@@ -11,9 +11,9 @@ status: >
   j=0 elliptic double cover. Equivalently, the assigned-factor ratio is a
   degree-three rational map whose S3 Galois-closure curve is that elliptic
   cover and whose branch values are 0,1,-omega,infinity, exactly the scalar
-  collision packet of THM-3947. The smallest realization has a reduced A1
-  graph plus an irreducible genus-one residual, a normal quadratic surface,
-  and two independent Cardano classes. It is not a Keller map.
+  collision packet of THM-3947. A degree-one-ratio realization has a reduced
+  A1 graph plus an irreducible genus-one residual, a normal quadratic
+  surface, and two independent Cardano classes. It is not a Keller map.
 source: jc-cohn3709 / normalized-cusp pullback factorization, 2026-08-24
 audit: >
   INDEPENDENT HOSTILE AUDIT PASS (jc-zero-debt-lift, with an independent
@@ -52,7 +52,7 @@ omega^2+omega+1=0,       delta=omega-omega^2,       delta^2=-3.       (1)
 
 The theorem first classifies the pullback of any nondegenerate internally
 split double-torus row to a branch normalized by `A1`. It then realizes the
-smallest nonconstant packet as an explicit plane discriminant. That example
+degree-one-ratio packet as an explicit plane discriminant. That example
 simultaneously attains a reduced one-place component, a normal quadratic
 surface, and two independent Cardano characters. Its unavoidable companion
 is elliptic, so this is a sharp structural survivor rather than a planar
