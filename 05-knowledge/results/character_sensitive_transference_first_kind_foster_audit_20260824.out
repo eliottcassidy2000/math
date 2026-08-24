@@ -1,0 +1,21 @@
+=== Exhaustive connected simple-graph controls ===
+vertices=2: connected_graphs=1, cuts=1
+vertices=3: connected_graphs=4, cuts=12
+vertices=4: connected_graphs=38, cuts=266
+vertices=5: connected_graphs=728, cuts=10920
+
+=== Weighted conorm-graph controls ===
+weighted_graphs=28, cuts=988
+
+=== Sharp orthogonal-star boundary ===
+Z^d with the all-half characteristic has delta*lambda_odd=sqrt(d)/2 for d=1,...,12.
+
+=== Scope verdict ===
+PROVED ALGEBRA: every rank-d lattice with an obtuse superbase satisfies
+  delta*lambda_odd <= sqrt(d)/2,
+and the constant is sharp on the orthogonal all-half family.
+CITED CONSEQUENCE: every Euclidean lattice of dimension at most three is of this kind.
+OPEN: no claim is made for a general lattice without an obtuse superbase.
+GRAPHS=799
+FOSTER_IDENTITIES=799
+CUTS=12187

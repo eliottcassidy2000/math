@@ -1,0 +1,19 @@
+LRC14_DIAGONAL_ELLIPSOID_REFINEMENT_INDEPENDENT_AUDIT
+status=PROVED_ALGEBRA_PLUS_VERIFIED_EXACT_CONTROLS;_NOT_CANONIZED;_LRC14_OPEN
+polar_vertices=2*C(13,2)=156 semantic_sha256=378624a5705e8daaf00b8acd6e7a7c4673d7568dd628709680cfed9d73ac5e34
+pair_condition=necessary_and_sufficient_for_positive_diagonal_H
+ap13_coordinate_max_boost_zero_facets=1 positive_facets=77
+ap13_linear_bank_zero_facets=1 positive_facets=77
+compressed_operator_ap13_ambient=4075/19 correct=50957/257 strict_rank_one_loss=1
+ambient_inverse_hostile=n=(1,2)_H=(2,1)_t2=7/4_correct=35/36_ambient=21/20
+correct_transform=A^(-1/2)_on_V;_dual=A^(1/2)*Lambda_star;_weight=a^T_H_a
+coordinate_max_immediate=E<196_square_if_nonzero<=193_raw_abs_aM<=8_l1<=49
+coordinate_max_kernel_balance=abs_aM<=7
+integer_l1_boundary=L49_min_at_HM=3:195_aM=(1,);L50_min:204
+l1_49_only_possible_shape=abs_aM_1_and_twelve_abs4;_requires_M_mod4=0_and_M/M2<3/2
+max_avoidance_ratio=-12+2sqrt621=37.839743177508_outside_live_R_lt_13=1
+linear_bank=D=M+M2;_D*S+2*sum(n_i*a_i^2)<=196D-1;_abs_aM<=9;_l1<=49
+linear_top_pair_support2=p+q<=13_reduced_ratio_count=28
+linear_scalar_cap=weaker_than_existing_exact_inradius;_weighted_localization_is_new
+quantifier_guard=coordinate_boosts_may_choose_different_Graver_relations
+PASS

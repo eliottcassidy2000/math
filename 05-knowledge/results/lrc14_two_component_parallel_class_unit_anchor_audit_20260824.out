@@ -1,0 +1,10 @@
+LRC14 TWO-COMPONENT PARALLEL-CLASS / UNIT-ANCHOR AUDIT 20260824
+Q=567869252041;B=322475487413604782665681;incoming_l2_square_cap=195
+euclidean_pair_atlas={"scale_one_absorbed_by_tail":[[1,3],[1,4],[1,9],[1,10],[2,3],[2,9],[3,7],[3,8],[4,7],[5,6],[5,12],[6,11],[7,10],[8,9]],"scale_one_even_tail_character":[[1,3],[1,9],[3,7],[9,11]],"scale_one_odd_tail_character_count":12,"scale_one_outliers":[[8,21,505],[9,11,202]],"scale_two_tail_character":"even","scale_two_tail_norm_square":82,"support_two_pair_count":47}
+parallel_class={"augmented_graph_rank":12,"bases":22,"cross_edge_role":"bridge_and_coloop_no_cycle_equation","internal_graph_rank":11,"triple_internal_pair_witnesses":286}
+dirichlet={"actual_Q_boundary_relation":[-1,1,1],"boundary_cases":5500,"exhaustive_cases_Q_2_through_25":1074060,"maximum_observed_height":25}
+inherited_rank_eleven_hostile={"body_scale":4398046511104,"component_sizes":[2,11],"decoder_edges":27,"decoder_rank":11,"internal_absorber":[3,-1],"internal_absorber_norm_square":10,"no_crossing_height_Q_reason":"body_scale_gt_2Q_max_small_component","primitive_body_maximum_U":40,"relative_tail_scale_t":1,"row_sum":796046418509828,"safe_time":"1/14"}
+outlier_controls=[{"component_sizes":[2,11],"decoder_rank":11,"pair":[8,21],"pair_norm_square":505,"safe_time":"1/14","short_support_two_count":19,"short_support_two_location":"eleven_body_only","tail_scale":1009},{"component_sizes":[2,11],"decoder_rank":11,"pair":[9,11],"pair_norm_square":202,"safe_time":"1/14","short_support_two_count":19,"short_support_two_location":"eleven_body_only","tail_scale":1009}]
+requirements=5371764
+semantic_sha256=b0c9ba27da57a5c419e06462059a1ccea3bb871f79d87b979a8fdcef5e859266
+RESULT=PASS;LRC14=OPEN

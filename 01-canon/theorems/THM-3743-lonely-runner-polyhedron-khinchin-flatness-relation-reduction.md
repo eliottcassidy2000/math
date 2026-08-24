@@ -2,7 +2,9 @@
 id: THM-3743
 title: "Lonely-runner polyhedron Khinchin-flatness relation reduction"
 status: >
-  CITED + PROVED ALGEBRA + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.
+  CITED + PROVED ALGEBRA + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED;
+  NUMERICAL CAP SUPERSEDED BY THM-4009. This theorem's l1<=356 implication
+  remains valid, but THM-4009 now gives ||a||_2<14 and ||a||_1<=50.
   A hypothetical primitive LRC(14) counterexample has a nonzero integer speed
   relation a with ||a||_1<=356.  An l1-minimal such relation is a Graver
   element.  Its support-two branch lies in an exact 19,314-ratio atlas; its
@@ -26,6 +28,7 @@ audit: >
 depends_on:
   - THM-2052-finite-height-forces-high-rank-bounded-relation-code
 related:
+  - THM-4009-euclidean-covering-transference-short-relation-compression
   - THM-778-centered-christoffel-endpoint-skew-product
   - THM-2051-fejer-bv-small-relation-alternative-for-lrc14
   - THM-2169-bounded-relation-on-every-lrc-deletion
@@ -51,6 +54,13 @@ general bound of Barvinok, as recorded by
 [Averkov--Hofscheier--Nill](https://arxiv.org/abs/1911.03511).  Everything
 after those two inputs is proved below.  No optimality or literature-priority
 claim is made.
+
+> **Numerical-cap update (2026-08-24).** The flatness argument below remains
+> correct, but its `l1<=356` output is no longer the sharp proved reduction in
+> this repository. [THM-4009](THM-4009-euclidean-covering-transference-short-relation-compression.md)
+> uses the same projected zonotope's Euclidean radius-`3/7` inball and
+> Banaszczyk covering transference to prove `||a||_2<14`, hence
+> `sum a_i^2<=195`, `||a||_1<=50`, and `|a_i|<=13`.
 
 Let `n=(n_1,...,n_13)` be a primitive vector of distinct positive integer
 speeds.  Put

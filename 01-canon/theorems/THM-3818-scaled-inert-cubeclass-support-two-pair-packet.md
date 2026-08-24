@@ -48,10 +48,14 @@ audit: >
   five-speed hostile, the sharp thirteen-vertex path, and independent
   rank/facet controls.  Its 38,454,450 active requirements agree under normal,
   optimized, and frozen replay.  MISTAKE-460 records the repaired scope seam.
-  The two-component extension adds 1,742 assertion-free exact requirements:
-  it checks the quotient slope atlas, a safe 2+11 row with both scales
-  recovered, and a 12+1 singleton packet fibre of size 14,077,914,720,208.
-  Normal, optimized, and frozen streams agree.
+  The repaired all-scale two-component extension adds 1,574 assertion-free
+  exact requirements: it checks the quotient slope atlas, a safe 2+11 row
+  with both scales recovered, and a 12+1 singleton packet fibre of size
+  14,077,914,720,208.  The 2+11 control has 27 all-scale decoder edges; the
+  former count 25 came from the stronger table-free common-scale filter and
+  is corrected in MISTAKE-486.  Components, rank, dominance, both recovered
+  scales, and every theorem implication are unchanged.  Normal, optimized,
+  and frozen streams agree.
   The cyclic-gluing extension is independently audited by a sieve atlas,
   exact wall cells, direct shift cells, a divisor union, and an independent
   congruence counter.  Its primary 3,914,679 requirements and independent
@@ -100,9 +104,9 @@ graphic_output_sha256: 3b379c5ee59dd1da85c1ec84c53da48e8d0cd2630d367c25c08af49d4
 graphic_semantic_sha256: ea89fb90944ad2073703463a9474234ad486c0eb99713a3ada35448b5fe121cf
 two_component_script: 04-computation/lrc14_two_component_decoder_quotient_extension_thm3818.py
 two_component_output: 05-knowledge/results/lrc14_two_component_decoder_quotient_extension_thm3818.out
-two_component_script_sha256: 2ce52b1a45c3c4416e367f8177b288f7f9dc7ac651bf58ee036137e17f2208b2
-two_component_output_sha256: df4b1c86df9f9871997c41bc9d236429d0ca61fae4125bfe0ce51bfff78004e6
-two_component_semantic_sha256: 3c937069964a6e2134e7da6c6009d1b3b71eecdbc2d5260807ea34bffe69ab3b
+two_component_script_sha256: aae0fa24c0f1eb2eee04445a16a8a899aee52b663a8d7757d44c5284e3697697
+two_component_output_sha256: e360e2e1a4805850132e25b559b14091e7b164349c74ee30c78fa405c275d742
+two_component_semantic_sha256: 0606c4dd0c129a3feef83ccb31d09428e5ed6e2a49741d15bc5db9b335b16e71
 cyclic_gluing_script: 04-computation/lrc14_two_component_cyclic_gluing_extension_thm3818.py
 cyclic_gluing_output: 05-knowledge/results/lrc14_two_component_cyclic_gluing_extension_thm3818.out
 cyclic_gluing_script_sha256: 57f4ba57204a8e987f48dce46f846247fb06a0d5c5d3eb2c9c2cd7664e78d0a9
@@ -672,9 +676,9 @@ table-free subcount, all edge subsets of a mixed five-speed hostile, the
 diagonal incidence law, facet compatibility, and the sharp thirteen-vertex
 path in `38,454,450` active requirements.  Its normal,
 optimized, and frozen streams also agree.
-The two-component companion checks the integral quotient, crossing-slope
-atlas, bounded pair-clique consequence, a safe `2+11` row with both scales
-recovered, and the exact `12+1` singleton fibre in `1,742` active
+The repaired all-scale two-component companion checks the integral quotient,
+crossing-slope atlas, bounded pair-clique consequence, a safe `2+11` row with
+both scales recovered, and the exact `12+1` singleton fibre in `1,574` active
 requirements.  Its normal, optimized, and frozen streams agree as well.
 The cyclic-gluing primary and independent companions then check the exact
 good-arc conductor, direct branch counts, the divisor-seam union, the

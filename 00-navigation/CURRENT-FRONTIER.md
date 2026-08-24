@@ -41,19 +41,18 @@ word/coboundary reconstructs one packet, but stripping is chart-dependent.
 THM-2363/THM-2368 do not recover the `28,393` semantic roots.
 THM-3731 gives 165 valuation orbits: repeats obstruct a valuation-only owner;
 pairwise-distinct positive coefficients repair only that narrow defect.
-[THM-3743](../01-canon/theorems/THM-3743-lonely-runner-polyhedron-khinchin-flatness-relation-reduction.md)
-adds `l1<=356` but needs slice/owner sidecars; [THM-3742](../01-canon/theorems/THM-3742-square-triangular-pell-mod13-central-sign-projective-cycle.md)
+[THM-4009](../01-canon/theorems/THM-4009-euclidean-covering-transference-short-relation-compression.md)
+supersedes THM-3743's numerical cap by a square-norm-`<=195` Graver row;
+owner/phase/arrival remain lost. [THM-3742](../01-canon/theorems/THM-3742-square-triangular-pell-mod13-central-sign-projective-cycle.md)
 is a wrong-torsor Pell `C14`; [THM-3744](../01-canon/theorems/THM-3744-pell-prefix-loneliness-constant-carry-exact-formula.md)
 is the safe control `M(S_13)=99/338`. No cited result proves LRC(14).
 
 ### Independent routes that remain live
 
-- **PROVED + CITED:** [THM-3743](../01-canon/theorems/THM-3743-lonely-runner-polyhedron-khinchin-flatness-relation-reduction.md)
-  turns any hypothetical counterexample into an integer speed relation of
-  `l1` norm at most `356`.  A minimal row is Graver; support two has `19,314`
-  reduced ratios, while higher support is a bounded multiway partition.
-  THM-2052's rank-twelve branch is already terminal; in rank eleven the row
-  either raises rank with an explicit cap or lies short inside the star.
+- **PROVED + CITED:** [THM-4009](../01-canon/theorems/THM-4009-euclidean-covering-transference-short-relation-compression.md)
+  gives square norm `<=195`, `l1<=50`, height `13`, 47 pair ratios and 55,459
+  histograms. A separate odd row need not be short. THM-2052 is
+  terminal in rank twelve; rank eleven splits outside/inside the star.
   THM-3793/[3825](../01-canon/theorems/THM-3825-prime-colour-valuation-two-cube-decoder.md)
   decode the `5,855` inert ratios/scales; THM-3818 adds `456,690` supports,
   `913,380` orientations and the pair-sum grid.  Its tags have square parity
@@ -68,8 +67,13 @@ is the safe control `M(S_13)=99/338`. No cited result proves LRC(14).
   candidates; the powers-of-four fibre has none.  In `11+2`, THM-3878 leaves
   `7,505` unconditionally; only in `t>=U`, cyclic slack plus one auxiliary
   leaves 58 certificate survivors: 57 at `s=1` and `(s,p,q)=(2,1,9)`.
-  THM-3910 closes 41; THM-3995's parity cap closes none; THM-4002 closes AP11 and 352,716 fixed `[1,21]` bodies.
-  THM-4003/4004 add component/ratio and prime/`t<U` gates (floor `U>=3,208,300,859`); all 17 arbitrary-body types remain OPEN.
+  THM-3910 closes 41; THM-3995 adds the owner-maximum conditional parity cap
+  `4(U-1)/(63U)` and its exact integer tariff, including the `k=0` plateau, but
+  closes no type. THM-4002 closes AP11 and 352,716 fixed `[1,21]` scale-two
+  bodies. THM-4003/4004 add component/ratio and prime/`t<U` gates (floor
+  `U>=3,208,300,859`); parallel classes block cycle augmentation and a divisor
+  anchor narrows `t<U`. All 17 arbitrary-body types plus owner/arrival remain
+  OPEN.
   THM-3858's normalized negative-Pell unit is `+/-j/3^v3(j) mod 9`; excluding
   `4,5` exactly exhausts the target-only `Z_3` test, not retained sidecars.
   FINITE-EXACT,
@@ -432,7 +436,7 @@ Reusable bridges (not literal object identifications):
 | Finite observer / recurrence | THM-3171/3172/3180/3181 | Is it invertible, a refuter, or only an address; which sidecar makes termination lawful? |
 | Continuation / min-plus kernel | Gordian profile; THM-840/853 | Which sidecar remains target-preserving under every future operation? |
 | Relation-cone carry atlas | THM-2196/2199 | Carry charts still need phase, SCC order, continuation, or JC residue/flux. |
-| Flatness covector / short relation | THM-3743 | Intersect the `l1<=356` Graver row with rank-eleven star spaces; owner, sign partition, phase and arrival are lost. |
+| Euclidean inball / short relation | THM-4009 | Intersect the square-norm-`<=195` row with rank-eleven stars; odd character, owner, phase and arrival are lost. |
 | Euclidean-addressed grid coboundary | THM-3710/778 finite control | Word plus basepoint reconstructs one pinned coefficient fibre, but stripping exits the bank and chart/absolute-lift/owner sidecars remain. |
 | Transverse-information tax | THM-2612/2615/2573 | Retain a pole, endpoint, or normal when a locus erases charge. |
 | Phase reconstruction | THM-3267/3269/3273/3277/3285 | Generator, sampler, backbone and one literal-ancestry horn are proved; endpoint origin/current and global action are absent. Not an LRC reduction. |

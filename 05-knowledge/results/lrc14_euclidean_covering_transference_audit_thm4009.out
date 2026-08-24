@@ -1,0 +1,63 @@
+=== Euclidean inball and transference constants ===
+[1/14,13/14]^13 = (1/2)1 + (3/7)[-1,1]^13.
+For x in n^perp with ||x||_2<=1, every |x_i|<=1 and projection(x)=x;
+hence the projected zonotope contains the closed ball B(c,3/7).
+A counterexample has dist(c,Lambda)>3/7, so mu(Lambda)>3/7.
+Using 2 mu(Lambda) lambda_1(Lambda*)<=12 gives lambda_1(Lambda*)<14.
+More exactly, the projected cube's centred Euclidean inradius factor is
+  rho(n)=min_(i<j) (n_i+n_j)/sqrt(n_i^2+n_j^2)
+        =(n_min+n_max)/sqrt(n_min^2+n_max^2).
+Thus lambda_1<14 sqrt(n_min^2+n_max^2)/(n_min+n_max); the universal
+bound is its unbounded-spread limit.
+
+=== Exact integer coefficient consequences ===
+Every transference relation a satisfies sum a_i^2<=195 and |a_i|<=13.
+The exact integer optimization gives ||a||_1<=50.
+The unique sorted absolute arithmetic extremizer is (3,3,4,...,4),
+with squared norm 194 and l1 norm 50 (realizability is not asserted).
+Bounded-spread integer caps (R=n_max/n_min):
+  R : square-norm cap, l1 cap
+  2: 108, 37
+  3: 122, 39
+  5: 141, 42
+  13: 169, 46
+  21: 178, 47
+  50: 188, 49
+
+=== Primitive relation atlases ===
+Support-two reduced ratios p<q with p^2+q^2<=195: 47.
+Unoriented ratio/support packets: 3666.
+Oriented labelled coefficient assignments: 7332.
+Their maximum p+q is 19; the prior Pell packet leaves only (1,5).
+Primitive absolute coefficient histograms by support:
+  2:47, 3:209, 4:566, 5:1177, 6:2057, 7:3180, 8:4490, 9:5911, 10:7374, 11:8805, 12:10188, 13:11455
+Total absolute histograms: 55459.
+Signed-multiset types modulo permutation/global sign: 5030161.
+Absolute histograms with odd coefficient sum: 28315.
+
+=== Labelled Euclidean-ball universe ===
+All nonzero labelled integer vectors with sum a_i^2<=195: 711202814025242.
+Primitive vectors: 711119925281794; primitive support>=2 modulo sign: 355559962640884.
+This is more than 2782564628359 times smaller than THM-3743's l1<=356 ambient universe.
+
+=== Rank-eleven Hadamard join ===
+If the short row lies outside THM-2052's rank-11 span, Hadamard gives
+  max(n_i) <= 11639011567946276516330452125265832396450210671398535269626998205847761612881723251682730932524351641613494572161619231675129410858204
+(134 digits). If it lies inside, that span contains a row with squared norm<=195.
+Support at most three is automatically inside because coefficient height<=13<91^6.
+
+=== Half-lattice parity sidecar and safe hostile ===
+The inball center c=(1/2)projection(1) satisfies 2c in Lambda.
+Because a counterexample has c notin Lambda=Lambda**, some (not necessarily short)
+dual relation has <a,c>=1/2 mod 1, equivalently sum a_i is odd.
+Banaszczyk transference alone does not force the norm-<14 row to be this odd row.
+The safe AP (1,...,13) has relation (1,-2,1), squared norm 6, and
+a valid boundary loneliness time t=1/14. Short resonance remains necessary,
+never sufficient; owner, phase, sign partition, and arrival are still lost.
+
+=== Scope verdict ===
+CITED + PROVED-ALGEBRA target: counterexample => a nonzero Graver relation
+with ||a||_2<14, sum a_i^2<=195, ||a||_1<=50, and |a_i|<=13.
+The citation supplies only Euclidean transference; all printed finite constants are exact.
+This does not prove LRC(14).
+CHECKS=33
