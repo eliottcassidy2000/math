@@ -12,6 +12,7 @@ import hashlib
 import json
 
 import sympy as sp
+from sympy.matrices.normalforms import smith_normal_form
 
 
 CHECKS = 0
@@ -68,6 +69,36 @@ zero(w*relations["wT=cP"] + c*relations["P(w+3)=T2"]
      "normalization syzygy consistency")
 gate(sp.gcd(w, w+3) == 1, "D(w) and D(w+3) cover the normalization")
 
+# The normalization is R-free on (1,T,w).  The multiplication matrices also
+# independently recover its discriminant and the old-order index.
+M_T = sp.Matrix([[0, 3*P, c*P], [1, 0, 0], [0, P, 0]])
+M_w = sp.Matrix([[0, c*P, 0], [0, 0, c], [1, 0, -3]])
+M_basis = [sp.eye(3), M_T, M_w]
+trace_pairing = sp.Matrix([
+    [sp.trace(left*right) for right in M_basis] for left in M_basis
+])
+disc_B = sp.factor(trace_pairing.det())
+disc_A = sp.factor(sp.discriminant(F, T))
+gate(disc_B == -27*P*(c**2*P-4), "normalization discriminant")
+gate(disc_A == -27*P**3*(c**2*P-4), "monogenic order discriminant")
+transition_A_to_B = sp.Matrix([[1, 0, 3*P], [0, 1, 0], [0, 0, P]])
+gate(transition_A_to_B.det() == P and disc_A == P**2*disc_B,
+     "old-to-normal basis index is exactly P")
+zero((w**3+3*w**2-4) - (w+2)**2*(w-1),
+     "branch polynomial has ramified E2 and unramified companion")
+
+# Nagata's vertical relation lattice has two primes over each distinct root
+# of c and one primitive sum relation per root.
+for root_count in range(1, 6):
+    relation = sp.zeros(root_count, 2*root_count)
+    for index in range(root_count):
+        relation[index, 2*index] = 1
+        relation[index, 2*index+1] = 1
+    smith = smith_normal_form(relation, domain=sp.ZZ)
+    gate(relation.rank() == root_count and
+         all(abs(int(smith[i, i])) == 1 for i in range(root_count)),
+         f"{root_count}-root vertical class ledger is torsion-free rank {root_count}")
+
 
 # ---------------------------------------------------------------------------
 # The two exact affine charts and their smoothness.
@@ -111,7 +142,7 @@ gate(len(G_inf.polys) == 1 and G_inf.polys[0].as_expr() == 1,
 # Relative ramification and the principal forbidden-unit prime.
 # ---------------------------------------------------------------------------
 
-# The first chart as a finite algebra over k[P,t] has relation matrix from
+# On the first localization, the relation matrix over k[P,t] comes from
 # cT-w(w+3)=0 and (w+3)P-T^2=0.
 jacobian_matrix_0 = sp.Matrix([
     [c, -(2*w+3)],
@@ -164,6 +195,8 @@ summary = {
     "checks": CHECKS,
     "family": "F=T^3-3PT-c(t)P^2;c nonzero",
     "normalization": "B=A[w],w=cv;two smooth charts D(w+3),D(w)",
+    "conductor": "B/A=R/(P);zero section splits into E0 and E3",
+    "class": "if c has s distinct roots then Cl(B)=Z^s and B*=k*",
     "moving_zero": "w=-3 retains the v=-3/c branch across c=0",
     "ramification": "E2=V(w+2),reduced principal,quotient k[t,1/c]",
     "obstruction": "delete E2 makes nonconstant w+2 a forbidden A2 unit",
@@ -175,6 +208,8 @@ print("THM-3963 moving-P2 normalization exact companion")
 print(f"CHECKS={CHECKS}")
 print("FAMILY=T3_MINUS_3PT_MINUS_C_OF_T_P2;C_NONZERO")
 print("NORMALIZATION=B_EQUALS_A_ADJOIN_W;W_EQUALS_CV;TWO_SMOOTH_CHARTS")
+print("CONDUCTOR=B_OVER_A_EQUALS_R_OVER_P;ZERO_SECTION_SPLITS_E0_PLUS_E3")
+print("CLASS=C_HAS_S_ROOTS_IMPLIES_CL_Z_TO_S;UNITS_SCALAR")
 print("MOVING_ZERO=W_MINUS3_RETAINS_ESCAPING_V_MINUS3_OVER_C")
 print("RAMIFICATION=E2_EQUALS_V_W_PLUS2;REDUCED_PRINCIPAL;K_T_1_OVER_C")
 print("NO_ATLAS=DELETE_E2;W_PLUS2_FORBIDDEN_NONCONSTANT_UNIT")

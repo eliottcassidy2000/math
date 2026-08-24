@@ -13,16 +13,18 @@ status: >
   not arbitrary P^2q2(P,t), the other repeated-hidden-factor debt, or JC(2).
 source: jc-cohn3709 + jc-extra-debt-local / post-THM-3961 moving conductor-debt lane, 2026-08-24
 audit: >
-  TWO INDEPENDENT HOSTILE AUDITS PASS (jc_zero_debt_lift and
-  jc_degree6_one_place, 2026-08-24). Both audits reconstructed the cubic
+  THREE INDEPENDENT HOSTILE AUDITS PASS (jc_zero_debt_lift,
+  jc_degree6_one_place, and jc_extra_debt_local, 2026-08-24). The audits reconstructed the cubic
   field, integral moving coordinate, determinantal relations, exact chart
   presentations and their primitive-linear injectivity, smoothness at
   arbitrary multiple zeros of c, and the reduced principal E2 ramification
   prime. A reproducibility audit replaced a chart determinant check that
   divided by c with the cancellation-free identity
   det+3T(w+2)=cP-wT, so the exact companion also covers c=0 fibres without
-  localization. Normal and optimized 36-gate runs byte-match the frozen
-  output; hashes and documentation checks pass.
+  localization. Normal and optimized 45-gate runs byte-match the frozen
+  output; the third audit supplied and checked the exact index, conductor,
+  discriminant, divisor, units, and class-group ledger in Section 2.1.
+  Hashes and documentation checks pass.
 depends_on:
   - THM-3961-arbitrary-q-hidden-repetition-normality-and-conductor-debt
 related:
@@ -30,9 +32,9 @@ related:
   - THM-3862-russell-finite-completion-nonmonogenic-branch-contract
 script: 04-computation/jc2_moving_p2_normalization_principal_ramification_thm3963.py
 output: 05-knowledge/results/jc2_moving_p2_normalization_principal_ramification_thm3963.out
-script_sha256: b19847721eed96e5d86696a935584186b8add9fbbcf9ba27796c1acd5085b54c
-output_sha256: c840f7802c74369bf48f04a2e2f59a5031f57c09ee590536d28630865c6fa990
-semantic_sha256: a7338a3a38fa1fa510734def07cd2f74a4cf6337836114e17345d8e9a8ca4e30
+script_sha256: ea6ca4d8be68e57f23da2c7aea29cd232749afa4ce1464b18ae3076d38cd39cd
+output_sha256: 552f7a793e1a38311923693e280eed0316c1e98adf95bb9fcbb83b3f7a54706d
+semantic_sha256: f88af4193333a392179ee2215f216e80a6088146eba24dad9e24c49d02a55646
 hash_basis: raw LF bytes
 ---
 
@@ -163,7 +165,84 @@ B is regular and normal.                                  (13)
 Since `B` is finite and birational over `A`, `(13)` identifies it with the
 integral closure of `A` in `K(v)`.
 
-### 2.1 What happens at a zero of c
+### 2.1 The exact index, conductor, and class ledger
+
+The relations `(8)` show that `B` is free over `R=k[P,t]` on
+
+```text
+(1,T,w),
+T^2=3P+Pw,                  Tw=cP,                 w^2=cT-3w. (13a)
+```
+
+Relative to this basis, the old order basis `(1,T,T^2)` has transition
+determinant `P`. Consequently
+
+```text
+B/A isomorphic to R/(P),
+conductor_(A subset B)=(P,T),                              (13b)
+```
+
+and in the normalization
+
+```text
+(P,T)=(P,T,w) intersection (P,T,w+3).                    (13c)
+```
+
+Indeed `B/(P,T)=k[t,w]/[w(w+3)]=k[t] x k[t]`. Thus the old
+singular zero section separates into the two normalization sections
+
+```text
+E_0=(P,T,w),                  E_3=(P,T,w+3).              (13d)
+```
+
+The trace pairing on `(1,T,w)` and the old binary-cubic discriminant give
+
+```text
+Disc(B/R)=-27P(c^2P-4),
+Disc(A/R)=-27P^3(c^2P-4)=P^2 Disc(B/R).                  (13e)
+```
+
+This independently freezes the index-one-in-`P` normalization debt.
+
+There is also an exact class-group explanation of what the zeros of `c`
+add. Write
+
+```text
+c=lambda product_(j=1)^s (t-alpha_j)^(m_j),
+```
+
+with distinct roots. After inverting `c`, one has
+
+```text
+B_c=k[t,c^(-1),v],                                       (13f)
+```
+
+a UFD. Over each `alpha_j` there are exactly two vertical primes
+`D_(j,0),D_(j,infinity)`, and
+
+```text
+div(t-alpha_j)=D_(j,0)+D_(j,infinity).                   (13g)
+```
+
+Nagata localization therefore gives
+
+```text
+Cl(B)=Z^s,                       B^*=k^*.                 (13h)
+```
+
+The multiplicities of the coefficient roots occur in the finer principal
+divisors
+
+```text
+div(w)=E_0+sum_j m_j D_(j,0),
+div(w+3)=E_3+2 sum_j m_j D_(j,infinity).                 (13i)
+```
+
+Thus multiple zeros change the labelled divisor relations but create neither
+torsion nor units. The later `E_2` obstruction is strictly finer than the
+coarse torsion-free class-group gate.
+
+### 2.2 What happens at a zero of c
 
 The two charts retain both vertical limits that the single `v` coordinate
 cannot see. On the first chart, setting `c=0` forces `w=0` and leaves
@@ -189,8 +268,9 @@ companion, respectively. The second-chart different below has value `9` at
 
 ## 3. A principal ramification prime closes every coefficient c(t)
 
-Regard `(11)` as a finite algebra over the target ring `R=k[P,t]`. Its monic
-equation in `w` is `(6)`, so its relative differential module on `D(w)` is
+On the localization `B_w` of the finite normalization, presentation `(11)`
+computes relative differentials over the target ring `R=k[P,t]`. Its monic
+equation in `w` is `(6)`, so
 
 ```text
 Omega_(B_w/R)=B_w dw/[3w(w+2)dw].                        (16)
