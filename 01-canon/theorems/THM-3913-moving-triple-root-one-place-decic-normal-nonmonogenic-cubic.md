@@ -2,7 +2,7 @@
 id: THM-3913
 title: "Moving-triple-root one-place elliptic decic normal nonmonogenic cubic"
 status: >
-  PROVED + VERIFIED-EXACT; AWAITING INDEPENDENT HOSTILE AUDIT.  The
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.  The
   coefficient-depth-three binary cubic
   (AU+CV)^3+C(AU+CV)U^2+A^2V^3 defines a normal, globally nonmonogenic S3
   cubic order.  Its discriminant is an absolutely irreducible decic with one
@@ -14,6 +14,18 @@ status: >
   depth but is not a Jacobian counterexample; rational depth-three
   deformations and JC(2) remain open.
 source: root / first post-THM-3908 coefficient-depth-three construction, 2026-08-23
+audit: >
+  INDEPENDENT HOSTILE AUDIT PASS after two proof-completeness clarifications.
+  The C=0 irreducibility specialization now records that the U^3 leading
+  coefficient A(A^2+C) is not divisible by C, so neither primitive factor
+  can lose degree on specialization.  The no-atlas step now explicitly uses
+  the deleted-ramification valuation for containment in the nonproperness set
+  and purity plus irreducibility for the full-component conclusion.  The
+  audit independently rechecked Delone--Faddeev normality, absolute
+  irreducibility at the unique smooth infinity point, the elliptic inverse
+  and pole ledger, boundary units, the nontrivial Kummer class, and the
+  polynomial-uniruledness contradiction.  Normal and optimized runs
+  byte-match the frozen output; raw hashes and documentation pass.
 depends_on:
   - THM-3801-cubic-etale-normalization-nonmonogenic-and-companion-sheet-gate
   - THM-3841-deleted-ramification-three-puncture-jelonek-nonentry
@@ -31,8 +43,8 @@ hash_basis: raw LF bytes
 
 # THM-3913 -- the first moving triple root pays every invoice except rationality
 
-**PROVED + VERIFIED-EXACT; AWAITING INDEPENDENT HOSTILE AUDIT.**  Work over
-an algebraically closed field `k` of characteristic zero.  Put `R=k[A,C]`
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.**  Work over an
+algebraically closed field `k` of characteristic zero.  Put `R=k[A,C]`
 and consider the binary cubic
 
 ```text
@@ -79,10 +91,17 @@ ideal `(A,C)`.  Every value of the binary index form therefore belongs to
 `(A,C)` and cannot be a scalar unit.  By the intrinsic index criterion of
 THM-3801, `T` is globally nonmonogenic.
 
-The generic binary cubic is irreducible.  Indeed, a factorization over
-`k(A,C)` would, by Gauss's lemma, give primitive positive-binary-degree
-factors over `k[A,C]`.  Neither factor can vanish identically after setting
-`C=0`, because that would give it nontrivial content `C`.  But
+The generic binary cubic is irreducible.  Indeed, after dehomogenizing with
+`V=1`, a factorization over `k(A,C)` would, by Gauss's lemma, give primitive
+positive-degree factors over `k[A,C]`.  Their leading coefficients multiply
+to
+
+```text
+A(A^2+C),                                                   (3a)
+```
+
+which is not divisible by `C`.  Hence neither factor loses degree after
+setting `C=0` (and neither specialization is zero).  But
 
 ```text
 Phi|_(C=0)=A^2(AU^3+V^3),                                  (4)
@@ -217,8 +236,10 @@ Thus the split-boundary Gram matrix and Smith data are
 ```
 
 in exact agreement with the first three-primary boundary degree allowed by
-THM-3912.  The matrix is nonsingular.  As in THM-3911, the divisor of a unit
-on `Q` pulls back to a combination of `B_+,B_-`; intersecting with the two
+THM-3912.  The matrix is nonsingular.  The affine double plane `Q` is normal:
+its reduced irreducible plane branch has only finitely many singular points.
+As in THM-3911, the divisor of a unit on `Q` pulls back to a combination of
+`B_+,B_-`; intersecting with the two
 boundary curves forces both coefficients to vanish.  Therefore `Q*=k*`.
 
 The normal `S3` cubic has a connected cyclic cubic Galois-closure layer over
@@ -238,9 +259,12 @@ a lattice possibility.
 
 Suppose an affine plane were a dominant etale degree-three atlas for this
 cubic function field.  THM-3801 identifies it with an open of the finite
-normalization.  The ramified divisor over the sole branch `(5)` is absent,
-so `V(Delta)` is an irreducible component of the nonproperness set of the
-resulting polynomial plane map.
+normalization.  The ramified divisor over the sole branch `(5)` is absent.
+The deleted-divisor valuation argument of THM-3841 therefore puts
+`V(Delta)` inside the nonproperness set of the resulting generically finite
+polynomial plane map.  That set is pure of dimension one when nonempty;
+since `V(Delta)` is irreducible, it is an entire irreducible component, not
+merely a subset of one.
 
 The polynomial-uniruledness gate used in THM-3841 would then give a dominant
 polynomial curve `A1 -> V(Delta)`.  Normality of `A1` lifts it through `(16)`
@@ -275,6 +299,6 @@ Both streams must byte-match the frozen output.  The companion checks the
 compact binary cubic, primitive/common-zero coefficient packet, exact
 discriminant, moving-root quintic, unique smooth infinity, Kummer
 irreducibility specialization, elliptic map and inverse, pole orders, and
-split-boundary Smith data in 24 active gates.  The Delone--Faddeev
-normality, absolute-irreducibility, Kummer-class, and Jelonek bridges are the
-human arguments awaiting independent hostile audit.  **QED.**
+split-boundary Smith data in 24 active gates.  The Delone--Faddeev normality,
+absolute-irreducibility, Kummer-class, and Jelonek bridges have been
+independently hostile-audited.  **QED.**
