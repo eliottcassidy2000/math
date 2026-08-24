@@ -1,0 +1,12 @@
+theorem=THM-3913-moving-triple-root-one-place-decic-normal-nonmonogenic-cubic
+binary_cubic=(AU+CV)^3+C(AU+CV)U^2+A^2V^3
+order=normal_nonmonogenic_S3;coefficient_depth=3
+branch=irreducible_decic;infinity=one_smooth_place
+normalization=elliptic_y2=w(w2-1)_minus_O
+quadratic_resolvent_units=kstar;class_group_3_torsion=NONZERO
+split_boundary_snf=1,9
+plane_atlas=EMPTY_BY_POLYNOMIAL_UNIRULEDNESS
+JC2=OPEN
+semantic_sha256=8a591b8a768f89173c9f426e28fc5467fb5e5d6ff87525fca3b10035c99d1805
+CHECKS=24
+RESULT=PASS
