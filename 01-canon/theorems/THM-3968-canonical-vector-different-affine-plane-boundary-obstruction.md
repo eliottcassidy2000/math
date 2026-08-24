@@ -2,8 +2,8 @@
 id: THM-3968
 title: "Canonical-vector and different obstruction for affine-plane finite completions"
 status: >
-  RESERVED / PROVISIONAL PROOF CANDIDATE / INDEPENDENT HOSTILE AUDIT
-  REQUIRED. Let X be a normal integral affine surface finite and
+  PROVED + INDEPENDENTLY HOSTILE-AUDITED. Let X be a normal integral affine
+  surface finite and
   generically separable over A2 in characteristic zero. If X contains a
   dense affine-plane open on which the finite map is etale, then its prime
   boundary classes form a basis of Cl(X), and the canonical class has in
@@ -17,6 +17,16 @@ status: >
   normal monogenic order, can contain a Keller affine-plane open. Gorenstein
   alone is deliberately not claimed to imply trivial canonical module.
 source: jc-zero-debt-lift / post-THM-3922 finite-duality synthesis, 2026-08-24
+audit: >
+  INDEPENDENT HOSTILE AUDIT PASS (jc_extra_debt_local, 2026-08-24). The
+  audit independently checked normal-surface Cohen--Macaulayness and local
+  miracle flatness, finite duality, the trace/codifferent identification and
+  positive divisor sign, support in the THM-3922 boundary basis, the tame
+  cubic different palette, torsion and Q-trivial collapse, purity and the
+  discriminant-unit alternative, and the finite-etale degree-one endpoint.
+  It also verified every hypersurface, complete-intersection, monogenic, and
+  Frobenius corollary and the deliberate distinction between Gorenstein and
+  globally trivial canonical module. No repair was required.
 depends_on:
   - THM-3922-affine-plane-open-boundary-basis-class-group-obstruction
 related:
@@ -28,10 +38,10 @@ related:
 
 # THM-3968 -- the canonical class must pay the exact different vector
 
-**RESERVED / PROVISIONAL PROOF CANDIDATE / INDEPENDENT HOSTILE AUDIT
-REQUIRED.** Work over an algebraically closed field `k` of characteristic
-zero. This theorem is a necessary invoice for a finite normal completion;
-it constructs no Keller map and proves no case of `JC(2)`.
+**PROVED + INDEPENDENTLY HOSTILE-AUDITED.** Work over an algebraically closed
+field `k` of characteristic zero. This theorem is a necessary invoice for a
+finite normal completion; it constructs no Keller map and proves no case of
+`JC(2)`.
 
 ## 1. Statement
 
@@ -251,4 +261,4 @@ nontrivial canonical debt, and its canonical coordinates in the proposed
 boundary basis must exactly reproduce the inertia/different colors. This is
 why a genuinely nonmonogenic or non-complete-intersection finite completion
 is not an aesthetic complication but a structural requirement. `JC(2)`
-remains **OPEN**. **QED candidate.**
+remains **OPEN**. **QED.**
