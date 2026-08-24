@@ -257,7 +257,7 @@ There is a complementary denominator-depth form of `(3)`. In the function
 field put
 
 ```text
-s=y/p=xt,                         tau=H/p^2=t.             (18)
+s=y/p=xt,                 tau=(p^3-y^2)/p^2=t.             (18)
 ```
 
 Then
