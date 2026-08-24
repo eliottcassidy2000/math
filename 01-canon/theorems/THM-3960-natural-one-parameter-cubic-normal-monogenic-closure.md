@@ -261,8 +261,11 @@ normal-monogenic mechanism closes all factorization types at once.
 
 The result does **not** prove JC(2). It proves that a counterexample cannot
 have finite normalization equal to the natural globally monogenic order
-`R[T]/(F)` in `(1)`. A viable construction must change the finite order—most
-notably by a genuine nonmonogenic overorder—or leave this one-parameter
-linear-in-`P` depressed-cubic grammar. Those escapes are precisely why the
-nonmonogenic S3 constructions elsewhere in the repo remain relevant.
+`R[T]/(F)` in `(1)`. In fact, when `B!=0`, `(10)` says this order is already
+the maximal finite order in its function field, so there is no proper
+overorder escape with the same base and field. A viable construction must
+leave this one-parameter linear-in-`P` depressed-cubic **function-field
+grammar**, for example by starting with one of the genuinely nonmonogenic
+S3 fields/orders studied elsewhere in the repo. Those constructions are not
+overorders of `(1)` and remain relevant.
 **QED (candidate pending independent audit).**
