@@ -135,6 +135,41 @@ for n in range(2, 8):
              f"n={n},k={k}: u+1 valuation floor")
 
 
+# The terminal scalar factor in the uniform two-by-two weight-support proof.
+# These exact polynomial controls exercise every endpoint k=1 as well as
+# several genuinely unequal ladders; the theorem gives the UFD derivation for
+# arbitrary n,k.
+Afac, Bfac, Lfac, Mfac = sp.symbols("Afac Bfac Lfac Mfac")
+h_test = u * (u + 1) * (u**2 + u + 2)
+K_test = u**2 + 2 * u + 3
+for n in range(2, 7):
+    for k in range(1, 6):
+        upper = n * (k - 1) + 1
+        f_test = Afac * h_test
+        g_test = Bfac * h_test**k
+        F_test = Lfac * K_test**upper
+        G_test = Mfac * K_test
+        scalar_row = (
+            sp.diff(f_test, u) * G_test
+            + n * f_test * sp.diff(G_test, u)
+            - n * k * sp.diff(F_test, u) * g_test
+            - upper * F_test * sp.diff(g_test, u)
+        )
+        terminal_factor = (
+            K_test * sp.diff(h_test, u)
+            + n * h_test * sp.diff(K_test, u)
+        ) * (
+            Afac * Mfac
+            - k * upper * Lfac * Bfac * K_test ** (upper - 1)
+            * h_test ** (k - 1)
+        )
+        zero(scalar_row - terminal_factor,
+             f"n={n},k={k}: two-weight terminal factorization")
+        gate(sp.degree(K_test * sp.diff(h_test, u)
+                       + n * h_test * sp.diff(K_test, u), u) >= 1,
+             f"n={n},k={k}: two-weight first factor nonconstant")
+
+
 # ---------------------------------------------------------------------------
 # Minimal member n=2: exact primitive and two-bracket collapse.
 # ---------------------------------------------------------------------------
@@ -159,6 +194,104 @@ A_left = -w2 * p2
 A_right = 6 * x * p2
 zero(jacobian(A_left, x) + jacobian(A_right, z2) - 1,
      "minimal two-bracket collapse")
+
+
+# ---------------------------------------------------------------------------
+# Natural finite cubic control A=p, C=x+y on B_2.
+# ---------------------------------------------------------------------------
+
+Xtar, Ptar, Ctar, Wtar = sp.symbols("Xtar Ptar Ctar Wtar")
+C2 = sp.expand(x + y2)
+w_source = sp.expand(z2 - 1)
+finite_cubic = (
+    Xtar**3 - 2 * Ctar * Xtar**2
+    + (Ctar**2 - Ptar - Ptar**3) * Xtar + Ptar * Ctar
+)
+zero(finite_cubic.subs({Xtar: x, Ptar: p2, Ctar: C2}),
+     "natural finite cubic equation")
+zero(p2 * y2 + x * y2**2 - x * p2**3,
+     "natural finite cubic precursor identity")
+zero(z2**2 - z2 - x**2 * p2,
+     "natural finite cubic integral z equation")
+zero(sp.together(z2 - (1 + x * (C2 - x) / p2)),
+     "natural finite cubic generic recovery of z")
+
+# The p=1 specialization has no constant or affine polynomial root.  The
+# displayed coefficient rows are the exact exhaustive degree-at-most-one
+# comparison used in the proof.
+aroot, broot = sp.symbols("aroot broot")
+specialized_root = sp.Poly(
+    finite_cubic.subs({Ptar: 1, Xtar: aroot * Ctar + broot}), Ctar
+)
+zero(specialized_root.coeff_monomial(Ctar**3)
+     - aroot * (aroot - 1)**2,
+     "finite cubic affine-root top coefficient")
+zero(specialized_root.as_expr().subs(aroot, 1)
+     - (Ctar * (broot**2 - 1) + broot**3 - 2 * broot),
+     "finite cubic affine-root endpoint")
+gate(sp.Poly(finite_cubic.subs({Ptar: 1, Xtar: broot}), Ctar)
+     .coeff_monomial(Ctar**2) == broot,
+     "finite cubic constant-root C2 coefficient")
+
+# Exact free normal basis {1,x,w}, w=z-1, and its discriminant/index ledger.
+zero(x**2 - (C2 * x - p2 * w_source),
+     "finite cubic free basis x2 row")
+zero(x * w_source
+     - (C2 * w_source + C2 - (1 + p2**2) * x),
+     "finite cubic free basis xw row")
+zero(w_source**2
+     - (p2 * C2 * x - (1 + p2**2) * w_source),
+     "finite cubic free basis w2 row")
+
+Mx = sp.Matrix([
+    [0, 0, Ctar],
+    [1, Ctar, -(1 + Ptar**2)],
+    [0, -Ptar, Ctar],
+])
+Mw = sp.Matrix([
+    [0, Ctar, 0],
+    [0, -(1 + Ptar**2), Ptar * Ctar],
+    [1, Ctar, -(1 + Ptar**2)],
+])
+trace_basis = [sp.eye(3), Mx, Mw]
+normal_discriminant = sp.factor(sp.Matrix([
+    [sp.trace(left * right) for right in trace_basis]
+    for left in trace_basis
+]).det())
+Delta2 = (
+    4 * Ctar**4 * Ptar - 8 * Ctar**2 * Ptar**4
+    + 20 * Ctar**2 * Ptar**2 + Ctar**2
+    + 4 * Ptar**7 + 12 * Ptar**5 + 12 * Ptar**3 + 4 * Ptar
+)
+zero(normal_discriminant - Delta2,
+     "finite cubic normal-basis discriminant")
+zero(sp.discriminant(finite_cubic, Xtar) - Ptar**2 * Delta2,
+     "finite cubic monogenic index-square discriminant")
+gate(Delta2.subs(Ptar, 0) == Ctar**2,
+     "finite cubic p=0 is generically unramified")
+
+# All three p=0,C!=0 normalization addresses satisfy the specialized table.
+fiber_rows = [
+    Xtar**2 - Ctar * Xtar + Ptar * Wtar,
+    Xtar * Wtar - Ctar * Wtar - Ctar + (1 + Ptar**2) * Xtar,
+    Wtar**2 - Ptar * Ctar * Xtar + (1 + Ptar**2) * Wtar,
+]
+for address in ((0, -1), (Ctar, -1), (Ctar, 0)):
+    for row in fiber_rows:
+        zero(row.subs({Ptar: 0, Xtar: address[0], Wtar: address[1]}),
+             "finite cubic p=0 normalization address")
+
+R2 = sp.expand(x * (2 * z2 - 1) + y2)
+J2 = sp.factor(jacobian(p2, C2))
+zero(x * J2 + R2, "finite cubic bracket numerator")
+zero(J2 + t * (t**2 + 2) * x**2 + t**2 + 1,
+     "finite cubic irreducible source ramification equation")
+gate(sp.rem(t**2 + 1, t, domain=sp.QQ) == 1,
+     "finite cubic ramification nonsquare odd t valuation")
+zero(R2 - x * ((2 * z2 - 1) + p2**2 / z2),
+     "finite cubic L1 residual factor")
+gate(sp.factor(J2.subs(x, 0)) == -(1 + t**2),
+     "finite cubic residual ramification meets L1")
 
 
 # ---------------------------------------------------------------------------
@@ -336,10 +469,11 @@ summary = {
     "exact_volume": "beta=-dz/((n-1)x^(n-1)) is regular and d beta=dx wedge dt",
     "grading": "B_-k=x^-k u^ceil(k/n)(u+1)^ceil(k/(n+1)) k[u]",
     "collapse": "all higher top generators give the same B_n",
-    "brackets": "constant has bracket length at most two; homogeneous pair impossible",
+    "brackets": "constant has bracket length at most two; every two-by-two weight support impossible",
     "rational_pair": "P=u(u+1)/((n-1)(1+2u)^2); Q=(1+2u)^3/x^(n-1)",
+    "finite_cubic": "B_2 finite free rank3 over k[p,x+y], normal basis 1,x,z-1; residual interior ramification",
     "minimal_search": "dims 1,5,14,28,47; linear ideal [1]; 7033 sparse rows have no F4 mate",
-    "scope": "positive completion passport; polynomial Darboux pair and finiteness open",
+    "scope": "positive completion passport; natural finite cubic non-Keller; finite Keller pair open",
 }
 semantic = hashlib.sha256(json.dumps(summary, sort_keys=True).encode()).hexdigest()
 
@@ -352,9 +486,10 @@ print("CANONICAL=DIV_SOURCE_VOLUME_D;KAPPA_1")
 print("EXACT_VOLUME=BETA_MINUS_DZ_OVER_N_MINUS1_XN_MINUS1;RHO_0")
 print("TOP_GENERATORS=ALL_M_GE_2_COLLAPSE_TO_B_N")
 print("GRADING=EXACT_NEGATIVE_WEIGHT_U_AND_U_PLUS1_VALUATION_FLOORS")
-print("BRACKETS=LENGTH_AT_MOST_2;NO_HOMOGENEOUS_OR_CANONICAL_GENERATOR_PAIR")
+print("BRACKETS=LENGTH_AT_MOST_2;NO_TWO_BY_TWO_WEIGHT_SUPPORT_OR_CANONICAL_GENERATOR_PAIR")
 print("RATIONAL_COMPRESSION=J_P_Q_1;DENOMINATORS_X_AND_2Z_MINUS1")
+print("FINITE_CUBIC=B2_FREE_RANK3_OVER_K_P_X_PLUS_Y;NORMAL_NONMONOGENIC;INTERIOR_RAMIFICATION")
 print("MINIMAL_FILTRATION_DIMS=1,5,14,28,47")
 print("MINIMAL_SEARCH=ARBITRARY_LINEAR_EMPTY;7033_LOW_SPARSE_ROWS_NO_F4_MATE")
-print("CONCLUSION=POSITIVE_COMPLETION_PASSPORT;POLYNOMIAL_DARBOUX_AND_FINITE_MAP_OPEN")
+print("CONCLUSION=POSITIVE_COMPLETION_PASSPORT;NATURAL_FINITE_CUBIC_NONKELLER;FINITE_KELLER_MAP_OPEN")
 print(f"SEMANTIC_SHA256={semantic}")

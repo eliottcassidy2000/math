@@ -12,11 +12,13 @@ status: >
   completion invoices simultaneously. Every higher top-generator variant
   collapses to the same B_n. The constant has bracket length at most two,
   and an exact rational one-bracket compression has only the divisors x and
-  2z-1 in its denominators. Homogeneous pairs, each canonical generator,
-  every generator-linear pair, and 7033 sparse low-filtration rows have no
-  polynomial mate. A polynomial Darboux pair and finite cubic target map
-  remain OPEN; no Jacobian counterexample is claimed.
-source: jc-zero-debt-lift + jc-degree6-one-place + root / post-THM-3971 residue-cancellation design, 2026-08-24
+  2z-1 in its denominators. Homogeneous pairs, every pair with at most two
+  weights in each entry, each canonical generator, every generator-linear
+  pair, and 7033 sparse low-filtration rows have no polynomial mate. On the
+  minimal member, (p,x+y) does give a finite degree-three polynomial map,
+  but it has a genuine ramification curve inside the affine-plane open. A
+  finite Keller map remains OPEN; no Jacobian counterexample is claimed.
+source: jc-zero-debt-lift + jc-degree6-one-place + jc-extra-debt-local + root / post-THM-3971 residue-cancellation design, 2026-08-24
 depends_on:
   - THM-3922-affine-plane-open-boundary-basis-class-group-obstruction
 related:
@@ -26,9 +28,9 @@ related:
   - THM-3972-simple-collision-affine-p-graph-blowup-normalization
 script: 04-computation/jc2_exact_volume_simple_cubic_completion_thm3973.py
 output: 05-knowledge/results/jc2_exact_volume_simple_cubic_completion_thm3973.out
-script_sha256: c0b9f024a33e629a49d7f816df4dd26f03cc93ef36a8fab67c8bca4febd9269b
-output_sha256: 8c0d2e6ab2d3a2695c0a6ecb184c31ed9aab22c830d89974ff2c00282c7670d5
-semantic_sha256: 6674f41354cb93ced1324905338268d55dba40242bc789fb889aeeca099bda9b
+script_sha256: fbebc1a411a327a22adf5506076a79eecb53ce99772eb0c91c7932ea7dc6853b
+output_sha256: b35754432aaf8d8701b6073d81a38bc7e0dbb3d8681d0e24a747fc6678f8085b
+semantic_sha256: 5cc1d20b2c19afbc97bd3f5233de9bf05a440622313cb1332dadbc91db00abf5
 hash_basis: raw LF bytes
 ---
 
@@ -70,7 +72,9 @@ This is the first family in the present search that simultaneously passes
 the affine-plane boundary, primitive class-group basis, simple `(2,1)`
 cubic canonical-different, and exact-volume gates. It is a positive
 completion **passport**, not yet a counterexample: no polynomial pair
-`A,C in B_n` with `J_(x,t)(A,C)=1`, and no finite target map, is constructed.
+`A,C in B_n` with `J_(x,t)(A,C)=1` is constructed. Section 8 gives a
+natural finite cubic map on `X_2`, but proves that it is ramified on the
+affine-plane open.
 
 ## 1. Exact determinantal presentation
 
@@ -344,6 +348,100 @@ and degree at least one. It cannot be the constant one. Therefore:
 no two homogeneous elements of B_n form a Darboux pair.  (36)
 ```
 
+### 6.1. Uniform two-by-two weight-support closure
+
+The homogeneous obstruction extends to every pair having at most two
+weights in each entry. Remove additive scalars, and suppose first that only
+one pair of homogeneous summands contributes to scalar weight. That pair's
+bracket would itself be the nonzero constant, contradicting `(36)`. Thus a
+putative two-by-two pair has two scalar contributors. Ordering the weights
+and using the vanishing of the unique lowest and highest bracket weights
+puts it, after exchanging the entries if necessary, in the cross form
+
+```text
+P=x^-R f(u)+x^(T+1-n)F(u),
+Q=x^-T g(u)+x^(R+1-n)G(u),                              (36a)
+```
+
+with `R,T>=n-1`. Here is the small sign point behind that last bound. A
+zero extreme bracket cannot pair a nonnegative weight with a negative one:
+at `u=0`, its initial coefficient is
+
+```text
+r ord_0(g)-s ord_0(f),                                  (36b)
+```
+
+which has strict sign. A weight-zero coefficient gives the same conclusion
+unless it is a scalar, already removed. If both upper weights were negative,
+all four coefficients would contain `u(u+1)` and the scalar row could not be
+one. Hence both upper weights in `(36a)` are nonnegative.
+
+The negative-piece formula `(29)` now makes the scalar row decisive. The
+cross bracket between weights `-R` and `R+1-n` can be nonzero at `u=0` only
+if `ord_0(f)=1`, `ord_0(G)=0`, and its derivative multiplier
+`R+1-n` is nonzero. Since
+
+```text
+ord_0(f)>=ceil(R/n),                                    (36c)
+```
+
+this forces `R=n`; the apparent endpoint `R=n-1` contributes zero because
+that multiplier vanishes and the remaining term is still divisible by
+`f`. Symmetrically, the other scalar bracket can be nonzero only for `T=n`.
+Since the two scalar brackets sum to one, at least one alternative occurs.
+
+Assume `R=n`. The lowest and highest non-scalar weights give the two
+Wronskian equations
+
+```text
+T f'g=n fg',
+[n(k-1)+1]FG'=F'G,                                     (36d)
+```
+
+after the following forced notation. The first equation and unique
+factorization give
+
+```text
+T=nk,       f=A h,       g=B h^k,       A,B in k^*,     (36e)
+```
+
+because the scalar row forces `f` to have a simple zero at `u=0`.
+If both `R=T=n`, the scalar row forces at least one of `f,g` to be simple,
+and the first Wronskian makes them scalar multiples, so the same conclusion
+holds for `f`.
+Formula `(29)` at weight `-n` also forces
+
+```text
+u(u+1) divides h,             deg(h)>=2.                (36f)
+```
+
+The upper weights are `n(k-1)+1` and `1`; the second Wronskian in `(36d)`
+therefore gives
+
+```text
+F=L K^(n(k-1)+1),        G=M K                          (36g)
+```
+
+with nonzero scalar factors. Up to the harmless global bracket sign, the
+remaining scalar coefficient factors exactly as
+
+```text
+(K h'+n h K')
+ [A M-k(n(k-1)+1)L B K^(n(k-1))h^(k-1)].                (36h)
+```
+
+The first factor has leading coefficient multiplier
+`deg(h)+n deg(K)>0` and degree `deg(h)+deg(K)-1>=1`; hence `(36h)` cannot be
+the constant one. The case `T=n` is symmetric. Consequently
+
+```text
+no Darboux pair on B_n has at most two weights in each entry. (36i)
+```
+
+This closes the complete two-by-two support cell for every `n>=2`. Larger
+two-by-three, three-by-two, and genuinely wider supports remain outside the
+claim here.
+
 The four canonical generators also have no mate even against an arbitrary
 inhomogeneous polynomial. Weight separation reduces the only potentially
 constant component to the following exact rows.
@@ -451,7 +549,133 @@ The exact remaining debts are visible: `P` has a pole on `w=0`, where
 `B_n`. Any successful polynomial compression must absorb these two
 divisors without restoring a boundary unit or a critical curve.
 
-## 8. Minimal bounded search and finiteness protocol
+## 8. A natural finite cubic and its residual ramification
+
+The minimal member already meets the finiteness invoice, although not the
+Keller invoice. On `B_2` set
+
+```text
+A=p,                         C=x+y.                       (F1)
+```
+
+The determinantal relations imply
+
+```text
+py+xy^2=xp^3.                                             (F2)
+```
+
+Substitution of `y=C-x` gives the monic equation
+
+```text
+x^3-2Cx^2+(C^2-p-p^3)x+pC=0.                            (F3)
+```
+
+Thus `x` and `y=C-x` are integral over `k[p,C]`; so is `z`, by
+
+```text
+z^2-z-x^2p=0.                                            (F4)
+```
+
+Consequently `B_2` is finite over `k[p,C]`. Generically,
+
+```text
+z=1+x(C-x)/p,                                            (F5)
+```
+
+so its fraction field is generated by `x`. The cubic `(F3)` is
+irreducible. Indeed, a reducible monic cubic over the integrally closed UFD
+`k[p,C]` would have a root in that ring. Specializing `p=1` would give a
+polynomial root of
+
+```text
+X(C-X)^2+C-2X.                                           (F6)
+```
+
+Such a root has `C`-degree at most one, since for degree at least two its
+cubic term has uniquely maximal degree. A constant root is ruled out by
+the `C^2` and `C` coefficients. For `X=aC+b`, the `C^3` coefficient is
+`a(a-1)^2`; the remaining case `a=1` gives
+
+```text
+(b^2-1)C+(b^3-2b),                                      (F7)
+```
+
+which cannot vanish. Hence `(F1)` is finite of generic degree three.
+
+This finite algebra is already the full normal order, and it has a useful
+nonmonogenic basis. Put `w=z-1`. The exact multiplication table on
+`{1,x,w}` is
+
+```text
+x^2=Cx-pw,
+xw=Cw+C-(1+p^2)x,
+w^2=pCx-(1+p^2)w.                                      (F7a)
+```
+
+It shows that the `k[p,C]`-span of `{1,x,w}` is a subalgebra containing all
+four generators. The three rows are generically independent because
+`w=(Cx-x^2)/p` and `(F3)` is the minimal polynomial of `x`. Thus
+
+```text
+B_2=k[p,C] direct-sum k[p,C]x direct-sum k[p,C]w          (F7b)
+```
+
+is finite free of rank three. Since `B_2` is normal, it is the integral
+closure of `k[p,C]` in the cubic field. The change from `{1,x,w}` to the
+monogenic rows `{1,x,x^2}` has determinant `-p`, and correspondingly
+
+```text
+Disc(F3)=p^2 Delta_2,
+Delta_2=4C^4p-8C^2p^4+20C^2p^2+C^2
+        +4p^7+12p^5+12p^3+4p.                           (F7c)
+```
+
+Here `Delta_2` is the discriminant of the normal basis `(F7b)`. At generic
+`p=0`, it equals `C^2!=0`, and the three normalization points are
+
+```text
+(x,w)=(0,-1), (C,-1), (C,0).                            (F7d)
+```
+
+Thus the factor `p^2` in the cubic polynomial discriminant is index debt,
+not branch: the natural completion is genuinely nonmonogenic along that
+line.
+
+It is not Keller. Directly,
+
+```text
+x J(p,x+y)=-R,                R=x(2z-1)+y,               (F8)
+J(p,x+y)=-[t(t^2+2)x^2+(t^2+1)].                        (F9)
+```
+
+The last polynomial is irreducible in `k[x,t]`: as a quadratic in `x`,
+reducibility would make `-(t^2+1)/(t(t^2+2))` a square in `k(t)`, contrary
+to its odd valuation at `t=0`. Let `E` be the closure of this reduced prime
+curve. There are two reduced components of `V(x)`,
+
+```text
+D=V(x,z,p),                 L_1=V(x,z-1,y),
+div_X2(x)=D+L_1.                                           (F10)
+```
+
+On `L_1`, use `y=xp^2/z` to obtain
+
+```text
+R=x[(2z-1)+p^2/z],          J|L_1=-(1+p^2).              (F11)
+```
+
+Since `R|D=y` generically, no boundary component occurs in `div(R)`, and
+
+```text
+div_X2(R)=L_1+E,             div_X2(J)=E-D.              (F12)
+```
+
+Together with `div(eta)=D`, this says `div(dp wedge dC)=E`. In particular,
+`E intersect U` is a nonempty interior ramification curve (it meets `L_1`
+at `p^2=-1`). The map `(F1)` is therefore the exact positive finiteness
+control and the exact hostile for Keller etaleness.
+
+## 9. Minimal bounded search
 
 There is an exact all-parameter submersion obstruction before the bounded
 mate search. On `B_2`, every generator-linear function whose restriction to
@@ -532,19 +756,19 @@ tested `A` rows and no survivor. The calculation uses exact integer ranks;
 there is no finite-field inference. It is only a hostile cutoff and is not
 used to infer the open all-degree claim.
 
-If a future pair survives, it becomes a planar counterexample only after
-the usual two checks. First, it is already nonautomorphic if its entries lie
-in `B_n`: since `ord_D(t)=-n`, one has `t notin B_n`, whereas an automorphic
-pair would force `k[A,C]=k[x,t] subset B_n`. Second, to realize `X_n` as the
-actual finite normal completion one must additionally prove
+If a future Darboux pair survives, it becomes a planar counterexample only
+after the usual two checks. First, it is already nonautomorphic if its
+entries lie in `B_n`: since `ord_D(t)=-n`, one has `t notin B_n`, whereas an
+automorphic pair would force `k[A,C]=k[x,t] subset B_n`. Second, to realize
+`X_n` as the actual finite normal completion one must additionally prove
 
 ```text
 B_n is finite over k[A,C].                                (53)
 ```
 
 For a concrete survivor, `(53)` is an exact elimination/integrality test on
-the four generators. The present census has no survivor, so no vacuous
-finiteness claim is made.
+the four generators. The pair `(F1)` proves that finiteness itself is
+achievable; `(F8)--(F12)` locate exactly why that pair is not Keller.
 
 Reproduce with
 
@@ -553,9 +777,9 @@ python3 04-computation/jc2_exact_volume_simple_cubic_completion_thm3973.py
 python3 -O 04-computation/jc2_exact_volume_simple_cubic_completion_thm3973.py
 ```
 
-Both runs must print `CHECKS=7415` and byte-match the frozen output.
+Both runs must print `CHECKS=7492` and byte-match the frozen output.
 
-## 9. Exact scope and next design gate
+## 10. Exact scope and next design gate
 
 THM-3973 does **not** construct a Keller pair. It proves that the coarse
 completion invoices which killed the preceding candidates are mutually
@@ -566,7 +790,8 @@ one rational unibranch A1 boundary,
 primitive free boundary class,
 simple-cubic canonical vector,
 exact source volume,
-constant bracket length at most two.                       (54)
+constant bracket length at most two,
+a finite free nonmonogenic cubic target map.               (54)
 ```
 
 The sibling graph blowup in THM-3972 has a related abstract completion
@@ -577,5 +802,6 @@ their marked pole/key data differ and require a separate comparison.
 The next positive gate is now sharply localized: either compress `(44)`
 polynomially, or deform the rational pair `(45)` so that the `x` and `w`
 denominators are absorbed while `(2)--(6)` survive. Arbitrary multigraded
-pairs and the finiteness row `(53)` remain **OPEN**, as does `JC(2)`.
+pairs beyond the two-by-two cell, and finiteness for any future Darboux
+pair, remain **OPEN**, as does `JC(2)`.
 **QED.**
