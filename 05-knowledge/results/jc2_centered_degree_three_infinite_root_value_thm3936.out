@@ -1,0 +1,11 @@
+THM-3936 centered infinite-root-value exact companion
+CHECKS=65
+SCOPE=centered trace-zero linear-color degree-three;t(infinity)=infinity
+POLE_ROWS=A:e2-simple;B:e3-simple;C:e3-double;D:e2+e2-simple
+ROW_A=p=1;k!=0;quintic;at-least-two-address fibre (-k,0)
+ROW_B=p=0;k!=0;quintic;three-address fibre (-k,0)
+ROW_C=p=0;k!=0;septic;three-address fibre (-k,0)
+ROW_D=q+k+2=0;q*k!=0;septic;three-address fibre (-2q-2,0)
+BRANCH=each implicit H has discriminant exponent one;genuine tame e=2
+CONCLUSION=source ramification component non-unibranch;no A2 Keller open
+SEMANTIC_SHA256=12141212df57e3d3e67e9a206682b64e0c2cbf64198096c4c57c4196f5c37adb

@@ -2,7 +2,7 @@
 id: THM-3935
 title: "Linear-conic resolvent has class group Z/3 and a unique cubic character"
 status: >
-  PROVED CANDIDATE + VERIFIED-EXACT; INDEPENDENT HOSTILE AUDIT PENDING.
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.
   The normal quadratic resolvent of the THM-3932 fold-three sextic has scalar
   units and class group Z/3.  Its natural Cardano divisor is the generator,
   not one of several local three-torsion directions.  Consequently the
@@ -10,6 +10,18 @@ status: >
   codimension-one unramified) C3 character up to inversion, and it recovers
   the already monogenic THM-3932 cubic.
 source: jc_degree6_one_place / post-THM-3932 global resolvent audit, 2026-08-23
+audit: >
+  INDEPENDENT HOSTILE AUDIT PASS (root and infinity_component_conic,
+  2026-08-23). The audit independently reconstructed the uniform closed-fibre
+  square obstruction and Weil localization sequence, an explicit inverse to
+  the quartic-to-Weierstrass map, both infinity sections and their difference
+  3Q, the I3* spin-tip correction and Mordell--Weil determinant, and the
+  scalar-unit calculation. It repaired the omitted q=0 singular row and made
+  purity and S3 descent explicit. It also separated Pic(S)=H1_et(S,mu3)=0
+  from Pic(Sreg)=H1_et(Sreg,mu3)=Z/3 by checking the Cardano prime is reflexive
+  but two-generated at the isolated singularity. The 53-gate companion
+  byte-matches in normal and optimized mode; raw and semantic hashes and
+  documentation checks pass.
 depends_on:
   - THM-3932-infinity-component-linear-conic-torus-sextic-fold-classification
 related:
@@ -19,15 +31,15 @@ related:
   - THM-3934-infinity-component-sextic-unique-reduced-splitting-conic
 script: 04-computation/jc2_linear_conic_resolvent_class_unique_character_thm3935.py
 output: 05-knowledge/results/jc2_linear_conic_resolvent_class_unique_character_thm3935.out
-script_sha256: 540eaf16f84fb591a71ce9b4b90bded327c3f3859fe25af8c959e3d1d3ff92fc
-output_sha256: 64c1d5cf4ba5db29d2feb8637ef949d95e12bfb76a9dc2f41c033669a8a6928d
-semantic_sha256: 78637dc5f57a2d03587228ec7dbd89f47ce2144e234f7ab25ee74b750fb53d6d
+script_sha256: 61c59e636d9122bf6118ec59df962169b5bee80e171d975ac73ed29cd6361096
+output_sha256: 4a68ab996bd24301194c351572a7b8cd846ca9f51318fb0e1c086d0ebee36c0a
+semantic_sha256: df63f1e9b60d0385c3f736b11c51493520a4115efb27206586208398bb481798
 hash_basis: raw LF bytes
 ---
 
 # THM-3935 -- the local four-line choice collapses to one global character
 
-**PROVED CANDIDATE + VERIFIED-EXACT; INDEPENDENT HOSTILE AUDIT PENDING.**
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.**
 Work over an algebraically closed field `k` of characteristic zero.  Put
 
 ```text
@@ -61,11 +73,12 @@ In particular, the order-three class exhibited in THM-3932 is the entire
 global three-primary supply.  If `Sreg` is the smooth locus, then
 
 ```text
-H^1(Sreg,mu_3)=Z/3.                                       (5)
+Pic(S)=0,                 H^1_et(S,mu_3)=0,
+Pic(Sreg)=Z/3,            H^1_et(Sreg,mu_3)=Z/3.           (5)
 ```
 
-The two nonzero characters are inverse generators of the same cyclic cover.
-That cover is precisely the natural Cardano cover
+The two nonzero smooth-locus characters are inverse generators of the same
+cyclic cover.  That cover is precisely the natural Cardano cover
 
 ```text
 z^3=(q+W)/2,        v^3=(q-W)/2,        zv=X,             (6)
@@ -97,8 +110,10 @@ The equation in `(1)` is irreducible.  Its partial derivatives are
 
 Together with the surface equation they vanish only at the origin.  Indeed,
 the `X=0` row forces `t=0`; in the `t=0`, `X!=0` row equation `(8)` forces
-`X=3`, which does not lie on `H=0`.  Thus this irreducible hypersurface is
-regular in codimension one and Cohen--Macaulay, hence normal by `R1+S2`.
+`X=3`, which does not lie on `H=0`.  In the remaining `t!=0`, `q=0` row,
+the `X` derivative becomes `12X^2`, so `X=0` and then `q=t^3=0`, again a
+contradiction.  Thus this irreducible hypersurface is regular in codimension
+one and Cohen--Macaulay, hence normal by `R1+S2`.
 
 Let `K=k(t)` and let `C=S_K`.  Every closed fibre of `S -> A1_t` is
 irreducible.  With `T=lambda^3`, its quartic is
@@ -308,14 +323,45 @@ order of `Q`.  Hence `C*=K*`.  Returning to the unit end of `(11)`, an element
 of `K*` having valuation zero at every `V_lambda` is a scalar.  Therefore
 `B*=k*`, completing `(2)`.
 
-## 5. The sole global cubic character
+## 5. Cartier failure at the origin and the sole smooth-locus character
 
-Let `U=Sreg`.  Normality gives `Gamma(U,O_U)=B`, and Weil divisors give
-`Pic(U)=Cl(B)`.  Since `k*` is cube-divisible, the Kummer sequence and `(2)`
-give
+The distinction between `S` and its smooth locus is essential.  Let
 
 ```text
-H^1(U,mu_3)=Cl(B)[3]=Z/3.                                (30)
+I=(X,q+W),                                                (30)
+```
+
+the divisorial ideal of `D+`.  The quotient `B/I=k[t]` is Cohen--Macaulay.
+Since `B` is a two-dimensional Cohen--Macaulay hypersurface, the depth lemma
+makes `I` maximal Cohen--Macaulay and hence reflexive.  At the singular origin
+`O`, however, its two displayed generators have independent linear initials
+
+```text
+X, W in m_O/m_O^2.
+```
+
+Equivalently, their classes in `I_O/m_O I_O` are independent, so `I_O` needs
+two generators and is not principal or invertible.  Thus the generator of
+`Cl(B)=Z/3` is not Cartier.  Its inverse cannot be Cartier either, since that
+would make the generator Cartier.  Therefore
+
+```text
+Pic(S)=0.                                                 (31)
+```
+
+Together with `B*=k*` and cube-divisibility of `k*`, the Kummer sequence on
+`S` gives
+
+```text
+H^1_et(S,mu_3)=0.                                        (32)
+```
+
+Now let `U=Sreg`.  Normal Hartogs gives `Gamma(U,O_U)=B`, while restriction
+across the codimension-two singular set gives `Pic(U)=Cl(B)`.  The Kummer
+sequence on `U` therefore gives
+
+```text
+H^1_et(U,mu_3)=Cl(B)[3]=Z/3.                              (33)
 ```
 
 The deck involution `W |-> -W` swaps `D+` and `D-`, so it acts by `-1` on
@@ -326,25 +372,38 @@ roots gives exactly `(6)-(7)`.
 Now take a normal generically `S3` cubic completion having exactly this
 squarefree discriminant and quadratic resolvent.  Over `U`, quadratic base
 change kills the tame transpositions along the branch and leaves a connected
-finite etale `C3` cover.  By `(30)` its character is the Cardano character or
-its inverse.  Those two choices define the same cyclic extension, so the
-Galois closure and its cubic subfield are forced.  THM-3932 proves that the
-normal integral closure in this field is the monogenic order `(7)`.  A
-different nonprincipal resolvent ideal therefore cannot create a second
-normal nonmonogenic cubic order with this exact branch.
+codimension-one-unramified `C3` cover.  Since `U` is regular, purity makes its
+normalization finite etale.  By `(33)` its character is the Cardano character
+or its inverse, and those two choices define the same cyclic extension.
+
+For completeness, let `sigma` generate its `C3` group and let `g` lift the
+quadratic deck involution.  The `S3` descent relation is
+`g sigma g^-1=sigma^-1`.  Since `g^2` lies in `C3` and is fixed by conjugation
+with `g`, inversion forces `g^2=1`.  The three lifts `sigma^b g` are conjugate:
+conjugation by `sigma^c` replaces `g` by `sigma^(2c)g`, and two is invertible
+modulo three.  Their fixed cubic fields are therefore `K`-isomorphic.  Thus
+the Galois closure and cubic field are forced.  THM-3932 proves that the normal
+integral closure in this field is the monogenic order `(7)`.  A different
+nonprincipal resolvent ideal cannot create a second normal nonmonogenic cubic
+order with this exact branch.
+
+Thus the Cardano cover is quasi-etale over `S`: it is etale in codimension one
+and a genuine torsor over `Sreg`, but it does not extend to an etale torsor
+across `O`.  Equation `(32)` is the exact obstruction to confusing the local
+Weil class with a Cartier class on the singular affine surface.
 
 ## 6. Local abundance versus global scarcity
 
 At the origin the weighted initial equation is
 
 ```text
-W^2+4X^3-t^6=0,                                          (31)
+W^2+4X^3-t^6=0,                                          (34)
 ```
 
 the simple elliptic `E~8` singularity.  Its weighted exceptional curve is the
 `j=0` elliptic curve `W^2=t^6-4X^3` in `P(2,1,3)`, and the deck involution acts
 as `[-1]`.  Locally its four lines in `E[3]` suggest four possible cyclic
-directions.  Equations `(2)` and `(30)` show what the local picture forgets:
+directions.  Equations `(2)` and `(33)` show what the local picture forgets:
 only the natural Cardano line globalizes to an affine Weil class.  The other
 three local directions die in the global vertical/infinity ledger.
 
@@ -357,11 +416,12 @@ python3 04-computation/jc2_linear_conic_resolvent_class_unique_character_thm3935
 python3 -O 04-computation/jc2_linear_conic_resolvent_class_unique_character_thm3935.py
 ```
 
-checks 51 identities: irreducibility and singular support; the uniform fibre
+checks 53 identities: irreducibility and singular support; the uniform fibre
 square obstruction; the quartic-to-Weierstrass change; the finite and infinity
 fibre invariants; the two infinity addresses; the multiples of `Q`; the three
-blowups and `D7` inverse-Cartan correction; absence of two-torsion; and the
-Cardano product/recovery identities.  Both modes byte-match the frozen output.
+blowups and `D7` inverse-Cartan correction; absence of two-torsion; the two
+independent local generators of `D+`; and the Cardano product/recovery
+identities.  Both modes byte-match the frozen output.
 
 The proof would fail, rather than silently persist, in any of the following
 nearby settings:
@@ -373,6 +433,6 @@ nearby settings:
    `(28)`;
 4. a nonnormal cubic suborder need not equal the unique integral closure;
 5. changing branch multiplicities can make the quadratic base-changed cover
-   ramified on `U`, outside `(30)`.
+   ramified on `U`, outside `(33)`.
 
 These are scope boundaries, not unresolved gaps in the stated exact model.
