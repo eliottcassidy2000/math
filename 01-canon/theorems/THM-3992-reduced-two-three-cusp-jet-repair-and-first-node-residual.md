@@ -16,14 +16,17 @@ status: >
   with R in (p^2,y). The exact p=0 seam then leaves precisely two first-jet
   branches: [s]q0=0 gives a genuine depth-one square-root lift, while the
   unique nonliftable branch has [s]q0=a/gamma and [s^2]b=2a. This sharply
-  narrows but does not close the 2:3 cell.
+  narrows but does not close the 2:3 cell. In the liftable branch, the nodal
+  constant a blocks every simultaneous pure cube lift; instead there are
+  K,L in k[p,y], L in (p,y), with
+  (C-L)^2-A^3+(3/4)K^2*A+K^3/4=0.
 source: root + frontier_transfer_scout / Hopf repair-quotient transfer, 2026-08-24
 audit: >
   PASS (root, 2026-08-24). The proof was independently checked from the full
   Laurent convolution law. The companion script separately expands the
   Laurent Jacobian, verifies every row and factorization, and passes the cusp,
-  node, first-seam, and nonliftable partial-row controls. Normal and optimized
-  executions are byte-identical.
+  node, first-seam, nonliftable partial-row, cube-lift-torsor, and moving-node
+  controls. Normal and optimized executions are byte-identical.
 depends_on:
   - THM-3989-cusp-log-laurent-conductor-and-nondividing-depth-reduction
 related:
@@ -32,8 +35,8 @@ related:
   - THM-3990-componentwise-harmonic-obstruction-and-repair-quotient
 script: 04-computation/jc2_reduced_23_cusp_jet_repair_thm3992.py
 output: 05-knowledge/results/jc2_reduced_23_cusp_jet_repair_thm3992.out
-script_sha256: e3f066043fce6881bfb21b1964a57e324706d6b2b94c113b8f850df512545ef2
-output_sha256: 104c26b1285745972ad4f4ff43bc4792a0960f304dd6dc01ee7d145072743f24
+script_sha256: dcb70a477f5bda8d9ef249f5fb45b5be9f13e38d4a3bb3759579d9f4ca25d96c
+output_sha256: 1c102f8fa6c2be95acbc190f0216ca1424cce5e4577eea08ede2c424631fc74c
 hash_basis: raw LF bytes
 ---
 
@@ -451,6 +454,102 @@ first-coordinate remainder called `F` in THM-3989's simple-base slice.
 Accordingly their two displayed `F_p(0,0)` formulas have different types and
 do not conflict.
 
+### 5.2 The liftable branch is nodal, never a simultaneous pure cube
+
+Retain `eta=0` and let `H` be the lift from `(39f)`. Put
+
+```text
+rho:k[p,y] -> k[s^2,s^3],       rho(K)=K(s^2,s^3),
+Delta=p^3-y^2=tau*p^2.                                  (39j)
+```
+
+Write
+
+```text
+H=h*tau^-1+q0+z*tau+O(tau^2),
+K=A-H^2 in P_0,                  kappa=rho(K).            (39k)
+```
+
+Then `kappa=A0-q0^2-2hz`. The normalized coefficient in `(9)` and the cube
+of `H` give
+
+```text
+[tau^-1]C=(3/2)h(q0^2+A0),
+[tau^-1]H^3=3h q0^2+3h^2z,
+[tau^-1](C-H^3)=(3/2)h*kappa.                           (39l)
+```
+
+The rows `tau^-3,tau^-2` already cancel. Since depth zero is exactly `P_0`,
+
+```text
+C-H^3 in P_0  iff  kappa=0  iff  K in Delta*P_0.        (39m)
+```
+
+For the last equivalence, divide any `F in k[p,y]` modulo `y^2-p^3` as
+`F=A(p)+yB(p)`. If `F(s^2,s^3)=0`, the even exponents from `A(s^2)` and odd
+exponents from `s^3B(s^2)` cannot cancel, so `A=B=0`. Hence
+`ker(rho)=(p^3-y^2)`.
+
+There is nevertheless an exact corrected lift:
+
+```text
+L=C-H^3-(3/2)K H in P_0.                                (39n)
+```
+
+Indeed, `KH` has only the possible negative row
+`[tau^-1](KH)=h*kappa`, which cancels `(39l)`. On `t=0`, one has
+`H=gamma*x`, `K=a`, and `C=H^3+(3a/2)H`; therefore `L(0,0)=0` and
+
+```text
+K in k[p,y],                 L in (p,y).                 (39o)
+```
+
+Eliminating `H` from `A=H^2+K` and `(39n)` gives the global identity
+
+```text
+(C-L)^2-A^3+(3/4)K^2 A+K^3/4=0.                        (39p)
+```
+
+It is a moving nodal family where `K!=0` and degenerates to the cusp where
+`K=0`; its deleted-line specialization is nodal because `K(0,0)=a!=0`.
+
+The obstruction does not depend on the chosen square lift. Any other lift
+with leading coefficient `h` has the same constant coefficient `q0`, so the
+depth-zero intersection and the kernel computation give uniquely
+
+```text
+H'=H+Delta*M,                    M in P_0.               (39q)
+```
+
+Conversely every such expression remains a square lift because `Delta*M`
+starts in row `tau^1`. Since
+
+```text
+[tau^1](Delta*M)=s^4*rho(M),
+kappa_(H+Delta*M)=kappa_H-2h*s^4*rho(M),                (39r)
+```
+
+the complete lift-independent obstruction is
+
+```text
+[kappa_H] in k[s^2,s^3]/s^5*k[s^2,s^3],                (39s)
+```
+
+whose monomial basis is `{1,s^2,s^3,s^4,s^6}`. Surjectivity of `rho` shows
+that `(39s)` vanishes exactly when some square lift is also a cube lift.
+
+But `H(x,0)=gamma*x` and `A(x,0)=gamma^2x^2+a`, so every square lift has
+
+```text
+kappa_H(0)=K(0,0)=a!=0.                                 (39t)
+```
+
+Thus no square lift with leading `h` is simultaneously a pure cube lift, and
+the first mismatch is `(3/2)gamma*a*s+O(s^3)`. The alternative square-leading
+sign `-h` is impossible as a common lift because its cube has leading
+coefficient `-h^3`, while `C` has `+h^3`. This proves the assertion for every
+possible common leading root.
+
 ## 6. The one-place cusp cotangent sidecar
 
 For the cusp ring and its normalization
@@ -493,7 +592,8 @@ The theorem does **not** prove:
 3. that the source term `gamma*x` can be removed by an allowed target repair;
 4. that `R in (p^2,y)` vanishes or is forced into a previously closed cell;
 5. that the two companion branches in `(39)` lie on one global component;
-6. that the lift in `(39f)` continues to a simultaneous square/cube root;
+6. that the nodal corrected form `(39n)` eliminates the `eta=0` branch or
+   continues through the positive Keller rows;
 7. that the reduced `(2,3)` cell is empty, or that `JC(2)` holds.
 
 The residual fifth-root normalization acts by
@@ -506,11 +606,12 @@ liftable/nonliftable split `(39e)`, and the **complete** oriented node-address
 graph. The roots of `(39)` enumerate only intersections with the known line
 `t=0`, not every source address over the target node. A two-owner split is not
 itself a boundary forest obstruction: THM-3951 concerns completion-boundary
-primes, whereas these pullback curves lie inside the source. One must test
-simultaneous cube lifting in the first seam branch, row-`-1` continuation in
-the second, further node addresses, and membership of the target node in the
-nonproper-value locus. A scalar resultant cannot replace those labels, as
-THM-3994 demonstrates. See MISTAKE-481.
+primes, whereas these pullback curves lie inside the source. Pure cube lifting
+is now excluded in the first branch by `(39t)`; the live tests are its nodal
+corrected positive rows, row-`-1` continuation in the second branch, further
+node addresses, and membership of the target node in the nonproper-value
+locus. A scalar resultant cannot replace those labels, as THM-3994
+demonstrates. See MISTAKE-481.
 
 Reproduce from the repository root:
 

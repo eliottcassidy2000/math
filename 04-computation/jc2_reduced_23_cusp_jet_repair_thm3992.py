@@ -306,6 +306,106 @@ assert_zero(
 )
 print("CONTROL: the eta=a0/gamma branch survives through row -2 but can fail row -1.")
 
+# In the eta=0 branch the square lift exists, but the nodal constant blocks
+# every simultaneous pure cube lift.  A common leading square/cube root cannot
+# use the alternative sign: gcd(eps^2-1,eps^3-1)=eps-1.
+eps = sp.symbols("eps")
+assert_zero(
+    "common square/cube leading sign is positive",
+    sp.gcd(eps**2 - 1, eps**3 - 1) - (eps - 1),
+)
+
+hg, qg, zg, k0 = sp.symbols("hg qg zg k0")
+H_generic = hg / tau + qg + zg * tau
+A0_generic = qg**2 + 2 * hg * zg + k0
+e_generic = sp.Rational(3, 2) * hg * (qg**2 + A0_generic)
+assert_zero(
+    "fixed square lift first cube mismatch",
+    e_generic
+    - sp.expand(H_generic**3).coeff(tau, -1)
+    - sp.Rational(3, 2) * hg * k0,
+)
+
+# The exact replacement is nodal: if K=A-H^2 is depth zero, subtracting
+# (3/2)K H kills the only possible negative row of C-H^3.
+k1, k2 = sp.symbols("k1 k2")
+K_generic = k0 + k1 * tau + k2 * tau**2
+C_negative = hg**3 / tau**3 + 3 * hg**2 * qg / tau**2 + e_generic / tau
+nodal_remainder = sp.expand(
+    C_negative - H_generic**3 - sp.Rational(3, 2) * K_generic * H_generic
+)
+for kk in range(-3, 0):
+    assert_zero(f"generic nodal correction row tau^{kk}", nodal_remainder.coeff(tau, kk))
+
+Xnode, Knode, Lnode = sp.symbols("Xnode Knode Lnode")
+Anode = Xnode**2 + Knode
+Cnode = Xnode**3 + sp.Rational(3, 2) * Knode * Xnode + Lnode
+assert_zero(
+    "global moving node identity",
+    (Cnode - Lnode) ** 2
+    - Anode**3
+    + sp.Rational(3, 4) * Knode**2 * Anode
+    + sp.Rational(1, 4) * Knode**3,
+)
+
+# Square lifts form the affine torsor H+Delta*P0, Delta=p^3-y^2=tau*p^2.
+# The tau^1 coefficient of Delta*M is s^4*rho(M), so for h=gamma*s the
+# cube obstruction is well-defined modulo s^5*k[s^2,s^3].
+Delta_log = sp.expand(p_log**3 - y_log**2)
+assert_zero("cusp equation Delta=tau*p^2", Delta_log - tau * p_log**2)
+assert_zero("pole cancellation x*Delta=p*y", x_log * Delta_log - p_log * y_log)
+for ipow in range(4):
+    for jpow in range(4):
+        M_log = p_log**ipow * y_log**jpow
+        rho_M = s ** (2 * ipow + 3 * jpow)
+        assert_zero(
+            f"square-lift torsor monomial ({ipow},{jpow})",
+            sp.expand(Delta_log * M_log).coeff(tau, 1) - s**4 * rho_M,
+        )
+
+# Three honest B2 controls: the boundary-node hostile, a fixed-lift positive,
+# and a torsor adjustment where H=x fails but H+Delta succeeds. None is Keller.
+a_node = sp.symbols("a_node", nonzero=True)
+H0 = x_log
+A_cube_hostile = x_log**2 + a_node
+C_cube_hostile = x_log**3 + sp.Rational(3, 2) * a_node * x_log
+assert_zero("eta0 hostile square remainder", A_cube_hostile - H0**2 - a_node)
+assert_zero(
+    "eta0 hostile cube mismatch",
+    sp.expand(C_cube_hostile - H0**3).coeff(tau, -1)
+    - sp.Rational(3, 2) * a_node * s,
+)
+assert_zero(
+    "eta0 hostile exact nodal correction",
+    C_cube_hostile
+    - H0**3
+    - sp.Rational(3, 2) * (A_cube_hostile - H0**2) * H0,
+)
+
+A_cube_positive = x_log**2 + Delta_log
+C_cube_positive = x_log**3 + sp.Rational(3, 2) * Delta_log * x_log
+assert_zero("fixed cube-positive square remainder", A_cube_positive - H0**2 - Delta_log)
+assert_zero(
+    "fixed cube-positive remainder is 3py/2",
+    C_cube_positive - H0**3 - sp.Rational(3, 2) * p_log * y_log,
+)
+
+A_cube_adjust = x_log**2 + 2 * p_log * y_log
+C_cube_adjust = x_log**3 + 3 * p_log * y_log * x_log
+H1 = x_log + Delta_log
+assert_zero("torsor-adjusted square remainder", A_cube_adjust - H1**2 + Delta_log**2)
+assert_zero(
+    "torsor-adjusted cube remainder",
+    C_cube_adjust - H1**3 + 3 * Delta_log * p_log * y_log + Delta_log**3,
+)
+assert_zero(
+    "unadjusted torsor cube mismatch",
+    sp.expand(C_cube_adjust - H0**3).coeff(tau, -1) - 3 * s**6,
+)
+print("DEDUCTION: eta=0 admits a square lift but no simultaneous pure cube lift.")
+print("           Its invariant constant obstruction is a0!=0;")
+print("           the exact replacement is a P0-valued moving nodal identity.")
+
 # Hostile controls: A=x^2+a, C=x^3+(3a/2)x, x=s/tau. They have bracket zero
 # and distinguish the one-address cusp from the two-address node.
 x, t, a_par, Avar, Cvar = sp.symbols("x t a A C")

@@ -53,6 +53,41 @@ PASS  nonliftable partial control row tau^-3
 PASS  nonliftable partial control row tau^-2
 PASS  nonliftable partial control first failure
 CONTROL: the eta=a0/gamma branch survives through row -2 but can fail row -1.
+PASS  common square/cube leading sign is positive
+PASS  fixed square lift first cube mismatch
+PASS  generic nodal correction row tau^-3
+PASS  generic nodal correction row tau^-2
+PASS  generic nodal correction row tau^-1
+PASS  global moving node identity
+PASS  cusp equation Delta=tau*p^2
+PASS  pole cancellation x*Delta=p*y
+PASS  square-lift torsor monomial (0,0)
+PASS  square-lift torsor monomial (0,1)
+PASS  square-lift torsor monomial (0,2)
+PASS  square-lift torsor monomial (0,3)
+PASS  square-lift torsor monomial (1,0)
+PASS  square-lift torsor monomial (1,1)
+PASS  square-lift torsor monomial (1,2)
+PASS  square-lift torsor monomial (1,3)
+PASS  square-lift torsor monomial (2,0)
+PASS  square-lift torsor monomial (2,1)
+PASS  square-lift torsor monomial (2,2)
+PASS  square-lift torsor monomial (2,3)
+PASS  square-lift torsor monomial (3,0)
+PASS  square-lift torsor monomial (3,1)
+PASS  square-lift torsor monomial (3,2)
+PASS  square-lift torsor monomial (3,3)
+PASS  eta0 hostile square remainder
+PASS  eta0 hostile cube mismatch
+PASS  eta0 hostile exact nodal correction
+PASS  fixed cube-positive square remainder
+PASS  fixed cube-positive remainder is 3py/2
+PASS  torsor-adjusted square remainder
+PASS  torsor-adjusted cube remainder
+PASS  unadjusted torsor cube mismatch
+DEDUCTION: eta=0 admits a square lift but no simultaneous pure cube lift.
+           Its invariant constant obstruction is a0!=0;
+           the exact replacement is a P0-valued moving nodal identity.
 PASS  control parametrization lies on eliminant
 PASS  control Weierstrass expansion
 PASS  control Jacobian is zero
