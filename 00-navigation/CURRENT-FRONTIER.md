@@ -347,15 +347,17 @@ asymptotic or residue.
   finite-free tower, and rational no-mates for every nonconstant
   `f in k(p)`. THM-3976 identifies the
   rational-compression pseudoplane and its `C`-only degree/support floors.
-  THM-3977 proves criticality of the simultaneous cusp/arm seed and both
-  tested formal corrections; its generalized lowest seam is critical for
-  `r!=0`, while `r=0` is submersive but has six-residue rational
-  exactness debt. THM-3978 computes the exact plane/completion response
-  ideals and exhibits incompatible formal-local integration constants.
-  THM-3979 lifts the cusp Darboux jets to every formal order. THM-3981 proves
-  that its canonical cusp quadrature is genus-two and transcendental, on
-  every scalar slice, but does not exclude alternative gauges. THM-3980 is
-  RESERVED for all-height/gauge-invariant nonalgebraization. Open:
+  THM-3977 closes the lowest cusp/arm seam and both tested corrections;
+  THM-3978 computes the plane/completion response ideals and incompatible
+  formal constants. THM-3979 lifts the cusp jets to every formal order.
+  THM-3980 proves the canonical all-height split atlas lives in `K x K`, not
+  any compatible domain. THM-3981 proves every centered slope generically
+  nonintegrable at height two, its slope-one scalar slices nonalgebraic, and
+  the slope-one generic gauge transcendental at every height. THM-3982
+  classifies every polynomial shear: nonlinear rows lack even rational
+  invariant values; affine rows pay the exact two colors. THM-3983 forces
+  coordinates constant on `D` and gives boundary degree `d<=r-1` for
+  rational fibres. THM-3984 is RESERVED. Open:
   algebraization with `y`, compatible/multiple/reducible/nongraph debts,
   degree `>=6`, polynomial compression, finite Keller entry, unrestricted
   Darboux entry, and `JC(2)`. THM-3853/3855 remain formal laboratories.

@@ -938,8 +938,31 @@
   `09dbf58e85137a73aba69837c8fe1e55b54afbcf8a7a703be5b522a811000dd4` /
   `a325289714ede662300ee6fff5369641bff8c92dc9e8508775200089dce7b6a4`.
 
+- `jc2_all_height_split_formal_cusp_nonalgebraization_thm3980.py` -> matching
+  `.out` [THM-3980 PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED].
+  At every `n>=2`, exact cusp and arm Darboux charts glue with opposite
+  Hensel signs. Either glued entry reconstructs the nontrivial idempotent, so
+  its generated algebra is exactly the reducible envelope `K x K` and it
+  cannot lie in a compatible integral extension of the global field. This
+  closes only the canonical split atlas, not alternative gauges. Checks:
+  `154`. Script/output/semantic SHA-256:
+  `31877bebf32fec6684a0203bd2d018b80517e62a4aaa6b25273da60af10922ad` /
+  `2b88196f5d7da9934ee181374c6aaf9126807c20f916cbe7d8889efb03e37656` /
+  `acb14866cb3a69b96fe9cf8d3e10e6d2de2a8dcd8f9ab27d1caf4664d9295e85`.
+
+- `jc2_centered_cusp_quadrature_genus2_thm3981.py` -> matching `.out`
+  [THM-3981 PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED]. For
+  every centering slope, the generic centered quadrature is nonexact on
+  every finite algebraic cover. Nonzero slopes give a genus-two holomorphic
+  form with divisor `P_0+P_infinity`; slope zero is rational with three
+  nonzero residues. Hence the canonical formal `X` is transcendental in
+  that gauge. Checks: `56`. Script/output/semantic SHA-256:
+  `be8cb9201d8b48ba23cc1db72fc7cb7e7a5722d0a6ff2545163b4c2bbae0dbbc` /
+  `5e879daec0413a9177baac4a9a626ab1a834da1adf6aa656bccdb7d988013427` /
+  `d99e424d8aeb80a290bd802dd3944298035a17409a3f0a45f69307ee1b047474`.
+
 - `jc2_centered_cusp_quadrature_genus_two_thm3981.py` -> matching `.out`
-  [THM-3981 PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED]. The
+  [THM-3981 INDEPENDENT LAMBDA-ONE SCALAR-SLICE SUPPLEMENT]. The
   centered cusp quadrature is birational to
   `v^2=(u^3-Y)^2+2u^2`, generically genus two, and its differential is
   exactly `du/v`. Holomorphic nonexactness plus trace descent proves the
@@ -951,6 +974,57 @@
   `9ba76e156c092410e755d2680e5c7413721d729957802bd03da1dc7ef20ff3b8` /
   `3f29a9da90581085fae01be3fe8887bdf294f5a1100f247b0278c179ac765b32` /
   `f88ec164728e05717827b54c573afed10668a4c4c448aae3f27f0bd8bcbb15b7`.
+
+- `jc2_all_height_centered_cusp_quadrature_thm3981_independent.py` ->
+  matching `.out` [THM-3981 INDEPENDENT ALL-HEIGHT CENTERED-GAUGE
+  SUPPLEMENT; PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED].
+  For every `n>=2`, the generic-`Y`, slope-one centered quadrature on
+  `z(z-1)^2=x^(n+1)(Y+x/2)` is nonexact. Odd heights have nonzero seam
+  residues; even heights at least four have a nonzero residue pairing with
+  a global holomorphic differential; height two is holomorphic genus two.
+  Trace descent makes the canonical `X_n` transcendental over `Frac(B_n)`.
+  This is gauge-specific and does not cover exceptional scalar fibres.
+  Checks: `248`, plus an independent `2,494`-gate sweep through `n=500`.
+  The frozen first-line `THM-3980` label is its pre-promotion scratch name;
+  canonical routing is this THM-3981 supplement.
+  Script/frozen-output SHA-256:
+  `d790684bbf4a1a00346f3e97bacd33bc5f42bc07252dabd3526d55324d9c8d3f` /
+  `60e053e4bd8d823af0133a9e80b30309c22329ed1c5bd46bc8e66d4c0a68738e`.
+
+- `jc2_polynomial_shear_submersion_rational_exactness_thm3982.py` -> matching
+  `.out` [THM-3982 PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED].
+  Every `A=x+h(x^nt)` is a source submersion. Nonlinear `h` has zero rational
+  invariant Hamiltonian image; affine `h` has the exact translated
+  THM-3978 two-color image; constant `h` owes the full height on `B_n`.
+  Consequently no polynomial shear has a constant mate in the completion.
+  Checks: `217`. Script/output/semantic SHA-256:
+  `6685e693249d23d49dfd65b8b5abb5f39444ce338057f29e6184f6508b864983` /
+  `4982833deef5987838b2d1df618bcafb9e5222020c3904a88105353ca4f3df33` /
+  `d6296d65a17dfae753d00943d1553503b0a7009d1ab6996e855d57dccac0b916`.
+
+- `jc2_coordinate_boundary_place_budget_thm3983.py` -> matching `.out`
+  [THM-3983 PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED]. Every
+  source polynomial coordinate in `B_n` restricts constantly to `D`; more
+  generally a separable boundary restriction of degree `d` and a rational
+  generic source fibre with `r` infinity places obey `d<=r-1`. Thus a cusp
+  profile `y^2` needs at least three places if rational. Checks: `174`.
+  Script/output/semantic SHA-256:
+  `a1b03588747575ed81ee8f23823edcf5e378448e88dfc753f48bda0fb7603687` /
+  `d0e0fc46ad0be6433f74d09237d80863189b4f5a3f74c5b218c47ad8a95e3483` /
+  `8f813d0377f5f996625582858894293ba8857f91c45a93471753b64fae48b7c8`.
+
+- `cyclotomic_factorial_two_power_decoder_20260824.py` -> matching `.out`
+  [ELEMENTARY PROVED IDENTITY + FINITE-EXACT CROSS-FRONTIER ATLAS; NO
+  FC/HFC/JC/LRC CONSEQUENCE]. For every `d>=2`, the projected factorial
+  moments satisfy `M_m=h_m(a^d,b^d)`, so `(M_1,M_2)` recovers every unordered
+  positive pair and resolves every two-cube collision. The projector is not
+  multiplicative, so this uses `L o Pi_d`, not original moments `L(f^m)`.
+  The `a+b<=356` atlas has `19,314` pairs, `28` double cube fibres, and no
+  two-moment collision. Active gates: `710,308`. Script/output/semantic
+  SHA-256:
+  `6da9af70c8979bcec1096b4e8ec05232bf3a2c9ac128406f0ad2ae4d6d9ca83e` /
+  `7df97b3983308eb262b421a3455e5d6f465612c5efed19ddf88f7e5f64e3a885` /
+  `81ff1f74df3fdd513c5374c3cae7b09f39f57e3bac4ef3a2ce1016ed09a77bc9`.
 
 - `hopf_s6_triangle_monodromy_snf_audit_20260824.py` -> matching `.out`
   [VERIFIED-EXACT DISPLAYED MATRICES + FINITE-EXACT CONDITIONAL ORIENTED

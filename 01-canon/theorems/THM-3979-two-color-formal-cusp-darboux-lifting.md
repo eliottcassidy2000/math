@@ -33,6 +33,7 @@ depends_on:
 related:
   - THM-3977-simultaneous-cusp-arm-family-critical-resultant
   - THM-3978-linear-seam-submersion-rational-mate-pole-obstruction
+  - THM-3980-all-height-canonical-split-formal-cusp-nonalgebraization
   - THM-3981-centered-cusp-quadrature-genus-two-transcendence
 script: 04-computation/jc2_two_color_formal_cusp_lifting_thm3979.py
 output: 05-knowledge/results/jc2_two_color_formal_cusp_lifting_thm3979.out
@@ -336,12 +337,20 @@ interior critical locus, or finiteness of the target map. Conversely, a
 positive construction must compress the infinite formal pair into finite
 support without reintroducing an interior critical point.
 
-THM-3981 subsequently identifies the generic centered quadrature with the
-genus-two differential `du/v` and proves, by trace descent, that the
-canonical transverse coordinate `X` is transcendental over the boundary
-function field. Thus this particular formal pair cannot algebraize or
-terminate. That later result is gauge-specific: the existence of a different
-algebraic formal Darboux gauge remains open.
+THM-3981 subsequently identifies the height-two generic centered quadrature
+with the genus-two differential `du/v` and proves, by trace descent, that
+the canonical transverse coordinate `X` is transcendental over the boundary
+function field. Its all-height supplement proves the analogous generic-`Y`
+statement for every `n>=2`, using seam residues at odd height and a
+holomorphic residue pairing at even height. Thus this particular centered
+formal gauge cannot algebraize or terminate. The result is gauge-specific:
+the existence of a different algebraic formal Darboux gauge remains open.
+
+THM-3980 gives a complementary algebraic split atlas at every height: its
+two color entries generate `K x K` and reconstruct the idempotent, so they
+cannot descend to a compatible domain. That mixed-sign split atlas is not
+the centered quadrature gauge of THM-3981; one is reducibly algebraic, the
+other transcendental.
 
 ## 8. Exact verification
 

@@ -283,7 +283,13 @@ its internal floors. THM-3977 closes the lowest simultaneous cusp/arm seam
 and both tested formal corrections. THM-3978 computes the linear-seam
 plane/completion response ideals and separates its incompatible completed
 integration constants. THM-3979 proves all-order formal cusp lifting, while
-THM-3981 proves the canonical lift is a transcendental genus-two quadrature.
+THM-3980 proves the rational split all-height atlas generates `K x K`, not
+a compatible domain. THM-3981 proves the height-two canonical centered lift
+is a transcendental genus-two quadrature for every slope, and its slope-one
+generic-`Y` supplement proves transcendence at every height by alternating
+residue and holomorphic-pairing obstructions. THM-3982 classifies all
+polynomial shears, while THM-3983 makes source coordinates constant on the
+boundary and gives `d<=r-1` for rational fibres. THM-3984 is only RESERVED.
 Alternative gauges and unrestricted support remain open.
 
 The session therefore ends at a sharp boundary.  **PROVED:** degree-four
@@ -291,8 +297,8 @@ centered nonentry, all-degree trace-carrier routing, the arbitrary-common-debt
 natural-cubic boundary obstruction, the four-color Mobius classification, and
 the centered degree-five and arbitrary-`q` normal monogenic closures.
 **VERIFIED-EXACT:** the 2,884-gate carrier companion and the
-`51/62/44/75/92/62/161/105/42/51/46/45/110/29/23/32/17/115/51/7494/1272/246/416/25/53` gates in
-THM-3950/51/52/53/54/56/58/59/60/61/62/63/64/65/67/69/70/71/72/73/74/75/76/77/78. **OPEN:** degree at least six,
+`51/62/44/75/92/62/161/105/42/51/46/45/110/29/23/32/17/115/51/7494/1272/246/416/25/53/96/154/56/25/248/217/174` gates in
+THM-3950/51/52/53/54/56/58/59/60/61/62/63/64/65/67/69/70/71/72/73/74/75/76/77/78/79/80/81/81-scalar/81-all-height/82/83. **OPEN:** degree at least six,
 arbitrary root gauges and coefficient planes, the remaining moving conductor
 debts, deformation of the new nonmonogenic order past its ramification curve,
 normalization-parameter descent, higher-degree non-centered strata, and the

@@ -402,8 +402,15 @@ seam family and both tested formal corrections. THM-3978 proves that the
 submersive linear seam has a rational mate but owes the two exact response
 factors `A^(n-1)` and `(A+c)^(n-1)` globally, even though each completed color
 chooses a successful but incompatible invariant constant. THM-3979 proves
-the cusp invoices lift to every formal order; THM-3981 proves its canonical
-quadrature cannot algebraize because it is a genus-two Abelian integral.
+the cusp invoices lift to every formal order. THM-3980 proves the canonical
+split atlas generates `K x K`, not a compatible domain; THM-3981 proves the
+centered gauge is an algebraically nonintegrable Abelian integral at height
+two for every slope and, at slope one over generic `Y`, at every height.
+Odd heights expose seam residues while even heights expose a global
+holomorphic residue pairing. THM-3982
+closes every polynomial shear by a rational-exactness trichotomy, while
+THM-3983 forces source coordinates constant on the boundary and charges a
+rational fibre one more infinity place than its boundary degree.
 The orthogonal THM-3955/57 node and
 coordinate-crossing cotangent sequences are proved local sidecars, not global
 Jacobian or Hopf results.
@@ -419,7 +426,7 @@ decisive experiments are:
    longer meet the affine-plane open while exact volume and finiteness survive;
    THM-3975 forces the first coordinate to leave `k(p)`, while
    THM-3976 supplies the hostile fixed-field pseudoplane quotient and
-   THM-3977/3978 exclude the lowest cusp and linear seams;
+   THM-3977/3978/3982 exclude the lowest cusp and all polynomial shears;
 3. search genuinely bivariate factors and simultaneous internal splits in two
    or three cube factors for an irreducible reduced full branch;
 4. compute the generic three-parabola quadratic normalization and its complete

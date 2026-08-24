@@ -381,10 +381,14 @@ cusp/arm seam by critical points and generic-fibre residues, including both
 tested formal corrections. THM-3978 gives the exact linear-seam response
 ideals: incompatible invariant constants block global algebraization even
 though each completed color has a mate. THM-3979 proves all-order formal cusp
-lifting; THM-3981 then proves its canonical quadrature genus-two and
-transcendental, including logarithmic nonentry on every exceptional scalar
-slice. Alternative gauges, finite Keller entry, and unrestricted Darboux
-entry remain open.
+lifting. THM-3980 proves its canonical split all-height atlas generates the
+reducible envelope `K x K`, not a compatible domain. THM-3981 proves every
+centered slope generically nonintegrable at height two, the fixed-slope
+exceptional scalar fibres logarithmically nonexact, and the fixed-slope
+generic quadrature transcendental at every height. THM-3982 classifies all polynomial
+shears; THM-3983 gives coordinate boundary constancy and the rational-fibre
+budget `d<=r-1`. Alternative gauges, finite Keller entry, and unrestricted
+Darboux entry remain open.
 None of these supplies a Hopf dependency here.
 
 ### Explicitly rejected vocabulary bridges

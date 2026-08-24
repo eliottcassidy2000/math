@@ -987,6 +987,10 @@ with incompatible invariant constants. THM-3979 then proves all-order formal
 cusp lifting, and THM-3981 turns the canonical lift into a precise
 nonalgebraization theorem: selector failure is the nonexact holomorphic form
 `du/v` on a genus-two curve, with residue hostiles on the singular slices.
+Its all-height supplement reveals a parity selector at the retained seam:
+odd height gives literal residues, while even height needs a holomorphic
+test differential and a nonzero residue pairing. The selected obstruction
+changes representation, but trace descent preserves nonexactness.
 Rational or formal solvability is not algebraization.
 THM-3955/57 are proved local conductor theorems with no global Hopf consequence.
 The proved LRC endpoint theorem moved to collision-free THM-4000; the namespace
@@ -1173,7 +1177,61 @@ Sidecars are consumer-specific.  A “root” may mean a polynomial coordinate, 
 normalization address, a tournament response vector, or an LRC owner; those
 objects cannot be transported merely because the same word is used.
 
-## 8. Ranked next work
+## 8. Cyclotomic factorial moments decode every two-power fibre
+
+A wildcard pull joins THM-3825's prime-colour two-cube decoder to the
+factorial functional of THM-3018 without confusing their native operations.
+For `F=ax+by`, let
+
+```text
+Pi_d G=(1/d) sum_(r mod d) G(x,zeta_d^r y),
+L(x^i y^j)=i!j!,
+M_m=L(Pi_d(F^(dm)))/(dm)!.
+```
+
+Then, for every `d>=2` and `m>=0`, coefficient cancellation proves
+
+```text
+M_m=sum_(j=0)^m a^(d(m-j))b^(dj)=h_m(a^d,b^d).          (36)
+```
+
+Thus `M_1=a^d+b^d` and `M_1^2-M_2=a^db^d`; the first two moments recover
+the unordered pair. At `d=3` this resolves every taxicab collision. The
+first hostile is already decisive:
+
+```text
+(1,12): (M_1,M_2)=(1729,2987713),
+(9,10): (M_1,M_2)=(1729,2260441).                       (37)
+```
+
+This is an elementary **PROVED** identity with a **FINITE-EXACT** atlas, not
+a Factorial-Conjecture result. The projector is linear but not
+multiplicative:
+
+```text
+[x^d y^d] Pi_d(F^d)^2=2a^db^d,
+[x^d y^d] Pi_d(F^(2d))=binom(2d,d)a^db^d.               (38)
+```
+
+Consequently the sequence uses the modified functional `L o Pi_d` on
+`(F^d)^m`; it is not `L(f^m)` for one fixed invariant polynomial under the
+original factorial functional. On `(d,a,b)=(3,1,2)`, the projected,
+fixed-invariant, and ordinary normalized second moments are respectively
+`73`, `329/5`, and `127`. This is the first failed transfer and the exact
+FC/HFC firewall.
+
+The assertion-free companion checks `710,308` gates, including the complete
+`a+b<=356`, `gcd(a,b)=1` support-two atlas: `19,314` pairs, `28` double cube
+fibres, and `19,314` distinct two-moment packets. Normal and optimized runs
+match the frozen output. Script/output/semantic hashes are
+`6da9af70c8979bcec1096b4e8ec05232bf3a2c9ac128406f0ad2ae4d6d9ca83e`,
+`7df97b3983308eb262b421a3455e5d6f465612c5efed19ddf88f7e5f64e3a885`,
+and `81ff1f74df3fdd513c5374c3cae7b09f39f57e3bac4ef3a2ce1016ed09a77bc9`.
+It preserves the unordered coefficient pair and common scaling, but loses
+orientation, runner placement, owner, phase, and every non-pair coordinate;
+there is therefore no LRC, JC, Rule-30, or other prize consequence.
+
+## 9. Ranked next work
 
 1. **LRC anchor:** combine auxiliary-center and endpoint cross-phase uniformly
    on THM-3910's 17 arbitrary-body types, or add owner/arrival data, while
