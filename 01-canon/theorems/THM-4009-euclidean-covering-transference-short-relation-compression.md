@@ -41,6 +41,8 @@ related:
   - THM-3910-lrc14-auxiliary-center-erosion-and-t-sheet-variance-response
   - THM-3995-scale-two-parity-hole-support-and-integer-variance-tariff
   - THM-4002-lrc14-signed-endpoint-cross-phase-and-fixed-scale-two-family
+  - THM-4014-lrc14-diagonal-polar-ellipsoid-fastest-coordinate-relation-compression
+  - THM-4015-first-kind-character-sensitive-foster-transference
 script: 04-computation/lrc14_euclidean_covering_transference_audit_thm4009.py
 output: 05-knowledge/results/lrc14_euclidean_covering_transference_audit_thm4009.out
 script_sha256: 4aedcfaebde66295d07b600f063e880a6fb4a81f11f5d6a597f9f35835394df5

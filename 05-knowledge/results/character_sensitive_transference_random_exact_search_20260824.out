@@ -1,0 +1,12 @@
+SEED=3237998100
+named=D4 all_characteristics=15 best_product=4 u=(0, 0, 1, 1) primal=4 dual_odd=1
+named=A4 all_characteristics=15 best_product=16/5 u=(0, 1, 0, 1) primal=4 dual_odd=4/5
+named=D5 all_characteristics=31 best_product=5 u=(0, 0, 0, 1, 1) primal=4 dual_odd=5/4
+d=4 checked=2497 skipped=53 best_product=4 ratio_to_d=1.000000000000
+u=(1, 1, 1, 1) primal=4 at (1, 1, 1, 1) dual_odd=1 at (1, 0, 0, 0)
+G=[[1, 0, 0, 0], [0, 1, 0, 0], [0, 0, 1, 0], [0, 0, 0, 1]]
+HOSTILE_COUNTEREXAMPLE=NO
+d=5 checked=3231 skipped=219 best_product=5 ratio_to_d=1.000000000000
+u=(1, 1, 1, 1, 1) primal=5 at (1, 1, 1, 1, 1) dual_odd=1 at (1, 0, 0, 0, 0)
+G=[[1, 0, 0, 0, 0], [0, 1, 0, 0, 0], [0, 0, 1, 0, 0], [0, 0, 0, 1, 0], [0, 0, 0, 0, 1]]
+HOSTILE_COUNTEREXAMPLE=NO
