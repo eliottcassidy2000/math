@@ -137,7 +137,7 @@ closes 41 of the 57 scale-one types; compact-to-open component containment and
 the integer sheet carrier supply further exact filters.  Thus the general
 conditional ledger is now 16 scale-one types plus `(2,1,9)`: 17, not 58.
 
-[THM-3920](../01-canon/theorems/THM-3920-lrc14-signed-endpoint-cross-phase-and-fixed-scale-two-family.md)
+[THM-3922](../01-canon/theorems/THM-3922-lrc14-signed-endpoint-cross-phase-and-fixed-scale-two-family.md)
 resolves the phase of that same sheet carrier.  If `E(G)` and `E(A)` are the
 signed endpoint words of the body safe set and pair danger set, then
 
@@ -161,7 +161,7 @@ Var(N_t)=t^2 disc_t(G),
 
 Variance retains magnitude; signed endpoint cross-phase locates the integer
 occupancy against the labelled obstruction.  THM-3910's native cubic-response
-collision and THM-3920's Graver/half-translate hostiles are complementary
+collision and THM-3922's Graver/half-translate hostiles are complementary
 proofs that pairwise or power data cannot recover that location.
 The symmetric return packet of mass `2*84^(-11)` remains useful thickness;
 without the endpoint word its translate is still unlocated relative to the
@@ -405,13 +405,31 @@ THM-3915 is the sharp hostile: its unique torsion class mixes the split
 boundary with all four finite ADE radical directions, while the pure boundary
 residue is primitive.  Abstract permission is not globalization.
 
-The surviving target is now plane-atlas entry.  Although `Frac(B)=k(s,z)`,
-the natural rational chart has nonconstant Jacobian, so rationality loses the
-polynomial/etale coordinate.  Moreover `e_c(U_et)=14` excludes only
-`U_et=A2`; a proper plane open with Euler-13 complement remains possible.
-The missing sidecars are the contracted valuation, open complement,
-units/Picard compatibility and nonproperness divisor.  THM-3916 and THM-3917
-are only reserved empty stubs for the two successor lanes.
+THM-3916 now closes that particular plane-atlas target.  On THM-3915's
+rational chart, the contracted common-zero divisor has genus two and is
+positive on both target functions.  The general valuation lemma therefore
+forbids a scalar-unit planar Jacobian in every same-field coordinate chart.
+This is strictly stronger than the Euler tariff and does not turn the tariff
+itself into a no-atlas proof.
+
+THM-3917 then crosses the genus boundary without crossing the atlas boundary.
+Its collapsed cubic is rational, but six distinct points of the rational
+ramification curve map to the contracted point.  The image boundary has at
+least six normalization branches there, whereas every irreducible boundary
+curve of an affine-plane open in a normal surface is unibranch.  Thus
+
+```text
+rational cubic completion
+  + positive-genus common-zero valuation -> impossible by THM-3916;
+
+genus-zero common-zero valuation
+  + multibranch ramification boundary    -> impossible in THM-3917.
+```
+
+The new missing sidecar is the complete fibrewise attachment of intrinsic
+ramification components to the contracted fibre.  Rationality preserves the
+function field and degree but destroys neither that branch incidence nor its
+cycle obstruction; forgetting it does.
 
 Finally,
 [THM-3879](../01-canon/theorems/THM-3879-rational-torus-sextic-c3-packet-one-place-tradeoff.md)
@@ -423,9 +441,13 @@ one, and the smooth-conic boundary.  Without immersion the exact reduced
 identity subtracts the common tangent-base divisor; the family
 `[ST^(d-1):T^d:S^d]` shows that correction is sharp in every degree.
 
-The open target is therefore an actual plane open inside THM-3915's maximal
-etale locus, or a proof that none exists.  One must retain its rational
-one-place branch, normal nonmonogenic cubic order and mixed three-class.
+The open target is therefore a new repeated-residual design in which every
+common-zero valuation has genus zero and every intrinsic ramification
+boundary component stays unibranch.  It must still retain a rational
+one-place branch, normal nonmonogenic cubic order and usable three-class.
+THM-3917 is **PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED**; its
+six-branch mechanism, rather than an unqualified no-atlas slogan, is the
+transportable obstruction.
 
 ## 5. Filtered kernels and principal parts are the same warning, not the same theorem
 
@@ -558,7 +580,8 @@ They do not share states, probability, chronology, or a reduction.
 | LRC support-two packet | lower-rank row | choose multiplier and absorb/add one runner | exact divisibility or LRC(13) safe interval | other runners, relative scale, arrival | owner plus component interval | 17 `t>=U` types after THM-3910 |
 | AK forcing graph | score certificate | add a sound forcing row | declared rule consequences | future-round cycle debt | cycle-rank profile | saturated `[2,3]` trace varieties |
 | JC residual | associated graded seam | take top homogeneous forms | leading cancellation | common color gcd and lower debt | primitive colors plus full evolving response | continuing `U,V` jets in THM-3898 |
-| Rational normal cubic order | plane atlas | choose a birational chart | function field and branch divisor | polynomial/etale open data | contracted valuation, complement, units/Picard, nonproperness | THM-3915 Jacobian/Euler-13 invoice |
+| Rational normal cubic order | plane atlas | choose a birational chart | function field and branch divisor | polynomial/etale open data | common-zero valuation genus | THM-3916 closes THM-3915's Keller model |
+| Genus-zero collapsed cubic | plane boundary | finite normalization and contraction | rationality and cover degree | normalization branches over the contracted point | fibrewise ramification attachment | audited THM-3917 six-branch hostile |
 | Removed divisor lattice | resolvent three-class | saturate boundary sublattice | conditional three-divisibility | actual class and ADE mixing | full exceptional lattice | THM-3915 mixed boundary--ADE hostile |
 | Rational dual | reduced dual curve | cancel common tangent factor | reduced tangent map | nonimmersion multiplicity | `E_nu` tangent-base divisor | `[ST^(d-1):T^d:S^d]` |
 | Rule 30 words | selected ray image | positive affine-word action | complete static orbit | physical chronology and owner | zero-fibre routed query | fibres requiring opposite rays |
@@ -572,17 +595,16 @@ objects cannot be transported merely because the same word is used.
 
 1. **LRC anchor:** combine auxiliary-center and endpoint cross-phase uniformly
    on THM-3910's 17 arbitrary-body types, or add owner/arrival data, while
-   keeping `t<U` separate.  THM-3920 closes only the 1,365 fixed bodies
+   keeping `t<U` separate.  THM-3922 closes only the 1,365 fixed bodies
    `E subset {1,...,15}`, `|E|=11`, with odd `t>=max E`; the general `(2,1,9)`
    type remains open.
 2. **Jacobian anchor:** leave `f=0`, x-only and THM-3898's canonical
    constant-sidecar family closed.  Attack arbitrary lower sidecars using the
    continuing-`U,V` hostile; a first-arrival schedule is insufficient.
-3. **Nonmonogenic niche:** classify or obstruct a proper `A2` open in
-   THM-3915's maximal etale locus.  Develop the proposed contracted
-   positive-genus valuation alongside units/Picard data, the nonproperness
-   divisor, and the exact Euler-13 complement invoice.  THM-3916/3917 are
-   reserved, not dependencies.
+3. **Nonmonogenic niche:** leave THM-3915 closed by THM-3916.  Search a
+   repeated-residual rational cubic for which every common-zero valuation has
+   genus zero and every ramification boundary component is unibranch.  Use
+   audited THM-3917 as the branch-incidence hostile.
 4. **AK niche:** leave the saturated empty-wildcard `[2,3]` slice closed.
    Classify inactive-slot and initial-wildcard strata, then search the next
    rectangle for a genuine score below `7/4` under the same sound/loose

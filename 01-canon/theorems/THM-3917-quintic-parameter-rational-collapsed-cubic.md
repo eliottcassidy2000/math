@@ -2,7 +2,7 @@
 id: THM-3917
 title: "Quintic-parameter rational collapsed cubic and six-branch boundary obstruction"
 status: >
-  PROVED + VERIFIED-EXACT; INDEPENDENT HOSTILE AUDIT PENDING. On the
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED. On the
   irreducible quintic parameter locus displayed below, the polynomial-part
   construction produces an irreducible cubic whose collapsed divisor has
   genus zero: its degree-three projection has four finite ramifications,
@@ -17,15 +17,16 @@ status: >
   JC(2).
 source: jc_degree6_one_place / post-THM-3915 genus-zero design lane, 2026-08-23
 audit: >
-  PROVISIONAL PROOF CANDIDATE AWAITING INDEPENDENT HOSTILE AUDIT. The exact
-  companion verifies the polynomial-part formula, irreducible squarefree
-  quintic, complete quartic discriminant and K-quotient factorization,
-  p--h resultant, polynomial-root irreducibility chains, local node and
-  ramification packet, three infinity Hensel branches, rational
-  ramification curve, rational chart, global cubic identity, and power-
-  basis discriminant in 55 active gates. Normal and optimized runs
-  byte-match the frozen output. The boundary-unibranch proof is intrinsic
-  and uses a common relative log resolution, not the computation.
+  INDEPENDENT HOSTILE AUDIT PASS (root and jc_zero_debt_lift, 2026-08-23).
+  The audits independently recovered the residual quartic, its unique
+  double root, the six-point support and p--h avoidance, both cubic-root
+  descents, the four-ramification Riemann--Hurwitz ledger, and the split
+  infinity expansions. They also checked the normalization factorization
+  B subset k[u,z], generic birationality of the ramification curve, the
+  contraction of all six addresses to one point, and the relative common-
+  resolution proof of boundary unibranchness, including the parallel-edge
+  case in the dual multigraph. Normal and optimized runs byte-match the
+  frozen output and all 55 active gates pass; no repair was required.
 related:
   - THM-3916-positive-genus-collapsed-valuation-keller-obstruction
   - THM-3915-rational-decic-cube-resolvent-index-debt-euler-tariff
@@ -40,7 +41,7 @@ hash_basis: raw LF bytes
 
 # THM-3917 -- genus zero is attainable, but six branches cannot be plane boundary
 
-**PROVED + VERIFIED-EXACT; INDEPENDENT HOSTILE AUDIT PENDING.** Work over an
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.** Work over an
 algebraically closed field `k` of characteristic zero. Choose `b in k`
 satisfying
 

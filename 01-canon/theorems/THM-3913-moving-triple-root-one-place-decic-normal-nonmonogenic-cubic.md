@@ -14,7 +14,9 @@ status: >
   uniruled and the cubic etale surface admits no plane atlas.  This pays the
   order, confluence, and three-class invoices at the first moving-triple-root
   depth but is not a Jacobian counterexample.  THM-3915 subsequently pays the
-  rationality invoice; plane-atlas/Keller entry and JC(2) remain open.
+  rationality invoice, but THM-3916 closes its same-field Keller model;
+  THM-3917 attains genus zero and then fails the boundary-unibranch invoice.
+  Other carriers, Keller entry, and JC(2) remain open.
 source: root / first post-THM-3908 coefficient-depth-three construction, 2026-08-23
 audit: >
   INDEPENDENT HOSTILE AUDIT PASS after two proof-completeness clarifications.
@@ -37,6 +39,8 @@ related:
   - THM-3844-two-cusp-polynomial-branch-quadratic-resolvent-design-gate
   - THM-3912-even-one-place-split-boundary-a2-three-torsion-design-sieve
   - THM-3915-rational-decic-cube-resolvent-index-debt-euler-tariff
+  - THM-3916-positive-genus-collapsed-valuation-keller-obstruction
+  - THM-3917-quintic-parameter-rational-collapsed-cubic
 script: 04-computation/jc2_moving_triple_root_one_place_elliptic_decic_thm3913.py
 output: 05-knowledge/results/jc2_moving_triple_root_one_place_elliptic_decic_thm3913.out
 script_sha256: 7b1f6ef2a2cd2381a3b44b2dd88c683deab23c16a5c37971ffd487a2334f8806

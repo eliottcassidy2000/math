@@ -35,7 +35,7 @@
   triples are pinned in THM-3910.
 
 - `lrc3878_mixed_incidence/packet_covariance_probe.py`, scale-two sweep, and
-  Graver/phase hostile -> matching `.out`s [THM-3920 PROVED + VERIFIED-EXACT
+  Graver/phase hostile -> matching `.out`s [THM-3922 PROVED + VERIFIED-EXACT
   + INDEPENDENTLY HOSTILE-AUDITED; LRC(14) OPEN].  Signed endpoints give
   `C_t=(1/(2t)) sum sigma_e tau_f B2({f-te})` and
   `L=m(1-alpha)-C_t`; sampled-grid energy gives a Cauchy certificate and an
@@ -121,13 +121,39 @@
   `Z^3 direct-sum Z/3`; the unique torsion class mixes split-boundary and all
   finite ADE directions.  An explicit index-`A^5` integral basis gives the
   rational normal finite-free, globally nonmonogenic `S3` maximal order with
-  sole reduced discriminant the decic.  Its maximal
-  etale locus has `e_c=14`, excluding only equality with `A2`; a proper plane
-  open with Euler-13 complement remains possible.  Proper plane-atlas entry,
-  Keller realization, and `JC(2)` remain open.  Script/output/semantic SHA-256:
+  sole reduced discriminant the decic.  Its maximal etale locus has `e_c=14`,
+  which by itself excludes only equality with `A2`.  THM-3916 subsequently
+  uses its genus-two common-zero valuation to exclude the candidate's
+  same-field Keller plane model.  `JC(2)` remains open.
+  Script/output/semantic SHA-256:
   `8408e35292a674be3731fd7c95ecfdc7d07d5324c81d8803d1e23922e8884341` /
   `5e1d4cd168597e8975580c00cb1e6cfd06c6d1d8a9657f5b57a056983866ecf1` /
   `238246047160a73f2de01d4ff62109d7cac03434ad31fdc58ae0378054030c6b`.
+
+- `jc2_positive_genus_collapsed_valuation_thm3916.py` -> matching `.out`
+  [THM-3916 PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED].  A
+  positive-genus divisorial valuation positive on both members of a
+  polynomial pair forbids scalar-unit Jacobian.  In THM-3915, the contracted
+  divisor `F=0` is irreducible of genus two, with eight finite simple
+  ramifications and three unramified infinity places; hence its same-field
+  Keller plane model is empty.  Repeated-residual genus-zero designs and
+  `JC(2)` remain open.  Checks: `26`.  Script/output/semantic SHA-256:
+  `1e658a4c13cb8cfe45d3a50b9f4e546abf283c62f40ccc654fc65686bded7078` /
+  `2b359fec32987cf934ba644ea458dee82220d11c877e1e832047604da2a07632` /
+  `75bbbaebe57df35e61244b7e5c28ee1b5d5a1f9660746c1308bc26b464b7868f`.
+
+- `jc2_quintic_parameter_rational_collapsed_cubic_thm3917.py` -> matching
+  `.out` [THM-3917 PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED].
+  The repeated residual makes the irreducible collapsed cubic
+  rational: four finite ramifications, two unramified nodes, and three
+  unramified infinity places.  Its rational ramification divisor nevertheless
+  has at least six normalization branches over the contracted point, so the
+  boundary-unibranch lemma excludes a same-field Keller plane atlas.  This
+  closes the displayed quintic-parameter family, not `JC(2)`.  Checks: `55`.
+  Script/output/semantic SHA-256:
+  `66e54dfe3cf1365a18f0df784e1dad9987c0ea74077da219edb5f817a16a583f` /
+  `e8c8b9802d48d0d1a4ba70afba78bfda1e0081a9d1d0bd79a0ba4da9c29567a7` /
+  `593e5af9e8099c8a5f3397a2247ba166235dd3710e69296eac3aa63628629926`.
 
 - `jc2_equianharmonic_e6_marked_zero_contact_shell_thm3909.py` -> matching
   `.out` [THM-3909 PROVED + VERIFIED-EXACT; JC(2) OPEN].  The Mordell--Weil

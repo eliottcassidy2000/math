@@ -11,9 +11,11 @@ status: >
   basis gives its normal finite-flat, rational, globally nonmonogenic maximal
   order with discriminant 6912 Delta.  Thus A=0 is pure order debt and the
   sole reduced field-discriminant divisor is the decic.  The maximal etale
-  locus has compact-support Euler characteristic 14 and is not A2.  A plane
-  atlas could still be a proper open subset with Euler complement 13, so the
-  atlas question and JC(2) remain open.
+  locus has compact-support Euler characteristic 14 and is not A2; this
+  Euler argument alone does not exclude a proper plane open.  Subsequent
+  THM-3916 proves that the contracted common-zero divisor has genus two and
+  excludes every same-field plane open on which the target functions form a
+  Keller pair.  This candidate is closed; JC(2) remains open.
 source: decic_resolvent_scout / rational cube-discriminant lane, 2026-08-23
 audit: >
   INDEPENDENT HOSTILE AUDIT PASS.  The audit rederived the complete
@@ -35,11 +37,14 @@ audit: >
   freezes all of these in 91 active gates; normal and optimized replays
   byte-match the frozen output and documentation passes.  The genus-two
   contracted-divisor idea is intentionally left for a successor audit and
-  is not used to claim a no-atlas theorem here.
+  is not used to claim a no-atlas theorem here.  THM-3916 subsequently pays
+  that invoice; it is a successor, not a dependency of this proof.
 related:
   - THM-3912-even-one-place-split-boundary-a2-three-torsion-design-sieve
   - THM-3913-moving-triple-root-one-place-decic-normal-nonmonogenic-cubic
   - THM-3914-decic-boundary-three-class-degree-one-isotropic-divisor
+  - THM-3916-positive-genus-collapsed-valuation-keller-obstruction
+  - THM-3917-quintic-parameter-rational-collapsed-cubic
 script: 04-computation/jc2_rational_decic_cube_resolvent_index_debt_thm3915.py
 output: 05-knowledge/results/jc2_rational_decic_cube_resolvent_index_debt_thm3915.out
 script_sha256: 8408e35292a674be3731fd7c95ecfdc7d07d5324c81d8803d1e23922e8884341
@@ -122,13 +127,12 @@ Finally, if `X=Spec B` and `U_et subset X` is the maximal open on which
 e_c(U_et)=14.                                               (10)
 ```
 
-Thus `U_et` itself is not an affine plane.  This is an exact boundary
-tariff, not a no-atlas theorem: a hypothetical plane atlas may be a proper
-open subset of `U_et`, and would have to delete a constructible complement
-of Euler characteristic `13`.  Whether such a deletion is compatible with
-units, Picard data, the nonproperness divisor, and the contracted positive-
-genus valuation is **OPEN**.  No Keller map is constructed and `JC(2)`
-remains **OPEN**.
+Thus `U_et` itself is not an affine plane.  Inside this theorem, this is an
+exact boundary tariff rather than a no-atlas theorem: a hypothetical plane
+atlas could have been a proper open subset with complement Euler
+characteristic `13`.  Subsequent THM-3916 proves that the contracted divisor
+has genus two and excludes a same-field affine-plane Keller model for these
+target functions.  No Keller map is constructed and `JC(2)` remains **OPEN**.
 
 ## 1. Normalization, the forbidden third cusp, and the genus ledger
 
@@ -612,12 +616,12 @@ is the one-point algebra `k[Z]/(Z^3)`.  Therefore
 e_c(U_et)=27-13=14.                                        (62)
 ```
 
-This proves `U_et` is not `A2`.  It does not exclude a proper open plane
-inside `U_et`: such an open would need complement Euler characteristic
-`13`.  The pending successor must test that complement against the unit and
-Picard groups, nonproperness components, and the positive-genus divisor
-contracted by the natural rational chart.  None of those missing steps is
-silently assumed here.
+This proves `U_et` is not `A2`.  The Euler computation itself does not exclude
+a proper open plane: such an open would need complement Euler characteristic
+`13`.  THM-3916 subsequently tests the intrinsic common-zero valuation,
+proves its residue curve has genus two, and rules out the relevant Keller
+plane model.  That successor result is not silently imported into the proof
+of the present Euler statement.
 
 ## 7. Scope and replay
 
@@ -625,7 +629,8 @@ This theorem constructs a rational branch, genuine quadratic-resolvent
 three-class, irreducible rational `S3` field, and normal nonmonogenic
 finite-flat cubic order with sole reduced discriminant `Delta`.  It does not
 construct a polynomial-plane etale atlas, a Keller pair, or a Jacobian
-counterexample.  The exact three-class is mixed, so THM-3914's pure-boundary
+counterexample; THM-3916 subsequently proves that no such Keller model exists
+for this candidate.  The exact three-class is mixed, so THM-3914's pure-boundary
 hyperbolic plane does not describe it.  The abstract `49` isotropic lines of
 the removed discriminant form do not give an index-`27` saturation; the
 actual quotient `(43)` has exactly one torsion line.

@@ -15,9 +15,12 @@ status: >
   generic-irreducible-S3 realization of that sharp control with generic
   discriminant exponent one; THM-3908 excludes the
   coefficient-depth-at-most-two pure-sixth top-form lane.  THM-3913 first
-  escapes at degree ten/depth three but is elliptic; THM-3915 gives a
-  different rational decic carrier.  Other sextic grammars,
-  nonnormal orders, Keller realization, and JC(2) remain open.
+  escapes at degree ten/depth three but is elliptic.  THM-3915 gives a
+  rational decic carrier, which THM-3916 closes as a Keller model by its
+  genus-two common-zero valuation; THM-3917 attains genus zero but pays a
+  six-branch boundary collision.  Other sextic grammars, unibranch
+  repeated-residual designs, nonnormal orders, Keller realization, and
+  JC(2) remain open.
 source: root / post-THM-3890 degree-six escape and cusp-cap session, 2026-08-23
 audit: >
   INDEPENDENTLY HOSTILE-AUDITED on 2026-08-23 by three disjoint audits.  One
@@ -47,6 +50,8 @@ related:
   - THM-3911-sharp-one-place-sextic-resolvent-three-torsion-obstruction
   - THM-3913-moving-triple-root-one-place-decic-normal-nonmonogenic-cubic
   - THM-3915-rational-decic-cube-resolvent-index-debt-euler-tariff
+  - THM-3916-positive-genus-collapsed-valuation-keller-obstruction
+  - THM-3917-quintic-parameter-rational-collapsed-cubic
 script: 04-computation/jc2_degree_six_common_zero_normal_cubic_two_place_thm3906.py
 output: 05-knowledge/results/jc2_degree_six_common_zero_normal_cubic_two_place_thm3906.out
 script_sha256: 3558670eb81467e10f924c68f2222d0ba82b036fb98a68fcb30a76bd2f92036a
