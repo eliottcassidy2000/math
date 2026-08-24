@@ -21,6 +21,15 @@
   `dc71fc2ef24515e5eb5e6562b8e6d21f04d75b31c2f59c06d40e3545730d65c3` /
   `bd3793f54f1ecb0a61671d01a12d2089b9dc995f4e98ad83cda5732024bf3224`.
 
+- `lrc14_thm4009_support_two_owner_typing_20260824.py` -> matching `.out`
+  [PROVED arithmetic typing + FINITE-EXACT; LRC(14) OPEN]. Support-two rows
+  split as body/body, body/extra, or extra/extra; only `(8,21),(9,11)` fail
+  the old cap in the last class, body/extra requires `tp<=13U`, and AP11 is
+  the owner-free hostile. The `47 x 17` table is discovery, not intersection.
+  Script/output SHA-256:
+  `d00b3b6206818e8c8a7d8bbba5b153473783a98e341e611dd5d3e90e381e060f` /
+  `e1b3cf909d1f10bc7adca26ae5044dc492a29b33a01551badf9aa390f361ffa1`.
+
 - `character_sensitive_transference_first_kind_foster_audit_20260824.py` and
   `character_sensitive_transference_random_exact_search_20260824.py` ->
   matching `.out`s [THM-4015 PROVED ALGEBRA + VERIFIED-EXACT on first-kind

@@ -205,6 +205,22 @@ min(lambda_H(body),lambda_H(tail));                    (9a)
 only a lower bound of `196` on both internal weighted minima would force the
 transference-selected row to cross.
 
+The latest incoming THM-4009 owner-typing audit supplies the complementary
+firewall. A support-two row in `(u_1,...,u_11,tp,tq)` is body/body,
+body/extra, or extra/extra. Fifteen of the seventeen external types are
+compatible with square norm `<=195`; only `(8,21)` and `(9,11)` fail, and
+only for extra/extra ownership. Body/extra ownership requires
+
+```text
+tp<=13U                         (and likewise tq<=13U). (9b)
+```
+
+AP11's norm-five body/body relation survives every external type. Thus the
+`47 x 17` table is an owner-labelled discovery product, not an intersection
+of type lists. Equations (9a)--(9b) together identify the next finite object:
+support labels, component incidence, internal weighted minima, and endpoint
+owner must travel in one record.
+
 ## 3. Fourier verdict: order matters, owner still matters more
 
 On the strict row `V_38={1,...,11,13,38}`, the 30 Euclidean-shortest rows are
@@ -456,7 +472,7 @@ map:         ordered partial sums -> frequency bouquet
 preserved:   sign, scale, ordering, cross-order phase
 destroyed:   endpoint atom and physical component
 sidecar:     signed owner-address word
-test:        47 ratio types x 17 residual types, all orders
+test:        owner-labelled 47 x 17 product, split body/body-extra/extra
 ```
 
 ### Lift fibre to covering code
@@ -482,7 +498,8 @@ test:        authentic I(13,191,1) parents rather than the AP control alone
 3. Traverse the 55,459 coefficient histograms inside rank-eleven star spaces,
    retaining component cut and owner word. Compute each component's internal
    weighted minimum before claiming the short row crosses; THM-4003's tail
-   absorber and the `1+2-3` body hostile are mandatory controls.
+   absorber, AP11, and the `1+2-3` body hostile are mandatory controls. Apply
+   the body/extra cutoff (9b) before enumerating labelled supports.
 4. Classify the divisor anchors `d|U` and `sd|tp` in the 16 scale-one residual
    shapes. Intersect with owner-labelled endpoint words; scalar divisibility
    alone gives rank, not a lonely time.

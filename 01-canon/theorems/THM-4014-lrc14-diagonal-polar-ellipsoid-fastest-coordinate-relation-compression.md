@@ -334,6 +334,15 @@ while `t` is coprime to the body. To force crossing, a future metric must
 control the **internal weighted minima** of both components, not only the
 global maximum coefficient.
 
+The incoming THM-4009 support-two owner audit makes the label loss explicit.
+Among THM-3910's seventeen external pair types, fifteen are compatible with
+the old square cap; `(8,21)` and `(9,11)` are incompatible only when the
+selected support is extra/extra. A body/extra pair involving `tp` necessarily
+satisfies `tp<=13U`, while AP11 has a norm-five body/body absorber for every
+external type. Consequently neither the 47 old ratios nor the 28 top-pair
+ratios may be intersected with the seventeen types without carrying support
+owner and component incidence.
+
 The independent exact report is
 [the diagonal-ellipsoid audit](../../05-knowledge/results/lrc14_diagonal_ellipsoid_refinement_independent_audit_20260824.md).
 Reproduce its frozen output with
