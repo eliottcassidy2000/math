@@ -2,7 +2,7 @@
 id: THM-3982
 title: "Polynomial-shear submersion rational exactness and two-color image"
 status: >
-  PROVED + VERIFIED-EXACT / AWAITING INDEPENDENT HOSTILE AUDIT. For every
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED. For every
   height n>=2 and every polynomial h, A_h=x+h(x^n t) is an affine
   submersion. Its Hamiltonian has a nonzero rational invariant value exactly
   when deg(h)<=1. For nonconstant h this is the generic inverse-branch
@@ -12,6 +12,15 @@ status: >
   regimes. In particular no polynomial shear has a constant-Jacobian mate
   in B_n, although the constant shears do have the source mate t.
 source: jc-degree6-one-place / post-THM-3978 polynomial-shear classification, 2026-08-24
+audit: >
+  PASS (root / jc-cohn3709, 2026-08-24). The audit independently rederived
+  the Hamiltonian equation in (A,u), the inverse-branch residue formula,
+  and the rational-exactness criterion, including the fact that infinity
+  contributes no missing pole. It checked the delta-integration argument,
+  its cancellation-free nonlinear leading term, the constant-shear Laurent
+  intersection and exact q=n row, and the affine translation to THM-3978
+  with the plus sign at the second color. Normal, optimized, and frozen
+  outputs byte-match at CHECKS=217; all hashes agree.
 depends_on:
   - THM-3973-exact-volume-simple-cubic-determinantal-affine-plane-completion
   - THM-3978-linear-seam-submersion-rational-mate-pole-obstruction
@@ -28,7 +37,7 @@ hash_basis: raw LF bytes
 
 # THM-3982 -- polynomial shears are submersions but never completion coordinates
 
-**PROVED + VERIFIED-EXACT / AWAITING INDEPENDENT HOSTILE AUDIT.** Work over
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.** Work over
 an algebraically closed field `k` of characteristic zero. Fix `n>=2`, put
 
 ```text
@@ -328,7 +337,7 @@ different obstructions. The result closes the full polynomial-shear first-
 coordinate family against companions of arbitrary support in `B_n`. It does
 not classify arbitrary first coordinates, formal power-series shears,
 nonpolynomial `h`, arbitrary Darboux pairs on `B_n`, or unrestricted `JC(2)`.
-**QED candidate.**
+**QED.**
 
 ## Reproduction
 
