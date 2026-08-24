@@ -1395,6 +1395,16 @@
   `117248d6eb4c56d0566f4c66930cbed4c9d583e248ad3b68b7a90af80053cf2c` /
   `3974383d1d1c05bc9901fe3bb43dfb4a8d3c7c845c52c7e1b456ffa26612599e` /
   `637b640a6ea58c4b80abacde95d3135fc4ac069d5a72ea31bff6fa53125d4291`.
+- `six_to_eleven_number_machinery_thm4000.py` -> matching `.out`
+  [THM-4000 PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED].
+  Consecutive samples compile the six
+  moduli `6,...,11` with factorial Smith sidecars; the centered split cubic
+  controls base-seven/base-ten CRT and every tripotent; the same packet gives
+  a Farey--Pell tower.  Separate typed applications verify the arithmetic
+  order-eight clock, `E8` stabilization, the OCF evaluation kernel, and the
+  Moon--Busch min-plus floor.  Checks: `148241`.  Script/output SHA-256:
+  `a4c011a1224f6dfe05b2aa90d5f9f72d28c46dfce0d7f93639c3424b848f3dd6` /
+  `3819a7f6d09a00f4c0a0657cd43fc55c53d103f6f3588a62587535cb9a8cc529`.
 
 - `jc2_degree_six_common_zero_normal_cubic_two_place_thm3906.py` -> matching
   `.out` [THM-3906 PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED].

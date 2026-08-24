@@ -41,17 +41,21 @@ Format per entry:
   `theta_3^8 = Theta_E8` and then treated the coefficient ratio as the
   constant `15`.  The left side is the theta series of the cubic lattice
   `Z^8`, not of `E8`.
-- **Minimal witness / first failed implication:** in the convention where the
-  exponent is half the squared norm, the first nonconstant coefficients are
-  `16` for `Theta_(Z^8)` and `240` for `Theta_E8`.  At the next coefficient
-  they are `112` and `2160`, so even the ratio changes from `15` to `135/7`.
-  Equal rank and a common theta-function vocabulary did not identify the
-  lattices or their theta series.
-- **Repair / strongest survivor:** `Theta_(Z^8)=theta_3^8`, whereas
-  `Theta_E8=E_4=1+240 sum_(n>=1) sigma_3(n)q^n`.  The ratio `15` survives only
-  on odd exponents, where Jacobi's eight-square formula happens to give
-  `r_8(n)=16 sigma_3(n)`.  The genuine rank-eight arithmetic operation is
-  orthogonal stabilization: for every even lattice `L`, `L direct_sum E8`
+- **Minimal witness / first failed implication:** put both series in the common
+  squared-norm convention.  Then
+  `Theta_(Z^8)=theta_3(q)^8=1+16q+112q^2+448q^3+1136q^4+...`, while
+  `Theta_E8=E_4(q^2)=1+240q^2+2160q^4+...`.  Thus the norm-one shells already
+  differ (`16` versus `0`), and even the first two common nonzero shells differ:
+  at norms two and four the counts are `112` versus `240` and `1136` versus
+  `2160`.  Equal rank and a common theta-function vocabulary did not identify
+  the lattices or their theta series.
+- **Repair / strongest survivor:** with exponent equal to half the squared norm,
+  `Theta_E8=E_4=1+240 sum_(n>=1) sigma_3(n)q^n`, while the odd cubic lattice has
+  half-integral exponents, `Theta_(Z^8)=theta_3(q^(1/2))^8`.  The identity
+  `r_8(n)=16 sigma_3(n)` for odd `n` is an internal eight-square formula, not a
+  same-shell ratio with `E8`.  The genuine rank-eight arithmetic operation is
+  orthogonal stabilization: for every positive-definite even integral lattice
+  `L`, `L direct_sum E8`
   has the same discriminant form as `L` and
   `Theta_(L direct_sum E8)=E_4 Theta_L`.  This gives a typed rank
   `r -> r+8` lift, not equality of theta series and not a tournament or Bott
