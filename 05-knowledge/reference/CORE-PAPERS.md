@@ -255,14 +255,11 @@ This maps imported claims, consumers, and exclusions; links—not bare IDs—are
 - **Primary/imported:** Nagata's corrected [Theorem 7.3](https://repository.kulib.kyoto-u.ac.jp/server/api/core/bitstreams/9ef8e868-5526-4830-b19f-543c0af09e7c/content) gives `Omega(deg R)>=3` for every counterexample-pencil member; Shastri's [criterion](https://doi.org/10.18910/6794) forces two top-form roots; [arXiv:2204.14178v1](https://arxiv.org/abs/2204.14178) gives reduced height `>=108`, only `(72,108)` below `125`.
 - **Consumer/boundary:** [THM-3550](../../01-canon/theorems/THM-3550-prime-degree-exclusion-and-pencil-height-eight-floor.md) supplies an independent elementary floor.  None proves `JC(2)`, existence of `(72,108)`, or height `125`.
 
-### Gwozdziewicz / Lang — injective lines and Newton similarity
+### Planar Keller target geometry — Lang; Jelonek--Lasoń; Nguyen; Shioda; Miranda--Persson
 
-- **CITED:** [Gwozdziewicz, Thm. 1.1](https://arxiv.org/abs/alg-geom/9305008) makes a planar Keller map injective on one line an automorphism.  [Lang](https://doi.org/10.1016/0022-4049(91)90128-O) proves that, when both degrees exceed one, their origin-augmented Newton polygons scale by the degree ratio.  Necessary only.
-
-### Jelonek--Lasoń / Nguyen Van Chau — planar nonproperness geometry
-
-- **CITED:** [Jelonek--Lasoń](https://arxiv.org/abs/1411.5011), *Manuscripta Math.* **156** (2018), prove that a generically finite degree-`d` map's nonproperness set is covered by polynomial curves of degree `<=d-1`.  [Nguyen Van Chau](https://arxiv.org/abs/math/0305088), *Ann. Polon. Math.* **84** (2004), [DOI](https://doi.org/10.4064/ap84-3-2), sharpens a nonempty planar Keller nonproperness set to a curve with one point at infinity.
-- **Boundary:** first prove that the generic image of an escaping divisor lies in the nonproperness set.  A finite collision, conductor, or branch curve alone does not qualify; withdrawn arXiv:2011.03472 is not imported.
+- **CITED:** [Lang](https://doi.org/10.1016/0022-4049(91)90128-O) proves Newton similarity; [Jelonek--Lasoń](https://arxiv.org/abs/1411.5011), Theorem 3.2/Corollary 3.5, give `D-1`/chart-width bounds; [Nguyen](https://arxiv.org/abs/math/0305088), Theorem 1, gives component degree pair `(M d,M e)`. THM-4122 divides out cover inflation; THM-4124 turns integral similarity into a target shear.
+- **CITED:** [Shioda](https://rikkyo.repo.nii.ac.jp/records/10027) supplies the Mordell--Weil framework; [Miranda--Persson](https://www.math.colostate.edu/~miranda/preprints/Miranda-Persson1986_Article_OnExtremalRationalEllipticSurf.pdf), Theorem 4.1/Table 5.2, classify `X_211` as `II*+I1+I1` with section group one. THM-4120 uses this only on one smooth theta seam.
+- **Boundary:** raw `M` is not intrinsic; `rho<=2` at `(72,108)` needs width six; base change can enlarge Mordell--Weil; and `Q^2-cP^3` is not a target automorphism. First route any escaping divisor into the nonproperness set.
 
 ### Belov--Kanel--Kontsevich — *The Jacobian Conjecture is stably equivalent to the Dixmier Conjecture*
 

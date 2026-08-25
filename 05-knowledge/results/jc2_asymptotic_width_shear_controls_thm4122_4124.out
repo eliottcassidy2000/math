@@ -1,0 +1,12 @@
+THM4122/4124 ASYMPTOTIC WIDTH AND SHEAR CONTROL CERTIFICATE
+scope=planar_nonproper_Keller_necessary_conditions;JC2=OPEN
+degree_pair_72_108_reduced=(2, 3)
+rho_exact_width6=(1, 2);rho_width5=(1,)
+unconditional_width30_hostile=(1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+inflation_rows=[(1, 1, (2, 3), (2, 3)), (1, 3, (2, 3), (6, 9)), (1, 4, (2, 3), (8, 12)), (2, 1, (4, 6), (4, 6)), (2, 3, (4, 6), (12, 18)), (2, 4, (4, 6), (16, 24)), (5, 1, (10, 15), (10, 15)), (5, 3, (10, 15), (30, 45)), (5, 4, (10, 15), (40, 60))]
+integral_shear_positive_rows=[(1, [(0, 0), (1, 0), (0, 2)], (1, 1), 1), (2, [(0, 0), (2, 0), (0, 4)], (1, 1), 1), (3, [(0, 0), (3, 0), (0, 6)], (1, 1), 1), (4, [(0, 0), (4, 0), (0, 8)], (1, 1), 1)]
+hostile_scaled_vertices=[(0, 0), (2, 0), (0, 4)]
+hostile_vertex_ratios=(1, 2);hostile_J=-4*x*y + 8*y**3 + 1
+resonant_2_3_identity=J(P,Q^2-cP^3)=2Q*J(P,Q)
+radial_convexity_rows=[(2, Fraction(1, 1), Fraction(1, 2)), (3, Fraction(1, 1), Fraction(1, 3)), (3, Fraction(2, 1), Fraction(2, 3)), (5, Fraction(1, 1), Fraction(1, 5)), (5, Fraction(2, 1), Fraction(2, 5)), (5, Fraction(3, 1), Fraction(3, 5)), (5, Fraction(4, 1), Fraction(4, 5))]
+RESULT=PASS

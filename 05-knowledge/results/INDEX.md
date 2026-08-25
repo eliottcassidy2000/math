@@ -16,6 +16,32 @@
   `e9263501d1d8129a8460a0deacbdac5d12e528a7042dfb3e484dfba683cfe28e`;
   independent: `7221ca2a46291828333e487d67b112750bb52c2260683afc80aa9dd3595c174a` /
   `ee0d0bfa2aac74e39e90a623430df9834afa175805b4804540c92f6cf93926d3`.
+- `jc2_asymptotic_width_shear_controls_thm4122_4124.py` -> matching `.out`
+  [THM-4122 PROVED FROM CITED NGUYEN/JELONEK--LASON/LANG + THM-3544 and
+  THM-4124 PROVED FROM CITED LANG + VERIFIED-EXACT; JC(2) OPEN]. A normalized
+  nonproperness component has intrinsic pole pair `(rho*d,rho*e)` with
+  `rho*max(d,e)<=min(D-1,w_X)`; polynomial covers inflate Nguyen's displayed
+  multiplier and must be divided out. At an integral degree ratio, one
+  triangular target shear synchronizes and cancels every scaled nonzero
+  Newton vertex. Exact hostiles retain `rho=1,...,10` at width 30, break
+  coefficient synchronization without the Keller equation, and show that
+  `Q^2-cP^3` is not a Keller-preserving `2:3` shear. Script/output SHA-256:
+  `7fd2f9a2e32b199489506c22bf0f34c849ab5b0f4750c20e78d40038bd491f5a` /
+  `d1bf27ab87eb78b79667854c3c57181942e248d83145a729e3460e641c8e2ca4`.
+
+- `jc23_extremal_target_de_response_thm4120.py` and independent
+  standard-library audit -> concordant `.out`s [THM-4120 PROVED RELATIVE TO
+  THM-3992/4053/4103 + CITED SHIODA--TATE + VERIFIED-EXACT + INDEPENDENTLY
+  VERIFIED-EXACT; JC(2) OPEN]. The smooth nonresonant theta-only
+  maximum-weight-eight target is `II*+I1+I1` with Mordell--Weil group `{O}`;
+  residue fields plus the Eisenstein-norm gate force degree `21`, and the
+  principal `DE` kernel raises total-degree floors to `(28,31)`. Primary
+  script/output SHA-256:
+  `a03716cc84df1391f7ba8e15ea362133405edc93b127e650fa68cbb9c51327c5` /
+  `a81cb731233ac7367c624fce3429ba5db0d5a292d5aa4e0034a5b5e1ea5eab32`;
+  independent:
+  `1f60a83be3a93778de19bc755cff266b786912686b1b7e591e19e48911bfaa01` /
+  `8ad5b294af06770b53348e300dd8090f832896ee1c776710a8540eba6a239b3a`.
 
 - `lrc_projective_tail_multiplier_residue_compiler_thm4121.py` and
   independent modular/supplier audit -> concordant semantic ledgers

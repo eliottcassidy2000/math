@@ -60,11 +60,11 @@ Then read the routed frontier, guardrails, and theorem. Logs and reflections are
     separate collision, phase and harmonic address. THM-3425 makes joint
     period plus parity the primitive half cap-six breaker. Composite rank
     seven and FC(3) remain open.
-12. **JC is false from dimension three; JC(2) and DC(2) remain open.** THM-1300 is exact. THM-2063/2071, THM-2084/2118/2102, and THM-2202 close typed sectors; THM-4044/4045 force `M>=8` and THM-4058/4060 handle fixed-`a`/simple packets.
-    THM-4067 identifies the universal graph-period gap `S_Gamma/Acal`, which
-    becomes a seminormal defect for reduced curve functions; it refutes the
-    displayed figure eight but preserves the abstract connection and `e>=2`
-    no-go. Global entry, `p*y^2`/walls, `JC(2)`, and `DC(2)` stay open.
+12. **JC is false from dimension three; JC(2) and DC(2) remain open.** THM-1300
+    is exact; THM-2084 and THM-3543--4103 close named planar cells. THM-4120
+    forces degree `21` and floors `(28,31)` only on one smooth `2:3` seam;
+    THM-4122/4124 add intrinsic-width and integral-ratio target-orbit gates.
+    Collision walls, other cells, global entry, `JC(2)`, and `DC(2)` stay open.
 13. **Complete period-14 coordinates can still be globally blind.** THM-2043
     proves parity-Hasse completeness for reduced period-14 functions. The
     audited Goddyn--Wong family in THM-2058 preserves the packet, every fixed
