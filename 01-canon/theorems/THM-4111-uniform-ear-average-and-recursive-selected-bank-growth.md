@@ -37,8 +37,8 @@ audit: >
   labelled parents and 33,864 ears through order five. It reproduces the
   exact sums, means, strong-ear controls, C3 coefficient hostile, inherited
   selected-bank bounds, and the equal-(H,F_1)-but-different-image hostile.
-  The independent normal/-O streams and the LF-stable primary streams
-  byte-match their frozen outputs.
+  After CRLF-to-LF normalization the independent normal/-O streams match their
+  frozen output; the LF-stable primary streams byte-match theirs directly.
 ---
 
 # THM-4111 -- uniform ear average and recursive selected-bank growth
@@ -284,6 +284,7 @@ python3 -B 04-computation/tournament_uniform_ear_average_growth_thm4111_independ
 python3 -B -O 04-computation/tournament_uniform_ear_average_growth_thm4111_independent_audit.py
 ```
 
-Each normal/-O pair must byte-match its LF-stable frozen output. These finite
-audits are hostile controls for the elementary double count, not the source of
-its quantifiers.
+The primary normal/-O pair must byte-match its LF-stable frozen output; the
+independent pair matches after CRLF-to-LF normalization under MISTAKE-402.
+These finite audits are hostile controls for the elementary double count, not
+the source of its quantifiers.

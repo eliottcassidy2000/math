@@ -75,6 +75,20 @@
   independent:
   `c607dac3d2f223fb95e76293a02f6f90767e8603ecb64961cd981d71f6e361e1` /
   `40131dd6d92e21080601d030099e8a9bf749ee994d0a5f38c96a1c17fc922482`.
+
+- `sparse_reciprocal_phase_graph_thm4110.py` -> matching `.out`
+  [THM-4110 PROVED + VERIFIED-EXACT + INDEPENDENTLY AUDITED; LRC(14) OPEN].
+  For a primitive positive row and connected reciprocal-commutator graph on
+  circle phases, the phase-sheet quotient order is the gcd of the weighted
+  spanning-tree monomials. Primewise saturation holds exactly when the
+  prime-free vertices induce a connected dominating set. AP13's 53-edge
+  unequal-`v_2` graph has quotient `(Z/2Z)^6`: 64 total sheets, one physical
+  and 63 extra; six same-shell anchors remove them. This certifies physical
+  orbit membership, not clearance or loneliness. Normal/-O transcripts match
+  the frozen output after LF normalization. Script/output SHA-256:
+  `914fdfb94adf40b0d981fa0c306f81ca3b224293c49135eb252ab179a98633f0` /
+  `93d3e77d4d3466232d0b5cdafc4cdf6a32043fbc55321efb569186b96d6126b0`.
+
 - `lrc_ap7_even_gap_overlap_atlas_thm4109.py` and independent audit ->
   matching `.out`s [THM-4109 PROVED RELATIVE TO THM-2072/4092/4101 +
   VERIFIED-EXACT + INDEPENDENTLY VERIFIED-EXACT; LRC(14) OPEN].  On the exact
@@ -84,6 +98,7 @@
   overlap, and explicit height-263 banks eliminate every other asymptotically
   eligible even gap.  The independent endpoint/wall audit checks `11,760`
   residue-law gates and the canonical covering hostile `{8,9,11,13}`.
+  Normal/-O transcripts match their frozen outputs after LF normalization.
   Primary script/output SHA-256:
   `505784e664c703cbcee7f1f66d579e3d203ae88d9970a9dde2598b4655719d56` /
   `391df0ccf5aaf4b5584ac359f97a53930e6006024bb9686a829b93a2f4156952`;

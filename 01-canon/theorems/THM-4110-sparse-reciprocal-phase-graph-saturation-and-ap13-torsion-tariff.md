@@ -4,12 +4,14 @@ title: "Sparse reciprocal phase graph saturation and AP13 torsion tariff"
 status: >
   PROVED + VERIFIED-EXACT + INDEPENDENTLY AUDITED. For a primitive positive
   integer row and a connected graph of reciprocal commutators on circle
-  phases, the finite nonphysical sheet count is the gcd of explicit weighted
-  spanning-tree monomials. Saturation is equivalent, prime by prime, to the
+  phases, the finite phase-sheet quotient has order equal to the gcd of
+  explicit weighted spanning-tree monomials. Saturation is equivalent,
+  prime by prime, to the
   prime-free vertices forming a connected dominating set. The complete
-  unequal-v2 graph on AP13 leaves exactly 64 half-toggle sheets, isomorphic to
-  (Z/2Z)^6; six same-shell reciprocal constraints are necessary and
-  sufficient to remove them. This is a physical-entry firewall, not LRC(14).
+  unequal-v2 graph on AP13 has 64 total half-toggle sheets, one physical and
+  63 nonphysical, with quotient (Z/2Z)^6; six same-shell reciprocal
+  constraints are necessary and sufficient to remove the extra sheets. This
+  is a physical-entry firewall, not LRC(14).
 source: codex-lrc14-abc-exponent-reciprocity-20260825
 depends_on:
   - THM-4105-primitive-reciprocal-phase-descent-and-quantitative-arrival
@@ -17,6 +19,8 @@ related:
   - THM-4100-residual-component-three-outlier-lrc-compiler
   - THM-4106-lrc-pair-owner-reciprocity-and-valuation-tree-decoder
   - THM-4107-gcd-normalized-exponent-tournament-holonomy-and-lrc-blindness
+  - THM-4108-abc-conditional-reciprocal-power-radicals-and-lrc-gauge-obstruction
+  - MISTAKE-402
 script: 04-computation/sparse_reciprocal_phase_graph_thm4110.py
 output: 05-knowledge/results/sparse_reciprocal_phase_graph_thm4110.out
 script_sha256: 914fdfb94adf40b0d981fa0c306f81ca3b224293c49135eb252ab179a98633f0
@@ -28,8 +32,9 @@ audit: >
   the primewise criterion, the tree boundary, and all quantifier firewalls. A
   separate exact AP13 path found maximal minors 64*(1,...,13), Smith factors
   1^6,2^6, and the unique minimum tree. The primary exact script exhausts
-  4,323 tree/value cases and 1,542 connected-graph/value cases; normal,
-  optimized, and frozen streams agree.
+  4,323 tree/value cases and 1,542 connected-graph/value cases. After
+  CRLF-to-LF normalization, normal and optimized streams match the frozen
+  output exactly.
 ---
 
 # THM-4110 -- sparse reciprocal phase graph saturation and AP13 torsion tariff
@@ -300,8 +305,9 @@ survivors after six anchor edges                1.          (25)
 
 It exhausts every labelled tree through six vertices for three primitive
 rows, and every connected labelled graph through five vertices for two rows,
-comparing direct maximal minors with `(5)` and `(13)`. Normal and optimized
-streams reproduce the frozen output exactly.
+comparing direct maximal minors with `(5)` and `(13)`. After CRLF-to-LF
+normalization, normal and optimized streams reproduce the frozen output
+exactly.
 
 An independent character-lattice referee found the required circle-only
 scope and rederived `(5)--(14)`. A separate exact AP13 computation obtained

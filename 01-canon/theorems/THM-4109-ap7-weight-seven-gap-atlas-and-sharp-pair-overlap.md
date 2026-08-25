@@ -22,6 +22,7 @@ related:
   - THM-4079-lrc14-antipodal-outlier-absorption-and-adaptive-clock
   - THM-4098-weight-seven-antipodal-scale-escape-and-missing-parity-rows
   - THM-4100-residual-component-three-outlier-lrc-compiler
+  - MISTAKE-402
 script: 04-computation/lrc_ap7_even_gap_overlap_atlas_thm4109.py
 output: 05-knowledge/results/lrc_ap7_even_gap_overlap_atlas_thm4109.out
 independent_audit_script: 04-computation/lrc_ap7_even_gap_overlap_atlas_thm4109_independent_audit.py
@@ -38,8 +39,8 @@ audit: >
   independent path uses literal theta-wall cells, a closed antiderivative,
   explicit left/right packet endpoints, remote derivation plus backward and
   forward checks of every residue law, and independently searched hostiles.
-  It checks 11,760 endpoint/quasipolynomial gates. Normal and optimized runs
-  are byte-identical to both frozen outputs.
+  It checks 11,760 endpoint/quasipolynomial gates. After CRLF-to-LF
+  normalization, normal and optimized runs match both frozen outputs exactly.
 ---
 
 # THM-4109 -- the AP7 weight-seven selected-pair gap atlas

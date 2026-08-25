@@ -516,7 +516,7 @@ forgets p-adic topology. It is unrelated to THM-4089's external variables
 `(p,s,xi,Y)`, despite both results containing an optimizer and a next-case
 obstruction. Neither theorem identifies an `f_14` residual or proves LRC(14).
 
-MISTAKE-500 supplies a useful branch-sensitive control. At `p=7,s=-5`, the
+MISTAKE-506 supplies a useful branch-sensitive control. At `p=7,s=-5`, the
 interpolation index six is divisible by `p-1`, so the trivial branch has the
 finite value `2801/42` with valuation `-1`; at `s=-1`, THM-4096 must instead
 name the `omega^2`-twisted rational vertex. In both cases negative valuation
@@ -621,6 +621,50 @@ pair-sum/determinant ratio prevent transfer to LRC or to p-adic irrationality.
 The useful common lesson is to retain the labelled valuation tree before
 passing to radical support, not that ABC supplies a missing LRC theorem.
 
+### 9.8 Spanning-tree saturation retains valuation depth, not safety
+
+THM-4110 supplies the missing synchronization invariant for a sparse graph of
+reciprocal phase equations. For a primitive row `v` and connected graph
+`Gamma`, the circle-phase quotient has exact order
+
+```text
+I_Gamma(v)=gcd_(T spanning tree of Gamma)
+             product_i v_i^(deg_T(i)-1).                  (31)
+```
+
+Primewise, its depth is the minimum spanning-tree energy
+
+```text
+v_p(I_Gamma)=min_T sum_i(deg_T(i)-1)v_p(v_i).             (32)
+```
+
+Saturation is therefore equivalent to the `p`-free vertices inducing a
+connected dominating set for every prime. On AP13 the unequal-`v_2` graph has
+53 edges and quotient `(Z/2Z)^6`: 64 total sheets, one physical and 63 extra.
+Six same-shell anchors remove precisely that tariff. Physical orbit membership
+still says nothing about `1/14` clearance.
+
+This is a genuine interface with THM-4091. The source is a labelled valuation
+vector plus the full edge-incidence lattice; the target is the finite phase
+quotient. The spanning-tree minimum preserves prime locations and depths.
+Radical support, one LCM, or THM-4107's edge orientation cannot recover it.
+Conversely, THM-4100 begins with an actual time, so its commutators already
+vanish; its missing coordinate is continuous survivor-component ancestry, not
+another torsion sheet.
+
+THM-4109 sharpens the AP7 selected-pair certificate to floors `197,232,268`
+for gaps `4,8,12`. Its modulus `980=2^2*5*7^2` is an endpoint/split branch
+atlas, not p-adic analysis. A composition with THM-4100 would need the length
+of a specific surviving component: total positive measure and an endpoint
+clock do not provide that sidecar.
+
+There is no direct THM-4110-to-THM-4111 theorem. The shared research move is
+nevertheless precise: expand the full fibre before selecting. Equation `(31)`
+takes a gcd over every spanning tree; THM-4111 expands every nonconstant cut
+before retaining one witness per scalar value. Choosing one tree or cut early
+destroys the invariant. This is a reusable method, not an LRC/H-spectrum
+identification and not an irrationality result.
+
 ## 10. Reproduction
 
 ```bash
@@ -638,6 +682,12 @@ python -B 04-computation/tournament_uniform_ear_average_growth_thm4111.py
 python -B -O 04-computation/tournament_uniform_ear_average_growth_thm4111.py
 python -B 04-computation/tournament_uniform_ear_average_growth_thm4111_independent_audit.py
 python -B -O 04-computation/tournament_uniform_ear_average_growth_thm4111_independent_audit.py
+python -B 04-computation/lrc_ap7_even_gap_overlap_atlas_thm4109.py
+python -B -O 04-computation/lrc_ap7_even_gap_overlap_atlas_thm4109.py
+python -B 04-computation/lrc_ap7_even_gap_overlap_atlas_thm4109_independent_audit.py
+python -B -O 04-computation/lrc_ap7_even_gap_overlap_atlas_thm4109_independent_audit.py
+python -B 04-computation/sparse_reciprocal_phase_graph_thm4110.py
+python -B -O 04-computation/sparse_reciprocal_phase_graph_thm4110.py
 ```
 
 The external certificate must be replayed from its pinned source commit; its
