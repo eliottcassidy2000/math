@@ -1,5 +1,20 @@
 # Script Results Index
 
+- `lrc_projective_tail_multiplier_residue_compiler_thm4121.py` and
+  independent modular/supplier audit -> concordant semantic ledgers
+  [THM-4121 PROVED ELEMENTARY PROJECTIVE RESIDUE COMPILER + VERIFIED-EXACT +
+  INDEPENDENTLY AUDITED; LRC(14) OPEN]. For
+  `S_(c,t)=(1,4,6,8,10,12,14,15,16,18,22) union {t,ct}`, the phase `9/19`
+  has parameter density zero for `c=0 mod 19`, `16/19` for `c=+/-1 mod 19`,
+  and `14/19` for every other nonzero multiplier class. The `16/19` value is
+  sharp because the first tail always loses residues `0,2,17`. Every member
+  remains outside THM-4112's three explicit thirteen-speed shapes through
+  all dilations and primitive normalizations. Primary script/output SHA-256:
+  `c187f19b711e0ec108bdf9157d9ae60a5504e1cd9fa485780d7473911f69b011` /
+  `99acb8e686bbf3df8bd2f6b10e4ea5060e9c5db5a5a084a1fef046c1a7fada67`;
+  independent: `3c3228528ec854e887ac2d2085dabdb79ac7cb56a5d96b91e7df40e1e0a65022` /
+  `26e134f1873b92d399f44df283aa7fbdb235027440470e3c98816ee55e858e73`.
+
 - `lrc_supplier_free_residue_family_thm4119.py` and independent modular audit
   -> concordant semantic ledgers [THM-4119 PROVED ELEMENTARY CONGRUENCE FAMILY
   + VERIFIED-EXACT + INDEPENDENTLY AUDITED; LRC(14) OPEN]. For

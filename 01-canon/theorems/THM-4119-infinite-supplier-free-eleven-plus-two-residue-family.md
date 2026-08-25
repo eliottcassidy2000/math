@@ -16,6 +16,7 @@ related:
   - THM-4049-lrc14-d2-two-phase-residue-firewall
   - THM-4112-antipodal-component-ancestry-chain-and-scale-separated-lrc-families
   - THM-4117-physical-eleven-plus-two-primitive-support-obstruction
+  - THM-4121-sharp-projective-tail-multiplier-residue-compiler
 script: 04-computation/lrc_supplier_free_residue_family_thm4119.py
 output: 05-knowledge/results/lrc_supplier_free_residue_family_thm4119.out
 independent_audit_script: 04-computation/lrc_supplier_free_residue_family_thm4119_independent_audit.py
@@ -102,6 +103,10 @@ At residue `0` the clearance in `(3)` is `0`; at the other four residues in
 two, while the body already attains two. This proves `(4)--(5)` and shows the
 classification is sharp for the displayed phase. Since `R` has fourteen
 classes, the valid parameters have natural density `14/19`.
+
+THM-4121 subsequently frees the tail multiplier: the present `c=3` row is
+one nonaligned projective class, while `c=+/-1 mod 19` aligns the two tail
+failure pairs and raises the same-phase density sharply to `16/19`.
 
 ## 2. Uniform exclusion from the three explicit suppliers
 

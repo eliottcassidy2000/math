@@ -1,0 +1,11 @@
+status=PASS
+family=S_(c,t)=BODY_union_{t,ct};c>1;t>22;phase=9/19
+body=(1, 4, 6, 8, 10, 12, 14, 15, 16, 18, 22);body_clearance=2/19
+bad_residues_by_c_mod19=((0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18), (0, 2, 17), (0, 1, 2, 17, 18), (0, 2, 7, 12, 17), (0, 2, 9, 10, 17), (0, 2, 8, 11, 17), (0, 2, 6, 13, 17), (0, 2, 3, 16, 17), (0, 2, 5, 14, 17), (0, 2, 4, 15, 17), (0, 2, 4, 15, 17), (0, 2, 5, 14, 17), (0, 2, 3, 16, 17), (0, 2, 6, 13, 17), (0, 2, 8, 11, 17), (0, 2, 9, 10, 17), (0, 2, 7, 12, 17), (0, 1, 2, 17, 18), (0, 2, 17))
+safe_counts_by_c_mod19=(0, 16, 14, 14, 14, 14, 14, 14, 14, 14, 14, 14, 14, 14, 14, 14, 14, 14, 16)
+classification=c=0:0/19;c=+/-1:16/19;all_other_nonzero_c:14/19
+clearance_rule=c_zero_or_t_zero:0;nonzero_bad:1/19;safe:2/19
+sharpness=every_nonzero_multiplier_loses_t=0,+/-17;maximum=16/19
+supplier_exclusion=AP8_and_D0_direct_core_failure;AP7_parity_or_forced_core_missing_unit
+dilation_controls=(1,2,3,7,19,38);normalization_and_exclusion=PASS
+semantic_sha256=62712d11643e5e93ba830a327226530739cd5f2bbace569c472751516166a089

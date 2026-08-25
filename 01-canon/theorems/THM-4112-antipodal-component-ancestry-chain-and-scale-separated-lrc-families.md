@@ -26,6 +26,7 @@ related:
   - THM-4110-sparse-reciprocal-phase-graph-saturation-and-ap13-torsion-tariff
   - THM-4117-physical-eleven-plus-two-primitive-support-obstruction
   - THM-4119-infinite-supplier-free-eleven-plus-two-residue-family
+  - THM-4121-sharp-projective-tail-multiplier-residue-compiler
   - MISTAKE-169
   - MISTAKE-274
 script: 04-computation/lrc_antipodal_component_ancestry_chain_thm4112.py
