@@ -36,7 +36,7 @@ related:
 script: 04-computation/hamiltonian_matching_deficit_two_prime_lane_thm4094.py
 output: 05-knowledge/results/hamiltonian_matching_deficit_two_prime_lane_thm4094.out
 script_sha256: 5b6c779958ad1de276873eabd3585f432bb593e32811fb138dc5d3c19948d616
-output_sha256: 5f174f77a873a02bd92bbeb4a5d70b3c329abc8152fb1330d4fe1dc6d98df34
+output_sha256: 5f174f77a873a02bd92bbebe4a5d70b3c329abc8152fb1330d4fe1dc6d98df34
 semantic_sha256: a7376b1f1d0bdea71e063caf85415a6555d070130c24304b2b2c6fb24571d76f
 hash_basis: raw LF bytes for files; canonical compact JSON for the semantic ledger
 audit: >

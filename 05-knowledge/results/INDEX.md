@@ -202,7 +202,7 @@
   as the first current unforced prime targets and records the finitary
   compactness obstruction. Script/output SHA-256:
   `5b6c779958ad1de276873eabd3585f432bb593e32811fb138dc5d3c19948d616` /
-  `5f174f77a873a02bd92bbeb4a5d70b3c329abc8152fb1330d4fe1dc6d98df34`.
+  `5f174f77a873a02bd92bbebe4a5d70b3c329abc8152fb1330d4fe1dc6d98df34`.
 
 - `tournament_order9_strong_ear_spectrum_thm4097.py` and independent audit ->
   matching `.out`s [THM-4097 PROVED ELEMENTARY REDUCTION + FINITE-EXACT +
