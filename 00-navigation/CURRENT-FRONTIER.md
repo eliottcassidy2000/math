@@ -271,6 +271,17 @@ singleton criteria; THM-3825 decodes. Fixed inert products give
 `liminf H sqrt(log log X)/sqrt(log X)>=0.4276598...`. No support asymptotic
 or residue follows.
 
+### Sun 2-4-6-8
+
+- **REFUTED + FINITE-EXACT:** [THM-4026](../01-canon/theorems/THM-4026-sun-two-four-six-eight-binomial-counterexample.md)
+  certifies hole `896315812331399`; least
+  hole is **OPEN**.
+- **PROVED:** [THM-4027](../01-canon/theorems/THM-4027-sun-two-four-six-eight-universal-modular-solubility.md)
+  proves universal modular solubility: no fixed local obstruction.
+- **PROVED:** [THM-4028](../01-canon/theorems/THM-4028-sun-two-four-six-eight-average-order-criticality.md)
+  gives `sum_(n<=X)a(n)~24.311...X^(25/24)` and residue refinements;
+  zero density and coverage are **OPEN**.
+
 ### Established landmarks
 
 - Hostile-audited [THM-2433](../01-canon/theorems/THM-2433-operation-fibre-deletion-incidence-and-startup-scar.md) gives finite-hole Burnside calculus: exact additive/multiplicative scars, covers and twin-centre atom `12`; chain difference and divisor Möbius are analogues, not Stirling.

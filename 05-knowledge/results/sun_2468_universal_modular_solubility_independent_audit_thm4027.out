@@ -1,0 +1,34 @@
+SUN_2468_UNIVERSAL_LOCAL_SOLUBILITY_FINITE_GATES
+finite_odd_prime_regular_covers
+p=3 image_sizes=(1, 3, 2, 2) regular_sumset=3/3
+p=5 image_sizes=(2, 2, 5, 5) regular_sumset=5/5
+p=7 image_sizes=(3, 3, 2, 7) regular_sumset=7/7
+p=11 image_sizes=(5, 5, 4, 3) regular_sumset=11/11
+p=13 image_sizes=(6, 5, 5, 4) regular_sumset=13/13
+p=17 image_sizes=(8, 7, 7, 6) regular_sumset=17/17
+p=19 image_sizes=(9, 8, 7, 6) regular_sumset=19/19
+p=23 image_sizes=(11, 9, 10, 8) regular_sumset=23/23
+p=29 image_sizes=(14, 12, 12, 10) regular_sumset=29/29
+p=31 image_sizes=(15, 12, 12, 13) regular_sumset=31/31
+p=37 image_sizes=(18, 14, 15, 15) regular_sumset=37/37
+p=41 image_sizes=(20, 16, 17, 16) regular_sumset=41/41
+p=43 image_sizes=(21, 16, 18, 16) regular_sumset=43/43
+p=47 image_sizes=(23, 18, 20, 17) regular_sumset=47/47
+p=53 image_sizes=(26, 20, 20, 22) regular_sumset=53/53
+p=59 image_sizes=(29, 23, 23, 26) regular_sumset=59/59
+p=61 image_sizes=(30, 24, 26, 24) regular_sumset=61/61
+p=67 image_sizes=(33, 25, 27, 24) regular_sumset=67/67
+p=71 image_sizes=(35, 27, 30, 26) regular_sumset=71/71
+p=73 image_sizes=(36, 28, 32, 27) regular_sumset=73/73
+p=79 image_sizes=(39, 30, 29, 31) regular_sumset=79/79
+p=83 image_sizes=(41, 31, 36, 33) regular_sumset=83/83
+cauchy_davenport_cutoff=89 integer_lower_bound_at_cutoff=91
+cauchy_davenport_scope=ALL_PRIMES_P_GE_89_BY_25P_OVER_24_MINUS_7_OVER_2
+two_adic_exact_balance_levels=1..14
+two_adic_theorem_scope=ALL_LEVELS_BY_TOGGLE_INDUCTION
+mod99 periods=(99, 297, 297, 297) target=53 target_factor=544/1089 minimum=496/1089@(86,) image=99/99
+semantic_sha256=19280c79873c76e292337fbb0acf1afc3c5929057dc2b266eb7fff28fb942ea8
+theorem=EVERY_RESIDUE_IS_REPRESENTED_MODULO_EVERY_POSITIVE_MODULUS
+proof_sidecars=CAUCHY_DAVENPORT_PLUS_REGULAR_W_HENSEL_PLUS_2_ADIC_TOGGLE_PLUS_CRT
+global_integer_coverage_inference=NONE
+PASS

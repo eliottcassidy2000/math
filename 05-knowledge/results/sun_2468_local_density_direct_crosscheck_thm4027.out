@@ -1,0 +1,18 @@
+SUN_2468_DIRECT_CARTESIAN_CROSSCHECK
+aggregation=DIRECT_FOUR_NESTED_LOOPS_NO_CONVOLUTION
+p=3 a=1 q=3 target=2 count=594 universe=2187 factor=22/27
+p=3 a=2 q=9 target=8 count=16524 universe=177147 factor=68/81
+p=5 a=1 q=5 target=4 count=2825 universe=15625 factor=113/125
+p=5 a=2 q=25 target=24 count=353750 universe=9765625 factor=566/625
+p=7 a=1 q=7 target=5 count=2177 universe=16807 factor=311/343
+p=7 a=2 q=49 target=33 count=744310 universe=40353607 factor=310/343
+p=11 a=1 q=11 target=9 count=792 universe=14641 factor=72/121
+p=13 a=1 q=13 target=5 count=2002 universe=28561 factor=154/169
+p=17 a=1 q=17 target=14 count=4080 universe=83521 factor=240/289
+p=19 a=1 q=19 target=13 count=6004 universe=130321 factor=316/361
+p=23 a=1 q=23 target=19 count=10856 universe=279841 factor=472/529
+p=29 a=1 q=29 target=0 count=24128 universe=707281 factor=832/841
+p=31 a=1 q=31 target=27 count=29202 universe=923521 factor=942/961
+p=43 a=1 q=43 target=35 count=80840 universe=3418801 factor=1880/1849
+semantic_sha256=8b05076aadbd0f3a42e7a5775c40d71bf2d7a91264638885f56d8bf28390ff3b
+PASS

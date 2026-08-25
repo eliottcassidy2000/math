@@ -1,0 +1,11 @@
+SUN_2468_FIXED_MODULUS_AVERAGE_ORDER_CONTROLS
+q=99 sigma_target=544/1089 sigma_worst=496/1089
+reciprocal_sum=25/24 volume_constant=24.311024862260965
+X=10000 total=210751 residue_53=1406 residue_86=1243 ratio_total=0.590608522921 ratio_target=0.780871479915 ratio_worst=0.757151160560
+X=100000 total=2715445 residue_53=16015 residue_86=14047 ratio_total=0.691360256345 ratio_target=0.808080295391 ratio_worst=0.777371079367
+X=1000000 total=33359460 residue_53=188541 residue_86=176188 ratio_total=0.771641798333 ratio_target=0.864304379057 ratio_worst=0.885838305362
+X=10000000 total=395630618 residue_53=2104568 residue_86=1951931 ratio_total=0.831419029302 ratio_target=0.876510661790 ratio_worst=0.891612041623
+semantic_sha256=5b6b96a786795da2e7446c56fbb3587d7c5a901d41d4d9b8c461428c965dd810
+theorem_scope=FIXED_Q_CUMULATIVE_RESIDUE_CLASS_ASYMPTOTIC
+pointwise_inference=NONE
+PASS

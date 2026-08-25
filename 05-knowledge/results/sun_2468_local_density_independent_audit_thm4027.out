@@ -1,0 +1,67 @@
+SUN_2468_LOCAL_MODULAR_EXACT_AUDIT
+N=896315812331399
+period_formula_gates=3996
+p=2 a=1 q=2 target=1 image=2/2 target_factor=1/1 min=1/1@[0,1] max=1/1
+p=2 a=2 q=4 target=3 image=4/4 target_factor=1/1 min=1/1@[0,1,2,3] max=1/1
+p=2 a=3 q=8 target=7 image=8/8 target_factor=1/1 min=1/1@[0,1,2,3,4,5,6,7] max=1/1
+p=2 a=4 q=16 target=7 image=16/16 target_factor=1/1 min=1/1@[0,1,2,3,4,5,6,7,8,9,10,11...] max=1/1
+p=2 a=5 q=32 target=7 image=32/32 target_factor=1/1 min=1/1@[0,1,2,3,4,5,6,7,8,9,10,11...] max=1/1
+p=2 a=6 q=64 target=7 image=64/64 target_factor=1/1 min=1/1@[0,1,2,3,4,5,6,7,8,9,10,11...] max=1/1
+p=2 a=7 q=128 target=7 image=128/128 target_factor=1/1 min=1/1@[0,1,2,3,4,5,6,7,8,9,10,11...] max=1/1
+p=2 a=8 q=256 target=135 image=256/256 target_factor=1/1 min=1/1@[0,1,2,3,4,5,6,7,8,9,10,11...] max=1/1
+p=3 a=1 q=3 target=2 image=3/3 target_factor=22/27 min=22/27@[2] max=10/9
+p=3 a=2 q=9 target=8 image=9/9 target_factor=68/81 min=62/81@[5] max=10/9
+p=3 a=3 q=27 target=26 image=27/27 target_factor=68/81 min=62/81@[5,14,23] max=10/9
+p=3 a=4 q=81 target=26 image=81/81 target_factor=68/81 min=62/81@[5,14,23,32,41,50,59,68,77] max=10/9
+p=3 a=5 q=243 target=188 image=243/243 target_factor=68/81 min=62/81@[5,14,23,32,41,50,59,68,77,86,95,104...] max=10/9
+p=3 a=6 q=729 target=188 image=729/729 target_factor=68/81 min=62/81@[5,14,23,32,41,50,59,68,77,86,95,104...] max=10/9
+p=5 a=1 q=5 target=4 image=5/5 target_factor=113/125 min=113/125@[4] max=28/25
+p=5 a=2 q=25 target=24 image=25/25 target_factor=566/625 min=556/625@[19] max=28/25
+p=5 a=3 q=125 target=24 image=125/125 target_factor=566/625 min=554/625@[44,119] max=28/25
+p=5 a=4 q=625 target=149 image=625/625 target_factor=566/625 min=554/625@[44,119,169,244,294,369,419,494,544,619] max=28/25
+p=7 a=1 q=7 target=5 image=7/7 target_factor=311/343 min=311/343@[5] max=388/343
+p=7 a=2 q=49 target=33 image=49/49 target_factor=310/343 min=310/343@[19,33,40] max=388/343
+p=7 a=3 q=343 target=82 image=343/343 target_factor=310/343 min=310/343@[19,33,40,68,82,89,117,131,138,166,180,187...] max=388/343
+p=11 a=1 q=11 target=9 image=11/11 target_factor=72/121 min=72/121@[9] max=152/121
+p=11 a=2 q=121 target=86 image=121/121 target_factor=72/121 min=72/121@[9,20,31,42,53,64,75,86,97,108,119] max=152/121
+p=11 a=3 q=1331 target=933 image=1331/1331 target_factor=72/121 min=72/121@[9,20,31,42,53,64,75,86,97,108,119,130...] max=152/121
+p=13 a=1 q=13 target=5 image=13/13 target_factor=154/169 min=150/169@[1] max=206/169
+p=13 a=2 q=169 target=18 image=169/169 target_factor=154/169 min=150/169@[1,14,27,40,53,66,79,92,105,118,131,144...] max=206/169
+p=17 a=1 q=17 target=14 image=17/17 target_factor=240/289 min=240/289@[14] max=320/289
+p=17 a=2 q=289 target=133 image=289/289 target_factor=240/289 min=240/289@[14,31,48,65,82,99,116,133,150,167,184,201...] max=320/289
+p=19 a=1 q=19 target=13 image=19/19 target_factor=316/361 min=316/361@[13,14] max=412/361
+p=19 a=2 q=361 target=203 image=361/361 target_factor=316/361 min=316/361@[13,14,32,33,51,52,70,71,89,90,108,109...] max=412/361
+p=23 a=1 q=23 target=19 image=23/23 target_factor=472/529 min=472/529@[19] max=570/529
+p=23 a=2 q=529 target=479 image=529/529 target_factor=472/529 min=472/529@[19,42,65,88,111,134,157,180,203,226,249,272...] max=570/529
+p=29 a=1 q=29 target=0 image=29/29 target_factor=832/841 min=806/841@[11] max=868/841
+p=31 a=1 q=31 target=27 image=31/31 target_factor=942/961 min=926/961@[24] max=1000/961
+p=31 a=2 q=961 target=554 image=961/961 target_factor=29198/29791 min=926/961@[24,55,86,117,148,179,210,241,272,303,334,365...] max=31240/29791
+p=43 a=1 q=43 target=35 image=43/43 target_factor=1880/1849 min=1786/1849@[11] max=1904/1849
+hensel_p=11 target=9 singular_target_states=0 critical_coordinate_sizes=(1, 3, 1, 1) all_power_stability=PROVED
+hensel_p=13 target=5 singular_target_states=0 critical_coordinate_sizes=(1, 1, 1, 1) all_power_stability=PROVED
+hensel_p=17 target=14 singular_target_states=0 critical_coordinate_sizes=(1, 1, 1, 1) all_power_stability=PROVED
+hensel_p=19 target=13 singular_target_states=0 critical_coordinate_sizes=(1, 3, 1, 1) all_power_stability=PROVED
+hensel_p=23 target=19 singular_target_states=0 critical_coordinate_sizes=(1, 1, 1, 1) all_power_stability=PROVED
+hensel_p=29 target=0 singular_target_states=0 critical_coordinate_sizes=(1, 3, 1, 1) all_power_stability=PROVED
+hensel_p=31 target=27 singular_target_states=4 critical_coordinate_sizes=(1, 3, 5, 3) all_power_stability=NOT_CLAIMED_SINGULAR_FIBRE
+hensel_p=43 target=35 singular_target_states=0 critical_coordinate_sizes=(1, 1, 1, 1) all_power_stability=PROVED
+small_lift_p=2 level=1 target=1 singular_target_states=0 critical_coordinate_sizes=(0, 0, 4, 0) scope=ONE_LEVEL_CERTIFICATE
+small_lift_p=3 level=2 target=8 singular_target_states=1944 critical_coordinate_sizes=(3, 9, 9, 21) scope=ONE_LEVEL_CERTIFICATE
+small_lift_p=5 level=2 target=24 singular_target_states=10000 critical_coordinate_sizes=(5, 5, 25, 75) scope=ONE_LEVEL_CERTIFICATE
+small_lift_p=7 level=2 target=33 singular_target_states=0 critical_coordinate_sizes=(7, 7, 7, 49) scope=ONE_LEVEL_CERTIFICATE
+crt_moduli=(9, 11, 25, 49, 13, 17, 19, 23)
+crt_residues=(8, 9, 24, 33, 5, 14, 13, 19)
+crt_factors=68/81,72/121,566/625,310/343,154/169,240/289,316/361,472/529
+crt_product_factor=5359658991616/22179335403225 approx=0.241651018580
+crt_modulus=11712375675 N_mod_crt=2839050674
+crt_packet_minimum_factor=81606963232768/387103333904287 approx=0.210814415907
+crt_packet_minimizer residues=(5, 9, 19, 19, 1, 14, 13, 19) combined=11170711319
+crt_packet_minimizer residues=(5, 9, 19, 19, 1, 14, 14, 19) combined=10554270494
+crt_packet_minimizer residues=(5, 9, 19, 33, 1, 14, 13, 19) combined=7824318269
+crt_packet_minimizer residues=(5, 9, 19, 33, 1, 14, 14, 19) combined=7207877444
+crt_packet_minimizer residues=(5, 9, 19, 40, 1, 14, 13, 19) combined=6151121744
+crt_packet_minimizer residues=(5, 9, 19, 40, 1, 14, 14, 19) combined=5534680919
+semantic_sha256=f4813c29d2a2310679da4c4571524d90ed36d773838e87f7e10676c2d598d802
+local_insolubility=NONE_IN_EXACT_UNIVERSES
+status=FINITE_EXACT_PLUS_LARGE_PRIME_HENSEL_THEOREM;_GLOBAL_ZERO_NOT_IMPLIED
+PASS
