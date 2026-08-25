@@ -1,5 +1,14 @@
 # The Zeta Function Knows About Tournaments
 
+**CORRECTION -- 2026-08-25.** Section 1's von Staudt--Clausen computation
+`denom(B_6)=2*3*7=42` is exact. Its further claim that this is "not a
+coincidence" or a common Bernoulli/tournament/Hurwitz obstruction is an
+unsupported synthesis, not a theorem. MISTAKE-501 also records that the
+Hamilton quaternion algebra does not ramify at `3,7` and that denominator
+`42` is not unique to `B_6` (`B_114` is the first counterexample). The other
+sections must be read mechanism by mechanism; shared prime labels alone do not
+transport a tournament invariant.
+
 *Written: opus-2026-03-17-S74. A reflection on the six genuine connections between the Riemann zeta function (and its relatives) and tournament parity theory.*
 
 ---

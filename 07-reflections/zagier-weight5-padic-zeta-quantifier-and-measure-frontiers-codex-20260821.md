@@ -1,5 +1,15 @@
 # Zagier weight five, p-adic zeta quantifiers, and measure frontiers
 
+**UPDATE -- 2026-08-25.** The singleton `OPEN` ledger below is a correct
+literature/source snapshot for this August 20--21 audit, but it is no longer a
+complete claim census. Christopher D. Long's August 24 GitHub research draft
+now claims 22 individual p-adic-zeta irrationalities. Its terminal interval
+certificate is `FINITE-EXACT`; the global theorem remains an **EXTERNAL
+PREPRINT CLAIM / UNDER SPECIALIST AUDIT**, not proved repository canon. See
+[`padic-holonomy-matching-logic-and-coordinate-depth-frontiers-codex-20260825.md`](padic-holonomy-matching-logic-and-coordinate-depth-frontiers-codex-20260825.md)
+and THM-4089/THM-4091. The Zagier weight-five and rejected same-lune measure
+conclusions below are unchanged.
+
 **Session date:** 2026-08-20--21  
 **Status:** literature statements `CITED`; elementary identities `PROVED`;
 rank, recurrence, and coefficient audits `FINITE-EXACT`; the lune exclusion

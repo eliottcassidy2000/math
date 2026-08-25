@@ -9,14 +9,18 @@ status: >
   have positive formula margins, while exact derivative brackets and tangent
   bounds prove negative global maxima for the immediate next cases (2,31),
   (3,13), (5,7), and (7,5). This is a sharp obstruction to extending the
-  manuscript by parameter retuning alone. The manuscript's 22 p-adic-zeta
-  irrationality theorem remains AUTHOR-CLAIMED / UNREFEREED; its
+  manuscript by parameter retuning alone. The first-chamber stationary point
+  is interior exactly for p<11; at p=13,s=3 even an idealized one-power Hasse
+  cost has negative margin for every continuation radius. The manuscript's
+  22 p-adic-zeta irrationality theorem remains AUTHOR-CLAIMED / UNREFEREED; its
   new geometric and adelic bridges are not certified here.
 source: codex-padic-zeta-tournament-20260825
 depends_on: []
 related:
   - THM-4056-divisor-phase-compiler-and-duffin-schaeffer-lcm-clock
+  - THM-4057-stern-brocot-depth-pullback-and-rational-edge-tournament-gauge
   - THM-4088-order-tournament-arithmetic-type-blindness-and-lrc-margin-density
+  - THM-4091-integral-coordinate-change-lcm-depth-boundary
 script: 04-computation/hybrid_padic_zeta_margin_frontier_thm4089.py
 output: 05-knowledge/results/hybrid_padic_zeta_margin_frontier_thm4089.out
 script_sha256: 90232af6c30b71ae7a4ae2a3f777effb32d6706c5a1413b948478b910c3a139e
@@ -27,6 +31,10 @@ primary_source_audit: .scratch/padic_repo_audit_20260825/REPORT.md
 independent_audit: .scratch/padic_margin_referee_20260825/REPORT.md
 independent_script_sha256: 43d0313595ed4f8704572ce6589b0aaa9764ba2c39cb47f75131bdfd012df0b6
 independent_output_sha256: ca51232dec53c195fe26157a6cc597668031f900c6ba04acdfc3a7582529066e
+boundary_script: 04-computation/hybrid_padic_margin_boundary_thm4089.py
+boundary_output: 05-knowledge/results/hybrid_padic_margin_boundary_thm4089.out
+boundary_script_sha256: 28baa8f3e529c728a1ac4580c51a16b5bb20a07139ef215b22659be0f37e6a35
+boundary_output_sha256: cd7cce306e7b551f680e0fc107212d5b1b440f2408fcc1de0a660b899ae2f60d
 hash_basis: raw bytes
 external_source: https://github.com/octonion/p-adic-zeta-irrationality/commit/b46a1770901551961710e155d775aae7c5ea39e7
 ---
@@ -40,8 +48,9 @@ The optimization was independently calculus- and
 
 This theorem does not import the external manuscript's claimed arithmetic
 holonomy theorem. It takes only its displayed elementary margin function as a
-defined real function, optimizes both free parameters globally, and identifies
-the first four cases which parameter retuning cannot reach.
+defined real function, optimizes both free parameters globally, identifies
+the first four cases which parameter retuning cannot reach, and proves the
+first-chamber and formal `p=13,s=3` boundaries.
 
 The external source is Christopher D. Long's
 [`p-adic-zeta-irrationality` repository at commit `b46a177`](https://github.com/octonion/p-adic-zeta-irrationality/commit/b46a1770901551961710e155d775aae7c5ea39e7).
@@ -229,7 +238,155 @@ It says exactly that extending each row of the claimed list by its next odd
 weight requires a genuinely stronger proof ingredient, not finer rational
 parameter search.
 
-## 6. What must improve, and what does not transfer
+## 6. The general first-chamber wall is p=11
+
+On the active unsaturated subchamber
+
+```text
+1<xi<(s+1)/s,                    c_p xi<1,               (18)
+```
+
+formula `(12)` is affine with positive slope, and its stationary point is
+still `(8)`. Its distance from the domain boundary factors exactly:
+
+```text
+boxed: xi*-1=(s-1)(11-p)/(12s^2+(s-1)(p+1)).             (19)
+```
+
+Moreover `xi*<(s+1)/s`, and `c_p xi*<1` exactly when `p<11`. Hence this
+stationary point lies inside `(18)` exactly for `p<11`; it is `xi=1` at
+`p=11` and lies below the admissible interval for `p>11`.
+
+The source's prime levels `2,3,5,7` are exactly its four selected levels, but
+this is not a genus-zero classification: `X_0(13)` is also genus zero.
+Equation `(19)` is an optimizer boundary and nothing more.
+
+## 7. A p=13,s=3 all-Y obstruction
+
+The `p=13` formal extrapolation lies beyond the first-chamber regime, so it
+requires a separate global chamber calculation.
+
+### 7.1 Optimistic one-power arithmetic cost
+
+First replace `J_13(xi)` by its absolute upper bound `xi`, making the Hasse
+term unrealistically favorable. Then
+
+```text
+S_id(xi)=7xi,
+tau_id(xi)=(7xi+3I_3(xi))/8.                             (20)
+```
+
+The floor and positive-part breakpoints split `1<xi<4` at
+
+```text
+4/3, 3/2, 2, 3.                                         (21)
+```
+
+Across the five successive chambers, the derivative of the numerator in
+`(20)` is
+
+```text
+9xi-11,       1,       6xi-8,       4,       3xi-5.     (22)
+```
+
+Only the first expression vanishes in its chamber. Endpoint comparison proves
+the unique global minimum
+
+```text
+boxed:
+xi=11/9,       I_3=305/108,       S_id=77/9,
+min tau_id=613/288.                                      (23)
+```
+
+Since `(1-c_p x)_+<=1`, every actual one-power Hasse integral satisfies
+`J_p(xi)<=xi`; therefore `(23)` is a lower bound for every cost of this form,
+not merely for the manuscript's particular `c_13`.
+
+### 7.2 Actual formal arithmetic cost
+
+For `p=13`, `c_13=7/6`. For every admissible `xi>1`, the positive part in
+`J_13` has ended at `6/7`, so
+
+```text
+J_13(xi)=integral_0^(6/7)(1-7x/6)dx=3/7.                (24)
+```
+
+The five chamber derivatives of the numerator `S+3I_3` are
+
+```text
+9xi-9,        3,       6xi-6,       6,       3xi-3,     (25)
+```
+
+all strictly positive on `1<xi<4`. Hence the infimum is approached but not
+attained as `xi` decreases to one:
+
+```text
+boxed: inf_(1<xi<4) tau_(13,3)(xi)=515/224.             (26)
+```
+
+### 7.3 Global negativity for every continuation radius
+
+For `s=3`, equations `(4)--(5)` give, for every `0<Y<1/13`,
+
+```text
+M=3log(13)-6pi Y-4tau-C_13(Y).                           (27)
+```
+
+The positive exponential series supplies the exact elementary bound
+
+```text
+exp(8/3)>sum_(j=0)^5 (8/3)^j/j!
+        =49621/3645>13,
+log(13)<8/3.                                            (28)
+```
+
+Dropping the two nonpositive terms in `(27)` and using `(23)` proves the
+robust idealized obstruction
+
+```text
+boxed: M < 8-613/72=-37/72<0.                           (29)
+```
+
+Using the actual cost `(26)` sharpens the rational upper bound to
+
+```text
+boxed: M < 8-515/56=-67/56<0.                           (30)
+```
+
+Thus no `Y` rescues this formal `p=13,s=3` margin, even after idealizing away
+the one-power Hasse codimension.
+
+### 7.4 Exact analytic optimizer
+
+In the one-collision-layer sector `1/26<=Y<1/13`, put `x=13Y`. Then
+
+```text
+C_13(Y)=(48pi/169)(acos(x)-x sqrt(1-x^2)).               (31)
+```
+
+The derivative of `-6pi Y-C_13(Y)` vanishes exactly at
+
+```text
+sqrt(1-x^2)=13/16,
+x=sqrt(87)/16,
+Y*=sqrt(87)/208.                                        (32)
+```
+
+Below `1/26`, the `c=13` layer alone makes the derivative positive; after
+`Y*`, the one-layer derivative is negative. Hence `(32)` is the global
+analytic optimizer. The optimistic exact maximum is
+
+```text
+3log(13)-613/72-(48pi/169)acos(sqrt(87)/16)
+                    -(3pi sqrt(87))/208,                (33)
+```
+
+numerically `-2.0879472412217...`. Replacing `613/72` by the actual infimum
+cost `515/56` gives the actual-cost supremum, numerically
+`-2.770486923761...`. The rational bounds `(29)--(30)`, not these decimals,
+certify negativity.
+
+## 8. What must improve, and what does not transfer
 
 The source audit identifies the load-bearing internal gates:
 
@@ -258,20 +415,28 @@ The lawful repo connections are narrower:
 - primes versus pivots form a weighted incidence structure with ties, not an
   intrinsic tournament.
 
-## 7. Replay, provenance, and scope
+THM-4091 gives the exact elementary coordinate-change boundary behind the
+LCM warning: cumulative clearing is functorial, while literal coefficient
+depth above one is not.
+
+## 9. Replay, provenance, and scope
 
 ```bash
 python3 -B 04-computation/hybrid_padic_zeta_margin_frontier_thm4089.py
 python3 -B -O 04-computation/hybrid_padic_zeta_margin_frontier_thm4089.py
 python3 -B 04-computation/padic_zeta_next_cell_margin_obstruction_thm4089.py
 python3 -B -O 04-computation/padic_zeta_next_cell_margin_obstruction_thm4089.py
+python3 -B 04-computation/hybrid_padic_margin_boundary_thm4089.py
+python3 -B -O 04-computation/hybrid_padic_margin_boundary_thm4089.py
 ```
 
-Both normal/optimized pairs produce their frozen outputs. The primary interval primitives are adapted,
+All three normal/optimized pairs produce their frozen outputs. The primary interval primitives are adapted,
 with the complete MIT copyright and permission notice in the script, from the source repository's certificate;
 the derivative enclosure, concavity/tangent proof, four next cases, and output
-are new to that companion. The standalone companion imports no source code and
-serves as the independent exact path.
+are new to that companion. The standalone next-cell companion imports no
+source code and serves as an independent exact path; the boundary companion
+proves the first-chamber and `p=13` statements by exact rational chamber
+algebra.
 
 This theorem proves only the optimization and sign statements for the
 explicit real function `(6)`. The external claim that 22 Kubota--Leopoldt

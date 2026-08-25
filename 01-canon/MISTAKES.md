@@ -29,6 +29,30 @@ Format per entry:
 - **Reusable rule:** density ratios do not rescale correlation kernels when
   the two arc widths differ; compute the convolution shape before taking a
   periodic average.
+## MISTAKE-501 (2026-08-25, Bernoulli--Hurwitz reflection) -- denominator primes were promoted to quaternion ramification and a finite p-adic value was called a pole
+
+- **What failed:** `07-reflections/bernoulli-hurwitz.md` claimed that the
+  Hamilton quaternion algebra ramifies at the finite primes `2,3,7`, that its
+  maximal-order discriminant is `42`, that `v_7(B_6)=-1` creates poles in a
+  congruence class, and that `B_6` is the unique Bernoulli number with
+  denominator `42`.
+- **Minimal witnesses / first failed implications:** the Hamilton algebra
+  `(-1,-1)_Q` ramifies only at the real place and finite prime `2`, so its
+  reduced finite discriminant is `2`. Kubota--Leopoldt interpolation gives the
+  finite value `zeta_7(-5)=2801/42` with valuation `-1`; a negative valuation
+  records a denominator, not a pole. Finally von Staudt--Clausen gives
+  `denom(B_114)=42`, so uniqueness already fails at the second index `114`.
+- **Repair / strongest survivor:** the exact identity `B_6=1/42` and its
+  divisor-set proof survive. The corrected reflection withdraws the quaternion
+  bridge, restores the pole at `s=1`, and replaces uniqueness by the exact
+  criterion `{p prime:p-1 divides n}={2,3,7}`. The finite-exact companion
+  exhausts all even `n<=1000`, finding 15 denominator-42 indices beginning
+  `6,114`.
+- **Reusable rule:** prime support in a rational special value does not identify
+  a ramification set, and negative valuation does not mean singularity. Audit
+  the function's domain point and interpolation formula separately from the
+  denominator. Before calling a value unique, test the defining divisor
+  criterion beyond the first visually suggestive indices.
 
 ## MISTAKE-499 (2026-08-25, THM-012b insertion decomposition) -- equality failures were mislabeled as orphan-bearing pairs
 

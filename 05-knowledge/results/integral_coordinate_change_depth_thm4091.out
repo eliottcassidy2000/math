@@ -1,0 +1,19 @@
+THM-4091 INTEGRAL COORDINATE-CHANGE AUDIT
+h(f)=h1*f+...+h4*f^4, each hi in [-2,2]; output degree <= 6
+
+coordinate changes exhausted = 625
+derivative/depth-one gates   = 13125
+LCM matrix gates             = 52500
+degree-one/two gates         = 7500
+depth-two failing entries    = 1688
+first possible failure       = (n,k)=(3,2)
+
+hostile R_e(q)=q^2/2^e, h(f)=f+f^2
+e=2: 3^e*[f^3]R_e(h) = 9/2
+e=3: 3^e*[f^3]R_e(h) = 27/4
+e=4: 3^e*[f^3]R_e(h) = 81/8
+e=5: 3^e*[f^3]R_e(h) = 243/16
+e=6: 3^e*[f^3]R_e(h) = 729/32
+e=7: 3^e*[f^3]R_e(h) = 2187/64
+e=8: 3^e*[f^3]R_e(h) = 6561/128
+EXACT CONTROLS: PASS

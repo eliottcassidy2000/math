@@ -1,0 +1,9 @@
+BERNOULLI-42 AND P-ADIC POLE CORRECTION
+universe: even Bernoulli indices 2<=n<=1000
+denom(B_n)=42 indices = [6, 114, 186, 258, 354, 402, 426, 474, 582, 654, 762, 834, 894, 942, 978]
+count                    = 15
+first two                = [6, 114]
+zeta_7(-5)               = 2801/42
+v_7(zeta_7(-5))          = -1
+negative valuation is a finite denominator, not a pole
+FINITE-EXACT CORRECTION: PASS

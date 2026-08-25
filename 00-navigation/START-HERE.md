@@ -18,7 +18,7 @@ python3 agents/start_session.py --topic "<target statement or object>"
 
 Then read the routed frontier, guardrails, and theorem. Logs and reflections are searchable history, not warm-up.
 
-## Seventeen high-signal facts to reuse, not re-derive
+## Eighteen high-signal facts to reuse, not re-derive
 
 1. **LRC(14) is first open.** Direct `<=6`; projected caps `1579/216`.
    THM-3378 leaves ledger/wall/families `372913/109/12` at `z1=216`.
@@ -87,6 +87,13 @@ Then read the routed frontier, guardrails, and theorem. Logs and reflections are
 17. **Sun 2-4-6-8 is refuted:** THM-4026; THM-4027/4028/4036/4037 separate
     local support, mean, energy and parity from coverage; THM-4040 gives
     uniqueness only in one CRT class. Global classification remains open.
+18. **The new p-adic-zeta headlines are external claims, not canon.** Long's
+    August 24 draft claims 22 individual irrationalities; only its terminal
+    interval margins are presently `FINITE-EXACT` here. THM-4089 proves a
+    `p=11` optimizer wall and a complete one-power `p=13,s=3` margin no-go;
+    THM-4091 proves the exact LCM/literal-depth coordinate-change boundary.
+    The separately supplied arXiv paper is matching logic, where THM-4090
+    sharpens the cited many-sort obstruction to the minimal two-sort boundary.
 ## Where to go by topic
 
 | Topic | Read first | Then use |
@@ -100,6 +107,8 @@ Then read the routed frontier, guardrails, and theorem. Logs and reflections are
 | Integer sequences / additive bases | [`CURRENT-FRONTIER.md#integer-sequences`](CURRENT-FRONTIER.md#integer-sequences) | THM-2000/2005/3359, THM-4026--4028/HYP-1953; keep support, local data, height, and carry distinct |
 | Pythagorean/Pell/power sums | [THM-3357](../01-canon/theorems/THM-3357-berggren-three-branch-walsh-level-collapse-and-parent-circuit.md) | THM-3333--3336/3339/3341/3345--3347/3353/3356/3358/3370/3375/3376; retain content/unit, branch order, ancestry, positivity chamber, and consumer labels |
 | ABC / IUT | [`CURRENT-FRONTIER.md#abc-iut`](CURRENT-FRONTIER.md#abc-iut) | [`CORE-PAPERS-ABC-IUT.md`](../05-knowledge/reference/CORE-PAPERS-ABC-IUT.md), THM-3833 |
+| P-adic zeta / irrationality | [`CURRENT-FRONTIER.md#other-active-portfolio`](CURRENT-FRONTIER.md#other-active-portfolio) | THM-4089/4091 and [`padic-holonomy-matching-logic-and-coordinate-depth-frontiers-codex-20260825.md`](../07-reflections/padic-holonomy-matching-logic-and-coordinate-depth-frontiers-codex-20260825.md); keep external theorem claims separate from finite formula certificates |
+| Matching logic | [THM-4090](../01-canon/theorems/THM-4090-two-sort-matching-logic-global-completeness-obstruction.md) | [Chen--Rosu source pin](../05-knowledge/reference/CORE-PAPERS.md#chen--rosu----completeness-and-incompleteness-of-basic-matching-logic); preserve exact language/system scope and sort-flow sidecar |
 | Broad portfolio | [`PROBLEM-LEDGER.md`](PROBLEM-LEDGER.md) | THM-2176/2177/2191; [`PROBLEM-ATLAS-2026-07-20.md`](PROBLEM-ATLAS-2026-07-20.md) only as historical provenance |
 | Formalization | relevant theorem's `formalization` field | `00-navigation/*FORMALIZATION*`, then a clean build/axiom audit |
 | Research method | [`RESEARCH-PROTOCOL.md`](RESEARCH-PROTOCOL.md) | [`META-PATTERNS.md`](META-PATTERNS.md), relevant reflections |

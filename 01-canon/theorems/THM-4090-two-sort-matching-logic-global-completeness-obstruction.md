@@ -18,8 +18,12 @@ related:
 script: 04-computation/two_sort_matching_logic_obstruction_thm4090.py
 output: 05-knowledge/results/two_sort_matching_logic_obstruction_thm4090.out
 independent_audit: .scratch/matching_two_sort_referee_20260825/REPORT.md
+independent_exact_script: 04-computation/matching_logic_two_sort_obstruction_thm4090.py
+independent_exact_output: 05-knowledge/results/matching_logic_two_sort_obstruction_thm4090.out
 script_sha256: ff64ea8dadc2fd2d4718ce303e93a87c22e95ad6db2a86cacc3a907a48bca758
 output_sha256: 3ac734da6800af7278ad9e13c85e848773548d8869d5680b694f09cd9759f6b3
+independent_exact_script_sha256: 5fcd07f7c5f5b14c2efff335dce4c9aa12a7861f7a5aa637a391d816a599e017
+independent_exact_output_sha256: c77fec8436ec08966d791ed00738f24c1b29ac87c4b1f09312794c6ed0e8932a
 hash_basis: raw LF bytes
 ---
 
@@ -153,6 +157,9 @@ all-cardinality symbolic proof, not its replacement.
 An independent referee rebuilt the denotations with literal finite sets,
 audited every primitive rule and the one-sort minimality import, and returned
 `PASS`.  Ordinary and optimized runs are required to agree byte-for-byte.
+A second exact companion independently enumerates all `5,050` finite models,
+checks the load-bearing intersection hostile and the feed closure, and
+byte-matches its frozen transcript under ordinary and optimized execution.
 
 ## 6. What this does not prove
 
@@ -161,3 +168,12 @@ least-fixpoint fragment, and no arithmetic theorem.  Treating rational,
 irrational, and transcendental numbers as three sorts supplies only types;
 transfer among them requires actual total operations and true axioms.  Bare
 sort or tournament labels cannot certify arithmetic type.
+
+## 7. Reproduction
+
+```bash
+python -B 04-computation/two_sort_matching_logic_obstruction_thm4090.py
+python -B -O 04-computation/two_sort_matching_logic_obstruction_thm4090.py
+python -B 04-computation/matching_logic_two_sort_obstruction_thm4090.py
+python -B -O 04-computation/matching_logic_two_sort_obstruction_thm4090.py
+```
