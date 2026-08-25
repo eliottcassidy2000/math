@@ -7,7 +7,8 @@ status: >
   chi_x(C)=2(S(C)-S(C-x)). THM-3729 and THM-4094 identify this exactly with
   a rooted boundary energy. OCF and principal-minor expansion give exact local
   and averaged support-moment formulas. Every nonconstant ear over every
-  labelled order-6 base has chi>=0, but a source over C3 has chi=-2.
+  labelled order-6 base and the inherited 456-class order-7 bank has chi>=0,
+  but a source over C3 has chi=-2.
   Existential/averaged unavoidability and H>=disc remain OPEN.
 source: codex-snark-apex-260822870-20260825
 depends_on:
@@ -22,14 +23,15 @@ related:
   - THM-4111-uniform-ear-average-and-recursive-selected-bank-growth
   - THM-4113-maximal-noncrossing-half-kempe-atlas
   - THM-4114-ocf-mobius-positivity-tropical-defect-layer-and-opposite-ear-cut-curvature
+  - THM-4115-uniform-ear-cut-walsh-variance-and-sharp-growth-refinement
 script: 04-computation/tournament_deletion_slack_unavoidability_hyp9080.py
 output: 05-knowledge/results/tournament_deletion_slack_unavoidability_hyp9080.out
 script_sha256: 6ff91dacc06b63c7e7fcd34163ca647e35a814f683eb0aa9fdb5a8ebd54000e6
 output_sha256: 0c41b86d3a445df8fcfcf2e2a49e7363f9410766de7c495a6ac02ac83610549b
 auxiliary_script: 04-computation/tournament_alu_support_moment_ear_tariff_hyp9080.py
 auxiliary_output: 05-knowledge/results/tournament_alu_support_moment_ear_tariff_hyp9080.out
-auxiliary_script_sha256: bb7d1b063f539975d2fe2f08fcc6b327c1e71e6a9a4758fcf29b019fa74a4f19
-auxiliary_output_sha256: 07f0e32b32950510b8a7028f3cba07db537a650e82482a6ba667a0156112d49e
+auxiliary_script_sha256: 870403672f12654b6f1372af19978f21e95aa3a057f68ad48ca2716acdeff9f9
+auxiliary_output_sha256: 41ffbeb17b83ff9ce087a7170d54c9ea44a292450e7b7c1c8bd458e51d7744a1
 hash_basis: raw working-tree bytes; normalized-LF hash for the inherited n=7 representative bank
 audit: >
   FINITE-EXACT PASS. The script exhausts all 33,866 labelled tournaments of
@@ -45,9 +47,10 @@ audit: >
   The auxiliary companion reconstructs OCF support atoms by Boolean Mobius
   inversion and Pfaffian-square atoms by principal determinants on 34,322
   objects. It checks 273,848 moment gates, 1,096 direct ear formulas, and all
-  2,031,616 nonconstant ears over labelled order-six bases. Its normal and
-  optimized transcripts reproduce the frozen output. The combined ear
-  tariff remains OPEN.
+  2,031,616 nonconstant ears over labelled order-six bases plus 57,456 ears
+  over the inherited order-seven representative bank. Its normal and
+  optimized transcripts reproduce the frozen output. The combined ear tariff
+  remains OPEN.
 ---
 
 # HYP-9080 -- tournament deletion-slack local unavoidability
@@ -305,6 +308,100 @@ control; positive definiteness does not imply `wtilde_ij>=0` or the tariff
 its proved directed-cut submodularity does not supply the missing
 cross-family domination.
 
+### 3.3 Exact Walsh lift of the combined tariff
+
+THM-4115 restores the Walsh coordinates of the Hamiltonian ear cube. The
+same transform applies exactly to the combined charge. Put
+
+```text
+Y_S=chi_(x_S)(T+x_S)/2,
+epsilon_i(S)=+1 if i in S and -1 otherwise,
+Wtilde=sum_(i<j)wtilde_ij.                                (11p)
+```
+
+Since `sum_i h_i=0`, equation `(11n)` becomes
+
+```text
+Y_S=Wtilde/2-a_0
+    +(1/2)sum_i h_i epsilon_i
+    -(1/2)sum_(i<j)wtilde_ij epsilon_i epsilon_j.          (11q)
+```
+
+Walsh orthogonality therefore gives the all-order identities
+
+```text
+E_S Y_S=Wtilde/2-a_0,
+Var_S(Y_S)=1/4(sum_i h_i^2+sum_(i<j)wtilde_ij^2).          (11r)
+```
+
+This is a proved degree-two carrier, but it is not a tariff proof. Unlike
+THM-4115's Hamiltonian weights, `wtilde=w+2dR` is not known coefficientwise
+nonnegative at all orders, and mean plus variance does not control the
+minimum of a labelled Boolean quadratic. Indeed
+
+```text
+min(Y_S,Y_(V-S))=cut_wtilde(S)-a_0-|h(S)|,                (11s)
+```
+
+so `(11o)` is exactly a nonconstant-cube support-floor problem. A cheap
+necessary condition follows: if `(11o)` holds, then only the two constant
+cuts can be negative, both equal to `-a_0`, and hence
+
+```text
+E_S Y_S >= -a_0/2^(|T|-1).                               (11t)
+```
+
+Neither `(11r)` nor `(11t)` is sufficient. The full labelled quadratic,
+rather than its first two scalar moments, is the faithful next carrier.
+
+There is nevertheless a sharp maximum consequence. Let `n=|T|`, put
+`W=sum_(i<j)w_ij`, and use THM-4115's one-defect count `F_1(T)`. The diagonal
+cofactor identity `disc(T-v)=2dR_vv` gives
+
+```text
+mu_Y:=E_S Y_S
+ =W/2+d(1-tr R)/2
+ =((n-1)H(T)+F_1(T))/4+d/2-(1/4)sum_v disc(T-v).          (11u)
+```
+
+Since `-K^2=K^T K` is positive semidefinite, `0<R<=I` in Loewner order.
+Thus `u_S^T R u_S<=n`; Hamiltonian insertion never decreases `H`, and so
+
+```text
+Y_S>=L:=-d(n-1)/2.                                       (11v)
+```
+
+Writing `B=sum_i h_i^2+sum_(i<j)wtilde_ij^2` and
+`M_Y=max_S Y_S`, average `(Y_S-L)(M_Y-Y_S)>=0`. Because
+`mu_Y-L=(W+d(n-tr R))/2>0`, this proves
+
+```text
+M_Y>=mu_Y+B/(2(W+d(n-tr R))).                             (11w)
+```
+
+Equality holds for the `C3` base: `L=-1`, `mu_Y=5/4`, `Var(Y)=27/16`, and
+`M_Y=2`. This can force a favorable **extension orientation**; it does not
+control a fixed child's deletion charge, whose base changes with the deleted
+vertex. Hence it proves neither LU nor ALU.
+
+One scalar obstruction to the tariff also survives. Put
+
+```text
+Z_S=(Y_S+Y_(V-S))/2=cut_wtilde(S)-a_0,
+Lh_S=(Y_S-Y_(V-S))/2=h(S).                                (11x)
+```
+
+The tariff implies `Z_S^2>=Lh_S^2` on every nonconstant cut, while the two
+constant cuts contribute `a_0^2` each. Therefore it necessarily implies
+
+```text
+mu_Y^2+(sum_(i<j)wtilde_ij^2-sum_i h_i^2)/4
+ >=2^(1-n)a_0^2.                                         (11y)
+```
+
+Violation of `(11y)` would refute the tariff. Satisfaction is not sufficient
+because the scalar moment still forgets labelled incidence.
+
 ## 4. Pointwise monotonicity fails at order four
 
 Use upper-pair bit order
@@ -370,14 +467,16 @@ OCF/Pfaffian support-moment objects                       34,322
 local and averaged support-moment gates                  273,848
 direct ear-cut gates through base order four               1,096
 nonconstant ears over all labelled order-six bases     2,031,616
+nonconstant ears over 456 order-seven representatives     57,456
 minimum combined off-diagonal weight                         1/2
 bases with a negative combined off-diagonal weight              0
 minimum nonconstant-ear chi                                     0
 bases with a negative nonconstant-ear chi                        0
-bases attaining minimum chi zero                            10,368. (16a)
+order-six bases attaining minimum chi zero                  10,368
+order-seven representatives attaining zero                    101. (16a)
 ```
 
-It also finds minimum combined tariff gap zero and no negative gap in this
+It also finds minimum combined tariff gap zero and no negative gap in either
 universe. The response construction uses exact `Fraction` inversion of
 `I-K^2` and a permutation reconstruction of `Start/End/Q`; direct
 Hamiltonian-DP/determinant evaluation checks every ear through base order
@@ -427,8 +526,10 @@ High-value next tests are:
    `Start/End/Q` ear tensor of THM-4104;
 2. seek a double-counting proof of ALU, retaining orphan paths and the actual
    rooted Pfaffian energy rather than separate upper bounds;
-3. prove or refute the combined ear tariff `(11o)`; first determine whether
-   `wtilde` has a negative off-diagonal entry at base order seven;
+3. prove or refute the combined ear tariff `(11o)`; the order-seven
+   representative bank still has minimum `wtilde_ij=1/2`, so replace the
+   permutation reconstruction by subset DP and scan a complete order-eight
+   representative bank;
 4. restrict first to strong tournaments and classify equality or near-zero
    rows under deletion;
 5. enumerate order eight by isomorphism classes before using random evidence;

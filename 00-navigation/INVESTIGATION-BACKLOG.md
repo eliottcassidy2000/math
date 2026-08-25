@@ -30,16 +30,29 @@
   between OCF packing supports and Pfaffian supports larger than half the
   vertex set. In parallel test the combined ear tariff
   `cut_(w+2dR)(S)>=a_0+|h(S)|`; every nonconstant ear through all labelled
-  order-six bases passes, while the source-over-`C3` constant ear with
-  `chi=-2` forbids pointwise monotonicity. THM-4114 supplies proved positivity
-  inside each response cube, not the missing cross-family domination.
-- **Incoming THM-4112 signal -- component ancestry is a real compiler.** Its
-  arbitrary-depth result under scale separation, ratio-two depth through six,
-  every finite adjacent ratio at least `12/5`, and explicit eleven- and
+  order-six bases and all 57,456 ears over the inherited order-seven class
+  bank passes, while the source-over-`C3` constant ear with `chi=-2` forbids
+  pointwise monotonicity. THM-4114 supplies proved positivity inside each
+  response cube; THM-4115 supplies its exact Walsh variance; neither gives the
+  missing labelled support floor or cross-family domination. Replace the
+  permutation `Q` reconstruction by subset DP before scanning order eight.
+- **Incoming THM-4112 signal -- span-envelope recursion is a real compiler.**
+  Its arbitrary-depth result under scale separation, ratio-two depth through
+  six, every finite adjacent ratio at least `12/5`, and explicit eleven- and
   thirteen-speed families are positive controls for an LRC boundary atlas.
-  Retain the separation hypothesis as an explicit state coordinate; the next
-  obstruction is an arbitrary-core alias/owner response, not another replay
-  of already-proved separated families.
+  It does not recover exact component identities, multiplicities, owners, or
+  physical origin. Retain the separation hypothesis as an explicit state
+  coordinate; the next obstruction is an arbitrary-core alias/owner response,
+  not another replay of already-proved separated families.
+- **ANCHOR/WILDCARD -- physical-origin-refined `11+2` atlas.** Start with
+  THM-4049's `d=2,c_2=9`, pair-shape `(1,3)` physical fibre and normalize only
+  by common dilation. Group rows by the old type/residue/parity/phase signature
+  but retain literal support, marked unit/core embedding, relative scale,
+  ordered parent gaps, safe components, owners/clocks, Smith sheets, and all
+  three THM-4112 supplier bits. Freeze THM-4117 as the nonsupplier-but-lonely
+  hostile and one positive control per supplier class. Find the least refined
+  response-determining signature before expanding to THM-3818's `52,692` seam
+  skeletons.
 - **Incoming THM-4116 signal -- LRC odd-shell trees plus full response.** The
   AP odd-shell quotient has `2^(c(F)-1)` phase sheets and is saturated iff
   `F` is connected; minimal repairs are spanning trees. Add this component

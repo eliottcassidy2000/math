@@ -9,7 +9,8 @@ This companion has two independent finite roles.
     deletion-charge moment identities.
 2.  It builds the full Hamiltonian ear cut from Start/End/Q data and the
     discriminant ear cut from the exact inverse response R=(I-K^2)^(-1).
-    It exhausts every nonconstant ear over every labelled order-six base.
+    It exhausts every nonconstant ear over every labelled order-six base and
+    every representative in the inherited 456-class order-seven bank.
 
 The local-unavoidability, averaged-unavoidability, and combined cut-tariff
 inequalities remain open.  All gates use ``require`` and survive ``-O``.
@@ -354,8 +355,7 @@ def direct_ear_audit(base_order: int) -> int:
     return gates
 
 
-def exhaustive_order_six_ears() -> dict[str, object]:
-    n = 6
+def ear_sweep(n: int, masks: tuple[int, ...]) -> dict[str, object]:
     all_nonconstant_ears = 0
     min_combined_edge: Fraction | None = None
     edge_witness: tuple[int, int, int] | None = None
@@ -367,7 +367,7 @@ def exhaustive_order_six_ears() -> dict[str, object]:
     min_tariff_gap: Fraction | None = None
     tariff_witness: tuple[int, int] | None = None
 
-    for mask in range(1 << (n * (n - 1) // 2)):
+    for mask in masks:
         matrix = tournament_matrix(n, mask)
         _, combined, field, a0 = ear_packet(matrix)
         base_min_edge = min(combined[i][j] for i in range(n) for j in range(i + 1, n))
@@ -413,10 +413,10 @@ def exhaustive_order_six_ears() -> dict[str, object]:
         and charge_witness is not None
         and min_tariff_gap is not None
         and tariff_witness is not None,
-        "nonempty order-six census",
+        "nonempty ear census",
     )
     return {
-        "bases": 1 << 15,
+        "bases": len(masks),
         "all_nonconstant_ears": all_nonconstant_ears,
         "min_combined_edge": min_combined_edge,
         "edge_witness": edge_witness,
@@ -468,7 +468,7 @@ def main() -> None:
         + ",".join(str(value) for value in c3_charges)
     )
 
-    row = exhaustive_order_six_ears()
+    row = ear_sweep(6, tuple(range(1 << 15)))
     print(
         f"base_order=6 labelled_bases={row['bases']} "
         f"all_nonconstant_ears={row['all_nonconstant_ears']} "
@@ -493,6 +493,33 @@ def main() -> None:
     require(row["negative_charge_bases"] == 0, "order-six mixed-ear nonnegativity")
     require(row["zero_min_bases"] == 10_368, "order-six zero-minimum base count")
     require(row["min_tariff_gap"] == 0, "order-six tariff gap minimum")
+
+    row7 = ear_sweep(7, reps)
+    print(
+        f"base_order=7 representative_bases={row7['bases']} "
+        f"all_nonconstant_ears={row7['all_nonconstant_ears']} "
+        f"min_combined_edge={row7['min_combined_edge']} "
+        f"edge_witness={row7['edge_witness']} "
+        f"negative_edge_bases={row7['negative_edge_bases']}"
+    )
+    print(
+        f"min_nonconstant_chi={2 * row7['min_halfcharge']} "
+        f"chi_witness={row7['charge_witness']} "
+        f"negative_chi_bases={row7['negative_charge_bases']} "
+        f"zero_min_bases={row7['zero_min_bases']}"
+    )
+    print(
+        f"min_combined_tariff_gap={row7['min_tariff_gap']} "
+        f"tariff_witness={row7['tariff_witness']}"
+    )
+    require(row7["bases"] == 456, "order-seven representative bank size")
+    require(row7["all_nonconstant_ears"] == 57_456, "order-seven representative ears")
+    require(row7["min_combined_edge"] == Fraction(1, 2), "order-seven edge minimum")
+    require(row7["negative_edge_bases"] == 0, "order-seven combined edge sign")
+    require(row7["min_halfcharge"] == 0, "order-seven mixed-ear charge minimum")
+    require(row7["negative_charge_bases"] == 0, "order-seven mixed-ear nonnegativity")
+    require(row7["zero_min_bases"] == 101, "order-seven zero-minimum representative count")
+    require(row7["min_tariff_gap"] == 0, "order-seven tariff gap minimum")
     print("result=FINITE-EXACT_PASS")
     print("ALU=OPEN combined_ear_tariff=OPEN LU=OPEN H_ge_disc=OPEN")
 

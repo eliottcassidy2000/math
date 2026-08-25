@@ -465,9 +465,26 @@ chi_(x_(V-S))/2=cut_wtilde(S)-h(S)-a_0.                    (23b)
 
 The open strong tariff is `cut_wtilde(S)>=a_0+|h(S)|` for every nonconstant
 cut. A new exact companion checked all 2,031,616 nonconstant ears over every
-labelled order-six base: minimum `chi=0`, no negative case; the minimum
-combined edge weight is `1/2`. Constants over `C3` retain `chi=-2`, while all
-six mixed ears have `chi=4`. These are finite facts, not an all-order proof.
+labelled order-six base and all 57,456 ears over the inherited 456-class
+order-seven bank: minimum `chi=0`, no negative case; the minimum combined
+edge weight remains `1/2`. Constants over `C3` retain `chi=-2`, while all six
+mixed ears have `chi=4`. These are finite facts, not an all-order proof.
+
+Incoming THM-4115 supplies the exact Walsh transform of this carrier. If
+`Y_S=chi_(x_S)/2` and `Wtilde=sum_(i<j)wtilde_ij`, then
+
+```text
+E Y=Wtilde/2-a_0,
+Var(Y)=1/4(sum_i h_i^2+sum_(i<j)wtilde_ij^2).              (23c)
+```
+
+This restores the full quadratic coefficient norm, but not the labelled
+support floor: `min(Y_S,Y_(V-S))=cut_wtilde(S)-a_0-|h(S)|`.
+The all-order bound `Y_S>=-d(n-1)/2` does give a support-sensitive maximum
+inequality, sharp on the `C3` base, but it selects a favorable extension
+orientation. LU and ALU prescribe charges coming from different deletion
+bases. Thus mean/variance growth and local unavoidability remain distinct
+problems.
 
 The typed comparison is:
 
@@ -497,7 +514,9 @@ cannot replace unavoidability.
 | THM-4099 | full mixed insertion boundary is compositional | proper faces lose mixed coefficients | PROVED |
 | THM-4104 | complete one-ear response is a finite cut tensor | selected image is not a global census | PROVED / finite |
 | THM-4111 | exact zero-mode/mean formula | mean loses image and reducibility | PROVED |
-| THM-4112 | component ancestry iterates on proved scale-separated LRC families | arbitrary cores and the full fourteen-runner quantifier remain | PROVED / conditional compiler |
+| THM-4112 | parent-gap component-span envelopes iterate on scale-separated LRC families | exact component identities, owners, physical origin, and arbitrary cores remain | PROVED under explicit hypotheses; relative to THM-2061/2066/2072 |
+| THM-4114/4115 | exact ear Boolean quadratic, curvature, mean, and variance | labelled minimum, interval, and cross-family domination remain | PROVED / independently audited |
+| THM-4117 | coarse physical `11+2` data do not force entry into known supplier families | full primitive support and marked unit/core origin are lost | PROVED relative to THM-4049 |
 | THM-4110/4116 | exact phase quotient and component repair law | synchronized phase is not LRC safety | PROVED |
 | THM-3042/4067 | common quotient/equalizer controls gluing | ambient realization and torsion can survive | PROVED |
 | THM-3173 | exact `C2*C3` quotient firewalls | cardinality six is not a modular action | PROVED |
@@ -506,14 +525,29 @@ cannot replace unavoidability.
 
 Two incoming promotions materially sharpen the comparison. THM-4116 turns the
 older AP13 “six missing constraints” observation into the complete component
-law `(15)`. THM-4112 proves an arbitrary-depth component-ancestry compiler
-under its separation hypotheses, including ratio-two depth through six, every
-finite adjacent ratio at least `12/5`, and explicit eleven- and thirteen-speed
-families. Neither promotion covers arbitrary LRC(14) cores. THM-4114 is now
+law `(15)`. THM-4112 proves an arbitrary-depth parent-gap span-envelope
+recursion under its separation hypotheses, including ratio-two depth through
+six, every finite adjacent ratio at least `12/5`, and explicit eleven- and
+thirteen-speed families. It does not recover exact component identities,
+multiplicities, owners, or physical origin. Neither promotion covers arbitrary
+LRC(14) cores. THM-4114 is now
 **PROVED + VERIFIED-EXACT + INDEPENDENTLY AUDITED**; its OCF presence-cube
 positivity and opposite-ear directed-cut curvature are genuine inputs, but
 they do not compare the OCF support moment with the adverse Pfaffian support
 moment in `(11c)`, so they still do not prove ALU or HYP-9080.
+
+THM-4117 is the mandatory physical-origin hostile. Its physical row
+
+```text
+(1,4,6,8,10,12,14,15,16,18,22,2^45,3*2^45)
+```
+
+is `1/14`-lonely with clearance `2/19`, yet no common dilation or primitive
+normalization enters THM-4112's `AP7+4`, `AP8+5`, or `D0+6` supplier classes;
+the forced AP7 quotient first misses the marked unit `1`. Rank, `11+2` type,
+pair type `(1,3)`, mod-56 residues, parity, and phase-sheet data therefore do
+not determine supplier entry. Failure of a sufficient THM-4112 certificate
+is neither a cover nor an irreducible boundary state.
 
 ## 11. LRC(14): a concrete boundary-atlas programme
 
@@ -528,7 +562,8 @@ map:          restrict a row to a separator and record its exact extension
               response under every lawful alias/collision quotient;
 preserved:    nonempty circular component and physical time compatibility;
 destroyed by current coarse maps:
-              component ancestry, endpoint owner, phase, and Smith torsion;
+              literal primitive support, marked unit/core origin, exact
+              component identity, endpoint owner, phase, and Smith torsion;
 needed sidecar:
               THM-4100 ancestry + THM-4110/4116 sheet component + exact
               boundary response rather than a mean;
@@ -540,19 +575,24 @@ cheapest decisive tests:
 The analogue of `allHomImages` is to enumerate every coordinate alias forced
 by a short relation, factor each noninjective state through a smaller
 interface, and retain the full circular response. THM-4112 supplies a real
-positive control for the ancestry coordinate: on its scale-separated families
-the component recursion can be iterated to arbitrary prescribed depth, and
-the proved ratio-two and `12/5` regimes show that this is not merely a finite
-toy. The analogue of reducibility is that every surviving exterior state
+positive control for the span-envelope coordinate: on its scale-separated
+families the parent-gap recursion can be iterated to arbitrary prescribed
+depth, and the proved ratio-two and `12/5` regimes show that this is not merely
+a finite toy. The analogue of reducibility is that every surviving exterior state
 extends to a `1/14`-safe physical cell. The analogue of unavoidability is still
 absent for arbitrary cores: bounded relations do not yet force a reducible
 interface type, and the scale-separation hypotheses cannot be silently erased.
 
 THM-4116 closes the phase-synchronizer subproblem on odd AP shells: connect
-the odd-shell constraint graph. THM-4112 closes component ancestry for its
-declared separated families. Their conjunction still does not close owner
-arrival, alias-complete response, or safe-cell intersection. This prevents
-two clean algebraic subresults from being promoted to LRC(14).
+the odd-shell constraint graph. THM-4112 closes the parent-gap span-envelope
+recursion under its declared separation hypotheses. Their conjunction still
+does not close exact component identity, physical origin, owner arrival,
+alias-complete response, or safe-cell intersection. THM-4117 proves this is a
+real obstruction even for a lonely physical row. The snark quotient is sound
+because it retains exact extension states and quantifies over every admissible
+colored semi-matching—not because topology reconstructs exterior origin. An
+LRC atlas must likewise retain every physical-origin fibre's full response;
+a catalogue of known suppliers is not an unavoidable atlas.
 
 ## 12. Rule 30: collision quotients after characteristic injectivity
 

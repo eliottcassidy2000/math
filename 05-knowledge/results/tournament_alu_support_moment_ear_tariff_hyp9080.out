@@ -11,5 +11,8 @@ c3_base_mask=2 ear_chis=-2,4,4,4,4,4,4,-2
 base_order=6 labelled_bases=32768 all_nonconstant_ears=2031616 min_combined_edge=1/2 edge_witness=(0, 0, 1) negative_edge_bases=0
 min_nonconstant_chi=0 chi_witness=(0, 1) negative_chi_bases=0 zero_min_bases=10368
 min_combined_tariff_gap=0 tariff_witness=(0, 1)
+base_order=7 representative_bases=456 all_nonconstant_ears=57456 min_combined_edge=1/2 edge_witness=(0, 0, 1) negative_edge_bases=0
+min_nonconstant_chi=0 chi_witness=(0, 1) negative_chi_bases=0 zero_min_bases=101
+min_combined_tariff_gap=0 tariff_witness=(0, 1)
 result=FINITE-EXACT_PASS
 ALU=OPEN combined_ear_tariff=OPEN LU=OPEN H_ge_disc=OPEN
