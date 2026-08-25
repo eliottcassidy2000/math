@@ -51,6 +51,17 @@ asymmetric (`|lambda_2/lambda_1|` tiny) while keeping denominators at
   (best: Aptekarev's and Rivoal's mixed forms with subgeometric gain, which
   fail (4)).  Considered the hardest of the five.
 
+## External p-adic holonomy boundary (2026-08-25)
+
+Long's external
+[`p-adic-zeta-irrationality`](https://github.com/octonion/p-adic-zeta-irrationality)
+claims 22 Kubota--Leopoldt irrationalities. Its LCM depths share only this
+framework's valuation budget: no recurrence, approximant pair, nonzero linear
+form, or root decay transfers. [THM-4089](../../01-canon/theorems/THM-4089-hybrid-padic-zeta-margin-optimization-and-next-case-obstruction.md)
+optimizes the displayed margin and blocks four next cases, but verifies none
+of the geometric/adelic gates. The 22-value theorem remains **PREPRINT CLAIM /
+UNDER SPECIALIST AUDIT**; see the [source audit](p-adic-zeta-irrationality-source-audit-20260825.md).
+
 ## If a future session attacks this
 
 1. Implement the *certificate checker* first (conditions 1–3 exact, 4

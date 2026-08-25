@@ -25,6 +25,7 @@ related:
   - THM-575
   - THM-565
   - THM-573
+  - THM-4088
   - OPEN-Q-108
 ---
 
@@ -50,6 +51,12 @@ interval, endpoint distance, max-speed scale, and finite-address route are
 retained.  Approximation can convert an irrational or transcendental interior
 witness into rational grid witnesses, but it cannot replace the proof that the
 interior witness interval exists.
+
+**2026-08-25 promotion boundary.**
+[THM-4088](../../01-canon/theorems/THM-4088-order-tournament-arithmetic-type-blindness-and-lrc-margin-density.md)
+puts all three arithmetic types in every strict witness component and makes
+tie-free order/quality tournaments type-blind. Thus only the zero-margin
+boundary, with endpoint/height and interval-local Stern sidecars, survives.
 
 The S265 scout
 `04-computation/lrc_irrational_transcendental_approximation_codex_s265.py`

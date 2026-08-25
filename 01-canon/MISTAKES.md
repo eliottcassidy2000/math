@@ -9,6 +9,30 @@ Format per entry:
 - Why it was wrong
 - The correct framing
 
+## MISTAKE-498 (2026-08-25, MISTAKE-497 / HYP-3779 repair attribution) -- a live THM-4089 ID was attached to an unrelated LRC ray claim
+
+- **What failed:** the first repair of HYP-3779 said that `THM-4089` was an
+  affine optimizer on `{1,...,12,182m}` and made the `m=1` point uniquely
+  nonnegative relative to `-1/12`. It also called a `THM-4089 referee` the
+  replayable replacement for the regularization-avatar computation.
+- **Minimal witness / first failed implication:** the only live theorem with
+  that ID is
+  [THM-4089--hybrid-padic-zeta-margin-optimization-and-next-case-obstruction](theorems/THM-4089-hybrid-padic-zeta-margin-optimization-and-next-case-obstruction.md).
+  Its variables are `(p,s,xi,Y)` and it optimizes an external p-adic-zeta
+  margin; it contains no `182m` ray, Dedekind sum, eta invariant, or LRC
+  affine optimizer. This is an ID/slug collision, not a consequence of that
+  theorem.
+- **Repair / strongest survivor:** remove THM-4089 from the HYP-3779 repair.
+  The actual exact LRC statement is
+  [THM-2057--scaled-zeta-core-one-tail-closure](theorems/THM-2057-scaled-zeta-core-one-tail-closure.md):
+  `M({1,...,12,182m})=14m/(182m+1)>1/14`. It supplies no p-adic/eta avatar or
+  comparison with `-1/12`. MISTAKE-497's character, eta-factor, and
+  Euler--Maclaurin corrections survive independently; the avatar synthesis
+  remains **OPEN**.
+- **Reusable rule:** never use an integer theorem ID without its slug/path.
+  In concurrent work, re-resolve the live file after every rebase before
+  attributing a correction or proof dependency.
+
 ## MISTAKE-497 (2026-08-25, HYP-3779 regularization avatars) -- a Teichmuller-twisted p-adic L-value was called the trivial-character zeta value, and a Dedekind sum lost its eta factor
 
 - **What failed:** HYP-3779 identified `zeta_7(-1)` with
@@ -37,19 +61,19 @@ Format per entry:
   `s(14,183)=-91/1098`, the cotangent formula, the complex value
   `zeta(-1)=-1/12`, and the correctly typed twisted value
   `L_7(-1,omega^2)=1/2` survive. The eta value is
-  `182/549` in Atiyah's orientation. THM-4089 replaces the analogy by an
-  exact affine optimizer and proves that the first point `m=1` is the unique
-  nonnegative hybrid on the ray `{1,...,12,182m}`; every `m>=2` lies on the
-  wrong side of `-1/12`. Any identification of the remaining LRC residual
-  with a p-adic/archimedean split or with `f_14` remains **OPEN analogy**, not
-  a proof dependency.
+  `182/549` in Atiyah's orientation. Independently,
+  [THM-2057--scaled-zeta-core-one-tail-closure](theorems/THM-2057-scaled-zeta-core-one-tail-closure.md)
+  proves `M({1,...,12,182m})=14m/(182m+1)>1/14`; it gives no p-adic/eta
+  identification or comparison with `-1/12`. Any identification of the
+  remaining LRC residual with a p-adic/archimedean split or with `f_14`
+  remains **OPEN analogy**, not a proof dependency.
 - **Sources and replay boundary:** the character typing is equation (1.1) of
   Luochen Zhao, *Sum Expressions for Kubota--Leopoldt p-adic L-functions*
   (2022); the lens-space factor is formula (4.25) of Michael Atiyah,
   *The Logarithm of the Dedekind Eta-Function*. The script/output named by
   HYP-3779 are absent from the current repository, so its old “verified”
-  provenance is not replayable. The replacement THM-4089 referee is exact
-  and optimization-safe.
+  provenance is not replayable. THM-2057 replays only the separate LRC ray;
+  THM-4089--hybrid-padic-zeta-margin is likewise unrelated to these avatars.
 - **Reusable rule:** a p-adic special value is not typed by its integer
   argument alone; retain the Dirichlet/Teichmuller character branch. Likewise,
   a spectral invariant must carry its normalization and orientation factor,

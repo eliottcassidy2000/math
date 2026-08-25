@@ -265,9 +265,9 @@ THM-2070 refutes the general HYP-8890/8895 bypasses.  Transfer
 - MISTAKE-227–229 correct the newest false syntheses: the AP chain frame is
   index `11!`, Paley adjacency roots are shifted half-scaled Gauss sums, and
   THM-2053's disk union has no discriminant `-7` or Heegner classification.
-- For applications outside tournament theory, first prove that the pairwise
-  relation is intrinsic and target-preserving. A forced total orientation can
-  destroy exactly the ties or magnitudes the original problem needs.
+- Applications require an intrinsic target-preserving relation;
+  [THM-4088](../01-canon/theorems/THM-4088-order-tournament-arithmetic-type-blindness-and-lrc-margin-density.md)
+  shows bare order erases magnitudes and arithmetic type.
 - Corrected HYP-8835 isolates a useful game/dynamics coordinate without
   overclaiming: tournament optimal support is uniquely odd (skew singularity
   plus the tournament block modulo two), while a positive kernel vector `Mp=0`

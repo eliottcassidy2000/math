@@ -1,5 +1,34 @@
 # Script Results Index
 
+- `hybrid_padic_zeta_margin_frontier_thm4089.py` -> matching `.out`
+  [THM-4089 PROVED ELEMENTARY FORMULA OPTIMIZATION + VERIFIED-EXACT +
+  INDEPENDENTLY CALCULUS/NUMERIC-AUDITED; external 22-value irrationality
+  theorem PREPRINT CLAIM / UNDER SPECIALIST AUDIT]. The displayed cutoff cost
+  is globally convex with explicit minimizer
+  `12(s(s+1)-1)/(12s^2+(s-1)(p+1))`; the analytic-radius objective is strictly
+  concave. All 22 fixed formula witnesses are positive, while exact derivative
+  brackets and concave tangents give negative global maxima for `(2,31)`,
+  `(3,13)`, `(5,7)`, and `(7,5)`. The derivative companion adapts the external
+  MIT interval primitives with their complete notice; a separate 100-digit
+  implementation checks the four optima. Script/output SHA-256:
+  `90232af6c30b71ae7a4ae2a3f777effb32d6706c5a1413b948478b910c3a139e` /
+  `393893b53c76580a8b891f61f22dc94e50ac2c3496cfd32e562b7b75ad6d4932`.
+
+- `order_tournament_arithmetic_type_thm4088.py` -> matching `.out`
+  [THM-4088 PROVED ELEMENTARY OBSERVER/LIOUVILLE-CONSTANT/P-ADIC SHELL
+  THEOREMS + VERIFIED-EXACT + INDEPENDENTLY OBSERVER/TYPING-AUDITED]. After
+  rational decorations are forgotten, monotone rational sequences tending to
+  `1/2`, `sqrt(2)`, and a Liouville number give the identical labelled index
+  tournament `i->j iff i<j`; every finite strict prefix has continuations of
+  all three types. Every prescribed strict p-adic valuation schedule is
+  realized by rational approximants. A strict LRC witness neighborhood
+  contains times of all three types, so arithmetic type cannot separate the
+  interior; boundary/height/rate and phase/owner/carrier sidecars remain
+  distinct questions. The exact companion checks `29,022` gates.
+  Script/output SHA-256:
+  `f4e85a03b3e9e608106883fccc7d86e5cbc6ed174fa110329b0e0ca41195b764` /
+  `9544d89a7d290012ec71a71ba6535dd454465aed60b97209ea1f5cbc43123731`.
+
 - `rule30_cyclotomic_hasse_packet_thm4064.py` and no-import recurrence,
   subtractive-depth, and character audit -> matching `.out`s [THM-4064
   PROVED universal cyclotomic/Hasse theorem + PROVED characteristic-zero

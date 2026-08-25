@@ -1,0 +1,13 @@
+THM-4089 HYBRID P-ADIC ZETA MARGIN FRONTIER CERTIFICATE
+scale: 10^80
+positive fixed witnesses: 22/22
+smallest positive case: (5, 5)
+smallest positive lower: 0.131799356827016832557664457131
+next cases: global maxima bounded by concave tangents
+  (2, 31): Y in [102749/5000000,205499/10000000], global margin upper <= -1.943953720720382239456347491909
+  (3, 13): Y in [182689/5000000,365379/10000000], global margin upper <= -1.655957196700841065227181181457
+  (5, 7): Y in [107943/2500000,431773/10000000], global margin upper <= -3.841753001087929215971397147627
+  (7, 5): Y in [466407/10000000,58301/1250000], global margin upper <= -3.609764970272283548875193762173
+external 22-value irrationality theorem: NOT VERIFIED BY THIS CERTIFICATE
+GATES: 294018
+VERIFIED-EXACT: True

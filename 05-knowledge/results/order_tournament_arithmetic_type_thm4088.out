@@ -1,0 +1,11 @@
+THM-4088 ORDER-TOURNAMENT ARITHMETIC-TYPE BLINDNESS AUDIT
+prefix length: 7
+common labelled orientation: i -> j iff i < j
+rational limit 1/2: first_det=2, long_det_bits=5, max_den_bits=5
+quadratic limit sqrt(2): first_det=2, long_det_bits=14, max_den_bits=16
+Liouville limit: first_det=10, long_det_bits=16740, max_den_bits=16743
+exact LRC Lipschitz pair checks: 28812
+exact p-adic quality checks: 45
+transcendence and density: PROOF-ONLY (not inferred by computation)
+GATES: 29022
+VERIFIED-EXACT: True
