@@ -1,0 +1,24 @@
+implementation=gentourng strong universe + contracted good/reversed-block DP + mask recurrence
+thread_modes=audited_1_and_8
+classes=178133
+strong_classes=178133
+raw_stream_sha256=3073d5ecf5f34345aa5f35c349c51b35f4c244e687db25c16627fcb602b019a1
+profile_serialization=ASCII header thm4131-n9-independent-profile-v1\n; then per gentourng record: 36 ASCII bits; H:u32le; W2,D4x4,Chdx4,theta_num,theta_den,rho_num,rho_den:i64le; rational,coset,actual cardinality-bitmasks:u16le; for m=1..8 J_num,J_den,L,A,lattice:i64le; F(mask):u32le for masks 0..511
+ordered_full_profile_sha256=c01572932582bf16071dfdedef810ff845197c4b2154518a31e251c04dc59655
+rational_central_failures=0
+coset_central_failures=0
+minimum_strict_coset_margin=90
+worst_rho=16430/44663
+worst_multiplicity=2
+worst_packet_1=label=111111011100111110111111111111111101,H=405,W=4665/1,D4=6029505/1,Chd=-1478700/1,theta=-32860/44663,rho=16430/44663,rational_t=(-1),coset_t=(-1),actual_t=(-3),layers=[(1,7,512061/311,1647,1785,6);(2,5,5389455/2177,2481,3009,6);(3,3,6658527/2177,3063,4041,6);(4,1,1055949/311,3399,4851,6);(5,-1,7588803/2177,3489,5439,6);(6,-3,7250007/2177,3333,5835,6);(7,-5,6375255/2177,2931,5565,6);(8,-7,709221/311,2283,3195,6)]
+worst_packet_2=label=101111101111111111111110011101111111,H=405,W=4665/1,D4=6029505/1,Chd=1478700/1,theta=32860/44663,rho=16430/44663,rational_t=(1),coset_t=(1),actual_t=(3),layers=[(1,7,709221/311,2283,3195,6);(2,5,6375255/2177,2931,5565,6);(3,3,7250007/2177,3333,5835,6);(4,1,7588803/2177,3489,5439,6);(5,-1,1055949/311,3399,4851,6);(6,-3,6658527/2177,3063,4041,6);(7,-5,5389455/2177,2481,3009,6);(8,-7,512061/311,1647,1785,6)]
+theta_zero=2661
+coset_reorders_rational=10772
+actual_noncentral_only=3248
+rational_histogram=(-1):87736,(1):87736,(1,-1):2661
+coset_histogram=(-1):82350,(1):82350,(1,-1):13433
+actual_histogram=(-1):85051,(-1,-3):83,(-3):1624,(1):85051,(1,-1):4617,(3):1624,(3,1):83
+control_code_2=010000000000000|H=3|rational_t=(2)|coset_t=(2,0)|actual_t=(2,0)|layers=[(1,4,551/15,37,51,2);(2,2,629/15,43,69,2);(3,0,1871/45,43,69,2);(4,-2,107/3,37,49,2);(5,-4,121/5,27,27,6)]|literal_child_replay=PASS
+control_code_140=001100010000000|H=15|rational_t=(2)|coset_t=(4)|actual_t=(4)|layers=[(1,4,639/7,135,135,102);(2,2,2122/21,103,129,2);(3,0,6211/63,99,115,2);(4,-2,1762/21,85,91,2);(5,-4,57/1,57,57,42)]|literal_child_replay=PASS
+control_code_20=001010000000000|H=19|rational_t=(0)|coset_t=(0)|actual_t=(2)|layers=[(1,4,7417/109,69,91,2);(2,2,9671/109,89,133,2);(3,0,10399/109,97,131,2);(4,-2,9601/109,89,123,2);(5,-4,7277/109,67,91,2)]|literal_child_replay=PASS
+status=ACCEPT
