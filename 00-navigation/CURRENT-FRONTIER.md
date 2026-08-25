@@ -83,25 +83,9 @@ is the safe control `M(S_13)=99/338`. No cited result proves LRC(14).
   proves that every old-strip ray has an eventual arithmetic-survivor tail;
   the owner-relaxed THM-4003 gate therefore cannot close ray tails, and has
   LRC meaning only at physical heights below `91^6`. Orthogonally,
-  [THM-4029](../01-canon/theorems/THM-4029-lrc14-ap-cover-twelve-owner-rational-tail.md)
-  proves the exact twelve-owner tail (`127/35`) and corrected span row
-  `(7,8,10,13,26,infinity)`; [THM-4038](../01-canon/theorems/THM-4038-ap-deficit-holonomic-sixty-phase-law.md)
-  upgrades `P=7,n>=12` to six affine counters with an exact minimal-60-phase
-  rational law. Its phase begins at second order, `6!C(n,6)` is the sharp
-  common desingularizer, and the cleared sequence is a degree-five
-  quasipolynomial, giving an explicit recurrence and D-finite nonalgebraic
-  generating function. Fibonacci owner denominators give only period 30;
-  the non-Fibonacci denominator four supplies the missing 2-adic clock.
-  [THM-4033](../01-canon/theorems/THM-4033-prime-sector-ap-cover-eventual-owner-tail.md)
-  proves the all-prime tail and constant
-  `P^-1 sum_(q<P)phi(q)(2(P-q)-1)/q`. For odd `P>=5`, the geometric owner
-  decomposition has sharp onset `(P^2+3)/4`; `P=3` is the lower-domain edge.
-  Its phase-rational law also implies fixed-`P` holonomicity. Scalar mismatch
-  at every earlier row is only FINITE-EXACT.
-  [THM-4035](../01-canon/theorems/THM-4035-sixty-clock-separation-and-finite-kakeya-spine.md)
-  separates the AP, Fibonacci-mod-10 and triangular-mod-30 clocks but gives no
-  sparse-owner transfer. The AP route still loses sparse occupancy, gaps and
-  owner placement. THM-3858
+  [THM-4029](../01-canon/theorems/THM-4029-lrc14-ap-cover-twelve-owner-rational-tail.md) gives the twelve-owner tail (`127/35`) and corrected span row. [THM-4038](../01-canon/theorems/THM-4038-ap-deficit-holonomic-sixty-phase-law.md) gives its exact minimal-60 rational law, second-order phase, sharp `6!C(n,6)` clearing, recurrence and D-finite nonalgebraic OGF; Fibonacci owners alone give period 30.
+  [THM-4033](../01-canon/theorems/THM-4033-prime-sector-ap-cover-eventual-owner-tail.md) proves the all-prime tail, totient constant and sharp odd-prime onset `(P^2+3)/4`; its phase law is holonomic, but every-earlier-row mismatch is only FINITE-EXACT.
+  [THM-4035](../01-canon/theorems/THM-4035-sixty-clock-separation-and-finite-kakeya-spine.md) makes Fibonacci/triangular clocks addresses, not transfers. The AP route still loses gaps/owners. THM-3858
   exhausts only the target `Z_3` test. **FINITE-EXACT:**
   `(9,13;76,132)` is the unique tripling edge through sum `10^6`
   (independent control `5000`).
@@ -284,25 +268,9 @@ THM-2070 refutes the general HYP-8890/8895 bypasses.  Transfer
 
 ### Headline
 
-[THM-4026](../01-canon/theorems/THM-4026-sun-two-four-six-eight-binomial-counterexample.md)
-refutes Sun's `2-4-6-8` conjecture at `896315812331399`; multiple independent
-exact Python/C++ routes agree and both neighbors are represented.
-[THM-4027](../01-canon/theorems/THM-4027-sun-two-four-six-eight-universal-modular-solubility.md)
-proves local surjectivity and exact periods, while
-[THM-4028](../01-canon/theorems/THM-4028-sun-two-four-six-eight-average-order-criticality.md)
-proves count `V X^(25/24)+O(X^(11/12))`.
-[THM-4036](../01-canon/theorems/THM-4036-sun-2468-energy-and-support-exponent.md)
-adds energy `O_epsilon(X^(13/12+epsilon))` and logarithmic exponent one for
-support and average-scale-rich support, globally and in every fixed AP.
-[THM-4037](../01-canon/theorems/THM-4037-centered-binomial-parity-and-singular-fibres.md)
-gives the exact centered-even/odd finite-difference bridge, a unique odd
-complete-period target for any even packet, and eight exact singular primes;
-these are local sidecars, not a hole test.
-[THM-4040](../01-canon/theorems/THM-4040-sun-2468-target-crt-class-singleton-census.md)
-proves that the known hole is the unique hole in its discovery class
-`459490 mod 1062347` through `1,001,999,999,999,999`, but examines only one
-target in `1,062,347`. Global leastness, exception density, pointwise lower
-tails, and a carry obstruction remain **OPEN**.
+THM-4026 certifies hole `896315812331399`; THM-4040 makes it least/unique only
+in one CRT class. THM-4027/4028/4036/4037 separate mean, energy and parity from
+coverage. Classification is **OPEN**.
 
 [THM-2000](../01-canon/theorems/THM-2000-support-harmonic-abel-dini-figurate-surface.md)/
 [2005](../01-canon/theorems/THM-2005-support-dirichlet-automatic-tournament-atlas.md)
@@ -318,29 +286,11 @@ or residue follows.
 
 ### Sun 2-4-6-8
 
-- **REFUTED + FINITE-EXACT:** [THM-4026](../01-canon/theorems/THM-4026-sun-two-four-six-eight-binomial-counterexample.md)
-  certifies hole `896315812331399`; least
-  hole is **OPEN**.
-- **PROVED:** [THM-4027](../01-canon/theorems/THM-4027-sun-two-four-six-eight-universal-modular-solubility.md)
-  proves universal modular solubility: no fixed local obstruction.
-- **PROVED:** [THM-4028](../01-canon/theorems/THM-4028-sun-two-four-six-eight-average-order-criticality.md)
-  gives `sum_(n<=X)a(n)=24.311...X^(25/24)+O(X^(11/12))`, fixed-residue
-  refinements with the same error, and the shell mean for
-  `H=o(X), H/X^(7/8)->infinity`; zero density and coverage are **OPEN**.
-- **PROVED:** [THM-4036](../01-canon/theorems/THM-4036-sun-2468-energy-and-support-exponent.md)
-  gives `sum a(n)^2 <<_epsilon X^(13/12+epsilon)`. Positivity and any fixed
-  fraction of the relevant `X^(1/24)` mean each occur on at least
-  `X^(1-epsilon)` targets, also in every fixed AP; positive density remains
-  **OPEN**.
-- **PROVED + FINITE-EXACT:** [THM-4037](../01-canon/theorems/THM-4037-centered-binomial-parity-and-singular-fibres.md)
-  centers even binomial atoms as even functions and their increments as odd
-  functions, isolates the unique odd complete-period target, and computes the
-  degree-24 critical eliminant and eight singular target primes. Local parity
-  and singularity do not classify holes.
-- **FINITE-EXACT + VERIFIED-EXACT:** [THM-4040](../01-canon/theorems/THM-4040-sun-2468-target-crt-class-singleton-census.md)
-  exhausts all `943,194,644` targets in the discovery CRT class from one
-  through `1,001,999,999,999,999`; its sole zero is the known target. This is
-  exact class-minimality, not global minimality.
+- **REFUTED + FINITE-EXACT:** [THM-4026](../01-canon/theorems/THM-4026-sun-two-four-six-eight-binomial-counterexample.md) certifies hole `896315812331399`; least hole is **OPEN**.
+- **PROVED:** [THM-4027](../01-canon/theorems/THM-4027-sun-two-four-six-eight-universal-modular-solubility.md)/[4028](../01-canon/theorems/THM-4028-sun-two-four-six-eight-average-order-criticality.md) give universal local support, mean `24.311...X^(25/24)` and fixed-AP/shell refinements; coverage remains **OPEN**.
+- **PROVED:** [THM-4036](../01-canon/theorems/THM-4036-sun-2468-energy-and-support-exponent.md) gives energy `X^(13/12+epsilon)` and `X^(1-epsilon)` positive/average-scale-rich targets, also in fixed APs; no positive density.
+- **PROVED + FINITE-EXACT:** [THM-4037](../01-canon/theorems/THM-4037-centered-binomial-parity-and-singular-fibres.md) gives centered parity, a degree-24 critical eliminant and eight singular primes; none classifies holes.
+- **FINITE-EXACT + VERIFIED-EXACT:** [THM-4040](../01-canon/theorems/THM-4040-sun-2468-target-crt-class-singleton-census.md) finds the known target as the sole zero among `943,194,644` targets in one discovery class through `1.002*10^15`; not global minimality.
 
 ### Established landmarks
 

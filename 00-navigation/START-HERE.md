@@ -99,11 +99,9 @@ Then read the routed frontier, guardrails, and theorem. Logs and reflections are
     commuting stable envelope, and abstract additive dual, and closes `9_10`.
     THM-2177 refutes Goemans' cost conjecture through a conflict graph.
     MISTAKE-230--235 forbid syntax-only bridges.
-17. **Sun 2-4-6-8 is refuted:** THM-4026; THM-4027/4028 separate local support
-    and mean from pointwise coverage; THM-4036 gives the energy/support
-    exponent, THM-4037 the centered odd-function/singular-fibre sidecar, and
-    THM-4040 exact uniqueness only inside the discovery CRT class. Global
-    leastness and classification remain open.
+17. **Sun 2-4-6-8 is refuted:** THM-4026; THM-4027/4028/4036/4037 separate
+    local support, mean, energy and parity from coverage; THM-4040 gives
+    uniqueness only in one CRT class. Global classification remains open.
 ## Where to go by topic
 
 | Topic | Read first | Then use |
