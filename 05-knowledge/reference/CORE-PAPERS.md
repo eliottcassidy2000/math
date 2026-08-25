@@ -12,9 +12,9 @@ This maps imported claims, consumers, and exclusions; links—not bare IDs—are
 - **Flows:** [THM-2177](../../01-canon/theorems/THM-2177-planar-counterexample-to-goemans-unsplittable-cost-flow-conjecture.md) refutes the exact-cost conjecture; cost-free `d_max` and planar `2d_max` survive.
 - **Reciprocals:** support differs from indexed multiplicity; figurate formulas omit repo extensions.
 - **JC/DC:** THM-1300 refutes `JC(n>=3)`; `JC(2),DC(1),DC(2)` are open. THM-2071 is local; THM-2044 refutes the two-pair Poisson claim.
-- **Two Hopf problems:** the [Brendle--Hung `S2 x S2` claim](CORE-PAPERS-BRENDLE-HUNG-S2XS2-2026-08-24.md) and [Hopf/S6 claim](CORE-PAPERS-HOPF-S6-2026-08-24.md) are distinct **PREPRINT CLAIM / UNDER AUDIT** results, not solved claims. THM-3990 proves only the final repair quotient; THM-3991 only the factorial Euler obstruction; THM-3993 only a local labelled wall-response theorem.
+- **Hopf preprints:** [Brendle--Hung `S2 x S2`](CORE-PAPERS-BRENDLE-HUNG-S2XS2-2026-08-24.md) and [Hopf/S6](CORE-PAPERS-HOPF-S6-2026-08-24.md) are distinct **CLAIMS / UNDER AUDIT**; THM-3990/3991/3993 prove only local obstructions.
 - **Kakeya `R^4`:** **OPEN**; `3.0543` is PREPRINT v1. See the [source/status and THM-4035 boundary audit](CORE-PAPERS-KAKEYA-4D-2026-08-24.md).
-
+- **Apex cubic:** [2608.22870v1](https://arxiv.org/abs/2608.22870) is a computer-assisted **PREPRINT UNDER AUDIT**; see [audit](CORE-PAPERS-APEX-CUBIC-2026-08-25.md).
 ## Rule 30
 
 - **Sources/status:** [announcement](https://writings.stephenwolfram.com/2019/10/announcing-the-rule-30-prizes/); [active prizes](https://rule30prize.org/) checked 2026-08-15; openness is repo inference.
