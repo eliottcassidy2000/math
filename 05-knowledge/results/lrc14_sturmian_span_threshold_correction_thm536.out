@@ -1,0 +1,14 @@
+THM536_STURMIAN_SPAN_THRESHOLD_CORRECTION_EXACT
+definition=a(m)=meas{x:{floor(7ex)_mod_7:0<=e<m}=Z/7}
+global_monotonicity=AP_m_subset_AP_(m+1)
+k=8;Nstar=7;a(Nstar+1)=481/1470;cap_minus_last=319/5880;a(Nstar+2)=2447/5880;first_minus_cap=17/490
+k=9;Nstar=8;a(Nstar+1)=2447/5880;cap_minus_last=65669/840840;a(Nstar+2)=8899/17640;first_minus_cap=25787/2522520
+k=10;Nstar=10;a(Nstar+1)=3419/5880;cap_minus_last=1753/76440;a(Nstar+2)=121103/194040;first_minus_cap=49739/2522520
+k=11;Nstar=13;a(Nstar+1)=14109/20020;cap_minus_last=411/20020;a(Nstar+2)=61211/84084;first_minus_cap=227/84084
+k=12;Nstar=26;a(Nstar+1)=11831779/13813800;cap_minus_last=8621/13813800;a(Nstar+2)=60551/70200;first_minus_cap=2657/491400
+k=13;Nstar=infinity;a(m)<=1-1/(7(m-1))<1_for_every_finite_m>=2
+canonical_minimal_witness=k12,N21,a22=6155/7497
+transcript_minimal_witness=k12,N22,a23=4333193/5222910
+two_engine_values=((8, Fraction(481, 1470)), (9, Fraction(2447, 5880)), (10, Fraction(8899, 17640)), (11, Fraction(3419, 5880)), (12, Fraction(121103, 194040)), (14, Fraction(14109, 20020)), (15, Fraction(61211, 84084)), (22, Fraction(6155, 7497)), (23, Fraction(4333193, 5222910)), (27, Fraction(11831779, 13813800)), (28, Fraction(60551, 70200)))
+checks=36
+RESULT=PASS

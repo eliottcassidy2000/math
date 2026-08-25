@@ -9,6 +9,35 @@ Format per entry:
 - Why it was wrong
 - The correct framing
 
+## MISTAKE-489 (2026-08-24, THM-536 Sturmian span threshold) -- the end of a finite AP table was interpreted as the first cap crossing
+
+- **What failed:** THM-536 reported the span-threshold tail
+  `N*(12),N*(13)=(20,20)`, while its later computation reported `(21,21)`.
+  The computation had evaluated the AP cover sequence only through `a(22)`;
+  for an absent `a(N+1)` it substituted the sentinel `Fraction(2)` and then
+  treated that sentinel as a genuine value above the cap.
+- **Minimal witnesses / first failed implication:** the theorem's own stored
+  row has `a(22)=6155/7497<6/7`, so span `N=21` already refutes the canonical
+  value `20`. Independently,
+  `a(23)=4333193/5222910<6/7`, so span `N=22` refutes the transcript value
+  `21`. The first failed implication was
+  `end of computed table => first mathematical failure`.
+- **Repair / strongest survivor:** pointwise subset domination and global
+  monotonicity survive. Two independent exact wall engines give
+  `a(27)=11831779/13813800<=6/7` and
+  `a(28)=60551/70200>6/7`, hence `N*(12)=26`. For `k=13`, the interval
+  `0<=theta<1/(m-1)` is noncovering at every finite `m>=2`, so
+  `a(m)<=1-1/(7(m-1))<1` and `N*(13)=infinity`. The complete corrected row is
+  `(7,8,10,13,26,infinity)` for `k=8..13`. THM-536 and its maintained
+  Sturmian scripts and stored outputs now carry the correction; the
+  pre-correction commits and the two witnesses above remain evidence of the
+  failure mechanism, not current truth.
+- **Reusable rule:** a search sentinel, timeout, or finite-array boundary may
+  never serve as a first-untested-point theorem. Before naming a largest
+  index, compute exact values on both sides of every finite crossing; when
+  the cap is an absolute maximum, define the threshold in the extended
+  naturals and prove whether any finite crossing can exist.
+
 ## MISTAKE-488 (2026-08-24, THM-4015 arbitrary-lattice sharp extension) -- a skipped-character scout and first-kind evidence hid the E7 Gram radical
 
 - **What failed:** a provisional bounded scout was treated as broad support
