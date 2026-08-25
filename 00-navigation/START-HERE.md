@@ -1,6 +1,6 @@
 # Start Here
 
-**Rolling brief — refreshed 2026-08-18; update whenever a headline changes.** This is a router, not a proof source; the startup packet prints the commit and [`CURRENT-FRONTIER.md`](CURRENT-FRONTIER.md) owns status links.
+**Rolling brief — refreshed 2026-08-24; update whenever a headline changes.** This is a router, not a proof source; the startup packet prints the commit and [`CURRENT-FRONTIER.md`](CURRENT-FRONTIER.md) owns status links.
 
 ## The five-minute orientation
 
@@ -18,7 +18,7 @@ python3 agents/start_session.py --topic "<target statement or object>"
 
 Then read the routed frontier, guardrails, and theorem. Logs and reflections are searchable history, not warm-up.
 
-## Sixteen high-signal facts to reuse, not re-derive
+## Seventeen high-signal facts to reuse, not re-derive
 
 1. **LRC(14) is first open.** Direct `<=6`; projected caps `1579/216`.
    THM-3378 leaves ledger/wall/families `372913/109/12` at `z1=216`.
@@ -99,6 +99,9 @@ Then read the routed frontier, guardrails, and theorem. Logs and reflections are
     commuting stable envelope, and abstract additive dual, and closes `9_10`.
     THM-2177 refutes Goemans' cost conjecture through a conflict graph.
     MISTAKE-230--235 forbid syntax-only bridges.
+17. **Sun's 2-4-6-8 conjecture is refuted.** THM-4026 proves the hole
+    `896315812331399`; THM-4027/4028 give full local support and growing mean,
+    not leastness, exception density, or pointwise coverage.
 ## Where to go by topic
 
 | Topic | Read first | Then use |
@@ -109,7 +112,7 @@ Then read the routed frontier, guardrails, and theorem. Logs and reflections are
 | NC2 / GMC | [`CURRENT-FRONTIER.md#nc2-and-gaussian-moments`](CURRENT-FRONTIER.md#nc2-and-gaussian-moments) | THM-2022/2101/2111/3365, formal interfaces; FC(3) open |
 | Jacobian / Dixmier / Poisson | [`CURRENT-FRONTIER.md#other-active-portfolio`](CURRENT-FRONTIER.md#other-active-portfolio) | [`CORE-PAPERS.md#jacobian-dixmier-and-poisson`](../05-knowledge/reference/CORE-PAPERS.md#jacobian-dixmier-and-poisson), THM-1300/2063/2071/2102/2118/2202/3279/3289/3367 |
 | Tournaments | [`CURRENT-FRONTIER.md#tournaments`](CURRENT-FRONTIER.md#tournaments) | [`TOURNAMENT-INVARIANT-ZOO-ATLAS-klein-S399.md`](TOURNAMENT-INVARIANT-ZOO-ATLAS-klein-S399.md), [`THE-ZOO.md`](THE-ZOO.md) with its freshness banner |
-| Integer sequences | [`CURRENT-FRONTIER.md#integer-sequences`](CURRENT-FRONTIER.md#integer-sequences) | THM-2000/2005/3288/3359/3499/3510; distinguish index, level count, value, and address |
+| Integer sequences / additive bases | [`CURRENT-FRONTIER.md#integer-sequences`](CURRENT-FRONTIER.md#integer-sequences) | THM-2000/2005/3288/3359/3499/3510 and THM-4026--4028/HYP-1953; distinguish support, multiplicity, local product, height, and carry normal form |
 | Pythagorean/Pell/power sums | [THM-3357](../01-canon/theorems/THM-3357-berggren-three-branch-walsh-level-collapse-and-parent-circuit.md) | THM-3333--3336/3339/3341/3345--3347/3353/3356/3358/3370/3375/3376; retain content/unit, branch order, ancestry, positivity chamber, and consumer labels |
 | ABC / IUT | [`CURRENT-FRONTIER.md#abc-iut`](CURRENT-FRONTIER.md#abc-iut) | [`CORE-PAPERS-ABC-IUT.md`](../05-knowledge/reference/CORE-PAPERS-ABC-IUT.md), THM-3833 |
 | Broad portfolio | [`PROBLEM-LEDGER.md`](PROBLEM-LEDGER.md) | THM-2176/2177/2191; [`PROBLEM-ATLAS-2026-07-20.md`](PROBLEM-ATLAS-2026-07-20.md) only as historical provenance |

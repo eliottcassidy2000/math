@@ -265,49 +265,36 @@ THM-2070 refutes the general HYP-8890/8895 bypasses.  Transfer
 
 ### Headline
 
-[THM-2000](../01-canon/theorems/THM-2000-support-harmonic-abel-dini-figurate-surface.md)
-and [THM-2005](../01-canon/theorems/THM-2005-support-dirichlet-automatic-tournament-atlas.md)
-separate support from indexed multiplicity and its collision tax:
+[THM-4026](../01-canon/theorems/THM-4026-sun-two-four-six-eight-binomial-counterexample.md)
+refutes Sun's `2-4-6-8` conjecture at `896315812331399`; three exact Python/C++
+routes agree and both neighbors are represented.
+[THM-4027](../01-canon/theorems/THM-4027-sun-two-four-six-eight-universal-modular-solubility.md)
+proves local surjectivity and exact periods, while
+[THM-4028](../01-canon/theorems/THM-4028-sun-two-four-six-eight-average-order-criticality.md)
+proves count `V X^(25/24)+O(X^(11/12))`. Leastness, exception density,
+pointwise laws, and a carry obstruction are **OPEN**.
 
-```text
-support profile       D_A(z) = sum_{a in support} a^{-z}
-indexed multiplicity  = D_A(z) + collision tax.
-```
-
-THM-3359 gives periodic modular supports; THM-2352 gives the q-adic plateau.
-[THM-3499](../01-canon/theorems/THM-3499-regular-shortlex-languages-have-logarithmic-density.md) proves regular shortlex density;
-[THM-3510](../01-canon/theorems/THM-3510-binary-shortlex-equal-level-count-log-density-boundary.md) is sharp: equal counts allow two densities or none.
+[THM-2000](../01-canon/theorems/THM-2000-support-harmonic-abel-dini-figurate-surface.md)/
+[2005](../01-canon/theorems/THM-2005-support-dirichlet-automatic-tournament-atlas.md)
+separate support from indexed multiplicity/collision tax. THM-3359/2352 give
+periodic and q-adic profiles; THM-3499/3510 give sharp shortlex boundaries.
 [THM-3730](../01-canon/theorems/THM-3730-positive-distinct-two-cube-support-abscissa.md)
-gives indexed abscissa `2/3`. THM-3793/4018 give inert and ramified-three
-singleton criteria; THM-3825 decodes. Fixed inert products give
-`liminf H/(log log X)^j>=2/(5*2^j*j!)`, while varying order gives log exponent
-`1/2`. Williams plus paired `d,3d` rows gives
-`liminf H sqrt(log log X)/sqrt(log X)>=0.4276598...`. No support asymptotic
-or residue follows.
+gives indexed abscissa `2/3`; THM-3793/4018/3825 give singleton criteria and
+decoding, not a support asymptotic or residue.
 
 ### Established landmarks
 
-- Hostile-audited [THM-2433](../01-canon/theorems/THM-2433-operation-fibre-deletion-incidence-and-startup-scar.md) gives finite-hole Burnside calculus: exact additive/multiplicative scars, covers and twin-centre atom `12`; chain difference and divisor Möbius are analogues, not Stirling.
-- Hostile-audited [THM-2438](../01-canon/theorems/THM-2438-poisson-newton-ternary-half-and-harmonic-divisor-incidence.md)
-  gives exact Poisson--Newton conjugacy, ternary Pascal walks and limiting
-  divisor-incidence scar; Abel--Dini/Bertrand is the boundary.
+- Hostile-audited THM-2433/2438/2500 give finite-hole calculus, exact
+  Poisson--Newton/divisor-incidence scars, bounded prime-free multiplicative
+  atoms, and prime-hole cage rays. These are typed analogues, not Stirling.
 - [THM-3359](../01-canon/theorems/THM-3359-modular-c-finite-supports-harmonic-density-and-periodic-scar.md)
   gives periodic modular C-finite supports, harmonic residue `delta=h/p`, and
   scar `delta-delta^2/2`; [THM-3364](../01-canon/theorems/THM-3364-cyclotomic-boolean-clocks-berggren-t4-xor-and-crt-phase.md)
   gives full phase; THM-3382 gives a time/address harmonic bifurcation. None
   restores ancestry; squares and `ceil(k log(k+1))` block all subsets.
-- Hostile-audited [THM-2500](../01-canon/theorems/THM-2500-finite-hole-relative-atoms-prime-rays-and-cover-bounds.md) classifies finite multiplicative hole modules. Prime-free holes have finitely
-  many artificial atoms at most `max h*spf(h)`; a prime hole creates
-  disjoint cage rays `m*q` with sharp `M^3/M^4` finite remainders. Additive
-  atoms stop at `2L+1/2L+2`, induced composite covers obey a sharp `M^2` law,
-  and artificial twin centres require both `c/2,c/3` in the prime-free holes.
-- The maximum-cyclic-triangle support mass is exactly
-  `75/4 - 24*log(2)`.
-- The condensation-hazard support is `{5,6,...}` with profile
-  `zeta(s)-H_4^(s)` and prefix-product parity shuffle tax
-  `67/4 - 24*log(2)`.
-- The A000568 support mass has a certified bracket narrower than
-  `3.11e-44`.
+- Exact support landmarks include maximum-cyclic-triangle mass
+  `75/4-24log2`, condensation mass `zeta(s)-H_4^s`, and an A000568 bracket
+  narrower than `3.11e-44`.
 - [THM-2010](../01-canon/theorems/THM-2010-new-tournament-invariant-sequences.md)
   records four-term candidates and a no-match search. That is not proof of
   sequence novelty.
@@ -331,7 +318,12 @@ or residue follows.
   transitive tournaments, and one determinant. MISTAKE-223 blocks NC2,
   hyper-Bessel, and Euler-characteristic transfers; THM-2023 is independent.
 
-### Live work: collision profiles; automatic structure; typed identities.
+### Live work
+
+- Sun `2-4-6-8`: least hole/density, lower tails, height-aware CRT classes,
+  minimal cover, norm intersections, and rank-labelled Pascal carries.
+- General sequences: collision profiles, automatic structure, typed
+  identities, and the critical `sum 1/d_i=1` coverage boundary.
 
 ## Other active portfolio
 

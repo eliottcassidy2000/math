@@ -2,10 +2,11 @@
 
 **Status (2026-08-24):** **FINITE-EXACT + INDEPENDENTLY VERIFIED** for the
 counterexample computation; **PROVED algebra** for the period and universal
-modular-solubility lemmas below.  This report audits the reserved canon files
+modular-solubility lemmas below.  This report audited the then-reserved canon
+files
 `THM-4026-sun-two-four-six-eight-binomial-counterexample.md` and
-`THM-4027-sun-two-four-six-eight-universal-modular-solubility.md`; it does not
-itself promote either reservation.
+`THM-4027-sun-two-four-six-eight-universal-modular-solubility.md`; their later
+status promotion is owned by the canon files, not by this audit report.
 
 ## Exact counterexample certificate
 
@@ -44,8 +45,9 @@ the exact identity `1+8 C(w,2)=(2w-1)^2`.
 
 For every odd prime `p`, the checker stores a bit mask of `x` for which `D`
 is a square modulo `p`, indexed by the `(y,z)` contribution.  The mask
-intersection through `p=89` leaves exactly `324` triples; exact integer
-square-root tests reject all of them.  A redundant terminal route continues
+intersection through `p=89` leaves exactly `324` triples.  Of these, `31`
+have residual below one; exact integer square-root tests reject the remaining
+`293`.  A redundant terminal route continues
 the residue masks and leaves `3,3,1,0` triples after primes
 `113,127,131,137`.  Thus one route ends in exact `isqrt`, while the other is
 a pure bounded congruence-cover certificate.  Neither is a single local
@@ -168,14 +170,19 @@ global/Archimedean, not a congruence obstruction.
 
 These are **FINITE-EXACT diagnostics**, not an asymptotic theorem.  The target
 is `20 mod 33`, the unique minimum-density class for the true binomial
-periods, with probability `16/1089` rather than the uniform `1/33`.  Its
-stabilized normalized local factors begin
+periods, with probability `16/1089` rather than the uniform `1/33`.  Exact
+normalized factors at the audited small-prime levels, followed by stable
+factors at the displayed primes above eight, are
 
 ```text
-p=2: 1       p=3: 68/81       p=5: 566/625       p=7: 310/343
+2^4: 1       3^2: 68/81       5^2: 566/625       7^2: 310/343
 p=11: 72/121 p=13: 154/169    p=17: 240/289      p=19: 316/361
 p=23: 472/529.
 ```
+
+The first line is **FINITE-EXACT only**; no all-level stabilization statement
+is used.  For `p=11,13,17,19,23`, the critical-tuple audit has no fully
+critical target solution, which proves stability after the first level.
 
 It is the minimum residue at `p=11,17,19,23` and second-lowest at `p=13`.
 At `p=31` four fully critical solutions fail to lift, giving stable factor
@@ -237,6 +244,6 @@ The matching frozen output is
 SHA-256:
 
 ```text
-script d350c3f133655f0b0026bd1ce377d7d0c128424c471202dccad248cbd033cae7
-output 22ec28e3f5ffd6cecee538666e96a03731a92b78e960719a3699e73ae9b2f4d4
+script 39febe3affe818f03c1b3d83161aad688fc1e6da271495617757eb097dd022cc
+output df11680c1a63266911a4f12bf1d3a71d27101dfe7dd6318ecffa34ddba05cf25
 ```

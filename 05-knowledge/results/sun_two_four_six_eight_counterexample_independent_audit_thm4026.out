@@ -35,7 +35,9 @@ quadratic-residue sieve triple counts:
   p=127 survivors=3
   p=131 survivors=1
   p=137 survivors=0
-exact isqrt checks after p<=89 = 324
+terminal candidates after p<=89 = 324
+negative-height rejections after p<=89 = 31
+exact isqrt checks after p<=89 = 293
 exact isqrt solutions = 0
 pure modular survivors after p<=137 = 0
 positive control (value,w,x,y,z) = (3846575646, 42321, 511, 71, 19)
@@ -49,11 +51,11 @@ exceptional-prime regular-coverage traces:
   p=29 partial_sizes=(14, 28, 29, 29)
   p=31 partial_sizes=(15, 31, 31, 31)
   p=47 partial_sizes=(23, 46, 47, 47)
-small-prime stabilized local factors:
-  p=2 sigma=1
-  p=3 sigma=68/81
-  p=5 sigma=566/625
-  p=7 sigma=310/343
+small-prime exact local factors at audited levels:
+  p=2 level=2^4 sigma=1
+  p=3 level=3^2 sigma=68/81
+  p=5 level=5^2 sigma=566/625
+  p=7 level=7^2 sigma=310/343
 selected p>8 first-level local factors:
   p=11 sigma_1=72/121
   p=13 sigma_1=154/169
@@ -72,6 +74,7 @@ fully critical p-adic lift rows (critical,lifting,stable_sigma):
   p=499 row=(2, 0, Fraction(124250000, 124251499))
 target mod 33 = 20
 target probability mod 33 = 16/1089
+minimum-density classes mod 33 = [20]
 PERIOD-CONTROLS: PASS
 REGULAR-LOCAL-COVERAGE-CONTROLS: PASS
 EXACT-SQUARE-TAIL: PASS

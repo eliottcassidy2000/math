@@ -8,6 +8,9 @@ related:
   - HYP-1931
   - HYP-1941
   - HYP-1952
+  - THM-4026-sun-two-four-six-eight-binomial-counterexample
+  - THM-4027-sun-two-four-six-eight-universal-modular-solubility
+  - THM-4028-sun-two-four-six-eight-average-order-criticality
 ---
 
 # HYP-1953: additive basis theorems form a coverage-density-normal-form spectrum
@@ -131,6 +134,48 @@ This suggests a new feature: among many Goldbach edges, some are compatible
 with the target's Fibonacci normal form while balanced prime pairs may have
 larger carry debt.  Abundance and normal-form compatibility are separate axes.
 
+## THM-4026--4028 update: a zero inside the supercritical local regime
+
+The Sun `2-4-6-8` system is now the sharpest hostile for this hypothesis. The
+three coordinates in the proposed profile separate completely at
+
+```text
+N=896315812331399:
+
+representation count       0                         (THM-4026, exact)
+local obstruction support  full modulo every m       (THM-4027, proved)
+average tuple exponent      25/24 = 1 + 1/24          (THM-4028, proved)
+normal-form carry state     exact rank-eight expansion; reachability OPEN.
+```
+
+The target is locally thin rather than locally forbidden: it is the unique
+minimum-density class `20 mod 33`, and its first prime-power factors are below
+the uniform mean at several audited prime powers. Nevertheless every residue
+modulo every positive modulus occurs. Thus full finite-level local support,
+even together with a diverging mean representation count, does not force
+pointwise coverage.
+
+The exact combinadic normal form is
+
+```text
+C(281,8)+C(279,7)+C(234,6)+C(212,5)
++C(188,4)+C(136,3)+C(43,2)+C(15,1).
+```
+
+Pascal normalization suggests a precise carry question: can a labelled state
+with at most one atom at each rank `8,6,4,2` reach this decreasing normal form
+while preserving the four-atom budget? This is not yet an obstruction. A
+confluence/completeness theorem for the rewrite system is required before the
+normal form can certify nonrepresentability.
+
+THM-4028 proves the general capacity threshold. If
+`sigma=sum_i 1/d_i<1`, a fixed tuple of polynomial degrees represents a
+density-zero set. At `sigma=1`, the Dirichlet volume controls only an upper
+density. At `sigma>1`, mean multiplicity grows, but THM-4026 proves that this
+is not sufficient for universality even when all local congruences are soluble.
+This repairs any reading of “adding dimension” as a pointwise theorem: the
+missing ingredient is a lower-tail or concentration mechanism.
+
 ## Predictions
 
 1. Goldbach-like searches should record not only representation count but also
@@ -142,9 +187,11 @@ larger carry debt.  Abundance and normal-form compatibility are separate axes.
 4. Fermat polygonal should be used as the bounded-cover sanity check for new
    atom systems: if a proposed atom set has no finite arity cover, it is
    Goldbach-like rather than polygonal-like.
-5. Tournament Analysis can import this as a standard additive-basis profile:
-   atom set, arity, representation entropy, local product, carry debt, and
-   canonical normal form.
+5. The standard additive-basis profile should record atom set, arity,
+   representation entropy, local product, carry debt, and canonical normal
+   form. Tournament Analysis is appropriate only if the representations carry
+   an intrinsic antisymmetric pair relation with honest tie semantics; the Sun
+   split is instead a symmetric bipartite compatibility graph.
 
 ## Next Tests
 
@@ -152,12 +199,19 @@ larger carry debt.  Abundance and normal-form compatibility are separate axes.
   pairs and compare against Hardy-Littlewood singular-series bonuses.
 - Replace Fibonacci normal form with polygonal and Ostrowski normal forms to
   see which basis makes Goldbach pairs lowest-debt.
-- Build a "representation tournament" on all Goldbach pairs of a fixed `n`,
-  orienting pair `A -> B` when `A` has lower carry debt, lower imbalance, or
-  higher local singular contribution.
+- Build a typed multiobjective representation poset or compatibility graph on
+  Goldbach pairs. Do not force debt, imbalance, and local contribution into a
+  cosmetic tournament unless one intrinsic tie-aware comparison is proved.
 - Reuse this profile on LRC endpoint rows: representation count corresponds
   to possible repairs, singular product to endpoint debt, and carry debt to
   legal handoff/canonicalization cost.
+- For the Sun system, compute exact count/local-factor distributions on
+  dyadic windows and low-density CRT progressions; test concentration rather
+  than inferring it from the mean.
+- Build the rank-labelled Pascal rewrite graph for the displayed combinadic
+  state and prove confluence or exhibit an explicit separating invariant.
+- Split at the eighth-binomial shell and classify the full bounded trajectory
+  in the three-summand defect set, retaining the adjacent seventh-rank carry.
 
 ## External Anchors
 

@@ -16,8 +16,8 @@
 //
 //   A^2+3B^2 = 24(N-S)+4.
 //
-// Thus the residual problem is an Eisenstein-norm equation with the extra
-// thin constraint that A belongs to the quadratic image x^2-3x+1.
+// Thus the residual problem is a Q(sqrt(-3)) field-norm equation with the
+// extra thin constraint that A belongs to the quadratic image x^2-3x+1.
 //
 // Reproduction commands are frozen in
 // 05-knowledge/results/sun_2468_counterexample_thm4026_independent.out.

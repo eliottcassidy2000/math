@@ -3,6 +3,26 @@
 **Status:** CURRENT. Compact defaults from repeated successes and failures;
 new cards require distinct-thread evidence or a severe repaired failure.
 
+## Separate unbounded local support from a height-bounded modular cover
+
+**Trigger/action:** when every residue is locally attainable but the exact
+search has a proved finite height box, reduce only as a necessary filter and
+allow several moduli to cover that bounded box. Prove local periods/lifts
+separately, retain the index intervals, and finish with an exact terminal
+predicate or a zero survivor mask.
+
+**Mechanism/counterindications:** a bounded cover says that every candidate in
+one finite box fails at least one necessary residue test; it is not a single
+congruence obstruction and cannot be extrapolated after the box is enlarged.
+If one modulus already excludes the target for all indices, use the ordinary
+local obstruction instead. Without a monotone height bound or a proof that
+future lifts cannot re-enter, the cover is unsound.
+
+**Evidence:** THM-4026's zero bounded square mask coexists with THM-4027's
+surjectivity modulo every modulus. In the distinct LRC thread, THM-2059's CRT
+packet joins and THM-2043/2050's global-blindness hostiles likewise require a
+height/first-exit sidecar.
+
 ## Separate observer type, recurrence class, and finite head
 
 **Action:** separate observer, evaluator, C/P class, zeros, and bulk/residue/head; no column determines another. THM-3288's degree-14 tail with prefix/Hankel order 15 is a sharp head tax. **Evidence:** THM-3172/3186/3210, THM-3200/3211, THM-3202/3213/3288.
