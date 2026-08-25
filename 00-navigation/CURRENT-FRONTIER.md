@@ -244,11 +244,12 @@ THM-2070 refutes the general HYP-8890/8895 bypasses.  Transfer
   the corresponding path counts; count marginals lose mixed response at the
   transitive-triple/C3 boundary.
 - [THM-4097](../01-canon/theorems/THM-4097-order-nine-strong-ear-spectrum-solid-interval-and-lane-extension.md)
-  computes all `1,482` strong order-nine values. Selected banks
-  [THM-4102](../01-canon/theorems/THM-4102-selected-order-ten-strong-ear-solid-interval.md)/[4104](../01-canon/theorems/THM-4104-selected-order-eleven-strong-ear-solid-interval.md)
-  give solid intervals `249..14649`, `429..80265` and every allowed odd
-  through `80,405`. First unforced lanes: `80,407`, `7*11,527=80,689`.
-  They are lower images, not censuses; global completeness is **OPEN**.
+  computes order nine; selected [THM-4102](../01-canon/theorems/THM-4102-selected-order-ten-strong-ear-solid-interval.md)/[4104](../01-canon/theorems/THM-4104-selected-order-eleven-strong-ear-solid-interval.md)
+  banks give intervals `249..14649`, `429..80265` and the allowed prefix
+  through `80,405` (next: `80,407`, `80,689`).
+  [THM-4111](../01-canon/theorems/THM-4111-uniform-ear-average-and-recursive-selected-bank-growth.md)
+  makes recursive image maxima unbounded; equal-`(H,F_1)` hostiles leave
+  interval overlap and global completeness **OPEN**.
 - Corrected HYP-8835: optimal support is uniquely odd; positive `Mp=0` gives a
   replicator integral. Pure optimum means Condorcet winner, not transitivity;
   source-over-`C3` is hostile and RPS levels are circles, not `T^2`.

@@ -19,6 +19,7 @@ depends_on:
   - THM-4102-selected-order-ten-strong-ear-solid-interval
 related:
   - THM-4099-squarefree-gap-transfer-and-mixed-insertion-boundary
+  - THM-4111-uniform-ear-average-and-recursive-selected-bank-growth
   - HYP-2879-strong-ear-atom-calculus
   - MISTAKE-055
 script: 04-computation/tournament_selected_order11_strong_ear_interval_thm4104.py
@@ -384,6 +385,16 @@ I_n intersect I_(n+1) nonempty,
 U_n -> infinity.                                          (26)
 ```
 
+THM-4111 now proves the strictly weaker, selection-robust statement
+
+```text
+max V_n^* -> infinity,                                    (26a)
+```
+
+with one-step factor `(n+3)/4`. It also gives two strong parents with equal
+`(H,F_1)` and exact cut mean but different ear images. Thus scalar averaging
+cannot supply the interval overlap or the solid-interval endpoint `U_n`.
+
 The observed intervals
 
 ```text
@@ -397,6 +408,6 @@ asymptotic proof. Establishing `(26)` would require structural control of how
 the labelled `(Start,End,Q)` fibers evolve under the first-witness selection;
 the three computed rows do not provide it.
 
-The finite constants are proved and independently audited. A separate proof
-of `(26)` is still absent, so the global H-spectrum conjecture remains
-**OPEN**.
+The finite constants and `(26a)` are proved and independently audited. A
+proof of the interval overlap and `U_n -> infinity` in `(26)` is still absent,
+so the global H-spectrum conjecture remains **OPEN**.

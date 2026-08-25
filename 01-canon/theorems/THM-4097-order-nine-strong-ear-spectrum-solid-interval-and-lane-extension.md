@@ -22,6 +22,7 @@ related:
   - THM-4099-squarefree-gap-transfer-and-mixed-insertion-boundary
   - THM-4102-selected-order-ten-strong-ear-solid-interval
   - THM-4104-selected-order-eleven-strong-ear-solid-interval
+  - THM-4111-uniform-ear-average-and-recursive-selected-bank-growth
   - HYP-2879-strong-ear-atom-calculus
 script: 04-computation/tournament_order9_strong_ear_spectrum_thm4097.py
 output: 05-knowledge/results/tournament_order9_strong_ear_spectrum_thm4097.out

@@ -20,6 +20,7 @@ depends_on:
 related:
   - THM-4099-squarefree-gap-transfer-and-mixed-insertion-boundary
   - THM-4104-selected-order-eleven-strong-ear-solid-interval
+  - THM-4111-uniform-ear-average-and-recursive-selected-bank-growth
 script: 04-computation/tournament_selected_order10_strong_ear_interval_thm4102.py
 output: 05-knowledge/results/tournament_selected_order10_strong_ear_interval_thm4102.out
 independent_audit_script: 04-computation/tournament_selected_order10_strong_ear_interval_thm4102_independent_audit.py

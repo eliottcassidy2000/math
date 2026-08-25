@@ -1,5 +1,23 @@
 # Script Results Index
 
+- `tournament_uniform_ear_average_growth_thm4111.py` and independent literal
+  audit -> concordant `.out`s [THM-4111 PROVED ELEMENTARY DOUBLE COUNT +
+  VERIFIED-EXACT + INDEPENDENTLY VERIFIED-EXACT]. For an order-`n` tournament,
+  summing over every labelled cut ear gives
+  `2^(n-2)((n+3)H(T)+F_1(T))`, with `F_1` the one-defect word count. After the
+  two constant cuts are removed, any recursively representative-selected
+  strong-ear bank satisfies `M_(n+1)>=(n+3)M_n/4`, hence its image maxima are
+  unbounded. `C3` refutes the `n+4` coefficient. Strong order-five codes
+  `1015,759` have the same `(H,F_1)=(9,30)` and mean `133/5` but different
+  ear images, so solid-interval overlap remains open. The independent path
+  imports no primary and scans `23,717,424` child orderings. Primary
+  script/output SHA-256:
+  `a8f48ebd9f50123672e58062d918d98786a89806167a07a0f262f59f74ed4aba` /
+  `f00a58d8423ccb92a576b6ad5e6bfc997576d5564083dfb25bad721ede01fe82`;
+  independent:
+  `c7c59e8eb98d3bfdcb2105802a7c7ffda2194e28a83e30c227a38d5d464e7ba7` /
+  `62be3fe1e66ca757f6d04ceb0f466e07502a4e1bbfa9c48172dc52baa4aa6c59`.
+
 - `tournament_selected_order11_strong_ear_interval_thm4104.py` and independent
   audit -> matching `.out`s [THM-4104 PROVED ELEMENTARY QUADRATIC-CUT IDENTITY
   + FINITE-EXACT + VERIFIED-EXACT + INDEPENDENTLY AUDITED; global H-spectrum
