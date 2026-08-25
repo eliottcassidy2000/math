@@ -523,7 +523,7 @@ cannot replace unavoidability.
 | THM-4111 | exact zero-mode/mean formula | mean loses image and reducibility | PROVED |
 | THM-4112 | parent-gap component-span envelopes iterate on scale-separated LRC families | exact component identities, owners, physical origin, and arbitrary cores remain | PROVED under explicit hypotheses; relative to THM-2061/2066/2072 |
 | THM-4114/4115/4118 | exact ear quadratic, moments, response lattice, and unit-state intervals | combined-charge component minima and cross-family domination remain | PROVED / independently audited |
-| THM-4117 | coarse physical `11+2` data do not force entry into known supplier families | full primitive support and marked unit/core origin are lost | PROVED relative to THM-4049 |
+| THM-4117/4119 | a physical row and an infinite lonely residue family miss all three known supplier shapes | full primitive support and marked unit/core origin are lost | PROVED; physical scope only for THM-4117 member |
 | THM-4110/4116 | exact phase quotient and component repair law | synchronized phase is not LRC safety | PROVED |
 | THM-3042/4067 | common quotient/equalizer controls gluing | ambient realization and torsion can survive | PROVED |
 | THM-3173 | exact `C2*C3` quotient firewalls | cardinality six is not a modular action | PROVED |
@@ -555,6 +555,19 @@ the forced AP7 quotient first misses the marked unit `1`. Rank, `11+2` type,
 pair type `(1,3)`, mod-56 residues, parity, and phase-sheet data therefore do
 not determine supplier entry. Failure of a sufficient THM-4112 certificate
 is neither a cover nor an irreducible boundary state.
+
+THM-4119 proves this is not an isolated arithmetic accident. For
+
+```text
+S_t={1,4,6,8,10,12,14,15,16,18,22,t,3t},       t>22,
+```
+
+fourteen of the nineteen residues of `t` give the exact common-phase
+clearance `2/19`, while every `t>22` misses all three supplier shapes under
+common dilation and primitive normalization. The canonical `t=2^45` member
+is the THM-4117 physical row; the other parameters are not claimed to come
+from the finite physical producer. This separates two issues that a boundary
+atlas must retain: arithmetic loneliness and physical-origin realizability.
 
 ## 11. LRC(14): a concrete boundary-atlas programme
 

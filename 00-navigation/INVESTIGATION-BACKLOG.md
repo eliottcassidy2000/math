@@ -55,9 +55,10 @@
   but retain literal support, marked unit/core embedding, relative scale,
   ordered parent gaps, safe components, owners/clocks, Smith sheets, and all
   three THM-4112 supplier bits. Freeze THM-4117 as the nonsupplier-but-lonely
-  hostile and one positive control per supplier class. Find the least refined
-  response-determining signature before expanding to THM-3818's `52,692` seam
-  skeletons.
+  **physical** hostile, THM-4119's fourteen-of-nineteen residue family as the
+  arithmetic-but-not-generally-physical control, and one positive control per
+  supplier class. Find the least refined response-determining signature before
+  expanding to THM-3818's `52,692` seam skeletons.
 - **Incoming THM-4116 signal -- LRC odd-shell trees plus full response.** The
   AP odd-shell quotient has `2^(c(F)-1)` phase sheets and is saturated iff
   `F` is connected; minimal repairs are spanning trees. Add this component
