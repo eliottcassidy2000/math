@@ -1,0 +1,9 @@
+LRC14 AFFINE COMPONENT-WIDTH INDEPENDENT CIRCLE AUDIT
+method=literal_strict_circle_walls+midcell_masks;no_formula_import
+d2_pairs=780;cells=125100;semantic_digest=0d308969f4210b175ee5999bff8fb6d8045da92730b9e7007791ded447442e8b
+d3_profiles=560;cells=40742;max_width_ratio=1/1
+d4_profiles=270;cells=13890;max_width_ratio=1/1
+endpoint_controls=d2,d3,d4:PASS
+fixed_bank_hostiles=d3:(1,55,56),period420;d4:(26,31,57),period392
+gates=848
+RESULT=PASS

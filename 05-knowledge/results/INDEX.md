@@ -1,5 +1,21 @@
 # Script Results Index
 
+- `lrc14_affine_component_width_escape_thm4052.py` and independent circle
+  audit -> matching `.out`s [THM-4052 PROVED RELATIVE TO LRCUpTo13 and the
+  affine boundary theorems + VERIFIED-EXACT + INDEPENDENTLY AUDITED; LRC(14)
+  OPEN]. A closed cited pack-margin arc escapes every equally short open
+  spoiled component. This closes `d2:E>=12M`, `d3:E>=11M`, and
+  `d4:3E>=44M`; the sharp d2 failure wedge additionally requires
+  `beta<12M` and `alpha*beta<6M(alpha+beta-7g)`. A typed physical d2 row
+  hits THM-4049's forbidden residues `11,23` but lies in the width cone.
+  Primary script/output SHA-256:
+  `d0165375b4d3d510549a5ef6d0584c3fd080bd7039bb4ccd0005bd6097628efc` /
+  `120b76f5d3fe5a6ae107e4c5579ec07c52d22a097f496e64cc0742bfcc999d91`;
+  independent script/output/semantic:
+  `b30309b3885f99786fc9c264b31e458ec19a65b73c8a9af0568c775d65e3801b` /
+  `458084ed8923d285d5e3045a7f9655ce38b8eb30c3ff386612763bc26adf4ee4` /
+  `0d308969f4210b175ee5999bff8fb6d8045da92730b9e7007791ded447442e8b`.
+
 - `tournament_strong_base_n7_exact_frontier.py` and independent audit ->
   matching `.out`s [THM-4051 FINITE-EXACT + VERIFIED-EXACT + INDEPENDENTLY
   AUDITED; all-order base OPEN]. The complete 456-class order-seven universe

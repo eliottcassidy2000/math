@@ -24,6 +24,7 @@ depends_on:
   - THM-4024-lrc14-complete-divisor-incidence-envelope
   - THM-4004-lrc14-three-detuned-divisor-comb-profile
 related:
+  - THM-4052-lrc14-affine-component-width-escape-cones
   - THM-4049-lrc14-d2-two-phase-residue-firewall
   - THM-4030-lrc14-d4-affine-defect-lattice-boundary
   - THM-4032-lrc14-d3-affine-defect-lattice-boundary

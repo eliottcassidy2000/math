@@ -1,0 +1,14 @@
+LRC14 AFFINE COMPONENT-WIDTH ESCAPE CONES
+status=PROVED_RELATIVE_TO_LRCUpTo13_AND_AFFINE_BOUNDARIES;LRC14=OPEN
+pack_arc_lengths=d2:1/42/M,d3d4:3/77/M
+coarse_cones=d2:E>=12M;d3:E>=11M;d4:3E>=44M
+d2_failure_wedge=a+b>7;beta<12M;alpha*beta<6M(alpha+beta-7g)
+d2_scalar_checks=126848
+controls=d2:167/308:1/14,d3:51/140:1/14,d4:4757/6160:137/1540
+method_hostile=H1..11;exceptions(1,11);central_and_both_margin_endpoints_spoiled
+physical=P:713721382004055345;sum:574570283588268864;Q:567869252041;crossing_floor:54561683510745
+physical_residues=37,11,5,43,41,23,17,47,39,1,4;firewall_hits=11,23
+physical_width=1/4996049674028387415;witness=1/14
+semantic_digest=0d308969f4210b175ee5999bff8fb6d8045da92730b9e7007791ded447442e8b
+checks=131697
+RESULT=PASS

@@ -23,6 +23,7 @@ depends_on:
   - THM-4024-lrc14-complete-divisor-incidence-envelope
   - THM-4004-lrc14-three-detuned-divisor-comb-profile
 related:
+  - THM-4052-lrc14-affine-component-width-escape-cones
   - THM-4030-lrc14-d4-affine-defect-lattice-boundary
   - THM-2059-crt-fiber-product-phase-packet
 script: 04-computation/lrc14_d3_affine_defect_lattice_boundary_thm4032.py

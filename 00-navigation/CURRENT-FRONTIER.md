@@ -75,9 +75,10 @@ is the safe control `M(S_13)=99/338`. No cited result proves LRC(14).
   give exact `d=4/3` affine circuits and close certificate-negative rows.
   [THM-4041](../01-canon/theorems/THM-4041-lrc14-d2-affine-defect-edge-boundary.md)
   gives the exact one-edge `d=2` spoiled-phase law. [THM-4049](../01-canon/theorems/THM-4049-lrc14-d2-two-phase-residue-firewall.md)
-  closes all odd pairs when the pack avoids ten classes mod `56`, including
-  `{1,...,10,12}`; a typed row hits forbidden class `11`. The complementary
-  `d=2` and the `d=3,4` pack-safe intersections remain open.
+  closes all odd pairs behind its ten-class mod-`56` pack firewall.
+  [THM-4052](../01-canon/theorems/THM-4052-lrc14-affine-component-width-escape-cones.md)
+  closes orthogonal cones `d2:E>=12M`, `d3:E>=11M`, `d4:3E>=44M`; strict
+  complements remain.
   [THM-4025](../01-canon/theorems/THM-4025-lrc14-owner-residue-odd-dilation-semigroup.md)
   gives the odd-divisibility semigroup, while [THM-4031](../01-canon/theorems/THM-4031-lrc14-endpoint-owner-rational-tail.md)
   proves that every old-strip ray has an eventual arithmetic-survivor tail;
