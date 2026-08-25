@@ -1,0 +1,13 @@
+THM-4098 primary Fraction-exact audit: PASS
+declared base-bank census=155; scaled rows=310
+smallest direct uncovered margin=29/7700
+smallest parity-branch longest base interval in census=13/784
+owner complement gates=10108
+row thresholds: AP7:q>=55 (L=9/490), AP6:q>=35 (L=1/35), AP5:q>=35 (L=1/35)
+sample endpoint witnesses:
+  AP7 q=55 bank=(440, 495, 605, 715) theta=4/35 N=70 source=core-left
+  AP7 q=56 bank=(448, 504, 616, 728) theta=4/35 N=70 source=core-left
+  AP6 q=35 bank=(245, 280, 315, 350, 420) theta=393/3430 N=3430 source=245-right
+  AP6 q=36 bank=(252, 288, 324, 360, 432) theta=407/3528 N=3528 source=252-right
+  AP5 q=35 bank=(210, 280, 350, 420, 490, 525) theta=337/2940 N=2940 source=210-right
+  AP5 q=36 bank=(216, 288, 360, 432, 504, 540) theta=4/35 N=70 source=core-left

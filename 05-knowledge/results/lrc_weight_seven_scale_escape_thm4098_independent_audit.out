@@ -1,0 +1,5 @@
+THM-4098 independent exact wall-cell audit: PASS
+declared bank census=80; target cell gates=240
+pointwise pullback gates=66240
+smallest positive target wall cell=1/30800
+q=1 AP7 hostile=cover; q=55 odd and q=56 even=survive
