@@ -2,13 +2,15 @@
 id: THM-4094
 title: "Hamiltonian matching deficit and two-prime-lane completeness reduction"
 status: >
-  PROVED + VERIFIED-EXACT. Full deletion incidence gives a left-perfect
-  matching and the exact Hamiltonian-path deficit as excess compatible
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED. Full deletion
+  incidence gives a left-perfect matching and the exact Hamiltonian-path
+  deficit as excess compatible
   insertions plus orphan paths; retaining only a selected matching loses that
   deficit, minimally at the transitive-triple/C3 boundary. Using the proved
-  omissions 7,21 and order-join multiplicativity, global H-spectrum
-  completeness is equivalent to strong realization of the two infinite lanes
-  p (odd prime p!=7) and 7p (odd prime p!=3). Finitary many-sorted
+  omissions 7,21, the proved strong carry atoms 49,63,343, and order-join
+  multiplicativity, global H-spectrum completeness is equivalent to strong
+  realization of the two infinite lanes p (odd prime p!=7) and 7p (odd prime
+  p!=3). Finitary many-sorted
   first-order theories whose incidence fibers are all finite have a uniform
   fiber bound, so the unbounded finite tournament/path universe requires
   external finite/standard semantics. The global H-spectrum conjecture
@@ -28,15 +30,22 @@ related:
   - MISTAKE-499
 script: 04-computation/hamiltonian_matching_deficit_two_prime_lane_thm4094.py
 output: 05-knowledge/results/hamiltonian_matching_deficit_two_prime_lane_thm4094.out
-script_sha256: 0ddd5d6199f9c9e5c9f241881f602c33722bb5964aa5f7a966c83ef52b787f8b
-output_sha256: eb46bf34492e76fd4a4186704c73f22860722a2abb71d1c1aad5499cb1a27d06
-semantic_sha256: 9e148b0e81a8cd0f965cb7ab15518a02d63dfaf89c590811d0efb2074b49e2b7
+script_sha256: 5b6c779958ad1de276873eabd3585f432bb593e32811fb138dc5d3c19948d616
+output_sha256: 5f174f77a873a02bd92bbebe4a5d70b3c329abc8152fb1330d4fe1dc6d98df34
+semantic_sha256: a7376b1f1d0bdea71e063caf85415a6555d070130c24304b2b2c6fb24571d76f
 hash_basis: raw LF bytes for files; canonical compact JSON for the semantic ledger
+audit: >
+  ACCEPT after making the finite carry hypotheses explicit, strengthening the
+  composable sidecar to full deletion fibers and cut signatures, repairing the
+  singleton compactness witness, and scoping deletion notation to |T|>=2.
+  The independent hostile audit replayed normal/-O/frozen transcripts and
+  checked the deletion identity, minimal hostile, prime extraction, exhaustive
+  seven-adic case split, compactness boundary, and exact hashes.
 ---
 
 # THM-4094 -- Hamiltonian matching deficit and two-prime-lane completeness
 
-**PROVED + VERIFIED-EXACT.**
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.**
 
 This theorem separates three claims compressed by a "matching completeness"
 intuition. Full deletion incidence computes the local Hamiltonian-path
@@ -101,7 +110,7 @@ it changes the order of a witness but creates no new value.
 
 ## 2. Full deletion incidence and the exact deficit
 
-Fix a tournament `T` and a vertex `v`. Put
+Fix a tournament `T` with at least two vertices and a vertex `v`. Put
 
 ```text
 L_v=Ham(T-v),                 R_v=Ham(T).               (6)
@@ -224,9 +233,10 @@ selected matching quotient:       monotonicity only.                 (17)
 There is no claim that "two sorts are inherently insufficient." Keeping the
 complete right sort and incidence retains the cardinality. The loss is caused
 by deleting unmatched witnesses. For one scalar update, the total `(10)` is
-sufficient. For a composable next insertion, the faithful sidecar is the full
-profile `(a_v(P)-1)_(P in L_v)`, together with the orphan paths and their
-failed shortcuts.
+sufficient. The count profile `(a_v(P)-1)_(P in L_v)` and the orphan
+total/path list are necessary but are not sufficient for composition: a
+faithful next-insertion sidecar retains the full fibers `D_v(P)`, the orphan
+paths, and their legal and failed cut signatures.
 
 ## 4. Support is not object or witness multiplicity
 
@@ -283,8 +293,9 @@ All are impossible by `(4)`, so
 
 ## 6. Exact two-prime-lane equivalence
 
-> **Theorem 6.1 (global completeness reduction).** Under Rédei parity and
-> `(3)`--`(4)`, the global conjecture `(5)` is equivalent to
+> **Theorem 6.1 (global completeness reduction).** Under Rédei parity,
+> `(3)`--`(4)`, and the proved strong carry atoms `(20)`, the global conjecture
+> `(5)` is equivalent to
 >
 > ```text
 > P_odd \ {7}       subset S_str,                       (21)
@@ -472,8 +483,8 @@ address-to-tournament realization rule.
 The repairs are typed:
 
 1. **Local scalar response:** retain the total `(10)`.
-2. **Composable insertion response:** retain the excess profile, orphan paths,
-   and endpoint/cut signatures.
+2. **Composable insertion response:** retain the full deletion fibers, orphan
+   paths, and their legal/failed endpoint-cut signatures.
 3. **Logical finiteness:** retain an external standard finite code or work in
    explicitly finite semantics.
 4. **Global spectrum:** construct both lanes `(21)`--`(22)`, or prove an
@@ -504,7 +515,7 @@ It checks:
 
 It separates two counts that the legacy prose of
 `THM-012b-insertion-decomposition` conflated before the repair recorded as
-MISTAKE-498. At order five:
+MISTAKE-499. At order five:
 
 ```text
 pairs with at least one orphan:                         3200,

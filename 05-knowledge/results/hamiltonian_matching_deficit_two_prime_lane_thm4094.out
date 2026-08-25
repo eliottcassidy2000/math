@@ -28,7 +28,7 @@ two_lane_decomposition_checked_allowed_odds_through= 1000000 checked= 499998 fai
 boundary_decompositions= {'49': [49], '63': [63], '343': [343], '611': [13, 47], '613': [613], '623': [623], '9261': [343, 3, 3, 3]}
 
 COMPACTNESS FINITE-SUBSET WITNESSES (C3 order joins)
-threshold= 1 copies= 0 vertices= 0 H= 1
+threshold= 1 copies= 0 vertices= 1 H= 1
 threshold= 2 copies= 1 vertices= 3 H= 3
 threshold= 10 copies= 3 vertices= 9 H= 27
 threshold= 100 copies= 5 vertices= 15 H= 243
@@ -36,5 +36,5 @@ threshold= 1000 copies= 7 vertices= 21 H= 2187
 threshold= 10000 copies= 9 vertices= 27 H= 19683
 threshold= 1000000 copies= 13 vertices= 39 H= 1594323
 
-semantic_sha256= 9e148b0e81a8cd0f965cb7ab15518a02d63dfaf89c590811d0efb2074b49e2b7
+semantic_sha256= a7376b1f1d0bdea71e063caf85415a6555d070130c24304b2b2c6fb24571d76f
 ALL_CHECKS_PASS

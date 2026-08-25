@@ -53,46 +53,12 @@ is the safe control `M(S_13)=99/338`. No cited result proves LRC(14).
 
 ### Independent routes that remain live
 
-- **PROVED + CITED:** [THM-4009](../01-canon/theorems/THM-4009-euclidean-covering-transference-short-relation-compression.md)
-  gives square norm `<=195`, `l1<=50`, height `13`, 47 ratios and 55,459
-  histograms; a separate odd row may be long. THM-2052 is terminal at rank
-  twelve; rank eleven splits outside/inside the star.
-  THM-3793/[3825](../01-canon/theorems/THM-3825-prime-colour-valuation-two-cube-decoder.md)
-  decode `5,855` inert ratios/scales; THM-3818 adds `456,690` supports,
-  `913,380` orientations, square-parity tags and 31 Pell points. Connected
-  incidence gives `max n_i<=355^12`; rank eleven has two components. At full
-  height `91^6`, crossing rows are forbidden, internal pairs bounded, and
-  packets recover both scales except an exact singleton-component congruence
-  fibre. Its cyclic sidecar makes `s lambda(v)>=1` a safe-time certificate.
-  The `12+1` branch forces scale one, `U>91^6/13`, at most 13 packets, and
-  none in the powers-of-four fibre. For `11+2`, THM-3878 leaves `7,505`;
-  in `t>=U` one auxiliary leaves 58 survivors (57 at `s=1`, plus
-  `(s,p,q)=(2,1,9)`). THM-3910 closes 41; THM-3995's conditional parity cap
-  `4(U-1)/(63U)` closes no type. THM-4002 closes AP11 and 352,716 fixed
-  `[1,21]` scale-two bodies. THM-4003/4004 give ratio/prime/`t<U` gates
-  (`U>=3,208,300,859`); all 17 arbitrary-body types and owner/arrival remain
-  OPEN. [THM-4024](../01-canon/theorems/THM-4024-lrc14-complete-divisor-incidence-envelope.md)
-  gives profile `(11,9,8,8,7,7,...)` and equality moduli `2,3,4`.
-  THM-4030/4032/4041 give exact `d=4/3/2` affine circuits; THM-4070 forces divisor cover `8..14`.
-  THM-4075 closes `max H<=30`; THM-4079 handles large one-outlier extensions, not arbitrary packs.
-  THM-4081 classifies the height-twelve antipodal control by the unique minimal `D*={1,3,4,5,7,8,9,11,12}`; odd/even dilation split and cited `7<=kappa<=9` leave `kappa=7,8` open.
-  THM-4087 closes all dilated AP9 two-outlier seams for `70<=B<C` at `N<=14C`; arbitrary cores, AP9 supply, physical entry, and LRC(14) remain **OPEN**.
-  THM-4052/4062/4066 close escape cones and two three-exception shapes, not LRC(14).
-  [THM-4025](../01-canon/theorems/THM-4025-lrc14-owner-residue-odd-dilation-semigroup.md)
-  gives the odd-divisibility semigroup, while [THM-4031](../01-canon/theorems/THM-4031-lrc14-endpoint-owner-rational-tail.md)
-  proves that every old-strip ray has an eventual arithmetic-survivor tail;
-  the owner-relaxed THM-4003 gate therefore cannot close ray tails, and has
-  LRC meaning only at physical heights below `91^6`. Orthogonally,
-  [THM-4029](../01-canon/theorems/THM-4029-lrc14-ap-cover-twelve-owner-rational-tail.md) gives the twelve-owner tail (`127/35`); [THM-4038](../01-canon/theorems/THM-4038-ap-deficit-holonomic-sixty-phase-law.md) gives its exact 60-phase holonomic law and sharp `6!C(n,6)` clearing. Fibonacci owners give period 30.
-  [THM-4033](../01-canon/theorems/THM-4033-prime-sector-ap-cover-eventual-owner-tail.md)
-  proves the all-prime tail and onset `(P^2+3)/4`.
-  [THM-4042](../01-canon/theorems/THM-4042-prime-sector-ap-cover-exact-clock-and-holonomic-law.md)
-  gives clocks `(6,60,420,27720)=(L_3,L_5,L_7,L_11)`;
-  `P=17` breaks the extrapolation.
-  [THM-4035](../01-canon/theorems/THM-4035-sixty-clock-separation-and-finite-kakeya-spine.md) makes Fibonacci/triangular clocks addresses, not transfers. The AP route still loses gaps/owners. THM-3858
-  exhausts only the target `Z_3` test. **FINITE-EXACT:**
-  `(9,13;76,132)` is the unique tripling edge through sum `10^6`
-  (independent control `5000`).
+- **Short-relation/decoder lane (PROVED + CITED):** [THM-4009](../01-canon/theorems/THM-4009-euclidean-covering-transference-short-relation-compression.md) gives square norm `<=195`; THM-2052 is terminal at rank twelve.
+  THM-3793/3818/[3825](../01-canon/theorems/THM-3825-prime-colour-valuation-two-cube-decoder.md) recover both scales at `91^6` except one congruence fibre. THM-3878/3910/4002--4004 leave 17 `11+2` types and owner/arrival.
+- **Affine/comb lane (PROVED):** [THM-4024](../01-canon/theorems/THM-4024-lrc14-complete-divisor-incidence-envelope.md) gives profile `(11,9,8,8,7,7,...)`; THM-4030/4032/4041 and THM-4070/4075/4079 close shapes. THM-4087 closes AP9 plus two outliers for `70<=B<C`.
+  [THM-4092](../01-canon/theorems/THM-4092-parity-weighted-antipodal-k-comb-density-compiler.md) gives weights one/two and closes AP8 plus three distinct speeds `>=281` through all dilations. Arbitrary cores and physical entry remain open.
+- **Quantifier/type controls (PROVED):** [THM-4095](../01-canon/theorems/THM-4095-exact-arithmetic-field-transport-gapped-pair-margins-and-order-tournament-blindness.md) gives exact field transport and a primitive-pair optimized-margin gap `(0,1/15)`; [THM-4096](../01-canon/theorems/THM-4096-twisted-padic-affine-lrc-ray-optimizer-and-next-case-obstruction.md) finds a nonnegative twisted affine expansion only at the first THM-2057 `182m` ray point. These are firewalls, not LRC(14).
+- **Owner/tail lane (PROVED):** [THM-4025](../01-canon/theorems/THM-4025-lrc14-owner-residue-odd-dilation-semigroup.md)/[4031](../01-canon/theorems/THM-4031-lrc14-endpoint-owner-rational-tail.md) give the old-strip survivor tail; THM-4029/4038 give the twelve-owner 60-phase law; THM-4033/4042 give the prime-sector tail and clocks through `P=11`, with `P=17` hostile. THM-4035 makes clocks addresses, not transfers. See the [detailed proof map](LRC14-PROOF-MAP.md).
 - **PROVED:** [THM-2928](../01-canon/theorems/THM-2928-critical-seven-comb-grid-tensorization-and-drift-tariff.md)/2941: literal zero/one/two/three-drift sectors are empty; `k=2,3` are finite.
 - **Orthogonal routes.** THM-1017 is HYP-6820; THM-2047/2050 keep phase/exit; THM-731/2048 prune; THM-1290 ends at `55`; HYP-8900 nonuniform.
 - **PROVED micro-staircase:** THM-3316 closes every prime and THM-3317 proves
@@ -267,7 +233,18 @@ THM-2070 refutes the general HYP-8890/8895 bypasses.  Transfer
   THM-2053's disk union has no discriminant `-7` or Heegner classification.
 - Applications require an intrinsic target-preserving relation;
   [THM-4088](../01-canon/theorems/THM-4088-order-tournament-arithmetic-type-blindness-and-lrc-margin-density.md)
-  shows bare order erases magnitudes and arithmetic type.
+  shows bare order erases magnitudes and arithmetic type, while
+  [THM-4095](../01-canon/theorems/THM-4095-exact-arithmetic-field-transport-gapped-pair-margins-and-order-tournament-blindness.md)
+  proves the sharper fixed-observer/optimized-margin split and realizes every
+  reciprocal mass in `(0,1]` on the same transitive prefix tower.
+- [THM-4094](../01-canon/theorems/THM-4094-hamiltonian-matching-deficit-and-two-prime-lane-completeness.md)
+  makes deletion incidence exact:
+  `H(T)-H(T-v)=sum_P(a_v(P)-1)+O_v`. A selected left-perfect matching loses
+  the deficit already on the transitive-triple/`C_3` pair. Using the proved
+  strong carries `49,63,343`, `H`-spectrum completeness is
+  now equivalent to strong realization of the ordinary-prime lane `p!=7` and
+  exceptional lane `7p`, `p!=3`; the first prefix-unforced targets are `613`
+  and `623`, and the conjecture remains **OPEN**.
 - Corrected HYP-8835 isolates a useful game/dynamics coordinate without
   overclaiming: tournament optimal support is uniquely odd (skew singularity
   plus the tournament block modulo two), while a positive kernel vector `Mp=0`
@@ -335,6 +312,13 @@ lift/phase clocks.
 
 ## Other active portfolio
 
+- **Matching logic:**
+  [THM-4090](../01-canon/theorems/THM-4090-two-sort-matching-logic-global-completeness-obstruction.md)
+  proves a satisfiable two-sort theory with a semantic consequence not
+  derivable in the basic definedness-free fixpoint-free Figure-2 calculus,
+  relative only to its cited soundness input. The preprint's one-sort
+  completeness remains **PREPRINT CLAIM / UNDER AUDIT**; no LRC, JC, p-adic,
+  or tournament result follows from the encoding analogy.
 - **Integral observers:** THM-4000 compiles consecutive values; THM-4010 gives kernel `(F^k)`, index `product(j!)^(k^2)`, rank `k min(m+1,p)`, and its first positive exponent.
   THM-4080 gives the full two-jet partition `e*{0,0,1,...,s-1,s+1,...,2s-1}` at one exact scale and every consecutive `p`-primary layer through `n<=p(p-1)`; the `s=p` wall and larger clusters remain **OPEN**.
 - **Even-graph spectrum:** THM-4083 proves `D=3,4`; THM-4084 gives all matching characters and forces any new `D=5` equality/counterexample to have `b=0`, frustration `>=4`. Full `D=5` is **OPEN** beyond exact `n=6,7,8` (MISTAKE-496).
@@ -412,6 +396,7 @@ Reusable bridges (not literal object identifications):
 
 | Mechanism | Proven source | Legitimate transfer question |
 |---|---|---|
+| Quantifier-order firewall | THM-4090/4094/4095 | Does a fixed-fibre theorem survive optimization, witness deletion, or global projection; if not, retain the full incidence/profile before taking support or an extremum. |
 | Whole-layer Frobenius / orbit norm | NC2/TNC | Packet preservation transfers; LRC lacks seed/exit and a `-1` stabilizer needs orientation. |
 | Quotient + sidecar | THM-3731 valuation owners; THM-3729 rooted switching | First test the stabilizer-fixed fibre; then retain the coefficient/root coordinate and re-audit the consumer. |
 | Bulk / boundary / null | THM-2058 | Large-prime grids are strict; tight support uses finitely many level-14 clocks; subthreshold packets vanish. |

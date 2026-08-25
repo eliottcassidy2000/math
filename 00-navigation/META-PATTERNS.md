@@ -121,7 +121,9 @@ seams/action kernel, and require fixed fibres for equivariant choices.
 Čech/torsor claims need composable predicate-preserving seams; normalization
 keeps conductor and branch labels. Injectivity is not congruence.
 **Evidence:** exact-six, THM-3450/3452/3454/3731/3732/3944/3951/3955/3957,
-MISTAKE-310/401/466.
+MISTAKE-310/401/466. Quantifier order is a sidecar: fixed-fibre richness need
+not survive optimization, witness selection, or sort projection; see
+THM-4090/4094/4095.
 
 ## Quotient by the actual repair, then test the native survivor
 

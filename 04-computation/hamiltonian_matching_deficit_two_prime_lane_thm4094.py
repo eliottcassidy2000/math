@@ -343,17 +343,18 @@ def main():
             copies += 1
             h_value *= 3
         require(h_value >= threshold, "compactness finite witness")
+        vertices = 1 if copies == 0 else 3 * copies
         row = {
             "threshold": threshold,
             "copies": copies,
-            "vertices": 3 * copies,
+            "vertices": vertices,
             "H": h_value,
         }
         compactness_rows.append(row)
         print(
             "threshold=", threshold,
             "copies=", copies,
-            "vertices=", 3 * copies,
+            "vertices=", vertices,
             "H=", h_value,
         )
     ledger["compactness_rows"] = compactness_rows

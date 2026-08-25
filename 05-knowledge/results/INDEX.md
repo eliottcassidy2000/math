@@ -1,5 +1,58 @@
 # Script Results Index
 
+- `lrc_twisted_padic_affine_margin_optimizer_thm4096.py` and independent
+  audit -> matching `.out`s [THM-4096 PROVED + VERIFIED-EXACT +
+  INDEPENDENTLY VERIFIED-EXACT; LRC(14) OPEN]. On
+  `V_m={1,...,12,182m}`, the normalized THM-2057 margin has an exact rational
+  affine expansion in the correctly typed values
+  `L_p(-1,omega_p^2)=(p-1)/12`. Only `m=1` lies on the positive side and has a
+  nonnegative optimizer; every `m>=2` lies below `zeta(-1)`, with two exact
+  Dedekind observers bracketing the carrier. This is not a common p-adic sum
+  or an `f_14` identification. Primary script/output SHA-256:
+  `277a9dca809654f0af575ca1812a6983e6163a29dea79717ce60601014afffbd` /
+  `41d9d95a654b13c04e623e15e1ea278d69cdb5ae2252ead67b13a59073157318`;
+  independent:
+  `392ad6f67d3be5edd4c43d9366c775cd2ac9a2111c2da494706f11455e8dddef` /
+  `da5cb1670357369dbbdb6a366448e634fcbce09452c76eb70484d6b9bbe884bf`.
+
+- `lrc_margin_arithmetic_type_tournament_blindness_thm4095.py` -> matching
+  `.out` [THM-4095 PROVED + FINITE-EXACT + VERIFIED-EXACT + INDEPENDENTLY
+  AUDITED; LRC(14) OPEN]. Every fixed finite observer preserves
+  `Q(F_S(t)-beta)=Q(t)`, and every strict witness rationalizes on an explicit
+  grid. Primitive two-speed optimized `1/3`-margins are instead the gapped set
+  `{1/6} union {1/6-1/(2q): q odd, q>=3}`. The same transitive order tower
+  realizes every reciprocal mass in `(0,1]`, proving that bare order data see
+  neither distinction. Script/output SHA-256:
+  `15ff1d8e382de6f9183f148619e20a32e163a10f4bed71a306e950f6aa62f591` /
+  `35e8b49afb170ee032feb0166c2c87325579f39273a4410068100928010c4ae3`.
+
+- `hamiltonian_matching_deficit_two_prime_lane_thm4094.py` -> matching `.out`
+  [THM-4094 PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED; global
+  H-spectrum conjecture OPEN]. Full deletion incidence gives the exact
+  Hamiltonian-path deficit; selecting one extension per old path loses it
+  minimally at the transitive-triple/C3
+  boundary. Given the proved omissions, multiplicativity, and strong carry
+  atoms `49,63,343`, global completeness is equivalent to strong realization
+  of the prime and seven-prime lanes. The exact audit also isolates `613` and
+  `623` as the first current unforced prime targets and records the finitary
+  compactness obstruction. Script/output SHA-256:
+  `5b6c779958ad1de276873eabd3585f432bb593e32811fb138dc5d3c19948d616` /
+  `5f174f77a873a02bd92bbebe4a5d70b3c329abc8152fb1330d4fe1dc6d98df34`.
+
+- `lrc_parity_weighted_antipodal_kcomb_thm4092.py` and independent audit ->
+  matching `.out`s [THM-4092 PROVED + PROVED RELATIVE TO THM-2061/2066/2072
+  + VERIFIED-EXACT + INDEPENDENTLY VERIFIED-EXACT; LRC(14) OPEN]. Even and
+  odd antipodal danger combs have exact weights one and two. The weighted
+  interval compiler supplies AP5--AP8 families with three through six
+  outliers; AP8 plus any three distinct speeds at least `281` closes every
+  dyadic two-odd-tail seam through all common dilations. Primary script/output
+  SHA-256:
+  `cc9f1e1d210cb9cb0f8da356d1f391cbf5d196548d7c8dfa9f341f61913757cf` /
+  `fd01f330831e7df484583323bc1e44bf7ed5cfd1059c59726ca801a03d1f68e5`;
+  independent:
+  `8aab44a830b07b614f8460be07df70b2659a3b6874a75fa920b3e12d666dc7d7` /
+  `2880e844bf7e19ce785f83511f457bb40cc6f05ae250f98981e29c705eed1dd8`.
+
 - `hybrid_padic_zeta_margin_frontier_thm4089.py` -> matching `.out`
   [THM-4089 PROVED ELEMENTARY FORMULA OPTIMIZATION + VERIFIED-EXACT +
   INDEPENDENTLY CALCULUS/NUMERIC-AUDITED; external 22-value irrationality
