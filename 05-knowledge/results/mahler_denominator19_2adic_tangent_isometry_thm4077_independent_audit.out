@@ -1,0 +1,7 @@
+THM-4077 independent Hensel/native audit
+s_range=0..6 target_heights=1..64 hensel_candidate_gates=2646
+safe_logarithm_identity_gates=448
+direct_launch_replays=36 ordinary_orbit_steps=240804
+s0_parameter_bits_lsb_first={"all_1":"1111111011011011010110010111001011010010101110011010000000001111","periodic_100":"1010100100000000011010001100100001100110011100011100101000101100","state_1":"1001100000110001011111101010100011100110110110001010000100000011"}
+semantic_sha256=d42d49b84279b630747e488c8b2bf8a255131d2c16477bff7e162de454436b80
+PASS: unique 64-bit lifts, tangent identity, and direct moving-time launches

@@ -1,0 +1,7 @@
+THM-4077 primary inverse-limit audit
+s_range=0..6 heights=1..12 finite_permutation_layers=84
+permutation_parity_gates=57330 one_bit_lift_gates=28658
+odd_carry_cylinder_gates_through_h10=7161
+h12_target_representatives=[{"L":18,"U_mod_4096":2761,"k":3,"s":0,"targets_h12":{"all_1":2943,"periodic_100":149,"state_1":3097}},{"L":36,"U_mod_4096":679,"k":4,"s":1,"targets_h12":{"all_1":169,"periodic_100":2555,"state_1":775}},{"L":72,"U_mod_4096":637,"k":5,"s":2,"targets_h12":{"all_1":3275,"periodic_100":209,"state_1":1941}},{"L":144,"U_mod_4096":2471,"k":6,"s":3,"targets_h12":{"all_1":2281,"periodic_100":2411,"state_1":2519}},{"L":288,"U_mod_4096":3605,"k":7,"s":4,"targets_h12":{"all_1":1859,"periodic_100":793,"state_1":573}},{"L":576,"U_mod_4096":255,"k":8,"s":5,"targets_h12":{"all_1":257,"periodic_100":1779,"state_1":2559}},{"L":1152,"U_mod_4096":2941,"k":9,"s":6,"targets_h12":{"all_1":1067,"periodic_100":1233,"state_1":469}}]
+semantic_sha256=07d2a4211e1cf4e47f4602bf3dbaa4a3f83f852bbe3c2891148bb0a0ec7faaef
+PASS: compatible permutations, one-bit isometry, and full odd carry cylinders
