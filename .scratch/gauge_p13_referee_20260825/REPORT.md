@@ -21,6 +21,12 @@ python -B .scratch/gauge_p13_referee_20260825/independent_audit.py
 python -B -O .scratch/gauge_p13_referee_20260825/independent_audit.py
 ```
 
+> **Post-audit integration note (2026-08-25):** THM-4088 and THM-4093 were
+> subsequently promoted after the required repairs. Section 6 records the
+> namespace state at audit time. The diagonal/principal Kubota--Leopoldt
+> branch warning remains current; THM-4093 deliberately excludes that shell
+> statement.
+
 The transcripts are byte-identical.  Script SHA-256 is
 `a5b0861f1056d880dc8b7af341cf3b4493a8370ed67eb6b628c9cf6e73b9ba6e`;
 the UTF-8 transcript SHA-256 under the PowerShell `Out-String` replay is

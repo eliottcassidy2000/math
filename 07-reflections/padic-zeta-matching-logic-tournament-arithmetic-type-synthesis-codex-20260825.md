@@ -1,7 +1,7 @@
 ---
 source: codex-padic-zeta-tournament-20260825
 status: >
-  RESEARCH SYNTHESIS. THM-4088--4090 are proved at their stated scopes; the
+  RESEARCH SYNTHESIS. THM-4088--4091 and THM-4093 are proved at their stated scopes; the
   external 22-value p-adic-zeta theorem and arXiv:2608.13306v1 remain
   AUTHOR-CLAIMED / UNREFEREED. LRC(14), JC(2), the Sun-hole classification,
   and the named tournament inequalities remain OPEN.
@@ -21,18 +21,26 @@ Their only lawful common theme is **controlled forgetting**: an observable may
 retain enough information for one local decision while deleting the global
 coordinate needed by the target theorem.
 
-This session produced three scoped advances:
+The combined concurrent session produced five scoped advances:
 
 1. [THM-4088](../01-canon/theorems/THM-4088-order-tournament-arithmetic-type-blindness-and-lrc-margin-density.md)
    proves that tie-free order and approximation-quality tournaments are blind
    to rational, algebraic-irrational, and transcendental type.
 2. [THM-4089](../01-canon/theorems/THM-4089-hybrid-padic-zeta-margin-optimization-and-next-case-obstruction.md)
    globally optimizes the external displayed margin, verifies its 22 formula
-   signs, and proves four immediate next cases impossible by parameter
-   retuning alone.
+   signs, proves four immediate next cases impossible by parameter retuning,
+   and separately proves an all-radius `p=13,s=3` one-power no-go.
 3. [THM-4090](../01-canon/theorems/THM-4090-two-sort-matching-logic-global-completeness-obstruction.md)
    sharpens the matching-logic preprint's three-sort counterexample to two
    sorts by an independently audited finite argument.
+4. [THM-4091](../01-canon/theorems/THM-4091-integral-coordinate-change-lcm-depth-boundary.md)
+   proves that cumulative LCM clearing survives every integral formal
+   coordinate change, while literal coefficient depth `e>=2` already fails
+   at output degree three.
+5. [THM-4093](../01-canon/theorems/THM-4093-rational-edge-diagonal-gauge-and-padic-tournament-zeta-tangent.md)
+   identifies the exact diagonal gauge preserved by determinant/Bowen--Lanford
+   zeta and the directed-triangle divisibility boundary of its first p-adic
+   tangent.
 
 No headline conjecture is claimed solved.
 
@@ -137,6 +145,12 @@ global optima for
 Thus `(4)` is a mechanism-level stopping result: more precision or a finer
 grid cannot extend any of the four rows by one odd weight. The cost theorem
 itself must improve.
+
+The orthogonal source-level extrapolation fails too. The first-chamber
+stationary point crosses `xi=1` at `p=11`; a complete chamber calculation at
+`p=13,s=3` gives idealized `tau>=613/288` and margin `<-37/72` for every
+continuation radius, with actual formal margin `<-67/56`. This does not decide
+the arithmetic type of `zeta_13(3)`; it rejects one displayed architecture.
 
 The cheapest serious audit is an explicit `(p,s)=(5,5)` worked case with a
 named frame, torsor chart, divisor and exceptional primes, source bases, one

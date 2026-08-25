@@ -145,6 +145,27 @@ and proves negative global maxima for the four immediate next cases:
 Thus extending `(1)` one odd weight in any row requires a stronger cost or
 energy theorem, not finer search for `xi,Y`.
 
+The same theorem also identifies a distinct source-level wall. In the first
+active arithmetic chamber the stationary point satisfies
+
+```text
+xi*-1=(s-1)(11-p)/(12s^2+(s-1)(p+1)),                   (6)
+```
+
+so it is interior exactly for `p<11`. A complete five-chamber calculation at
+`p=13,s=3` then proves that even the idealized bound `J_13(xi)<=xi` has
+`tau>=613/288`; since `log(13)<8/3` and the remaining analytic terms are
+nonpositive, every continuation radius satisfies
+
+```text
+M_(13,3)<-37/72.                                        (7)
+```
+
+For the actual formal integrand, `J_13(xi)=3/7` on `xi>1`,
+`inf tau=515/224`, and the bound sharpens to `M_(13,3)<-67/56`. This is a
+no-go for the displayed one-power architecture, not evidence that
+`zeta_13(3)` is rational or that another method cannot reach it.
+
 ## Lawful repo interfaces and firewalls
 
 | source object | repo target/map | preserved | destroyed / needed sidecar |

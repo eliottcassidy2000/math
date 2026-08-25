@@ -235,7 +235,7 @@ THM-2070 refutes the general HYP-8890/8895 bypasses.  Transfer
   THM-2053's disk union has no discriminant `-7` or Heegner classification.
 - [THM-4088](../01-canon/theorems/THM-4088-order-tournament-arithmetic-type-blindness-and-lrc-margin-density.md)/[4095](../01-canon/theorems/THM-4095-exact-arithmetic-field-transport-gapped-pair-margins-and-order-tournament-blindness.md):
   bare order loses magnitude/type; fixed-observer and optimized margins split
-  even on one transitive prefix tower.
+  even on one transitive tower. THM-4093's gauge/tangent needs surviving cycles.
 - [THM-4094](../01-canon/theorems/THM-4094-hamiltonian-matching-deficit-and-two-prime-lane-completeness.md)
   reduces completeness, via exact deletion incidence and carries `49,63,343`,
   to lanes `p` (`p!=7`) and `7p` (`p!=3`).

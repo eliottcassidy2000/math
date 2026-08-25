@@ -27,7 +27,7 @@ The positive scope is: one sort; arbitrary finitary signature, possibly
 infinite; nullary symbols allowed; set-valued symbol interpretations; element
 variables denote singletons; no definedness, fixpoints, or free set variables;
 closed `Gamma,phi`; arbitrary possibly infinite `Gamma`; the displayed
-Figure-2 Hilbert system.
+standard Hilbert system.
 
 Let `E={(sigma,i)}` be the coordinate set, `[p]` the box associated to a word
 `p in E*`, and
@@ -78,7 +78,8 @@ conditional on these inputs; this is not a specialist or formal audit.
   proof relations. The aconjunctive, unary-only, and applicative-minimal
   boundaries remain open.
 - Proposition 30 gives a satisfiable three-sort `Gamma models phi` with
-  `Gamma` not deriving `phi`, refuting global completeness of Figure 2, not
+  `Gamma` not deriving `phi`, refuting global completeness of that displayed
+  calculus, not
   axiomatizability of semantic consequence.
 - Theorem 33 says every well-founded calculus built from hypotheses/valid
   leaves and localization-respecting rules can derive only localized

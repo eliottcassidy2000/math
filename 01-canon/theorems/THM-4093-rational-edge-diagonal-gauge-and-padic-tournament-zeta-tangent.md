@@ -10,6 +10,12 @@ status: >
   outputs, but raw vertex labels and transitive tournaments remain
   arithmetic-type blind. This is not a p-adic L-value irrationality theorem.
 source: codex-padic-zeta-tournament-20260825
+audit: >
+  PASS WITH SCOPE REPAIRS INCORPORATED. The primary companion checks exact
+  similarities and every labelled tournament through order six. The
+  independent standard-library verifier checks 6,148 determinant, 7,680
+  power/trace, and 102,700 valuation gates, including zero-weight and
+  p=2,c3=2 strict-depth hostiles. Normal and optimized outputs agree.
 depends_on:
   - THM-4057-stern-brocot-depth-pullback-and-rational-edge-tournament-gauge
 related:

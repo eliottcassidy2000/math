@@ -1,10 +1,10 @@
 # P-adic holonomy, matching-logic sort flow, and coordinate-depth frontiers
 
-**Session date:** 2026-08-25  
+**Session date:** 2026-08-25
 **Status:** external p-adic theorem `PREPRINT CLAIM / UNDER SPECIALIST AUDIT`;
 external interval replay `FINITE-EXACT`; matching-logic source `CITED / ARXIV
-V1`; THM-4089, THM-4090, and THM-4091 `PROVED` in their exact scopes. None of
-these statuses proves a new p-adic irrationality statement in repository canon.
+V1`; THM-4088--4091 and THM-4093 `PROVED` in their exact scopes. None of these
+statuses proves a new p-adic irrationality statement in repository canon.
 
 ## 1. Outcome first
 
@@ -37,6 +37,11 @@ The two supplied links are independent.
    while the hypothesis's output sort cannot feed the conclusion sort in the
    calculus. This is THM-4090, independently refereed against every primitive
    rule.
+6. A bare order tournament cannot detect rational/algebraic/transcendental
+   type (THM-4088). The lawful rational-edge survivor is narrower: unit
+   endpoint ratios give diagonal similarity, and a tournament's first p-adic
+   determinant-zeta tangent is controlled exactly by triangle-count
+   divisibility (THM-4093).
 
 ## 2. Inheritance pass and live concept board
 
@@ -189,7 +194,8 @@ xi*-1=(s-1)(11-p)/(12s^2+(s-1)(p+1))                    (4)
 
 makes the boundary structural: `xi*>1` exactly when `p<11`; `p=11` is the
 wall; for `p>11` the stationary point is outside the admissible interval.
-For prime levels, the interior list is exactly `2,3,5,7`.
+Among primes, the interior list is exactly `2,3,5,7`. This is an optimizer
+boundary, not a genus-zero classification; `X_0(13)` is also genus zero.
 
 For the next named frontier `p=13,s=3`, make the arithmetic artificially more
 favorable by replacing `J_13(xi)` with its absolute upper bound `xi`. This is
@@ -262,7 +268,8 @@ better estimate for the same one-power Hasse codimension cannot prove
 determinant-level saving, enlarge the analytic continuation width, or change
 the template/energy functional.
 
-The observed next-cell sign changes in a numerical scout were
+Independent exact derivative brackets and concave tangent bounds prove the
+global next-cell sign changes
 
 ```text
 p=2:  s=29 positive, s=31 negative;
@@ -271,8 +278,9 @@ p=5:  s=5  positive, s=7  negative;
 p=7:  s=3  positive, s=5  negative.
 ```
 
-These scout signs explain why the shipped list ends where it does, but only
-the 22 shipped positive cells and the exact no-go (8) are promoted here.
+These four negative maxima and the 22 shipped positive cells are now promoted
+in THM-4089. They prove a one-step stopping boundary, not a classification of
+all higher odd weights.
 
 ## 5. THM-4091: the exact coordinate-change depth boundary
 
@@ -367,14 +375,14 @@ The matching-logic non-edge `a !-> b` and the p-adic refusal to scalarize
 weighted rows are two independent examples of that method. Similar syntax is
 not the connection; consumer-faithful transport is.
 
-Two concurrent tournament lanes arrived as THM-4088 and THM-4093 namespace
-reservations. They remain `RESERVED / UNPROVED EMPTY STUBS`, so no statement
-from either is used here. The current objects supply only sparse directed
-dependency/transport graphs, not intrinsic complete pairwise observables;
-forcing them into tournaments would invent orientations on ties and missing
-edges. If a future diagonal-similarity or arithmetic-type-blindness theorem is
-promoted there, it must first declare the pairwise observable, gauge, preserved
-irrationality or margin predicate, and lost valuation/weight sidecar.
+The two concurrent tournament lanes are now promoted with those declarations.
+THM-4088 proves that order and p-adic-quality rankings collapse to transitive
+tournaments and lose arithmetic type. THM-4093 proves that unit vertex-ratio
+weights are literal diagonal similarity for determinant/Bowen--Lanford zeta;
+for a tournament its first p-adic tangent has depth `3v_p(x)` exactly when `p`
+does not divide the directed-triangle count. This graph zeta is not the
+Kubota--Leopoldt function. Dependency and transport graphs remain sparse, so
+forcing their missing pairs into a tournament would still invent data.
 
 ## 8. Updated frontier priorities
 
@@ -396,16 +404,25 @@ irrationality or margin predicate, and lost valuation/weight sidecar.
    transferring the 60-phase AP law, Apéry denominators, or Duffin--Schaeffer
    clocks through a nonlinear coordinate. Preserve decay/nonvanishing as
    separate proof obligations.
+6. **Decorated tournament tangent:** THM-4093 makes `p|c_3` the exact first
+   cancellation wall. Any stronger arithmetic observer should retain the
+   next nonzero determinant coefficient, its p-adic unit, and vertex-height
+   data; the orientation or triangle count alone remains type-blind by
+   THM-4088.
 
 ## 9. Reproduction
 
 ```bash
+python -B 04-computation/hybrid_padic_zeta_margin_frontier_thm4089.py
+python -B -O 04-computation/hybrid_padic_zeta_margin_frontier_thm4089.py
 python -B 04-computation/hybrid_padic_margin_boundary_thm4089.py
 python -B -O 04-computation/hybrid_padic_margin_boundary_thm4089.py
 python -B 04-computation/matching_logic_two_sort_obstruction_thm4090.py
 python -B -O 04-computation/matching_logic_two_sort_obstruction_thm4090.py
 python -B 04-computation/integral_coordinate_change_depth_thm4091.py
 python -B -O 04-computation/integral_coordinate_change_depth_thm4091.py
+python -B .scratch/gauge_p13_referee_20260825/independent_audit.py
+python -B -O .scratch/gauge_p13_referee_20260825/independent_audit.py
 ```
 
 The external certificate must be replayed from its pinned source commit; its

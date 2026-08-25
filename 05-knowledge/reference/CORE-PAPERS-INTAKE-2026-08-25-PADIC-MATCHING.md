@@ -18,8 +18,9 @@ narrower statuses.
   replays all 22 stated terminal margins exactly; its smallest lower endpoint
   is positive in the `(p,s)=(5,5)` cell. This is **FINITE-EXACT** for the
   implemented formulas only. THM-4089 proves an independent elementary
-  optimizer boundary and a next-case no-go; THM-4091 proves the separate
-  coordinate-change denominator boundary.
+  optimizer, four next-weight global no-go results, and the separate
+  `p=13,s=3` all-radius no-go; THM-4091 proves the coordinate-change
+  denominator boundary.
 - **Does not prove in this repository:** any of the 22 irrationality claims
   until the global BGG/descent, Hasse-source, product-digit Cartier,
   fixed-bundle CDT, continuation-radius, and Bost-filtration interfaces receive
@@ -50,8 +51,11 @@ narrower statuses.
 
 ## Consumers and reproduction
 
-- THM-4089: exact optimizer wall and formal `p=13,s=3` one-power margin no-go.
+- THM-4089: exact optimizer, four next-weight failures, `p=11` chamber wall,
+  and formal `p=13,s=3` one-power margin no-go.
 - THM-4090: exact two-sort global-completeness obstruction.
 - THM-4091: exact LCM/coefficientwise-depth coordinate-change boundary.
+- THM-4093: determinant/Bowen--Lanford diagonal gauge and exact p-adic
+  tournament-zeta tangent boundary; unrelated to Kubota--Leopoldt zeta.
 - Full audit reflection:
   [`padic-holonomy-matching-logic-and-coordinate-depth-frontiers-codex-20260825.md`](../../07-reflections/padic-holonomy-matching-logic-and-coordinate-depth-frontiers-codex-20260825.md).

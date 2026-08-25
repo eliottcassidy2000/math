@@ -239,6 +239,53 @@
   `90232af6c30b71ae7a4ae2a3f777effb32d6706c5a1413b948478b910c3a139e` /
   `393893b53c76580a8b891f61f22dc94e50ac2c3496cfd32e562b7b75ad6d4932`.
 
+- `hybrid_padic_margin_boundary_thm4089.py` -> matching `.out` [THM-4089
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY AUDITED; external irrationality
+  theorem PREPRINT CLAIM / UNDER SPECIALIST AUDIT]. The first active cutoff
+  stationary point is interior exactly for `p<11`. At `p=13,s=3`, the
+  idealized one-power arithmetic cost has minimum `613/288` and every
+  continuation-radius margin is `<-37/72`; the actual formal cost has
+  infimum `515/224` and margin `<-67/56`. The companion checks 1,064 general
+  identities, all five chambers, and both all-radius obstructions. Hashes:
+  `28baa8f3e529c728a1ac4580c51a16b5bb20a07139ef215b22659be0f37e6a35` /
+  `cd7cce306e7b551f680e0fc107212d5b1b440f2408fcc1de0a660b899ae2f60d`.
+
+- `matching_logic_two_sort_obstruction_thm4090.py` -> matching `.out`
+  [THM-4090 PROVED + FINITE-EXACT + INDEPENDENTLY RULE-BY-RULE AUDITED,
+  relative to the cited sound calculus]. Two sorts and one unary `f:b->a`
+  already give a satisfiable semantic consequence that the hypothesis sort
+  cannot feed in a derivation; the companion exhausts 5,050 unary models and
+  hostile controls. One-sort sharpness imports Chen--Rosu's cited theorem.
+  Hashes: `5fcd07f7c5f5b14c2efff335dce4c9aa12a7861f7a5aa637a391d816a599e017` /
+  `c77fec8436ec08966d791ed00738f24c1b29ac87c4b1f09312794c6ed0e8932a`.
+
+- `integral_coordinate_change_depth_thm4091.py` -> matching `.out` [THM-4091
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY AUDITED]. Every integral formal
+  coordinate change preserves cumulative `LCM^e` clearing and literal
+  coefficient depth one. For every `e>=2`, literal depth first fails at
+  `(n,k)=(3,2)` via `R=q^2/2^e,h=f+f^2`; the scaled composition-matrix
+  integrality condition is exact. Hashes:
+  `c0125199819821e051f07c2e1418e6f1f09628acd22b1146b7e90806d4726a4c` /
+  `a86fae7a2586cf41f34bba7a3a22ffa9d8193ab0f4bb43243ffc217d03fcf006`.
+
+- `bernoulli_42_and_padic_pole_correction_20260825.py` -> matching `.out`
+  [FINITE-EXACT SUPPORT FOR MISTAKE-499]. The Hamilton algebra's reduced
+  finite discriminant is not `42`; negative `v_7(zeta_7(-5))` is not a pole;
+  and denominator `42` recurs first at `B_114`. The exact even-index scan
+  through 1,000 finds 15 occurrences. Hashes:
+  `adddccefb0f18c186c5ba227c447106f03c762cf4a8b40c5930db65e4e16a8c1` /
+  `1eec4557b1cdd97f8db6a3ef6e5afeb169e8901ff38c3d96895fb6df37f71cea`.
+
+- `.scratch/gauge_p13_referee_20260825/independent_audit.py` -> accompanying
+  `REPORT.md` [THM-4093 PROVED + VERIFIED-EXACT + INDEPENDENTLY
+  HOSTILE-AUDITED]. Unit vertex-ratio weights give literal diagonal
+  similarity and preserve determinant graph zeta. For nonzero `x in pQ_p`,
+  the tournament-zeta tangent has valuation at least `3v_p(x)`, with equality
+  iff `p` does not divide the directed-triangle count. The audit executes
+  6,148 determinant, 7,680 power/trace, and 102,700 valuation gates and
+  includes both zero-weight and divisible-triangle hostiles. Script SHA-256:
+  `a5b0861f1056d880dc8b7af341cf3b4493a8370ed67eb6b628c9cf6e73b9ba6e`.
+
 - `order_tournament_arithmetic_type_thm4088.py` -> matching `.out`
   [THM-4088 PROVED ELEMENTARY OBSERVER/LIOUVILLE-CONSTANT/P-ADIC SHELL
   THEOREMS + VERIFIED-EXACT + INDEPENDENTLY OBSERVER/TYPING-AUDITED]. After

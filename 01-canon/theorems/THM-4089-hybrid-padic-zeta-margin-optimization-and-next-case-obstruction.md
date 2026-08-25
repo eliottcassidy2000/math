@@ -3,7 +3,8 @@ id: THM-4089
 title: "Hybrid p-adic zeta margin optimization and next-case obstruction"
 status: >
   PROVED ELEMENTARY OPTIMIZATION OF THE DISPLAYED EXTERNAL MARGIN +
-  VERIFIED-EXACT + INDEPENDENTLY CALCULUS/NUMERIC-AUDITED. The cutoff cost is globally convex and has an explicit
+  VERIFIED-EXACT + INDEPENDENTLY CALCULUS/NUMERIC-AUDITED. The cutoff cost is
+  globally convex and has an explicit
   unique minimizer; the analytic-radius contribution is globally strictly
   concave and has a unique critical maximizer. The 22 displayed witnesses
   have positive formula margins, while exact derivative brackets and tangent
@@ -15,6 +16,16 @@ status: >
   22 p-adic-zeta irrationality theorem remains AUTHOR-CLAIMED / UNREFEREED; its
   new geometric and adelic bridges are not certified here.
 source: codex-padic-zeta-tournament-20260825
+audit: >
+  PASS. The frontier certificate uses exact derivative brackets and rigorous
+  tangent bounds for the four next-weight cells, with a separate 100-digit
+  implementation checking the optima. The boundary certificate checks 1,064
+  general stationary-point identities, all five p=13 arithmetic chambers,
+  the exact exponential bound, and both all-Y obstructions. The p=13 algebra,
+  endpoints, quantifiers, p=11 boundary, ideal/actual costs, and collision
+  optimizer were also independently checked line by line. Both scripts have
+  byte-identical normal/optimized output, no assert statements, and no
+  floating literals.
 depends_on: []
 related:
   - THM-4056-divisor-phase-compiler-and-duffin-schaeffer-lcm-clock
@@ -35,7 +46,7 @@ boundary_script: 04-computation/hybrid_padic_margin_boundary_thm4089.py
 boundary_output: 05-knowledge/results/hybrid_padic_margin_boundary_thm4089.out
 boundary_script_sha256: 28baa8f3e529c728a1ac4580c51a16b5bb20a07139ef215b22659be0f37e6a35
 boundary_output_sha256: cd7cce306e7b551f680e0fc107212d5b1b440f2408fcc1de0a660b899ae2f60d
-hash_basis: raw bytes
+hash_basis: raw LF bytes
 external_source: https://github.com/octonion/p-adic-zeta-irrationality/commit/b46a1770901551961710e155d775aae7c5ea39e7
 ---
 
