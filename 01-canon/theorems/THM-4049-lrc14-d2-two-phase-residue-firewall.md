@@ -26,6 +26,7 @@ related:
   - THM-4041-lrc14-d2-affine-defect-edge-boundary
   - THM-4004-lrc14-three-detuned-divisor-comb-profile
   - THM-4024-lrc14-complete-divisor-incidence-envelope
+  - THM-4117-physical-eleven-plus-two-primitive-support-obstruction
 script: 04-computation/lrc14_d2_two_phase_all_height_probe_20260824.py
 output: 05-knowledge/results/lrc14_d2_two_phase_all_height_probe_20260824.out
 script_sha256: c24612429463a4d0caf88ccaf5d301a186b0d2346bd284141920aeb52e0699dd

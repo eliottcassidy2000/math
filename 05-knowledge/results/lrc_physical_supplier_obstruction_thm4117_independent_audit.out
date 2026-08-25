@@ -1,0 +1,8 @@
+status=PASS
+implementation=clean-room exhaustive tail/scale recognizer plus integer-residue phase audit
+row_gcd=1;row_sum=140737488355454;box_bound=322475487413604782665681
+AP7_witnesses=0;tail_scale_attempts=1;forced_tails=(1, 15);forced_q=1;missing=(1,)
+AP8=False;missing=(2, 3, 5, 7);D0=False;missing=(3, 5)
+physical_clearance=2/19;antipodal_clearance=1/38;firewall_numerators_over_112=(4, 4, 2, 2)
+positive_controls=PASS;sizes=(13, 13, 13)
+semantic_sha256=73563bafba2bc5e8dd870aee18e32047a053eed8a9bce84ad33e7aaecceb0f88

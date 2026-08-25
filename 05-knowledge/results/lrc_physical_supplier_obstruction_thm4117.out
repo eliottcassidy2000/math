@@ -1,0 +1,18 @@
+status=PASS
+row=(1, 4, 6, 8, 10, 12, 14, 15, 16, 18, 22, 35184372088832, 105553116266496)
+row_gcd=1; row_size=13; row_sum=140737488355454; bound=322475487413604782665681
+typed_source=s=1;t=35184372088832;p,q=(1, 3);U=22;t_ge_U=True
+odd_forced_tails=(1, 15)
+even_block=(4, 6, 8, 10, 12, 14, 16, 18, 22, 35184372088832, 105553116266496); even_block_gcd=2
+forced_q=1; forced_core=(2, 3, 4, 5, 6, 7, 8, 9, 11, 17592186044416, 52776558133248)
+forced_core_mod56=(2, 3, 4, 5, 6, 7, 8, 9, 11, 32, 40)
+AP7_seam=False; missing_AP7=(1,)
+AP8_plus_5=False; missing_AP8=(2, 3, 5, 7)
+D0_plus_6=False; missing_D0=(3, 5)
+phase=9/19; physical_clearance=2/19; threshold=1/14
+same_phase_antipodal_clearance=1/38
+firewall_clearances=(Fraction(1, 28), Fraction(1, 28), Fraction(1, 56), Fraction(1, 56))
+dilation_controls=(1,2,3,7,42,101); primitive_normalization_and_phase_pullback=PASS
+positive_AP7_control=(2, 4, 6, 8, 10, 12, 14, 103, 105, 170, 172, 182, 202); recognized=True
+positive_AP8_control=(1, 2, 3, 4, 5, 6, 7, 8, 94, 188, 376, 752, 1504); recognized=True
+positive_D0_control=(3, 4, 5, 6, 8, 10, 12, 16, 32, 64, 128, 256, 512); recognized=True

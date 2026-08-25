@@ -1,5 +1,18 @@
 # Script Results Index
 
+- `lrc_physical_supplier_obstruction_thm4117.py` and independent exhaustive
+  recognizer -> concordant `.out`s [THM-4117 PROVED RELATIVE TO THM-4049 +
+  VERIFIED-EXACT + INDEPENDENTLY AUDITED; LRC(14) OPEN]. The canonical
+  physical rank-eleven `11+2` row from THM-4049/MISTAKE-490 enters none of
+  THM-4112's AP7+4 seam, AP8+5, or D0+6 suppliers under any common dilation
+  or primitive normalization. Its forced AP7 quotient misses unit `1`, while
+  `theta=9/19` gives physical clearance `2/19`; this is a method hostile, not
+  an LRC counterexample. Primary script/output SHA-256:
+  `c867edb1da4c0bea71f351722c32790774a3319c513d80102a02beaaea00ce3e` /
+  `56051358a6aa60142934c37fe8216ce81e4b42f6cfc190221c9cb347b3472649`;
+  independent: `da067a3f6145f889ca46ae06e2b9a1a71c71d7c5db3c659dacf25b01522cca71` /
+  `09979db4cd0c806899580f3b3900c193dbd982f2110328a314140350a0259637`.
+
 - `tournament_gap_polynomial_ocf_curvature_candidate.py` and independent
   clean-room audit -> concordant `.out`s [THM-4114 PROVED + VERIFIED-EXACT +
   INDEPENDENTLY AUDITED; global H-spectrum conjecture OPEN]. OCF normalization
