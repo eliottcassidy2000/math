@@ -62,8 +62,11 @@ is the safe control `M(S_13)=99/338`. No cited result proves LRC(14).
   arbitrary parity to `93`. THM-4098 adds dilated weight-seven rows; THM-4109
   gives AP7 odd-pair floors `197/232/268` at gaps `4/8/12`, with only `4,8`
   beating `264` here. Arbitrary cores and physical entry remain open.
-- **Type/firewalls (PROVED):** [THM-4095](../01-canon/theorems/THM-4095-exact-arithmetic-field-transport-gapped-pair-margins-and-order-tournament-blindness.md) gives field transport and gap `(0,1/15)`; [THM-4096](../01-canon/theorems/THM-4096-twisted-padic-affine-lrc-ray-optimizer-and-next-case-obstruction.md) isolates one ray point.
-  [THM-4110](../01-canon/theorems/THM-4110-sparse-reciprocal-phase-graph-saturation-and-ap13-torsion-tariff.md) finds `64` AP13 sheets; THM-4105--4108 are firewalls; common arrival is open.
+- **Quantifier/type controls (PROVED):** [THM-4095](../01-canon/theorems/THM-4095-exact-arithmetic-field-transport-gapped-pair-margins-and-order-tournament-blindness.md)
+  gives field transport and gap `(0,1/15)`; THM-4096 isolates one ray point.
+  THM-4105/4106 are reciprocal decoders; THM-4107/4108 are tournament/radical
+  firewalls. [THM-4110](../01-canon/theorems/THM-4110-sparse-reciprocal-phase-graph-saturation-and-ap13-torsion-tariff.md)
+  finds `64` AP13 sheets. Common arrival remains open.
 - **Owner/tail lane (PROVED):** [THM-4025](../01-canon/theorems/THM-4025-lrc14-owner-residue-odd-dilation-semigroup.md)/[4031](../01-canon/theorems/THM-4031-lrc14-endpoint-owner-rational-tail.md) give the old-strip survivor tail; THM-4029/4038 give the twelve-owner 60-phase law; THM-4033/4042 give the prime-sector tail and clocks through `P=11`, with `P=17` hostile. THM-4035 makes clocks addresses, not transfers. See the [detailed proof map](LRC14-PROOF-MAP.md).
 - **PROVED:** [THM-2928](../01-canon/theorems/THM-2928-critical-seven-comb-grid-tensorization-and-drift-tariff.md)/2941: literal zero/one/two/three-drift sectors are empty; `k=2,3` are finite.
 - **Orthogonal routes.** THM-1017 is HYP-6820; THM-2047/2050 keep phase/exit; THM-731/2048 prune; THM-1290 ends at `55`; HYP-8900 nonuniform.
@@ -224,32 +227,22 @@ THM-2070 refutes the general HYP-8890/8895 bypasses.  Transfer
 - [THM-4051](../01-canon/theorems/THM-4051-tournament-order-seven-strong-base-exact-frontier.md)
   closes all 353 strong order-seven classes; Paley gives minimum ratio `27/8`,
   not sampled `4.22`. All-order remains open.
-- THM-3315/3322/3324 compile switched walks, moments, joins and response Gram.
-  THM-3359/3364 give periodic/cyclotomic `T4`; THM-3379 its Fibonacci median
-  quotient. THM-3369/3372/3377 give skew/deletion currents; THM-3380 locates
-  their first card/fugacity/palindrome losses. Startup, arcs, SCC order/time remain.
+- THM-3315--3380 compile switched walks, joins, response Gram, periodic/cyclotomic
+  `T4`, Fibonacci quotients, and deletion currents; several losses remain.
 - A literal Paley bridge exists only in THM-640's prime quadratic-residue scope.
   Composite modulus 14 and repeated score/node heuristics do not inherit it.
-- MISTAKE-227–229 correct the newest false syntheses: the AP chain frame is
-  index `11!`, Paley adjacency roots are shifted half-scaled Gauss sums, and
-  THM-2053's disk union has no discriminant `-7` or Heegner classification.
-- [THM-4088](../01-canon/theorems/THM-4088-order-tournament-arithmetic-type-blindness-and-lrc-margin-density.md)/[4095](../01-canon/theorems/THM-4095-exact-arithmetic-field-transport-gapped-pair-margins-and-order-tournament-blindness.md):
-  bare order loses magnitude/type; fixed-observer and optimized margins split
-  even on one transitive tower. THM-4093's gauge/tangent needs surviving cycles.
-- [THM-4094](../01-canon/theorems/THM-4094-hamiltonian-matching-deficit-and-two-prime-lane-completeness.md)
-  reduces completeness, via exact deletion incidence and carries `49,63,343`,
+- MISTAKE-227--229 repair the `11!` AP frame, Paley roots, and a false Heegner
+  reading. THM-4088/4095 show bare order loses magnitude/type; THM-4093 needs cycles.
+- THM-4094 reduces completeness, via exact deletion and carries `49,63,343`,
   to lanes `p` (`p!=7`) and `7p` (`p!=3`).
-- [THM-4099](../01-canon/theorems/THM-4099-squarefree-gap-transfer-and-mixed-insertion-boundary.md)
-  makes finite insertion compositional: its squarefree face coefficients are
-  the corresponding path counts; count marginals lose mixed response at the
-  transitive-triple/C3 boundary.
+- THM-4099 makes insertion compositional; scalar marginals lose mixed response.
 - [THM-4097](../01-canon/theorems/THM-4097-order-nine-strong-ear-spectrum-solid-interval-and-lane-extension.md)
   computes all `1,482` strong order-nine values and its cut-plus-field basis
   `{3,4}`. Selected THM-4102/4104 banks give intervals through `80,265`
   and the allowed prefix through `80,405` (next `80,407,80,689`).
   [THM-4111](../01-canon/theorems/THM-4111-uniform-ear-average-and-recursive-selected-bank-growth.md)
   forces unbounded maxima in every full-cut recursively selected bank;
-  interval overlap and global completeness remain **OPEN**.
+  cut dispersion, interval overlap and global completeness remain **OPEN**.
 - Corrected HYP-8835: optimal support is uniquely odd; positive `Mp=0` gives a
   replicator integral. Pure optimum means Condorcet winner, not transitivity;
   source-over-`C3` is hostile and RPS levels are circles, not `T^2`.

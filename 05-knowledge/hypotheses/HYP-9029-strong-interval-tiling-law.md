@@ -8,7 +8,9 @@ status: >
   has a strong witness. THM-4102 adds a selected order-ten interval
   [249,14649]; THM-4104 adds selected order-eleven [429,80265], proving
   every allowed odd through 80405 globally realized. Complete order-ten and
-  order-eleven images and global continuation remain open.
+  order-eleven images and global continuation remain open. THM-4111 proves
+  that every full-cut recursively selected bank has unbounded maxima, but
+  does not prove interval overlap or unbounded solid-interval endpoints.
 source: kind-pasteur-2026-07-26-S134
 related:
   - THM-1370-h-spectrum-omits-7-21-all-n
@@ -18,6 +20,7 @@ related:
   - THM-4097-order-nine-strong-ear-spectrum-solid-interval-and-lane-extension
   - THM-4102-selected-order-ten-strong-ear-solid-interval
   - THM-4104-selected-order-eleven-strong-ear-solid-interval
+  - THM-4111-uniform-ear-average-and-recursive-selected-bank-growth
 script: 04-computation/strong_h_spectrum_intervals_kps_S134.py
 output: 05-knowledge/results/strong_h_spectrum_intervals_kps_S134.out
 data: 05-knowledge/results/strong_H_spectrum_m9_values_kps_S134.out
@@ -92,6 +95,15 @@ labelled representative per attained value so that the next bank's cut
 quadratics contain an overlapping interval. Equal-`H` parents can have
 different quadratics, so the labelled `(Q,L)` sidecar is indispensable.
 
+THM-4111 removes growth of the scalar maximum from the list of conjectural
+steps. Its uniform cut identity implies `M_(n+1)>=(n+3)M_n/4` for every
+one-representative-per-value bank that expands all nonconstant cuts, hence
+factorial-over-exponential and therefore unbounded maxima. This does not yet
+advance the solid right endpoint `d_n`: the averaging operation destroys the
+individual-cut distribution, and its maximum can sit outside every long
+interval. The open structural coordinate is now explicitly **dispersion and
+overlap**, not raw growth.
+
 Independent-path note (same session): a LABELED brute-force
 enumeration (2^28 tournaments, different algorithm from monad's
 iso-class generation; strong_h_spectrum_m8_labeled_kps_S134.cpp)
@@ -102,6 +114,7 @@ hypothesis's central interval [69, 609].
 
 Cheapest decisive tests: (i) compile the selected order-twelve bank
 (`43,251*(2^11-2)=88,491,546` ears) with the quadratic recurrence; (ii) prove
-the bank-selection overlap lemma without enumerating every equal-`H` fibre;
+the bank-selection overlap lemma by adding a variance/small-ball or local
+`+-2` control to THM-4111's exact mean, without enumerating every equal-`H` fibre;
 (iii) attempt the `+-2` surgery on the doubly-regular-minus-arc family; and
 (iv) prove `d_n>=f(n+2)` for one explicit construction family.

@@ -522,6 +522,105 @@ finite value `2801/42` with valuation `-1`; at `s=-1`, THM-4096 must instead
 name the `omega^2`-twisted rational vertex. In both cases negative valuation
 means a denominator, not a pole.
 
+### 9.4 Uniform ear averaging turns one-defect words into all-order growth
+
+THM-4111 supplies the cleanest positive matching-to-tournament transfer in
+this session. For a tournament `T` of order `n`, delete the new vertex `x`
+from a Hamiltonian path of the cut ear `T+x_S`. If `x` is internal, the result
+is a base ordering with either zero bad adjacencies and a marked site, or one
+bad adjacency marked at its unique failure. Summing over the free cut bits
+gives exactly
+
+```text
+sum_S H(T+x_S)=2^(n-2)((n+3)H(T)+F_1(T)),                (28)
+```
+
+where `F_1(T)` counts one-defect orderings. Thus THM-4099's first squarefree
+defect layer is not merely analogous to an error term: it is the exact surplus
+in the Boolean cut trace.
+
+The connection ledger is explicit. The source is the labelled cut-ear fibre;
+the target is the zero/one-defect word layer; deletion of `x` together with
+its marked position is the map. It preserves total path multiplicity and the
+unique repair site, but summing over `S` destroys every individual cut value
+and the `(w,h)` dispersion from THM-4097. Consequently every full-cut recursive
+one-witness-per-value bank has
+
+```text
+M_(n+1)>=(n+3)M_n/4,                                     (29)
+```
+
+and hence unbounded maxima under every representative choice. It does not
+prove that those maxima lie in, or extend, a solid interval. The new H-spectrum
+frontier is a variance/small-ball or local-step theorem for the cut quadratic,
+not another proof that the right tail grows.
+
+This also gives a disciplined negative p-adic comparison. Equation `(28)` is
+an exact finite trace, while THM-4091's coefficientwise depths are a filtration.
+Both warn that an aggregate can retain enough information for one conclusion
+while erasing the coordinate needed for the next. There is no p-adic zeta or
+irrationality consequence of `(28)`.
+
+### 9.5 Newton totals and coefficient depths are parallel lossy quotients
+
+THM-4103 closes a different finite response problem on the smooth,
+nonresonant, theta-only JC survivor: its ramification packet is
+`{1,2,2,3,3,3,7}`, its Riemann--Hurwitz total is fourteen, and its necessary
+cover degrees are `{7,12,21}`. This is a response atlas, not a Jacobian
+counterexample.
+
+The exact interface with THM-4091 is methodological. Newton-polygon totals and
+the Riemann--Hurwitz degree remember aggregate slope/ramification mass; the
+labelled Puiseux edges remember which coefficient created it. Likewise an LCM
+depth remembers the worst p-adic denominator, while the coefficientwise depth
+vector remembers where it occurs. The source-to-target map in both cases is a
+maximum or sum over labelled coordinates. It preserves a necessary obstruction
+and destroys the attachment data needed for sufficiency. No step transports a
+p-adic irrationality certificate to JC(2), which remains **OPEN**.
+
+### 9.6 Residual-component ancestry is a two-shell 2-adic filtration
+
+THM-4100 lowers the arbitrary-parity AP8-plus-three cutoff to `93` under the
+exact survival tariff
+
+```text
+1/b+min(4/c,2/c+4/d)<=7L.                                (30)
+```
+
+The improvement comes from retaining whether the third danger family shares
+an ancestral component with the second; the two branches `4/c` and
+`2/c+4/d` are not interchangeable scalar estimates. Odd/even dilation makes
+this a genuine two-shell `v_2` filtration: the map retains parity ancestry and
+component overlap, but destroys higher residue labels and physical entry
+times. The analogy to coefficientwise p-adic depth is exact at this two-level
+bookkeeping scale only. It proves neither arbitrary-core closure nor LRC(14).
+
+### 9.7 Reciprocal powers separate exact gauges from cosmetic tournaments
+
+THM-4105--4108 provide four useful firewalls. Primitive reciprocal-exponent
+commutators characterize one physical abelian-group orbit and quantify near
+arrival, but do not certify loneliness. A mixed-parity pair's optimized margin
+and owner imbalance reconstruct its primitive labelled ratio; cross-`v_2`
+summaries on a spanning tree reconstruct a primitive row that is not all odd.
+The decoder loses the common time, maximizer locations, and gcd sheets, so it
+is arithmetic reconstruction rather than synchronization.
+
+Pairwise gcd normalization of `a^b` versus `b^a` does create a genuine
+tie-free tournament: an edge reverses exactly at divisibility or the ratio
+`2:3`, and triangle holonomy records incompatible edge gauges. This object is
+not THM-4093's diagonal endpoint gauge, whose closed-walk ratios cancel. More
+decisively, AP13 and an infinite loose family have the same complete labelled
+exponent tournament. The tournament therefore loses LRC margin, phase and
+arrival, and THM-4111's Hamiltonian ear average has no automatic role in it.
+
+Finally, THM-4108's reciprocal-power separation and gauge obstruction are
+unconditional, while radical saturation is explicitly **CONDITIONAL ON ABC**
+and ineffective. Radical support is the zero/nonzero projection of signed
+valuation depth; lift dependence, AP13's zero boundary, and an unbounded
+pair-sum/determinant ratio prevent transfer to LRC or to p-adic irrationality.
+The useful common lesson is to retain the labelled valuation tree before
+passing to radical support, not that ABC supplies a missing LRC theorem.
+
 ## 10. Reproduction
 
 ```bash
@@ -535,6 +634,10 @@ python -B 04-computation/integral_coordinate_change_depth_thm4091.py
 python -B -O 04-computation/integral_coordinate_change_depth_thm4091.py
 python -B .scratch/gauge_p13_referee_20260825/independent_audit.py
 python -B -O .scratch/gauge_p13_referee_20260825/independent_audit.py
+python -B 04-computation/tournament_uniform_ear_average_growth_thm4111.py
+python -B -O 04-computation/tournament_uniform_ear_average_growth_thm4111.py
+python -B 04-computation/tournament_uniform_ear_average_growth_thm4111_independent_audit.py
+python -B -O 04-computation/tournament_uniform_ear_average_growth_thm4111_independent_audit.py
 ```
 
 The external certificate must be replayed from its pinned source commit; its

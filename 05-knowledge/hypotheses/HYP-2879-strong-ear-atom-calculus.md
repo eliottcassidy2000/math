@@ -24,6 +24,7 @@ related:
   - THM-4097
   - THM-4102
   - THM-4104
+  - THM-4111
 ---
 
 # HYP-2879: strong H-atoms grow by labelled ears with an exact cut polynomial
@@ -150,6 +151,22 @@ choose one parent in each scalar fibre so that the union of its nonconstant
 cut quadratics contains an interval overlapping the preceding bank. This
 retains the parent word and `(Q,L)` sidecar and does not assume that `H(parent)`
 alone determines the child image.
+
+THM-4111 now proves one genuinely all-order part of this program. If every
+stage retains one strong representative for each attained scalar value and
+then expands **all** nonconstant cuts from every retained parent, the next
+maximum satisfies
+
+```text
+M_(n+1) >= (n+3)M_n/4,
+```
+
+so the selected-bank maxima are unbounded under every representative choice.
+The mechanism is an exact all-cut average whose surplus is the one-defect word
+layer `F_1(T)`. It says nothing about dispersion around the mean: a large value
+may be isolated. The remaining bank-selection lemma must therefore force
+overlap or a sufficiently dense interval, not merely growth of the rightmost
+attained value.
 
 This reframes `{7,21}` as absent solutions of recursive cut polynomials before
 the Busch/Moon strong-min boundary lets the spectrum re-enter.  They are not

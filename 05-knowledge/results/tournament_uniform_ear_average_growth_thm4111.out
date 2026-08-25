@@ -1,5 +1,5 @@
 THM-4111 UNIFORM CUT-EAR AVERAGE PRIMARY REFEREE
-status=PROVISIONAL_PRIMARY_PASS
+status=PRIMARY_PASS
 formula=sum_S H(T+x_S)=2^(n-2)*((n+3)H(T)+F1(T))
 exhaustive_order_rows= [{'order': 2, 'tournaments': 2, 'strong_parents': 0, 'identity_checks': 2, 'ear_checks': 8, 'strong_ear_checks': 0, 'minimum_max_ratio_slack': [7, 4], 'minimum_row': [0, 1, 1, 3, 2, 1]}, {'order': 3, 'tournaments': 8, 'strong_parents': 2, 'identity_checks': 8, 'ear_checks': 64, 'strong_ear_checks': 12, 'minimum_max_ratio_slack': [1, 6], 'minimum_row': [2, 3, 0, 5, 5, 1]}, {'order': 4, 'tournaments': 64, 'strong_parents': 24, 'identity_checks': 64, 'ear_checks': 1024, 'strong_ear_checks': 336, 'minimum_max_ratio_slack': [5, 4], 'minimum_row': [4, 5, 7, 15, 79, 7]}, {'order': 5, 'tournaments': 1024, 'strong_parents': 544, 'identity_checks': 1024, 'ear_checks': 32768, 'strong_ear_checks': 16320, 'minimum_max_ratio_slack': [13, 15], 'minimum_row': [40, 15, 18, 43, 179, 5]}]
 totals_tournaments_ears_strong_ears= [1098, 33864, 16668]

@@ -13,6 +13,7 @@ Every executable gate uses ``require`` and survives ``python -O``.
 from __future__ import annotations
 
 import json
+import sys
 from fractions import Fraction
 from hashlib import sha256
 from itertools import permutations
@@ -111,6 +112,8 @@ def fraction_row(value: Fraction) -> list[int]:
 
 
 def main() -> None:
+    if hasattr(sys.stdout, "reconfigure"):
+        sys.stdout.reconfigure(newline="\n")
     order_rows: list[dict[str, object]] = []
     total_tournaments = 0
     total_ears = 0
@@ -235,7 +238,7 @@ def main() -> None:
         require(semantic == EXPECTED_SEMANTIC_SHA256, "semantic ledger digest")
 
     print("THM-4111 UNIFORM CUT-EAR AVERAGE PRIMARY REFEREE")
-    print("status=PROVISIONAL_PRIMARY_PASS")
+    print("status=PRIMARY_PASS")
     print("formula=sum_S H(T+x_S)=2^(n-2)*((n+3)H(T)+F1(T))")
     print("exhaustive_order_rows=", order_rows)
     print("totals_tournaments_ears_strong_ears=", ledger["totals"])

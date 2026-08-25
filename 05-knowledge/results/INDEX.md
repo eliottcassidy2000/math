@@ -5,18 +5,53 @@
   VERIFIED-EXACT + INDEPENDENTLY VERIFIED-EXACT]. For an order-`n` tournament,
   summing over every labelled cut ear gives
   `2^(n-2)((n+3)H(T)+F_1(T))`, with `F_1` the one-defect word count. After the
-  two constant cuts are removed, any recursively representative-selected
+  two constant cuts are removed, any full-cut recursively representative-selected
   strong-ear bank satisfies `M_(n+1)>=(n+3)M_n/4`, hence its image maxima are
   unbounded. `C3` refutes the `n+4` coefficient. Strong order-five codes
   `1015,759` have the same `(H,F_1)=(9,30)` and mean `133/5` but different
   ear images, so solid-interval overlap remains open. The independent path
   imports no primary and scans `23,717,424` child orderings. Primary
   script/output SHA-256:
-  `a8f48ebd9f50123672e58062d918d98786a89806167a07a0f262f59f74ed4aba` /
-  `f00a58d8423ccb92a576b6ad5e6bfc997576d5564083dfb25bad721ede01fe82`;
+  `f58f2a10d70685cc998a14d1ee6d4381e4e1c0d60e41aee3e7f89ca80570fe36` /
+  `708d55d7ac5f5d47441314d393d11d727324a3f20eca815678c0d2935b2973a9`;
   independent:
   `c7c59e8eb98d3bfdcb2105802a7c7ffda2194e28a83e30c227a38d5d464e7ba7` /
   `62be3fe1e66ca757f6d04ceb0f466e07502a4e1bbfa9c48172dc52baa4aa6c59`.
+- `reciprocal_phase_arrival_straddle_thm4105.py` -> matching `.out`
+  [THM-4105 PROVED + VERIFIED-EXACT + INDEPENDENTLY AUDITED; LRC(14) OPEN].
+  For a primitive integer row, vanishing reciprocal commutators in an abelian
+  group are equivalent to one physical power orbit. On the circle their defect
+  gives explicit two-sided arrival bounds, while the signed straddle owner is
+  intrinsic only below the antipodal boundary. Script/output SHA-256:
+  `ffe70d8e51621490cb1bb9d39323ac7b10ef215545626b9317d86432ba8c753a` /
+  `dfaea1aff7b61e2d5389e60196c198c98a5f23ecfb38c2edad0fe559c8517825`.
+
+- `lrc_pair_owner_reciprocity_thm4106.py` and independent audit -> matching
+  `.out`s [THM-4106 PROVED + VERIFIED-EXACT + INDEPENDENTLY VERIFIED-EXACT;
+  common arrival and LRC(14) OPEN]. A mixed-parity primitive pair is recovered
+  from its optimized margin and exact owner imbalance, and `N-1` cross-`v_2`
+  tree summaries reconstruct every primitive positive row that is not all odd.
+  The representation loses common time, gcd sheets, and maximizer locations.
+  Primary script/output SHA-256:
+  `4266285916d0fbe725d89bb888f52212b63ca5dba9722de2d14fe4ae4bac2182` /
+  `471f97276a99243c86ff83d420882e435137c45d8590f6ab2540ce9287d899fb`;
+  independent:
+  `42035f1d1ce2032d374b8dda6dfc65361e3615975bf13955ec8b69f86b9f1693` /
+  `6e80fd339472037f3663bc3a76df351504b5803e367bb3276883d7abe43bcc1b`.
+
+- `reciprocal_power_abc_lrc_thm4107_4108.py` and the THM-4107 independent
+  audit -> matching `.out`s [THM-4107 PROVED + VERIFIED-EXACT + INDEPENDENTLY
+  VERIFIED-EXACT; THM-4108 elementary parts PROVED, radical saturation
+  CONDITIONAL ON ABC, INDEPENDENTLY AUDITED; LRC(14) OPEN]. Pairwise gcd
+  normalization gives a genuine exponent tournament with divisibility/`2:3`
+  edge law and exact triangle holonomy, but AP13 and infinitely many loose rows
+  share it. Radical support further erases signed valuation depth and is
+  lift-gauge dependent. Shared script/output SHA-256:
+  `f1db2869841130571c550d821580a1ec428364e83b6dcf0ee2ca598d96ff4fd1` /
+  `6e91f10ea6db2b117937d439bd7d7a9b300ce3fa31a10b92e3811dee79ecbe32`;
+  THM-4107 independent:
+  `fc4bb5b5bc6c372fcadab53002e43224b0d51cb0c6b16cc51055603d17345cb9` /
+  `ac300d909e83bc4bda38240b390b70da525798338d22b468cc624591e9593ffe`.
 
 - `tournament_selected_order11_strong_ear_interval_thm4104.py` and independent
   audit -> matching `.out`s [THM-4104 PROVED ELEMENTARY QUADRATIC-CUT IDENTITY

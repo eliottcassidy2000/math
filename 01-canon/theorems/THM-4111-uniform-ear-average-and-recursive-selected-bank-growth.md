@@ -5,23 +5,27 @@ status: >
   PROVED ELEMENTARY DOUBLE COUNT + VERIFIED-EXACT + INDEPENDENTLY
   VERIFIED-EXACT. The exact all-cut sum is
   2^(n-2)((n+3)H(T)+F_1(T)), where F_1 counts base orderings with exactly one
-  bad adjacency. Its nonconstant-cut specialization forces every recursively
-  representative-selected strong-ear bank to have unbounded image maxima.
-  This does not prove overlap or unbounded endpoints of solid intervals.
+  bad adjacency. Its nonconstant-cut specialization forces every full-cut,
+  recursively representative-selected strong-ear bank to have unbounded image
+  maxima. This does not prove interval overlap, unbounded endpoints of solid
+  intervals, or global H-spectrum completeness.
 source: codex-frontier-synthesis-creative-20260825g
 depends_on:
   - THM-001-redei
+related:
   - THM-4097-order-nine-strong-ear-spectrum-solid-interval-and-lane-extension
+  - THM-4099-squarefree-gap-transfer-and-mixed-insertion-boundary
   - THM-4102-selected-order-ten-strong-ear-solid-interval
   - THM-4104-selected-order-eleven-strong-ear-solid-interval
-related:
-  - THM-4099-squarefree-gap-transfer-and-mixed-insertion-boundary
+  - HYP-2879-strong-ear-atom-calculus
+  - HYP-9029-strong-interval-tiling-law
+  - MISTAKE-402
 script: 04-computation/tournament_uniform_ear_average_growth_thm4111.py
 output: 05-knowledge/results/tournament_uniform_ear_average_growth_thm4111.out
 independent_audit_script: 04-computation/tournament_uniform_ear_average_growth_thm4111_independent_audit.py
 independent_audit_output: 05-knowledge/results/tournament_uniform_ear_average_growth_thm4111_independent_audit.out
-script_sha256: a8f48ebd9f50123672e58062d918d98786a89806167a07a0f262f59f74ed4aba
-output_sha256: f00a58d8423ccb92a576b6ad5e6bfc997576d5564083dfb25bad721ede01fe82
+script_sha256: f58f2a10d70685cc998a14d1ee6d4381e4e1c0d60e41aee3e7f89ca80570fe36
+output_sha256: 708d55d7ac5f5d47441314d393d11d727324a3f20eca815678c0d2935b2973a9
 independent_audit_script_sha256: c7c59e8eb98d3bfdcb2105802a7c7ffda2194e28a83e30c227a38d5d464e7ba7
 independent_audit_output_sha256: 62be3fe1e66ca757f6d04ceb0f466e07502a4e1bbfa9c48172dc52baa4aa6c59
 semantic_sha256: 0bb800d8caa1c1fd449657fb9f68a33842062ec4f3866f34488d9c8ea3251915
@@ -33,7 +37,8 @@ audit: >
   labelled parents and 33,864 ears through order five. It reproduces the
   exact sums, means, strong-ear controls, C3 coefficient hostile, inherited
   selected-bank bounds, and the equal-(H,F_1)-but-different-image hostile.
-  Both normal/-O streams byte-match the frozen output.
+  The independent normal/-O streams and the LF-stable primary streams
+  byte-match their frozen outputs.
 ---
 
 # THM-4111 -- uniform ear average and recursive selected-bank growth
@@ -157,18 +162,21 @@ max_(empty!=S!=V) H(T+x_S) >= oddceil(A_nc(T))
 
 ## 3. Selection-robust recursive growth
 
-Start at any order `n_0>=3` with a nonempty finite bank `B_(n_0)` of strong
-tournaments. Recursively form the full value image
+Start at any order `n_0>=3` with a nonempty finite bank `B_(n_0)` of
+order-`n_0` strong tournaments. Recursively form the full nonconstant-cut
+value image
 
 ```text
 V_(n+1)={H(T+x_S):T in B_n, empty!=S!=V(T)},                (12)
 ```
 
-and let `B_(n+1)` contain an arbitrary one strong witness for each value in
-`V_(n+1)`. This includes deterministic first-labelled-witness selection but
-does not depend on that choice. Nonconstant ears over a strong parent are
-strong: `x` has both an in-neighbor and an out-neighbor, and strongness of the
-parent supplies paths in both directions to every old vertex.
+and let `B_(n+1)` contain an arbitrary one order-`n+1` strong witness for each
+value in `V_(n+1)`. At every step all nonconstant cuts from every retained
+parent are included before one representative per scalar value is selected.
+This includes deterministic first-labelled-witness selection but does not
+depend on that choice. Nonconstant ears over a strong parent are strong: `x`
+has both an in-neighbor and an out-neighbor, and strongness of the parent
+supplies paths in both directions to every old vertex.
 
 Put
 
@@ -257,7 +265,7 @@ Those remain **OPEN**.
 
 ## 5. Exact controls and reproduction
 
-The primary referee independently computes `H` by subset DP, enumerates
+The primary referee computes `H` by subset DP, enumerates
 `F_1`, and checks `(4)`, `(8)`, parity, and strong-ear inheritance on every
 labelled tournament through order five:
 
@@ -272,7 +280,10 @@ It freezes the `C3` hostile and the two inherited selected-bank rows. Run
 ```bash
 python3 -B 04-computation/tournament_uniform_ear_average_growth_thm4111.py
 python3 -B -O 04-computation/tournament_uniform_ear_average_growth_thm4111.py
+python3 -B 04-computation/tournament_uniform_ear_average_growth_thm4111_independent_audit.py
+python3 -B -O 04-computation/tournament_uniform_ear_average_growth_thm4111_independent_audit.py
 ```
 
-The streams must byte-match the frozen output. This finite audit is a hostile
-control for the elementary double count, not the source of its quantifiers.
+Each normal/-O pair must byte-match its LF-stable frozen output. These finite
+audits are hostile controls for the elementary double count, not the source of
+its quantifiers.
