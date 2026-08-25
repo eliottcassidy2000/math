@@ -22,6 +22,7 @@ related:
   - THM-4104-selected-order-eleven-strong-ear-solid-interval
   - THM-4118-ear-response-lattice-and-stateful-unit-component-intervals
   - THM-4123-balanced-cardinality-ear-average-growth-and-johnson-layer-lattice
+  - THM-4127-johnson-slice-hoeffding-variance-and-central-support-dominance
   - HYP-2879-strong-ear-atom-calculus
   - HYP-9029-strong-interval-tiling-law
   - MISTAKE-402
@@ -273,10 +274,12 @@ This strictly improves THM-4111's `(n+3)/4` recurrence and still tends to
 infinity. It is selection-robust because the full cut fibre is expanded before
 one representative per scalar value is retained.
 
-**Later balanced-slice refinement.** THM-4123 conditions the cut field on a
+**Later balanced-slice refinements.** THM-4123 conditions the cut field on a
 central cardinality layer. Its exact mean is coefficientwise stronger than
-the reduced bound `(12)` for every `n>=4`, but is incomparable with the
-unreduced variance floor `(10)`. A full-cut bank may take the better of both.
+the reduced bound `(12)` for every `n>=4`, but the mean-only floor remains
+incomparable with the unreduced variance floor `(10)`. THM-4127 restores the
+exact Johnson-slice variance and proves that the best central support floor
+dominates `(10)`; in odd order both middle layers must be expanded.
 
 For the selected frontier parents already used by THM-4097/4102/4104:
 

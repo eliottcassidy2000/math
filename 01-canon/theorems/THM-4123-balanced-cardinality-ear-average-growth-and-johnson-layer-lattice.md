@@ -6,10 +6,12 @@ status: >
   VERIFIED-EXACT + INDEPENDENTLY AUDITED. Every cardinality-m cut-ear fibre
   has an exact binomial sum and mean. Central layers give a balanced-cut
   selected-bank recurrence that is coefficientwise stronger than THM-4115's
-  reduced Cauchy recurrence for every n>=4, though incomparable with its
-  unreduced variance floor. Exchange increments generate the exact response
-  lattice on each Johnson slice and sharpen mean rounding. This forces one
-  large balanced child, not an interval or a balanced global maximizer.
+  reduced Cauchy recurrence for every n>=4. Its mean-only floor is
+  incomparable with THM-4115's unreduced variance floor; THM-4127 later
+  restores slice variance and proves central support dominance. Exchange
+  increments generate the exact response lattice on each Johnson slice and
+  sharpen mean rounding. This forces one large balanced child, not an
+  interval or a balanced global maximizer.
 source: codex-frontier-synthesis-creative-20260825g
 depends_on:
   - THM-001-redei
@@ -19,6 +21,7 @@ depends_on:
 related:
   - THM-4111-uniform-ear-average-and-recursive-selected-bank-growth
   - THM-4114-ocf-mobius-positivity-tropical-defect-layer-and-opposite-ear-cut-curvature
+  - THM-4127-johnson-slice-hoeffding-variance-and-central-support-dominance
   - HYP-2879-strong-ear-atom-calculus
   - HYP-9029-strong-interval-tiling-law
 script: 04-computation/tournament_balanced_cardinality_ear_average_layer_lattice_thm4123.py
@@ -340,8 +343,8 @@ average destroys.
   Hence the exact slice mean does not determine its image.
 
 - At code `8`, the exact variance floor is `994/33>144/5`; at strong code
-  `40`, it is `479/13<192/5`. This proves the incomparability asserted after
-  `(15)`.
+  `40`, it is `479/13<192/5`. This proves the mean-only incomparability
+  asserted after `(15)`. THM-4127 resolves it after slice variance is retained.
 
 - The regular `C5` class, first code `76`, has balanced mean `42` and image
   `{41,43}`. Thus the odd-ceiling `43` in `(10)` is attained, and no uniform
@@ -380,11 +383,13 @@ These are finite-exact boundaries, not all-order lattice classifications.
 
 The source of `(2)` is the full ear fibre, the operation is restriction to
 the Johnson slice, and the preserved data are `H,W,F_1`, response parity,
-and strongness of nonconstant ears. Averaging destroys the arrangement of
-the field and edge weights, slice variance, response connectivity, and the
-location of a global maximum. The layer lattice restores one arithmetic
-coordinate but not interval connectivity; THM-4118's state-labelled unit
-components remain the relevant sidecar for propagation.
+and strongness of nonconstant ears. Averaging in this theorem destroys the
+arrangement of the field and edge weights, slice variance, response
+connectivity, and the location of a global maximum. THM-4127 later restores
+the exact two-energy slice variance and central support dominance, but not an
+interval or a balanced global maximizer. The layer lattice restores one
+arithmetic coordinate but not interval connectivity; THM-4118's state-labelled
+unit components remain the relevant sidecar for propagation.
 
 Run
 

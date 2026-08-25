@@ -1,5 +1,21 @@
 # Script Results Index
 
+- `tournament_johnson_slice_hoeffding_variance_thm4127.py` and independent
+  raw-incidence audit -> concordant semantic ledgers [THM-4127 PROVED
+  ELEMENTARY JOHNSON-HOEFFDING DECOMPOSITION + SHARP SLICE SUPPORT + CENTRAL
+  DOMINANCE + VERIFIED-EXACT + INDEPENDENTLY AUDITED]. Every cardinality layer
+  has exact orthogonal degree-one/degree-two energies and variance. Its support
+  floor has exact THM-4123 coset rounding, and one middle layer in even order,
+  or the better of both in odd order, always dominates THM-4115's full-cube
+  floor. The audit scans `33,866` labelled parents and profiles all `1,098`
+  through order five plus all `22,320` strong order-six parents; code `11`
+  proves that a prescribed odd middle layer may lose, while order-seven code
+  `34` first splits the two central variances after one strong tie. Primary
+  script/output SHA-256: `44be2322e9bf7a9687e7ba2294d026b3f60ebe65473d8342cf42b0a72ff9b0d2` /
+  `677670e4f549063ba8b1ecd0f1ffa1ce78fae7b6c2a7fe91507899885f85b907`;
+  independent: `a9bf16d168486021161b68832f4f0543ece09275d7c5fe3d15bf9ed2211be0f7` /
+  `30bad1bf189eff8a66174250b205c5f973d5d85ca21cda11ede75ccedc6496cc`.
+
 - `lrc_arbitrary_multitail_projective_packing_thm4125.py` and independent
   four-state signed-pair audit -> concordant semantic ledgers [THM-4125
   PROVED ELEMENTARY PROJECTIVE PACKING + SHARP NATURAL-THRESHOLD TRANSITION +
