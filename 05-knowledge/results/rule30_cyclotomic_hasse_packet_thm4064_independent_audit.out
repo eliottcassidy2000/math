@@ -1,0 +1,13 @@
+== independent THM4064 Rule30 cyclotomic/Hasse packet audit ==
+status=PASS;no-import-from-primary
+query_packet_reconstruction=conditional_on_already_audited_THM4047
+primary_sha256=46f35b1081ab13d8a70bbcae35180eb7a00758fefaebfbee7b7cd83cb2f0d4a3;primary_output_sha256=e753b1bfdf082d9f4871f116745e7f3bcd9aea4f097c5a523d51c746388c4dce
+factor_counts={'C60': 82, 'C60_denominator': 172, 'C60_depth_sign': 82, 'C60_denominator_depth_sign': 172, 'C60_denominator_full_depth': 547, 'C60_denominator_flank_mod2': 172, 'C60_full_exact_denominator_packet': 100001}
+factor_census_sha256=fc7679bc50f53005384a9f0c34f33ff651cf30b578a2828795495525adca427f
+sign_sector_census_sha256=41a87e724c878456bc94ae8deb5f65892562a1d689e280dc2ab53d77b87815d4
+ell29_hostile_labels=((4, 3, 3, -1, (0, 1, 1, 1)), (4, 1, 3, -1, (0, 1, 1, 1)));values=(0, 1);sign_support=(1, 3, 5, 7)
+d1_depth_convention=None_sentinel_not_a_Stern_depth
+finite_char_hostile=F13bar;p4;word_(5,1,0,0);primitive_mode_zero
+script_sha256=11f559d7d41e3738b2942f0a5464a8eebfe5589f2f1d3e71fa211cbf9210ed03
+CHECKS=5573429
+RESULT=PASS

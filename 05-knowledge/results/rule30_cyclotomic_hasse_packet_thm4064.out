@@ -1,0 +1,30 @@
+== Rule30 C60 cyclotomic/divisor-depth synthesis ==
+status=FINITE-EXACT fixed-bank plus exact universal decompositions
+parent_sha256=(('THM4047_script', 'd454cc5b40315c02ebf486f29e227ebc9a79c78ede18fc449a7dd32f8dc21148'), ('THM4047_output', 'bae500127999c350ebeff77c3145fbb4abf7b5b7292d2882eeecc6492fba75e3'), ('THM4055_script', 'c6de48e956c425b21d20f4dc364e10d41e3fd7d7401c486c0aee08e416c1f535'), ('THM4055_output', 'e6ed3dfa72f85e33d4b702f1cfcaa48965624f44e8a2f458601b5cd44d58728f'), ('THM4044_script', 'cc49cd7024fdeaab6c0d668c9ca497ee113ea6c45b3c9735d836322781629898'), ('THM4044_output', '4e73f5d3fed3bec3966d914f4981777f1a3b78892321bd443ed83f2799185fc0'), ('THM4010_script', 'f28dfba947010cb1b82891b1c1b6981fbc2f0555865840eddb75693d29c10888'), ('THM4010_output', '2a97b20bea13267d3a1d324975f921e9399e59861f2206fd9c3a72ce1108cc7e'), ('THM4056_script', 'a15fb134839f84b5e1a4f07131f893af790adcc2c6b8189780c851a9e90d77e9'), ('THM4056_output', 'bce0b8ccc22db995a0d96560aa66c7707b581b45e419a02589920a4249b28947'), ('THM4059_script', '4279d31e869764ea80febfdfaad90689cb5e679847929c04cb7ed5768efd56f4'), ('THM4059_output', '313f79dc4f21b69a62847796211a55230264d5d4ccf7abb8796c6ac702fdd3d8'))
+typed_map=C_N --t|->zeta_N^t--> mu_N; exact_denominator=root_order
+full_fibre_product=mu_N~=mu_60 x_mu_g mu_p; preserves both phases and order
+C60_projection=z|->z^m; kernel=mu_m; loses q_torsor/nonzero isotypic sectors
+Hasse_parent=THM4044;mu_m-invariants=A_60,k via Q=P^m
+sign_Fourier_support=k=(N/p)h;mu_m_weight=15h_mod_m_for_p>=4
+d1_depth_convention=None_sentinel_not_a_Stern_depth
+factor_counts={'C60': 82, 'C60_denominator': 172, 'C60_depth_sign': 82, 'C60_denominator_depth_sign': 172, 'C60_denominator_full_depth': 547, 'C60_denominator_flank_mod2': 172, 'C60_full_exact_denominator_packet': 100001}
+factor_counts_by_period={'C60': ((1, 16), (2, 10), (4, 56), (8, 0), (16, 0), (32, 0)), 'C60_denominator': ((1, 16), (2, 10), (4, 56), (8, 49), (16, 41), (32, 0)), 'C60_depth_sign': ((1, 16), (2, 10), (4, 56), (8, 0), (16, 0), (32, 0)), 'C60_denominator_depth_sign': ((1, 16), (2, 10), (4, 56), (8, 49), (16, 41), (32, 0)), 'C60_denominator_full_depth': ((1, 16), (2, 10), (4, 56), (8, 329), (16, 136), (32, 0)), 'C60_denominator_flank_mod2': ((1, 16), (2, 10), (4, 56), (8, 49), (16, 41), (32, 0)), 'C60_full_exact_denominator_packet': ((1, 16), (2, 10), (4, 56), (8, 668), (16, 87118), (32, 12133))}
+distinct_tail_words=60457
+factor_census_sha256=fc7679bc50f53005384a9f0c34f33ff651cf30b578a2828795495525adca427f
+sign_sector_histogram=(((1, (0,)), 16), ((2, (0,)), 10), ((4, (0,)), 56), ((8, (0, 1)), 625), ((8, (1,)), 43), ((16, (0, 1, 2, 3)), 84078), ((16, (0, 1, 3)), 1360), ((16, (1, 2, 3)), 1385), ((16, (1, 3)), 295), ((32, (0, 1, 2, 3, 4, 5, 6, 7)), 12015), ((32, (0, 1, 2, 3, 5, 6, 7)), 61), ((32, (0, 1, 3, 4, 5, 7)), 4), ((32, (0, 1, 3, 5, 7)), 3), ((32, (1, 2, 3, 4, 5, 6, 7)), 40), ((32, (1, 2, 3, 5, 6, 7)), 7), ((32, (1, 3, 5, 7)), 3))
+sign_fourier_order_shell_histogram=(((1, (1,)), 16), ((2, (2,)), 10), ((4, (1, 2, 4)), 33), ((4, (4,)), 23), ((8, (1, 2, 4, 8)), 379), ((8, (1, 2, 8)), 50), ((8, (1, 4, 8)), 85), ((8, (2, 4, 8)), 70), ((8, (4, 8)), 41), ((8, (8,)), 43), ((16, (1, 2, 4, 8, 16)), 55307), ((16, (1, 2, 4, 16)), 816), ((16, (1, 2, 8, 16)), 3250), ((16, (1, 2, 16)), 96), ((16, (1, 4, 8, 16)), 9844), ((16, (1, 4, 16)), 190), ((16, (1, 8, 16)), 670), ((16, (2, 4, 8, 16)), 9579), ((16, (2, 4, 16)), 167), ((16, (2, 8, 16)), 676), ((16, (4, 8, 16)), 4752), ((16, (4, 16)), 91), ((16, (8, 16)), 1385), ((16, (16,)), 295), ((32, (1, 2, 4, 8, 16, 32)), 8895), ((32, (1, 2, 4, 8, 32)), 2), ((32, (1, 2, 4, 16, 32)), 36), ((32, (1, 2, 8, 16, 32)), 295), ((32, (1, 2, 16, 32)), 5), ((32, (1, 2, 32)), 3), ((32, (1, 4, 8, 16, 32)), 1157), ((32, (1, 4, 8, 32)), 1), ((32, (1, 4, 16, 32)), 5), ((32, (1, 8, 16, 32)), 56), ((32, (2, 4, 8, 16, 32)), 1161), ((32, (2, 4, 16, 32)), 10), ((32, (2, 8, 16, 32)), 59), ((32, (4, 8, 16, 32)), 392), ((32, (4, 8, 32)), 1), ((32, (4, 16, 32)), 5), ((32, (8, 16, 32)), 40), ((32, (16, 32)), 7), ((32, (32,)), 3))
+sign_sector_census_sha256=41a87e724c878456bc94ae8deb5f65892562a1d689e280dc2ab53d77b87815d4
+minimal_hostile=ell_29 at times 90,150 in C_120
+hostile_clock_phases=(30, 30)
+hostile_C120_residues=(90, 30)
+hostile_packets=(d,a,D,epsilon,flank_mod2)=((4, 3, 3, -1, (0, 1, 1, 1)), (4, 1, 3, -1, (0, 1, 1, 1)))
+hostile_values=(0, 1)
+ell29_sign_fourier_support_C8=(1, 3, 5, 7);lifted_C120_exponents=(15,45,75,105)
+loss=C60_plus_denominator/depth/sign/flank all identify hostile pair
+sidecars=point_torsor_or_labelled_numerator;dually_nontrivial_mu_2_sector
+Smith_firewall=no_THM4010_integral_Smith_transfer_by_exponentiation_alone
+finite_char_hostile=F13bar;p4;word_(5,1,0,0);primitive_mode_zero
+SCOPE fixed left-front tails only; moving center and Rule30 prizes OPEN
+script_sha256=46f35b1081ab13d8a70bbcae35180eb7a00758fefaebfbee7b7cd83cb2f0d4a3
+CHECKS=30744788
+RESULT=PASS

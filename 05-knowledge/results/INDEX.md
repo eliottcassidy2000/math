@@ -1,5 +1,24 @@
 # Script Results Index
 
+- `rule30_cyclotomic_hasse_packet_thm4064.py` and no-import recurrence,
+  subtractive-depth, and character audit -> matching `.out`s [THM-4064
+  PROVED universal cyclotomic/Hasse theorem + PROVED characteristic-zero
+  primitive-frequency theorem + FINITE-EXACT fixed Rule-30 bank +
+  VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED; Rule-30 prizes OPEN]. The
+  THM-4055 `q`-torsor exponentiates to the kernel `mu_m`; the `mu_m`-invariant
+  depth-`k` Hasse algebra is exactly the pulled-back `C_60` algebra. Every
+  rational least-dyadic-period word has all odd character sectors. In the
+  fixed bank, every coarse denominator/depth/sign/flank feature retains at
+  most `547/100001` tails, while labelled numerator data retain all. The
+  period-minimal `ell_29` hostile aliases values `0,1` at times `90,150`
+  despite equal `C_60`, denominator, depth/sign, and flank parity. Primary
+  script/output SHA-256:
+  `46f35b1081ab13d8a70bbcae35180eb7a00758fefaebfbee7b7cd83cb2f0d4a3` /
+  `e753b1bfdf082d9f4871f116745e7f3bcd9aea4f097c5a523d51c746388c4dce`;
+  independent:
+  `11f559d7d41e3738b2942f0a5464a8eebfe5589f2f1d3e71fa211cbf9210ed03` /
+  `2baaeb90311e8b444979279e9e4006497b785850dac3c7627a33c074f3ab5e6d`.
+
 - `jc2_finite_graph_period_connection_ramification_thm4063.py` and
   independent Fraction-only audit -> matching `.out`s [THM-4063 PROVED
   abstract theorem + CONDITIONAL figure-eight cokernel + UNCONDITIONAL
