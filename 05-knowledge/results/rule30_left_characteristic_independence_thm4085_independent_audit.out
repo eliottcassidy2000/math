@@ -1,0 +1,13 @@
+anf_cell_atlas=cells:49;depth:0..6;max_monomials:1360;pivot_form:singleton_only
+anf_triangular_inverse_atlas=families:91;inverse_replays:10682;evaluation_gates:116392
+anf_marked_blocks=r:1;k:(1, 2, 3);address_intervals:((-1, -1), (-2, -2), (-3, -3));width:5;full_inverse_replays:32
+anf_marked_blocks=r:2;k:(2, 5);address_intervals:((-2, 0), (-5, -3));width:9;full_inverse_replays:512
+anf_marked_blocks=r:3;k:(3, 8);address_intervals:((-3, 1), (-8, -4));width:15;full_inverse_replays:0
+anf_same_address_hostile=Y0:x0;Y1:x0+x1+x2+x1x2;counts:(1, 3, 3, 1);nonzero_collision_character:-1/2
+anf_gap_two_hostile=condition:first_block_100;second_block:(x_-4,x_-3,1+x_1+x_2+x_1x_2);solutions:3/16;joint_mass:3/128
+anf_cemetery=k1_to_k6:((1, 1, 3), (2, 3, 5), (3, 5, 7), (4, 7, 9), (5, 9, 11), (6, 11, 13));unique_words:1_then_all_zero;infinity_class_retained:true
+semantic_sha256=7fc5aab0380f2de90cca9d8f83d0625029398eeb7ff323efe249ee9cbd49809c
+monomial_gates=26340
+inverse_replays=11226
+evaluation_gates=217418
+RESULT=PASS

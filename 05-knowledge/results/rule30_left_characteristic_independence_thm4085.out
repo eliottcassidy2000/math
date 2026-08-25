@@ -1,0 +1,17 @@
+left_permutive_atlas=rules:16;cells:9;distinct_address_sets:131;assignments:317856;uniform_word_gates:19040
+same_address_hostile=cells:(0,0),(1,1);address:0;counts_00_10_01_11:(1, 3, 3, 1);walsh_character:-4/8
+rational_ray=p/q:-1/2;sites:(0, -1, -1, -2, -2, -3);addresses:(0, -2, -3, -5, -6, -8);distinct:6;support:64;max_word_mass:32/2048;bound_denominator:64
+rational_ray=p/q:0/1;sites:(0, 0, 0, 0, 0, 0);addresses:(0, -1, -2, -3, -4, -5);distinct:6;support:64;max_word_mass:32/2048;bound_denominator:64
+rational_ray=p/q:1/3;sites:(0, 0, 0, 1, 1, 1);addresses:(0, -1, -2, -2, -3, -4);distinct:5;support:64;max_word_mass:60/2048;bound_denominator:32
+rational_ray=p/q:1/2;sites:(0, 0, 1, 1, 2, 2);addresses:(0, -1, -1, -2, -2, -3);distinct:4;support:64;max_word_mass:98/2048;bound_denominator:16
+rational_ray=p/q:2/3;sites:(0, 0, 1, 2, 2, 3);addresses:(0, -1, -1, -1, -2, -2);distinct:3;support:62;max_word_mass:143/2048;bound_denominator:8
+rational_ray=p/q:1/1;sites:(0, 1, 2, 3, 4, 5);addresses:(0, 0, 0, 0, 0, 0);distinct:1;support:54;max_word_mass:277/2048;bound_denominator:2
+marked_blocks=r:1;k:(1, 2, 3);length:1;address_intervals:((-1, -1), (-2, -2), (-3, -3));joint_target_mass:4/32;independent_denominator:8
+marked_blocks=r:2;k:(2, 5);length:3;address_intervals:((-2, 0), (-5, -3));joint_target_mass:8/512;independent_denominator:64
+marked_blocks=r:3;k:(3, 8);length:5;address_intervals:((-3, 1), (-8, -4));joint_target_mass:32/32768;independent_denominator:1024
+marked_threshold_hostile=r:2;gap:2;joint_mass:3/128;independent_mass:2/128;conditioned_second_block:(a,b,1+c+d+cd);free_solutions:3/16;gap3_mass:8/512
+cemetery_classes=k1_to_k6:((1, 2, 8), (2, 8, 32), (3, 32, 128), (4, 128, 512), (5, 512, 2048), (6, 2048, 8192));mass_forms:P(Z_k=infinity)=2^-(2k-1),P(center1_and_infinity)=2^-(2k+1)
+semantic_sha256=bde3ac4efad657c775370ba1c06d5973f3803aaae80a41f1bdc9318451b3f01f
+assignments_checked=374164
+exact_gates=20876
+RESULT=PASS
