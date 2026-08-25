@@ -1,0 +1,16 @@
+status=PASS
+scope=all_odd_squarefree_q_through_5000;exact_CRT_spectral_probes
+squarefree_denominators_checked=2026
+crt_spectral_pairs_checked=388
+parity_tensor_obstructions_checked=1358
+identity=S(q)=4*N(q)-phi(q)
+exact_bound=|S(q)|<=2^omega*sqrt(q)*Lbar(q)*Abar(q)
+weak_bound_exactly_checked=replace_Abar_radicals_by_1+sum_Hstar(q/d)
+squarefree_apex_corollary=|B(q)|<=q^(1/2+o(1))
+minimal_nonmultiplicative_hostile=S(3)*S(5)=0;S(15)=8
+CRT_parity_plaquette=eta(0,0)*eta(1,0)*eta(0,1)*eta(1,1)=-1
+largest_packet_ratios=[(Fraction(1, 1), 15, 8, 8), (Fraction(1, 1), 7, 6, 6), (Fraction(1, 1), 3, 2, 2), (Fraction(11, 15), 31, 22, 30), (Fraction(5, 9), 19, 10, 18), (Fraction(3, 7), 87, 24, 56), (Fraction(2, 5), 55, 16, 40), (Fraction(13, 33), 67, 26, 66), (Fraction(3, 8), 85, 24, 64), (Fraction(23, 63), 127, 46, 126), (Fraction(1, 3), 201, 44, 132), (Fraction(1, 3), 93, 20, 60)]
+largest_apex_ratios=[(Fraction(1, 1), 7, 6), (Fraction(1, 1), 3, 2), (Fraction(11, 15), 31, 22), (Fraction(5, 7), 15, 10), (Fraction(3, 5), 21, 12), (Fraction(5, 9), 19, 10), (Fraction(11, 23), 93, 44), (Fraction(13, 33), 67, 26), (Fraction(23, 63), 127, 46), (Fraction(9, 25), 201, 72), (Fraction(27, 77), 155, 54), (Fraction(1, 3), 55, 18)]
+table_sha256=6d9ec06aad3d2c412a2fa3f8e7d95eb0cbfa01b944fb49e5221ecda59334f03d
+crt_sha256=606ba0d5aa290cd856cf527fdeb1e284f83673986b84549de612f2aaec7a5d96
+boundary=prime_Weil_is_imported;no_prime_power_or_all_composite_claim

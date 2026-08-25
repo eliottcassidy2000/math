@@ -1,0 +1,16 @@
+status=PASS
+method=continued_fraction_depth;direct_lower_star;extended_euclid_half_box;CRT_histogram_convolution
+scope=all_odd_squarefree_q_through_3000;all_h_k_on_nine_hostile_CRT_moduli
+squarefree_denominators_checked=1213
+composite_parity_fluxes_checked=784
+full_CRT_spectral_pairs_checked=28705
+degenerate_prime_axis_controls=19
+identity=continued_fraction_S(q)=4*N(q)-phi(q)
+divisor_star=direct_B(q)=sum_{d|q,d>1}S(d)
+tournament_apex=indeg-outdeg=B(q);indeg+outdeg=q-1
+rank_one_control=every_nonzero_local_tensor_has_plaquette_flux_+1
+global_parity_flux=-1_for_every_checked_composite_squarefree_q
+minimal_nonmultiplicative_hostile=S(3)*S(5)=0;S(15)=8
+table_sha256=d9c0e68fa19911d9a4b75eea507bb4bf3998876192b383ff3fc08da9bb034309
+crt_sha256=632b1cad7d24b4ed1306e0f8896bae9d4a85e54b9b9f76ecb5f4b4ae2f89cb2f
+boundary=prime_Weil_is_imported;prime_powers_and_all_composites_are_OPEN
