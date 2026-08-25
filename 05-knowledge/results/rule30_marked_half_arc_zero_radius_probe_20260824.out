@@ -1,0 +1,36 @@
+UNNUMBERED Rule30 marked half-arc and nearest-zero-radius probe
+script_sha256_lf=a81b8d61ae0512820cf42e8c73c6f78fdeda70749f3aff9a67aac8003d8c94e8
+rule30_center_prefix20=11011100110001011001
+independent_complete_rule30_rows_match_through=512
+complete_row_checks=513
+haar_characteristic_unique_preimage_checks=((1, 1, 1, 1), (2, 3, 1, 1), (3, 5, 1, 1), (4, 7, 1, 1), (5, 9, 1, 1), (6, 11, 1, 1), (7, 13, 1, 1), (8, 15, 1, 1))
+haar_characteristic_words_exhausted=43690
+haar_tail_law=P(Z>r)=2^{-(2r-1)}
+haar_mass_law=P(Z=1)=1/2;P(Z=r)=3*2^{-(2r-1)}_for_r>=2
+haar_center_given_radius=P(c=1|Z=1)=3/4;P(c=1|Z=r)=1/4_for_r>=2
+haar_joint_law=P(c=1,Z=1)=3/8;P(c=1,Z=r)=3*2^{-(2r+1)}_for_r>=2
+direct_transition_current_checks=131327
+direct_full_terminal_arc_checks=511
+direct_shortened_half_arc_checks=511
+direct_sharp_even_midpoint_boundary_checks=256
+direct_marked_current_zero_run_and_earlier_cylinder_checks=66047
+universal_identity_target=c_k=XOR_{h=-floor(k/2)-1}^{-1} Q_k(h)
+universal_boundary_target=for_even_k_T_k(-k/2)=1
+finite_universe=single_seed_rule30;2<=k<=262143
+finite_universe_size=262142
+nearest_zero_search_cap=64
+nearest_zero_unresolved_count=0
+nearest_zero_histogram=((1, 131120), (2, 98428), (3, 24449), (4, 6074), (5, 1570), (6, 383), (7, 90), (8, 20), (9, 8))
+nearest_zero_center_split_radius_zero_one=((1, 32569, 98551), (2, 73737, 24691), (3, 18346, 6103), (4, 4560, 1514), (5, 1179, 391), (6, 276, 107), (7, 70, 20), (8, 14, 6), (9, 4, 4))
+nearest_zero_record_maxima=((2, 2, 0), (8, 3, 1), (20, 4, 0), (217, 7, 0), (5815, 8, 1), (79883, 9, 0))
+nearest_zero_radius_at_least_8_witnesses=((5815, 8, 1), (26964, 8, 0), (54710, 8, 0), (64526, 8, 0), (67149, 8, 1), (72966, 8, 0), (75428, 8, 0), (76758, 8, 0), (79883, 9, 0), (89590, 8, 0), (100594, 8, 1), (101071, 9, 1), (116632, 8, 0), (134557, 8, 0), (141097, 8, 1), (144131, 8, 0), (158069, 9, 1), (172700, 8, 0), (173330, 8, 0), (184176, 8, 1), (191113, 8, 0), (203149, 9, 0), (210524, 8, 1), (212842, 9, 1), (230316, 9, 0), (241807, 9, 0), (242312, 9, 1), (246123, 8, 0))
+nearest_zero_radius_9_witnesses=((79883, 9, 0), (101071, 9, 1), (158069, 9, 1), (203149, 9, 0), (212842, 9, 1), (230316, 9, 0), (241807, 9, 0), (242312, 9, 1))
+first_radius_9_witness=(79883, 9, 0)
+universal_radius_at_most_8=REFUTED_FINITE_EXACT
+dyadic_prefix_histograms=((255, ((1, 140), (2, 89), (3, 21), (4, 3), (7, 1)), 7), (511, ((1, 272), (2, 177), (3, 48), (4, 10), (5, 1), (7, 2)), 7), (1023, ((1, 531), (2, 355), (3, 94), (4, 29), (5, 7), (6, 3), (7, 3)), 7), (2047, ((1, 1053), (2, 741), (3, 180), (4, 48), (5, 14), (6, 7), (7, 3)), 7), (4095, ((1, 2063), (2, 1537), (3, 364), (4, 93), (5, 24), (6, 9), (7, 4)), 7), (8191, ((1, 4120), (2, 3069), (3, 745), (4, 187), (5, 51), (6, 13), (7, 4), (8, 1)), 8), (16383, ((1, 8198), (2, 6225), (3, 1450), (4, 377), (5, 102), (6, 23), (7, 6), (8, 1)), 8), (32767, ((1, 16347), (2, 12446), (3, 2951), (4, 765), (5, 199), (6, 49), (7, 7), (8, 2)), 8), (65535, ((1, 32774), (2, 24662), (3, 6011), (4, 1543), (5, 416), (6, 104), (7, 20), (8, 4)), 8), (131071, ((1, 65513), (2, 49187), (3, 12220), (4, 3067), (5, 819), (6, 204), (7, 47), (8, 11), (9, 2)), 9), (262143, ((1, 131120), (2, 98428), (3, 24449), (4, 6074), (5, 1570), (6, 383), (7, 90), (8, 20), (9, 8)), 9))
+single_seed_vs_haar_scaled_discrepancies=((1, 1, 2, 131120, 98), (2, 3, 8, 98428, 998), (3, 3, 32, 24449, -4058), (4, 3, 128, 6074, -8954), (5, 3, 512, 1570, 17414), (6, 3, 2048, 383, -2042), (7, 3, 8192, 90, -49146), (8, 3, 32768, 20, -131066), (9, 3, 131072, 8, 262150))
+single_seed_finite_temporal_histogram_equals_haar_proportions=NO
+semantic_sha256=5945c0dc21b6112bdd0bfde0bd230fcf894cc60786530c68737ad9d3409f6005
+status=UNNUMBERED;UNIVERSAL_IDENTITIES_DIRECTLY_CHECKED_FINITE;RADIUS_DATA_FINITE_EXACT
+rule30_density_prize=OPEN
+ALL CHECKS PASSED
