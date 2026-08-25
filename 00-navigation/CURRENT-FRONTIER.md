@@ -69,7 +69,21 @@ is the safe control `M(S_13)=99/338`. No cited result proves LRC(14).
   `4(U-1)/(63U)` closes no type. THM-4002 closes AP11 and 352,716 fixed
   `[1,21]` scale-two bodies. THM-4003/4004 give ratio/prime/`t<U` gates
   (`U>=3,208,300,859`); all 17 arbitrary-body types and owner/arrival remain
-  OPEN. THM-3858 exhausts only the target `Z_3` test. **FINITE-EXACT:**
+  OPEN. [THM-4024](../01-canon/theorems/THM-4024-lrc14-complete-divisor-incidence-envelope.md)
+  upgrades the divisor-incidence profile to `(11,9,8,8,7,7,...)`, leaving
+  only equality moduli `2,3,4`; [THM-4030](../01-canon/theorems/THM-4030-lrc14-d4-affine-defect-lattice-boundary.md)
+  converts the `d=4` obstruction into an exact bounded odd support-three
+  relation and closes every certificate-negative row, but still needs the
+  divided pack's safe-phase set. [THM-4025](../01-canon/theorems/THM-4025-lrc14-owner-residue-odd-dilation-semigroup.md)
+  gives the odd-divisibility semigroup, while [THM-4031](../01-canon/theorems/THM-4031-lrc14-endpoint-owner-rational-tail.md)
+  proves that every old-strip ray has an eventual arithmetic-survivor tail;
+  the owner-relaxed THM-4003 gate therefore cannot close ray tails, and has
+  LRC meaning only at physical heights below `91^6`. Orthogonally,
+  [THM-4029](../01-canon/theorems/THM-4029-lrc14-ap-cover-twelve-owner-rational-tail.md)
+  proves the exact twelve-owner/60-phase AP-cover tail with constant `127/35`
+  and corrects the span row to `(7,8,10,13,26,infinity)`. The AP-container
+  route still loses sparse occupancy, gaps and owner placement. THM-3858
+  exhausts only the target `Z_3` test. **FINITE-EXACT:**
   `(9,13;76,132)` is the unique tripling edge through sum `10^6`
   (independent control `5000`).
 - **PROVED:** [THM-2928](../01-canon/theorems/THM-2928-critical-seven-comb-grid-tensorization-and-drift-tariff.md)/2941: literal zero/one/two/three-drift sectors are empty; `k=2,3` are finite.
