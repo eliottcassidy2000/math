@@ -61,10 +61,11 @@ Then read the routed frontier, guardrails, and theorem. Logs and reflections are
     period plus parity the primitive half cap-six breaker. Composite rank
     seven and FC(3) remain open.
 12. **JC is false from dimension three; JC(2) and DC(2) remain open.** THM-1300
-    is exact; THM-2084 and THM-3543--4103 close named planar cells. THM-4120
-    forces degree `21` and floors `(28,31)` only on one smooth `2:3` seam;
-    THM-4122/4124 add intrinsic-width and integral-ratio target-orbit gates.
-    Collision walls, other cells, global entry, `JC(2)`, and `DC(2)` stay open.
+    is exact; THM-2084 and THM-3543--4103 close named planar cells.
+    THM-4120/4126 force degree `21`, nodal nonproperness, and `(28,42)` only
+    on one smooth `2:3` seam;
+    THM-4122/4124 add width and target-orbit gates. Walls, global entry,
+    `JC(2)`, and `DC(2)` stay open.
 13. **Complete period-14 coordinates can still be globally blind.** THM-2043
     proves parity-Hasse completeness for reduced period-14 functions. The
     audited Goddyn--Wong family in THM-2058 preserves the packet, every fixed

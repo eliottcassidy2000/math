@@ -30,12 +30,13 @@
   `d1bf27ab87eb78b79667854c3c57181942e248d83145a729e3460e641c8e2ca4`.
 
 - `jc23_extremal_target_de_response_thm4120.py` and independent
-  standard-library audit -> concordant `.out`s [THM-4120 PROVED RELATIVE TO
-  THM-3992/4053/4103 + CITED SHIODA--TATE + VERIFIED-EXACT + INDEPENDENTLY
-  VERIFIED-EXACT; JC(2) OPEN]. The smooth nonresonant theta-only
-  maximum-weight-eight target is `II*+I1+I1` with Mordell--Weil group `{O}`;
-  residue fields plus the Eisenstein-norm gate force degree `21`, and the
-  principal `DE` kernel raises total-degree floors to `(28,31)`. Primary
+  standard-library audit -> concordant `.out`s [THM-4120/4126 PROVED
+  RELATIVE TO THM-3992/4053/4103/4122 + CITED SHIODA--TATE + VERIFIED-EXACT
+  + INDEPENDENTLY VERIFIED-EXACT; JC(2) OPEN]. The smooth nonresonant
+  theta-only maximum-weight-eight target is `II*+I1+I1` with Mordell--Weil
+  group `{O}`. Full-boundary finiteness forces global degree `21`, `rho=1`,
+  and nonproperness equal to one or both nodal fibres; the `DE` kernel and
+  global `2:3` ratio raise total-degree floors to `(28,42)`. Primary
   script/output SHA-256:
   `a03716cc84df1391f7ba8e15ea362133405edc93b127e650fa68cbb9c51327c5` /
   `a81cb731233ac7367c624fce3429ba5db0d5a292d5aa4e0034a5b5e1ea5eab32`;

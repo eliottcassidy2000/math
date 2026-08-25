@@ -340,15 +340,15 @@ lift/phase clocks.
   challenges `(3,9),(5,6),(7,5),(11,4),(13,4)` all remain **OPEN**; the public
   `131199`-field file is a named finite population, not a world census.
 - **Jacobian/Dixmier:** `JC(2),DC(2)` remain **OPEN**; THM-3543--4103 close
-  named cells only. On the first smooth nonresonant theta-only `2:3` seam,
-  [THM-4120](../01-canon/theorems/THM-4120-jc23-extremal-target-degree-twenty-one-response.md)
-  forces response degree `21` and total-degree floors `(28,31)`.
+  named cells only. On the smooth theta `2:3` seam,
+  THM-4120/[4126](../01-canon/theorems/THM-4126-jc23-extremal-target-vertical-nonproperness.md)
+  force degree `21`, `rho=1`, nodal nonproperness, and floors `(28,42)`.
   [THM-4122](../01-canon/theorems/THM-4122-planar-keller-asymptotic-width-and-resonant-shear-contraction.md)
-  bounds normalized nonproperness poles by `rho*max(d,e)<=min(D-1,w_X)`;
+  bounds intrinsic poles by `rho*max(d,e)<=min(D-1,w_X)`;
   [THM-4124](../01-canon/theorems/THM-4124-planar-keller-integral-degree-ratio-all-vertex-shear.md)
-  removes integral reduced ratios in a target-orbit-minimal form. The three
-  collision walls, `M>=9`, other cells, chart entry, and THM-4044's clock
-  remain open; `(72,108)` has `rho<=2` only conditionally on width six.
+  removes integral ratios after target-orbit minimization. Walls, `M>=9`,
+  other cells, and chart entry remain open;
+  `(72,108)` has `rho<=2` conditional on width six.
   Exceptional quartic: THM-3703/3737 give grammar/image, THM-4034 the
   conductor, and THM-4039/4043/4046 reach `J_7`, obstruct `J_8`, and close
   critical `H`. [THM-4054](../01-canon/theorems/THM-4054-exceptional-affine-simple-zero-retained-packet.md)

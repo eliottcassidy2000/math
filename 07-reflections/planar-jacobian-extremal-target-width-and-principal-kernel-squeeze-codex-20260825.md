@@ -1,11 +1,11 @@
 # Planar JC(2): squeeze the counterexample through target arithmetic, intrinsic width, and principal edge kernels
 
 **Research synthesis, 2026-08-25.** The planar Jacobian conjecture remains
-**OPEN**. This session proves three narrower results: THM-4120 on the smooth
-nonresonant theta-only maximum-weight-eight `2:3` seam, THM-4122 on intrinsic
-pole widths of nonproperness components, and THM-4124 on integral-degree
-target shears. No statement below promotes a formal scaffold to a global
-Keller map or treats a reserved cell as proved.
+**OPEN**. This session proves four narrower results: THM-4120 on the smooth
+maximum-weight-eight `2:3` response, THM-4122 on intrinsic nonproperness
+width, THM-4124 on integral-degree target shears, and THM-4126 on vertical
+nonproperness inside that smooth seam. No statement below promotes a formal
+scaffold to a global Keller map.
 
 ## 1. Inheritance and portfolio
 
@@ -63,8 +63,9 @@ source escape width --bounds--> W --types--> target nonproperness curves,
 Lang polygon scaling --plus coefficients--> S --reduces--> target orbit.       (3)
 ```
 
-Neither arrow in `(3)` enters the local `2:3` seam automatically. Keeping
-these mechanisms separate prevents two tempting false transfers.
+THM-4126 now connects the first arrow to the smooth local seam, but only by
+using complete boundary exhaustion. The target-shear arrow still does not
+enter that nonintegral `2:3` gauge automatically.
 
 ## 3. The smooth maximum-weight-eight seam is much thinner
 
@@ -126,6 +127,29 @@ deg A>=28,                       deg C>=31.                (9)
 This does not empty the seam. It says any survivor must pay a much larger
 global degree bill than its first local jet suggests.
 
+Full boundary exhaustion supplies a second, global consequence. Removing the
+target origin and its complete seven-point inverse image makes the generic
+affine-fibre map finite of degree `21`. Clearing denominators in monic
+integrality equations spreads finiteness away from finitely many values of
+`q=E(U,V)`. Hence every target nonproperness component is vertical. THM-4122
+excludes every smooth elliptic fibre, leaving only the two nodal `I1` fibres
+
+```text
+E(U,V)=0,                       E(U,V)=a^3/2.             (10)
+```
+
+On their normalizations `(U,V)` has pole pair `(2,3)`, so `rho=1` and the
+global polynomial-degree pair is `(2G,3G)`. The local floor `deg A>=28` now
+forces
+
+```text
+G>=14,                    (deg A,deg C)>=(28,42),         (11)
+```
+
+or `(30,45)` in the higher-`DE`-weight branch. Thus `21` is also the global
+function-field degree on this seam, and the possible nonproperness set is
+exactly one or both nodal fibres.
+
 ## 4. Global counterexample normal form
 
 Let a nonproper Keller pair have degrees `(m,n)=G(d,e)` with `gcd(d,e)=1`,
@@ -133,7 +157,7 @@ and let `E=max(d,e)`, `D=max(m,n)`. For each irreducible nonproperness
 component, normalize it and write its intrinsic target pole pair as
 
 ```text
-(rho_C d,rho_C e).                                        (10)
+(rho_C d,rho_C e).                                        (12)
 ```
 
 Nguyen's raw parametrization multiplier is `M=(cover degree)rho_C`; it is not
@@ -141,20 +165,20 @@ intrinsic. Jelonek--Lason's total-degree and fixed-source-direction
 parametrizations then give
 
 ```text
-rho_C E <= min(D-1,w_X(F)).                               (11)
+rho_C E <= min(D-1,w_X(F)).                               (13)
 ```
 
 Consequences include `G>=2` and, in every affine-linear source chart,
 
 ```text
-w_X(F)>=max(4,E).                                         (12)
+w_X(F)>=max(4,E).                                         (14)
 ```
 
 For the global reduced pair `2:3`, Lang similarity makes every directional
 degree pair `(2r_j,3r_j)`, so `w_X=3r_min`; THM-3544 gives `r_min>=2` and
 
 ```text
-rho_C<=min(35,r_min)              at degrees (72,108).    (13)
+rho_C<=min(35,r_min)              at degrees (72,108).    (15)
 ```
 
 A genuinely attained chart with `w_X=6` would therefore force only pole pairs
@@ -167,7 +191,7 @@ single coefficient-synchronized shear:
 
 ```text
 deg Q=r deg P  =>  Q -> Q-cP^r lowers degree
-                    and cancels every nonzero outer vertex.                 (14)
+                    and cancels every nonzero outer vertex.                 (16)
 ```
 
 Therefore a degree-sum-minimal representative under two-sided triangular
@@ -175,10 +199,10 @@ target moves has neither degree dividing the other, so its reduced pair has
 `d,e>=2`. This is a normalization of the target orbit, not a claim about every
 presentation.
 
-The resonant `2:3` expression does not extend `(14)`:
+The resonant `2:3` expression does not extend `(16)`:
 
 ```text
-Jac(P,Q^2-cP^3)=2Q Jac(P,Q).                              (15)
+Jac(P,Q^2-cP^3)=2Q Jac(P,Q).                              (17)
 ```
 
 It is an observable, not an invertible target move. The current extremal
@@ -189,25 +213,23 @@ this shear theorem.
 
 | region | current squeeze | status | cheapest next decisive test |
 |---|---|---|---|
-| arbitrary planar Keller pair | choose a target-orbit representative with reduced `d,e>=2`; every nonproper component has `(rho d,rho e)` and obeys `(11)` | PROVED/CITED | search for a source chart with width close to `E`, recording componentwise `rho` |
+| arbitrary planar Keller pair | choose a target-orbit representative with reduced `d,e>=2`; every nonproper component has `(rho d,rho e)` and obeys `(13)` | PROVED/CITED | search for a source chart with width close to `E`, recording componentwise `rho` |
 | reduced `(72,108)` | each chart has `w_X=3r_min>=6` and `rho<=min(35,r_min)`; `rho in {1,2}` only if `r_min=2` is attained | PROVED + CONDITIONAL | compute the smallest `r_min` allowed by the reduced support constraints |
-| oriented `2:3`, `b=d=0`, maximum residual weight `8`, smooth nonresonant theta-only | degree exactly `21`; all punctures map to `O`; `(deg A,deg C)>=(28,31)` | PROVED RELATIVE + CITED + VERIFIED-EXACT | combine `(w-T)`-adic re-entry with all lower weight layers and the remaining Jacobian rows |
+| oriented `2:3`, `b=d=0`, maximum residual weight `8`, smooth nonresonant theta-only | global degree `21`; `S_F` is one/both nodal fibres; `rho=1`; `(deg A,deg C)>=(28,42)` | PROVED RELATIVE + CITED + VERIFIED-EXACT | enumerate rank-21 sheet defects and node monodromy for the two possible components |
 | same weight-eight face on three collision walls | smooth response proof unavailable | OPEN | normalize each repeated-root boundary and run the full THM-3997 Hasse system |
 | same reduced depth with maximum residual weight `>=9` | no finite support closure | OPEN | enumerate the first new edge-kernel generators and test whether pole-degree 21 still forces a coupled floor |
 | other depth cells or chart entry | not reached by the local reduction | OPEN | prove an invariant routing theorem into the oriented B2 chart, or produce a hostile cell |
 
-This table is the honest squeeze. The global theorems constrain what a
-counterexample's target geometry must look like; THM-4120 constrains one
-local source-at-infinity cell. No proved map currently identifies those two
-descriptions component by component.
+This table is the honest squeeze. THM-4126 identifies the local and global
+`2:3` descriptions only inside the smooth seam by the full-boundary spreading
+argument. No such identification is proved on a collision wall, another
+depth cell, or before chart entry.
 
-There is therefore no numerical conflict between degree `21` and a small
-`rho`. The former is the degree of a generic **source-fibre map** to an
-elliptic target, and `(42,63)` are pullback pole-divisor degrees on that
-genus-eight source curve. The latter measures coordinate poles on the
-normalization of a **target nonproperness component**. Likewise the local
-oriented `2:3` pole-depth cell has not been identified with the reduced global
-polynomial-degree pair `(d,e)`. Equating either pair is a carrier/type error.
+The numerical carriers remain distinct even after that bridge: `21` is the
+function-field/generic-fibre mapping degree; `(14,21)` is the pole pair at the
+single `DE` source puncture; `(42,63)` is the total source-curve pole-divisor
+pair; and `(2,3)` is the pole pair on a target nonproperness normalization.
+The bridged value is `rho=1`, not `7` or `21`.
 
 ## 6. Connection contracts
 
@@ -259,21 +281,39 @@ polynomial-degree pair `(d,e)`. Equating either pair is a carrier/type error.
 - **cheapest hostile:** the scaled-polygon non-Keller pair with vertex ratios
   `1,2` in the THM-4124 certificate.
 
+### 6.5 Complete boundary to vertical nonproperness
+
+- **source:** the finite projective generic-fibre map and its full inverse
+  image of the target origin;
+- **target:** the global nonproperness locus stratified by `q=E(U,V)`;
+- **map:** restrict away from the boundary, then clear denominators in monic
+  integrality equations;
+- **preserved:** mapping degree and finiteness over a dense pencil open set;
+- **destroyed:** which exceptional `q` values are nonproper before fibre
+  geometry is reintroduced;
+- **sidecar:** equality of the seven punctures with the complete boundary;
+- **cheapest hostile:** omit one puncture mapping to a finite target point,
+  which can restore a horizontal nonproperness component.
+
 ## 7. Highest-value next session
 
-1. **Collision-wall normalization.** For each of THM-4053's three walls,
+1. **Rank-21 nodal census.** For the three possibilities
+   `S_F=N_0,N_1,N_0 union N_1`, enumerate generic sheet loss, node monodromy,
+   and THM-3996 address packets in the finite-flat completion. The hostile is
+   a disconnected extra address packet invisible to total degree.
+2. **Collision-wall normalization.** For each of THM-4053's three walls,
    compute the normalized boundary points, their residue fields, and the
    target elliptic surface after stable reduction. Then ask whether a
    Mordell--Weil or component-group gate replaces the smooth argument.
-2. **Full `(w-T)`-adic compiler.** Order all support layers by `DE` weight and
+3. **Full `(w-T)`-adic compiler.** Order all support layers by `DE` weight and
    principal-kernel multiplicity, feed their first two re-entry coefficients
    into THM-3997's all-row Hasse system, and search for a decreasing response
    budget. The positive control is THM-4120's square/cube baseline; the
    hostile is cross-layer pole restoration.
-3. **Intrinsic-width ownership.** In the `(72,108)` reduced support atlas,
-   optimize `w_X(F)` over affine-linear source directions. If width six is
-   forced, enumerate only normalized target curves with pole pairs `(2,3)`
-   and `(4,6)` and compare their resultants with the source boundary ledger.
+4. **Target-orbit peak reduction.** Decide whether a triangular target word
+   can first increase degrees from `(2G,3G)` and later lower their sum. The
+   hostile `C^2-cA^3` is resonant but not an automorphism; any lawful word must
+   retain the explicit pencil and nonproperness sidecars.
 
 The strategic reframing is now precise: do not search for arbitrary
 coefficients of a vast Keller pair. Search for compatibility among three
