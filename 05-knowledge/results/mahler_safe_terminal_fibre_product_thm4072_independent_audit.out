@@ -1,0 +1,19 @@
+THM-4072 independent native-first exact audit
+exhaustive_depth=16
+ordinary_prefixes_checked=131070
+lex_safe_counts_0_to_16=1,2,3,5,8,12,18,27,40,60,90,134,201,302,452,678,1018
+renewal_states_0_to_16=1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17
+terminal_extendible_safe_prefixes_0_to_16=1,2,3,5,8,12,18,27,40,60,90,134,201,302,452,678,1018
+native_clock_descent_gates=545289
+safe_native_level16_sha256=1231259c09ce234c71feb5b89d9c59381ba9227b83ca95566ca10928dac995ce
+pairwise_follower_separators=136
+maximum_scout_separator_length=9
+shifted_greedy_resets_in_256=132
+greedy_equality_prefix_64=1010000010010010100000000010000001000010000001001001010000000000
+periodic_100_tails=18/19,8/19,12/19
+periodic_100_native_block_18=101100001010011110
+terminal_A1_truncated_tail=94/81
+centered_01_native_block_4=0110
+centered_01_hostile_suffix=266/243
+tower_horizon_bitlength_hostile=18:17:27/38;36:35:27/38;54:53:27/38;72:71:27/38
+result=PASS

@@ -1,6 +1,8 @@
 # Current Frontier
 
-**Rolling state — 2026-08-25.** Links are proof sources; composition and residuals live here. Statuses: **PROVED**, **CITED**, **FINITE-EXACT**, **VERIFIED**, **CONDITIONAL**, **OPEN**, **RESERVED**, **REFUTED**, **SUPERSEDED**.
+**State — 2026-08-25.** Proof links; statuses: **PROVED**, **CITED**,
+**FINITE-EXACT**, **VERIFIED**, **CONDITIONAL**, **OPEN**, **RESERVED**,
+**REFUTED**, **SUPERSEDED**.
 
 ## LRC(14)
 
@@ -123,7 +125,7 @@ is the safe control `M(S_13)=99/338`. No cited result proves LRC(14).
 
 ## Mahler `3/2`
 
-**OPEN.** [THM-3848 frontier and next task](MAHLER-THREE-HALVES-FRONTIER-2026-08-23.md).
+**OPEN.** [THM-4072: exact product, vacuous finite tests, next task](MAHLER-THREE-HALVES-FRONTIER-2026-08-23.md).
 
 ## ABC-IUT
 

@@ -71,19 +71,38 @@ denominator-19 construction changes its initial integer with `m`.  IUT adds no
 unconditional input here; only the contested claimed IUT-to-ABC implication
 could feed the explicitly conditional ABC consumer.
 
-## Live finite-exact task
+## Exact fibre product and finite-state obstruction
 
-Build the fibre product of the strict safe follower tree with THM-2352's
-plateau/stabilization clock.  Preserve four sidecars throughout:
+[THM-4072](../01-canon/theorems/THM-4072-mahler-safe-terminal-fibre-product-and-finite-state-obstruction.md)
+closes the former finite task.  The safe follower graph has countable state
+`q`: nonrejection is the closed language `K`, while strict safety is exactly
+infinitely many reset edges.  Carry and native digits are related by a
+rooted-binary-tree automorphism with the online integer sidecar
 
-1. oriented phase rather than centered distance;
-2. equality-boundary versus strict status;
-3. native carry residue and suffix follower state;
-4. ordinary terminal/stabilization state.
+```text
+e=c xor (u mod 2),
+u'=(3u+c+3^(m+1)e)/2.
+```
 
-Mandatory hostile controls are the greedy equality boundary,
-`(100)^infinity` (safe but nonterminal), the `A=1` itinerary (terminal but
-unsafe), `(01)^infinity` (the nonterminal mod-five maximizer), and the
-changing-start denominator-19 tower.  A successful finite computation must
-state why its filtered universe still contains every genuine candidate; raw
-survival counts alone are not a Mahler or LRC theorem.
+Thus a candidate code is exactly a synchronized path that never rejects,
+resets infinitely often, and has finitely many but at least one native `1`.
+Every finite terminal-prefix test removes **zero** safe nodes: its inverse
+limit closes strict safety to `K` and eventual-zero native paths to the full
+binary path space.  The rooted pair-prefix language is nonregular, and no
+finite synchronous transducer changes carry to native coordinates.  The
+greedy boundary, `(100)^infinity`, `A=1`, `(01)^infinity`, and the
+denominator-19 tower are exact controls, not candidate evidence.
+
+## Live deterministic task
+
+After the last native `1`, the product becomes the deterministic integer
+system
+
+```text
+(q,u) -> (delta(q,u mod 2), ceil(3u/2)),
+```
+
+with rejection when `delta` is undefined.  Starting from every reachable
+safe state with `u>0`, prove that the orbit rejects or loses the infinite-reset
+condition; alternatively exhibit one reachable nonrejecting orbit with
+infinitely many resets.  This is the honest post-terminal Mahler problem.
