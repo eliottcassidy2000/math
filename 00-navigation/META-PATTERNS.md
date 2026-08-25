@@ -242,11 +242,14 @@ only after factorization or target-annihilation is proved.
 
 ## Fill operation columns, not only invariant columns
 
-**Action/boundary:** test native generators on object and dual. Before
-replacing an object by rank `e(n)=n`, pull generators through the rank and
-type the law; otherwise rank only schedules. Retain a decoder whenever rank
-loses gaps, weights, ancestry, cancellation or fibre components. **Evidence:**
-THM-3756, THM-3382, THM-3758/3819.
+**Trigger/action:** when an invariant census stalls, apply the next native
+generator to the object and dual; type its pullback, split boundary paths from
+cycles, and retain a decoder before rank loses gaps, weights, or fibres.
+**Counterindications:** fixed carriers need not control moving observers; unit
+conditions matter; a factorized kernel need not factorize its weight; graph
+periods reach `S_Gamma`, not the common-target algebra `Acal`, without descent.
+**Evidence:** THM-3756/3382/3758/3819 and, independently, THM-4065--4068:
+Rule-30 transfer, affine dilation, graph equalizer, and CRT/parity split.
 
 ## Tournament Analysis must preserve content
 

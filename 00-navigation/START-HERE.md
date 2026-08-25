@@ -1,6 +1,6 @@
 # Start Here
 
-**Rolling brief — refreshed 2026-08-24; update whenever a headline changes.** This is a router, not a proof source; the startup packet prints the commit and [`CURRENT-FRONTIER.md`](CURRENT-FRONTIER.md) owns status links.
+**Rolling brief — refreshed 2026-08-25; update whenever a headline changes.** This is a router, not a proof source; the startup packet prints the commit and [`CURRENT-FRONTIER.md`](CURRENT-FRONTIER.md) owns status links.
 
 ## The five-minute orientation
 
@@ -24,6 +24,7 @@ Then read the routed frontier, guardrails, and theorem. Logs and reflections are
    THM-3378 leaves ledger/wall/families `372913/109/12` at `z1=216`.
    THM-3349--3360 close the 561-body lane; THM-3366 leaves projected rows/counts `4,056/200,069,517,203` (`k=2`) and `1,897/2,548,893,834` (`k=3`).
    THM-3368 adds a Horn tariff, not an LRC proof; the rung, physical entry and LRC remain open.
+   THM-4066 closes two exact affine rays; physical entry and LRC remain open.
 2. **The `q <= 25` period claim is refuted.** THM-762/764 exhibit `26*{1,...,12} union {339}`, whose first good period is `27`.
 3. **Good-period existence is a maximum statement, not an average or count.**
    The tight AP at its resonant ruler defeats the tempting mean arguments; see
@@ -52,29 +53,18 @@ Then read the routed frontier, guardrails, and theorem. Logs and reflections are
    phase; THM-3285 gives a literal `R-M-R` horn. Its FINITE-EXACT `13`-label
    normal atlas has two middle completions but no outer co-support. A two-axis
    atom, current and LRC(14) remain OPEN.
-10. **Pair structure must be typed.** THM-3315/3364/3369/3372 give local
-    tournament/walk currents; THM-3423 gives a Cayley disjointness graph, not
-    a tournament. None supplies nonlocal LRC arcs or physical time.
+10. **Pair structure must be typed.** THM-3423 gives a graph, not a tournament;
+    THM-4068 gives Stern/apex square-root bounds for odd squarefree moduli, but
+    parity has CRT cross-ratio `-1` and prime powers remain open.
 11. **Support is not multiplicity.** THM-2000/2005/2352/3359/3362/3382
     separate collision, phase and harmonic address. THM-3425 makes joint
     period plus parity the primitive half cap-six breaker. Composite rank
     seven and FC(3) remain open.
-12. **JC is false from dimension three; JC(2) and DC(2) remain open.** THM-1300 is exact. THM-2063/2071, THM-2084/2118/2102, and THM-2202 close linear through cubic fibers and twice-odd finite poles; THM-2214/2217/2247 close the inherited nonsplit train through degree `14`.
-    THM-3544/3550 internally force hypothetical pencil degrees composite
-    `>=6` and height `>=8`; Nagata's cited degree theorem sharpens every
-    pencil degree to `Omega>=3`, while arXiv:2204.14178 gives reduced height
-    `>=108` and leaves only `(72,108)` below `125`.
-    THM-3543--3557 give the collision/repair atlas: quotient repair begins at
-    `(4,5)`, displayed graphs are closed, and cubic/packet/mixed-width lanes
-    remain sharply typed but open.
-    THM-3695--3712: `y=0` first `3x4`; W002/W007/W008 empty, one W003
-    family closed, W003--W006 otherwise live.
-    THM-2371/THM-2376 close named degree-`18` strata; later sheet/quotient losses remain.
-    THM-3212--3419 give the later infinity, deck, boundary, and linear-`z`
-    atlases; THM-3418 closes sparse `f(x)+g(x)z^d`, not general fibres.
-    THM-4044/4045 pin the clock and force `M>=8`; THM-4053 cuts two weight-8
-    strata. THM-4058/4060/4063 handle fixed-`a`, simple, and ramified
-    packets; `p*y^2`/walls and global `JC(2)`/`DC(2)` stay open.
+12. **JC is false from dimension three; JC(2) and DC(2) remain open.** THM-1300 is exact. THM-2063/2071, THM-2084/2118/2102, and THM-2202 close typed sectors; THM-4044/4045 force `M>=8` and THM-4058/4060 handle fixed-`a`/simple packets.
+    THM-4067 identifies the universal graph-period gap `S_Gamma/Acal`, which
+    becomes a seminormal defect for reduced curve functions; it refutes the
+    displayed figure eight but preserves the abstract connection and `e>=2`
+    no-go. Global entry, `p*y^2`/walls, `JC(2)`, and `DC(2)` stay open.
 13. **Complete period-14 coordinates can still be globally blind.** THM-2043
     proves parity-Hasse completeness for reduced period-14 functions. The
     audited Goddyn--Wong family in THM-2058 preserves the packet, every fixed
@@ -86,21 +76,13 @@ Then read the routed frontier, guardrails, and theorem. Logs and reflections are
 14. **The peel obstruction is quantized.** THM-2048 decomposes discrepancy into
     the old `6mu^2` floor plus an exact integer fiber-occupancy variance tax. It
     strictly improves the uniform tail test but is not a universal proof.
-15. **Every counterexample is in a finite labelled code/deck/fan atlas.** THM-2051/2052 force support `3..5`, bounded height, and rank at least eleven; THM-2053/2055/2056 give the transverse deck, determinant gate, signed fan, and finite Kelvin/Farey certificate. THM-2057--2059 close two AP-tail families and split/join clock packets, without forcing overlap.
-    THM-2060--2100, including THM-2081--2087 and THM-2088--2093, fold the
-    dyadic seam, retain owner addresses, and give the uniform box
-    `max(S)<=22,822,941,298,192,042`.
-    THM-2114--2168 leave four signatures and scalar `5+3`; THM-2187--2385
-    retain slope/current, prove rank twelve, and leave `165` depth-one rows
-    plus an owner-typed multiplicity word.
-    MISTAKE-260/MISTAKE-261 block inverse-root nonvanishing and expose the
-    `28,393`-dimensional landing kernel; THM-2363/THM-2368 remain sidecars.
-    THM-2452--2763 close seams, not arrival; sector attachment remains live.
-16. **Use the native operation carrier, not shared syntax.** THM-2176 exposes
-    the knot continuation cocycle; THM-2191 gives its catalytic group length,
-    commuting stable envelope, and abstract additive dual, and closes `9_10`.
-    THM-2177 refutes Goemans' cost conjecture through a conflict graph.
-    MISTAKE-230--235 forbid syntax-only bridges.
+15. **Every counterexample is in a finite labelled code/deck/fan atlas.** THM-2051--2059 bound support/height and retain deck, fan, and clock data; THM-2081--2087 and THM-2088--2093 preserve owner addresses inside a finite box.
+    MISTAKE-260/MISTAKE-261 expose a `28,393`-dimensional landing kernel;
+    THM-2363/THM-2368 and THM-2371/THM-2376 are typed sidecars, not arrival.
+16. **Use the native operation carrier, not shared syntax.** THM-2176/2191
+    expose the knot continuation carrier; MISTAKE-230--235 forbid syntax-only
+    bridges. THM-4065's Rule-30 spatial transfer proves infinitely many isolated
+    fixed-column zeros and next depth `1420878968`; center/prizes remain open.
 17. **Sun 2-4-6-8 is refuted:** THM-4026; THM-4027/4028/4036/4037 separate
     local support, mean, energy and parity from coverage; THM-4040 gives
     uniqueness only in one CRT class. Global classification remains open.

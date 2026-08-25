@@ -184,6 +184,7 @@
 67. **JC closures do not compose.** THM-3770 closes fixed-target/dressing poles; THM-3779 closes target words only for tower `m>=2`; THM-3780 closes fillings only for the same pair. THM-3782 needs divisor coverage for all-word transfer. THM-3781 closes every scalar-centred `3x3` AP cell, but not noncentral, gapped, or larger supports.
     THM-3783 computes the `m=1` surface; THM-3786 closes its irregular `2x3` cells, not the common-step lane or all Darboux pairs. THM-3784's trace-zero rungs have no nonzero base-field bracket, but nonbase mixed brackets remain. Audited THM-3785 closes the linear third-pole pseudo-plane's birational/affine/`2x2` entrances, not nonlinear multigraded pairs. Other higher poles/supports, altered pairs, arbitrary quartics, interacting Cohn factors, and `JC(2)` remain open.
 68. **The odd-period finite-cycle Rule 30 no-go is not a prize theorem.** THM-3778 closes exact finite scale-cycles only in the cyclic projective-profile ansatz. Spatially nonperiodic or nonclosing profiles, nonlinear owner/carry sidecars, Mealy and signalizer closure, bounded gaps, center/density/balance, and every Rule 30 prize remain open.
+69. **Graph incidence is not period completeness.** MISTAKE-494/THM-4067: compare common-target `Acal` with graph equalizer `S_Gamma`; nonincident formal contacts can survive. Under edge primitives completeness is `Acal=S_Gamma`.
 ## Promotion checklist
 Audit types, quantifiers, symmetries, direction, quotient loss, hostiles,
 dependencies, correction lineage, both replays, and every failure boundary.

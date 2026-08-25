@@ -9,17 +9,20 @@
 
 - **Advanced anchor -- inverse-parity packet cancellation.** THM-4061 now
   proves the exact odd-modulus hyperbola identity `S(q)=4N(q)-phi(q)` and the
-  prime bound `S(p)=O(sqrt(p)log^2 p)` from Weil. Determine prime-power and
-  composite bounds, classify zero packets, and decide whether the non-Euler-
-  product Dirichlet series has global cancellation. Preserve the inverse
-  carry `h`; parity of endpoints and inverse alone already fails at
-  denominator eight. **PRIME LANE PROVED; REMAINDER OPEN.**
+  prime bound `S(p)=O(sqrt(p)log^2 p)` from Weil. THM-4068 extends this to
+  `|S(q)|<=q^(1/2+o(1))` for every odd squarefree `q` by exact CRT Kloosterman
+  factorization; parity itself is provably non-tensorial. Determine
+  prime-power and general nonsquarefree bounds, classify zero packets, and
+  decide whether the non-Euler-product Dirichlet series has global
+  cancellation. **ODD SQUAREFREE LANE PROVED; PRIME POWERS/GENERAL LANE OPEN.**
 - **Advanced niche -- depth-tournament score asymptotics.** THM-4061 proves
   that the normalized apex imbalance tends to zero along primes. THM-4059
   identifies the general lower star as `B(N)=sum_(q|N,q>1)S(q)` and the total
-  initial imbalance as `sum S(q)floor(X/q)`. Bound these composite observables
-  and compare them with directed-triangle density without promoting a lower
-  star to a full vertex degree in a larger tournament. **PRIME APEX PROVED;
+  initial imbalance as `sum S(q)floor(X/q)`. THM-4068 now proves
+  `|B(N)|<=N^(1/2+o(1))` and normalized apex balance for every odd squarefree
+  `N`. Bound prime-power/general composite observables and compare them with
+  directed-triangle density without promoting a lower star to a full vertex
+  degree in a larger tournament. **ODD SQUAREFREE APEX PROVED; GENERAL
   REMAINDER OPEN.**
 
 - **Anchor -- trace-pure `e+pi` recurrence audit.** Express every promising

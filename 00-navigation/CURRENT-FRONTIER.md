@@ -1,6 +1,6 @@
 # Current Frontier
 
-**Rolling state — 2026-08-24.** Links are proof sources; composition and residuals live here. Statuses: **PROVED**, **CITED**, **FINITE-EXACT**, **VERIFIED**, **CONDITIONAL**, **OPEN**, **RESERVED**, **REFUTED**, **SUPERSEDED**.
+**Rolling state — 2026-08-25.** Links are proof sources; composition and residuals live here. Statuses: **PROVED**, **CITED**, **FINITE-EXACT**, **VERIFIED**, **CONDITIONAL**, **OPEN**, **RESERVED**, **REFUTED**, **SUPERSEDED**.
 
 ## LRC(14)
 
@@ -78,6 +78,7 @@ is the safe control `M(S_13)=99/338`. No cited result proves LRC(14).
   the ten-class mod-`56` firewall; and [THM-4052](../01-canon/theorems/THM-4052-lrc14-affine-component-width-escape-cones.md)
   closes `d2:E>=12M`, `d3:E>=11M`, `d4:3E>=44M`. The finite producer obeys
   `d sum(H)+sum(E)<=91^12`; THM-4062 makes its affine intercept mandatory.
+  [THM-4066](../01-canon/theorems/THM-4066-lrc14-diagonal-intercept-pullback-and-exact-affine-ray-closure.md) closes `3H union h{1,4,5}` for `3∤h,24h>=11M` and `4H union h{2,7,9}` for odd `h,21h>=22M`; LRC(14) stays open.
   [THM-4025](../01-canon/theorems/THM-4025-lrc14-owner-residue-odd-dilation-semigroup.md)
   gives the odd-divisibility semigroup, while [THM-4031](../01-canon/theorems/THM-4031-lrc14-endpoint-owner-rational-tail.md)
   proves that every old-strip ray has an eventual arithmetic-survivor tail;
@@ -230,7 +231,7 @@ THM-2070 refutes the general HYP-8890/8895 bypasses.  Transfer
   `4/6/3` K4 carriers; matching loses Cassini sign. THM-3497: ancestry
   densities. THM-4057 separates coprime arcs, Pell/Fibonacci depth gauge, and
   Calkin--Wilf Berggren radix. THM-4059 gives inverse-depth/divisor stars;
-  THM-4061 proves prime-apex balance. Composite cancellation remains open.
+  THM-4061 proves prime-apex balance; [THM-4068](../01-canon/theorems/THM-4068-squarefree-stern-packet-and-tournament-apex-balance.md) gives `|S(q)|,|B(q)|<=q^(1/2+o(1))` for odd squarefree `q`: the CRT kernel factors, parity does not, and nonsquarefree moduli stay open.
 - THM-3457/3462: `25/477`.
 - THM-1926 factors zeta over the strong core; THM-1940 gives `var(lambda^2)`.
 - THM-1965 stops at `n<=6`; THM-1966 adds a signed-Rédei coordinate at `n=7`.
@@ -346,9 +347,10 @@ lift/phase clocks.
 - **Knots:** THM-2176/2191/2281 and THM-2242/2330--2383: localization, owner/ANOVA/rectangle/reference inversion; realization/stable diagonal open. THM-2646: modular/exponent `B3` conjugacy, not Markov invariance.
 - **Flows:** [THM-2177](../01-canon/theorems/THM-2177-planar-counterexample-to-goemans-unsplittable-cost-flow-conjecture.md): planar `58<60` refutes exact `d_max`; planar `2d_max` survives.
 - **Hensel:** THM-3446/3449/[3452](../01-canon/theorems/THM-3452-unequal-depth-noncommuting-smooth-hensel-heisenberg-orbit-law.md): weighted/equal/unequal banks; dyadic repair.
-- **Rule 30:** [4047](../01-canon/theorems/THM-4047-rule30-left-front-affine-monodromy-clock.md)/[4055](../01-canon/theorems/THM-4055-sixty-dyadic-response-fibre-law.md)/[4064](../01-canon/theorems/THM-4064-rule30-cyclotomic-kernel-character-and-c60-alias-obstruction.md):
-  only `82/100001` factor through `C_60`; `q` is a `mu_m` torsor/character.
-  Numerator restores it; depth/flank do not. Center/prizes **OPEN**.
+- **Rule 30:** [4047](../01-canon/theorems/THM-4047-rule30-left-front-affine-monodromy-clock.md)/[4064](../01-canon/theorems/THM-4064-rule30-cyclotomic-kernel-character-and-c60-alias-obstruction.md)/[4065](../01-canon/theorems/THM-4065-rule30-temporal-cylinder-transfer-infinite-zero-columns-and-next-zero.md):
+  cyclic-word spatial transfer proves infinitely many isolated fixed-column
+  zeros; after `87866`, the next is `1420878968` (gap `1420791102`). Fixed
+  columns and `C_60` still lose the moving center/character; prizes **OPEN**.
 - **Two Hopf problems:** the `S2 x S2` curvature and `S6` complex-structure
   preprints are distinct **PREPRINT CLAIM / UNDER AUDIT**. Only the recorded
   mixed/Hessian identities are exact in the first lane; the `2Z` orbit in the
@@ -372,8 +374,11 @@ lift/phase clocks.
   [THM-4058](../01-canon/theorems/THM-4058-exceptional-affine-triangle-period-and-simple-zero-monomial-ladder.md)
   makes frozen-`a` failure an all-`m` ladder;
   [THM-4060](../01-canon/theorems/THM-4060-exceptional-simple-zero-mixed-form-cokernel-collapse-and-formal-pair-lift.md)
-  solves simple zeros formally; THM-4063 gives the graph connection and
-  `e>=2` no-go. Completeness/global entry/`JC(2)` stay open.
+  solves simple zeros formally. THM-4063's graph connection is conditional and
+  its `e>=2` no-go survives. [THM-4067](../01-canon/theorems/THM-4067-seminormal-period-kernel-and-figure-eight-completeness-obstruction.md)
+  identifies the universal gap `S_Gamma/Acal`, specializing to a seminormal
+  defect for reduced curve-function realizations, and refutes the displayed
+  figure-eight antecedent. Global entry/`JC(2)` stay open.
 - **Weyl boundary:** THM-2049 gives a formal beta-adic lift; finite termination remains.
 - **Planar source fibres:** THM-2063/THM-2084--2480 (including
   THM-2371/THM-2376) close the named
