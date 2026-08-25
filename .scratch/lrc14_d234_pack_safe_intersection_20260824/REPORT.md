@@ -154,3 +154,7 @@ summary digest is
 `fc375ff65bc4e5c36b4e60a906291fa55088a0e149b130867da1a9341e4f78b8`.
 The LF-normalized SHA-256 of `audit.py` is
 `3932b4b25838dcf3b239ca0285bbb8f34362a44a31371a1ef28ce7be5ee7c09b`.
+The exact normal transcript is `audit.out`; its LF-normalized SHA-256 is
+`407c7613bfd9de4ea5bbf215b03cb0298105ba180a11b00785cbadefb9475dec`.
+A fresh optimized run has the same `10109` LF-normalized bytes and the same
+SHA-256.
