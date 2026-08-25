@@ -1,0 +1,11 @@
+THM-4093 exact audit
+rational diagonal-gauge cases: 126
+tournaments exhausted through n=6: 33867
+cyclic/transitive triple slots audited: 665864
+exact p-adic tangent checks: 190
+Stern T_5: apex B=0, c3=1, det(I-uA)=-(u - 1)*(u**2 + u + 1)
+Stern T_9: apex B=0, c3=17, det(I-uA)=-4*u**8 - 24*u**7 - 55*u**6 - 59*u**5 - 34*u**4 - 17*u**3 + 1
+Stern T_13: apex B=0, c3=52, det(I-uA)=-48*u**12 - 340*u**11 - 1030*u**10 - 1780*u**9 - 2072*u**8 - 1802*u**7 - 1112*u**6 - 565*u**5 - 176*u**4 - 52*u**3 + 1
+hostile: B(T_9)=0 but c3(T_9)=17 and zeta is nontrivial
+sharpness hostile: P=1-2u^3-u^4, p=x=2 gives v_p(zeta(x)-1)=5
+all exact gates PASS

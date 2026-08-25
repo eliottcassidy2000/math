@@ -2,183 +2,162 @@
 id: THM-4090
 title: "Two-sort matching-logic global-completeness obstruction"
 status: >
-  PROVED FINITE SORT-FLOW SHARPENING + CITED SOUNDNESS INPUT + INDEPENDENTLY
-  RULE-BY-RULE AUDITED, relative to the many-sorted definedness-free
-  fixpoint-free Figure-2 matching-logic semantics and calculus of
-  arXiv:2608.13306v1. Two nonempty sorts and one unary symbol
-  f:b->a already admit a satisfiable theory Gamma and a closed b-sorted
-  consequence phi with Gamma models phi but Gamma does not derive phi. This
-  sharpens the preprint's three-sort Proposition 30 to a proved two-sort
-  failure. Together with the preprint's claimed one-sort theorem, this would
-  make its sort-count boundary sharp. It refutes global completeness of that
-  calculus, not axiomatizability or all calculi.
-source: codex-padic-zeta-tournament-20260825
+  PROVED + CITED MINIMALITY INPUT + FINITE-EXACT + INDEPENDENTLY AUDITED.
+  The standard Hilbert system for basic many-sorted, definedness-free,
+  fixpoint-free matching logic is already globally incomplete for a
+  satisfiable theory over two sorts and one unary symbol. Two sorts are
+  minimal existentially relative to the cited preprint-v1 one-sort
+  completeness theorem. This is a calculus obstruction, not
+  nonaxiomatizability.
+source: >
+  codex-padic-zeta-tournament-20260825; Chen--Rosu,
+  arXiv:2608.13306v1, Corollary 15 and many-sorted system of Figure 2
 depends_on: []
 related:
-  - THM-4088-order-tournament-arithmetic-type-blindness-and-lrc-margin-density
-external_source: https://arxiv.org/abs/2608.13306v1
+  - arXiv:2608.13306v1
+script: 04-computation/two_sort_matching_logic_obstruction_thm4090.py
+output: 05-knowledge/results/two_sort_matching_logic_obstruction_thm4090.out
+independent_audit: .scratch/matching_two_sort_referee_20260825/REPORT.md
+script_sha256: ff64ea8dadc2fd2d4718ce303e93a87c22e95ad6db2a86cacc3a907a48bca758
+output_sha256: 3ac734da6800af7278ad9e13c85e848773548d8869d5680b694f09cd9759f6b3
+hash_basis: raw LF bytes
 ---
 
-# THM-4090 -- global-completeness failure already occurs with two sorts
+# THM-4090 -- two sorts already obstruct global completeness
 
-**PROVED finite sort-flow sharpening + CITED soundness input + INDEPENDENTLY
-RULE-BY-RULE AUDITED.**
+**PROVED + CITED MINIMALITY INPUT + FINITE-EXACT + INDEPENDENTLY AUDITED.**
 
-The source
-[“Completeness and incompleteness of basic matching logic,” arXiv:2608.13306v1](https://arxiv.org/abs/2608.13306v1)
-claims global completeness for the one-sorted, definedness-free,
-fixpoint-free system and gives a three-sort counterexample in Proposition 30.
-The elementary sharpening below needs only two sorts and one unary symbol.
-See the [local source audit](../../05-knowledge/reference/arxiv-2608-13306-matching-logic-source-audit.md)
-for the theorem ledger and imported inputs.
+## 1. Exact setting and statement
 
-The status of the preprint's own new results remains **PREPRINT CLAIM / UNDER
-AUDIT**. This theorem uses its explicitly displayed semantics and Figure-2
-rule typing as definitions, plus the earlier soundness theorem cited there,
-and gives a separate finite sort-flow argument.
-
-## 1. The two-sort theory
-
-Let the carriers `M_a,M_b` be nonempty, let the signature consist of
+Use the standard Hilbert system displayed in Chen--Rosu,
+[*Completeness and incompleteness of basic matching
+logic*](https://arxiv.org/abs/2608.13306v1), with nonempty carriers and
+set-valued symbols.  Work in its basic many-sorted fragment: no definedness,
+fixpoints, nominals, or set variables.  Take two sorts `b,a`, one symbol
 
 ```text
-f:b -> a,                                                   (1)
+f : b -> a,
 ```
 
-and use the many-sorted matching-logic semantics of the source. Element
-variables denote singleton subsets of their carrier, symbols extend
-pointwise to subsets and propagate the empty set, and a pattern is satisfied
-when its denotation is its entire result-sort carrier.
-
-Put
+and the closed patterns
 
 ```text
-Gamma={forall x:b forall y:b. f(x and y)},                 (2)
-phi=forall x:b. x.                                         (3)
+Gamma = { forall x:b forall y:b. f(x and y) },
+phi   =   forall x:b. x.                                (1)
 ```
 
-The outer sort of the hypothesis in `(2)` is `a`; quantification does not
-change the outer sort. The conclusion `(3)` has outer sort `b`. Both are
-closed.
-
-### Theorem 1.1
+Then `Gamma` is satisfiable and
 
 ```text
-Gamma is satisfiable,       Gamma models phi,       Gamma does not prove phi. (4)
+Gamma |= phi,              but              Gamma !|- phi. (2)
 ```
 
-Consequently the many-sorted Figure-2 calculus is not globally complete
-already for two sorts.
+Consequently the displayed standard Hilbert system is not globally complete
+in general with two sorts.  Two is the least possible number of sorts for
+such an example relative to the paper's **CITED PREPRINT-v1** Corollary 15,
+which claims global completeness in the same basic one-sorted fragment.  The
+paper's new positive results have not been independently formalized here; see
+the [bounded source audit](../../05-knowledge/reference/arxiv-2608-13306-matching-logic-source-audit.md).
 
-## 2. Satisfiability and semantic consequence
+The minimality statement is existential.  It does not say that every
+two-sort signature or theory is incomplete.
 
-Take both carriers to be singletons and interpret `f` totally. Then `(2)` is
-total, so `Gamma` is satisfiable.
+## 2. Semantic mechanism
 
-Conversely, suppose a model satisfies `(2)`. If `r,s in M_b` were distinct,
-choose a valuation with `x=r,y=s`. Since element variables denote
-singletons,
+Element variables denote singletons, conjunction denotes intersection, and
+a positive-arity symbol propagates an empty argument to the empty set.  If
+the `b`-carrier contains distinct `r,s`, the valuation `x=r,y=s` makes
 
 ```text
-rho(x and y)={r} intersect {s}=emptyset.                   (5)
+[[x and y]] = empty,        [[f(x and y)]] = empty.      (3)
 ```
 
-Pointwise symbol extension gives `f(emptyset)=emptyset`, which cannot equal
-the nonempty carrier `M_a`. This contradicts totality of `(2)`. Hence every
-model of `Gamma` has singleton `M_b`.
+Since the `a`-carrier is nonempty, the universal intersection in `Gamma`
+cannot then be total.  Every `Gamma`-model therefore has `|M_b|=1`.
 
-For a singleton `M_b={w}`,
+Conversely, if `M_b={r}`, then `Gamma` is total exactly when
+`f_M(r)=M_a`.  This gives a model for every nonempty `M_a`, so the entailment
+is not vacuous.  Finally
 
 ```text
-rho(forall x:b. x)=intersection_(z in M_b){z}={w}=M_b.    (6)
+[[forall x:b. x]] = intersection_(r in M_b) {r},        (4)
 ```
 
-Thus `Gamma models phi`. On a two-element `b`-carrier the intersection in
-`(6)` is empty, so `phi` is not valid.
+which is total exactly when `|M_b|=1`.  Equations (3)--(4) prove
+`Gamma |= phi`.
 
-The source's longer conclusion
+## 3. Sort-flow proof of nonderivability
+
+Orient a feed edge from each input sort of a positive-arity symbol to its
+output sort.  Here the only nontrivial feed is
 
 ```text
-forall x:b forall y:b. (x iff y)                           (7)
+b -> a;                         there is no path a -> b. (5)
 ```
 
-works as well. Formula `(3)` is the minimal one-variable version.
+Induct on a putative finite derivation and strengthen the assertion to:
 
-## 3. The sort-flow non-derivability proof
+> Every derived line of sort `b` has an empty-theory derivation.
 
-Say a sort feeds another if they are equal or a positive-arity symbol has an
-argument of the first sort and result of the second, and take transitive
-closure. In signature `(1)`,
+This is a rule-by-rule invariant of the displayed calculus.
+
+- The sole hypothesis has sort `a`, so it cannot be such a line.
+- Propositional, quantifier, propagation, Existence, and
+  singleton-variable axiom instances already have empty-theory derivations.
+- Modus ponens and existential generalization preserve the pattern sort, so
+  their premises can be replaced by the empty-theory derivations supplied by
+  induction.  The derived universal-generalization rule is handled the same
+  way.
+- Framing is the only primitive inference that may change sort.  It follows
+  an input-to-output feed edge; for `f:b->a` it can conclude at `a`, never at
+  `b` from an `a` premise.
+
+Thus `Gamma |- phi` would imply `|- phi`.  But in a model with a two-element
+`b`-carrier, (4) is empty, so `phi` is not valid.  Soundness of the displayed
+system gives the contradiction and proves the second half of (2).
+
+This is the two-sort analogue of the paper's sort-flow induction around
+Corollary 35; it is not literally an instance of that corollary's fixed
+three-sort signature.
+
+## 4. Equality, scope, and tournament firewall
+
+The one/two-sort boundary is sharp only for this exact language and calculus.
+A genuinely global or cross-sort rule can break the induction, and the proof
+does not rule out a different complete recursively enumerable calculus.  In
+fact the paper notes that fixpoint-free global consequence remains reducible
+to first-order consequence.  Adding a symbol with an input feed from `a`
+toward `b` also destroys the specific separation (5), without by itself
+proving completeness.
+
+The feed carrier is an intrinsic directed graph, not generally a tournament:
+it may omit pairs, contain both orientations, and have loops.  Completing it
+to a tournament invents reachability and can invalidate the proof.  The
+load-bearing invariant is the absent feed path `a -> b`, not a chosen total
+orientation.
+
+## 5. Verification record
+
+The primary exact companion enumerates every set-valued interpretation
+`f:M_b -> P(M_a)` with
 
 ```text
-a => a,             b => b,             b => a,
-a does not feed b.                                           (8)
+1 <= |M_b| <= 4,                  1 <= |M_a| <= 3.      (6)
 ```
 
-Every inference rule of the source's many-sorted Figure-2 system has premises
-whose sorts feed the sort of its conclusion:
+It checks `5,050` models, finds exactly three `Gamma`-models (one for each
+tested size of `M_a`, always with `|M_b|=1`), checks (4), and independently
+closes the feed graph.  This finite audit is a hostile control for the
+all-cardinality symbolic proof, not its replacement.
 
-| rule family | sort behavior |
-|---|---|
-| tautologies, quantifier axioms, propagation axioms, existence, singleton-variable axiom | premise-free at their result sort |
-| modus ponens | all patterns have one outer sort |
-| existential and derived universal generalization | outer-sort preserving |
-| framing | moves from a symbol argument sort to its result sort, exactly one feed edge |
+An independent referee rebuilt the denotations with literal finite sets,
+audited every primitive rule and the one-sort minimality import, and returned
+`PASS`.  Ordinary and optimized runs are required to agree byte-for-byte.
 
-Induction on a finite derivation from `Gamma` now proves:
+## 6. What this does not prove
 
-```text
-every b-sorted derived line is derivable from the axioms alone. (9)
-```
-
-Indeed, the only theory-dependent initial line has sort `a`. It cannot be a
-premise in the ancestry of a `b`-sorted conclusion by `(8)`, while all
-premise-free lines remain available.
-
-If `Gamma proved phi`, equation `(9)` would give `prove phi`. Soundness of
-the displayed calculus would make `phi` valid, contradicting the two-element
-model above. This proves the last assertion in `(4)`.
-
-## 4. Conditional sharpness and exact scope
-
-Independently of the preprint's positive theorem, this example proves failure
-already at two sorts, so the one-sort hypothesis cannot be weakened merely to
-“finitely many sorts.” If the preprint's claimed one-sort completeness theorem
-is correct, the two statements together make the boundary sharp in **number
-of sorts**. This is not a claim that every two-sort signature fails.
-
-The same proof survives:
-
-- arbitrary extra nullary symbols, because they create no feed edge or
-  application context with a hole;
-- extra positive-arity symbols only when they create no path `a=>b`.
-
-It does not cover definedness, fixpoints, free set variables, or nominals.
-Nominals are singleton-interpreted model-fixed constants, not ordinary
-nullary symbols. It also does not prove that the semantic consequence relation
-is unaxiomatizable. As the preprint stresses, many-sorted model consequence
-translates to first-order consequence under effective hypotheses; a different
-complete calculus may exist.
-
-## 5. Relation to the repo frontiers
-
-The result is a formalization guardrail, not a mathematical bridge to the
-repo's headline problems.
-
-- Encoding LRC(14), planar Keller pairs, or a p-adic irrationality statement
-  as `Gamma models phi` would still require a faithful semantics-preserving
-  encoding and a proof of the semantic consequence. Completeness alone
-  constructs neither a lonely time nor an arithmetic contradiction.
-- Natural recursive encodings may require fixpoints, where the preprint's
-  Theorem 19 instead claims non-recursive-enumerability of validity.
-- The argument-reachability relation in the paper may have loops, missing
-  pairs, and both directions. It is not a tournament. The sort-flow relation
-  in `(8)` is a preorder whose strict quotient is a DAG, also not a tournament.
-- The exact shared mechanism is controlled forgetting: localization or sort
-  projection preserves reachable consequences and loses an unreachable
-  global carrier. That analogy transfers only after the source, target, map,
-  and missing sidecar are specified.
-
-Thus THM-4090 sharpens one external logical frontier while leaving LRC(14),
-JC(2), the 22-value p-adic-zeta claim, and every named tournament inequality
-open.
+THM-4090 proves no nonaxiomatizability result, no result about the paper's
+least-fixpoint fragment, and no arithmetic theorem.  Treating rational,
+irrational, and transcendental numbers as three sorts supplies only types;
+transfer among them requires actual total operations and true axioms.  Bare
+sort or tournament labels cannot certify arithmetic type.
