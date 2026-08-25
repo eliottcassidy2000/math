@@ -1,0 +1,6 @@
+THM-4083 independent exhaustive character/FWHT audit
+n_range=4..8 terminal_lengths=4,5
+total_characters=2131016 cycle_vectors=1511 integer_butterflies=66813528
+rows=[{"characters":8,"cycles_by_length":{"3":4,"4":3},"d3":{"minimizers":7,"minimum":4},"d4":null,"dimension":3,"n":4},{"characters":64,"cycles_by_length":{"3":10,"4":15,"5":12},"d3":{"minimizers":10,"minimum":9},"d4":{"minimizers":10,"minimum":15},"dimension":6,"n":5},{"characters":1024,"cycles_by_length":{"3":20,"4":45,"5":72},"d3":{"minimizers":15,"minimum":16},"d4":{"minimizers":15,"minimum":40},"dimension":10,"n":6},{"characters":32768,"cycles_by_length":{"3":35,"4":105,"5":252},"d3":{"minimizers":21,"minimum":25},"d4":{"minimizers":21,"minimum":85},"dimension":15,"n":7},{"characters":2097152,"cycles_by_length":{"3":56,"4":210,"5":672},"d3":{"minimizers":28,"minimum":36},"d4":{"minimizers":28,"minimum":156},"dimension":21,"n":8}]
+semantic_sha256=6f814b904df999b9cf432a981570ddd3a5aa30a47a38a0a64a161521c5eb64ec
+PASS: exhaustive D3/D4 minima and labelled equality multiplicities through n=8
