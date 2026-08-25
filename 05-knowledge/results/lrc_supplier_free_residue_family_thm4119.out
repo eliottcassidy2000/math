@@ -1,0 +1,9 @@
+status=PASS
+family=S_t=BODY_union_{t,3t};t>22
+body=(1, 4, 6, 8, 10, 12, 14, 15, 16, 18, 22);phase=9/19;body_clearance=2/19
+clearance_numerators_over_19_by_residue=(0, 2, 1, 2, 2, 2, 2, 1, 2, 2, 2, 2, 1, 2, 2, 2, 2, 1, 2)
+safe_residues_mod19=(1, 3, 4, 5, 6, 8, 9, 10, 11, 13, 14, 15, 16, 18);excluded=(0, 2, 7, 12, 17);density=14/19
+supplier_exclusion=AP8_missing_(2,3,5,7);D0_missing_(3,5);AP7_parity_or_missing_unit
+canonical_t=2^45;residue=18;clearance=2/19
+dilation_controls=(1,2,3,7,19,38);normalization_and_exclusion=PASS
+semantic_sha256=b1d6101e71ed922a4f1a873dcd11d0f7c41be9bd1f2a3c1a6c53f8f07c61ac35

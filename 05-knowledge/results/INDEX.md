@@ -1,5 +1,18 @@
 # Script Results Index
 
+- `lrc_supplier_free_residue_family_thm4119.py` and independent modular audit
+  -> concordant semantic ledgers [THM-4119 PROVED ELEMENTARY CONGRUENCE FAMILY
+  + VERIFIED-EXACT + INDEPENDENTLY AUDITED; LRC(14) OPEN]. For
+  `S_t=(1,4,6,8,10,12,14,15,16,18,22) union {t,3t}`, exactly fourteen
+  residue classes modulo `19` give clearance `2/19` at phase `9/19`; the
+  other five give `0` or `1/19`. Every `t>22`, safe or not at that phase,
+  stays outside THM-4112's three explicit thirteen-speed shapes under all
+  common dilations and primitive normalizations. Primary script/output
+  SHA-256: `e246ac0d3fb07f07b9be930c8d547b14202b3a166ea15a0d0bed6865480a3697` /
+  `538ad0b9cbbcc000fb49e8867f8825db07595fd3ff9c3efd73d351055ca42584`;
+  independent: `cd78f8fa07ab9e2fc3a16ab619def789d0f8d3cd5abab6143f5ed0716333bcc1` /
+  `e777357295fb19006158fff2f5788aa6deec2574e7fab8b16b42af8109f66860`.
+
 - `tournament_ear_response_lattice_unit_components_thm4118.py` and literal
   child audit -> concordant semantic ledgers [THM-4118 PROVED ELEMENTARY
   REDUCTIONS + VERIFIED-EXACT + INDEPENDENTLY AUDITED; global H-spectrum
