@@ -69,10 +69,8 @@ is the safe control `M(S_13)=99/338`. No cited result proves LRC(14).
 - **Quantifier/type controls (PROVED):** [THM-4095](../01-canon/theorems/THM-4095-exact-arithmetic-field-transport-gapped-pair-margins-and-order-tournament-blindness.md)
   gives field transport and gap `(0,1/15)`; THM-4096 isolates one ray point.
   THM-4105/4106 are reciprocal decoders; THM-4107/4108 are tournament/radical
-  firewalls. [THM-4110](../01-canon/theorems/THM-4110-sparse-reciprocal-phase-graph-saturation-and-ap13-torsion-tariff.md)
-  finds `64` AP13 sheets; [THM-4116](../01-canon/theorems/THM-4116-boundary-state-gluing-and-ap-odd-shell-tree-synchronizers.md)
-  gives the odd-shell law `2^(c(F)-1)` plus tree/cycle synchronization.
-  Physical safety and common arrival remain open.
+  firewalls. THM-4110 finds `64` AP13 sheets; THM-4116 gives
+  `2^(c(F)-1)`. Safety/arrival stay open.
 - **Owner/tail lane (PROVED):** [THM-4025](../01-canon/theorems/THM-4025-lrc14-owner-residue-odd-dilation-semigroup.md)/[4031](../01-canon/theorems/THM-4031-lrc14-endpoint-owner-rational-tail.md) give the old-strip survivor tail; THM-4029/4038 give the twelve-owner 60-phase law; THM-4033/4042 give the prime-sector tail and clocks through `P=11`, with `P=17` hostile. THM-4035 makes clocks addresses, not transfers. See the [detailed proof map](LRC14-PROOF-MAP.md).
 - **PROVED:** [THM-2928](../01-canon/theorems/THM-2928-critical-seven-comb-grid-tensorization-and-drift-tariff.md)/2941: literal zero/one/two/three-drift sectors are empty; `k=2,3` are finite.
 - **Orthogonal routes.** THM-1017 is HYP-6820; THM-2047/2050 keep phase/exit; THM-731/2048 prune; THM-1290 ends at `55`; HYP-8900 nonuniform.
