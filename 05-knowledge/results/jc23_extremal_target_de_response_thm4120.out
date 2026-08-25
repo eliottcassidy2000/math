@@ -1,0 +1,23 @@
+THM4120 JC23 EXTREMAL TARGET AND DE RESPONSE CERTIFICATE
+scope=THM4103_smooth_nonresonant_theta_only;JC2=OPEN
+target_c4=36*a**2
+target_discriminant=-216*q*(-a**3 + 2*q)
+infinity_valuations=(4, 5, 10);fibres=I1,I1,IIstar
+NS=rho10;section_fibre_det=-1;E8_rank8;MW={O}
+K_rational_punctures=(('AB', 1), ('CD', 3), ('DE', 7), ('EF+', 3), ('EF-', 3));weight=17
+BC=one_quadratic_closed_point;joint_weight=4
+degree_before_norm=(17, 21);after_norm=(21,)
+pullback_O_indices=(1, 2, 2, 3, 7, 3, 3);pole_degrees_A_C=(42, 63)
+quadratic_hostile=(U,V)=(a/2,r),q=a^3/2+r^2
+DE_T=-gamma/theta;c1=gamma*phi/theta**2;c2=epsilon*gamma/theta**2 + gamma*kappa/theta**2 - gamma*phi**2/theta**3
+phi0_epsilon_plus_kappa=-14336*gamma/(135*A5**3);reentry_costs=1,2
+DE_layer_kernel=(w-T);w=x^6*t^7
+DE_top_bracket=7*x^10*t^6*(2*f*g'-3*f'*g)
+A14_layers=[(2, 0), (8, 7), (14, 14), (20, 21)];C21_layers=[(3, 0), (9, 7), (15, 14), (21, 21)]
+A15_layers=[(9, 8), (15, 15), (21, 22)];C22_layers=[(10, 8), (16, 15), (22, 22)]
+baseline_response=f=gamma^2*h^2,g=gamma^3*h^3,h(0)=1,h(T)=-7
+baseline_degree_floor=(28, 42)
+higher_degree_floor=(30, 31)
+combined_degree_floor=(28, 31)
+cross_layer_reentry_hostile_effective_weights=(14, 14)
+RESULT=PASS

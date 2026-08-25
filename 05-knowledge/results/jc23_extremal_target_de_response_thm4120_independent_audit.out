@@ -1,0 +1,18 @@
+THM4120 JC23 INDEPENDENT STANDARD-LIBRARY AUDIT
+scope=THM4103_smooth_nonresonant_theta_only;JC2=OPEN
+discriminant_coefficients_q2_qa3_a6=(Fraction(-432, 1), Fraction(216, 1), Fraction(0, 1))
+finite_root_multiplicities=(1, 1)
+infinity_valuations=(4, 5, 10);fibres=I1,I1,IIstar
+section_fibre_det=-1;trivial_rank=10;MW={O}
+rational_weight=17;candidates=(17, 21);survivors=(21,)
+pullback=(1, 2, 2, 3, 7, 3, 3);pole_degrees=(42,63)
+BC_irreducible_reason=odd_valuation_at_q=-gamma
+quadratic_hostile=verified_at_3_exact_specializations
+A14=[(2, 0), (8, 7), (14, 14), (20, 21)];C21=[(3, 0), (9, 7), (15, 14), (21, 21)];A15=[(9, 8), (15, 15), (21, 22)];C22=[(10, 8), (16, 15), (22, 22)]
+general_bracket=verified_on_3_distinct_layer_pairs
+T=-2/3;h0=1;hT=-7
+multiplicity_lock=14*3=21*2;equal_simple_hostile=nonzero
+DE_inverse_series=(Fraction(-2, 3), Fraction(10, 9), Fraction(-8, 27));reentry_costs=(1,2)
+baseline_floor=(28, 42);higher_floor=(30, 31)
+combined_floor=(28, 31)
+RESULT=PASS
