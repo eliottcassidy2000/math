@@ -1,5 +1,26 @@
 # Script Results Index
 
+- `tournament_strong_centrality_through_order_eight_thm4131.py` and
+  independent canonical-augmentation/contracted-block audit -> concordant
+  semantic ledgers [THM-4131 FINITE-EXACT + VERIFIED-EXACT + INDEPENDENTLY
+  AUDITED]. Every one of the `6,403` strong tournament isomorphism classes of
+  orders four through eight has only central rational and exact-coset
+  Johnson-slice support-floor optimizers. The worst normalized tilts are
+  `0,0,198/901,711/3959,14809/29733`; the strict central-over-outer coset
+  margins are `2,6,6,22,16`. Actual maxima remain separate: `4` order-six
+  and `1,702` order-eight classes have no central actual maximizer. Coset
+  rounding changes `74` order-seven optimizer tuples, but none leaves the
+  center. The primary nauty census and pure-standard-library independent
+  universe recover strong class counts `1,6,35,353,6008` and matching profile fingerprints.
+  Primary script/output SHA-256:
+  `6b195b0379d1ae3e5d215aa1c495f7180daeecae189df86269d07ef855867881` /
+  `1e6f3258fd740a329451f214302d56eb6754795ee211dcac39df4a4eeb96157e`;
+  independent: `693484165663f5e05d35fb7b6dfd9ae0cc01a49c72f2db74db74017d93ab5b94` /
+  `6efb87263c698375a1ce5da57251434ad3f71fe01060db96fa54d19b8a340542`;
+  semantic: `8e5ef116e577c3d3ab5dd4bea50953581a457ffbaae4f80504060c8793fed578`.
+  All-order strong centrality, actual-maximizer classification, and intervals
+  remain open.
+
 - `jc23_theta_only_extremal_seam_critical_monodromy_thm4130.py` and independent
   `(s,p)` elimination/permutation audit -> concordant semantic ledgers
   [THM-4130 PROVED RELATIVE TO THM-3996/4053/4103/4120/4126 + VERIFIED-EXACT

@@ -19,6 +19,7 @@ depends_on:
   - THM-4123-balanced-cardinality-ear-average-growth-and-johnson-layer-lattice
   - THM-4127-johnson-slice-hoeffding-variance-and-central-support-dominance
 related:
+  - THM-4131-strong-tournament-centrality-through-order-eight
   - HYP-9029-strong-interval-tiling-law
 script: 04-computation/tournament_johnson_slice_support_envelope_thm4128.py
 output: 05-knowledge/results/tournament_johnson_slice_support_envelope_thm4128.out
@@ -308,7 +309,9 @@ python3 -B -O 04-computation/tournament_johnson_slice_support_envelope_thm4128_i
 PYTHONHASHSEED=0 python3 -B 04-computation/tournament_johnson_slice_support_envelope_thm4128_independent_audit.py
 ```
 
-All six streams match their frozen outputs byte-for-byte. The theorem does
-not prove an all-order strong centrality law, an exact-coset optimizer, an
-actual maximizing layer, a slice interval, or global `H`-spectrum
-completeness. **QED.**
+All six streams match their frozen outputs byte-for-byte. THM-4131 later
+verifies that every rational and exact-coset floor optimizer is central for
+every strong tournament of orders four through eight, with a strict central
+coset margin. All-order strong centrality, actual-maximizer classification,
+slice intervals, and global `H`-spectrum completeness remain **OPEN**.
+**QED.**
