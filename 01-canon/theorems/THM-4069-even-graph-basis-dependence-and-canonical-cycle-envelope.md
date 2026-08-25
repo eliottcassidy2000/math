@@ -1,21 +1,27 @@
 ---
 id: THM-4069
-title: "Even-graph basis dependence, star/path separation, and the canonical all-cycle envelope"
+title: "Even-graph tree-diameter classification and canonical all-cycle envelope"
 status: >
   PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED. The image on
   isomorphism classes of the fundamental-cycle cube depends on its spanning
   tree: already at n=4 the star gives P3 while the path gives K3. For every
   n>=3 the star image is connected bipartite with chromatic number 2, and a
   tree has only odd fundamental cycles exactly when it is a star. The
-  canonical repair is the all-simple-cycle envelope. It is the union over all
-  spanning-tree images and, more strongly, equals the path-tree image for
-  every n. Thus the historical path-based E_n graph object survives
+  complete basis-response law is E_(n,T)=union_(3<=k<=diam(T)+1)R_(n,k),
+  where R_(n,k) toggles a k-cycle. Hence there are exactly n-2 distinct
+  spanning-tree images, strictly nested by tree diameter. The canonical
+  repair is the all-simple-cycle envelope. It is the union over all
+  spanning-tree images and equals the path-tree image for every n. Thus the
+  historical path-based E_n graph object survives
   canonically, and computations explicitly verified on that edge image keep
   their prior status; only the claim that an arbitrary spanning-tree
   fundamental-cycle image gives the same adjacency is retracted.
 source: codex-frontier-synthesis-creative-20260825c / recovered even-graph dual lane
 audit: >
-  PASS. The primary audit constructs cycle spaces from independent star and
+  PASS. An independent quotient-level proof audit verifies the complete
+  diameter classification and strictness witness; a fresh exhaustive scan of
+  every labelled tree through n=6 confirms that the image depends only on
+  diameter. The primary audit constructs cycle spaces from independent star and
   path bases, canonicalizes every Eulerian graph through n=6, compares both
   images with the all-cycle envelope, scans all 18,247 labelled trees through
   n=7 for the odd-basis/star equivalence, and verifies the generator-union
@@ -189,9 +195,57 @@ E_(n,T) is a spanning subgraph of widehat(E)_n.                   (15)
 The envelope is connected because it contains the connected image of any
 fundamental-cycle cube.
 
+### 4.1 Complete classification by tree diameter
+
+For `3<=k<=n`, let `R_(n,k)` be the canonical edge relation obtained by
+toggling one labelled `k`-cycle and then passing to isomorphism classes.
+This is well-defined because `S_n` is transitive on the simple `k`-cycles.
+For a tree `T`, put
+
+```text
+Lambda(T)={|C|:C in B_T}.                                        (15a)
+```
+
+Generators of the same length induce the same relation after quotienting,
+so multiplicity and placement disappear and
+
+```text
+E_(n,T)=union_(k in Lambda(T)) R_(n,k).                           (15b)
+```
+
+If `D=diam(T)`, then
+
+```text
+Lambda(T)={3,4,...,D+1}.                                         (15c)
+```
+
+Indeed every chord cycle has length at most `D+1`. Conversely a diameter
+path contains a pair at each distance `d=2,...,D`; that pair is a chord and
+its fundamental cycle has length `d+1`. Thus
+
+```text
+boxed: E_(n,T)=E_n^(D):=union_(k=3)^(D+1)R_(n,k).                 (15d)
+```
+
+The inclusions
+
+```text
+E_n^(2) proper-subset E_n^(3) proper-subset ...
+ proper-subset E_n^(n-1)                                        (15e)
+```
+
+are strict. The edge from the empty graph to the class of a single
+`(D+2)`-cycle belongs to `E_n^(D+1)` and to no earlier layer: a move from
+the empty graph is isomorphic to its generator, whose length is at most
+`D+1` in `E_n^(D)`. Every diameter `D=2,...,n-1` occurs: take a path of
+length `D` and attach any remaining leaves to its second vertex. Hence there
+are exactly `n-2` spanning-tree images. In particular,
+the full tree presentation is compressed losslessly to the one integer
+`diam(T)` for this edge-image observable.
+
 It also has two exact intrinsic descriptions.
 
-### 4.1 Union over every spanning tree
+### 4.2 Union over every spanning tree
 
 Given a simple cycle `C`, delete one of its edges `e`. The remaining path is
 a forest and therefore extends to a spanning tree `T` of `K_n` that does not
@@ -204,7 +258,7 @@ boxed: widehat(E)_n = union_T E_(n,T).                           (16)
 
 The union in `(16)` is an edge union on the common canonical vertex set.
 
-### 4.2 One path already realizes the envelope
+### 4.3 One path already realizes the envelope
 
 Let `P_n` be the path `0-1-...-(n-1)`. For every `k in {3,...,n}`, its chord
 `(0,k-1)` has a fundamental cycle of length `k`. The symmetric group is

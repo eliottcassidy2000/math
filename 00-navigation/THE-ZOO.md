@@ -40,7 +40,7 @@ Full invariant list: [`05-knowledge/COMPLETE_INVARIANT_CATALOG.md`](../05-knowle
 | **Tournaments T_n** | H, c₃/t_k, scores, \|Aut\|, isSC, OCF/OCR, Fourier c_k, F/W-poly, Ω/α_k, skew-spectrum, Pfaffian, Betti, domination, binary-form dictionary | mostly n≤7, some n≤9 |
 | **Metagraph G_n** | degree, eccentricity, diameter, spectralGap, neutral-arc count (=A000568) | n≤5 exact, n≤7 partial |
 | **Merged G_n/ℤ₂** | class-size parity, SC spine/rib/sea edge typing | edge-typed; **own topology unstudied** |
-| **Even graphs `widehat(E)_n`** | canonical all-cycle/path envelope; V=A002854, reported χ and ω=χ, chordal≤6; arbitrary `E_(n,T)` is basis-dependent (THM-4069) | **least-developed row (§5)** |
+| **Even graphs `widehat(E)_n`** | canonical all-cycle/path envelope; V=A002854, reported χ and ω=χ, chordal≤6; tree images form an `n-2` step diameter chain (THM-4069) | **least-developed row (§5)** |
 | **Tilings / waggly / wiggly / blue-black** | independence poly, blue-self parity, transfer-matrix trace, gridSym | combinatorial only; **no spectrum/homology** |
 | **Staircase δ_{n−2}** | pin-grid, strips, good-cuts, connectivity | **no spectral/Pfaffian/homology invariant** |
 | **LRC speed-sets V** | M(V)/covering-min, danger-bands, Bonferroni, deep-well 14/183, danger-graph clique | metric-rich; **tournament invariants never pulled back (§5)** |

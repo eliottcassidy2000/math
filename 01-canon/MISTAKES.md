@@ -22,11 +22,13 @@ Format per entry:
   path-tree basis contains triangles and a four-cycle and gives `K_3`.
 - **Repair / strongest survivor:** THM-4069 writes the tree-dependent object
   as `E_(n,T)` and defines the canonical all-simple-cycle envelope
-  `widehat(E)_n`. The envelope is the union of all `E_(n,T)` and equals the
-  path-tree image for every `n`, because the path basis contains one cycle of
-  each length. Hence the historical path-basis values, the canonical vertex
-  set, and separately proved two-graph/switching identifications survive;
-  importing those values to an arbitrary spanning-tree basis does not.
+  `widehat(E)_n`. In fact `E_(n,T)` depends only on `diam(T)` and the `n-2`
+  possible images form a strict nested chain. The envelope is its top member
+  and equals the path-tree image for every `n`, because the path basis
+  contains one cycle of each length. Hence the historical path-basis object,
+  the canonical vertex set, and separately proved two-graph/switching
+  identifications survive; importing path values to another diameter does
+  not.
 - **Reusable rule:** quotienting vertices by a symmetry does not make an edge
   relation canonical. Audit invariance of the generator set; if it fails,
   retain the presentation as a sidecar or saturate the generators over the
