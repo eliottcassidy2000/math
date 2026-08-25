@@ -17,6 +17,7 @@ related:
   - THM-4112-antipodal-component-ancestry-chain-and-scale-separated-lrc-families
   - THM-4117-physical-eleven-plus-two-primitive-support-obstruction
   - THM-4119-infinite-supplier-free-eleven-plus-two-residue-family
+  - THM-4125-arbitrary-multitail-projective-packing-and-sharp-density
 script: 04-computation/lrc_projective_tail_multiplier_residue_compiler_thm4121.py
 output: 05-knowledge/results/lrc_projective_tail_multiplier_residue_compiler_thm4121.out
 independent_audit_script: 04-computation/lrc_projective_tail_multiplier_residue_compiler_thm4121_independent_audit.py
@@ -160,6 +161,10 @@ B_3={0,2,7,12,17},                                        (9)
 ```
 
 so Theorem 1 recovers its density `14/19` classification exactly.
+
+THM-4125 subsequently replaces the pair `{1,c}` by an arbitrary finite tail
+multiplier bank. Its fixed `1/14` density depends only on signed projective
+support, while the natural threshold changes regime at seven tails.
 
 ## 3. Uniform exclusion from three explicit suppliers
 

@@ -17,6 +17,7 @@ related:
   - THM-4112-antipodal-component-ancestry-chain-and-scale-separated-lrc-families
   - THM-4117-physical-eleven-plus-two-primitive-support-obstruction
   - THM-4121-sharp-projective-tail-multiplier-residue-compiler
+  - THM-4125-arbitrary-multitail-projective-packing-and-sharp-density
 script: 04-computation/lrc_supplier_free_residue_family_thm4119.py
 output: 05-knowledge/results/lrc_supplier_free_residue_family_thm4119.out
 independent_audit_script: 04-computation/lrc_supplier_free_residue_family_thm4119_independent_audit.py
@@ -107,6 +108,8 @@ classes, the valid parameters have natural density `14/19`.
 THM-4121 subsequently frees the tail multiplier: the present `c=3` row is
 one nonaligned projective class, while `c=+/-1 mod 19` aligns the two tail
 failure pairs and raises the same-phase density sharply to `16/19`.
+THM-4125 then classifies arbitrary finite tail banks and separates this fixed
+benchmark density from the seven-tail natural-threshold transition.
 
 ## 2. Uniform exclusion from the three explicit suppliers
 

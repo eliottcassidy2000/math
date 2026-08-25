@@ -1,5 +1,21 @@
 # Script Results Index
 
+- `lrc_arbitrary_multitail_projective_packing_thm4125.py` and independent
+  four-state signed-pair audit -> concordant semantic ledgers [THM-4125
+  PROVED ELEMENTARY PROJECTIVE PACKING + SHARP NATURAL-THRESHOLD TRANSITION +
+  VERIFIED-EXACT + INDEPENDENTLY AUDITED; LRC(14) OPEN]. For
+  `U union {ct:c in C}`, the exact `0,1/19,2/19` phase table depends only on
+  the signed projective support size `m`. The fixed `1/14` density is
+  `(18-2m)/19`, with sharp maximum `16/19` for arbitrarily many distinct
+  aligned tails. At the natural `1/(12+r)` threshold, every nonzero parameter
+  class is safe once `r>=7` (equality at seven), giving density `18/19`
+  regardless of projective diversity. Both audits exhaust all `262,143`
+  nonempty nonzero residue subsets. Primary script/output SHA-256:
+  `85920f11bfdf86abd1d7afeaee9f248d20134eb0656af4c0416d9a55677ba2b6` /
+  `7b659ae86dd858b592d45ee76022cc5adb7f1e2d88558eda342723371b761822`;
+  independent: `73f85fc4997d4085d8f5d29f5b21dd576925e8cdfc1929d0b02f298e6a236aff` /
+  `a9a622b7d12006c1e4dd93e49abad5d8d2d5088f9904fc379d2493b0a4f2ab61`.
+
 - `tournament_balanced_cardinality_ear_average_layer_lattice_thm4123.py`
   and independent boundary audit -> concordant core semantic ledgers
   [THM-4123 PROVED ELEMENTARY FIXED-CARDINALITY DOUBLE COUNT +
