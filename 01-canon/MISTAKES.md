@@ -9,6 +9,53 @@ Format per entry:
 - Why it was wrong
 - The correct framing
 
+## MISTAKE-497 (2026-08-25, HYP-3779 regularization avatars) -- a Teichmuller-twisted p-adic L-value was called the trivial-character zeta value, and a Dedekind sum lost its eta factor
+
+- **What failed:** HYP-3779 identified `zeta_7(-1)` with
+  `(1-7)zeta(-1)=1/2`, identified `s(h,k)` itself with the signature eta
+  invariant of `L(k,h)`, and promoted the `-1/12` asymptotic into an exact
+  `B_2` Euler--Maclaurin remainder. It then described the discrepancy among
+  these avatars as exactly the `f_14` cusp residual.
+- **Minimal witness / first failed implication:** the Kubota--Leopoldt
+  interpolation formula is character-sensitive. For the standard
+  trivial-character branch `zeta_p(s)=L_p(s,1)`, take
+  `k_j=2+(p-3)p^j`. Then `p-1` divides `k_j` and `k_j` tends p-adically to
+  `2`. Interpolation plus von Staudt--Clausen gives
+  `v_p(zeta_p(-1))=-1` and
+  `p zeta_p(-1)=1/2 mod p`; in particular
+  `zeta_7(-1) in 4/7+Z_7`, so it cannot equal the 7-adic unit `1/2`.
+  The rational identity is instead
+  `L_p(-1,omega_p^2)=(1-p)zeta(-1)=(p-1)/12`, on the
+  Teichmuller-twisted branch. Independently, Atiyah's formula (4.25) gives
+  `eta_sig(L(k,h))=-4s(h,k)` in the displayed orientation convention, not
+  `s(h,k)`. For the linear function in the ordinary Euler--Maclaurin formula,
+  the standard `B_2` derivative correction vanishes because the endpoint
+  derivatives agree; `zeta(-1)=-B_2/2` remains an asymptotic/regularization
+  relation, not the claimed exact remainder.
+- **Repair / strongest survivor:** HYP-3779 is downgraded to
+  **PARTIALLY REFUTED / CORRECTED**. The exact Dedekind identity
+  `s(14,183)=-91/1098`, the cotangent formula, the complex value
+  `zeta(-1)=-1/12`, and the correctly typed twisted value
+  `L_7(-1,omega^2)=1/2` survive. The eta value is
+  `182/549` in Atiyah's orientation. THM-4089 replaces the analogy by an
+  exact affine optimizer and proves that the first point `m=1` is the unique
+  nonnegative hybrid on the ray `{1,...,12,182m}`; every `m>=2` lies on the
+  wrong side of `-1/12`. Any identification of the remaining LRC residual
+  with a p-adic/archimedean split or with `f_14` remains **OPEN analogy**, not
+  a proof dependency.
+- **Sources and replay boundary:** the character typing is equation (1.1) of
+  Luochen Zhao, *Sum Expressions for Kubota--Leopoldt p-adic L-functions*
+  (2022); the lens-space factor is formula (4.25) of Michael Atiyah,
+  *The Logarithm of the Dedekind Eta-Function*. The script/output named by
+  HYP-3779 are absent from the current repository, so its old “verified”
+  provenance is not replayable. The replacement THM-4089 referee is exact
+  and optimization-safe.
+- **Reusable rule:** a p-adic special value is not typed by its integer
+  argument alone; retain the Dirichlet/Teichmuller character branch. Likewise,
+  a spectral invariant must carry its normalization and orientation factor,
+  and an asymptotic regularization constant is not automatically an exact
+  Euler--Maclaurin remainder.
+
 ## MISTAKE-496 (2026-08-25, THM-4084 D5 firewall) -- the balanced character was omitted from a nontriviality qualifier
 
 - **What failed:** the first promoted form of THM-4084 boxed the implication
