@@ -35,6 +35,7 @@ depends_on:
   - THM-3687-russell-cylinder-exceptional-quartic-actual-j0-lift
 related:
   - THM-4058-exceptional-affine-triangle-period-and-simple-zero-monomial-ladder
+  - THM-4060-exceptional-simple-zero-mixed-form-cokernel-collapse-and-formal-pair-lift
   - THM-4046-exceptional-quartic-j7-lift-and-j8-obstruction
   - THM-3629-russell-cylinder-linear-vertical-fold-global-form-boundary
   - THM-3631-russell-cylinder-noneven-closed-form-order-five-survival
@@ -392,6 +393,10 @@ to `epsilon=1` nor supplies corrections at order `epsilon^2`, at source
 cutoff six, or at any later order.  It also does not prove that both outputs
 of a hypothetical global pair must mix; that unavailable conclusion was the
 evenness error repaired in Section 2.
+
+THM-4060 later identifies the all-order mixed closed-form cokernel and uses
+formal Darboux factorization to obtain a local formal pair.  That later
+formal result does not strengthen the finite or global claims of this theorem.
 
 ## 6. Connection contract
 

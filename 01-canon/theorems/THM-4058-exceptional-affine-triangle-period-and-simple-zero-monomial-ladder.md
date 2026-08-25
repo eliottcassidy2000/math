@@ -29,6 +29,7 @@ audit: >
 depends_on:
   - THM-4054-exceptional-affine-simple-zero-retained-packet
 related:
+  - THM-4060-exceptional-simple-zero-mixed-form-cokernel-collapse-and-formal-pair-lift
   - THM-3629-russell-cylinder-linear-vertical-fold-global-form-boundary
   - THM-3630-russell-cylinder-noneven-formal-survivor-no-finite-jet-bound
   - THM-3635-russell-cylinder-retained-curve-jet-plane-actual-rank-witness
@@ -415,6 +416,10 @@ first fixed-`a` failure.  Nothing here contradicts that escape or promotes
 the fixed-coordinate period to an obstruction for arbitrary pairs.  No
 global polynomial pair, Keller map, counterexample, or consequence for
 `JC(2)` is constructed.
+
+THM-4060 subsequently proves that the whole ladder transgresses into the
+first-output direction and constructs an all-order local formal mixed pair.
+That result leaves every global exclusion in the preceding paragraph intact.
 
 ## 8. Reproduction
 

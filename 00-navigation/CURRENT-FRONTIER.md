@@ -364,14 +364,15 @@ or residue follows.
   `M=6,7`. THM-4053 kills off-wall `p^4`/two-term weight eight and gives a
   norm-degree gate for `p*y^2`; three walls remain. THM-4044's sixty-clock
   alias still needs a second jet or degree cap.
-  In the exceptional-quartic lane, THM-3703/3737 give the grammar/image and
-  THM-4034 the conductor. THM-4039/4043/4046 reach `J_7`, obstruct `J_8`,
-  and close `0!=H in t^2 C[t]`. [THM-4054](../01-canon/theorems/THM-4054-exceptional-affine-simple-zero-retained-packet.md)
-  treats the simple-zero boundary: exact forms saturate the cutoff-five
-  packet; fixed `a` fails, but its mixed tangent survives.
+  Exceptional quartic: THM-3703/3737 give grammar/image, THM-4034 the
+  conductor, and THM-4039/4043/4046 reach `J_7`, obstruct `J_8`, and close
+  critical `H`. [THM-4054](../01-canon/theorems/THM-4054-exceptional-affine-simple-zero-retained-packet.md)
+  gives cutoff-five saturation/mixed escape;
   [THM-4058](../01-canon/theorems/THM-4058-exceptional-affine-triangle-period-and-simple-zero-monomial-ladder.md)
-  proves that gauge succeeds through `m+2` and fails at `m+3` for every
-  `H=t+gamma*t^m`, `gamma!=0`. Mixed pairs, global entry, and `JC(2)` stay open.
+  makes frozen-`a` failure an all-`m` ladder;
+  [THM-4060](../01-canon/theorems/THM-4060-exceptional-simple-zero-mixed-form-cokernel-collapse-and-formal-pair-lift.md)
+  leaves four mixed classes; every simple zero has a formal local pair.
+  Global entry/`JC(2)` stay open.
 - **Weyl boundary:** THM-2049 gives a formal beta-adic lift; finite termination remains.
 - **Planar source fibres:** THM-2063/THM-2084--2480 (including
   THM-2371/THM-2376) close the named

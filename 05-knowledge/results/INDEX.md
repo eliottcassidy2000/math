@@ -1,5 +1,22 @@
 # Script Results Index
 
+- `jc2_exceptional_simple_zero_mixed_form_cokernel_formal_pair_thm4060.py`
+  and standalone split-prime hostile audit -> matching `.out`s [THM-4060
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED in a formal/local
+  scope; `JC(2)` OPEN].  The first-output circulation transgression changes
+  THM-4058's one-class-per-degree fixed-`a` cokernel into the four-class
+  filtered mixed cokernel `K[[A]]/A^4`.  The finite rank is
+  `3*binom(N+2,2)-min(N+1,4)`.  Every normalized simple-zero displacement
+  `H=t+O(t^2)` has an all-order formal local mixed pair of source Jacobian
+  `12`; convergence, algebraization, and global polynomial entry remain open.
+  The exact companion checks `N=0..8`; the independent audit checks all four
+  split roots modulo `137` at `N=4..12`.  Script hashes:
+  `5faa1db5d9aa127e71f22f6bbb4ceee56b3dfe7addd5eb26b2416d04bfe8098a` /
+  `f168c3d8a5d6cd4f92a6d2a18ddd4708c1f29da142e00eab2b294426f16bce2d`;
+  output hashes:
+  `803ee72dcfc77a60020bcafc85c67b2c5f04836315dc7c8963700ffee5927d63` /
+  `03faaf8109e2d3469550888c3bb6fc2f9339b1c3e0742cf2d693a872a455ba79`.
+
 - `jc2_exceptional_affine_triangle_period_monomial_ladder_thm4058.py` and
   independent split-prime retained-matrix audit -> matching `.out`s
   [THM-4058 PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED in the

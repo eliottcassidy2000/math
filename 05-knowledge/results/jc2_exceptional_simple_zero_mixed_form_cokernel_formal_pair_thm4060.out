@@ -1,0 +1,18 @@
+EXCEPTIONAL MIXED-PAIR PERIOD TRANSGRESSION -- EXACT OVER Q(ALPHA)
+upstream_hashes=1e84ce5674c74c8b2d504fe8f57341be86ab20e1eab5c8fafe7494bb52d488a2,99d6e27e93129636faba409750fbd1b71fd3f60a7b65117ea24f906cd78888e1
+upstream_thm4054_replay_pass=True
+source_normalization=L_mix=12*f_A+4*c_x*f_u-3*g_c+a_x*g_u=-3*D
+bracket_normalization=D=P+R_c*Q-R_A*S=-4*d_A(f_on_branch)+d_c(g_on_branch)
+closed_form_cap=4;closed_dimension=85;P=-4*f_A+g_c;Q=g_u;S=4*f_u;closure=P_u-Q_c+S_A=0;forward_and_reverse_complete=True
+moving_endpoint_sum=(0,0,0);Pi(L_mix)=12*d_A(Pi(f))
+normalized_transgression=Lambda(L_mix)=12*(d/dA+5/A)*Lambda(f)
+common_target_period_ideal=A^5*K[[A]];w^s_lead=-(s/2)*rho*A^(s+4)
+carrier_leads_for_f=w^s:D=2*s*(s+9)*rho*A^(s+3);L_mix=-6*s*(s+9)*rho*A^(s+3)
+rank_formula=3*binom(N+2,2)-min(N+1,4);exact_controls=N0..8
+rank_rows=[(0, 3, 6, 2, 1), (1, 9, 18, 7, 2), (2, 18, 38, 15, 3), (3, 30, 68, 26, 4), (4, 45, 110, 41, 4), (5, 63, 166, 59, 4), (6, 84, 238, 80, 4), (7, 108, 328, 104, 4), (8, 135, 438, 131, 4)]
+all_visible_stable_monomials_in_coupled_image=True
+H=t+gamma*t^m:D_rhs=4*m*gamma*w^(m-1);L_mix_rhs=-12*m*gamma*w^(m-1);first_f_lead=-gamma*(m-1)/(m+9)*w^m;m=2..12_checked
+persistent_cokernel_degrees=(0,1,2,3);no_later_linearized_source-cutoff_obstruction
+table_sha256=1fefca39e8602eaae4b2e1095a603e0457e475665ffa28b0bd90faa39bf38fde
+scope=formal_local_closed-form_cokernel_and_formal_pair_lift;formal_Darboux_factorization_is_textual_not_computational;no_convergence_algebraization_or_global_pair_claim
+RESULT=PASS
