@@ -1,0 +1,14 @@
+CONFLUENT_TWOJET_SINGLE_SCALE_SMITH_THM4080
+status=PROVED_FORMULA;VERIFIED_EXACT
+single_scale_profile=e*(0,0,1,...,s-1,s+1,...,2s-1);scope=1<=s<p
+mechanism=minor_weight_minus_derivative_rows;unit_confluent_matroid_witness
+corollary=consecutive_n<=p*(p-1);partition=union_over_mod_p_cluster_profiles
+single_scale_DVR_cases=132
+direct_consecutive_DVR_cases=34
+formula_consecutive_cases=178
+hostile_s_eq_p(p=2)=actual:(0, 0, 2, 2);false_extension:(0, 0, 1, 3)
+hostile_s_eq_p(p=3)=actual:(0, 0, 1, 3, 4, 4);false_extension:(0, 0, 1, 2, 4, 5)
+hostile_s_eq_p(p=5)=actual:(0, 0, 1, 2, 3, 5, 6, 7, 8, 8);false_extension:(0, 0, 1, 2, 3, 4, 6, 7, 8, 9)
+semantic_sha256=b7cf25da07f12edd250892e42d477dcb929a8f6a081bc46671e2b3ee765e1447
+gates=1068749
+RESULT=PASS

@@ -1,0 +1,11 @@
+CONFLUENT_TWOJET_SINGLE_SCALE_SMITH_THM4080_INDEPENDENT_AUDIT
+status=ALL_MINORS_PLUS_MOD_P_MATROID;PASS
+all_determinantal_divisor_cases=6
+matroid_cases=136;unit_witness_minors=1896
+quadratic_range_formula_cases=948
+hostile_s_eq_p(p=2)=actual:(0, 0, 2, 2);false_extension:(0, 0, 1, 3)
+hostile_s_eq_p(p=3)=actual:(0, 0, 1, 3, 4, 4);false_extension:(0, 0, 1, 2, 4, 5)
+boundary_mechanism=derivative_row_rank_drops_from_p_to_p_minus_1
+semantic_sha256=fb55e3c1dd445b524333b4bef3e5cc1825ab52c53033840d1bf9f1424bf385a9
+gates=13437566
+RESULT=PASS
