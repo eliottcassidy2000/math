@@ -193,7 +193,8 @@ components. It is either an endpoint of `J` or a tooth endpoint
 Therefore the survivor has an even presentation
 
 ```text
-theta=r/N,        N<=max(Q,14 max(V)).                       (15)
+H(V)=max({0} union V),
+theta=r/N,        N<=max(Q,14H(V)).                          (15)
 ```
 
 At both labels `r` and `r+N/2`, every speed in `D union V` is weak-safe. For
@@ -286,14 +287,14 @@ N<=14v_k,       E_N=R_N=empty.                              (21)
 The all-parity headline is particularly simple:
 
 ```text
-C={1,...,8,B,C,D},       281<=B<C<D                         (22)
+K={1,...,8,B,C,D},       281<=B<C<D                         (22)
 ```
 
 always has a two-phase safe point and a clock `N<=14D`. Consequently, for
 every `q>=1` and every two distinct positive odd integers `x,y`,
 
 ```text
-2qC union {x,y}                                             (23)
+2qK union {x,y}                                             (23)
 ```
 
 is `1/14`-lonely.

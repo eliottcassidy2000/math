@@ -1,0 +1,11 @@
+THM-4096 independent hostile audit: PASS
+finite universe: phase/affine m=1..4096; negative-side rows=4095
+Euclidean-reciprocity Dedekind evaluations=1024
+active phase owners for every audited m: {1,182m}; value=14m/(182m+1)
+rational vertices: p=2 Euler-factor -> 1/12; p=7 twisted -> 1/2
+{2,7} optimizer samples=101; endpoint costs=1/366,1/1281; unique minimizer=(0,1/1281)
+finite-prime exchange rows=25; last single-prime cost=1/17751
+odd-prime trivial-branch controls=[(3, 1, 2, 2), (5, 1, 12, 3), (5, 2, 52, 3), (7, 1, 30, 4), (7, 2, 198, 4), (11, 1, 90, 6), (13, 1, 132, 7)]
+hostiles rejected: trivial zeta_7(-1)=1/2; eta_sig=s; nonnegative hybrid at m=2
+m=1: s(14,183)=s(14,183 adapted)=C=-91/1098; eta_sig=182/549
+m=2: -91/73 < -63/730 < -1/12 < 1/2 < 364/365; C-z_infinity=-13/4380

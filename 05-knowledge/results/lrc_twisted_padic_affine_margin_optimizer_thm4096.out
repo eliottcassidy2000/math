@@ -1,0 +1,8 @@
+THM-4096 twisted p-adic affine optimizer audit: PASS
+ray identities=2000; strict interval certificates=1999
+direct Dedekind sums=20; Euler-factor vertices=6
+optimizer gates=9; interpolation controls=6
+m=1: C=s(14,183)=-91/1098; 2a+7b=1/183; minimizer=(0,1/1281)
+m=2 interval: -91/73 < -63/730 < -1/12 < 1/2 < 364/365
+trivial-branch scaled congruence rows=[(5, 1, 12, 3), (5, 2, 52, 3), (7, 1, 30, 4), (7, 2, 198, 4), (11, 1, 90, 6), (13, 1, 132, 7)]
+eta control: -4*s(14,183)=182/549

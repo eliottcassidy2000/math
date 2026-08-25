@@ -1,0 +1,6 @@
+THM-4095 arithmetic-type and order-tournament audit: PASS
+primitive pair maxima=1965; odd=651; mixed=1314
+optimized margins={1/6} union {1/6-1/(2q): odd q>=3}; gap=(0,1/15)
+affine recovery gates=12956; strict grid gates=3
+greedy Egyptian finite controls=6; replacement tail=40 terms
+hostile same-order pair: {1,2} margin=0; {1,3} margin=1/6

@@ -1,8 +1,8 @@
 # THM-012b: Insertion Decomposition Formula
 
 **Type:** Theorem
-**Certainty:** 4 — VERIFIED (exhaustive n≤5, formula holds with 0 failures)
-**Status:** VERIFIED (proof pending full rigor)
+**Certainty:** 5 — PROVED + VERIFIED (THM-4094 gives the elementary full-incidence proof; exhaustive n≤5 has 0 failures)
+**Status:** PROVED + VERIFIED; legacy orphan-count prose corrected by MISTAKE-499
 **Contributed by:** opus-2026-03-05-S3
 **NOTE:** Formerly mislabeled as THM-013 (filename collision with THM-013-arc-flip-delta-I.md).
 Renamed to THM-012b. This is a standalone result not referenced by other theorems under this ID.
@@ -89,8 +89,10 @@ The paper's Remark at line 1261-1264 claims: "Claim A is equivalent to Σ(inshat
 **This is INCORRECT.** The correct equivalence requires including the orphan term:
 Σ(inshat-1)/2 + #{orphans} = 2*Σ mu(C), not Σ(inshat-1)/2 = Σ mu(C).
 
-The paper's remark implicitly assumes H(T) = Σ inshat(v,P'), which fails whenever there are
-orphan paths (96/256 pairs at n=4, 3080/5120 at n=5, while Claim A has 0 failures).
+The paper's remark implicitly assumes H(T) = Σ inshat(v,P'). This equality fails exactly when
+the Type-II total differs from the orphan total: 96/256 pairs at n=4 and 3080/5120 at n=5.
+Orphans themselves occur in 96/256 and 3200/5120 pairs, respectively; at n=5, 960
+orphan-bearing pairs have equal totals. See THM-4094 and MISTAKE-499.
 
 ---
 

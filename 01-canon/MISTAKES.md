@@ -9,6 +9,27 @@ Format per entry:
 - Why it was wrong
 - The correct framing
 
+## MISTAKE-499 (2026-08-25, THM-012b insertion decomposition) -- equality failures were mislabeled as orphan-bearing pairs
+
+- **What failed:** the legacy relationship note in THM-012b said that the
+  obsolete identity `H(T)=sum_P inshat(v,P)` fails whenever orphan paths
+  exist, and then labeled `3080/5120` at order five as the number of
+  orphan-bearing `(T,v)` pairs.
+- **Minimal witness / first failed implication:** for the directed triangle
+  with one vertex deleted, one orphan exists and the Type-II total is also
+  one, so the obsolete equality happens to balance. An orphan therefore does
+  not by itself force failure. Exhaustively at order five, `3200/5120` pairs
+  have at least one orphan, `3080/5120` have unequal Type-II and orphan
+  totals, and `960/5120` are orphan-bearing but balanced.
+- **Repair / strongest survivor:** THM-012b's insertion-decomposition formula
+  remains correct and now has the elementary full-incidence proof of
+  THM-4094. Its prose now assigns `3080` to failures of the obsolete equality
+  and `3200` to positive orphan support. THM-4094's exact deficit
+  `H(T)-H(T-v)=sum_P(a_v(P)-1)+O_v` has zero failures through order five.
+- **Reusable rule:** support of a correction term and failure of a proposed
+  equality are different statistics; cancellations can make a false formula
+  hold on objects where both correction terms are nonzero.
+
 ## MISTAKE-498 (2026-08-25, MISTAKE-497 / HYP-3779 repair attribution) -- a live THM-4089 ID was attached to an unrelated LRC ray claim
 
 - **What failed:** the first repair of HYP-3779 said that `THM-4089` was an
@@ -20,15 +41,16 @@ Format per entry:
   [THM-4089--hybrid-padic-zeta-margin-optimization-and-next-case-obstruction](theorems/THM-4089-hybrid-padic-zeta-margin-optimization-and-next-case-obstruction.md).
   Its variables are `(p,s,xi,Y)` and it optimizes an external p-adic-zeta
   margin; it contains no `182m` ray, Dedekind sum, eta invariant, or LRC
-  affine optimizer. This is an ID/slug collision, not a consequence of that
+  affine optimizer. This was an ID/slug collision, not a consequence of that
   theorem.
-- **Repair / strongest survivor:** remove THM-4089 from the HYP-3779 repair.
-  The actual exact LRC statement is
-  [THM-2057--scaled-zeta-core-one-tail-closure](theorems/THM-2057-scaled-zeta-core-one-tail-closure.md):
-  `M({1,...,12,182m})=14m/(182m+1)>1/14`. It supplies no p-adic/eta avatar or
-  comparison with `-1/12`. MISTAKE-497's character, eta-factor, and
-  Euler--Maclaurin corrections survive independently; the avatar synthesis
-  remains **OPEN**.
+- **Repair / strongest survivor:** removing THM-4089 from the repair was
+  necessary. [THM-2057--scaled-zeta-core-one-tail-closure](theorems/THM-2057-scaled-zeta-core-one-tail-closure.md)
+  proves the exact LRC ray. The subsequently reserved and independently
+  audited [THM-4096--twisted-padic-affine-LRC-ray-optimizer](theorems/THM-4096-twisted-padic-affine-lrc-ray-optimizer-and-next-case-obstruction.md)
+  now proves the separate rational affine optimizer under its correct ID and
+  explicitly disclaims a common p-adic-valued sum. MISTAKE-497's character,
+  eta-factor, and Euler--Maclaurin corrections survive; the avatar/`f_14`
+  synthesis remains **OPEN**.
 - **Reusable rule:** never use an integer theorem ID without its slug/path.
   In concurrent work, re-resolve the live file after every rebase before
   attributing a correction or proof dependency.
@@ -42,7 +64,7 @@ Format per entry:
   these avatars as exactly the `f_14` cusp residual.
 - **Minimal witness / first failed implication:** the Kubota--Leopoldt
   interpolation formula is character-sensitive. For the standard
-  trivial-character branch `zeta_p(s)=L_p(s,1)`, take
+  trivial-character branch `zeta_p(s)=L_p(s,1)` at an odd prime, take
   `k_j=2+(p-3)p^j`. Then `p-1` divides `k_j` and `k_j` tends p-adically to
   `2`. Interpolation plus von Staudt--Clausen gives
   `v_p(zeta_p(-1))=-1` and
@@ -63,17 +85,22 @@ Format per entry:
   `L_7(-1,omega^2)=1/2` survive. The eta value is
   `182/549` in Atiyah's orientation. Independently,
   [THM-2057--scaled-zeta-core-one-tail-closure](theorems/THM-2057-scaled-zeta-core-one-tail-closure.md)
-  proves `M({1,...,12,182m})=14m/(182m+1)>1/14`; it gives no p-adic/eta
-  identification or comparison with `-1/12`. Any identification of the
-  remaining LRC residual with a p-adic/archimedean split or with `f_14`
-  remains **OPEN analogy**, not a proof dependency.
+  proves `M({1,...,12,182m})=14m/(182m+1)>1/14`. THM-4096
+  normalizes that explicit witness and proves an exact rational affine
+  optimizer: `m=1` is the unique positive-side point and every `m>=2` lies
+  below `-1/12`. It explicitly loses p-adic topology. Any identification of
+  the LRC residual with a p-adic/archimedean split or with `f_14` remains
+  **OPEN analogy**, not a proof dependency.
 - **Sources and replay boundary:** the character typing is equation (1.1) of
-  Luochen Zhao, *Sum Expressions for Kubota--Leopoldt p-adic L-functions*
-  (2022); the lens-space factor is formula (4.25) of Michael Atiyah,
-  *The Logarithm of the Dedekind Eta-Function*. The script/output named by
+  [Luochen Zhao, *Sum Expressions for Kubota--Leopoldt p-adic L-functions*
+  (2022)](https://arxiv.org/abs/2201.08870); the lens-space factor is formula
+  (4.25) of [Michael Atiyah, *The Logarithm of the Dedekind
+  Eta-Function*](https://webhomes.maths.ed.ac.uk/~v1ranick/papers/atiyahlg.pdf).
+  The script/output named by
   HYP-3779 are absent from the current repository, so its old “verified”
-  provenance is not replayable. THM-2057 replays only the separate LRC ray;
-  THM-4089--hybrid-padic-zeta-margin is likewise unrelated to these avatars.
+  provenance is not replayable. THM-2057 replays the LRC ray, and the
+  THM-4096 replacement referee replays only its rational affine optimizer;
+  THM-4089--hybrid-padic-zeta-margin is unrelated to these avatars.
 - **Reusable rule:** a p-adic special value is not typed by its integer
   argument alone; retain the Dirichlet/Teichmuller character branch. Likewise,
   a spectral invariant must carry its normalization and orientation factor,
