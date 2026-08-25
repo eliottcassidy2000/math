@@ -1,0 +1,9 @@
+status=PROVED Calkin--Wilf/Berggren identities with FINITE-EXACT hostile companion
+stern_brocot_words=65535;projective_euclid_reciprocal_checks=54795
+calkin_wilf_nodes=1048575;pythagorean_ordinals=349525
+cw_reflection=k_star=3*2^floor(log2(k))-1-k
+berggren_ordinals=A:2k-1;B:4k_star+3;C:4k+3
+berggren_depth=11;nodes=265720;max_parameter=33461;branches={'A': 88573, 'B': 88573, 'C': 88573}
+finite_reduction_fibres=[(8, 21, 16, 28), (32, 323, 244, 496), (128, 5021, 3762, 8128), (512, 79851, 59904, 130816)]
+n4_completion_hostile=ascending:(H,c3)=(1,0);flip_2_4:(H,c3)=(3,1)
+PASS

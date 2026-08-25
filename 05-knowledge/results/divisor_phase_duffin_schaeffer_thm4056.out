@@ -1,0 +1,10 @@
+status=PROVED identities with FINITE-EXACT hostile companion
+natural_edge_levels=255;divisor_first_differences=254
+clock_qmax=12;lcm_period=27720;mobius_recoveries=11
+duffin_schaeffer_shells=299;common_clock_mean=176831/90090
+phase_lift_pointwise_hostile=first_difference_at_t=1
+phase_kernel_hostile=psi_2_to_psi_4_preserves_phase_and_mean_but_changes_lift
+rational_separation_checks=2162124;golden_norm_checks=304193
+golden_hostile=alpha_notin_Wprime(q->1/(4q));DS_sum_diverges
+e_cf_product_checks=100;product_first_3n_positive_digits=2^n*n!
+PASS

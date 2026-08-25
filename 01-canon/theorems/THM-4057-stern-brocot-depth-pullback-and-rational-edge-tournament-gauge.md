@@ -2,44 +2,57 @@
 id: THM-4057
 title: "Stern--Brocot depth pullback and rational-edge tournament gauge"
 status: >
-  PROVED + VERIFIED-EXACT.  Reduced positive rationals are exactly the
-  ordered arcs of the coprimality graph, with reciprocal as arc reversal;
-  this raw object is not a tournament.  The reciprocal is the global
-  Stern--Brocot mirror and preserves path depth.  Pulling that depth through
-  the exact Berggren/Farey prefix code gives D(wx)=D(x)+2|w|-#A and turns the
-  A-branch Walsh character into the Stern--Brocot checkerboard character.
-  An explicit scale-invariant depth gauge gives a lawful nontransitive
-  tournament, with infinite Pell and Fibonacci directed-cycle families.
-  Trace/norm/signed-sheet and Gaussian-square formulas identify exactly what
-  reciprocal reversal preserves and loses.  None of this proves an
-  irrationality statement, Duffin--Schaeffer, LRC(14), or a tournament
-  characterization of Berggren ancestry.
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED. Reduced positive
+  rationals are ordered coprime arcs, not tournament edges; a tournament on
+  positive naturals is exactly a scale-decorated reciprocal selector.
+  Reciprocal is the global Stern--Brocot mirror and preserves its continued-
+  fraction depth. Pullback through the Berggren prefix code gives
+  D(wx)=D(x)+2|w|-#A and the A-branch Walsh character. Separately, the
+  Calkin--Wilf heap gives a natural ordinal: primitive Pythagorean parameters
+  are exactly k=3,5 mod 6, with explicit Berggren transducers and radix
+  inverses. A lawful depth-gauged tournament has infinite Pell/Fibonacci
+  cycle families; branch-triangle gcds, parity counts, and the unique root
+  shadow collision are exact. No LRC, Jacobian, irrationality, or arbitrary
+  tournament-invariant transfer is asserted.
 source: codex-khinchin-ds-rational-tournament-20260824
 audit: >
-  The exact companion checks the rational-edge typing, reciprocal path mirror,
+  The primary companion checks rational-edge typing, reciprocal Stern paths,
   canonical continued fractions, trace/norm/sheet identities, Gaussian
-  content, all Berggren words through depth eight, five additional rational
-  roots through depth five, three distinct reflections, the tournament on
-  initial natural-number segments through 60, and finite Pell/Fibonacci
-  controls.  An independent audit rederived the all-depth cocycle and Walsh
-  ray, caught the gcd/height loss and the distinction from HYP-2925's
-  Euclidean quotient-count parity, and verified the stated scope.
+  content, Berggren depth words and roots, the lawful tournament through
+  finite segments, and Pell/Fibonacci controls. The secondary and independent
+  companions separately check Stern versus Calkin--Wilf reflection, the heap
+  involution, mod-six Pythagorean section, Berggren ordinal transducers and
+  inverses, reduction fibres, scale selectors, branch gcds, parity counts,
+  the extreme-edge cycle rule, and the unique root collision.
 depends_on:
   - THM-2596-modular-free-factor-farey-gram-owner-cocycle
   - THM-3333-gaussian-square-farey-pythagorean-triangular-light-cone
   - THM-3357-berggren-three-branch-walsh-level-collapse-and-parent-circuit
+  - THM-3509-reduced-fraction-harmonic-k4-face-and-fibonacci-unit-cassini-ray
+  - THM-3756-odd-square-ordinal-berggren-affine-descent
+  - THM-4056-divisor-phase-compiler-and-duffin-schaeffer-lcm-clock
 related:
   - HYP-2212-quadratic-discriminant-carrier-pi-e
   - HYP-2628-lrc14-euler-copy-squarefree-profile
   - HYP-2925-lrc14-magnitude-aware-tournaments
-  - THM-3509-reduced-fraction-harmonic-k4-face-and-fibonacci-unit-cassini-ray
+  - THM-2294-anchored-plucker-tournament-and-kakeya-address-bank
+  - THM-3382-fibonacci-ray-dual-index-harmonic-bifurcation-and-ternary-heap-addresses
   - THM-3744-pell-prefix-loneliness-constant-carry-exact-formula
-  - THM-4056-divisor-phase-compiler-and-duffin-schaeffer-lcm-clock
 script: 04-computation/stern_brocot_rational_edge_tournament_thm4057.py
 output: 05-knowledge/results/stern_brocot_rational_edge_tournament_thm4057.out
 script_sha256: 98406973d1a2c60dfe30b498d36c8cd30e35b8088e851d612b1db28dde9e1d27
 output_sha256: 13102a7220e5e02adfc4eae5dc920ea7acb63ba284216c004e0b3fe9e4473692
+secondary_script: 04-computation/calkin_wilf_berggren_ordinal_thm4057.py
+secondary_output: 05-knowledge/results/calkin_wilf_berggren_ordinal_thm4057.out
+secondary_script_sha256: 0ad8497d50ab4ec59568489b6dc8c8f4ed9243b64c36e6608ab369137e99cfa2
+secondary_output_sha256: 00f13ea27cfb7ec1bcc44dd1375623e4f8803de642b19679f64419fa3d354e2b
+independent_audit_script: 04-computation/calkin_wilf_berggren_ordinal_thm4057_independent_audit.py
+independent_audit_output: 05-knowledge/results/calkin_wilf_berggren_ordinal_thm4057_independent_audit.out
+independent_audit_script_sha256: a65dc37d2fd4a2a592ee3fcd0095ec5ba8ff0a42a46e88fd32bd169baee7fa82
+independent_audit_output_sha256: b6eef90db4c150e3570454c1236145a6de9f5ef533aef2e282beb59d64c3a335
+hash_basis: raw bytes
 ---
+
 
 # THM-4057 -- reciprocal rational edges, Berggren depth parity, and a lawful tournament gauge
 
@@ -529,3 +542,482 @@ and infinite Pell/Fibonacci claims are proved symbolically by `(20)--(24)` and
 Nothing here proves irrationality or transcendence of Khinchin's constant or
 `e+pi`, the Duffin--Schaeffer theorem, a Berggren-tree tournament
 classification, LRC(14), JC(2), or any transfer among those open problems.
+
+## 10. Complementary Calkin--Wilf ordinal and scale-selector layer
+
+Three coordinates must remain distinct. Stern--Brocot depth is the sum-of-
+partial-quotients path statistic used by the Berggren cocycle above.
+Calkin--Wilf heap position is a breadth-first natural ordinal with a different
+reciprocal involution. Finally, the dilation or gcd of a natural-number edge
+is erased by reduction. The results below show how the three coordinates
+interact without identifying them.
+
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.** The theorem
+implements the proposed “rational number as an edge” only after separating
+four objects which otherwise collapse: completeness, direction, primitive
+ratio, and dilation. No literature-priority or global-novelty claim is made.
+
+### 1. Inheritance and type repair
+
+[THM-2294](THM-2294-anchored-plucker-tournament-and-kakeya-address-bank.md)
+is the orientation guardrail: antisymmetric signs orient, while symmetric
+characters are colours. [THM-3509](THM-3509-reduced-fraction-harmonic-k4-face-and-fibonacci-unit-cassini-ray.md)
+supplies the exact reduced-fraction/Pythagorean leg-swap fibre.
+[THM-3756](THM-3756-odd-square-ordinal-berggren-affine-descent.md) supplies
+the closest natural-number chart and the canonical warning that outer odd
+rank is not a node address. [THM-3382](THM-3382-fibonacci-ray-dual-index-harmonic-bifurcation-and-ternary-heap-addresses.md)
+is the index-map hostile: density and harmonic class change under a different
+injection of the same tree into the naturals.
+
+There are three distinct rational-edge objects.
+
+1. All positive reduced rationals `p/q`, oriented `p->q`, give both arcs on
+   every coprime pair, plus the loop `1->1`. This is a bidirected coprimality
+   graph, not a tournament.
+2. Restricting to `p<q` gives the upward acyclic orientation of the
+   coprimality graph. Noncoprime pairs such as `{2,4}` are missing, so it is
+   still not a tournament.
+3. Orient every natural pair by size, `a->b` for `a<b`, and attach its
+   reduced ratio and gcd. This is a complete transitive tournament whose
+   rational label has a scale sidecar.
+
+The first two constructions are useful graphs. Calling either a tournament
+would erase a load-bearing failure of completeness or antisymmetry.
+
+### 2. Every tournament is a scale-decorated reciprocal selector
+
+Write every unordered natural pair uniquely as
+
+```text
+{a,b}=g{p,q},       g=gcd(a,b),       gcd(p,q)=1,       p<q. (1)
+```
+
+For a tournament `T` on `N_(>0)`, define
+
+```text
+epsilon_T(p,q;g)=0  if gp->gq,
+epsilon_T(p,q;g)=1  if gq->gp.                            (2)
+```
+
+Then
+
+```text
+T  <->  arbitrary bit functions epsilon(p,q;g)             (3)
+```
+
+is a bijection. Tournament converse toggles every bit, and the selected
+reduced rational changes from `p/q` to `q/p`.
+
+A direction on the reduced rational independent of representative scale is
+well-defined if and only if
+
+```text
+epsilon(p,q;g) is independent of g.                         (4)
+```
+
+Without (4), two multiples of one rational ray can select opposite reciprocal
+nodes. Thus an arbitrary tournament is not a bit function on reduced
+rationals alone; it is a **scale-decorated** selector.
+
+If a directed edge `u->v` is labelled `u/v`, then every directed path has
+
+```text
+product_(i=0)^(r-1) v_i/v_(i+1)=v_0/v_r.                  (5)
+```
+
+Every directed-cycle product is therefore one. Rational magnitudes form an
+exact multiplicative coboundary and cannot detect tournament curl; curl lives
+in the selector bits.
+
+#### Coprimality masks impose no finite graph-pattern restriction
+
+Every finite simple graph occurs, up to relabelling, as an induced
+coprimality graph. Given a desired graph, assign a private prime `p_ij` to
+both vertices `i,j` for each desired **nonedge**, and give every vertex an
+additional private prime. The products at two vertices have gcd greater than
+one exactly at the prescribed nonedges and are all distinct. Consequently a
+coprimality mask alone cannot force a finite tournament pattern; direction,
+height, prime labels, or Euclidean ancestry is additional data.
+
+#### Minimal completion hostile
+
+On `[4]` the upward coprime graph misses only `{2,4}`. Completing it as
+`2->4` gives the transitive tournament with
+
+```text
+(H,c_3)=(1,0),
+```
+
+while `4->2` gives a source over a directed triangle with
+
+```text
+(H,c_3)=(3,1).                                            (6)
+```
+
+The same coprime-edge data therefore admits different Hamiltonian-path and
+cycle counts.
+
+### 3. Exact Stern--Brocot reciprocal reflection
+
+Represent a reduced fraction by its primitive column `(numerator,denominator)`.
+At a Stern--Brocot interval address `w`, let `P_w` have the left and right
+boundary columns. Put
+
+```text
+J  =[[0,1],[1,0]],
+U_L=[[1,1],[0,1]],
+U_R=[[1,0],[1,1]].                                        (7)
+```
+
+Then
+
+```text
+P_empty=J,       P_(wL)=P_w U_L,       P_(wR)=P_w U_R.     (8)
+```
+
+Since `J U_L J=U_R`, induction gives
+
+```text
+P_(bar w)=J P_w J,                                        (9)
+```
+
+where `bar w` interchanges every `L` and `R`. The mediant vector is
+`P_w(1,1)^T`, so (9) swaps its coordinates:
+
+```text
+p/q  ->  q/p.                                             (10)
+```
+
+Thus arc reversal is literally reflection across the center of the
+Stern--Brocot tree. It is not, by itself, a vertex permutation of a finite
+tournament.
+
+The positive pair monoid obeys the same mirror identities
+
+```text
+L(p,q)=(p,p+q),       R(p,q)=(p+q,q),
+S L=R S,              S R=L S,                            (11)
+```
+
+with `S(p,q)=(q,p)`. Equation (11) does not identify the Stern--Brocot and
+Calkin--Wilf parent maps.
+
+### 4. The distinct Calkin--Wilf natural ordinal
+
+The two trees enumerate the same positive rationals, but the same mixed word
+need not name the same node:
+
+```text
+word LR:       Stern--Brocot 2/3,       Calkin--Wilf 3/2.  (12)
+```
+
+Let Stern's diatomic sequence be
+
+```text
+s(0)=0, s(1)=1,
+s(2n)=s(n),       s(2n+1)=s(n)+s(n+1).                    (13)
+```
+
+The Calkin--Wilf heap node `k>=1` is
+
+```text
+C(k)=s(k)/s(k+1).                                         (14)
+```
+
+Write the binary expansion of `k` as `1w`, with `L=0,R=1`, and put
+`ell=floor(log_2 k)`. Letterwise reciprocal reflection has the affine ordinal
+
+```text
+k*=3*2^ell-1-k.                                           (15)
+```
+
+Indeed, (15) complements the `ell` suffix bits and the pair recursion in
+(11) swaps `s(k),s(k+1)`.
+
+For the natural-order tournament on `[N]`, every edge has the unique lossless
+label
+
+```text
+(a,b)=g(s(k),s(k+1)),
+k>=2 even,       g s(k+1)<=N.                             (16)
+```
+
+Thus
+
+```text
+E(T_N) <-> {(k,g): k>=2 even, g s(k+1)<=N}.                (17)
+```
+
+Forgetting `g` gives the fibre `floor(N/s(k+1))` proved in
+[THM-4056](THM-4056-divisor-phase-compiler-and-duffin-schaeffer-lcm-clock.md).
+Reflection preserves maximum height and this fibre while reversing the arc.
+
+Reciprocal rationals share the **projective Euclidean coefficient word**
+obtained by deleting only a leading continued-fraction zero. They do not
+generally share the standard finite Khinchin word, which always discards
+`a_0`; THM-4056 gives the exact `3/5` versus `5/3` hostile.
+
+### 5. Primitive Pythagorean parameters are `k=3,5 mod 6`
+
+Two elementary inductions from (13) give
+
+```text
+s(k) is even  iff  3|k,
+s(k)>s(k+1)   iff  k is odd,       k>1.                   (18)
+```
+
+Adjacent Stern values are coprime. Therefore the standard primitive
+Pythagorean parameters
+
+```text
+m>n>0,       gcd(m,n)=1,       m-n odd                    (19)
+```
+
+are exactly
+
+```text
+(m,n)=(s(k),s(k+1)),       k=3 or 5 mod 6.                 (20)
+```
+
+The opposite-parity condition is essential: `(3,1)` is coprime but generates
+the nonprimitive triple `(8,6,10)`.
+
+For the standard Berggren parameter branches
+
+```text
+A(m,n)=(2m-n,m),
+B(m,n)=(2m+n,m),
+C(m,n)=(m+2n,n),                                           (21)
+```
+
+the induced natural-number maps are
+
+```text
+A(k)=2k-1,
+B(k)=4k*+3=12*2^floor(log_2 k)-4k-1,
+C(k)=4k+3.                                                 (22)
+```
+
+If the Calkin--Wilf word of `k` is `w=uR`, the word laws are
+
+```text
+A: uR -> uLR,
+B: w  -> (bar w)RR,
+C: w  -> wRR.                                              (23)
+```
+
+The child branch is visible in the terminal binary digits:
+
+```text
+A-image: k=1 mod 4,
+B-image: k=3 mod 8, except the root k=3,
+C-image: k=7 mod 8.                                       (24)
+```
+
+Consequently the inverse Berggren descent on the set (20) is
+
+```text
+k -> (k+1)/2                         if k=1 mod 4,
+k -> ((k-3)/4)*                      if k=3 mod 8 and k>3,
+k -> (k-3)/4                         if k=7 mod 8.          (25)
+```
+
+This is a complete radix descent to the root `k=3`. Under THM-3756's branch
+convention, `A,B,C` are respectively its `L,M,R`.
+
+#### Exact depth pullback
+
+The root has Calkin--Wilf depth one. An `A` step adds one bit; a `B` or `C`
+step adds two. At Berggren depth `d`, the nodes at Calkin--Wilf depth
+
+```text
+1+d+j
+```
+
+are therefore counted by
+
+```text
+C(d,j)2^j,       0<=j<=d.                                 (26)
+```
+
+The ordinal image (20) has natural density `1/3`, Dirichlet series for
+`Re(s)>1`
+
+```text
+6^(-s)[zeta(s,1/2)+zeta(s,5/6)],                           (27)
+```
+
+and, as `X->infinity`, harmonic sum
+
+```text
+sum_(k<=X,k=3,5 mod 6)1/k
+ = (1/3)log X + gamma/3 - pi*sqrt(3)/12
+   + log(2)/3 - log(3)/12 + O(1/X).                        (28)
+```
+
+These are properties of the Calkin--Wilf ordinal. The canonical ternary heap
+of THM-3382 gives the same abstract tree a different density and harmonic
+class.
+
+### 6. Odd-square coordinates and the Vieta light-cone carrier
+
+The exact bridge from (19) to THM-3756's odd roots is
+
+```text
+q=m+n,       d=m-n,
+m=(q+d)/2,  n=(q-d)/2.                                    (29)
+```
+
+It bijects primitive opposite-parity `(m,n)` with coprime odd `q>d>0` and
+preserves the full primitive triple:
+
+```text
+(m^2-n^2,2mn,m^2+n^2)
+ =(qd,(q^2-d^2)/2,(q^2+d^2)/2).                           (30)
+```
+
+For the oriented edge `d->q`, put
+
+```text
+Sigma=q+d,       Pi=qd,       Delta=q-d.                   (31)
+```
+
+Reciprocal reflection fixes `Sigma,Pi`, negates `Delta`, and
+
+```text
+Sigma^2-4Pi=Delta^2,
+A=Pi,       2B=Sigma*Delta,       4C=Sigma^2+Delta^2.      (32)
+```
+
+Thus the generic sum/product/discriminant carrier from the `e,pi` work has an
+exact Pythagorean realization: the symmetric coordinates retain the unordered
+edge, while the discriminant sign is the orientation sidecar. Reversal sends
+
+```text
+(A,B,C)->(A,-B,C).                                        (33)
+```
+
+If `g=gcd(q,d)>1` is odd, (30) has exact content `g^2`; reducing `d/q`
+collapses that scaled Berggren component. For an odd denominator `q`, exactly
+`phi(q)/2` incoming reduced numerators are odd, so THM-3756's odd/odd chart is
+precisely half of that denominator shell.
+
+### 7. Berggren branch triangles and the minimal cycle obstruction
+
+For a parent `(m,n)` satisfying (19), join the parent edge, one child edge in
+(21), and the remaining closure edge on their three natural endpoints. The
+closure gcd is
+
+```text
+gcd_A=gcd_B=gcd(n,2),       gcd_C=gcd(m,2).                (34)
+```
+
+Indeed,
+
+```text
+gcd(n,2m-n)=gcd(n,2m+n)=gcd(n,2),
+gcd(m,m+2n)=gcd(m,2n)=gcd(m,2).                            (35)
+```
+
+At Berggren depth `d`, the counts of nodes with `n` odd/even are
+
+```text
+(3^d+(-1)^d)/2,       (3^d-(-1)^d)/2.                     (36)
+```
+
+This follows from the two-state parity transfer: `A,B` toggle the state and
+`C` preserves it. Hence the marked branch incidences split as
+
+```text
+primitive K3       = (3^(d+1)+(-1)^d)/2,
+scale-two closure  = (3^(d+1)-(-1)^d)/2.                  (37)
+```
+
+In the natural-order tournament each branch triangle is transitive. Flipping
+the unique edge joining its least and greatest natural vertices creates a
+directed 3-cycle; flipping either short edge alone leaves a transitive
+triangle. The extreme edge is the closure in branches `A,B` and the child
+edge in branch `C`. Global reflection flips all three and is again transitive.
+
+#### Unique unordered-Pythagorean collision in a branch triangle
+
+Put `t=n/m in (0,1)`. The three reduced edge labels in the `A,B,C` triangles
+are respectively
+
+```text
+A: t, 1/(2-t), t/(2-t),
+B: t, 1/(2+t), t/(2+t),
+C: t, t/(1+2t), 1/(1+2t).                                (38)
+```
+
+By THM-3509, two reduced fractions in `(0,1)` have the same primitive
+normalized unordered Pythagorean triple exactly when they are related by
+
+```text
+J(x)=(1-x)/(1+x).                                         (39)
+```
+
+Solving the three pair equations in each row of (38) gives
+
+```text
+A: t^2-4t+1=0,  2t-1=0,  t^2-3t+1=0;
+B: t^2+2t-1=0, t^2+t-1=0, no solution;
+C: 3t^2-1=0,   t=0,       t=0.                            (40)
+```
+
+The only rational root in `(0,1)` is `t=1/2`. Primitivity forces the root
+`(m,n)=(2,1)`, branch `A`, with labels
+
+```text
+(1/2,2/3,1/3),
+U(1/2)=U(1/3)={3,4,5},       U(2/3)={5,12,13}.             (41)
+```
+
+Reflecting only the closure `1->3` changes the natural transitive triangle
+into
+
+```text
+1->2->3->1                                                   (42)
+```
+
+while preserving every gcd and the entire unordered-Pythagorean multiset.
+Equation (41) is the unique additional shadow collision among all marked
+branch incidences. Direction was already lost by reciprocal folding; the
+collision shows that even distinct edge identities can merge at the root.
+
+### 8. Validity boundary and generated frontiers
+
+- The natural-order completion is transitive. Nontrivial tournament structure
+  enters only through explicit selector bits; coprimality is not an intrinsic
+  total orientation.
+- Stern--Brocot reflection (9) and Calkin--Wilf ordinal (15) are compatible
+  reciprocal mirrors but different address systems. Formula (22) belongs to
+  Calkin--Wilf.
+- The quotient to an unordered primitive triple loses reciprocal direction,
+  leg order, and raw scale. Retaining ordered legs repairs the `J` collision;
+  retaining scale repairs the infinite dilation fibre.
+- No LRC(14), planar Jacobian, `e+pi`, or Duffin--Schaeffer consequence follows
+  from the shared Vieta grammar alone.
+- Live generated tasks are: classify finite-state dilation-invariant
+  selectors on Stern--Brocot words; combine branch closure signs with
+  THM-3357's parity/Walsh characters; determine distinct rather than marked
+  branch-triangle overlaps; and find the smallest extension of THM-3756's
+  ordinal carrying both reciprocal direction and the `J`-parity bit.
+
+### 9. Replay
+
+From the repository root:
+
+```text
+python -B 04-computation/calkin_wilf_berggren_ordinal_thm4057.py
+python -B -O 04-computation/calkin_wilf_berggren_ordinal_thm4057.py
+python -B 04-computation/calkin_wilf_berggren_ordinal_thm4057_independent_audit.py
+python -B -O 04-computation/calkin_wilf_berggren_ordinal_thm4057_independent_audit.py
+```
+
+The primary path checks `1,048,575` Calkin--Wilf nodes and every Berggren node
+through depth eleven. The independent path reconstructs word reflection,
+all `1,024` tournaments on `[5]` from scale selectors, and the branch/gcd/
+collision atlas through depth eight. Both normal/optimized pairs are
+byte-identical. **QED.**
+

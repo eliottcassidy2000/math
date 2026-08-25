@@ -206,6 +206,9 @@ This maps imported claims, consumers, and exclusions; links—not bare IDs—are
 
 ## Continued fractions and Khinchin content
 - [Continued-fraction, Khinchin, and Duffin--Schaeffer primary pins and exact repo boundaries](continued-fractions-khinchin-duffin-schaeffer-pins.md).
+- The [metric-approximation audit supplement](CORE-PAPERS-METRIC-APPROXIMATION.md)
+  records the named-number and irrationality-exponent guardrails used by the
+  complementary THM-4056/4057 audits; metric inputs do not settle named constants.
 
 ## Jacobian, Dixmier, and Poisson
 

@@ -1,0 +1,8 @@
+status=INDEPENDENT FINITE-EXACT audit
+fibre_types_checked=92370;incidence_shells_checked=2768
+clock_qmax=15;lcm_period=360360;recursive_recoveries=14
+clock_mean=28505303068840888256/7700585006276737575
+phase_lift_pointwise_hostile=first_difference_at_t=1
+phase_kernel_hostile=q2_and_q4_weights_have_same_phase_clock_but_different_lift_clocks
+cf_normalization_hostile=3/5_vs_5/3;equal_projective_word_but_unequal_standard_Khinchin_word
+PASS

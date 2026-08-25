@@ -228,9 +228,10 @@ THM-2070 refutes the general HYP-8890/8895 bypasses.  Transfer
 - THM-1880/1885: Pell; THM-3335/3339/3357/3364/3379: Fibonacci
   tournaments. [THM-3509](../01-canon/theorems/THM-3509-reduced-fraction-harmonic-k4-face-and-fibonacci-unit-cassini-ray.md):
   `4/6/3` K4 carriers; matching loses Cassini sign. THM-3497: ancestry
-  densities. THM-4057: coprime arcs are not tournaments; its added depth gauge
-  has Pell/Fibonacci `C3` rays and pulls through Berggren. THM-4059 gives the
-  packet/star divisor law and height columns; both lose gcd/height. No currents.
+  densities. THM-4057 separates coprime arcs, its Pell/Fibonacci depth gauge,
+  and the Calkin--Wilf Berggren radix. THM-4059 gives inverse-depth packets,
+  the lower-star divisor law, and height columns; reduction loses gcd/height
+  and unordered shadows lose curl. No currents.
 - THM-3457/3462: `25/477`.
 - THM-1926 factors zeta over the strong core; THM-1940 gives `var(lambda^2)`.
 - THM-1965 stops at `n<=6`; THM-1966 adds a signed-Rédei coordinate at `n=7`.
@@ -292,6 +293,10 @@ singleton criteria; THM-3825 decodes. Fixed inert products give
 `1/2`. Williams plus paired `d,3d` rows gives
 `liminf H sqrt(log log X)/sqrt(log X)>=0.4276598...`. No support asymptotic
 or residue follows.
+
+[THM-4056](../01-canon/theorems/THM-4056-divisor-phase-compiler-and-duffin-schaeffer-lcm-clock.md)
+gives natural-edge fibres and distinct phase/lift clocks with common metric
+mean; its hostiles block named-point transfer. `e+pi`/Khinchin remain **OPEN**.
 
 ### Sun 2-4-6-8
 

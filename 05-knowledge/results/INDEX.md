@@ -31,6 +31,38 @@
   independent script/output:
   `9cf33bbd5d022893a2dc31bec837ad708d1d9ef501015fb38da54feaea7a94d2` /
   `12037bf83bf0754677a6f80d1b89830e2e3d5cd9acb66f3201a50e623fbce939`.
+- `calkin_wilf_berggren_ordinal_thm4057.py` and independent
+  branch/fibre audit -> matching `.out`s [THM-4057 PROVED + VERIFIED-EXACT +
+  INDEPENDENTLY HOSTILE-AUDITED]. Tournaments on the positive naturals are
+  exactly scale-decorated reciprocal selectors; coprime rational arcs alone
+  are not tournaments. Stern--Brocot reflection is reciprocal edge reversal.
+  In the distinct Calkin--Wilf heap, primitive Pythagorean parameters are
+  exactly `k=3,5 mod 6`, with Berggren maps
+  `A=2k-1,B=4k*+3,C=4k+3` and exact radix inverses. Branch closure counts are
+  `(3^(d+1)+(-1)^d)/2` primitive and the complementary scale-two count; the
+  unique unordered-Pythagorean branch collision is the root
+  `(1/2,2/3,1/3)`. Primary script/output SHA-256:
+  `0ad8497d50ab4ec59568489b6dc8c8f4ed9243b64c36e6608ab369137e99cfa2` /
+  `00f13ea27cfb7ec1bcc44dd1375623e4f8803de642b19679f64419fa3d354e2b`;
+  independent script/output:
+  `a65dc37d2fd4a2a592ee3fcd0095ec5ba8ff0a42a46e88fd32bd169baee7fa82` /
+  `b6eef90db4c150e3570454c1236145a6de9f5ef533aef2e282beb59d64c3a335`.
+
+- `divisor_phase_duffin_schaeffer_thm4056.py` and independent sieve/clock
+  audit -> matching `.out`s [THM-4056 PROVED elementary reductions + CITED
+  metric inputs + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED]. Natural
+  edges have primitive fibre `floor(N/q)` and compile into an invertible lift
+  divisor clock; unit-residue phases give a distinct radical-class clock.
+  Both complete-period means equal the finite Duffin--Schaeffer raw mass, but
+  `q=2` versus `q=4` proves phase/mean equality loses prime-power depth. A
+  golden-ratio hostile blocks pointwise use of full measure; an infinite
+  finite digit-mean limit forces irrationality exponent two. The trace and
+  synchronized-form gates do not settle `e+pi`. Primary script/output SHA-256:
+  `9b9f234a2f9b49b4c254063d04a86d37324906c00c3c7789b6603ba0c7fe66a9` /
+  `fa1c2c019c5c8e31d0496a2f6a0229885305c113dd9fbddac772a2fe1a09f601`;
+  independent script/output:
+  `efb303a62ed272111b23f56c61befc6e5ba940eae9bc6fc5fe0090ed09a85cd4` /
+  `444a040cb2f9679043c2c30d058d5a200d55cc3ae59d5a6fc1bd6e9871d33ed1`.
 
 - `sixty_dyadic_response_fibre_thm4055.py` and independent CRT/spatial audit
   -> matching `.out`s [THM-4055 PROVED universal phase-fibre law +

@@ -1,0 +1,7 @@
+status=INDEPENDENT FINITE-EXACT Calkin--Wilf/Berggren audit
+pair_monoid_checks=12174;cw_word_checks=65535
+pythagorean_collision_pairs=5841;unique_branch_collision=1
+primitive_K3_counts=[2, 4, 14, 40, 122, 364, 1094, 3280, 9842]
+scale2_closure_counts=[1, 5, 13, 41, 121, 365, 1093, 3281, 9841]
+scale_selector_tournaments_N5=1024
+PASS

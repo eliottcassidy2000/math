@@ -67,3 +67,14 @@
   factor-choice torsor and proves unbounded U-spine fibres by CRT.
 - **Does not prove:** the count without its prime condition (`c=3` is the
   minimal hostile), Berggren ancestry words, XOR matchings, or a tournament.
+
+## 2026-08-24 repo-derived rational-edge update
+
+[THM-4057](../../01-canon/theorems/THM-4057-stern-brocot-depth-pullback-and-rational-edge-tournament-gauge.md)
+is **PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED** and is derived
+from elementary Stern/Calkin--Wilf recurrences plus prior repo carriers. It
+identifies primitive-Pythagorean Calkin--Wilf ordinals as `3,5 mod 6`, gives
+the exact three Berggren ordinal transducers and radix inverse, and classifies
+marked branch-triangle closure gcds and the unique unordered-Pythagorean root
+collision. The sources above do not supply those ordinal/tournament claims;
+THM-4057 does not claim they prove a tournament, LRC, or Jacobian result.
