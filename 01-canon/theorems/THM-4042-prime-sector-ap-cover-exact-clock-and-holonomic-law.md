@@ -18,6 +18,14 @@ related:
   - THM-4029-lrc14-ap-cover-twelve-owner-rational-tail
   - THM-4035-sixty-clock-separation-and-finite-kakeya-spine
   - THM-4038-ap-deficit-holonomic-sixty-phase-law
+  - THM-1420-the-sixty-plateau-in-lrc
+  - THM-1105-arithmetic-position-law
+  - THM-563-signed-deltaw-periodicity-bound
+  - THM-879-vgrid-moment-and-moebius-sinc
+  - THM-1226-gcd-period-projective-charge-obstruction
+  - THM-3848-rational-base-prefix-atom-tree-and-lonely-runner-separation
+  - THM-4000-centered-base-split-cubic-observer-and-tripotent-crt-atlas
+  - THM-4044-sixty-clock-hasse-alias-and-planar-jc-boundary-firewall
 script: 04-computation/prime_sector_ap_cover_exact_clock_thm4042.py
 output: 05-knowledge/results/prime_sector_ap_cover_exact_clock_thm4042.out
 script_sha256: 4e4d5f98bf3746f78efa1736933f3456b143466df7c6057be923f20bdb222678
@@ -25,6 +33,7 @@ output_sha256: 1d781c506b5dea8a03b077335845c87a02ca5395bfe28c65089f92f961f74803
 independent_audit_script: 04-computation/prime_sector_ap_cover_exact_clock_independent_audit_thm4042.py
 independent_audit_output: 05-knowledge/results/prime_sector_ap_cover_exact_clock_independent_audit_thm4042.out
 independent_audit_report: 05-knowledge/results/prime_sector_ap_cover_exact_clock_independent_audit_thm4042.md
+reflection: 07-reflections/six-sixty-420-27720-master-lcm-census-2026-08-24.md
 independent_audit_script_sha256: 024e2ced48a508a6903f12c1cb48663061d4d05c83b18f934585aa91782a47d0
 independent_audit_output_sha256: a56beb886757a5c0b4b1fa18919326880d0a374c090322154fd910da0b287397
 ---
@@ -160,6 +169,65 @@ denominator,
 
 with the convention `rad(1)=1`. The radical collapse in `(7)` is the
 top-boundary instance of `(7a)` and one source of the smaller clocks.
+
+### 2a. Master-LCM form and the four-row coincidence
+
+There is a useful equivalent form of `(7b)` which was exposed by the
+repository-wide `6,60,420,27720` census.  For prime `P>=5`, put
+
+```text
+M_P=lcm(1,...,P-2),                 R_P=rad(M_P).
+```
+
+Prime by prime, `(7b)` is exactly
+
+\[
+ \boxed{\Pi_P=\gcd(M_P,(P-1)R_P)
+              =R_P\gcd(M_P/R_P,P-1).}                \tag{7c}
+\]
+
+Consequently
+
+\[
+ \boxed{\frac{M_P}{\Pi_P}
+ =\prod_{\ell\le P-2}\ell^{\max\{0,
+       \lfloor\log_\ell(P-2)\rfloor-v_\ell(P-1)-1\}}
+ ={M_P/R_P\over\gcd(M_P/R_P,P-1)}.}                  \tag{7d}
+\]
+
+In particular,
+
+```text
+Pi_P=M_P  iff  M_P/R_P divides P-1.                  (7e)
+```
+
+The scope `P>=5` matters: the separately handled row `P=3` has `Pi_3=2`,
+whereas the right side of `(7c)` would be `1`.  An exact incremental audit
+of `(7b)--(7e)` for every prime `P<=10000` found equality in `(7e)` only for
+`P=5,7,13`; see
+`04-computation/six_sixty_420_27720_master_lcm_census_20260824.py`.
+
+At the first four odd-prime rows after `3`, another finite coincidence occurs:
+
+```text
+(Pi_5,Pi_7,Pi_11,Pi_13)=(6,60,420,27720)
+                         =(lcm(1..3),lcm(1..5),
+                           lcm(1..7),lcm(1..11)).       (7f)
+```
+
+Thus these four clocks are the initial-segment LCM staircase sampled at the
+previous odd prime.  This is **not** a general prime-sector law.  At `P=17`,
+
+```text
+M_17=lcm(1..15)=360360,   R_17=30030,
+Pi_17=R_17*gcd(12,16)=120120=M_17/3.                  (7g)
+```
+
+The previous-prime prediction would have been `lcm(1..13)=360360`.  It loses
+one factor `3` because `3^2|M_17` but `3` does not divide `P-1=16`; only the
+radical factor survives.  The divisibility chain also stops here:
+`27720` does not divide `120120`.  Equations `(7c)--(7g)` classify the
+four-row match while firewalling it from extrapolation.
 
 ## 3. Constant, sharp desingularizer, and recurrence
 

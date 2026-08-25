@@ -1,0 +1,55 @@
+STRUCTURAL EXACT AUDIT
+targets: (6, 60, 420, 27720)
+initial-segment LCM identity: ((3, 6), (5, 60), (7, 420), (11, 27720))
+successive sampled ratios: (10, 7, 66)
+full intervening LCM staircase n=3..11: (6, 12, 60, 60, 420, 840, 2520, 2520, 27720)
+THM-4044 observer tower: 6|60|420|27720; root sets grow and kernels shrink
+THM-4042 master identity verified for every prime P<=10000
+M_P=L_(P-2); Pi_P = gcd(M_P, (P-1) rad(M_P)) for prime P>=5
+P=3 scope boundary: exact Pi_3=2, proposed gcd right side=1
+Pi_P=L_(P-2) primes P<=10000: [5, 7, 13]
+P=5: Pi=6, L_(P-2)=6, L_previous_prime=6, previous-prime equality=True
+P=7: Pi=60, L_(P-2)=60, L_previous_prime=60, previous-prime equality=True
+P=11: Pi=420, L_(P-2)=2520, L_previous_prime=420, previous-prime equality=True
+P=13: Pi=27720, L_(P-2)=27720, L_previous_prime=27720, previous-prime equality=True
+P=17: Pi=120120, L_(P-2)=360360, L_previous_prime=360360, previous-prime equality=False
+THM-1420 L_floor(n/2) target bands:
+  6: n=6..7; 60: n=10..13; 420: n=14..15; 27720: n=22..25
+THM-1105 blocker speeds L_Q at Q=3,5,7,11: (6, 60, 420, 27720)
+THM-879 exact minimal v-periods at L=3,5,7,11: (6, 60, 420, 27720)
+THM-879 valuation control at L=5: S_2=47/30; S_4=3/5
+THM-3848 valuation-depth hostile: 84*primorial(121)=55 mod 121; 84*L_121=0 mod every q<=121
+THM-563 period clocks 7*lcm(B): (60, 420) (3960, 27720)
+THM-1226 difference set: [1, 2, 3, 4, 5, 6, 8, 9, 10, 11, 12]
+parallel modulus joins: lcm(60,14)=420; lcm(3960,14)=27720
+commuting scale relation: 3960=66*60; 27720=66*420
+THM-4000 CRT observer: lcm(6,7,8,9,10,11)=27720; product=12*27720
+THM-823 replay continuation: lcm(2,...,12)*13=27720*13=360360
+THM-2258 endpoint common mesh: 14*lcm(33,3,44,55,165,198)=27720
+THM-3106 derived grid: lcm(E)=13860; 14*lcm(E)=194040; /7=27720
+THM-1415 subset-LCM census on {1,...,12}, subset size<=6:
+  6: count=10/2509, frequency-rank=53
+  60: count=123/2509, frequency-rank=2
+  420: count=97/2509, frequency-rank=5
+  27720: count=15/2509, frequency-rank=44
+all nonempty subsets of {1,...,12}:
+  6: count=10/4095
+  60: count=132/4095
+  420: count=132/4095
+  27720: count=192/4095
+THM-4036 Sun hostile scales (partial overlap only): (72, 360, 2520, 27720, 360360)
+Fibonacci/Farey finite root-mass overlap: 1+1/2+1/3+1/4+1/5+1/7=1019/420
+hostile L_n+1 control: 7,61,421 prime; 27721=19*1459 composite
+all structural assertions passed
+RAW TOKEN CENSUS (SEMANTICS-FREE CONTAMINATION DIAGNOSTIC)
+universe: regular files below 04-computation and 05-knowledge/results
+excluded self/output: 04-computation/six_sixty_420_27720_master_lcm_census_20260824.py 05-knowledge/results/six_sixty_420_27720_master_lcm_census_20260824.out
+files scanned: 38138
+bytes scanned: 638951186
+6: exact tokens=723417, matching lines=500250, matching files=24805
+60: exact tokens=24825, matching lines=21432, matching files=5341
+420: exact tokens=5695, matching lines=3035, matching files=870
+27720: exact tokens=2028, matching lines=1901, matching files=101
+files containing all four exact tokens: 38
+literal /27720 denominator tokens: 1798
+/27720 share of 27720 tokens: 88.658777%

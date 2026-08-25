@@ -274,16 +274,16 @@ consecutive AP is replaced by a sparse runner set. The required sidecars are
 owner, side, missing sector, gap geometry, and unbounded height. A clock match
 without those data is only an address coincidence.
 
-An incoming Jacobian namespace, THM-4044, is still **RESERVED / UNPROVED**
-and contributes no theorem, but it names a precise cross-frontier hostile:
-the confluent `C_60` evaluation kernel for a forced `[p^2]R` residual
-coordinate. The candidate map sends an AP phase to the same cyclic evaluation
-address; it preserves only `C_60` translation and destroys owner words, poles,
-and affine height. The required JC sidecars are the forced coefficient and
-kernel rank. The cheapest lawful test is therefore to compute that confluent
-kernel and ask whether the AP moment packet remains injective after the
-residual projection. THM-4042's clock collapses at other primes make a bare
-period match especially weak evidence.
+THM-4044 is now **PROVED + VERIFIED-EXACT + INDEPENDENTLY AUDITED**.  Its
+confluent `C_60` observer has exact kernel `((P^60-1)^k)`, and on the forced
+pure residual ideal the kernel is `P^2(P^60-1)^kK[P]`.  Thus the proposed
+cross-frontier hostile is settled: a fixed finite clock depth loses the
+mandatory `[P^2]R` coordinate at degree `60k+2` unless the second boundary
+Hasse jet or a degree cap is retained.  The map from an AP phase to the same
+cyclic evaluation address preserves only `C_60` translation and destroys
+owner words, poles, affine height, and the Keller constraints.  THM-4042's
+clock collapses at other primes make a bare period match especially weak
+evidence.
 
 ## Public anchors
 

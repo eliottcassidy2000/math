@@ -35,6 +35,7 @@ related:
   - THM-4034-exceptional-quartic-global-conductor-degree-178
   - THM-4037-centered-binomial-parity-and-singular-fibres
   - THM-4038-ap-deficit-holonomic-sixty-phase-law
+  - THM-4042-prime-sector-ap-cover-exact-clock-and-holonomic-law
 script: 04-computation/jc2_sixty_clock_hasse_alias_thm4044.py
 output: 05-knowledge/results/jc2_sixty_clock_hasse_alias_thm4044.out
 script_sha256: cc49cd7024fdeaab6c0d668c9ca497ee113ea6c45b3c9735d836322781629898
@@ -114,6 +115,39 @@ D_P^[2]Delta_k(0)=[P^2]Delta_k=(-1)^k !=0.             (8)
 
 Thus the second boundary Hasse jet, rather than another nonzero phase, is
 the first sidecar which separates the minimal alias.
+
+### 1a. Uniform root-of-unity clock corollary
+
+The proof of `(4)--(8)` is not specific to `60`.  If `M>=1`, the
+characteristic of `K` does not divide `M`, and `K` contains all `M` distinct
+roots in `mu_M`, define `O_(k,M)` by evaluating the first `k` Hasse jets on
+`mu_M`.  The same pairwise-coprime factor argument proves
+
+```text
+ker O_(k,M)=((P^M-1)^k),
+ker(O_(k,M)|P^2K[P])=P^2(P^M-1)^kK[P].                (8a)
+```
+
+It is injective on `P^2K[P]` through degree `Mk+1`, and its first residual
+alias is `P^2(P^M-1)^k`, of degree `Mk+2`.  Therefore the exact divisibility
+tower
+
+```text
+6 | 60 | 420 | 27720                                  (8b)
+```
+
+gives inclusions of root sets in a common splitting field and the reverse
+kernel tower
+
+```text
+ker O_(k,27720) subset ker O_(k,420)
+  subset ker O_(k,60) subset ker O_(k,6).              (8c)
+```
+
+This is a genuine shared clock-lattice mechanism, but it preserves only
+root-of-unity evaluation and Hasse depth.  It does not identify an AP owner
+word, an LRC gap geometry, or a planar-Jacobian residual, so each application
+still requires its problem-specific sidecars.
 
 ## 2. The planar-JC residual firewall
 

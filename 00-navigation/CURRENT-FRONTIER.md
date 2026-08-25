@@ -86,7 +86,11 @@ is the safe control `M(S_13)=99/338`. No cited result proves LRC(14).
   the owner-relaxed THM-4003 gate therefore cannot close ray tails, and has
   LRC meaning only at physical heights below `91^6`. Orthogonally,
   [THM-4029](../01-canon/theorems/THM-4029-lrc14-ap-cover-twelve-owner-rational-tail.md) gives the twelve-owner tail (`127/35`); [THM-4038](../01-canon/theorems/THM-4038-ap-deficit-holonomic-sixty-phase-law.md) gives its exact 60-phase holonomic law and sharp `6!C(n,6)` clearing. Fibonacci owners give period 30.
-  [THM-4033](../01-canon/theorems/THM-4033-prime-sector-ap-cover-eventual-owner-tail.md) proves the all-prime tail and sharp onset `(P^2+3)/4`; [THM-4042](../01-canon/theorems/THM-4042-prime-sector-ap-cover-exact-clock-and-holonomic-law.md) gives exact prime-adic clocks/recurrence, with `P=5,11` collapse. Earlier rows are FINITE-EXACT.
+  [THM-4033](../01-canon/theorems/THM-4033-prime-sector-ap-cover-eventual-owner-tail.md)
+  proves the all-prime tail and onset `(P^2+3)/4`.
+  [THM-4042](../01-canon/theorems/THM-4042-prime-sector-ap-cover-exact-clock-and-holonomic-law.md)
+  gives clocks `(6,60,420,27720)=(L_3,L_5,L_7,L_11)`;
+  `P=17` breaks the extrapolation.
   [THM-4035](../01-canon/theorems/THM-4035-sixty-clock-separation-and-finite-kakeya-spine.md) makes Fibonacci/triangular clocks addresses, not transfers. The AP route still loses gaps/owners. THM-3858
   exhausts only the target `Z_3` test. **FINITE-EXACT:**
   `(9,13;76,132)` is the unique tripling edge through sum `10^6`
