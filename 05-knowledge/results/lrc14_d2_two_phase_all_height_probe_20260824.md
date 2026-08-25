@@ -45,10 +45,10 @@ clearances at the actual lift times.
 | live concept | object / representation | predicate | operation / invariant | loss / obstruction | cheapest test |
 |---|---|---|---|---|---|
 | affine defect edge | open set `Sigma_(alpha,beta)` | can both labels be spoiled? | odd pair, half-shift | forgets `G(H)` | intersect with named phases |
-| divided pack | closed set `G(H)` | is a named pack phase safe? | evaluate residues mod `56` | named phases need not exist physically | exact residue filter |
+| divided pack | closed set `G(H)` | is a named pack phase safe? | evaluate residues mod `56` | named phases need not be pack-safe | exact residue filter |
 | dual phase bank | four lift times over two `y` values | does some lift survive? | complement/hitting dual | forgets all other phases | enumerate all odd masks |
 | periodic mask carrier | odd residues mod `112` | can one pair cover both banks? | quotient by common denominator | forgets speed height, harmless here | all 1,596 residue pairs |
-| physical producer | filtered tuple `(s,t,p,q,u)` | does its projected `H` enter the residue class? | projection to `(H,E)` | no finite producer is currently proved | future exact producer/projection bound |
+| physical producer | filtered tuple `(s,t,p,q,u)` | does its projected `H` enter the residue class? | projection to `(H,E)` | the proved `91^12` box is not tractably enumerated | execute projection or sharpen the bound |
 
 The new mask identity strengthens the dual-bank and periodic-carrier items.
 It does not solve the physical-producer item: a physical divided pack need
@@ -178,9 +178,9 @@ test:      all 1,596 odd residue pairs with repetition, by Fraction and
 
 The next direct test is not to enlarge the odd-pair height again.  It is to
 project a genuinely physical THM-3818 `d=2` producer onto the divided pack's
-modulo-`56` residues and measure how often `(1)` holds; without a proved
-producer or projection bound, that image remains untyped and potentially
-infinite.
+modulo-`56` residues and measure how often `(1)` holds. THM-3818 already
+supplies a finite `91^12` box; the missing work is an executed projection
+census or a sharper bound that makes that census tractable.
 
 ## Exact artifact
 

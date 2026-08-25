@@ -18,9 +18,9 @@
   bank. **Typing firewall:** zero profiles pass THM-3818; `d=2` fails the pair
   atlas and height, while `d=3,4` fail the `Q=91^6` crossing-height filter.
   This is a hostile/control theorem, not LRC closure. The next high-value
-  task is an exact finite physical producer, or a proved finite projection
-  bound, from filtered tuples to `(d,H,E)`; only then rerun the interval
-  intersection on the physical image.
+  task is to execute the projection from THM-3818's existing finite `91^12`
+  box to `(d,H,E)`, or first prove a tractable sharper bound; then rerun the
+  interval intersection on the physical image.
 - **D2 measure/owner compression.** THM-4041 proves that for reduced odd
   exceptions `a<b`, the spoiled mass is
   `4 sum_(r>0 odd,7r<a+b) min(1/(7b),(a+b-7r)/(14ab))`, while common odd

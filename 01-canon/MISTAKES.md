@@ -9,6 +9,32 @@ Format per entry:
 - Why it was wrong
 - The correct framing
 
+## MISTAKE-490 (2026-08-24, THM-4049 physical projection scope) -- an unexecuted huge finite box was called an absent bound, and parity was dropped from the target
+
+- **What failed:** the THM-4049 discovery report and first promotion said no
+  finite physical producer/projection bound was proved, although THM-3818
+  already confines the unresolved branch to `sum n_i<=91^12`. The connection
+  ledger mapped only to `H mod 56` while claiming to preserve the two
+  exceptions' odd parity, a coordinate not present in that target.
+- **Minimal witness / first failed implication:** the typed THM-3818 row
+  `u=(1,4,6,8,10,12,14,15,16,18,22)`, `v=(1,3)`, `s=1`, `t=2^45`
+  lies inside the finite box and has rank-eleven `11+2` typing. Its divided
+  pack residues are `(2,3,4,5,6,7,8,9,11,32,40) mod 56`, so forbidden class
+  `11` occurs physically. The four firewall clearances are
+  `(1/28,1/28,1/56,1/56)`, while `x=9/19` gives `2/19`; this is not an LRC
+  counterexample. The first failed implications were
+  `not tractably enumerated => no finite bound` and
+  `source parity known => parity preserved by a target that omits it`.
+- **Repair / strongest survivor:** THM-4049's residue theorem is unchanged.
+  Its map now targets `(H mod 56,alpha mod 2,beta mod 2)`, the typed hostile
+  proves the complementary physical image is genuine, and the next test is
+  an executed projection census inside THM-3818's existing box or a sharper
+  tractable bound. LRC(14) remains open.
+- **Reusable rule:** distinguish existence, effectivity, tractability, and
+  execution of a finite bound. A connection target must explicitly retain
+  every coordinate later listed as preserved; otherwise record it as a
+  sidecar or loss.
+
 ## MISTAKE-489 (2026-08-24, THM-536 Sturmian span threshold) -- the end of a finite AP table was interpreted as the first cap crossing
 
 - **What failed:** THM-536 reported the span-threshold tail

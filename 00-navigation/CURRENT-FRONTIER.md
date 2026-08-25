@@ -77,9 +77,9 @@ is the safe control `M(S_13)=99/338`. No cited result proves LRC(14).
   completes the `d=2` affine law: its two-centre complex has one defect edge,
   no circuit, and an exact spoiled-phase law. [THM-4049](../01-canon/theorems/THM-4049-lrc14-d2-two-phase-residue-firewall.md)
   gives an all-height four-time closure when the divided `d=2` pack avoids ten
-  classes mod `56`, including `{1,...,10,12}` against every odd pair. No
-  physical projection forces this firewall; the complementary `d=2` image
-  and the `d=3,4` pack-safe intersections remain open.
+  classes mod `56`, including `{1,...,10,12}` against every odd pair. A typed
+  physical row hits forbidden class `11`; the complementary `d=2` image and
+  the `d=3,4` pack-safe intersections remain open.
   [THM-4025](../01-canon/theorems/THM-4025-lrc14-owner-residue-odd-dilation-semigroup.md)
   gives the odd-divisibility semigroup, while [THM-4031](../01-canon/theorems/THM-4031-lrc14-endpoint-owner-rational-tail.md)
   proves that every old-strip ray has an eventual arithmetic-survivor tail;

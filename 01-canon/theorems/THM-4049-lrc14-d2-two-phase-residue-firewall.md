@@ -9,9 +9,9 @@ status: >
   2{1,...,10,12} union {alpha,beta} for every distinct positive odd pair,
   with no exception-height bound. The proof is an elementary mask identity;
   two independent exhaustive residue implementations verify it. This is a
-  sufficient residue subfamily only: no proved physical projection places
-  every THM-4041 divided eleven-pack inside the firewall, so LRC(14) remains
-  open.
+  sufficient residue subfamily only: a typed THM-3818 row can hit the
+  forbidden class 11, so the complementary physical image is genuine and
+  LRC(14) remains open.
 source: root + lrc14_probe + lrc_prefix_audit, 2026-08-24
 audit: >
   PASS. The proof classifies the pack residues and the two first-bank danger
@@ -20,7 +20,8 @@ audit: >
   residues and 1,596 unordered pairs by Fraction and modular masks. A
   no-import integer audit tests the full-row consequence directly at common
   denominator 112 and reproduces the endpoint and three load-bearing
-  hostiles. Normal and optimized streams byte-match both frozen outputs.
+  hostiles. An independent scope audit supplies a typed physical pack outside
+  the firewall. Normal and optimized streams byte-match both frozen outputs.
 related:
   - THM-4041-lrc14-d2-affine-defect-edge-boundary
   - THM-4004-lrc14-three-detuned-divisor-comb-profile
@@ -190,20 +191,41 @@ above. It does **not** imply `(3)`. THM-4049 therefore closes every physical
 row whose projected divided pack happens to avoid `R`, but it does not close
 the entire THM-4041 image, any other `11+2` branch, or LRC(14).
 
+The complementary image is not merely formal. In THM-3818's finite box, the
+typed two-component row
+
+```text
+u=(1,4,6,8,10,12,14,15,16,18,22),   v=(1,3),
+s=1,                                 t=2^45           (14)
+```
+
+has component sizes `11+2`, rank eleven, and no bounded crossing row. Its two
+odd exceptions are `(1,15)`, while its divided pack has residues
+
+```text
+(2,3,4,5,6,7,8,9,11,32,40) modulo 56.               (15)
+```
+
+Thus class `11` really occurs. The four times in `T` have full-row
+clearances `(1/28,1/28,1/56,1/56)`, but `x=9/19` has clearance `2/19`.
+This is a hostile to uniform physical entry into the firewall, not an LRC
+counterexample.
+
 The precise remaining connection is:
 
 ```text
 source:    a physical THM-3818 d=2 producer
-target:    the divided eleven-pack residues modulo 56
-map:       project the producer to H, then reduce each h modulo 56
-preserves: the two exceptions are odd
+target:    (H modulo 56, alpha modulo 2, beta modulo 2)
+map:       project to (H,alpha,beta), then reduce the displayed coordinates
+preserves: the pack firewall test and odd-exception sidecar
 needed:    prove H avoids R, or classify and close the rows that do not
 lost data: owner, height, all phases outside T, and the physical tuple origin
-test:      exact finite producer/projection enumeration once a bound is proved. (14)
+test:      execute the projection census in THM-3818's 91^12 box, or sharpen
+           that bound enough to make the census tractable.                (16)
 ```
 
-The existing finite control bank does not replace that missing producer or
-projection theorem. This residue firewall is a proved sufficient subfamily,
-not an extrapolation from exception height `79` and not a proof of LRC(14).
+The existing finite control bank does not replace that unexecuted physical
+projection. This residue firewall is a proved sufficient subfamily, not an
+extrapolation from exception height `79` and not a proof of LRC(14).
 
 **QED.**
