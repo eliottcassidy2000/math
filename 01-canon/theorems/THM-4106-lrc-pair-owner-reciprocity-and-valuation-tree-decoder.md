@@ -17,6 +17,7 @@ related:
   - THM-3742-square-triangular-pell-mod13-central-sign-projective-cycle
   - THM-4057-stern-brocot-depth-pullback-and-rational-edge-tournament-gauge
   - THM-4105-primitive-reciprocal-phase-descent-and-quantitative-arrival
+  - THM-4110-sparse-reciprocal-phase-graph-saturation-and-ap13-torsion-tariff
 script: 04-computation/lrc_pair_owner_reciprocity_thm4106.py
 output: 05-knowledge/results/lrc_pair_owner_reciprocity_thm4106.out
 script_sha256: 4266285916d0fbe725d89bb888f52212b63ca5dba9722de2d14fe4ae4bac2182
@@ -250,9 +251,11 @@ mixed   -> twelve cross-v2 pair summaries encode the row exactly.          (22)
 
 This is a representation theorem, not a loneliness inequality. Pair maxima
 generally occur at incompatible times. The summaries discard the common-gcd
-sheet and the locations of all lifted maximizers. The remaining anchor
-problem is simultaneous signed-residue and arrival synchronization across the
-twelve-edge tree.
+sheet and the locations of all lifted maximizers. THM-4110 proves that even
+the complete cross-`v_2` reciprocal phase graph can retain torsion sheets: on
+AP13 the exact quotient is `(Z/2Z)^6`. The remaining anchor problem is
+therefore simultaneous signed-residue and arrival synchronization on a
+**saturated augmentation**, not merely across the twelve informative edges.
 
 Zero speeds, duplicate absolute speeds, and signed rows that become duplicate
 after absolutization lie outside `(20)`; they must first be reduced to the
@@ -260,12 +263,13 @@ standard distinct positive hard row.
 
 ## 5. Generated next tasks
 
-1. On each of the 17 live `11+2` types, select a cross-valuation spanning tree
-   minimizing a synchronization cost such as `lcm(m_e+n_e)`, maximum clock,
-   or `sum log rad(m_e n_e(m_e+n_e))`.
-2. Retain, on every tree edge, its two signed maximizers and both equality
-   clocks. Test whether a short tree cycle or one non-tree edge forces a
-   common `1/14`-safe cell.
+1. On each of the 17 live `11+2` types, compute THM-4110's phase-sheet group
+   for the full informative graph, then find a minimum saturated augmentation.
+   AP13 requires six same-shell constraints, so one non-tree edge is not a
+   viable universal target.
+2. Minimize clock and Bezout costs only after saturation. Retain every sheet,
+   both signed maximizers, and both equality clocks; then test for a common
+   `1/14`-safe cell.
 3. Enrich the existing support-two short-relation atlas with `(m+n,n-m)`, the
    Pythagorean leg, owner imbalance, and prime colours. A radical address is a
    colour, not a synchronization theorem.

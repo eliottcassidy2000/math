@@ -1,0 +1,15 @@
+THM-4110 exact sparse reciprocal phase graph audit
+tree_minor_cases=4323
+tree_minor_gates=29751
+connected_graph_value_cases=1542
+graph_index_gates=1542
+prime_free_core_gates=6075
+AP13_unequal_v2_edges=53
+AP13_unique_minimum_tree=((1, 2), (1, 4), (1, 6), (1, 8), (1, 10), (1, 12), (2, 3), (2, 5), (2, 7), (2, 9), (2, 11), (2, 13))
+AP13_tree_minor_gcd=64
+AP13_graph_prime_exponents={2: 6, 3: 0, 5: 0, 7: 0, 11: 0, 13: 0}
+AP13_cross_v2_phase_sheets=64
+AP13_phase_sheet_group=(Z/2Z)^6
+AP13_same_shell_anchor_edges=6
+AP13_augmented_surviving_sheets=1
+PASS

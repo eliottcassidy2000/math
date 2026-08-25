@@ -1,7 +1,7 @@
 ---
 source: codex-lrc14-abc-exponent-reciprocity-20260825
 status: >
-  RESEARCH SYNTHESIS. THM-4105--4107 are unconditional proved results;
+  RESEARCH SYNTHESIS. THM-4105--4107 and THM-4110 are unconditional proved results;
   THM-4108 is unconditional for its separation and gauge obstruction and
   conditional on ABC for radical saturation. LRC(14), ABC, and the disputed
   IUT-to-ABC implication remain OPEN / CONTESTED at their recorded scopes.
@@ -18,15 +18,16 @@ external:
 
 The useful hidden key in `a^b` versus `b^a` is not the direction of the
 inequality. Raw direction is only the scalar potential `log(x)/x`. The useful
-structure appears when exponentiation is asked one of three better-typed
+structure appears when exponentiation is asked one of four better-typed
 questions:
 
 1. do reciprocal phase equations descend to one physical time?
-2. what edgewise normalization created a tournament cycle?
-3. after primitive normalization, what radical information survives an
+2. when does a sparse graph of those equations leave torsion sheets?
+3. what edgewise normalization created a tournament cycle?
+4. after primitive normalization, what radical information survives an
    additive packet?
 
-Those questions produced four durable results:
+Those questions produced five durable results:
 
 - THM-4105: reciprocal commutators exactly characterize a primitive row's
   physical phase orbit and quantitatively control arrival;
@@ -38,10 +39,13 @@ Those questions produced four durable results:
 - THM-4108: ABC conditionally forces logarithmic radical saturation of
   coprime `a^b+-b^a`, while the natural LRC straddle packet fails an exact
   lift-gauge test and cannot force the loneliness margin.
+- THM-4110: a sparse reciprocal phase graph has an exact weighted-tree sheet
+  index; AP13's complete informative graph leaves `(Z/2Z)^6` and needs six
+  same-shell constraints.
 
 The net LRC advance is a sharper representation and a smaller named
-obligation: **simultaneous phase/arrival synchronization across a lossless
-reciprocal-owner tree**. It is not a proof of LRC(14).
+obligation: **simultaneous phase/arrival synchronization on a saturated,
+lossless reciprocal-owner graph**. It is not a proof of LRC(14).
 
 ## Inheritance pass and live board
 
@@ -91,6 +95,29 @@ bi-Lipschitz to distance from the orbit up to explicit constants
 therefore distinguish an algebraically compatible packet from a physically
 arriving one without pretending that arrival already implies loneliness.
 
+## Surprise 1b: graph connectedness is not phase saturation
+
+The incoming component compiler exposed a hidden assumption in the proposed
+owner-tree program. A connected set of reciprocal equations can reconstruct
+the row and still leave nonphysical circle components. For a connected graph
+`Gamma`, the exact sheet count is
+
+```text
+gcd_(T spanning tree of Gamma) product_i v_i^(deg_T(i)-1).
+```
+
+Prime by prime, the index vanishes only when vertices whose speeds avoid that
+prime form a connected dominating set. The spanning tree may change with the
+prime; the triangle with speeds `(2,3,5)` is saturated because its three tree
+indices have gcd one, although no individual tree has index one.
+
+The AP13 hostile is unusually clean. Even all `53` unequal-`v_2` edges leave
+six independent half-toggles on speeds `3,5,7,9,11,13`. Thus the quotient is
+`(Z/2Z)^6`, and six same-shell constraints are necessary and sufficient. The
+old twelve-edge proposal was not merely incomplete computationally; it was
+missing an exact two-adic coordinate. This is the kind of negative theorem
+that materially improves the search space.
+
 ## Surprise 2: the owner imbalance is a reciprocal Pythagorean leg
 
 For primitive `m<n`, the owner switch is governed by the two clocks
@@ -120,8 +147,8 @@ every odd pair to `(1/2,1/2)`, but an all-odd whole row is already safe at the
 antipode. In a mixed row, the unequal-`v_2` graph is connected, so only twelve
 informative pair ratios are needed to reconstruct thirteen speeds.
 
-The forgotten coordinate is not arithmetic. It is **when the twelve edges
-can be realized together**.
+The forgotten coordinate is not arithmetic. It is **which phase sheet the
+twelve edges occupy, and when a saturated packet arrives together**.
 
 ## Surprise 3: cycles measure normalization holonomy
 
