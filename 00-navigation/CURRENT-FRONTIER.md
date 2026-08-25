@@ -76,6 +76,7 @@ is the safe control `M(S_13)=99/338`. No cited result proves LRC(14).
   THM-4030/4032/4041 give exact `d=4/3/2` affine circuits; THM-4070 forces divisor cover `8..14`.
   THM-4075 closes `max H<=30`; THM-4079 handles large one-outlier extensions, not arbitrary packs.
   THM-4081 classifies the height-twelve antipodal control by the unique minimal `D*={1,3,4,5,7,8,9,11,12}`; odd/even dilation split and cited `7<=kappa<=9` leave `kappa=7,8` open.
+  THM-4087 closes all dilated AP9 two-outlier seams for `70<=B<C` at `N<=14C`; arbitrary cores, AP9 supply, physical entry, and LRC(14) remain **OPEN**.
   THM-4052/4062/4066 close escape cones and two three-exception shapes, not LRC(14).
   [THM-4025](../01-canon/theorems/THM-4025-lrc14-owner-residue-odd-dilation-semigroup.md)
   gives the odd-divisibility semigroup, while [THM-4031](../01-canon/theorems/THM-4031-lrc14-endpoint-owner-rational-tail.md)
@@ -336,18 +337,12 @@ lift/phase clocks.
 
 - **Integral observers:** THM-4000 compiles consecutive values; THM-4010 gives kernel `(F^k)`, index `product(j!)^(k^2)`, rank `k min(m+1,p)`, and its first positive exponent.
   THM-4080 gives the full two-jet partition `e*{0,0,1,...,s-1,s+1,...,2s-1}` at one exact scale and every consecutive `p`-primary layer through `n<=p(p-1)`; the `s=p` wall and larger clusters remain **OPEN**.
-- **Even-graph cumulative spectrum:** THM-4083 proves gaps `2(n-2)^2` through four-cycles and `2(n-2)(n^2-6n+10)` through five-cycles for every admissible `n`; cumulative `D>=5` remains **OPEN**.
-- **AMM:** THM-3588 forces `R=512` departures by `(35,38,39,42,44)`.
-  At `R=32768`, FINITE-EXACT Rule-A gives `854:DIE@8246`,
-  `855:CLOSED@20238`, `856:CLOSED@20233`; thus `854/855` is a one-step local
-  transition. No `D0` monotonicity, global feasibility or `C*` value follows.
+- **Even-graph spectrum:** THM-4083 proves `D=3,4`; THM-4084 gives all matching characters and forces any new `D=5` equality/counterexample to have `b=0`, frustration `>=4`. Full `D=5` is **OPEN** beyond exact `n=6,7,8` (MISTAKE-496).
+- **AMM:** [THM-4086](../01-canon/theorems/THM-4086-rule-a-transition-clock-and-phase-cocycle.md) separates the shared adjacent-offset kernel from feed/front/debt, rebuilds the `R=32768` clocks behind inherited `854:DIE,855/856:CLOSED`, and proves a nonconstant dyadic phase cocycle. Fixed-policy/local only: no global monotonicity, alternative infeasibility, all-`R` family, or `C*` consequence.
 - **Knots:** THM-2176/2191/2281 and THM-2242/2330--2383: localization, owner/ANOVA/rectangle/reference inversion; realization/stable diagonal open. THM-2646: modular/exponent `B3` conjugacy, not Markov invariance.
 - **Flows:** [THM-2177](../01-canon/theorems/THM-2177-planar-counterexample-to-goemans-unsplittable-cost-flow-conjecture.md): planar `58<60` refutes exact `d_max`; planar `2d_max` survives.
 - **Hensel:** THM-3446/3449/[3452](../01-canon/theorems/THM-3452-unequal-depth-noncommuting-smooth-hensel-heisenberg-orbit-law.md): weighted/equal/unequal banks; dyadic repair.
-- **Rule 30:** [4047](../01-canon/theorems/THM-4047-rule30-left-front-affine-monodromy-clock.md)/[4064](../01-canon/theorems/THM-4064-rule30-cyclotomic-kernel-character-and-c60-alias-obstruction.md)/[4065](../01-canon/theorems/THM-4065-rule30-temporal-cylinder-transfer-infinite-zero-columns-and-next-zero.md):
-  cyclic-word spatial transfer proves infinitely many isolated fixed-column
-  zeros; after `87866`, the next is `1420878968` (gap `1420791102`). Fixed
-  columns and `C_60` still lose the moving center/character; prizes **OPEN**.
+- **Rule 30:** THM-4047/4064/4065 give the affine/cyclotomic/fixed-column transfer and next zero `1420878968`. [THM-4085](../01-canon/theorems/THM-4085-rule30-left-characteristic-independence-and-haar-extremes.md) proves distinct-address iid Haar laws, rational-ray entropy, separated-block independence, and logarithmic extremes. Haar is not the named seed; center/character prizes remain **OPEN**.
 - **Two Hopf problems:** the `S2 x S2` curvature and `S6` complex-structure
   preprints are distinct **PREPRINT CLAIM / UNDER AUDIT**. Only the recorded
   mixed/Hessian identities are exact in the first lane; the `2Z` orbit in the

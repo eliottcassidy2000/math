@@ -74,7 +74,7 @@ Five habitats. Each invariant: **name — what it measures — status — canoni
 |---|---|
 | **`widehat(E)_n=E_(n,P_n)`** | canonical all-simple-cycle envelope; V = 2,3,7,16,54 (A002854); THM-4069 |
 | arbitrary fundamental-tree image `E_(n,T)` | depends **exactly on `diam(T)`**: `n-2` strictly nested length-layer images; star gives χ=2, path gives the envelope; minimal `P_3`/`K_3` split at n=4 (THM-4069/MISTAKE-495) |
-| diameter-layer metric/algebra | THM-4073: exact radial distance/commuting weighted lifts. THM-4078: signed-dual basis, triangle gap `2(n-2)`, lazy relaxation `n(n-1)/6`, and all-`n>=4` Boolean noncommutation. THM-4083: cumulative gaps `2(n-2)^2` for `D=3` and `2(n-2)(n^2-6n+10)` for `D=4`, all admissible `n`; `D>=5` open |
+| diameter-layer metric/algebra | THM-4073/4078: radial metric, signed dual, triangle gap, relaxation, noncommutation. THM-4083 proves `D=3,4`; THM-4084 gives all matching characters and forces any new `D=5` equality/counterexample to have `b=0`, frustration `>=4`. Full `D=5` is open beyond exact `n=6,7,8` (MISTAKE-496). |
 | χ, ω of path/envelope | reported 2,3,5,10,28; ω=χ (chordal ≤ n=6, odd holes n=7); these historical path computations survive THM-4069 |
 | **"do EVERYTHING on E_n too"** | **MANDATE LARGELY UNFULFILLED** (§II.e) — most G_n invariants never run on E_n |
 | bridge matrix B[tourn,even] | full rank V(E_n) at all n |
@@ -162,8 +162,9 @@ non-backtracking operator is exactly the "no immediate reversal" structure that 
 3. **The equivariant partition function Z_n** — flagged by the forgotten-threads pass as "the
    project's deepest surmise": a single generating object that would unify tournament / metagraph /
    moment layers. **Never tested.** (Backlog item filed — see §IV #1.)
-4. **The full E_n invariant sweep** — opus's "do everything on E_n too" mandate: most G_n
-   computations (energy, Hadwiger, width, spine/ribs/sea analog) have **never been run on E_n.**
+4. **The full E_n invariant sweep** — THM-4084 now supplies the
+   matching-character profile and the `D=5` frustration-three firewall, but
+   energy, Hadwiger, width, and spine/ribs/sea analogs remain largely unrun.
 5. **fractional χ, and the Lovász-θ sandwich** on G_n/Z₂.
 
 ### II.f Open pieces of the GMC(2) / nullcone chain (from the moment-nullcone pass)

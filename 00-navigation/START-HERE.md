@@ -82,7 +82,8 @@ Then read the routed frontier, guardrails, and theorem. Logs and reflections are
 16. **Use the native operation carrier, not shared syntax.** THM-2176/2191
     expose the knot continuation carrier; MISTAKE-230--235 forbid syntax-only
     bridges. THM-4065's Rule-30 spatial transfer proves infinitely many isolated
-    fixed-column zeros and next depth `1420878968`; center/prizes remain open.
+    fixed-column zeros and next depth `1420878968`; THM-4085 proves
+    distinct-address iid/Haar extremes, not named-seed prizes.
 17. **Sun 2-4-6-8 is refuted:** THM-4026; THM-4027/4028/4036/4037 separate
     local support, mean, energy and parity from coverage; THM-4040 gives
     uniqueness only in one CRT class. Global classification remains open.
