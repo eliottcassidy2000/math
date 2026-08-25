@@ -81,6 +81,41 @@
   Script/output SHA-256:
   `f4e85a03b3e9e608106883fccc7d86e5cbc6ed174fa110329b0e0ca41195b764` /
   `9544d89a7d290012ec71a71ba6535dd454465aed60b97209ea1f5cbc43123731`.
+- `rational_edge_diagonal_gauge_padic_tournament_zeta_thm4093.py` -> matching
+  `.out` [THM-4093 PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED].
+  Vertex-ratio edge weights are diagonal similarity; a tournament determinant
+  begins `1-c3*u^3`, giving `v_p(Z_T(x)-1)=3v_p(x)` iff `p` does not divide
+  `c3`. The primary exhausts all 33,867 labelled tournaments through six
+  vertices and 190 tangent rows; an independent standard-library audit checks
+  102,700 valuation gates. Primary script/output SHA-256:
+  `ef82e05ed85f30fef95c79c24c8b972d36cfaea990b930c381220b9c66153c0f` /
+  `f3deed30e5cb68a869d80e88596a2268f5dabc894eaa6a284ad9bf2b1071c0ac`.
+
+- `two_sort_matching_logic_obstruction_thm4090.py` -> matching `.out`
+  [THM-4090 PROVED + CITED one-sort minimality + FINITE-EXACT +
+  INDEPENDENTLY AUDITED]. The satisfiable two-sort theory semantically forces
+  a singleton `b` carrier but cannot derive its sort-`b` conclusion across the
+  one-way feed `b->a`. The companion checks all 5,050 declared small models.
+  Script/output SHA-256:
+  `ff64ea8dadc2fd2d4718ce303e93a87c22e95ad6db2a86cacc3a907a48bca758` /
+  `3ac734da6800af7278ad9e13c85e848773548d8869d5680b694f09cd9759f6b3`.
+
+- `padic_zeta_next_cell_margin_obstruction_thm4089.py` -> matching `.out`
+  [THM-4089 PROVED GLOBAL OPTIMIZATION + FINITE-INTERVAL + INDEPENDENTLY
+  AUDITED; external singleton claims UNREFEREED]. Exact seams, derivative
+  brackets, and global tangent bounds make the pinned formula negative at
+  `(2,31),(3,13),(5,7),(7,5)`. Script/output SHA-256:
+  `5499b7f420a242d6b96a66707120b071e7941fbff68be54f6386e423e0f52913` /
+  `6199c1ef483ab385d79f63746226c9e45c6b0265b6657f9e21dfb375c1c5c2e7`.
+
+- `lrc_order_tournament_arithmetic_type_density_thm4088.py` -> matching
+  `.out` [THM-4088 PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED;
+  LRC(14) OPEN]. Scalar-order tournaments forget arithmetic type; a strict
+  LRC margin gives an explicit witness ball containing every type, while the
+  AP13 equality skeleton is the rational hostile. The exact probe checks
+  896,112 Lipschitz pairs. Script/output SHA-256:
+  `1aa1f9210b9a1eac224ebacf08f68f95a06d532c4ab9749b4b75ae7766c50565` /
+  `80860bf57cf1597cdc2fb3454cbdd7ccef5b824607cbc541d15a6544848efbd6`.
 
 - `rule30_cyclotomic_hasse_packet_thm4064.py` and no-import recurrence,
   subtractive-depth, and character audit -> matching `.out`s [THM-4064

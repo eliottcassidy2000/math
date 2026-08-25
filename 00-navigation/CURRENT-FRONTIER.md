@@ -312,6 +312,10 @@ lift/phase clocks.
 
 ## Other active portfolio
 
+- **P-adic-zeta intake:** the pinned 22 singleton claims remain
+  **AUTHOR-CLAIMED / UNREFEREED**. THM-4089 proves only the displayed-margin
+  optimum and four next-cell obstructions; its geometric/adelic gates remain
+  open.
 - **Matching logic:**
   [THM-4090](../01-canon/theorems/THM-4090-two-sort-matching-logic-global-completeness-obstruction.md)
   proves a satisfiable two-sort theory with a semantic consequence not

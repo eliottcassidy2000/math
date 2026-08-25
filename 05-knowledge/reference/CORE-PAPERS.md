@@ -612,8 +612,8 @@ new homotopy group, `p=2` statement, or LRC/GMC consequence.
 
 ## August 2026 preprint intake
 
-[August 14 intake](CORE-PAPERS-INTAKE-2026-08-14.md): four preprints + Rule 30;
-headlines **CITED**; proved consumers THM-3390/3392/3395/3396/3456/3458/3459.
+- [August 14 intake](CORE-PAPERS-INTAKE-2026-08-14.md): preprints/Rule 30.
+- [August 25 intake](CORE-PAPERS-INTAKE-2026-08-25-PADIC-ZETA-MATCHING-LOGIC.md): **UNREFEREED**; THM-4089/4090.
 
 ## Maintenance rule
 
