@@ -74,7 +74,7 @@ Five habitats. Each invariant: **name — what it measures — status — canoni
 |---|---|
 | **`widehat(E)_n=E_(n,P_n)`** | canonical all-simple-cycle envelope; V = 2,3,7,16,54 (A002854); THM-4069 |
 | arbitrary fundamental-tree image `E_(n,T)` | depends **exactly on `diam(T)`**: `n-2` strictly nested length-layer images; star gives χ=2, path gives the envelope; minimal `P_3`/`K_3` split at n=4 (THM-4069/MISTAKE-495) |
-| diameter-layer metric/algebra | THM-4073: exact radial distance/commuting weighted lifts. THM-4078: signed-dual basis, triangle gap `2(n-2)`, lazy relaxation `n(n-1)/6`, and all-`n>=4` Boolean noncommutation; cumulative `D>=3` gap conjectural |
+| diameter-layer metric/algebra | THM-4073: exact radial distance/commuting weighted lifts. THM-4078: signed-dual basis, triangle gap `2(n-2)`, lazy relaxation `n(n-1)/6`, and all-`n>=4` Boolean noncommutation. THM-4083: cumulative gaps `2(n-2)^2` for `D=3` and `2(n-2)(n^2-6n+10)` for `D=4`, all admissible `n`; `D>=5` open |
 | χ, ω of path/envelope | reported 2,3,5,10,28; ω=χ (chordal ≤ n=6, odd holes n=7); these historical path computations survive THM-4069 |
 | **"do EVERYTHING on E_n too"** | **MANDATE LARGELY UNFULFILLED** (§II.e) — most G_n invariants never run on E_n |
 | bridge matrix B[tourn,even] | full rank V(E_n) at all n |

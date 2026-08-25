@@ -270,14 +270,13 @@ THM-4029/4030/4031/4032, S79.
 
 **Trigger / action:** before adopting a fitted recurrence, prove a structural sublemma or pre-register and attack its first untested prediction. Short interpolants have many competitors; detrend availability (THM-2447) and distinguish thresholds from closed forms. **Evidence:** S135's 24 breaks/6 survivors; MISTAKE-055; THM-2444/2453/2454, THM-2467, THM-1286, THM-790.
 
-## Classify response-state growth before naming the closed form
+## Normalize repeated-response towers before scalarizing
 
-**Action/boundary:** derive repeated-operation response and classify state as
-fixed jet, moving endpoint jet, time-varying transfer or arithmetic section.
-Test uniform family annihilation before finite detection: moving boundaries
-blind fixed derivative banks. Such state exposes tails, not converses or low
-bit complexity. **Evidence:** THM-3181/3202/3186/3235/3268, THM-3466,
-THM-3383/3397, THM-3465.
+**Trigger/action:** classify repeated state as fixed/moving jet, transfer, or arithmetic section; when scales stabilize, conjugate to one carrier and compute the first exact valuation, rank, or layer defect. Compare `gr(ker)` with `ker(gr)` and retain transitions/eigenvalue fibres before taking limits or inducting.
+
+**Counterindications:** moving boundaries blind fixed banks, and normalization need not preserve the target. Retain integrality/positivity, the first forbidden rank, and the longest lost layer; closeness gives neither termination nor equality rigidity.
+
+**Evidence:** THM-3181/3202/3186/3235/3268/3383/3397/3410--3413/3465/3466; THM-4080's `s=p` wall, THM-4082's exact divergent bit, and THM-4083's missing Hamilton layer.
 
 ## Divide exceptional multiplicity before judging a wall
 
@@ -306,6 +305,3 @@ THM-3383/3397, THM-3465.
 ## Exteriorize a commutative response against the lost relation
 
 **Action:** when multiplicative `F_T` forgets join order and marked deletions factor, contract `r(z)(A-A^T)r(w)^T`; close `q=sum r_v`. Rank-one `+J/-J` cross blocks exteriorize first responses. Stop for nonconstant cross blocks, bad deletion laws, target-bearing ties, or contraction kernels; currents need not be injective or chronological. **Evidence:** THM-3369/3372 derive `q`, THM-3377 carries it, and THM-3380's self-converse `ABBA/BAAB` kills both first currents, prompting iteration.
-
-## Test filtration--observer commutation before scalarizing
-**Action:** when a filtration meets a kernel, average, or quotient, compare `gr(ker)` with `ker(gr)` and retain transitions plus eigenvalue fibres. Marginal observers delete extensions and scale; persistent classes may split while one annihilator merges them, and a discarded scalar fibre may carry growing cost. Scalarize only after a split/semisimple square, distinct observable eigenvalues, or target-preserving section makes both orders commute. **Evidence:** THM-3412/3413/3410.

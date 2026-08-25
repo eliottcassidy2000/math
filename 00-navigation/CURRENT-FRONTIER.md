@@ -73,12 +73,10 @@ is the safe control `M(S_13)=99/338`. No cited result proves LRC(14).
   (`U>=3,208,300,859`); all 17 arbitrary-body types and owner/arrival remain
   OPEN. [THM-4024](../01-canon/theorems/THM-4024-lrc14-complete-divisor-incidence-envelope.md)
   gives profile `(11,9,8,8,7,7,...)` and equality moduli `2,3,4`.
-  [THM-4030](../01-canon/theorems/THM-4030-lrc14-d4-affine-defect-lattice-boundary.md)/[4032](../01-canon/theorems/THM-4032-lrc14-d3-affine-defect-lattice-boundary.md)
-  give exact `d=4/3` affine circuits and close certificate-negative rows.
-  THM-4041 gives exact `d=2`; [THM-4070](../01-canon/theorems/THM-4070-lrc14-d2-mod14-two-bank-affine-ray-firewall.md) forces divisor cover `8..14`, and [THM-4075](../01-canon/theorems/THM-4075-lrc14-divisor-complete-dyadic-owner-word-closure-through-30.md) closes `max H<=30`.
-  THM-4079 closes large one-outlier extensions adaptively; its premise is not universal.
-  [THM-4052](../01-canon/theorems/THM-4052-lrc14-affine-component-width-escape-cones.md) closes the `d2/d3/d4` escape cones; THM-4062 retains the affine intercept.
-  THM-4066 closes two three-exception shapes; LRC(14) stays open.
+  THM-4030/4032/4041 give exact `d=4/3/2` affine circuits; THM-4070 forces divisor cover `8..14`.
+  THM-4075 closes `max H<=30`; THM-4079 handles large one-outlier extensions, not arbitrary packs.
+  THM-4081 classifies the height-twelve antipodal control by the unique minimal `D*={1,3,4,5,7,8,9,11,12}`; odd/even dilation split and cited `7<=kappa<=9` leave `kappa=7,8` open.
+  THM-4052/4062/4066 close escape cones and two three-exception shapes, not LRC(14).
   [THM-4025](../01-canon/theorems/THM-4025-lrc14-owner-residue-odd-dilation-semigroup.md)
   gives the odd-divisibility semigroup, while [THM-4031](../01-canon/theorems/THM-4031-lrc14-endpoint-owner-rational-tail.md)
   proves that every old-strip ray has an eventual arithmetic-survivor tail;
@@ -123,7 +121,7 @@ is the safe control `M(S_13)=99/338`. No cited result proves LRC(14).
 
 ## Mahler `3/2`
 
-**OPEN.** [THM-4077 separates tangent coding from both termination gates](MAHLER-THREE-HALVES-FRONTIER-2026-08-23.md).
+**OPEN.** [Detailed route](MAHLER-THREE-HALVES-FRONTIER-2026-08-23.md): THM-4077 separates tangent coding from termination; THM-4082 gives the common linear chart, exact defect `s+2+2v_2(x)`, and distinct transported fibres, but no strict-safe termination or Z-number decision.
 
 ## ABC-IUT
 
@@ -336,12 +334,9 @@ lift/phase clocks.
 
 ## Other active portfolio
 
-- **Integral observers:** hostile-audited
-  [THM-4000](../01-canon/theorems/THM-4000-centered-base-split-cubic-observer-and-tripotent-crt-atlas.md)
-  compiles consecutive values; [THM-4010](../01-canon/theorems/THM-4010-confluent-consecutive-hasse-observer-kernel-index-and-smith-firewall.md)
-  gives kernel `(F^k)`, index `product(j!)^(k^2)`, rank `k min(m+1,p)`, and
-  first positive `p`-exponent `1+v_p(k)`. CRT closes the `k=2` pair band;
-  later layers and transfers remain **OPEN**.
+- **Integral observers:** THM-4000 compiles consecutive values; THM-4010 gives kernel `(F^k)`, index `product(j!)^(k^2)`, rank `k min(m+1,p)`, and its first positive exponent.
+  THM-4080 gives the full two-jet partition `e*{0,0,1,...,s-1,s+1,...,2s-1}` at one exact scale and every consecutive `p`-primary layer through `n<=p(p-1)`; the `s=p` wall and larger clusters remain **OPEN**.
+- **Even-graph cumulative spectrum:** THM-4083 proves gaps `2(n-2)^2` through four-cycles and `2(n-2)(n^2-6n+10)` through five-cycles for every admissible `n`; cumulative `D>=5` remains **OPEN**.
 - **AMM:** THM-3588 forces `R=512` departures by `(35,38,39,42,44)`.
   At `R=32768`, FINITE-EXACT Rule-A gives `854:DIE@8246`,
   `855:CLOSED@20238`, `856:CLOSED@20233`; thus `854/855` is a one-step local

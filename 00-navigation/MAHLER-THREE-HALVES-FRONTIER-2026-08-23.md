@@ -1,6 +1,6 @@
 # Mahler `3/2` frontier
 
-**Current status (2026-08-23): OPEN.**  This is the routed detail behind the
+**Current status (2026-08-25): OPEN.**  This is the routed detail behind the
 compact entry in [CURRENT-FRONTIER](CURRENT-FRONTIER.md).  Primary-source
 records live in
 [CORE-PAPERS-MAHLER-THREE-HALVES](../05-knowledge/reference/CORE-PAPERS-MAHLER-THREE-HALVES.md).
@@ -116,3 +116,21 @@ unbounded follower state.
 [THM-4077](../01-canon/theorems/THM-4077-mahler-denominator19-2adic-tangent-full-shift-isometry.md)
 closes these programmers to a moving-time odd-`Z_2` tangent isometry, not one
 orbit. Parameter/output termination give two different open safe intersections.
+
+## Renormalized cross-scale chart
+
+[THM-4082](../01-canon/theorems/THM-4082-mahler-renormalized-linear-chart-and-exact-bit-defect.md)
+rescales the depth-`s` parameter by `3^s` and puts every THM-4077 isometry in
+one chart. With `Lambda=(243/152)log(3^18)`, an odd 2-adic unit, the exact law
+
+```text
+v_2(H_s(x)-Lambda*x)=s+2+2v_2(x),       x!=0,
+```
+
+says the nonlinear and linear carry words share exactly that many initial
+bits and differ at the next. The induced near-identity isometry transports
+the strict-safe and output-termination fibres exactly. Parameter termination
+retains the separate sidecar `P_s=3^s N_odd`: these dense countable loci are
+strictly decreasing with empty intersection, while output-only and neither
+termination remain dense at every fixed scale. Both strict-safe intersections
+and the deterministic orbit task remain open; the chart produces no Z-number.
