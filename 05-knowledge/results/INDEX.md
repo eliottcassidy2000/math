@@ -1,5 +1,31 @@
 # Script Results Index
 
+- `sixty_dyadic_response_fibre_thm4055.py` and independent CRT/spatial audit
+  -> matching `.out`s [THM-4055 PROVED universal phase-fibre law +
+  FINITE-EXACT fixed Rule 30 bank + VERIFIED-EXACT + INDEPENDENTLY AUDITED;
+  Rule 30 prizes OPEN]. For a least dyadic period `p=2^e`, each fixed
+  `C_60` phase has `2^max(e-2,0)` response-phase states; a response factors
+  through `C_60` iff `e<=2`. Exactly `82/100001` certified fixed-column tails
+  factor, while `ell_29(t+60)=1-ell_29(t)` for all `t>=90`. Primary
+  script/output SHA-256:
+  `c6de48e956c425b21d20f4dc364e10d41e3fd7d7401c486c0aee08e416c1f535` /
+  `e6ed3dfa72f85e33d4b702f1cfcaa48965624f44e8a2f458601b5cd44d58728f`;
+  independent script/output/semantic:
+  `e7ed7c344aec61d98d6cf39f6102c5bd20f218fe9b765f6b5dfe9fc7157d5646` /
+  `ee5f6b95286b47cde49308a5a128044dcaa0fe75ea2a18d4a23573a9d6bba0f5` /
+  `4de3162dfeaaa77c75256bdd86592d46110745992ff575f2c8c8953d378a55f0`.
+
+- `sun_2468_clock_height_firewall_20260824.py` -> matching `.out`
+  [`FINITE-EXACT` reflection sidecar; Sun conjecture already REFUTED, global
+  leastness OPEN]. At the THM-4026 target, exact output-modulus local factors
+  at `q=60,420,27720` are respectively `2486/3375`, `773146/1157625`, and
+  `19117792/46690875`, all positive. The nonzero `F_61` atlas has `212846` of
+  `60^4` phase tuples over the target and `S_2+S_4=F_61`. The missing
+  coordinate is the integral lift/height plus terminal triangular-square
+  test. Script/output SHA-256:
+  `3bacce126e5ced496aef3560af7a338bb40f4974172de90572bec78fec646f93` /
+  `932a39bba5d924dc3f5aa3ffb04aba98f8467ea2d62b3fa34e26e068d83e4302`.
+
 - `jc2_exceptional_affine_simple_zero_retained_packet_thm4054.py` and
   independent array audit -> matching `.out`s [THM-4054 PROVED +
   VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED in a finite/local scope;
