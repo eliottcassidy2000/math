@@ -1,0 +1,10 @@
+THM-4082 independent logarithm/exponential audit
+precision_bits=72 inverse_precision_bits=48 s_range=0..12 valuation_range=0..16
+log_terms_ell=30 log_terms_minus_three=44 ell_v2=3
+analytic_valuation_gates=1768 original_map_comparison_gates=1768 exponential_remainder_gates=1768
+inverse_fibre_gates=143 inverse_zero_gates=13
+maximum_exponential_terms=36
+ell_mod_65536=24872 lambda_mod_65536=13893
+source_assert_nodes=0 source_float_literals=0
+semantic_sha256=37bb93219290c1d356d35dbabda0444f9958e50f2bb5a62aa6900612a5b43e29
+PASS: independent analytic normal form, exact remainder, and inverse fibres

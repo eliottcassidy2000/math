@@ -1,0 +1,12 @@
+THM-4082 primary affine/geometric audit
+precision_bits=48 s_range=0..12 x_range=1..4095
+secant_gates=13 zero_forward_gates=13
+valuation_gates=53235 carry_first_divergence_gates=53235
+safe_triangular_gates=16382 safe_counts=[1, 2, 3, 4, 6, 9, 13, 20, 30, 44, 67, 101, 150]
+inverse_fibre_gates=143 inverse_zero_gates=13
+vertical_divisibility_gates=50
+lambda_mod_65536=13893 secant_rows=[(0, 47817, 2), (1, 27533, 3), (2, 9173, 4), (3, 11621, 5), (4, 5253, 6), (5, 45765, 7), (6, 12101, 8), (7, 10309, 9), (8, 6725, 10), (9, 65093, 11), (10, 50757, 12), (11, 22085, 13), (12, 30277, 14)]
+small_scale_even_controls=[(0, 1, 2), (0, 2, 4), (1, 1, 3), (1, 2, 5)]
+source_assert_nodes=0 source_float_literals=0
+semantic_sha256=01d1fb2f935f9fc9a9662a3278f30daf9aba3dd2798a770ff3ea65a977add997
+PASS: sharp tangent, exact bit defect, fibre transport, and boundaries
