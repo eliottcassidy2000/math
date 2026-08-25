@@ -19,6 +19,7 @@ related:
   - THM-2602-commutative-vertex-insertion-and-ordered-transition-curvature-no-go
   - THM-4111-uniform-ear-average-and-recursive-selected-bank-growth
   - THM-4114-ocf-mobius-positivity-tropical-defect-layer-and-opposite-ear-cut-curvature
+  - THM-4118-ear-response-lattice-and-stateful-unit-component-intervals
 script: 04-computation/tournament_squarefree_gap_transfer_thm4099.py
 output: 05-knowledge/results/tournament_squarefree_gap_transfer_thm4099.out
 independent_audit_script: 04-computation/tournament_squarefree_gap_transfer_thm4099_independent_audit.py

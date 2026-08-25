@@ -245,9 +245,10 @@ THM-2070 refutes the general HYP-8890/8895 bypasses.  Transfer
   THM-4102/4104 give intervals to `80,265` and prefix to `80,405` (next
   `80,407,80,689`). THM-4111/4115 force unbounded full-cut maxima via exact
   Walsh variance, factor `(n+1)(n+2)/(4n)` (`C3` sharp), and `F_1` surplus.
-  THM-4114 proves presence positivity versus submodular ear cuts;
-  full rank can stay gapped. At `n=5`, `400/544` parents lack an `M-2`
-  neighbor. Overlap/completeness remain **OPEN**.
+  THM-4114 separates positive faces from submodular ear cuts; THM-4118 adds
+  exact response gcds and stateful unit-component intervals. At `n=5`, all
+  `544` parents have gcd `2` yet gaps, and `400` lack an `M-2` neighbor.
+  Overlap/completeness remain **OPEN**.
 - Corrected HYP-8835: optimal support is uniquely odd; positive `Mp=0` gives a
   replicator integral. Pure optimum means Condorcet winner, not transitivity;
   source-over-`C3` is hostile and RPS levels are circles, not `T^2`.

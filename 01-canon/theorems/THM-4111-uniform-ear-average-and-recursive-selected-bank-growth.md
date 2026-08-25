@@ -19,6 +19,7 @@ related:
   - THM-4104-selected-order-eleven-strong-ear-solid-interval
   - THM-4114-ocf-mobius-positivity-tropical-defect-layer-and-opposite-ear-cut-curvature
   - THM-4115-uniform-ear-cut-walsh-variance-and-sharp-growth-refinement
+  - THM-4118-ear-response-lattice-and-stateful-unit-component-intervals
   - HYP-2879-strong-ear-atom-calculus
   - HYP-9029-strong-interval-tiling-law
   - MISTAKE-402

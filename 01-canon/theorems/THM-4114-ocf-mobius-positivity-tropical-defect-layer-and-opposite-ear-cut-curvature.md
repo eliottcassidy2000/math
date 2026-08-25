@@ -18,6 +18,7 @@ related:
   - THM-2602-commutative-vertex-insertion-and-ordered-transition-curvature-no-go
   - THM-4111-uniform-ear-average-and-recursive-selected-bank-growth
   - THM-4115-uniform-ear-cut-walsh-variance-and-sharp-growth-refinement
+  - THM-4118-ear-response-lattice-and-stateful-unit-component-intervals
 script: 04-computation/tournament_gap_polynomial_ocf_curvature_candidate.py
 output: 05-knowledge/results/tournament_gap_polynomial_ocf_curvature_candidate.out
 independent_audit_script: 04-computation/tournament_ocf_mobius_ear_curvature_thm4114_independent_audit.py

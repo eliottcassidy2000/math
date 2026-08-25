@@ -20,6 +20,7 @@ related:
   - THM-4099-squarefree-gap-transfer-and-mixed-insertion-boundary
   - THM-4102-selected-order-ten-strong-ear-solid-interval
   - THM-4104-selected-order-eleven-strong-ear-solid-interval
+  - THM-4118-ear-response-lattice-and-stateful-unit-component-intervals
   - HYP-2879-strong-ear-atom-calculus
   - HYP-9029-strong-interval-tiling-law
   - MISTAKE-402
