@@ -1,0 +1,16 @@
+THM-4097 INDEPENDENT AUDIT
+historical_sets_equal= True
+class_totals= (191536, 178133)
+strong_spectrum_size= 1482
+first_intervals= [(75, 75, 1), (81, 81, 1), (85, 2881, 1399)]
+first_post_interval_boundary= (False, True)
+witness= (75, 9, 9897508671, 75, 75, True)
+witness= (81, 9, 10165944127, 81, 81, True)
+witness= (85, 9, 49392123839, 85, 85, True)
+witness= (613, 8, 251585423, 613, 613, True)
+witness= (623, 9, 63853559615, 623, 623, True)
+witness= (2881, 9, 34308081455, 2881, 2881, True)
+witness= (2885, 9, 63870568207, 2885, 2885, True)
+witness= (3357, 9, 68164491031, 3357, 3357, True)
+semantic_sha256= 7c2f9f5c9a586d1eed5b0329a294b7541c1c492682cb9ecb76c2eefc2d14b167
+ALL_CHECKS_PASS

@@ -1,0 +1,18 @@
+ORDER-NINE STRONG-EAR SPECTRUM
+A000568_counts= [1, 1, 2, 4, 12, 56, 456, 6880]
+strong_order8_parents= 6008
+nonconstant_ears_checked= 1526032
+strong_spectrum_size= 1482 min= 75 max= 3357
+first_intervals= [(75, 75, 1), (81, 81, 1), (85, 2881, 1399)]
+solid_odd_interval= [85,2881] count=1399
+post_interval_tail_count= 81
+post_interval_tail= [2885, 2891, 2903, 2917, 2919, 2931, 2959, 2961, 2963, 2967, 2971, 2973, 2979, 2981, 2983, 2985, 2987, 2989, 2991, 2993, 2995, 2999, 3001, 3003, 3005, 3007, 3009, 3011, 3013, 3015, 3017, 3019, 3021, 3023, 3025, 3027, 3029, 3031, 3033, 3035, 3037, 3039, 3041, 3043, 3045, 3047, 3049, 3051, 3053, 3055, 3057, 3059, 3061, 3063, 3065, 3067, 3069, 3071, 3073, 3075, 3079, 3081, 3083, 3085, 3095, 3101, 3105, 3109, 3159, 3243, 3249, 3255, 3267, 3275, 3279, 3281, 3297, 3299, 3303, 3333, 3357]
+historical_all_classes= 191536 historical_strong_classes= 178133
+ear_histogram_legacy_sets_equal= True
+direct_witness_checks= 1482 failures= 0
+key_witnesses= {'75': {'parent_index': 48, 'signature': 253, 'cut_weight': 7, 'code': 9897508671}, '81': {'parent_index': 33, 'signature': 253, 'cut_weight': 7, 'code': 10165944127}, '85': {'parent_index': 33, 'signature': 64, 'cut_weight': 1, 'code': 49392123839}, '613': {'parent_index': 1, 'signature': 2, 'cut_weight': 1, 'code': 68719460287}, '623': {'parent_index': 5, 'signature': 57, 'cut_weight': 4, 'code': 63853559615}, '2881': {'parent_index': 4497, 'signature': 141, 'cut_weight': 4, 'code': 34308081455}, '2885': {'parent_index': 4542, 'signature': 51, 'cut_weight': 4, 'code': 63870568207}, '3357': {'parent_index': 6522, 'signature': 23, 'cut_weight': 4, 'code': 68164491031}}
+order8_H613_witness= {'parent_index': 130, 'signature': 19, 'cut_weight': 3, 'code': 251585423}
+ordinary_prime_lane_through=2879 next_unforced= 2887
+seven_prime_lane_p_through=409 next_unforced_value= 2933
+semantic_sha256= b72cfe0e2c2ca2302f54933060299fc302cc9f241ef79154aead9524b426f0d5
+ALL_CHECKS_PASS
