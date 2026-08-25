@@ -509,8 +509,9 @@ It checks:
 3. the actual `H=9` support/multiplicity hostile;
 4. product closure of all `303` prefix values through target `5,000`, locating
    `613` as the first allowed miss;
-5. Theorem 6.1's construction for all `499,998` allowed odd values through one
-   million, with zero failures; and
+5. the arithmetic factor decomposition used in Theorem 6.1's sufficiency
+   direction for all `499,998` allowed odd values through one million,
+   conditional on the stated lane and carry atoms, with zero failures; and
 6. `C_3`-join witnesses for finite subsets of the compactness type.
 
 It separates two counts that the legacy prose of

@@ -56,7 +56,7 @@
 - `hybrid_padic_zeta_margin_frontier_thm4089.py` -> matching `.out`
   [THM-4089 PROVED ELEMENTARY FORMULA OPTIMIZATION + VERIFIED-EXACT +
   INDEPENDENTLY CALCULUS/NUMERIC-AUDITED; external 22-value irrationality
-  theorem PREPRINT CLAIM / UNDER SPECIALIST AUDIT]. The displayed cutoff cost
+  theorem AUTHOR-CLAIMED / UNREFEREED]. The displayed cutoff cost
   is globally convex with explicit minimizer
   `12(s(s+1)-1)/(12s^2+(s-1)(p+1))`; the analytic-radius objective is strictly
   concave. All 22 fixed formula witnesses are positive, while exact derivative
@@ -105,8 +105,8 @@
   AUDITED; external singleton claims UNREFEREED]. Exact seams, derivative
   brackets, and global tangent bounds make the pinned formula negative at
   `(2,31),(3,13),(5,7),(7,5)`. Script/output SHA-256:
-  `5499b7f420a242d6b96a66707120b071e7941fbff68be54f6386e423e0f52913` /
-  `6199c1ef483ab385d79f63746226c9e45c6b0265b6657f9e21dfb375c1c5c2e7`.
+  `43d0313595ed4f8704572ce6589b0aaa9764ba2c39cb47f75131bdfd012df0b6` /
+  `ca51232dec53c195fe26157a6cc597668031f900c6ba04acdfc3a7582529066e`.
 
 - `lrc_order_tournament_arithmetic_type_density_thm4088.py` -> matching
   `.out` [THM-4088 PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED;

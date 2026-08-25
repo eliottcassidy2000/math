@@ -8,7 +8,6 @@ alternating-series enclosures, and exact integer-square-root bounds.
 
 from __future__ import annotations
 
-from decimal import Decimal, localcontext
 from fractions import Fraction
 from math import isqrt
 
@@ -207,11 +206,18 @@ def check_symbolic_seams(s: int) -> None:
         require(derivative_active == -k, f"positive-part derivative seam failed at k={k}")
 
 
-def decimal(q: Fraction, digits: int = 18) -> str:
-    with localcontext() as ctx:
-        ctx.prec = digits + 15
-        x = Decimal(q.numerator) / Decimal(q.denominator)
-        return f"{x:.{digits}f}"
+def decimal_bound(q: Fraction, digits: int = 18, *, upper: bool) -> str:
+    """Print a directed decimal enclosure using exact integer arithmetic."""
+
+    scale = 10**digits
+    scaled_num = q.numerator * scale
+    if upper:
+        integer = -((-scaled_num) // q.denominator)
+    else:
+        integer = scaled_num // q.denominator
+    sign = "-" if integer < 0 else ""
+    whole, fraction = divmod(abs(integer), scale)
+    return f"{sign}{whole}.{fraction:0{digits}d}"
 
 
 def main() -> None:
@@ -239,8 +245,10 @@ def main() -> None:
         require(upper < 0, "independent tangent upper bound is not negative")
 
         print(
-            f"{p:1d} {s:2d}  {str(xi):9s}  {decimal(dl[0]):>20s}  "
-            f"{decimal(dr[1]):>20s}  {decimal(upper):>22s}"
+            f"{p:1d} {s:2d}  {str(xi):9s}  "
+            f"{decimal_bound(dl[0], upper=False):>20s}  "
+            f"{decimal_bound(dr[1], upper=True):>20s}  "
+            f"{decimal_bound(upper, upper=True):>22s}"
         )
 
     print()

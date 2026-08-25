@@ -316,6 +316,32 @@ the distinguished temporal orbit.  This is the same quantifier boundary as
 finite p-adic digit balls and finite continued-fraction cells.  A transfer
 needs a temporal current, not an order tournament on observed prefixes.
 
+### Hamiltonian-path tournament spectrum
+
+The concurrent THM-4094 turns the matching-logic warning into an exact
+tournament statement without conflating the subjects. For vertex deletion,
+the **full** two-sort path incidence retains the exact increment
+
+```text
+H(T)-H(T-v)=sum_P(a_v(P)-1)+O_v,
+```
+
+whereas selecting one extension per old path discards both excess insertions
+and orphan paths. This is the same controlled-forgetting grammar as sort flow,
+but here the source, target, loss map, and repaired sidecar are literal
+tournament objects. Combined with SCC multiplicativity and the proved gaps
+`7,21`, it reduces the open global `H`-spectrum conjecture to two strong prime
+lanes, with first unforced construction targets `613` and `623`. THM-4088
+prevents a cosmetic shortcut: assigning rational, algebraic, or transcendental
+vertex labels cannot create those strong atoms unless the arithmetic
+decoration controls the insertion deficit or cycle structure intrinsically.
+The common minimal activation is `C_3`: a scalar-order tournament is
+transitive, with `Z_T=1`, `H(T)=1`, and zero deletion deficit regardless of
+the arithmetic types decorating its vertices; `C_3` instead has `c_3=1` and
+`H(C_3)-H(K_2)=2`. Thus `H>1` certifies nonconstant tournament zeta, but
+`H`, `c_3`, and `nu_p(H)` observe adjacency/SCC structure rather than the
+arithmetic type of external labels.
+
 ## 9. Generated next tasks
 
 ### Anchor -- specialist audit of the `22`-cell draft

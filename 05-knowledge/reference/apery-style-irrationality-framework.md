@@ -59,8 +59,9 @@ claims 22 Kubota--Leopoldt irrationalities. Its LCM depths share only this
 framework's valuation budget: no recurrence, approximant pair, nonzero linear
 form, or root decay transfers. [THM-4089](../../01-canon/theorems/THM-4089-hybrid-padic-zeta-margin-optimization-and-next-case-obstruction.md)
 optimizes the displayed margin and blocks four next cases, but verifies none
-of the geometric/adelic gates. The 22-value theorem remains **PREPRINT CLAIM /
-UNDER SPECIALIST AUDIT**; see the [source audit](p-adic-zeta-irrationality-source-audit-20260825.md).
+of the geometric/adelic gates. The 22-value theorem remains **AUTHOR-CLAIMED /
+UNREFEREED; SPECIALIST AUDIT OPEN**; see the
+[source audit](p-adic-zeta-irrationality-source-audit-20260825.md).
 
 ## If a future session attacks this
 

@@ -1,8 +1,8 @@
 # `p-adic-zeta-irrationality` source audit (2026-08-25)
 
-**Status: EXTERNAL PREPRINT CLAIM / UNDER SPECIALIST AUDIT. Numerical margin
-certificate VERIFIED-EXACT relative to the manuscript formulas. Do not cite
-the 22-value theorem as proved canon.**
+**Status: AUTHOR-CLAIMED / UNREFEREED RESEARCH DRAFT; SPECIALIST AUDIT OPEN.
+Numerical margin certificate VERIFIED-EXACT relative to the manuscript
+formulas. Do not cite the 22-value theorem as proved canon.**
 
 ## Frozen source and provenance
 
@@ -164,5 +164,5 @@ energy theorem, not finer search for `xi,Y`.
   hyperedges; a forced total orientation would discard the additive adelic
   budget which makes `(3)` meaningful.
 
-The 22-value theorem remains **PREPRINT CLAIM / UNDER SPECIALIST AUDIT** until
-the geometric and adelic gates are independently verified.
+The 22-value theorem remains **AUTHOR-CLAIMED / UNREFEREED** until the
+geometric and adelic gates are independently verified.

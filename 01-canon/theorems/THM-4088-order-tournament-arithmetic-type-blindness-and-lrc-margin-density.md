@@ -12,23 +12,34 @@ status: >
   the Liouville constant have the identical labelled tournament on N given
   by i->j iff i<j;
   every finite increasing rational prefix admits continuations of all three
-  types. Arithmetic conclusions must retain quantitative sidecars such as
+  types, and every finite transitive fibre realizes arbitrary prescribed
+  rational, exact-degree algebraic, and transcendental vertex types.
+  Arithmetic conclusions must retain quantitative sidecars such as
   determinants, heights, clearing, residuals, decay, and degree fences. A
-  strict LRC witness interval contains times of all three types, so arithmetic
-  type cannot separate the interior branch of LRC(14). No p-adic-zeta
+  strict LRC witness interval contains rational times, times of every exact
+  algebraic degree, and transcendental times, so arithmetic type cannot
+  separate the interior branch of LRC(14); the AP13 equality set is the sharp
+  rational hostile. No p-adic-zeta
   irrationality, transcendence beyond the displayed Liouville constant,
   LRC(14), or tournament-invariant inequality follows.
 source: codex-padic-zeta-tournament-20260825
 depends_on:
   - THM-4057-stern-brocot-depth-pullback-and-rational-edge-tournament-gauge
   - THM-613-margin-measure-slope-bridge
+  - THM-358-lrc-initial-segment-unit-skeleton
 related:
   - THM-4056-divisor-phase-compiler-and-duffin-schaeffer-lcm-clock
+  - THM-1158-invcov-refuted-by-doubled-ap
   - HYP-3114-lrc14-irrational-transcendental-approximation-sidecar
 script: 04-computation/order_tournament_arithmetic_type_thm4088.py
 output: 05-knowledge/results/order_tournament_arithmetic_type_thm4088.out
 script_sha256: f4e85a03b3e9e608106883fccc7d86e5cbc6ed174fa110329b0e0ca41195b764
 output_sha256: 9544d89a7d290012ec71a71ba6535dd454465aed60b97209ea1f5cbc43123731
+independent_script: 04-computation/lrc_order_tournament_arithmetic_type_density_thm4088.py
+independent_output: 05-knowledge/results/lrc_order_tournament_arithmetic_type_density_thm4088.out
+independent_audit: .scratch/lrc_density_referee_20260825/REPORT.md
+independent_script_sha256: 1aa1f9210b9a1eac224ebacf08f68f95a06d532c4ab9749b4b75ae7766c50565
+independent_output_sha256: 80860bf57cf1597cdc2fb3454cbdd7ccef5b824607cbc541d15a6544848efbd6
 hash_basis: raw bytes
 ---
 
@@ -86,6 +97,33 @@ r_j-r_i=Delta_ij/(b_i b_j).                               (4)
 The tournament keeps only `sgn(Delta_ij)`. It destroys the determinant
 magnitude and both heights, which together reconstruct the rational gap in
 `(4)`.
+
+For the fibre statement, extend the same scalar comparison observer to any
+pairwise-distinct real labels `x_v`, orienting `u->v` exactly when `x_u<x_v`.
+
+### Theorem 1.2 (complete finite arithmetic-type fibres)
+
+Conversely, fix any finite transitive tournament and prescribe independently
+at every vertex one of
+
+```text
+rational;
+real algebraic of exact degree d, for any chosen d>=2;
+transcendental.                                             (4a)
+```
+
+The tournament has pairwise-distinct real labels of exactly those prescribed
+types. List the vertices in tournament order and choose disjoint increasing
+open intervals. Rationals are dense. For fixed `d`, the numbers
+`q+r*2^(1/d)` with rational `q,r` and `r!=0` are dense and have exact degree
+`d`: `X^d-2` is Eisenstein, and the affine change generates the same field.
+Transcendentals are dense because each interval is uncountable whereas the
+algebraic numbers are countable. Choosing in the assigned intervals proves
+the claim.
+
+Thus even a mixed finite pattern of arithmetic types is arbitrary inside a
+single scalar-order-tournament fibre. This statement is deliberately limited
+to the observer `(2)`; an intrinsic arithmetic orientation can carry more.
 
 ## 2. One labelled tournament, three different limit types
 
@@ -263,9 +301,9 @@ F_S(t_0)>=c+delta,       delta>0,                         (19)
 ```
 
 then every `u` with `|u-t_0|<delta/M` satisfies `F_S(u)>c`.
-Every nonempty real interval contains rational, algebraic-irrational, and
-transcendental numbers, so the strict witness component contains times of all
-three types.
+Every nonempty real interval contains rationals, algebraic numbers of every
+fixed exact degree `d>=2`, and transcendental numbers. Hence each of these
+classes is relatively dense in every strict witness component.
 
 For LRC(14), this proves that the arithmetic type of an **interior** lonely
 time cannot distinguish a speed family or close the conjecture. The survivor
@@ -274,6 +312,35 @@ the quantitative task of landing on a prescribed finite denominator shell.
 The interval-local Stern sign sum suggested by THM-4057/4071 remains a lawful
 open problem because it retains denominator and interval labels; it is not a
 classification by arithmetic type.
+
+### Sharp boundary and finite-address corollary
+
+Positive margin is load-bearing. For the AP13 control
+
+```text
+S={1,...,13},                     c=1/14,                (20)
+```
+
+THM-358 proves
+
+```text
+{t in R/Z:F_S(t)>=1/14}
+  ={a/14 mod 1:1<=a<=13, gcd(a,14)=1},
+{t in R/Z:F_S(t)>1/14}=empty.                            (21)
+```
+
+The equality set is finite and rational, so the density conclusion cannot be
+weakened from strict margin to equality. The radius `delta/M` is also sharp
+from Lipschitz data alone: for `S={1}`, `c=1/4`, `t_0=1/2`, both endpoints of
+that radius have value exactly `c`.
+
+Every nonempty strict witness arc contains a closed finite Stern--Brocot cell:
+follow the nested cells of an irrational point in the arc until their widths
+are smaller than its distance to the boundary. Its interior therefore still
+contains representatives of every type above. Here a finite cell allows
+terminating rational completions. A symbolic cylinder restricted by
+convention to infinite continued-fraction expansions contains no rationals
+and is not interchangeable with this statement.
 
 ## 7. Transfer and loss ledger
 
@@ -297,12 +364,18 @@ pairs, and both directions.
 ```bash
 python3 -B 04-computation/order_tournament_arithmetic_type_thm4088.py
 python3 -B -O 04-computation/order_tournament_arithmetic_type_thm4088.py
+python3 -B 04-computation/lrc_order_tournament_arithmetic_type_density_thm4088.py
+python3 -B -O 04-computation/lrc_order_tournament_arithmetic_type_density_thm4088.py
 ```
 
 The companion checks identical order matrices for exact prefixes of `(5)`,
 `(6)`, and `(9)`, determinant reconstruction, `28,812` exact Lipschitz pairs,
-and `45` rational p-adic controls. It explicitly does not infer transcendence
-by computation.
+and `45` rational p-adic controls. The no-import independent companion checks
+the complete expected unit skeleton on the declared `1/(60n)` grids for
+initial segments through AP13, `896,112` circle-Lipschitz pairs, every induced
+strict-margin implication on its declared grid, and the sharp
+one-speed endpoint hostile. Both normal/optimized pairs byte-match their
+frozen outputs. Neither companion infers transcendence by computation.
 
 This theorem proves a no-go and identifies the positive sidecars. It proves
 no irrationality or transcendence result for a new named constant, no claim

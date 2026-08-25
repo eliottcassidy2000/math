@@ -3,7 +3,7 @@ source: codex-padic-zeta-tournament-20260825
 status: >
   RESEARCH SYNTHESIS. THM-4088--4090 are proved at their stated scopes; the
   external 22-value p-adic-zeta theorem and arXiv:2608.13306v1 remain
-  PREPRINT CLAIM / UNDER AUDIT. LRC(14), JC(2), the Sun-hole classification,
+  AUTHOR-CLAIMED / UNREFEREED. LRC(14), JC(2), the Sun-hole classification,
   and the named tournament inequalities remain OPEN.
 external:
   - https://github.com/octonion/p-adic-zeta-irrationality/commit/b46a1770901551961710e155d775aae7c5ea39e7
@@ -141,8 +141,8 @@ itself must improve.
 The cheapest serious audit is an explicit `(p,s)=(5,5)` worked case with a
 named frame, torsor chart, divisor and exceptional primes, source bases, one
 small-prime Hasse matrix and kernel, and one large-prime pole-grade pivot.
-Until then, the 22 irrationalities remain **PREPRINT CLAIM / UNDER SPECIALIST
-AUDIT**.
+Until then, the 22 irrationalities remain **AUTHOR-CLAIMED / UNREFEREED;
+SPECIALIST AUDIT OPEN**.
 
 ## Wildcard: matching logic and the two-sort wall
 

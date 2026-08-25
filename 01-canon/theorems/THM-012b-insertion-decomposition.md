@@ -5,7 +5,8 @@
 **Status:** PROVED + VERIFIED; legacy orphan-count prose corrected by MISTAKE-499
 **Contributed by:** opus-2026-03-05-S3
 **NOTE:** Formerly mislabeled as THM-013 (filename collision with THM-013-arc-flip-delta-I.md).
-Renamed to THM-012b. This is a standalone result not referenced by other theorems under this ID.
+Renamed to THM-012b. THM-4094 now supplies the rigorous full-incidence proof
+and repairs the legacy census under MISTAKE-499.
 **Tags:** #insertion #orphan-paths #hamiltonian-paths #claim-a-reformulation
 
 ---

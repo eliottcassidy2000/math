@@ -10,7 +10,7 @@ status: >
   bounds prove negative global maxima for the immediate next cases (2,31),
   (3,13), (5,7), and (7,5). This is a sharp obstruction to extending the
   manuscript by parameter retuning alone. The manuscript's 22 p-adic-zeta
-  irrationality theorem remains PREPRINT CLAIM / UNDER SPECIALIST AUDIT; its
+  irrationality theorem remains AUTHOR-CLAIMED / UNREFEREED; its
   new geometric and adelic bridges are not certified here.
 source: codex-padic-zeta-tournament-20260825
 depends_on: []
@@ -21,6 +21,12 @@ script: 04-computation/hybrid_padic_zeta_margin_frontier_thm4089.py
 output: 05-knowledge/results/hybrid_padic_zeta_margin_frontier_thm4089.out
 script_sha256: 90232af6c30b71ae7a4ae2a3f777effb32d6706c5a1413b948478b910c3a139e
 output_sha256: 393893b53c76580a8b891f61f22dc94e50ac2c3496cfd32e562b7b75ad6d4932
+independent_script: 04-computation/padic_zeta_next_cell_margin_obstruction_thm4089.py
+independent_output: 05-knowledge/results/padic_zeta_next_cell_margin_obstruction_thm4089.out
+primary_source_audit: .scratch/padic_repo_audit_20260825/REPORT.md
+independent_audit: .scratch/padic_margin_referee_20260825/REPORT.md
+independent_script_sha256: 43d0313595ed4f8704572ce6589b0aaa9764ba2c39cb47f75131bdfd012df0b6
+independent_output_sha256: ca51232dec53c195fe26157a6cc597668031f900c6ba04acdfc3a7582529066e
 hash_basis: raw bytes
 external_source: https://github.com/octonion/p-adic-zeta-irrationality/commit/b46a1770901551961710e155d775aae7c5ea39e7
 ---
@@ -28,8 +34,8 @@ external_source: https://github.com/octonion/p-adic-zeta-irrationality/commit/b4
 # THM-4089 -- exact frontier of the displayed hybrid margin
 
 **PROVED elementary optimization of the displayed formula +
-VERIFIED-EXACT. External irrationality theorem: PREPRINT CLAIM / UNDER
-SPECIALIST AUDIT. The optimization was independently calculus- and
+VERIFIED-EXACT. External irrationality theorem: AUTHOR-CLAIMED / UNREFEREED.
+The optimization was independently calculus- and
 100-digit-numerically audited.**
 
 This theorem does not import the external manuscript's claimed arithmetic
@@ -195,6 +201,20 @@ After inserting the exact cutoff minimizer `(8)`, the results are
 | `(5,7)` | `[107943/2500000,431773/10000000]` | `-3.841753001087929215971397147627` |
 | `(7,5)` | `[466407/10000000,58301/1250000]` | `-3.609764970272283548875193762173` |
 
+A second, no-import exact `Fraction` implementation uses different
+transcendental enclosures and narrower derivative brackets. It independently
+tightens the same four global upper bounds to
+
+```text
+(2,31) < -1.943953720741976711,
+(3,13) < -1.655957196706988949,
+(5, 7) < -3.841753001089363045,
+(7, 5) < -3.609764970278347646.                          (16a)
+```
+
+The two displays are compatible upper enclosures, not competing numerical
+claims; `(16a)` is the sharper independent enclosure.
+
 Thus no choice of the two displayed parameters can make the current margin
 positive in any of these four cases. If every other term is held fixed, the
 hybrid cost `tau` must decrease by at least, respectively,
@@ -243,15 +263,18 @@ The lawful repo connections are narrower:
 ```bash
 python3 -B 04-computation/hybrid_padic_zeta_margin_frontier_thm4089.py
 python3 -B -O 04-computation/hybrid_padic_zeta_margin_frontier_thm4089.py
+python3 -B 04-computation/padic_zeta_next_cell_margin_obstruction_thm4089.py
+python3 -B -O 04-computation/padic_zeta_next_cell_margin_obstruction_thm4089.py
 ```
 
-Both modes produce the frozen output. The interval primitives are adapted,
+Both normal/optimized pairs produce their frozen outputs. The primary interval primitives are adapted,
 with the complete MIT copyright and permission notice in the script, from the source repository's certificate;
 the derivative enclosure, concavity/tangent proof, four next cases, and output
-are new to this companion.
+are new to that companion. The standalone companion imports no source code and
+serves as the independent exact path.
 
 This theorem proves only the optimization and sign statements for the
 explicit real function `(6)`. The external claim that 22 Kubota--Leopoldt
-values are irrational remains **PREPRINT CLAIM / UNDER SPECIALIST AUDIT**.
+values are irrational remains **AUTHOR-CLAIMED / UNREFEREED**.
 No LRC(14), planar Jacobian, Sun-classification, transcendence, or tournament
 invariant result follows.
