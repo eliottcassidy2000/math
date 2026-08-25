@@ -158,8 +158,8 @@
 - `lrc_twisted_padic_affine_margin_optimizer_thm4096.py` and independent
   audit -> matching `.out`s [THM-4096 PROVED + VERIFIED-EXACT +
   INDEPENDENTLY VERIFIED-EXACT; LRC(14) OPEN]. On
-  `V_m={1,...,12,182m}`, the normalized THM-2057 margin has an exact rational
-  affine expansion in the correctly typed values
+  `V_m={1,...,12,182m}`, the normalized THM-2057 witness phase has an exact
+  rational affine expansion in the correctly typed values
   `L_p(-1,omega_p^2)=(p-1)/12`. Only `m=1` lies on the positive side and has a
   nonnegative optimizer; every `m>=2` lies below `zeta(-1)`, with two exact
   Dedekind observers bracketing the carrier. This is not a common p-adic sum
@@ -174,10 +174,12 @@
   `.out` [THM-4095 PROVED + FINITE-EXACT + VERIFIED-EXACT + INDEPENDENTLY
   AUDITED; LRC(14) OPEN]. Every fixed finite observer preserves
   `Q(F_S(t)-beta)=Q(t)`, and every strict witness rationalizes on an explicit
-  grid. Primitive two-speed optimized `1/3`-margins are instead the gapped set
-  `{1/6} union {1/6-1/(2q): q odd, q>=3}`. The same transitive order tower
-  realizes every reciprocal mass in `(0,1]`, proving that bare order data see
-  neither distinction. Script/output SHA-256:
+  grid. Primitive two-speed optimized `1/3`-margins instead form the closed
+  countable set `{1/6} union {1/6-1/(2q): q odd, q>=3}`, with unique
+  accumulation point `1/6` and gap `(0,1/15)`. A maximizing denominator is at
+  most `2 max(S)`. The same transitive order tower realizes every reciprocal
+  mass in `(0,1]` and has graph zeta identically one, proving that bare order
+  data see neither distinction. Script/output SHA-256:
   `15ff1d8e382de6f9183f148619e20a32e163a10f4bed71a306e950f6aa62f591` /
   `35e8b49afb170ee032feb0166c2c87325579f39273a4410068100928010c4ae3`.
 
@@ -191,8 +193,16 @@
   of the prime and seven-prime lanes. The exact audit isolates `613` and `623`
   as the first targets beyond its finite prefix and records the finitary
   compactness obstruction; THM-4097 subsequently realizes both. Script/output SHA-256:
+  H-spectrum conjecture OPEN]. At order at least two, full deletion incidence
+  gives the exact Hamiltonian-path deficit; selecting one extension per old
+  path loses it minimally at the transitive-triple/C3 boundary. Given the
+  proved omissions, multiplicativity, and finite-prefix strong carry atoms
+  `49,63,343`, global completeness is equivalent to strong realization of the
+  prime and seven-prime lanes. The exact audit also isolates `613` and `623`
+  as the first current unforced prime targets and records the finitary
+  compactness obstruction. Script/output SHA-256:
   `5b6c779958ad1de276873eabd3585f432bb593e32811fb138dc5d3c19948d616` /
-  `5f174f77a873a02bd92bbebe4a5d70b3c329abc8152fb1330d4fe1dc6d98df34`.
+  `5f174f77a873a02bd92bbeb4a5d70b3c329abc8152fb1330d4fe1dc6d98df34`.
 
 - `tournament_order9_strong_ear_spectrum_thm4097.py` and independent audit ->
   matching `.out`s [THM-4097 PROVED ELEMENTARY REDUCTION + FINITE-EXACT +
@@ -269,7 +279,7 @@
   `a86fae7a2586cf41f34bba7a3a22ffa9d8193ab0f4bb43243ffc217d03fcf006`.
 
 - `bernoulli_42_and_padic_pole_correction_20260825.py` -> matching `.out`
-  [FINITE-EXACT SUPPORT FOR MISTAKE-499]. The Hamilton algebra's reduced
+  [FINITE-EXACT SUPPORT FOR MISTAKE-500]. The Hamilton algebra's reduced
   finite discriminant is not `42`; negative `v_7(zeta_7(-5))` is not a pole;
   and denominator `42` recurs first at `B_114`. The exact even-index scan
   through 1,000 finds 15 occurrences. Hashes:

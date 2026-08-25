@@ -4,7 +4,7 @@
 truth-source classification. In particular, entries calling `{2,3,7}` the
 "Hurwitz primes" do not describe ramification of the Hamilton quaternion
 algebra, and the `42`/Hurwitz/quaternion identifications routed through
-`bernoulli-hurwitz.md` are withdrawn by MISTAKE-501. Retain only individually
+`bernoulli-hurwitz.md` are withdrawn by MISTAKE-504. Retain only individually
 proved numerical identities such as `B_6=1/42` and `phi(42)=12`; the labels
 "representation," "triple point," and "same obstruction" carry no theorem.
 

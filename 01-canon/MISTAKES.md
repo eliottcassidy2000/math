@@ -29,7 +29,73 @@ Format per entry:
 - **Reusable rule:** density ratios do not rescale correlation kernels when
   the two arc widths differ; compute the convolution shape before taking a
   periodic average.
-## MISTAKE-501 (2026-08-25, Bernoulli--Hurwitz reflection) -- denominator primes were promoted to quaternion ramification and a finite p-adic value was called a pole
+
+## MISTAKE-503 (2026-08-25, THM-4096 / MISTAKE-497 repair audit) -- a certified witness was upgraded to the optimum and one strict comparison was left unjustified
+
+- **What failed:** MISTAKE-497 said that THM-2057 proves
+  `M({1,...,12,182m})=14m/(182m+1)`, and MISTAKE-498 called the same result
+  an exact ray theorem. THM-4096 also attributed the complete order
+  `A_m<C_m<-1/12<1/2<F_m` only to formulas that did not themselves prove
+  the final comparison `F_m>1/2`.
+- **Minimal witnesses / first failed implications:** THM-2057 proves that the
+  displayed time has witness value `14m/(182m+1)` and hence gives a strict
+  lower bound for `M`; it does not prove global maximality. Independently,
+  the missing comparison is
+  `F_m-1/2=((m-2)(1183m+546)+1089)/(6(182m+1))>0` for `m>=2`.
+- **Repair / strongest survivor:** MISTAKE-497--498 now attribute only the
+  strict witness and no longer claim an exact optimum. THM-4096 includes the
+  omitted positive factorization. Its affine optimizer is unchanged because
+  it normalizes the explicit THM-2057 witness phase, not `M(V_m)`; the full
+  Dedekind ordering is now proved in the displayed text.
+- **Reusable rule:** distinguish `F_S(t_0)=c` from `M(S)=c`, even when the
+  witness is canonical. When a chain of strict inequalities is boxed, audit
+  every adjacent comparison rather than citing formulas that cover only most
+  of the chain.
+
+## MISTAKE-502 (2026-08-25, THM-4094 promotion audit) -- an empty-path endpoint and finite-prefix carry hypotheses were left implicit
+
+- **What failed:** THM-4094 stated its deletion-incidence theorem for every
+  finite tournament although its binary-word proof and exact referee begin at
+  order two. Its two-prime-lane equivalence was advertised under parity,
+  multiplicativity, and the omissions `7,21`, while the sufficiency proof
+  also uses the finite-prefix strong carry atoms `49,63,343`. The compactness
+  sidecar printed the threshold-one neutral product as a zero-vertex
+  tournament with `H=1` without declaring an empty-tournament convention.
+- **Minimal witnesses / first failed implications:** deleting the only vertex
+  leaves an empty word, so the displayed `s_1,s_m` insertion argument is not
+  typed without an extra convention. Lanes `(21)--(22)` alone do not supply
+  the `63` and `343` used for the `7*3^k` and odd powers of seven cases.
+- **Repair / strongest survivor:** the incidence theorem is scoped to
+  `|V(T)|>=2`; the global equivalence explicitly assumes the proved carry
+  atoms `(20)` from THM-1370's finite prefix; and the threshold-one exact
+  control now uses the singleton tournament. The deficit identity, minimal
+  order-three quotient collision, prime-lane extraction, compactness theorem,
+  and open global conjecture all survive.
+- **Reusable rule:** a neutral multiplicative object is not automatically a
+  member of the intended combinatorial universe. List finite seed/carry atoms
+  as hypotheses when an infinite-lane reduction uses them in exceptional
+  valuation cases.
+
+## MISTAKE-501 (2026-08-25, THM-4095 optimized pair spectrum) -- a gapped convergent spectrum was called discrete
+
+- **What failed:** the optimized primitive-pair margin set
+  `{1/6} union {1/6-1/(2q):q>=3 odd}` was called discrete in `R`, and the
+  Egyptian-fraction proof wrote `1/m_j<=x_j<1/(m_j-1)` without excluding
+  `m_j=1`.
+- **Minimal witnesses / first failed implications:** as odd `q` tends to
+  infinity, `1/6-1/(2q)` tends to the included point `1/6`, so that point is
+  not isolated. For `x_j=1`, one has `m_j=1` and the right side of the quoted
+  inequality is undefined.
+- **Repair / strongest survivor:** the spectrum is countable and gapped, with
+  unique accumulation point `1/6` and the same exact gap `(0,1/15)`. The
+  greedy bound is now stated only for `m_j>=2`, while `m_j=1` is handled as
+  the terminating `x_j=1` case. All field-transport, pair-optimization, and
+  tournament-blindness formulas survive.
+- **Reusable rule:** a gap near one endpoint does not imply discreteness.
+  Audit accumulation points and exceptional denominator values before
+  assigning a topological label to an exact spectrum.
+
+## MISTAKE-504 (2026-08-25, Bernoulli--Hurwitz reflection) -- denominator primes were promoted to quaternion ramification and a finite p-adic value was called a pole
 
 - **What failed:** `07-reflections/bernoulli-hurwitz.md` claimed that the
   Hamilton quaternion algebra ramifies at the finite primes `2,3,7`, that its
@@ -90,7 +156,7 @@ Format per entry:
   theorem.
 - **Repair / strongest survivor:** removing THM-4089 from the repair was
   necessary. [THM-2057--scaled-zeta-core-one-tail-closure](theorems/THM-2057-scaled-zeta-core-one-tail-closure.md)
-  proves the exact LRC ray. The subsequently reserved and independently
+  proves a strict LRC witness on the ray. The subsequently reserved and independently
   audited [THM-4096--twisted-padic-affine-LRC-ray-optimizer](theorems/THM-4096-twisted-padic-affine-lrc-ray-optimizer-and-next-case-obstruction.md)
   now proves the separate rational affine optimizer under its correct ID and
   explicitly disclaims a common p-adic-valued sum. MISTAKE-497's character,
@@ -130,7 +196,7 @@ Format per entry:
   `L_7(-1,omega^2)=1/2` survive. The eta value is
   `182/549` in Atiyah's orientation. Independently,
   [THM-2057--scaled-zeta-core-one-tail-closure](theorems/THM-2057-scaled-zeta-core-one-tail-closure.md)
-  proves `M({1,...,12,182m})=14m/(182m+1)>1/14`. THM-4096
+  proves a witness with value `14m/(182m+1)>1/14`. THM-4096
   normalizes that explicit witness and proves an exact rational affine
   optimizer: `m=1` is the unique positive-side point and every `m>=2` lies
   below `-1/12`. It explicitly loses p-adic topology. Any identification of

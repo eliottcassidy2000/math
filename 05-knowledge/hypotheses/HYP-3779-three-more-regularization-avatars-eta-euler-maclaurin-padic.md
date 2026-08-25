@@ -1,7 +1,7 @@
 ---
 id: HYP-3779
 title: THREE MORE REGULARIZATION AVATARS of the LRC14 margin (deepening S67 HYP-3774) -- topological, exact, and p-adic -- with multiple proof-directions. The seed (S67): margin(n)=n/Phi6-1/n=-12 s(n,Phi6)/n^2, s(n,Phi6)=-T/(12T+6)->-1/12=zeta(-1), T=1+..+(n-1). Beyond the Ramanujan/archimedean avatar (S67), THREE more, all verified: (AVATAR 1, SPECTRAL/TOPOLOGICAL) the Dedekind sum has the cotangent form s(h,k)=(1/4k) sum_j cot(pi j/k)cot(pi h j/k), which is the APS eta-invariant / Hirzebruch signature defect of the LENS SPACE L(k,h); so the LRC14 margin s(14,183)=-91/1098 IS the eta-invariant of the 3-manifold L(183,14), and Dedekind-Rademacher reciprocity = the APS cobordism/gluing formula. (AVATAR 2, EULER-MACLAURIN) the margin is EXACTLY the Bernoulli-B2 (2nd-order) remainder of the speed-sum T: margin=-12 s/n^2 and n^2*margin -> -12 zeta(-1)=1, with B2=1/6 the E-M coefficient. (AVATAR 3, p-ADIC) Kubota-Leopoldt zeta_p(-1)=-(1-p)/12; at the apex prime 7, zeta_7(-1)=1/2, which DISAGREES with the archimedean zeta(-1)=-1/12 -- the un-regularizable residual (f14 at the 7-cusp) is exactly where the 7-adic and archimedean regularizations SPLIT. SYNTHESIS: the LRC14 margin has THREE regularization avatars (Ramanujan/archimedean -1/12, spectral/eta-invariant of L(183,14), p-adic zeta_p(-1)); they AGREE on the bulk but SPLIT at the apex prime 7 = the residual = the genus-1 cusp form. PROOF-DIRECTIONS: (1) bound the margin via lens-space eta-invariant positivity + cobordism (reciprocity); (3) characterize the residual as the 7-adic/archimedean regularization discrepancy (the "wild at 7" part).
-status: PARTIALLY REFUTED / CORRECTED by MISTAKE-497, MISTAKE-498, and THM-4096. The exact Dedekind and margin identities survive, but eta_sig=-4s up to orientation, not s; 1/2 is the twisted value L_7(-1,omega^2), not the trivial-character zeta_7(-1); the exact B2-remainder wording is retracted; and the f14/local-global synthesis remains an OPEN analogy. THM-2057 proves the exact LRC ray; THM-4096 proves only its rational affine optimizer; THM-4089 is unrelated.
+status: PARTIALLY REFUTED / CORRECTED by MISTAKE-497, MISTAKE-498, MISTAKE-503, and THM-4096. The exact Dedekind and margin identities survive, but eta_sig=-4s up to orientation, not s; 1/2 is the twisted value L_7(-1,omega^2), not the trivial-character zeta_7(-1); the exact B2-remainder wording is retracted; and the f14/local-global synthesis remains an OPEN analogy. THM-2057 proves a strict witness on the LRC ray, not global maximality; THM-4096 proves only its rational affine optimizer; THM-4089 is unrelated.
 source: mac-mini-2026-06-30-S70
 related:
   - HYP-3774   # S67: the zeta-regularization carrier (Mobius interpolation, 24=psi(14), hexagonal anomaly) -- this DEEPENS it
@@ -9,7 +9,7 @@ related:
   - HYP-3586   # X0(14) apex cusp d=7, the f14 cusp-form obstruction (the residual)
   - HYP-2808   # Dedekind-Rademacher reciprocity (the far-coherence tool) = APS cobordism here
   - HYP-3771   # the crystallographic (2,3,p) spine; the apex-7 hyperbolic
-  - THM-2057   # exact {1,...,12,182m} LRC ray, not a regularization avatar
+  - THM-2057   # strict {1,...,12,182m} witness ray, not an optimum or regularization avatar
   - THM-4096   # exact rational affine optimizer, not a common p-adic invariant
 results:
   - 04-computation/regularization_avatars_eta_padic_macmini_20260630.py
@@ -18,7 +18,7 @@ results:
 
 # HYP-3779 -- three more regularization avatars of the margin (topological, exact, p-adic)
 
-> **CORRECTION (MISTAKE-497/498; THM-4096).** The historical text below is
+> **CORRECTION (MISTAKE-497/498/503; THM-4096).** The historical text below is
 > retained for provenance but must not be cited as current truth. In Atiyah's
 > displayed orientation convention the signature eta invariant is
 > `eta_sig(L(k,h))=-4s(h,k)`, so the value at `(k,h)=(183,14)` is

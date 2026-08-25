@@ -17,6 +17,7 @@ depends_on:
 related:
   - HYP-3779
   - MISTAKE-497
+  - MISTAKE-503
 script: 04-computation/lrc_twisted_padic_affine_margin_optimizer_thm4096.py
 output: 05-knowledge/results/lrc_twisted_padic_affine_margin_optimizer_thm4096.out
 independent_audit_script: 04-computation/lrc_twisted_padic_affine_margin_optimizer_thm4096_independent_audit.py
@@ -204,14 +205,21 @@ F_m-C_m=(m-1)(1183m+7)/(6D_m),
 C_m-A_m=(m-1)(1274m-7)/(6D_m).                             (17)
 ```
 
+The remaining comparison in the full order has the independent positive
+factorization
+
+```text
+F_m-1/2=((m-2)(1183m+546)+1089)/(6D_m)>0       (m>=2).     (17a)
+```
+
 At `m=1` there is a triple collision
 
 ```text
 F_1=C_1=A_1=-91/1098.                                      (18)
 ```
 
-For every `m>=2`, the factors in `(4)` and `(17)` are strict, producing the
-complete order
+For every `m>=2`, the factors in `(4)`, `(17)`, and `(17a)` are strict,
+producing the complete order
 
 ```text
 boxed: A_m<C_m<-1/12<1/2<F_m.                              (19)

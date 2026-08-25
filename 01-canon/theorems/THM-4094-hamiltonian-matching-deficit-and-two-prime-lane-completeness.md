@@ -2,12 +2,12 @@
 id: THM-4094
 title: "Hamiltonian matching deficit and two-prime-lane completeness reduction"
 status: >
-  PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED. Full deletion
-  incidence gives a left-perfect matching and the exact Hamiltonian-path
-  deficit as excess compatible
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED. For tournaments of
+  order at least two, full deletion incidence gives a left-perfect
+  matching and the exact Hamiltonian-path deficit as excess compatible
   insertions plus orphan paths; retaining only a selected matching loses that
   deficit, minimally at the transitive-triple/C3 boundary. Using the proved
-  omissions 7,21, the proved strong carry atoms 49,63,343, and order-join
+  finite-prefix strong carry atoms 49,63,343, omissions 7,21, and order-join
   multiplicativity, global H-spectrum completeness is equivalent to strong
   realization of the two infinite lanes p (odd prime p!=7) and 7p (odd prime
   p!=3). Finitary many-sorted
@@ -32,10 +32,11 @@ related:
   - MISTAKE-209
   - MISTAKE-219
   - MISTAKE-499
+  - MISTAKE-502
 script: 04-computation/hamiltonian_matching_deficit_two_prime_lane_thm4094.py
 output: 05-knowledge/results/hamiltonian_matching_deficit_two_prime_lane_thm4094.out
 script_sha256: 5b6c779958ad1de276873eabd3585f432bb593e32811fb138dc5d3c19948d616
-output_sha256: 5f174f77a873a02bd92bbebe4a5d70b3c329abc8152fb1330d4fe1dc6d98df34
+output_sha256: 5f174f77a873a02bd92bbeb4a5d70b3c329abc8152fb1330d4fe1dc6d98df34
 semantic_sha256: a7376b1f1d0bdea71e063caf85415a6555d070130c24304b2b2c6fb24571d76f
 hash_basis: raw LF bytes for files; canonical compact JSON for the semantic ledger
 audit: >
@@ -144,7 +145,8 @@ x -> v -> y -> x,                                       (9)
 
 so its failed shortcut marks a directed triangle through `v`.
 
-> **Theorem 2.1 (deletion-incidence deficit).** Every left degree satisfies
+> **Theorem 2.1 (deletion-incidence deficit).** If `|V(T)|>=2`, every left
+> degree satisfies
 > `a_v(P)>=1`; every right degree in `D_v` is zero or one; and
 >
 > ```text
@@ -298,8 +300,8 @@ All are impossible by `(4)`, so
 ## 6. Exact two-prime-lane equivalence
 
 > **Theorem 6.1 (global completeness reduction).** Under Rédei parity,
-> `(3)`--`(4)`, and the proved strong carry atoms `(20)`, the global conjecture
-> `(5)` is equivalent to
+> `(3)`--`(4)`, and the finite-prefix strong carry atoms `(20)`, the global
+> conjecture `(5)` is equivalent to
 >
 > ```text
 > P_odd \ {7}       subset S_str,                       (21)

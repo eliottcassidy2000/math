@@ -3,8 +3,9 @@
 **Session date:** 2026-08-25
 **Status:** external p-adic theorem `PREPRINT CLAIM / UNDER SPECIALIST AUDIT`;
 external interval replay `FINITE-EXACT`; matching-logic source `CITED / ARXIV
-V1`; THM-4088--4091 and THM-4093 `PROVED` in their exact scopes. None of these
-statuses proves a new p-adic irrationality statement in repository canon.
+V1`; the referenced THM-4088--4091 and THM-4093--4096 are `PROVED` in their
+exact scopes. None of these statuses proves a new p-adic irrationality
+statement in repository canon.
 
 ## 1. Outcome first
 
@@ -42,6 +43,18 @@ The two supplied links are independent.
    endpoint ratios give diagonal similarity, and a tournament's first p-adic
    determinant-zeta tangent is controlled exactly by triangle-count
    divisibility (THM-4093).
+7. THM-4094 replaces a selected Hamiltonian-path matching by the full deletion
+   incidence and recovers the exact missing deficit. It also reduces the open
+   global Hamiltonian-path spectrum conjecture to two strong prime lanes.
+8. THM-4095 proves exact generated-field transport for every fixed finite LRC
+   observer, while optimized primitive-pair margins form a closed countable
+   gapped set, with unique accumulation point `1/6` and literal gap
+   `(0,1/15)`. Bare order tournaments see neither fact; their determinant
+   graph zeta is identically one because they are acyclic.
+9. THM-4096 repairs the character branch in the Cover14 regularization lane:
+   the first ray point has a unique positive-side rational affine optimizer,
+   while every later point has a sign obstruction. This is not a sum across
+   p-adic fields.
 
 ## 2. Inheritance pass and live concept board
 
@@ -410,7 +423,106 @@ forcing their missing pairs into a tournament would still invent data.
    data; the orientation or triangle count alone remains type-blind by
    THM-4088.
 
-## 9. Reproduction
+## 9. Late incoming frontiers and their exact interfaces
+
+### 9.1 Full incidence, not a chosen matching
+
+THM-4094 shows that for a tournament `T`, vertex `v`, and every Hamiltonian
+path `P` of `T-v`, the number `a_v(P)` of legal insertions satisfies
+
+```text
+H(T)-H(T-v)=sum_P(a_v(P)-1)+O_v,                         (23)
+```
+
+where `O_v` counts paths whose deletion shortcut fails. Selecting one legal
+extension of each `P` proves only monotonicity; it deletes both excess
+extensions and orphans. The directed triangle is the minimal hostile: after
+choosing one edge, the transitive triple and `C_3` have the same selected
+matching but deficits zero and two.
+
+This is the combinatorial analogue of the sort/weight/lattice sidecar rule,
+with a sharper conclusion. The missing coordinate is not “another sort” in
+the abstract; it is the unmatched right witnesses and their full fiber
+profile. The theorem's separate reduction of the open H-spectrum conjecture
+to strong realization of `p` and `7p` lanes uses SCC multiplicativity, the
+proved omissions `7,21`, and the finite-prefix strong carry atoms
+`49,63,343`; it does not follow from matching logic.
+
+There is nevertheless a precise logical interface. Each fixed finite
+tournament has a faithful two-sort object/path incidence, but finitary
+first-order compactness says that a theory whose fibers are finite in every
+model has a uniform fiber bound. Hence one theory cannot isolate all unbounded
+finite path fibers while excluding infinite ones under ordinary all-structure
+semantics. This compactness boundary is different from THM-4090's sort-flow
+obstruction and points toward external finite-model or standard-code semantics
+for a mechanized H-spectrum project.
+
+### 9.2 Fixed-observer field transport versus optimized-family gaps
+
+For fixed finite integer speeds `S` and rational `beta`, THM-4095 proves
+
+```text
+Q(F_S(t)-beta)=Q(t),                                      (24)
+```
+
+because an active branch writes `t=(k+epsilon F_S(t))/v`. Thus rational,
+algebraic-irrational, and transcendental field fibers are each transported
+exactly and are dense inside every strict witness interval. This strengthens
+THM-4088's density statement before the order quotient is taken.
+
+Changing the quantifier changes the answer. After optimizing over time and
+then varying primitive pairs, the complete two-runner `1/3`-margin spectrum is
+
+```text
+{1/6} union {1/6-1/(2q):q>=3 odd},                       (25)
+```
+
+with open gap `(0,1/15)`. A fixed observer has dense typed values; the family
+of optimized observers is closed, countable, gapped, and accumulates only at
+`1/6`.
+Every fixed observer also has a maximizing witness with denominator at most
+twice its largest speed. The destroyed coordinate is the order of
+“fix `S` / vary `t` / optimize / vary `S`,” not arithmetic type itself.
+
+The exact THM-4093 connection is negative but structural. Increasing-order
+prefix tournaments have strictly upper-triangular adjacency matrices, hence
+`det(I-uA)=1` and graph zeta `1`; they land in THM-4093's `c_3=0`
+infinite-depth branch. The order quotient has killed every cycle before any
+unit vertex-ratio gauge is applied.
+
+### 9.3 The lawful p-adic/LRC shadow is rational and character-labelled
+
+THM-4096 studies the different Cover14 ray
+
+```text
+V_m={1,...,12,182m}.                                      (26)
+```
+
+After a rational normalization `C_m` of THM-2057's witness phase, it compares
+`C_m` with the correctly typed twisted vertices
+
+```text
+L_p(-1,omega_p^2)=(p-1)/12.                              (27)
+```
+
+The affine moment equation has a nonnegative solution only at `m=1`; every
+`m>=2` requires a negative moment and lies below `zeta(-1)`. At `m=1`, the
+level-prime `{2,7}` optimizer puts all allowed mass at seven. Two Dedekind
+observers collide there and separate strictly from `m=2` onward.
+
+This is a lawful connection because every vertex in `(27)` is first mapped to
+the same rational affine line and the character is retained. It deliberately
+forgets p-adic topology. It is unrelated to THM-4089's external variables
+`(p,s,xi,Y)`, despite both results containing an optimizer and a next-case
+obstruction. Neither theorem identifies an `f_14` residual or proves LRC(14).
+
+MISTAKE-500 supplies a useful branch-sensitive control. At `p=7,s=-5`, the
+interpolation index six is divisible by `p-1`, so the trivial branch has the
+finite value `2801/42` with valuation `-1`; at `s=-1`, THM-4096 must instead
+name the `omega^2`-twisted rational vertex. In both cases negative valuation
+means a denominator, not a pole.
+
+## 10. Reproduction
 
 ```bash
 python -B 04-computation/hybrid_padic_zeta_margin_frontier_thm4089.py

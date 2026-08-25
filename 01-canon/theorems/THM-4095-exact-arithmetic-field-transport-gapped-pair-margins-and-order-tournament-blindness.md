@@ -6,8 +6,9 @@ status: >
   F_S(t)=min_(v in S)||vt|| preserves the singly generated field exactly:
   Q(F_S(t)-beta)=Q(t) for rational beta. Consequently each arithmetic field
   fiber has its exact typed image and is dense below the rational optimum.
-  In contrast, primitive two-speed optimized 1/3-margins form the discrete
-  set {1/6} union {1/6-1/(2q): q odd, q>=3}, with gap (0,1/15).
+  In contrast, primitive two-speed optimized 1/3-margins form the countable
+  closed gapped set {1/6} union {1/6-1/(2q): q odd, q>=3}, whose unique
+  accumulation point is 1/6 and whose gap at zero is (0,1/15).
   Order tournaments see neither distinction: even infinite transitive prefix
   towers realize every reciprocal mass in (0,1]. This is an information-loss
   theorem, not LRC(14) or a rejection of intrinsically defined tournaments.
@@ -16,7 +17,9 @@ depends_on: []
 related:
   - THM-1155-threespeed-exhaustive-and-ceiling
   - THM-4088-order-tournament-arithmetic-type-blindness-and-lrc-margin-density
+  - THM-4093-rational-edge-diagonal-gauge-and-padic-tournament-zeta-tangent
   - THM-4096-twisted-padic-affine-lrc-ray-optimizer-and-next-case-obstruction
+  - MISTAKE-501
 script: 04-computation/lrc_margin_arithmetic_type_tournament_blindness_thm4095.py
 output: 05-knowledge/results/lrc_margin_arithmetic_type_tournament_blindness_thm4095.out
 script_sha256: 15ff1d8e382de6f9183f148619e20a32e163a10f4bed71a306e950f6aa62f591
@@ -37,7 +40,8 @@ superficially conflicting observations become compatible once the
 quantifiers are separated:
 
 1. varying the time for one fixed finite speed set gives a full interval;
-2. varying the speed set and then optimizing can give a discrete spectrum;
+2. varying the speed set and then optimizing can give a countable gapped
+   spectrum with an accumulation point;
 3. replacing the metric data by its order tournament destroys both facts.
 
 ## 1. A fixed finite observer preserves the generated field
@@ -94,6 +98,20 @@ M(S) is rational, and every maximizing time is rational.                 (6)
 
 The second assertion also follows from `(5)` after the first. Similarly,
 the lower endpoint in `(2)` is attained only at rational times.
+
+The rationality statement has a uniform, speed-dependent height refinement.
+Every maximizing time is a vertex of the finite piecewise-affine lower
+envelope. Such a vertex is either a tent wall `t=k/(2v)` or an intersection
+of two nonparallel active branches,
+
+```text
+t=(epsilon_i k_i-epsilon_j k_j)
+  /(epsilon_i v_i-epsilon_j v_j).                         (6a)
+```
+
+If `V=max(S)`, reduction of either expression gives a denominator at most
+`2V`. Thus every finite observer has a maximizing witness `r/q` with
+`q<=2V`; this is not a speed-independent denominator shell.
 
 ## 2. Exact typed images and density
 
@@ -207,6 +225,11 @@ gap
 boxed: (0,1/15).                                           (18)
 ```
 
+The set in `(17)` is **not discrete**: along odd `q -> infinity`, its second
+family converges to the included point `1/6`. This is its unique accumulation
+point. The exact surviving statement is that the spectrum is countable,
+closed, and gapped at zero.
+
 Thus the fixed-observer density theorem `(8)--(9)` does **not** imply that
 optimized margins are dense when the speed set varies. The optimization
 quantifier is the destroyed coordinate.
@@ -228,8 +251,23 @@ strictly increasing sequence with
 sum_(n>=1) 1/a_n=x.                                        (20)
 ```
 
+There is an exact graph-zeta expression for the loss. After increasing-order
+labelling, the adjacency matrix `A` of every finite prefix is strictly upper
+triangular and hence nilpotent. Therefore
+
+```text
+det(I-uA)=1,                 zeta_A(u)=1.                  (20a)
+```
+
+This is the `c_3=0` infinite-depth branch of THM-4093, and diagonal
+vertex-ratio gauges cannot restore a cycle after the order quotient has
+killed all cycles. THM-4093 is the positive contrast: an intrinsic cyclic
+tournament retains determinant-zeta data, while the total-order tournament
+does not.
+
 Apply the greedy Egyptian-fraction algorithm to `x`. If the current remainder
-is `x_j>0` and `m_j=ceil(1/x_j)`, then
+is `x_j>0` and `m_j=ceil(1/x_j)`, then `m_j=1` exactly in the terminating
+case `x_j=1`. When `m_j>=2`,
 
 ```text
 1/m_j<=x_j<1/(m_j-1).                                     (21)
@@ -242,7 +280,7 @@ x_(j+1)<1/[m_j(m_j-1)],
 m_(j+1)>m_j(m_j-1)>=m_j.                                  (22)
 ```
 
-The `m_j=1` case is `x=1` and terminates immediately. Otherwise a
+The `m_j=1` case terminates immediately. Otherwise a
 nonterminating denominator sequence tends to infinity, so
 `x_j<1/(m_j-1)->0` and its unit fractions sum to `x`. Thus the denominators
 are strictly increasing unless the expansion terminates. If the last term is
