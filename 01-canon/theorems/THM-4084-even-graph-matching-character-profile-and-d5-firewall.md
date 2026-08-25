@@ -6,7 +6,8 @@ status: >
   every signed switching class represented by a negative matching has an
   exact all-cycle negative-count profile. In the cumulative D=5 layer, every
   matching of size at least two lies strictly above the single-edge value,
-  as does every nonsingle class of frustration index at most three. Thus any
+  as does every nontrivial nonsingle class of frustration index at most three.
+  Thus any
   counterexample or additional equality class for the still-open D=5
   single-edge conjecture has no balanced vertex deletion and has frustration
   index at least four. The full D=5 conjecture remains OPEN beyond the
@@ -36,7 +37,7 @@ script_sha256: 50b502bd2b61d5db7d2978306faf60ed13e620e94ab9abc68438dc5b1ca21631
 output_sha256: 27cb6ceb6ed202ce411ae49e779074cedeba7fc89649f92b7ef31ae32fdb502a
 independent_audit_script: 04-computation/even_graph_matching_character_d5_firewall_thm4084_independent_audit.py
 independent_audit_output: 05-knowledge/results/even_graph_matching_character_d5_firewall_thm4084_independent_audit.out
-independent_audit_script_sha256: 8893601232812ccaad2418b52d47326081b610828907021b7e84dd603ac46195
+independent_audit_script_sha256: 68e604413d557f1062656d6df4436bcb0456b848b41d1b0218fae10442d2c21e
 independent_audit_output_sha256: 7a44734295f78aa5387394a72f36f97c68f59e4a383fd4087155b7a855a693fc
 hash_basis: raw LF bytes
 ---
@@ -48,7 +49,8 @@ dual of THM-4078 turns a spectral-gap question into the minimization of odd
 cycle counts. A matching of negative edges is unusually tractable because a
 cycle can meet it only in disjoint prescribed edges. This gives an exact
 profile in every cycle layer and, at `D=5`, removes the whole matching family
-and every class of frustration index at most three from the open search.
+and every nontrivial nonsingle class of frustration index at most three from
+the open search.
 
 Throughout, `n>=6`, `1<=r<=floor(n/2)`, and `M_r` is a matching of `r`
 negative edges in the signed complete graph `K_n`. Let
@@ -274,13 +276,13 @@ gap in every row:
 ```
 
 A class of frustration index three has some three-edge minimum
-representative, so `(22)` excludes it. Together with the trivial balanced
-class, the single-edge equality class, and the two-edge classification, this
-proves
+representative, so `(22)` excludes it. Together with the separate trivial
+balanced class, the single-edge equality class, and the two-edge
+classification, this proves
 
 ```text
 boxed:
-if S_5(H)<=A_n and [H] is not a single-edge class,
+if S_5(H)<=A_n and [H] is neither balanced nor a single-edge class,
 then frustration([H])>=4.                                   (23)
 ```
 
@@ -313,9 +315,9 @@ lambda_(<=6)(H)=Q_(n,5)-2S_5(H),
 Laplacian eigenvalue=2S_5(H).                                (26)
 ```
 
-Hence no matching orbit other than `r=1`, and no other class of frustration
-at most three, can lower or enlarge the equality space of the candidate D5
-spectral gap `2A_n`.
+Hence no matching orbit other than `r=1`, and no other nontrivial class of
+frustration at most three, can lower or enlarge the equality space of the
+candidate D5 spectral gap `2A_n`.
 
 The independent exact audit exhausts the frustration index of all
 `2^C(n-1,2)` labelled switching classes for `n=6,7`, and evaluates every one

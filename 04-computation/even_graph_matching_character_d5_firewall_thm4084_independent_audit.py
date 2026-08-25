@@ -4,7 +4,7 @@
 Unlike the primary audit, this path never materializes a list of cycles.  It
 counts negative Hamilton cycles on every vertex subset by a parity-refined
 Held--Karp recurrence, exhausts every labelled switching class for n=6,7,
-computes frustration by all cuts, and classifies the complete index-at-most-two
+computes frustration by all cuts, and classifies the complete index-at-most-three
 universe.  It separately checks every matching layer through n=10.
 """
 

@@ -9,6 +9,26 @@ Format per entry:
 - Why it was wrong
 - The correct framing
 
+## MISTAKE-496 (2026-08-25, THM-4084 D5 firewall) -- the balanced character was omitted from a nontriviality qualifier
+
+- **What failed:** the first promoted form of THM-4084 boxed the implication
+  `S_5(H)<=A_n` and `[H]` not single-edge `=> frustration([H])>=4`. The proof
+  had classified the balanced class separately, but the displayed premise did
+  not exclude it.
+- **Minimal witness / first failed implication:** the empty negative-edge set
+  is balanced, has `S_5=0<=A_n`, is not a single-edge class, and has
+  frustration index zero.
+- **Repair / strongest survivor:** the premise now requires `[H]` to be
+  neither balanced nor single-edge (equivalently, a nontrivial nonsingle
+  character). Every algebraic profile, three-edge shape inequality, exact
+  audit, and the resulting firewall for possible D5 counterexamples remains
+  unchanged: such a class has no balanced deletion and frustration at least
+  four.
+- **Reusable rule:** whenever an extremum is a spectral-gap minimum, carry
+  the exclusion of the trivial character into every downstream implication;
+  a phrase such as "not the proposed equality class" does not itself exclude
+  the zero eigenvalue.
+
 ## MISTAKE-495 (2026-08-25, even-graph metagraph) -- a canonical vertex quotient was mistaken for basis-independent adjacency
 
 - **What failed:** the even-graph metagraph was described as a canonical
