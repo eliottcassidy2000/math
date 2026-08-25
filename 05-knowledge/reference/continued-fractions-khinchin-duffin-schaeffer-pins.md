@@ -34,3 +34,29 @@ flatness.  It supplies no irrationality result for Khinchin's constant.
   equality between formal multiplicity mass and finite union measure, any
   irrationality statement about a named constant, or LRC(14).  Conversely,
   THM-4056 does not reproduce the paper's infinite correlation estimate.
+
+## Quantitative Duffin--Schaeffer mass
+
+Koukoulopoulos--Maynard--Yang,
+[arXiv:2404.14628](https://arxiv.org/abs/2404.14628), use the finite mass
+`Psi(Q)=sum_(q<=Q) 2phi(q)psi(q)/q` in their quantitative counting theorem.
+THM-4056 recompiles this first moment exactly, but that equality alone gives
+neither interval independence nor a named-point membership statement.
+
+## Irrationality exponent
+
+Sondow,
+[*Irrationality Measures, Irrationality Bases, and a Theorem of Jarnik*](https://arxiv.org/abs/math/0406300),
+records the continued-fraction formula
+`mu(x)=2+limsup log(a_(n+1))/log(q_n)`. THM-4056 uses it to prove that an
+existing finite infinite digit-geometric-mean limit forces `mu(x)=2`.
+Neither one finite digit mean nor an almost-everywhere metric theorem names a
+specific point.
+
+## Reciprocal normalization
+
+THM-4057 separates two coefficient conventions. Deleting only a leading zero
+from the full projective Euclidean word is reciprocal-invariant. The standard
+finite Khinchin word deletes the integer part on both sides and need not be:
+`3/5=[0;1,1,2]` versus `5/3=[1;1,2]` is the exact hostile. Infinite asymptotic
+means survive a finite prefix change; finite words and products need not.

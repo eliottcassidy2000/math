@@ -31,37 +31,52 @@
   independent script/output:
   `9cf33bbd5d022893a2dc31bec837ad708d1d9ef501015fb38da54feaea7a94d2` /
   `12037bf83bf0754677a6f80d1b89830e2e3d5cd9acb66f3201a50e623fbce939`.
-- `calkin_wilf_berggren_ordinal_thm4057.py` and independent
-  branch/fibre audit -> matching `.out`s [THM-4057 PROVED + VERIFIED-EXACT +
-  INDEPENDENTLY HOSTILE-AUDITED]. Tournaments on the positive naturals are
-  exactly scale-decorated reciprocal selectors; coprime rational arcs alone
-  are not tournaments. Stern--Brocot reflection is reciprocal edge reversal.
-  In the distinct Calkin--Wilf heap, primitive Pythagorean parameters are
-  exactly `k=3,5 mod 6`, with Berggren maps
-  `A=2k-1,B=4k*+3,C=4k+3` and exact radix inverses. Branch closure counts are
-  `(3^(d+1)+(-1)^d)/2` primitive and the complementary scale-two count; the
-  unique unordered-Pythagorean branch collision is the root
-  `(1/2,2/3,1/3)`. Primary script/output SHA-256:
-  `0ad8497d50ab4ec59568489b6dc8c8f4ed9243b64c36e6608ab369137e99cfa2` /
+- `stern_brocot_depth_packet_character_thm4059.py`, secondary
+  `stern_depth_packet_divisor_star_thm4059.py`, and independent hostile audit
+  -> matching `.out`s [THM-4059 PROVED + VERIFIED-EXACT + INDEPENDENTLY
+  HOSTILE-AUDITED].  Full Stern depth is invariant under modular inversion;
+  its exact-denominator sign packets satisfy the binary-Farey functional
+  equation and recurrence, the complete `S(q)=phi(q) mod 4` law for `q>2`,
+  arbitrary weighted/twisted clock identities, Berggren row/column formulas,
+  and exact Legendre/Paley pockets at `q=5,13`.  The independent paths also
+  verify `D(p/q)=pq+pr+rh mod 2` for `pr-qh=1`, the dyadic inverse-lift bit,
+  equal signed odd/even half-shells, and the Möbius-invertible lower-star law
+  `A=1*S`, `B=A-1`.  The weight is generally neither a unit-group character
+  nor a multiplicative arithmetic function.  Primary SHA-256 script/output:
+  `4279d31e869764ea80febfdfaad90689cb5e679847929c04cb7ed5768efd56f4` /
+  `313f79dc4f21b69a62847796211a55230264d5d4ccf7abb8796c6ac702fdd3d8`;
+  secondary: `875ab2ea14eca894b34d754d106b74ad963057926cb20833515442e675cfa275` /
+  `a0c39269d766aad2aaa522b86c4ae366d8f12370bcbb5fc3b6a05886333d86be`;
+  independent: `c792be30b3bfa5efc0d0d1b821ad99cb09adddef080aa758bab53209fafd72bd` /
+  `65c39db3cda9994cc492246984d9ab86ea3682b19e45339dac684995dc775219`.
+
+- `stern_brocot_rational_edge_tournament_thm4057.py`, secondary
+  `calkin_wilf_berggren_ordinal_thm4057.py`, and independent branch/fibre
+  audit -> matching `.out`s [THM-4057 PROVED + VERIFIED-EXACT +
+  INDEPENDENTLY HOSTILE-AUDITED]. The primary proves the Stern depth cocycle,
+  depth-gauged tournament, and Pell/Fibonacci cycle rays. The secondary keeps
+  the distinct Calkin--Wilf heap, `k=3,5 mod 6` Pythagorean section, Berggren
+  radix maps, scale selectors, branch gcds, and unique root shadow collision.
+  Primary SHA-256 script/output: `98406973d1a2c60dfe30b498d36c8cd30e35b8088e851d612b1db28dde9e1d27` /
+  `13102a7220e5e02adfc4eae5dc920ea7acb63ba284216c004e0b3fe9e4473692`;
+  secondary: `0ad8497d50ab4ec59568489b6dc8c8f4ed9243b64c36e6608ab369137e99cfa2` /
   `00f13ea27cfb7ec1bcc44dd1375623e4f8803de642b19679f64419fa3d354e2b`;
-  independent script/output:
-  `a65dc37d2fd4a2a592ee3fcd0095ec5ba8ff0a42a46e88fd32bd169baee7fa82` /
+  independent: `a65dc37d2fd4a2a592ee3fcd0095ec5ba8ff0a42a46e88fd32bd169baee7fa82` /
   `b6eef90db4c150e3570454c1236145a6de9f5ef533aef2e282beb59d64c3a335`.
 
-- `divisor_phase_duffin_schaeffer_thm4056.py` and independent sieve/clock
+- `divisor_phase_duffin_schaeffer_clock_thm4056.py`, secondary
+  `divisor_phase_duffin_schaeffer_thm4056.py`, and independent sieve/clock
   audit -> matching `.out`s [THM-4056 PROVED elementary reductions + CITED
-  metric inputs + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED]. Natural
-  edges have primitive fibre `floor(N/q)` and compile into an invertible lift
-  divisor clock; unit-residue phases give a distinct radical-class clock.
-  Both complete-period means equal the finite Duffin--Schaeffer raw mass, but
-  `q=2` versus `q=4` proves phase/mean equality loses prime-power depth. A
-  golden-ratio hostile blocks pointwise use of full measure; an infinite
-  finite digit-mean limit forces irrationality exponent two. The trace and
-  synchronized-form gates do not settle `e+pi`. Primary script/output SHA-256:
-  `9b9f234a2f9b49b4c254063d04a86d37324906c00c3c7789b6603ba0c7fe66a9` /
+  metric inputs + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED]. The primary
+  is the lossless exact-denominator cyclic compiler; the secondary separates
+  the radical-class phase and divisor-invertible scale-lift clocks, proves
+  their common Duffin--Schaeffer mean and pointwise firewalls, and records the
+  Khinchin/exponent and `e+pi` proof gates. Primary SHA-256 script/output:
+  `a15fb134839f84b5e1a4f07131f893af790adcc2c6b8189780c851a9e90d77e9` /
+  `bce0b8ccc22db995a0d96560aa66c7707b581b45e419a02589920a4249b28947`;
+  secondary: `9b9f234a2f9b49b4c254063d04a86d37324906c00c3c7789b6603ba0c7fe66a9` /
   `fa1c2c019c5c8e31d0496a2f6a0229885305c113dd9fbddac772a2fe1a09f601`;
-  independent script/output:
-  `efb303a62ed272111b23f56c61befc6e5ba940eae9bc6fc5fe0090ed09a85cd4` /
+  independent: `efb303a62ed272111b23f56c61befc6e5ba940eae9bc6fc5fe0090ed09a85cd4` /
   `444a040cb2f9679043c2c30d058d5a200d55cc3ae59d5a6fc1bd6e9871d33ed1`.
 
 - `sixty_dyadic_response_fibre_thm4055.py` and independent CRT/spatial audit

@@ -1,0 +1,11 @@
+status=PROVED identities with FINITE-EXACT audit
+coprime_pairs_checked=298035;box=700x700
+packet_denominators_checked=2..3000
+divisor_stars_checked=2..3000
+parity=D(p/q)=p*q+p*r+r*h mod 2; p*r-q*h=1
+odd_q_packet=sum_a (-1)^(a+a_inverse)
+even_q_packet=-sum_a (-1)^((a*a_inverse-1)/q)
+star(n)=sum_(d|n,d>1) packet(d)
+packet_values_q2_to_q40=(-1, 2, -2, 0, -2, 6, 0, -2, -4, 2, -4, 0, 2, 8, -4, -4, 2, 10, 0, 4, -10, -2, 0, -8, -4, 2, -4, -8, 0, 22, 4, -4, 0, 0, -4, 8, -2, 8, -8)
+hostiles=endpoint_parity:(2/3,2/5);even_inverse_parity:(1/8,3/8);U9_noncharacter:2*2=4;nonmultiplicative:S10!=S2*S5
+

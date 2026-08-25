@@ -195,6 +195,7 @@ print()
 # 2. Packet sums, binary Farey recurrence, and mod-four classification.
 packet_bound = 5000
 packet_sum = [0] * (packet_bound + 1)
+packet_sum[1] = 1  # Declared cyclic zero-phase weight; not D(0/1).
 packet_units = 0
 for q in range(2, packet_bound + 1):
     total = 0
@@ -215,7 +216,7 @@ def packet_value(q: int) -> int:
         if gcd(a, q) == 1
     )
 
-check(packet_sum[1] == 0, "S(1) bookkeeping boundary")
+check(packet_sum[1] == 1, "S(1) declared cyclic boundary")
 check(packet_sum[2] == -1, "S(2) boundary")
 recurrence_terms = 0
 for q in range(3, packet_bound + 1):
@@ -258,7 +259,7 @@ for q in range(2, star_bound + 1):
     check(recovered == packet_sum[q], f"Mobius recovery q={q}")
     check((q - 1 + direct) % 2 == 0, f"star indegree parity q={q}")
 
-print("B(q)=sum_{d|q}S(d), S(q)=sum_{d|q}mu(q/d)B(d): PASS")
+print("B(q)=sum_{d|q,d>1}S(d); S(q)=sum_{d|q}mu(q/d)B(d) for q>1: PASS")
 print("B(2)..B(20):", star_sum[2:21])
 print()
 

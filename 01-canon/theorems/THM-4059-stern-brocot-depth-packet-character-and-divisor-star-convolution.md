@@ -2,7 +2,7 @@
 id: THM-4059
 title: "Stern--Brocot depth packet character and divisor-star convolution"
 status: >
-  PROVED + VERIFIED-EXACT + INDEPENDENTLY AUDITED.  Modular inversion inside every unit packet
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED. Modular inversion inside every unit packet
   preserves full Stern--Brocot depth and admits an explicit parity formula
   from the mod-two Farey-flank hexagon.  The depth-character packet sums
   satisfy an exact binary-Farey functional equation and recurrence, a complete
@@ -15,8 +15,8 @@ status: >
   classification of character packets.
 source: codex-khinchin-ds-rational-tournament-20260824
 audit: >
-  Two independent hostile referees returned promotion verdicts after checking
-  every proof boundary and replaying normal/optimized modes.  The companion
+  Independent hostile referees returned promotion verdicts after checking
+  every proof boundary and replaying three normal/optimized companions. The primary
   checks canonical Farey flanks, full-depth modular inversion,
   and the inverse parity law through q=1200; all 7,600,457 unit pairs through
   q=5000; an independent binary-Farey recurrence and the mod-four law; direct
@@ -31,15 +31,31 @@ related:
   - THM-873-ramanujan-fourier-expansion-of-interval-core-good-sets
   - THM-2632-farey-v4-theta-channel-and-hurwitz-crt-parity-sidecar
   - THM-3357-berggren-three-branch-walsh-level-collapse-and-parent-circuit
+  - THM-3509-reduced-fraction-harmonic-k4-face-and-fibonacci-unit-cassini-ray
+  - THM-3756-odd-square-ordinal-berggren-affine-descent
 script: 04-computation/stern_brocot_depth_packet_character_thm4059.py
 output: 05-knowledge/results/stern_brocot_depth_packet_character_thm4059.out
-script_sha256: 13a019ddd06c3b19a340e8514d501e6da3e8980578646802009817a14081fd5a
-output_sha256: b40fc666c96146aed5c3d41bed7b1d94d47b2bbbd1575eb30865cbd26e0d5060
+script_sha256: 4279d31e869764ea80febfdfaad90689cb5e679847929c04cb7ed5768efd56f4
+output_sha256: 313f79dc4f21b69a62847796211a55230264d5d4ccf7abb8796c6ac702fdd3d8
+secondary_script: 04-computation/stern_depth_packet_divisor_star_thm4059.py
+secondary_output: 05-knowledge/results/stern_depth_packet_divisor_star_thm4059.out
+secondary_script_sha256: 875ab2ea14eca894b34d754d106b74ad963057926cb20833515442e675cfa275
+secondary_output_sha256: a0c39269d766aad2aaa522b86c4ae366d8f12370bcbb5fc3b6a05886333d86be
+independent_audit_script: 04-computation/stern_depth_packet_divisor_star_thm4059_independent_audit.py
+independent_audit_output: 05-knowledge/results/stern_depth_packet_divisor_star_thm4059_independent_audit.out
+independent_audit_script_sha256: c792be30b3bfa5efc0d0d1b821ad99cb09adddef080aa758bab53209fafd72bd
+independent_audit_output_sha256: 65c39db3cda9994cc492246984d9ab86ea3682b19e45339dac684995dc775219
+hash_basis: raw bytes
 ---
 
 # THM-4059 -- the Stern--Brocot checkerboard across denominator packets
 
-**PROVED + VERIFIED-EXACT + INDEPENDENTLY AUDITED.**
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.**
+
+**Terminology warning.** Here “depth character” means the `{+1,-1}`-valued
+Stern checkerboard weight.  It is generally not a group character of `U_q`;
+the exact character pockets and the first obstruction are classified only in
+the finite scope stated in Section 6.
 
 THM-4056 grades reduced rationals by exact denominator and THM-4057 grades
 them by Stern--Brocot depth.  This theorem computes their first exact
@@ -131,7 +147,7 @@ Each left or right Stern--Brocot descent right-multiplies the flank by a
 column-addition shear.  Modulo two, the two shears are the adjacent
 transpositions of the three nonzero vectors of `F_2^2`.  Therefore the sign
 of the resulting permutation relative to `J` is exactly `(-1)^D`.  This is
-the bipartite character of THM-2632's `S_3=C_6` Farey-flank hexagon, not one
+the bipartite character of THM-2632's Cayley-graph `C_6` on `S_3`, not one
 of its three theta channels.
 
 The six residue cases finish the proof.  When `q` is odd,
@@ -153,17 +169,43 @@ odd `k`, respectively, the two flanks are
 
 which is `(-1)^(k+1)`.  This includes the boundary `q=2`.
 
-## 2. Packet sums and a binary-Farey recurrence
-
-Define the exact-denominator depth character
+The same flank proof gives a global positive-rational form. For arbitrary
+coprime `p,q>0` with `q>1`, let `r` be the least positive inverse of `p`
+modulo `q` and write `pr-qh=1`. Then
 
 ```text
-S(1)=0                         (bookkeeping only),
+D(p/q) ≡ pq+pr+rh (mod 2).                              (10a)
+```
+
+Indeed the parent flank is `M=[h,p-h; r,q-r]`. Set
+`G=JM=[r,q-r; h,p-h]`. The sign of `[a,b;c,d] in GL_2(F_2)` is
+`(-1)^(ac+bc+bd)`; substitution gives `(10a)`. For `q=1`, separately,
+`D(p/1)=p-1`. Formula `(7)` is exactly the specialization `1<=p<q`.
+
+When `q` is even, the carry `k` is also the inverse-lift sheet bit:
+
+```text
+a^(-1) mod 2q = u       if k is even,
+                  u+q   if k is odd.                    (10b)
+```
+
+Thus the sign is negative on the stationary inverse lift and positive on the
+switched lift. This connects the checkerboard to the dyadic clock extension
+without making it multiplicative.
+
+## 2. Packet sums and a binary-Farey recurrence
+
+Define the exact-denominator depth weight, using THM-4056's total cyclic
+compiler convention,
+
+```text
+epsilon_1(0)=S(1)=1            (declared bookkeeping weight),
 S(q)=sum_(a in U_q) epsilon(a,q),       q>1.             (11)
 ```
 
-There is no character at the zero/denominator-one phase; `S(1)=0` only makes
-the divisor formulas uniform.  In particular
+This does not assign a Stern depth to `0/1`. Every exact-denominator `S`-
+packet sum below excludes the bookkeeping `q=1` term; in particular `(15)`
+starts at `q=2`. Also,
 
 ```text
 S(2)=-1.                                                    (12)
@@ -247,9 +289,15 @@ Thus `B(q)` is incoming-from-smaller minus outgoing-to-smaller.  Reducing
 groups these lower vertices into one copy of every `U_d`, `d|q`, so
 
 ```text
-B(q)=sum_(d|q) S(d),
-S(q)=sum_(d|q) mu(q/d)B(d).                             (19)
+A(q)=sum_(d|q) S(d),
+B(q)=sum_(d|q,d>1) S(d)=A(q)-1,
+S(q)=sum_(d|q) mu(q/d)A(d),                             (19)
+S(q)=sum_(d|q) mu(q/d)B(d),       q>1.                 (19a)
 ```
+
+Here `A` is the total cyclic compiler including its declared zero phase;
+`B(1)=0` and `B` is the positive lower star. Equation `(19a)` is the Möbius
+inverse of the zero-phase-excluded divisor sum, not a second value for `S(1)`.
 
 Consequently the indegree and outdegree of the maximal vertex in the
 tournament on `{1,...,q}` are
@@ -276,6 +324,17 @@ S(2)S(5)=0 != -4=S(10),
 S(3)S(5)=0 != 8=S(15).                                 (22)
 ```
 
+Since `|S(q)|<=phi(q)<=q`, absolute convergence for `Re(s)>2` gives
+
+```text
+sum_(N>=1) B(N)/N^s = zeta(s) sum_(q>=2) S(q)/q^s.      (22a)
+```
+
+This is a divisor-convolution factorization, not an Euler product: `S` is
+nonmultiplicative. Also, `(18)--(20)` describe the lower star, equivalently
+the full star only when `q` is the apex of the initial tournament. They do
+not give the degree of vertex `q` inside a larger finite tournament.
+
 ## 4. Weighted LCM clocks and twisted Ramanujan packets
 
 For `x!=0 in C_N`, reduce
@@ -289,6 +348,12 @@ and put
 ```text
 chi_N(x)=epsilon(a,d_N(x));             chi_N(0)=0.     (23)
 ```
+
+Here `chi_N` is the positive-packet character, extended by zero only for
+notation on all of `C_N`.  Separately, the total compiler character
+`tilde chi_N=chi_N+1_{0}` assigns the declared bookkeeping weight `+1` at
+zero, without assigning a Stern depth to `0/1`.  Thus the unweighted sum of
+`chi_N` is `B(N)`, while the unweighted sum of `tilde chi_N` is `A(N)`.
 
 For every commutative-ring-valued denominator weight `W`, THM-4056's labelled
 compiler gives
@@ -328,8 +393,11 @@ Taking
 W(d)=2psi(d)/d                                          (28)
 ```
 
-gives an exact **signed** Duffin--Schaeffer layer sum.  It is Fourier/
-multiplicity data, never a union measure or an infinite correlation estimate.
+gives the exact formal **signed two-radius/multiplicity mass** of the
+divisor-complete Duffin--Schaeffer block on `d|N`, `d>1`; each summand is one
+exact-denominator layer. It is Fourier/multiplicity data, not a signed
+Lebesgue union measure once arcs can saturate, and never an infinite
+correlation estimate.
 For the prefix `d<=Q` in `C_(L_Q)`, the exact-denominator filter remains
 mandatory.
 
@@ -388,12 +456,14 @@ Together with the unsigned THM-4056 count, the master-clock rows are
 ## 6. Exact Paley pockets and a Khinchin hostile
 
 The numerator function `a->epsilon(a,q)` is usually not a group character.
-For example,
+Even denominators already fail at the identity. The first odd failure is
 
 ```text
-epsilon(2,11)=+1,
-epsilon(4,11)=-1 != epsilon(2,11)^2.                    (34)
+epsilon(2,9)=epsilon(4,9)=-1 != epsilon(2,9)^2.         (34)
 ```
+
+The denominator-eleven row supplies another hostile:
+`epsilon(2,11)=+1` but `epsilon(4,11)=-1`.
 
 There are nevertheless exact small pockets:
 
@@ -446,8 +516,9 @@ about irrationality of Khinchin's constant.
 | packet signs | scalar `S(q)` | signed imbalance | numerator labels and distribution |
 | labelled lower star at `q` | reduced packets indexed by `d|q` | vertex, exact denominator, and sign | none |
 | packet totals `{S(d):d|q}` | scalar `B(q)` | total lower-star imbalance `(19)` | individual divisor contributions; inversion needs the family `{B(d):d|q}` |
-| packet family | `C_N` | every labelled sign and twisted Fourier mode | none before summing; zero phase has no sign |
-| signed DS layers | `(24),(27)` | finite multiplicity/Fourier data | union geometry and infinite correlations |
+| positive packet family | `C_N\{0}` | every positive labelled sign and twisted Fourier mode | zero is excluded |
+| total compiler extension | `C_N` via `tilde chi_N` | the positive packet family plus its `W(1)`/`A(N)` bookkeeping term | zero has declared weight `+1`, but no Stern depth |
+| signed DS layers | `(24),(27)` | formal two-radius multiplicity/Fourier data | union geometry, saturation, and infinite correlations |
 | Berggren tree | ternary rows / height columns | A-Walsh sign and exact column mass | branch order if only row/column totals retained |
 | digit word | length and product | finite Khinchin-type scalar | checkerboard sign by `(37)--(38)` |
 
@@ -462,9 +533,14 @@ Run
 ```bash
 python3 -B 04-computation/stern_brocot_depth_packet_character_thm4059.py
 python3 -B -O 04-computation/stern_brocot_depth_packet_character_thm4059.py
+python3 -B 04-computation/stern_depth_packet_divisor_star_thm4059.py
+python3 -B -O 04-computation/stern_depth_packet_divisor_star_thm4059.py
+python3 -B 04-computation/stern_depth_packet_divisor_star_thm4059_independent_audit.py
+python3 -B -O 04-computation/stern_depth_packet_divisor_star_thm4059_independent_audit.py
 ```
 
-The transcripts are byte-identical.  The exact companion includes:
+Each normal/optimized transcript pair is byte-identical.  The primary exact
+companion includes:
 
 - `437,785` primitive flank cases through denominator `1200`;
 - all `7,600,457` unit pairs through denominator `5000`, with an independently
@@ -475,6 +551,12 @@ The transcripts are byte-identical.  The exact companion includes:
   `1000`, compared as a set with the generated tree;
 - nonmultiplicativity, noncharacter, q=1/q=2, prefix, and digit-product
   hostile controls.
+
+The secondary audit independently checks 298,035 arbitrary coprime positive
+pairs and every packet/lower star through 3000. The third path checks
+1,216,587 modular inverses through denominator 2000, compiler/Möbius recovery
+through 1000, the mod-four and half-shell laws, degree directions, and the
+minimal q=9 and `(2,5,10)` hostiles.
 
 The functional equation, inverse-depth theorem, mod-four law, divisor
 convolution, clock transform, and all-height Berggren row/column formulas are

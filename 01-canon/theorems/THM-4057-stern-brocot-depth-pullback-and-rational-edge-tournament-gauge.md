@@ -451,14 +451,17 @@ The exact connections now separate cleanly.
 
 ### Khinchin
 
-Reciprocal inserts or removes only the leading continued-fraction digit/zero.
-The positive digit word is unchanged, and any asymptotic geometric mean is
-unchanged by one finite insertion.  Khinchin's almost-everywhere geometric
-mean is therefore reciprocal-even.  So are depth `(8)` and finite products
-of all positive digits.  None can orient an edge without an odd sidecar such
-as `sgn(b-a)` in `(27)`.  MISTAKE-231 separately forbids treating a finite
-digit mean as a universal entropy.  The irrationality of Khinchin's constant
-itself remains open; this theorem supplies no approximation sequence for it.
+After deleting only a leading zero, the full projective Euclidean
+coefficient word is reciprocal-invariant. The standard finite Khinchin word
+instead deletes the integer part on both sides and can lose or gain one
+positive digit; `3/5=[0;1,1,2]` versus `5/3=[1;1,2]` is the exact hostile.
+Consequently an infinite asymptotic geometric mean is unchanged by the finite
+prefix modification, but a finite positive-digit word or product need not be.
+Stern--Brocot depth `(8)` is reciprocal-even. Neither it nor an asymptotic
+digit mean can orient an edge without an odd sidecar such as `sgn(b-a)` in
+`(27)`. MISTAKE-231 separately forbids treating a finite digit mean as a
+universal entropy. The irrationality of Khinchin's constant itself remains
+open; this theorem supplies no approximation sequence for it.
 
 ### Duffin--Schaeffer
 
@@ -589,20 +592,20 @@ would erase a load-bearing failure of completeness or antisymmetry.
 Write every unordered natural pair uniquely as
 
 ```text
-{a,b}=g{p,q},       g=gcd(a,b),       gcd(p,q)=1,       p<q. (1)
+{a,b}=g{p,q},       g=gcd(a,b),       gcd(p,q)=1,       p<q. (CW1)
 ```
 
 For a tournament `T` on `N_(>0)`, define
 
 ```text
 epsilon_T(p,q;g)=0  if gp->gq,
-epsilon_T(p,q;g)=1  if gq->gp.                            (2)
+epsilon_T(p,q;g)=1  if gq->gp.                            (CW2)
 ```
 
 Then
 
 ```text
-T  <->  arbitrary bit functions epsilon(p,q;g)             (3)
+T  <->  arbitrary bit functions epsilon(p,q;g)             (CW3)
 ```
 
 is a bijection. Tournament converse toggles every bit, and the selected
@@ -612,17 +615,17 @@ A direction on the reduced rational independent of representative scale is
 well-defined if and only if
 
 ```text
-epsilon(p,q;g) is independent of g.                         (4)
+epsilon(p,q;g) is independent of g.                         (CW4)
 ```
 
-Without (4), two multiples of one rational ray can select opposite reciprocal
+Without (CW4), two multiples of one rational ray can select opposite reciprocal
 nodes. Thus an arbitrary tournament is not a bit function on reduced
 rationals alone; it is a **scale-decorated** selector.
 
 If a directed edge `u->v` is labelled `u/v`, then every directed path has
 
 ```text
-product_(i=0)^(r-1) v_i/v_(i+1)=v_0/v_r.                  (5)
+product_(i=0)^(r-1) v_i/v_(i+1)=v_0/v_r.                  (CW5)
 ```
 
 Every directed-cycle product is therefore one. Rational magnitudes form an
@@ -651,7 +654,7 @@ On `[4]` the upward coprime graph misses only `{2,4}`. Completing it as
 while `4->2` gives a source over a directed triangle with
 
 ```text
-(H,c_3)=(3,1).                                            (6)
+(H,c_3)=(3,1).                                            (CW6)
 ```
 
 The same coprime-edge data therefore admits different Hamiltonian-path and
@@ -666,26 +669,26 @@ boundary columns. Put
 ```text
 J  =[[0,1],[1,0]],
 U_L=[[1,1],[0,1]],
-U_R=[[1,0],[1,1]].                                        (7)
+U_R=[[1,0],[1,1]].                                        (CW7)
 ```
 
 Then
 
 ```text
-P_empty=J,       P_(wL)=P_w U_L,       P_(wR)=P_w U_R.     (8)
+P_empty=J,       P_(wL)=P_w U_L,       P_(wR)=P_w U_R.     (CW8)
 ```
 
 Since `J U_L J=U_R`, induction gives
 
 ```text
-P_(bar w)=J P_w J,                                        (9)
+P_(bar w)=J P_w J,                                        (CW9)
 ```
 
 where `bar w` interchanges every `L` and `R`. The mediant vector is
-`P_w(1,1)^T`, so (9) swaps its coordinates:
+`P_w(1,1)^T`, so (CW9) swaps its coordinates:
 
 ```text
-p/q  ->  q/p.                                             (10)
+p/q  ->  q/p.                                             (CW10)
 ```
 
 Thus arc reversal is literally reflection across the center of the
@@ -696,10 +699,10 @@ The positive pair monoid obeys the same mirror identities
 
 ```text
 L(p,q)=(p,p+q),       R(p,q)=(p+q,q),
-S L=R S,              S R=L S,                            (11)
+S L=R S,              S R=L S,                            (CW11)
 ```
 
-with `S(p,q)=(q,p)`. Equation (11) does not identify the Stern--Brocot and
+with `S(p,q)=(q,p)`. Equation (CW11) does not identify the Stern--Brocot and
 Calkin--Wilf parent maps.
 
 ### 4. The distinct Calkin--Wilf natural ordinal
@@ -708,44 +711,44 @@ The two trees enumerate the same positive rationals, but the same mixed word
 need not name the same node:
 
 ```text
-word LR:       Stern--Brocot 2/3,       Calkin--Wilf 3/2.  (12)
+word LR:       Stern--Brocot 2/3,       Calkin--Wilf 3/2.  (CW12)
 ```
 
 Let Stern's diatomic sequence be
 
 ```text
 s(0)=0, s(1)=1,
-s(2n)=s(n),       s(2n+1)=s(n)+s(n+1).                    (13)
+s(2n)=s(n),       s(2n+1)=s(n)+s(n+1).                    (CW13)
 ```
 
 The Calkin--Wilf heap node `k>=1` is
 
 ```text
-C(k)=s(k)/s(k+1).                                         (14)
+C(k)=s(k)/s(k+1).                                         (CW14)
 ```
 
 Write the binary expansion of `k` as `1w`, with `L=0,R=1`, and put
 `ell=floor(log_2 k)`. Letterwise reciprocal reflection has the affine ordinal
 
 ```text
-k*=3*2^ell-1-k.                                           (15)
+k*=3*2^ell-1-k.                                           (CW15)
 ```
 
-Indeed, (15) complements the `ell` suffix bits and the pair recursion in
-(11) swaps `s(k),s(k+1)`.
+Indeed, (CW15) complements the `ell` suffix bits and the pair recursion in
+(CW11) swaps `s(k),s(k+1)`.
 
 For the natural-order tournament on `[N]`, every edge has the unique lossless
 label
 
 ```text
 (a,b)=g(s(k),s(k+1)),
-k>=2 even,       g s(k+1)<=N.                             (16)
+k>=2 even,       g s(k+1)<=N.                             (CW16)
 ```
 
 Thus
 
 ```text
-E(T_N) <-> {(k,g): k>=2 even, g s(k+1)<=N}.                (17)
+E(T_N) <-> {(k,g): k>=2 even, g s(k+1)<=N}.                (CW17)
 ```
 
 Forgetting `g` gives the fibre `floor(N/s(k+1))` proved in
@@ -759,24 +762,24 @@ generally share the standard finite Khinchin word, which always discards
 
 ### 5. Primitive Pythagorean parameters are `k=3,5 mod 6`
 
-Two elementary inductions from (13) give
+Two elementary inductions from (CW13) give
 
 ```text
 s(k) is even  iff  3|k,
-s(k)>s(k+1)   iff  k is odd,       k>1.                   (18)
+s(k)>s(k+1)   iff  k is odd,       k>1.                   (CW18)
 ```
 
 Adjacent Stern values are coprime. Therefore the standard primitive
 Pythagorean parameters
 
 ```text
-m>n>0,       gcd(m,n)=1,       m-n odd                    (19)
+m>n>0,       gcd(m,n)=1,       m-n odd                    (CW19)
 ```
 
 are exactly
 
 ```text
-(m,n)=(s(k),s(k+1)),       k=3 or 5 mod 6.                 (20)
+(m,n)=(s(k),s(k+1)),       k=3 or 5 mod 6.                 (CW20)
 ```
 
 The opposite-parity condition is essential: `(3,1)` is coprime but generates
@@ -787,7 +790,7 @@ For the standard Berggren parameter branches
 ```text
 A(m,n)=(2m-n,m),
 B(m,n)=(2m+n,m),
-C(m,n)=(m+2n,n),                                           (21)
+C(m,n)=(m+2n,n),                                           (CW21)
 ```
 
 the induced natural-number maps are
@@ -795,7 +798,7 @@ the induced natural-number maps are
 ```text
 A(k)=2k-1,
 B(k)=4k*+3=12*2^floor(log_2 k)-4k-1,
-C(k)=4k+3.                                                 (22)
+C(k)=4k+3.                                                 (CW22)
 ```
 
 If the Calkin--Wilf word of `k` is `w=uR`, the word laws are
@@ -803,7 +806,7 @@ If the Calkin--Wilf word of `k` is `w=uR`, the word laws are
 ```text
 A: uR -> uLR,
 B: w  -> (bar w)RR,
-C: w  -> wRR.                                              (23)
+C: w  -> wRR.                                              (CW23)
 ```
 
 The child branch is visible in the terminal binary digits:
@@ -811,15 +814,15 @@ The child branch is visible in the terminal binary digits:
 ```text
 A-image: k=1 mod 4,
 B-image: k=3 mod 8, except the root k=3,
-C-image: k=7 mod 8.                                       (24)
+C-image: k=7 mod 8.                                       (CW24)
 ```
 
-Consequently the inverse Berggren descent on the set (20) is
+Consequently the inverse Berggren descent on the set (CW20) is
 
 ```text
 k -> (k+1)/2                         if k=1 mod 4,
 k -> ((k-3)/4)*                      if k=3 mod 8 and k>3,
-k -> (k-3)/4                         if k=7 mod 8.          (25)
+k -> (k-3)/4                         if k=7 mod 8.          (CW25)
 ```
 
 This is a complete radix descent to the root `k=3`. Under THM-3756's branch
@@ -837,14 +840,14 @@ step adds two. At Berggren depth `d`, the nodes at Calkin--Wilf depth
 are therefore counted by
 
 ```text
-C(d,j)2^j,       0<=j<=d.                                 (26)
+C(d,j)2^j,       0<=j<=d.                                 (CW26)
 ```
 
-The ordinal image (20) has natural density `1/3`, Dirichlet series for
+The ordinal image (CW20) has natural density `1/3`, Dirichlet series for
 `Re(s)>1`
 
 ```text
-6^(-s)[zeta(s,1/2)+zeta(s,5/6)],                           (27)
+6^(-s)[zeta(s,1/2)+zeta(s,5/6)],                           (CW27)
 ```
 
 and, as `X->infinity`, harmonic sum
@@ -852,7 +855,7 @@ and, as `X->infinity`, harmonic sum
 ```text
 sum_(k<=X,k=3,5 mod 6)1/k
  = (1/3)log X + gamma/3 - pi*sqrt(3)/12
-   + log(2)/3 - log(3)/12 + O(1/X).                        (28)
+   + log(2)/3 - log(3)/12 + O(1/X).                         (CW28)
 ```
 
 These are properties of the Calkin--Wilf ordinal. The canonical ternary heap
@@ -861,11 +864,11 @@ class.
 
 ### 6. Odd-square coordinates and the Vieta light-cone carrier
 
-The exact bridge from (19) to THM-3756's odd roots is
+The exact bridge from (CW19) to THM-3756's odd roots is
 
 ```text
 q=m+n,       d=m-n,
-m=(q+d)/2,  n=(q-d)/2.                                    (29)
+m=(q+d)/2,  n=(q-d)/2.                                    (CW29)
 ```
 
 It bijects primitive opposite-parity `(m,n)` with coprime odd `q>d>0` and
@@ -873,20 +876,20 @@ preserves the full primitive triple:
 
 ```text
 (m^2-n^2,2mn,m^2+n^2)
- =(qd,(q^2-d^2)/2,(q^2+d^2)/2).                           (30)
+ =(qd,(q^2-d^2)/2,(q^2+d^2)/2).                           (CW30)
 ```
 
 For the oriented edge `d->q`, put
 
 ```text
-Sigma=q+d,       Pi=qd,       Delta=q-d.                   (31)
+Sigma=q+d,       Pi=qd,       Delta=q-d.                   (CW31)
 ```
 
 Reciprocal reflection fixes `Sigma,Pi`, negates `Delta`, and
 
 ```text
 Sigma^2-4Pi=Delta^2,
-A=Pi,       2B=Sigma*Delta,       4C=Sigma^2+Delta^2.      (32)
+A=Pi,       2B=Sigma*Delta,       4C=Sigma^2+Delta^2.      (CW32)
 ```
 
 Thus the generic sum/product/discriminant carrier from the `e,pi` work has an
@@ -894,35 +897,35 @@ exact Pythagorean realization: the symmetric coordinates retain the unordered
 edge, while the discriminant sign is the orientation sidecar. Reversal sends
 
 ```text
-(A,B,C)->(A,-B,C).                                        (33)
+(A,B,C)->(A,-B,C).                                        (CW33)
 ```
 
-If `g=gcd(q,d)>1` is odd, (30) has exact content `g^2`; reducing `d/q`
+If `g=gcd(q,d)>1` is odd, (CW30) has exact content `g^2`; reducing `d/q`
 collapses that scaled Berggren component. For an odd denominator `q`, exactly
 `phi(q)/2` incoming reduced numerators are odd, so THM-3756's odd/odd chart is
 precisely half of that denominator shell.
 
 ### 7. Berggren branch triangles and the minimal cycle obstruction
 
-For a parent `(m,n)` satisfying (19), join the parent edge, one child edge in
-(21), and the remaining closure edge on their three natural endpoints. The
+For a parent `(m,n)` satisfying (CW19), join the parent edge, one child edge in
+(CW21), and the remaining closure edge on their three natural endpoints. The
 closure gcd is
 
 ```text
-gcd_A=gcd_B=gcd(n,2),       gcd_C=gcd(m,2).                (34)
+gcd_A=gcd_B=gcd(n,2),       gcd_C=gcd(m,2).                (CW34)
 ```
 
 Indeed,
 
 ```text
 gcd(n,2m-n)=gcd(n,2m+n)=gcd(n,2),
-gcd(m,m+2n)=gcd(m,2n)=gcd(m,2).                            (35)
+gcd(m,m+2n)=gcd(m,2n)=gcd(m,2).                            (CW35)
 ```
 
 At Berggren depth `d`, the counts of nodes with `n` odd/even are
 
 ```text
-(3^d+(-1)^d)/2,       (3^d-(-1)^d)/2.                     (36)
+(3^d+(-1)^d)/2,       (3^d-(-1)^d)/2.                     (CW36)
 ```
 
 This follows from the two-state parity transfer: `A,B` toggle the state and
@@ -930,7 +933,7 @@ This follows from the two-state parity transfer: `A,B` toggle the state and
 
 ```text
 primitive K3       = (3^(d+1)+(-1)^d)/2,
-scale-two closure  = (3^(d+1)-(-1)^d)/2.                  (37)
+scale-two closure  = (3^(d+1)-(-1)^d)/2.                  (CW37)
 ```
 
 In the natural-order tournament each branch triangle is transitive. Flipping
@@ -947,22 +950,22 @@ are respectively
 ```text
 A: t, 1/(2-t), t/(2-t),
 B: t, 1/(2+t), t/(2+t),
-C: t, t/(1+2t), 1/(1+2t).                                (38)
+C: t, t/(1+2t), 1/(1+2t).                                (CW38)
 ```
 
 By THM-3509, two reduced fractions in `(0,1)` have the same primitive
 normalized unordered Pythagorean triple exactly when they are related by
 
 ```text
-J(x)=(1-x)/(1+x).                                         (39)
+tau(x)=(1-x)/(1+x).                                         (CW39)
 ```
 
-Solving the three pair equations in each row of (38) gives
+Solving the three pair equations in each row of (CW38) gives
 
 ```text
 A: t^2-4t+1=0,  2t-1=0,  t^2-3t+1=0;
 B: t^2+2t-1=0, t^2+t-1=0, no solution;
-C: 3t^2-1=0,   t=0,       t=0.                            (40)
+C: 3t^2-1=0,   t=0,       t=0.                            (CW40)
 ```
 
 The only rational root in `(0,1)` is `t=1/2`. Primitivity forces the root
@@ -970,18 +973,18 @@ The only rational root in `(0,1)` is `t=1/2`. Primitivity forces the root
 
 ```text
 (1/2,2/3,1/3),
-U(1/2)=U(1/3)={3,4,5},       U(2/3)={5,12,13}.             (41)
+U(1/2)=U(1/3)={3,4,5},       U(2/3)={5,12,13}.             (CW41)
 ```
 
 Reflecting only the closure `1->3` changes the natural transitive triangle
 into
 
 ```text
-1->2->3->1                                                   (42)
+1->2->3->1                                                   (CW42)
 ```
 
 while preserving every gcd and the entire unordered-Pythagorean multiset.
-Equation (41) is the unique additional shadow collision among all marked
+Equation (CW41) is the unique additional shadow collision among all marked
 branch incidences. Direction was already lost by reciprocal folding; the
 collision shows that even distinct edge identities can merge at the root.
 
@@ -990,11 +993,11 @@ collision shows that even distinct edge identities can merge at the root.
 - The natural-order completion is transitive. Nontrivial tournament structure
   enters only through explicit selector bits; coprimality is not an intrinsic
   total orientation.
-- Stern--Brocot reflection (9) and Calkin--Wilf ordinal (15) are compatible
-  reciprocal mirrors but different address systems. Formula (22) belongs to
+- Stern--Brocot reflection (CW9) and Calkin--Wilf ordinal (CW15) are compatible
+  reciprocal mirrors but different address systems. Formula (CW22) belongs to
   Calkin--Wilf.
 - The quotient to an unordered primitive triple loses reciprocal direction,
-  leg order, and raw scale. Retaining ordered legs repairs the `J` collision;
+  leg order, and raw scale. Retaining ordered legs repairs the `tau` collision;
   retaining scale repairs the infinite dilation fibre.
 - No LRC(14), planar Jacobian, `e+pi`, or Duffin--Schaeffer consequence follows
   from the shared Vieta grammar alone.
@@ -1002,7 +1005,7 @@ collision shows that even distinct edge identities can merge at the root.
   selectors on Stern--Brocot words; combine branch closure signs with
   THM-3357's parity/Walsh characters; determine distinct rather than marked
   branch-triangle overlaps; and find the smallest extension of THM-3756's
-  ordinal carrying both reciprocal direction and the `J`-parity bit.
+  ordinal carrying both reciprocal direction and the `tau`-parity bit.
 
 ### 9. Replay
 
@@ -1020,4 +1023,3 @@ through depth eleven. The independent path reconstructs word reflection,
 all `1,024` tournaments on `[5]` from scale selectors, and the branch/gcd/
 collision atlas through depth eight. Both normal/optimized pairs are
 byte-identical. **QED.**
-

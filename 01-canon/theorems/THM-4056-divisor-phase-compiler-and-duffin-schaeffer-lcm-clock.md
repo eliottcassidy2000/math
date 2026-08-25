@@ -384,10 +384,10 @@ exact cyclotomic polynomial remainders for `(11)` rather than floating-point
 Fourier comparisons.
 
 This theorem proves a finite compiler, its symmetries, transforms, and exact
-subpackets.  It proves no irrationality statement about Khinchin's constant,
-`e+pi`, or any other constant; no Duffin--Schaeffer correlation estimate; no
-union-coverage theorem; no classification of the Berggren tree; and no
-LRC(14) result.
+subpackets. It settles no open named irrationality question—in particular,
+neither Khinchin's constant nor `e+pi`; it proves no Duffin--Schaeffer
+correlation estimate, union-coverage theorem, Berggren-tree classification,
+or LRC(14) result.
 
 ## 8. Complementary natural-edge, metric, and named-point layer
 
@@ -417,7 +417,7 @@ digit scalar, are load-bearing. The valid `e,pi` carrier in the mixed-status
 is
 
 ```text
-S=e+pi,        P=e*pi,        D=e-pi,        D^2=S^2-4P.       (1)
+S=e+pi,        P=e*pi,        D=e-pi,        D^2=S^2-4P.       (E1)
 ```
 
 No two of `S,P,D` are algebraic, but their owner is not identified.
@@ -425,16 +425,16 @@ No two of `S,P,D` are algebraic, but their owner is not identified.
 Use the Koukoulopoulos--Maynard normalization
 
 ```text
-|x-a/q| <= psi(q)/q,       a in Z, gcd(a,q)=1,       q>=1,      (2)
+|x-a/q| <= psi(q)/q,       a in Z, gcd(a,q)=1,       q>=1,      (E2)
 ```
 
-and write `W'(psi)` for the subset of `R` satisfying (2) infinitely often.
+and write `W'(psi)` for the subset of `R` satisfying (E2) infinitely often.
 This is the period-one extension of the standard `[0,1]` limsup set. For the
 finite clocks below fix `Q>=2`, put
 
 ```text
 L_Q=lcm(1,2,...,Q),
-Psi_Q=sum_(q=2)^Q 2 phi(q) psi(q)/q.                         (3)
+Psi_Q=sum_(q=2)^Q 2 phi(q) psi(q)/q.                         (E3)
 ```
 
 `Psi_Q` is raw interval length per unit interval, counted with multiplicity.
@@ -451,20 +451,20 @@ E_N={(a,b):1<=a<b<=N}
 be the arcs of the natural-order transitive tournament, and reduce an arc by
 
 ```text
-rho(a,b)=(a/g,b/g),       g=gcd(a,b).                         (4)
+rho(a,b)=(a/g,b/g),       g=gcd(a,b).                         (E4)
 ```
 
 For every primitive `1<=p<q<=N`,
 
 ```text
-rho^(-1)(p,q)={(kp,kq):1<=k<=floor(N/q)}.                    (5)
+rho^(-1)(p,q)={(kp,kq):1<=k<=floor(N/q)}.                    (E5)
 ```
 
 Thus the fibre has size `floor(N/q)`. There are `phi(q)` primitive types in
 the denominator shell `q`, so exact double counting gives
 
 ```text
-C(N,2)=sum_(q=2)^N phi(q) floor(N/q).                        (6)
+C(N,2)=sum_(q=2)^N phi(q) floor(N/q).                        (E6)
 ```
 
 Taking the first difference in `N`, a primitive type `p/q` acquires one new
@@ -472,12 +472,12 @@ lift exactly when `q|N`. Equivalently, the `N-1` new arcs ending at `N` split
 as one copy of every reduced `p/q` with `q|N`, and
 
 ```text
-N-1=sum_(q|N,q>=2) phi(q).                                  (7)
+N-1=sum_(q|N,q>=2) phi(q).                                  (E7)
 ```
 
-Equations (5)--(7) concern the complete edge set before reduction. Deleting
+Equations (E5)--(E7) concern the complete edge set before reduction. Deleting
 noncoprime pairs first leaves an incomplete coprimality graph, not a
-tournament. Forgetting `k` in (5) loses scale multiplicity.
+tournament. Forgetting `k` in (E5) loses scale multiplicity.
 
 ### 3. Two exact LCM clocks with one mean
 
@@ -489,29 +489,29 @@ phase clock
 ```text
 P_Q(t)
  =2 sum_(q=2)^Q psi(q) sum_(a in U_q) 1_[t=a mod q]
- =2 sum_(q=2)^Q psi(q) 1_[gcd(t,q)=1].                      (8)
+ =2 sum_(q=2)^Q psi(q) 1_[gcd(t,q)=1].                      (E8)
 ```
 
 The identity
 
 ```text
 1_[gcd(t,q)=1]=sum_(d|gcd(t,q)) mu(d)
-               =sum_(d|q) mu(d)1_[d|t]                    (9)
+               =sum_(d|q) mu(d)1_[d|t]                    (E9)
 ```
 
-compiles (8) into the signed divisor clock
+compiles (E8) into the signed divisor clock
 
 ```text
 P_Q(t)=sum_(d=1)^Q c_d 1_[d|t],
-c_d=2 mu(d) sum_(2<=q<=Q,d|q) psi(q).                      (10)
+c_d=2 mu(d) sum_(2<=q<=Q,d|q) psi(q).                      (E10)
 ```
 
-Formula (8) proves `P_Q(t)>=0`, although the coefficients in (10) are signed.
+Formula (E8) proves `P_Q(t)>=0`, although the coefficients in (E10) are signed.
 The period divides `L_Q`; cancellation can make it smaller. Every unit class
 modulo `q` occurs `L_Q/q` times in one complete period, hence
 
 ```text
-(1/L_Q)sum_(t=1)^L_Q P_Q(t)=Psi_Q.                         (11)
+(1/L_Q)sum_(t=1)^L_Q P_Q(t)=Psi_Q.                         (E11)
 ```
 
 The phase compiler is not injective on denominators. Both
@@ -519,26 +519,26 @@ The phase compiler is not injective on denominators. Both
 only the radical-class aggregates
 
 ```text
-A_r=sum_(rad(q)=r) psi(q).                                 (12)
+A_r=sum_(rad(q)=r) psi(q).                                 (E12)
 ```
 
-Moving unit weight from `q=2` to `q=4` leaves (8), (10), and (11) unchanged.
+Moving unit weight from `q=2` to `q=4` leaves (E8), (E10), and (E11) unchanged.
 Prime-power denominator depth is the missing sidecar.
 
 #### 3.2 Scale-lift divisor clock
 
 Give each lifted edge of primitive type `p/q`, `q<=Q`, the pulse amplitude
-`2psi(q)`, and let `W_N` be the total amplitude in `E_N`. By (5),
+`2psi(q)`, and let `W_N` be the total amplitude in `E_N`. By (E5),
 
 ```text
-W_N=2 sum_(q=2)^Q psi(q)phi(q)floor(N/q).                   (13)
+W_N=2 sum_(q=2)^Q psi(q)phi(q)floor(N/q).                   (E13)
 ```
 
 Adding vertex `t` gives the positive lift clock
 
 ```text
 R_Q(t)=W_t-W_(t-1)
-      =2 sum_(q=2)^Q psi(q)phi(q)1_[q|t].                  (14)
+      =2 sum_(q=2)^Q psi(q)phi(q)1_[q|t].                  (E14)
 ```
 
 This clock is invertible as a divisor sum. If
@@ -551,36 +551,36 @@ then
 
 ```text
 R_Q(n)=sum_(q|n)b(q),
-b(n)=sum_(d|n)mu(n/d)R_Q(d).                              (15)
+b(n)=sum_(d|n)mu(n/d)R_Q(d).                              (E15)
 ```
 
 Its complete-period mean is again
 
 ```text
-(1/L_Q)sum_(t=1)^L_Q R_Q(t)=Psi_Q.                        (16)
+(1/L_Q)sum_(t=1)^L_Q R_Q(t)=Psi_Q.                        (E16)
 ```
 
 The two clocks are not pointwise equal. At the smallest hostile,
 `Q=2,psi(2)=1`, their values on one period are
 
 ```text
-P=(2,0),        R=(0,2).                                  (17)
+P=(2,0),        R=(0,2).                                  (E17)
 ```
 
 The `q=2` versus `q=4` radical hostile is sharper: the phase clocks and raw
 masses coincide, but the lift clocks on four ticks are respectively
 
 ```text
-(0,2,0,2),      (0,0,0,4).                                (18)
+(0,2,0,2),      (0,0,0,4).                                (E18)
 ```
 
 For a fixed edge `a/q`, its phase ticks `a+jq` match its lifted copies
 `((j+1)a,(j+1)q)` over a complete period. This bijection depends on the edge,
 so it proves equality of first moments, not synchronized overlap data. For an
-arbitrary prefix `T`, (13) gives only
+arbitrary prefix `T`, (E13) gives only
 
 ```text
-|W_T/T-Psi_Q| <= (1/T)sum_(q=2)^Q 2psi(q)phi(q).           (19)
+|W_T/T-Psi_Q| <= (1/T)sum_(q=2)^Q 2psi(q)phi(q).           (E19)
 ```
 
 ### 4. Imported Duffin--Schaeffer theorem and the pointwise firewall
@@ -589,11 +589,11 @@ Koukoulopoulos--Maynard prove on `[0,1]` (and hence period-one on `R`) that,
 for arbitrary nonnegative `psi`,
 
 ```text
-sum_q phi(q)psi(q)/q=infinity  ==>  W'(psi) has full measure. (20)
+sum_q phi(q)psi(q)/q=infinity  ==>  W'(psi) has full measure. (E20)
 ```
 
 This is **CITED**, not reproved by the clocks. The clocks recompile exactly
-the partial sums in (20); they do not supply the overlap theorem.
+the partial sums in (E20); they do not supply the overlap theorem.
 
 The following pointwise statements are elementary and **PROVED**.
 
@@ -603,41 +603,41 @@ The following pointwise statements are elementary and **PROVED**.
 2. For `psi_0(q)=1/q`,
 
    ```text
-   W'(psi_0)=R\Q.                                          (21)
+   W'(psi_0)=R\Q.                                          (E21)
    ```
 
 3. For
 
    ```text
-   alpha=(sqrt(5)-1)/2,       psi_*(q)=1/(4q),             (22)
+   alpha=(sqrt(5)-1)/2,       psi_*(q)=1/(4q),              (E22)
    ```
 
-   the series in (20) diverges, so `W'(psi_*)` has full measure, but
+   the series in (E20) diverges, so `W'(psi_*)` has full measure, but
    `alpha` is not in `W'(psi_*)`.
 
 For a reduced rational `A/B` and any different reduced `a/q`,
 
 ```text
-|A/B-a/q|=|Aq-aB|/(Bq)>=1/(Bq).                           (23)
+|A/B-a/q|=|Aq-aB|/(Bq)>=1/(Bq).                           (E23)
 ```
 
-When `psi(q)->0`, (23) excludes all but finitely many approximants; the exact
+When `psi(q)->0`, (E23) excludes all but finitely many approximants; the exact
 fraction itself occurs at only one reduced denominator. This proves part 1.
 Every irrational has infinitely many reduced convergents with error
-`<1/q^2`, while part 1 excludes rationals, proving (21).
+`<1/q^2`, while part 1 excludes rationals, proving (E21).
 
-For (22), let `beta=-(sqrt(5)+1)/2`. If `r=p/q` lies in `[0,1]`, then
+For (E22), let `beta=-(sqrt(5)+1)/2`. If `r=p/q` lies in `[0,1]`, then
 
 ```text
 |(r-alpha)(r-beta)|=|p^2+pq-q^2|/q^2>=1/q^2,
-|r-beta|<4,                                                (24)
+|r-beta|<4,                                                (E24)
 ```
 
 so `|r-alpha|>1/(4q^2)`. Rationals outside `[0,1]` are farther than `1/4`.
 On the other hand,
 
 ```text
-sum_q phi(q)/(4q^2)=infinity,                              (25)
+sum_q phi(q)/(4q^2)=infinity,                              (E25)
 ```
 
 already by the prime terms. This explicit named quadratic irrational is the
@@ -654,20 +654,20 @@ x=[a_0;a_1,a_2,...]
 have a finite digit-geometric-mean limit
 
 ```text
-(a_1...a_n)^(1/n) -> G < infinity.                         (26)
+(a_1...a_n)^(1/n) -> G < infinity.                         (E26)
 ```
 
 Then its irrationality exponent is exactly
 
 ```text
-mu(x)=2.                                                    (27)
+mu(x)=2.                                                    (E27)
 ```
 
-Indeed, with `S_n=sum_(j<=n)log(a_j)`, (26) gives
+Indeed, with `S_n=sum_(j<=n)log(a_j)`, (E26) gives
 
 ```text
 log(a_(n+1))/n
- =((n+1)/n)(S_(n+1)/(n+1))-S_n/n ->0.                     (28)
+ =((n+1)/n)(S_(n+1)/(n+1))-S_n/n ->0.                     (E28)
 ```
 
 The convergent denominators satisfy `q_n>=F_(n+1)`, hence
@@ -675,32 +675,32 @@ The convergent denominators satisfy `q_n>=F_(n+1)`, hence
 with Legendre's criterion, give
 
 ```text
-mu(x)=2+limsup_n log(a_(n+1))/log(q_n),                    (29)
+mu(x)=2+limsup_n log(a_(n+1))/log(q_n),                    (E29)
 ```
 
-and prove (27). Thus, in the normalization (2),
+and prove (E27). Thus, in the normalization (E2),
 
 ```text
 x in W'(q |-> 1/q),
-x notin W'(q |-> q^(-1-epsilon))       for every epsilon>0. (30)
+x notin W'(q |-> q^(-1-epsilon))       for every epsilon>0. (E30)
 ```
 
 This is the valid infinite connection between a finite Khinchin limit and
 metric approximation. A single finite digit mean has no such consequence:
 any finite prefix admits both exponent-two and Liouville continuations.
 
-The classical Khinchin theorem says that (26) holds with
+The classical Khinchin theorem says that (E26) holds with
 `G=2.685452...` for almost every `x`; it does not describe that named
 constant's own continued fraction. Euler's continued fraction supplies a
 sharp atypical control:
 
 ```text
 e=[2;1,2,1,1,4,1,1,6,1,...],
-product_(first 3n positive digits)=2^n n!,                 (31)
+product_(first 3n positive digits)=2^n n!,                 (E31)
 ```
 
 so the geometric mean for `e` diverges. Nevertheless `a_n=O(n)` and
-`q_n>=F_(n+1)` give `mu(e)=2` by (29); the converse to (26) is false.
+`q_n>=F_(n+1)` give `mu(e)=2` by (E29); the converse to (E26) is false.
 
 ### 6. Reciprocal reflection and its exact losses
 
@@ -709,7 +709,7 @@ coprimality, the unordered endpoints, maximum height, and the scale-fibre
 size
 
 ```text
-floor(N/max(p,q)).                                         (32)
+floor(N/max(p,q)).                                         (E32)
 ```
 
 It does not preserve the distinguished denominator shell or a general
@@ -719,29 +719,29 @@ lengths of `3->5` and `5->3` are `1/15` and `1/6`.
 More generally, the raw edge length
 
 ```text
-ell(p->q)=2psi(q)/q                                        (33)
+ell(p->q)=2psi(q)/q                                        (E33)
 ```
 
 is reversal-invariant for every primitive pair if and only if
 
 ```text
-psi(n)=c n                                                 (34)
+psi(n)=c n                                                 (E34)
 ```
 
 for one constant `c`: use the primitive edge `1<->n` to force
 `psi(n)/n=psi(1)`, and the converse is immediate. If `psi(n)->0`, or if
-`psi(n)<=1/2` for every `n`, (34) forces `c=0`. Thus no nontrivial standard
+`psi(n)<=1/2` for every `n`, (E34) forces `c=0`. Thus no nontrivial standard
 decaying or bounded approximation function is globally reciprocal-even.
 
 There is also a continued-fraction normalization trap:
 
 ```text
-3/5=[0;1,1,2],       5/3=[1;1,2].                         (35)
+3/5=[0;1,1,2],       5/3=[1;1,2].                         (E35)
 ```
 
 Deleting only a leading zero gives the same **projective Euclidean
 coefficient word** `(1,1,2)`. The standard finite Khinchin word always
-deletes the integer part `a_0`, giving `(1,1,2)` versus `(1,2)` in (35).
+deletes the integer part `a_0`, giving `(1,1,2)` versus `(1,2)` in (E35).
 Therefore the standard finite Khinchin mean is not exactly reciprocal-even.
 For an infinite limit, deleting finitely many initial digits does preserve
 the limit and irrationality exponent.
@@ -766,11 +766,11 @@ gate:
 ```text
 (i) all coefficients and initial denominators descend to Q(S);
 (ii) every P-dependence cancels after specialization;
-(iii) a separate P- or D-sidecar supplies denominator control.              (36)
+(iii) a separate P- or D-sidecar supplies denominator control.              (E36)
 ```
 
 For example `e^2+pi^2=S^2-2P`, so merely symmetrizing independent recurrences
-usually fails (36).
+usually fails (E36).
 
 #### Synchronized-linear-form criterion
 
@@ -784,7 +784,7 @@ Then
 
 ```text
 N_n=W_nL_n+V_nM_n
-   =(W_nU_n+V_nR_n)+V_nW_n(e+pi).                         (37)
+   =(W_nU_n+V_nR_n)+V_nW_n(e+pi).                         (E37)
 ```
 
 If `N_n` is nonzero infinitely often and tends to zero, then `e+pi` is
@@ -793,7 +793,7 @@ sufficient rate packet is
 
 ```text
 |L_n|<=exp(-an), |V_n|<=exp(bn),
-|M_n|<=exp(-cn), |W_n|<=exp(dn),       a>d, c>b,           (38)
+|M_n|<=exp(-cn), |W_n|<=exp(dn),       a>d, c>b,           (E38)
 ```
 
 plus nonvanishing. Existing repo work does not provide this synchronized
@@ -804,14 +804,14 @@ cross-decay/nonzero packet.
 - The Koukoulopoulos--Maynard theorem and classical Khinchin theorem are
   **CITED**. The clock, pointwise firewall, exponent implication, reciprocal
   rigidity, and proof gates are **PROVED** here.
-- `e+pi` irrationality remains **OPEN**. The criterion (37) is a target
+- `e+pi` irrationality remains **OPEN**. The criterion (E37) is a target
   format, not a constructed sequence.
 - The arithmetic nature of Khinchin's constant is not settled by any cited
   result here. Typical digit means concern other real numbers.
 - Equality of clock means loses cross-denominator overlap synchronization;
-  the radical-class collision (18) is the minimal witness.
+  the radical-class collision (E18) is the minimal witness.
 - Promising next work is a trace-purity audit of every repo irrationality
-  recurrence, a paired growth/decay/nonvanishing ledger for (37), and a
+  recurrence, a paired growth/decay/nonvanishing ledger for (E37), and a
   congruence-restricted version of the phase clock retaining prime-power
   depth.
 
@@ -819,7 +819,7 @@ cross-decay/nonzero packet.
 
 - Koukoulopoulos--Maynard,
   [*On the Duffin--Schaeffer conjecture*](https://arxiv.org/abs/1907.04593),
-  proves (20).
+  proves (E20).
 - Koukoulopoulos--Maynard--Yang,
   [*An almost sharp quantitative version...*](https://arxiv.org/abs/2404.14628),
   uses the finite mass `Psi_Q` in its quantitative counting theorem.
@@ -828,7 +828,7 @@ cross-decay/nonzero packet.
   Khinchin digit-mean theorem and the atypical Euler expansion.
 - Sondow,
   [*Irrationality Measures, Irrationality Bases, and a Theorem of Jarnik*](https://arxiv.org/abs/math/0406300),
-  records formula (29); the short proof above also identifies its mechanism.
+  records formula (E29); the short proof above also identifies its mechanism.
 
 ### 10. Replay
 
@@ -844,4 +844,3 @@ python -B -O 04-computation/divisor_phase_duffin_schaeffer_thm4056_independent_a
 Both normal/optimized pairs are byte-identical. The independent path uses a
 totient sieve, direct clock arrays, recursive divisor inversion, and the
 finite-Khinchin normalization hostile. **QED.**
-
