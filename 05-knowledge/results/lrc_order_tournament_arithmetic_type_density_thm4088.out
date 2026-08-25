@@ -1,0 +1,6 @@
+THM-4088 independent exact probe
+tight-initial-segment grid values: 6240
+circle-Lipschitz pairs: 896112
+strict-margin implications: 22935
+open-radius endpoint hostile: PASS
+PASS
