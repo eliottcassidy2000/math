@@ -1,0 +1,8 @@
+status=PASS_GAUGE_REPAIRED
+typed_incidence=(11,9,8);pack=1..10;strict_masks=PASS
+cover_masks ((0, 2), (3,), (1,))
+leak_masks ((0, 2), (0,), (0,))
+label_gauge_covariance=mask(y+1)=mask(y)-1_mod_4
+signed_periods (2, 3, 4, 5, 6, 7, 8, 9, 10) signed_clock 2520
+unsigned_periods (2, 3, 4, 5, 6, 7, 4, 3, 10) unsigned_clock 420
+owner_formula_and_formal_fourier_checks 54

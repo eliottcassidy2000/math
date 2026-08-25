@@ -76,8 +76,8 @@ is the safe control `M(S_13)=99/338`. No cited result proves LRC(14).
   [THM-4041](../01-canon/theorems/THM-4041-lrc14-d2-affine-defect-edge-boundary.md)
   gives the exact `d=2` defect edge; [THM-4049](../01-canon/theorems/THM-4049-lrc14-d2-two-phase-residue-firewall.md)
   the ten-class mod-`56` firewall; and [THM-4052](../01-canon/theorems/THM-4052-lrc14-affine-component-width-escape-cones.md)
-  closes `d2:E>=12M`, `d3:E>=11M`, `d4:3E>=44M`. The finite/reconstructive
-  producer obeys `d sum(H)+sum(E)<=91^12`; complement compression is open.
+  closes `d2:E>=12M`, `d3:E>=11M`, `d4:3E>=44M`. The finite producer obeys
+  `d sum(H)+sum(E)<=91^12`; THM-4062 makes its affine intercept mandatory.
   [THM-4025](../01-canon/theorems/THM-4025-lrc14-owner-residue-odd-dilation-semigroup.md)
   gives the odd-divisibility semigroup, while [THM-4031](../01-canon/theorems/THM-4031-lrc14-endpoint-owner-rational-tail.md)
   proves that every old-strip ray has an eventual arithmetic-survivor tail;

@@ -1,5 +1,20 @@
 # Script Results Index
 
+- `lrc14_affine_intercept_divisor_star_obstruction_thm4062.py` and
+  independent Euclidean-depth/winner-track audit -> matching `.out`s
+  [THM-4062 PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED;
+  LRC(14) OPEN]. Every exception mask factors through `(q,a,tau)`, where
+  THM-4056/4059 erase the label-gauged affine intercept `tau`. Two primitive
+  `d=4` rows have identical labelled packets `((2,1),(4,1),(4,3))`, depth
+  signs `(-1,-1,-1)`, and incidence `(11,9,8)`, but masks respectively cover
+  `C_4` and leak labels `1,3`. The depth-signed THM-4042 controller has exact
+  `P=11` period `2520`, versus unsigned `420`. Primary script/output SHA-256:
+  `aab25543b47d72307891b12d87c0cb74ecdb88f13c444e95ed7a3610807acfc1` /
+  `d352a8ba923b30cbb0227718120207bf63d6def886b36096704a3fb2ba0cbb48`;
+  independent:
+  `4d29ccb89cbfef22b8aede289aa9dfcd33a47fdd96ccf9f3e2cbff361e86bde6` /
+  `29167744830c288ad103e84e64a6a3d941d91627936795a465c7d7362835b7c8`.
+
 - `stern_depth_modular_hyperbola_prime_balance_thm4061.py`, independent
   Farey-tree audit, and Fourier hostile audit -> matching `.out`s [THM-4061
   PROVED + CITED WEIL INPUT + VERIFIED-EXACT + INDEPENDENTLY

@@ -107,10 +107,12 @@
   `d=3,4`. Marking the pair makes this representation reconstructive:
   `t/d=gcd(h_p,h_q)`, then `(p,q)`, while
   `s=gcd(d H_body,E)` and the body `u` follow. The small banks above do not
-  enumerate that enormous image. The next task is a feasible exact
-  compression/sieve of this bounded producer, using THM-4049's two-phase
-  residue firewall as a `d=2` projection filter, followed by the interval
-  test on every survivor.
+  enumerate that enormous image. THM-4062 proves that the complete static
+  labelled divisor/depth packet cannot preserve selected-phase coverage; the
+  missing sidecar is the label-gauged affine intercept. The next task is a
+  feasible exact compression of the bounded producer that retains that
+  intercept, uses THM-4049's `d=2` projection filter, and interval-tests every
+  survivor.
 - **D2 measure/owner compression.** THM-4041 proves that for reduced odd
   exceptions `a<b`, the spoiled mass is
   `4 sum_(r>0 odd,7r<a+b) min(1/(7b),(a+b-7r)/(14ab))`, while common odd
