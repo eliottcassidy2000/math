@@ -4,7 +4,9 @@
 [THM-4097](../01-canon/theorems/THM-4097-order-nine-strong-ear-spectrum-solid-interval-and-lane-extension.md),
 [THM-4099](../01-canon/theorems/THM-4099-squarefree-gap-transfer-and-mixed-insertion-boundary.md),
 [THM-4102](../01-canon/theorems/THM-4102-selected-order-ten-strong-ear-solid-interval.md),
+[THM-4104](../01-canon/theorems/THM-4104-selected-order-eleven-strong-ear-solid-interval.md),
 [THM-4103](../01-canon/theorems/THM-4103-jc23-theta-boundary-ramification-and-degree-response.md),
+[THM-4111](../01-canon/theorems/THM-4111-uniform-ear-average-and-recursive-selected-bank-growth.md),
 and
 [THM-4109](../01-canon/theorems/THM-4109-ap7-weight-seven-gap-atlas-and-sharp-pair-overlap.md).
 The multiaffine response object and unequal-arc trapezoid below are elementary
@@ -136,6 +138,12 @@ extraction, and the preserved predicate is the Bonferroni survivor margin.
 Scalar total overlap destroys which zero-gap pattern caused the loss.  The
 needed sidecar is the three offsets `(2o_i-e)` and the clipped endpoint cell.
 
+The tempting shortcut `int_J K(2d theta)dtheta=Q_d/2` is **REFUTED**.  At
+`d=1` the left side is exactly zero because `2J` misses the trapezoid support,
+while `Q_1/2=171/480200`.  MISTAKE-500 records this pre-promotion failure.
+The even--odd response therefore needs its own trapezoid endpoint law; the
+odd--odd triangle atlas cannot be rescaled into it.
+
 The cheapest decisive test is now precise: classify the zero-edge odd
 triples in `(6)`, derive an exact residue-ray law for the three trapezoids in
 `(9)`, and determine the true full-pair uniform floors.  A bounded scan is
@@ -155,19 +163,25 @@ triple/directed-triangle hostile proves that all proper-face counts and the
 first-step count profile can agree while the mixed coefficient differs.
 This is exactly the failure mode repaired by `(1)`--`(4)` in the LRC lane.
 
-THM-4097 then certifies every odd `H` from `85` through `2881` at order nine,
+THM-4097 certifies every odd `H` from `85` through `2881` at order nine,
 and its independently reconstructed atlas shows that neither order-eight
 `H=613` class reaches `623` by a nonconstant ear; a parent with `H=99` does.
 So scalar parent size is not an ancestry coordinate.  THM-4102 uses one
 labelled parent for every known order-nine value and already forces the
-global allowed prefix through `14655` at order ten.
+global allowed prefix through `14655` at order ten.  Concurrent THM-4104
+iterates the labelled construction at order eleven, explicitly fills the old
+targets `14657` and `14777`, and moves the allowed prefix through `80405`.
+THM-4111 then proves the exact all-cut average
+`2^(n-2)((n+3)H+F_1)` and forces unbounded maxima for every recursively
+representative-selected bank.  It does not force overlap or unbounded right
+endpoints of the solid intervals.
 
 The next operation should not be another scalar parent histogram.  Take
 three inserted vertices, retain the eight squarefree faces, and use the
 defect filtration: a degree-`r` coefficient sees only base words with at most
 `r` bad adjacencies.  The concrete target is an eight-state rank-three
-transfer that explains which order-nine parents fill the two solid
-order-ten intervals and which mixed faces control the first gap `14657`.
+transfer that explains which parent fibres fill the order-ten/order-eleven
+solid intervals and which mixed faces control the new boundary at `80407`.
 
 Connection contract:
 
@@ -272,8 +286,8 @@ lost geometric input.
 
 1. Prove the three-trapezoid AP7 residue law and determine full-pair floors
    for gaps `4,8`; test the exact zero-gap triples first.
-2. Build the rank-three tournament squarefree transfer and measure the first
-   order-ten interval boundary against equal-`H` parent hostiles.
+2. Build the rank-three tournament squarefree transfer and measure the
+   order-eleven boundary at `80407` against equal-`H` parent hostiles.
 3. Enumerate the three JC Nielsen-class universes, then feed survivors to a
    labelled Laurent target-response elimination.
 4. Replace the Kakeya direction clock by a multiscale placement/shading

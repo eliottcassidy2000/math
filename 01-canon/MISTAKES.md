@@ -9,6 +9,27 @@ Format per entry:
 - Why it was wrong
 - The correct framing
 
+## MISTAKE-500 (2026-08-25, exploratory AP7 full-pair gap graph) -- an unequal-arc overlap was replaced by half an equal-arc triangle
+
+- **What failed:** an unpromoted scratch model assigned an even--odd AP7
+  edge of frequency gap `2d` the limiting weight `Q_d/2`, where `Q_d` is the
+  equal-width odd--odd triangular overlap from THM-4109.
+- **Minimal witness / first failed implication:** the even comb has phase arc
+  radius `1/14`, while the odd antipodal comb has radius `1/7`. Their frozen
+  intersection is the trapezoid `K(s)` recorded in the 2026-08-25 labelled-
+  response reflection, not half the equal-arc triangle. At `d=1`, exact
+  integration on `J=[4/35,13/98]` gives
+  `int_J K(2 theta)dtheta=0`, whereas `Q_1/2=171/480200>0`.
+- **Repair / strongest survivor:** use the genuine even--odd weight
+  `R_d=int_J K(2d theta)dtheta` and derive its own endpoint/residue law. The
+  literal finite-bank six-pair margin remains a valid next observable, and
+  THM-4109 is unaffected because it retains only an odd--odd pair. The false
+  limiting graph and all conclusions drawn from its `Q_d/2` weights are
+  **REFUTED** and were deleted before promotion.
+- **Reusable rule:** density ratios do not rescale correlation kernels when
+  the two arc widths differ; compute the convolution shape before taking a
+  periodic average.
+
 ## MISTAKE-499 (2026-08-25, THM-012b insertion decomposition) -- equality failures were mislabeled as orphan-bearing pairs
 
 - **What failed:** the legacy relationship note in THM-012b said that the
