@@ -24,6 +24,7 @@ related:
   - THM-4113-maximal-noncrossing-half-kempe-atlas
   - THM-4114-ocf-mobius-positivity-tropical-defect-layer-and-opposite-ear-cut-curvature
   - THM-4115-uniform-ear-cut-walsh-variance-and-sharp-growth-refinement
+  - THM-4118-ear-response-lattice-and-stateful-unit-component-intervals
 script: 04-computation/tournament_deletion_slack_unavoidability_hyp9080.py
 output: 05-knowledge/results/tournament_deletion_slack_unavoidability_hyp9080.out
 script_sha256: 6ff91dacc06b63c7e7fcd34163ca647e35a814f683eb0aa9fdb5a8ebd54000e6
@@ -401,6 +402,40 @@ mu_Y^2+(sum_(i<j)wtilde_ij^2-sum_i h_i^2)/4
 
 Violation of `(11y)` would refute the tariff. Satisfaction is not sufficient
 because the scalar moment still forgets labelled incidence.
+
+### 3.4 Stateful response lattice imported from THM-4118
+
+THM-4118's proof is carrier-level and therefore applies to the combined
+integer-valued quadratic `Y`, but its Hamiltonian parity conclusion does not.
+For `n>=3`, define
+
+```text
+A_i^Y=Y_{ {i} }-Y_empty,
+K_ij^Y=Y_{ {i} }+Y_{ {j} }-Y_{ {i,j} }-Y_empty,
+delta_Y=gcd({A_i^Y} union {K_ij^Y}).                       (11z)
+```
+
+The degree-two identity `(11q)` gives
+
+```text
+Y_S=Y_empty+sum_(i in S)A_i^Y
+              -sum_({i,j} subseteq S)K_ij^Y,
+<Y_S-Y_empty: empty!=S!=V>_Z=delta_Y Z.                  (11aa)
+```
+
+If every coefficient in `(11z)` vanishes, `Y` is constant and the tariff is
+decided directly. Otherwise make a graph on the nonconstant cuts, joining a
+one-flip or one-in/one-out exchange exactly when its `Y` change is
+`0` or `+/-delta_Y`. Every connected component maps onto a solid arithmetic
+interval with step `delta_Y`, by the same discrete intermediate-value proof
+as THM-4118.
+
+This is the first stateful sidecar that genuinely survives the transfer. It
+does not prove all component minima nonnegative, and THM-4118's Hamiltonian
+fact `d_T=2` must not be copied to `delta_Y`. The decisive next experiment is
+to classify the combined-charge unit components on the zero-gap order-seven
+representatives and ask which labelled coefficient or Pfaffian sidecar
+separates components that reach below zero from those that do not.
 
 ## 4. Pointwise monotonicity fails at order four
 

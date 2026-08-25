@@ -36,6 +36,11 @@
   response cube; THM-4115 supplies its exact Walsh variance; neither gives the
   missing labelled support floor or cross-family domination. Replace the
   permutation `Q` reconstruction by subset DP before scanning order eight.
+  In parallel import THM-4118 at the correct carrier: build the combined
+  `Y=chi/2` singleton/pair gcd and `0,+/-delta_Y` flip/exchange components on
+  the 101 zero-minimum order-seven classes. Do not import its Hamiltonian
+  conclusion `d_T=2`; classify which full labelled sidecar controls component
+  minima.
 - **Incoming THM-4112 signal -- span-envelope recursion is a real compiler.**
   Its arbitrary-depth result under scale separation, ratio-two depth through
   six, every finite adjacent ratio at least `12/5`, and explicit eleven- and

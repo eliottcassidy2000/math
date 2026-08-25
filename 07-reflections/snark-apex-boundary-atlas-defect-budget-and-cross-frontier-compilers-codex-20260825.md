@@ -486,6 +486,13 @@ orientation. LU and ALU prescribe charges coming from different deletion
 bases. Thus mean/variance growth and local unavoidability remain distinct
 problems.
 
+THM-4118 adds the right kind of sidecar: the exact singleton/pair response
+lattice plus labelled flip/exchange components whose unit-step images are
+solid intervals. Its proof transfers to the combined integer quadratic `Y`,
+with a new gcd `delta_Y`; its Hamiltonian conclusion `d_T=2` does not. This
+organizes tariff hostiles by actual cut-state reachability instead of a
+scalar moment, but still leaves the sign of each component minimum open.
+
 The typed comparison is:
 
 ```text
@@ -515,7 +522,7 @@ cannot replace unavoidability.
 | THM-4104 | complete one-ear response is a finite cut tensor | selected image is not a global census | PROVED / finite |
 | THM-4111 | exact zero-mode/mean formula | mean loses image and reducibility | PROVED |
 | THM-4112 | parent-gap component-span envelopes iterate on scale-separated LRC families | exact component identities, owners, physical origin, and arbitrary cores remain | PROVED under explicit hypotheses; relative to THM-2061/2066/2072 |
-| THM-4114/4115 | exact ear Boolean quadratic, curvature, mean, and variance | labelled minimum, interval, and cross-family domination remain | PROVED / independently audited |
+| THM-4114/4115/4118 | exact ear quadratic, moments, response lattice, and unit-state intervals | combined-charge component minima and cross-family domination remain | PROVED / independently audited |
 | THM-4117 | coarse physical `11+2` data do not force entry into known supplier families | full primitive support and marked unit/core origin are lost | PROVED relative to THM-4049 |
 | THM-4110/4116 | exact phase quotient and component repair law | synchronized phase is not LRC safety | PROVED |
 | THM-3042/4067 | common quotient/equalizer controls gluing | ambient realization and torsion can survive | PROVED |
