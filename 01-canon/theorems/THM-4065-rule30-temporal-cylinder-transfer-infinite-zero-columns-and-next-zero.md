@@ -236,7 +236,7 @@ Exactly `12133` transfers, with no intervening zero, give
 (ell_99999,ell_100000)=(be79924b,90f58380).          (14)
 ```
 
-Starting from `(12)`, both exact C implementations take `1420778968` further
+Starting from `(14)`, both exact C implementations take `1420778968` further
 transfers before the second coordinate is first zero. Therefore
 
 ```text

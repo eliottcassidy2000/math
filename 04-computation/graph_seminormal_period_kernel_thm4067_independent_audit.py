@@ -261,7 +261,6 @@ for opening in range(1, 7):
     require(sharp != 0, ("sharp mixed coefficient", opening))
 
 print(f"binomial_contact_checks=fixed:{fixed_checks};mixed:{mixed_checks}")
-print("fixed_period_defect_quotient=Q[[A,c]]/(A^q);all_q>=1")
-print("mixed_cokernel_quotient=Q[[A,c]]/(A^(q-1));nonzero_for_q>=2")
+print("fixed_period_defect_surjects_onto=Q[[A,c]]/(A^q);all_q>=1")
+print("mixed_cokernel_surjects_onto=Q[[A,c]]/(A^(q-1));nonzero_for_q>=2")
 print("displayed_figure_eight_antecedent=REFUTED;abstract_implication=SURVIVES")
-

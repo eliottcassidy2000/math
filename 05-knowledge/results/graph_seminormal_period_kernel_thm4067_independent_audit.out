@@ -16,6 +16,6 @@ scaled_lines=((Fraction(0, 1), Fraction(0, 1)), (Fraction(1, 1), Fraction(-1, 1)
 oriented_c_increments=(Fraction(1, 1), Fraction(1, 1), Fraction(-2, 1), Fraction(-1, 1), Fraction(-2, 1), Fraction(3, 1));witness_periods=(Fraction(0, 1), Fraction(0, 1))
 witness_parallel_difference_mod_epsilon=1
 binomial_contact_checks=fixed:504;mixed:504
-fixed_period_defect_quotient=Q[[A,c]]/(A^q);all_q>=1
-mixed_cokernel_quotient=Q[[A,c]]/(A^(q-1));nonzero_for_q>=2
+fixed_period_defect_surjects_onto=Q[[A,c]]/(A^q);all_q>=1
+mixed_cokernel_surjects_onto=Q[[A,c]]/(A^(q-1));nonzero_for_q>=2
 displayed_figure_eight_antecedent=REFUTED;abstract_implication=SURVIVES
