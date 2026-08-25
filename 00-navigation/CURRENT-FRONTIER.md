@@ -312,17 +312,11 @@ lift/phase clocks.
 
 ## Other active portfolio
 
-- **P-adic-zeta intake:** the pinned 22 singleton claims remain
-  **AUTHOR-CLAIMED / UNREFEREED**. THM-4089 proves only the displayed-margin
-  optimum and four next-cell obstructions; its geometric/adelic gates remain
-  open.
-- **Matching logic:**
-  [THM-4090](../01-canon/theorems/THM-4090-two-sort-matching-logic-global-completeness-obstruction.md)
-  proves a satisfiable two-sort theory with a semantic consequence not
-  derivable in the basic definedness-free fixpoint-free Figure-2 calculus,
-  relative only to its cited soundness input. The preprint's one-sort
-  completeness remains **PREPRINT CLAIM / UNDER AUDIT**; no LRC, JC, p-adic,
-  or tournament result follows from the encoding analogy.
+- **P-adic zeta:** the pinned 22 claims stay **AUTHOR-CLAIMED / UNREFEREED**;
+  THM-4089 proves only a formula optimum/four-cell obstruction, not its gates.
+- **Matching logic:** THM-4090 gives a two-sort Figure-2 calculus
+  counterexample relative to cited soundness; one-sort completeness remains a
+  preprint claim, and no arithmetic/tournament transfer follows.
 - **Integral observers:** THM-4000 compiles consecutive values; THM-4010 gives kernel `(F^k)`, index `product(j!)^(k^2)`, rank `k min(m+1,p)`, and its first positive exponent.
   THM-4080 gives the full two-jet partition `e*{0,0,1,...,s-1,s+1,...,2s-1}` at one exact scale and every consecutive `p`-primary layer through `n<=p(p-1)`; the `s=p` wall and larger clusters remain **OPEN**.
 - **Even-graph spectrum:** THM-4083 proves `D=3,4`; THM-4084 gives all matching characters and forces any new `D=5` equality/counterexample to have `b=0`, frustration `>=4`. Full `D=5` is **OPEN** beyond exact `n=6,7,8` (MISTAKE-496).

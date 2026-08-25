@@ -342,6 +342,32 @@ the arithmetic types decorating its vertices; `C_3` instead has `c_3=1` and
 `H`, `c_3`, and `nu_p(H)` observe adjacency/SCC structure rather than the
 arithmetic type of external labels.
 
+### Exact field transport versus optimization
+
+The incoming THM-4095 locates a positive result hidden behind THM-4088's
+no-go. For fixed finite `S` and rational `beta`, the piecewise-affine observer
+does not merely preserve coarse rational/algebraic/transcendental type:
+
+```text
+Q(F_S(t)-beta)=Q(t).
+```
+
+The active branch `(v,k,epsilon)` reconstructs `t`. The loss occurs only when
+that branch and value are replaced by scalar order, or when the quantifier is
+changed by optimizing over speed sets. Primitive two-speed optimized margins
+then form a discrete spectrum with gap `(0,1/15)`. This cleanly separates
+three levels: exact field transport for a fixed observer, topological density
+inside a strict witness component, and a gapped spectrum after optimization.
+
+THM-4096 gives the analogous boundary on the corrected regularization lane.
+The normalized Cover14 carrier is a nonnegative rational affine combination
+of the correctly typed twisted values `L_p(-1,omega_p^2)` only at `m=1`; its
+required moment is negative for every `m>=2`. Because the construction places
+cross-prime rational shadows in a common real affine line, it deliberately
+forgets p-adic topology. The next lawful experiment must stay at one prime and
+retain character plus valuation; otherwise it can only rediscover the affine
+hostile.
+
 ## 9. Generated next tasks
 
 ### Anchor -- specialist audit of the `22`-cell draft
