@@ -24,6 +24,7 @@ related:
   - THM-4081-lrc-antipodal-height12-obstruction-and-six-speed-floor
   - THM-4088-order-tournament-arithmetic-type-blindness-and-lrc-margin-density
   - THM-4101-ap7-weight-seven-gap-four-second-moment-absorption
+  - THM-4112-antipodal-component-ancestry-chain-and-scale-separated-lrc-families
   - THM-1094-exact-two-comb-component-theorem
   - THM-1176-seven-wall-slow-gap-harmonic-crowding
   - MISTAKE-126

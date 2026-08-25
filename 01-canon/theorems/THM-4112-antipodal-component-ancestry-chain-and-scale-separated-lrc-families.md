@@ -2,12 +2,14 @@
 id: THM-4112
 title: "Antipodal component-ancestry chain and scale-separated LRC families"
 status: >
-  RESERVED / PROVISIONAL PROOF CANDIDATE UNDER INDEPENDENT AUDIT. The
-  one-tooth/two-protrusion lemma, arbitrary-depth ancestry recursion,
-  four-outlier sharpening, scale-separated suppliers, non-AP core, exact
-  controls, and endpoint-clock consequences below have a primary exact
-  referee but are not proved canon until an independent implementation and
-  scope audit accept them.
+  PROVED + PROVED RELATIVE TO THM-2061/2066/2072 + VERIFIED-EXACT +
+  INDEPENDENTLY AUDITED. A parity-aware one-tooth/two-protrusion lemma
+  iterates to arbitrary depth under explicit parent-gap gates. Ratio-two
+  chains of depth at most six and every finite chain with adjacent ratio at
+  least 12/5 give exact scale-separated suppliers. This yields AP7
+  four-outlier eleven-cores, a primitive non-AP core plus six outliers, and
+  AP8 plus five outliers; the latter two are direct thirteen-speed LRC(14)
+  families. Arbitrary cores and LRC(14) remain open.
 source: codex-frontier-synthesis-creative-20260825g
 depends_on:
   - THM-2061-lrc14-dyadic-two-tail-folded-seam
@@ -26,9 +28,14 @@ related:
   - MISTAKE-274
 script: 04-computation/lrc_antipodal_component_ancestry_chain_thm4112.py
 output: 05-knowledge/results/lrc_antipodal_component_ancestry_chain_thm4112.out
+independent_audit_script: 04-computation/lrc_antipodal_component_ancestry_chain_thm4112_independent_audit.py
+independent_audit_output: 05-knowledge/results/lrc_antipodal_component_ancestry_chain_thm4112_independent_audit.out
 script_sha256: a036113d9918a81390b5d803c0e2c1a1b6e62c9168311e1f3599490e9e990195
 output_sha256: cc7da6625a80008cd7644ad6a211f3bd0c3c119ff95ead7a51d22dbc30f76e3e
 semantic_sha256: 9834738b13362e78c30f577bd4dc1219221c9c1d8413a18102dc1b56d65cf093
+independent_audit_script_sha256: 9a084c2ef41ad54850a3ef0a444f1c35eaa2ffe017c3c35843d9398b7b6a719a
+independent_audit_output_sha256: 4ccf4f419156ac2215f427639b8d7de7b138211d34c17043aa5969ce87dd54f3
+independent_semantic_sha256: a716c2a1656d979a087674ebd3e92fb3a691e02a87f4bc867092d6b1dffcec6e
 hash_basis: raw LF bytes
 primary_audit: >
   PASS. Fraction-exact literal-open components, the exact one-comb base,
@@ -36,13 +43,21 @@ primary_audit: >
   AP7 adaptive-root rows, the geometric-depth constants, both hostiles, the
   non-AP interval, and both direct thirteen-speed boundary families replay
   identically under normal and optimized Python and match the frozen output.
+independent_audit: >
+  ACCEPT. A clean-room Fraction-only wall-cell and endpoint-connectivity
+  engine imports no primary code and independently reproduces the exact-span
+  base, ancestry recursion, both scale regimes, adaptive AP7 split,
+  parity-free suppliers, both phases of the non-AP interval, endpoint clocks,
+  direct thirteen-speed rows, and both ancestry hostiles. Normal, optimized,
+  and frozen outputs byte-match; the smallest theorem failure is none.
 ---
 
 # THM-4112 -- antipodal component ancestry and scale separation
 
-**RESERVED / PROVISIONAL PROOF CANDIDATE UNDER INDEPENDENT AUDIT.**
+**PROVED + PROVED RELATIVE TO THM-2061/2066/2072 + VERIFIED-EXACT +
+INDEPENDENTLY AUDITED.**
 
-This candidate isolates the operation implicit in THM-4100 and iterates it:
+This theorem isolates the operation implicit in THM-4100 and iterates it:
 a slow open tooth has only two sides, so a faster residual satisfying the
 slow parent-gap gate can contribute at most one component envelope on each
 side. The resulting coefficients are `1,2,4,...`. Unlike the blind suffix
@@ -156,7 +171,8 @@ has span exactly `a_(v_r)`, not strictly less. Starting from that weak base,
 Lemma 1 makes every reinserted level strict. This proves Theorem 2 by reverse
 induction.
 
-Now let `D` be a finite core and let
+Now let `D` be a finite core, assume `{v_1,...,v_r}` is disjoint from `D`,
+and let
 
 ```text
 J=[alpha,alpha+L] subset
@@ -317,13 +333,14 @@ Let `84<=a<b<c<d`. If `a` or `b` is even, the four outliers satisfy
 - if `a` is odd, `b` is even, and `b<2a`, use root `s=b` and tail `(a,c,d)`;
 - if `a` is odd, `b` is even, and `b>=2a`, use root `s=a` and tail `(b,c,d)`.
 
-In the first case the worst survival row is `a=84`:
+In the first case the worst **seven-scaled** survival margin is at `a=84`:
 
 ```text
 9/70-[1/84+2/85+8/86]=1/8772.                             (27)
 ```
 
-In the second case the right side is maximized at `a=85,b=86,c=87`:
+In the second case the seven-scaled left side is maximized at
+`a=85,b=86,c=87`:
 
 ```text
 9/70-[1/86+2/85+8/87]=650/445179.                         (28)
@@ -582,6 +599,8 @@ Run
 ```text
 python3 -B 04-computation/lrc_antipodal_component_ancestry_chain_thm4112.py
 python3 -B -O 04-computation/lrc_antipodal_component_ancestry_chain_thm4112.py
+python3 -B 04-computation/lrc_antipodal_component_ancestry_chain_thm4112_independent_audit.py
+python3 -B -O 04-computation/lrc_antipodal_component_ancestry_chain_thm4112_independent_audit.py
 ```
 
 The separate AP8 threshold-25 finite census is deliberately absent. No
@@ -589,7 +608,7 @@ statement about that census is part of THM-4112. The geometric series in
 `(18)--(19)` is a proved analytic majorant, not an extrapolation from the
 depth-12 symbolic control.
 
-Until the independent referee reproduces the open-component semantics,
-parent-gap gates, non-AP interval, finite-depth equality boundary, and exact
-hostiles, this document remains a reserved provisional candidate rather
-than proved canon.
+The independent referee reproduces the open-component semantics, parent-gap
+gates, non-AP interval, finite-depth equality boundary, endpoint-clock scope,
+and exact hostiles with a separate wall-cell engine. The two implementations
+and their frozen outputs agree on every theorem-bearing row. **QED.**

@@ -61,7 +61,11 @@ is the safe control `M(S_13)=99/338`. No cited result proves LRC(14).
   `>=281` (all-even `>=85`); THM-4100 retains component ancestry and lowers
   arbitrary parity to `93`. THM-4098 adds dilated weight-seven rows; THM-4109
   gives AP7 odd-pair floors `197/232/268` at gaps `4/8/12`, with only `4,8`
-  beating `264` here. Arbitrary cores and physical entry remain open.
+  beating `264` here. [THM-4112](../01-canon/theorems/THM-4112-antipodal-component-ancestry-chain-and-scale-separated-lrc-families.md)
+  iterates the parity-aware parent-gap envelope to arbitrary depth, gives
+  ratio-two depth-`<=6` and ratio-`>=12/5` suppliers, and proves direct AP8
+  plus five and primitive non-AP plus six thirteen-speed families. Arbitrary
+  cores and physical entry remain open.
 - **Quantifier/type controls (PROVED):** [THM-4095](../01-canon/theorems/THM-4095-exact-arithmetic-field-transport-gapped-pair-margins-and-order-tournament-blindness.md)
   gives field transport and gap `(0,1/15)`; THM-4096 isolates one ray point.
   THM-4105/4106 are reciprocal decoders; THM-4107/4108 are tournament/radical

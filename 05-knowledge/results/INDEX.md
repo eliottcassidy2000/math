@@ -1,5 +1,20 @@
 # Script Results Index
 
+- `lrc_antipodal_component_ancestry_chain_thm4112.py` and independent
+  wall-cell audit -> concordant `.out`s [THM-4112 PROVED + PROVED RELATIVE TO
+  THM-2061/2066/2072 + VERIFIED-EXACT + INDEPENDENTLY AUDITED; LRC(14) OPEN].
+  The parity-aware recursion
+  `h_i=1/(7v_i)+2h_(i+1)` is valid under the explicit parent-gap gate.
+  Ratio-two chains work through depth six, while adjacent ratio `>=12/5`
+  works at arbitrary finite depth. It gives AP7 four-outlier eleven-cores,
+  direct AP8-plus-five and primitive-non-AP-plus-six thirteen-speed families,
+  and exact parent-gap/all-root hostiles. Primary script/output SHA-256:
+  `a036113d9918a81390b5d803c0e2c1a1b6e62c9168311e1f3599490e9e990195` /
+  `cc7da6625a80008cd7644ad6a211f3bd0c3c119ff95ead7a51d22dbc30f76e3e`;
+  independent:
+  `9a084c2ef41ad54850a3ef0a444f1c35eaa2ffe017c3c35843d9398b7b6a719a` /
+  `4ccf4f419156ac2215f427639b8d7de7b138211d34c17043aa5969ce87dd54f3`.
+
 - `tournament_uniform_ear_average_growth_thm4111.py` and independent literal
   audit -> concordant `.out`s [THM-4111 PROVED ELEMENTARY DOUBLE COUNT +
   VERIFIED-EXACT + INDEPENDENTLY VERIFIED-EXACT]. For an order-`n` tournament,
