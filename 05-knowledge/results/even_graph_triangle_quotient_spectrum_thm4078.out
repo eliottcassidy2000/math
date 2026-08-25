@@ -1,0 +1,5 @@
+THM-4078 primary primal-orbit audit
+n_range=3..6 direct_relabel_gates=745164
+rows=[{"charpoly":"(lambda - 1)*(lambda + 1)","commutator_0_C3":null,"n":3,"orbits":2,"states":2,"triangle_degree":1},{"charpoly":"lambda*(lambda - 4)*(lambda + 4)","commutator_0_C3":[0,1],"n":4,"orbits":3,"states":8,"triangle_degree":4},{"charpoly":"lambda*(lambda - 10)*(lambda - 4)*(lambda - 2)*(lambda + 2)*(lambda + 4)*(lambda + 10)","commutator_0_C3":[0,1],"n":5,"orbits":7,"states":64,"triangle_degree":10},{"charpoly":"lambda**4*(lambda - 20)*(lambda - 12)*(lambda - 8)*(lambda - 4)**3*(lambda + 4)**3*(lambda + 8)*(lambda + 12)*(lambda + 20)","commutator_0_C3":[0,1],"n":6,"orbits":16,"states":1024,"triangle_degree":20}]
+semantic_sha256=4e2127c8e81fd44010a68f66203261376a693b0b841522f186a0161003cbf35f
+PASS: quotient matrices, exact spectra, reversibility, and Boolean hostile

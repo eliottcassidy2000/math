@@ -1,0 +1,6 @@
+THM-4078 independent signed-dual/Walsh audit
+n_range=3..8 total_characters=2131018 cycle_vectors=9432
+dual_orbit_counts={"3":2,"4":3,"5":7,"6":16,"7":54}
+prefix_rows=[{"characters":2,"dimension":1,"minimizer_counts":[1],"n":3,"prefix_minima":[1]},{"characters":8,"dimension":3,"minimizer_counts":[6,7],"n":4,"prefix_minima":[2,4]},{"characters":64,"dimension":6,"minimizer_counts":[10,10,10],"n":5,"prefix_minima":[3,9,15]},{"characters":1024,"dimension":10,"minimizer_counts":[15,15,15,15],"n":6,"prefix_minima":[4,16,40,64]},{"characters":32768,"dimension":15,"minimizer_counts":[21,21,21,21,21],"n":7,"prefix_minima":[5,25,85,205,325]},{"characters":2097152,"dimension":21,"minimizer_counts":[28,28,28,28,28,28],"n":8,"prefix_minima":[6,36,156,516,1236,1956]}]
+semantic_sha256=8cf96bbfe3024e3d052174b2e71b021174cfcf86a358f96a12d93e83570ba53d
+PASS: dual spectrum and FINITE-EXACT prefix conjecture through n=8
