@@ -1,0 +1,9 @@
+TOURNAMENT STRONG-BASE ORDER-SEVEN INDEPENDENT AUDIT
+status=FINITE-EXACT; no all-order consequence
+universe=456_canonical_reps;strong=353
+method=literal_permutations+dominating_cuts+Pfaffian_square_sums
+strong_equalities=()
+minimum_strong_slack=21;rep=38;H=25;Eeven=2;Eodd=4
+minimum_strong_ratio=27/8;rep=85298;H=189;Eeven=8;Eodd=56
+semantic_digest=ef45816e64458457a1b5045c599dd08475e3304a177482de21c1c1f5b61ed350
+RESULT=PASS

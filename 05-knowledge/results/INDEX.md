@@ -1,5 +1,20 @@
 # Script Results Index
 
+- `tournament_strong_base_n7_exact_frontier.py` and independent audit ->
+  matching `.out`s [THM-4051 FINITE-EXACT + VERIFIED-EXACT + INDEPENDENTLY
+  AUDITED; all-order base OPEN]. The complete 456-class order-seven universe
+  contains 353 strong classes, all satisfying
+  `H>=max(E_even,E_odd(1))`, with no equality. Minimum slack is `21` at
+  representative `38`; minimum ratio is `27/8` at the Paley representative
+  `85298`, with `(H,E_even,E_odd)=(189,8,56)`. This corrects THM-1950's
+  sampled `4.22` and monotone-margin inference. Primary script/output SHA-256:
+  `4d6efb8a7db92dba74429fd472697046bcff7a57b66ed18118a908238f2f2a71` /
+  `30e68764683f94a19e10b604e21c4bacfec9aedd1ebefe58b8f38f4944577bc6`;
+  independent script/output/semantic:
+  `af0ab20c3cf31c9065c17dc5eb9b7d13be745d362423233748cf20f77ef22e82` /
+  `4ad351682da0ae0b2a71e54698530337a23f95684dfc1308ff23944835d62e91` /
+  `ef45816e64458457a1b5045c599dd08475e3304a177482de21c1c1f5b61ed350`.
+
 - `jc2_max7_hidden_elliptic_tail_thm4045.py` and independent audit ->
   matching `.out`s [THM-4045 PROVED + VERIFIED-EXACT + INDEPENDENTLY
   AUDITED; JC(2) OPEN]. On the live reduced `(2,3)` seam `b=d=0`, the

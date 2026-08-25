@@ -9,6 +9,28 @@ Format per entry:
 - Why it was wrong
 - The correct framing
 
+## MISTAKE-491 (2026-08-24, THM-1950 order-seven strong-base margin) -- a sampled extremum missed the Paley class
+
+- **What failed:** THM-1950 tested 6,387 labelled strong tournaments of order
+  seven, reported a minimum ratio
+  `H/max(E_even,E_odd(1))` near `4.22`, and used the observed sequence to say
+  that the strong base had increasing room.
+- **Minimal witness / first failed implication:** the order-seven Paley
+  tournament has `(H,E_even,E_odd(1))=(189,8,56)`, hence ratio
+  `189/56=27/8=3.375<4.22`. The first failed implication was
+  `minimum of a nonuniform labelled sample => minimum over isomorphism
+  classes`; the second was `short finite trend => monotone margin`.
+- **Repair / strongest survivor:** THM-4051 exhausts the complete 456-class
+  order-seven universe, detects exactly 353 strong classes, and verifies the
+  inequality on all of them with no equality. The minimum additive slack is
+  `21`, while the exact minimum ratio is `27/8` at Paley. Thus the base is
+  proved through order seven, but its all-order form and any monotone margin
+  remain open.
+- **Reusable rule:** sampled extrema are evidence, never quotient-complete
+  bounds. Before extrapolating a margin, exhaust the unlabeled universe when
+  feasible and include high-symmetry regular/Paley objects as hostile
+  controls.
+
 ## MISTAKE-490 (2026-08-24, THM-4049 physical projection scope) -- an unexecuted huge finite box was called an absent bound, and parity was dropped from the target
 
 - **What failed:** the THM-4049 discovery report and first promotion said no

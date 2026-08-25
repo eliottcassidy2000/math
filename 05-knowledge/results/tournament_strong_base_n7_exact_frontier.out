@@ -1,0 +1,11 @@
+TOURNAMENT STRONG-BASE ORDER-SEVEN EXACT FRONTIER
+status=FINITE-EXACT; all-order H>=disc remains OPEN
+universe=THM1370_canonical_order7_reps;classes=456;strong=353
+method=Hamiltonian_subset_DP+Bareiss+Fraction_inverse;converse_checks=456
+strong_equalities=()
+minimum_strong_slack=21;rep=38;H=25;Eeven=2;Eodd=4
+minimum_strong_ratio=27/8;rep=85298;H=189;Eeven=8;Eodd=56
+strong_response_range=2/3..7;min_rep=299;max_rep=17976
+paley7_control=strong:True,H:189,Eeven:8,Eodd:56,response:7
+semantic_digest=ef45816e64458457a1b5045c599dd08475e3304a177482de21c1c1f5b61ed350
+RESULT=PASS

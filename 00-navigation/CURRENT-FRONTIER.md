@@ -247,6 +247,9 @@ THM-2070 refutes the general HYP-8890/8895 bypasses.  Transfer
   FINITE-EXACT: the first quotient hostile is at `n=6`: two strong switched
   representatives share `H=29`, `disc=2`, but rooted odd energies are `6,4`;
   covariant root transport restores equality.
+- [THM-4051](../01-canon/theorems/THM-4051-tournament-order-seven-strong-base-exact-frontier.md)
+  closes all 353 strong order-seven classes; Paley gives minimum ratio `27/8`,
+  not sampled `4.22`. All-order remains open.
 - THM-3315/3322/3324 compile switched walks, moments, joins and response Gram.
   THM-3359/3364 give periodic/cyclotomic `T4`; THM-3379 its Fibonacci median
   quotient. THM-3369/3372/3377 give skew/deletion currents; THM-3380 locates

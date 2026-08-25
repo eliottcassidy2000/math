@@ -10,10 +10,11 @@ status: >
     - kernel inequality max(1,x)max(1,y) ≥ max(1+xy,x+y)/2: proved by 3 cases, 500k-sample slack ≥ 0.
     - the invariant statement H(T) ≥ P(T)=max(1,s(T))·disc(T): exhaustive n≤6 (all 2^{C(n,2)}).
   (2) THE RESIDUAL BASE (open, the whole remaining content): for strongly connected C,
-    H(C) ≥ max(1,s(C))·disc(C).  Verified exhaustively n ≤ 6 (2,24,544,22320 strong labelled;
-    0 violations) + strong samples n=7 (6387/6387).  Tight only at C₃ (H=3, s=3, disc=1 ⟹
-    max(1,s)disc=3); ratio H/(max(1,s)disc) grows (1, 1.67, 1.875, 3.75, 4.22 at n=3..7), so the
-    base has increasing room — strongly evidenced, not proved.  Note s(C)≥1 FAILS for strong C at
+    H(C) ≥ max(1,s(C))·disc(C). Verified exhaustively through n=7: n≤6 on labelled
+    tournaments and n=7 on all 353 strong isomorphism classes (THM-4051), with 0 violations.
+    Tight only at C₃ (H=3, s=3, disc=1 ⟹ max(1,s)disc=3). The former sampled n=7
+    minimum ratio 4.22 and monotone-growth inference are SUPERSEDED: the exact minimum is
+    27/8 at the Paley tournament, so no monotonic margin claim is licensed. Note s(C)≥1 FAILS for strong C at
     n≥7 (min s = 0.667,0.556 at n=7,8), which is exactly why the base must carry the max(1,·) and
     the kernel is the two-sided max-inequality, not the naive ∏sᵢ bound.
   (3) So this is "H ≥ disc reduced to strongly-connected", NOT "H ≥ disc proved" — the exact
@@ -107,6 +108,13 @@ strong base `c₃ ≤ H`: a strongly-connected tournament is vertex-pancyclic (M
 Hamiltonian paths, so `H` is large where `disc` (bounded by `∏(1+μ_j²)/2^{n−1}` with the fixed
 energy `Σμ_j² = C(n,2)`) is small. A likely route: bound `s·disc` by a Hamiltonian-path injection,
 or an eigenvalue-product argument on the strong spectrum (Perron + the isotropic pairs, THM-1858).
+
+**Exact order-seven correction (THM-4051).** The complete 456-class quotient
+universe contains 353 strong classes, all satisfying the base strictly. Its
+minimum additive slack is `21`, but its minimum ratio is `27/8`, attained by
+the regular Paley tournament with `(H,disc,s·disc)=(189,8,56)`. The old
+sampled value near `4.22` missed this hostile symmetry class; in particular,
+the finite minima do not justify a monotone-growth claim.
 
 ## Why this matters
 
