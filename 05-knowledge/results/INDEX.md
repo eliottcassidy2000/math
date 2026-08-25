@@ -1,5 +1,20 @@
 # Script Results Index
 
+- `jc2_exceptional_affine_simple_zero_retained_packet_thm4054.py` and
+  independent array audit -> matching `.out`s [THM-4054 PROVED +
+  VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED in a finite/local scope;
+  `JC(2)` OPEN]. For `H=t` and `H=t+t^2`, the complete cutoff-five arbitrary
+  and polynomial-exact two-form images separately coincide at rank `59/63`
+  and contain the constant packet, although the two source images differ.
+  Fixed `F=a` for `H=t+t^2` first fails at cutoff five with a nonzero
+  quartic-field response, while the full mixed first-order tangent contains
+  `-24t`. Primary script/output SHA-256:
+  `1e84ce5674c74c8b2d504fe8f57341be86ab20e1eab5c8fafe7494bb52d488a2` /
+  `55a78d9bdff23d85058acff9a20e2903c801512bc68f90b2bdc3b1dfdb731005`;
+  independent script/output:
+  `cc12c81d8e4d614fbdc0146035cabc0c82b8a64c25ba53f0d9a27f969210b41d` /
+  `96b2cf4ad92128c377876c193d16a2bc118edb741a13d4e9df01fe0937c26fed`.
+
 - `jc2_weight8_complete_lower_model_thm4053.py` and independent direct-plane
   audit -> matching `.out`s [THM-4053 PROVED + VERIFIED-EXACT + INDEPENDENTLY
   AUDITED on the live `b=d=0` reduced `(2,3)` seam; JC(2) OPEN]. At exact

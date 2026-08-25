@@ -356,21 +356,16 @@ or residue follows.
   `131199`-field file is a named finite population, not a world census.
 - **Jacobian/Dixmier:** `JC(2),DC(2)` remain **OPEN**; THM-3543--3991 close
   named cells only. THM-3992/3997 reduce the first live `2:3` cell to
-  `R in (p^2,y)`, force `[p^2]R!=0`, and exclude `R=0`; THM-3994/3996/3999
-  retain the multiplicity, address, and boundary sidecars. THM-4005 excludes
-  live `3x4/4x3`; THM-4007/4008 constrain fixed-gauge `5x5` on `b=d=0` and
-  exclude pure `p`. THM-4016's nontorsion point does not attach (THM-4017).
-  THM-4012/4045 exclude `M=6,7`.
-  [THM-4053](../01-canon/theorems/THM-4053-jc2-live-max-eight-trichotomy-and-eisenstein-survivor.md)
-  kills off-wall `p^4`/two-term weight eight; `p*y^2` has a norm-degree gate.
-  Three walls remain. THM-4044 first aliases on `P^2K[P]` at
-  `P^2(P^60-1)^k`, degree `60k+2`; it needs a second jet or degree cap.
-  In the Russell exceptional-quartic lane, THM-3703/3737 give the rank-18
-  grammar and lift/kernel; THM-4034 gives the degree-178 conductor and three
-  lost cotangent lines. THM-4039 reaches `J_3`, THM-4043 reaches `J_6`, and
-  [THM-4046](../01-canon/theorems/THM-4046-exceptional-quartic-j7-lift-and-j8-obstruction.md)
-  reaches `J_7`, obstructs `J_8`, and closes every `0!=H in t^2 C[t]` over
-  the four exceptional folds. Other cells, global entry, and `JC(2)` stay open.
+  `R in (p^2,y)`; THM-4005 excludes live `3x4/4x3`; THM-4012/4045 exclude
+  `M=6,7`. THM-4053 kills off-wall `p^4`/two-term weight eight and gives a
+  norm-degree gate for `p*y^2`; three walls remain. THM-4044's sixty-clock
+  alias still needs a second jet or degree cap.
+  In the exceptional-quartic lane, THM-3703/3737 give the grammar/image and
+  THM-4034 the conductor. THM-4039/4043/4046 reach `J_7`, obstruct `J_8`,
+  and close `0!=H in t^2 C[t]`. [THM-4054](../01-canon/theorems/THM-4054-exceptional-affine-simple-zero-retained-packet.md)
+  treats the simple-zero boundary: exact forms saturate the cutoff-five
+  packet, fixed `a` fails there, but its mixed first-order tangent survives.
+  This is finite/local; other cells, global entry/pairs, and `JC(2)` stay open.
 - **Weyl boundary:** THM-2049 gives a formal beta-adic lift; finite termination remains.
 - **Planar source fibres:** THM-2063/THM-2084--2480 (including
   THM-2371/THM-2376) close the named
