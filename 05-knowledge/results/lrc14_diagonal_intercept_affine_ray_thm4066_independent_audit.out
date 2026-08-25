@@ -1,0 +1,15 @@
+LRC14_DIAGONAL_INTERCEPT_AFFINE_RAY_THM4066_INDEPENDENT_AUDIT
+path=affine_centres_to_real_intersections_to_circle_projection
+d3_real_intervals ((Fraction(-1, 14), Fraction(-11, 168)), (Fraction(11, 168), Fraction(1, 14)))
+d3_projected ((Fraction(11, 56), Fraction(3, 14)), (Fraction(11, 14), Fraction(45, 56))) width 1/56 measure 1/28
+d4_real_intervals ((Fraction(3, 14), Fraction(11, 49)), (Fraction(27, 98), Fraction(2, 7)), (Fraction(5, 7), Fraction(71, 98)), (Fraction(38, 49), Fraction(11, 14)))
+d4_projected ((Fraction(5, 49), Fraction(1, 7)), (Fraction(6, 7), Fraction(44, 49))) width 2/49 measure 4/49
+formal_label_conjugacy_checks 144
+endpoint_words ((3, Fraction(11, 56), ((0,), (), (1,))), (3, Fraction(3, 14), ((), (2,), (1,))), (3, Fraction(11, 14), ((), (0,), (1,))), (3, Fraction(45, 56), ((2,), (), (1,))), (4, Fraction(5, 49), ((0, 2), (), (3,))), (4, Fraction(1, 7), ((), (1,), ())), (4, Fraction(6, 7), ((), (2,), ())), (4, Fraction(44, 49), ((1, 3), (), (0,))))
+nonunit_components ((Fraction(0, 1), Fraction(1, 14)), (Fraction(13, 70), Fraction(3, 14)), (Fraction(13, 56), Fraction(15, 56)), (Fraction(27, 70), Fraction(29, 70)), (Fraction(27, 56), Fraction(29, 56)), (Fraction(41, 70), Fraction(43, 70)), (Fraction(41, 56), Fraction(43, 56)), (Fraction(11, 14), Fraction(57, 70)), (Fraction(13, 14), Fraction(1, 1)))
+nonunit_measure 51/140 false_pullback_measure 1/28
+runner_counts=d3:13,d4:13;stationary_runner_makes_LRC14
+d3_threshold=24h>=11M;gain=24/5;witness=1/33
+d4_threshold=21h>=22M;gain=14/9;witness=1/44
+checks 207
+RESULT=PASS

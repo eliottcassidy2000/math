@@ -1,0 +1,15 @@
+LRC14_DIAGONAL_INTERCEPT_AFFINE_RAY_THM4066
+scope=LRC14_OPEN;exact_affine_ray_families_only
+pullback=h*D_hdelta(y)=D_delta(hy);gcd(h,d)=1
+d2_control_components ((Fraction(13, 35), Fraction(8, 21)), (Fraction(13, 21), Fraction(22, 35))) width 1/105 measure 2/105
+d3_components ((Fraction(11, 56), Fraction(3, 14)), (Fraction(11, 14), Fraction(45, 56))) width 1/56 measure 1/28
+d3_scaled=2h_components_width_1/(56h);closure=24h>=11M
+d4_components ((Fraction(5, 49), Fraction(1, 7)), (Fraction(6, 7), Fraction(44, 49))) width 2/49 measure 4/49
+d4_scaled=2h_components_width_2/(49h);closure=21h>=22M
+endpoint_checks 12 strict_leaks_closed_covers
+nonunit_h3_measure 51/140 false_pullback 1/28
+phase_label_conjugacy_checks 63200
+d3_gain_factor=24/5;example_witness=1/33;clearance=1/11
+d4_gain_factor=14/9;example_witness=1/44;clearance=1/11
+checks 63282
+RESULT=PASS
