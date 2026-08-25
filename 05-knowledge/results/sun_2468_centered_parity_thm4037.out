@@ -1,0 +1,6 @@
+polynomial_checks=2196
+modular_lane_checks=185308
+m=3 distinguished=0 odd_targets=[0] minimum_v2=0
+m=11 distinguished=10 odd_targets=[10] minimum_v2=0
+m=33 distinguished=21 odd_targets=[21] minimum_v2=0
+all_checks=PASS

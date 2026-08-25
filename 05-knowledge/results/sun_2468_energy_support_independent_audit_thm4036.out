@@ -1,0 +1,24 @@
+STRICTNESS_AND_DIVISOR_BOUND
+d=2;L=2;zero_boundary_gq=(2, 5, 9, 14, 20);strict=PASS;R_bound_h1_5000=PASS;tightest=(5, 2, 4)
+d=4;L=3;zero_boundary_gq=(1, 5, 15, 35, 70);strict=PASS;R_bound_h1_5000=PASS;tightest=(1, 1, 8)
+d=6;L=5;zero_boundary_gq=(1, 7, 28, 84, 210);strict=PASS;R_bound_h1_5000=PASS;tightest=(1, 1, 30)
+d=8;L=7;zero_boundary_gq=(1, 9, 45, 165, 495);strict=PASS;R_bound_h1_5000=PASS;tightest=(1, 1, 96)
+peel=(6, 8);X=50;E=16;diag=14;offdiag=2;tail_B=4;tail_E=4;ordered_tail_offdiag=12;decomposition=PASS
+peel=(4, 6, 8);X=50;E=108;diag=70;offdiag=38;tail_B=14;tail_E=16;ordered_tail_offdiag=180;decomposition=PASS
+peel=(2, 4, 6, 8);X=50;E=3049;diag=677;offdiag=2372;tail_B=60;tail_E=108;ordered_tail_offdiag=3492;decomposition=PASS
+peel=(6, 8);X=200;E=26;diag=24;offdiag=2;tail_B=5;tail_E=5;ordered_tail_offdiag=20;decomposition=PASS
+peel=(4, 6, 8);X=200;E=242;diag=166;offdiag=76;tail_B=24;tail_E=26;ordered_tail_offdiag=550;decomposition=PASS
+peel=(2, 4, 6, 8);X=200;E=24620;diag=3454;offdiag=21166;tail_B=152;tail_E=242;ordered_tail_offdiag=22862;decomposition=PASS
+peel=(6, 8);X=1000;E=48;diag=46;offdiag=2;tail_B=6;tail_E=6;ordered_tail_offdiag=30;decomposition=PASS
+peel=(4, 6, 8);X=1000;E=765;diag=481;offdiag=284;tail_B=46;tail_E=48;ordered_tail_offdiag=2068;decomposition=PASS
+peel=(2, 4, 6, 8);X=1000;E=243547;diag=24949;offdiag=218598;tail_B=459;tail_E=765;ordered_tail_offdiag=209916;decomposition=PASS
+FIXED_AP_CAUCHY_SCHWARZ
+q=1;all_classes_exact_CS=PASS
+q=2;all_classes_exact_CS=PASS
+q=3;all_classes_exact_CS=PASS
+q=4;all_classes_exact_CS=PASS
+q=5;all_classes_exact_CS=PASS
+q=6;all_classes_exact_CS=PASS
+q=7;all_classes_exact_CS=PASS
+q=8;all_classes_exact_CS=PASS
+RESULT=PASS
