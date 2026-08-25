@@ -22,6 +22,7 @@ related:
   - THM-115
   - THM-520
   - THM-4097
+  - THM-4102
 ---
 
 # HYP-2879: strong H-atoms grow by labelled ears with an exact cut polynomial

@@ -5,6 +5,7 @@ scripts/*.ps1 text eol=crlf
 # Keep their checkout bytes invariant even when core.autocrlf is enabled.
 *.py text eol=lf
 *.out text eol=lf
+*.tsv text eol=lf
 *.md text eol=lf
 *.lean text eol=lf
 04-computation/ak_strict_saturated_2x3_thm3903/ladder_modular_exhaust.cpp text eol=lf

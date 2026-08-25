@@ -5,9 +5,9 @@ status: >
   OPEN ALL-ORDER TILING LAW. THM-4097 promotes the complete order-nine strong
   spectrum and the exact coverage prefix: strong(7)>=[65,105],
   strong(8)>=[69,609], strong(9)>=[85,2881], so every odd in [65,2881]
-  has a strong witness and every allowed odd through 2885 is globally
-  realized. The next interval, order ten, and global continuation remain
-  open.
+  has a strong witness. THM-4102 adds a selected order-ten interval
+  [249,14649], proving every allowed odd through 14655 globally realized.
+  The complete order-ten image and global continuation remain open.
 source: kind-pasteur-2026-07-26-S134
 related:
   - THM-1370-h-spectrum-omits-7-21-all-n
@@ -15,6 +15,7 @@ related:
   - THM-1936-signed-redei-join-multiplicative
   - HYP-9028-circulant-hamiltonian-excess-tends-to-e
   - THM-4097-order-nine-strong-ear-spectrum-solid-interval-and-lane-extension
+  - THM-4102-selected-order-ten-strong-ear-solid-interval
 script: 04-computation/strong_h_spectrum_intervals_kps_S134.py
 output: 05-knowledge/results/strong_h_spectrum_intervals_kps_S134.out
 data: 05-knowledge/results/strong_H_spectrum_m9_values_kps_S134.out
@@ -24,9 +25,10 @@ data: 05-knowledge/results/strong_H_spectrum_m9_values_kps_S134.out
 
 The H-spectrum's gap half is PROVED (`{7,21}` forbidden); the completeness
 half ("every other odd occurs") is THM-1370's standing conjecture. THM-4097
-now proves exact global coverage through `2885`, with `2887` the first target
-not forced by the known finite strong values and multiplication. Canon already
-reduces completeness to strong tournaments
+proves exact global coverage through `2885`; THM-4102's selected order-ten
+bank extends it through `14655`, with `14657` the first target not forced by
+the current finite strong values and multiplication. Canon already reduces
+completeness to strong tournaments
 (spectrum = multiplicative closure of strong H-values, THM-1862/
 THM-1936, machine-checked). This hypothesis records the missing
 structural mechanism, sitting unremarked in the exhaustive censuses:
@@ -72,6 +74,11 @@ and `h` is an integral zero-sum orientation field. At `8->9`, cut weights
 `{3,4}` generate the entire 1,482-value strong spectrum, while `w=4` alone
 misses exactly `89,93,105,125`. Any all-order surgery must control the field,
 not merely the cut energy.
+
+THM-4102 confirms that a deterministic one-witness-per-value order-nine bank
+already tiles the much longer odd interval `[249,14649]` at order ten. This is
+a selected image rather than a complete order-ten census, so it supports but
+does not prove the all-order tiling law.
 
 Independent-path note (same session): a LABELED brute-force
 enumeration (2^28 tournaments, different algorithm from monad's
