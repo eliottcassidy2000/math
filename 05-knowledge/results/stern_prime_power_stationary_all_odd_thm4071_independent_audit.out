@@ -1,0 +1,32 @@
+THM-4071 independent exact audit
+method=Euclid_depth;direct_star;generic_Phi_division;p_adic_Morse;tuple_CRT
+arithmetic=integer/cyclotomic_coefficients;floats=False;asserts=False
+
+depth_packet_rows=49 nonsquarefree_rows=36
+depth_packet_digest=2144bc407a397372bd39e124ea2f3da778e7919b0cd65b0a0b4779d7ef0aafb3
+p3_a2=(q,S,B,N)=(9,-2,0,1)
+
+direct_lift_layers=20 direct_lift_fibers=2288
+p3_a2_lift_words=(('+', '-', '-'), ('-', '-', '+'), {-1: 2})
+first_full_direct_correlation=(3, 3, (4, 7, (-1, -1, -1)))
+noncontractive_x1=C_p(0,-1)=2-p verified_on_every_layer
+
+generic cyclotomic stationary audit
+  p=3 a=1 q=3 categories={'origin': 1, 'prime-residual': 8}
+  p=3 a=2 q=9 categories={'derivative-unit-zero': 36, 'no-critical-class': 18, 'origin': 1, 'prime-residual': 8, 'two-critical-classes': 18}
+  p=3 a=3 q=27 categories={'derivative-unit-zero': 360, 'no-critical-class': 180, 'origin': 1, 'prime-residual': 8, 'two-critical-classes': 180}
+  p=3 a=4 q=81 categories={'derivative-unit-zero': 3276, 'no-critical-class': 1638, 'origin': 1, 'prime-residual': 8, 'two-critical-classes': 1638}
+  p=5 a=2 q=25 categories={'derivative-unit-zero': 200, 'no-critical-class': 200, 'origin': 1, 'prime-residual': 24, 'two-critical-classes': 200}
+  p=5 a=3 q=125 categories={'derivative-unit-zero': 5200, 'no-critical-class': 5200, 'origin': 1, 'prime-residual': 24, 'two-critical-classes': 5200}
+  p=7 a=2 q=49 categories={'derivative-unit-zero': 588, 'no-critical-class': 882, 'origin': 1, 'prime-residual': 48, 'two-critical-classes': 882}
+  p=11 a=2 q=121 categories={'derivative-unit-zero': 2420, 'no-critical-class': 6050, 'origin': 1, 'prime-residual': 120, 'two-critical-classes': 6050}
+q9_degenerates=origin=6;primitive_axis=0;residual_axis=-3;nonsquare=0;stationary=PASS
+spectral_pairs=40672 generic_Gauss_checks=80
+
+mixed_tuple_CRT q=45 blocks=(9, 5) pairs=2025 flux=-1 digest=2dd7652f649c0f7643baa3a6c34834bf7ace4a79c21abe1ecfeb3b5b6d63b7ab
+mixed_tuple_CRT q=63 blocks=(9, 7) pairs=3969 flux=-1 digest=52cd5b2a58800e38d306d296abdacac9622a92b8aded15973ab55a6b7c46faf3
+mixed_tuple_CRT q=75 blocks=(3, 25) pairs=5625 flux=-1 digest=6a9892bce42da5d6525165a2961868a6ec3fca12efef854126c8e5a046105bed
+mixed_tuple_CRT q=225 blocks=(9, 25) pairs=50625 flux=-1 digest=5b019e6764b2da82537b3888b075383bcb2fd18d5d2d13276125630fcd01046f
+mixed_tuple_CRT_pairs=62244
+
+PASS: independent THM-4071 construction agrees

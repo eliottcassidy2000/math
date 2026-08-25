@@ -1,0 +1,67 @@
+THM-4071 primary exact audit
+method=inverse_parity;affine_lift;stationary_cyclotomic;block_CRT
+arithmetic=integer/GF(2)/cyclotomic_coefficients;floats=False;asserts=False
+
+prime-power packets (a:q:S:B)
+  p=3 1:3:+2:+2,2:9:-2:+0,3:27:+2:+2,4:81:-18:-16,5:243:+2:-14,6:729:-50:-64,7:2187:-30:-94,8:6561:-146:-240,9:19683:+18:-222,10:59049:-546:-768,11:177147:+658:-110
+  p=5 1:5:+0:+0,2:25:-8:-8,3:125:-8:-16,4:625:-64:-80,5:3125:-8:-88,6:15625:+24:-64,7:78125:-280:-344,8:390625:-1392:-1736
+  p=7 1:7:+6:+6,2:49:-14:-8,3:343:-10:-18,4:2401:-126:-144,5:16807:+310:+166,6:117649:-1102:-936
+  p=11 1:11:+2:+2,2:121:-18:-16,3:1331:+82:+66,4:14641:-178:-112,5:161051:-94:-206
+  p=13 1:13:+0:+0,2:169:-40:-40,3:2197:+144:+104,4:28561:-128:-24,5:371293:+632:+608
+  p=17 1:17:-4:-4,2:289:-36:-40,3:4913:-244:-284,4:83521:-1164:-1448
+  p=19 1:19:+10:+10,2:361:-58:-48,3:6859:+138:+90,4:130321:-186:-96
+  p=23 1:23:-2:-2,2:529:-54:-56,3:12167:-18:-74,4:279841:-1830:-1904
+  p=29 1:29:-8:-8,2:841:+48:+40,3:24389:+64:+104
+  p=31 1:31:+22:+22,2:961:-46:-24,3:29791:-90:-114
+  p=37 1:37:+8:+8,2:1369:-32:-24,3:50653:+400:+376
+  p=41 1:41:+4:+4,2:1681:-148:-144,3:68921:+140:-4
+  p=43 1:43:+2:+2,2:1849:-226:-224,3:79507:-398:-622
+  p=47 1:47:+14:+14,2:2209:-230:-216,3:103823:-130:-346
+  p=53 1:53:-8:-8,2:2809:-160:-168,3:148877:+984:+816
+  p=59 1:59:-6:-6,2:3481:-106:-112,3:205379:-470:-582
+  p=61 1:61:+0:+0,2:3721:-136:-136,3:226981:+1168:+1032
+  p=67 1:67:+26:+26,2:4489:-234:-208,3:300763:-550:-758
+  p=71 1:71:+14:+14,2:5041:-294:-280,3:357911:-450:-730
+  p=73 1:73:+4:+4,2:5329:-156:-152,3:389017:-540:-692
+  p=79 1:79:+14:+14,2:6241:-294:-280
+  p=83 1:83:+2:+2,2:6889:-194:-192
+  p=89 1:89:-4:-4,2:7921:-396:-400
+  p=97 1:97:-12:-12,2:9409:-228:-240
+  p=101 1:101:+8:+8,2:10201:-96:-88
+packet_rows=93 nonsquarefree_rows=68 largest_q=390625
+max_absS_squared_over_q=(Fraction(51076, 1849), (43, 2, 1849, -226))
+
+affine lift audit
+  p=3 1->2 C_hist={-1: 2}
+  p=3 2->3 C_hist={-1: 6}
+  p=3 3->4 C_hist={-1: 6, 3: 12}
+  p=5 1->2 C_hist={-3: 2, 1: 2}
+  p=5 2->3 C_hist={-3: 14, 1: 4, 5: 2}
+  p=5 3->4 C_hist={-3: 22, 1: 54, 5: 24}
+  p=7 1->2 C_hist={-5: 2, -1: 4}
+  p=7 2->3 C_hist={-5: 6, -1: 28, 3: 8}
+  p=7 3->4 C_hist={-5: 18, -1: 176, 3: 72, 7: 28}
+lift_layers=34 lift_fibers=47872
+p3_a2_hostile=({-1: 2}, {-1: (1, 1, 0, 0, 2)})
+first_actual_full_affine_correlation=(3, 3, (4, 7, 1, 2, 2))
+
+prime-power Kloosterman stationary audit
+  p=3 a=1 q=3 categories={'origin': 1, 'prime-residual': 8}
+  p=3 a=2 q=9 categories={'nonresidue-vanishing': 18, 'one-unit-vanishing': 36, 'origin': 1, 'prime-residual': 8, 'stationary-square': 18}
+  p=3 a=3 q=27 categories={'nonresidue-vanishing': 180, 'one-unit-vanishing': 360, 'origin': 1, 'prime-residual': 8, 'stationary-square': 180}
+  p=3 a=4 q=81 categories={'nonresidue-vanishing': 1638, 'one-unit-vanishing': 3276, 'origin': 1, 'prime-residual': 8, 'stationary-square': 1638}
+  p=5 a=2 q=25 categories={'nonresidue-vanishing': 200, 'one-unit-vanishing': 200, 'origin': 1, 'prime-residual': 24, 'stationary-square': 200}
+  p=5 a=3 q=125 categories={'nonresidue-vanishing': 5200, 'one-unit-vanishing': 5200, 'origin': 1, 'prime-residual': 24, 'stationary-square': 5200}
+  p=7 a=2 q=49 categories={'nonresidue-vanishing': 882, 'one-unit-vanishing': 588, 'origin': 1, 'prime-residual': 48, 'stationary-square': 882}
+  p=11 a=2 q=121 categories={'nonresidue-vanishing': 6050, 'one-unit-vanishing': 2420, 'origin': 1, 'prime-residual': 120, 'stationary-square': 6050}
+kloosterman_pairs=40672 gauss_norm_checks=90
+
+CRT parity plaquettes=56 all_flux=-1
+nonmultiplicative_hostile=S3*S5=0 S15=8
+  mixed_block_CRT q=45 blocks=(9, 5) pairs=2025
+  mixed_block_CRT q=63 blocks=(9, 7) pairs=3969
+  mixed_block_CRT q=75 blocks=(3, 25) pairs=5625
+  mixed_block_CRT q=225 blocks=(9, 25) pairs=50625
+mixed_block_CRT_pairs=62244
+
+PASS: THM-4071 exact controls verified

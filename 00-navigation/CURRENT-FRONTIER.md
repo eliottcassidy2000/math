@@ -230,8 +230,10 @@ THM-2070 refutes the general HYP-8890/8895 bypasses.  Transfer
   tournaments. [THM-3509](../01-canon/theorems/THM-3509-reduced-fraction-harmonic-k4-face-and-fibonacci-unit-cassini-ray.md):
   `4/6/3` K4 carriers; matching loses Cassini sign. THM-3497: ancestry
   densities. THM-4057 separates coprime arcs, Pell/Fibonacci depth gauge, and
-  Calkin--Wilf Berggren radix. THM-4059 gives inverse-depth/divisor stars;
-  THM-4061 proves prime-apex balance; [THM-4068](../01-canon/theorems/THM-4068-squarefree-stern-packet-and-tournament-apex-balance.md) gives `|S(q)|,|B(q)|<=q^(1/2+o(1))` for odd squarefree `q`: the CRT kernel factors, parity does not, and nonsquarefree moduli stay open.
+  Calkin--Wilf Berggren radix. THM-4059/4061/4068 give Stern stars and
+  prime/squarefree bounds. [THM-4071](../01-canon/theorems/THM-4071-stern-prime-power-stationary-phase-and-all-odd-apex-balance.md)
+  proves `|K_(p^a)(h,k)|<=2sqrt(p^a gcd(h,k,p^a))` and all-odd
+  `|S(q)|,|B(q)|<=q^(1/2+o(1))`; the kernel factors, parity and `S` do not.
 - THM-3457/3462: `25/477`.
 - THM-1926 factors zeta over the strong core; THM-1940 gives `var(lambda^2)`.
 - THM-1965 stops at `n<=6`; THM-1966 adds a signed-Rédei coordinate at `n=7`.

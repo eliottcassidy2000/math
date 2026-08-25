@@ -54,8 +54,8 @@ Then read the routed frontier, guardrails, and theorem. Logs and reflections are
    normal atlas has two middle completions but no outer co-support. A two-axis
    atom, current and LRC(14) remain OPEN.
 10. **Pair structure must be typed.** THM-3423 gives a graph, not a tournament;
-    THM-4068 gives Stern/apex square-root bounds for odd squarefree moduli, but
-    parity has CRT cross-ratio `-1` and prime powers remain open.
+    THM-4071 gives Stern/apex `q^(1/2+o(1))` bounds for every odd modulus via
+    prime-power stationary phase, but parity still has CRT cross-ratio `-1`.
 11. **Support is not multiplicity.** THM-2000/2005/2352/3359/3362/3382
     separate collision, phase and harmonic address. THM-3425 makes joint
     period plus parity the primitive half cap-six breaker. Composite rank

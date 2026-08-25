@@ -9,21 +9,20 @@
 
 - **Advanced anchor -- inverse-parity packet cancellation.** THM-4061 now
   proves the exact odd-modulus hyperbola identity `S(q)=4N(q)-phi(q)` and the
-  prime bound `S(p)=O(sqrt(p)log^2 p)` from Weil. THM-4068 extends this to
-  `|S(q)|<=q^(1/2+o(1))` for every odd squarefree `q` by exact CRT Kloosterman
-  factorization; parity itself is provably non-tensorial. Determine
-  prime-power and general nonsquarefree bounds, classify zero packets, and
-  decide whether the non-Euler-product Dirichlet series has global
-  cancellation. **ODD SQUAREFREE LANE PROVED; PRIME POWERS/GENERAL LANE OPEN.**
+  prime bound `S(p)=O(sqrt(p)log^2 p)` from Weil. THM-4068 supplies the
+  squarefree CRT bridge; THM-4071 proves the missing prime-power stationary
+  estimate and now gives `|S(q)|<=q^(1/2+o(1))` for **every odd `q`** while
+  parity remains non-tensorial. Classify zero packets, seek cancellation
+  beyond pointwise completion/two logarithms, and study the non-Euler-product
+  Dirichlet series. **ALL-ODD BALANCE LANE PROVED; ZERO/SHARP LANE OPEN.**
 - **Advanced niche -- depth-tournament score asymptotics.** THM-4061 proves
   that the normalized apex imbalance tends to zero along primes. THM-4059
   identifies the general lower star as `B(N)=sum_(q|N,q>1)S(q)` and the total
-  initial imbalance as `sum S(q)floor(X/q)`. THM-4068 now proves
-  `|B(N)|<=N^(1/2+o(1))` and normalized apex balance for every odd squarefree
-  `N`. Bound prime-power/general composite observables and compare them with
-  directed-triangle density without promoting a lower star to a full vertex
-  degree in a larger tournament. **ODD SQUAREFREE APEX PROVED; GENERAL
-  REMAINDER OPEN.**
+  initial imbalance as `sum S(q)floor(X/q)`. THM-4071 proves
+  `|B(N)|<=N^(1/2+o(1))` and normalized apex balance for every odd `N`.
+  Bound the total initial imbalance, test sharpness and directed-triangle
+  correlations, and do not promote a lower star to a full vertex degree in a
+  larger tournament. **ALL-ODD APEX PROVED; GLOBAL-SUM/SHARPNESS OPEN.**
 
 - **Anchor -- trace-pure `e+pi` recurrence audit.** Express every promising
   symmetric repo recurrence coefficient in `Q[S,P]`, `S=e+pi,P=e*pi`, and
