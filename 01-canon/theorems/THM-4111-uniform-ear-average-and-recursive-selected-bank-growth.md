@@ -1,24 +1,242 @@
 ---
 id: THM-4111
 title: "Uniform ear average and recursive selected-bank growth"
-status: RESERVED / UNPROVED EMPTY STUB
+status: >
+  RESERVED / PROVISIONAL PROOF CANDIDATE UNDER AUDIT. The claimed exact
+  all-cut sum is 2^(n-2)((n+3)H(T)+F_1(T)), where F_1 counts base orderings
+  with exactly one bad adjacency. If correct, its nonconstant-cut
+  specialization forces every recursively representative-selected strong-ear
+  bank to have unbounded image maxima. This does not prove overlap or
+  unbounded endpoints of solid intervals. No proved status or dependency is
+  asserted before independent audit.
 source: codex-frontier-synthesis-creative-20260825g
 depends_on: []
 related:
+  - THM-001-redei
   - THM-4097-order-nine-strong-ear-spectrum-solid-interval-and-lane-extension
   - THM-4099-squarefree-gap-transfer-and-mixed-insertion-boundary
   - THM-4102-selected-order-ten-strong-ear-solid-interval
   - THM-4104-selected-order-eleven-strong-ear-solid-interval
+script: 04-computation/tournament_uniform_ear_average_growth_thm4111.py
+output: 05-knowledge/results/tournament_uniform_ear_average_growth_thm4111.out
+script_sha256: a8f48ebd9f50123672e58062d918d98786a89806167a07a0f262f59f74ed4aba
+output_sha256: f00a58d8423ccb92a576b6ad5e6bfc997576d5564083dfb25bad721ede01fe82
+semantic_sha256: 0bb800d8caa1c1fd449657fb9f68a33842062ec4f3866f34488d9c8ea3251915
+hash_basis: raw LF bytes for files; canonical compact JSON for the semantic ledger
+audit: PENDING INDEPENDENT AUDIT; NO STATUS PROMOTION.
 ---
 
 # THM-4111 -- uniform ear average and recursive selected-bank growth
 
-**RESERVED / UNPROVED EMPTY STUB.**
+**RESERVED / PROVISIONAL PROOF CANDIDATE UNDER AUDIT.**
 
-No mathematical claim is established by this reservation. The intended
-candidate double-counts all cut-ear Hamiltonian paths against the zero- and
-one-defect word layers, then tests whether the resulting exact mean forces
-unbounded maxima in the recursive first-witness selected banks. Every formula,
-quantifier, strong-ear consequence, and claimed separation from solid-interval
-growth remains provisional until the proof, exact hostile controls,
-normal/optimized replay, and independent audit are frozen.
+This candidate isolates the part of THM-4104's open recursive-bank question
+that does not require another spectrum census. The proposed mechanism proves
+growth of the largest selected-image value by averaging the full labelled cut
+fibre. It does **not** prove that the long solid intervals overlap forever or
+that their right endpoints are unbounded.
+
+## 1. Zero- and one-defect deletion layers
+
+Let `T` be a tournament on a vertex set `V` of order `n>=2`. Write
+
+```text
+H(T)=#{directed Hamiltonian paths of T}.                       (1)
+```
+
+For an ordering `P=(v_1,...,v_n)` of `V`, put
+
+```text
+delta_T(P)=#{i:v_(i+1)->v_i},
+F_1(T)=#{P:delta_T(P)=1}.                                    (2)
+```
+
+Thus `F_1(T)` is exactly THM-4099's one-defect word layer before a
+new-vertex cut decides whether the unique defect is repaired.
+
+Adjoin a labelled vertex `x`. For every `S subseteq V`, let `T+x_S` have the
+old arcs of `T` and cut convention
+
+```text
+S={v:x->v}.                                                   (3)
+```
+
+> **Candidate Theorem 1.1 (uniform cut-ear sum).** For every tournament `T`
+> of order `n>=2`,
+>
+> ```text
+> sum_(S subseteq V) H(T+x_S)
+>   =2^(n-2)((n+3)H(T)+F_1(T)).                              (4)
+> ```
+
+### Proposed proof
+
+Sum the Hamiltonian paths of `T+x_S` over all `2^n` cuts and partition them by
+the position of `x`.
+
+If `x` is first, deleting it leaves a Hamiltonian path of `T`; its first old
+vertex must lie in `S`, leaving `2^(n-1)` choices of `S`. The last-position
+case is symmetric and also contributes `2^(n-1)H(T)`. The two endpoint cases
+therefore contribute `2^n H(T)`.
+
+If `x` is internal, deleting it exposes one adjacent pair of an ordering `P`
+of `V`; every other adjacency of `P` must be an arc of `T`. There are exactly
+two possibilities:
+
+1. `P` is a Hamiltonian path, and any of its `n-1` positions can be exposed;
+2. `P` lies in `F_1(T)`, and only its unique bad position can be exposed.
+
+For a fixed exposed ordered pair `(a,b)`, the path requires `a->x->b`, hence
+`a notin S` and `b in S`. The other `n-2` membership bits are free, so every
+such exposed word occurs for exactly `2^(n-2)` cuts. The internal contribution
+is consequently
+
+```text
+2^(n-2)((n-1)H(T)+F_1(T)).                                  (5)
+```
+
+Adding the endpoint term `2^n H(T)` gives `(4)`. The position of `x`, the
+deleted word, and its exposed position recover every counted object, so no two
+parts overlap. **QED, subject to audit.**
+
+The same calculation can be read through THM-4097's `(Start,End,Q)` boundary:
+the endpoint expectation is `H(T)`, while the symmetric total of `Q` is
+
+```text
+sum_(a!=b)Q_T(a,b)=(n-1)H(T)+F_1(T).                         (6)
+```
+
+This identifies the one-defect squarefree layer of THM-4099 as the exact
+surplus in the uniform ear average.
+
+## 2. Remove the two constant cuts
+
+For `S=empty` or `S=V`, the new vertex is respectively a sink or source and
+
+```text
+H(T+x_S)=H(T).                                               (7)
+```
+
+Subtracting these two terms from `(4)` gives the exact nonconstant mean
+
+```text
+A_nc(T)=
+ [ (2^n(n+3)-8)H(T)+2^n F_1(T) ] / [4(2^n-2)].              (8)
+```
+
+Since `n>=2`, the all-cut mean is
+
+```text
+((n+3)H(T)+F_1(T))/4 > H(T),                                (9)
+```
+
+so removing the two constant values only increases the mean. Therefore
+
+```text
+max_(empty!=S!=V) H(T+x_S) >= (n+3)H(T)/4.                  (10)
+```
+
+Every Hamiltonian-path count is odd by THM-001, so if `oddceil(q)` denotes
+the least odd integer at least `q`, `(8)` also gives
+
+```text
+max_(empty!=S!=V) H(T+x_S) >= oddceil(A_nc(T))
+                              >= oddceil((n+3)H(T)/4).       (11)
+```
+
+## 3. Selection-robust recursive growth
+
+Start at any order `n_0>=3` with a nonempty finite bank `B_(n_0)` of strong
+tournaments. Recursively form the full value image
+
+```text
+V_(n+1)={H(T+x_S):T in B_n, empty!=S!=V(T)},                (12)
+```
+
+and let `B_(n+1)` contain an arbitrary one strong witness for each value in
+`V_(n+1)`. This includes deterministic first-labelled-witness selection but
+does not depend on that choice. Nonconstant ears over a strong parent are
+strong: `x` has both an in-neighbor and an out-neighbor, and strongness of the
+parent supplies paths in both directions to every old vertex.
+
+Put
+
+```text
+M_n=max{H(T):T in B_n}.                                     (13)
+```
+
+Choose any `T_n in B_n` with `H(T_n)=M_n`. Equations `(10)--(12)` imply
+
+```text
+M_(n+1) >= (n+3)M_n/4.                                     (14)
+```
+
+Iteration gives, for every `m>n_0`,
+
+```text
+M_m >= M_(n_0) (m+2)! / ((n_0+2)! 4^(m-n_0)).              (15)
+```
+
+The right side tends to infinity. Thus no recursive representative-selection
+rule can keep the selected-image maxima bounded.
+
+For the frozen banks in THM-4097/4102/4104, `(11)` gives the theorem-forced
+rows
+
+| parent order | parent maximum | forced next maximum | observed next maximum |
+|---:|---:|---:|---:|
+| `9` | `3,357` | `10,071` | `15,621` |
+| `10` | `15,621` | `50,769` | `93,751` |
+
+The excess beyond the forced column is finite-exact information from the
+selected banks, not a consequence of the average alone.
+
+## 4. Sharp hostile and scope
+
+Let `T=C3`. Then
+
+```text
+H(T)=3, F_1(T)=0,                                           (16)
+```
+
+and the six nonconstant ears all have Hamiltonian-path count `5`. Hence the
+one-defect surplus can vanish even for a strong parent, and the tempting
+uniform strengthening
+
+```text
+max H(T+x_S) >= (n+4)H(T)/4                                (17)
+```
+
+already fails because `5<21/4`. This is the minimal strong hostile.
+
+The proposed result proves unbounded **image maxima**. A maximum may be
+isolated. It proves none of the following:
+
+- overlap of the recursive solid intervals;
+- unbounded right endpoints of those solid intervals;
+- a complete order-`n` spectrum at any new order; or
+- global H-spectrum completeness.
+
+Those remain **OPEN**.
+
+## 5. Exact controls and reproduction
+
+The primary referee independently computes `H` by subset DP, enumerates
+`F_1`, and checks `(4)`, `(8)`, parity, and strong-ear inheritance on every
+labelled tournament through order five:
+
+```text
+1,098 parent tournaments,
+33,864 cut ears,
+16,668 nonconstant ears over strong parents.                (18)
+```
+
+It freezes the `C3` hostile and the two inherited selected-bank rows. Run
+
+```bash
+python3 -B 04-computation/tournament_uniform_ear_average_growth_thm4111.py
+python3 -B -O 04-computation/tournament_uniform_ear_average_growth_thm4111.py
+```
+
+The streams must byte-match the frozen output. This finite audit is a hostile
+control for the elementary double count, not the source of its quantifiers.
