@@ -1,0 +1,15 @@
+== THM-4043 exceptional-quartic shifted stable identities and J6 lift ==
+status=PROVED VERIFIED-EXACT arbitrary-target-two-forms no-closedness
+parent_sha256 (('thm3683_script', 'b5e4132c322b3a01883688be9e8c993c5927a38f191c547eefcc84af432d9eb3'), ('thm3683_output', '3dfc849c88ca713c1a200fe05d26676624f9f83d9432e54a1c1c17058b320025'), ('thm3688_script', '02cd67446b18b3863bc3665d48a6c5cccda81c394f94b754d2b90b1597c53ba6'), ('thm3688_output', '0c6bce1baef8dab98cd63219538c5e14aa9eae05903dc85fee647f776b514459'), ('thm3737_script', '4bbae46df140fbcda30b747f6356538a74fea34b928ed396e481e196fd0303c9'), ('thm3737_output', 'e97bb6b47f147b5dac5fff8ceb4deab87e8cd85a902d4bb8a1397c1ccecbd996'))
+parabola_matrix shape=168x18 rank=15 left_nullity=3
+parabola_relations supports=(3,7,14) basis=(LambdaJ1,LambdaJ3+R4J1,LambdaJ5+R4J3+R2J1)
+parabola_J5_active_dimension=1 active_block=(5/18,-1,13/18)
+hostile_Q6 p=0 r=0 off_parabola_p=-5717/729 rank=16 left_nullity=2 J5_active_dimension=0
+R2_one=0 shifted_k2_clears_J4_when_J2_zero
+R0_one=-256*F(r)/1594323 exceptional_field_remainder=0
+shift w^k: Jtilde_n=J_(n-k), J_negative=0, k=(5,3,1)
+actual_stagewise_through_J6=1 via_THM3688_input_and_THM3737_image
+SCOPE finite stagewise actual lift; next scalar J7; no all-order/global/JC2
+script_sha256 ef76a4aefe213c63ff4ce40d97fb57f6a9cf1b6ea90a7a4032b57c6e9c462de3
+CHECKS 554
+RESULT=PASS

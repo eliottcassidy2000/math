@@ -32,6 +32,7 @@ depends_on:
   - THM-3681-russell-cylinder-qdagger-universal-sixth-stable-debt
 related:
   - THM-3651-russell-cylinder-degree-seven-double-zero-sixth-order-closure
+  - THM-4043-exceptional-quartic-shifted-stable-identities-and-j6-lift
 script: 04-computation/jc2_russell_cylinder_sixth_debt_quartic_thm3683.py
 output: 05-knowledge/results/jc2_russell_cylinder_sixth_debt_quartic_thm3683.out
 script_sha256: b5e4132c322b3a01883688be9e8c993c5927a38f191c547eefcc84af432d9eb3
@@ -328,4 +329,6 @@ The theorem concerns only this Russell compiler, the principal retained
 slope packet, degree at most eight, and critical displacements
 `H'(0)=0`.  Mixed folds, other tangent charts, higher-degree Hermite families,
 and arbitrary planar maps remain open.  No counterexample is constructed and
-the planar Jacobian conjecture remains **OPEN**.  **QED.**
+the planar Jacobian conjecture remains **OPEN**.  Downstream THM-4043 shifts
+the identity proved here and obtains a stagewise actual lift through `J_6` at
+the four roots; it does not produce an all-order or global pair.  **QED.**

@@ -10,9 +10,9 @@ status: >
   F_5,G_5.  Thus all four exceptional embeddings admit one stagewise actual
   lift through J_4.  The induced next-cokernel map from every admissible
   L_0-kernel is zero, and the coupled F_4/F_5 choice response at J_5 is also
-  zero, with the earlier frozen data through F_3,G_3 fixed.  The value of
-  the J_5 gate, coherent degree control, algebraization,
-  a global pair, a Keller map, and JC(2) all remain open.
+  zero, with the earlier frozen data through F_3,G_3 fixed.  This theorem
+  does not evaluate J_5; downstream THM-4043 proves its vanishing and reaches
+  J_6.  J_7, coherent degree control, globalization, and JC(2) remain open.
 source: jc2-double-zero-rebuild-20260824 / retained-jet continuation, 2026-08-24
 audit: >
   PASS -- an independent full-polynomial reconstruction recovered the
@@ -34,6 +34,7 @@ depends_on:
 related:
   - THM-3651-russell-cylinder-degree-seven-double-zero-sixth-order-closure
   - THM-4034-exceptional-quartic-global-conductor-degree-178
+  - THM-4043-exceptional-quartic-shifted-stable-identities-and-j6-lift
 script: 04-computation/jc2_russell_cylinder_exceptional_quartic_j3_lift_rigidity_thm4039.py
 output: 05-knowledge/results/jc2_russell_cylinder_exceptional_quartic_j3_lift_rigidity_thm4039.out
 script_sha256: abd5bef4b306710cbc0e5ff76fc7a7b7bb580eb296dd5ad3312e39ea2df36993
@@ -370,8 +371,8 @@ This does not cover changing `F_2,F_3` or their normal sidecars.
 
 ## 6. Strict boundary and reproduction
 
-The theorem proves finite stagewise existence, not a controlled or global
-series.  In particular it does not
+The theorem itself proves finite stagewise existence, not a controlled or
+global series.  In particular it does not
 
 - compute or prove vanishing of the now well-defined `J_5` scalar;
 - freeze explicit actual target expressions for `F_4,G_4,F_5,G_5` or bound
@@ -381,9 +382,9 @@ series.  In particular it does not
 - construct a polynomial Keller map or prove its noninjectivity; or
 - prove a counterexample to `JC(2)`, which remains open.
 
-If the `J_5` gate is later solved, THM-3683's universal sixth-order identity
-will force the corresponding `J_6` scalar gate at the exceptional quartic
-roots.  It does not force `J_5` itself.
+Downstream THM-4043 applies `w`-shifts of THM-3683's universal identity,
+proves the `J_5` gate vanishes, and reaches `J_6`.  That later theorem does
+not retroactively add a `J_5` computation to the present certificate.
 
 ```bash
 python3 -B 04-computation/jc2_russell_cylinder_exceptional_quartic_j3_lift_rigidity_thm4039.py
