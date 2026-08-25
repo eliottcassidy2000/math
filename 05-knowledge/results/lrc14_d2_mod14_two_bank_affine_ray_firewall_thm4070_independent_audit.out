@@ -1,0 +1,30 @@
+LRC14_D2_SMALL_DENOMINATOR_SIEVE_THM4070_INDEPENDENT
+universe=maximal_nonmultiple_pack_residues_for_each_q=2..14
+complete_sieve_pair_profiles 559
+complete_even_q_triple_profiles 1264
+q 2 k None numerators_over_2q (1,) danger_classes ((),) pair_histogram ((1, 3),) odd_exception_capacity unbounded triple_histogram ()
+q 3 k None numerators_over_2q (1,) danger_classes ((),) pair_histogram ((1, 6),) odd_exception_capacity unbounded triple_histogram ()
+q 4 k None numerators_over_2q (1,) danger_classes ((),) pair_histogram ((1, 10),) odd_exception_capacity unbounded triple_histogram ()
+q 5 k None numerators_over_2q (1,) danger_classes ((),) pair_histogram ((1, 15),) odd_exception_capacity unbounded triple_histogram ()
+q 6 k None numerators_over_2q (1,) danger_classes ((),) pair_histogram ((1, 21),) odd_exception_capacity unbounded triple_histogram ()
+q 7 k None numerators_over_2q (1,) danger_classes ((),) pair_histogram ((1, 28),) odd_exception_capacity unbounded triple_histogram ()
+q 8 k 3 numerators_over_2q (1, 9, 3, 11) danger_classes ((1, 15), (7, 9), (5, 11), (3, 13)) pair_histogram ((2, 24), (3, 12)) odd_exception_capacity 3 triple_histogram ((1, 32), (2, 72), (3, 16))
+q 9 k 2 numerators_over_2q (1, 10, 2, 11) danger_classes ((1, 17), (9,), (9,), (5, 13)) pair_histogram ((1, 4), (2, 9), (3, 22), (4, 10)) odd_exception_capacity 2 triple_histogram ()
+q 10 k 3 numerators_over_2q (1, 11, 3, 13) danger_classes ((1, 19), (9, 11), (7, 13), (3, 17)) pair_histogram ((2, 24), (3, 28), (4, 3)) odd_exception_capacity 3 triple_histogram ((1, 32), (2, 120), (3, 64), (4, 4))
+q 11 k 2 numerators_over_2q (1, 12, 2, 13) danger_classes ((1, 21), (11,), (11,), (5, 17)) pair_histogram ((1, 4), (2, 11), (3, 30), (4, 21)) odd_exception_capacity 2 triple_histogram ()
+q 12 k 5 numerators_over_2q (1, 13, 5, 17) danger_classes ((1, 23), (11, 13), (5, 19), (7, 17)) pair_histogram ((2, 24), (3, 44), (4, 10)) odd_exception_capacity 3 triple_histogram ((1, 32), (2, 168), (3, 144), (4, 20))
+q 13 k 2 numerators_over_2q (1, 14, 2, 15) danger_classes ((1, 25), (13,), (13,), (7, 19)) pair_histogram ((1, 4), (2, 13), (3, 38), (4, 36)) odd_exception_capacity 2 triple_histogram ()
+q 14 k 3 numerators_over_2q (1, 15, 3, 17) danger_classes ((1, 27), (13, 15), (9, 19), (5, 23)) pair_histogram ((2, 24), (3, 60), (4, 21)) odd_exception_capacity 3 triple_histogram ((1, 32), (2, 216), (3, 256), (4, 56))
+q14_redundant_universe=all_52_nonmultiple_pack_residues_mod56_simultaneously
+times_numerators_over_28 (1, 15, 3, 17)
+danger_classes_mod28 ((1, 27), (13, 15), (9, 19), (5, 23))
+odd_classes_mod56 28 unordered_pairs 406
+safe_time_count_histogram ((2, 96), (3, 232), (4, 78))
+old_allowed 46 new_allowed 52 gained (11, 22, 23, 33, 34, 45)
+clean_winners_over_28 (3, 17)
+clean_old_bank_distance_numerators_over_112 (4, 4, 2, 2)
+physical_distance_numerators_over_28 (1, 1, 2, 2)
+multiple14_and_even_exception_hostiles=PASS
+q15_maximal_residue_grid_hostile=PASS
+active_requirements 4619
+semantic_sha256 fc149e3fde01c5c63d6f5dfdeac72a9c91200b2ed47c83c1c273dce734e9784b

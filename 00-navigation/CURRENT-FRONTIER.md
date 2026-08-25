@@ -75,12 +75,13 @@ is the safe control `M(S_13)=99/338`. No cited result proves LRC(14).
   gives profile `(11,9,8,8,7,7,...)` and equality moduli `2,3,4`.
   [THM-4030](../01-canon/theorems/THM-4030-lrc14-d4-affine-defect-lattice-boundary.md)/[4032](../01-canon/theorems/THM-4032-lrc14-d3-affine-defect-lattice-boundary.md)
   give exact `d=4/3` affine circuits and close certificate-negative rows.
-  [THM-4041](../01-canon/theorems/THM-4041-lrc14-d2-affine-defect-edge-boundary.md)
-  gives the exact `d=2` defect edge; [THM-4049](../01-canon/theorems/THM-4049-lrc14-d2-two-phase-residue-firewall.md)
-  the ten-class mod-`56` firewall; and [THM-4052](../01-canon/theorems/THM-4052-lrc14-affine-component-width-escape-cones.md)
+  THM-4041 gives the exact `d=2` defect edge. [THM-4070](../01-canon/theorems/THM-4070-lrc14-d2-mod14-two-bank-affine-ray-firewall.md)
+  strengthens THM-4049 to a `q=2..14` sieve: every survivor's eleven-pack
+  covers all seven maximal divisors `8..14`; its `q=14` bank closes the
+  physical hostile and all odd affine rays. [THM-4052](../01-canon/theorems/THM-4052-lrc14-affine-component-width-escape-cones.md)
   closes `d2:E>=12M`, `d3:E>=11M`, `d4:3E>=44M`. The finite producer obeys
   `d sum(H)+sum(E)<=91^12`; THM-4062 makes its affine intercept mandatory.
-  [THM-4066](../01-canon/theorems/THM-4066-lrc14-diagonal-intercept-pullback-and-exact-affine-ray-closure.md) closes `3H union h{1,4,5}` for `3∤h,24h>=11M` and `4H union h{2,7,9}` for odd `h,21h>=22M`; LRC(14) stays open.
+  THM-4066 closes two three-exception affine shapes; LRC(14) stays open.
   [THM-4025](../01-canon/theorems/THM-4025-lrc14-owner-residue-odd-dilation-semigroup.md)
   gives the odd-divisibility semigroup, while [THM-4031](../01-canon/theorems/THM-4031-lrc14-endpoint-owner-rational-tail.md)
   proves that every old-strip ray has an eventual arithmetic-survivor tail;

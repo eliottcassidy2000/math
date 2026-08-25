@@ -111,18 +111,20 @@
   `s=gcd(d H_body,E)` and the body `u` follow. The small banks above do not
   enumerate that enormous image. THM-4062 proves that the complete static
   labelled divisor/depth packet cannot preserve selected-phase coverage; the
-  missing sidecar is the label-gauged affine intercept. The next task is a
-  feasible exact compression of the bounded producer that retains that
-  intercept, uses THM-4049's `d=2` projection filter, and interval-tests every
-  survivor.
+  missing sidecar is the label-gauged affine intercept. THM-4070 now removes
+  every `d=2` row whose divided pack misses any divisor `2..14`; equivalently,
+  a survivor must cover each maximal divisor `8..14`. Compress the bounded
+  producer only inside that divisibility-covering residual, retaining the
+  intercept and exact safe-set containment.
 - **D2 measure/owner compression.** THM-4041 proves that for reduced odd
   exceptions `a<b`, the spoiled mass is
   `4 sum_(r>0 odd,7r<a+b) min(1/(7b),(a+b-7r)/(14ab))`, while common odd
-  dilation preserves mass and multiplies components. THM-4049 separately
-  closes every pack avoiding ten classes mod `56` by four fixed lifts, for
-  all odd pairs. Project the physical producer modulo `56`; classify the
-  complementary packs, then intersect their exact safe components with the
-  spoiled set. Scalar mass equality still does not decide containment.
+  dilation preserves mass and multiplies components. THM-4070 replaces
+  THM-4049's ten-class filter by a complete `q=2..14` bank, enlarges the
+  mod-`56` allowed set from 46 to 52 classes, and closes the old physical
+  hostile. Classify the remaining divisor-covering packs, then intersect
+  their exact safe components with the spoiled set; mass alone still does
+  not decide containment.
 - **Sparse deletion response of the twelve AP owners.** THM-4029 solves the
   full AP container, while LRC needs sparse `E subset {0,...,N}`. For each
   owner/side/track, record whether the selected arrival time lies in `E`.
