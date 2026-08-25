@@ -1,0 +1,8 @@
+THM-4079 primary general-construction audit
+strict_rational_bodies=138
+continuous_threshold_cases=2898 clock_4B_threshold_cases=2898 even_clock_2B_threshold_cases=2898
+all_safe_phase_inequalities=568512 phase_band_mesh_points=5050
+max_band_distances=even:1/14,odd:1/14
+max_scaled_shifts=continuous:1/14,clock4B:1/4
+semantic_sha256=b75d9d2eb61cffa3382767c5f3688e543859892c7dabf56c6c59ceaf3d53755b
+PASS: continuous absorption and adaptive 4B/2B constructions

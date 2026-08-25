@@ -1,0 +1,9 @@
+THM-4079 independent canonical-family/obstruction audit
+canonical_core_phase_checks=22000 literal_odd_tail_classes=5045040
+blind_horizon_divisibility_checks=5050
+odd_layer_union_intervals=5 even_cover_rows=5
+full_theta_checkpoints=294 full_theta_open_cells=293
+deletion_witness_gates=144 strict_margin_hostile_signs=2
+cover_maxima=2/35,3/49,10/147,3/49,2/35
+semantic_sha256=3baf3b24f31fdec5b14802f18d9b9a998ec894b5c5ce1abc1a47df43bb7d396e
+PASS: infinite adaptive family, fixed-bank blindness, and minimal obstruction
