@@ -6,10 +6,10 @@ the identity
 
     1 + 8 * C(w, 2) = (2*w - 1)^2
 
-and bit masks of quadratic-residue conditions.  The first terminal route
-checks the 324 candidates surviving primes through 89 with ``isqrt``.  The
-second terminal route continues the modular sieve through 137 and leaves no
-candidate at all.
+and bit masks of quadratic-residue conditions. The first terminal route
+leaves 324 masks after primes through 89, rejects 31 by residual admissibility,
+and checks the remaining 293 with ``isqrt``. The second terminal route
+continues the modular sieve through 137 and leaves no candidate at all.
 
 The script also audits the finite exceptional-prime rows used in the proof of
 THM-4027 (universal modular solubility), exact small-prime local-density
@@ -279,7 +279,7 @@ def build_quadratic_residue_masks(
     return masks
 
 
-def audit_counterexample() -> tuple[dict[int, int], int, int, int]:
+def audit_counterexample() -> tuple[dict[int, int], int, int, int, int]:
     """Run both terminal routes over the complete canonical universe."""
 
     x_max = largest_top_index(4, TARGET)
@@ -299,7 +299,8 @@ def audit_counterexample() -> tuple[dict[int, int], int, int, int]:
     masks = build_quadratic_residue_masks(x_values, SIEVE_PRIMES)
     full_x_mask = (1 << len(x_values)) - 1
     triple_counts = {p: 0 for p in SIEVE_PRIMES}
-    exact_tail_checks = 0
+    exact_tail_survivors = 0
+    exact_isqrt_checks = 0
     exact_tail_solutions = 0
     final_survivors = 0
 
@@ -319,11 +320,12 @@ def audit_counterexample() -> tuple[dict[int, int], int, int, int]:
                         lowest_bit = tail & -tail
                         index = lowest_bit.bit_length() - 1
                         tail -= lowest_bit
-                        exact_tail_checks += 1
+                        exact_tail_survivors += 1
                         x = x_values[index]
                         remainder = TARGET - comb(x, 4) - high_atom
                         if remainder < 1:
                             continue
+                        exact_isqrt_checks += 1
                         discriminant = 8 * remainder + 1
                         root = isqrt(discriminant)
                         if root >= 3 and root % 2 == 1 and root * root == discriminant:
@@ -334,10 +336,17 @@ def audit_counterexample() -> tuple[dict[int, int], int, int, int]:
             final_survivors += surviving.bit_count()
 
     require(triple_counts == EXPECTED_TRIPLE_COUNTS, "frozen sieve fingerprint")
-    require(exact_tail_checks == 324, "exact integer-square tail size")
+    require(exact_tail_survivors == 324, "terminal mask-survivor count")
+    require(exact_isqrt_checks == 293, "positive-residual integer-square tail size")
     require(exact_tail_solutions == 0, "candidate has no representation")
     require(final_survivors == 0, "pure modular terminal route")
-    return triple_counts, universe, exact_tail_checks, final_survivors
+    return (
+        triple_counts,
+        universe,
+        exact_tail_survivors,
+        exact_isqrt_checks,
+        final_survivors,
+    )
 
 
 def positive_control() -> tuple[int, int, int, int, int]:
@@ -362,6 +371,7 @@ small_local = {
     5: local_factor_small_prime(5, 2),
     7: local_factor_small_prime(7, 2),
 }
+small_local_moduli = {2: 16, 3: 9, 5: 25, 7: 49}
 expected_small = {
     2: Fraction(1, 1),
     3: Fraction(68, 81),
@@ -422,7 +432,13 @@ require(
     "mod-33 target is a minimum-density class",
 )
 
-triple_counts, universe, exact_tail_checks, final_survivors = audit_counterexample()
+(
+    triple_counts,
+    universe,
+    exact_tail_survivors,
+    exact_isqrt_checks,
+    final_survivors,
+) = audit_counterexample()
 
 print("THM-4026 SUN 2-4-6-8 COUNTEREXAMPLE INDEPENDENT EXACT AUDIT")
 print(f"target = {TARGET}")
@@ -431,7 +447,8 @@ print("canonical maxima = x:12112 y:932 z:281")
 print("quadratic-residue sieve triple counts:")
 for p in SIEVE_PRIMES:
     print(f"  p={p:3d} survivors={triple_counts[p]}")
-print(f"exact isqrt checks after p<=89 = {exact_tail_checks}")
+print(f"terminal mask survivors after p<=89 = {exact_tail_survivors}")
+print(f"positive-residual isqrt checks = {exact_isqrt_checks}")
 print("exact isqrt solutions = 0")
 print(f"pure modular survivors after p<=137 = {final_survivors}")
 print(f"positive control (value,w,x,y,z) = {positive}")
@@ -439,9 +456,9 @@ print(f"finite exact-period hostile rows = {period_rows}")
 print("exceptional-prime regular-coverage traces:")
 for p in sorted(regular_traces):
     print(f"  p={p:2d} partial_sizes={regular_traces[p]}")
-print("small-prime stabilized local factors:")
+print("selected small-prime-power local factors:")
 for p in sorted(small_local):
-    print(f"  p={p} sigma={small_local[p]}")
+    print(f"  p={p} q={small_local_moduli[p]} sigma={small_local[p]}")
 print("selected p>8 first-level local factors:")
 for p in sorted(large_local):
     print(f"  p={p} sigma_1={large_local[p]}")

@@ -35,7 +35,8 @@ quadratic-residue sieve triple counts:
   p=127 survivors=3
   p=131 survivors=1
   p=137 survivors=0
-exact isqrt checks after p<=89 = 324
+terminal mask survivors after p<=89 = 324
+positive-residual isqrt checks = 293
 exact isqrt solutions = 0
 pure modular survivors after p<=137 = 0
 positive control (value,w,x,y,z) = (3846575646, 42321, 511, 71, 19)
@@ -49,11 +50,11 @@ exceptional-prime regular-coverage traces:
   p=29 partial_sizes=(14, 28, 29, 29)
   p=31 partial_sizes=(15, 31, 31, 31)
   p=47 partial_sizes=(23, 46, 47, 47)
-small-prime stabilized local factors:
-  p=2 sigma=1
-  p=3 sigma=68/81
-  p=5 sigma=566/625
-  p=7 sigma=310/343
+selected small-prime-power local factors:
+  p=2 q=16 sigma=1
+  p=3 q=9 sigma=68/81
+  p=5 q=25 sigma=566/625
+  p=7 q=49 sigma=310/343
 selected p>8 first-level local factors:
   p=11 sigma_1=72/121
   p=13 sigma_1=154/169

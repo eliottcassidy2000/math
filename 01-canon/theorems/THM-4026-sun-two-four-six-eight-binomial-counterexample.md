@@ -17,6 +17,13 @@ script: 04-computation/sun_2468_counterexample_modular_certificate_thm4026.cpp
 output: 05-knowledge/results/sun_2468_counterexample_modular_certificate_thm4026.out
 independent_audit_script: 04-computation/sun_2468_counterexample_independent_exact_sieve_thm4026.cpp
 independent_audit_output: 05-knowledge/results/sun_2468_counterexample_independent_exact_sieve_thm4026.out
+disjoint_bank_audit_script: 04-computation/sun_2468_counterexample_thm4026_independent.cpp
+disjoint_bank_audit_output: 05-knowledge/results/sun_2468_counterexample_thm4026_independent.out
+joint_period_local_audit_script: 04-computation/sun_two_four_six_eight_counterexample_independent_audit_thm4026.py
+joint_period_local_audit_output: 05-knowledge/results/sun_two_four_six_eight_counterexample_independent_audit_thm4026.out
+joint_period_local_audit_report: 05-knowledge/results/sun_two_four_six_eight_counterexample_period_local_audit_thm4026.md
+eisenstein_row_sieve_script: 04-computation/sun_2468_eisenstein_inert_row_sieve_thm4026.py
+eisenstein_row_sieve_output: 05-knowledge/results/sun_2468_eisenstein_inert_row_sieve_thm4026.out
 ---
 
 # THM-4026 -- Sun's 2-4-6-8 conjecture is false
@@ -100,8 +107,10 @@ feasible `(x,y,z)` triples satisfying
 C(x,4)+C(y,6)+C(z,8) <= N-1.                            (4)
 ```
 
-This pins the universe; merely looping over the three individual boxes would
-include `249,573,769` invalid vector lanes.
+This pins the universe. Applying the full `12,110`-entry `x` array to each of
+the `248,160` admissible `(z,y)` rows would visit `3,005,217,600` lanes and
+include `249,573,769` invalid ones. The still larger Cartesian product of the
+three individual boxes has `3,090,472,000` lanes.
 
 For a triple in `(4)`, set
 
@@ -117,6 +126,47 @@ m=C(w,2) for some w>=2  <=>  D=(2w-1)^2                 (6)
 ```
 
 turns the missing coordinate into a square test.
+
+### An Eisenstein-norm sidecar
+
+An incoming disjoint-prime-bank audit exposed a second exact coordinate. Put
+
+```text
+A=x^2-3x+1,       B=2w-1,       S=C(y,6)+C(z,8).
+```
+
+Direct expansion gives
+
+```text
+24*C(x,4)+1=A^2,              8*C(w,2)+1=B^2.          (6a)
+```
+
+Here `A>=1` and `B>=3` are odd. If `omega^2+omega+1=0`, then a
+four-term representation is therefore equivalent to
+
+\[
+6(N-S)+1={A^2+3B^2\over4}
+=N_{\mathbf Z[\omega]}\!\left({A+B\over2}+B\omega\right),       \tag{6b}
+\]
+
+together with the thin-image condition
+
+```text
+4A+5=(2x-3)^2.                                         (6c)
+```
+
+For a rational prime `ell=2 mod 3`, the Eisenstein norm form is anisotropic
+modulo `ell`; hence an odd valuation of `ell` in `6(N-S)+1` eliminates that
+entire `(y,z)` row. This is a useful row-level sieve, not a replacement for
+the certificate: unrestricted norm representability loses positivity and
+the square constraint `(6c)`. The incoming verifier records `(6b)` but its
+decisive algorithm still uses the discriminant masks from `(6)`.
+
+As a finite control, the routed companion applies the odd-valuation test for
+all `87` inert primes through `1,000` to the complete `248,160` `(z,y)` rows.
+It leaves `61,188`, the exact fraction `5099/20680`. This quantifies a cheap
+row filter; those survivors are not asserted to satisfy the norm equation or
+to extend to a four-term representation.
 
 ## 3. Primary regenerated modular certificate
 
@@ -182,6 +232,16 @@ residue-audit build agree after timing/thread metadata are removed. This
 method shares the discriminant identity `(6)`, which is unavoidable, but not
 the prime-by-prime bitset certificate or its control flow.
 
+Two later incoming replays give further redundancy. A dependency-free Python
+bitset route scans the full `3,090,472,000`-lane product of the individual
+top-index boxes, leaves `324` mask survivors through prime `89`, rejects `31`
+by residual admissibility and the other `293` by `isqrt`, and leaves zero
+survivors after prime `137`. A separate C++ implementation uses
+two disjoint 15-prime banks; each bank followed by exact square tests finds
+zero representations, and their combined 29-prime cover leaves zero modular
+survivors. These are independent implementations of the same necessary-square
+mechanism, not additional conceptual proofs.
+
 ## 5. Positive and hostile controls
 
 The primary certificate also exhausts both neighbours in the same convention:
@@ -204,9 +264,8 @@ The independent audit finds the same witnesses and also checks the boundary
 ```
 
 This catches the otherwise easy error of allowing a zero triangular term.
-An exact radius-50 replay found the center to be the only zero in that
-window; all 100 neighbours have between 38 and 183 minimal-domain
-representations. This is a diagnostic statement, not a minimality theorem.
+Only the two adjacent controls are promoted here; no wider isolation or
+minimality claim is made.
 
 ## 6. What the certificate preserves and loses
 
@@ -217,6 +276,21 @@ finite box is imposed, all magnitude information. THM-4027 proves that the
 full four-term sum is soluble modulo every modulus, so no fixed congruence
 class can replace the bounded certificate. The missing sidecar is precisely
 the archimedean box `(4)`.
+
+There is also a lawful Pascal-carry coordinate. The greedy rank-eight
+combinadic expansion is exactly
+
+```text
+N=C(281,8)+C(279,7)+C(234,6)+C(212,5)
+  +C(188,4)+C(136,3)+C(43,2)+C(15,1).                 (15)
+```
+
+Thus `N` lies on a full descending Pascal flag even though it misses Sun's
+role-labelled four-atom family supported at ranks `2,4,6,8`. The identity
+`C(t,k)=C(t-1,k)+C(t-1,k-1)` gives a split relation and, in reverse, a carry,
+but it does not preserve atom count or the one-atom-per-role constraint.
+Whether a confluent bounded carry normal form detects this hole is an **OPEN**
+structural reformulation, not part of the certificate.
 
 The source gist's NumPy `sqrt` plus integer square-back is sound at this fixed
 scale (`D<2^53`), but it is not the load-bearing method here. Both canonical

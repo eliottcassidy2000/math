@@ -2,7 +2,7 @@
 id: THM-4027
 title: "Sun 2-4-6-8 universal modular solubility"
 status: >
-  PROVED + FINITE-EXACT SMALL-PRIME SIDECAR + INDEPENDENTLY AUDITED. Every
+  PROVED + FINITE-EXACT EXCEPTIONAL-PRIME SIDECAR + INDEPENDENTLY AUDITED. Every
   residue modulo every positive modulus is represented by the admissible
   2-4-6-8 binomial sum. Thus THM-4026 has no congruence obstruction. Exact
   local densities are positive but nonuniform; N lies in the unique worst
@@ -23,11 +23,14 @@ local_density_independent_audit_script: 04-computation/sun_2468_local_density_in
 local_density_independent_audit_output: 05-knowledge/results/sun_2468_local_density_independent_audit_thm4027.out
 direct_crosscheck_script: 04-computation/sun_2468_local_density_direct_crosscheck_thm4027.py
 direct_crosscheck_output: 05-knowledge/results/sun_2468_local_density_direct_crosscheck_thm4027.out
+sharp_exception_audit_script: 04-computation/sun_two_four_six_eight_counterexample_independent_audit_thm4026.py
+sharp_exception_audit_output: 05-knowledge/results/sun_two_four_six_eight_counterexample_independent_audit_thm4026.out
+sharp_exception_audit_report: 05-knowledge/results/sun_two_four_six_eight_counterexample_period_local_audit_thm4026.md
 ---
 
 # THM-4027 -- every congruence class is soluble
 
-**PROVED + FINITE-EXACT SMALL-PRIME SIDECAR + INDEPENDENTLY AUDITED.** For
+**PROVED + FINITE-EXACT EXCEPTIONAL-PRIME SIDECAR + INDEPENDENTLY AUDITED.** For
 every positive integer `m` and every residue `r mod m`, there are integers
 
 \[
@@ -110,7 +113,34 @@ the four roles, the extra exponents `e` are
 This table is exactly where a naïve `p^a`-sample would corrupt the small
 primes.
 
-## 3. Odd-prime base coverage
+## 3. Odd-prime coverage
+
+The denominator primes `3,5,7` admit a direct all-power construction. For
+such a prime put `k=p+1` and
+
+```text
+F_p(q)=C(pq+1,p+1),       k=4,6,8 respectively.
+```
+
+Lucas gives `F_p(q)=q mod p`. More strongly, if `H=t*p^(a+1)`, Vandermonde
+shows that in
+
+```text
+C(pq+1+H,p+1)-C(pq+1,p+1)
+```
+
+the `j=p` term is `t*p^a mod p^(a+1)` and every other term is divisible by
+`p^(a+1)`. Hence
+
+```text
+F_p(q+t*p^a)=F_p(q)+t*p^a mod p^(a+1).                 (7a)
+```
+
+Digit induction makes `F_p` a permutation modulo every `p^a`. Set `w=2`,
+use the `p+1` role for the requested residue minus one, and set the inactive
+higher roles to their canonical zero indices. Replacing `q` by a sufficiently
+large representative of its class enforces the lower bound on the active
+index. Thus all powers of `3,5,7` are already solved.
 
 For an odd prime `p`, let
 
@@ -147,26 +177,38 @@ Iterated Cauchy--Davenport now yields
                                                                \tag{11}
 \]
 
-The second argument is at least
+For `p>8`, the second argument is at least
 
 ```text
 25p/24-7/2,                                             (12)
 ```
 
-so `(11)` is `p` for every prime `p>=89`.
-
-The remaining odd primes are a finite exact sidecar. Using the complete
-periods from `(4)`, the companion constructs a representation with regular
-triangular coordinate for every residue at
+so the crude bound already handles every prime `p>=89`. Retaining the
+ceilings is sharper. Write `p=24q+r`; for the eight possible prime residues,
+the second argument of `(11)` minus `p` is
 
 ```text
-3,5,7,11,13,17,19,23,29,31,37,41,43,47,53,59,
-61,67,71,73,79,83.                                      (13)
+q-1  for r in {1,13,17,19},
+q-2  for r in {5,7,11,23}.                              (13a)
 ```
 
-It freezes one witness per target residue and checks the same finite gate by
-an independent Pascal-state implementation. Thus every residue modulo every
-odd prime has a solution with `2w-1` nonzero.
+Therefore `(11)` can fail among primes above eight only at
+
+```text
+11,13,17,19,23,29,31,47.                               (13b)
+```
+
+The independent exact sidecar checks those eight regular sumsets; after the
+roles `2,4,6,8` their successive sizes are respectively
+
+```text
+(5,10,11,11), (6,13,13,13), (8,16,17,17),
+(9,19,19,19), (11,22,23,23), (14,28,29,29),
+(15,31,31,31), (23,46,47,47).                          (13c)
+```
+
+Thus every residue modulo every prime above eight has a solution with
+`2w-1` nonzero.
 
 The reciprocal-degree sum is not decorative. In the general typed packet
 `{2=d_1,d_2,...,d_s}` the same argument has lower slope
@@ -179,9 +221,9 @@ When this exceeds one, large-prime saturation follows after finitely many
 small-prime gates. For `2,4,6,8`, the excess is only `1/24`; THM-4028 shows
 that this is also the mean-growth exponent.
 
-## 4. Lifting every odd prime power
+## 4. Lifting the remaining odd prime powers
 
-Fix a target integer `R` and a regular solution modulo `p`. Hold `x,y,z`
+Fix `p>8`, a target integer `R`, and a regular solution modulo `p`. Hold `x,y,z`
 fixed and write
 
 ```text
@@ -212,11 +254,16 @@ modulo two, induction proves that `C(w,2)` alone is onto modulo every `2^a`.
 In fact it is exactly two-to-one over its period `2^(a+1)`, so convolving the
 other roles leaves the complete two-adic distribution exactly uniform.
 
-An independent connection supplies a second route: the prime-power Newton
-coordinate `n -> C(n,p^e) mod p^a` is balanced on its exact period. Taking
-`p=2,e=3` makes the octic role `C(z,8)` itself uniform. The triangular-toggle
-and balanced-octic proofs are independent controls on the delicate
-denominator prime.
+An incoming audit supplies a second elementary route. On even indices put
+
+```text
+f(t)=C(2t,2)=t(2t-1).
+```
+
+Then `f(t)-f(s)=(t-s)(2t+2s-1)`, and the second factor is odd. Thus `f` is
+injective, hence bijective, on `Z/2^a Z`; a positive representative of `t`
+enforces `w=2t>=2`. The digit-toggle and even-index permutation proofs are
+independent controls on the delicate denominator prime.
 
 ## 6. Coordinatewise CRT and the lower bounds
 
@@ -302,7 +349,14 @@ four singular target points,
 ```
 
 and the factor changes from `942/961` at `31` to `29198/29791` at `31^2`.
-This is the required Hasse-jet hostile against blind lift stabilization.
+An incoming audit finds the same boundary at `p=499`: two singular target
+points `(250,226,252,253)` and `(250,276,252,253)` fail to lift, changing
+`248998/249001` to the stable factor
+`124250000/124251499`. These are Hasse-jet hostiles against blind lift
+stabilization. In general, if every singular target point modulo `p` fails
+its first lift, every solution modulo `p^2` reduces to a nonsingular point;
+the level-two factor then remains constant at all higher powers. Thus the
+displayed `p=31` factor is also stable from level two onward.
 
 ## 9. Reproduction and scope
 

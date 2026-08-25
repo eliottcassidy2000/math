@@ -1,0 +1,11 @@
+THM4026_EISENSTEIN_INERT_ROW_SIEVE
+target=896315812331399
+admissible_yz_rows=248160
+norm_identity_controls=N-1,N+1 PASS
+combinadic_control=PASS
+cutoff=10 inert_primes_used=2 newly_killed=60726 alive=187434
+cutoff=100 inert_primes_used=13 newly_killed=112523 alive=74911
+cutoff=1000 inert_primes_used=87 newly_killed=13723 alive=61188
+final_alive_fraction=5099/20680
+scope=FINITE-EXACT necessary-row-sieve; not a representation certificate
+RESULT=PASS

@@ -2,10 +2,11 @@
 
 **Status (2026-08-24):** **FINITE-EXACT + INDEPENDENTLY VERIFIED** for the
 counterexample computation; **PROVED algebra** for the period and universal
-modular-solubility lemmas below.  This report audits the reserved canon files
+modular-solubility lemmas below. This report was prepared while
 `THM-4026-sun-two-four-six-eight-binomial-counterexample.md` and
-`THM-4027-sun-two-four-six-eight-universal-modular-solubility.md`; it does not
-itself promote either reservation.
+`THM-4027-sun-two-four-six-eight-universal-modular-solubility.md` were
+reserved. They have since been promoted in canon; this is a supporting audit,
+not the current status authority.
 
 ## Exact counterexample certificate
 
@@ -42,10 +43,15 @@ A representation exists if and only if the parenthesized residual is at
 least one and `D=q^2` for an odd `q>=3`, in which case `w=(q+1)/2`.  This is
 the exact identity `1+8 C(w,2)=(2w-1)^2`.
 
+Exactly `2,755,643,831` of those product-box lanes have residual at least
+one. The pure modular route intentionally scans the larger box; the exact
+`isqrt` terminal rejects negative or zero residuals before testing a square.
+
 For every odd prime `p`, the checker stores a bit mask of `x` for which `D`
 is a square modulo `p`, indexed by the `(y,z)` contribution.  The mask
-intersection through `p=89` leaves exactly `324` triples; exact integer
-square-root tests reject all of them.  A redundant terminal route continues
+intersection through `p=89` leaves exactly `324` triples. Residual
+admissibility rejects `31`, and exact integer square-root tests reject the
+remaining `293`. A redundant terminal route continues
 the residue masks and leaves `3,3,1,0` triples after primes
 `113,127,131,137`.  Thus one route ends in exact `isqrt`, while the other is
 a pure bounded congruence-cover certificate.  Neither is a single local
@@ -168,13 +174,13 @@ global/Archimedean, not a congruence obstruction.
 
 These are **FINITE-EXACT diagnostics**, not an asymptotic theorem.  The target
 is `20 mod 33`, the unique minimum-density class for the true binomial
-periods, with probability `16/1089` rather than the uniform `1/33`.  Its
-stabilized normalized local factors begin
+periods, with probability `16/1089` rather than the uniform `1/33`. Selected
+exact normalized local factors are
 
 ```text
-p=2: 1       p=3: 68/81       p=5: 566/625       p=7: 310/343
-p=11: 72/121 p=13: 154/169    p=17: 240/289      p=19: 316/361
-p=23: 472/529.
+sigma_16=1       sigma_9=68/81       sigma_25=566/625
+sigma_49=310/343 sigma_11=72/121     sigma_13=154/169
+sigma_17=240/289 sigma_19=316/361    sigma_23=472/529.
 ```
 
 It is the minimum residue at `p=11,17,19,23` and second-lowest at `p=13`.
@@ -201,21 +207,25 @@ heuristic comparison, not an asserted circle-method asymptotic.
 - **Global-blindness hostile:** the source object is the bounded index box;
   reduction modulo any fixed modulus preserves local representability but
   destroys height and exact equality.  The required sidecar is the index
-  interval plus the square discriminant.  This is the same methodological
-  failure isolated by THM-2043/2050 for LRC local coordinates, but it is not
-  an LRC reduction.
+  interval plus the square discriminant. This is the same methodological
+  failure isolated by
+  [THM-2043](../../01-canon/theorems/THM-2043-period14-parity-hasse-jet-completeness.md)
+  and [THM-2050](../../01-canon/theorems/THM-2050-period14-top-germs-do-not-determine-global-loneliness.md)
+  for LRC local coordinates, but it is not an LRC reduction.
 - **Support versus multiplicity:** modular support is complete, while exact
   global support misses `N`; representation density and support coverage are
-  different observables, matching the THM-2000/2005 guardrail.
+  different observables, matching
+  [THM-2000](../../01-canon/theorems/THM-2000-support-harmonic-abel-dini-figurate-surface.md)
+  and [THM-2005](../../01-canon/theorems/THM-2005-support-dirichlet-automatic-tournament-atlas.md).
 - **Carry lane:** the exact combinadic expansion
   `C(281,8)+C(279,7)+C(234,6)+C(212,5)+C(188,4)+C(136,3)+C(43,2)+C(15,1)`
   equals `N`.  The failed four-term representation asks whether Pascal carry
   moves can eliminate all odd ranks while leaving one atom at each even rank.
   A confluent carry obstruction or finite-state normal form is **OPEN**.
-- **Repaired headline:** “every positive integer” is **REFUTED**.  Plausible
-  replacements—density-one representability, finitely many exceptions, an
-  asymptotic for representation counts, or infinitely many CRT-engineered
-  holes—are all **OPEN** and mutually distinct.
+- **Repaired headline:** “every positive integer” is **REFUTED**. Plausible
+  replacements—density-one representability, finitely many exceptions, a
+  pointwise asymptotic for representation counts, or infinitely many
+  CRT-engineered holes—are all **OPEN** and mutually distinct.
 - **Search frontier:** rank residue classes by their exact `p`-adic density,
   combine low-density classes by CRT, and retain height.  The decisive test is
   whether those progressions produce further exact holes, not merely smaller
@@ -237,6 +247,6 @@ The matching frozen output is
 SHA-256:
 
 ```text
-script d350c3f133655f0b0026bd1ce377d7d0c128424c471202dccad248cbd033cae7
-output 22ec28e3f5ffd6cecee538666e96a03731a92b78e960719a3699e73ae9b2f4d4
+script 61ab4604fe0ff0506a8dfb0c8e8ccbd1f6dd568b8c8cb75b4f8aa100e0e63955
+output 3eda1fa9a407e12bcec750ee3d5938696d99cbf1b45c1e8737908296b855adcb
 ```
