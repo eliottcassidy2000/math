@@ -16,6 +16,7 @@ depends_on:
 related:
   - THM-536-lrc-seven-sector-sturmian-partial-sum-reframe
   - THM-1425
+  - THM-4055-sixty-dyadic-response-fibre-law
   - THM-4026-sun-two-four-six-eight-binomial-counterexample
   - THM-4027-sun-two-four-six-eight-universal-modular-solubility
   - THM-4028-sun-two-four-six-eight-average-order-criticality

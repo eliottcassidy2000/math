@@ -1,0 +1,10 @@
+SUN_2468_CLOCK_HEIGHT_FIREWALL_20260824
+target=896315812331399
+q=60;Nmod=59;role_periods=(120, 720, 3600, 7200);local_factor=2486/3375;phase_denominator=2239488000000;accepted=27493171200
+q=420;Nmod=299;role_periods=(840, 5040, 25200, 352800);local_factor=773146/1157625;phase_denominator=37639074816000000;accepted=59852633702400
+q=27720;Nmod=13319;role_periods=(55440, 332640, 1663200, 23284800);local_factor=19117792/46690875;phase_denominator=714191507917848576000000;accepted=10549385805850214400
+F61_nonzero_atlas=(target=21,image_sizes=(31, 24, 26, 24),accepted=212846/12960000,S2_plus_S4_full=True)
+preserved=role-labelled congruence phase and exact periodic multiplicity
+lost=integral lift quotient;anisotropic height coupling;exact triangular-square test
+next_test=p61 phase tuple plus lift quotient and nearest-square gap on THM4026 survivors
+scope=FINITE-EXACT local hostile;Sun conjecture already REFUTED;global leastness OPEN

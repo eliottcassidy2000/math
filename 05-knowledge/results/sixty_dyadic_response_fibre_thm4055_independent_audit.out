@@ -1,0 +1,12 @@
+SIXTY_DYADIC_RESPONSE_FIBRE_THM4055_INDEPENDENT_AUDIT
+method=compatible-pair CRT inversion;ordinary spatial Rule30;independent THM4047 output
+phase_fibres_p_g_m_lcm=((1, 1, 1, 60), (2, 2, 1, 60), (4, 4, 1, 60), (8, 4, 2, 120), (16, 4, 4, 240), (32, 4, 8, 480))
+period_histogram=((1, 16), (2, 10), (4, 56), (8, 668), (16, 87118), (32, 12133))
+phase_only_columns=82
+hidden_sidecar_columns=99919
+sidecar_states_and_bits=((1, 1, 0), (2, 1, 0), (4, 1, 0), (8, 2, 1), (16, 4, 2), (32, 8, 3))
+ell29_closed_strip_repeat=(time=90,period=8,least_against4=True)
+ell29=(start=90,absolute_word=(1, 1, 0, 1, 0, 0, 1, 0),shift60=complement)
+hostile_period8_fibres=(r0=faithful,r1=constant)
+semantic_sha256=4de3162dfeaaa77c75256bdd86592d46110745992ff575f2c8c8953d378a55f0
+audit=PASS;no primary import;response values separated from phase states

@@ -26,6 +26,7 @@ depends_on:
   - THM-3468-rule30-radial-green-fold-innovation-discrepancy-and-fixed-seed-carrier-boundaries
 related:
   - THM-4050-rule30-half-arc-marked-cylinder-and-radius-nine-hostile
+  - THM-4055-sixty-dyadic-response-fibre-law
   - THM-3456-left-permutive-trace-bijection-and-rule30-seed-boundary
   - THM-3458-rule30-right-edge-2-adic-odometer-and-moving-observer-boundary
   - THM-3471-rule30-motzkin-strip-circuit-and-innovation-carry-spectrum
