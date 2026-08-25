@@ -1,5 +1,5 @@
 ======================================================================
-(1) ENGINE EQUIVALENCE: IE vs direct vs Sturmian, on AP_m for m up to 22
+(1) ENGINE EQUIVALENCE: IE vs direct vs Sturmian, on AP_m for m up to 28
 ======================================================================
   m= 1: direct=               0  ie==direct:True  sturm==direct:True
   m= 2: direct=               0  ie==direct:True  sturm==direct:True
@@ -23,13 +23,19 @@
   m=20: direct=   261547/325584  (IE skipped)      sturm==direct:True
   m=21: direct=     20949/25840  (IE skipped)      sturm==direct:True
   m=22: direct=       6155/7497  (IE skipped)      sturm==direct:True
+  m=23: direct= 4333193/5222910  (IE skipped)      sturm==direct:True
+  m=24: direct= 1184111/1413258  (IE skipped)      sturm==direct:True
+  m=25: direct=     72327/85652  (IE skipped)      sturm==direct:True
+  m=26: direct= 6325787/7438200  (IE skipped)      sturm==direct:True
+  m=27: direct=11831779/13813800  (IE skipped)      sturm==direct:True
+  m=28: direct=     60551/70200  (IE skipped)      sturm==direct:True
 
-  All engines agree (m<=22): True
+  All engines agree (m<=28): True
 
 ======================================================================
 (2) MONOTONICITY a(m)<=a(m+1), and a(m)=0 for m<=6
 ======================================================================
-  monotone non-decreasing (m<=22): True
+  monotone non-decreasing (m<=28): True
   a(m)=0 for m<=6: True
 
 ======================================================================
@@ -63,14 +69,14 @@
     k=11: dispatch=    25/91 (~0.2747)  floor=  5/7  violates_floor:True
 
 ======================================================================
-(5) N*(k) = max{N : a(N+1) <= cap_k}   (claim 7,8,10,13,21,21; THM-536 says ...,20,20)
+(5) N*(k)=sup{N : a(N+1)<=cap_k} in the extended naturals
 ======================================================================
-  k=8: cap=0.3815  N*=7  (a(N*+1)=0.3272 <= cap, a(N*+2)=0.416156462585034)
-  k=9: cap=0.4943  N*=8  (a(N*+1)=0.4162 <= cap, a(N*+2)=0.5044784580498867)
-  k=10: cap=0.6044  N*=10  (a(N*+1)=0.5815 <= cap, a(N*+2)=0.6241135848278705)
-  k=11: cap=0.7253  N*=13  (a(N*+1)=0.7047 <= cap, a(N*+2)=0.7279744065458351)
-  k=12: cap=0.8571  N*=21  (a(N*+1)=0.8210 <= cap, a(N*+2)=NA)
-  k=13: cap=1.0000  N*=21  (a(N*+1)=0.8210 <= cap, a(N*+2)=NA)
+  k=8: cap=0.3815  N*=7  (a(N*+1)=0.3272 <= cap, a(N*+2)=0.4162 > cap)
+  k=9: cap=0.4943  N*=8  (a(N*+1)=0.4162 <= cap, a(N*+2)=0.5045 > cap)
+  k=10: cap=0.6044  N*=10  (a(N*+1)=0.5815 <= cap, a(N*+2)=0.6241 > cap)
+  k=11: cap=0.7253  N*=13  (a(N*+1)=0.7047 <= cap, a(N*+2)=0.7280 > cap)
+  k=12: cap=0.8571  N*=26  (a(N*+1)=0.8565 <= cap, a(N*+2)=0.8625 > cap)
+  k=13: cap=1.0000  N*=infinity  (a(m)<=1-1/(7(m-1))<1 for every finite m>=2)
 
 ======================================================================
 (3) INCLUSION MONOTONICITY  E subset F => meas(S7(E)) <= meas(S7(F))
@@ -115,7 +121,7 @@
 ======================================================================
 SUMMARY FLAGS
 ======================================================================
-  engines_equiv(m<=22)      : True
+  engines_equiv(m<=28)      : True
   monotone a(m)             : True
   a(m)=0 for m<=6           : True
   claimed a(m) values match : True

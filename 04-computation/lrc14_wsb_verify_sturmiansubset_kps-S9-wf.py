@@ -2,11 +2,11 @@
 Adversarial verification of T859 (angle "sturmian-subset-domination", kps-S9).
 
 Claims to verify (exact rationals, fractions.Fraction):
-  (1) meas(S7) breakpoint engine vs an independent Sturmian theta-space engine: match for m<=22.
+  (1) meas(S7) breakpoint engine vs an independent Sturmian theta-space engine: match for m<=28.
   (2) a(m):=meas(S7(AP_m)) is NON-DECREASING in m, a(m)=0 for m<=6.
   (3) inclusion monotonicity  E subset F => meas(S7(E)) <= meas(S7(F))  over integer sets.
   (4) a(m) exact values for m=7..16 as claimed.
-  (5) N*(k) = max{N : a(N+1) <= cap_k} = 7,8,10,13,21,21 (claim)  vs THM-536's 7,8,10,13,20,20.
+  (5) Corrected extended-natural thresholds N*(k)=7,8,10,13,26,infinity.
   (6) cap_k canonical values & proved floor cap_k >= (k-6)/7.
   (7) L_y(consec_k) <= cap_k all k; consec maximizes L_y over bounded spread (spot check).
   (8) HUNT for counterexamples to meas(S7(E)) <= cap_k:
@@ -120,11 +120,11 @@ def consec(k):
 
 # =====================================================================
 print("="*70)
-print("(1) ENGINE EQUIVALENCE: IE vs direct vs Sturmian, on AP_m for m up to 22")
+print("(1) ENGINE EQUIVALENCE: IE vs direct vs Sturmian, on AP_m for m up to 28")
 print("="*70)
 a_vals = {}
 eng_ok = True
-for m in range(1, 23):
+for m in range(1, 29):
     E = consec(m)
     d = measS7_direct(E)
     s = measS7_sturmian(E)
@@ -143,7 +143,7 @@ for m in range(1, 23):
     else:
         flag = "" if ok else "  <<< MISMATCH"
         print(f"  m={m:2d}: direct={str(d):>16}  (IE skipped)      sturm==direct:{ok}{flag}")
-print(f"\n  All engines agree (m<=22): {eng_ok}")
+print(f"\n  All engines agree (m<=28): {eng_ok}")
 
 print()
 print("="*70)
@@ -151,7 +151,7 @@ print("(2) MONOTONICITY a(m)<=a(m+1), and a(m)=0 for m<=6")
 print("="*70)
 mono_ok = True
 zero_ok = True
-for m in range(1, 22):
+for m in range(1, 28):
     if a_vals[m] > a_vals[m+1]:
         mono_ok = False
         print(f"  VIOLATION: a({m})={a_vals[m]} > a({m+1})={a_vals[m+1]}")
@@ -159,7 +159,7 @@ for m in range(1, 7):
     if a_vals[m] != 0:
         zero_ok = False
         print(f"  VIOLATION: a({m})={a_vals[m]} != 0")
-print(f"  monotone non-decreasing (m<=22): {mono_ok}")
+print(f"  monotone non-decreasing (m<=28): {mono_ok}")
 print(f"  a(m)=0 for m<=6: {zero_ok}")
 
 print()
@@ -201,16 +201,28 @@ for k,bad in [(9,F(2025,4004)),(10,F(36,91)),(11,F(25,91))]:
 
 print()
 print("="*70)
-print("(5) N*(k) = max{N : a(N+1) <= cap_k}   (claim 7,8,10,13,21,21; THM-536 says ...,20,20)")
+print("(5) N*(k)=sup{N : a(N+1)<=cap_k} in the extended naturals")
 print("="*70)
-# need a(m) up to m=22 (have it). N*(k) largest N with a(N+1)<=cap_k.
+# MISTAKE-489 repair: never treat the end of a finite table as a cap crossing.
 for k in range(8,14):
     cap = CAP[k]
+    if cap == 1:
+        print(
+            f"  k={k}: cap={float(cap):.4f}  N*=infinity  "
+            "(a(m)<=1-1/(7(m-1))<1 for every finite m>=2)"
+        )
+        continue
     Nstar = None
-    for N in range(1, 22):
+    for N in range(1, 28):
         if a_vals[N+1] <= cap:
             Nstar = N
-    print(f"  k={k}: cap={float(cap):.4f}  N*={Nstar}  (a(N*+1)={float(a_vals[Nstar+1]):.4f} <= cap, a(N*+2)={float(a_vals[Nstar+2]) if Nstar+2<=22 else 'NA'})")
+        else:
+            break
+    if Nstar is None or Nstar + 2 > 28 or a_vals[Nstar + 2] <= cap:
+        raise RuntimeError(f"uncertified cap crossing k={k},Nstar={Nstar}")
+    print(f"  k={k}: cap={float(cap):.4f}  N*={Nstar}  "
+          f"(a(N*+1)={float(a_vals[Nstar+1]):.4f} <= cap, "
+          f"a(N*+2)={float(a_vals[Nstar+2]):.4f} > cap)")
 
 print()
 print("="*70)
@@ -364,7 +376,7 @@ print()
 print("="*70)
 print("SUMMARY FLAGS")
 print("="*70)
-print(f"  engines_equiv(m<=22)      : {eng_ok}")
+print(f"  engines_equiv(m<=28)      : {eng_ok}")
 print(f"  monotone a(m)             : {mono_ok}")
 print(f"  a(m)=0 for m<=6           : {zero_ok}")
 print(f"  claimed a(m) values match : {amatch}")

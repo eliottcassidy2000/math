@@ -24,14 +24,15 @@ WHAT THIS SCRIPT ESTABLISHES (all EXACT rationals):
 
  (A) RE-DERIVE meas(S7(AP_m)) from the Sturmian cover-time reframe (theta=7x,
      residues = partial sums of a mechanical word) and confirm it matches the
-     direct breakpoint engine for m up to ~24. Tabulate the exact sequence.
+     direct breakpoint engine for m up to 28. Tabulate the exact sequence.
 
  (B) Prove (computationally, exact) the two structural facts the subset-domination
      route needs about the AP-row sequence a(m) := meas(S7(AP_m)):
        (B1) a(m) is NON-DECREASING in m  [needed: AP_{N+1} bound is monotone].
        (B2) a(m) -> 1 and is < 1 for all finite m; locate the crossing of cap_k.
      Combined: subset-domination certifies EXACTLY the primitive E with
-     span(E) <= N*(k), where N*(k) = max{N : a(N+1) <= cap_k}.
+     span(E) <= N*(k), where N*(k) is the extended-natural supremum of
+     {N : a(N+1) <= cap_k}.
 
  (C) QUANTIFY the residual (span > N*(k)) precisely and characterize WHY pointwise
      domination is weak there: the AP_{N+1} bound throws away the *sparsity* of E
@@ -145,7 +146,11 @@ def main():
     print("(A) meas(S7(AP_m)) : breakpoint engine vs Sturmian cover-time engine (EXACT)")
     print("="*94)
     a = {}
-    MMAX = 22
+    # Every finite cap crossing below 1 must be computed on both sides.  The
+    # previous MMAX=22 table used Fraction(2) as an absent-value sentinel and
+    # accidentally interpreted the end of the table as a mathematical
+    # crossing for k=12,13 (MISTAKE-489).
+    MMAX = 28
     print(f"{'m':>3} {'breakpoint a(m)':>22} {'sturmian a(m)':>22} {'float':>9} match")
     for m in range(1, MMAX+1):
         v1 = measS7_AP(m)
@@ -169,22 +174,31 @@ def main():
     assert all(a[m] == 0 for m in range(1, 7))
     assert mono
     # (B2) approach to 1
-    print(f"  (B2) a(m) < 1 for all finite m (the all-covered theta-set is open, misses boundary);")
-    print(f"       a({MMAX})={float(a[MMAX]):.5f}. Sequence is increasing toward 1.")
+    print(f"  (B2) a(m) < 1 for every finite m: theta in [0,1/(m-1)) is non-covering for m>=2;")
+    print(f"       a({MMAX})={float(a[MMAX]):.5f}. (No all-m convergence claim is needed here.)")
     # crossing of cap_k
-    print("\n  N*(k) = max span certified by pointwise domination = max{N : a(N+1) <= cap_k}:")
+    print("\n  N*(k) = extended-natural span supremum certified by pointwise domination:")
     Nstar = {}
     for k in sorted(CAP):
         ck = CAP[k]
+        if ck == 1:
+            Nstar[k] = None
+            print(
+                f"    k={k:2d}: cap_k={str(ck):>10} ({float(ck):.4f})  N*=infinity  "
+                "a(m)<=1-1/(7(m-1))<cap for every finite m>=2"
+            )
+            continue
         Ns = None
-        for N in range(k-1, 60):
-            if a.get(N+1, F(2)) <= ck:
+        for N in range(k-1, MMAX):
+            if a[N+1] <= ck:
                 Ns = N
             else:
                 break
+        if Ns is None or Ns + 2 > MMAX or a[Ns + 2] <= ck:
+            raise RuntimeError(f"uncertified cap crossing k={k},Ns={Ns}")
         Nstar[k] = Ns
-        anext = a.get((Ns+1) if Ns is not None else 0, F(0))
-        afail = a.get((Ns+2) if Ns is not None else 0, F(2))
+        anext = a[Ns+1]
+        afail = a[Ns+2]
         print(f"    k={k:2d}: cap_k={str(ck):>10} ({float(ck):.4f})  N*={Ns}  "
               f"a(N*+1)={float(anext):.4f}<=cap  a(N*+2)={float(afail):.4f}>cap")
 
@@ -276,17 +290,25 @@ def main():
     print("(F) HONEST RESIDUAL ACCOUNTING: what is covered, what is not")
     print("="*94)
     print("  Decompose all primitive E (|E|=k) by span s=max(E):")
-    print("    (i)  s <= N*(k)              -> CERTIFIED by subset domination (PROVED set-containment).")
-    print("    (ii) N*(k) < s <= B_box(k)   -> covered by the EXHAUSTIVE bounded-span checks")
-    print("                                    (HYP-2603 boxes: 0 violations). FINITE, mod scale.")
-    print("    (iii) s > B_box(k)           -> the wide-spread regime; meas(S7) small (sweep (E)),")
-    print("                                    but NOT yet a closed-form proof. = the open piece.")
+    print("    (i)  s <= N*(k)                    -> CERTIFIED by subset domination.")
+    print("    (ii) s <= B_box(k)                 -> covered by the EXHAUSTIVE bounded-span checks")
+    print("                                          (HYP-2603 boxes: 0 violations). FINITE, mod scale.")
+    print("    (iii) s > max(N*(k),B_box(k))      -> the genuine residual when N*(k) is finite;")
+    print("                                          its observed smallness is not a closed-form proof.")
     Bbox = {8:18, 9:17, 10:16, 11:16, 12:16, 13:16}  # canon HYP-2603 / codex boxes
     for k in sorted(CAP):
         Ns = Nstar.get(k)
-        print(f"  k={k:2d}: subset-domination certifies span<={Ns}; "
-              f"exhaustive box checked to span<={Bbox.get(k,'?')}; "
-              f"wide-spread span>{Bbox.get(k,'?')} = residual (smallness, unproved closed-form).")
+        box_bound = Bbox.get(k)
+        if Ns is None:
+            print(
+                f"  k={k:2d}: subset-domination certifies every finite span; "
+                "there is no S7-cap residual at cap_k=1."
+            )
+        else:
+            combined = max(Ns, box_bound)
+            print(f"  k={k:2d}: subset-domination certifies span<={Ns}; "
+                  f"exhaustive box checked to span<={box_bound}; "
+                  f"combined residual begins at span>{combined}.")
     print()
     print("  KEY QUANTITATIVE TAKEAWAY for the writeup:")
     for k in [8]:
@@ -306,9 +328,9 @@ def main():
     print()
     print("  RIGOROUS STATUS OF THIS ANGLE:")
     print("   * meas(S7(AP_m)) = Sturmian partial-sum cover-time, PROVED equal to breakpoint engine,")
-    print("     PROVED non-decreasing and =0 for m<=6 (exact, m<=22).")
+    print("     PROVED non-decreasing and =0 for m<=6 (exact, m<=28).")
     print("   * subset domination => meas(S7(E)) <= a(span+1): PROVED set-containment (THM-536),")
-    print("     here QUANTIFIED to certify exactly span<=N*(k) (N*=7,8,10,13,~ for k=8..11).")
+    print("     here QUANTIFIED with N*=7,8,10,13,26,infinity for k=8..13.")
     print("   * The route ALONE is structurally incapable of closing wide span (occupancy<1 slack);")
     print("     it must be PAIRED with (ii) the finite bounded-span check and (iii) a genuine")
     print("     wide-spread smallness bound. (iii) remains the open piece (HYP-2608 route (a)).")

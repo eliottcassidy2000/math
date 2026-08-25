@@ -2,7 +2,7 @@
 id: THM-3683
 title: "Russell-cylinder sixth-debt quartic on the zero-fourth parabola"
 status: >
-  PROVED + VERIFIED-EXACT; PENDING INDEPENDENT HOSTILE AUDIT.  On the complete
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.  On the complete
   THM-3677 zero-fourth-debt parabola, the retained order-six arbitrary-two-form
   cokernel over Q(r) has dimension four and one active quotient class.  Its
   constant debt is -256/3^13 times an explicit irreducible quartic F(r).
@@ -13,11 +13,25 @@ status: >
   order six.  Two roots are real and two nonreal.  No actual lift or Keller
   pair is asserted, and JC(2) remains open.
 source: kps-s197 / symbolic QQ(r) retained sixth-debt computation, 2026-08-21
+audit: >
+  PASS -- a separate differentiation-before-truncation implementation at
+  r=2/3 recovered the 30-by-252 rank 26 matrix, the exact 23-entry active
+  row, the embedded three-dimensional order-four cokernel, and every
+  constant-response statement.  A second dense mod-137 implementation
+  checked rank 26 and zero constant debt at all four distinct reductions of
+  the quartic roots.  PARI independently confirmed irreducibility,
+  discriminant, real-root count, isolating intervals, and numerical roots.
+  Normal, optimized, and stored transcripts are byte-identical, and the two
+  semantic hashes were independently reconstructed.  The conjugate
+  degree-seven THM-3651 specialization supplies an additional exact
+  certificate/debt scale control.
 depends_on:
   - THM-3673-russell-cylinder-monomial-ramification-debt-dilation
   - THM-3675-russell-cylinder-critical-fold-formal-conjugacy-closure
   - THM-3677-russell-cylinder-degree-eight-fourth-debt-parabola
   - THM-3681-russell-cylinder-qdagger-universal-sixth-stable-debt
+related:
+  - THM-3651-russell-cylinder-degree-seven-double-zero-sixth-order-closure
 script: 04-computation/jc2_russell_cylinder_sixth_debt_quartic_thm3683.py
 output: 05-knowledge/results/jc2_russell_cylinder_sixth_debt_quartic_thm3683.out
 script_sha256: b5e4132c322b3a01883688be9e8c993c5927a38f191c547eefcc84af432d9eb3
@@ -29,7 +43,7 @@ hash_basis: raw LF bytes for files; canonical 23-entry symbolic row and quartic 
 
 # THM-3683 -- only four algebraic folds survive the sixth-debt screen
 
-**PROVED + VERIFIED-EXACT; PENDING INDEPENDENT HOSTILE AUDIT.**  The fixed
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.**  The fixed
 `Q_dagger` obstruction of THM-3681 is one point of a symbolic family.  Over
 the whole zero-fourth-debt parabola, the next debt is a quartic.  Its four
 zeros are the exact next candidate set.
@@ -285,7 +299,25 @@ The companion builds all `252` columns directly over `Q(r)`, verifies `(9)`
 on each column, reconstructs both symbolic cokernels and their embedding,
 checks the `23` coefficients and value-block sums, proves irreducibility and
 root counts by exact polynomial arithmetic, and independently recomputes the
-rank and all constant responses in the quartic field.  Reproduce with
+rank and all constant responses in the quartic field.
+
+The independent hostile audit rebuilt the matrix from full pulled-back
+polynomials at `r=2/3`, differentiating before truncation, and recovered the
+same rank, active row, predecessor embedding, and value-block cancellations.
+Over `F_137`, where `F` has four distinct roots, a separate dense jet path
+gave rank `26` and zero constant response at every root.  PARI independently
+confirmed the exact quartic arithmetic and root data.  As a further algebraic
+control, the THM-3651 degree-seven subline `p=0`, `r=-beta/9` gives
+
+```text
+F(-beta/9)=2187(21544632beta-97639283)/33800,
+<ell_+,12>=-(3645/11)D_6,                            (22)
+```
+
+with the minus identity obtained by conjugation.  This specialization is a
+cross-control, not a dependency in the proof of the symbolic family.
+
+Reproduce with
 
 ```bash
 python -B 04-computation/jc2_russell_cylinder_sixth_debt_quartic_thm3683.py
@@ -296,5 +328,4 @@ The theorem concerns only this Russell compiler, the principal retained
 slope packet, degree at most eight, and critical displacements
 `H'(0)=0`.  Mixed folds, other tangent charts, higher-degree Hermite families,
 and arbitrary planar maps remain open.  No counterexample is constructed and
-the planar Jacobian conjecture remains **OPEN**.  **QED pending independent
-hostile audit.**
+the planar Jacobian conjecture remains **OPEN**.  **QED.**

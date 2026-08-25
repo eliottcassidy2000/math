@@ -1,7 +1,14 @@
 ---
 id: THM-536
 title: The Sturmian partial-sum-walk reframe of the LRC(14) seven-sector cover for the AP — meas(S7(consec_k)) = (1/7)·meas{θ∈[0,7): the partial sums S_e=⌊eθ⌋ mod 7 (e=0..k-1) of a slope-frac(θ) mechanical word cover Z/7}; PROVED vanishing meas(S7(consec_k))=0 for k≤6 (only k<7 residues visited); the PROVED pointwise subset-domination lemma (E⊆{0..N} ⟹ meas(S7(E))≤meas(S7(AP_{N+1}))); and three clean refutations (per-block IE-extremality, span/spread-monotonicity, and meas(S7) translation-invariance are all FALSE) that explain WHY AP-extremality of meas(S7) is irreducibly an aggregate phenomenon
-status: MIXED. PROVED: the θ=7x Sturmian reparametrization (exact, verified k=3..14); meas(S7(consec_k))=0 for k≤6 (cardinality: |{S_e}|≤k<7); the pointwise subset-domination lemma (set inclusion at every x); meas(S7) scale-invariance (re-confirmed) and NON-translation-invariance (counterexample). VERIFIED (exact/adversarial): THM-534's deg-3 dual L_y closes k=9,10 with consec the maximizer and ZERO over-cap on widened boxes (maxE≤17, 24310 sets) — an independent adversarial confirmation of THM-534. REFUTED (exact): per-IE-block extremality of meas(B_M) (AP is neither the per-M max nor min; ~half the signed per-M differences are negative); span-monotonicity and elementary-spread-monotonicity of meas(S7) (both have increases); 7-term-AP ⟹ 31/210 (false for translated/non-0-based APs — only scale-orbits of {0..6} give 31/210). LRC(14) NOT proved; the live gap is unchanged ("consec maximizes meas(S7)"/L_y on k=8,9,10).
+status: >
+  MIXED + CORRECTED BY MISTAKE-489. PROVED: the theta=7x Sturmian
+  reparametrization; vanishing for k<=6; pointwise subset domination; global
+  monotonicity of the AP cover sequence; scale invariance and failure of
+  translation invariance. FINITE-EXACT, TWO-ENGINE AUDITED: the corrected
+  span thresholds are N*=(7,8,10,13,26,infinity) for k=8..13. REFUTED:
+  per-IE-block extremality, span/spread monotonicity for arbitrary E, and the
+  translated-AP reading. LRC(14) is not proved.
 source: mac-mini-2026-06-18-S7
 depends_on:
   - THM-532   # seven-sector relation-height split (meas(S7)=M7+corr; scale invariance)
@@ -12,6 +19,11 @@ related:
   - THM-531   # AP-orbit invariance (mu_theta is translation+scale invariant — CONTRAST: meas(S7) is only scale-invariant)
   - HYP-2603  # codex seven-sector net-cap reduction
 external: Lonely Runner Conjecture (first open case = 13 speeds). Sturmian / mechanical words; three-distance (Steinhaus) theorem; cutting sequences of a line.
+correction_script: 04-computation/lrc14_sturmian_span_threshold_correction_thm536.py
+correction_output: 05-knowledge/results/lrc14_sturmian_span_threshold_correction_thm536.out
+correction_script_sha256: ad3d4906946ca22e12afcf5ca37cc1a7134f1929813bb0ef578435108de38f0f
+correction_output_sha256: c548ee02f7956edd42f87dd1f0daa19b1f0ec668a042786928991a857f62c354
+hash_basis: raw LF bytes
 ---
 
 # THM-536 — The Sturmian partial-sum-walk reframe of the seven-sector cover
@@ -53,11 +65,41 @@ sector analogue of "you need at least 7 runners to surround the lonely one with 
 
 > `meas(S7(E)) ≤ meas(S7(AP_{N+1}))`   whenever `E ⊆ {0,…,N}`.
 
-This rigorously certifies `meas(S7(E)) ≤ cap_k` for every primitive `E` of span `≤ N*(k)`,
-where `N*(k)` is the largest `N` with `meas(S7(AP_{N+1})) ≤ cap_k`: `N*= 7,8,10,13,20,20` for
-`k=8..13`. It is **sharp at the AP** (span `k−1`) but weak for small `k` (at `k=8`, `N*=7=k−1`
-certifies only the AP itself); the residual is the larger-span shapes, which are empirically
-far under cap (`≈0.20` vs `cap_8≈0.38`).
+This rigorously certifies `meas(S7(E)) <= cap_k` for every primitive `E` of
+span at most `N*(k)`. In the extended naturals, define
+
+```text
+N*(k)=sup{N>=k-1: meas(S7(AP_(N+1)))<=cap_k}.
+```
+
+**MISTAKE-489 correction.** The exact thresholds are
+
+```text
+N*(8),...,N*(13)=7,8,10,13,26,infinity.               (B2.1)
+```
+
+The first four values are unchanged. For `k=12`, two independent rational
+wall engines give
+
+```text
+a(27)=11831779/13813800 <= 6/7,
+a(28)=60551/70200       >  6/7,                        (B2.2)
+```
+
+so the last finite certified span is `26`. For `k=13`, every finite `m>=2`
+has a noncover interval: when `0<=theta<1/(m-1)`, all `floor(e theta)` with
+`0<=e<m` vanish. Hence
+
+```text
+a(m)<=1-1/(7(m-1))<1=cap_13,                           (B2.3)
+```
+
+and the extended threshold is infinity. The old finite values came from
+interpreting the end of a table as a cap crossing; they are superseded.
+
+At `k=8`, `N*=7=k-1` still certifies only the AP itself. The residual for the
+nontrivial caps is the larger-span family beyond the corresponding value in
+`(B2.1)`; empirical smallness is not a proof of that residual.
 
 ## C. Three REFUTATIONS — why AP-extremality is irreducibly aggregate
 
