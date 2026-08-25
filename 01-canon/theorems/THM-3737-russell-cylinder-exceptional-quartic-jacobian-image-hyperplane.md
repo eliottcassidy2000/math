@@ -10,9 +10,12 @@ status: >
   150-square determinant in a good split reduction certifies the required
   characteristic-zero minor; modular failure is not used as evidence.
   Consequently every later stable equation has one exact scalar solvability
-  gate.  This does not construct a coherent all-order series, global pair,
-  Keller map, or JC(2) counterexample.
-source: jc_zero_debt_lift / exact positive-minor saturation, 2026-08-23
+  gate. The resulting exact sequence splits over K[Z]: one fixed
+  18-channel right inverse and a free rank-18 kernel describe every
+  stagewise lift, while a representative-level quadratic normal compiler
+  carries all normal derivatives. This does not construct a coherent
+  all-order series, global pair, Keller map, or JC(2) counterexample.
+source: jc_zero_debt_lift / exact positive-minor saturation, 2026-08-23; jacobian_incoming_bridge / split-lift corollary, 2026-08-24
 audit: >
   PASS AFTER THREE TYPING REPAIRS -- an independent replay matched the
   pinned normal, optimized, and stored transcript bytes.  Separate mod-137
@@ -23,7 +26,9 @@ audit: >
   stagewise (n+1) scalar gate.  It repaired only the distinction between
   restrictions and image polynomials, the representative-level typing of
   normal sidecars, and the explicit gamma_0 inputs to L_0; no mathematical
-  conclusion changed.
+  conclusion changed. The later split-lift corollary is formal from the
+  displayed free modules and the PID K[Z]; its Taylor compiler is asserted
+  only for chosen actual representatives.
 depends_on:
   - THM-3683-russell-cylinder-sixth-debt-quartic-on-the-zero-fourth-parabola
   - THM-3687-russell-cylinder-exceptional-quartic-actual-j0-lift
@@ -32,6 +37,8 @@ related:
   - THM-3677-russell-cylinder-degree-eight-fourth-debt-parabola
   - THM-3688-russell-cylinder-exceptional-quartic-actual-j1-j2-lift
   - THM-3629-russell-cylinder-positive-global-pair-to-jc2-counterexample
+  - THM-4030-lrc14-d4-affine-defect-lattice-boundary
+  - THM-4032-lrc14-d3-affine-defect-lattice-boundary
 script: 04-computation/jc2_russell_cylinder_exceptional_quartic_jacobian_image_hyperplane_thm3737.py
 output: 05-knowledge/results/jc2_russell_cylinder_exceptional_quartic_jacobian_image_hyperplane_thm3737.out
 script_sha256: 4bbae46df140fbcda30b747f6356538a74fea34b928ed396e481e196fd0303c9
@@ -284,7 +291,136 @@ Equation `(22)` is stagewise sufficiency only.  It does not say that the
 scalar gates vanish at every order, that one can choose a coherent infinite
 series with controlled degrees, or that such a series algebraizes.
 
-## 6. Reproduction and strict boundary
+## 6. Split lift and representative-level normal compiler
+
+Write the free basis `(11)` as
+
+```text
+eta_0=1,                 eta_1=xZ,
+eta_r=x^r-x              (3<=r<=17 odd),
+eta_r=x^r-(9/4)x         (2<=r<=16 even).             (23)
+```
+
+Equation `(18)` lets us choose, once and for all, pairs
+
+```text
+u_r=(F_r,G_r) in S^2,          L_0(u_r)=eta_r.         (24)
+```
+
+Every `H in I` has a unique expansion
+
+```text
+H=sum_(r=0)^17 h_r(Z)eta_r,       h_r in K[Z],         (25)
+```
+
+and therefore
+
+```text
+sigma(H)=sum_(r=0)^17 h_r(Z)u_r                         (26)
+```
+
+is a `K[Z]`-linear right inverse of `L_0:S^2->I`. Since `Z` is
+nonconstant, `K[Z]` is a polynomial ring in one variable over the field
+`K`, hence a PID. The split exact sequence
+
+```text
+0 -> ker L_0 -> S^2 -> I -> 0                          (27)
+```
+
+has source rank `36` and target rank `18`. Its kernel is consequently free
+of rank `18`. After choosing a basis `v_1,...,v_18`, every solution is
+
+```text
+sigma(H)+sum_(j=1)^18 g_j(Z)v_j,       g_j in K[Z].    (28)
+```
+
+This is an existence theorem for fixed module channels. It does not claim
+that explicit low-degree `u_r,v_j` have already been extracted.
+
+The same split can carry every normal derivative, but only after choosing
+actual target representatives. Use the target ring and compiler
+
+```text
+R_K=K[b,c,e]/(c^2e-b(b+4)),
+D=1+x^2q,
+b=(D-1)(D+2)^2,  c=xD(D+2),  e=q(D+3),               (29)
+```
+
+and choose actual representatives `Z_tilde,u_tilde_r,v_tilde_j` of the
+corresponding restrictions. For an actual representative `H_tilde`, define
+
+```text
+N_(H_tilde)(s)
+ =Phi(H_tilde)(x,Q_alpha(x)+s)
+ =sum_(k>=0) gamma_k(H_tilde)s^k/k!.                  (30)
+```
+
+Substitution makes `N` a `K`-algebra homomorphism on actual
+representatives. It need not descend to their restriction classes. With
+
+```text
+mu=lc_x(E+3)^(-1),          Z_tilde=mu(e+3),           (31)
+```
+
+direct substitution in `(29)` gives the quadratic sidecar
+
+```text
+N_(Z_tilde)(s)
+ =Z+mu(4+2x^2 Q_alpha)s+mu x^2 s^2.                  (32)
+```
+
+Hence, componentwise for every polynomial `h`,
+
+```text
+N_(h(Z_tilde)u_tilde_r)(s)
+ =h(N_(Z_tilde)(s)) N_(u_tilde_r)(s),                (33)
+```
+
+and similarly for the kernel channels. One quadratic series therefore
+carries every `Z`-height and all its normal derivatives; a fresh raw
+coefficient solve is unnecessary after the finite channel representatives
+are chosen.
+
+At stable order `n`, put
+
+```text
+H_n=(c_n-D_n)/(n+1).                                  (34)
+```
+
+The gate `(22)` is exactly `H_n in I`. When it passes, `(25)--(33)`
+construct an actual representative-level next coefficient and describe
+every alternative restriction-level choice. This is stagewise and
+cutoff-free in polynomial degree; it supplies no recurrence in `n` and no
+proof that the next scalar gate will pass.
+
+### The support-three circuit shared with the LRC defect boundary
+
+For the common retained values `(f,g)` of a pair in `S^2`, equations `(5)`
+give the value map
+
+```text
+A_J(f,g)=[[9,3],[-4,3],[-9,3]] (f,g)^T.               (35)
+```
+
+Its signed maximal minors are
+
+```text
+(15,-54,39)=54(5/18,-1,13/18),                        (36)
+```
+
+which recovers `Lambda` as its primitive rank-two compatibility circuit.
+THM-4030/4032 have the same support-three architecture: their centre maps
+have one signed-minor circuit, then local gcd/residue and strict-window
+saturation upgrades compatibility to an affine lift. Here the separate
+positive-minor `K[Z]` saturation in Section 4 upgrades `(36)` to polynomial
+realizability.
+
+This is a typed mechanism bridge, not a map from runner configurations to
+Keller maps. It preserves rank-two image compatibility and the need for a
+saturation sidecar. It loses every LRC inequality, gcd, phase, and owner;
+in the other direction it loses actual-representative normal jets.
+
+## 7. Reproduction and strict boundary
 
 From the repository root:
 

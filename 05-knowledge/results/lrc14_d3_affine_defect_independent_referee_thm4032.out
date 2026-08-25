@@ -1,0 +1,10 @@
+LRC14_D3_AFFINE_DEFECT_INDEPENDENT_REFEREE
+semantic_engine=all_6_literal_open_interval_assignments
+arithmetic_engine=bounded_defects_plus_congruence_reconstruction
+profiles=1540;positive=1065;range=1..32_nonmultiples_of_3
+box=A_mod_a,B_0_to_2b,C_0_to_2c:verified_on_every_reconstruction
+mod3=>nonzero_and_no_endpoint_ties
+first_omit_mod3_hostile=(8, (2, 7, 8), (2, 7, 8), (-1, -2, -3, 0))
+first_omit_circuit_hostile=(7, (1, 4, 7), (1, 4, 7), (1, -1, -2, 9))
+checks=14334
+RESULT=PASS

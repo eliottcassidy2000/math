@@ -51,8 +51,10 @@ THM-2059 and THM-2043/2050 require height/exit sidecars for LRC joins.
 
 ## Discretize phase on boundary atlas
 
-**Action:** at algebraic phase endpoints, rewrite coefficients as currents over the lower-phase field; finite cyclotomic/monomial coordinates make cancellation coordinatewise. **Caution:** this is not nonvanishing: arbitrary cuts and uniform combs need color/amplitude/owner. A nonconstant factor can be phase-invisible: target-neutral dilation leaves same-axis harmonics in one residue class, so only cross-axis mixing changes target character.
-**Evidence:** THM-2022, THM-2303/2304, and hostile THM-2299/2344 (including the nonconstant twelve-tooth control).
+**Action/boundary:** at algebraic endpoints, rewrite coefficients as currents
+over the lower-phase field. Coordinatewise cancellation is not nonvanishing:
+retain color/amplitude/owner, and test phase-invisible same-axis dilation.
+**Evidence:** THM-2022, THM-2303/2304, hostile THM-2299/2344.
 
 ## Search the statement before the method
 
@@ -86,9 +88,11 @@ THM-3955/3957 and MISTAKE-471 are conductor hostiles.
 
 ## Audit saturation and basis covariance before naming a lattice bridge
 
-**Action:** for equal ranks, canonical-looking Grams, or proposed discriminants, name ambient modules/maps and compute kernel, cokernel/saturation, discriminant, and minimal vectors. Quadratic claims need `GL_n(Z)` covariance and an invariant form before class groups.
-**Boundary:** full-rank frames can have huge index; a max of linear forms need not be one quadratic representation problem. Label frame comparisons; arithmetic transfer needs an invariant form and target-preserving map.
-**Evidence:** MISTAKE-227 (`11!` index) and MISTAKE-229 (false Heegner form on THM-2053).
+**Action/boundary:** name ambient modules/maps and compute kernel, saturation,
+discriminant and minimal vectors. Equal rank does not control index; maxima
+of linear forms are not automatically quadratic forms. Arithmetic transfer
+needs `GL_n(Z)` covariance, an invariant form and target-preserving map.
+**Evidence:** MISTAKE-227/229.
 
 ## Preserve the selected side, not only the walls
 
@@ -100,8 +104,10 @@ THM-3955/3957 and MISTAKE-471 are conductor hostiles.
 
 ## Restore a collapsed grading before transporting moments
 
-**Action:** when a diagonal moment or total count is claimed to encode a multigraded target, expose the lost grading/observer and test translates preserving the diagonal but changing the target. `CT[P^m Pbar^m]` fixes augmentation zero; mixed `CT[P^r Pbar^s]` restores grade `r-s`. The diagonal suffices only after target invariance under that loss is proved.
-**Evidence:** MISTAKE-226/209, THM-2352, THM-2615/2620/2625: target difference loses endpoint origin/determinant; joint current restores cells and admissible parabolic sectors.
+**Action/boundary:** expose the grading lost by diagonal moments/totals and
+test target-changing translates. Mixed `CT[P^r Pbar^s]` restores grade
+`r-s`; diagonal data suffices only after target invariance is proved.
+**Evidence:** MISTAKE-226/209, THM-2352, THM-2615/2620/2625.
 
 ## Refine and saturate before transporting a factor or shadow
 
@@ -110,9 +116,12 @@ THM-3955/3957 and MISTAKE-471 are conductor hostiles.
 
 ## Controlled forgetting and unlabeled quotients require a sidecar
 
-**Action:** for `q:X->Y`, inspect `X times_Y X`, split off-diagonal seams, and retain `ker(q)/(ker(q) intersect ker(rho))` for action `rho`. A `G`-equivariant choice field needs `A(x)^(Stab_G(x))!=empty`; else keep a marked/set-valued fibre. Čech/torsor language needs a nonempty invertible composable predicate-preserving seam.
-**Boundary:** normalization retains original/conductor-complement/full sites, conductor kernel, and labelled branches. Frozen-bank injectivity is not congruence; “minimal” is consumer-relative, and relational targets need no section.
-**Evidence:** exact-six, THM-3450/3452/3454/3731/3732/3944/3951/3955/3957, MISTAKE-310/401/466.
+**Action/boundary:** for `q:X->Y`, inspect `X times_Y X`, retain off-diagonal
+seams/action kernel, and require fixed fibres for equivariant choices.
+Čech/torsor claims need composable predicate-preserving seams; normalization
+keeps conductor and branch labels. Injectivity is not congruence.
+**Evidence:** exact-six, THM-3450/3452/3454/3731/3732/3944/3951/3955/3957,
+MISTAKE-310/401/466.
 
 ## Quotient by the actual repair, then test the native survivor
 
@@ -140,8 +149,12 @@ THM-3990/3989/3991; THM-4002 is the nonlinear counterindication.
 
 ## Compose witness fibres before taking their scalar shadow
 
-**Action:** when finite-to-one maps freeze different masks, retain base/root labels, form the cospan, disintegrate one set-valued fibre, cross the transverse fibre, then scalarize; record order, units, endpoints, and landing. Successive constancy turns correlation into incidence. Shared divisors, missing high factors, nonunits, untransported targets, or endpoint atoms can break it; a cospan is not a tournament equivalence. Compute its Čech nerve.
-**Evidence:** THM-2426/2427/2413; THM-2680 has no THM-2682 two-simplex, and THM-2658 needs a common gain section.
+**Action/boundary:** when finite-to-one maps freeze different masks, retain
+labels, form the cospan, cross compatible fibres, then scalarize; record
+order, units, endpoints and landing. Shared divisors, nonunits, missing
+factors or endpoint atoms break composition; a cospan is not a tournament
+equivalence. Compute its Čech nerve. **Evidence:** THM-2426/2427/2413;
+THM-2680 lacks a THM-2682 two-simplex and THM-2658 needs a gain section.
 
 ## Existence is a maximum or tail question, not automatically a mean question
 
@@ -229,12 +242,20 @@ only after factorization or target-annihilation is proved.
 
 ## Fill operation columns, not only invariant columns
 
-**Action:** when invariants abound but laws do not, test native generators on the object and dual. Before treating rank `e(n)` as `n`, pull each generator through it and label the law affine, polynomial, finite-state, decoding-dependent, or unclosed. A pulled-back law makes rank structural; otherwise it only schedules. If the operation exits the carrier or rank loses gaps, weights, ancestry, cancellation, or fibre components, retain a decoder and those coordinates.
-**Evidence:** THM-3756 (`odd-square-ordinal-berggren-affine-descent`), THM-3382 (`fibonacci-ray-dual-index-harmonic-bifurcation-and-ternary-heap-addresses`), THM-3758/3819.
+**Action/boundary:** test native generators on object and dual. Before
+replacing an object by rank `e(n)=n`, pull generators through the rank and
+type the law; otherwise rank only schedules. Retain a decoder whenever rank
+loses gaps, weights, ancestry, cancellation or fibre components. **Evidence:**
+THM-3756, THM-3382, THM-3758/3819.
 
 ## Tournament Analysis must preserve content
 
-**Action:** when pairwise data suggests a tournament, require an intrinsic binary relation, preserve ties, name the target, test alternate vertices, and compute endpoint-swap parity. Antisymmetric signs may orient; symmetric signs are colors/gains, and Pfaffian orientation is an extra gauge. A gauge resolves ties only when its support and preserved contraction enter the theorem. **Evidence:** MISTAKE-212/214; THM-2290/2292/2294 and S79.
+**Action/boundary:** require an intrinsic relation, ties, target and endpoint
+parity. Threshold overlaps need absolute weights: orientation/rank can match
+across true/false profiles. Keep height beside finite tournament controllers;
+gauges count only with target-preserving support.
+**Evidence:** MISTAKE-212/214; THM-2290/2292/2294, THM-382,
+THM-4029/4030/4031/4032, S79.
 
 ## Type a shared sum as a weighted fiber before transferring it
 
@@ -246,8 +267,12 @@ only after factorization or target-annihilation is proved.
 
 ## Classify response-state growth before naming the closed form
 
-**Action:** for repeated joins, lifts, or substitutions, derive the operation response and classify sufficient state as fixed jet, moving endpoint jet, time-varying transfer, or gauged arithmetic section. Test uniform family annihilation before claiming finite detection: one object may be finite while family length is unbounded, and moving boundary jets blind every fixed derivative bank. These states expose tail/decimation, not converses or low bit complexity.
-**Evidence:** THM-3181/3202/3186/3235/3268; THM-3466's block/moving-jet contrast; unbounded THM-3383/3397 debt; THM-3465.
+**Action/boundary:** derive repeated-operation response and classify state as
+fixed jet, moving endpoint jet, time-varying transfer or arithmetic section.
+Test uniform family annihilation before finite detection: moving boundaries
+blind fixed derivative banks. Such state exposes tails, not converses or low
+bit complexity. **Evidence:** THM-3181/3202/3186/3235/3268, THM-3466,
+THM-3383/3397, THM-3465.
 
 ## Divide exceptional multiplicity before judging a wall
 

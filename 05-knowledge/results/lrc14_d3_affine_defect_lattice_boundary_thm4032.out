@@ -1,0 +1,8 @@
+LRC14_D3_AFFINE_DEFECT_LATTICE_BOUNDARY_THM4032
+iff=direct_phase=affine_centres=mod3_defect_circuit
+profiles=560;first_false_gcd_gate=(1, 4, 7)
+minimal_distinct_geometric=(5, (1, 4, 5), Fraction(23, 112), ((0,), (2,), (1,)), (0, 1, 3, 1, 1, -1, Fraction(-23, 336), Fraction(89, 112)))
+minimal_H10_pack_hostile=(11, (1, 5, 11), Fraction(2, 11), ((0,), (1,), (2,)))
+typed_row=(6, 9, 12, 15, 18, 21, 24, 27, 1, 5, 11, 3, 30);safe_phase=1/14;clearance=1/14
+checks=3627
+RESULT=PASS

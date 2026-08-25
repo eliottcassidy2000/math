@@ -70,23 +70,30 @@ is the safe control `M(S_13)=99/338`. No cited result proves LRC(14).
   `[1,21]` scale-two bodies. THM-4003/4004 give ratio/prime/`t<U` gates
   (`U>=3,208,300,859`); all 17 arbitrary-body types and owner/arrival remain
   OPEN. [THM-4024](../01-canon/theorems/THM-4024-lrc14-complete-divisor-incidence-envelope.md)
-  upgrades the divisor-incidence profile to `(11,9,8,8,7,7,...)`, leaving
-  only equality moduli `2,3,4`; [THM-4030](../01-canon/theorems/THM-4030-lrc14-d4-affine-defect-lattice-boundary.md)
-  converts the `d=4` obstruction into an exact bounded odd support-three
-  relation and closes every certificate-negative row, but still needs the
-  divided pack's safe-phase set. [THM-4025](../01-canon/theorems/THM-4025-lrc14-owner-residue-odd-dilation-semigroup.md)
+  gives profile `(11,9,8,8,7,7,...)` and equality moduli `2,3,4`.
+  [THM-4030](../01-canon/theorems/THM-4030-lrc14-d4-affine-defect-lattice-boundary.md)/[4032](../01-canon/theorems/THM-4032-lrc14-d3-affine-defect-lattice-boundary.md)
+  give exact `d=4/3` affine circuits and close certificate-negative rows;
+  both still need the pack-safe set, and `d=2` lacks an affine law.
+  [THM-4025](../01-canon/theorems/THM-4025-lrc14-owner-residue-odd-dilation-semigroup.md)
   gives the odd-divisibility semigroup, while [THM-4031](../01-canon/theorems/THM-4031-lrc14-endpoint-owner-rational-tail.md)
   proves that every old-strip ray has an eventual arithmetic-survivor tail;
   the owner-relaxed THM-4003 gate therefore cannot close ray tails, and has
   LRC meaning only at physical heights below `91^6`. Orthogonally,
   [THM-4029](../01-canon/theorems/THM-4029-lrc14-ap-cover-twelve-owner-rational-tail.md)
   proves the exact twelve-owner/60-phase AP-cover tail with constant `127/35`
-  and corrects the span row to `(7,8,10,13,26,infinity)`. The AP-container
-  route still loses sparse occupancy, gaps and owner placement.
+  and corrects the span row to `(7,8,10,13,26,infinity)`.
+  [THM-4038](../01-canon/theorems/THM-4038-ap-deficit-holonomic-sixty-phase-law.md)
+  makes the `P=7` tail an exact rational law from `n>=12`, proves minimal
+  phase `60`, and supplies an explicit P-recursive law and D-finite
+  nonalgebraic generating function.
+  [THM-4033](../01-canon/theorems/THM-4033-prime-sector-ap-cover-eventual-owner-tail.md)
+  proves the corresponding all-prime finite-owner tail and constant
+  `P^-1 sum_(q<P)phi(q)(2(P-q)-1)/q`.
   [THM-4035](../01-canon/theorems/THM-4035-sixty-clock-separation-and-finite-kakeya-spine.md)
-  separates its `lcm(1,...,6)` clock from the Fibonacci-mod-10 and
-  triangular-mod-30 state clocks; scalar shadows and its finite Kakeya spine
-  supply no sparse-owner or LRC transfer. THM-3858
+  separates the AP clock from the Fibonacci-mod-10 and triangular-mod-30
+  state clocks; scalar shadows and its finite Kakeya spine supply no
+  sparse-owner or LRC transfer. The AP-container route still loses sparse
+  occupancy, gaps and owner placement. THM-3858
   exhausts only the target `Z_3` test. **FINITE-EXACT:**
   `(9,13;76,132)` is the unique tripling edge through sum `10^6`
   (independent control `5000`).
@@ -361,6 +368,10 @@ or residue follows.
   THM-3994/3996 type multiplicity versus address ownership; THM-3999 fixes the boundary/class ledger. THM-4005 excludes live `3x4/4x3`; THM-4007 gives fixed-gauge `5x5` on `b=d=0`, forces `p^3!=0`, and couples `p^4,y^2`.
   THM-4008 excludes pure-`p` residuals. THM-4016 proves the formal sharp `5x5` point `(43/84,127/84)` nontorsion; THM-4017 refutes its attachment role via forced `p^4` at `rho^-2`. Its truncated `j=1728` side facet dies when `p*y^2` enters. THM-4011 supplies the companion-factor/log Riemann--Hurwitz audit.
   THM-4012 proves the conditional good-elliptic-factor/Bolza observer and, for the distinct actual max-six attachment `(43/224,267/224)` with `p^4=0`, proves the stable model and unconditional exclusion. Thus `b=d=0` has `M>=7`; `M>=9` needs face-stability at weights seven/eight.
+  In the Russell exceptional-quartic lane, THM-3703/3737 give a rank-18
+  grammar, one image hyperplane, a split 18+18 lift/kernel, and a quadratic
+  representative normal compiler. Future gates, coherence, degree control,
+  algebraization and Keller entry remain OPEN.
   Other reduced cells, higher faces, cancellation, Keller/Darboux entry, the nonreduced Russell `(6,4)` lane, and `JC(2)` stay open.
 - **Weyl boundary:** THM-2049 gives a formal beta-adic lift; finite termination remains.
 - **Planar source fibres:** THM-2063/THM-2084--2480 (including

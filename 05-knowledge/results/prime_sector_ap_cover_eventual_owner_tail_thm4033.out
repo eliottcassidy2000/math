@@ -1,0 +1,25 @@
+PRIME-SECTOR EVENTUAL OWNER AUDIT
+P=2: owners=1; C_P=1/2; q=P_boundary_robust=True
+P=3: owners=2; C_P=7/6; q=P_boundary_robust=True
+P=5: owners=6; C_P=12/5; q=P_boundary_robust=True
+P=7: owners=12; C_P=127/35; q=P_boundary_robust=True
+P=11: owners=32; C_P=667/110; q=P_boundary_robust=True
+P=13: owners=46; C_P=14577/2002; q=P_boundary_robust=True
+P=17: owners=80; C_P=75116/7735; q=P_boundary_robust=True
+P=19: owners=102; C_P=53004169/4849845; q=P_boundary_robust=True
+P=23: owners=150; C_P=99408258/7436429; q=P_boundary_robust=True
+P=29: owners=242; C_P=965375416/56751695; q=P_boundary_robust=True
+P=31: owners=278; C_P=1827852918728/100280245065; q=P_boundary_robust=True
+constant_rows_sha256=525bdd55a1f5a2dd731db84a8174d5dc1378ca50c28bd6441bba83a57b220ebd
+P=2: sampled_owner_formula_onset=2; checked_through_m=20; direct_sha256=7d6b53d8002c93059d35cd2c3a7484a0d3ecbea7ece47a59bcc3b1e95cad083a
+P=3: sampled_owner_formula_onset=3; checked_through_m=24; direct_sha256=a731824bf72e89edeb63ac852e91c459cb820d5e9c0f3945cb14bf89aa37804e
+P=5: sampled_owner_formula_onset=7; checked_through_m=32; direct_sha256=7c4d66f853d205260a4b4bb66992c3211a2c17de666ab4288270a3c7ecf6fe63
+P=7: sampled_owner_formula_onset=13; checked_through_m=30; direct_sha256=498699c13ecc6468e2c3353a90eecaadfb0d9045f18f993e4f7d46bf4cea91fb
+P=11: sampled_owner_formula_onset=31; checked_through_m=42; direct_sha256=e1f1d7de36d4928d440ae83b139544ad876fe1baf3626e14abbe2bb9676de488
+P=13: sampled_owner_formula_onset=43; checked_through_m=54; direct_sha256=9025856fa82f3a99bbbcdea59070be6da44681f82e312671fc9fb52d1525e083
+P=17: sampled_owner_formula_onset=73; checked_through_m=84; direct_sha256=c5205c67fa8f32a90f8e8d0d7ede7a8e3171691d8366c7586430a4dd90d9f343
+P=19: sampled_owner_formula_onset=91; checked_through_m=103; direct_sha256=a7b484d37d19c1b0c30fe951044c00690df03499831f36afc6c7eb8bf52929a2
+P=23: sampled_owner_formula_onset=133; checked_through_m=140; direct_sha256=c085043376f4f8d5bbb054146c6a073a349ae699887900078274e426959485f6
+small_prime_rows_sha256=4201eb205a9f3280d36ba65d3f2818b448d9c3ce776801ab0237faebc75451bb
+H=4_composite_hostile_sha256=1a2158f92227a50421e662b2850fe92bf406598628d775265639d36dda7a8026; naive_prime_formula_fails_through_tail=True
+RESULT=PASS

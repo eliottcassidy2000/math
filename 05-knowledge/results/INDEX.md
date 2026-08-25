@@ -7,6 +7,28 @@
   fixed residue class. For degrees `2,4,6,8` this is `O(X^(11/12))`, yielding
   a shell mean on exactly the scale `H=o(X)`, `H/X^(7/8)->infinity`, but no
   pointwise positivity.
+- `lrc14_d3_affine_defect_lattice_boundary_thm4032.py` and its independent
+  referee -> matching `.out`s [THM-4032 PROVED RELATIVE TO THM-4024/4004 +
+  VERIFIED-EXACT + INDEPENDENTLY REFEREED; LRC(14) OPEN]. Three-lift
+  spoilage is exactly a bounded support-three circuit with gcd, mod-3, and
+  strict-window sidecars. The primary audit checks 560 profiles/3,627 gates;
+  the literal-interval referee checks 1,540 profiles/14,334 gates and isolates
+  separate no-residue/no-circuit hostiles. Script/output SHA-256:
+  `be09b2ff98503ce470a4cf233098c39ec72fd74c193d2f57e3a488f5ad052a43` /
+  `60909f655d86293216b001377b222431a36bb8a66b5cd1187b014a96c21a91ca`;
+  independent `b079c2706fd81c5f465596ebb64e63dd58cfb8f193a3ebefce286ebb7699bfb1` /
+  `e7b72cded0da828beaf8c237341bb13dca8eba22741fa3b027ac8a7085ec4cc5`.
+
+- `prime_sector_ap_cover_eventual_owner_tail_thm4033.py` -> matching `.out`
+  [THM-4033 PROVED + VERIFIED-EXACT]. For every fixed prime, the persistent
+  noncover owners are exactly reduced rationals of denominator below `P`;
+  the tail is phase-rational and has constant
+  `C_P=(1/P)sum_(q<P)phi(q)(2(P-q)-1)/q`. Exact owner/constant/guard checks
+  reach prime 31 and direct walls reach prime 23. The local half of onset
+  `(P^2+3)/4` is proved; global attraction remains OPEN. Modulus four is the
+  first composite hostile. Script/output SHA-256:
+  `77c3de5f38e553839dbabb44cd71bf405fba3dd0389a63a8e633e0b4397fa33b` /
+  `39c330e077a0a66c74eb6358679459b372035888484fa9e5627f8d3c5fa88025`.
 
 - `sun_2468_counterexample_thm4026.py` -> matching `.out` [THM-4026
   REFUTED CONJECTURE + PROVED COUNTEREXAMPLE + VERIFIED-EXACT]. Over exactly
