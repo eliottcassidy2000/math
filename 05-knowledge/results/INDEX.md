@@ -1,5 +1,20 @@
 # Script Results Index
 
+- `jc2_exceptional_affine_triangle_period_monomial_ladder_thm4058.py` and
+  independent split-prime retained-matrix audit -> matching `.out`s
+  [THM-4058 PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED in the
+  formal/local fixed-`a` scope; `JC(2)` OPEN].  The three exceptional affine
+  branch surfaces have one complete normalized triangle-period cokernel per
+  retained degree.  Its response on `w^r` is first nonzero in degree `r+4`
+  and equals `-(r/2)rho`.  Hence, for every `m>=2` and `gamma!=0`, fixed
+  `F=a` for `H=t+gamma*t^m` succeeds through cutoff `m+2` and first fails at
+  `m+3`, with response `gamma*binom(m,2)rho`.  Primary script/output SHA-256:
+  `99d6e27e93129636faba409750fbd1b71fd3f60a7b65117ea24f906cd78888e1` /
+  `8bf827144b5da0e14dab9fc43eae59f2ec695d6bf60e4298e6b1d28b0369e26b`;
+  independent script/output:
+  `9cf33bbd5d022893a2dc31bec837ad708d1d9ef501015fb38da54feaea7a94d2` /
+  `12037bf83bf0754677a6f80d1b89830e2e3d5cd9acb66f3201a50e623fbce939`.
+
 - `sixty_dyadic_response_fibre_thm4055.py` and independent CRT/spatial audit
   -> matching `.out`s [THM-4055 PROVED universal phase-fibre law +
   FINITE-EXACT fixed Rule 30 bank + VERIFIED-EXACT + INDEPENDENTLY AUDITED;

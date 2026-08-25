@@ -73,7 +73,10 @@ Then read the routed frontier, guardrails, and theorem. Logs and reflections are
     THM-3212--3419 give the later infinity, deck, boundary, and linear-`z`
     atlases; THM-3418 closes sparse `f(x)+g(x)z^d`, not general fibres.
     THM-4044/4045 pin the clock alias and force `M>=8`; THM-4053 excludes two
-    off-wall weight-eight strata, leaving `p*y^2` and three walls. `JC(2)`/`DC(2)` OPEN.
+    off-wall weight-eight strata, leaving `p*y^2` and three walls. THM-4058
+    gives an all-m failure only for the frozen local output `a`; mixed pairs
+    remain open.
+    `JC(2)`/`DC(2)` OPEN.
 13. **Complete period-14 coordinates can still be globally blind.** THM-2043
     proves parity-Hasse completeness for reduced period-14 functions. The
     audited Goddyn--Wong family in THM-2058 preserves the packet, every fixed

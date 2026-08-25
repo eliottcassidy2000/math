@@ -34,6 +34,7 @@ depends_on:
   - THM-3683-russell-cylinder-sixth-debt-quartic-on-the-zero-fourth-parabola
   - THM-3687-russell-cylinder-exceptional-quartic-actual-j0-lift
 related:
+  - THM-4058-exceptional-affine-triangle-period-and-simple-zero-monomial-ladder
   - THM-4046-exceptional-quartic-j7-lift-and-j8-obstruction
   - THM-3629-russell-cylinder-linear-vertical-fold-global-form-boundary
   - THM-3631-russell-cylinder-noneven-closed-form-order-five-survival

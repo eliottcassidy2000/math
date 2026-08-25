@@ -369,8 +369,10 @@ or residue follows.
   THM-4034 the conductor. THM-4039/4043/4046 reach `J_7`, obstruct `J_8`,
   and close `0!=H in t^2 C[t]`. [THM-4054](../01-canon/theorems/THM-4054-exceptional-affine-simple-zero-retained-packet.md)
   treats the simple-zero boundary: exact forms saturate the cutoff-five
-  packet, fixed `a` fails there, but its mixed first-order tangent survives.
-  This is finite/local; other cells, global entry/pairs, and `JC(2)` stay open.
+  packet; fixed `a` fails, but its mixed tangent survives.
+  [THM-4058](../01-canon/theorems/THM-4058-exceptional-affine-triangle-period-and-simple-zero-monomial-ladder.md)
+  proves that gauge succeeds through `m+2` and fails at `m+3` for every
+  `H=t+gamma*t^m`, `gamma!=0`. Mixed pairs, global entry, and `JC(2)` stay open.
 - **Weyl boundary:** THM-2049 gives a formal beta-adic lift; finite termination remains.
 - **Planar source fibres:** THM-2063/THM-2084--2480 (including
   THM-2371/THM-2376) close the named

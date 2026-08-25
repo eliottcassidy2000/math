@@ -1,0 +1,15 @@
+EXCEPTIONAL FIXED-a TRIANGLE PERIOD -- EXACT OVER Q(alpha)
+branch_order=(p=-1,p=0,p=1);slopes=(3/4,-1/3,-3/4)
+pair_intersections=common_through_A4;first_split=A5
+delta=(-4147013413888/1937102445,745359898624/71744535,-368319367168/7971615,-146885574656/2657205)
+delta_over_rho=26/15
+normalized_c_edges=(5/13,-18/13,1)
+normalized_w_edges=(15/52,6/13,-3/4)
+triangle_area_over_delta_squared=-15/52
+canonical_affine_response_on_w=-rho/2
+all_r_response_on_w^r=-(r/2)rho;first_degree=r+4
+source_reparam=H=t+gamma*t^m;h_prime=1-m*gamma*u^(m-1)+higher
+canonical_fixed_a_constant_response=gamma*binom(m,2)*rho;first_cutoff=m+3
+inverse_reparam_controls=m=2..12:PASS
+scope=formal_three-branch_fixed-a_packet_only
+RESULT=PASS

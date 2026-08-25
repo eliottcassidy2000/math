@@ -1,0 +1,12 @@
+EXCEPTIONAL AFFINE TRIANGLE PERIOD / MONOMIAL LADDER -- INDEPENDENT MOD-137 AUDIT
+split_roots=(44,82,92,134);all_good=True
+branch_slopes=(3/4,-1/3,-3/4);pairwise_vertices_common_through_A4=True
+rho_reductions=(8,85,12,135);delta=(26/15)rho
+c_edge_ratios=(5/13,-18/13,1);area=(-15/52)delta^2
+reduced_period_w=-rho/2
+m_range=2..12;pass_cutoff=m+2;fail_cutoff=m+3
+all_pass_responses_zero=True;all_fail_responses=binom(m,2)*gamma*rho
+rank_formula=rows-(N+1);inverse_derivative_gamma_polynomials_checked=True
+table_sha256=1641250c558fbdeea9f2e2ccff1a515761d4af596f95ae5bce4587d12edc72c9
+scope=independent_split-prime_hostile_audit_not_characteristic-zero_proof
+RESULT=PASS
