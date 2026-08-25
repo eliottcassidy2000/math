@@ -73,7 +73,7 @@ is the safe control `M(S_13)=99/338`. No cited result proves LRC(14).
   gives profile `(11,9,8,8,7,7,...)` and equality moduli `2,3,4`.
   [THM-4030](../01-canon/theorems/THM-4030-lrc14-d4-affine-defect-lattice-boundary.md)/[4032](../01-canon/theorems/THM-4032-lrc14-d3-affine-defect-lattice-boundary.md)
   give exact `d=4/3` affine circuits and close certificate-negative rows.
-  [THM-4036](../01-canon/theorems/THM-4036-lrc14-d2-affine-defect-edge-boundary.md)
+  [THM-4041](../01-canon/theorems/THM-4041-lrc14-d2-affine-defect-edge-boundary.md)
   completes the `d=2` affine law: its two-centre complex has one defect edge,
   no circuit, and an exact spoiled-phase measure/component formula. All three
   equality moduli still need intersection with the correctly typed divided
@@ -91,8 +91,11 @@ is the safe control `M(S_13)=99/338`. No cited result proves LRC(14).
   phase `60`, and supplies an explicit P-recursive law and D-finite
   nonalgebraic generating function.
   [THM-4033](../01-canon/theorems/THM-4033-prime-sector-ap-cover-eventual-owner-tail.md)
-  proves the corresponding all-prime finite-owner tail and constant
-  `P^-1 sum_(q<P)phi(q)(2(P-q)-1)/q`.
+  proves the all-prime tail and constant
+  `P^-1 sum_(q<P)phi(q)(2(P-q)-1)/q`. For odd `P>=5`, the geometric owner
+  decomposition has sharp onset `(P^2+3)/4`; `P=3` is the lower-domain edge.
+  Its phase-rational law also implies fixed-`P` holonomicity. Scalar mismatch
+  at every earlier row is only FINITE-EXACT.
   [THM-4035](../01-canon/theorems/THM-4035-sixty-clock-separation-and-finite-kakeya-spine.md)
   separates the AP clock from the Fibonacci-mod-10 and triangular-mod-30
   state clocks; scalar shadows and its finite Kakeya spine supply no
@@ -375,10 +378,16 @@ or residue follows.
   In the Russell exceptional-quartic lane, THM-3703/3737 give a rank-18
   grammar, one image hyperplane, a split 18+18 lift/kernel, and a quadratic
   representative normal compiler. The image's exact multiplicative
-  annihilator is `x(x^2-1)K[x]`, forcing that factor in any global conductor;
-  THM-4034's degree-178 conductor remains a RESERVED proof candidate. Future
-  gates, coherence, degree control, algebraization and Keller entry remain
-  OPEN.
+  annihilator is `L K[x]`, `L=x(x^2-1)`. THM-4034 proves the global conductor
+  `L^2h_172K[x]` of degree `178`; the intervening multiplier module has exact
+  length `175` and reduced finite-etale support. As an inherited nonunital
+  algebra it splits exactly as a three-dimensional zero algebra and the
+  `172`-dimensional finite-etale algebra `K[x]/h_172`; its nilradical is also
+  the exact kernel of regular multiplication. Thus multiplication-only
+  channels lose precisely the three retained cotangent lines. This is a
+  required linear sidecar, not a singularity classification or a JC
+  obstruction. Future gates, coherence, degree control, algebraization and
+  Keller entry remain OPEN.
   Other reduced cells, higher faces, cancellation, Keller/Darboux entry, the nonreduced Russell `(6,4)` lane, and `JC(2)` stay open.
 - **Weyl boundary:** THM-2049 gives a formal beta-adic lift; finite termination remains.
 - **Planar source fibres:** THM-2063/THM-2084--2480 (including

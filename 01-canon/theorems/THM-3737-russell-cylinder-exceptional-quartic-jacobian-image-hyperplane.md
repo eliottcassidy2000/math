@@ -14,10 +14,13 @@ status: >
   18-channel right inverse and a free rank-18 kernel describe every
   stagewise lift, while a representative-level quadratic normal compiler
   carries all normal derivatives. The multiplicative annihilator of the
-  image hyperplane inside K[x] is exactly x(x^2-1)K[x], so the actual
-  restriction-algebra conductor is contained in that principal ideal. This
-  does not construct a coherent all-order series, global pair, Keller map,
-  or JC(2) counterexample.
+  image hyperplane inside K[x] is exactly x(x^2-1)K[x]. With THM-4034, the
+  gap from the actual conductor is a cyclic K[x]-module of length 175 with
+  reduced finite-etale support. Its inherited nonunital algebra splits as a
+  three-dimensional zero algebra and a 172-dimensional finite-etale algebra;
+  multiplication loses exactly the three retained cotangent lines. This does
+  not construct a coherent all-order series, global pair, Keller map, or
+  JC(2) counterexample.
 source: jc_zero_debt_lift / exact positive-minor saturation, 2026-08-23; jacobian_incoming_bridge / split-lift corollary, 2026-08-24
 audit: >
   PASS AFTER THREE TYPING REPAIRS -- an independent replay matched the
@@ -31,7 +34,12 @@ audit: >
   normal sidecars, and the explicit gamma_0 inputs to L_0; no mathematical
   conclusion changed. The later split-lift corollary is formal from the
   displayed free modules and the PID K[Z]; its Taylor compiler is asserted
-  only for chosen actual representatives.
+  only for chosen actual representatives. The multiplier/conductor corollary
+  is formal from Lambda and THM-4034 and was independently type-audited: its
+  length-175 object is a cyclic module, not a reduced quotient algebra. A
+  second independent audit recovered its exact CRT radical split, local
+  lengths, multiplication kernel, and the distinction between module support
+  of degree 175 and reduced multiplier algebra of degree 172.
 depends_on:
   - THM-3683-russell-cylinder-sixth-debt-quartic-on-the-zero-fourth-parabola
   - THM-3687-russell-cylinder-exceptional-quartic-actual-j0-lift
@@ -435,18 +443,94 @@ Let
 c_S=(S:K[x])={f in K[x]:fK[x] subset S}              (38)
 ```
 
-be the still-uncomputed global conductor of the restriction algebra. Since
-`S subset I` by `(3)`, equations `(36)--(38)` give the rigorous necessary
-factor
+be the global conductor of the restriction algebra. Since `S subset I` by
+`(3)`, equations `(36)--(38)` give
 
 ```text
 c_S subset LK[x].                                    (39)
 ```
 
-As `K[x]` is a PID, any monic conductor generator must therefore be
-divisible by `x(x^2-1)`. This is a cheap exact gate for the reserved
-degree-`178` candidate in THM-4034; it does not prove that candidate,
-determine the degree-`175` cofactor, or imply Gorensteinness.
+THM-4034 subsequently computes the stronger exact factorization
+
+```text
+c_S=L^2 h_172 K[x],                                  (40)
+```
+
+where `h_172` is squarefree and coprime to `L`. Therefore multiplication by
+`L` induces a canonical `K[x]`-module isomorphism
+
+```text
+K[x]/(Lh_172)  ~=  Ann_mult(I)/c_S,
+[r]             |-> [Lr],
+dim_K Ann_mult(I)/c_S=175.                           (41)
+```
+
+The kernel in `(41)` is `(Lh_172)` by cancellation in the domain `K[x]`.
+Thus the multiplier gap is cyclic, with annihilator `(Lh_172)`, and is free
+of rank one over the reduced finite-etale support algebra
+`K[x]/(Lh_172)`. The displayed isomorphism is **not** multiplicative: with
+the multiplication inherited from the nonunital ideal quotient, the nonzero
+class `[Lh_172]` squares to zero. Hence the quotient itself must not be
+called reduced or finite etale.
+
+There is a sharper exact algebra description.  Put `A=K[x]`, `h=h_172`, and
+
+```text
+Q=Ann_mult(I)/c_S=LA/L^2hA,       N=LhA/L^2hA.       (42)
+```
+
+Because `(L,h)=1`, the Chinese remainder theorem restricts to an isomorphism
+of commutative, generally nonunital `K`-algebras
+
+```text
+Q  ~=  (LA/L^2A) x (A/hA),
+[f] |-> ([f] mod L^2,[f] mod h).                     (43)
+```
+
+The first factor has identically zero multiplication and dimension `3`; the
+second is a unital finite-etale algebra of dimension `172`.  Under `(43)`,
+
+```text
+N       ~= (LA/L^2A) x 0,
+Q^2     ~= 0 x (A/hA).                               (44)
+```
+
+Consequently
+
+```text
+N=Nil(Q)=Ann_Q(Q),   NQ=0,   dim_K N=3,
+Q^2=L^2A/L^2hA ~= A/hA,      dim_K Q^2=172,
+Q=N direct_sum Q^2,           Q^j=Q^2 for j>=2.      (45)
+```
+
+In particular, `Q_red=Q/N` is `A/hA`, not `A/(Lh)`.  The latter is instead
+the reduced algebra of the ambient conductor fibre:
+
+```text
+Nil(A/L^2hA)=N,       (A/L^2hA)/N ~= A/(Lh),
+(A/L^2hA)/Q ~= A/L.                                  (46)
+```
+
+Locally at each retained point `a in {-1,0,1}`, the multiplier gap is the
+one-dimensional zero algebra
+
+```text
+Q_((x-a)) ~= (x-a)/(x-a)^2.                          (47)
+```
+
+At every irreducible factor of `h`, it is the corresponding residue field,
+of local length one, and there is no other support.  Therefore the regular
+multiplication map `Q -> End_K(Q)` has exact kernel `N` and image the regular
+representation of `A/hA`.  Any channel compiler that records this gap only
+through internal multiplication necessarily discards exactly the three
+retained cotangent lines and needs a three-dimensional linear sidecar to
+recover them.
+
+This length `175` module and its `3+172` multiplication split measure exactly
+which polynomial multipliers land in the Jacobian image hyperplane but are
+not forced into the restriction algebra. They do not classify singularities,
+make later scalar gates vanish, obstruct the existing `K[Z]`-linear split,
+or imply Gorensteinness.
 
 ### The support-three circuit shared with the LRC defect boundary
 
@@ -454,20 +538,20 @@ For the common retained values `(f,g)` of a pair in `S^2`, equations `(5)`
 give the value map
 
 ```text
-A_J(f,g)=[[9,3],[-4,3],[-9,3]] (f,g)^T.               (40)
+A_J(f,g)=[[9,3],[-4,3],[-9,3]] (f,g)^T.               (48)
 ```
 
 Its signed maximal minors are
 
 ```text
-(15,-54,39)=54(5/18,-1,13/18),                        (41)
+(15,-54,39)=54(5/18,-1,13/18),                        (49)
 ```
 
 which recovers `Lambda` as its primitive rank-two compatibility circuit.
 THM-4030/4032 have the same support-three architecture: their centre maps
 have one signed-minor circuit, then local gcd/residue and strict-window
 saturation upgrades compatibility to an affine lift. Here the separate
-positive-minor `K[Z]` saturation in Section 4 upgrades `(41)` to polynomial
+positive-minor `K[Z]` saturation in Section 4 upgrades `(49)` to polynomial
 realizability.
 
 This is a typed mechanism bridge, not a map from runner configurations to

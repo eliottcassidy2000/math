@@ -19,8 +19,8 @@
   independent `2935a6976d19b5ef99bdaae45be7b77e905e4f9edb8946af06af7441b843ffb2` /
   `e7b72cded0da828beaf8c237341bb13dca8eba22741fa3b027ac8a7085ec4cc5`.
 
-- `lrc14_d2_affine_defect_edge_boundary_thm4036.py` -> matching `.out`
-  [THM-4036 PROVED RELATIVE TO THM-4024/4004 + VERIFIED-EXACT +
+- `lrc14_d2_affine_defect_edge_boundary_thm4041.py` -> matching `.out`
+  [THM-4041 PROVED RELATIVE TO THM-4024/4004 + VERIFIED-EXACT +
   HOSTILE-AUDITED; LRC(14) OPEN]. Two-lift spoilage is exactly one affine
   defect with `N==alpha*beta (mod 2g)` and
   `7|N|<alpha+beta`, equivalently reduced exception sum `>7`. The two-centre
@@ -28,19 +28,22 @@
   spoiled-phase measure/component law and checks 780 odd pairs/6,957 gates,
   including a correctly typed eleven-pack containing the requested
   `{1,...,10}` core. Script/output SHA-256:
-  `78e8e129562ffadcc3e50bd4032463b8eb2d8017bb73ab1c97273eadb52898a3` /
-  `002db8870c4d0a27d947e934ff88e49b9ebe42422fcecba5def02238f1948015`.
+  `586a92c076b47f1d2be695771cc8b5e380327ba46cc7bad4184268ae489e6139` /
+  `8b55e6d9f35b14bb14fce2843e270449af5044539723bb995e7bb234cbd4be04`.
 
 - `prime_sector_ap_cover_eventual_owner_tail_thm4033.py` -> matching `.out`
   [THM-4033 PROVED + VERIFIED-EXACT]. For every fixed prime, the persistent
   noncover owners are exactly reduced rationals of denominator below `P`;
-  the tail is phase-rational and has constant
-  `C_P=(1/P)sum_(q<P)phi(q)(2(P-q)-1)/q`. Exact owner/constant/guard checks
-  reach prime 31 and direct walls reach prime 23. The local half of onset
-  `(P^2+3)/4` is proved; global attraction remains OPEN. Modulus four is the
-  first composite hostile. Script/output SHA-256:
-  `77c3de5f38e553839dbabb44cd71bf405fba3dd0389a63a8e633e0b4397fa33b` /
-  `39c330e077a0a66c74eb6358679459b372035888484fa9e5627f8d3c5fa88025`.
+  the tail is phase-rational, holonomic for fixed `P`, and has constant
+  `C_P=(1/P)sum_(q<P)phi(q)(2(P-q)-1)/q`. For odd `P>=5`, exact
+  three-gap/Farey attraction gives sharp geometric onset `(P^2+3)/4`;
+  `P=3` is the lower-domain edge, and scalar mismatch at every earlier row
+  remains finite-exact. Exact
+  owner/constant/guard/sharp-interval checks reach prime 31 and direct walls
+  reach prime 23. Modulus four is the first composite hostile. Script/output
+  SHA-256:
+  `8c73998c615d3709819898494ffede3a773c2efaf415b1cc3f4d6e3e5c923c61` /
+  `3670f67e6c3b4bfb1621f6b7f77c944ca3693b22563e6d95e0fdddac552e04af`.
 
 - `sun_2468_counterexample_thm4026.py` -> matching `.out` [THM-4026
   REFUTED CONJECTURE + PROVED COUNTEREXAMPLE + VERIFIED-EXACT]. Over exactly

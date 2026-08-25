@@ -1,5 +1,5 @@
 ---
-id: THM-4036
+id: THM-4041
 title: "LRC(14) d=2 affine defect-edge boundary and exact spoiled-phase law"
 status: >
   PROVED RELATIVE TO THM-4024/4004 + VERIFIED-EXACT + HOSTILE-AUDITED.
@@ -28,14 +28,14 @@ related:
   - THM-4032-lrc14-d3-affine-defect-lattice-boundary
   - THM-4025-lrc14-owner-residue-odd-dilation-semigroup
   - THM-3878-lrc14-eleven-plus-two-harmonic-absorption-seam-collapse
-script: 04-computation/lrc14_d2_affine_defect_edge_boundary_thm4036.py
-output: 05-knowledge/results/lrc14_d2_affine_defect_edge_boundary_thm4036.out
-script_sha256: 78e8e129562ffadcc3e50bd4032463b8eb2d8017bb73ab1c97273eadb52898a3
-output_sha256: 002db8870c4d0a27d947e934ff88e49b9ebe42422fcecba5def02238f1948015
+script: 04-computation/lrc14_d2_affine_defect_edge_boundary_thm4041.py
+output: 05-knowledge/results/lrc14_d2_affine_defect_edge_boundary_thm4041.out
+script_sha256: 586a92c076b47f1d2be695771cc8b5e380327ba46cc7bad4184268ae489e6139
+output_sha256: 8b55e6d9f35b14bb14fce2843e270449af5044539723bb995e7bb234cbd4be04
 hash_basis: raw LF bytes
 ---
 
-# THM-4036 -- the d=2 affine defect-edge boundary
+# THM-4041 -- the d=2 affine defect-edge boundary
 
 **PROVED RELATIVE TO THM-4024/4004 + VERIFIED-EXACT +
 HOSTILE-AUDITED.** The theorem completes the affine description of the three
@@ -332,9 +332,8 @@ the other arbitrary-body branches, or prove LRC(14).
 ## 8. Replay
 
 ```text
-python3 -B 04-computation/lrc14_d2_affine_defect_edge_boundary_thm4036.py
-python3 -B -O 04-computation/lrc14_d2_affine_defect_edge_boundary_thm4036.py
+python3 -B 04-computation/lrc14_d2_affine_defect_edge_boundary_thm4041.py
+python3 -B -O 04-computation/lrc14_d2_affine_defect_edge_boundary_thm4041.py
 ```
 
 Both runs reproduce the frozen raw-LF output. **QED.**
-

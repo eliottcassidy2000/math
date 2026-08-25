@@ -1,4 +1,4 @@
-THM4036 d=2,c2=9 affine defect-edge exact audit
+THM4041 d=2,c2=9 affine defect-edge exact audit
 status=PASS
 universe=unordered distinct positive odd pairs <= 79
 profiles= 780

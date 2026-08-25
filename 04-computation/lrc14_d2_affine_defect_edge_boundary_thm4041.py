@@ -315,7 +315,7 @@ def control_packet():
 def main():
     census = audit_pair_universe()
     controls = control_packet()
-    print("THM4036 d=2,c2=9 affine defect-edge exact audit")
+    print("THM4041 d=2,c2=9 affine defect-edge exact audit")
     print("status=PASS")
     print("universe=unordered distinct positive odd pairs <=", census["limit"])
     print("profiles=", census["profiles"])
@@ -347,6 +347,5 @@ def main():
 
 if __name__ == "__main__":
     main()
-
 
 

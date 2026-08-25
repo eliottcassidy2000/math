@@ -11,6 +11,7 @@ P=23: owners=150; C_P=99408258/7436429; q=P_boundary_robust=True
 P=29: owners=242; C_P=965375416/56751695; q=P_boundary_robust=True
 P=31: owners=278; C_P=1827852918728/100280245065; q=P_boundary_robust=True
 constant_rows_sha256=525bdd55a1f5a2dd731db84a8174d5dc1378ca50c28bd6441bba83a57b220ebd
+sharp_onset_rows_sha256=a351d0cced5455449df18d0711cbe6184962e7f5430f4818f16b39381bbf0c6e; pre_onset_interval_and_guards=True; P=3_edge=True
 P=2: sampled_owner_formula_onset=2; checked_through_m=20; direct_sha256=7d6b53d8002c93059d35cd2c3a7484a0d3ecbea7ece47a59bcc3b1e95cad083a
 P=3: sampled_owner_formula_onset=3; checked_through_m=24; direct_sha256=a731824bf72e89edeb63ac852e91c459cb820d5e9c0f3945cb14bf89aa37804e
 P=5: sampled_owner_formula_onset=7; checked_through_m=32; direct_sha256=7c4d66f853d205260a4b4bb66992c3211a2c17de666ab4288270a3c7ecf6fe63

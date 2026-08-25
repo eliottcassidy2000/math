@@ -1,8 +1,8 @@
 #!/usr/bin/env python3
-"""Optimization-safe exact audit for the THM-4033 prime-sector finite-owner theorem.
+"""Optimization-safe exact audit for the THM-4033 sharp prime-sector theorem.
 
-This is regression evidence, not a substitute for the symbolic compactness and
-track arguments in PRIME-SECTOR-EVENTUAL-OWNER-THEOREM-PACKET.md.
+This is regression evidence, not a substitute for the symbolic three-gap,
+Farey-cylinder, and local-track arguments in THM-4033.
 """
 
 from fractions import Fraction as Q
@@ -120,6 +120,21 @@ def owner_arcs_at(P: int, n: int):
     return tuple(arcs)
 
 
+def guard_arcs(P: int):
+    arcs = []
+    for p, q in owners(P):
+        theta = Q(P * p, q)
+        plus, minus = track_guard_radii(P, p, q)
+        arcs.append(((p, q), split_circular_arc(P, theta - minus, theta + plus)))
+    return tuple(arcs)
+
+
+def open_overlap(first, second) -> bool:
+    a, b = first
+    c, d = second
+    return max(a, c) < min(b, d)
+
+
 def owner_formula_deficit(P: int, m: int) -> Q:
     n = m - 1
     return sum(
@@ -176,6 +191,7 @@ def main() -> None:
     primes = tuple(P for P in range(2, 32) if is_prime(P))
 
     constant_rows = []
+    sharp_rows = []
     for P in primes:
         total = Q(0)
         by_q = []
@@ -208,12 +224,120 @@ def main() -> None:
                                 for a, b in pieces_i for c, d in pieces_j),
                         f"positive owner overlap at P={P}: {owner_i},{owner_j}")
 
+        guards = guard_arcs(P)
+        for i, (owner_i, pieces_i) in enumerate(guards):
+            for owner_j, pieces_j in guards[i + 1:]:
+                require(not any(open_overlap(first, second)
+                                for first in pieces_i for second in pieces_j),
+                        f"maximal owner guards overlap at P={P}: {owner_i},{owner_j}")
+
+        if P >= 5:
+            h = (P - 1) // 2
+            Q0 = h * (h + 1) + 1
+            n_minus = h * (h + 1) - 1
+            require(Q0 == (P * P + 3) // 4,
+                    f"sharp onset identity failed at P={P}")
+            for q in range(1, P):
+                large_gap_slack = Q0 - (q + (q - 1) * (P - q))
+                require(large_gap_slack == (q - h - 1) * (q - h - 2)
+                        and large_gap_slack >= 0,
+                        f"large-gap attraction inequality failed at P={P},q={q}")
+                local_slack = h * (h + 1) - (q + (q - 1) * (P - q))
+                require(local_slack == (q - h - 1) * (q - h - 2) - 1,
+                        f"pre-onset local identity failed at P={P},q={q}")
+                require(q + (q - 1) * (P - q - 1) <= h * h + 1,
+                        f"negative pre-onset inequality failed at P={P},q={q}")
+            require(max((r - 1) * (P - r) for r in range(1, P)) == h * h,
+                    f"zero-sum attraction maximum failed at P={P}")
+
+            q_first = h + 1
+            require(all(n_minus - ((n_minus - s) % q_first)
+                        == q_first * (q_first - 2) + s
+                        for s in range(q_first)),
+                    f"first middle-track identity failed at P={P}")
+            q_second = h + 2
+            require(n_minus == q_second * q_second - 3 * q_second + 1,
+                    f"second middle-horizon identity failed at P={P}")
+            require(n_minus - (n_minus % q_second) == q_second * (q_second - 3)
+                    and n_minus - ((n_minus - 1) % q_second) == n_minus
+                    and all(n_minus - ((n_minus - s) % q_second)
+                            == q_second * q_second - 4 * q_second + s
+                            for s in range(2, q_second)),
+                    f"second middle-track identity failed at P={P}")
+
+            for p, q in owners(P):
+                plus, minus = owner_radii(P, p, q, n_minus)
+                guard_plus, guard_minus = track_guard_radii(P, p, q)
+                if q == 1:
+                    require((plus, minus) == (Q(P - 1, n_minus),
+                                               Q(P - 2, n_minus)),
+                            f"denominator-one pre-onset radii failed at P={P}")
+                else:
+                    lower_guard = Q(1, q * (q - 1))
+                    require(guard_plus >= lower_guard and guard_minus >= lower_guard,
+                            f"guard lower bound failed at P={P},p/q={p}/{q}")
+                    require(plus <= Q(P - q, q * (n_minus - q + 1))
+                            and minus <= Q(P - q - 1, q * (n_minus - q + 1)),
+                            f"leading-radius bound failed at P={P},p/q={p}/{q}")
+                require(plus <= guard_plus and minus < guard_minus,
+                        f"pre-onset piece escaped guard at P={P},p/q={p}/{q}")
+
+            a = 2 * h * h - h + 1
+            d = h * h - 1
+            c = 2 * h**3 - h * h - h + 1
+            left = Q(a, h)
+            right = Q(c, d)
+            require(h * c - a * d == 1 and a % P == 2 and c % P == 1,
+                    f"sharp interval identities failed at P={P}")
+            require(right - left == Q(1, h * d),
+                    f"sharp interval width failed at P={P}")
+
+            for e in range(1, n_minus + 1):
+                low_j = floor(e * left) - 1
+                high_j = floor(e * right) + 1
+                require(not any(j % P == 1 and Q(j, e) < right
+                                and Q(j + 1, e) > left
+                                for j in range(low_j, high_j + 1)),
+                        f"sharp interval hit sector 1 early at P={P},e={e}")
+
+            for V in range(1 - h, n_minus // d + 1):
+                max_U = (n_minus - V * d) // h
+                for U in range(1, max_U + 1):
+                    e = U * h + V * d
+                    if e <= 0:
+                        continue
+                    j = U * a + V * c
+                    require(c * e - j * d == U and h * j - a * e == V,
+                            f"sharp interval basis identity failed at P={P}")
+                    require(j % P != 1,
+                            f"sharp interval congruence obstruction failed at P={P}")
+
+            n0_j = h * (h + 1) * left
+            require(n0_j.denominator == 1 and int(n0_j) % P == 1
+                    and right <= left + Q(1, h * (h + 1)),
+                    f"sharp interval next-time hit failed at P={P}")
+
+            interval = (left, right)
+            require(not any(open_overlap(piece, interval)
+                            for _, pieces in guards for piece in pieces),
+                    f"sharp interval met an owner guard at P={P}")
+            pre_arcs = owner_arcs_at(P, n_minus)
+            require(not any(open_overlap(piece, interval)
+                            for _, pieces in pre_arcs for piece in pieces),
+                    f"sharp interval met a pre-onset owner piece at P={P}")
+            sharp_rows.append((P, Q0, left, right, tuple(pre_arcs)))
+
     require(closed_constant(2) == Q(1, 2), "P=2 constant changed")
     require(closed_constant(3) == Q(7, 6), "P=3 constant changed")
     require(closed_constant(7) == Q(127, 35), "P=7 constant changed")
     require(owner_leading_radii(2, 0, 1) == (Q(1), Q(0)), "P=2 seam convention changed")
     require(owner_leading_radii(3, 1, 2) == (Q(1, 2), Q(0)), "P=3 q=P-1 side changed")
+    p3_pre = direct_cover_sequence(3, 2)
+    require(1 - p3_pre[1] == 1 and 1 - ((1 - 0) % 2) == 0,
+            "P=3 pre-onset edge changed")
     print(f"constant_rows_sha256={digest(tuple(constant_rows))}")
+    print(f"sharp_onset_rows_sha256={digest(tuple(sharp_rows))}; "
+          "pre_onset_interval_and_guards=True; P=3_edge=True")
 
     direct_ranges = {
         2: 20, 3: 24, 5: 32, 7: 30, 11: 42, 13: 54, 17: 84,
