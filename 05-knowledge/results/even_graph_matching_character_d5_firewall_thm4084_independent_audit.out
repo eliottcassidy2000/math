@@ -1,9 +1,9 @@
 THM-4084 independent switching-class Held-Karp audit
 exhaustive_class_range=6,7 all_layer_matching_range=6..10
-low_frustration_classes=351 exhaustive_subset_cycle_gates=27678
+low_frustration_classes=2006 exhaustive_subset_cycle_gates=167748
 all_layer_subset_cycle_gates=8003
-exhaustive_rows=[{"class_counts":{"0":1,"1":15,"2":105,"3":395,"4":480,"5":27,"6":1},"d5_equalities":15,"low_nontrivial_classes":120,"n":6},{"class_counts":{"0":1,"1":21,"2":210,"3":1260,"4":4830,"5":11382,"6":11322,"7":3720,"8":21,"9":1},"d5_equalities":21,"low_nontrivial_classes":231,"n":7}]
+exhaustive_rows=[{"class_counts":{"0":1,"1":15,"2":105,"3":395,"4":480,"5":27,"6":1},"d5_equalities":15,"low_nontrivial_classes":515,"n":6},{"class_counts":{"0":1,"1":21,"2":210,"3":1260,"4":4830,"5":11382,"6":11322,"7":3720,"8":21,"9":1},"d5_equalities":21,"low_nontrivial_classes":1491,"n":7}]
 matching_rows=[{"matching_sizes":3,"n":6},{"matching_sizes":3,"n":7},{"matching_sizes":4,"n":8},{"matching_sizes":4,"n":9},{"matching_sizes":5,"n":10}]
 n4_D3_boundary=matching:4,edge:4
-semantic_sha256=1330d0a963f57c4c29d8af13810d0b1f7486815ab86567674930aceb5a2d5325
-PASS: exhaustive frustration<=2 firewall, independent all-layer matching profile, and sharp boundary
+semantic_sha256=9c6bf209688101bcb18b79f1f23986939a8dc807c84145eb318b696d520673ff
+PASS: exhaustive frustration<=3 firewall, independent all-layer matching profile, and sharp boundary

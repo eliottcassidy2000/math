@@ -1,8 +1,9 @@
 THM-4084 primary labelled-matching cycle audit
 direct_n_range=6..9 symbolic_n_range=6..128
-matching_profile_gates=18456 direct_cycle_parity_gates=20580188
+matching_profile_gates=18456 direct_cycle_parity_gates=80406311
 positivity_factorization_gates=16360 switching_minimality_gates=21762
-rows=[{"adjacent_two_value":96,"edge_value":64,"labelled_matchings":75,"matching_two_value":84,"n":6},{"adjacent_two_value":328,"edge_value":205,"labelled_matchings":231,"matching_two_value":310,"n":7},{"adjacent_two_value":860,"edge_value":516,"labelled_matchings":763,"matching_two_value":852,"n":8},{"adjacent_two_value":1884,"edge_value":1099,"labelled_matchings":2619,"matching_two_value":1914,"n":9}]
+three_edge_symbolic_gates=615 three_edge_direct_gates=12201
+rows=[{"adjacent_two_value":96,"edge_value":64,"labelled_matchings":75,"matching_two_value":84,"n":6,"three_edge_signings":455},{"adjacent_two_value":328,"edge_value":205,"labelled_matchings":231,"matching_two_value":310,"n":7,"three_edge_signings":1330},{"adjacent_two_value":860,"edge_value":516,"labelled_matchings":763,"matching_two_value":852,"n":8,"three_edge_signings":3276},{"adjacent_two_value":1884,"edge_value":1099,"labelled_matchings":2619,"matching_two_value":1914,"n":9,"three_edge_signings":7140}]
 n4_D3_boundary=matching:4,edge:4
-semantic_sha256=9c9b917b84055a6411abae78026ed1915d6f7a6358a399078368422f2611de9f
-PASS: all-layer matching profile, D5 strict firewall, frustration-two shapes, and sharp D3 boundary
+semantic_sha256=741e7a188d9e0bc47314f44264ba6956ac3407a185e19e4dcc452e9d854ac73a
+PASS: all-layer matching profile, D5 frustration-three firewall, and sharp D3 boundary

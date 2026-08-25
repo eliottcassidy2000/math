@@ -6,20 +6,21 @@ status: >
   every signed switching class represented by a negative matching has an
   exact all-cycle negative-count profile. In the cumulative D=5 layer, every
   matching of size at least two lies strictly above the single-edge value,
-  as does every nonsingle class of frustration index at most two. Thus any
+  as does every nonsingle class of frustration index at most three. Thus any
   counterexample or additional equality class for the still-open D=5
   single-edge conjecture has no balanced vertex deletion and has frustration
-  index at least three. The full D=5 conjecture remains OPEN beyond the
+  index at least four. The full D=5 conjecture remains OPEN beyond the
   inherited exhaustive n=6,7,8 bases.
 source: codex-frontier-synthesis-creative-20260825f / matching-character wildcard
 audit: >
   PASS. The primary path directly enumerates labelled matchings and simple
-  cycles through n=9, performing 18,456 profile gates and 20,580,188 direct
-  cycle-parity gates; it also performs 16,360 symbolic positivity gates and
-  21,762 exact switching-minimality gates. The independent Held--Karp parity
+  cycles through n=9, performing 18,456 matching-profile gates, 12,201 direct
+  three-edge-shape gates, and 80,406,311 direct cycle-parity gates; it also
+  performs 16,360 matching-positivity gates, 615 symbolic three-edge gates,
+  and 21,762 exact switching-minimality gates. The independent Held--Karp parity
   path exhausts the frustration index of every labelled switching class at
-  n=6,7, classifies all 351 nontrivial classes of frustration at most two
-  there, and checks all matching layers through n=10 with 35,681 subset-cycle
+  n=6,7, classifies all 2,006 nontrivial classes of frustration at most three
+  there, and checks all matching layers through n=10 with 175,751 subset-cycle
   gates. Both paths recover the
   sharp n=4 D3 antibalanced tie. Normal and optimized outputs byte-match; both
   scripts have zero assert nodes and zero floating literals.
@@ -31,12 +32,12 @@ related:
   - THM-4069-even-graph-basis-dependence-and-canonical-cycle-envelope
 script: 04-computation/even_graph_matching_character_d5_firewall_thm4084.py
 output: 05-knowledge/results/even_graph_matching_character_d5_firewall_thm4084.out
-script_sha256: ab79ef638f0de341bb82557232e345a90eed1c6b22488a347bca69ffe0b840c3
-output_sha256: 00c6ab9e11a1dc52eaf710490e2592448d97a801aadd2e86b783455c6e7bc952
+script_sha256: 50b502bd2b61d5db7d2978306faf60ed13e620e94ab9abc68438dc5b1ca21631
+output_sha256: 27cb6ceb6ed202ce411ae49e779074cedeba7fc89649f92b7ef31ae32fdb502a
 independent_audit_script: 04-computation/even_graph_matching_character_d5_firewall_thm4084_independent_audit.py
 independent_audit_output: 05-knowledge/results/even_graph_matching_character_d5_firewall_thm4084_independent_audit.out
-independent_audit_script_sha256: bdb78d0382ef0bc5cfbb18838c085aecdbbbec1c9dcf1ef005ba77acda3a6096
-independent_audit_output_sha256: 467a8a80547206ff4465846e2835d7ab56a3931a6942f1db33ee46554de9eda4
+independent_audit_script_sha256: 8893601232812ccaad2418b52d47326081b610828907021b7e84dd603ac46195
+independent_audit_output_sha256: 7a44734295f78aa5387394a72f36f97c68f59e4a383fd4087155b7a855a693fc
 hash_basis: raw LF bytes
 ---
 
@@ -47,7 +48,7 @@ dual of THM-4078 turns a spectral-gap question into the minimization of odd
 cycle counts. A matching of negative edges is unusually tractable because a
 cycle can meet it only in disjoint prescribed edges. This gives an exact
 profile in every cycle layer and, at `D=5`, removes the whole matching family
-and every class of frustration index at most two from the open search.
+and every class of frustration index at most three from the open search.
 
 Throughout, `n>=6`, `1<=r<=floor(n/2)`, and `M_r` is a matching of `r`
 negative edges in the signed complete graph `K_n`. Let
@@ -200,7 +201,7 @@ Since `m>=3`, equations `(12)`--`(15)` prove
 boxed: S_5(M_r)>S_5(M_1)=A_n for every r>=2.                 (16)
 ```
 
-## 4. The complete frustration-two firewall
+## 4. The complete frustration-three firewall
 
 A switching class of frustration index two has a representative made of two
 edges. Up to relabelling, the two edges are disjoint or adjacent.
@@ -231,13 +232,56 @@ S_5({ab,ac})-A_n=(n-4)/(n-2) A_n>0.                         (19)
 ```
 
 Equations `(17)`--`(19)` classify and exclude every frustration-two shape.
-Together with the trivial balanced class and the single-edge equality class,
-they prove
+
+There are only five three-edge shapes. Put
+
+```text
+C_n=A_n/(n-2)=n^3-11n^2+41n-50.                              (20)
+```
+
+For a three-edge graph `H`, let `a(H)` and `d(H)=3-a(H)` count its adjacent
+and disjoint unordered edge pairs, and let `U_n(H)` count cumulatively the
+cycles of lengths `3,...,6` that contain all three edges. Parity
+inclusion--exclusion gives
+
+```text
+S_5(H)=3A_n-2a(H)C_n-4d(H)B_n+4U_n(H).                       (21)
+```
+
+The adjacent-pair containment sum is `C_n`; the disjoint-pair containment
+sum is `2B_n`. Contracting the path components of all three prescribed edges
+gives the complete table
+
+```text
+shape H              a(H)  d(H)  U_n(H)
+3K_2                    0     3       8
+P_3 disjoint-union K_2  1     2       4n-18
+P_4                     2     1       n^2-8n+17
+K_(1,3)                 3     0       0
+K_3                     3     0       1.
+```
+
+Write `t=n-6>=0`. Substitution in `(21)` produces a manifestly positive
+gap in every row:
+
+```text
+(S_5(H)-A_n)/2
+ = t^4+11t^3+27t^2+18t+14,      H=3K_2,
+ = t^4+10t^3+26t^2+31t+16,      H=P_3 disjoint-union K_2,
+ = t^4+ 9t^3+27t^2+36t+20,      H=P_4,
+ = t^4+ 8t^3+24t^2+33t+16,      H=K_(1,3),
+ = t^4+ 8t^3+24t^2+33t+18,      H=K_3.                       (22)
+```
+
+A class of frustration index three has some three-edge minimum
+representative, so `(22)` excludes it. Together with the trivial balanced
+class, the single-edge equality class, and the two-edge classification, this
+proves
 
 ```text
 boxed:
 if S_5(H)<=A_n and [H] is not a single-edge class,
-then frustration([H])>=3.                                   (20)
+then frustration([H])>=4.                                   (23)
 ```
 
 THM-4083 supplies an orthogonal deletion firewall. Its balanced-deletion
@@ -247,7 +291,7 @@ for every cumulative layer. Consequently any D5 counterexample, or any
 additional D5 equality class, must satisfy simultaneously
 
 ```text
-b(H)=0,                 frustration([H])>=3.                 (21)
+b(H)=0,                 frustration([H])>=4.                 (24)
 ```
 
 This intersection, rather than either condition alone, is the new reduced
@@ -259,23 +303,23 @@ Let
 
 ```text
 M_(<=6)=M_3+M_4+M_5+M_6,
-Q_(n,5)=sum_(k=3)^6 N_(n,k).                                 (22)
+Q_(n,5)=sum_(k=3)^6 N_(n,k).                                 (25)
 ```
 
 The THM-4078 eigenvalue indexed by `[H]` is
 
 ```text
 lambda_(<=6)(H)=Q_(n,5)-2S_5(H),
-Laplacian eigenvalue=2S_5(H).                                (23)
+Laplacian eigenvalue=2S_5(H).                                (26)
 ```
 
 Hence no matching orbit other than `r=1`, and no other class of frustration
-at most two, can lower or enlarge the equality space of the candidate D5
+at most three, can lower or enlarge the equality space of the candidate D5
 spectral gap `2A_n`.
 
 The independent exact audit exhausts the frustration index of all
 `2^C(n-1,2)` labelled switching classes for `n=6,7`, and evaluates every one
-of the `120+231=351` nontrivial classes in the frustration-at-most-two
+of the `515+1,491=2,006` nontrivial classes in the frustration-at-most-three
 stratum. Within that stratum it finds respectively `15` and `21` D5 equality
 classes, exactly the `C(n,2)` single-edge classes. Independently, the complete
 Walsh census frozen with THM-4078 evaluates every switching character through
@@ -289,18 +333,18 @@ The lower-order boundary is real. At `n=4`, in the cumulative `D=3` layer,
 the negative disjoint matching is antibalanced and has
 
 ```text
-(c_3^-,c_4^-)=(4,0),       S_3(M_2)=4=S_3(M_1).              (24)
+(c_3^-,c_4^-)=(4,0),       S_3(M_2)=4=S_3(M_1).              (27)
 ```
 
 Thus neither the strict matching statement nor the unique-equality statement
 extends to that boundary.
 
-The all-`n` D5 minimum remains **OPEN**. Equations `(20)`--`(21)` do not
-control frustration-three-or-more classes with no balanced deletion. They
+The all-`n` D5 minimum remains **OPEN**. Equations `(23)`--`(24)` do not
+control frustration-four-or-more classes with no balanced deletion. They
 identify the first genuinely hostile stratum and do not assume that the two
 coordinates are sufficient there.
 
-Finally, `(9)` and `(23)` concern the multiplicity-weighted simple-cycle
+Finally, `(9)` and `(26)` concern the multiplicity-weighted simple-cycle
 operators in the canonical diameter layer/all-simple-cycle envelope. By
 MISTAKE-495 and THM-4069, they must not be transferred to an arbitrary
 spanning-tree fundamental-cycle image whose diameter omits some of these
@@ -316,8 +360,8 @@ python3 04-computation/even_graph_matching_character_d5_firewall_thm4084.py
 
 It directly checks `(6)` on every labelled matching through `n=9`, verifies
 the D5 factorizations through `n=128`, checks strict switching minimality for
-every matching and every cut representative through `n=12`, verifies both
-frustration-two shapes, and recovers `(24)`.
+every matching and every cut representative through `n=12`, verifies every
+labelled three-edge graph through `n=9`, and recovers `(27)`.
 
 Independent Held--Karp audit:
 
@@ -327,6 +371,6 @@ python3 04-computation/even_graph_matching_character_d5_firewall_thm4084_indepen
 
 This path never materializes cyclic-order lists. It counts even/odd cycles by
 a subset dynamic program, checks every switching class at `n=6,7`, recovers
-the full frustration histogram and the complete frustration-two firewall,
+the full frustration histogram and the complete frustration-three firewall,
 and independently verifies every matching layer through `n=10`. The frozen
 normal outputs byte-match both optimized (`python3 -O`) runs.

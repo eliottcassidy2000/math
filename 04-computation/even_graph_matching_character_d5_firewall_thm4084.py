@@ -15,7 +15,7 @@ import json
 from math import comb, factorial
 
 
-EXPECTED_SEMANTIC_SHA256 = "9c9b917b84055a6411abae78026ed1915d6f7a6358a399078368422f2611de9f"
+EXPECTED_SEMANTIC_SHA256 = "741e7a188d9e0bc47314f44264ba6956ac3407a185e19e4dcc452e9d854ac73a"
 
 
 def require(condition: bool, message: str) -> None:
@@ -100,6 +100,43 @@ def d5_matching_value(n: int, size: int) -> int:
     )
 
 
+def three_edge_shape(chosen: tuple[tuple[int, int], ...]) -> str:
+    degrees: dict[int, int] = {}
+    for a, b in chosen:
+        degrees[a] = degrees.get(a, 0) + 1
+        degrees[b] = degrees.get(b, 0) + 1
+    signature = tuple(sorted(degrees.values()))
+    names = {
+        (1, 1, 1, 1, 1, 1): "matching3",
+        (1, 1, 1, 1, 2): "path2_plus_edge",
+        (1, 1, 2, 2): "path3",
+        (1, 1, 1, 3): "star3",
+        (2, 2, 2): "triangle",
+    }
+    require(signature in names, f"unknown three-edge signature {signature}")
+    return names[signature]
+
+
+def d5_three_edge_value(n: int, shape: str) -> int:
+    edge_value = d5_edge_value(n)
+    adjacent_pair_sum = edge_value // (n - 2)
+    disjoint_pair_half_sum = d5_overlap_value(n)
+    data = {
+        "matching3": (0, 3, 8),
+        "path2_plus_edge": (1, 2, 4 * n - 18),
+        "path3": (2, 1, n * n - 8 * n + 17),
+        "star3": (3, 0, 0),
+        "triangle": (3, 0, 1),
+    }
+    adjacent_pairs, disjoint_pairs, triple_sum = data[shape]
+    return (
+        3 * edge_value
+        - 2 * adjacent_pairs * adjacent_pair_sum
+        - 4 * disjoint_pairs * disjoint_pair_half_sum
+        + 4 * triple_sum
+    )
+
+
 def cut_mask(n: int, subset: tuple[int, ...], edge_index: dict[tuple[int, int], int]) -> int:
     chosen = set(subset)
     mask = 0
@@ -113,9 +150,10 @@ def canonical_matching_mask(size: int, edge_index: dict[tuple[int, int], int]) -
     return sum(1 << edge_index[(2 * index, 2 * index + 1)] for index in range(size))
 
 
-def audit_symbolic_range() -> tuple[int, int]:
+def audit_symbolic_range() -> tuple[int, int, int]:
     positivity_gates = 0
     switching_gates = 0
+    three_edge_gates = 0
     for n in range(6, 129):
         edge_value = d5_edge_value(n)
         overlap = d5_overlap_value(n)
@@ -133,6 +171,12 @@ def audit_symbolic_range() -> tuple[int, int]:
             require(3 * gap == (size - 1) * defect_numerator, f"gap factorization changed n={n},r={size}")
             require(gap == 0 if size == 1 else gap > 0, f"D5 firewall failed n={n},r={size}")
             positivity_gates += 4
+        for shape in ("matching3", "path2_plus_edge", "path3", "star3", "triangle"):
+            require(
+                d5_three_edge_value(n, shape) > edge_value,
+                f"three-edge D5 firewall failed n={n},shape={shape}",
+            )
+            three_edge_gates += 1
 
     for n in range(6, 13):
         edges, edge_index = edge_system(n)
@@ -144,12 +188,13 @@ def audit_symbolic_range() -> tuple[int, int]:
                     require(switched_weight > size, f"matching was not switching-minimal n={n},r={size},S={subset}")
                     switching_gates += 1
         require(len(edges) == comb(n, 2), f"edge universe changed n={n}")
-    return positivity_gates, switching_gates
+    return positivity_gates, switching_gates, three_edge_gates
 
 
-def audit_direct_labelled() -> tuple[int, int, list[dict[str, int]]]:
+def audit_direct_labelled() -> tuple[int, int, int, list[dict[str, int]]]:
     matching_gates = 0
     parity_gates = 0
+    three_edge_gates = 0
     rows: list[dict[str, int]] = []
     for n in range(6, 10):
         edges, edge_index = edge_system(n)
@@ -181,6 +226,19 @@ def audit_direct_labelled() -> tuple[int, int, list[dict[str, int]]]:
             matching_gates += 1
             parity_gates += len(cycles[length])
         require(adjacent_sum > d5_edge_value(n), f"adjacent frustration-two firewall failed n={n}")
+
+        shape_counts: dict[str, int] = {}
+        for chosen in itertools.combinations(edges, 3):
+            shape = three_edge_shape(chosen)
+            signing = sum(1 << edge_index[item] for item in chosen)
+            actual = sum(negative_count(signing, cycles[length]) for length in range(3, 7))
+            expected = d5_three_edge_value(n, shape)
+            require(actual == expected, f"direct three-edge profile failed n={n},shape={shape},edges={chosen}")
+            require(actual > d5_edge_value(n), f"direct three-edge firewall failed n={n},shape={shape}")
+            shape_counts[shape] = shape_counts.get(shape, 0) + 1
+            three_edge_gates += 1
+            parity_gates += sum(len(cycles[length]) for length in range(3, 7))
+        require(sum(shape_counts.values()) == comb(comb(n, 2), 3), f"three-edge universe changed n={n}")
         rows.append(
             {
                 "n": n,
@@ -188,9 +246,10 @@ def audit_direct_labelled() -> tuple[int, int, list[dict[str, int]]]:
                 "edge_value": d5_edge_value(n),
                 "matching_two_value": d5_matching_value(n, 2),
                 "adjacent_two_value": adjacent_sum,
+                "three_edge_signings": sum(shape_counts.values()),
             }
         )
-    return matching_gates, parity_gates, rows
+    return matching_gates, parity_gates, three_edge_gates, rows
 
 
 def audit_boundary() -> tuple[int, int]:
@@ -206,8 +265,8 @@ def audit_boundary() -> tuple[int, int]:
 
 
 def main() -> None:
-    positivity_gates, switching_gates = audit_symbolic_range()
-    matching_gates, parity_gates, rows = audit_direct_labelled()
+    positivity_gates, switching_gates, symbolic_three_edge_gates = audit_symbolic_range()
+    matching_gates, parity_gates, direct_three_edge_gates, rows = audit_direct_labelled()
     boundary_matching, boundary_edge = audit_boundary()
     payload = {
         "boundary": [boundary_matching, boundary_edge],
@@ -216,6 +275,8 @@ def main() -> None:
         "positivity_gates": positivity_gates,
         "rows": rows,
         "switching_gates": switching_gates,
+        "symbolic_three_edge_gates": symbolic_three_edge_gates,
+        "direct_three_edge_gates": direct_three_edge_gates,
     }
     digest = hashlib.sha256(json.dumps(payload, sort_keys=True, separators=(",", ":")).encode("ascii")).hexdigest()
     require(digest == EXPECTED_SEMANTIC_SHA256, f"semantic digest changed: {digest}")
@@ -223,10 +284,11 @@ def main() -> None:
     print(f"direct_n_range=6..9 symbolic_n_range=6..128")
     print(f"matching_profile_gates={matching_gates} direct_cycle_parity_gates={parity_gates}")
     print(f"positivity_factorization_gates={positivity_gates} switching_minimality_gates={switching_gates}")
+    print(f"three_edge_symbolic_gates={symbolic_three_edge_gates} three_edge_direct_gates={direct_three_edge_gates}")
     print(f"rows={json.dumps(rows, sort_keys=True, separators=(',', ':'))}")
     print(f"n4_D3_boundary=matching:{boundary_matching},edge:{boundary_edge}")
     print(f"semantic_sha256={digest}")
-    print("PASS: all-layer matching profile, D5 strict firewall, frustration-two shapes, and sharp D3 boundary")
+    print("PASS: all-layer matching profile, D5 frustration-three firewall, and sharp D3 boundary")
 
 
 if __name__ == "__main__":

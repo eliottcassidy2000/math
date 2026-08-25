@@ -16,7 +16,7 @@ import json
 from math import comb, factorial
 
 
-EXPECTED_SEMANTIC_SHA256 = "1330d0a963f57c4c29d8af13810d0b1f7486815ab86567674930aceb5a2d5325"
+EXPECTED_SEMANTIC_SHA256 = "9c6bf209688101bcb18b79f1f23986939a8dc807c84145eb318b696d520673ff"
 
 
 def require(condition: bool, message: str) -> None:
@@ -117,6 +117,71 @@ def canonical_matching(size: int) -> tuple[tuple[int, int], ...]:
     return tuple((2 * index, 2 * index + 1) for index in range(size))
 
 
+def edge_shape(items: tuple[tuple[int, int], ...]) -> str:
+    degrees: dict[int, int] = {}
+    for a, b in items:
+        degrees[a] = degrees.get(a, 0) + 1
+        degrees[b] = degrees.get(b, 0) + 1
+    signature = tuple(sorted(degrees.values()))
+    names = {
+        (1, 1): "single",
+        (1, 1, 1, 1): "disjoint",
+        (1, 1, 2): "adjacent",
+        (1, 1, 1, 1, 1, 1): "matching3",
+        (1, 1, 1, 1, 2): "path2_plus_edge",
+        (1, 1, 2, 2): "path3",
+        (1, 1, 1, 3): "star3",
+        (2, 2, 2): "triangle",
+    }
+    require(signature in names, f"unknown edge shape {signature}")
+    return names[signature]
+
+
+def cycles_containing_edges(n: int, length: int, items: tuple[tuple[int, int], ...]) -> int:
+    vertices = {vertex for item in items for vertex in item}
+    degrees = {vertex: 0 for vertex in vertices}
+    neighbors = {vertex: set() for vertex in vertices}
+    for a, b in items:
+        degrees[a] += 1
+        degrees[b] += 1
+        neighbors[a].add(b)
+        neighbors[b].add(a)
+    if max(degrees.values()) > 2:
+        return 0
+
+    components = 0
+    unseen = set(vertices)
+    while unseen:
+        components += 1
+        stack = [unseen.pop()]
+        while stack:
+            vertex = stack.pop()
+            for nxt in neighbors[vertex]:
+                if nxt in unseen:
+                    unseen.remove(nxt)
+                    stack.append(nxt)
+
+    edge_count = len(items)
+    if all(degree == 2 for degree in degrees.values()):
+        return 1 if components == 1 and length == edge_count else 0
+    vertex_count = len(vertices)
+    if length < vertex_count:
+        return 0
+    return (
+        2 ** (components - 1)
+        * factorial(length - edge_count - 1)
+        * comb(n - vertex_count, length - vertex_count)
+    )
+
+
+def inclusion_exclusion_profile(n: int, length: int, items: tuple[tuple[int, int], ...]) -> int:
+    total = 0
+    for size in range(1, len(items) + 1):
+        for chosen in itertools.combinations(items, size):
+            total += (-2) ** (size - 1) * cycles_containing_edges(n, length, chosen)
+    return total
+
+
 def exhaustive_low_frustration(n: int) -> tuple[dict[int, int], int, int, int]:
     indices = edge_index(n)
     gauge_edges = tuple(item for item in indices if 0 not in item)
@@ -135,7 +200,7 @@ def exhaustive_low_frustration(n: int) -> tuple[dict[int, int], int, int, int]:
         switched = [(signing ^ cut).bit_count() for cut in cuts]
         frustration = min(switched)
         class_counts[frustration] = class_counts.get(frustration, 0) + 1
-        if frustration > 2 or frustration == 0:
+        if frustration > 3 or frustration == 0:
             continue
 
         low_classes += 1
@@ -143,10 +208,7 @@ def exhaustive_low_frustration(n: int) -> tuple[dict[int, int], int, int, int]:
         shapes: set[str] = set()
         for representative in minimum_representatives:
             negative_edges = [item for item, position in indices.items() if representative & (1 << position)]
-            if frustration == 1:
-                shapes.add("single")
-            else:
-                shapes.add("adjacent" if set(negative_edges[0]) & set(negative_edges[1]) else "disjoint")
+            shapes.add(edge_shape(tuple(negative_edges)))
         require(len(shapes) == 1, f"minimum shape was not intrinsic n={n},mask={signing},shapes={shapes}")
         shape = next(iter(shapes))
 
@@ -156,9 +218,17 @@ def exhaustive_low_frustration(n: int) -> tuple[dict[int, int], int, int, int]:
             expected = {length: edge_profile(n, length) for length in range(3, 7)}
         elif shape == "disjoint":
             expected = {length: profile_formula(n, length, 2) for length in range(3, 7)}
-        else:
+        elif shape == "adjacent":
             expected = {
                 length: 2 * edge_profile(n, length) - 2 * factorial(n - 3) // factorial(n - length)
+                for length in range(3, 7)
+            }
+        else:
+            representative_edges = tuple(
+                item for item, position in indices.items() if next(iter(minimum_representatives)) & (1 << position)
+            )
+            expected = {
+                length: inclusion_exclusion_profile(n, length, representative_edges)
                 for length in range(3, 7)
             }
         require(profile == expected, f"Held--Karp low-frustration profile failed n={n},mask={signing},shape={shape}")
@@ -240,7 +310,7 @@ def main() -> None:
     print(f"matching_rows={json.dumps(matching_rows, sort_keys=True, separators=(',', ':'))}")
     print(f"n4_D3_boundary=matching:{boundary_value},edge:{boundary_edge}")
     print(f"semantic_sha256={digest}")
-    print("PASS: exhaustive frustration<=2 firewall, independent all-layer matching profile, and sharp boundary")
+    print("PASS: exhaustive frustration<=3 firewall, independent all-layer matching profile, and sharp boundary")
 
 
 if __name__ == "__main__":
