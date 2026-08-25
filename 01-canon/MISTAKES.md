@@ -9,6 +9,40 @@ Format per entry:
 - Why it was wrong
 - The correct framing
 
+## MISTAKE-494 (2026-08-25, THM-4063 figure-eight packet) -- embedded edge segments hid a nonincident formal contact congruence
+
+- **What failed:** the two polygonal cycles were audited for proper segment
+  crossings and for their exact moment carrier, but the displayed
+  common-ambient restriction packet remained a candidate for the conditional
+  `3q-2` cokernel without testing period completeness. Segment disjointness
+  does not imply independence of the supporting formal branch germs. The
+  abstract implication in THM-4063 was explicitly conditional and is not
+  retracted.
+- **Minimal witness / first failed implication:** with `epsilon=A^q`, the
+  nonincident edges `e_3:u=c/2` and
+  `e_5:u=c/2+(5/2)epsilon` force
+  `(delta_c T)_3=(delta_c T)_5 mod epsilon`. Nevertheless the branchwise
+  density `m=(0,2,1,0,0,0)` has oriented periods
+  `0*epsilon+2*epsilon+1*(-2epsilon)=0` and `0`, while
+  `m_3-m_5=1`. Thus `m in ker P` but `m notin delta_c(T)` for every integer
+  `q>=1`. More generally `ker P/delta_c(T)` surjects onto
+  `k[[A,c]]/(A^q)`. Base differentiation loses only one contact order, so
+  for `q>=2` the actual mixed cokernel also surjects onto
+  `k[[A,c]]/(A^(q-1))`.
+- **Repair / strongest survivor:** THM-4063's abstract connection theorem,
+  exact moment carrier `(q,2q)`, opening lattice, and higher-ramification
+  no-go survive. Its `3q-2` formula is inapplicable to the displayed ambient
+  figure eight; it remains a conditional formula for a separately proved
+  period-complete realization with the same carrier data. THM-4067 gives the
+  general correction
+  `ker P/delta_c(T)~=S_Gamma/Acal` and the exact mixed sequence
+  `0->Q/(Q intersect U)->coker D->J/P(delta_A Acal)->0`.
+- **Reusable rule:** before asserting or pursuing graph-period completeness,
+  compare the full common-target restriction algebra with the graph
+  value-equalizer. Test every pair of supporting formal branches, including
+  nonincident edges, modulo the opening/contact ideal; an embedded compact
+  graph can still carry invisible ambient congruences.
+
 ## MISTAKE-493 (2026-08-24, exceptional affine packet) -- THM-3629's even-fold mixing conclusion was applied to a non-even fold
 
 - **What failed:** the nonlinear `H'(0)!=0` conclusion of THM-3629 was

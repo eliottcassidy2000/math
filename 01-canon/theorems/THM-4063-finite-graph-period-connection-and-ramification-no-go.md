@@ -2,16 +2,19 @@
 id: THM-4063
 title: "Finite-graph period connection and higher-ramification no-go"
 status: >
-  PROVED ABSTRACT PERIOD/CONNECTION THEOREM + CONDITIONAL FIGURE-EIGHT
-  COKERNEL + UNCONDITIONAL RAMIFICATION NO-GO + VERIFIED-EXACT +
+  PROVED ABSTRACT PERIOD/CONNECTION THEOREM + REFUTED COMPLETENESS ANTECEDENT
+  FOR THE DISPLAYED FIGURE-EIGHT REALIZATION + CONDITIONAL ABSTRACT
+  TWO-CYCLE COKERNEL + UNCONDITIONAL RAMIFICATION NO-GO + VERIFIED-EXACT +
   INDEPENDENTLY HOSTILE-AUDITED. Under explicit period-completeness and full
   opening-lattice hypotheses, a finite branch graph has mixed cokernel
   R^beta/nabla L; aligned carrier valuations nu_i give length sum(nu_i-1).
-  An embedded two-cycle carrier has relative exponents (q,2q), hence
-  conditional length 3q-2 rather than a Betti-only guess. Separately, every
-  pullback through H(t)=a t^e+... has Jacobian factor H'(t); e>=2 forbids a
-  nonzero constant Jacobian, sharply. This proves no period completeness for
-  the figure eight, convergence, algebraization, global pair, or JC(2).
+  The displayed two-cycle carrier has relative exponents (q,2q), but THM-4067
+  proves that its common ambient target is not period-complete: the fixed
+  defect surjects R[[c]]/(A^q), and for q>=2 the actual mixed cokernel
+  surjects R[[c]]/(A^(q-1)). Thus the conditional length 3q-2 is inapplicable
+  to that realization. Separately, every pullback through H(t)=a t^e+...
+  has Jacobian factor H'(t); e>=2 forbids a nonzero constant Jacobian,
+  sharply. This proves no convergence, algebraization, global pair, or JC(2).
 source: codex-frontier-synthesis-breakthrough-20260825 / mixed-form conductor lane
 audit: >
   PASS after replacing a crossing polygon, typing endpoint evaluation,
@@ -22,13 +25,17 @@ audit: >
   hostile. A Fraction-only audit independently checks embedding, moment
   reconstruction, carrier ledgers through eight openings, and ramification
   leads through e=19. Both normal/optimized pairs byte-match; both scripts
-  have zero assert nodes and zero float literals.
+  have zero assert nodes and zero float literals. THM-4067 subsequently
+  hostile-audited the conditional antecedent itself and refuted it for the
+  displayed T=R[[c,u]], M=all branchwise densities; this changes no abstract
+  implication, carrier moment, or ramification result here.
 depends_on:
   - THM-4058-exceptional-affine-triangle-period-and-simple-zero-monomial-ladder
   - THM-4060-exceptional-simple-zero-mixed-form-cokernel-collapse-and-formal-pair-lift
 related:
   - THM-3696-y0-collision-ring-three-branch-conductor-and-graded-modules
   - THM-4054-exceptional-affine-simple-zero-retained-packet
+  - THM-4067-seminormal-period-kernel-and-figure-eight-completeness-obstruction
 script: 04-computation/jc2_finite_graph_period_connection_ramification_thm4063.py
 output: 05-knowledge/results/jc2_finite_graph_period_connection_ramification_thm4063.out
 independent_audit_script: 04-computation/jc2_finite_graph_period_connection_ramification_thm4063_independent_audit.py
@@ -302,22 +309,55 @@ L=epsilon R e_1 direct_sum epsilon^2 R e_2,
 nabla=d/dA+(q/A)I.                                   (25)
 ```
 
-Consequently, **if period completeness `(9)` is separately proved for a
-realization of this restriction packet**, then `(18)` gives
+Consequently, **for any separately proved period-complete realization with
+this same carrier data**, `(18)` gives
 
 ```text
 coker D ~= R/A^(q-1) direct_sum R/A^(2q-1),
 dim_k coker D=3q-2.                                  (26)
 ```
 
-This differs from the Betti-only guess `2(q-1)` by `q`. Equation `(26)` is
-conditional: the exact carrier calculation does not itself prove period
-completeness. Its unconditional lesson is that graph incidence and opening
-order do not determine the common-germ carrier; cycle moments are a necessary
-sidecar.
+This differs from the Betti-only guess `2(q-1)` by `q`. Equation `(26)` is an
+abstract conditional implication, and no such realization is constructed
+here.
+
+THM-4067 subsequently resolves the antecedent **negatively for the displayed
+choice `T=R[[c,u]]`, `M=direct_sum_e R[[c]]` above**. The nonincident edges
+
+```text
+e_3:u=c/2,                  e_5:u=c/2+(5/2)epsilon
+```
+
+force every common-target derivative to satisfy
+`(delta_c f)_3=(delta_c f)_5 mod epsilon`. Nevertheless, with the orientations
+in `(20)`,
+
+```text
+m=(0,2,1,0,0,0)
+```
+
+has periods `0*epsilon+2*epsilon-2*epsilon=0` and `0`, while
+`m_3-m_5=1`. More strongly, THM-4067 proves
+
+```text
+ker P/delta_c(T) ->> R[[c]]/(A^q),                    (26a)
+
+coker D ->> R[[c]]/(A^(q-1))       for q>=2.          (26b)
+```
+
+Both targets are infinite-dimensional over `k` when nonzero. Thus `(26)` is
+inapplicable to this displayed common-ambient realization. Its unconditional
+survivor is the exact moment carrier `(22)`, opening lattice `(24)`, and the
+warning that graph incidence and opening order do not determine either the
+common-germ carrier or the hidden graph-gluing defect.
 
 ## 6. Completeness and characteristic firewalls
 
+- THM-4067 identifies the missing invariant exactly. With edgewise primitives,
+  `ker P/delta_c(T)` is the quotient of the graph value-equalizer by the
+  common-target restriction algebra. In reduced curve settings this is the
+  seminormal defect; the mixed cokernel has an additional exact left term
+  before the connection quotient `(13)`.
 - Incidence does not imply period completeness. The curves
   `y(y-x^m)=0` have the same two-branch graph but normalization image
   `{(f,g):f=g mod x^m}` and conductor
@@ -414,6 +454,8 @@ python3 -B 04-computation/jc2_finite_graph_period_connection_ramification_thm406
 python3 -B -O 04-computation/jc2_finite_graph_period_connection_ramification_thm4063_independent_audit.py
 ```
 
-The theorem gives no period completeness for the figure eight, no convergence
-or algebraization of a formal pair, no polynomial Keller map, and no progress
-from the local packet to global `JC(2)` or `DC(2)`. **QED.**
+The displayed figure eight is now proved period-incomplete by THM-4067; for
+`q>=2` its actual mixed cokernel already has an infinite contact quotient.
+This theorem and its repair give no convergence or algebraization of a formal
+pair, no polynomial Keller map, and no progress from the local packet to
+global `JC(2)` or `DC(2)`. **QED.**

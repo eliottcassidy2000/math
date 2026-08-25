@@ -1,0 +1,21 @@
+THM4067_INDEPENDENT_FRACTION_AUDIT
+tree:incidence_rank=3;cycle_rank=0;cycle_boundaries=zero
+triangle:incidence_rank=2;cycle_rank=1;cycle_boundaries=zero
+figure_eight:incidence_rank=4;cycle_rank=2;cycle_boundaries=zero
+contact_derivative_matrix_ledger
+m=1;cutoff=4;rows=10;rank=10;cokernel=0
+m=2;cutoff=5;rows=12;rank=11;cokernel=1
+m=3;cutoff=6;rows=14;rank=12;cokernel=2
+m=4;cutoff=7;rows=16;rank=13;cokernel=3
+m=5;cutoff=8;rows=18;rank=14;cokernel=4
+m=6;cutoff=9;rows=20;rank=15;cokernel=5
+m=7;cutoff=10;rows=22;rank=16;cokernel=6
+m=8;cutoff=11;rows=24;rank=17;cokernel=7
+thm3696_hostile_values=(Fraction(0, 1), Fraction(0, 1), Fraction(0, 1));derivatives=(Fraction(-2, 1), Fraction(0, 1), Fraction(-2, 1));jet_law=-4
+scaled_lines=((Fraction(0, 1), Fraction(0, 1)), (Fraction(1, 1), Fraction(-1, 1)), (Fraction(1, 2), Fraction(0, 1)), (Fraction(-2, 1), Fraction(0, 1)), (Fraction(1, 2), Fraction(5, 2)), (Fraction(-1, 3), Fraction(0, 1)))
+oriented_c_increments=(Fraction(1, 1), Fraction(1, 1), Fraction(-2, 1), Fraction(-1, 1), Fraction(-2, 1), Fraction(3, 1));witness_periods=(Fraction(0, 1), Fraction(0, 1))
+witness_parallel_difference_mod_epsilon=1
+binomial_contact_checks=fixed:504;mixed:504
+fixed_period_defect_quotient=Q[[A,c]]/(A^q);all_q>=1
+mixed_cokernel_quotient=Q[[A,c]]/(A^(q-1));nonzero_for_q>=2
+displayed_figure_eight_antecedent=REFUTED;abstract_implication=SURVIVES
