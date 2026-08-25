@@ -1,0 +1,21 @@
+THM4134_PRIMARY_AUDIT
+scope=theta_only_DeltaV_collision_wall_M8
+wall=W=135*Phi^2+5504*Theta=0;Phi!=0
+secondary_wall=D=273375*Phi^2+2696167424
+Qwall_degree=15;c15=513984438272*r**4*(273375*r**2 + 2696167424)/12075125625
+critical_strict_transform_generic=u/W=-11610/(273375*r**2 + 2696167424)
+critical_strict_transform_secondary=u^2/W=-5/501248
+critical_value_escape=G*W^2->2*(273375*r**2 + 2696167424)**3/(82909778259375*r**2)
+boundary_generic=u-(110716875*r**4/(44032*(273375*r**2 + 2696167424)))*v^2+...;residue_order=4;e=5
+boundary_secondary=node_discriminant=501248/225;residue_orders=1,1;e=2,2
+generic_ledger=genus8;critical_length=19;packet=7,5,3,2,2,1;degrees=16|20
+secondary_ledger=genus7;critical_length=18;packet=7,3,2,2,2,2,1;degrees=15|19
+full_boundary_support_cases=generic:16;secondary:15
+full_boundary_verdict=n20:CONTRADICTION;n19:CONTRADICTION
+residual=generic_n16_horizontal_BC;secondary_n15_horizontal_BC
+hostile=(Phi,Theta)=(5504,-743040);Q15_mod101_coefficients=(22, -9, 25, -7, -17, -43, -37, 47, -19, -2, -18, -43, -20, 12, -45, 19)
+hostile_mod101_gcd=1
+polynomial_section=(a/2+16*rho^2/(9*a^2),-rho-64*rho^3/(27*a^3));pole_pair=2,3
+firewall=critical_resultant_inertia_is_not_cover_inertia;root_labels_and_BC_images_retained
+semantic_sha256=a5d55d70a100e3f4c9413c9b4ab88fe5532b6d8c58740888042f31bc170ace2d
+verdict=HIGH_BRANCHES_EXCLUDED;LOW_HORIZONTAL_BC_BRANCHES_OPEN;JC2_OPEN
