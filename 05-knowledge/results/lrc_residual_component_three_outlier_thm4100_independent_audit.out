@@ -1,0 +1,11 @@
+THM-4100 INDEPENDENT RESIDUAL-COMPONENT AUDIT
+pair= {'rows': 1225, 'components': 73066, 'seams': 1225, 'max_ratio': '72/73', 'max_row': [16, 41], 'max_component': ['139/574', '74/287'], 'max_bound': '73/4592'}
+triple= {'rows': 19600, 'components': 1390420, 'seams': 19600, 'clipped_components': 1410020, 'sharpened_rows': 4600, 'max_ratio': '1050/1081', 'max_row': [1, 42, 47], 'midpoint_component': ['-25/329', '25/329'], 'primary_tied_component': ['279/658', '379/658']}
+seam_convention=midpoint lift; one seam component per row; clipping adds one
+triple_max_tie=midpoint gauge selects seam [-25/329,25/329]; primary left-end gauge selects interior [279/658,379/658]
+AP8= {'least_uniform': 93, 'rows': 3276, 'odd_classes': 2227526, 'maximum_clock': 1680, 'distinct_endpoints': 19, 'boundary': ['11/49', 98, 22, 71, 34, 0], 'spread': [90, 94, 189, '4757/88830', '1/50760', '11/49', 98]}
+Dstar_safe_hostile=weight17;Dstar_and_O_cover;S_theta=18/77
+Cover14_hostile=weight19;max182;AP_M=14/183;nonAP_M=2/17
+scope=THM-4100 AP8+3 arbitrary parity versus THM-4101 AP7+4 resonant weight7
+semantic_sha256= f596182653208fc0b34d330ee20b4404e79602d14692a0d67a86f0f9e4370796
+ALL_CHECKS_PASS
