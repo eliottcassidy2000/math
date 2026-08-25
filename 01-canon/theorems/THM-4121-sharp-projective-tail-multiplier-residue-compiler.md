@@ -1,5 +1,5 @@
 ---
-id: THM-4120
+id: THM-4121
 title: "Sharp projective tail-multiplier residue compiler"
 status: RESERVED / UNPROVED EMPTY STUB
 source: codex-frontier-synthesis-creative-20260825g
@@ -10,7 +10,7 @@ related:
   - THM-4119-infinite-supplier-free-eleven-plus-two-residue-family
 ---
 
-# THM-4120 -- reserved / unproved empty stub
+# THM-4121 -- reserved / unproved empty stub
 
 **RESERVED / UNPROVED EMPTY STUB.**
 
