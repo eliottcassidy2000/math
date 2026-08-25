@@ -18,6 +18,7 @@ related:
   - HYP-3779
   - MISTAKE-497
   - MISTAKE-503
+  - MISTAKE-504
 script: 04-computation/lrc_twisted_padic_affine_margin_optimizer_thm4096.py
 output: 05-knowledge/results/lrc_twisted_padic_affine_margin_optimizer_thm4096.out
 independent_audit_script: 04-computation/lrc_twisted_padic_affine_margin_optimizer_thm4096_independent_audit.py
@@ -109,7 +110,7 @@ therefore an optimization in their common rational affine line. It is not an
 addition operation between distinct fields `Q_p`.
 
 The standard trivial-character branch is genuinely different at `p=7`.
-For every odd prime `p>=5`, set
+For every odd prime `p>=5` and every integer `j>=1`, set
 
 ```text
 k_j=2+(p-3)p^j.                                             (8)

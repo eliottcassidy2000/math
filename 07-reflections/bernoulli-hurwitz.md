@@ -5,7 +5,7 @@ promotions: it assigned the Hamilton quaternion algebra finite ramification
 `{2,3,7}`, turned a finite negative `7`-adic valuation into a pole, and called
 `B_6` the unique Bernoulli number of denominator `42`. The exact
 von Staudt--Clausen calculation survives; the quaternion and pole bridge does
-not. See MISTAKE-504 and the finite-exact companion
+not. See MISTAKE-506 and the finite-exact companion
 [`bernoulli_42_and_padic_pole_correction_20260825.py`](../04-computation/bernoulli_42_and_padic_pole_correction_20260825.py).
 
 **Session:** kind-pasteur-2026-03-16-S116n

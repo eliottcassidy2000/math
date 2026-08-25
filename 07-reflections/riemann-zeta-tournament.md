@@ -3,7 +3,7 @@
 **CORRECTION -- 2026-08-25.** Section 1's von Staudt--Clausen computation
 `denom(B_6)=2*3*7=42` is exact. Its further claim that this is "not a
 coincidence" or a common Bernoulli/tournament/Hurwitz obstruction is an
-unsupported synthesis, not a theorem. MISTAKE-504 also records that the
+unsupported synthesis, not a theorem. MISTAKE-506 also records that the
 Hamilton quaternion algebra does not ramify at `3,7` and that denominator
 `42` is not unique to `B_6` (`B_114` is the first counterexample). The other
 sections must be read mechanism by mechanism; shared prime labels alone do not

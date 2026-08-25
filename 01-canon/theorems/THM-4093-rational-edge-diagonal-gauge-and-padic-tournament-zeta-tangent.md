@@ -19,7 +19,7 @@ audit: >
 depends_on:
   - THM-4057-stern-brocot-depth-pullback-and-rational-edge-tournament-gauge
 related:
-  - THM-1926-tournament-completeness-constructions
+  - THM-1926-tournament-zeta-euler-product-over-strong-core
   - THM-4059-stern-brocot-depth-packet-character-and-divisor-star-convolution
   - MISTAKE-409
 script: 04-computation/rational_edge_diagonal_gauge_padic_tournament_zeta_thm4093.py

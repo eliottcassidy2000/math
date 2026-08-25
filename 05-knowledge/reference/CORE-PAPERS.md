@@ -479,7 +479,7 @@ Detailed source/import/guardrail records for Brittenham--Hermiller, Zakharov, Ry
 [compositional-relations source sidecar](CORE-PAPERS-COMPOSITIONAL-RELATIONS.md). THM-2176 derives the continuation profile, positive interaction coboundary, and pure-bypass split from cited crossing certificates.
 THM-2191 uses prime-decomposition cancellation and the four-ball crossing metric to construct catalytic Gordian localization and close the `9_10` reverse direction.
 
-## Tournaments
+## Tournaments ([Moon 1966 sidecar](CORE-PAPERS-TOURNAMENT-STRONG-EARS-2026-08-25.md))
 
 ### Grinberg--Stanley — *The Rédei--Berge symmetric function of a directed graph*
 
@@ -613,7 +613,7 @@ new homotopy group, `p=2` statement, or LRC/GMC consequence.
 ## August 2026 preprint intake
 
 - [August 14 intake](CORE-PAPERS-INTAKE-2026-08-14.md): preprints/Rule 30.
-- August 25: [comprehensive audit](CORE-PAPERS-INTAKE-2026-08-25-PADIC-ZETA-MATCHING-LOGIC.md) and [bounded snapshot](CORE-PAPERS-INTAKE-2026-08-25-PADIC-MATCHING.md). Long's 22 claims remain **PREPRINT CLAIM / UNDER SPECIALIST AUDIT** with formula-only replay in THM-4089/4091; Chen--Rosu is **CITED / UNREFEREED ARXIV V1**, consumed by THM-4090. The sources are unrelated and license no p-adic/logical transfer.
+- August 25: [comprehensive audit](CORE-PAPERS-INTAKE-2026-08-25-PADIC-ZETA-MATCHING-LOGIC.md) and [bounded snapshot](CORE-PAPERS-INTAKE-2026-08-25-PADIC-MATCHING.md). Long's 22 claims remain **PREPRINT CLAIM / UNDER SPECIALIST AUDIT** with formula-only replay in THM-4089 and a denominator-transport boundary in THM-4091; Chen--Rosu is **CITED / UNREFEREED ARXIV V1**, consumed by THM-4090. The sources are unrelated and license no p-adic/logical transfer.
 
 ## Maintenance rule
 

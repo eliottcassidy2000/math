@@ -1,0 +1,15 @@
+THM-4097 independent strong-ear cut-field audit: PASS
+finite universe: order8 iso reps=6880; strong parents=6008; nonconstant cuts/parent=254; ear rows=1526032
+carrier gates: pair-integrality=168224; field-integrality=48064; cut-field identities=1526032; direct child DP controls=6008
+order9 strong-ear support: count=1482; min=75; max=3357
+longest solid odd interval: [85,2881], count=1399; low holes=[77,79,83]
+cut-cardinality spectra E1..E7 sizes: 962,1294,1467,1478,1467,1294,962; converse symmetry PASS
+central basis: E4 misses exactly [89,93,105,125]; E3 repairs all; E3 union E4 exact
+target parent/cut multiplicities: H613=674 across 525 parents; H623=780 across 610 parents
+direct strong order8 H613 reps: 4546,4572
+displayed complement pair: Hparent=91; cut=588; field=-56/+56; H=623/735
+c3 firewalls at p=7: (H,c3)=(623,16) and (33,7)
+semantic row digest sha256=0df47ad8c203084182416644ad15aeef6db05bcdaad91062aed610e2c7757fe3
+spectrum/weight semantic digest sha256=de2b67a2c9bc0a349d33f7c9e996508a53116fbfe1e4764edc2e918005acd736
+boundary carrier digest sha256=58391155b309c5dc651bfec1cb3f261590449e02c0ce06ac150891b5fafd4bd0
+sorted support digest sha256=3392c88e40a9458542c742422ac8a6338af6d2433e4c3405b0b6115ec5455530

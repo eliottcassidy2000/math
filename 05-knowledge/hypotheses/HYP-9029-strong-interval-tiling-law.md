@@ -2,18 +2,19 @@
 id: HYP-9029
 title: "The strong-interval tiling law: H-spectrum completeness reduces to overlapping strong intervals"
 status: >
-  OPEN (the reduction is exact given canon; the tiling verified at
-  the three available junctions with exploding slack: strong(7) >=
-  [65,105], strong(8) >= [69,609], strong(9) >= [85,2881], covering
-  every odd in [65, 2881] by a strong witness). Identified by the
-  S134 provenance sweep as the one unrecorded lever in the {7,21}
-  crossroads (atlas priority slot #5).
+  OPEN ALL-ORDER TILING LAW. THM-4097 promotes the complete order-nine strong
+  spectrum and the exact coverage prefix: strong(7)>=[65,105],
+  strong(8)>=[69,609], strong(9)>=[85,2881], so every odd in [65,2881]
+  has a strong witness and every allowed odd through 2885 is globally
+  realized. The next interval, order ten, and global continuation remain
+  open.
 source: kind-pasteur-2026-07-26-S134
 related:
   - THM-1370-h-spectrum-omits-7-21-all-n
   - THM-1862-order-join-reduction-principle
   - THM-1936-signed-redei-join-multiplicative
   - HYP-9028-circulant-hamiltonian-excess-tends-to-e
+  - THM-4097-order-nine-strong-ear-spectrum-solid-interval-and-lane-extension
 script: 04-computation/strong_h_spectrum_intervals_kps_S134.py
 output: 05-knowledge/results/strong_h_spectrum_intervals_kps_S134.out
 data: 05-knowledge/results/strong_H_spectrum_m9_values_kps_S134.out
@@ -21,10 +22,11 @@ data: 05-knowledge/results/strong_H_spectrum_m9_values_kps_S134.out
 
 # HYP-9029 -- the strong spectra tile the odd line
 
-The H-spectrum's gap half is PROVED ({7,21} forbidden, four
-independent proofs, one Lean); the completeness half ("every other
-odd occurs") is THM-1370's standing conjecture, verified to 3357 by
-sampling. Canon already reduces completeness to strong tournaments
+The H-spectrum's gap half is PROVED (`{7,21}` forbidden); the completeness
+half ("every other odd occurs") is THM-1370's standing conjecture. THM-4097
+now proves exact global coverage through `2885`, with `2887` the first target
+not forced by the known finite strong values and multiplication. Canon already
+reduces completeness to strong tournaments
 (spectrum = multiplicative closure of strong H-values, THM-1862/
 THM-1936, machine-checked). This hypothesis records the missing
 structural mechanism, sitting unremarked in the exhaustive censuses:
@@ -62,6 +64,14 @@ give contiguity directly; THM-1370's insertion lemma and the
 THM-1900 insertion-response calculus are the natural instruments.
 The single-arc-core family provably cannot do it (its gap density
 is 1/2, OPEN-Q-055), so the surgery must use a richer family.
+
+THM-4097 identifies the richer exact carrier. Every strong tournament is a
+nonconstant ear of a strong parent, and the response is
+`H(parent)+cut_w(S)+sum_S h`, where `w` is an integral symmetric cut weight
+and `h` is an integral zero-sum orientation field. At `8->9`, cut weights
+`{3,4}` generate the entire 1,482-value strong spectrum, while `w=4` alone
+misses exactly `89,93,105,125`. Any all-order surgery must control the field,
+not merely the cut energy.
 
 Independent-path note (same session): a LABELED brute-force
 enumeration (2^28 tournaments, different algorithm from monad's

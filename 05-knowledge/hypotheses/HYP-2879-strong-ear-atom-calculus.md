@@ -1,6 +1,11 @@
 ---
 id: HYP-2879
-status: SUPPORTED by exact iso-class audit n<=8; open as all-n strong-ear reducibility / cofinite atom calculus
+status: >
+  PARTIALLY PROVED by THM-4097. The exact insertion formula and all-order
+  strong-ear reducibility are proved (the latter from Moon 1966, Theorem 2);
+  the cofinite atom calculus, all-order finite cut-basis law, and interval
+  tiling remain OPEN. The older iso-class audit through n<=8 remains an exact
+  finite control.
 source: codex-2026-06-22-S99
 tags: [tournaments, h-spectrum, strong-components, ears, insertion, forbidden-H, finite-basis, lrc14, residues, tournament-analysis]
 related:
@@ -16,6 +21,7 @@ related:
   - HYP-2873
   - THM-115
   - THM-520
+  - THM-4097
 ---
 
 # HYP-2879: strong H-atoms grow by labelled ears with an exact cut polynomial
@@ -113,20 +119,24 @@ branch.
 
 ## Proof program
 
-The all-n version should split into three lemmas.
+THM-4097 resolves the first two parts of the earlier three-lemma program and
+sharpens the remaining carrier.
 
-1. **Strong-ear reducibility:** every strong tournament on `n>=4` has a
-   vertex whose deletion remains strong, ideally at least two such vertices.
-   The audit verifies this through `n=8`; it should be a Moon/ear-decomposition
-   theorem for strong tournaments.
-2. **Ear cut formula:** the displayed `start/end/Q` formula is elementary and
-   formalizable by partitioning Hamiltonian paths according to the position of
-   the new vertex.
-3. **Cofinite atom generation:** use strong-min lower bounds for the small
+1. **Strong-ear reducibility -- PROVED from a cited theorem.** Moon 1966,
+   Theorem 2 gives `s(n,n-1)=2`: every strong tournament of order at least four
+   has at least two induced strong parents of order one less. Thus every strong
+   tournament is recursively a nonconstant one-vertex ear from `C_3`.
+2. **Ear cut formula -- PROVED.** THM-4097 proves the displayed
+   `start/end/Q` formula, compiles `Q` by subset path DP, and refines the
+   response to an integral symmetric cut weight `w` plus zero-sum orientation
+   field `h`. The exact `623/735` complement pair proves that the unoriented
+   `(w,{S,V\S})` quotient is lossy.
+3. **Cofinite atom generation -- OPEN:** use strong-min lower bounds for the small
    forbidden boundary and use balanced-ear cut polynomials to show direct
    strong-core re-entry.  The observed `w=3` near-surjectivity at `7->8`
-   suggests balanced ears are the generic/high-main-term branch; exceptional
-   low values route to boundary ears.
+   is followed at `8->9` by the exact two-weight basis `{3,4}`: weight four
+   covers `1478/1482` values and misses `89,93,105,125`, all supplied by weight
+   three. This remains finite-order evidence, not an all-order theorem.
 
 This reframes `{7,21}` as absent solutions of recursive cut polynomials before
 the Busch/Moon strong-min boundary lets the spectrum re-enter.  They are not
@@ -186,3 +196,6 @@ profiles, not merely any chordless heptagon.
 - `04-computation/tournament_strong_ear_atoms_codex_s99.py`
 - `05-knowledge/results/tournament_strong_ear_atoms_codex_s99.out`
 - `07-reflections/strong-ear-atoms-and-finite-bases-codex-s99.md`
+- `01-canon/theorems/THM-4097-order-nine-strong-ear-spectrum-solid-interval-and-lane-extension.md`
+- `04-computation/tournament_order9_strong_ear_spectrum_thm4097.py`
+- `04-computation/order_nine_strong_ear_cut_field_thm4097_independent_audit.py`

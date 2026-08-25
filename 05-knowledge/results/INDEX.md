@@ -154,6 +154,37 @@
   `e9853437725f3d49fa10e75fc0d01a6c41b4e6ec4b5d71b909b9785ed23f0f36` /
   `f8347ff0fb3e3412ab0b87802074da68e85c7feb589a676374f2c0592f81fd8d` /
   `4aa1304da5c70e401c4953707820d377aeaf2418638dce747246c383309b3136`.
+- `tournament_selected_order10_strong_ear_interval_thm4102.py` and
+  independent audit -> matching `.out`s [THM-4102 PROVED + FINITE-EXACT +
+  INDEPENDENTLY AUDITED; selected construction, global conjecture OPEN]. One
+  retained strong order-nine witness per THM-4097 value generates `755,820`
+  ears and `7,566` values, including every odd `249..14649` and explicit
+  strong atoms `2887,2933`. Every allowed odd through `14655` is now globally
+  realized; current lane targets are `14657,14777`. Primary hashes:
+  `e7049a6347100e6dc54c7b6c03b299cde7dcfaca811954797971b8e7552421a8` /
+  `3ac25e2e154994178fa916d124b91e2c5a9b831768279a457298fb679dc4b4dd`;
+  independent:
+  `6dca471289cc1f76704b1444edbb4f2d78c7002a5367d11df81498d64a2fa592` /
+  `b9ced2eb803abcfa3091306ce2fb43c71e941aaa7b0a8e66795d51c4a0830a96`.
+
+- `tournament_order9_strong_ear_spectrum_thm4097.py`, its independent
+  universe audit, and the independent cut-field audit -> matching `.out`s
+  [THM-4097 PROVED + CITED + VERIFIED-EXACT + INDEPENDENTLY VERIFIED-EXACT;
+  global H-spectrum conjecture OPEN]. Moon 1966, Theorem 2 makes every strong
+  tournament a nonconstant ear of a strong parent. The complete `1,526,032`
+  ear census recovers `1,482` order-nine values and every odd `85..2881`.
+  Cut weight four misses exactly `89,93,105,125`; weight three repairs all
+  four. The integral carrier is
+  `H(child_S)=H(parent)+cut_w(S)+sum_S h`; the unoriented `623/735` pair
+  proves the zero-sum field is load-bearing. Primary hashes:
+  `610ca5850b272e0e75c574f2c1a710a0b96c75cc7191b1e1f1a03dfbdd1378d6` /
+  `0c3c9690ad5877d86480693af7ce97d8936c90e21b65677eefec72234c933dc0`;
+  first independent:
+  `b58de51efa200374e6014c8aeace4086fc7df1b2b73db36a01c0fcc4d2dd7943` /
+  `71058bc6b31ba26a59a58bb7f1e5366e767ed43db1f4bb2ddb80642b02acbfa6`;
+  cut-field independent:
+  `1f0bd30d9a2e48f05243a6cbbcb2a3a203367a6e37cd456874c82cb631bb3775` /
+  `56efda1aa77391ba42530799dea95605b91fe22797cf855b00ac56c22b0443f2`.
 
 - `lrc_twisted_padic_affine_margin_optimizer_thm4096.py` and independent
   audit -> matching `.out`s [THM-4096 PROVED + VERIFIED-EXACT +
@@ -185,22 +216,15 @@
 
 - `hamiltonian_matching_deficit_two_prime_lane_thm4094.py` -> matching `.out`
   [THM-4094 PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED; global
-  H-spectrum conjecture OPEN]. Full deletion incidence gives the exact
-  Hamiltonian-path deficit; selecting one extension per old path loses it
-  minimally at the transitive-triple/C3
-  boundary. Given the proved omissions, multiplicativity, and strong carry
-  atoms `49,63,343`, global completeness is equivalent to strong realization
-  of the prime and seven-prime lanes. The exact audit isolates `613` and `623`
-  as the first targets beyond its finite prefix and records the finitary
-  compactness obstruction; THM-4097 subsequently realizes both. Script/output SHA-256:
   H-spectrum conjecture OPEN]. At order at least two, full deletion incidence
   gives the exact Hamiltonian-path deficit; selecting one extension per old
   path loses it minimally at the transitive-triple/C3 boundary. Given the
   proved omissions, multiplicativity, and finite-prefix strong carry atoms
   `49,63,343`, global completeness is equivalent to strong realization of the
-  prime and seven-prime lanes. The exact audit also isolates `613` and `623`
-  as the first current unforced prime targets and records the finitary
-  compactness obstruction. Script/output SHA-256:
+  prime and seven-prime lanes. Relative to its prefix, the exact audit isolates
+  `613` and `623` as the first unforced targets; THM-4097 and THM-4102 have
+  since realized these and the next pair `2887,2933`. The compactness
+  obstruction survives. Script/output SHA-256:
   `5b6c779958ad1de276873eabd3585f432bb593e32811fb138dc5d3c19948d616` /
   `5f174f77a873a02bd92bbebe4a5d70b3c329abc8152fb1330d4fe1dc6d98df34`.
 
@@ -321,7 +345,7 @@
   `f3deed30e5cb68a869d80e88596a2268f5dabc894eaa6a284ad9bf2b1071c0ac`.
 
 - `two_sort_matching_logic_obstruction_thm4090.py` -> matching `.out`
-  [THM-4090 PROVED + CITED one-sort minimality + FINITE-EXACT +
+  [THM-4090 PROVED + CITED soundness/one-sort minimality + FINITE-EXACT +
   INDEPENDENTLY AUDITED]. The satisfiable two-sort theory semantically forces
   a singleton `b` carrier but cannot derive its sort-`b` conclusion across the
   one-way feed `b->a`. The companion checks all 5,050 declared small models.
@@ -9754,7 +9778,7 @@
 - `lrc14_delayed_word_simultaneous_drift_service_thm2466.py` -> matching `.out` [THM-2466 INDEPENDENT EXACT REFEREE]. A separate exact interval-intersection implementation checks `60` circular-BV word/function/frequency covariances, simultaneous drift/service retention, the `252004`, `32768`, and `66453504` invoices, and the small-clock/zero-mean hostiles. Hashes `4f68d2be...b4d6497` / `3527b4c2...e2cf6`.
 - `jc2_degree22_bw_plane_square_lift_thm2468.py` -> matching `.out` [THM-2468 PROVED + VERIFIED-EXACT]. On the degree-22 `B,W` support-two plane, `lambda=W/B^3` gives the exact quintic pencil `R_lambda=R_0-82458112 lambda p^3(616p-1089v+63)^2`. Every factorization would contain a line or conic: the line ideal is unit, and the three conic top types are unit or force the forbidden cubic-root boundary `h=0`, proving uniform absolute irreducibility. Restoring `p=B/y^2` as `Y^2=1/p` exposes the fixed squarefree section `R(0,v)=-567L_5(v)`; five smooth simple zeros force at least six quadratic branch places and genus at least two. This closes the fourth of ten support-two planes. Hashes `00cf5ce1...45b6` / `cf087693...c156`.
 - `metagraph_pureblue_n13_threaded_kps_S134.cpp` -> matching `.out` [THM-2454 n=13 CONFIRMATION, third consecutive pre-registered hit]. The 2^36 threaded pruned census (21 raw survivors, 15 classes; n=11/12 controls exact): pure-blue(13) = 13 with the locked inventory confirmed class-for-class -- 10 rigid [1,3,9,9,9,9,27,27,27,81] = pal13(13) + (15,5,3) + 2x(135,45,3) (T5-centered palindromes). The alphabet law {1,C3,T5} now stands at ELEVEN exhaustive census points; no new pure-blue atom through size 13. Hashes `149e60b8...` / `94fcdfe4...`.
-- `strong_h_spectrum_intervals_kps_S134.py` (+ m9 dump/values) -> matching `.out`s [HYP-9029]. The strong-interval tiling law: strong(7) >= [65,105], strong(8) >= [69,609], strong(9) >= [85,2881] (giant runs from the exhaustive censuses; m=9 values regenerated from monad's s6 generator and stored); junctions overlap (69<=105, 85<=609), so every odd in [65,2881] has a STRONG witness. With THM-1862/1936's semigroup law + the m<=8 product base, H-spectrum completeness (THM-1370's conjecture) REDUCES to the tiling law. Left edge = Busch floor (~5/3 growth), right edge = HYP-9028 excess constant x n!/2^(n-1) (factorial) => slack explodes (36 -> 524). The unrecorded lever of the {7,21} crossroads.
+- `strong_h_spectrum_intervals_kps_S134.py` (+ m9 dump/values) -> matching `.out`s [HYP-9029; finite order-nine content promoted by THM-4097]. The strong-interval tiling law remains OPEN all-order: strong(7) >= [65,105], strong(8) >= [69,609], strong(9) >= [85,2881]. THM-4097 independently reconstructs the complete order-nine strong spectrum, proves all-order ear reducibility, and identifies the exact integral cut-field carrier. The junctions cover every odd in [65,2881] strongly and every allowed odd through 2885 globally; the next interval remains open.
 - `metagraph_bicycle_spaces_kps_S134.py` -> matching `.out` [THM-2467 PROVED + FINITE-EXACT]. klein-S399's top never-computed object: dim bicycle(K_n) = (n-2)[n even] (even-cut proof; odd-n split direct, even-n defect is FULL codimension-shift, not small); tile graph K_n minus base path has dim bicycle in {0,1} with dim 1 iff n = 2,3,6,9,10 (mod 12) (palindromic residues; verified 4..30); the mod-9 five-point fit breaks at n=21 and is kept as a hostile control (MISTAKE-055 motif). Hashes `a1e01a90...fec6` / `aa63d68b...e3c9`.
 - `jc2_degree22_bd_plane_square_lift_thm2463.py` and independent referee -> matching `.out`s [THM-2463 PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED]. On the degree-22 `B,D` support-two plane, exact elimination gives an absolutely irreducible quartic for every `lambda=D/B^2!=0`: both linear Newton shapes and all three quadratic top types have unit coefficient ideals, including the separately enumerated `lambda=49/33` polygon. Restoring the discarded physical relation `p=B/y^2` as `Y^2=1/p` is decisive: `R(0,v)=-567L_5(v)` with squarefree quintic `L_5`, so the connected double cover has at least six branch points and genus at least two. No rational trajectory survives; with the axes, this closes the third of ten support-two planes. Primary hashes `92345433...9ce08a` / `ea3c9447...b8488`; independent hashes `a2e4d351...40db5` / `ec0b6583...2c5ae`.
 - `bcw_reduction_verified_construction_agent_S61b.py` -> `.out` FIRST STORED RUN (kps-S134; script by death-star-S61b/c, never previously run to output). Resolves the S61c-vs-ledger discrepancy for the fleet-#1 Zhao-witness target: the script verifies the BCW MACHINERY only -- degree-reduction shear, doubling-to-nilpotent + T-homogenization (H_c cubic-homogeneous, J nilpotent index 5), and the Gorni-Zampieri pairing all hold as POLYNOMIAL IDENTITIES (globally, not on a section) on its test maps, exit 0. It does NOT contain the end-to-end reduction of the wild THM-1310 map or collision transport; 'BCW reduction complete' (bbc91d542) = machinery-complete. The PROBLEM-LEDGER blocker (cubic-homogeneous Keller reduction OF F) remains open with a now-verified toolchain.
@@ -11220,7 +11244,7 @@ Note: Some scripts take >5 minutes. Use `timeout` appropriately.
 | `h_productive_boundary_closure_codex_s97.py` | [STORED] | HYP-2874 productive H-closure ledger.  Computes the target factor routes for `H=7` and `H=21`, records the THM-115 Moon pancyclic boundary `H>=25` for every strong core with `n>=9`, and closes the low ledger by THM-200/THM-343 for `H=7`, THM-079 for the `n<=8` single-core `H=21` base, and THM-115 for the large strong-core branch.  Interprets strong-component/OCF condensation as the admissible boundary approach and even-graph minor moves as wild quotient approaches that do not preserve `H`; also records the S33 guardrail that the permanent forbidden set is not the false ideal `7Z`. | `h_productive_boundary_closure_codex_s97.out` |
 | `tournament_h_strong_minor_lens_codex_s98.py` | [STORED] | HYP-2877 positive companion to HYP-2872.  Audits all `33868` rooted fixed-Hamiltonian-path tournaments through `n=7`; verifies `0` failures of `H(T)=prod H(C_i)` over strong components and `0` singleton strong-component suppression failures; finds `89` strong-atom signatures with `0` multiple-H collisions.  Observed strong-atom gaps up to `189` match the rooted odd gaps, including `{7,21}`, while strong atoms divisible by `7` such as `35,49,77,91,133,147,175` exist.  Redirects the Kuratowski/Wagner analogy to labelled strong-component H-atoms and treats Beurling-Selberg carriers as labelled analytic atoms with explicit defects. | `tournament_h_strong_minor_lens_codex_s98.out` |
 | `lrc14_residue_basis_character_sum_codex_s98.py` | [STORED] | HYP-2876 finite residue-basis audit.  Tests the prompt basis `{83,89,21}` on `602` deterministic primitive covering rows up to speed `10000`, certifying `591` with `11` misses and first missed row certified instead at `D=19`.  Proves by construction that any finite denominator list `B` is killed by `{1,...,11,13,84*lcm(B)}`; for `{83,89,21}`, the exact killer tail is `13030668` and all three basis counts are zero.  Strengthens the apex floor from `D=14` to all reduced denominators `2..14`, and frames `N(S,D)` as main term plus exact character/resonance packet.  Tournament Analysis uses residue/proof-carrier vertices rather than runners. | `lrc14_residue_basis_character_sum_codex_s98.out` |
-| `tournament_strong_ear_atoms_codex_s99.py` | [STORED] | HYP-2879 strong-ear atom calculus.  Uses the validated non-isomorphic tournament tower through `n=8` and verifies the exact insertion formula `H(T+x)=start(sig=1)+end(sig=0)+Q(sig=0,sig=1)` for all nonconstant ears from strong parents through `7->8`.  Finds `0` formula failures and `0` strongness failures; every strong class on `n=4..8` has at least two strong-deletion vertices; ear-generated spectra equal the full strong H-spectra in every transition `3->4` through `7->8`.  In the largest transition, balanced cut weight `w=3` covers `295/297` strong `n=8` values, missing only `49,75`, and adding `w=1` covers all. | `tournament_strong_ear_atoms_codex_s99.out` |
+| `tournament_strong_ear_atoms_codex_s99.py` | [STORED; HYP-2879 PARTLY PROMOTED BY THM-4097] | Uses the validated non-isomorphic tournament tower through `n=8` and verifies the exact insertion formula `H(T+x)=start(sig=1)+end(sig=0)+Q(sig=0,sig=1)` for all nonconstant ears from strong parents through `7->8`. Finds `0` formula failures and `0` strongness failures; every strong class on `n=4..8` has at least two strong-deletion vertices; ear-generated spectra equal the full strong H-spectra in every transition `3->4` through `7->8`. In the largest transition, balanced cut weight `w=3` covers `295/297` strong `n=8` values, missing only `49,75`, and adding `w=1` covers all. THM-4097 closes all-order strong-ear reducibility via Moon 1966 and gives the integral `(w,h)` refinement. | `tournament_strong_ear_atoms_codex_s99.out` |
 | `tournament_apex_cut_weight_ledger_codex_s99.py` | [STORED] | HYP-2880 apex-cut extension ledger.  Represents all `2^21` rooted `n=8` rows as rooted `n=7` bases plus a fixed-path apex row, and computes `H(T+apex)` exactly by summing legal apex insertion slots over old Hamiltonian paths.  Balanced raw `w=3` cuts supply a broad strong-value block (`645112` strong rows, `463` distinct `H`, max `513`), but raw rooted cut size is coarser than HYP-2879's non-isomorphic strong-ear quotient: rooted `w=3` can still realize `49,75`, while the quotient-level balanced branch misses exactly those two values.  The sharper `w=1` signal is near-constant insertion defect: `49=2*25-1` via `{1:1,2:24}` and `75=2*39-3` via `{1:3,2:36}`, both from strong `n=7` bases.  KPS S31f's literal-tile audit says the longest tile is not required for `49/75`, so the apex object here is the boundary-row defect. | `tournament_apex_cut_weight_ledger_codex_s99.out` |
 | `e7_c5_h7_obstruction_map_codex_s100.py` | [STORED] | HYP-2881 exact fixed-path audit separating directed C5 support from E7 metagraph C5 holes.  Rebuilds E7 without external graph packages, verifies `54` classes, `951` metagraph edges, and `1496` C5 holes.  The H=7 point `alpha=(3,0)` has `0` masks/classes in this fixed-path cube; `k3_forces_pentagon` has `54` masks in `5` classes, those classes hit `835/1496` C5 holes but no hole is fully made of them, and directed C5 support maps to one E7 class (class 3).  Together with S37, verdict is two-level: directed C5 support = H=7 K3 support; E7 metagraph C5 hole is a quotient-cycle incidence object. | `e7_c5_h7_obstruction_map_codex_s100.out` |
 | `lrc14_repeated_packet_graph_codex_s101.py` | [STORED] | HYP-2883 finite signed packet graph for the HYP-2632 repeated-residue kernel.  On residues `{0,2,3,4,5,6}`, negative `4+2` loop weights `-4,-25,-18,-25,-18,-18` are exactly balanced by incident `4+1+1` edge weights in `{0,1,8}`; zero edges are precisely the affine matching `a+b=2 mod 7`, and off that lane high/low is `chi_7(Q)`.  Verifies `loop(a)+sum_b edge(a,b)=0` at every vertex, reframing the finite kernel as a signed-current graph rather than a scalar signed ledger. | `lrc14_repeated_packet_graph_codex_s101.out` |

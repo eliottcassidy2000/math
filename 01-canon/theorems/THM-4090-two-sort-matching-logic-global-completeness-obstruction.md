@@ -2,7 +2,8 @@
 id: THM-4090
 title: "Two-sort matching-logic global-completeness obstruction"
 status: >
-  PROVED + CITED MINIMALITY INPUT + FINITE-EXACT + INDEPENDENTLY AUDITED.
+  PROVED + CITED SOUNDNESS/MINIMALITY INPUT + FINITE-EXACT + INDEPENDENTLY
+  AUDITED.
   The standard Hilbert system for basic many-sorted, definedness-free,
   fixpoint-free matching logic is already globally incomplete for a
   satisfiable theory over two sorts and one unary symbol. Two sorts are
@@ -29,7 +30,8 @@ hash_basis: raw LF bytes
 
 # THM-4090 -- two sorts already obstruct global completeness
 
-**PROVED + CITED MINIMALITY INPUT + FINITE-EXACT + INDEPENDENTLY AUDITED.**
+**PROVED + CITED SOUNDNESS/MINIMALITY INPUT + FINITE-EXACT + INDEPENDENTLY
+AUDITED.**
 
 ## 1. Exact setting and statement
 

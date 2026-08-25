@@ -26,10 +26,14 @@ by inserting v at a feasible position (the classical Rédei insertion argument
 guarantees at least one), and removing v recovers the original path, so the
 map is injective. ∎
 
-**(3) Strong floor is nondecreasing.** Let f(n) = min{h(S) : S strong on n
-vertices}. Moon's theorem (every strong tournament on n ≥ 4 vertices contains
-a strong subtournament on n − 1 vertices) + (2) gives f(n) ≥ f(n − 1) for
-n ≥ 5. [CITATION: Moon 1968, strong-subtournament theorem; classical.]
+**(3) Strong floor is nondecreasing.** Let `f(n)=min{h(S):S strong on n
+vertices}`. Moon's theorem says every strong tournament on `n>=4` vertices
+contains at least two induced strong subtournaments on `n-1` vertices. With
+(2), this gives `f(n)>=f(n-1)` for `n>=5`. [CITATION: J. W. Moon, "On
+Subtournaments of a Tournament," Canadian Mathematical Bulletin 9(3) (1966),
+297--301, Theorem 2, DOI 10.4153/CMB-1966-038-7; its formula
+`s(n,k)=n-k+1` gives `s(n,n-1)=2`.]
+This bibliographic correction is recorded as MISTAKE-505.
 
 **(4) Exhaustive small spectra (frozen outputs).** strong(3) = {3},
 strong(4) = {5}, f(5) = 9, f(6) = 15, f(7) = 25, f(8) = 45 — exhaustive at

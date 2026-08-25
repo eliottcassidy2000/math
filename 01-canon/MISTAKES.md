@@ -30,6 +30,31 @@ Format per entry:
   the two arc widths differ; compute the convolution shape before taking a
   periodic average.
 
+## MISTAKE-505 (2026-08-25, THM-1370 strong-subtournament citation) -- the correct classical theorem was attached to the wrong year and its quantitative multiplicity was hidden
+
+- **What failed:** THM-1370 cited a generic "Moon 1968" strong-subtournament
+  theorem for the deletion step. The direct source is J. W. Moon, *On
+  Subtournaments of a Tournament*, Canadian Mathematical Bulletin 9(3)
+  (1966), Theorem 2, DOI `10.4153/CMB-1966-038-7`.
+- **Repair / strongest survivor:** THM-1370 now cites the exact source and
+  formula `s(n,k)=n-k+1`. At `k=n-1` this gives two induced strong parents,
+  stronger than the one parent needed for its monotone-floor proof. THM-4097
+  uses the quantitative form to close all-order strong-ear reducibility.
+- **Reusable rule:** verify the theorem number, year, and quantitative form of
+  a classical input before inheriting a historical bibliographic shorthand.
+
+## MISTAKE-504 (2026-08-25, THM-4096 interpolation index) -- an eventual congruence was stated without its load-bearing first-index scope
+
+- **What failed:** equation (8) of THM-4096 and the matching repair text in
+  MISTAKE-497 set `k_j=2+(p-3)p^j` but did not say `j>=1`. At `j=0` one has
+  `k_0=p-1`, which is not congruent to `2 mod p`.
+- **Repair / strongest survivor:** the interpolation sequence is now scoped to
+  integers `j>=1`. Then `p-1` divides `k_j`, `k_j -> 2` p-adically, and
+  `k_j=2 mod p`, exactly as used by both independent THM-4096 audits. All
+  valuation and limit conclusions are unchanged.
+- **Reusable rule:** test the first index separately before promoting an
+  eventual congruence to a statement about an entire interpolation sequence.
+
 ## MISTAKE-503 (2026-08-25, THM-4096 / MISTAKE-497 repair audit) -- a certified witness was upgraded to the optimum and one strict comparison was left unjustified
 
 - **What failed:** MISTAKE-497 said that THM-2057 proves
@@ -95,7 +120,7 @@ Format per entry:
   Audit accumulation points and exceptional denominator values before
   assigning a topological label to an exact spectrum.
 
-## MISTAKE-504 (2026-08-25, Bernoulli--Hurwitz reflection) -- denominator primes were promoted to quaternion ramification and a finite p-adic value was called a pole
+## MISTAKE-506 (2026-08-25, Bernoulli--Hurwitz reflection) -- denominator primes were promoted to quaternion ramification and a finite p-adic value was called a pole
 
 - **What failed:** `07-reflections/bernoulli-hurwitz.md` claimed that the
   Hamilton quaternion algebra ramifies at the finite primes `2,3,7`, that its
@@ -176,8 +201,8 @@ Format per entry:
 - **Minimal witness / first failed implication:** the Kubota--Leopoldt
   interpolation formula is character-sensitive. For the standard
   trivial-character branch `zeta_p(s)=L_p(s,1)` at an odd prime, take
-  `k_j=2+(p-3)p^j`. Then `p-1` divides `k_j` and `k_j` tends p-adically to
-  `2`. Interpolation plus von Staudt--Clausen gives
+  `k_j=2+(p-3)p^j` for integers `j>=1`. Then `p-1` divides `k_j` and `k_j`
+  tends p-adically to `2`. Interpolation plus von Staudt--Clausen gives
   `v_p(zeta_p(-1))=-1` and
   `p zeta_p(-1)=1/2 mod p`; in particular
   `zeta_7(-1) in 4/7+Z_7`, so it cannot equal the 7-adic unit `1/2`.

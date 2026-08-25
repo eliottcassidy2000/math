@@ -33,6 +33,7 @@ related:
   - MISTAKE-219
   - MISTAKE-499
   - MISTAKE-502
+  - THM-4102-selected-order-ten-strong-ear-solid-interval
 script: 04-computation/hamiltonian_matching_deficit_two_prime_lane_thm4094.py
 output: 05-knowledge/results/hamiltonian_matching_deficit_two_prime_lane_thm4094.out
 script_sha256: 5b6c779958ad1de276873eabd3585f432bb593e32811fb138dc5d3c19948d616
@@ -350,9 +351,10 @@ cannot be separated as `7*p`; and `49,343` transport higher seven-adic
 valuation. No analogous exceptional lane is needed elsewhere because the
 ordinary prime itself is not forbidden there.
 
-## 7. Current frontier and a construction hostile
+## 7. Finite-prefix boundary and a surviving construction hostile
 
-The prefix through `609` proves the ordinary-prime lane through `p=607` and
+At the input boundary of this theorem, the prefix through `609` proved the
+ordinary-prime lane through `p=607` and
 the seven-prime lane through `p=83`, since `7*83=581`. It also supplies the
 carry atoms `(20)`. Multiplication advances beyond the literal prefix:
 
@@ -557,10 +559,10 @@ Raw file hashes and the canonical semantic hash are pinned above.
 
 ## 11. Scope
 
-THM-4094 does **not** prove or refute `(5)`, and does not assert that `613` or
-`623` is absent from the actual spectrum. It proves only that they are not
-forced by the stated prefix and multiplication, and that completeness reduces
-exactly to `(21)`--`(22)`.
+THM-4094 does **not** prove or refute `(5)`, and never asserted that `613` or
+`623` was absent from the actual spectrum. THM-4097 has now strongly realized
+both. This theorem proves only that they were not forced by its stated prefix
+and multiplication, and that completeness reduces exactly to `(21)`--`(22)`.
 
 Compactness does not prohibit proving every standard instance of `(31)`, a
 constructive realization algorithm, induction in ordinary mathematics,
