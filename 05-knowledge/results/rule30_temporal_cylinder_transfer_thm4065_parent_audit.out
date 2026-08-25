@@ -1,0 +1,9 @@
+RULE30_TEMPORAL_CYLINDER_TRANSFER_THM4065_PARENT_AUDIT
+method=no_import_query_packet_reconstruction
+parent_source_sha256=d454cc5b40315c02ebf486f29e227ebc9a79c78ede18fc449a7dd32f8dc21148
+parent_output_sha256=bae500127999c350ebeff77c3145fbb4abf7b5b7292d2882eeecc6492fba75e3
+parent_semantic_sha256=62c469a9af7fd4b6ed2eeed6aef384a76e1712d848cca3dd01fa157f6440f915
+zero_columns=(2, 7, 28, 399, 53207, 58286, 87866)
+target_absolute_words=((87867, 1402474, 32, 'cf3030cf'), (99998, 1790666, 32, 'f687520b'), (99999, 1790698, 32, 'be79924b'), (100000, 1790730, 32, '90f58380'))
+checks=30744208
+status=PASS;conditional_only_on_already_audited_THM4047_physical_query_packet
