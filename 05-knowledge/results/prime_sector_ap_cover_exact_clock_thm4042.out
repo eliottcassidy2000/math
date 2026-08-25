@@ -1,0 +1,79 @@
+PRIME OWNER ASYMPTOTIC RADII
+P=2;kappa=1/2;radius_formula=PASS
+P=3;kappa=7/6;radius_formula=PASS
+P=5;kappa=12/5;radius_formula=PASS
+P=7;kappa=127/35;radius_formula=PASS
+P=11;kappa=667/110;radius_formula=PASS
+P=13;kappa=14577/2002;radius_formula=PASS
+P=17;kappa=75116/7735;radius_formula=PASS
+P=19;kappa=53004169/4849845;radius_formula=PASS
+P=23;kappa=99408258/7436429;radius_formula=PASS
+P=29;kappa=965375416/56751695;radius_formula=PASS
+P=31;kappa=1827852918728/100280245065;radius_formula=PASS
+P=37;kappa=54132377990233/2473579378270;radius_formula=PASS
+P=41;kappa=37928436768491/1560257761678;radius_formula=PASS
+P=43;kappa=100728261903539/3946534338362;radius_formula=PASS
+
+EVENTUAL DENOMINATOR CLOCKS
+P=2;q=1;vector_period=1;top_shift_period=1;top_shift_support=1
+P=2;L=1;global_vector_period=1;phase_bound_sharp=True;all_shifts_active=[0];top_shift_periods=(1,)
+P=3;q=1;vector_period=1;top_shift_period=1;top_shift_support=1
+P=3;q=2;vector_period=2;top_shift_period=2;top_shift_support=1
+P=3;L=2;global_vector_period=2;phase_bound_sharp=True;all_shifts_active=[0, 1];top_shift_periods=(1, 2)
+P=5;q=1;vector_period=1;top_shift_period=1;top_shift_support=1
+P=5;q=2;vector_period=2;top_shift_period=2;top_shift_support=2
+P=5;q=3;vector_period=3;top_shift_period=3;top_shift_support=2
+P=5;q=4;vector_period=2;top_shift_period=2;top_shift_support=2
+P=5;L=12;global_vector_period=6;phase_bound_sharp=False;all_shifts_active=[0, 1, 2, 3];top_shift_periods=(1, 2, 3, 2)
+P=7;q=1;vector_period=1;top_shift_period=1;top_shift_support=1
+P=7;q=2;vector_period=2;top_shift_period=2;top_shift_support=2
+P=7;q=3;vector_period=3;top_shift_period=3;top_shift_support=3
+P=7;q=4;vector_period=4;top_shift_period=4;top_shift_support=3
+P=7;q=5;vector_period=5;top_shift_period=5;top_shift_support=4
+P=7;q=6;vector_period=6;top_shift_period=6;top_shift_support=2
+P=7;L=60;global_vector_period=60;phase_bound_sharp=True;all_shifts_active=[0, 1, 2, 3, 4, 5];top_shift_periods=(1, 2, 3, 4, 5, 6)
+P=11;q=1;vector_period=1;top_shift_period=1;top_shift_support=1
+P=11;q=2;vector_period=2;top_shift_period=2;top_shift_support=2
+P=11;q=3;vector_period=3;top_shift_period=3;top_shift_support=2
+P=11;q=4;vector_period=4;top_shift_period=4;top_shift_support=3
+P=11;q=5;vector_period=5;top_shift_period=5;top_shift_support=5
+P=11;q=6;vector_period=6;top_shift_period=6;top_shift_support=4
+P=11;q=7;vector_period=7;top_shift_period=7;top_shift_support=6
+P=11;q=8;vector_period=4;top_shift_period=4;top_shift_support=6
+P=11;q=9;vector_period=3;top_shift_period=3;top_shift_support=6
+P=11;q=10;vector_period=10;top_shift_period=10;top_shift_support=4
+P=11;L=2520;global_vector_period=420;phase_bound_sharp=False;all_shifts_active=[0, 1, 2, 3, 4, 5, 6, 7, 8, 9];top_shift_periods=(1, 2, 3, 4, 5, 6, 7, 4, 3, 10)
+P=13;q=1;vector_period=1;top_shift_period=1;top_shift_support=1
+P=13;q=2;vector_period=2;top_shift_period=2;top_shift_support=2
+P=13;q=3;vector_period=3;top_shift_period=3;top_shift_support=3
+P=13;q=4;vector_period=4;top_shift_period=4;top_shift_support=3
+P=13;q=5;vector_period=5;top_shift_period=5;top_shift_support=4
+P=13;q=6;vector_period=6;top_shift_period=6;top_shift_support=3
+P=13;q=7;vector_period=7;top_shift_period=7;top_shift_support=6
+P=13;q=8;vector_period=8;top_shift_period=8;top_shift_support=5
+P=13;q=9;vector_period=9;top_shift_period=9;top_shift_support=8
+P=13;q=10;vector_period=10;top_shift_period=10;top_shift_support=8
+P=13;q=11;vector_period=11;top_shift_period=11;top_shift_support=10
+P=13;q=12;vector_period=6;top_shift_period=6;top_shift_support=4
+P=13;L=27720;global_vector_period=27720;phase_bound_sharp=True;all_shifts_active=[0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11];top_shift_periods=(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 6)
+
+CLOSED CLOCK-PERIOD PROFILE
+P=2;Pi=1;L=1;L_over_Pi=1;delta=(1,)
+P=3;Pi=2;L=2;L_over_Pi=1;delta=(1, 2)
+P=5;Pi=6;L=12;L_over_Pi=2;delta=(1, 2, 3, 2)
+P=7;Pi=60;L=60;L_over_Pi=1;delta=(1, 2, 3, 4, 5, 6)
+P=11;Pi=420;L=2520;L_over_Pi=6;delta=(1, 2, 3, 4, 5, 6, 7, 4, 3, 10)
+P=13;Pi=27720;L=27720;L_over_Pi=1;delta=(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 6)
+P=17;Pi=120120;L=720720;L_over_Pi=6;delta=(1, 2, 3, 4, 5, 6, 7, 8, 3, 10, 11, 12, 13, 14, 15, 2)
+P=19;Pi=3063060;L=12252240;L_over_Pi=4;delta=(1, 2, 3, 4, 5, 6, 7, 4, 9, 10, 11, 12, 13, 14, 15, 4, 17, 6)
+P=23;Pi=19399380;L=232792560;L_over_Pi=12;delta=(1, 2, 3, 4, 5, 6, 7, 4, 3, 10, 11, 12, 13, 14, 15, 4, 17, 6, 19, 20, 21, 22)
+P=29;Pi=892371480;L=80313433200;L_over_Pi=90;delta=(1, 2, 3, 4, 5, 6, 7, 8, 3, 10, 11, 12, 13, 14, 15, 8, 17, 6, 19, 20, 21, 22, 23, 24, 5, 26, 3, 14)
+P=31;Pi=194090796900;L=2329089562800;L_over_Pi=12;delta=(1, 2, 3, 4, 5, 6, 7, 4, 9, 10, 11, 12, 13, 14, 15, 4, 17, 18, 19, 20, 21, 22, 23, 12, 25, 26, 9, 28, 29, 30)
+P=37;Pi=7220177644680;L=144403552893600;L_over_Pi=20;delta=(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 8, 17, 18, 19, 20, 21, 22, 23, 24, 5, 26, 27, 28, 29, 30, 31, 8, 33, 34, 35, 6)
+P=41;Pi=296829525392400;L=5342931457063200;L_over_Pi=18;delta=(1, 2, 3, 4, 5, 6, 7, 8, 3, 10, 11, 12, 13, 14, 15, 16, 17, 6, 19, 20, 21, 22, 23, 24, 25, 26, 3, 28, 29, 30, 31, 16, 33, 34, 35, 12, 37, 38, 39, 10)
+P=43;Pi=1825501581163260;L=219060189739591200;L_over_Pi=120;delta=(1, 2, 3, 4, 5, 6, 7, 4, 9, 10, 11, 12, 13, 14, 15, 4, 17, 18, 19, 20, 21, 22, 23, 12, 5, 26, 9, 28, 29, 30, 31, 4, 33, 34, 35, 36, 37, 38, 39, 20, 41, 42)
+P=47;Pi=26165522663340060;L=9419588158802421600;L_over_Pi=360;delta=(1, 2, 3, 4, 5, 6, 7, 4, 3, 10, 11, 12, 13, 14, 15, 4, 17, 6, 19, 20, 21, 22, 23, 12, 5, 26, 3, 28, 29, 30, 31, 4, 33, 34, 35, 12, 37, 38, 39, 20, 41, 42, 43, 44, 15, 46)
+P=53;Pi=2459559130353965640;L=3099044504245996706400;L_over_Pi=1260;delta=(1, 2, 3, 4, 5, 6, 7, 8, 3, 10, 11, 12, 13, 14, 15, 8, 17, 6, 19, 20, 21, 22, 23, 24, 5, 26, 3, 28, 29, 30, 31, 8, 33, 34, 35, 12, 37, 38, 39, 40, 41, 42, 43, 44, 15, 46, 47, 24, 7, 10, 51, 26)
+P=59;Pi=65178316954380089460;L=164249358725037825439200;L_over_Pi=2520;delta=(1, 2, 3, 4, 5, 6, 7, 4, 3, 10, 11, 12, 13, 14, 15, 4, 17, 6, 19, 20, 21, 22, 23, 12, 5, 26, 3, 28, 29, 30, 31, 4, 33, 34, 35, 12, 37, 38, 39, 20, 41, 42, 43, 44, 15, 46, 47, 12, 7, 10, 51, 52, 53, 6, 55, 28, 57, 58)
+P=61;Pi=115365621009252758344200;L=9690712164777231700912800;L_over_Pi=84;delta=(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 8, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 9, 28, 29, 30, 31, 8, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 24, 7, 50, 51, 52, 53, 18, 55, 56, 57, 58, 59, 30)
+RESULT=PASS

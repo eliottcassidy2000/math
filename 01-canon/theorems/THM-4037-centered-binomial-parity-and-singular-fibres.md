@@ -288,6 +288,39 @@ also do not divide `(21)`.  THM-4027 proves all those local counts are
 positive.  Parity, local density, and bounded exact coverage are distinct
 coordinates.
 
+### Exact square-avoidance quotient
+
+The rank-two coordinate makes the odd-function loss completely explicit:
+
+\[
+ 8{w\choose2}+1=(2w-1)^2.                            \tag{21a}
+\]
+
+For an integer `n`, let
+
+\[
+ \mathcal H_n=\left\{{x\choose4}+{y\choose6}+{z\choose8}\le n-1:
+ x\ge3, y\ge5, z\ge7\right\}.
+\]
+
+Then the canonical Sun representation count vanishes exactly when
+
+\[
+ a(n)=0\quad\Longleftrightarrow\quad
+ 8(n-h)+1\ne b^2
+ \quad\text{for every }h\in\mathcal H_n
+ \text{ and every odd }b\ge3.                       \tag{21b}
+\]
+
+Indeed, a square in `(21b)` gives `w=(b+1)/2>=2`, and `(21a)` gives the
+missing triangular atom; the converse is immediate. Under the centered
+reflection `iota_2(w)=1-w`, the coordinate `b=2w-1` is odd:
+`b(iota_2(w))=-b(w)`. Passing to the even atom is precisely the quotient
+`b -> b^2`. It preserves the square test but destroys the sign and the
+positive chamber `b>=3`. Thus `(21b)` is an exact all-hole criterion, not an
+enumeration or an effective global leastness proof; it identifies the
+height-sensitive sidecar that complete modular parity omits.
+
 ## 5. Odd derivatives and the critical-value eliminant
 
 Work now over a field of characteristic `p>8`, so every factorial in `(6)` is

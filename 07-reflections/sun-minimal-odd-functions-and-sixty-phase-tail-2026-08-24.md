@@ -184,6 +184,15 @@ not preserve the positive chamber, bounded height, or a common integral lift.
 Complete modular parity and singularity therefore cannot detect the exact
 hole. THM-4026 is the hostile witness.
 
+For the triangular role, the missing sidecar has an exact name. Writing
+`b=2w-1` gives `8*C(w,2)+1=b^2`, while centered reflection sends `b` to
+`-b`. Hence all Sun holes are exactly the higher-sumset values for which
+every translate `8(n-h)+1` avoids odd squares `b^2`, `b>=3`. The square
+quotient preserves the even atom and destroys the sign; the positive chamber
+is precisely the choice `b>=3`. This is a lawful odd-function classifier
+criterion, but it does not supply the missing global square-intersection
+estimate.
+
 ## Result 4: sixty is a clock, not a Sturmian cause
 
 After the THM-4029 owner reduction, for `n>=12`,
@@ -227,6 +236,20 @@ period 60, yielding an explicit order-360 polynomial recurrence. Its ordinary
 generating function is D-finite but nonalgebraic because of its logarithmic
 singularity.
 
+The all-prime refinement THM-4042 makes the causal statement sharper. For
+`2<=q<=P-2`, the exact owner-word period is
+
+```text
+product over ell^e || q of ell^min(e,v_ell(P-1)+1),
+```
+
+with top boundary period `rad(P-1)`. Hence the global phase has a closed
+prime-adic product formula. It equals 60 at `P=7`, but collapses from the
+naive denominator lcm by factors `2,6,6` at `P=5,11,17`. The Fibonacci and
+triangular states remain exact addresses for the exceptional `P=7` clock;
+the valuation of `P-1` and the image set `(P^(-1)-1)U_q` are the general
+cause.
+
 Block summation of each owner track gives an exact triangular-number formula.
 That bridge preserves phase and total arrival time, but destroys reciprocal
 costs, sides, max-min selectors, and missing-sector labels. It is useful as a
@@ -251,6 +274,17 @@ consecutive AP is replaced by a sparse runner set. The required sidecars are
 owner, side, missing sector, gap geometry, and unbounded height. A clock match
 without those data is only an address coincidence.
 
+An incoming Jacobian namespace, THM-4044, is still **RESERVED / UNPROVED**
+and contributes no theorem, but it names a precise cross-frontier hostile:
+the confluent `C_60` evaluation kernel for a forced `[p^2]R` residual
+coordinate. The candidate map sends an AP phase to the same cyclic evaluation
+address; it preserves only `C_60` translation and destroys owner words, poles,
+and affine height. The required JC sidecars are the forced coefficient and
+kernel rank. The cheapest lawful test is therefore to compute that confluent
+kernel and ask whether the AP moment packet remains injective after the
+residual projection. THM-4042's clock collapses at other primes make a bare
+period match especially weak evidence.
+
 ## Public anchors
 
 - Zhi-Wei Sun's formulation and the reported all-integer verification through
@@ -260,4 +294,3 @@ without those data is only an address coincidence.
 - Discovery transcript for the explicit counterexample and selected CRT
   blocks:
   https://gist.github.com/tadamcz/0c578c8b2b3fb92fe8584bc0725187e3
-

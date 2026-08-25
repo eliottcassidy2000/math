@@ -1,0 +1,7 @@
+winner_formula_checks=546
+direct_word_block_checks=35
+p_adic_period_checks=6027
+period_profile={2: 1, 3: 2, 5: 6, 7: 60, 11: 420, 13: 27720, 17: 120120}
+finite_prime_windows=P3,P5,P7
+composite_P4_m20_gap=1/72
+RESULT=PASS

@@ -45,6 +45,22 @@
   `8c73998c615d3709819898494ffede3a773c2efaf415b1cc3f4d6e3e5c923c61` /
   `3670f67e6c3b4bfb1621f6b7f77c944ca3693b22563e6d95e0fdddac552e04af`.
 
+- `prime_sector_ap_cover_exact_clock_thm4042.py` and independent audit ->
+  matching `.out`s [THM-4042 PROVED + VERIFIED-EXACT + INDEPENDENTLY
+  HOSTILE-AUDITED; LRC(14) OPEN]. Every prime-sector owner word has an exact
+  p-adic period, giving a closed minimal clock; `Pi_7=60`, while `P=5,11,17`
+  refute the naive full-lcm law. The sharp common clearing is
+  `(P-1)!C(n,P-1)`; the cleared tail is an exact-phase degree-`P-2`
+  quasipolynomial, hence P-recursive with D-finite nonalgebraic OGF. The
+  independent audit checks 546 winners, 35 raw word blocks, and all 6,027
+  word periods through prime 251, plus a composite-4 hostile. Primary
+  script/output SHA-256:
+  `4e4d5f98bf3746f78efa1736933f3456b143466df7c6057be923f20bdb222678` /
+  `1d781c506b5dea8a03b077335845c87a02ca5395bfe28c65089f92f961f74803`;
+  independent:
+  `024e2ced48a508a6903f12c1cb48663061d4d05c83b18f934585aa91782a47d0` /
+  `a56beb886757a5c0b4b1fa18919326880d0a374c090322154fd910da0b287397`.
+
 - `sun_2468_counterexample_thm4026.py` -> matching `.out` [THM-4026
   REFUTED CONJECTURE + PROVED COUNTEREXAMPLE + VERIFIED-EXACT]. Over exactly
   `248,160` admissible `(y,z)` pairs, it counts `2,755,643,831` admissible

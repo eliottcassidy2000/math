@@ -25,6 +25,7 @@ related:
   - THM-4028
   - THM-4033-prime-sector-ap-cover-eventual-owner-tail
   - THM-4035-sixty-clock-separation-and-finite-kakeya-spine
+  - THM-4042-prime-sector-ap-cover-exact-clock-and-holonomic-law
 script: 04-computation/lrc14_ap_cover_holonomic_sixty_phase_thm4038.py
 output: 05-knowledge/results/lrc14_ap_cover_holonomic_sixty_phase_thm4038.out
 ---
@@ -118,6 +119,11 @@ Consequently the global clock is precisely the synchronization
 \[
  \operatorname{lcm}(1,2,3,4,5,6)=60.                 \tag{6}
 \]
+
+THM-4042 puts this `P=7` fact inside an all-prime valuation law. Individual
+word periods can collapse below their denominators, and the global lcm does
+collapse at `P=5,11,17`; at `P=7` all six periods happen to remain full.
+Thus `(6)` is exact here but is not a generic denominator-lcm principle.
 
 THM-4035 independently identifies three pointed `60`-cycles: the phase labels
 here, the full Fibonacci state `(F_r,F_(r+1)) mod 10`, and the pointed
