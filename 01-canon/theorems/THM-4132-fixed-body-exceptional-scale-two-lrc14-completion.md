@@ -2,7 +2,8 @@
 id: THM-4132
 title: "Fixed-body completion of the exceptional scale-two LRC(14) cell"
 status: >
-  PROVED ELEMENTARY COMPACT-TO-OPEN COMPLETION + VERIFIED-EXACT. Let
+  PROVED ELEMENTARY COMPACT-TO-OPEN COMPLETION + VERIFIED-EXACT +
+  INDEPENDENTLY AUDITED. Let
   U=(1,4,6,8,10,12,14,15,16,18,22). For every positive odd integer t, the
   thirteen distinct speeds 2U union {t,9t} have a common phase of clearance
   at least 1/14. This closes the U-body slice of THM-3878's exceptional
@@ -17,9 +18,14 @@ related:
   - THM-4002-lrc14-signed-endpoint-cross-phase-and-fixed-scale-two-family
 script: 04-computation/lrc14_fixed_body_scale_two_completion_thm4132.py
 output: 05-knowledge/results/lrc14_fixed_body_scale_two_completion_thm4132.out
+independent_audit_script: 04-computation/lrc14_fixed_body_scale_two_completion_thm4132_independent_audit.py
+independent_audit_output: 05-knowledge/results/lrc14_fixed_body_scale_two_completion_thm4132_independent_audit.out
 script_sha256: 2a928cc1d622fa3b5a5d351edf3594058b2631cf6c8224b0a203d1f7258ac70f
 output_sha256: a4084955d9adbde07e2459757dd3c305268fe84a99c436475f0d9379faa428cd
+independent_audit_script_sha256: 6c3571653607e4b609fc171e3d8cd62f2f4380b00931d702338534372a9e1eca
+independent_audit_output_sha256: 2d1e770df01d36bddfc387c34e9eb188d85687cb0f9931adcf9040f940012f9b
 semantic_sha256: aa6314ca8c25b5ad512bef0874dfb7262bd65cab8b200abba32d1cfe6b7710a6
+independent_semantic_sha256: a1a708792f72909ea1ee517586dcc30f8dc16f46781005b4e3fc22edcf875f88
 hash_basis: raw LF bytes
 primary_audit: >
   PASS. A standalone Fraction implementation reconstructs the closed body
@@ -28,11 +34,19 @@ primary_audit: >
   checks the t=1 clock and a fixed-sheet hostile, and constructs literal
   verified lifts for all 1,000 odd scales from 3 through 2,001. Normal,
   optimized, and hash-seeded replays agree with the frozen output.
+independent_audit: >
+  ACCEPT. A clean-room Fraction referee imports no primary code. It rebuilds
+  the body's 244-wall strict-danger complement and the quotient's 22 literal
+  two-sheet walls, verifies the compact-to-open gate including endpoint
+  strictness and wrap threshold, and independently finds full-row wall
+  witnesses at eight hostile scales through 2,001. Normal, optimized, and
+  two hash-seeded replays are byte-identical to the frozen output.
 ---
 
 # THM-4132 -- fixed-body exceptional scale-two completion
 
-**PROVED ELEMENTARY COMPACT-TO-OPEN COMPLETION + VERIFIED-EXACT.**
+**PROVED ELEMENTARY COMPACT-TO-OPEN COMPLETION + VERIFIED-EXACT +
+INDEPENDENTLY AUDITED.**
 
 THM-4129 closes every two-speed completion of one eleven-speed body but
 correctly stops before scaling the body separately from two odd tails.
@@ -178,3 +192,13 @@ PYTHONHASHSEED=0 python3 -B 04-computation/lrc14_fixed_body_scale_two_completion
 ```
 
 All three streams agree with the frozen output. **QED.**
+
+The clean-room referee can be replayed with
+
+```text
+python3 -B 04-computation/lrc14_fixed_body_scale_two_completion_thm4132_independent_audit.py
+python3 -B -O 04-computation/lrc14_fixed_body_scale_two_completion_thm4132_independent_audit.py
+PYTHONHASHSEED=8675309 python3 -B 04-computation/lrc14_fixed_body_scale_two_completion_thm4132_independent_audit.py
+```
+
+These streams are byte-identical to the independent frozen output. **QED.**

@@ -1,0 +1,14 @@
+THM4132_FIXED_BODY_SCALE_TWO_COMPLETION_INDEPENDENT_AUDIT_20260825
+route=strict-danger complement + literal two-sheet inequalities + full-row wall controls
+body_complement=walls:244;positive_components:28;measure:5497/64680;component_sha256:aa4c9fb243876ece15f56099b6433e20443456f94c84dc293ec6d2a8a545cb0f
+J=[33/70,27/56];length=3/280;owners=((15,), (4,))
+two_sheet_quotient=walls:22;components:(('2/21', '8/63'), ('55/63', '19/21'));beta:2/63;measure:4/63;endpoints:open
+compact_to_open=critical_scale:80/27;first_integer:3;surplus:1/2520;equality_closes:1;wrap_threshold:94
+t1_clock=1/13;clearance=1/13
+fixed_sheet_hostile=w:1/9;z:1/18;sheet0:('1/18', '1/2');sheet1:('4/9', '0')
+direct_full_row_controls=((1, '89/1176', '89/1176', 506), (3, '233/4032', '19/252', 546), (5, '181/4704', '15/196', 586), (21, '181/4704', '15/196', 906), (23, '2071/54096', '139/1932', 946), (93, '7219/187488', '593/7812', 2346), (95, '25733/670320', '1793/23940', 2386), (2001, '540587/14119056', '36335/504252', 40506))
+normalization=odd t gives 13 distinct speeds and primitive full row
+scope=fixed U-body only; arbitrary bodies, physical entry, even-t normalization, and LRC14 remain open
+semantic_sha256=a1a708792f72909ea1ee517586dcc30f8dc16f46781005b4e3fc22edcf875f88
+checks=122
+STATUS=PASS
