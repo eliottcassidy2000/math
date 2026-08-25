@@ -23,7 +23,7 @@ script: 04-computation/lrc_arbitrary_multitail_projective_packing_thm4125.py
 output: 05-knowledge/results/lrc_arbitrary_multitail_projective_packing_thm4125.out
 independent_audit_script: 04-computation/lrc_arbitrary_multitail_projective_packing_thm4125_independent_audit.py
 independent_audit_output: 05-knowledge/results/lrc_arbitrary_multitail_projective_packing_thm4125_independent_audit.out
-script_sha256: 85920f11bfdf86abd1d7afeaee9f248d20134eb0656af4c0416d9a55677ba2b6
+script_sha256: 82fef5178d83645ba72aafb3c4aadd0dd72e299d9c42bfbfb2d92eab6c044915
 output_sha256: 7b659ae86dd858b592d45ee76022cc5adb7f1e2d88558eda342723371b761822
 semantic_sha256: 2b80075c494e496faa4247cbe22d59cb07af20b31cc7c426e82d7be8e5dc7192
 independent_audit_script_sha256: 73f85fc4997d4085d8f5d29f5b21dd576925e8cdfc1929d0b02f298e6a236aff
@@ -34,8 +34,8 @@ primary_audit: >
   PASS. A standalone Fraction implementation exhausts all 262,143 nonempty
   subsets of the eighteen nonzero residue classes, checks the complete
   0/1/2 clearance law, signed-support histogram, ordinary- and
-  signed-distinct optima, and literal aligned families with 1 through 40
-  actual tails across the r=6/7 threshold boundary. Normal, optimized, and
+  signed-distinct optima, and literal aligned families at selected tail counts
+  up to 40 across the r=6/7 threshold boundary. Normal, optimized, and
   frozen outputs byte-match.
 independent_audit: >
   ACCEPT. A clean-room integer implementation imports no primary code and
@@ -106,7 +106,8 @@ B_C={0} union union_(c in C){+/-17(c mod 19)^(-1)}.       (5)
 ```
 
 > **Theorem 1 (complete multi-tail clearance law).** If some `c in C` is
-> zero modulo `19`, then `delta_C(t)=0` for every integer `t`. Otherwise
+> zero modulo `19`, then `delta_C(t)=0` for every admissible integer `t>22`.
+> Otherwise
 > `(5)` has cardinality `1+2m`, and
 >
 > ```text

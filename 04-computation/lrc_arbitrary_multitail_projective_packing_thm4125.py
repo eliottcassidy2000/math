@@ -80,7 +80,7 @@ def row(multipliers, parameter):
     require(parameter > max(BODY), "tail scale above the body")
     require(len(set(multipliers)) == len(multipliers), "distinct multipliers")
     values = tuple(sorted(BODY + tuple(c * parameter for c in multipliers)))
-    require(len(values) == len(BODY) + len(multipliers), "distinct row speeds")
+    require(len(set(values)) == len(BODY) + len(multipliers), "distinct row speeds")
     return values
 
 
