@@ -31,6 +31,7 @@ depends_on:
   - THM-4007-live-two-three-third-normal-row-five-weight-floor
   - THM-4012-weighted-leading-face-good-elliptic-factor-observer
 related:
+  - THM-4053-jc2-live-max-eight-trichotomy-and-eisenstein-survivor
   - THM-4008-pure-p-residual-totally-degenerate-generic-fibre-no-go
   - THM-4011-companion-observer-kernel-etale-log-rh-and-endpoint-gate
   - THM-4017-sharp-weight-eight-specialization-obstruction-and-newton-ledger

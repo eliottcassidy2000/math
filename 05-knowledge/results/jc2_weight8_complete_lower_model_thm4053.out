@@ -1,0 +1,12 @@
+JC2 MAXIMUM-WEIGHT-EIGHT COMPLETE LOWER MODEL
+status=PROVED_ON_LIVE_b=d=0_SEAM;JC2=OPEN
+forced=epsilon/gamma:2752/(135A5^3);delta/gamma+6kappa/(7A5gamma):-11392/(105A5^4)
+strata=delta_generic,delta_kappa0_phi,delta_kappa0_contract,theta_only,both_generic,both_kappa0
+base_change=Q=sigma^24;faces=L,D,V,R;multiplicity=1;nodes=8xA23
+walls=DeltaD=phi^2-4kappa*delta;DeltaV=phi^2-4epsilon*theta;delta+theta=0
+excluded_off_wall=p4_only,two_term_top
+survivor=py2_only;E0;j=0;degree=Eisenstein_norm;ramification_budget=14
+norm_checks=500
+semantic_digest=10c489b9be9b5214581e0f6a52609235b0506aaa5d1c6ef431c5fcb36ba6988e
+checks=570
+RESULT=PASS

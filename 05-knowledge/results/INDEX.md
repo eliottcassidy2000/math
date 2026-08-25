@@ -1,5 +1,20 @@
 # Script Results Index
 
+- `jc2_weight8_complete_lower_model_thm4053.py` and independent direct-plane
+  audit -> matching `.out`s [THM-4053 PROVED + VERIFIED-EXACT + INDEPENDENTLY
+  AUDITED on the live `b=d=0` reduced `(2,3)` seam; JC(2) OPEN]. At exact
+  maximum weight eight, the off-wall `p^4`-only and two-term top strata are
+  excluded by complete-model CM mismatch. The sole nonresonant survivor is
+  `p*y^2`-only, whose unique elliptic component is `j=0`; its generic fibre
+  degree must be `a^2-ab+b^2` and its ramification budget is `14`. Three
+  collision walls remain. Primary script/output SHA-256:
+  `5d5d117d76200a4857d9f12bd1500511fa82d3c28880101816c78688487e11d4` /
+  `fcc0bf5e890781ecc0e0313844c4f760104f96fe4201be7cfe9f443111bc970e`;
+  independent script/output/semantic:
+  `b8162608f0ea64d6e6d1aa0bfa46cdae8efe8784c8fa775454d7f944cd8fe094` /
+  `5d8d828091901594d66bad1bdc8e897e367d7b100275a2ddbc71985d966d8c02` /
+  `10c489b9be9b5214581e0f6a52609235b0506aaa5d1c6ef431c5fcb36ba6988e`.
+
 - `lrc14_affine_component_width_escape_thm4052.py` and independent circle
   audit -> matching `.out`s [THM-4052 PROVED RELATIVE TO LRCUpTo13 and the
   affine boundary theorems + VERIFIED-EXACT + INDEPENDENTLY AUDITED; LRC(14)

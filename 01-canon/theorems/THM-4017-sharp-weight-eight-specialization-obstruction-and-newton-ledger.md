@@ -30,6 +30,7 @@ depends_on:
   - THM-4007-live-two-three-third-normal-row-five-weight-floor
   - THM-4016-sharp-five-by-five-elliptic-attachment-nontorsion
 related:
+  - THM-4053-jc2-live-max-eight-trichotomy-and-eisenstein-survivor
   - THM-4008-pure-p-residual-totally-degenerate-generic-fibre-no-go
   - THM-4012-weighted-leading-face-good-elliptic-factor-observer
 script: 04-computation/jc2_sharp_weight8_specialization_obstruction_thm4017.py

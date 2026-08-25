@@ -360,11 +360,11 @@ or residue follows.
   retain the multiplicity, address, and boundary sidecars. THM-4005 excludes
   live `3x4/4x3`; THM-4007/4008 constrain fixed-gauge `5x5` on `b=d=0` and
   exclude pure `p`. THM-4016's nontorsion point does not attach (THM-4017).
-  THM-4012 excludes exact `M=6`; THM-4045's complete max-seven lower model
-  excludes `M=7`, so this seam has `M>=8`. Weight eight remains open because
-  `p*y^2` destroys the max-seven tail. THM-4044's depth-`k` sixty-clock first
-  aliases on `P^2K[P]` at `P^2(P^60-1)^k`, degree `60k+2`; a second boundary
-  jet or degree cap is indispensable.
+  THM-4012/4045 exclude `M=6,7`.
+  [THM-4053](../01-canon/theorems/THM-4053-jc2-live-max-eight-trichotomy-and-eisenstein-survivor.md)
+  kills off-wall `p^4`/two-term weight eight; `p*y^2` has a norm-degree gate.
+  Three walls remain. THM-4044 first aliases on `P^2K[P]` at
+  `P^2(P^60-1)^k`, degree `60k+2`; it needs a second jet or degree cap.
   In the Russell exceptional-quartic lane, THM-3703/3737 give the rank-18
   grammar and lift/kernel; THM-4034 gives the degree-178 conductor and three
   lost cotangent lines. THM-4039 reaches `J_3`, THM-4043 reaches `J_6`, and

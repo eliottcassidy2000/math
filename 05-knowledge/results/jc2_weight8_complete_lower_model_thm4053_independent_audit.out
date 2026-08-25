@@ -1,0 +1,9 @@
+JC2 WEIGHT-EIGHT INDEPENDENT DIRECT-PLANE AUDIT
+method=direct_support_inequalities+exact_polygon_tiling+coefficient_dicts
+strata=6;faces=L,D,V,R;base_change=24;multiplicity=1
+models=delta:E1728_or_rational;theta:E0;both:Bolza_E8000^2
+walls=DeltaD,DeltaV,delta+theta
+norm_checks=500;ramification=14
+semantic_digest=10c489b9be9b5214581e0f6a52609235b0506aaa5d1c6ef431c5fcb36ba6988e
+gates=578
+RESULT=PASS
