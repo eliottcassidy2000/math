@@ -246,11 +246,12 @@ def coupled_ranks(prime, root, predecessor, cutoff):
 
 
 def structured_coupled_solution(prime, root, predecessor, cutoff=375):
-    """Solve J1,J2 by a 395 + 178 + 395 block factorization.
+    """Solve J1,J2 by a 395 + 174 + 395 selected-direction factorization.
 
     The first/third stable blocks use the same Bezout operator.  We solve J1,
     use 177 unreachable high J2 rows plus the one omitted low-row residual to
-    select 178 kernel directions, and reuse the Bezout square for low J2.
+    form a 178-coordinate response of rank 174, select 174 kernel directions,
+    and reuse the Bezout square for low J2.
     """
     B, C, E, dB, dC, dE = predecessor["compiler"]
     F1, G1 = predecessor["F1"], predecessor["G1"]
