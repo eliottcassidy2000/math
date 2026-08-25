@@ -1,0 +1,57 @@
+AGGREGATE SHIFT COEFFICIENTS
+c=0;minimal_period=60;support_phases=60;distinct=12
+c=1;minimal_period=60;support_phases=60;distinct=12
+c=2;minimal_period=60;support_phases=60;distinct=12
+c=3;minimal_period=60;support_phases=57;distinct=8
+c=4;minimal_period=30;support_phases=52;distinct=4
+c=5;minimal_period=6;support_phases=20;distinct=2
+full_A_vector_minimal_period=60;distinct_phase_vectors=60
+owner_denominator_q=1;coefficient_vector_minimal_period=1;distinct=1
+owner_denominator_q=2;coefficient_vector_minimal_period=2;distinct=2
+owner_denominator_q=3;coefficient_vector_minimal_period=3;distinct=3
+owner_denominator_q=4;coefficient_vector_minimal_period=4;distinct=4
+owner_denominator_q=5;coefficient_vector_minimal_period=5;distinct=5
+owner_denominator_q=6;coefficient_vector_minimal_period=6;distinct=6
+fibonacci_denominator_skeleton_period=30
+all_owners_except_q4_period=30
+CLEARED-DENOMINATOR PHASE POLYNOMIAL
+degree=0;minimal_period=60;distinct=12;first=-1800/7
+degree=1;minimal_period=60;distinct=59;first=5004/7
+degree=2;minimal_period=60;distinct=60;first=-4663/7
+degree=3;minimal_period=60;distinct=60;first=3849/14
+degree=4;minimal_period=60;distinct=25;first=-725/14
+degree=5;minimal_period=1;distinct=1;first=127/35
+phase_polynomial_minimal_period=60;distinct_phase_polynomials=60
+ASYMPTOTIC PHASE MOMENTS
+k=0;minimal_period=1;distinct=1;range=(127/5,127/5)
+k=1;minimal_period=60;distinct=25;range=(131/10,39/2)
+k=2;minimal_period=60;distinct=42;range=(112/5,45)
+k=3;minimal_period=60;distinct=60;range=(223/5,259/2)
+k=4;minimal_period=60;distinct=60;range=(499/5,2167/5)
+k=5;minimal_period=60;distinct=60;range=(1213/5,3207/2)
+k=6;minimal_period=60;distinct=60;range=(3127/5,6361)
+k=7;minimal_period=60;distinct=60;range=(8413/5,53099/2)
+cleared_tail_recurrence_n12_499=True;failures=[]
+TRACK CLOCK TRIANGULAR DECOMPOSITION
+q=1;s=0;period=1;triangular_formula=PASS_K1_29
+q=2;s=0;period=2;triangular_formula=PASS_K1_29
+q=2;s=1;period=2;triangular_formula=PASS_K1_29
+q=3;s=0;period=3;triangular_formula=PASS_K1_29
+q=3;s=1;period=3;triangular_formula=PASS_K1_29
+q=3;s=2;period=3;triangular_formula=PASS_K1_29
+q=4;s=0;period=4;triangular_formula=PASS_K1_29
+q=4;s=1;period=4;triangular_formula=PASS_K1_29
+q=4;s=2;period=4;triangular_formula=PASS_K1_29
+q=4;s=3;period=4;triangular_formula=PASS_K1_29
+q=5;s=0;period=5;triangular_formula=PASS_K1_29
+q=5;s=1;period=5;triangular_formula=PASS_K1_29
+q=5;s=2;period=5;triangular_formula=PASS_K1_29
+q=5;s=3;period=5;triangular_formula=PASS_K1_29
+q=5;s=4;period=5;triangular_formula=PASS_K1_29
+q=6;s=0;period=6;triangular_formula=PASS_K1_29
+q=6;s=1;period=6;triangular_formula=PASS_K1_29
+q=6;s=2;period=6;triangular_formula=PASS_K1_29
+q=6;s=3;period=6;triangular_formula=PASS_K1_29
+q=6;s=4;period=6;triangular_formula=PASS_K1_29
+q=6;s=5;period=6;triangular_formula=PASS_K1_29
+RESULT=PASS

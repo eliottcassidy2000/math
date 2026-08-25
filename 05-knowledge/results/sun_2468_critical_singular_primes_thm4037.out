@@ -1,0 +1,9 @@
+critical_value_checks=12
+additive_resultant_checks=58
+branch_numerators=8
+candidate_primes=20
+singular_nonlift_checks=130
+centered_lift_checks=8
+displayed_singular_primes=31,499,35837,42667,199447,508471,98610539,931932289
+square_or_field_rejected_candidates=13,73,109,307,401,479,607,1753,3221,21617,34667,5503241
+all_checks=PASS
