@@ -1,9 +1,10 @@
 # Rule 30 marked half-arc and characteristic-cylinder note
 
-**Status:** UNNUMBERED RESEARCH NOTE.  The identities and Haar comparison
-below have complete elementary proofs in this note.  The single-seed census
-is `FINITE-EXACT` only.  Nothing here proves a Rule 30 prize, and this note is
-not a canon promotion.
+**Status:** `PROMOTED TO THM-4050 + FINITE-EXACT`. The universal identities
+and complete Haar comparison are proved in
+[THM-4050](../01-canon/theorems/THM-4050-rule30-half-arc-marked-cylinder-and-radius-nine-hostile.md).
+The single-seed census is `FINITE-EXACT` only, and nothing here proves a
+Rule 30 prize.
 
 ## Inheritance pass and live board
 
@@ -168,20 +169,25 @@ specified word among `2^(2r-1)` equally likely words.  Consequently
 ```text
 P_Haar(Z_k>r)=2^(-(2r-1)),                            (8)
 P_Haar(Z_k=1)=1/2,
-P_Haar(Z_k=r)=3*2^(-(2r-1))             (2<=r<=k).   (9)
+P_Haar(Z_k=r)=3*2^(-(2r-1))             (2<=r<=k),
+P_Haar(Z_k=infinity)=2^(-(2k-1)).                      (9)
 ```
 
 Appending the center is one more characteristic step.  Hence
 
 ```text
 P_Haar(c_k=1 | Z_k=1)=3/4,
-P_Haar(c_k=1 | Z_k=r)=1/4                 (r>=2),    (10)
+P_Haar(c_k=1 | Z_k=r)=1/4                 (2<=r<=k),
+P_Haar(c_k=1 | Z_k=infinity)=1/4,                     (10)
 P_Haar(c_k=1,Z_k=1)=3/8,
-P_Haar(c_k=1,Z_k=r)=3*2^(-(2r+1))         (r>=2).    (11)
+P_Haar(c_k=1,Z_k=r)=3*2^(-(2r+1))         (2<=r<=k),
+P_Haar(c_k=1,Z_k=infinity)=2^(-(2k+1)).               (11)
 ```
 
-These identities recover Haar fairness of the center after summing over the
-radius classes.  They do **not** transfer to the single-seed temporal orbit.
+The terminal class is load-bearing on a finite backward line; omitting it
+leaves a center-one mass deficit `2^(-(2k+1))`.  With it, these identities
+recover Haar fairness of the center after summing over all radius classes.
+They do **not** transfer to the single-seed temporal orbit.
 The two probability spaces are different:
 
 ```text

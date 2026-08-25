@@ -9,6 +9,26 @@ Format per entry:
 - Why it was wrong
 - The correct framing
 
+## MISTAKE-492 (2026-08-24, Rule 30 marked-cylinder Haar partition) -- the finite backward line omitted its no-zero terminal class
+
+- **What failed:** the first marked-cylinder note defined `Z_k=infinity`
+  when its finite backward terminal line had no zero, but displayed only the
+  finite-radius Haar masses and then said those masses recover center
+  fairness.
+- **Minimal witness / first failed implication:** the omitted event is the
+  all-one length-`k` characteristic cylinder, with
+  `P(Z_k=infinity)=2^(-(2k-1))`. Its center-one subevent appends one more
+  characteristic one and has mass `2^(-(2k+1))`. The displayed finite-radius
+  center-one masses therefore summed to `1/2-2^(-(2k+1))`, not `1/2`.
+- **Repair / strongest survivor:** the half-arc, nearest-zero, marked-cylinder,
+  finite-radius, and deterministic single-seed statements were unchanged.
+  The complete law adds
+  `P(c_k=1|Z_k=infinity)=1/4` and the joint terminal mass above; only after
+  including that class does the partition recover exact Haar center fairness.
+- **Reusable rule:** when a stopping time is defined on a finite line, audit
+  the cemetery/no-hit state before summing its distribution or conditioning
+  another observable on the stopping partition.
+
 ## MISTAKE-491 (2026-08-24, THM-1950 order-seven strong-base margin) -- a sampled extremum missed the Paley class
 
 - **What failed:** THM-1950 tested 6,387 labelled strong tournaments of order

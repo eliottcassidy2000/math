@@ -23,6 +23,7 @@ depends_on:
   - THM-3463-rule30-mealy-section-suffix-parity-current-and-complexity-boundary
   - THM-3468-rule30-radial-green-fold-innovation-discrepancy-and-fixed-seed-carrier-boundaries
 related:
+  - THM-4050-rule30-half-arc-marked-cylinder-and-radius-nine-hostile
   - THM-2810-factorial-hankel-faithfulness-and-bounded-radial-carrier-no-go
   - THM-3357-berggren-three-branch-walsh-level-collapse-and-parent-circuit
   - THM-3456-left-permutive-trace-bijection-and-rule30-seed-boundary
@@ -475,6 +476,11 @@ h_0=0 mod P_(K+1).                                   (38b)
 The periods are unbounded, so the inverse limit forces `h_0=0` in `Z_2`.
 The owner is therefore not free; the remaining debt is the ordered current
 on the moving arc `[-k,0)`.
+
+Downstream THM-4050 uses the physical light-cone zero to shorten this arc to
+`[-floor(k/2)-1,0)`, then stops it at the nearest actual zero. The resulting
+address is exactly a marked `1 0^(2r-2)` cylinder. Its Haar law is explicit,
+but deterministic temporal discrepancy remains open.
 
 ## 7. A charged uniform macroblock compiler
 

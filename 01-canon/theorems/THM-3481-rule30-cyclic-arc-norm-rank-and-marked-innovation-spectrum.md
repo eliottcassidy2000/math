@@ -26,6 +26,7 @@ depends_on:
   - THM-3471-rule30-motzkin-strip-circuit-and-innovation-carry-spectrum
 related:
   - THM-3468-rule30-radial-green-fold-innovation-discrepancy-and-fixed-seed-carrier-boundaries
+  - THM-4050-rule30-half-arc-marked-cylinder-and-radius-nine-hostile
 script: 04-computation/rule30_cyclic_arc_norm_rank_thm3481.py
 output: 05-knowledge/results/rule30_cyclic_arc_norm_rank_thm3481.out
 script_sha256: ccc2273232736380c0830528294517ff585cf3d12a8857b270881271b11dad95
@@ -301,6 +302,11 @@ vanishes.  Taking `m=k` proves (26) for every **odd innovative physical
 terminal profile**, and proves (27) when `d>=2`.  The depth `k=3` profile on
 the one-variable cube is the explicit exception.  This is strictly about the
 whole spatial phase profile; it does not determine the marked sample (22).
+
+THM-4050 later replaces the physical length `k` by the light-cone length
+`floor(k/2)+1`, applies the odd-length criterion there, and identifies the
+nearest-zero adaptive endpoint with a marked spatial cylinder. It does not
+turn this unpointed rank theorem into a temporal balance result.
 
 ## 5. The at-most-two-wrap physical trichotomy
 

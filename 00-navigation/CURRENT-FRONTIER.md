@@ -74,12 +74,10 @@ is the safe control `M(S_13)=99/338`. No cited result proves LRC(14).
   [THM-4030](../01-canon/theorems/THM-4030-lrc14-d4-affine-defect-lattice-boundary.md)/[4032](../01-canon/theorems/THM-4032-lrc14-d3-affine-defect-lattice-boundary.md)
   give exact `d=4/3` affine circuits and close certificate-negative rows.
   [THM-4041](../01-canon/theorems/THM-4041-lrc14-d2-affine-defect-edge-boundary.md)
-  completes the `d=2` affine law: its two-centre complex has one defect edge,
-  no circuit, and an exact spoiled-phase law. [THM-4049](../01-canon/theorems/THM-4049-lrc14-d2-two-phase-residue-firewall.md)
-  gives an all-height four-time closure when the divided `d=2` pack avoids ten
-  classes mod `56`, including `{1,...,10,12}` against every odd pair. A typed
-  physical row hits forbidden class `11`; the complementary `d=2` image and
-  the `d=3,4` pack-safe intersections remain open.
+  gives the exact one-edge `d=2` spoiled-phase law. [THM-4049](../01-canon/theorems/THM-4049-lrc14-d2-two-phase-residue-firewall.md)
+  closes all odd pairs when the pack avoids ten classes mod `56`, including
+  `{1,...,10,12}`; a typed row hits forbidden class `11`. The complementary
+  `d=2` and the `d=3,4` pack-safe intersections remain open.
   [THM-4025](../01-canon/theorems/THM-4025-lrc14-owner-residue-odd-dilation-semigroup.md)
   gives the odd-divisibility semigroup, while [THM-4031](../01-canon/theorems/THM-4031-lrc14-endpoint-owner-rational-tail.md)
   proves that every old-strip ray has an eventual arithmetic-survivor tail;
@@ -342,12 +340,12 @@ or residue follows.
 - **Knots:** THM-2176/2191/2281 and THM-2242/2330--2383: localization, owner/ANOVA/rectangle/reference inversion; realization/stable diagonal open. THM-2646: modular/exponent `B3` conjugacy, not Markov invariance.
 - **Flows:** [THM-2177](../01-canon/theorems/THM-2177-planar-counterexample-to-goemans-unsplittable-cost-flow-conjecture.md): planar `58<60` refutes exact `d_max`; planar `2d_max` survives.
 - **Hensel:** THM-3446/3449/[3452](../01-canon/theorems/THM-3452-unequal-depth-noncommuting-smooth-hensel-heisenberg-orbit-law.md): weighted/equal/unequal banks; dyadic repair.
-- **Rule 30:** THM-3502--3824 give compiler/carry, cycle and shell kernels;
-  [THM-4013](../01-canon/theorems/THM-4013-rule30-depth-fifteen-history-failure-and-adaptive-routed-repair.md)
-  gives finite adaptive repair through `65535`, not an all-scale observer.
-  [THM-4047](../01-canon/theorems/THM-4047-rule30-left-front-affine-monodromy-clock.md)
-  gives the exact fixed-depth clock through `100000`, but does not uniformly
-  control the moving center diagonal. All three prizes remain **OPEN**.
+- **Rule 30:** THM-3502--3824 give compiler/carry, cycle and shell kernels.
+  THM-4013 gives adaptive repair through `65535`, not an all-scale observer.
+  THM-4047 gives the fixed-depth clock through `100000`.
+  [THM-4050](../01-canon/theorems/THM-4050-rule30-half-arc-marked-cylinder-and-radius-nine-hostile.md)
+  gives the half-arc/cylinder law and refutes radius `<=8` at `k=79883`.
+  Moving-mark control and all three prizes remain **OPEN**.
 - **Two Hopf problems:** the `S2 x S2` curvature and `S6` complex-structure
   preprints are distinct **PREPRINT CLAIM / UNDER AUDIT**. Only the recorded
   mixed/Hessian identities are exact in the first lane; the `2Z` orbit in the

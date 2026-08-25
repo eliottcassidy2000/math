@@ -19,7 +19,7 @@ This maps imported claims, consumers, and exclusions; links—not bare IDs—are
 
 - **Sources/status:** [announcement](https://writings.stephenwolfram.com/2019/10/announcing-the-rule-30-prizes/); [active prizes](https://rule30prize.org/) checked 2026-08-15; openness is repo inference.
 - **Imported:** [Rowland](https://doi.org/10.25088/ComplexSystems.16.3.239) gives `v_m`; [Christol et al.](https://www.numdam.org/articles/10.24033/bsmf.1926/) applies only to [THM-3471](../../01-canon/theorems/THM-3471-rule30-motzkin-strip-circuit-and-innovation-carry-spectrum.md) finite sums.
-- **Repo frontier:** [3516](../../01-canon/theorems/THM-3516-rule30-marked-van-der-put-carry-and-power-section-bridge.md).  No prize/priority claim.
+- **Repo frontier:** [THM-3516](../../01-canon/theorems/THM-3516-rule30-marked-van-der-put-carry-and-power-section-bridge.md) gives marked carry; [THM-4050](../../01-canon/theorems/THM-4050-rule30-half-arc-marked-cylinder-and-radius-nine-hostile.md) gives the half-arc/cylinder law. No prize/priority claim.
 
 ## Lonely Runner Conjecture
 

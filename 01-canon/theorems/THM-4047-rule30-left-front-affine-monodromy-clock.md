@@ -25,6 +25,7 @@ audit: >
 depends_on:
   - THM-3468-rule30-radial-green-fold-innovation-discrepancy-and-fixed-seed-carrier-boundaries
 related:
+  - THM-4050-rule30-half-arc-marked-cylinder-and-radius-nine-hostile
   - THM-3456-left-permutive-trace-bijection-and-rule30-seed-boundary
   - THM-3458-rule30-right-edge-2-adic-odometer-and-moving-observer-boundary
   - THM-3471-rule30-motzkin-strip-circuit-and-innovation-carry-spectrum
@@ -203,6 +204,11 @@ three tempting implications:
 2. the fixed-column zero/doubling clock does not control center discrepancy;
 3. a precompiled fixed strip gives no lower bound for evaluating the moving
    diagonal bit.
+
+THM-4050 gives the moving diagonal an adaptive nearest-zero address and an
+exact marked-cylinder representation. Its finite radius-nine witness is a
+hostile to a radius-eight shortcut, while its Haar law still does not bound
+the deterministic temporal cylinder discrepancy needed here.
 
 For THM-3471, the positive content is different: a fixed source depth uses
 fixed left offsets, so (5)--(6) provide an exact procedural compiler for its

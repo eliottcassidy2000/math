@@ -1,5 +1,5 @@
 UNNUMBERED Rule30 marked half-arc and nearest-zero-radius probe
-script_sha256_lf=a81b8d61ae0512820cf42e8c73c6f78fdeda70749f3aff9a67aac8003d8c94e8
+script_sha256_lf=429f36d4a6593b3cdae39896d7b332a548cb011d63c1320b272d303d80726d21
 rule30_center_prefix20=11011100110001011001
 independent_complete_rule30_rows_match_through=512
 complete_row_checks=513
@@ -7,8 +7,11 @@ haar_characteristic_unique_preimage_checks=((1, 1, 1, 1), (2, 3, 1, 1), (3, 5, 1
 haar_characteristic_words_exhausted=43690
 haar_tail_law=P(Z>r)=2^{-(2r-1)}
 haar_mass_law=P(Z=1)=1/2;P(Z=r)=3*2^{-(2r-1)}_for_r>=2
+haar_finite_line_terminal_mass=P(Z_k=infinity)=2^{-(2k-1)}
 haar_center_given_radius=P(c=1|Z=1)=3/4;P(c=1|Z=r)=1/4_for_r>=2
+haar_center_given_terminal=P(c=1|Z_k=infinity)=1/4
 haar_joint_law=P(c=1,Z=1)=3/8;P(c=1,Z=r)=3*2^{-(2r+1)}_for_r>=2
+haar_terminal_joint_law=P(c=1,Z_k=infinity)=2^{-(2k+1)}
 direct_transition_current_checks=131327
 direct_full_terminal_arc_checks=511
 direct_shortened_half_arc_checks=511
