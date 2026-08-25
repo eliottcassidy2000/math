@@ -1,5 +1,31 @@
 # Script Results Index
 
+- `lrc14_fixed_body_universal_odd_tail_completion_thm4136.py` and independent
+  active-wall clean-room referee -> concordant exact mechanisms [THM-4136
+  PROVED ELEMENTARY UNIVERSAL FIXED-BODY COMPLETION + VERIFIED-EXACT +
+  INDEPENDENTLY AUDITED; LRC(14) OPEN]. For
+  `U=(1,4,6,8,10,12,14,15,16,18,22)` and every two distinct positive odd
+  `a,b`, the row `2U union {a,b}` is LRC(14). After
+  `a=pt,b=qt`, the two-sheet bad quotient has component width at most
+  `2/(7q)` for odd `q>=9`; the six lower ratios give a universal ceiling
+  `2/63`. Thus `t>=3` closes with surplus `1/2520`, while `t=1,q>=27`
+  closes with surplus `1/7560`. Three clocks close all `68` residual ratios
+  in categories `56/10/2`, with strict minima
+  `89/1176,15/196,17/224`. The independent audit joins quotient cells only
+  across active strict walls, scans hostiles through `q=1001`, and checks all
+  thirteen literal clearances in the residual rows. Primary script/output
+  SHA-256:
+  `50c40de4756362d05ffe7f6064a0990e062a08b8b317708febd554e780de8c23` /
+  `d8b01ff355561f69a4b0bcfa3d25fe065eb9b253f1367ef8d5457e31a620c179`;
+  independent:
+  `6d1f308fc009e67ad9c9e5ba8c544db56cc09375a778bfe7b454efdf7afbc034` /
+  `7a2905f0e33c027db0c61845ace430d9ae80a38a9e5e49d79d86534a350ee418`;
+  semantic ledgers:
+  `4e62dbd9b4cd87a7044687d48668449b7129ac11adb29512803ae7d01be61dbf` /
+  `92b303d4737b146a0ff31de4c13fed920e70531d486495e31793128e5ca4482e`.
+  Arbitrary bodies, physical entry, mixed tail parity, and LRC(14) remain
+  open.
+
 - `tournament_strong_centrality_order_nine_thm4135.py` and independent
   clean-room C++ contracted-block census -> concordant complete profiles
   [THM-4135 FINITE-EXACT + VERIFIED-EXACT + INDEPENDENTLY AUDITED]. All
@@ -76,7 +102,9 @@
   primary/independent semantic ledgers:
   `aa6314ca8c25b5ad512bef0874dfb7262bd65cab8b200abba32d1cfe6b7710a6` /
   `a1a708792f72909ea1ee517586dcc30f8dc16f46781005b4e3fc22edcf875f88`.
-  Arbitrary bodies, general scale-two entry, and LRC(14) remain open.
+  THM-4136 later generalizes this fixed-body conclusion from ratio `(1,9)`
+  to every two distinct odd tails. Arbitrary bodies, physical entry, and
+  LRC(14) remain open.
 
 - `tournament_strong_centrality_through_order_eight_thm4131.py` and
   independent canonical-augmentation/contracted-block audit -> concordant
@@ -129,9 +157,10 @@
   A body window of length `3/280`, a sharp danger-comb bound, an exact
   `23..41` table, and three clocks for the 26 low-tail residual pairs close
   all `119,316` controls through 500 and all `5,855` scale-one `U`-body ratio
-  types. THM-4132 later closes the fixed-`U` exceptional scale-two rows
-  `2U union {t,9t}` for every positive odd `t`. Arbitrary bodies, general
-  scale-two entry, and LRC(14) remain open. Primary script/output SHA-256:
+  types. THM-4132 first closes the fixed-`U` exceptional scale-two rows
+  `2U union {t,9t}`; THM-4136 later closes every fixed-`2U` row with two
+  distinct odd tails. Arbitrary bodies, physical entry, and LRC(14) remain
+  open. Primary script/output SHA-256:
   `f027c93324096de71a63f6cefcf7d9f75a6ef36b0b878c8b4248d6871d783cfa` /
   `9a31e2ab7d319e63df067cfbfd05059a52b8e032b2fa1ae5bf7de93342d087b8`;
   independent: `f977c65658b2dad6374196866c6f6211a1b833d3d24c9b852cf6fa959ea2bbe7` /

@@ -16,6 +16,7 @@ depends_on:
 related:
   - THM-3878-lrc14-eleven-plus-two-harmonic-absorption-seam-collapse
   - THM-4002-lrc14-signed-endpoint-cross-phase-and-fixed-scale-two-family
+  - THM-4136-fixed-body-universal-odd-tail-lrc14-completion
 script: 04-computation/lrc14_fixed_body_scale_two_completion_thm4132.py
 output: 05-knowledge/results/lrc14_fixed_body_scale_two_completion_thm4132.out
 independent_audit_script: 04-computation/lrc14_fixed_body_scale_two_completion_thm4132_independent_audit.py
@@ -180,6 +181,8 @@ all lower relative scales. It does not close an arbitrary eleven-speed body,
 the general scale-two certificate type, physical entry into the `11+2`
 branch, even-`t` bookkeeping outside the primitive scale-two normalization,
 or LRC(14).
+THM-4136 later strictly generalizes this fixed-body conclusion to every two
+distinct odd tails over `2U`; the arbitrary-body and entry boundaries remain.
 
 The exact audit additionally constructs and directly checks a literal safe
 lift for every odd `3<=t<=2001`; this is a control, not the source of the

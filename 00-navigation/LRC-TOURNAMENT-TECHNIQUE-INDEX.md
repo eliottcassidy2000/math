@@ -18,7 +18,7 @@ AP/GW equality atom, C27 petal/two-block discharge, K33/F7 state lift,
 covering/boundary-moment positivity, or a rigorous Fejer/Toeplitz certificate.
 Every technique below is a possible tooth in that zipper.
 
-### Current response carrier -- THM-3910/4129/4132
+### Current response carrier -- THM-3910/4129/4132/4136
 
 - **Move:** use an auxiliary runner only to select a marked deep center, then
   delete it before transporting the neighborhood.  Preserving the eleven-body
@@ -29,8 +29,9 @@ Every technique below is a possible tooth in that zipper.
   the target safe mass; its `t Z` Fourier energy and integer variance tariff
   give all-large-scale sufficient gates.  THM-4002 gives its phase-resolved
   signed-endpoint form and closes 352,716 fixed `[1,21]` scale-two bodies.
-  THM-4129 closes fixed-`U` scale one; THM-4132 closes fixed-`2U` `(1,9)`
-  scale two by combining the compact body arc with the open two-lift quotient.
+  THM-4129 closes fixed-`U` scale one; THM-4132 first closes fixed-`2U`
+  ratio `(1,9)`, and THM-4136 uses the general cross-comb width plus three
+  low clocks to close every fixed-`2U` row with two distinct odd tails.
 - **Preserves:** body safety, literal root `t`, integer fibre multiplicity,
   compact/open endpoint status, and the cubic mixed danger response.
 - **Forgets / guardrail:** an ordinary tournament, complete pairwise Gram
@@ -39,9 +40,10 @@ Every technique below is a possible tooth in that zipper.
   safe response by `17/61992`.  THM-4002's equal-Graver-fibre and
   half-translate hostiles independently show that relation length and full
   Fourier power lose relative phase.  Endpoint equality remains atomic data.
-- **Next pull:** attack the 16 arbitrary-body scale-one types and arbitrary-
-  body/physical-entry scale two while retaining the common body sheet word.
-- **Pointers:** THM-3910, THM-4002, THM-4129, THM-4132; THM-2221, THM-3377,
+- **Next pull:** transfer the cross-comb bound to the 16 arbitrary-body
+  scale-one types and arbitrary-body/physical-entry scale two while retaining
+  the common body sheet word and a body-safe component of sufficient length.
+- **Pointers:** THM-3910, THM-4002, THM-4129, THM-4132, THM-4136; THM-2221, THM-3377,
   THM-3380, THM-3729;
   `lrc14-fixed-radius-auxiliary-center-t-sheet-response-and-tournament-cubic-sidecar-root-20260823.md`.
 

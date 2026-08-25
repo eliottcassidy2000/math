@@ -73,8 +73,8 @@ is the safe control `M(S_13)=99/338`. No cited result proves LRC(14).
   `2^(c(F)-1)`. Safety/arrival stay open.
 - **Owner/tail lane (PROVED):** THM-4025/4031 give survivor tails;
   THM-4029/4038 the 60-phase law; THM-4033/4042 clocks through `P=11`
-  (`P=17` hostile). THM-4129/4132
-  close fixed-`U` scale one and exceptional `(1,9)` scale two; arbitrary
+  (`P=17` hostile). THM-4129/4136
+  close fixed-`U` scale one and every fixed-`2U` odd-tail row; arbitrary
   bodies, entry and LRC(14) remain open. See the [proof map](LRC14-PROOF-MAP.md).
 - **PROVED:** [THM-2928](../01-canon/theorems/THM-2928-critical-seven-comb-grid-tensorization-and-drift-tariff.md)/2941: literal zero/one/two/three-drift sectors are empty; `k=2,3` are finite.
 - **Orthogonal routes.** THM-1017 is HYP-6820; THM-2047/2050 keep phase/exit; THM-731/2048 prune; THM-1290 ends at `55`; HYP-8900 nonuniform.

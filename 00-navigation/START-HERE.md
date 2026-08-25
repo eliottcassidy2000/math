@@ -24,8 +24,8 @@ Then read the routed frontier, guardrails, and theorem. Logs and reflections are
    THM-3378 leaves ledger/wall/families `372913/109/12` at `z1=216`.
    THM-3349--3360 close the 561-body lane; THM-3366 leaves projected rows/counts `4,056/200,069,517,203` (`k=2`) and `1,897/2,548,893,834` (`k=3`).
    THM-3368 is a Horn tariff, not a proof; rung, physical entry and LRC remain open.
-   THM-4066 closes two affine rays; THM-4129/4132 close fixed-`U` scale one
-   and exceptional `(1,9)` scale two. Arbitrary bodies remain open.
+   THM-4066 closes two affine rays; THM-4129/4136 close fixed-`U` scale one
+   and the full odd-tail scale-two parity class. Arbitrary bodies remain open.
 2. **The `q <= 25` period claim is refuted.** THM-762/764 exhibit `26*{1,...,12} union {339}`, whose first good period is `27`.
 3. **Good-period existence is a maximum statement, not an average or count.**
    The tight AP at its resonant ruler defeats the tempting mean arguments; see
