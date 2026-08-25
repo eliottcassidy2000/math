@@ -1,0 +1,17 @@
+== THM-4086 Rule-A transition clock and phase cocycle: independent audit ==
+trusted_status_input=INHERITED-FINITE-EXACT;short_referee_rebuilds_clock_not_full_state
+archive_pins=engine:8887080fc6e30760efa4a0ba76218ec97676cc717c6e76ccefbaeec6c73684ad;S192:65b6fab453a0adb156bc79e1f9168fd46d95037fd345e2322861ec1f76f15ba0;S193:962577096266bdc6df7b004eb38412b85a8a2b47eb9dd000f4666e9829043207;checkpoint:a3c1c856979fd7b0b21ca12f93d08b3340345fd175187b9c724a14bc91b97710
+R16384_pins=runner:ddf248e8939bbdefa7b2544bbd3df1c23e47e53e00aae4013d09149eae2ca59c;output:28cedef2dc0b176b62f0633d93ea23a7c316993ed197743bd54f4466eb860c21
+route=direct Fibonacci-Lucas floor prefix + reverse binomial feed + dense R16 state
+direct_prefix=rows:7711;sha256:1af6740c796b5e74247f8426cdd8114f1ca2368d3c16f3f1b2984c796fa8ae40
+front_rows=((854, 20448, 12318, 8130), (855, 20449, 12317, 8132), (856, 20450, 12316, 8134))
+stable_rows=((854, 'DIE', 8246, 20448, 25379, 40043, 4394, 8130, 19875), (855, 'CLOSED', 20238, 20449, 32551, 40044, 16383, 8132, None), (856, 'CLOSED', 20233, 20450, 32549, 40045, 16383, 8134, None))
+cell_zero_clocks=((854, 7709, 25050, 7710, 20234), (855, 7708, 25060, 7709, 20238), (856, 7708, 25050, 7709, 20233))
+small_R16_terminals=((0, 'CLOSED', 7), (1, 'CLOSED', 8), (2, 'CLOSED', 6), (3, 'CLOSED', 7), (4, 'CLOSED', 6), (5, 'CLOSED', 6));two_direction_hostile_control=PASS
+eta_witnesses=((0, 0), (2, 1));zeta_witnesses=((0, 1), (1, 0), (4, 2))
+transition_split=854:front_death_before_clock;855,856:clock_exactly_equals_capture
+common_semantic_sha256=079764dd469362281f1374d6f2a9db81652a02af0ec827420dae71fe774d20fd
+independent_semantic_sha256=1667d631e30f37800eabb1ad472113e931fe0f05beb233a78dc200a90f052b61
+CHECKS=127952
+status=INDEPENDENTLY-VERIFIED-EXACT;load-bearing transition-clock fields
+scope=fixed Rule-A policy;no alternative feasibility,global monotonicity,or C-star consequence

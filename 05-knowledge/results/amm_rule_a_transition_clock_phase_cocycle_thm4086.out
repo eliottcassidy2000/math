@@ -1,0 +1,21 @@
+== THM-4086 Rule-A transition clock and phase cocycle: primary ==
+scope=PROVED structural formulas + FINITE-EXACT R=32768 transition facts
+trusted_status_input=INHERITED-FINITE-EXACT;short_companion_does_not_replay_full_state
+archive_pins=engine:8887080fc6e30760efa4a0ba76218ec97676cc717c6e76ccefbaeec6c73684ad;S192:65b6fab453a0adb156bc79e1f9168fd46d95037fd345e2322861ec1f76f15ba0;S193:962577096266bdc6df7b004eb38412b85a8a2b47eb9dd000f4666e9829043207;checkpoint:a3c1c856979fd7b0b21ca12f93d08b3340345fd175187b9c724a14bc91b97710
+R16384_pins=runner:ddf248e8939bbdefa7b2544bbd3df1c23e47e53e00aae4013d09149eae2ca59c;output:28cedef2dc0b176b62f0633d93ea23a7c316993ed197743bd54f4466eb860c21
+alpha_enclosure=10756/17987<=alpha<105183/175895;floors_exact:n=0..65535
+kernel_record={"length":32767,"one_steps":19595,"sha256":"de5b8a18782d1880fc9be55a6c8589feb0f9e84fed70b4519a05341ab654ff2b","zero_steps":13172}
+front_rows=((854, 20448, 12318, 8130), (855, 20449, 12317, 8132), (856, 20450, 12316, 8134))
+stable_rows=((854, 'DIE', 8246, 20448, 25379, 40043, 4394, 8130, 19875), (855, 'CLOSED', 20238, 20449, 32551, 40044, 16383, 8132, None), (856, 'CLOSED', 20233, 20450, 32549, 40045, 16383, 8134, None))
+cell_zero_clocks=((854, 7709, 25050, 7710, 20234), (855, 7708, 25060, 7709, 20238), (856, 7708, 25050, 7709, 20233))
+clock_shape=20234<20238>20233;855_to_856_capture_shift=-5
+small_R16_terminals=((0, 'CLOSED', 7), (1, 'CLOSED', 8), (2, 'CLOSED', 6), (3, 'CLOSED', 7), (4, 'CLOSED', 6), (5, 'CLOSED', 6));neither_nondecreasing_nor_nonincreasing=PASS
+eta_counts=((0, 8191), (1, 8193));eta_witnesses=((0, 0), (2, 1));eta_sha256=ab3c4e721822fb884f3e16bf4c93266e2199643c665cb835143bfed5f0c08880
+zeta_counts=((0, 3294), (1, 8190), (2, 4900));zeta_witnesses=((0, 1), (1, 0), (4, 2));zeta_sha256=3358eb1539f82e7138e82dc8f6eef31b54282a922b992ba51e24d2723536979d
+scale_triangle=R16384:412D/413C;R32768:854D/855C/856C;outer_defect=30+eta
+lift_obstruction=RuleA_856_not_equal_rowwise_degree_lift_of_RuleA_855;capture_rows:20233!=20238
+common_semantic_sha256=079764dd469362281f1374d6f2a9db81652a02af0ec827420dae71fe774d20fd
+primary_semantic_sha256=2b49218c35d0c2793dbcca51e9d1f66c2d07f70ff494a46b5266a849dd728259
+CHECKS=345853
+status=PROVED-STRUCTURAL+FINITE-EXACT+VERIFIED-EXACT;fixed Rule-A policy
+nonconsequence=no global offset threshold,alternative infeasibility,uniform family,D0 law,or C-star bound
