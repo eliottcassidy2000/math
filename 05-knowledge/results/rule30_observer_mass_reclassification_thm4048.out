@@ -1,0 +1,13 @@
+RULE30_OBSERVER_MASS_RECLASSIFICATION_THM4048
+universe=THM4013_records_n=1..65535;projective_history=0..6
+producer=04-computation/rule30_depth15_history_adaptive_route_thm4013.py
+dependency_sha256=2ce110f0b8e9c71c3d298aaf07e8e6c02b70d33e5671bc763f3f3b490caa5445
+columns=(fibres,center_mismatch_fibres,optimal_center_errors,conditional_L1,max_fibre_minority)
+carry_mode_none=((5637, 4435, 26149, 13237, 43), (15235, 9050, 20917, 23701, 15), (45916, 8105, 8661, 48213, 4), (61838, 1750, 1760, 62015, 2), (64912, 302, 307, 64921, 2), (65371, 71, 74, 65387, 2), (65450, 41, 43, 65449, 2))
+carry_mode_target=((10074, 23, 23, 65489, 1), (24284, 18, 18, 65499, 1), (54020, 5, 5, 65525, 1), (63587, 2, 2, 65531, 1), (65214, 0, 0, 65535, 0), (65442, 0, 0, 65535, 0), (65491, 0, 0, 65535, 0))
+carry_mode_carry=((5664, 4433, 26136, 13263, 43), (15256, 9046, 20905, 23725, 15), (45923, 8102, 8658, 48219, 4), (61840, 1749, 1759, 62017, 2), (64912, 302, 307, 64921, 2), (65371, 71, 74, 65387, 2), (65450, 41, 43, 65449, 2))
+carry_mode_full=((10097, 0, 0, 65535, 0), (24302, 0, 0, 65535, 0), (54025, 0, 0, 65535, 0), (63589, 0, 0, 65535, 0), (65214, 0, 0, 65535, 0), (65442, 0, 0, 65535, 0), (65491, 0, 0, 65535, 0))
+semantic_sha256=d2c57aa4962930868c201069466456fdccc0943f1ad1395a1af3abad897424c4
+interpretation=THM4013 target mismatches are not center mismatches;full carry determines center;target mode deletes only the lower carry bit
+scope=FINITE-EXACT canonical capped observer family;no all-scale or prize claim
+RESULT=PASS

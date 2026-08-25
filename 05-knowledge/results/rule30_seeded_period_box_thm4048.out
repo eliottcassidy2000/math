@@ -1,0 +1,13 @@
+RULE30_SEEDED_PERIOD_BOX_THM4048
+universe=time_0..65535;candidate_periods=1..32768
+center_index=c_t=bit_t(R_t);R_0=1;R_(t+1)=R_t_xor((2R_t)_or_(4R_t))
+direct_CA_crosscheck=0..512;PASS=True
+inverse_boundary_index_crosscheck=N_0..8,p_1..8;first_beta_defect=e+p;PASS=True
+center_ones=32877;center_prefix_sha256=b95ec4087c94dff6998fb1c416da5d666d4a99bcefd750849b9dd0401296bab2
+period_box=no_pair_(N,p)_with_0<=N<=32767_and_1<=p<=32768;minimum_last_mismatch=32767;attained_by=(32767, 32768)
+shift_equality=max_equal_run_29_over_every_tested_shift;attained_by_periods=(16664, 25579)
+dyadic_period_last_mismatches=((1, 65533), (2, 65533), (4, 65529), (8, 65527), (16, 65517), (32, 65503), (64, 65471), (128, 65405), (256, 65279), (512, 65023), (1024, 64511), (2048, 63487), (4096, 61437), (8192, 57343), (16384, 49148), (32768, 32767))
+innovation_rows_(m,q,v_m,wrap_length)=((0, 1, 1, 1), (1, 2, 3, 2), (2, 4, 4, 1), (3, 8, 6, 0), (4, 16, 7, 0), (5, 32, 9, 0), (6, 64, 15, 0), (7, 128, 16, 0), (8, 256, 24, 0), (9, 512, 25, 0), (10, 1024, 27, 0), (11, 2048, 29, 0), (12, 4096, 34, 0), (13, 8192, 36, 0), (14, 16384, 37, 0), (15, 32768, 39, 0))
+period_mismatch_stream_sha256=04775bb95fe41374c57a3866f8637d1552038ae0523c067ccf69642f7c571bf5
+scope=FINITE-EXACT only;no eventual nonperiodicity or prize claim
+RESULT=PASS

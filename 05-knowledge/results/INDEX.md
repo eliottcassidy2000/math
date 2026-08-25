@@ -203,6 +203,31 @@
   search `15d686582a859f59cacaf5d0550ad9a4472b530a0c97eac50aa1da6c3abde7b1` /
   `4f2f10fadabb032530ad1a1da539df5fd77b0df6c3192324ad45cc1d4ffab856`.
 
+- `rule30_seeded_period_box_thm4048.py`,
+  `rule30_shell_history_balance_thm4048.py`, and
+  `rule30_observer_mass_reclassification_thm4048.py`, plus
+  `rule30_low_owner_quotient_carry_thm4048.py` -> matching `.out`s
+  [THM-4048 PROVED REDUCTIONS + VERIFIED-EXACT + HOSTILE-AUDITED; all three
+  Rule 30 prizes OPEN]. Seeded periodic candidates compile first relation
+  failure `e` to inverse-boundary bit `e+T`; dyadic wraps obey a period-class
+  rigidity law. Prefix balance is iff shell-prefix amplitude is `o(2^m)`, and
+  observer variation is `length-2*optimal_error`. Balance forces sublinear
+  wrap length; a low-owner current gives a target-blind sufficient condition,
+  exact shell readout retains the lower-base carry, and a physical `K=2`
+  collision exposes a separate quotient-carry firewall. A
+  balanced easy sequence with linear right-special history blocks
+  history-depth hardness. Rule 30
+  finite banks reach `65535`/`2^18`; THM-4013 transition mismatches are
+  retyped from center error. Script/output SHA-256 pairs:
+  `32594d42fb0df7b0b8e3ceeb2efe4c7288a5b7161ca4ba011914a42a29b60d04` /
+  `74b344c9d7a0f3b52c13b8f1ccb76f1aa65500b1942d730a398ec0636c4bb432`;
+  `a3a06c349b514614e861401586e76938d33b314ddd43a222148b7b1420c34980` /
+  `6536724391fa2b29c80f4a796b849e2660941b564d9b9289cb2f6b2a561d16a0`;
+  `fda5f43afb4fae516b0ccafe3ed8a1df26bf1dce9b9584d60c0a4d714b105c9f` /
+  `25773ca2ea39fd855395021bf01edb50b620de06f1d11c6a3cf7d4728a205271`;
+  `2f702ee9b122feb13828bf3d7395cd2fbdc066ec8de4d768205215e2c5b36032` /
+  `8f93a0b1184541268c9a5f7a097f0b5f46566150d231a4dcf45bddcd8c63aefa`.
+
 - `rule30_left_front_affine_monodromy_thm4047.py` and its no-import audit ->
   matching `.out`s [THM-4047 PROVED + VERIFIED-EXACT + INDEPENDENTLY
   AUDITED; all three Rule 30 prizes OPEN]. The universal affine block law
