@@ -21,6 +21,7 @@ related:
   - THM-4119-infinite-supplier-free-eleven-plus-two-residue-family
   - THM-4121-sharp-projective-tail-multiplier-residue-compiler
   - THM-4125-arbitrary-multitail-projective-packing-and-sharp-density
+  - THM-4132-fixed-body-exceptional-scale-two-lrc14-completion
 script: 04-computation/lrc14_universal_two_speed_completion_thm4129.py
 output: 05-knowledge/results/lrc14_universal_two_speed_completion_thm4129.out
 independent_audit_script: 04-computation/lrc14_universal_two_speed_completion_thm4129_independent_audit.py
@@ -315,7 +316,10 @@ Consequences are exact.
    `(2)`. In particular, this closes the `U`-body cells of all sixteen live
    scale-one types listed by THM-3910. It does **not** remove an arbitrary-body
    type from that ledger. The scale-two `(s,p,q)=(2,1,9)` slice has body `2U`
-   with odd tails and is not a common dilation of `(2)`; it is untouched.
+   with odd tails and is not a common dilation of `(2)`, so it is not a
+   consequence of this theorem. THM-4132 later closes precisely that fixed-
+   `U` slice by retaining both physical lifts and the open quotient sidecar;
+   arbitrary-body scale two remains open.
 
 Because `1 in S_(a,b)`, the row is primitive. For every common dilation
 `k>=1`, if `x` proves `(3)` then

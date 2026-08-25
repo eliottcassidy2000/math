@@ -73,9 +73,9 @@ is the safe control `M(S_13)=99/338`. No cited result proves LRC(14).
   `2^(c(F)-1)`. Safety/arrival stay open.
 - **Owner/tail lane (PROVED):** THM-4025/4031 give survivor tails;
   THM-4029/4038 the 60-phase law; THM-4033/4042 clocks through `P=11`
-  (`P=17` hostile). THM-4129 closes every two-speed completion of
-  `U=(1,4,6,8,10,12,14,15,16,18,22)` and all `5,855` scale-one `U`-body
-  slices; arbitrary bodies remain open. See the [proof map](LRC14-PROOF-MAP.md).
+  (`P=17` hostile). THM-4129/4132
+  close fixed-`U` scale one and exceptional `(1,9)` scale two; arbitrary
+  bodies, entry and LRC(14) remain open. See the [proof map](LRC14-PROOF-MAP.md).
 - **PROVED:** [THM-2928](../01-canon/theorems/THM-2928-critical-seven-comb-grid-tensorization-and-drift-tariff.md)/2941: literal zero/one/two/three-drift sectors are empty; `k=2,3` are finite.
 - **Orthogonal routes.** THM-1017 is HYP-6820; THM-2047/2050 keep phase/exit; THM-731/2048 prune; THM-1290 ends at `55`; HYP-8900 nonuniform.
 - **PROVED micro-staircase:** THM-3316 closes every prime and THM-3317 proves
@@ -250,8 +250,11 @@ THM-2070 refutes the general HYP-8890/8895 bypasses.  Transfer
   `80,407,80,689`). THM-4111/4115 force unbounded full-cut maxima via exact
   Walsh variance, factor `(n+1)(n+2)/(4n)` (`C3` sharp), and `F_1` surplus.
   THM-4123/4127 give slice means/lattices and beat the cube centrally;
-  THM-4128 optimizes every rational floor; THM-4131 gives strong rational/coset
-  centrality through order eight. All-order, actual maxima and intervals remain **OPEN**.
+  THM-4128/4131/4135
+  prove strong rational/coset centrality through order nine;
+  THM-4133
+  **REFUTES** all-order centrality at twelve. Orders ten/eleven, actual maxima
+  and intervals remain **OPEN**.
   THM-4114 separates positive faces from submodular ear cuts; THM-4118 adds
   exact response gcds and stateful unit-component intervals. At `n=5`, all
   `544` parents have gcd `2` yet gaps, and `400` lack an `M-2` neighbor.
@@ -344,11 +347,12 @@ lift/phase clocks.
   challenges `(3,9),(5,6),(7,5),(11,4),(13,4)` all remain **OPEN**; the public
   `131199`-field file is a named finite population, not a world census.
 - **Jacobian/Dixmier:** `JC(2),DC(2)` remain **OPEN**. On the smooth
-  nonresonant theta-only exact-`M=8` `2:3` seam, THM-4120/4126 force degree `21`, `rho=1`, nodal
-  nonproperness, and `(28,42)`; [THM-4130](../01-canon/theorems/THM-4130-theta-only-extremal-seam-critical-monodromy-obstruction.md)
-  empties it by critical monodromy. THM-4122 bounds intrinsic poles;
-  THM-4124 removes integral ratios after target-orbit minimization. The three
-  collision walls, `M>=9`, other cells and entries remain open;
+  nonresonant theta-only exact-`M=8` `2:3` seam, THM-4120/4126 force degree
+  `21` and `(28,42)`; [THM-4130](../01-canon/theorems/THM-4130-theta-only-extremal-seam-critical-monodromy-obstruction.md)
+  empties it. THM-4122/4124 bound poles and remove integral ratios;
+  THM-4134
+  excludes `Delta_V=0` degrees `20,19` but leaves `16,15`. Other walls,
+  `M>=9`, cells and entries remain open;
   `(72,108)` has `rho<=2` conditional on width six.
   Exceptional quartic: THM-3703/3737 give grammar/image, THM-4034 the
   conductor, and THM-4039/4043/4046 reach `J_7`, obstruct `J_8`, and close

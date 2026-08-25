@@ -1,6 +1,6 @@
 # Active Guardrails
 
-**Short hazard sheet — refreshed 2026-08-24.** Read this at startup; search [`MISTAKES.md`](MISTAKES.md) for witnesses, repairs, and lineage. This records current prohibitions, not the whole history.
+**Short hazard sheet — refreshed 2026-08-25.** Read this at startup; search [`MISTAKES.md`](MISTAKES.md) for witnesses, repairs, and lineage. This records current prohibitions, not the whole history.
 
 ## Universal
 
@@ -125,8 +125,7 @@
     sign gauge and label dependence.
 39. **The invariant lattice is exact only through `n<=6`.** THM-1966 adds an
     independent signed coordinate at `n=7`.
-40. **`H>=disc` remains open; rooted response needs its root.** THM-1950 reduces to strong tournaments; THM-3729 is covariant under `(K,u)->(DKD,Du)`.
-    Its switching-class Hamiltonian mean dominates the even and odd energy means separately, but no mean comparison controls fixed `u=1` in a fixed representative; unsigned induced-subtournament square energy fails at order five.
+40. **`H>=disc` remains open; rooted response needs its root.** THM-1950 reduces to strong tournaments; THM-3729 is covariant under `(K,u)->(DKD,Du)`, but switching means do not control fixed `u=1`, and unsigned square energy fails at order five. Johnson support-floor centrality holds through order nine (THM-4135) but is refuted all-order at twelve (THM-4133); orders ten/eleven and actual maxima stay separate.
 41. **Do not manufacture tournaments from ties.** Without an intrinsic binary
     relation and honest tie semantics, use the actual carrier. THM-2221's
     pinned-context observable is a symmetric cut semimetric plus core kernel.
@@ -138,7 +137,6 @@
     saturation index `11!` and is not THM-2052's signed code.
 45. **Small-prime Paley spectra assign no LRC roles.** MISTAKE-228. Fibonacci, apex, rank, and tight/slack labels remain heuristics without a map.
 45a. **Six-edge ambient parity is not quartic parity.** THM-2753: the faithful `S4` action on `E(K4)` lies in `A6`, and transposition/double-transposition one-generator cycle types collide; the three matchings restore sign through `S4/V4=S3`. Retain the opposition/address sidecar, but the full subgroup orbitals do recover it.
-
 ## Sequences and cross-domain transfers
 
 46. **Support is not an indexed multiset.** MISTAKE-209 and THM-2000/2005;

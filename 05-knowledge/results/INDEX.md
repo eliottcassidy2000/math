@@ -1,5 +1,83 @@
 # Script Results Index
 
+- `tournament_strong_centrality_order_nine_thm4135.py` and independent
+  clean-room C++ contracted-block census -> concordant complete profiles
+  [THM-4135 FINITE-EXACT + VERIFIED-EXACT + INDEPENDENTLY AUDITED]. All
+  `178,133` strong tournament isomorphism classes of order nine have only
+  central rational and exact-coset Johnson support-floor maximizers; the
+  minimum strict central-over-outer coset margin is `90`. Actual response
+  maxima remain distinct: `3,248` classes are noncentral-only. The two
+  implementations recover the same worst packet
+  `(H,W,D4,|C_hd|)=(405,4665,6029505,1478700)` and tilt `16430/44663`,
+  while using different response serializations and profile fingerprints.
+  Primary script/output SHA-256:
+  `ab247ff7da23d2659efd53dfc2f0e7a8841134734004eafa04c13ad596b28986` /
+  `24412327b2d56362ddcdad2a042192ff04df56d0001e8456aba53698c037d46c`;
+  independent:
+  `5ed81bd2ab3054d1a05471c42fe724c14eb0df278dbc3ee3b7d6d38253fff530` /
+  `b217807222b0b8cd2b2234f37a9bf40129469671ff64d6ea28dd0fcd88657b04`;
+  semantic: `0b3d2c65723e0ecc78cbf02d1735320794a6bd6e5f7c3a371ee94432e19c5b49`.
+  THM-4133 refutes the all-order extension at order twelve; orders ten and
+  eleven remain unclassified.
+
+- `jc23_delta_v_collision_wall_strict_transform_thm4134.py` and independent
+  rational-coordinate elimination audit -> concordant semantic ledgers
+  [THM-4134 PROVED RELATIVE TO THM-3996/4053/4103/4120/4122/4130 +
+  VERIFIED-EXACT + INDEPENDENTLY AUDITED; JC(2) OPEN]. On the theta-only
+  exact-`M=8` wall `Delta_V=0`, division of the exceptional critical
+  multiplicity gives a generic genus-eight packet `(7,5,3,2,2,1)` with
+  degree alternatives `{16,20}` and a secondary genus-seven packet
+  `(7,3,2,2,2,2,1)` with alternatives `{15,19}`. Monodromy excludes the
+  full-boundary `20,19` branches. The finite horizontal BC carriers at
+  `16,15`, the other collision walls, `M>=9`, `JC(2)`, and `DC(2)` remain
+  open. Primary script/output SHA-256:
+  `4aad959ef19bd96015b219970368ebd241b5c57c534ea001238d796e4f322604` /
+  `a0c3479c7ab4d56d210541d2992fd89fc3e0e5e0fc23ade07c0d5938bb6dffc0`;
+  independent:
+  `96f11131edfc834a533682dcce44ac8027cd27de31d2cebc5816475c82d73bcb` /
+  `07843acdc731cdb8a93b638a73d468d1c93900bfade8594af6ad1f2c8d47890b`;
+  semantic: `a5d55d70a100e3f4c9413c9b4ab88fe5532b6d8c58740888042f31bc170ace2d`.
+
+- `tournament_strong_cyclic_substitution_centrality_counterexample_thm4133.py`
+  and independent C++/GMP contracted-block audit -> matching exact packet
+  [THM-4133 VERIFIED-EXACT + INDEPENDENTLY AUDITED COUNTEREXAMPLE]. Replacing
+  one block of a fixed strong five-vertex quotient by `R_9` with one vertex
+  deleted gives a strong order-twelve tournament with frozen adjacency
+  `(3070,3644,3704,3824,4064,4032,3970,3846,3598,1024,2049,512)` and
+  packet `(H,W,D4,C_hd)=(27759,506085,80871049732,-23596773036)`. Its tilt
+  `53092739331/40435524866` exceeds one; both rational and exact-coset floors
+  optimize uniquely at noncentral `t=-2`, whose exact-coset value beats the
+  center by `2,224`. This **REFUTES** all-order strong rational and exact-
+  coset centrality, without classifying orders ten or eleven. Primary
+  script/output SHA-256:
+  `7bd4c518464d4c48baf9cb9c1c8c2012a9f79f029c8e07141c0e51c338ffeeb2` /
+  `52d6c229b46ac1f38afb61d54073eac2400757205f38f26a0c646b7a8cdf5bf1`;
+  independent:
+  `c312eab367d2ace57ecc87b56383ed534db3bf3f119107d99d4bb57945e9c201` /
+  `00b906d460c74f1906b52124ae8e8ce7d6f0678e4d94af2f2356294e830fbbf1`;
+  semantic: `2d41d1a1bb6f8a936c6f8104d149cba898ae51d17371981dbf2d1332643d2873`.
+
+- `lrc14_fixed_body_scale_two_completion_thm4132.py` and independent
+  strict-danger-complement referee -> concordant exact mechanisms [THM-4132
+  PROVED ELEMENTARY COMPACT-TO-OPEN COMPLETION + VERIFIED-EXACT +
+  INDEPENDENTLY AUDITED; LRC(14) OPEN]. For
+  `U=(1,4,6,8,10,12,14,15,16,18,22)` and every positive odd `t`, the row
+  `2U union {t,9t}` is LRC(14). The closed body interval
+  `J=[33/70,27/56]` has length `3/280`; the open two-sheet obstruction has
+  maximum component length `2/63`, so the first admissible scale already has
+  surplus `3|J|-2/63=1/2520`. The independent audit reconstructs all `244`
+  body walls and `22` quotient walls and finds direct full-row controls at
+  eight scales through `2,001`. Primary script/output SHA-256:
+  `2a928cc1d622fa3b5a5d351edf3594058b2631cf6c8224b0a203d1f7258ac70f` /
+  `a4084955d9adbde07e2459757dd3c305268fe84a99c436475f0d9379faa428cd`;
+  independent:
+  `6c3571653607e4b609fc171e3d8cd62f2f4380b00931d702338534372a9e1eca` /
+  `2d1e770df01d36bddfc387c34e9eb188d85687cb0f9931adcf9040f940012f9b`;
+  primary/independent semantic ledgers:
+  `aa6314ca8c25b5ad512bef0874dfb7262bd65cab8b200abba32d1cfe6b7710a6` /
+  `a1a708792f72909ea1ee517586dcc30f8dc16f46781005b4e3fc22edcf875f88`.
+  Arbitrary bodies, general scale-two entry, and LRC(14) remain open.
+
 - `tournament_strong_centrality_through_order_eight_thm4131.py` and
   independent canonical-augmentation/contracted-block audit -> concordant
   semantic ledgers [THM-4131 FINITE-EXACT + VERIFIED-EXACT + INDEPENDENTLY
@@ -18,8 +96,9 @@
   independent: `693484165663f5e05d35fb7b6dfd9ae0cc01a49c72f2db74db74017d93ab5b94` /
   `6efb87263c698375a1ce5da57251434ad3f71fe01060db96fa54d19b8a340542`;
   semantic: `8e5ef116e577c3d3ab5dd4bea50953581a457ffbaae4f80504060c8793fed578`.
-  All-order strong centrality, actual-maximizer classification, and intervals
-  remain open.
+  THM-4135 extends the positive range through order nine, while THM-4133
+  refutes the all-order extension at order twelve. Orders ten and eleven,
+  actual-maximizer classification, and intervals remain open.
 
 - `jc23_theta_only_extremal_seam_critical_monodromy_thm4130.py` and independent
   `(s,p)` elimination/permutation audit -> concordant semantic ledgers
@@ -31,8 +110,10 @@
   injections and degree-`21` transitivity force the vanishing-cycle supports
   to meet once, hence a three-cycle commutator, contradicting boundary type
   `(7,3,3,3,2,2,1)`. The `Delta_V=0` hostile drops the eliminant degree to
-  `15`; collision walls, `M>=9`, other cells, `JC(2)`, and `DC(2)` remain
-  open. Primary script/output SHA-256:
+  `15`. THM-4134 later reduces that `Delta_V=0` wall and excludes its
+  full-boundary degrees `20,19`, while finite horizontal carriers at `16,15`
+  survive. The other collision walls, `M>=9`, other cells, `JC(2)`, and
+  `DC(2)` remain open. Primary script/output SHA-256:
   `9cc246bb07894f548ef5ff4814ca92e9384a77de54617e3311df341458420fb3` /
   `020f79bcc07384e02623053adcaee20edb240ee5bef363f1f3bbe86056cafefd`;
   independent:
@@ -48,8 +129,9 @@
   A body window of length `3/280`, a sharp danger-comb bound, an exact
   `23..41` table, and three clocks for the 26 low-tail residual pairs close
   all `119,316` controls through 500 and all `5,855` scale-one `U`-body ratio
-  types. Arbitrary bodies, the scale-two `(2,1,9)` slice, and LRC(14) remain
-  open. Primary script/output SHA-256:
+  types. THM-4132 later closes the fixed-`U` exceptional scale-two rows
+  `2U union {t,9t}` for every positive odd `t`. Arbitrary bodies, general
+  scale-two entry, and LRC(14) remain open. Primary script/output SHA-256:
   `f027c93324096de71a63f6cefcf7d9f75a6ef36b0b878c8b4248d6871d783cfa` /
   `9a31e2ab7d319e63df067cfbfd05059a52b8e032b2fa1ae5bf7de93342d087b8`;
   independent: `f977c65658b2dad6374196866c6f6211a1b833d3d24c9b852cf6fa959ea2bbe7` /
@@ -924,7 +1006,8 @@
   excluded by complete-model CM mismatch. The sole nonresonant survivor is
   `p*y^2`-only, whose unique elliptic component is `j=0`; its generic fibre
   degree must be `a^2-ab+b^2` and its ramification budget is `14`. Three
-  collision walls remain. Primary script/output SHA-256:
+  collision walls remain; THM-4134 stratifies `Delta_V=0`, excluding degrees
+  `20,19` but leaving horizontal-BC degrees `16,15`. Primary script/output SHA-256:
   `5d5d117d76200a4857d9f12bd1500511fa82d3c28880101816c78688487e11d4` /
   `fcc0bf5e890781ecc0e0313844c4f760104f96fe4201be7cfe9f443111bc970e`;
   independent script/output/semantic:

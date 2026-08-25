@@ -11,9 +11,10 @@ status: >
   collapse to one. The DE edge is an evaluation quotient with principal
   kernel (x^6t^7+gamma/theta); Keller cancellation locks the two output
   multiplicities and raises the necessary total-degree floors to
-  deg(A)>=28 and deg(C)>=31. THM-4130 later excludes this smooth seam. JC(2),
-  the three collision walls, other reduced depth cells, and maximum residual
-  weight at least nine remain OPEN.
+  deg(A)>=28 and deg(C)>=31. THM-4130 later excludes this smooth seam;
+  THM-4134 excludes the Delta_V full-boundary degrees 20/19 but leaves
+  horizontal-BC degrees 16/15. JC(2), the other walls, other cells, and
+  maximum residual weight at least nine remain OPEN.
 source: planar-jacobian-squeeze / 2026-08-25
 audit: >
   PASS. The primary SymPy certificate and independent standard-library
@@ -33,6 +34,7 @@ related:
   - THM-2230-planar-jacobian-response-fiber-and-exact-target-shear-quotient
   - THM-3996-two-three-companion-node-address-balance-and-jelonek-alternative
   - THM-4130-theta-only-extremal-seam-critical-monodromy-obstruction
+  - THM-4134-delta-v-collision-wall-strict-transform-and-high-branch-exclusion
 external:
   - "T. Shioda, On the Mordell--Weil lattices, Comment. Math. Univ. St. Pauli 39 (1990), 211--240, DOI:10.14992/00009994."
   - "R. Miranda and U. Persson, On extremal rational elliptic surfaces, Math. Z. 193 (1986), 537--558, Theorem 4.1 and Table 5.2, DOI:10.1007/BF01160474."
@@ -380,7 +382,8 @@ other reduced depth pairs, arbitrary completions, or all of `JC(2)`.
 
 THM-4130 later bypasses this coefficient program and excludes the smooth
 seam: its exact 20-point critical ledger forces a three-cycle commutator,
-contradicting the inherited boundary packet. The three collision walls still
-require their own normalized boundary fields.
+contradicting the inherited boundary packet. THM-4134 later normalizes
+`Delta_V=0`, excludes degrees `20,19`, and leaves horizontal-BC degrees
+`16,15`; the other two collision walls remain open.
 
 **QED.**

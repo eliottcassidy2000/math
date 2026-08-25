@@ -8,8 +8,10 @@ status: >
   after THM-4123 exact layer-coset rounding. The central-versus-outer coset
   margin is uniformly positive in every audited order. Actual ear-response
   maxima need not be central: four order-six and 1,702 order-eight strong
-  isomorphism classes are explicit finite boundaries. No all-order strong
-  centrality theorem or actual-maximizer theorem is claimed.
+  isomorphism classes are explicit finite boundaries. THM-4135 later extends
+  support-floor centrality through order nine, while THM-4133 refutes its
+  all-order extension at order twelve. No all-order or central actual-
+  maximizer theorem is claimed.
 source: codex-frontier-synthesis-creative-20260825m
 depends_on:
   - THM-4123-balanced-cardinality-ear-average-growth-and-johnson-layer-lattice
@@ -17,6 +19,8 @@ depends_on:
   - THM-4128-johnson-slice-support-envelope-and-exposure-centrality-criterion
 related:
   - THM-4118-ear-response-lattice-and-stateful-unit-component-intervals
+  - THM-4133-strong-cyclic-substitution-johnson-centrality-counterexample
+  - THM-4135-strong-tournament-centrality-complete-order-nine
   - HYP-2879-strong-ear-atom-calculus
   - HYP-9029-strong-interval-tiling-law
 script: 04-computation/tournament_strong_centrality_through_order_eight_thm4131.py
@@ -316,7 +320,8 @@ The source is the full strong-tournament isomorphism-class universe through
 order eight; the preserved coordinates are the complete response vector,
 the THM-4128 exposure packet, and every THM-4123 layer coset. Passing to a
 support floor still loses the actual maximizer, as `(10)--(11)` demonstrate.
-This theorem proves no strong centrality statement in order nine or higher,
-no central actual-maximizer theorem, no slice interval, no response
-connectivity, and no global `H`-spectrum result. All such extensions remain
-**OPEN**. **QED.**
+This theorem itself proves no strong centrality statement in order nine or
+higher. THM-4135 later closes order nine and THM-4133 refutes the all-order
+extension at order twelve; orders ten and eleven remain unclassified. No
+central actual-maximizer theorem, slice interval, response connectivity, or
+global `H`-spectrum result follows. **QED.**

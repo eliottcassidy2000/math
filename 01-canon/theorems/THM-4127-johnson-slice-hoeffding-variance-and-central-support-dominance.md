@@ -25,6 +25,8 @@ related:
   - THM-4118-ear-response-lattice-and-stateful-unit-component-intervals
   - THM-4128-johnson-slice-support-envelope-and-exposure-centrality-criterion
   - THM-4131-strong-tournament-centrality-through-order-eight
+  - THM-4133-strong-cyclic-substitution-johnson-centrality-counterexample
+  - THM-4135-strong-tournament-centrality-complete-order-nine
   - HYP-9029-strong-interval-tiling-law
 script: 04-computation/tournament_johnson_slice_hoeffding_variance_thm4127.py
 output: 05-knowledge/results/tournament_johnson_slice_hoeffding_variance_thm4127.out
@@ -392,9 +394,10 @@ THM-4128 subsequently rewrites all these rational slice floors as one strict
 quadratic in `t=n-2m` and gives its exact nearest-grid optimizer. Exact cosets
 and actual maxima remain separate sidecars.
 
-THM-4131 later verifies central rational and exact-coset optimizers for every
-strong class through order eight. Its `74` order-seven coset reorderings and
-order-six/eight actual-max hostiles keep both sidecars load-bearing.
+THM-4131/4135 later verify central rational and exact-coset optimizers through
+order nine. THM-4133 refutes the all-order extension at twelve; orders
+ten/eleven remain unclassified. The order-six/eight actual-max hostiles keep
+that separate sidecar load-bearing.
 
 The smaller THM-4123 packet `(H,F_1,W)` is insufficient: order-five codes
 `8` and `759` have the same balanced mean `144/5`, but variances `1469/25`

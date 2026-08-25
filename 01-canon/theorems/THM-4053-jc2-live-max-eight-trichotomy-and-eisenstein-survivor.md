@@ -11,8 +11,9 @@ status: >
   The sole nonresonant survivor is p*y^2-only: its unique positive-genus
   component is the target-compatible j=0 curve, and the generic fibre degree
   must be an Eisenstein norm a^2-ab+b^2; its total ramification is 14. The
-  THM-4130 later excludes the survivor; the three explicit collision walls
-  remain open.
+  THM-4130 later excludes the survivor. THM-4134 stratifies the Delta_V wall,
+  excluding degrees 20/19 but leaving horizontal-BC degrees 16/15; the other
+  two collision walls remain open.
 source: long-precise-frontiers / 2026-08-24
 audit: >
   PASS. The primary certificate expands the complete support, enumerates all
@@ -34,6 +35,7 @@ related:
   - THM-4017-sharp-weight-eight-specialization-obstruction-and-newton-ledger
   - THM-4044-sixty-clock-hasse-alias-and-planar-jc-boundary-firewall
   - THM-4130-theta-only-extremal-seam-critical-monodromy-obstruction
+  - THM-4134-delta-v-collision-wall-strict-transform-and-high-branch-exclusion
 external: >
   Tim Dokchitser, "Models of curves over DVRs," arXiv:1807.00025v2,
   Definitions 3.7, 3.9, and 3.12 and Theorem 3.14, through the same
@@ -439,8 +441,9 @@ The maximum-eight problem is now reduced to three explicit collision walls:
 2. stable reduction of the cuspidal cubic edge `Delta_V=0` in `(7b)`;
 3. the eight-attachment collision `delta+theta=0` in `(7c)`.
 THM-4130 later excludes the smooth survivor `(7d)`, after
-THM-4103/4120/4126 fix its boundary response, degree, and nonproperness. Thus
-the three collision walls, maximum residual weight at least nine, and JC(2)
-remain open.
+THM-4103/4120/4126 fix its boundary response, degree, and nonproperness.
+THM-4134 later stratifies `Delta_V=0`, excludes degrees `20,19`, and leaves
+horizontal-BC degrees `16,15`. The `Delta_D=0` and `delta+theta=0` walls,
+those residual branches, weight at least nine, and JC(2) remain open.
 
 **QED.**
