@@ -24,10 +24,11 @@
 - **D2 measure/owner compression.** THM-4041 proves that for reduced odd
   exceptions `a<b`, the spoiled mass is
   `4 sum_(r>0 odd,7r<a+b) min(1/(7b),(a+b-7r)/(14ab))`, while common odd
-  dilation preserves mass and multiplies components. Intersect this exact
-  sequence with attainable eleven-pack safe masses and owner locations.
-  A mass win closes a row, but scalar mass equality does not decide interval
-  containment; retain component addresses and closed safe walls.
+  dilation preserves mass and multiplies components. THM-4049 separately
+  closes every pack avoiding ten classes mod `56` by four fixed lifts, for
+  all odd pairs. Project the physical producer modulo `56`; classify the
+  complementary packs, then intersect their exact safe components with the
+  spoiled set. Scalar mass equality still does not decide containment.
 - **Sparse deletion response of the twelve AP owners.** THM-4029 solves the
   full AP container, while LRC needs sparse `E subset {0,...,N}`. For each
   owner/side/track, record whether the selected arrival time lies in `E`.

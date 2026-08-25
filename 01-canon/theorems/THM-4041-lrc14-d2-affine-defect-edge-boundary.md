@@ -24,6 +24,7 @@ depends_on:
   - THM-4024-lrc14-complete-divisor-incidence-envelope
   - THM-4004-lrc14-three-detuned-divisor-comb-profile
 related:
+  - THM-4049-lrc14-d2-two-phase-residue-firewall
   - THM-4030-lrc14-d4-affine-defect-lattice-boundary
   - THM-4032-lrc14-d3-affine-defect-lattice-boundary
   - THM-4025-lrc14-owner-residue-odd-dilation-semigroup
@@ -261,6 +262,13 @@ meas(G(H))>meas(Sigma_(alpha,beta))                    (22)
 
 is a sufficient closure certificate, though no uniform inequality `(22)` is
 claimed here.
+
+Downstream THM-4049 supplies a different exact certificate: if every member
+of `H` avoids ten named classes modulo `56`, the four lifts over
+`y in {1/14,5/56}` close the row for every odd exception pair, with no height
+bound. In particular it closes the explicit pack `{1,...,10,12}` uniformly.
+No proved physical projection forces an arbitrary inherited eleven-pack into
+that residue firewall, so `(21)` remains open on the complementary image.
 
 ## 6. Sharp and typed controls
 

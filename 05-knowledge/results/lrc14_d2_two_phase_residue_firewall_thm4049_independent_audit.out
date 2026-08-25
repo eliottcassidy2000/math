@@ -1,0 +1,13 @@
+THM4049 INDEPENDENT INTEGER-RESIDUE AUDIT
+common_denominator=112;closed_threshold_numerator=8
+time_numerators=(4, 60, 5, 61)
+pack_residue_universe=56;allowed=46;forbidden=(0, 11, 14, 22, 23, 28, 33, 34, 42, 45)
+odd_exception_residues=56;unordered_pairs_with_repetition=1596
+safe_time_count_histogram=((1, 60), (2, 370), (3, 760), (4, 406))
+first_bank_spoilers_mod28=((+/-1),(+/-15))
+plusminus15_mod28_safe_at_both_second_bank_times=True
+closed_endpoint=h12_at_x5_over112_has_clearance_1_over14=True
+pack_h11_hostile=True;pack_h14_hostile=True;even_pair_hostile=True
+universal_consequence=every_allowed_pack_residue_family_and_every_odd_exception_pair_has_a_safe_displayed_time
+semantic_digest=894ee0f19c3c75e88670d385984e670ad8f96fcdc958002b22d4466bcd4fb99c
+RESULT=PASS

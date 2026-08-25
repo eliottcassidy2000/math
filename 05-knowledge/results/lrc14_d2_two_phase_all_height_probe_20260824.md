@@ -1,8 +1,9 @@
 # LRC(14) `d=2` two-phase all-height probe
 
-**Status:** `PROOF-COMPLETE SIGNAL + FINITE-EXACT + VERIFIED-EXACT; NOT
-CANON`.  This note records a candidate elementary lemma and its exact residue
-audit.  It closes an explicit residue-defined family, not the physical
+**Status:** `PROMOTED TO THM-4049 + FINITE-EXACT + VERIFIED-EXACT`. This is
+the discovery report for
+[THM-4049](../../01-canon/theorems/THM-4049-lrc14-d2-two-phase-residue-firewall.md).
+The theorem closes an explicit residue-defined family, not the physical
 `THM-3818` `d=2` branch and not LRC(14).
 
 ## Inheritance pass
@@ -53,7 +54,7 @@ The new mask identity strengthens the dual-bank and periodic-carrier items.
 It does not solve the physical-producer item: a physical divided pack need
 not lie in the residue class below.
 
-## Candidate lemma: a four-time residue firewall
+## Theorem signal: a four-time residue firewall
 
 Put
 
@@ -192,6 +193,8 @@ python3 -B -O 04-computation/lrc14_d2_two_phase_all_height_probe_20260824.py
 
 Both modes byte-match
 `05-knowledge/results/lrc14_d2_two_phase_all_height_probe_20260824.out`.
+The frozen transcript retains its pre-promotion `NOT CANON` provenance line;
+the audited mathematical statement is now canonical in THM-4049.
 The companion checks all `56` odd residues modulo `112`, all `1,596`
 unordered pairs with repetition, direct Fraction masks against an independent
 integer-residue implementation, the exact pack residue firewall, five
