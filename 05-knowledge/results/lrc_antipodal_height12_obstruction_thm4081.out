@@ -1,0 +1,12 @@
+THM-4081 primary transformed-circle interval audit
+canonical_Dstar=1,3,4,5,7,8,9,11,12 parity_shadow_gates=9
+odd_layers=6 generated_odd_intervals=36 stage_component_counts=1,3,5,5,5,5
+final_odd_intervals=[8/49,13/77];[5/21,20/77];[36/77,41/77];[57/77,16/21];[64/77,41/49]
+strict_even_cover=d12:1/49;d8:1/21;d4:5/77;d8:1/21;d12:1/49
+deletion_survivor_gates=99 omitted_strict_failures=9
+subsets_classified=4096 obstruction_count=8 cardinality_histogram=9:1,10:3,11:3,12:1
+endpoint_hostile_speeds=8 exact_safe_t_singletons=6 positive_safe_intervals=0
+odd_dilation_identity_gates=180 odd_dilation_witness_gates=495
+even_dilation_safe_gates=9 even_dilation_t=1/13
+semantic_sha256=c4ce906c1b6aaa25d0f1bfece791978cbcf182ed464d7ca67397f1f13a3222c2
+PASS: D* obstruction, strong minimality, [1,12] iff classification, and dilation boundary

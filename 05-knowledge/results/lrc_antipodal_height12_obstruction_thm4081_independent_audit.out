@@ -1,0 +1,10 @@
+THM-4081 independent literal original-theta wall/cell audit
+Dstar_wall_endpoints=186 Dstar_circle_walls=185 Dstar_open_cells=185 Dstar_test_points=370 Dstar_phase_gates=6660
+full_wall_endpoints=222 full_circle_walls=221 full_open_cells=221 full_test_points=442 full_phase_gates=10608
+subsets_classified=4096 obstruction_count=8 cardinality_histogram=9:1,10:3,11:3,12:1
+deletion_survivor_phase_gates=198 deletion_strict_failures=9
+endpoint_hostile_wall_endpoints=302 endpoint_hostile_circle_walls=301 endpoint_hostile_open_cells=301 safe_walls=12 safe_open_cells=0 hostile_phase_gates=9632
+odd_dilation_identity_gates=486 odd_dilation_survivor_phase_gates=432 odd_dilation_strict_failures=27
+even_dilation_phase_gates=18 even_dilation_theta=1/26
+semantic_sha256=b67d635d2eec2dfcf0197343be7bc92443ff76291519a0d8b765d65e47707b43
+PASS: independent literal-theta obstruction, iff subset classification, endpoints, and dilation boundary
