@@ -1,0 +1,16 @@
+SELECTED ORDER-TEN STRONG-EAR INTERVAL
+selected_order9_parents= 1482
+nonconstant_ears_checked= 755820
+selected_value_count= 7566 min= 125 max= 15621
+primary_solid_interval= [249,14649] count=7201
+secondary_solid_interval= [15055,15551] count=249
+first_intervals= [(125, 125, 1), (135, 135, 1), (145, 147, 2), (153, 155, 2), (159, 161, 2), (165, 171, 4), (175, 231, 29), (235, 245, 6), (249, 14649, 7201), (14653, 14655, 2), (14659, 14659, 1), (14663, 14671, 5)]
+longest_intervals= [(249, 14649, 7201), (15055, 15551, 249), (175, 231, 29), (235, 245, 6), (14663, 14671, 5), (165, 171, 4), (15027, 15033, 4), (15037, 15043, 4), (15611, 15617, 4), (14679, 14683, 3), (14689, 14693, 3), (15003, 15007, 3)]
+direct_parent_checks= 1482 failures= 0
+direct_witness_checks= 7566 failures= 0
+key_witnesses= {'125': {'parent_h': 75, 'signature': 253, 'cut_weight': 7, 'code': 18179778674239}, '249': {'parent_h': 75, 'signature': 104, 'cut_weight': 3, 'code': 26993059954495}, '2887': {'parent_h': 127, 'signature': 158, 'cut_weight': 5, 'code': 25133469073343}, '2933': {'parent_h': 119, 'signature': 27, 'cut_weight': 4, 'code': 34960494755519}, '14649': {'parent_h': 2575, 'signature': 271, 'cut_weight': 5, 'code': 13193187335727}, '14653': {'parent_h': 2517, 'signature': 267, 'cut_weight': 4, 'code': 17454203805215}, '14655': {'parent_h': 2393, 'signature': 263, 'cut_weight': 4, 'code': 17591902805567}, '15055': {'parent_h': 2741, 'signature': 170, 'cut_weight': 4, 'code': 25004756344591}, '15551': {'parent_h': 3081, 'signature': 77, 'cut_weight': 4, 'code': 32976074124951}, '15621': {'parent_h': 2903, 'signature': 329, 'cut_weight': 4, 'code': 10852575419951}}
+global_allowed_prefix_through=14655 multiplicative_bridge_14651=49*13*23
+ordinary_prime_lane_through=14653 next_unforced= 14657
+seven_prime_lane_p_through=2099 next_unforced_value= 14777
+semantic_sha256= 2f61916d83f606766e059888809abc276a007a372381bafd1bfdfbc8d7cd2168
+ALL_CHECKS_PASS
