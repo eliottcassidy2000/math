@@ -1,0 +1,17 @@
+embedded_figure_eight_beta=2
+period(u)=(-1/2, -5/2)
+period(c*u)=(-1/2, 10/3)
+moment_det=-35/12
+raw_carrier=epsilon^2*R*v_u+epsilon^3*R*v_cu
+opening_lattice=epsilon*R^2
+relative_Smith_exponents=(q,2q)
+conditional_mixed_exponents=(q-1,2q-1);length=3q-2
+triangle_check=beta_1;opening_5;carrier_5;cokernel_length_4
+ramification_e=1:ord_t(H')=0;unit=True
+ramification_e=2:ord_t(H')=1;unit=False
+ramification_e=3:ord_t(H')=2;unit=False
+ramification_e=4:ord_t(H')=3;unit=False
+ramification_e=5:ord_t(H')=4;unit=False
+ramification_e=6:ord_t(H')=5;unit=False
+ramification_e=7:ord_t(H')=6;unit=False
+char_5_resonant_carrier_indices=[0, 5, 10, 15, 20, 25]

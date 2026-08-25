@@ -1,5 +1,21 @@
 # Script Results Index
 
+- `jc2_finite_graph_period_connection_ramification_thm4063.py` and
+  independent Fraction-only audit -> matching `.out`s [THM-4063 PROVED
+  abstract theorem + CONDITIONAL figure-eight cokernel + UNCONDITIONAL
+  ramification no-go + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED;
+  `JC(2)` OPEN]. Under period completeness and a full opening lattice, the
+  mixed cokernel is `R^beta/nabla L`; aligned carrier valuations have length
+  `sum(nu_i-1)`. An embedded two-cycle carrier has exponents `(q,2q)` and
+  conditional length `3q-2`. Every pullback through `H(t)=a*t^e+...` has
+  exact Jacobian divisor `H'`, so `e>=2` forbids a nonzero constant Jacobian.
+  Primary script/output SHA-256:
+  `3be9075dfca04a0389645ef980cb0c47b958ffc6fb8a74654c44a2fdf574a24f` /
+  `b5326dd6bcaf4536e132a008530c20191b7a06534f0ccf8d9739302f3dae60e2`;
+  independent:
+  `be239e482359bcb2920c7417ef1139ff568d7dcca8f43cbcc254712d8b203a8a` /
+  `08ae928e55c7b69283ba687f8250062200af5c2a87f263798ef6c3ac1b04d318`.
+
 - `lrc14_affine_intercept_divisor_star_obstruction_thm4062.py` and
   independent Euclidean-depth/winner-track audit -> matching `.out`s
   [THM-4062 PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED;

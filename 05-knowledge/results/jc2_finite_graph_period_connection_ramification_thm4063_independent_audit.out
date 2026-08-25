@@ -1,0 +1,9 @@
+status=PASS
+embedded_cycles=opposite_half_planes;common_vertex_only
+period_u=(Fraction(-1, 2), Fraction(-5, 2))
+period_cu=(Fraction(-1, 2), Fraction(10, 3))
+moment_det=-35/12
+carrier=raw_(2q,3q);relative_(q,2q)
+conditional_mixed=(q-1,2q-1);length=3q-2
+ramification=ord(H_prime)=e-1;unit_Jacobian_impossible_for_e>=2
+boundary=carrier_packet_does_not_assert_period_completeness

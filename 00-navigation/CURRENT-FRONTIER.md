@@ -372,8 +372,8 @@ lift/phase clocks.
   [THM-4058](../01-canon/theorems/THM-4058-exceptional-affine-triangle-period-and-simple-zero-monomial-ladder.md)
   makes frozen-`a` failure an all-`m` ladder;
   [THM-4060](../01-canon/theorems/THM-4060-exceptional-simple-zero-mixed-form-cokernel-collapse-and-formal-pair-lift.md)
-  leaves four mixed classes; every simple zero has a formal local pair.
-  Global entry/`JC(2)` stay open.
+  solves simple zeros formally; THM-4063 gives the graph connection and
+  `e>=2` no-go. Completeness/global entry/`JC(2)` stay open.
 - **Weyl boundary:** THM-2049 gives a formal beta-adic lift; finite termination remains.
 - **Planar source fibres:** THM-2063/THM-2084--2480 (including
   THM-2371/THM-2376) close the named
