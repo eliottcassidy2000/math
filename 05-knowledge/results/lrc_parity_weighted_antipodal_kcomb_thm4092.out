@@ -1,0 +1,18 @@
+THM-4092 primary Fraction-exact audit: PASS
+core gates=26; fragmentation gates=34000; sharp equalities=80
+threshold rows=10; owner gates=6370; dilation gates=880
+low-height hostile covers=10; weight-seven hostile=(8, 9, 11, 13)
+uniform threshold table (core,odd,min_outlier):
+  AP5/o0:181, AP6/o0:76, AP6/o1:146, AP7/o0:63, AP7/o1:90, AP7/o2:172, AP8/o0:85, AP8/o1:106, AP8/o2:150, AP8/o3:281
+sample certified rows:
+  AP5/o0 speeds=(182, 184, 186, 188, 190, 192) source=182-left N=2548
+  AP6/o0 speeds=(76, 78, 80, 82, 84) source=core_left N=70
+  AP6/o1 speeds=(146, 147, 148, 150, 152) source=core_left N=70
+  AP7/o0 speeds=(64, 66, 68, 70) source=64-left N=896
+  AP7/o1 speeds=(90, 91, 92, 94) source=core_left N=70
+  AP7/o2 speeds=(172, 173, 174, 175) source=172-right N=2408
+  AP8/o0 speeds=(86, 88, 90) source=core_left N=98
+  AP8/o1 speeds=(106, 107, 108) source=core_right N=56
+  AP8/o2 speeds=(150, 151, 153) source=core_left N=98
+  AP8/o3 speeds=(281, 283, 285) source=core_right N=56
+arrangement source histogram={'182-left': 1, 'core_left': 5, '64-left': 1, '172-right': 1, 'core_right': 2}

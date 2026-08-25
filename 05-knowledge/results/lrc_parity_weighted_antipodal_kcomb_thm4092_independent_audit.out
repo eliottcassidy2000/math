@@ -1,0 +1,15 @@
+THM-4092 independent original-theta cell audit: PASS
+core tests=78; window tests=15300; sharp equalities=60
+threshold banks=10; combinations=774; owner tests=7518
+literal low-height covers=10; weighted-ceiling cover=(8, 9, 11, 13)
+independent witnesses:
+  AP5/o0 speeds=(182, 184, 186, 188, 190, 192) theta=103/896 N=896
+  AP6/o0 speeds=(76, 78, 80, 82, 84) theta=4/35 N=70
+  AP6/o1 speeds=(146, 147, 148, 150, 152) theta=4/35 N=70
+  AP7/o0 speeds=(64, 66, 68, 70) theta=113/980 N=980
+  AP7/o1 speeds=(90, 91, 92, 94) theta=4/35 N=70
+  AP7/o2 speeds=(172, 173, 174, 175) theta=281/2408 N=2408
+  AP8/o0 speeds=(86, 88, 90) theta=11/49 N=98
+  AP8/o1 speeds=(106, 107, 108) theta=337/1498 N=1498
+  AP8/o2 speeds=(150, 151, 153) theta=11/49 N=98
+  AP8/o3 speeds=(281, 283, 285) theta=299/1330 N=1330
