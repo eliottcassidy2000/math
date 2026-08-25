@@ -9,6 +9,29 @@ Format per entry:
 - Why it was wrong
 - The correct framing
 
+## MISTAKE-495 (2026-08-25, even-graph metagraph) -- a canonical vertex quotient was mistaken for basis-independent adjacency
+
+- **What failed:** the even-graph metagraph was described as a canonical
+  "dual" obtained by quotienting the fundamental-cycle cube by graph
+  isomorphism, without retaining its spanning-tree basis. The Eulerian graph
+  classes are canonical, but a general fundamental-cycle generator set is
+  not invariant under relabelling, so its edge image need not be canonical.
+- **Minimal witness / first failed implication:** at `n=4` the three Eulerian
+  isomorphism classes are `0`, `C_3` plus an isolated vertex, and `C_4`. A
+  star-tree basis contains only triangles and gives the path `P_3`; a
+  path-tree basis contains triangles and a four-cycle and gives `K_3`.
+- **Repair / strongest survivor:** THM-4069 writes the tree-dependent object
+  as `E_(n,T)` and defines the canonical all-simple-cycle envelope
+  `widehat(E)_n`. The envelope is the union of all `E_(n,T)` and equals the
+  path-tree image for every `n`, because the path basis contains one cycle of
+  each length. Hence the historical path-basis values, the canonical vertex
+  set, and separately proved two-graph/switching identifications survive;
+  importing those values to an arbitrary spanning-tree basis does not.
+- **Reusable rule:** quotienting vertices by a symmetry does not make an edge
+  relation canonical. Audit invariance of the generator set; if it fails,
+  retain the presentation as a sidecar or saturate the generators over the
+  symmetry group before naming the quotient graph.
+
 ## MISTAKE-494 (2026-08-25, THM-4063 figure-eight packet) -- embedded edge segments hid a nonincident formal contact congruence
 
 - **What failed:** the two polygonal cycles were audited for proper segment

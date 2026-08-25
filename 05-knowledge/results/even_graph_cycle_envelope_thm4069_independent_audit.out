@@ -1,0 +1,17 @@
+THM-4069 independent subset-scan audit
+universe=all edge subsets; tree_source=(n-1)-subset scan
+
+cycle-space and generator-union census
+  n all_subgraphs Eulerian iso_classes trees stars odd_bases simple_cycles union path_E envelope_E
+  3 8 2 2 3 3 3 1 1 1 1
+  4 64 8 3 16 4 4 7 7 3 3
+  5 1024 64 7 125 5 5 37 37 16 16
+  6 32768 1024 16 1296 6 6 197 197 90 90
+
+n=4 direct quotient witness
+  vertices=['empty', 'triangle+isolated', 'four-cycle']
+  star=[('empty', 'triangle+isolated'), ('triangle+isolated', 'four-cycle')]
+  path=[('empty', 'four-cycle'), ('empty', 'triangle+isolated'), ('triangle+isolated', 'four-cycle')]
+  envelope=[('empty', 'four-cycle'), ('empty', 'triangle+isolated'), ('triangle+isolated', 'four-cycle')]
+
+PASS: independent edge-subset and spanning-tree scans agree with THM-4069

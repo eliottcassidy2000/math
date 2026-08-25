@@ -68,12 +68,13 @@ Five habitats. Each invariant: **name — what it measures — status — canoni
 | **width of G_n** | max antichain | C(n−2,⌊(n−2)/2⌋) FAILS n≥7 |
 | **Hadwiger h(G_n/Z₂)** | largest clique minor | K₆-minor at n=7, h≥12; h≥22 at n=8 |
 
-### I.c Even-graph invariants (E_n, the DUAL of G_n) — opus's standing mandate
+### I.c Even-graph invariants (canonical envelope `widehat(E)_n`) — opus's standing mandate
 
 | object | value / status |
 |---|---|
-| **E_n** (even-graph metagraph) | V = 2,3,7,16,54 (A002854); DUAL of G_n |
-| χ(E_n), ω(E_n) | 2,3,5,10,28; ω=χ (chordal ≤ n=6, odd holes n=7) |
+| **`widehat(E)_n=E_(n,P_n)`** | canonical all-simple-cycle envelope; V = 2,3,7,16,54 (A002854); THM-4069 |
+| arbitrary fundamental-tree image `E_(n,T)` | **basis-dependent**: star gives χ=2 for all n, while path gives the envelope; minimal `P_3`/`K_3` split at n=4 (MISTAKE-495) |
+| χ, ω of path/envelope | reported 2,3,5,10,28; ω=χ (chordal ≤ n=6, odd holes n=7); these historical path computations survive THM-4069 |
 | **"do EVERYTHING on E_n too"** | **MANDATE LARGELY UNFULFILLED** (§II.e) — most G_n invariants never run on E_n |
 | bridge matrix B[tourn,even] | full rank V(E_n) at all n |
 
@@ -200,8 +201,9 @@ generators. Each is a *recipe*: feed it the zoo, get new computations.
 all iso classes n≤7, then Lean-verify survivors. (THM-1850 ran this once: γ+tr≤n+1 proved, three
 refuted.) **The ~150 WOWII inequalities each have a directed analog not yet formed.**
 
-**G2 — the E_n dual generator.** Every computation on G_n has a dual on E_n (opus mandate). Recipe:
-take any G_n result, replace tournament-orientation S_n-action with even-graph S_n-action, recompute.
+**G2 — the even-graph dual generator.** Every computation on G_n has an even-graph analog (opus
+mandate). Recipe: use the canonical envelope `widehat(E)_n=E_(n,P_n)`, or retain `T` explicitly
+when studying `E_(n,T)`; never silently transfer path values to another basis (THM-4069/MISTAKE-495).
 **Largely unrun** (§II.e #4).
 
 **G3 — the refinement generator.** Every global invariant has a per-iso-class and a per-charge

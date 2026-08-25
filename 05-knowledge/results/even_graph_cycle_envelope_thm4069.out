@@ -1,0 +1,30 @@
+THM-4069 primary exact audit
+arithmetic=integer/GF(2); assertions=disabled-by-construction
+
+n=4 minimal witness
+  classes=['empty', 'triangle+isolated', 'four-cycle']
+  star_edges=[('empty', 'triangle+isolated'), ('triangle+isolated', 'four-cycle')]
+  path_edges=[('empty', 'four-cycle'), ('empty', 'triangle+isolated'), ('triangle+isolated', 'four-cycle')]
+  envelope_edges=[('empty', 'four-cycle'), ('empty', 'triangle+isolated'), ('triangle+isolated', 'four-cycle')]
+
+quotient census
+  n labelled_states iso_classes simple_cycles star_E path_E envelope_E path_bip envelope_bip
+  3 2 2 1 1 1 1 True True
+  4 8 3 7 2 3 3 False False
+  5 64 7 37 8 16 16 False False
+  6 1024 16 197 31 90 90 False False
+
+all-labelled-tree parity audit
+  n trees stars all_odd_fundamental_cycles
+  3 3 3 3
+  4 16 4 4
+  5 125 5 5
+  6 1296 6 6
+  7 16807 7 7
+
+generator_union n=3 trees=3 generators=1 simple_cycles=1 PASS
+generator_union n=4 trees=16 generators=7 simple_cycles=7 PASS
+generator_union n=5 trees=125 generators=37 simple_cycles=37 PASS
+generator_union n=6 trees=1296 generators=197 simple_cycles=197 PASS
+
+PASS: basis dependence, star parity, connectivity, and canonical envelope verified
