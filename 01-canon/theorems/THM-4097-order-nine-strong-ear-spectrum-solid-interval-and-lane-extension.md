@@ -8,8 +8,9 @@ status: >
   2,881. Combined with THM-1370 and THM-4094, every allowed odd value through
   2,881 is attained, the ordinary strong-prime lane is proved through 2,879,
   and the strong seven-prime lane is proved through 7*409. The first values
-  not supplied by these finite certificates are 2,887 and 7*419=2,933. The
-  global H-spectrum conjecture remains OPEN.
+  not supplied at this theorem's scope are 2,887 and 7*419=2,933. THM-4102
+  and THM-4104 subsequently move the current targets to 80,407 and
+  7*11,527=80,689. The global H-spectrum conjecture remains OPEN.
 source: codex-frontier-synthesis-creative-20260825g
 depends_on:
   - THM-1370-h-spectrum-omits-7-21-all-n
@@ -18,6 +19,9 @@ related:
   - THM-012b-insertion-decomposition
   - THM-1862-order-join-reduction-principle
   - THM-4051-tournament-order-seven-strong-base-exact-frontier
+  - THM-4099-squarefree-gap-transfer-and-mixed-insertion-boundary
+  - THM-4102-selected-order-ten-strong-ear-solid-interval
+  - THM-4104-selected-order-eleven-strong-ear-solid-interval
   - HYP-2879-strong-ear-atom-calculus
 script: 04-computation/tournament_order9_strong_ear_spectrum_thm4097.py
 output: 05-knowledge/results/tournament_order9_strong_ear_spectrum_thm4097.out
@@ -258,6 +262,10 @@ iff
   every odd prime p>=2887 is strongly attained, and
   every 7p with odd prime p>=419 is strongly attained.               (13)
 ```
+
+Equation `(13)` is the reduction at order-nine scope. THM-4102 first moves
+its two lower bounds to `14,657` and `2,111`; THM-4104 currently moves them
+to `80,407` and `11,527`, respectively.
 
 The sporadic tail `E_9` supplies some atoms beyond these thresholds, but does
 not move the first missing member of either lane.

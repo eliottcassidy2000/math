@@ -1,5 +1,21 @@
 # Script Results Index
 
+- `tournament_selected_order11_strong_ear_interval_thm4104.py` and independent
+  audit -> matching `.out`s [THM-4104 PROVED ELEMENTARY QUADRATIC-CUT IDENTITY
+  + FINITE-EXACT + VERIFIED-EXACT + INDEPENDENTLY AUDITED; global H-spectrum
+  conjecture OPEN]. One deterministic order-ten witness for each of THM-4102's
+  `7,566` selected values generates `7,732,452` nonconstant ears and a
+  `43,251`-value selected order-eleven image. It contains every odd value in
+  `[429,80265]` and `[80875,84259]`. Together with twelve exact multiplicative
+  bridges, every allowed odd through `80,405` occurs; the first unforced lane
+  values are `80,407` and `7*11,527=80,689`. This is a lower image, not a full
+  order-eleven census. Primary script/output SHA-256:
+  `996c6f13abd82d0b8d1e74cf7ec949b31d093d70979715440ec8caa56a379e03` /
+  `75437285e47f97cdf80ac5a3e816149d35ca62f157b35850ce9f5629e24370d4`;
+  independent:
+  `c607dac3d2f223fb95e76293a02f6f90767e8603ecb64961cd981d71f6e361e1` /
+  `40131dd6d92e21080601d030099e8a9bf749ee994d0a5f38c96a1c17fc922482`.
+
 - `jc23_theta_boundary_response_thm4103.py` and independent audit -> matching
   `.out`s [THM-4103 PROVED RELATIVE TO THM-3992/4053 + VERIFIED-EXACT +
   INDEPENDENTLY VERIFIED-EXACT; JC(2) OPEN]. On the smooth nonresonant
@@ -20,6 +36,21 @@
   `682b14ecfbd932dc0d6f15b2b0fd9c42541eba2b4a509f03e2b0f747f0a1d3c7` /
   `e3fb544a4d0e28c8b827889efe1670e5bf7fae0b2fd14b8bf4749e917bc36dfb`.
 
+- `tournament_selected_order10_strong_ear_interval_thm4102.py` and independent
+  audit -> matching `.out`s [THM-4102 PROVED ELEMENTARY REDUCTION +
+  FINITE-EXACT + VERIFIED-EXACT + INDEPENDENTLY AUDITED; global H-spectrum
+  conjecture OPEN]. A deterministic bank of one order-nine witness for each
+  of THM-4097's `1,482` values generates `755,820` nonconstant ears and
+  `7,566` selected values, including every odd in `[249,14649]` and
+  `[15055,15551]`. With exact multiplication, every allowed odd through
+  `14,655` occurs; THM-4104 subsequently supersedes the theorem-local lane
+  targets `14,657,14,777`. Primary script/output SHA-256:
+  `e7049a6347100e6dc54c7b6c03b299cde7dcfaca811954797971b8e7552421a8` /
+  `3ac25e2e154994178fa916d124b91e2c5a9b831768279a457298fb679dc4b4dd`;
+  independent:
+  `6dca471289cc1f76704b1444edbb4f2d78c7002a5367d11df81498d64a2fa592` /
+  `b9ced2eb803abcfa3091306ce2fb43c71e941aaa7b0a8e66795d51c4a0830a96`.
+
 - `lrc_ap7_weight_seven_gap4_second_moment_thm4101.py` and independent audit
   -> matching `.out`s [THM-4101 PROVED RELATIVE TO THM-2072/4092 +
   VERIFIED-EXACT + INDEPENDENTLY VERIFIED-EXACT; LRC(14) OPEN]. On the exact
@@ -33,6 +64,37 @@
   independent:
   `34cd587c7bb1dad0a50d0d624f06ef21d64479952340c42f65dcb2060c332745` /
   `06703acf7534a918813f7bcf863155442e03f8011e1ff3778d074621a171e743`.
+
+- `lrc_residual_component_three_outlier_thm4100.py` and independent audit ->
+  matching `.out`s [THM-4100 PROVED RELATIVE TO THM-2061/2066/2072 +
+  VERIFIED-EXACT + INDEPENDENTLY AUDITED; LRC(14) OPEN]. A closed safe interval
+  of length `L` survives three new speeds `b<c<d` whenever
+  `1/b+min(4/c,2/c+4/d)<=7L`; an endpoint supplies an adaptive even clock
+  `N<=max(Q,14d)`. Thus every AP8 core with arbitrary-parity outliers
+  `93<=b<c<d` closes the dyadic two-odd-tail seam through common dilations.
+  The correct circular-triple component count is `1,390,420`; the exploratory
+  `1,410,020` double-counted `19,600` clipped pieces.
+  Primary script/output SHA-256:
+  `e51c47f058a0d27ad231891db788f8bd45d6eafbe7758bbe5881c6fbca943b4f` /
+  `9b4ee3b390f4c53a2e04e6b002d6d2be9d541fca8c5778ce599a840f04ceda46`;
+  independent:
+  `de03fe6b491487193e32a373687db3553ed30115e5f4ce6ba1b89f544dad8eba` /
+  `f5ed4898094eb7191662fa3970c8a9ff05f2430fdadf937c6470efc2fa782837`.
+
+- `tournament_squarefree_gap_transfer_thm4099.py` and independent audit ->
+  matching `.out`s [THM-4099 PROVED + VERIFIED-EXACT + INDEPENDENTLY AUDITED].
+  For every nonempty base `B` and finite inserted set, the coefficient of each
+  squarefree face `X_S` in the exact gap polynomial is `H(B union S)`. Two
+  insertions give a four-state transfer matrix; degree `r` sees precisely the
+  base words with at most `r` bad old adjacencies. Proper-face/first-step count
+  profiles do not recover the mixed coefficient, minimally at the
+  transitive-triple/C3 boundary; complete labelled fibres are not claimed
+  insufficient. Primary script/output SHA-256:
+  `533b821ba8401958565d5b76272315d554c96d36a08cff825ab62acbd5ee175a` /
+  `3aa4c9ce323fae69ac7fe415de48ffb126e8a4297fbaf88f994082de950480b1`;
+  independent:
+  `e4e39b4c384cc7d19d2dc467650738f67f6c9ea60c823a98ae7c8da87d73cad2` /
+  `6c1acecef3f850efd10b2bc72e8904fc4be5596e90c2b36f9a93859e82dff19c`.
 
 - `lrc_weight_seven_scale_escape_thm4098.py` and independent audit ->
   matching `.out`s [THM-4098 PROVED RELATIVE TO THM-2061/2072/4092 +
@@ -107,8 +169,9 @@
   complete strong order-nine spectrum has `1,482` values and contains every
   odd value from `85` through `2,881`; explicit strong witnesses realize
   `613` and `623`. Combined with THM-1370/4094, every allowed odd value through
-  `2,881` is attained and the first unforced lane values are `2,887` and
-  `2,933=7*419`. Primary script/output SHA-256:
+  `2,881` is attained; at this theorem's scope the first unforced lane values
+  are `2,887` and `2,933=7*419`. THM-4102/4104 subsequently supersede that
+  numerical frontier. Primary script/output SHA-256:
   `610ca5850b272e0e75c574f2c1a710a0b96c75cc7191b1e1f1a03dfbdd1378d6` /
   `0c3c9690ad5877d86480693af7ce97d8936c90e21b65677eefec72234c933dc0`;
   independent script/output SHA-256:

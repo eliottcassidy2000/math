@@ -23,6 +23,9 @@ depends_on:
 related:
   - THM-012b-insertion-decomposition
   - THM-4097-order-nine-strong-ear-spectrum-solid-interval-and-lane-extension
+  - THM-4099-squarefree-gap-transfer-and-mixed-insertion-boundary
+  - THM-4102-selected-order-ten-strong-ear-solid-interval
+  - THM-4104-selected-order-eleven-strong-ear-solid-interval
   - THM-2290-context-selected-colored-pair-kernel-is-hafnian-complete
   - THM-3456-left-permutive-trace-bijection-and-rule30-seed-boundary
   - THM-796-three-sorted-recursive-tiling-line-node-incidence
@@ -360,7 +363,8 @@ multiplication is prime `613`, and the first seven-prime target is
 `7*89=623`. These are targets relative to the prefix `(25)`, not asserted
 gaps. THM-4097 subsequently gives explicit strong witnesses for both and
 extends the current first-unforced lane values to `2,887` and
-`7*419=2,933`.
+`7*419=2,933`. THM-4102 then moves them to `14,657` and `14,777`, and
+THM-4104 moves the current frontier to `80,407` and `7*11,527=80,689`.
 
 There is a sharp actual-tournament hostile to inference from the finite prefix
 and value-controlled operations alone. Put

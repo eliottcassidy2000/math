@@ -8,8 +8,10 @@ status: >
   contains every odd value from 249 through 14,649 and a second solid interval
   from 15,055 through 15,551. Together with prior canon and multiplication
   this extends the allowed global prefix through 14,655 and moves the first
-  unforced lane values to 14,657 and 7*2,111=14,777. This is a selected
-  construction, not a complete order-ten census; the global conjecture is OPEN.
+  unforced lane values at this theorem's scope to 14,657 and
+  7*2,111=14,777. THM-4104 subsequently moves the current targets to 80,407
+  and 7*11,527=80,689. This is a selected construction, not a complete
+  order-ten census; the global conjecture is OPEN.
 source: codex-frontier-synthesis-creative-20260825g
 depends_on:
   - THM-1370-h-spectrum-omits-7-21-all-n
@@ -17,6 +19,7 @@ depends_on:
   - THM-4097-order-nine-strong-ear-spectrum-solid-interval-and-lane-extension
 related:
   - THM-4099-squarefree-gap-transfer-and-mixed-insertion-boundary
+  - THM-4104-selected-order-eleven-strong-ear-solid-interval
 script: 04-computation/tournament_selected_order10_strong_ear_interval_thm4102.py
 output: 05-knowledge/results/tournament_selected_order10_strong_ear_interval_thm4102.out
 independent_audit_script: 04-computation/tournament_selected_order10_strong_ear_interval_thm4102_independent_audit.py
@@ -156,6 +159,8 @@ all odd primes p>=14657, and all 7p with odd prime p>=2111. (9)
 ```
 
 These are first unforced targets, not claimed gaps.
+THM-4104 subsequently supersedes this numerical frontier: its selected
+order-eleven image moves the two tail bounds to `80,407` and `11,527`.
 
 ## 4. Exact verification boundary
 
