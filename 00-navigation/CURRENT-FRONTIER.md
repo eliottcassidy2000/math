@@ -75,7 +75,8 @@ is the safe control `M(S_13)=99/338`. No cited result proves LRC(14).
   gives profile `(11,9,8,8,7,7,...)` and equality moduli `2,3,4`.
   [THM-4030](../01-canon/theorems/THM-4030-lrc14-d4-affine-defect-lattice-boundary.md)/[4032](../01-canon/theorems/THM-4032-lrc14-d3-affine-defect-lattice-boundary.md)
   give exact `d=4/3` affine circuits and close certificate-negative rows.
-  THM-4041 gives exact `d=2`; [THM-4070](../01-canon/theorems/THM-4070-lrc14-d2-mod14-two-bank-affine-ray-firewall.md) forces divisor cover `8..14`, and [THM-4075](../01-canon/theorems/THM-4075-lrc14-divisor-complete-dyadic-owner-word-closure-through-30.md) closes `max H<=30` by owner-word clocks `N<=38`.
+  THM-4041 gives exact `d=2`; [THM-4070](../01-canon/theorems/THM-4070-lrc14-d2-mod14-two-bank-affine-ray-firewall.md) forces divisor cover `8..14`, and [THM-4075](../01-canon/theorems/THM-4075-lrc14-divisor-complete-dyadic-owner-word-closure-through-30.md) closes `max H<=30`.
+  THM-4079 closes large one-outlier extensions adaptively; its premise is not universal.
   [THM-4052](../01-canon/theorems/THM-4052-lrc14-affine-component-width-escape-cones.md) closes the `d2/d3/d4` escape cones; THM-4062 retains the affine intercept.
   THM-4066 closes two three-exception shapes; LRC(14) stays open.
   [THM-4025](../01-canon/theorems/THM-4025-lrc14-owner-residue-odd-dilation-semigroup.md)
@@ -122,7 +123,7 @@ is the safe control `M(S_13)=99/338`. No cited result proves LRC(14).
 
 ## Mahler `3/2`
 
-**OPEN.** [THM-4074: every finite post-terminal cylinder occurs; global orbit remains](MAHLER-THREE-HALVES-FRONTIER-2026-08-23.md).
+**OPEN.** [THM-4077 separates tangent coding from both termination gates](MAHLER-THREE-HALVES-FRONTIER-2026-08-23.md).
 
 ## ABC-IUT
 
@@ -232,7 +233,7 @@ THM-2070 refutes the general HYP-8890/8895 bypasses.  Transfer
   Calkin--Wilf Berggren radix. THM-4059/4061/4068 give Stern stars and
   prime/squarefree bounds. [THM-4071](../01-canon/theorems/THM-4071-stern-prime-power-stationary-phase-and-all-odd-apex-balance.md)
   proves `|K_(p^a)(h,k)|<=2sqrt(p^a gcd(h,k,p^a))` and all-odd
-  `|S(q)|,|B(q)|<=q^(1/2+o(1))`; the kernel factors, parity and `S` do not.
+  `|S(q)|,|B(q)|<=q^(1/2+o(1))`; THM-4076 adds exact mod-eight residues.
 - THM-3457/3462: `25/477`.
 - THM-1926 factors zeta over the strong core; THM-1940 gives `var(lambda^2)`.
 - THM-1965 stops at `n<=6`; THM-1966 adds a signed-Rédei coordinate at `n=7`.

@@ -111,6 +111,8 @@ infinitely many resets.
 rules out a bounded version of this task.  A reachable denominator-19 terminal
 family has arbitrarily long reset runways and then programs every finite carry
 word beginning in `1`; safe words stay nonrejecting and greedy prefixes reach
-unbounded follower state.  The parameter changes with the requested horizon.
-The honest target is therefore a global invariant or one fixed infinite
-reachable orbit, not a larger finite prefix/state census.
+unbounded follower state.
+
+[THM-4077](../01-canon/theorems/THM-4077-mahler-denominator19-2adic-tangent-full-shift-isometry.md)
+closes these programmers to a moving-time odd-`Z_2` tangent isometry, not one
+orbit. Parameter/output termination give two different open safe intersections.

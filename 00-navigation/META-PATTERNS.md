@@ -250,8 +250,8 @@ keep a decoder.
 a kernel but not its parity weight; inverse limits close strict/Buechi gates.
 A canonical carrier need not give a canonical observable or language.
 **Evidence:** THM-4069 (tree-diameter generator orbits), THM-4071
-(kernel/parity split), THM-4072 (rooted-tree bijection versus two tail gates),
-and THM-3756/3382/3758/3819/4065--4068.
+(kernel/parity split), THM-4072/4077 (carrier versus tail acceptance),
+THM-4078/4079 (retained sidecars), and THM-3756/3382/3758/3819/4065--4068.
 
 ## Tournament Analysis must preserve content
 

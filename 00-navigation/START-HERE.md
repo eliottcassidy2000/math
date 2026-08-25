@@ -55,7 +55,7 @@ Then read the routed frontier, guardrails, and theorem. Logs and reflections are
    atom, current and LRC(14) remain OPEN.
 10. **Pair structure must be typed.** THM-3423 gives a graph, not a tournament;
     THM-4071 gives Stern/apex `q^(1/2+o(1))` bounds for every odd modulus via
-    prime-power stationary phase, but parity still has CRT cross-ratio `-1`.
+    prime-power stationary phase, and THM-4076 adds exact mod-eight residues.
 11. **Support is not multiplicity.** THM-2000/2005/2352/3359/3362/3382
     separate collision, phase and harmonic address. THM-3425 makes joint
     period plus parity the primitive half cap-six breaker. Composite rank
