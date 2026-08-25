@@ -1,0 +1,13 @@
+THM-4074 independent native-first exact audit
+greedy_prefix_30=101000001001001010000000001000
+hensel_box=s:0..6;h:1..12;all_odd_start_words
+hensel_target_classes=28665
+hensel_candidate_gates=573468
+direct_suffix_safe_counts=1,1,2,3,4,6,9,13,20,30,44,67
+safe_target_lifts=1400
+native_direct_prefix_steps=36846
+greedy_lifts=s0:h4:t1;s0:h8:t65;s0:h12:t1089;s1:h4:t15;s1:h8:t255;s1:h12:t1535;s2:h4:t13;s2:h8:t189;s2:h12:t957;s3:h4:t15;s3:h8:t143;s3:h12:t399;s4:h4:t5;s4:h8:t37;s4:h12:t3109;s5:h4:t7;s5:h8:t247;s5:h12:t3063;s6:h4:t13;s6:h8:t125;s6:h12:t2685
+native_t1_controls=s0:m18:zeros4:reject10:resets4:maxq6;s1:m36:zeros5:reject6:resets5:maxq2;s2:m72:zeros6:reject10:resets7:maxq2;s3:m144:zeros7:reject8:resets7:maxq2;s4:m288:zeros8:reject15:resets12:maxq2;s5:m576:zeros9:reject10:resets9:maxq2;s6:m1152:zeros10:reject14:resets11:maxq2;s7:m2304:zeros11:reject12:resets11:maxq2;s8:m4608:zeros12:reject19:resets14:maxq3;s9:m9216:zeros13:reject14:resets13:maxq2;s10:m18432:zeros14:reject21:resets16:maxq2
+hostiles=even_t_has_one_extra_v2;word_11_lifts_but_is_not_safe
+scope=finite_exact_layers_and_all_parameter_proof_identities;Mahler_remains_open
+status=PASS

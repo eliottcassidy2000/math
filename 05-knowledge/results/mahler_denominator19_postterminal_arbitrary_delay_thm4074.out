@@ -1,0 +1,15 @@
+THM-4074 primary exact audit
+greedy_prefix_30=101000001001001010000000001000
+parameter_box=s:0..6;h:1..12;odd_t_mod_2^h
+isometry_layers=84
+odd_parameter_classes=28665
+odd_residue_classes=28665
+safe_odd_start_counts=1,1,2,3,4,6,9,13,20,30,44,67
+safe_target_realizations=1400
+direct_denominator19_prefix_steps=2286
+greedy_controls_h4_h8_h12=s0:h4:t1:m18;s0:h8:t65:m1170;s0:h12:t1089:m19602;s1:h4:t15:m540;s1:h8:t255:m9180;s1:h12:t1535:m55260;s2:h4:t13:m936;s2:h8:t189:m13608;s2:h12:t957:m68904;s3:h4:t15:m2160;s3:h8:t143:m20592;s3:h12:t399:m57456;s4:h4:t5:m1440;s4:h8:t37:m10656;s4:h12:t3109:m895392;s5:h4:t7:m4032;s5:h8:t247:m142272;s5:h12:t3063:m1764288;s6:h4:t13:m14976;s6:h8:t125:m144000;s6:h12:t2685:m3093120
+t1_rejection_controls=s0:reject10:resets4:maxq6;s1:reject6:resets5:maxq2;s2:reject10:resets7:maxq2;s3:reject8:resets7:maxq2;s4:reject15:resets12:maxq2;s5:reject10:resets9:maxq2;s6:reject14:resets11:maxq2
+even_t2_v2=4,5,6,7,8,9,10
+hostiles=even_t_changes_zero_count;word_11_realized_but_rejects;A1_rejects_at_index3
+scope=finite_postterminal_programming_only;no_infinite_survivor_claim
+status=PASS
