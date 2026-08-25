@@ -1,0 +1,33 @@
+THM-4059 Stern--Brocot depth-packet character audit
+
+canonical flank / inverse-formula cases through q=1200: 437785
+full-depth modular inversion and the odd/even inverse formulas: PASS
+
+packet units through q=5000: 7600457
+binary-recurrence primitive terms: 3800228
+S(2)..S(5000) sha256: 9e5baaaff1df2977b70969f9108f2be47dd1313658b3c7e1ec484959941260ee
+S(q)=2 sum_{2a+b=q} epsilon(a/b) and exact mod-4 law: PASS
+S(2)..S(20): [-1, 2, -2, 0, -2, 6, 0, -2, -4, 2, -4, 0, 2, 8, -4, -4, 2, 10, 0]
+
+B(q)=sum_{d|q}S(d), S(q)=sum_{d|q}mu(q/d)B(d): PASS
+B(2)..B(20): [-1, 2, -3, 0, -1, 6, -3, 0, -5, 2, -7, 0, 7, 10, -7, -4, -1, 10, -7]
+
+arbitrary weighted and signed Duffin--Schaeffer clock identities: PASS
+unweighted master-clock characters: [(6, -1), (60, -11), (420, -39), (840, -71), (2520, -139), (27720, -151)]
+
+complete primitive Berggren spinors with q<=1000: 202861
+fixed-height column is S(q) (even q) or S(q)/2 (odd q): PASS
+every complete ternary-depth row through h=8 has signed mass -1: PASS
+N  primitive-phases  signed-depth-mass
+    6                 4                 -2
+   60                52                -16
+  420               367                -45
+27720             25987               -201
+
+hostiles: S(10)!=S(2)S(5); q=5 is numerator-specific;
+          epsilon(2/11)^2 != epsilon(4/11), so no Dirichlet character
+exact packets: epsilon is trivial at q=3,7,15 and Legendre at p=5,13
+Khinchin hostile: 2/5 and 4/5 have equal digit length/product, opposite signs
+
+TOTAL EXACT GATES: 3928043
+ALL CHECKS PASSED

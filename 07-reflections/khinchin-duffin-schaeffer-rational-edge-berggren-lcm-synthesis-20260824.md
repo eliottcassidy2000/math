@@ -1,10 +1,11 @@
 # Khinchin, Duffin--Schaeffer, rational edges, and the two arithmetic trees
 
 **Session synthesis, 2026-08-24.** Current truth is owned by the linked canon,
-not by this reflection.  The session promotes two exact results:
+not by this reflection.  The session promotes three exact results:
 [THM-4056](../01-canon/theorems/THM-4056-divisor-phase-compiler-and-duffin-schaeffer-lcm-clock.md)
+[THM-4057](../01-canon/theorems/THM-4057-stern-brocot-depth-pullback-and-rational-edge-tournament-gauge.md),
 and
-[THM-4057](../01-canon/theorems/THM-4057-stern-brocot-depth-pullback-and-rational-edge-tournament-gauge.md).
+[THM-4059](../01-canon/theorems/THM-4059-stern-brocot-depth-packet-character-and-divisor-star-convolution.md).
 The irrationality of Khinchin's constant and of `e+pi` remain **OPEN**;
 Duffin--Schaeffer is **CITED**, not reproved; and no claim is made about
 LRC(14), planar `JC(2)`, or Sun-hole classification.
@@ -15,6 +16,7 @@ LRC(14), planar `JC(2)`, or Sun-hole classification.
 | Stern--Brocot / Berggren | `PROVED + VERIFIED-EXACT` | `D(wx)=D(x)+2|w|-#A`; Berggren `A`-Walsh is depth checkerboard | depth parity loses branch order and ancestry |
 | tournament completion | `PROVED + VERIFIED-EXACT` | a scale-invariant depth gauge; infinite Pell and Fibonacci directed cycles | the gauge is added and loses gcd/height |
 | divisor clocks | `PROVED + VERIFIED-EXACT` | `C_N` is the disjoint union of exact-denominator unit packets | a clock does not supply infinite correlation estimates |
+| depth packet character | `PROVED + VERIFIED-EXACT + INDEPENDENTLY AUDITED` | inverse formula, binary-Farey recurrence, mod-four law, star convolution, Berggren columns | asymptotics and global character classification |
 | Duffin--Schaeffer | finite input compiled exactly; infinite theorem `CITED` | first moments and every finite labelled arc are preserved | cross-layer overlap and limsup independence |
 | irrationality | scope/no-go sharpened | LCM clearing, Farey area, and reciprocal sheet are separated | nonzero integer linear form plus decay still missing |
 
@@ -272,6 +274,77 @@ does not supply that estimate.  This is exactly the MISTAKE-209 boundary.
 No approximation sequence for Khinchin's constant or `e+pi` emerged, so no
 irrationality claim was promoted.
 
+## Exact advance VI: the two gradings have a nontrivial character transform
+
+The frontier-board question
+
+```text
+S(q)=sum_(a in U_q)(-1)^D(a/q)
+```
+
+did not remain merely experimental.  THM-4059 proves that if `u` is the
+modular inverse of `a mod q` and `au=1+kq`, then modular inversion preserves
+the **full** Stern--Brocot depth and
+
+```text
+(-1)^D(a/q)=(-1)^(a+u)       (q odd),
+(-1)^D(a/q)=(-1)^(k+1)       (q even).                 (10)
+```
+
+The mechanism is THM-2632's mod-two Farey-flank hexagon: each Stern--Brocot
+step is an adjacent transposition of the three nonzero `F_2^2` directions.
+This is internal inversion inside `U_q`, not rational reciprocal.
+
+Even more usefully, the primitive-pair series satisfies
+
+```text
+F(X,Y)=XY-F(XY,Y)-F(X,XY),                             (11)
+```
+
+which yields
+
+```text
+S(2)=-1,
+S(q)=2 sum_(2a+b=q,(a,b)=1)(-1)^D(a/b)                 (q>2). (12)
+```
+
+Consequently `S(q)=phi(q) mod 4` for `q>2`.  The value is `2 mod 4` exactly for
+`q=4`, `q=p^e`, or `q=2p^e` with odd `p=3 mod 4`; it is zero mod four
+otherwise.
+
+This closes the direct clock/tournament bridge:
+
+```text
+B(q)=sum_(a<q) sigma_D(a,q)=sum_(d|q)S(d),             (13)
+```
+
+with Möbius inversion recovering `S`.  Arbitrary weighted versions live on
+the THM-4056 clock, so `W(d)=2psi(d)/d` gives an exact signed
+Duffin--Schaeffer packet sum.  It remains multiplicity/Fourier data, not
+coverage.
+
+On primitive opposite-parity spinors, the fixed-height column is `S(q)` for
+even `q` and `S(q)/2` for odd `q`, while every complete Berggren ternary row
+has signed sum `-1`.  Thus ancestry rows and denominator-height columns form
+a genuine two-dimensional Walsh table.  At the four master clocks the
+unsigned/signed Pythagorean packet pairs are
+
+```text
+(4,-2), (52,-16), (367,-45), (25987,-201).             (14)
+```
+
+Finally, the packets at `5` and `13` are exactly Legendre characters.  The
+thirteen packet is a Paley-graph/Gauss-sum column, not a Paley tournament.
+The same `q=5` row supplies the clean Khinchin hostile:
+
+```text
+2/5=[0;2,2],      4/5=[0;1,4]
+```
+
+have the same positive-digit length and product/geometric mean but opposite
+depth signs.  Khinchin's scalar statistic and the checkerboard character are
+therefore provably different information.
+
 ## Incoming-agent integration and audit repairs
 
 The parallel recovery and hostile audits materially changed the result.
@@ -288,14 +361,17 @@ The parallel recovery and hostile audits materially changed the result.
   in the Fourier statement.  Each was repaired before promotion.
 - Finite experiments were not allowed to carry the all-depth cocycle or the
   infinite Pell/Fibonacci laws; both were replaced by symbolic proofs.
+- The final cross-bridge probe turned the first proposed frontier question
+  into THM-4059.  Its `7,600,457`-unit prefix suggested the law, but the
+  promoted proof is the Farey functional equation and continuant reversal;
+  the finite scan is only a hostile audit.
 
 ## Frontier board after the session
 
-1. **Depth character on a denominator packet.**  Study
-   `S(q)=sum_(a in U_q)(-1)^D(a/q)`.  This is the first direct interaction
-   between the THM-4056 denominator grading and the THM-4057 depth grading.
-   Multiplicativity, prime-power recurrences, and Ramanujan transforms need
-   hostile tests before any conjecture.
+1. **Depth-character asymptotics.**  THM-4059 now gives the exact inverse
+   formula, recurrence, mod-four law, and divisor transform for `S(q)`.
+   Determine cancellation bounds, mean square, prime-power behavior, and all
+   moduli where the packet is a group character; `S` is not multiplicative.
 2. **Finite overlap operators.**  Retain the full labelled arc-overlap matrix
    on `C_(L_Q)` and ask which GCD-graph correlations become convolutional or
    block-circulant.  The target is a finite exact precursor, not a new proof
