@@ -1,0 +1,8 @@
+status=PASS
+implementation=iterative_Farey_tree_no_continued_fraction_or_packet_import
+fractions_generated=2736187
+odd_denominators_checked=1499
+odd_primes_checked=429
+controls=p5_zero;p13_zero;q9_noncharacter;q11_hostile
+table_sha256=c80934c31ddce68539572fb4c943d121818d7d6c1958306490df390a5345a713
+boundary=finite_exact_audit;Weil_prime_bound_remains_cited

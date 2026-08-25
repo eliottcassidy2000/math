@@ -1,0 +1,13 @@
+status=PASS
+scope=odd_q_exact_through_5000;prime_weil_consequence_checked_exactly
+identity=S(q)=4*N_q-phi(q)
+N_q=#{1<=r,s<=(q-1)/2:4rs=1_mod_q}
+prime_bound=|S(p)|<=2*sqrt(p)*Hstar(p)^2+2*Hstar(p)/p+(p-1)/p^2
+Hstar(p)=2*H_(p-1)-H_((p-1)/2)
+odd_denominators_checked=2499
+odd_primes_checked=668
+zero_packets_count=90
+zero_packets_first=[5, 13, 35, 45, 51, 61, 75, 119, 135, 153, 181, 205, 235, 273, 293, 315, 427, 465, 485, 505, 525, 579, 615, 651, 663, 675, 689, 699, 705, 771, 779, 833, 955, 979, 1015, 1045, 1055, 1109, 1211, 1245]
+largest_observed_S2_over_p=[(4159, 374, Fraction(139876, 4159)), (2837, 296, Fraction(87616, 2837)), (4801, -348, Fraction(121104, 4801)), (1789, -208, Fraction(43264, 1789)), (3821, -296, Fraction(87616, 3821)), (2707, 242, Fraction(58564, 2707)), (1709, -184, Fraction(33856, 1709)), (3011, 234, Fraction(54756, 3011)), (1423, 158, Fraction(24964, 1423)), (2819, 218, Fraction(47524, 2819)), (127, 46, Fraction(2116, 127)), (3407, 238, Fraction(56644, 3407))]
+table_sha256=55e9076f03e4812bc2778f364f95e3d6306dbdc41cd6e93f10f3ff7340dac02a
+boundary=Weil_bound_is_cited_not_reproved;no_zero_classification_or_LRC_claim

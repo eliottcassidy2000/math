@@ -1,5 +1,24 @@
 # Script Results Index
 
+- `stern_depth_modular_hyperbola_prime_balance_thm4061.py`, independent
+  Farey-tree audit, and Fourier hostile audit -> matching `.out`s [THM-4061
+  PROVED + CITED WEIL INPUT + VERIFIED-EXACT + INDEPENDENTLY
+  HOSTILE-AUDITED]. Every odd depth packet is the exact modular-hyperbola
+  discrepancy `S(q)=4N(q)-phi(q)`. At primes, Fourier completion plus the
+  cited Weil bound gives `S(p)=O(sqrt(p)log^2 p)` and normalized prime-apex
+  bias `O(log^2(p)/sqrt(p))`. The exact paths check 2,499 odd denominators
+  through 5,000 and 2,736,187 independently generated Farey fractions; the
+  Fourier reconstruction checks every odd prime through 79. Primary
+  script/output SHA-256:
+  `ef6af342a844ab219dd4ec0db93898540510c99cdf5b9d5848343ddc1bedceab` /
+  `a358382749869609b7f48f29090e2f380de2cea16f105097ec98e8e0c3e333ec`;
+  independent:
+  `7cdb75d9b4ade320a037dd0a8b46c09a9cc7640f5bbe6c3eb977958930d0f98c` /
+  `c0076d6b623cf34cb9937f2037fffa74fdb3694822c30973051fe3112aca17f6`;
+  hostile:
+  `a0b62b2fa5889e58530e1d76245d203510446ae26582dc4bb3bc7c88583f3ca0` /
+  `1fcb7d7a8b2335c07fd6bb4780369d64c70884280092b9e261fde4f8548ea752`.
+
 - `jc2_exceptional_simple_zero_mixed_form_cokernel_formal_pair_thm4060.py`
   and standalone split-prime hostile audit -> matching `.out`s [THM-4060
   PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED in a formal/local
