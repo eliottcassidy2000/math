@@ -107,17 +107,6 @@ is the safe control `M(S_13)=99/338`. No cited result proves LRC(14).
 
 **ABC OPEN; IUT-to-ABC CONTESTED.** [Ledger](../05-knowledge/reference/CORE-PAPERS-ABC-IUT.md); THM-4108 conditional.
 
-## Apex cubic / snarks
-
-**PREPRINT UNDER AUDIT:** [2608.22870v1](https://arxiv.org/abs/2608.22870);
-checks unreplayed; not full 4-flow. [Audit](../05-knowledge/reference/CORE-PAPERS-APEX-CUBIC-2026-08-25.md).
-[THM-4113](../01-canon/theorems/THM-4113-maximal-noncrossing-half-kempe-atlas.md)
-and [THM-4116](../01-canon/theorems/THM-4116-boundary-state-gluing-and-ap-odd-shell-tree-synchronizers.md)
-are **PROVED**.
-[HYP-9080](../05-knowledge/hypotheses/HYP-9080-tournament-deletion-slack-local-unavoidability.md)
-is **OPEN + FINITE-EXACT**. MISTAKE-507 corrects the `Z/3` claim to a
-`(Z/2)^2` 4-flow.
-
 ## NC2 and Gaussian moments
 
 ### Headline
