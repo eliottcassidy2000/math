@@ -1,0 +1,9 @@
+THM-4076 primary exact audit
+universe=odd q in [3,4999] rows=2499
+root_scan_candidates=6247500 nonfixed_even_even_orbit_pairs=630947
+divisor_star_terms=10071
+zero_S_count=90 prime_zero_S=[5, 13, 61, 181, 293, 1109, 1429, 1453, 3637]
+controls=[{"B":2,"N":1,"Omega":1,"S":2,"even_roots":1,"indegree":2,"omega":1,"outdegree":0,"phi":2,"q":3,"roots":2},{"B":0,"N":1,"Omega":1,"S":0,"even_roots":1,"indegree":2,"omega":1,"outdegree":2,"phi":4,"q":5,"roots":2},{"B":0,"N":1,"Omega":2,"S":-2,"even_roots":1,"indegree":4,"omega":1,"outdegree":4,"phi":6,"q":9,"roots":2},{"B":10,"N":4,"Omega":2,"S":8,"even_roots":2,"indegree":12,"omega":2,"outdegree":2,"phi":8,"q":15,"roots":4},{"B":-8,"N":3,"Omega":2,"S":-8,"even_roots":1,"indegree":8,"omega":1,"outdegree":16,"phi":20,"q":25,"roots":2},{"B":-8,"N":5,"Omega":1,"S":-8,"even_roots":1,"indegree":10,"omega":1,"outdegree":18,"phi":28,"q":29,"roots":2},{"B":6,"N":6,"Omega":2,"S":0,"even_roots":2,"indegree":20,"omega":2,"outdegree":14,"phi":24,"q":35,"roots":4},{"B":8,"N":11,"Omega":1,"S":8,"even_roots":1,"indegree":22,"omega":1,"outdegree":14,"phi":36,"q":37,"roots":2},{"B":8,"N":6,"Omega":3,"S":0,"even_roots":2,"indegree":26,"omega":2,"outdegree":18,"phi":24,"q":45,"roots":4},{"B":-8,"N":10,"Omega":2,"S":-8,"even_roots":2,"indegree":28,"omega":2,"outdegree":36,"phi":48,"q":65,"roots":4},{"B":12,"N":10,"Omega":3,"S":-8,"even_roots":4,"indegree":58,"omega":3,"outdegree":46,"phi":48,"q":105,"roots":8}]
+mod16_hostile=q13:S=0,Nmod4=3 versus q29:S=8,Nmod4=1
+semantic_sha256=3db7917b131abf20197bcadd21f3c4612494f2dd9c8c0b3d991c7cdac3ae0bea
+PASS: inverse orbits, mod-eight laws, degree residues, and zero gates

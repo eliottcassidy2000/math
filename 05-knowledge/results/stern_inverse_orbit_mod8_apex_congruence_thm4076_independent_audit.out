@@ -1,0 +1,9 @@
+THM-4076 independent Euclidean-depth audit
+universe=odd q in [3,2999] rows=1499
+primitive_depth_evaluations=1823912
+direct_apex_depth_evaluations=4497000
+zero_S_count=67
+controls=[{"B_direct":2,"N_half_box":1,"Omega":1,"S":2,"indegree_direct":2,"omega":1,"outdegree_direct":0,"phi":2,"q":3,"roots":2},{"B_direct":0,"N_half_box":1,"Omega":1,"S":0,"indegree_direct":2,"omega":1,"outdegree_direct":2,"phi":4,"q":5,"roots":2},{"B_direct":0,"N_half_box":1,"Omega":2,"S":-2,"indegree_direct":4,"omega":1,"outdegree_direct":4,"phi":6,"q":9,"roots":2},{"B_direct":10,"N_half_box":4,"Omega":2,"S":8,"indegree_direct":12,"omega":2,"outdegree_direct":2,"phi":8,"q":15,"roots":4},{"B_direct":-8,"N_half_box":3,"Omega":2,"S":-8,"indegree_direct":8,"omega":1,"outdegree_direct":16,"phi":20,"q":25,"roots":2},{"B_direct":-8,"N_half_box":5,"Omega":1,"S":-8,"indegree_direct":10,"omega":1,"outdegree_direct":18,"phi":28,"q":29,"roots":2},{"B_direct":6,"N_half_box":6,"Omega":2,"S":0,"indegree_direct":20,"omega":2,"outdegree_direct":14,"phi":24,"q":35,"roots":4},{"B_direct":8,"N_half_box":11,"Omega":1,"S":8,"indegree_direct":22,"omega":1,"outdegree_direct":14,"phi":36,"q":37,"roots":2},{"B_direct":8,"N_half_box":6,"Omega":3,"S":0,"indegree_direct":26,"omega":2,"outdegree_direct":18,"phi":24,"q":45,"roots":4},{"B_direct":-8,"N_half_box":10,"Omega":2,"S":-8,"indegree_direct":28,"omega":2,"outdegree_direct":36,"phi":48,"q":65,"roots":4},{"B_direct":12,"N_half_box":10,"Omega":3,"S":-8,"indegree_direct":58,"omega":3,"outdegree_direct":46,"phi":48,"q":105,"roots":8}]
+mod16_hostile=q13:S=0,Nmod4=3 versus q29:S=8,Nmod4=1
+semantic_sha256=c2db100477f3d70ee99b6ff907ba0f5e7898405e6361259a58cee29c67f68fae
+PASS: Euclidean depth, half-box hyperbola, direct stars, and degree counts
