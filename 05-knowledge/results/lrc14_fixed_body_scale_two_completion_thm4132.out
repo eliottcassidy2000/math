@@ -1,0 +1,11 @@
+status=PASS
+theorem=THM-4132 fixed U-body exceptional scale-two completion
+J=[33/70,27/56];length=3/280;owners=(15,),(4,)
+quotient_components=((Fraction(2, 21), Fraction(8, 63)), (Fraction(55, 63), Fraction(19, 21)));beta=2/63
+first_odd_scale_surplus=1/2520
+t1_clock=1/13;clearance=1/13
+fixed_sheet_hostile=w:1/9;sheet_gaps:(Fraction(1, 18), Fraction(0, 1))
+literal_controls=1000;range=odd 3..2001
+literal_control_sha256=51b170951a3f7d482f184410aab773484dfe5204ccc9862ee1b65203ea54a2c9
+scope=fixed body 2U only; arbitrary bodies, physical entry, and LRC14 remain open
+semantic_sha256=aa6314ca8c25b5ad512bef0874dfb7262bd65cab8b200abba32d1cfe6b7710a6
