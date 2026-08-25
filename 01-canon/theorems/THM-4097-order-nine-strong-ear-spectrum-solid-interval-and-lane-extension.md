@@ -27,6 +27,16 @@ script_sha256: 610ca5850b272e0e75c574f2c1a710a0b96c75cc7191b1e1f1a03dfbdd1378d6
 output_sha256: 0c3c9690ad5877d86480693af7ce97d8936c90e21b65677eefec72234c933dc0
 independent_audit_script_sha256: b58de51efa200374e6014c8aeace4086fc7df1b2b73db36a01c0fcc4d2dd7943
 independent_audit_output_sha256: 71058bc6b31ba26a59a58bb7f1e5366e767ed43db1f4bb2ddb80642b02acbfa6
+certificate_atlas_script: 04-computation/order9_strong_ear_interval_certificate_codex_20260825.py
+certificate_atlas_audit_script: 04-computation/order9_strong_ear_interval_independent_audit_codex_20260825.py
+certificate_atlas: 05-knowledge/results/order9_strong_ear_interval_certificates_codex_20260825.tsv
+certificate_atlas_output: 05-knowledge/results/order9_strong_ear_interval_certificate_codex_20260825.out
+certificate_atlas_audit_output: 05-knowledge/results/order9_strong_ear_interval_independent_audit_codex_20260825.out
+certificate_atlas_script_sha256: e9853437725f3d49fa10e75fc0d01a6c41b4e6ec4b5d71b909b9785ed23f0f36
+certificate_atlas_audit_script_sha256: f8347ff0fb3e3412ab0b87802074da68e85c7feb589a676374f2c0592f81fd8d
+certificate_atlas_sha256: 4aa1304da5c70e401c4953707820d377aeaf2418638dce747246c383309b3136
+certificate_atlas_output_sha256: 1fb90b6e3c622c46cd99dfff7f8ced8312b740a6ac74d7b23e93d99082a3db12
+certificate_atlas_audit_output_sha256: 7fe896cebf2e5641e07be6de56a0d25a0b952c9dd752fd5c7a93279aa625f975
 engine: 04-computation/strong_H_spectrum_m8_isoclass_monad_s5.py
 engine_sha256: 6ab922de4a8b6f6c15ee0ca7e0b036c3821b3e800dbdf961de72194e73346419
 historical_histogram: 05-knowledge/results/h_spectrum_n9_histogram_monad_s6.tsv
@@ -41,7 +51,9 @@ audit: >
   order eight, evaluates all 1,526,032 nonconstant strong ears by a subset-DP
   boundary polynomial, and directly checks one labelled witness for every
   retained value. Two older order-nine canonical enumerations give the same
-  1,482-value set. The independent path compares those frozen universes and
+  1,482-value set. A later certificate atlas freezes and independently
+  reconstructs one parent/cut/child witness for every one of the 1,399 odd
+  values in the solid interval. The independent path compares those frozen universes and
   checks eight boundary witnesses by both Held--Karp DP and literal
   permutation enumeration. Normal/-O streams byte-match frozen outputs.
 ---

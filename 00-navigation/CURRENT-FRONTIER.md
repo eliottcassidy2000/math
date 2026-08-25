@@ -56,7 +56,9 @@ is the safe control `M(S_13)=99/338`. No cited result proves LRC(14).
 - **Short-relation/decoder lane (PROVED + CITED):** [THM-4009](../01-canon/theorems/THM-4009-euclidean-covering-transference-short-relation-compression.md) gives square norm `<=195`; THM-2052 is terminal at rank twelve.
   THM-3793/3818/[3825](../01-canon/theorems/THM-3825-prime-colour-valuation-two-cube-decoder.md) recover both scales at `91^6` except one congruence fibre. THM-3878/3910/4002--4004 leave 17 `11+2` types and owner/arrival.
 - **Affine/comb lane (PROVED):** [THM-4024](../01-canon/theorems/THM-4024-lrc14-complete-divisor-incidence-envelope.md) gives profile `(11,9,8,8,7,7,...)`; THM-4030/4032/4041 and THM-4070/4075/4079 close shapes. THM-4087 closes AP9 plus two outliers for `70<=B<C`.
-  [THM-4092](../01-canon/theorems/THM-4092-parity-weighted-antipodal-k-comb-density-compiler.md) gives weights one/two and closes AP8 plus three distinct speeds `>=281` through all dilations. Arbitrary cores and physical entry remain open.
+  THM-4092 closes AP8 plus three speeds `>=281`; THM-4098/4101 add the missing
+  dilated weight-seven rows and an unscaled AP7 gap-four family. Arbitrary
+  cores and physical entry remain open.
 - **Quantifier/type controls (PROVED):** [THM-4095](../01-canon/theorems/THM-4095-exact-arithmetic-field-transport-gapped-pair-margins-and-order-tournament-blindness.md) gives exact field transport and a primitive-pair optimized-margin gap `(0,1/15)`; [THM-4096](../01-canon/theorems/THM-4096-twisted-padic-affine-lrc-ray-optimizer-and-next-case-obstruction.md) finds a nonnegative twisted affine expansion only at the first THM-2057 `182m` ray point. These are firewalls, not LRC(14).
 - **Owner/tail lane (PROVED):** [THM-4025](../01-canon/theorems/THM-4025-lrc14-owner-residue-odd-dilation-semigroup.md)/[4031](../01-canon/theorems/THM-4031-lrc14-endpoint-owner-rational-tail.md) give the old-strip survivor tail; THM-4029/4038 give the twelve-owner 60-phase law; THM-4033/4042 give the prime-sector tail and clocks through `P=11`, with `P=17` hostile. THM-4035 makes clocks addresses, not transfers. See the [detailed proof map](LRC14-PROOF-MAP.md).
 - **PROVED:** [THM-2928](../01-canon/theorems/THM-2928-critical-seven-comb-grid-tensorization-and-drift-tariff.md)/2941: literal zero/one/two/three-drift sectors are empty; `k=2,3` are finite.
@@ -339,8 +341,9 @@ lift/phase clocks.
   named cells only. THM-3992/3997 reduce the first live `2:3` cell to
   `R in (p^2,y)`; THM-4005 excludes live `3x4/4x3`; THM-4012/4045 exclude
   `M=6,7`. THM-4053 kills off-wall `p^4`/two-term weight eight and gives a
-  norm-degree gate for `p*y^2`; three walls remain. THM-4044's sixty-clock
-  alias still needs a second jet or degree cap.
+  norm-degree gate for `p*y^2`; three walls remain. THM-4103 reduces its
+  boundary to a finite degree/target-response problem. THM-4044's sixty-clock
+  alias still needs an independent closure.
   Exceptional quartic: THM-3703/3737 give grammar/image, THM-4034 the
   conductor, and THM-4039/4043/4046 reach `J_7`, obstruct `J_8`, and close
   critical `H`. [THM-4054](../01-canon/theorems/THM-4054-exceptional-affine-simple-zero-retained-packet.md)

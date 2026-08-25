@@ -1,5 +1,65 @@
 # Script Results Index
 
+- `jc23_theta_boundary_response_thm4103.py` and independent audit -> matching
+  `.out`s [THM-4103 PROVED RELATIVE TO THM-3992/4053 + VERIFIED-EXACT +
+  INDEPENDENTLY VERIFIED-EXACT; JC(2) OPEN]. On the smooth nonresonant
+  theta-only survivor, the complete generic Newton polygon has genus eight
+  and source-infinity ramification packet `{1,2,2,3,3,3,7}`. This packet
+  exhausts the fourteen Riemann--Hurwitz units. The index-one puncture is
+  forced to target infinity and the index-two pair is one quadratic Galois
+  orbit, reducing the degree to `{7,12,21}` and the response universe to
+  `3` coarse, `4` edge-refined, and `5` labelled profiles. The index-seven
+  branch forces `deg_t(A),deg_t(C)>=7` and total degrees at least `15,16`.
+  Both live `phi` support branches
+  and six counterfactual coefficient-deletion hostiles are checked; deleting the mandatory
+  `(4,2)` vertex preserves genus and ramification total but changes the
+  packet. Primary script/output SHA-256:
+  `2ad7fe9eb5ab3a683c4c3ea552e4c88f989cc654133e91df014340ed8398a71c` /
+  `dd387a9865cb4a0a397e510b8e7c6a64750b1bf9c64c8e2907dc2d6b24cc29af`;
+  independent:
+  `682b14ecfbd932dc0d6f15b2b0fd9c42541eba2b4a509f03e2b0f747f0a1d3c7` /
+  `e3fb544a4d0e28c8b827889efe1670e5bf7fae0b2fd14b8bf4749e917bc36dfb`.
+
+- `lrc_ap7_weight_seven_gap4_second_moment_thm4101.py` and independent audit
+  -> matching `.out`s [THM-4101 PROVED RELATIVE TO THM-2072/4092 +
+  VERIFIED-EXACT + INDEPENDENTLY VERIFIED-EXACT; LRC(14) OPEN]. On the exact
+  AP7 safe interval, four outliers of total antipodal weight seven are
+  absorbed when one is even, three are odd, an odd pair is `{u,u+4}`, and
+  the explicit overlap-credit inequality holds. Minimum speed `264` is a
+  uniform sufficient boundary; `{8,9,11,13}` is a hostile cover and `263` is
+  only a failure of the criterion. Primary script/output SHA-256:
+  `9937f686321c7950fb6c9c907946506aaf37d7c9e7f118c5942074d7a92b74c0` /
+  `ec138ce28df0e921d45c462ef19d81308e0725863e85479b0f340033303bc038`;
+  independent:
+  `34cd587c7bb1dad0a50d0d624f06ef21d64479952340c42f65dcb2060c332745` /
+  `06703acf7534a918813f7bcf863155442e03f8011e1ff3778d074621a171e743`.
+
+- `lrc_weight_seven_scale_escape_thm4098.py` and independent audit ->
+  matching `.out`s [THM-4098 PROVED RELATIVE TO THM-2061/2072/4092 +
+  VERIFIED-EXACT + INDEPENDENTLY VERIFIED-EXACT; LRC(14) OPEN]. A positive
+  base safe interval plus the exact parity-sensitive dilation pullback closes
+  every antipodal weight-seven bank of cardinality below seven when `qL>=1`.
+  This fills the missing AP7/AP6/AP5 parity rows at `q>=55,35,35`; odd `q`
+  preserves the two phases and even `q` collapses them to a sub-seven
+  one-phase bank. Primary script/output SHA-256:
+  `a6f77908408ae854cdc3e24f7dd7de0e330d032a9e9893a5d0cdce3a1daabb46` /
+  `00a2a184154ed668d69e18babad51f4a99cae16c9fa69b34cb6b85b5a8a9db47`;
+  independent:
+  `929edc49da3b0ac83979faceed33fd2b7c5b48e8b81a5b564158a723ce92deeb` /
+  `eb33a5c20defc168d6200ddaccd1eaa95eddd031d8d3620f3bd272d649f40f9e`.
+
+- `order9_strong_ear_interval_certificate_codex_20260825.py` and independent
+  audit -> a `1,399`-row TSV [FINITE-EXACT + INDEPENDENTLY VERIFIED-EXACT
+  certificate-atlas addendum to THM-4097]. Every odd value in `[85,2881]`
+  has an explicit strong order-eight parent, nonconstant cut, and reconstructed
+  strong order-nine child. The audit recomputes every Hamiltonian-path count.
+  Both strong order-eight `H=613` classes and all their `508` nonconstant ears
+  miss `623`; the certified `623` child instead comes from an `H=99` parent.
+  Generator/auditor/TSV SHA-256:
+  `e9853437725f3d49fa10e75fc0d01a6c41b4e6ec4b5d71b909b9785ed23f0f36` /
+  `f8347ff0fb3e3412ab0b87802074da68e85c7feb589a676374f2c0592f81fd8d` /
+  `4aa1304da5c70e401c4953707820d377aeaf2418638dce747246c383309b3136`.
+
 - `lrc_twisted_padic_affine_margin_optimizer_thm4096.py` and independent
   audit -> matching `.out`s [THM-4096 PROVED + VERIFIED-EXACT +
   INDEPENDENTLY VERIFIED-EXACT; LRC(14) OPEN]. On

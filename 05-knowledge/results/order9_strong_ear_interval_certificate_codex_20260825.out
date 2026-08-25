@@ -1,0 +1,18 @@
+ORDER-NINE STRONG-EAR INTERVAL CERTIFICATE
+formula_calibration_C3=((1, 5), (2, 5), (3, 5), (4, 5), (5, 5), (6, 5))
+order8_classes=6880
+strong_order8_parents=6008
+nonconstant_cuts_scanned=1526032
+formula_spot_checks=512
+H613_parent_classes=2
+H613_parent_nonconstant_cuts=508
+H613_to_H623_ears=0
+certificate_rows=1399
+interval=all odd H in [85,2881]
+certificate_sha256=4aa1304da5c70e401c4953707820d377aeaf2418638dce747246c383309b3136
+certificate_path=05-knowledge/results/order9_strong_ear_interval_certificates_codex_20260825.tsv
+witness_85=(131201, 2, 56406573441, 51, 34, 1, 50)
+witness_613=(4097, 64, 39226204289, 65, 64, 32, 517)
+witness_623=(320, 86, 38688260800, 99, 36, 66, 521)
+witness_2881=(10636354, 58, 51692247234, 583, 323, 324, 2234)
+conclusion=FINITE-EXACT explicit strong order-nine ear witnesses

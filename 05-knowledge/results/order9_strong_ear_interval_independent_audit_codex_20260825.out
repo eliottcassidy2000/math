@@ -1,0 +1,9 @@
+ORDER-NINE STRONG-EAR INTERVAL INDEPENDENT AUDIT
+controls=transitive6:H=1/non-strong;C3:H=3/strong
+certificate_sha256=4aa1304da5c70e401c4953707820d377aeaf2418638dce747246c383309b3136
+verified_rows=1399
+verified_interval=all odd H in [85,2881]
+distinct_parent_H_values=109
+parent_H_range=(45, 657)
+strong_parent_failures=0;strong_child_failures=0;H_failures=0
+conclusion=INDEPENDENTLY VERIFIED FINITE-EXACT
