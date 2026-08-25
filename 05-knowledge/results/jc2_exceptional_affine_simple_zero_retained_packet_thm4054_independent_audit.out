@@ -1,0 +1,10 @@
+AFFINE EXCEPTIONAL INDEPENDENT ARRAY AUDIT
+Qvalues=(Fraction(-3, 1), Fraction(-3, 4), Fraction(-3, 1));Qderivatives=(Fraction(-9, 2), Fraction(1, 1), Fraction(9, 2));Qprime0=1=>non_even
+local_identity=Jac_xq(a,c)=-3, so (a,-4c) has Jac=12 for H=t
+cut5=rows63/all168/exact231/fixed83/linearized166
+roots44,82,92,134:ranks=59,59,57,59;spans(all,exact,fixed,mixed-tangent)=1,1,0,1
+fixed_a_obstruction=first appears at cut5 for H=t+t^2
+mixed_first_order=required -24t lies in affine Darboux tangent image
+scope=retained three-multigerm packet, not a global pair or all-order lift
+summary_sha256=16ecfc3a74d4ebf28d4aaf28e404ad196274cf0ead1c2a96da1bbe4113206f4a
+RESULT=PASS

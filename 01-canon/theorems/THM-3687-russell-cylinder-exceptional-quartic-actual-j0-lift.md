@@ -23,6 +23,7 @@ depends_on:
 related:
   - THM-3678-russell-cylinder-qdagger-actual-j0-lift
   - THM-3680-russell-cylinder-qdagger-coupled-stable-lift
+  - THM-4054-exceptional-affine-simple-zero-retained-packet
 script: 04-computation/jc2_russell_cylinder_exceptional_quartic_exact_j0_lift_thm3687.py
 auxiliary_script: 04-computation/jc2_russell_cylinder_exceptional_quartic_modular_lift_thm3687.py
 output: 05-knowledge/results/jc2_russell_cylinder_exceptional_quartic_exact_j0_lift_thm3687.out

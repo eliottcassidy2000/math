@@ -42,6 +42,7 @@ related:
   - THM-3677-russell-cylinder-degree-eight-fourth-debt-parabola
   - THM-3688-russell-cylinder-exceptional-quartic-actual-j1-j2-lift
   - THM-4039-exceptional-quartic-j3-lift-and-adjacent-gate-rigidity
+  - THM-4054-exceptional-affine-simple-zero-retained-packet
 script: 04-computation/jc2_russell_cylinder_exceptional_quartic_order8_closure_thm4046.py
 output: 05-knowledge/results/jc2_russell_cylinder_exceptional_quartic_order8_closure_thm4046.out
 script_sha256: c5032d3c066a31207a4f09583be012c2437e6650e23c2ccae6db542592dd060c

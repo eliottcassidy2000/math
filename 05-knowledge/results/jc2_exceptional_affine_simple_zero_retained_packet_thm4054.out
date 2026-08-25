@@ -1,0 +1,24 @@
+EXCEPTIONAL AFFINE/SIMPLE-ZERO PACKET -- EXACT OVER Q(alpha)
+Q_values=(-3,-3/4,-3)
+Q_derivatives=(-9/2,1,9/2);Q_prime_0=1;Q_is_not_even=True
+local_identity=a=e/(b+4)=q/D^2;Jac_xq(a,c)=-3
+affine_local_pair=(a,-4c);source_Jacobian_for_H=t=12
+cut5=rows63;packet=J_n through x-order 5-n for n=0..5
+H=t:arbitrary_columns=168 rank=59 relation_dim=4
+H=t:polynomial_exact_columns=231 rank=59
+H=t:exact_image_equals_arbitrary=True;constant_in_image=True;terminal_J5_projection=0
+H=t:relation_sha256=bb0a2ba7f46b6bf721c875a1a7a19000e1b3b8845ba11bc4707bd299b9740852
+H=t+t^2:arbitrary_columns=168 rank=59 relation_dim=4
+H=t+t^2:polynomial_exact_columns=231 rank=59
+H=t+t^2:exact_image_equals_arbitrary=True;constant_in_image=True;terminal_J5_projection=0
+H=t+t^2:relation_sha256=bbaf81804c69200a9214711f4f3865acb39831f22af02d623436e788dd6b633e
+affine_vs_mixed:combined_relation_rank=6;images_equal=False
+affine_mixed-pair_tangent_image_equals_affine_arbitrary_image=True
+relation_nonzero_counts_for_both=(3, 7, 14, 23)
+fixed_F=a:H=t+t^2:cut4_columns=55 rank=40 relation_dim=5;constant_in_span=True
+fixed_F=a:H=t+t^2:cut5_columns=83 rank=57 relation_dim=6;constant_in_span=False
+fixed_F=a:nonzero_constant_response=(-2073506706944/1678822119, 372679949312/62178597, -184159683584/6908733, -73442787328/2302911)
+fixed_F=a:response_norm=28278059768285603108255604733711150481408/392425657272606224710564875
+mixed_first_order:columns=166 rank=59 relation_dim=4;required_-24t_in_span=True
+scope=retained_three-multigerm_cutoff_five_and_dual_numbers_only
+RESULT=PASS

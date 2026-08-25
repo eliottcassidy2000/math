@@ -9,6 +9,24 @@ Format per entry:
 - Why it was wrong
 - The correct framing
 
+## MISTAKE-493 (2026-08-24, exceptional affine packet) -- THM-3629's even-fold mixing conclusion was applied to a non-even fold
+
+- **What failed:** the nonlinear `H'(0)!=0` conclusion of THM-3629 was
+  imported to the exceptional polynomial `Q_alpha`, suggesting that both
+  outputs of every survivor must mix surface and stable coordinates.
+- **Minimal witness / first failed implication:** THM-3687 already records
+  `Q_alpha'(-1,0,1)=(-9/2,1,9/2)`, so `Q_alpha'(0)=1` and `Q_alpha` is not
+  even. THM-3629 uses evenness to create its shifted `D=0` sign collision;
+  dropping that hypothesis invalidates the mixing implication.
+- **Repair / strongest survivor:** THM-4054 rederives the parity-free local
+  identities `a=e/(b+4)=q/D^2` and `Jac_(x,q)(a,c)=-3`, then separates the
+  affine local pair, finite exact-form images, fixed-`a` hostile, and mixed
+  first-order tangent. It makes no global mixing, Darboux, Keller, or
+  `JC(2)` claim.
+- **Reusable rule:** when importing a theorem from a nearby exceptional
+  stratum, recheck every structural hypothesis even if its retained values
+  and ranks agree; a derivative or symmetry coordinate may have changed.
+
 ## MISTAKE-492 (2026-08-24, Rule 30 marked-cylinder Haar partition) -- the finite backward line omitted its no-zero terminal class
 
 - **What failed:** the first marked-cylinder note defined `Z_k=infinity`

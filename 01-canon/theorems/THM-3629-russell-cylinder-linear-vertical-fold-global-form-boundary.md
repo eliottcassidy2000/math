@@ -28,6 +28,7 @@ depends_on:
 related:
   - THM-3618-compiler-one-graph-observable-fibre-separator-no-embedding
   - THM-3622-compiler-one-observable-graph-closure-normalization-arm-debt
+  - THM-4054-exceptional-affine-simple-zero-retained-packet
 script: 04-computation/jc2_russell_cylinder_linear_vertical_global_form_boundary_thm3629.py
 output: 05-knowledge/results/jc2_russell_cylinder_linear_vertical_global_form_boundary_thm3629.out
 script_sha256: fa7c8c0edaf2ee31140f810923001126bf935ee1b3da3a21dc8cfd2203e54613
