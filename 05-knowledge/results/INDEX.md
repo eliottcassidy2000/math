@@ -1,5 +1,35 @@
 # Script Results Index
 
+- `lrc14_universal_two_speed_completion_thm4129.py` and independent periodic-
+  antiderivative/common-grid audit -> concordant semantic ledgers [THM-4129
+  PROVED ELEMENTARY UNIVERSAL COMPLETION + VERIFIED-EXACT + INDEPENDENTLY
+  AUDITED; LRC(14) OPEN]. For every distinct positive `a,b` outside
+  `U=(1,4,6,8,10,12,14,15,16,18,22)`, the set `U union {a,b}` is LRC(14).
+  A body window of length `3/280`, a sharp danger-comb bound, an exact
+  `23..41` table, and three clocks for the 26 low-tail residual pairs close
+  all `119,316` controls through 500 and all `5,855` scale-one `U`-body ratio
+  types. Arbitrary bodies, the scale-two `(2,1,9)` slice, and LRC(14) remain
+  open. Primary script/output SHA-256:
+  `f027c93324096de71a63f6cefcf7d9f75a6ef36b0b878c8b4248d6871d783cfa` /
+  `9a31e2ab7d319e63df067cfbfd05059a52b8e032b2fa1ae5bf7de93342d087b8`;
+  independent: `f977c65658b2dad6374196866c6f6211a1b833d3d24c9b852cf6fa959ea2bbe7` /
+  `a7e4df345ae9c50ce15ccef4a4e9dcfe31902df499e2733d27991d0d7ddfa456`.
+
+- `tournament_johnson_slice_support_envelope_thm4128.py` and independent
+  permutation audit -> concordant semantic ledgers [THM-4128 PROVED
+  ELEMENTARY DIRECTED-EXPOSURE QUADRATIC ENVELOPE + SHARP CENTRALITY
+  CRITERION + VERIFIED-EXACT + INDEPENDENTLY AUDITED]. All rational Johnson-
+  slice support floors form one strict quadratic in `t=n-2m`; its optimizer
+  is the nearest admissible parity-grid point, with sharp even/odd centrality
+  criteria. The complete `33,856`-parent census finds `8,448` rationally
+  noncentral order-six cases but no strong one, while 288 exact-coset
+  reorderings also yield no strong failure. Code `20` warns that the rational
+  optimizer need not locate the actual maximum. Primary script/output
+  SHA-256: `f4d92806b6df81d9bea5bd0e10123e62c9a98e7493e5b32979e4116e51f0739c` /
+  `420808f7876c0fbbfb28875add9968fec08c5a4f7a764f89a12d9852b64692c3`;
+  independent: `618a47772b369194d2d5fbbc60781fd7a35278d83be3f49d678d353bcb1dd437` /
+  `4d640604e1f898e45b2773c3acdae88fc81c3d7fe89411876fecaf0816923f51`.
+
 - `tournament_johnson_slice_hoeffding_variance_thm4127.py` and independent
   raw-incidence audit -> concordant semantic ledgers [THM-4127 PROVED
   ELEMENTARY JOHNSON-HOEFFDING DECOMPOSITION + SHARP SLICE SUPPORT + CENTRAL

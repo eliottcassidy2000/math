@@ -23,6 +23,7 @@ depends_on:
 related:
   - THM-4111-uniform-ear-average-and-recursive-selected-bank-growth
   - THM-4118-ear-response-lattice-and-stateful-unit-component-intervals
+  - THM-4128-johnson-slice-support-envelope-and-exposure-centrality-criterion
   - HYP-9029-strong-interval-tiling-law
 script: 04-computation/tournament_johnson_slice_hoeffding_variance_thm4127.py
 output: 05-knowledge/results/tournament_johnson_slice_hoeffding_variance_thm4127.out
@@ -385,6 +386,10 @@ For every rational slice floor simultaneously it is
 
 Exact lattice rounding additionally needs THM-4123's layer coset
 `(a_(T,m),d_(T,m))`.
+
+THM-4128 subsequently rewrites all these rational slice floors as one strict
+quadratic in `t=n-2m` and gives its exact nearest-grid optimizer. Exact cosets
+and actual maxima remain separate sidecars.
 
 The smaller THM-4123 packet `(H,F_1,W)` is insufficient: order-five codes
 `8` and `759` have the same balanced mean `144/5`, but variances `1469/25`

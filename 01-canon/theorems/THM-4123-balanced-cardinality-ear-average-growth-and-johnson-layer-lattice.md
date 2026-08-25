@@ -22,6 +22,7 @@ related:
   - THM-4111-uniform-ear-average-and-recursive-selected-bank-growth
   - THM-4114-ocf-mobius-positivity-tropical-defect-layer-and-opposite-ear-cut-curvature
   - THM-4127-johnson-slice-hoeffding-variance-and-central-support-dominance
+  - THM-4128-johnson-slice-support-envelope-and-exposure-centrality-criterion
   - HYP-2879-strong-ear-atom-calculus
   - HYP-9029-strong-interval-tiling-law
 script: 04-computation/tournament_balanced_cardinality_ear_average_layer_lattice_thm4123.py
@@ -386,10 +387,12 @@ the Johnson slice, and the preserved data are `H,W,F_1`, response parity,
 and strongness of nonconstant ears. Averaging in this theorem destroys the
 arrangement of the field and edge weights, slice variance, response
 connectivity, and the location of a global maximum. THM-4127 later restores
-the exact two-energy slice variance and central support dominance, but not an
-interval or a balanced global maximizer. The layer lattice restores one
-arithmetic coordinate but not interval connectivity; THM-4118's state-labelled
-unit components remain the relevant sidecar for propagation.
+exact two-energy slice variance and central dominance; THM-4128 then
+optimizes the rational floor across all nonconstant layers by a
+nearest-parity-grid rule. Neither proves an interval nor locates an actual
+maximizing layer. The layer lattice restores one arithmetic coordinate but
+not interval connectivity; THM-4118's state-labelled unit components remain
+the relevant sidecar for propagation.
 
 Run
 

@@ -71,7 +71,11 @@ is the safe control `M(S_13)=99/338`. No cited result proves LRC(14).
   THM-4105/4106 are reciprocal decoders; THM-4107/4108 are tournament/radical
   firewalls. THM-4110 finds `64` AP13 sheets; THM-4116 gives
   `2^(c(F)-1)`. Safety/arrival stay open.
-- **Owner/tail lane (PROVED):** [THM-4025](../01-canon/theorems/THM-4025-lrc14-owner-residue-odd-dilation-semigroup.md)/[4031](../01-canon/theorems/THM-4031-lrc14-endpoint-owner-rational-tail.md) give the old-strip survivor tail; THM-4029/4038 give the twelve-owner 60-phase law; THM-4033/4042 give the prime-sector tail and clocks through `P=11`, with `P=17` hostile. THM-4035 makes clocks addresses, not transfers. See the [detailed proof map](LRC14-PROOF-MAP.md).
+- **Owner/tail lane (PROVED):** THM-4025/4031 give survivor tails;
+  THM-4029/4038 the 60-phase law; THM-4033/4042 clocks through `P=11`
+  (`P=17` hostile). THM-4129 closes every two-speed completion of
+  `U=(1,4,6,8,10,12,14,15,16,18,22)` and all `5,855` scale-one `U`-body
+  slices; arbitrary bodies remain open. See the [proof map](LRC14-PROOF-MAP.md).
 - **PROVED:** [THM-2928](../01-canon/theorems/THM-2928-critical-seven-comb-grid-tensorization-and-drift-tariff.md)/2941: literal zero/one/two/three-drift sectors are empty; `k=2,3` are finite.
 - **Orthogonal routes.** THM-1017 is HYP-6820; THM-2047/2050 keep phase/exit; THM-731/2048 prune; THM-1290 ends at `55`; HYP-8900 nonuniform.
 - **PROVED micro-staircase:** THM-3316 closes every prime and THM-3317 proves
@@ -245,8 +249,8 @@ THM-2070 refutes the general HYP-8890/8895 bypasses.  Transfer
   THM-4102/4104 give intervals to `80,265` and prefix to `80,405` (next
   `80,407,80,689`). THM-4111/4115 force unbounded full-cut maxima via exact
   Walsh variance, factor `(n+1)(n+2)/(4n)` (`C3` sharp), and `F_1` surplus.
-  THM-4123 adds balanced means and Johnson lattices. THM-4127's best central
-  support floor dominates the cube floor; odd order needs both middle layers.
+  THM-4123 adds slice means/lattices; THM-4127 beats the cube centrally;
+  THM-4128 gives the exact all-slice quadratic optimizer (strong centrality OPEN).
   THM-4114 separates positive faces from submodular ear cuts; THM-4118 adds
   exact response gcds and stateful unit-component intervals. At `n=5`, all
   `544` parents have gcd `2` yet gaps, and `400` lack an `M-2` neighbor.

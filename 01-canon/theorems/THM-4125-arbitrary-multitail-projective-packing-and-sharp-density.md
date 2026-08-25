@@ -18,6 +18,7 @@ related:
   - THM-764-covering-small-period-signed-pair-deck-and-q25-refutation
   - THM-4119-infinite-supplier-free-eleven-plus-two-residue-family
   - THM-4121-sharp-projective-tail-multiplier-residue-compiler
+  - THM-4129-universal-two-speed-completion-of-the-eleven-speed-lrc14-body
   - HYP-7812
 script: 04-computation/lrc_arbitrary_multitail_projective_packing_thm4125.py
 output: 05-knowledge/results/lrc_arbitrary_multitail_projective_packing_thm4125.out
@@ -265,9 +266,10 @@ multipliers are distinct and `t>22`. Lonely runner permits different runners
 to occupy the same phase position, so co-location is not an obstruction.
 
 The fixed-density optimum is specific to `U`, phase `9/19`, and the benchmark
-`1/14`. A bad residue in `(6)` only fails that displayed benchmark; it is not
-a global nonloneliness claim. The natural-density statement is likewise an
-explicit-family certificate, not an arbitrary-core closure. Only the
+`1/14`. A bad residue in `(6)` only fails that displayed benchmark. THM-4129
+later closes every two-tail projection at `1/14`, but not the full `r>=3`
+bank. The natural-density statement is likewise an explicit-family
+certificate, not an arbitrary-core closure. Only the
 `C={1,c}` thirteen-speed specialization inherits THM-4121's uniform exclusion
 from THM-4112's three explicit suppliers. No supplier statement is asserted
 for general `C`, and LRC(14) remains open.

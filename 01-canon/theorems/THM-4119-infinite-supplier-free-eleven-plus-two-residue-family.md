@@ -18,6 +18,7 @@ related:
   - THM-4117-physical-eleven-plus-two-primitive-support-obstruction
   - THM-4121-sharp-projective-tail-multiplier-residue-compiler
   - THM-4125-arbitrary-multitail-projective-packing-and-sharp-density
+  - THM-4129-universal-two-speed-completion-of-the-eleven-speed-lrc14-body
 script: 04-computation/lrc_supplier_free_residue_family_thm4119.py
 output: 05-knowledge/results/lrc_supplier_free_residue_family_thm4119.out
 independent_audit_script: 04-computation/lrc_supplier_free_residue_family_thm4119_independent_audit.py
@@ -194,6 +195,7 @@ PYTHONHASHSEED=0 python3 -B 04-computation/lrc_supplier_free_residue_family_thm4
 ```
 
 All six streams match their frozen outputs byte-for-byte. The five excluded
-residues are failures only of the fixed phase `9/19`; they are not asserted
-to be nonlonely. This family does not prove LRC(14), classify arbitrary
-eleven-speed bodies, or exhaust component-ancestry suppliers. **QED.**
+residues fail only the fixed phase `9/19`; THM-4129 later proves every such
+row lonely at some phase. This family does not prove LRC(14), classify
+arbitrary eleven-speed bodies, or exhaust component-ancestry suppliers.
+**QED.**

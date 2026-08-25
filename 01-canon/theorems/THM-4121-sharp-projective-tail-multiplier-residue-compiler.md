@@ -18,6 +18,7 @@ related:
   - THM-4117-physical-eleven-plus-two-primitive-support-obstruction
   - THM-4119-infinite-supplier-free-eleven-plus-two-residue-family
   - THM-4125-arbitrary-multitail-projective-packing-and-sharp-density
+  - THM-4129-universal-two-speed-completion-of-the-eleven-speed-lrc14-body
 script: 04-computation/lrc_projective_tail_multiplier_residue_compiler_thm4121.py
 output: 05-knowledge/results/lrc_projective_tail_multiplier_residue_compiler_thm4121.out
 independent_audit_script: 04-computation/lrc_projective_tail_multiplier_residue_compiler_thm4121_independent_audit.py
@@ -226,7 +227,8 @@ normalization. **QED.**
 The `16/19` optimum is for this fixed body, the paired-tail form `{t,ct}`,
 and the single common phase `9/19`. It is not an upper bound for arbitrary
 phases, bodies, or LRC constructions. A parameter in a bad class only fails
-this displayed phase; it is not asserted to be nonlonely. Likewise the
+this displayed phase; THM-4129 later proves every actual paired-tail row
+lonely at some phase. Likewise the
 supplier conclusion concerns THM-4112's **three explicit thirteen-speed
 shapes**, not every possible input to its general component-ancestry lemma.
 Unlike the `c=3,t=2^45` specialization of THM-4117/4119, the new optimal
