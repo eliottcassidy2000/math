@@ -1,0 +1,8 @@
+small_exact_checks=92
+manifest_arithmetic_checks=43
+manifest_blocks=9
+manifest_union=[1,1001999999999999]
+manifest_class_targets=943194644
+claimed_zero_vector=0,0,0,0,0,0,0,0,1
+claimed_unique_zero=896315812331399
+all_checks=PASS

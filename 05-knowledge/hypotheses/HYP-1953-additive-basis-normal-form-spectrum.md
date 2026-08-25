@@ -11,6 +11,9 @@ related:
   - THM-4026-sun-two-four-six-eight-binomial-counterexample
   - THM-4027-sun-two-four-six-eight-universal-modular-solubility
   - THM-4028-sun-two-four-six-eight-average-order-criticality
+  - THM-4036-sun-2468-energy-and-support-exponent
+  - THM-4037-centered-binomial-parity-and-singular-fibres
+  - THM-4040-sun-2468-target-crt-class-singleton-census
 ---
 
 # HYP-1953: additive basis theorems form a coverage-density-normal-form spectrum
@@ -176,6 +179,42 @@ is not sufficient for universality even when all local congruences are soluble.
 This repairs any reading of “adding dimension” as a pointwise theorem: the
 missing ingredient is a lower-tail or concentration mechanism.
 
+## THM-4036/4037/4040 update: thick support, thin exact hole data
+
+The energy bound
+
+```text
+sum_(n<=X) a(n)^2 <<_epsilon X^(13/12+epsilon)
+```
+
+now shows that at least `X^(1-epsilon)` targets carry any fixed positive
+fraction of the cutoff-scale mean `asymp X^(1/24)`, globally and in every
+fixed arithmetic progression. This is substantially stronger than merely
+counting represented targets, but it still permits a density-one set of
+holes: logarithmic support exponent one is not positive density. The precise
+missing coordinate remains the lower tail, not total capacity.
+
+The centered-binomial identity in THM-4037 supplies a lawful odd-function
+bridge. Even binomial atoms become centered-even polynomials, while their
+forward differences are centered-odd and lower the rank. Complete-period
+parity isolates one odd target, and the derivative eliminant exposes eight
+singular target primes. These observables preserve reflection and critical
+fibres but destroy height and simultaneous lifting, so they are local
+sidecars rather than necessary-and-sufficient hole tests.
+
+THM-4040 gives the complementary finite fact. In the discovery class
+
+```text
+n = 459490 mod 1062347,
+```
+
+the known counterexample is the unique zero among `943,194,644` targets from
+one through `1,001,999,999,999,999`. This converts a search prior into an
+exact bounded classification, not a global one: the class samples only one
+target in `1,062,347`, and universal modular solubility forbids treating it as
+a congruence obstruction. Together the three theorems separate mean, energy,
+local criticality, finite search geometry, and pointwise coverage.
+
 ## Predictions
 
 1. Goldbach-like searches should record not only representation count but also
@@ -205,9 +244,9 @@ missing ingredient is a lower-tail or concentration mechanism.
 - Reuse this profile on LRC endpoint rows: representation count corresponds
   to possible repairs, singular product to endpoint debt, and carry debt to
   legal handoff/canonicalization cost.
-- For the Sun system, compute exact count/local-factor distributions on
-  dyadic windows and low-density CRT progressions; test concentration rather
-  than inferring it from the mean.
+- For the Sun system, extend the exact count/local-factor census beyond the
+  one audited CRT progression and sample unbiased dyadic windows; test lower
+  tails and concentration rather than inferring them from mean or energy.
 - Build the rank-labelled Pascal rewrite graph for the displayed combinadic
   state and prove confluence or exhibit an explicit separating invariant.
 - Split at the eighth-binomial shell and classify the full bounded trajectory

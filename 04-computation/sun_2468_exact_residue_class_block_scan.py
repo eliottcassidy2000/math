@@ -25,12 +25,43 @@ Example (the five-prime class containing THM-4026's counterexample):
 from __future__ import annotations
 
 import argparse
+from concurrent.futures import ThreadPoolExecutor
 import hashlib
+from math import comb
 import os
 from pathlib import Path
 import subprocess
 import sys
 import tempfile
+
+
+TARGET_CLASS_MODULUS = 1_062_347
+TARGET_CLASS_RESIDUE = 459_490
+TARGET_HOLE = 896_315_812_331_399
+
+# These half-open interval blocks partition [1, 1_002_000_000_000_000).
+# The remaining entries are exact expected controls, not search heuristics:
+# start, width, base, c4, c6, c8, triples, marks, targets, min, argmin, zeros.
+TARGET_CLASS_CENSUS = (
+    (1, 1_999_999_999_999, 459_490, 2631, 334, 127,
+     99_211_900, 51_852_255, 1_882_624, 3, 636_132_780_743, 0),
+    (2_000_000_000_000, 10_000_000_000_000, 2_000_000_418_018, 4119, 451, 159,
+     263_480_161, 283_941_711, 9_413_120, 2, 9_480_152_433_497, 0),
+    (12_000_000_000_000, 90_000_000_000_000, 12_000_000_210_658, 7033, 645, 209,
+     845_239_561, 2_789_161_302, 84_718_082, 2, 99_934_198_737_404, 0),
+    (102_000_000_000_000, 100_000_000_000_000, 102_000_000_469_112, 8343, 723, 228,
+     1_225_867_610, 3_272_771_677, 94_131_202, 3, 122_533_388_547_887, 0),
+    (202_000_000_000_000, 100_000_000_000_000, 202_000_000_520_206, 9226, 773, 240,
+     1_525_588_515, 3_321_577_932, 94_131_202, 4, 202_687_664_107_388, 0),
+    (302_000_000_000_000, 100_000_000_000_000, 302_000_000_571_300, 9910, 811, 249,
+     1_782_451_689, 3_390_881_393, 94_131_202, 3, 350_011_776_754_814, 0),
+    (402_000_000_000_000, 200_000_000_000_000, 402_000_000_622_394, 10963, 868, 262,
+     2_220_090_999, 6_842_995_836, 188_262_404, 4, 406_999_014_660_698, 0),
+    (602_000_000_000_000, 200_000_000_000_000, 602_000_000_724_582, 11778, 911, 272,
+     2_594_651_419, 6_944_628_451, 188_262_404, 4, 677_862_454_957_862, 0),
+    (802_000_000_000_000, 200_000_000_000_000, 802_000_000_826_770, 12452, 945, 279,
+     2_927_893_995, 6_984_950_518, 188_262_404, 0, TARGET_HOLE, 1),
+)
 
 
 CPP_SOURCE = r'''#include <algorithm>
@@ -47,6 +78,9 @@ using u64 = std::uint64_t;
 using u128 = unsigned __int128;
 
 static u64 choose_exact(u64 n, int k) {
+    if (n < static_cast<u64>(k)) {
+        return 0;
+    }
     u128 value = 1;
     for (int i = 1; i <= k; ++i) {
         value = value * static_cast<u64>(n - k + i) / static_cast<u64>(i);
@@ -234,11 +268,17 @@ int main(int argc, char** argv) {
 
 def parse_args() -> argparse.Namespace:
     parser = argparse.ArgumentParser(description=__doc__)
-    parser.add_argument("--start", type=int, required=True)
-    parser.add_argument("--width", type=int, required=True)
-    parser.add_argument("--modulus", type=int, required=True)
-    parser.add_argument("--residue", type=int, required=True)
+    parser.add_argument("--start", type=int)
+    parser.add_argument("--width", type=int)
+    parser.add_argument("--modulus", type=int)
+    parser.add_argument("--residue", type=int)
     parser.add_argument("--low-cutoff", type=int, default=0)
+    parser.add_argument(
+        "--target-class-census",
+        action="store_true",
+        help="replay the exact nine-block THM-4040 target-class census",
+    )
+    parser.add_argument("--jobs", type=int, default=3, help="parallel census engines (default: 3)")
     parser.add_argument(
         "--build-dir",
         type=Path,
@@ -249,6 +289,14 @@ def parse_args() -> argparse.Namespace:
 
 
 def require_inputs(args: argparse.Namespace) -> None:
+    if args.target_class_census:
+        if any(value is not None for value in (args.start, args.width, args.modulus, args.residue)):
+            raise SystemExit("do not combine --target-class-census with single-block inputs")
+        if args.jobs <= 0:
+            raise SystemExit("--jobs must be positive")
+        return
+    if None in (args.start, args.width, args.modulus, args.residue):
+        raise SystemExit("single-block mode requires START, WIDTH, MODULUS, and RESIDUE")
     if args.start <= 0 or args.width <= 0 or args.modulus <= 0:
         raise SystemExit("START, WIDTH, and MODULUS must be positive")
     if not 0 <= args.residue < args.modulus:
@@ -257,7 +305,12 @@ def require_inputs(args: argparse.Namespace) -> None:
         raise SystemExit("require 0 <= LOW_CUTOFF <= 65535")
 
 
-def build_and_run(args: argparse.Namespace, build_dir: Path) -> int:
+def require(condition: bool, message: str) -> None:
+    if not condition:
+        raise AssertionError(message)
+
+
+def compile_engine(args: argparse.Namespace, build_dir: Path) -> Path:
     build_dir.mkdir(parents=True, exist_ok=True)
     source_path = build_dir / "sun_2468_exact_residue_class_block_scan.cpp"
     executable_name = "sun_2468_exact_residue_class_block_scan.exe" if os.name == "nt" else "sun_2468_exact_residue_class_block_scan"
@@ -278,16 +331,133 @@ def build_and_run(args: argparse.Namespace, build_dir: Path) -> int:
         str(executable_path),
     ]
     subprocess.run(compile_command, check=True)
+    return executable_path
+
+
+def run_engine(
+    executable_path: Path,
+    start: int,
+    width: int,
+    modulus: int,
+    residue: int,
+    low_cutoff: int,
+) -> str:
     run_command = [
         str(executable_path),
-        str(args.start),
-        str(args.width),
-        str(args.modulus),
-        str(args.residue),
-        str(args.low_cutoff),
+        str(start),
+        str(width),
+        str(modulus),
+        str(residue),
+        str(low_cutoff),
     ]
-    completed = subprocess.run(run_command, check=False)
-    return completed.returncode
+    completed = subprocess.run(run_command, check=True, text=True, capture_output=True)
+    require(not completed.stderr, f"engine wrote stderr: {completed.stderr}")
+    return completed.stdout
+
+
+def parse_engine_output(output: str) -> tuple[dict[str, int | str], dict[int, int]]:
+    fields: dict[str, int | str] = {}
+    low: dict[int, int] = {}
+    for line in output.splitlines():
+        if line.startswith("LOW target="):
+            pieces = line.replace("LOW target=", "").replace(" count=", " ").split()
+            require(len(pieces) == 2, f"malformed LOW line: {line}")
+            low[int(pieces[0])] = int(pieces[1])
+        elif "=" in line and not line.startswith("interval="):
+            key, value = line.split("=", 1)
+            fields[key] = int(value) if value.isdigit() else value
+    require(fields.get("RESULT") == "PASS", "engine did not return RESULT=PASS")
+    return fields, low
+
+
+def small_independent_control(executable_path: Path) -> None:
+    start, width, modulus, residue = 1, 10_000, 33, 20
+    high = start + width - 1
+    targets = tuple(n for n in range(start, high + 1) if n % modulus == residue)
+    direct = {n: 0 for n in targets}
+    atom_lists = []
+    for k, lower in ((2, 2), (4, 3), (6, 5), (8, 7)):
+        values = []
+        top = lower
+        while (value := comb(top, k)) <= high:
+            values.append(value)
+            top += 1
+        atom_lists.append(values)
+    for a in atom_lists[0]:
+        for b in atom_lists[1]:
+            if a + b > high:
+                break
+            for c in atom_lists[2]:
+                if a + b + c > high:
+                    break
+                for d in atom_lists[3]:
+                    total = a + b + c + d
+                    if total > high:
+                        break
+                    if total in direct:
+                        direct[total] += 1
+    output = run_engine(executable_path, start, width, modulus, residue, 65_535)
+    fields, low = parse_engine_output(output)
+    require(low == direct, "C++ block counts disagree with direct Python Cartesian control")
+    require(fields["minimum_count"] == 2 and fields["minimum_target"] == 9590,
+            "small-control minimum changed")
+    print("small_direct_control=PASS;targets=303;minimum_count=2;minimum_target=9590;zeros=0")
+
+
+def census_block(executable_path: Path, index: int, row: tuple[int, ...]):
+    start, width = row[:2]
+    output = run_engine(
+        executable_path, start, width, TARGET_CLASS_MODULUS, TARGET_CLASS_RESIDUE, 0
+    )
+    fields, low = parse_engine_output(output)
+    expected_keys = (
+        "base", "c4_values", "c6_values", "c8_values", "feasible_higher_triples",
+        "representation_marks", "targets", "minimum_count", "minimum_target", "zeros",
+    )
+    expected_values = row[2:]
+    actual_values = tuple(fields[key] for key in expected_keys)
+    require(actual_values == expected_values,
+            f"census block {index} mismatch: {actual_values} != {expected_values}")
+    expected_low = {TARGET_HOLE: 0} if row[-1] else {}
+    require(low == expected_low, f"census block {index} LOW rows changed: {low}")
+    high = start + width - 1
+    return (
+        f"block={index};interval=[{start},{high}];base={fields['base']};"
+        f"triples={fields['feasible_higher_triples']};marks={fields['representation_marks']};"
+        f"targets={fields['targets']};minimum_count={fields['minimum_count']};"
+        f"minimum_target={fields['minimum_target']};zeros={fields['zeros']}"
+    )
+
+
+def target_class_census(executable_path: Path, jobs: int) -> None:
+    small_independent_control(executable_path)
+    with ThreadPoolExecutor(max_workers=jobs) as executor:
+        futures = [
+            executor.submit(census_block, executable_path, index, row)
+            for index, row in enumerate(TARGET_CLASS_CENSUS, 1)
+        ]
+        summaries = [future.result() for future in futures]
+    for summary in summaries:
+        print(summary)
+    total_targets = sum(row[-4] for row in TARGET_CLASS_CENSUS)
+    require(total_targets == 943_194_644, "wrong target census cardinality")
+    print(f"census_modulus={TARGET_CLASS_MODULUS};census_residue={TARGET_CLASS_RESIDUE}")
+    print("census_interval=[1,1001999999999999]")
+    print(f"census_targets={total_targets}")
+    print(f"census_holes=[{TARGET_HOLE}]")
+    print("RESULT=PASS")
+
+
+def build_and_run(args: argparse.Namespace, build_dir: Path) -> int:
+    executable_path = compile_engine(args, build_dir)
+    if args.target_class_census:
+        target_class_census(executable_path, args.jobs)
+        return 0
+    output = run_engine(
+        executable_path, args.start, args.width, args.modulus, args.residue, args.low_cutoff
+    )
+    sys.stdout.write(output)
+    return 0
 
 
 def main() -> int:

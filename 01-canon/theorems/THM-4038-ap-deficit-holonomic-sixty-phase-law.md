@@ -24,6 +24,7 @@ related:
   - THM-637
   - THM-4028
   - THM-4033-prime-sector-ap-cover-eventual-owner-tail
+  - THM-4035-sixty-clock-separation-and-finite-kakeya-spine
 script: 04-computation/lrc14_ap_cover_holonomic_sixty_phase_thm4038.py
 output: 05-knowledge/results/lrc14_ap_cover_holonomic_sixty_phase_thm4038.out
 ---
@@ -117,6 +118,16 @@ Consequently the global clock is precisely the synchronization
 \[
  \operatorname{lcm}(1,2,3,4,5,6)=60.                 \tag{6}
 \]
+
+THM-4035 independently identifies three pointed `60`-cycles: the phase labels
+here, the full Fibonacci state `(F_r,F_(r+1)) mod 10`, and the pointed
+triangular state modulo `30`. It also proves that the first two normalized
+moment coefficients, equivalently the scaled pair `(M_1(r),M_2(r))`, inject
+the sixty phases. Those are exact phase *addresses*. The owner decomposition
+`(5)` supplies the distinct causal statement: the AP clock comes from
+synchronizing the six rational-owner track periods, with denominator four
+carrying the missing 2-adic factor. Address conjugacy does not recover owners,
+sides, missing sectors, or the affine height `n`.
 
 ### Fibonacci/Ostrowski hostile
 
