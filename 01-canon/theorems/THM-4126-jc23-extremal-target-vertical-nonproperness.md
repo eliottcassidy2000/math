@@ -11,9 +11,9 @@ status: >
   to be one of the two nodal I1 affine target fibres. Its intrinsic pole pair
   is (2,3), so rho=1. The global mapping degree is 21 and the polynomial
   degrees are (2G,3G) with G>=14, hence at least (28,42); the higher-DE-weight
-  branch has G>=15 and degrees at least (30,45). JC(2), chart entry, collision
-  walls, other depth cells, and maximum residual weight at least nine remain
-  OPEN.
+  branch has G>=15 and degrees at least (30,45). THM-4130 later excludes this
+  smooth seam. JC(2), collision walls, other depth cells, and maximum
+  residual weight at least nine remain OPEN.
 source: planar-jacobian-squeeze / 2026-08-25
 audit: >
   PASS. Two independent agents checked the full-boundary restriction,
@@ -28,6 +28,7 @@ depends_on:
 related:
   - THM-3996-etale-node-address-balance-cycle-and-nonproperness-dichotomy
   - THM-4124-planar-keller-integral-degree-ratio-all-vertex-shear
+  - THM-4130-theta-only-extremal-seam-critical-monodromy-obstruction
 external:
   - "Nguyen Van Chau, Non-proper value set and the Jacobian condition, Ann. Polon. Math. 84 (2004), Corollary 2, arXiv:math/0305088."
 ---
@@ -241,10 +242,11 @@ Identifying `rho_C` with `7` or `21` is a type error.
 
 ## 5. Boundary
 
-This theorem is conditional on actual entry into THM-4120's complete smooth
-seam. It does not treat the three collision walls, maximum residual weight at
-least nine, other pole-depth cells, or arbitrary planar Keller pairs. A
-triangular target move can change the displayed pencil and embedded curves;
-THM-4124 does not by itself put this local gauge in a target-orbit-minimal
-form. The theorem classifies the only possible nonproperness set inside the
-seam; it does not prove that either nodal option is realizable.
+This theorem is an implication under hypothetical entry into THM-4120's
+complete smooth seam. It does not treat the three collision walls, maximum
+residual weight at least nine, other pole-depth cells, or arbitrary planar
+Keller pairs. A triangular target move can change the displayed pencil and
+embedded curves; THM-4124 does not by itself put this local gauge in a
+target-orbit-minimal form. The theorem classifies the only possible
+nonproperness set inside the seam. THM-4130 later proves that neither nodal
+option is realizable by a nonautomorphic Keller pair in this seam.

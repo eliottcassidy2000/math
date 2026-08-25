@@ -62,9 +62,9 @@ Then read the routed frontier, guardrails, and theorem. Logs and reflections are
     seven and FC(3) remain open.
 12. **JC is false from dimension three; JC(2) and DC(2) remain open.** THM-1300
     is exact; THM-2084 and THM-3543--4103 close named planar cells.
-    THM-4120/4126 force degree `21`, nodal nonproperness, and `(28,42)` only
-    on one smooth `2:3` seam;
-    THM-4122/4124 add width and target-orbit gates. Walls, global entry,
+    THM-4120/4126 force degree `21`, nodal nonproperness, and `(28,42)`;
+    THM-4130 empties that smooth nonresonant `M=8` seam. THM-4122/4124 add width/orbit gates.
+    Three collision walls, global entry,
     `JC(2)`, and `DC(2)` stay open.
 13. **Complete period-14 coordinates can still be globally blind.** THM-2043
     proves parity-Hasse completeness for reduced period-14 functions. The

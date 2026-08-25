@@ -342,15 +342,12 @@ lift/phase clocks.
   tuple is now at least `(8,5,4,3,3)` for `ell=(3,5,7,11,13)`. The requested
   challenges `(3,9),(5,6),(7,5),(11,4),(13,4)` all remain **OPEN**; the public
   `131199`-field file is a named finite population, not a world census.
-- **Jacobian/Dixmier:** `JC(2),DC(2)` remain **OPEN**; THM-3543--4103 close
-  named cells only. On the smooth theta `2:3` seam,
-  THM-4120/[4126](../01-canon/theorems/THM-4126-jc23-extremal-target-vertical-nonproperness.md)
-  force degree `21`, `rho=1`, nodal nonproperness, and floors `(28,42)`.
-  [THM-4122](../01-canon/theorems/THM-4122-planar-keller-asymptotic-width-and-resonant-shear-contraction.md)
-  bounds intrinsic poles by `rho*max(d,e)<=min(D-1,w_X)`;
-  [THM-4124](../01-canon/theorems/THM-4124-planar-keller-integral-degree-ratio-all-vertex-shear.md)
-  removes integral ratios after target-orbit minimization. Walls, `M>=9`,
-  other cells, and chart entry remain open;
+- **Jacobian/Dixmier:** `JC(2),DC(2)` remain **OPEN**. On the smooth
+  nonresonant theta-only exact-`M=8` `2:3` seam, THM-4120/4126 force degree `21`, `rho=1`, nodal
+  nonproperness, and `(28,42)`; [THM-4130](../01-canon/theorems/THM-4130-theta-only-extremal-seam-critical-monodromy-obstruction.md)
+  empties it by critical monodromy. THM-4122 bounds intrinsic poles;
+  THM-4124 removes integral ratios after target-orbit minimization. The three
+  collision walls, `M>=9`, other cells and entries remain open;
   `(72,108)` has `rho<=2` conditional on width six.
   Exceptional quartic: THM-3703/3737 give grammar/image, THM-4034 the
   conductor, and THM-4039/4043/4046 reach `J_7`, obstruct `J_8`, and close

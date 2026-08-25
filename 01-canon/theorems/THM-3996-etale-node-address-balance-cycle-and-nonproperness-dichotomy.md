@@ -38,6 +38,7 @@ related:
   - THM-3955-node-cotangent-normalization-kernel-and-conductor-torsion
   - THM-3951-affine-plane-boundary-incidence-forest-and-equianharmonic-survivor-nonentry
   - THM-3992-reduced-two-three-cusp-jet-repair-and-first-node-residual
+  - THM-4130-theta-only-extremal-seam-critical-monodromy-obstruction
   - MISTAKE-481
 script: 04-computation/jc2_etale_node_address_balance_thm3996.py
 output: 05-knowledge/results/jc2_etale_node_address_balance_thm3996.out

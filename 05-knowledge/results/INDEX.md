@@ -1,5 +1,24 @@
 # Script Results Index
 
+- `jc23_theta_only_extremal_seam_critical_monodromy_thm4130.py` and independent
+  `(s,p)` elimination/permutation audit -> concordant semantic ledgers
+  [THM-4130 PROVED RELATIVE TO THM-3996/4053/4103/4120/4126 + VERIFIED-EXACT
+  + INDEPENDENTLY VERIFIED-EXACT; JC(2) OPEN]. The smooth nonresonant
+  theta-only exact-`M=8` reduced `2:3` seam contains no nonautomorphic planar
+  Keller pair. Two independent degree-sixteen eliminants give exactly `20`
+  distinct affine critical points over the two target nodes. Local fixed-sheet
+  injections and degree-`21` transitivity force the vanishing-cycle supports
+  to meet once, hence a three-cycle commutator, contradicting boundary type
+  `(7,3,3,3,2,2,1)`. The `Delta_V=0` hostile drops the eliminant degree to
+  `15`; collision walls, `M>=9`, other cells, `JC(2)`, and `DC(2)` remain
+  open. Primary script/output SHA-256:
+  `9cc246bb07894f548ef5ff4814ca92e9384a77de54617e3311df341458420fb3` /
+  `020f79bcc07384e02623053adcaee20edb240ee5bef363f1f3bbe86056cafefd`;
+  independent:
+  `322756789ad0c47d421130b60db7dabe78066a8dd972ee707dcd7a6d57cbf8fa` /
+  `3231ec6d8429a9ffc25cac0fb94cf6679e1348434cddcf1aaf019d9d93affac5`;
+  semantic: `62f23741001fa94b0dbaddd0381d80e8a5c6f11f7be5df59fedc14ebb218bb58`.
+
 - `lrc14_universal_two_speed_completion_thm4129.py` and independent periodic-
   antiderivative/common-grid audit -> concordant semantic ledgers [THM-4129
   PROVED ELEMENTARY UNIVERSAL COMPLETION + VERIFIED-EXACT + INDEPENDENTLY

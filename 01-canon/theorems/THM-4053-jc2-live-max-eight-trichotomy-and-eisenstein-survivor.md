@@ -11,7 +11,8 @@ status: >
   The sole nonresonant survivor is p*y^2-only: its unique positive-genus
   component is the target-compatible j=0 curve, and the generic fibre degree
   must be an Eisenstein norm a^2-ab+b^2; its total ramification is 14. The
-  three explicit collision walls and the survivor remain open.
+  THM-4130 later excludes the survivor; the three explicit collision walls
+  remain open.
 source: long-precise-frontiers / 2026-08-24
 audit: >
   PASS. The primary certificate expands the complete support, enumerates all
@@ -32,6 +33,7 @@ depends_on:
 related:
   - THM-4017-sharp-weight-eight-specialization-obstruction-and-newton-ledger
   - THM-4044-sixty-clock-hasse-alias-and-planar-jc-boundary-firewall
+  - THM-4130-theta-only-extremal-seam-critical-monodromy-obstruction
 external: >
   Tim Dokchitser, "Models of curves over DVRs," arXiv:1807.00025v2,
   Definitions 3.7, 3.9, and 3.12 and Theorem 3.14, through the same
@@ -431,16 +433,14 @@ node, and boundary charts is a new exact target, not a conclusion here.
 
 ## 8. Precise remaining frontiers
 
-The maximum-eight problem has been reduced to four explicit objects:
+The maximum-eight problem is now reduced to three explicit collision walls:
 
 1. stable reduction of the repeated quadratic edge `Delta_D=0` in `(7a)`;
 2. stable reduction of the cuspidal cubic edge `Delta_V=0` in `(7b)`;
-3. the eight-attachment collision `delta+theta=0` in `(7c)`; and
-4. in the smooth survivor `(7d)`, computation of the actual Keller fibre
-   degree followed by the Eisenstein norm sieve, plus localization of the
-   ramification budget `14` at the eight `A_23` charts.
-
-These are lower-dimensional algebraic walls and one explicit degree problem,
-but they are nonempty open obligations. Weight eight and JC(2) remain open.
+3. the eight-attachment collision `delta+theta=0` in `(7c)`.
+THM-4130 later excludes the smooth survivor `(7d)`, after
+THM-4103/4120/4126 fix its boundary response, degree, and nonproperness. Thus
+the three collision walls, maximum residual weight at least nine, and JC(2)
+remain open.
 
 **QED.**

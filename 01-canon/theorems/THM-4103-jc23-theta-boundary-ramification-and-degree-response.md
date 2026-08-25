@@ -12,7 +12,8 @@ status: >
   The generic Keller fibre degree is therefore one of {7,12,21}, with only
   3 coarse, 4 edge-refined, and 5 fully labelled target-infinity responses.
   The index-seven branch also forces deg_t(A),deg_t(C)>=7 and total degrees
-  at least 15,16. These constraints do not construct or exclude the survivor.
+  at least 15,16. These constraints do not themselves exclude the survivor;
+  THM-4130 later does so by critical monodromy.
 source: codex-arithmetic-boundary-breakthrough-20260825
 depends_on:
   - THM-3992-reduced-two-three-cusp-jet-repair-and-first-node-residual
@@ -20,6 +21,7 @@ depends_on:
 related:
   - THM-4012-weighted-leading-face-good-elliptic-factor-observer
   - THM-4044-sixty-clock-hasse-alias-and-planar-jc-boundary-firewall
+  - THM-4130-theta-only-extremal-seam-critical-monodromy-obstruction
 script: 04-computation/jc23_theta_boundary_response_thm4103.py
 output: 05-knowledge/results/jc23_theta_boundary_response_thm4103.out
 independent_audit_script: 04-computation/jc23_theta_boundary_response_thm4103_independent_audit.py
@@ -489,8 +491,8 @@ remaining sidecar.
 
 ## 8. Precise next frontier and representation firewall
 
-The next decisive object is not another genus count. It is the four unfilled
-geometric rows of the seven-row Puiseux evaluation table
+At this stage the next decisive object was not another genus count, but the
+four unfilled geometric rows of the seven-row Puiseux evaluation table
 
 ```text
 P | edge | e_P | ord_P(A) | ord_P(C) | leading target value.          (35)
@@ -508,7 +510,8 @@ Kakeya-style direction-only shadow has the same defect: it retains boundary
 directions but discards multiplicity and target image. Those representations
 may become useful only with the full edge/Puiseux sidecar.
 
-The smooth theta-only survivor, the three collision walls of THM-4053, and
-`JC(2)` all remain **OPEN**.
+THM-4120 later completes the labelled response, and THM-4130 then excludes
+the smooth theta-only survivor by critical monodromy. The three collision
+walls of THM-4053 and `JC(2)` remain **OPEN**.
 
 **QED.**

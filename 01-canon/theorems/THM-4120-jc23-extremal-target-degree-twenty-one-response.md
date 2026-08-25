@@ -11,9 +11,9 @@ status: >
   collapse to one. The DE edge is an evaluation quotient with principal
   kernel (x^6t^7+gamma/theta); Keller cancellation locks the two output
   multiplicities and raises the necessary total-degree floors to
-  deg(A)>=28 and deg(C)>=31. JC(2), chart entry, the three collision walls,
-  the other reduced depth cells, and maximum residual weight at least nine
-  remain OPEN.
+  deg(A)>=28 and deg(C)>=31. THM-4130 later excludes this smooth seam. JC(2),
+  the three collision walls, other reduced depth cells, and maximum residual
+  weight at least nine remain OPEN.
 source: planar-jacobian-squeeze / 2026-08-25
 audit: >
   PASS. The primary SymPy certificate and independent standard-library
@@ -32,6 +32,7 @@ depends_on:
 related:
   - THM-2230-planar-jacobian-response-fiber-and-exact-target-shear-quotient
   - THM-3996-two-three-companion-node-address-balance-and-jelonek-alternative
+  - THM-4130-theta-only-extremal-seam-critical-monodromy-obstruction
 external:
   - "T. Shioda, On the Mordell--Weil lattices, Comment. Math. Univ. St. Pauli 39 (1990), 211--240, DOI:10.14992/00009994."
   - "R. Miranda and U. Persson, On extremal rational elliptic surfaces, Math. Z. 193 (1986), 537--558, Theorem 4.1 and Table 5.2, DOI:10.1007/BF01160474."
@@ -377,9 +378,9 @@ inside the completion used by THM-3992. It does not apply automatically to
 the three collision walls, `(b,d)!=(0,0)`, residual weight at least nine,
 other reduced depth pairs, arbitrary completions, or all of `JC(2)`.
 
-The next local obligation is now coefficient-level rather than
-response-level: compile the finite `(w-T)`-adic re-entry budgets against the
-full Hasse image criterion of THM-3997, and audit the three collision walls
-with their own normalized boundary fields.
+THM-4130 later bypasses this coefficient program and excludes the smooth
+seam: its exact 20-point critical ledger forces a three-cycle commutator,
+contradicting the inherited boundary packet. The three collision walls still
+require their own normalized boundary fields.
 
 **QED.**
