@@ -354,17 +354,17 @@ or residue follows.
   THM-4008 excludes pure-`p` residuals. THM-4016 proves the formal sharp `5x5` point `(43/84,127/84)` nontorsion; THM-4017 refutes its attachment role via forced `p^4` at `rho^-2`. Its truncated `j=1728` side facet dies when `p*y^2` enters. THM-4011 supplies the companion-factor/log Riemann--Hurwitz audit.
   THM-4012 proves the conditional good-elliptic-factor/Bolza observer and, for the distinct actual max-six attachment `(43/224,267/224)` with `p^4=0`, proves the stable model and unconditional exclusion. Thus `b=d=0` has `M>=7`; `M>=9` needs face-stability at weights seven/eight.
   In the Russell exceptional-quartic lane, THM-3703/3737 give a rank-18
-  grammar, one image hyperplane, a split 18+18 lift/kernel, and a quadratic
-  normal compiler. The image's exact multiplicative
+  grammar, one image hyperplane, split lift/kernel and normal compiler. The
+  image's exact multiplicative
   annihilator is `L K[x]`, `L=x(x^2-1)`. THM-4034 proves the global conductor
-  `L^2h_172K[x]` of degree `178`; the intervening multiplier module has exact
-  length `175` and reduced finite-etale support. As an inherited nonunital
-  algebra it splits exactly as a three-dimensional zero algebra and the
-  `172`-dimensional finite-etale algebra `K[x]/h_172`; its nilradical is also
-  the exact kernel of regular multiplication. Thus multiplication-only
-  channels lose the three retained cotangent lines: a required linear sidecar,
-  not a singularity classification or JC obstruction. Future gates,
-  coherence, degree control, algebraization and Keller entry remain OPEN.
+  `L^2h_172K[x]` of degree `178`; the multiplier module has length `175` and
+  reduced finite-etale support. As a nonunital algebra it is a
+  three-dimensional zero algebra plus `K[x]/h_172`; its nilradical is the
+  regular-multiplication kernel. Multiplication-only channels therefore lose
+  three retained cotangent lines and require a linear sidecar.
+  [THM-4039](../01-canon/theorems/THM-4039-exceptional-quartic-j3-lift-and-adjacent-gate-rigidity.md)
+  reaches `J_4` for all four embeddings and makes the `J_5` scalar
+  choice-rigid but unevaluated. Later gates and globalization remain OPEN.
   Other reduced cells, higher faces, cancellation, Keller/Darboux entry, the nonreduced Russell `(6,4)` lane, and `JC(2)` stay open.
 - **Weyl boundary:** THM-2049 gives a formal beta-adic lift; finite termination remains.
 - **Planar source fibres:** THM-2063/THM-2084--2480 (including

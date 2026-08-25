@@ -28,6 +28,7 @@ related:
   - THM-3683-russell-cylinder-sixth-debt-quartic-on-the-zero-fourth-parabola
   - THM-3688-russell-cylinder-exceptional-quartic-actual-j1-j2-lift
   - THM-3737-russell-cylinder-exceptional-quartic-jacobian-image-hyperplane
+  - THM-4039-exceptional-quartic-j3-lift-and-adjacent-gate-rigidity
 script: 04-computation/jc2_russell_cylinder_exceptional_quartic_global_conductor_thm4034.py
 output: 05-knowledge/results/jc2_russell_cylinder_exceptional_quartic_global_conductor_thm4034.out
 script_sha256: f44baddb7d7c8c4d204d19952dadabfa4a52235e667295555481591a4f66ea11

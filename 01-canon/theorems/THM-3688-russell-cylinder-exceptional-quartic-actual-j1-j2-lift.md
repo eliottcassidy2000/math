@@ -29,6 +29,7 @@ related:
   - THM-3680-russell-cylinder-qdagger-coupled-stable-lift
   - THM-3629-russell-cylinder-linear-vertical-fold-global-form-boundary
   - THM-3737-russell-cylinder-exceptional-quartic-jacobian-image-hyperplane
+  - THM-4039-exceptional-quartic-j3-lift-and-adjacent-gate-rigidity
 script: 04-computation/jc2_russell_cylinder_exceptional_quartic_exact_j1_j2_lift_thm3688.py
 output: 05-knowledge/results/jc2_russell_cylinder_exceptional_quartic_exact_j1_j2_lift_thm3688.out
 script_sha256: 02cd67446b18b3863bc3665d48a6c5cccda81c394f94b754d2b90b1597c53ba6
@@ -255,11 +256,12 @@ counterexample.  It does not prove
 - a counterexample to `JC(2)`.
 
 THM-3629 becomes applicable only after a positive **global** pair is
-constructed.  THM-3737 subsequently reduces the `J_3` stage to the scalar
-gate `Lambda(D_3)=0`, but neither theorem proves that gate, constructs
-`F_4,G_4`, solves the dependent `J_4` gate, or supplies a coherent/global
-continuation.  The next actual-ring task is the coupled `J_3,J_4`
-continuation while retaining the gap compiler and operator `(14)`.
+constructed.  Downstream THM-3737 reduces the `J_3` stage to the scalar gate
+`Lambda(D_3)=0`, and THM-4039 proves that gate and obtains stagewise actual
+coefficients through `J_4`.  Those later theorems do not retroactively add a
+`J_3` claim to the frozen certificate proved here.  The current actual-ring
+frontier is the choice-rigid but unevaluated `J_5` scalar, followed by
+coherent degree control and globalization.
 
 ## 6. Reproduction
 

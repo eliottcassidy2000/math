@@ -47,6 +47,7 @@ depends_on:
 related:
   - THM-3677-russell-cylinder-degree-eight-fourth-debt-parabola
   - THM-3688-russell-cylinder-exceptional-quartic-actual-j1-j2-lift
+  - THM-4039-exceptional-quartic-j3-lift-and-adjacent-gate-rigidity
   - THM-3629-russell-cylinder-positive-global-pair-to-jc2-counterexample
   - THM-4030-lrc14-d4-affine-defect-lattice-boundary
   - THM-4032-lrc14-d3-affine-defect-lattice-boundary
@@ -575,4 +576,6 @@ good-reduction denominator, the determinant `(15)`, and the hostile cutoff.
 
 This theorem proves neither the later scalar identities nor an all-order
 solution, positive global pair, noninjective Keller map, or counterexample to
-the planar Jacobian conjecture.  **QED.**
+the planar Jacobian conjecture.  Downstream THM-4039 evaluates the frozen
+THM-3688 `J_3` gate, reaches `J_4` stagewise, and proves that the `J_5`
+scalar is choice-rigid; it does not establish all-order continuation.  **QED.**
