@@ -1,0 +1,22 @@
+LRC14 D2 TWO-PHASE ALL-HEIGHT EXACT PROBE
+status=PROOF-COMPLETE SIGNAL + FINITE-EXACT RESIDUE AUDIT; NOT CANON
+endpoint_convention=pack_closed(>=1/14);danger_open(<1/14)
+phase_bank_y=(1/14,5/56);lift_time_banks=((1/28,15/28),(5/112,61/112))
+odd_residue_universe_mod112=56;unordered_with_repetition_pairs=1596;direct_modular_masks_match=True
+pairs_spoiling_y1=64;pairs_spoiling_y2=64;pairs_spoiling_both=0
+y1_label0_residues_mod112=(1, 27, 29, 55, 57, 83, 85, 111)
+y1_label1_residues_mod112=(13, 15, 41, 43, 69, 71, 97, 99)
+y1_label1_class=+/-15_mod28;its_y2_mask_is_empty=True
+allowed_pack_residues_mod56=(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 12, 13, 15, 16, 17, 18, 19, 20, 21, 24, 25, 26, 27, 29, 30, 31, 32, 35, 36, 37, 38, 39, 40, 41, 43, 44, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55);forbidden_pack_residues_mod56=(0, 11, 14, 22, 23, 28, 33, 34, 42, 45)
+canonical_pack_H0=(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 12);safe_at_both_y=True
+positive_control_exceptions=(1, 11):bank=1,label=1,x=15/28,clearance=1/14
+positive_control_exceptions=(1, 15):bank=2,label=1,x=61/112,clearance=1/14
+positive_control_exceptions=(3, 5):bank=1,label=0,x=1/28,clearance=1/14
+positive_control_exceptions=(9, 15):bank=1,label=0,x=1/28,clearance=1/14
+positive_control_exceptions=(111, 113):bank=1,label=1,x=15/28,clearance=1/14
+hypothesis_hostile_y2_pack=H=(11,),exceptions=(1,15),all_four_bank_times_fail=True
+hypothesis_hostile_y1_pack=H=(14,),exceptions=(1,11),all_four_bank_times_fail=True
+parity_hostile=H=canonical_H0,exceptions=(22,28),all_four_bank_times_fail=True
+consequence=for_every_pack_H_in_allowed_mod56_and_every_two_odd_exceptions_some_displayed_lift_time_has_full_row_clearance>=1/14
+semantic_digest=364f63bbeec172c18250e856905f376a47264a43569d0206972684c0e6590536
+RESULT=PASS
