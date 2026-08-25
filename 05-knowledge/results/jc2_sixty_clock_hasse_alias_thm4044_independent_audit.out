@@ -1,0 +1,20 @@
+STATUS=THM-4044;INDEPENDENT_CONFLUENT_MATRIX_AUDIT
+PASS  O_1 injective on P^2 degrees through 60k+1
+PASS  O_1 has a one-dimensional first kernel at degree 60k+2
+PASS  boundary Hasse order two repairs first O_1 kernel
+PASS  explicit Delta_1 spans the first matrix kernel
+PASS  Delta_1 endpoint coefficients
+PASS  O_2 injective on P^2 degrees through 60k+1
+PASS  O_2 has a one-dimensional first kernel at degree 60k+2
+PASS  boundary Hasse order two repairs first O_2 kernel
+PASS  explicit Delta_2 spans the first matrix kernel
+PASS  Delta_2 endpoint coefficients
+PASS  O_3 injective on P^2 degrees through 60k+1
+PASS  O_3 has a one-dimensional first kernel at degree 60k+2
+PASS  boundary Hasse order two repairs first O_3 kernel
+PASS  explicit Delta_3 spans the first matrix kernel
+PASS  Delta_3 endpoint coefficients
+RESULT independent_rank_boundary=k=1:ranks=60,60,61;k=2:ranks=120,120,121;k=3:ranks=180,180,181
+SEMANTIC_SHA256=00f526270644924d75acf32de7f638f9b9dffa04ddda83d5320c76b7a93b4e94
+CHECKS=15
+ALL THM-4044 INDEPENDENT CHECKS PASSED

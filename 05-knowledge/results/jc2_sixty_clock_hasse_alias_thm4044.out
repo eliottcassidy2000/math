@@ -1,0 +1,58 @@
+STATUS=THM-4044;PROVED_EXACT_CLOCK_KERNEL;JC(2)_OPEN
+UNIVERSE=mu_60_Hasse_observer;F_61_realization;unbounded_residual_firewall
+PASS  44 generates F_61^x
+PASS  half-period is t -> -t
+PASS  Delta_1 has sharp degree 60k+2
+PASS  Delta_1 changes [P^2] by (-1)^k
+PASS  Delta_1 is invisible to boundary jets 0,1
+PASS  boundary Hasse jet 2 detects Delta_1
+PASS  all 60 phase jets below depth 1 kill Delta_1
+PASS  Delta_2 has sharp degree 60k+2
+PASS  Delta_2 changes [P^2] by (-1)^k
+PASS  Delta_2 is invisible to boundary jets 0,1
+PASS  boundary Hasse jet 2 detects Delta_2
+PASS  all 60 phase jets below depth 2 kill Delta_2
+PASS  Delta_3 has sharp degree 60k+2
+PASS  Delta_3 changes [P^2] by (-1)^k
+PASS  Delta_3 is invisible to boundary jets 0,1
+PASS  boundary Hasse jet 2 detects Delta_3
+PASS  all 60 phase jets below depth 3 kill Delta_3
+PASS  Delta_4 has sharp degree 60k+2
+PASS  Delta_4 changes [P^2] by (-1)^k
+PASS  Delta_4 is invisible to boundary jets 0,1
+PASS  boundary Hasse jet 2 detects Delta_4
+PASS  all 60 phase jets below depth 4 kill Delta_4
+PASS  Delta_5 has sharp degree 60k+2
+PASS  Delta_5 changes [P^2] by (-1)^k
+PASS  Delta_5 is invisible to boundary jets 0,1
+PASS  boundary Hasse jet 2 detects Delta_5
+PASS  all 60 phase jets below depth 5 kill Delta_5
+PASS  Delta_6 has sharp degree 60k+2
+PASS  Delta_6 changes [P^2] by (-1)^k
+PASS  Delta_6 is invisible to boundary jets 0,1
+PASS  boundary Hasse jet 2 detects Delta_6
+PASS  all 60 phase jets below depth 6 kill Delta_6
+RESULT kernel_generator=P^2(P^60-1)^k;first_invisible_degree=60k+2
+RESULT missing_boundary_coordinate=D_P^[2]R(0,0)=[P^2]R
+PASS  all four-phase cubic observers are broad
+RESULT kakeya_cubic_vandermonde_count=487635
+RESULT kakeya_vandermonde_sha256=51d84bb0cdbe034392cb62758a3a8b0a7a16fe5e576648b27aaeebfe00125ff6
+PASS  all half-clock node-address identities hold
+PASS  half-clock labels all 30 split nonzero node parameters
+RESULT node_phase_shift=r+30 labels X->-X and (A,C)->(A,-C)
+PASS  centered binomial rank 2 is even on the clock
+PASS  centered binomial rank 2 lies below interpolation boundary
+PASS  centered binomial rank 4 is even on the clock
+PASS  centered binomial rank 4 lies below interpolation boundary
+PASS  centered binomial rank 6 is even on the clock
+PASS  centered binomial rank 6 lies below interpolation boundary
+PASS  centered binomial rank 8 is even on the clock
+PASS  centered binomial rank 8 lies below interpolation boundary
+PASS  the 60-clock omits the centered fixed point t=0
+RESULT Sun_even_atoms=degree_at_most_8<60;torus_evaluation_is_faithful_but_omits_fixed_point
+PASS  three clock jets reach the degree-178 conductor range sharply
+RESULT degree_178_conductor_is_injective_under_O_3_after_scalar_extension
+RESULT unbounded_JC_residual_has_no_fixed_finite_clock_depth
+SEMANTIC_SHA256=0c35001112cfda56ec6a6495f7907d84bf84077a1948128a412f8dfbfadd2855
+CHECKS=45
+ALL THM-4044 PRIMARY CHECKS PASSED
