@@ -240,16 +240,18 @@ only after factorization or target-annihilation is proved.
 
 **Action:** when mining neglected work, separate dormant frames, under-titled results, orphan computations, near-refutations, and cited stalls; rank by orthogonality, artifact readiness, transfer value, and probe cost. Citation counts confuse live code with abandonment and stagnation with health; use them only after semantic inspection. **Evidence:** S124, S79, and S128c136 atlases.
 
-## Fill operation columns, not only invariant columns
+## Canonicalize mechanics; retain the predicate
 
-**Trigger/action:** when an invariant census stalls, apply the next native
-generator to the object and dual; type its pullback, split boundary paths from
-cycles, and retain a decoder before rank loses gaps, weights, or fibres.
-**Counterindications:** fixed carriers need not control moving observers; unit
-conditions matter; a factorized kernel need not factorize its weight; graph
-periods reach `S_Gamma`, not the common-target algebra `Acal`, without descent.
-**Evidence:** THM-3756/3382/3758/3819 and, independently, THM-4065--4068:
-Rule-30 transfer, affine dilation, graph equalizer, and CRT/parity split.
+**Trigger/action:** if an operation has a clean orbit, factorization, or
+finite-level bijection, canonicalize it, then retain generator support,
+weights, and tail acceptance until descent is proved. Type its pullback and
+keep a decoder.
+**Mechanism/counterindication:** quotients saturate generators; CRT can factor
+a kernel but not its parity weight; inverse limits close strict/Buechi gates.
+A canonical carrier need not give a canonical observable or language.
+**Evidence:** THM-4069 (tree-diameter generator orbits), THM-4071
+(kernel/parity split), THM-4072 (rooted-tree bijection versus two tail gates),
+and THM-3756/3382/3758/3819/4065--4068.
 
 ## Tournament Analysis must preserve content
 
