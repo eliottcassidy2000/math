@@ -1,0 +1,15 @@
+RULE30_LEFT_FRONT_AFFINE_MONODROMY_THM4047
+universe=single_seed_left_front_columns_r=0..100000
+certificate=all_times_after_each_start;wrapped_recurrence_plus_physical_phase
+zero_columns=(2, 7, 28, 399, 53207, 58286, 87866)
+zero_column_natural_ranks=((1, 2), (2, 7), (3, 28), (4, 399), (5, 53207), (6, 58286), (7, 87866))
+period_doubling_columns=(3, 8, 29, 400, 87867)
+identity_monodromy_columns=(53208, 58287)
+reset_column_count=99992
+physical_phase_queries=((3, 2, 0, (1, 1)), (8, 10, 0, (1, 1)), (29, 90, 0, (1, 1)), (400, 3050, 1, (1, 1)), (53208, 847962, 0, (1, 0)), (58287, 929210, 1, (1, 0)), (87867, 1402474, 0, (1, 1)))
+period_histogram=((1, 16), (2, 10), (4, 56), (8, 668), (16, 87118), (32, 12133))
+center_diagonal_at_or_after_stored_certificate_start_columns=(0, 1, 2, 3, 4)
+global_repeat=(start=1790730,period=32)
+packed_simulation_steps=1790762
+certificate_sha256=62c469a9af7fd4b6ed2eeed6aef384a76e1712d848cca3dd01fa157f6440f915
+scope=PROVED universal affine criterion;FINITE-EXACT physical bank;Rule30 prizes OPEN

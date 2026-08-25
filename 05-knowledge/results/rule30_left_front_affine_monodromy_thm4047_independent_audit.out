@@ -1,0 +1,9 @@
+RULE30_LEFT_FRONT_AFFINE_MONODROMY_THM4047_INDEPENDENT_AUDIT
+universe=direct_single_seed_left_front_strip_r=0..100000
+physical_repeat=(time=2000000,period=32,least_global=True)
+zero_columns=(2, 7, 28, 399, 53207, 58286, 87866)
+period_doubling_columns=(3, 8, 29, 400, 87867)
+identity_monodromy_columns=(53208, 58287)
+period_histogram=((1, 16), (2, 10), (4, 56), (8, 668), (16, 87118), (32, 12133))
+cycle_sha256=1baa887ff258867d1718236ccf66a8f2dde4dc039caed285c585d1fb08cfd827
+audit=PASS;direct packed orbit;scalar orientation control;no primary import

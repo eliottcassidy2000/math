@@ -143,6 +143,20 @@
   search `15d686582a859f59cacaf5d0550ad9a4472b530a0c97eac50aa1da6c3abde7b1` /
   `4f2f10fadabb032530ad1a1da539df5fd77b0df6c3192324ad45cc1d4ffab856`.
 
+- `rule30_left_front_affine_monodromy_thm4047.py` and its no-import audit ->
+  matching `.out`s [THM-4047 PROVED + VERIFIED-EXACT + INDEPENDENTLY
+  AUDITED; all three Rule 30 prizes OPEN]. The universal affine block law
+  separates reset, odd-weight period-doubling, and even-weight identity
+  monodromies. The physical all-future bank `0<=r<=100000` has eventual-zero
+  columns `(2,7,28,399,53207,58286,87866)`; the late identity successors
+  retain opposite phase bits, and a direct packed orbit proves a global
+  period `32` after time `2000000`. The center is the moving diagonal
+  `c_t=ell_t(t)`, not a fixed-column limit. Primary script/output SHA-256:
+  `d454cc5b40315c02ebf486f29e227ebc9a79c78ede18fc449a7dd32f8dc21148` /
+  `bae500127999c350ebeff77c3145fbb4abf7b5b7292d2882eeecc6492fba75e3`;
+  independent `aa0cafcdf194b7073c50e02004af71a3fb91bcdb87b5cf042682e917286c303c` /
+  `4dd45b0073b15d18dfe6bc68c976fecf09fe7d86055c3bf673449b84bb521c1f`.
+
 - `rule30_depth15_history_adaptive_route_thm4013.py` and its no-import audit ->
   matching `.out`s [THM-4013 FINITE-EXACT + VERIFIED-EXACT + INDEPENDENTLY
   HOSTILE-AUDITED; all-scale Rule 30 OPEN]. On all `1<=n<=65535`, history

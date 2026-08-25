@@ -333,12 +333,12 @@ or residue follows.
 - **Knots:** THM-2176/2191/2281 and THM-2242/2330--2383: localization, owner/ANOVA/rectangle/reference inversion; realization/stable diagonal open. THM-2646: modular/exponent `B3` conjugacy, not Markov invariance.
 - **Flows:** [THM-2177](../01-canon/theorems/THM-2177-planar-counterexample-to-goemans-unsplittable-cost-flow-conjecture.md): planar `58<60` refutes exact `d_max`; planar `2d_max` survives.
 - **Hensel:** THM-3446/3449/[3452](../01-canon/theorems/THM-3452-unequal-depth-noncommuting-smooth-hensel-heisenberg-orbit-law.md): weighted/equal/unequal banks; dyadic repair.
-- **Rule 30:** THM-3502--3824 give compiler/carry, cycle and shell kernels.
-  FINITE-EXACT THM-4006 reaches `n=1023`; the physical base repairs `943/951`.
+- **Rule 30:** THM-3502--3824 give compiler/carry, cycle and shell kernels;
   [THM-4013](../01-canon/theorems/THM-4013-rule30-depth-fifteen-history-failure-and-adaptive-routed-repair.md)
-  reaches `n=65535`: history depths `3/4/5/6` leave `1522/197/33/10`
-  mismatches. A base-fibre-selected full off-ray repairs this finite universe;
-  either fixed direction fails. All-scale and Rule 30 prizes remain **OPEN**.
+  gives finite adaptive repair through `65535`, not an all-scale observer.
+  [THM-4047](../01-canon/theorems/THM-4047-rule30-left-front-affine-monodromy-clock.md)
+  gives the exact fixed-depth clock through `100000`, but does not uniformly
+  control the moving center diagonal. All three prizes remain **OPEN**.
 - **Two Hopf problems:** the `S2 x S2` curvature and `S6` complex-structure
   preprints are distinct **PREPRINT CLAIM / UNDER AUDIT**. Only the recorded
   mixed/Hessian identities are exact in the first lane; the `2Z` orbit in the
