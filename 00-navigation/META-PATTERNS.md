@@ -5,23 +5,15 @@ new cards require distinct-thread evidence or a severe repaired failure.
 
 ## Separate unbounded local support from a height-bounded modular cover
 
-**Trigger/action:** when every residue is locally attainable but the exact
-search has a proved finite height box, reduce only as a necessary filter and
-allow several moduli to cover that bounded box. Prove local periods/lifts
-separately, retain the index intervals, and finish with an exact terminal
-predicate or a zero survivor mask.
+**Trigger/action:** residue tests may cover a proved height box even when the
+unbounded map is locally onto; retain bounds and an exact terminal test.
 
-**Mechanism/counterindications:** a bounded cover says that every candidate in
-one finite box fails at least one necessary residue test; it is not a single
-congruence obstruction and cannot be extrapolated after the box is enlarged.
-If one modulus already excludes the target for all indices, use the ordinary
-local obstruction instead. Without a monotone height bound or a proof that
-future lifts cannot re-enter, the cover is unsound.
+**Counterindications:** do not extrapolate beyond the box; without height or
+no-reentry proof the cover is unsound. Prefer a genuine one-modulus
+obstruction when available.
 
-**Evidence:** THM-4026's zero bounded square mask coexists with THM-4027's
-surjectivity modulo every modulus. In the distinct LRC thread, THM-2059's CRT
-packet joins and THM-2043/2050's global-blindness hostiles likewise require a
-height/first-exit sidecar.
+**Evidence:** THM-4026/4027's bounded-zero/all-modulus pair; independently,
+THM-2059 and THM-2043/2050 require height/exit sidecars for LRC joins.
 
 ## Separate observer type, recurrence class, and finite head
 

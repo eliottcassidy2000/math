@@ -266,20 +266,14 @@ THM-2070 refutes the general HYP-8890/8895 bypasses.  Transfer
 ### Headline
 
 [THM-4026](../01-canon/theorems/THM-4026-sun-two-four-six-eight-binomial-counterexample.md)
-refutes Sun's `2-4-6-8` conjecture at `896315812331399`; three exact Python/C++
-routes agree and both neighbors are represented.
-[THM-4027](../01-canon/theorems/THM-4027-sun-two-four-six-eight-universal-modular-solubility.md)
-proves local surjectivity and exact periods, while
-[THM-4028](../01-canon/theorems/THM-4028-sun-two-four-six-eight-average-order-criticality.md)
-proves count `V X^(25/24)+O(X^(11/12))`. Leastness, exception density,
-pointwise laws, and a carry obstruction are **OPEN**.
+refutes Sun at `896315812331399`; THM-4027 gives all-modulus support and
+THM-4028 the summatory `V X^(25/24)+O(X^(11/12))`. Leastness, exception
+density, and pointwise/carry laws are **OPEN**.
 
-[THM-2000](../01-canon/theorems/THM-2000-support-harmonic-abel-dini-figurate-surface.md)/
-[2005](../01-canon/theorems/THM-2005-support-dirichlet-automatic-tournament-atlas.md)
-separate support from indexed multiplicity/collision tax. THM-3359/2352 give
-periodic and q-adic profiles; THM-3499/3510 give sharp shortlex boundaries.
-[THM-3730](../01-canon/theorems/THM-3730-positive-distinct-two-cube-support-abscissa.md)
-gives indexed abscissa `2/3`; THM-3793/4018/3825 give singleton criteria and
+THM-2000/2005 separate support from multiplicity/collision tax; THM-3359/2352
+give periodic/q-adic profiles and THM-3499/3510 sharp shortlex boundaries.
+THM-3730 gives indexed abscissa `2/3`; THM-3793/4018/3825 give singleton
+criteria and
 decoding, not a support asymptotic or residue.
 
 ### Established landmarks
@@ -287,21 +281,17 @@ decoding, not a support asymptotic or residue.
 - Hostile-audited THM-2433/2438/2500 give finite-hole calculus, exact
   Poisson--Newton/divisor-incidence scars, bounded prime-free multiplicative
   atoms, and prime-hole cage rays. These are typed analogues, not Stirling.
-- [THM-3359](../01-canon/theorems/THM-3359-modular-c-finite-supports-harmonic-density-and-periodic-scar.md)
-  gives periodic modular C-finite supports, harmonic residue `delta=h/p`, and
-  scar `delta-delta^2/2`; [THM-3364](../01-canon/theorems/THM-3364-cyclotomic-boolean-clocks-berggren-t4-xor-and-crt-phase.md)
-  gives full phase; THM-3382 gives a time/address harmonic bifurcation. None
+- THM-3359 gives periodic modular C-finite supports, harmonic residue
+  `delta=h/p`, and scar `delta-delta^2/2`; THM-3364 gives full phase and
+  THM-3382 a time/address harmonic bifurcation. None
   restores ancestry; squares and `ceil(k log(k+1))` block all subsets.
 - Exact support landmarks include maximum-cyclic-triangle mass
   `75/4-24log2`, condensation mass `zeta(s)-H_4^s`, and an A000568 bracket
   narrower than `3.11e-44`.
-- [THM-2010](../01-canon/theorems/THM-2010-new-tournament-invariant-sequences.md)
-  records four-term candidates and a no-match search. That is not proof of
-  sequence novelty.
-- [THM-2412](../01-canon/theorems/THM-2412-delta-exponential-and-central-newton-layer-split.md)
-  makes the Maclaurin/Newton analogy exact; [THM-2413](../01-canon/theorems/THM-2413-prime-index-affine-drift-and-twin-center-weld.md)
-  identifies A014574 as prime-index plateaux and fixed-gap multiplicative atoms.
-  [THM-2422](../01-canon/theorems/THM-2422-operation-fibres-summand-closure-and-twin-center-ancestry.md)
+- THM-2010 records four-term candidates and a no-match search, not sequence
+  novelty.
+- THM-2412 makes the Maclaurin/Newton analogy exact; THM-2413 identifies
+  A014574 as prime-index plateaux/fixed-gap multiplicative atoms. THM-2422
   retains labelled fibres: parity/square swap walls; closure
   `N\{1,4,6}` with dyadic frontier; local A014574 recurrence refuted at term
   `21`; and distinct ancestry FINITE-EXACT through center `10^8`, ALL-n OPEN.
@@ -320,10 +310,9 @@ decoding, not a support asymptotic or residue.
 
 ### Live work
 
-- Sun `2-4-6-8`: least hole/density, lower tails, height-aware CRT classes,
-  minimal cover, norm intersections, and rank-labelled Pascal carries.
-- General sequences: collision profiles, automatic structure, typed
-  identities, and the critical `sum 1/d_i=1` coverage boundary.
+Sun `2-4-6-8`: least hole/density, lower tails, height-aware CRT, minimal
+cover, norm/carry obstructions. General sequences: collision/automatic
+structure and the critical `sum 1/d_i=1` boundary.
 
 ## Other active portfolio
 
