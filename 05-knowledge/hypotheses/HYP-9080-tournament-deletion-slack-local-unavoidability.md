@@ -5,16 +5,13 @@ status: >
   OPEN CONJECTURE + PROVED REDUCTION IDENTITY + FINITE-EXACT EVIDENCE, NOT
   PROVED. For a tournament C and vertex x, put S=H-disc and
   chi_x(C)=2(S(C)-S(C-x)). THM-3729 and THM-4094 identify this exactly with
-  twice the Hamiltonian insertion gain minus the actual rooted odd-Pfaffian
-  boundary energy plus the deletion discriminant. The conjecture says every
-  tournament of order at least two has some x with chi_x>=0. It would prove
-  H>=disc by deletion induction. Pointwise monotonicity is false: a source
-  over C3 has one chi=-2. Exhaustive labelled orders 2..6 and all 456 order-7
-  isomorphism representatives have no all-negative row; the stronger summed
-  charge is also nonnegative on that universe. Neither statement is proved
-  in general.
+  a rooted boundary energy. OCF and principal-minor expansion give exact local
+  and averaged support-moment formulas. Every nonconstant ear over every
+  labelled order-6 base has chi>=0, but a source over C3 has chi=-2.
+  Existential/averaged unavoidability and H>=disc remain OPEN.
 source: codex-snark-apex-260822870-20260825
 depends_on:
+  - THM-002-ocf
   - THM-3729-rooted-pfaffian-response-and-sign-root-deletion-average
   - THM-4094-hamiltonian-matching-deficit-and-two-prime-lane-completeness
 related:
@@ -24,10 +21,15 @@ related:
   - THM-4104-selected-order-eleven-strong-ear-solid-interval
   - THM-4111-uniform-ear-average-and-recursive-selected-bank-growth
   - THM-4113-maximal-noncrossing-half-kempe-atlas
+  - THM-4114-ocf-mobius-positivity-tropical-defect-layer-and-opposite-ear-cut-curvature
 script: 04-computation/tournament_deletion_slack_unavoidability_hyp9080.py
 output: 05-knowledge/results/tournament_deletion_slack_unavoidability_hyp9080.out
 script_sha256: 6ff91dacc06b63c7e7fcd34163ca647e35a814f683eb0aa9fdb5a8ebd54000e6
 output_sha256: 0c41b86d3a445df8fcfcf2e2a49e7363f9410766de7c495a6ac02ac83610549b
+auxiliary_script: 04-computation/tournament_alu_support_moment_ear_tariff_hyp9080.py
+auxiliary_output: 05-knowledge/results/tournament_alu_support_moment_ear_tariff_hyp9080.out
+auxiliary_script_sha256: bb7d1b063f539975d2fe2f08fcc6b327c1e71e6a9a4758fcf29b019fa74a4f19
+auxiliary_output_sha256: 07f0e32b32950510b8a7028f3cba07db537a650e82482a6ba667a0156112d49e
 hash_basis: raw working-tree bytes; normalized-LF hash for the inherited n=7 representative bank
 audit: >
   FINITE-EXACT PASS. The script exhausts all 33,866 labelled tournaments of
@@ -40,6 +42,12 @@ audit: >
   410,408 rooted-response gates and 5,404 incidence gates. Normal and
   optimized runs reproduce the frozen transcript. Local unavoidability,
   its averaged strengthening, and H>=disc remain OPEN.
+  The auxiliary companion reconstructs OCF support atoms by Boolean Mobius
+  inversion and Pfaffian-square atoms by principal determinants on 34,322
+  objects. It checks 273,848 moment gates, 1,096 direct ear formulas, and all
+  2,031,616 nonconstant ears over labelled order-six bases. Its normal and
+  optimized transcripts reproduce the frozen output. The combined ear
+  tariff remains OPEN.
 ---
 
 # HYP-9080 -- tournament deletion-slack local unavoidability
@@ -153,6 +161,150 @@ summand supplies a reducible deletion. It remains open. In particular, the
 positive total charge of the apex-cubic paper supplies no inequality for
 `(10)`.
 
+### 3.1 Exact OCF/Pfaffian support-moment form
+
+The averaged charge has a second exact expression which identifies where a
+proof must act. Let `Gamma` range over collections of pairwise
+vertex-disjoint directed odd cycles of `C`, including the empty collection,
+and put
+
+```text
+U(Gamma)=the union of their vertex supports,
+weight(Gamma)=2^|Gamma|.                                  (11a)
+```
+
+For every even vertex set `A`, put
+
+```text
+p_A=Pf(K_C[A])^2=det(K_C[A]),        p_empty=1.            (11b)
+```
+
+Then
+
+```text
+boxed:
+|C|S(C)-sum_x S(C-x)
+ =sum_Gamma |U(Gamma)| 2^|Gamma|
+  -2^(1-|C|) sum_(A even)(2|A|-|C|)p_A.                   (11c)
+```
+
+Indeed, THM-002 gives `H(C)=sum_Gamma 2^|Gamma|`. A fixed collection
+survives exactly `|C|-|U(Gamma)|` vertex deletions, so
+
+```text
+|C|H(C)-sum_xH(C-x)=sum_Gamma |U(Gamma)|2^|Gamma|.         (11d)
+```
+
+The principal-minor expansion gives
+
+```text
+disc(C)=2^(1-|C|)sum_(A even)p_A.                         (11e)
+```
+
+The same minor occurs in `disc(C-x)` exactly when `x notin A`, with twice
+the normalization in `(11e)`. Hence
+
+```text
+|C|disc(C)-sum_xdisc(C-x)
+ =2^(1-|C|)sum_(A even)(2|A|-|C|)p_A,                    (11f)
+```
+
+and subtracting `(11f)` from `(11d)` proves `(11c)`.
+
+There is also an exact local form:
+
+```text
+chi_x(C)/2
+ =sum_(Gamma:x in U(Gamma))2^|Gamma|
+  -2^(1-|C|)(sum_(A even:x in A)p_A
+             -sum_(A even:x notin A)p_A).                 (11g)
+```
+
+Thus ALU is a comparison between two **support moments**, not between the
+unweighted numbers of cycles and minors. Only Pfaffian supports with
+`|A|>|C|/2` have an adverse coefficient in `(11c)`; smaller supports help.
+OCF/Mobius positivity proves that the first-family atoms are nonnegative, but
+it gives no cross-family inequality against the large Pfaffian supports.
+This is the first missing implication, so even the proved and independently
+audited THM-4114 presence-cube positivity is not a proof of ALU: that theorem
+controls the OCF atoms internally, not their comparison with the adverse
+large-Pfaffian support moment.
+
+### 3.2 Exact combined ear-cut tariff
+
+The local charge also has a precise cut formulation. Let `T` be a tournament
+with skew matrix `K`, put
+
+```text
+d=disc(T),                  R=(I-K^2)^(-1).                 (11h)
+```
+
+`I-K^2` is positive definite. Moreover `R` is the symmetric part of
+`(I+K)^(-1)`. For `S subseteq V(T)`, adjoin an ear `x_S` with
+`x_S->v` exactly when `v in S`; its incident root is
+
+```text
+u_S=1-2 1_S.                                               (11i)
+```
+
+THM-3729 gives the discriminant response
+
+```text
+g(S):=disc(T+x_S)
+ =d/2(1+u_S^T R u_S)
+ =g(empty)-2d cut_R(S).                                   (11j)
+```
+
+Use THM-4104's ear data
+
+```text
+w_ij=(Q(i,j)+Q(j,i))/2,
+h_i=Start(i)-End(i)+(col_i(Q)-row_i(Q))/2,
+sum_i h_i=0.                                               (11k)
+```
+
+Then
+
+```text
+H(T+x_S)-H(T)=cut_w(S)+h(S),       h(S)=sum_(i in S)h_i.   (11l)
+```
+
+Put
+
+```text
+a_0=g(empty)-d,                 wtilde=w+2dR.              (11m)
+```
+
+Combining `(11j)--(11m)` with `(5)` gives the exact paired formulas
+
+```text
+boxed:
+chi_(x_S)(T+x_S)/2       =cut_wtilde(S)+h(S)-a_0,
+chi_(x_(V-S))(T+x_(V-S))/2
+                           =cut_wtilde(S)-h(S)-a_0.         (11n)
+```
+
+This isolates a stronger open tariff proposal:
+
+> **Combined ear-tariff conjecture.** For every finite `T` and every
+> nonempty proper `S subset V(T)`,
+>
+> ```text
+> cut_wtilde(S)>=a_0+|h(S)|.                              (11o)
+> ```
+
+Equation `(11o)` would make the deletion charge nonnegative for both mixed
+ear orientations. In particular, every vertex of a strong tournament has a
+nonconstant incident cut, so `(11o)` would be much stronger than LU on the
+strong stratum.
+
+The signs cannot be read from THM-4104 alone. Although `w_ij>=0` and `R` is
+positive definite, the off-diagonal entries of `R` have no general sign
+control; positive definiteness does not imply `wtilde_ij>=0` or the tariff
+`(11o)`. This is the exact presence-cube/ear-cube firewall left by THM-4114:
+its proved directed-cut submodularity does not supply the missing
+cross-family domination.
+
 ## 4. Pointwise monotonicity fails at order four
 
 Use upper-pair bit order
@@ -179,6 +331,12 @@ Hence the tempting statement `chi_x>=0` for every vertex is false. The
 strongest survivor is existential unavoidability: the other three vertices
 in `(14)` still have positive charge.
 
+As an ear over the fixed `C3` base, the separation is even sharper. The two
+constant source/sink cuts have `chi=-2`, while each of the six nonconstant
+cuts has `chi=4`. Thus nonnegative OCF presence differences and the
+submodular Hamiltonian ear response can coexist with a negative deletion
+charge; the missing object is the combined Pfaffian tariff `(11o)`.
+
 ## 5. Finite-exact frontier
 
 The exact scout finds:
@@ -204,6 +362,26 @@ chi=(44,34,20,44,20,20,34),       max chi=44.               (16)
 
 These are `FINITE-EXACT` facts only. The order-seven bank is checked against
 its normalized-LF SHA-256 before use. No extrapolation in `n` is licensed.
+
+The auxiliary exact path adds:
+
+```text
+OCF/Pfaffian support-moment objects                       34,322
+local and averaged support-moment gates                  273,848
+direct ear-cut gates through base order four               1,096
+nonconstant ears over all labelled order-six bases     2,031,616
+minimum combined off-diagonal weight                         1/2
+bases with a negative combined off-diagonal weight              0
+minimum nonconstant-ear chi                                     0
+bases with a negative nonconstant-ear chi                        0
+bases attaining minimum chi zero                            10,368. (16a)
+```
+
+It also finds minimum combined tariff gap zero and no negative gap in this
+universe. The response construction uses exact `Fraction` inversion of
+`I-K^2` and a permutation reconstruction of `Start/End/Q`; direct
+Hamiltonian-DP/determinant evaluation checks every ear through base order
+four. Equation `(16a)` is evidence for `(11o)`, not a proof.
 
 ## 6. Typed relation to the snark proof
 
@@ -239,6 +417,8 @@ Reproduce the current frontier with
 ```bash
 python3 -B 04-computation/tournament_deletion_slack_unavoidability_hyp9080.py
 python3 -B -O 04-computation/tournament_deletion_slack_unavoidability_hyp9080.py
+python3 -B 04-computation/tournament_alu_support_moment_ear_tariff_hyp9080.py
+python3 -B -O 04-computation/tournament_alu_support_moment_ear_tariff_hyp9080.py
 ```
 
 High-value next tests are:
@@ -247,10 +427,12 @@ High-value next tests are:
    `Start/End/Q` ear tensor of THM-4104;
 2. seek a double-counting proof of ALU, retaining orphan paths and the actual
    rooted Pfaffian energy rather than separate upper bounds;
-3. restrict first to strong tournaments and classify equality or near-zero
+3. prove or refute the combined ear tariff `(11o)`; first determine whether
+   `wtilde` has a negative off-diagonal entry at base order seven;
+4. restrict first to strong tournaments and classify equality or near-zero
    rows under deletion;
-4. enumerate order eight by isomorphism classes before using random evidence;
-5. construct a hostile with all `chi_x<0`, which would refute LU without
+5. enumerate order eight by isomorphism classes before using random evidence;
+6. construct a hostile with all `chi_x<0`, which would refute LU without
    refuting `H>=disc`, or prove a structural reason one cannot occur.
 
 Neither LU nor ALU is a proved dependency of any current theorem. In

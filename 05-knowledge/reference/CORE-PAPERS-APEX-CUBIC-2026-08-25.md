@@ -105,6 +105,28 @@ The portable principle is `global conserved surplus > sum local defect
 allowances`.  Merely ignoring exceptional neighborhoods would not give the
 contradiction.
 
+There is a sharp algebraic boundary hidden by the paper's convenient
+``strictly below 20'' phrasing.  If a plane pseudo-triangulation has `q`
+digons and every other face is a triangle, Euler's formula gives
+
+```text
+E=3V-6+q,             sum_v 10(6-d(v))=120-20q.              (3a)
+```
+
+The maximum of the five proved one-digon ceilings in `(3)` is `18`.
+Consequently the present scalar budget closes exactly when
+
+```text
+18q < 120-20q,        equivalently q<=3.                     (3b)
+```
+
+At four digons the available global surplus is only `40`, while the same
+local allowance can total `72`.  Any four-digon extension using this budget
+without a new interaction term would need a uniform per-digon tariff
+strictly below `10`.  Thus the paper's ``two or three defects'' is a genuine
+wall of the current accounting, not just the range happened upon by the
+minimal-counterexample reduction.
+
 ### 4. Rotation-preserving quotient compiler
 
 Weak connectivity and digons let a configuration embed non-inducedly or with
@@ -141,7 +163,33 @@ reproducibility evidence, not as part of the mathematical justification.
 This repository has not rerun `(4)` and therefore records the whole external
 claim as under audit.
 
-## Repo consumer and exact sharpening
+The v1 paper does not pin immutable commits.  Read-only `HEAD` checks on the
+audit date found configurations at `8698d62e8ae5...`, discharging rules at
+`75277eefec09...`, computer checks at `50cba56fe86e...`, and the
+semi-reducibility checker at `4c9468e24dea...`.  Those are freshness markers,
+not archival proof pins.  The instructions also require lexicographic
+configuration order and literal enumeration without deduplication to recover
+the published island counts; their README expressly says matching the
+metrics does not by itself guarantee correctness.  No wall-clock or memory
+ledger is published.
+
+## Repo consumers and exact sharpenings
+
+[THM-4113](../../01-canon/theorems/THM-4113-maximal-noncrossing-half-kempe-atlas.md)
+proves independently that Algorithm B.1.2's nonredundant planar partial
+matchings are exactly the maximal noncrossing partial matchings.  Rooting the
+boundary identifies them with noncrossing partitions into blocks of sizes
+two and three, with generating functions
+
+```text
+C=1+x^2 C^2+u x^3 C^3,       M=C+uxC^2.                    (5)
+```
+
+This replaces one generate-and-prune routine by a direct output-sensitive
+generator and gives the exact totals
+`1,1,1,3,4,10,20,42,98,210,492,...`.  It audits the topology atlas only;
+ternary ring colorings, semi-consistency closure, the 915 configurations,
+and the large reducibility/discharging checks remain outside its scope.
 
 [THM-4116](../../01-canon/theorems/THM-4116-boundary-state-gluing-and-ap-odd-shell-tree-synchronizers.md)
 imports no unverified coloring theorem.  It extracts the paper's native
@@ -149,7 +197,7 @@ interface operation and proves it independently:
 
 ```text
 # three-edge-colorings of a glued graph
-  = dot product of its ordered boundary extension vectors.               (5)
+  = dot product of its ordered boundary extension vectors.               (6)
 ```
 
 Its exact Petersen four-edge boundary has disjoint supports and its K4
@@ -158,7 +206,7 @@ every adjacent-edge four-pole of an uncolorable finite simple cubic graph to
 one even multiplicity.  Exact atlases distinguish the Petersen, `J_5`, and
 two Blanusa graph families, but that scalar does not in general classify
 their edge orbits.  Transporting
-`(5)` as an interface-state operation to the
+`(6)` as an interface-state operation to the
 already-proved THM-4110 AP13 torsion quotient yields the new odd-shell
 component law `2^(c(F)-1)` and classifies all minimal phase synchronizers as
 spanning trees.  That sharpening is internally `PROVED`; it does not validate

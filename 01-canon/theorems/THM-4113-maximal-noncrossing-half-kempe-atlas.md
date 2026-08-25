@@ -9,9 +9,10 @@ status: >
   sizes 2 and 3, or one root singleton together with an ordered pair of such
   partitions. If u marks singleton half-chains, their bivariate generating
   function is M=C+uxC^2 where C=1+x^2C^2+ux^3C^3. This gives an explicit
-  coefficient formula, a direct output-sensitive generator, the total
-  sequence 1,1,1,3,4,10,20,42,98,..., and the exact shifted signed
-  A321197 identity. At boundary size five, coarse pair compatibility is the
+  coefficient formula, a direct output-sensitive generator, exponential
+  growth constant 2.610718613276..., the total sequence
+  1,1,1,3,4,10,20,42,98,..., and the exact shifted signed A321197 identity.
+  At boundary size five, coarse pair compatibility is the
   Petersen/A4-root graph of THM-261: planarity removes a crossing C5 from
   its 15 edges and leaves precisely the 10 half-Kempe atlas states.
 source: codex-snark-apex-260822870-20260825
@@ -245,6 +246,64 @@ A(-x)=1/C=1-x^2(C+xC^2)=1-x^2M,                            (16)
 
 and coefficient comparison is `(15)`. Thus the sequence match is a theorem,
 not an identification from finitely many terms.
+
+### 3.1 Exact asymptotic size of the topology atlas
+
+Put
+
+```text
+phi(y)=1+y^2+y^3,                 Y=x phi(Y).               (16a)
+```
+
+Let `tau` be the unique positive solution of
+
+```text
+tau phi'(tau)=phi(tau),       equivalently 2tau^3+tau^2=1, (16b)
+```
+
+and define
+
+```text
+rho=tau/phi(tau),             alpha=rho^(-1)=2tau+3tau^2,
+beta=sqrt(2phi(tau)/phi''(tau)).                            (16c)
+```
+
+The implicit equation has its first positive critical point at `(rho,tau)`.
+Its supported sizes include `1,3,4`, whose differences have gcd one, so the
+solution is aperiodic and `rho` is the unique dominant singularity. Expanding
+`Y-x phi(Y)=0` at the double implicit root gives
+
+```text
+Y=tau-beta sqrt(1-x/rho)+O(1-x/rho).                       (16d)
+```
+
+Since `M=(Y+Y^2)/x`, the square-root transfer yields
+
+```text
+boxed:
+|H_n| ~ K alpha^n n^(-3/2),
+K=(1+2tau)beta/(2sqrt(pi)rho).                             (16e)
+```
+
+Numerically,
+
+```text
+tau   =0.6572981061383759908...,
+rho   =0.3830363007774162250...,
+alpha =2.610718613276039350...,
+K     =1.295313565966669182....                            (16f)
+```
+
+The algebraic growth constant is the positive root selected by `(16c)` of
+
+```text
+4alpha^3+alpha^2-18alpha-31=0,                             (16g)
+```
+
+equivalently `rho` satisfies `31rho^3+18rho^2-rho-4=0`.
+Thus the topology atlas grows as `Theta(alpha^n n^(-3/2))`; the direct
+generator is output-sensitive but cannot make the output family polynomial
+in boundary length.
 
 ## 4. The five-boundary Petersen firewall
 

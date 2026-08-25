@@ -30,7 +30,12 @@ Format per entry:
   graph, three incident edges are pairwise adjacent and therefore require
   three distinct edge colors.  The
   relevant color-flow group is `F_2^2`, not `Z/3Z`: the three nonzero
-  elements at every cubic vertex are exactly the three edge colors.  Finally,
+  elements at every cubic vertex are exactly the three edge colors.  After
+  normalizing a nowhere-zero `Z/3Z` flow to orient every edge with value one,
+  conservation at a cubic vertex forces that vertex to be a source or a
+  sink, so such a flow exists exactly on bipartite cubic graphs.  `K4` is the
+  smallest separator: it is three-edge-colorable but has no `Z/3Z` flow.
+  Finally,
   `7` and `25` have the same residue `1 mod 3` but differ in primality, so the
   residue describes splitting only after a rational prime has been given.
 - **Repair / strongest survivors:** THM-264 is now `FINITE-EXACT` for
