@@ -1,0 +1,18 @@
+LRC14_FIXED_BODY_UNIVERSAL_ODD_TAIL_THM4136_INDEPENDENT_AUDIT
+scope=U_fixed;two_distinct_positive_odd_tails;LRC14_global=OPEN
+implementation=clean_room_stdlib_only_exact_Fraction_no_project_imports
+body=1,4,6,8,10,12,14,15,16,18,22
+closed_body_arc=[33/70,27/56];length=3/280;owners=15,4
+low_quotient_components={'1,3': [], '1,5': [], '1,7': ['1/49', '1/49'], '3,5': ['1/105', '1/105'], '3,7': ['1/49', '1/49'], '5,7': ['1/49', '1/49']}
+exceptional_1_9_widths=('2/63', '2/63')
+q_tooth_bound=beta_pq<=2/(7q)_for_odd_q>=9
+q_tooth_scan=primitive_odd_q<=101:1047;large_hostiles_to_q=1001:70;bound_equalities=972;global_max=2/63;global_max_rows=((1, 9),)
+q_tooth_scan_transcript_sha256=498ceaace5553f042cf57af38c05378e3554402d82bd3592882888bba0d55a32
+scale_surpluses=t>=3_first:1/2520;t=1,q>=27_first:1/7560
+residual_pairs=68;clock_split=56,10,2;clocks={'non13': '89/1176', '13_middle': '181/4704', '13_edge': '431/4480'}
+clock_minima={'non13': '89/1176', '13_middle': '15/196', '13_edge': '17/224'}
+consequence_check=all_13_literal_clearances_verified_in_each_residual_row
+hostiles=strict_endpoints;active_wall_punctures;unbalanced_and_near_diagonal_large_q
+semantic_sha256=92b303d4737b146a0ff31de4c13fed920e70531d486495e31793128e5ca4482e
+checks=1386
+RESULT=ACCEPT;THM4136_CANDIDATE_VERIFIED;LRC14=OPEN

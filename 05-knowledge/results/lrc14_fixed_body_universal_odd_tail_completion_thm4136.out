@@ -1,0 +1,13 @@
+THM4136_FIXED_BODY_UNIVERSAL_ODD_TAIL_COMPLETION_20260825
+statement=every distinct positive odd a,b makes 2U union {a,b} 1/14-safe
+U=(1, 4, 6, 8, 10, 12, 14, 15, 16, 18, 22);J=[33/70,27/56];length=3/280;owners=((15,), (4,))
+low_two_sheet_quotients=(((1, 3), (), '0'), ((1, 5), (), '0'), ((3, 5), (('13/35', '8/21'), ('13/21', '22/35')), '1/105'), ((1, 7), (('6/49', '1/7'), ('6/7', '43/49')), '1/49'), ((3, 7), (('2/7', '15/49'), ('34/49', '5/7')), '1/49'), ((5, 7), (('20/49', '3/7'), ('4/7', '29/49')), '1/49'))
+universal_quotient_beta=2/63;scan=(1053, 101, (2, 63), ((1, 9),));large_ratio_rule=2/(7q) for q>=9
+scale_gates=t>=3 surplus:1/2520;primitive q>=27 surplus:1/7560
+finite_bank=pairs:68;clocks:('89/1176', '181/4704', '431/4480');categories:(56, 10, 2);minima:('89/1176', '15/196', '17/224');exceptions:((1, 13), (13, 25));pair_sha256:fb98c8bb0119fee3532e48537156a702a5fb93f103c367634b9797e4686cec8b
+fixed_sheet_hostile=w:1/9;sheet0:('1/18', '1/2');sheet1:('4/9', '0')
+direct_full_row_controls=(((1, 3), '89/1176', '89/1176', 494), ((1, 13), '431/4480', '17/224', 512), ((13, 25), '233/4032', '19/252', 562), ((1, 27), '233/3024', '19/252', 540), ((3, 9), '181/4704', '15/196', 510), ((3, 27), '233/4032', '19/252', 546), ((101, 103), '5975/103824', '207/2884', 894), ((2001, 18009), '540587/14119056', '36335/504252', 40506))
+scope=fixed U only; arbitrary bodies, physical entry, and LRC14 remain open
+semantic_sha256=4e62dbd9b4cd87a7044687d48668449b7129ac11adb29512803ae7d01be61dbf
+checks=35240
+STATUS=PASS
