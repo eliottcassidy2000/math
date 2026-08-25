@@ -2,6 +2,11 @@
 """
 omega_girth_investigation_s18b.py -- kind-pasteur-2026-03-21-S18b
 
+SUPERSEDED HISTORICAL EXPLORATION.  This version collapses distinct directed
+cycles with the same support and extrapolates finite data globally.  Use
+omega_girth_fixed_s18b.py, repaired THM-264, and MISTAKE-507 instead.  Its
+printed synthesis is not current evidence.
+
 THE GIRTH OF OMEGA(T): What is the shortest cycle in the conflict graph?
 
 The girth g(Omega(T)) is the length of the shortest cycle in Omega(T).

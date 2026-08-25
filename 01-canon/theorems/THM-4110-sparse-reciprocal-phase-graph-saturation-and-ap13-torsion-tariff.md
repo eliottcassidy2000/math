@@ -9,9 +9,9 @@ status: >
   prime by prime, to the
   prime-free vertices forming a connected dominating set. The complete
   unequal-v2 graph on AP13 has 64 total half-toggle sheets, one physical and
-  63 nonphysical, with quotient (Z/2Z)^6; six same-shell reciprocal
-  constraints are necessary and sufficient to remove the extra sheets. This
-  is a physical-entry firewall, not LRC(14).
+  63 nonphysical, with quotient (Z/2Z)^6; six suitably incident same-shell
+  reciprocal constraints are necessary and sufficient to remove the extra
+  sheets. This is a physical-entry firewall, not LRC(14).
 source: codex-lrc14-abc-exponent-reciprocity-20260825
 depends_on:
   - THM-4105-primitive-reciprocal-phase-descent-and-quantitative-arrival

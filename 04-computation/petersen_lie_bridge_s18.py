@@ -2,6 +2,11 @@
 """
 petersen_lie_bridge_s18.py — kind-pasteur-2026-03-21-S18
 
+SUPERSEDED HISTORICAL EXPLORATION.  The pair-indexed so(n) skew basis is not
+the set of sl(n) root vectors, and the Kneser arc-support graph is not the OCF
+cycle-conflict graph.  See repaired THM-261/262 and MISTAKE-507.  Printed
+global Petersen/Omega claims below are not current evidence.
+
 DEEP INVESTIGATION: The Petersen Graph ↔ Lie Algebra Bridge
 
 Central thesis: The Petersen graph K(5,2) is the orthogonality graph

@@ -1,3 +1,8 @@
+> **CORRECTION (2026-08-25):** every use of THM-264 below is finite-exact
+> only for tournament orders `3..6`.  Its global threshold is refuted at
+> order seven, and global no-intermediate conflict girth is OPEN.  See
+> MISTAKE-507 and the repaired THM-264.
+
 # Tournaments as proof engines: a generative catalog of techniques
 
 *mac-mini-2026-06-27-S65. Owner: starting from the forbidden-H={7,21} proof-by-contradiction (encode a
@@ -26,7 +31,7 @@ Crossing these *generates* techniques. The known forbidden-H proof is `(vertices
 | **Rédei parity** | `H(T) = #Hamiltonian paths` is **odd**, always | Rédei |
 | **H-spectrum holes** | `H = I(Ω,2) = 1+2α₁+4α₂+…` ; **7, 21 are non-realizable** (∀n proved for 7; n≤8 for 21) | THM-029/079 |
 | **Completeness-forcing** | every pair has an arc ⟹ sparse cycle structure forces extra cycles (3 pairwise-sharing 3-cycles ⟹ a 5-cycle) | THM-029 |
-| **Girth dichotomy** | `girth(Ω(T)) ∈ {3, ∞}` — no conflict graph has girth 4,5,6,… | THM-264 |
+| **Finite girth dichotomy** | `girth(Ω(T)) in {3,infinity}` for orders `3..6`; global version OPEN | repaired THM-264 / MISTAKE-507 |
 | **Landau** | a sequence is a score seq iff `Σ_{i∈S}s_i ≥ C(|S|,2)` ∀S, `=` for S=all | Landau |
 | **Metagraph χ** | `χ(G_n) = n−1`; `ω(E_n)=χ(E_n)`, odd holes at n=7 | canon |
 | **SCC product** | `H(T) = ∏_i H(C_i)` over strong components | THM-454/520 |

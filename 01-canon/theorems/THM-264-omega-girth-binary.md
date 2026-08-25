@@ -1,42 +1,107 @@
-# THM-264: Binary Girth of Tournament Conflict Graphs
+# THM-264: Finite-Exact Binary Girth of Tournament Conflict Graphs
 
-**Status:** PROVED (exhaustive verification n=3..6, with structural argument)
-**Filed by:** kind-pasteur-2026-03-21-S18b
+**Status:** FINITE-EXACT for `3 <= n <= 6`; original global statement
+**SUPERSEDED** by MISTAKE-507
+**Filed by:** kind-pasteur-2026-03-21-S18b; scope repaired 2026-08-25
 
-## Statement
+## Definitions
 
-For any tournament T on n vertices, the girth of the conflict graph Omega(T) takes exactly one of two values:
+For a tournament `T`, let `Omega(T)` have one vertex for each distinct
+directed odd cycle of `T`, taken up to cyclic rotation; distinct cycles with
+the same vertex support remain distinct vertices.  Two cycle-vertices are
+adjacent when their supports intersect.  Write
+`alpha_1(T)=|V(Omega(T))|`, and use `girth=infinity` for an acyclic graph.
 
-- **girth(Omega(T)) = 3** if alpha_1(T) >= 3 (T has at least 3 odd cycles)
-- **girth(Omega(T)) = infinity** if alpha_1(T) <= 2 (Omega is acyclic or trivial)
+## Finite-exact statement
 
-There are NO tournament conflict graphs with finite girth in {4, 5, 6, ...}.
+For every labelled tournament on `n` vertices with `3 <= n <= 6`,
 
-## Corollary: Anti-Conflict Girth
+- `girth(Omega(T))` is either `3` or `infinity`;
+- `girth(Omega(T))=3` exactly when `alpha_1(T)>=3`; and
+- `girth(Omega(T))=infinity` exactly when `alpha_1(T)<=2`.
 
-The complement of Omega(T) has girth = infinity for all tournaments at n <= 6. The non-interference relation among odd cycles is always acyclic.
+In the same finite universe, the complement of `Omega(T)` is acyclic.
 
-Together: girth(Omega) in {3, inf} and girth(Omega^c) = inf. Tournament conflict graphs are maximally asymmetric in girth.
+This is an exhaustive finite result, not a theorem for arbitrary order.
 
-## Verification
+## Exact census
 
-Exhaustive over all tournaments at n=3 (8), n=4 (64), n=5 (1024), n=6 (32768).
+The computation exhausts all `2^binom(n,2)` labelled tournaments for
+`n=3,4,5,6`, namely `8,64,1024,32768` objects.
 
-At n=5: 544 tournaments have girth(Omega)=3 (these have alpha_1 in {4,5,6}), 480 have girth=inf (alpha_1 in {0,1,2}).
+- At `n=5`, 544 tournaments have conflict girth 3 and 480 have conflict
+  girth infinity.  The former have `alpha_1 in {4,5,6,7}`; the latter have
+  `alpha_1 in {0,1,2}`.
+- At `n=6`, 28,848 tournaments have conflict girth 3 and 3,920 have conflict
+  girth infinity.  The former have `alpha_1>=4`; the latter have
+  `alpha_1<=2`.  The value `alpha_1=3` does not occur.
 
-At n=6: 28848 have girth=3 (alpha_1 >= 4), 3920 have girth=inf (alpha_1 <= 2). Notably, alpha_1=3 does NOT occur at n=6 in the girth=inf class.
+The structural observations in the original proof explain the small-order
+census: every odd-cycle support has size at least three, so any two such
+supports intersect when `n<=5` (and a five-cycle meets every nonempty
+support); at order six the tournament constraints force a conflicting triple
+once three or more odd cycles exist.  They do not extend the quantifier
+beyond the computed range.
 
-## Structural Argument
+## Global failure boundary
 
-When alpha_1 >= 3, among all odd cycles C_1, ..., C_{alpha_1}, some triple must pairwise share vertices (form a triangle in Omega). At n <= 5, this is automatic because any two 3-subsets share at least one element. At n=6, even though disjoint cycle pairs exist, there are always enough overlapping cycles to produce a triangle. The key constraint: tournament completeness forces dense cycle neighborhoods.
+The former implication
 
-## Implications
+```text
+alpha_1(T)>=3  =>  girth(Omega(T))=3
+```
 
-1. **Impossibility filter**: Any graph with finite girth > 3 CANNOT be Omega(T). This eliminates the Petersen graph (girth 5), all Moore graphs, all cages, and all locally-linear graphs in one sweep.
+is false already at `n=7`.  THM-343 records ten labelled tournaments with
+`alpha_1=3` whose conflict graph is `K_1 disjoint_union K_2`, hence has
+girth infinity.  Thus the threshold criterion and the slogan “three cycles
+force a conflict triangle” are **REFUTED** globally.
 
-2. **Binary phase**: Tournament conflict has no "partially entangled" regime. Either cycles are dense enough for triangles (girth 3) or they're sparse enough for no cycles at all (acyclic).
+Whether every tournament conflict graph nevertheless has girth in
+`{3,infinity}` is **OPEN** here: the order-seven witness refutes the proposed
+criterion but does not create an intermediate cycle.
 
-3. **Profile determinacy explanation**: The root cycle profile captures the binary phase (girth 3 vs inf) perfectly. Its failure at n=6 occurs WITHIN the girth-3 phase, where quantitative structure (alpha_2) varies while the qualitative structure (girth) does not.
+The finite complement statement does fail globally.  On nine vertices, take
+three disjoint directed triangles `A,B,C` and orient every cross-block edge
+according to the transitive order `A->B->C`, also `A->C`.  The strongly
+connected components are exactly the triangles, so the only directed odd
+cycles are those three disjoint cycles.  Hence
+
+```text
+Omega(T)=edgeless graph on three vertices,
+complement(Omega(T))=K_3.                                  (1)
+```
+
+Thus global complement acyclicity is **REFUTED** (with a witness of order
+nine); the finite `n<=6` statement remains exact.
+
+Consequently, the old use of THM-264 as a universal exclusion of Petersen,
+Moore, cage, or other finite-girth graphs is also superseded.  The exclusion
+is proved only for conflict graphs arising in the finite universe
+`3 <= n <= 6`.
+
+## Reproduction
+
+```bash
+python3 04-computation/omega_girth_fixed_s18b.py \
+  > /tmp/omega_girth_fixed_s18b.out
+cmp /tmp/omega_girth_fixed_s18b.out \
+  05-knowledge/results/omega_girth_fixed_s18b.out
+```
+
+The script includes positive controls `K_3,K_5`, hostile controls `C_5` and
+Petersen (both girth five), the acyclic control `P_3`, and the order-nine
+three-triangle complement hostile `(1)` before the tournament census.  Its
+cycle generator fixes the least vertex as the first entry, which
+removes cyclic rotations without collapsing multiple directed cycles on one
+support.
+
+## Correction lineage and related results
+
+- MISTAKE-507 -- global-scope, Lie-carrier, flow, and arithmetic-analogy audit
+- THM-343-H7-impossible -- exact order-seven hostile `K_1 disjoint_union K_2`
+- THM-261-petersen-root-orthogonality -- exact Petersen/Kneser support carrier
 
 ## Source
-omega_girth_fixed_s18b.py
+
+`04-computation/omega_girth_fixed_s18b.py` and
+`05-knowledge/results/omega_girth_fixed_s18b.out`

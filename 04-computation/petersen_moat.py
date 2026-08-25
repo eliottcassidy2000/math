@@ -2,6 +2,10 @@
 """
 petersen_moat.py — opus-2026-03-14-S79
 
+SUPERSEDED HISTORICAL EXPLORATION.  Non-Hamiltonicity alone does not make a
+graph a snark, and the printed Petersen/Omega analogies are not proofs.  See
+MISTAKE-507 and repaired THM-261/264.
+
 THE PETERSEN GRAPH, THE T=10 MOAT, AND THE DOUBLE-5 STRUCTURE
 
 The Petersen graph P is the most important graph in graph theory.
@@ -430,7 +434,8 @@ print()
 print("Petersen graph Hamiltonian properties:")
 print("  NOT Hamiltonian (no Hamilton cycle)")
 print("  But has Hamilton paths")
-print("  This non-Hamiltonicity is KEY — makes it a 'snark'")
+print("  Non-Hamiltonicity alone does NOT make a graph a snark")
+print("  Petersen is a snark because it also has the required cubic/coloring structure")
 print()
 
 # Connection to tournaments:

@@ -28,6 +28,43 @@
   independent:
   `9a084c2ef41ad54850a3ef0a444f1c35eaa2ffe017c3c35843d9398b7b6a719a` /
   `4ccf4f419156ac2215f427639b8d7de7b138211d34c17043aa5969ce87dd54f3`.
+- `snark_boundary_ap_shell_thm4116.py` -> matching `.out` [THM-4116 PROVED
+  + VERIFIED-EXACT + INDEPENDENTLY AUDITED; LRC(14) OPEN]. Ordered boundary
+  extension tensors contract exactly; a Petersen adjacent two-vertex side
+  with four-edge boundary has disjoint support while the analogous `K_4`
+  side has dot product six. Every uncolorable finite simple cubic graph has
+  one even
+  Kempe-compressed multiplicity per edge; the exact Petersen/`J_5`/two-
+  Blanusa atlas gives the displayed per-edge multiplicity histograms and
+  detects multiple edge classes. For
+  `AP_(2q-1)`, an odd-shell graph `F` leaves `2^(c(F)-1)` circle-phase sheets:
+  trees are the `q^(q-2)` minimum synchronizers, and edge-deletion robustness
+  is exactly edge connectivity. For `q>=3`, minimum one-edge-fault-tolerant
+  repairs are the `(q-1)!/2` labelled cycles (360 for AP13). The AP13
+  six-edge histogram is `1:16807,2:32417,4:5005,8:35`; phase synchronization
+  does not imply physical safety. An independent referee checked all simple
+  graphs through five vertices and every cut, rebuilt both controls, and
+  independently reproduced the AP rank census and normal/optimized output;
+  a committed perfect-matching engine checks all 105 cubic edge sides.
+  Primary script/output SHA-256:
+  `a52a71c881459a5ffcee55cba183f8c4b8e33bea6b47ed3e2e63bc5cf2ddbe8f` /
+  `23a316c682bd89c99f98676e26c35bf7ad349065e6ae9e4ad13a50e28e1bf321`;
+  independent script/output:
+  `33784fcd273cbdeefe3e18569aee48df0acfe0f6f458b684922c6fa18d8bf105` /
+  `059a8d93fc40a99d341e76194a68283eef38d0118ab39ebbdef419897d76489b`.
+
+- `snark_half_kempe_atlas_thm4113.py` -> matching `.out` [THM-4113 PROVED
+  + VERIFIED-EXACT]. The nonredundant partial matchings of Algorithm B.1.2 in
+  arXiv:2608.22870v1 are exactly maximal noncrossing partial matchings. A
+  rooted boundary identifies them with a 2--3-block noncrossing partition or
+  a root singleton plus an ordered pair of such partitions, giving
+  `M=C+uxC^2`, `C=1+x^2C^2+ux^3C^3`. On five boundary points, cyclic
+  planarity deletes a crossing `C_5` from the 15 coarse Petersen/A4
+  compatibility edges and leaves ten half-Kempe states. This audits the
+  boundary atlas combinatorics, not the external apex-cubic theorem's three
+  large computations. Script/output SHA-256:
+  `87419c3c74782ffa9a220098306e665124ffc11a242be2bf20b1efa8ad8a214a` /
+  `ce0157c903e68ec842ed1fb72e84017c2530a2866ba2721a91ceaf67186fde48`.
 
 - `tournament_uniform_ear_average_growth_thm4111.py` and independent literal
   audit -> concordant `.out`s [THM-4111 PROVED ELEMENTARY DOUBLE COUNT +

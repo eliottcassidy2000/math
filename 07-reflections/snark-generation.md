@@ -1,45 +1,68 @@
-# Snark Generation vs Prime Generation
+> **HISTORICAL SPECULATION / SUPERSEDED (2026-08-25).**  No unique
+> factorization, Euclid operation, four-level chain, or shared `{2,3,7}`
+> obstruction was proved.  A repeated numeral is not a transfer map.
+> MISTAKE-507 withdraws those claims and this file records the repaired
+> research direction.
 
-## The analogy
+# From “Snarks as Primes” to Boundary Obstruction Compilers
 
-| Primes | Snarks |
-|--------|--------|
-| Natural numbers | Cubic graphs |
-| Multiplication | Dot product (glue along removed edges) |
-| Prime (irreducible) | Prime snark (no proper snark minor) |
-| Composite | Dot-product of smaller snarks |
-| Euclid: prod + 1 | Snark Euclid: dot-product + local modification |
-| Sieve of Eratosthenes | Sieve of Vizing (remove 3-colorable) |
-| Sylvester: 2,3,7,43,1807 | Snark chain: Petersen, ?, ?, ? |
+## Why the arithmetic analogy stopped
 
-## The first few
+Graph dot products, 2-sums, and other gluing operations depend on marked
+interfaces and need not give unique factors.  “Prime snark” also varies with
+the chosen reduction operation.  Consequently, Petersen, the Blanusa
+snarks, and flower snarks cannot be assigned arithmetic prime/composite
+values without first defining and proving a factorization theory.  Local
+modifications such as Loupekine constructions do not play the role of
+`product+1`, and no four-level termination law is known.
 
-Petersen (10 vertices) = 2 (the atom, the first prime snark).
-Blanusa (18 vertices) = Petersen · Petersen? = 2² = 4 (first composite?).
-Flower J₅ (20 vertices) = 3? (first prime snark after Petersen?).
+## Exact replacement: an interface relation
 
-## The "+1" operation
+Cut a graph along an ordered edge boundary.  For each piece `X`, retain
 
-For primes: +1 ensures the new number shares no factor with the product.
-For snarks: a LOCAL MODIFICATION (Y-Δ, vertex insertion, Loupekine construction)
-that creates new snark structure not factoring through known snarks.
+```text
+f_X(sigma) = number of internal proper colorings extending boundary word sigma.
+```
 
-## Chain length = 4?
+THM-4116 proves the exact gluing law
 
-The chain of prime numbers via Lucas-Lehmer: 3, 7, 47, 2207 (4 primes).
-The chain of prime snarks should similarly have 4 irreducible levels
-before the structure repeats — because the same {2, 3, 7} obstruction
-governs both. The curvature (3 = triangle = minimum cycle) and the
-threshold (7 = forbidden = Fano = octonion) are the SAME in both worlds.
+```text
+#Col_3(G) = sum_sigma f_X(sigma) f_(V-X)(sigma).
+```
 
-## The common obstruction
+The Petersen hostile has two nonempty boundary supports with zero overlap;
+the analogous `K_4` control has dot product six.  Thus noncolorability is not
+the absence of local states but an incompatibility between two extension
+relations.  This is the reusable obstruction compiler that the prime analogy
+was trying to locate.
 
-Primes and snarks share the SAME obstruction: the number 3.
-- Primes: 3-cycle cascade at H=7. Three intersecting cycles overflow.
-- Snarks: 3-edge-coloring fails. Three colors insufficient.
-Both are obstructed by the CURVATURE QUANTUM.
-The Petersen graph (the first snark) IS the tournament theory's
-structure constants: |V|=10=T₄, degree=3, girth=5, χ_f=Q(3/7).
+## Past snark data that remains useful
 
-The snark world and the prime world are TWO PROJECTIONS
-of the same underlying {2, 3, 7} structure.
+- THM-261 identifies Petersen exactly as the disjoint-support graph on
+  positive `A_4` roots.  It preserves support orthogonality, but loses arc
+  orientation, signs, and the distinction between the `so(5)` and `sl(5)`
+  vectors sharing the same pair index.
+- Full cycle-length profiles show that high girth is not cycle poverty:
+  Petersen has `(c_5,c_6,c_8,c_9)=(12,10,15,20)`.  Witness cycles and their
+  cut incidences are needed in addition to the counts.
+- Resistance, oddness, criticality, and boundary-extension rank measure
+  different repair costs.  A single “is a snark” bit destroys all of them.
+
+## Exact adjacent-edge atlas and next experiment
+
+THM-4116 now builds the adjacent-edge atlas for the colorable `K_4` control,
+Petersen, `J_5`, and both Sage-convention Blanusa snarks.  Parity gives four
+boundary-word orbits; for every uncolorable finite simple cubic graph, a
+Kempe involution compresses them to `(m_e,m_e,0,0)` with even `m_e`.  The
+exact histograms are
+`{2:15}`, `{4:5,6:10,10:10,12:5}`, `{4:23,6:4}`, and `{4:25,6:2}`.
+
+The next experiment should compare matched six-pole cuts and record:
+
+1. support size and extension multiplicities beyond the forced four-pole law;
+2. compatibility rank after quotienting the global `S_3` color gauge;
+3. the smallest vertex or edge deletion making the pairing nonzero; and
+4. cycle witnesses meeting the cut.
+
+The experiment can reveal reusable obstruction types without asserting an
+arithmetic factorization that the graph operations do not preserve.

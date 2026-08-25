@@ -1,3 +1,9 @@
+> **HISTORICAL ANALOGY / CORRECTION (2026-08-25):** coding-language
+> correspondences below are heuristic unless tied to a named theorem.  In
+> particular, THM-264 is finite-exact only through order six; its universal
+> girth dichotomy and derived sharp rate/distance claims are superseded by
+> MISTAKE-507.
+
 # Tournaments as Codes
 
 **Session:** kind-pasteur-2026-03-21-S18c

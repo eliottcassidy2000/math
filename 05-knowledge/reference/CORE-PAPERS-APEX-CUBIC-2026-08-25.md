@@ -152,8 +152,13 @@ interface operation and proves it independently:
   = dot product of its ordered boundary extension vectors.               (5)
 ```
 
-Its exact Petersen cut has disjoint supports and its K4 control has dot
-product six.  Transporting `(5)` as an interface-state operation to the
+Its exact Petersen four-edge boundary has disjoint supports and its K4
+control has dot product six.  Cubic parity plus a Kempe involution compresses
+every adjacent-edge four-pole of an uncolorable finite simple cubic graph to
+one even multiplicity.  Exact atlases distinguish the Petersen, `J_5`, and
+two Blanusa graph families, but that scalar does not in general classify
+their edge orbits.  Transporting
+`(5)` as an interface-state operation to the
 already-proved THM-4110 AP13 torsion quotient yields the new odd-shell
 component law `2^(c(F)-1)` and classifies all minimal phase synchronizers as
 spanning trees.  That sharpening is internally `PROVED`; it does not validate

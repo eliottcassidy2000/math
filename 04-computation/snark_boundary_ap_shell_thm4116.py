@@ -7,7 +7,7 @@ is used.
 """
 
 from collections import Counter
-from itertools import combinations
+from itertools import combinations, product
 
 
 COLORS = range(3)
@@ -100,6 +100,126 @@ def graph_boundary_audit(name, vertices, edges, side, boundary_order):
         f"{multiplicity_histogram(right)})"
     )
     return left, right
+
+
+def flower_snark_edges(k):
+    """Return the repo's standard Isaacs flower-snark J_k edge set."""
+    assert k >= 5 and k % 2 == 1
+    center = lambda i: 4 * (i % k)
+    b_leaf = lambda i: 4 * (i % k) + 1
+    c_leaf = lambda i: 4 * (i % k) + 2
+    d_leaf = lambda i: 4 * (i % k) + 3
+    edges = set()
+    for i in range(k):
+        for leaf in (b_leaf(i), c_leaf(i), d_leaf(i)):
+            edges.add(tuple(sorted((center(i), leaf))))
+        edges.add(tuple(sorted((b_leaf(i), b_leaf(i + 1)))))
+    long_cycle = tuple(c_leaf(i) for i in range(k)) + tuple(
+        d_leaf(i) for i in range(k)
+    )
+    for index, vertex in enumerate(long_cycle):
+        edges.add(tuple(sorted((vertex, long_cycle[(index + 1) % (2 * k)]))))
+    assert len(edges) == 6 * k
+    return tuple(sorted(edges))
+
+
+def cubic_edge_atlas(vertices, edges):
+    """Return full coloring count and the four-orbit four-pole atlas."""
+    vertices = tuple(vertices)
+    edges = tuple(sorted(tuple(sorted(edge)) for edge in edges))
+    adjacency = {vertex: set() for vertex in vertices}
+    for u, v in edges:
+        adjacency[u].add(v)
+        adjacency[v].add(u)
+    assert all(len(adjacency[vertex]) == 3 for vertex in vertices)
+    direct = full_coloring_count(vertices, edges)
+
+    left_support = {
+        (a, b, c, d)
+        for a in COLORS for b in COLORS for c in COLORS for d in COLORS
+        if a != b and c != d and {a, b} == {c, d}
+    }
+    parity_support = {
+        word
+        for word in product(COLORS, repeat=4)
+        if all(word.count(color) % 2 == 0 for color in COLORS)
+    }
+    assert len(parity_support) == 21
+
+    signatures = Counter()
+    for u, v in edges:
+        u_boundary = sorted(
+            tuple(sorted((u, neighbor)))
+            for neighbor in adjacency[u]
+            if neighbor != v
+        )
+        v_boundary = sorted(
+            tuple(sorted((v, neighbor)))
+            for neighbor in adjacency[v]
+            if neighbor != u
+        )
+        boundary_order = tuple(u_boundary + v_boundary)
+        complement = set(vertices) - {u, v}
+        counts = boundary_color_counts(
+            vertices, edges, complement, boundary_order
+        )
+        assert set(counts) <= parity_support
+        same = counts[(0, 0, 0, 0)]
+        parallel = counts[(0, 0, 1, 1)]
+        straight = counts[(0, 1, 0, 1)]
+        crossed = counts[(0, 1, 1, 0)]
+        for a in COLORS:
+            for b in COLORS:
+                if a == b:
+                    assert counts[(a, a, a, a)] == same
+                else:
+                    assert counts[(a, a, b, b)] == parallel
+                    assert counts[(a, b, a, b)] == straight
+                    assert counts[(a, b, b, a)] == crossed
+        assert sum(counts.values()) == (
+            3 * same + 6 * (parallel + straight + crossed)
+        )
+        assert direct == 6 * (straight + crossed)
+        signatures[(same, parallel, straight, crossed)] += 1
+    return direct, signatures
+
+
+def blanusa_first_edges():
+    """SageMath's explicit first Blanusa-snark constructor."""
+    special = (
+        (0, 5), (1, 17), (2, 14), (3, 8), (4, 17),
+        (6, 11), (7, 17), (9, 13), (10, 15), (12, 16),
+    )
+    path = tuple((i, i + 1) for i in range(16))
+    return tuple(sorted(special + path + ((0, 16),)))
+
+
+def blanusa_second_graph():
+    """SageMath's explicit second Blanusa-snark constructor."""
+    c0 = (-1, 0)
+    c1 = (-1, 1)
+    vertices = (c0, c1) + tuple(
+        (row, index) for row in range(2) for index in range(8)
+    )
+    edges = {
+        tuple(sorted(edge))
+        for edge in (
+            (c0, (0, 0)), (c0, (1, 4)), (c0, c1),
+            (c1, (0, 3)), (c1, (1, 1)),
+            ((0, 2), (0, 5)), ((0, 6), (0, 4)),
+            ((0, 7), (0, 1)), ((1, 7), (1, 2)),
+            ((1, 0), (1, 6)), ((1, 3), (1, 5)),
+        )
+    }
+
+    def add_cycle(cycle):
+        for index, vertex in enumerate(cycle):
+            edges.add(tuple(sorted((vertex, cycle[(index + 1) % len(cycle)]))))
+
+    add_cycle(tuple((0, i) for i in range(5)))
+    add_cycle(tuple((1, i) for i in range(5)))
+    add_cycle(((0, 5), (0, 6), (0, 7), (1, 5), (1, 6), (1, 7)))
+    return vertices, tuple(sorted(edges))
 
 
 def component_count(vertices, edges):
@@ -237,6 +357,44 @@ def main():
     assert set(pet_left) == expected_left
     assert set(pet_right) == expected_right
     assert set(pet_left).isdisjoint(pet_right)
+
+    k4_direct, k4_atlas = cubic_edge_atlas(k4_vertices, k4_edges)
+    assert k4_direct == 6
+    assert k4_atlas == Counter({(0, 1, 0, 1): 6})
+    pet_direct, pet_atlas = cubic_edge_atlas(
+        petersen_vertices, petersen_edges
+    )
+    assert pet_direct == 0
+    assert pet_atlas == Counter({(2, 2, 0, 0): 15})
+    j5_vertices = tuple(range(20))
+    j5_edges = flower_snark_edges(5)
+    j5_direct, j5_atlas = cubic_edge_atlas(j5_vertices, j5_edges)
+    assert j5_direct == 0
+    assert j5_atlas == Counter({(4, 4, 0, 0): 5, (6, 6, 0, 0): 10,
+                               (10, 10, 0, 0): 10, (12, 12, 0, 0): 5})
+    blanusa1_vertices = tuple(range(18))
+    blanusa1_edges = blanusa_first_edges()
+    blanusa1_direct, blanusa1_atlas = cubic_edge_atlas(
+        blanusa1_vertices, blanusa1_edges
+    )
+    assert blanusa1_direct == 0
+    assert blanusa1_atlas == Counter({(4, 4, 0, 0): 23,
+                                     (6, 6, 0, 0): 4})
+    blanusa2_vertices, blanusa2_edges = blanusa_second_graph()
+    blanusa2_direct, blanusa2_atlas = cubic_edge_atlas(
+        blanusa2_vertices, blanusa2_edges
+    )
+    assert blanusa2_direct == 0
+    assert blanusa2_atlas == Counter({(4, 4, 0, 0): 25,
+                                     (6, 6, 0, 0): 2})
+    print(
+        "Cubic 4-pole atlas: "
+        f"K4={tuple(sorted(k4_atlas.items()))}; "
+        f"Petersen={tuple(sorted(pet_atlas.items()))}; "
+        f"J5={tuple(sorted(j5_atlas.items()))}; "
+        f"BlanusaI={tuple(sorted(blanusa1_atlas.items()))}; "
+        f"BlanusaII={tuple(sorted(blanusa2_atlas.items()))}"
+    )
 
     graph_cases, bit_gates = exhaustive_component_law()
     odds, possible, sheet_hist = ap13_six_edge_census()

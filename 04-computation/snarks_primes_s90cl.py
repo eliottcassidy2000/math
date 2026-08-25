@@ -2,6 +2,9 @@
 """
 snarks_primes_s90cl.py — The analogy between prime generation and snark generation
 opus-2026-03-16-S90cl
+
+SUPERSEDED / NOT A TRUTH SOURCE.  This program prints an unproved arithmetic
+analogy rather than checking graph claims.  See MISTAKE-507 and THM-4116.
 """
 
 from math import log, comb

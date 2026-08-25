@@ -1,17 +1,29 @@
-# THM-262: Dual Lie Algebra Embedding of Tournaments
+# THM-262: Dual Lie-Algebra Carriers of Tournaments
 
-**Status:** PROVED (structural theorem)
+**Status:** PROVED formulas; carrier terminology corrected by MISTAKE-507
 **Filed by:** kind-pasteur-2026-03-21-S18
 
 ## Statement
 
-A tournament T on [n] simultaneously embeds in two Lie algebras:
+A tournament `T` on `[n]` has two related but inequivalent Lie-theoretic
+carriers:
 
-**(A) In so(n):** The skew-adjacency matrix B_T = sum_{i<j} eps_{ij}(E_{ij} - E_{ji}) is an element of so(n). The root system of so(n) is B_{floor(n/2)} (n odd) or D_{n/2} (n even).
+**(A) Faithful `so(n)` encoding:** The skew-adjacency matrix
+`B_T=sum_{i<j} eps_{ij}(E_{ij}-E_{ji})` is an element of `so(n)` and uniquely
+recovers every arc sign.  For `n>=3`, the root system of `so(n)` is type
+`B_floor(n/2)` for odd `n` and `D_(n/2)` for even `n`.
 
-**(B) In sl(n):** The weight w(T) = sum_{i<j} eps_{ij}(e_i - e_j) is an element of the root lattice of A_{n-1} = sl(n). In coordinates, w(T) = (d_0, ..., d_{n-1}) where d_k = 2*score(k) - (n-1) is the score deviation.
+**(B) Nonfaithful `A_(n-1)` score projection:** The weight
+`w(T)=sum_{i<j} eps_{ij}(e_i-e_j)` is an element of the `A_(n-1)` root
+lattice.  In coordinates, `w(T)=(d_0,...,d_(n-1))`, where
+`d_k=2*score(k)-(n-1)`.  Different tournaments can have the same score
+weight, so this is not an embedding of the tournament set.
 
-The bridge: the standard basis of so(n), namely {E_{ij} - E_{ji} : i<j}, coincides with the root vectors of sl(n). Thus dim so(n) = C(n,2) = # positive roots of A_{n-1} for all n.
+**The bridge:** both the skew basis `E_{ij}-E_{ji}` and the positive
+`A_(n-1)` roots are canonically indexed by the `C(n,2)` unordered pairs.
+They do not coincide as vectors or as root systems.  The shared pair index is
+the exact carrier; passing from `B_T` to `w(T)` destroys all information not
+visible in the score sequence.
 
 ## Key properties
 
@@ -19,7 +31,9 @@ The bridge: the standard basis of so(n), namely {E_{ij} - E_{ji} : i<j}, coincid
 
 2. **Zero weight = regular tournament:** w(T) = 0 iff T is regular. At n=5, ALL 24 regular tournaments have H=15 (Paley max).
 
-3. **Weight norm = score spread:** ||w||^2 in the A_{n-1} Killing form measures how far T is from regularity. At n=5:
+3. **Weight norm = score spread:** `||w||^2` for the standard normalized
+   `A_(n-1)` root inner product (roots have squared length two) measures how
+   far `T` is from regularity. At `n=5`:
    - ||w||^2 = 0: H = 15 (regular only)
    - ||w||^2 = 8: H in {11, 13, 15}
    - ||w||^2 = 16: H = 9
@@ -33,7 +47,10 @@ The bridge: the standard basis of so(n), namely {E_{ij} - E_{ji} : i<j}, coincid
 
 ## Significance
 
-This "fundamental triangle" — A_{n-1} positive roots, K(n,2) orthogonality, so(n) basis — unifies three perspectives on tournament structure:
+This typed triangle -- `A_(n-1)` positive-root supports, `K(n,2)`
+orthogonality, and the pair-indexed `so(n)` basis -- relates three
+perspectives on tournament structure without identifying their ambient
+vectors:
 - Combinatorial: arcs as signed roots
 - Algebraic: skew-adjacency in so(n)
 - Graph-theoretic: Kneser/Johnson duality

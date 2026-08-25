@@ -2,8 +2,12 @@
 """
 omega_girth_fixed_s18b.py -- kind-pasteur-2026-03-21-S18b
 
-FIXED girth computation for Omega(T).
-The previous version had a BFS bug. This version uses correct cycle detection.
+Girth computation for the canonical OCF conflict graph Omega(T).
+
+The first repaired version fixed a BFS bug but collapsed distinct directed
+odd cycles having the same vertex support.  This version keeps one vertex per
+directed cycle, normalized by starting at its least vertex, as required by
+THM-002/MISTAKE-004 and MISTAKE-507.
 """
 
 import sys
@@ -31,25 +35,23 @@ def count_hp(A, n):
     full = (1 << n) - 1
     return sum(dp[(full, v)] for v in range(n))
 
-def find_all_odd_cycle_vertex_sets(A, n):
-    cycle_sets = []
+def find_all_odd_cycles(A, n):
+    """List directed odd cycles up to cyclic rotation, retaining multiplicity."""
+    cycles = []
     for length in range(3, n+1, 2):
         for subset in combinations(range(n), length):
             sub = list(subset)
-            has_cycle = False
+            # sub[0] is the least vertex, so fixing it first removes exactly
+            # the cyclic-rotation multiplicity and keeps distinct cycles on
+            # the same vertex support as distinct list entries.
             for perm in permutations(sub[1:]):
                 ordering = [sub[0]] + list(perm)
-                is_cycle = True
-                for idx in range(length):
-                    if not A[ordering[idx]][ordering[(idx+1) % length]]:
-                        is_cycle = False
-                        break
-                if is_cycle:
-                    has_cycle = True
-                    break
-            if has_cycle:
-                cycle_sets.append(frozenset(subset))
-    return cycle_sets
+                if all(
+                    A[ordering[idx]][ordering[(idx + 1) % length]]
+                    for idx in range(length)
+                ):
+                    cycles.append(frozenset(subset))
+    return cycles
 
 def build_omega_matrix(cycle_sets):
     """Build conflict graph as adjacency matrix."""
@@ -140,6 +142,28 @@ for i,j in pet_edges:
     adj_pet[i][j] = adj_pet[j][i] = True
 print(f"  Petersen girth: {girth_from_matrix(adj_pet, 10)} (expected 5)")
 
+# Three directed triangles with a transitive orientation between blocks.
+# Every directed cycle stays inside one block, so Omega is edgeless on three
+# vertices while its complement is K3.  This is the global hostile to the
+# finite n<=6 complement-acyclicity observation.
+block_hostile = np.zeros((9, 9), dtype=int)
+for base in (0, 3, 6):
+    block_hostile[base][base + 1] = 1
+    block_hostile[base + 1][base + 2] = 1
+    block_hostile[base + 2][base] = 1
+for left in range(3):
+    for right in range(left + 1, 3):
+        for u in range(3 * left, 3 * left + 3):
+            for v in range(3 * right, 3 * right + 3):
+                block_hostile[u][v] = 1
+block_cycles = find_all_odd_cycles(block_hostile, 9)
+assert len(block_cycles) == 3
+block_omega, block_count = build_omega_matrix(block_cycles)
+block_anti = complement_matrix(block_omega, block_count)
+assert girth_from_matrix(block_omega, block_count) == float('inf')
+assert girth_from_matrix(block_anti, block_count) == 3
+print("  n=9 three-block hostile: Omega girth inf; complement girth 3")
+
 # ========================================================================
 # MAIN COMPUTATION
 # ========================================================================
@@ -167,7 +191,7 @@ for n in [3, 4, 5, 6]:
                 A[j][i] = 1
 
         H = count_hp(A, n)
-        cycles = find_all_odd_cycle_vertex_sets(A, n)
+        cycles = find_all_odd_cycles(A, n)
         nc = len(cycles)
 
         if nc <= 1:

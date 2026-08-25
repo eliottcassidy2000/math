@@ -1,13 +1,23 @@
+> **HISTORICAL SYNTHESIS / GLOBAL GIRTH CLAIM SUPERSEDED (2026-08-25).**
+> THM-264 is finite-exact only through order six.  Order seven refutes
+> `alpha_1>=3 => girth(Omega)=3`; global no-intermediate girth and global
+> complement acyclicity is refuted at order nine.  See MISTAKE-507.  Later claims
+> in this file that explain all tournaments through that dichotomy are
+> speculative, not current canon.
+
 # The Binary Skeleton
 
 **Session:** kind-pasteur-2026-03-21-S18b
-**Arising from:** THM-264 (Omega girth in {3, inf}), the six-patterns reflection, and a careful reading of all agents' work
+**Arising from:** the finite THM-264 census, the six-patterns reflection, and a careful reading of prior work
 
 ---
 
 ## The Discovery
 
-The conflict graph Omega(T) has girth in {3, infinity}. No tournament produces a conflict graph with girth 4, 5, 6, or any finite value other than 3. The system is either fully entangled (triangles everywhere) or completely unentangled (no cycles at all).
+The original session observed `girth(Omega(T)) in {3,infinity}` through the
+exhaustive range `n <= 6` and conjectured it globally.  That extrapolation is
+**OPEN**, not a theorem; its proposed `alpha_1` threshold already fails at
+order seven (THM-343).
 
 This is not an isolated fact. It is one bone in a skeleton that runs through the entire project.
 
@@ -59,7 +69,7 @@ These are specific values that can NEVER be achieved:
 
 These are properties that split tournaments into exactly two classes:
 
-19. **Omega girth in {3, infinity}** — THM-264. No intermediate girth values.
+19. **Finite Omega girth census** — THM-264 proves values `{3,infinity}` only for `3 <= n <= 6`; the global statement is **OPEN**.
 20. **Self-complementary vs non-SC** — SC tournaments have involution anti-automorphisms; non-SC don't. beta_1 > 0 requires SC at n=6.
 21. **Hereditary maximizers: odd n only** — At odd n, regular maximizers are hereditary. At even n, NO maximizers are hereditary.
 22. **Pfaffian classification at n=6** — beta_1 > 0 implies |Pf| in {1,3}; beta_3 > 0 implies |Pf| in {7,9}. Perfect separation.
@@ -69,7 +79,7 @@ These are properties that split tournaments into exactly two classes:
 
 24. **H mod 4 = 1 + 2*alpha_1 mod 4** — Binary switch: alpha_1 even -> H = 1 mod 4; alpha_1 odd -> H = 3 mod 4.
 25. **det(B) = Pf^2 at even n, det(B) = 0 at odd n** — Even/odd parity creates the fundamental spectral dichotomy.
-26. **Omega complement girth = infinity always** — The anti-conflict relation is ALWAYS acyclic. No exceptions.
+26. **Finite complement census** — complement acyclicity holds through `n=6` but is **REFUTED** globally by THM-264's order-nine `K_3` hostile.
 
 ---
 
@@ -83,7 +93,9 @@ A tournament is a complete oriented graph. Every pair of vertices has a definite
 
 - **Homology is maximally decisive:** beta_2 = 0 always (the second boundary map is always exact). The seesaw beta_1 * beta_3 = 0 means: the homological "energy" is allocated to one degree or the other, never shared. This is decisiveness in homological dimension.
 
-- **Girth is maximally decisive:** Omega has girth 3 or infinity. Either the cycle structure is dense enough for triangles to form instantly, or it's too sparse for any cycles at all. There is no "partially cyclic" regime because tournament completeness forces dense interactions.
+- **Girth supplied a finite binary-looking signal:** only girth three or
+  infinity occurs through order six.  Whether intermediate conflict girth
+  occurs later is open, so completeness alone does not yet explain it.
 
 - **H is maximally decisive modulo 2:** Always odd. The parity is locked. This is Redei's theorem — the most fundamental binary property of tournaments.
 
@@ -91,9 +103,12 @@ A tournament is a complete oriented graph. Every pair of vertices has a definite
 
 ### Why No Intermediate States?
 
-The absence of intermediate states (girth 4, 5; beta_2 > 0; H = 7) has a common root: **tournament completeness forces saturation.**
-
-Consider girth. If Omega has 3+ vertices, the underlying tournament has 3+ odd cycles. Each cycle uses at least 3 tournament vertices. With 3 cycles and a limited vertex supply, the pigeonhole principle forces overlaps. Overlaps create conflict edges. Three-way overlaps create triangles. The saturation is so fast that the system jumps directly from "not enough cycles for any conflict cycle" to "enough overlap for the shortest possible conflict cycle."
+The original text attributed every missing intermediate state to the slogan
+**tournament completeness forces saturation**.  That is not a proof.  Three
+cycles need not form a conflict triangle: THM-343's order-seven examples have
+three canonical odd cycles and `Omega=K_1 disjoint_union K_2`.  Any global
+girth argument must control the full cycle-intersection hypergraph, including
+distinct directed cycles with the same vertex support.
 
 This is exactly like percolation on the complete graph. In the Erdos-Renyi model G(n,p), there is a sharp threshold for the appearance of a giant component. Below threshold: many small components. Above threshold: one giant component. The transition is sharp — no "medium-sized components" persist.
 
@@ -107,15 +122,17 @@ Tournament theory has an analogous zero-one structure, but it's deterministic ra
 
 - beta_2 = 0 with probability 1 (universal, deterministic)
 - beta_1 * beta_3 = 0 with probability 1 (universal, verified)
-- Omega girth in {3, inf} with probability 1 (no intermediate girths exist)
+- Omega girth in `{3,infinity}` throughout the exact `n<=6` census; the
+  all-order version remains open
 
 These are not statements about random tournaments. They are statements about ALL tournaments. The binary skeleton is not a statistical phenomenon — it is algebraic.
 
 ---
 
-## Where Else Does {3, infinity} Live?
+## Where the finite `{3,infinity}` signal suggested analogies
 
-The girth dichotomy of Omega is a specific instance of a broader pattern. Here are the closest analogues I've found:
+The following are historical prompts.  They do not promote the finite Omega
+census to an all-order dichotomy.
 
 ### 1. The Kneser Girth Transition (Found by opus-S119)
 
@@ -126,21 +143,23 @@ K(n,2) — the Kneser graph on 2-subsets of [n] — has girth:
 - K(6,2): 3 (first triangle from 3 disjoint pairs)
 - K(n,2) for n >= 6: 3
 
-So K(n,2) also has a girth dichotomy: {infinity, 5, 3}, and for n >= 6 it's binary {3, infinity depending on whether there are any edges}. The Petersen graph sits at the unique transition point n=5 where girth is neither 3 nor infinity.
-
-**This is the ANTI-Omega result.** Omega girth is {3, inf}. The Kneser girth (for arc pairs) transitions through 5 on its way from infinity to 3. The Petersen is the boundary object — the one graph where the anti-conflict girth is finite but not 3.
+Thus `K(n,2)` has girth infinity for `n=3,4`, five at `n=5`, and
+three for `n>=6`.  This makes the Petersen graph a useful hostile for any
+putative conflict-graph representation, but THM-264 does **not** exclude the
+Petersen graph from occurring as some `Omega(T)` at larger order.
 
 ### 2. The Transfer Matrix Trace (tr(M) in {H, 0})
 
 The transfer matrix M satisfies tr(M) = H at odd n, tr(M) = 0 at even n. This is another {value, zero} dichotomy. The parity of n acts as a binary switch that either enables or completely annihilates the trace. No partial trace exists.
 
-This parallels the girth dichotomy: the "trace" of the cycle structure of Omega is either fully present (girth 3 = triangles) or fully absent (girth infinity = acyclic).
+The trace identity is exact where separately proved; its resemblance to the
+finite girth census is only an analogy.
 
 ### 3. The Seesaw (beta_1 * beta_3 = 0)
 
 This is a {left, right} dichotomy rather than {finite, infinite}, but the structure is the same: two mutually exclusive states with no interpolation. A tournament's homological "energy" is entirely in degree 1 or entirely in degree 3, never split.
 
-The girth dichotomy is the cycle-level version: Omega's cycle structure is either fully triangulated or fully acyclic, never intermediate.
+The proposed cycle-level dichotomy remains open beyond the finite census.
 
 ### 4. The H = 7 Impossibility
 
@@ -154,9 +173,11 @@ Opus discovered that tournament H and stabilizer code distance d are both evalua
 - H = I(Omega, 2) — evaluation at x = 2 (counting regime)
 - d = lim_{x->0} of a related function (minimum weight regime)
 
-The binary girth {3, inf} constrains both: a girth-3 graph has many short cycles, which INCREASES the independence polynomial at x = 2 (more paths for independent sets to weave through) but DECREASES code distance (short cycles = low-weight logical operators). Girth-infinity graphs have the reverse: low I(G, 2) but potentially high distance.
-
-So the binary girth is the switch between "counting-efficient" (girth 3, high H) and "distance-efficient" (girth infinity, potentially high code distance). You can optimize for one or the other, but not both. This is a new manifestation of the counting-vs-distance tradeoff in coding theory.
+The partition-function/code-distance paragraph is conjectural.  Girth alone
+does not monotonically determine an independence polynomial, and no typed map
+from these tournament conflict graphs to the cited stabilizer constructions
+was supplied.  Retain it only as a prompt for a controlled pair of graph
+families with all side data fixed.
 
 ### 6. Ecological Intransitivity (External Analogy)
 
@@ -171,7 +192,9 @@ This is the {3, infinity} pattern in biology. The tournament conflict graph of t
 
 Ramsey theory's most basic result: R(3,3) = 6. In any 2-coloring of the edges of K_6, there is a monochromatic triangle. Equivalently: among 6 people, either 3 are mutual friends or 3 are mutual strangers. No intermediate state.
 
-The Omega girth dichotomy has a Ramsey flavor: among the odd cycles of a tournament, either some triple is mutually conflicting (triangle in Omega, girth = 3) or no pair is conflicting enough to cycle (girth = infinity). The Ramsey-like bound R(3, inf) = 3 (if Omega has 3+ vertices, it has a triangle) is exactly our THM-264.
+The former Ramsey paraphrase was false: an `Omega` with at least three
+vertices need not contain a triangle, as THM-343's `K_1 disjoint_union K_2`
+hostile shows.  THM-264 currently supplies only the finite `n<=6` census.
 
 The Ramsey number R(3,3) = 6 appears in our setting as well: n = 6 is where the Kneser girth transitions from 5 to 3, where beta_3 first appears, where the per-path identity first fails, and where alpha_2 first becomes possible. Six is the tournament Ramsey threshold.
 
@@ -183,7 +206,8 @@ Why is tournament structure so relentlessly binary?
 
 I think the answer is that tournaments are **complete.** Every pair has a definite orientation. There are no "missing" edges, no ambiguity, no partial information. This completeness is the source of all the binary phenomena:
 
-- Completeness forces the conflict graph to be dense when there are enough cycles, making triangles unavoidable (girth = 3 or infinity, nothing between).
+- Completeness constrains cycle intersections, but it does not by itself make
+  the conflict graph dense; the exact threshold claim is refuted.
 - Completeness makes every path extendable (Redei: H >= 1 always), locking the parity.
 - Completeness makes the path homology exact in degree 2 (beta_2 = 0: every apparent 2-hole is actually a boundary).
 - Completeness makes the score sequence highly constraining (the root cycle profile almost determines H).
@@ -192,7 +216,9 @@ In a general digraph, all of these binary properties fail. Beta_2 can be nonzero
 
 This suggests a meta-theorem: **every "soft" structural property of general digraphs becomes "hard" (binary) when restricted to tournaments.** The completeness constraint rigidifies the entire structure, collapsing continuous spectra into discrete alternatives.
 
-If this meta-theorem is true, then the binary skeleton is not a collection of independent results but a single consequence of tournament completeness propagating through different algebraic frameworks. The {3, infinity} girth, the {1 mod 2, always} parity, the {0, positive} Betti numbers, the {permanent, temporary} H-gaps — all are faces of the same rigidification.
+If a repaired meta-theorem exists, it must state its carrier and quantifiers
+separately for each invariant.  The finite girth signal cannot currently be
+grouped with the proved parity statements as one theorem.
 
 ---
 
@@ -214,4 +240,8 @@ These predictions are testable. The fourth is already partially verified (HYP-32
 
 ---
 
-*The binary skeleton of tournament theory is not a curiosity — it is the central structural fact. Tournaments are the mathematical objects where pairwise comparison is total, and totality makes everything binary. The girth of Omega, taking values {3, infinity} with nothing between, is the clearest expression of this principle. It is the mathematical equivalent of the observation that in a room where everyone has an opinion about everyone else, the opinion structure is either trivially simple (no disagreement cycles) or maximally complex (disagreement triangles everywhere), with no middle ground. The Petersen graph, living at girth 5, is the forbidden intermediate — the graph that would exist if opinions could be partially entangled. Its impossibility as a tournament conflict graph is not a technical lemma but a statement about the nature of total comparison.*
+*The durable lesson is methodological: a striking finite binary pattern is a
+reason to search for the missing coordinate and a hostile boundary case, not
+to infer an all-order law.  Here the missing coordinates were canonical
+directed-cycle multiplicity and the full cycle-intersection hypergraph; the
+Petersen-as-conflict question and intermediate-girth question remain open.*

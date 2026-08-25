@@ -1,3 +1,7 @@
+> **HISTORICAL SYNTHESIS / CORRECTION (2026-08-25):** references below to a
+> universal THM-264 girth dichotomy are finite-exact only through order six.
+> See MISTAKE-507; the global statement is OPEN.
+
 # Seventeen Vitali Atoms
 
 **Session:** kind-pasteur-2026-03-21-S18m

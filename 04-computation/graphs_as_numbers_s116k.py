@@ -1,5 +1,8 @@
 #!/usr/bin/env python3
-"""graphs_as_numbers_s116k.py — If snarks are primes, what are the other numbers?
+"""graphs_as_numbers_s116k.py — historical snark/prime analogy.
+
+SUPERSEDED / NOT A TRUTH SOURCE.  No factorization functor or prime-snark
+dictionary is proved here.  See MISTAKE-507 and THM-4116's boundary tensor.
 
 The Petersen graph = 2 (the first prime, the atom).
 Snarks = primes (irreducible obstructions).

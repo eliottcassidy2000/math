@@ -1,6 +1,10 @@
 #!/usr/bin/env python3
 """petersen_tricks_s116k.py — Tricks from the Cayley-Paley-Petersen connection.
 
+SUPERSEDED HISTORICAL EXPLORATION.  Numerical coincidences below do not give
+a transfer map, and the global Petersen-as-Omega question is OPEN.  See
+THM-264 and MISTAKE-507; do not use this transcript as proof.
+
 The Petersen graph sits at the intersection of {2,3,5,7,10}.
 Its fractional chromatic number = Q(3/7) = 5/2.
 Its vertices = C(5,2) = T_4 = 10 = the reset cost.
@@ -138,8 +142,8 @@ print("  Petersen has 10 vertices. Could 10 of the 14 three-cycles form")
 print("  a Petersen-like conflict graph? Unlikely (Petersen is 3-regular,")
 print("  but conflict graphs of 3-cycles at n=7 have varying degree).")
 print()
-print("  The Petersen graph probably does NOT arise as Omega(T).")
-print("  But I(Petersen, 2) = {H_petersen} is the H-value it WOULD give.")
+print("  Whether the Petersen graph arises as Omega(T) is OPEN here.")
+print(f"  But I(Petersen, 2) = {H_petersen} is the H-value it WOULD give.")
 print()
 
 # ============================================================

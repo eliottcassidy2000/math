@@ -3,6 +3,11 @@
 stabilizer_tournament_bridge_s127.py — Stabilizer Code Distance ↔ Tournament Theory
 opus-2026-03-21-S127
 
+SUPERSEDED HISTORICAL EXPLORATION.  The printed order-eight claw/girth claim
+below is false: claw-freeness would not exclude triangles, and the repaired
+canonical census already has conflict-girth-three examples at orders five and
+six.  See THM-264 and MISTAKE-507; do not use this transcript as evidence.
+
 THE CONNECTION:
 
 A stabilizer code on n qubits is described by a graph G on n vertices.
@@ -82,8 +87,8 @@ print("""
 
   For tournament conflict graphs:
     girth(Omega(T)) varies with T.
-    At n<=8: Omega(T) is claw-free → girth >= 4 (no triangles if bipartite)
-    At n>=9: Omega(T) can have claws → girth can be 3.
+    HISTORICAL CLAIM WITHDRAWN: the old claw-free/girth inference is false.
+    Exact canonical examples already have girth 3 at orders five and six.
 
   THE ANALOGY:
     Large girth in the CODE graph → high DISTANCE

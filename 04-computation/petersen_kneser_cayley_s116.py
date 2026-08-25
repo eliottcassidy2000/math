@@ -2,6 +2,11 @@
 """
 petersen_kneser_cayley_s116.py — opus-2026-03-21-S116
 
+SUPERSEDED HISTORICAL EXPLORATION.  This script contains false prose,
+including K(5,3) isomorphic to K(5,2); in fact K(5,3) has no edges.  It also
+conflates pair-support and cycle-conflict carriers.  See MISTAKE-507; do not
+use its printed synthesis as reproducible evidence.
+
 THE PETERSEN-KNESER-CAYLEY-LIE NEXUS
 
 The Petersen graph K(5,2) is a Kneser graph — its vertices are 2-element
@@ -255,11 +260,10 @@ for n in range(3, 10):
 
 print(f"""
   KEY OBSERVATIONS:
-  1. At n=5: K(5,3) = the complement of K(5,2) = complement of Petersen!
-     K(5,3) has C(5,3)=10 vertices, edges connect 3-subsets that are
-     disjoint. But two 3-subsets of {{1,...,5}} are disjoint iff their
-     complements (2-subsets) are disjoint — which means K(5,3) ≅ K(5,2).
-     Actually: K(5,3) is isomorphic to K(5,2) (Kneser complementation).
+  1. At n=5, K(5,3) has C(5,3)=10 vertices and NO edges, because two
+     3-subsets of a 5-set cannot be disjoint.  Complementing a 3-subset gives
+     a 2-subset, but it does not preserve the disjointness relation; hence
+     K(5,3) is not Petersen and is not isomorphic to K(5,2).
 
   2. At n=7: K(7,3) = the Kneser graph on 35 vertices.
      Max matching = 2 (two disjoint triples using 6 of 7 vertices).

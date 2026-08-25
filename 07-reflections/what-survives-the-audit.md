@@ -1,3 +1,7 @@
+> **CORRECTION (2026-08-25):** the THM-264 item below survives only as an
+> exhaustive `n=3..6` result.  Its claimed global structural argument is
+> superseded by MISTAKE-507 and the order-seven hostile in THM-343.
+
 # What Survives the Audit
 
 **Session:** kind-pasteur-2026-03-21-S18z

@@ -19,7 +19,13 @@ This places the Petersen graph (and the entire K(n,2) family) firmly within Lie 
 - K(5,2) = Petersen: orthogonality graph of 10 positive roots of A_4 = sl(5)
 - K(n,2): orthogonality graph of C(n,2) positive roots of A_{n-1} = sl(n)
 
-Since dim so(n) = C(n,2) = # positive roots of A_{n-1}, and the standard basis of so(n) IS the set of root vectors {E_{ij} - E_{ji}}, tournaments live at the intersection of so(n) and A_{n-1}.
+Since `dim so(n) = C(n,2) = #Phi^+(A_{n-1})`, the skew basis
+`F_{ij}=E_{ij}-E_{ji}` and the positive `A_{n-1}` roots have a canonical
+common indexing by pairs `{i,j}`.  They are **not** the same vectors:
+`F_{ij}` is an element of `so(n)`, whereas an `sl(n)` root vector is, for
+example, `E_{ij}` in the root space of `e_i-e_j`.  The exact bridge is the
+shared support index and its disjointness graph, not an identification of the
+two Lie algebras.  See MISTAKE-507.
 
 ## Computational verification
 
@@ -34,7 +40,12 @@ A tournament T on [n] assigns eps_{ij} in {+1,-1} to each positive root alpha_{i
 - A vertex of the hypercube {+/-1}^{C(n,2)} in so(n)
 - A signed function on the positive roots of A_{n-1}
 
-The Petersen graph structure on these roots determines which root pairs are "orthogonal" (disjoint arcs) vs "conflicting" (overlapping arcs), directly connecting to the tournament conflict graph via the Kneser/Johnson duality.
+The Petersen graph structure on these roots determines which **arc supports**
+are orthogonal (disjoint pairs) versus overlapping.  This supplies an
+incidence sidecar for tournament calculations, but it is not the tournament
+conflict graph `Omega(T)`: the latter has directed odd cycles, not arcs, as
+vertices.  Any transfer from the pair-indexed Kneser/Johnson layer to
+`Omega(T)` must explicitly retain the cycle-incidence map.
 
 ## Source
 petersen_lie_bridge_s18.py, Part 1

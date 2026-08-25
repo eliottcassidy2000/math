@@ -1,3 +1,9 @@
+> **HISTORICAL SPECULATION / CORRECTION (2026-08-25):** the proposed literal
+> `{3,infinity}` tessellation and modular-group identifications were never
+> proved.  Moreover, THM-264 is finite-exact only through order six and its
+> global threshold fails at order seven.  See MISTAKE-507.  Treat the text
+> below as provenance for analogies, not a truth source.
+
 # The Tessellation
 
 **Session:** kind-pasteur-2026-03-21-S18f

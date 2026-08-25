@@ -1,3 +1,8 @@
+> **HISTORICAL SYNTHESIS / CORRECTION (2026-08-25):** the `so(n)` skew
+> basis and `sl(n)` root vectors share pair indices but are not the same
+> vectors, and THM-264 gives no global exclusion of Petersen as a tournament
+> conflict graph.  See MISTAKE-507.  Applications below are speculative.
+
 # Six Patterns and Where They Lead
 
 **Session:** kind-pasteur-2026-03-21-S18
@@ -15,7 +20,11 @@ The Petersen-Lie bridge investigation produced specific results about tournament
 
 **What it is:** A single object lives naturally in two different algebraic structures, and neither structure alone sees the full picture, but together they do.
 
-A tournament T simultaneously lives in so(n) as a skew-adjacency matrix and in the A_{n-1} root lattice as a signed function on positive roots. The same basis elements {E_{ij} - E_{ji}} serve as generators of so(n) AND as root vectors of sl(n). The object doesn't "choose" one home -- it exists in both, and the two homes see different invariants (Casimirs vs weight norms), neither of which alone determines H.
+A tournament `T` has a faithful skew-adjacency encoding in `so(n)` and a
+nonfaithful score-weight projection to the `A_(n-1)` root lattice.  Both use
+the same pair index `{i,j}`, but `E_ij-E_ji` is not the `sl(n)` root vector
+`E_ij`.  The two carriers see different invariants (Casimirs versus score
+weights), neither of which alone determines `H`.
 
 **The abstract principle:** When an object has a dual algebraic nature, look for the invariants that are visible from one perspective but invisible from the other. The intersection of these two views is richer than their union.
 
@@ -89,7 +98,10 @@ For tournaments: the A_{n-1} weight norm ||w||^2 measures distance from regulari
 
 **What it is:** Two unrelated counting formulas produce the same number, and the coincidence points to a deep structural isomorphism.
 
-dim so(n) = C(n,2) = # positive roots of A_{n-1}. This is not a coincidence -- it reveals that the standard basis of so(n) IS the set of root vectors of sl(n). The Petersen graph materializes at n=5 where this count is 10, but the identity holds for all n.
+`dim so(n)=C(n,2)=#Phi^+(A_(n-1))`.  The equality yields a canonical
+bijection of index sets: both sides are labelled by pairs.  It does **not**
+identify the skew matrices with `sl(n)` root vectors.  Petersen materializes
+at `n=5` in the separate support-orthogonality graph of THM-261.
 
 **The abstract principle:** When two different formulas from two different theories give the same answer, there is almost always a natural bijection or isomorphism hiding beneath. Finding it converts a numerical curiosity into a theorem.
 
@@ -103,7 +115,12 @@ dim so(n) = C(n,2) = # positive roots of A_{n-1}. This is not a coincidence -- i
 
 ## Pattern 6: The Impossibility via Duality Reversal
 
-**What it is:** A structure is impossible as a substructure because it exists in the wrong half of a duality. The Petersen graph can never be a tournament conflict graph because it lives in the Kneser (anti-conflict) world, not the Johnson (conflict) world.
+**What it was meant to test:** whether a configuration can be excluded
+because a faithful duality places it on the wrong side.  No such global
+duality was proved for Petersen versus tournament conflict graphs.  Repaired
+THM-264 excludes finite girth five only in the exhaustive tournament universe
+of orders `3..6`; the global realization question is not settled by the
+Kneser/Johnson labels alone.
 
 **The abstract principle:** When trying to prove that a certain configuration is impossible, look for a duality that places the configuration on the "wrong side." The proof becomes: the configuration encodes X, but the context requires Y, and X and Y are complements.
 
@@ -168,18 +185,23 @@ This is a **Phase Transition with No Intermediate Phase.** The system is either 
 
 The binary phase is perhaps the deepest of the patterns because it constrains all the others. The profile determinacy boundary (Pattern 3) isn't just a boundary -- it separates two phases with nothing between them. The impossibility (Pattern 6) isn't marginal -- it's categorical. The weight-norm anticorrelation (Pattern 4) maps directly onto the two phases: low norm = girth 3 phase, high norm = girth infinity phase.
 
-### The Anti-Conflict Girth Is Always Infinity
+### The finite anti-conflict census and its first hostile
 
-Perhaps the most striking finding: at n <= 6, the anti-conflict girth (girth of the complement of Omega) is ALWAYS infinity. The complement of Omega has no cycles at all -- it is always a forest (or empty).
-
-This means: there is no sequence of odd cycles C_1, C_2, ..., C_k where consecutive ones are vertex-disjoint AND the chain wraps back to the start. The "non-interference" relation among odd cycles is always acyclic. Odd cycles are organized in a TREE of non-interference, never a cycle.
-
-This is the DUAL of the girth-3 theorem: conflict always has short cycles; non-conflict never has any cycles. Together:
-
-**girth(Omega) in {3, infinity} and girth(Omega^c) = infinity**
-
-Tournament conflict graphs are MAXIMALLY ASYMMETRIC in girth: the graph has the shortest possible finite girth (3), while its complement has the longest possible girth (infinity). No other simple graph family has this property. It is uniquely characteristic of tournament conflict.
+The repaired exhaustive statement is finite: for `n <= 6`, the complement
+of `Omega(T)` is acyclic, and every finite conflict girth observed is three.
+Neither pattern is a global theorem.  THM-343 already refutes the old
+`alpha_1 >= 3` threshold at order seven.  More decisively, at order nine,
+take three disjoint directed triangles and orient every cross-block arc
+transitively from the first block to the second to the third.  These are the
+only directed odd cycles, so `Omega(T)` is an edgeless three-vertex graph and
+its complement is `K_3`.  Thus global complement acyclicity is **REFUTED**,
+while the existence of an intermediate finite conflict girth remains
+**OPEN**.  See THM-264 and MISTAKE-507.
 
 ---
 
-*The six patterns are not metaphors. They are theorems about structure that happen to have been discovered in tournaments but that apply wherever two algebraic perspectives coexist, wherever conflict has a complement, wherever a local fingerprint reaches its resolution limit, wherever symmetry determines optimality, wherever two formulas accidentally agree, and wherever impossibility is the shadow of a duality. The girth of Omega, collapsing to a binary {3, infinity} with no intermediate values, is the sharpest expression of these patterns: tournament conflict is all-or-nothing, the Petersen graph is categorically excluded, and the acyclic anti-conflict complement is the hidden skeleton that holds the structure together.*
+*These six patterns are prompts for typed transfer, not automatic theorems in
+new carriers.  The finite `n <= 6` girth census is a useful hostile-probe
+generator, but its former global extrapolation and Petersen exclusion have
+been withdrawn; every transfer must retain the map, lost data, and decisive
+test recorded in MISTAKE-507.*

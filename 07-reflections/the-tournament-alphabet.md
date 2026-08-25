@@ -1,3 +1,9 @@
+> **HISTORICAL SYNTHESIS / CORRECTION (2026-08-25):** the global THM-264
+> girth dichotomy used below is finite-exact only through order six; its old
+> threshold is refuted at order seven, and complement acyclicity is refuted
+> at order nine.  See MISTAKE-507.  Alphabet analogies are not theorem
+> transfers.
+
 # The Tournament Alphabet
 
 **Session:** kind-pasteur-2026-03-21-S18d
@@ -166,7 +172,12 @@ For q = 3: H_3 = "ternary tournament count."
 
 4. **The OCR depends on q.** The score sequence determines more or less of H_q depending on q. At q = 2, OCR ~ 97%. At q -> infinity, OCR -> 100% (the dominant independent set, determined by alpha_1, dominates). At q = 1, OCR might be lower.
 
-5. **The girth dichotomy is independent of q.** Girth is a property of Omega, not of the evaluation point. So girth(Omega) in {3, infinity} holds for all q-tournaments.
+5. **Girth is independent of the evaluation point, but the claimed global
+   dichotomy is not proved.**  The exact census gives finite girth three (or
+   infinity) only through order six.  THM-343 refutes its old threshold at
+   order seven; whether an intermediate finite conflict girth occurs is
+   **OPEN**, and complement acyclicity is **REFUTED** at order nine
+   (THM-264, MISTAKE-507).
 
 ---
 

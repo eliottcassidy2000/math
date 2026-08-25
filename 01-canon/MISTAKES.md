@@ -9,6 +9,59 @@ Format per entry:
 - Why it was wrong
 - The correct framing
 
+## MISTAKE-507 (2026-08-25, legacy snark/tournament synthesis audit) -- finite conflict-girth data, pair-indexed Lie carriers, flows, and arithmetic analogies were conflated
+
+- **What failed:** THM-264 promoted its exhaustive `n<=6` conflict-graph
+  census to the global implication `alpha_1>=3 => girth(Omega)=3` and hence
+  to a universal no-intermediate-girth theorem.  Its first repaired
+  reproducer also retained only one directed cycle per vertex support,
+  although canonical OCF `Omega` has one vertex per distinct directed odd
+  cycle.  THM-261/262 then called the
+  pair-indexed skew basis of `so(n)` the root vectors of `sl(n)`.  Historical
+  snark reflections additionally identified cubic three-edge-coloring with a
+  nowhere-zero `Z/3Z` flow, said cubic graphs are always two-edge-colorable,
+  treated a residue modulo three as a primality test, and promoted
+  “snarks are primes” without a factorization map.
+- **Minimal witnesses / first failed implications:** THM-343 gives ten
+  labelled order-seven tournaments with `alpha_1=3` and
+  `Omega=K_1 disjoint_union K_2`, so the conflict girth is infinity rather
+  than three.  The matrix `E_12-E_21 in so(n)` is not the `sl(n)` root vector
+  `E_12`; only their pair labels agree.  At every vertex of a nonempty cubic
+  graph, three incident edges are pairwise adjacent and therefore require
+  three distinct edge colors.  The
+  relevant color-flow group is `F_2^2`, not `Z/3Z`: the three nonzero
+  elements at every cubic vertex are exactly the three edge colors.  Finally,
+  `7` and `25` have the same residue `1 mod 3` but differ in primality, so the
+  residue describes splitting only after a rational prime has been given.
+- **Repair / strongest survivors:** THM-264 is now `FINITE-EXACT` for
+  `3<=n<=6`; the global no-intermediate-girth question is OPEN, and its old
+  threshold criterion is REFUTED.  The canonical-cycle rerun leaves the
+  girth class counts unchanged but repairs the order-five girth-three range
+  from `alpha_1 in {4,5,6}` to `{4,5,6,7}` and the order-six range to
+  `{4,5,6,7,8,9,10,11,12,13,14,16,19,20}`.  Global complement acyclicity is
+  REFUTED by three disjoint directed triangles with transitively oriented
+  cross-block arcs: `Omega` is edgeless on three vertices and its complement
+  is `K_3`.  THM-261's exact support map
+  `{i,j}->e_i-e_j` and Petersen/Kneser orthogonality theorem survive.  THM-262
+  now separates the faithful skew-adjacency encoding from the nonfaithful
+  score-weight projection.  The standard cubic equivalence is proper
+  three-edge-coloring iff a nowhere-zero `F_2^2` flow, hence a nowhere-zero
+  4-flow.  The proof-grade snark abstraction is instead THM-4116's ordered
+  boundary extension relation: gluing is an exact dot product, and an
+  obstruction is empty compatibility.
+- **Reusable rule:** a shared index set, numeral, residue, or obstruction
+  slogan is not a transfer map.  Name the source and target objects, the
+  actual map, the preserved predicate, the destroyed data, and the sidecar
+  before importing a theorem across carriers.
+
+  Affected historical executable-prose artifacts include
+  `omega_girth_investigation_s18b.py`, `petersen_lie_bridge_s18.py`,
+  `petersen_kneser_cayley_s116.py`, `graphs_as_numbers_s116k.py`,
+  `snarks_primes_s90cl.py`, `petersen_moat.py`,
+  `stabilizer_tournament_bridge_s127.py`, and
+  `petersen_tricks_s116k.py`; their warning headers and this correction take
+  precedence over their printed analogies.
+
 ## MISTAKE-500 (2026-08-25, exploratory AP7 full-pair gap graph) -- an unequal-arc overlap was replaced by half an equal-arc triangle
 
 - **What failed:** an unpromoted scratch model assigned an even--odd AP7

@@ -38,9 +38,15 @@ related:
   - HYP-3074
   - HYP-2963
   - OPEN-Q-108
+  - MISTAKE-507
 ---
 
 # HYP-3105: Tournament Obstruction-Transfer Atlas
+
+> **Scope correction (2026-08-25):** THM-264 supplies only an exhaustive
+> order-`3..6` conflict-girth lever.  Its global threshold is refuted and the
+> global no-intermediate-girth claim is OPEN.  No atlas row may use it outside
+> that finite universe without a new proof.
 
 ## Claim
 
