@@ -25,6 +25,7 @@ related:
   - THM-3629-russell-cylinder-linear-vertical-fold-global-form-boundary
   - THM-3641-russell-cylinder-principal-noneven-curvature-debt-boundary
   - THM-3675-russell-cylinder-critical-fold-formal-conjugacy-closure
+  - THM-4046-exceptional-quartic-j7-lift-and-j8-obstruction
 script: 04-computation/jc2_russell_cylinder_monomial_ramification_debt_dilation_thm3673.py
 output: 05-knowledge/results/jc2_russell_cylinder_monomial_ramification_debt_dilation_thm3673.out
 script_sha256: 81d8237c9fefae07176d82bffb7d9b84763be3c13bb72755da2e0530d90db573

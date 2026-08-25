@@ -26,6 +26,7 @@ related:
   - THM-3623-russell-cylinder-even-general-vertical-fold-all-order-closure
   - THM-3629-russell-cylinder-linear-vertical-fold-global-form-boundary
   - THM-3641-russell-cylinder-principal-noneven-curvature-debt-boundary
+  - THM-4046-exceptional-quartic-j7-lift-and-j8-obstruction
 script: 04-computation/jc2_russell_cylinder_critical_fold_formal_conjugacy_thm3675.py
 output: 05-knowledge/results/jc2_russell_cylinder_critical_fold_formal_conjugacy_thm3675.out
 script_sha256: 543dd998a41924e16c1f6d1cf1439432fe050cef84e7c9301ecd25fb977bfd00

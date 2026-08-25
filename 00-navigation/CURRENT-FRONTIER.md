@@ -362,10 +362,10 @@ or residue follows.
   three-dimensional zero algebra plus `K[x]/h_172`; its nilradical is the
   regular-multiplication kernel. Multiplication-only channels therefore lose
   three retained cotangent lines and require a linear sidecar.
-  THM-4039 certifies `J_3` and choice rigidity.
-  [THM-4043](../01-canon/theorems/THM-4043-exceptional-quartic-shifted-stable-identities-and-j6-lift.md)
-  shifts the universal identity and reaches `J_6` for all four embeddings;
-  `J_7` and globalization remain OPEN.
+  THM-4039 certifies `J_3`; THM-4043 reaches `J_6`.
+  [THM-4046](../01-canon/theorems/THM-4046-exceptional-quartic-j7-lift-and-j8-obstruction.md)
+  reaches `J_7`, obstructs `J_8`, and closes every `0!=H in t^2 C[t]`
+  over the four exceptional folds.
   Other reduced cells, higher faces, cancellation, Keller/Darboux entry, the nonreduced Russell `(6,4)` lane, and `JC(2)` stay open.
 - **Weyl boundary:** THM-2049 gives a formal beta-adic lift; finite termination remains.
 - **Planar source fibres:** THM-2063/THM-2084--2480 (including

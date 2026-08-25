@@ -31,6 +31,7 @@ related:
   - THM-3737-russell-cylinder-exceptional-quartic-jacobian-image-hyperplane
   - THM-4039-exceptional-quartic-j3-lift-and-adjacent-gate-rigidity
   - THM-4043-exceptional-quartic-shifted-stable-identities-and-j6-lift
+  - THM-4046-exceptional-quartic-j7-lift-and-j8-obstruction
 script: 04-computation/jc2_russell_cylinder_exceptional_quartic_exact_j1_j2_lift_thm3688.py
 output: 05-knowledge/results/jc2_russell_cylinder_exceptional_quartic_exact_j1_j2_lift_thm3688.out
 script_sha256: 02cd67446b18b3863bc3665d48a6c5cccda81c394f94b754d2b90b1597c53ba6
@@ -261,8 +262,8 @@ constructed.  Downstream THM-3737 reduces the `J_3` stage to the scalar gate
 `Lambda(D_3)=0`, and THM-4039 proves that gate and obtains stagewise actual
 coefficients through `J_4`; THM-4043 then uses shifted stable identities to
 reach `J_6`.  Those later theorems do not retroactively add a `J_3` claim to
-the frozen certificate proved here.  The current actual-ring frontier is
-`J_7`, followed by coherent degree control and globalization.
+the frozen certificate proved here.  THM-4046 reaches `J_7` and proves the
+first unavoidable scalar debt at `J_8`.
 
 ## 6. Reproduction
 

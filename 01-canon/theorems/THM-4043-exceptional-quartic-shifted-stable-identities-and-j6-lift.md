@@ -30,6 +30,7 @@ depends_on:
 related:
   - THM-3677-russell-cylinder-degree-eight-fourth-debt-parabola
   - THM-4039-exceptional-quartic-j3-lift-and-adjacent-gate-rigidity
+  - THM-4046-exceptional-quartic-j7-lift-and-j8-obstruction
 script: 04-computation/jc2_russell_cylinder_exceptional_quartic_shifted_stable_j6_lift_thm4043.py
 output: 05-knowledge/results/jc2_russell_cylinder_exceptional_quartic_shifted_stable_j6_lift_thm4043.out
 script_sha256: ef76a4aefe213c63ff4ce40d97fb57f6a9cf1b6ea90a7a4032b57c6e9c462de3
@@ -247,5 +248,6 @@ theorem proves neither
 - a polynomial Keller map or its noninjectivity; nor
 - a counterexample to `JC(2)`, which remains open.
 
-The next scalar gate is `J_7`, followed independently by coherent degree
-control and globalization.  **QED.**
+Downstream THM-4046 proves a new order-eight identity, reaches `J_7`, and
+shows that no actual order-nine choice can clear `J_8`; it does not
+retroactively add an order-eight identity to this theorem.  **QED.**

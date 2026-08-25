@@ -49,6 +49,7 @@ related:
   - THM-3688-russell-cylinder-exceptional-quartic-actual-j1-j2-lift
   - THM-4039-exceptional-quartic-j3-lift-and-adjacent-gate-rigidity
   - THM-4043-exceptional-quartic-shifted-stable-identities-and-j6-lift
+  - THM-4046-exceptional-quartic-j7-lift-and-j8-obstruction
   - THM-3629-russell-cylinder-positive-global-pair-to-jc2-counterexample
   - THM-4030-lrc14-d4-affine-defect-lattice-boundary
   - THM-4032-lrc14-d3-affine-defect-lattice-boundary
@@ -578,5 +579,5 @@ good-reduction denominator, the determinant `(15)`, and the hostile cutoff.
 This theorem proves neither the later scalar identities nor an all-order
 solution, positive global pair, noninjective Keller map, or counterexample to
 the planar Jacobian conjecture.  Downstream THM-4039 certifies the frozen
-`J_3` gate and choice rigidity; THM-4043's shifted identities reach `J_6`.
-Neither establishes all-order continuation.  **QED.**
+`J_3` gate and choice rigidity; THM-4043 reaches `J_6`, and THM-4046 reaches
+`J_7` before proving a nonzero `J_8` debt.  **QED.**

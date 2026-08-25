@@ -11,8 +11,9 @@ status: >
   lift through J_4.  The induced next-cokernel map from every admissible
   L_0-kernel is zero, and the coupled F_4/F_5 choice response at J_5 is also
   zero, with the earlier frozen data through F_3,G_3 fixed.  This theorem
-  does not evaluate J_5; downstream THM-4043 proves its vanishing and reaches
-  J_6.  J_7, coherent degree control, globalization, and JC(2) remain open.
+  does not evaluate J_5; downstream THM-4043 reaches J_6, and THM-4046
+  reaches J_7 and proves the sharp J_8 obstruction.  No conclusion outside
+  that exceptional family, and no JC(2) conclusion, is asserted here.
 source: jc2-double-zero-rebuild-20260824 / retained-jet continuation, 2026-08-24
 audit: >
   PASS -- an independent full-polynomial reconstruction recovered the
@@ -35,6 +36,7 @@ related:
   - THM-3651-russell-cylinder-degree-seven-double-zero-sixth-order-closure
   - THM-4034-exceptional-quartic-global-conductor-degree-178
   - THM-4043-exceptional-quartic-shifted-stable-identities-and-j6-lift
+  - THM-4046-exceptional-quartic-j7-lift-and-j8-obstruction
 script: 04-computation/jc2_russell_cylinder_exceptional_quartic_j3_lift_rigidity_thm4039.py
 output: 05-knowledge/results/jc2_russell_cylinder_exceptional_quartic_j3_lift_rigidity_thm4039.out
 script_sha256: abd5bef4b306710cbc0e5ff76fc7a7b7bb580eb296dd5ad3312e39ea2df36993
@@ -385,6 +387,7 @@ global series.  In particular it does not
 Downstream THM-4043 applies `w`-shifts of THM-3683's universal identity,
 proves the `J_5` gate vanishes, and reaches `J_6`.  That later theorem does
 not retroactively add a `J_5` computation to the present certificate.
+THM-4046 then reaches `J_7` and proves that `J_8` cannot be cleared.
 
 ```bash
 python3 -B 04-computation/jc2_russell_cylinder_exceptional_quartic_j3_lift_rigidity_thm4039.py
