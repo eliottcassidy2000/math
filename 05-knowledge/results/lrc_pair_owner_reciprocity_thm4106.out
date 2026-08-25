@@ -1,0 +1,17 @@
+LRC EXPONENT/OWNER RECIPROCITY EXACT AUDIT
+primitive pairs m<n<=80: total=1965, mixed=1314, odd=651
+all exact pair maxima, complete maximizer sets, owner-cell measures, tie counts, and mixed-pair recovery: PASS
+all scaled pairs 0<u<v<=60: total=1770, cross-v2=1195, repeated-v2=575
+all scaled equality clocks, complete lifted maximizers, owner measures, and v2-level conditions: PASS
+independent square-wave correlations 1<=r,s<=40: total=1600, Fourier normalization: PASS
+exponent pairs 2<=a<b<=18: total=136, unequal=135, equal=[(2, 4)]
+exponent-core parity: same-odd=29, mixed=106
+  (a,b)=(2,3) core=(8,9) q=17 Delta2=3 M=8/17 owner=9/17
+  (a,b)=(2,5) core=(25,32) q=57 Delta2=5 M=28/57 owner=200/399
+  (a,b)=(3,5) core=(125,243) q=368 Delta2=0 M=1/2 owner=1/2
+  (a,b)=(3,6) core=(8,27) q=35 Delta2=-3 M=17/35 owner=333/665
+  (a,b)=(6,12) core=(1,729) q=730 Delta2=0 M=1/2 owner=1/2
+hostile pair summaries: {1,3} and {1,5} both (M,owner)=(1/2,1/2)
+hostile extensions: M(1,2,3)=1/4, M(1,2,5)=1/3
+primitive 4-rows in [1,16]: reconstructed mixed=1675, all-odd antipode controls=70
+VERDICT: exact pair reconstruction holds only in the mixed-parity shell; owner locations remain mandatory for multi-speed LRC.

@@ -19,13 +19,10 @@
 - **2026 formalization: PRELIMINARY RADAR.**  The author's April 2026 report
   describes skeletal early-stage work, not a completed public machine-checked
   proof.
-- **Repo consequences:** [THM-3833](../../01-canon/theorems/THM-3833-abc-conditional-cube-radical-and-hyperbolic-power-finiteness.md)
-  and [THM-3848](../../01-canon/theorems/THM-3848-rational-base-prefix-atom-tree-and-lonely-runner-separation.md)
-  prove implications *from an explicitly assumed ABC schema*.  THM-3848
-  obtains a radical floor on odd `ceil(3a/2)` transitions and logarithmic
-  radical saturation for an explicit denominator-19 safe-prefix tower.  It
-  also proves exact even-run and LRC valuation hostiles.  Neither theorem uses
-  IUT as an antecedent.
+- **Repo consequences:** [THM-3833](../../01-canon/theorems/THM-3833-abc-conditional-cube-radical-and-hyperbolic-power-finiteness.md),
+  [3848](../../01-canon/theorems/THM-3848-rational-base-prefix-atom-tree-and-lonely-runner-separation.md),
+  and [4108](../../01-canon/theorems/THM-4108-abc-conditional-reciprocal-power-radicals-and-lrc-gauge-obstruction.md)
+  assume ABC, not IUT; THM-4108 blocks the LRC straddle transfer.
 
 ## 1. The exact ABC interface
 

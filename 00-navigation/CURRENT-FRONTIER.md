@@ -61,7 +61,7 @@ is the safe control `M(S_13)=99/338`. No cited result proves LRC(14).
   keeps component ancestry and lowers arbitrary parity to `93`, with a
   `d`-sensitive criterion. THM-4098/4101 close weight-seven rows. Arbitrary
   cores and physical entry remain open.
-- **Quantifier/type controls (PROVED):** [THM-4095](../01-canon/theorems/THM-4095-exact-arithmetic-field-transport-gapped-pair-margins-and-order-tournament-blindness.md) gives exact field transport and a primitive-pair optimized-margin gap `(0,1/15)`; [THM-4096](../01-canon/theorems/THM-4096-twisted-padic-affine-lrc-ray-optimizer-and-next-case-obstruction.md) finds a nonnegative twisted affine expansion only at the first THM-2057 `182m` ray point. These are firewalls, not LRC(14).
+- **Quantifier/type controls (PROVED):** [THM-4095](../01-canon/theorems/THM-4095-exact-arithmetic-field-transport-gapped-pair-margins-and-order-tournament-blindness.md) gives exact field transport and a primitive-pair optimized-margin gap `(0,1/15)`; [THM-4096](../01-canon/theorems/THM-4096-twisted-padic-affine-lrc-ray-optimizer-and-next-case-obstruction.md) isolates the first affine ray point. THM-4105--4108 add reciprocal decoders/firewalls; common arrival remains open.
 - **Owner/tail lane (PROVED):** [THM-4025](../01-canon/theorems/THM-4025-lrc14-owner-residue-odd-dilation-semigroup.md)/[4031](../01-canon/theorems/THM-4031-lrc14-endpoint-owner-rational-tail.md) give the old-strip survivor tail; THM-4029/4038 give the twelve-owner 60-phase law; THM-4033/4042 give the prime-sector tail and clocks through `P=11`, with `P=17` hostile. THM-4035 makes clocks addresses, not transfers. See the [detailed proof map](LRC14-PROOF-MAP.md).
 - **PROVED:** [THM-2928](../01-canon/theorems/THM-2928-critical-seven-comb-grid-tensorization-and-drift-tariff.md)/2941: literal zero/one/two/three-drift sectors are empty; `k=2,3` are finite.
 - **Orthogonal routes.** THM-1017 is HYP-6820; THM-2047/2050 keep phase/exit; THM-731/2048 prune; THM-1290 ends at `55`; HYP-8900 nonuniform.
@@ -96,7 +96,7 @@ is the safe control `M(S_13)=99/338`. No cited result proves LRC(14).
 
 ## ABC-IUT
 
-**ABC OPEN; IUT-to-ABC CONTESTED.** [Ledger](../05-knowledge/reference/CORE-PAPERS-ABC-IUT.md); THM-3833/3848 remain conditional.
+**ABC OPEN; IUT-to-ABC CONTESTED.** [Ledger](../05-knowledge/reference/CORE-PAPERS-ABC-IUT.md); THM-4108 conditional.
 
 ## NC2 and Gaussian moments
 

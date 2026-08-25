@@ -1,0 +1,12 @@
+RECIPROCAL EXPONENTIATION / LRC ARRIVAL EXACT AUDIT
+modular states=354466 compatible=3010 reconstructed=3010
+nonprimitive hostile: v=(2,4), q=2, phase=(0,1) compatible but not physical
+quantitative pointwise gates=361622 largest_sample_Bezout_l1=3
+natural off-diagonal ties=((2, 4),)
+strict natural triples=1122 directed_cycles=0
+weighted reciprocal triangle gates=56
+LRC straddle factorization gates=3049
+AP13 straddle=(1, 13, 0, 1, Fraction(1, 14), Fraction(1, 14))
+coprime reciprocal-power pairs=84 parity_gcd_gates=84
+normalized LRC determinant ABC packets=20304
+PASS
