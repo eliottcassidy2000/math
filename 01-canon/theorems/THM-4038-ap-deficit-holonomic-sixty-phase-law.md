@@ -23,6 +23,7 @@ depends_on:
 related:
   - THM-637
   - THM-4028
+  - THM-4033-prime-sector-ap-cover-eventual-owner-tail
 script: 04-computation/lrc14_ap_cover_holonomic_sixty_phase_thm4038.py
 output: 05-knowledge/results/lrc14_ap_cover_holonomic_sixty_phase_thm4038.out
 ---
@@ -69,6 +70,13 @@ every phase,
 
 so `(2)` recovers THM-4029's leading constant `127/35` after the `1/7`
 normalization.
+
+THM-4033 supplies the complementary geometric explanation: its all-prime
+three-gap/Farey theorem proves that `n=12` is the sharp owner-decomposition
+onset for `P=7` (equivalently `m=13`).  The present theorem supplies the
+exact selector table, minimal phase, and recurrence at that onset; THM-4033
+supplies the general-prime onset and does not claim these `P=7`-specific
+minimal-phase data.
 
 ## 2. Exact phase minimality and its denominator owners
 

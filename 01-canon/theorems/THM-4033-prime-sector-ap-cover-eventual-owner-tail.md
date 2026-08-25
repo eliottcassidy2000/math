@@ -24,6 +24,7 @@ depends_on: []
 related:
   - THM-4029-lrc14-ap-cover-twelve-owner-rational-tail
   - THM-4031-lrc14-endpoint-owner-rational-tail
+  - THM-4038-ap-deficit-holonomic-sixty-phase-law
 script: 04-computation/prime_sector_ap_cover_eventual_owner_tail_thm4033.py
 output: 05-knowledge/results/prime_sector_ap_cover_eventual_owner_tail_thm4033.out
 script_sha256: 8c73998c615d3709819898494ffede3a773c2efaf415b1cc3f4d6e3e5c923c61
@@ -420,8 +421,12 @@ class modulo `L_P`, (3) makes `D_P` a finite sum of rational functions of the
 phase index, hence P-recursive.  Finite interlacing of the residue classes is
 D-finite, and changing the finite prefix preserves D-finiteness.  In
 particular `P=7` has a proved qualitative holonomic law from a phase modulus
-dividing `60`.  This corollary supplies neither an explicit recurrence nor a
-minimal one.
+dividing `60`.  This corollary by itself supplies neither an explicit
+recurrence nor a minimal phase.  THM-4038 independently supplies exactly that
+`P=7` refinement: from `n=12` (the present sharp onset) it proves minimal
+phase `60`, an explicit polynomial-coefficient recurrence, and a D-finite but
+nonalgebraic ordinary generating function.  No corresponding minimal-phase
+claim for general prime `P` is made here.
 
 ## 6. Closed prime constant
 

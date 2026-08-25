@@ -84,12 +84,10 @@ is the safe control `M(S_13)=99/338`. No cited result proves LRC(14).
   the owner-relaxed THM-4003 gate therefore cannot close ray tails, and has
   LRC meaning only at physical heights below `91^6`. Orthogonally,
   [THM-4029](../01-canon/theorems/THM-4029-lrc14-ap-cover-twelve-owner-rational-tail.md)
-  proves the exact twelve-owner/60-phase AP-cover tail with constant `127/35`
-  and corrects the span row to `(7,8,10,13,26,infinity)`.
-  [THM-4038](../01-canon/theorems/THM-4038-ap-deficit-holonomic-sixty-phase-law.md)
-  makes the `P=7` tail an exact rational law from `n>=12`, proves minimal
-  phase `60`, and supplies an explicit P-recursive law and D-finite
-  nonalgebraic generating function.
+  proves the exact twelve-owner tail (`127/35`) and corrected span row
+  `(7,8,10,13,26,infinity)`; [THM-4038](../01-canon/theorems/THM-4038-ap-deficit-holonomic-sixty-phase-law.md)
+  upgrades `P=7,n>=12` to an exact minimal-60-phase rational law, explicit
+  recurrence, and D-finite nonalgebraic generating function.
   [THM-4033](../01-canon/theorems/THM-4033-prime-sector-ap-cover-eventual-owner-tail.md)
   proves the all-prime tail and constant
   `P^-1 sum_(q<P)phi(q)(2(P-q)-1)/q`. For odd `P>=5`, the geometric owner
@@ -97,10 +95,9 @@ is the safe control `M(S_13)=99/338`. No cited result proves LRC(14).
   Its phase-rational law also implies fixed-`P` holonomicity. Scalar mismatch
   at every earlier row is only FINITE-EXACT.
   [THM-4035](../01-canon/theorems/THM-4035-sixty-clock-separation-and-finite-kakeya-spine.md)
-  separates the AP clock from the Fibonacci-mod-10 and triangular-mod-30
-  state clocks; scalar shadows and its finite Kakeya spine supply no
-  sparse-owner or LRC transfer. The AP-container route still loses sparse
-  occupancy, gaps and owner placement. THM-3858
+  separates the AP, Fibonacci-mod-10 and triangular-mod-30 clocks but gives no
+  sparse-owner transfer. The AP route still loses sparse occupancy, gaps and
+  owner placement. THM-3858
   exhausts only the target `Z_3` test. **FINITE-EXACT:**
   `(9,13;76,132)` is the unique tripling edge through sum `10^6`
   (independent control `5000`).
@@ -377,17 +374,16 @@ or residue follows.
   THM-4012 proves the conditional good-elliptic-factor/Bolza observer and, for the distinct actual max-six attachment `(43/224,267/224)` with `p^4=0`, proves the stable model and unconditional exclusion. Thus `b=d=0` has `M>=7`; `M>=9` needs face-stability at weights seven/eight.
   In the Russell exceptional-quartic lane, THM-3703/3737 give a rank-18
   grammar, one image hyperplane, a split 18+18 lift/kernel, and a quadratic
-  representative normal compiler. The image's exact multiplicative
+  normal compiler. The image's exact multiplicative
   annihilator is `L K[x]`, `L=x(x^2-1)`. THM-4034 proves the global conductor
   `L^2h_172K[x]` of degree `178`; the intervening multiplier module has exact
   length `175` and reduced finite-etale support. As an inherited nonunital
   algebra it splits exactly as a three-dimensional zero algebra and the
   `172`-dimensional finite-etale algebra `K[x]/h_172`; its nilradical is also
   the exact kernel of regular multiplication. Thus multiplication-only
-  channels lose precisely the three retained cotangent lines. This is a
-  required linear sidecar, not a singularity classification or a JC
-  obstruction. Future gates, coherence, degree control, algebraization and
-  Keller entry remain OPEN.
+  channels lose the three retained cotangent lines: a required linear sidecar,
+  not a singularity classification or JC obstruction. Future gates,
+  coherence, degree control, algebraization and Keller entry remain OPEN.
   Other reduced cells, higher faces, cancellation, Keller/Darboux entry, the nonreduced Russell `(6,4)` lane, and `JC(2)` stay open.
 - **Weyl boundary:** THM-2049 gives a formal beta-adic lift; finite termination remains.
 - **Planar source fibres:** THM-2063/THM-2084--2480 (including
