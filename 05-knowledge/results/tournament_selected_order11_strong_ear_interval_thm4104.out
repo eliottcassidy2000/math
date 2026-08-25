@@ -1,0 +1,31 @@
+THM-4104 SELECTED ORDER-ELEVEN STRONG-EAR PRIMARY REFEREE
+status=PROVISIONAL_PRIMARY_PASS
+A000568_counts= [1, 1, 2, 4, 12, 56, 456, 6880]
+strong_order8_parents= 6008 complete_order8_formula_checks= 1526032
+selected_order9_parents= 1482 complete_order9_formula_checks= 755820
+selected_order9_bank_sha256= c03c203943e734d09bee4b8818227b8f184405ce4c5092dd56d0fdb6107d528c
+selected_order10_parents= 7566 direct_DP_strong_failures= 0
+selected_order10_bank_sha256= 2f3fbd5d7f56de24a1f08ea08585dd029c70344ef444830915b5ea0d203e4b92
+selected_order10_source_sha256= c4b073e7e0ba7d965bb978635a2cd4ec60dc8acfb815d4388b32bab644d71980
+order10_original_formula_controls= 53524 failures= 0
+nonconstant_order11_ears_checked= 7732452
+selected_value_count= 43251 min= 225 max= 93751
+selected_value_set_sha256= 3bead7d8a2539f3c217540199e4b71b208fed526f80cd43bf435e17dd1b0c328
+primary_solid_interval= [429,80265] count=39919 adjacent_holes=(427,80267)
+secondary_solid_interval= [80875,84259] count=1693 adjacent_holes=(80873,84261)
+first_intervals= [(225, 225, 1), (243, 245, 2), (255, 255, 1), (261, 261, 1), (265, 267, 2), (273, 273, 1), (279, 279, 1), (285, 285, 1), (291, 291, 1), (295, 297, 2), (301, 309, 5), (313, 315, 2), (319, 325, 4), (329, 329, 1), (333, 333, 1)]
+longest_intervals= [(429, 80265, 39919), (80875, 84259, 1693), (86995, 88317, 662), (86823, 86953, 66), (88321, 88413, 47), (84263, 84323, 31), (80823, 80871, 25), (379, 419, 21), (80305, 80341, 19), (88519, 88555, 19), (337, 371, 18), (86957, 86991, 18), (88421, 88453, 17), (80777, 80803, 14), (86663, 86687, 13)]
+direct_key_witness_checks= 8 failures= 0
+key_witnesses= {'225': {'parent_h': 125, 'signature': 32, 'cut_weight': 1, 'code': 34095368048213567, 'dp_H': 225}, '429': {'parent_h': 125, 'signature': 116, 'cut_weight': 4, 'code': 33813343248580159, 'dp_H': 429}, '14657': {'parent_h': 773, 'signature': 898, 'cut_weight': 4, 'code': 4980304472833599, 'dp_H': 14657}, '14777': {'parent_h': 697, 'signature': 283, 'cut_weight': 5, 'code': 25105481806249279, 'dp_H': 14777}, '80265': {'parent_h': 13253, 'signature': 903, 'cut_weight': 6, 'code': 2181427721976895, 'dp_H': 80265}, '80875': {'parent_h': 15059, 'signature': 182, 'cut_weight': 5, 'code': 33617973800943135, 'dp_H': 80875}, '84259': {'parent_h': 12667, 'signature': 15, 'cut_weight': 4, 'code': 36024248539118623, 'dp_H': 84259}, '93751': {'parent_h': 15581, 'signature': 841, 'cut_weight': 5, 'code': 3645901060717615, 'dp_H': 93751}}
+global_allowed_prefix_through=80405 checks= 40201 direct= 40189 composed= 12
+multiplicatively_composed_prefix_values= [80267, 80281, 80285, 80289, 80303, 80343, 80359, 80365, 80375, 80383, 80397, 80403]
+ordinary_prime_lane_through= 80387 next_unforced= 80407
+seven_prime_lane_p_through= 11519 next_unforced_value= 80689
+semantic_sha256= 11241b1a8d55d9a1b725b2343b0cf8543397a48a2eb9ba102bb3132b8b020067
+semantic_source=THM-4102 deterministic selected labelled order-ten bank
+semantic_map=adjoin every nonconstant labelled cut and evaluate the quadratic boundary
+semantic_preserved=Hamiltonian-path count and strongness by the strong-ear lemma
+semantic_destroyed=unselected equal-H parents, isomorphism multiplicity, and full order-eleven image
+semantic_sidecar=labelled parent code plus Start/End/Q boundary and cut signature
+scope=selected lower image only; full order-eleven census and global H-spectrum remain OPEN
+ALL_CHECKS_PASS

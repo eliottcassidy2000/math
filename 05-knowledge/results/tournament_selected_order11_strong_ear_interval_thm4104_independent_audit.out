@@ -1,0 +1,19 @@
+THM-4104 INDEPENDENT SELECTED-EAR AUDIT
+A000568_counts= [1, 1, 2, 4, 12, 56, 456, 6880]
+small_fast_separate_DP_literal_controls= 470 failures= 0
+selected_order9_parents= 1482 bank_sha256= c03c203943e734d09bee4b8818227b8f184405ce4c5092dd56d0fdb6107d528c
+selected_order10_parents= 7566 bank_sha256= 2f3fbd5d7f56de24a1f08ea08585dd029c70344ef444830915b5ea0d203e4b92 direct_DP_strong_failures= 0
+selected_order11_ears= 7732452 strongness_by_nonconstant_ear_lemma= 7732452
+selected_value_count= 43251 min= 225 max= 93751
+primary_solid_interval= [429,80265] count=39919 adjacent_holes=(427,80267)
+secondary_solid_interval= [80875,84259] count=1693 adjacent_holes=(80873,84261)
+first_intervals= [(225, 225, 1), (243, 245, 2), (255, 255, 1), (261, 261, 1), (265, 267, 2), (273, 273, 1), (279, 279, 1), (285, 285, 1), (291, 291, 1), (295, 297, 2), (301, 309, 5), (313, 315, 2)]
+longest_intervals= [(429, 80265, 39919), (80875, 84259, 1693), (86995, 88317, 662), (86823, 86953, 66), (88321, 88413, 47), (84263, 84323, 31), (80823, 80871, 25), (379, 419, 21), (80305, 80341, 19), (88519, 88555, 19), (337, 371, 18), (86957, 86991, 18)]
+broad_fast_separate_DP_strong_samples= 262 failures= 0
+key_boundary_witnesses= {225: (125, 32, 1, 34095368048213567), 429: (125, 116, 4, 33813343248580159), 14657: (773, 898, 4, 4980304472833599), 14777: (697, 283, 5, 25105481806249279), 80265: (13253, 903, 6, 2181427721976895), 80387: (14443, 47, 5, 31503056742464543), 80405: (13493, 283, 5, 22513037423950911), 80633: (14527, 665, 5, 15198813324868767), 80875: (15059, 182, 5, 33617973800943135), 84259: (12667, 15, 4, 36024248539118623), 93751: (15581, 841, 5, 3645901060717615)}
+explicit_previous_targets= (14657, (773, 898, 4, 4980304472833599)) (14777, (697, 283, 5, 25105481806249279))
+global_allowed_prefix_through=80405 multiplicative_bridges_above_80265= [(80267, (11, 7297)), (80281, (43, 1867)), (80285, (5, 16057)), (80289, (3, 26763)), (80303, (131, 613)), (80343, (3, 26781)), (80359, (17, 4727)), (80365, (5, 16073)), (80375, (5, 16075)), (80383, (31, 2593)), (80397, (3, 26799)), (80403, (3, 26801))]
+ordinary_prime_lane_through= 80387 next_unforced= 80407
+seven_prime_lane_p_through= 11519 next_unforced_value= 80689
+semantic_sha256= 77a73efc867036bcb662dc5974a704e4fcda9fe8270c778cf032e87f2ba95a13
+ALL_CHECKS_PASS
