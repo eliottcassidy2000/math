@@ -1,0 +1,10 @@
+THM-4101 AP7 weight-seven gap-four primary audit: PASS
+J=[4/35,13/98] L=9/490 split=1/8
+pair_lower=P-E/u P=927/240100 E=10027/60025
+pointwise_moment=r0:0<=0,r1:1<=1,r2:1<=3/2,r3:1<=3/2,r4:1<=1
+pair_overlap_rows=997 worst_exact_slack=(Fraction(41532959, 56033529580), 1869)
+uniform_floor=264 margin_u265=489784241/100536614409000 margin_u267=203219143/20256819706200
+hostile=(8, 9, 11, 13) union=9/490 analytic_upper=8588837/123603480 covers_open=1
+boundary_positive=(264, 265, 267, 269) union=2113950697/164141411280 survivor_measure=128698793/23448773040 analytic_slack=489784241/100536614409000
+separated_positive=(264, 265, 269, 1001) union=5445021/499493995 analytic_slack=1395616199/4895041151000
+floor263_near_miss=(264, 263, 265, 267) actual_survivor=20501/3721713 analytic_deficit=-2479073/401200661400 status=criterion-only-not-counterexample

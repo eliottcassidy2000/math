@@ -1,0 +1,9 @@
+THM-4101 independent literal-theta audit: PASS
+core_wall_cell_tests=21
+pointwise=[(0, Fraction(0, 1), Fraction(0, 1)), (1, Fraction(1, 1), Fraction(1, 1)), (2, Fraction(1, 1), Fraction(3, 2)), (3, Fraction(1, 1), Fraction(3, 2)), (4, Fraction(1, 1), Fraction(1, 1))]
+gap4_overlap_rows=497 containment_tests=94715 minimum_slack=(Fraction(30264273, 38121973540), 889)
+constants=P:927/240100 E:10027/60025 L:9/490
+uniform_margins=u265:489784241/100536614409000 u267:203219143/20256819706200
+hostile=(8, 9, 11, 13) union=9/490 pair_sum=12889/840840 safe_cells=0 uncovered_walls=0
+positive=(264, 265, 267, 269) union=2113950697/164141411280 survivor=128698793/23448773040 pair_sum=620903/110607420 safe_cells=16 uncovered_walls=32
+arrangement_witness=(Fraction(214, 1869), 3738, '267-right') max_clock=3766
