@@ -1,0 +1,10 @@
+field=THM3683_exceptional_quartic;restriction_algebra=THM3703
+condition_shape=1602x178;rank_mod_137=178;selected_det=1;selected_rows_hash=be7e4888affc2676b671a0791a05794b2b7229ec997a2312247210a3eb50d145
+conductor_degree=178;conductor_support=177;conductor_hash=8e19b56da62b319108eacd59884e440ac902d1a886e6fafa0ac7d9fb1573da99
+conductor_products=18;all_exact_membership=True;normalization_basis=1,x,...,x^17_over_K[Z]
+retained_factor=x^2*(x^2-1)^2;quotient_degree=172;quotient_hash=939fa31b2b9efcda5c935873ee782cc5139f1dac3c21b68fe8dff1c6ed04c54b;retained_multiplicity_exact=2,2,2;off_retained_squarefree=True
+degree_delta=89;global_conductor_colength=178;S_mod_conductor_length=89;numerical_semigroup_conductor=170;x170_first_failed_shift=0
+resultant_degrees=578,488,338;triple_gcd_degree=178;intrinsic_conductor=True
+two_resultant_hostile_mod137_degree=186;extra=x^2*(x^2-1)^3
+NO_CLAIM=singularity_classification_or_higher_stable_lift_or_Keller_or_JC2
+RESULT=PASS
