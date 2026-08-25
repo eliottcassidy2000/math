@@ -22,6 +22,7 @@ depends_on:
   - THM-1862-order-join-reduction-principle
 related:
   - THM-012b-insertion-decomposition
+  - THM-4097-order-nine-strong-ear-spectrum-solid-interval-and-lane-extension
   - THM-2290-context-selected-colored-pair-kernel-is-hafnian-complete
   - THM-3456-left-permutive-trace-bijection-and-rule30-seed-boundary
   - THM-796-three-sorted-recursive-tiling-line-node-incidence
@@ -354,9 +355,12 @@ carry atoms `(20)`. Multiplication advances beyond the literal prefix:
 611=13*47 in S.                                         (24)
 ```
 
-The first target not forced by the prefix and multiplication is prime `613`,
-the first current ordinary-lane target. The first current seven-prime target
-is `7*89=623`. These are proof-frontier targets, not asserted gaps.
+At the scope of this theorem, the first target not forced by the prefix and
+multiplication is prime `613`, and the first seven-prime target is
+`7*89=623`. These are targets relative to the prefix `(25)`, not asserted
+gaps. THM-4097 subsequently gives explicit strong witnesses for both and
+extends the current first-unforced lane values to `2,887` and
+`7*419=2,933`.
 
 There is a sharp actual-tournament hostile to inference from the finite prefix
 and value-controlled operations alone. Put

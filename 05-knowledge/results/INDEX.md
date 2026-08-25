@@ -33,11 +33,27 @@
   minimally at the transitive-triple/C3
   boundary. Given the proved omissions, multiplicativity, and strong carry
   atoms `49,63,343`, global completeness is equivalent to strong realization
-  of the prime and seven-prime lanes. The exact audit also isolates `613` and
-  `623` as the first current unforced prime targets and records the finitary
-  compactness obstruction. Script/output SHA-256:
+  of the prime and seven-prime lanes. The exact audit isolates `613` and `623`
+  as the first targets beyond its finite prefix and records the finitary
+  compactness obstruction; THM-4097 subsequently realizes both. Script/output SHA-256:
   `5b6c779958ad1de276873eabd3585f432bb593e32811fb138dc5d3c19948d616` /
   `5f174f77a873a02bd92bbebe4a5d70b3c329abc8152fb1330d4fe1dc6d98df34`.
+
+- `tournament_order9_strong_ear_spectrum_thm4097.py` and independent audit ->
+  matching `.out`s [THM-4097 PROVED ELEMENTARY REDUCTION + FINITE-EXACT +
+  VERIFIED-EXACT + INDEPENDENTLY CROSS-AUDITED; global H-spectrum conjecture
+  OPEN]. The exact `(Start,End,Q)` ear boundary evaluates all `1,526,032`
+  nonconstant ears over the `6,008` strong order-eight representatives. The
+  complete strong order-nine spectrum has `1,482` values and contains every
+  odd value from `85` through `2,881`; explicit strong witnesses realize
+  `613` and `623`. Combined with THM-1370/4094, every allowed odd value through
+  `2,881` is attained and the first unforced lane values are `2,887` and
+  `2,933=7*419`. Primary script/output SHA-256:
+  `610ca5850b272e0e75c574f2c1a710a0b96c75cc7191b1e1f1a03dfbdd1378d6` /
+  `0c3c9690ad5877d86480693af7ce97d8936c90e21b65677eefec72234c933dc0`;
+  independent script/output SHA-256:
+  `b58de51efa200374e6014c8aeace4086fc7df1b2b73db36a01c0fcc4d2dd7943` /
+  `71058bc6b31ba26a59a58bb7f1e5366e767ed43db1f4bb2ddb80642b02acbfa6`.
 
 - `lrc_parity_weighted_antipodal_kcomb_thm4092.py` and independent audit ->
   matching `.out`s [THM-4092 PROVED + PROVED RELATIVE TO THM-2061/2066/2072

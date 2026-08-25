@@ -238,13 +238,13 @@ THM-2070 refutes the general HYP-8890/8895 bypasses.  Transfer
   proves the sharper fixed-observer/optimized-margin split and realizes every
   reciprocal mass in `(0,1]` on the same transitive prefix tower.
 - [THM-4094](../01-canon/theorems/THM-4094-hamiltonian-matching-deficit-and-two-prime-lane-completeness.md)
-  makes deletion incidence exact:
-  `H(T)-H(T-v)=sum_P(a_v(P)-1)+O_v`. A selected left-perfect matching loses
-  the deficit already on the transitive-triple/`C_3` pair. Using the proved
-  strong carries `49,63,343`, `H`-spectrum completeness is
-  now equivalent to strong realization of the ordinary-prime lane `p!=7` and
-  exceptional lane `7p`, `p!=3`; the first prefix-unforced targets are `613`
-  and `623`, and the conjecture remains **OPEN**.
+  makes deletion incidence exact and reduces completeness, using strong
+  carries `49,63,343`, to the lanes `p` (`p!=7`) and `7p` (`p!=3`).
+- [THM-4097](../01-canon/theorems/THM-4097-order-nine-strong-ear-spectrum-solid-interval-and-lane-extension.md)
+  computes all `1,482` strong order-nine values and the solid odd interval
+  `85..2881`; hence all allowed odds through `2,881` occur, including strong
+  `613,623`. First unforced lane values: `2,887` and `7*419=2,933`. Global
+  completeness remains **OPEN**.
 - Corrected HYP-8835 isolates a useful game/dynamics coordinate without
   overclaiming: tournament optimal support is uniquely odd (skew singularity
   plus the tournament block modulo two), while a positive kernel vector `Mp=0`
