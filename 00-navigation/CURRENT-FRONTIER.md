@@ -75,13 +75,9 @@ is the safe control `M(S_13)=99/338`. No cited result proves LRC(14).
   gives profile `(11,9,8,8,7,7,...)` and equality moduli `2,3,4`.
   [THM-4030](../01-canon/theorems/THM-4030-lrc14-d4-affine-defect-lattice-boundary.md)/[4032](../01-canon/theorems/THM-4032-lrc14-d3-affine-defect-lattice-boundary.md)
   give exact `d=4/3` affine circuits and close certificate-negative rows.
-  THM-4041 gives the exact `d=2` defect edge. [THM-4070](../01-canon/theorems/THM-4070-lrc14-d2-mod14-two-bank-affine-ray-firewall.md)
-  strengthens THM-4049 to a `q=2..14` sieve: every survivor's eleven-pack
-  covers all seven maximal divisors `8..14`; its `q=14` bank closes the
-  physical hostile and all odd affine rays. [THM-4052](../01-canon/theorems/THM-4052-lrc14-affine-component-width-escape-cones.md)
-  closes `d2:E>=12M`, `d3:E>=11M`, `d4:3E>=44M`. The finite producer obeys
-  `d sum(H)+sum(E)<=91^12`; THM-4062 makes its affine intercept mandatory.
-  THM-4066 closes two three-exception affine shapes; LRC(14) stays open.
+  THM-4041 gives exact `d=2`; [THM-4070](../01-canon/theorems/THM-4070-lrc14-d2-mod14-two-bank-affine-ray-firewall.md) forces divisor cover `8..14`, and [THM-4075](../01-canon/theorems/THM-4075-lrc14-divisor-complete-dyadic-owner-word-closure-through-30.md) closes `max H<=30` by owner-word clocks `N<=38`.
+  [THM-4052](../01-canon/theorems/THM-4052-lrc14-affine-component-width-escape-cones.md) closes the `d2/d3/d4` escape cones; THM-4062 retains the affine intercept.
+  THM-4066 closes two three-exception shapes; LRC(14) stays open.
   [THM-4025](../01-canon/theorems/THM-4025-lrc14-owner-residue-odd-dilation-semigroup.md)
   gives the odd-divisibility semigroup, while [THM-4031](../01-canon/theorems/THM-4031-lrc14-endpoint-owner-rational-tail.md)
   proves that every old-strip ray has an eventual arithmetic-survivor tail;
@@ -126,7 +122,7 @@ is the safe control `M(S_13)=99/338`. No cited result proves LRC(14).
 
 ## Mahler `3/2`
 
-**OPEN.** [THM-4072: exact product, vacuous finite tests, next task](MAHLER-THREE-HALVES-FRONTIER-2026-08-23.md).
+**OPEN.** [THM-4074: every finite post-terminal cylinder occurs; global orbit remains](MAHLER-THREE-HALVES-FRONTIER-2026-08-23.md).
 
 ## ABC-IUT
 

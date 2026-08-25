@@ -30,7 +30,7 @@
 18. **THM-2061 is a reduction, not an empty-seam theorem.** Closed core safety and open tail teeth are load-bearing; `max(C)<=19` leaves the signed seam.
 19. **THM-2062 filters heredity, not phase height.** A fixed `N` wheel may die at `p=2`, while global primitive-direction density stays positive.
 20. **THM-2065 is PROVED only as a reduction.** Circuit-free strict residuals become finitely many rays; persistent height-`2^20` marked circuits remain.
-21. **THM-2066 is a bounded closure.** Its owner-word atlas closes primitive divisor-complete eleven-cores through maximum `24`, not unbounded cores or every lower-cardinality terminal.
+21. **THM-2066/4075 are bounded.** Owner words close divisor-complete eleven-cores through `30`, even nonprimitive ones—not higher cores or all lower-cardinality terminals.
 22. **THM-2068 is menu-relative.** Seven clocks are minimum inside `15..34`; this is not a universal owner-clock bank.
 23. **No fixed finite bank is uniform.** THM-2072's common-multiple core proves sensor blindness, not mathematical hardness; its antipodal/quarter-fan certificates close only their stated subclasses.
 24. **The dyadic tower is lossless but still open.** THM-2073's internal

@@ -32,7 +32,10 @@ depends_on:
   - THM-4052-lrc14-affine-component-width-escape-cones
   - THM-4066-lrc14-diagonal-intercept-pullback-and-exact-affine-ray-closure
 related:
+  - THM-2061-lrc14-dyadic-two-tail-folded-seam
+  - THM-2066-dyadic-seam-owner-word-crt-atlas
   - THM-4062-lrc-divisor-star-affine-intercept-obstruction
+  - THM-4075-lrc14-divisor-complete-dyadic-owner-word-closure-through-30
   - THM-615-folding-identity-and-AP-even-part-confinement
 script: 04-computation/lrc14_d2_mod14_two_bank_affine_ray_firewall_thm4070.py
 output: 05-knowledge/results/lrc14_d2_mod14_two_bank_affine_ray_firewall_thm4070.out
@@ -67,14 +70,21 @@ is distance to the nearest integer. Safety is the **closed** inequality
 
 ## 1. Inheritance and the retained coordinate
 
-The closest proved mechanism is THM-4041's exact `d=2` defect edge, together
-with THM-4066's unit-dilation conjugacy. The canonical hostile is THM-4049's
-typed physical row whose divided pack contains residue `11 mod 56`. The
-corrected near miss is MISTAKE-490: THM-4049's residue theorem survived, but
-its physical projection had to retain exception parity and acknowledge the
-existing, unexecuted THM-3818 finite box. The least-used relevant sidecar is
-THM-615's finite argmax bank for the AP even pack; it suggests retaining the
-actual rational pack phases, not only the measure of their safe set.
+The closest geometric mechanism is THM-4041's exact `d=2` defect edge,
+together with THM-4066's unit-dilation conjugacy. The recovered predecessor is
+THM-2061 Section 3, which already forces the same divisor-completeness condition
+by folded-seam residue eligibility; THM-2066's labelled owner words are its
+downstream sidecar. This theorem independently recovers those pins with
+explicit `q`-specific banks and adds the `q=14` firewall/ray and capacity
+conclusions.
+
+The canonical hostile is THM-4049's typed physical row whose divided pack
+contains residue `11 mod 56`. The corrected near miss is MISTAKE-490:
+THM-4049's residue theorem survived, but its physical projection had to retain
+exception parity and acknowledge the existing, unexecuted THM-3818 finite box.
+The least-used relevant sidecar is THM-615's finite argmax bank for the AP even
+pack; it suggests retaining the actual rational pack phases, not only the
+measure of their safe set.
 
 For a finite integer pack `H`, put
 

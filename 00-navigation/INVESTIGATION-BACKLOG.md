@@ -111,20 +111,21 @@
   `s=gcd(d H_body,E)` and the body `u` follow. The small banks above do not
   enumerate that enormous image. THM-4062 proves that the complete static
   labelled divisor/depth packet cannot preserve selected-phase coverage; the
-  missing sidecar is the label-gauged affine intercept. THM-4070 now removes
-  every `d=2` row whose divided pack misses any divisor `2..14`; equivalently,
-  a survivor must cover each maximal divisor `8..14`. Compress the bounded
-  producer only inside that divisibility-covering residual, retaining the
-  intercept and exact safe-set containment.
+  missing sidecar is the label-gauged affine intercept. THM-4070 leaves only
+  `d=2` packs covering every divisor `8..14`. THM-4075 reconnects that residual
+  to THM-2066 owner words and closes all eleven-packs with `max H<=30`, including
+  nonprimitive cores. In the physical `W=V_dec` branch every body--pair reduced
+  height already exceeds `Q`; compress its bounded producer with intercept,
+  owner word, and exact containment intact.
 - **D2 measure/owner compression.** THM-4041 proves that for reduced odd
   exceptions `a<b`, the spoiled mass is
   `4 sum_(r>0 odd,7r<a+b) min(1/(7b),(a+b-7r)/(14ab))`, while common odd
   dilation preserves mass and multiplies components. THM-4070 replaces
   THM-4049's ten-class filter by a complete `q=2..14` bank, enlarges the
   mod-`56` allowed set from 46 to 52 classes, and closes the old physical
-  hostile. Classify the remaining divisor-covering packs, then intersect
-  their exact safe components with the spoiled set; mass alone still does
-  not decide containment.
+  hostile. Above THM-4075's finite owner-word box, intersect exact safe
+  components with the spoiled set while retaining clock words and affine
+  intercepts; mass alone still does not decide containment.
 - **Sparse deletion response of the twelve AP owners.** THM-4029 solves the
   full AP container, while LRC needs sparse `E subset {0,...,N}`. For each
   owner/side/track, record whether the selected arrival time lies in `E`.
@@ -210,7 +211,7 @@
 ### ISOPERIMETRIC DIMENSION of tournament graphs (seed OEIS A263135; opus-2026-07-23-S1, HYP-9022)
 - **Source:** `07-reflections/the-isoperimetric-dimension-axis-honeycomb-vs-metagraph-opus-S1.md`; HYP-9022; script `04-computation/metagraph_isoperimetric_dimension_opus_S1.py` (+ `.out`). Extends `concrete_cheeger_s92v.py` (n=5-only Cheeger).
 - **The frame (verified n≤6):** A263135 (honeycomb max-contacts) + A047932 (triangular) + A123663 (square) are one family — the edge-isoperimetric profile `(d/2)N − c√N` of a d-regular vertex-transitive graph; the `√` exponent `=(D−1)/D` is dimension `D=2`. Ported to the arc-flip metagraph `G_n`: it is the **isoperimetric ANTIPODE** — `diam~0.7 log₂V` (log, not `√V`), `λ₂(L)~2` (boundary linear, not `√V`), sparsest cut TRANSVERSE to the H-gradient and the SC/NS split. Conjecturally `D=∞`. SEA(NS-NS)=expander core; SPINE(SC-SC)=sparse quasi-1D.
-- **OPEN / next steps (each cheap):** (1) **the n→∞ conductance constant** — is `G_n` a true expander (φ bounded below) or slow-decaying? Exact φ=0.6,0.379 (n=4,5); n=6 bracketed [0.16,0.46]; get n=7 φ via `tournament_metagraph.py`/`fast_metagraph_n7.py`. (2) **isoperimetric dimension of the SC-spine** (quasi-1D at n=6, branched at n=5 — resolve). (3) ⭐ **run the whole battery on the canonical even-graph envelope `widehat(E)_n=E_(n,P_n)`** (THM-4069); compare it separately with the star image, whose χ=2 for every n. The honeycomb IS a tiling by even 6-cycles, so the envelope remains the prime candidate for a genuinely 2D ("honeycomb-analog") tournament graph. (4) the densest-k-subgraph profile `M_n(k)` on `G_n` (started; exact n≤5) vs the A000568 edge-sandwich (OPEN-Q-108). (5) does "no thin boundary layer" give a clean *impossibility* meta-lemma for `G_n` bounds proved by peeling? (retro-explains MISTAKE-035/037).
+- **OPEN / next steps (each cheap):** (1) **the n→∞ conductance constant** — is `G_n` a true expander (φ bounded below) or slow-decaying? Exact φ=0.6,0.379 (n=4,5); n=6 bracketed [0.16,0.46]; get n=7 φ via `tournament_metagraph.py`/`fast_metagraph_n7.py`. (2) **isoperimetric dimension of the SC-spine** (quasi-1D at n=6, branched at n=5 — resolve). (3) ⭐ **run the remaining battery on `widehat(E)_n` and every diameter layer.** THM-4069/4073 now give the exact chain, radial cycle distances and commuting weighted algebra; conductance, width, homology and Boolean spectra remain. (4) the densest-k-subgraph profile `M_n(k)` on `G_n` (started; exact n≤5) vs the A000568 edge-sandwich (OPEN-Q-108). (5) does "no thin boundary layer" give a clean *impossibility* meta-lemma for `G_n` bounds proved by peeling? (retro-explains MISTAKE-035/037).
 
 ### RECOVERY LEDGER: forgotten frames + revivable hypotheses + gaps (death-star-2026-07-21-S79, HYP-8649)
 - **Source:** 4-agent repo sweep (invariant census, computation archaeology, frames graveyard, navigation gaps); complements klein-S399's master atlas. Full detail: `07-reflections/the-recovery-ledger-forgotten-frames-revivable-hypotheses-and-the-gaps-deathstar-S79.md`.

@@ -105,4 +105,12 @@ system
 with rejection when `delta` is undefined.  Starting from every reachable
 safe state with `u>0`, prove that the orbit rejects or loses the infinite-reset
 condition; alternatively exhibit one reachable nonrejecting orbit with
-infinitely many resets.  This is the honest post-terminal Mahler problem.
+infinitely many resets.
+
+[THM-4074](../01-canon/theorems/THM-4074-mahler-denominator19-postterminal-arbitrary-delay.md)
+rules out a bounded version of this task.  A reachable denominator-19 terminal
+family has arbitrarily long reset runways and then programs every finite carry
+word beginning in `1`; safe words stay nonrejecting and greedy prefixes reach
+unbounded follower state.  The parameter changes with the requested horizon.
+The honest target is therefore a global invariant or one fixed infinite
+reachable orbit, not a larger finite prefix/state census.
