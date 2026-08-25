@@ -2,7 +2,7 @@
 id: THM-4133
 title: "Strong cyclic-substitution counterexample to all-order Johnson centrality"
 status: >
-  VERIFIED-EXACT EXPLICIT COUNTEREXAMPLE. A strong tournament of order twelve,
+  VERIFIED-EXACT + INDEPENDENTLY AUDITED EXPLICIT COUNTEREXAMPLE. A strong tournament of order twelve,
   obtained by substituting R_9 minus one vertex into one block of a fixed
   strong five-vertex quotient, has normalized THM-4128 exposure tilt
   53092739331/40435524866>1. Its unique rational and exact-coset support-floor
@@ -22,6 +22,10 @@ output: 05-knowledge/results/tournament_strong_cyclic_substitution_centrality_co
 script_sha256: 7bd4c518464d4c48baf9cb9c1c8c2012a9f79f029c8e07141c0e51c338ffeeb2
 output_sha256: 52d6c229b46ac1f38afb61d54073eac2400757205f38f26a0c646b7a8cdf5bf1
 semantic_sha256: 2d41d1a1bb6f8a936c6f8104d149cba898ae51d17371981dbf2d1332643d2873
+independent_audit_script: 04-computation/tournament_strong_cyclic_substitution_centrality_counterexample_thm4133_independent_audit.cpp
+independent_audit_output: 05-knowledge/results/tournament_strong_cyclic_substitution_centrality_counterexample_thm4133_independent_audit.out
+independent_audit_script_sha256: c312eab367d2ace57ecc87b56383ed534db3bf3f119107d99d4bb57945e9c201
+independent_audit_output_sha256: 00b906d460c74f1906b52124ae8e8ce7d6f0678e4d94af2f2356294e830fbbf1
 hash_basis: raw LF bytes
 primary_audit: >
   PASS. The construction is generated from its quotient arcs and cyclic
@@ -31,11 +35,18 @@ primary_audit: >
   6,8,10 family prefix supplies positive controls, while the frozen order-12
   adjacency and all layers supply a direct hostile. Normal, optimized and
   hash-seeded replays agree with the frozen output.
+independent_audit: >
+  ACCEPT. A clean-room C++/GMP contracted-good/reversed-block evaluator
+  imports no primary code. It reconstructs the quotient and cyclic deletion,
+  checks strongness, recomputes all 4,096 responses by both a mask recurrence
+  and direct arc sums, and independently recovers every packet, layer, lattice
+  and optimizer. It also audits the larger regular-block family and the three
+  central proper-prefix controls. O3 and O0 builds have byte-identical output.
 ---
 
 # THM-4133 -- strong cyclic-substitution centrality counterexample
 
-**VERIFIED-EXACT EXPLICIT COUNTEREXAMPLE.**
+**VERIFIED-EXACT + INDEPENDENTLY AUDITED EXPLICIT COUNTEREXAMPLE.**
 
 THM-4131 proves strong rational and exact-coset Johnson centrality through
 order eight. Its worst classes at orders seven through nine suggest a common
@@ -148,3 +159,17 @@ PYTHONHASHSEED=0 python3 -B 04-computation/tournament_strong_cyclic_substitution
 ```
 
 All three streams agree with the frozen output. **QED.**
+
+The independent replay is
+
+```text
+clang++ -O3 -std=c++17 \
+  04-computation/tournament_strong_cyclic_substitution_centrality_counterexample_thm4133_independent_audit.cpp \
+  -I/opt/homebrew/opt/gmp/include -L/opt/homebrew/opt/gmp/lib \
+  -lgmpxx -lgmp -o /tmp/thm4133_independent
+/tmp/thm4133_independent
+```
+
+An `-O0` build produces the same frozen output. Besides the exact packet, it
+checks the cut formula against all `4,096` masks and fingerprints the response
+vector as `df5f7d507a5f27e2` (FNV-64). **QED.**
