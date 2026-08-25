@@ -72,7 +72,9 @@ Then read the routed frontier, guardrails, and theorem. Logs and reflections are
     THM-2371/THM-2376 close named degree-`18` strata; later sheet/quotient losses remain.
     THM-3212--3419 give the later infinity, deck, boundary, and linear-`z`
     atlases; THM-3418 closes sparse `f(x)+g(x)z^d`, not general fibres.
-    THM-3367 tames line images only; `JC(2)`/`DC(2)` remain OPEN.
+    THM-4045 gives `M>=8` on the first live `(2,3)` `b=d=0` seam; THM-4044
+    pins the sharp sixty-clock boundary alias. Weight eight, other cells, and
+    `JC(2)`/`DC(2)` remain OPEN.
 13. **Complete period-14 coordinates can still be globally blind.** THM-2043
     proves parity-Hasse completeness for reduced period-14 functions. The
     audited Goddyn--Wong family in THM-2058 preserves the packet, every fixed

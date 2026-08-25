@@ -1,5 +1,34 @@
 # Script Results Index
 
+- `jc2_max7_hidden_elliptic_tail_thm4045.py` and independent audit ->
+  matching `.out`s [THM-4045 PROVED + VERIFIED-EXACT + INDEPENDENTLY
+  AUDITED; JC(2) OPEN]. On the live reduced `(2,3)` seam `b=d=0`, the
+  complete exact max-seven lower Newton model has three faces: a seven-node
+  rational main face, one `j=1728` elliptic tail, and a rational vertical
+  face. After `Q=sigma^84`, all edge and resolution components are rational,
+  while the target has good `j=0` reduction; the CM Hom mismatch excludes
+  exact `M=7`, raising the seam floor to `M>=8`. A weight-eight `p*y^2`
+  endpoint destroys the tail with gap `-1/4`, so weight eight remains open.
+  Primary script/output SHA-256: `7e5746f62400331d305e41619f3a804818a7dd2ce016ebb3e7b0808882112bcc` /
+  `2a6b519227d3ca6a796cfd646b89096dad4ece0fb9d3b619c01d8b711545480f`;
+  independent script/output/semantic: `ac664386c78644f87d16bfedce224234d4b45aa84e55b4ca1d2dbb0428a420ce` /
+  `230fbfd2965646a950a039f35d4ef9c4fb26a9dc107e3178d08192e873fd41b7` /
+  `2b4745d3cff4ae93dd75308f5edf89f77c9c4412c0e91be3fc016d14d42b30ca`.
+
+- `jc2_sixty_clock_hasse_alias_thm4044.py` and independent audit -> matching
+  `.out`s [THM-4044 PROVED + VERIFIED-EXACT + INDEPENDENTLY AUDITED; JC(2)
+  OPEN]. The depth-`k` Hasse observer on all sixtieth roots has kernel
+  `((P^60-1)^k)`; on the JC pure-`P` ideal its sharp first alias is
+  `P^2(P^60-1)^k`, of degree `60k+2`, preserving all clock jets and boundary
+  jets zero/one while changing `[P^2]`. The same theorem types the 4D Kakeya
+  spine as cubic interpolation, the half-clock as a node address, Sun's
+  degree-at-most-eight atoms as one-clock recoverable, and the degree-178
+  conductor as three-jet recoverable. Primary script/output SHA-256:
+  `cc49cd7024fdeaab6c0d668c9ca497ee113ea6c45b3c9735d836322781629898` /
+  `4e73f5d3fed3bec3966d914f4981777f1a3b78892321bd443ed83f2799185fc0`;
+  independent `e5c97fdcff0a2f0824dd4c70582228bc7acfd5e55dccf8850a2dc21bddf169bf` /
+  `fbb7ab4429fcf6ade9d912f482f3b99aee71de01539713fb204c39952625f056`.
+
 - `sun_2468_average_order_quantitative_proof_audit_thm4028.md` [THM-4028
   PROVED + INDEPENDENTLY PROOF-AUDITED]. Half-open cube containment and the
   shifted-binomial face audit prove the general error

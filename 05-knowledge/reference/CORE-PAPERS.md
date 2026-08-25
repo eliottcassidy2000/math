@@ -210,7 +210,7 @@ This maps imported claims, consumers, and exclusions; links—not bare IDs—are
 ## Jacobian, Dixmier, and Poisson
 
 - **Florit--Smith / Milne:** [Florit--Smith, §4.14](https://arxiv.org/abs/2101.00917) corroborates `Jac(y^2=x(x^4+1))~E_8000^2`; [Milne, CM 1.9/1.10/3.12--3.13](https://www.jmilne.org/math/CourseNotes/CM.pdf) pins primitive-type classification for 4012's wt `9--11` audit.
-- **Guardrail:** [THM-4012](../../01-canon/theorems/THM-4012-weighted-leading-face-good-elliptic-factor-observer.md) derives the Bolza split. Neither source proves face-stability, spectra/formulas, `JC(2)`, or higher-weight exclusion.
+- **Dokchitser / guardrail:** [*Models of curves over DVRs*, arXiv:1807.00025v2](https://arxiv.org/abs/1807.00025), Definitions 3.7/3.9/3.12 and Theorem 3.14, supplies the general face/edge model used by [THM-4045](../../01-canon/theorems/THM-4045-live-two-three-max-seven-hidden-elliptic-tail-no-go.md) before its seven exact nodes are resolved. It proves none of the in-repo face arithmetic, Keller map, or `JC(2)` claims; Florit--Smith/Milne likewise do not prove face-stability.
 
 ### Degtyarev — weight-eight/nine torus sextics and the stereographic trigonal model
 

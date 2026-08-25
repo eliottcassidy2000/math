@@ -349,24 +349,23 @@ or residue follows.
   tuple is now at least `(8,5,4,3,3)` for `ell=(3,5,7,11,13)`. The requested
   challenges `(3,9),(5,6),(7,5),(11,4),(13,4)` all remain **OPEN**; the public
   `131199`-field file is a named finite population, not a world census.
-- **Jacobian/Dixmier:** `JC(2),DC(2)` remain **OPEN**; THM-3543--3991 close named cells, not global entry. THM-3992/3997 reduce the first live `2:3` cell to `R in (p^2,y)`, give the all-row Hasse criterion, force `[p^2]R!=0`, and exclude `R=0`.
-  THM-3994/3996 type multiplicity versus address ownership; THM-3999 fixes the boundary/class ledger. THM-4005 excludes live `3x4/4x3`; THM-4007 gives fixed-gauge `5x5` on `b=d=0`, forces `p^3!=0`, and couples `p^4,y^2`.
-  THM-4008 excludes pure-`p` residuals. THM-4016 proves the formal sharp `5x5` point `(43/84,127/84)` nontorsion; THM-4017 refutes its attachment role via forced `p^4` at `rho^-2`. Its truncated `j=1728` side facet dies when `p*y^2` enters. THM-4011 supplies the companion-factor/log Riemann--Hurwitz audit.
-  THM-4012 proves the conditional good-elliptic-factor/Bolza observer and, for the distinct actual max-six attachment `(43/224,267/224)` with `p^4=0`, proves the stable model and unconditional exclusion. Thus `b=d=0` has `M>=7`; `M>=9` needs face-stability at weights seven/eight.
-  In the Russell exceptional-quartic lane, THM-3703/3737 give a rank-18
-  grammar, one image hyperplane, split lift/kernel and normal compiler. The
-  image's exact multiplicative
-  annihilator is `L K[x]`, `L=x(x^2-1)`. THM-4034 proves the global conductor
-  `L^2h_172K[x]` of degree `178`; the multiplier module has length `175` and
-  reduced finite-etale support. As a nonunital algebra it is a
-  three-dimensional zero algebra plus `K[x]/h_172`; its nilradical is the
-  regular-multiplication kernel. Multiplication-only channels therefore lose
-  three retained cotangent lines and require a linear sidecar.
-  THM-4039 certifies `J_3`; THM-4043 reaches `J_6`.
+- **Jacobian/Dixmier:** `JC(2),DC(2)` remain **OPEN**; THM-3543--3991 close
+  named cells only. THM-3992/3997 reduce the first live `2:3` cell to
+  `R in (p^2,y)`, force `[p^2]R!=0`, and exclude `R=0`; THM-3994/3996/3999
+  retain the multiplicity, address, and boundary sidecars. THM-4005 excludes
+  live `3x4/4x3`; THM-4007/4008 constrain fixed-gauge `5x5` on `b=d=0` and
+  exclude pure `p`. THM-4016's nontorsion point does not attach (THM-4017).
+  THM-4012 excludes exact `M=6`; THM-4045's complete max-seven lower model
+  excludes `M=7`, so this seam has `M>=8`. Weight eight remains open because
+  `p*y^2` destroys the max-seven tail. THM-4044's depth-`k` sixty-clock first
+  aliases on `P^2K[P]` at `P^2(P^60-1)^k`, degree `60k+2`; a second boundary
+  jet or degree cap is indispensable.
+  In the Russell exceptional-quartic lane, THM-3703/3737 give the rank-18
+  grammar and lift/kernel; THM-4034 gives the degree-178 conductor and three
+  lost cotangent lines. THM-4039 reaches `J_3`, THM-4043 reaches `J_6`, and
   [THM-4046](../01-canon/theorems/THM-4046-exceptional-quartic-j7-lift-and-j8-obstruction.md)
-  reaches `J_7`, obstructs `J_8`, and closes every `0!=H in t^2 C[t]`
-  over the four exceptional folds.
-  Other reduced cells, higher faces, cancellation, Keller/Darboux entry, the nonreduced Russell `(6,4)` lane, and `JC(2)` stay open.
+  reaches `J_7`, obstructs `J_8`, and closes every `0!=H in t^2 C[t]` over
+  the four exceptional folds. Other cells, global entry, and `JC(2)` stay open.
 - **Weyl boundary:** THM-2049 gives a formal beta-adic lift; finite termination remains.
 - **Planar source fibres:** THM-2063/THM-2084--2480 (including
   THM-2371/THM-2376) close the named

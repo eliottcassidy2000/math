@@ -1,0 +1,64 @@
+STATUS=THM-4045;INDEPENDENT_NO_IMPORT_AUDIT;JC(2)_OPEN
+UNIVERSE=exact_Fraction_support;complete_lower_hull;boundary_and_genus_ledgers
+PASS  forced normalized p3 coefficient
+PASS  forced normalized y2 coefficient
+PASS  kappa is nonzero
+PASS  max-seven coefficient is nonzero
+PASS  shared support survives exact collection
+PASS  three and only three lower faces
+PASS  main face plane
+PASS  tail face plane
+PASS  vertical face plane
+PASS  main initial coefficients
+PASS  tail initial coefficients
+PASS  vertical initial coefficients
+PASS  global Pick ledger
+PASS  main Pick ledger
+PASS  tail Pick ledger
+PASS  vertical Pick ledger
+PASS  main intersection polynomial has degree seven
+PASS  main Jacobian coefficient is nonzero
+PASS  seven torus nodes saturate the binomial intersection number
+PASS  main graph rank is six
+PASS  A83 node resolution preserves graph rank
+PASS  tail quartic invariant I=48*phi^2*kappa
+PASS  tail quartic invariant J=0
+PASS  tail quartic is squarefree
+PASS  tail torus gradient system is nonsingular
+PASS  positive-genus ledger is one plus six
+PASS  edge AB squarefree
+PASS  edge BD squarefree
+PASS  edge BC squarefree
+PASS  edge CD squarefree
+PASS  edge DE squarefree
+PASS  edge AE squarefree
+PASS  edge EF squarefree
+PASS  edge FA squarefree
+PASS  generic AB edge is linear with unit leading coefficient
+PASS  generic BC edge discriminant has nonzero Q-leading coefficient
+PASS  generic CD/DE/EF edges are linear
+PASS  generic FA cubic discriminant Q^2 coefficient
+PASS  generic FA discriminant has exact Q-adic order two
+PASS  generic source chart excludes p=s^2
+PASS  all ramified face slopes integral
+PASS  BD exact slopes and determinant-one sequence
+PASS  AE exact slopes and determinant-one sequence
+PASS  all face denominators are one
+PASS  both inner edges are primitive
+PASS  all six outer Definition 3.12 sequences have r=0
+PASS  all inner-chain multiplicities are one
+PASS  main chart retains only phi on the central face
+PASS  exact node smoothing thickness
+PASS  target A scaling balances cubic and q
+PASS  target C scaling balances square and q
+PASS  lower target terms vanish
+PASS  weight-eight p*y2 endpoint destroys tail
+RESULT lower_hull_faces=3;face_genera=6_arithmetic_graph,1_elliptic,0_rational
+RESULT tail_binary_quartic=phi^2*P^4+4*kappa;I_nonzero;J_zero;j=1728
+RESULT target_special_fibre=Y^2-X^3-1;j=0;CM_fields_Q(i)_and_Q(sqrt(-3))
+RESULT special_graph_b1=6;unique_positive_genus_component=tail
+RESULT exact_M7_no_go=>live_floor_M>=8;hostile_M8_gap=-1/4
+RESULT generic_outer_edges=squarefree;FA_discriminant_Q2=-27epsilon^2;completion=C_q
+SEMANTIC_SHA256=2b4745d3cff4ae93dd75308f5edf89f77c9c4412c0e91be3fc016d14d42b30ca
+GATES=53
+ALL INDEPENDENT THM-4045 CHECKS PASSED

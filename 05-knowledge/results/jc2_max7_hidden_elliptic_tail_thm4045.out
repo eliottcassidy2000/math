@@ -1,0 +1,69 @@
+STATUS=THM-4045;MAX_WEIGHT_SEVEN_EXCLUDED;JC(2)_OPEN
+UNIVERSE=live_reduced_(2,3)_cell;b=d=0;exact_total_weight_M=7
+PASS  forced raw epsilon at A5=1
+PASS  forced raw kappa at A5=1
+PASS  shared s^2*p^3 coefficient does not cancel
+PASS  all three boundary coefficients are nonzero
+PASS  expanded shared coefficient is kappa-epsilon
+PASS  complete support has exactly the three claimed lower faces
+FACET [(0, 1, 0), (0, 4, 1), (1, 4, 1)] PLANE (Fraction(0, 1), Fraction(1, 3), Fraction(-1, 3))
+FACET [(0, 1, 0), (1, 4, 1), (2, 0, 0), (3, 3, 1)] PLANE (Fraction(1, 7), Fraction(2, 7), Fraction(-2, 7))
+FACET [(2, 0, 0), (3, 3, 1), (4, 2, 1)] PLANE (Fraction(1, 4), Fraction(1, 4), Fraction(-1, 2))
+PASS  main chart scaling (s,p)=(sigma^-12 S,sigma^-24 P)
+PASS  tail chart scaling (s,p)=(sigma^-21 S,sigma^-21 P)
+PASS  vertical chart scaling p=sigma^-28 P
+PASS  symbolic kappa-epsilon is -3968*gamma/(27*A5^3)
+PASS  main face factors into two rational components
+PASS  vertical face is smooth and rational on the torus
+PASS  main intersections are transverse with determinant -7*phi*S^6
+PASS  the seven main-face node addresses are simple
+PASS  binomial lattice intersection number seven is saturated by the torus nodes
+PASS  exact nodal chart is U*V=-gamma*sigma^84
+PASS  regular resolution of each node inserts an A_83 rational chain
+PASS  tail quadratic completes to W^2=phi^2*P^4+4*kappa
+PASS  tail gradient equations have nonzero determinant and no torus singularity
+PASS  tail quartic has I!=0,J=0 and hence j=1728
+PASS  edge AB is squarefree
+PASS  edge BD is squarefree
+PASS  edge BC is squarefree
+PASS  edge CD is squarefree
+PASS  edge DE is squarefree
+PASS  edge AE is squarefree
+PASS  edge EF is squarefree
+PASS  edge FA is squarefree
+PASS  generic outer edge AB is squarefree over k((Q))
+PASS  generic outer edge BC is squarefree over k((Q))
+PASS  generic outer edge CD is squarefree over k((Q))
+PASS  generic outer edge DE is squarefree over k((Q))
+PASS  generic outer edge EF is squarefree over k((Q))
+PASS  generic outer edge FA is squarefree over k((Q))
+PASS  generic FA cubic discriminant has Q-adic order at least two
+PASS  generic FA cubic discriminant leads with -27*epsilon^2*Q^2
+PASS  on the generic torus curve p=s^2 is impossible
+PASS  Pick parity for [(0, 1), (2, 0), (4, 2), (3, 3), (1, 4), (0, 4)]
+PASS  global Newton polygon has seven interior points
+PASS  Pick parity for [(0, 1), (2, 0), (3, 3), (1, 4)]
+PASS  main face has arithmetic genus six
+PASS  Pick parity for [(2, 0), (4, 2), (3, 3)]
+PASS  tail face has genus one
+PASS  Pick parity for [(0, 1), (1, 4), (0, 4)]
+PASS  vertical face is rational
+PASS  seven-node two-component main graph has first Betti number six
+PASS  special-fibre genus ledger is graph six plus elliptic one
+PASS  BD slopes have minimal sequence 24>23>22>21
+PASS  AE slopes have minimal sequence -24>-25>-26>-27>-28
+PASS  Definition 3.12 inner-chain lengths are two and three
+PASS  all six integer outer slopes have r=0 and add no chain
+PASS  all inner-chain multiplicities are one
+PASS  target has good special fibre Y^2=X^3+1 with j=0
+PASS  weight-eight p*y^2 destroys the elliptic tail facet
+RESULT lower_faces=main_nodal_rational_graph+elliptic_j1728_tail+rational_vertical
+RESULT node_local_model=UV+gamma*sigma^84;seven_A83_resolutions
+RESULT positive_genus_inventory=E_j1728_only;dual_graph_rank=6;total_genus=7
+RESULT target_good_reduction=E_j0;Hom(E_j1728,E_j0)=0_in_characteristic_zero
+RESULT live_b=d=0_exact_M7=IMPOSSIBLE;new_floor_M>=8;weight8_OPEN
+RESULT hostile_weight8_p_y2_gap=-1/4;max7_hypothesis_is_load_bearing
+RESULT generic_completion=actual_smooth_C_q;FA_discriminant_lead=-27epsilon^2Q^2
+SEMANTIC_SHA256=e1504d397388c64768994598ead2822e80abe9188364ae56194d138011caf9cd
+CHECKS=54
+ALL THM-4045 PRIMARY CHECKS PASSED
