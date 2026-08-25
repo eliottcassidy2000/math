@@ -143,14 +143,7 @@ THM-3990/3989/3991; THM-4002 is the nonlinear counterindication.
 
 ## The same representation is not the same carrier
 
-**Trigger/action:** for shared modules or isotypic projections, name the sector, multiplicity/commutant, realization, neutral blocks, and target. **Boundary:** characters forget positivity, occurrences, geometry, phase, and stabilizers; transfer needs a predicate-preserving functor, and a nonzero determinant supplies only a linear frame. **Evidence:** THM-2648/2655, THM-2455/2598/3105/3108, THM-3243/3250/3255/3260/3273.
-
-**Consumer-flow refinement:** before compressing sorts or changing arithmetic
-coordinates, draw the directed consumer graph and the scaled transport matrix.
-A missing sort edge blocks derivability (THM-4090); an integral coordinate map
-can preserve cumulative LCM clearing while destroying literal higher depth
-(THM-4091). Reachability is only a dependency check, and matrix integrality is
-only an arithmetic check; neither supplies the final target theorem.
+**Trigger/action:** for shared modules or isotypic projections, name the sector, multiplicity/commutant, realization, neutral blocks, and target. **Boundary:** characters forget positivity, occurrences, geometry, phase, and stabilizers; transfer needs a predicate-preserving functor, and a nonzero determinant supplies only a linear frame. **Evidence:** THM-2648/2655, THM-2455/2598/3105/3108, THM-3243/3250/3255/3260/3273/4090/4091.
 
 ## After a scalar quotient, choose between a coherent lift and orbit incidence
 

@@ -367,6 +367,15 @@ The matching-logic non-edge `a !-> b` and the p-adic refusal to scalarize
 weighted rows are two independent examples of that method. Similar syntax is
 not the connection; consumer-faithful transport is.
 
+Two concurrent tournament lanes arrived as THM-4088 and THM-4093 namespace
+reservations. They remain `RESERVED / UNPROVED EMPTY STUBS`, so no statement
+from either is used here. The current objects supply only sparse directed
+dependency/transport graphs, not intrinsic complete pairwise observables;
+forcing them into tournaments would invent orientations on ties and missing
+edges. If a future diagonal-similarity or arithmetic-type-blindness theorem is
+promoted there, it must first declare the pairwise observable, gauge, preserved
+irrationality or margin predicate, and lost valuation/weight sidecar.
+
 ## 8. Updated frontier priorities
 
 1. **Specialist p-adic audit:** mechanize one complete claimed cell, preferably

@@ -613,7 +613,8 @@ new homotopy group, `p=2` statement, or LRC/GMC consequence.
 ## August 2026 preprint intake
 
 - [August 14 intake](CORE-PAPERS-INTAKE-2026-08-14.md): preprints/Rule 30.
-- [August 25 intake](CORE-PAPERS-INTAKE-2026-08-25-PADIC-ZETA-MATCHING-LOGIC.md): **UNREFEREED**; THM-4089/4090.
+- [August 25 comprehensive intake](CORE-PAPERS-INTAKE-2026-08-25-PADIC-ZETA-MATCHING-LOGIC.md): **UNREFEREED**; THM-4089/4090.
+- [August 25 bounded snapshot intake](CORE-PAPERS-INTAKE-2026-08-25-PADIC-MATCHING.md): pinned-source identity, terminal-certificate boundary, and exact repo consumers.
 
 ### Long -- *Hybrid arithmetic holonomy and twenty-two individual p-adic zeta values*
 

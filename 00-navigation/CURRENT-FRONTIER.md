@@ -337,28 +337,6 @@ lift/phase clocks.
   tuple is now at least `(8,5,4,3,3)` for `ell=(3,5,7,11,13)`. The requested
   challenges `(3,9),(5,6),(7,5),(11,4),(13,4)` all remain **OPEN**; the public
   `131199`-field file is a named finite population, not a world census.
-- **P-adic zeta irrationality:** Long's August 24 GitHub research draft claims
-  22 individual values; its rational interval script is **FINITE-EXACT** for
-  the terminal margins, while the theorem is an **EXTERNAL PREPRINT CLAIM /
-  UNDER SPECIALIST AUDIT**. [THM-4089](../01-canon/theorems/THM-4089-hybrid-padic-zeta-margin-optimization-and-next-case-obstruction.md)
-  proves the exact `p=11` optimizer wall and, after formal extrapolation,
-  excludes the whole one-power `p=13,s=3` margin even under ideal Hasse cost
-  (`M<-37/72`; actual formal cost gives `M<-67/56`).
-  [THM-4091](../01-canon/theorems/THM-4091-integral-coordinate-change-lcm-depth-boundary.md)
-  proves cumulative LCM transport at every depth, literal depth-one transport,
-  and the minimal degree-three failure for every higher depth. The 22 claimed
-  irrationalities and `zeta_13(3)` are not proved canon; the next `p=13` route
-  needs extra determinant saving, wider continuation, or a different template.
-- **Matching logic:** [THM-4090](../01-canon/theorems/THM-4090-two-sort-matching-logic-global-completeness-obstruction.md)
-  proves, relative to the cited standard calculus, global incompleteness with
-  exactly two sorts and one unary symbol. One sort is complete only in the
-  exact basic, definedness-free, fixpoint-free language without nominals or set
-  variables. The arXiv source is unrelated to p-adic zeta; the shared lesson is
-  representation-loss auditing, not an object-level theorem bridge.
-- **Bernoulli/Hurwitz correction:** MISTAKE-497 withdraws the claims that the
-  Hamilton quaternions ramify at `3,7`, that negative `7`-adic valuation is a
-  pole, and that `B_6` uniquely has denominator `42`. The exact second index is
-  `114`; only the von Staudt divisor-set calculation survives.
 - **Jacobian/Dixmier:** `JC(2),DC(2)` remain **OPEN**; THM-3543--3991 close
   named cells only. THM-3992/3997 reduce the first live `2:3` cell to
   `R in (p^2,y)`; THM-4005 excludes live `3x4/4x3`; THM-4012/4045 exclude
@@ -437,8 +415,6 @@ Reusable bridges (not literal object identifications):
 | Euclidean inball / short relation | THM-4009 | Intersect the square-norm-`<=195` row with rank-eleven stars; odd character, owner, phase and arrival are lost. |
 | Euclidean-addressed grid coboundary | THM-3710/778 finite control | Word plus basepoint reconstructs one pinned coefficient fibre, but stripping exits the bank and chart/absolute-lift/owner sidecars remain. |
 | Transverse-information tax | THM-2612/2615/2573 | Retain a pole, endpoint, or normal when a locus erases charge. |
-| Integral coordinate transport | THM-4091 | Cumulative LCM clearing survives every integral change; literal `n^e` depth survives exactly at universal depth one and needs the scaled composition matrix for `e>=2`. Decay/nonvanishing remain separate. |
-| Sort-flow / consumer graph | THM-4090 | A hypothesis can influence a conclusion only along well-typed consumer paths. The graph is generally sparse, not a tournament; reachability checks dependency but never proves the edge lemma. |
 | Phase reconstruction | THM-3267/3269/3273/3277/3285 | Generator, sampler, backbone and one literal-ancestry horn are proved; endpoint origin/current and global action are absent. Not an LRC reduction. |
 | Integrality/support holes | THM-2200 | Holes can fill under powers while prime dilates die; retain coefficients and sidecars. |
 | Weighted-sector obstruction | THM-2045 factorized `R` family | Does the unique constant-producing sector fail on a broader Lee–Li inner edge? |
