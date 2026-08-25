@@ -18,6 +18,7 @@ related:
   - THM-4102-selected-order-ten-strong-ear-solid-interval
   - THM-4104-selected-order-eleven-strong-ear-solid-interval
   - THM-4114-ocf-mobius-positivity-tropical-defect-layer-and-opposite-ear-cut-curvature
+  - THM-4115-uniform-ear-cut-walsh-variance-and-sharp-growth-refinement
   - HYP-2879-strong-ear-atom-calculus
   - HYP-9029-strong-interval-tiling-law
   - MISTAKE-402
@@ -210,6 +211,12 @@ rows
 
 The excess beyond the forced column is finite-exact information from the
 selected banks, not a consequence of the average alone.
+
+**Later refinement.** THM-4115 retains the degree-one and degree-two Walsh
+coefficients discarded by this average. Its exact variance and the pointwise
+lower support `H(T+x_S)>=H(T)` strengthen `(14)` to
+`M_(n+1)>=(n+1)(n+2)M_n/(4n)`. Equations `(14)--(15)` remain valid but are no
+longer the sharpest invariant-free recurrence in canon.
 
 ## 4. Sharp hostile and scope
 

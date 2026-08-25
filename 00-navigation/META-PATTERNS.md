@@ -162,7 +162,8 @@ THM-2680 lacks a THM-2682 two-simplex and THM-2658 needs a gain section.
 
 **Trigger / action:** for existence, covering, or near-extremality, identify the actual max/tail event before averaging and test whether a saturated exceptional rung is mean-invisible.
 **Mechanism / counterindication:** means erase rare structure unless a separate sharp inequality recovers the required tail.
-**Evidence:** S399 strategy families 1, 2, and 5; MISTAKE-129/171.
+**Evidence:** S399 1,2,5; MISTAKE-129/171; THM-4111/4115: cut
+mean+variance/support forces a maximum, not an interval.
 
 ## Respect symmetries by searching orbit representatives
 

@@ -1,0 +1,21 @@
+THM-4115 EAR-CUT WALSH VARIANCE INDEPENDENT AUDIT
+status=INDEPENDENT_AUDIT_PASS
+method=literal parent and child permutations; Boolean singleton/second differences
+degree2_walsh=f=mu-(1/2)sum_i h_i*r_i-(1/2)sum_ij w_ij*r_i*r_j
+variance=Var(X)=(sum_i h_i^2+sum_ij w_ij^2)/4
+support_bound=max(X)>=mu+Var(X)/(mu-H)
+full_F1_bound=max>=((n+1)(n+2)/(4n))H+((n(n-1)+2)/(4n(n-1)))F1
+universal_bound=max>=((n+1)(n+2)/(4n))H
+n1_denominator_hostile= {'order': 1, 'H': 1, 'F1': 0, 'values': [1, 1], 'mean': [1, 1], 'variance': [0, 1], 'mu_minus_H': [0, 1]}
+exhaustive_order_rows= [{'order': 2, 'tournaments': 2, 'strong_parents': 0, 'ear_checks': 8, 'parent_words_scanned': 4, 'child_words_scanned': 48, 'strong_ear_checks': 0, 'strong_without_maximum_minus_two_neighbor': 0, 'variance_range': [[3, 4], [3, 4]], 'minimum_support_slack_code': [0, 1, 0], 'minimum_universal_slack_code': [3, 2, 0]}, {'order': 3, 'tournaments': 8, 'strong_parents': 2, 'ear_checks': 64, 'parent_words_scanned': 48, 'child_words_scanned': 1536, 'strong_ear_checks': 12, 'strong_without_maximum_minus_two_neighbor': 0, 'variance_range': [[3, 4], [11, 4]], 'minimum_support_slack_code': [0, 1, 2], 'minimum_universal_slack_code': [0, 1, 2]}, {'order': 4, 'tournaments': 64, 'strong_parents': 24, 'ear_checks': 1024, 'parent_words_scanned': 1536, 'child_words_scanned': 122880, 'strong_ear_checks': 336, 'strong_without_maximum_minus_two_neighbor': 0, 'variance_range': [[33, 4], [63, 4]], 'minimum_support_slack_code': [3, 1, 4], 'minimum_universal_slack_code': [45, 8, 4]}, {'order': 5, 'tournaments': 1024, 'strong_parents': 544, 'ear_checks': 32768, 'parent_words_scanned': 122880, 'child_words_scanned': 23592960, 'strong_ear_checks': 16320, 'strong_without_maximum_minus_two_neighbor': 400, 'variance_range': [[177, 4], [427, 4]], 'minimum_support_slack_code': [29, 9, 76], 'minimum_universal_slack_code': [23, 2, 40]}]
+totals_parents_ears_parentwords_childwords_strongears= [1098, 33864, 124468, 23717424, 16668]
+n2_factor_control= {'code': 0, 'H': 1, 'F1': 1, 'values': [1, 1, 3, 1], 'factor': [3, 2], 'audit': {'mean': [3, 2], 'variance': [3, 4], 'maximum': 3, 'maximum_neighbor_drops': [2], 'minimum_maximum_neighbor_drop': 2, 'support_rhs': [3, 1], 'full_f1_rhs': [2, 1], 'universal_rhs': [3, 2], 'weight_sum': [1, 1], 'weight_square_sum': [1, 1], 'linear_square_sum': [2, 1]}}
+C3_sharp_equality= {'code': 2, 'H': 3, 'F1': 0, 'values': [3, 5, 5, 5, 5, 5, 5, 3], 'audit': {'mean': [9, 2], 'variance': [3, 4], 'maximum': 5, 'maximum_neighbor_drops': [2], 'minimum_maximum_neighbor_drop': 2, 'support_rhs': [5, 1], 'full_f1_rhs': [5, 1], 'universal_rhs': [5, 1], 'weight_sum': [3, 1], 'weight_square_sum': [3, 1], 'linear_square_sum': [0, 1]}}
+equal_mean_distinct_variance_hostiles= [{'code': 1015, 'H': 9, 'F1': 30, 'mean': [51, 2], 'variance': [305, 4], 'image': [9, 15, 17, 19, 23, 25, 27, 29, 33, 37, 41], 'nonconstant_image': [15, 17, 19, 23, 25, 27, 29, 33, 37, 41], 'maximum': 41, 'maximum_neighbor_drops': [4, 8, 18]}, {'code': 759, 'H': 9, 'F1': 30, 'mean': [51, 2], 'variance': [315, 4], 'image': [9, 15, 17, 19, 23, 29, 31, 33, 37, 43], 'nonconstant_image': [15, 17, 19, 23, 29, 31, 33, 37, 43], 'maximum': 43, 'maximum_neighbor_drops': [6, 10, 12, 14]}]
+recursive_product_rows= [{'initial_order': 2, 'final_order': 10, 'eight_step_product': [259875, 512]}, {'initial_order': 3, 'final_order': 11, 'eight_step_product': [571725, 512]}, {'initial_order': 4, 'final_order': 12, 'eight_step_product': [1216215, 512]}, {'initial_order': 5, 'final_order': 13, 'eight_step_product': [2459457, 512]}, {'initial_order': 6, 'final_order': 14, 'eight_step_product': [4729725, 512]}, {'initial_order': 7, 'final_order': 15, 'eight_step_product': [4343625, 256]}, {'initial_order': 8, 'final_order': 16, 'eight_step_product': [3828825, 128]}, {'initial_order': 9, 'final_order': 17, 'eight_step_product': [13018005, 256]}]
+recursive_product=M_m/M_n>=m*(m+1)!/(n*(n+1)!*4^(m-n))
+semantic_sha256= d805f598ce72128f22bd46bf4c8ba696b471be4934455af00b02837fa508cc0c
+semantic_preserved=literal path counts, full cut field, Walsh norm, lower support
+semantic_destroyed=interval placement and overlap after taking a maximum
+semantic_scope=maxima/variance only; interval overlap remains OPEN
+ALL_CHECKS_PASS

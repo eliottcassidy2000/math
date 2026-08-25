@@ -1,0 +1,20 @@
+THM-4115 EAR-CUT WALSH VARIANCE PRIMARY REFEREE
+status=PRIMARY_PASS
+walsh=X_S=H+W/2+sum_i(h_i eps_i)/2-sum_ij(w_ij eps_i eps_j)/2
+variance=1/4*(sum_i h_i^2+sum_ij w_ij^2)
+exact_floor=M>=mu+Var/(mu-H)
+universal_floor=M>=((n+1)(n+2)/(4n))*H
+order_rows= [{'order': 2, 'tournaments': 2, 'strong_parents': 0, 'cuts': 8, 'strong_ears': 0, 'strong_without_maximum_minus_two_neighbor': 0, 'minimum_exact_oddceil_slack': None, 'minimum_universal_oddceil_slack': None}, {'order': 3, 'tournaments': 8, 'strong_parents': 2, 'cuts': 64, 'strong_ears': 12, 'strong_without_maximum_minus_two_neighbor': 0, 'minimum_exact_oddceil_slack': 0, 'minimum_universal_oddceil_slack': 0}, {'order': 4, 'tournaments': 64, 'strong_parents': 24, 'cuts': 1024, 'strong_ears': 336, 'strong_without_maximum_minus_two_neighbor': 0, 'minimum_exact_oddceil_slack': 2, 'minimum_universal_oddceil_slack': 4}, {'order': 5, 'tournaments': 1024, 'strong_parents': 544, 'cuts': 32768, 'strong_ears': 16320, 'strong_without_maximum_minus_two_neighbor': 400, 'minimum_exact_oddceil_slack': 2, 'minimum_universal_oddceil_slack': 10}]
+totals_tournaments_cuts_strong_parents_strong_ears= [1098, 33864, 570, 16668]
+order_one_denominator_hostile= [1, 1]
+order_two_H_F1_mean_var_max= [1, 1, [3, 2], [3, 4], 3]
+C3_H_F1_W_mean_var_floor_max= [3, 0, 3, [9, 2], [3, 4], [5, 1], 5]
+equal_mean_codes_H_F1_mean_variances= [[1015, 9, 30, [51, 2], [305, 4], [4, 8, 18]], [759, 9, 30, [51, 2], [315, 4], [6, 10, 12, 14]]]
+same_H_F1_variance_different_image_conflicts_through_order5= 0
+selected_large_rows= [{'order': 9, 'code': 68164491031, 'H': 3357, 'F1': 16434, 'W': 21645, 'variance': [13030011, 4], 'exact_floor': [34825587, 2405], 'exact_oddceil': 14481, 'universal_oddceil': 10259, 'maximum': 15487}, {'order': 10, 'code': 10852575419951, 'H': 15621, 'F1': 95625, 'W': 118107, 'variance': [366134213, 4], 'exact_floor': [9002648278, 118107], 'exact_oddceil': 76225, 'universal_oddceil': 51551, 'maximum': 93751}]
+recursive_product_rows= [[3, 10, 86625, 256], [9, 11, 121, 12], [10, 12, 117, 10], [5, 30, 8168656283793770092453125, 134217728]]
+semantic_sha256= 7580aaf0fd320afad386d6401b3e95dea31c91fc2cb3fc67b085773dcdf0836e
+semantic_preserved=full cut fibre, Walsh degrees 0/1/2, and lower support H
+semantic_destroyed=individual cut image after moments
+semantic_scope=maxima and variance only; interval overlap remains OPEN
+ALL_CHECKS_PASS

@@ -9,8 +9,9 @@ status: >
   [249,14649]; THM-4104 adds selected order-eleven [429,80265], proving
   every allowed odd through 80405 globally realized. Complete order-ten and
   order-eleven images and global continuation remain open. THM-4111 proves
-  that every full-cut recursively selected bank has unbounded maxima, but
-  does not prove interval overlap or unbounded solid-interval endpoints.
+  that every full-cut recursively selected bank has unbounded maxima;
+  THM-4115 strengthens the recurrence using exact Walsh variance. Neither
+  proves interval overlap or unbounded solid-interval endpoints.
 source: kind-pasteur-2026-07-26-S134
 related:
   - THM-1370-h-spectrum-omits-7-21-all-n
@@ -21,6 +22,7 @@ related:
   - THM-4102-selected-order-ten-strong-ear-solid-interval
   - THM-4104-selected-order-eleven-strong-ear-solid-interval
   - THM-4111-uniform-ear-average-and-recursive-selected-bank-growth
+  - THM-4115-uniform-ear-cut-walsh-variance-and-sharp-growth-refinement
 script: 04-computation/strong_h_spectrum_intervals_kps_S134.py
 output: 05-knowledge/results/strong_h_spectrum_intervals_kps_S134.out
 data: 05-knowledge/results/strong_H_spectrum_m9_values_kps_S134.out
@@ -103,6 +105,28 @@ advance the solid right endpoint `d_n`: the averaging operation destroys the
 individual-cut distribution, and its maximum can sit outside every long
 interval. The open structural coordinate is now explicitly **dispersion and
 overlap**, not raw growth.
+
+THM-4115 sharpens this diagnosis. Its exact degree-two Walsh expansion gives
+
+```text
+Var=1/4(sum_i h_i^2+sum_(i<j)w_ij^2)
+```
+
+and, using the support bound `H(T+x_S)>=H(T)`, improves the universal bank
+recurrence to
+
+```text
+M_(n+1) >= ((n+1)(n+2)/(4n))M_n.
+```
+
+The directed triangle attains equality, so this invariant-free order-three
+coefficient is sharp. Variance separates the known equal-mean hostile, but it
+still collapses the labelled coefficient arrangement and hence does not force
+a small-ball estimate, a `+/-2` chain, or an interval. In fact, `400/544`
+labelled strong order-five parents have no `M-2` one-bit neighbor at any
+maximizing cut. The cheapest next test is therefore a **multi-cut or
+multi-parent overlap** theorem conditional on the full `(w,h)` geometry, not
+single-bit descent from the scalar maximum.
 
 Independent-path note (same session): a LABELED brute-force
 enumeration (2^28 tournaments, different algorithm from monad's

@@ -665,6 +665,121 @@ before retaining one witness per scalar value. Choosing one tree or cut early
 destroys the invariant. This is a reusable method, not an LRC/H-spectrum
 identification and not an irrationality result.
 
+### 9.9 Walsh variance restores dispersion energy, not interval placement
+
+THM-4115 answers the variance question left by THM-4111 without pretending it
+answers the interval question. Write `X_S=H(T+x_S)` and use THM-4097's cut
+field. On the complete Boolean fibre,
+
+```text
+X_S=H+W/2+(1/2)sum_i h_i epsilon_i
+              -(1/2)sum_(i<j)w_ij epsilon_i epsilon_j,     (33)
+Var(X)=1/4(sum_i h_i^2+sum_(i<j)w_ij^2).                  (34)
+```
+
+Every old Hamiltonian path has a canonical insertion slot for every cut, so
+`X_S>=H`. Combining this lower support with `(34)` gives
+
+```text
+max X >= mu+Var(X)/(mu-H)
+      >= ((n+1)(n+2)/(4n))H.                              (35)
+```
+
+The directed triangle has equality `3 -> 5`; hence the new order-three
+coefficient is sharp. For recursive full-cut banks the closed product is
+
+```text
+M_m/M_n >= m(m+1)!/(n(n+1)!4^(m-n)).                     (36)
+```
+
+The one-defect surplus itself cannot vanish again after the directed-triangle
+base. If `C_k` counts cyclic orders with `k` bad cyclic edges, breaking the
+cycle gives `H=nC_0+C_1` and `F_1=(n-1)C_1+2C_2`. A one/two-defect cyclic
+order extends across every added vertex while retaining one or two defects;
+a directed triangle plus any fourth vertex supplies the base. Consequently
+strong parents of order at least four satisfy `F_1>=n-1` in even order and
+`F_1>=2` in odd order. This adds a parity-sensitive positive term to `(35)`.
+The much stronger candidate `F_1>=H` has no all-order proof and remains
+**OPEN**. A read-only exploratory census found no hostile through order seven
+and minimum observed ratio `6/5` at order five; this is a lead, not promoted
+canon.
+
+The cheapest local continuation fails sharply. Among labelled strong parents
+at orders `3,4,5`, respectively `0/2,0/24,400/544` have no maximizing cut
+with an `M-2` one-bit neighbor. The canonical codes `1015,759` have positive
+maximum-neighbor drop sets `{4,8,18}` and `{6,10,12,14}`. Thus moment-forced
+growth cannot be converted into an interval by greedily descending the cut
+cube in unit odd steps. The next viable object is an overlap graph between
+different cuts or parents, not just the one-bit neighborhood of one maximum.
+
+Surprisingly, scalar variance has not yet produced an image collision. The
+cap-32 order-nine scout expands the complete order-eight ear stream and keeps
+up to 32 distinct labelled parents in every `H`-fibre. Its `46,314` parents
+contain `11,938` repeated `(H,F_1,Var)` groups and `88,527` equal-triple pairs,
+but zero different-image pairs. The source is this deterministic capped
+labelled universe; the target is the nonconstant ear-image set; grouping by
+the scalar triple is the map. No information loss is *observed* on this finite
+universe, despite the map visibly discarding coefficient labels. This is
+**FINITE-EXACT EVIDENCE**, not a proof that the quotient is injective. It
+creates a genuine fork: prove a fixed-order determinacy mechanism, or enlarge
+the fibres until the first labelled-incidence hostile appears.
+
+The connection ledger is exact. The source is the complete labelled cut
+fibre. The target is its degree-zero/one/two Walsh coefficient vector; the
+Walsh transform is the map. It preserves every cut response until Parseval is
+taken. The variance quotient then preserves only coefficient energy and
+destroys signs, edge incidence, phase placement, higher moments, and local
+adjacency among attained odd values. The needed sidecar for HYP-9029 is a
+labelled small-ball/local-overlap statement on `(w,h)`, not a third scalar
+moment. The cheapest decisive test is to condition on a narrow value window
+and measure which single-bit cut flips realize `+/-2` chains.
+
+This also clarifies the now-**PROVED** THM-4114. Its ear-cube pair curvature
+is the symmetric coefficient
+`Delta_i Delta_j X=-(Q_ij+Q_ji)=-2w_ij`. With
+`K=Q+Q^T=2w`, the corresponding Walsh coefficient is `-K_ij/4` and
+`Var(X)=sum_i h_i^2/4+||K||_F^2/32`. Its full directed network still retains
+`Start/End/Q`. THM-4115 then contracts the exact `(H,h,w)` carrier to the
+squared norm in `(34)`. The two views are compatible, but neither has proved
+interval determinacy.
+
+The shared hostile makes that firewall concrete. THM-4114's lex-code `8` is,
+after reversing the five labels, THM-4115's LSB-first code `1015`. The proved
+variance audit gives `H=9`, `F_1=30`, `W=33`, `Var=305/4`, variance floor
+`994/33`, odd ceiling `31`, and actual maximum `41`; the cut image still omits
+the internal odd value `21`. The proved curvature audit additionally reports
+full-rank `K`; the combined data exhibit the missing local-overlap coordinate.
+
+The live pull of THM-4112 supplies a useful but deliberately nonliteral model
+for that next coordinate. Its source is a chain of antipodal danger-component
+families; its target is a surviving safe interval; repeated union is the map.
+It preserves every suffix envelope **and each parent safe gap**, while a final
+total span destroys the ancestry gate. The tournament source would instead be
+several labelled cut images or parent banks, and the target would be an odd
+value-overlap graph. No predicate-preserving map between these objects is yet
+known, so there is no LRC/H-spectrum theorem transfer. The lawful research
+lesson is narrower: after the one-maximum descent fails, retain the overlap
+gap at every parent/scale rather than another terminal scalar. This points to
+a scale- or ancestry-labelled multi-parent overlap lemma for HYP-9029.
+
+The later live pull of **PROVED** THM-4117 supplies the matching hostile on
+the LRC side. Its canonical physical `11+2` row is itself `1/14`-lonely, but
+no common dilation or primitive normalization places it in any of
+THM-4112's three supplier classes: the AP7 parity split forces a quotient
+core missing its unit origin. Thus type, residues, scale invariance, and even
+positive safety do not recover supplier ancestry. This is not a tournament
+transfer; it strengthens the shared loss ledger. A proposed overlap theorem
+must retain the literal support/origin (LRC) or labelled cut incidence
+(H-spectrum), rather than classify either object by terminal scalars alone.
+
+There is a disciplined p-adic analogy and no theorem transfer. THM-4091's
+coefficientwise depth vector and `(33)` both retain labelled coordinates that
+a scalar norm destroys. An LCM depth keeps an extremum; Walsh variance keeps
+an `L^2` energy. Neither quotient remembers where its mass lives. Thus the
+source paper's coefficientwise denominator discipline motivates the loss
+ledger, but THM-4115 supplies no p-adic zeta irrationality conclusion and no
+LRC(14) certificate.
+
 ## 10. Reproduction
 
 ```bash
@@ -682,6 +797,12 @@ python -B 04-computation/tournament_uniform_ear_average_growth_thm4111.py
 python -B -O 04-computation/tournament_uniform_ear_average_growth_thm4111.py
 python -B 04-computation/tournament_uniform_ear_average_growth_thm4111_independent_audit.py
 python -B -O 04-computation/tournament_uniform_ear_average_growth_thm4111_independent_audit.py
+python -B 04-computation/tournament_ear_cut_walsh_variance_thm4115.py
+python -B -O 04-computation/tournament_ear_cut_walsh_variance_thm4115.py
+python -B 04-computation/tournament_ear_cut_walsh_variance_thm4115_independent_audit.py
+python -B -O 04-computation/tournament_ear_cut_walsh_variance_thm4115_independent_audit.py
+python -B 04-computation/order9_ear_variance_image_determinacy_cap32_scout.py
+python -B -O 04-computation/order9_ear_variance_image_determinacy_cap32_scout.py
 python -B 04-computation/lrc_ap7_even_gap_overlap_atlas_thm4109.py
 python -B -O 04-computation/lrc_ap7_even_gap_overlap_atlas_thm4109.py
 python -B 04-computation/lrc_ap7_even_gap_overlap_atlas_thm4109_independent_audit.py

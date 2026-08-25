@@ -1,11 +1,12 @@
 ---
 id: HYP-2879
 status: >
-  PARTIALLY PROVED by THM-4097. The exact insertion formula and all-order
-  strong-ear reducibility are proved (the latter from Moon 1966, Theorem 2);
-  the cofinite atom calculus, all-order finite cut-basis law, and interval
-  tiling remain OPEN. The older iso-class audit through n<=8 remains an exact
-  finite control.
+  PARTIALLY PROVED by THM-4097/4111/4115. The exact insertion formula and
+  all-order strong-ear reducibility are proved (the latter from Moon 1966,
+  Theorem 2). Exact cut mean and Walsh variance now force selection-robust
+  factorial-over-exponential maximum growth. The cofinite atom calculus,
+  all-order finite cut-basis law, and interval tiling remain OPEN. The older
+  iso-class audit through n<=8 remains an exact finite control.
 source: codex-2026-06-22-S99
 tags: [tournaments, h-spectrum, strong-components, ears, insertion, forbidden-H, finite-basis, lrc14, residues, tournament-analysis]
 related:
@@ -25,6 +26,7 @@ related:
   - THM-4102
   - THM-4104
   - THM-4111
+  - THM-4115
 ---
 
 # HYP-2879: strong H-atoms grow by labelled ears with an exact cut polynomial
@@ -167,6 +169,48 @@ layer `F_1(T)`. It says nothing about dispersion around the mean: a large value
 may be isolated. The remaining bank-selection lemma must therefore force
 overlap or a sufficiently dense interval, not merely growth of the rightmost
 attained value.
+
+THM-4115 restores the exact degree-one and degree-two Walsh norm discarded by
+that average. The cut variance is
+
+```text
+Var=1/4(sum_i h_i^2+sum_(i<j)w_ij^2),
+```
+
+and lower support at `H(T)` sharpens the recurrence to
+
+```text
+M_(n+1) >= ((n+1)(n+2)/(4n))M_n.
+```
+
+The one-defect layer also has a proved strong-parent floor. Cyclic-order
+breaking and extension give `F_1>=n-1` for even `n>=4` and `F_1>=2` for odd
+`n>=5`, producing a strict additive term in the THM-4115 recurrence. The
+stronger proportional candidate `F_1>=H` is **OPEN**. A read-only exploratory
+census found no hostile through order seven, but that scout is not used by the
+proved recurrence or promoted as canonical evidence.
+
+This resolves **variance as a scalar** but not dispersion in the sense needed
+for tiling: the norm forgets coefficient incidence, signs, small-ball mass,
+and local `+/-2` adjacency in the cut image. The missing coordinate is now a
+labelled distribution or local-overlap sidecar, not another raw moment.
+
+The first local repair is also closed negatively. THM-4115's exact census
+finds `400/544` labelled strong order-five parents for which no maximizing cut
+has a one-bit neighbor of value `M-2`; the canonical two hostiles have minimum
+positive maximum-neighbor drops `4` and `6`. Therefore the missing overlap
+sidecar cannot be a monotone single-bit `-2` descent from the moment-forced
+maximum. Paired flips, multi-parent overlap, or value adjacency between
+nonincident cuts remain viable.
+
+There is a countervailing finite signal. A deterministic order-nine scout
+retaining up to 32 labelled witnesses in every exact `H`-fibre compares
+`88,527` equal-`(H,F_1,Var)` pairs and finds no different ear image. Because
+the usual selected bank contains only one parent per `H`, it could not reveal
+this. The enlarged result is **FINITE-EXACT EVIDENCE ONLY**: it suggests either
+a fixed-order determinacy theorem or a rarer hostile beyond the cap, but proves
+neither. The next decisive computation should enlarge selected `H`-fibres,
+not rerun the injective one-per-value bank.
 
 This reframes `{7,21}` as absent solutions of recursive cut polynomials before
 the Busch/Moon strong-min boundary lets the spectrum re-enter.  They are not

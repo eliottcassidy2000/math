@@ -241,15 +241,13 @@ THM-2070 refutes the general HYP-8890/8895 bypasses.  Transfer
   to lanes `p` (`p!=7`) and `7p` (`p!=3`).
 - THM-4099 makes insertion compositional; scalar marginals lose mixed response.
 - [THM-4097](../01-canon/theorems/THM-4097-order-nine-strong-ear-spectrum-solid-interval-and-lane-extension.md)
-  computes all `1,482` strong order-nine values and its cut-plus-field basis
-  `{3,4}`. Selected THM-4102/4104 banks give intervals through `80,265`
-  and the allowed prefix through `80,405` (next `80,407,80,689`).
-  [THM-4111](../01-canon/theorems/THM-4111-uniform-ear-average-and-recursive-selected-bank-growth.md)
-  forces unbounded maxima in every full-cut recursively selected bank;
-  cut dispersion, interval overlap and global completeness remain **OPEN**.
-- [THM-4114](../01-canon/theorems/THM-4114-ocf-mobius-positivity-tropical-defect-layer-and-opposite-ear-cut-curvature.md)
-  separates positive presence faces from submodular ear cuts. Code `8` stays
-  gapped despite full rank; interval propagation remains **OPEN**.
+  computes `1,482` strong order-nine values and cut-field basis `{3,4}`.
+  THM-4102/4104 give intervals to `80,265` and prefix to `80,405` (next
+  `80,407,80,689`). THM-4111/4115 force unbounded full-cut maxima via exact
+  Walsh variance, factor `(n+1)(n+2)/(4n)` (`C3` sharp), and `F_1` surplus.
+  THM-4114 proves presence positivity versus submodular ear cuts;
+  full rank can stay gapped. At `n=5`, `400/544` parents lack an `M-2`
+  neighbor. Overlap/completeness remain **OPEN**.
 - Corrected HYP-8835: optimal support is uniquely odd; positive `Mp=0` gives a
   replicator integral. Pure optimum means Condorcet winner, not transitivity;
   source-over-`C3` is hostile and RPS levels are circles, not `T^2`.

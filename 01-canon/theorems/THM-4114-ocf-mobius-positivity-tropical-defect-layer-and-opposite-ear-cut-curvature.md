@@ -461,7 +461,30 @@ The missing coordinate is arithmetic overlap—atom sizes, gcds, or a
 unit-step adjacency graph. THM-4111's mean forces growth of selected maxima;
 neither that mean nor rank supplies the overlap sidecar.
 
-## 8. Exact verification and scope
+## 8. Exact variance companion
+
+THM-4115 is a **PROVED** companion to the ear-cube curvature here.
+Writing `K=Q+Q^T=2w`, its Walsh calculation gives
+
+```text
+hat X({i,j})=-K_ij/4,
+Var(X)=1/4 sum_i h_i^2+||K||_F^2/32.                        (38)
+```
+
+The hostile in `(35)` is code `1015` in THM-4115's LSB-first upper-pair
+encoding after reversing the five vertex labels. That proved audit gives
+
+```text
+H=9, F_1=30, W=33, Var=305/4,
+variance floor=994/33, oddceil=31, actual maximum=41.        (39)
+```
+
+Its image still misses `21`. Thus adding exact variance to the full-rank
+curvature control does not supply interval overlap. The exact
+response-sufficient quotient is `(Start,End,Q)->(H,h,w)`; passing further to
+the scalar variance loses the labelled coefficient arrangement.
+
+## 9. Exact verification and scope
 
 The primary dependency-free referee declares
 
@@ -471,7 +494,7 @@ OCF: 33,867 labelled tournaments through order six,
 Mobius: 220,387 atoms and 811,255 mixed differences through order five;
 ear cut: 1,099 tournaments through order five,
          33,866 cut values, 83,506 pair differences,
-         41,480 higher differences.                         (38)
+         41,480 higher differences.                         (40)
 ```
 
 It also freezes tensor powers through `k=6`, literal gadget
@@ -492,6 +515,5 @@ PYTHONHASHSEED=0 python3 -B 04-computation/tournament_ocf_mobius_ear_curvature_t
 This theorem proves structural identities and sharp no-go boundaries. It
 does not prove a solid interval at a new order, compress an arbitrary gap
 interface below its full squarefree state, or prove the global
-Hamiltonian-path spectrum conjecture. THM-4115 separately reserves a Walsh
-variance refinement of the ear cut; no variance or sharper growth theorem is
-claimed here. **QED.**
+Hamiltonian-path spectrum conjecture. THM-4115 separately proves the exact
+Walsh variance and a sharper growth theorem. **QED.**

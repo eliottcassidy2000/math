@@ -79,6 +79,40 @@
   `87419c3c74782ffa9a220098306e665124ffc11a242be2bf20b1efa8ad8a214a` /
   `ce0157c903e68ec842ed1fb72e84017c2530a2866ba2721a91ceaf67186fde48`.
 
+- `order9_ear_variance_image_determinacy_cap32_scout.py` -> matching `.out`
+  [FINITE-EXACT EVIDENCE; NO ALL-ORDER DETERMINACY CLAIM]. From the complete
+  `6,008*254=1,526,032` strong order-eight ear stream, retain the first at most
+  32 distinct labelled order-nine parents in each of 1,482 `H`-fibres. Among
+  46,314 parents there are 14,085 `(H,F_1,Var)` groups, 11,938 repeated groups,
+  and 88,527 equal-triple pairs; none has different nonconstant ear images.
+  The rank-one slice exactly reproduces the THM-4102 selected bank. This is a
+  deterministic finite scout, not evidence supplied by the one-per-`H` bank
+  itself and not an injectivity theorem. Script/output SHA-256:
+  `6efc4c94ea72f67068d519f28e08b49c84fdbbda61c36da672f9946bc7df8280` /
+  `63d057e338a2d8fc4d4c1a60aeb478f556858007809212ae75ecf1d8ef283aca`;
+  semantic SHA-256:
+  `5f139bbcd2bfd615e4abd10d6aa8f52946eb4935bb2c0e6eb32aa694da9d4279`.
+- `tournament_ear_cut_walsh_variance_thm4115.py` and independent literal
+  audit -> concordant `.out`s [THM-4115 PROVED ELEMENTARY WALSH/PARSEVAL +
+  VERIFIED-EXACT + INDEPENDENTLY VERIFIED-EXACT]. For the complete labelled
+  ear-cut cube,
+  `Var(H(T+x_S))=(sum_i h_i^2+sum_(i<j)w_ij^2)/4`. Together with the exact
+  lower support `H(T+x_S)>=H(T)`, this gives
+  `max_S H(T+x_S)>=mu+Var/(mu-H)` and the universal selected-bank recurrence
+  `M_(n+1)>=(n+1)(n+2)M_n/(4n)`, sharp for `C3`. A cyclic-order proof adds
+  `F_1>=n-1` in even strong order and `F_1>=2` in odd strong order `n>=4`.
+  The primary scans all 33,864 ears through parent order five plus selected
+  order-nine/ten controls; the
+  independent literal path scans 23,717,424 child orderings. A local-step
+  hostile is already exact: `400/544` strong labelled order-five parents have
+  no `M-2` neighbor at a maximizing cut. Interval overlap and global
+  H-spectrum completeness remain OPEN. Primary script/output
+  SHA-256:
+  `27546bc169cf07ce95260afa56322ae8e6b44432e379e549605bf28f85225faa` /
+  `25c0005e8743b57ba849e5bc42e40c9ae55fa7b8106bebe8bef4e8af37dcc8b8`;
+  independent:
+  `0007b1b52ee39bc169668580959bac770f83fcd0604a41bdf9097446a23dc1bd` /
+  `287560799d8be6550d2e409449661900885e8cf52333c8e42e68e39c084dd46d`.
 - `tournament_uniform_ear_average_growth_thm4111.py` and independent literal
   audit -> concordant `.out`s [THM-4111 PROVED ELEMENTARY DOUBLE COUNT +
   VERIFIED-EXACT + INDEPENDENTLY VERIFIED-EXACT]. For an order-`n` tournament,
