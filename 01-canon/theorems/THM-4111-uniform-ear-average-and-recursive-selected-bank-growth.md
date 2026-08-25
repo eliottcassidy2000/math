@@ -2,36 +2,47 @@
 id: THM-4111
 title: "Uniform ear average and recursive selected-bank growth"
 status: >
-  RESERVED / PROVISIONAL PROOF CANDIDATE UNDER AUDIT. The claimed exact
-  all-cut sum is 2^(n-2)((n+3)H(T)+F_1(T)), where F_1 counts base orderings
-  with exactly one bad adjacency. If correct, its nonconstant-cut
-  specialization forces every recursively representative-selected strong-ear
-  bank to have unbounded image maxima. This does not prove overlap or
-  unbounded endpoints of solid intervals. No proved status or dependency is
-  asserted before independent audit.
+  PROVED ELEMENTARY DOUBLE COUNT + VERIFIED-EXACT + INDEPENDENTLY
+  VERIFIED-EXACT. The exact all-cut sum is
+  2^(n-2)((n+3)H(T)+F_1(T)), where F_1 counts base orderings with exactly one
+  bad adjacency. Its nonconstant-cut specialization forces every recursively
+  representative-selected strong-ear bank to have unbounded image maxima.
+  This does not prove overlap or unbounded endpoints of solid intervals.
 source: codex-frontier-synthesis-creative-20260825g
-depends_on: []
-related:
+depends_on:
   - THM-001-redei
   - THM-4097-order-nine-strong-ear-spectrum-solid-interval-and-lane-extension
-  - THM-4099-squarefree-gap-transfer-and-mixed-insertion-boundary
   - THM-4102-selected-order-ten-strong-ear-solid-interval
   - THM-4104-selected-order-eleven-strong-ear-solid-interval
+related:
+  - THM-4099-squarefree-gap-transfer-and-mixed-insertion-boundary
 script: 04-computation/tournament_uniform_ear_average_growth_thm4111.py
 output: 05-knowledge/results/tournament_uniform_ear_average_growth_thm4111.out
+independent_audit_script: 04-computation/tournament_uniform_ear_average_growth_thm4111_independent_audit.py
+independent_audit_output: 05-knowledge/results/tournament_uniform_ear_average_growth_thm4111_independent_audit.out
 script_sha256: a8f48ebd9f50123672e58062d918d98786a89806167a07a0f262f59f74ed4aba
 output_sha256: f00a58d8423ccb92a576b6ad5e6bfc997576d5564083dfb25bad721ede01fe82
+independent_audit_script_sha256: c7c59e8eb98d3bfdcb2105802a7c7ffda2194e28a83e30c227a38d5d464e7ba7
+independent_audit_output_sha256: 62be3fe1e66ca757f6d04ceb0f466e07502a4e1bbfa9c48172dc52baa4aa6c59
 semantic_sha256: 0bb800d8caa1c1fd449657fb9f68a33842062ec4f3866f34488d9c8ea3251915
+independent_semantic_sha256: 1580575c67bc5b8cdea70db9c7efef256cad50b8a5ed3ce18e7a73303dfad9f0
 hash_basis: raw LF bytes for files; canonical compact JSON for the semantic ledger
-audit: PENDING INDEPENDENT AUDIT; NO STATUS PROMOTION.
+audit: >
+  PASS. The independent path imports no primary code and literally scans
+  124,468 parent orderings plus 23,717,424 child orderings over all 1,098
+  labelled parents and 33,864 ears through order five. It reproduces the
+  exact sums, means, strong-ear controls, C3 coefficient hostile, inherited
+  selected-bank bounds, and the equal-(H,F_1)-but-different-image hostile.
+  Both normal/-O streams byte-match the frozen output.
 ---
 
 # THM-4111 -- uniform ear average and recursive selected-bank growth
 
-**RESERVED / PROVISIONAL PROOF CANDIDATE UNDER AUDIT.**
+**PROVED ELEMENTARY DOUBLE COUNT + VERIFIED-EXACT + INDEPENDENTLY
+VERIFIED-EXACT.**
 
-This candidate isolates the part of THM-4104's open recursive-bank question
-that does not require another spectrum census. The proposed mechanism proves
+This theorem isolates the part of THM-4104's open recursive-bank question
+that does not require another spectrum census. The averaging mechanism proves
 growth of the largest selected-image value by averaging the full labelled cut
 fibre. It does **not** prove that the long solid intervals overlap forever or
 that their right endpoints are unbounded.
@@ -61,7 +72,7 @@ old arcs of `T` and cut convention
 S={v:x->v}.                                                   (3)
 ```
 
-> **Candidate Theorem 1.1 (uniform cut-ear sum).** For every tournament `T`
+> **Theorem 1.1 (uniform cut-ear sum).** For every tournament `T`
 > of order `n>=2`,
 >
 > ```text
@@ -69,7 +80,7 @@ S={v:x->v}.                                                   (3)
 >   =2^(n-2)((n+3)H(T)+F_1(T)).                              (4)
 > ```
 
-### Proposed proof
+### Proof
 
 Sum the Hamiltonian paths of `T+x_S` over all `2^n` cuts and partition them by
 the position of `x`.
@@ -97,7 +108,7 @@ is consequently
 
 Adding the endpoint term `2^n H(T)` gives `(4)`. The position of `x`, the
 deleted word, and its exposed position recover every counted object, so no two
-parts overlap. **QED, subject to audit.**
+parts overlap. **QED.**
 
 The same calculation can be read through THM-4097's `(Start,End,Q)` boundary:
 the endpoint expectation is `H(T)`, while the symmetric total of `Q` is
@@ -209,7 +220,32 @@ max H(T+x_S) >= (n+4)H(T)/4                                (17)
 
 already fails because `5<21/4`. This is the minimal strong hostile.
 
-The proposed result proves unbounded **image maxima**. A maximum may be
+There is a separate minimal quotient boundary for interval propagation. In
+the LSB-first upper-pair encoding of THM-4097, the strong order-five parents
+with codes `1015` and `759` both have
+
+```text
+H=9,                 F_1=30,
+all-cut sum=816,      nonconstant sum/mean=798 and 133/5.   (18)
+```
+
+Nevertheless their nonconstant ear-value sets are respectively
+
+```text
+{15,17,19,23,25,27,29,33,37,41},
+{15,17,19,23,29,31,33,37,43}.                              (19)
+```
+
+Thus even `(H,F_1)` and the exact mean do not determine the cut image. The
+first failed implication is
+
+```text
+(zero/one-defect totals)  -/->  solid-interval propagation. (20)
+```
+
+The full distributional `(Start,End,Q)` sidecar remains load-bearing.
+
+The result proves unbounded **image maxima**. A maximum may be
 isolated. It proves none of the following:
 
 - overlap of the recursive solid intervals;
@@ -228,7 +264,7 @@ labelled tournament through order five:
 ```text
 1,098 parent tournaments,
 33,864 cut ears,
-16,668 nonconstant ears over strong parents.                (18)
+16,668 nonconstant ears over strong parents.                (21)
 ```
 
 It freezes the `C3` hostile and the two inherited selected-bank rows. Run
