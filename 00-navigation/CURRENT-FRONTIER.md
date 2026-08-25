@@ -55,12 +55,13 @@ is the safe control `M(S_13)=99/338`. No cited result proves LRC(14).
 
 - **Short-relation/decoder lane (PROVED + CITED):** [THM-4009](../01-canon/theorems/THM-4009-euclidean-covering-transference-short-relation-compression.md) gives square norm `<=195`; THM-2052 is terminal at rank twelve.
   THM-3793/3818/[3825](../01-canon/theorems/THM-3825-prime-colour-valuation-two-cube-decoder.md) recover both scales at `91^6` except one congruence fibre. THM-3878/3910/4002--4004 leave 17 `11+2` types and owner/arrival.
-- **Affine/comb lane (PROVED):** [THM-4024](../01-canon/theorems/THM-4024-lrc14-complete-divisor-incidence-envelope.md) gives profile `(11,9,8,8,7,7,...)`; THM-4030/4032/4041 and THM-4070/4075/4079 close shapes. THM-4087 closes AP9 plus two outliers for `70<=B<C`.
-  THM-4092 closes AP8 plus three speeds at `>=281` (all-even: `>=85`);
-  [THM-4100](../01-canon/theorems/THM-4100-residual-component-three-outlier-lrc-compiler.md)
-  keeps component ancestry and lowers arbitrary parity to `93`, with a
-  `d`-sensitive criterion. THM-4098/4101 close weight-seven rows. Arbitrary
-  cores and physical entry remain open.
+- **Affine/comb lane (PROVED):** THM-4024 gives profile
+  `(11,9,8,8,7,7,...)`; THM-4030--4041/4070--4079 close shapes; THM-4087
+  closes AP9 plus two outliers. THM-4092 closes AP8 plus three speeds at
+  `>=281` (all-even `>=85`); THM-4100 retains component ancestry and lowers
+  arbitrary parity to `93`. THM-4098 adds dilated weight-seven rows; THM-4109
+  gives AP7 odd-pair floors `197/232/268` at gaps `4/8/12`, with only `4,8`
+  beating `264` here. Arbitrary cores and physical entry remain open.
 - **Quantifier/type controls (PROVED):** [THM-4095](../01-canon/theorems/THM-4095-exact-arithmetic-field-transport-gapped-pair-margins-and-order-tournament-blindness.md) gives exact field transport and a primitive-pair optimized-margin gap `(0,1/15)`; [THM-4096](../01-canon/theorems/THM-4096-twisted-padic-affine-lrc-ray-optimizer-and-next-case-obstruction.md) isolates the first affine ray point. THM-4105--4108 add reciprocal decoders/firewalls; common arrival remains open.
 - **Owner/tail lane (PROVED):** [THM-4025](../01-canon/theorems/THM-4025-lrc14-owner-residue-odd-dilation-semigroup.md)/[4031](../01-canon/theorems/THM-4031-lrc14-endpoint-owner-rational-tail.md) give the old-strip survivor tail; THM-4029/4038 give the twelve-owner 60-phase law; THM-4033/4042 give the prime-sector tail and clocks through `P=11`, with `P=17` hostile. THM-4035 makes clocks addresses, not transfers. See the [detailed proof map](LRC14-PROOF-MAP.md).
 - **PROVED:** [THM-2928](../01-canon/theorems/THM-2928-critical-seven-comb-grid-tensorization-and-drift-tariff.md)/2941: literal zero/one/two/three-drift sectors are empty; `k=2,3` are finite.

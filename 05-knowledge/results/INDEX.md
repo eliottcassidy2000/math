@@ -15,6 +15,21 @@
   independent:
   `c607dac3d2f223fb95e76293a02f6f90767e8603ecb64961cd981d71f6e361e1` /
   `40131dd6d92e21080601d030099e8a9bf749ee994d0a5f38c96a1c17fc922482`.
+- `lrc_ap7_even_gap_overlap_atlas_thm4109.py` and independent audit ->
+  matching `.out`s [THM-4109 PROVED RELATIVE TO THM-2072/4092/4101 +
+  VERIFIED-EXACT + INDEPENDENTLY VERIFIED-EXACT; LRC(14) OPEN].  On the exact
+  AP7 safe interval, the selected odd-pair second-moment certificate has sharp
+  uniform floors `197,232,268` for gaps `4,8,12`.  Only gaps `4,8` improve
+  the former floor `264` within this certificate; gaps `2,6,10` have zero
+  overlap, and explicit height-263 banks eliminate every other asymptotically
+  eligible even gap.  The independent endpoint/wall audit checks `11,760`
+  residue-law gates and the canonical covering hostile `{8,9,11,13}`.
+  Primary script/output SHA-256:
+  `505784e664c703cbcee7f1f66d579e3d203ae88d9970a9dde2598b4655719d56` /
+  `391df0ccf5aaf4b5584ac359f97a53930e6006024bb9686a829b93a2f4156952`;
+  independent:
+  `ba940638a2d8a0667c1ccfb1da045f98707cbbaa5b43dd5e874ebccc6b9b6add` /
+  `f1a163991a220164effedf9e92880da0b1e19b29b08685daf0a4300cf08764c9`.
 
 - `jc23_theta_boundary_response_thm4103.py` and independent audit -> matching
   `.out`s [THM-4103 PROVED RELATIVE TO THM-3992/4053 + VERIFIED-EXACT +

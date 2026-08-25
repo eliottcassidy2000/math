@@ -1,0 +1,25 @@
+THM-4109 AP7 even-gap overlap atlas exact certificate: PASS
+J=[4/35,13/98] L=9/490
+zero_pair_overlap_gaps=[2, 6, 10]
+whole_J_internal_resonances=[(4, 1), (8, 2), (12, 3)]
+general_bound_exact_gates=4600
+internal exact-pair uniform floors:
+  g=4 k=1 Q=2187/480200 floor=197 worst=(Fraction(68161, 17847663372), 203, 197, 'ray') previous_floor_hostile=(Fraction(-28297, 11357603964), 203, 197, 'ray')
+  g=8 k=2 Q=927/240100 floor=232 worst=(Fraction(11027, 15001161644), 233, 235, 'special') previous_floor_hostile=(Fraction(-500165, 73729113612), 233, 231, 'ray')
+  g=12 k=3 Q=1521/480200 floor=268 worst=(Fraction(20945, 2764475878), 271, 269, 'ray') previous_floor_hostile=(Fraction(-54, 1604047), 267, 269, 'special')
+height263_asymptotic_tax=69/81004
+height263_only_possible_gaps=[4, 8, 12, 16, 20, 34, 38, 42, 46]
+g>=202_Q_upper=2063/1212505<2tax=69/40502
+height263 exact criterion hostiles outside g=4,8:
+  g=12 bank=(263, 264, 265, 275) pair=1577/506275 margin=-37921/751312100
+  g=16 bank=(263, 264, 265, 279) pair=1277/513639 margin=-334935/931627004
+  g=20 bank=(263, 264, 265, 283) pair=152/74429 margin=-4901605/8504852972
+  g=34 bank=(263, 264, 265, 297) pair=9367/5467770 margin=-734207/1014271335
+  g=38 bank=(263, 264, 267, 305) pair=327/190015 margin=-32696563/46175925180
+  g=42 bank=(263, 264, 267, 309) pair=47/27501 margin=-11066945/15593837028
+  g=46 bank=(263, 264, 267, 313) pair=1933/1169994 margin=-17389205/23693548494
+general moving-target lower bound:
+  M_g(u)>=Q_g-(5*g*L/4+2/7)/u
+general convergence upper bound:
+  M_g(u)<=Q_g+(5*g*L/4+1)/u
+conclusion=gap4 improves 264 to 197; gap8 broadens at 232; no other even gap beats 264

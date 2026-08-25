@@ -1,0 +1,18 @@
+AP7 even-gap overlap atlas independent exact audit: PASS
+J=[4/35,13/98] L=9/490
+endpoint/quasipolynomial_gates=11760
+single-packet uniform certificate thresholds:
+  g=4 Q=2187/480200 first_height=197 least_boundary_gate=68161/17847663372 at_u=203 least_odd=197 least_even=198 previous_hostile=(196, 197, 203, 207) selected_u=203 pair=359/84042 margin=-28297/11357603964
+  g=8 Q=927/240100 first_height=232 least_boundary_gate=11027/15001161644 at_u=233 least_odd=233 least_even=232 previous_hostile=(231, 232, 233, 241) selected_u=233 pair=1434/393071 margin=-500165/73729113612
+  g=12 Q=1521/480200 first_height=268 least_boundary_gate=20945/2764475878 at_u=271 least_odd=269 least_even=268 previous_hostile=(267, 268, 269, 279) selected_u=267 pair=77/24831 margin=-54/1604047
+height263_asymptotic_candidates=[4, 8, 12, 16, 20, 34, 38, 42, 46]
+height263 independently searched certificate hostiles:
+  g=12 bank=(263, 264, 265, 275) selected_u=263 pair=1577/506275 margin=-37921/751312100
+  g=16 bank=(263, 264, 265, 279) selected_u=263 pair=1277/513639 margin=-334935/931627004
+  g=20 bank=(263, 264, 265, 283) selected_u=263 pair=152/74429 margin=-4901605/8504852972
+  g=34 bank=(263, 264, 265, 297) selected_u=263 pair=9367/5467770 margin=-734207/1014271335
+  g=38 bank=(263, 264, 265, 301) selected_u=263 pair=971/554141 margin=-6329749/9045797684
+  g=42 bank=(263, 264, 265, 305) selected_u=263 pair=139/80215 margin=-6462109/9166007620
+  g=46 bank=(263, 264, 265, 309) selected_u=263 pair=317/189623 margin=-970051/1326602508
+canonical_hostile=(8, 9, 11, 13) union_measure=9/490 selected_pair_rows=[(9, 2, Fraction(0, 1), Fraction(-11041, 252252)), (11, 2, Fraction(0, 1), Fraction(-11041, 252252)), (9, 4, Fraction(1, 210), Fraction(-26101, 630630))]
+scope=thresholds are sharp for the selected-pair second-moment certificate, not actual absorption
