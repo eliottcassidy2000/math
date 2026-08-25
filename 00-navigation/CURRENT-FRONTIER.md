@@ -228,7 +228,10 @@ THM-2070 refutes the general HYP-8890/8895 bypasses.  Transfer
 - THM-1880/1885: Pell; THM-3335/3339/3357/3364/3379: Fibonacci
   tournaments. [THM-3509](../01-canon/theorems/THM-3509-reduced-fraction-harmonic-k4-face-and-fibonacci-unit-cassini-ray.md):
   `4/6/3` K4 carriers; matching loses Cassini sign. THM-3497: ancestry
-  densities. No currents.
+  densities. THM-4057 types rationals as coprime arcs (not tournaments),
+  pulls Stern--Brocot depth through Berggren, and gives an added
+  scale-invariant depth tournament with Pell/Fibonacci `C3` rays; it loses
+  gcd/height. No currents.
 - THM-3457/3462: `25/477`.
 - THM-1926 factors zeta over the strong core; THM-1940 gives `var(lambda^2)`.
 - THM-1965 stops at `n<=6`; THM-1966 adds a signed-Rédei coordinate at `n=7`.
@@ -309,6 +312,9 @@ or residue follows.
 - THM-2010's four-term no-match search is not proof of sequence novelty.
 - THM-2412/2413/2422 establish the Newton coordinate, A014574 plateaux, and
   labelled fibres; distinct ancestry is FINITE-EXACT only through `10^8`.
+- THM-4056 compiles exact-denominator packets into `C_N`; filtered `L_Q`
+  carries Duffin--Schaeffer prefixes and the `6,60,420,27720` clocks, but only
+  finite first moments, not overlap independence.
 - THM-3181--3324 separate jets, tails, carries, dynamics and Gram/Hesse
   controls; their multi-edge audit is local. THM-3333/3335/3341/3357 and
   THM-3756 prove typed identities/descent, not an LRC transfer.

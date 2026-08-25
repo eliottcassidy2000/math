@@ -205,7 +205,7 @@ This maps imported claims, consumers, and exclusions; links—not bare IDs—are
 - **RADAR / PREPRINT v1:** [arXiv:2607.16082v1](https://arxiv.org/abs/2607.16082) proves the sharp `2^(-n+1)` extreme-runner guarantee for ordered time-dependent velocities with divergent relative displacement.  No theorem depends on it, and it proves nothing about constant-velocity LRC(14), `1/14`, integer spectra, or finite checking.
 
 ## Continued fractions and Khinchin content
-- Cellarosi--Hensley--Miller--Wellens [arXiv:1402.0208v3](https://arxiv.org/abs/1402.0208) pins the classical almost-everywhere digit-mean theorem. The exact [continuant probe](../../04-computation/jc_lrc_khinchin_continuant_sidecar_probe_20260823.py) and Pell control [THM-3744](../../01-canon/theorems/THM-3744-pell-prefix-loneliness-constant-carry-exact-formula.md) show that it recovers neither ordered words, target sidecars, nor flatness.
+- [Continued-fraction, Khinchin, and Duffin--Schaeffer primary pins and exact repo boundaries](continued-fractions-khinchin-duffin-schaeffer-pins.md).
 
 ## Jacobian, Dixmier, and Poisson
 

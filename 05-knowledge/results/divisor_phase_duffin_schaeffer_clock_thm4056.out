@@ -1,0 +1,48 @@
+THM-4056 exact divisor-phase / Duffin--Schaeffer clock audit
+
+compiler universes: 165
+compiled exact phases: 44590
+bijection/inverse/phi strata/unit orbits: PASS
+
+arbitrary rational weights and DS multiplicity mass: PASS
+
+exact cyclotomic Ramanujan transforms: 468
+DFT formula sum_{d|N} W(d)c_d(k): PASS
+
+Q  L_Q  prefix-centres  new-clock-phases
+ 1      1              1                0
+ 2      2              2                1
+ 3      6              4                4
+ 4     12              6                6
+ 5     60             10               48
+ 6     60             12                0
+ 7    420             18              360
+ 8    840             22              420
+ 9   2520             28             1680
+10   2520             32                0
+11  27720             42            25200
+12  27720             46                0
+13 360360             58           332640
+14 360360             64                0
+15 360360             72                0
+16 720720             80           360360
+prefix filter and prime-power jump law: PASS
+
+clock inclusions use x -> (N'/N)x; ordinary residue reduction fails: PASS
+
+x -> -x preserves denominator/radius; a/q -> q/a need not: PASS
+
+N  odd-part  primitive-Pythagorean-phases  formula
+    6         3                             4        4
+   60        15                            52       52
+  420       105                           367      367
+27720      3465                         25987    25987
+Pythagorean/Berggren subpacket count: PASS
+
+Q=5 unfiltered divisor denominators above Q: [6, 10, 12, 15, 20, 30, 60]
+overlap hostile: formal mass=1, union measure=3/4
+scope hostiles: PASS
+
+LCM odd-prime milestones: [(3, 6), (5, 60), (7, 420), (11, 27720)]
+TOTAL EXACT GATES: 1773760
+ALL CHECKS PASSED

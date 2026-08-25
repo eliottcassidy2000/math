@@ -1,0 +1,44 @@
+THM-4057 Stern--Brocot / rational-edge tournament audit
+
+bounded rational arcs (endpoints <= 48): 1422
+raw object: bidirected on coprime pairs, empty on noncoprime pairs
+p<q restriction: acyclic coprimality-graph orientation, not tournament
+
+primitive mirror/depth cases: 8771
+reciprocal swaps L/R and preserves depth and positive CF digits: PASS
+
+trace/norm/sheet and Gaussian cases: 9900
+reversal fixes trace/norm and negates sheet/first Gaussian coordinate: PASS
+
+h  nodes  depth-odd  depth-even  signed-sum
+0      1          1           0 (-1, -2)
+1      3          2           1 (-1, -6)
+2      9          5           4 (-1, -10)
+3     27         14          13 (-1, -14)
+4     81         41          40 (-1, -18)
+5    243        122         121 (-1, -22)
+6    729        365         364 (-1, -26)
+7   2187       1094        1093 (-1, -30)
+8   6561       3281        3280 (-1, -34)
+Berggren nodes checked across levels: 9841
+D(w(1/2))=1+2h-#A and pulled-back Walsh ray: PASS
+
+all-root depth-cocycle nodes checked: 1820
+D(wx)=D(x)+2h-#A and signed C^(2h) ray for five roots: PASS
+
+J:x->1/x, j:x->1-x, H:x->(1-x)/(1+x) are distinct: PASS
+
+first directed triangle: 2->1->5->2 on (1, 2, 5)
+directed C3 counts n=3..20: [0, 0, 1, 2, 2, 9, 17, 22, 32, 38, 52, 61, 74, 98, 122, 157, 176, 213]
+score profile n=5: (0, 2, 2, 2, 4)
+score profile n=10: (0, 3, 4, 4, 4, 5, 5, 6, 7, 7)
+score profile n=15: (1, 2, 4, 6, 6, 7, 7, 7, 7, 7, 8, 10, 10, 11, 12)
+score profile n=20: (2, 4, 4, 6, 8, 8, 9, 9, 9, 10, 10, 10, 10, 11, 11, 12, 13, 14, 15, 15)
+depth-gauged tournament antisymmetry/totality/scaling: PASS
+
+Pell directed-cycle family (first four): [(1, 5, 2), (1, 29, 12), (1, 169, 70), (1, 985, 408)]
+Fibonacci directed-cycle family (first four): [(1, 5, 8), (1, 13, 8), (1, 89, 144), (1, 233, 144)]
+Pell all odd j>=3; Fibonacci n=0 or 5 mod 6 cycle laws: PASS
+
+TOTAL EXACT GATES: 1328926
+ALL CHECKS PASSED
