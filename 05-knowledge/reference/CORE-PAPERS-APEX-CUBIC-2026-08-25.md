@@ -143,7 +143,7 @@ claim as under audit.
 
 ## Repo consumer and exact sharpening
 
-[THM-4114](../../01-canon/theorems/THM-4114-boundary-state-gluing-and-ap-odd-shell-tree-synchronizers.md)
+[THM-4116](../../01-canon/theorems/THM-4116-boundary-state-gluing-and-ap-odd-shell-tree-synchronizers.md)
 imports no unverified coloring theorem.  It extracts the paper's native
 interface operation and proves it independently:
 

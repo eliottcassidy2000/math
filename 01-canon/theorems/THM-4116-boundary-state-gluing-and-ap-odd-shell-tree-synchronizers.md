@@ -1,5 +1,5 @@
 ---
-id: THM-4114
+id: THM-4116
 title: "Boundary-state gluing and AP odd-shell tree synchronizers"
 status: >
   PROVED + VERIFIED-EXACT. Ordered boundary extension vectors glue by an
@@ -18,14 +18,14 @@ related:
   - THM-343-H7-impossible
   - THM-4105-primitive-reciprocal-phase-descent-and-quantitative-arrival
   - MISTAKE-501
-script: 04-computation/snark_boundary_ap_shell_thm4114.py
-output: 05-knowledge/results/snark_boundary_ap_shell_thm4114.out
-script_sha256: 2007d8a0a038c9dac2bf2351f3d09ccdf17fe926c78f5f015a58751ab74b37ec
+script: 04-computation/snark_boundary_ap_shell_thm4116.py
+output: 05-knowledge/results/snark_boundary_ap_shell_thm4116.out
+script_sha256: 41f407ddfe435af428f5b4aceeec2267bd1431b8b67555d68c1b141dd5ea050a
 output_sha256: 4ebfdcd47e8e8c9d5bf62a0f5aca341ad4d02dffdde91ff4b8f8f9c4b20d0f80
 hash_basis: raw LF bytes
 ---
 
-# THM-4114 -- boundary-state gluing and AP odd-shell tree synchronizers
+# THM-4116 -- boundary-state gluing and AP odd-shell tree synchronizers
 
 **PROVED + VERIFIED-EXACT.**  The useful abstraction of a snark is an empty
 boundary-extension pairing, not an arithmetic prime analogy.  Transporting

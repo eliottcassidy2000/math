@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Exact boundary-state and AP odd-shell synchronization audit for THM-4114.
+"""Exact boundary-state and AP odd-shell synchronization audit for THM-4116.
 
 The graph half checks use labelled edges and labelled colors.  The AP checks
 work on the two-torsion quotient from THM-4110; no floating point arithmetic
