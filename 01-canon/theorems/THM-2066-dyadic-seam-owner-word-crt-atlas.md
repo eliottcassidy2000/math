@@ -32,10 +32,12 @@ Let `C` be an eleven-speed quotient core and retain the THM-2061 seam
 S=2C union {x,y},       x,y distinct positive odd.       (1)
 ```
 
-For a clock `N`, define its weak-safe quotient-core packet
+Write `|a|_N=min_(k in Z)|a-kN|` and label each class modulo `N` by its
+canonical representative `0<=r<N`. For a clock `N`, define its weak-safe
+labelled quotient-core packet
 
 ```text
-A_N(C)={r mod N:14|cr|_N>=N for every c in C}.           (2)
+A_N(C)={0<=r<N:14|cr|_N>=N for every c in C}.            (2)
 ```
 
 ## 1. Exact owner words
@@ -52,6 +54,10 @@ owner word on the labelled packet (2) by
 ```text
 omega_(N,C,z)(r)=nint(zr/N) mod 2.                       (4)
 ```
+
+Here `nint` is the unique nearest integer. The canonical representative is a
+label gauge: replacing `r` by `r+N` flips every odd tail's owner bit, while
+the complementary-word relation below is unchanged by that common flip.
 
 Both eligibility and (4) depend only on `z mod 2N`: adding `2N` changes the
 nearest integer by the even number `2r`.
@@ -189,4 +195,3 @@ direct enumeration of both lifts, verifies divisor transport, exhausts all
 `2,496,144` cores in (12), independently applies the divisor pins, and checks
 the histogram (14). Runtime checks survive optimized Python and the frozen
 output ends in `PASS`. QED.
-
