@@ -8,6 +8,7 @@ related:
   - THM-4094-hamiltonian-matching-deficit-and-two-prime-lane-completeness
   - THM-4097-order-nine-strong-ear-spectrum-solid-interval-and-lane-extension
   - THM-4111-uniform-ear-average-and-recursive-selected-bank-growth
+  - THM-4114-ocf-mobius-positivity-tropical-defect-layer-and-opposite-ear-cut-curvature
 ---
 
 # THM-4115 -- reserved / unproved empty stub

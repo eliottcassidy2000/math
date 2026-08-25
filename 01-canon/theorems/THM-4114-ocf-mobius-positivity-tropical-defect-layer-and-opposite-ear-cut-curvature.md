@@ -2,13 +2,12 @@
 id: THM-4114
 title: "OCF Mobius positivity, tropical defect layer, and opposite ear-cut curvature"
 status: >
-  RESERVED / PROVISIONAL PROOF CANDIDATE UNDER INDEPENDENT AUDIT. OCF
-  normalization makes every induced-subset Mobius atom and mixed Boolean
-  difference nonnegative. A fixed base word has a matching-controlled first
-  repair layer. By contrast, every one-vertex ear response is a submodular
-  directed-cut quadratic. Full rank, stability, and Lorentzianity do not
-  force an interval. The proof and primary referee below are not proved canon
-  until an independent implementation and scope audit accept them.
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY AUDITED. OCF normalization makes
+  every induced-subset Mobius atom and mixed Boolean difference nonnegative.
+  A fixed base word has a matching-controlled first repair layer. By
+  contrast, every one-vertex ear response is a submodular directed-cut
+  quadratic. Full transfer or interaction rank does not force an interval,
+  while stability and Lorentzianity already fail on minimal faces.
 source: codex-frontier-synthesis-creative-20260825g
 depends_on:
   - THM-002-ocf
@@ -18,26 +17,41 @@ related:
   - THM-1975-the-path-cover-polynomial-is-the-refined-compositional-invariant
   - THM-2602-commutative-vertex-insertion-and-ordered-transition-curvature-no-go
   - THM-4111-uniform-ear-average-and-recursive-selected-bank-growth
+  - THM-4115-uniform-ear-cut-walsh-variance-and-sharp-growth-refinement
 script: 04-computation/tournament_gap_polynomial_ocf_curvature_candidate.py
 output: 05-knowledge/results/tournament_gap_polynomial_ocf_curvature_candidate.out
+independent_audit_script: 04-computation/tournament_ocf_mobius_ear_curvature_thm4114_independent_audit.py
+independent_audit_output: 05-knowledge/results/tournament_ocf_mobius_ear_curvature_thm4114_independent_audit.out
 script_sha256: 81d2ce6dd8f1ac1a3cd3b56a457bc0fef21a463377c95200d0c1033d1a80958f
 output_sha256: 9c28f557b99966837ca0226dc96829f3300375282050c2b5247c88a8443aebc9
 semantic_sha256: 0eeda799bfc4764678b3aa8c5067b04b7a74944e5b0b6dbf519f427b09dd56b5
+independent_audit_script_sha256: 4fc9763c589c60979d53793b071eaf4dd6393fd932e5b040158d0ae3b40a05ef
+independent_audit_output_sha256: 2ecbaaadce2303ee9d33daddca4d8f9f50e9ad01e30c9f3931dd9e2994f720e7
+independent_semantic_sha256: 3917956b00891bdfb012076298867a484f4b0a41950e0e18326a782067131c5e
 hash_basis: raw LF bytes
 primary_audit: >
-  PASS. A self-contained implementation checks OCF atoms on all 33,867
-  labelled tournaments through order six, 2,131,018 induced masks, 220,387
-  Mobius atoms, 811,255 mixed differences, tensor controls through k=6, the
-  strict degree-delay and algebraic hostiles, and every ear cut through order
-  five. Normal, optimized, and frozen outputs byte-match.
+  PASS. A self-contained implementation checks OCF data on all 33,867
+  labelled tournaments through order six and 2,131,018 induced masks. The
+  Mobius census separately covers 220,387 atoms and 811,255 mixed differences
+  through order five. It also checks tensor controls through k=6, the strict
+  degree-delay and algebraic hostiles, and every ear cut through order five.
+  Normal, optimized, and frozen outputs byte-match.
+independent_audit: >
+  ACCEPT. A clean-room implementation imports no primary code and independently
+  verifies OCF Mobius positivity and parity, deletion/promotion, zeta Smith
+  forms and characteristic-dependent ranks, the matching defect layer, both
+  stability hostiles, the full-cube ear cut, and the gapped full-rank code-8
+  witness. It reproduces every stated finite census with the Mobius scope
+  explicitly bounded through order five. Normal, optimized, and frozen
+  outputs byte-match; the smallest theorem failure is none.
 ---
 
 # THM-4114 -- OCF positivity and the opposite ear-cut cube
 
-**RESERVED / PROVISIONAL PROOF CANDIDATE UNDER INDEPENDENT AUDIT.**
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY AUDITED.**
 
 THM-4099 makes finite vertex insertion compositional by retaining a
-squarefree gap polynomial. This candidate identifies two different Boolean
+squarefree gap polynomial. This theorem identifies two different Boolean
 cubes hidden in that construction.
 
 - In the **presence cube**, a coordinate decides whether a fixed inserted
@@ -74,14 +88,14 @@ directed odd cycles in `W`, including the empty collection. Write
 ```text
 A_I(Gamma)=V(Gamma) intersect I,
 c_A=sum_(Gamma:A_I(Gamma)=A) 2^|Gamma|,
-Omega_(W/B)=sum_(A subseteq I)c_A X_A,
+Phi_(W/B)=sum_(A subseteq I)c_A X_A,
 P_I=product_(i in I)(1+X_i).                                (3)
 ```
 
 > **Theorem 1 (OCF-normalized face).** In `R_I`,
 >
 > ```text
-> Z_(W/B)=P_I Omega_(W/B)
+> Z_(W/B)=P_I Phi_(W/B)
 >        =sum_(A subseteq I)c_A X_A
 >           product_(i in I minus A)(1+X_i).                 (4)
 > ```
@@ -104,7 +118,9 @@ h(S)=sum_(A subseteq S)c_A.                                 (6)
 The coefficient of `X_S` on either right side of `(4)` is
 the same zeta sum. **QED.**
 
-Boolean Mobius inversion gives
+The symbol `Phi` deliberately does not reuse THM-002's `Omega(W)`, which is
+the odd-cycle **conflict graph**, not a polynomial. Boolean Mobius inversion
+gives
 
 ```text
 c_A=sum_(T subseteq A)(-1)^(|A|-|T|)h(T)>=0.                (7)
@@ -123,17 +139,20 @@ Substitution of `(6)` gives
 boxed: Delta_A h(S)=sum_(D subseteq S)c_(A union D)>=0.      (9)
 ```
 
-Thus `h` is a totally monotone Boolean capacity: every additive
-mixed difference is nonnegative. The parity is also exact:
+Thus `h` is a totally monotone Boolean capacity: every additive mixed
+difference is nonnegative. If `A` is nonempty, every term on the right of
+`(9)` is even, so every nonempty mixed difference is even as well. The parity
+of the atoms is exact:
 
 ```text
 c_emptyset=H(W[B]) is positive and odd,
 c_A is even for every nonempty A.                           (10)
 ```
 
-The first identity counts OCF packings lying entirely in `B`.
-Every packing counted by nonempty `c_A` has at least one cycle and
-therefore even weight.
+The first identity counts OCF packings lying entirely in `B`. Every packing
+counted by nonempty `c_A` has at least one cycle and therefore even weight.
+The atom is a weighted packing sum; it is not generally twice an unweighted
+cycle count.
 
 ## 2. Deletion, promotion, and flattening rank
 
@@ -144,15 +163,17 @@ polynomial after moving `i` into the base. Then
 ```text
 Z_(W/B)=Z_del+X_i Z_promote,                                (11)
 Z_(W/B)|_(X_i=0)=Z_del,
-partial_i Z_(W/B)=Z_promote.                                (12)
+Coeff_(X_i) Z_(W/B)=Z_promote.                              (12)
 ```
 
-The derivative uses the unique multiaffine representative. For the normalized
-polynomials, cancelling `P_(I minus {i})` in `(11)` gives
+Here `Coeff_(X_i)` is the normal-form linear operation
+`f_0+X_i f_1 -> f_1`. Ordinary differentiation is not being asserted to be a
+derivation of the squarefree quotient. For the normalized polynomials,
+cancelling `P_(I minus {i})` in `(11)` gives
 
 ```text
-Omega_B
- =Omega_del+X_i(Omega_promote-Omega_del).                   (13)
+Phi_B
+ =Phi_del+X_i(Phi_promote-Phi_del).                         (13)
 ```
 
 The coefficient of `X_J` in the difference is
@@ -172,9 +193,11 @@ If `zeta_U[A,J]=1[J subseteq A]`, then `(6)` is
 boxed: M=zeta_U C zeta_V^T.                                 (15)
 ```
 
-Boolean zeta matrices are integral unimodular matrices. Thus `M`
-and `C` have the same rank over every field. This preserves linear
-separability, not arithmetic spacing.
+Boolean zeta matrices are integral unimodular matrices. Thus `M` and `C`
+have the same Smith normal form over the integers and the same rank over each
+specified field. The numerical rank may still depend on the characteristic;
+no Boolean, tropical, or nonnegative-rank claim is made. This preserves
+linear separability, not arithmetic spacing.
 
 ## 3. The first tropical layer of one base word
 
@@ -217,7 +240,7 @@ r(P)=min {
 ```
 
 with value infinity if no allocation exists. This is a disjoint-hyperedge
-repair problem.
+repair problem, and necessarily `r(P)>=delta(P)`.
 
 The smallest strict delay occurs at order four. In lexicographic tournament
 code `42`, take
@@ -233,7 +256,15 @@ Its bad gap has local coefficients
 (empty,{2},{3},{2,3})=(0,0,0,1).                           (21)
 ```
 
-Hence `delta(P)=1` but `r(P)=2`.
+More explicitly, its left, internal, and right factors are
+
+```text
+1+V+UV,             UV,             1+U+UV,                (21a)
+```
+
+whose squarefree product is `UV`. Hence `delta(P)=1` but `r(P)=2`, repaired
+by the block `0->2->3->1`. Polynomial degree here measures inserted-footprint
+size, not cycle count, total cycle length, or the number of bad gaps.
 
 There is a parallel 2-adic boundary. Every coefficient `h(S)` is
 odd, so direct coefficient valuations of `Z` vanish. For a nonzero
@@ -255,7 +286,8 @@ For `1<=i<=k`, take directed triangles
 b_i -> u_i -> v_i -> b_i                                   (23)
 ```
 
-and join the gadgets transitively. Use base
+and form their **ordinal sum**, orienting every inter-gadget arc from the
+earlier gadget to the later one. Use base
 `B={b_i}` and inserted banks `U={u_i},V={v_i}`. Every
 Hamiltonian path concatenates gadget paths, so the face flattening is
 
@@ -270,10 +302,14 @@ rank_Q(M)=2^k,
 |det M|=2^(k 2^(k-1)),                                     (25)
 ```
 
-with the same full rank over fields of odd characteristic. It fails in
-characteristic two, as the determinant warns. Yet the entry set is only
+with the same full rank over fields of odd characteristic. Its Smith factors
+are `2^j` with multiplicity `binom(k,j)`: the base matrix has Smith form
+`diag(1,2)`, and unimodular tensor powers preserve the diagonal tensor form.
+In characteristic two its rank is therefore `1`, not `2^k`. Yet the entry
+formula and value set are only
 
 ```text
+M_(A,D)=3^|A intersect D|,
 {3^j:0<=j<=k}.                                              (26)
 ```
 
@@ -291,6 +327,14 @@ Z=1+U+V+3UV.                                                (27)
 This is not real stable: `U=sqrt(-1)` and
 `V=(-2+sqrt(-1))/5` both lie in the open upper half-plane and make
 `Z=0`.
+
+The OCF-normalized footprint polynomial is
+
+```text
+Phi=1+2UV,                                                  (27a)
+```
+
+which also is not real stable: `U=V=i/sqrt(2)` is an upper-half-plane zero.
 
 The ordinary homogenization
 
@@ -351,11 +395,23 @@ Delta_u Delta_v H(T+x_S)
 Delta_A H(T+x_S)=0,              |A|>=3.                   (34)
 ```
 
-Thus every ear response is a submodular quadratic set function. On a directed
-triangle, the presence-face pair difference is `+2`, whereas all
-three ear-cube pair differences are `-2`. Presence and ear cubes
-use different coordinates—vertex selection versus incident-arc reversal—so
-`(9)` cannot be imported into ear-interval propagation.
+Thus every ear response is a submodular quadratic set function on the **full**
+Boolean cube. The nonconstant signatures that preserve a strong base form a
+punctured domain, not a lattice, so submodularity there must always mean the
+restriction of the full-cube identity.
+
+On a directed triangle, the presence-face pair difference is `+2`, whereas
+all three ear-cube pair differences are `-2`. Higher differences separate as
+well: order-four code `42` with base `{0}` has footprint atoms
+
+```text
+(1,0,0,0,0,0,2,2),                                        (34a)
+```
+
+so its presence-cube third difference is `2`, while every ear-cube third
+difference is zero. Presence and ear cubes use different coordinates—vertex
+selection versus incident-arc reversal—so `(9)` cannot be imported into
+ear-interval propagation.
 
 ## 7. Full ear interaction rank still misses an interval
 
@@ -368,7 +424,7 @@ H(T)=9,
  ={15,17,19,23,25,27,29,33,37,41}.                         (35)
 ```
 
-The internal odd value `21` is missing. Nevertheless its symmetric
+The internal odd values `21,31,35,39` are missing. Nevertheless its symmetric
 interaction matrix
 
 ```text
@@ -386,6 +442,11 @@ has
 ```text
 det K=-24320,        rank_Q K=5.                            (37)
 ```
+
+The directed `Q`-matrix itself also has rational determinant `5520`. A
+`{0,2}` versus `{1,3,4}` response flattening has Smith form `(1,2,2,8)`, so
+it has full row rank over every odd characteristic while the response image
+remains gapped.
 
 Hence strongness, full interaction rank, and exact cut curvature do not make
 one parent's ear image solid. Exhaustively:
@@ -407,7 +468,7 @@ The primary dependency-free referee declares
 ```text
 OCF: 33,867 labelled tournaments through order six,
      2,131,018 induced masks, 314,690 directed odd cycles;
-Mobius: 220,387 atoms and 811,255 mixed differences;
+Mobius: 220,387 atoms and 811,255 mixed differences through order five;
 ear cut: 1,099 tournaments through order five,
          33,866 cut values, 83,506 pair differences,
          41,480 higher differences.                         (38)
@@ -422,11 +483,15 @@ Run
 ```text
 python3 -B 04-computation/tournament_gap_polynomial_ocf_curvature_candidate.py
 python3 -B -O 04-computation/tournament_gap_polynomial_ocf_curvature_candidate.py
+PYTHONHASHSEED=0 python3 -B 04-computation/tournament_gap_polynomial_ocf_curvature_candidate.py
+python3 -B 04-computation/tournament_ocf_mobius_ear_curvature_thm4114_independent_audit.py
+python3 -B -O 04-computation/tournament_ocf_mobius_ear_curvature_thm4114_independent_audit.py
+PYTHONHASHSEED=0 python3 -B 04-computation/tournament_ocf_mobius_ear_curvature_thm4114_independent_audit.py
 ```
 
-This candidate proves structural identities and sharp no-go boundaries. It
+This theorem proves structural identities and sharp no-go boundaries. It
 does not prove a solid interval at a new order, compress an arbitrary gap
 interface below its full squarefree state, or prove the global
-Hamiltonian-path spectrum conjecture. Until its independent audit is
-complete, it remains a reserved provisional candidate rather than proved
-canon.
+Hamiltonian-path spectrum conjecture. THM-4115 separately reserves a Walsh
+variance refinement of the ear cut; no variance or sharper growth theorem is
+claimed here. **QED.**

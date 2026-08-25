@@ -247,6 +247,9 @@ THM-2070 refutes the general HYP-8890/8895 bypasses.  Transfer
   [THM-4111](../01-canon/theorems/THM-4111-uniform-ear-average-and-recursive-selected-bank-growth.md)
   forces unbounded maxima in every full-cut recursively selected bank;
   cut dispersion, interval overlap and global completeness remain **OPEN**.
+- [THM-4114](../01-canon/theorems/THM-4114-ocf-mobius-positivity-tropical-defect-layer-and-opposite-ear-cut-curvature.md)
+  separates positive presence faces from submodular ear cuts. Code `8` stays
+  gapped despite full rank; interval propagation remains **OPEN**.
 - Corrected HYP-8835: optimal support is uniquely odd; positive `Mp=0` gives a
   replicator integral. Pure optimum means Condorcet winner, not transitivity;
   source-over-`C3` is hostile and RPS levels are circles, not `T^2`.

@@ -1,5 +1,19 @@
 # Script Results Index
 
+- `tournament_gap_polynomial_ocf_curvature_candidate.py` and independent
+  clean-room audit -> concordant `.out`s [THM-4114 PROVED + VERIFIED-EXACT +
+  INDEPENDENTLY AUDITED; global H-spectrum conjecture OPEN]. OCF normalization
+  makes every presence-cube Mobius atom and mixed difference nonnegative,
+  while a one-vertex ear response is exactly a submodular directed-cut
+  quadratic. A fixed word's first live layer is a disjoint-hyperedge repair
+  degree, not merely its bad-gap count. The `C3` ordinal-sum faces have Smith
+  factors `2^j`, but code `8` has a gapped strong-ear image despite full
+  rational interaction and response-flattening rank. Primary script/output
+  SHA-256: `81d2ce6dd8f1ac1a3cd3b56a457bc0fef21a463377c95200d0c1033d1a80958f` /
+  `9c28f557b99966837ca0226dc96829f3300375282050c2b5247c88a8443aebc9`;
+  independent: `4fc9763c589c60979d53793b071eaf4dd6393fd932e5b040158d0ae3b40a05ef` /
+  `2ecbaaadce2303ee9d33daddca4d8f9f50e9ad01e30c9f3931dd9e2994f720e7`.
+
 - `lrc_antipodal_component_ancestry_chain_thm4112.py` and independent
   wall-cell audit -> concordant `.out`s [THM-4112 PROVED + PROVED RELATIVE TO
   THM-2061/2066/2072 + VERIFIED-EXACT + INDEPENDENTLY AUDITED; LRC(14) OPEN].
