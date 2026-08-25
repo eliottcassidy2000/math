@@ -82,7 +82,11 @@ is the safe control `M(S_13)=99/338`. No cited result proves LRC(14).
   [THM-4029](../01-canon/theorems/THM-4029-lrc14-ap-cover-twelve-owner-rational-tail.md)
   proves the exact twelve-owner/60-phase AP-cover tail with constant `127/35`
   and corrects the span row to `(7,8,10,13,26,infinity)`. The AP-container
-  route still loses sparse occupancy, gaps and owner placement. THM-3858
+  route still loses sparse occupancy, gaps and owner placement.
+  [THM-4035](../01-canon/theorems/THM-4035-sixty-clock-separation-and-finite-kakeya-spine.md)
+  separates its `lcm(1,...,6)` clock from the Fibonacci-mod-10 and
+  triangular-mod-30 state clocks; scalar shadows and its finite Kakeya spine
+  supply no sparse-owner or LRC transfer. THM-3858
   exhausts only the target `Z_3` test. **FINITE-EXACT:**
   `(9,13;76,132)` is the unique tripling edge through sum `10^6`
   (independent control `5000`).
@@ -374,6 +378,18 @@ or residue follows.
   diagonal/unknown-arity/root/nonmultiplicative losses block FC/HFC transfer.
 - THM-1490 is one verified higher-dimensional Gaussian construction; newer
   three-real-Gaussian examples supersede “dimension four is sharp.”
+
+### Euclidean four-dimensional Kakeya
+
+**OPEN.**  Hausdorff record `3.059849573...`; a 2025 v1 preprint claims
+maximal `3.0543`, versus published `3.049570924...`. Four-linear/sticky
+`13/4` have extra hypotheses. [Source audit](../05-knowledge/reference/CORE-PAPERS-KAKEYA-4D-2026-08-24.md).
+
+[THM-4035](../01-canon/theorems/THM-4035-sixty-clock-separation-and-finite-kakeya-spine.md)
+is **FINITE-EXACT:** three `C_60` clocks chart the nonzero torus of
+`P^3(F_61)`; the same one-clock phase has all-broad and all-narrow embeddings.
+Lines/basepoints, boundary directions, multiplicity and scale are absent, so
+no Kakeya bound follows.
 
 ### Arithmetic-Kakeya forcing certificates
 

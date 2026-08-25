@@ -41,6 +41,37 @@
   denominator-`P` boundary and give either an explicit onset or an honest
   nonuniform compactness statement.
 
+### THM-4035 sixty-clock / four-dimensional Kakeya tasks (2026-08-24)
+
+- **Cyclic-MDS weight atlas (niche).**  Over `F_61`, classify
+  `v_W(r)=(phi^(w_0r),...,phi^(w_3r))` by complete zero spectra of three- and
+  four-minors, modulo phase units, common weight translation and coordinate
+  permutation.  Consecutive weights are the all-broad positive control;
+  repeated weights are the planar hostile.  This is FINITE-EXACT algebra and
+  proves no Euclidean estimate.
+- **Projective boundary and line-placement completion.**  Add the `14,764`
+  zero-coordinate directions missing from THM-4035's `216,000`-point torus
+  chart, then choose one affine line per direction.  Compare concurrent,
+  AP-owner-derived and shuffled basepoints by exact union-size and
+  multiplicity spectra.  Preserve direction, basepoint and boundary-chart
+  labels separately.
+- **Owner-labelled broad/narrow jackknife.**  Attach THM-4029's twelve owners
+  to both the twisted-cubic and planar embeddings while keeping the phase
+  histogram fixed.  Ask whether concurrency or pinned multiplicity detects
+  the determinant regime.  Cheapest controls are all `487,635` four-minors
+  and cyclic affine relabellings `r->ur+c`, `gcd(u,60)=1`.
+- **Euclidean planebrush interface audit.**  Attempt a multiscale enrichment
+  with shading density, two-ends, moving three-plane labels, angular separation
+  and Wolff nonconcentration.  Stop unless these data survive the finite-to-tube
+  map.  A 60-point direction spine, even full-spark, is not a Kakeya set and
+  cannot improve the current `R^4` dimension bound by itself.
+- **Sun phase-fibre lower tail (wildcard).**  Parameterize nonzero inputs to
+  the `2,4,6,8` roles by `C_60` modulo 61.  Since `S_2+S_4=F_61`, retain
+  least bounded-lift height and role-labelled multiplicity after residue
+  saturation.  Compare the counterexample class `21 mod 61` with nearby
+  represented controls; target a variance/lower-tail theorem, not another
+  congruence obstruction or first-moment asymptotic.
+
 ### ISOPERIMETRIC DIMENSION of tournament graphs (seed OEIS A263135; opus-2026-07-23-S1, HYP-9022)
 - **Source:** `07-reflections/the-isoperimetric-dimension-axis-honeycomb-vs-metagraph-opus-S1.md`; HYP-9022; script `04-computation/metagraph_isoperimetric_dimension_opus_S1.py` (+ `.out`). Extends `concrete_cheeger_s92v.py` (n=5-only Cheeger).
 - **The frame (verified n≤6):** A263135 (honeycomb max-contacts) + A047932 (triangular) + A123663 (square) are one family — the edge-isoperimetric profile `(d/2)N − c√N` of a d-regular vertex-transitive graph; the `√` exponent `=(D−1)/D` is dimension `D=2`. Ported to the arc-flip metagraph `G_n`: it is the **isoperimetric ANTIPODE** — `diam~0.7 log₂V` (log, not `√V`), `λ₂(L)~2` (boundary linear, not `√V`), sparsest cut TRANSVERSE to the H-gradient and the SC/NS split. Conjecturally `D=∞`. SEA(NS-NS)=expander core; SPINE(SC-SC)=sparse quasi-1D.

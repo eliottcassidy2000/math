@@ -1,0 +1,16 @@
+THM-4035 SIXTY-CLOCK AND FINITE KAKEYA AUDIT
+ap_tail=(owners:12,owner_denominators:1..6,phase_period:60,distinct_laws:60,law_sha256:75bb78852ddc0943b8c124007f53fc0ceb090a8c8af7c49396e63d88b888b187)
+ap_phase_fingerprint=(A1_distinct:25,A2_distinct:42,pair_distinct:60,pair_sha256:822caf7c1f20caae34226a23132c9756e9250151543f534bce34f6cc2c00a462)
+fibonacci_mod10=(pi2:3,pi5:20,pi10:60,state_images:60,scalar_fibre_sizes:(4, 4, 4, 4, 4, 8, 8, 8, 8, 8))
+triangular_period_theorem=(odd_M:M,even_M:2M,audit_M:1..120,tau10:20,tau30:60,tau60:120)
+triangular_mod30=(state_images:60,scalar_images:12,fibre_sizes:(2, 2, 4, 4, 4, 4, 4, 4, 8, 8, 8, 8))
+combined_scalars=(images:48,doubletons:(((0, 0), (0, 15)), ((0, 15), (30, 45)), ((2, 6), (3, 36)), ((3, 1), (13, 46)), ((3, 21), (26, 53)), ((5, 0), (20, 35)), ((5, 10), (40, 55)), ((5, 15), (5, 50)), ((5, 25), (10, 25)), ((7, 6), (23, 56)), ((7, 16), (16, 43)), ((8, 21), (6, 33))))
+parity_repair=(images:60,one_bit_sufficient:True)
+hostile_phase_pair=(phases:(0,15),F_mod10:(0,0),T_mod30:(0,0),A1:(37/14,31/14),laws_equal:False)
+finite_field_clock=(p:61,sqrt5:26,phi:44,ord_phi:60,pi61:60,fibonacci_projective_images:15,phase_from_fibonacci:F_(r+1)+43F_r)
+triangular_multiplicative_shadow=(period:60,images:12,formula:phi^(2T_r))
+sun_2468_mod61_hostile=(target_residue:21,role_image_sizes:(31,24,26,24),partial_sumset_sizes:(31,61,61,61),local_obstruction:False)
+projective_direction_atlas=(P3_directions:230764,nonzero_torus:216000,torus_coordinates:3_independent_C60_clocks)
+twisted_cubic_broad_control=(directions:60,quartets:487635,nonzero_determinants:487635,det_sha256:ce4f0e3e707f740a608257bbc6630e4916d5d6ff3b4a220b3d05ec2d1f93a452)
+same_clock_narrow_control=(directions:60,quartets:487635,zero_determinants:487635,phase0123_dets:(24,0))
+RESULT=PASS

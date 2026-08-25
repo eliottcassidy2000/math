@@ -1,8 +1,9 @@
 ---
 id: HYP-2235
-status: OPEN finite-field carrier transfer hypothesis with exact S659 scout
-source: codex-2026-06-05-S659
+status: OPEN finite-field carrier transfer hypothesis with exact S659 and THM-4035 scouts
+source: codex-2026-06-05-S659 + THM-4035 addendum, 2026-08-24
 related:
+  - THM-4035-sixty-clock-separation-and-finite-kakeya-spine
   - HYP-2234
   - HYP-2233
   - HYP-2231
@@ -153,6 +154,43 @@ support fixed, jackknife the hidden owner/concurrency labels, and watch which
 rows lose the target predicate.  This is the S656 forcing-jackknife protocol in
 incidence form.
 
+## THM-4035 `p=61` addendum (2026-08-24)
+
+**FINITE-EXACT, not a promotion of this hypothesis.**  THM-4035 supplies the
+first four-dimensional direction control with an exact common phase clock.
+In `F_61`, `phi=44` has order 60 and three independent phase coordinates give
+
+```text
+(a,b,c) |-> [1:phi^a:phi^b:phi^c],
+```
+
+a bijection onto the `216,000`-direction nonzero torus of `P^3(F_61)`.  A
+single phase embeds both as
+
+```text
+B(r)=[1:t:t^2:t^3]       (all 487,635 four-minors nonzero),
+N(r)=[1:t:1:t]           (all 487,635 four-minors zero).
+```
+
+Thus direction phase and transversality are independent carrier fields.  The
+same clock can be maximally broad or wholly narrow; adding a Fibonacci or
+triangular scalar name does not repair the loss because those are functions
+of the original phase.
+
+The next exact HYP-2235 experiment is therefore:
+
+```text
+complete all projective boundary charts;
+choose one affine line in every direction;
+attach AP-owner-derived, concurrent, and shuffled basepoints;
+compare union size + multiplicity + pinned fibres + determinant rank.
+```
+
+Only a change in the incidence statistics under owner-preserving jackknives
+would support the proposed no-leak carrier.  Equal statistics would be a
+recorded stopping result.  Even a positive finite result would still omit
+Euclidean shadings, two-ends, scale and Wolff nonconcentration.
+
 ## Assumption Challenge
 
 The vertices in the S659 tournament are not points, lines, runners, or
@@ -172,4 +210,5 @@ external Kakeya or Falconer theorem claim.
 **See also:** HYP-2234, HYP-2233, HYP-2231, HYP-2230, HYP-2222, HYP-2197,
 HYP-2176, HYP-1804, `04-computation/finite_field_kakeya_falconer_s659.py`,
 `05-knowledge/results/finite_field_kakeya_falconer_s659.out`,
-`07-reflections/finite-field-kakeya-falconer-lrc-carrier-s659.md`.
+`07-reflections/finite-field-kakeya-falconer-lrc-carrier-s659.md`, and
+[THM-4035](../../01-canon/theorems/THM-4035-sixty-clock-separation-and-finite-kakeya-spine.md).
