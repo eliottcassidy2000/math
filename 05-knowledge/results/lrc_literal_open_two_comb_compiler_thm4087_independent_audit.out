@@ -1,0 +1,10 @@
+THM-4087 independent literal-theta wall/cell audit
+core_walls_in_component=2 core_wall_phase_gates=36 core_cell_phase_gates=18
+component_pairs=1225 component_count=73066 worst_pair=49,50 worst_length=197/34300 bound_ratio=197/200
+family_pairs=3240 family_phase_gates=71280 owner_class_gates=2004002
+witness_sources=core_left:2080,core_right:0,first:554,second:606
+dilation_phase_gates=1056 dilation_owner_gates=240
+H8_safe_walls=12 H8_safe_cells=0 H8_7m_gates=1200
+mistake274_open_handoff=1/14 local_48_123_component=[139/1722,74/861] hostile_wall_gates=4 hostile_cell_gates=5
+semantic_sha256=6cb7ea0ddd6832dce43ccda398a3a5dd8074292c62648d8f984ed4851380b2b0
+PASS: independent literal walls, clocks, dilation, endpoint hostiles, and correction lineage

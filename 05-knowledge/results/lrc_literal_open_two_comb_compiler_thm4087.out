@@ -1,0 +1,10 @@
+THM-4087 primary literal-open component/owner-clock audit
+core_interval=[4/49,3/35] length=1/245 core_phase_gates=54
+component_pairs=3160 component_count=300288 worst_pair=77,78 worst_length=103/28028 bound_ratio=103/104
+arithmetic_pairs=499500 one_tooth=358117 odd_multi=99800 even_multi=41583
+family_pairs=6105 family_phase_gates=134310 odd_class_gates=1756510 max_clock=2478
+witness_sources=core_left:3828,core_right:1501,first:573,second:203
+dilation_phase_gates=1320 dilation_clock_gates=360
+H8_7m_hostile_gates=600 local_48_123_component=[139/1722,74/861]
+semantic_sha256=e8ad1d1e3e2dd027ef47947bdee47b9e26981932bca5d378a123bb52ee77bb60
+PASS: two-comb interval compiler, adaptive owner clock, AP9 two-outlier family, and dilation
