@@ -1,0 +1,18 @@
+THM-4073 primary exact metric audit
+universe=anchored-triangle span; cycles=cyclic-order generation
+arithmetic=integer/GF(2); assertions=disabled-by-construction
+
+cycle-distance profiles; each row lists d([0],[C_3]),...,d([0],[C_n])
+  n=3 states=2 cycles=1 rows=[(2, (1,))]
+  n=4 states=8 cycles=7 rows=[(2, (1, 2)), (3, (1, 1))]
+  n=5 states=64 cycles=37 rows=[(2, (1, 2, 3)), (3, (1, 1, 2)), (4, (1, 1, 1))]
+  n=6 states=1024 cycles=197 rows=[(2, (1, 2, 3, 4)), (3, (1, 1, 2, 2)), (4, (1, 1, 1, 2)), (5, (1, 1, 1, 1))]
+  n=7 states=32768 cycles=1172 rows=[(2, (1, 2, 3, 4, 5)), (3, (1, 1, 2, 2, 3)), (4, (1, 1, 1, 2, 2)), (5, (1, 1, 1, 1, 2)), (6, (1, 1, 1, 1, 1))]
+metric_checks=55 transition_gates=84024922
+
+n=4 weighted orbit operators
+  M3=[[0, 4, 0], [1, 0, 3], [0, 4, 0]]
+  M4=[[0, 0, 3], [0, 3, 0], [1, 0, 2]]
+  weighted_commute=True boolean_support_commute=False
+
+PASS: 55 exact metric cases and the typed commuting lift survived

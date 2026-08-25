@@ -1,0 +1,19 @@
+THM-4073 independent quotient audit
+universe=all edge subsets; cycles=connected 2-regular recognition
+quotient=direct permutation canon; arithmetic=integer/GF(2)
+
+quotient rows: n D vertices edges deg_empty ecc_empty diameter cycle_distances
+  3 2 2 1 1 1 1 (1,)
+  4 2 3 2 1 2 2 (1, 2)
+  4 3 3 3 2 1 1 (1, 1)
+  5 2 7 8 1 4 4 (1, 2, 3)
+  5 3 7 14 2 3 3 (1, 1, 2)
+  5 4 7 16 3 2 2 (1, 1, 1)
+  6 2 16 31 1 5 5 (1, 2, 3, 4)
+  6 3 16 63 2 3 3 (1, 1, 2, 2)
+  6 4 16 78 3 3 3 (1, 1, 1, 2)
+  6 5 16 90 4 2 2 (1, 1, 1, 1)
+
+metric_checks=30 edge_subsets=33864 transition_gates=433754 relabel_gates=745164
+hostile_n6_D3_D4_equal_diameter=3
+PASS: independent simple-orbit graphs reproduce THM-4073
