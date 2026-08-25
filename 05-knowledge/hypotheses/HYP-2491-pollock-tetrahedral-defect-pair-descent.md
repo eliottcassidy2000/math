@@ -157,6 +157,38 @@ remainder, where `R_4` is denser.  This mirrors the LRC blocking-height theme:
 dominance grows in raw cumulative load, but the proof-relevant object is the
 tail defect/correlation, not the scalar dominance ranking alone.
 
+## 2026-08-24 mixed-binomial hostile
+
+THM-4026 supplies an exact cross-thread instance of the lifted defect-trajectory
+mechanism. Define
+
+```text
+D_246 = positive integers not in
+        {C(w,2)+C(x,4)+C(y,6): w,x,y>=2},
+r_z   = 896315812331399-C(z,8).
+```
+
+The exhaustive certificate proves
+
+```text
+r_z in D_246 for every canonical shell z=7,...,281.       (A)
+```
+
+Pascal gives the exact adjacent transport
+
+```text
+r_(z-1)=r_z+C(z-1,7),              8<=z<=281.             (B)
+```
+
+Thus one genuine global hole produces a chain of `274` consecutive defect
+pairs with seventh-binomial spacings. This is stronger finite evidence for the
+*carrier* “whole defect trajectory plus labelled gap” than a single missing
+residue. It does not prove the Pollock no-long-pair theorem: `D_246` and `D_4`
+are different atom systems, the gap rank is seven rather than two, and the
+Sun chain is finite. The cheapest new test is to attach a minimal exact
+three-summand failure certificate to every shell in (A) and ask whether those
+certificates obey a common carry grammar.
+
 ## Octahedral Sibling
 
 The same script includes a small Pollock octahedral scout.  Through `100000`,

@@ -1,5 +1,51 @@
 # Script Results Index
 
+- `sun_2468_average_order_quantitative_proof_audit_thm4028.md` [THM-4028
+  PROVED + INDEPENDENTLY PROOF-AUDITED]. Half-open cube containment and the
+  shifted-binomial face audit prove the general error
+  `O(X^(sigma-1/d_max))`; fixed period cosets give the same error for every
+  fixed residue class. For degrees `2,4,6,8` this is `O(X^(11/12))`, yielding
+  a shell mean on exactly the scale `H=o(X)`, `H/X^(7/8)->infinity`, but no
+  pointwise positivity.
+
+- `sun_2468_counterexample_thm4026.py` -> matching `.out` [THM-4026
+  REFUTED CONJECTURE + PROVED COUNTEREXAMPLE + VERIFIED-EXACT]. Over exactly
+  `248,160` admissible `(y,z)` pairs, it counts `2,755,643,831` admissible
+  canonical triples. Integer-formed odd-prime masks scan the rowwise
+  `3,005,217,600`-lane superset, leave `287,120` candidates, and pass
+  `263,434` height-valid lanes to exact square tests; none represents
+  `896315812331399`. The known
+  two-canonical-representation control `4655`, both immediate-neighbor witnesses,
+  support boundaries, local-density wheel, low-pair character-hole identity,
+  and exact rank-eight combinadic form pass under normal and optimized Python.
+  Script/output/semantic SHA-256:
+  `5cb77eab853e40e7698c2a20fbdf4645e7162bc55beffbc11481502eee510a2d` /
+  `5261ac45a367c5f7f61a2bafd98e4f6eb04fcc97bff3ac304575ca3ede7d7aeb` /
+  `7fe93b58bc221c6d9859c411de7d5215743db51a211609100cc87015817a6b7e`.
+
+- `sun_two_four_six_eight_counterexample_independent_audit_thm4026.py` ->
+  matching `.out` plus period/local proof report [THM-4026 INDEPENDENTLY
+  VERIFIED-EXACT; THM-4027 PROVED + VERIFIED-EXACT]. This dependency-free
+  reconstruction covers all `3,090,472,000` rectangular canonical triples.
+  Primes through `89` leave `324` terminal candidates: `31` fail the height
+  test and exact `isqrt` rejects `293`; continuation through `137` leaves zero
+  bounded modular survivors. It independently proves
+  the least period `product_(p^a||m)p^(a+floor(log_p k))` and universal
+  modular solubility, with 72 period and eight exceptional regular-sumset
+  hostile rows. Script/output SHA-256:
+  `120c7d694c86bc0d489d051366ed45573a21487c96740feae0319ba4a67e1cb7` /
+  `bbb14d2118f1aefda32eb5d1da970311e7667119adc2a11335e1d2955638a144`.
+
+- `sun_2468_counterexample_thm4026_independent.cpp` -> matching `.out`
+  [THM-4026 INDEPENDENTLY HOSTILE-AUDITED]. Two disjoint prime banks leave
+  `67,181` and `99,556` nonnegative candidates and exact square tests reject
+  all; a separate 29-prime bounded cover leaves zero candidates. The exact
+  small control has two canonical representations, planted high-scale controls
+  have `67/143` canonical representations, and a serial UBSan replay is clean.
+  Source/output SHA-256:
+  `6fc67f593dc77fbef2f6bcee1c9fe917548c6144fa33790d459185f98c5dae25` /
+  `990f637c740f9330b993c699cd0307c04912bf6280642f7b7bffb72d6df615db`.
+
 - `lrc14_euclidean_covering_transference_audit_thm4009.py` and its independent
   referee -> matching `.out`s [THM-4009 PROVED ALGEBRA + VERIFIED-EXACT +
   INDEPENDENTLY HOSTILE-AUDITED; LRC(14) OPEN]. A hypothetical counterexample

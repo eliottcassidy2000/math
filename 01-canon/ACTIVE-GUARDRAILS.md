@@ -1,6 +1,6 @@
 # Active Guardrails
 
-**Short hazard sheet — refreshed 2026-08-23.** Read this at startup; search [`MISTAKES.md`](MISTAKES.md) for witnesses, repairs, and lineage. This records current prohibitions, not the whole history.
+**Short hazard sheet — refreshed 2026-08-24.** Read this at startup; search [`MISTAKES.md`](MISTAKES.md) for witnesses, repairs, and lineage. This records current prohibitions, not the whole history.
 
 ## Universal
 
@@ -145,8 +145,7 @@
     repetitions contribute a collision tax.
 47. **Density zero does not imply reciprocal convergence or a critical coefficient.** Use Abel--Dini/Bertrand; THM-3730 proves both positive two-cube series diverge at the boundary and gives the support lower bound `H(X)>=kappa log log X-6.3745826010...`,
     but only the indexed lattice series has a coefficient.  The quantitative inert-prime singleton subfamily gives no full-support asymptotic, pole, or residue.
-48. **Finite prefixes and proxy supports are not all-`n` laws.** MISTAKE-219;
-    freeze support, offsets, profile, and quantified tail.
+48. **Finite/local/mean proxies are not all-`n` laws.** MISTAKE-219 and THM-4026--4028: freeze support, height, tail, and the equality test.
 49. **No OEIS match is not novelty.** A search miss proves no new sequence.
 50. **A shared Pascal array is not a geometric bridge.** MISTAKE-222; demand a
     common valuation or boundary operation and a loss ledger.

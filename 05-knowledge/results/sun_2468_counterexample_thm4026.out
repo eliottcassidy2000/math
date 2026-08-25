@@ -1,0 +1,364 @@
+{
+  "local_anatomy": {
+    "combined_relative_density": "1341862076416/5205800617325",
+    "rare_wheel_classes": [
+      261644,
+      7487324
+    ],
+    "rare_wheel_modulus": 8580495,
+    "rare_wheel_primes": [
+      3,
+      5,
+      7,
+      11,
+      17,
+      19,
+      23
+    ],
+    "rows": [
+      {
+        "count": 594,
+        "factor": "22/27",
+        "is_minimum": true,
+        "minimizers": [
+          2
+        ],
+        "p": 3,
+        "periods": [
+          3,
+          9,
+          9,
+          9
+        ],
+        "target_residue": 2,
+        "uniform_average": 729
+      },
+      {
+        "count": 2825,
+        "factor": "113/125",
+        "is_minimum": true,
+        "minimizers": [
+          4
+        ],
+        "p": 5,
+        "periods": [
+          5,
+          5,
+          25,
+          25
+        ],
+        "target_residue": 4,
+        "uniform_average": 3125
+      },
+      {
+        "count": 2177,
+        "factor": "311/343",
+        "is_minimum": true,
+        "minimizers": [
+          5
+        ],
+        "p": 7,
+        "periods": [
+          7,
+          7,
+          7,
+          49
+        ],
+        "target_residue": 5,
+        "uniform_average": 2401
+      },
+      {
+        "count": 792,
+        "factor": "72/121",
+        "is_minimum": true,
+        "minimizers": [
+          9
+        ],
+        "p": 11,
+        "periods": [
+          11,
+          11,
+          11,
+          11
+        ],
+        "target_residue": 9,
+        "uniform_average": 1331
+      },
+      {
+        "count": 2002,
+        "factor": "154/169",
+        "is_minimum": false,
+        "minimizers": [
+          1
+        ],
+        "p": 13,
+        "periods": [
+          13,
+          13,
+          13,
+          13
+        ],
+        "target_residue": 5,
+        "uniform_average": 2197
+      },
+      {
+        "count": 4080,
+        "factor": "240/289",
+        "is_minimum": true,
+        "minimizers": [
+          14
+        ],
+        "p": 17,
+        "periods": [
+          17,
+          17,
+          17,
+          17
+        ],
+        "target_residue": 14,
+        "uniform_average": 4913
+      },
+      {
+        "count": 6004,
+        "factor": "316/361",
+        "is_minimum": true,
+        "minimizers": [
+          13,
+          14
+        ],
+        "p": 19,
+        "periods": [
+          19,
+          19,
+          19,
+          19
+        ],
+        "target_residue": 13,
+        "uniform_average": 6859
+      },
+      {
+        "count": 10856,
+        "factor": "472/529",
+        "is_minimum": true,
+        "minimizers": [
+          19
+        ],
+        "p": 23,
+        "periods": [
+          23,
+          23,
+          23,
+          23
+        ],
+        "target_residue": 19,
+        "uniform_average": 12167
+      }
+    ],
+    "target_wheel_class": 7487324
+  },
+  "positive_control": {
+    "admissible_xyz_triples": 1225,
+    "exact_test_sha256": "e9c8116115776a1ea0ba5c3cb10594ea5d03acdb1a8b32902a5982022fd24017",
+    "exact_tests": 2,
+    "modular_survivor_sha256": "2c2802f6487bd4e5fae4b439cdcc5bd780b5961a66b52603359667ad8f992d29",
+    "modular_survivors": 2,
+    "ranges": {
+      "x": [
+        3,
+        19
+      ],
+      "y": [
+        5,
+        14
+      ],
+      "z": [
+        7,
+        14
+      ]
+    },
+    "rectangular_xyz_triples": 1360,
+    "representations": [
+      [
+        85,
+        14,
+        9,
+        7
+      ],
+      [
+        94,
+        7,
+        9,
+        11
+      ]
+    ],
+    "support_sizes": [
+      17,
+      10,
+      8
+    ],
+    "target": 4655,
+    "x_checksum_mod_1000000007": 21,
+    "yz_checksum_mod_1000000007": 18018,
+    "yz_pairs": 78
+  },
+  "quartic_hole_controls": {
+    "checked_primes": [
+      17,
+      23,
+      47,
+      53,
+      83,
+      107,
+      113,
+      137,
+      167,
+      173,
+      197,
+      227,
+      233,
+      257,
+      263,
+      293,
+      317,
+      347,
+      353,
+      383,
+      443,
+      467
+    ],
+    "identity_checks": 10201,
+    "prime_control_bound": 500,
+    "target_hole_congruences": {
+      "17": 14,
+      "23": 19
+    }
+  },
+  "rank_8_combinadic_normal_form": [
+    [
+      281,
+      8,
+      871896500955975
+    ],
+    [
+      279,
+      7,
+      24202109279205
+    ],
+    [
+      234,
+      6,
+      213748248714
+    ],
+    [
+      212,
+      5,
+      3403031632
+    ],
+    [
+      188,
+      4,
+      50404915
+    ],
+    [
+      136,
+      3,
+      410040
+    ],
+    [
+      43,
+      2,
+      903
+    ],
+    [
+      15,
+      1,
+      15
+    ]
+  ],
+  "represented_immediate_neighbors": {
+    "896315812331398": [
+      33663667,
+      9433,
+      16,
+      9
+    ],
+    "896315812331400": [
+      40920205,
+      6138,
+      22,
+      13
+    ]
+  },
+  "scope": "single-target exact counterexample; no minimality claim",
+  "sieve_primes": [
+    3,
+    5,
+    7,
+    11,
+    13,
+    17,
+    19,
+    23,
+    29,
+    31,
+    37,
+    41,
+    43
+  ],
+  "status": "PASS",
+  "support_boundaries": {
+    "2": [
+      42339481,
+      896315804504940,
+      896315846844421
+    ],
+    "4": [
+      12112,
+      896266258399820,
+      896562324551740
+    ],
+    "6": [
+      932,
+      895693597430352,
+      901490966993008
+    ],
+    "8": [
+      281,
+      871896500955975,
+      897353333100675
+    ]
+  },
+  "target_audit": {
+    "admissible_xyz_triples": 2755643831,
+    "exact_test_sha256": "6339b50611656ce14a6ec748815863b7b5f52ab393483c7623f0f31811aa697c",
+    "exact_tests": 263434,
+    "modular_survivor_sha256": "7e9021758b26c124f24ba1d34e1e175f321b93326a1613507528a8d47b3ad66a",
+    "modular_survivors": 287120,
+    "ranges": {
+      "x": [
+        3,
+        12112
+      ],
+      "y": [
+        5,
+        932
+      ],
+      "z": [
+        7,
+        281
+      ]
+    },
+    "rectangular_xyz_triples": 3090472000,
+    "representations": [],
+    "support_sizes": [
+      12110,
+      928,
+      275
+    ],
+    "target": 896315812331399,
+    "x_checksum_mod_1000000007": 493635279,
+    "yz_checksum_mod_1000000007": 718421623,
+    "yz_pairs": 248160
+  }
+}
+semantic_sha256=7fe93b58bc221c6d9859c411de7d5215743db51a211609100cc87015817a6b7e

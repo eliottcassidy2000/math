@@ -69,7 +69,21 @@ is the safe control `M(S_13)=99/338`. No cited result proves LRC(14).
   `4(U-1)/(63U)` closes no type. THM-4002 closes AP11 and 352,716 fixed
   `[1,21]` scale-two bodies. THM-4003/4004 give ratio/prime/`t<U` gates
   (`U>=3,208,300,859`); all 17 arbitrary-body types and owner/arrival remain
-  OPEN. THM-3858 exhausts only the target `Z_3` test. **FINITE-EXACT:**
+  OPEN. [THM-4024](../01-canon/theorems/THM-4024-lrc14-complete-divisor-incidence-envelope.md)
+  upgrades the divisor-incidence profile to `(11,9,8,8,7,7,...)`, leaving
+  only equality moduli `2,3,4`; [THM-4030](../01-canon/theorems/THM-4030-lrc14-d4-affine-defect-lattice-boundary.md)
+  converts the `d=4` obstruction into an exact bounded odd support-three
+  relation and closes every certificate-negative row, but still needs the
+  divided pack's safe-phase set. [THM-4025](../01-canon/theorems/THM-4025-lrc14-owner-residue-odd-dilation-semigroup.md)
+  gives the odd-divisibility semigroup, while [THM-4031](../01-canon/theorems/THM-4031-lrc14-endpoint-owner-rational-tail.md)
+  proves that every old-strip ray has an eventual arithmetic-survivor tail;
+  the owner-relaxed THM-4003 gate therefore cannot close ray tails, and has
+  LRC meaning only at physical heights below `91^6`. Orthogonally,
+  [THM-4029](../01-canon/theorems/THM-4029-lrc14-ap-cover-twelve-owner-rational-tail.md)
+  proves the exact twelve-owner/60-phase AP-cover tail with constant `127/35`
+  and corrects the span row to `(7,8,10,13,26,infinity)`. The AP-container
+  route still loses sparse occupancy, gaps and owner placement. THM-3858
+  exhausts only the target `Z_3` test. **FINITE-EXACT:**
   `(9,13;76,132)` is the unique tripling edge through sum `10^6`
   (independent control `5000`).
 - **PROVED:** [THM-2928](../01-canon/theorems/THM-2928-critical-seven-comb-grid-tensorization-and-drift-tariff.md)/2941: literal zero/one/two/three-drift sectors are empty; `k=2,3` are finite.
@@ -251,18 +265,19 @@ THM-2070 refutes the general HYP-8890/8895 bypasses.  Transfer
 
 ### Headline
 
-[THM-2000](../01-canon/theorems/THM-2000-support-harmonic-abel-dini-figurate-surface.md)
-and [THM-2005](../01-canon/theorems/THM-2005-support-dirichlet-automatic-tournament-atlas.md)
-separate support from indexed multiplicity and its collision tax:
+[THM-4026](../01-canon/theorems/THM-4026-sun-two-four-six-eight-binomial-counterexample.md)
+refutes Sun's `2-4-6-8` conjecture at `896315812331399`; multiple independent
+exact Python/C++ routes agree and both neighbors are represented.
+[THM-4027](../01-canon/theorems/THM-4027-sun-two-four-six-eight-universal-modular-solubility.md)
+proves local surjectivity and exact periods, while
+[THM-4028](../01-canon/theorems/THM-4028-sun-two-four-six-eight-average-order-criticality.md)
+proves count `V X^(25/24)+O(X^(11/12))`. Leastness, exception density,
+pointwise laws, and a carry obstruction are **OPEN**.
 
-```text
-support profile       D_A(z) = sum_{a in support} a^{-z}
-indexed multiplicity  = D_A(z) + collision tax.
-```
-
-THM-3359 gives periodic modular supports; THM-2352 gives the q-adic plateau.
-[THM-3499](../01-canon/theorems/THM-3499-regular-shortlex-languages-have-logarithmic-density.md) proves regular shortlex density;
-[THM-3510](../01-canon/theorems/THM-3510-binary-shortlex-equal-level-count-log-density-boundary.md) is sharp: equal counts allow two densities or none.
+[THM-2000](../01-canon/theorems/THM-2000-support-harmonic-abel-dini-figurate-surface.md)/
+[2005](../01-canon/theorems/THM-2005-support-dirichlet-automatic-tournament-atlas.md)
+separate support from indexed multiplicity/collision tax. THM-3359/2352 give
+periodic and q-adic profiles; THM-3499/3510 give sharp shortlex boundaries.
 [THM-3730](../01-canon/theorems/THM-3730-positive-distinct-two-cube-support-abscissa.md)
 gives indexed abscissa `2/3`. THM-3793/4018 give inert and ramified-three
 singleton criteria; THM-3825 decodes. Fixed inert products give
@@ -279,56 +294,33 @@ or residue follows.
 - **PROVED:** [THM-4027](../01-canon/theorems/THM-4027-sun-two-four-six-eight-universal-modular-solubility.md)
   proves universal modular solubility: no fixed local obstruction.
 - **PROVED:** [THM-4028](../01-canon/theorems/THM-4028-sun-two-four-six-eight-average-order-criticality.md)
-  gives `sum_(n<=X)a(n)~24.311...X^(25/24)` and residue refinements;
-  zero density and coverage are **OPEN**.
+  gives `sum_(n<=X)a(n)=24.311...X^(25/24)+O(X^(11/12))`, fixed-residue
+  refinements with the same error, and the shell mean for
+  `H=o(X), H/X^(7/8)->infinity`; zero density and coverage are **OPEN**.
 
 ### Established landmarks
 
-- Hostile-audited [THM-2433](../01-canon/theorems/THM-2433-operation-fibre-deletion-incidence-and-startup-scar.md) gives finite-hole Burnside calculus: exact additive/multiplicative scars, covers and twin-centre atom `12`; chain difference and divisor Möbius are analogues, not Stirling.
-- Hostile-audited [THM-2438](../01-canon/theorems/THM-2438-poisson-newton-ternary-half-and-harmonic-divisor-incidence.md)
-  gives exact Poisson--Newton conjugacy, ternary Pascal walks and limiting
-  divisor-incidence scar; Abel--Dini/Bertrand is the boundary.
-- [THM-3359](../01-canon/theorems/THM-3359-modular-c-finite-supports-harmonic-density-and-periodic-scar.md)
-  gives periodic modular C-finite supports, harmonic residue `delta=h/p`, and
-  scar `delta-delta^2/2`; [THM-3364](../01-canon/theorems/THM-3364-cyclotomic-boolean-clocks-berggren-t4-xor-and-crt-phase.md)
-  gives full phase; THM-3382 gives a time/address harmonic bifurcation. None
-  restores ancestry; squares and `ceil(k log(k+1))` block all subsets.
-- Hostile-audited [THM-2500](../01-canon/theorems/THM-2500-finite-hole-relative-atoms-prime-rays-and-cover-bounds.md) classifies finite multiplicative hole modules. Prime-free holes have finitely
-  many artificial atoms at most `max h*spf(h)`; a prime hole creates
-  disjoint cage rays `m*q` with sharp `M^3/M^4` finite remainders. Additive
-  atoms stop at `2L+1/2L+2`, induced composite covers obey a sharp `M^2` law,
-  and artificial twin centres require both `c/2,c/3` in the prime-free holes.
-- The maximum-cyclic-triangle support mass is exactly
-  `75/4 - 24*log(2)`.
-- The condensation-hazard support is `{5,6,...}` with profile
-  `zeta(s)-H_4^(s)` and prefix-product parity shuffle tax
-  `67/4 - 24*log(2)`.
-- The A000568 support mass has a certified bracket narrower than
-  `3.11e-44`.
-- [THM-2010](../01-canon/theorems/THM-2010-new-tournament-invariant-sequences.md)
-  records four-term candidates and a no-match search. That is not proof of
-  sequence novelty.
-- [THM-2412](../01-canon/theorems/THM-2412-delta-exponential-and-central-newton-layer-split.md)
-  makes the Maclaurin/Newton analogy exact; [THM-2413](../01-canon/theorems/THM-2413-prime-index-affine-drift-and-twin-center-weld.md)
-  identifies A014574 as prime-index plateaux and fixed-gap multiplicative atoms.
-  [THM-2422](../01-canon/theorems/THM-2422-operation-fibres-summand-closure-and-twin-center-ancestry.md)
-  retains labelled fibres: parity/square swap walls; closure
-  `N\{1,4,6}` with dyadic frontier; local A014574 recurrence refuted at term
-  `21`; and distinct ancestry FINITE-EXACT through center `10^8`, ALL-n OPEN.
-- THM-3181--3324 separate finite jets, fixed-depth non-P tails, LRC ray
-  carries, signed continuation, saddles/decimation, exact edge updates,
-  response Gram, and Hesse/Hilbert controls.  The 55-pair multi-edge audit is
-  local only; Q4 radius/non-P, dynamics, and bit complexity stay OPEN.
-- **EXACT typed identities:** corrected HYP-8820 gives
-  `bagel(n)-cake(n)=T_n-1`; THM-3333/3335/3341/3357 type the triangular,
-  Pythagorean, and ternary-Walsh identities.  THM-3756 proves odd-root fibres
-  and Berggren descent, but unbounded scalar fibres block its LRC transfer.
-  MISTAKE-222 forbids transfer from syntax without a valuation-preserving map.
-- **Arrangement shadow:** corrected HYP-8825 joins Vandermonde, braid chambers,
-  transitive tournaments, and one determinant. MISTAKE-223 blocks NC2,
-  hyper-Bessel, and Euler-characteristic transfers; THM-2023 is independent.
+- THM-2433/2438/2500 give finite-hole calculus, Poisson--Newton/divisor scars,
+  bounded prime-free atoms, and prime-hole rays; these are typed analogues.
+- THM-3359/3364/3382 give periodic support, full phase, and time/address
+  profiles, but no ancestry. Exact support landmarks include
+  `75/4-24log2`, `zeta(s)-H_4^s`, and an A000568 bracket below `3.11e-44`.
+- THM-2010's four-term no-match search is not proof of sequence novelty.
+- THM-2412/2413/2422 establish the Newton coordinate, A014574 plateaux, and
+  labelled fibres; distinct ancestry is FINITE-EXACT only through `10^8`.
+- THM-3181--3324 separate jets, tails, carries, dynamics and Gram/Hesse
+  controls; their multi-edge audit is local. THM-3333/3335/3341/3357 and
+  THM-3756 prove typed identities/descent, not an LRC transfer.
+- Corrected HYP-8820 gives `bagel(n)-cake(n)=T_n-1`; corrected HYP-8825 gives
+  the arrangement shadow. MISTAKE-222/223 block syntax-only LRC/NC2 transfer;
+  THM-2023 is independent.
 
-### Live work: collision profiles; automatic structure; typed identities.
+### Live work
+
+- Sun `2-4-6-8`: least hole/density, lower tails, height-aware CRT classes,
+  minimal cover, norm intersections, and rank-labelled Pascal carries.
+- General sequences: collision profiles, automatic structure, typed
+  identities, and the critical `sum 1/d_i=1` coverage boundary.
 
 ## Other active portfolio
 
@@ -352,17 +344,11 @@ or residue follows.
   mismatches. A base-fibre-selected full off-ray repairs this finite universe;
   either fixed direction fails. All-scale and Rule 30 prizes remain **OPEN**.
 - **Two Hopf problems:** the `S2 x S2` curvature and `S6` complex-structure
-  preprints are distinct **PREPRINT CLAIM / UNDER AUDIT**. Relative to one
-  reconstructed Brendle--Hung implementation, the mixed identities and
-  generic positive-definite normal Hessian are exact; the other summands,
-  cubic integral, extension, and headline remain open. Conditional on the
-  stated `S6` analytic pieces, the marked completed orbit is `2Z`; quotient,
-  attaching, nearby-cycle, recognition, and headline gates remain. The only
-  `G2`-invariant almost-complex tensors are the standard octonionic `+/-J`,
-  and `N_J(e1,e2)=4e4` excludes only that invariant lane. The order-seven
-  Lyapunov separator and its zero-padding to every `n>=7` are exact; normal
-  matrices cannot be counterexamples and `n=6` is open. No global manifold
-  follows from these ledgers.
+  preprints are distinct **PREPRINT CLAIM / UNDER AUDIT**. Only the recorded
+  mixed/Hessian identities are exact in the first lane; the `2Z` orbit in the
+  second is conditional and still lacks quotient/attaching/recognition. The
+  invariant `G2` lane is excluded and the order-seven Lyapunov separator is
+  exact for `n>=7`; `n=6` and both global headlines remain open.
 - **Imaginary-quadratic class rank:** the exact published/control lower-bound
   tuple is now at least `(8,5,4,3,3)` for `ell=(3,5,7,11,13)`. The requested
   challenges `(3,9),(5,6),(7,5),(11,4),(13,4)` all remain **OPEN**; the public
@@ -373,26 +359,19 @@ or residue follows.
   THM-4012 proves the conditional good-elliptic-factor/Bolza observer and, for the distinct actual max-six attachment `(43/224,267/224)` with `p^4=0`, proves the stable model and unconditional exclusion. Thus `b=d=0` has `M>=7`; `M>=9` needs face-stability at weights seven/eight.
   Other reduced cells, higher faces, cancellation, Keller/Darboux entry, the nonreduced Russell `(6,4)` lane, and `JC(2)` stay open.
 - **Weyl boundary:** THM-2049 gives a formal beta-adic lift; finite termination remains.
-- **Planar source fibres:** THM-2063/THM-2084--2480 (including THM-2371/
-  THM-2376) close the named degree-at-most-eighteen strata; THM-2671/2683/2692
-  empty the inherited nonsplit degree-22 branch. THM-2719--2781 close every
-  reduced split-sheet exact-square terminal `M=4k-2`, not chart entry.
-  THM-2784--2831 give `F=VG^2`, a first-order passport, and only the displayed
-  simple-pole/cyclic no-gos; nonzero passports and global entry stay open.
-  THM-2799--3151 close named accessory/resonant/balanced cells with `N>=4D`;
-  THM-3167/3172 retain diagonal/field/owner gates. THM-3212--3437 close named
-  `B,C,E`, clutch, transport, sparse, character, Prüfer, and Artin-jet lanes,
-  but no section/transfer; THM-3306 sidecars are FINITE-EXACT only.
-- **Factorial:** THM-3483 closes exact-support quadratics through `r=10028`.
-  In `9980<=d<=10030`, `9/36/6` rows close by exit/divisor/rho; at `d=9996`
-  the divisor barcodes leave `3998` and `p=19` is the first ordered killer.
-  This refutes only barcode completeness. THM-3182--3470 close named carrier,
-  character, and shear cells; support `5`, ancestry, positivity, and mixed
-  cells remain open. THM-4001 recovers every known-arity multiset `{a_i^d}`
-  from its first `k` coordinatewise cyclotomic factorial responses; diagonal
-  averaging, unknown zero arity, root branches, and nonmultiplicativity block
-  FC/HFC transfer. HFC-null still needs orientation/basepoint; HFC(3), FC(3),
-  `JC(2)` and arbitrary faces remain **OPEN**.
+- **Planar source fibres:** THM-2063/THM-2084--2480 (including
+  THM-2371/THM-2376) close the named
+  degree-at-most-eighteen strata; THM-2671/2683/2692 empty the inherited
+  nonsplit degree-22 branch, and THM-2719--2781 close reduced split-sheet
+  exact-square terminals, not chart entry. Later passport/accessory/jet lanes
+  close only their named cells; nonzero passports, section/transfer, and
+  global entry remain open. THM-3306 sidecars are FINITE-EXACT only.
+- **Factorial:** THM-3483 closes exact-support quadratics through `r=10028`;
+  the `d=9996`, `p=19` row refutes only barcode completeness. THM-3182--3470
+  close named carrier/character/shear cells, while support five, ancestry,
+  positivity, and mixed cells remain open. THM-4001 exactly recovers a
+  known-arity multiset `{a_i^d}` from `k` coordinatewise cyclotomic responses;
+  diagonal/unknown-arity/root/nonmultiplicative losses block FC/HFC transfer.
 - THM-1490 is one verified higher-dimensional Gaussian construction; newer
   three-real-Gaussian examples supersede “dimension four is sharp.”
 

@@ -2,11 +2,11 @@
 
 **Status (2026-08-24):** **FINITE-EXACT + INDEPENDENTLY VERIFIED** for the
 counterexample computation; **PROVED algebra** for the period and universal
-modular-solubility lemmas below. This report was prepared while
+modular-solubility lemmas below.  This report audited the then-reserved canon
+files
 `THM-4026-sun-two-four-six-eight-binomial-counterexample.md` and
-`THM-4027-sun-two-four-six-eight-universal-modular-solubility.md` were
-reserved. They have since been promoted in canon; this is a supporting audit,
-not the current status authority.
+`THM-4027-sun-two-four-six-eight-universal-modular-solubility.md`; their later
+status promotion is owned by the canon files, not by this audit report.
 
 ## Exact counterexample certificate
 
@@ -49,9 +49,9 @@ one. The pure modular route intentionally scans the larger box; the exact
 
 For every odd prime `p`, the checker stores a bit mask of `x` for which `D`
 is a square modulo `p`, indexed by the `(y,z)` contribution.  The mask
-intersection through `p=89` leaves exactly `324` triples. Residual
-admissibility rejects `31`, and exact integer square-root tests reject the
-remaining `293`. A redundant terminal route continues
+intersection through `p=89` leaves exactly `324` triples.  Of these, `31`
+have residual below one; exact integer square-root tests reject the remaining
+`293`.  A redundant terminal route continues
 the residue masks and leaves `3,3,1,0` triples after primes
 `113,127,131,137`.  Thus one route ends in exact `isqrt`, while the other is
 a pure bounded congruence-cover certificate.  Neither is a single local
@@ -174,14 +174,19 @@ global/Archimedean, not a congruence obstruction.
 
 These are **FINITE-EXACT diagnostics**, not an asymptotic theorem.  The target
 is `20 mod 33`, the unique minimum-density class for the true binomial
-periods, with probability `16/1089` rather than the uniform `1/33`. Selected
-exact normalized local factors are
+periods, with probability `16/1089` rather than the uniform `1/33`.  Exact
+normalized factors at the audited small-prime levels, followed by stable
+factors at the displayed primes above eight, are
 
 ```text
-sigma_16=1       sigma_9=68/81       sigma_25=566/625
-sigma_49=310/343 sigma_11=72/121     sigma_13=154/169
-sigma_17=240/289 sigma_19=316/361    sigma_23=472/529.
+2^4: 1       3^2: 68/81       5^2: 566/625       7^2: 310/343
+p=11: 72/121 p=13: 154/169    p=17: 240/289      p=19: 316/361
+p=23: 472/529.
 ```
+
+The first line is **FINITE-EXACT only**; no all-level stabilization statement
+is used.  For `p=11,13,17,19,23`, the critical-tuple audit has no fully
+critical target solution, which proves stability after the first level.
 
 It is the minimum residue at `p=11,17,19,23` and second-lowest at `p=13`.
 At `p=31` four fully critical solutions fail to lift, giving stable factor
@@ -247,6 +252,6 @@ The matching frozen output is
 SHA-256:
 
 ```text
-script 61ab4604fe0ff0506a8dfb0c8e8ccbd1f6dd568b8c8cb75b4f8aa100e0e63955
-output 3eda1fa9a407e12bcec750ee3d5938696d99cbf1b45c1e8737908296b855adcb
+script 120c7d694c86bc0d489d051366ed45573a21487c96740feae0319ba4a67e1cb7
+output bbb14d2118f1aefda32eb5d1da970311e7667119adc2a11335e1d2955638a144
 ```

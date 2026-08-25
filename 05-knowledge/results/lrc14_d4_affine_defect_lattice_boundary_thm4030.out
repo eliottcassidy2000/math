@@ -1,0 +1,12 @@
+LRC14_D4_AFFINE_DEFECT_LATTICE_BOUNDARY_THM4030_EXACT_AUDIT
+scope=THM4004_c4_equals_8_selector_boundary;LRC14=OPEN
+iff=direct_phase_cover=A_B_C_affine_certificate=bounded_odd_defect_relation
+relation=(2r)N_ab-bN_ar+aN_br=0;all_N_odd_nonzero
+gcd_gates=a+b>7gcd(a,b);a+2r>7gcd(a,r);b+2r>7gcd(b,r)
+equivalence_profiles=270;pairwise_gate_checks=270
+pairwise_not_sufficient=(2, 7, 11)
+minimal_geometric_hostile=(9, 2, 7, 9, Fraction(6, 49));certificate=(2, 7, 1, 1, 1, 1)
+minimal_H10_hostile=(11, 2, 9, 11, Fraction(1, 11));safe_phase=21/22;clearance=1/11
+strict_endpoint_positive=(2,5,7);new_small_positive=(2,3,5)
+checks=4153
+RESULT=PASS

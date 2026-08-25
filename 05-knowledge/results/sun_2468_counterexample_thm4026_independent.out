@@ -1,7 +1,7 @@
 THM4026_SUN_2468_COUNTEREXAMPLE_INDEPENDENT_EXACT_AUDIT
 date=2026-08-24
 source=04-computation/sun_2468_counterexample_thm4026_independent.cpp
-source_sha256=9fc8ea3d78d1f933e57ba366aec430a3fd161ba6157c9f0331d179cc625cf1c2
+source_sha256=6fc67f593dc77fbef2f6bcee1c9fe917548c6144fa33790d459185f98c5dae25
 
 REPRODUCTION
 g++ -std=c++20 -O3 -fopenmp -Wall -Wextra -Wconversion 04-computation/sun_2468_counterexample_thm4026_independent.cpp -o /tmp/sun_2468_counterexample_thm4026_independent

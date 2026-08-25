@@ -2,16 +2,25 @@
 id: THM-3703
 title: "Russell-cylinder exceptional-quartic SAGBI and Apéry module"
 status: >
-  PROVED + VERIFIED-EXACT.  Over the irreducible quartic field of THM-3683,
-  the exceptional-fold restriction algebra has a six-element monic SAGBI
-  basis of degrees 18,21,30,71,83,124 and an explicit free rank-18 module
-  presentation over its degree-18 generator.  Its leading-degree semigroup
-  has genus 89 and conductor 170, so the filtered restriction space through
-  degree 375 has dimension 287.  The 287 raw target restrictions used by the
-  THM-3687/structured coupled selector form an exact K-basis of that filtered
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.  Over the
+  irreducible quartic field of THM-3683, the exceptional-fold restriction
+  algebra has a six-element monic SAGBI basis of degrees 18,21,30,71,83,124
+  and an explicit free rank-18 module presentation over its degree-18
+  generator.  Its leading-degree semigroup has genus 89 and conductor 170,
+  so the filtered restriction space through degree 375 has dimension 287.
+  The 287 raw target restrictions selected by the cutoff-375 `395+174+395`
+  coupled solve extending THM-3687 form an exact K-basis of that filtered
   space; split fibres supply a nonzero-minor certificate, not an inference
   from modular failure.  The global conductor ideal is not computed here.
 source: jc_zero_debt_lift / exceptional-quartic restriction-ring basis, 2026-08-22
+audit: >
+  PASS -- independent PARI reconstruction verified the quartic identities,
+  six SAGBI degrees, all 54 exact module reductions, Apéry set, normalization,
+  and filtered dimension; independent semigroup and good-reduction probes
+  recovered the 89 gaps, conductor 170, rank 287, frozen pivots, and a nonzero
+  287-square determinant.  Normal and optimized main and eight-fibre sidecar
+  replays byte-matched their frozen transcripts.  Downstream actual-target
+  typing and the one-way characteristic-zero minor inference were audited.
 depends_on:
   - THM-3683-russell-cylinder-sixth-debt-quartic-on-the-zero-fourth-parabola
 related:
@@ -22,17 +31,20 @@ auxiliary_script: 04-computation/jc2_russell_cylinder_exceptional_quartic_restri
 output: 05-knowledge/results/jc2_russell_cylinder_exceptional_quartic_sagbi_module_thm3703.out
 auxiliary_output: 05-knowledge/results/jc2_russell_cylinder_exceptional_quartic_restriction_basis_modular_probe.out
 script_sha256: 3022ce723c58af0c1b59283ac8d2eb7629fbd74a63eeb139f43aa0e1612d67d9
+auxiliary_script_sha256: 0b8b35b6425dd9fdaf5c8df661ecbd2582dc296573e0b215bd2283e1765512bc
 output_sha256: 41fdeabedb9113255bffa135b124be6d53df2d8acb1a8a977fd5066831407f3b
+auxiliary_output_sha256: bd7d071236a4c261adc5257e12ccba4ef1381ca87ea5e0c0e402620441baed33
 hash_basis: raw LF bytes
 ---
 
 # THM-3703 -- the exceptional restriction algebra has a six-degree grammar
 
-**PROVED + VERIFIED-EXACT.**  The four sixth-debt roots do not merely share
-the same successful raw monomial counts.  They are four embeddings of one
-restriction algebra with an exact finite SAGBI and Apéry-module description.
-This replaces the 1,017-column cutoff packet by a canonical 18-residue
-object and explains the recurrent rank `287` structurally.
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.**  The four
+sixth-debt roots do not merely share the same successful raw monomial counts.
+They are four embeddings of one restriction algebra with an exact finite
+SAGBI and Apéry-module description.  This replaces the 1,017-column cutoff
+packet by a canonical 18-residue object and explains the recurrent rank `287`
+structurally.
 
 All rings below have characteristic zero.
 

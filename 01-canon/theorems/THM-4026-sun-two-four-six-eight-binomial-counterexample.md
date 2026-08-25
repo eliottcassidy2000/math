@@ -22,8 +22,11 @@ disjoint_bank_audit_output: 05-knowledge/results/sun_2468_counterexample_thm4026
 joint_period_local_audit_script: 04-computation/sun_two_four_six_eight_counterexample_independent_audit_thm4026.py
 joint_period_local_audit_output: 05-knowledge/results/sun_two_four_six_eight_counterexample_independent_audit_thm4026.out
 joint_period_local_audit_report: 05-knowledge/results/sun_two_four_six_eight_counterexample_period_local_audit_thm4026.md
+python_exact_audit_script: 04-computation/sun_2468_counterexample_thm4026.py
+python_exact_audit_output: 05-knowledge/results/sun_2468_counterexample_thm4026.out
 eisenstein_row_sieve_script: 04-computation/sun_2468_eisenstein_inert_row_sieve_thm4026.py
 eisenstein_row_sieve_output: 05-knowledge/results/sun_2468_eisenstein_inert_row_sieve_thm4026.out
+source_reference: 05-knowledge/reference/CORE-PAPERS-SUN-2468-2026-08-24.md
 ---
 
 # THM-4026 -- Sun's 2-4-6-8 conjecture is false
@@ -168,6 +171,34 @@ It leaves `61,188`, the exact fraction `5099/20680`. This quantifies a cheap
 row filter; those survivors are not asserted to satisfy the norm equation or
 to extend to a four-term representation.
 
+There is also an exact quadratic-character obstruction for the **low pair**.
+For every prime `p` congruent to `17` or `23 mod 30`,
+
+\[
+384\left(\binom w2+\binom x4+{1\over6}\right)
+=\left((2x-3)^2-5\right)^2+48(2w-1)^2.                \tag{6d}
+\]
+
+In these two residue classes `(5/p)=(-48/p)=-1`. If the right side vanished
+and `2w-1` were nonzero, then `-48` would be a square; if `2w-1` vanished,
+the first square would force `5` to be a square. Both are impossible. Hence
+
+```text
+C(w,2)+C(x,4) != -1/6 mod p.                           (6e)
+```
+
+The target lies in this forbidden low-pair class at both small instances:
+
+```text
+N mod 17=14=-1/6,       N mod 23=19=-1/6.              (6f)
+```
+
+Thus a hypothetical high-pair value `H=C(y,6)+C(z,8)` would have to satisfy
+`H!=0 mod 17` and `H!=0 mod 23`, equivalently `gcd(H,391)=1`. This is only a
+required translation: the high pair covers every residue at both primes, so
+`(6e)` is not a four-summand local obstruction. It is a structural sidecar
+for pairing and CRT searches.
+
 ## 3. Primary regenerated modular certificate
 
 The primary companion regenerates the quadratic residues for the 31 primes
@@ -241,6 +272,15 @@ two disjoint 15-prime banks; each bank followed by exact square tests finds
 zero representations, and their combined 29-prime cover leaves zero modular
 survivors. These are independent implementations of the same necessary-square
 mechanism, not additional conceptual proofs.
+
+A further exact Python route works over the `248,160` admissible `(y,z)`
+rows, separately counts the `2,755,643,831` height-feasible triples, and
+applies its 13-prime masks to the `3,005,217,600`-lane rowwise rectangular
+superset. The masks leave `287,120` candidates; `23,686` are height-invalid,
+and integer `isqrt` rejects all `263,434` feasible survivors. It also replays
+the small positive control `4655`, the local-density rows, the character holes
+`(6e)`, and the combinadic expansion below. This route is redundant evidence,
+not a new logical dependency of the primary C++ certificate.
 
 ## 5. Positive and hostile controls
 

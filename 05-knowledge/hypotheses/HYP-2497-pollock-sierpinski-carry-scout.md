@@ -195,6 +195,30 @@ But the largest defect is not an ultra-near miss:
 So carry windows explain a real chunk of the exceptional geometry but cannot
 be the whole proof by themselves.
 
+## 2026-08-24 anti-obstruction from the Sun system
+
+THM-4027 proves a stronger single-residue warning in a different mixed
+binomial system: the sum
+
+```text
+C(w,2)+C(x,4)+C(y,6)+C(z,8)
+```
+
+is surjective modulo every positive modulus, yet THM-4026 gives an exact
+integer hole. After fixing `z`, the `275` residuals form the defect trajectory
+
+```text
+r_z=N-C(z,8),                 r_(z-1)-r_z=C(z-1,7),
+```
+
+and every residual misses the three-summand `2/4/6` support. This validates
+the guardrail “single residues are scalar shadows” in an all-modulus setting:
+even complete local support can coexist with a bounded global height failure.
+It does not transfer a theorem to Pollock. The preserved object is only the
+labelled adjacent-shell defect relation; the atom set, rank, and global tail
+are lost. Any reuse must retain the entire height-bounded trajectory and its
+per-shell certificate.
+
 ## Proof Program
 
 The next lemmas are ordered by leverage:
