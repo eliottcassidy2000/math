@@ -1,5 +1,22 @@
 # Script Results Index
 
+- `tournament_balanced_cardinality_ear_average_layer_lattice_thm4123.py`
+  and independent boundary audit -> concordant core semantic ledgers
+  [THM-4123 PROVED ELEMENTARY FIXED-CARDINALITY DOUBLE COUNT +
+  JOHNSON-LATTICE + VERIFIED-EXACT + INDEPENDENTLY AUDITED; global
+  H-spectrum conjecture OPEN]. Every cardinality-`m` ear fibre has exact sum
+  `C(n,m)H+C(n-2,m-1)((n-1)H+F_1)`. Central layers improve THM-4115's
+  reduced growth factor to `1+floor(n^2/4)/n`, while exchange increments
+  generate each layer's exact response lattice and coset rounding. Codes
+  `8,759` have equal balanced means but different images; code `20` first
+  shows a global maximum need not be balanced. The independent order-six
+  census finds `1,920/22,320` strong labelled parents with no balanced global
+  maximizer. Primary script/output SHA-256:
+  `39092103a67b33b92d3f434c585b2b3f4c9c3dae003fa671b899c20dd8b7790f` /
+  `e9263501d1d8129a8460a0deacbdac5d12e528a7042dfb3e484dfba683cfe28e`;
+  independent: `7221ca2a46291828333e487d67b112750bb52c2260683afc80aa9dd3595c174a` /
+  `ee0d0bfa2aac74e39e90a623430df9834afa175805b4804540c92f6cf93926d3`.
+
 - `lrc_projective_tail_multiplier_residue_compiler_thm4121.py` and
   independent modular/supplier audit -> concordant semantic ledgers
   [THM-4121 PROVED ELEMENTARY PROJECTIVE RESIDUE COMPILER + VERIFIED-EXACT +

@@ -1,0 +1,14 @@
+status=PASS
+implementation=subset Hamiltonian DP plus literal one-defect orderings
+slice_sum=C(n,m)H+C(n-2,m-1)((n-1)H+F1)
+balanced_bound=(1+floor(n^2/4)/n)H+floor(n^2/4)F1/(n(n-1))
+order_rows=[{'order': 2, 'parents': 2, 'strong': 0, 'ears': 8, 'layers': 6, 'ordering_checks': 4, 'balanced_lattice_histogram': ((2, 2),), 'strong_balanced_lattice_histogram': (), 'oddceil_equality_all_strong': (2, 0)}, {'order': 3, 'parents': 8, 'strong': 2, 'ears': 64, 'layers': 32, 'ordering_checks': 48, 'balanced_lattice_histogram': ((0, 2), (2, 6)), 'strong_balanced_lattice_histogram': ((0, 2),), 'oddceil_equality_all_strong': (2, 2)}, {'order': 4, 'parents': 64, 'strong': 24, 'ears': 1024, 'layers': 320, 'ordering_checks': 1536, 'balanced_lattice_histogram': ((2, 48), (8, 16)), 'strong_balanced_lattice_histogram': ((2, 24),), 'oddceil_equality_all_strong': (0, 0)}, {'order': 5, 'parents': 1024, 'strong': 544, 'ears': 32768, 'layers': 6144, 'ordering_checks': 122880, 'balanced_lattice_histogram': ((2, 1024),), 'strong_balanced_lattice_histogram': ((2, 544),), 'oddceil_equality_all_strong': (24, 24)}]
+totals_parents_ears_layers_orderings=(1098, 33864, 6502, 124468)
+C3_balanced=(1, (5, 1), 5, 5, 0, 5, (5,))
+equal_mean_hostiles_code8_code759=((2, (144, 5), 41, 17, 2, 29, (17, 19, 23, 25, 27, 29, 33, 37, 41)), (2, (144, 5), 43, 43, 2, 29, (15, 19, 23, 29, 31, 33, 37, 43)))
+variance_incomparability_code8_code40=((994, 33), (144, 5), (479, 13), (192, 5))
+regular_C5_balanced=(2, (42, 1), 43, 41, 2, 43, (41, 43))
+code20_layer_maxima=(19, 91, 133, 131, 123, 91, 19);balanced_not_global=PASS
+code30571_balanced=(3, (738, 5), 189, 159, 6, 153, (135, 141, 153, 159, 189));layer_lattices=(0, 18, 6, 6, 6, 18, 0)
+scope=large balanced child and layer coset only; interval and global-max location remain OPEN
+semantic_sha256=0f227c83e27b0f2beda7d432c46c2821318cf5cd1277c4c6bafd6e1de67963ec

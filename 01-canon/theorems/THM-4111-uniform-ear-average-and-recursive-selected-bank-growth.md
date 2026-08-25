@@ -20,6 +20,7 @@ related:
   - THM-4114-ocf-mobius-positivity-tropical-defect-layer-and-opposite-ear-cut-curvature
   - THM-4115-uniform-ear-cut-walsh-variance-and-sharp-growth-refinement
   - THM-4118-ear-response-lattice-and-stateful-unit-component-intervals
+  - THM-4123-balanced-cardinality-ear-average-growth-and-johnson-layer-lattice
   - HYP-2879-strong-ear-atom-calculus
   - HYP-9029-strong-interval-tiling-law
   - MISTAKE-402
@@ -218,6 +219,11 @@ coefficients discarded by this average. Its exact variance and the pointwise
 lower support `H(T+x_S)>=H(T)` strengthen `(14)` to
 `M_(n+1)>=(n+1)(n+2)M_n/(4n)`. Equations `(14)--(15)` remain valid but are no
 longer the sharpest invariant-free recurrence in canon.
+
+**Later cardinality refinement.** THM-4123 conditions this same double count
+on a fixed cut size. Its balanced layer strengthens the reduced THM-4115
+factor again to `1+floor(n^2/4)/n`, strictly at every order `n>=4`, while an
+exact Johnson-layer lattice supplies the appropriate congruence rounding.
 
 ## 4. Sharp hostile and scope
 

@@ -1,0 +1,11 @@
+status=PASS
+implementation=clean-room Start/End/Q boundary plus literal ordering controls
+slice_sum=C(n,m)H+C(n-2,m-1)((n-1)H+F1)
+balanced_bound=(1+floor(n^2/4)/n)H+floor(n^2/4)F1/(n(n-1))
+order_rows=[{'order': 2, 'parents': 2, 'strong': 0, 'ears': 8, 'layers': 6, 'ordering_checks': 4, 'balanced_lattice_histogram': ((2, 2),), 'strong_balanced_lattice_histogram': (), 'oddceil_equality_all_strong': (2, 0)}, {'order': 3, 'parents': 8, 'strong': 2, 'ears': 64, 'layers': 32, 'ordering_checks': 48, 'balanced_lattice_histogram': ((0, 2), (2, 6)), 'strong_balanced_lattice_histogram': ((0, 2),), 'oddceil_equality_all_strong': (2, 2)}, {'order': 4, 'parents': 64, 'strong': 24, 'ears': 1024, 'layers': 320, 'ordering_checks': 1536, 'balanced_lattice_histogram': ((2, 48), (8, 16)), 'strong_balanced_lattice_histogram': ((2, 24),), 'oddceil_equality_all_strong': (0, 0)}, {'order': 5, 'parents': 1024, 'strong': 544, 'ears': 32768, 'layers': 6144, 'ordering_checks': 122880, 'balanced_lattice_histogram': ((2, 1024),), 'strong_balanced_lattice_histogram': ((2, 544),), 'oddceil_equality_all_strong': (24, 24)}]
+totals_parents_ears_layers_orderings=(1098, 33864, 6502, 124468)
+literal_named_replays=(('c3', 2), ('code20', 20), ('code30571', 30571))
+order6_census={'strong': 22320, 'without_balanced_global_maximizer': 1920, 'first_failure': (20, 133, 131, (48,), (19, 91, 133, 131, 123, 91, 19)), 'balanced_lattice_histogram': ((2, 22080), (6, 240))}
+scope=large balanced child and layer coset only; interval and global-max location remain OPEN
+semantic_sha256=0f227c83e27b0f2beda7d432c46c2821318cf5cd1277c4c6bafd6e1de67963ec
+extended_semantic_sha256=b0ee0ce581dccf3af6ba937473c45717b6132f7a396a2dee36be8b62f0efd178

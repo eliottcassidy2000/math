@@ -21,6 +21,7 @@ related:
   - THM-4102-selected-order-ten-strong-ear-solid-interval
   - THM-4104-selected-order-eleven-strong-ear-solid-interval
   - THM-4118-ear-response-lattice-and-stateful-unit-component-intervals
+  - THM-4123-balanced-cardinality-ear-average-growth-and-johnson-layer-lattice
   - HYP-2879-strong-ear-atom-calculus
   - HYP-9029-strong-interval-tiling-law
   - MISTAKE-402
@@ -271,6 +272,11 @@ M_m >= M_n * m(m+1)! / (n(n+1)! 4^(m-n)).                  (17)
 This strictly improves THM-4111's `(n+3)/4` recurrence and still tends to
 infinity. It is selection-robust because the full cut fibre is expanded before
 one representative per scalar value is retained.
+
+**Later balanced-slice refinement.** THM-4123 conditions the cut field on a
+central cardinality layer. Its exact mean is coefficientwise stronger than
+the reduced bound `(12)` for every `n>=4`, but is incomparable with the
+unreduced variance floor `(10)`. A full-cut bank may take the better of both.
 
 For the selected frontier parents already used by THM-4097/4102/4104:
 

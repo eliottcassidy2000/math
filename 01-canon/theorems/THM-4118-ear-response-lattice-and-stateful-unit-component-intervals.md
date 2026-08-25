@@ -15,6 +15,7 @@ depends_on:
   - THM-001-redei
   - THM-4097-order-nine-strong-ear-spectrum-solid-interval-and-lane-extension
 related:
+  - THM-4123-balanced-cardinality-ear-average-growth-and-johnson-layer-lattice
   - THM-4099-squarefree-gap-transfer-and-mixed-insertion-boundary
   - THM-4111-uniform-ear-average-and-recursive-selected-bank-growth
   - THM-4114-ocf-mobius-positivity-tropical-defect-layer-and-opposite-ear-cut-curvature
