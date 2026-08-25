@@ -15,6 +15,7 @@ related:
   - THM-4057-stern-brocot-depth-pullback-and-rational-edge-tournament-gauge
   - THM-4088-order-tournament-arithmetic-type-blindness-and-lrc-margin-density
   - THM-4095-exact-arithmetic-field-transport-gapped-pair-margins-and-order-tournament-blindness
+  - THM-4099-squarefree-gap-transfer-and-mixed-insertion-boundary
   - THM-4105-primitive-reciprocal-phase-descent-and-quantitative-arrival
   - THM-4108-abc-conditional-reciprocal-power-radicals-and-lrc-gauge-obstruction
 script: 04-computation/reciprocal_power_abc_lrc_thm4107_4108.py
@@ -266,6 +267,11 @@ counts: even the complete labelled orientation agrees.
    from `(14)`; use the exact census only as a verifier, not as proof.
 5. Treat the Stern equality ray `(5)` as an ABC normalization canary: any
    apparent exponential-height gain must survive primitive gcd removal.
+6. Specialize THM-4099's squarefree gap factors to `(11)`: every local factor
+   becomes an explicit divisibility/`2:3` predicate. This may derive
+   divisor-sum recurrences for exponent-tournament Hamiltonian counts, but the
+   AP13/prime fibre `(19)` proves that the entire specialization is still
+   LRC-blind.
 
 ## 7. Exact audit
 

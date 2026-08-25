@@ -32,6 +32,12 @@
   full deck with THM-762/764's signed blocker deck on AP13 and V26. Stop if an
   isomorphic deck still crosses the `1/14` boundary; otherwise identify the
   smallest sidecar that separates it.
+- **Incoming THM-4099 signal -- arithmetic squarefree gap transfer.**
+  Specialize every local insertion factor to THM-4107's exact
+  divisibility/`2:3` edge law and derive initial-segment `H` recurrences from
+  actual base words. THM-4102's selected-ear interval is a positive tournament
+  control. AP13 versus `{1,...,12,p}` is the decisive LRC stopping test: every
+  tournament-only coefficient agrees, so this lane cannot certify loneliness.
 - **ABC lane -- use only actual three-term relations.** Feed ABC into a live
   short-Graver relation only after positive primitive normalization. Keep
   coefficient slots, signed valuation depths, owner phase, and arrival.

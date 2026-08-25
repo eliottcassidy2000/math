@@ -156,6 +156,15 @@ power level one to every higher integer level flips exactly the edges
 part and total `v_2+v_3`. This deserves comparison with the existing mod-six
 LRC carriers, but only after residues and owners are attached.
 
+The incoming THM-4099 gap-transfer theorem sharpens this tournament-only lane.
+Because every edge of the normalized exponent tournament is an explicit
+divisibility or `2:3` test, its squarefree local insertion factors are
+arithmetic predicates rather than black-box orientations. That is promising
+for exact recurrences of `H` on initial segments and connects directly to
+THM-4102's selected-ear bank. It cannot improve LRC by itself: the complete
+gap polynomial is a function of the labelled tournament, so it is identical
+on the AP13/prime hostile fibre.
+
 ## Surprise 4: ABC is strongest where the LRC bridge is weakest
 
 For coprime distinct bases, the unconditional separation
