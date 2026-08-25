@@ -1,0 +1,40 @@
+MINIMAL INSERTION HOSTILES (delete v=2; common base arc 0->1)
+transitive mask= 7 H_old= 1 H_new= 1 left_degrees= (1,) type_ii= 0 orphans= 0 deficit= 0
+  old_paths= ((0, 1),)
+  new_paths= ((0, 1, 2),)
+  orphan_paths= ()
+C3 mask= 5 H_old= 1 H_new= 3 left_degrees= (2,) type_ii= 1 orphans= 1 deficit= 2
+  old_paths= ((0, 1),)
+  new_paths= ((0, 1, 2), (1, 2, 0), (2, 0, 1))
+  orphan_paths= ((1, 2, 0),)
+
+FULL INSERTION-DEFICIT AUDIT
+n= 2 pairs= 4 failures= 0 positive_orphan_pairs= 0 paper_identity_failures= 0 orphan_but_balanced= 0
+n= 3 pairs= 24 failures= 0 positive_orphan_pairs= 6 paper_identity_failures= 0 orphan_but_balanced= 6
+n= 4 pairs= 256 failures= 0 positive_orphan_pairs= 96 paper_identity_failures= 96 orphan_but_balanced= 48
+n= 5 pairs= 5120 failures= 0 positive_orphan_pairs= 3200 paper_identity_failures= 3080 orphan_but_balanced= 960
+
+SUPPORT VERSUS OBJECT-MULTIPLICITY HOSTILE
+strong_n5_mask= 8 H= 9
+C3_join_C3_mask= 24573 H= 9 strong= False
+two distinct objects; support={9}; object-term multiset=[9,9]
+
+FINITE-PREFIX / MULTIPLICATIVE-CLOSURE HOSTILE
+base_count= 303 base_max= 609
+611_factorization=13*47; reached= True
+613_prime= True reached= False
+first_20_allowed_missing_through_5000= [613, 617, 619, 623, 631, 641, 643, 647, 653, 659, 661, 673, 677, 679, 683, 691, 701, 707, 709, 719]
+two_lane_decomposition_checked_allowed_odds_through= 1000000 checked= 499998 failures= 0 atom_kinds= ['7-prime', 'finite-7-carry', 'ordinary-prime']
+boundary_decompositions= {'49': [49], '63': [63], '343': [343], '611': [13, 47], '613': [613], '623': [623], '9261': [343, 3, 3, 3]}
+
+COMPACTNESS FINITE-SUBSET WITNESSES (C3 order joins)
+threshold= 1 copies= 0 vertices= 0 H= 1
+threshold= 2 copies= 1 vertices= 3 H= 3
+threshold= 10 copies= 3 vertices= 9 H= 27
+threshold= 100 copies= 5 vertices= 15 H= 243
+threshold= 1000 copies= 7 vertices= 21 H= 2187
+threshold= 10000 copies= 9 vertices= 27 H= 19683
+threshold= 1000000 copies= 13 vertices= 39 H= 1594323
+
+semantic_sha256= 9e148b0e81a8cd0f965cb7ab15518a02d63dfaf89c590811d0efb2074b49e2b7
+ALL_CHECKS_PASS
