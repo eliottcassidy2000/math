@@ -1,0 +1,28 @@
+THM4036 d=2,c2=9 affine defect-edge exact audit
+status=PASS
+universe=unordered distinct positive odd pairs <= 79
+profiles= 780
+primitive_profiles= 651
+positive_profiles= 759
+semantic_gates= 6957
+equivalence=literal_wall_cells=affine_centres=defect_sidecars=reduced_sum_gt_7
+first_positive= (1, 7, Fraction(13, 196), (0, 3, 1), -1)
+first_nonprimitive_positive= (3, 21, Fraction(13, 588), (0, 10, 3), -3)
+safe_pair= (1, 5)
+safe_nonprimitive= (3, 9)
+minimal_max_hostile= (3, 5, Fraction(3, 16), ((1,), (0,)))
+dilated_hostile= (9, 15, Fraction(1, 16), ((1,), (0,)))
+minimal_hostile_phase_measure_components= (Fraction(2, 105), 4, 2)
+dilated_phase_measure_components= (Fraction(2, 105), 12, 6)
+requested_H10_core= (1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+correct_typed_K11= (1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 12)
+K11_safe_phase= 1/11
+typed_exceptions= (1, 11)
+typed_masks= ((0,), (1,))
+typed_body= (4, 6, 8, 10, 12, 14, 16, 18, 20, 1, 11)
+typed_pair= (2, 24)
+typed_row_safe_phase_clearance= (Fraction(15, 196), Fraction(1, 14))
+typed_row_strict_safe_phase_clearance= (Fraction(229, 560), Fraction(5, 56))
+consecutive_H11_safe_phase= 1/12
+circuit_rank=0 (one defect edge; no nontrivial cycle equation)
+scope=selector certificate only; pack-safe-phase intersection is forgotten

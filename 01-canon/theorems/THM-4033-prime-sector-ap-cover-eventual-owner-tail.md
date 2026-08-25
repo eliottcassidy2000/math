@@ -7,7 +7,8 @@ status: >
   reduced rationals of denominator below P, is eventually phase-rational
   with period dividing lcm(1,...,P-1), and has an explicit positive
   1/m constant and two-sided rational bounds. The onset is existential and
-  pointwise in P. The observed sharp onset (P^2+3)/4 is FINITE-EXACT only.
+  pointwise in P. The observed odd-prime sharp onset (P^2+3)/4 is
+  FINITE-EXACT only; the P=2 edge is m_0=2.
 source: root + prime_sector_theorem / generated sequence task, 2026-08-24
 audit: >
   PASS. Exact owner coefficients and the totient constant agree through
@@ -357,15 +358,18 @@ rho^+ <=(P-q)/[q(n-q+1)],
 rho^- <=(P-q-1)/[q(n-q+1)].                          (21)
 ```
 
-At `n=n_0`, both radii fit inside `(20)` because
+At `n=n_0`, the positive radius is at most its guard because
 
 ```text
 (q-1)(P-q+1)<=floor(P^2/4).                          (22)
 ```
 
-The case `q=1` is direct. Thus every proposed owner piece is already inside
-the region where the exact track lemma applies at `n_0`, and remains there
-at all later horizons. Middle denominators make `(22)` sharp and explain the
+The negative radius is strictly inside its guard because
+`(q-1)(P-q)<q(P-q)<=n_0`. The case `q=1` is direct. Thus the included
+negative endpoint remains in the exact track region, while equality on the
+positive side is harmless because that endpoint is excluded. Every proposed
+half-open owner piece is therefore guarded at `n_0`, and remains so at all
+later horizons. Middle denominators make `(22)` sharp and explain the
 quadratic scale.
 
 The only missing all-prime implication is the following **OPEN finite
@@ -385,7 +389,8 @@ the explicit three-gap/Farey parameterization. If `(23)` holds, the local
 result above proves the owner formula from `m_0` onward. It does not by
 itself prove that every earlier row fails.
 
-The direct engine nevertheless finds exact onset `m_0` for the tested pairs
+Through its audited horizons, the direct engine finds sampled onset `m_0` for
+the tested pairs
 
 ```text
 (3,3), (5,7), (7,13), (11,31), (13,43), (17,73),

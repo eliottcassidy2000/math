@@ -13,8 +13,11 @@ status: >
   gate. The resulting exact sequence splits over K[Z]: one fixed
   18-channel right inverse and a free rank-18 kernel describe every
   stagewise lift, while a representative-level quadratic normal compiler
-  carries all normal derivatives. This does not construct a coherent
-  all-order series, global pair, Keller map, or JC(2) counterexample.
+  carries all normal derivatives. The multiplicative annihilator of the
+  image hyperplane inside K[x] is exactly x(x^2-1)K[x], so the actual
+  restriction-algebra conductor is contained in that principal ideal. This
+  does not construct a coherent all-order series, global pair, Keller map,
+  or JC(2) counterexample.
 source: jc_zero_debt_lift / exact positive-minor saturation, 2026-08-23; jacobian_incoming_bridge / split-lift corollary, 2026-08-24
 audit: >
   PASS AFTER THREE TYPING REPAIRS -- an independent replay matched the
@@ -39,6 +42,7 @@ related:
   - THM-3629-russell-cylinder-positive-global-pair-to-jc2-counterexample
   - THM-4030-lrc14-d4-affine-defect-lattice-boundary
   - THM-4032-lrc14-d3-affine-defect-lattice-boundary
+  - THM-4034-exceptional-quartic-global-conductor-degree-178
 script: 04-computation/jc2_russell_cylinder_exceptional_quartic_jacobian_image_hyperplane_thm3737.py
 output: 05-knowledge/results/jc2_russell_cylinder_exceptional_quartic_jacobian_image_hyperplane_thm3737.out
 script_sha256: 4bbae46df140fbcda30b747f6356538a74fea34b928ed396e481e196fd0303c9
@@ -393,26 +397,77 @@ every alternative restriction-level choice. This is stagewise and
 cutoff-free in polynomial degree; it supplies no recurrence in `n` and no
 proof that the next scalar gate will pass.
 
+### The exact multiplicative annihilator and the conductor factor
+
+Although `I` is not an ideal, its polynomial multipliers have a small exact
+core. Put
+
+```text
+Ann_mult(I)={f in K[x]: fK[x] subset I},
+L=x(x^2-1).                                           (35)
+```
+
+Then
+
+```text
+boxed: Ann_mult(I)=LK[x].                             (36)
+```
+
+Indeed, for arbitrary `P in K[x]`, equations `(6)` and `(18)` give
+
+```text
+Lambda(fP)=5f(-1)P(-1)/18-f(0)P(0)+13f(1)P(1)/18.   (37)
+```
+
+Lagrange interpolation lets the three values of `P` be prescribed
+independently. All three displayed weights are nonzero, so `(37)` vanishes
+for every `P` exactly when
+
+```text
+f(-1)=f(0)=f(1)=0,
+```
+
+equivalently `L|f`. This proves `(36)`.
+
+Let
+
+```text
+c_S=(S:K[x])={f in K[x]:fK[x] subset S}              (38)
+```
+
+be the still-uncomputed global conductor of the restriction algebra. Since
+`S subset I` by `(3)`, equations `(36)--(38)` give the rigorous necessary
+factor
+
+```text
+c_S subset LK[x].                                    (39)
+```
+
+As `K[x]` is a PID, any monic conductor generator must therefore be
+divisible by `x(x^2-1)`. This is a cheap exact gate for the reserved
+degree-`178` candidate in THM-4034; it does not prove that candidate,
+determine the degree-`175` cofactor, or imply Gorensteinness.
+
 ### The support-three circuit shared with the LRC defect boundary
 
 For the common retained values `(f,g)` of a pair in `S^2`, equations `(5)`
 give the value map
 
 ```text
-A_J(f,g)=[[9,3],[-4,3],[-9,3]] (f,g)^T.               (35)
+A_J(f,g)=[[9,3],[-4,3],[-9,3]] (f,g)^T.               (40)
 ```
 
 Its signed maximal minors are
 
 ```text
-(15,-54,39)=54(5/18,-1,13/18),                        (36)
+(15,-54,39)=54(5/18,-1,13/18),                        (41)
 ```
 
 which recovers `Lambda` as its primitive rank-two compatibility circuit.
 THM-4030/4032 have the same support-three architecture: their centre maps
 have one signed-minor circuit, then local gcd/residue and strict-window
 saturation upgrades compatibility to an affine lift. Here the separate
-positive-minor `K[Z]` saturation in Section 4 upgrades `(36)` to polynomial
+positive-minor `K[Z]` saturation in Section 4 upgrades `(41)` to polynomial
 realizability.
 
 This is a typed mechanism bridge, not a map from runner configurations to

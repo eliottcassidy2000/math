@@ -19,6 +19,18 @@
   independent `2935a6976d19b5ef99bdaae45be7b77e905e4f9edb8946af06af7441b843ffb2` /
   `e7b72cded0da828beaf8c237341bb13dca8eba22741fa3b027ac8a7085ec4cc5`.
 
+- `lrc14_d2_affine_defect_edge_boundary_thm4036.py` -> matching `.out`
+  [THM-4036 PROVED RELATIVE TO THM-4024/4004 + VERIFIED-EXACT +
+  HOSTILE-AUDITED; LRC(14) OPEN]. Two-lift spoilage is exactly one affine
+  defect with `N==alpha*beta (mod 2g)` and
+  `7|N|<alpha+beta`, equivalently reduced exception sum `>7`. The two-centre
+  complex has no circuit. The companion additionally proves the exact
+  spoiled-phase measure/component law and checks 780 odd pairs/6,957 gates,
+  including a correctly typed eleven-pack containing the requested
+  `{1,...,10}` core. Script/output SHA-256:
+  `78e8e129562ffadcc3e50bd4032463b8eb2d8017bb73ab1c97273eadb52898a3` /
+  `002db8870c4d0a27d947e934ff88e49b9ebe42422fcecba5def02238f1948015`.
+
 - `prime_sector_ap_cover_eventual_owner_tail_thm4033.py` -> matching `.out`
   [THM-4033 PROVED + VERIFIED-EXACT]. For every fixed prime, the persistent
   noncover owners are exactly reduced rationals of denominator below `P`;

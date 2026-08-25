@@ -72,8 +72,12 @@ is the safe control `M(S_13)=99/338`. No cited result proves LRC(14).
   OPEN. [THM-4024](../01-canon/theorems/THM-4024-lrc14-complete-divisor-incidence-envelope.md)
   gives profile `(11,9,8,8,7,7,...)` and equality moduli `2,3,4`.
   [THM-4030](../01-canon/theorems/THM-4030-lrc14-d4-affine-defect-lattice-boundary.md)/[4032](../01-canon/theorems/THM-4032-lrc14-d3-affine-defect-lattice-boundary.md)
-  give exact `d=4/3` affine circuits and close certificate-negative rows;
-  both still need the pack-safe set, and `d=2` lacks an affine law.
+  give exact `d=4/3` affine circuits and close certificate-negative rows.
+  [THM-4036](../01-canon/theorems/THM-4036-lrc14-d2-affine-defect-edge-boundary.md)
+  completes the `d=2` affine law: its two-centre complex has one defect edge,
+  no circuit, and an exact spoiled-phase measure/component formula. All three
+  equality moduli still need intersection with the correctly typed divided
+  pack safe set (`11` speeds at `d=2`, `10` at `d=3,4`).
   [THM-4025](../01-canon/theorems/THM-4025-lrc14-owner-residue-odd-dilation-semigroup.md)
   gives the odd-divisibility semigroup, while [THM-4031](../01-canon/theorems/THM-4031-lrc14-endpoint-owner-rational-tail.md)
   proves that every old-strip ray has an eventual arithmetic-survivor tail;
@@ -370,8 +374,11 @@ or residue follows.
   THM-4012 proves the conditional good-elliptic-factor/Bolza observer and, for the distinct actual max-six attachment `(43/224,267/224)` with `p^4=0`, proves the stable model and unconditional exclusion. Thus `b=d=0` has `M>=7`; `M>=9` needs face-stability at weights seven/eight.
   In the Russell exceptional-quartic lane, THM-3703/3737 give a rank-18
   grammar, one image hyperplane, a split 18+18 lift/kernel, and a quadratic
-  representative normal compiler. Future gates, coherence, degree control,
-  algebraization and Keller entry remain OPEN.
+  representative normal compiler. The image's exact multiplicative
+  annihilator is `x(x^2-1)K[x]`, forcing that factor in any global conductor;
+  THM-4034's degree-178 conductor remains a RESERVED proof candidate. Future
+  gates, coherence, degree control, algebraization and Keller entry remain
+  OPEN.
   Other reduced cells, higher faces, cancellation, Keller/Darboux entry, the nonreduced Russell `(6,4)` lane, and `JC(2)` stay open.
 - **Weyl boundary:** THM-2049 gives a formal beta-adic lift; finite termination remains.
 - **Planar source fibres:** THM-2063/THM-2084--2480 (including
