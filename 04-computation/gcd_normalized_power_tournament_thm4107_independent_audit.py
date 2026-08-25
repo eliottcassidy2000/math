@@ -189,5 +189,3 @@ print(f"M_AP13={ap_max} M_V26={v26_max} first_V26_target_witness={first_v26}")
 print(f"M_pair_12={pair12_max} M_pair_23={pair23_max}")
 print(f"M_odd={odd_max} M_mixed={mixed_max}")
 print("PASS")
-
-

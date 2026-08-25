@@ -19,7 +19,7 @@ related:
   - THM-4107-gcd-normalized-exponent-tournament-holonomy-and-lrc-blindness
 script: 04-computation/reciprocal_power_abc_lrc_thm4107_4108.py
 output: 05-knowledge/results/reciprocal_power_abc_lrc_thm4107_4108.out
-script_sha256: 977490728ed77150daf580dbc294f7355bc502cf85c750748e8d4ed532d5691b
+script_sha256: f1db2869841130571c550d821580a1ec428364e83b6dcf0ee2ca598d96ff4fd1
 output_sha256: 6e91f10ea6db2b117937d439bd7d7a9b300ce3fa31a10b92e3811dee79ecbe32
 hash_basis: raw LF bytes
 audit: >

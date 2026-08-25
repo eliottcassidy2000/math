@@ -353,5 +353,3 @@ print("AP13_period27_isomorphism=swap endpoint positions 1 and 13")
 print("pair_hostile={1,2}:1/3 vs {2,3}:2/5")
 print("thirteen_hostile=identical transitive tournament; odd M=1/2, mixed 1/4<=M<1/2")
 print("PASS")
-
-
