@@ -21,7 +21,9 @@ related:
   - THM-4099-squarefree-gap-transfer-and-mixed-insertion-boundary
   - THM-4111-uniform-ear-average-and-recursive-selected-bank-growth
   - HYP-2879-strong-ear-atom-calculus
+  - HYP-9029-strong-interval-tiling-law
   - MISTAKE-055
+  - MISTAKE-402
 script: 04-computation/tournament_selected_order11_strong_ear_interval_thm4104.py
 output: 05-knowledge/results/tournament_selected_order11_strong_ear_interval_thm4104.out
 independent_audit_script: 04-computation/tournament_selected_order11_strong_ear_interval_thm4104_independent_audit.py
@@ -43,7 +45,8 @@ audit: >
   and scans all 7,732,452 ears. The independent path imports neither primary,
   rebuilds both bank digests, reproduces all 43,251 values, directly checks all
   7,566 parents, eleven key children and 262 broad samples, and verifies 470
-  small literal/DP controls. Both normal/-O pairs byte-match frozen outputs.
+  small literal/DP controls. Both normal/-O pairs match their frozen outputs
+  after CRLF-to-LF transcript normalization.
 ---
 
 # THM-4104 -- the selected order-eleven strong-ear interval
@@ -125,6 +128,25 @@ H(S union {v})
 Equation `(10)` evaluates the entire truth table deterministically by removing
 one least significant bit at a time. It is the fast evaluator used for the
 7.7-million-row scan, not a fitted recurrence or numerical interpolation.
+
+This is exactly THM-4097's cut-field carrier in an unsymmetrized chart. With
+
+```text
+w_ij=(Q_ij+Q_ji)/2,
+h_i=Start_T(i)-End_T(i)+(col_i(Q)-row_i(Q))/2,             (10a)
+```
+
+the internal `Q` terms cancel and the directed cut splits as
+
+```text
+sum_(b in S)L_T(b)-sum_(a,b in S)Q_T(a,b)
+  =cut_w(S)+sum_(i in S)h_i.                              (10b)
+```
+
+Thus `(7)` and THM-4097's symmetric-cut-plus-zero-sum-field formula are
+identical, not competing evaluators: `(7)` is the fast directed quadratic,
+while `(10b)` exposes the orientation information destroyed by an unoriented
+cut quotient.
 
 If `T` is strong and
 
@@ -310,7 +332,7 @@ direct DP/strong order-eleven boundary controls                  8. (25)
 The order-ten comparison universe uses six spread masks on every selected
 parent and all `1,022` masks on eight inherited boundary parents. Every check
 uses `require`; the source has no `assert` nodes and no floating literals.
-Normal and optimized Python produce byte-identical output.
+Normal and optimized Python produce identical LF-normalized transcripts.
 
 The independent implementation imports neither primary compiler. It rebuilds
 both selected banks with a separately structured boundary evaluator, scans
@@ -328,7 +350,7 @@ python3 -B 04-computation/tournament_selected_order11_strong_ear_interval_thm410
 python3 -B -O 04-computation/tournament_selected_order11_strong_ear_interval_thm4104_independent_audit.py
 ```
 
-Frozen raw-byte hashes:
+Frozen LF-byte hashes (compare after CRLF-to-LF normalization on Windows):
 
 ```text
 script  996c6f13abd82d0b8d1e74cf7ec949b31d093d70979715440ec8caa56a379e03

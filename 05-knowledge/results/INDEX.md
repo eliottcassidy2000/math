@@ -28,6 +28,13 @@
   bridges, every allowed odd through `80,405` occurs; the first unforced lane
   values are `80,407` and `7*11,527=80,689`. This is a lower image, not a full
   order-eleven census. Primary script/output SHA-256:
+  audit -> matching `.out`s [THM-4104 PROVED + FINITE-EXACT + INDEPENDENTLY
+  AUDITED; selected construction, global conjecture OPEN]. One retained
+  order-ten witness for each of THM-4102's `7,566` values generates
+  `7,732,452` ears and an exact `43,251`-value image containing every odd
+  `429..80265` and `80875..84259`. Multiplication extends global coverage
+  through `80405`; current lane targets are `80407,80689`. LF-normalized
+  primary script/output SHA-256:
   `996c6f13abd82d0b8d1e74cf7ec949b31d093d70979715440ec8caa56a379e03` /
   `75437285e47f97cdf80ac5a3e816149d35ca62f157b35850ce9f5629e24370d4`;
   independent:
@@ -151,7 +158,7 @@
   Both strong order-eight `H=613` classes and all their `508` nonconstant ears
   miss `623`; the certified `623` child instead comes from an `H=99` parent.
   Generator/auditor/TSV SHA-256:
-  `e9853437725f3d49fa10e75fc0d01a6c41b4e6ec4b5d71b909b9785ed23f0f36` /
+  `8687aa30d3e282afe69cb80a5df67f146c5ffd98e0e87845a06969c589727877` /
   `f8347ff0fb3e3412ab0b87802074da68e85c7feb589a676374f2c0592f81fd8d` /
   `4aa1304da5c70e401c4953707820d377aeaf2418638dce747246c383309b3136`.
 - `tournament_selected_order10_strong_ear_interval_thm4102.py` and
@@ -159,8 +166,8 @@
   INDEPENDENTLY AUDITED; selected construction, global conjecture OPEN]. One
   retained strong order-nine witness per THM-4097 value generates `755,820`
   ears and `7,566` values, including every odd `249..14649` and explicit
-  strong atoms `2887,2933`. Every allowed odd through `14655` is now globally
-  realized; current lane targets are `14657,14777`. Primary hashes:
+  strong atoms `2887,2933`. At this stage global coverage reached `14655` and
+  lane targets were `14657,14777`; THM-4104 later realizes both. Primary hashes:
   `e7049a6347100e6dc54c7b6c03b299cde7dcfaca811954797971b8e7552421a8` /
   `3ac25e2e154994178fa916d124b91e2c5a9b831768279a457298fb679dc4b4dd`;
   independent:

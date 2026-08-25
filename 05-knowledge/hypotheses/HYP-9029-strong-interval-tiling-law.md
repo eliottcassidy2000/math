@@ -6,8 +6,9 @@ status: >
   spectrum and the exact coverage prefix: strong(7)>=[65,105],
   strong(8)>=[69,609], strong(9)>=[85,2881], so every odd in [65,2881]
   has a strong witness. THM-4102 adds a selected order-ten interval
-  [249,14649], proving every allowed odd through 14655 globally realized.
-  The complete order-ten image and global continuation remain open.
+  [249,14649]; THM-4104 adds selected order-eleven [429,80265], proving
+  every allowed odd through 80405 globally realized. Complete order-ten and
+  order-eleven images and global continuation remain open.
 source: kind-pasteur-2026-07-26-S134
 related:
   - THM-1370-h-spectrum-omits-7-21-all-n
@@ -16,6 +17,7 @@ related:
   - HYP-9028-circulant-hamiltonian-excess-tends-to-e
   - THM-4097-order-nine-strong-ear-spectrum-solid-interval-and-lane-extension
   - THM-4102-selected-order-ten-strong-ear-solid-interval
+  - THM-4104-selected-order-eleven-strong-ear-solid-interval
 script: 04-computation/strong_h_spectrum_intervals_kps_S134.py
 output: 05-knowledge/results/strong_h_spectrum_intervals_kps_S134.out
 data: 05-knowledge/results/strong_H_spectrum_m9_values_kps_S134.out
@@ -25,9 +27,9 @@ data: 05-knowledge/results/strong_H_spectrum_m9_values_kps_S134.out
 
 The H-spectrum's gap half is PROVED (`{7,21}` forbidden); the completeness
 half ("every other odd occurs") is THM-1370's standing conjecture. THM-4097
-proves exact global coverage through `2885`; THM-4102's selected order-ten
-bank extends it through `14655`, with `14657` the first target not forced by
-the current finite strong values and multiplication. Canon already reduces
+proves exact global coverage through `2885`; THM-4102/4104's selected banks
+extend it through `80405`, with `80407` and `7*11527=80689` the first two lane
+targets not forced by current finite strong values and multiplication. Canon reduces
 completeness to strong tournaments
 (spectrum = multiplicative closure of strong H-values, THM-1862/
 THM-1936, machine-checked). This hypothesis records the missing
@@ -40,10 +42,12 @@ overlap consecutively.**
 strong(7) >= [65, 105]     (islands below: [25,61], hole only at 63)
 strong(8) >= [69, 609]     (islands: 45, [49,53], [57,65])
 strong(9) >= [85, 2881]    (islands: 75, 81; 1,399 consecutive odds)
+strong(10) >= [249,14649]  (selected bank; 7,201 consecutive odds)
+strong(11) >= [429,80265]  (selected bank; 39,919 consecutive odds)
 
-junctions: 69 <= 105, 85 <= 609  -- every odd in [65, 2881] has a
-STRONG witness; products of m <= 8 strong values give all odd <= 400
-except {7, 21} (machine-checked in the monad s5 out).
+junctions: 69<=105, 85<=609, 249<=2881, 429<=14649.
+Thus every odd in [65,80265] has a STRONG witness; multiplication bridges
+the remaining allowed values through 80405.
 ```
 
 **Conjecture (tiling law).** For every `n >= 7`, `strong(n)`
@@ -80,6 +84,14 @@ already tiles the much longer odd interval `[249,14649]` at order ten. This is
 a selected image rather than a complete order-ten census, so it supports but
 does not prove the all-order tiling law.
 
+THM-4104 repeats the selection at order ten and obtains `[429,80265]` at order
+eleven. Its directed quadratic `C+sum_S L-sum_(SxS)Q` is exactly THM-4097's
+symmetric-cut-plus-zero-sum-field carrier in unsymmetrized coordinates. This
+suggests a weaker sufficient theorem than full spectral induction: choose one
+labelled representative per attained value so that the next bank's cut
+quadratics contain an overlapping interval. Equal-`H` parents can have
+different quadratics, so the labelled `(Q,L)` sidecar is indispensable.
+
 Independent-path note (same session): a LABELED brute-force
 enumeration (2^28 tournaments, different algorithm from monad's
 iso-class generation; strong_h_spectrum_m8_labeled_kps_S134.cpp)
@@ -88,9 +100,8 @@ max 661, identical sets -- independently re-verifying both the
 MISTAKE-055 correction (min 45, not the Leonardo 41) and this
 hypothesis's central interval [69, 609].
 
-Cheapest decisive tests: (i) m = 10 strong interval via canonical
-augmentation (the monad s6 generator extends; expect
-`c_10 ~ 100-130`, `d_10 ~ 15,000`); (ii) attempt the +-2 surgery
-lemma on the doubly-regular-minus-arc family; (iii) prove
-`d_n >= f(n+2)` for one explicit construction family, which already
-chains two floors ahead.
+Cheapest decisive tests: (i) compile the selected order-twelve bank
+(`43,251*(2^11-2)=88,491,546` ears) with the quadratic recurrence; (ii) prove
+the bank-selection overlap lemma without enumerating every equal-`H` fibre;
+(iii) attempt the `+-2` surgery on the doubly-regular-minus-arc family; and
+(iv) prove `d_n>=f(n+2)` for one explicit construction family.

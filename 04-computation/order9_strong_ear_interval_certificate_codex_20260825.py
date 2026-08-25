@@ -288,7 +288,8 @@ def main():
         fields = (value,) + found[value]
         rows.append("\t".join(map(str, fields)) + "\n")
     payload = "".join(rows)
-    CERTIFICATE.write_text(payload)
+    # Keep the generated certificate byte-stable on Windows as well as POSIX.
+    CERTIFICATE.write_bytes(payload.encode())
     digest = sha256(payload.encode()).hexdigest()
 
     print("order8_classes=6880")
@@ -301,7 +302,7 @@ def main():
     print("certificate_rows=" + str(len(TARGETS)))
     print("interval=all odd H in [85,2881]")
     print("certificate_sha256=" + digest)
-    print("certificate_path=" + str(CERTIFICATE.relative_to(ROOT)))
+    print("certificate_path=" + CERTIFICATE.relative_to(ROOT).as_posix())
     for value in (85, 613, 623, 2881):
         print("witness_" + str(value) + "=" + repr(found[value]))
     print("conclusion=FINITE-EXACT explicit strong order-nine ear witnesses")

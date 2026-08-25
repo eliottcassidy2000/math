@@ -23,6 +23,7 @@ related:
   - THM-520
   - THM-4097
   - THM-4102
+  - THM-4104
 ---
 
 # HYP-2879: strong H-atoms grow by labelled ears with an exact cut polynomial
@@ -138,6 +139,17 @@ sharpens the remaining carrier.
    is followed at `8->9` by the exact two-weight basis `{3,4}`: weight four
    covers `1478/1482` values and misses `89,93,105,125`, all supplied by weight
    three. This remains finite-order evidence, not an all-order theorem.
+
+THM-4104 supplies a sharper intermediate target. Its directed quadratic
+`C+sum_S L-sum_(SxS)Q` is algebraically the same carrier as THM-4097's
+`H+cut_w(S)+sum_S h`; the latter is its symmetric-plus-orientation
+decomposition. Selecting only one labelled parent per attained scalar value
+still yields solid intervals at orders ten and eleven. Thus full cofinite
+generation would follow from the weaker **bank-selection lemma**: recursively
+choose one parent in each scalar fibre so that the union of its nonconstant
+cut quadratics contains an interval overlapping the preceding bank. This
+retains the parent word and `(Q,L)` sidecar and does not assume that `H(parent)`
+alone determines the child image.
 
 This reframes `{7,21}` as absent solutions of recursive cut polynomials before
 the Busch/Moon strong-min boundary lets the spectrum re-enter.  They are not

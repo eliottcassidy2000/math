@@ -57,7 +57,7 @@ certificate_atlas_audit_script: 04-computation/order9_strong_ear_interval_indepe
 certificate_atlas: 05-knowledge/results/order9_strong_ear_interval_certificates_codex_20260825.tsv
 certificate_atlas_output: 05-knowledge/results/order9_strong_ear_interval_certificate_codex_20260825.out
 certificate_atlas_audit_output: 05-knowledge/results/order9_strong_ear_interval_independent_audit_codex_20260825.out
-certificate_atlas_script_sha256: e9853437725f3d49fa10e75fc0d01a6c41b4e6ec4b5d71b909b9785ed23f0f36
+certificate_atlas_script_sha256: 8687aa30d3e282afe69cb80a5df67f146c5ffd98e0e87845a06969c589727877
 certificate_atlas_audit_script_sha256: f8347ff0fb3e3412ab0b87802074da68e85c7feb589a676374f2c0592f81fd8d
 certificate_atlas_sha256: 4aa1304da5c70e401c4953707820d377aeaf2418638dce747246c383309b3136
 certificate_atlas_output_sha256: 1fb90b6e3c622c46cd99dfff7f8ced8312b740a6ac74d7b23e93d99082a3db12
@@ -424,11 +424,10 @@ primes
 
 and the sporadic seven-prime targets for `p=431,433,439,443`.
 
-**Successor note.** THM-4102 has since realized both `2887` and `2933` as
-explicit strong order-ten ears from a deterministic selected parent bank. It
-extends the current finite-data lane frontiers to `14657` and
-`7*2111=14777`. Equations `(26)--(29)` remain the exact order-at-most-nine
-boundary proved here.
+**Successor note.** THM-4102 realized `2887,2933`; THM-4104 then realized
+`14657,14777` inside a selected order-eleven image. The current finite-data
+lane targets are `80407` and `7*11527=80689`. Equations `(26)--(29)` remain
+the exact order-at-most-nine boundary proved here.
 
 Using THM-1862 order-join multiplicativity, the exact finite support now gives
 every odd `m<=2885` except `7,21`. The next value not forced by these witnesses
@@ -463,9 +462,8 @@ This theorem changes three frontier labels.
    basis, solid interval, and lane prefixes above.
 3. **OPEN:** prove overlapping solid intervals at every higher order, or
    otherwise construct every ordinary-prime and seven-prime strong atom.
-   THM-4102 computes a selected order-ten image and moves the current lane
-   tests to `14657` and `14777`; the complete image over every strong
-   order-nine parent remains uncomputed.
+   THM-4102/4104 compute selected order-ten/eleven images and move the current
+   lane tests to `80407,80689`; the complete images remain uncomputed.
 
 The observed central basis is a finite-order theorem, not an all-order
 conjecture smuggled into the proof. A next computation should retain the full
@@ -484,8 +482,8 @@ python 04-computation/order_nine_strong_ear_cut_field_thm4097_independent_audit.
 python -O 04-computation/order_nine_strong_ear_cut_field_thm4097_independent_audit.py
 ```
 
-Each normal/optimized pair must match its corresponding frozen output. The
-primary compiler must match
+After CRLF-to-LF transcript normalization (MISTAKE-402), each normal/optimized
+pair must match its corresponding frozen output. The primary compiler matches
 `05-knowledge/results/tournament_order9_strong_ear_spectrum_thm4097.out`
 byte for byte. The older independent universe controls are
 `04-computation/strong_H_spectrum_m9_isoclass_monad_s6.py` and
@@ -496,6 +494,6 @@ The additional cut-field referee
 does not import the primary THM-4097 program. It independently recomputes all
 `1,526,032` ear rows, carrier integrality, the sorted support, target
 multiplicities, every cut-cardinality spectrum `E_1,...,E_7`, the exact
-`{3,4}` basis, complement hostile, and triangle firewall; normal and optimized
-modes match its frozen output exactly, including the primary semantic digest
+`{3,4}` basis, complement hostile, and triangle firewall; LF-normalized normal
+and optimized modes match its frozen output, including the semantic digest
 `de2b67a2c9bc0a349d33f7c9e996508a53116fbfe1e4764edc2e918005acd736`.

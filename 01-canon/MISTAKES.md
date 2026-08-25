@@ -2432,6 +2432,12 @@ stronger entry for that incident.
   absolute recurrence.  Difference invariants survive affine shifts;
   homogeneous recurrences generally do not.  State the exact normalization
   basis for every byte-equality claim.
+- **2026-08-25 recurrence / repair:** THM-4097's certificate generator used
+  `Path.write_text` and a platform-native displayed path. On Windows this
+  rewrote the pinned TSV with CRLF and printed backslashes. It now writes
+  explicit UTF-8/LF bytes and a POSIX path; THM-4097/4102/4104 replay equality
+  is asserted only after CRLF-to-LF transcript normalization.
+
 ## MISTAKE-403 (2026-08-15, THM-3456 Rule 30 source scope) -- a citation was scoped below its actual use and an active prize listing was paraphrased as a literal openness statement
 
 - **What failed:** the provisional THM-3456 frontmatter said Wolfram's 2019

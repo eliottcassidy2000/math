@@ -21,6 +21,7 @@ related:
   - THM-4099-squarefree-gap-transfer-and-mixed-insertion-boundary
   - THM-4104-selected-order-eleven-strong-ear-solid-interval
   - THM-4111-uniform-ear-average-and-recursive-selected-bank-growth
+  - MISTAKE-402
 script: 04-computation/tournament_selected_order10_strong_ear_interval_thm4102.py
 output: 05-knowledge/results/tournament_selected_order10_strong_ear_interval_thm4102.out
 independent_audit_script: 04-computation/tournament_selected_order10_strong_ear_interval_thm4102_independent_audit.py
@@ -39,7 +40,8 @@ audit: >
   the selected bank using only the pinned representative generator, checks
   strongness on all 755,820 children, reproduces all 7,566 values and both
   intervals, recomputes ten codes by separate DP, and literally enumerates
-  nine key parents and two boundary children. Normal/-O streams byte-match.
+  nine key parents and two boundary children. Normal/-O streams agree after
+  CRLF-to-LF transcript normalization.
 ---
 
 # THM-4102 -- selected order-ten strong-ear solid interval
@@ -163,6 +165,9 @@ These are first unforced targets, not claimed gaps.
 THM-4104 subsequently supersedes this numerical frontier: its selected
 order-eleven image moves the two tail bounds to `80,407` and `11,527`.
 
+**Successor note.** THM-4104 realizes both targets and extends the selected
+construction's current lane boundaries to `80407` and `7*11527=80689`.
+
 ## 4. Exact verification boundary
 
 The primary script pins THM-4097's compiler and regenerates its complete
@@ -210,5 +215,6 @@ python3 -B 04-computation/tournament_selected_order10_strong_ear_interval_thm410
 python3 -B -O 04-computation/tournament_selected_order10_strong_ear_interval_thm4102_independent_audit.py
 ```
 
-Each normal/optimized pair must byte-match its corresponding frozen output.
+After CRLF-to-LF normalization (MISTAKE-402), each normal/optimized pair must
+match its corresponding frozen output.
 Every executable gate uses `require`; optimization removes no check.
