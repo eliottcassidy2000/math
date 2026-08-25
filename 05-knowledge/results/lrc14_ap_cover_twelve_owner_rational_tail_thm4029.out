@@ -1,0 +1,77 @@
+AP COVER THEOREM-READY AUDIT
+direct_x_wall_m1_30_sha256=498699c13ecc6468e2c3353a90eecaadfb0d9045f18f993e4f7d46bf4cea91fb
+farey_cover_time_m1_200_sha256=2c23c4784d643e3fc81c666bf9c503acd2c55cd266ac4dbd126e6c35ce0a9946
+independent_engines_equal_m1_30=True; unresolved_at_200=97347557/5324865084
+caps={8: Fraction(2243, 5880), 9: Fraction(1979, 4004), 10: Fraction(55, 91), 11: Fraction(66, 91), 12: Fraction(6, 7), 13: Fraction(1, 1)}; minimizers_sha256=f642d175cea66333da35da37706fac961e02cc5e16d1caf639abb0b372a1b6e3
+crossings=[(8, Fraction(481, 1470), Fraction(2243, 5880), Fraction(2447, 5880)), (9, Fraction(2447, 5880), Fraction(1979, 4004), Fraction(8899, 17640)), (10, Fraction(3419, 5880), Fraction(55, 91), Fraction(121103, 194040)), (11, Fraction(14109, 20020), Fraction(66, 91), Fraction(61211, 84084)), (12, Fraction(11831779, 13813800), Fraction(6, 7), Fraction(60551, 70200))]
+Nstar=(7,8,10,13,26,infinity)
+m12_immediate_predecessor_hostile=direct:72937/194040,owner_formula:68647/194040,components:14
+m13_sharp_base=direct:6987/21560,owner_formula:6987/21560,components:12
+m13_owner_component_records=((Fraction(0, 1), Fraction(79, 12), Fraction(15, 2), Fraction(5, 12), Fraction(1, 2)), (Fraction(1, 6), Fraction(7, 6), Fraction(13, 11), Fraction(0, 1), Fraction(1, 66)), (Fraction(1, 5), Fraction(11, 8), Fraction(13, 9), Fraction(1, 40), Fraction(2, 45)), (Fraction(1, 4), Fraction(17, 10), Fraction(20, 11), Fraction(1, 20), Fraction(3, 44)), (Fraction(1, 3), Fraction(9, 4), Fraction(27, 11), Fraction(1, 12), Fraction(4, 33)), (Fraction(2, 5), Fraction(25, 9), Fraction(17, 6), Fraction(1, 45), Fraction(1, 30)), (Fraction(1, 2), Fraction(10, 3), Fraction(41, 11), Fraction(1, 6), Fraction(5, 22)), (Fraction(3, 5), Fraction(46, 11), Fraction(17, 4), Fraction(1, 55), Fraction(1, 20)), (Fraction(2, 3), Fraction(55, 12), Fraction(24, 5), Fraction(1, 12), Fraction(2, 15)), (Fraction(3, 4), Fraction(26, 5), Fraction(16, 3), Fraction(1, 20), Fraction(1, 12)), (Fraction(4, 5), Fraction(67, 12), Fraction(62, 11), Fraction(1, 60), Fraction(2, 55)), (Fraction(5, 6), Fraction(35, 6), Fraction(41, 7), Fraction(0, 1), Fraction(1, 42)))
+track_guards=min_m13:0,min_m14:1/13; endpoint_audit=((Fraction(16, 3), Fraction(53, 10), Fraction(59, 11), False, True, True), (Fraction(17, 4), Fraction(38, 9), Fraction(47, 11), False, True, True))
+owner_formula_m13_200_sha256=0e022ec997876f6749993ef4cf2a41aaa6f4831be95bcfb5f985f11ef251b718; farey_equal=True
+phase_laws=60; phase_law_sha256=d790b8487e652468504f2b004c916368085b3abb8605558c4817b601c603d196
+phase=00;first_n=60;terms=((Fraction(15, 1), 0), (Fraction(107, 20), 1), (Fraction(44, 15), 2), (Fraction(27, 20), 3), (Fraction(3, 5), 4), (Fraction(1, 6), 5))
+phase=01;first_n=61;terms=((Fraction(327, 20), 0), (Fraction(4, 1), 1), (Fraction(57, 20), 2), (Fraction(8, 5), 3), (Fraction(3, 5), 4))
+phase=02;first_n=62;terms=((Fraction(239, 15), 0), (Fraction(107, 20), 1), (Fraction(2, 1), 2), (Fraction(91, 60), 3), (Fraction(3, 5), 4))
+phase=03;first_n=63;terms=((Fraction(337, 20), 0), (Fraction(74, 15), 1), (Fraction(57, 20), 2), (Fraction(23, 30), 4))
+phase=04;first_n=64;terms=((Fraction(224, 15), 0), (Fraction(117, 20), 1), (Fraction(44, 15), 2), (Fraction(91, 60), 3), (Fraction(1, 6), 5))
+phase=05;first_n=65;terms=((Fraction(63, 4), 0), (Fraction(59, 15), 1), (Fraction(67, 20), 2), (Fraction(8, 5), 3), (Fraction(23, 30), 4))
+phase=06;first_n=66;terms=((Fraction(83, 5), 0), (Fraction(19, 4), 1), (Fraction(29, 15), 2), (Fraction(27, 20), 3), (Fraction(3, 5), 4), (Fraction(1, 6), 5))
+phase=07;first_n=67;terms=((Fraction(327, 20), 0), (Fraction(28, 5), 1), (Fraction(9, 4), 2), (Fraction(3, 5), 3), (Fraction(3, 5), 4))
+phase=08;first_n=68;terms=((Fraction(224, 15), 0), (Fraction(107, 20), 1), (Fraction(18, 5), 2), (Fraction(11, 12), 3), (Fraction(3, 5), 4))
+phase=09;first_n=69;terms=((Fraction(337, 20), 0), (Fraction(59, 15), 1), (Fraction(57, 20), 2), (Fraction(8, 5), 3), (Fraction(1, 6), 4))
+phase=10;first_n=70;terms=((Fraction(46, 3), 0), (Fraction(117, 20), 1), (Fraction(29, 15), 2), (Fraction(91, 60), 3), (Fraction(3, 5), 4), (Fraction(1, 6), 5))
+phase=11;first_n=71;terms=((Fraction(327, 20), 0), (Fraction(13, 3), 1), (Fraction(67, 20), 2), (Fraction(3, 5), 3), (Fraction(23, 30), 4))
+phase=12;first_n=12;terms=((Fraction(78, 5), 0), (Fraction(107, 20), 1), (Fraction(7, 3), 2), (Fraction(27, 20), 3), (Fraction(3, 5), 4), (Fraction(1, 6), 5))
+phase=13;first_n=13;terms=((Fraction(327, 20), 0), (Fraction(23, 5), 1), (Fraction(57, 20), 2), (Fraction(1, 1), 3), (Fraction(3, 5), 4))
+phase=14;first_n=14;terms=((Fraction(239, 15), 0), (Fraction(107, 20), 1), (Fraction(13, 5), 2), (Fraction(91, 60), 3))
+phase=15;first_n=15;terms=((Fraction(65, 4), 0), (Fraction(74, 15), 1), (Fraction(57, 20), 2), (Fraction(3, 5), 3), (Fraction(23, 30), 4))
+phase=16;first_n=16;terms=((Fraction(224, 15), 0), (Fraction(21, 4), 1), (Fraction(44, 15), 2), (Fraction(91, 60), 3), (Fraction(3, 5), 4), (Fraction(1, 6), 5))
+phase=17;first_n=17;terms=((Fraction(327, 20), 0), (Fraction(59, 15), 1), (Fraction(11, 4), 2), (Fraction(8, 5), 3), (Fraction(23, 30), 4))
+phase=18;first_n=18;terms=((Fraction(83, 5), 0), (Fraction(107, 20), 1), (Fraction(29, 15), 2), (Fraction(3, 4), 3), (Fraction(3, 5), 4), (Fraction(1, 6), 5))
+phase=19;first_n=19;terms=((Fraction(327, 20), 0), (Fraction(28, 5), 1), (Fraction(57, 20), 2), (Fraction(3, 5), 3))
+phase=20;first_n=20;terms=((Fraction(43, 3), 0), (Fraction(107, 20), 1), (Fraction(18, 5), 2), (Fraction(91, 60), 3), (Fraction(3, 5), 4))
+phase=21;first_n=21;terms=((Fraction(337, 20), 0), (Fraction(10, 3), 1), (Fraction(57, 20), 2), (Fraction(8, 5), 3), (Fraction(23, 30), 4))
+phase=22;first_n=22;terms=((Fraction(239, 15), 0), (Fraction(117, 20), 1), (Fraction(4, 3), 2), (Fraction(91, 60), 3), (Fraction(3, 5), 4), (Fraction(1, 6), 5))
+phase=23;first_n=23;terms=((Fraction(327, 20), 0), (Fraction(74, 15), 1), (Fraction(67, 20), 2), (Fraction(23, 30), 4))
+phase=24;first_n=24;terms=((Fraction(78, 5), 0), (Fraction(107, 20), 1), (Fraction(44, 15), 2), (Fraction(27, 20), 3), (Fraction(1, 6), 5))
+phase=25;first_n=25;terms=((Fraction(63, 4), 0), (Fraction(23, 5), 1), (Fraction(57, 20), 2), (Fraction(8, 5), 3), (Fraction(3, 5), 4))
+phase=26;first_n=26;terms=((Fraction(239, 15), 0), (Fraction(19, 4), 1), (Fraction(13, 5), 2), (Fraction(91, 60), 3), (Fraction(3, 5), 4))
+phase=27;first_n=27;terms=((Fraction(337, 20), 0), (Fraction(74, 15), 1), (Fraction(9, 4), 2), (Fraction(3, 5), 3), (Fraction(23, 30), 4))
+phase=28;first_n=28;terms=((Fraction(224, 15), 0), (Fraction(117, 20), 1), (Fraction(44, 15), 2), (Fraction(11, 12), 3), (Fraction(3, 5), 4), (Fraction(1, 6), 5))
+phase=29;first_n=29;terms=((Fraction(327, 20), 0), (Fraction(59, 15), 1), (Fraction(67, 20), 2), (Fraction(8, 5), 3), (Fraction(1, 6), 4))
+phase=30;first_n=30;terms=((Fraction(16, 1), 0), (Fraction(107, 20), 1), (Fraction(29, 15), 2), (Fraction(27, 20), 3), (Fraction(3, 5), 4), (Fraction(1, 6), 5))
+phase=31;first_n=31;terms=((Fraction(327, 20), 0), (Fraction(5, 1), 1), (Fraction(57, 20), 2), (Fraction(3, 5), 3), (Fraction(3, 5), 4))
+phase=32;first_n=32;terms=((Fraction(224, 15), 0), (Fraction(107, 20), 1), (Fraction(3, 1), 2), (Fraction(91, 60), 3), (Fraction(3, 5), 4))
+phase=33;first_n=33;terms=((Fraction(337, 20), 0), (Fraction(59, 15), 1), (Fraction(57, 20), 2), (Fraction(1, 1), 3), (Fraction(23, 30), 4))
+phase=34;first_n=34;terms=((Fraction(239, 15), 0), (Fraction(117, 20), 1), (Fraction(29, 15), 2), (Fraction(91, 60), 3), (Fraction(1, 6), 5))
+phase=35;first_n=35;terms=((Fraction(63, 4), 0), (Fraction(74, 15), 1), (Fraction(67, 20), 2), (Fraction(3, 5), 3), (Fraction(23, 30), 4))
+phase=36;first_n=36;terms=((Fraction(78, 5), 0), (Fraction(19, 4), 1), (Fraction(44, 15), 2), (Fraction(27, 20), 3), (Fraction(3, 5), 4), (Fraction(1, 6), 5))
+phase=37;first_n=37;terms=((Fraction(327, 20), 0), (Fraction(23, 5), 1), (Fraction(9, 4), 2), (Fraction(8, 5), 3), (Fraction(3, 5), 4))
+phase=38;first_n=38;terms=((Fraction(239, 15), 0), (Fraction(107, 20), 1), (Fraction(13, 5), 2), (Fraction(11, 12), 3), (Fraction(3, 5), 4))
+phase=39;first_n=39;terms=((Fraction(337, 20), 0), (Fraction(74, 15), 1), (Fraction(57, 20), 2), (Fraction(3, 5), 3), (Fraction(1, 6), 4))
+phase=40;first_n=40;terms=((Fraction(43, 3), 0), (Fraction(117, 20), 1), (Fraction(44, 15), 2), (Fraction(91, 60), 3), (Fraction(3, 5), 4), (Fraction(1, 6), 5))
+phase=41;first_n=41;terms=((Fraction(327, 20), 0), (Fraction(10, 3), 1), (Fraction(67, 20), 2), (Fraction(8, 5), 3), (Fraction(23, 30), 4))
+phase=42;first_n=42;terms=((Fraction(83, 5), 0), (Fraction(107, 20), 1), (Fraction(4, 3), 2), (Fraction(27, 20), 3), (Fraction(3, 5), 4), (Fraction(1, 6), 5))
+phase=43;first_n=43;terms=((Fraction(327, 20), 0), (Fraction(28, 5), 1), (Fraction(57, 20), 2), (Fraction(3, 5), 4))
+phase=44;first_n=44;terms=((Fraction(224, 15), 0), (Fraction(107, 20), 1), (Fraction(18, 5), 2), (Fraction(91, 60), 3))
+phase=45;first_n=45;terms=((Fraction(65, 4), 0), (Fraction(59, 15), 1), (Fraction(57, 20), 2), (Fraction(8, 5), 3), (Fraction(23, 30), 4))
+phase=46;first_n=46;terms=((Fraction(239, 15), 0), (Fraction(21, 4), 1), (Fraction(29, 15), 2), (Fraction(91, 60), 3), (Fraction(3, 5), 4), (Fraction(1, 6), 5))
+phase=47;first_n=47;terms=((Fraction(327, 20), 0), (Fraction(74, 15), 1), (Fraction(11, 4), 2), (Fraction(3, 5), 3), (Fraction(23, 30), 4))
+phase=48;first_n=48;terms=((Fraction(78, 5), 0), (Fraction(107, 20), 1), (Fraction(44, 15), 2), (Fraction(3, 4), 3), (Fraction(3, 5), 4), (Fraction(1, 6), 5))
+phase=49;first_n=49;terms=((Fraction(327, 20), 0), (Fraction(23, 5), 1), (Fraction(57, 20), 2), (Fraction(8, 5), 3))
+phase=50;first_n=50;terms=((Fraction(46, 3), 0), (Fraction(107, 20), 1), (Fraction(13, 5), 2), (Fraction(91, 60), 3), (Fraction(3, 5), 4))
+phase=51;first_n=51;terms=((Fraction(337, 20), 0), (Fraction(13, 3), 1), (Fraction(57, 20), 2), (Fraction(3, 5), 3), (Fraction(23, 30), 4))
+phase=52;first_n=52;terms=((Fraction(224, 15), 0), (Fraction(117, 20), 1), (Fraction(7, 3), 2), (Fraction(91, 60), 3), (Fraction(3, 5), 4), (Fraction(1, 6), 5))
+phase=53;first_n=53;terms=((Fraction(327, 20), 0), (Fraction(59, 15), 1), (Fraction(67, 20), 2), (Fraction(1, 1), 3), (Fraction(23, 30), 4))
+phase=54;first_n=54;terms=((Fraction(83, 5), 0), (Fraction(107, 20), 1), (Fraction(29, 15), 2), (Fraction(27, 20), 3), (Fraction(1, 6), 5))
+phase=55;first_n=55;terms=((Fraction(63, 4), 0), (Fraction(28, 5), 1), (Fraction(57, 20), 2), (Fraction(3, 5), 3), (Fraction(3, 5), 4))
+phase=56;first_n=56;terms=((Fraction(224, 15), 0), (Fraction(19, 4), 1), (Fraction(18, 5), 2), (Fraction(91, 60), 3), (Fraction(3, 5), 4))
+phase=57;first_n=57;terms=((Fraction(337, 20), 0), (Fraction(59, 15), 1), (Fraction(9, 4), 2), (Fraction(8, 5), 3), (Fraction(23, 30), 4))
+phase=58;first_n=58;terms=((Fraction(239, 15), 0), (Fraction(117, 20), 1), (Fraction(29, 15), 2), (Fraction(11, 12), 3), (Fraction(3, 5), 4), (Fraction(1, 6), 5))
+phase=59;first_n=59;terms=((Fraction(327, 20), 0), (Fraction(74, 15), 1), (Fraction(67, 20), 2), (Fraction(3, 5), 3), (Fraction(1, 6), 4))
+tail_exact=phase-wise sum C/[7(n-c)], n=m-1, 0<=c<=5
+tail_bounds=127/[35(m-1)] <= 1-a(m) <= 127/[35(m-6)] for m>=13
+asymptotic=lim m(1-a(m))=127/35
+RESULT=PASS
