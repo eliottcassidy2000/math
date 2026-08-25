@@ -1,0 +1,13 @@
+HYP-9080 tournament deletion-slack local-unavoidability scout
+labelled n=2 count=2 all_negative=0 negative_individuals=0 min_chi=0 min_chi_witness=(0, 0) min_average_halfcharge=0 min_best_chi=0
+labelled n=3 count=8 all_negative=0 negative_individuals=0 min_chi=0 min_chi_witness=(0, 0) min_average_halfcharge=0 min_best_chi=0
+labelled n=4 count=64 all_negative=0 negative_individuals=16 min_chi=-2 min_chi_witness=(2, 3) min_average_halfcharge=0 min_best_chi=0
+labelled n=5 count=1024 all_negative=0 negative_individuals=240 min_chi=-2 min_chi_witness=(4, 4) min_average_halfcharge=0 min_best_chi=0
+labelled n=6 count=32768 all_negative=0 negative_individuals=6528 min_chi=-6 min_chi_witness=(72, 5) min_average_halfcharge=0 min_best_chi=0
+n7_isomorphism_reps count=456 strong=353 all_negative=0 negative_individuals=68 min_chi=-8 min_chi_witness=(664, 6) min_average_halfcharge=0 min_best_chi=0
+n7_strong_min_best_chi=44 witness_mask=171 H=27 disc=4 slack=23 chis=44,34,20,44,20,20,34
+first_negative_individual=n4 mask=2 x=3 H_disc_slack=3,2,1 deletion_slack=2 chi=-2
+rooted_response_gates=410408
+full_deletion_incidence_gates=5404 through_n=5
+result=FINITE-EXACT_PASS
+local_unavoidability=OPEN average_form=OPEN H_ge_disc=OPEN
