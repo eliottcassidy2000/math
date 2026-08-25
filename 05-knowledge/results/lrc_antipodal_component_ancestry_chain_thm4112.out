@@ -1,0 +1,23 @@
+THM-4112 ANTIPODAL COMPONENT-ANCESTRY CHAIN EXACT REFEREE
+status=PASS
+open_interval_semantics=strict overlap only; endpoint touching is a safe separator
+chain_formula=h_i=sum_{j=i}^r 2^(j-i)/(7*v_j);base_components_have_span_equal_to_h_r;reinserted_levels_are_strict
+symbolic_coefficient_depths=1..12;numeric_algebra_rows=1474;one_comb_equality_components=7550
+geometric_arbitrary_depth=lambda>=12/5;h_tail<=1/[7*v_i*(lambda-2)]<=5/(14*v_i);h_i<=lambda/[7*v_i*(lambda-2)]
+geometric_thresholds=lambda12/5:D0_v1>=16,AP8_v1>=112;lambda3:AP8_v1>=56
+AP7_four_boundary=(84,85,86,87);P=1/301;Q=213/25585;g84=1/98;h=39439/2149140;slack=1/61404;theta=74/609;clock=1218
+AP7_criterion_near_miss=(82,83,84,85);h_minus_L=151/357315;not_a_cover_claim
+AP7_root_split=a_even:root_a;odd_a_even_b_and_b<2a:root_b;odd_a_even_b_and_b>=2a:root_a
+AP7_positive_bank=84<=a<b<c<d<=100,(a_or_b_even);rows=1932;root_cases=a_even:1344,b_even_near:588,b_even_separated:0;max_ratio=458228/838503;row=(88,95,97,99);component=[251/1330,137/693];length=1181/131670;bound=93167/5676440
+AP7_root_split_controls=near(85,86,87,88)->root86,h=80839/4451790;boundary(85,170,171,172)->root85,h=146/14535;far(85,1000,1001,1002)->root85,h=185117/59559500
+AP7_wrong_root_hostile=(85,1000,1001,1002),root1000;Q=1341/595595>g1000=3/3500;excess=83049/59559500
+AP7_adaptive_weight7=(85,86,91,101),root86;P=2/637;Q=431/54145;g=3/301;h=81867/4656470;slack=366/465647;theta=81/707;clock=1414
+AP7_all_odd_weight8=(47,95,97,99),root47;P=2/679;Q=477/64505;g=5/658;h=54053/3031735;slack=22847/42444290;theta=4/35;clock=70
+parent_gap_hostile=(85,87,89,91);Q=437/54201>g85=1/238;component=[69/1274,46/637];length=23/1274;formal=11719/658155;excess=207559/838489470;root_teeth=3
+all_root_hostile=(43,45,47,49);every_root_has_a_two_consecutive_tooth_bridge;AP7_theta=4/35
+D0=(3,4,5,6,8,10,12);J=[1/42,13/168];L=3/56;gcd=1;nonAP;norm_ranges=3:[1/14,13/56],4:[2/21,13/42],5:[5/42,65/168],6:[1/7,13/28],8:[4/21,1/2],10:[19/84,1/2],12:[1/14,1/2]
+D0_four_controls=(28,29,30,31):slack=89/170520;criterion_near_miss(26,27,28,29):deficit=457/137592;all_odd(15,31,33,35):slack=19/95480
+D0_six_doubling=(16,32,64,128,256,512);levels=(3/56,5/224,1/112,3/896,1/896,1/3584);h1=L;components=416;max=1/112;theta=43/1792;clock=1792
+AP8_five_doubling=(94,188,376,752,1504);levels=(5/658,1/329,3/2632,1/2632,1/10528);slack=1/18424;components=1316;max=1/658;theta=11/49;clock=98
+scope=conditional component ancestry plus structured positive suppliers;LRC(14) remains OPEN
+semantic_sha256=9834738b13362e78c30f577bd4dc1219221c9c1d8413a18102dc1b56d65cf093
