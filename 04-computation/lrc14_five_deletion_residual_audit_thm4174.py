@@ -5,9 +5,13 @@ from collections import Counter
 from fractions import Fraction as F
 from itertools import combinations
 from math import lcm
+import sys
 
 import numpy as np
 from scipy.optimize import Bounds, LinearConstraint, milp
+
+
+sys.stdout.reconfigure(newline="\n")
 
 
 ANCHORS = (120, 126, 143)
@@ -19,6 +23,11 @@ POOL = (
 OPTIONAL = tuple(v for v in POOL if v not in ANCHORS)
 RESIDUAL4 = (25, 50, 96, 100, 105, 128, 192, 210, 256)
 COMMON = 18_241_159_416_480
+
+
+def require(condition, message):
+    if not condition:
+        raise RuntimeError(message)
 
 
 def safe_at(point, speed):
@@ -74,14 +83,14 @@ def main():
     common = 1
     for speed in POOL:
         common = lcm(common, 14 * speed)
-    assert common == COMMON
+    require(common == COMMON, "common wall lattice changed")
     walls = {F(0), F(1)}
     for speed in POOL:
         for tooth in range(speed):
             walls.add(F(14 * tooth + 1, 14 * speed))
             walls.add(F(14 * tooth + 13, 14 * speed))
     walls = tuple(sorted(walls))
-    assert len(walls) == 7134
+    require(len(walls) == 7134, "wall count changed")
     wall_ticks = np.array([int(w * COMMON) for w in walls], dtype=np.int64)
 
     levels = [tuple(combinations(range(27), d)) for d in range(6)]
@@ -92,9 +101,9 @@ def main():
         offsets.append(total)
         indices.append({subset: i for i, subset in enumerate(level)})
         total += len(level)
-    assert total == 101584
+    require(total == 101584, "subset-group universe changed")
     quints = levels[5]
-    assert len(quints) == 80730
+    require(len(quints) == 80730, "five-deletion edge universe changed")
 
     group_ids = []
     hist = Counter()
@@ -132,7 +141,7 @@ def main():
             for subset in combinations(quint, d):
                 subset_groups[row, col] = offsets[d] + indices[d][subset]
                 col += 1
-        assert col == 32
+        require(col == 32, f"subset row width changed at row={row}")
         quint_masks[row] = sum(1 << i for i in quint)
         incidence[row, list(quint)] = 1.0
 
@@ -146,7 +155,7 @@ def main():
         partial[scaled <= COMMON] = 0
         partial[scaled >= 13 * COMMON] = 12 * COMMON
         contributions = 12 * (whole[1:] - whole[:-1]) * COMMON + partial[1:] - partial[:-1]
-        assert np.all(contributions >= 0)
+        require(np.all(contributions >= 0), f"negative cell contribution at q={q}")
         reduced = np.add.reduceat(contributions[ordered_cells], starts)
         grouped = np.zeros(total, dtype=np.int64)
         grouped[present_groups] = reduced
@@ -154,7 +163,7 @@ def main():
         differences = 9 * numerators - 8 * q * COMMON
         active = np.flatnonzero(differences >= 0)
         equalities = int(np.count_nonzero(differences == 0))
-        assert len(active)
+        require(len(active) > 0, f"empty five-deletion repair graph at q={q}")
 
         result = milp(
             c=np.ones(27),
@@ -165,17 +174,26 @@ def main():
             ),
             options={"presolve": True, "time_limit": 60},
         )
-        assert result.success, (q, result.message)
+        require(result.success, f"MILP failed at q={q}: {result.message}")
         cover = sum(1 << i for i, x in enumerate(result.x) if x > 0.5)
         active_masks = tuple(int(quint_masks[i]) for i in active)
-        assert all(edge & cover for edge in active_masks)
+        require(all(edge & cover for edge in active_masks),
+                f"MILP cover misses an edge at q={q}")
         tau = cover.bit_count()
-        assert abs(result.fun - tau) < 1e-7
+        require(abs(result.fun - tau) < 1e-7,
+                f"nonintegral MILP objective at q={q}")
         cover7, states = find_cover_exact(active_masks, 7)
-        assert (cover7 is None) == (tau > 7), (q, tau, cover7)
+        require((cover7 is None) == (tau > 7),
+                f"MILP/exact-cover disagreement at q={q}, tau={tau}")
         if cover7 is not None:
-            assert all(edge & cover7 for edge in active_masks)
-        row = (q, len(active), tau, labels(cover), equalities, states)
+            require(all(edge & cover7 for edge in active_masks),
+                    f"exact cover misses an edge at q={q}")
+        exact_witness, _ = find_cover_exact(active_masks, tau)
+        require(exact_witness is not None and exact_witness.bit_count() == tau,
+                f"deterministic minimum witness failed at q={q}")
+        require(all(edge & exact_witness for edge in active_masks),
+                f"deterministic witness misses an edge at q={q}")
+        row = (q, len(active), tau, labels(exact_witness), equalities, states)
         rows.append(row)
         print("ROW", row, flush=True)
 

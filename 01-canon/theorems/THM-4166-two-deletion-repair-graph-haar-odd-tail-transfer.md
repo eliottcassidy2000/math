@@ -594,5 +594,6 @@ This theorem classifies one precise two-deletion mechanism for one fixed
 pool. It does not prove that these are all bodies accessible to THM-4150,
 establish optimality of the pool, treat arbitrary tail parity, or prove
 LRC(14). THM-4170 subsequently classifies the genuine three-uniform
-`d=3` transversal problem exactly; higher deletions, moving pools, entry,
-and mixed/even tails are separate operations.
+`d=3` transversal problem exactly, and THM-4174 closes its residual newcomer
+labels by `d<=6`. Moving pools, arbitrary-body reduction, entry, and
+mixed/even tails remain separate operations.

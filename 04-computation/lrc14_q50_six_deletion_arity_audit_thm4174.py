@@ -5,6 +5,10 @@ from collections import Counter, defaultdict
 from fractions import Fraction as F
 from itertools import combinations
 from math import lcm
+import sys
+
+
+sys.stdout.reconfigure(newline="\n")
 
 
 ANCHORS = (120, 126, 143)
@@ -16,6 +20,11 @@ POOL = (
 OPTIONAL = tuple(v for v in POOL if v not in ANCHORS)
 COMMON = 18_241_159_416_480
 Q = 50
+
+
+def require(condition, message):
+    if not condition:
+        raise RuntimeError(message)
 
 
 def safe_at(point, speed):
@@ -85,7 +94,7 @@ def main():
     common = 1
     for speed in POOL:
         common = lcm(common, 14 * speed)
-    assert common == COMMON
+    require(common == COMMON, "common wall lattice changed")
     walls = {F(0), F(1)}
     for speed in POOL:
         for tooth in range(speed):
@@ -93,7 +102,7 @@ def main():
             walls.add(F(14 * tooth + 13, 14 * speed))
     walls = tuple(sorted(walls))
     ticks = tuple(int(w * COMMON) for w in walls)
-    assert len(ticks) == 7134
+    require(len(ticks) == 7134, "wall count changed")
 
     buckets = defaultdict(int)
     hist = Counter()
@@ -135,8 +144,10 @@ def main():
         states8 = 0
         if cover7 is None:
             cover8, states8 = find_cover_exact(active, 8)
-            if cover8 is not None:
-                assert all(edge & cover8 for edge in active)
+            require(cover8 is not None and cover8.bit_count() == 8,
+                    (d, "missing exact size-eight cover"))
+            require(all(edge & cover8 for edge in active),
+                    f"exact size-eight cover misses an edge at d={d}")
         print(
             "ARITY", d,
             "TOTAL", __import__("math").comb(27, d),

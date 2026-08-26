@@ -5,9 +5,13 @@ from collections import Counter
 from fractions import Fraction as F
 from itertools import combinations
 from math import lcm
+import sys
 
 import numpy as np
 from scipy.optimize import Bounds, LinearConstraint, milp
+
+
+sys.stdout.reconfigure(newline="\n")
 
 
 ANCHORS = (120, 126, 143)
@@ -25,6 +29,11 @@ BAD3 = (
     516, 520, 550, 567, 744, 768, 924,
 )
 COMMON = 18_241_159_416_480
+
+
+def require(condition, message):
+    if not condition:
+        raise RuntimeError(message)
 
 
 def safe_at(point, speed):
@@ -81,14 +90,14 @@ def main():
     common = 1
     for speed in POOL:
         common = lcm(common, 14 * speed)
-    assert common == COMMON
+    require(common == COMMON, "common wall lattice changed")
     walls = {F(0), F(1)}
     for speed in POOL:
         for tooth in range(speed):
             walls.add(F(14 * tooth + 1, 14 * speed))
             walls.add(F(14 * tooth + 13, 14 * speed))
     walls = tuple(sorted(walls))
-    assert len(walls) == 7134
+    require(len(walls) == 7134, "wall count changed")
     wall_ticks = np.array([int(w * COMMON) for w in walls], dtype=np.int64)
 
     singles = tuple((i,) for i in range(27))
@@ -99,7 +108,7 @@ def main():
     triple_idx = {x: i for i, x in enumerate(triples)}
     quad_idx = {x: i for i, x in enumerate(quads)}
     offsets = (0, 1, 28, 379, 3304)
-    assert len(quads) == 17550
+    require(len(quads) == 17550, "four-deletion edge universe changed")
 
     group_ids = []
     hist = Counter()
@@ -152,7 +161,7 @@ def main():
         quad_masks.append(mask)
         incidence[row, list(quad)] = 1.0
     subset_groups = np.array(subset_groups, dtype=np.int64)
-    assert subset_groups.shape == (17550, 16)
+    require(subset_groups.shape == (17550, 16), "subset-group shape changed")
 
     rows = []
     for q in BAD3:
@@ -164,7 +173,7 @@ def main():
         partial[scaled <= COMMON] = 0
         partial[scaled >= 13 * COMMON] = 12 * COMMON
         contributions = 12 * (whole[1:] - whole[:-1]) * COMMON + partial[1:] - partial[:-1]
-        assert np.all(contributions >= 0)
+        require(np.all(contributions >= 0), f"negative cell contribution at q={q}")
         reduced = np.add.reduceat(contributions[ordered_cells], starts)
         grouped = np.zeros(20854, dtype=np.int64)
         grouped[present_groups] = reduced
@@ -172,10 +181,11 @@ def main():
         differences = 9 * numerators - 8 * q * COMMON
         active = np.flatnonzero(differences >= 0)
         equalities = int(np.count_nonzero(differences == 0))
-        assert len(active)
+        require(len(active) > 0, f"empty four-deletion repair graph at q={q}")
 
-        # Minimum transversal as a 27-variable binary MILP.  The returned
-        # integer witness is checked directly against every exact active edge.
+        # Minimum transversal as a 27-variable binary MILP.  Its objective and
+        # one witness are checked, but only the deterministic exact-recursion
+        # witness is frozen below because optimal MILP witnesses need not be unique.
         constraint = LinearConstraint(incidence[active], np.ones(len(active)), np.inf)
         result = milp(
             c=np.ones(27),
@@ -184,19 +194,31 @@ def main():
             constraints=constraint,
             options={"presolve": True, "time_limit": 30},
         )
-        assert result.success, (q, result.message)
+        require(result.success, f"MILP failed at q={q}: {result.message}")
         cover = sum(1 << i for i, x in enumerate(result.x) if x > 0.5)
-        assert all(quad_masks[i] & cover for i in active)
+        require(all(quad_masks[i] & cover for i in active),
+                f"MILP cover misses an edge at q={q}")
         tau = cover.bit_count()
-        assert abs(result.fun - tau) < 1e-7
+        require(abs(result.fun - tau) < 1e-7,
+                f"nonintegral MILP objective at q={q}")
         exact_cover7, states = find_cover_exact(
             tuple(quad_masks[i] for i in active), 7
         )
-        assert (exact_cover7 is None) == (tau > 7), (q, tau, exact_cover7)
+        require((exact_cover7 is None) == (tau > 7),
+                f"MILP/exact-cover disagreement at q={q}, tau={tau}")
         if exact_cover7 is not None:
-            assert exact_cover7.bit_count() <= 7
-            assert all(quad_masks[i] & exact_cover7 for i in active)
-        rows.append((q, len(active), tau, labels(cover), equalities, states))
+            require(exact_cover7.bit_count() <= 7,
+                    f"exact cover exceeds budget at q={q}")
+            require(all(quad_masks[i] & exact_cover7 for i in active),
+                    f"exact cover misses an edge at q={q}")
+        exact_witness, _ = find_cover_exact(
+            tuple(quad_masks[i] for i in active), tau
+        )
+        require(exact_witness is not None and exact_witness.bit_count() == tau,
+                f"deterministic minimum witness failed at q={q}")
+        require(all(quad_masks[i] & exact_witness for i in active),
+                f"deterministic witness misses an edge at q={q}")
+        rows.append((q, len(active), tau, labels(exact_witness), equalities, states))
         print("ROW", rows[-1], flush=True)
 
     print("TAU_HIST", tuple(sorted(Counter(row[2] for row in rows).items())))

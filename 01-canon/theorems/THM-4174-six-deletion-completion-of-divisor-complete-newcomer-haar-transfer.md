@@ -25,13 +25,13 @@ independent_five_script: 04-computation/lrc14_five_deletion_residual_audit_thm41
 independent_five_output: 05-knowledge/results/lrc14_five_deletion_residual_audit_thm4174.out
 independent_six_script: 04-computation/lrc14_q50_six_deletion_arity_audit_thm4174.py
 independent_six_output: 05-knowledge/results/lrc14_q50_six_deletion_arity_audit_thm4174.out
-script_sha256: b8ad9ab60715ddde853a45459ccbc6d01f1d6e2c6a31f48eaa497765208722de
+script_sha256: 1b692f04f2763afe79d09b788cc73d7e44ff65d4f14bca24e66d8ece2e3d926b
 output_sha256: 8679f01a234987cc7784419d1013cac9c26a16f34ac2e00d4d94e6ee09327586
-independent_four_script_sha256: 6185e541a234d7b0a6f672b44ed0fdbd0756db98368f1715e70ffcd850a5948f
-independent_four_output_sha256: a7dacffa7ab64a497df3dab511249134d20bf5607561b7f968fe77b40c1beaec
-independent_five_script_sha256: d018b7a84c3683cb3b1b320d0e17dbd6fba8dfe370752e7fee6d149e5e0b6b74
-independent_five_output_sha256: 7246a6644c35b9a1afca039628ef7810dd51523535098344126c166d466a54e4
-independent_six_script_sha256: 4536216aa8435fac609f9f5ed22541326fc0931a366866756b0e669e00a9b2cb
+independent_four_script_sha256: f30b5e2f30efcb1bce4d074daa0e262eccc6c1dfceac0ad8ff8ac698be1ab8c4
+independent_four_output_sha256: 98b4c43aef985dffde2838eefe8dac2b4403bb3a2f8902d30927323afa9a7762
+independent_five_script_sha256: 235915c64992609b1bba6d5e275168baebffcd01736432b1919d3880ffd8d1a8
+independent_five_output_sha256: 4ff0d33dba336538772cac5e95ca2025fd90363c0fa8aa888f605cfb3ff92369
+independent_six_script_sha256: 576574e861b18da5f62e0d0f468290dc4d43cc05977d1082ff43759c1461ee02
 independent_six_output_sha256: ee13bbc4bb7fbdc51b8294635280d7bee6d501fe080f2815ac637d087edbd62b
 hash_basis: raw LF bytes
 primary_audit: >
@@ -41,11 +41,13 @@ primary_audit: >
   Normal, optimized, and hash-seeded outputs byte-match.
 independent_audit: >
   ACCEPT WITH DECLARED SHARED GEOMETRY. Separate NumPy group-lattice arrays,
-  SciPy MILP witnesses, and separately instantiated exact-recursion checks
+  SciPy MILP optimum values, deterministic exact-recursion witnesses, and
+  separately instantiated exact-recursion checks
   reproduce the d=4 and d=5 residual ledgers and the q=50 d=6 tau=8 control.
   The group-lattice/MILP route is algorithmically distinct; the recursions
   share branch order and all paths remain Python implementations sharing the
-  exact wall-lattice identity. No independent C++ geometry is claimed.
+  exact wall-lattice identity. NumPy and SciPy are explicit runtime
+  requirements for the second path. No independent C++ geometry is claimed.
 ---
 
 # THM-4174 -- six-deletion completion of every newcomer
@@ -325,9 +327,11 @@ For `N>=290`, the scale-one newcomer classes with `1<=q<=N` have exact count
 and are disjoint from the `binom(27,8)=2,220,075` old THM-4156 cores.
 
 There is also a sharp content-stable separation from the full THM-4158
-wrapped-carrier theorem. If `cH_(q,K) subset P_m`, then every member of `P_m`
-is at least `m`, while `120c in cH`; hence `m<=120c`. The maximum member of
-`P_m` is
+wrapped-carrier theorem. Here `cH_(q,K)` denotes the undoubled content-`c`
+core; the corresponding physical body is `2cH_(q,K)`. If
+`cH_(q,K) subset P_m`, then every member of `P_m` is at least `m`, while
+`120c in cH`; hence `m<=120c`. The case `m=1` is impossible because
+`max(P_1)=44<120c`. Thus `m>=2`, where the maximum member of `P_m` is
 
 ```text
 floor(41(12m+1)/16)<=3690c+2.                           (22)
@@ -377,12 +381,23 @@ Replay the independent algorithmic audits with
 
 ```bash
 python3 -B 04-computation/lrc14_four_deletion_residual_audit_thm4174.py
+python3 -B -O 04-computation/lrc14_four_deletion_residual_audit_thm4174.py
+PYTHONHASHSEED=4174 python3 -B \
+  04-computation/lrc14_four_deletion_residual_audit_thm4174.py
 python3 -B 04-computation/lrc14_five_deletion_residual_audit_thm4174.py
+python3 -B -O 04-computation/lrc14_five_deletion_residual_audit_thm4174.py
+PYTHONHASHSEED=4174 python3 -B \
+  04-computation/lrc14_five_deletion_residual_audit_thm4174.py
 python3 -B 04-computation/lrc14_q50_six_deletion_arity_audit_thm4174.py
+python3 -B -O 04-computation/lrc14_q50_six_deletion_arity_audit_thm4174.py
+PYTHONHASHSEED=4174 python3 -B \
+  04-computation/lrc14_q50_six_deletion_arity_audit_thm4174.py
 ```
 
-All four fresh streams byte-match the frozen outputs. The second path uses
-different group arrays and optimization witnesses; its exact-recursion check
+All four fresh streams byte-match the frozen outputs under ordinary,
+optimized, and hash-seeded Python. The second path uses different group arrays
+and MILP optimum values, but freezes deterministic witnesses from exact
+recursion so solver tie-breaking cannot change the artifact; its recursion
 shares the primary branch order. All paths share the rational wall-lattice
 identity and Python runtime.
 A warning-clean signed-128-bit C++ reconstruction would be a valuable third

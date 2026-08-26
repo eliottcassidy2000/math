@@ -12,16 +12,19 @@
   primary audit reconstructs `7,134` rational walls, makes `2,093,130` exact
   threshold comparisons with zero equalities, and exhausts all transversals
   through size seven. NumPy group-lattice and SciPy MILP routes reproduce the
-  residual ledgers; separately instantiated recursion checks share the primary
-  branch order and rational wall geometry. Primary source/output SHA-256:
-  `b8ad9ab60715ddde853a45459ccbc6d01f1d6e2c6a31f48eaa497765208722de` /
+  residual ledgers; deterministic exact-recursion witnesses prevent
+  platform-dependent MILP tie-breaking, while the separately instantiated
+  checks share the primary branch order and rational wall geometry. Every
+  `q>=3693` core is outside all THM-4158 alphabets at every content. Primary
+  source/output SHA-256:
+  `1b692f04f2763afe79d09b788cc73d7e44ff65d4f14bca24e66d8ece2e3d926b` /
   `8679f01a234987cc7784419d1013cac9c26a16f34ac2e00d4d94e6ee09327586`;
   arity-four, arity-five, and arity-six audit source/output pairs:
-  `6185e541a234d7b0a6f672b44ed0fdbd0756db98368f1715e70ffcd850a5948f` /
-  `a7dacffa7ab64a497df3dab511249134d20bf5607561b7f968fe77b40c1beaec`,
-  `d018b7a84c3683cb3b1b320d0e17dbd6fba8dfe370752e7fee6d149e5e0b6b74` /
-  `7246a6644c35b9a1afca039628ef7810dd51523535098344126c166d466a54e4`,
-  and `4536216aa8435fac609f9f5ed22541326fc0931a366866756b0e669e00a9b2cb` /
+  `f30b5e2f30efcb1bce4d074daa0e262eccc6c1dfceac0ad8ff8ac698be1ab8c4` /
+  `98b4c43aef985dffde2838eefe8dac2b4403bb3a2f8902d30927323afa9a7762`,
+  `235915c64992609b1bba6d5e275168baebffcd01736432b1919d3880ffd8d1a8` /
+  `4ff0d33dba336538772cac5e95ca2025fd90363c0fa8aa888f605cfb3ff92369`,
+  and `576574e861b18da5f62e0d0f468290dc4d43cc05977d1082ff43759c1461ee02` /
   `ee13bbc4bb7fbdc51b8294635280d7bee6d501fe080f2815ac637d087edbd62b`.
 
 - `jc23_repeated_top_row_a_complete_exclusion_thm4173.py` and an independent
@@ -73,9 +76,10 @@
   `9,608` qualifiers, zero threshold equalities, and ordered-word
   XOR/multiply fingerprint `02784121a66537ac`; an eight-edge discrepancy matching proves the
   cofinal tail. A hostile cover means only that this sufficient certificate
-  fails, not that a body is unsafe. At content one, every core with `q>=3693`
-  lies outside every THM-4158 alphabet; this separation is not promoted
-  through dilation. Windows LF/binary-stdout replays preserve all outputs.
+  fails, not that a body is unsafe. THM-4170 itself records a content-one
+  separation from every THM-4158 alphabet for `q>=3693`; THM-4174 later
+  promotes the same threshold to every content. Windows LF/binary-stdout
+  replays preserve all outputs.
   Analytic source/output and C++ source/output SHA-256:
   `d6c7413e94a4e92a096e96eb7586287f58a033a58f7a0fb27fdd43e34cb49c25` /
   `4a48470d4af3b4bc2e35874ddacaa42ebcf296670680521252f4127e411f1ab1` /

@@ -312,7 +312,9 @@ Consequently, for every `q>=3693` and every `K in binom(O,7)`, the core
 theorem, this gives `888,030` content-one cores per newcomer outside the full
 union of THM-4158 carrier alphabets. This is a mechanism-level alphabet
 comparison only. It does not claim disjointness after a common dilation and
-does not produce additional LRC bodies beyond `(5)`.
+does not produce additional LRC bodies beyond `(5)`. THM-4174 later proves
+that the same `q>=3693` separation holds at every common content; that stronger
+statement is not used in this theorem.
 
 ## 6. Exact controls and audit architecture
 
@@ -434,6 +436,7 @@ histogram does not retain which repair triples overlap. Here the preserved
 target is `tau(E_3({q}))>7`, so the missing coordinate is the labelled
 triple-incidence deck (or equivalent overlap data), not another arity count.
 The cheapest decisive hostile is a pair of hypergraphs with the same
-support-size/deletion-layer histogram and different transversal number. Thus
-tomography may organize a higher-deletion census, but cannot replace the
-cover recursion without this incidence sidecar.
+support-size/deletion-layer histogram and different transversal number.
+THM-4174 subsequently performs the exact `d=4,5,6` residual census and closes
+the fixed-pool newcomer filtration, while confirming that tomography cannot
+replace cover recursion without this incidence sidecar.
