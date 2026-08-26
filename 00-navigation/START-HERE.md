@@ -68,7 +68,7 @@ Then read the routed frontier, guardrails, and theorem; logs are history.
     THM-2371/THM-2376 are typed sidecars, not arrival.
 16. **Use the native operation carrier, not shared syntax.** THM-2176/2191
     expose knot continuation; MISTAKE-230--235 forbid syntax-only bridges.
-    THM-4065/4085/4206 are fixed-column/Haar results, not named-seed prizes.
+    THM-4065/4085/4204/4206 do not solve a prize.
 17. **Sun 2-4-6-8 is refuted:** THM-4026. THM-4027/4028/4036/4037 separate
     local invariants from coverage; THM-4040 gives one-CRT-class uniqueness.
 ## Where to go by topic

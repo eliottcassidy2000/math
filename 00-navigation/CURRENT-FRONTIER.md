@@ -350,7 +350,7 @@ lift/phase clocks.
 - **Knots:** THM-2176/2191/2281 and THM-2242/2330--2383: localization, owner/ANOVA/rectangle/reference inversion; realization/stable diagonal open. THM-2646: modular/exponent `B3` conjugacy, not Markov invariance.
 - **Flows:** [THM-2177](../01-canon/theorems/THM-2177-planar-counterexample-to-goemans-unsplittable-cost-flow-conjecture.md): planar `58<60` refutes exact `d_max`; planar `2d_max` survives.
 - **Hensel:** THM-3446/3449/[3452](../01-canon/theorems/THM-3452-unequal-depth-noncommuting-smooth-hensel-heisenberg-orbit-law.md): weighted/equal/unequal banks; dyadic repair.
-- **Rule 30:** THM-4047/4064/4065 give the fixed-column transfer and next zero `1420878968`. THM-4085 and [THM-4206](../01-canon/theorems/THM-4206-rule30-characteristic-address-contrast-deck-entropy-decomposition.md) give iid address pivots and the exact repeated-address entropy/deck; covariance loses higher Walsh data. Haar is not the named seed; center/character prizes remain **OPEN**.
+- **Rule 30:** THM-4047/4064/4065/4085/4206 are fixed/Haar. [THM-4204](../01-canon/theorems/THM-4204-rule30-debruijn-reset-and-dyadic-prefix-saturation.md) gives spatial reset/unique-fibre/dyadic ancestry. Prizes remain **OPEN**.
 - **Two Hopf problems:** the `S2 x S2` curvature and `S6` complex-structure
   preprints are distinct **PREPRINT CLAIM / UNDER AUDIT**. Only the recorded
   mixed/Hessian identities are exact in the first lane; the `2Z` orbit in the
