@@ -1,0 +1,13 @@
+THM4189_NORMALIZED_PRIMARY_EXACT_ACCEPT
+checks=70
+wall=zeta=Theta=0;eta*Delta*K!=0;Phi_arbitrary
+normalized_resultant=T^56*(6T+1)^2*Q19
+Q19_constant=-14348907*eta**7/128
+Q19_leading=eta**7*(105*Delta - 5696)**6/562500
+symbolic_coefficient_sha256=3155290376d3254b4d788ecb9fb5bb57aa965e69a8591a11ea5c3f22091b14d3
+polygon=((0,1),(2,0),(4,2),(3,4),(1,5),(0,5));ledger=(28,10,10)
+packet=(8,7,4,2,2,1);defect=18;critical_length=23
+carrier=K*W^2=q-1/2;finite=(20,2);full=24
+collision_hostile=T=tau;fibre=X*(X-1);source_p=tau,tau+tau^2
+universal_hostile=T=-1/6;fibre=(X-1)*(X^2-6);Q19_squarefree
+semantic_sha256=4a68f573e1d54bc276f3bec1464ee8994a4594ecdce30f6e5573e07ff70cca59

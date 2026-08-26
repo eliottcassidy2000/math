@@ -1,0 +1,14 @@
+THM4189_SOURCE_INDEPENDENT_EXACT_ACCEPT
+checks=76
+chart=(s,p);critical_pair=(A,B);hessian_bridge=ideal_zero
+source_resultants=p^2*R20_transverse;p^2*R19_on_Theta_zero
+R19_constant=-96*(105*Delta - 5696)**2/25
+R19_leading=4374*eta**6*(105*Delta - 5696)/5
+symbolic_coefficient_sha256=b4d5d9557b7ca63db40aa242b32bf6a34163a72c7e053a22534c255c95a6d752
+normal_escape=v=1/p~-5*Theta/(6*K)
+polygon_ledger=(28,10,10);merged_indices=3+5_to_7
+horizontal_face=Delta+eta*s;unique_simple_nonzero_root=-Delta/eta
+collision_source_p=tau,tau+tau^2;both_simple
+universal_source_p=-5/36;R19_squarefree
+packet=(8,7,4,2,2,1);critical_length=23;responses_strict
+semantic_sha256=fb449c1782493d64339fad46dcc49979c7522b9fc49275df5fe2904b42ceef89
