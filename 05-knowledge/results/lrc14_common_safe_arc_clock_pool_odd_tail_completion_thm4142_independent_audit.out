@@ -1,0 +1,10 @@
+THM4142_COMMON_POOL_INDEPENDENT_AUDIT_20260825
+status=PASS;implementation=clean-room standard-library exact arithmetic
+arc_safe_count=36;pool=(1, 3, 4, 6, 8, 9, 10, 11, 12, 14, 15, 16, 18, 22, 24, 28, 30, 32, 35, 37, 41, 43, 45, 49, 60, 64);body_count=7726160
+failure_masks=((5, (False, False, True)), (7, (True, False, False)), (13, (True, True, False)), (20, (True, False, False)), (26, (True, True, True)), (33, (True, False, False)), (39, (False, True, False)), (47, (False, False, True)), (62, (False, False, True)), (66, (True, False, False)));clock_margins=((4, 49), (11, 147), (17, 224))
+quotient_scan=(2350, 151, (2, 63), ((1, 9),));far_hostiles=(((1, 999), (2, 6993), (2, 6993)), ((997, 999), (221, 774669), (2, 6993)), ((1, 1001), (2, 7007), (2, 7007)), ((999, 1001), (1993, 6999993), (2, 7007)))
+residual={'counts': (56, 10, 2), 'minima': ((89, 1176), (11, 147), (17, 224))};surpluses=((1, 2520), (1, 7560))
+direct_rows=(((3, 6, 8, 9, 11, 16, 22, 28, 37, 49, 64), (5, 7), (1959, 132608), (9795, 132608), 1022), ((1, 10, 12, 14, 18, 24, 30, 32, 41, 45, 60), (13, 25), (1223, 26880), (37, 420), 1214), ((4, 6, 8, 15, 16, 22, 28, 35, 43, 49, 64), (101, 103), (207, 23072), (207, 2884), 1558), ((1, 3, 9, 11, 14, 18, 24, 32, 37, 45, 60), (999, 1001), (4325, 112112), (4325, 56056), 4998))
+scope=26-speed common certificate alphabet only; outside bodies, entry, mixed parity, LRC14 open
+checks=9496
+semantic_sha256=dfddeafede97f47d6b8c38a4676cd6bc24c16559833690f51400addae8a5801b
