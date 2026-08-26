@@ -1,0 +1,12 @@
+THM4192_K_ZERO_NORMALIZED_EXACT_ACCEPT
+checks=84
+strata=Theta!=0;Theta=0,Phi!=0;Theta=Phi=0
+normalized_residual_degrees=18,15,14
+normalized_constants=-3^15*eta^7/2^7
+normalized_leading=656100*Theta^6*eta^5;6561*Phi^6*eta^5/4;59049*eta^9/4
+polygons=(27,9,10);(23,9,8);(22,8,8)
+packets=(8,5,5,4,1);(8,4,4,2,1);(8,5,4,1)
+critical_lengths=22,19,18;degrees=23,19,18;defects=18,14,14
+boundary_fields=all_rational;commutator_upper=2,0,0
+symbolic_coefficient_sha256=584e02ec9a6a800f5dbb50b77420a3fd6a7317c2e424229eb56eb7aef30a1ba9
+semantic_sha256=b68faf7eeeca165723e53f9253031e2c8bc513e2edf6efc57264f013fed6958a
