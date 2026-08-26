@@ -1,0 +1,12 @@
+THM4145_ROOTED_PAIR_EXPANSION_TWO_DEFECT_INDEPENDENT_20260825
+status=PASS;universe=all rooted labelled tournaments orders 2..5
+order=2;labels=2;rooted=4;strong_rooted=0;max_deletion_orders=1
+order=3;labels=8;rooted=24;strong_rooted=6;max_deletion_orders=2
+order=4;labels=64;rooted=256;strong_rooted=96;max_deletion_orders=6
+order=5;labels=1024;rooted=5120;strong_rooted=2720;max_deletion_orders=24
+rooted_rows=5404;strong_rooted=2822
+order11_covering_presentations=93559490
+c3_hostile=(101,0,101101,5,4)
+root_loss_control=(001000,(0,11),(1,9))
+semantic_fnv64=9f075ab9b9d3f07f
+checks=strong_iff,ear_identity,defect_formula,internal_gap_pair
