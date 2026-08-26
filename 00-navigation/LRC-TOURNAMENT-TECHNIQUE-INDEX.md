@@ -38,6 +38,9 @@ Every technique below is a possible tooth in that zipper.
   `13/(14M)-1/(14m)>=2/189`, its width defeats every nonresidual cross-comb
   component; endpoint/small-minimum clocks close `q<=25`. Its complete width
   census has `60,301,653,510` bodies on labels `1..80`.
+  THM-4151's anchored odd-wall slack gives `16M<=156m+13`, translation rule
+  `140m>=16D-13`, and eleven-body density `(35/39)^10`; the mechanism is a
+  Boolean two-sheet join, not a cosmetic tournament.
 - **Preserves:** body safety, literal root `t`, integer fibre multiplicity,
   compact/open endpoint status, and the cubic mixed danger response.
 - **Forgets / guardrail:** an ordinary tournament, complete pairwise Gram
@@ -47,10 +50,10 @@ Every technique below is a possible tooth in that zipper.
   half-translate hostiles independently show that relation length and full
   Fourier power lose relative phase.  Endpoint equality remains atomic data.
 - **Next pull:** optimize over non-first or disconnected safe components and
-  body-dependent residual clocks to reach bodies failing THM-4148's extremal
-  width gate; retain compact/open endpoint type under multiplication by `t`.
+  body-dependent residual clocks to reach eleven-bodies failing THM-4151's
+  affine cap; retain compact/open endpoint type and the physical sheet labels.
 - **Pointers:** THM-3910, THM-4002, THM-4129, THM-4132, THM-4136, THM-4142,
-  THM-4148; THM-2221, THM-3377,
+  THM-4148, THM-4151; THM-2221, THM-3377,
   THM-3380, THM-3729;
   `lrc14-fixed-radius-auxiliary-center-t-sheet-response-and-tournament-cubic-sidecar-root-20260823.md`.
 

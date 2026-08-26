@@ -1,5 +1,46 @@
 # Script Results Index
 
+- `lrc14_scale_sensitive_anchored_first_window_transfer_thm4151.py` and
+  independent warning-clean C++ audit -> matching exact gates [THM-4151
+  PROVED ELEMENTARY ANCHORED-CARRIER TRANSFER + VERIFIED-EXACT +
+  INDEPENDENTLY AUDITED; LRC(14) OPEN]. Every finite positive body `H` with
+  `m=min(H),M=max(H)` and `16M<=156m+13` has universal `1/14`-safe completion
+  after doubling by every distinct positive odd tail pair. Odd carrier walls
+  leave the anchored endpoint at least `1/(14mb)` of lattice slack. The cap is
+  sharp for the arbitrary-cardinality theorem: `2{2,...,21} union {1,25}` is
+  literally unsafe, with all `946` wall probes below threshold. Every finite
+  additive pattern of span `D` enters after `140m>=16D-13`; `{6,...,52}` is
+  the first 47-label translated block. Among eleven-subsets of `[1,N]`, the
+  anchored family has asymptotic density `(35/39)^10`; THM-4148 adds exactly
+  `{1,...,11}`. Primary script/output SHA-256:
+  `df324c947f753edf1d0c175e198c3e9c4da25957e60abbc495366f6d6f5a7ec5` /
+  `bf4c413749623b28ea6884c66bf1acbe002e628b3912fa83f7824c6c653948d1`;
+  independent:
+  `6bfc0d438e7c04d4a5b27ed9bde53fcd3bebd79c958cbba3b69080f4fca93de4` /
+  `a3a2e244ca95886fa1e08ad3e4876a378027e9f127856fbde7cd14343ac1609d`;
+  shared semantic SHA-256/FNV-64:
+  `84adc34f0dc8ffb415455827a227f86cab1bea3169d73d3912721bd815e1b514` /
+  `ff11c60c57deec04`.
+
+- `jc23_exact_m9_eta_generic_monodromy_thm4147.py` and an independent
+  `(s,p)`-chart audit -> concordant exact mechanisms [THM-4147 PROVED
+  RELATIVE TO THM-3827/3992/4053/4103/4120/4122/4130/4138 + VERIFIED-EXACT +
+  INDEPENDENTLY VERIFIED-EXACT; JC(2) OPEN]. On the live reduced `(2,3)` seam,
+  the dense generic eta-only exact-weight-nine chamber `Eta!=0,Zeta=0` is
+  empty of nonautomorphic Keller pairs. Its critical length is `24`, source
+  genus `10`, and infinity packet `(8,5,4,3,2,2,1)`. Rational target response
+  and the inherited quadratic carrier leave degrees `25,21`; one-pivot
+  commutator and merger-capacity contradictions exclude them. The eta
+  specialization walls and the zeta-only/mixed cubic-carrier chambers remain
+  open, as do entry, `JC(2)`, and `DC(2)`. Primary script/output SHA-256:
+  `0186b5ae1728b9b5dde8b18e09b42a2512b53602b03ad604a73bbded2b5bccec` /
+  `ae712c0cdb751fbbc2b5e285c66bf3d18e08ed96dba8d3d6a3abb71f3e29a0d4`;
+  independent:
+  `05b47167b7c5c3ae06e24d23d906e2e2fa7e3b43ef40b3e109df42b4c49ee62a` /
+  `0af28bd29d2a9921205b8423db2f1f68d35abd42c8602f7ceee9a65057623e8a`;
+  shared semantic SHA-256:
+  `8d00d0a84d02b99a33b3c71ea39c97fcbf19a14b22c5a6e558c17b5c80aa6cfe`.
+
 - `lrc14_first_window_width_universal_odd_tail_transfer_thm4148.py` and
   independent warning-clean C++ audit -> matching exact gates [THM-4148
   PROVED ELEMENTARY FIRST-WINDOW/CROSS-COMB TRANSFER + VERIFIED-EXACT +
@@ -99,7 +140,7 @@
   strata have critical lengths `19,17`, normalized infinity packets
   `(6,6,3,2,2,1)` and `(6,6,5,1)`, and no compatible transitive monodromy
   response. Together with THM-4130/4138/4141, this empties THM-4053's full
-  exact-weight-eight trichotomy on the live reduced `(2,3)` seam; `M>=9`,
+  exact-weight-eight trichotomy on the live reduced `(2,3)` seam; remaining `M>=9`,
   entry, other cells, `JC(2)`, and `DC(2)` remain open. Primary script/output
   SHA-256:
   `c5a711a8852ad0d1a9e15c794c7f9b513ee1fb1238d7d2dac2686ab9ea39d03b` /
@@ -166,7 +207,7 @@
   `+-3P`. Puncture-avoiding vanishing loops, two BC transpositions, and merger
   capacities `14<15` and `13<14` contradict transitivity. Combined with
   THM-4134, this empties the theta-only exact-`M=8` `Delta_V=0` wall.
-  The other two collision walls, `M>=9`, entry, other cells, `JC(2)`, and
+  The other two collision walls, remaining `M>=9`, entry, other cells, `JC(2)`, and
   `DC(2)` remain open. Primary script/output SHA-256:
   `61744bea33439e2a1be80ed86e9fa5a0ca8bb82b90be1575af05b0840afed9e2` /
   `f8f72753eb04eb6e1a00706f6ff1177f287e6c783084de5d7816cd6003e0f97c`;
@@ -265,7 +306,7 @@
   `(7,3,2,2,2,2,1)` with alternatives `{15,19}`. Monodromy excludes the
   full-boundary `20,19` branches. THM-4138 later excludes the finite
   horizontal-BC degrees `16,15`; together they empty this `Delta_V=0` wall.
-  The other collision walls, `M>=9`, `JC(2)`, and `DC(2)` remain open. Primary
+  The other collision walls, remaining `M>=9`, `JC(2)`, and `DC(2)` remain open. Primary
   script/output SHA-256:
   `4aad959ef19bd96015b219970368ebd241b5c57c534ea001238d796e4f322604` /
   `a0c3479c7ab4d56d210541d2992fd89fc3e0e5e0fc23ade07c0d5938bb6dffc0`;
@@ -353,7 +394,7 @@
   to meet once, hence a three-cycle commutator, contradicting boundary type
   `(7,3,3,3,2,2,1)`. The `Delta_V=0` hostile drops the eliminant degree to
   `15`. THM-4134/4138 later reduce and empty that `Delta_V=0` wall, excluding
-  degrees `20,19,16,15`. The other collision walls, `M>=9`, other cells,
+  degrees `20,19,16,15`. The other collision walls, remaining `M>=9`, other cells,
   `JC(2)`, and `DC(2)` remain open. Primary script/output SHA-256:
   `9cc246bb07894f548ef5ff4814ca92e9384a77de54617e3311df341458420fb3` /
   `020f79bcc07384e02623053adcaee20edb240ee5bef363f1f3bbe86056cafefd`;

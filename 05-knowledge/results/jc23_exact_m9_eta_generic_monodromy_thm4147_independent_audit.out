@@ -1,0 +1,13 @@
+THM-4147 independent exact audit
+checks=55
+chart=(s,p);critical_resultant=p^10*degree20 after nonzero scalar
+U_eta_Tminus1over6=universal_pair_only
+critical_length=20+2+2=24
+supporting_inequalities=7;pick=29,11,10
+boundary_packet=8,5,4,3,2,2,1
+quadratic_BC=K*w^2=q-1/2
+response_degrees=25,21
+sharp_L23_merger_hostile=PASS
+witness_R20_coeff_sha256=7bc33000523331a2be3769814207c1ecb488f4e451d942f75623751da3c65f10
+semantic_sha256=8d00d0a84d02b99a33b3c71ea39c97fcbf19a14b22c5a6e558c17b5c80aa6cfe
+PASS

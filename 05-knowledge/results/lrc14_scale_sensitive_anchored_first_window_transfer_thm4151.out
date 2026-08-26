@@ -1,0 +1,17 @@
+THM4151_SCALE_SENSITIVE_ANCHORED_FIRST_WINDOW_TRANSFER_20260825
+status=PASS;scope=exact rational and finite combinatorial controls
+gate=(4m-1)/(14m(12m+1));integral_gate=16M<=156m+13
+endpoint_test_floor_through_m500=143/2000
+sharp_carrier=b=12m+1;left_slack=1/(14mb);remaining_room=gate
+mechanism_hostile=(m=1,M=11,tails=(1,13),window=(1/14,13/154))
+hostile_rescue=(phase=5/24,clearance=1/12)
+translation_span_gate=140m>=16D-13
+span46_first_translate=6;cap_at_6=59;block_6_52_labels=47;max_block_at_6=54
+direct_wall_cells=1355_primitive_passes;25_first_failures_confirmed
+actual_cap_hostile=2{2..21}+{1,25};safe_components=0
+actual_cap_hostile_probes=946_walls;wallmax=12/175;midmax=1/16
+anchored_family_counts=20:75582,40:792864735,80:3548681310136,120:392890789426111,160:10500809430042208,200:131378242150108190
+combined_family_rule=anchored+1_for_N>=11;combined_count_at_20=75583
+asymptotic_density=2758547353515625/8140406085191601
+semantic_sha256=84adc34f0dc8ffb415455827a227f86cab1bea3169d73d3912721bd815e1b514
+semantic_fnv64=ff11c60c57deec04

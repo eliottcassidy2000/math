@@ -7,7 +7,7 @@ status: >
   first-window width at least 2/189 has universal 1/14-safe completion after
   doubling by every pair of distinct positive odd tails. Exactly
   60,301,653,510 eleven-body sets satisfy this width gate; their
-  labels lie in {3,...,80}. The block {15,...,60} alone supplies
+  labels lie in {1,...,80}. The block {15,...,60} alone supplies
   13,340,783,196 families, and 46 is sharp among consecutive blocks for this
   mechanism. Arbitrary bodies, entry, and LRC(14) remain open.
 source: codex-frontier-synthesis-creative-20260825ah
@@ -346,7 +346,7 @@ preserved:    all body gaps, closed endpoints, both physical sheets
 destroyed:    internal body structure beyond min/max
 sidecar:      open cross-comb C_(p,q), not one fixed lift
 hostile:      (27)--(28) defeats a universal endpoint clock
-decisive test: W versus 2/63 and 2/(7q), then clock (14). (30)
+decisive test: W versus 2/63 and 2/(7q), then (14) or the m=1,2 clock banks. (30)
 ```
 
 ## 8. Audit and scope

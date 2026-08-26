@@ -1,0 +1,17 @@
+THM-4147 primary exact audit
+checks=54
+normalized_top=Eta*P^3*Y; Zeta=0
+generic_eta_hull=0:1,2:0,4:2,4:3,3:4,1:5,0:5
+pick=2area:29,boundary:11,genus:10
+critical_resultant=T^56*(6T+1)^2*degree20 after nonzero scalar
+U_eta_Tminus1over6=universal_pair_only
+critical_length=24
+boundary_packet=8,5,4,3,2,2,1;defect=18
+response_degrees=25,21
+degree25_support_budget=26;degree21_support_budget=18
+sharp_L23_merger_hostile=PASS
+witness_Q20_coeff_sha256=c71a94984838cee834adc6cbde848275fd55d3b49d0abf88fc7f691c758ea89e
+remaining_scouts=eta:24,zeta:24,both:25;NOT_THEOREM_DEPENDENCIES
+remaining_newton_scouts=zeta:g11:26:11,8,2,2,2,1;both:g11:27:8,8,4,2,2,2,1
+semantic_sha256=8d00d0a84d02b99a33b3c71ea39c97fcbf19a14b22c5a6e558c17b5c80aa6cfe
+PASS
