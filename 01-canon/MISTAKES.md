@@ -9,6 +9,28 @@ Format per entry:
 - Why it was wrong
 - The correct framing
 
+## MISTAKE-513 (2026-08-26, THM-4166/4170 hostile audit) -- a wordwise XOR/multiply recurrence was still labelled bytewise FNV-1a-64
+
+- **What failed:** MISTAKE-512 correctly repaired the missing digit in the
+  offset constant, but the promoted THM-4166 and THM-4170 artifacts still
+  called their fingerprints standard `FNV-1a-64`. Both implementations apply
+  one round `h <- (h XOR u)*0x100000001b3 mod 2^64` to each semantic integer
+  word `u`; standard FNV-1a instead applies a round to every serialized byte.
+  For the integer `1`, these give respectively `af63bc4c8601b62c` and, under
+  little-endian `uint64` serialization, `89cd31291d2aefa4`.
+- **Scope of the error:** nomenclature and serialization provenance only.
+  The exact Haar measures, graphs/hypergraphs, transversal decisions, 1,032
+  two-deletion qualifiers, 61 triple-deletion failures, cutoffs, margins, and
+  body counts do not depend on either fingerprint.
+- **Repair:** the recurrence is now named `word_xor_mul64` and specified by
+  its initial state, multiplier, ordered integer-word ledger, and lack of byte
+  serialization. The numerical sidecars `995aa971af1069e4` and
+  `02784121a66537ac` are unchanged; labels, sources, outputs, and raw hashes
+  were refrozen. MISTAKE-512 remains the correction of the initial missing
+  digit, but its claim that the resulting recurrence was standard FNV-1a-64
+  is superseded by this entry. Cross-language agreement does not validate a
+  borrowed algorithm name; audit the update unit and serialization too.
+
 ## MISTAKE-512 (2026-08-26, THM-4166 audit) -- a custom 19-digit seed was labelled as the standard FNV-1a-64 offset basis
 
 - **What failed:** the first promoted THM-4166 global-census artifacts seeded
@@ -22,12 +44,12 @@ Format per entry:
   `49,463`-label universe, edge comparisons, vertex-cover histogram, `1,032`
   qualifiers, last qualifier `q=8,265`, analytic cutoff, margins, and body
   counts are unchanged.
-- **Repair:** both implementations now use the standard offset basis and
-  reproduce the corrected FNV-1a-64 fingerprint `995aa971af1069e4`; all
-  normal/optimized/hash-seeded and O0/O2/UBSan outputs and raw hashes were
-  refrozen.  When a named checksum family is used as a sidecar, audit its
-  initialization constant independently; cross-implementation agreement only
-  proves agreement on the shared specification, including a shared typo.
+- **Repair:** both implementations now use the standard FNV offset constant
+  and reproduce the corrected wordwise fingerprint `995aa971af1069e4`; all
+  replay modes and raw hashes were refrozen. MISTAKE-513 supersedes the later
+  claim that this wordwise recurrence itself is standard FNV-1a-64. When a
+  named checksum family is used as a sidecar, audit its initialization,
+  update unit, and serialization independently.
 
 ## MISTAKE-511 (2026-08-25, Haar odd-tail pool promotions) -- exact new certificates were mistaken for new frontier families after the divisor clock had already closed every advertised pool row
 

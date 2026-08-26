@@ -97,7 +97,8 @@ def graph_from_pairs(pairs):
     return tuple(adjacency)
 
 
-def fnv_update(state, value):
+def word_hash_update(state, value):
+    """One uint64 XOR/multiply round; deliberately not bytewise FNV-1a."""
     return ((state ^ int(value)) * 1_099_511_628_211) & UINT64_MASK
 
 
@@ -315,11 +316,11 @@ def main():
         row = (q, int(edge_counts[q]), alpha, tau, witness, graph)
         rows.append(row)
         tau_histogram[tau] = tau_histogram.get(tau, 0) + 1
-        semantic_hash = fnv_update(semantic_hash, q)
-        semantic_hash = fnv_update(semantic_hash, row[1])
-        semantic_hash = fnv_update(semantic_hash, alpha)
+        semantic_hash = word_hash_update(semantic_hash, q)
+        semantic_hash = word_hash_update(semantic_hash, row[1])
+        semantic_hash = word_hash_update(semantic_hash, alpha)
         for mask in graph:
-            semantic_hash = fnv_update(semantic_hash, mask)
+            semantic_hash = word_hash_update(semantic_hash, mask)
 
     admitted = tuple(row for row in rows if row[3] > 7)
     expected_histogram = {
@@ -396,7 +397,7 @@ def main():
     print("bodies_per_q", comb(27, 7))
     print("extension_bodies", extension_bodies)
     print("with_old_thm4156", extension_bodies + old_bodies)
-    print("semantic_fnv1a64", f"{semantic_hash:016x}")
+    print("semantic_word_xor_mul64", f"{semantic_hash:016x}")
     print("unique_graphs", len(cache))
     print("GLOBAL_CENSUS_PASS")
 

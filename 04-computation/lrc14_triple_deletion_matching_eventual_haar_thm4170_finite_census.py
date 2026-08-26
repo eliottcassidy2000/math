@@ -28,8 +28,8 @@ COMMON = 18_241_159_416_480
 LIMIT = 9_699
 BLOCK = 128
 THRESHOLD = F(4, 63)
-FNV_OFFSET = 14_695_981_039_346_656_037
-FNV_PRIME = 1_099_511_628_211
+WORD_HASH_OFFSET = 14_695_981_039_346_656_037
+WORD_HASH_MULTIPLIER = 1_099_511_628_211
 UINT64_MASK = (1 << 64) - 1
 EXPECTED_HOSTILE = (
     3, 6, 22, 24, 25, 46, 48, 50, 55, 64, 70, 72, 75, 83, 93,
@@ -217,7 +217,7 @@ def main():
     greedy_qualifiers = 0
     branch_qualifiers = 0
     equality_total = 0
-    fnv = FNV_OFFSET
+    qualifier_word_hash = WORD_HASH_OFFSET
     controls = {}
     max_int64 = np.iinfo(np.int64).max
 
@@ -267,7 +267,9 @@ def main():
                     greedy_qualifiers += 1
                 else:
                     branch_qualifiers += 1
-                fnv = ((fnv ^ q) * FNV_PRIME) & UINT64_MASK
+                qualifier_word_hash = (
+                    (qualifier_word_hash ^ q) * WORD_HASH_MULTIPLIER
+                ) & UINT64_MASK
             else:
                 tau, minimum = minimum_cover_through_seven(edges)
                 require(tau is not None, "hostile minimum cover")
@@ -283,7 +285,8 @@ def main():
     require((qualifier_count, greedy_qualifiers, branch_qualifiers) == (9608, 8837, 771),
             "qualifier census")
     require(equality_total == 0, "finite equality audit")
-    require(fnv == 0x02784121A66537AC, "qualifier standard FNV")
+    require(qualifier_word_hash == 0x02784121A66537AC,
+            "qualifier wordwise XOR/multiply hash")
     require(labels_text(controls[924][2]) == (16, 85, 88, 145, 168, 252),
             "q924 cover")
     require(len(controls[925][1]) == 9 and controls[925][2] is None,
@@ -323,7 +326,7 @@ def main():
               f"cover7={cover is not None};cover={labels_text(cover or 0)};equalities={equalities}")
     for q in (924, 925):
         print(f"direct_fraction_q={q};matching_rows={direct_rows[q]}")
-    print(f"qualifier_q_fnv1a64={fnv:016x}")
+    print(f"qualifier_q_word_xor_mul64={qualifier_word_hash:016x}")
     print("certificate=all_q>=925_by_finite_925_to_9699_plus_eventual_q>=9700")
     print("PASS")
 

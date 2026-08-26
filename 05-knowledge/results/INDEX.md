@@ -9,8 +9,8 @@
   failure is `q=924`, and every `q>=925` supplies all `binom(27,7)=888,030`
   primitive divisor-complete cores, at every common content and with every
   distinct positive odd tail pair. The finite universe has `9,669` labels,
-  `9,608` qualifiers, zero threshold equalities, and standard qualifier
-  FNV-1a-64 `02784121a66537ac`; an eight-edge discrepancy matching proves the
+  `9,608` qualifiers, zero threshold equalities, and ordered-word
+  XOR/multiply fingerprint `02784121a66537ac`; an eight-edge discrepancy matching proves the
   cofinal tail. A hostile cover means only that this sufficient certificate
   fails, not that a body is unsafe. Analytic source/output and C++
   source/output SHA-256:
@@ -19,10 +19,10 @@
   `c0525dc3f0cd66c4ce6a3218171fe22f8ac07b78766fd306ab84381cd8e1b850` /
   `91f19492b174d78747f5fcf3d65fe0af60251651831c17abd507b5b9b53faf01`;
   finite Python source/output and independent C++ source/output:
-  `52ec6e32ea71370882df960efaf815e5a39af4b9048f81fe4281c95f67203232` /
-  `3df1138f38e0bf631f203b2c331d8acde1458f3e6682b643d020c56799300e0f` /
-  `a6b203acd7dc4bb151783c59ad4039466fccc725e9111fcbbb4cc4b395081832` /
-  `014f266c228644a5251d1a8985237e8a0fec956077f9f9eff36a2fd27f00e1eb`.
+  `913f86fa1e27f9af36475535f50bdd57dca5f92dca522967b88ee2aee61f338f` /
+  `86d38ff3cdedb7414852ceaa736e35216ac7b2f17ed33c19cdb535b746bff80d` /
+  `3492ce7ad0b4d177ce364ede3b782aaa965b1f54c0181f528e44b5f81cb4304a` /
+  `046b2952e253bdbbf43c37ac03921b51e9c28af6dbb017eda1fc5acc3b4eb63b`.
 
 - `jc23_row_a_inner_resultant_wall_exclusion_thm4171.py` and an independent
   `(A,C_0)` endpoint audit -> concordant exact wall certificates [THM-4171
@@ -53,17 +53,17 @@
   bodies total, and admits no forced newcomer set of size `2..8`. Two
   deletions qualify exactly `1,032` newcomers, last `q=8,265`, giving
   `918,667,035` bodies with the base family; the analytic supergraph cutoff
-  and complete census rule out re-entry. MISTAKE-512 repairs a fingerprinting
-  label only: the regenerated global audits use the standard FNV-1a offset and
-  agree on `995aa971af1069e4`, with all mathematical ledgers unchanged.
+  and complete census rule out re-entry. MISTAKE-512/513 repair fingerprint
+  metadata only: the audits agree on the explicitly wordwise XOR/multiply
+  sidecar `995aa971af1069e4`, with all mathematical ledgers unchanged.
   THM-4160 primary source/output SHA-256:
   `6cafff20874f4854bcf6f95303a607e13844a53bc066bfaca6ae2d9b150feea8` /
   `cc80874f70b021abc25fb6fc90ba2e9fe8b4e3b4aca82d00b09cfe84011c387f`;
   THM-4166 primary/global Python source/output:
   `e5f91aaaff3876568dbcace7623bdf5c03c8643cc450c5d2945d74ff449d1e55` /
   `276be2254d9e9311fb00a60d7e8397af5d179943aab134fe5530ace319860c86` /
-  `e8ba13e7ebced97744a542f948762fd868c4b92c7789f66876afb94f80cf31d8` /
-  `8021a660f52c6512eb944f78e48328f4e7a50560793b1da300227bbba8fb2f0f`.
+  `4cc8b067458a365c3d7f13fe9af1b0168157f66d573eeeaa99b211f9f1a0fa5a` /
+  `b9a06d4cb1c66bf9f41ef07ef5aa224c216ead6882a8694161844737ddf36708`.
 
 - `jc23_y_only_inner_top_intersection_exclusion_thm4165.py` and an
   independent `(A,C_0)`/local audit -> concordant exact boundary certificates

@@ -368,7 +368,7 @@ int main() {
           "qualifier proof split");
   require(equality_total == 0, "finite equality audit");
   require(qualifier_hash == 0x02784121a66537acULL,
-          "standard FNV-1a qualifier ledger");
+          "qualifier wordwise XOR/multiply hash");
   const auto control_at = [&](int q) -> const Control& {
     const auto row = std::find_if(controls.begin(), controls.end(),
         [q](const Control& control) { return control.q == q; });
@@ -422,7 +422,7 @@ int main() {
     }
     std::cout << ")\n";
   }
-  std::cout << "qualifier_q_fnv1a64=" << std::hex << std::setfill('0')
+  std::cout << "qualifier_q_word_xor_mul64=" << std::hex << std::setfill('0')
             << std::setw(16) << qualifier_hash << std::dec << "\n";
   std::cout << "certificate=all_q>=925_by_finite_925_to_9699_plus_"
                "eventual_q>=9700\n";

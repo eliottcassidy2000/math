@@ -75,9 +75,8 @@ is the safe control `M(S_13)=99/338`. No cited result proves LRC(14).
   give tails, the 60-phase law, and clocks; THM-4129/4136 close fixed `U/2U`.
   THM-4142/4148/4151 give families and the affine gate. THM-4150/4152/4153
   give abstract Haar transfers, but THM-4154 corrects their displayed pools.
-  THM-4156 closes `2,220,075` anchored bodies; [THM-4158](../01-canon/theorems/THM-4158-three-band-wrapped-carrier-odd-tail-lrc14-transfer.md)
-  gives the three-band density and `38,620,298,376` anchored `m=7` bodies.
-  [THM-4160](../01-canon/theorems/THM-4160-anchored-haar-deletion-cover-and-content-tower.md)/
+  THM-4156/[4158](../01-canon/theorems/THM-4158-three-band-wrapped-carrier-odd-tail-lrc14-transfer.md)
+  give anchored pool/carrier families. [THM-4160](../01-canon/theorems/THM-4160-anchored-haar-deletion-cover-and-content-tower.md)/
   [4166](../01-canon/theorems/THM-4166-two-deletion-repair-graph-haar-odd-tail-transfer.md)
   exactly classify one/two deletions (`11,100,375`/`918,667,035` bodies).
   [THM-4170](../01-canon/theorems/THM-4170-triple-deletion-matching-eventual-haar-odd-tail-transfer.md)
@@ -363,8 +362,8 @@ lift/phase clocks.
   [THM-4157](../01-canon/theorems/THM-4157-repeated-top-edge-wall-planar-jacobian-exclusion.md)
   adds `B/C` critical opens and all `D` with `eta!=0`.
   [THM-4171](../01-canon/theorems/THM-4171-row-a-inner-resultant-wall-planar-jacobian-exclusion.md)
-  closes coefficient-open row-`A` `D_A=0` at lengths `22,21,20,19`; other
-  row-`A` and surviving row-`B/C` walls remain. THM-4155 handles Y-only;
+  closes row-`A` `D_A=0` at lengths `22,21,20,19`; other `A/B/C` walls remain.
+  THM-4155 handles Y-only;
   [THM-4159](../01-canon/theorems/THM-4159-inner-resultant-wall-planar-jacobian-exclusion.md),
   [4161](../01-canon/theorems/THM-4161-y-only-double-top-root-planar-jacobian-exclusion.md), and
   [4164](../01-canon/theorems/THM-4164-y-only-triple-top-root-planar-jacobian-exclusion.md)

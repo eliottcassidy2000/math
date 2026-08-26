@@ -32,12 +32,12 @@ script_sha256: e5f91aaaff3876568dbcace7623bdf5c03c8643cc450c5d2945d74ff449d1e55
 output_sha256: 276be2254d9e9311fb00a60d7e8397af5d179943aab134fe5530ace319860c86
 independent_audit_source_sha256: bc3c3547ebdc6e9191dd5f390a01d759d2223b7faf5eeffa2d065b29621e61b1
 independent_audit_output_sha256: 9dda2b76fe4701c03359da9ae4dc1405da1939cf79354d1f99cc977e2653dbe5
-global_census_script_sha256: e8ba13e7ebced97744a542f948762fd868c4b92c7789f66876afb94f80cf31d8
-global_census_output_sha256: 8021a660f52c6512eb944f78e48328f4e7a50560793b1da300227bbba8fb2f0f
-global_census_independent_source_sha256: 611fd46950fd5df6d5645c1f1c1f50883200dd8e596a0cacd0d197bf416eaeca
-global_census_independent_output_sha256: efd801b960f9bd0f35a16bb2e4651265f2f16a8bb61a7b4704dca300eb2a180b
+global_census_script_sha256: 4cc8b067458a365c3d7f13fe9af1b0168157f66d573eeeaa99b211f9f1a0fa5a
+global_census_output_sha256: b9a06d4cb1c66bf9f41ef07ef5aa224c216ead6882a8694161844737ddf36708
+global_census_independent_source_sha256: 17acfe56f3d121858877ff8eeb701b2a70bde75c52a1d2e9079ddd4b931f75f6
+global_census_independent_output_sha256: 3ff8ab357211c5f51cc9f73001bc5e77c375298baee9e032903b15ee32ed1cb1
 q_le_200_semantic_ledger_sha256: 13404c6c2986bd5a14bad57519eb30792adc8e8ea33146b7c68969e33b255394
-global_semantic_fnv1a64: 995aa971af1069e4
+global_semantic_word_xor_mul64: 995aa971af1069e4
 hash_basis: raw LF bytes
 primary_audit: >
   PASS. Sequential exact Fraction intersections independently reconstruct all
@@ -363,13 +363,19 @@ The exact vertex-cover histogram is:
 |count|45|127|124|596|793|6241|38003|2502|377|435|81|45|32|19|11|13|4|5|3|5|2|
 
 Exactly 1,032 rows have `tau>7`. The full qualifier list and all
-`(q,|E|,alpha,tau)` rows are frozen in both global outputs under the common
-standard FNV-1a-64 recurrence, initialized at offset basis
-`0xcbf29ce484222325`,
+`(q,|E|,alpha,tau)` rows are frozen in both global outputs under the following
+wordwise 64-bit XOR/multiply recurrence:
 
 ```text
-FNV-1a-64 = 995aa971af1069e4.                           (32)
+h_0=0xcbf29ce484222325,
+h_(j+1)=((h_j XOR u_j)*0x100000001b3) mod 2^64,
+word-hash=995aa971af1069e4.                             (32)
 ```
+
+For each `q` in increasing order, the unsigned integer words are
+`q,|E|,alpha,adjacency[0],...,adjacency[26]`. There is deliberately no byte
+serialization; this is a reproducibility sidecar, **not** standard bytewise
+FNV-1a-64 (MISTAKE-513).
 
 The maximum cover number is 20, attained exactly at `q=380,386`. The final
 positive and immediate hostile are

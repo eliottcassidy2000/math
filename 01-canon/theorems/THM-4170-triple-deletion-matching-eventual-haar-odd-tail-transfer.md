@@ -34,11 +34,11 @@ output_sha256: 4a48470d4af3b4bc2e35874ddacaa42ebcf296670680521252f4127e411f1ab1
 semantic_sha256: d6ae7826c902ee3dd166a5b0961d29b3f8fd3829ca1c1d256a6677a24da46024
 independent_audit_source_sha256: c0525dc3f0cd66c4ce6a3218171fe22f8ac07b78766fd306ab84381cd8e1b850
 independent_audit_output_sha256: 91f19492b174d78747f5fcf3d65fe0af60251651831c17abd507b5b9b53faf01
-finite_census_script_sha256: 52ec6e32ea71370882df960efaf815e5a39af4b9048f81fe4281c95f67203232
-finite_census_output_sha256: 3df1138f38e0bf631f203b2c331d8acde1458f3e6682b643d020c56799300e0f
-finite_census_independent_source_sha256: a6b203acd7dc4bb151783c59ad4039466fccc725e9111fcbbb4cc4b395081832
-finite_census_independent_output_sha256: 014f266c228644a5251d1a8985237e8a0fec956077f9f9eff36a2fd27f00e1eb
-finite_qualifier_q_fnv1a64: 02784121a66537ac
+finite_census_script_sha256: 913f86fa1e27f9af36475535f50bdd57dca5f92dca522967b88ee2aee61f338f
+finite_census_output_sha256: 86d38ff3cdedb7414852ceaa736e35216ac7b2f17ed33c19cdb535b746bff80d
+finite_census_independent_source_sha256: 3492ce7ad0b4d177ce364ede3b782aaa965b1f54c0181f528e44b5f81cb4304a
+finite_census_independent_output_sha256: 046b2952e253bdbbf43c37ac03921b51e9c28af6dbb017eda1fc5acc3b4eb63b
+finite_qualifier_q_word_xor_mul64: 02784121a66537ac
 hash_basis: raw LF bytes
 primary_audit: >
   PASS. Exact Fraction arithmetic constructs the 7,134 global walls,
@@ -54,8 +54,9 @@ finite_census_audits: >
   PASS/ACCEPT. A vectorized exact common-lattice Python census and a separate
   C++20 grouped-cell implementation classify all 9,669 newcomer labels below
   9,700. They agree on all 61 certificate failures, every minimum-transversal
-  histogram entry, zero equalities, q=924/925 controls, and the standard
-  FNV-1a qualifier ledger. Python normal/-O/seed and C++ O0/O2/UBSan outputs
+  histogram entry, zero equalities, q=924/925 controls, and the specified
+  wordwise XOR/multiply qualifier ledger. Python normal/-O/seed and C++
+  O0/O2/UBSan outputs
   respectively byte-match.
 ---
 
@@ -223,11 +224,17 @@ The minimum-transversal histogram on the 61 failures is
 
 Of the 9,608 qualifiers, 8,837 have the immediate lexicographic matching-of-
 eight certificate; the remaining 771 pass the exhaustive no-seven-cover
-branch. The standard FNV-1a-64 hash of the ordered qualifying `q` ledger is
+branch. The ordered qualifying `q` ledger has the reproducibility sidecar
 
 ```text
-02784121a66537ac.                                        (13)
+h_0=0xcbf29ce484222325,
+h_(j+1)=((h_j XOR q_j)*0x100000001b3) mod 2^64,
+h_final=02784121a66537ac.                                (13)
 ```
+
+Here the qualifying `q_j` are taken in increasing order and each is one
+unsigned integer word. This is a wordwise XOR/multiply recurrence, not
+standard bytewise FNV-1a-64 (MISTAKE-513).
 
 The last certificate failure and the next label form a sharp finite control:
 

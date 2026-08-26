@@ -298,7 +298,7 @@ int main() {
   MarginRecord positive_margin;
   MarginRecord negative_margin;
   std::uint64_t semantic_hash = 14695981039346656037ULL;
-  auto fnv = [&](std::uint64_t value) {
+  auto update_word_hash = [&](std::uint64_t value) {
     semantic_hash ^= value;
     semantic_hash *= 1099511628211ULL;
   };
@@ -370,10 +370,10 @@ int main() {
     ++bounded_cover_checks;
     ++tau_histogram[row.tau];
     if (q <= 200) ++tau_histogram_200[row.tau];
-    fnv(q);
-    fnv(row.edges);
-    fnv(row.alpha);
-    for (const std::uint32_t mask : row.adjacency) fnv(mask);
+    update_word_hash(q);
+    update_word_hash(row.edges);
+    update_word_hash(row.alpha);
+    for (const std::uint32_t mask : row.adjacency) update_word_hash(mask);
     if (row.tau > 7) {
       admitted.push_back(row);
       if (q <= 200) admitted_200.push_back(q);
@@ -419,7 +419,8 @@ int main() {
                         [q](const GraphRow& row) { return row.q == q; }),
             "one-deletion family is subsumed");
   }
-  require(semantic_hash == 0x995aa971af1069e4ULL, "semantic FNV-1a-64");
+  require(semantic_hash == 0x995aa971af1069e4ULL,
+          "semantic wordwise XOR/multiply hash");
 
   std::cout << "THM4166_TWO_DELETION_GLOBAL_CPP_CENSUS_20260826\n";
   std::cout << "q_universe=1..49493 outside P;count=" << universe_count << "\n";
@@ -483,6 +484,7 @@ int main() {
   std::cout << "bodies_per_q=" << bodies_per_q
             << ";extension_bodies=" << extension_bodies
             << ";with_old_thm4156=" << extension_bodies + 2220075 << "\n";
-  std::cout << "semantic_fnv1a64=" << std::hex << semantic_hash << std::dec << "\n";
+  std::cout << "semantic_word_xor_mul64=" << std::hex << semantic_hash
+            << std::dec << "\n";
   std::cout << "PASS\n";
 }
