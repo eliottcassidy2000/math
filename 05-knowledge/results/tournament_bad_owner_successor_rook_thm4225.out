@@ -1,0 +1,14 @@
+THM-4225 exact successor-rook audit
+universe=all labelled tournaments of orders 2..5
+order=2 tournaments=2 subset_checks=8
+order=3 tournaments=8 subset_checks=64
+order=4 tournaments=64 subset_checks=1024
+order=5 tournaments=1024 subset_checks=32768
+totals tournaments=1098 upper_zeta_checks=33864 pair_formula_checks=10648
+control=C3 word=101 C_empty=1 C_full=1 layers=(1, 0, 0, 1)
+control=T2 word=1 C_empty=0 C_full=0 layers=(0, 1, 0)
+control=T3 word=111 C_empty=0 C_full=0 layers=(0, 1, 1, 0)
+control=T4 word=111111 C_empty=0 C_full=0 layers=(0, 1, 4, 1, 0)
+control=T5 word=1111111111 C_empty=0 C_full=0 layers=(0, 1, 11, 11, 1, 0)
+fingerprint_sha256=dd34fcb9f69c0d3bb2fdf79db34967ab3a3a7236e5726140373022464fbc5375
+checks=PASS total_mass,layer_reversal,first_moment,all_upper_zeta_successor_rook,pair_codegree_formula
