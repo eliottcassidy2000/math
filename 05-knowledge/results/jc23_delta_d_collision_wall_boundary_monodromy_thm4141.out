@@ -1,0 +1,12 @@
+THM4141_DELTA_D_BOUNDARY_MONODROMY_PRIMARY
+polygon=(0,1),(2,0),(4,2),(2,4),(0,5);pick=area2:24,boundary:10,genus:8
+collision=L(0,v)=-Delta*Q*v^2*(v-r)^2;L_u=-1376*Q*r^3/135;smooth=YES
+collision_branch=u~-(135*Delta/(1376*r))*v^2;residue_order=6;index=7
+infinity_packet=7,7,2,2,1;ramification_defect=14
+affine_s0_packet=1,1,1,1
+response_degrees=15,19;critical_length=18
+degree19=boundary_cycle_type_7,7,2,2,1!=identity_or_3cycle;EXCLUDED
+degree15=handle_index<=11;carrier_index=2;total<=13<14;EXCLUDED
+hostiles=delete_cubic_loses_transversality;fixed_sum_n+2_allows_transitivity;carrier_index_3_allows_transitivity
+semantic_sha256=400997aaf03937bcb4adc6fd82be47305677e3671c6ab60b50c8d57586ee7b9f
+verdict=DeltaD_wall=EMPTY_RELATIVE;JC2=OPEN;DC2=OPEN
