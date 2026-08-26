@@ -25,7 +25,11 @@ Then read the routed frontier, guardrails, and theorem; logs are history.
    THM-3378 leaving `372913/109/12`. THM-4154 corrects three inherited pools;
    THM-4156 adds `2,220,075` divisor-complete bodies. THM-4158's exact wrapped
    carrier raises the minimum-indexed density to `0.3421696706978653...` and
-   gives `38,620,298,376` anchored `m=7` bodies. Entry and LRC stay open.
+   gives `38,620,298,376` anchored `m=7` bodies. THM-4160/4166 make the
+   one-/two-deletion Haar layers exact (`11,100,375` and `918,667,035`
+   bodies), while THM-4170's triple-deletion certificate fails at exactly 61
+   newcomer labels and succeeds for every `q>=925`, with `888,030` cores per
+   qualifying newcomer. Entry, arbitrary bodies, and LRC stay open.
 2. **The `q <= 25` period claim is refuted.** THM-762/764 exhibit `26*{1,...,12} union {339}`, whose first good period is `27`.
 3. **Good-period existence is a maximum statement.** The tight resonant AP
    defeats average/count arguments; see MISTAKE-127/129/130.
@@ -56,7 +60,8 @@ Then read the routed frontier, guardrails, and theorem; logs are history.
 12. **JC is false from dimension three; JC(2), DC(2) remain open.** THM-1300
     is exact; THM-2084 closes cells. THM-4130/4138/4141/4143 empty `M=8`;
     THM-4147/4157 close the stated `M=9` chambers. In the THM-4155 Y-only chart,
-    THM-4159/4161/4164 leave only `I_C=D_C=0` when `zeta!=0`.
+    THM-4159/4161/4164/4165 close every `zeta!=0` coefficient stratum;
+    THM-4171 closes the coefficient-open repeated-top row-`A` wall `D_A=0`.
 13. **Complete period-14 coordinates can be globally blind.** THM-2058 keeps
     every fixed-depth packet coordinate but exits at `47/113`; THM-2043/2047/
     2050 separate local completeness from global maxima.

@@ -1,5 +1,86 @@
 # Script Results Index
 
+- `lrc14_triple_deletion_matching_eventual_haar_thm4170.py`, its independent
+  C++ audit, and two finite-census implementations -> concordant exact
+  certificates [THM-4170 PROVED RELATIVE TO THM-4150/4156 + VERIFIED-EXACT +
+  INDEPENDENTLY AUDITED; LRC(14) OPEN]. For the fixed THM-4156 pool, every
+  positive newcomer outside the pool except exactly 61 labels has
+  triple-repair transversal number greater than seven; the last certificate
+  failure is `q=924`, and every `q>=925` supplies all `binom(27,7)=888,030`
+  primitive divisor-complete cores, at every common content and with every
+  distinct positive odd tail pair. The finite universe has `9,669` labels,
+  `9,608` qualifiers, zero threshold equalities, and standard qualifier
+  FNV-1a-64 `02784121a66537ac`; an eight-edge discrepancy matching proves the
+  cofinal tail. A hostile cover means only that this sufficient certificate
+  fails, not that a body is unsafe. Analytic source/output and C++
+  source/output SHA-256:
+  `4ae78940383301f7d7bf3fa999781d0ff7358524a26f9e6a2e1159faea3e3313` /
+  `4a48470d4af3b4bc2e35874ddacaa42ebcf296670680521252f4127e411f1ab1` /
+  `c0525dc3f0cd66c4ce6a3218171fe22f8ac07b78766fd306ab84381cd8e1b850` /
+  `91f19492b174d78747f5fcf3d65fe0af60251651831c17abd507b5b9b53faf01`;
+  finite Python source/output and independent C++ source/output:
+  `52ec6e32ea71370882df960efaf815e5a39af4b9048f81fe4281c95f67203232` /
+  `3df1138f38e0bf631f203b2c331d8acde1458f3e6682b643d020c56799300e0f` /
+  `a6b203acd7dc4bb151783c59ad4039466fccc725e9111fcbbb4cc4b395081832` /
+  `014f266c228644a5251d1a8985237e8a0fec956077f9f9eff36a2fd27f00e1eb`.
+
+- `jc23_row_a_inner_resultant_wall_exclusion_thm4171.py` and an independent
+  `(A,C_0)` endpoint audit -> concordant exact wall certificates [THM-4171
+  PROVED RELATIVE TO THE STATED THM-3827--4157 TRANSPORT PACKAGE +
+  VERIFIED-EXACT + INDEPENDENT SOURCE-PAIR/ENDPOINT AUDIT; JC(2) OPEN]. The
+  complete coefficient-open repeated-top row-`A` wall
+  `zeta=-eta`, `eta*Delta*(Delta+Theta)!=0`,
+  `4Theta*K^2-27eta^2=0` has four exhaustive critical lengths
+  `22,21,20,19`, all with genus ten and packet `(7,7,4,2,2,2,1)`.
+  Independent source resultants give residual degrees `18,17,16,15`; four
+  directly audited normalized Morse points restore the lengths. A
+  carrier-orbit lemma makes the full ceilings `6,8,10,12<18` and finite
+  ceilings `3,5,7,9<15`, excluding every nonautomorphic Keller pair on this
+  wall. Other row-`A` walls, rows `B/C`, entry, `M>=10`, JC(2), and DC(2)
+  remain open. Primary script/output SHA-256:
+  `b55a485d9d393d1c01c55425e8416a50800f85cd94215e36cb0e47ff315ae2b4` /
+  `cf837f54b2a1d200a7676ef7e5982f59094d6ab6519e9206a4721ad7a0f8fb34`;
+  independent script/output:
+  `08671e089f20abe3a60c11ea3cc05f65546e8eaeb08f6d1585b32aa763cdb050` /
+  `3a9d86158a92bfec9de67242abb682ca3e3e38c401b6183161d1d172bacda0ba`.
+
+- `lrc14_anchored_deletion_cover_thm4160.py` and
+  `lrc14_two_deletion_repair_graph_thm4166.py`, with independent Fraction,
+  global-lattice, and C++ audits -> complete first two levels of the fixed-pool
+  deletion ladder [THM-4160/4166 PROVED RELATIVE TO THM-4150/4156 +
+  VERIFIED-EXACT + INDEPENDENTLY AUDITED; LRC(14) OPEN]. One deletion adds
+  exactly `q=5,66,182,298,336,340,380,386,528,572`, giving `11,100,375`
+  bodies total, and admits no forced newcomer set of size `2..8`. Two
+  deletions qualify exactly `1,032` newcomers, last `q=8,265`, giving
+  `918,667,035` bodies with the base family; the analytic supergraph cutoff
+  and complete census rule out re-entry. MISTAKE-512 repairs a fingerprinting
+  label only: the regenerated global audits use the standard FNV-1a offset and
+  agree on `995aa971af1069e4`, with all mathematical ledgers unchanged.
+  THM-4160 primary source/output SHA-256:
+  `6cafff20874f4854bcf6f95303a607e13844a53bc066bfaca6ae2d9b150feea8` /
+  `cc80874f70b021abc25fb6fc90ba2e9fe8b4e3b4aca82d00b09cfe84011c387f`;
+  THM-4166 primary/global Python source/output:
+  `e5f91aaaff3876568dbcace7623bdf5c03c8643cc450c5d2945d74ff449d1e55` /
+  `276be2254d9e9311fb00a60d7e8397af5d179943aab134fe5530ace319860c86` /
+  `e8ba13e7ebced97744a542f948762fd868c4b92c7789f66876afb94f80cf31d8` /
+  `8021a660f52c6512eb944f78e48328f4e7a50560793b1da300227bbba8fb2f0f`.
+
+- `jc23_y_only_inner_top_intersection_exclusion_thm4165.py` and an
+  independent `(A,C_0)`/local audit -> concordant exact boundary certificates
+  [THM-4165 PROVED RELATIVE TO THM-3827--4155 + VERIFIED-EXACT + INDEPENDENT
+  SOURCE-PAIR/LOCAL AUDIT; JC(2) OPEN]. The entire Y-only
+  `eta=Delta=0`, `zeta!=0`, `I_C=D_C=0` intersection is empty of
+  nonautomorphic Keller pairs. Its four exhaustive strata have
+  `(L,g)=(20,9),(19,9),(19,9),(19,8)` and close the last `zeta!=0` gap left
+  by THM-4159/4161/4164. The result remains relative to inherited
+  finite-separable carrier/fixed-sheet transport; `zeta=0`, other cells,
+  entry, `M>=10`, JC(2), and DC(2) remain open. Primary script/output and
+  independent script/output SHA-256:
+  `c7c33a1ac8777053dbf31c30072df0e886605239b48e87e74bc179b1a61ab8c6` /
+  `dbc10308c5ee706934630f125d137d579ce1912cb26382197cfac3f4061f69a2` /
+  `64dfc0bc841410c352b8fa135126edcc22733df98f8c83f6bab53e5ec7d4f6dc` /
+  `a4eaf246e5f582ff3356cf85fb09f2fc6f31e0c4430d4183aee3808779ad2bb2`.
+
 - `lrc14_three_band_wrapped_carrier_odd_tail_transfer_thm4158.py` and an
   independent no-import endpoint/wall implementation -> matching exact
   certificates [THM-4158 PROVED ELEMENTARY COMPLETE WRAPPED-CARRIER ALPHABET

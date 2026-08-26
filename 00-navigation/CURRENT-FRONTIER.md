@@ -73,15 +73,17 @@ is the safe control `M(S_13)=99/338`. No cited result proves LRC(14).
   `2^(c(F)-1)`. Safety/arrival stay open.
 - **Owner/tail lane (PROVED):** THM-4025/4031, 4029/4038, and 4033/4042
   give tails, the 60-phase law, and clocks; THM-4129/4136 close fixed `U/2U`.
-  THM-4142/4148/4151 give families and the affine gate.
-  THM-4150/4152/4153 give abstract Haar transfers at `4/63,4/77,4/91`, but
-  THM-4154 shows their displayed pools were already closed at `x=1/12`.
-  THM-4156 instead forces anchors `{120,126,143}` and closes `2,220,075`
-  divisor-complete bodies. [THM-4158](../01-canon/theorems/THM-4158-three-band-wrapped-carrier-odd-tail-lrc14-transfer.md)
-  proves the complete three-band carrier alphabet, density
-  `0.3421696706978653...`, and a `38,620,298,376`-body anchored `m=7`
-  specialization. Its census is minimum-indexed, not the total carrier union;
-  entry, arbitrary bodies, and LRC(14) remain open.
+  THM-4142/4148/4151 give families and the affine gate. THM-4150/4152/4153
+  give abstract Haar transfers, but THM-4154 corrects their displayed pools.
+  THM-4156 closes `2,220,075` anchored bodies; [THM-4158](../01-canon/theorems/THM-4158-three-band-wrapped-carrier-odd-tail-lrc14-transfer.md)
+  gives the three-band density and `38,620,298,376` anchored `m=7` bodies.
+  [THM-4160](../01-canon/theorems/THM-4160-anchored-haar-deletion-cover-and-content-tower.md)/
+  [4166](../01-canon/theorems/THM-4166-two-deletion-repair-graph-haar-odd-tail-transfer.md)
+  exactly classify one/two deletions (`11,100,375`/`918,667,035` bodies).
+  [THM-4170](../01-canon/theorems/THM-4170-triple-deletion-matching-eventual-haar-odd-tail-transfer.md)
+  finds exactly 61 triple-certificate failures, last `q=924`; every `q>=925`
+  supplies `888,030` cores. Failure is not danger; entry, arbitrary bodies,
+  and LRC(14) remain open.
   See the [proof map](LRC14-PROOF-MAP.md).
 - **PROVED:** [THM-2928](../01-canon/theorems/THM-2928-critical-seven-comb-grid-tensorization-and-drift-tariff.md)/2941: literal zero/one/two/three-drift sectors are empty; `k=2,3` are finite.
 - **Orthogonal routes.** THM-1017 is HYP-6820; THM-2047/2050 keep phase/exit; THM-731/2048 prune; THM-1290 ends at `55`; HYP-8900 nonuniform.
@@ -359,17 +361,17 @@ lift/phase clocks.
 - **Jacobian/Dixmier:** `JC(2),DC(2)` remain **OPEN**. THM-4130/4138/4141/4143
   empty exact `M=8`; THM-4147 excludes `M=9` `P/Y/B/A`.
   [THM-4157](../01-canon/theorems/THM-4157-repeated-top-edge-wall-planar-jacobian-exclusion.md)
-  adds `B/C` critical opens and all `D` with `eta!=0`, including `J=0` and
-  the zero-Hessian wall `H_30=0`; row-`A` wall `4Theta K^2-27eta^2=0` is next.
-  THM-4155 handles the coefficient-open Y-only slice. On its inner/top
-  boundaries, [THM-4159](../01-canon/theorems/THM-4159-inner-resultant-wall-planar-jacobian-exclusion.md)
-  closes `I_C=0,D_C!=0`, while
-  [THM-4161](../01-canon/theorems/THM-4161-y-only-double-top-root-planar-jacobian-exclusion.md)
-  and [THM-4164](../01-canon/theorems/THM-4164-y-only-triple-top-root-planar-jacobian-exclusion.md)
-  close every double/triple point of `D_C=0,I_C!=0`. Thus for `zeta!=0`
-  that Y-only chart has been squeezed to the codimension-two intersection
-  `I_C=D_C=0`. That intersection, other walls/cells, `M>=10`, and entry stay
-  open.
+  adds `B/C` critical opens and all `D` with `eta!=0`.
+  [THM-4171](../01-canon/theorems/THM-4171-row-a-inner-resultant-wall-planar-jacobian-exclusion.md)
+  closes coefficient-open row-`A` `D_A=0` at lengths `22,21,20,19`; other
+  row-`A` and surviving row-`B/C` walls remain. THM-4155 handles Y-only;
+  [THM-4159](../01-canon/theorems/THM-4159-inner-resultant-wall-planar-jacobian-exclusion.md),
+  [4161](../01-canon/theorems/THM-4161-y-only-double-top-root-planar-jacobian-exclusion.md), and
+  [4164](../01-canon/theorems/THM-4164-y-only-triple-top-root-planar-jacobian-exclusion.md)
+  close its inner/top walls for `zeta!=0`.
+  [THM-4165](../01-canon/theorems/THM-4165-y-only-inner-top-triple-intersection-planar-jacobian-exclusion.md)
+  closes their intersection. Thus Y-only is empty for `zeta!=0`; `zeta=0`,
+  other cells, `M>=10`, and entry stay open.
   Exceptional quartic: THM-3703/3737 give grammar/image, THM-4034 the
   conductor, and THM-4039/4043/4046 reach `J_7`, obstruct `J_8`, and close
   critical `H`. [THM-4054](../01-canon/theorems/THM-4054-exceptional-affine-simple-zero-retained-packet.md)
