@@ -1,0 +1,94 @@
+THM-4223 exact audit transcript
+================================
+
+Status separation
+-----------------
+PROVED: the Boolean cut-cover hierarchy and the formulas for H, End_i,
+N_ij, D_i, q, B_ij, and the endpoint multigraph degrees.
+REFUTED: B_ij <= End_i End_j for all strong tournaments.
+FINITE-EXACT / OPEN: B_ij <= End_i End_j + min(End_i,End_j) survives the
+complete strong-class census through order nine; no all-order proof is
+claimed.
+
+Environment
+-----------
+Apple clang version 17.0.0 (clang-1700.0.13.5)
+Target: arm64-apple-darwin24.3.0
+Homebrew nauty 2.9.3:
+  /opt/homebrew/bin/gentourng -> ../Cellar/nauty/2.9.3/bin/gentourng
+
+Build
+-----
+clang++ -std=c++17 -O3 -Wall -Wextra -pedantic \
+  04-computation/tournament_cyclic_cut_cover_boolean_mobius_thm4223.cpp \
+  -o /tmp/tournament-cut-cover-thm4223-O3
+
+Direct order-nine witness
+-------------------------
+Command:
+  /tmp/tournament-cut-cover-thm4223-O3 --direct-witness
+
+Output:
+mode=direct_witness
+encoding=upper_triangle_row_major;1_means_i_to_j
+word=110111111111111111111111011111111110
+order=9 strong=yes cyclic_orders=40320
+H=85 c=1
+End=(1,1,2,1,5,10,20,5,40)
+A=(0,0,1,0,4,9,19,4,39)
+D=(0,17,84,50,219,387,655,420,1082)
+outdegree=(7,7,6,5,4,3,2,1,1)
+pair=6,7 N=128 B=104 End_product=100 product_plus_min=105
+pair=7,8 N=249 B=205 End_product=200 product_plus_min=205
+checks=PASS permutation_vs_DP,all_exact_formulas,boolean_mobius_512_subsets
+
+The direct mode literally scans all 9! linear vertex orders. Fixing vertex
+zero first gives the 8!=40320 cyclic orders modulo rotation. Independently,
+subset Hamilton-path DP reconstructs H, End, D, c, and the two-path-cover
+counts. The mode also forms the complete 512-entry Boolean zeta transform
+and inverts it back to every exact bad-owner count C_S.
+
+Complete strong-class census through order nine
+------------------------------------------------
+Commands:
+  for n in 3 4 5 6 7 8 9; do
+    /opt/homebrew/bin/gentourng -q -c "$n" | \
+      /tmp/tournament-cut-cover-thm4223-O3
+  done
+
+Output:
+order=3 strong_classes=1 product_failures=0 worst_product_excess=0 repaired_failures=0 product_equal_positive=0 repaired_equal_positive=0
+checks=PASS strong_input,H_End_D_q_formulas,nonnegative_B
+order=4 strong_classes=1 product_failures=0 worst_product_excess=0 repaired_failures=0 product_equal_positive=1 repaired_equal_positive=0
+checks=PASS strong_input,H_End_D_q_formulas,nonnegative_B
+order=5 strong_classes=6 product_failures=0 worst_product_excess=0 repaired_failures=0 product_equal_positive=3 repaired_equal_positive=0
+checks=PASS strong_input,H_End_D_q_formulas,nonnegative_B
+order=6 strong_classes=35 product_failures=0 worst_product_excess=0 repaired_failures=0 product_equal_positive=8 repaired_equal_positive=0
+checks=PASS strong_input,H_End_D_q_formulas,nonnegative_B
+order=7 strong_classes=353 product_failures=0 worst_product_excess=0 repaired_failures=0 product_equal_positive=21 repaired_equal_positive=0
+checks=PASS strong_input,H_End_D_q_formulas,nonnegative_B
+order=8 strong_classes=6008 product_failures=0 worst_product_excess=0 repaired_failures=0 product_equal_positive=56 repaired_equal_positive=0
+checks=PASS strong_input,H_End_D_q_formulas,nonnegative_B
+product_failure word=110111111111111111111111011111111110 pair=6,7 c=1 End_i=20 End_j=5 N=128 B=104 product=100 product_plus_min=105
+product_failure word=110111111111111111111111011111111110 pair=7,8 c=1 End_i=5 End_j=40 N=249 B=205 product=200 product_plus_min=205
+order=9 strong_classes=178133 product_failures=2 worst_product_excess=5 repaired_failures=0 product_equal_positive=146 repaired_equal_positive=1
+checks=PASS strong_input,H_End_D_q_formulas,nonnegative_B
+
+The class total is
+  1+1+6+35+353+6008+178133 = 184537.
+
+Compiler and sanitizer cross-checks
+------------------------------------
+An O0 binary was built with
+  clang++ -std=c++17 -O0 -Wall -Wextra -pedantic [source] -o [O0 binary]
+
+Process-substitution diff checks gave byte-identical O0/O3 streams for the
+direct witness and the full order-nine strong-class census:
+  BYTE_MATCH_O0_O3_n9_and_witness=PASS
+
+An AddressSanitizer/UndefinedBehaviorSanitizer binary was built with
+  clang++ -std=c++17 -O1 -g -fsanitize=address,undefined \
+    -fno-omit-frame-pointer [source] -o [sanitizer binary]
+
+It completed the direct order-nine witness and all 353 strong order-seven
+classes with the same displayed summaries and no sanitizer report.
