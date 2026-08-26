@@ -1,0 +1,44 @@
+q50 zero-original minimal-anchor independent referee
+method=direct exact circle arrangement + literal combinations
+ruler=91205797082400 walls=7214 atoms=7213 q_safe_masks=2605
+q_safe_total=6/7
+E5 candidates=142506 edges=3017 equalities=0 min_edge_delta=9312918552 max_nonedge_delta=-3452771070 bytewise_fnv1a64=0x610758055bc9b339
+E6 candidates=593775 edges=85324 equalities=0 min_edge_delta=17425422 max_nonedge_delta=-131971518 bytewise_fnv1a64=0xae5939488dda3e3f
+E7 candidates=2035800 edges=821737 equalities=0 min_edge_delta=17425422 max_nonedge_delta=-20115648 bytewise_fnv1a64=0xd166afaf21409479
+control {8,10,15,20,143,176,290} mass=2912475704927/45602898541200
+control {10,15,20,85,120,143,176} mass=2566056877/40320865200
+minimal_anchor_search_nodes=19397927 valid_stop_nodes=4891436
+minimal_anchor_sizes={4:32,5:297,6:24}
+body_candidates=8436285 valid_bodies=1491665 uncovered=0
+body_first_anchor_size={4:1138494,5:348712,6:4459}
+body_contains_anchor_size={4:1138494,5:1206549,6:63155}
+body_anchor_presentations={4:3230304,5:7821198,6:143640}
+four_anchor_body_multiplicity={0:353171,1:262761,2:332137,3:204900,4:178178,5:59560,6:66399,7:13188,8:11229,9:6149,10:2666,11:658,12:493,13:140,15:36}
+all_anchor_body_multiplicity={1:37492,2:80107,3:121064,4:173876,5:122833,6:165819,7:72822,8:175353,9:109352,10:115676,11:16340,12:156347,13:11075,14:48665,15:27638,16:24656,18:32550}
+body_bytewise_fnv1a64=0x54b17755072176af
+size5_E5_covers=21506 histogram={3:33,4:1229,5:20244} anchors_with_cover=256 bytewise_fnv1a64=0x90516e3542e3d959
+size5_E6_survivors=15 bodies=2
+size5_survivor_body={16,88,95,145,168,170,193,240,252,286} presentation_multiplicity=9 E7_disjoint_repairs=736 first_E7_repair={8,10,15,20,80,85,290}
+size5_survivor_body={80,88,95,145,168,170,193,240,252,286} presentation_multiplicity=6 E7_disjoint_repairs=514 first_E7_repair={8,10,15,16,20,85,120}
+size5_survivor_presentation A={16,95,170,252,286} K={88,145,168,193,240} |K|=5 E7_cover=0
+size5_survivor_presentation A={88,95,170,252,286} K={16,145,168,193,240} |K|=5 E7_cover=0
+size5_survivor_presentation A={88,95,170,252,286} K={80,145,168,193,240} |K|=5 E7_cover=0
+size5_survivor_presentation A={16,145,170,252,286} K={88,95,168,193,240} |K|=5 E7_cover=0
+size5_survivor_presentation A={88,145,170,252,286} K={16,95,168,193,240} |K|=5 E7_cover=0
+size5_survivor_presentation A={88,145,170,252,286} K={80,95,168,193,240} |K|=5 E7_cover=0
+size5_survivor_presentation A={95,168,170,252,286} K={16,88,145,193,240} |K|=5 E7_cover=0
+size5_survivor_presentation A={95,168,170,252,286} K={80,88,145,193,240} |K|=5 E7_cover=0
+size5_survivor_presentation A={145,168,170,252,286} K={16,88,95,193,240} |K|=5 E7_cover=0
+size5_survivor_presentation A={145,168,170,252,286} K={80,88,95,193,240} |K|=5 E7_cover=0
+size5_survivor_presentation A={16,170,193,252,286} K={88,95,145,168,240} |K|=5 E7_cover=0
+size5_survivor_presentation A={88,170,193,252,286} K={16,95,145,168,240} |K|=5 E7_cover=0
+size5_survivor_presentation A={88,170,193,252,286} K={80,95,145,168,240} |K|=5 E7_cover=0
+size5_survivor_presentation A={168,170,193,252,286} K={16,88,95,145,240} |K|=5 E7_cover=0
+size5_survivor_presentation A={168,170,193,252,286} K={80,88,95,145,240} |K|=5 E7_cover=0
+size6_E5_covers=4 histogram={4:4} anchors_with_cover=2 anchors_without_cover=22 bytewise_fnv1a64=0x190b62cd1cc4b58b
+size6_E6_survivors=0 bodies=0
+size6_E5_cover A={42,63,88,132,286,290} K={80,85,168,193} |K|=4 E6_disjoint_repairs=913 first_E6_repair={8,10,15,16,95,145}
+size6_E5_cover A={42,63,88,132,286,290} K={85,168,193,240} |K|=4 E6_disjoint_repairs=708 first_E6_repair={8,10,15,16,95,145}
+size6_E5_cover A={42,63,88,132,286,290} K={95,168,193,240} |K|=4 E6_disjoint_repairs=461 first_E6_repair={8,10,16,80,85,145}
+size6_E5_cover A={42,63,132,176,286,290} K={95,168,193,240} |K|=4 E6_disjoint_repairs=651 first_E6_repair={8,10,15,85,88,143}
+structural_self_check=PASS
