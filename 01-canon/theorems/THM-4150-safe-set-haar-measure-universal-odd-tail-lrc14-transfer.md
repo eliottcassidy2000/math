@@ -16,15 +16,14 @@ depends_on:
 related:
   - THM-4142-common-safe-arc-clock-pool-universal-odd-tail-lrc14-completion
   - THM-4148-first-window-width-universal-odd-tail-lrc14-transfer
-  - THM-4149-minimum-two-first-window-odd-tail-lrc14-transfer
 script: 04-computation/lrc14_safe_set_haar_measure_odd_tail_transfer_thm4150.py
 output: 05-knowledge/results/lrc14_safe_set_haar_measure_odd_tail_transfer_thm4150.out
 independent_audit_script: 04-computation/lrc14_safe_set_haar_measure_odd_tail_transfer_thm4150_independent_audit.py
 independent_audit_output: 05-knowledge/results/lrc14_safe_set_haar_measure_odd_tail_transfer_thm4150_independent_audit.out
-script_sha256: bbd1b717dc716c3fde2aff0b30da350060913391b92a4d1b792a6f106919785e
+script_sha256: 4e81f65385ea81137bb3a8465ca6b7bb635592873960df57001f7d10e5c67283
 output_sha256: e35db11b0e380bf9391f29d8d4d7221548f227fdde058625c6716d1401d3e16d
 semantic_sha256: 9b08f96a0b6771ddadc366232f0cd7e3d07b208d3328668890b6a6cc24a5390f
-independent_audit_script_sha256: f74e3b7e8a1bb6be6492eb399944e2292368e20c3733c1199d36ff6e4f5598c3
+independent_audit_script_sha256: fed4a4ffbc750b66b88a2161319812e843d876c98cacb5db6773091c739aecca
 independent_audit_output_sha256: f8aa43bb153b637e04f5b7653e532dc08fcedefca4b07744cc38bc2bcd0a5cba
 independent_semantic_sha256: 1686df22845483de1378e8c91e9fb1260bfd826fb56e3652e607e8eb67ccf81e
 hash_basis: raw LF bytes
@@ -96,8 +95,14 @@ B_(p,q)=D_p intersect (D_q-1/2),                         (5)
 ```
 
 then the other term is `B_(p,q)+1/2`. These terms are disjoint because
-`D_p intersect (D_p-1/2)` is empty. Doubling identifies them, so for the
-open bad quotient `C_(p,q)` one has
+`D_p intersect (D_p-1/2)` is empty. More precisely, the inverse image of the
+open bad quotient under doubling is their disjoint union,
+
+```text
+m_2^(-1)(C_(p,q))=B_(p,q) disjoint_union (B_(p,q)+1/2).
+```
+
+Haar invariance under the surjective doubling map therefore gives
 
 ```text
 mu(C_(p,q))=2mu(B_(p,q)).                                (6)
@@ -256,7 +261,7 @@ there are `binom(j-i-1,9)` such bodies. Summing this number over exactly the
 pairs satisfying THM-4148's stated conditions
 
 ```text
-min H>=3,             27(13 min H-max H)>=4 min H max H (23)
+27(13 min H-max H)>=4 min H max H.                       (23)
 ```
 
 gives `208,000`. Therefore the complementary

@@ -177,7 +177,7 @@ def main() -> None:
     for i, smallest in enumerate(POOL):
         for j in range(i + 10, len(POOL)):
             largest = POOL[j]
-            if smallest >= 3 and 27 * (13 * smallest - largest) >= 4 * smallest * largest:
+            if 27 * (13 * smallest - largest) >= 4 * smallest * largest:
                 width_count += comb(j - i - 1, 9)
     check(total == 193_536_720, "family total")
     check(width_count == 208_000, "width subfamily")

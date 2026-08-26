@@ -235,7 +235,7 @@ def body_audit() -> dict[str, object]:
         for j in range(i + 10, len(POOL)):
             maximum = POOL[j]
             choices = comb(j - i - 1, 9)
-            if minimum >= 3 and 27 * (13 * minimum - maximum) >= 4 * minimum * maximum:
+            if 27 * (13 * minimum - maximum) >= 4 * minimum * maximum:
                 width_covered += choices
     require(width_covered == 208_000, "THM4148-covered subfamily")
     new_beyond_width = family_count - width_covered
