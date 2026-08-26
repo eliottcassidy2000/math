@@ -1,0 +1,73 @@
+AUDIT exactly_one_original_all_q_joint_wall_exhaustive
+ROW q 6 anchor 40,143,252 D5 raw 50160 projected_unique 21728 exact_seven_covers 0
+ROW q 6 anchor 80,143,252 D5 raw 50160 projected_unique 18647 exact_seven_covers 0
+ROW q 6 anchor 143,240,252 D5 raw 50160 projected_unique 16208 exact_seven_covers 0
+ROW q 22 anchor 40,143,252 D5 raw 54396 projected_unique 27213 exact_seven_covers 0
+ROW q 22 anchor 80,143,252 D5 raw 54396 projected_unique 23730 exact_seven_covers 0
+ROW q 22 anchor 143,240,252 D5 raw 54396 projected_unique 22003 exact_seven_covers 0
+ROW q 24 anchor 40,143,252 D5 raw 51188 projected_unique 23419 exact_seven_covers 0
+ROW q 24 anchor 80,143,252 D5 raw 51188 projected_unique 19593 exact_seven_covers 0
+ROW q 24 anchor 143,240,252 D5 raw 51188 projected_unique 18080 exact_seven_covers 0
+ROW q 25 anchor 40,143,252 D5 raw 34684 projected_unique 15819 exact_seven_covers 0
+ROW q 25 anchor 80,143,252 D5 raw 34684 projected_unique 14056 exact_seven_covers 0
+ROW q 25 anchor 143,240,252 D5 raw 34684 projected_unique 11786 exact_seven_covers 2 witnesses [85,88,95,132,145,168,193;653037585685254] [85,88,95,145,168,193,264;653523957351594] D6_raw 320668 D6_projected_unique 109010 D6_exact_seven_covers 0 D6_tau 10 D6_tau_search_nodes 30688
+ROW q 48 anchor 40,143,252 D5 raw 77327 projected_unique 35912 exact_seven_covers 0
+ROW q 48 anchor 80,143,252 D5 raw 77327 projected_unique 31703 exact_seven_covers 0
+ROW q 48 anchor 143,240,252 D5 raw 77327 projected_unique 33781 exact_seven_covers 0
+ROW q 70 anchor 40,143,252 D5 raw 73996 projected_unique 35292 exact_seven_covers 0
+ROW q 70 anchor 80,143,252 D5 raw 73996 projected_unique 31337 exact_seven_covers 0
+ROW q 70 anchor 143,240,252 D5 raw 73996 projected_unique 29866 exact_seven_covers 0
+ROW q 72 anchor 40,143,252 D5 raw 59802 projected_unique 28200 exact_seven_covers 0
+ROW q 72 anchor 80,143,252 D5 raw 59802 projected_unique 26184 exact_seven_covers 0
+ROW q 72 anchor 143,240,252 D5 raw 59802 projected_unique 22324 exact_seven_covers 0
+ROW q 96 anchor 40,143,252 D5 raw 21457 projected_unique 8734 exact_seven_covers 0
+ROW q 96 anchor 80,143,252 D5 raw 21457 projected_unique 7098 exact_seven_covers 0
+ROW q 96 anchor 143,240,252 D5 raw 21457 projected_unique 8083 exact_seven_covers 0
+ROW q 100 anchor 40,143,252 D5 raw 26410 projected_unique 11721 exact_seven_covers 0
+ROW q 100 anchor 80,143,252 D5 raw 26410 projected_unique 9079 exact_seven_covers 0
+ROW q 100 anchor 143,240,252 D5 raw 26410 projected_unique 8249 exact_seven_covers 0
+ROW q 105 anchor 40,143,252 D5 raw 37139 projected_unique 16606 exact_seven_covers 0
+ROW q 105 anchor 80,143,252 D5 raw 37139 projected_unique 14735 exact_seven_covers 0
+ROW q 105 anchor 143,240,252 D5 raw 37139 projected_unique 13228 exact_seven_covers 1 witnesses [85,88,95,132,145,168,193;137058830954262] D6_raw 325808 D6_projected_unique 113647 D6_exact_seven_covers 0 D6_tau 9 D6_tau_search_nodes 13475
+ROW q 110 anchor 40,143,252 D5 raw 44484 projected_unique 17529 exact_seven_covers 0
+ROW q 110 anchor 80,143,252 D5 raw 44484 projected_unique 14127 exact_seven_covers 0
+ROW q 110 anchor 143,240,252 D5 raw 44484 projected_unique 16574 exact_seven_covers 0
+ROW q 128 anchor 40,143,252 D5 raw 31275 projected_unique 11325 exact_seven_covers 0
+ROW q 128 anchor 80,143,252 D5 raw 31275 projected_unique 8970 exact_seven_covers 0
+ROW q 128 anchor 143,240,252 D5 raw 31275 projected_unique 8612 exact_seven_covers 0
+ROW q 130 anchor 40,143,252 D5 raw 105407 projected_unique 50140 exact_seven_covers 0
+ROW q 130 anchor 80,143,252 D5 raw 105407 projected_unique 47062 exact_seven_covers 0
+ROW q 130 anchor 143,240,252 D5 raw 105407 projected_unique 48227 exact_seven_covers 0
+ROW q 140 anchor 40,143,252 D5 raw 59351 projected_unique 25665 exact_seven_covers 0
+ROW q 140 anchor 80,143,252 D5 raw 59351 projected_unique 21389 exact_seven_covers 0
+ROW q 140 anchor 143,240,252 D5 raw 59351 projected_unique 20669 exact_seven_covers 0
+ROW q 186 anchor 40,143,252 D5 raw 61671 projected_unique 28351 exact_seven_covers 0
+ROW q 186 anchor 80,143,252 D5 raw 61671 projected_unique 24431 exact_seven_covers 0
+ROW q 186 anchor 143,240,252 D5 raw 61671 projected_unique 23275 exact_seven_covers 0
+ROW q 192 anchor 40,143,252 D5 raw 43980 projected_unique 18108 exact_seven_covers 0
+ROW q 192 anchor 80,143,252 D5 raw 43980 projected_unique 15208 exact_seven_covers 0
+ROW q 192 anchor 143,240,252 D5 raw 43980 projected_unique 16532 exact_seven_covers 0
+ROW q 206 anchor 40,143,252 D5 raw 65683 projected_unique 31832 exact_seven_covers 0
+ROW q 206 anchor 80,143,252 D5 raw 65683 projected_unique 27009 exact_seven_covers 0
+ROW q 206 anchor 143,240,252 D5 raw 65683 projected_unique 28588 exact_seven_covers 0
+ROW q 210 anchor 40,143,252 D5 raw 26533 projected_unique 9604 exact_seven_covers 0
+ROW q 210 anchor 80,143,252 D5 raw 26533 projected_unique 8515 exact_seven_covers 0
+ROW q 210 anchor 143,240,252 D5 raw 26533 projected_unique 6844 exact_seven_covers 3 witnesses [16,85,88,95,145,168,193;133790709734640] [85,88,95,132,145,168,193;143619922477458] [85,88,95,145,168,193,264;146192452975926] D6_raw 261505 D6_projected_unique 79772 D6_exact_seven_covers 0 D6_tau 10 D6_tau_search_nodes 24019
+ROW q 220 anchor 40,143,252 D5 raw 77964 projected_unique 35132 exact_seven_covers 0
+ROW q 220 anchor 80,143,252 D5 raw 77964 projected_unique 30779 exact_seven_covers 0
+ROW q 220 anchor 143,240,252 D5 raw 77964 projected_unique 30776 exact_seven_covers 0
+ROW q 256 anchor 40,143,252 D5 raw 25765 projected_unique 10176 exact_seven_covers 0
+ROW q 256 anchor 80,143,252 D5 raw 25765 projected_unique 8015 exact_seven_covers 0
+ROW q 256 anchor 143,240,252 D5 raw 25765 projected_unique 7164 exact_seven_covers 4 witnesses [16,85,88,95,132,168,193;2208945420479952] [16,85,88,95,168,193,264;2197395006204888] [16,88,95,132,168,170,193;2139814748215242] [16,88,95,168,170,193,264;2133799951864014] D6_raw 273944 D6_projected_unique 85739 D6_exact_seven_covers 0 D6_tau 10 D6_tau_search_nodes 22957
+ROW q 260 anchor 40,143,252 D5 raw 61262 projected_unique 26322 exact_seven_covers 0
+ROW q 260 anchor 80,143,252 D5 raw 61262 projected_unique 23085 exact_seven_covers 0
+ROW q 260 anchor 143,240,252 D5 raw 61262 projected_unique 22240 exact_seven_covers 0
+ROW q 294 anchor 40,143,252 D5 raw 68909 projected_unique 29666 exact_seven_covers 0
+ROW q 294 anchor 80,143,252 D5 raw 68909 projected_unique 25249 exact_seven_covers 0
+ROW q 294 anchor 143,240,252 D5 raw 68909 projected_unique 25007 exact_seven_covers 0
+ROW q 366 anchor 40,143,252 D5 raw 57331 projected_unique 25835 exact_seven_covers 0
+ROW q 366 anchor 80,143,252 D5 raw 57331 projected_unique 21550 exact_seven_covers 0
+ROW q 366 anchor 143,240,252 D5 raw 57331 projected_unique 19839 exact_seven_covers 0
+SUMMARY D5_ROWS 69 D5_ZERO_COVER_ROWS 65 D5_COVER_ROWS 4 D6_ROWS 4 D6_ZERO_COVER_ROWS 4
+SEMANTIC_LEDGER_FNV1A64_LE dd68c95b98fb9926
+VERDICT PASS

@@ -1,0 +1,77 @@
+PROBE exactly_one_original_all_q_native_repairs
+ROW q 6 anchor 40,143,252 D5 raw 50160 projected_minimal 1017 has_cover_le7 0 nodes 790
+ROW q 6 anchor 80,143,252 D5 raw 50160 projected_minimal 811 has_cover_le7 0 nodes 784
+ROW q 6 anchor 143,240,252 D5 raw 50160 projected_minimal 868 has_cover_le7 0 nodes 790
+ROW q 22 anchor 40,143,252 D5 raw 54396 projected_minimal 1523 has_cover_le7 0 nodes 688
+ROW q 22 anchor 80,143,252 D5 raw 54396 projected_minimal 1142 has_cover_le7 0 nodes 688
+ROW q 22 anchor 143,240,252 D5 raw 54396 projected_minimal 1193 has_cover_le7 0 nodes 688
+ROW q 24 anchor 40,143,252 D5 raw 51188 projected_minimal 1812 has_cover_le7 0 nodes 1471
+ROW q 24 anchor 80,143,252 D5 raw 51188 projected_minimal 1403 has_cover_le7 0 nodes 1259
+ROW q 24 anchor 143,240,252 D5 raw 51188 projected_minimal 1606 has_cover_le7 0 nodes 1505
+ROW q 25 anchor 40,143,252 D5 raw 34684 projected_minimal 1478 has_cover_le7 0 nodes 703
+ROW q 25 anchor 80,143,252 D5 raw 34684 projected_minimal 1260 has_cover_le7 0 nodes 649
+ROW q 25 anchor 143,240,252 D5 raw 34684 projected_minimal 1206 has_cover_le7 1 nodes 286 witness 85,88,95,132,145,168,193 has_cover_le6 0 nodes_le6 385 body_delta 6530375856852540
+ROW q 25 anchor 143,240,252 D6 raw 320668 projected_minimal 5651 has_cover_le7 0 nodes 3009 has_cover_le8 0 nodes_le8 5710 has_cover_le9 0 nodes_le9 10357 has_cover_le10 1 nodes_le10 9161 witness10 8,80,85,88,95,132,145,168,193,286
+ROW q 48 anchor 40,143,252 D5 raw 77327 projected_minimal 862 has_cover_le7 0 nodes 550
+ROW q 48 anchor 80,143,252 D5 raw 77327 projected_minimal 719 has_cover_le7 0 nodes 559
+ROW q 48 anchor 143,240,252 D5 raw 77327 projected_minimal 761 has_cover_le7 0 nodes 667
+ROW q 70 anchor 40,143,252 D5 raw 73996 projected_minimal 982 has_cover_le7 0 nodes 475
+ROW q 70 anchor 80,143,252 D5 raw 73996 projected_minimal 893 has_cover_le7 0 nodes 409
+ROW q 70 anchor 143,240,252 D5 raw 73996 projected_minimal 812 has_cover_le7 0 nodes 568
+ROW q 72 anchor 40,143,252 D5 raw 59802 projected_minimal 1266 has_cover_le7 0 nodes 508
+ROW q 72 anchor 80,143,252 D5 raw 59802 projected_minimal 1046 has_cover_le7 0 nodes 514
+ROW q 72 anchor 143,240,252 D5 raw 59802 projected_minimal 1119 has_cover_le7 0 nodes 517
+ROW q 96 anchor 40,143,252 D5 raw 21457 projected_minimal 1581 has_cover_le7 0 nodes 2827
+ROW q 96 anchor 80,143,252 D5 raw 21457 projected_minimal 1095 has_cover_le7 0 nodes 2635
+ROW q 96 anchor 143,240,252 D5 raw 21457 projected_minimal 1415 has_cover_le7 0 nodes 3023
+ROW q 100 anchor 40,143,252 D5 raw 26410 projected_minimal 1076 has_cover_le7 0 nodes 1176
+ROW q 100 anchor 80,143,252 D5 raw 26410 projected_minimal 849 has_cover_le7 0 nodes 1012
+ROW q 100 anchor 143,240,252 D5 raw 26410 projected_minimal 876 has_cover_le7 0 nodes 1336
+ROW q 105 anchor 40,143,252 D5 raw 37139 projected_minimal 637 has_cover_le7 0 nodes 837
+ROW q 105 anchor 80,143,252 D5 raw 37139 projected_minimal 523 has_cover_le7 0 nodes 792
+ROW q 105 anchor 143,240,252 D5 raw 37139 projected_minimal 543 has_cover_le7 1 nodes 741 witness 85,88,95,132,145,168,193 has_cover_le6 0 nodes_le6 419 body_delta 28782354500395020
+ROW q 105 anchor 143,240,252 D6 raw 325808 projected_minimal 4417 has_cover_le7 0 nodes 2357 has_cover_le8 0 nodes_le8 4513 has_cover_le9 1 nodes_le9 4694 witness9 8,80,85,88,95,132,145,168,193
+ROW q 110 anchor 40,143,252 D5 raw 44484 projected_minimal 1180 has_cover_le7 0 nodes 1429
+ROW q 110 anchor 80,143,252 D5 raw 44484 projected_minimal 883 has_cover_le7 0 nodes 1125
+ROW q 110 anchor 143,240,252 D5 raw 44484 projected_minimal 1051 has_cover_le7 0 nodes 1429
+ROW q 128 anchor 40,143,252 D5 raw 31275 projected_minimal 1207 has_cover_le7 0 nodes 1019
+ROW q 128 anchor 80,143,252 D5 raw 31275 projected_minimal 883 has_cover_le7 0 nodes 980
+ROW q 128 anchor 143,240,252 D5 raw 31275 projected_minimal 935 has_cover_le7 0 nodes 1035
+ROW q 130 anchor 40,143,252 D5 raw 105407 projected_minimal 1225 has_cover_le7 0 nodes 604
+ROW q 130 anchor 80,143,252 D5 raw 105407 projected_minimal 1103 has_cover_le7 0 nodes 544
+ROW q 130 anchor 143,240,252 D5 raw 105407 projected_minimal 1129 has_cover_le7 0 nodes 772
+ROW q 140 anchor 40,143,252 D5 raw 59351 projected_minimal 788 has_cover_le7 0 nodes 607
+ROW q 140 anchor 80,143,252 D5 raw 59351 projected_minimal 681 has_cover_le7 0 nodes 595
+ROW q 140 anchor 143,240,252 D5 raw 59351 projected_minimal 660 has_cover_le7 0 nodes 670
+ROW q 186 anchor 40,143,252 D5 raw 61671 projected_minimal 911 has_cover_le7 0 nodes 469
+ROW q 186 anchor 80,143,252 D5 raw 61671 projected_minimal 765 has_cover_le7 0 nodes 454
+ROW q 186 anchor 143,240,252 D5 raw 61671 projected_minimal 779 has_cover_le7 0 nodes 469
+ROW q 192 anchor 40,143,252 D5 raw 43980 projected_minimal 868 has_cover_le7 0 nodes 721
+ROW q 192 anchor 80,143,252 D5 raw 43980 projected_minimal 682 has_cover_le7 0 nodes 607
+ROW q 192 anchor 143,240,252 D5 raw 43980 projected_minimal 716 has_cover_le7 0 nodes 721
+ROW q 206 anchor 40,143,252 D5 raw 65683 projected_minimal 1561 has_cover_le7 0 nodes 790
+ROW q 206 anchor 80,143,252 D5 raw 65683 projected_minimal 1259 has_cover_le7 0 nodes 748
+ROW q 206 anchor 143,240,252 D5 raw 65683 projected_minimal 1261 has_cover_le7 0 nodes 859
+ROW q 210 anchor 40,143,252 D5 raw 26533 projected_minimal 627 has_cover_le7 0 nodes 1084
+ROW q 210 anchor 80,143,252 D5 raw 26533 projected_minimal 543 has_cover_le7 0 nodes 1108
+ROW q 210 anchor 143,240,252 D5 raw 26533 projected_minimal 473 has_cover_le7 1 nodes 370 witness 16,85,88,95,145,168,193 has_cover_le6 0 nodes_le6 526 body_delta 56192098088548800
+ROW q 210 anchor 143,240,252 D6 raw 261505 projected_minimal 3107 has_cover_le7 0 nodes 1913 has_cover_le8 0 nodes_le8 3893 has_cover_le9 0 nodes_le9 7529 has_cover_le10 1 nodes_le10 9145 witness10 8,80,85,88,95,132,145,168,193,290
+ROW q 220 anchor 40,143,252 D5 raw 77964 projected_minimal 1093 has_cover_le7 0 nodes 721
+ROW q 220 anchor 80,143,252 D5 raw 77964 projected_minimal 937 has_cover_le7 0 nodes 631
+ROW q 220 anchor 143,240,252 D5 raw 77964 projected_minimal 970 has_cover_le7 0 nodes 739
+ROW q 256 anchor 40,143,252 D5 raw 25765 projected_minimal 1454 has_cover_le7 0 nodes 1242
+ROW q 256 anchor 80,143,252 D5 raw 25765 projected_minimal 1083 has_cover_le7 0 nodes 1164
+ROW q 256 anchor 143,240,252 D5 raw 25765 projected_minimal 1104 has_cover_le7 1 nodes 1113 witness 16,85,88,95,132,168,193 has_cover_le6 0 nodes_le6 704 body_delta 70686253455358464
+ROW q 256 anchor 143,240,252 D6 raw 273944 projected_minimal 4184 has_cover_le7 0 nodes 2185 has_cover_le8 0 nodes_le8 4401 has_cover_le9 0 nodes_le9 8894 has_cover_le10 1 nodes_le10 5646 witness10 8,16,80,85,88,95,168,176,193,264
+ROW q 260 anchor 40,143,252 D5 raw 61262 projected_minimal 969 has_cover_le7 0 nodes 682
+ROW q 260 anchor 80,143,252 D5 raw 61262 projected_minimal 720 has_cover_le7 0 nodes 652
+ROW q 260 anchor 143,240,252 D5 raw 61262 projected_minimal 856 has_cover_le7 0 nodes 688
+ROW q 294 anchor 40,143,252 D5 raw 68909 projected_minimal 758 has_cover_le7 0 nodes 712
+ROW q 294 anchor 80,143,252 D5 raw 68909 projected_minimal 623 has_cover_le7 0 nodes 634
+ROW q 294 anchor 143,240,252 D5 raw 68909 projected_minimal 622 has_cover_le7 0 nodes 712
+ROW q 366 anchor 40,143,252 D5 raw 57331 projected_minimal 885 has_cover_le7 0 nodes 730
+ROW q 366 anchor 80,143,252 D5 raw 57331 projected_minimal 693 has_cover_le7 0 nodes 754
+ROW q 366 anchor 143,240,252 D5 raw 57331 projected_minimal 766 has_cover_le7 0 nodes 733
+SUMMARY D5_ROWS 69 D5_ZERO_COVER_ROWS 65 D5_COVER_ROWS 4 D6_ROWS 4 D6_ZERO_COVER_ROWS 4
+PRIMARY_SEMANTIC_LEDGER_FNV1A64_LE 1b82498b55f45bd3
+VERDICT PASS
