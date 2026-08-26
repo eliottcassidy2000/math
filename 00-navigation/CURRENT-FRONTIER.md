@@ -109,7 +109,8 @@ is the safe control `M(S_13)=99/338`. No cited result proves LRC(14).
 
 ## Mahler `3/2`
 
-**OPEN.** [Detailed route](MAHLER-THREE-HALVES-FRONTIER-2026-08-23.md): THM-4077 separates tangent coding from termination; THM-4082 gives the common linear chart, exact defect `s+2+2v_2(x)`, and distinct transported fibres, but no strict-safe termination or Z-number decision.
+**OPEN.** [Detailed route](MAHLER-THREE-HALVES-FRONTIER-2026-08-23.md): THM-4072
+gives the reset law and `A=8/13` hostile; THM-4077/4082 give charts, not a Z-number.
 
 ## ABC-IUT
 

@@ -8,8 +8,9 @@ status: >
   simple root, zeta!=0, and I_C!=0 is excluded. The J_top!=0 stratum has
   (g,L,packet)=(9,21,(8,5,3,2,2,2,1)); the J_top=0 ordinary-node stratum has
   (8,20,(8,3,2,2,2,2,2,1)); its unique cusp has
-  (8,18,(8,3,3,2,2,2,1)). The triple-root and I_C intersections, other
-  cells, entry, M>=10, JC(2), and DC(2) remain OPEN.
+  (8,18,(8,3,3,2,2,2,1)). THM-4164 subsequently closes the triple-root
+  locus off `I_C=0`; the common `I_C=0,Disc(C)=0` intersections, other cells,
+  entry, M>=10, JC(2), and DC(2) remain OPEN.
 source: codex-lrc14-jc-sharp-fronts-20260825b
 depends_on:
   - THM-3827-generic-fibre-genus-floor-for-nonlinear-cubic-plane-atlases
@@ -25,6 +26,8 @@ depends_on:
 related:
   - THM-4157-repeated-top-edge-wall-planar-jacobian-exclusion
   - THM-4159-inner-resultant-wall-planar-jacobian-exclusion
+  - THM-4164-y-only-triple-top-root-planar-jacobian-exclusion
+  - THM-4165-y-only-inner-top-triple-intersection-planar-jacobian-exclusion
 script: 04-computation/jc23_y_only_double_top_root_exclusion_thm4161.py
 output: 05-knowledge/results/jc23_y_only_double_top_root_exclusion_thm4161.out
 secondary_wall_script: 04-computation/jc23_y_only_double_top_root_secondary_wall_thm4161.py
@@ -33,6 +36,10 @@ secondary_wall_independent_audit_script: 04-computation/jc23_y_only_double_top_r
 secondary_wall_independent_audit_output: 05-knowledge/results/jc23_y_only_double_top_root_secondary_wall_thm4161_independent_audit.out
 independent_audit_script: 04-computation/jc23_y_only_double_top_root_exclusion_thm4161_independent_audit.py
 independent_audit_output: 05-knowledge/results/jc23_y_only_double_top_root_exclusion_thm4161_independent_audit.out
+supplementary_direct_root_script: 04-computation/jc23_y_only_double_top_root_wall_thm4161.py
+supplementary_direct_root_output: 05-knowledge/results/jc23_y_only_double_top_root_wall_thm4161.out
+supplementary_direct_root_independent_audit_script: 04-computation/jc23_y_only_double_top_root_wall_thm4161_independent_audit.py
+supplementary_direct_root_independent_audit_output: 05-knowledge/results/jc23_y_only_double_top_root_wall_thm4161_independent_audit.out
 script_sha256: a56f09c2caa143023158920149c934720f19d0cb63b7d15f34473e0c785f9034
 output_sha256: 17536d51e1cb6028a891a858786402971c2d8936f86063136d7a5b55395c6206
 secondary_wall_script_sha256: 4ee43862a1dcab4f3ab78f82575c09d4fb180f60aab38efd288844b89d2fae06
@@ -41,10 +48,16 @@ secondary_wall_independent_audit_script_sha256: 41ae504d2f3b876ec1886373d3288b62
 secondary_wall_independent_audit_output_sha256: 7812dde796acae90ed3cc4736597c7cfdf523ee0e011983447a35ff6e63c53ba
 independent_audit_script_sha256: 20b1848044b6cdec82c58aa8281fa14086476f8fe686e693ea91537202ce86c7
 independent_audit_output_sha256: e39b5a0bd1924cb60a6d901c505482780cdc2da96e9e8fea77fc8f676fc9e801
+supplementary_direct_root_script_sha256: 6f2181240b8fd5897f922f3c26067f4c91031f869b77e8bb14dfc89df438cbfd
+supplementary_direct_root_output_sha256: 6ace665c7d3d9449fd04b0cad9913ef3c1bce955b6ae04513a5fb9102195269b
+supplementary_direct_root_independent_audit_script_sha256: 9846b3d1e659af51ffe5f2f3bc5dd841c8184c0274e01f617c334413bfc289c3
+supplementary_direct_root_independent_audit_output_sha256: 8ecdced043a929d942cc952496abac6b2d9a902d8fa9c3a3df5948462b767bc9
 semantic_sha256: 69d972a9d14186b328695dc08804eebffb089449648ff3cd20ddec53c1fd0b25
 secondary_wall_semantic_sha256: 8943b86c9bc0ea5ec9643939d57e5ae6f714482b55591a550b9abb3c29bb29ef
 secondary_wall_independent_semantic_sha256: 1e9ac64e08b9d18ec7560f8e9704c57b8e4d25e10968050ffd13ebe10c75b079
 independent_semantic_sha256: 632743f7b69862cb9cc39c0abc80060087ed08c5c45e23141c773e83ec0169be
+supplementary_direct_root_semantic_sha256: 9e00cdbf68489a26e824458a177af856cda10244c613f062662896b96b4556ff
+supplementary_direct_root_independent_semantic_sha256: ca74eeb5e783553cd866a708b8f08d119c7fd18ea561ac10762940e5cb38755d
 hash_basis: raw LF bytes
 primary_audit: >
   PASS. The generic-wall certificate reconstructs both critical projections,
@@ -63,6 +76,11 @@ independent_audit: >
   ACCEPT. A clean-room source-chart referee recovers the double root from its
   linear subresultant, uses the alternative critical pair (A,C_0), a disjoint
   control, and independently reconstructs the generic packet and responses.
+supplementary_direct_root_audit: >
+  ACCEPT. Two further exact certificates use the reciprocal-free direct-root
+  chart C=zeta(W-r)^2(W-u). They independently reconstruct I_C, both degree-17
+  endpoint resultants, the quadratic top contact, ramification index five,
+  packet, genus, and response contradictions on the J_C*I_C!=0 subchart.
 ---
 
 # THM-4161 -- complete Y-only nontriple double-top-root exclusion
@@ -512,7 +530,52 @@ C triple: a=b, requiring a cubic strict transform.
 There is no remaining `J_C` exception: its ordinary-node and cusp strata are
 both included above.
 
-## 7. Exact artifacts and replay
+THM-4159 subsequently closes `I_C=0` away from the top collision, and
+THM-4164 closes the triple-root locus away from `I_C=0`. Their common
+`I_C=0,Disc(C)=0` intersections remain outside all three theorems.
+
+## 7. Supplementary direct-root chart audit
+
+An independent reciprocal-free chart writes
+
+```text
+C(W)=zeta(W-r)^2(W-u),       zeta=kappa/(r^2u),
+P_I=2027776r^3u+1013888r^2u^2+17415,
+I_C=-44032P_I/(273375r^4u^2).
+```
+
+Under
+
+```text
+r*u*(r-u)*(356r^2+15)*P_I != 0,
+```
+
+this is exactly the `J_C*I_C!=0` part of Sections 1--4 after
+`(a,b)=(1/r,1/u)`. Direct elimination, without reciprocal substitution,
+independently gives
+
+```text
+Res_s(A,B)=p^6R_17,
+R_17(0)=3877634048P_I/(50625r^6u^3),
+
+Res_X(f,h)=T^56(6T+1)^2Q_17,
+Q_17(0)=-72965752821794209792/(56953125r^14u^7).
+```
+
+Both leading coefficients contain `(r-u)^3(356r^2+15)`; the normalized one
+also contains `P_I^2`. The direct top chart has unit `L_z` and
+`z~(W-r)^2`, hence `ord(omega)=4` and ramification index five. It reproduces
+
+```text
+(g,L,packet)=(9,21,(8,5,3,2,2,2,1))
+```
+
+and all full and finite response contradictions. A second clean-room script
+reconstructs the same endpoint factors, direct-root chart, and the control
+`(r,u)=(1,2)`. This is supplementary corroboration of the generic subchart;
+Section 5, not this audit, closes `J_C=0`.
+
+## 8. Exact artifacts and replay
 
 ```text
 python3 -B 04-computation/jc23_y_only_double_top_root_exclusion_thm4161.py
@@ -530,6 +593,14 @@ PYTHONHASHSEED=313 python3 -B 04-computation/jc23_y_only_double_top_root_seconda
 python3 -B 04-computation/jc23_y_only_double_top_root_secondary_wall_thm4161_independent_audit.py
 python3 -B -O 04-computation/jc23_y_only_double_top_root_secondary_wall_thm4161_independent_audit.py
 PYTHONHASHSEED=347 python3 -B 04-computation/jc23_y_only_double_top_root_secondary_wall_thm4161_independent_audit.py
+
+python3 -B 04-computation/jc23_y_only_double_top_root_wall_thm4161.py
+python3 -B -O 04-computation/jc23_y_only_double_top_root_wall_thm4161.py
+PYTHONHASHSEED=127 python3 -B 04-computation/jc23_y_only_double_top_root_wall_thm4161.py
+
+python3 -B 04-computation/jc23_y_only_double_top_root_wall_thm4161_independent_audit.py
+python3 -B -O 04-computation/jc23_y_only_double_top_root_wall_thm4161_independent_audit.py
+PYTHONHASHSEED=127 python3 -B 04-computation/jc23_y_only_double_top_root_wall_thm4161_independent_audit.py
 ```
 
 This theorem does not prove `JC(2)` or `DC(2)`. **QED.**

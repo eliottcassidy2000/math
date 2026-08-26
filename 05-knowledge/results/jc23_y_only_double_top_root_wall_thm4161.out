@@ -1,0 +1,15 @@
+THM4161_Y_ONLY_DOUBLE_TOP_ROOT_WALL_20260825
+status=PASS;scope=symbolic identities plus exact nonempty control
+gate=r*u*(r-u)*(356r^2+15)*P_I!=0
+P_I=2027776r^3u+1013888r^2u^2+17415
+I_C=-44032*P_I/(273375r^4u^2)
+source_resultant=p^6*R17;normalized_resultant=T^56*(6T+1)^2*Q17
+source_endpoints=nonzero_exact;normalized_endpoints=nonzero_exact
+control=(r,u)=(1,2);R17_squarefree;Q17_squarefree;Q17(-1/6)!=0
+universal_critical_points=4;hessians=6,-6;L=21
+top_chart=z~(W-r)^2;omega_order=4;collided_index=5
+packet=(8,5,3,2,2,2,1);g=9;defect=16
+responses=full(n=23,commutator_cap=4);finite(n=17,beta=3,caps=14,15,3)
+hostile_walls=P_I=0|u=r|356r^2+15=0
+checks=31
+semantic_sha256=9e00cdbf68489a26e824458a177af856cda10244c613f062662896b96b4556ff

@@ -166,6 +166,54 @@
   primary semantic SHA-256/FNV-64:
   `b1d8f0a1cad02303d3560e1deb471794d3b9fdcff0b1e1cffe12379674f6cdb6` /
   `416565bf17102710`.
+- The THM-4159/4161/4164 Y-only wall suites, including eight independent
+  source-chart audits and the supplementary direct-root pair below ->
+  concordant exact exclusions [PROVED RELATIVE TO THM-4155 + VERIFIED-EXACT
+  + INDEPENDENTLY AUDITED; JC(2) OPEN]. THM-4159 closes `I_C=0` when
+  `zeta*Disc(C)!=0`; THM-4161 closes every nontriple double-top root with
+  `zeta*I_C!=0`, including its ordinary-node and unique cusp subwalls; THM-4164
+  closes the triple-top-root locus with `zeta*I_C!=0`. The common
+  `I_C=0,Disc(C)=0` intersections remain open. The supplementary direct-root
+  chart `C=zeta(W-r)^2(W-u)` independently reconstructs the generic THM-4161
+  packet `(8,5,3,2,2,2,1)`, `(g,L)=(9,21)`, and both response failures; it
+  does not replace THM-4161's separate `J_C=0` closure. Supplementary
+  primary script/output/semantic SHA-256:
+  `6f2181240b8fd5897f922f3c26067f4c91031f869b77e8bb14dfc89df438cbfd` /
+  `6ace665c7d3d9449fd04b0cad9913ef3c1bce955b6ae04513a5fb9102195269b` /
+  `9e00cdbf68489a26e824458a177af856cda10244c613f062662896b96b4556ff`;
+  supplementary independent:
+  `9846b3d1e659af51ffe5f2f3bc5dd841c8184c0274e01f617c334413bfc289c3` /
+  `8ecdced043a929d942cc952496abac6b2d9a902d8fa9c3a3df5948462b767bc9` /
+  `ca74eeb5e783553cd866a708b8f08d119c7fd18ea561ac10762940e5cb38755d`.
+
+- `lrc14_three_band_wrapped_carrier_odd_tail_transfer_thm4158.py` and an
+  independent warning-clean C++ audit -> matching exact carrier ledgers
+  [THM-4158 PROVED ELEMENTARY TRANSFER + VERIFIED-EXACT + INDEPENDENTLY
+  AUDITED; LRC(14) OPEN]. The maximal fixed carrier has three wrapped bands
+  for `m>=2` and a fourth only at `m=1`; every finite selected body, after
+  doubling, accepts every distinct positive odd tail pair. Anchors
+  `{7,120,126,143}` give `38,620,298,376` primitive divisor-complete `m=7`
+  bodies outside both first-window gates. The full minimum-indexed eleven-body
+  family has asymptotic label density `0.3421696706978653...`; `m=1` gives
+  `1,144,066` bodies. Primary script/output/semantic SHA-256/FNV:
+  `cc087514ad555e18b5ab70ecd2682d9cac99e2990f53b734c43a2074904fa3eb` /
+  `dce9609981e9fba105c342921d0bb482f2cb5646cbaa1dc4a0b28eeab0f82975` /
+  `9ef136184225c88a692eb1aca0a33e5be60e02f4cf27a20c04939be98ba6d96e` /
+  `0f8d84ecb8dee6a5`; independent script/output/FNV:
+  `0ff9a928a8a53f39e2597447e58ae5b419e6d7efe81ae24bc2262609e515002f` /
+  `95c8b95e7dc658b233f8492766950c9e5eca4380eebf20348de8b271e530e0c3` /
+  `0e2f276aaba5e6c8`.
+
+- `mahler_clocked_reset_skeleton_corollary_thm4072_independent_audit.py` ->
+  matching `.out` [THM-4072 SUPPLEMENTARY PROVED COROLLARY + VERIFIED-EXACT +
+  INDEPENDENTLY HOSTILE-AUDITED; MAHLER `3/2` OPEN]. Every carry cylinder has
+  `A=r_m+2^m k => T^m(A)=u_m+3^m k`; each finite reset skeleton is one residue
+  modulo a power of two. The minimal same-depth `A=8/13` hostile defeats the
+  `(m,q,h,native-one-seen)` quotient. This is finite compatibility, not an
+  infinite safe orbit. Script/output/semantic SHA-256:
+  `98420f520cba0fdb7bd817a53c82ae6a0afdad8b4cdb9dd9d254127d93634a92` /
+  `ef1e2ebcba654c808eebf9c1b0ba316a6c3fbc9de905b820356acce9fcd7bf9e` /
+  `e1212aecd45106af21a8452c442d7023eeec55adda3772f9f62e99977f4fa57f`.
 
 - `tournament_rooted_pair_mixed_twoear_tensor_thm4162.py`, the order-eleven
   tensor engine/aggregator, and an independent literal child-DP engine ->
@@ -267,7 +315,8 @@
   `T^56(6T+1)^2Q18`, and
   `(g,L,packet)=(9,22,(8,3,3,3,2,2,2,1))`. The full response `n=24` fails
   `4<16`, while finite `(n,beta)=(18,3)` has merger capacity `16<17`.
-  The inner and top-face collision walls remain open. Primary script/output
+  THM-4159/4161/4164 subsequently close the inner and top-face collision
+  strata away from their common `I_C=0,Disc(C)=0` intersections. Primary script/output
   SHA-256:
   `4e9e8ca0c1a3f864003ee5869882f15439669858cbaf22096b02724a376d8e32` /
   `8d78bc243e4027c76f6116d35c5dcd16191e45221ef4a80bfa98240bae976513`;

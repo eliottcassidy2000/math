@@ -8,8 +8,9 @@ status: >
   contains no nonautomorphic planar Keller pair. Its three exhaustive
   critical strata have lengths 21,20,19; all retain genus 9 and packet
   (8,3,3,3,2,2,2,1). The carrier-orbit lemma excludes every finite response.
-  The top-face collision, zeta=0, other cells, entry, M>=10, JC(2), and DC(2)
-  remain OPEN.
+  THM-4161/4164 subsequently close the nontriple/triple top collisions off
+  `I_C=0`; the common `I_C=0,Disc(C)=0` intersections, zeta=0, other cells,
+  entry, M>=10, JC(2), and DC(2) remain OPEN.
 source: codex-lrc14-jc-sharp-fronts-20260825b
 depends_on:
   - THM-3827-generic-fibre-genus-floor-for-nonlinear-cubic-plane-atlases

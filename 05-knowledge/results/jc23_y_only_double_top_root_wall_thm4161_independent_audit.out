@@ -1,0 +1,17 @@
+THM4161_DOUBLE_TOP_ROOT_INDEPENDENT_REFEREE_20260825
+verdict=ACCEPT_PROVED_RELATIVE_TO_INHERITED_THM4155_MECHANISMS;canon_status=PROVED_RELATIVE
+audit_levels=symbolic:parametrization,resultants,top_chart,hostile_jets;finite:r1u2_squarefree_nonemptiness
+gate=r*u*(r-u)*(356*r^2+15)*P_I != 0;P_I=2027776*r**3*u + 1013888*r**2*u**2 + 17415
+IC=-44032*(2027776*r**3*u + 1013888*r**2*u**2 + 17415)/(273375*r**4*u**2)
+source=p^6*R17;degree=17;R0=3877634048*(2027776*r**3*u + 1013888*r**2*u**2 + 17415)/(50625*r**6*u**3);Rlead=3289935900927224469054816256*(r - u)**3*(356*r**2 + 15)/(252226880859375*r**16*u**8)
+normalized=T^56*(6*T+1)^2*Q17;degree=17;Q0=-72965752821794209792/(56953125*r**14*u**7);Qlead=210555897659342366019508240384*(r - u)**3*(356*r**2 + 15)*(2027776*r**3*u + 1013888*r**2*u**2 + 17415)**2/(9308590679915771484375*r**20*u**10)
+critical_length=21;universal_hessians=(6,-6)
+top_contact=2;omega_order=4;top_index=5
+newton=(area2:27,boundary:11,pick_genus:9);packet=(8, 5, 3, 2, 2, 2, 1);defect=16;genus_relative=9
+responses=full:23,finite:17,beta:3;full_cap=4;finite_caps=(14, 15, 3)
+hostiles=PI_zero:endpoints;u_eq_r:degree16_contact3;Ar_zero:node_or_thinner_cusp
+control_r_u=(1,2);coefficients=(688/135, -2752/135, 688/27, -89478737152/273375, 2968/45);R_squarefree=1;Q_squarefree=1;Q_minus_sixth_nonzero=1
+control_R_coeff_sha256=0d14190b525dc4c4aa1256550300d0621a751769be7a958f588854935847e8ff
+control_Q_coeff_sha256=1c4ccd362d490e6a5a5408b1265528bd3ad62789651220d82eb5e620c925ab9d
+checks=53
+semantic_sha256=ca74eeb5e783553cd866a708b8f08d119c7fd18ea561ac10762940e5cb38755d
