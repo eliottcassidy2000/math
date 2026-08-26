@@ -1,0 +1,10 @@
+labels_sha256=17062afaf0be31fef492a0e3d1c5ef810b1997713a7a30c75d9997b1602fbace
+digraph6_sha256=b0e87b8faf6238275aa238fbc7d4f2b8e5d8c47c7b3d38d06e19ef0a8d49e2cd
+rows=12155 rowwise_label_match=1 independently_prime=12155
+automorphism_distribution=12128 graphs : groupsize=3 |          23 graphs : groupsize=5 |           3 graphs : groupsize=11 |           1 graphs : groupsize=55 |  12155 graphs altogether
+hostile_label=0000001100100001000000000000111111011101111111111000101
+hostile_prime=1 module_witness=None
+hostile_self_converse=1
+hostile_automorphism=1 graphs : groupsize=1 |  1 graphs altogether
+hostile_deletion_unique=11
+hostile_prime_card_indices=1,6,10

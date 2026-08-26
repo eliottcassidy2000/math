@@ -1,0 +1,31 @@
+run_dir=<temporary>
+raw_3x2_by_residue
+0 0
+1 0
+2 1296960
+3 1296960
+4 1296960
+5 1296960
+6 1296960
+7 1296960
+8 1296960
+9 1296960
+10 1296960
+11 1296960
+12 1296960
+13 1296960
+14 0
+15 0
+raw_other_types
+3x3 285120
+5x2 960
+11 32
+canonical_counts
+3x2.union 10808
+3x3.canon 1320
+5x2.canon 24
+11.canon 4
+all.union 12155
+census_sha256 23bd0908762e66c999ca1138895f3a9068a03eb7efc7cc8ad2c3bbff03c738d3
+canonical_d6_sha256 b0e87b8faf6238275aa238fbc7d4f2b8e5d8c47c7b3d38d06e19ef0a8d49e2cd
+frozen_d6_byte_match=1
