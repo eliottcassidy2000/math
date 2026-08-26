@@ -2,7 +2,7 @@
 id: THM-4188
 title: "Every-newcomer zero-original hierarchy and exact 23-resonance filtration"
 status: >
-  PROVED RELATIVE TO THM-4150/4170/4174/4185 + VERIFIED-EXACT PRIMARY
+  PROVED RELATIVE TO THM-4150/4170/4174/4175/4185 + VERIFIED-EXACT PRIMARY
   POOL-WALL AND INDEPENDENT JOINT-WALL AUDITS; LRC(14) OPEN. For every
   positive newcomer q outside the fixed thirty-label pool, all 1,491,665
   primitive divisor-complete zero-original ten-bodies have Haar mass at
@@ -11,12 +11,15 @@ status: >
   closes by a uniform shallower native repair hierarchy. A strict-limit
   component-discrepancy argument closes all q>=2587 independently of the
   finite census. A separate endpoint-erosion sidecar sharpens this sufficient
-  cofinal range to q>=2479 but is not load-bearing for the theorem.
+  cofinal range to q>=2479 but is not load-bearing for the theorem. Together
+  with the disjoint THM-4174 and THM-4175 slices, this gives 9,039,920 named
+  cores per newcomer.
 source: codex-lrc-q-deformation-20260826
 depends_on:
   - THM-4150-safe-set-haar-measure-universal-odd-tail-lrc14-transfer
   - THM-4170-triple-deletion-matching-eventual-haar-odd-tail-transfer
   - THM-4174-six-deletion-completion-of-divisor-complete-newcomer-haar-transfer
+  - THM-4175-haar-failure-atom-deletion-tomography-and-anchor-exchange
   - THM-4185-q50-complete-zero-original-minimal-anchor-hierarchy
 related:
   - THM-4178-q50-divisor-complete-anchor-triple-exchange
@@ -63,7 +66,7 @@ sharpening_audit: >
 
 # THM-4188 -- every-newcomer zero-original hierarchy and resonance filtration
 
-**PROVED RELATIVE TO THM-4150/4170/4174/4185 + VERIFIED-EXACT; LRC(14)
+**PROVED RELATIVE TO THM-4150/4170/4174/4175/4185 + VERIFIED-EXACT; LRC(14)
 REMAINS OPEN.**
 
 ## 1. Exact all-newcomer statement
@@ -144,17 +147,18 @@ cores. For `N>=290`, newcomer labels `1<=q<=N` supply
 (N-30)*1,491,665.                                        (10)
 ```
 
-Combining the disjoint zero-original slice here with the all-three-original
-slice of THM-4174 gives exactly
+Combining the three pairwise-disjoint original-anchor-count slices proved by
+THM-4174 (all three originals), THM-4175 (exactly two originals), and this
+theorem (zero originals) gives exactly
 
 ```text
-1,491,665+888,030=2,379,695                              (11)
+888,030+6,660,225+1,491,665=9,039,920                   (11)
 ```
 
-named cores per newcomer. Equation `(11)` makes no claim about the
-exactly-one- or exactly-two-original slices away from `q=50`. At `q=50`, the
-four separately proved slices still total `10,111,881` as recorded in
-THM-4185; `(11)` neither duplicates nor replaces that count.
+named cores per newcomer. Only the exactly-one-original slice is not promoted
+uniformly in `q`: at `q=50`, THM-4179 supplies its `1,071,961` cores, and
+`9,039,920+1,071,961=10,111,881`, the four-slice total recorded in THM-4185.
+Equation `(11)` neither duplicates nor replaces that `q=50` count.
 
 ## 2. Exact edgewise phase diagram
 
@@ -480,8 +484,9 @@ Its normal and UBSan output SHA-256 is
    `binom(U,10)`. Arbitrary ten-bodies and other body sizes remain outside the
    statement.
 3. Only the zero-original slice is deformed here. THM-4174 separately supplies
-   the all-three-original slice. Exactly-one and exactly-two slices are not
-   promoted uniformly in `q` by this theorem.
+   the all-three-original slice and THM-4175 supplies the exactly-two-original
+   slice for every newcomer. The exactly-one-original slice remains
+   `q=50`-only through THM-4179.
 4. The conclusion is the safe-set Haar bound and universal doubled-body
    transfer for positive common content and two distinct positive odd tails.
    It does not establish physical entry, mixed/even-tail branches, or an

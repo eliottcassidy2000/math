@@ -9,6 +9,28 @@ Format per entry:
 - Why it was wrong
 - The correct framing
 
+## MISTAKE-515 (2026-08-26, THM-4188 cross-slice synthesis) -- a complete all-newcomer theorem was omitted from the inherited count
+
+- **What failed:** the first promoted THM-4188 synthesis combined its new
+  zero-original slice only with THM-4174's all-three-original slice. It said
+  that neither the exactly-one- nor exactly-two-original slice was known
+  uniformly in the newcomer `q`, undercounting the named disjoint cores as
+  `2,379,695` per newcomer.
+- **Minimal witness / first failed implication:** THM-4175 is explicitly a
+  complete C++ all-`q` theorem for every `q notin P`; its one-anchor-exchange
+  bodies contain exactly two members of `A_0` and contribute `6,660,225`
+  cores per newcomer. The failed implication was that the `q=50` provenance
+  of the surrounding exchange program limited THM-4175's promoted scope.
+- **Repair / strongest survivor:** the zero-original THM-4188 theorem and its
+  `1,491,665` count are unchanged. The corrected pairwise-disjoint synthesis
+  is `888,030+6,660,225+1,491,665=9,039,920` cores for every newcomer. Only
+  THM-4179's exactly-one-original `1,071,961` slice remains `q=50`-only,
+  recovering the known four-slice total `10,111,881` there.
+- **Reusable rule:** before declaring an anchor-count slice nonuniform,
+  search the exact theorem status and all-parameter quantifier, not only its
+  historical motivating label. Partitioned novelty counts require a complete
+  past-work scope audit across every slice.
+
 ## MISTAKE-514 (2026-08-26, Y-only exact-weight-nine routing) -- a filtration exit was listed as an open coefficient wall
 
 - **What failed:** current navigation and several Y-only theorem synopses
