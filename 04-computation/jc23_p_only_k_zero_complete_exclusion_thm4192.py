@@ -334,6 +334,116 @@ for face_poly in linear_face_polynomials:
     need(sp.degree(face_poly, w) == 1,
          "a claimed rational face ceased to be primitive-linear")
 
+# Projection hostile A: two distinct Morse critical points share one T-value.
+# The real algebraic parameter tau is isolated exactly, and the quotient-fibre
+# resultant proves that X=0,1 are the complete common fibre.
+tau = sp.symbols("tau")
+C3 = sp.Poly(68352 * tau**3 - 9632 * tau**2 + 1680 * tau - 945, tau)
+left, right = sp.Rational(51, 200), sp.Rational(32, 125)
+need(C3.eval(left) < 0 and C3.eval(right) > 0,
+     "collision interval signs changed")
+need(C3.count_roots(left, right) == 1 and sp.discriminant(C3) < 0,
+     "collision interval no longer isolates the unique real root")
+B_tau = (
+    68352 * tau**6 + 205056 * tau**5 + 195424 * tau**4
+    + 49088 * tau**3 - 7952 * tau**2 + 1680 * tau - 315
+)
+eta_tau = sp.factor(
+    -2 * B_tau / (315 * tau**4 * (tau + 1)**2 * (5 * tau + 2))
+)
+Phi_tau = sp.factor(-eta_tau * tau)
+Theta_tau = sp.factor((
+    136704 * tau**7 + 410112 * tau**6 + 390848 * tau**5
+    + 98176 * tau**4 - 15904 * tau**3 + 3360 * tau**2
+    + 945 * tau + 630
+) / (630 * tau**4 * (tau + 1)**2 * (5 * tau + 2)))
+collision_values = {Phi: Phi_tau, Theta: Theta_tau, eta: eta_tau}
+for label, expression in collision_values.items():
+    numerator, denominator = sp.together(expression).as_numer_denom()
+    need(sp.gcd(C3, sp.Poly(numerator, tau)).degree() == 0,
+         f"collision {label} can vanish")
+    need(sp.gcd(C3, sp.Poly(denominator, tau)).degree() == 0,
+         f"collision {label} denominator can vanish")
+
+
+def tau_remainder(expr):
+    numerator, denominator = sp.together(expr).as_numer_denom()
+    need(sp.gcd(C3, sp.Poly(denominator, tau)).degree() == 0,
+         "collision expression denominator meets cubic")
+    return sp.rem(sp.Poly(numerator, tau), C3)
+
+
+collision_G = sp.cancel(G.subs(collision_values))
+collision_f = sp.cancel(f.subs(collision_values))
+collision_h = sp.cancel(h.subs(collision_values))
+collision_hessian = sp.cancel(hessian.subs(collision_values))
+for x_value in (0, 1):
+    need(tau_remainder(collision_f.subs({X: x_value, T: tau})).is_zero,
+         "collision f point changed")
+    need(tau_remainder(collision_h.subs({X: x_value, T: tau})).is_zero,
+         "collision h point changed")
+    hessian_numerator = sp.together(
+        collision_hessian.subs({X: x_value, T: tau})
+    ).as_numer_denom()[0]
+    need(sp.gcd(C3, sp.Poly(hessian_numerator, tau)).degree() == 0,
+         "collision point ceased to be Morse")
+    for value in (0, sp.Rational(1, 2)):
+        value_numerator = sp.together(
+            collision_G.subs({X: x_value, T: tau}) - value
+        ).as_numer_denom()[0]
+        need(sp.gcd(C3, sp.Poly(value_numerator, tau)).degree() == 0,
+             "collision point became a target-node inverse")
+
+fibre = sp.Poly(X * (X - 1), X)
+quotients = []
+for name, expression in (("f", collision_f), ("h", collision_h)):
+    numerator = sp.together(expression.subs(T, tau)).as_numer_denom()[0]
+    quotient, remainder = sp.div(sp.Poly(numerator, X), fibre)
+    for coefficient in remainder.all_coeffs():
+        need(sp.rem(sp.Poly(coefficient, tau), C3).is_zero,
+             f"collision {name} fibre lost X(X-1)")
+    quotients.append(quotient)
+quotient_resultant = sp.resultant(
+    quotients[0].as_expr(), quotients[1].as_expr(), X
+)
+quotient_numerator = sp.together(quotient_resultant).as_numer_denom()[0]
+need(sp.gcd(C3, sp.Poly(quotient_numerator, tau)).degree() == 0,
+     "collision fibre acquired an additional common root")
+need(not tau_remainder(tau**2).is_zero,
+     "collision source p-coordinates ceased to be distinct")
+
+# Projection hostile B: a third Morse point joins the universal T=-1/6
+# fibre in row II.  The residual Q15 is nevertheless squarefree.
+t_universal = -sp.Rational(1, 6)
+universal_values = {
+    Phi: sp.Rational(201808, 1575),
+    Theta: sp.Integer(0),
+    eta: sp.Rational(2766784, 875),
+}
+universal_Q15 = sp.Poly(Q15.as_expr().subs(universal_values), T)
+need(universal_Q15.eval(t_universal) == 0,
+     "universal hostile Q15(-1/6) changed")
+need(universal_Q15.diff().eval(t_universal) != 0,
+     "universal hostile residual root ceased to be simple")
+need(sp.gcd(universal_Q15, universal_Q15.diff()).degree() == 0,
+     "universal hostile residual ceased to be squarefree")
+universal_G = sp.expand(G.subs(universal_values))
+universal_f = sp.cancel(sp.diff(universal_G, X) / T)
+universal_h = sp.diff(universal_G, T)
+universal_fibre_gcd = sp.gcd(
+    sp.Poly(universal_f.subs(T, t_universal), X),
+    sp.Poly(universal_h.subs(T, t_universal), X),
+).monic()
+need(sp.factor(universal_fibre_gcd.as_expr()) == (X - 1) * (X**2 - 6),
+     "universal hostile fibre changed")
+universal_hessian = sp.det(sp.hessian(universal_G, (X, T)))
+need(universal_G.subs({X: 1, T: t_universal})
+     == sp.Rational(42257, 91854),
+     "universal hostile extra value changed")
+need(universal_hessian.subs({X: 1, T: t_universal})
+     == -sp.Rational(27296015083, 937461924),
+     "universal hostile extra Hessian changed")
+
 coefficient_digest = sha256("|".join(
     sp.sstr(coefficient)
     for polynomial in (Q18, Q15, Q14)
@@ -342,7 +452,8 @@ coefficient_digest = sha256("|".join(
 semantic = (
     "K=0;Delta=5696/105;normalized=(Q18,Q15,Q14);"
     "lengths=(22,19,18);packets=((8,5,5,4,1),(8,4,4,2,1),(8,5,4,1));"
-    "all_boundary_places=rational;n-L=(1,0,0);defects=(18,14,14)"
+    "all_boundary_places=rational;n-L=(1,0,0);defects=(18,14,14);"
+    "projection_hostiles=repeated_T,universal_fibre"
 )
 
 print("THM4192_K_ZERO_NORMALIZED_EXACT_ACCEPT")
@@ -355,5 +466,7 @@ print("polygons=(27,9,10);(23,9,8);(22,8,8)")
 print("packets=(8,5,5,4,1);(8,4,4,2,1);(8,5,4,1)")
 print("critical_lengths=22,19,18;degrees=23,19,18;defects=18,14,14")
 print("boundary_fields=all_rational;commutator_upper=2,0,0")
+print("projection_collision_hostile=T=tau;fibre=X*(X-1);two_Morse_points")
+print("projection_universal_hostile=row_II;T=-1/6;fibre=(X-1)*(X^2-6);Q15_squarefree")
 print(f"symbolic_coefficient_sha256={coefficient_digest}")
 print(f"semantic_sha256={sha256(semantic.encode('ascii')).hexdigest()}")

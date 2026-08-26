@@ -121,6 +121,8 @@ need(sp.factor(R18.LC() + 65610 * Theta * eta**6) == 0,
 # Stratum 2: Theta=0, Phi!=0.  The degree drops in s, so compute the direct
 # specialized resultant rather than specializing a fixed Sylvester matrix.
 A0, B0 = sp.expand(A.subs(Theta, 0)), sp.expand(B.subs(Theta, 0))
+need(res18.subs(Theta, 0) == 0,
+     "row-A Sylvester determinant no longer exposes the degree-drop trap")
 need((sp.degree(A0, s), sp.degree(B0, s)) == (4, 1),
      "Theta-zero source degrees changed")
 need(sp.factor(sp.Poly(A0, s).LC() - p**2 * (Phi + eta * p)) == 0,
@@ -140,7 +142,8 @@ need(sp.factor(R15.TC() - 1296 * Phi) == 0,
 need(sp.factor(R15.LC() - 6561 * eta**5) == 0,
      "R15 leading row changed")
 
-# Stratum 3: Theta=Phi=0.
+# Stratum 3: Theta=Phi=0.  Recompute once more from the specialized source
+# pair; do not infer its p-adic saturation from the row-II endpoint formula.
 A00, B00 = sp.expand(A0.subs(Phi, 0)), sp.expand(B0.subs(Phi, 0))
 need((sp.degree(A00, s), sp.degree(B00, s)) == (4, 1),
      "terminal source degrees changed")
@@ -149,6 +152,8 @@ need(sp.factor(sp.Poly(A00, s).LC() - eta * p**3) == 0,
 need(sp.factor(sp.Poly(B00, s).LC() - 9 * eta * p**3) == 0,
      "terminal B leading row changed")
 res14 = sp.resultant(A00, B00, s)
+need(sp.factor(res14 - res15.subs(Phi, 0)) == 0,
+     "direct Phi-zero recomputation disagrees")
 need(valuation(res14, p) == 3 and sp.degree(res14, p) == 17,
      "terminal source artifact changed")
 R14 = exact_quotient(res14, p**3, p, "terminal source resultant")
@@ -273,6 +278,86 @@ need((degrees, gaps, defects) == ((23, 19, 18), (1, 0, 0), (18, 14, 14)),
 need(all(2 * gap < defect for gap, defect in zip(gaps, defects)),
      "commutator contradictions changed")
 
+# Projection hostile A transported to two distinct source p-fibres.  The
+# cubic interval isolates the same real tau used in the normalized audit.
+tau = sp.symbols("tau")
+C3 = sp.Poly(68352 * tau**3 - 9632 * tau**2 + 1680 * tau - 945, tau)
+left, right = sp.Rational(51, 200), sp.Rational(32, 125)
+need(C3.eval(left) < 0 and C3.eval(right) > 0
+     and C3.count_roots(left, right) == 1,
+     "collision interval isolation changed")
+B_tau = (
+    68352 * tau**6 + 205056 * tau**5 + 195424 * tau**4
+    + 49088 * tau**3 - 7952 * tau**2 + 1680 * tau - 315
+)
+eta_tau = sp.factor(
+    -2 * B_tau / (315 * tau**4 * (tau + 1)**2 * (5 * tau + 2))
+)
+Phi_tau = sp.factor(-eta_tau * tau)
+Theta_tau = sp.factor((
+    136704 * tau**7 + 410112 * tau**6 + 390848 * tau**5
+    + 98176 * tau**4 - 15904 * tau**3 + 3360 * tau**2
+    + 945 * tau + 630
+) / (630 * tau**4 * (tau + 1)**2 * (5 * tau + 2)))
+collision_values = {Phi: Phi_tau, Theta: Theta_tau, eta: eta_tau}
+for label, expression in collision_values.items():
+    numerator, denominator = sp.together(expression).as_numer_denom()
+    need(sp.gcd(C3, sp.Poly(numerator, tau)).degree() == 0,
+         f"collision {label} can vanish")
+    need(sp.gcd(C3, sp.Poly(denominator, tau)).degree() == 0,
+         f"collision {label} denominator can vanish")
+
+
+def tau_remainder(expr):
+    numerator, denominator = sp.together(expr).as_numer_denom()
+    need(sp.gcd(C3, sp.Poly(denominator, tau)).degree() == 0,
+         "collision denominator meets cubic")
+    return sp.rem(sp.Poly(numerator, tau), C3)
+
+
+collision_A = sp.cancel(A.subs(collision_values))
+collision_B = sp.cancel(B.subs(collision_values))
+collision_hessian = sp.cancel(source_hessian.subs(collision_values))
+source_points = ((0, tau), (tau, tau + tau**2))
+for s_value, p_value in source_points:
+    need(tau_remainder(collision_A.subs({s: s_value, p: p_value})).is_zero,
+         "collision A point changed")
+    need(tau_remainder(collision_B.subs({s: s_value, p: p_value})).is_zero,
+         "collision B point changed")
+    hessian_numerator = sp.together(
+        collision_hessian.subs({s: s_value, p: p_value})
+    ).as_numer_denom()[0]
+    need(sp.gcd(C3, sp.Poly(hessian_numerator, tau)).degree() == 0,
+         "collision source point ceased to be Morse")
+need(not tau_remainder(tau**2).is_zero,
+     "collision source p-values ceased to be distinct")
+
+# Projection hostile B becomes an ordinary nonzero-p source point in row II.
+universal_values = {
+    Phi: sp.Rational(201808, 1575),
+    eta: sp.Rational(2766784, 875),
+}
+universal_A = sp.expand(A0.subs(universal_values))
+universal_B = sp.expand(B0.subs(universal_values))
+universal_R15 = sp.Poly(R15.as_expr().subs(universal_values), p)
+extra_s, extra_p = -sp.Rational(1, 6), -sp.Rational(5, 36)
+need(universal_A.subs({s: extra_s, p: extra_p}) == 0,
+     "universal source A point changed")
+need(universal_B.subs({s: extra_s, p: extra_p}) == 0,
+     "universal source B point changed")
+need(universal_R15.eval(extra_p) == 0,
+     "universal source residual root changed")
+need(sp.gcd(universal_R15, universal_R15.diff()).degree() == 0,
+     "universal source residual ceased to be squarefree")
+need(source_hessian.subs({Theta: 0, **universal_values}).subs(
+    {s: extra_s, p: extra_p}
+) == -sp.Rational(27296015083, 26040609),
+     "universal source Hessian changed")
+need(G.subs({Theta: 0, **universal_values}).subs(
+    {s: extra_s, p: extra_p}
+) == sp.Rational(42257, 91854),
+     "universal source value changed")
+
 coefficient_digest = sha256("|".join(
     sp.sstr(coefficient)
     for polynomial in (R18, R15, R14)
@@ -281,7 +366,8 @@ coefficient_digest = sha256("|".join(
 semantic = (
     "source_pair=(A,B);resultants=(p^4R18,p^2R15,p^3R14);"
     "lengths=(22,19,18);packets=((8,5,5,4,1),(8,4,4,2,1),(8,5,4,1));"
-    "degrees=(23,19,18);gaps=(1,0,0);defects=(18,14,14)"
+    "degrees=(23,19,18);gaps=(1,0,0);defects=(18,14,14);"
+    "degree_drop=recompute_Theta0_and_Phi0;hostiles=collision,universal"
 )
 
 print("THM4192_K_ZERO_SOURCE_INDEPENDENT_EXACT_ACCEPT")
@@ -294,5 +380,8 @@ print("critical_lengths=22,19,18")
 print("polygons=(27,9,10);(23,9,8);(22,8,8)")
 print("packets=(8,5,5,4,1);(8,4,4,2,1);(8,5,4,1)")
 print("degrees=23,19,18;gaps=1,0,0;defects=18,14,14")
+print("degree_drop_firewall=res18|Theta=0_is_zero;res15,res14_direct")
+print("projection_collision_source_p=tau,tau+tau^2;both_Morse")
+print("projection_universal_source_p=-5/36;R15_squarefree")
 print(f"symbolic_coefficient_sha256={coefficient_digest}")
 print(f"semantic_sha256={sha256(semantic.encode('ascii')).hexdigest()}")

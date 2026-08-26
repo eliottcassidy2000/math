@@ -33,23 +33,26 @@ script: 04-computation/jc23_p_only_k_zero_complete_exclusion_thm4192.py
 output: 05-knowledge/results/jc23_p_only_k_zero_complete_exclusion_thm4192.out
 independent_audit_script: 04-computation/jc23_p_only_k_zero_complete_exclusion_independent_audit_thm4192.py
 independent_audit_output: 05-knowledge/results/jc23_p_only_k_zero_complete_exclusion_independent_audit_thm4192.out
-script_sha256: 4eb58333108068a96bdc7298b0c4a53084b206be2dc99264a787ca26a9db72d7
-output_sha256: 8c56ce3f409fd6aea9b9f43e0b23106346e9ff50ed37e43ae8586c611e1309f7
-independent_audit_script_sha256: 262707bfa13cd1a632f7c5dc90a6bff60c44043102e57977884fda1d5532f4cb
-independent_audit_output_sha256: a48f7b044dc125befe9131d24664f69b20b3f81868ee5a4f34ac0f1bfad9b5f4
+script_sha256: 45a8e28d859ed1f78743fe3c469de6cba89d3e3cfff6647ec1d90a950cf1aef9
+output_sha256: 5921d2c62e42a843e72a0128731c36c5e8d52af96bd6c4fc3117319f89fa2ed1
+independent_audit_script_sha256: 8cad1da6f86248c090a1813cab823462d44337d2e65a84b88e0a8b706748b89e
+independent_audit_output_sha256: fe237f69cb5ef8c3b162bef2cc59592943b40d017d8027b8c8a34138ece5589c
 hash_basis: raw LF bytes
 primary_audit: >
   PASS. A normalized (X,T) implementation reconstructs the complete source,
   Hessian bridge, both universal fibres, all three exact residual resultants,
   every Newton hull and face, the rational packet indices, and all three
-  strict commutator contradictions. Disjoint squarefree and universal-fibre
-  controls are nonvacuity checks, not hypotheses.
+  strict commutator contradictions. It also verifies two exact projection
+  hostiles: a repeated T-value with two Morse points and a residual point on
+  the universal T=-1/6 fibre. These are probes, not hypotheses.
 independent_audit: >
   ACCEPT. A separate rational (s,p) implementation uses the distinct (A,B)
   critical pair, proves the source Hessian bridge by ideal reduction, excludes
   p=0, t=0, and source-infinity losses, computes p^4R18, p^2R15, and p^3R14,
-  and independently reconstructs the hulls from supporting halfspaces. Normal,
-  optimized, and fixed-hash streams byte-match.
+  enforces direct Sylvester recomputation after both coefficient drops,
+  transports both projection hostiles to source coordinates, and independently
+  reconstructs the hulls from supporting halfspaces. Normal, optimized, and
+  fixed-hash streams byte-match.
 ---
 
 # THM-4192 -- complete P-only K-zero planar Jacobian exclusion
@@ -200,6 +203,29 @@ The three direct source resultants are
 | II | `(4,1)` | `p^2(Phi+eta p),p^2(7Phi+9eta p)` | `p^2R_15` | `R_15(0)=1296Phi`, `LC=6561eta^5` |
 | III | `(4,1)` | `eta p^3,9eta p^3` | `p^3R_14` | `R_14(0)=1296eta`, `LC=6561eta^5` |
 
+There is a mandatory three-row degree-drop firewall.  If
+`Res_s^(5,2)` denotes the row-I Sylvester determinant with its declared
+`s`-degrees frozen, then
+
+```text
+Res_s^(5,2)(A,B)|_(Theta=0)=0.
+```
+
+It is therefore invalid to specialize that determinant into row II.  One
+must first specialize the source pair, observe the degree drop `(5,2)->(4,1)`,
+and recompute
+
+```text
+Res_s(A|_(Theta=0),B|_(Theta=0))=p^2R_15.
+```
+
+At `Phi=0` the source pair is specialized and its resultant is recomputed
+again, giving `p^3R_14`; the additional `p` is a genuine endpoint loss and
+cannot be read from the row-II unit formula.  The independent audit checks
+both direct recomputations; it also verifies that the direct row-III
+resultant equals the ordinary `Phi=0` specialization of the already-correct
+row-II polynomial resultant.
+
 In II the two leading rows have resultant `-2Phi eta`, so they never vanish
 together.  All remaining leading rows are visibly units for `p!=0`.  On
 `p=0` one has `A=-s,B(0,0)=-6`; on `t=0`, `A=-s,B(0,0)=-6`.  Hence every
@@ -209,6 +235,75 @@ lengths plus the four normalized points.
 
 The different artefact exponents in the two projections are intentional:
 they confirm that only the saturated residual degree is geometric.
+
+## Exact projection hostiles (audits, not hypotheses)
+
+The first hostile forbids any squarefree-`T` shortcut in stratum I.  Let
+`tau` be the unique real root in `(51/200,32/125)` of
+
+```text
+C(tau)=68352tau^3-9632tau^2+1680tau-945,
+```
+
+put
+
+```text
+B(tau)=68352tau^6+205056tau^5+195424tau^4+49088tau^3
+       -7952tau^2+1680tau-315,
+eta=-2B(tau)/(315tau^4(tau+1)^2(5tau+2)),
+Phi=-eta tau,
+Theta=(136704tau^7+410112tau^6+390848tau^5+98176tau^4
+       -15904tau^3+3360tau^2+945tau+630)
+      /(630tau^4(tau+1)^2(5tau+2)).
+```
+
+Exact gcd tests modulo `C` show that all denominators and the required
+`Theta,eta` units are nonzero.  Over `Q(tau)`, at `T=tau`,
+
+```text
+gcd_X(f,h)=X(X-1).
+```
+
+There is no further common root after dividing both equations by `X(X-1)`.
+Both points are Morse, and neither has `G`-value `0` or `1/2`.  Their source
+coordinates are
+
+```text
+(s,p)=(0,tau), (tau,tau+tau^2),
+```
+
+so the full source projection separates them although the normalized
+`T`-eliminant has a repeated root.
+
+The second hostile forbids deleting the universal fibre from the residual
+factor in stratum II.  At
+
+```text
+Theta=0, Phi=201808/1575, eta=2766784/875,
+```
+
+one has
+
+```text
+T=-1/6: gcd_X(f,h)=(X-1)(X^2-6),
+Q_15(-1/6)=0, Q_15'(-1/6)!=0,
+gcd(Q_15,Q_15')=1.
+```
+
+Thus a third, ordinary point `X=1` joins the two universal points while the
+residual remains squarefree.  At this point
+
+```text
+G=42257/91854,
+det Hess_(X,T)(G)=-27296015083/937461924,
+(s,p)=(-1/6,-5/36),
+det Hess_(s,p)(G)=-27296015083/26040609.
+```
+
+The source audit also checks that `p=-5/36` is a simple root of the direct
+row-II residual `R_15`.  Neither hostile is an assumption in the exclusion;
+they certify that the proof counts the full reduced critical scheme rather
+than roots of either projection.
 
 ## Newton faces and exact packets
 
@@ -338,25 +433,27 @@ Primary normalized certificate:
 
 ```text
 04-computation/jc23_p_only_k_zero_complete_exclusion_thm4192.py
-sha256 4eb58333108068a96bdc7298b0c4a53084b206be2dc99264a787ca26a9db72d7
+sha256 45a8e28d859ed1f78743fe3c469de6cba89d3e3cfff6647ec1d90a950cf1aef9
 
 05-knowledge/results/jc23_p_only_k_zero_complete_exclusion_thm4192.out
-sha256 8c56ce3f409fd6aea9b9f43e0b23106346e9ff50ed37e43ae8586c611e1309f7
+sha256 5921d2c62e42a843e72a0128731c36c5e8d52af96bd6c4fc3117319f89fa2ed1
 ```
 
 Independent rational-source certificate:
 
 ```text
 04-computation/jc23_p_only_k_zero_complete_exclusion_independent_audit_thm4192.py
-sha256 262707bfa13cd1a632f7c5dc90a6bff60c44043102e57977884fda1d5532f4cb
+sha256 8cad1da6f86248c090a1813cab823462d44337d2e65a84b88e0a8b706748b89e
 
 05-knowledge/results/jc23_p_only_k_zero_complete_exclusion_independent_audit_thm4192.out
-sha256 a48f7b044dc125befe9131d24664f69b20b3f81868ee5a4f34ac0f1bfad9b5f4
+sha256 fe237f69cb5ef8c3b162bef2cc59592943b40d017d8027b8c8a34138ece5589c
 ```
 
-Both paths contain disjoint exact squarefree controls in every stratum.
-The primary controls also avoid `T=-1/6`.  These are nonvacuity/hostile
-checks only: squarefreeness and fibre separation are **not hypotheses**.
+Both paths contain disjoint exact squarefree controls in every stratum.  The
+primary controls also avoid `T=-1/6`; the two displayed hostiles separately
+show that repeated projection roots and residual/universal-fibre collisions
+do occur.  All are audit probes only: squarefreeness and fibre separation are
+**not hypotheses**.
 
 Normal, optimized, and fixed-hash executions byte-match the frozen outputs:
 

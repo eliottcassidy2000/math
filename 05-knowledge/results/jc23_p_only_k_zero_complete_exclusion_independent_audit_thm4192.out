@@ -1,5 +1,5 @@
 THM4192_K_ZERO_SOURCE_INDEPENDENT_EXACT_ACCEPT
-checks=116
+checks=143
 source_pair=(A,B);hessian_bridge=ideal_zero
 source_resultants=p^4*R18;p^2*R15;p^3*R14
 source_constants=-31104*Theta^2;1296*Phi;1296*eta
@@ -8,5 +8,8 @@ critical_lengths=22,19,18
 polygons=(27,9,10);(23,9,8);(22,8,8)
 packets=(8,5,5,4,1);(8,4,4,2,1);(8,5,4,1)
 degrees=23,19,18;gaps=1,0,0;defects=18,14,14
+degree_drop_firewall=res18|Theta=0_is_zero;res15,res14_direct
+projection_collision_source_p=tau,tau+tau^2;both_Morse
+projection_universal_source_p=-5/36;R15_squarefree
 symbolic_coefficient_sha256=def207e2d2753551781c5661c3a8bddc66b5212b31c5753becf93074782374d1
-semantic_sha256=7e64f8a666c508f9b7725b58c2837e1b306cfbb38c515feeb27eb149356378ac
+semantic_sha256=f54366cf74ebff74294f5753ef395e2e312c42f6f2bafa31d9062cd2c578799c
