@@ -1,0 +1,1 @@
+q10_full_polynomial parent=111111101111111111111101111110110111110111111 higher_weight_literal_checks=968 max_H_degree=2 max_old_capacity_degree=2 max_new_capacity_degree=1 max_packet_degree=4 terms_H_C_D_plus_minus=56,386,386,386,386 strong_patterns=1022 strong_rational_failures=0 status=PASS

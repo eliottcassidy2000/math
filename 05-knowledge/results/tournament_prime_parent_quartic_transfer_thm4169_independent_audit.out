@@ -1,0 +1,12 @@
+THM-4169 independent Python audit
+arithmetic=exact-integer validation=explicit-require optimized_checks=live
+augmentation_controls rows=((3, 2, 16), (4, 0, 0), (5, 264, 8448)) prime_parents=266 patterns=8464 status=PASS
+small_transfer_controls rows=((2, 2, 8), (3, 8, 64), (4, 64, 1024)) status=PASS
+parent 111111101111111111111101111110110111110111111 order=10 prime=yes
+full_transfer patterns=1024 H_checks=1024 capacity_checks=56320 packet_checks=4096 status=PASS
+degrees H=2 old_capacity_max=2 new_capacity_max=1 capacity_hist=((1, 10), (2, 45)) packet=(('C', 4), ('D', 4), ('D+2C', 4), ('D-2C', 4))
+terms (('H', 56), ('C', 386), ('D', 386), ('D+2C', 386), ('D-2C', 386))
+polynomial_sha256 (('H', 'c0d840a431d8b4fc4e5f8153a00f14a2e98eba354d060aabd29b6205f6e652ce'), ('C', 'e0affbebd286333984bd8d340e05f45fd922730eed721211746282528b059b17'), ('D', '80af79df35408f47ab805299d8d3ab860dcd41aefbe94181e1fd7c9415504004'), ('D+2C', 'b2162c2485032b6180c3e0e962664044c29eae7ff1e5a3c4590f911c906cb133'), ('D-2C', '6e099fb5ace814ccc2809444c522000cdf2b571e350f291b281cfb5bddf8fc75'))
+all_values_sha256 93c6ee88686a5acfa5e17ff117659de610d112d8dfce025623c8c01aa7dd216b
+boundary_controls z0_margin=209423320 z1023_twice_abs_C=3818407904 z1023_D=2735733720 z1023_margin=-1082674184 status=PASS
+overall status=PASS

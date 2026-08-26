@@ -478,6 +478,9 @@ THM-2191 uses prime-decomposition cancellation and the four-ball crossing metric
 
 ## Tournaments ([Moon 1966 sidecar](CORE-PAPERS-TOURNAMENT-STRONG-EARS-2026-08-25.md))
 
+**Schmerl--Trotter — PUBLISHED / stable; checked 2026-08-26.** [*Discrete Mathematics* **113** (1993), 191--205](https://doi.org/10.1016/0012-365X(93)90516-V) classifies the three critical prime tournament families at odd order `>=5`, and none at even order.
+THM-4169 imports only prime deletion; all other claims are in-repo.
+
 ### Grinberg--Stanley — *The Rédei--Berge symmetric function of a directed graph*
 
 - **Primary / freshness:** [arXiv:2307.05569v1](https://arxiv.org/abs/2307.05569),
