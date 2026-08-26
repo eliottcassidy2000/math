@@ -1,0 +1,12 @@
+THM4138_HORIZONTAL_CARRIER_AUDIT
+generic:n=16;L=19;origin_defect=12;carrier_defect=2;max_total_index=14;min_orbits=2;splits=14
+secondary:n=15;L=18;origin_defect=10;carrier_defect=2;max_total_index=13;min_orbits=2;splits=13
+carrier_collision=two_distinct_transpositions_or_one_(2,2);total_index=2
+sharp_positive=actual_ledgers_attain_total_index_n-2_and_exactly_two_orbits
+hostile_fixed_offset=n+2:total_index_n-1;TRANSITIVE
+hostile_carrier_defect=3:total_index_n-1;TRANSITIVE
+section_identity=2P=(-a,-rho);THM4134_section=3P
+section_collision=rho=0->(U,V)=(a/2,0);local=q-a^3/2=V^2-(3a/2)xi^2-xi^3
+firewall=section_identity_is_hostile_control_not_Mordell-Weil_completeness
+semantic_sha256=e1593d26e2a4b6931c1550868dbc3c85c9cf9430813bc5ba28c095dd72b28b66
+verdict=n16:CONTRADICTION;n15:CONTRADICTION;DeltaV_wall=EMPTY;JC2=OPEN
