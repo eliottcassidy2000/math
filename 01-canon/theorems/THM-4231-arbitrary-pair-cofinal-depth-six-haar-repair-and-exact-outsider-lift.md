@@ -9,13 +9,17 @@ status: >
   this fills all C(32,11)=129,024,480 eleven-bodies in every such two-outsider
   chart. The adjacent 17547/17548 transition is exact only for the complete
   depth-six component-discrepancy activation filter; it is not a minimal
-  literal entry threshold. Arbitrary finite pair entry and LRC(14) remain OPEN.
+  literal entry threshold. Combined with THM-4227/4228, every remaining pair
+  has gcd at most 3466 and lies on one of finitely many small-outsider rays or
+  in one finite box. Arbitrary finite pair entry and LRC(14) remain OPEN.
 source: codex-frontier-synthesis-20260826
 depends_on:
   - THM-4150-safe-set-haar-measure-universal-odd-tail-lrc14-transfer
   - THM-4156-divisor-complete-anchor-pool-haar-odd-tail-transfer
   - THM-4170-triple-deletion-matching-eventual-haar-odd-tail-transfer
   - THM-4191-complete-full-pool-newcomer-haar-transfer
+  - THM-4227-two-outsider-scale-separated-depth-eight-haar-wedge
+  - THM-4228-common-gcd-two-outsider-periodic-observable-haar-ray
 related:
   - THM-4207-two-newcomer-sharp-depth-transition-base-surplus-composition-and-variable-pool-chart-number
   - THM-4211-fixed-fifty-cofinal-two-newcomer-haar-tail-and-eighteen-label-chart
@@ -336,9 +340,45 @@ decisive test: tau(A_6^(2)(Q))>9 on the complete deletion universe. (28)
 ## 8. Boundaries and next frontiers
 
 This theorem proves neither arbitrary finite pair entry nor a minimal literal
-cofinal threshold. The main remaining LRC routes are:
+cofinal threshold. It does, however, combine sharply with THM-4227. For a
+pair of distinct positive outsiders, write
 
-1. allow one outsider to remain arbitrary while the other becomes large;
+```text
+m=min(q,r),        M=max(q,r).                           (29)
+```
+
+THM-4231 handles `m>=17548`. If `3391<=m<=17547`, THM-4227 handles the pair
+as soon as
+
+```text
+M>=ceil(321902813232(m+130)/10633545731).               (30)
+```
+
+The right side is increasing and equals `535125` at `m=17547`. Consequently,
+every pair not covered by THM-4227 or THM-4231 lies in
+
+```text
+m<=3390,
+or
+3391<=m<=17547 and M<=535124.                           (31)
+```
+
+THM-4228 separately handles `gcd(q,r)>=3467`. Thus every pair left by all
+three theorems also satisfies
+
+```text
+gcd(q,r)<=3466.                                          (32)
+```
+
+The unproved pair plane is therefore a gcd-thinned finite box together with
+finitely many fixed-small-outsider rays. This is a reduction, not a closure:
+none of the three theorems supplies the cofinal tail on each ray with
+`m<=3390`.
+
+The main remaining LRC routes are therefore:
+
+1. prove one cofinal tail for every outsider below `3391`, retaining its
+   literal label, then exhaust the finite remainder in `(31)`;
 2. combine phase-sensitive or common-gcd discrepancy with the symmetric
    Bonferroni deck without losing the literal pair labels;
 3. count the intrinsic multiplicity of lawful repairs per residual body,
