@@ -22,9 +22,11 @@ Then read the routed frontier, guardrails, and theorem; logs are history.
 ## Seventeen high-signal facts to reuse, not re-derive
 
 1. **LRC(14) is first open.** Direct `<=6`; projected caps `1579/216` leave
-   `372913/109/12`. THM-4174/4175 give `888,030/6,660,225` fixed-pool all-/
-   one-anchor bodies; THM-4178/4179 close `q=50` anchors by depth seven,
-   giving `1,071,961` two-anchor bodies. Entry/LRC stay open.
+   `372913/109/12`. THM-4174/4175 give `888,030/6,660,225` fixed-pool
+   all-three-/exactly-two-original-anchor bodies; THM-4178/4179 give
+   `1,071,961` exactly-one-original bodies. THM-4182 adds `1,138,494`
+   zero-original four-anchor bodies, for `9,758,710` bodies across the four
+   disjoint declared `q=50` slices. Entry/arbitrary bodies/LRC stay open.
 2. **The `q <= 25` period claim is refuted.** THM-762/764 exhibit `26*{1,...,12} union {339}`, whose first good period is `27`.
 3. **Good-period existence is a maximum statement.** The tight resonant AP
    defeats average/count arguments; see MISTAKE-127/129/130.
@@ -55,8 +57,9 @@ Then read the routed frontier, guardrails, and theorem; logs are history.
 12. **JC is false from dimension three; JC(2), DC(2) remain open.** THM-1300
     is exact; THM-2084 closes cells. THM-4130/4138/4141/4143 empty `M=8`;
     THM-4147/4157 close stated `M=9` chambers; THM-4159/4161/4164/4165 close
-    Y-only for `zeta!=0`. THM-4176/4180 close repeated-top `zeta=-eta` for
-    `eta!=0`; `eta=0` and entry survive.
+    Y-only for `zeta!=0`. THM-4176/4180 exhaust the repeated-top exact-`M=9`
+    locus (`eta=0` is a filtration exit), and THM-4183 closes the complete
+    P-only `zeta=Delta=0,eta!=0` wall. Other walls/cells and entry survive.
 13. **Complete period-14 coordinates can be globally blind.** THM-2058 keeps
     every fixed-depth packet coordinate but exits at `47/113`; THM-2043/2047/
     2050 separate local completeness from global maxima.

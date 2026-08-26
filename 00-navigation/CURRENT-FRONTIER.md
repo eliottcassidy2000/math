@@ -79,7 +79,12 @@ is the safe control `M(S_13)=99/338`. No cited result proves LRC(14).
   [THM-4178](../01-canon/theorems/THM-4178-q50-divisor-complete-anchor-triple-exchange.md)/
   [4179](../01-canon/theorems/THM-4179-q50-seventh-deletion-primitive-anchor-completion.md)
   clear two `q=50` blockers at sharp depth seven and transfer all six anchors;
-  the exactly-one-original union has `1,071,961` bodies. Fixed-pool; entry,
+  the exactly-one-original union has `1,071,961` bodies.
+  [THM-4182](../01-canon/theorems/THM-4182-q50-zero-original-four-anchor-transfer-and-two-repair-obstruction-graph.md)
+  classifies 32 zero-original four-anchors, collapses 27 shallow blockers to
+  five body states, crosses them with a sharp two-repair bank, and transfers
+  `1,138,494` further distinct bodies. The four original-anchor-count slices
+  are disjoint and total `9,758,710` fixed-`q=50` cores. Fixed-pool; entry,
   arbitrary bodies, and LRC(14) stay open. [Proof map](LRC14-PROOF-MAP.md).
 - **PROVED:** [THM-2928](../01-canon/theorems/THM-2928-critical-seven-comb-grid-tensorization-and-drift-tariff.md)/2941: literal zero/one/two/three-drift sectors are empty; `k=2,3` are finite.
 - **Orthogonal routes.** THM-1017 is HYP-6820; THM-2047/2050 keep phase/exit; THM-731/2048 prune; THM-1290 ends at `55`; HYP-8900 nonuniform.
@@ -359,10 +364,15 @@ lift/phase clocks.
   exact `M=8`; THM-4147/4157 close stated `M=9` chambers.
   [THM-4176](../01-canon/theorems/THM-4176-complete-repeated-top-wall-planar-jacobian-exclusion.md)/
   [4180](../01-canon/theorems/THM-4180-repeated-top-delta-zero-planar-jacobian-exclusion.md)
-  close repeated-top `zeta=-eta`, `eta!=0` by the `Delta!=0/0` split.
+  exhaust the repeated-top exact-`M=9` locus by the `Delta!=0/0` split:
+  source completeness makes `eta=0` a lower-weight filtration exit, not a
+  third exact-`M=9` wall.
+  [THM-4183](../01-canon/theorems/THM-4183-p-only-delta-zero-planar-jacobian-exclusion.md)
+  closes the complete P-only `zeta=Delta=0,eta!=0` wall, including both
+  `Theta!=0` and the index-`3+5` to index-`7` blowdown at `Theta=0`.
   THM-4155/4159/4161/4164/4165 close Y-only for `zeta!=0`.
-  Repeated-top `eta=0`, `zeta=0` Y-only, other cells, `M>=10`, and entry stay
-  open.
+  Other P/B coefficient and critical walls, `zeta=0` Y-only, other cells,
+  `M>=10`, and entry stay open.
   Exceptional quartic: THM-3703/3737 give grammar/image, THM-4034 the
   conductor, and THM-4039/4043/4046 reach `J_7`, obstruct `J_8`, and close
   critical `H`. [THM-4054](../01-canon/theorems/THM-4054-exceptional-affine-simple-zero-retained-packet.md)
