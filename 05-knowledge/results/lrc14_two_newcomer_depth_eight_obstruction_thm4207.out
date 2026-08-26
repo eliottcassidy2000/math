@@ -1,0 +1,35 @@
+BODY size=10 denominator=18241159416480 numerator=4095603492296 walls=2976 delta63=185058382348728 verdict=SAFE
+BODY_Q50 size=11 denominator=91205797082400 numerator=15772098388110 walls=3076 delta63=628819010121330 verdict=SAFE
+BODY_Q51 size=11 denominator=18241159416480 numerator=3483106658468 walls=3076 delta63=146471081817564 verdict=SAFE
+BODY_Q50_R51 size=12 denominator=91205797082400 numerator=13370495373852 walls=3176 delta63=477518020223076 verdict=SAFE
+COVER_BODY_Q50 size=11 denominator=1788348962400 numerator=311595973898 walls=2750 delta63=12477150505974 verdict=SAFE
+COVER_BODY_Q51 size=11 denominator=6080386472160 numerator=1151011493488 walls=2750 delta63=48192178201104 verdict=SAFE
+COVER_BODY_Q50_R51 size=12 denominator=30401932360800 numerator=4353776988210 walls=2850 delta63=152680220814030 verdict=SAFE
+D8_COVER_BODY9_Q50_R51 size=11 denominator=30401932360800 numerator=5181339311468 walls=2650 delta63=204816647179284 verdict=SAFE
+AMBIENT size=23 denominator=18241159416480 numerator=1707836516620 walls=5788 delta63=34629062881140 verdict=SAFE
+AMBIENT_Q50 size=24 denominator=91205797082400 numerator=5832510466110 walls=5868 delta63=2624971035330 verdict=SAFE
+AMBIENT_Q51 size=24 denominator=18241159416480 numerator=1449993422022 walls=5888 delta63=18384947921466 verdict=SAFE
+AMBIENT_Q50_R51 size=25 denominator=91205797082400 numerator=4784585646640 walls=5968 delta63=-63394292591280 verdict=FAIL
+AMBIENT5_Q50 size=26 denominator=472568896800 numerator=30016437908 walls=6194 delta63=760001004 verdict=SAFE
+AMBIENT5_Q51 size=26 denominator=94513779360 numerator=6804390632 walls=6214 delta63=50621492376 verdict=SAFE
+AMBIENT5_Q50_R51 size=27 denominator=472568896800 numerator=24908783128 walls=6294 delta63=-321022250136 verdict=FAIL
+AMBIENT4_Q50 size=27 denominator=472568896800 numerator=30144160238 walls=6114 delta63=8806507794 verdict=SAFE
+AMBIENT4 size=26 denominator=94513779360 numerator=8256228982 walls=6034 delta63=142087308426 verdict=SAFE
+AMBIENT4_Q51 size=27 denominator=94513779360 numerator=7001122736 walls=6134 delta63=63015614928 verdict=SAFE
+AMBIENT4_Q50_R51 size=28 denominator=472568896800 numerator=25118839648 walls=6214 delta63=-307788689376 verdict=FAIL
+D8_MISSED_REPAIR_Q50_R51 size=24 denominator=91205797082400 numerator=5812030313604 walls=5326 delta63=1334721427452 verdict=SAFE
+OPT_PAIR q=50 r=51 atoms=5358 denominator=91205797082400 numerator=10889142704340 delta63=321192802043820 body={10,80,95,120,132,143,145,168,170,193} verdict=SAFE
+PAIR_LAYER q=50 r=51 d=0 edges=0 equalities=0 best_delta63=-162927527815458 best={}
+PAIR_LAYER q=50 r=51 d=1 edges=0 equalities=0 best_delta63=-137192788989648 best={95}
+PAIR_LAYER q=50 r=51 d=2 edges=0 equalities=0 best_delta63=-112490718004728 best={88,95}
+PAIR_LAYER q=50 r=51 d=3 edges=0 equalities=0 best_delta63=-86842253960658 best={145,168,290}
+PAIR_LAYER q=50 r=51 d=4 edges=0 equalities=0 best_delta63=-56566644996078 best={88,95,145,290}
+PAIR_LAYER q=50 r=51 d=5 edges=0 equalities=0 best_delta63=-21963398001678 best={88,95,145,193,290}
+PAIR_LAYER q=50 r=51 d=6 edges=39 equalities=0 best_delta63=14670755127882 best={80,88,145,168,193,290}
+PAIR_LAYER q=50 r=51 d=7 edges=10114 equalities=0 best_delta63=58118939526942 best={80,88,145,168,193,240,290}
+PAIR_LAYER q=50 r=51 d=8 edges=311544 equalities=0 best_delta63=97750631715282 best={80,88,95,145,168,190,193,290}
+PAIR_GREEDY q=50 r=51 d=6 edges=39 cover_size=2 cover={145,193} verified=YES
+PAIR_EXACT_TAU q=50 r=51 d=6 tau=2 witness={145,193} candidates=327 edge_checks=837
+PAIR_GREEDY q=50 r=51 d=7 edges=10114 cover_size=6 cover={80,95,143,145,168,193} verified=YES
+PAIR_EXACT_TAU q=50 r=51 d=7 tau=5 witness={95,143,145,193,240} candidates=96824 edge_checks=8884152
+TARGET7 q=50 r=51 d=8 edges=311544 greedy_size=8 greedy={16,88,95,143,168,193,240,290} greedy_verified=YES candidates=2035800 expected=2035800 checks=42630041 max_checks=48276 closest={95,143,168,193,240,252,290} missed={8,42,88,132,145,170,176,264} cover=NONE verdict=TAU_GT_7
