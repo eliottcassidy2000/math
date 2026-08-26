@@ -9,6 +9,31 @@ Format per entry:
 - Why it was wrong
 - The correct framing
 
+## MISTAKE-518 (2026-08-26, THM-4202 defect scope) -- an obsolete odd-order gate survived an all-order dependency
+
+- **What failed:** THM-4202 correctly proved an all-order one-sided block
+  identity, but restricted its centered variance--covariance form to odd
+  right factors and explicitly said the reduction was unavailable at even
+  order. That copied THM-4181's earlier parity scope after THM-4184, already a
+  declared dependency, had proved the required rooted parity balance at every
+  order.
+- **Minimal witness / first failed implication:** with left factor `C3`, every
+  one of the two labelled order-two and sixty-four labelled order-four right
+  factors satisfies `S=K/m` and the exact defect formula `(14e)`. Thus even
+  order is not a missing-parity sector. Two independent implementations now
+  replay all `1,098` labelled right factors of orders two through five in the
+  primary path and all `74` factors of orders two through four in the literal
+  path.
+- **Repair / strongest survivor:** THM-4202's vertex-transitive positivity,
+  one-sided identity, regular hostiles, and covariance ledger are unchanged.
+  The defect address is stronger: `(14e)` holds at every right order. General
+  `(OS+)` remains open because the needed variance--covariance bound, not
+  parity centering, is the missing step.
+- **Reusable rule:** when a theorem depends on a later scope promotion,
+  re-audit every local qualifier inherited from the predecessor theorem.
+  Reusing an older equation number can silently preserve a superseded parity
+  restriction even when the algebra already has the stronger input.
+
 ## MISTAKE-517 (2026-08-26, THM-4191 scope promotion) -- a widened theorem was still added as one disjoint stratum
 
 - **What failed:** THM-4191 was strengthened from the zero-original stratum to

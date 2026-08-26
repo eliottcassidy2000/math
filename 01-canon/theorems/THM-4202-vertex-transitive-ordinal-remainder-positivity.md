@@ -6,8 +6,8 @@ status: >
   ALGORITHMICALLY INDEPENDENT FINITE AUDIT. For all finite nonempty
   vertex-transitive tournaments A,B with |B|>=3, R_+(A,B)>0. No
   self-converse hypothesis is used. If only A is vertex-transitive, an exact
-  all-order identity remains; for odd |B| its complete defect from the
-  symmetric baseline is a variance-covariance penalty. Regular score first
+  all-order identity remains, and at every right order its complete defect
+  from the symmetric baseline is a variance-covariance penalty. Regular score first
   fails to force those sidecars at order seven. General (OS+), the all-order
   no-sink gate law, LRC(14), JC(2), and DC(2) remain OPEN.
 source: open-frontiers-incoming-20260826b / forgotten-tournament signal
@@ -24,27 +24,27 @@ independent_audit_script: 04-computation/tournament_vertex_transitive_ordinal_re
 independent_audit_output: 05-knowledge/results/tournament_vertex_transitive_ordinal_remainder_positivity_independent_audit_thm4202.out
 minimal_hostile_script: 04-computation/tournament_regular_order7_minimal_hostile_thm4202.py
 minimal_hostile_output: 05-knowledge/results/tournament_regular_order7_minimal_hostile_thm4202.out
-script_sha256: 5049c5bf1da78570c43066045a1bbe882d2d16f1f5f5b1f5d65e7155ee590c14
-output_sha256: 1cb06814c20e9a9ca9aa4d3a0eb10375c796be8191217c7bca99c376368dca90
+script_sha256: 954a2a0b85036d446a1bbf5ec1c0f5f46e9f5b2646a7d72a63c17775569dbafd
+output_sha256: 96d7a18c1aaff89556ecae3456471d37d910aa6cd3edaa71555c765389384634
 primary_dependency_lrc_sha256: 0a60b3133d567eea99da3d29e85c70352a918f90d919647724e3c97f12ba6ba7
 primary_dependency_thm4184_sha256: 9ab09bf8b70ee5dcf3d86698180a456d67f012655b49a16dfea9903caefbb39c
-independent_audit_script_sha256: afecd09c0e5cc47312ba98bb56003f95f1d1a2f77501aea5a11f0284ca65f746
-independent_audit_output_sha256: 5e688c069dbf17657fe678f8e7d9d6a5c9fadd66c4ff22cd82f89475a27aa58e
+independent_audit_script_sha256: 37e0555155ec6715a238df62cb6a9327156631ee84214de70a0c61edd5be1b18
+independent_audit_output_sha256: 7962a5404785bc06399e84495783b585503dee6f3301c196797f3dae24f97d8a
 minimal_hostile_script_sha256: 0f03b29fe3a15902a44ea63170d7f5d77d9ecd5c02748fa161b9805d949e9244
 minimal_hostile_output_sha256: e56e2f8d0d80c354b38b7e25a8c00d4517b05b084437a76c0c6c4dcb67c3f08e
 hash_basis: raw LF bytes
 primary_audit: >
   PASS. The inherited exact engine checks 930 vertex-transitive pairs, 90
-  transitive-prefix rows, and the one-sided identity on all 1,032 labelled
-  odd right factors of orders three and five. It also freezes an exact
+  transitive-prefix rows, and the one-sided identity on all 1,098 labelled
+  right factors of orders two through five. It also freezes an exact
   regular order-nine hostile. Semantic digest
-  25bee1eda8dc268bd0e7bfab92622f31d5af1cef08c7c5a059547b783c49aead.
+  faf77ea0f456efdfe0cdfdafac5fa880c401196c0d056796494fc1b1d8c3b22a.
 independent_audit: >
   ACCEPT. A standalone literal-permutation path rebuilds Hamilton counts,
   exposure capacities, rooted states, and 26 direct ordinal children without
-  importing tournament code. It independently reconstructs the one-sided
-  defect and order-nine hostile. Semantic digest
-  3830d2aa1207eddba04f188bf5064a1c5b4747b82a3351c647c890d980c7c91e.
+  importing tournament code. It independently reconstructs 74 even/odd
+  one-sided defects and the order-nine hostile. Semantic digest
+  9428843ca20a1b09d9dbc6c47d5f0a89d65a37c722117e637a0dbfc7f0c46056.
 minimal_hostile_audit: >
   ACCEPT. A standalone literal enumeration proves every regular tournament
   below order seven vertex-transitive, then reconstructs the first regular
@@ -232,8 +232,8 @@ R_+(A,B)
   +(m/2)[(m+3)S^2-(5m-1)Q].                           (14b)
 ```
 
-If `n=|B|` is odd, THM-4181's aggregate parity identities still hold without
-any symmetry of `B`, so
+THM-4184's all-order parity balance holds without any symmetry of `B`, so for
+every `n=|B|`
 
 ```text
 S=K/m.                                                  (14c)
@@ -255,14 +255,13 @@ R_+(A,B)
   -m h Cov -(m/2)(5m-1)Var_t,                          (14e)
 ```
 
-where `R_sym` is precisely the right side of `(12)`. Thus the **odd-right-
-order sector** of the unresolved one-sided `(OS+)` problem has an exact
-address: bound the rooted-state variance and its covariance with `d+4r` by
-the positive symmetric baseline. For even `|B|`, the all-order identity
-`(14b)` remains exact, but the parity reduction `S=K/m` and hence `(14e)` are
-not available. This is more precise than asking for pointwise cross-capacity
-dominance, which THM-4181 already refutes. THM-4177's incoming-fan injection
-is the natural least-used sidecar for attacking the covariance term.
+where `R_sym` is precisely the right side of `(12)`. Thus the unresolved
+one-sided `(OS+)` problem at **every right order** has an exact address: bound
+the rooted-state variance and its covariance with `d+4r` by the positive
+symmetric baseline. This is more precise than asking for pointwise
+cross-capacity dominance, which THM-4181 already refutes. THM-4177's
+incoming-fan injection is the natural least-used sidecar for attacking the
+covariance term.
 
 ## 4. Positivity in the three right-order regimes
 
@@ -405,7 +404,7 @@ false uniform value=233,574,516,
 difference=3,816.                                      (23e)
 ```
 
-The odd-order defect identity accounts for the discrepancy exactly:
+The all-order defect identity accounts for the discrepancy exactly:
 
 ```text
 Var(t)=696/7, Cov(t,d+4r)=192,
@@ -493,12 +492,12 @@ R_+(1,C3)=120.                                          (27)
 ```
 
 It also checks `90` prefixed-cycle rows from `(2)`, `(14b)--(14e)` on all
-`1,032` labelled odd right factors of orders three and five with left `C3`,
+`1,098` labelled right factors of orders two through five with left `C3`,
 the order-nine hostile, and the LRC projection hostile in Section 8. The
 frozen semantic digest is
 
 ```text
-25bee1eda8dc268bd0e7bfab92622f31d5af1cef08c7c5a059547b783c49aead.
+faf77ea0f456efdfe0cdfdafac5fa880c401196c0d056796494fc1b1d8c3b22a.
 ```
 
 ### 7.2 Algorithmically independent referee
@@ -523,7 +522,7 @@ All `26` direct child remainders equal `(12)` and are strict, again with
 minimum `120`. Its semantic digest is
 
 ```text
-3830d2aa1207eddba04f188bf5064a1c5b4747b82a3351c647c890d980c7c91e.
+9428843ca20a1b09d9dbc6c47d5f0a89d65a37c722117e637a0dbfc7f0c46056.
 ```
 
 Thus an algorithmically independent audit is not merely feasible; the
@@ -546,10 +545,10 @@ assembly gives the same `233,570,700`. Its semantic digest is
 Artifact byte hashes are
 
 ```text
-primary script       5049c5bf1da78570c43066045a1bbe882d2d16f1f5f5b1f5d65e7155ee590c14
-primary output       1cb06814c20e9a9ca9aa4d3a0eb10375c796be8191217c7bca99c376368dca90
-independent script   afecd09c0e5cc47312ba98bb56003f95f1d1a2f77501aea5a11f0284ca65f746
-independent output   5e688c069dbf17657fe678f8e7d9d6a5c9fadd66c4ff22cd82f89475a27aa58e
+primary script       954a2a0b85036d446a1bbf5ec1c0f5f46e9f5b2646a7d72a63c17775569dbafd
+primary output       96d7a18c1aaff89556ecae3456471d37d910aa6cd3edaa71555c765389384634
+independent script   37e0555155ec6715a238df62cb6a9327156631ee84214de70a0c61edd5be1b18
+independent output   7962a5404785bc06399e84495783b585503dee6f3301c196797f3dae24f97d8a
 hostile script       0f03b29fe3a15902a44ea63170d7f5d77d9ecd5c02748fa161b9805d949e9244
 hostile output       e56e2f8d0d80c354b38b7e25a8c00d4517b05b084437a76c0c6c4dcb67c3f08e
 ```

@@ -108,7 +108,7 @@ def one_sided_vt_formula(
     return value, cross
 
 
-def odd_symmetry_defect(
+def symmetry_defect(
     left: base.TournamentData,
     right: base.TournamentData,
     cross: tuple[int, ...],
@@ -225,10 +225,11 @@ def main() -> None:
             digest.update(("prefix|" + "|".join(map(str, row)) + "\n").encode("ascii"))
             prefix_checks += 1
 
-    # One-sided symmetry/defect identity on every labelled odd right factor
-    # at orders three and five, with C3 as the VT left factor.
+    # One-sided symmetry/defect identity on every labelled right factor at
+    # orders two through five, with C3 as the VT left factor.  THM-4184's
+    # all-order parity balance makes the centering valid at even order too.
     one_sided_checks = 0
-    for order in (3, 5):
+    for order in (2, 3, 4, 5):
         pair_count = order * (order - 1) // 2
         for bits in range(1 << pair_count):
             out = base.parse(format(bits, f"0{pair_count}b"), order)
@@ -236,7 +237,7 @@ def main() -> None:
             direct = base.remainder(cycle, right)
             formula, cross = one_sided_vt_formula(cycle, right)
             need(formula.denominator == 1 and formula.numerator == direct, "one-sided formula")
-            variance, covariance, penalty = odd_symmetry_defect(cycle, right, cross)
+            variance, covariance, penalty = symmetry_defect(cycle, right, cross)
             uniform = vt_formula(cycle, right)
             need(uniform - penalty == direct, "odd symmetry-defect identity")
             digest.update(
@@ -301,7 +302,7 @@ def main() -> None:
             break
     need(hostile is not None, "regular hostile not found")
     hostile_cross = tuple(2 * (row[0] + 2 * row[1]) for row in hostile[3])
-    hostile_variance, hostile_covariance, hostile_penalty = odd_symmetry_defect(
+    hostile_variance, hostile_covariance, hostile_penalty = symmetry_defect(
         cycle, data, hostile_cross
     )
     need(hostile_penalty == hostile[8], "hostile defect penalty")
@@ -340,7 +341,7 @@ def main() -> None:
     print("vt_minimum", minimum)
     print("prefix_cycle_checks", prefix_checks)
     print("prefix_cycle_minimum", prefix_minimum)
-    print("one_sided_odd_defect_checks", one_sided_checks)
+    print("one_sided_all_order_defect_checks", one_sided_checks)
     print("regular_hostile_triangle", hostile[0])
     print("regular_hostile_label", hostile[1])
     print("regular_hostile_hamilton", hostile[2])

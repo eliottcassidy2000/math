@@ -255,7 +255,7 @@ def one_sided_vt_formula(
     return value, cross
 
 
-def odd_symmetry_defect(
+def symmetry_defect(
     left: tuple[int, ...], right: tuple[int, ...], cross: tuple[int, ...]
 ) -> tuple[Fraction, Fraction, Fraction]:
     m, n = len(left), len(right)
@@ -370,26 +370,34 @@ def main() -> None:
             digest.update(("direct|" + "|".join(map(str, row)) + "\n").encode("ascii"))
             direct_checks += 1
 
-    # One-sided identity on all eight labelled order-three right factors.
+    # One-sided identity on every labelled right factor of orders two through
+    # four.  This independently covers both parities with literal children.
     cycle = circulant(3, {1})
     one_sided_checks = 0
-    for bits in range(8):
-        right_rows = [0] * 3
-        cursor = 0
-        for left_vertex in range(3):
-            for right_vertex in range(left_vertex + 1, 3):
-                if bits & (1 << cursor):
-                    right_rows[left_vertex] |= 1 << right_vertex
-                else:
-                    right_rows[right_vertex] |= 1 << left_vertex
-                cursor += 1
-        right = tuple(right_rows)
-        direct = direct_remainder(cycle, right)
-        formula, cross = one_sided_vt_formula(cycle, right)
-        need(formula.denominator == 1 and formula.numerator == direct, "one-sided direct formula")
-        variance, covariance, penalty = odd_symmetry_defect(cycle, right, cross)
-        need(vt_formula(cycle, right) - penalty == direct, "one-sided defect")
-        one_sided_checks += 1
+    for order in (2, 3, 4):
+        width = order * (order - 1) // 2
+        for bits in range(1 << width):
+            right_rows = [0] * order
+            cursor = 0
+            for left_vertex in range(order):
+                for right_vertex in range(left_vertex + 1, order):
+                    if bits & (1 << cursor):
+                        right_rows[left_vertex] |= 1 << right_vertex
+                    else:
+                        right_rows[right_vertex] |= 1 << left_vertex
+                    cursor += 1
+            right = tuple(right_rows)
+            direct = direct_remainder(cycle, right)
+            formula, cross = one_sided_vt_formula(cycle, right)
+            need(formula.denominator == 1 and formula.numerator == direct, "one-sided direct formula")
+            variance, covariance, penalty = symmetry_defect(cycle, right, cross)
+            need(vt_formula(cycle, right) - penalty == direct, "one-sided defect")
+            digest.update(
+                ("defect|" + "|".join(map(str, (order, label(right), direct,
+                                                   variance, covariance, penalty))) + "\n")
+                .encode("ascii")
+            )
+            one_sided_checks += 1
 
     # Rebuild the primary order-nine score-regular hostile literally.
     seed = circulant(9, {1, 2, 3, 4})
@@ -417,7 +425,7 @@ def main() -> None:
     false_uniform = vt_formula(cycle, hostile)
     need(false_uniform.denominator == 1 and hostile_direct != false_uniform, "hostile separation")
     hostile_cross = tuple(2 * (row[0] + 2 * row[1]) for row in hostile_ends)
-    hostile_variance, hostile_covariance, hostile_penalty = odd_symmetry_defect(
+    hostile_variance, hostile_covariance, hostile_penalty = symmetry_defect(
         cycle, hostile, hostile_cross
     )
     need(hostile_penalty == false_uniform - hostile_direct, "hostile defect penalty")
@@ -459,7 +467,7 @@ def main() -> None:
     print("uniform_factor_checks", uniform_checks)
     print("direct_literal_child_checks", direct_checks)
     print("direct_minimum", minimum)
-    print("one_sided_odd_defect_checks", one_sided_checks)
+    print("one_sided_all_order_defect_checks", one_sided_checks)
     print("regular_hostile_label", hostile_row[1])
     print("regular_hostile_hamilton", hostile_row[2])
     print("regular_hostile_end_states", hostile_row[3])
