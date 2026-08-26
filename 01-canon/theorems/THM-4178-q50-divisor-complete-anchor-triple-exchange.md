@@ -15,6 +15,7 @@ related:
   - THM-4170-triple-deletion-matching-eventual-haar-odd-tail-transfer
   - THM-4172-multideletion-support-tomography-and-same-parity-johnson-holonomy
   - THM-4174-six-deletion-completion-of-divisor-complete-newcomer-haar-transfer
+  - THM-4179-q50-seventh-deletion-primitive-anchor-completion
 script: 04-computation/lrc14_q50_divisor_complete_anchor_triple_exchange_thm4178.py
 output: 05-knowledge/results/lrc14_q50_divisor_complete_anchor_triple_exchange_thm4178.out
 independent_audit_script: 04-computation/lrc14_q50_divisor_complete_anchor_triple_exchange_thm4178_independent_audit.cpp
@@ -474,3 +475,6 @@ only deletion arities five and six and distinct positive odd tails after
 doubling. It does not provide physical entry, classify arbitrary
 divisor-complete bodies, handle mixed/even tails, prove the two hostile rows
 unsafe, or prove LRC(14).
+
+THM-4179 later proves that both hostile rows cross sharply at deletion depth
+seven; their depth-six covers are certificate blocks, not body obstructions.

@@ -74,13 +74,13 @@ is the safe control `M(S_13)=99/338`. No cited result proves LRC(14).
 - **Owner/tail lane (PROVED):** THM-4025/4031, 4029/4038, and 4033/4042
   give tails, the 60-phase law, and clocks; THM-4129/4136 close fixed `U/2U`.
   THM-4142--4154 give affine/Haar families and transfers.
-  THM-4174 closes all-anchor deletion (`61,9,1,0`; `888,030` cores/newcomer;
-  `q>=3693` content-stably outside THM-4158). THM-4175 closes `6,660,225`
-  all-`q` one-anchor exchanges/newcomer at sharp depth six.
-  [THM-4178](../01-canon/theorems/THM-4178-q50-divisor-complete-anchor-triple-exchange.md)
-  gives the `q=50` six-anchor profile: `480,700` new two-anchor bodies and two
-  seven-cover certificate blocks, not unsafety. Fixed-pool only; entry/
-  arbitrary bodies/LRC(14) remain open. [Proof map](LRC14-PROOF-MAP.md).
+  THM-4174/4175 close fixed-pool all-/one-anchor lanes
+  (`888,030`/`6,660,225` bodies per newcomer).
+  [THM-4178](../01-canon/theorems/THM-4178-q50-divisor-complete-anchor-triple-exchange.md)/
+  [4179](../01-canon/theorems/THM-4179-q50-seventh-deletion-primitive-anchor-completion.md)
+  clear two `q=50` blockers at sharp depth seven and transfer all six anchors;
+  the exactly-one-original union has `1,071,961` bodies. Fixed-pool; entry,
+  arbitrary bodies, and LRC(14) stay open. [Proof map](LRC14-PROOF-MAP.md).
 - **PROVED:** [THM-2928](../01-canon/theorems/THM-2928-critical-seven-comb-grid-tensorization-and-drift-tariff.md)/2941: literal zero/one/two/three-drift sectors are empty; `k=2,3` are finite.
 - **Orthogonal routes.** THM-1017 is HYP-6820; THM-2047/2050 keep phase/exit; THM-731/2048 prune; THM-1290 ends at `55`; HYP-8900 nonuniform.
 - **PROVED micro-staircase:** THM-3316 closes every prime and THM-3317 proves

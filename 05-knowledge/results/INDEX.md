@@ -1,5 +1,24 @@
 # Script Results Index
 
+- `lrc14_q50_seventh_deletion_primitive_anchor_completion_thm4179.py` and an
+  independent joint-wall C++20 engine -> blocker descent and all-six-anchor
+  completion [THM-4179 PROVED RELATIVE TO THM-4150/4178 + VERIFIED-EXACT +
+  INDEPENDENTLY AUDITED; LRC(14) OPEN]. For a monotone deletion family, every
+  small transversal at depth `d+1` already blocks depth `d`; maximal deletion
+  is exactly the body's own Haar-threshold test. The two THM-4178 depth-six
+  hostile rows have exactly `1` and `3` seven-blockers. Every blocker misses a
+  named depth-seven repair, while the full depth-seven hypergraphs have
+  `298,279` and `286,291` edges, zero equalities, and exact transversal number
+  eight. Hence all six primitive divisor-complete `q=50` anchors transfer by
+  depth at most seven. Overlap-aware counting gives `1,071,961` distinct
+  exactly-one-original-anchor bodies, `591,261` beyond THM-4178's positive
+  row; anchor presentations must not be added. Primary source/output SHA-256:
+  `3310b12f80aac7c8b774c8af5ba356bdb28a8a95e64a154541ea9b18165f3d89` /
+  `ea3fb40c8c613e25a1ff563cd82ae88bb9c11587092faf98c2acd9163d1b10eb`;
+  independent source/output:
+  `47c0d8f1107d35b770d63348a21fcac04ffc08dc4a611b46b221f0be0ac5aa3b` /
+  `1f4ea2ca6e454075c9916f84a9cdbe3859c3243ef4070b426c6d3e397a94a3c0`.
+
 - `tournament_root_split_source_sink_census_thm4177.cpp` and an independent
   Python referee -> root-split/current/odd-path structure and source/sink
   boundary descent [THM-4177 PROVED STRUCTURAL + FINITE-EXACT COMPLETE
