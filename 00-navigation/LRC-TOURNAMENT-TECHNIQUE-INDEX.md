@@ -18,7 +18,7 @@ AP/GW equality atom, C27 petal/two-block discharge, K33/F7 state lift,
 covering/boundary-moment positivity, or a rigorous Fejer/Toeplitz certificate.
 Every technique below is a possible tooth in that zipper.
 
-### Current response carrier -- THM-3910/4129/4132/4136/4142
+### Current response carrier -- THM-3910/4129/4132/4136/4142/4148
 
 - **Move:** use an auxiliary runner only to select a marked deep center, then
   delete it before transporting the neighborhood.  Preserving the eleven-body
@@ -34,6 +34,10 @@ Every technique below is a possible tooth in that zipper.
   low clocks to close every fixed-`2U` row with two distinct odd tails.
   THM-4142 intersects the common arc and clock bank before body selection,
   extending this certificate to `7,726,160` eleven-subsets of a 26-speed pool.
+  THM-4148 instead keeps only a movable body-safe first window. If
+  `m>=3` and `13/(14M)-1/(14m)>=2/189`, its width defeats every nonresidual
+  cross-comb component and one endpoint clock closes the residual `q<=25`;
+  `[15,60]` alone yields `13,340,783,196` eleven-body families.
 - **Preserves:** body safety, literal root `t`, integer fibre multiplicity,
   compact/open endpoint status, and the cubic mixed danger response.
 - **Forgets / guardrail:** an ordinary tournament, complete pairwise Gram
@@ -42,11 +46,11 @@ Every technique below is a possible tooth in that zipper.
   safe response by `17/61992`.  THM-4002's equal-Graver-fibre and
   half-translate hostiles independently show that relation length and full
   Fourier power lose relative phase.  Endpoint equality remains atomic data.
-- **Next pull:** transfer the cross-comb carrier to the sixteen arbitrary-body
-  scale-one types and to scale-two bodies outside THM-4142's certificate pool,
-  while retaining the common body sheet word and a body-safe component of
-  sufficient length.
-- **Pointers:** THM-3910, THM-4002, THM-4129, THM-4132, THM-4136, THM-4142; THM-2221, THM-3377,
+- **Next pull:** optimize over non-first or disconnected safe components and
+  body-dependent residual clocks to reach bodies failing THM-4148's extremal
+  width gate; retain compact/open endpoint type under multiplication by `t`.
+- **Pointers:** THM-3910, THM-4002, THM-4129, THM-4132, THM-4136, THM-4142,
+  THM-4148; THM-2221, THM-3377,
   THM-3380, THM-3729;
   `lrc14-fixed-radius-auxiliary-center-t-sheet-response-and-tournament-cubic-sidecar-root-20260823.md`.
 

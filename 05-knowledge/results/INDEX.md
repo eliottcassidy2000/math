@@ -1,5 +1,26 @@
 # Script Results Index
 
+- `lrc14_first_window_width_universal_odd_tail_transfer_thm4148.py` and
+  independent warning-clean C++ audit -> matching exact gates [THM-4148
+  PROVED ELEMENTARY FIRST-WINDOW/CROSS-COMB TRANSFER + VERIFIED-EXACT +
+  INDEPENDENTLY AUDITED; LRC(14) OPEN]. Every finite positive body `H` with
+  `m=min(H)>=3` and `13/(14M)-1/(14m)>=2/189` has universal `1/14`-safe
+  completion after doubling by every pair of distinct positive odd tails.
+  Thus `[15,60]` supplies `C(46,11)=13,340,783,196` eleven-body families,
+  beyond THM-4142's common pool; 46 labels is sharp among consecutive blocks
+  for this mechanism, with all maximal starts exactly `14..22`. The hostile
+  tails `(1,211)` kill opposite endpoint lifts, while moving to
+  `y=1/105`, `x=53/105` rescues the full `[15,60]` superbody. Arbitrary
+  bodies, entry, and LRC(14) remain open. Primary script/output SHA-256:
+  `ffee89d8ec8833a5533ade63edf1ee3d34ca89c0dfe77b7a2651575f09d2bdf4` /
+  `ed11811dbb0dc7fef83e00431d30276318360938b58b459bf7637479079e9677`;
+  independent:
+  `e617521359ad7ea8ee02c646e78fec69cad8c07a430fe4e47ce0e8352e6880cc` /
+  `222c4cc324b87c6f4a2464db22d2fa369b39320dff53d0ff14cb4289dc53650d`;
+  shared semantic SHA-256/FNV-64:
+  `6f4c7b6fd62bca62f0a8baccb63822e6f19df831d2ece22001c2412cfce44e2e` /
+  `1f67e51174709013`.
+
 - `tournament_rooted_pair_expansion_two_defect_thm4145.py` and independent
   standard-library C++ audit -> matching structural identities [THM-4145
   PROVED ELEMENTARY ROOTED SUBSTITUTION + EXACT TWO-DEFECT FORMULA +
