@@ -93,6 +93,23 @@ finite synchronous transducer changes carry to native coordinates.  The
 greedy boundary, `(100)^infinity`, `A=1`, `(01)^infinity`, and the
 denominator-19 tower are exact controls, not candidate evidence.
 
+The same theorem now records the exact clocked-cylinder and reset-skeleton
+normal form. If a carry prefix of length `m` sends its least representative
+`r_m` to `u_m`, then every nonnegative integer in that cylinder obeys
+
+```text
+A=r_m+2^m k  =>  T^m(A)=u_m+3^m k.
+```
+
+Because `3^ell` is a unit modulo every `2^j`, every finite prescribed reset
+skeleton cuts out exactly one residue class modulo `2^L`. This is a finite
+compatibility theorem, not an infinite candidate. The minimal hostile for the
+terminal-depth-retaining quotient is `A=8` versus `A=13`: after four steps
+they share depth, follower state, height, and the native-one-seen flag, but
+the next carry `1` rejects the former while `0` keeps the latter alive. Thus
+an all-depth argument must supplement this quotient with output information,
+such as the residual integer/cylinder address.
+
 ## Live deterministic task
 
 After the last native `1`, the product becomes the deterministic integer
@@ -105,7 +122,9 @@ system
 with rejection when `delta` is undefined.  Starting from every reachable
 safe state with `u>0`, prove that the orbit rejects or loses the infinite-reset
 condition; alternatively exhibit one reachable nonrejecting orbit with
-infinitely many resets.
+infinitely many resets. Finite reset-skeleton solvability alone cannot decide
+this inverse limit: couple the exact residue classes to an Archimedean or
+genuinely all-depth `2`-adic obstruction.
 
 [THM-4074](../01-canon/theorems/THM-4074-mahler-denominator19-postterminal-arbitrary-delay.md)
 rules out a bounded version of this task.  A reachable denominator-19 terminal

@@ -1,18 +1,19 @@
 THM4158_THREE_BAND_WRAPPED_CARRIER_ODD_TAIL_TRANSFER_20260825
 status=PASS;scope=exact rational and finite combinatorial controls
-carrier=[1/(14m),8/(7(12m+1))];m>=2
+carrier=[1/(14m),8/(7(12m+1))];m>=1
 bands=[m,floor(13(12m+1)/16)]|[15m,floor(27(12m+1)/16)]|[29m,floor(41(12m+1)/16)]
-direct_pool_reconstruction=m2..1000_match;fourth_band_only_m1
+m1_exception=[1,10]|[15,21]|[29,33]|[43,44];size=24;family=1144066
+direct_pool_reconstruction=m1..1000_match;fourth_band_only_m1
 endpoint_test_floor_through_m300=601/8400
-large_bad_tooth_checks=361192
+large_bad_tooth_checks=361200
 sharp_control=shortening_right_endpoint_fails_for_tails_(1,12m+1)
-direct_strict_wall_tail_rows=6327
+direct_strict_wall_tail_rows=7030
 m7_pool=[7,69]|[105,143]|[203,217];size=117
 m7_anchors=7,120,126,143;primitive_divisor_complete_through_14
 m7_family_count=38620298376;outside_4148_4151=38620298376
 fixed_clock_control=gap(240/12)=0
-finite_family_counts=20:75582,40:812850987,80:3595550244611,120:397529462747261,160:10616582432233990,200:132777517674540845
+finite_family_counts=20:78585,40:813203703,80:3595551388677,120:397529463891327,160:10616582433378056,200:132777517675684911
 asymptotic_density=848953086913769850118498851618778832628468542103282298683365532079/2481088067163593416217816176836483026480276818419826456353950662656
 old_density=2758547353515625/8140406085191601;density_gain=59367779473724913286745294455473885142894795652409271/17997353908972062863364250852276005638984892348209823744
-semantic_sha256=b1d8f0a1cad02303d3560e1deb471794d3b9fdcff0b1e1cffe12379674f6cdb6
-semantic_fnv64=416565bf17102710
+semantic_sha256=9ef136184225c88a692eb1aca0a33e5be60e02f4cf27a20c04939be98ba6d96e
+semantic_fnv64=0f8d84ecb8dee6a5

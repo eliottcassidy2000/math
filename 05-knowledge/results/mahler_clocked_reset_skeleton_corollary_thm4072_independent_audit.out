@@ -1,0 +1,13 @@
+MAHLER CLOCKED-RESET COROLLARY THM-4072 INDEPENDENT AUDIT
+checks=4127032
+cone_gates=131008;transition_gates=196512
+reset_lengths_through_128=26
+reset_map_gates=3328;xor_gates=26
+second_reset_congruence_gates=18488
+skeletons_total_depth_le_18=2290
+skeleton_affine_gates=36640
+minimal_clock_quotient_hostile=depth4;A8_vs_A13;q=1
+A8=T4=41;next1;reject_index4
+A13=T4=68;next0;reject_index10
+semantic_sha256=e1212aecd45106af21a8452c442d7023eeec55adda3772f9f62e99977f4fa57f
+verdict=EXACT_IDENTITIES_CONFIRMED;NOVELTY_LIMITED

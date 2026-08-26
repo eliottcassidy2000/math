@@ -4,20 +4,24 @@
 from __future__ import annotations
 
 import hashlib
+import sys
 from fractions import Fraction
 from math import comb, gcd
 
 
-EXPECTED_SEMANTIC_SHA256 = "b1d8f0a1cad02303d3560e1deb471794d3b9fdcff0b1e1cffe12379674f6cdb6"
-EXPECTED_SEMANTIC_FNV64 = "416565bf17102710"
+sys.stdout.reconfigure(newline="\n")
+
+
+EXPECTED_SEMANTIC_SHA256 = "9ef136184225c88a692eb1aca0a33e5be60e02f4cf27a20c04939be98ba6d96e"
+EXPECTED_SEMANTIC_FNV64 = "0f8d84ecb8dee6a5"
 
 EXPECTED_FINITE_COUNTS = {
-    20: 75_582,
-    40: 812_850_987,
-    80: 3_595_550_244_611,
-    120: 397_529_462_747_261,
-    160: 10_616_582_432_233_990,
-    200: 132_777_517_674_540_845,
+    20: 78_585,
+    40: 813_203_703,
+    80: 3_595_551_388_677,
+    120: 397_529_463_891_327,
+    160: 10_616_582_433_378_056,
+    200: 132_777_517_675_684_911,
 }
 
 
@@ -45,9 +49,9 @@ def carrier_width(first: int) -> Fraction:
 
 
 def blocks(first: int) -> tuple[tuple[int, int], ...]:
-    """Closed-form common-safe bands; first>=2 has exactly three."""
+    """Closed-form common-safe bands: four at m=1, then exactly three."""
     answer = []
-    for tooth in range(3):
+    for tooth in range(4 if first == 1 else 3):
         lower = first * (14 * tooth + 1)
         upper = ((12 * first + 1) * (14 * tooth + 13)) // 16
         require(lower <= upper, ("nonempty band", first, tooth))
@@ -136,7 +140,7 @@ def pool_count_at_bound(first: int, bound: int) -> int:
 
 def eleven_body_count(bound: int) -> int:
     answer = 0
-    for first in range(2, bound + 1):
+    for first in range(1, bound + 1):
         available = pool_count_at_bound(first, bound) - 1
         if available >= 10:
             answer += comb(available, 10)
@@ -179,7 +183,7 @@ def fnv64(data: bytes) -> str:
 
 def main() -> None:
     # The common carrier has the exact anchored width inherited from THM-4151.
-    for first in range(2, 1001):
+    for first in range(1, 1001):
         left, right = carrier(first)
         require(left < right, ("positive carrier width", first))
         require(
@@ -210,7 +214,7 @@ def main() -> None:
     # either miss the bad carrier or have no more than G_m room to its right.
     endpoint_floor = Fraction(1, 2)
     large_tooth_checks = 0
-    for first in range(2, 301):
+    for first in range(1, 301):
         left, right = carrier(first)
         upper_lift = (1 + left) / 2
         for speed in range(1, 12 * first + 1, 2):
@@ -272,7 +276,7 @@ def main() -> None:
     # Direct strict-wall replay over all small tail pairs, without using the
     # parity proof.  The body is automatically safe on both lifts throughout.
     direct_tail_rows = 0
-    for first in range(2, 11):
+    for first in range(1, 11):
         odd_tails = range(1, 76, 2)
         for tail_b in odd_tails:
             for tail_a in range(1, tail_b, 2):
@@ -333,8 +337,10 @@ def main() -> None:
     ledger = (
         "carrier=[1/(14m),8/(7(12m+1))];width=(4m-1)/(14m(12m+1));"
         "bands=[m,floor(13(12m+1)/16)]|[15m,floor(27(12m+1)/16)]|"
-        "[29m,floor(41(12m+1)/16)];m>=2;direct_pool_m2..1000=match;"
-        f"endpoint_floor_m2..300={endpoint_floor};large_tooth_checks={large_tooth_checks};"
+        "[29m,floor(41(12m+1)/16)];m>=2;"
+        "m1_fourth=[43,44];m1_pool_size=24;m1_family=1144066;"
+        "direct_pool_m1..1000=match;"
+        f"endpoint_floor_m1..300={endpoint_floor};large_tooth_checks={large_tooth_checks};"
         "shortened_carrier_tails(1,12m+1)=unsafe;closed_endpoint=safe;"
         f"direct_tail_rows={direct_tail_rows};"
         "m7_pool=[7,69]|[105,143]|[203,217];pool_size=117;"
@@ -353,9 +359,10 @@ def main() -> None:
 
     print("THM4158_THREE_BAND_WRAPPED_CARRIER_ODD_TAIL_TRANSFER_20260825")
     print("status=PASS;scope=exact rational and finite combinatorial controls")
-    print("carrier=[1/(14m),8/(7(12m+1))];m>=2")
+    print("carrier=[1/(14m),8/(7(12m+1))];m>=1")
     print("bands=[m,floor(13(12m+1)/16)]|[15m,floor(27(12m+1)/16)]|[29m,floor(41(12m+1)/16)]")
-    print("direct_pool_reconstruction=m2..1000_match;fourth_band_only_m1")
+    print("m1_exception=[1,10]|[15,21]|[29,33]|[43,44];size=24;family=1144066")
+    print("direct_pool_reconstruction=m1..1000_match;fourth_band_only_m1")
     print(f"endpoint_test_floor_through_m300={endpoint_floor}")
     print(f"large_bad_tooth_checks={large_tooth_checks}")
     print("sharp_control=shortening_right_endpoint_fails_for_tails_(1,12m+1)")

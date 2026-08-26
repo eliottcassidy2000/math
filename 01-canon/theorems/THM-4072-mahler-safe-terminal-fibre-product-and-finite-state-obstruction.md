@@ -10,7 +10,10 @@ status: >
   exact fibre product gives an iff characterization of candidate Z-number
   codes, but every finite local terminal-prefix test is vacuous.  The rooted
   safe pair-prefix language is nonregular and the coordinate change has no
-  finite synchronous transducer.
+  finite synchronous transducer.  A proved clocked-cylinder corollary gives
+  one affine residue cone for every finite reset skeleton, while the minimal
+  terminal-depth hostile A=8 versus A=13 shows that follower state, native
+  clock and positivity marker still do not determine even the next decision.
   None of these statements proves that the candidate language is nonempty or
   calls that unknown language nonsofic; Mahler's Z-number problem remains open.
 source: codex-frontier-synthesis-creative-20260825c / Mahler fibre-product lane
@@ -28,7 +31,10 @@ audit: >
   (100)^infinity, A=1, (01)^infinity, and the denominator-19 changing-start
   tower at horizons 18,36,54,72.  They use exact integers and rational numbers
   only, contain no Python assert nodes or floating constants, and normal and
-  optimized runs byte-match their frozen outputs.
+  optimized runs byte-match their frozen outputs.  A later clean-room
+  corollary audit performs 4,127,032 additional exact gates, reconstructs all
+  2,290 reset skeletons through total depth 18, and verifies the minimal
+  same-terminal-depth A=8 versus A=13 quotient hostile.
 depends_on:
   - THM-2228-mahler-three-halves-carry-tail-and-integral-stabilization
   - THM-2231-relation-carry-completion-and-exact-radix-clock
@@ -42,6 +48,11 @@ independent_audit_script: 04-computation/mahler_safe_terminal_fibre_product_thm4
 independent_audit_output: 05-knowledge/results/mahler_safe_terminal_fibre_product_thm4072_independent_audit.out
 independent_audit_script_sha256: 818ab917ef4e8e0268bf4821ec529f35efa21c09c67cedcbe2a89e5e45d2b25f
 independent_audit_output_sha256: 019ed652a342108da1f31eb7f04bbdf88953fbc283cfdab0905052351ea891cc
+corollary_independent_audit_script: 04-computation/mahler_clocked_reset_skeleton_corollary_thm4072_independent_audit.py
+corollary_independent_audit_output: 05-knowledge/results/mahler_clocked_reset_skeleton_corollary_thm4072_independent_audit.out
+corollary_independent_audit_script_sha256: 98420f520cba0fdb7bd817a53c82ae6a0afdad8b4cdb9dd9d254127d93634a92
+corollary_independent_audit_output_sha256: ef1e2ebcba654c808eebf9c1b0ba316a6c3fbc9de905b820356acce9fcd7bf9e
+corollary_semantic_sha256: e1212aecd45106af21a8452c442d7023eeec55adda3772f9f62e99977f4fa57f
 hash_basis: raw working-tree bytes (LF)
 ---
 
@@ -461,7 +472,107 @@ The following five controls exercise different failed implications.
    horizon and fails immediately afterward.  This is a finite-horizon
    obstruction, not one infinite candidate.
 
-## 7. Map, loss, sidecars, and exact test
+## 7. Clocked-cylinder and reset-skeleton corollary
+
+The unbounded integer sidecar in Section 3 admits a useful exact block form.
+For a carry prefix `w=c_0...c_(m-1)`, let `r_m` be its canonical native
+residue and put `u_m=T^m(r_m)`, where
+
+```text
+T(A)=ceil(3A/2).
+```
+
+Every nonnegative ordinary completion of that cylinder is uniquely
+
+```text
+A=r_m+2^m k,                         k>=0.             (38)
+```
+
+and repeated substitution in the ceiling recurrence gives
+
+```text
+2^m T^m(A)=3^m A+C_m,
+C_m=sum_(0<=j<m)c_j 2^j 3^(m-1-j).
+```
+
+Subtracting the same identity for `r_m` proves the all-depth clocked cone
+
+```text
+T^m(A)=u_m+3^m k.                                      (39)
+```
+
+At depth `m`, write
+
+```text
+e=k mod 2,                 k'=(k-e)/2,
+c=(u_m+e) mod 2.
+```
+
+Then the synchronized update is
+
+```text
+r_(m+1)=r_m+2^m e,
+u_(m+1)=(3u_m+c+3^(m+1)e)/2,
+T^(m+1)(A)=u_(m+1)+3^(m+1)k'.                         (40)
+```
+
+Thus the native clock updates to `max(0,h-1)`, so it descends by one when
+`h>0`; the actual output state remains a load-bearing coordinate.
+
+There is also an exact reset-block form. Let `d=d_1d_2...` be the greedy
+equality word. For each `ell` with `d_ell=1`, define
+
+```text
+b_ell=d_1...d_(ell-1)0,
+rho_ell=the canonical residue of b_ell,
+nu_ell=T^ell(rho_ell).
+```
+
+The first-reset branch is
+
+```text
+A=rho_ell+2^ell k,
+J_ell(A)=nu_ell+3^ell k.                              (41)
+```
+
+Appending a reset block of length `j` imposes exactly
+
+```text
+nu_ell+3^ell k = rho_j mod 2^j.                       (42)
+```
+
+Because `3^ell` is a unit modulo `2^j`, equation `(42)` has one and only one
+class of `k modulo 2^j`. Induction gives the proved corollary:
+
+> Every finite reset skeleton `(ell_1,...,ell_s)` determines exactly one
+> carry residue modulo `2^L`, `L=sum ell_i`, and all of its ordinary
+> completions obey one affine output formula of the form `(39)`.
+
+This says neither that the native clock is zero at depth `L` nor that an
+infinite reset skeleton has an ordinary-integer inverse-limit point. These
+reset congruences alone therefore cannot remove a prescribed finite skeleton.
+
+The smallest witness against the terminal-depth-retaining quotient
+`(m,q,h,native-one-seen)` is
+
+```text
+A=8:   8,12,18,27,41;       carries 0001; q=1, h=0;
+A=13:  13,20,30,45,68;      carries 1001; q=1, h=0.   (43)
+```
+
+Both prefixes are follower-safe and have seen a native one. The next state
+of `A=8` has carry `1` against the required `d_2=0`, so it rejects at index
+four. The next state of `A=13` has carry `0`, survives, and first rejects at
+index ten. Exact exhaustion of terminal depths one through three finds no
+opposite next decisions in one quotient class, and depth four gives the
+lexicographically first pair `(8,13)`. Hence even the next decision needs at
+least the parity of `u_m`, while longer fate requires its unbounded value.
+
+This corollary is a blockwise normal form for THM-2228/4072, not a separate
+Mahler breakthrough. It proves no Z-number, universal rejection, new height
+bound, or post-terminal programming theorem.
+
+## 8. Map, loss, sidecars, and exact test
 
 ```text
 source:       a carry path c and its safe follower state q_m;
@@ -479,7 +590,7 @@ cheapest decisive finite tests:
               rejection/upward disagreement, open-tail certificate (10),
               a native 1, or completion of a displayed clock;
 irreducibly infinitary gates:
-              infinitely many resets and eventually no native 1s.          (38)
+              infinitely many resets and eventually no native 1s.          (44)
 ```
 
 The primary exact replay is
@@ -498,7 +609,14 @@ python3 -B -O 04-computation/mahler_safe_terminal_fibre_product_thm4072_independ
 
 Both outputs byte-match the frozen artifacts named in the front matter.
 
-## 8. Dependency and scope audit
+The supplementary clean-room corollary replay is
+
+```text
+python3 -B 04-computation/mahler_clocked_reset_skeleton_corollary_thm4072_independent_audit.py
+python3 -B -O 04-computation/mahler_clocked_reset_skeleton_corollary_thm4072_independent_audit.py
+```
+
+## 9. Dependency and scope audit
 
 - **THM-2228** supplies the carry homeomorphism, affine orbit identity,
   strict-tail/positive-stabilization iff theorem, nonemptiness and absence of
@@ -513,8 +631,9 @@ Both outputs byte-match the frozen artifacts named in the front matter.
 - The new content here is the explicit transition (14), the compatible
   carry/native rooted-tree automorphism, the reset-Buechi proof including its
   reverse direction, the exact four-gate fibre product (24), the no-pruning
-  inverse limit (29), the two finite-state impossibility results, and the joint
-  denominator-19 hostile.
+  inverse limit (29), the two finite-state impossibility results, the joint
+  denominator-19 hostile, and the later blockwise corollary `(38)--(43)` with
+  its minimal clock-quotient witness.
 
 The proved consequence is an exact representation-and-obstruction theorem.
 It neither constructs nor excludes a Mahler Z-number.
