@@ -1,7 +1,15 @@
 ---
 id: THM-4216
 title: "Tail-five non-singleton right-factor positivity"
-status: RESERVED / UNPROVED PROVISIONAL PROOF UNDER AUDIT
+status: >
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY AUDITED. For
+  Q_n=C3 triangleright P_n, bare ordinal remainder is positive against every
+  non-singleton right factor exactly when n>=5 and against every nonempty
+  right factor exactly when n>=6. At tail five the exact four-debt
+  decomposition gives the strict polynomial floor and the uniform
+  non-singleton bound 2730H(C)^2. Consequently THM-4213's separated
+  multi-cycle language needs final tail five, not six. General (OS+),
+  adjacent-cycle thresholds, and arbitrary-left bare positivity remain open.
 source: root-frontier-synthesis-20260826
 depends_on:
   - THM-4187-universal-source-padding-supermodularity-and-transitive-left-ordinal-positivity
@@ -12,8 +20,12 @@ related:
   - THM-4193-cycle-first-transitive-tail-crossing-and-transitive-context-positivity
 script: 04-computation/tournament_tail_five_nonsingleton_right_factor_positivity_thm4216.py
 output: 05-knowledge/results/tournament_tail_five_nonsingleton_right_factor_positivity_thm4216.out
+independent_audit_script: 04-computation/tournament_tail_five_nonsingleton_right_factor_positivity_independent_audit_thm4216.cpp
+independent_audit_output: 05-knowledge/results/tournament_tail_five_nonsingleton_right_factor_positivity_independent_audit_thm4216.out
 script_sha256: 4e189e468b580fa5bacc8ff80fceabe4ecb72002196fc989a447e40012a7c5e6
 output_sha256: 35221cfa04c7fd9f9e89bd0f1ffa3febc188c53e4dd9f76603e3bbb729640921
+independent_audit_script_sha256: b2b85eafe4bc6a823913a0098fe02c7dd68b109de481f110a44d5f3c4b9d4e52
+independent_audit_output_sha256: 7a11ecba317d3367cf29acfcca5d1597b06e6f3442bc4228d96be2b932e64ac4
 hash_basis: raw LF bytes
 primary_audit: >
   PASS. Exact symbolic coordinate change reconstructs the tail-five unary
@@ -23,19 +35,23 @@ primary_audit: >
   1,099 labelled right factors through order five, both sharp hostile lists,
   2,198 later-tail rows, and 34 final-tail-five no-sink controls. Normal and
   python -O streams byte-match.
+independent_audit: >
+  ACCEPT. A standalone C++17 referee reconstructs tournaments from literal
+  adjacency, uses its own subset path DP, and imports neither ordinal transfer
+  nor response jets. It independently recovers the Q5 jet, unary coefficients,
+  fan rewrite, exact four-debt identity, strict tau boundary, all-adjacencies
+  marked-Hamilton bound, hostile tables, later-tail propagation, and 34
+  final-tail-five no-sink controls. O0, O3, and ASan/UBSan streams byte-match.
 ---
 
 # THM-4216 -- tail-five non-singleton right-factor positivity
 
-**RESERVED / UNPROVED PROVISIONAL PROOF UNDER AUDIT.**
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY AUDITED.**
 
-The proposed result sharpens THM-4213's final-tail-six `(OS+)` corollary to
+The result sharpens THM-4213's final-tail-six `(OS+)` corollary to
 final tail five. The mechanism is an exact positive decomposition hidden in
 THM-4208's unary response: after the incoming fan is traded for Hamilton
 starts, the signed current becomes an edge-avoidance mass.
-
-Nothing in this file is available as a proved dependency until the
-independent audit is complete and the status is promoted.
 
 ## 1. Statement and inheritance pass
 
@@ -49,7 +65,7 @@ Q_n=C3 triangleright P_n,                    n>=0,       (1)
 
 where `P_0` is empty notation only in `(1)`.
 
-> **Provisional Theorem 1 (exact tail-five positive decomposition).** For
+> **Theorem 1 (exact tail-five positive decomposition).** For
 > every right factor `C`, write `h=H(C)` and `w=W(C)`. Then
 >
 > ```text
@@ -69,14 +85,14 @@ where `P_0` is empty notation only in `(1)`.
 > R_+(Q_5,P_1)=-180.                                   (4)
 > ```
 
-> **Provisional Theorem 2 (two sharp right-factor thresholds).** One has
+> **Theorem 2 (two sharp right-factor thresholds).** One has
 >
 > ```text
 > R_+(Q_n,C)>0 for every non-singleton C   iff n>=5,
 > R_+(Q_n,C)>0 for every nonempty C        iff n>=6.    (5)
 > ```
 
-> **Provisional Corollary 3 (final-tail-five multi-cycle `(OS+)`).** Every
+> **Corollary 3 (final-tail-five multi-cycle `(OS+)`).** Every
 > THM-4213 strong-component word
 >
 > ```text
@@ -183,7 +199,7 @@ Nonnegativity and the totals in `(9)` also give
 p<= (sum_i v_i)(sum_i t_i)=(w+h)h.                    (17)
 ```
 
-Subtraction of the proposed floor in `(2)` from the exact identity `(15)`
+Subtraction of the floor in `(2)` from the exact identity `(15)`
 produces the exact certificate
 
 ```text
@@ -193,8 +209,12 @@ R_+(Q_5,C)-6[-33h^2+274hw+214w^2]
 ```
 
 Every term on the right is nonnegative, proving `(2)`.
+In fact `tau>0`, because every nonempty tournament has a Hamilton path and
+the Hamilton-start counts sum to `h>0`.  Thus `(2)` is always strict, although
+the weaker displayed form is the useful compositional certificate.
 
-If `C` has at least two vertices, mark one adjacency in each Hamilton path:
+If `C` has at least two vertices, mark each of the `|C|-1` adjacencies in
+every Hamilton path:
 
 ```text
 w>=(|C|-1)h>=h.                                        (19)
@@ -279,7 +299,7 @@ removes the additional final singleton required by THM-4213 Corollary 4.
 
 ## 6. Scope firewall
 
-The proposed theorem proves a bare-remainder sign only for the cycle-first
+The theorem proves a bare-remainder sign only for the cycle-first
 transitive-tail family and for THM-4213's tail-five-separated language. It
 does not prove that every member of the uniformly positive ideal has positive
 bare remainder; the singleton hostile `(4)` explicitly refutes that
@@ -299,7 +319,7 @@ decisive tests:
               P1 at tail five and P2 through tails zero to four.          (29)
 ```
 
-## 7. Provisional replay
+## 7. Exact replay
 
 ```bash
 PYTHONPATH=04-computation python3 -B \
@@ -310,4 +330,14 @@ PYTHONPATH=04-computation python3 -O -B \
 ```
 
 Both streams byte-match the frozen primary output. Independent audit remains
-pending; this file therefore remains outside the proof graph.
+available through the standalone literal engine:
+
+```bash
+clang++ -std=c++17 -O3 -DNDEBUG -Wall -Wextra -Wpedantic -Werror \
+  04-computation/tournament_tail_five_nonsingleton_right_factor_positivity_independent_audit_thm4216.cpp \
+  -o /tmp/thm4216-independent
+/tmp/thm4216-independent | diff -u \
+  05-knowledge/results/tournament_tail_five_nonsingleton_right_factor_positivity_independent_audit_thm4216.out -
+```
+
+The independent O0, O3, and ASan/UBSan streams byte-match the frozen output.

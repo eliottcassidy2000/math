@@ -271,8 +271,9 @@ THM-2070 refutes the general HYP-8890/8895 bypasses.  Transfer
   [THM-4212](../01-canon/theorems/THM-4212-cycle-prefix-uniform-arbitrary-context-threshold-and-tail-five-lower-bound.md)
   proves uniform threshold `n>=5`;
   [THM-4213](../01-canon/theorems/THM-4213-uniform-prefix-ordinal-semigroup-and-tail-five-cycle-language.md)
-  gives the `m`-cycle floor `10764(9^m-1)/8`, final-tail-six `(OS+)`, and
-  adjacent-cycle hostile `-338580`. General `(OS+)` remains **OPEN**.
+  gives the `m`-cycle floor and adjacent-cycle hostile; [THM-4216](../01-canon/theorems/THM-4216-tail-five-nonsingleton-right-factor-positivity.md)
+  gives sharp bare thresholds `5/6` (non-singleton/all) and final-tail-five
+  `(OS+)`. General `(OS+)` remains **OPEN**.
   THM-4114/4118 leave face/cut and gcd gaps; completeness is **OPEN**.
 - Corrected HYP-8835: optimal support is uniquely odd; positive `Mp=0` gives a
   replicator integral. Pure optimum means Condorcet winner, not transitivity;
