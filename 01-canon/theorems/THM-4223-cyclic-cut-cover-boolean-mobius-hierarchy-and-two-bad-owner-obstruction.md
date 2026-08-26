@@ -2,18 +2,21 @@
 id: THM-4223
 title: "Cyclic cut-cover Boolean Mobius hierarchy and two-bad-owner obstruction"
 status: >
-  PROVED / REFUTED / FINITE-EXACT / OPEN FIREWALL. Proves the all-order
+  PROVED / REFUTED / FINITE-EXACT / SUPERSEDED SIDECAR FIREWALL. Proves the all-order
   owner-refined Boolean zeta/Mobius dictionary between cyclic bad-owner sets
   and cyclically ordered path covers, including exact formulas for H,
   endpoints, two-path covers, one-defect counts, and q. Refutes the natural
   local product bound B_ij<=End_i End_j first at a strong tournament of order
-  nine. The repair B_ij<=End_i End_j+min(End_i,End_j) is only FINITE-EXACT
-  through order nine and remains OPEN. HYP-9081 remains OPEN.
+  nine. The formerly OPEN repair B_ij<=End_i End_j+min(End_i,End_j) is
+  FINITE-EXACT through order nine but REFUTED first at order ten by THM-4224,
+  which also refutes every fixed multiple of the min repair. HYP-9081 remains
+  OPEN.
 source: codex-five-copy-switching-session-20260826
 depends_on:
   - THM-4208-cycle-prefix-arbitrary-context-recurrence-endpoint-energy-and-eventual-positivity
   - THM-4219-no-sink-endpoint-energy-floor-and-near-ordinal-sharpness
 related:
+  - THM-4224-order-ten-minimal-plus-min-two-bad-owner-obstruction
   - THM-3134-tournament-endpoint-jets-and-the-cubic-c3-gregory-newton-profile-transform
   - THM-4115-uniform-ear-cut-walsh-variance-and-sharp-growth-refinement
   - HYP-9081-strong-tournament-five-copy-endpoint-energy-inequality
@@ -35,7 +38,7 @@ audit: >
 
 # THM-4223 -- cyclic cut-cover Boolean Mobius hierarchy and two-bad-owner obstruction
 
-**PROVED / REFUTED / FINITE-EXACT / OPEN FIREWALL.**
+**PROVED / REFUTED / FINITE-EXACT / SUPERSEDED SIDECAR FIREWALL.**
 
 The scalar cyclic defect profile in THM-4115 remembers how many bad cyclic
 adjacencies occur. This theorem retains their owners. Cutting a cyclic word
@@ -45,8 +48,9 @@ endpoint data and identify the missing two-bad-owner sidecar for HYP-9081.
 
 The hierarchy does not prove HYP-9081. In particular, the most immediate
 pairwise injection suggested by the new sidecar is false in order nine. The
-slightly enlarged bound that survives the census is recorded only as an open
-question, not as an all-order result.
+slightly enlarged bound that survived this theorem's census was recorded only
+as an open question; THM-4224 subsequently refutes it first at order ten and
+on an infinite family.
 
 ## 1. Owner-refined cyclic cuts
 
@@ -261,7 +265,8 @@ B_78=End_7 End_8+min(End_7,End_8)=205.                    (24)
 >
 > has no failure through order nine. This makes nine the first failure
 > order for `(20)` in the exact census. Statement `(25)` is **FINITE-EXACT
-> / OPEN**, not a proved all-order inequality.
+> THROUGH ORDER NINE / REFUTED ALL-ORDER**: THM-4224 gives its first failure
+> at order ten. The finite statement here remains valid.
 
 The strong-class counts for orders `3,...,9` are
 
@@ -290,9 +295,8 @@ The exact sidecar restoring those losses is the tensor `(C_S)`, equivalently
 `(N_R)` by `(2)--(3)`.
 
 The order-nine witness proves that a proof of HYP-9081 cannot simply inject
-each `B_ij` into `End_i times End_j`. A viable five-copy switching must
-either use the higher `N_R` coherently across several owners, retain an
-additional marked choice comparable to the correction in `(25)`, or exploit
-a tournament-specific compatibility among the clique/star/edge layers.
-Nothing here proves that `(25)` holds in all orders, and nothing here closes
-HYP-9081.
+each `B_ij` into `End_i times End_j`. THM-4224 further proves that no fixed
+multiple of the smaller endpoint family repairs that local injection. A
+viable five-copy switching must use the higher `N_R` coherently across
+several owners or exploit tournament-specific compatibility among the
+clique/star/edge layers. Nothing here or in THM-4224 closes HYP-9081.

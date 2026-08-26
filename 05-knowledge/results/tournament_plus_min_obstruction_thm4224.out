@@ -1,0 +1,106 @@
+THM-4224 exact audit transcript
+================================
+
+STATUS SEPARATION
+-----------------
+PROVED:
+  * the all-order X_m formulas and the positivity of its HYP-9081 gap;
+  * the order-ten counterexample and the no-fixed-K consequence.
+VERIFIED-EXACT:
+  * literal order-ten scan of all 10! linear and 9! cyclic orders;
+  * independent subset-DP checks for X_m, m=1..12.
+FINITE-EXACT:
+  * complete strong-isomorphism-class ratio census, orders 3..9.
+OPEN:
+  * 25 B_ij <= 27 End_i End_j for arbitrary strong tournaments.
+The abstract moment tensor below is not asserted tournament-realizable.
+
+ENVIRONMENT
+-----------
+Apple clang version 17.0.0 (clang-1700.0.13.5)
+nauty 2.9.3 (Homebrew gentourng)
+
+REPRODUCTION
+------------
+clang++ -std=c++17 -Wall -Wextra -pedantic -O0 \
+  04-computation/tournament_plus_min_obstruction_thm4224.cpp \
+  -o /tmp/thm4224_o0
+/tmp/thm4224_o0
+
+clang++ -std=c++17 -Wall -Wextra -pedantic -O3 \
+  04-computation/tournament_plus_min_obstruction_thm4224.cpp \
+  -o /tmp/thm4224_o3
+/tmp/thm4224_o3
+
+for n in 3 4 5 6 7 8 9; do
+  gentourng -q -c "$n" | /tmp/thm4224_o3 --census
+done
+
+clang++ -std=c++17 -Wall -Wextra -pedantic -O1 -g \
+  -fsanitize=address,undefined \
+  04-computation/tournament_plus_min_obstruction_thm4224.cpp \
+  -o /tmp/thm4224_san
+ASAN_OPTIONS=detect_leaks=0 UBSAN_OPTIONS=halt_on_error=1 /tmp/thm4224_san
+
+DEFAULT TRANSCRIPT
+------------------
+mode=literal_order_ten
+encoding=upper_triangle_row_major;1_means_i_to_j
+word=110111111111111111111111111110111111111111111
+strong=yes linear_orders=3628800 cyclic_orders=362880
+H=165 c=1 N_8,9=505 B_8,9=421
+End=(1,1,2,1,5,10,20,40,80,5)
+D=(0,33,164,98,411,715,1187,1927,3094,852)
+product_plus_min=405 repaired_excess=16
+five_copy_gap=9931626
+checks=PASS literal_10_factorial,cyclic_9_factorial,formula_profile
+mode=family_subset_DP range_m=1..12
+m=1 n=6 H=15 c=1 End_r=5 End_z=5 N_rz=25 B_rz=16 repair_excess=-14 ratio=16/25 q=111 G=3186
+m=2 n=7 H=25 c=1 End_r=10 End_z=5 N_rz=57 B_rz=43 repair_excess=-12 ratio=43/50 q=348 G=22834
+m=3 n=8 H=45 c=1 End_r=20 End_z=5 N_rz=121 B_rz=97 repair_excess=-8 ratio=97/100 q=1011 G=191626
+m=4 n=9 H=85 c=1 End_r=40 End_z=5 N_rz=249 B_rz=205 repair_excess=0 ratio=205/200 q=2914 G=1439826
+m=5 n=10 H=165 c=1 End_r=80 End_z=5 N_rz=505 B_rz=421 repair_excess=16 ratio=421/400 q=8481 G=9931626
+m=6 n=11 H=325 c=1 End_r=160 End_z=5 N_rz=1017 B_rz=853 repair_excess=48 ratio=853/800 q=24968 G=65005874
+m=7 n=12 H=645 c=1 End_r=320 End_z=5 N_rz=2041 B_rz=1717 repair_excess=112 ratio=1717/1600 q=74151 G=412145546
+m=8 n=13 H=1285 c=1 End_r=640 End_z=5 N_rz=4089 B_rz=3445 repair_excess=240 ratio=3445/3200 q=221454 G=2562083986
+m=9 n=14 H=2565 c=1 End_r=1280 End_z=5 N_rz=8185 B_rz=6901 repair_excess=496 ratio=6901/6400 q=663501 G=15730532266
+m=10 n=15 H=5125 c=1 End_r=2560 End_z=5 N_rz=16377 B_rz=13813 repair_excess=1008 ratio=13813/12800 q=1991188 G=95816630514
+m=11 n=16 H=10245 c=1 End_r=5120 End_z=5 N_rz=32761 B_rz=27637 repair_excess=2032 ratio=27637/25600 q=5979891 G=580633048266
+m=12 n=17 H=20485 c=1 End_r=10240 End_z=5 N_rz=65529 B_rz=55285 repair_excess=4080 ratio=55285/51200 q=17962394 G=3506721009746
+checks=PASS strong,H,c,End,N,B,D,q,G_all_rows
+mode=abstract_moment_firewall
+layers=(1,10,25,48,25,10,1)
+owner_marginals=(48,48,48,72,72,72)
+compatible_indegrees=(2,2,2,3,3,3) strict_Landau=yes
+c=1 A_0=A_1=5 B_0,1=25 End_0=End_1=6 H=16 D=(50,50,0,0,0,0) five_copy_gap=-3992
+checks=PASS total,reversal_layers,first_moment,owner_marginals,strong_score_feasibility,27_over_25_local_bound
+
+COMPLETE STRONG-CLASS CENSUS
+----------------------------
+order=3 strong_classes=1 max_ratio=0/1 decimal=0.000000000000 candidate_25B_le_27product_failures=0
+max_word= pair=0,0
+checks=PASS strong_input,nonnegative_B,exact_cross_multiplication
+order=4 strong_classes=1 max_ratio=1/1 decimal=1.000000000000 candidate_25B_le_27product_failures=0
+max_word=100111 pair=0,2
+checks=PASS strong_input,nonnegative_B,exact_cross_multiplication
+order=5 strong_classes=6 max_ratio=1/1 decimal=1.000000000000 candidate_25B_le_27product_failures=0
+max_word=1101111101 pair=1,3
+checks=PASS strong_input,nonnegative_B,exact_cross_multiplication
+order=6 strong_classes=35 max_ratio=1/1 decimal=1.000000000000 candidate_25B_le_27product_failures=0
+max_word=111011111111101 pair=1,4
+checks=PASS strong_input,nonnegative_B,exact_cross_multiplication
+order=7 strong_classes=353 max_ratio=1/1 decimal=1.000000000000 candidate_25B_le_27product_failures=0
+max_word=111101111111111111101 pair=1,5
+checks=PASS strong_input,nonnegative_B,exact_cross_multiplication
+order=8 strong_classes=6008 max_ratio=1/1 decimal=1.000000000000 candidate_25B_le_27product_failures=0
+max_word=1111101111111111111111111101 pair=1,6
+checks=PASS strong_input,nonnegative_B,exact_cross_multiplication
+order=9 strong_classes=178133 max_ratio=104/100 decimal=1.040000000000 candidate_25B_le_27product_failures=0
+max_word=110111111111111111111111011111111110 pair=6,7
+checks=PASS strong_input,nonnegative_B,exact_cross_multiplication
+
+CONTROLS
+--------
+BYTE_MATCH_O0_O3_default=PASS
+BYTE_MATCH_O0_O3_n3_through_n9_census=PASS
+ASAN_UBSAN_default=PASS

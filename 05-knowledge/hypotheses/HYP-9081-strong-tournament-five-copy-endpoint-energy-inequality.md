@@ -6,14 +6,17 @@ status: >
   dispersion inequality for every finite strong tournament, with equality
   only at C3. Conditional on it, every finite no-sink tournament satisfies
   Delta_V>=3(W+2H)^2/8, with equality exactly at a transitive prefix followed
-  by C3. FINITE-EXACT support through strong order nine and exact sharp
-  near-ordinal families are recorded in THM-4219; neither is an
-  all-order proof.
+  by C3. THM-4223/4224 refute the local two-bad-owner product bound and every
+  fixed smaller-endpoint repair, but THM-4224 proves its hostile family has a
+  positive all-order five-copy gap. FINITE-EXACT support through strong order
+  nine and exact sharp families do not prove the hypothesis.
 source: codex-endpoint-gap-session-20260826
 depends_on:
   - THM-4208-cycle-prefix-arbitrary-context-recurrence-endpoint-energy-and-eventual-positivity
 related:
   - THM-4219-no-sink-endpoint-energy-floor-and-near-ordinal-sharpness
+  - THM-4223-cyclic-cut-cover-boolean-mobius-hierarchy-and-two-bad-owner-obstruction
+  - THM-4224-order-ten-minimal-plus-min-two-bad-owner-obstruction
 ---
 
 # HYP-9081 -- strong-tournament five-copy endpoint-energy inequality
@@ -87,6 +90,47 @@ while the genuine endpoint-matrix floors
 `sum_i v_i^2/(sum_i v_i)^2` tends to `1/2`, far above the five-copy scale
 `1/5`. Any proof must use additional path-cover switching structure, not
 only the symmetric degree model.
+
+THM-4223 restores the exact cyclic bad-owner tensor behind that matrix. If
+`B_ij` counts cyclic orders with exactly the two bad owners `i,j`, then its
+first natural local bound
+
+```text
+B_ij<=End_i End_j                                       (6a)
+```
+
+is refuted first at order nine. THM-4224 proves that even
+
+```text
+B_ij<=End_i End_j+K min(End_i,End_j)                    (6b)
+```
+
+fails for every fixed constant `K`: an infinite strong family has bounded
+smaller endpoint count and exponentially growing excess. This does not refute
+Hypothesis 1. The same family has an explicit strictly positive all-order gap
+`G`; its failure mechanism is local concentration with global cross-owner
+compensation.
+
+Even strong scalar cyclic moments do not replace actual switching. For `n=6`
+there is a nonnegative abstract owner tensor with layer totals
+
+```text
+(1,10,25,48,25,10,1),                                  (6c)
+```
+
+owner marginals `(48,48,48,72,72,72)`, and low layers
+
+```text
+c=1,       A_0=A_1=5,       B_01=25.                    (6d)
+```
+
+It has total `5!`, reversal symmetry, first moment `6!/2`, and marginals
+compatible with the feasible strong indegree sequence `(2,2,2,3,3,3)`.
+It even satisfies `B_01<=End_0 End_1`. Nevertheless `(4)` has gap `-3992`:
+`H=16` and `D=(50,50,0,0,0,0)`. This tensor is not asserted tournament-
+realizable. It proves that Boolean nonnegativity, reversal/owner moments,
+score feasibility, and a local pair ratio still omit successor-compatible
+realizability.
 
 ## 3. Conditional three-eighths theorem
 
@@ -197,6 +241,8 @@ at `C3`. The minimum gaps are
 ```
 
 The exact `T(n,1)` and `T(n,2)` formulae in THM-4219 prove positivity on
-those all-order families and show sharpness of the coefficient `5`. They do
-not control arbitrary strong tournaments, so Hypothesis 1 and Conditional
-theorem 2 remain open.
+those all-order families and show sharpness of the coefficient `5`.
+THM-4224 adds a two-reversal family on which every fixed local min repair
+fails while the exact global five-copy gap stays positive. None controls
+arbitrary strong tournaments, so Hypothesis 1 and Conditional theorem 2
+remain open.
