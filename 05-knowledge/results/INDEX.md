@@ -23,6 +23,28 @@
   `088cd3627ef782d74609f7977ab92cad91d2e8e2b5d27332dc4f29a71348239b` /
   `dd4f72fb4a409a5e`.
 
+- `jc23_weight9_generic_monodromy_thm4147.py` and an independent expanded-source
+  SymPy audit -> concordant exact ledgers [THM-4147 PROVED RELATIVE TO
+  THM-3827/3992/3997/4007/4103/4120/4122/4130/4141/4143 + VERIFIED-EXACT +
+  INDEPENDENTLY HOSTILE-AUDITED; JC(2) OPEN]. On the live `b=d=0` reduced
+  `(2,3)` seam, the three critical-open exact-`M=9` chambers `P,Y,B` have
+  Newton genera `10,11,11`, affine critical lengths `24,24,25`, and complete
+  packets `(8,5,4,3,2,2,1)`, `(11,8,2,2,2,1)`, and
+  `(8,8,4,2,2,2,1)`. Prime quadratic/cubic residue fields give finite
+  responses `(n,beta)=(21,2),(20,3),(21,3)`, each satisfying
+  `L=n+beta+1`; a finite-separable carrier lemma retains all fixed sheets
+  across the cubic Hurwitz collisions. Full responses of degrees `25,26,27`
+  fail `ind([X,Y])<=2|supp X intersect supp Y|`. Coefficient contractions,
+  `eta+zeta=0`, resultant/discriminant walls, entry, other cells, `M>=10`,
+  `JC(2)`, and `DC(2)` remain open. Primary script/output SHA-256:
+  `141fe2dbeaab13ab1293737e0dca5f6e208c181aa9f9f26b01534a36ec2407e9` /
+  `8e3de3d0bb92b676c4e1f605a08cb218bce3faa19f54514cc34d3e096d71b87a`;
+  independent:
+  `b995e885469feed32e04102552dab7ca7d3f58333beef0462525a2c740dd9345` /
+  `58353654fc5399df5c1e9872bd261a415ca7da1ecf804879464339e80cd86eb3`;
+  primary semantic SHA-256:
+  `c8f8e922d9a3322955abe0be82881124d7bac3eb143277acafad26f70a5d47fa`.
+
 - `tournament_rooted_pair_expansion_two_defect_thm4145.py` and independent
   standard-library C++ audit -> matching structural identities [THM-4145
   PROVED ELEMENTARY ROOTED SUBSTITUTION + EXACT TWO-DEFECT FORMULA +
