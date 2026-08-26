@@ -1,5 +1,83 @@
 # Script Results Index
 
+- `lrc14_divisor_complete_anchor_pool_haar_transfer_thm4156.py` and an
+  independent successive-interval intersection audit -> matching exact pool
+  ledgers [THM-4156 PROVED RELATIVE TO THM-4150 + VERIFIED-EXACT +
+  INDEPENDENTLY AUDITED; LRC(14) OPEN]. The mandatory anchors
+  `{120,126,143}` make every selected eleven-body primitive and
+  divisor-complete through `14`, while the 30-label common safe set has
+  `7,134` walls, `150` components, and exact Haar measure
+  `298133356159/4560289854120>4/63`. Hence every distinct positive odd tail
+  pair completes all `binom(27,8)=2,220,075` bodies; `1,875,709` lie outside
+  both THM-4148/4151 gates. The doubled anchor `120` kills the inherited
+  `x=1/12` clock, so this family survives THM-4154's hostile audit. Physical
+  entry, arbitrary divisor-complete bodies, and LRC(14) remain open. Primary
+  script/output SHA-256:
+  `db264924c1234323ecb299fbe7aacc4bc4d3b46290ec754bf4ba23ddffa8103d` /
+  `c30bfc3f0fdd3f2dfd37efb490f8e28fc36c30583a442361d2acce57f790aae1`;
+  independent:
+  `e94cec1a54f4ff36f32a66a13ad1c5b9263fe24c1b6a6fa164bc0b39eb8ff2ad` /
+  `c0b2bdda38d7c08d4a3b060499c99a2ff96c4b9a4cab5c368a47cfeca80ecf1e`;
+  semantic SHA-256:
+  `ed193657974754e64ae4faed03bc63146f453c16290553ef5d88f198bc77bd0e` /
+  `97954c5f353ca0977c87d1649abb646a43af4cdb636bcc211861a12129b1c415`.
+
+- `jc23_generic_y_only_delta_zero_weight_nine_exclusion_thm4155.py` and an
+  independent `(A,C_0)`-source replay -> concordant exact wall ledgers
+  [THM-4155 PROVED RELATIVE TO THM-3827/3992/3997/4007/4103/4120/4122/
+  4130/4147 + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED; JC(2) OPEN].
+  On `eta=Delta=0`, `K0=2848/45`, the coefficient-open gate
+  `zeta*(4Theta*K0^2-27zeta^2)*Disc(C)!=0` excludes every nonautomorphic
+  Keller pair. The exact source resultants are `p^6R18` and, under the
+  independent second generator, `p^8R18`; the normalized resultant is
+  `T^56(6T+1)^2Q18`, and
+  `(g,L,packet)=(9,22,(8,3,3,3,2,2,2,1))`. The full response `n=24` fails
+  `4<16`, while finite `(n,beta)=(18,3)` has merger capacity `16<17`.
+  The inner and top-face collision walls remain open. Primary script/output
+  SHA-256:
+  `4e9e8ca0c1a3f864003ee5869882f15439669858cbaf22096b02724a376d8e32` /
+  `8d78bc243e4027c76f6116d35c5dcd16191e45221ef4a80bfa98240bae976513`;
+  independent:
+  `6814f463adcd61d75c626135eab140e53965e9e41312ad8ea689d5a7836e2eb5` /
+  `65a06be05dc43c74fdded1690327d58863760e0d924427077df84007979b812b`;
+  semantic SHA-256:
+  `e24081ff7259ce7c61abba1c5476bf2cf68588b934ef0d19ee461100d3e97d17` /
+  `e1a7880dff5092afe8b2de6ca30d412d00656cec6e73744d09655c7e9441358c`.
+
+- `lrc14_third_tier_haar_finite_exception_pool43_transfer_thm4153.py` and
+  independent direct interval audit -> matching third-tier ledgers
+  [THM-4153 PROVED ABSTRACT TRANSFER + VERIFIED-EXACT + INDEPENDENTLY
+  AUDITED; CONCRETE POOL SCOPE CORRECTED BY THM-4154; LRC(14) OPEN]. Haar
+  measure at least `4/91` leaves eleven primitive tail ratios and finite odd
+  scale banks, closed for the displayed 43-label pool by one exact clock.
+  Its `5,752,004,349` subfamily count and geometry remain valid, but every
+  concrete row was already closed by `x=1/12`. Script/output SHA-256:
+  `eb5b7d85b260686b372c3a92f352157ad33573efb1c0819ca5830174babd78ab` /
+  `29b72543b5ce18574ac03b498504c1a5e9e1c13c5cfb769a013b024ce64feaff`;
+  independent:
+  `cc65e3c37d3f63fc7cc5af843f666cd93f9911a544ef529e2259899d4535e6b9` /
+  `8f43757f05e7967c7d643bdd16b9abf4dffc3bf5d4c97426ee63559c9f5ea7ab`;
+  semantic SHA-256:
+  `8fc29d9da1111f0b2cf5e13c6cd6dbca6e68072acd7f4b95f5455f7e412245f7` /
+  `fec0ab982776064029be96988978f783e365914e2615e03cc5bd0e1a17f3a998`.
+
+- `lrc14_second_tier_haar_finite_exception_pool40_transfer.py` and an
+  independent periodic-tooth audit -> matching second-tier ledgers
+  [THM-4152 PROVED ABSTRACT TRANSFER + VERIFIED-EXACT + INDEPENDENTLY
+  AUDITED; CONCRETE POOL SCOPE CORRECTED BY THM-4154; LRC(14) OPEN]. Haar
+  measure at least `4/77` leaves only primitive tail ratio `(1,9)`; a longest
+  component reduces it to finitely many odd scales. The 40-label pool's
+  `2,311,801,440` subfamilies and four-scale clock are exact, but the old
+  `x=1/12` clock already closed every concrete row. Script/output SHA-256:
+  `f1c59b205c258c6127c595d04161bb49633ee3a59977e930953225a635de074b` /
+  `7f4c77741f74488e4c413056ea548351d62adaa123ac9f81831d8aebca63d9b3`;
+  independent:
+  `a504d3486eadc40adbb55124a97ea5875ddeab2c18831a7fdb7ea2332bb3f20f` /
+  `f9ccfec7191cd9d78928b455344f5951e1c0d65eebc3ef9224ba6480c5365d05`;
+  semantic SHA-256:
+  `f13989721e4bddfbfea0b48abdaba9201e06daed15e7cbf7ad139084ce00168c` /
+  `ce2f02310458b21dbc247590ff969065f64008ef4d93241dab052118b09553ee`.
+
 - `lrc14_scale_sensitive_anchored_first_window_transfer_thm4151.py` and
   independent warning-clean C++ audit -> matching exact gates [THM-4151
   PROVED ELEMENTARY ANCHORED-CARRIER TRANSFER + VERIFIED-EXACT +
@@ -21,6 +99,38 @@
   shared semantic SHA-256/FNV-64:
   `84adc34f0dc8ffb415455827a227f86cab1bea3169d73d3912721bd815e1b514` /
   `ff11c60c57deec04`.
+
+- `lrc14_safe_set_haar_measure_odd_tail_transfer_thm4150.py` and an
+  independent direct-tooth audit -> matching full-safe-set ledgers
+  [THM-4150 PROVED ABSTRACT HAAR/CROSS-COMB TRANSFER + VERIFIED-EXACT +
+  INDEPENDENTLY AUDITED; CONCRETE POOL SCOPE CORRECTED BY THM-4154;
+  LRC(14) OPEN]. Every body with complete `1/14`-safe-set measure at least
+  `4/63` accepts every distinct positive odd tail pair after doubling; the
+  threshold is sharp with unique primitive equality ratio `(1,9)`. The
+  33-label pool geometry and `193,536,720` count are exact, but its concrete
+  family was already closed by `x=1/12`. Script/output SHA-256:
+  `4e81f65385ea81137bb3a8465ca6b7bb635592873960df57001f7d10e5c67283` /
+  `e35db11b0e380bf9391f29d8d4d7221548f227fdde058625c6716d1401d3e16d`;
+  independent:
+  `fed4a4ffbc750b66b88a2161319812e843d876c98cacb5db6773091c739aecca` /
+  `f8aa43bb153b637e04f5b7653e532dc08fcedefca4b07744cc38bc2bcd0a5cba`;
+  semantic SHA-256:
+  `9b08f96a0b6771ddadc366232f0cd7e3d07b208d3328668890b6a6cc24a5390f` /
+  `1686df22845483de1378e8c91e9fb1260bfd826fb56e3652e607e8eb67ccf81e`.
+
+- `lrc14_minimum_boundary_universal_odd_tail_transfer_thm4149.py` and its
+  independent C++ replay -> matching alternative endpoint ledgers
+  [THM-4149 SUPERSEDED BY THM-4148; REPRODUCIBLE AUDIT ONLY]. The isolated
+  minimum-one/minimum-two repair and its `3/14` endpoint partition remain
+  valid, but current THM-4148 already contains those cases and owns the full
+  `60,301,653,510` census. Script/output SHA-256:
+  `cf146ae0b9a5fbbbdb6bf8597550c7923848cea1ae13ccba453b11c1b855e1c7` /
+  `84bca834c0ccbbb656c7d06ebc5f4fa30d4a9fb682d46464518dff400a0589d8`;
+  independent:
+  `283477210905e2ae4729ad978a9e67c7496581a413ac8a8fb6dc5b616a2df35b` /
+  `b8457993e1ae0802aa6b9d65d36cdb6b0a501dfb6f9e9f8ad084ab3a1ea5f036`;
+  shared semantic SHA-256:
+  `90de52f9075568cead74de79315daf0494ad7f1f49e5ae7303eff0eae7881f6d`.
 
 - `jc23_weight9_eta_only_supplementary_crosscheck_thm4147.py` and an
   independent `(s,p)`-chart replay -> concordant eta-row mechanisms

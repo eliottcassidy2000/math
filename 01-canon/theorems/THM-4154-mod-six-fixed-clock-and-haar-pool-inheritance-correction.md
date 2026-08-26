@@ -20,6 +20,7 @@ related:
   - THM-4150-safe-set-haar-measure-universal-odd-tail-lrc14-transfer
   - THM-4152-second-tier-haar-finite-exception-pool40-odd-tail-transfer
   - THM-4153-third-tier-haar-finite-exception-pool43-odd-tail-transfer
+  - THM-4156-divisor-complete-anchor-pool-haar-odd-tail-transfer
 ---
 
 # THM-4154 -- mod-six fixed clock and Haar-pool inheritance correction
@@ -178,3 +179,6 @@ decisive test: literal membership of H in the nonzero classes mod 6.       (11)
 This theorem handles only the already isolated dyadic body plus odd-tail
 parity seam. It does not prove entry into that seam, close bodies containing
 multiples of `6`, handle mixed/even tails, or prove LRC(14).
+In particular it corrects only the concrete `P33/P40/P43` novelty attribution,
+not the abstract THM-4150/4152/4153 criteria, and it does not apply to
+THM-4156's anchored bodies, which contain both `120` and `126`.

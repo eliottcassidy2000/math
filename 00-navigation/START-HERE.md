@@ -21,10 +21,10 @@ Then read the routed frontier, guardrails, and theorem. Logs and reflections are
 ## Seventeen high-signal facts to reuse, not re-derive
 
 1. **LRC(14) is first open.** Direct `<=6`; projected caps `1579/216`.
-   THM-3378 leaves `372913/109/12`; THM-3366 keeps `k=2,3` finite but entry
-   open. THM-4142/4148/4151 give large body families, the cap
-   `16M<=156m+13`, eventual translation, and density `(35/39)^10`.
-   Arbitrary thirteen-speed bodies and LRC stay open.
+   THM-3378 leaves `372913/109/12`. THM-4142/4148/4151 give large families;
+   THM-4154 corrects three inherited pools. THM-4156 genuinely adds
+   `2,220,075` divisor-complete bodies, `1,875,709` beyond both current gates.
+   Entry, arbitrary thirteen-speed bodies, and LRC stay open.
 2. **The `q <= 25` period claim is refuted.** THM-762/764 exhibit `26*{1,...,12} union {339}`, whose first good period is `27`.
 3. **Good-period existence is a maximum statement, not an average or count.**
    The tight AP at its resonant ruler defeats the tempting mean arguments; see
@@ -61,10 +61,10 @@ Then read the routed frontier, guardrails, and theorem. Logs and reflections are
     period plus parity the primitive half cap-six breaker. Composite rank
     seven and FC(3) remain open.
 12. **JC is false from dimension three; JC(2), DC(2) remain open.** THM-1300
-    is exact; THM-2084 closes named cells. THM-4130/4138/4141/4143 empty live
-    exact `M=8`; THM-4147 excludes critical-open exact-`M=9` `P/Y/B` and a
-    generic anti-diagonal subchamber. Remaining walls, `M>=10`, cells, and
-    entry stay open.
+    is exact; THM-2084 closes named cells; THM-4130/4138/4141/4143 empty exact `M=8`;
+    THM-4147 excludes `M=9`
+    `P/Y/B/A`. THM-4155 also excludes the gated `eta=Delta=0` Y-only slice.
+    Its collision walls, `M>=10`, other cells, and entry stay open.
 13. **Complete period-14 coordinates can still be globally blind.** THM-2043
     proves parity-Hasse completeness for reduced period-14 functions. The
     audited Goddyn--Wong family in THM-2058 preserves the packet, every fixed

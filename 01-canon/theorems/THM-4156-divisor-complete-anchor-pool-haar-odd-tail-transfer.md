@@ -7,7 +7,7 @@ status: >
   strictly above 4/63. Requiring the three anchors 120,126,143 makes every
   selected eleven-body primitive and divisor-complete through 14. THM-4150
   therefore closes 2,220,075 bodies with every distinct positive odd tail
-  pair, including 1,875,709 outside both current first-window gates.
+  pair, including 1,875,709 outside both named THM-4148/4151 gates.
 source: codex-lrc14-planar-jc-breakthrough-20260825
 depends_on:
   - THM-4150-safe-set-haar-measure-universal-odd-tail-lrc14-transfer
@@ -15,6 +15,7 @@ related:
   - THM-366-lrc-small-denominator-divisibility-sieve
   - THM-2061-lrc14-dyadic-two-tail-folded-seam
   - THM-4075-lrc14-divisor-complete-dyadic-owner-word-closure-through-30
+  - THM-4148-first-window-width-universal-odd-tail-lrc14-transfer
   - THM-4150-safe-set-haar-measure-universal-odd-tail-lrc14-transfer
   - THM-4151-scale-sensitive-first-window-odd-tail-lrc14-transfer
   - THM-4154-mod-six-fixed-clock-and-haar-pool-inheritance-correction
@@ -167,7 +168,7 @@ THM-4150 applied to `(11)` proves `(3)` for every distinct positive odd pair.
 The even body speeds are pairwise distinct, the odd tails are pairwise
 distinct and cannot meet an even speed, so `(3)` is a genuine thirteen-speed
 row. The structurally distinct interval audit independently reproduces
-`(6)--(7)`. Thus THM-4150 applied to `(11)` proves `(3)`. **QED.**
+`(6)--(7)`. This completes the independent verification. **QED.**
 
 There are `27` optional labels, so the exact family size is
 
@@ -194,8 +195,8 @@ finds exactly `344,366` admitted bodies. Consequently
 2,220,075-344,366=1,875,709                            (15)
 ```
 
-lie outside both current first-window gates. Equation `(15)` is a comparison
-with those two declared criteria only; it is not a claim that no other
+fail both named gates. Equation `(15)` is a comparison with those two
+declared criteria only; it is not a claim that no other
 canonical certificate can close an individual member.
 
 ## 5. What changed and what remains open

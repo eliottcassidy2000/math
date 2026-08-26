@@ -71,12 +71,14 @@ is the safe control `M(S_13)=99/338`. No cited result proves LRC(14).
   THM-4105/4106 are reciprocal decoders; THM-4107/4108 are tournament/radical
   firewalls. THM-4110 finds `64` AP13 sheets; THM-4116 gives
   `2^(c(F)-1)`. Safety/arrival stay open.
-- **Owner/tail lane (PROVED):** THM-4025/4031 give survivor tails;
-  THM-4029/4038 the 60-phase law; THM-4033/4042 clocks through `P=11`
-  (`P=17` hostile). THM-4129/4136 close fixed `U`/`2U`; THM-4142/4148 give
-  `7,726,160` pool and `60,301,653,510` gate bodies. THM-4151 strengthens
-  this to `16M<=156m+13`, eventual translation of every finite pattern, and
-  eleven-body density `(35/39)^10`. Other bodies, entry and LRC(14) remain open.
+- **Owner/tail lane (PROVED):** THM-4025/4031, 4029/4038, and 4033/4042
+  give tails, the 60-phase law, and clocks; THM-4129/4136 close fixed `U/2U`.
+  THM-4142/4148/4151 give families and the affine gate.
+  THM-4150/4152/4153 give abstract Haar transfers at `4/63,4/77,4/91`, but
+  THM-4154 shows their displayed pools were already closed at `x=1/12`.
+  THM-4156 instead forces anchors `{120,126,143}` and closes `2,220,075`
+  divisor-complete bodies, `1,875,709` beyond both current gates. Entry,
+  arbitrary bodies, and LRC(14) remain open.
   See the [proof map](LRC14-PROOF-MAP.md).
 - **PROVED:** [THM-2928](../01-canon/theorems/THM-2928-critical-seven-comb-grid-tensorization-and-drift-tariff.md)/2941: literal zero/one/two/three-drift sectors are empty; `k=2,3` are finite.
 - **Orthogonal routes.** THM-1017 is HYP-6820; THM-2047/2050 keep phase/exit; THM-731/2048 prune; THM-1290 ends at `55`; HYP-8900 nonuniform.
@@ -349,12 +351,12 @@ lift/phase clocks.
   tuple is now at least `(8,5,4,3,3)` for `ell=(3,5,7,11,13)`. The requested
   challenges `(3,9),(5,6),(7,5),(11,4),(13,4)` all remain **OPEN**; the public
   `131199`-field file is a named finite population, not a world census.
-- **Jacobian/Dixmier:** `JC(2),DC(2)` remain **OPEN**. THM-4130/4138/4141/4143
-  empty the live exact-`M=8` seam. At exact `M=9`,
-  [THM-4147](../01-canon/theorems/THM-4147-generic-exact-weight-nine-planar-jacobian-monodromy-exclusion.md)
-  excludes critical-open `P/Y/B` and a generic anti-diagonal subchamber;
-  remaining coefficient/critical walls, `M>=10`, other cells, and entry remain open;
-  `(72,108)` has `rho<=2` conditional on width six.
+- **Jacobian/Dixmier:** `JC(2),DC(2)` remain **OPEN**. THM-4130/4138/4141/4143 empty
+  exact `M=8`; THM-4147 excludes exact-`M=9` `P/Y/B` and generic
+  anti-diagonal `A`. THM-4155 excludes the coefficient-open `eta=Delta=0` slice with
+  `(g,L,packet)=(9,22,(8,3,3,3,2,2,2,1))`. Its inner and top-face collision
+  walls, other cells, `M>=10`, and entry remain open; `(72,108)` has
+  `rho<=2` conditional on width six.
   Exceptional quartic: THM-3703/3737 give grammar/image, THM-4034 the
   conductor, and THM-4039/4043/4046 reach `J_7`, obstruct `J_8`, and close
   critical `H`. [THM-4054](../01-canon/theorems/THM-4054-exceptional-affine-simple-zero-retained-packet.md)

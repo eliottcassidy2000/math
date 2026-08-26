@@ -9,7 +9,7 @@ status: >
   component reduces (t,9t) to finitely many odd scales, which any exact clock
   bank may close. The explicit 40-label pool needs only t=1,3,5,7 in this
   Haar/clock proof and has 2,311,801,440 eleven-body subfamilies. Exactly
-  2,311,548,340 fail the current THM-4148 min/max width gate, but THM-4154
+  2,311,548,340 fail THM-4148's stated min/max width gate, but THM-4154
   proves that the concrete pool-family safety was already inherited from the
   small-denominator/divisor sieve. Arbitrary bodies, physical entry, and
   LRC(14) remain open.
@@ -295,10 +295,10 @@ therefore inherited literally. The number of additional eleven-subsets is
 2,311,801,440-193,536,720=2,118,264,720.                 (23)
 ```
 
-For the comparison with current THM-4148, the universe is **exactly all
+For the comparison with THM-4148's stated gate, the universe is **exactly all
 eleven-subsets of `P`**. Fixing the minimum and maximum at positions `i<j`
 leaves `binom(j-i-1,9)` choices. Summing over the pairs satisfying the
-current unrestricted width inequality
+stated unrestricted width inequality
 
 ```text
 27(13 min H-max H)>=4 min H max H                       (24)

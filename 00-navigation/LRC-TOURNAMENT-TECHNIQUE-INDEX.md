@@ -18,7 +18,7 @@ AP/GW equality atom, C27 petal/two-block discharge, K33/F7 state lift,
 covering/boundary-moment positivity, or a rigorous Fejer/Toeplitz certificate.
 Every technique below is a possible tooth in that zipper.
 
-### Current response carrier -- THM-3910/4129/4132/4136/4142/4148
+### Current response carrier -- THM-3910/4129/4132/4136/4142/4148/4150--4156
 
 - **Move:** use an auxiliary runner only to select a marked deep center, then
   delete it before transporting the neighborhood.  Preserving the eleven-body
@@ -41,6 +41,10 @@ Every technique below is a possible tooth in that zipper.
   THM-4151's anchored odd-wall slack gives `16M<=156m+13`, translation rule
   `140m>=16D-13`, and eleven-body density `(35/39)^10`; the mechanism is a
   Boolean two-sheet join, not a cosmetic tournament.
+  THM-4150/4152/4153 give abstract Haar/finite-exception tiers; THM-4154
+  shows their displayed pools were inherited at `x=1/12`. THM-4156's
+  mandatory anchors kill that clock and close `2,220,075` divisor-complete
+  bodies, `1,875,709` beyond both THM-4148/4151 gates.
 - **Preserves:** body safety, literal root `t`, integer fibre multiplicity,
   compact/open endpoint status, and the cubic mixed danger response.
 - **Forgets / guardrail:** an ordinary tournament, complete pairwise Gram
@@ -49,11 +53,11 @@ Every technique below is a possible tooth in that zipper.
   safe response by `17/61992`.  THM-4002's equal-Graver-fibre and
   half-translate hostiles independently show that relation length and full
   Fourier power lose relative phase.  Endpoint equality remains atomic data.
-- **Next pull:** optimize over non-first or disconnected safe components and
-  body-dependent residual clocks to reach eleven-bodies failing THM-4151's
-  affine cap; retain compact/open endpoint type and the physical sheet labels.
+- **Next pull:** generalize THM-4156's anchored safe-set construction to
+  arbitrary divisor-complete bodies, or prove physical entry into that seam;
+  retain divisor owners, compact/open endpoints, and physical sheet labels.
 - **Pointers:** THM-3910, THM-4002, THM-4129, THM-4132, THM-4136, THM-4142,
-  THM-4148, THM-4151; THM-2221, THM-3377,
+  THM-4148, THM-4150--4156; THM-2221, THM-3377,
   THM-3380, THM-3729;
   `lrc14-fixed-radius-auxiliary-center-t-sheet-response-and-tournament-cubic-sidecar-root-20260823.md`.
 

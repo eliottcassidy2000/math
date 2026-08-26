@@ -8,7 +8,7 @@ status: >
   eleven-ratio set. One positive safe component reduces those ratios to
   finite odd-scale banks. The explicit 43-label pool closes its full bank at
   one Haar-sidecar clock and has 5,752,004,349 eleven-body subfamilies,
-  5,751,751,249 outside the current THM-4148 min/max width gate. THM-4154
+  5,751,751,249 outside THM-4148's stated min/max width gate. THM-4154
   proves that this concrete pool-family safety was already inherited from
   the small-denominator/divisor sieve. Arbitrary bodies, parity-class entry,
   and LRC(14) remain OPEN.
