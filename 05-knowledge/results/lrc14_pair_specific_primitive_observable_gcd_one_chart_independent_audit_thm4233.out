@@ -1,0 +1,13 @@
+THM-4233 independent reduced-rational safe-teeth audit
+pair=3713,5149 gcd=1 pool_max=290 outside_pool=1
+method=ordered_reduced_rational_interval_intersection primitive=exact_rational_endpoint_integration imports_primary=0
+grid=267655318 raw_endpoint_entries=17726 unique_endpoints=17724 collision_ticks=95591185,172064133
+safe_components=7595 unsafe_cells=10128 safe_ticks=196644720 beta=98322360/133827659 beta_minus_66_over_91=16387038/1739759567
+primitive_min_raw=-2057535171948 at_tick=207775767 primitive_max_raw=2057535171948 at_tick=59879551 raw_den=71639369253681124
+primitive_min=-138535899/4823550313337 at=55959/72086 primitive_max=138535899/4823550313337 at=16127/72086 omega=277071798/4823550313337
+thm4228_threshold=1650/28710227 threshold_margin=82934716896/2826229070241355051
+semantic_interval_ledger_fnv1a64_le=635148be446ddc28
+hostile_1_13_beta=66/91 hostile_1_13_omega=990/8281 small_1_2_beta=11/14 small_1_2_omega=11/98
+fibonacci_2584_4181_beta=55561907/75625928 fibonacci_2584_4181_omega=42967355/553336008694 fibonacci_predecessor_pass=0
+dilation_g2_beta=98322360/133827659 dilation_g2_omega=138535899/4823550313337 expected_half=138535899/4823550313337
+checks=PASS reduced_teeth,ordered_intersection,null_collisions,rational_primitive,swap_symmetry,controls,dilation_scaling
