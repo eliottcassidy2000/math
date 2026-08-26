@@ -268,6 +268,9 @@ THM-2070 refutes the general HYP-8890/8895 bypasses.  Transfer
   proves fixed-context C-finite eventuality, endpoint-energy equality iff
   transitive, and FINITE-EXACT order-eight jets. Uniform arbitrary-context
   `n=5`, `(OS+)`, and bank remain **OPEN**.
+  THM-4212 is a **RESERVED / UNPROVED EMPTY STUB** for an independent analytic
+  audit of the tail-five uniform arbitrary-context bound; it is not a result
+  or dependency.
   THM-4114/4118 leave face/cut and gcd gaps; completeness is **OPEN**.
 - Corrected HYP-8835: optimal support is uniquely odd; positive `Mp=0` gives a
   replicator integral. Pure optimum means Condorcet winner, not transitivity;
