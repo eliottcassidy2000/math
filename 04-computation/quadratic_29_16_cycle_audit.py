@@ -16,9 +16,15 @@ mod-43^2 positive/hostile controls without floating point arithmetic.
 
 from collections import Counter
 from fractions import Fraction
+from math import gcd
 
 
 C = Fraction(-29, 16)
+
+
+def require(condition: bool, message: str) -> None:
+    if not condition:
+        raise RuntimeError(message)
 
 
 def f(x: Fraction) -> Fraction:
@@ -29,7 +35,7 @@ def scaled_T(u: int, modulus: int | None = None) -> int:
     """T(u)=(u^2-29)/4, exactly on odd u or modulo an odd modulus."""
     if modulus is None:
         numerator = u * u - 29
-        assert numerator % 4 == 0
+        require(numerator % 4 == 0, "integer scaled_T called on an invalid parity")
         return numerator // 4
     return ((u * u - 29) * pow(4, -1, modulus)) % modulus
 
@@ -57,10 +63,13 @@ def finite_cycles(modulus: int) -> list[tuple[int, ...]]:
 def rational_graph() -> None:
     candidates = [Fraction(a, 4) for a in (-7, -5, -3, -1, 1, 3, 5, 7)]
     image = {x: f(x) for x in candidates}
-    assert set(image.values()) <= set(candidates)
+    require(set(image.values()) <= set(candidates), "candidate graph is not closed")
 
     cycle = [Fraction(-7, 4), Fraction(5, 4), Fraction(-1, 4)]
-    assert [f(x) for x in cycle] == cycle[1:] + cycle[:1]
+    require(
+        [f(x) for x in cycle] == cycle[1:] + cycle[:1],
+        "claimed rational 3-cycle fails",
+    )
 
     print("COMPLETE RATIONAL PREPERIODIC GRAPH (proof filters stated above)")
     for x in candidates:
@@ -95,9 +104,12 @@ def moduli_and_triangle() -> None:
     for t in (Fraction(1), Fraction(-2), Fraction(-1, 2)):
         points, parameter = parameter_cycle(t)
         local_f = lambda x: x * x + parameter
-        assert [local_f(x) for x in points] == points[1:] + points[:1]
-        assert set(points) == expected
-        assert parameter == C
+        require(
+            [local_f(x) for x in points] == points[1:] + points[:1],
+            f"marked 3-cycle formula fails at t={t}",
+        )
+        require(set(points) == expected, f"AP point set fails at t={t}")
+        require(parameter == C, f"parameter c fails at t={t}")
         print(f"  t={t}: points={tuple(map(str, points))}, c={parameter}")
 
     # At the AP representative t=1, Euclid's pair (t+1,t)=(2,1)
@@ -108,10 +120,13 @@ def moduli_and_triangle() -> None:
     odd_leg = m * m - n * n
     even_leg = 2 * m * n
     hypotenuse = m * m + n * n
-    assert (odd_leg, even_leg, hypotenuse) == (3, 4, 5)
-    assert 16 == even_leg**2
-    assert 29 == hypotenuse**2 + m**2
-    assert 7 == even_leg**2 - odd_leg**2
+    require(
+        (odd_leg, even_leg, hypotenuse) == (3, 4, 5),
+        "Euclid specialization does not give 3-4-5",
+    )
+    require(16 == even_leg**2, "16=4^2 identity fails")
+    require(29 == hypotenuse**2 + m**2, "29=5^2+2^2 identity fails")
+    require(7 == even_leg**2 - odd_leg**2, "7=4^2-3^2 identity fails")
     print("  t=1 -> Euclid pair (2,1) -> triangle (3,4,5)")
     print("  exact identities: 16=4^2, 29=5^2+2^2, 7=4^2-3^2")
 
@@ -124,8 +139,11 @@ def moduli_and_triangle() -> None:
     orbit = [Fraction(1)]
     for _ in range(2):
         orbit.append(R(orbit[-1]))
-    assert orbit == [Fraction(1), Fraction(-1, 2), Fraction(-2)]
-    assert R(orbit[-1]) == orbit[0]
+    require(
+        orbit == [Fraction(1), Fraction(-1, 2), Fraction(-2)],
+        "AP parameter relabeling orbit fails",
+    )
+    require(R(orbit[-1]) == orbit[0], "projective relabeling is not period 3")
 
     def matmul(
         left: tuple[tuple[int, int], tuple[int, int]],
@@ -147,8 +165,8 @@ def moduli_and_triangle() -> None:
     powers = [identity]
     for _ in range(6):
         powers.append(matmul(powers[-1], A))
-    assert powers[3] == ((-1, 0), (0, -1))
-    assert powers[6] == identity
+    require(powers[3] == ((-1, 0), (0, -1)), "A^3 != -I")
+    require(powers[6] == identity, "A^6 != I")
     print(f"  relabeling R(t)=-1/(t+1) has AP orbit {tuple(map(str, orbit))}")
     print("  SL2 lift [[0,-1],[1,1]]: A^3=-I, A^6=I, charpoly=lambda^2-lambda+1")
 
@@ -159,40 +177,120 @@ def finite_ring_controls() -> None:
         cycles = finite_cycles(modulus)
         print(f"  mod {modulus}: cycles={cycles}")
     cycles_63 = finite_cycles(63)
-    assert cycles_63 == [(5, 62, 56), (14, 26, 20), (35, 47, 41)]
-    assert all(len(cycle) == 3 for cycle in cycles_63)
+    require(
+        cycles_63 == [(5, 62, 56), (14, 26, 20), (35, 47, 41)],
+        "mod-63 cycle census changed",
+    )
+    require(
+        all(len(cycle) == 3 for cycle in cycles_63),
+        "mod-63 hostile control acquired a non-3-cycle",
+    )
     print("  hostile control: mod 63 has no exact 6-cycle")
 
     # The rational 3-cycle multiplier is
     # (-7/2)*(5/2)*(-1/2) = 35/8, hence -1 modulo the unique good prime 43.
     p = 43
     multiplier = Fraction(35, 8)
-    assert (35 * pow(8, -1, p)) % p == p - 1
+    require(
+        (35 * pow(8, -1, p)) % p == p - 1,
+        "3-cycle multiplier is not -1 mod 43",
+    )
     modulus = p * p
     cycles = finite_cycles(modulus)
     counts = Counter(map(len, cycles))
-    assert counts[3] == 1
-    assert counts[6] == 21
+    require(counts[3] == 1, "mod-43^2 census lost the rational 3-cycle")
+    require(counts[6] == 21, "mod-43^2 census does not have 21 six-cycles")
 
     # The entire tube above {-7,5,-1} mod 43 contains 3*43 points.  It is
     # exactly the old 3-cycle plus the 21 six-cycles (3 + 21*6 = 129).
     base = {(-7) % p, 5 % p, (-1) % p}
     tube_cycles = [c for c in cycles if all(u % p in base for u in c)]
-    assert Counter(map(len, tube_cycles)) == Counter({6: 21, 3: 1})
-    assert sum(map(len, tube_cycles)) == 3 * p
+    require(
+        Counter(map(len, tube_cycles)) == Counter({6: 21, 3: 1}),
+        "mod-43^2 residue tube cycle census fails",
+    )
+    require(
+        sum(map(len, tube_cycles)) == 3 * p,
+        "mod-43^2 residue tube does not account for all 3*43 points",
+    )
 
     representative = [36]
     for _ in range(5):
         representative.append(scaled_T(representative[-1], modulus))
-    assert scaled_T(representative[-1], modulus) == representative[0]
-    assert len(set(representative)) == 6
+    require(
+        scaled_T(representative[-1], modulus) == representative[0],
+        "mod-1849 representative does not close",
+    )
+    require(len(set(representative)) == 6, "mod-1849 representative is not exact")
     print(f"  3-cycle multiplier = {multiplier} == -1 (mod 43)")
     print(f"  mod 43^2 tube: {dict(sorted(Counter(map(len, tube_cycles)).items()))}")
     print(f"  representative exact 6-cycle mod 1849: {representative}")
     print("  63 local F=T^3 two-cycles = 3*(43-1)/2; T groups them into 21 six-cycles")
 
 
+def multiplicative_order(base: int, modulus: int) -> int:
+    require(gcd(base, modulus) == 1, "multiplicative order requires a unit")
+    value = 1
+    for order in range(1, modulus + 1):
+        value = value * base % modulus
+        if value == 1:
+            return order
+    raise RuntimeError("multiplicative-order search exceeded Euler bound")
+
+
+def doubling_cycles_63() -> None:
+    """Exact period-six roots for S(z)=z^2 through exponent doubling."""
+    mersenne = 2**6 - 1
+    require(mersenne == 63 == 3**2 * 7, "Mersenne factorization fails")
+    old_prime_support = {prime for prime in (3, 7) if mersenne % prime == 0}
+    require(old_prime_support == {3, 7}, "prime support of 63 changed")
+    require((2**2 - 1) % 3 == 0, "3 is not inherited from exponent 2")
+    require((2**3 - 1) % 7 == 0, "7 is not inherited from exponent 3")
+
+    orders = {modulus: multiplicative_order(2, modulus) for modulus in (9, 21, 63)}
+    require(orders == {9: 6, 21: 6, 63: 6}, "conductor orders are not all six")
+
+    def doubling_cycles(modulus: int) -> list[tuple[int, ...]]:
+        cycles: set[tuple[int, ...]] = set()
+        for exponent in range(modulus):
+            path: list[int] = []
+            at: dict[int, int] = {}
+            value = exponent
+            while value not in at:
+                at[value] = len(path)
+                path.append(value)
+                value = 2 * value % modulus
+            cycles.add(canonical_cycle(path[at[value] :]))
+        return sorted(cycles, key=lambda cycle: (len(cycle), cycle))
+
+    cycles = doubling_cycles(63)
+    census = Counter(map(len, cycles))
+    require(
+        census == Counter({6: 9, 3: 2, 2: 1, 1: 1}),
+        "doubling-cycle census modulo 63 fails",
+    )
+    exact_six = [cycle for cycle in cycles if len(cycle) == 6]
+    require(sum(map(len, exact_six)) == 54, "exact-six degree is not 54")
+    require(
+        6 + 12 + 36 == 54,
+        "cyclotomic degrees phi(9)+phi(21)+phi(63) do not sum to 54",
+    )
+
+    print("\nSQUARING MAP S(z)=z^2 ON 63RD ROOTS / EXPONENT DOUBLING")
+    print("  2^6-1=63=3^2*7; 3 already divides 2^2-1 and 7 already divides 2^3-1")
+    print("  primitive prime divisors at exponent 6: NONE")
+    print("  exact-period-6 factor: ((z^63-1)(z-1))/((z^7-1)(z^3-1))")
+    print("                       = cyclotomic Phi_9 Phi_21 Phi_63")
+    print(f"  conductor orders: {orders}; degrees: 6+12+36=54")
+    print(f"  exponent-doubling cycle census mod 63: {dict(sorted(census.items()))}")
+    for cycle in exact_six:
+        print(f"    six-cycle {cycle}")
+    print("  mechanism split: conductor 9 uses 3-adic depth; conductor 21 uses CRT synchronization;")
+    print("                   conductor 63 combines the two. No single mechanism is universal.")
+
+
 if __name__ == "__main__":
     rational_graph()
     moduli_and_triangle()
     finite_ring_controls()
+    doubling_cycles_63()

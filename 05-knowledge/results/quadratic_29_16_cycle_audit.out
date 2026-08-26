@@ -1,0 +1,49 @@
+COMPLETE RATIONAL PREPERIODIC GRAPH (proof filters stated above)
+  -7/4 -> 5/4
+  -5/4 -> -1/4
+  -3/4 -> -5/4
+  -1/4 -> -7/4
+   1/4 -> -7/4
+   3/4 -> -5/4
+   5/4 -> -1/4
+   7/4 -> 5/4
+  unique rational cycle: -7/4 -> 5/4 -> -1/4 -> -7/4
+  rational exact period 6: NONE
+
+AP LOCUS IN THE STANDARD RATIONAL 3-CYCLE PARAMETER
+  t=1: points=('5/4', '-1/4', '-7/4'), c=-29/16
+  t=-2: points=('-1/4', '-7/4', '5/4'), c=-29/16
+  t=-1/2: points=('-7/4', '5/4', '-1/4'), c=-29/16
+  t=1 -> Euclid pair (2,1) -> triangle (3,4,5)
+  exact identities: 16=4^2, 29=5^2+2^2, 7=4^2-3^2
+  relabeling R(t)=-1/(t+1) has AP orbit ('1', '-1/2', '-2')
+  SL2 lift [[0,-1],[1,1]]: A^3=-I, A^6=I, charpoly=lambda^2-lambda+1
+
+FINITE-RING CONTROLS FOR T(u)=(u^2-29)/4
+  mod 7: cycles=[(0, 5, 6)]
+  mod 9: cycles=[(2, 5, 8)]
+  mod 63: cycles=[(5, 62, 56), (14, 26, 20), (35, 47, 41)]
+  hostile control: mod 63 has no exact 6-cycle
+  3-cycle multiplier = 35/8 == -1 (mod 43)
+  mod 43^2 tube: {3: 1, 6: 21}
+  representative exact 6-cycle mod 1849: [36, 779, 85, 1799, 1080, 1762]
+  63 local F=T^3 two-cycles = 3*(43-1)/2; T groups them into 21 six-cycles
+
+SQUARING MAP S(z)=z^2 ON 63RD ROOTS / EXPONENT DOUBLING
+  2^6-1=63=3^2*7; 3 already divides 2^2-1 and 7 already divides 2^3-1
+  primitive prime divisors at exponent 6: NONE
+  exact-period-6 factor: ((z^63-1)(z-1))/((z^7-1)(z^3-1))
+                       = cyclotomic Phi_9 Phi_21 Phi_63
+  conductor orders: {9: 6, 21: 6, 63: 6}; degrees: 6+12+36=54
+  exponent-doubling cycle census mod 63: {1: 1, 2: 1, 3: 2, 6: 9}
+    six-cycle (1, 2, 4, 8, 16, 32)
+    six-cycle (3, 6, 12, 24, 48, 33)
+    six-cycle (5, 10, 20, 40, 17, 34)
+    six-cycle (7, 14, 28, 56, 49, 35)
+    six-cycle (11, 22, 44, 25, 50, 37)
+    six-cycle (13, 26, 52, 41, 19, 38)
+    six-cycle (15, 30, 60, 57, 51, 39)
+    six-cycle (23, 46, 29, 58, 53, 43)
+    six-cycle (31, 62, 61, 59, 55, 47)
+  mechanism split: conductor 9 uses 3-adic depth; conductor 21 uses CRT synchronization;
+                   conductor 63 combines the two. No single mechanism is universal.

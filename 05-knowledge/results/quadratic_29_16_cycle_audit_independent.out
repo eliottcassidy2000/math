@@ -1,0 +1,7 @@
+RATIONAL/AP: eight quarter-integers; sole cycle length 3; Q-period 6 absent
+AP SOLUTION: m=-1/4, d=3/2, c=-29/16; marked t-orbit=(1,-1/2,-2)
+FINITE QUADRATIC: mod63 point returns={3:9}; no six
+FINITE QUADRATIC: 43^2 has exactly 126 period-6 points, all in the tube -> 21 cycles
+SQUARING: point returns={1:1,2:2,3:6,6:54} -> nine six-cycles
+SQUARING: exact factor=Phi_9 Phi_21 Phi_63, degree 54; conductors 9/21/63
+INDEPENDENT_AUDIT=PASS
