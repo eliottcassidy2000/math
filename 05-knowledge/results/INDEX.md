@@ -73,37 +73,40 @@
   `9,608` qualifiers, zero threshold equalities, and ordered-word
   XOR/multiply fingerprint `02784121a66537ac`; an eight-edge discrepancy matching proves the
   cofinal tail. A hostile cover means only that this sufficient certificate
-  fails, not that a body is unsafe. Analytic source/output and C++
-  source/output SHA-256:
-  `4ae78940383301f7d7bf3fa999781d0ff7358524a26f9e6a2e1159faea3e3313` /
+  fails, not that a body is unsafe. At content one, every core with `q>=3693`
+  lies outside every THM-4158 alphabet; this separation is not promoted
+  through dilation. Windows LF/binary-stdout replays preserve all outputs.
+  Analytic source/output and C++ source/output SHA-256:
+  `d6c7413e94a4e92a096e96eb7586287f58a033a58f7a0fb27fdd43e34cb49c25` /
   `4a48470d4af3b4bc2e35874ddacaa42ebcf296670680521252f4127e411f1ab1` /
-  `c0525dc3f0cd66c4ce6a3218171fe22f8ac07b78766fd306ab84381cd8e1b850` /
+  `0fed5f5e2b8968309b86f4196901ff4396b99a576853fabfa11803e1132994ee` /
   `91f19492b174d78747f5fcf3d65fe0af60251651831c17abd507b5b9b53faf01`;
   finite Python source/output and independent C++ source/output:
-  `913f86fa1e27f9af36475535f50bdd57dca5f92dca522967b88ee2aee61f338f` /
+  `932847febcaa4aea0f564fe458c82b52fa02e5bdc693b55f14ab8a1d061e5709` /
   `86d38ff3cdedb7414852ceaa736e35216ac7b2f17ed33c19cdb535b746bff80d` /
-  `3492ce7ad0b4d177ce364ede3b782aaa965b1f54c0181f528e44b5f81cb4304a` /
+  `85395ddef97adcfc6aed3b0c9485b517da06e0bc2417561156f3a8e8791a15ea` /
   `046b2952e253bdbbf43c37ac03921b51e9c28af6dbb017eda1fc5acc3b4eb63b`.
 
-- `jc23_row_a_inner_resultant_wall_exclusion_thm4171.py` and an independent
-  `(A,C_0)` endpoint audit -> concordant exact wall certificates [THM-4171
-  PROVED RELATIVE TO THE STATED THM-3827--4157 TRANSPORT PACKAGE +
-  VERIFIED-EXACT + INDEPENDENT SOURCE-PAIR/ENDPOINT AUDIT; JC(2) OPEN]. The
-  complete coefficient-open repeated-top row-`A` wall
-  `zeta=-eta`, `eta*Delta*(Delta+Theta)!=0`,
-  `4Theta*K^2-27eta^2=0` has four exhaustive critical lengths
-  `22,21,20,19`, all with genus ten and packet `(7,7,4,2,2,2,1)`.
-  Independent source resultants give residual degrees `18,17,16,15`; four
-  directly audited normalized Morse points restore the lengths. A
-  carrier-orbit lemma makes the full ceilings `6,8,10,12<18` and finite
-  ceilings `3,5,7,9<15`, excluding every nonautomorphic Keller pair on this
-  wall. Other row-`A` walls, rows `B/C`, entry, `M>=10`, JC(2), and DC(2)
-  remain open. Primary script/output SHA-256:
+- `jc23_row_a_inner_resultant_wall_exclusion_thm4171.py` and
+  `jc23_repeated_top_row_a_complete_exclusion_thm4173.py`, with independent
+  endpoint/bridge audits -> concordant exact exclusions [THM-4171/4173
+  PROVED RELATIVE TO THEIR STATED TRANSPORT PACKAGES + VERIFIED-EXACT +
+  INDEPENDENTLY AUDITED; JC(2) OPEN]. THM-4171 closes `D_A=0` at exhaustive
+  lengths `22,21,20,19`. THM-4173 uses the complementary `D_A!=0`
+  Keller--Morse/local-resultant bridge, length `23`, and closes repeated-top
+  row `A` under `zeta=-eta`, `eta*Delta*(Delta+Theta)!=0`, with no
+  residual-discriminant or `Q_19(-1/6)` gate. The contracted `Delta=0`
+  boundary, rows `B/C`, entry, `M>=10`, JC(2), and DC(2) remain open.
+  THM-4171 primary/independent source/output SHA-256:
   `b55a485d9d393d1c01c55425e8416a50800f85cd94215e36cb0e47ff315ae2b4` /
   `cf837f54b2a1d200a7676ef7e5982f59094d6ab6519e9206a4721ad7a0f8fb34`;
-  independent script/output:
   `08671e089f20abe3a60c11ea3cc05f65546e8eaeb08f6d1585b32aa763cdb050` /
-  `3a9d86158a92bfec9de67242abb682ca3e3e38c401b6183161d1d172bacda0ba`.
+  `3a9d86158a92bfec9de67242abb682ca3e3e38c401b6183161d1d172bacda0ba`;
+  THM-4173 primary/independent source/output:
+  `b7fc2c372e398aff9181f001a0c20bd794a112b1a426dac288148f2a3d0ce8e4` /
+  `4a43b0f333c2cc2d8dbc7373d3f624c382ac5e9be4bbe85d9fbd41f6dbb02ba2` /
+  `6d7c01a3396e802a538c3a5530dcbf203df883d44c4da9c926635ef3a4b18810` /
+  `95810cae502f9a17d083906d4316088b73df4f30ffe21fd2f9ba960384b43625`.
 
 - `lrc14_anchored_deletion_cover_thm4160.py` and
   `lrc14_two_deletion_repair_graph_thm4166.py`, with independent Fraction,
@@ -121,10 +124,25 @@
   `6cafff20874f4854bcf6f95303a607e13844a53bc066bfaca6ae2d9b150feea8` /
   `cc80874f70b021abc25fb6fc90ba2e9fe8b4e3b4aca82d00b09cfe84011c387f`;
   THM-4166 primary/global Python source/output:
-  `e5f91aaaff3876568dbcace7623bdf5c03c8643cc450c5d2945d74ff449d1e55` /
+  `544b2af5b0d1068885145f81fcb31d1ee6fd231979686434a450917e793fbc26` /
   `276be2254d9e9311fb00a60d7e8397af5d179943aab134fe5530ace319860c86` /
-  `4cc8b067458a365c3d7f13fe9af1b0168157f66d573eeeaa99b211f9f1a0fa5a` /
-  `b9a06d4cb1c66bf9f41ef07ef5aa224c216ead6882a8694161844737ddf36708`.
+  `cda309760677e9d330dc45c2663cfd9a2cfca87f4f4367db776d98bbae5be0d2` /
+  `b9a06d4cb1c66bf9f41ef07ef5aa224c216ead6882a8694161844737ddf36708`;
+  independent/global C++ source/output:
+  `534670dcadbe852a6b63e5e9a229fef9e457b0a7532743aba7231d0f02ef0f3b` /
+  `9dda2b76fe4701c03359da9ae4dc1405da1939cf79354d1f99cc977e2653dbe5` /
+  `c559361efd605dd5735f4521fde27517d3401b0dfadc6fcd9f9029c2c9c6cfda` /
+  `3ff8ab357211c5f51cc9f73001bc5e77c375298baee9e032903b15ee32ed1cb1`.
+  At content one, grouped overlap audits put `833,560,758` new cores outside
+  all THM-4158 alphabets; dilation destroys this split. Primary
+  source/output/semantic hashes:
+  `74f3d673e69a43abda3cb1b849c41d0a384ec939e2d77750333468fed30a12c7` /
+  `7bca8e35dffa91503116050fb252133a6e5780120269856ac98e5f11699f4031` /
+  `4921c4994f6542750764c8f05292b0400ef86b961d49d4a426b264bb4efe8873`;
+  independent source/output/semantic hashes:
+  `c245920713f6cdba69aca115ca95c533ace459cc1e5c7bfe0ac4aef20c2e3973` /
+  `3e9c104a4de591da5fc83c742dde9d982145c47501df1e3cea8af38ff7bd515f` /
+  `f68f7398944d5b6118e6fe4085ce62cfb48cac9778857340564eed3375eaa671`.
 
 - `jc23_y_only_inner_top_intersection_exclusion_thm4165.py` and an
   independent `(A,C_0)`/local audit -> concordant exact boundary certificates
@@ -142,8 +160,6 @@
   `64dfc0bc841410c352b8fa135126edcc22733df98f8c83f6bab53e5ec7d4f6dc` /
   `a4eaf246e5f582ff3356cf85fb09f2fc6f31e0c4430d4183aee3808779ad2bb2`.
 
-- `lrc14_three_band_wrapped_carrier_odd_tail_transfer_thm4158.py` and an
-  independent no-import endpoint/wall implementation -> matching exact
 - `lrc14_three_band_wrapped_carrier_odd_tail_transfer_thm4158.py`, an
   independent endpoint/Haar implementation, and a warning-clean C++ referee
   -> matching exact
@@ -203,41 +219,6 @@
   independent overlap script/output:
   `dc94fe602dfed2f3e64b160a117acf8fc26e8ffd63ddfb863ef4187ef606ecf6` /
   `86a9746211c33d97e6188f58159ecdc8ee34152a612f7091c78ccd31e21fdbeb`.
-
-- `lrc14_two_deletion_repair_graph_thm4166.py`, a complete exact lattice
-  census, two independent C++ routes, and two grouped carrier-overlap audits
-  -> concordant certificates [THM-4166 PROVED RELATIVE TO THM-4150/4156 +
-  VERIFIED-EXACT + INDEPENDENTLY AUDITED; LRC(14) OPEN]. For the fixed
-  THM-4156 pool, the repair graph on 27 optional labels satisfies the needed
-  seven-set condition exactly when `tau(Gamma_q)>7`. Exactly `1,032`
-  newcomers qualify, last `q=8,265`; the analytic tail bound excludes every
-  `q>=49,494`. They close `916,446,960` bodies, `907,566,660` strict beyond
-  THM-4160, or `918,667,035` with the old family. FINITE-EXACT at content
-  one, `82,886,202` new bodies overlap at least one THM-4158 carrier and
-  `833,560,758` lie outside all of them; the strict outside count is
-  `826,292,834`. Every stable or affine-transition body is canonical.
-  A strict `q=18` hostile outside at content one has its double in `P_35`,
-  so the carrier split is not an all-content theorem. Primary Python
-  source/output and q<=200 semantic ledger SHA-256:
-  `544b2af5b0d1068885145f81fcb31d1ee6fd231979686434a450917e793fbc26` /
-  `276be2254d9e9311fb00a60d7e8397af5d179943aab134fe5530ace319860c86` /
-  `13404c6c2986bd5a14bad57519eb30792adc8e8ea33146b7c68969e33b255394`;
-  independent C++ source/output:
-  `534670dcadbe852a6b63e5e9a229fef9e457b0a7532743aba7231d0f02ef0f3b` /
-  `9dda2b76fe4701c03359da9ae4dc1405da1939cf79354d1f99cc977e2653dbe5`;
-  global Python source/output and independent C++ source/output:
-  `56a4bfbf472dbc3df9554f58e9cc83ae3c3f52f37c5a2729f0338c8ae0e0d059` /
-  `baae4adc57739c852dec2a8c666328cea2c4031934547e2afa4044a314c9bff6` /
-  `8976593096bccd304c338ff4c8a72583357de9cc45d2caddd6e472ed98dc063f` /
-  `41bc97d70cdb8fce3997e89e1f6d6088a1ce26e03c31d45c2ce8bf6b16327c12`.
-  Carrier-overlap primary source/output/semantic:
-  `f62ff96d51f69ca80d8ea8683cb7df7435ebf4620313b496c74e9751cc8b60e1` /
-  `cff9bada469e2545d10affa4c5b5b0219d9f3d4a8499c15be1698f657e7e0515` /
-  `9ef359c186477c930d3b5b606199bcc486d4c07a35b2a015965c6390e06342e1`;
-  independent source/output/semantic:
-  `06524e958bf878d9d8d4eccb96a4807d4efc333bb5148a983f685e8ec010bc5a` /
-  `eb43e1599b584eaa001916b66f009cdb199ac7183b2747f5684df7730791d1e5` /
-  `b6493fab4db6a2937d04a362b6dd7d6aa1108f0b3b75b6cf42a22edd753f8668`.
 
 - The THM-4159/4161/4164/4165 Y-only wall suites and the supplementary
   direct-root pair below ->

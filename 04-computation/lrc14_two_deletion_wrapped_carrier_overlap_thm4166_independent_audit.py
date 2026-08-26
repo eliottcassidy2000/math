@@ -52,7 +52,7 @@ FROZEN = (
     / "05-knowledge/results/"
     / "lrc14_two_deletion_repair_graph_thm4166_global_census.out"
 )
-FROZEN_SHA256 = "baae4adc57739c852dec2a8c666328cea2c4031934547e2afa4044a314c9bff6"
+FROZEN_SHA256 = "b9a06d4cb1c66bf9f41ef07ef5aa224c216ead6882a8694161844737ddf36708"
 
 
 require(len(ANCHORS) == 3, "anchor count")

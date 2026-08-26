@@ -30,14 +30,14 @@ finite_census_script: 04-computation/lrc14_triple_deletion_matching_eventual_haa
 finite_census_output: 05-knowledge/results/lrc14_triple_deletion_matching_eventual_haar_thm4170_finite_census.out
 finite_census_independent_source: 04-computation/lrc14_triple_deletion_matching_eventual_haar_thm4170_finite_census_independent.cpp
 finite_census_independent_output: 05-knowledge/results/lrc14_triple_deletion_matching_eventual_haar_thm4170_finite_census_independent_cpp.out
-script_sha256: 4ae78940383301f7d7bf3fa999781d0ff7358524a26f9e6a2e1159faea3e3313
+script_sha256: d6c7413e94a4e92a096e96eb7586287f58a033a58f7a0fb27fdd43e34cb49c25
 output_sha256: 4a48470d4af3b4bc2e35874ddacaa42ebcf296670680521252f4127e411f1ab1
 semantic_sha256: d6ae7826c902ee3dd166a5b0961d29b3f8fd3829ca1c1d256a6677a24da46024
-independent_audit_source_sha256: c0525dc3f0cd66c4ce6a3218171fe22f8ac07b78766fd306ab84381cd8e1b850
+independent_audit_source_sha256: 0fed5f5e2b8968309b86f4196901ff4396b99a576853fabfa11803e1132994ee
 independent_audit_output_sha256: 91f19492b174d78747f5fcf3d65fe0af60251651831c17abd507b5b9b53faf01
-finite_census_script_sha256: 913f86fa1e27f9af36475535f50bdd57dca5f92dca522967b88ee2aee61f338f
+finite_census_script_sha256: 932847febcaa4aea0f564fe458c82b52fa02e5bdc693b55f14ab8a1d061e5709
 finite_census_output_sha256: 86d38ff3cdedb7414852ceaa736e35216ac7b2f17ed33c19cdb535b746bff80d
-finite_census_independent_source_sha256: 3492ce7ad0b4d177ce364ede3b782aaa965b1f54c0181f528e44b5f81cb4304a
+finite_census_independent_source_sha256: 85395ddef97adcfc6aed3b0c9485b517da06e0bc2417561156f3a8e8791a15ea
 finite_census_independent_output_sha256: 046b2952e253bdbbf43c37ac03921b51e9c28af6dbb017eda1fc5acc3b4eb63b
 finite_qualifier_q_word_xor_mul64: 02784121a66537ac
 hash_basis: raw LF bytes
@@ -59,6 +59,10 @@ finite_census_audits: >
   wordwise XOR/multiply qualifier ledger. Python normal/-O/seed and C++
   O0/O2/UBSan outputs
   respectively byte-match.
+portability_audit: >
+  PASS. Both Python paths force LF stdout, both C++ paths force binary stdout
+  on Windows, and exact-path attributes keep both C++ sources LF. Fresh
+  MinGW C++20 builds and Python replays preserve all four frozen output hashes.
 ---
 
 # THM-4170 -- triple-deletion matching eventual Haar transfer
@@ -292,6 +296,23 @@ by every `d`-deletion repair hypergraph with `4<=d<=20`. After finding a
 disjoint triple, extend it inside the 20-label complement `O\K`. This is a
 second certificate for the same `888,030` bodies per `q`, not an additional
 family count.
+
+There is also an eventual separation from THM-4158 at **content one**. Every
+core `H_(q,K)` contains `120`. If it were contained in a THM-4158 alphabet
+`P_m`, then `m=1` is impossible because `max(P_1)=44`, while for `m>=2` the
+first label of `P_m` is `m`, so `m<=120`. The third-band endpoint is increasing
+in `m`, and therefore
+
+```text
+max(P_m)<=floor(41(12*120+1)/16)=3692.                 (16a)
+```
+
+Consequently, for every `q>=3693` and every `K in binom(O,7)`, the core
+`H_(q,K)` lies in no THM-4158 alphabet. Since every such `q` qualifies by the
+theorem, this gives `888,030` content-one cores per newcomer outside the full
+union of THM-4158 carrier alphabets. This is a mechanism-level alphabet
+comparison only. It does not claim disjointness after a common dilation and
+does not produce additional LRC bodies beyond `(5)`.
 
 ## 6. Exact controls and audit architecture
 

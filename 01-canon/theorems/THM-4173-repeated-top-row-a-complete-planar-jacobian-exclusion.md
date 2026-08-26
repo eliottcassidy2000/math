@@ -26,6 +26,7 @@ related:
   - THM-4159-inner-resultant-wall-planar-jacobian-exclusion
   - THM-4161-y-only-double-top-root-planar-jacobian-exclusion
   - THM-4164-y-only-triple-top-root-planar-jacobian-exclusion
+  - THM-4165-y-only-inner-top-triple-intersection-planar-jacobian-exclusion
 script: 04-computation/jc23_repeated_top_row_a_complete_exclusion_thm4173.py
 output: 05-knowledge/results/jc23_repeated_top_row_a_complete_exclusion_thm4173.out
 independent_audit_script: 04-computation/jc23_repeated_top_row_a_complete_exclusion_thm4173_independent_bridge_audit.py
@@ -332,6 +333,10 @@ PYTHONHASHSEED=4173 python3 -B \
   04-computation/jc23_repeated_top_row_a_complete_exclusion_thm4173.py
 
 python3 -B \
+  04-computation/jc23_repeated_top_row_a_complete_exclusion_thm4173_independent_bridge_audit.py
+python3 -B -O \
+  04-computation/jc23_repeated_top_row_a_complete_exclusion_thm4173_independent_bridge_audit.py
+PYTHONHASHSEED=4173 python3 -B \
   04-computation/jc23_repeated_top_row_a_complete_exclusion_thm4173_independent_bridge_audit.py
 ```
 

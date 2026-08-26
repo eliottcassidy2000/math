@@ -357,21 +357,13 @@ lift/phase clocks.
   tuple is now at least `(8,5,4,3,3)` for `ell=(3,5,7,11,13)`. The requested
   challenges `(3,9),(5,6),(7,5),(11,4),(13,4)` all remain **OPEN**; the public
   `131199`-field file is a named finite population, not a world census.
-- **Jacobian/Dixmier:** `JC(2),DC(2)` remain **OPEN**. THM-4130/4138/4141/4143
-  empty exact `M=8`; THM-4147 excludes `M=9` `P/Y/B/A`.
-  [THM-4157](../01-canon/theorems/THM-4157-repeated-top-edge-wall-planar-jacobian-exclusion.md)
-  adds `B/C` critical opens and all `D` with `eta!=0`.
+- **Jacobian/Dixmier:** `JC(2),DC(2)` remain **OPEN**. THM-4130--4143 empty
+  exact `M=8`; THM-4147/4157 close stated `M=9` chambers.
   [THM-4173](../01-canon/theorems/THM-4173-repeated-top-row-a-complete-planar-jacobian-exclusion.md)
-  completes repeated-top row `A` (including THM-4171's `D_A=0` wall) via a
-  resultant-multiplicity/Hessian bridge; other `B/C` walls remain.
-  THM-4155 handles Y-only;
-  [THM-4159](../01-canon/theorems/THM-4159-inner-resultant-wall-planar-jacobian-exclusion.md),
-  [4161](../01-canon/theorems/THM-4161-y-only-double-top-root-planar-jacobian-exclusion.md), and
-  [4164](../01-canon/theorems/THM-4164-y-only-triple-top-root-planar-jacobian-exclusion.md)
-  close its inner/top walls for `zeta!=0`.
-  [THM-4165](../01-canon/theorems/THM-4165-y-only-inner-top-triple-intersection-planar-jacobian-exclusion.md)
-  closes their intersection. Thus Y-only is empty for `zeta!=0`; `zeta=0`,
-  other cells, `M>=10`, and entry stay open.
+  combines THM-4171 with a Keller--Morse bridge to close repeated-top row `A`
+  when `zeta=-eta`, `eta*Delta*(Delta+Theta)!=0`. THM-4155/4159/4161/4164/4165
+  close Y-only for `zeta!=0`. Repeated-top `Delta=0`, remaining `B/C` walls,
+  `zeta=0` Y-only, other cells, `M>=10`, and entry stay open.
   Exceptional quartic: THM-3703/3737 give grammar/image, THM-4034 the
   conductor, and THM-4039/4043/4046 reach `J_7`, obstruct `J_8`, and close
   critical `H`. [THM-4054](../01-canon/theorems/THM-4054-exceptional-affine-simple-zero-retained-packet.md)

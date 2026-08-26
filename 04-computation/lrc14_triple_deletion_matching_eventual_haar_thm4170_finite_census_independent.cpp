@@ -11,6 +11,11 @@
 #include <string>
 #include <vector>
 
+#ifdef _WIN32
+#include <fcntl.h>
+#include <io.h>
+#endif
+
 namespace {
 using i128 = __int128_t;
 using u128 = __uint128_t;
@@ -174,6 +179,9 @@ struct Control {
 }  // namespace
 
 int main() {
+#ifdef _WIN32
+  _setmode(_fileno(stdout), _O_BINARY);
+#endif
   const std::vector<int> anchors{120, 126, 143};
   const std::vector<int> pool{
       8, 10, 15, 16, 20, 30, 40, 42, 60, 63, 80, 84, 85, 88, 95,

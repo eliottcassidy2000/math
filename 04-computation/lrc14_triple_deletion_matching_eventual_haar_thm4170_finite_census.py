@@ -12,8 +12,12 @@ from collections import Counter, defaultdict
 from fractions import Fraction as F
 from itertools import combinations
 from math import lcm
+import sys
 
 import numpy as np
+
+
+sys.stdout.reconfigure(newline="\n")
 
 
 ANCHORS = (120, 126, 143)
