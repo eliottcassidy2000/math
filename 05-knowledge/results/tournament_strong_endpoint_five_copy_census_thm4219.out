@@ -1,0 +1,36 @@
+universe=one gentourng representative of every strong tournament isomorphism class, orders 3 through 9
+generator=Homebrew nauty 2.9.3 /opt/homebrew/bin/gentourng
+generator_filter=-c (strong tournaments); evaluator does not independently recheck strongness
+word_format=upper triangle row by row; bit 1 means lower-labelled vertex points to higher-labelled vertex
+compile=clang++ -std=c++17 -O3 -Wall -Wextra -pedantic 04-computation/tournament_strong_endpoint_five_copy_census_thm4219.cpp -o /tmp/census4219
+run=for n in $(seq 3 9); do /opt/homebrew/bin/gentourng -q -c "$n" | /tmp/census4219; done
+arithmetic=Hamilton DP and inequality in exact unsigned integers; ratio champion selected by checked unsigned-128 cross multiplication
+variants=clang O0/O3 byte-match orders 3 through 9; ASan/UBSan passes order 7
+n=3 rows=1 bad=0 equal=1
+min_gap=0 word=101 H=3 W=6 m=27
+min_ratio=5 fraction=135/27 word=101 H=3 W=6 m=27 gap=0
+v_min_ratio=3,3,3
+n=4 rows=1 bad=0 equal=0
+min_gap=44 word=100111 H=5 W=22 m=191
+min_ratio=5.23036649214659644 fraction=999/191 word=100111 H=5 W=22 m=191 gap=44
+v_min_ratio=7,5,6,9
+n=5 rows=6 bad=0 equal=0
+min_gap=510 word=1101111101 H=9 W=66 m=1293
+min_ratio=5.39443155452436152 fraction=6975/1293 word=1101111101 H=9 W=66 m=1293 gap=510
+v_min_ratio=9,11,21,11,23
+n=6 rows=35 bad=0 equal=0
+min_gap=3186 word=111011111111101 H=15 W=186 m=8649
+min_ratio=5.3683662851196674 fraction=46431/8649 word=111011111111101 H=15 W=186 m=8649 gap=3186
+v_min_ratio=15,18,29,57,23,59
+n=7 rows=353 bad=0 equal=0
+min_gap=19842 word=111101111111111111101 H=27 W=510 m=59505
+min_ratio=5.33345097050668038 fraction=317367/59505 word=111101111111111111101 H=27 W=510 m=59505 gap=19842
+v_min_ratio=27,30,48,77,153,47,155
+n=8 rows=6008 bad=0 equal=0
+min_gap=122778 word=1111101111111111111111111101 H=51 W=1410 m=432153
+min_ratio=5.28410771185205252 fraction=2283543/432153 word=1111101111111111111111111101 H=51 W=1410 m=432153 gap=122778
+v_min_ratio=51,54,84,132,209,417,95,419
+n=9 rows=178133 bad=0 equal=0
+min_gap=753810 word=111111011111111111111111111111111101 H=99 W=3966 m=3315057
+min_ratio=5.22738975528927519 fraction=17329095/3315057 word=111111011111111111111111111111111101 H=99 W=3966 m=3315057 gap=753810
+v_min_ratio=99,102,156,240,372,581,1161,191,1163
