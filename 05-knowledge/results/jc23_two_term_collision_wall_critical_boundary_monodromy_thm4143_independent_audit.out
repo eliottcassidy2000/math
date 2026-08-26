@@ -1,0 +1,13 @@
+JC23 TWO-TERM COLLISION WALL INDEPENDENT AUDIT
+scope=exact_M8_two_term_wall_Theta=-Delta;Phi!=0;JC2_OPEN
+phi_zero=NO_GO;critical_value_pattern_gcds=1,1,1,1
+critical_generic=resultant:7*T^30*Phi*(6*T+1)^2*Q15;length=19
+critical_K0=Delta:5696/105;Q13;length=17
+packet_generic=(6,6,3,2,2,1);defect=14;labels=rational(6,6,3,1)+quadratic(2,2)
+packet_K0=(6,6,5,1);defect=14;labels=all_rational
+responses=generic:n20_or_n16_with_two_distinct_transpositions;K0:n18
+stable_collision=central:A*(Delta*A+Z^8-Phi*Z);normalize_Z0;nodes=7;genus=2+6=8
+monodromy=n20_full:PASS;n16_quadratic_carriers:PASS;n18_full:PASS
+semantic_digest=1d2e2cd6d6fde167cdf32e8c27b273b1e5aae82a9067471ff6ad6369f9049d63
+checks=113
+RESULT=PASS

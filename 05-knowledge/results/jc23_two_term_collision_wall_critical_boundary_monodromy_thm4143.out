@@ -1,0 +1,14 @@
+THM4143_TWO_TERM_WALL_PRIMARY
+identity=P^4-PY^2=T*P^3
+Phi=0=NO_GO;critical_value_binary_shapes=4;all_parameter_gcds=1
+K_nonzero=resultant=7*T^30*Phi*(6T+1)^2*Q15;degree_Q15=15;critical_length=19
+K_zero=Delta=5696/105;resultant=7*T^30*Phi*(6T+1)^2*Q13;degree_Q13=13;critical_length=17
+generic_polygon=0,1;2,0;4,2;4,3;0,5;arithmetic_genus=9
+K0_polygon=0,1;2,0;4,3;0,5;arithmetic_genus=9
+boundary_node=ordinary;branches=a~(Phi/Delta)z,a~(gamma/Phi)z^7;indices=6,6;normalized_genus=8
+generic_packet=6,6,3,2,2,1;responses=n16_finite_BC_or_n20_full
+K0_packet=6,6,5,1;response=n18_full
+monodromy=n20,n18_shared_pivot_EXCLUDED;n16_carrier_capacity<=14<15_EXCLUDED
+hostiles=Phi0_all_shapes_fail;L18_degree16_reaches_transitivity;node_normalization_lowers_genus_one
+semantic_sha256=b91c8b2d1205fb15b7d5c7a77e81d30a4bb0fc0442c6756ea8afdd98f1b15d77
+verdict=two_term_wall=EMPTY_RELATIVE;exact_M8_trichotomy=EMPTY_RELATIVE;JC2=OPEN;DC2=OPEN
