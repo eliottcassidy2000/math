@@ -21,6 +21,13 @@
 > chirality is a necessary lower-jet sidecar. [THM-4212](../01-canon/theorems/THM-4212-cycle-prefix-uniform-arbitrary-context-threshold-and-tail-five-lower-bound.md)
 > uses that sidecar and the dual endpoint energy to prove the sharp uniform
 > arbitrary-context threshold `n>=5` for the cycle-prefix family.
+> [THM-4213](../01-canon/theorems/THM-4213-uniform-prefix-ordinal-semigroup-and-tail-five-cycle-language.md)
+> then identifies the exact ordinal-prefix telescope: nonnegative prefixes
+> form a semigroup and uniformly positive prefixes a two-sided ideal. This
+> yields an intrinsic tail-five-separated multi-cycle language with geometric
+> floor `10764(9^m-1)/8` and final-tail-six `(OS+)`. The adjacent-cycle word
+> `C3 triangleright C3 triangleright P5` has defect `-338580`, so the ordered
+> block positions remain a load-bearing sidecar.
 
 *klein-2026-07-21-S399. Owner directive: "keep adding to the zoo, go back through past work
 thoroughly and look for all possible ideas and threads relating to them, make sure none are lost,

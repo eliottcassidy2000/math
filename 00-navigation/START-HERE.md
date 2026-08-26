@@ -48,9 +48,8 @@ Then read the routed frontier, guardrails, and theorem; logs are history.
    completions but no outer co-support. Atom, current and LRC remain open.
 10. **Order-eleven asymmetric bank is OPEN.** THM-4144/4162/4163 close
     nonprimes; THM-4168 closes `12,155` symmetric primes; THM-4169 has
-    presentations, not classes. THM-4187 proves transitive-left `(OS+)`;
-    THM-4193/4208 give tail-five/endpoint mechanisms; THM-4212 proves the
-    sharp arbitrary-context threshold `n>=5`. General `(OS+)` remains open.
+    presentations, not classes. THM-4187 is transitive-left; THM-4212/4213
+    give tail-five and multi-cycle/final-tail-six `(OS+)`.
 11. **Support is not multiplicity.** THM-2000/2005/2352/3359/3362/3382
     separate collision, phase and address; THM-3425 needs period plus parity.
     Composite rank seven and FC(3) remain open.

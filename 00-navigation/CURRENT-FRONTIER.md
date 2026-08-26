@@ -267,9 +267,10 @@ THM-2070 refutes the general HYP-8890/8895 bypasses.  Transfer
   [THM-4208](../01-canon/theorems/THM-4208-cycle-prefix-arbitrary-context-recurrence-endpoint-energy-and-eventual-positivity.md)
   proves C-finite eventuality and endpoint energy.
   [THM-4212](../01-canon/theorems/THM-4212-cycle-prefix-uniform-arbitrary-context-threshold-and-tail-five-lower-bound.md)
-  proves `F_n(B,C)>=10764H(B)^2H(C)^2` for `n>=5` (equality only at
-  `n=5,B=C=P_1`), hence uniform positivity iff `n>=5`. General `(OS+)` and
-  the order-eleven bank remain **OPEN**.
+  proves uniform threshold `n>=5`;
+  [THM-4213](../01-canon/theorems/THM-4213-uniform-prefix-ordinal-semigroup-and-tail-five-cycle-language.md)
+  gives the `m`-cycle floor `10764(9^m-1)/8`, final-tail-six `(OS+)`, and
+  adjacent-cycle hostile `-338580`. General `(OS+)` remains **OPEN**.
   THM-4114/4118 leave face/cut and gcd gaps; completeness is **OPEN**.
 - Corrected HYP-8835: optimal support is uniquely odd; positive `Mp=0` gives a
   replicator integral. Pure optimum means Condorcet winner, not transitivity;

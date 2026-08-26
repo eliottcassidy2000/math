@@ -1,0 +1,10 @@
+theorem=THM-4213-independent
+engine=literal-labelled-subset-DP-no-ordinal-capacity-transfer
+literal_q5_floor_checks=9
+literal_q5_equalities=1
+literal_telescope_checks=9
+good_suffix_hostile_order=11
+good_suffix_hostile_hamilton=9
+good_suffix_hostile_singleton_defect=-338580
+q6_against_c3_remainder=26147880
+status=PASS
