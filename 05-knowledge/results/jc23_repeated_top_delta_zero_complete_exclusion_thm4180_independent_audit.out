@@ -1,0 +1,11 @@
+THM4180_INDEPENDENT_NORMALIZED_AUDIT
+geometry=Delta_zero_halfspaces_and_replacement_face_recomputed
+row_partition=A:theta!=0;B:theta=0,phi!=0;C:theta=phi=0;Btop=7168/135;D:empty
+bridge=T*detD(f,h)-detHess(G)-f*G_XT=0
+row_A_normalized=Q19;DA_wall_Q_degrees=18,17,16
+row_A_DA_terminal=gcd(S0,Q16_top)=1
+row_B_normalized=Q17;row_C_normalized=Q15
+critical_lengths=A:23_or_22,21,20;B:21;C:19
+responses=all_full_and_finite_bounds_strict
+checks=66
+verdict=INDEPENDENT_DELTA_ZERO_ACCEPT

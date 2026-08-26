@@ -1,0 +1,14 @@
+THM4180_REPEATED_TOP_DELTA_ZERO_PRIMARY_EXACT_CERTIFICATE
+wall=Delta:0,zeta:-eta,eta!=0
+polygon=((0,1),(2,0),(5,3),(1,5),(0,4));Pick=(30,10,11)
+replacement_face=Q*p^4*(epsilon+eta*s*p);root_W=-epsilon/eta
+vertical_s_zero=affine_not_infinity_packet
+rows=A:theta!=0;B:theta=0,phi!=0;C:theta=phi=0,b0=7168/135
+packets=A:(7,7,4,2,2,2,1);B:(6,6,4,2,2,2,1);C:(5,5,4,2,2,2,1)
+source_pair=(A,B);s_infinity=none_for_p!=0,eta!=0
+critical_lengths=A_off_DA:23;A_on_DA:22,21,20;B:21;C:19
+row_A_DA_tower=18,17,16;terminal_gcd(S0,P0)=1
+carrier=q-1/2=k0*W^2-eta*W^3;degree=3;beta=3
+responses=all_full_and_finite_bounds_strict
+checks=96
+verdict=DELTA_ZERO_REPEATED_TOP_CLOSES
