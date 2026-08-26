@@ -1,0 +1,17 @@
+THM4149_MINIMUM_BOUNDARY_ODD_TAIL_TRANSFER_20260825
+status=PASS;scope=exact rational minimum-one/two boundary
+width_gate=2/189;minimum_caps=(1:11,2:20)
+primitive_residual_pairs=68
+minimum_one_partition=(56,11,1)
+minimum_one_clocks=((1/14,0),(6/77,1),(3/14,0))
+minimum_one_body_gaps=(1/14,6/77,1/14)
+minimum_one_first_window_hostile=(1,13;6/91,8/91)
+minimum_one_isolated_clock=3/14
+minimum_two_partition=(58,8,2)
+minimum_two_clocks=((1/28,1),(1/28,0),(13/280,1))
+minimum_two_hostile=3/56;minimum_two_rescue=9/112
+added_eleven_bodies=43759
+all_width_body_minima=1..70;all_width_max_label=80
+all_width_eleven_bodies=60301653510
+semantic_sha256=90de52f9075568cead74de79315daf0494ad7f1f49e5ae7303eff0eae7881f6d
+semantic_fnv64=6784b7e0b01a759d
