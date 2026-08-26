@@ -1,0 +1,144 @@
+PAIR p=10 q=15 nonstrict=0 min_delta=529871591416284 min_body=8,80,84,85,88,95,145 max_cutoff=409 cutoff_body=85,95,145,193,240,252,286
+PAIR p=10 q=20 nonstrict=0 min_delta=612720939118680 min_body=85,95,120,143,145,168,193 max_cutoff=402 cutoff_body=88,95,145,193,240,252,286
+PAIR p=10 q=30 nonstrict=0 min_delta=510172393088124 min_body=8,80,84,85,88,95,145 max_cutoff=413 cutoff_body=85,95,145,193,240,252,286
+PAIR p=10 q=60 nonstrict=0 min_delta=479994455516004 min_body=8,80,84,85,88,95,145 max_cutoff=452 cutoff_body=85,95,145,193,240,252,286
+PAIR p=10 q=63 nonstrict=0 min_delta=515782790447184 min_body=8,80,88,95,143,168,193 max_cutoff=415 cutoff_body=85,95,145,168,193,240,286
+PAIR p=10 q=132 nonstrict=0 min_delta=526573861360992 min_body=85,95,120,143,145,168,193 max_cutoff=441 cutoff_body=85,95,145,193,240,252,286
+PAIR p=10 q=170 nonstrict=0 min_delta=484550439173424 min_body=8,80,88,95,120,145,168 max_cutoff=472 cutoff_body=88,95,145,193,240,252,286
+PAIR p=10 q=176 nonstrict=0 min_delta=516967843194360 min_body=8,80,95,143,145,168,193 max_cutoff=464 cutoff_body=85,95,145,193,240,252,286
+PAIR p=10 q=190 nonstrict=0 min_delta=546686229450564 min_body=8,80,88,143,145,168,193 max_cutoff=449 cutoff_body=85,145,168,193,240,252,286
+PAIR p=10 q=264 nonstrict=0 min_delta=520337362953168 min_body=85,95,120,143,145,168,193 max_cutoff=472 cutoff_body=85,95,145,168,240,252,286
+PAIR p=10 q=290 nonstrict=0 min_delta=529391089927296 min_body=16,85,95,120,143,168,193 max_cutoff=480 cutoff_body=85,95,120,168,193,252,286
+PAIR p=15 q=20 nonstrict=0 min_delta=542761927265844 min_body=8,80,84,85,88,95,145 max_cutoff=440 cutoff_body=88,95,145,193,240,252,286
+PAIR p=15 q=30 nonstrict=0 min_delta=564963069683844 min_body=8,80,84,85,88,95,145 max_cutoff=398 cutoff_body=85,95,145,193,240,252,286
+PAIR p=15 q=60 nonstrict=0 min_delta=491369398881660 min_body=8,80,84,85,88,95,145 max_cutoff=441 cutoff_body=85,95,145,193,240,252,286
+PAIR p=15 q=63 nonstrict=0 min_delta=489957609394512 min_body=8,80,88,95,143,145,168 max_cutoff=423 cutoff_body=85,95,145,193,240,252,286
+PAIR p=15 q=132 nonstrict=0 min_delta=528894748466136 min_body=8,80,84,85,95,120,145 max_cutoff=460 cutoff_body=85,95,145,193,240,252,286
+PAIR p=15 q=170 nonstrict=0 min_delta=463225592564280 min_body=8,80,84,88,95,120,145 max_cutoff=505 cutoff_body=88,95,145,193,240,252,286
+PAIR p=15 q=176 nonstrict=0 min_delta=499591244661264 min_body=8,80,95,143,145,168,193 max_cutoff=487 cutoff_body=85,95,145,193,240,252,286
+PAIR p=15 q=190 nonstrict=0 min_delta=497659376843532 min_body=8,80,88,143,145,168,193 max_cutoff=465 cutoff_body=80,85,145,193,240,252,286
+PAIR p=15 q=264 nonstrict=0 min_delta=541410530829948 min_body=8,80,85,95,120,145,252 max_cutoff=479 cutoff_body=85,95,145,193,240,252,286
+PAIR p=15 q=290 nonstrict=0 min_delta=515294772441480 min_body=8,80,88,95,143,168,193 max_cutoff=482 cutoff_body=85,88,95,193,240,252,286
+PAIR p=20 q=30 nonstrict=0 min_delta=551465127899244 min_body=8,80,84,85,88,95,145 max_cutoff=443 cutoff_body=88,95,145,193,240,252,286
+PAIR p=20 q=60 nonstrict=0 min_delta=544740109576884 min_body=8,80,84,85,88,95,145 max_cutoff=440 cutoff_body=85,95,145,193,240,252,286
+PAIR p=20 q=63 nonstrict=0 min_delta=526748704523244 min_body=8,80,88,95,143,168,193 max_cutoff=441 cutoff_body=88,95,145,193,240,252,286
+PAIR p=20 q=132 nonstrict=0 min_delta=575302174883028 min_body=16,95,143,145,168,193,240 max_cutoff=465 cutoff_body=95,145,168,193,240,252,286
+PAIR p=20 q=170 nonstrict=0 min_delta=506736729616104 min_body=8,80,84,88,95,120,145 max_cutoff=520 cutoff_body=88,95,145,193,240,252,286
+PAIR p=20 q=176 nonstrict=0 min_delta=566828537578560 min_body=8,80,95,143,145,168,193 max_cutoff=487 cutoff_body=85,95,145,193,240,252,286
+PAIR p=20 q=190 nonstrict=0 min_delta=562841595748404 min_body=8,80,85,88,143,168,193 max_cutoff=476 cutoff_body=85,145,168,193,240,252,286
+PAIR p=20 q=264 nonstrict=0 min_delta=570214831329288 min_body=85,95,120,143,145,168,193 max_cutoff=491 cutoff_body=95,145,168,193,240,252,286
+PAIR p=20 q=290 nonstrict=0 min_delta=567928081574352 min_body=8,80,88,95,143,168,193 max_cutoff=492 cutoff_body=8,88,95,193,240,252,286
+PAIR p=30 q=60 nonstrict=0 min_delta=552776881673484 min_body=8,80,84,85,88,95,145 max_cutoff=436 cutoff_body=85,95,145,193,240,252,286
+PAIR p=30 q=63 nonstrict=0 min_delta=497261881809864 min_body=8,80,88,95,143,145,168 max_cutoff=414 cutoff_body=85,95,145,193,240,252,286
+PAIR p=30 q=132 nonstrict=0 min_delta=547803353280060 min_body=8,80,84,85,95,145,286 max_cutoff=462 cutoff_body=85,95,145,193,240,252,286
+PAIR p=30 q=170 nonstrict=0 min_delta=504077706893160 min_body=8,80,88,95,145,168,286 max_cutoff=495 cutoff_body=88,95,145,193,240,252,286
+PAIR p=30 q=176 nonstrict=0 min_delta=519306471612540 min_body=8,80,95,143,145,168,193 max_cutoff=485 cutoff_body=85,95,145,193,240,252,286
+PAIR p=30 q=190 nonstrict=0 min_delta=517922790011964 min_body=8,80,88,143,145,168,193 max_cutoff=462 cutoff_body=80,85,145,193,240,252,286
+PAIR p=30 q=264 nonstrict=0 min_delta=559779951222720 min_body=8,42,80,85,95,143,145 max_cutoff=474 cutoff_body=85,95,145,193,240,252,286
+PAIR p=30 q=290 nonstrict=0 min_delta=510377547599712 min_body=8,80,88,95,143,168,193 max_cutoff=491 cutoff_body=85,88,95,193,240,252,286
+PAIR p=60 q=63 nonstrict=0 min_delta=525379853142900 min_body=8,80,88,95,143,168,193 max_cutoff=434 cutoff_body=85,95,145,193,240,252,286
+PAIR p=60 q=132 nonstrict=0 min_delta=550402989112476 min_body=8,80,84,85,95,145,286 max_cutoff=472 cutoff_body=85,95,145,193,240,252,286
+PAIR p=60 q=170 nonstrict=0 min_delta=500865310913292 min_body=8,80,88,95,145,168,193 max_cutoff=506 cutoff_body=88,95,145,193,240,252,286
+PAIR p=60 q=176 nonstrict=0 min_delta=549988750863864 min_body=8,80,85,95,145,168,193 max_cutoff=488 cutoff_body=85,95,145,193,240,252,286
+PAIR p=60 q=190 nonstrict=0 min_delta=551566378150344 min_body=8,80,84,85,88,145,286 max_cutoff=454 cutoff_body=85,88,145,193,240,252,286
+PAIR p=60 q=264 nonstrict=0 min_delta=560243124120888 min_body=8,80,84,85,88,95,145 max_cutoff=498 cutoff_body=85,95,145,193,240,252,286
+PAIR p=60 q=290 nonstrict=0 min_delta=539208732711204 min_body=8,80,84,85,88,95,286 max_cutoff=485 cutoff_body=85,88,95,193,240,252,286
+PAIR p=63 q=132 nonstrict=0 min_delta=556318087267356 min_body=8,80,88,95,143,168,193 max_cutoff=438 cutoff_body=95,145,168,193,240,252,286
+PAIR p=63 q=170 nonstrict=0 min_delta=488367963099612 min_body=8,80,88,95,143,145,168 max_cutoff=479 cutoff_body=88,95,145,193,240,252,286
+PAIR p=63 q=176 nonstrict=0 min_delta=507472263797652 min_body=8,80,95,143,145,168,193 max_cutoff=478 cutoff_body=85,95,145,193,240,252,286
+PAIR p=63 q=190 nonstrict=0 min_delta=518256654018840 min_body=8,80,88,143,145,168,193 max_cutoff=448 cutoff_body=85,145,168,193,240,252,286
+PAIR p=63 q=264 nonstrict=0 min_delta=557586181666620 min_body=16,95,120,143,145,168,193 max_cutoff=468 cutoff_body=95,145,168,193,240,252,286
+PAIR p=63 q=290 nonstrict=0 min_delta=508462470099288 min_body=8,80,88,95,143,168,193 max_cutoff=467 cutoff_body=85,95,168,193,240,252,286
+PAIR p=132 q=170 nonstrict=0 min_delta=523538875472688 min_body=16,84,95,120,143,145,193 max_cutoff=497 cutoff_body=95,120,145,193,240,252,286
+PAIR p=132 q=176 nonstrict=0 min_delta=569052711679032 min_body=8,80,95,143,145,168,193 max_cutoff=505 cutoff_body=8,95,145,193,240,252,286
+PAIR p=132 q=190 nonstrict=0 min_delta=571357473797304 min_body=16,85,120,143,145,168,193 max_cutoff=461 cutoff_body=85,145,168,193,240,252,286
+PAIR p=132 q=264 nonstrict=0 min_delta=632446977201192 min_body=16,95,120,143,145,168,193 max_cutoff=459 cutoff_body=8,95,145,193,240,252,286
+PAIR p=132 q=290 nonstrict=0 min_delta=556533354954024 min_body=16,85,95,120,143,168,193 max_cutoff=505 cutoff_body=8,88,95,193,240,252,286
+PAIR p=170 q=176 nonstrict=0 min_delta=498992799226824 min_body=8,80,95,143,145,168,193 max_cutoff=531 cutoff_body=40,95,145,193,240,252,286
+PAIR p=170 q=190 nonstrict=0 min_delta=507900247103772 min_body=8,80,88,143,145,168,193 max_cutoff=493 cutoff_body=88,145,168,193,240,252,286
+PAIR p=170 q=264 nonstrict=0 min_delta=536903201639520 min_body=16,95,120,143,145,168,193 max_cutoff=528 cutoff_body=95,145,168,193,240,252,286
+PAIR p=170 q=290 nonstrict=0 min_delta=501915978908712 min_body=8,80,88,95,143,168,193 max_cutoff=563 cutoff_body=8,88,95,193,240,252,286
+PAIR p=176 q=190 nonstrict=0 min_delta=564036878137104 min_body=8,80,85,143,145,168,193 max_cutoff=493 cutoff_body=85,145,168,193,240,252,286
+PAIR p=176 q=264 nonstrict=0 min_delta=602805451477248 min_body=8,80,95,143,145,168,193 max_cutoff=507 cutoff_body=8,95,145,193,240,252,286
+PAIR p=176 q=290 nonstrict=0 min_delta=544609782077004 min_body=8,80,85,95,143,168,193 max_cutoff=522 cutoff_body=40,85,95,193,240,252,286
+PAIR p=190 q=264 nonstrict=0 min_delta=579364193994480 min_body=16,85,120,143,145,168,193 max_cutoff=503 cutoff_body=85,145,168,193,240,252,286
+PAIR p=190 q=290 nonstrict=0 min_delta=544338446295420 min_body=8,80,85,88,168,193,286 max_cutoff=512 cutoff_body=85,120,126,168,193,240,286
+PAIR p=264 q=290 nonstrict=0 min_delta=561835035361440 min_body=16,85,95,120,143,168,193 max_cutoff=537 cutoff_body=85,95,168,193,240,252,286
+SUMMARY denominator=91205797082400 cells=7213 pairs=66 profiles=2100384 strict_pairs=66 nonstrict_pairs=0 global_max_cutoff=563
+PROGRESS outsider=100
+PROGRESS outsider=150
+PROGRESS outsider=200
+PROGRESS outsider=250
+PROGRESS outsider=300
+PROGRESS outsider=350
+PROGRESS outsider=400
+PROGRESS outsider=450
+PROGRESS outsider=500
+PROGRESS outsider=550
+LITERAL p=10 q=15 rows=377 checks=11997648 failures=0 equalities=0 min_delta=366540925180248 min_denominator=91205797082400 min_r=70 min_body=8,80,85,88,95,120,145
+LITERAL p=10 q=20 rows=370 checks=11774880 failures=0 equalities=0 min_delta=458291538114228 min_denominator=91205797082400 min_r=70 min_body=80,85,88,95,120,126,145
+LITERAL p=10 q=30 rows=381 checks=12124944 failures=0 equalities=0 min_delta=371248171504938 min_denominator=91205797082400 min_r=70 min_body=8,80,85,88,95,145,168
+LITERAL p=10 q=60 rows=420 checks=13366080 failures=0 equalities=0 min_delta=337550803531578 min_denominator=91205797082400 min_r=70 min_body=8,80,85,88,95,145,168
+LITERAL p=10 q=63 rows=383 checks=12188592 failures=0 equalities=0 min_delta=397252390014648 min_denominator=91205797082400 min_r=70 min_body=80,85,95,120,143,145,168
+LITERAL p=10 q=132 rows=409 checks=13016016 failures=0 equalities=0 min_delta=402779904608718 min_denominator=91205797082400 min_r=70 min_body=80,85,95,120,126,145,168
+LITERAL p=10 q=170 rows=440 checks=14002560 failures=0 equalities=0 min_delta=355791167871048 min_denominator=91205797082400 min_r=70 min_body=8,80,88,95,120,145,168
+LITERAL p=10 q=176 rows=432 checks=13747968 failures=0 equalities=0 min_delta=393544721583468 min_denominator=91205797082400 min_r=70 min_body=80,85,95,120,126,145,168
+LITERAL p=10 q=190 rows=417 checks=13270608 failures=0 equalities=0 min_delta=418306565208168 min_denominator=91205797082400 min_r=70 min_body=8,80,85,88,120,145,168
+LITERAL p=10 q=264 rows=440 checks=14002560 failures=0 equalities=0 min_delta=394245028891350 min_denominator=91205797082400 min_r=70 min_body=80,85,95,120,126,145,168
+LITERAL p=10 q=290 rows=448 checks=14257152 failures=0 equalities=0 min_delta=415906952245470 min_denominator=91205797082400 min_r=90 min_body=8,80,85,88,95,168,286
+LITERAL p=15 q=20 rows=408 checks=12984192 failures=0 equalities=0 min_delta=400003933535388 min_denominator=91205797082400 min_r=70 min_body=8,80,85,88,95,120,145
+LITERAL p=15 q=30 rows=366 checks=11647584 failures=0 equalities=0 min_delta=433427391046692 min_denominator=91205797082400 min_r=65 min_body=8,42,80,85,88,95,145
+LITERAL p=15 q=60 rows=409 checks=13016016 failures=0 equalities=0 min_delta=372458543002182 min_denominator=91205797082400 min_r=70 min_body=8,80,85,88,95,145,168
+LITERAL p=15 q=63 rows=391 checks=12443184 failures=0 equalities=0 min_delta=385320959949996 min_denominator=91205797082400 min_r=55 min_body=8,80,88,95,143,145,168
+LITERAL p=15 q=132 rows=428 checks=13620672 failures=0 equalities=0 min_delta=395705398207392 min_denominator=91205797082400 min_r=70 min_body=8,80,84,85,95,120,145
+LITERAL p=15 q=170 rows=473 checks=15052752 failures=0 equalities=0 min_delta=354221134248114 min_denominator=91205797082400 min_r=195 min_body=8,80,84,88,95,120,145
+LITERAL p=15 q=176 rows=455 checks=14479920 failures=0 equalities=0 min_delta=398421483238926 min_denominator=91205797082400 min_r=65 min_body=8,42,80,85,95,145,252
+LITERAL p=15 q=190 rows=433 checks=13779792 failures=0 equalities=0 min_delta=392091512386392 min_denominator=91205797082400 min_r=70 min_body=8,80,85,88,120,145,168
+LITERAL p=15 q=264 rows=447 checks=14225328 failures=0 equalities=0 min_delta=413319461892246 min_denominator=91205797082400 min_r=70 min_body=8,80,85,95,120,126,145
+LITERAL p=15 q=290 rows=450 checks=14320800 failures=0 equalities=0 min_delta=423451820807316 min_denominator=91205797082400 min_r=65 min_body=8,42,80,85,88,95,252
+LITERAL p=20 q=30 rows=411 checks=13079664 failures=0 equalities=0 min_delta=420264017400402 min_denominator=91205797082400 min_r=65 min_body=8,80,84,85,88,95,145
+LITERAL p=20 q=60 rows=408 checks=12984192 failures=0 equalities=0 min_delta=424892216534058 min_denominator=91205797082400 min_r=70 min_body=8,80,85,88,95,145,168
+LITERAL p=20 q=63 rows=409 checks=13016016 failures=0 equalities=0 min_delta=446438467504260 min_denominator=91205797082400 min_r=55 min_body=8,80,88,95,143,168,193
+LITERAL p=20 q=132 rows=433 checks=13779792 failures=0 equalities=0 min_delta=451614771942516 min_denominator=91205797082400 min_r=36 min_body=16,84,95,120,143,145,193
+LITERAL p=20 q=170 rows=488 checks=15530112 failures=0 equalities=0 min_delta=387577135937628 min_denominator=91205797082400 min_r=70 min_body=8,80,88,95,120,145,168
+LITERAL p=20 q=176 rows=455 checks=14479920 failures=0 equalities=0 min_delta=469436218428492 min_denominator=91205797082400 min_r=48 min_body=8,80,95,143,145,168,193
+LITERAL p=20 q=190 rows=444 checks=14129856 failures=0 equalities=0 min_delta=438872041374858 min_denominator=91205797082400 min_r=140 min_body=8,42,80,85,88,120,145
+LITERAL p=20 q=264 rows=459 checks=14607216 failures=0 equalities=0 min_delta=462144574902528 min_denominator=91205797082400 min_r=48 min_body=85,95,120,143,145,168,193
+LITERAL p=20 q=290 rows=460 checks=14639040 failures=0 equalities=0 min_delta=467732708558010 min_denominator=91205797082400 min_r=90 min_body=8,80,85,88,95,168,286
+LITERAL p=30 q=60 rows=404 checks=12856896 failures=0 equalities=0 min_delta=439587696040038 min_denominator=91205797082400 min_r=70 min_body=8,80,85,88,95,145,168
+LITERAL p=30 q=63 rows=382 checks=12156768 failures=0 equalities=0 min_delta=401923848195324 min_denominator=91205797082400 min_r=70 min_body=8,80,85,88,95,145,168
+LITERAL p=30 q=132 rows=430 checks=13684320 failures=0 equalities=0 min_delta=436884119652708 min_denominator=91205797082400 min_r=70 min_body=8,80,85,95,126,145,240
+LITERAL p=30 q=170 rows=463 checks=14734512 failures=0 equalities=0 min_delta=403714088763804 min_denominator=91205797082400 min_r=70 min_body=8,80,88,95,145,168,193
+LITERAL p=30 q=176 rows=453 checks=14416272 failures=0 equalities=0 min_delta=417030204722292 min_denominator=91205797082400 min_r=48 min_body=8,80,95,143,145,168,193
+LITERAL p=30 q=190 rows=430 checks=13684320 failures=0 equalities=0 min_delta=426319130507634 min_denominator=91205797082400 min_r=70 min_body=8,80,85,88,145,168,193
+LITERAL p=30 q=264 rows=442 checks=14066208 failures=0 equalities=0 min_delta=443021626156284 min_denominator=91205797082400 min_r=110 min_body=8,80,85,95,126,145,286
+LITERAL p=30 q=290 rows=459 checks=14607216 failures=0 equalities=0 min_delta=417962065379796 min_denominator=91205797082400 min_r=130 min_body=8,42,80,85,88,95,252
+LITERAL p=60 q=63 rows=402 checks=12793248 failures=0 equalities=0 min_delta=432662595515514 min_denominator=91205797082400 min_r=70 min_body=8,80,85,88,95,145,168
+LITERAL p=60 q=132 rows=440 checks=14002560 failures=0 equalities=0 min_delta=891512262200196 min_denominator=182411594164800 min_r=96 min_body=8,80,84,85,88,95,145
+LITERAL p=60 q=170 rows=474 checks=15084576 failures=0 equalities=0 min_delta=394219131403734 min_denominator=91205797082400 min_r=70 min_body=8,80,88,95,145,168,193
+LITERAL p=60 q=176 rows=456 checks=14511744 failures=0 equalities=0 min_delta=893552121406980 min_denominator=182411594164800 min_r=96 min_body=8,80,84,85,95,145,286
+LITERAL p=60 q=190 rows=422 checks=13429728 failures=0 equalities=0 min_delta=862995240748620 min_denominator=182411594164800 min_r=96 min_body=8,80,84,85,88,145,286
+LITERAL p=60 q=264 rows=466 checks=14829984 failures=0 equalities=0 min_delta=907592531918436 min_denominator=182411594164800 min_r=96 min_body=8,80,84,85,88,95,145
+LITERAL p=60 q=290 rows=453 checks=14416272 failures=0 equalities=0 min_delta=855223574785650 min_denominator=182411594164800 min_r=96 min_body=8,80,84,85,88,95,286
+LITERAL p=63 q=132 rows=406 checks=12920544 failures=0 equalities=0 min_delta=968593710229614 min_denominator=182411594164800 min_r=96 min_body=8,80,88,95,143,168,193
+LITERAL p=63 q=170 rows=447 checks=14225328 failures=0 equalities=0 min_delta=414733945622724 min_denominator=91205797082400 min_r=70 min_body=8,80,88,95,120,145,168
+LITERAL p=63 q=176 rows=446 checks=14193504 failures=0 equalities=0 min_delta=426165944750406 min_denominator=91205797082400 min_r=48 min_body=8,80,95,143,145,168,193
+LITERAL p=63 q=190 rows=416 checks=13238784 failures=0 equalities=0 min_delta=890743756717710 min_denominator=182411594164800 min_r=96 min_body=8,80,88,143,145,168,193
+LITERAL p=63 q=264 rows=436 checks=13875264 failures=0 equalities=0 min_delta=470050547403780 min_denominator=91205797082400 min_r=48 min_body=85,95,120,143,145,168,193
+LITERAL p=63 q=290 rows=435 checks=13843440 failures=0 equalities=0 min_delta=861412711889772 min_denominator=182411594164800 min_r=96 min_body=8,80,88,95,143,168,193
+LITERAL p=132 q=170 rows=465 checks=14798160 failures=0 equalities=0 min_delta=431040552742800 min_denominator=91205797082400 min_r=140 min_body=8,42,80,95,120,145,252
+LITERAL p=132 q=176 rows=473 checks=15052752 failures=0 equalities=0 min_delta=462735755768916 min_denominator=91205797082400 min_r=48 min_body=8,80,95,143,145,168,193
+LITERAL p=132 q=190 rows=429 checks=13652496 failures=0 equalities=0 min_delta=482084298198216 min_denominator=91205797082400 min_r=36 min_body=16,84,85,120,143,145,193
+LITERAL p=132 q=264 rows=427 checks=13588848 failures=0 equalities=0 min_delta=524396005026768 min_denominator=91205797082400 min_r=48 min_body=8,95,120,143,145,168,193
+LITERAL p=132 q=290 rows=473 checks=15052752 failures=0 equalities=0 min_delta=475489689831576 min_denominator=91205797082400 min_r=36 min_body=16,84,85,95,120,143,193
+LITERAL p=170 q=176 rows=499 checks=15880176 failures=0 equalities=0 min_delta=412466967458280 min_denominator=91205797082400 min_r=48 min_body=8,80,95,143,145,168,193
+LITERAL p=170 q=190 rows=461 checks=14670864 failures=0 equalities=0 min_delta=418496146053174 min_denominator=91205797082400 min_r=90 min_body=8,80,88,143,145,168,193
+LITERAL p=170 q=264 rows=496 checks=15784704 failures=0 equalities=0 min_delta=444628633199814 min_denominator=91205797082400 min_r=48 min_body=8,95,120,143,145,168,193
+LITERAL p=170 q=290 rows=531 checks=16898544 failures=0 equalities=0 min_delta=839291917216284 min_denominator=182411594164800 min_r=96 min_body=8,80,88,95,168,193,286
+LITERAL p=176 q=190 rows=461 checks=14670864 failures=0 equalities=0 min_delta=14759980158217644 min_denominator=2827379709554400 min_r=93 min_body=8,80,85,143,145,168,193
+LITERAL p=176 q=264 rows=475 checks=15116400 failures=0 equalities=0 min_delta=487969459975368 min_denominator=91205797082400 min_r=48 min_body=8,80,95,143,145,168,193
+LITERAL p=176 q=290 rows=490 checks=15593760 failures=0 equalities=0 min_delta=925665763072554 min_denominator=182411594164800 min_r=96 min_body=8,80,85,95,168,193,286
+LITERAL p=190 q=264 rows=471 checks=14989104 failures=0 equalities=0 min_delta=970964491147056 min_denominator=182411594164800 min_r=96 min_body=8,80,88,145,168,193,286
+LITERAL p=190 q=290 rows=480 checks=15275520 failures=0 equalities=0 min_delta=903792026326014 min_denominator=182411594164800 min_r=96 min_body=8,80,85,88,168,193,286
+LITERAL p=264 q=290 rows=505 checks=16071120 failures=0 equalities=0 min_delta=945794164965678 min_denominator=182411594164800 min_r=96 min_body=8,80,88,95,168,193,286
+LITERAL_SUMMARY rows=29042 checks=924232608 failures=0 equalities=0

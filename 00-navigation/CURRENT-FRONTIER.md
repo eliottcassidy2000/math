@@ -71,13 +71,12 @@ is the safe control `M(S_13)=99/338`. No cited result proves LRC(14).
   THM-4105/4106 are reciprocal decoders; THM-4107/4108 are tournament/radical
   firewalls. THM-4110 finds `64` AP13 sheets; THM-4116 gives
   `2^(c(F)-1)`. Safety/arrival stay open.
-- **Owner/tail:** THM-4156/4191 close the zero/one-outsider layers; THM-4207
-  closes fixed `(50,51)` and THM-4211 a fixed-`50` tail. [THM-4231](../01-canon/theorems/THM-4231-arbitrary-pair-cofinal-depth-six-haar-repair-and-exact-outsider-lift.md)
-  fills all `C(32,11)` charts for distinct `q,r>=17548`.
-  [THM-4227](../01-canon/theorems/THM-4227-two-outsider-scale-separated-depth-eight-haar-wedge.md)
-  reaches a directed wedge from `3391`; [THM-4228](../01-canon/theorems/THM-4228-common-gcd-two-outsider-periodic-observable-haar-ray.md)
-  covers gcd `>=3467`. These thresholds are certificate-only; finite pair
-  entry and LRC(14) stay open.
+- **Owner/tail:** THM-4156/4191 close zero/one layers. THM-4227/4228 and
+  [THM-4231](../01-canon/theorems/THM-4231-arbitrary-pair-cofinal-depth-six-haar-repair-and-exact-outsider-lift.md)
+  cover wedge, gcd-ray, and cofinal-quadrant pair regions.
+  [THM-4234](../01-canon/theorems/THM-4234-fixed-fifty-twenty-label-pair-haar-charts.md)
+  closes all 66 fixed-`50` chart pairs and one triple (`chi_50>=21`); all 220
+  triples close for `r>=589`. Cutoffs are sufficient; arbitrary entry stays open.
 - **PROVED:** [THM-2928](../01-canon/theorems/THM-2928-critical-seven-comb-grid-tensorization-and-drift-tariff.md)/2941: literal zero/one/two/three-drift sectors are empty; `k=2,3` are finite.
 - **Orthogonal routes.** THM-1017 is HYP-6820; THM-2047/2050 keep phase/exit; THM-731/2048 prune; THM-1290 ends at `55`; HYP-8900 nonuniform.
 - **PROVED micro-staircase:** THM-3316 closes every prime and THM-3317 proves
@@ -371,8 +370,10 @@ lift/phase clocks.
   repeated-top. THM-4183/4186/4189/4192 and THM-4205/4209 close the named
   `K=0` faces; THM-4217 closes mixed off-anti `Delta=0`. THM-4218/4220 close
   dense and complete `zeta=0` exact `M=10`, including the split conic;
-  THM-4222/4226 close dense `M=11/13` via primitive CM. Walls, other cells,
-  `M=12`, `M>=14`, and seam entry stay open.
+  THM-4222/[4232](../01-canon/theorems/THM-4232-weight-eleven-u-zero-primitive-cm-planar-jacobian-exclusion.md) close `M=11` off four walls; THM-4226 closes dense `M=13`.
+  [THM-4230](../01-canon/theorems/THM-4230-exact-weight-twelve-cyclotomic-prym-planar-jacobian-squeeze.md)
+  reduces its `M=12` gate to a proper countable nonempty hidden-`E_0` locus;
+  that locus, walls, entry, and JC(2) stay open.
   Exceptional quartic: THM-3703/3737 give grammar/image, THM-4034 the
   conductor, and THM-4039/4043/4046 reach `J_7`, obstruct `J_8`, and close
   critical `H`. [THM-4054](../01-canon/theorems/THM-4054-exceptional-affine-simple-zero-retained-packet.md)

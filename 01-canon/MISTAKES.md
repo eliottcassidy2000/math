@@ -9,6 +9,41 @@ Format per entry:
 - Why it was wrong
 - The correct framing
 
+## MISTAKE-521 (2026-08-26, exact-weight-twelve Jacobian audit) -- a rational isogeny decomposition was treated as an integral Hom-lattice exhaustion
+
+- **What failed:** the first exact-`M=12` scratch analysis displayed two
+  degree-four maps from the genus-seven main component to the good `j=0`
+  elliptic target and inferred that every target map had degree divisible by
+  four. A rational group-ring decomposition identifies isogeny factors, but
+  by itself neither saturates the integral Hom lattice of the visible
+  genus-two quotient nor excludes an additional target factor inside the
+  primitive `Phi_12` fourfold.
+- **Minimal witness / first failed implication:** for
+  `H:y^2=x^6+1`, the two quotient maps define a `(2,2)`-isogeny
+  `E^2 -> J(H)`. Its kernel could a priori permit half-integral combinations,
+  so the displayed maps alone did not prove the degree lattice. Independently,
+  the gate-interior wall `W=0` has an extra involution and an exact splitting
+
+  ```text
+  A_(Phi_12) ~ E_0^2 x E_1728^2.
+  ```
+
+  Thus the primitive character multiplicities `(0,1,1,2)` do not imply
+  `Hom(A_(Phi_12),E_0)=0`; character occurrence is not Hom exhaustion.
+- **Repair / strongest survivor:** the `(2,2)` kernel is the graph of
+  Frobenius `t -> t^2` on `E[2]=F_4`. The descent equations
+  `a t+b t^2=0` for all `t` force `a=b=0 mod 2`, proving that the two visible
+  maps do saturate `Hom(J(H),E)` and give the exact degree form
+  `4(N(a)+N(b))` after the ramified double cover. The remaining primitive
+  hidden-`E_0` locus is nonempty, but a separate isotypic/CM/Torelli argument
+  proves it countable and proper. Hence the `34/42` response excludes only
+  its complement; it does not close the whole `M=12` gate or `JC(2)`.
+- **Reusable rule:** a rational isogeny packet records factors, not an
+  integral map lattice. Audit the gluing kernel before using degree
+  divisibility, and distinguish character support, Hodge multiplicity,
+  rational isotypic factors, integral Hom saturation, and the actual
+  specialization locus.
+
 ## MISTAKE-520 (2026-08-26, THM-4203 inheritance audit) -- a size-eighteen pool task was generated after the whole pool was already safe
 
 - **What failed:** THM-4203 proved every subset of its thirty-label pool `P`

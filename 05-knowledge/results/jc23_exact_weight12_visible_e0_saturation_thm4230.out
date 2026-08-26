@@ -1,0 +1,4 @@
+F4_FROBENIUS [0, 1, 3, 2]
+DESCENT_RESIDUES [(0, 0)]
+CONCLUSION a_mod_2=b_mod_2=0
+PASS

@@ -21,6 +21,7 @@ related:
   - THM-4217-complete-mixed-off-antidiagonal-delta-zero-planar-jacobian-exclusion
   - THM-4220-weight-ten-zeta-zero-genus-two-planar-jacobian-exclusion
   - THM-4227-two-outsider-scale-separated-depth-eight-haar-wedge
+  - THM-4230-exact-weight-twelve-cyclotomic-prym-planar-jacobian-squeeze
 external: >
   Tim Dokchitser, "Models of curves over DVRs," arXiv:1807.00025v2,
   Definitions 3.7, 3.9, and 3.12 and Theorem 3.14, through the audited use
@@ -351,14 +352,14 @@ Section 1 is exact: under `A*B*Z*(A+B)!=0`, no further `U` stratum remains.
   scaling, genus, and degree-inventory calculation stated above.
 - **PROVED RELATIVE:** the `U=0, A*B*Z*(A+B)!=0` exclusion and, with
   THM-4222, the arbitrary-`U` union corollary.
-- **RESERVED:** THM-4230 is only the empty namespace for a possible M12 Prym
-  squeeze; it supplies no proved dependency or conclusion here.
 - **OPEN:** `A=0`, `B=0`, `Z=0`, `A+B=0`, other M11 cells, seam entry, JC(2),
-  DC(2), and M12.
-- **M12 hostile/open mechanism:** the dense M12 main genus-seven face has the
-  degree-four quotient
-  `v^2=(W^2-4UZ)x^3+4Z`; therefore a naive `Hom=0` transfer is false.  No
-  divisibility or polarization conclusion from that quotient is claimed here.
+  DC(2), and the unresolved M12 hidden-Hom locus/walls.
+- **Later orthogonal M12 advance:** THM-4230 promotes the Prym analysis and
+  proves that every hypothetical point in its exact-M12 gate lies on a
+  countable proper, nonempty hidden-`E_0` Hom locus. It repairs the naive
+  `Hom=0` transfer by saturating the visible integral Hom lattice and keeping
+  the connected Prym. It is not a dependency of the present M11 theorem and
+  does not close M12 or JC(2).
 
 ## 9. Replay and audit boundary
 

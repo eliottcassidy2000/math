@@ -1,0 +1,13 @@
+monomials 16 [(1, 0), (2, 0), (3, 0), (4, 0), (5, 0), (6, 0), (2, 1), (3, 1), (4, 1), (0, 2), (1, 2), (2, 2), (3, 2), (0, 3), (1, 3), (0, 4)]
+source_points 28
+lower_plane (Fraction(1, 12), Fraction(1, 6), Fraction(-1, 6)) equal [(0, 1, 0), (0, 7, 1), (2, 0, 0), (2, 6, 1), (4, 5, 1), (6, 4, 1)]
+global_pick (48, 14, 18) component_pick (24, 12, 7)
+H0_characters [5, 7, 8, 9, 10, 11, 11]
+H1_characters [1, 1, 2, 3, 4, 5, 5, 7, 7, 8, 9, 10, 11, 11]
+involution {'invariant': [8, 10], 'anti': [5, 7, 9, 11, 11]}
+W=0_primitive_split {'rho_plus': [5, 11], 'rho_minus': [7, 11]}
+packet [11, 11, 11, 2, 2, 2, 2, 1] full 42 finite 34
+carrier_decomposition_wall zeta*(zeta^2-4*K*Z)=0
+E2_gluing_mod2_admissible [(0, 0)]
+hostile_W=-2Z {'U': 2, 'W': -2, 'Z': 1, 'D': -4, 'Lambda': 1}
+PASS

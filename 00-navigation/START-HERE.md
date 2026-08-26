@@ -21,10 +21,9 @@ Then read the routed frontier, guardrails, and theorem; logs are history.
 
 ## Seventeen high-signal facts
 
-1. **LRC(14) is first open.** Caps `1579/216` leave `372913/109/12`.
-   THM-4156/4191 close zero/one-outsider layers; THM-4231 fills all
-   `C(32,11)` charts for distinct `q,r>=17548`. THM-4227/4228 add a scale
-   wedge and all gcd-`>=3467` pairs. Finite entry remains open.
+1. **LRC(14) is first open.** THM-4227/4228/4231 cover three arbitrary-pair
+   regions. THM-4234 closes all 66 fixed-`50` restricted-pool pair charts and
+   one maximin-surplus triple, giving `chi_50>=21`; arbitrary entry stays open.
 2. **The `q <= 25` period claim is refuted.** THM-762/764 exhibit `26*{1,...,12} union {339}`, whose first good period is `27`.
 3. **Good-period existence is a maximum statement.** The tight resonant AP
    defeats average/count arguments; see MISTAKE-127/129/130.
@@ -53,13 +52,11 @@ Then read the routed frontier, guardrails, and theorem; logs are history.
 11. **Support is not multiplicity.** THM-2000/2005/2352/3359/3362/3382
     separate collision, phase and address; THM-3425 needs period plus parity.
     Composite rank seven and FC(3) remain open.
-12. **JC is false from dimension three; JC(2), DC(2) remain open.** THM-2084
-    closes cells; THM-4130--4165 close named `M<=9` chambers. THM-4176/4180
-    exhaust repeated-top; THM-4183/4186/4189/4192 close P-only, THM-4209/4176
-    close mixed/anti `K=0`, and THM-4205 closes its last Y-only row. Thus the
-    `K=0` is empty; THM-4217 closes mixed off-anti `Delta=0`; THM-4218/4220
-    close dense and `zeta=0` exact `M=10`; THM-4222/4226 close dense `M=11/13`
-    by primitive CM. Walls, other cells, `M=12`, `M>=14`, and entry stay open.
+12. **JC is false from dimension three; JC(2), DC(2) remain open.**
+    THM-2084 and THM-4130--4217 close named chambers; THM-4218/4220 close exact
+    `M=10`; THM-4222/4232 close `M=11` off four walls; THM-4226 closes dense
+    `M=13`. THM-4230 reduces one `M=12` gate to a countable proper, nonempty
+    hidden-`E_0` locus; that locus, walls, entry, and JC(2) stay open.
 13. **Complete period-14 coordinates can be globally blind.** THM-2058 keeps
     every fixed-depth packet coordinate but exits at `47/113`; THM-2043/2047/
     2050 separate local completeness from global maxima.
