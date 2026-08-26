@@ -9,6 +9,33 @@ Format per entry:
 - Why it was wrong
 - The correct framing
 
+## MISTAKE-516 (2026-08-26, THM-4200 status quantifier) -- "nonsingle" again failed to exclude the balanced switching class
+
+- **What failed:** the first promoted THM-4200 frontmatter and opening said
+  that every nonsingle switching class at or below the proposed `D=5`
+  single-edge value has frustration at least five and no balanced deletion.
+  The detailed theorem statement correctly required the class to be neither
+  balanced nor single-edge, but the summary dropped the balanced exclusion.
+- **Minimal witness / first failed implication:** take the balanced character
+  `H=emptyset`. It is not a single-edge class, yet
+
+  ```text
+  S_5(H)=0<=A_n,       frustration([H])=0,       b(H)=n.
+  ```
+
+  Thus "not single-edge" does not imply "nontrivial nonsingle". This repeats
+  the quantifier mechanism isolated in MISTAKE-496, although the new
+  four-edge computation itself is unaffected.
+- **Repair / strongest survivor:** the frontmatter and opening now use the
+  exact qualifier "neither balanced nor single-edge". THM-4200's all-order
+  inequality for every four-edge representative, its unique `K_(1,4),n=6`
+  equality and center switch, and the resulting strict exclusion of genuine
+  frustration-four classes remain unchanged.
+- **Reusable rule:** in switching-character minima, always list the balanced
+  class, the proposed nontrivial minimizer, and the residual classes as three
+  separate strata. A negation of the minimizer's name does not automatically
+  remove the trivial character.
+
 ## MISTAKE-515 (2026-08-26, THM-4188 cross-slice synthesis) -- a complete all-newcomer theorem was omitted from the inherited count
 
 - **What failed:** the first promoted THM-4188 synthesis combined its new

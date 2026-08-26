@@ -6,8 +6,9 @@ status: >
   every signed K_n represented by four negative edges has cumulative odd
   cycle count S_5 at least the single-edge value A_n. Equality occurs only
   for a K_(1,4) negative star at n=6, and switching at its center leaves one
-  negative edge. Consequently every nonsingle switching class at or below
-  A_n has frustration index at least five and no balanced vertex deletion.
+  negative edge. Consequently every switching class that is neither balanced
+  nor single-edge and lies at or below A_n has frustration index at least five
+  and no balanced vertex deletion.
   The complete D=5 single-edge conjecture remains OPEN.
 source: open-frontiers-incoming-20260826b / recovered four-edge support lane
 depends_on:
@@ -29,7 +30,8 @@ hash_basis: raw LF bytes
 # THM-4200 -- the four-edge D5 frustration firewall
 
 **PROVED + VERIFIED-EXACT + INDEPENDENTLY VERIFIED-EXACT.** THM-4084
-excluded every nonsingle switching class of frustration index at most three
+excluded every class that is neither balanced nor single-edge and has
+frustration index at most three
 from the still-open cumulative `D=5` single-edge conjecture. The next support
 layer has only eleven graph types. Exact cycle-containment inversion closes
 all eleven at once and raises that firewall from four to five.
