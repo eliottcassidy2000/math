@@ -1,0 +1,10 @@
+LRC14_SECOND_TIER_POOL40_INDEPENDENT_INTERVAL_AUDIT_20260825
+status=PASS;implementation=direct periodic-tooth intersections;LRC14=OPEN
+ratios=2350;above_4/77=((1, 9),);equal=((1, 11), (3, 11))
+pool=(components=44,measure=23518182747542658511201/441420293060220631236800,max_width=137/32900)
+max_components=((Fraction(299, 658), Fraction(321, 700)), (Fraction(379, 700), Fraction(359, 658)))
+finite_scales=(1, 3, 5, 7);clock=(57/742,799/1484,1/14,((1, (685, 1484), (229, 1484)), (3, (571, 1484), (687, 1484)), (5, (457, 1484), (339, 1484)), (7, (49, 212), (17, 212))))
+families=2311801440;P33=193536720;increment=2118264720
+width_covered=253100;beyond_width=2311548340
+checks=9423
+semantic_sha256=ce2f02310458b21dbc247590ff969065f64008ef4d93241dab052118b09553ee
