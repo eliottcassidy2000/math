@@ -9,6 +9,26 @@ Format per entry:
 - Why it was wrong
 - The correct framing
 
+## MISTAKE-522 (2026-08-26, THM-4230 certificate audit) -- a support helper omission was described as full-support coverage
+
+- **What failed:** THM-4230's verification prose said that its primary
+  certificate covered the full valued support. The primary
+  `expanded_support` helper actually omitted the fixed point `(2,0,1)` coming
+  from the nonoptional term `-Qs^2/2`.
+- **Minimal witness / first failed implication:** inspecting the expanded
+  support list finds no `(2,0,1)`. The independent implementation does include
+  it and computes exact gap `1` above the unique lower plane. The primary's
+  separate scaled-model identity also retains `-sigma^12 S^2/2`, so the
+  omission never changes the hull, component, genus, degree, or Prym argument.
+- **Repair / strongest survivor:** THM-4230 now assigns full-support coverage
+  of this fixed point to the independent audit and describes the primary as
+  exhaustive only over the variable rows/cancellations plus its exact scaled
+  identity. The theorem and all six hashes remain unchanged.
+- **Reusable rule:** support compilers must add fixed base/residual monomials
+  explicitly before claiming a complete valued support. A later exact identity
+  can make an omission harmless, but it does not retroactively populate an
+  earlier support helper.
+
 ## MISTAKE-521 (2026-08-26, exact-weight-twelve Jacobian audit) -- a rational isogeny decomposition was treated as an integral Hom-lattice exhaustion
 
 - **What failed:** the first exact-`M=12` scratch analysis displayed two

@@ -53,10 +53,11 @@ audit: >
   PASS. The primary SymPy certificate executes 16,548 exact checks over all
   16,384 lower-row subsets and 128 coincident-support cancellations. A
   standard-library clean-room audit independently reconstructs the support,
+  including the fixed residual point omitted by the primary support helper,
   hull, genera, character packet, response degrees, carrier wall, and both
-  hostiles. A separate four-element F_4 certificate proves integral
-  saturation of the visible j=0 Hom lattice. Normal, optimized, and
-  fixed-hash-seed runs byte-match the frozen outputs.
+  hostiles. A separate four-element F_4 certificate proves integral saturation
+  of the visible j=0 Hom lattice. Normal, optimized, and fixed-hash-seed runs
+  byte-match the frozen outputs.
 ---
 
 # THM-4230 -- exact-weight-twelve cyclotomic Prym squeeze
@@ -132,6 +133,12 @@ nu(r,l)=(r+2l-2)/12,
 The endpoint coefficients `U,Z` own the hull vertices, so `(6)` survives all
 `2^14` optional-row deletions and `2^7` coincident-support cancellations.
 In particular, cancellations at `W-U=0` or `Z-W=0` require no extra gate.
+The primary certificate's `expanded_support` helper omits the fixed residual
+point `(2,0,1)` contributed by `-Qs^2/2`; the independent audit includes it
+and verifies its gap from the unique lower plane is exactly `1`. The primary
+scaled-model identity `(9)` also retains the term. Thus the omission changes
+neither the hull nor any theorem conclusion, but the independent path is the
+load-bearing full-support check for this point.
 
 The global polygon, Pick ledger, and face factorization are
 
@@ -437,13 +444,14 @@ python3 -B 04-computation/jc23_exact_weight12_cyclotomic_prym_squeeze_thm4230_in
 python3 -B 04-computation/jc23_exact_weight12_visible_e0_saturation_thm4230.py
 ```
 
-The primary certificate covers the full support, every lower-row subset and
-collision, hull, edge schemes, Pick/packet ledgers, scaled model, nodes,
-characters, elliptic quotient identities, and `W=-2Z`. The independent
-standard-library audit reconstructs the geometry, carrier wall, responses,
-characters, `W=0`, `W=-2Z`, and the `F_4` residue result without importing the
-primary implementation. The dedicated saturation certificate exhausts all
-sixteen coefficient pairs on all four elements of `F_4`.
+The primary certificate covers every variable support row, lower-row subset
+and collision, hull, edge schemes, Pick/packet ledgers, scaled model, nodes,
+characters, elliptic quotient identities, and `W=-2Z`; its support helper has
+the fixed-residual limitation recorded in Section 2. The independent
+standard-library audit reconstructs the full support, geometry, carrier wall,
+responses, characters, `W=0`, `W=-2Z`, and the `F_4` residue result without
+importing the primary implementation. The dedicated saturation certificate
+exhausts all sixteen coefficient pairs on all four elements of `F_4`.
 
 The computations do not prove the stated standard CM/Prym/Torelli inputs,
 classify `H_0`, handle walls, prove entry, or prove `JC(2)`. These are explicit
