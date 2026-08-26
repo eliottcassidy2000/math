@@ -1,0 +1,15 @@
+THM4220_INDEPENDENT_ZETA_ZERO_REGULAR_MODEL_AUDIT
+scope=zeta0,u*xi*(u+xi)!=0;proved=(Dv!=0)|(K=Theta=0)
+facets=M:(r+2k-2)/10,V:(r-2)/2;lower_coefficients=arbitrary
+K_nonzero=Pick(34,12,12),packet(9,9,3,3,2,2,1),degree29
+Theta_only=Pick(32,10,12),packet(9,9,5,3,1),degree27
+K_Theta_zero=Pick(30,10,11),packet(9,9,3,3,1),degree25
+Q=sigma30;face_multiplicities=1;BD=0>-6,5_P1_per_root;A29x10
+components=genus2_C+rational_only;graph_b1=(10,9);genera=(12,11)
+genus2_Jacobian=simple;Hom_to_elliptic=0;target=good_j0
+degree_conservation=special_degree0;generic_finite_degree_positive
+open_exactly=Dv=0,K!=0;reason=split_conic+double_UD_edge
+dependency=THM4045_Dokchitser_model+THM4218_genus2_simplicity
+semantic_sha256=8166d82bbe87e7f424b2d8d7a388ee7ee22d01375cf4c6bce354845ec5b3c818
+checks=10318
+verdict=ACCEPT_THM4220_RELATIVE

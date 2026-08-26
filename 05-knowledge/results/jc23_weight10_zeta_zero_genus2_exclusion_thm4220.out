@@ -1,0 +1,13 @@
+checks=92
+scope=zeta=0;upsilon*xi*(upsilon+xi)!=0
+proved=(D_V!=0)|(K=Theta=0);D_V=Theta^2-4*K*xi
+planes=M:(r+2k-2)/10;V:(r-2)/2
+K_nonzero_DV_nonzero=polygon[(0,1),(2,0),(4,2),(4,4),(0,6)];Pick=34,12,12;packet=(9,9,3,3,2,2,1);degree=29
+K_zero_Theta_nonzero=polygon[(0,1),(2,0),(4,3),(4,4),(0,6)];Pick=32,10,12;packet=(9,9,5,3,1);degree=27
+K_Theta_zero=polygon[(0,1),(2,0),(4,4),(0,6)];Pick=30,10,11;packet=(9,9,3,3,1);degree=25
+main=C_genus2+R_rational;side=conic_genus0;graphs=b1_10_or_9
+internal_BD=slopes_0>-6;roots=2;P1_per_root=5;multiplicity=1
+base_change=Q=sigma^30;multiplicities=1;target_special=y^2=x^3+1
+degree_conservation=0;finite_nonconstant_generic_map=impossible
+open=D_V=0,K!=0(split_conic_and_double_UD_root)
+semantic_sha256=c588cea255f0546634c4d4cc8d5748b58668826cfc853f843c48a355c3b0a467
