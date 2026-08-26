@@ -52,112 +52,122 @@ The shared useful idea is not “all five problems are the same.” It is that a
 first nonzero coordinate becomes useful only when the sidecar needed by the
 next operation remains attached.
 
-## 1. LRC: three complementary cofinal geometries
+## 1. LRC: direct cofinal quadrant and method sidecars
 
-[THM-4227](../01-canon/theorems/THM-4227-two-outsider-scale-separated-depth-eight-haar-wedge.md)
-and THM-4231 solve different parts of the outsider plane.
-
-THM-4227 is sequential. For an ordered pair it first intersects a depth-eight
-base repair with `G_q`, retains the new component count, and then intersects
-with `G_r`. It proves the directed wedge
+THM-4231 now gives the strongest size-only coverage. For each labelled
+`B in binom(P,9)`, retain the literal safe set `U_B=G_B`, its exact mass `M_B`,
+and its cyclic component count `c_B`. THM-4170 and Bonferroni give
 
 ```text
-q>=3391,
-10633545731 r >= 321902813232(q+130),                  (1)
+mu(U_B intersect G_q intersect G_r)
+ >=(5/7)M_B-(6c_B/49)(1/q+1/r).                        (1)
 ```
 
-or its transpose. Its strength is scale separation: one outsider may be much
-smaller than `17548`.
-
-THM-4231 is symmetric. For a six-deletion `R`, it applies Bonferroni directly
-inside `U_R=G_(P\R)`:
+All `14,307,150` bodies have `45M_B-4>0`. Define
 
 ```text
-mu(U_R intersect G_q intersect G_r)
- >=(5/7)M_R-(6c_R/49)(1/q+1/r).                        (2)
+kappa_body(B)=ceil(108c_B/(7(45M_B-4))).               (2)
 ```
 
-The exact activation
+Two structurally independent full censuses agree that the maximum is exactly
+`1307`, uniquely at
 
 ```text
-kappa_2(R)=ceil(108c_R/(7(45M_R-4)))                   (3)
+B*={170,176,190,193,240,252,264,286,290},
+M_B* ticks=4,579,301,272,924,
+c_B*=618.                                               (3)
 ```
 
-produces a `54,566`-edge deck at `Q=17548` with no nine-cover. Two independent
-paths agree on all `593,775` deletions and literally scan all
-`14,307,150` nine-bodies. This closes every pair of distinct outsiders
-`q,r>=17548` and, with THM-4156/4191, every one of the
-`C(32,11)=129,024,480` eleven-faces in the resulting chart.
-
-THM-4228 retains arithmetic correlation instead of discarding it. Writing
-`(q,r)=g(u,v)`, it treats `G_u intersect G_v` as one periodic observable and
-proves the sharp primitive-pair density floor
-
-```text
-mu(G_u intersect G_v)>=66/91,                           (3a)
-```
-
-with equality only at ratio `1:13` or `13:1`. Component discrepancy at the
-single outer frequency `g` then closes every pair with `gcd(q,r)>=3467`.
-This reaches arithmetic rays missed by a purely size-based picture. The three
-methods retain different coordinates: directed scale order, common divisor
-plus primitive shape, or symmetric marginal size.
+They agree on the complete seven-field ledger fingerprint
+`5b8c08ad9d02622a`. The uniform direct cutoff is `1307`, and the unique
+second-largest threshold is `1290`. Thus only `B*` needs treatment below
+`1307`. For `1290<=q<=1306`, its first direct-safe larger label is exactly
+`r_0(q)=2614-q`; the intervening triangle has `33+31+...+1=289` pairs. Two
+independent literal geometries exhaust that triangle and find every pair
+strictly safe, with minimum at `(1300,1305)`. Hence every distinct
+`q,r>=1290` is safe; with THM-4156/4191 this fills all
+`C(32,11)=129,024,480` faces. This is a finite literal patch to a
+certificate-sharp direct theorem, not a claimed literal threshold.
 
 ### Pair-plane reduction
 
-For `m=min(q,r)` and `M=max(q,r)`, THM-4231 handles `m>=17548`. If
-`3391<=m<=17547`, THM-4227 handles
+Every still-uncovered pair now has
 
 ```text
-M>=ceil(321902813232(m+130)/10633545731).               (4)
+min(q,r)<=1289.                                         (4)
 ```
 
-The right side is increasing and is `535125` at `m=17547`. Therefore every
-still-uncovered outsider pair satisfies
+For genuine outsiders, the infinite remainder is exactly the `1,259` rays
+indexed by `q in {1,...,1289}\P`, not the previous finite-box-plus-rays
+region. A cofinal theorem on each ray would leave a finite exact remainder. It
+is important not to call `(4)` a finite reduction before those tails are proved.
+
+The first ray is now proved by two independent full censuses:
 
 ```text
-m<=3390,
-or
-3391<=m<=17547 and M<=535124,
-and in either case gcd(q,r)<=3466.                       (5)
+q=1, r>=543,        max_B kappa_1(B)=543.               (4a)
 ```
 
-This changes the topology of the open problem. Pair entry is no longer one
-undifferentiated infinite quadrant: it is one finite exact region plus a
-finite list of fixed-small-label rays. The natural next analytic obligation is
-one cofinal theorem for each small literal outsider; the remaining computation
-then becomes finite. THM-4228 removes the gcd-large arithmetic subrays, but it
-cannot touch `min(q,r)<=3390` through its `gcd>=3467` hypothesis.
+The same `B*` is the unique extremizer, but is literally safe at `r=542`.
+Thus only `1,258` unbounded outsider rays remain, plus a finite initial segment
+on the `q=1` ray.
 
-### Repair-or-direct descent
-
-The `Q=17547` activation deck has exactly one nine-cover,
+A broader exact primary also scans all `1,276` labels
+`q in {1,...,1306}\P` against all bodies: `18,255,923,400` cases. Every
+limiting surplus is positive and the global tail maximum is
 
 ```text
-W={85,88,143,168,193,240,252,264,290}.                 (6)
+K=931 at q=1305,
+B={20,170,190,193,240,252,264,286,290}.                 (4b)
 ```
 
-That cover is not dangerous. A direct exact pool calculation gives
+The load-bearing ray has a separate exact replay, but the full range lacks an
+independent census. Hence the resulting finite-box claim `max(q,r)>=931` is
+**VERIFIED-SCRATCH**, not proved canon, pending that audit.
+
+[THM-4227](../01-canon/theorems/THM-4227-two-outsider-scale-separated-depth-eight-haar-wedge.md)
+and [THM-4228](../01-canon/theorems/THM-4228-common-gcd-two-outsider-periodic-observable-haar-ray.md)
+are now coverage-subsumed, but not methodologically obsolete. THM-4227's
+sequential intersection retains directed scale order and component birth.
+THM-4228 factors `(q,r)=g(u,v)`, retains primitive shape, and proves the sharp
+two-comb floor
 
 ```text
-mu(G_W) ticks=4,802,564,195,362,
-c(G_W)=506,
-kappa_2(W)=995.                                         (7)
+mu(G_u intersect G_v)>=66/91,                           (5)
 ```
 
-Thus `(6)` is uniformly safe far before the repair deck loses its last cover.
-At this writing `(7)` is **VERIFIED-SCRATCH**, pending its independent
-composite-deck audit. It suggests the stronger certificate:
+with equality only at ratio `1:13` or its swap. These coordinates are natural
+inputs for the fixed-ray problem, where symmetric Bonferroni discards too much
+phase information.
+
+### Why the repair route disappeared at the optimum
+
+The old depth-six activation transition remains exact:
 
 ```text
-every B either misses an active repair edge
-or B itself has direct two-comb activation <=Q.         (8)
+Q=17547: one nine-cover
+W={85,88,143,168,193,240,252,264,290};
+Q=17548: no nine-cover.                                 (6)
 ```
 
-The correct next experiment is to enumerate every cover at descending `Q`,
-attach each cover's exact `(M_B,c_B,kappa_2(B))`, and locate the first cutoff
-where `(8)` holds. This is the LRC analogue of keeping moderate-multiplicity
-fibres rather than asking only whether the zero set is empty.
+The new direct census proves
+
+```text
+kappa_body(W)=995,                 rho(W)=17548.         (7)
+```
+
+The first strict depth-six repair activates only at `3077`. Consequently, for
+the composite threshold
+
+```text
+theta(B)=min(kappa_body(B),rho(B)),                      (8)
+```
+
+the exact repair-or-direct analytic maximum is `1307`, with every optimizer
+resolved by the direct branch. The `17547/17548` transition is a useful exact hypergraph
+sidecar, but its old safety headline is superseded. This is a concrete version
+of the Sun-inspired multiplicity lesson: count certificates only after testing
+the target object's own mass and boundary complexity.
 
 ## 2. Planar JC: owner descent removes whole walls
 
@@ -329,21 +339,22 @@ source-first resultant, component, genus, attachment, and degree audit.
 
 ## Procedurally generated next tasks
 
-1. **LRC anchor:** finish the composite repair-or-direct descent from
-   `Q=17547`; freeze all covers and direct thresholds, then independently
-   audit the first lower transition.
-2. **LRC entry:** build a fixed-prefix/component atlas for every outsider
-   `q<3391` not in `P`; seek one cofinal `r` threshold per literal `q`.
-3. **LRC finite closure:** after those rays, enumerate the finite remainder in
-   `(5)` with a native joint-wall or exact direct-margin verifier, using
-   primitive-pair-specific oscillation where the gcd theorem is wasteful.
+1. **LRC anchor:** independently audit the full `18,255,923,400`-case ray
+   census; if `931` survives, promote the finite-box reduction with its
+   orientation proof and retain `931` as certificate-only.
+2. **LRC entry:** refine the remaining `q<=1289` thresholds by reversing
+   orientation and retaining primitive phase rather than only symmetric loss.
+3. **LRC finite closure:** after those ray tails, enumerate their finite
+   remainders with a native joint-wall or exact direct-margin verifier, using
+   primitive-pair-specific oscillation where the universal gcd floor is
+   wasteful.
 4. **JC anchor:** apply owner descent to the cheapest of `A=0`, `B=0`, `Z=0`,
    `A+B=0`, selecting by replacement-face genus rather than coefficient name.
 5. **JC hostile:** compute the M12 elliptic quotient's integral Hom and
    polarization lattice before using any degree-mod-four proposal.
 6. **Multiplicity niche:** emit the intrinsic `c_(q,r)(B)` histogram, second
-   moment, minimum margin, and failure masks for the THM-4207 residual bodies
-   and the THM-4231 transition covers.
+   moment, minimum margin, and failure masks on the fixed-small-ray residuals;
+   compare it with direct `(M_B,c_B)` thresholds before invoking repair.
 7. **Boolean wildcard:** compare lower-zeta mass, upper-zeta forced-failure
    counts, and cyclic boundary tensors without inventing a cosmetic
    tournament orientation.

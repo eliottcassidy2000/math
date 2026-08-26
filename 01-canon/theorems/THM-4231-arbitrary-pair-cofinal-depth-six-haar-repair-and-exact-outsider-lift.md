@@ -1,54 +1,96 @@
 ---
 id: THM-4231
-title: "Arbitrary-pair cofinal depth-six Haar repair and exact outsider lift"
+title: "Hybrid cofinal pair quadrant, fixed-one ray, and sharp Haar sidecars"
 status: >
   PROVED RELATIVE TO THM-4150/4156/4170/4191 + VERIFIED-EXACT +
   INDEPENDENTLY AUDITED. For the displayed thirty-label pool, every nine-body
   becomes 1/14-Haar-safe after adjoining any two distinct integers q,r at
-  least 17548. Together with the inherited zero- and one-outsider layers,
-  this fills all C(32,11)=129,024,480 eleven-bodies in every such two-outsider
-  chart. The adjacent 17547/17548 transition is exact only for the complete
-  depth-six component-discrepancy activation filter; it is not a minimal
-  literal entry threshold. Combined with THM-4227/4228, every remaining pair
-  has gcd at most 3466 and lies on one of finitely many small-outsider rays or
-  in one finite box. Arbitrary finite pair entry and LRC(14) remain OPEN.
+  least 1290. Together with the inherited zero- and one-outsider layers, this
+  fills all C(32,11)=129,024,480 eleven-bodies in every such chart. The value
+  1307 is the exact minimum of the direct component-discrepancy/Bonferroni
+  certificate; two independent literal censuses patch its unique exceptional
+  body down to 1290. Neither value is claimed as the minimal literal threshold.
+  The exact
+  fixed-one ray is independently closed for every r>=543. The
+  depth-six activation transition 17547/17548 remains a valid but superseded
+  repair-hypergraph sidecar. Finite pair entry and LRC(14) remain OPEN.
 source: codex-frontier-synthesis-20260826
 depends_on:
   - THM-4150-safe-set-haar-measure-universal-odd-tail-lrc14-transfer
   - THM-4156-divisor-complete-anchor-pool-haar-odd-tail-transfer
   - THM-4170-triple-deletion-matching-eventual-haar-odd-tail-transfer
   - THM-4191-complete-full-pool-newcomer-haar-transfer
-  - THM-4227-two-outsider-scale-separated-depth-eight-haar-wedge
-  - THM-4228-common-gcd-two-outsider-periodic-observable-haar-ray
 related:
   - THM-4207-two-newcomer-sharp-depth-transition-base-surplus-composition-and-variable-pool-chart-number
   - THM-4211-fixed-fifty-cofinal-two-newcomer-haar-tail-and-eighteen-label-chart
   - THM-4214-two-newcomer-pascal-complete-eleven-body-haar-charts
   - THM-4223-cyclic-cut-cover-boolean-mobius-hierarchy-and-two-bad-owner-obstruction
-primary_script: 04-computation/lrc14_arbitrary_pair_cofinal_depth6_primary_thm4231.py
-primary_output: 05-knowledge/results/lrc14_arbitrary_pair_cofinal_depth6_primary_thm4231.out
-independent_audit_script: 04-computation/lrc14_arbitrary_pair_cofinal_depth6_independent_audit_thm4231.py
-independent_audit_output: 05-knowledge/results/lrc14_arbitrary_pair_cofinal_depth6_independent_audit_thm4231.out
-primary_script_sha256: 794f0df69956e46c5c73ad6489498b1bd404b9d3643722b129f4b63b092c890a
-primary_output_sha256: ddaa2fdd3c822126a5c51c48b526450f34cd22537a40421bba42524ed5c51834
-independent_audit_script_sha256: a52740967b84dcef6be68e9ad362cdc51ea9552234c6f5cd8e725a87f0d947f9
-independent_audit_output_sha256: 0e7dffe54514f3d46d8076b7dda0c69418ec774c6d47ba95aa2b50bb73f76cec
+  - THM-4227-two-outsider-scale-separated-depth-eight-haar-wedge
+  - THM-4228-common-gcd-two-outsider-periodic-observable-haar-ray
+direct_primary_script: 04-computation/lrc14_two_outsider_direct_body_cofinal_primary_thm4231.cpp
+direct_primary_output: 05-knowledge/results/lrc14_two_outsider_direct_body_cofinal_primary_thm4231.out
+direct_primary_script_sha256: 48ccab283874ff35f362e6d3c71b36e958dbe0dc444307dadb23b0ec62194bea
+direct_primary_output_sha256: 65116c5a9e921ce6cd0a0834baf6749c24e25e922879dc28500b41c754e8f4ca
+direct_independent_audit_script: 04-computation/lrc14_two_outsider_direct_body_cofinal_independent_audit_thm4231.cpp
+direct_independent_audit_output: 05-knowledge/results/lrc14_two_outsider_direct_body_cofinal_independent_audit_thm4231.out
+direct_independent_audit_script_sha256: 933dcb5b03a4ef1ff5a455821968ee2f9d566558c7b64e6575e0079cc64f11bb
+direct_independent_audit_output_sha256: b3793a60144fd1f2b04dd7ab7ec51ab1544179c2b99236e168238b0104427adf
+literal_control_script: 04-computation/lrc14_two_outsider_direct_body_cofinal_literal_controls_thm4231.py
+literal_control_output: 05-knowledge/results/lrc14_two_outsider_direct_body_cofinal_literal_controls_thm4231.out
+literal_control_script_sha256: 33414032ad707feaaba988724b655085d14559137361e432ae2d6497c7271172
+literal_control_output_sha256: f6a2cb94306c55ca39c43ab8e6973abd9ea9af6cc2f3d08b670566f6475858be
+literal_independent_audit_script: 04-computation/lrc14_two_outsider_direct_body_cofinal_literal_independent_audit_thm4231.py
+literal_independent_audit_output: 05-knowledge/results/lrc14_two_outsider_direct_body_cofinal_literal_independent_audit_thm4231.out
+literal_independent_audit_script_sha256: 9db0bae7ccdcae2609f8a1e237435e2ffd6f092322950d548e98aa2cd6402350
+literal_independent_audit_output_sha256: 4102df02b3c35678e8968d60fdf1e306346c0d71097d1aa644eb77d544c9b12b
+hybrid_q1290_primary_script: 04-computation/lrc14_hybrid_q1290_cofinal_quadrant_primary_thm4231.py
+hybrid_q1290_primary_output: 05-knowledge/results/lrc14_hybrid_q1290_cofinal_quadrant_primary_thm4231.out
+hybrid_q1290_primary_script_sha256: 62c41846be5e9b49a3ad67ae744de70dd6cd2f1f45b4c25eafdf731ae13853d3
+hybrid_q1290_primary_output_sha256: 9698e9ffc59418fbe7b636ec3a9cf4e73c7ffe5a76f2dfaf48422993f70e3420
+hybrid_q1290_independent_audit_script: 04-computation/lrc14_hybrid_q1290_cofinal_quadrant_independent_audit_thm4231.py
+hybrid_q1290_independent_audit_output: 05-knowledge/results/lrc14_hybrid_q1290_cofinal_quadrant_independent_audit_thm4231.out
+hybrid_q1290_independent_audit_script_sha256: af5bcb4ea1be63464a37c9e48c900b19f30996dc868072224399a42d3175abff
+hybrid_q1290_independent_audit_output_sha256: 3b4d00959b58b3416bac5ef95a540ed112ba068a8f4c9d6b343646d1807cc761
+fixed_one_primary_script: 04-computation/lrc14_fixed_one_outsider_cofinal_tail_primary_thm4231.cpp
+fixed_one_primary_output: 05-knowledge/results/lrc14_fixed_one_outsider_cofinal_tail_primary_thm4231.out
+fixed_one_primary_script_sha256: 278426831e51e7052eab980c94274d30cb21255f8a10cc0a54eab18042ce6bf2
+fixed_one_primary_output_sha256: dde24be6a541365ab7b0be6a0399aafa544a241d387bcdfb0e31eff0ae08b0c9
+fixed_one_literal_script: 04-computation/lrc14_fixed_one_outsider_cofinal_tail_literal_controls_thm4231.py
+fixed_one_literal_output: 05-knowledge/results/lrc14_fixed_one_outsider_cofinal_tail_literal_controls_thm4231.out
+fixed_one_literal_script_sha256: c973a9141c88d3404c9734c93e2d0f87ba39986e164c044a5de5d0b065cb5dbc
+fixed_one_literal_output_sha256: b6ea6eb6bb9dcd21ce5cfe25bc160eaf95b7a6932a7ca12415a4ff8a8864688a
+fixed_one_independent_audit_script: 04-computation/lrc14_fixed_one_outsider_cofinal_tail_independent_audit_thm4231.cpp
+fixed_one_independent_audit_output: 05-knowledge/results/lrc14_fixed_one_outsider_cofinal_tail_independent_audit_thm4231.out
+fixed_one_independent_audit_script_sha256: 1c3508225ae9ee988d39a796886b888921fc37fd5ac0d1153b24a9bac91cbe2a
+fixed_one_independent_audit_output_sha256: 83faac9ba0740295f5b9bc179ce908eb0660e47daa9085976352fa609b6e1d04
+activation_primary_script: 04-computation/lrc14_arbitrary_pair_cofinal_depth6_primary_thm4231.py
+activation_primary_output: 05-knowledge/results/lrc14_arbitrary_pair_cofinal_depth6_primary_thm4231.out
+activation_independent_audit_script: 04-computation/lrc14_arbitrary_pair_cofinal_depth6_independent_audit_thm4231.py
+activation_independent_audit_output: 05-knowledge/results/lrc14_arbitrary_pair_cofinal_depth6_independent_audit_thm4231.out
+activation_primary_script_sha256: 794f0df69956e46c5c73ad6489498b1bd404b9d3643722b129f4b63b092c890a
+activation_primary_output_sha256: ddaa2fdd3c822126a5c51c48b526450f34cd22537a40421bba42524ed5c51834
+activation_independent_audit_script_sha256: a52740967b84dcef6be68e9ad362cdc51ea9552234c6f5cd8e725a87f0d947f9
+activation_independent_audit_output_sha256: 0e7dffe54514f3d46d8076b7dda0c69418ec774c6d47ba95aa2b50bb73f76cec
 hash_basis: raw LF bytes
 audit: >
-  PASS / ACCEPT. The primary midpoint-cell and lower-zeta implementation
-  exhausts all C(30,6) deletions and proves the new cutoff by a path-complete
-  cover DFS. A separate endpoint-toggle implementation reverse-scatters mass
-  and signed component boundaries, then literally scans all C(30,9) bodies
-  against independently ordered decks at both adjacent cutoffs. Normal and
-  optimized Python replays byte-match both frozen outputs.
+  PASS / ACCEPT. The primary midpoint-cell split-zeta program and a separate
+  endpoint-toggle flat-coefficient implementation each exhaust all
+  C(30,9)=14,307,150 bodies and recover the same seven-field labelled ledger,
+  unique threshold-1307 extremizer, adjacent ceiling slacks, and exact
+  activation sidecar. Independent endpoint and midpoint sweeps agree on all
+  289 exceptional pairs in the hybrid 1290 quadrant. Independent midpoint and
+  endpoint implementations also
+  agree on the complete fixed-one-ray census and its unique threshold-543
+  extremizer. The old activation artifacts independently retain the
+  17547/17548 cover transition.
 ---
 
-# THM-4231 -- arbitrary-pair cofinal depth-six Haar repair and exact outsider lift
+# THM-4231 -- hybrid cofinal pair quadrant, fixed-one ray, and sharp Haar sidecars
 
 **PROVED RELATIVE TO THM-4150/4156/4170/4191 + VERIFIED-EXACT +
 INDEPENDENTLY AUDITED; LRC(14) REMAINS OPEN.**
 
-## 1. Statement and inheritance
+## 1. Statement
 
 Retain the THM-4156 pool
 
@@ -66,216 +108,252 @@ alpha=4/63.                                              (2)
 ```
 
 > **Cofinal arbitrary-pair theorem.** For every two distinct integers
-> `q,r>=17548` and every `B in binom(P,9)`,
+> `q,r>=1290` and every `B in binom(P,9)`,
 >
 > ```text
 > mu(G_(B union {q,r}))>=alpha.                          (3)
 > ```
 
-The quantifier is uniform over the entire northeast quadrant, apart from the
-diagonal `q=r`; neither newcomer is fixed. This strengthens THM-4211's
-fixed-`50` cofinal ray in a different direction. It does not include pairs
-with one small outsider, arbitrary finite pair entry, or all thirteen-speed
-instances.
+Neither outsider is fixed. The theorem is uniform on the complete northeast
+quadrant off the diagonal. It does not prove a pair with one label below
+`1290`, a minimal literal threshold, physical entry of an arbitrary LRC row
+into this pool, or LRC(14).
 
-The closest proved mechanism is THM-4170's component-discrepancy estimate.
-The canonical hostile is THM-4207's failure of marginal one-newcomer deck
-intersection. The corrected near miss is to regard a cover of a sufficient
-repair deck as an unsafe body. The least-used sidecar is the exact component
-count of each fixed-pool safe set, retained together with its mass.
+## 2. Inheritance and corrected object
 
-## 2. Symmetric two-newcomer discrepancy
+The closest analytic mechanism is THM-4170's discrepancy estimate for a
+finite union of circle intervals. The canonical hostile is THM-4207's failure
+of marginal repair-deck composition. The corrected near miss is to keep
+sharpening deletion certificates before testing the target body itself.
+MISTAKE-520 exposed the same error one level earlier: ambient full-pool safety
+already implied all fixed-pool subsets by heredity.
 
-For `R in binom(P,6)`, define
+The least-used sidecar is the exact component count of the literal body safe
+set `G_B`. Once `(M_B,c_B)` is retained for every labelled body, no deletion
+repair is needed at the optimal cofinal cutoff. The old depth-six repair deck
+remains an independently useful incidence and activation sidecar.
 
-```text
-U_R=G_(P\R),        M_R=mu(U_R),        c_R=#components(U_R). (4)
-```
+## 3. Direct-body Bonferroni theorem
 
-THM-4170 equation `(9)` applies to every union of `c_R` circle intervals:
-
-```text
-mu(U_R intersect G_s)>=(6/7)M_R-6c_R/(49s).             (5)
-```
-
-Bonferroni inside `U_R` therefore gives
+For `B in binom(P,9)`, set
 
 ```text
-mu(U_R intersect G_q intersect G_r)
- >=(5/7)M_R-(6c_R/49)(1/q+1/r).                         (6)
+U_B=G_B,          M_B=mu(U_B),          c_B=#components(U_B). (4)
 ```
 
-Set
+THM-4170 equation `(9)` applies to every union of `c_B` circle intervals:
 
 ```text
-s_R=45M_R-4.                                            (7)
+mu(U_B intersect G_s)>=(6/7)M_B-6c_B/(49s).             (5)
 ```
 
-When `s_R>0`, define the integer activation
+Bonferroni inside the fixed set `U_B` gives
 
 ```text
-kappa_2(R)=ceil(108c_R/(7s_R)).                         (8)
+mu(U_B intersect G_q intersect G_r)
+ >=(5/7)M_B-(6c_B/49)(1/q+1/r).                         (6)
 ```
 
-If `q,r>=kappa_2(R)`, then
+Define
 
 ```text
-(6c_R/49)(1/q+1/r)<=12c_R/(49kappa_2(R))<=s_R/63.
+s_B=45M_B-4.                                            (7)
 ```
 
-Since `(5/7)M_R-alpha=s_R/63`, equation `(6)` proves
+The exact census below proves `s_B>0` for every labelled nine-body. Put
 
 ```text
-mu(G_((P\R) union {q,r}))>=alpha.                       (9)
+kappa_body(B)=ceil(108c_B/(7s_B)).                      (8)
 ```
 
-Thus every strict-limit deletion becomes a lawful joint repair on an explicit
-uniform quadrant. No independence or equidistribution of `G_q` and `G_r` is
-assumed; `(6)` uses only the two one-frequency discrepancy bounds and
-Bonferroni.
-
-## 3. Activation deck and transversal consequence
-
-For an integer cutoff `Q`, let
+If `q,r>=kappa_body(B)`, then
 
 ```text
-A_6^(2)(Q)={R in binom(P,6):s_R>0 and kappa_2(R)<=Q}.    (10)
+(6c_B/49)(1/q+1/r)<=12c_B/(49kappa_body(B))<=s_B/63.
 ```
 
-If `q,r>=Q`, every edge of `(10)` is a lawful repair by `(9)`. If the
-transversal number satisfies
+Since `(5/7)M_B-alpha=s_B/63`, equation `(6)` proves `(3)` as soon as
 
 ```text
-tau(A_6^(2)(Q))>9,                                      (11)
+max_(B in binom(P,9)) kappa_body(B)<=1307.              (9)
 ```
 
-then every `B in binom(P,9)` misses some edge `R`. For that edge,
+No independence or equidistribution of `G_q` and `G_r` is assumed. This direct
+argument first proves the cofinal theorem with `1307`; Section 6 supplies the
+finite exact exceptional ledger needed to lower the final statement to `1290`.
 
-```text
-B union {q,r} subset (P\R) union {q,r},
-G_((P\R) union {q,r}) subset G_(B union {q,r}).          (12)
-```
+## 4. Complete exact body census
 
-Safe-set monotonicity and `(9)` prove `(3)`. This is a sufficient
-hypergraph certificate, not an equivalence between covers and unsafe bodies.
-
-## 4. Complete primary census and adjacent transition
-
-The exact pool arrangement has common denominator
+The fixed-pool arrangement has common denominator
 
 ```text
 D=18,241,159,416,480,
-7,134 walls, 7,133 open cells.                           (13)
+7,134 walls and 7,133 open cells.                       (10)
 ```
 
-The primary program exhausts all
+The primary exhausts every one of
 
 ```text
-binom(30,6)=593,775                                     (14)
+binom(30,9)=14,307,150                                  (11)
 ```
 
-deletions. Exactly `140,082` have `s_R>0`, `453,693` have nonpositive
-surplus, and there are no equalities. The minimum and maximum activations are
+labelled bodies. All `s_B` are strictly positive. The activation range is
+`101` through `1307`; the maximum is unique:
 
 ```text
-3,077 at {88,143,168,193,252,286},
-4,636,948,909 at {80,95,120,143,170,193}.               (15)
+B*={170,176,190,193,240,252,264,286,290},
+M_B* ticks=4,579,301,272,924,
+c_B*=618,
+s_B* ticks=133,103,919,615,660,
+kappa_body(B*)=1307.                                    (12)
 ```
 
-At the adjacent cutoffs,
+The second-largest threshold is `1290`, also attained once. The body-mass and
+component ranges are
 
 ```text
-|A_6^(2)(17547)|=54,563,
-|A_6^(2)(17548)|=54,566.                                (16)
+4,131,630,720,966 <= M_B ticks <= 7,498,291,720,920,
+80 <= c_B <= 618.                                       (13)
 ```
 
-The nine-set
+For each body in increasing thirty-bit mask order, the primary freezes
 
 ```text
-W={85,88,143,168,193,240,252,264,290}                  (17)
+(body,kappa_body,mass_ticks,components,s_B ticks,
+ first_disjoint_repair_activation,composite_threshold). (14)
 ```
 
-covers the complete `17547` deck. Three edges activate at `17548`; one edge
-disjoint from `W` is
+The bytewise FNV-1a-64 fingerprint of the complete seven-field ledger is
 
 ```text
-R#={8,16,42,95,132,145},
-M_R# ticks=1,694,858,026,164,
-c_R#=206,
-(45M_R#-4) ticks=3,303,973,511,460.                     (18)
+5b8c08ad9d02622a.                                       (15)
 ```
 
-A path-complete recursion on the complete `54,566`-edge deck chooses the
-first uncovered edge and branches on each of its six vertices. It visits
-`663,464` states, all terminally dead, and proves that no cover of size at
-most nine exists. Therefore
+### Split-zeta construction
+
+Let `F_i` be the failed-label mask on cell `i`, `ell_i` its exact length, and
+index cells cyclically. Then
 
 ```text
-tau(A_6^(2)(17547))<=9,
-tau(A_6^(2)(17548))>9.                                  (19)
+M_B=sum_i ell_i 1_(F_i intersect B=empty),
+c_B=sum_i [1_(F_i intersect B=empty)
+           -1_((F_(i-1) union F_i) intersect B=empty)]. (16)
 ```
 
-Equations `(11)--(12)` now prove the theorem.
-
-The exact labelled row fingerprints are
-
-```text
-all 140,082 strict rows:       a8b79ad77ad91a62,
-Q=17547 filtered rows:         476fef92619d2c0b,
-Q=17548 filtered rows:         d20636ace1522a29.         (20)
-```
-
-Each row contributes five little-endian unsigned 64-bit words
-`(mask,kappa,mass_ticks,components,surplus_ticks)` to bytewise FNV-1a-64.
+The primary midpoint classifier aggregates `(16)` to `2,939` mass and `1,457`
+signed component-boundary coefficients. It splits the thirty labels into two
+fifteen-label halves, performs a complete fifteen-bit subset-zeta transform on
+one half for every filtered choice on the other, and visits each body exactly
+once.
 
 ## 5. Independent exact audit
 
-The referee implementation does not import the primary geometry, zeta
-lookup, edge order, or cover search. It instead:
-
-1. constructs all `7,133` cells by endpoint enter/leave toggles rather than
-   midpoint classification;
-2. forms mass and signed cyclic component-boundary coefficients and
-   reverse-incidence scatters them to all `593,775` deletions rather than
-   summing submasks separately for each deletion;
-3. orders the filtered edges by an independent SplitMix key; and
-4. scans every one of the `14,307,150` labelled nine-bodies at both cutoffs
-   rather than solving the dual cover problem recursively.
-
-At `17547`, the scan performs `233,058,925` incidence checks and finds
-exactly one cover, namely `W`. At `17548`, it performs `233,056,301` checks
-and finds zero covers; the closest body `W` misses `R#`. The referee also
-checks every exact ceiling inequality
+The referee imports neither the midpoint classifier nor the primary split
+schedule. It constructs the arrangement by endpoint enter/leave toggles,
+builds a flat disjoint-coefficient census, and independently enumerates all
+`14,307,150` bodies. It recovers
 
 ```text
-7s_R(kappa_2(R)-1)<108c_R<=7s_R kappa_2(R)              (21)
+cells=7,133,
+effective mass/component coefficients=2,939/1,457,
+all-positive surpluses=14,307,150,
+unique maximum=1307 at B*,
+unique second maximum=1290,
+unique minimum=101,
+FNV ledger=5b8c08ad9d02622a.                              (17)
 ```
 
-after clearing `D`, and recovers both filtered decks directly with zero
-boundary equalities. It agrees on every count and all three fingerprints in
-`(20)`.
+It also reconstructs all `140,082` strict depth-six repair rows and agrees on
+the first disjoint repair activation of every body. Two additional commutative
+digest controls and exact left/right ceiling inequalities are frozen in its
+output.
 
-As hostile controls, an independent literal joint-wall sweep at the pair
-`(17547,17548)` finds that both the newly activating repair and the old
-covering body are already strictly safe:
+## 6. Sharp direct boundary and hybrid literal quadrant
+
+At `Q=1306`, exactly `14,307,149` bodies pass the direct test and `B*` is the
+unique failure. At `Q=1307`, all bodies pass. The exact symmetric gaps have
+opposite signs, so `1307` is the minimum of the uniform direct certificate.
+The unique second-largest body threshold is `1290`; hence every `B!=B*` is
+already direct-safe for distinct `q,r>=1290`.
+
+It remains to patch `B*`. Order the outsiders as `q<r`. If `q>=1307`, the
+direct theorem applies. For every `1290<=q<=1306`, exact arithmetic proves
+that the first direct-safe larger label is
 
 ```text
-mu(G_((P\R#) union {17547,17548}))
- =1344542319402481/19682934366703608,
-63mu-4=94832200881617/312427529630216>0;                (22)
-
-mu(G_(W union {17547,17548}))
- =2384057538965009671/12317373137900310480,
-63mu-4=1602002101638005831/195513859331750960>0.        (23)
+r_0(q)=2614-q.                                          (18)
 ```
 
-Thus `17548` is the first cutoff at which this complete activation deck has
-no nine-cover. It is not the first literal safe pair, and `(17)` is not an
-unsafe-body witness.
+Both the strict failure at `r_0(q)-1` and success at `r_0(q)` are checked by
+integer cross-multiplication. The unresolved literal region therefore has
 
-## 6. Exact outsider lift and odd-tail consequence
+```text
+sum_(q=1290)^1306 (2614-2q-1)=33+31+...+1=289 pairs.   (18a)
+```
 
-Fix distinct `q,r>=17548`. Every eleven-subset of the thirty-two-label set
+An endpoint-toggle sweep and a separately written wall/midpoint classifier
+exhaust all 289 pairs. Both report the same semantic ledger hash
+`ab05deaad2b90c981c15abd2420a74ae74ba85e303c98f825bd3548d7db01860`,
+zero nonpositive rows, and the unique smallest literal margin
+
+```text
+(q,r)=(1300,1305),
+63mu-4=18886235531/2585198330>0.                        (18b)
+```
+
+Thus `B*` is safe throughout the missing triangle, and `(3)` holds for every
+distinct `q,r>=1290`. As a representative hostile control,
+`B* union {1306,1307}` is strictly safe even though its direct bound is
+negative. The number `1290` is a proved hybrid cutoff, not a claimed minimal
+literal threshold; `1307` remains the exact direct-certificate cutoff.
+
+## 7. Superseded depth-six repair headline
+
+For comparison, retain the exact strict depth-six repair activation
+
+```text
+rho(B)=min_{R intersect B=empty} kappa_2(R),             (19)
+```
+
+with `rho(B)=infinity` if there is no strict repair. The previous version of
+this theorem proved
+
+```text
+|A_6^(2)(17547)|=54,563 with one nine-cover W,
+|A_6^(2)(17548)|=54,566 with no nine-cover.              (20)
+```
+
+The unique cover was
+
+```text
+W={85,88,143,168,193,240,252,264,290}.                  (21)
+```
+
+Both old primary/referee artifacts remain canonical and independently audited.
+The direct census now gives
+
+```text
+M_W ticks=4,802,564,195,362,
+c_W=506,
+kappa_body(W)=995,
+rho(W)=17548.                                            (22)
+```
+
+Thus the cover was itself uniformly direct-safe long before its last repair
+activated. If
+
+```text
+theta(B)=min(kappa_body(B),rho(B)),                      (23)
+```
+
+then `max_B theta(B)=1307`. In fact the first strict depth-six repair activates
+only at `3077`, so the repair branch is dormant at the optimum. Equation `(20)`
+is still an exact sharp activation-filter transition, but its `17548` safety
+headline is superseded by `(3)`.
+
+## 8. Exact outsider lift and odd-tail transfer
+
+Fix distinct `q,r>=1290`. Every eleven-subset of
 
 ```text
 P union {q,r}                                            (24)
@@ -283,12 +361,12 @@ P union {q,r}                                            (24)
 
 is safe:
 
-- with no outsider, THM-4156 proves the stronger full-pool bound and safe-set
+- with no outsider, THM-4156 proves the stronger full-pool bound and
   monotonicity handles every subset;
 - with one labelled outsider, THM-4191 handles every ten-subset of `P`; and
 - with both outsiders, `(3)` handles every nine-subset of `P`.
 
-The labelled block count is exactly
+The exact labelled partition is
 
 ```text
 binom(30,11)+2binom(30,10)+binom(30,9)
@@ -296,116 +374,151 @@ binom(30,11)+2binom(30,10)+binom(30,9)
  =129,024,480=binom(32,11).                              (25)
 ```
 
-For each two-outsider body in `(3)`, every positive integer `c` and every two
-distinct positive odd integers `a,b`, THM-4150 gives some `x in R/Z` with
+For every two-outsider body, every positive integer `c`, and every two
+distinct positive odd integers `a,b`, THM-4150 supplies some `x in R/Z` with
 
 ```text
 min_(v in 2c(B union {q,r}) union {a,b})||vx||>=1/14.   (26)
 ```
 
-The same transfer applies to the zero- and one-outsider bodies. These are
-genuine infinite LRC(14) families of thirteen relative speeds, not a proof
-for an arbitrary instance.
+These are genuine infinite LRC(14) families of thirteen relative speeds, not
+a proof for an arbitrary instance.
 
-## 7. Boolean sidecar and transfer from the tournament work
+## 9. Independently audited fixed-one ray
 
-For each cyclic pool cell `i`, retain its failed-label mask `F_i` and length
-`ell_i`. For a deletion `R`, the exact formulas behind the computation are
+The same retained-coordinate method is much stronger once one outsider is
+fixed literally. For `B in binom(P,9)`, put
 
 ```text
-M_R=sum_i ell_i 1_(F_i subset R),
-c_R=sum_i [1_(F_i subset R)
-           -1_(F_(i-1) union F_i subset R)].            (27)
+V_B=G_(B union {1}),  M_B^(1)=mu(V_B),  c_B^(1)=#components(V_B). (26a)
 ```
 
-The first line is a lower Boolean zeta transform. The second retains the
-cyclic-adjacency sidecar needed to turn safe-cell counts into component
-counts. This is the lawful lesson from THM-4223's owner-refined Boolean
-hierarchy: retain the tensor and the operation-specific adjacency, not only a
-scalar total. There is no intrinsic pairwise orientation here, so no
-tournament is imposed.
+THM-4170 gives
 
-The connection contract is
+```text
+mu(V_B intersect G_r)>=(6/7)M_B^(1)-6c_B^(1)/(49r).    (26b)
+```
+
+The complete census proves `54M_B^(1)-4>0` for all bodies and, with
+
+```text
+kappa_1(B)=ceil(54c_B^(1)/(7(54M_B^(1)-4))),           (26c)
+```
+
+finds the unique maximum
+
+```text
+max_B kappa_1(B)=543,
+B*={170,176,190,193,240,252,264,286,290},
+M_B*^(1) ticks=3,885,436,686,322,
+c_B*^(1)=528,
+(54M_B*^(1)-4) ticks=136,848,943,395,468.              (26d)
+```
+
+Therefore every `B union {1,r}` is safe for every `r>=543`. The primary
+midpoint/split-zeta census and an independent endpoint-event/down-set census
+each exhaust all `14,307,150` bodies and recover the same extremizer, mass,
+component count, surplus, cutoff, and unique second cutoff `530`. Their
+coefficient aggregations and digests are independently frozen.
+
+At `r=542`, every body but `B*` passes the analytic certificate. The literal
+endpoint controls nevertheless give
+
+```text
+mu(G_(B* union {1,542}))=689745548341/3874102039080,
+63mu-4=443770815701/61493683160>0.                      (26e)
+```
+
+Thus `543` is certificate-sharp, not literal-sharp. With the zero/one layers,
+this also fills all `C(32,11)` faces of every chart `P union {1,r}` for
+`r>=543`, and THM-4150 again supplies the odd-tail LRC(14) families.
+
+## 10. Pair-plane and method boundaries
+
+Every outsider pair not covered by `(3)` has
+
+```text
+min(q,r)<=1289.                                         (27)
+```
+
+For genuine outsiders, these are the `1,259` rays indexed by
+`q in {1,...,1289}\P`. A cofinal theorem on each ray would leave one finite
+exact remainder. Neither that full ray theorem nor the finite census is proved
+here.
+
+THM-4227's directed wedge starts with one coordinate at least `3391`, and
+THM-4228's common-gcd theorem forces both coordinates at least `3467`.
+Consequently their body-safety regions lie inside `(3)` and are now subsumed
+as coverage. Their methods remain distinct and potentially useful below the
+quadrant: sequential component birth retains scale order, while the periodic
+observable retains common divisor and primitive pair shape. Reserved
+primitive-shape charts are not proved input.
+
+## 11. Boolean sidecar and connection contract
+
+Equation `(16)` is a lower Boolean zeta transform plus a cyclic transition
+count. This is the lawful transfer from THM-4223's owner-refined Boolean
+hierarchy: retain the exact label tensor and the adjacency required by the
+next operation. There is no intrinsic pairwise orientation on the cells, so no
+tournament is imposed.
 
 ```text
 source:       cyclic pool cells (F_i,ell_i) and adjacent mask unions
-target:       the depth-six joint activation deck
-map:          lower-zeta mass and transition count -> (M_R,c_R,kappa_2(R))
-preserved:    labels, exact mass, components, and the uniform q/r quantifier
+target:       every labelled nine-body and its two-outsider threshold
+map:          disjointness zeta -> (M_B,c_B) -> kappa_body
+preserved:    body labels, exact mass, components, uniform q/r quantifier
 destroyed:    component addresses and literal q/r phase alignment
-sidecar:      adjacent failure-mask unions and literal boundary scans
-decisive test: tau(A_6^(2)(Q))>9 on the complete deletion universe. (28)
+sidecar:      adjacent mask unions and literal endpoint sweep
+hostile:      unique direct extremizer B*; its 289-pair triangle is literally safe
+decisive test: max_B kappa_body(B).                       (28)
 ```
 
-## 8. Boundaries and next frontiers
+## 12. Reproduction
 
-This theorem proves neither arbitrary finite pair entry nor a minimal literal
-cofinal threshold. It does, however, combine sharply with THM-4227. For a
-pair of distinct positive outsiders, write
-
-```text
-m=min(q,r),        M=max(q,r).                           (29)
-```
-
-THM-4231 handles `m>=17548`. If `3391<=m<=17547`, THM-4227 handles the pair
-as soon as
-
-```text
-M>=ceil(321902813232(m+130)/10633545731).               (30)
-```
-
-The right side is increasing and equals `535125` at `m=17547`. Consequently,
-every pair not covered by THM-4227 or THM-4231 lies in
-
-```text
-m<=3390,
-or
-3391<=m<=17547 and M<=535124.                           (31)
-```
-
-THM-4228 separately handles `gcd(q,r)>=3467`. Thus every pair left by all
-three theorems also satisfies
-
-```text
-gcd(q,r)<=3466.                                          (32)
-```
-
-The unproved pair plane is therefore a gcd-thinned finite box together with
-finitely many fixed-small-outsider rays. This is a reduction, not a closure:
-none of the three theorems supplies the cofinal tail on each ray with
-`m<=3390`.
-
-The main remaining LRC routes are therefore:
-
-1. prove one cofinal tail for every outsider below `3391`, retaining its
-   literal label, then exhaust the finite remainder in `(31)`;
-2. combine phase-sensitive or common-gcd discrepancy with the symmetric
-   Bonferroni deck without losing the literal pair labels;
-3. count the intrinsic multiplicity of lawful repairs per residual body,
-   rather than an order-dependent greedy separator count; and
-4. leave the fixed pool through an entry or replacement theorem.
-
-The fixed-object firewall remains essential: a compatible certificate for
-moving pairs at every depth would not imply one fixed pair. Here `(6)--(12)`
-keep the same literal `q,r,B` throughout and are uniform after one finite
-cutoff.
-
-## 9. Reproduction
-
-From the repository root, each command must produce the matching frozen
-output byte for byte:
+From the repository root, compile both C++ paths with C++20, optimization, and
+OpenMP, then compare stdout byte-for-byte with their frozen outputs:
 
 ```bash
-python3 -B 04-computation/lrc14_arbitrary_pair_cofinal_depth6_primary_thm4231.py
-python3 -O -B 04-computation/lrc14_arbitrary_pair_cofinal_depth6_primary_thm4231.py
+g++ -O3 -fopenmp -std=c++20 \
+  04-computation/lrc14_two_outsider_direct_body_cofinal_primary_thm4231.cpp \
+  -o /tmp/thm4231-primary
+OMP_NUM_THREADS=12 /tmp/thm4231-primary
 
-python3 -B 04-computation/lrc14_arbitrary_pair_cofinal_depth6_independent_audit_thm4231.py
-python3 -O -B 04-computation/lrc14_arbitrary_pair_cofinal_depth6_independent_audit_thm4231.py
+g++ -O3 -fopenmp -std=c++20 \
+  04-computation/lrc14_two_outsider_direct_body_cofinal_independent_audit_thm4231.cpp \
+  -o /tmp/thm4231-referee
+OMP_NUM_THREADS=12 /tmp/thm4231-referee 1306
+
+python3 -B \
+  04-computation/lrc14_two_outsider_direct_body_cofinal_literal_controls_thm4231.py
+
+python3 -B \
+  04-computation/lrc14_two_outsider_direct_body_cofinal_literal_independent_audit_thm4231.py
+
+python3 -B \
+  04-computation/lrc14_hybrid_q1290_cofinal_quadrant_primary_thm4231.py
+
+python3 -B \
+  04-computation/lrc14_hybrid_q1290_cofinal_quadrant_independent_audit_thm4231.py
+
+g++ -O3 -fopenmp -std=c++20 \
+  04-computation/lrc14_fixed_one_outsider_cofinal_tail_primary_thm4231.cpp \
+  -o /tmp/thm4231-q1-primary
+OMP_NUM_THREADS=12 /tmp/thm4231-q1-primary 1
+
+g++ -O3 -fopenmp -std=c++20 \
+  04-computation/lrc14_fixed_one_outsider_cofinal_tail_independent_audit_thm4231.cpp \
+  -o /tmp/thm4231-q1-referee
+OMP_NUM_THREADS=12 /tmp/thm4231-q1-referee
+
+python3 -B \
+  04-computation/lrc14_fixed_one_outsider_cofinal_tail_literal_controls_thm4231.py
 ```
 
-The first path uses exact midpoint cells, submask zeta sums, and a
-path-complete transversal search. The second uses endpoint toggles,
-reverse-incidence scatter, and exhaustive body enumeration. Both run with
-integer/rational arithmetic only.
+The frozen referee transcript is the `1306` invocation above; the no-argument
+mode performs a binary-search diagnostic and emits additional lines. The
+primary output is stable under `-O2/-O3` and one/twelve threads. The referee
+uses a structurally different geometry and census. The older Python activation
+paths reproduce the exact sidecar `(20)`.
 
 **QED.**
