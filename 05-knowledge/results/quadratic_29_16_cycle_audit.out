@@ -18,6 +18,14 @@ AP LOCUS IN THE STANDARD RATIONAL 3-CYCLE PARAMETER
   exact identities: 16=4^2, 29=5^2+2^2, 7=4^2-3^2
   relabeling R(t)=-1/(t+1) has AP orbit ('1', '-1/2', '-2')
   SL2 lift [[0,-1],[1,1]]: A^3=-I, A^6=I, charpoly=lambda^2-lambda+1
+  point interpolant M(x)=(4x-13)/(16x+12); det-one lift cube=-I
+
+HORIZONTAL TARGET-PENCIL CONTROL
+  r=4x+1 sends the cycle to (-6,6,0)
+  a=-48,q=0 nodal normalization points: [(Fraction(-12, 1), Fraction(216, 1)), (Fraction(-12, 1), Fraction(-216, 1)), (Fraction(-48, 1), Fraction(0, 1))]
+  projective N(r)=2(r-6)/(r+2) permutes parameters but does not preserve the node pair
+  THM-4134 3P section at q=0: U=56/3, V=(5/27)rho; DISJOINT from these points
+  verdict: zero-fibre incidence PROVED; horizontal-carrier identification REFUTED
 
 FINITE-RING CONTROLS FOR T(u)=(u^2-29)/4
   mod 7: cycles=[(0, 5, 6)]

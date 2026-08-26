@@ -27,6 +27,32 @@ def require(condition: bool, message: str) -> None:
         raise RuntimeError(message)
 
 
+def poly_trim(poly: list[int]) -> list[int]:
+    while len(poly) > 1 and poly[-1] == 0:
+        poly.pop()
+    return poly
+
+
+def poly_add(*polys: list[int]) -> list[int]:
+    result = [0] * max(map(len, polys))
+    for poly in polys:
+        for index, coefficient in enumerate(poly):
+            result[index] += coefficient
+    return poly_trim(result)
+
+
+def poly_scale(poly: list[int], scalar: int) -> list[int]:
+    return poly_trim([scalar * coefficient for coefficient in poly])
+
+
+def poly_mul(left: list[int], right: list[int]) -> list[int]:
+    result = [0] * (len(left) + len(right) - 1)
+    for i, a in enumerate(left):
+        for j, b in enumerate(right):
+            result[i + j] += a * b
+    return poly_trim(result)
+
+
 def f(x: Fraction) -> Fraction:
     return x * x + C
 
@@ -80,6 +106,44 @@ def rational_graph() -> None:
 
 def moduli_and_triangle() -> None:
     """Audit the standard rational 3-cycle parameter at its AP values."""
+
+    # Low-to-high coefficient arrays for the full rational-function chart.
+    # These checks certify the identities for indeterminate t, not merely at
+    # the three AP specializations used below.
+    D_poly = [0, 2, 2]
+    A0_poly = [1, 1, 2, 1]
+    A1_poly = [-1, -1, 0, 1]
+    A2_poly = [-1, -3, -2, -1]
+    N_poly = [1, 4, 9, 8, 4, 2, 1]
+    phi3_poly = [1, 1, 1]
+    zero = [0]
+    require(
+        poly_add(poly_mul(A0_poly, A0_poly), poly_scale(N_poly, -1), poly_scale(poly_mul(A1_poly, D_poly), -1)) == zero,
+        "p0^2+c=p1 chart identity fails",
+    )
+    require(
+        poly_add(poly_mul(A1_poly, A1_poly), poly_scale(N_poly, -1), poly_scale(poly_mul(A2_poly, D_poly), -1)) == zero,
+        "p1^2+c=p2 chart identity fails",
+    )
+    require(
+        poly_add(poly_mul(A2_poly, A2_poly), poly_scale(N_poly, -1), poly_scale(poly_mul(A0_poly, D_poly), -1)) == zero,
+        "p2^2+c=p0 chart identity fails",
+    )
+    require(
+        poly_add(poly_scale(A1_poly, 2), poly_scale(A0_poly, -1), poly_scale(A2_poly, -1))
+        == poly_scale(poly_mul([-1, 1], phi3_poly), 2),
+        "p1-middle AP factor fails",
+    )
+    require(
+        poly_add(poly_scale(A0_poly, 2), poly_scale(A1_poly, -1), poly_scale(A2_poly, -1))
+        == poly_scale(poly_mul([2, 1], phi3_poly), 2),
+        "p0-middle AP factor fails",
+    )
+    require(
+        poly_add(poly_scale(A2_poly, 2), poly_scale(A0_poly, -1), poly_scale(A1_poly, -1))
+        == poly_scale(poly_mul([1, 2], phi3_poly), -2),
+        "p2-middle AP factor fails",
+    )
 
     def parameter_cycle(t: Fraction) -> tuple[list[Fraction], Fraction]:
         denominator = 2 * t * (t + 1)
@@ -169,6 +233,93 @@ def moduli_and_triangle() -> None:
     require(powers[6] == identity, "A^6 != I")
     print(f"  relabeling R(t)=-1/(t+1) has AP orbit {tuple(map(str, orbit))}")
     print("  SL2 lift [[0,-1],[1,1]]: A^3=-I, A^6=I, charpoly=lambda^2-lambda+1")
+
+    # There is also a unique projective interpolant on the point coordinate
+    # itself.  In x it is (4x-13)/(16x+12); after the AP normalization
+    # r=4x+1 it is N(r)=2(r-6)/(r+2).  The determinant-one lifts have cube -I.
+    direct_cycle = [Fraction(-7, 4), Fraction(5, 4), Fraction(-1, 4)]
+
+    def projective_x(x: Fraction) -> Fraction:
+        return (4 * x - 13) / (16 * x + 12)
+
+    require(
+        [projective_x(x) for x in direct_cycle]
+        == direct_cycle[1:] + direct_cycle[:1],
+        "direct projective interpolant fails",
+    )
+    direct_lift = ((Fraction(1, 4), Fraction(-13, 16)), (1, Fraction(3, 4)))
+
+    def frac_matmul(left, right):
+        return (
+            (
+                left[0][0] * right[0][0] + left[0][1] * right[1][0],
+                left[0][0] * right[0][1] + left[0][1] * right[1][1],
+            ),
+            (
+                left[1][0] * right[0][0] + left[1][1] * right[1][0],
+                left[1][0] * right[0][1] + left[1][1] * right[1][1],
+            ),
+        )
+
+    direct_square = frac_matmul(direct_lift, direct_lift)
+    direct_cube = frac_matmul(direct_square, direct_lift)
+    require(direct_cube == ((-1, 0), (0, -1)), "direct lift cube is not -I")
+    print("  point interpolant M(x)=(4x-13)/(16x+12); det-one lift cube=-I")
+
+
+def horizontal_zero_fibre_control() -> None:
+    """Typed incidence with, and separation from, THM-4134's target section."""
+    a = Fraction(-48)
+    x_cycle = [Fraction(-7, 4), Fraction(5, 4), Fraction(-1, 4)]
+    r_cycle = [4 * x + 1 for x in x_cycle]
+    require(r_cycle == [-6, 6, 0], "AP normalization r=4x+1 changed")
+
+    # The q=0 nodal fibre is V^2=(U-a)(U+a/2)^2.  Its normalization is
+    # nu(r)=(r^2+a, r(r^2+3a/2)), with weights two and three in r.
+    def nu(r: Fraction) -> tuple[Fraction, Fraction]:
+        return r * r + a, r * (r * r + 3 * a / 2)
+
+    def zero_fibre_residual(point: tuple[Fraction, Fraction]) -> Fraction:
+        U, V = point
+        return V * V - U**3 + 3 * a * a * U / 4 + a**3 / 4
+
+    fibre_points = [nu(r) for r in r_cycle]
+    require(
+        fibre_points == [(-12, 216), (-12, -216), (-48, 0)],
+        "a=-48 zero-fibre points changed",
+    )
+    require(
+        all(zero_fibre_residual(point) == 0 for point in fibre_points),
+        "normalized points miss the a=-48,q=0 fibre",
+    )
+
+    # Conjugating the projective cycle by r=4x+1 gives N(r).  It does not
+    # descend to an automorphism of the nodal cubic: its fixed points satisfy
+    # r^2=-12, whereas the two conductor preimages satisfy r^2=72.
+    def N(r: Fraction) -> Fraction:
+        return 2 * (r - 6) / (r + 2)
+
+    require([N(r) for r in r_cycle] == r_cycle[1:] + r_cycle[:1], "N orbit fails")
+    require(-12 != -3 * a / 2, "projective fixed pair unexpectedly equals node pair")
+
+    # THM-4134's polynomial section is 3P on q=a^3/2+rho^2.  On q=0,
+    # rho^2=-a^3/2 and its U-coordinate is 56/3, so it is not any nu(r_i).
+    rho_squared = -a**3 / 2
+    section_U = a / 2 + 16 * rho_squared / (9 * a * a)
+    section_V_over_rho = -1 - 64 * rho_squared / (27 * a**3)
+    require(section_U == Fraction(56, 3), "q=0 horizontal-section U changed")
+    require(section_V_over_rho == Fraction(5, 27), "q=0 section V/rho changed")
+    require(
+        all(section_U != point[0] for point in fibre_points),
+        "cycle-normalization point unexpectedly lies on the 3P section",
+    )
+
+    print("\nHORIZONTAL TARGET-PENCIL CONTROL")
+    print("  r=4x+1 sends the cycle to (-6,6,0)")
+    print(f"  a=-48,q=0 nodal normalization points: {fibre_points}")
+    print("  projective N(r)=2(r-6)/(r+2) permutes parameters but does not preserve the node pair")
+    print("  THM-4134 3P section at q=0: U=56/3, V=(5/27)rho; DISJOINT from these points")
+    print("  verdict: zero-fibre incidence PROVED; horizontal-carrier identification REFUTED")
 
 
 def finite_ring_controls() -> None:
@@ -292,5 +443,6 @@ def doubling_cycles_63() -> None:
 if __name__ == "__main__":
     rational_graph()
     moduli_and_triangle()
+    horizontal_zero_fibre_control()
     finite_ring_controls()
     doubling_cycles_63()

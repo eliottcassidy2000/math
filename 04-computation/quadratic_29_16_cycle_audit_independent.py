@@ -16,6 +16,19 @@ def require(condition: bool, message: str) -> None:
         raise RuntimeError(message)
 
 
+def matrix_mul_2(left, right):
+    return (
+        (
+            left[0][0] * right[0][0] + left[0][1] * right[1][0],
+            left[0][0] * right[0][1] + left[0][1] * right[1][1],
+        ),
+        (
+            left[1][0] * right[0][0] + left[1][1] * right[1][0],
+            left[1][0] * right[0][1] + left[1][1] * right[1][1],
+        ),
+    )
+
+
 def qmap(x: Fraction) -> Fraction:
     return x * x - Fraction(29, 16)
 
@@ -69,8 +82,65 @@ def rational_and_ap_audit() -> None:
     orbit.extend((R(orbit[-1]), R(R(orbit[-1]))))
     require(orbit == [Fraction(1), Fraction(-1, 2), Fraction(-2)], "R-orbit fails")
 
+    ordered_cycle = [Fraction(-7, 4), Fraction(5, 4), Fraction(-1, 4)]
+
+    def M(x: Fraction) -> Fraction:
+        return (4 * x - 13) / (16 * x + 12)
+
+    require(
+        [M(x) for x in ordered_cycle] == ordered_cycle[1:] + ordered_cycle[:1],
+        "unique point-coordinate interpolant fails",
+    )
+    B = ((Fraction(1, 4), Fraction(-13, 16)), (1, Fraction(3, 4)))
+    require(B[0][0] * B[1][1] - B[0][1] * B[1][0] == 1, "det B != 1")
+    require(
+        matrix_mul_2(matrix_mul_2(B, B), B) == ((-1, 0), (0, -1)),
+        "independent B^3=-I audit fails",
+    )
+
     print("RATIONAL/AP: eight quarter-integers; sole cycle length 3; Q-period 6 absent")
     print("AP SOLUTION: m=-1/4, d=3/2, c=-29/16; marked t-orbit=(1,-1/2,-2)")
+
+
+def horizontal_fibre_audit() -> None:
+    a = Fraction(-48)
+    x_cycle = [Fraction(-7, 4), Fraction(5, 4), Fraction(-1, 4)]
+    parameters = [4 * x + 1 for x in x_cycle]
+    require(parameters == [-6, 6, 0], "independent AP normalization fails")
+
+    points = [
+        (r * r + a, r * (r * r + 3 * a / 2))
+        for r in parameters
+    ]
+    require(points == [(-12, 216), (-12, -216), (-48, 0)], "zero-fibre points fail")
+    for U, V in points:
+        residual = V * V - U**3 + 3 * a * a * U / 4 + a**3 / 4
+        require(residual == 0, "point misses q=0 target fibre")
+
+    def N(r: Fraction) -> Fraction:
+        return 2 * (r - 6) / (r + 2)
+
+    require(
+        [N(r) for r in parameters] == parameters[1:] + parameters[:1],
+        "normalized projective interpolant fails",
+    )
+    C = ((Fraction(1, 2), -3), (Fraction(1, 4), Fraction(1, 2)))
+    require(
+        matrix_mul_2(matrix_mul_2(C, C), C) == ((-1, 0), (0, -1)),
+        "independent C^3=-I audit fails",
+    )
+    # Order-three N can preserve a two-point set only pointwise.  Its fixed
+    # equation is r^2=-12, while the nodal conductor pair has r^2=-3a/2=72.
+    require(Fraction(-12) != -3 * a / 2, "N unexpectedly descends through the node")
+
+    rho_squared = -a**3 / 2
+    section_u = a / 2 + 16 * rho_squared / (9 * a * a)
+    section_v_over_rho = -1 - 64 * rho_squared / (27 * a**3)
+    require((section_u, section_v_over_rho) == (Fraction(56, 3), Fraction(5, 27)), "3P q=0 specialization fails")
+    require(all(section_u != U for U, _ in points), "3P section meets normalized cycle points")
+
+    print("ZERO FIBRE: r=(-6,6,0) -> ((-12,216),(-12,-216),(-48,0)) on a=-48,q=0")
+    print("CARRIER SEPARATION: 3P has U=56/3 at q=0; proposed section identification is false")
 
 
 def finite_quadratic_audit() -> None:
@@ -224,6 +294,7 @@ def mersenne_squaring_audit() -> None:
 
 if __name__ == "__main__":
     rational_and_ap_audit()
+    horizontal_fibre_audit()
     finite_quadratic_audit()
     mersenne_squaring_audit()
     print("INDEPENDENT_AUDIT=PASS")
