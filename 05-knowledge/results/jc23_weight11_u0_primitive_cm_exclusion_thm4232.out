@@ -1,0 +1,17 @@
+THM4232_WEIGHT11_U0_PRIMITIVE_CM_EXACT_CERTIFICATE
+scope=exact_M11,b=d=0,reduced_(2,3),U=0,A*B*Z*(A+B)!=0,all_lower_coefficients
+partition=Delta!=0|Delta=0;next_pure_owner=(p4|fixed_-1376/135*p3)
+monomials=13;universal_valued_support=24;active_support=(Delta4:23,Delta0:22);fixed_residual_included
+top=(p4y,py3);support_collision_hostiles=(256*32)+(128*32)=8192+4096=12288
+faces_Delta4=M11,T3,V4;Pick=((33,5,15),(3,5,0),(4,6,0));global=(40,12,15)
+faces_Delta0=M11,T3,V3;Pick=((33,5,15),(3,5,0),(3,5,0));global=(39,11,15)
+packet_both=(10,10,5,4,2,2,2,1);full_degree=36;finite_degree=30;defect=28
+edge_schemes_both=8_reduced;gate=A*B*Z*(A+B)*c_k!=0;c4=Delta;c3=-1376/135
+base_change=Q:sigma^132;face_multiplicities=1;main_nodes=11*A131
+chains_Delta4=AE:8,BD:7;chains_Delta0=AE:19,BD:7;all_inserted_components=rational
+positive_genus=C11:g5;dual_graph_rank=10;special_genus=15
+C11=P^11-(B/A^3)x^3/(1-x);CM_type=(4,5,8,9,10);stabilizer=(1)
+CITED_INPUT=Milne_CM_Prop_3.13;primitive_CM_implies_simple;Hom(JC11,E0)=0
+target_special=Y^2-X^3-1;degree_conservation=special_sum_0
+checks=12657
+verdict=EXACT_M11_U0_WALL_EXCLUDED_RELATIVE
