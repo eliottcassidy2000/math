@@ -1,9 +1,11 @@
 ---
 id: HYP-2235
-status: OPEN finite-field carrier transfer hypothesis with exact S659 and THM-4035 scouts
-source: codex-2026-06-05-S659 + THM-4035 addendum, 2026-08-24
+status: OPEN finite-field carrier transfer hypothesis with exact S659 and THM-4035/4235 scouts
+source: codex-2026-06-05-S659 + THM-4035/4235/4236 addenda, 2026-08-26
 related:
   - THM-4035-sixty-clock-separation-and-finite-kakeya-spine
+  - THM-4235-finite-four-dimensional-torus-kakeya-quadratic-carrier
+  - THM-4236-four-dimensional-kakeya-monic-cubic-focal-selector
   - HYP-2234
   - HYP-2233
   - HYP-2231
@@ -177,19 +179,36 @@ same clock can be maximally broad or wholly narrow; adding a Fibonacci or
 triangular scalar name does not repair the loss because those are functions
 of the original phase.
 
-The next exact HYP-2235 experiment is therefore:
+THM-4235 now completes that first exact experiment.  On the same torus
+directions, four basepoint rules have union sizes
 
 ```text
-complete all projective boundary charts;
-choose one affine line in every direction;
-attach AP-owner-derived, concurrent, and shuffled basepoints;
-compare union size + multiplicity + pinned fibres + determinant rank.
+12,960,001 -> 6,696,030 -> 3,460,500 -> 1,814,460.
 ```
 
-Only a change in the incidence statistics under owner-preserving jackknives
-would support the proposed no-leak carrier.  Equal statistics would be a
-recorded stopping result.  Even a positive finite result would still omit
-Euclidean shadings, two-ends, scale and Wolff nonconcentration.
+The final quadratic carrier has maximum multiplicity eight, and all of its
+maximum-multiplicity points are rank-four direction cubes.  Four recursive
+quadratic boundary charts then supply one line in every direction of
+`P^3(F_61)`, with exact union size `1,868,641` and maximum multiplicity twelve.
+Thus the old boundary and affine-line debts are closed in this finite model,
+while the same direction-only invariants still permit a greater-than-sevenfold
+change in union size.
+
+The next exact HYP-2235 experiment is now:
+
+```text
+hold fixed the full-projective quadratic carrier's marginal multiplicity and
+pinned-rank histograms; shuffle its basepoint assignment; and compare
+higher-order incidence, polynomial-parent concentration, and a two-scale
+Frostman surrogate.
+```
+
+THM-4236 supplies the Euclidean comparison coordinate: the quadratic carrier
+is the reduction of a degree-two affine-intercept selector whose absolute
+line Jacobian is governed by a monic focal cubic.  Its three focal times
+explain the finite threefold fold.  Reduction still omits Euclidean shadings,
+two-ends, scale and Wolff nonconcentration, so this exact match is not a
+transfer theorem.
 
 ## Assumption Challenge
 
@@ -210,5 +229,9 @@ external Kakeya or Falconer theorem claim.
 **See also:** HYP-2234, HYP-2233, HYP-2231, HYP-2230, HYP-2222, HYP-2197,
 HYP-2176, HYP-1804, `04-computation/finite_field_kakeya_falconer_s659.py`,
 `05-knowledge/results/finite_field_kakeya_falconer_s659.out`,
-`07-reflections/finite-field-kakeya-falconer-lrc-carrier-s659.md`, and
-[THM-4035](../../01-canon/theorems/THM-4035-sixty-clock-separation-and-finite-kakeya-spine.md).
+`07-reflections/finite-field-kakeya-falconer-lrc-carrier-s659.md`,
+[the 2026-08-26 focal-selector / quadratic-carrier synthesis](../../07-reflections/four-dimensional-kakeya-focal-selector-quadratic-carrier-and-atlas-seams-2026-08-26.md),
+[THM-4035](../../01-canon/theorems/THM-4035-sixty-clock-separation-and-finite-kakeya-spine.md),
+[THM-4235](../../01-canon/theorems/THM-4235-finite-four-dimensional-torus-kakeya-quadratic-carrier.md),
+and
+[THM-4236](../../01-canon/theorems/THM-4236-four-dimensional-kakeya-monic-cubic-focal-selector.md).

@@ -122,7 +122,7 @@ gives the reset law and `A=8/13` hostile; THM-4077/4082 give charts, not a Z-num
 
 - **PROVED:** [THM-2022](../01-canon/theorems/THM-2022-gmc2-frobenius-lowest-balanced-face.md)
   proves NC2 and hence unrestricted GMC(2).
-- **REFUTED for `n>=3`:** GMC is false; see [`CORE-PAPERS.md`](../05-knowledge/reference/CORE-PAPERS.md). THM-3290 gives the family/Archimedes boundary, THM-3300 the `U(1)^n`-invariant Gaussian subproblem (not `FC=GMC`), and THM-3301 the no-eigenvector refutation. [THM-2801](../01-canon/theorems/THM-2801-sharp-special-image-boundary-and-beta-shift-witness.md) gives `SIC(1)` true / `SIC(n>=2)` false, not `JC(2)`.
+- **REFUTED for `n>=3`:** GMC is false ([sources](../05-knowledge/reference/CORE-PAPERS.md)); THM-3290/3300/3301 give boundary/invariant/no-eigenvector controls. [THM-2801](../01-canon/theorems/THM-2801-sharp-special-image-boundary-and-beta-shift-witness.md) proves `SIC(1)` / refutes `SIC(n>=2)`, not `JC(2)`.
 - **FORMALIZATION COMPLETE:** `GMC2Main` exposes unconditional `dvdK1`, `nc2`,
   and `gmc2`, kernel-pure up to `propext`, choice, and quotient soundness;
   `singlePolyCrux_holds` discharges the legacy `DvdK1` premise.  THM-2101's
@@ -353,7 +353,7 @@ lift/phase clocks.
 - **Even-graph spectrum:** THM-4083 closes `D=3,4`; THM-4084/[4200](../01-canon/theorems/THM-4200-even-graph-four-edge-d5-frustration-firewall.md)
   force any new `D=5` equality/counterexample into `b=0`, frustration `>=5`.
   Full `D=5` is **OPEN** beyond `n=6,7,8` (MISTAKE-496).
-- **AMM:** [THM-4086](../01-canon/theorems/THM-4086-rule-a-transition-clock-and-phase-cocycle.md) separates the shared adjacent-offset kernel from feed/front/debt, rebuilds the `R=32768` clocks behind inherited `854:DIE,855/856:CLOSED`, and proves a nonconstant dyadic phase cocycle. Fixed-policy/local only: no global monotonicity, alternative infeasibility, all-`R` family, or `C*` consequence.
+- **AMM:** [THM-4086](../01-canon/theorems/THM-4086-rule-a-transition-clock-and-phase-cocycle.md) proves a fixed-policy `R=32768` clock/cocycle; no global monotonicity, all-`R`, or `C*` result.
 - **Knots:** THM-2176/2191/2281 and THM-2242/2330--2383: localization, owner/ANOVA/rectangle/reference inversion; realization/stable diagonal open. THM-2646: modular/exponent `B3` conjugacy, not Markov invariance.
 - **Flows:** [THM-2177](../01-canon/theorems/THM-2177-planar-counterexample-to-goemans-unsplittable-cost-flow-conjecture.md): planar `58<60` refutes exact `d_max`; planar `2d_max` survives.
 - **Hensel:** THM-3446/3449/[3452](../01-canon/theorems/THM-3452-unequal-depth-noncommuting-smooth-hensel-heisenberg-orbit-law.md): weighted/equal/unequal banks; dyadic repair.
@@ -408,12 +408,7 @@ lift/phase clocks.
 
 ### Euclidean four-dimensional Kakeya
 
-**OPEN.** Hausdorff record `3.059849573...`; a 2025 v1 preprint claims maximal
-`3.0543` versus published `3.049570924...`; four-linear/sticky `13/4` need
-extra hypotheses. [Source audit](../05-knowledge/reference/CORE-PAPERS-KAKEYA-4D-2026-08-24.md).
-THM-4035 is **FINITE-EXACT:** three `C_60` clocks chart `P^3(F_61)`'s nonzero
-torus, but lines/basepoints, boundary directions, multiplicity and scale are
-absent, so no Kakeya bound follows.
+**OPEN; [record `3.059849573...`](../05-knowledge/reference/CORE-PAPERS-KAKEYA-4D-2026-08-24.md).** [THM-4235](../01-canon/theorems/THM-4235-finite-four-dimensional-torus-kakeya-quadratic-carrier.md) is a verified finite carrier; [THM-4236](../01-canon/theorems/THM-4236-four-dimensional-kakeya-monic-cubic-focal-selector.md) proves the focal-selector obstruction.  The Euclidean atlas/seam bridge remains open.
 
 ### Arithmetic-Kakeya forcing certificates
 

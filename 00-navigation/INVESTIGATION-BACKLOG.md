@@ -394,22 +394,34 @@
   permutation.  Consecutive weights are the all-broad positive control;
   repeated weights are the planar hostile.  This is FINITE-EXACT algebra and
   proves no Euclidean estimate.
-- **Projective boundary and line-placement completion.**  Add the `14,764`
-  zero-coordinate directions missing from THM-4035's `216,000`-point torus
-  chart, then choose one affine line per direction.  Compare concurrent,
-  AP-owner-derived and shuffled basepoints by exact union-size and
-  multiplicity spectra.  Preserve direction, basepoint and boundary-chart
-  labels separately.
+- **Projective boundary and line-placement completion -- DONE (THM-4235).**
+  Four disjoint quadratic charts now cover all `230,764` directions and give
+  a genuine finite Kakeya set of size `1,868,641`, maximum multiplicity
+  twelve, and two independently agreeing exact count paths.  The nonzero
+  torus placement ladder changes union size by a factor greater than seven
+  while keeping all directions fixed.  NEXT: shuffle basepoint assignments
+  while holding marginal multiplicity and pinned-rank histograms fixed, then
+  test higher incidence and two-scale parent concentration.
 - **Owner-labelled broad/narrow jackknife.**  Attach THM-4029's twelve owners
   to both the twisted-cubic and planar embeddings while keeping the phase
   histogram fixed.  Ask whether concurrency or pinned multiplicity detects
   the determinant regime.  Cheapest controls are all `487,635` four-minors
   and cyclic affine relabellings `r->ur+c`, `gcd(u,60)=1`.
-- **Euclidean planebrush interface audit.**  Attempt a multiscale enrichment
-  with shading density, two-ends, moving three-plane labels, angular separation
-  and Wolff nonconcentration.  Stop unless these data survive the finite-to-tube
-  map.  A 60-point direction spine, even full-spark, is not a Kakeya set and
-  cannot improve the current `R^4` dimension bound by itself.
+- **Affine-atlas / seam / planebrush trichotomy (THM-4236 frontier).**  For a
+  selected line write its invariant intercept as `a(u)`.  Prove that at each
+  scale either `a` has low approximate polynomial-atlas complexity, patch
+  collisions are quantitatively transverse, or the narrow three-plane flag
+  varies slowly enough for planebrush.  Retain shading, all-translate two-ends,
+  angular separation, algebraic-parent type, scale and Wolff
+  nonconcentration.  Test the ruled quadric `ad-bc=1` before promotion.
+  THM-4236 already excludes local `W^(1,p)` selectors for every `p>=1`;
+  quantify Lusin-Lipschitz complexity next, then test the `BV` Cantor part and
+  fractional Sobolev regimes without assuming a Sobolev area formula.
+- **Buffered factoring admissibility.**  The 2026 Hua--Yao--Yang refinement is
+  useful only after its relative Frostman hypothesis is supplied.  Seek an
+  exceptional-parent or weighted-average version compatible with polynomial
+  Wolff counting; a single child in a `rho`-parent has relative constant as
+  large as `(rho/delta)^3`, so a uniform import is false.
 - **Sun phase-fibre lower tail (wildcard).**  Parameterize nonzero inputs to
   the `2,4,6,8` roles by `C_60` modulo 61.  Since `S_2+S_4=F_61`, retain
   least bounded-lift height and role-labelled multiplicity after residue

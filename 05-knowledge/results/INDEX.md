@@ -1,5 +1,19 @@
 # Script Results Index
 
+- `kakeya4d_quadratic_carrier_thm4235.py` -> exact affine-placement and full
+  projective quadratic Kakeya carrier over `F_61` [THM-4235 FINITE-EXACT +
+  VERIFIED + INDEPENDENTLY AUDITED; EUCLIDEAN KAKEYA IN `R^4` OPEN].  The
+  fixed `216,000` nonzero-torus directions have union ladder
+  `12,960,001 / 6,696,030 / 3,460,500 / 1,814,460`; the fully quadratic row
+  has multiplicities `1,2,4,8`, all maximum fibres are rank-four affine
+  cubes, and `58/70` quartets per cube are transverse.  Four disjoint boundary
+  charts cover all `230,764` projective directions and give union `1,868,641`,
+  maximum multiplicity twelve, and incidence mass `14,076,604`.  Inverse-
+  fibre and direct line enumeration agree; an independent discriminant audit
+  reproduces the full histogram.  Script/output SHA-256:
+  `54d6fcae9f2c2527473b11a4f54a159c93ff56481c227b1363cc5386ce1e360f` /
+  `916b8c03e54a7e4039f7bb51d4463e38e8ac00d1059ab45a13f145e9fbb74dfc`.
+
 - `tournament_ordinal_sum_capacity_transfer_thm4181.py` and an independent
   literal-permutation C++ referee -> exact ordinal-sum transfer and parity
   component exchange [THM-4181 PROVED STRUCTURAL + FINITE-EXACT STRICT

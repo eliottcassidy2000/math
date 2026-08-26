@@ -1,0 +1,9 @@
+THM-4235 FINITE FOUR-DIMENSIONAL QUADRATIC KAKEYA CARRIER
+universe=(field:61,ambient_points:13845841,projective_directions:230764,torus_directions:216000,boundary_directions:14764)
+torus_plane_concentration=(histogram:{0: 4, 3540: 14400, 3541: 216000, 3600: 360},maximum:3600,maximum_fraction:1/60)
+torus_placement_ladder=(concurrent:12960001,one_fold:6696030,two_folds:3460500,three_folds:1814460)
+torus_quadratic=(multiplicity_histogram:{1: 480, 2: 20880, 4: 302760, 8: 1490340},direct_sha256:1f0a54fea0375993d5511dbc0f94e9d954cdd0350034161e571a385152af861d,cube_determinants:{-16: 1, -8: 28, 0: 12, 8: 28, 16: 1},transverse_quartets:86439720)
+full_projective_carrier=(union:1868641,ambient_fraction:1868641/13845841,multiplicity_histogram:{1: 150, 2: 9450, 4: 210151, 6: 120, 7: 30, 8: 1641540, 9: 60, 10: 1260, 12: 5880},maximum_multiplicity:12,incidences:14076604,direct_sha256:a864f6f5e985117986257347bd872ea3e2585deff17bbf3cbb505a765686097d,chart_sum_upper:1877824)
+euclidean_polynomial_shadow=(map:(t,s1^2+t*s1,s2^2+t*s2,s3^2+t*s3),focal_determinant:(2*s1+t)*(2*s2+t)*(2*s3+t),det_DF_sign:-1,focal_degree:3)
+scope_boundary=(finite_field_kakeya_set:True,euclidean_transfer:False,angles:False,tube_thickness:False,shadings:False,two_ends:False,scales:False)
+RESULT=PASS

@@ -1,6 +1,6 @@
 # Four-dimensional Kakeya: primary pins and transfer boundaries
 
-> **Freshness/status audit: 2026-08-24.**  `OPEN` below refers to the
+> **Freshness/status audit: 2026-08-26.**  `OPEN` below refers to the
 > Euclidean linear Kakeya set/maximal-function conjecture in dimension four.
 > Multilinear, sticky, plany, finite-field geometric, and Arithmetic-Kakeya
 > statements have different hypotheses and conclusions and must not be merged.
@@ -78,6 +78,44 @@ proves `dim_H K >= 13/4` under the extra sticky hypothesis; see also the
 *Revista Matemática Iberoamericana* 42 (2026).  It neither treats arbitrary
 Kakeya sets nor proves the predicted sticky dimension four.
 
+### New multiplicity-factoring input (2026-08-19)
+
+Hua--Yao--Yang,
+[*Buffered Shading-Compatible Multiplicity Factoring in Four Dimensions*](https://arxiv.org/abs/2608.18693),
+is a **PREPRINT v1 CLAIM**, submitted 2026-08-19.  For finite indexed convex
+parent--child families, it constructs one compatible refinement with constant
+inner/global/coarse multiplicities and a multiplicity product.  Its stated
+hypotheses include coordinatewise comparability of child John semiaxes,
+common parent semiaxis scales, a bounded relative Frostman constant inside
+each parent, and measurable positive-density shadings.  The coarse shading
+lives on a shortest-scale external buffer.
+
+The paper explicitly proves no new four-dimensional Kakeya maximal or
+Hausdorff exponent.  Polynomial-Wolff upper counting does not provide its
+uniform relative Frostman hypothesis: already one `delta`-tube in a
+`rho`-tube parent can have relative Frostman constant comparable to
+`(rho/delta)^3`.  Its local estimate also lacks the global tube-cardinality
+factor of a two-ends incidence estimate.  The useful frontier is therefore an
+exceptional-parent or weighted-average Frostman lemma, not an unqualified
+insertion of this theorem into the planebrush recursion.
+
+### Canonical higher-dimensional hostile: the ruled quadric
+
+Zahl's current survey records the hypersurface
+
+```text
+Z={(a,b,c,d) in R^4:ad-bc=1}.
+```
+
+It contains a three-dimensional family of lines.  Its full tube family fails
+the Convex Wolff Axioms, but after the survey's random thinning and
+translated/rotated replication one obtains roughly `delta^-3` tubes satisfying
+those axioms whose union has volume about `delta^(1/2)`.  This is a near miss,
+not a Kakeya counterexample.  It shows that pair intersections, direction
+determinants, and convex nonconcentration without an algebraic-parent sidecar
+cannot support a four-dimensional induction.  See
+[Zahl, Sections 4.1--4.2](https://arxiv.org/abs/2512.09397).
+
 ## Finite-field geometry is a separate solved cardinality problem
 
 Dvir,
@@ -129,7 +167,7 @@ alpha < 3/(3.059849573...-1) = 1.456417031....
 The repository's certificate cells prove none of these external Arithmetic-
 Kakeya exponents; they remain a search language and exact finite audit.
 
-## Repo import: THM-4035
+## Repo imports: THM-4035, THM-4235, and THM-4236
 
 [THM-4035](../../01-canon/theorems/THM-4035-sixty-clock-separation-and-finite-kakeya-spine.md)
 imports only the algebraic transversality predicate.  Over `F_61`, one common
@@ -137,19 +175,44 @@ imports only the algebraic transversality predicate.  Over `F_61`, one common
 two-plane representation with every four-minor zero.  Three independent
 clocks chart the nonzero torus of `P^3(F_61)`.
 
-The import preserves cyclic phase and determinant rank.  It destroys or omits
-affine line basepoints, direction completion, incidence multiplicity,
-Euclidean angular size, shadings, two-ends, scale, and Wolff nonconcentration.  Those
-coordinates are mandatory sidecars before any Kakeya theorem can consume the
-finite model.
+That first import preserves cyclic phase and determinant rank.  It destroys
+or omits affine line basepoints, direction completion, incidence multiplicity,
+Euclidean angular size, shadings, two-ends, scale, and Wolff
+nonconcentration.
+
+[THM-4235](../../01-canon/theorems/THM-4235-finite-four-dimensional-torus-kakeya-quadratic-carrier.md)
+closes the first three finite debts.  On the same nonzero torus directions,
+four affine placement laws have union sizes ranging from `12,960,001` to
+`1,814,460`.  Four recursive quadratic boundary charts then give one line in
+all `230,764` directions of `P^3(F_61)`, exact union size `1,868,641`, and
+maximum multiplicity twelve.  This is **FINITE-EXACT + VERIFIED**, not a
+Euclidean bound.
+
+[THM-4236](../../01-canon/theorems/THM-4236-four-dimensional-kakeya-monic-cubic-focal-selector.md)
+is a **PROVED** real line-selector theorem.  On a bounded slope chart, the
+invariant affine intercept `a(u)` gives incidence map
+`F(u,t)=(t,a(u)+tu)` and monic focal determinant
+`det(Da(u)+tI_3)`.  A Lipschitz intercept on a positive-measure slope patch
+sweeps positive four-volume; indeed a null selected family cannot have a
+local `W^(1,p)` intercept section for any `p>=1`.  The theorem also gives a
+sharp cubic `L1` constant `1/64`, a shaded focal bound, a two-ends linear
+density bound, and a finite polynomial-atlas Bezout multiplicity bound.
+
+These imports now retain direction, transverse placement, exact finite
+multiplicity, and a Euclidean focal law.  They still omit or do not control
+Euclidean tube thickness, an arbitrary selector's atlas complexity, seam
+adjacency, moving narrow flags, nested parents, relative Frostman cost, and
+Wolff nonconcentration.  Those coordinates are mandatory before a general
+Kakeya estimate can consume the model.
 
 ## Explicit non-implications
 
-None of the cited results or THM-4035 proves:
+None of the cited results or THM-4035/4235/4236 proves:
 
 - the Euclidean Kakeya conjecture in `R^4`;
 - a new Euclidean dimension or maximal-function bound;
 - a finite-field-to-Euclidean transfer theorem;
-- that one periodic orbit supplies all projective directions;
+- that one periodic orbit supplies all projective directions in a Euclidean
+  slope chart;
 - Arithmetic Kakeya at any new exponent; or
 - LRC(14).
