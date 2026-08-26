@@ -1,0 +1,14 @@
+THM4186_SOURCE_CHART_EXACT_ACCEPT
+checks=48
+source_resultant=p^4*R20
+R20_constant=-96*(105*Delta - 5696)**2/25
+R20_leading=-65610*Theta*eta**6
+symbolic_coefficient_sha256=161db63dfa1eba678ba814828ea16ad9bd02190cf4d46e30e84986635848c0aa
+source_infinity_sidecar=3LC(A)-LC(C)=2pK
+source_hessian_bridge=p*detD(A,C)=2*t^4*detHess(G)_mod_(A,C)
+collision_hostile=T=1;source_points=(0,1),(1,2);source_R20_squarefree
+universal_hostile=T=-1/6;source_point=(-1/6,-5/36);source_R20_squarefree
+critical_length=24
+packet=(8, 5, 4, 3, 2, 2, 1);defect=18
+finite=(n=21,beta=2);full=n=25
+semantic_sha256=bbb60bb84485f8ca25ffaae37c36725107723f7da023d4f54a383936e5a3361e

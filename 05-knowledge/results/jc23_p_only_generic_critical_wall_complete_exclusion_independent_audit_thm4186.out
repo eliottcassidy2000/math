@@ -1,0 +1,13 @@
+THM4186_NORMALIZED_INDEPENDENT_ACCEPT
+checks=57
+weight9_top=(p^3*y,y^3);eta=zeta=0_is_M_le_8
+normalized_resultant=T^56*(6T+1)^2*Q20
+generic_Q20_sha256=c71a94984838cee834adc6cbde848275fd55d3b49d0abf88fc7f691c758ea89e
+collision_Q20_sha256=b27b8b6bf188a7f199c02de6d01aeaad55ff52644525f202d10c30a8bf3879ff
+universal_Q20_sha256=9ff791d5c6f0d234753bce58e62437b368284a45f631c970a077f0d01d667c98
+collision_hostile=gcd(Q20,Q20prime)=T-1;fibre=X*(X-1)
+universal_hostile=Q20(-1/6)=0;fibre=(X-1)*(X^2-6)
+normalized_hessian_bridge=T*detD(f,h)=detHess(G)+f*G_XT
+critical_length=24;packet=(8, 5, 4, 3, 2, 2, 1);defect=18
+finite=(n=21,beta=2);full=n=25
+semantic_sha256=c155fa7ab7b9cdf7306460eb21dd437fd1f8af22516d582fd7eb7a0159e0ac48
