@@ -272,9 +272,13 @@ THM-2070 refutes the general HYP-8890/8895 bypasses.  Transfer
   [THM-4221](../01-canon/theorems/THM-4221-cycle-left-source-padding-no-sink-low-capacity-response-sector.md)
   proves an exact source-padding increment and low-`W/H` no-sink sector;
   [THM-4223](../01-canon/theorems/THM-4223-cyclic-cut-cover-boolean-mobius-hierarchy-and-two-bad-owner-obstruction.md)
-  gives the owner-set Mobius hierarchy and endpoint clique-star-edge model,
-  while refuting the naive pair-product bound first at order nine. Its `+min`
-  repair, HYP-9081, general `(OS+)`, and THM-4114/4118 remain **OPEN**.
+  gives lower owner-set Mobius and the first naive-pair failure at order nine;
+  [THM-4224](../01-canon/theorems/THM-4224-order-ten-minimal-plus-min-two-bad-owner-obstruction.md)
+  makes `+min` failure minimal at order ten, rules out fixed `product+K min`,
+  and leaves a hostile family HYP-positive;
+  [THM-4225](../01-canon/theorems/THM-4225-bad-owner-upper-zeta-successor-rook-hierarchy.md)
+  gives upper zeta as cycle-free successor rooks. The `27/25` candidate,
+  HYP-9081, `(OS+)`, and THM-4114/4118 remain **OPEN**.
 - Corrected HYP-8835: optimal support is uniquely odd; positive `Mp=0` gives a
   replicator integral. Pure optimum means Condorcet winner, not transitivity;
   source-over-`C3` is hostile and RPS levels are circles, not `T^2`.
@@ -369,8 +373,8 @@ lift/phase clocks.
   repeated-top. THM-4183/4186/4189/4192 and THM-4205/4209 close the named
   `K=0` faces; THM-4217 closes mixed off-anti `Delta=0`. THM-4218/4220 close
   dense and complete `zeta=0` exact `M=10`, including the split conic;
-  THM-4222 closes dense `M=11` via primitive CM. Their coefficient walls,
-  other cells, `M>=12`, and seam entry stay open.
+  THM-4222/4226 close dense `M=11/13` via primitive CM. Walls, other cells,
+  `M=12`, `M>=14`, and seam entry stay open.
   Exceptional quartic: THM-3703/3737 give grammar/image, THM-4034 the
   conductor, and THM-4039/4043/4046 reach `J_7`, obstruct `J_8`, and close
   critical `H`. [THM-4054](../01-canon/theorems/THM-4054-exceptional-affine-simple-zero-retained-packet.md)
