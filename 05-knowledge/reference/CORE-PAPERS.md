@@ -19,7 +19,7 @@ This maps imported claims, consumers, and exclusions; links—not bare IDs—are
 
 - **Sources/status:** [announcement](https://writings.stephenwolfram.com/2019/10/announcing-the-rule-30-prizes/); [active prizes](https://rule30prize.org/) checked 2026-08-15; openness is repo inference.
 - **Imported:** [Rowland](https://doi.org/10.25088/ComplexSystems.16.3.239) gives `v_m`; [Christol et al.](https://www.numdam.org/articles/10.24033/bsmf.1926/) applies only to [THM-3471](../../01-canon/theorems/THM-3471-rule30-motzkin-strip-circuit-and-innovation-carry-spectrum.md) finite sums.
-- **Repo frontier:** [THM-3516](../../01-canon/theorems/THM-3516-rule30-marked-van-der-put-carry-and-power-section-bridge.md) gives marked carry; [THM-4050](../../01-canon/theorems/THM-4050-rule30-half-arc-marked-cylinder-and-radius-nine-hostile.md) gives the cylinder; [THM-4204](../../01-canon/theorems/THM-4204-rule30-debruijn-reset-and-dyadic-prefix-saturation.md) gives spatial resets, the unique-fibre law, dyadic ancestry, and a saturated center-prefix no-go. No prize claim.
+- **Repo frontier:** [THM-4204](../../01-canon/theorems/THM-4204-rule30-debruijn-reset-and-dyadic-prefix-saturation.md) gives inverse fibres; [THM-4210](../../01-canon/theorems/THM-4210-rule30-lossless-dyadic-block-current-cartier-tree.md) gives the forward current tree. Physical closure and prizes remain open.
 
 ## Lonely Runner Conjecture
 

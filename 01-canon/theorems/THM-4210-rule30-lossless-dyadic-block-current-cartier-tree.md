@@ -2,19 +2,31 @@
 id: THM-4210
 title: "Rule 30 lossless dyadic block-current Cartier tree"
 status: >
-  RESERVED / PROVISIONAL PROOF CANDIDATE UNDER AUDIT. The isolated-seed
-  collision current has an exact all-scale dyadic block representation. Its
-  two physical children are the even Cartier channel at the two temporal
-  parities; the odd Cartier channel is the transverse spatial-coset current
-  needed for lossless reconstruction. The odd channel is exactly null for
-  the fixed marked center after decimation, but it re-enters physical current
-  generation through the Rule-30 quadratic coupling. The resulting
-  infinite-state two-child automaton gives exact dyadic-defect and Prize-1/
-  Prize-2 interfaces. Ambient endpoint, character-bank, and arbitrary-tail
-  hostiles show why bounded truncations do not decide either prize without
-  an all-scale physical-admissibility theorem. No Rule-30 prize is solved.
+  PROVED exact isolated-seed dyadic block-current recurrence + PROVED
+  lossless even/odd Cartier lift + PROVED infinite-state two-child 2-kernel
+  automaton and dyadic-difference transform + PROVED Prize-1/Prize-2
+  reductions + PROVED ambient truncation firewalls + FINITE-EXACT physical
+  hostiles + VERIFIED-EXACT + INDEPENDENTLY AUDITED. The two physical
+  children are the even Cartier channel at the two temporal parities; the odd
+  channel is the transverse spatial-coset current needed for lossless
+  reconstruction. It is exactly null for the fixed marked center after
+  decimation, but it re-enters physical current generation through Rule 30's
+  quadratic coupling. Bounded truncations of the ambient Frobenius/Cartier
+  carrier alone do not decide either prize without an all-scale physical-
+  admissibility theorem. No Rule-30 prize is solved.
 source: codex/session-rule30-debruijn-reset-20260826
-depends_on: []
+audit: >
+  PASS. Two independent agents audited Laurent orientation, scale indexing,
+  finite-depth losslessness, the center-null odd channel, nonlinear physical
+  coupling, dyadic inversion, Prize-1 quantifiers, Prize-2 shell equivalence,
+  ambient endpoint/jet/tail hostiles, and LSD-versus-MSD automaton scope.
+  One referee corrected an overstrong support-cone sentence and required the
+  ambient-tail and physical-current types to be separated. Primary and
+  no-import scalar scripts pass normally and under -O, byte-match their
+  stored outputs, and have independently verified hashes.
+depends_on:
+  - THM-3463-rule30-mealy-section-suffix-parity-current-and-complexity-boundary
+  - THM-4048-rule30-periodicity-balance-and-model-firewalls
 related:
   - THM-3463-rule30-mealy-section-suffix-parity-current-and-complexity-boundary
   - THM-3488-rule30-inward-slack-monicity-and-parity-cartier-ramification
@@ -36,9 +48,10 @@ hash_basis: raw LF bytes
 
 # THM-4210 -- the lossless dyadic block-current Cartier tree
 
-**RESERVED / PROVISIONAL PROOF CANDIDATE UNDER AUDIT.** The universal proofs
-below are algebraic. The exact computations audit their physical Rule-30
-instances; they do not promote a finite bank to an asymptotic statement.
+**PROVED in the exact physical and ambient scopes stated below;
+FINITE-EXACT for the displayed physical hostiles.** The universal proofs are
+algebraic. The computations audit their physical Rule-30 instances; they do
+not promote a finite bank to an asymptotic statement.
 
 The main correction is load-bearing. The odd Cartier channel is necessary to
 reconstruct the full current, but it does not drive the fixed even-lattice
@@ -107,7 +120,7 @@ boxed: Y_0^(h,r)=c_r delta_0.                          (7)
 Let
 
 ```text
-K(d,k)=[x^k](1+x+x^2)^d.                              (8)
+K(d,k)=[x^k](1+x+x^2)^d       in F_2.                 (8)
 ```
 
 The central coefficient of `q(w)^d` is one for every `d`: for even `d`,
@@ -505,10 +518,11 @@ delta_e(r)
  =sum_(u=0)^(h-1)[z^0]q^(h-1-u)N_(r+u).              (54)
 ```
 
-At time offset `u`, it sees exactly the sites `|j|<=h-1-u`. The bound is
-sharp in the ambient current category: an impulse `z^(h-1)` at `u=0`
-reaches the center through the unique all-left endpoint path. Hence no fixed
-spatial coefficient window determines (54) at every scale.
+At time offset `u`, only sites `|j|<=h-1-u` can contribute; internal Green
+coefficients can vanish. The radius is sharp in the ambient current category:
+an impulse `z^(h-1)` at `u=0` reaches the center through the unique all-left
+endpoint path. Hence no fixed spatial coefficient window determines (54) at
+every scale.
 
 More generally, for `P_m=w^m`, the response trace
 
@@ -524,7 +538,7 @@ ambient statement.
 
 ### 7.2 Fixed character and Hasse banks
 
-Fix finitely many quotient jets
+Fix a nonempty finite bank of quotient jets, with `M_i,d_i>=1`,
 
 ```text
 L/(1+w^(M_i))^(d_i)                                   (56)
@@ -564,16 +578,21 @@ origin observer.
 
 ### 7.3 Every finite formal prefix has opposite ambient continuations
 
-Let `A_0,...,A_(H+1)` be any finite physical Rule-30 row prefix. Continue it
-by any chosen finite-support rows `B_t`, and define the unobserved forcing by
+Let `A_0,...,A_(H+1)` be any finite physical Rule-30 row prefix. Set
+`B_t=A_t` for `0<=t<=H+1`, continue by any chosen finite-support rows `B_t`,
+and define the unobserved forcing by
 
 ```text
 D_t=B_(t+1)+qB_t.                                     (60)
 ```
 
-Then (6), every block identity, and every Cartier identity above hold for
-the resulting ambient driven system. The currents through time `H` remain
-the physical adjacent-`11` currents.
+The driven linear identities (6) and (10)--(27) then hold with `D_t`
+replacing `N_t` in the block source (3). If additionally
+`support(B_t) subset [-t,t]`, the support-derived center identities (7), (9),
+and (28), and hence their dyadic center consequences, also hold. The currents
+through time `H` remain the physical adjacent-`11` currents. Physical
+admissibility `D_t=N(B_t)`, in particular the quadratic identity (35), is
+deliberately not imposed beyond `H`.
 
 One continuation may take every later row to be `delta_0`, giving the
 eventually constant-one, unbalanced center. Another may take the later rows
@@ -598,10 +617,10 @@ to the physical quadratic law (35); the Frobenius/Cartier identities alone
 cannot supply the missing uniform argument.
 
 The same arbitrary-trace realization shows that the ambient algebra imposes
-neither automaticity nor rational-coefficient P-recursiveness: it realizes
-every binary center sequence, whereas each of those finite-description
-classes is countable. This is a formalism firewall, not a classification of
-the physical center.
+neither automaticity nor P-recursiveness in the standard sense of a nonzero
+eventual recurrence over `Q[n]`: it realizes every binary center sequence,
+whereas each of those finite-description classes is countable. This is a
+formalism firewall, not a classification of the physical center.
 
 ## 8. The finite-state conditional and exact state-count scope
 
