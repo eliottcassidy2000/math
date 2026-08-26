@@ -1,0 +1,11 @@
+THM4171_ROW_A_INNER_WALL_INDEPENDENT_ENDPOINT_AUDIT
+checks=57
+scope=INDEPENDENT_SOURCE_PAIR_AND_ENDPOINT_AUDIT_NOT_NORMALIZED
+alternative_source_pair=A,C0
+source_AC0=p^9R18;p^10R17;p^11R16;p^12R15
+actual_endpoints=J,S,P,H4_terminal
+terminal_firewall=H4_irreducible_reduced;all_eight_resultants_nonzero
+lengths=22,21,20,19
+monodromy=all_full_and_finite_bounds_strict
+semantic_sha256=00d1b3b825527642dc602fb9c79fa116a1a1cbea09fc55fe83b9cf2874710556
+verdict=ACCEPT

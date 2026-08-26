@@ -1,0 +1,13 @@
+THM4171_ROW_A_INNER_RESULTANT_WALL_EXACT_CERTIFICATE
+checks=76
+chart=K:k;Delta:(5696-90k)/105;Theta:3u^2;eta:2ku/3
+source=p^7R18;endpoints=J,S,P,H4_terminal
+J=3Phi*k+8k*u+27u^3
+S=-180k^3-135k^2u^2+2752k^2+2160ku^2+4860u^4
+P=16380k^3+12285k^2u^2-115072k^2-710640ku^2-9534464k+1999872u^2
+lengths=22,21,20,19
+packet=[7,7,4,2,2,2,1];genus=10
+responses=all_full_and_finite_carrier_orbit_bounds_strict
+H4_sha256=7406bc522f377d9150081de58bfbfedc5b23474254908ebc770555cd83bb4bdb
+semantic_sha256=874df6fe1c3dc79c439ea46ebe70f6d05981f90adaa98064998784c72c747f0a
+verdict=PASS
