@@ -35,13 +35,14 @@ hash_basis: raw LF bytes
 primary_audit: >
   PASS. The THM-4188 pool-wall/safe-prefix path forms inclusion-minimal
   projected decks and recursively rejects every cover through budget seven
-  on all load-bearing rows. O2 and O0 streams match after LF normalization;
-  semantic ledger 1b82498b55f45bd3.
+  on all load-bearing rows. O2, O0, and Apple-Clang-17 UBSan streams match
+  after LF normalization; semantic ledger 1b82498b55f45bd3.
 independent_audit: >
   PASS. The separate THM-4188 joint-wall path retains every distinct projected
   edge and literally scans all 480,700 seven-sets per row. It independently
   recovers the ten depth-five blockers and depth-six transversal numbers.
-  O2 and O0 streams match after LF normalization; semantic ledger
+  O2, O0, and Apple-Clang-17 UBSan streams match after LF normalization;
+  semantic ledger
   dd68c95b98fb9926.
 ---
 
@@ -320,12 +321,13 @@ primary O2: PASS, ledger 1b82498b55f45bd3
 primary O0: PASS, ledger 1b82498b55f45bd3
 independent O2: PASS, ledger dd68c95b98fb9926
 independent O0: PASS, ledger dd68c95b98fb9926
-UBSan: NOT EXECUTED; this host linker reports "cannot find -lubsan".
+primary Apple Clang 17 UBSan: PASS, ledger 1b82498b55f45bd3
+independent Apple Clang 17 UBSan: PASS, ledger dd68c95b98fb9926
 ```
 
-The UBSan limitation is an environment blocker, not a passing sanitizer
-claim.  A Linux/Clang UBSan replay remains appropriate before declaring a
-sanitizer audit.
+The original Windows MinGW host could not link `-lubsan`; that environment
+limitation is preserved as provenance, but the later macOS Apple-Clang-17
+replays close the sanitizer audit for both implementations.
 
 Replay from repository root:
 
@@ -344,6 +346,18 @@ g++ -std=c++20 -O0 -Wall -Wextra -Wpedantic -Werror \
   04-computation/lrc14_exactly_one_newcomer_projected_repair_depth_stratification_independent_audit_thm4201.cpp \
   -o /tmp/lrc4201-independent-o0
 /tmp/lrc4201-independent-o0
+
+clang++ -std=c++20 -O1 -g -fsanitize=undefined \
+  -fno-sanitize-recover=undefined -Wall -Wextra -Wpedantic -Werror \
+  04-computation/lrc14_exactly_one_newcomer_projected_repair_depth_stratification_thm4201.cpp \
+  -o /tmp/lrc4201-primary-ubsan
+/tmp/lrc4201-primary-ubsan
+
+clang++ -std=c++20 -O1 -g -fsanitize=undefined \
+  -fno-sanitize-recover=undefined -Wall -Wextra -Wpedantic -Werror \
+  04-computation/lrc14_exactly_one_newcomer_projected_repair_depth_stratification_independent_audit_thm4201.cpp \
+  -o /tmp/lrc4201-independent-ubsan
+/tmp/lrc4201-independent-ubsan
 ```
 
 The maintained wrappers locally suppress only the artificial `return-type`
