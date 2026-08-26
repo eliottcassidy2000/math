@@ -1,5 +1,66 @@
 # Script Results Index
 
+- `lrc14_multideletion_all_newcomers_exact_thm4174.py` and three second-path
+  residual/transversal audits -> exact completion of the fixed THM-4156
+  newcomer lane [THM-4174 PROVED RELATIVE TO THM-4150/4156/4158/4170 +
+  VERIFIED-EXACT + DECLARED-SHARED-GEOMETRY AUDITS; LRC(14) OPEN]. The exact
+  failure sets at deletion arities `3,4,5,6` have sizes `61,9,1,0`, so every
+  positive `q` outside the pool supplies all `binom(27,7)=888,030` anchored
+  cores at every content and with every distinct positive odd tail pair.
+  The unique five-deletion residual is `q=50`: its transversal number rises
+  from `1` at arity four to `5` at arity five and `8` at arity six. The
+  primary audit reconstructs `7,134` rational walls, makes `2,093,130` exact
+  threshold comparisons with zero equalities, and exhausts all transversals
+  through size seven. NumPy group-lattice and SciPy MILP routes reproduce the
+  residual ledgers; separately instantiated recursion checks share the primary
+  branch order and rational wall geometry. Primary source/output SHA-256:
+  `b8ad9ab60715ddde853a45459ccbc6d01f1d6e2c6a31f48eaa497765208722de` /
+  `8679f01a234987cc7784419d1013cac9c26a16f34ac2e00d4d94e6ee09327586`;
+  arity-four, arity-five, and arity-six audit source/output pairs:
+  `6185e541a234d7b0a6f672b44ed0fdbd0756db98368f1715e70ffcd850a5948f` /
+  `a7dacffa7ab64a497df3dab511249134d20bf5607561b7f968fe77b40c1beaec`,
+  `d018b7a84c3683cb3b1b320d0e17dbd6fba8dfe370752e7fee6d149e5e0b6b74` /
+  `7246a6644c35b9a1afca039628ef7810dd51523535098344126c166d466a54e4`,
+  and `4536216aa8435fac609f9f5ed22541326fc0931a366866756b0e669e00a9b2cb` /
+  `ee13bbc4bb7fbdc51b8294635280d7bee6d501fe080f2815ac637d087edbd62b`.
+
+- `jc23_repeated_top_row_a_complete_exclusion_thm4173.py` and an independent
+  generic-coefficient bridge audit -> complete repeated-top row-`A`
+  exclusion [THM-4173 PROVED RELATIVE TO THE STATED THM-3827--4171
+  TRANSPORT PACKAGE + VERIFIED-EXACT + INDEPENDENTLY BRIDGE-AUDITED; JC(2)
+  OPEN]. On `zeta=-eta`, `eta*Delta*(Delta+Theta)!=0`, THM-4171 handles
+  `D_A=0`; off that wall the full resultant divisor has affine critical
+  length `21` even when projected roots collide. Several reduced points in
+  one fibre retain their multiplicities, while a single nonreduced point
+  forces a zero Keller Hessian through
+  `T det D(G_X/T,G_T)=det Hess(G)+(G_X/T)G_XT`. Thus no residual
+  discriminant, universal fibre-separation, or `Q_19(-1/6)` hypothesis is
+  needed. Primary source/output SHA-256:
+  `b7fc2c372e398aff9181f001a0c20bd794a112b1a426dac288148f2a3d0ce8e4` /
+  `4a43b0f333c2cc2d8dbc7373d3f624c382ac5e9be4bbe85d9fbd41f6dbb02ba2`;
+  independent source/output:
+  `6d7c01a3396e802a538c3a5530dcbf203df883d44c4da9c926635ef3a4b18810` /
+  `95810cae502f9a17d083906d4316088b73df4f30ffe21fd2f9ba960384b43625`.
+
+- `tournament_multideletion_support_tomography_thm4172.py`, its independent
+  C++ audit, and `tournament_order11_two_deletion_certificate_thm4172.cpp`
+  with five frozen streams -> all-depth deletion tomography and same-parity
+  Johnson transport [THM-4172 PROVED + VERIFIED-EXACT + INDEPENDENTLY
+  AUDITED]. The complete capacity-deletion tower binomially inverts the
+  outside-support histogram; arbitrary edge polynomials diagonalize by
+  vertex-support degree; and even deletion depth expresses the parent tilt
+  as a positive barycenter of corrected restrictions. Exact two-deletion
+  banks certify all `12,155` symmetric prime order-eleven classes and all
+  `1,002` prime attachments over one frozen asymmetric parent. The separate
+  `100,000`-row stream is a deterministic sample, and the full asymmetric
+  bank remains open. Primary and independent source/output SHA-256:
+  `720aee79d95eaf1ab0049dcf7d7bdd099592be2786716f52e6c399994b65db4d` /
+  `8090ebd4969ffbb2ff822623fc0d98e498e3a46426fd71be50e90e097bcb1f80` /
+  `39ade4819410c0226aa9a27d40c4290eecffa1fc6255cf638739d194b03811aa` /
+  `9112310d8a42cda65e5a1dc7862184584fdbb9013074043ddd83e102b0f3704e`;
+  finite evaluator SHA-256
+  `c2113784df1dfabef739f50bd93eae6d2d9aec9f1fb9cdf96dd4d90ff975f350`.
+
 - `lrc14_triple_deletion_matching_eventual_haar_thm4170.py`, its independent
   C++ audit, and two finite-census implementations -> concordant exact
   certificates [THM-4170 PROVED RELATIVE TO THM-4150/4156 + VERIFIED-EXACT +

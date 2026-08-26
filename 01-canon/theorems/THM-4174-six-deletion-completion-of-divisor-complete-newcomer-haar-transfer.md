@@ -2,8 +2,8 @@
 id: THM-4174
 title: "Six-deletion completion of divisor-complete newcomer Haar transfer"
 status: >
-  PROVED RELATIVE TO THM-4150/4156/4170 + VERIFIED-EXACT STANDARD-LIBRARY
-  WALL-LATTICE/SUBMASK CENSUS + INDEPENDENT NUMPY GROUP-LATTICE/MILP AND
+  PROVED RELATIVE TO THM-4150/4156/4158/4170 + VERIFIED-EXACT STANDARD-LIBRARY
+  WALL-LATTICE/SUBMASK CENSUS + SECOND-PATH NUMPY GROUP-LATTICE/MILP AND
   EXACT-TRANSVERSAL AUDITS; LRC(14) OPEN. Every positive newcomer q outside
   the fixed THM-4156 pool closes all 888,030 anchored seven-choice bodies at
   every common content with every pair of distinct positive odd tails. The
@@ -12,9 +12,9 @@ source: codex-lrc-triple-deletion-synthesis-20260826
 depends_on:
   - THM-4150-safe-set-haar-measure-universal-odd-tail-lrc14-transfer
   - THM-4156-divisor-complete-anchor-pool-haar-odd-tail-transfer
+  - THM-4158-three-band-wrapped-carrier-odd-tail-lrc14-transfer
   - THM-4170-triple-deletion-matching-eventual-haar-odd-tail-transfer
 related:
-  - THM-4158-three-band-wrapped-carrier-odd-tail-lrc14-transfer
   - THM-4160-anchored-haar-deletion-cover-and-content-tower
   - THM-4166-two-deletion-repair-graph-haar-odd-tail-transfer
 script: 04-computation/lrc14_multideletion_all_newcomers_exact_thm4174.py
@@ -41,15 +41,16 @@ primary_audit: >
   Normal, optimized, and hash-seeded outputs byte-match.
 independent_audit: >
   ACCEPT WITH DECLARED SHARED GEOMETRY. Separate NumPy group-lattice arrays,
-  SciPy MILP witnesses, and independently ordered exact recursions reproduce
-  the d=4 and d=5 residual ledgers and the q=50 d=6 tau=8 control. These are
-  distinct algorithms but remain Python implementations sharing the exact
-  wall-lattice identity; no independent C++ geometry is claimed.
+  SciPy MILP witnesses, and separately instantiated exact-recursion checks
+  reproduce the d=4 and d=5 residual ledgers and the q=50 d=6 tau=8 control.
+  The group-lattice/MILP route is algorithmically distinct; the recursions
+  share branch order and all paths remain Python implementations sharing the
+  exact wall-lattice identity. No independent C++ geometry is claimed.
 ---
 
 # THM-4174 -- six-deletion completion of every newcomer
 
-**PROVED RELATIVE TO THM-4150/4156/4170 + VERIFIED-EXACT; LRC(14) REMAINS
+**PROVED RELATIVE TO THM-4150/4156/4158/4170 + VERIFIED-EXACT; LRC(14) REMAINS
 OPEN.**
 
 ## 1. Statement
@@ -66,7 +67,7 @@ P={8,10,15,16,20,30,40,42,60,63,80,84,85,88,95,
 O=P\A.                                                   (1)
 ```
 
-For every positive integer `q notin P` and every `d`, define the
+For every positive integer `q notin P` and every `0<=d<=27`, define the
 `d`-deletion repair hypergraph on `O` by
 
 ```text
@@ -209,8 +210,8 @@ recursion. At every search state it chooses an uncovered edge and branches on
 its vertices; a greedy disjoint-edge packing gives a valid lower-bound prune.
 All returned covers are checked against every active edge. A second path uses
 global failure-group arrays and exact signed-integer vectorization, then checks
-the same hypergraphs both by MILP witnesses and by a separately implemented
-exact recursion.
+the same hypergraphs both by MILP witnesses and by a separately instantiated
+exact-recursion cross-check.
 
 ## 4. The exact residual filtration
 
@@ -380,9 +381,10 @@ python3 -B 04-computation/lrc14_five_deletion_residual_audit_thm4174.py
 python3 -B 04-computation/lrc14_q50_six_deletion_arity_audit_thm4174.py
 ```
 
-All four fresh streams byte-match the frozen outputs. The independent paths
-use different group arrays, optimization witnesses, and recursion order, but
-they share the exact rational wall-lattice identity and the Python runtime.
+All four fresh streams byte-match the frozen outputs. The second path uses
+different group arrays and optimization witnesses; its exact-recursion check
+shares the primary branch order. All paths share the rational wall-lattice
+identity and Python runtime.
 A warning-clean signed-128-bit C++ reconstruction would be a valuable third
 path; it is not represented as an existing audit or a dependency of the
 mathematical double-counting proof.

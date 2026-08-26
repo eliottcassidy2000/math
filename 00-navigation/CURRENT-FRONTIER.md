@@ -75,12 +75,10 @@ is the safe control `M(S_13)=99/338`. No cited result proves LRC(14).
   give tails, the 60-phase law, and clocks; THM-4129/4136 close fixed `U/2U`.
   THM-4142/4148/4151 give families and the affine gate. THM-4150/4152/4153
   give abstract Haar transfers, but THM-4154 corrects their displayed pools.
-  THM-4156/4158 give the base pool/carrier. [THM-4160](../01-canon/theorems/THM-4160-anchored-haar-deletion-cover-and-content-tower.md),
-  [4166](../01-canon/theorems/THM-4166-two-deletion-repair-graph-haar-odd-tail-transfer.md), and
-  [THM-4170](../01-canon/theorems/THM-4170-triple-deletion-matching-eventual-haar-odd-tail-transfer.md)
-  exactly classify deletion arities `1..3`: triple has 61 failures, last
-  `q=924`, and `888,030` cores per qualifier. Failure is not danger; entry,
-  arbitrary bodies, and LRC(14) remain open.
+  [THM-4174](../01-canon/theorems/THM-4174-six-deletion-completion-of-divisor-complete-newcomer-haar-transfer.md)
+  makes THM-4156/4158/4160/4166/4170 exact through `d=6`:
+  failures at `d=3..6` are `61,9,1,0`, so every newcomer supplies `888,030`
+  cores. Fixed-family only: no entry or arbitrary bodies; LRC(14) remains open.
   See the [proof map](LRC14-PROOF-MAP.md).
 - **PROVED:** [THM-2928](../01-canon/theorems/THM-2928-critical-seven-comb-grid-tensorization-and-drift-tariff.md)/2941: literal zero/one/two/three-drift sectors are empty; `k=2,3` are finite.
 - **Orthogonal routes.** THM-1017 is HYP-6820; THM-2047/2050 keep phase/exit; THM-731/2048 prune; THM-1290 ends at `55`; HYP-8900 nonuniform.
@@ -258,9 +256,12 @@ THM-2070 refutes the general HYP-8890/8895 bypasses.  Transfer
   THM-4128/4131/4135/4137 prove centrality through order ten.
   [THM-4144](../01-canon/theorems/THM-4144-order-eleven-large-homogeneous-module-johnson-centrality.md)/4162/
   [4163](../01-canon/theorems/THM-4163-order-eleven-homogeneous-pair-johnson-centrality.md)
-  close nonprimes; [THM-4167](../01-canon/theorems/THM-4167-tournament-exposure-capacity-deletion-support-moment-and-parity-holonomy.md)
-  gives deletion holonomy; [THM-4168](../01-canon/theorems/THM-4168-prime-order-eleven-nontrivial-automorphism-johnson-centrality.md)
-  closes `12,155` symmetric primes. [THM-4169](../01-canon/theorems/THM-4169-prime-parent-one-vertex-augmentation-and-quartic-johnson-transfer.md)
+  close nonprimes; [THM-4168](../01-canon/theorems/THM-4168-prime-order-eleven-nontrivial-automorphism-johnson-centrality.md)
+  closes `12,155` symmetric primes. THM-4167 gives one-deletion holonomy;
+  [THM-4172](../01-canon/theorems/THM-4172-multideletion-support-tomography-and-same-parity-johnson-holonomy.md)
+  gives all-depth tomography/even-depth barycentres and certifies them
+  plus `1,002` children of one asymmetric parent—not the full bank.
+  [THM-4169](../01-canon/theorems/THM-4169-prime-parent-one-vertex-augmentation-and-quartic-johnson-transfer.md)
   gives quadratic `(H,c)`, quartic gates, and via **CITED** Schmerl--Trotter a
   `7,921,973,322`-presentation cover plus critical controls—not an orbit/class
   count. The asymmetric bank is **OPEN**; THM-4133 refutes order twelve.
@@ -359,8 +360,9 @@ lift/phase clocks.
   empty exact `M=8`; THM-4147 excludes `M=9` `P/Y/B/A`.
   [THM-4157](../01-canon/theorems/THM-4157-repeated-top-edge-wall-planar-jacobian-exclusion.md)
   adds `B/C` critical opens and all `D` with `eta!=0`.
-  [THM-4171](../01-canon/theorems/THM-4171-row-a-inner-resultant-wall-planar-jacobian-exclusion.md)
-  closes row-`A` `D_A=0` at lengths `22,21,20,19`; other `A/B/C` walls remain.
+  [THM-4173](../01-canon/theorems/THM-4173-repeated-top-row-a-complete-planar-jacobian-exclusion.md)
+  completes repeated-top row `A` (including THM-4171's `D_A=0` wall) via a
+  resultant-multiplicity/Hessian bridge; other `B/C` walls remain.
   THM-4155 handles Y-only;
   [THM-4159](../01-canon/theorems/THM-4159-inner-resultant-wall-planar-jacobian-exclusion.md),
   [4161](../01-canon/theorems/THM-4161-y-only-double-top-root-planar-jacobian-exclusion.md), and

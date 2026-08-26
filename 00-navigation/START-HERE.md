@@ -22,8 +22,8 @@ Then read the routed frontier, guardrails, and theorem; logs are history.
 ## Seventeen high-signal facts to reuse, not re-derive
 
 1. **LRC(14) is first open.** Direct `<=6`; projected caps `1579/216` leave
-   `372913/109/12`. THM-4160/4166/4170 make fixed-pool deletions `1..3` exact;
-   triple has 61 failures, last `q=924`. Entry, arbitrary bodies, and LRC stay open.
+   `372913/109/12`. THM-4160/4166/4170/4174 make fixed-pool `d<=6` exact
+   (failures `61/9/1/0` at `d=3/4/5/6`). Entry, arbitrary bodies, and LRC stay open.
 2. **The `q <= 25` period claim is refuted.** THM-762/764 exhibit `26*{1,...,12} union {339}`, whose first good period is `27`.
 3. **Good-period existence is a maximum statement.** The tight resonant AP
    defeats average/count arguments; see MISTAKE-127/129/130.
@@ -55,7 +55,7 @@ Then read the routed frontier, guardrails, and theorem; logs are history.
     is exact; THM-2084 closes cells. THM-4130/4138/4141/4143 empty `M=8`;
     THM-4147/4157 close the stated `M=9` chambers. In the THM-4155 Y-only chart,
     THM-4159/4161/4164/4165 close every `zeta!=0` coefficient stratum;
-    THM-4171 closes the coefficient-open repeated-top row-`A` wall `D_A=0`.
+    THM-4173 completes repeated-top row `A`, including THM-4171's `D_A=0` wall.
 13. **Complete period-14 coordinates can be globally blind.** THM-2058 keeps
     every fixed-depth packet coordinate but exits at `47/113`; THM-2043/2047/
     2050 separate local completeness from global maxima.
