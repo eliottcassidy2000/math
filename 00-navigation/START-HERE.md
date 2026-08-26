@@ -44,10 +44,10 @@ Then read the routed frontier, guardrails, and theorem; logs are history.
 9. **Whole-packet Frobenius is not an LRC proof.** THM-3255/3267 give
    rank/phase; THM-3285's FINITE-EXACT `13`-label `R-M-R` horn has two middle
    completions but no outer co-support. Atom, current and LRC remain open.
-10. **Order-eleven asymmetric bank is OPEN.** THM-4144/4162/4163 close
-    nonprimes; THM-4168 closes `12,155` symmetric primes; THM-4169 has
-    presentations, not classes. THM-4187 is transitive-left; THM-4212/13/15/16
-    give sharp cycle/adjacent thresholds and final-tail-five `(OS+)`.
+10. **Order-eleven asymmetric bank is OPEN.** THM-4144/62/63 close nonprimes;
+    THM-4168 closes `12,155` symmetric primes; THM-4169 is presentation-only.
+    THM-4212/13/15/16 give cycle/adjacent thresholds; THM-4219/4221 add the
+    no-sink endpoint floor and a source-padding sector. General `(OS+)` is open.
 11. **Support is not multiplicity.** THM-2000/2005/2352/3359/3362/3382
     separate collision, phase and address; THM-3425 needs period plus parity.
     Composite rank seven and FC(3) remain open.

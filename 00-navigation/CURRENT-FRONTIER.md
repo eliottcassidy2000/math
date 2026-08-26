@@ -255,17 +255,11 @@ THM-2070 refutes the general HYP-8890/8895 bypasses.  Transfer
   close nonprimes; [THM-4168](../01-canon/theorems/THM-4168-prime-order-eleven-nontrivial-automorphism-johnson-centrality.md)
   closes symmetric primes; THM-4167/[4172](../01-canon/theorems/THM-4172-multideletion-support-tomography-and-same-parity-johnson-holonomy.md)
   add tomography.
-  [THM-4169](../01-canon/theorems/THM-4169-prime-parent-one-vertex-augmentation-and-quartic-johnson-transfer.md)
-  is **CITED** presentation-only;
-  [THM-4177](../01-canon/theorems/THM-4177-root-split-johnson-current-and-source-sink-boundary-census.md)
-  gives padding descent;
-  [THM-4181](../01-canon/theorems/THM-4181-ordinal-sum-capacity-transfer-and-parity-component-exchange.md)
-  gives transfer/census;
-  [THM-4184](../01-canon/theorems/THM-4184-path-cover-parity-ordinal-cocycle-and-lollipop-positivity.md)
-  gives parity/cocycle/lollipops; THM-4187 gives transitive-left `(OS+)` and
+  THM-4169 is **CITED** presentation-only; THM-4177 gives padding descent;
+  THM-4181 gives transfer/census; THM-4184 gives parity/cocycle/lollipops;
+  THM-4187 gives transitive-left `(OS+)` and
   THM-4193 transitive-context tail-five;
-  [THM-4202](../01-canon/theorems/THM-4202-vertex-transitive-ordinal-remainder-positivity.md)
-  gives VT/one-sided positivity;
+  THM-4202 gives VT/one-sided positivity;
   [THM-4208](../01-canon/theorems/THM-4208-cycle-prefix-arbitrary-context-recurrence-endpoint-energy-and-eventual-positivity.md)
   gives C-finite response/endpoint energy;
   [THM-4212](../01-canon/theorems/THM-4212-cycle-prefix-uniform-arbitrary-context-threshold-and-tail-five-lower-bound.md)
@@ -276,8 +270,13 @@ THM-2070 refutes the general HYP-8890/8895 bypasses.  Transfer
   gives adjacent threshold `7`, floor `967788`, and `(OS+)` from `8` (`Z_7`
   bare open);
   [THM-4216](../01-canon/theorems/THM-4216-tail-five-nonsingleton-right-factor-positivity.md)
-  gives bare `5/6` and final-tail-five `(OS+)`. General `(OS+)` and
-  THM-4114/4118 completeness remain **OPEN**.
+  gives bare `5/6` and final-tail-five `(OS+)`;
+  [THM-4219](../01-canon/theorems/THM-4219-no-sink-endpoint-energy-floor-and-near-ordinal-sharpness.md)
+  proves `Delta_V>=n(n-1)H^2` and coefficient-`5` sharp towers;
+  [THM-4221](../01-canon/theorems/THM-4221-cycle-left-source-padding-no-sink-low-capacity-response-sector.md)
+  proves an exact source-padding increment and a low-`W/H` no-sink sector.
+  HYP-9081's strong five-copy bound, general `(OS+)`, and THM-4114/4118
+  completeness remain **OPEN**.
 - Corrected HYP-8835: optimal support is uniquely odd; positive `Mp=0` gives a
   replicator integral. Pure optimum means Condorcet winner, not transitivity;
   source-over-`C3` is hostile and RPS levels are circles, not `T^2`.
