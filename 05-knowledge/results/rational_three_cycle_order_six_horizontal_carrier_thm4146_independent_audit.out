@@ -1,0 +1,10 @@
+THM4146_INDEPENDENT_AUDIT
+rational_graph=PASS;escape=PASS;two_adic_unit_classes=PASS
+matrix_central_sign=PASS;integral_q48_hexagon=COMPLETE;model_defining_section_character=PASS
+universal_trace_parameter=PASS;AP_difference_derivation=PASS;Pythagorean_uniqueness=PASS
+horizontal_section=PASS;uniform_q_fibre_split=27*a^3/64_nonzero
+period6_dynatomic=degree54;irreducible_mod11;real_points18;real_cycles3
+period6_coefficient_sha256=e48d6769fc26e83b238513c8dbebbb16dcdf1533a8680ea0bc6bc08e97070c8a
+scalar_mod63_cycles=((5, 62, 56), (14, 26, 20), (35, 47, 41));all_length3
+semantic_sha256=014f11897d8ca216faa897f117db118a9760b791d393d664289b621d99456d3c
+verdict=ACCEPT;SECTION_POLYNOMIAL_COLLISION_NOT_ONE_FIBRE;JC2_OPEN

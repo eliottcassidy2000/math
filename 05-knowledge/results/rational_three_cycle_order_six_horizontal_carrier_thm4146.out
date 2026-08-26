@@ -1,0 +1,25 @@
+THM4146_PRIMARY_AUDIT
+finite_affine_rational_cycle=-7/4->5/4->-1/4->-7/4
+finite_affine_rational_preperiodic_numerators=-7,-5,-3,-1,1,3,5,7
+bounded_odd_graph=-7:5,-5:-1,-3:-5,-1:-7,1:-7,3:-5,5:-1,7:5
+universal_cycle_parameter=c=-(s^2+s+2);disc=(4s^2+6s+9)^2
+universal_lift=trace1;det1;L^2-L+I=0;L^3=-I;L^6=I
+specific_integer_lift=A[[1,-13],[1,3]];det=16;trace=4;A^3=-64I
+specific_invariant=q=X^2+2XY+13Y^2=(X+Y)^2+3*(2Y)^2;level=48
+integral_q48_hexagon=((-7, 1), (-5, -1), (2, -2), (7, -1), (5, 1), (-2, 2))
+model_defining_section_character=L(Bz)/L(z)=-1;not_BC_normal_character
+AP_uniqueness=(m,r,c)=(-1/4,3/2,-29/16)
+Pythagorean_uniqueness=(a,b,h,D)=k*(3,4,5,29k)
+horizontal_normalization=t=4rho/(3a);U=a/2+t^2;V=-t^3-3at/4
+horizontal_a_minus48_roots=-6,6,0;translated=-7,5,-1
+horizontal_images=(U,V,q)=((12, 0, -8640), (12, 0, -8640), (-24, 0, -55296))
+horizontal_firewall=three_parameter_points_do_not_lie_in_one_q_fibre
+period6_dynatomic_degree=54;irreducible_mod11=PASS
+period6_real_points=18;period6_real_cycles=3;period6_affine_rational_points=0
+period6_coefficient_sha256=e48d6769fc26e83b238513c8dbebbb16dcdf1533a8680ea0bc6bc08e97070c8a
+mersenne63=degree((g^6)')=63=3^2*7;ord_3(2)=2;ord_7(2)=3;A_mod63_order=6
+pair_sums_x=-1/2,1,-2;pair_sums_y=-2,4,-8;integer_product=64
+scalar_mod63_cycles=((5, 62, 56), (14, 26, 20), (35, 47, 41));no_length6
+palette=F2^2_nonzero_C3_matches_normalized_cycle_-2,1,-1/2
+semantic_sha256=014f11897d8ca216faa897f117db118a9760b791d393d664289b621d99456d3c
+verdict=EXACT_ORDER6_LINEAR_LIFT_AND_HORIZONTAL_FIBRE_HOSTILE;NO_BC_ACTION;JC2_OPEN

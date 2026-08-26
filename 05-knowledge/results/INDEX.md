@@ -65,6 +65,29 @@
   semantic ledgers:
   `b91c8b2d1205fb15b7d5c7a77e81d30a4bb0fc0442c6756ea8afdd98f1b15d77` /
   `1d2e2cd6d6fde167cdf32e8c27b273b1e5aae82a9067471ff6ad6369f9049d63`.
+- `rational_three_cycle_order_six_horizontal_carrier_thm4146.py` and an
+  independent Fraction/polynomial-division audit -> concordant exact ledgers
+  [THM-4146 PROVED + VERIFIED-EXACT + INDEPENDENTLY AUDITED; EXTENDS THM-4139;
+  JC(2) OPEN]. Beyond THM-4139's rational graph, AP rigidity, specific lift and
+  normalization/horizontal separation, every exact quadratic three-cycle has
+  a trace-one `SL_2` lift with cube `-I`. For `x^2-29/16`, its integer model
+  gives the complete hexagon on `X^2+2XY+13Y^2=48`; the signed Pythagorean
+  template forces `3:4:5` and `29`. At `a=-48`, THM-4134's horizontal `V=0`
+  divisor has the same source roots `{-6,6,0}` but a set-theoretic singleton
+  `q`-fibre plus a two-reduced-point outer `q`-fibre mapping to the node of
+  `S`, distinct from THM-4139's three `q=0` normalization images. The
+  introduced order-six action therefore acts only on the comparison divisor,
+  not the BC cover. The quadratic exact-period-six factor is irreducible mod
+  `11`, degree `54`, with `18` real roots; scalar iteration mod `63` has only
+  three-cycles. THM-4138 already closes the old degree-`16/15` wall by
+  independent mechanisms. Primary script/output SHA-256:
+  `599bd10756498f27f9c528e71829673a14406c60a4c3bb70ff4ac559eecc4c19` /
+  `0f4c26ef092827ce54afcc9cf215e0c350af51554c7c9ac6b6affe44128311e2`;
+  independent:
+  `81969e3d145f5fd2a83c794e2871d5d901c5c5b8641f9a6c9a3f11c81e9ef1d1` /
+  `0ac6ff15ba0bd55fb4474fa3f298b59ad24391d814e96b4a6f0f8360d9e9c1c0`;
+  shared semantic ledger:
+  `014f11897d8ca216faa897f117db118a9760b791d393d664289b621d99456d3c`.
 
 - `lrc14_common_safe_arc_clock_pool_odd_tail_completion_thm4142.py` and
   independent clean-room referee -> concordant exact mechanisms [THM-4142
