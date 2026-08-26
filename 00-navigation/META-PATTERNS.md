@@ -129,7 +129,7 @@ THM-4090/4094/4095.
 
 **Trigger/action:** build lawful ambient edge/primitive face first.
 **Counterindication/sidecar:** verify hypotheses; retain labels/field and
-multiplicity. **Evidence:** THM-4191/4192/4217/4218.
+multiplicity. **Evidence:** THM-4191/4192/4217/4218/4220/4222.
 
 ## Quotient by the actual repair, then test the native survivor
 

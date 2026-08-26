@@ -55,9 +55,9 @@ Then read the routed frontier, guardrails, and theorem; logs are history.
     closes cells; THM-4130--4165 close named `M<=9` chambers. THM-4176/4180
     exhaust repeated-top; THM-4183/4186/4189/4192 close P-only, THM-4209/4176
     close mixed/anti `K=0`, and THM-4205 closes its last Y-only row. Thus the
-    `K=0` is empty; THM-4217 closes mixed off-anti `Delta=0`, and THM-4218
-    closes dense-top exact `M=10`. Its walls, other cells, `M>=11`, and entry
-    survive; `eta=zeta=0` exits `M=9`.
+    `K=0` is empty; THM-4217 closes mixed off-anti `Delta=0`; THM-4218/4220
+    close dense and zeta-zero `M=10`, and THM-4222 closes dense `M=11`.
+    Their walls, other cells, `M>=12`, and entry survive.
 13. **Complete period-14 coordinates can be globally blind.** THM-2058 keeps
     every fixed-depth packet coordinate but exits at `47/113`; THM-2043/2047/
     2050 separate local completeness from global maxima.

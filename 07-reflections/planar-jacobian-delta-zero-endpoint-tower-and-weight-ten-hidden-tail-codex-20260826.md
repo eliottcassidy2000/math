@@ -9,15 +9,22 @@
 - **PROVED RELATIVE + VERIFIED-EXACT + independently audited:**
   [THM-4218](../01-canon/theorems/THM-4218-exact-weight-ten-hidden-elliptic-tail-degree-three-planar-jacobian-exclusion.md)
   closes the dense-top exact-`M=10` chamber for arbitrary lower coefficients.
+- **PROVED RELATIVE + VERIFIED-EXACT + independently audited:**
+  [THM-4220](../01-canon/theorems/THM-4220-weight-ten-zeta-zero-genus-two-planar-jacobian-exclusion.md)
+  closes the entire `zeta=0` exact-`M=10` top-unit wall, including its
+  split-conic strict transform.
+- **PROVED RELATIVE + VERIFIED-EXACT + independently audited:**
+  [THM-4222](../01-canon/theorems/THM-4222-dense-weight-eleven-primitive-cm-planar-jacobian-exclusion.md)
+  closes the dense-side exact-`M=11` chamber by primitive CM and degree zero.
 - **FINITE-EXACT / TRACKED SCRATCH:** one independent critical-open control
   in [the scratch report](../.scratch/jc_m10_dense_20260826/REPORT.md).
-- **OPEN:** the four top coefficient walls, nonzero-`Delta`/nonzero-`K`
-  exact-`M=9` critical walls, seam entry, other cells, exact `M>=11`, `JC(2)`,
-  and `DC(2)`.
+- **OPEN:** the three remaining exact-`M=10` top walls, five dense-`M=11`
+  walls, nonzero-`Delta`/nonzero-`K` exact-`M=9` critical walls, seam entry,
+  other cells, exact `M>=12`, `JC(2)`, and `DC(2)`.
 
 This reflection preserves the session's operation choices and next questions.
-The theorem files, not this reflection, are the truth sources for THM-4217
-and THM-4218.
+The theorem files, not this reflection, are the truth sources for
+THM-4217/4218/4220/4222.
 
 ## Portfolio and inheritance
 
@@ -174,13 +181,54 @@ face/edge root, rationality of the resolution chains, and specialization
 degree conservation with the labelled attachments. An independent
 reconstruction recovered the same model and degree obstruction.
 
-## 5. New operation suggested by the endpoint tower
+## 5. Rational side faces and primitive CM
+
+On `zeta=0`, the old tail disappears but the `y^2` row creates a rational
+side face. With `D_V=Theta^2-4Kxi`, the three polygons have genera `12,12,11`
+according as `K!=0`, `K=0,Theta!=0`, or `K=Theta=0`. Off `D_V=0` the side
+normalizes to the conic
+
+```text
+Y^2=K+Theta P+xi P^2.                                  (13)
+```
+
+The genus-two main component is then the sole positive-genus component, so
+degree conservation is zero. On `D_V=0,K!=0`, the first strict-transform row
+has order `sigma^15`. If `A_0=Phi+eta alpha` is nonzero it gives an `A_29`
+rational path; if `A_0=0` normalization gives two rational sheets. Thus no
+hidden tail survives, and THM-4220 closes the entire top-unit wall.
+
+At exact weight eleven, the new coefficients
+
+```text
+A=[p^4y]H,       B=[py^3]H
+```
+
+together with `U=[p^5]H,Z=[y^3]H` force three lower faces. Under
+`A*B*U*Z*(A+B)!=0`, the global polygon has Pick genus `15` and packet
+`(10,10,5,4,2,2,2,1)`. Both side faces are rational. The main component is
+
+```text
+P^11=(B/A^3)x^3/(1-x),                                (14)
+```
+
+a genus-five cyclic cover with CM type `{4,5,8,9,10}` and trivial
+stabilizer. Milne's primitive-CM classification makes its Jacobian simple,
+so it has no elliptic quotient. The `Q=sigma^330` model has only rational
+side, toric, and `A_329` components; degree conservation again gives zero.
+
+This also records a genuine method boundary: the full and finite carrier
+degrees are `36,30`, both divisible by three, so THM-4218's congruence does
+not extend. The order-eleven attachment difference is exact torsion but is
+not a genus-one degree invoice; primitive CM is the stronger coordinate.
+
+## 6. New operation suggested by the endpoint tower
 
 Full symbolic resultants become expensive at `M>=10`, but the obstruction
 uses only four pieces of their information:
 
 ```text
-p-valuation, residual degree, first nonzero p-row, last nonzero p-row. (13)
+p-valuation, residual degree, first nonzero p-row, last nonzero p-row. (15)
 ```
 
 This suggests a scalable **endpoint Hasse compiler**:
@@ -199,25 +247,20 @@ terminal quotient gcds. THM-4217 is a positive control; projected-root
 collisions are the hostile showing why squarefreeness must not enter the
 compiler.
 
-## 6. Ranked continuation
+## 7. Ranked continuation
 
-1. Attack `zeta=0,upsilon*xi!=0`; its side face becomes rational, so test
-   whether the genus-two component and boundary graph force a replacement
-   obstruction away from the new discriminant walls.
-2. Build the endpoint Hasse compiler and compare its `M=9` output with the
-   exact `D,J,S,T0` tower before trusting it at `M=10`.
-3. Promote a uniform typed endpoint ideal for the `M=10` chamber; this remains
-   useful as a scalable source-side instrument despite THM-4218's closure.
-4. Resolve `upsilon+xi=0`, where ten transverse nodes collide with the two
-   index-nine labels; retain the strict transform and attachment divisor.
-5. On `zeta!=0` critical walls, use the carrier-orbit lemma first. The full
-   response survives down to `L>=20`; the elementary finite gate needs the
-   stronger length `29`, so orbit structure is the scarce coordinate.
-6. Search `M>=11` lower faces for torsion-labelled attachment differences;
-   compare their torsion orders directly with all carrier-response degrees.
-7. Keep `upsilon=0`, `xi=0`, `upsilon+xi=0`, other cells, and entry as
-   separate objects. No seam theorem is evidence for global entry without an
-   explicit target-preserving reduction.
+1. Resolve the exact-`M=10` contractions `upsilon=0`, `xi=0`, and
+   `upsilon+xi=0`; each changes a vertex, component, or contact divisor.
+2. Build the finite exact-`M=11` wall atlas `A=0,B=0,U=0,Z=0,A+B=0`; the
+   replacement side faces are rational but the main CM type may change.
+3. Enumerate exact `M=12`, where new face moduli may replace cyclotomic
+   rigidity; retain all positive-genus components before testing `Hom`.
+4. Build the endpoint Hasse compiler and reproduce the exact `M=9`
+   `D,J,S,T0` tower before trusting it on higher critical walls.
+5. On remaining `M=9` critical walls, use carrier orbits before elementary
+   support caps; projected-root squarefreeness is not a source-length gate.
+6. Keep other cells and seam entry separate. No seam theorem is evidence for
+   global entry without an explicit target-preserving reduction.
 
 This is the session's main conceptual shift: coefficient walls are best
 organized by what the source endpoint tower can still see, while boundary

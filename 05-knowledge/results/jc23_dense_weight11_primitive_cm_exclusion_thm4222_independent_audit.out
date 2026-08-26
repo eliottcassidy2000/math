@@ -1,0 +1,15 @@
+THM4222_INDEPENDENT_CLEAN_ROOM_AUDIT
+checks=648
+scope=exact_M11;A*B*U*Z*(A+B)!=0;all_lower_coefficients
+faces=M11,V5,T3;support_subsets=512;collision_patterns=32
+Pick=global(41,13,15);main(33,5,15);side_genera=(0,0)
+packet=(10,10,5,4,2,2,2,1);responses=(full36,finite30)
+edges=8_reduced;internal_chains=(AE5,BD19);nodes=11*A329
+model=Q:sigma^330;multiplicity_one;components_complete
+C=P^11-(B/A^3)*x^3/(1-x);genus=5
+CM_type=(4,5,8,9,10);H1=all_nontrivial_chars;stabilizer=(1)
+CITED=Milne_Prop1.9_Cor1.10_Props3.12-3.13;Jacobian=simple
+attachments=(x=1,x=0);dual_graph_rank=10;special_genus=15
+target=good_j0;Hom_to_E0=0;specialized_degree=0
+verdict=ACCEPT_THM4222
+semantic_sha256=17d955e0eb812af8f056cd53cc2b7d1b4fa336c7f1ac01d9517cc19c27edd6fc

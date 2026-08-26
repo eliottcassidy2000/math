@@ -2,7 +2,8 @@
 id: THM-4222
 title: "Dense weight-eleven primitive-CM planar Jacobian exclusion"
 status: >
-  PROVED RELATIVE TO THM-3992/3997/4012/4045/4218 + VERIFIED-EXACT.
+  PROVED RELATIVE TO THM-3992/3997/4012/4045/4218 + VERIFIED-EXACT
+  + INDEPENDENTLY AUDITED.
   In the inherited b=d=0 reduced (2,3) seam, the complete exact-M=11
   locus with nonzero p^4y, py^3, p^5, y^3 coefficients and separated
   weight-eleven top roots contains no nonautomorphic planar Keller pair.
@@ -28,18 +29,23 @@ external: >
   chains. J. S. Milne, "Complex Multiplication" course notes (2020),
   Sections 1.9--1.10 and Proposition 3.13, supplies the standard theorem
   that primitive CM-pairs classify simple CM abelian varieties up to
-  isogeny. The exact face arithmetic, CM characters and stabilizer,
+  isogeny; https://www.jmilne.org/math/CourseNotes/CM.pdf. The exact face
+  arithmetic, CM characters and stabilizer,
   regular-model ledger, and planar-Jacobian consequence are proved here.
 script: 04-computation/jc23_dense_weight11_primitive_cm_exclusion_thm4222.py
 output: 05-knowledge/results/jc23_dense_weight11_primitive_cm_exclusion_thm4222.out
 script_sha256: f8d92c59e754eee75c2a8e101ad1c2f597372406a3fefadfafd717638b384609
 output_sha256: bbf4161da4c0f290c384a8a662fff1231588526d53ca57d5c538a3899438ee47
+independent_audit_script: 04-computation/jc23_dense_weight11_primitive_cm_exclusion_thm4222_independent_audit.py
+independent_audit_output: 05-knowledge/results/jc23_dense_weight11_primitive_cm_exclusion_thm4222_independent_audit.out
+independent_audit_script_sha256: fe9ed3bcb4651168be37201794b8b5bd8261b28b317a4350a5cbca94099def57
+independent_audit_output_sha256: de5d236c496c9e80d42d56864e46cfa72abd45086b177569df6ddfe7a3f5fcdb
 ---
 
 # THM-4222 -- dense weight-eleven primitive-CM planar Jacobian exclusion
 
-**PROVED RELATIVE TO THM-3992/3997/4012/4045/4218 + VERIFIED-EXACT;
-JC(2) REMAINS OPEN.**
+**PROVED RELATIVE TO THM-3992/3997/4012/4045/4218 + VERIFIED-EXACT
++ INDEPENDENTLY AUDITED; JC(2) REMAINS OPEN.**
 
 ## 1. Statement and scope
 
@@ -307,17 +313,20 @@ Its Newton triangle `(0,0),(1,5),(3,4)` has interior points
 (1,2),(1,3),(1,4),(2,3),(2,4).                         (26)
 ```
 
-The deck action
+For the covariant Jacobian convention used here, the deck action
 
 ```text
 tau:(S,P) |-> (zeta_11^6S,zeta_11P)                    (27)
 ```
 
-acts on the associated regular differentials with characters
+acts on the tangent/regular-differential CM type with characters
 
 ```text
 Phi={4,5,8,9,10}.                                      (28)
 ```
+
+The contravariant convention replaces `Phi` by `-Phi`; its stabilizer and
+the primitivity conclusion are unchanged.
 
 Their negatives are `{1,2,3,6,7}`, so `H^1(C)` contains every nonzero
 character once and `Q[tau]=Q(zeta_11)` has degree `10=2g`. Exact
@@ -409,6 +418,9 @@ schemes, primitive normals and edge denominators, slope sequences, exact
 main/side charts, eleven `A_329` models, genus completeness, cyclic-cover
 identity, CM characters and stabilizer, generic edges, target scaling, and
 degree-zero inventory. It marks Milne Proposition 3.13 as a cited input.
+The clean-room audit independently reconstructs the facets, side charts,
+chain sequences, Chevalley--Weil character spectrum, CM-type stabilizer,
+Milne gates, and degree-conservation ledger.
 
 Replay with
 
@@ -416,6 +428,10 @@ Replay with
 python3 -B 04-computation/jc23_dense_weight11_primitive_cm_exclusion_thm4222.py
 python3 -B -O 04-computation/jc23_dense_weight11_primitive_cm_exclusion_thm4222.py
 PYTHONHASHSEED=4222 python3 -B 04-computation/jc23_dense_weight11_primitive_cm_exclusion_thm4222.py
+
+python3 -B 04-computation/jc23_dense_weight11_primitive_cm_exclusion_thm4222_independent_audit.py
+python3 -B -O 04-computation/jc23_dense_weight11_primitive_cm_exclusion_thm4222_independent_audit.py
+PYTHONHASHSEED=4222 python3 -B 04-computation/jc23_dense_weight11_primitive_cm_exclusion_thm4222_independent_audit.py
 ```
 
 All three streams byte-match the frozen output. **QED.**
