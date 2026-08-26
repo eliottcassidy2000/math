@@ -14,6 +14,7 @@ source: codex-lrc-multiwindow-probe-20260825
 depends_on:
   - THM-4136-fixed-body-universal-odd-tail-lrc14-completion
 related:
+  - THM-2061-lrc14-dyadic-two-tail-folded-seam
   - THM-4142-common-safe-arc-clock-pool-universal-odd-tail-lrc14-completion
   - THM-4148-first-window-width-universal-odd-tail-lrc14-transfer
 script: 04-computation/lrc14_safe_set_haar_measure_odd_tail_transfer_thm4150.py
@@ -46,6 +47,16 @@ independent_audit: >
 
 **PROVED FULL-SAFE-SET HAAR/CROSS-COMB TRANSFER + VERIFIED-EXACT +
 INDEPENDENT IMPLEMENTATION AUDIT; LRC(14) REMAINS OPEN.**
+
+The closest proved measure mechanism is THM-2061, Sections 1 and 4: its
+folded-seam obstruction already gives the sharp nonstrict cap `4/63`, with
+primitive equality ratio `(1,9)`. The new content here is the strict upgrade
+
+```text
+failed dyadic seam  =>  mu(G_H)<4/63,
+```
+
+together with a Fourier--Bernoulli dual proof and the hereditary pool census.
 
 THM-4148 keeps one connected first window and forgets every other component
 of the body-safe set. The useful dual operation is to retain all components

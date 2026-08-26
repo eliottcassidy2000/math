@@ -9,6 +9,29 @@ Format per entry:
 - Why it was wrong
 - The correct framing
 
+## MISTAKE-510 (2026-08-25, concurrent first-window boundary promotion) -- a stale base duplicated a theorem already strengthened upstream
+
+- **What failed:** THM-4149 was derived and promoted from a local copy in
+  which THM-4148 still assumed `min(H)>=3`. During the same session, the live
+  upstream THM-4148 incorporated the `m=1,2` clock banks and the complete
+  `60,301,653,510` census. The later rebase therefore exposed THM-4149 as a
+  duplicate, not a second live theorem. The upstream status synopsis also
+  retained the stale phrase `labels lie in {3,...,80}` after its theorem and
+  census had expanded to minima one and two.
+- **Minimal witness / first failed implication:** current THM-4148,
+  Section 4, explicitly contains the `m=1` and `m=2` clocks and its Section 5
+  counts both boundary rows. The singleton minimum-one body row uses label
+  `1`, directly contradicting the stale frontmatter range.
+- **Repair / strongest survivor:** THM-4148 is the sole live proved width
+  theorem, and its synopsis now says `{1,...,80}`. THM-4149 is marked
+  **SUPERSEDED**. Its independently audited alternative endpoint
+  partition—including the isolated `3/14` repair for `(1,13)`—survives as a
+  reproducible audit, not as a distinct dependency.
+- **Reusable rule:** after any concurrent rebase, compare theorem statements,
+  quantifiers, counts, and status prose before routing a promotion. Equal
+  conclusions with different certificates require one live theorem plus
+  explicit supersession provenance.
+
 ## MISTAKE-509 (2026-08-25, exploratory two-term Jacobian-wall response) -- an unlabelled boundary subset was treated as a realizable response
 
 - **What failed:** an exploratory monodromy argument allowed an arbitrary
