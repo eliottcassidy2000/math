@@ -1,0 +1,20 @@
+REGULAR_ORDER7_MINIMAL_HOSTILE_ACCEPT
+below7 order 1 regular_labelled 1 regular_classes 1 all_vertex_transitive True
+below7 order 2 regular_labelled 0 regular_classes 0 all_vertex_transitive True
+below7 order 3 regular_labelled 2 regular_classes 1 all_vertex_transitive True
+below7 order 4 regular_labelled 0 regular_classes 0 all_vertex_transitive True
+below7 order 5 regular_labelled 24 regular_classes 1 all_vertex_transitive True
+below7 order 6 regular_labelled 0 regular_classes 0 all_vertex_transitive True
+seed_connection (1, 2, 3) reversed_triangle (0, 2, 4)
+pair_label 101100111001010111111
+score (3, 3, 3, 3, 3, 3, 3)
+automorphism_size 3 orbits ((0, 3, 5), (1, 4, 6), (2,))
+hamilton 171 mass 1638
+rooted_starts ((116, 141), (118, 142), (117, 141), (116, 141), (118, 142), (116, 141), (118, 142))
+rooted_ends ((118, 142), (116, 141), (117, 141), (118, 142), (116, 141), (118, 142), (116, 141))
+capacity_degrees (468, 468, 468, 468, 468, 468, 468)
+incoming_masses (236, 232, 234, 236, 232, 236, 232)
+cross_row (804, 796, 798, 804, 796, 804, 796)
+remainder_literal 233570700 remainder_transfer 233570700 false_uniform 233574516
+defect variance 696/7 covariance 192 penalty 3816
+semantic_sha256 87a5682f9b258a3ee766dbc476c585c0aea6ca48f16a4551b6e03e957ccb5df2

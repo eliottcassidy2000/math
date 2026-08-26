@@ -6,6 +6,12 @@
 > charge-lattice/GMC/LRC functional swap below. Read the tournament section of
 > [`CURRENT-FRONTIER.md`](CURRENT-FRONTIER.md) first.
 
+> **Current addendum (2026-08-26).** [THM-4202](../01-canon/theorems/THM-4202-vertex-transitive-ordinal-remainder-positivity.md)
+> proves strict ordinal remainder for every vertex-transitive pair with
+> nontrivial right factor. With only the left factor vertex-transitive, its
+> exact defect ledger is symmetric baseline minus rooted-state covariance and
+> variance; regular score first fails to force those sidecars at order seven.
+
 *klein-2026-07-21-S399. Owner directive: "keep adding to the zoo, go back through past work
 thoroughly and look for all possible ideas and threads relating to them, make sure none are lost,
 procedurally generate new frames / methods / angles of attack / things to compute, find the things

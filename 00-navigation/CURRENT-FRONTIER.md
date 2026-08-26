@@ -266,12 +266,12 @@ THM-2070 refutes the general HYP-8890/8895 bypasses.  Transfer
   remainder census.
   [THM-4184](../01-canon/theorems/THM-4184-path-cover-parity-ordinal-cocycle-and-lollipop-positivity.md)
   gives parity, rank-one separation, the normalized cocycle, and lollipops.
-  [THM-4187](../01-canon/theorems/THM-4187-universal-source-padding-supermodularity-and-transitive-left-ordinal-positivity.md)
-  proves source-padding supermodularity, transitive-left local positivity and
-  strict `(OS+)`, the `G_-` dual, and a terminal-`C3` bound.
-  [THM-4193](../01-canon/theorems/THM-4193-cycle-first-transitive-tail-crossing-and-transitive-context-positivity.md)
-  proves `C3 triangleright P_n` transitive-context positive iff `n>=5`.
-  Arbitrary contexts/general `(OS+)` stay **OPEN**.
+  THM-4187 proves transitive-left `(OS+)`; THM-4193 crosses the cycle-first
+  transitive-context wall exactly at tail length five.
+  [THM-4202](../01-canon/theorems/THM-4202-vertex-transitive-ordinal-remainder-positivity.md)
+  proves `R_+(A,B)>0` for vertex-transitive `A,B`, `|B|>=3`; its one-sided
+  formula isolates an odd-right variance/covariance defect. Arbitrary
+  contexts, general `(OS+)`, and the asymmetric bank stay **OPEN**.
   THM-4114/4118 expose face/cut and gcd gaps: at `n=5`, all `544` parents have
   gcd `2` yet gaps, and `400` lack an `M-2` neighbor. Completeness is **OPEN**.
 - Corrected HYP-8835: optimal support is uniquely odd; positive `Mp=0` gives a
