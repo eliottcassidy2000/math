@@ -77,10 +77,11 @@ is the safe control `M(S_13)=99/338`. No cited result proves LRC(14).
   fixed-`q=50` original-anchor-count `3/2/1` slices of
   `888030/6660225/1071961` bodies; THM-4178/4179 cross the last two blockers at
   sharp depth seven.
-  [THM-4182](../01-canon/theorems/THM-4182-q50-zero-original-four-anchor-transfer-and-two-repair-obstruction-graph.md)
-  adds `1,138,494` zero-original four-anchor bodies by collapsing 27 blockers
-  to five states and a sharp two-repair bank. The four slices total
-  `9,758,710`; fixed-pool entry, arbitrary bodies, and LRC(14) stay open.
+  THM-4182 starts the zero-original slice with `1,138,494` four-anchor bodies;
+  [THM-4185](../01-canon/theorems/THM-4185-q50-complete-zero-original-minimal-anchor-hierarchy.md)
+  completes all `1,491,665` declared good ten-bodies via the exact
+  `32/297/24` size-`4/5/6` anchor hierarchy. The four slices total
+  `10,111,881`; fixed-pool entry, arbitrary bodies, and LRC(14) stay open.
   [Proof map](LRC14-PROOF-MAP.md).
 - **PROVED:** [THM-2928](../01-canon/theorems/THM-2928-critical-seven-comb-grid-tensorization-and-drift-tariff.md)/2941: literal zero/one/two/three-drift sectors are empty; `k=2,3` are finite.
 - **Orthogonal routes.** THM-1017 is HYP-6820; THM-2047/2050 keep phase/exit; THM-731/2048 prune; THM-1290 ends at `55`; HYP-8900 nonuniform.
