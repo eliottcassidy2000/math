@@ -9,6 +9,35 @@ Format per entry:
 - Why it was wrong
 - The correct framing
 
+## MISTAKE-520 (2026-08-26, THM-4203 inheritance audit) -- a size-eighteen pool task was generated after the whole pool was already safe
+
+- **What failed:** THM-4203 proved every subset of its thirty-label pool `P`
+  through size seventeen by a depth-eight repair-hypergraph dichotomy and then
+  generated size eighteen as the next finite safety boundary. Its inheritance
+  pass named THM-4191 but omitted THM-4156, which uses exactly the same pool.
+- **Minimal witness / first failed implication:** THM-4156, equation (7),
+  already proves `mu(G_P)>4/63`. For every `B subset P`, constraint deletion
+  gives `G_P subset G_B`, hence
+
+  ```text
+  mu(G_B)>=mu(G_P)>4/63
+  ```
+
+  with no cardinality cutoff. Thus every subset through size thirty was
+  already safe; size eighteen was not an open boundary.
+- **Repair / strongest survivor:** THM-4156 now states its full hereditary
+  consequence explicitly. THM-4203 remains a valid, independently audited
+  alternative certificate whose distinct content is the sharp
+  `tau(E_8(50))=14` repair-hypergraph theorem, its complete bounded
+  transversal census and direct margins, and the associated newcomer
+  mechanism. Its size-eighteen task is withdrawn. The live boundary is
+  outside-pool incidence, two-outsider composition, or physical entry—not a
+  larger subset of `P`.
+- **Reusable rule:** before extending a deletion/repair search by one layer,
+  test the undeleted ambient object and propagate any certificate in the
+  correct monotonicity direction. A sophisticated alternative certificate
+  can be mathematically useful without creating a new truth region.
+
 ## MISTAKE-519 (2026-08-26, THM-4209 repeated-top routing) -- a newly recomputed specialization was called open after an older complete theorem had already closed it
 
 - **What failed:** THM-4209 correctly recomputed the `K=0` anti-diagonal

@@ -4,10 +4,11 @@ title: "Divisor-complete anchor-pool Haar odd-tail transfer"
 status: >
   PROVED RELATIVE TO THM-4150 + VERIFIED-EXACT + INDEPENDENT EXACT INTERVAL
   AUDIT; LRC(14) OPEN. A 30-label common safe-set pool has Haar measure
-  strictly above 4/63. Requiring the three anchors 120,126,143 makes every
-  selected eleven-body primitive and divisor-complete through 14. THM-4150
-  therefore closes 2,220,075 bodies with every distinct positive odd tail
-  pair, including 1,875,709 outside both named THM-4148/4151 gates.
+  strictly above 4/63, so every subset of that pool inherits the same lower
+  bound. Requiring the three anchors 120,126,143 makes every selected
+  eleven-body primitive and divisor-complete through 14. THM-4150 therefore
+  closes 2,220,075 anchored bodies with every distinct positive odd tail pair,
+  including 1,875,709 outside both named THM-4148/4151 gates.
 source: codex-lrc14-planar-jc-breakthrough-20260825
 depends_on:
   - THM-4150-safe-set-haar-measure-universal-odd-tail-lrc14-transfer
@@ -19,6 +20,7 @@ related:
   - THM-4150-safe-set-haar-measure-universal-odd-tail-lrc14-transfer
   - THM-4151-scale-sensitive-first-window-odd-tail-lrc14-transfer
   - THM-4154-mod-six-fixed-clock-and-haar-pool-inheritance-correction
+  - THM-4203-fixed-pool-seventeen-body-depth-eight-haar-completion
 script: 04-computation/lrc14_divisor_complete_anchor_pool_haar_transfer_thm4156.py
 output: 05-knowledge/results/lrc14_divisor_complete_anchor_pool_haar_transfer_thm4156.out
 independent_audit_script: 04-computation/lrc14_divisor_complete_anchor_pool_haar_transfer_thm4156_independent_audit.py
@@ -65,6 +67,19 @@ For every eight-element set `K subset P\A`, define the eleven-body
 ```text
 H=A union K.                                           (2)
 ```
+
+> **Full hereditary pool consequence.** For every `B subset P`,
+>
+> ```text
+> mu(G_B)>=mu(G_P)>4/63.                               (2a)
+> ```
+>
+> If `B` is nonempty, then for every two distinct positive odd integers
+> `a,b` there is an `x in R/Z` such that
+>
+> ```text
+> min_(v in 2B union {a,b})||vx||>=1/14.               (2b)
+> ```
 
 > **Theorem.** For every body `(2)` and every two distinct
 > positive odd integers `a,b`, there exists `x in R/Z` such that
@@ -169,6 +184,13 @@ The even body speeds are pairwise distinct, the odd tails are pairwise
 distinct and cannot meet an even speed, so `(3)` is a genuine thirteen-speed
 row. The structurally distinct interval audit independently reproduces
 `(6)--(7)`. This completes the independent verification. **QED.**
+
+The same inclusion argument does not require the anchors or cardinality
+eleven: it proves `(2a)` for every subset of `P`, and THM-4150 proves `(2b)`.
+This consequence was implicit in `(7)` and `(11)` but was not stated or routed
+until the MISTAKE-520 inheritance repair. In particular, it subsumes the
+body-safety conclusion of THM-4203; that theorem's sharp repair-hypergraph
+census remains independent structural content.
 
 There are `27` optional labels, so the exact family size is
 

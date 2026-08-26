@@ -71,7 +71,7 @@ is the safe control `M(S_13)=99/338`. No cited result proves LRC(14).
   THM-4105/4106 are reciprocal decoders; THM-4107/4108 are tournament/radical
   firewalls. THM-4110 finds `64` AP13 sheets; THM-4116 gives
   `2^(c(F)-1)`. Safety/arrival stay open.
-- **Owner/tail lane (PROVED):** THM-4203 closes pool `<=17`;
+- **Owner/tail:** THM-4156 closes `P`; THM-4203 is its E8 census;
   [THM-4191](../01-canon/theorems/THM-4191-complete-full-pool-newcomer-haar-transfer.md)
   /4201 handle one newcomer.
   [THM-4207](../01-canon/theorems/THM-4207-two-newcomer-sharp-depth-transition-base-surplus-composition-and-variable-pool-chart-number.md)

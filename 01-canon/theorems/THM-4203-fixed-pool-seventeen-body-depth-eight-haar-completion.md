@@ -5,8 +5,10 @@ status: >
   PROVED RELATIVE TO THM-4150/4188 + VERIFIED-EXACT PRIMARY POOL-WALL AND
   INDEPENDENT JOINT-WALL AUDITS; THIRD REFEREE MATCH; LRC(14) OPEN. Every
   nonempty subset of the fixed thirty-label pool of cardinality at most
-  seventeen has complete 1/14-safe-set Haar mass at least 4/63. The q=50
-  depth-eight repair hypergraph has exact transversal number fourteen. Its
+  seventeen has complete 1/14-safe-set Haar mass at least 4/63, but
+  MISTAKE-520 records that this safety conclusion was already an immediate
+  hereditary corollary of THM-4156 for all subset sizes through thirty. The
+  distinct q=50 depth-eight repair hypergraph has exact transversal number fourteen. Its
   57,410 terminal
   covers through budget seventeen expand to exactly 66,468 transversals of
   sizes fourteen through seventeen, and every one has positive direct Haar
@@ -49,6 +51,14 @@ independent_audit: >
 
 **PROVED RELATIVE TO THM-4150/4188 + VERIFIED-EXACT IN TWO MAINTAINED WALL
 IMPLEMENTATIONS AND A THIRD REFEREE PATH; LRC(14) REMAINS OPEN.**
+
+**Inheritance correction (MISTAKE-520).** The same pool `P` occurs in
+THM-4156, whose exact equation `mu(G_P)>4/63` and safe-set monotonicity already
+imply `(1)` for every `B subset P`, with no size-seventeen cutoff. The theorem
+below remains a valid alternative proof through seventeen. Its genuinely
+distinct content is the sharp depth-eight transversal theorem, the complete
+terminal/upward-closure census, the direct-margin ledger, and the newcomer
+certificate mechanism; it did not create a new body-safety region.
 
 ## 1. Statement and inheritance pass
 
@@ -324,11 +334,11 @@ Scope firewalls:
    parity, and LRC(14) remain open.
 5. The E9 addendum repairs one E8 cover and proves no global E9 statement.
 
-The next finite boundary task is the exact size-eighteen upward completion:
-enumerate terminal E8 covers to budget eighteen, generate every exact
-size-eighteen transversal from a terminal search subcover, and test whether the
-minimum direct margin remains positive. This is a generated experiment, not a
-claim of the theorem.
+The formerly generated size-eighteen upward completion is withdrawn by
+MISTAKE-520: THM-4156 already proves every size-eighteen subset, and indeed
+every subset of `P` through size thirty, safe. Extending the E8 census may
+still study the repair certificate itself, but cannot extend the proved
+body-safety region.
 
 The cheapest precise outside-pool extension is also finite. For
 
