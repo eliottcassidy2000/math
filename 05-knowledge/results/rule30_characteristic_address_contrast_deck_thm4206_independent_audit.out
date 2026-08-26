@@ -1,0 +1,5 @@
+independent_hostile=triple:(1,1,1,1,0,2,2,0);pairs:(uniform,uniform,(1,3,3,1));third_walsh:1/2;deck:D=A_or_x2;conditional_supports:(4,4)
+independent_slope_one_ones=3/4;6/16;40/64;108/256;552/1024;1894/4096;8756/16384;30272/65536
+independent_slope_one_correlations=-1/2,1/4,-1/4,5/32,-5/64,77/1024,-141/2048,39/512
+finite_scope=depths:1..8;no_extrapolation:true
+THM4206_INDEPENDENT_PASS
