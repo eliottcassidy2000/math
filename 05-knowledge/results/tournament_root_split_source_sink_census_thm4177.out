@@ -1,0 +1,58 @@
+THM4177_PRIMARY_V1
+q=3 parents=2 presentations=16 strong_parents=1 prime_parents=1 sink_parents=1 source_parents=1
+  algebra root_formula=48/0 root_split=16/0 path_edges=6/0
+  intrinsic plus_neg=2 plus_zero=0 sink_children=6 sink_plus_neg_zero_pos=2,0,4 nosink_plus_nonpositive=0 minus_neg=2 minus_zero=0 source_children=6 source_minus_neg_zero_pos=2,0,4 nosource_minus_nonpositive=0
+  child_controls strong=8 strong_gate_fail=0 prime=0 prime_gate_fail=0
+  parent_controls strong_nonuniform=6 strong_fail=0 strong_min=44 prime_nonuniform=6 prime_fail=0 prime_min=44 prime_parent_prime_children=0
+  parent_equivalences plus_nonzero_nonpositive_iff_sink_disagree=0 minus_nonfull_nonpositive_iff_source_disagree=0 plus_corner_min_iff_sink_disagree=0 minus_corner_min_iff_source_disagree=0
+  layers plus_self=1,0,1,0 plus_cross=0,0,0,NA minus_self=1,0,1,0 minus_cross=0,0,0,NA
+q=4 parents=4 presentations=64 strong_parents=1 prime_parents=0 sink_parents=2 source_parents=2
+  algebra root_formula=256/0 root_split=64/0 path_edges=24/0
+  intrinsic plus_neg=12 plus_zero=0 sink_children=20 sink_plus_neg_zero_pos=12,0,8 nosink_plus_nonpositive=0 minus_neg=12 minus_zero=0 source_children=20 source_minus_neg_zero_pos=12,0,8 nosource_minus_nonpositive=0
+  child_controls strong=32 strong_gate_fail=0 prime=19 prime_gate_fail=0
+  parent_controls strong_nonuniform=14 strong_fail=0 strong_min=640 prime_nonuniform=0 prime_fail=0 prime_min=NA prime_parent_prime_children=0
+  parent_equivalences plus_nonzero_nonpositive_iff_sink_disagree=0 minus_nonfull_nonpositive_iff_source_disagree=0 plus_corner_min_iff_sink_disagree=0 minus_corner_min_iff_source_disagree=0
+  layers plus_self=4,0,0,12 plus_cross=2,0,0,20 minus_self=4,0,0,12 minus_cross=2,0,0,20
+q=5 parents=12 presentations=384 strong_parents=6 prime_parents=3 sink_parents=4 source_parents=4
+  algebra root_formula=1920/0 root_split=384/0 path_edges=120/0
+  intrinsic plus_neg=52 plus_zero=0 sink_children=76 sink_plus_neg_zero_pos=52,0,24 nosink_plus_nonpositive=0 minus_neg=52 minus_zero=0 source_children=76 source_minus_neg_zero_pos=52,0,24 nosource_minus_nonpositive=0
+  child_controls strong=254 strong_gate_fail=0 prime=126 prime_gate_fail=0
+  parent_controls strong_nonuniform=180 strong_fail=0 strong_min=6476 prime_nonuniform=90 prime_fail=0 prime_min=6476 prime_parent_prime_children=60
+  parent_equivalences plus_nonzero_nonpositive_iff_sink_disagree=0 minus_nonfull_nonpositive_iff_source_disagree=0 plus_corner_min_iff_sink_disagree=0 minus_corner_min_iff_source_disagree=0
+  layers plus_self=16,0,0,132 plus_cross=8,0,0,308 minus_self=16,0,0,132 minus_cross=8,0,0,308
+q=6 parents=56 presentations=3584 strong_parents=35 prime_parents=15 sink_parents=12 source_parents=12
+  algebra root_formula=21504/0 root_split=3584/0 path_edges=840/0
+  intrinsic plus_neg=352 plus_zero=0 sink_children=440 sink_plus_neg_zero_pos=352,0,88 nosink_plus_nonpositive=0 minus_neg=352 minus_zero=0 source_children=440 source_minus_neg_zero_pos=352,0,88 nosource_minus_nonpositive=0
+  child_controls strong=2771 strong_gate_fail=0 prime=1599 prime_gate_fail=0
+  parent_controls strong_nonuniform=2170 strong_fail=0 strong_min=54476 prime_nonuniform=930 prime_fail=0 prime_min=59508 prime_parent_prime_children=750
+  parent_equivalences plus_nonzero_nonpositive_iff_sink_disagree=0 minus_nonfull_nonpositive_iff_source_disagree=0 plus_corner_min_iff_sink_disagree=0 minus_corner_min_iff_source_disagree=0
+  layers plus_self=132,0,0,48 plus_cross=132,0,0,312 minus_self=132,0,0,48 minus_cross=132,0,0,312
+q=7 parents=456 presentations=58368 strong_parents=353 prime_parents=197 sink_parents=56 source_parents=56
+  algebra root_formula=408576/0 root_split=58368/0 path_edges=9576/0
+  intrinsic plus_neg=3530 plus_zero=0 sink_children=4040 sink_plus_neg_zero_pos=3530,0,510 nosink_plus_nonpositive=0 minus_neg=3530 minus_zero=0 source_children=4040 source_minus_neg_zero_pos=3530,0,510 nosource_minus_nonpositive=0
+  child_controls strong=50668 strong_gate_fail=0 prime=34160 prime_gate_fail=0
+  parent_controls strong_nonuniform=44478 strong_fail=0 strong_min=429044 prime_nonuniform=24822 prime_fail=0 prime_min=461988 prime_parent_prime_children=22064
+  parent_equivalences plus_nonzero_nonpositive_iff_sink_disagree=0 minus_nonfull_nonpositive_iff_source_disagree=0 plus_corner_min_iff_sink_disagree=0 minus_corner_min_iff_source_disagree=0
+  layers plus_self=1200,0,0,648 plus_cross=1200,0,0,2376 minus_self=1200,0,0,648 minus_cross=1200,0,0,2376
+q=8 parents=6880 presentations=1761280 strong_parents=6008 prime_parents=4008 sink_parents=456 source_parents=456
+  algebra root_formula=14090240/0 root_split=1761280/0 path_edges=192640/0
+  intrinsic plus_neg=60216 plus_zero=0 sink_children=65248 sink_plus_neg_zero_pos=60216,0,5032 nosink_plus_nonpositive=0 minus_neg=60216 minus_zero=0 source_children=65248 source_minus_neg_zero_pos=60216,0,5032 nosource_minus_nonpositive=0
+  child_controls strong=1634407 strong_gate_fail=0 prime=1256103 prime_gate_fail=0
+  parent_controls strong_nonuniform=1526032 strong_fail=0 strong_min=3320952 prime_nonuniform=1018032 prime_fail=0 prime_min=3552196 prime_parent_prime_children=953904
+  parent_equivalences plus_nonzero_nonpositive_iff_sink_disagree=0 minus_nonfull_nonpositive_iff_source_disagree=0 plus_corner_min_iff_sink_disagree=0 minus_corner_min_iff_source_disagree=0
+  layers plus_self=25696,15,3,-3200 plus_cross=38544,0,2,0 minus_self=25696,15,3,-3200 minus_cross=38544,0,2,0
+  negative_plus_layer q=8 label=1110111111011111111111100111 ell=7 self=-2136 full=1258844 other_self=356832 all_cross=904148 strong=1 prime=0 source=0 min_module=2 incident_cross=1:42972,3:42784,5:70612
+  negative_plus_layer q=8 label=1111101110111111111111111110 ell=7 self=-1900 full=888188 other_self=249276 all_cross=640812 strong=1 prime=0 source=0 min_module=2 incident_cross=1:26580,3:33880,5:55536
+  negative_plus_layer q=8 label=1111011110111111111111100111 ell=7 self=-132 full=1300564 other_self=365744 all_cross=934952 strong=1 prime=0 source=0 min_module=2 incident_cross=1:43132,3:52192,5:76448
+  negative_plus_layer q=8 label=1111011110011111111111111001 ell=7 self=-3200 full=1448440 other_self=409436 all_cross=1042204 strong=1 prime=0 source=0 min_module=2 incident_cross=1:47044,3:46608,5:80204
+  negative_plus_layer q=8 label=1111011110111110111111111001 ell=7 self=-1932 full=1503384 other_self=423036 all_cross=1082280 strong=1 prime=0 source=0 min_module=2 incident_cross=1:47300,3:58140,5:83944
+  negative_plus_layer q=8 label=1111101110011110111111111110 ell=7 self=-1780 full=2091960 other_self=555580 all_cross=1538160 strong=1 prime=0 source=0 min_module=5 incident_cross=1:64420,3:131500,5:162060
+  negative_plus_layer q=8 label=1111101111011101111111111110 ell=7 self=-852 full=1746936 other_self=467316 all_cross=1280472 strong=1 prime=0 source=0 min_module=3 incident_cross=1:62940,3:102276,5:133164
+  negative_plus_layer q=8 label=1100111111011110001111111111 ell=7 self=-512 full=1829704 other_self=507800 all_cross=1322416 strong=1 prime=0 source=0 min_module=2 incident_cross=1:58908,3:79348,5:118968
+  negative_plus_layer q=8 label=1101111110111111111000111111 ell=7 self=-2076 full=1086412 other_self=314980 all_cross=773508 strong=1 prime=0 source=0 min_module=2 incident_cross=1:33924,3:29432,5:52092
+  negative_plus_layer q=8 label=1100000110111111111111111111 ell=7 self=-468 full=1291900 other_self=369036 all_cross=923332 strong=1 prime=0 source=0 min_module=2 incident_cross=1:42668,3:40912,5:67424
+  negative_plus_layer q=8 label=1111101101111111111111111110 ell=7 self=-684 full=662736 other_self=190008 all_cross=473412 strong=1 prime=0 source=0 min_module=2 incident_cross=1:21396,3:21432,5:37152
+  negative_plus_layer q=8 label=1110000101111111111111111111 ell=7 self=-1356 full=1764960 other_self=523656 all_cross=1242660 strong=1 prime=0 source=0 min_module=2 incident_cross=1:68076,3:43956,5:82884
+  negative_plus_layer q=8 label=1110111101000111111111111111 ell=7 self=-380 full=1159476 other_self=333796 all_cross=826060 strong=1 prime=0 source=0 min_module=2 incident_cross=1:35132,3:39128,5:61744
+  negative_plus_layer q=8 label=1110111101011111111111100111 ell=7 self=-1204 full=1305060 other_self=371940 all_cross=934324 strong=1 prime=0 source=0 min_module=2 incident_cross=1:43732,3:51420,5:72668
+  negative_plus_layer q=8 label=1010111111011110111111111001 ell=7 self=-1560 full=1711468 other_self=478660 all_cross=1234368 strong=1 prime=0 source=0 min_module=2 incident_cross=1:54444,3:68876,5:98856

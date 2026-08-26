@@ -1,0 +1,23 @@
+THM4177_INDEPENDENT_V1
+arbitrary_tensor_root_split_checks=4 failures=0
+generic_tensor_hostile label=100111 weights=1,1,1,1,2,3 C=-4 D=6 Gplus=-2
+q=3 parents=2 presentations=16 strong_parents=1 prime_parents=1 sink_parents=1 source_parents=1
+  algebra root_formula=48/0 root_split=16/0 path_edges=6/0
+  intrinsic plus_neg=2 plus_zero=0 sink_children=6 nosink_plus_nonpositive=0 minus_neg=2 minus_zero=0 source_children=6 nosource_minus_nonpositive=0
+  child_controls strong=8 prime=0
+  parent_equivalences plus_nonzero_nonpositive_iff_sink_disagree=0 minus_nonfull_nonpositive_iff_source_disagree=0 plus_corner_min_iff_sink_disagree=0 minus_corner_min_iff_source_disagree=0
+q=4 parents=4 presentations=64 strong_parents=1 prime_parents=0 sink_parents=2 source_parents=2
+  algebra root_formula=256/0 root_split=64/0 path_edges=24/0
+  intrinsic plus_neg=12 plus_zero=0 sink_children=20 nosink_plus_nonpositive=0 minus_neg=12 minus_zero=0 source_children=20 nosource_minus_nonpositive=0
+  child_controls strong=32 prime=19
+  parent_equivalences plus_nonzero_nonpositive_iff_sink_disagree=0 minus_nonfull_nonpositive_iff_source_disagree=0 plus_corner_min_iff_sink_disagree=0 minus_corner_min_iff_source_disagree=0
+q=5 parents=12 presentations=384 strong_parents=6 prime_parents=3 sink_parents=4 source_parents=4
+  algebra root_formula=1920/0 root_split=384/0 path_edges=120/0
+  intrinsic plus_neg=52 plus_zero=0 sink_children=76 nosink_plus_nonpositive=0 minus_neg=52 minus_zero=0 source_children=76 nosource_minus_nonpositive=0
+  child_controls strong=254 prime=126
+  parent_equivalences plus_nonzero_nonpositive_iff_sink_disagree=0 minus_nonfull_nonpositive_iff_source_disagree=0 plus_corner_min_iff_sink_disagree=0 minus_corner_min_iff_source_disagree=0
+q=6 parents=56 presentations=3584 strong_parents=35 prime_parents=15 sink_parents=12 source_parents=12
+  algebra root_formula=21504/0 root_split=3584/0 path_edges=840/0
+  intrinsic plus_neg=352 plus_zero=0 sink_children=440 nosink_plus_nonpositive=0 minus_neg=352 minus_zero=0 source_children=440 nosource_minus_nonpositive=0
+  child_controls strong=2771 prime=1599
+  parent_equivalences plus_nonzero_nonpositive_iff_sink_disagree=0 minus_nonfull_nonpositive_iff_source_disagree=0 plus_corner_min_iff_sink_disagree=0 minus_corner_min_iff_source_disagree=0
