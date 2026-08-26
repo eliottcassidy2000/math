@@ -1,0 +1,8 @@
+labelled_orders_1_to_5=1099 source_padding_and_literal_response=PASS
+no_sink=738 no_sink_by_order=[0, 0, 2, 32, 704]
+radical_sector_by_order=[0, 0, 0, 32, 704] conditional_rows_by_order=[0, 0, 2, 32, 704]
+min_increment_over_H2={3: '1480', 4: '4716', 5: '8004'} equality_labelled=2
+marked_arc_injection=PASS endpoint_chirality_45H2=PASS lower_sector=PASS
+controls=C3_increment=13320;transitive3_filtered_increment=-1044;T1_n9_outside_clean_increment=2324598120
+symbolic_integer_reductions=clean_slack_531n-2002;conditional_numerator_1017n2+738n+369
+THM4221_EXACT_AUDIT=PASS
