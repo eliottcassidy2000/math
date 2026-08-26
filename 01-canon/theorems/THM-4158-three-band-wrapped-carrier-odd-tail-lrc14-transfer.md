@@ -5,13 +5,16 @@ status: >
   PROVED ELEMENTARY COMPLETE WRAPPED-CARRIER ALPHABET + VERIFIED-EXACT +
   INDEPENDENTLY AUDITED; LRC(14) OPEN. For every m>=2, every finite body
   drawn from the exact three-band alphabet P_m accepts every pair of distinct
-  positive odd tails after doubling. Among eleven-subsets of [1,N], a
+  positive odd tails after doubling; at m=1 the exact alphabet has one extra
+  band and the same transfer holds. Among eleven-subsets of [1,N], a
   canonical minimum-indexed certified subfamily has asymptotic density
   0.3421696706978653..., strictly above THM-4151's first-band density. The
-  m=7 divisor-complete specialization supplies 38,620,298,376 bodies outside
-  the stated THM-4148/4151 gates and disjoint from THM-4156's explicit family.
-  Entry, arbitrary thirteen-speed rows, and LRC(14) remain open.
+  m=7 minimum-indexed seam has 81,572,506,886,508 bodies; its
+  38,620,298,376-body divisor-complete subfamily lies outside the stated
+  THM-4148/4151 gates and is disjoint from THM-4156's explicit family. Entry,
+  mixed/even tails, arbitrary thirteen-speed rows, and LRC(14) remain open.
 source: codex-frontier-synthesis-creative-20260825as
+supplementary_source: codex-open-frontiers-overnight-20260825
 depends_on:
   - THM-4151-scale-sensitive-first-window-odd-tail-lrc14-transfer
 related:
@@ -23,27 +26,38 @@ script: 04-computation/lrc14_three_band_wrapped_carrier_odd_tail_transfer_thm415
 output: 05-knowledge/results/lrc14_three_band_wrapped_carrier_odd_tail_transfer_thm4158.out
 independent_audit_script: 04-computation/lrc14_three_band_wrapped_carrier_odd_tail_transfer_thm4158_independent_audit.py
 independent_audit_output: 05-knowledge/results/lrc14_three_band_wrapped_carrier_odd_tail_transfer_thm4158_independent_audit.out
-script_sha256: 8a95c6123aa048b13047cde1cf46694484b429a21572c189480f30a1a77f9936
-output_sha256: 50eb8105f5e4bc548610be8e2de1e7c1b189eb59d3ecac28a1a424578e6f7ef5
-semantic_sha256: b1d8f0a1cad02303d3560e1deb471794d3b9fdcff0b1e1cffe12379674f6cdb6
-semantic_fnv64: 416565bf17102710
-independent_audit_script_sha256: 795a0d4b74e5741184c2eeb0342a462951e16bd1962e7b7812dad69ccaef1ea1
-independent_audit_output_sha256: 63f1ee1329ac9e48844be850f3b4bfdc39737d61b586e2e90e85f85f47dd34c1
+cross_language_audit_script: 04-computation/lrc14_three_band_wrapped_carrier_odd_tail_transfer_thm4158_independent_cpp_audit.cpp
+cross_language_audit_output: 05-knowledge/results/lrc14_three_band_wrapped_carrier_odd_tail_transfer_thm4158_independent_cpp_audit.out
+script_sha256: 8595784844856f61326728d80f53980d239e14e1400574bea374b382794e37ab
+output_sha256: 3eb3ae21b6b644b1d5211a2b890f6043d6bf462e3707b406d721535bd8aed753
+semantic_sha256: 7b71523951db221ce08ff16c2c87629e1ff896b052f7a1324032bd4bca7314eb
+semantic_fnv64: fbb8b1eeaef5dd11
+independent_audit_script_sha256: 4c0da48086a3bab5bcf947b5b113ba71c18047060cb4db90094a4df894680b5d
+independent_audit_output_sha256: 21da776146c19d39ba5a15f477b58d417b4f57a956d60aed3c8657fde7aedffc
+cross_language_audit_script_sha256: fa657f2aef9a093ca0b3fffd385a6f3683df49a3899df78cee66dfe0e5a0c9d3
+cross_language_audit_output_sha256: 7577edb6de80f4b6f7e4b32c1c70cd539252ecdc981aaf4f839cda65dd59286f
+cross_language_semantic_fnv64: 435c75c9215201cb
 hash_basis: raw LF bytes
 primary_audit: >
-  PASS. Exact Fraction arithmetic reconstructs the complete three-band pool
-  for m=2,...,1000, checks the odd-wall and sharp endpoint identities through
-  m=300, directly resolves 6,327 strict-wall tail rows, verifies the m=7
-  divisor owners and hostiles, and reproduces the finite counts and density.
+  PASS. Exact Fraction arithmetic reconstructs the complete pool for
+  m=1,...,1000, checks the odd-wall and sharp endpoint identities through
+  m=300, directly resolves 7,030 strict-wall tail rows, verifies both m=1
+  censuses, the m=7 families and hostiles, and reproduces the finite counts.
   Every mandatory check survives optimized execution; normal, optimized, and
   hash-seeded replays byte-match the frozen output.
 independent_audit: >
   ACCEPT. A no-import implementation reconstructs the complete pool for
   m=1,...,250 from endpoint inequalities, independently computes the full
-  m=7 safe set and Haar measure, and reproduces every family count and the
-  rational density. Normal, optimized, and hash-seeded outputs byte-match.
+  m=7 safe set, all four safe walls, absence of isolated safe atoms, and Haar
+  measure, then reproduces the m>=2 finite census and rational density.
+  Normal, optimized, and hash-seeded outputs byte-match.
   A separate analytic audit verified the infinite odd-tail proof and its
   compact/open endpoint case.
+cross_language_audit: >
+  ACCEPT. Warning-clean standard-library C++ independently checks 15,456,403
+  speed gates and 127,500 odd-tail pairs, reconstructs both finite censuses
+  and the m=7 seams, and recomputes the density with a separate BigUInt
+  implementation. O0 and O3 outputs agree byte-for-byte.
 ---
 
 # THM-4158 -- three-band wrapped-carrier odd-tail transfer
@@ -59,14 +73,14 @@ a body label occupies.
 
 ## 1. The exact wrapped alphabet
 
-Fix an integer `m>=2` and put
+Fix an integer `m>=1` and put
 
 ```text
 J_m=[1/(14m),8/(7(12m+1))],
 G_m=|J_m|=(4m-1)/(14m(12m+1)).                         (1)
 ```
 
-Define the three closed integer bands
+For `m>=2`, define the three closed integer bands
 
 ```text
 P_m=
@@ -76,6 +90,12 @@ P_m=
 ```
 
 Intervals in `(2)` mean all integers between their endpoints.
+
+At the boundary `m=1`, use instead the exact four-band alphabet
+
+```text
+P_1=[1,10] union [15,21] union [29,33] union [43,44]. (2a)
+```
 
 > **Theorem.** For every finite `H subseteq P_m` and every two distinct
 > positive odd integers `a,b`, there exists `x in R/Z` such that
@@ -117,9 +137,10 @@ floor, upper endpoint minus lower endpoint has numerator
 m(140-56k)+14k+13.                                     (6)
 ```
 
-At `k=3`, this is `55-28m<0`. Increasing `k` by one decreases the numerator
-by `56m-14>0`, so every later row is also empty. The first three rows are
-nonempty for `m>=2`. This proves `(4)`, including both closed endpoints.
+For `m>=2`, the numerator at `k=3` is `55-28m<0`; every later row is still
+smaller. At `m=1`, row `k=3` is `[43,44]`, while row `k=4` has numerator
+`-15` and later rows decrease by `42`. Thus `(2)` and `(2a)` are the exact
+fixed-carrier alphabets, including both closed endpoints.
 
 For every `h in H` and `y in J_m`, equation `(4)` says that `hy` is safe.
 Consequently both physical half-lifts
@@ -243,6 +264,28 @@ possible carrier parameters. Exact arithmetic gives
 | 160 | 10,616,582,432,233,990 |
 | 200 | 132,777,517,674,540,845 |
 
+The boundary carrier certifies all `binom(24,11)=2,496,144` eleven-subsets
+of `P_1`. To extend the collision-free minimum-indexed census, require the
+body to contain `1` and put
+
+```text
+E_1(N)=binom(|P_1 intersect [1,N]|-1,10),
+A(N)=F(N)+E_1(N).                                      (14a)
+```
+
+Thus `E_1(N)` stabilizes at `binom(23,10)=1,144,066` once `N>=44`:
+
+| `N` | `E_1(N)` | `A(N)` |
+|---:|---:|---:|
+| 20 | 3,003 | 78,585 |
+| 40 | 352,716 | 813,203,703 |
+| 80 | 1,144,066 | 3,595,551,388,677 |
+| 120 | 1,144,066 | 397,529,463,891,327 |
+| 160 | 1,144,066 | 10,616,582,433,378,056 |
+| 200 | 1,144,066 | 132,777,517,675,684,911 |
+
+This finite boundary slice does not change the limiting density.
+
 For `m/N -> u`, the normalized pool size tends to
 
 ```text
@@ -277,7 +320,16 @@ P_7=[7,69] union [105,143] union [203,217],
 |P_7|=117.                                              (17)
 ```
 
-Require the four anchors
+Every eleven-subset of `P_7` containing `7` is a distinct minimum-indexed
+certificate, giving the larger unstructured seam
+
+```text
+binom(116,10)=81,572,506,886,508.                       (17a)
+```
+
+No primitivity, divisor coverage, or first-window failure is asserted for
+all bodies in `(17a)`. For that stronger structured conclusion, require the
+four anchors
 
 ```text
 A={7,120,126,143}.                                      (18)
@@ -327,11 +379,30 @@ remain live under `python -O`. The independent no-import script rebuilds the
 pool from endpoint inequalities and the `m=7` safe set from its full rational
 wall arrangement.
 
-The independent replay also records the valid boundary alphabet
+The `m=1` computation is not merely a sampled control: Section 2 proves the
+fourth band is exact, and Sections 3--5 use only `m>=1`. Hence
 
 ```text
 P_1=[1,10] union [15,21] union [29,33] union [43,44].   (23)
 ```
 
-The fourth band is unique to `m=1`. Equation `(23)` is retained as a verified
-boundary control and is not included in the promoted `m>=2` census or density.
+is the proved boundary corollary used in `(14a)`. The Python interval audit
+also tests every safe wall of the full `P_7` arrangement and rules out
+isolated safe atoms. A warning-clean C++ referee imports neither Python
+implementation and independently rebuilds the carrier, direct tail pairs,
+finite seams, and density.
+
+```text
+python3 -B 04-computation/lrc14_three_band_wrapped_carrier_odd_tail_transfer_thm4158.py
+python3 -B -O 04-computation/lrc14_three_band_wrapped_carrier_odd_tail_transfer_thm4158.py
+python3 -B 04-computation/lrc14_three_band_wrapped_carrier_odd_tail_transfer_thm4158_independent_audit.py
+
+g++ -std=c++17 -O3 -Wall -Wextra -Werror -pedantic \
+  04-computation/lrc14_three_band_wrapped_carrier_odd_tail_transfer_thm4158_independent_cpp_audit.cpp \
+  -o thm4158-independent-cpp-audit
+./thm4158-independent-cpp-audit
+```
+
+The theorem handles the isolated dyadic two-odd-tail form. It does not prove
+entry into that form, handle mixed/even tails, close arbitrary thirteen-speed
+rows, or settle LRC(14). **QED.**

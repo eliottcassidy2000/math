@@ -144,28 +144,36 @@
 
 - `lrc14_three_band_wrapped_carrier_odd_tail_transfer_thm4158.py` and an
   independent no-import endpoint/wall implementation -> matching exact
+- `lrc14_three_band_wrapped_carrier_odd_tail_transfer_thm4158.py`, an
+  independent endpoint/Haar implementation, and a warning-clean C++ referee
+  -> matching exact
   certificates [THM-4158 PROVED ELEMENTARY COMPLETE WRAPPED-CARRIER ALPHABET
   + VERIFIED-EXACT + INDEPENDENTLY AUDITED; LRC(14) OPEN]. For every `m>=2`,
   the complete alphabet safe throughout
   `J_m=[1/(14m),8/(7(12m+1))]` is exactly
   `[m,floor(13(12m+1)/16)] union [15m,floor(27(12m+1)/16)] union
   [29m,floor(41(12m+1)/16)]`; every subbody accepts every distinct positive
-  odd tail pair after doubling. The canonical minimum-indexed eleven-body
-  subfamily has density `0.34216967069786529458...`, strictly above the
-  THM-4151 first-band density; it is not the total union over carrier
-  parameters. At `m=7`, mandatory anchors `{7,120,126,143}` give
+  odd tail pair after doubling. At `m=1`, a fourth band gives `2,496,144`
+  raw eleven-body certificates, of which `1,144,066` contain the unique
+  minimum `1`. The canonical minimum-indexed family has asymptotic subset
+  density `0.34216967069786529458...`, strictly above the THM-4151 first-band
+  density. At `m=7`, the minimum-indexed seam has `81,572,506,886,508`
+  bodies; mandatory anchors `{7,120,126,143}` select
   `38,620,298,376` primitive divisor-complete bodies outside the stated
   THM-4148/4151 gates and disjoint from THM-4156's explicit family. The full
-  `P_7` safe set has measure `22/3381<4/63`; individual subbody Haar gates are
-  unclassified. Primary script/output SHA-256:
-  `8a95c6123aa048b13047cde1cf46694484b429a21572c189480f30a1a77f9936` /
-  `50eb8105f5e4bc548610be8e2de1e7c1b189eb59d3ecac28a1a424578e6f7ef5`;
-  independent script/output:
-  `795a0d4b74e5741184c2eeb0342a462951e16bd1962e7b7812dad69ccaef1ea1` /
-  `63f1ee1329ac9e48844be850f3b4bfdc39737d61b586e2e90e85f85f47dd34c1`;
-  primary semantic SHA-256/FNV-64:
-  `b1d8f0a1cad02303d3560e1deb471794d3b9fdcff0b1e1cffe12379674f6cdb6` /
-  `416565bf17102710`.
+  `P_7` safe set has measure `22/3381<4/63`, four safe wall points, and no
+  isolated safe atoms; individual subbody Haar gates remain unclassified.
+  Primary script/output/semantic SHA-256 and FNV-64:
+  `8595784844856f61326728d80f53980d239e14e1400574bea374b382794e37ab` /
+  `3eb3ae21b6b644b1d5211a2b890f6043d6bf462e3707b406d721535bd8aed753` /
+  `7b71523951db221ce08ff16c2c87629e1ff896b052f7a1324032bd4bca7314eb` /
+  `fbb8b1eeaef5dd11`; Python independent script/output:
+  `4c0da48086a3bab5bcf947b5b113ba71c18047060cb4db90094a4df894680b5d` /
+  `21da776146c19d39ba5a15f477b58d417b4f57a956d60aed3c8657fde7aedffc`;
+  C++ script/output/FNV:
+  `fa657f2aef9a093ca0b3fffd385a6f3683df49a3899df78cee66dfe0e5a0c9d3` /
+  `7577edb6de80f4b6f7e4b32c1c70cd539252ecdc981aaf4f839cda65dd59286f` /
+  `435c75c9215201cb`.
 - The THM-4159/4161/4164 Y-only wall suites, including eight independent
   source-chart audits and the supplementary direct-root pair below ->
   concordant exact exclusions [PROVED RELATIVE TO THM-4155 + VERIFIED-EXACT
@@ -185,24 +193,6 @@
   `9846b3d1e659af51ffe5f2f3bc5dd841c8184c0274e01f617c334413bfc289c3` /
   `8ecdced043a929d942cc952496abac6b2d9a902d8fa9c3a3df5948462b767bc9` /
   `ca74eeb5e783553cd866a708b8f08d119c7fd18ea561ac10762940e5cb38755d`.
-
-- `lrc14_three_band_wrapped_carrier_odd_tail_transfer_thm4158.py` and an
-  independent warning-clean C++ audit -> matching exact carrier ledgers
-  [THM-4158 PROVED ELEMENTARY TRANSFER + VERIFIED-EXACT + INDEPENDENTLY
-  AUDITED; LRC(14) OPEN]. The maximal fixed carrier has three wrapped bands
-  for `m>=2` and a fourth only at `m=1`; every finite selected body, after
-  doubling, accepts every distinct positive odd tail pair. Anchors
-  `{7,120,126,143}` give `38,620,298,376` primitive divisor-complete `m=7`
-  bodies outside both first-window gates. The full minimum-indexed eleven-body
-  family has asymptotic label density `0.3421696706978653...`; `m=1` gives
-  `1,144,066` bodies. Primary script/output/semantic SHA-256/FNV:
-  `cc087514ad555e18b5ab70ecd2682d9cac99e2990f53b734c43a2074904fa3eb` /
-  `dce9609981e9fba105c342921d0bb482f2cb5646cbaa1dc4a0b28eeab0f82975` /
-  `9ef136184225c88a692eb1aca0a33e5be60e02f4cf27a20c04939be98ba6d96e` /
-  `0f8d84ecb8dee6a5`; independent script/output/FNV:
-  `0ff9a928a8a53f39e2597447e58ae5b419e6d7efe81ae24bc2262609e515002f` /
-  `95c8b95e7dc658b233f8492766950c9e5eca4380eebf20348de8b271e530e0c3` /
-  `0e2f276aaba5e6c8`.
 
 - `mahler_clocked_reset_skeleton_corollary_thm4072_independent_audit.py` ->
   matching `.out` [THM-4072 SUPPLEMENTARY PROVED COROLLARY + VERIFIED-EXACT +

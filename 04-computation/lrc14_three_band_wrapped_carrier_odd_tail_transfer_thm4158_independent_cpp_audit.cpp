@@ -963,7 +963,7 @@ int main() {
         }
 
         SemanticLedger ledger;
-        ledger.add("status", "ACCEPT_CANDIDATE_AS_STATED");
+        ledger.add("status", "ACCEPT");
         ledger.add("uniform_m_range", "2..1000");
         ledger.add("three_blocks", "[m,floor(13s/16)];[15m,floor(27s/16)];[29m,floor(41s/16)]");
         ledger.add("interval", "[1/(14m),8/(7(12m+1))]");
@@ -977,7 +977,8 @@ int main() {
         ledger.add("m1_pool_size", static_cast<u64>(m1.pool_size));
         ledger.add("m1_fifth_band_defect",
                    static_cast<u64>(m1.fifth_band_defect));
-        ledger.add("m1_eleven_body_count", m1.family_count);
+        ledger.add("m1_all_eleven_body_count", choose_u64(24, 11));
+        ledger.add("m1_minimum_indexed_eleven_body_count", m1.family_count);
         ledger.add("small_tail_endpoint_gates", endpoint.small_tail_endpoint_gates);
         ledger.add("large_tail_room_gates", endpoint.large_tail_room_gates);
         ledger.add("tooth_gates", endpoint.tooth_gates);
@@ -1002,8 +1003,8 @@ int main() {
         ledger.add("asymptotic_density", density.density_string);
         ledger.add("old_density", density.old_density_string);
         ledger.add("density_gain", density.gain_string);
-        ledger.add("supplementary_pool_label_density", "21/41");
-        ledger.add("scope", "LRC14_OPEN;ENTRY_OPEN;M1_FINITE_SLICE_DOES_NOT_CHANGE_DENSITY");
+        ledger.add("density_profile_at_4_over_123", "21/41");
+        ledger.add("scope", "LRC14_OPEN;ENTRY_OPEN;MIXED_OR_EVEN_TAILS_OPEN;M1_FINITE_SLICE_DOES_NOT_CHANGE_DENSITY");
 
         std::cout << "THM4158_INDEPENDENT_CPP_AUDIT\n";
         for (const std::string& row : ledger.rows()) {

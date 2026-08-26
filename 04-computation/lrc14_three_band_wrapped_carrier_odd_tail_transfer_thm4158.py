@@ -12,10 +12,19 @@ from math import comb, gcd
 sys.stdout.reconfigure(newline="\n")
 
 
-EXPECTED_SEMANTIC_SHA256 = "9ef136184225c88a692eb1aca0a33e5be60e02f4cf27a20c04939be98ba6d96e"
-EXPECTED_SEMANTIC_FNV64 = "0f8d84ecb8dee6a5"
+EXPECTED_SEMANTIC_SHA256 = "7b71523951db221ce08ff16c2c87629e1ff896b052f7a1324032bd4bca7314eb"
+EXPECTED_SEMANTIC_FNV64 = "fbb8b1eeaef5dd11"
 
-EXPECTED_FINITE_COUNTS = {
+EXPECTED_UNIFORM_COUNTS = {
+    20: 75_582,
+    40: 812_850_987,
+    80: 3_595_550_244_611,
+    120: 397_529_462_747_261,
+    160: 10_616_582_432_233_990,
+    200: 132_777_517_674_540_845,
+}
+
+EXPECTED_COMBINED_COUNTS = {
     20: 78_585,
     40: 813_203_703,
     80: 3_595_551_388_677,
@@ -138,9 +147,9 @@ def pool_count_at_bound(first: int, bound: int) -> int:
     )
 
 
-def eleven_body_count(bound: int) -> int:
+def eleven_body_count(bound: int, first_start: int) -> int:
     answer = 0
-    for first in range(1, bound + 1):
+    for first in range(first_start, bound + 1):
         available = pool_count_at_bound(first, bound) - 1
         if available >= 10:
             answer += comb(available, 10)
@@ -196,6 +205,7 @@ def main() -> None:
     # A fourth band is possible only at m=1; all later bands are empty.
     require(((12 * 1 + 1) * 55) // 16 == 44, "m=1 fourth-band endpoint")
     require(43 <= 44, "m=1 fourth band is nonempty")
+    require(direct_pool(1) == pool(1), "direct pool m=1")
     for first in range(2, 1001):
         require(direct_pool(first) == pool(first), ("direct pool", first))
         for speed in pool(first):
@@ -285,7 +295,7 @@ def main() -> None:
                     ("direct tail row", first, tail_a, tail_b),
                 )
                 direct_tail_rows += 1
-    require(direct_tail_rows == 6_327, "direct tail row count")
+    require(direct_tail_rows == 7_030, "direct tail row count")
 
     # The divisor-complete m=7 family lies outside both named first-window
     # gates and kills the old x=1/12 fixed clock.
@@ -314,16 +324,44 @@ def main() -> None:
     require(all(owner[modulus] % modulus == 0 for modulus in range(2, 15)), "divisor owners")
     divisor_family_count = comb(len(pool_seven) - len(anchors), 7)
     require(divisor_family_count == 38_620_298_376, "m=7 family count")
+    m7_minimum_indexed_count = comb(len(pool_seven) - 1, 10)
+    require(
+        m7_minimum_indexed_count == 81_572_506_886_508,
+        "m=7 minimum-indexed family count",
+    )
     require(16 * 143 > 156 * 7 + 13, "outside THM-4151 gate")
     require(27 * (13 * 7 - 143) - 4 * 7 * 143 < 0, "outside THM-4148 gate")
     require(gap(2 * 120, Fraction(1, 12)) == 0, "fixed-clock hostile")
 
     # Exact finite counts and the six-piece Riemann density constant.
-    finite_counts = {
-        bound: eleven_body_count(bound)
+    m1_pool_size = len(pool(1))
+    m1_raw_count = comb(m1_pool_size, 11)
+    m1_minimum_indexed_count = comb(m1_pool_size - 1, 10)
+    require(m1_raw_count == 2_496_144, "m=1 raw eleven-body count")
+    require(
+        m1_minimum_indexed_count == 1_144_066,
+        "m=1 minimum-indexed count",
+    )
+    finite_uniform_counts = {
+        bound: eleven_body_count(bound, 2)
         for bound in (20, 40, 80, 120, 160, 200)
     }
-    require(finite_counts == EXPECTED_FINITE_COUNTS, "finite family counts")
+    finite_combined_counts = {
+        bound: eleven_body_count(bound, 1)
+        for bound in (20, 40, 80, 120, 160, 200)
+    }
+    finite_m1_counts = {
+        bound: finite_combined_counts[bound] - finite_uniform_counts[bound]
+        for bound in finite_uniform_counts
+    }
+    require(finite_uniform_counts == EXPECTED_UNIFORM_COUNTS, "uniform family counts")
+    require(finite_combined_counts == EXPECTED_COMBINED_COUNTS, "combined family counts")
+    require(
+        finite_m1_counts
+        == {20: 3_003, 40: 352_716, 80: 1_144_066, 120: 1_144_066,
+            160: 1_144_066, 200: 1_144_066},
+        "m=1 minimum-indexed finite counts",
+    )
     density = density_constant()
     expected_density = Fraction(
         848953086913769850118498851618778832628468542103282298683365532079,
@@ -338,16 +376,24 @@ def main() -> None:
         "carrier=[1/(14m),8/(7(12m+1))];width=(4m-1)/(14m(12m+1));"
         "bands=[m,floor(13(12m+1)/16)]|[15m,floor(27(12m+1)/16)]|"
         "[29m,floor(41(12m+1)/16)];m>=2;"
-        "m1_fourth=[43,44];m1_pool_size=24;m1_family=1144066;"
+        f"m1_fourth=[43,44];m1_pool_size={m1_pool_size};"
+        f"m1_raw_eleven_bodies={m1_raw_count};"
+        f"m1_minimum_indexed_eleven_bodies={m1_minimum_indexed_count};"
         "direct_pool_m1..1000=match;"
         f"endpoint_floor_m1..300={endpoint_floor};large_tooth_checks={large_tooth_checks};"
         "shortened_carrier_tails(1,12m+1)=unsafe;closed_endpoint=safe;"
         f"direct_tail_rows={direct_tail_rows};"
         "m7_pool=[7,69]|[105,143]|[203,217];pool_size=117;"
         "anchors=7,120,126,143;divisor_complete_2..14;gcd=1;"
-        f"m7_family={divisor_family_count};fails_4148_4151;clock_1/12_killed;"
-        "finite_counts="
-        + ",".join(f"{bound}:{count}" for bound, count in finite_counts.items())
+        f"m7_family={divisor_family_count};"
+        f"m7_minimum_indexed_family={m7_minimum_indexed_count};"
+        "fails_4148_4151;clock_1/12_killed;"
+        "finite_uniform_counts="
+        + ",".join(f"{bound}:{count}" for bound, count in finite_uniform_counts.items())
+        + ";finite_m1_counts="
+        + ",".join(f"{bound}:{count}" for bound, count in finite_m1_counts.items())
+        + ";finite_combined_counts="
+        + ",".join(f"{bound}:{count}" for bound, count in finite_combined_counts.items())
         + f";density={density};old_density={old_density};gain={density_gain}"
     )
     semantic = hashlib.sha256(ledger.encode()).hexdigest()
@@ -361,7 +407,11 @@ def main() -> None:
     print("status=PASS;scope=exact rational and finite combinatorial controls")
     print("carrier=[1/(14m),8/(7(12m+1))];m>=1")
     print("bands=[m,floor(13(12m+1)/16)]|[15m,floor(27(12m+1)/16)]|[29m,floor(41(12m+1)/16)]")
-    print("m1_exception=[1,10]|[15,21]|[29,33]|[43,44];size=24;family=1144066")
+    print(
+        "m1_exception=[1,10]|[15,21]|[29,33]|[43,44];size=24;"
+        f"raw_eleven_bodies={m1_raw_count};"
+        f"minimum_indexed_eleven_bodies={m1_minimum_indexed_count}"
+    )
     print("direct_pool_reconstruction=m1..1000_match;fourth_band_only_m1")
     print(f"endpoint_test_floor_through_m300={endpoint_floor}")
     print(f"large_bad_tooth_checks={large_tooth_checks}")
@@ -370,8 +420,11 @@ def main() -> None:
     print("m7_pool=[7,69]|[105,143]|[203,217];size=117")
     print("m7_anchors=7,120,126,143;primitive_divisor_complete_through_14")
     print(f"m7_family_count={divisor_family_count};outside_4148_4151={divisor_family_count}")
+    print(f"m7_minimum_indexed_family_count={m7_minimum_indexed_count}")
     print("fixed_clock_control=gap(240/12)=0")
-    print("finite_family_counts=" + ",".join(f"{n}:{v}" for n, v in finite_counts.items()))
+    print("finite_uniform_counts=" + ",".join(f"{n}:{v}" for n, v in finite_uniform_counts.items()))
+    print("finite_m1_minimum_indexed_counts=" + ",".join(f"{n}:{v}" for n, v in finite_m1_counts.items()))
+    print("finite_combined_counts=" + ",".join(f"{n}:{v}" for n, v in finite_combined_counts.items()))
     print(f"asymptotic_density={density}")
     print(f"old_density={old_density};density_gain={density_gain}")
     print(f"semantic_sha256={semantic}")

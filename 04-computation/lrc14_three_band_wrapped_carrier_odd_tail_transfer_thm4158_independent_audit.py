@@ -6,8 +6,12 @@ common-safe alphabet, the full m=7 Haar-safe set, the counted families, and
 the asymptotic density from normalized rational arithmetic.
 """
 
+import sys
 from fractions import Fraction as Q
 from math import comb
+
+
+sys.stdout.reconfigure(newline="\n")
 
 
 DELTA = Q(1, 14)
@@ -83,7 +87,17 @@ def safe_components(speeds):
             merged[-1] = (merged[-1][0], right)
         else:
             merged.append((left, right))
-    return tuple(merged)
+    safe_walls = tuple(
+        wall
+        for wall in walls
+        if all(gap(speed, wall) >= DELTA for speed in speeds)
+    )
+    isolated = tuple(
+        wall
+        for wall in safe_walls
+        if not any(left <= wall <= right for left, right in merged)
+    )
+    return tuple(merged), safe_walls, isolated
 
 
 def count_at_bound(m, bound):
@@ -115,7 +129,7 @@ for first in range(1, 251):
 
 P7 = tuple(range(7, 70)) + tuple(range(105, 144)) + tuple(range(203, 218))
 require(formula_pool(7) == P7 and len(P7) == 117, "P7")
-components = safe_components(P7)
+components, safe_walls, isolated_safe_walls = safe_components(P7)
 require(
     components
     == (
@@ -124,8 +138,21 @@ require(
     ),
     "P7 full safe set",
 )
+require(
+    safe_walls == (Q(1, 98), Q(13, 966), Q(953, 966), Q(97, 98)),
+    "P7 safe walls",
+)
+require(isolated_safe_walls == (), "P7 has no isolated safe wall atoms")
 haar = sum((right - left for left, right in components), Q(0))
 require(haar == Q(22, 3381) < HAAR_GATE, "P7 Haar hostile")
+
+P1 = formula_pool(1)
+require(len(P1) == 24, "P1 size")
+require(comb(len(P1), 11) == 2_496_144, "P1 raw eleven-body count")
+require(
+    comb(len(P1) - 1, 10) == 1_144_066,
+    "P1 minimum-indexed eleven-body count",
+)
 
 expected_counts = {
     20: 75_582,
@@ -172,8 +199,10 @@ print("THM4158 INDEPENDENT EXACT AUDIT")
 print("result=ACCEPT")
 print("complete_pool_reconstruction=m1..250")
 print("m1_pool=[1,10]|[15,21]|[29,33]|[43,44]")
+print("m1_raw_eleven_bodies=2496144;minimum_indexed_eleven_bodies=1144066")
 print("m7_pool=[7,69]|[105,143]|[203,217];size=117")
 print("m7_safe_components=[1/98,13/966]|[953/966,97/98]")
+print("m7_safe_walls=1/98,13/966,953/966,97/98;isolated_safe_atoms=0")
 print("m7_haar=22/3381<4/63")
 print("m7_anchored_families=38620298376")
 print("finite_counts=" + ",".join(f"{n}:{value}" for n, value in actual_counts.items()))
