@@ -2,9 +2,10 @@
 """Exact audit for the order-eleven THM-4224 tail-fiber extension.
 
 This packet deliberately avoids the full order-eleven tournament bank.  It
-proves the affine all-tail identities algebraically, checks the family by an
-independent subset DP, and exhausts the small, presentation-dependent shell
-obtained by reversing exactly two arcs of one fixed transitive order.
+checks the algebraic consequences of the externally proved forced-tail
+bijection, checks the family by an independent subset DP, and exhausts the
+small, presentation-dependent sphere obtained by reversing exactly two arcs
+of one fixed transitive order.
 
 Only the Python standard library is used.  All comparisons are exact integer
 cross multiplications, and all checks remain active under ``python -O``.
@@ -321,7 +322,7 @@ def formal_identity_checks() -> tuple[int, int, int]:
     n_cover = (partition_sum, 0)
     cycle = (0, 1)
     b_value = add(add(n_cover, scale(-1, end_x)), add(scale(-1, end_z), cycle))
-    product = (25, 0)
+    product = (core_h * core_h, 0)
     check(b_value == (27, -4), "formal B identity")
     check(add(b_value, scale(-1, product)) == (2, -4), "formal product excess")
     check(add(add(b_value, scale(-1, product)), (0, -5)) == (2, -9), "formal +min")
@@ -411,7 +412,7 @@ def classified_two_reversal_shell(n: int) -> frozenset[tuple[tuple[int, int], ..
     return frozenset(classified)
 
 
-def radius_two_order11(digest: "sha256") -> dict[str, object]:
+def exact_two_reversal_order11(digest: "sha256") -> dict[str, object]:
     n = 11
     arcs = all_arcs(n)
     brute_strong: list[tuple[tuple[int, int], ...]] = []
@@ -694,11 +695,11 @@ def main() -> None:
         "X7 rook boundary",
     )
 
-    shell = radius_two_order11(digest)
+    shell = exact_two_reversal_order11(digest)
     controls = gauge_and_controls(shell, x6_profile, x6_pairs)
 
     print("tournament_order11_tail_fiber_thm4224 exact audit")
-    print("status=PROVED_SYMBOLIC_IDENTITIES,VERIFIED_EXACT_FAMILY,FINITE_EXACT_RADIUS_TWO")
+    print("status=SYMBOLIC_ALL_M_ALGEBRA_CHECKS,VERIFIED_EXACT_FAMILY,FINITE_EXACT_TWO_REVERSAL_SPHERE")
     print()
     print("[formal_tail_fiber]")
     print("scope=X_m,1<=t<m,u=2^(t-1)")
@@ -739,7 +740,7 @@ def main() -> None:
     print("threshold=both_repairs_hold_iff_m<=6;first_failure_m=7_order=12")
     print("all_m_sign_certificate=base_m7_plus_strictly_decreasing_forward_difference")
     print()
-    print("[radius_two_order11]")
+    print("[exact_two_reversal_order11]")
     print("gauge=fixed_labelled_transitive_order_0<...<10")
     print(f"candidate_reversal_pairs={shell['candidate_pairs']}")
     print(
@@ -797,8 +798,8 @@ def main() -> None:
     )
     print(f"T11_1_minimum_presentations={len(shell['min_gap_rows'])}")
     print(f"T11_1_isomorphism_maps_old_to_tower={controls['tower_maps']} check=PASS")
-    print("X6_radius2_reversals=((0,3),(3,10))")
-    print(f"X6_swap_0_1_radius3_reversals={controls['swapped_reversals']}")
+    print("X6_fixed_gauge_two_reversals=((0,3),(3,10))")
+    print(f"X6_swap_0_1_fixed_gauge_three_reversals={controls['swapped_reversals']}")
     print(f"X6_swap_0_1_word={controls['swapped_word']}")
     print("gauge_transport=End,D,G,all_pair_N_B_product_min_rho:PASS")
     print(
@@ -808,7 +809,7 @@ def main() -> None:
     )
     print()
     print("[firewall]")
-    print("radius_two_is_presentation_dependent_not_an_isomorphism_class_census")
+    print("exact_two_reversal_sphere_is_presentation_dependent_not_an_isomorphism_class_census")
     print("arbitrary_order11_strong_tournaments,27_over_25,HYP_9081,OS_plus=OPEN")
     print("raw_upper_zeta_and_normalized_rho_do_not_encode_weighted_successor_completions")
     print()
