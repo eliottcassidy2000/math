@@ -6,8 +6,9 @@
 > published rational-six-cycle conclusion is conditional. The elementary
 > order and squaring-map calculation is routed to
 > [THM-4139](../../01-canon/theorems/THM-4139-rational-three-cycle-order-six-lift-and-horizontal-carrier.md),
-> which is still a `RESERVED / UNPROVED EMPTY STUB` at this audit point. This
-> ledger is source metadata and scope control, not a second theorem record.
+> which was subsequently promoted to `PROVED / FINITE-EXACT / VERIFIED` with
+> an independent audit. This ledger is source metadata and scope control, not
+> a second theorem record.
 
 ## Status at a glance
 
@@ -16,7 +17,7 @@
 | Pintér, arXiv:2607.22267v2 | **CITED / EXTERNAL PREPRINT v2**; appendix models **VERIFIED-EXACT** independently | a `P/e`-minor-free bridgeless multigraph has a nowhere-zero `4`-flow |
 | Shapiro, arXiv:2608.23342v1 | **CITED / EXTERNAL UNREFEREED PREPRINT v1**; statement and proof interface audited | fixed-mean Poisson law for instanton passage counts in a double well |
 | Stoll, arXiv:0803.2836v2 | **PUBLISHED / CONDITIONAL** for rational-six-cycle nonexistence; Theorem 6 is unconditional as an implication from `rank J(Q)=3` | arithmetic-dynamical curve and Chabauty reduction for quadratic six-cycles |
-| `2^6-1` and `z -> z^2` calculation | **ELEMENTARY / VERIFIED-EXACT in this ledger**; designated theorem file THM-4139 remains **RESERVED** | no primitive prime at exponent six, but exact order six at modulus `9`, and exact-period-six torsion strata |
+| `2^6-1` and `z -> z^2` calculation | **ELEMENTARY / VERIFIED-EXACT** here and in promoted THM-4139 | no primitive prime at exponent six, but exact order six at modulus `9`, and exact-period-six torsion strata |
 
 ## 1. Petersen contraction and nowhere-zero four-flows
 
