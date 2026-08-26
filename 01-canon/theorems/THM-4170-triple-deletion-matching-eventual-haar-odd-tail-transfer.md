@@ -21,6 +21,7 @@ related:
   - THM-4158-three-band-wrapped-carrier-odd-tail-lrc14-transfer
   - THM-4160-anchored-haar-deletion-cover-and-content-tower
   - THM-4166-two-deletion-repair-graph-haar-odd-tail-transfer
+  - THM-4172-multideletion-support-tomography-and-same-parity-johnson-holonomy
 script: 04-computation/lrc14_triple_deletion_matching_eventual_haar_thm4170.py
 output: 05-knowledge/results/lrc14_triple_deletion_matching_eventual_haar_thm4170.out
 independent_audit_source: 04-computation/lrc14_triple_deletion_matching_eventual_haar_thm4170_independent_audit.cpp
@@ -405,3 +406,13 @@ transversal mechanism, not unsafe bodies and not exclusions from every known
 mechanism. Labels in `P` are outside the newcomer definition. This theorem
 does not assert maximality of the matching, treat arbitrary divisor-complete
 bodies, treat mixed/even tail parities, or prove LRC(14).
+
+THM-4172 supplies a cross-thread deletion-tomography warning. Symmetric
+deletion layers can invert an outside-support-size histogram, but that scalar
+histogram does not retain which repair triples overlap. Here the preserved
+target is `tau(E_3({q}))>7`, so the missing coordinate is the labelled
+triple-incidence deck (or equivalent overlap data), not another arity count.
+The cheapest decisive hostile is a pair of hypergraphs with the same
+support-size/deletion-layer histogram and different transversal number. Thus
+tomography may organize a higher-deletion census, but cannot replace the
+cover recursion without this incidence sidecar.
