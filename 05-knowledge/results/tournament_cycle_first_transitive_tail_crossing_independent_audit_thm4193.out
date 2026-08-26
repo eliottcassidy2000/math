@@ -1,0 +1,13 @@
+TOURNAMENT_CYCLE_FIRST_TRANSITIVE_TAIL_CROSSING_INDEPENDENT
+method direct_actual_child_complementary_path_tables
+direct_transitive_gate_checks 12
+direct_singleton_formula_checks 8
+direct_singleton_rows [(0, -216), (1, -468), (2, -900), (3, -1332), (4, -180), (5, 10764), (6, 68364), (7, 328716)]
+direct_context_formula_checks 120
+direct_positive_context_checks 10
+arithmetic_formula_checks 167936
+arithmetic_increment_checks 163776
+last_negative_prefix C3▷P4 -180
+first_positive_prefix C3▷P5 10764
+survivor_label 1011111111111111111111111111
+PASS

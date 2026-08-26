@@ -1,0 +1,18 @@
+TOURNAMENT_CYCLE_FIRST_TRANSITIVE_TAIL_CROSSING
+singleton_formula 12*(2*4^n-(3n+21)*2^n+1)
+singleton_rows_n0_to_n5 [(0, -216), (1, -468), (2, -900), (3, -1332), (4, -180), (5, 10764)]
+singleton_sign_crossing negative_n_le_4 positive_n_ge_5
+direct_transitive_context_formula_checks 576
+algebra_formula_checks 167936
+algebra_increment_checks 163776
+algebra_f5_checks 4096
+first_positive_prefix C3▷P5 value 10764
+singleton_census [(1, 1, 0, 1, 0, 0), (2, 1, 1, 0, 0, 0), (3, 2, 1, 0, 1, 0), (4, 4, 2, 0, 2, 0), (5, 12, 4, 0, 8, 0), (6, 56, 12, 0, 44, 0), (7, 456, 56, 0, 400, 0), (8, 6880, 456, 0, 6423, 1)]
+unique_source_free_order_le_8_survivor (8, '1011111111111111111111111111', 10764)
+singleton_census_sha256 2bd16f607e89f4bb8efb09c319497da8a42f7d553b83898f44ccf7dedbbcefed
+arbitrary_context_factor_classes 532
+arbitrary_context_presentations 283024
+arbitrary_context_negative 0
+arbitrary_context_minimum (10764, 1, '', 1, '')
+finite_singleton_domination_minimum (0, 1, '', 1, '')
+PASS
