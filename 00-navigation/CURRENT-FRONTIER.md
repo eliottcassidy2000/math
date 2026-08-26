@@ -248,13 +248,9 @@ THM-2070 refutes the general HYP-8890/8895 bypasses.  Transfer
 - THM-4094 reduces completeness, via exact deletion and carries `49,63,343`,
   to lanes `p` (`p!=7`) and `7p` (`p!=3`).
 - THM-4099 makes insertion compositional; marginals lose mixed response.
-- [THM-4097](../01-canon/theorems/THM-4097-order-nine-strong-ear-spectrum-solid-interval-and-lane-extension.md)
-  and THM-4102/4104/4111--4137 handle the order-nine/ten interval-cut route.
-  [THM-4144](../01-canon/theorems/THM-4144-order-eleven-large-homogeneous-module-johnson-centrality.md)/4162/
-  [4163](../01-canon/theorems/THM-4163-order-eleven-homogeneous-pair-johnson-centrality.md)
-  close nonprimes; [THM-4168](../01-canon/theorems/THM-4168-prime-order-eleven-nontrivial-automorphism-johnson-centrality.md)
-  closes symmetric primes; THM-4167/[4172](../01-canon/theorems/THM-4172-multideletion-support-tomography-and-same-parity-johnson-holonomy.md)
-  add tomography.
+- THM-4097/4102/4104/4111--4137 handle the order-nine/ten interval-cut route;
+  THM-4144/4162/4163 close nonprimes, THM-4168 symmetric primes, and
+  THM-4167/4172 add tomography.
   THM-4169 is **CITED** presentation-only; THM-4177 gives padding descent;
   THM-4181 gives transfer/census; THM-4184 gives parity/cocycle/lollipops;
   THM-4187 gives transitive-left `(OS+)` and
@@ -274,9 +270,11 @@ THM-2070 refutes the general HYP-8890/8895 bypasses.  Transfer
   [THM-4219](../01-canon/theorems/THM-4219-no-sink-endpoint-energy-floor-and-near-ordinal-sharpness.md)
   proves `Delta_V>=n(n-1)H^2` and coefficient-`5` sharp towers;
   [THM-4221](../01-canon/theorems/THM-4221-cycle-left-source-padding-no-sink-low-capacity-response-sector.md)
-  proves an exact source-padding increment and a low-`W/H` no-sink sector.
-  HYP-9081's strong five-copy bound, general `(OS+)`, and THM-4114/4118
-  completeness remain **OPEN**.
+  proves an exact source-padding increment and low-`W/H` no-sink sector;
+  [THM-4223](../01-canon/theorems/THM-4223-cyclic-cut-cover-boolean-mobius-hierarchy-and-two-bad-owner-obstruction.md)
+  gives the owner-set Mobius hierarchy and endpoint clique-star-edge model,
+  while refuting the naive pair-product bound first at order nine. Its `+min`
+  repair, HYP-9081, general `(OS+)`, and THM-4114/4118 remain **OPEN**.
 - Corrected HYP-8835: optimal support is uniquely odd; positive `Mp=0` gives a
   replicator integral. Pure optimum means Condorcet winner, not transitivity;
   source-over-`C3` is hostile and RPS levels are circles, not `T^2`.
@@ -367,13 +365,12 @@ lift/phase clocks.
   challenges `(3,9),(5,6),(7,5),(11,4),(13,4)` all remain **OPEN**; the public
   `131199`-field file is a named finite population, not a world census.
 - **Jacobian/Dixmier:** `JC(2),DC(2)` remain **OPEN**. THM-4130--4143 empty
-  `M=8`; THM-4147/4157 close named `M=9` chambers; THM-4176/4180
-  exhaust repeated-top. `eta=zeta=0` is a lower-weight exit.
-  THM-4183/4186/4189/4192 close P-only; THM-4209/4176 close mixed/anti `K=0`.
-  THM-4205 closes the last Y-only `K=0` walls; that coefficient face is empty.
-  THM-4217 closes mixed off-anti `Delta=0`. THM-4218/4220 close dense and
-  zeta-zero exact `M=10`; THM-4222 closes dense `M=11` by primitive CM.
-  Their walls, other cells, `M>=12`, and entry stay open.
+  `M=8`; THM-4147/4157 close named `M=9` chambers; THM-4176/4180 exhaust
+  repeated-top. THM-4183/4186/4189/4192 and THM-4205/4209 close the named
+  `K=0` faces; THM-4217 closes mixed off-anti `Delta=0`. THM-4218/4220 close
+  dense and complete `zeta=0` exact `M=10`, including the split conic;
+  THM-4222 closes dense `M=11` via primitive CM. Their coefficient walls,
+  other cells, `M>=12`, and seam entry stay open.
   Exceptional quartic: THM-3703/3737 give grammar/image, THM-4034 the
   conductor, and THM-4039/4043/4046 reach `J_7`, obstruct `J_8`, and close
   critical `H`. [THM-4054](../01-canon/theorems/THM-4054-exceptional-affine-simple-zero-retained-packet.md)

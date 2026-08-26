@@ -46,8 +46,9 @@ Then read the routed frontier, guardrails, and theorem; logs are history.
    completions but no outer co-support. Atom, current and LRC remain open.
 10. **Order-eleven asymmetric bank is OPEN.** THM-4144/62/63 close nonprimes;
     THM-4168 closes `12,155` symmetric primes; THM-4169 is presentation-only.
-    THM-4212/13/15/16 give cycle/adjacent thresholds; THM-4219/4221 add the
-    no-sink endpoint floor and a source-padding sector. General `(OS+)` is open.
+    THM-4212/13/15/16 give cycle/adjacent thresholds; THM-4219/4221/4223 add
+    the no-sink floor, source-padding sector, and owner-set cut hierarchy.
+    The five-copy bound and general `(OS+)` remain open.
 11. **Support is not multiplicity.** THM-2000/2005/2352/3359/3362/3382
     separate collision, phase and address; THM-3425 needs period plus parity.
     Composite rank seven and FC(3) remain open.
@@ -56,8 +57,8 @@ Then read the routed frontier, guardrails, and theorem; logs are history.
     exhaust repeated-top; THM-4183/4186/4189/4192 close P-only, THM-4209/4176
     close mixed/anti `K=0`, and THM-4205 closes its last Y-only row. Thus the
     `K=0` is empty; THM-4217 closes mixed off-anti `Delta=0`; THM-4218/4220
-    close dense and zeta-zero `M=10`, and THM-4222 closes dense `M=11`.
-    Their walls, other cells, `M>=12`, and entry survive.
+    close dense and `zeta=0` exact `M=10`; THM-4222 closes dense `M=11` by
+    primitive CM. Their walls, other cells, `M>=12`, and entry remain open.
 13. **Complete period-14 coordinates can be globally blind.** THM-2058 keeps
     every fixed-depth packet coordinate but exits at `47/113`; THM-2043/2047/
     2050 separate local completeness from global maxima.
