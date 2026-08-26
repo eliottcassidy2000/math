@@ -6,15 +6,18 @@
   [THM-4217](../01-canon/theorems/THM-4217-complete-mixed-off-antidiagonal-delta-zero-planar-jacobian-exclusion.md)
   closes the mixed off-antidiagonal exact-`M=9` face `Delta=0` inside the
   inherited `b=d=0` reduced `(2,3)` seam.
-- **FINITE-EXACT / TRACKED SCRATCH:** the exact-`M=10` dense-top hull,
-  boundary-component inventory, and one lawful critical control in
-  [the scratch report](../.scratch/jc_m10_dense_20260826/REPORT.md).
-- **OPEN:** the uniform exact-`M=10` critical-open theorem, its coefficient
-  walls, nonzero-`Delta`/nonzero-`K` exact-`M=9` critical walls, seam entry,
-  other cells, `JC(2)`, and `DC(2)`.
+- **PROVED RELATIVE + VERIFIED-EXACT + independently audited:**
+  [THM-4218](../01-canon/theorems/THM-4218-exact-weight-ten-hidden-elliptic-tail-degree-three-planar-jacobian-exclusion.md)
+  closes the dense-top exact-`M=10` chamber for arbitrary lower coefficients.
+- **FINITE-EXACT / TRACKED SCRATCH:** one independent critical-open control
+  in [the scratch report](../.scratch/jc_m10_dense_20260826/REPORT.md).
+- **OPEN:** the four top coefficient walls, nonzero-`Delta`/nonzero-`K`
+  exact-`M=9` critical walls, seam entry, other cells, exact `M>=11`, `JC(2)`,
+  and `DC(2)`.
 
 This reflection preserves the session's operation choices and next questions.
-The theorem file, not this reflection, is the truth source for THM-4217.
+The theorem files, not this reflection, are the truth sources for THM-4217
+and THM-4218.
 
 ## Portfolio and inheritance
 
@@ -125,7 +128,7 @@ the Eisenstein endomorphism `1-zeta_3`. What survives is a divisibility
 sidecar: any compatible specialized map must have degree divisible by three.
 That is information, not a contradiction.
 
-## 3. A second route still finds a dense weight-ten obstruction
+## 3. A second route independently finds a weight-ten obstruction
 
 At the exact rational control
 
@@ -145,13 +148,12 @@ full:    2(31-29)=4<24,
 finite:  2*25-29-1+3=23<24.                           (11)
 ```
 
-Thus there is a nonempty exact critical-open candidate chamber at `M=10`.
-This is not yet a theorem: the durable statement still needs a clean-room
-boundary reconstruction and a uniform description of the source endpoint
-open set. The exact scout and frozen output are routed through the scratch
-report rather than promoted by implication from one control.
+Thus the exact critical-open part of this chamber is nonempty before the
+Keller obstruction is imposed. This calculation is an independent positive
+control, not the reason the full coefficient chamber closes. The exact scout
+and frozen output remain routed through the scratch report.
 
-## 4. Conditional degree-three closure from the hidden tail
+## 4. Degree-three closure from the hidden tail
 
 The hostile tail may carry a stronger obstruction than the critical length.
 On a compatible regular specialization, rational components are constant by
@@ -165,16 +167,12 @@ degree divisible by three. Degree conservation would force
 ```
 
 But the two carrier responses have degrees `31` and `25`, both congruent to
-one modulo three. This would close the whole packet chamber independently of
-the critical length.
-
-The argument is presently **CONDITIONAL**, not canon. Its missing lemma is a
-regular total-space certificate after `Q=sigma^30`: primitive face
-multiplicity one, all compactified face/edge roots, rationality of every
-resolution chain, and specialization degree conservation with the labelled
-attachments. The face normals and transverse crossings strongly support the
-lemma, but an unaudited toric model is exactly where a hidden component or
-multiplicity could invalidate `(12)`.
+one modulo three. THM-4218 proves this closes the whole packet chamber
+independently of the critical length. Its regular-total-space certificate
+after `Q=sigma^30` checks primitive face multiplicity one, every compactified
+face/edge root, rationality of the resolution chains, and specialization
+degree conservation with the labelled attachments. An independent
+reconstruction recovered the same model and degree obstruction.
 
 ## 5. New operation suggested by the endpoint tower
 
@@ -203,22 +201,20 @@ compiler.
 
 ## 6. Ranked continuation
 
-1. Certify or refute the `Q=sigma^30` regular model; if it passes, promote the
-   degree-mod-three obstruction before relying on critical resultants.
+1. Attack `zeta=0,upsilon*xi!=0`; its side face becomes rational, so test
+   whether the genus-two component and boundary graph force a replacement
+   obstruction away from the new discriminant walls.
 2. Build the endpoint Hasse compiler and compare its `M=9` output with the
    exact `D,J,S,T0` tower before trusting it at `M=10`.
-3. Independently promote the nonempty critical-open `M=10` chamber with a
-   typed endpoint ideal; this remains useful even if the stronger toric route
-   closes the same chamber.
-4. Attack `zeta=0,upsilon*xi!=0`; its optional side face is rational, so the
-   genus-two component may become the sole abelian boundary component away
-   from its discriminant walls.
+3. Promote a uniform typed endpoint ideal for the `M=10` chamber; this remains
+   useful as a scalable source-side instrument despite THM-4218's closure.
+4. Resolve `upsilon+xi=0`, where ten transverse nodes collide with the two
+   index-nine labels; retain the strict transform and attachment divisor.
 5. On `zeta!=0` critical walls, use the carrier-orbit lemma first. The full
    response survives down to `L>=20`; the elementary finite gate needs the
    stronger length `29`, so orbit structure is the scarce coordinate.
-6. Combine the hidden `j=0` tail's degree-divisible-by-three condition with
-   critical-value and nonproperness allocations; do not treat it as a
-   standalone no-go.
+6. Search `M>=11` lower faces for torsion-labelled attachment differences;
+   compare their torsion orders directly with all carrier-response degrees.
 7. Keep `upsilon=0`, `xi=0`, `upsilon+xi=0`, other cells, and entry as
    separate objects. No seam theorem is evidence for global entry without an
    explicit target-preserving reduction.

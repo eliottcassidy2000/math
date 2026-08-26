@@ -1,0 +1,15 @@
+THM4218_WEIGHT10_HIDDEN_ELLIPTIC_TAIL_EXACT_CERTIFICATE
+scope=exact_M10,b=d=0,reduced_(2,3),u*v*zeta*(u+v)!=0,all_lower_coefficients
+monomials=11;lower_support_subsets=256;lower_faces=M10,T6;cancellations=16
+polygon=((0,1),(2,0),(5,3),(4,4),(0,6));Pick=(36,12,13)
+packet=(9,9,6,2,2,2,1);degree=31;defect=24;cubic_carrier_degree=3
+main=genus2_plus_rational_with_10_nodes;tail=j0_elliptic;shared_roots=2
+CM=Q(zeta5)_primitive;genus2_Jacobian_simple;Hom_to_E0=0
+attachments=(0,+1),(0,-1);difference_order=3;Norm(1-zeta3)=3
+base_change=Q:sigma^30;face_multiplicities=1;A29_nodes=10;other_chains=rational
+target_special=Y^2=X^3+1;positive_genus=(2,1);dual_graph_rank=10
+critical_control=R25_squarefree;L=29;source_digest=64353cd027215e41765ea0f46cad79f94435079808e1ce41e10675421b4c3857
+responses=full:n31_cap4<24;finite:n25_beta3_cap23<24
+degree_conservation=3_divides_tail_degree;31_mod3=1;25_mod3=1
+checks=403
+verdict=EXACT_M10_DENSE_TOP_CHAMBER_EXCLUDED_RELATIVE

@@ -1,0 +1,15 @@
+THM4218_INDEPENDENT_REGULAR_MODEL_MOD3_AUDIT
+theorem_scope=all_lower_coefficients;critical_resultant_used=false
+cell=exact_M10,b=d=0,reduced_(2,3);gate=upsilon*xi*zeta*(upsilon+xi)!=0
+lower_faces=M:(r+2k-2)/10,T:(r+k-2)/6;Q=sigma^30;multiplicities=(1,1)
+edge_schemes=6_reduced;toric_chains=none;BD_slopes=-5>-6;BD_roots=2
+main=R+genus2;nodes=10;local=UV-sigma^30/2;resolution=A29x10
+tail=j0_genus1;dual_graph_b1=10;special_genus=13;packet=(9,9,6,2,2,2,1)
+genus2_sidecar=Q(zeta5),simple,Hom_to_elliptic=0
+attachments=(0,+1),(0,-1);difference=nonzero_3_torsion
+target=good_j0;degree_specialization=3_divides_generic_degree
+responses=full31,finite25;residues_mod3=(1,1);carrier=prime_separable_cubic
+critical_control=separate_positive_control,R25_squarefree,L29,digest=64353cd027215e41765ea0f46cad79f94435079808e1ce41e10675421b4c3857
+dependency=THM-4045_plus_Dokchitser_Def3.7_Def3.9_Def3.12_Thm3.14
+checks=341
+verdict=ACCEPT_THM4218_RELATIVE

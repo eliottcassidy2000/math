@@ -372,8 +372,9 @@ lift/phase clocks.
   exhaust repeated-top. `eta=zeta=0` is a lower-weight exit.
   THM-4183/4186/4189/4192 close P-only; THM-4209/4176 close mixed/anti `K=0`.
   THM-4205 closes the last Y-only `K=0` walls; that coefficient face is empty.
-  THM-4217 closes mixed off-anti `Delta=0` via lengths `25--21` and packet
-  `(8,8,4,2,2,2,1)`. Other critical walls/cells, `M>=10`, and entry stay open.
+  THM-4217 closes mixed off-anti `Delta=0`; THM-4218 closes dense-top exact
+  `M=10` by a degree-three elliptic tail. Their walls, other cells, `M>=11`,
+  and entry stay open.
   Exceptional quartic: THM-3703/3737 give grammar/image, THM-4034 the
   conductor, and THM-4039/4043/4046 reach `J_7`, obstruct `J_8`, and close
   critical `H`. [THM-4054](../01-canon/theorems/THM-4054-exceptional-affine-simple-zero-retained-packet.md)
