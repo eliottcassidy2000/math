@@ -1,5 +1,27 @@
 # Script Results Index
 
+- `lrc14_common_safe_arc_clock_pool_odd_tail_completion_thm4142.py` and
+  independent clean-room referee -> concordant exact mechanisms [THM-4142
+  PROVED ELEMENTARY COMMON-CERTIFICATE FAMILY + VERIFIED-EXACT +
+  INDEPENDENTLY AUDITED; LRC(14) OPEN]. Intersecting the `J`-safe labels with
+  strict doubled-speed safety at the three THM-4136 clocks gives a
+  certificate-relative maximal alphabet of `26` speeds. Every eleven-subset
+  `B` and every two distinct positive odd `a,b` make
+  `2B union {a,b}` LRC(14)-safe, covering `7,726,160` bodies. The complete
+  `1..93` scan, the `s>=94` length obstruction, clock-body minima
+  `4/49,11/147,17/224`, all `68` residual ratios, and independent quotient
+  scans through `q=151` pass. Primary script/output SHA-256:
+  `27e57b9a117cbf21c31da1e1c500d0dcf1b892b17f95bdd3c711c14a5f126e59` /
+  `31d805faa67c818a1b60b3ee705e4338934423ec871d5f2782136d3513563b11`;
+  independent:
+  `6cdfe76483895c6bd515894b7ac34c9bf28b67222d73c1c2180c316fed8585d5` /
+  `8c2dff6db1c74236ced2d9dff23e48cf46f383fde8a4c23b0be30c86165cfbd7`;
+  semantic ledgers:
+  `fe13698f821b5328bf7fc56267c0745280a7607261770f1b99424627f6686a3e` /
+  `dfddeafede97f47d6b8c38a4676cd6bc24c16559833690f51400addae8a5801b`.
+  Bodies outside this certificate pool, physical entry, mixed tail parity,
+  and LRC(14) remain open.
+
 - `jc23_delta_v_horizontal_carrier_monodromy_exclusion_thm4138.py` and
   independent clean-room elliptic/topological audit -> concordant exact
   mechanisms [THM-4138 PROVED RELATIVE TO THM-4120/4122/4130/4134 +
@@ -71,8 +93,10 @@
   semantic ledgers:
   `4e62dbd9b4cd87a7044687d48668449b7129ac11adb29512803ae7d01be61dbf` /
   `92b303d4737b146a0ff31de4c13fed920e70531d486495e31793128e5ca4482e`.
-  Arbitrary bodies, physical entry, mixed tail parity, and LRC(14) remain
-  open.
+  THM-4142 later intersects the same arc and clock certificates before
+  choosing the body, extending the result to `7,726,160` bodies in its
+  26-speed pool. Bodies outside that pool, physical entry, mixed tail parity,
+  and LRC(14) remain open.
 
 - `tournament_strong_centrality_order_nine_thm4135.py` and independent
   clean-room C++ contracted-block census -> concordant complete profiles
@@ -155,8 +179,9 @@
   `aa6314ca8c25b5ad512bef0874dfb7262bd65cab8b200abba32d1cfe6b7710a6` /
   `a1a708792f72909ea1ee517586dcc30f8dc16f46781005b4e3fc22edcf875f88`.
   THM-4136 later generalizes this fixed-body conclusion from ratio `(1,9)`
-  to every two distinct odd tails. Arbitrary bodies, physical entry, and
-  LRC(14) remain open.
+  to every two distinct odd tails. THM-4142 further extends the same
+  certificate to `7,726,160` eleven-speed bodies. Bodies outside that
+  common-certificate pool, physical entry, and LRC(14) remain open.
 
 - `tournament_strong_centrality_through_order_eight_thm4131.py` and
   independent canonical-augmentation/contracted-block audit -> concordant
@@ -210,8 +235,9 @@
   all `119,316` controls through 500 and all `5,855` scale-one `U`-body ratio
   types. THM-4132 first closes the fixed-`U` exceptional scale-two rows
   `2U union {t,9t}`; THM-4136 later closes every fixed-`2U` row with two
-  distinct odd tails. Arbitrary bodies, physical entry, and LRC(14) remain
-  open. Primary script/output SHA-256:
+  distinct odd tails. THM-4142 further extends the same certificate to
+  `7,726,160` eleven-speed bodies. Bodies outside that common-certificate
+  pool, physical entry, and LRC(14) remain open. Primary script/output SHA-256:
   `f027c93324096de71a63f6cefcf7d9f75a6ef36b0b878c8b4248d6871d783cfa` /
   `9a31e2ab7d319e63df067cfbfd05059a52b8e032b2fa1ae5bf7de93342d087b8`;
   independent: `f977c65658b2dad6374196866c6f6211a1b833d3d24c9b852cf6fa959ea2bbe7` /
