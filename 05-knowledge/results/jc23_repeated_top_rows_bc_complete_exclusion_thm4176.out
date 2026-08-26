@@ -1,0 +1,10 @@
+bridge=T*detD(f,h)-detHess(G)-f*G_XT=0
+row_B_X_infinity=none_for_T!=0,Phi*eta!=0
+row_C_X_infinity=none_for_T!=0,eta!=0
+J=Delta*(105Delta-5696)^2+54675eta^2
+row_B_Q_degrees=17;16_on_J;15_on_J_and_Phi_star;14_on_H_roots
+row_B_min_L=18;finite_ceiling=7<13;full_ceiling=10<16
+row_C_Q_degrees=15;14_on_J;13_at_Delta_22784_over_825
+row_C_min_L=17;finite_ceiling=5<11;full_ceiling=8<14
+checks=26
+verdict=B_AND_C_CLOSE

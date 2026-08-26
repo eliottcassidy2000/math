@@ -27,6 +27,7 @@ related:
   - THM-4161-y-only-double-top-root-planar-jacobian-exclusion
   - THM-4164-y-only-triple-top-root-planar-jacobian-exclusion
   - THM-4165-y-only-inner-top-triple-intersection-planar-jacobian-exclusion
+  - THM-4176-complete-repeated-top-wall-planar-jacobian-exclusion
 script: 04-computation/jc23_repeated_top_row_a_complete_exclusion_thm4173.py
 output: 05-knowledge/results/jc23_repeated_top_row_a_complete_exclusion_thm4173.out
 independent_audit_script: 04-computation/jc23_repeated_top_row_a_complete_exclusion_thm4173_independent_bridge_audit.py
@@ -314,7 +315,8 @@ makes no assertion about:
 
 1. `eta=0`;
 2. `Delta=0`, where the common Newton polygon contracts;
-3. `C=0`, namely rows B, C, and D of THM-4157;
+3. `C=0`, namely rows B, C, and D of THM-4157, not asserted here but closed
+   in full by THM-4176;
 4. entry into the reduced seam or another reduced cell;
 5. exact residual weight at least ten;
 6. failure of the inherited finite-separable transport package;

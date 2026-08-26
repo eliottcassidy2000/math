@@ -10,9 +10,10 @@ status: >
   three rows contain no nonautomorphic planar Keller pair, and the deepest
   row is excluded for every eta!=0. The latter closure combines projection
   switching, an exact quadratic endpoint wall, and a degree-thirty
-  nonreduced-critical-point/Hessian obstruction. The remaining critical
-  walls in the first three rows, eta=0, Delta=0, entry, other cells,
-  exact weight at least ten, JC(2), and DC(2) remain OPEN.
+  nonreduced-critical-point/Hessian obstruction. The first-three-row walls
+  left outside this theorem are subsequently closed by THM-4173/4176.
+  Eta=0, Delta=0, entry, other cells, exact weight at least ten, JC(2), and
+  DC(2) remain OPEN.
 source: codex-frontier-synthesis-creative-20260825aq
 depends_on:
   - THM-3827-generic-fibre-genus-floor-for-nonlinear-cubic-plane-atlases
@@ -28,6 +29,9 @@ related:
   - THM-4141-delta-d-collision-wall-boundary-monodromy-exclusion
   - THM-4143-two-term-collision-wall-critical-boundary-monodromy-exclusion
   - THM-4155-generic-y-only-delta-zero-weight-nine-planar-jacobian-exclusion
+  - THM-4171-row-a-inner-resultant-wall-planar-jacobian-exclusion
+  - THM-4173-repeated-top-row-a-complete-planar-jacobian-exclusion
+  - THM-4176-complete-repeated-top-wall-planar-jacobian-exclusion
 script: 04-computation/jc23_weight9_repeated_top_wall_thm4157.py
 output: 05-knowledge/results/jc23_weight9_repeated_top_wall_thm4157.out
 symbolic_output: 05-knowledge/results/jc23_weight9_repeated_top_wall_symbolic_endpoints_thm4157.out
@@ -159,8 +163,8 @@ critical length drops to `15`; the sharpened finite/full inequalities in
 section 5.1 still exclude the slice.  On `H_30=0`, section 5.2 constructs a
 nonreduced affine critical point and hence a zero Hessian, contradicting the
 Keller--Morse congruence.  Thus row `D` is completely excluded in scope.  The
-surviving row-`A,B,C` coefficient/resultant/discriminant walls are listed in
-section 9.
+row-`A,B,C` coefficient/resultant/discriminant walls outside this theorem are
+listed in section 9 and are subsequently closed by THM-4173/4176.
 
 ## 2. Complete source and type ledger
 
@@ -790,7 +794,7 @@ the raw source degree.
 
 ## 9. Honest residual walls
 
-The theorem still does not cross:
+This theorem itself does not cross:
 
 1. `eta=0`, which leaves exact weight nine/repeated-top scope;
 2. `Delta=0`, which contracts the common Newton polygon;
@@ -806,11 +810,17 @@ discarded: they are rows `B,C,D` and have been treated separately.  Row `D`
 has no remaining coefficient/resultant/discriminant wall in the present
 scope: `H_36,H_24` are removed by projection switching, `J=0` by section 5.1,
 and `H_30=0` by section 5.2.  Conversely, this complete deepest-row result
-does not close any row-`A,B,C` wall in item 3.
+does not itself close any row-`A,B,C` wall in item 3. THM-4173 subsequently
+closes row `A`, and THM-4176 closes rows `B,C`; those successors leave only
+items 1, 2, 4, and 5 open on the present route.
 
-## 10. Decisive next computation
+## 10. Discharged continuation
 
-After complete row `D`, the sharpest explicit remaining coefficient wall is
+THM-4171/4173 discharged the row-`A` continuation below. THM-4176 then exports
+the same resultant-multiplicity/Hessian mechanism to every row-`B,C` degree
+wall. The following preserves the then-decisive computation that led there.
+
+After complete row `D`, the sharpest explicit remaining coefficient wall was
 the row-`A` critical-infinity wall exposed by the canonical independent
 anti-diagonal computation.  Put
 
@@ -847,7 +857,7 @@ The exact test is binary: either the lost resultant multiplicity is supported
 at a unique finite point, so the local lemma of section 5.2 gives an immediate
 Hessian contradiction, or it lies at critical infinity and its strict
 transform supplies the next required sidecar.  This is the first row-`A`
-wall not settled by the canonical open-chamber computation.
+wall not settled by the canonical open-chamber computation at that stage.
 
 ## 11. Exact artifacts and replay
 

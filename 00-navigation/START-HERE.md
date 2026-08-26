@@ -54,8 +54,8 @@ Then read the routed frontier, guardrails, and theorem; logs are history.
 12. **JC is false from dimension three; JC(2), DC(2) remain open.** THM-1300
     is exact; THM-2084 closes cells. THM-4130/4138/4141/4143 empty `M=8`;
     THM-4147/4157 close stated `M=9` chambers; THM-4159/4161/4164/4165 close
-    Y-only for `zeta!=0`. THM-4173 closes repeated-top row `A` when
-    `zeta=-eta` and `eta*Delta*(Delta+Theta)!=0`; `Delta=0` and rows `B/C` survive.
+    Y-only for `zeta!=0`. THM-4176 closes `zeta=-eta` for `eta*Delta!=0`;
+    `eta*Delta=0` and entry survive.
 13. **Complete period-14 coordinates can be globally blind.** THM-2058 keeps
     every fixed-depth packet coordinate but exits at `47/113`; THM-2043/2047/
     2050 separate local completeness from global maxima.

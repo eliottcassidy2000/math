@@ -1,5 +1,37 @@
 # Script Results Index
 
+- `jc23_repeated_top_rows_bc_complete_exclusion_thm4176.py` and a narrow
+  independent PARI/GP resultant audit -> complete repeated-top-wall exclusion
+  [THM-4176 PROVED RELATIVE TO ITS STATED TRANSPORT PACKAGE + VERIFIED-EXACT +
+  INDEPENDENTLY RESULTANT-AUDITED; JC(2), DC(2) OPEN]. On `zeta=-eta` and
+  `eta*Delta!=0`, inherited rows `A,D` and the exact new `B,C` degree-drop
+  towers exclude every nonautomorphic planar Keller pair. The Python audit
+  checks the Morse-resultant bridge, finite-`X` infinity gates, towers,
+  terminal gcds, and length arithmetic; its `T=0` contribution is the
+  inherited THM-4157/4173 identity. PARI/GP independently checks only the
+  `B,C` resultant towers and terminal gcd. Primary source/output SHA-256:
+  `928d77ae3a9815abaa38cf7ca6e29716f5d3f1575fc46e68ec93481baf59cc98` /
+  `7b32ef45ab66500a181215a1c14d6beb4d03d1af8fed2569fd63c30cdd199d79`;
+  independent source/output:
+  `37d5f1da666e2ed023987d9e0ab8cbd376bb5e53dfd9fec40422ad0c65a0b734` /
+  `a6edc0762e692e054dea56553cb60edbc2f587fdfd0852655d2e4b4b4d39eb59`.
+
+- `lrc14_haar_failure_atom_anchor_exchange_thm4175.py` and an independent
+  all-newcomer C++ audit -> failure-atom inversion plus one-anchor exchange
+  [THM-4175 PROVED + VERIFIED-EXACT; COMPLETE ALL-`q` C++ AUDIT AND
+  INDEPENDENT PYTHON `q=50` AUDIT; LRC(14) OPEN]. Deletion
+  transforms recover every labelled failure atom; symmetric ledgers recover
+  only support-size totals. Replacing one anchor at a time yields exact
+  failure counts `82/13/1/0`, `84/14/1/0`, and `64/10/1/0` at depths
+  `3/4/5/6`; the sole depth-five residual is `q=50`. Thus depth six certifies
+  `3*binom(27,8)=6,660,225` new scale-one bodies per newcomer, disjoint from
+  the all-anchor family. Primary source/output SHA-256:
+  `d0dd60d900655147d399e2ba4aa4ba18bb37472ed43e60ca941e229d8669976b` /
+  `56b9bb8f0608320fedd34357ceec7b00cf1719b97d6e90c13c5304757907b63f`;
+  independent source/output:
+  `b1f40b89b9a4335b5ad261346c09e419893a1f8211b7c14c65db58073e74a91b` /
+  `b5e048cd4b1d262e943ebbf56eb53cebd39aa7eee96328001e9940b21c5b081e`.
+
 - `lrc14_multideletion_all_newcomers_exact_thm4174.py` and three second-path
   residual/transversal audits -> exact completion of the fixed THM-4156
   newcomer lane [THM-4174 PROVED RELATIVE TO THM-4150/4156/4158/4170 +

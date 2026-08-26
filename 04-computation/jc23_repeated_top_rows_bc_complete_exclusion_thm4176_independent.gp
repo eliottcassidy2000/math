@@ -1,0 +1,42 @@
+P=T+X^2*T^2;
+Y=X*T*P;
+K=2848/45-7*D/6;
+base=-X^2*T/2-3*P+8*P^2/3-1376*P^3/135+K*Y^2+D*P^4-D*P*Y^2+e*P^3*Y-e*Y^3;
+J=D*(105*D-5696)^2+54675*e^2;
+A=105*D-5696;
+b=825*D-22784;
+
+GC=base;
+fC=deriv(GC,X)/T;
+hC=deriv(GC,T);
+QC=polresultant(fC,hC,X)/(T^32*(6*T+1)^2);
+if(poldegree(QC,T)!=15,error("C degree"));
+if(polcoef(QC,15,T)!=e^3*J^2/22500,error("C top"));
+c14=divrem(polcoef(QC,14,T),J,e)[2];
+if(c14!=4*D^2*e*A^4*b^2/8303765625,error("C J-wall next slot"));
+D2=22784/825;
+e2=-739213574144/187171875;
+c13=divrem(subst(divrem(polcoef(QC,13,T),J,e)[2],D,D2),e^2-e2,e)[2];
+expectedC13=-39082296781894638834860007697799970816*e/8994856609344482421875;
+if(c13!=expectedC13,error("C terminal slot"));
+
+GB=base+ph*P^2*Y;
+fB=deriv(GB,X)/T;
+hB=deriv(GB,T);
+QB=polresultant(fB,hB,X)/(T^30*(6*T+1)^2);
+if(poldegree(QB,T)!=17,error("B degree"));
+if(polcoef(QB,17,T)!=e^3*J^2/22500,error("B top"));
+F=180*D*e*b^2-4*D*A^2*b*ph-1215*e*A^2*ph^2;
+if(divrem(polcoef(QB,16,T),J,e)[2]!=D*A^4*F/373669453125,error("B J-wall next slot"));
+if(poldisc(F,ph)!=16*D*A^2*b^2*J,error("B double-root wall"));
+phstar=-2*D*b/(1215*e);
+H=187425*D^3-25939920*D^2+1215936512*D-18687983616;
+N=1161862920421875*D^8-436262053412193750*D^7+72428665164732450000*D^6-6925998948093233280000*D^5+416163890453413588992000*D^4-16047146699676377898024960*D^3+386666237774835302050824192*D^2-5306381690338021964332924928*D+31649810610496845164669042688;
+scale=397166535676406250000*e^3;
+b15=subst(divrem(polcoef(QB,15,T),J,e)[2],ph,phstar);
+if(divrem(scale*b15+3*D^3*A^6*H^2,J,e)[2]!=0,error("B H-wall slot"));
+b14=subst(divrem(polcoef(QB,14,T),J,e)[2],ph,phstar);
+if(divrem(scale*b14+D^3*A^4*N,J,e)[2]!=0,error("B terminal slot"));
+if(gcd(H,D*A*b*N)!=1,error("B terminal unit/coprimality gate"));
+
+print("PARI_GP_INDEPENDENT_BC_BRIDGE_ACCEPT");

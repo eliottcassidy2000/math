@@ -9,8 +9,9 @@ status: >
   4Theta*K^2-27eta^2=0 contains no nonautomorphic planar Keller pair.
   Its four exhaustive source strata have critical lengths 22,21,20,19,
   all with genus 10 and packet (7,7,4,2,2,2,1). Full and finite
-  cubic-carrier responses are strictly impossible. Other row-A walls,
-  rows B/C, entry, other cells, M>=10, JC(2), and DC(2) remain OPEN.
+  cubic-carrier responses are strictly impossible. Other row-A and B/C
+  walls are subsequently closed by THM-4173/4176; entry, other cells, M>=10,
+  JC(2), and DC(2) remain OPEN.
 source: codex-lrc14-jc-sharp-fronts-20260825b
 depends_on:
   - THM-3827-generic-fibre-genus-floor-for-nonlinear-cubic-plane-atlases
@@ -27,6 +28,8 @@ depends_on:
 related:
   - THM-4159-inner-resultant-wall-planar-jacobian-exclusion
   - THM-4165-y-only-inner-top-triple-intersection-planar-jacobian-exclusion
+  - THM-4173-repeated-top-row-a-complete-planar-jacobian-exclusion
+  - THM-4176-complete-repeated-top-wall-planar-jacobian-exclusion
 script: 04-computation/jc23_row_a_inner_resultant_wall_exclusion_thm4171.py
 output: 05-knowledge/results/jc23_row_a_inner_resultant_wall_exclusion_thm4171.out
 independent_audit_script: 04-computation/jc23_row_a_inner_resultant_wall_exclusion_thm4171_independent_endpoint_audit.py
@@ -482,10 +485,10 @@ that transport package.
 
 This theorem closes the whole `D_A=0` row-A wall under `(1)`, including all
 of its endpoint intersections; it imposes no source-resultant discriminant.
-It does not close the other row-A coefficient/resultant/discriminant walls
-off `D_A`, the surviving walls in rows `B,C`, `eta=0`, `Delta=0`, entry into
-the reduced seam, another reduced cell, exact residual weight at least ten,
-`JC(2)`, or `DC(2)`.
+It does not itself close the other row-A coefficient/resultant/discriminant
+walls off `D_A` or the walls in rows `B,C`; THM-4173 and THM-4176 close those
+later. It makes no claim on `eta=0`, `Delta=0`, entry into the reduced seam,
+another reduced cell, exact residual weight at least ten, `JC(2)`, or `DC(2)`.
 
 ## 8. Exact artifacts and replay
 
