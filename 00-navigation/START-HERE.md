@@ -21,10 +21,9 @@ Then read the routed frontier, guardrails, and theorem; logs are history.
 
 ## Seventeen high-signal facts to reuse, not re-derive
 
-1. **LRC(14) is first open.** Direct `<=6`; projected caps `1579/216`, with
-   THM-3378 leaving `372913/109/12`. THM-4160/4166/4170 exactly classify the
-   fixed-pool deletion ladder through arity three: 61 triple-certificate
-   failures, none after `q=924`. Entry, arbitrary bodies, and LRC stay open.
+1. **LRC(14) is first open.** Direct `<=6`; projected caps `1579/216` leave
+   `372913/109/12`. THM-4160/4166/4170 make fixed-pool deletions `1..3` exact;
+   triple has 61 failures, last `q=924`. Entry, arbitrary bodies, and LRC stay open.
 2. **The `q <= 25` period claim is refuted.** THM-762/764 exhibit `26*{1,...,12} union {339}`, whose first good period is `27`.
 3. **Good-period existence is a maximum statement.** The tight resonant AP
    defeats average/count arguments; see MISTAKE-127/129/130.
