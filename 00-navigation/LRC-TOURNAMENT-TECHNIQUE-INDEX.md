@@ -80,6 +80,12 @@ Every technique below is a possible tooth in that zipper.
   transfer, and overlap-aware union—not presentation addition—gives
   `1,071,961` exactly-one-original-anchor bodies. Maximal deletion identifies
   the unrestricted repair test with the body's own Haar threshold.
+  THM-4185 then closes all `1,491,665` good zero-original ten-bodies at
+  `q=50` through its `32/297/24` minimal-anchor hierarchy. THM-4188 transports
+  that entire slice to every newcomer: the q50 E5/E6/E7 inclusions fail at
+  exactly `15/19/23` nested resonance labels, and shallower native E6/E5
+  hypergraphs have no covers within the residual `6/5/4` budgets there.
+  Together THM-4174/4175/4188 give `9,039,920` disjoint cores per newcomer.
 - **Preserves:** body safety, literal root `t`, integer fibre multiplicity,
   compact/open endpoint status, and the cubic mixed danger response.
 - **Forgets / guardrail:** an ordinary tournament, complete pairwise Gram
@@ -92,15 +98,16 @@ Every technique below is a possible tooth in that zipper.
   /4179 require labelled hyperedge overlaps: none is an intrinsic tournament.
   Symmetric deletion tomography recovers support-size statistics but not the
   incidence deck controlling `tau`. Endpoint equality remains atomic data.
-- **Next pull:** extend THM-4179's completed two-anchor slice across
-  THM-4170's residual newcomer labels or moving anchors; do not repeat the
-  fixed `q=50` or THM-4175 all-`q` one-anchor audits. Arbitrary-body entry and
+- **Next pull:** deform THM-4179's exactly-one-original slice away from
+  `q=50`, or replace the fixed pool by an entry theorem; do not repeat the
+  completed THM-4174/4175/4188 all-`q` slices. Arbitrary-body entry and
   mixed/even tails remain separate.
   Retain safe-tooth rank, omitted-label masks, divisor owners, endpoints,
   labelled hyperedge incidence, and physical sheet labels.
 - **Pointers:** THM-3910, THM-4002, THM-4129, THM-4132, THM-4136, THM-4142,
   THM-4148, THM-4150, THM-4156, THM-4158, THM-4160, THM-4166, THM-4170,
-  THM-4172, THM-4174, THM-4175, THM-4178, THM-4179; THM-2221, THM-3377,
+  THM-4172, THM-4174, THM-4175, THM-4178, THM-4179, THM-4185, THM-4188;
+  THM-2221, THM-3377,
   THM-3380, THM-3729;
   `lrc14-fixed-radius-auxiliary-center-t-sheet-response-and-tournament-cubic-sidecar-root-20260823.md`.
 

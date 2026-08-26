@@ -22,10 +22,11 @@ Then read the routed frontier, guardrails, and theorem; logs are history.
 ## Seventeen high-signal facts to reuse, not re-derive
 
 1. **LRC(14) is first open.** Direct `<=6`; projected caps `1579/216` leave
-   `372913/109/12`. THM-4174/4175/4179/4185 transfer disjoint fixed-`q=50`
-   slices with `|A_0 intersection B|=3,2,1,0` and respective counts
-   `888030/6660225/1071961/1491665` (`10111881` total); the last is the complete
-   declared good zero-original ten-body slice. Entry/arbitrary bodies/LRC stay open.
+   `372913/109/12`. THM-4174/4175/4188 uniformly transfer the disjoint
+   `|A_0 intersection B|=3,2,0` slices with counts
+   `888030/6660225/1491665` (`9039920` per newcomer) through THM-4188's exact
+   `15/19/23` resonances. At `q=50`, THM-4179's `1071961` exactly-one slice
+   raises the total to `10111881`. Entry/arbitrary bodies/LRC stay open.
 2. **The `q <= 25` period claim is refuted.** THM-762/764 exhibit `26*{1,...,12} union {339}`, whose first good period is `27`.
 3. **Good-period existence is a maximum statement.** The tight resonant AP
    defeats average/count arguments; see MISTAKE-127/129/130.

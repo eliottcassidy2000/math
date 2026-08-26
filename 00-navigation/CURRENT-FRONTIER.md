@@ -73,15 +73,13 @@ is the safe control `M(S_13)=99/338`. No cited result proves LRC(14).
   `2^(c(F)-1)`. Safety/arrival stay open.
 - **Owner/tail lane (PROVED):** THM-4025/4031, 4029/4038, and 4033/4042
   give tails, the 60-phase law, and clocks; THM-4129/4136 close fixed `U/2U`.
-  THM-4142--4154 give affine/Haar transfers. THM-4174/4175/4179 give disjoint
-  fixed-`q=50` original-anchor-count `3/2/1` slices of
-  `888030/6660225/1071961` bodies; THM-4178/4179 cross the last two blockers at
-  sharp depth seven.
-  THM-4182 starts the zero-original slice with `1,138,494` four-anchor bodies;
-  [THM-4185](../01-canon/theorems/THM-4185-q50-complete-zero-original-minimal-anchor-hierarchy.md)
-  completes all `1,491,665` declared good ten-bodies via the exact
-  `32/297/24` size-`4/5/6` anchor hierarchy. The four slices total
-  `10,111,881`; fixed-pool entry, arbitrary bodies, and LRC(14) stay open.
+  THM-4142--4154 give Haar transfers. THM-4174/4175 uniformly transfer
+  the original-anchor-count `3/2` slices (`888,030/6,660,225` bodies).
+  [THM-4188](../01-canon/theorems/THM-4188-all-newcomer-zero-original-anchor-hierarchy-and-resonance-filtration.md)
+  deforms THM-4185's `1,491,665` zero-original `32/297/24` hierarchy to every
+  `q notin P` via exact `15/19/23` resonances and native repairs. This gives
+  `9,039,920` cores per newcomer; at `q=50`, THM-4179's exactly-one slice gives
+  the four-slice total `10,111,881`. Entry, arbitrary bodies, and LRC(14) stay open.
   [Proof map](LRC14-PROOF-MAP.md).
 - **PROVED:** [THM-2928](../01-canon/theorems/THM-2928-critical-seven-comb-grid-tensorization-and-drift-tariff.md)/2941: literal zero/one/two/three-drift sectors are empty; `k=2,3` are finite.
 - **Orthogonal routes.** THM-1017 is HYP-6820; THM-2047/2050 keep phase/exit; THM-731/2048 prune; THM-1290 ends at `55`; HYP-8900 nonuniform.
