@@ -247,15 +247,16 @@ THM-2070 refutes the general HYP-8890/8895 bypasses.  Transfer
 - THM-4099 makes insertion compositional; scalar marginals lose mixed response.
 - [THM-4097](../01-canon/theorems/THM-4097-order-nine-strong-ear-spectrum-solid-interval-and-lane-extension.md)
   computes `1,482` strong order-nine values and cut-field basis `{3,4}`.
-  THM-4102/4104 give intervals to `80,265` and prefix to `80,405` (next
-  `80,407,80,689`). THM-4111/4115 force unbounded full-cut maxima via exact
-  Walsh variance, factor `(n+1)(n+2)/(4n)` (`C3` sharp), and `F_1` surplus.
-  THM-4123/4127 give slice means/lattices and beat the cube centrally;
+  THM-4102/4104 give intervals to `80,265` and prefix to `80,405`.
+  THM-4111/4115 force unbounded full-cut maxima;
+  THM-4123/4127 give central slice gains;
   THM-4128/4131/4135/4137 prove centrality through order ten;
   [THM-4144](../01-canon/theorems/THM-4144-order-eleven-large-homogeneous-module-johnson-centrality.md)
-  closes order-eleven module sizes `3..9` (margin `>=380`), leaving pairs and
-  primes. THM-4133 **REFUTES** all-order centrality at twelve. Actual maxima
-  and intervals remain **OPEN**.
+  closes order-eleven module sizes `3..9` (margin `>=380`).
+  [THM-4145](../01-canon/theorems/THM-4145-rooted-homogeneous-pair-expansion-two-defect-formula.md)
+  reduces pairs to `93,559,490` rooted mixed-two-ear presentations; pairs/
+  primes remain open. THM-4133 **REFUTES** all-order centrality
+  at twelve; actual maxima and intervals remain **OPEN**.
   THM-4114 separates positive faces from submodular ear cuts; THM-4118 adds
   exact response gcds and stateful unit-component intervals. At `n=5`, all
   `544` parents have gcd `2` yet gaps, and `400` lack an `M-2` neighbor.

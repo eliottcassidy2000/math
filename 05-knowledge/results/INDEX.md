@@ -1,5 +1,27 @@
 # Script Results Index
 
+- `tournament_rooted_pair_expansion_two_defect_thm4145.py` and independent
+  standard-library C++ audit -> matching structural identities [THM-4145
+  PROVED ELEMENTARY ROOTED SUBSTITUTION + EXACT TWO-DEFECT FORMULA +
+  VERIFIED-EXACT + INDEPENDENTLY AUDITED]. Pair expansion preserves and
+  reflects strongness. If `B_r=N_Q^+(r)`, then
+  `H(P_r(Q))=F_Q(B_r)`, and the internal exposure weight is `w_ab=H(Q)`.
+  More sharply, the child count is the exact sum over root-deletion orders:
+  weights `k^2,2k-1,2` for zero, one, or two repairable defects, and zero
+  otherwise. All `5,404` rooted labelled cases through quotient order five
+  pass independently; the directed-triangle hostile has actual count `5`
+  versus square-only `4`. The order-eleven pair stratum is thereby reduced
+  to `93,559,490` rooted presentations, whose full Johnson data is a mixed
+  two-ear field; centrality remains open. Primary script/output SHA-256:
+  `475f152a5c3a5d03691f953c08be68fb17157a6e66444d18de0876ed78d8db86` /
+  `f282d82707fb5364b9c42cfe88b56b250d111c73f3121678564b590074c1c503`;
+  independent:
+  `40c834de56220724a295c69af98487112f1136500fe1fb7353ffd4ad961678c3` /
+  `782091fa4b7dd0e76336b1e2556e333b5952d2dea7f7120a0c1af0d4efb4e011`;
+  semantic SHA-256/FNV-64:
+  `d174d868d8d1784901ef3926b0d0dc03e27a842eadd9a31df931c00716fa11cc` /
+  `9f075ab9b9d3f07f`.
+
 - `tournament_order_eleven_large_module_centrality_thm4144.py`, exact C++
   engine, and independent clean-room C++ audit -> concordant complete
   substitution atlas [THM-4144 FINITE-EXACT + VERIFIED-EXACT + INDEPENDENTLY
@@ -9,9 +31,9 @@
   strong and pass both gates; these are presentations, not target-class
   counts. The sharp tilt is `3201028/5617819<1` and the minimum strict
   central-over-outer coset margin is `380`. A sink deletion hostile proves
-  strongness is load-bearing. The exact residual is homogeneous pairs plus
-  prime tournaments; actual-maximizer centrality is not claimed. Primary
-  Python/engine/output
+  strongness is load-bearing. THM-4145 later reduces the pair residual to a
+  rooted mixed-two-ear census; prime tournaments have no substitution
+  reduction. Actual-maximizer centrality is not claimed. Primary Python/engine/output
   SHA-256:
   `e72c8710a5de2aad77e7710880857f1b47148adf82b6fb4278417a30a982edfd` /
   `03dfb092830313d71d41c35dcf7fb7d300db9850bbd52b1291ace7e674bf63bc` /
