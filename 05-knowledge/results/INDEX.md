@@ -6,20 +6,21 @@
   INDEPENDENTLY AUDITED; LRC(14) OPEN]. Every finite positive body `H` with
   `m=min(H)>=3` and `13/(14M)-1/(14m)>=2/189` has universal `1/14`-safe
   completion after doubling by every pair of distinct positive odd tails.
-  Thus `[15,60]` supplies `C(46,11)=13,340,783,196` eleven-body families,
-  beyond THM-4142's common pool; 46 labels is sharp among consecutive blocks
-  for this mechanism, with all maximal starts exactly `14..22`. The hostile
+  Grouping by the unique minimum gives exactly `60,301,609,751` certified
+  eleven-body sets, with minima `3..70` and maximum label `80`; `[15,60]`
+  alone supplies `C(46,11)=13,340,783,196`. Forty-six labels is sharp among
+  consecutive blocks, with all maximal starts exactly `14..22`. The hostile
   tails `(1,211)` kill opposite endpoint lifts, while moving to
   `y=1/105`, `x=53/105` rescues the full `[15,60]` superbody. Arbitrary
   bodies, entry, and LRC(14) remain open. Primary script/output SHA-256:
-  `ffee89d8ec8833a5533ade63edf1ee3d34ca89c0dfe77b7a2651575f09d2bdf4` /
-  `ed11811dbb0dc7fef83e00431d30276318360938b58b459bf7637479079e9677`;
+  `c5938e111e5b888a3f6b923bd1457f7b89f15bd127ec90bbd6ae12f1cf0a63cc` /
+  `d7cda26940eb3264ba2ed4381433a3aab54aaa04e7c0bbaad91c692b9588b130`;
   independent:
-  `e617521359ad7ea8ee02c646e78fec69cad8c07a430fe4e47ce0e8352e6880cc` /
-  `222c4cc324b87c6f4a2464db22d2fa369b39320dff53d0ff14cb4289dc53650d`;
+  `8082615643dcd1ccfad2948d5e7eaf73d39d8c4a173511a6e92131c865c20e28` /
+  `9e5ffed9f249bfc07f46fe8a01fc3a42a64796799215a54f7171effeaa6ca342`;
   shared semantic SHA-256/FNV-64:
-  `6f4c7b6fd62bca62f0a8baccb63822e6f19df831d2ece22001c2412cfce44e2e` /
-  `1f67e51174709013`.
+  `1bed18a18b2747baed31600403926d44e8139ae4aa219698d6eb3401a295f38c` /
+  `56b59e7ee90c92f6`.
 
 - `tournament_rooted_pair_expansion_two_defect_thm4145.py` and independent
   standard-library C++ audit -> matching structural identities [THM-4145

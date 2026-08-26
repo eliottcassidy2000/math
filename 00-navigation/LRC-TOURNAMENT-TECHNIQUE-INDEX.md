@@ -37,7 +37,7 @@ Every technique below is a possible tooth in that zipper.
   THM-4148 instead keeps only a movable body-safe first window. If
   `m>=3` and `13/(14M)-1/(14m)>=2/189`, its width defeats every nonresidual
   cross-comb component and one endpoint clock closes the residual `q<=25`;
-  `[15,60]` alone yields `13,340,783,196` eleven-body families.
+  its complete width census has `60,301,609,751` bodies on labels `3..80`.
 - **Preserves:** body safety, literal root `t`, integer fibre multiplicity,
   compact/open endpoint status, and the cubic mixed danger response.
 - **Forgets / guardrail:** an ordinary tournament, complete pairwise Gram
