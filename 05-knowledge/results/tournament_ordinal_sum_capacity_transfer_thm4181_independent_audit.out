@@ -1,0 +1,21 @@
+THM4181_INDEPENDENT_LITERAL_AUDIT
+labelled_counts q1=1 q2=2 q3=8 q4=64 q5=1024 q6=32768
+literal_sidecar_checks 33867
+literal_even_component_exchange_checks 65600
+literal_direct_transfer_checks 374
+labelled_remainder_checks 55350
+labelled_remainder_minimum 120
+labelled_dominance_presentations 90166
+derived_first_left total=6 A=3:010 B=3:010 coords=0,2,0 lhs=6 rhs=10 slack=-4
+derived_first_right total=7 A=1: B=6:000010000000001 coords=0,4,1 lhs=18 rhs=26 slack=-8
+derived_first_right_A_ge_2 total=8 A=2:0 B=6:000010000000001 coords=0,4,1 lhs=18 rhs=26 slack=-8
+derived_first_right_A_ge_3 total=8 A=3:010 B=5:0001000001 coords=0,3,0 lhs=20 rhs=24 slack=-4
+derived_first_left_block_sharp A=010 B=010 coords=0,2,0 lhs=6 rhs=10 slack=-4
+derived_first_right_block_sharp A= B=000010000000001 coords=0,4,1 lhs=18 rhs=26 slack=-8
+primary_canonical_first_right B=111111100111111 lhs=22 rhs=28 slack=-6
+primary_canonical_first_right_block_sharp B=111111101111110 lhs=18 rhs=26 slack=-8
+left_obstruction C3 C3 values 6 10 slack -4
+right_A_ge_3_stress C3 1111100111 values 20 30 slack -10
+sharp_left_5x5 values 88 730 slack -642
+sharp_right_5x5 values 90 150 slack -60
+PASS
