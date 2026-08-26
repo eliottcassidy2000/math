@@ -1,0 +1,21 @@
+mode=exhaust_all_n6 rows=32768 prime_rows=10320 strong_rows=22320 parent_fail=8448 prime_parent_fail=0 strong_parent_fail=0 all_restriction_cert_fail=10368 prime_all_restriction_cert_fail=0 strong_all_restriction_cert_fail=0 abs_bary_cert_fail=8448 prime_abs_bary_cert_fail=0 strong_abs_bary_cert_fail=0 restriction_failures=81120 identity_failures=0 zero_D=0
+max_restriction_ratio=5 witness=code=2 label=010000000000000 delete=3,4 C=720 D=72
+max_abs_bary_ratio=1.50300601202404804 witness=code=72 label=000100100000000 sumAbsC=18000 sumD=5988
+first_all_fail=code=0 label=000000000000000
+first_abs_fail=code=2 label=010000000000000
+mode=exhaust_strong_n6 rows=22320 prime_rows=10320 strong_rows=22320 parent_fail=0 prime_parent_fail=0 strong_parent_fail=0 all_restriction_cert_fail=0 prime_all_restriction_cert_fail=0 strong_all_restriction_cert_fail=0 abs_bary_cert_fail=0 prime_abs_bary_cert_fail=0 strong_abs_bary_cert_fail=0 restriction_failures=0 identity_failures=0 zero_D=0
+max_restriction_ratio=0.804597701149425304 witness=code=80 label=000010100000000 delete=1,5 C=1120 D=696
+max_abs_bary_ratio=0.29902242668200113 witness=code=16 label=000010000000000 sumAbsC=4160 sumD=6956
+mode=exhaust_prime_n6 rows=10320 prime_rows=10320 strong_rows=10320 parent_fail=0 prime_parent_fail=0 strong_parent_fail=0 all_restriction_cert_fail=0 prime_all_restriction_cert_fail=0 strong_all_restriction_cert_fail=0 abs_bary_cert_fail=0 prime_abs_bary_cert_fail=0 strong_abs_bary_cert_fail=0 restriction_failures=0 identity_failures=0 zero_D=0
+max_restriction_ratio=0.571428571428571397 witness=code=81 label=100010100000000 delete=1,5 C=608 D=532
+max_abs_bary_ratio=0.178799999999999987 witness=code=81 label=100010100000000 sumAbsC=3576 sumD=10000
+mode=exhaust_all_n7 rows=2097152 prime_rows=973680 strong_rows=1677488 parent_fail=0 prime_parent_fail=0 strong_parent_fail=0 all_restriction_cert_fail=391216 prime_all_restriction_cert_fail=0 strong_all_restriction_cert_fail=0 abs_bary_cert_fail=0 prime_abs_bary_cert_fail=0 strong_abs_bary_cert_fail=0 restriction_failures=1552320 identity_failures=0 zero_D=0
+max_restriction_ratio=3.00983606557377037 witness=code=4 label=001000000000000000000 delete=4,5 C=7344 D=1220
+max_abs_bary_ratio=0.92776769509981849 witness=code=136 label=000100010000000000000 sumAbsC=184032 sumD=99180
+first_all_fail=code=0 label=000000000000000000000
+mode=exhaust_strong_n7 rows=1677488 prime_rows=973680 strong_rows=1677488 parent_fail=0 prime_parent_fail=0 strong_parent_fail=0 all_restriction_cert_fail=0 prime_all_restriction_cert_fail=0 strong_all_restriction_cert_fail=0 abs_bary_cert_fail=0 prime_abs_bary_cert_fail=0 strong_abs_bary_cert_fail=0 restriction_failures=0 identity_failures=0 zero_D=0
+max_restriction_ratio=0.463038180341186045 witness=code=160 label=000001010000000000000 delete=4,6 C=13680 D=14772
+max_abs_bary_ratio=0.179927591142544419 witness=code=365 label=101101101000000000000 sumAbsC=102576 sumD=285048
+mode=exhaust_prime_n7 rows=973680 prime_rows=973680 strong_rows=973680 parent_fail=0 prime_parent_fail=0 strong_parent_fail=0 all_restriction_cert_fail=0 prime_all_restriction_cert_fail=0 strong_all_restriction_cert_fail=0 abs_bary_cert_fail=0 prime_abs_bary_cert_fail=0 strong_abs_bary_cert_fail=0 restriction_failures=0 identity_failures=0 zero_D=0
+max_restriction_ratio=0.417035185541242082 witness=code=292 label=001001001000000000000 delete=3,6 C=17352 D=20804
+max_abs_bary_ratio=0.146561502545569655 witness=code=300 label=001101001000000000000 sumAbsC=133344 sumD=454908

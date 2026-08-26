@@ -1,0 +1,3 @@
+mode=stdin rows=12155 prime_rows=12155 strong_rows=12155 parent_fail=0 prime_parent_fail=0 strong_parent_fail=0 all_restriction_cert_fail=0 prime_all_restriction_cert_fail=0 strong_all_restriction_cert_fail=0 abs_bary_cert_fail=0 prime_abs_bary_cert_fail=0 strong_abs_bary_cert_fail=0 restriction_failures=0 identity_failures=0 zero_D=0
+max_restriction_ratio=0.951366988783803325 witness=1000000000010000000100000001000111111000101001001010101 delete=1,2 C=-2219867376 D=3500017452
+max_abs_bary_ratio=0.527007147238975016 witness=0100000000000000000000000011011000110100011001010110101 sumAbsC=101359119456 sumD=288494529876

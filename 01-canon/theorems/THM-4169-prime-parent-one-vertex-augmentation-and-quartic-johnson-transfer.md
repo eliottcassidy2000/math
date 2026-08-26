@@ -8,6 +8,9 @@ status: >
   ORDER-TEN PRIME-PARENT CENSUS AND CRITICAL CONTROLS + VERIFIED-EXACT +
   INDEPENDENTLY AUDITED. The 7,921,973,322 rows form a class-marked
   presentation cover, not a rooted-orbit or unrooted-isomorphism-class count.
+  An exact root/card incidence corollary now gives the weighted quotient from
+  rooted augmentation orbits to unrooted noncritical classes, including the
+  asymmetric 1/p(T) card weight; its numerical total is not evaluated.
   Rational centrality uses the strict gate 2|C|<D; exact Johnson cosets retain
   the complete (H,c) sidecar. This theorem does not prove order-eleven
   Johnson centrality.
@@ -294,6 +297,56 @@ unrooted child classes, with the two doubletons
 Thus even an asymmetric parent does not make all 1,002 unrooted children
 pairwise nonisomorphic; forgetting the distinguished root is the lost
 coordinate.
+
+### Exact root/card incidence quotient
+
+Let `Q` range over one representative of each prime order-ten isomorphism
+class, and let `A_Q` be its prime attachment patterns. There is a canonical
+bijection
+
+```text
+disjoint_union_[Q] Aut(Q)\A_Q
+  <--> rooted prime pairs [(T,x)] with T-x prime.        (24)
+```
+
+Indeed, choosing an isomorphism `T-x -> Q` records the attachment pattern of
+`x`; changing that identification acts by `Aut(Q)`. Conversely an attachment
+recovers the rooted pair, and rooted isomorphisms give exactly the same orbit.
+
+For a prime order-eleven child `T`, put
+
+```text
+P(T)={v in V(T):T-v is prime},
+a(T)=|Aut(T)\P(T)|.                                    (25)
+```
+
+The fibre of the forget-root map over `[T]` has exactly `a(T)` elements.
+Therefore weighting each rooted class by `1/a(T)` gives the exact unrooted
+noncritical class count:
+
+```text
+boxed:
+N_noncritical
+ =sum_[Q] sum_([z] in Aut(Q)\A_Q) 1/a(T_z)
+ =sum_[Q] 1/|Aut(Q)| sum_(z in A_Q)
+      |Stab_(Aut(Q))(z)|/a(T_z).                        (26)
+```
+
+The second equality is orbit--stabilizer, orbit by orbit. The stabilizer is
+canonically `Aut(T_z,x)`. On the asymmetric-child stratum it is trivial and
+`a(T)=p(T):=|P(T)|`, so
+
+```text
+boxed:
+N_(asymmetric,noncritical)
+ =sum_[Q] 1/|Aut(Q)|
+    sum_(z in A_Q, Aut(T_z)=1) 1/p(T_z).                (27)
+```
+
+This is an exact quotient formula, not an evaluation. For the hostile
+doubletons `336~432` and `368~400`, all four children are asymmetric and
+have exactly six prime deletion cards. The missing root/card weight is thus
+literally `1/6` on each rooted presentation in these fibres.
 
 For the same parent, the source pattern `1023` is nonstrong and has
 

@@ -10,7 +10,10 @@ status: >
   numerator and denominator have support degrees three and four, every
   deletion depth obeys an exact normalized transport law. Even deletion
   depth preserves parity and makes the parent tilt a genuine positive
-  barycenter of the corrected restrictions.
+  barycenter of the corrected restrictions. FINITE-EXACT complete checks
+  certify all 12,155 symmetric prime order-eleven classes and all 1,002
+  prime attachments over the frozen asymmetric parent; a 100,000-row stream
+  is a deterministic VERIFIED SAMPLE, not a census.
 source: codex-frontier-synthesis-creative-20260826au
 depends_on:
   - THM-002-ocf
@@ -26,10 +29,23 @@ script: 04-computation/tournament_multideletion_support_tomography_thm4172.py
 output: 05-knowledge/results/tournament_multideletion_support_tomography_thm4172.out
 independent_audit_script: 04-computation/tournament_multideletion_support_tomography_thm4172_independent_audit.cpp
 independent_audit_output: 05-knowledge/results/tournament_multideletion_support_tomography_thm4172_independent_audit.out
+finite_certificate_source: 04-computation/tournament_order11_two_deletion_certificate_thm4172.cpp
+finite_certificate_outputs:
+  - 05-knowledge/results/tournament_order11_two_deletion_certificate_thm4172_symmetric.out
+  - 05-knowledge/results/tournament_order11_two_deletion_certificate_thm4172_cube.out
+  - 05-knowledge/results/tournament_order11_two_deletion_certificate_thm4172_random100k.out
+  - 05-knowledge/results/tournament_order11_two_deletion_certificate_thm4172_exhaustive.out
+  - 05-knowledge/results/tournament_order11_two_deletion_certificate_thm4172_hostiles.out
 script_sha256: 720aee79d95eaf1ab0049dcf3d7bdd099592be2786716f52e6c399994b65db4d
 output_sha256: 8090ebd4969ffbb2ff822623fc0d98e498e3a46426fd71be50e90e097bcb1f80
 independent_audit_script_sha256: 39ade4819410c0226aa9a27d40c4290eecffa1fc6255cf638739d194b03811aa
 independent_audit_output_sha256: 9112310d8a42cda65e5a1dc7862184584fdbb9013074043ddd83e102b0f3704e
+finite_certificate_source_sha256: c2113784df1dfabef739f50bd93eae6d2d9aec9f1fb9cdf96dd4d90ff975f350
+finite_symmetric_output_sha256: 1d4bd17481c6babdba112fec5b6a6f45a1186621b7d967f3b867690304319125
+finite_cube_output_sha256: b502f90f54b431e54304ad9a11254ac4e95463811fbc40bc75809c623c62fa4f
+finite_random100k_output_sha256: f6d9ecea2b148009f169427c6e5cf72d20b23a71b3062e1319490bc3a058feb6
+finite_exhaustive_output_sha256: a6a7a15aa0028c0faed3ea1f90f584bb68a1f9dae857d43f9cb8a78b38cf97f9
+finite_hostiles_output_sha256: 9d4b14eaefc49da6fe960e84e3d030b037f9b943a794dfa0403d6e6bc5320f96
 hash_basis: raw LF bytes
 primary_audit: >
   PASS. Literal tagged odd-cycle packings check 410 capacity coordinates and
@@ -43,6 +59,14 @@ independent_audit: >
   evaluates response capacities by ear-state Hamilton DPs for the named
   controls, and repeats the all-depth polynomial algebra. Clang O0/O3 and
   GCC O3 streams byte-match under warnings-as-errors builds.
+finite_certificate_audit: >
+  PASS. A separate exact C++ evaluator checks all 668,525 corrected
+  restrictions over the complete THM-4168 symmetric-prime bank, all 55,110
+  restrictions over the 1,002 prime children in the frozen THM-4169 cube,
+  complete labelled orders six and seven, a deterministic 100,000-row
+  order-eleven sample, and corrected-versus-actual hostile controls. Fresh
+  O3 outputs byte-match all frozen streams; O0 also byte-matches the
+  symmetry, cube, and hostile streams.
 ---
 
 # THM-4172 -- multideletion support tomography and same-parity Johnson holonomy
@@ -278,7 +302,60 @@ as a same-parity order-nine restriction problem. It does **not** inherit
 THM-4135 automatically, because `b^(R)` need not equal the capacity tensor
 of the actual order-nine card.
 
-## 6. Sharp controls
+## 6. Aggregate quartic gates and exact evidence
+
+At order eleven, `(13)` specializes further to
+
+```text
+sum_(|R|=2) C_R=28C,                 sum_(|R|=2) D_R=21D,
+
+boxed:
+sum_(|R|=2)(2D_R+3C_R)=42(D+2C),
+sum_(|R|=2)(2D_R-3C_R)=42(D-2C).                    (22a)
+```
+
+Thus the parent strict rational gate is exactly positivity of both aggregate
+signed child walls. Two convenient stronger sufficient loads are
+
+```text
+L_local=max_R 3|C_R|/(2D_R),
+L_abs=3 sum_R |C_R|/(2 sum_R D_R).                    (22b)
+```
+
+Either `L_local<1` or the weaker `L_abs<1` implies `(22)`. The first demand
+checks every corrected order-nine restriction; the second permits signed
+cancellation only after paying the triangle-inequality tax.
+
+The separate exact evaluator gives the following finite banks.
+
+| universe | target rows | corrected restrictions | local/absolute failures | sharp local load | sharp absolute load |
+|:---|---:|---:|---:|:---|:---|
+| complete THM-4168 symmetric primes | `12,155` | `668,525` | `0 / 0` | `92494474/97222707` | `201109364/381606521` |
+| prime children in the frozen THM-4169 cube | `1,002` | `55,110` | `0 / 0` | `1038483552/1131093929` | `571044751/1214691687` |
+
+Both are **FINITE-EXACT** complete checks of the displayed universes. The two
+uniform nonstrong cube attachments are the only local-certificate failures
+in the full 1,024-pattern cube; they are not prime.
+
+A deterministic SplitMix64 stream of `100,000` labelled order-eleven rows
+contains `88,346` prime and `97,900` strong rows. No prime or strong row fails
+the parent, local, or absolute gate. All `2,100` local failures in the whole
+stream are nonstrong. This is a **VERIFIED SAMPLE**, not an isomorphism-class
+census and not evidence by itself for the remaining universal claim.
+
+Complete labelled small-order controls also have zero strong local failures:
+
+```text
+n=6: 22,320 strong rows,    334,800 restrictions, max load 70/87;
+n=7: 1,677,488 strong rows, 35,227,248 restrictions, max load 570/1231.
+                                                               (22c)
+```
+
+These computations make all 55 walls a plausible next certificate for the
+asymmetric bank, but they do not prove that every strong order-eleven tensor
+satisfies them.
+
+## 7. Sharp controls
 
 The prime order-eleven code from THM-4167,
 
@@ -328,7 +405,27 @@ So same-parity deletion exposes the known failure almost everywhere. The
 one-deletion parity factor and the corrected-versus-actual distinction are
 both load-bearing.
 
-## 7. Boundaries and replay
+There is also a corrected-versus-actual hostile on the THM-4133 row. For
+`R={1,2}`, the actual order-ten card is strong and central:
+
+```text
+(C,D)=(-34428472,168571592),
+7|C|/(2D)=4303559/6020414<1.                           (26a)
+```
+
+The corrected parent restriction is noncentral:
+
+```text
+(C_R,D_R)=(-51221650864,152533479120),
+7|C_R|/(2D_R)=22409472253/19066684890>1.              (26b)
+```
+
+Its coordinatewise deletion defect is nonzero on all 45 edges, with total
+`705,854` and maximum coordinate `35,962`. Thus even **strong central actual
+cards** cannot substitute for corrected restrictions; the full edgewise
+deletion defect is the missing sidecar.
+
+## 8. Boundaries and replay
 
 - The normalized law stops when fewer than four vertices remain because the
   disjoint-edge denominator vanishes.
@@ -339,7 +436,7 @@ both load-bearing.
   additional information.
 - The strict wall is `|tau|<1`. Equality retains THM-4128's distinction
   between a central optimizer existing and every optimizer being central.
-- Neither `(21)` nor the positive named control proves the full asymmetric
+- Neither `(21)` nor the positive finite banks prove the full asymmetric
   order-eleven bank.
 
 Run the primary exact audit with
@@ -358,6 +455,23 @@ clang++ -O3 -std=c++17 -Wall -Wextra -Werror \
   04-computation/tournament_multideletion_support_tomography_thm4172_independent_audit.cpp \
   -o /tmp/thm4172_independent_audit
 /tmp/thm4172_independent_audit
+```
+
+Replay the finite banks with
+
+```text
+clang++ -O3 -std=c++17 -Wall -Wextra -Werror \
+  04-computation/tournament_order11_two_deletion_certificate_thm4172.cpp \
+  -o /tmp/thm4172_certificate
+
+git show origin/main:05-knowledge/results/tournament_prime_nontrivial_automorphism_order11_thm4168.labels \
+  | /tmp/thm4172_certificate --stdin
+/tmp/thm4172_certificate --cube
+/tmp/thm4172_certificate --random 11 100000
+/tmp/thm4172_certificate --exhaust 6
+/tmp/thm4172_certificate --exhaust 7
+/tmp/thm4172_certificate --thm4133
+/tmp/thm4172_certificate --root-hostile
 ```
 
 Clang `-O0/-O3` and GCC `-O3` produce the same frozen stream. The finite
