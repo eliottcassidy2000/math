@@ -75,14 +75,12 @@ is the safe control `M(S_13)=99/338`. No cited result proves LRC(14).
   give tails, the 60-phase law, and clocks; THM-4129/4136 close fixed `U/2U`.
   THM-4142/4148/4151 give families and the affine gate. THM-4150/4152/4153
   give abstract Haar transfers, but THM-4154 corrects their displayed pools.
-  THM-4156/[4158](../01-canon/theorems/THM-4158-three-band-wrapped-carrier-odd-tail-lrc14-transfer.md)
-  give anchored pool/carrier families. [THM-4160](../01-canon/theorems/THM-4160-anchored-haar-deletion-cover-and-content-tower.md)/
-  [4166](../01-canon/theorems/THM-4166-two-deletion-repair-graph-haar-odd-tail-transfer.md)
-  exactly classify one/two deletions.
+  THM-4156/4158 give the base pool/carrier. [THM-4160](../01-canon/theorems/THM-4160-anchored-haar-deletion-cover-and-content-tower.md),
+  [4166](../01-canon/theorems/THM-4166-two-deletion-repair-graph-haar-odd-tail-transfer.md), and
   [THM-4170](../01-canon/theorems/THM-4170-triple-deletion-matching-eventual-haar-odd-tail-transfer.md)
-  finds exactly 61 triple-certificate failures, last `q=924`; every `q>=925`
-  supplies `888,030` cores. Failure is not danger; entry, arbitrary bodies,
-  and LRC(14) remain open.
+  exactly classify deletion arities `1..3`: triple has 61 failures, last
+  `q=924`, and `888,030` cores per qualifier. Failure is not danger; entry,
+  arbitrary bodies, and LRC(14) remain open.
   See the [proof map](LRC14-PROOF-MAP.md).
 - **PROVED:** [THM-2928](../01-canon/theorems/THM-2928-critical-seven-comb-grid-tensorization-and-drift-tariff.md)/2941: literal zero/one/two/three-drift sectors are empty; `k=2,3` are finite.
 - **Orthogonal routes.** THM-1017 is HYP-6820; THM-2047/2050 keep phase/exit; THM-731/2048 prune; THM-1290 ends at `55`; HYP-8900 nonuniform.
