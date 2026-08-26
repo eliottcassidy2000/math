@@ -1,5 +1,44 @@
 # Script Results Index
 
+- `jc23_weight9_repeated_top_wall_thm4157.py` with factor, `J=0`, and
+  `H_30=0` companions plus six clean-room audits -> concordant exact wall
+  ledgers [THM-4157 PROVED RELATIVE TO THM-3827/3992/3997/4007/4103/4120/
+  4122/4130/4147 + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED; JC(2)
+  OPEN]. On `zeta=-eta`, `eta*Delta!=0`, the exhaustive structural rows
+  `A/B/C/D` have packets `(7,7,4,2,2,2,1)`, `(6,6,4,2,2,2,1)`,
+  `(5,5,4,2,2,2,1)`, `(7,4,2,2,2,1)` and critical lengths `23,21,19,16`.
+  The first three nonempty critical opens fail both finite and full response
+  inequalities. In row `D`, projection switching removes the `H_24,H_36`
+  artifacts, exact quadratic-field algebra gives `L=15` and excludes `J=0`,
+  and the common irreducible degree-thirty wall has one exactly-double
+  projected root, one finite critical point, local length two, and zero
+  Hessian, contradicting Keller--Morse congruence. Thus row `D` is completely
+  excluded for every `eta!=0`; the `A/B/C` critical walls remain open, with
+  `D_A=4Theta*K^2-27eta^2` next. Primary script/default/symbolic SHA-256:
+  `a69244d03e52aa33f843696d58c505fda0f7d0618d4fa0d6515eead728221927` /
+  `39a645fcaf3756d9eb0838557c81d020994163b91d5632f852b12385f4eab485` /
+  `be28a7806f09c656f6ad7e7f79ff2d7566858cda5b5a5ed90891ffa8a131836e`;
+  factor script/output:
+  `079852fd424591858c3560150ba5250233d299cfe2f2285050641642dbf2f513` /
+  `91b91809c99ebeecf26af27fdb7168311fa5124a90f71a8f942c1495133cf483`;
+  `J=0` script/output:
+  `dd4a6ead99d3013b260913114561ef1027ef0273d642502492b15def2f87bb90` /
+  `1a577bdb1f44cc2e2f27927ca01b19527e9e1603767aba54509baf8495d99d10`;
+  `H_30` script/output:
+  `90d7715649fd7d7f55cfc11c87429311a843a929e3f53820a785bfbb70f70073` /
+  `ea0e093bfeb9abeb9b6878dd23751e51922f3bfa06231815944f445875823f1f`;
+  independent point/tower scripts and outputs:
+  `754555871dbd082bd21a912b4216bf55ce8e389037bff2887ac2445da13be0c7` /
+  `be82d02a296cf6dd40bcb7daf8278fbb49212b58f8de0771fdbc237d92779843` /
+  `248dc4f3b727a602270d67a2457c701a1442ced5c567b60ac7c15b96b3c400ab` /
+  `760f9556a740874fcf9708a609972ef4f251eca6c9406c49b3c2c841b416c9e1`;
+  primary/factor/`J`/`H_30`/point semantic SHA-256:
+  `6267e49f6c6e5edecb2ae99bcb88f6111010f2b02663c84652ad30654334af2d` /
+  `08f3d689c392ea14d3d87df61068cb35267056d2a2f8d9318617cc568657d2f8` /
+  `b373e61184f208ce7315f655d74834fd0182c8614e381766cca1d41b186ef908` /
+  `f400db7367d8ff42e6bddebe74a5952ed2af8f21999bc57202c68dc2aa77fe94` /
+  `3534b84eac3679630eeaed120f68478cc2f6a16248620323957a80832b1995e0`.
+
 - `lrc14_divisor_complete_anchor_pool_haar_transfer_thm4156.py` and an
   independent successive-interval intersection audit -> matching exact pool
   ledgers [THM-4156 PROVED RELATIVE TO THM-4150 + VERIFIED-EXACT +

@@ -351,12 +351,12 @@ lift/phase clocks.
   tuple is now at least `(8,5,4,3,3)` for `ell=(3,5,7,11,13)`. The requested
   challenges `(3,9),(5,6),(7,5),(11,4),(13,4)` all remain **OPEN**; the public
   `131199`-field file is a named finite population, not a world census.
-- **Jacobian/Dixmier:** `JC(2),DC(2)` remain **OPEN**. THM-4130/4138/4141/4143 empty
-  exact `M=8`; THM-4147 excludes exact-`M=9` `P/Y/B` and generic
-  anti-diagonal `A`. THM-4155 excludes the coefficient-open `eta=Delta=0` slice with
-  `(g,L,packet)=(9,22,(8,3,3,3,2,2,2,1))`. Its inner and top-face collision
-  walls, other cells, `M>=10`, and entry remain open; `(72,108)` has
-  `rho<=2` conditional on width six.
+- **Jacobian/Dixmier:** `JC(2),DC(2)` remain **OPEN**. THM-4130/4138/4141/4143
+  empty exact `M=8`; THM-4147 excludes `M=9` `P/Y/B/A`.
+  [THM-4157](../01-canon/theorems/THM-4157-repeated-top-edge-wall-planar-jacobian-exclusion.md)
+  adds `B/C` critical opens and all `D` with `eta!=0`, including `J=0` and
+  the zero-Hessian wall `H_30=0`; row-`A` wall `4Theta K^2-27eta^2=0` is next.
+  THM-4155 handles a Y-only slice. Other walls, cells, `M>=10`, and entry stay open.
   Exceptional quartic: THM-3703/3737 give grammar/image, THM-4034 the
   conductor, and THM-4039/4043/4046 reach `J_7`, obstruct `J_8`, and close
   critical `H`. [THM-4054](../01-canon/theorems/THM-4054-exceptional-affine-simple-zero-retained-packet.md)
