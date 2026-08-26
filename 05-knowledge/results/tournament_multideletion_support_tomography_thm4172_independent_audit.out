@@ -1,0 +1,5 @@
+capacity_tomography 10650 42162
+multideletion_algebra 15 632
+prime11 tau=1055017002/11090656697 central_pairs=55 worst_pair=7,10 worst_abs=1629373665/9484374388
+hostile12 tau=-53092739331/40435524866 central_one=12 noncentral_pairs=65 central_pair=9,11 central_tau=-4461429/4143186457 worst_pair=9,10 worst_abs=770665315/458646486
+THM4172_INDEPENDENT_AUDIT_ACCEPT
