@@ -1,0 +1,5 @@
+stage1_h15_monic_sha256=c26b5e4c5c390de1fe0d9400c9be54dd8592828f027423f5541c62d24dea511a
+stage1_Q_u_sha256=eecf925a95a4b1eda2a9f1a909db72e721fd3c3c4ed0366f8209de5d0ad2c338
+stage1_factor_degrees=[(1, 5), (15, 1), (18, 2)]
+stage1_tower_irreducible=yes
+stage1_checks=185

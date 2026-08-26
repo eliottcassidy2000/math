@@ -1,0 +1,12 @@
+INDEPENDENT H30 POINT-LEVEL AUDIT
+H30_mod_347_degree=30;Rabin_gcd_degrees=(0, 0, 0);Frobenius_remainder=0
+H30_irreducible_over_Q=yes;h15_irreducible=yes;eta^2-u_irreducible=yes
+gcd(Q,Qprime)_degree=1;repeated_multiplicity=2
+t0_unit=yes;6t0+1_unit=yes;u_unit=yes;J_unit=yes;A(t0)_unit=yes
+X_leading_rows=7*T^7*eta,8*T^7*eta;finite_infinity_loss=0
+direct_point_values=subresultant:0,f:0,h:0,detD:0,Hessian:0
+t0_sha256=142f6a9980b176836233324d4c5b9adecb4c0552da4de051c9e2ef9de06d6e59
+X_over_eta_sha256=b9823208ca248cfb1cb65c5ee748e766d80dcce3876c259c4cb26ec9720d52b5
+A_at_t0_sha256=96ed5eddf04950d5c5d960ac4804db7b95ee94d5e02f4988702485f1c01434a7
+semantic_sha256=3534b84eac3679630eeaed120f68478cc2f6a16248620323957a80832b1995e0
+verdict=PASS

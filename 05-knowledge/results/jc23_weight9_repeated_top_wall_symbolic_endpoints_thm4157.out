@@ -1,0 +1,96 @@
+EXACT-M=9 REPEATED TOP-EDGE WALL CERTIFICATE
+checks=15200
+wall=zeta=-eta, eta!=0
+contraction=eta*p^3*y-eta*y^3=eta*s*p^3*(p-s^2)
+polygon=((0, 1), (2, 0), (5, 3), (1, 5), (0, 5))
+Pick=area2:31,boundary:11,arithmetic_genus:11
+strict_transform=z^11*F(1/z,(1-a)/z^2)
+tangent_cone=Q*a*(eta*a-(Delta+Theta)*z)
+residue=Q*z^7*dz/L_a
+cubic_carrier=q-1/2=K*W^2-eta*W^3; residue_degree=3; beta=3
+case=A_C_nonzero
+  control=Delta:1,Theta:19/11,Phi:11/7,eta:23/13,K:5591/90,B:14021/270
+  local_delta=1; branches=a~(C/eta)z,a~-z^8/(2C)
+  packet=(7, 7, 4, 2, 2, 2, 1); genus=10; defect=18
+  primary=T^42*(6T+1)^2*Q19
+  Q_constant=-8957952000000/1771561; Q_leading=-11206045421019265531550064784/407151596119125
+  Q_at_T_minus_1_over_6=-45247933399557903233058067097905705543757294356149600793/401596928478780283624907298330821537280000000
+  Q_squarefree_gcd_degree=0
+  Q_sha256=7b144ef59de4548bd8d1bf27fc9d0a02e3f861e836b8975623a170567b8552c8
+  independent=p^8*R19
+  R_constant=1325533905629568/604175; R_leading=6918774197944320000/5436100813
+  R_squarefree_gcd_degree=0
+  R_sha256=dd6aad7b1331ad2729200f72fa657500979016c70dcd8efda8febef4440825b1
+  critical_length=23=19+2+2
+  finite_response=n:19,beta:3,L=n+beta+1,one_handle_capacity:17<n-1:18
+  full_response=n:25,overlap<=2,commutator_index<=4<defect:18
+case=B_C_zero_Phi_nonzero
+  control=Delta:1,Theta:-1,Phi:11/7,eta:23/13,K:5591/90,B:14021/270
+  local_delta=2; branches=a~(Phi/eta)z^2,a~-z^7/(2Phi)
+  packet=(6, 6, 4, 2, 2, 2, 1); genus=9; defect=16
+  primary=T^30*(6T+1)^2*Q17
+  Q_constant=-483153/32; Q_leading=85821754813159273972508/352960408125
+  Q_at_T_minus_1_over_6=2035881837211839251442057862431734169270739429/19607318786489949837378201600000000
+  Q_squarefree_gcd_degree=0
+  Q_sha256=5fb0b18799992e11c5f7552a2f17a67a332499b266c166b54eda3b7bdc23400f
+  independent=p^8*R17
+  R_constant=-70369952239872/54925; R_leading=30531977307612/371293
+  R_squarefree_gcd_degree=0
+  R_sha256=13c0f176030c1843ea0f877900f8d4f7e2a7a0f6768352c2f3c5da38a76d5840
+  critical_length=21=17+2+2
+  finite_response=n:17,beta:3,L=n+beta+1,one_handle_capacity:15<n-1:16
+  full_response=n:23,overlap<=2,commutator_index<=4<defect:16
+case=C_C_Phi_zero_B_nonzero
+  control=Delta:1,Theta:-1,Phi:0,eta:23/13,K:5591/90,B:14021/270
+  local_delta=3; branches=a~(B/eta)z^3,a~-z^6/(2B)
+  packet=(5, 5, 4, 2, 2, 2, 1); genus=8; defect=14
+  primary=T^32*(6T+1)^2*Q15
+  Q_constant=12463005381719088344323/12793950000; Q_leading=85821754813159273972508/352960408125
+  Q_at_T_minus_1_over_6=864313382035934405867314226418650006329459/226842042511105903065600000000
+  Q_squarefree_gcd_degree=0
+  Q_sha256=29f23c1118a2826659911750a71c5f17eeab0c9f068a64753eec49363cddd389
+  independent=p^8*R15
+  R_constant=-70369952239872/54925; R_leading=994981781335325982843932/18796708125
+  R_squarefree_gcd_degree=0
+  R_sha256=edab9e43ebb6ed5f31325a4ebf7f0000ea2946ce83271de96daef73cbd0d3d6c
+  critical_length=19=15+2+2
+  finite_response=n:15,beta:3,L=n+beta+1,one_handle_capacity:13<n-1:14
+  full_response=n:21,overlap<=2,commutator_index<=4<defect:14
+case=D_C_Phi_B_zero
+  control=Delta:2048/45,Theta:-2048/45,Phi:0,eta:23/13,K:1376/135,B:0
+  local_delta=4; branches=z=tau^2,a~c*tau^9,c^2=1/(2eta)
+  packet=(7, 4, 2, 2, 2, 1); genus=7; defect=12
+  primary=T^35*(6T+1)^2*Q12
+  Q_constant=-1140178853421/11881376; Q_leading=84349672224497501284348663943/231577323770812500
+  Q_at_T_minus_1_over_6=-9936912397188929298533993878181977704859/1722581760318710451404400000000
+  Q_squarefree_gcd_degree=0
+  Q_sha256=9a96efc9e8179b95eacb80e9d091009ad3be78c45b508f85c999c9435458761f
+  independent=p^8*R12
+  R_constant=-3875767847803456/2471625; R_leading=-1809463840379127/62748517
+  R_squarefree_gcd_degree=0
+  R_sha256=4eff887aa16a5e072f9a9b5bf9513b16339d8028f7e7010059b566335a980667
+  critical_length=16=12+2+2
+  finite_response=n:12,beta:3,L=n+beta+1,one_handle_capacity:10<n-1:11
+  full_response=n:18,overlap<=2,commutator_index<=4<defect:12
+deepest_projection_portfolio=
+  J(eta)=22143375*eta_deep**2 + 15510536192
+  Q12_constant=-(3^11/2^5)*eta^5
+  Q12_leading=eta^3*J(eta)^2/3690562500
+  R12_constant=-(64/1125)*eta*J(eta)
+  R12_leading=-531441*eta^7
+  disc_T_Q12=unit*eta^32*H30*H36^2
+  disc_p_R12=unit*eta^40*H30*H24^2
+  H30_sha256=7f65856a5fa69e3a35511e1c7eaf84f0c517397d9d08e4275965cbc5760f2e2b
+  H36_sha256=0311e867c9d077d409761a0f47c84967d304479650a2d6c6b9b532b198fcec15
+  H24_sha256=21267b85a00cd6ea8f70e78df570ee669d258c194bd0a36dda3c16b83f862341
+  gcd(H24,H36)=gcd(H24,Q12(-1/6))=gcd(J,H30)=1
+  portfolio_open=eta*J(eta)*H30(eta)!=0:at_least_one_projection_squarefree
+commutator_overlap_hostile_pairs=15017:PASS
+symbolic_endpoint_formulas=
+  A:-12288*(Delta+Theta)^6
+  B:-(3*7^5/2^5)*Phi^5
+  C:2*3^6*eta*(epsilon+K)^5
+  D:-(3^11/2^5)*eta^5
+symbolic_endpoints_recomputed=(-12288*(Delta_symbol + Theta_symbol)**6, -50421*Phi_symbol**5/32, -16807*eta_symbol_C*(45*Delta_symbol_C - 2048)**5/984150000, -177147*eta_symbol**5/32):PASS
+semantic_sha256=6267e49f6c6e5edecb2ae99bcb88f6111010f2b02663c84652ad30654334af2d
+verdict=PASS_ON_FOUR_STRUCTURAL_CRITICAL_OPEN_SUBCHAMBERS

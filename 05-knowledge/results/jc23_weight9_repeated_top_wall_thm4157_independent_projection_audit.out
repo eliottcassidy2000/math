@@ -1,0 +1,10 @@
+INDEPENDENT PRIMITIVE-PROJECTION CRITICAL AUDIT
+projection=Z=X+T;eliminate=T from (G_X,G_T)
+infinity_sidecar=gcd of the two T-leading coefficient polynomials in Z
+row=A;degree=23;squarefree=True;universal=4;residual=19;T_degrees=(15,15);infinity_gcd=1;monic_sha256=41af700e36f2b726e31fb021149c38efa323308163763aa29dddac9b4ceeadaa
+row=B;degree=21;squarefree=True;universal=4;residual=17;T_degrees=(14,14);infinity_gcd=1;monic_sha256=c49fcaa4a6147c33138a06672ba5c051cac88e134bcdf4865a5a504dcf1760a9
+row=C;degree=19;squarefree=True;universal=4;residual=15;T_degrees=(14,14);infinity_gcd=1;monic_sha256=15f85f45e684b17f239a68a5a64dff205110eb3471edb99abfd67c3a30a866d5
+row=D;degree=16;squarefree=True;universal=4;residual=12;T_degrees=(14,14);infinity_gcd=1;monic_sha256=5972821cd259985e8c5d979179d010b0073fe91b6837db6e18a4190d24b13e39
+universal=T=0,X^2=-6,G=0,Hessian=6;T=-1/6,X^2=6,G=1/2,Hessian=-6
+semantic_sha256=fb315ae19d7f6f92762a02f027df3c496e48469210bd51bff4aed7ecdd60f121
+verdict=PASS

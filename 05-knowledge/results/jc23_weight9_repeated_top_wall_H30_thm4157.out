@@ -1,0 +1,16 @@
+DEEPEST REPEATED-WALL H30 NONREDUCEDNESS CERTIFICATE
+field=Q[u]/h15(u);tower_relation=eta^2-u
+h15_degree=15;H30(eta)=h15(eta^2);irreducible=yes
+gcd(Q12/eta,d(Q12/eta))_degree=1
+repeated_T_avoids=T*(6T+1)
+primitive_linear_X_subresultant=A(T,u)X+eta*B(T,u)
+gcd(h15,Res_T(Q_u,A_u))=1;unique_finite_X_point=yes
+resultant_multiplicity_at_point>=2;critical_scheme_nonreduced=yes
+T*det_D(f,h)=det_Hess_G_on_f=0;det_Hess_G=0
+gcd(H30,eta*J)=1
+Q_u_sha256=eecf925a95a4b1eda2a9f1a909db72e721fd3c3c4ed0366f8209de5d0ad2c338
+A_u_sha256=bb379bb2cf02f79b2af520dc7d602da71524ed80344ab727f0a099fd86aa48be
+B_u_sha256=c8de82553503ce8442ea81ac346ec8c964b3b95c7b7f9e481d16b1f7516a2026
+semantic_sha256=f400db7367d8ff42e6bddebe74a5952ed2af8f21999bc57202c68dc2aa77fe94
+checks=19
+verdict=PASS

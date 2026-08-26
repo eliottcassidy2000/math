@@ -1,0 +1,206 @@
+{
+  "area2": 31,
+  "boundary": 11,
+  "carrier_discriminant": "-(2*q - 1)*(-8*K**3 + 54*eta**2*q - 27*eta**2)/4",
+  "commutator_hostile_pairs": 15017,
+  "faces": {
+    "cubic": "s**2*(-2*K*Q*p**2*s**2 + 2*Q*eta*p**3*s**3 - Q + 2)/2",
+    "delta": "Q*p**5*(Delta + eta*s)",
+    "e1": "-(Q*s**2 + 2*p - 2*s**2)/2",
+    "repeated": "Q*eta*p**3*s*(p - s**2)**2",
+    "vertical_affine": "p*(Delta*Q*p**4 + Q*alpha*p**2 + Q*epsilon*p**3 + Q*lambda*p - 1)"
+  },
+  "hull": [
+    [
+      0,
+      1
+    ],
+    [
+      2,
+      0
+    ],
+    [
+      5,
+      3
+    ],
+    [
+      1,
+      5
+    ],
+    [
+      0,
+      5
+    ]
+  ],
+  "initials": {
+    "A": [
+      2,
+      "-Q*a*(C*z - a*eta)"
+    ],
+    "B_first": [
+      4,
+      "-Q*a*(Phi*z**2 - a*eta)"
+    ],
+    "B_second": [
+      9,
+      "-Q*z**2*(2*Phi*a + z**7)/2"
+    ],
+    "C_first": [
+      6,
+      "-Q*a*(B*z**3 - a*eta)"
+    ],
+    "C_second": [
+      9,
+      "-Q*z**3*(2*B*a + z**6)/2"
+    ],
+    "D": [
+      18,
+      "-Q*(-2*a**2*eta + z**9)/2"
+    ]
+  },
+  "pick_genus": 11,
+  "rows": {
+    "A": {
+      "L": 23,
+      "beta": 3,
+      "defect": 18,
+      "delta": 1,
+      "finite_n": 19,
+      "full_n": 25,
+      "genus": 10,
+      "packet": [
+        7,
+        7,
+        4,
+        2,
+        2,
+        2,
+        1
+      ]
+    },
+    "B": {
+      "L": 21,
+      "beta": 3,
+      "defect": 16,
+      "delta": 2,
+      "finite_n": 17,
+      "full_n": 23,
+      "genus": 9,
+      "packet": [
+        6,
+        6,
+        4,
+        2,
+        2,
+        2,
+        1
+      ]
+    },
+    "C": {
+      "L": 19,
+      "beta": 3,
+      "defect": 14,
+      "delta": 3,
+      "finite_n": 15,
+      "full_n": 21,
+      "genus": 8,
+      "packet": [
+        5,
+        5,
+        4,
+        2,
+        2,
+        2,
+        1
+      ]
+    },
+    "D": {
+      "L": 16,
+      "beta": 3,
+      "defect": 12,
+      "delta": 4,
+      "finite_n": 12,
+      "full_n": 18,
+      "genus": 7,
+      "packet": [
+        7,
+        4,
+        2,
+        2,
+        2,
+        1
+      ]
+    }
+  },
+  "support": [
+    [
+      0,
+      1
+    ],
+    [
+      0,
+      2
+    ],
+    [
+      0,
+      3
+    ],
+    [
+      0,
+      4
+    ],
+    [
+      0,
+      5
+    ],
+    [
+      1,
+      4
+    ],
+    [
+      1,
+      5
+    ],
+    [
+      2,
+      0
+    ],
+    [
+      2,
+      1
+    ],
+    [
+      2,
+      2
+    ],
+    [
+      2,
+      3
+    ],
+    [
+      2,
+      4
+    ],
+    [
+      3,
+      3
+    ],
+    [
+      3,
+      4
+    ],
+    [
+      4,
+      2
+    ],
+    [
+      4,
+      3
+    ],
+    [
+      5,
+      3
+    ]
+  ]
+}
+semantic_sha256=0544a7840876a92b1b78afb633fb9dd7180f1ca4c22c476a93d482e7e6c33de3
