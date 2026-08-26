@@ -8,7 +8,10 @@ status: >
   every fixed arithmetic progression, is at least X^(1-epsilon), and the
   same lower bound holds for targets carrying any fixed positive fraction
   of the relevant mean multiplicity. Thus support and average-scale-rich
-  support have logarithmic exponent one. The higher-role shadow
+  support have logarithmic exponent one. For every fixed lower fraction and
+  positive power slack, all but that lower fraction of tuple mass lies below
+  the corresponding `X^(1/24+delta)` upper multiplicity scale, while the
+  upper-tail fibre count is `O_delta(X^(1-delta))`. The higher-role shadow
   C(x,4)+C(y,6)+C(z,8) alone represents at least X^(1/2-epsilon) targets;
   the two-role C(y,6)+C(z,8) support has exact logarithmic exponent 7/24.
   This proves neither positive density nor eventual coverage; leastness and
@@ -536,6 +539,46 @@ global one, is `o(A_(q,r)(X))`. Thus no fixed-power-thin carrier can hold a
 positive fraction of the representation mass. This remains compatible with
 a hole set of density one, because it constrains tuple mass rather than the
 number of zero fibres.
+
+### Simultaneous multiplicity window
+
+The lower-threshold and anti-condensation arguments combine into a genuine
+two-sided tuple-mass window. Fix `0<theta<1` and `delta>0`, and put
+
+```text
+W_(theta,delta)(X)=
+ {n<=X: theta A(X)/X <= a(n) < X^(1/24+delta)}.        (26c)
+```
+
+Then
+
+\[
+ \sum_{n\in W_{\theta,\delta}(X)}a(n)
+ \ge (1-\theta-o(1))A(X).                             \tag{26d}
+\]
+
+Indeed, the fibres below the lower threshold carry less than
+`theta A(X)`. For the upper tail, use `(2)` with loss `delta/2`: if
+`U=X^(1/24+delta)`, then
+
+\[
+ \sum_{\substack{n\le X\\a(n)\ge U}}a(n)
+ \le U^{-1}\sum_{n\le X}a(n)^2
+ \ll_\delta X^{25/24-\delta/2}=o(A(X)).
+\]
+
+The same energy estimate also counts the upper-tail fibres:
+
+\[
+ \#\{n\le X:a(n)\ge X^{1/24+\delta}\}
+ \le X^{-1/12-2\delta}\sum_{n\le X}a(n)^2
+ \ll_\delta X^{1-\delta}.                             \tag{26e}
+\]
+
+Both parameters are fixed before `X` tends to infinity. This is a statement
+about where tuple mass lies, not a density or coverage theorem: it remains
+compatible with a density-one hole set, and it does not say that most integers
+have multiplicity in the displayed window.
 
 ## 5. Classification firewall and exact leastness status
 

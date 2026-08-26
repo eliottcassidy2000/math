@@ -6,7 +6,9 @@ status: >
   rescaling x=3^s t, the THM-4077 denominator-19 isometries converge uniformly
   to one linear odd-unit isometry. Their error has the sharp valuation
   s+2+2v_2(x), so the nonlinear and linear carry words have exactly that many
-  common initial bits. The induced near-identity isometry transports the
+  common initial bits. For every pair of scales s<t, their exact pairwise
+  defect is governed by the shallower scale s, so each nonzero point converges
+  without ever stabilizing. The induced near-identity isometry transports the
   strict-safe and output-termination fibres exactly, while the separately
   scaled parameter-termination loci form a decreasing dense countable
   filtration with empty intersection. Neither open strict-safe termination
@@ -153,6 +155,43 @@ s=1 defect bits    3     5.                            (11)
 Thus the odd-unit law `s+2` must not be silently extended unchanged to even
 `x`; every extra factor of two in `x` contributes two additional common bits.
 
+### Pairwise cross-scale separation
+
+The common limit makes every pair of finite scales exactly comparable. For
+every `x!=0` in `Z_2` and integers `0<=s<t`,
+
+```text
+boxed: v_2(H_t(x)-H_s(x))=s+2+2v_2(x).                (11a)
+```
+
+Indeed, put `E_j(x)=H_j(x)-Lambda*x`. Equation `(6)` gives
+
+```text
+v_2(E_s(x))=s+2+2v_2(x)<t+2+2v_2(x)=v_2(E_t(x)).
+```
+
+The two valuations are unequal, so the strong triangle equality makes the
+shallower error survive in `E_t-E_s=H_t-H_s`, proving `(11a)`. At `x=0`, all
+maps vanish and the finite valuation formula is replaced by exact equality.
+
+Consequently, for fixed nonzero `x`, the sequence `(H_s(x))` is Cauchy but
+never eventually constant. Its pairwise ultrametric distance is determined
+exactly by the shallower scale. If
+
+```text
+R_(s,t)=H_s^(-1) o H_t,                               (11b)
+```
+
+then the isometry of `H_s` also gives
+
+```text
+v_2(R_(s,t)(x)-x)=s+2+2v_2(x).
+```
+
+This is pointwise chart separation. It says nothing about preservation of
+ordinary integers, positivity, Mahler time evolution, or either termination
+fibre.
+
 ## 3. Exact carry agreement and the near-identity transport
 
 Let `Phi:{0,1}^N -> Z_2` be the THM-2228 carry homeomorphism. THM-4077 recalls
@@ -168,6 +207,12 @@ agree for exactly s+2+2v_2(x) initial digits,           (12)
 and their next digits are opposite. At `x=0` the two entire words coincide.
 This is an exact first-divergence statement, not merely a congruence lower
 bound.
+
+Likewise, `(11a)` says that for every `0<=s<t`, the carry words
+`Phi^(-1)(H_s(x))` and `Phi^(-1)(H_t(x))` agree for exactly
+`s+2+2v_2(x)` digits and differ at the next. Thus passing to a deeper chart
+cannot repair the first finite-scale defect; it only postpones its own new
+defect beyond that position.
 
 Both `H_s` and `L_infinity` are onto isometries: the first is the composition
 of THM-4077's `Fhat_s` with multiplication by `3^(-s)`, and the second is

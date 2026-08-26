@@ -147,7 +147,14 @@ v_2(H_s(x)-Lambda*x)=s+2+2v_2(x),       x!=0,
 ```
 
 says the nonlinear and linear carry words share exactly that many initial
-bits and differ at the next. The induced near-identity isometry transports
+bits and differ at the next. More strongly, for every `0<=s<t`,
+
+```text
+v_2(H_t(x)-H_s(x))=s+2+2v_2(x),
+```
+
+so a fixed nonzero point converges without eventual stabilization and its
+pairwise distance is governed by the shallower chart. The induced near-identity isometry transports
 the strict-safe and output-termination fibres exactly. Parameter termination
 retains the separate sidecar `P_s=3^s N_odd`: these dense countable loci are
 strictly decreasing with empty intersection, while output-only and neither
