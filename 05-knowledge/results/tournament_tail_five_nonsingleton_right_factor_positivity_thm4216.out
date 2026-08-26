@@ -1,0 +1,14 @@
+theorem=THM-4216
+symbolic_coordinate_change=PASS
+symbolic_fan_to_avoidance_rewrite=PASS
+certified_floor=6*(-33*H^2+274*H*W+214*W^2)
+nonsingleton_uniform_floor=2730*H^2
+labelled_contexts_orders_1_to_5=1099
+exact_decomposition_rows=1099
+nonsingleton_positive_rows=1098
+later_tail_rows=2198
+minimum_finite_gap_over_2730H2=7854
+p2_hostiles_n0_to_n4=-288,-684,-1368,-2232,-1512
+p1_hostiles_n0_to_n5=-72,-216,-468,-900,-1332,-180
+final_tail_five_no_sink_controls=34
+semantic_sha256=e4ede75db3d58bbea2e3d412c153607a67ba5a1216c46b9e78904bb51eb30e3a
