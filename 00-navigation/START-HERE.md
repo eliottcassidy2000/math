@@ -22,8 +22,8 @@ Then read the routed frontier, guardrails, and theorem; logs are history.
 ## Seventeen high-signal facts to reuse, not re-derive
 
 1. **LRC(14) is first open.** Direct `<=6`; projected caps `1579/216` leave
-   `372913/109/12`. THM-4160/4166/4170/4174 make fixed-pool `d<=6` exact
-   (failures `61/9/1/0` at `d=3/4/5/6`). Entry, arbitrary bodies, and LRC stay open.
+   `372913/109/12`. THM-4174/4175 close fixed-pool all-/one-anchor newcomer
+   lanes at depth six (`888,030`/`6,660,225` bodies). Entry and LRC stay open.
 2. **The `q <= 25` period claim is refuted.** THM-762/764 exhibit `26*{1,...,12} union {339}`, whose first good period is `27`.
 3. **Good-period existence is a maximum statement.** The tight resonant AP
    defeats average/count arguments; see MISTAKE-127/129/130.

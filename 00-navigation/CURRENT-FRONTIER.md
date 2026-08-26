@@ -76,11 +76,10 @@ is the safe control `M(S_13)=99/338`. No cited result proves LRC(14).
   THM-4142/4148/4151 give families and the affine gate. THM-4150/4152/4153
   give abstract Haar transfers, but THM-4154 corrects their displayed pools.
   [THM-4174](../01-canon/theorems/THM-4174-six-deletion-completion-of-divisor-complete-newcomer-haar-transfer.md)
-  completes the THM-4156/4160/4166/4170 fixed-pool deletion ladder through `d=6`:
-  failures at `d=3..6` are `61,9,1,0`, so every newcomer supplies `888,030`
-  cores. For `q>=3693` these are content-stably outside every THM-4158
-  alphabet. Fixed-family only: no entry or arbitrary bodies; LRC(14) remains open.
-  See the [proof map](LRC14-PROOF-MAP.md).
+  closes all-anchor deletion (`61,9,1,0`; `888,030` cores/newcomer), content-
+  stably outside THM-4158 for `q>=3693`. [THM-4175](../01-canon/theorems/THM-4175-haar-failure-atom-deletion-tomography-and-anchor-exchange.md)
+  closes `6,660,225` one-anchor exchanges/newcomer at sharp total depth six.
+  Fixed-pool; LRC(14) open. [Proof map](LRC14-PROOF-MAP.md).
 - **PROVED:** [THM-2928](../01-canon/theorems/THM-2928-critical-seven-comb-grid-tensorization-and-drift-tariff.md)/2941: literal zero/one/two/three-drift sectors are empty; `k=2,3` are finite.
 - **Orthogonal routes.** THM-1017 is HYP-6820; THM-2047/2050 keep phase/exit; THM-731/2048 prune; THM-1290 ends at `55`; HYP-8900 nonuniform.
 - **PROVED micro-staircase:** THM-3316 closes every prime and THM-3317 proves

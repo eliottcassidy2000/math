@@ -1,0 +1,19 @@
+LRC14_HAAR_FAILURE_ATOM_ANCHOR_EXCHANGE
+q 50 pool 30 optional 27
+walls 7134 cells 7133 failure_atoms 2950
+threshold 4/63
+tomography {'labels': (8, 15, 42, 63, 85, 88, 120, 126, 143, 252), 'subsets': 1024, 'mixed_differences': 59049, 'nonzero_atoms': 40, 'atom_layers': (556463055075760, 268603050776200, 130535409977000, 69558081685400, 1107073167200, 8288708428000, 0, 0, 0, 0, 0), 'deletion_layers': (556463055075760, 5833233601533800, 27588800345372000, 77559117798535800, 143562902955431400, 182858308098429320, 162331287160737800, 99187767239617000, 39925751682889800, 9561333840500400, 1034555379109560)}
+mixed_total_depth_rows
+removed 120 t5 {'raw_repairs': 2467, 'minimal_repairs': 535, 'tau': 5, 'cover': (95, 168, 193, 240, 290), 'states': 237, 'equalities': 0, 'minimum_positive': 186258371040, 'closest_negative': -69055421400} t6 {'raw_repairs': 59320, 'minimal_repairs': 13158, 'tau': None, 'cover': None, 'states': 4370, 'equalities': 0, 'minimum_positive': 348508440, 'closest_negative': -2881514160}
+removed 126 t5 {'raw_repairs': 2126, 'minimal_repairs': 1417, 'tau': 5, 'cover': (95, 168, 193, 240, 290), 'states': 267, 'equalities': 0, 'minimum_positive': 186258371040, 'closest_negative': -69055421400} t6 {'raw_repairs': 51810, 'minimal_repairs': 11051, 'tau': None, 'cover': None, 'states': 6663, 'equalities': 0, 'minimum_positive': 348508440, 'closest_negative': -2639430360}
+removed 143 t5 {'raw_repairs': 2476, 'minimal_repairs': 654, 'tau': 7, 'cover': (80, 85, 88, 145, 168, 193, 286), 'states': 1277, 'equalities': 0, 'minimum_positive': 186258371040, 'closest_negative': -69055421400} t6 {'raw_repairs': 60509, 'minimal_repairs': 14321, 'tau': None, 'cover': None, 'states': 3439, 'equalities': 0, 'minimum_positive': 348508440, 'closest_negative': -2881514160}
+forced_anchor_optional_depth_rows
+removed 120 d4 {'raw_repairs': 404, 'minimal_repairs': 404, 'tau': 5, 'cover': (95, 145, 168, 193, 240), 'states': 277, 'equalities': 0, 'minimum_positive': 1536056517240, 'closest_negative': -131879432160} d5 {'raw_repairs': 13059, 'minimal_repairs': 13059, 'tau': None, 'cover': None, 'states': 7935, 'equalities': 0, 'minimum_positive': 28724106600, 'closest_negative': -4067652960}
+removed 126 d5 {'raw_repairs': 5549, 'minimal_repairs': 5549, 'tau': 7, 'cover': (80, 95, 145, 168, 170, 193, 252), 'states': 4166, 'equalities': 0, 'minimum_positive': 23157545040, 'closest_negative': -2639430360} d6 {'raw_repairs': 81841, 'minimal_repairs': 81841, 'tau': None, 'cover': None, 'states': 14876, 'equalities': 0, 'minimum_positive': 8218024920, 'closest_negative': -582719760}
+removed 143 d4 {'raw_repairs': 413, 'minimal_repairs': 413, 'tau': 6, 'cover': (85, 88, 168, 193, 286, 290), 'states': 748, 'equalities': 0, 'minimum_positive': 433980015840, 'closest_negative': -380557253160} d5 {'raw_repairs': 14248, 'minimal_repairs': 14248, 'tau': None, 'cover': None, 'states': 5496, 'equalities': 0, 'minimum_positive': 86976104040, 'closest_negative': -14264139960}
+uniform_divisor_complete_counts ((120, 2029699), (126, 967956), (143, 657800))
+uniform_primitive_divisor_complete_counts ((120, 2029699), (126, 967956), (143, 580280))
+missing_143_even_nonprimitive_hostile 77520
+uniform_even_q_primitive_total 3577935
+uniform_odd_q_primitive_total 3655455
+PASS
