@@ -8,8 +8,8 @@ from fractions import Fraction
 from math import comb
 
 
-EXPECTED_SEMANTIC_SHA256 = "6f4c7b6fd62bca62f0a8baccb63822e6f19df831d2ece22001c2412cfce44e2e"
-EXPECTED_SEMANTIC_FNV64 = "1f67e51174709013"
+EXPECTED_SEMANTIC_SHA256 = "1bed18a18b2747baed31600403926d44e8139ae4aa219698d6eb3401a295f38c"
+EXPECTED_SEMANTIC_FNV64 = "56b59e7ee90c92f6"
 
 
 def gap(speed: int, phase: Fraction) -> Fraction:
@@ -93,13 +93,26 @@ def main() -> None:
     family_count = comb(46, 11)
     assert family_count == 13_340_783_196
 
+    # Exhaust the theorem's full eleven-body family by its unique minimum.
+    # For fixed m the gate is M<=floor(351m/(4m+27)); choosing the other ten
+    # labels anywhere up to this cap counts each body exactly once.
+    all_width_rows: list[tuple[int, int, int]] = []
+    for m in range(3, 1001):
+        last_cap = 351 * m // (4 * m + 27)
+        if last_cap - m >= 10:
+            all_width_rows.append((m, last_cap, comb(last_cap - m, 10)))
+    assert [row[0] for row in all_width_rows] == list(range(3, 71))
+    assert max(row[1] for row in all_width_rows) == 80
+    all_width_family_count = sum(row[2] for row in all_width_rows)
+    assert all_width_family_count == 60_301_609_751
+
     ledger = (
         "gate=2/189;scale3=2/63;q27=2/189;"
         "residual=17/84;valid46=14..22;max47disc=-272;"
         "block15_60=3/280;surplus=1/7560;"
         "clock=211/420;clock_tail=37/84;"
         "hostile=1/420,1/420;rescue=1/7;"
-        "families=13340783196"
+        "families=13340783196;all11=60301609751;mrange=3..70;maxlabel=80"
     )
     semantic = hashlib.sha256(ledger.encode()).hexdigest()
     semantic_fnv = fnv64(ledger.encode())
@@ -118,6 +131,8 @@ def main() -> None:
     print("moving_base_hostile=((1/420,1),(211/420,211),1/420)")
     print(f"moving_base_rescue=(1/105,53/105,{rescue_clearance})")
     print(f"eleven_subsets={family_count}")
+    print("all_width_body_minima=3..70;all_width_max_label=80")
+    print(f"all_width_eleven_subsets={all_width_family_count}")
     print(f"semantic_sha256={semantic}")
     print(f"semantic_fnv64={semantic_fnv}")
 

@@ -6,10 +6,10 @@ status: >
   INDEPENDENTLY AUDITED; LRC(14) OPEN. Every finite positive body H with
   min(H)>=3 and first-window width at least 2/189 has universal 1/14-safe
   completion after doubling by every pair of distinct positive odd tails.
-  The 46-label block {15,...,60} therefore supplies 13,340,783,196
-  eleven-body families, far beyond THM-4142's fixed pool. Forty-six is sharp
-  among consecutive blocks for this first-window mechanism. Arbitrary bodies,
-  entry, and LRC(14) remain open.
+  Exactly 60,301,609,751 eleven-body sets satisfy this width gate; their
+  labels lie in {3,...,80}. The block {15,...,60} alone supplies
+  13,340,783,196 families, and 46 is sharp among consecutive blocks for this
+  mechanism. Arbitrary bodies, entry, and LRC(14) remain open.
 source: codex-frontier-synthesis-creative-20260825ah
 depends_on:
   - THM-689-dead-zone-lemma-k7-rigidity-and-consecutive-maximality
@@ -22,27 +22,27 @@ script: 04-computation/lrc14_first_window_width_universal_odd_tail_transfer_thm4
 output: 05-knowledge/results/lrc14_first_window_width_universal_odd_tail_transfer_thm4148.out
 independent_audit_script: 04-computation/lrc14_first_window_width_universal_odd_tail_transfer_thm4148_independent_audit.cpp
 independent_audit_output: 05-knowledge/results/lrc14_first_window_width_universal_odd_tail_transfer_thm4148_independent_audit.out
-script_sha256: ffee89d8ec8833a5533ade63edf1ee3d34ca89c0dfe77b7a2651575f09d2bdf4
-output_sha256: ed11811dbb0dc7fef83e00431d30276318360938b58b459bf7637479079e9677
-semantic_sha256: 6f4c7b6fd62bca62f0a8baccb63822e6f19df831d2ece22001c2412cfce44e2e
-semantic_fnv64: 1f67e51174709013
-independent_audit_script_sha256: e617521359ad7ea8ee02c646e78fec69cad8c07a430fe4e47ce0e8352e6880cc
-independent_audit_output_sha256: 222c4cc324b87c6f4a2464db22d2fa369b39320dff53d0ff14cb4289dc53650d
-independent_semantic_fnv64: 1f67e51174709013
+script_sha256: c5938e111e5b888a3f6b923bd1457f7b89f15bd127ec90bbd6ae12f1cf0a63cc
+output_sha256: d7cda26940eb3264ba2ed4381433a3aab54aaa04e7c0bbaad91c692b9588b130
+semantic_sha256: 1bed18a18b2747baed31600403926d44e8139ae4aa219698d6eb3401a295f38c
+semantic_fnv64: 56b59e7ee90c92f6
+independent_audit_script_sha256: 8082615643dcd1ccfad2948d5e7eaf73d39d8c4a173511a6e92131c865c20e28
+independent_audit_output_sha256: 9e5ffed9f249bfc07f46fe8a01fc3a42a64796799215a54f7171effeaa6ca342
+independent_semantic_fnv64: 56b59e7ee90c92f6
 hash_basis: raw LF bytes
 primary_audit: >
   PASS. Exact Fraction arithmetic checks both analytic scale gates, the sharp
   residual clock, all nine maximal 46-label blocks, impossibility of 47
   labels, the complete {15,...,60} endpoint clearances, the moving-base
-  hostile and rescue, and the eleven-subset count. Normal, optimized, and
-  hash-seeded replays byte-match. The cross-comb topology is inherited from
-  THM-4136's independently audited exact proof.
+  hostile and rescue, and the complete 60,301,609,751-set width-family count.
+  Normal, optimized, and hash-seeded replays byte-match. The cross-comb
+  topology is inherited from THM-4136's independently audited exact proof.
 independent_audit: >
   ACCEPT. A separate warning-clean standard-library C++ implementation uses
   normalized integer rationals and direct modular gaps. It independently
-  reproduces every gate, discriminant, endpoint, hostile, rescue, family
-  count, and the shared semantic FNV. Optimized, unoptimized, and sanitizer
-  controls agree.
+  reproduces every gate, discriminant, endpoint, hostile, rescue, the block
+  and exhaustive family counts, and the shared semantic FNV. Optimized,
+  unoptimized, and sanitizer controls agree.
 ---
 
 # THM-4148 -- first-window width odd-tail transfer
@@ -180,7 +180,7 @@ For every odd `r<=25`, hypothesis `m>=3` gives
 Apply `(15)` to `r=p,q`. The body is safe because `2x=y mod 1`. This closes
 the residual ratios and proves `(4)`. **QED.**
 
-## 5. A 46-label superbody and 13,340,783,196 families
+## 5. The complete 60,301,609,751-family width census
 
 Take
 
@@ -211,6 +211,40 @@ binom(46,11)=13,340,783,196                              (19)
 
 such bodies. These bodies are not restricted to THM-4142's 26-speed pool.
 
+The block count is only one subfamily. For fixed `m=min H`, condition `(5)`
+is equivalent to
+
+```text
+max H <= U(m)=floor(351m/(4m+27)).                      (20)
+```
+
+An eleven-element body with minimum `m` is therefore obtained by choosing
+its other ten labels from `{m+1,...,U(m)}`, giving exactly
+
+```text
+binom(U(m)-m,10)                                        (21)
+```
+
+bodies. This is nonzero, under `m>=3`, exactly for `3<=m<=70`: testing the
+smallest possible maximum `m+10` reduces the gate to
+
+```text
+4m^2-284m+270<=0,                                      (22)
+```
+
+which holds on precisely those integers. The cap `U(m)` is increasing and
+has final value `U(70)=80`. Hence the theorem's complete eleven-body census is
+
+```text
+sum_(m=3)^70 binom(floor(351m/(4m+27))-m,10)
+  =60,301,609,751.                                     (23)
+```
+
+Each body has a unique minimum, so this sum has no duplicates. Thus every
+one of these `60,301,609,751` bodies, after doubling, accepts every distinct
+positive odd tail pair. The `13,340,783,196` block families in `(19)` form a
+particularly simple hereditary subcollection.
+
 ## 6. Consecutive-block sharpness for this mechanism
 
 For a consecutive block `H={A,...,B}`, condition `(5)` is exact. A block of
@@ -218,21 +252,21 @@ at least 47 labels has `B>=A+46`. Increasing `B` only shrinks the first
 window, so a necessary condition is
 
 ```text
-4A^2-140A+1242<=0.                                      (20)
+4A^2-140A+1242<=0.                                      (24)
 ```
 
-Its discriminant is `-272`, so `(20)` is impossible. For exactly 46 labels,
+Its discriminant is `-272`, so `(24)` is impossible. For exactly 46 labels,
 `B=A+45`, and `(5)` becomes
 
 ```text
-4A^2-144A+1215<=0.                                      (21)
+4A^2-144A+1215<=0.                                      (25)
 ```
 
 The roots are `13.5` and `22.5`. Thus the maximal consecutive blocks for
 this first-window transfer are exactly
 
 ```text
-{A,...,A+45},                    14<=A<=22.              (22)
+{A,...,A+45},                    14<=A<=22.              (26)
 ```
 
 This is sharpness of the stated min/max mechanism, not a claim that another
@@ -244,21 +278,21 @@ The residual endpoint clock is deliberately used only for `q<=25`. For the
 body `(16)`, the lower base `y=1/210` has lifts
 
 ```text
-x_0=1/420,                      x_1=211/420.             (23)
+x_0=1/420,                      x_1=211/420.             (27)
 ```
 
 The tails `(1,211)` kill opposite lifts:
 
 ```text
 ||x_0||=1/420,        ||211x_1||=1/420,
-211^2=1 mod 420.                                         (24)
+211^2=1 mod 420.                                         (28)
 ```
 
 So no fixed choice of the endpoint sheet proves the large-ratio lane. Moving
 inside the same body interval to
 
 ```text
-y=1/105,                       x=53/105                  (25)
+y=1/105,                       x=53/105                  (29)
 ```
 
 rescues the complete 48-speed set, with tail gaps `52/105` and full-row
@@ -272,14 +306,14 @@ map:          y -> {y/2,(y+1)/2}, then w=gcd(a,b)y
 preserved:    all body gaps, closed endpoints, both physical sheets
 destroyed:    internal body structure beyond min/max
 sidecar:      open cross-comb C_(p,q), not one fixed lift
-hostile:      (23)--(24) defeats a universal endpoint clock
-decisive test: W versus 2/63 and 2/(7q), then clock (14). (26)
+hostile:      (27)--(28) defeats a universal endpoint clock
+decisive test: W versus 2/63 and 2/(7q), then clock (14). (30)
 ```
 
 ## 8. Audit and scope
 
-The primary and independent artifacts exactly reproduce `(12)--(25)`, the
-nine blocks in `(22)`, and count `(19)`. Replay with
+The primary and independent artifacts exactly reproduce `(12)--(29)`, the
+nine blocks in `(26)`, and both counts `(19),(23)`. Replay with
 
 ```text
 python3 -B 04-computation/lrc14_first_window_width_universal_odd_tail_transfer_thm4148.py

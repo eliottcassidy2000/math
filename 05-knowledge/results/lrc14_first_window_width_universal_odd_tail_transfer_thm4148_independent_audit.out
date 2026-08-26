@@ -10,4 +10,6 @@ residual_clock=(211/420,37/84)
 moving_base_hostile=((1/420,1),(211/420,211),1/420)
 moving_base_rescue=(1/105,53/105,1/7)
 eleven_subsets=13340783196
-semantic_fnv64=1f67e51174709013
+all_width_body_minima=3..70;all_width_max_label=80
+all_width_eleven_subsets=60301609751
+semantic_fnv64=56b59e7ee90c92f6

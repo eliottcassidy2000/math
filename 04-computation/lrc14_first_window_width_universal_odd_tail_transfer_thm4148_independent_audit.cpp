@@ -128,15 +128,31 @@ int main() {
 
     const std::uint64_t families = choose(46, 11);
     require(families == 13340783196ULL, "family count");
+
+    std::uint64_t all_width_families = 0;
+    int first_minimum = -1, last_minimum = -1, maximum_label = 0;
+    for (int minimum = 3; minimum <= 1000; ++minimum) {
+      const int last_cap = 351 * minimum / (4 * minimum + 27);
+      if (last_cap - minimum < 10) continue;
+      if (first_minimum < 0) first_minimum = minimum;
+      last_minimum = minimum;
+      maximum_label = std::max(maximum_label, last_cap);
+      all_width_families += choose(last_cap - minimum, 10);
+    }
+    require(first_minimum == 3 && last_minimum == 70,
+            "all-width minimum range");
+    require(maximum_label == 80, "all-width maximum label");
+    require(all_width_families == 60301609751ULL,
+            "all-width eleven-body count");
     const std::string ledger =
         "gate=2/189;scale3=2/63;q27=2/189;"
         "residual=17/84;valid46=14..22;max47disc=-272;"
         "block15_60=3/280;surplus=1/7560;"
         "clock=211/420;clock_tail=37/84;"
         "hostile=1/420,1/420;rescue=1/7;"
-        "families=13340783196";
+        "families=13340783196;all11=60301609751;mrange=3..70;maxlabel=80";
     const std::uint64_t semantic = fnv64(ledger);
-    require(semantic == 0x1f67e51174709013ULL, "semantic FNV");
+    require(semantic == 0x56b59e7ee90c92f6ULL, "semantic FNV");
 
     std::cout << "THM4148_FIRST_WINDOW_WIDTH_ODD_TAIL_TRANSFER_INDEPENDENT_20260825\n";
     std::cout << "status=PASS;scope=independent integer-rational controls\n";
@@ -151,6 +167,10 @@ int main() {
     std::cout << "moving_base_hostile=((1/420,1),(211/420,211),1/420)\n";
     std::cout << "moving_base_rescue=(1/105,53/105," << rescue_clearance << ")\n";
     std::cout << "eleven_subsets=" << families << '\n';
+    std::cout << "all_width_body_minima=" << first_minimum << ".."
+              << last_minimum << ";all_width_max_label=" << maximum_label
+              << '\n';
+    std::cout << "all_width_eleven_subsets=" << all_width_families << '\n';
     std::cout << "semantic_fnv64=" << std::hex << std::setw(16)
               << std::setfill('0') << semantic << std::dec << '\n';
     return 0;
