@@ -5,6 +5,7 @@
 #include <numeric>
 #include <stdexcept>
 #include <string>
+#include <utility>
 #include <vector>
 
 struct Rat {
@@ -84,6 +85,69 @@ int main() {
     require(residual_min == Rat(17, 84) && residual_min >= delta,
             "residual endpoint clock");
 
+    std::vector<std::pair<int,int>> residual_pairs;
+    for (int q = 3; q <= 25; q += 2) {
+      for (int p = 1; p < q; p += 2) {
+        if (std::gcd(p, q) == 1) residual_pairs.emplace_back(p, q);
+      }
+    }
+    require(residual_pairs.size() == 68, "residual pair count");
+    const auto coverage = [&](Rat clock) {
+      std::vector<bool> answer;
+      for (const auto& pair : residual_pairs) {
+        answer.push_back(std::min(gap(pair.first, clock),
+                                  gap(pair.second, clock)) >= delta);
+      }
+      return answer;
+    };
+    const auto covered_count = [](const std::vector<bool>& row) {
+      return std::count(row.begin(), row.end(), true);
+    };
+
+    const std::vector<Rat> m1_clocks{Rat(1,28),Rat(83,154),Rat(3,28)};
+    const auto m1a = coverage(m1_clocks[0]);
+    const auto m1b = coverage(m1_clocks[1]);
+    const auto m1c = coverage(m1_clocks[2]);
+    require(covered_count(m1a) == 56 && covered_count(m1b) == 56 &&
+            covered_count(m1c) == 48, "m=1 coverage sizes");
+    int m1_first_union = 0, m1_all_union = 0;
+    for (std::size_t i = 0; i < residual_pairs.size(); ++i) {
+      m1_first_union += m1a[i] || m1b[i];
+      m1_all_union += m1a[i] || m1b[i] || m1c[i];
+      if (!(m1a[i] || m1b[i])) {
+        require(residual_pairs[i] == std::pair<int,int>{1,13} && m1c[i],
+                "m=1 exceptional pair");
+      }
+    }
+    require(m1_first_union == 67 && m1_all_union == 68,
+            "m=1 cover union");
+    std::vector<int> m1_body;
+    for (int h = 1; h <= 11; ++h) m1_body.push_back(2*h);
+    require(clearance(m1_body,m1_clocks[0]) == Rat(1,14) &&
+            clearance(m1_body,m1_clocks[1]) == Rat(6,77) &&
+            clearance(m1_body,m1_clocks[2]) == Rat(1,14),
+            "m=1 body clocks");
+
+    const std::vector<Rat> m2_clocks{Rat(29,56),Rat(1,56),Rat(183,350)};
+    const auto m2a = coverage(m2_clocks[0]);
+    const auto m2b = coverage(m2_clocks[1]);
+    const auto m2c = coverage(m2_clocks[2]);
+    require(covered_count(m2a) == 58 && covered_count(m2b) == 48 &&
+            covered_count(m2c) == 39, "m=2 coverage sizes");
+    int m2_first_union = 0, m2_all_union = 0;
+    for (std::size_t i = 0; i < residual_pairs.size(); ++i) {
+      m2_first_union += m2a[i] || m2b[i];
+      m2_all_union += m2a[i] || m2b[i] || m2c[i];
+    }
+    require(m2_first_union == 66 && m2_all_union == 68,
+            "m=2 cover union");
+    std::vector<int> m2_body;
+    for (int h = 2; h <= 20; ++h) m2_body.push_back(2*h);
+    require(clearance(m2_body,m2_clocks[0]) == Rat(1,14) &&
+            clearance(m2_body,m2_clocks[1]) == Rat(1,14) &&
+            clearance(m2_body,m2_clocks[2]) == Rat(3,35),
+            "m=2 body clocks");
+
     std::vector<int> valid_46;
     for (int first = 3; first <= 1000; ++first) {
       if (width_gate(first, first + 45)) valid_46.push_back(first);
@@ -131,7 +195,7 @@ int main() {
 
     std::uint64_t all_width_families = 0;
     int first_minimum = -1, last_minimum = -1, maximum_label = 0;
-    for (int minimum = 3; minimum <= 1000; ++minimum) {
+    for (int minimum = 1; minimum <= 1000; ++minimum) {
       const int last_cap = 351 * minimum / (4 * minimum + 27);
       if (last_cap - minimum < 10) continue;
       if (first_minimum < 0) first_minimum = minimum;
@@ -139,25 +203,32 @@ int main() {
       maximum_label = std::max(maximum_label, last_cap);
       all_width_families += choose(last_cap - minimum, 10);
     }
-    require(first_minimum == 3 && last_minimum == 70,
+    require(first_minimum == 1 && last_minimum == 70,
             "all-width minimum range");
     require(maximum_label == 80, "all-width maximum label");
-    require(all_width_families == 60301609751ULL,
+    require(all_width_families == 60301653510ULL,
             "all-width eleven-body count");
     const std::string ledger =
         "gate=2/189;scale3=2/63;q27=2/189;"
-        "residual=17/84;valid46=14..22;max47disc=-272;"
+        "residual=17/84;"
+        "m1clocks=1/28,83/154,3/28;m1cover=56,56,48,68;"
+        "m2clocks=29/56,1/56,183/350;m2cover=58,48,39,68;"
+        "valid46=14..22;max47disc=-272;"
         "block15_60=3/280;surplus=1/7560;"
         "clock=211/420;clock_tail=37/84;"
         "hostile=1/420,1/420;rescue=1/7;"
-        "families=13340783196;all11=60301609751;mrange=3..70;maxlabel=80";
+        "families=13340783196;all11=60301653510;mrange=1..70;maxlabel=80";
     const std::uint64_t semantic = fnv64(ledger);
-    require(semantic == 0x56b59e7ee90c92f6ULL, "semantic FNV");
+    require(semantic == 0xdd4f72fb4a409a5eULL, "semantic FNV");
 
     std::cout << "THM4148_FIRST_WINDOW_WIDTH_ODD_TAIL_TRANSFER_INDEPENDENT_20260825\n";
     std::cout << "status=PASS;scope=independent integer-rational controls\n";
     std::cout << "width_gate=2/189;scale_gates=(2/63,2/189)\n";
     std::cout << "residual_clock_min=" << residual_min << '\n';
+    std::cout << "small_minimum_clocks_m1=(1/28,83/154,3/28);"
+                 "coverage=(56,56,48,68)\n";
+    std::cout << "small_minimum_clocks_m2=(29/56,1/56,183/350);"
+                 "coverage=(58,48,39,68)\n";
     std::cout << "consecutive_46_starts=(14,15,16,17,18,19,20,21,22)\n";
     std::cout << "consecutive_47_discriminant=-272;consecutive_46_discriminant=1296\n";
     std::cout << "block_15_60_interval=(" << left << ',' << right << ','

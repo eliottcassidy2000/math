@@ -2,6 +2,8 @@ THM4148_FIRST_WINDOW_WIDTH_ODD_TAIL_TRANSFER_20260825
 status=PASS;scope=exact rational arithmetic controls
 width_gate=2/189;scale_gates=(2/63,2/189)
 residual_clock_min=17/84
+small_minimum_clocks_m1=(1/28,83/154,3/28);coverage=(56,56,48,68)
+small_minimum_clocks_m2=(29/56,1/56,183/350);coverage=(58,48,39,68)
 consecutive_46_starts=(14,15,16,17,18,19,20,21,22)
 consecutive_47_discriminant=-272;consecutive_46_discriminant=1296
 block_15_60_interval=(1/210,13/840,3/280)
@@ -10,7 +12,7 @@ residual_clock=(211/420,37/84)
 moving_base_hostile=((1/420,1),(211/420,211),1/420)
 moving_base_rescue=(1/105,53/105,1/7)
 eleven_subsets=13340783196
-all_width_body_minima=3..70;all_width_max_label=80
-all_width_eleven_subsets=60301609751
-semantic_sha256=1bed18a18b2747baed31600403926d44e8139ae4aa219698d6eb3401a295f38c
-semantic_fnv64=56b59e7ee90c92f6
+all_width_body_minima=1..70;all_width_max_label=80
+all_width_eleven_subsets=60301653510
+semantic_sha256=088cd3627ef782d74609f7977ab92cad91d2e8e2b5d27332dc4f29a71348239b
+semantic_fnv64=dd4f72fb4a409a5e

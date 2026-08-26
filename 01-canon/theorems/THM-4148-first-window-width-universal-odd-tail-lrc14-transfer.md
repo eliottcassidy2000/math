@@ -4,9 +4,9 @@ title: "First-window width transfer for universal odd-tail LRC(14) completion"
 status: >
   PROVED ELEMENTARY FIRST-WINDOW/CROSS-COMB TRANSFER + VERIFIED-EXACT +
   INDEPENDENTLY AUDITED; LRC(14) OPEN. Every finite positive body H with
-  min(H)>=3 and first-window width at least 2/189 has universal 1/14-safe
-  completion after doubling by every pair of distinct positive odd tails.
-  Exactly 60,301,609,751 eleven-body sets satisfy this width gate; their
+  first-window width at least 2/189 has universal 1/14-safe completion after
+  doubling by every pair of distinct positive odd tails. Exactly
+  60,301,653,510 eleven-body sets satisfy this width gate; their
   labels lie in {3,...,80}. The block {15,...,60} alone supplies
   13,340,783,196 families, and 46 is sharp among consecutive blocks for this
   mechanism. Arbitrary bodies, entry, and LRC(14) remain open.
@@ -22,20 +22,20 @@ script: 04-computation/lrc14_first_window_width_universal_odd_tail_transfer_thm4
 output: 05-knowledge/results/lrc14_first_window_width_universal_odd_tail_transfer_thm4148.out
 independent_audit_script: 04-computation/lrc14_first_window_width_universal_odd_tail_transfer_thm4148_independent_audit.cpp
 independent_audit_output: 05-knowledge/results/lrc14_first_window_width_universal_odd_tail_transfer_thm4148_independent_audit.out
-script_sha256: c5938e111e5b888a3f6b923bd1457f7b89f15bd127ec90bbd6ae12f1cf0a63cc
-output_sha256: d7cda26940eb3264ba2ed4381433a3aab54aaa04e7c0bbaad91c692b9588b130
-semantic_sha256: 1bed18a18b2747baed31600403926d44e8139ae4aa219698d6eb3401a295f38c
-semantic_fnv64: 56b59e7ee90c92f6
-independent_audit_script_sha256: 8082615643dcd1ccfad2948d5e7eaf73d39d8c4a173511a6e92131c865c20e28
-independent_audit_output_sha256: 9e5ffed9f249bfc07f46fe8a01fc3a42a64796799215a54f7171effeaa6ca342
-independent_semantic_fnv64: 56b59e7ee90c92f6
+script_sha256: 73dc8167567c26b6dec37b844b96c6098c082b3526b6947a9f1d405f0b024ab9
+output_sha256: 5d19081b584283fcec3d463611aa4d0158893fc479c2906e378e9acaed9de4d2
+semantic_sha256: 088cd3627ef782d74609f7977ab92cad91d2e8e2b5d27332dc4f29a71348239b
+semantic_fnv64: dd4f72fb4a409a5e
+independent_audit_script_sha256: 40b72d5ee4f2b3d815c7c170b3936f794cc2e3cee83840eae81e030a6ca02c02
+independent_audit_output_sha256: f76d37745ad8470f6efd2df43d9ed9becccbdd1cb84aff343acacf5509db974e
+independent_semantic_fnv64: dd4f72fb4a409a5e
 hash_basis: raw LF bytes
 primary_audit: >
   PASS. Exact Fraction arithmetic checks both analytic scale gates, the sharp
-  residual clock, all nine maximal 46-label blocks, impossibility of 47
-  labels, the complete {15,...,60} endpoint clearances, the moving-base
-  hostile and rescue, and the complete 60,301,609,751-set width-family count.
-  Normal, optimized, and hash-seeded replays byte-match. The cross-comb
+  residual clocks including the m=1,2 banks, all nine maximal 46-label blocks,
+  impossibility of 47 labels, the complete {15,...,60} endpoint clearances,
+  the moving-base hostile and rescue, and the 60,301,653,510-set width-family
+  count. Normal, optimized, and hash-seeded replays byte-match. The cross-comb
   topology is inherited from THM-4136's independently audited exact proof.
 independent_audit: >
   ACCEPT. A separate warning-clean standard-library C++ implementation uses
@@ -68,7 +68,7 @@ W=13/(14M)-1/(14m),                                      (2)
 and suppose
 
 ```text
-m>=3,                        W>=2/189.                   (3)
+W>=2/189.                                                 (3)
 ```
 
 > **Theorem.** For every two distinct positive odd integers `a,b`, there is
@@ -163,14 +163,14 @@ again contradicting `(11)`.
 
 ## 4. One endpoint clock closes every residual ratio
 
-The only remaining case has `t=1` and odd `p<q<=25`. Take the lower closed
-endpoint of `(6)` and its upper physical lift:
+The only remaining case has `t=1` and odd `p<q<=25`. If `m>=3`, take the
+lower closed endpoint of `(6)` and its upper physical lift:
 
 ```text
 y=1/(14m),                    x=(y+1)/2=(14m+1)/(28m).  (14)
 ```
 
-For every odd `r<=25`, hypothesis `m>=3` gives
+For every odd `r<=25`, this gives
 
 ```text
 0<r/(28m)<=25/84<1/2,
@@ -178,9 +178,48 @@ For every odd `r<=25`, hypothesis `m>=3` gives
 ```
 
 Apply `(15)` to `r=p,q`. The body is safe because `2x=y mod 1`. This closes
-the residual ratios and proves `(4)`. **QED.**
+the residual ratios for `m>=3`.
 
-## 5. The complete 60,301,609,751-family width census
+It remains to remove the artificial small-minimum restriction. The width
+gate itself forces `M<=20` when `m=2`. The three body-safe clocks
+
+```text
+x=29/56,                    x=1/56,                    x=183/350.          (15a)
+```
+
+have doubled-body phases `1/28,1/28,8/175` in the first window for every
+`M<=20`. At `29/56`, every odd `r<=23` has gap `(28-r)/56>=5/56`. For
+`q=25`, the clock `1/56` handles every `p>=5`; for `p=1,3`, the clock
+`183/350` gives the `q=25` gap exactly `1/14` and the two `p`-gaps
+`167/350,151/350`. Thus `(15a)` closes every residual pair for `m=2`.
+
+When `m=1`, the gate forces `M<=11`. The clocks `1/28,83/154` have
+doubled-body phases `1/14,6/77` inside the first window. The first handles
+every pair with `p>=3`. For `p=1`, use
+
+```text
+x=83/154=1/2+3/77.                                      (15b)
+```
+
+For odd `r<=25`,
+
+```text
+||rx||=|77-6r|/154.                                     (15c)
+```
+
+This is at least `11/154=1/14` except at `r=13`; it therefore handles every
+`(1,q)` except `(1,13)`. The final pair uses `x=3/28`. Its tail gaps are
+`3/28,11/28`, while for every `1<=h<=11`,
+
+```text
+||2h(3/28)||=||3h/14||>=1/14.                           (15d)
+```
+
+Hence it is safe for the full doubled body `2{1,...,11}`, and therefore for
+every subbody. This closes `m=1`, proves `(4)` without a minimum hypothesis,
+and completes the theorem. **QED.**
+
+## 5. The complete 60,301,653,510-family width census
 
 Take
 
@@ -225,8 +264,8 @@ its other ten labels from `{m+1,...,U(m)}`, giving exactly
 binom(U(m)-m,10)                                        (21)
 ```
 
-bodies. This is nonzero, under `m>=3`, exactly for `3<=m<=70`: testing the
-smallest possible maximum `m+10` reduces the gate to
+bodies. This is nonzero exactly for `1<=m<=70`: testing the smallest possible
+maximum `m+10` reduces the gate to
 
 ```text
 4m^2-284m+270<=0,                                      (22)
@@ -236,12 +275,12 @@ which holds on precisely those integers. The cap `U(m)` is increasing and
 has final value `U(70)=80`. Hence the theorem's complete eleven-body census is
 
 ```text
-sum_(m=3)^70 binom(floor(351m/(4m+27))-m,10)
-  =60,301,609,751.                                     (23)
+sum_(m=1)^70 binom(floor(351m/(4m+27))-m,10)
+  =60,301,653,510.                                     (23)
 ```
 
 Each body has a unique minimum, so this sum has no duplicates. Thus every
-one of these `60,301,609,751` bodies, after doubling, accepts every distinct
+one of these `60,301,653,510` bodies, after doubling, accepts every distinct
 positive odd tail pair. The `13,340,783,196` block families in `(19)` form a
 particularly simple hereditary subcollection.
 
