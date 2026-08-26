@@ -9,8 +9,9 @@ status: >
   critical strata have lengths 21,20,19; all retain genus 9 and packet
   (8,3,3,3,2,2,2,1). The carrier-orbit lemma excludes every finite response.
   THM-4161/4164 subsequently close the nontriple/triple top collisions off
-  `I_C=0`, and THM-4165 closes their common intersection. The zeta=0 wall,
-  other cells, entry, M>=10, JC(2), and DC(2) remain OPEN.
+  `I_C=0`, and THM-4165 closes their common intersection. Eta=zeta=0 exits
+  exact M=9 (MISTAKE-514); other cells, entry, M>=10, JC(2), and DC(2)
+  remain OPEN.
 source: codex-lrc14-jc-sharp-fronts-20260825b
 depends_on:
   - THM-3827-generic-fibre-genus-floor-for-nonlinear-cubic-plane-atlases
@@ -385,8 +386,8 @@ proves the theorem.
 
 This closes the complete `I_C=0` stopping wall of THM-4155 under
 `zeta*D_C!=0`. It does not cross the top-face collision `D_C=0`, the
-`zeta=0` coefficient wall, another reduced cell, seam entry, exact residual
-weight at least ten, `JC(2)`, or `DC(2)`.
+lower-weight filtration exit `eta=zeta=0`, another reduced cell, seam entry,
+exact residual weight at least ten, `JC(2)`, or `DC(2)`.
 
 THM-4165 subsequently closes the omitted `I_C=D_C=0,zeta!=0` intersection.
 

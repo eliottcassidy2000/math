@@ -10,8 +10,8 @@ status: >
   planar Keller pair. Its normalized genus is 9, affine critical length is
   22, and labelled infinity packet is (8,3,3,3,2,2,2,1).
   THM-4159/4161/4164/4165 subsequently close every zeta!=0 inner/top
-  boundary. The zeta=0 wall, other coefficient cells, entry, M>=10, JC(2),
-  and DC(2) remain OPEN.
+  boundary. Eta=zeta=0 exits exact M=9 (MISTAKE-514); other coefficient
+  cells, entry, M>=10, JC(2), and DC(2) remain OPEN.
 source: codex-lrc14-planar-jc-breakthrough-20260825
 depends_on:
   - THM-3827-generic-fibre-genus-floor-for-nonlinear-cubic-plane-atlases
@@ -366,7 +366,7 @@ The proof deliberately stops at exactly the factors detected by both the
 critical and boundary computations:
 
 ```text
-zeta=0:       no longer the Y-only exact-weight-nine locus;
+zeta=0:       with eta=0, exits exact weight nine (MISTAKE-514);
 I_C=0:        R_18(0)=0 and [T^18]Q_18=0;
 D_C=0:        [p^18]R_18=[T^18]Q_18=0 and top-face roots collide. (28)
 ```

@@ -9,8 +9,9 @@ status: >
   (g,L,packet)=(9,21,(8,5,3,2,2,2,1)); the J_top=0 ordinary-node stratum has
   (8,20,(8,3,2,2,2,2,2,1)); its unique cusp has
   (8,18,(8,3,3,2,2,2,1)). THM-4164 subsequently closes the triple-root
-  locus off `I_C=0`, and THM-4165 closes the common intersection. The zeta=0
-  wall, other cells, entry, M>=10, JC(2), and DC(2) remain OPEN.
+  locus off `I_C=0`, and THM-4165 closes the common intersection.
+  Eta=zeta=0 exits exact M=9 (MISTAKE-514); other cells, entry, M>=10,
+  JC(2), and DC(2) remain OPEN.
 source: codex-lrc14-jc-sharp-fronts-20260825b
 depends_on:
   - THM-3827-generic-fibre-genus-floor-for-nonlinear-cubic-plane-atlases
@@ -349,7 +350,8 @@ a^2=-356/15,                 b=ca.
 ```
 
 Conversely these formulas parameterize the whole nontriple `J_C=0` wall.
-Here `c=0` is exactly `zeta=0`, while `c=1` is exactly the triple-root row.
+Here `c=0` is exactly `zeta=0` and exits the Y-only exact-`M=9` filtration,
+while `c=1` is exactly the triple-root row.
 Exact reduction in `Q(c)[a]/(15a^2+356)` gives
 
 ```text

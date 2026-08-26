@@ -9,7 +9,8 @@ status: >
   the genus is 9, affine critical length is 20, and packet is
   (8,7,2,2,2,1); on J=0 the genus is 8, length is 19, and packet is
   (8,4,2,2,2,2,1). THM-4165 subsequently closes the I_C=0 intersection.
-  The zeta=0 wall, other cells, entry, M>=10, JC(2), and DC(2) remain OPEN.
+  Eta=zeta=0 exits exact M=9 (MISTAKE-514); other cells, entry, M>=10,
+  JC(2), and DC(2) remain OPEN.
 source: codex-lrc14-jc-sharp-fronts-20260825b
 depends_on:
   - THM-3827-generic-fibre-genus-floor-for-nonlinear-cubic-plane-atlases
@@ -342,8 +343,8 @@ I_C=0, equivalently 5805a^4+1013888=0.
 ```
 
 THM-4165 subsequently closes that inner wall. No claim is made about the
-zeta=0 wall, another reduced cell, entry, exact weight at least ten, `JC(2)`,
-or `DC(2)`.
+lower-weight filtration exit `eta=zeta=0`, another reduced cell, entry,
+exact weight at least ten, `JC(2)`, or `DC(2)`.
 
 Primary replay:
 

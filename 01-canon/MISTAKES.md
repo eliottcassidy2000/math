@@ -9,6 +9,30 @@ Format per entry:
 - Why it was wrong
 - The correct framing
 
+## MISTAKE-514 (2026-08-26, Y-only exact-weight-nine routing) -- a filtration exit was listed as an open coefficient wall
+
+- **What failed:** current navigation and several Y-only theorem synopses
+  called `zeta=0` an open Y-only exact-weight-nine wall. In the complete
+  reduced source, however, Y-only already means `eta=0,zeta!=0`; setting
+  `zeta=0` also kills `eta` and leaves no weight-nine term.
+- **Minimal witness / first failed implication:** with `wt(p)=2,wt(y)=3`, the
+  only weight-nine source monomials are `p^3y` and `y^3`, carrying
+  coefficients `eta,zeta`. Thus exact `M=9` is equivalent to
+  `(eta,zeta)!=(0,0)`. Coefficient-chart closure does not preserve the exact-
+  weight filtration: `eta=zeta=0` lies in `M<=8`, not on an exact-`M=9`
+  Y-only boundary.
+- **Repair / strongest survivor:** Y-only is now routed as
+  `eta=0,zeta!=0`. Its apparent `zeta=0` boundary is recorded as a lower-
+  weight filtration exit. If `zeta=0` while exact weight nine persists, then
+  `eta!=0` and the row is P-only: THM-4183 closes `Delta=0`, while THM-4186
+  closes the generic coefficient chamber `eta*Delta*K*Theta!=0`, including
+  every critical-eliminant wall. The P coefficient contractions
+  `Delta!=0,K*Theta=0` remain open.
+- **Reusable rule:** before naming a coefficient boundary of an exact-weight
+  chamber, recompute the surviving top graded row. A vanished chart
+  coefficient may change the chamber, lower the filtration, or leave the
+  declared universe rather than define a new wall inside it.
+
 ## MISTAKE-513 (2026-08-26, THM-4166/4170 hostile audit) -- a wordwise XOR/multiply recurrence was still labelled bytewise FNV-1a-64
 
 - **What failed:** MISTAKE-512 correctly repaired the missing digit in the

@@ -7,8 +7,9 @@ status: >
   eta=Delta=0 exact-weight-nine intersection zeta!=0, I_C=D_C=0 contains no
   nonautomorphic planar Keller pair. Its four exhaustive strata have
   (L,g)=(20,9),(19,9),(19,9),(19,8), with respectively smooth-double,
-  smooth-double, triple, and ordinary-node top boundary. The zeta=0 wall,
-  other cells, entry, M>=10, JC(2), and DC(2) remain OPEN.
+  smooth-double, triple, and ordinary-node top boundary. Eta=zeta=0 exits
+  exact M=9 (MISTAKE-514); other cells, entry, M>=10, JC(2), and DC(2)
+  remain OPEN.
 source: codex-lrc14-jc-sharp-fronts-20260825b
 depends_on:
   - THM-3827-generic-fibre-genus-floor-for-nonlinear-cubic-plane-atlases
@@ -504,8 +505,9 @@ This theorem closes exactly
 eta=Delta=0,       zeta!=0,       I_C=D_C=0.
 ```
 
-It makes no claim on `zeta=0`, another reduced cell, seam entry, exact
-residual weight at least ten, `JC(2)`, or `DC(2)`.
+It makes no claim on the lower-weight filtration exit `eta=zeta=0`, another
+reduced cell, seam entry, exact residual weight at least ten, `JC(2)`, or
+`DC(2)`.
 
 Primary replay:
 
