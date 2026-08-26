@@ -1,0 +1,18 @@
+THM-4200 independent literal-cycle audit
+type inventory=11 signatures across all 20,475 four-edge subsets of K8
+basis=Newton binom(t,j); degree bound=4 because every odd cycle contains a fixed edge
+
+K1,4      first_n=6 gaps=(0, 123, 516, 1413, 3120) newton=(0, 123, 270, 234, 72) sixth=6015
+paw       first_n=6 gaps=(32, 189, 648, 1655, 3528) newton=(32, 157, 302, 246, 72) sixth=6657
+fork      first_n=6 gaps=(40, 207, 692, 1753, 3720) newton=(40, 167, 318, 258, 72) sixth=6995
+K1,3+K2   first_n=6 gaps=(36, 189, 660, 1719, 3708) newton=(36, 153, 318, 270, 72) sixth=7041
+K3+K2     first_n=6 gaps=(40, 193, 664, 1723, 3712) newton=(40, 153, 318, 270, 72) sixth=7045
+C4        first_n=6 gaps=(48, 239, 764, 1881, 3920) newton=(48, 191, 334, 258, 72) sixth=7283
+P5        first_n=6 gaps=(36, 205, 708, 1815, 3868) newton=(36, 169, 334, 270, 72) sixth=7281
+P4+K2     first_n=6 gaps=(36, 187, 680, 1797, 3892) newton=(36, 151, 342, 282, 72) sixth=7391
+2P3       first_n=6 gaps=(32, 195, 692, 1805, 3888) newton=(32, 163, 334, 282, 72) sixth=7367
+P3+2K2    first_n=7 gaps=(177, 652, 1771, 3900, 7477) newton=(177, 475, 644, 366, 72) sixth=13012
+4K2       first_n=8 gaps=(596, 1721, 3896, 7571, 13268) newton=(596, 1125, 1050, 450, 72) sixth=21581
+
+equality ledger=[K1,4 at n=6], center switch={(0,5)}
+result=PASS; literal cycles independently exclude frustration index four

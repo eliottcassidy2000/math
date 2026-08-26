@@ -1,0 +1,31 @@
+THM-4200 primary exact audit
+four-edge isomorphism types=11; K8 labelled sets=20475
+method=parity inclusion-exclusion + exact linear-forest contraction
+
+K1,4      v=5 first_n=6 shift_gap=3*t**4 + 21*t**3 + 51*t**2 + 48*t
+  c3=4*(n - 5) c4=4*(n - 5)*(n - 3) c5=4*(n - 5)*(n - 4)*(n - 3) c6=4*(n - 5)**2*(n - 4)*(n - 3)
+paw       v=4 first_n=6 shift_gap=3*t**4 + 23*t**3 + 61*t**2 + 70*t + 32
+  c3=2*(2*n - 7) c4=2*(2*n**2 - 15*n + 29) c5=2*(n - 4)*(n - 3)*(2*n - 9) c6=2*(n - 5)**2*(n - 4)*(2*n - 5)
+fork      v=5 first_n=6 shift_gap=3*t**4 + 25*t**3 + 63*t**2 + 76*t + 40
+  c3=4*(n - 4) c4=4*(n - 4)*(n - 3) c5=4*(n**3 - 11*n**2 + 38*n - 38) c6=4*(n - 5)*(n**3 - 11*n**2 + 36*n - 28)
+K1,3+K2   v=6 first_n=6 shift_gap=3*t**4 + 27*t**3 + 57*t**2 + 66*t + 36
+  c3=2*(2*n - 7) c4=2*(n - 5)*(2*n - 3) c5=2*(2*n**3 - 21*n**2 + 61*n - 24) c6=2*(n - 5)*(2*n**3 - 21*n**2 + 55*n + 12)
+K3+K2     v=5 first_n=6 shift_gap=3*t**4 + 27*t**3 + 57*t**2 + 66*t + 40
+  c3=2*(2*n - 5) c4=2*(n - 5)*(2*n - 3) c5=2*(2*n**3 - 21*n**2 + 61*n - 24) c6=2*(n - 5)*(2*n**3 - 21*n**2 + 55*n + 12)
+C4        v=4 first_n=6 shift_gap=3*t**4 + 25*t**3 + 71*t**2 + 92*t + 48
+  c3=4*(n - 4) c4=4*(n - 4)*(n - 3) c5=4*(n - 4)**2*(n - 3) c6=4*(n - 5)**2*(n - 4)*(n - 2)
+P5        v=5 first_n=6 shift_gap=3*t**4 + 27*t**3 + 65*t**2 + 74*t + 36
+  c3=2*(2*n - 7) c4=2*(2*n**2 - 13*n + 19) c5=2*(2*n**3 - 21*n**2 + 65*n - 48) c6=2*(n - 5)*(2*n**3 - 21*n**2 + 59*n - 16)
+P4+K2     v=6 first_n=6 shift_gap=3*t**4 + 29*t**3 + 63*t**2 + 56*t + 36
+  c3=4*(n - 3) c4=4*(n**2 - 6*n + 6) c5=4*(n**3 - 10*n**2 + 26*n - 4) c6=4*(n**4 - 15*n**3 + 72*n**2 - 94*n - 76)
+2P3       v=6 first_n=6 shift_gap=3*t**4 + 29*t**3 + 59*t**2 + 72*t + 32
+  c3=4*(n - 3) c4=4*(n - 5)*(n - 1) c5=4*(n**3 - 10*n**2 + 25*n + 4) c6=4*(n**4 - 15*n**3 + 71*n**2 - 77*n - 144)
+P3+2K2    v=7 first_n=7 shift_gap=3*t**4 + 43*t**3 + 172*t**2 + 257*t + 177
+  c3=2*(2*n - 5) c4=2*(n - 5)*(2*n - 1) c5=2*(2*n**3 - 19*n**2 + 39*n + 28) c6=2*(2*n**4 - 29*n**3 + 124*n**2 - 69*n - 348)
+4K2       v=8 first_n=8 shift_gap=3*t**4 + 57*t**3 + 333*t**2 + 732*t + 596
+  c3=4*(n - 2) c4=4*n*(n - 5) c5=4*(n - 6)*(n - 4)*(n + 1) c6=4*(n**4 - 14*n**3 + 53*n**2 + 8*n - 208)
+
+equality ledger=[K1,4 at n=6]
+center switch leaves=((0, 5),)
+direct controls=all c3..c6 rows at the first three admissible orders
+result=PASS; every frustration-four class is strictly above A_n

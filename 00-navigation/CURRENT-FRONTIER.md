@@ -345,7 +345,9 @@ lift/phase clocks.
   preprint claim, and no arithmetic/tournament transfer follows.
 - **Integral observers:** THM-4000 compiles consecutive values; THM-4010 gives kernel `(F^k)`, index `product(j!)^(k^2)`, rank `k min(m+1,p)`, and its first positive exponent.
   THM-4080 gives the full two-jet partition `e*{0,0,1,...,s-1,s+1,...,2s-1}` at one exact scale and every consecutive `p`-primary layer through `n<=p(p-1)`; the `s=p` wall and larger clusters remain **OPEN**.
-- **Even-graph spectrum:** THM-4083 proves `D=3,4`; THM-4084 gives all matching characters and forces any new `D=5` equality/counterexample to have `b=0`, frustration `>=4`. Full `D=5` is **OPEN** beyond exact `n=6,7,8` (MISTAKE-496).
+- **Even-graph spectrum:** THM-4083 closes `D=3,4`; THM-4084/[4200](../01-canon/theorems/THM-4200-even-graph-four-edge-d5-frustration-firewall.md)
+  force any new `D=5` equality/counterexample into `b=0`, frustration `>=5`.
+  Full `D=5` is **OPEN** beyond `n=6,7,8` (MISTAKE-496).
 - **AMM:** [THM-4086](../01-canon/theorems/THM-4086-rule-a-transition-clock-and-phase-cocycle.md) separates the shared adjacent-offset kernel from feed/front/debt, rebuilds the `R=32768` clocks behind inherited `854:DIE,855/856:CLOSED`, and proves a nonconstant dyadic phase cocycle. Fixed-policy/local only: no global monotonicity, alternative infeasibility, all-`R` family, or `C*` consequence.
 - **Knots:** THM-2176/2191/2281 and THM-2242/2330--2383: localization, owner/ANOVA/rectangle/reference inversion; realization/stable diagonal open. THM-2646: modular/exponent `B3` conjugacy, not Markov invariance.
 - **Flows:** [THM-2177](../01-canon/theorems/THM-2177-planar-counterexample-to-goemans-unsplittable-cost-flow-conjecture.md): planar `58<60` refutes exact `d_max`; planar `2d_max` survives.
