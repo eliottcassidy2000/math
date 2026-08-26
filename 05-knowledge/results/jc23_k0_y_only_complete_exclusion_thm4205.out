@@ -1,0 +1,14 @@
+JC23_K0_Y_ONLY_COMPLETE_SOURCE
+scope=K=0,Delta=5696/105,eta=0,zeta!=0,Phi/Theta arbitrary
+source_pair=(A,B);degrees=(6,3);infinity=(3*zeta*p^2,9*zeta*p^2)
+hessian_bridge=p*detD(A,B)=2*t^2*detHess mod(A,B)
+resultant=p^6*R20;R0=1259712*zeta^3
+RLC=(40870620168192/1225)*zeta^7
+universal=T0:2,T-1/6:2;critical_length=24
+polygon=((0,1),(2,0),(5,3),(3,4),(0,5));Pick=(30,10,11)
+packet=(11,8,2,2,2,1);full_n=26;defect=20
+carrier=zeta*W^3=q-1/2;prime_owner_degree=3;finite=(n,beta)=(20,3)
+responses=finite:18<19,identity:3<19,full:4<20
+partition=P:4192,Y:4205,G:4209,A:4176
+checks=67
+K0_Y_ONLY_COMPLETE_ACCEPT

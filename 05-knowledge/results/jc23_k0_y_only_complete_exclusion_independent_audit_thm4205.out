@@ -1,0 +1,11 @@
+JC23_K0_Y_ONLY_ALTERNATIVE_PAIR_REFEREE
+source_pair=(A,C0);degrees=(6,7);infinity=(3*zeta*p^2,6*zeta*p^2)
+bridge=p*detD(A,C0)=2*t^4*detHess mod(A,C0)
+resultant=p^8*R20;R0=1259712*zeta^3
+RLC=(40870620168192/1225)*zeta^7
+normalized_control=degree78,T56,(6T+1)^2,Q20
+hull=((0,1),(2,0),(5,3),(3,4),(0,5));Pick=(30,10,11)
+packet=(11,8,2,2,2,1);L=24;full_n=26;defect=20
+carrier=one_prime_cubic_owner;finite=(20,3);responses=18<19,4<20
+checks=25
+K0_Y_ONLY_ALTERNATIVE_PAIR_ACCEPT

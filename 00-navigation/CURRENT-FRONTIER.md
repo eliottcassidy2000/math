@@ -363,15 +363,11 @@ lift/phase clocks.
   `131199`-field file is a named finite population, not a world census.
 - **Jacobian/Dixmier:** `JC(2),DC(2)` remain **OPEN**. THM-4130--4143 empty
   `M=8`; THM-4147/4157 close named `M=9` chambers; THM-4176/4180
-  exhaust repeated-top. `eta=0` is a lower-weight exit.
-  THM-4183/4186/4189/[4192](../01-canon/theorems/THM-4192-complete-p-only-k-zero-planar-jacobian-exclusion.md)
-  close all P-only `zeta=0,eta!=0`.
-  [THM-4209](../01-canon/theorems/THM-4209-generic-mixed-b-k-zero-exact-weight-nine-planar-jacobian-exclusion.md)
-  closes genuinely mixed `K=0`; THM-4176 already closes the whole
-  anti-diagonal, including the repeated-tangent residual drops `17/15`.
-  Together with THM-4192 and THM-4147, the unresolved `K=0` coefficient locus
-  is confined to Y-only critical walls. Other cells, `M>=10`, and entry stay
-  open.
+  exhaust repeated-top. `eta=zeta=0` is a lower-weight exit.
+  THM-4183/4186/4189/4192 close P-only; THM-4209/4176 close mixed/anti `K=0`.
+  [THM-4205](../01-canon/theorems/THM-4205-complete-exact-weight-nine-k-zero-planar-jacobian-exclusion.md)
+  closes its last Y-only walls, so the exact-`M=9` `K=0` coefficient face is
+  empty inside the inherited seam. Other cells, `M>=10`, and entry stay open.
   Exceptional quartic: THM-3703/3737 give grammar/image, THM-4034 the
   conductor, and THM-4039/4043/4046 reach `J_7`, obstruct `J_8`, and close
   critical `H`. [THM-4054](../01-canon/theorems/THM-4054-exceptional-affine-simple-zero-retained-packet.md)

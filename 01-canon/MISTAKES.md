@@ -28,10 +28,11 @@ Format per entry:
   all-critical-wall exclusion for `eta*zeta*(eta+zeta)!=0` at `K=0`. Its
   anti computations survive as independent verification of THM-4176, not as
   a new theorem or open frontier. With THM-4192 closing P-only `K=0` and
-  THM-4147 closing the critical-open Y-only row, the unresolved `K=0`
-  coefficient locus is confined to Y-only critical walls
-  `eta=0,zeta!=0`. Entry, other reduced cells, `M>=10`, JC(2), and DC(2)
-  remain open.
+  THM-4147 closing the critical-open Y-only row, the then-unresolved `K=0`
+  coefficient locus was confined to Y-only critical walls
+  `eta=0,zeta!=0`. THM-4205 subsequently closes those walls and hence the
+  whole exact-weight-nine `K=0` coefficient face. Entry, other reduced cells,
+  `M>=10`, JC(2), and DC(2) remain open.
 - **Reusable rule:** before promoting a specialized computation or naming its
   complement open, search older theorems by the ambient defining equations
   and quantifiers, not only by the newest theorem's title. A complete

@@ -11,8 +11,10 @@ status: >
   lengths 22,19,18 and complete rational packets (8,5,5,4,1), (8,4,4,2,1),
   (8,5,4,1). Their response gaps are 1,0,0 and their commutator caps 2,0,0,
   against origin defects 18,14,14. Together with THM-4189 this closes the
-  whole P-only exact-weight-nine row zeta=0,eta!=0. Mixed B, other cells,
-  entry, M>=10, JC(2), and DC(2) remain OPEN.
+  whole P-only exact-weight-nine row zeta=0,eta!=0. THM-4209 and THM-4205
+  subsequently close the mixed and Y-only K-zero rows, so the whole
+  exact-weight-nine K-zero coefficient face is now empty. Other cells, entry,
+  M>=10, JC(2), and DC(2) remain OPEN.
 source: jc-k-zero-wall-20260826
 depends_on:
   - THM-3827-generic-fibre-genus-floor-for-nonlinear-cubic-plane-atlases
@@ -29,6 +31,7 @@ depends_on:
 related:
   - THM-4183-p-only-delta-zero-planar-jacobian-exclusion
   - THM-4176-complete-repeated-top-wall-planar-jacobian-exclusion
+  - THM-4205-complete-exact-weight-nine-k-zero-planar-jacobian-exclusion
 script: 04-computation/jc23_p_only_k_zero_complete_exclusion_thm4192.py
 output: 05-knowledge/results/jc23_p_only_k_zero_complete_exclusion_thm4192.out
 independent_audit_script: 04-computation/jc23_p_only_k_zero_complete_exclusion_independent_audit_thm4192.py
@@ -84,7 +87,8 @@ III: Theta=Phi=0.
 > planar Keller pair in the inherited reduced seam.
 
 Together with THM-4189 (complete P-only `K!=0`) this closes the whole
-P-only exact-weight-nine row.  It does not close the mixed B chamber, entry,
+P-only exact-weight-nine row. THM-4209 and THM-4205 subsequently close the
+mixed and Y-only `K=0` rows. This theorem by itself does not close entry,
 other reduced cells, `M>=10`, `JC(2)`, or `DC(2)`.
 
 ## Inheritance and weakest link

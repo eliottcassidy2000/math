@@ -55,10 +55,10 @@ Then read the routed frontier, guardrails, and theorem; logs are history.
     Composite rank seven and FC(3) remain open.
 12. **JC is false from dimension three; JC(2), DC(2) remain open.** THM-2084
     closes cells; THM-4130--4165 close named `M<=9` chambers. THM-4176/4180
-    exhaust repeated-top; THM-4183/4186/4189/4192 close all P-only
-    `zeta=0,eta!=0`; THM-4209 closes genuinely mixed `K=0` and THM-4176 its
-    anti-diagonal. Only Y-only critical walls remain at `K=0`; other
-    walls/entry survive, and `eta=zeta=0` exits `M=9`.
+    exhaust repeated-top; THM-4183/4186/4189/4192 close P-only, THM-4209/4176
+    close mixed/anti `K=0`, and THM-4205 closes its last Y-only row. Thus the
+    exact-`M=9` `K=0` coefficient face is empty inside the inherited seam.
+    Other walls/entry survive; `eta=zeta=0` exits `M=9`.
 13. **Complete period-14 coordinates can be globally blind.** THM-2058 keeps
     every fixed-depth packet coordinate but exits at `47/113`; THM-2043/2047/
     2050 separate local completeness from global maxima.

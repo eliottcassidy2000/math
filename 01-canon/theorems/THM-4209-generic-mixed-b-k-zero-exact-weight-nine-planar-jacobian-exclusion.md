@@ -11,9 +11,9 @@ status: >
   THM-4176 had already excluded the whole zeta=-eta, eta!=0 wall, including
   Theta=-Delta at K=0. The genuinely mixed source resultant has residual
   length 21 and total critical length 25; its complete packet and pure cubic
-  carrier force strict finite/full monodromy deficits. The unresolved K=0
-  coefficient locus is confined to critical walls in the Y-only row
-  eta=0,zeta!=0. Entry, M>=10, JC(2), and DC(2) remain OPEN.
+  carrier force strict finite/full monodromy deficits. THM-4205 subsequently
+  closes the Y-only critical walls and hence the whole exact-weight-nine K=0
+  coefficient face. Entry, M>=10, JC(2), and DC(2) remain OPEN.
 source: codex-pair-entry-jc-mixed-20260826
 depends_on:
   - THM-4147-generic-exact-weight-nine-planar-jacobian-monodromy-exclusion
@@ -21,6 +21,7 @@ depends_on:
   - THM-4192-complete-p-only-k-zero-planar-jacobian-exclusion
 related:
   - THM-4155-generic-y-only-delta-zero-weight-nine-planar-jacobian-exclusion
+  - THM-4205-complete-exact-weight-nine-k-zero-planar-jacobian-exclusion
 script: 04-computation/jc23_k0_generic_mixed_b_exclusion_thm4209.py
 output: 05-knowledge/results/jc23_k0_generic_mixed_b_exclusion_thm4209.out
 independent_audit_script: 04-computation/jc23_k0_generic_mixed_b_exclusion_independent_audit_thm4209.py
@@ -403,9 +404,10 @@ The `zeta=0`, `eta!=0` specialization is already closed by THM-4192, while
 eta=0,                         zeta!=0.                 (36)
 ```
 
-THM-4147 closes its critical-open part; its residual critical walls remain
-open. None of these specializations is silently inferred from the generic
-resultant.
+THM-4147 closes its critical-open part. THM-4205 subsequently uses the
+source-ideal specialization of this audit to close every residual critical
+wall in `(36)`. None of these specializations is silently inferred from the
+generic resultant.
 
 ## 8. Audit and replay
 
@@ -434,6 +436,7 @@ This theorem newly removes the critical-open hypothesis only on the genuinely
 mixed `K=0` stratum `(3)`. Its anti-diagonal computations are independently
 verified redundancy for THM-4176. Together, THM-4192 closes the P-only row,
 THM-4176 closes the anti-diagonal row, this theorem closes the genuinely mixed
-row, and THM-4147 closes the critical-open Y-only row. The remaining `K=0`
-coefficient frontier is the Y-only critical-wall locus in `(36)`. Entry into
-the reduced seam, `M>=10`, JC(2), and DC(2) remain open.
+row, and THM-4147 closes the critical-open Y-only row. THM-4205 subsequently
+closes all remaining Y-only critical walls, hence the whole exact-weight-nine
+`K=0` coefficient face. Entry into the reduced seam, `M>=10`, JC(2), and
+DC(2) remain open.
