@@ -1,0 +1,8 @@
+THM4150_INDEPENDENT_INTERVAL_UNION_AUDIT_20260825
+status=PASS;implementation=direct danger-tooth and safe-tooth intersections
+ratios=2350;cross_bound=4/63;maximizers=((1, 9),)
+pool=(components=46,measure=110551382435042260737/1702610555154297252800,max_width=3/700)
+fragmented_body=(components=100,measure=1142176622583/5854727790800,max_width=21/4100)
+families=193536720;width_covered=208000;beyond_width=193328720
+checks=11766
+semantic_sha256=1686df22845483de1378e8c91e9fb1260bfd826fb56e3652e607e8eb67ccf81e

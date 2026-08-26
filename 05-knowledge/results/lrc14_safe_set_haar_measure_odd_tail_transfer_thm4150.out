@@ -1,0 +1,15 @@
+THM4150_SAFE_SET_HAAR_ODD_TAIL_TRANSFER_20260825
+status=PASS;scope=exact cross-comb measure and body-safe-set audit
+cross_measure_bound=4/63;unique_equality=(1,9);large_product_start=23
+cross_scan=(1053, 101, (4, 63), ((1, 9),))
+pool_size=33;pool=(1, 2, 4, 5, 8, 10, 16, 17, 19, 20, 23, 25, 29, 31, 32, 34, 38, 40, 41, 43, 47, 50, 51, 53, 58, 62, 64, 69, 71, 73, 75, 76, 80)
+pool_wall_count=2472;pool_components=46
+pool_measure=110551382435042260737/1702610555154297252800
+pool_surplus=3148874954907620719/2189070713769810753600
+pool_max_component=3/700
+families=193536720;width_covered=208000;beyond_width=193328720
+fragmented_body=(1, 17, 31, 32, 41, 47, 50, 51, 58, 62, 71)
+fragmented_geometry=(components=100,measure=1142176622583/5854727790800,max_width=21/4100)
+below_threshold_control=((10931, 194040), (1, 13))
+checks=3541
+semantic_sha256=9b08f96a0b6771ddadc366232f0cd7e3d07b208d3328668890b6a6cc24a5390f
