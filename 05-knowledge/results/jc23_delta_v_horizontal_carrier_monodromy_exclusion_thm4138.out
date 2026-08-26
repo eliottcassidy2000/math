@@ -1,0 +1,27 @@
+THM4138_PRIMARY_AUDIT
+scope=theta_only_DeltaV_collision_wall_M8_horizontal_residuals
+degree_tower_options=B_to_S,S_to_q:((1, 2), (2, 1))
+degree_tower_survivor=B_to_S,S_to_q:(1, 2)
+e1_hostile=CONTRADICTION_WITH_THM4120_EqK_equals_O
+normalized_surface=y^2=x^3-3x+2+t^2
+discriminant=-432*t**2*(t**2 + 4)
+fibres=I2@0;I1@t^2=-4;IVstar@infinity;root_ranks=A1+E6
+infinity_valuations_c4_c6_Delta=(4, 4, 8)
+MW_rank=1;height_P=1/6;index,torsion=(1, 1)
+P=(1,t);2P=(-2, -t);3P=(4*t**2/9 + 1, -t*(8*t**2 + 27)/27)
+4P_first_denominator_hostile=((16*t**2 + 81)/(4*t**2), (8*t**4 + 216*t**2 + 729)/(8*t**3))
+denominator_degree_height_rows=((1, 0, 0), (2, 0, 0), (3, 0, 0), (4, 2, 1), (5, 4, 2), (6, 4, 2), (7, 8, 4), (8, 10, 5), (9, 12, 6), (10, 16, 8), (11, 20, 10), (12, 22, 11))
+IVstar_3P_reduction=(4/9, -8/27);additive_parameter=-3/2
+polynomial_positive_multiples=(1, 2, 3);pole_pairs={1: (0, 1), 2: (0, 1), 3: (2, 3)}
+forced_horizontal_curve=V^2=(U-a/2)(U+a/4)^2
+q_on_S=a**2*(8*a + 9*z**2)/16;S_node_q=5*a**3/64;node_hessian_det=3*a
+target_node_contacts=o1:transverse_to_both_branches;o0_node:missed
+reference_q=1/4;BC_U=1/18;BC_V^2=-121/2916;standard_delta1_contains_BC_points
+fixed_sheet_repair=parallel_push_off_inside_Milnor_annulus
+punctured_torus_relation=[delta0,delta1]*muO*muPlus*muMinus=1
+monodromy_generators=X,Y,TPlus,TMinus;muO=surface_relation_word;T_supports=2,2
+generic_capacity=support_sum,max_capacity,required=(13, 14, 15)
+secondary_capacity=support_sum,max_capacity,required=(12, 13, 14)
+capacity_hostile=cycle_on_n_minus_2_plus_two_transpositions_attains_n_minus_1
+semantic_sha256=187c7e26f7b8ec16fa3a286502a3d87cc7edf6e4a8b6804047f0e5b46fa88449
+verdict=GENERIC_N16_CONTRADICTION;SECONDARY_N15_CONTRADICTION;DeltaV_WALL_EMPTY_RELATIVE_TO_DEPENDENCIES
