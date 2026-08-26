@@ -73,19 +73,15 @@ is the safe control `M(S_13)=99/338`. No cited result proves LRC(14).
   `2^(c(F)-1)`. Safety/arrival stay open.
 - **Owner/tail lane (PROVED):** THM-4025/4031, 4029/4038, and 4033/4042
   give tails, the 60-phase law, and clocks; THM-4129/4136 close fixed `U/2U`.
-  THM-4142--4154 give affine/Haar families and transfers.
-  THM-4174/4175 close fixed-pool all-/one-anchor lanes
-  (`888,030`/`6,660,225` bodies per newcomer).
-  [THM-4178](../01-canon/theorems/THM-4178-q50-divisor-complete-anchor-triple-exchange.md)/
-  [4179](../01-canon/theorems/THM-4179-q50-seventh-deletion-primitive-anchor-completion.md)
-  clear two `q=50` blockers at sharp depth seven and transfer all six anchors;
-  the exactly-one-original union has `1,071,961` bodies.
+  THM-4142--4154 give affine/Haar transfers. THM-4174/4175/4179 give disjoint
+  fixed-`q=50` original-anchor-count `3/2/1` slices of
+  `888030/6660225/1071961` bodies; THM-4178/4179 cross the last two blockers at
+  sharp depth seven.
   [THM-4182](../01-canon/theorems/THM-4182-q50-zero-original-four-anchor-transfer-and-two-repair-obstruction-graph.md)
-  classifies 32 zero-original four-anchors, collapses 27 shallow blockers to
-  five body states, crosses them with a sharp two-repair bank, and transfers
-  `1,138,494` further distinct bodies. The four original-anchor-count slices
-  are disjoint and total `9,758,710` fixed-`q=50` cores. Fixed-pool; entry,
-  arbitrary bodies, and LRC(14) stay open. [Proof map](LRC14-PROOF-MAP.md).
+  adds `1,138,494` zero-original four-anchor bodies by collapsing 27 blockers
+  to five states and a sharp two-repair bank. The four slices total
+  `9,758,710`; fixed-pool entry, arbitrary bodies, and LRC(14) stay open.
+  [Proof map](LRC14-PROOF-MAP.md).
 - **PROVED:** [THM-2928](../01-canon/theorems/THM-2928-critical-seven-comb-grid-tensorization-and-drift-tariff.md)/2941: literal zero/one/two/three-drift sectors are empty; `k=2,3` are finite.
 - **Orthogonal routes.** THM-1017 is HYP-6820; THM-2047/2050 keep phase/exit; THM-731/2048 prune; THM-1290 ends at `55`; HYP-8900 nonuniform.
 - **PROVED micro-staircase:** THM-3316 closes every prime and THM-3317 proves
@@ -269,8 +265,13 @@ THM-2070 refutes the general HYP-8890/8895 bypasses.  Transfer
   gives padding descent and a `q<=8` census.
   [THM-4181](../01-canon/theorems/THM-4181-ordinal-sum-capacity-transfer-and-parity-component-exchange.md)
   gives exact rank-two ordinal transfer and a positive factor-order-`<=7`
-  remainder census. Its all-order remainder, `|T|>=4` sign law, and asymmetric
-  bank are **OPEN**; THM-4133 refutes order 12.
+  remainder census.
+  [THM-4184](../01-canon/theorems/THM-4184-path-cover-parity-ordinal-cocycle-and-lollipop-positivity.md)
+  balances path-cover parity at every order, makes nonadjacent ordinal blocks
+  rank one, proves the normalized cocycle and an infinite transitive-spine/
+  `C3` positive family, and retains a finite no-sink-third census. `(OS+)`,
+  all-order local/sign laws, and the asymmetric bank remain **OPEN**;
+  THM-4133 refutes order 12.
   THM-4114/4118 expose face/cut and gcd gaps: at `n=5`, all `544` parents have
   gcd `2` yet gaps, and `400` lack an `M-2` neighbor. Completeness is **OPEN**.
 - Corrected HYP-8835: optimal support is uniquely odd; positive `Mp=0` gives a
@@ -362,15 +363,12 @@ lift/phase clocks.
   `131199`-field file is a named finite population, not a world census.
 - **Jacobian/Dixmier:** `JC(2),DC(2)` remain **OPEN**. THM-4130--4143 empty
   exact `M=8`; THM-4147/4157 close stated `M=9` chambers.
-  [THM-4176](../01-canon/theorems/THM-4176-complete-repeated-top-wall-planar-jacobian-exclusion.md)/
-  [4180](../01-canon/theorems/THM-4180-repeated-top-delta-zero-planar-jacobian-exclusion.md)
-  exhaust the repeated-top exact-`M=9` locus by the `Delta!=0/0` split:
-  source completeness makes `eta=0` a lower-weight filtration exit, not a
-  third exact-`M=9` wall.
+  THM-4176/4180 exhaust repeated-top exact `M=9` by the `Delta!=0/0` split;
+  source completeness makes `eta=0` a lower-weight filtration exit.
   [THM-4183](../01-canon/theorems/THM-4183-p-only-delta-zero-planar-jacobian-exclusion.md)
-  closes the complete P-only `zeta=Delta=0,eta!=0` wall, including both
-  `Theta!=0` and the index-`3+5` to index-`7` blowdown at `Theta=0`.
-  THM-4155/4159/4161/4164/4165 close Y-only for `zeta!=0`.
+  closes P-only `zeta=Delta=0,eta!=0`, including the `Theta=0` index-`3+5`
+  to index-`7` blowdown. THM-4155/4159/4161/4164/4165 close Y-only for
+  `zeta!=0`.
   Other P/B coefficient and critical walls, `zeta=0` Y-only, other cells,
   `M>=10`, and entry stay open.
   Exceptional quartic: THM-3703/3737 give grammar/image, THM-4034 the
@@ -404,15 +402,12 @@ lift/phase clocks.
 
 ### Euclidean four-dimensional Kakeya
 
-**OPEN.**  Hausdorff record `3.059849573...`; a 2025 v1 preprint claims
-maximal `3.0543`, versus published `3.049570924...`. Four-linear/sticky
-`13/4` have extra hypotheses. [Source audit](../05-knowledge/reference/CORE-PAPERS-KAKEYA-4D-2026-08-24.md).
-
-[THM-4035](../01-canon/theorems/THM-4035-sixty-clock-separation-and-finite-kakeya-spine.md)
-is **FINITE-EXACT:** three `C_60` clocks chart the nonzero torus of
-`P^3(F_61)`; the same one-clock phase has all-broad and all-narrow embeddings.
-Lines/basepoints, boundary directions, multiplicity and scale are absent, so
-no Kakeya bound follows.
+**OPEN.** Hausdorff record `3.059849573...`; a 2025 v1 preprint claims maximal
+`3.0543` versus published `3.049570924...`; four-linear/sticky `13/4` need
+extra hypotheses. [Source audit](../05-knowledge/reference/CORE-PAPERS-KAKEYA-4D-2026-08-24.md).
+THM-4035 is **FINITE-EXACT:** three `C_60` clocks chart `P^3(F_61)`'s nonzero
+torus, but lines/basepoints, boundary directions, multiplicity and scale are
+absent, so no Kakeya bound follows.
 
 ### Arithmetic-Kakeya forcing certificates
 
@@ -421,30 +416,29 @@ floor `2`; THM-3903: `[2,2]` `7/4`, saturated empty-wildcard `[2,3]` `11/6`.
 Arbitrary/larger cells and certificate import remain open; none proves AK.
 
 ## Cross-domain connection discipline
-
 Reusable bridges (not literal object identifications):
 
 | Mechanism | Proven source | Legitimate transfer question |
 |---|---|---|
-| Quantifier-order firewall | THM-4090/4094/4095 | Does a fixed-fibre theorem survive optimization, witness deletion, or global projection; if not, retain the full incidence/profile before taking support or an extremum. |
-| Whole-layer Frobenius / orbit norm | NC2/TNC | Packet preservation transfers; LRC lacks seed/exit and a `-1` stabilizer needs orientation. |
-| Quotient + sidecar | THM-3731 valuation owners; THM-3729 rooted switching | First test the stabilizer-fixed fibre; then retain the coefficient/root coordinate and re-audit the consumer. |
-| Bulk / boundary / null | THM-2058 | Large-prime grids are strict; tight support uses finitely many level-14 clocks; subthreshold packets vanish. |
-| Operation-response | tournament/sequence/FC/Rule 30 | THM-3315/3322/3324 give walks and Gram; THM-3732/3511 require seam and next-operation congruence tests. |
-| Actual atlas / resonance | THM-3791/3797/3802 | `H^2_dR=E/k` keeps the resonant coefficient; lower contacts and the affine cover are not recovered. |
-| Reversible address | THM-3743/3793/3818/3825 | Cube packets recover a two-component scale quotient except for an exact singleton congruence fibre; owner/arrival/loneliness are still lost. |
+| Quantifier-order firewall | THM-4090/4094/4095 | Retain incidence/profile until after optimization, witness deletion and global projection. |
+| Whole-layer Frobenius / orbit norm | NC2/TNC | Packets transfer; LRC lacks seed/exit and a `-1` stabilizer needs orientation. |
+| Quotient + sidecar | THM-3731; THM-3729 | Test the fixed fibre, retain coefficient/root, then re-audit the consumer. |
+| Bulk / boundary / null | THM-2058 | Large-prime grids are strict; tight support uses finite level-14 clocks; subthreshold packets vanish. |
+| Operation-response | tournaments/sequences/FC/Rule 30 | Walk/Gram responses still need seam and next-operation congruence tests. |
+| Actual atlas / resonance | THM-3791/3797/3802 | `H^2_dR=E/k` keeps resonance, not lower contacts or the affine cover. |
+| Reversible address | THM-3743/3793/3818/3825 | Cube packets retain scale except one congruence fibre; owner/arrival/loneliness are lost. |
 | Amplitude lattice | THM-3804/3824 | Lift and fixed-division tariffs, not adaptive/projective chronology. |
-| `Z/3` deletion lattice | THM-3785/3790/3808 | Visible `1+2` principalizes; deleting class-one rays yields `ker(sum mod 3)` units, not a surface map. |
-| Positive filtration | THM-3816 | Domain `gr` and `F_0=k` force `S*=k*`; complement units need divisor classes, and affineness is separate. |
-| HFC--JC boundary | THM-3303/3328 | Null moments force collision; cone overlap gives a double sheet, otherwise retain anti-tangent/vertex-cone data. |
+| `Z/3` deletion lattice | THM-3785/3790/3808 | Deletion yields `ker(sum mod 3)` units, not a surface map. |
+| Positive filtration | THM-3816 | `gr` and `F_0=k` force `S*=k*`; complement units and affineness are separate. |
+| HFC--JC boundary | THM-3303/3328 | Null moments force collision; otherwise retain anti-tangent/vertex-cone data. |
 | One-sided accumulation | LRC spectrum | Can qualitative isolation be made effective by finite state/pinning data? |
 | Finite observer / recurrence | THM-3171/3172/3180/3181 | Is it invertible, a refuter, or only an address; which sidecar makes termination lawful? |
-| Continuation / min-plus kernel | Gordian profile; THM-840/853 | Which sidecar remains target-preserving under every future operation? |
-| Relation-cone carry atlas | THM-2196/2199 | Carry charts still need phase, SCC order, continuation, or JC residue/flux. |
-| Euclidean inball / short relation | THM-4009 | Intersect the square-norm-`<=195` row with rank-eleven stars; odd character, owner, phase and arrival are lost. |
-| Euclidean-addressed grid coboundary | THM-3710/778 finite control | Word plus basepoint reconstructs one pinned coefficient fibre, but stripping exits the bank and chart/absolute-lift/owner sidecars remain. |
+| Continuation / min-plus kernel | Gordian profile; THM-840/853 | Which sidecar survives every future operation? |
+| Relation-cone carry atlas | THM-2196/2199 | Carry still needs phase, SCC order, continuation or JC residue/flux. |
+| Euclidean inball / short relation | THM-4009 | Intersect norm `<=195` with rank-eleven stars; owner/phase/arrival are lost. |
+| Euclidean grid coboundary | THM-3710/778 | Word plus basepoint recovers one fibre; stripping loses chart/lift/owner. |
 | Transverse-information tax | THM-2612/2615/2573 | Retain a pole, endpoint, or normal when a locus erases charge. |
-| Phase reconstruction | THM-3267/3269/3273/3277/3285 | Generator, sampler, backbone and one literal-ancestry horn are proved; endpoint origin/current and global action are absent. Not an LRC reduction. |
+| Phase reconstruction | THM-3267/3269/3273/3277/3285 | Local reconstruction lacks endpoint origin/current and global action; not an LRC reduction. |
 | Integrality/support holes | THM-2200 | Holes can fill under powers while prime dilates die; retain coefficients and sidecars. |
 | Weighted-sector obstruction | THM-2045 factorized `R` family | Does the unique constant-producing sector fail on a broader Lee–Li inner edge? |
 

@@ -22,11 +22,10 @@ Then read the routed frontier, guardrails, and theorem; logs are history.
 ## Seventeen high-signal facts to reuse, not re-derive
 
 1. **LRC(14) is first open.** Direct `<=6`; projected caps `1579/216` leave
-   `372913/109/12`. THM-4174/4175 give `888,030/6,660,225` fixed-pool
-   all-three-/exactly-two-original-anchor bodies; THM-4178/4179 give
-   `1,071,961` exactly-one-original bodies. THM-4182 adds `1,138,494`
-   zero-original four-anchor bodies, for `9,758,710` bodies across the four
-   disjoint declared `q=50` slices. Entry/arbitrary bodies/LRC stay open.
+   `372913/109/12`. THM-4174/4175/4179/4182 transfer disjoint fixed-`q=50`
+   slices with `|A_0 intersection B|=3,2,1,0` and respective counts
+   `888030/6660225/1071961/1138494` (`9758710` total); the last is four-anchor
+   only. Entry/arbitrary bodies/LRC stay open.
 2. **The `q <= 25` period claim is refuted.** THM-762/764 exhibit `26*{1,...,12} union {339}`, whose first good period is `27`.
 3. **Good-period existence is a maximum statement.** The tight resonant AP
    defeats average/count arguments; see MISTAKE-127/129/130.
@@ -48,18 +47,18 @@ Then read the routed frontier, guardrails, and theorem; logs are history.
    rank/phase; THM-3285's FINITE-EXACT `13`-label `R-M-R` horn has two middle
    completions but no outer co-support. Atom, current and LRC remain open.
 10. **Order-eleven asymmetric bank is OPEN.** THM-4144/4162/4163 close
-    nonprimes and THM-4168 closes `12,155` symmetric primes. THM-4169's **CITED** cover counts
-    presentations, not classes; THM-4177/4181 give finite `q<=8`/factor-`<=7`
-    padding/ordinal evidence, not the open sign law.
+    nonprimes and THM-4168 closes `12,155` symmetric primes. THM-4169's
+    **CITED** cover counts presentations, not classes. THM-4177/4181/4184 give
+    finite padding evidence, exact ordinal transfer/parity collapse, and one
+    infinite lollipop family, not the open sign law.
 11. **Support is not multiplicity.** THM-2000/2005/2352/3359/3362/3382
     separate collision, phase and address; THM-3425 needs period plus parity.
     Composite rank seven and FC(3) remain open.
-12. **JC is false from dimension three; JC(2), DC(2) remain open.** THM-1300
-    is exact; THM-2084 closes cells. THM-4130/4138/4141/4143 empty `M=8`;
-    THM-4147/4157 close stated `M=9` chambers; THM-4159/4161/4164/4165 close
-    Y-only for `zeta!=0`. THM-4176/4180 exhaust the repeated-top exact-`M=9`
-    locus (`eta=0` is a filtration exit), and THM-4183 closes the complete
-    P-only `zeta=Delta=0,eta!=0` wall. Other walls/cells and entry survive.
+12. **JC is false from dimension three; JC(2), DC(2) remain open.** THM-2084
+    closes cells; THM-4130--4143 empty `M=8`, and THM-4147--4165 close named
+    `M=9` chambers. THM-4176/4180 exhaust repeated-top exact `M=9` (`eta=0`
+    exits the filtration); THM-4183 closes P-only `zeta=Delta=0,eta!=0`.
+    Other walls/cells and entry survive.
 13. **Complete period-14 coordinates can be globally blind.** THM-2058 keeps
     every fixed-depth packet coordinate but exits at `47/113`; THM-2043/2047/
     2050 separate local completeness from global maxima.
