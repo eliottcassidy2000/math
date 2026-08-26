@@ -8,8 +8,11 @@ status: >
   genus-seven positive-genus component and response degrees 42/34. Outside
   a countable proper primitive-Prym hidden-j=0 Hom locus, the specialized
   degree is divisible by four, so no nonautomorphic planar Keller pair exists
-  there. The hidden Hom locus is nonempty at W=0. Its classification,
-  exclusion on it, the whole M=12 gate, seam entry, JC(2), and DC(2) are OPEN.
+  there. The hidden Hom locus is nonempty at W=0, where an explicit rank-two
+  Eisenstein sublattice has Gram determinant 24; degree 34 is absent and all
+  192 degree-42 vectors fail attachment collapse inside this sublattice.
+  Its saturation in the full hidden Hom lattice, exclusion on the locus, the
+  whole M=12 gate, seam entry, JC(2), and DC(2) are OPEN.
 source: codex-jc-lrc-niche-crossfeed-20260826
 depends_on:
   - THM-3992-reduced-two-three-cusp-jet-repair-and-first-node-residual
@@ -48,6 +51,18 @@ visible_saturation_script: 04-computation/jc23_exact_weight12_visible_e0_saturat
 visible_saturation_output: 05-knowledge/results/jc23_exact_weight12_visible_e0_saturation_thm4230.out
 visible_saturation_script_sha256: bc205c520a8830f1a77e14d2fc6fee8c716f15d8ad2878690f43e7eb7320b507
 visible_saturation_output_sha256: 39c88771b90bf22a094af3eaaf611e9c5ca0d0369864a42b5a78bc341c33c073
+explicit_w0_map_script: 04-computation/jc23_weight12_w0_hidden_e0_explicit_map_thm4230.py
+explicit_w0_map_output: 05-knowledge/results/jc23_weight12_w0_hidden_e0_explicit_map_thm4230.out
+explicit_w0_map_independent_audit_script: 04-computation/jc23_weight12_w0_hidden_e0_explicit_map_thm4230_independent_audit.py
+explicit_w0_map_independent_audit_output: 05-knowledge/results/jc23_weight12_w0_hidden_e0_explicit_map_thm4230_independent_audit.out
+explicit_w0_map_script_sha256: dd8556b045ac3e9f2ad240c2a9e0bc3ad193105d559b0f922a0f3ec5283ed32d
+explicit_w0_map_output_sha256: 05cda15ec6e7b9c384899f649d7d2444ccd9b192040b34b3212191582c849e23
+explicit_w0_map_independent_audit_script_sha256: e648e25d9cc8860fcab911dded2eb12d8eca8b19de7ff4d133f36a9f1193ae3a
+explicit_w0_map_independent_audit_output_sha256: 3853c7cd9971065c13e981324793f72fa70c677440e6f13c621fc577059cdc2c
+explicit_w0_lattice_script: 04-computation/jc23_thm4230_w0_hidden_e0_degree42_lattice.py
+explicit_w0_lattice_output: 05-knowledge/results/jc23_thm4230_w0_hidden_e0_degree42_lattice.out
+explicit_w0_lattice_script_sha256: 6c249f8403c1fc41c9010c55747d1d703688022283f9cac9ddb730025aef6ef7
+explicit_w0_lattice_output_sha256: 5e57d1301cc94015bd8c088617b5b896165145c025d09768c2a74995afecc02b
 hash_basis: raw LF bytes
 audit: >
   PASS. The primary SymPy certificate executes 16,548 exact checks over all
@@ -56,8 +71,13 @@ audit: >
   including the fixed residual point omitted by the primary support helper,
   hull, genera, character packet, response degrees, carrier wall, and both
   hostiles. A separate four-element F_4 certificate proves integral saturation
-  of the visible j=0 Hom lattice. Normal, optimized, and fixed-hash-seed runs
-  byte-match the frozen outputs.
+  of the visible j=0 Hom lattice. Two further exact paths verify the explicit
+  W=0 degree-six hidden-E_0 map: SymPy factorization and a standard-library
+  quotient-ring reconstruction. A further exact certificate computes its
+  rank-two Eisenstein Gram, exhausts the 192 degree-42 vectors, checks 16
+  attachment-orbit representatives in four good finite-field embeddings,
+  and proves the rank-one norm-seven obstruction by a nonzero resultant.
+  Normal, optimized, and fixed-hash-seed runs byte-match the frozen outputs.
 ---
 
 # THM-4230 -- exact-weight-twelve cyclotomic Prym squeeze
@@ -396,6 +416,218 @@ A_12(W=0) ~ E_0^2 x E_1728^2.                          (34)
 Thus `0 in H_0`. Equations `(29)--(34)` prove that the named locus is
 countable, proper, and nonempty; they do not classify it.
 
+### 6.1. An explicit hidden degree-six quotient at `W=0`
+
+The abstract imprimitive-CM witness in `(34)` can be made explicit. Scale the
+`W=0` positive-genus component to
+
+```text
+C_0: x^6+y^4=1,
+x=U^(1/6)P,                  y=Z^(1/4)SP.              (34a)
+```
+
+Put
+
+```text
+t=(1+y^2)/x^3,
+x^3=2t/(t^2+1),             y^2=(t^2-1)/(t^2+1).      (34b)
+```
+
+Let `a` be any root of
+
+```text
+a^4-2a^3-2a+1=0,                                      (34c)
+```
+
+and choose `s` with
+
+```text
+s^6=4/(2a^3+3a^2-1).                                  (34d)
+```
+
+The denominator in `(34d)` is nonzero: its resultant with `(34c)` is
+`-108`. Define
+
+```text
+f_a:C_0->E_0,
+X=(s^2/2)x(t^2-a^2)/t,
+Y=(s^3/2)y(t^2+a^3)/t.                                (34e)
+```
+
+Writing `m=t^2`, the load-bearing identity is
+
+```text
+(m-1)(m+a^3)^2-(m-a^2)^3
+ =(2a^3+3a^2-1)m(m+1),                                (34f)
+```
+
+because the difference between the two sides factors as
+
+```text
+m(a+1)^2(a^4-2a^3-2a+1).                              (34g)
+```
+
+Substitution of `(34b)` and `(34d)` into `(34e)` now gives exactly
+`Y^2-X^3=1`.
+
+This map has degree six. Over `t=0` there are two points, each with
+`ord(t)=3`, `ord(x)=1`, and an order-two pole of `X`; the same holds over
+infinity. Over each of `t=i,-i` there is one point with `ord(t-i)=6`,
+`ord(x)=-2`, again giving an order-two pole of `X`. There are no others.
+The resultant of `(34c)` with `a^2+1` is `4`, so no listed pole cancels.
+Thus the pole divisor of `X` has degree
+
+```text
+2*2+2*2+1*2+1*2=12=2 deg(f_a),
+deg(f_a)=6.                                             (34h)
+```
+
+Let
+
+```text
+iota:(x,y)->(x,-y)=tau^6,       sigma:(x,y)->(xi_3x,y).
+```
+
+Then
+
+```text
+f_a o iota=[-1] o f_a,          f_a o sigma=[xi_3] o f_a. (34i)
+```
+
+The first identity places `f_a` in the Prym. The `E_1728` factor in `(28)`
+is Hom-orthogonal to `E_0`, so `f_a` is an explicit hidden quotient of
+`A_12`, rather than one of the visible maps through `B`.
+
+The same formula also reaches the actual attachment sidecar. On the twelve
+contacts `P=S^2`,
+
+```text
+c=y^2/x^3=sqrt(Z/U),
+c=(t-t^-1)/2.                                          (34j)
+```
+
+Thus they split into the two six-point fibres at `t` and `-1/t`, exchanged
+by `tau`; within either fibre, `sigma` and `iota` generate the three CM
+rotates and their negatives. If `f_a` took one common value on a six-point
+fibre, that value would lie in both `E_0[3]` and `E_0[2]`, hence would be the
+origin. But `(34e)` is affine there: `t=0,infinity` would force a vanished
+gate endpoint, while `t=+-i` is exactly `U+Z=0`, excluded by `(3)`. Therefore
+
+```text
+f_a alone does not collapse the twelve attachments.                   (34k)
+```
+
+For `alpha in O=Z[xi_3]`, postcomposition has
+
+```text
+deg(alpha f_a)=6N(alpha).                               (34l)
+```
+
+Consequently this explicit rank-one line contains no degree-34 map. It does
+contain degree-42 candidates arithmetically because `N(3+xi_3)=7`. Those
+candidates can also be excluded from attachment collapse, and the second
+explicit hidden direction can be retained.
+
+Let `omega=xi_3`, let `T` act on maps by precomposition with `tau`, and choose
+one root `a` in either reciprocal pair of `(34c)`. After harmless `O`-unit
+choices, put
+
+```text
+f=f_a,                         g=Tf,
+T^2=-omega.                                             (34m)
+```
+
+The four roots of `(34c)` give, up to `O`-units,
+
+```text
+f,             g,             f+g,             g-omega f. (34n)
+```
+
+An exact elliptic addition calculation finds
+
+```text
+deg(f)=6,             deg(f+g)=6,             deg(f-g)=18.
+```
+
+The cancellation in `f+g` is load-bearing: after imposing
+`a^2-(1+sqrt(3))a+1=0` and `xi_12^4-xi_12^2+1=0`, the determinant of the two
+linear `t^2` coefficients in the addition slope is exactly zero; for `f-g`
+it is nonzero and creates twelve additional double `X`-poles. Hence the
+`O`-lattice
+
+```text
+L_exp=O f direct-sum O g                              (34o)
+```
+
+has Hermitian degree Gram matrix, with the form linear in its first slot,
+
+```text
+             [ 6,       -4-2omega   ]
+H_exp=       [ -4-2omega^2,    6   ],
+det(H_exp)=24.                                         (34p)
+```
+
+In particular, every degree in `L_exp` is divisible by six, so degree `34`
+does not occur. The positive-eigenvalue bound for `(34p)` reduces degree
+`42` to Eisenstein coefficients in `[-6,6]^4`. Exact enumeration gives
+
+```text
+192 degree-42 vectors,
+16 orbits under scalar mu_6 and T,
+determinant norms 13,49,61,73, each with multiplicity 48. (34q)
+```
+
+For a representative `h=af+bg`, attachment collapse is equivalent to
+`h(A)=Th(A)=O`. If `d_h(t)` is the reduced `X`-denominator, this would force
+a common root of
+
+```text
+d_h(t)             and             t^deg(d_h)d_h(-1/t). (34r)
+```
+
+All sixteen representatives have `deg d_h=13`. In each of four exact good
+reductions
+
+```text
+(q,xi_12,a,s)=(313,29,135,21), (349,24,246,28),
+               (373,69,297,33), (397,157,161,27),     (34s)
+```
+
+the gcd in `(34r)` has degree zero. The embeddings satisfy the cyclotomic,
+quadratic-root, and sixth-root equations with nonzero derivatives, and the
+denominator degree is preserved. Thus a characteristic-zero common factor,
+whose resultant would reduce to zero in every good embedding, is impossible.
+This is a finite-exact exclusion of attachment collapse for every degree-42
+vector in `L_exp`.
+
+On the rank-one line there is also a symbolic control. The two norm-seven
+CM kernels have `X`-coordinates satisfying
+
+```text
+7X^6-4X^3+16=0.                                      (34t)
+```
+
+Writing `r=X^3` and `m=t^2`, the two attachment fibres would require
+
+```text
+(m-a^2)^3-r(2a^3+3a^2-1)m(m+1)=0,
+-(a^2m-1)^3-r(2a^3+3a^2-1)m(m+1)=0.                  (34u)
+```
+
+Successively eliminating `m`, the quartic root `a`, and
+`7r^2-4r+16` gives the nonzero total resultant
+
+```text
+2^72 * 3^54.                                          (34v)
+```
+
+Thus degree `42` cannot collapse the attachments even on any single
+`O f_a` line. Equations `(34p)--(34v)` exclude degrees `34` and `42` only in
+the explicit rank-two sublattice `L_exp`. They do **not** prove that
+`L_exp=Hom(A_12,E_0)`, nor do they settle the integral gluing with the visible
+lattice. Saturation of the hidden lattice and the full attachment degree form
+are the precise surviving `W=0` problems.
+
 ## 7. Relative exclusion and hostiles
 
 Take `kappa notin H_0`. Equations `(28)`, the `j=1728` mismatch, and the
@@ -442,6 +674,9 @@ Replay with
 python3 -B 04-computation/jc23_exact_weight12_cyclotomic_prym_squeeze_thm4230.py
 python3 -B 04-computation/jc23_exact_weight12_cyclotomic_prym_squeeze_thm4230_independent_audit.py
 python3 -B 04-computation/jc23_exact_weight12_visible_e0_saturation_thm4230.py
+python3 -B 04-computation/jc23_weight12_w0_hidden_e0_explicit_map_thm4230.py
+python3 -B 04-computation/jc23_weight12_w0_hidden_e0_explicit_map_thm4230_independent_audit.py
+python3 -B 04-computation/jc23_thm4230_w0_hidden_e0_degree42_lattice.py
 ```
 
 The primary certificate covers every variable support row, lower-row subset
@@ -451,7 +686,13 @@ the fixed-residual limitation recorded in Section 2. The independent
 standard-library audit reconstructs the full support, geometry, carrier wall,
 responses, characters, `W=0`, `W=-2Z`, and the `F_4` residue result without
 importing the primary implementation. The dedicated saturation certificate
-exhausts all sixteen coefficient pairs on all four elements of `F_4`.
+exhausts all sixteen coefficient pairs on all four elements of `F_4`. The two
+explicit-map paths respectively use exact SymPy elimination and a hand-written
+quotient ring. The hidden-lattice certificate checks the characteristic-zero
+addition/Gram identities, the complete bounded degree-42 census, four good
+finite-field attachment resultants, and the independent symbolic norm-seven
+resultant. Its finite-field statement is **FINITE-EXACT**; the map and
+rank-one identities are exact algebra.
 
 The computations do not prove the stated standard CM/Prym/Torelli inputs,
 classify `H_0`, handle walls, prove entry, or prove `JC(2)`. These are explicit

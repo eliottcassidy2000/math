@@ -1,0 +1,14 @@
+THM-4230 explicit W=0 hidden-E0 map certificate
+normalized_curve=x^6+y^4=1 t=(1+y^2)/x^3
+quartic=p^4-2p^3-2p+1 scale=s^6=4/(2p^3+3p^2-1)
+identity_factor=u*(p+1)^2*(p^4-2p^3-2p+1)
+map_X=(s^2/2)*x*(t^2-p^2)/t
+map_Y=(s^3/2)*y*(t^2+p^3)/t
+map_equation=PASS Y^2-X^3=1
+resultants=scale:-108,p2_plus_1:4,p:1
+pole_ledger=t0:2x2,tinf:2x2,ti:1x2,tminus_i:1x2 total_X=12
+map_degree=6 anti_tau6=Prym hidden_E0=PASS
+attachment_c=(t-t^-1)/2 tau_action=t->-1/t
+six_orbit_actions=(zeta3,-1) common_value_forces_O=PASS
+rank_one_degrees=6*N(alpha) degree34=impossible degree42_norm7=possible
+result=PASS explicit hidden map; full hidden lattice and norm7 torsion remain OPEN

@@ -1,0 +1,17 @@
+THM-4230 W=0 hidden-E0 degree-42 lattice certificate
+scope=explicit_L=O*f+O*Tf; full_hidden_Hom_saturation=OPEN
+tau=t->-1/t T^2=-omega
+addition=deg_f:6,deg_f_plus_Tf:6,deg_f_minus_Tf:18
+hermitian_gram=[[6,-4-2omega],[-4-2omega^2,6]] det=24
+four_maps=f,Tf,f+Tf,T(f+Tf)=Tf-omega*f (up to O-units)
+degree42_vectors=192 unit_tau_orbits=16 determinant_norms={13: 48, 49: 48, 61: 48, 73: 48}
+degree34_vectors=0 reason=all_L_degrees_divisible_by_6
+finite_field=q:313,z:29,p:135,s:21 reps:16 denominator_degrees:13 reciprocal_gcd_degrees:0 denominator_sha256:030b2914934a99696461406d869f59aad735e2f6256a082dd76c7b54591b84c5
+finite_field=q:349,z:24,p:246,s:28 reps:16 denominator_degrees:13 reciprocal_gcd_degrees:0 denominator_sha256:8f085c395d9f3d9ba4028f11773c6bcc172aa309c8d6f598bfcb01780dc11d94
+finite_field=q:373,z:69,p:297,s:33 reps:16 denominator_degrees:13 reciprocal_gcd_degrees:0 denominator_sha256:7ede4e76aa3638407f7b945d48ed849dab5b9a21eb18b108b94d93b59d1fcf26
+finite_field=q:397,z:157,p:161,s:27 reps:16 denominator_degrees:13 reciprocal_gcd_degrees:0 denominator_sha256:b6dddd0e2d690b92993e2b4a0e86831de2629901b0d014c47726d7287eb147a1
+rank_one_norm7_kernel=7*X^6-4*X^3+16 p_norm_resultant=-20639121408*(r+1)^4*(11*r^2-32*r-16)^4
+rank_one_total_resultant=274604369010841150447552802899013412117622554624 factorization=2^72*3^54 nonzero=PASS
+attachment_degree42_in_explicit_L=EXCLUDED_FINITE_EXACT
+rank_one_degree42_attachment_collapse=EXCLUDED_SYMBOLIC
+result=PASS explicit lattice; full hidden-Hom integral saturation remains OPEN

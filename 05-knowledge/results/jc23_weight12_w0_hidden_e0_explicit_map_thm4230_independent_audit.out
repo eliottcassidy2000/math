@@ -1,0 +1,9 @@
+THM-4230 independent quotient-ring hidden-E0 audit
+ring=Q[p]/(p^4-2p^3-2p+1) implementation=standard_library
+bivariate_identity_coefficients=0,0,0,0 quotient_remainder=PASS
+bezout_units=scale_denominator,p2_plus_1 PASS
+normalization=x3=2t/(t2+1),y2=(t2-1)/(t2+1)
+pole_ledger=2x2+2x2+1x2+1x2=12 map_degree=6
+attachment_orbit=fixed_by_zeta3_and_negation_implies_O
+eisenstein_norm_3_plus_zeta3=7 rank_one_degree42_control=PASS
+result=PASS independent algebra; saturation/full attachment lattice OPEN
