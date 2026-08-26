@@ -1,0 +1,10 @@
+LRC14_ANCHORED_DELETION_COVER_THM4160_ANCHOR_AUDIT_20260826
+universe=1<=a<b<c<=143;checked=477191;constraints=gcd1_and_each_d_2_through_14_divides_an_anchor
+covers=((70, 72, 143), (72, 140, 143), (120, 126, 143));all_maxima_143=True
+divisor_ownership={2: (120, 126), 3: (120, 126), 4: (120,), 5: (120,), 6: (120, 126), 7: (126,), 8: (120,), 9: (126,), 10: (120,), 11: (143,), 12: (120,), 13: (143,), 14: (126,)};current_anchor_inclusion_minimal=True
+fixed_optional_pool_geometry=(triple,pool_size,components,mass,margin)
+  ((70, 72, 143), 30, 102, Fraction(3242643641, 80005085160), Fraction(-5511132917, 240015255480))
+  ((72, 140, 143), 30, 106, Fraction(90567155849, 2280144927060), Fraction(-54203950631, 2280144927060))
+  ((120, 126, 143), 30, 150, Fraction(298133356159, 4560289854120), Fraction(8591143199, 4560289854120))
+haar_threshold_pattern=(False,False,True);current_anchors_unique_in_complete_height143_cover_universe=True
+semantic_sha256=78c304f62c71a4c08881081a4b94270dd4b53df495bd29fbf9f72f2eb1b995d3
