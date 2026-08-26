@@ -24,6 +24,11 @@ EXPECTED_FINITE_COUNTS = {
 DELTA = Fraction(1, 14)
 
 
+def require(condition: bool, label: object) -> None:
+    if not condition:
+        raise RuntimeError(f"FAIL: {label}")
+
+
 def gap(speed: int, phase: Fraction) -> Fraction:
     value = speed * phase
     residue = value - value.numerator // value.denominator
@@ -45,7 +50,7 @@ def blocks(first: int) -> tuple[tuple[int, int], ...]:
     for tooth in range(3):
         lower = first * (14 * tooth + 1)
         upper = ((12 * first + 1) * (14 * tooth + 13)) // 16
-        assert lower <= upper
+        require(lower <= upper, ("nonempty band", first, tooth))
         answer.append((lower, upper))
     return tuple(answer)
 
@@ -91,7 +96,7 @@ def tails_have_safe_lift(
     left, right = carrier(first)
     if right_override is not None:
         right = right_override
-    assert left <= right
+    require(left <= right, ("carrier order", first, right_override))
     walls = {left, right}
     for speed in (tail_a, tail_b):
         for integer in range(-2, speed + 3):
@@ -141,7 +146,7 @@ def eleven_body_count(bound: int) -> int:
 def linear_power_integral(
     constant: Fraction, slope: Fraction, left: Fraction, right: Fraction
 ) -> Fraction:
-    assert slope != 0
+    require(slope != 0, ("nonzero integration slope", left, right))
     return (
         (constant + slope * right) ** 11
         - (constant + slope * left) ** 11
@@ -176,25 +181,30 @@ def main() -> None:
     # The common carrier has the exact anchored width inherited from THM-4151.
     for first in range(2, 1001):
         left, right = carrier(first)
-        assert left < right
-        assert right - left == Fraction(
-            4 * first - 1, 14 * first * (12 * first + 1)
+        require(left < right, ("positive carrier width", first))
+        require(
+            right - left
+            == Fraction(4 * first - 1, 14 * first * (12 * first + 1)),
+            ("carrier width identity", first),
         )
 
     # Endpoint inequalities yield precisely three bands for every m>=2.
     # A fourth band is possible only at m=1; all later bands are empty.
-    assert ((12 * 1 + 1) * 55) // 16 == 44
-    assert 43 <= 44
+    require(((12 * 1 + 1) * 55) // 16 == 44, "m=1 fourth-band endpoint")
+    require(43 <= 44, "m=1 fourth band is nonempty")
     for first in range(2, 1001):
-        assert direct_pool(first) == pool(first)
+        require(direct_pool(first) == pool(first), ("direct pool", first))
         for speed in pool(first):
-            assert interval_safe_for_speed(first, speed)
+            require(
+                interval_safe_for_speed(first, speed),
+                ("formula band safety", first, speed),
+            )
         fourth_lower = 43 * first
         fourth_upper = ((12 * first + 1) * 55) // 16
-        assert fourth_lower > fourth_upper
+        require(fourth_lower > fourth_upper, ("empty fourth band", first))
         fifth_lower = 57 * first
         fifth_upper = ((12 * first + 1) * 69) // 16
-        assert fifth_lower > fifth_upper
+        require(fifth_lower > fifth_upper, ("empty fifth band", first))
 
     # Odd-wall parity: small tails clear at the anchored endpoint; large tails
     # either miss the bad carrier or have no more than G_m room to its right.
@@ -205,34 +215,58 @@ def main() -> None:
         upper_lift = (1 + left) / 2
         for speed in range(1, 12 * first + 1, 2):
             value = gap(speed, upper_lift)
-            assert value > DELTA
+            require(value > DELTA, ("small-tail endpoint", first, speed))
             endpoint_floor = min(endpoint_floor, value)
 
         first_large = 12 * first + 1
         exact_tooth = containing_bad_tooth(first_large, left)
-        assert exact_tooth == (
-            Fraction(6, 7 * first_large),
-            Fraction(8, 7 * first_large),
+        require(
+            exact_tooth
+            == (
+                Fraction(6, 7 * first_large),
+                Fraction(8, 7 * first_large),
+            ),
+            ("sharp containing tooth", first),
         )
         tooth_left, tooth_right = exact_tooth
-        assert left - tooth_left == Fraction(1, 14 * first * first_large)
-        assert tooth_right - left == carrier_width(first)
-        assert right == tooth_right
+        require(
+            left - tooth_left == Fraction(1, 14 * first * first_large),
+            ("sharp left slack", first),
+        )
+        require(
+            tooth_right - left == carrier_width(first),
+            ("sharp right room", first),
+        )
+        require(right == tooth_right, ("sharp right endpoint", first))
 
         shortened_right = (left + right) / 2
-        assert not tails_have_safe_lift(first, 1, first_large, shortened_right)
-        assert tails_have_safe_lift(first, 1, first_large)
+        require(
+            not tails_have_safe_lift(first, 1, first_large, shortened_right),
+            ("shortened-carrier hostile", first),
+        )
+        require(
+            tails_have_safe_lift(first, 1, first_large),
+            ("closed-endpoint rescue", first),
+        )
 
         for speed in range(first_large, 60 * first + 2, 2):
             tooth = containing_bad_tooth(speed, left)
             if tooth is None:
                 continue
             tooth_left, tooth_right = tooth
-            assert left - tooth_left >= Fraction(1, 14 * first * speed)
-            assert tooth_right - left <= Fraction(
-                4 * first - 1, 14 * first * speed
+            require(
+                left - tooth_left >= Fraction(1, 14 * first * speed),
+                ("odd-wall left slack", first, speed),
             )
-            assert tooth_right - left <= carrier_width(first)
+            require(
+                tooth_right - left
+                <= Fraction(4 * first - 1, 14 * first * speed),
+                ("odd-wall right room", first, speed),
+            )
+            require(
+                tooth_right - left <= carrier_width(first),
+                ("carrier-width closure", first, speed),
+            )
             large_tooth_checks += 1
 
     # Direct strict-wall replay over all small tail pairs, without using the
@@ -242,18 +276,21 @@ def main() -> None:
         odd_tails = range(1, 76, 2)
         for tail_b in odd_tails:
             for tail_a in range(1, tail_b, 2):
-                assert tails_have_safe_lift(first, tail_a, tail_b)
+                require(
+                    tails_have_safe_lift(first, tail_a, tail_b),
+                    ("direct tail row", first, tail_a, tail_b),
+                )
                 direct_tail_rows += 1
-    assert direct_tail_rows == 6_327
+    require(direct_tail_rows == 6_327, "direct tail row count")
 
     # The divisor-complete m=7 family lies outside both named first-window
     # gates and kills the old x=1/12 fixed clock.
     pool_seven = pool(7)
-    assert blocks(7) == ((7, 69), (105, 143), (203, 217))
-    assert len(pool_seven) == 117
+    require(blocks(7) == ((7, 69), (105, 143), (203, 217)), "m=7 bands")
+    require(len(pool_seven) == 117, "m=7 pool size")
     anchors = (7, 120, 126, 143)
-    assert set(anchors).issubset(pool_seven)
-    assert gcd(gcd(gcd(*anchors[:2]), anchors[2]), anchors[3]) == 1
+    require(set(anchors).issubset(pool_seven), "m=7 anchors in pool")
+    require(gcd(gcd(gcd(*anchors[:2]), anchors[2]), anchors[3]) == 1, "anchor gcd")
     owner = {
         2: 120,
         3: 120,
@@ -269,29 +306,29 @@ def main() -> None:
         13: 143,
         14: 126,
     }
-    assert all(owner[modulus] in anchors for modulus in range(2, 15))
-    assert all(owner[modulus] % modulus == 0 for modulus in range(2, 15))
+    require(all(owner[modulus] in anchors for modulus in range(2, 15)), "owner labels")
+    require(all(owner[modulus] % modulus == 0 for modulus in range(2, 15)), "divisor owners")
     divisor_family_count = comb(len(pool_seven) - len(anchors), 7)
-    assert divisor_family_count == 38_620_298_376
-    assert 16 * 143 > 156 * 7 + 13
-    assert 27 * (13 * 7 - 143) - 4 * 7 * 143 < 0
-    assert gap(2 * 120, Fraction(1, 12)) == 0
+    require(divisor_family_count == 38_620_298_376, "m=7 family count")
+    require(16 * 143 > 156 * 7 + 13, "outside THM-4151 gate")
+    require(27 * (13 * 7 - 143) - 4 * 7 * 143 < 0, "outside THM-4148 gate")
+    require(gap(2 * 120, Fraction(1, 12)) == 0, "fixed-clock hostile")
 
     # Exact finite counts and the six-piece Riemann density constant.
     finite_counts = {
         bound: eleven_body_count(bound)
         for bound in (20, 40, 80, 120, 160, 200)
     }
-    assert finite_counts == EXPECTED_FINITE_COUNTS
+    require(finite_counts == EXPECTED_FINITE_COUNTS, "finite family counts")
     density = density_constant()
     expected_density = Fraction(
         848953086913769850118498851618778832628468542103282298683365532079,
         2481088067163593416217816176836483026480276818419826456353950662656,
     )
-    assert density == expected_density
+    require(density == expected_density, "density constant")
     old_density = Fraction(35, 39) ** 10
     density_gain = density - old_density
-    assert density_gain > 0
+    require(density_gain > 0, "strict density gain")
 
     ledger = (
         "carrier=[1/(14m),8/(7(12m+1))];width=(4m-1)/(14m(12m+1));"
@@ -310,9 +347,9 @@ def main() -> None:
     semantic = hashlib.sha256(ledger.encode()).hexdigest()
     semantic_fnv = fnv64(ledger.encode())
     if EXPECTED_SEMANTIC_SHA256:
-        assert semantic == EXPECTED_SEMANTIC_SHA256
+        require(semantic == EXPECTED_SEMANTIC_SHA256, "semantic SHA-256")
     if EXPECTED_SEMANTIC_FNV64:
-        assert semantic_fnv == EXPECTED_SEMANTIC_FNV64
+        require(semantic_fnv == EXPECTED_SEMANTIC_FNV64, "semantic FNV-64")
 
     print("THM4158_THREE_BAND_WRAPPED_CARRIER_ODD_TAIL_TRANSFER_20260825")
     print("status=PASS;scope=exact rational and finite combinatorial controls")
