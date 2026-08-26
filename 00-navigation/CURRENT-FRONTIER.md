@@ -71,15 +71,13 @@ is the safe control `M(S_13)=99/338`. No cited result proves LRC(14).
   THM-4105/4106 are reciprocal decoders; THM-4107/4108 are tournament/radical
   firewalls. THM-4110 finds `64` AP13 sheets; THM-4116 gives
   `2^(c(F)-1)`. Safety/arrival stay open.
-- **Owner/tail lane (PROVED):** THM-4025/4031, 4029/4038, and 4033/4042
-  give tails, the 60-phase law, and clocks; THM-4129/4136 close fixed `U/2U`.
+- **Owner/tail lane (PROVED):** THM-4025--4042 give 60-phase clocks;
   [THM-4191](../01-canon/theorems/THM-4191-complete-full-pool-newcomer-haar-transfer.md)
-  transfers all `C(30,10)=30,045,015` fixed-pool ten-bodies per newcomer:
-  q50 depth seven off THM-4188's 23 resonances, native depth six on them.
-  [THM-4201](../01-canon/theorems/THM-4201-exactly-one-newcomer-projected-repair-depth-stratification.md)
-  classifies 65 projected depth-five rows and four depth-six rows.
-  Entry/two-newcomer scope and LRC(14) stay open.
-  [Proof map](LRC14-PROOF-MAP.md).
+  transfers all `C(30,10)=30,045,015` pool bodies per newcomer; THM-4201
+  profiles the 65/4 depth-five/six rows. A
+  [FINITE-EXACT scout](../05-knowledge/results/lrc14-post-full-pool-two-newcomer-frontier-20260826.md)
+  has base `tau=11` and `{49,50}`/`{6,50}` pair controls. Entry, comparable
+  pairs, and LRC(14) stay open. [Proof map](LRC14-PROOF-MAP.md).
 - **PROVED:** [THM-2928](../01-canon/theorems/THM-2928-critical-seven-comb-grid-tensorization-and-drift-tariff.md)/2941: literal zero/one/two/three-drift sectors are empty; `k=2,3` are finite.
 - **Orthogonal routes.** THM-1017 is HYP-6820; THM-2047/2050 keep phase/exit; THM-731/2048 prune; THM-1290 ends at `55`; HYP-8900 nonuniform.
 - **PROVED micro-staircase:** THM-3316 closes every prime and THM-3317 proves

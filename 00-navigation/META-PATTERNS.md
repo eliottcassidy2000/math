@@ -125,6 +125,12 @@ MISTAKE-310/401/466. Quantifier order is a sidecar: fixed-fibre richness need
 not survive optimization, witness selection, or sort projection; see
 THM-4090/4094/4095.
 
+## Certify before projection
+
+**Trigger/action:** build lawful ambient edge/primitive face first.
+**Counterindication/sidecar:** verify hypotheses; retain labels/field and
+multiplicity. **Evidence:** THM-4191/4192 ambient/toric repairs.
+
 ## Quotient by the actual repair, then test the native survivor
 
 **Trigger/action:** derive the actual repair image/orbits, quotient in the

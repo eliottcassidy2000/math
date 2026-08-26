@@ -88,6 +88,8 @@ Every technique below is a possible tooth in that zipper.
   incidence sidecar and classifies the exactly-one certificate depth: 65 of
   69 resonance-anchor rows close at E5; the four A3 exceptions have
   `2/1/3/4` seven-covers and close at E6 with `tau=10/9/10/10`.
+  The post-full-pool pair scout keeps the same hypergraph object; it does not
+  turn its higher-order incidence into a tournament.
 - **Preserves:** body safety, literal root `t`, integer fibre multiplicity,
   compact/open endpoint status, and the cubic mixed danger response.
 - **Forgets / guardrail:** an ordinary tournament, complete pairwise Gram

@@ -2,17 +2,17 @@
 id: THM-4190
 title: "Every-newcomer exactly-one-original direct-body completion"
 status: >
-  PROVED RELATIVE TO THM-4150/4174/4175/4178/4179/4188/4191 + VERIFIED-EXACT PRIMARY
+  PROVED RELATIVE TO THM-4150/4174/4175/4178/4179/4188 + VERIFIED-EXACT PRIMARY
   POOL-WALL FAILURE-SUBSET ZETA AND INDEPENDENT JOINT-WALL SAFE-SUPERSET
   ZETA AUDITS; LRC(14) OPEN. For every positive newcomer q outside the fixed
   thirty-label pool, all 1,071,961 bodies in THM-4179's exactly-one-original
   slice have complete safe-set Haar mass at least 4/63. THM-4188 transports
   the correctly matched q=50 E6/E7 anchor layers outside its 23 resonances;
   direct maximal-deletion coordinates close all 33,168,300 anchor-labelled
-  resonance presentations, strictly and without equality. Its body-safety
-  consequence is now subsumed by THM-4191's full-pool theorem; the dual-zeta
-  proof and exactly-one structural slice remain independent. This is not
-  LRC(14).
+  resonance presentations, strictly and without equality. THM-4191 now
+  subsumes the body-safety consequence by closing every fixed-pool ten-body;
+  this theorem retains an independent exactly-one deformation mechanism and
+  its exact minima, not an additive family count and not LRC(14).
 source: lrc-one-original-deformation-20260826
 depends_on:
   - THM-4150-safe-set-haar-measure-universal-odd-tail-lrc14-transfer
@@ -21,9 +21,9 @@ depends_on:
   - THM-4178-q50-divisor-complete-anchor-triple-exchange
   - THM-4179-q50-seventh-deletion-primitive-anchor-completion
   - THM-4188-all-newcomer-zero-original-anchor-hierarchy-and-resonance-filtration
-  - THM-4191-complete-full-pool-newcomer-haar-transfer
 related:
   - THM-4185-q50-complete-zero-original-minimal-anchor-hierarchy
+  - THM-4191-complete-full-pool-newcomer-haar-transfer
 script: 04-computation/lrc14_all_newcomer_one_original_direct_body_completion_thm4190.cpp
 output: 05-knowledge/results/lrc14_all_newcomer_one_original_direct_body_completion_thm4190.out
 independent_audit_script: 04-computation/lrc14_all_newcomer_one_original_joint_wall_audit_thm4190.cpp
@@ -50,7 +50,7 @@ independent_audit: >
 
 # THM-4190 -- every-newcomer exactly-one-original direct-body completion
 
-**PROVED RELATIVE TO THM-4150/4174/4175/4178/4179/4188/4191 + VERIFIED-EXACT +
+**PROVED RELATIVE TO THM-4150/4174/4175/4178/4179/4188 + VERIFIED-EXACT +
 INDEPENDENTLY AUDITED; LRC(14) REMAINS OPEN.**
 
 ## 1. Exact theorem and body universe
@@ -259,7 +259,7 @@ This is a strict positive control, not a claimed equality or a global sharp
 constant. Equations `(21)--(25)` prove `(5)` for every `q in Q_7`. Together
 with Section 2 they prove `(5)` for every `q notin P`.
 
-## 4. Odd-tail transfer and superseded slice synthesis
+## 4. Odd-tail transfer and relation to the complete full-pool theorem
 
 Every `B in H_1` contains one of the primitive divisor-complete anchors in
 `(7)`. More importantly, THM-4150 applies to every nonempty finite positive
@@ -267,24 +267,20 @@ body once `(5)` is known; primitivity is not an extra transfer hypothesis.
 Haar invariance under multiplication by `c` and THM-4150 prove `(6)`.
 **QED relative to THM-4150.**
 
-At this theorem's original promotion, THM-4174, THM-4175, this theorem, and
-the then-zero-original form of THM-4191 gave four pairwise-disjoint fixed-pool
-slices, distinguished by the number of labels from `A_0`:
+THM-4191 now independently proves the same lower bound for every fixed-pool
+ten-body. In particular,
 
 ```text
-all three originals (THM-4174):          888,030,
-exactly two originals (THM-4175):      6,660,225,
-THM-4179 exactly-one slice (this):      1,071,961,
-zero originals (THM-4191):             8,436,285,
-                                       ----------
-historical subpartition subtotal:      17,056,501.      (29)
+H_1 subset binom(P,10),
+|H_1|=1,071,961 < |binom(P,10)|=30,045,015.             (29)
 ```
 
-THM-4188's `1,491,665` good zero-original bodies remain a distinguished
-primitive divisor-complete subcount. Before this theorem, the exactly-one row
-and hence `(29)` were `q=50`-only. The strengthened THM-4191 now certifies all
-`binom(30,10)=30,045,015` ten-bodies in `P`, so `(29)` is a historical
-subpartition, not the current full-pool count and not an additive contribution.
+Therefore this theorem's `1,071,961` bodies are a non-additive subset of
+THM-4191's complete `30,045,015`-body universe. The body-safety consequence is
+subsumed, but the theorem retains a separate matched-depth anchor filtration,
+`33,168,300` direct resonance presentations, exact row minima, and two dual
+zeta audits. THM-4174/4175 and THM-4188 likewise remain structural sidecars;
+their family counts must not be added to THM-4191's complete universe.
 
 ## 5. Independent audit
 
@@ -340,10 +336,10 @@ decisive test: two dual zeta transforms plus 69 literal minimizer sweeps. (33)
 This theorem completes exactly the body universe `(3)`. It does not certify
 every ten-body containing exactly one member of `A_0`, bodies outside this
 fixed pool, physical entry of a hypothetical counterexample, mixed/even tail
-branches, or necessity of the Haar threshold. The `17,056,501` cores in
-`(29)` form a named historical subpartition now subsumed by THM-4191, not an
-extra family and not all possible thirteen-speed sets. This theorem does not
-prove LRC(14).
+branches, or necessity of the Haar threshold. The `1,071,961` cores in `(29)`
+are a named fixed-pool subfamily of THM-4191's complete universe, not an
+additional family and not all possible thirteen-speed sets. This theorem does
+not prove LRC(14).
 
 ## 7. Exact artifacts and replay
 

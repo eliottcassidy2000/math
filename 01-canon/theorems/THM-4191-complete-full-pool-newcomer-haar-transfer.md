@@ -140,7 +140,10 @@ Both audits enumerate the complete universe
 |binom(P,10)|=binom(30,10)=30,045,015                  (9)
 ```
 
-and find a disjoint E7 edge for every body. Therefore
+and find a disjoint E7 edge for every body. Any transversal with fewer than
+ten vertices extends inside the thirty-vertex ground set `P` to a ten-vertex
+transversal. Thus absence of a ten-vertex transversal also rules out every
+transversal of size at most ten. Therefore
 
 ```text
 tau(E_7(50))>10.                                      (10)
@@ -190,7 +193,9 @@ Every row has zero threshold equalities and
 tau(E_6(q))>10                         for q in Q_7.    (14)
 ```
 
-Thus `(6)` proves `(3)` at every exceptional newcomer. Together with
+Here the same extension-to-ten argument used after `(9)` converts the exact
+ten-body exhaustion into the stated transversal inequality. Thus `(6)` proves
+`(3)` at every exceptional newcomer. Together with
 Section 3, this exhausts every positive `q notin P`.
 
 ## 5. Sharp certificate boundary
