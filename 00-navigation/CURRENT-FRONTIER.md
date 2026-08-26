@@ -71,15 +71,15 @@ is the safe control `M(S_13)=99/338`. No cited result proves LRC(14).
   THM-4105/4106 are reciprocal decoders; THM-4107/4108 are tournament/radical
   firewalls. THM-4110 finds `64` AP13 sheets; THM-4116 gives
   `2^(c(F)-1)`. Safety/arrival stay open.
-- **Owner/tail lane (PROVED):** [THM-4203](../01-canon/theorems/THM-4203-fixed-pool-seventeen-body-depth-eight-haar-completion.md)
-  closes pool `<=17`; [THM-4191](../01-canon/theorems/THM-4191-complete-full-pool-newcomer-haar-transfer.md)
+- **Owner/tail lane (PROVED):** THM-4203 closes pool `<=17`;
+  [THM-4191](../01-canon/theorems/THM-4191-complete-full-pool-newcomer-haar-transfer.md)
   /4201 handle one newcomer.
   [THM-4207](../01-canon/theorems/THM-4207-two-newcomer-sharp-depth-transition-base-surplus-composition-and-variable-pool-chart-number.md)
   closes fixed `(50,51)`; [THM-4211](../01-canon/theorems/THM-4211-fixed-fifty-cofinal-two-newcomer-haar-tail-and-eighteen-label-chart.md)
   gives the fixed-`50` tail, `(49,50)`, and an 18-chart;
   [THM-4214](../01-canon/theorems/THM-4214-two-newcomer-pascal-complete-eleven-body-haar-charts.md)
   gives `C(20,11)=167,960` and `C(32,11)=129,024,480` charts.
-  `5682` is activation-only; arbitrary pairs, entry, and LRC(14) stay open.
+  `5682` is activation-only; arbitrary pairs/entry and LRC(14) stay open.
 - **PROVED:** [THM-2928](../01-canon/theorems/THM-2928-critical-seven-comb-grid-tensorization-and-drift-tariff.md)/2941: literal zero/one/two/three-drift sectors are empty; `k=2,3` are finite.
 - **Orthogonal routes.** THM-1017 is HYP-6820; THM-2047/2050 keep phase/exit; THM-731/2048 prune; THM-1290 ends at `55`; HYP-8900 nonuniform.
 - **PROVED micro-staircase:** THM-3316 closes every prime and THM-3317 proves
