@@ -7,7 +7,9 @@ status: >
   threshold four.  Its
   unique-predecessor output language has a 13-state minimal DFA and an exact
   order-five complementary counting law, so asymptotically almost every
-  cyclic output has one predecessor.  On every ring retaining a two-cell zero
+  cyclic output has one predecessor.  Under uniform finite-ring input, the
+  probability of a multiple-predecessor output is exactly V_N/2^N and the
+  one-step Shannon entropy deficit is Theta((rho/2)^N).  On every ring retaining a two-cell zero
   gap, each isolated physical row from time two onward has one cyclic
   predecessor before a final sparse/dense fork;
   on rings of size four times a dyadic time, the next ancestor count alternates
@@ -261,6 +263,56 @@ So almost every labelled periodic output has exactly one predecessor, with
 an exact exponentially small exceptional proportion.  This does **not** make
 the global ring map bijective: THM-3458's `0^N` and `1^N` fibres remain exact
 zero/multiple-predecessor hostiles.
+
+### 3.1 Exact finite-ring Haar entropy bridge
+
+Let `X_N` be uniform on the `2^N` labelled cyclic input rows and put
+`Y_N=F_N(X_N)`.  For an output word `w`, write
+
+```text
+k_w=|F_N^(-1)(w)|,        n_k=|{w:k_w=k}|.             (19a)
+```
+
+The transformation product in Section 2 has rank at most three for every
+nonempty word, so `k_w<=3`.  Moreover
+
+```text
+n_1=U_N=2^N-V_N,             sum_w k_w=2^N.            (19b)
+```
+
+Subtracting the `k=1` contribution gives the exact identity
+
+```text
+sum_(k=2)^3 k n_k=V_N.                                  (19c)
+```
+
+Thus a uniform input lands in a multiple-predecessor output with probability
+exactly
+
+```text
+P(k_(Y_N)>=2)=V_N/2^N.                                  (19d)
+```
+
+Because `F_N` is deterministic,
+
+```text
+N-H(Y_N)=H(X_N|Y_N)
+ =2^(-N) sum_(k=2)^3 k n_k log_2(k).                    (19e)
+```
+
+Equations `(19c)--(19e)` imply
+
+```text
+V_N/2^N <= N-H(Y_N) <= log_2(3) V_N/2^N
+                         =Theta((rho/2)^N),             (19f)
+H_infinity(Y_N)>=N-log_2(3).                            (19g)
+```
+
+This is a lossless inverse-fibre-to-Haar bridge for one complete spatial row
+on a finite ring.  It is complementary to THM-4206, whose entropy identity
+uses forward characteristic-address pivots for a finite spacetime cell
+family under infinite Bernoulli Haar input.  Neither statement supplies the
+other's sidecar, and `(19f)` is not a named-seed temporal entropy theorem.
 
 ## 4. Physical isolated rows reset and become backward-rigid
 
