@@ -1,0 +1,13 @@
+THM4156_DIVISOR_COMPLETE_ANCHOR_POOL_HAAR_TRANSFER_20260825
+status=PASS;scope=exact common-safe-set and complete stated-family census
+anchors=(120, 126, 143);divisor_owners=((2, 120), (3, 120), (4, 120), (5, 120), (6, 120), (7, 126), (8, 120), (9, 126), (10, 120), (11, 143), (12, 120), (13, 143), (14, 126))
+pool_size=30;pool=(8, 10, 15, 16, 20, 30, 40, 42, 60, 63, 80, 84, 85, 88, 95, 120, 126, 132, 143, 145, 168, 170, 176, 190, 193, 240, 252, 264, 286, 290)
+pool_walls=7134;pool_components=150
+pool_measure=298133356159/4560289854120
+threshold=4/63;surplus=8591143199/4560289854120
+pool_max_component=37/25520
+families={'total': 2220075, 'thm4148': 0, 'thm4151': 344366, 'both': 0, 'beyond_union': 1875709}
+fixed_clock_hostile=x=1/12 has zero clearance at doubled anchor 120
+positive_control=((199, 21280), (21479, 42560), (199, 2660), (20683, 42560))
+checks=2220415
+semantic_sha256=ed193657974754e64ae4faed03bc63146f453c16290553ef5d88f198bc77bd0e
