@@ -32,12 +32,12 @@ script_sha256: e5f91aaaff3876568dbcace7623bdf5c03c8643cc450c5d2945d74ff449d1e55
 output_sha256: 276be2254d9e9311fb00a60d7e8397af5d179943aab134fe5530ace319860c86
 independent_audit_source_sha256: bc3c3547ebdc6e9191dd5f390a01d759d2223b7faf5eeffa2d065b29621e61b1
 independent_audit_output_sha256: 9dda2b76fe4701c03359da9ae4dc1405da1939cf79354d1f99cc977e2653dbe5
-global_census_script_sha256: ad1d648b636384c1e7bedf51e34ff7b39b68f63e0163b65ee3b2930e0331c2d6
-global_census_output_sha256: baae4adc57739c852dec2a8c666328cea2c4031934547e2afa4044a314c9bff6
-global_census_independent_source_sha256: 0350d6e8c1f7a83a877e119fb199f9a163d1e84db310ea89874fca7575351e4b
-global_census_independent_output_sha256: 41bc97d70cdb8fce3997e89e1f6d6088a1ce26e03c31d45c2ce8bf6b16327c12
+global_census_script_sha256: e8ba13e7ebced97744a542f948762fd868c4b92c7789f66876afb94f80cf31d8
+global_census_output_sha256: 8021a660f52c6512eb944f78e48328f4e7a50560793b1da300227bbba8fb2f0f
+global_census_independent_source_sha256: 611fd46950fd5df6d5645c1f1c1f50883200dd8e596a0cacd0d197bf416eaeca
+global_census_independent_output_sha256: efd801b960f9bd0f35a16bb2e4651265f2f16a8bb61a7b4704dca300eb2a180b
 q_le_200_semantic_ledger_sha256: 13404c6c2986bd5a14bad57519eb30792adc8e8ea33146b7c68969e33b255394
-global_semantic_fnv64: cbc7947c3ed0e41e
+global_semantic_fnv1a64: 995aa971af1069e4
 hash_basis: raw LF bytes
 primary_audit: >
   PASS. Sequential exact Fraction intersections independently reconstruct all
@@ -364,10 +364,11 @@ The exact vertex-cover histogram is:
 
 Exactly 1,032 rows have `tau>7`. The full qualifier list and all
 `(q,|E|,alpha,tau)` rows are frozen in both global outputs under the common
-semantic 64-bit FNV recurrence
+standard FNV-1a-64 recurrence, initialized at offset basis
+`0xcbf29ce484222325`,
 
 ```text
-FNV-64 recurrence = cbc7947c3ed0e41e.                  (32)
+FNV-1a-64 = 995aa971af1069e4.                           (32)
 ```
 
 The maximum cover number is 20, attained exactly at `q=380,386`. The final

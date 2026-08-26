@@ -305,7 +305,7 @@ def main():
     cache = {}
     rows = []
     tau_histogram = {}
-    semantic_hash = 1_469_598_103_934_665_603
+    semantic_hash = 14_695_981_039_346_656_037
     for q in labels:
         graph = tuple(int(mask) for mask in adjacency[q])
         if graph not in cache:
@@ -330,7 +330,7 @@ def main():
     require(tau_histogram == expected_histogram, "global tau histogram changed")
     require(len(admitted) == 1_032, "global admitted count changed")
     require(admitted[-1][0] == 8_265, "last admitted q changed")
-    require(semantic_hash == 0xCBC7947C3ED0E41E, "semantic hash changed")
+    require(semantic_hash == 0x995AA971AF1069E4, "semantic hash changed")
     maximum_tau_rows = tuple((row[0], row[3]) for row in rows if row[3] == 20)
     require(maximum_tau_rows == ((380, 20), (386, 20)), "maximum tau rows changed")
     one_deletion_ten = (5, 66, 182, 298, 336, 340, 380, 386, 528, 572)
@@ -396,7 +396,7 @@ def main():
     print("bodies_per_q", comb(27, 7))
     print("extension_bodies", extension_bodies)
     print("with_old_thm4156", extension_bodies + old_bodies)
-    print("semantic_fnv64", f"{semantic_hash:016x}")
+    print("semantic_fnv1a64", f"{semantic_hash:016x}")
     print("unique_graphs", len(cache))
     print("GLOBAL_CENSUS_PASS")
 

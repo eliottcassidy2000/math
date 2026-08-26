@@ -9,6 +9,26 @@ Format per entry:
 - Why it was wrong
 - The correct framing
 
+## MISTAKE-512 (2026-08-26, THM-4166 audit) -- a custom 19-digit seed was labelled as the standard FNV-1a-64 offset basis
+
+- **What failed:** the first promoted THM-4166 global-census artifacts seeded
+  their multiply/xor semantic recurrence with decimal
+  `1469598103934665603` and labelled the result `FNV-1a-64`.  The standard
+  64-bit FNV-1a offset basis is `14695981039346656037`, hexadecimal
+  `0xcbf29ce484222325`; the original literal was missing its final digit `7`.
+- **Scope of the error:** this was a fingerprint nomenclature and provenance
+  defect, not a graph or measure error.  Both independent implementations used
+  the same mistaken seed, so their agreement did not detect it.  The complete
+  `49,463`-label universe, edge comparisons, vertex-cover histogram, `1,032`
+  qualifiers, last qualifier `q=8,265`, analytic cutoff, margins, and body
+  counts are unchanged.
+- **Repair:** both implementations now use the standard offset basis and
+  reproduce the corrected FNV-1a-64 fingerprint `995aa971af1069e4`; all
+  normal/optimized/hash-seeded and O0/O2/UBSan outputs and raw hashes were
+  refrozen.  When a named checksum family is used as a sidecar, audit its
+  initialization constant independently; cross-implementation agreement only
+  proves agreement on the shared specification, including a shared typo.
+
 ## MISTAKE-511 (2026-08-25, Haar odd-tail pool promotions) -- exact new certificates were mistaken for new frontier families after the divisor clock had already closed every advertised pool row
 
 - **What failed:** THM-4150, THM-4152, and THM-4153 proved genuine abstract

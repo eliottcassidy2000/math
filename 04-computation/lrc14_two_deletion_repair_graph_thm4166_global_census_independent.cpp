@@ -297,7 +297,7 @@ int main() {
   std::uint64_t equality_edges = 0;
   MarginRecord positive_margin;
   MarginRecord negative_margin;
-  std::uint64_t semantic_hash = 1469598103934665603ULL;
+  std::uint64_t semantic_hash = 14695981039346656037ULL;
   auto fnv = [&](std::uint64_t value) {
     semantic_hash ^= value;
     semantic_hash *= 1099511628211ULL;
@@ -419,7 +419,7 @@ int main() {
                         [q](const GraphRow& row) { return row.q == q; }),
             "one-deletion family is subsumed");
   }
-  require(semantic_hash == 0xcbc7947c3ed0e41eULL, "semantic FNV64");
+  require(semantic_hash == 0x995aa971af1069e4ULL, "semantic FNV-1a-64");
 
   std::cout << "THM4166_TWO_DELETION_GLOBAL_CPP_CENSUS_20260826\n";
   std::cout << "q_universe=1..49493 outside P;count=" << universe_count << "\n";
@@ -483,6 +483,6 @@ int main() {
   std::cout << "bodies_per_q=" << bodies_per_q
             << ";extension_bodies=" << extension_bodies
             << ";with_old_thm4156=" << extension_bodies + 2220075 << "\n";
-  std::cout << "semantic_fnv64=" << std::hex << semantic_hash << std::dec << "\n";
+  std::cout << "semantic_fnv1a64=" << std::hex << semantic_hash << std::dec << "\n";
   std::cout << "PASS\n";
 }
