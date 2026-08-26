@@ -21,9 +21,9 @@ Then read the routed frontier, guardrails, and theorem; logs are history.
 
 ## Seventeen high-signal facts
 
-1. **LRC(14) is first open.** THM-4227/4228/4231 cover three arbitrary-pair
-   regions. THM-4234 closes all 66 fixed-`50` restricted-pool pair charts and
-   one maximin-surplus triple, giving `chi_50>=21`; arbitrary entry stays open.
+1. **LRC(14) is first open.** THM-4227/28/31 cover three pair regions;
+   THM-4233 adds a coprime ray/resonance-zero compiler. THM-4234 closes all
+   66 fixed-`50` pairs and one triple (`chi_50>=21`); arbitrary entry is open.
 2. **The `q <= 25` period claim is refuted.** THM-762/764 exhibit `26*{1,...,12} union {339}`, whose first good period is `27`.
 3. **Good-period existence is a maximum statement.** The tight resonant AP
    defeats average/count arguments; see MISTAKE-127/129/130.

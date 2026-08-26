@@ -133,8 +133,9 @@ For `F_Q=(s^2-p)(1-QH)-Qs^2/2`, a row `c p^i y^j` contributes endpoints
 ```
 
 Together with `(2,0,0),(0,1,0),(2,0,1)`, the universal valued support has
-24 points.  The active supports have 23 points for `Delta != 0` and 22 for
-`Delta=0`.  The complete coincident-point coefficient ledger on `U=0` is
+24 points.  Before optional lower-row and aggregate-collision deletions, the
+maximal branch supports have 23 points for `Delta != 0` and 22 for `Delta=0`.
+The complete coincident-point coefficient ledger on `U=0` is
 
 ```text
 (2,3,1): K-epsilon = 1984/27-(7/6)Delta,
@@ -373,9 +374,9 @@ python3 -B -O 04-computation/jc23_weight11_u0_primitive_cm_exclusion_thm4232_ind
 PYTHONHASHSEED=4232 python3 -B 04-computation/jc23_weight11_u0_primitive_cm_exclusion_thm4232_independent_audit.py
 ```
 
-The primary executes 12,657 exact gates.  Normal, `-O`, fixed-hash-seed, and
-combined primary runs are identical.  The standard-library clean-room audit
-executes 12,695 gates; its same four runs are also identical.  On Windows the
+The primary executes 12,657 exact gates.  Its normal, `-O`, and fixed-hash-seed
+runs are identical.  The standard-library clean-room audit executes 12,695
+gates; its same three modes are also identical.  On Windows the
 live streams use CRLF while the frozen artifacts use repository-style LF;
 normalizing CRLF to LF gives byte equality.
 
