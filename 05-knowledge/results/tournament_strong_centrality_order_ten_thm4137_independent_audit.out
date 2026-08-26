@@ -1,0 +1,49 @@
+theorem=THM-4137
+scope=complete independent audit of all unlabeled strong tournaments of order ten
+source=04-computation/tournament_strong_centrality_order_ten_thm4137_independent_audit.cpp
+source_sha256=8d531fcad7e0149bb6ccb70e876d504b0912341321e9cde0f08e9746b8286d19
+gentourng_path=/opt/homebrew/bin/gentourng
+gentourng_sha256=89df605922cc574b28688248b7c256d24342cc615f887e89b2d096038970c110
+compile=clang++ -O3 -std=c++17 -Xpreprocessor -fopenmp -I/opt/homebrew/opt/libomp/include -I/opt/homebrew/opt/openssl/include 04-computation/tournament_strong_centrality_order_ten_thm4137_independent_audit.cpp -L/opt/homebrew/opt/libomp/lib -lomp -L/opt/homebrew/opt/openssl/lib -lcrypto -o /tmp/thm4137_independent_audit
+full_replay=gentourng -q 10 | env OMP_NUM_THREADS=8 /tmp/thm4137_independent_audit
+direct_all_stream_check=gentourng -q 10 | tee >(wc -l >&2) | openssl dgst -sha256 => 9733056,af2873154068897522bc15477d989b0577877d2bbebc08aea3082353e5378b67
+direct_strong_stream_check=gentourng -q -c 10 | tee >(wc -l >&2) | openssl dgst -sha256 => 9355949,47bcaa3ef6272261dee3092735b47b3d2154d882aae6a8420c964cd3ef7289b7
+thread_replay=for audit_threads in 1 8; do gentourng -q 10 0/128 | env OMP_NUM_THREADS=$audit_threads /tmp/thm4137_independent_audit | openssl dgst -sha256; done => f895423a98968e31139ae2a18a87bc087de67e333a8239fe15a9a5b5265a1150 (both)
+optimization_replay=for audit_binary in /tmp/thm4137_independent_audit /tmp/thm4137_independent_audit_O0; do gentourng -q 10 0/512 | env OMP_NUM_THREADS=1 $audit_binary | openssl dgst -sha256; done => 42066f2089d2e1952508a0ba6071bfe2567a83b3ca05b16da4ecf9a705c4f6e0 (both)
+full_passes=2
+implementation=all-class gentourng stream + local two-way reachability + independent contracted good/reversed-block engine
+literal_crosscheck=two worst profiles replayed as 1024 explicit 11-vertex child tournaments
+input_contract=45 ASCII upper-triangle bits per gentourng record; all order-ten classes, not -c
+isomorph_rejection_contract=gentourng one representative per unlabeled class; checked by frozen all-class count and raw digest
+profile_serialization=ASCII header thm4137-n10-independent-profile-v1\n; for each locally strong record in input order: 45 ASCII bits; H:u32le; W2,D4x4,Chdx4,theta_num,theta_den,rho_num,rho_den:i64le; rational,coset,actual cardinality masks:u16le; m=1..9 J_num,J_den,floor,actual_max,lattice:i64le; F(mask):u32le for masks 0..1023
+all_unlabeled_classes=9733056
+locally_strong_classes=9355949
+locally_nonstrong_classes=377107
+all_raw_stream_sha256=af2873154068897522bc15477d989b0577877d2bbebc08aea3082353e5378b67
+locally_filtered_strong_stream_sha256=47bcaa3ef6272261dee3092735b47b3d2154d882aae6a8420c964cd3ef7289b7
+ordered_full_profile_sha256=8b2d93cd83ccafa86315b540cbeba5338812ad4d6393712bd403163b954ebab9
+rational_central_failures=0
+coset_central_failures=0
+coset_reorders_rational=0
+minimum_strict_coset_margin=24
+minimum_margin_multiplicity=2
+minimum_margin_packet_1=label=111111101110011111101111111111111111111111101,H=765,W=13095/1,D4=50202180/1,Chd=-13068360/1,theta=-36301/39843,rho=36301/39843,rational_t=(0),coset_t=(0),actual_t=(-2)
+minimum_margin_packet_2=label=101111110111111111111111111111110011101111111,H=765,W=13095/1,D4=50202180/1,Chd=13068360/1,theta=36301/39843,rho=36301/39843,rational_t=(0),coset_t=(0),actual_t=(2)
+theta_zero=8599
+worst_rho=34499248/37325237
+worst_multiplicity=2
+worst_packet_1=label=111111101110011111110111110111111111111111101,H=1431,W=19557/1,D4=111975711/1,Chd=-29570784/1,theta=-34499248/37325237,rho=34499248/37325237,rational_t=(0),coset_t=(0),actual_t=(-4),layers=[(1,8,13234965/2173,6093,6933,6);(2,6,40554497/4346,9333,11805,2);(3,4,536384935/45633,11755,16047,2);(4,2,406414943/30422,13361,19839,2);(5,0,215178219/15211,14147,21923,2);(6,-2,1288243325/91266,14117,23377,2);(7,-4,201794477/15211,13267,24201,2);(8,-6,50411425/4346,11601,23175,2);(9,-8,59418751/6519,9115,13041,2)]
+worst_packet_2=label=101111110111111111111111110011111011101111111,H=1431,W=19557/1,D4=111975711/1,Chd=29570784/1,theta=34499248/37325237,rho=34499248/37325237,rational_t=(0),coset_t=(0),actual_t=(4),layers=[(1,8,59418751/6519,9115,13041,2);(2,6,50411425/4346,11601,23175,2);(3,4,201794477/15211,13267,24201,2);(4,2,1288243325/91266,14117,23377,2);(5,0,215178219/15211,14147,21923,2);(6,-2,406414943/30422,13361,19839,2);(7,-4,536384935/45633,11755,16047,2);(8,-6,40554497/4346,9333,11805,2);(9,-8,13234965/2173,6093,6933,6)]
+worst_literal_child_replay=PASS_2_OF_2_ALL_1024_CUTS
+worst_reversal_isomorphism=PASS
+worst_reversal_mapping=(0->9,1->5,2->8,3->3,4->7,5->6,6->4,7->1,8->0,9->2)
+rational_optimizer_histogram=(0):9355949
+coset_optimizer_histogram=(0):9355949
+actual_noncentral_only=3146972
+actual_optimizer_histogram=(-2):1550812,(-2,-4):321,(-4):22353,(0):6186633,(0,-2):11172,(2):1550812,(2,0):11172,(4):22353,(4,2):321
+control_code_2=010000000000000|H=3|rational_t=(2)|coset_t=(2,0)|actual_t=(2,0)|layers=[(1,4,551/15,37,51,2);(2,2,629/15,43,69,2);(3,0,1871/45,43,69,2);(4,-2,107/3,37,49,2);(5,-4,121/5,27,27,6)]|literal_child_dp=PASS
+control_code_140=001100010000000|H=15|rational_t=(2)|coset_t=(4)|actual_t=(4)|layers=[(1,4,639/7,135,135,102);(2,2,2122/21,103,129,2);(3,0,6211/63,99,115,2);(4,-2,1762/21,85,91,2);(5,-4,57/1,57,57,42)]|literal_child_dp=PASS
+control_code_20=001010000000000|H=19|rational_t=(0)|coset_t=(0)|actual_t=(2)|layers=[(1,4,7417/109,69,91,2);(2,2,9671/109,89,133,2);(3,0,10399/109,97,131,2);(4,-2,9601/109,89,123,2);(5,-4,7277/109,67,91,2)]|literal_child_dp=PASS
+semantic_serialization=ASCII header thm4137-n10-independent-semantic-v1\n followed by the ordered key=value fact lines above
+semantic_sha256=2984d66aad38b7b7a5fa4de0ec14e6e08ff383bf277eaa2ae4290dca1841f045
+status=ACCEPT
