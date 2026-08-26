@@ -241,8 +241,7 @@ THM-2070 refutes the general HYP-8890/8895 bypasses.  Transfer
 - [THM-4051](../01-canon/theorems/THM-4051-tournament-order-seven-strong-base-exact-frontier.md)
   closes all 353 strong order-seven classes; Paley gives minimum ratio `27/8`,
   not sampled `4.22`. All-order remains open.
-- THM-3315--3380 compile switched walks, joins, response Gram, periodic/cyclotomic
-  `T4`, Fibonacci quotients, and deletion currents; several losses remain.
+- THM-3315--3380 compile switched-walk, response, and deletion tools; losses remain.
 - A literal Paley bridge exists only in THM-640's prime quadratic-residue scope.
   Composite modulus 14 and repeated score/node heuristics do not inherit it.
 - MISTAKE-227--229 repair the `11!` AP frame, Paley roots, and a false Heegner
@@ -251,26 +250,24 @@ THM-2070 refutes the general HYP-8890/8895 bypasses.  Transfer
   to lanes `p` (`p!=7`) and `7p` (`p!=3`).
 - THM-4099 makes insertion compositional; scalar marginals lose mixed response.
 - [THM-4097](../01-canon/theorems/THM-4097-order-nine-strong-ear-spectrum-solid-interval-and-lane-extension.md)
-  computes `1,482` strong order-nine values and cut-field basis `{3,4}`.
-  THM-4102/4104 give intervals to `80,265` and prefix to `80,405`.
-  THM-4111/4115 force unbounded full-cut maxima;
-  THM-4123/4127 give central slice gains;
-  THM-4128/4131/4135/4137 prove centrality through order ten.
+  computes `1,482` order-nine values and cut basis `{3,4}`; THM-4102/4104
+  extend the interval prefix to `80,405`, and THM-4111--4137 add cut/centrality
+  results through order ten.
   [THM-4144](../01-canon/theorems/THM-4144-order-eleven-large-homogeneous-module-johnson-centrality.md)/4162/
   [4163](../01-canon/theorems/THM-4163-order-eleven-homogeneous-pair-johnson-centrality.md)
   close nonprimes; [THM-4168](../01-canon/theorems/THM-4168-prime-order-eleven-nontrivial-automorphism-johnson-centrality.md)
   closes `12,155` symmetric primes. THM-4167/[4172](../01-canon/theorems/THM-4172-multideletion-support-tomography-and-same-parity-johnson-holonomy.md)
-  give deletion tomography and certify those plus `1,002` one-parent children.
+  add tomography and `1,002` one-parent children.
   [THM-4169](../01-canon/theorems/THM-4169-prime-parent-one-vertex-augmentation-and-quartic-johnson-transfer.md)
-  gives quartic gates and a **CITED** `7,921,973,322`-presentation cover—not
-  classes.
+  gives quartic gates and a **CITED** `7,921,973,322`-presentation cover, not classes.
   [THM-4177](../01-canon/theorems/THM-4177-root-split-johnson-current-and-source-sink-boundary-census.md)
-  gives root-current/odd-path/padding descent and a `q<=8` census; its
-  `|T|>=4` sign law and asymmetric bank are **OPEN**. THM-4133 refutes order 12.
-  THM-4114 separates positive faces from submodular ear cuts; THM-4118 adds
-  exact response gcds and stateful unit-component intervals. At `n=5`, all
-  `544` parents have gcd `2` yet gaps, and `400` lack an `M-2` neighbor.
-  Overlap/completeness remain **OPEN**.
+  gives padding descent and a `q<=8` census.
+  [THM-4181](../01-canon/theorems/THM-4181-ordinal-sum-capacity-transfer-and-parity-component-exchange.md)
+  gives exact rank-two ordinal transfer and a positive factor-order-`<=7`
+  remainder census. Its all-order remainder, `|T|>=4` sign law, and asymmetric
+  bank are **OPEN**; THM-4133 refutes order 12.
+  THM-4114/4118 expose face/cut and gcd gaps: at `n=5`, all `544` parents have
+  gcd `2` yet gaps, and `400` lack an `M-2` neighbor. Completeness is **OPEN**.
 - Corrected HYP-8835: optimal support is uniquely odd; positive `Mp=0` gives a
   replicator integral. Pure optimum means Condorcet winner, not transitivity;
   source-over-`C3` is hostile and RPS levels are circles, not `T^2`.

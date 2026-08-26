@@ -46,9 +46,9 @@ Then read the routed frontier, guardrails, and theorem; logs are history.
    rank/phase; THM-3285's FINITE-EXACT `13`-label `R-M-R` horn has two middle
    completions but no outer co-support. Atom, current and LRC remain open.
 10. **Order-eleven asymmetric bank is OPEN.** THM-4144/4162/4163 close
-    nonprimes; THM-4168 closes `12,155` symmetric primes. THM-4169's **CITED**
-    cover counts presentations, not classes; THM-4177 gives descent
-    and a `q<=8` census; its `|T|>=4` sign law remains OPEN.
+    nonprimes and THM-4168 closes `12,155` symmetric primes. THM-4169's **CITED** cover counts
+    presentations, not classes; THM-4177/4181 give finite `q<=8`/factor-`<=7`
+    padding/ordinal evidence, not the open sign law.
 11. **Support is not multiplicity.** THM-2000/2005/2352/3359/3362/3382
     separate collision, phase and address; THM-3425 needs period plus parity.
     Composite rank seven and FC(3) remain open.

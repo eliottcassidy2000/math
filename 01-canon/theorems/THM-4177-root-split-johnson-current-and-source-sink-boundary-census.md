@@ -586,6 +586,11 @@ Finally, THM-4133 is not a hostile to `(32)`: its order-twelve failure uses
 the stricter order-twelve coefficient, while it still has both
 `D+2C>0` and `D-2C>0`.
 
+**Later boundary.** THM-4181 computes exact ordinal-sum transfer through two
+rooted path-cover parity states and proves its positive remainder on `242,060`
+factor-order-at-most-seven presentations. Its all-order remainder remains
+**OPEN**, so its strong-core reduction does not change the status of `(32)`.
+
 ## 9. Replay
 
 Build and run the full primary certificate with

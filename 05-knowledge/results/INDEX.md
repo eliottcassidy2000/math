@@ -1,5 +1,26 @@
 # Script Results Index
 
+- `tournament_ordinal_sum_capacity_transfer_thm4181.py` and an independent
+  literal-permutation C++ referee -> exact ordinal-sum transfer and parity
+  component exchange [THM-4181 PROVED STRUCTURAL + FINITE-EXACT STRICT
+  POSITIVITY ON `242,060` ORDERED BLOCK-CLASS PRESENTATIONS +
+  INDEPENDENTLY AUDITED; ALL-ORDER REMAINDER AND SIGN LAW OPEN]. Internal
+  capacities scale by the opposite factor's Hamilton count, while the cross
+  matrix is the sum of two rooted path-cover parity products and has rank at
+  most two. Odd-order parity and even-order component exchange preserve the
+  required total layer mass. The exact arbitrary-tensor block formula yields
+  a remainder `R_+>0` for every `1<=|A|<=7`, no-sink `3<=|B|<=7`
+  presentation, uniquely minimized at `120` by one-vertex `triangleright C3`.
+  Pointwise coordinate dominance is false, first at `C3 triangleright C3` on
+  the left and total order seven on the right. Hence reduction to a strong
+  minimal counterexample remains conditional on the open all-order remainder.
+  Primary source/output SHA-256:
+  `735f1cadb699cb44b190a84ab7284fe8aedc3ecc68109a416302926a29c36099` /
+  `b4bd9d46d2964566f6326d52caf3648237713876779e50c9a469c5fb589f5922`;
+  independent source/output:
+  `2be285497e4e930279c97df904874753f38a266bbdd0fbaa5941e13fa46c2089` /
+  `a6f97f326d159b288ea398b7674605497ffe4d16deadbd9ea9d3abdc387ec5f3`.
+
 - `jc23_repeated_top_delta_zero_complete_exclusion_thm4180.py` and an
   independent normalized `(X,T)` audit -> complete Delta-zero repeated-top
   exclusion [THM-4180 PROVED RELATIVE TO ITS STATED TRANSPORT PACKAGE +
