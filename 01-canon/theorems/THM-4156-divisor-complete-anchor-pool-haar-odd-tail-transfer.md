@@ -2,16 +2,15 @@
 id: THM-4156
 title: "Divisor-complete anchor-pool Haar odd-tail transfer"
 status: >
-  RESERVED / PROOF CANDIDATE UNDER INDEPENDENT AUDIT. The exact primary
-  calculation gives a 30-label common safe-set pool of Haar measure strictly
-  above 4/63. Requiring the three anchors 120,126,143 makes every selected
-  eleven-body primitive and divisor-complete through 14. Conditional on the
-  pending independent interval audit, THM-4150 then closes 2,220,075 bodies
-  with every distinct positive odd tail pair, including 1,875,709 outside
-  both current first-window gates. No proved dependency may use this file
-  until its status is promoted.
+  PROVED RELATIVE TO THM-4150 + VERIFIED-EXACT + INDEPENDENT EXACT INTERVAL
+  AUDIT; LRC(14) OPEN. A 30-label common safe-set pool has Haar measure
+  strictly above 4/63. Requiring the three anchors 120,126,143 makes every
+  selected eleven-body primitive and divisor-complete through 14. THM-4150
+  therefore closes 2,220,075 bodies with every distinct positive odd tail
+  pair, including 1,875,709 outside both current first-window gates.
 source: codex-lrc14-planar-jc-breakthrough-20260825
-depends_on: []
+depends_on:
+  - THM-4150-safe-set-haar-measure-universal-odd-tail-lrc14-transfer
 related:
   - THM-366-lrc-small-denominator-divisibility-sieve
   - THM-2061-lrc14-dyadic-two-tail-folded-seam
@@ -21,24 +20,34 @@ related:
   - THM-4154-mod-six-fixed-clock-and-haar-pool-inheritance-correction
 script: 04-computation/lrc14_divisor_complete_anchor_pool_haar_transfer_thm4156.py
 output: 05-knowledge/results/lrc14_divisor_complete_anchor_pool_haar_transfer_thm4156.out
+independent_audit_script: 04-computation/lrc14_divisor_complete_anchor_pool_haar_transfer_thm4156_independent_audit.py
+independent_audit_output: 05-knowledge/results/lrc14_divisor_complete_anchor_pool_haar_transfer_thm4156_independent_audit.out
 script_sha256: db264924c1234323ecb299fbe7aacc4bc4d3b46290ec754bf4ba23ddffa8103d
 output_sha256: c30bfc3f0fdd3f2dfd37efb490f8e28fc36c30583a442361d2acce57f790aae1
 semantic_sha256: ed193657974754e64ae4faed03bc63146f453c16290553ef5d88f198bc77bd0e
+independent_audit_script_sha256: e94cec1a54f4ff36f32a66a13ad1c5b9263fe24c1b6a6fa164bc0b39eb8ff2ad
+independent_audit_output_sha256: c0b2bdda38d7c08d4a3b060499c99a2ff96c4b9a4cab5c368a47cfeca80ecf1e
+independent_semantic_sha256: 97954c5f353ca0977c87d1649abb646a43af4cdb636bcc211861a12129b1c415
 hash_basis: raw LF bytes
 primary_audit: >
   PASS. Exact Fraction arithmetic reconstructs every safe-set wall and cell,
   the divisor-owner table, reflection symmetry, a direct positive control,
   the failed one-twelfth hostile, and all 2,220,075 declared bodies. Normal,
   optimized, and hash-seeded outputs byte-match.
+independent_audit: >
+  ACCEPT. A no-import implementation intersects each speed's closed safe
+  tooth union successively, using the global wall set only as a checksum. It
+  reproduces all 7,134 walls, 150 components, the exact measure and maximum
+  width, both controls, and an independently grouped family census. Normal,
+  optimized, and hash-seeded outputs byte-match.
 ---
 
 # THM-4156 -- a divisor-complete common-Haar pool
 
-**RESERVED / PROOF CANDIDATE UNDER INDEPENDENT AUDIT.** The proof below has a
-passing exact primary certificate. Promotion awaits its structurally distinct
-interval audit; until then this file is not a proved dependency.
+**PROVED RELATIVE TO THM-4150 + VERIFIED-EXACT + INDEPENDENT EXACT INTERVAL
+AUDIT; LRC(14) REMAINS OPEN.**
 
-## 1. Candidate statement and inheritance
+## 1. Statement and inheritance
 
 Put
 
@@ -56,7 +65,7 @@ For every eight-element set `K subset P\A`, define the eleven-body
 H=A union K.                                           (2)
 ```
 
-> **Candidate theorem.** For every body `(2)` and every two distinct
+> **Theorem.** For every body `(2)` and every two distinct
 > positive odd integers `a,b`, there exists `x in R/Z` such that
 >
 > ```text
@@ -157,8 +166,8 @@ G_P subset G_H,                 mu(G_H)>=mu(G_P)>4/63. (11)
 THM-4150 applied to `(11)` proves `(3)` for every distinct positive odd pair.
 The even body speeds are pairwise distinct, the odd tails are pairwise
 distinct and cannot meet an even speed, so `(3)` is a genuine thirteen-speed
-row. This proves the candidate statement subject only to the independent
-audit of `(6)--(7)`.
+row. The structurally distinct interval audit independently reproduces
+`(6)--(7)`. Thus THM-4150 applied to `(11)` proves `(3)`. **QED.**
 
 There are `27` optional labels, so the exact family size is
 
@@ -218,4 +227,12 @@ Primary replay:
 python3 -B 04-computation/lrc14_divisor_complete_anchor_pool_haar_transfer_thm4156.py
 python3 -B -O 04-computation/lrc14_divisor_complete_anchor_pool_haar_transfer_thm4156.py
 PYTHONHASHSEED=271828 python3 -B 04-computation/lrc14_divisor_complete_anchor_pool_haar_transfer_thm4156.py
+```
+
+Independent replay:
+
+```bash
+python3 -B 04-computation/lrc14_divisor_complete_anchor_pool_haar_transfer_thm4156_independent_audit.py
+python3 -B -O 04-computation/lrc14_divisor_complete_anchor_pool_haar_transfer_thm4156_independent_audit.py
+PYTHONHASHSEED=314159 python3 -B 04-computation/lrc14_divisor_complete_anchor_pool_haar_transfer_thm4156_independent_audit.py
 ```

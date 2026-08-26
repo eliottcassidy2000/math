@@ -1,0 +1,13 @@
+THM-4155 INDEPENDENT Y-ONLY DELTA-ZERO AUDIT
+source_resultant=p^8*R18;critical_length=22
+R18_constant=-46656*Zeta*(4*Theta*K^2-27*Zeta^2)
+R18_leading=-236196*Zeta^5*Disc(epsilon*w^3+Phi*w^2+Theta*w+Zeta)
+polygon=((0,1),(2,0),(5,3),(3,4),(0,4));Pick=(27,11,9)
+packet=(8,3,3,3,2,2,2,1);labels=rat(8,3,3,3,1)+cubic(2,2,2)
+responses=full24/finite18;finite_carriers=3
+monodromy=full:6<23;finite:15,16,3<17
+gates=Zeta*(4*Theta*K^2-27*Zeta^2)*horizontal_discriminant!=0
+control_sha256=3f525f9d742268642fa27e73b183f4733db580e0e0db079827ba44ccc5c52bfc
+checks=1600317
+semantic_sha256=e1a7880dff5092afe8b2de6ca30d412d00656cec6e73744d09655c7e9441358c
+RESULT=PASS
