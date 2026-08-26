@@ -1,0 +1,38 @@
+AUDIT q50_zero_original_minimal_anchor_hierarchy_joint_wall_cpp20
+JOINT_GEOMETRY denominator=91205797082400 walls=7214 atoms=7213 labelled_atom_fnv1a64_le=0ccd305ae47c79ea
+MINIMAL_ANCHOR_LAYER size=1 count=0 mask_fnv1a64_le=cbf29ce484222325
+MINIMAL_ANCHOR_LAYER size=2 count=0 mask_fnv1a64_le=cbf29ce484222325
+MINIMAL_ANCHOR_LAYER size=3 count=0 mask_fnv1a64_le=cbf29ce484222325
+MINIMAL_ANCHOR_LAYER size=4 count=32 mask_fnv1a64_le=f9f6fd7d15fa2ddb
+MINIMAL_ANCHOR_LAYER size=5 count=297 mask_fnv1a64_le=3841dfd22c768456
+MINIMAL_ANCHOR_LAYER size=6 count=24 mask_fnv1a64_le=11739190505473e1
+SIZE6_PRODUCT core=42,63,132,286 left=8,16,88,176 right=10,20,30,170,190,290
+GLOBAL_LAYER d=5 candidates=142506 edges=3017 equalities=0 min_edge_delta=9312918552 max_nonedge_delta=-3452771070 edge_fnv1a64_le=6beebf7aa4701ef0
+GLOBAL_LAYER d=6 candidates=593775 edges=85324 equalities=0 min_edge_delta=17425422 max_nonedge_delta=-131971518 edge_fnv1a64_le=e9951e7b4a3fba86
+GLOBAL_LAYER d=7 candidates=2035800 edges=821737 equalities=0 min_edge_delta=17425422 max_nonedge_delta=-20115648 edge_fnv1a64_le=808ca531b29c5e83
+SIZE5_E6_BLOCKER anchor=16,95,170,252,286 K=88,145,168,193,240
+SIZE5_E6_BLOCKER anchor=16,145,170,252,286 K=88,95,168,193,240
+SIZE5_E6_BLOCKER anchor=16,170,193,252,286 K=88,95,145,168,240
+SIZE5_E6_BLOCKER anchor=88,95,170,252,286 K=16,145,168,193,240
+SIZE5_E6_BLOCKER anchor=88,95,170,252,286 K=80,145,168,193,240
+SIZE5_E6_BLOCKER anchor=88,145,170,252,286 K=16,95,168,193,240
+SIZE5_E6_BLOCKER anchor=88,145,170,252,286 K=80,95,168,193,240
+SIZE5_E6_BLOCKER anchor=88,170,193,252,286 K=16,95,145,168,240
+SIZE5_E6_BLOCKER anchor=88,170,193,252,286 K=80,95,145,168,240
+SIZE5_E6_BLOCKER anchor=95,168,170,252,286 K=16,88,145,193,240
+SIZE5_E6_BLOCKER anchor=95,168,170,252,286 K=80,88,145,193,240
+SIZE5_E6_BLOCKER anchor=145,168,170,252,286 K=16,88,95,193,240
+SIZE5_E6_BLOCKER anchor=145,168,170,252,286 K=80,88,95,193,240
+SIZE5_E6_BLOCKER anchor=168,170,193,252,286 K=16,88,95,145,240
+SIZE5_E6_BLOCKER anchor=168,170,193,252,286 K=80,88,95,145,240
+SIZE5_RESIDUAL_BODY labels=16,88,95,145,168,170,193,240,252,286 presentations=9 E7_witnesses=736 first_witness=8,10,15,20,80,85,290
+SIZE5_RESIDUAL_BODY labels=80,88,95,145,168,170,193,240,252,286 presentations=6 E7_witnesses=514 first_witness=8,10,15,16,20,85,120
+SIZE5_SUMMARY no_E5_cover_rows=41 E5_cover_rows=256 complete_E5_covers=21506 cover_size_hist=3:33,4:1229,5:20244 E6_blocker_presentations=15 E6_blocker_bodies=2 row_ledger_fnv1a64_le=9dbf51ecd6f8c2d5
+SIZE6_E5_BLOCKER anchor=42,63,88,132,286,290 K=80,85,168,193 E6_witnesses=913 first_witness=8,10,15,16,95,145
+SIZE6_E5_BLOCKER anchor=42,63,88,132,286,290 K=85,168,193,240 E6_witnesses=708 first_witness=8,10,15,16,95,145
+SIZE6_E5_BLOCKER anchor=42,63,88,132,286,290 K=95,168,193,240 E6_witnesses=461 first_witness=8,10,16,80,85,145
+SIZE6_E5_BLOCKER anchor=42,63,132,176,286,290 K=95,168,193,240 E6_witnesses=651 first_witness=8,10,15,85,88,143
+SIZE6_SUMMARY no_E5_cover_rows=22 E5_cover_rows=2 complete_E5_covers=4 cover_size_hist=4:4 E6_blockers=0 row_ledger_fnv1a64_le=a4f776dc340f0260
+BODY_HIERARCHY ambient=8436285 valid_primitive_divisor_complete=1491665 size4_union=1138494 after_size5=1487206 after_size6=1491665 remainder_after_size4=353171 remainder_after_size5=4459 remainder_after_size6=0 presentations_by_anchor_size=4:3230304,5:7821198,6:143640
+Q50_FOUR_DISJOINT_ORIGINAL_ANCHOR_SLICES 10111881
+VERDICT PASS
