@@ -19,12 +19,11 @@ python3 agents/start_session.py --topic "<target statement or object>"
 
 Then read the routed frontier, guardrails, and theorem; logs are history.
 
-## Seventeen high-signal facts to reuse, not re-derive
+## Seventeen high-signal facts
 
-1. **LRC(14) is first open.** Direct `<=6`; projected caps `1579/216` leave
-   `372913/109/12`. THM-4191 gives all one-newcomer bodies; THM-4207 gives
-   `(50,51)`; THM-4211/4214 give the fixed-`50` tail and `167,960`-face
-   outsider charts. Leaf-leaf pairs and LRC(14) remain open.
+1. **LRC(14) is first open.** Caps `1579/216` leave `372913/109/12`.
+   THM-4203/4191 handle zero/one outsiders; THM-4207/4211/4214 give pair charts
+   `167,960` and `129,024,480`. Arbitrary pairs and LRC(14) remain open.
 2. **The `q <= 25` period claim is refuted.** THM-762/764 exhibit `26*{1,...,12} union {339}`, whose first good period is `27`.
 3. **Good-period existence is a maximum statement.** The tight resonant AP
    defeats average/count arguments; see MISTAKE-127/129/130.

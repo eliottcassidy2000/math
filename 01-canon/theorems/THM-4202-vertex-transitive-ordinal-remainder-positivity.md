@@ -18,6 +18,8 @@ depends_on:
 related:
   - THM-4133-strong-cyclic-substitution-johnson-centrality-counterexample
   - THM-4193-cycle-first-transitive-tail-crossing-and-transitive-context-positivity
+  - THM-4208-cycle-prefix-arbitrary-context-recurrence-endpoint-energy-and-eventual-positivity
+  - THM-4212-cycle-prefix-uniform-arbitrary-context-threshold-and-tail-five-lower-bound
 script: 04-computation/tournament_vertex_transitive_ordinal_remainder_positivity_thm4202.py
 output: 05-knowledge/results/tournament_vertex_transitive_ordinal_remainder_positivity_thm4202.out
 independent_audit_script: 04-computation/tournament_vertex_transitive_ordinal_remainder_positivity_independent_audit_thm4202.py

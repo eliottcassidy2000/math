@@ -19,7 +19,8 @@ depends_on:
 related:
   - THM-4174-six-deletion-completion-of-divisor-complete-newcomer-haar-transfer
   - THM-4188-all-newcomer-zero-original-anchor-hierarchy-and-resonance-filtration
-  - THM-4203-fixed-pool-thirteen-body-depth-eight-haar-transfer
+  - THM-4203-fixed-pool-seventeen-body-depth-eight-haar-completion
+  - THM-4214-two-newcomer-pascal-complete-eleven-body-haar-charts
 script: 04-computation/lrc14_two_newcomer_depth_eight_obstruction_thm4207.cpp
 output: 05-knowledge/results/lrc14_two_newcomer_depth_eight_obstruction_thm4207.out
 independent_audit_script: 04-computation/lrc14_two_newcomer_depth_eight_obstruction_independent_audit_thm4207.cpp

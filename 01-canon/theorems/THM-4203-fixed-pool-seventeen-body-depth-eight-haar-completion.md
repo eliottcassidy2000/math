@@ -19,6 +19,9 @@ depends_on:
   - THM-4191-complete-full-pool-newcomer-haar-transfer
 related:
   - THM-4201-exactly-one-newcomer-projected-repair-depth-stratification
+  - THM-4207-two-newcomer-sharp-depth-transition-base-surplus-composition-and-variable-pool-chart-number
+  - THM-4211-fixed-fifty-cofinal-two-newcomer-haar-tail-and-eighteen-label-chart
+  - THM-4214-two-newcomer-pascal-complete-eleven-body-haar-charts
 script: 04-computation/lrc14_fixed_pool_seventeen_body_depth8_haar_completion_thm4203.cpp
 output: 05-knowledge/results/lrc14_fixed_pool_seventeen_body_depth8_haar_completion_thm4203.out
 independent_audit_script: 04-computation/lrc14_fixed_pool_seventeen_body_depth8_haar_completion_independent_audit_thm4203.cpp

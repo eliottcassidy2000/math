@@ -2,7 +2,8 @@
 id: THM-4214
 title: "Two-newcomer Pascal-complete eleven-body Haar charts"
 status: >
-  PROVED ORGANIZATIONAL SYNTHESIS RELATIVE TO THM-4150/4156/4191/4211 +
+  PROVED ORGANIZATIONAL SYNTHESIS RELATIVE TO THM-4150/4156/4191/4203/4207/
+  4211 +
   VERIFIED-EXACT + INDEPENDENTLY AUDITED ZERO-LAYER CONTROL. The safe faces
   through rank eleven contain the join of the displayed eighteen-label
   simplex with the fixed-50 newcomer star. For every outsider r, all
@@ -10,17 +11,19 @@ status: >
   least 4/63, partitioned by newcomer count as
   31,824+87,516+48,620. More generally the finite m-leaf star has
   f_j=C(18,j)+(m+1)C(18,j-1)+mC(18,j-2) certified rank-j faces for
-  0<=j<=11. This theorem organizes inherited body theorems into a new
-  simplicial/downset statement; it proves no leaf-leaf newcomer pair,
-  arbitrary-pair entry, or LRC(14).
+  0<=j<=11. For Q={50,51}, {49,50}, or {50,r} with r>=5682, all
+  C(32,11)=129,024,480 eleven-subsets of P union Q are also safe. A labelled
+  Pascal-block/combinadic rank bijects each displayed complete rank-eleven
+  chart with an initial interval of the natural numbers. This theorem proves
+  no arbitrary-pair entry or LRC(14).
 source: codex-lrc-pascal-complete-20260826
 depends_on:
   - THM-4150-safe-set-haar-measure-universal-odd-tail-lrc14-transfer
   - THM-4156-divisor-complete-anchor-pool-haar-odd-tail-transfer
   - THM-4191-complete-full-pool-newcomer-haar-transfer
-  - THM-4211-fixed-fifty-cofinal-two-newcomer-haar-tail-and-eighteen-label-chart
-related:
+  - THM-4203-fixed-pool-seventeen-body-depth-eight-haar-completion
   - THM-4207-two-newcomer-sharp-depth-transition-base-surplus-composition-and-variable-pool-chart-number
+  - THM-4211-fixed-fifty-cofinal-two-newcomer-haar-tail-and-eighteen-label-chart
 script: 04-computation/lrc14_two_newcomer_pascal_complete_chart_thm4214.cpp
 output: 05-knowledge/results/lrc14_two_newcomer_pascal_complete_chart_thm4214.out
 independent_audit_script: 04-computation/lrc14_two_newcomer_pascal_complete_chart_independent_audit_thm4214.cpp
@@ -43,7 +46,8 @@ independent_audit: >
 
 # THM-4214 -- two-newcomer Pascal-complete eleven-body Haar charts
 
-**PROVED ORGANIZATIONAL SYNTHESIS RELATIVE TO THM-4150/4156/4191/4211 +
+**PROVED ORGANIZATIONAL SYNTHESIS RELATIVE TO THM-4150/4156/4191/4203/4207/
+4211 +
 VERIFIED-EXACT + INDEPENDENTLY AUDITED ZERO-LAYER CONTROL; LRC(14) REMAINS
 OPEN.**
 
@@ -119,33 +123,57 @@ two newcomers:   binom(18,9)    = 48,620,
                                      167,960=binom(20,11). (9)
 ```
 
-For each rank-eleven `H` in `(5)`, every positive integer `c` and every two
-distinct positive odd integers `a,b`, THM-4150 supplies some `x in R/Z` with
+There is also a full-pool completion on the proved pair families. If
+
+```text
+Q={50,51},  Q={49,50},  or  Q={50,r} with r>=5682,      (9a)
+```
+
+then every `H in binom(P union Q,11)` satisfies `(6)`. Its four labelled
+outsider-incidence blocks have sizes
+
+```text
+binom(30,11), binom(30,10), binom(30,10), binom(30,9),
+```
+
+and hence contain exactly
+
+```text
+54,627,300+30,045,015+30,045,015+14,307,150
+  =129,024,480=binom(32,11)                              (9b)
+```
+
+eleven-bodies for each pair in `(9a)`.
+
+For each rank-eleven `H` in `(5)`, or each
+`H in binom(P union Q,11)` with `Q` from `(9a)`, every positive integer `c`
+and every two distinct positive odd integers `a,b`, THM-4150 supplies some
+`x in R/Z` with
 
 ```text
 min_(v in 2cH union {a,b})||vx||>=1/14.                (10)
 ```
 
-The closest proved mechanisms are THM-4156's common-pool mass, THM-4191's
-complete one-newcomer layer, and THM-4211's fixed-50 two-newcomer chart. The
-canonical hostile is the exact rank-nine body in Section 5, where the bare
-two-danger-set Bonferroni bound is negative. The corrected near miss is to
-call the three inherited rows separate charts and forget that their newcomer
-incidences glue as one simplicial star. The least-used sidecar is precisely
-the newcomer count together with the central-versus-leaf incidence retained
-by `Sigma_R`.
+The closest proved mechanisms are THM-4156/4203's small/full zero-newcomer
+layers, THM-4191's complete one-newcomer layer, and THM-4207/4211's fixed-pair
+two-newcomer charts. The canonical hostile is the exact rank-nine body in
+Section 5, where the bare two-danger-set Bonferroni bound is negative. The
+corrected near miss is to call the inherited rows separate charts and forget
+that their newcomer incidences glue. The least-used sidecar is precisely the
+newcomer count together with the central-versus-leaf incidence retained by
+`Sigma_R`.
 
 The live concept board was
 
 ```text
 common-pool simplex | one-newcomer cone | fixed-50 star
-rank-eleven truncation | mod-six divisor hostile.       (11)
+full-pool Pascal blocks | combinadic rank | mod-six hostile.             (11)
 ```
 
 The selected method cards are “search the statement before the method” and
 “controlled forgetting requires a sidecar”: the theorem is obtained by
-recovering the three current body theorems, then retaining which newcomer
-vertices each one actually permits.
+recovering the current body theorems, then retaining which newcomer vertices
+each one actually permits.
 
 ## 2. Proof by newcomer count
 
@@ -191,6 +219,14 @@ This also explains downward closure rather than merely asserting it. Each
 lower face is extended *within the same permitted newcomer face*: to ten
 pool labels in the one-newcomer row and to nine chart labels in the central
 two-newcomer row. No forbidden leaf-leaf edge is introduced.
+
+For the full-pool assertion `(9a)`, partition an eleven-set `H` by
+`|H intersect Q|`. With zero outsiders, THM-4203 applies because `11<=17`.
+With one labelled outsider, THM-4191 applies to the unique ten-subset of `P`.
+With both outsiders, THM-4207 applies to `{50,51}`, while THM-4211 applies
+to `{49,50}` and to `{50,r}` for `r>=5682`. These four cases are disjoint and
+exhaustive. This proof does not infer a new pair by interpolation in its
+labels.
 
 ## 3. Exact face enumeration and the Pascal completion
 
@@ -315,7 +351,56 @@ clock, but no claim is made that they evade every earlier certificate. The
 Haar conclusions `(6)` and `(10)` remain valid in all cases and for every
 allowed common scale.
 
-## 7. Exact artifacts and replay
+## 7. Full-pool Pascal blocks and ordinal rank
+
+Fix an order `Q=(q_0,q_1)` on any pair in `(9a)`, order `P` increasingly,
+and let `rho_(n,k)` be a fixed zero-based combinadic rank on the `k`-subsets
+of an ordered `n`-set. Define
+
+```text
+rank_Q(H)=
+  rho_(30,11)(H),                                      H intersect Q=empty;
+  binom(30,11)+rho_(30,10)(H intersect P),             H intersect Q={q_0};
+  binom(30,11)+binom(30,10)+rho_(30,10)(H intersect P),
+                                                       H intersect Q={q_1};
+  binom(30,11)+2binom(30,10)+rho_(30,9)(H intersect P),
+                                                       H intersect Q=Q. (26)
+```
+
+The block offsets are the partial sums in `(9b)`, so `(26)` is a bijection
+
+```text
+binom(P union Q,11) <-> {0,1,...,129,024,479}.          (27)
+```
+
+Replacing `P,30` by `C,18` gives the analogous bijection from the complete
+one-leaf chart in `(9)` to `{0,1,...,167,959}`. The block recovers the exact
+outsider-incidence word and the combinadic coordinate recovers the pool
+subset. Thus the rank forgets the proof certificate but not the discrete
+body. Coincidences after common scaling or between different pair families
+are not asserted to be disjoint. Adding one to either zero-based rank gives
+the literal one-based ordinal `1,...,N`.
+
+Before selecting a second outsider, THM-4203 and THM-4191 similarly fill
+
+```text
+binom(30,11)+binom(30,10)=84,672,315=binom(31,11)       (28)
+```
+
+eleven-bodies in every one-newcomer pool `P union {q}` with `q notin P`.
+The connection contract for the full-pool completion is
+
+```text
+source:       H in binom(P union Q,11)
+target:       the zero-, labelled-one-, or two-outsider body theorem
+map:          H -> (H intersect Q,H intersect P)
+preserved:    every label, outsider identity, cardinality, Haar threshold
+destroyed:    repair edge, wall address, and chosen safe phase
+sidecar:      the two-bit outsider-incidence word
+decisive test: all four labelled Pascal blocks are covered.              (29)
+```
+
+## 8. Exact artifacts and replay
 
 Primary:
 
@@ -358,14 +443,16 @@ g++ -std=c++20 -O2 -Wall -Wextra -Wpedantic -Werror \
 Both programs also byte-match at `-O0` and `-O3`. Clang undefined-behavior
 sanitizer runs emit the same streams with no diagnostics.
 
-## 8. Strict scope
+## 9. Strict scope
 
-This theorem proves a simplicial organization and its exact face vector. Its
-bodywise safety inputs are inherited: THM-4156 owns the zero-newcomer simplex,
-THM-4191 the one-newcomer cone, and THM-4211 the fixed-50 star edges. The new
-content is that these inputs glue on one common chart and remain downward
-closed without losing newcomer incidence.
+This theorem proves two compatible organizations. On `C`, THM-4156 owns the
+zero-newcomer simplex, THM-4191 the one-newcomer cone, and THM-4211 the
+fixed-50 star edges. On `P` and the pairs `(9a)`, THM-4203 owns the zero block,
+THM-4191 the labelled one blocks, and THM-4207/4211 the two block. The new
+content is that these inputs glue without losing newcomer incidence and admit
+the exact ordinal ranks `(26)--(28)`.
 
-It does **not** prove a leaf-leaf edge `{r,s}`, any three-newcomer face,
-replacement of the center `50`, arbitrary two-newcomer safety on `C`, entry
-of an arbitrary LRC(14) instance into the charts, or full LRC(14).
+It does **not** prove a leaf-leaf edge `{r,s}` in the arbitrary star, any
+three-newcomer face, replacement of the center `50`, arbitrary two-newcomer
+safety on `C` or `P`, entry of an arbitrary LRC(14) instance into the charts,
+or full LRC(14).

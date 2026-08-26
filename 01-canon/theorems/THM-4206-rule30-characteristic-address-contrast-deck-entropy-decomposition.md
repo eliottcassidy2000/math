@@ -28,6 +28,7 @@ related:
   - THM-4047-rule30-left-front-affine-monodromy-clock
   - THM-4050-rule30-half-arc-marked-cylinder-and-radius-nine-hostile
   - THM-4065-rule30-temporal-cylinder-transfer-infinite-zero-columns-and-next-zero
+  - THM-4210-rule30-lossless-dyadic-block-current-cartier-tree
 script: 04-computation/rule30_characteristic_address_contrast_deck_thm4206.py
 output: 05-knowledge/results/rule30_characteristic_address_contrast_deck_thm4206.out
 script_sha256: 084b7fdc65a1dcc712e9575aa6aa48f554b390c1f8fa06a74be76930debad7df
