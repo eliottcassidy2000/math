@@ -1,5 +1,49 @@
 # Script Results Index
 
+- `tournament_order_eleven_large_module_centrality_thm4144.py`, exact C++
+  engine, and independent clean-room C++ audit -> concordant complete
+  substitution atlas [THM-4144 FINITE-EXACT + VERIFIED-EXACT + INDEPENDENTLY
+  AUDITED]. Every strong order-eleven tournament with a homogeneous module of
+  size `3..9` has only central rational and exact-coset Johnson support-floor
+  optimizers. All `4,055,870` marked quotient/block construction rows are
+  strong and pass both gates; these are presentations, not target-class
+  counts. The sharp tilt is `3201028/5617819<1` and the minimum strict
+  central-over-outer coset margin is `380`. A sink deletion hostile proves
+  strongness is load-bearing. The exact residual is homogeneous pairs plus
+  prime tournaments; actual-maximizer centrality is not claimed. Primary
+  Python/engine/output
+  SHA-256:
+  `e72c8710a5de2aad77e7710880857f1b47148adf82b6fb4278417a30a982edfd` /
+  `03dfb092830313d71d41c35dcf7fb7d300db9850bbd52b1291ace7e674bf63bc` /
+  `ae29c3253ae2e21c4119e5a4fc6720fd55117b082a6c285a58303fa4ce0bff2e`;
+  independent source/output:
+  `06b53688edcc3f37f0c3f583a7af5fe5eda58ebad663da9302291342415868d6` /
+  `6020c78ab6c6fe1f52704453b466c6fe1eff08489fee07948a62653f2fd8d28f`;
+  semantic ledgers:
+  `4c7ca82098f748137cc99e52a10b47c5eb59b405746c9daf20b664701bed10c9` /
+  `6516491b7097782ed50e200bdde26b032109f7275e95c5d5cd8c506c3a292829`.
+
+- `jc23_two_term_collision_wall_critical_boundary_monodromy_thm4143.py`
+  and independent clean-room SymPy audit -> concordant exact mechanisms
+  [THM-4143 PROVED RELATIVE TO THM-3827/4053/4103/4120/4122/4130/4138/4141
+  + VERIFIED-EXACT + INDEPENDENTLY AUDITED; JC(2) OPEN]. On the live
+  exact-`M=8` two-term wall `delta*theta!=0`, `delta+theta=0`, the `Phi=0`
+  stratum fails exact critical-value elimination. The `K!=0` and `K=0`
+  strata have critical lengths `19,17`, normalized infinity packets
+  `(6,6,3,2,2,1)` and `(6,6,5,1)`, and no compatible transitive monodromy
+  response. Together with THM-4130/4138/4141, this empties THM-4053's full
+  exact-weight-eight trichotomy on the live reduced `(2,3)` seam; `M>=9`,
+  entry, other cells, `JC(2)`, and `DC(2)` remain open. Primary script/output
+  SHA-256:
+  `c5a711a8852ad0d1a9e15c794c7f9b513ee1fb1238d7d2dac2686ab9ea39d03b` /
+  `ffd874eab873bbbaf989b83fd90eef9b6a4f1d7ded3f1512b5463414029329fd`;
+  independent:
+  `493529db444b7b0665c55549929ebaf80101cc20f194428086e7e3476ebb76a2` /
+  `9b35bed2a4cdf1458bbbc10a1d26ae6d0d6cea0487b57bd707553bd65b0a85db`;
+  semantic ledgers:
+  `b91c8b2d1205fb15b7d5c7a77e81d30a4bb0fc0442c6756ea8afdd98f1b15d77` /
+  `1d2e2cd6d6fde167cdf32e8c27b273b1e5aae82a9067471ff6ad6369f9049d63`.
+
 - `lrc14_common_safe_arc_clock_pool_odd_tail_completion_thm4142.py` and
   independent clean-room referee -> concordant exact mechanisms [THM-4142
   PROVED ELEMENTARY COMMON-CERTIFICATE FAMILY + VERIFIED-EXACT +
@@ -67,8 +111,10 @@
   independent full-profile digest:
   `8b2d93cd83ccafa86315b540cbeba5338812ad4d6393712bd403163b954ebab9`.
   Together with THM-4135 this proves support-floor centrality through order
-  ten. Order eleven remains open; THM-4133 refutes the all-order extension at
-  twelve, and no central actual-maximizer theorem follows.
+  ten. THM-4144 later closes the order-eleven homogeneous-module strata of
+  sizes `3..9`; pair-module and prime strata remain. THM-4133 refutes the
+  all-order extension at twelve, and no central actual-maximizer theorem
+  follows.
 
 - `lrc14_fixed_body_universal_odd_tail_completion_thm4136.py` and independent
   active-wall clean-room referee -> concordant exact mechanisms [THM-4136
@@ -115,9 +161,9 @@
   `5ed81bd2ab3054d1a05471c42fe724c14eb0df278dbc3ee3b7d6d38253fff530` /
   `b217807222b0b8cd2b2234f37a9bf40129469671ff64d6ea28dd0fcd88657b04`;
   semantic: `0b3d2c65723e0ecc78cbf02d1735320794a6bd6e5f7c3a371ee94432e19c5b49`.
-  THM-4137 later extends the positive range through order ten; order eleven
-  remains unclassified, while THM-4133 refutes the all-order extension at
-  order twelve.
+  THM-4137 later extends the positive range through order ten, and THM-4144
+  closes order-eleven homogeneous modules of sizes `3..9`; pair and prime
+  strata remain, while THM-4133 refutes the all-order extension at twelve.
 
 - `jc23_delta_v_collision_wall_strict_transform_thm4134.py` and independent
   rational-coordinate elimination audit -> concordant semantic ledgers
@@ -202,7 +248,8 @@
   `6efb87263c698375a1ce5da57251434ad3f71fe01060db96fa54d19b8a340542`;
   semantic: `8e5ef116e577c3d3ab5dd4bea50953581a457ffbaae4f80504060c8793fed578`.
   THM-4135/4137 extend the positive range through order ten, while THM-4133
-  refutes the all-order extension at order twelve. Order eleven,
+  refutes the all-order extension at order twelve. THM-4144 closes
+  order-eleven homogeneous modules of sizes `3..9`; pair/prime strata,
   actual-maximizer classification, and intervals remain open.
 
 - `jc23_theta_only_extremal_seam_critical_monodromy_thm4130.py` and independent
