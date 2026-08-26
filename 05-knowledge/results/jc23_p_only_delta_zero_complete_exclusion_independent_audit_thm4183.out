@@ -1,0 +1,12 @@
+P_ONLY_DELTA_ZERO_INDEPENDENT_SOURCE_AUDIT
+chart=(s,p);critical_pair=(A,B);hessian_bridge=ideal_zero
+source_resultants=p^2*R20_or_p^2*R19
+critical_lengths=20+4:24;19+4:23
+normal_escape=v=1/p~-5*Theta/(6*K0)
+polygons=Theta_nonzero:(28,10,10);Theta_zero:(27,9,10)
+Theta_zero_blows_down_indices_3_plus_5_to_7
+packets=(8,5,4,3,2,2,1);(8,7,4,2,2,1)
+responses=all_full_and_finite_bounds_strict
+eta_zero=exact_M9_scope_exit
+checks=91
+verdict=INDEPENDENT_P_ONLY_DELTA_ZERO_ACCEPT

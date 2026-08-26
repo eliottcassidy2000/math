@@ -1,0 +1,12 @@
+P_ONLY_DELTA_ZERO_PRIMARY_EXACT_CERTIFICATE
+wall=zeta:0,Delta:0,eta!=0;Phi_arbitrary
+rows=Theta_nonzero_or_Theta_zero
+bridge=T*detD(f,h)-detHess(G)-f*G_XT=0
+critical_degrees=Theta_nonzero:20;Theta_zero:19
+critical_lengths=Theta_nonzero:24;Theta_zero:23
+normal_escape=u=1/T~-25*Theta^4/(324*K0^2*eta^2)
+packets=Theta_nonzero:(8,5,4,3,2,2,1);Theta_zero:(8,7,4,2,2,1)
+carrier=K0*(s*p)^2=q-1/2;degree=2;beta=2
+responses=full_and_finite_bounds_strict_in_both_rows
+checks=49
+verdict=P_ONLY_DELTA_ZERO_CLOSES
