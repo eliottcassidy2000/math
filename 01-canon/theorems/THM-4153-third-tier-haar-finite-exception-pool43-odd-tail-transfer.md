@@ -6,10 +6,12 @@ status: >
   VERIFIED-EXACT + INDEPENDENT INTERVAL AUDIT; LRC(14) OPEN. Haar measure
   at least 4/91 excludes every primitive odd tail ratio except an explicit
   eleven-ratio set. One positive safe component reduces those ratios to
-  finite odd-scale banks. An explicit 43-label pool closes its full bank at
-  one clock and supplies 5,752,004,349 eleven-body families, 5,751,751,249
-  outside the current THM-4148 min/max width gate. Arbitrary bodies,
-  parity-class entry, and LRC(14) remain OPEN.
+  finite odd-scale banks. The explicit 43-label pool closes its full bank at
+  one Haar-sidecar clock and has 5,752,004,349 eleven-body subfamilies,
+  5,751,751,249 outside the current THM-4148 min/max width gate. THM-4154
+  proves that this concrete pool-family safety was already inherited from
+  the small-denominator/divisor sieve. Arbitrary bodies, parity-class entry,
+  and LRC(14) remain OPEN.
 source: codex-lrc14-planar-jc-breakthrough-20260825
 depends_on:
   - THM-2061-lrc14-dyadic-two-tail-folded-seam
@@ -19,6 +21,7 @@ depends_on:
 related:
   - THM-4142-common-safe-arc-clock-pool-universal-odd-tail-lrc14-completion
   - THM-4148-first-window-width-universal-odd-tail-lrc14-transfer
+  - THM-4154-mod-six-fixed-clock-and-haar-pool-inheritance-correction
 script: 04-computation/lrc14_third_tier_haar_finite_exception_pool43_transfer_thm4153.py
 output: 05-knowledge/results/lrc14_third_tier_haar_finite_exception_pool43_transfer_thm4153.out
 independent_audit_script: 04-computation/lrc14_third_tier_haar_finite_exception_pool43_transfer_thm4153_independent_audit.py
@@ -186,7 +189,7 @@ scale inside the bank, `(4)` keeps both tails safe and `y_(p,q,t) in G_H`
 keeps the doubled body safe. This contradicts failure and proves `(5)`.
 **QED.**
 
-## 4. Explicit pool and one-clock closure
+## 4. Exact pool geometry and Haar-sidecar clock; safety inherited
 
 Put
 
@@ -195,6 +198,18 @@ P={1,2,4,5,8,10,16,17,19,20,23,25,29,31,32,34,38,40,
    41,43,47,50,51,53,58,62,64,67,69,71,73,75,76,80,
    82,86,89,93,95,111,141,159,285}.                    (14)
 ```
+
+THM-4152's subpool has no multiple of `6`, and each new label satisfies
+
+```text
+111 mod 6=159 mod 6=285 mod 6=3.
+```
+
+Hence `P intersect 6Z=empty`. THM-4154's fixed phase `x=1/12` already gives
+body clearance at least `1/6` and odd-tail clearance at least `1/12` for
+every row over this pool. The geometry and clock below remain an exact
+independent realization of the third-tier criterion, not the first proof of
+the concrete pool-family safety.
 
 This is THM-4152's pool plus `111,159,285`. Its exact safe-set arrangement
 has `4,776` walls and `46` positive-length components, with
@@ -239,7 +254,9 @@ The smallest tail gap across the entire bank is
 ```
 
 Therefore `2P union {a,b}` is safe for every distinct positive odd pair.
-Deleting body labels preserves the certificate.
+Deleting body labels preserves the certificate. This conclusion is factual,
+but THM-4154's simpler common clock already proves it without the Haar or
+finite-exception calculation.
 
 ## 5. Counts, boundary, and loss ledger
 
@@ -249,9 +266,12 @@ The pool supplies
 binom(43,11)=5,752,004,349                              (19)
 ```
 
-eleven-body families. Since the 40-label pool is literally contained in
-`P`, the increment is `3,440,202,909`. Inside precisely the universe of
-eleven-subsets of `P`, the THM-4148 inequality
+eleven-body families. This hereditary count is exact, but all of its members
+were already covered by THM-366 and THM-4154's explicit `x=1/12` witness;
+THM-2061's divisor pin records the same necessary condition in the normalized
+seam. Since the 40-label pool is literally contained in `P`, the increment
+is `3,440,202,909`. Inside precisely the universe of eleven-subsets of `P`,
+the THM-4148 inequality
 
 ```text
 27(13 min H-max H)>=4 min H max H                       (20)
@@ -263,9 +283,11 @@ made.
 
 The `4/91` boundary is inclusive because compact-to-proper-open containment
 closes equality. Below it, the five ratios in `(10)` become genuine
-exceptions. The present clock is hostile there: for `(5,13)` it fails at
-every residual scale `1,3,5,7`. A fourth tier therefore needs another clock
-or a different pool/clock pair.
+exceptions to the **scalar Haar filter**. The present Haar-sidecar clock is
+hostile there: for `(5,13)` it fails at every residual scale `1,3,5,7`.
+Thus a fourth tier along this specific Haar/clock ladder needs another
+sidecar. This is method telemetry only: it is not a hostile row for `P`,
+because THM-4154's `x=1/12` clock closes every odd ratio and scale.
 
 ```text
 source:       complete closed body-safe set G_H
@@ -274,14 +296,15 @@ map:          Haar mass -> ratio filter; component width -> scale filter
 preserved:    total mass, strict/open type, labelled ratio, width, clocks
 destroyed:    component addresses and owners at the scalar stage
 sidecar:      one addressed component plus E-indexed clocks
-positive:     P closes all E-banks with one clock
-hostile:      that clock fails the next (5,13) bank
-next test:    two-clock covering of the five equality-ratio banks.        (21)
+positive:     the Haar-sidecar clock closes all E-banks
+hostile:      that sidecar fails the next (5,13) bank, but P is safe at 1/12
+next test:    only for the abstract ladder, cover five equality-ratio banks. (21)
 ```
 
-No pool maximality or threshold optimality is claimed. The theorem does not
-handle mixed/even tails, physical entry into the parity seam, arbitrary
-bodies, or LRC(14).
+No pool maximality or threshold optimality is claimed. THM-4154 supersedes
+only the novelty claim for the explicit pool families, not the abstract
+third-tier transfer. This theorem does not handle mixed/even tails, physical
+entry into the parity seam, arbitrary bodies, or LRC(14).
 
 ## 6. Exact replay
 

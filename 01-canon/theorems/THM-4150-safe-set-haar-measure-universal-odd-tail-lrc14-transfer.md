@@ -6,10 +6,12 @@ status: >
   INDEPENDENT IMPLEMENTATION AUDIT; LRC(14) OPEN. Every finite positive body
   H whose complete 1/14-safe set has Haar measure at least 4/63 accepts every
   pair of distinct positive odd tails after doubling. The cross-comb bound
-  4/63 is sharp and has unique primitive equality ratio (1,9). An explicit
-  33-speed pool supplies 193,536,720 eleven-body families, of which exactly
-  193,328,720 fail THM-4148's stated min/max width gate. Arbitrary bodies,
-  parity-class entry, and LRC(14) remain open.
+  4/63 is sharp and has unique primitive equality ratio (1,9). The explicit
+  33-speed pool has exactly 193,536,720 eleven-body subfamilies, of which
+  193,328,720 fail THM-4148's stated min/max width gate, but THM-4154 proves
+  that this concrete pool-family safety was already inherited from the
+  small-denominator/divisor sieve. Arbitrary bodies, parity-class entry, and
+  LRC(14) remain open.
 source: codex-lrc-multiwindow-probe-20260825
 depends_on:
   - THM-4136-fixed-body-universal-odd-tail-lrc14-completion
@@ -17,6 +19,7 @@ related:
   - THM-2061-lrc14-dyadic-two-tail-folded-seam
   - THM-4142-common-safe-arc-clock-pool-universal-odd-tail-lrc14-completion
   - THM-4148-first-window-width-universal-odd-tail-lrc14-transfer
+  - THM-4154-mod-six-fixed-clock-and-haar-pool-inheritance-correction
 script: 04-computation/lrc14_safe_set_haar_measure_odd_tail_transfer_thm4150.py
 output: 05-knowledge/results/lrc14_safe_set_haar_measure_odd_tail_transfer_thm4150.out
 independent_audit_script: 04-computation/lrc14_safe_set_haar_measure_odd_tail_transfer_thm4150_independent_audit.py
@@ -50,13 +53,17 @@ INDEPENDENT IMPLEMENTATION AUDIT; LRC(14) REMAINS OPEN.**
 
 The closest proved measure mechanism is THM-2061, Sections 1 and 4: its
 folded-seam obstruction already gives the sharp nonstrict cap `4/63`, with
-primitive equality ratio `(1,9)`. The new content here is the strict upgrade
+primitive equality ratio `(1,9)`. The new abstract content here is the strict
+upgrade
 
 ```text
 failed dyadic seam  =>  mu(G_H)<4/63,
 ```
 
-together with a Fourier--Bernoulli dual proof and the hereditary pool census.
+together with a Fourier--Bernoulli dual proof. The exact pool geometry and
+census below remain valid, but THM-4154 corrects their significance: every
+label in that concrete pool is nonzero modulo `6`, so its family-safety
+corollary was already covered by THM-366 and THM-2061.
 
 THM-4148 keeps one connected first window and forgets every other component
 of the body-safe set. The useful dual operation is to retain all components
@@ -227,7 +234,7 @@ nonempty open subset of the circle has positive Haar measure. But then
 `K=G_H` and `U=m_t^(-1)(C_(p,q))` contradicts `(16)`. This proves `(3)`.
 **QED.**
 
-## 4. A 33-label fragmented pool
+## 4. Exact geometry of a 33-label pool; safety inherited
 
 Let
 
@@ -235,6 +242,13 @@ Let
 P={1,2,4,5,8,10,16,17,19,20,23,25,29,31,32,34,38,
    40,41,43,47,50,51,53,58,62,64,69,71,73,75,76,80}.    (18)
 ```
+
+Literal reduction modulo `6` gives `P intersect 6Z=empty`. Therefore
+THM-4154's fixed phase `x=1/12` already gives body clearance at least `1/6`
+and every odd tail clearance at least `1/12`. The Haar argument below is a
+second, logically independent certificate for this pool and supplies the
+fragmented-safe-set geometry used to test the abstract transfer theorem; it
+is not the first proof of the pool-family safety.
 
 The complete exact wall arrangement of `G_P` has `2,472` distinct walls
 and `46` positive-length components. Direct rational summation gives
@@ -265,6 +279,10 @@ is `1/14`-safe. The pool supplies exactly
 ```text
 binom(33,11)=193,536,720.                               (22)
 ```
+
+This is an exact hereditary census, but not a new coverage count relative to
+the proved divisor sieve: all `193,536,720` bodies were already safe by the
+common `x=1/12` certificate of THM-4154.
 
 The comparison with THM-4148 is made **inside precisely the universe of all
 eleven-subsets of `P`**. For fixed minimum and maximum positions `i<j`,
@@ -332,8 +350,10 @@ hostile:      H_* has 100 components and no component of width 2/189
 decisive test: mu(G_H) versus sharp sup_(p,q)mu(C_(p,q))=4/63. (28)
 ```
 
-This theorem closes a large full-safe-set family and includes minimum-one
-bodies. It does not prove a uniform lower bound `mu(G_H)>=4/63`, classify
+This theorem proves a full-safe-set transfer criterion and includes
+minimum-one bodies in its exact test pool. THM-4154 supersedes only the claim
+that the explicit pool contributes previously uncovered families. This
+theorem does not prove a uniform lower bound `mu(G_H)>=4/63`, classify
 bodies below the threshold, handle mixed/even tail parities, or provide
 physical entry into the `11+2` odd-tail branch. It does not prove LRC(14).
 

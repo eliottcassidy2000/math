@@ -9,6 +9,41 @@ Format per entry:
 - Why it was wrong
 - The correct framing
 
+## MISTAKE-511 (2026-08-25, Haar odd-tail pool promotions) -- exact new certificates were mistaken for new frontier families after the divisor clock had already closed every advertised pool row
+
+- **What failed:** THM-4150, THM-4152, and THM-4153 proved genuine abstract
+  Haar/component/clock transfer criteria and then advertised their explicit
+  33-, 40-, and 43-label pools as large new hereditary families outside the
+  THM-4148 width gate.  The inheritance pass named THM-2061 but did not apply
+  its least-used divisor pin to the literal pool labels.  Every label in all
+  three pools is nonzero modulo `6`.
+- **Minimal witness / first failed implication:** for any subbody `H` of any
+  of those pools and any positive odd tails `a,b`, the thirteen-speed row
+  `2H union {a,b}` contains no multiple of `12`.  At the single clock
+  `x=1/12`,
+
+  ```text
+  ||2hx||=||h/6||>=1/6,       ||ax||,||bx||>=1/12>1/14.
+  ```
+
+  Thus THM-366's small-denominator witness already closes every one of the
+  advertised rows, with uniform surplus `1/84`; equivalently, THM-2061 says
+  a surviving dyadic-seam core must contain a multiple of `6`.
+- **Repair / strongest survivor:** THM-4150's sharp compact-open Haar
+  criterion and Fourier--Bernoulli formula, THM-4152's one-exception
+  component-width criterion, and THM-4153's eleven-exception finite-bank
+  criterion all remain proved, as do their exact arrangements and counts.
+  Their explicit pool applications are correct alternative certificates but
+  are **not new LRC(14)-frontier coverage**.  THM-4154 records the elementary
+  fixed clock and the corrected scope.  A genuinely frontier-facing odd-tail
+  pool must at minimum force every selected eleven-body to contain a multiple
+  of `6` (and satisfy the other divisor pins); an all-eleven-subset pool can do
+  that only if it contains at most ten labels outside `6Z`.
+- **Reusable rule:** after constructing a large hereditary family, run the
+  complete inherited small-denominator sieve on the resulting physical speed
+  rows before comparing it only with the newest certificate.  “Outside this
+  width gate” does not mean “outside existing canon.”
+
 ## MISTAKE-510 (2026-08-25, concurrent first-window boundary promotion) -- a stale base duplicated a theorem already strengthened upstream
 
 - **What failed:** THM-4149 was derived and promoted from a local copy in
