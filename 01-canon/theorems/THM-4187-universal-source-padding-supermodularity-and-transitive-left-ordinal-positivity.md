@@ -270,6 +270,28 @@ A nonempty no-sink tournament has order at least three, so its initial value
 is already strict.  This proves `(19)`, hence `(OS+)` for every transitive
 left factor at every order. QED.
 
+### Transitive-prefix monotonicity and a source-free reduction
+
+The same local theorem applies before an arbitrary left core.  For all
+`a>=1` and nonempty `B,C`, equation `(2)` gives
+
+```text
+R_+(P_a triangleright B,C)
+ =R_+(B,C)+Theta(P_a,B,C)>=R_+(B,C),                    (20a)
+```
+
+with equality exactly at `(a,B,C)=(1,1,1)`.  In particular, when `C` has no
+sink the inequality is strict.  If general `(OS+)` fails, choose a
+counterexample with the left factor of minimum order.  That factor cannot
+have a source: deleting a universal source writes it as `1 triangleright B`,
+and `(20a)` produces a smaller counterexample.  Equivalently, its first
+strong component is not a singleton and therefore has order at least three.
+
+This reduces the open problem to **source-free left factors**; it does not
+reduce it to strong left factors.  The cycle-first hostiles in Section 5 show
+that source-free left factors can already carry negative curvature when the
+right factor has a sink.
+
 ### Converse dual
 
 Converse preserves `H`, `D`, and the symmetric capacity coordinates, reverses
