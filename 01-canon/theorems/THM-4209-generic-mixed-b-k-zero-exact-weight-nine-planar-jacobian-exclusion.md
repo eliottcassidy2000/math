@@ -2,24 +2,25 @@
 id: THM-4209
 title: "Generic mixed-B K-zero exact-weight-nine planar Jacobian exclusion"
 status: >
-  PROVED RELATIVE TO THM-4147/4192 + VERIFIED-EXACT + INDEPENDENTLY
+  PROVED RELATIVE TO THM-4147/4176/4192 + VERIFIED-EXACT + INDEPENDENTLY
   SOURCE-AUDITED. On the live exact-weight-nine b=d=0 reduced (2,3) seam at
   K=0 and Delta=5696/105, every genuinely mixed row with
   eta*zeta*(eta+zeta)!=0 is excluded for arbitrary Phi,Theta, without a
-  critical-discriminant or projection-squarefreeness hypothesis. The
-  anti-diagonal zeta=-eta is also excluded for eta!=0, arbitrary Phi, and
-  Theta!=-Delta. Direct source resultants give residual lengths 21 and 19;
-  four universal points give critical lengths 25 and 23. Complete packets
-  and the pure cubic carrier force strict finite/full monodromy deficits.
-  The anti repeated-tangent wall Theta=-Delta, other mixed walls, entry,
-  M>=10, JC(2), and DC(2) remain OPEN.
+  critical-discriminant or projection-squarefreeness hypothesis. The direct
+  anti-diagonal calculation is an independently verified redundancy check:
+  THM-4176 had already excluded the whole zeta=-eta, eta!=0 wall, including
+  Theta=-Delta at K=0. The genuinely mixed source resultant has residual
+  length 21 and total critical length 25; its complete packet and pure cubic
+  carrier force strict finite/full monodromy deficits. The unresolved K=0
+  coefficient locus is confined to critical walls in the Y-only row
+  eta=0,zeta!=0. Entry, M>=10, JC(2), and DC(2) remain OPEN.
 source: codex-pair-entry-jc-mixed-20260826
 depends_on:
   - THM-4147-generic-exact-weight-nine-planar-jacobian-monodromy-exclusion
+  - THM-4176-complete-repeated-top-wall-planar-jacobian-exclusion
   - THM-4192-complete-p-only-k-zero-planar-jacobian-exclusion
 related:
   - THM-4155-generic-y-only-delta-zero-weight-nine-planar-jacobian-exclusion
-  - THM-4176-complete-repeated-top-wall-planar-jacobian-exclusion
 script: 04-computation/jc23_k0_generic_mixed_b_exclusion_thm4209.py
 output: 05-knowledge/results/jc23_k0_generic_mixed_b_exclusion_thm4209.out
 independent_audit_script: 04-computation/jc23_k0_generic_mixed_b_exclusion_independent_audit_thm4209.py
@@ -47,7 +48,7 @@ independent_audit: >
 
 # THM-4209 -- generic mixed-B K-zero exact-weight-nine planar Jacobian exclusion
 
-**PROVED RELATIVE TO THM-4147/4192 + VERIFIED-EXACT + INDEPENDENTLY
+**PROVED RELATIVE TO THM-4147/4176/4192 + VERIFIED-EXACT + INDEPENDENTLY
 SOURCE-AUDITED; JC(2) AND DC(2) REMAIN OPEN.**
 
 ## 1. Exact statement and inheritance pass
@@ -64,24 +65,28 @@ Thus the wall `K=0` is exactly
 Delta=5696/105.                                       (2)
 ```
 
-> **Theorem.** No normalized exact-weight-nine source on either of the
-> following coefficient strata is a nonautomorphic planar Keller pair:
+> **Theorem.** No normalized exact-weight-nine source on the following
+> coefficient stratum is a nonautomorphic planar Keller pair:
 >
 > ```text
-> G: eta*zeta*(eta+zeta)!=0, Phi and Theta arbitrary;
->
-> A: zeta=-eta, eta!=0, Theta!=-Delta, Phi arbitrary.  (3)
+> G: eta*zeta*(eta+zeta)!=0, Phi and Theta arbitrary.   (3)
 > ```
 
 No critical-resultant discriminant, squarefree projected-root condition, or
 separation condition at `T=-1/6` is imposed. Multiple roots of a critical
 projection are allowed.
 
-THM-4147 already excludes the critical-open part of these rows. The advance
+THM-4147 already excludes the critical-open part of this row. The advance
 here is to replace projection genericity by the complete reduced source
 critical scheme, closing every projection-collision wall inside `(3)`.
 THM-4192 supplies the closest rational-source precedent on the `zeta=0`
 wall.
+
+The anti-diagonal `zeta=-eta`, `eta!=0` is not a second new stratum.
+THM-4176 already excludes that entire repeated-top wall for every
+`Phi,Theta` when `Delta!=0`; condition `(2)` makes `Delta` nonzero. The
+anti-diagonal source calculations retained below are an independent
+redundancy check, not a scope extension. MISTAKE-519 records the correction.
 
 The inheritance pass is:
 
@@ -177,7 +182,7 @@ Both endpoints are units under row `G` of `(3)`, for every `Phi,Theta`.
 The residual source critical scheme therefore has length `21`, counted with
 intersection multiplicity.
 
-### 3.2 Anti-diagonal row
+### 3.2 Anti-diagonal redundancy check
 
 One must specialize the source pair first and recompute its resultant;
 specializing only a frozen generic leading-degree determinant would be
@@ -190,8 +195,10 @@ R_19(0)=-1,259,712 eta^3,
 [p^19]R_19=1,327,104 eta^5(Delta+Theta)^4.             (15)
 ```
 
-These are units exactly under row `A` of `(3)`. The residual source critical
-length is `19`, with `Phi` arbitrary.
+These are units when `eta*(Delta+Theta)!=0`. The residual source critical
+length is `19`, with `Phi` arbitrary. This independently recovers the generic
+row-A ledger of THM-4176 after imposing `K=0`; it is not needed for the new
+theorem `(3)`.
 
 ### 3.3 Reducedness and the four universal points
 
@@ -307,7 +314,7 @@ ind([X,Y])<=2(n-L_G)=2(27-25)=4<delta_G=20.            (27)
 Both responses are impossible. This proves row `G` of `(3)` for every
 `Phi,Theta`, including every critical-projection collision wall.
 
-## 6. Anti-diagonal response contradiction
+## 6. Anti-diagonal redundancy response
 
 On `zeta=-eta`, the two raw top branches merge. THM-4147's local coordinate
 calculation has tangent cone
@@ -344,12 +351,13 @@ In the full response,
 ind([X,Y])<=2(n_A-L_A)=2(25-23)=4<delta_A=18.          (32)
 ```
 
-The identity-handle case again has index only `3<18`. This proves row `A`
-of `(3)` without a critical-open condition.
+The identity-handle case again has index only `3<18`. This reproduces the
+`K=0`, `Theta!=-Delta` slice of THM-4176 by a separate source calculation.
+It adds no coefficient scope to `(3)`.
 
-## 7. The next repeated-tangent frontier
+## 7. Repeated-tangent audit and the true `K=0` frontier
 
-The excluded anti wall
+The anti specialization
 
 ```text
 zeta=-eta, eta!=0, Theta=-Delta                         (33)
@@ -367,10 +375,17 @@ Phi=0:  residual degree 15,
          =229,431,851,352,064 eta^5/50,625.            (34)
 ```
 
-These resultants are **VERIFIED-EXACT**, but no boundary packet or response
-theorem is asserted on `(33)`. The tangent singularity must be normalized
-anew before the critical degrees can enter a monodromy budget. This is the
-sharp next mixed `K=0` frontier.
+These resultants are **VERIFIED-EXACT**. They are the `K=0` specializations
+of THM-4176's complete row-B/row-C degree towers, whose normalized packets
+are respectively
+
+```text
+(6,6,4,2,2,2,1),              (5,5,4,2,2,2,1).
+```
+
+Thus `(33)` is already excluded by THM-4176. A proof confined to this file
+would still have to normalize the repeated tangent before using `(34)` in a
+monodromy budget; the dependency supplies exactly that missing step.
 
 Other hostile specializations have the expected type changes:
 
@@ -380,7 +395,16 @@ zeta=0:     residual degree 18;
 eta=zeta=0: exits exact weight nine.                   (35)
 ```
 
-They are outside `(3)` and are not silently inferred from the generic
+The `zeta=0`, `eta!=0` specialization is already closed by THM-4192, while
+`eta=zeta=0` exits exact weight nine. Consequently the genuinely unresolved
+`K=0` coefficient locus is confined to the Y-only row
+
+```text
+eta=0,                         zeta!=0.                 (36)
+```
+
+THM-4147 closes its critical-open part; its residual critical walls remain
+open. None of these specializations is silently inferred from the generic
 resultant.
 
 ## 8. Audit and replay
@@ -406,7 +430,10 @@ Compare stdout with the corresponding frozen outputs. Normal and `python3
 
 ## 9. Strict scope
 
-This theorem removes the critical-open hypothesis only on the two mixed
-`K=0` strata in `(3)`. It does **not** close the anti repeated-tangent wall
-`(33)`, `eta=0`, `zeta=0`, other coefficient cells, entry into the reduced
-seam, `M>=10`, JC(2), or DC(2).
+This theorem newly removes the critical-open hypothesis only on the genuinely
+mixed `K=0` stratum `(3)`. Its anti-diagonal computations are independently
+verified redundancy for THM-4176. Together, THM-4192 closes the P-only row,
+THM-4176 closes the anti-diagonal row, this theorem closes the genuinely mixed
+row, and THM-4147 closes the critical-open Y-only row. The remaining `K=0`
+coefficient frontier is the Y-only critical-wall locus in `(36)`. Entry into
+the reduced seam, `M>=10`, JC(2), and DC(2) remain open.

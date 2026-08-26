@@ -366,8 +366,11 @@ lift/phase clocks.
   THM-4183/4186/4189/[4192](../01-canon/theorems/THM-4192-complete-p-only-k-zero-planar-jacobian-exclusion.md)
   close all P-only `zeta=0,eta!=0`.
   [THM-4209](../01-canon/theorems/THM-4209-generic-mixed-b-k-zero-exact-weight-nine-planar-jacobian-exclusion.md)
-  closes mixed `K=0` except the anti repeated tangent `Theta=-Delta`, whose
-  exact residual drops are `17/15`. Other cells, `M>=10`, and entry stay open.
+  closes genuinely mixed `K=0`; THM-4176 already closes the whole
+  anti-diagonal, including the repeated-tangent residual drops `17/15`.
+  Together with THM-4192 and THM-4147, the unresolved `K=0` coefficient locus
+  is confined to Y-only critical walls. Other cells, `M>=10`, and entry stay
+  open.
   Exceptional quartic: THM-3703/3737 give grammar/image, THM-4034 the
   conductor, and THM-4039/4043/4046 reach `J_7`, obstruct `J_8`, and close
   critical `H`. [THM-4054](../01-canon/theorems/THM-4054-exceptional-affine-simple-zero-retained-packet.md)

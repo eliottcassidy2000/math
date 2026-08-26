@@ -9,6 +9,35 @@ Format per entry:
 - Why it was wrong
 - The correct framing
 
+## MISTAKE-519 (2026-08-26, THM-4209 repeated-top routing) -- a newly recomputed specialization was called open after an older complete theorem had already closed it
+
+- **What failed:** THM-4209 correctly recomputed the `K=0` anti-diagonal
+  source resultant and recorded further residual drops at
+  `Theta=-Delta`, but its status, scope section, and current navigation called
+  that repeated-tangent slice open. The same theorem also presented the
+  `Theta!=-Delta` anti row as new coefficient scope.
+- **Minimal witness / first failed implication:** THM-4176 quantifies over the
+  entire repeated-top wall `zeta=-eta` with `eta*Delta!=0`, for arbitrary
+  `Phi,Theta`, and has no residual-discriminant or leading-degree exception.
+  On `K=0`, one has `Delta=5696/105!=0`, so THM-4176 includes both
+  `Theta!=-Delta` and `Theta=-Delta`. Its row-B/row-C packets are exactly
+  `(6,6,4,2,2,2,1)` and `(5,5,4,2,2,2,1)`, matching THM-4209's residual
+  degree drops `17/15`. Recomputing a specialization did not make the older
+  universal quantifier disappear.
+- **Repair / strongest survivor:** THM-4209's genuinely new theorem is the
+  all-critical-wall exclusion for `eta*zeta*(eta+zeta)!=0` at `K=0`. Its
+  anti computations survive as independent verification of THM-4176, not as
+  a new theorem or open frontier. With THM-4192 closing P-only `K=0` and
+  THM-4147 closing the critical-open Y-only row, the unresolved `K=0`
+  coefficient locus is confined to Y-only critical walls
+  `eta=0,zeta!=0`. Entry, other reduced cells, `M>=10`, JC(2), and DC(2)
+  remain open.
+- **Reusable rule:** before promoting a specialized computation or naming its
+  complement open, search older theorems by the ambient defining equations
+  and quantifiers, not only by the newest theorem's title. A complete
+  coefficient-wall theorem subsumes every later parameter specialization,
+  even when the later calculation uses a different projection or resultant.
+
 ## MISTAKE-518 (2026-08-26, THM-4202 defect scope) -- an obsolete odd-order gate survived an all-order dependency
 
 - **What failed:** THM-4202 correctly proved an all-order one-sided block
