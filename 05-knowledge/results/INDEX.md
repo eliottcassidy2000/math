@@ -4,23 +4,24 @@
   independent warning-clean C++ audit -> matching exact gates [THM-4148
   PROVED ELEMENTARY FIRST-WINDOW/CROSS-COMB TRANSFER + VERIFIED-EXACT +
   INDEPENDENTLY AUDITED; LRC(14) OPEN]. Every finite positive body `H` with
-  `m=min(H)>=3` and `13/(14M)-1/(14m)>=2/189` has universal `1/14`-safe
+  `13/(14M)-1/(14m)>=2/189` has universal `1/14`-safe
   completion after doubling by every pair of distinct positive odd tails.
-  Grouping by the unique minimum gives exactly `60,301,609,751` certified
-  eleven-body sets, with minima `3..70` and maximum label `80`; `[15,60]`
+  Three explicit clocks each close the residual `m=1,2` cases. Grouping by
+  the unique minimum gives exactly `60,301,653,510` certified eleven-body
+  sets, with minima `1..70` and maximum label `80`; `[15,60]`
   alone supplies `C(46,11)=13,340,783,196`. Forty-six labels is sharp among
   consecutive blocks, with all maximal starts exactly `14..22`. The hostile
   tails `(1,211)` kill opposite endpoint lifts, while moving to
   `y=1/105`, `x=53/105` rescues the full `[15,60]` superbody. Arbitrary
   bodies, entry, and LRC(14) remain open. Primary script/output SHA-256:
-  `c5938e111e5b888a3f6b923bd1457f7b89f15bd127ec90bbd6ae12f1cf0a63cc` /
-  `d7cda26940eb3264ba2ed4381433a3aab54aaa04e7c0bbaad91c692b9588b130`;
+  `73dc8167567c26b6dec37b844b96c6098c082b3526b6947a9f1d405f0b024ab9` /
+  `5d19081b584283fcec3d463611aa4d0158893fc479c2906e378e9acaed9de4d2`;
   independent:
-  `8082615643dcd1ccfad2948d5e7eaf73d39d8c4a173511a6e92131c865c20e28` /
-  `9e5ffed9f249bfc07f46fe8a01fc3a42a64796799215a54f7171effeaa6ca342`;
+  `40b72d5ee4f2b3d815c7c170b3936f794cc2e3cee83840eae81e030a6ca02c02` /
+  `f76d37745ad8470f6efd2df43d9ed9becccbdd1cb84aff343acacf5509db974e`;
   shared semantic SHA-256/FNV-64:
-  `1bed18a18b2747baed31600403926d44e8139ae4aa219698d6eb3401a295f38c` /
-  `56b59e7ee90c92f6`.
+  `088cd3627ef782d74609f7977ab92cad91d2e8e2b5d27332dc4f29a71348239b` /
+  `dd4f72fb4a409a5e`.
 
 - `tournament_rooted_pair_expansion_two_defect_thm4145.py` and independent
   standard-library C++ audit -> matching structural identities [THM-4145
