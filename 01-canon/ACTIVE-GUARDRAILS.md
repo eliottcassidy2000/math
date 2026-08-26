@@ -137,6 +137,8 @@
     saturation index `11!` and is not THM-2052's signed code.
 45. **Small-prime Paley spectra assign no LRC roles.** MISTAKE-228. Fibonacci, apex, rank, and tight/slack labels remain heuristics without a map.
 45a. **Six-edge ambient parity is not quartic parity.** THM-2753: the faithful `S4` action on `E(K4)` lies in `A6`, and transposition/double-transposition one-generator cycle types collide; the three matchings restore sign through `S4/V4=S3`. Retain the opposition/address sidecar, but the full subgroup orbitals do recover it.
+45b. **Presentation cover is not orbit census.** THM-4169's rows retain parent/attachment; automorphisms and root-forgetting merge them. Use Burnside/root-card incidence.
+    The rational gate is strict `2|C|<D`; exact cosets need `(H,c)`.
 ## Sequences and cross-domain transfers
 
 46. **Support is not an indexed multiset.** MISTAKE-209 and THM-2000/2005;

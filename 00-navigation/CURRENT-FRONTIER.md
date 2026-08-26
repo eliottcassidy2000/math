@@ -257,12 +257,14 @@ THM-2070 refutes the general HYP-8890/8895 bypasses.  Transfer
   THM-4111/4115 force unbounded full-cut maxima;
   THM-4123/4127 give central slice gains;
   THM-4128/4131/4135/4137 prove centrality through order ten.
-  [THM-4144](../01-canon/theorems/THM-4144-order-eleven-large-homogeneous-module-johnson-centrality.md)
-  closes module sizes `3..9`; THM-4162/
+  [THM-4144](../01-canon/theorems/THM-4144-order-eleven-large-homogeneous-module-johnson-centrality.md)/4162/
   [4163](../01-canon/theorems/THM-4163-order-eleven-homogeneous-pair-johnson-centrality.md)
-  close `93,559,490` rooted pair presentations (margin `>=380`). Only primes
-  remain. THM-4133 **REFUTES** all-order centrality
-  at twelve; actual maxima and intervals remain **OPEN**.
+  close nonprimes; [THM-4167](../01-canon/theorems/THM-4167-tournament-exposure-capacity-deletion-support-moment-and-parity-holonomy.md)
+  gives deletion holonomy; [THM-4168](../01-canon/theorems/THM-4168-prime-order-eleven-nontrivial-automorphism-johnson-centrality.md)
+  closes `12,155` symmetric primes. [THM-4169](../01-canon/theorems/THM-4169-prime-parent-one-vertex-augmentation-and-quartic-johnson-transfer.md)
+  gives quadratic `(H,c)`, quartic gates, and via **CITED** Schmerl--Trotter a
+  `7,921,973,322`-presentation cover plus critical controls—not an orbit/class
+  count. The asymmetric bank is **OPEN**; THM-4133 refutes order twelve.
   THM-4114 separates positive faces from submodular ear cuts; THM-4118 adds
   exact response gcds and stateful unit-component intervals. At `n=5`, all
   `544` parents have gcd `2` yet gaps, and `400` lack an `M-2` neighbor.
