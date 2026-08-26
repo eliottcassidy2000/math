@@ -1,0 +1,17 @@
+TOURNAMENT_ORDINAL_COCYCLE_PARITY_INDEPENDENT
+labelled_parity_tournaments 1099
+terminal_involution_cover_objects 78418
+pair_direct_transfer_checks 505
+triple_direct_transfer_checks 339
+weighted_cocycle_checks 339
+labelled_no_sink_third_presentations 191250
+theta_negative 0 zero 0
+theta_normalized_minimum 648/9 witness 1,1,3,,,010,648,9
+theta_stream_fnv1a64 ea8fbe3dd275095e
+minimal_hostile_scope_checks 43
+minimal_hostile_negative 2 zero 1
+first_hostile 5,3,1,1,010,,,-216
+closed_form_gate_checks 40
+lollipop_box_checks 110
+lollipop_remainder_minimum 120,1,0
+PASS
