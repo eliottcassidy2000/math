@@ -1,0 +1,17 @@
+LRC14_TRIPLE_DELETION_MATCHING_EVENTUAL_HAAR_THM4170_INDEPENDENT_CPP_20260826
+walls=7134;cells=7133;cell_hist=150,328,518,678,5459,
+triple_banks=2925;stable_edges=1335;stable_cover7=0;stable_cover=();limit_equalities=0
+chosen_matching_cutoff=9700;previous_activation_event=9687;activated_at_9699=665;activated_at_9700=666
+eventual_matching8=((8,84,252),(15,88,95),(40,85,170),(63,176,193),(10,145,290),(42,132,264),(16,168,286),(80,190,240))
+integer_width_endpoint_bound=4060;midpoint_product_bound=32967200;int64_max=9223372036854775807;comparisons_use_int128=1
+matching_edge=(8,84,252);components=148;bank_mass=53623011809/701583054480;limit_surplus=4961689987/2455540690680;discrepancy_bound_B=44500410884160/4961689987;eventual_cutoff=8969
+matching_edge=(15,88,95);components=178;bank_mass=140987531863/1824115941648;limit_surplus=17603497445/6384405795768;discrepancy_bound_B=139153987548576/17603497445;eventual_cutoff=7905
+matching_edge=(40,85,170);components=166;bank_mass=4641131947/59611632080;limit_surplus=6087298409/1877766410520;discrepancy_bound_B=38168476426080/6087298409;eventual_cutoff=6271
+matching_edge=(63,176,193);components=164;bank_mass=23261449/302928780;limit_surplus=7400521/3180752190;discrepancy_bound_B=63874697040/7400521;eventual_cutoff=8632
+matching_edge=(10,145,290);components=162;bank_mass=12058235549/157251374280;limit_surplus=1229956807/550379809980;discrepancy_bound_B=10917738271440/1229956807;eventual_cutoff=8877
+matching_edge=(42,132,264);components=156;bank_mass=354200884867/4560289854120;limit_surplus=49204909241/15961014489420;discrepancy_bound_B=304887950246880/49204909241;eventual_cutoff=6197
+matching_edge=(16,168,286);components=168;bank_mass=4772688913/62044759920;limit_surplus=1591026937/651469979160;discrepancy_bound_B=13401668142720/1591026937;eventual_cutoff=8424
+matching_edge=(80,190,240);components=164;bank_mass=13415915189/175395763620;limit_surplus=1270909207/613885172670;discrepancy_bound_B=12327816528720/1270909207;eventual_cutoff=9700
+q=9699;hyperedges=1351;cover7=0;cover=();greedy_matching=8;matching_first8=((8,10,95),(15,16,252),(20,42,88),(30,85,145),(40,168,170),(60,176,193),(63,80,240),(84,132,264));equalities=0;min_positive=1952954401/7371708549184980;min_negative=361845711/327631491074888
+q=9700;hyperedges=1356;cover7=0;cover=();greedy_matching=8;matching_first8=((8,10,95),(15,16,252),(20,42,88),(30,85,145),(40,132,264),(60,168,170),(63,80,193),(176,190,240));equalities=0;min_positive=6049169/4103414803800;min_negative=1206587/3023568802800
+PASS
