@@ -1,0 +1,11 @@
+THM4161_Y_ONLY_DOUBLE_TOP_ROOT_SECONDARY_WALL=PASS
+checks=42
+Jwall:a^2=-356/15;b=c*a;I~387c^2+80c+40
+node:c!=33/43;boundary=ordinary-node;e=2,2;g8;packet=(8,3,2,2,2,2,2,1)
+node:critical=p6R16=Q16;L20;full22;finite16,beta3;strict
+cusp:c=33/43;boundary=(2,3)-cusp;e=3;g8;packet=(8,3,3,2,2,2,1)
+cusp:critical=p6R14=Q14;L18;full21;finite15,beta3
+cusp-finite:carrier-orbit union>=12;support-sum<=12;overlap=0;origin-index<=3<11
+remaining:triple c=1;inner 387c^2+80c+40=0
+controls=node:c=2;cusp:c=33/43;both-projections-squarefree
+semantic_sha256=8943b86c9bc0ea5ec9643939d57e5ae6f714482b55591a550b9abb3c29bb29ef

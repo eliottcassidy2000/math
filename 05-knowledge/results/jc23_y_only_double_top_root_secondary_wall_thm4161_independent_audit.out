@@ -1,0 +1,9 @@
+THM4161_Y_ONLY_DOUBLE_TOP_ROOT_SECONDARY_WALL_INDEPENDENT_AUDIT=PASS
+checks=41
+quotient=a^2+356/15;b=c*a;I~387c2+80c+40
+alternative=Res_s(A,C0)=p8R16;control=c3;squarefree
+node=disc~-45568*(43c-33)/675;e2,e2;g8;L20;packet=8,3,2,2,2,2,2,1
+cusp=c33/43;y2-(q+1161/80)u3;e3;g8;Res=p8R14;L18
+cusp-finite=n15>m+1;union12;supportsum12;overlap0;origin<=3<11
+controls=node:c=3;cusp:c=33/43;alternative-source-squarefree=yes
+semantic_sha256=1e9ac64e08b9d18ec7560f8e9704c57b8e4d25e10968050ffd13ebe10c75b079

@@ -1,0 +1,10 @@
+THM4164_Y_ONLY_TRIPLE_TOP_ROOT_EXCLUSION=PASS
+checks=57
+triple=C=kappa*(aW-1)^3;I~-a2*(5805a4+1013888)
+generic=Res:p6R16;T56*(6T+1)^2Q16;L20;control=a1
+generic-boundary=smooth-cubic-tangency;e7;g9;packet=8,7,2,2,2,1;responses22/16
+Jwall=a2=-356/15;Res:R15/Q15;L19;both-squarefree
+Jwall-boundary=node;branches=e2,e4;g8;packet=8,4,2,2,2,2,1;responses21/15
+remaining=inner 5805a4+1013888=0
+controls=generic:a=1;Jwall:a=2sqrt(-1335)/15;both-projections-squarefree
+semantic_sha256=a9e1e53b621dabf0e5ebe569c228abfcbda27e65dfb78230415f0dafa763c1d9

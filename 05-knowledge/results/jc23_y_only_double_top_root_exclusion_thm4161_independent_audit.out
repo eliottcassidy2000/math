@@ -1,0 +1,8 @@
+THM4161_Y_ONLY_DOUBLE_TOP_ROOT_INDEPENDENT_AUDIT=PASS
+checks=25
+chart=intrinsic-linear-subresultant;double-root=-B_C/A_C
+alternative-critical=Res_s(A,C0)=p^8*R17;endpoints-live
+local=u-unit-plus-v^2;omega-order=4;merged-index=5
+packet=(8,5,3,2,2,2,1);g=9;L=21;responses=23/17;beta=3
+control=(a,b)=(2,3);source-residual-squarefree=yes
+semantic_sha256=632743f7b69862cb9cc39c0abc80060087ed08c5c45e23141c773e83ec0169be

@@ -1,0 +1,10 @@
+THM4161_Y_ONLY_DOUBLE_TOP_ROOT_EXCLUSION=PASS
+checks=55
+top=kappa*(aW-1)^2*(bW-1);intrinsic=Disc(C)=0,C_nontriple,J_C*I_C!=0
+critical=source:p6R17;normalized:T56*(6T+1)^2*Q17;L=21
+boundary=smooth-quadratic-tangency;u/v2=172*a3*(a-b)/(3J);e=5
+geometry=g9;packet=(8,5,3,2,2,2,1);rational=(8,5,3,1)+cubic=(2,2,2)
+responses=full(n23,comm<=4<16);finite(n17,beta3,capacities14/15/3<16)
+next=J=0 secondary strict transform;triple=a-b=0;inner=I=0
+control=(a,b)=(1,2);source_squarefree=yes;normalized_squarefree=yes
+semantic_sha256=69d972a9d14186b328695dc08804eebffb089449648ff3cd20ddec53c1fd0b25

@@ -1,0 +1,10 @@
+THM4164_Y_ONLY_TRIPLE_TOP_ROOT_INDEPENDENT_AUDIT=PASS
+checks=42
+alternative=Res_s(A,C0)=p8R16;control=a2;squarefree
+generic-boundary=v3+u;smooth;e7;g9;packet=8,7,2,2,2,1;L20
+Jwall=a2=-356/15;alternative=p8R15;control=quadratic-field
+Jwall-boundary=uv+u2+v3;branches=e2,e4;g8;packet=8,4,2,2,2,2,1;L19
+responses=generic22/16;wall21/15;all-finite-and-full-strict
+remaining=inner 5805a4+1013888=0
+controls=generic:a=2;Jwall:a=2sqrt(-1335)/15;alternative-source-squarefree
+semantic_sha256=65935648fd74d7d394a48bb4b13f9930259eb6be3f51b97634663a275cda731c

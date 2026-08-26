@@ -1,0 +1,12 @@
+THM4159_Y_ONLY_INNER_RESULTANT_WALL_INDEPENDENT_AUDIT
+checks=61
+alternative_source_pair=A,C
+source_AC=p^9R17;p^10R16;p^11R15
+strata=J!=0:L21;J=0,S!=0:L20;J=S=0:L19
+controls=L21_u1_Phi1_squarefree;L20_u1_J0_squarefree
+terminal_firewall=Disc(S)!=0;all_six_resultants_nonzero
+faces=prime_cubic_carrier(2,2,2)+rational(8,3,3,3,1)
+origin_indices=full16;finite13;carrier_total3
+monodromy_bounds=full_at_most10;finite_at_most7
+semantic_sha256=f2feb98cb9cd02dd5dd2c4346b5c0a0dbc992e6db96fe7282bf3150d24032a69
+verdict=ACCEPT

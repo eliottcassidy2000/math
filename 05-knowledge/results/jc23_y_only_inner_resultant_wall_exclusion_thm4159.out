@@ -1,0 +1,16 @@
+THM4159_Y_ONLY_INNER_RESULTANT_WALL_PRIMARY_AUDIT
+checks=79
+parameter_map=zeta=(5696/135)u;Theta=3u^2;inverse_u=3zeta/(2K0)
+J=8544Phi-22784u-1215u^3
+S=2460375u^4-204543360u^2+5580439552
+strata=J!=0:L21;J=0,S!=0:L20;J=S=0:L19
+source_AB=p^7R17;p^8R16;p^9R15
+normalized=T^56(6T+1)^2*(Q17,Q16,Q15)
+JS_gcd_firewall=S_squarefree;u,DiscC,all_source_and_normalized_endpoints_coprime
+polygon=(0,1),(2,0),(5,3),(3,4),(0,4);Pick=(27,11,9)
+packet=8,3,3,3,2,2,2,1;full_n24_origin_index16
+finite_origin_packet=8,3,3,3,1;n18;index13;carrier_beta3
+full_bounds=L21:6,L20:8,L19:10<16
+finite_bounds=L21:3,L20:5,L19:7<13
+semantic_sha256=27bc93095e0f13030049e97584d769e7b78d47a0a81a0945458c250c5e617f9a
+verdict=PASS
