@@ -1,0 +1,23 @@
+THM-4215 clean-room literal audit
+engine=labelled adjacency + Hamilton-subset DP + odd-directed-path capacity DP + direct G_+ kernel
+transfer_or_response_jet_imports=NONE
+boundary_record=tail=0;F11=-10692
+boundary_record=tail=1;F11=-23652
+boundary_record=tail=2;F11=-50868
+boundary_record=tail=3;F11=-105300
+boundary_record=tail=4;F11=-203796
+boundary_record=tail=5;F11=-338580
+boundary_record=tail=6;F11=-317844
+boundary_record=tail=7;F11=967788
+context_record=contexts=P1,P1;HB=1;HC=1;F=967788;slack=0
+context_record=contexts=P2,P1;HB=1;HC=1;F=8681580;slack=7713792
+context_record=contexts=P1,P2;HB=1;HC=1;F=9649368;slack=8681580
+context_record=contexts=C3,P1;HB=3;HC=1;F=81113472;slack=72403380
+context_record=contexts=P1,C3;HB=1;HC=3;F=58787304432;slack=58778594340
+literal_boundary_rows=8
+literal_context_controls=5
+literal_nontransitive_controls=C3,P1 and P1,C3
+Z7_invariants=order:13,H:9,W:18414,G_plus:-734004
+literal_record_fnv64=2161d1176f87f75d
+analysis_cache_entries=19
+OVERALL=PASS
