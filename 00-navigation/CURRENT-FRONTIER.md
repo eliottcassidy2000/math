@@ -78,7 +78,7 @@ is the safe control `M(S_13)=99/338`. No cited result proves LRC(14).
   THM-4156/[4158](../01-canon/theorems/THM-4158-three-band-wrapped-carrier-odd-tail-lrc14-transfer.md)
   give anchored pool/carrier families. [THM-4160](../01-canon/theorems/THM-4160-anchored-haar-deletion-cover-and-content-tower.md)/
   [4166](../01-canon/theorems/THM-4166-two-deletion-repair-graph-haar-odd-tail-transfer.md)
-  exactly classify one/two deletions (`11,100,375`/`918,667,035` bodies).
+  exactly classify one/two deletions.
   [THM-4170](../01-canon/theorems/THM-4170-triple-deletion-matching-eventual-haar-odd-tail-transfer.md)
   finds exactly 61 triple-certificate failures, last `q=924`; every `q>=925`
   supplies `888,030` cores. Failure is not danger; entry, arbitrary bodies,
