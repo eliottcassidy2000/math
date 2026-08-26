@@ -11,8 +11,10 @@ status: >
   The sole nonresonant survivor is p*y^2-only: its unique positive-genus
   component is the target-compatible j=0 curve, and the generic fibre degree
   must be an Eisenstein norm a^2-ab+b^2; its total ramification is 14. The
-  THM-4130 later excludes the survivor. THM-4134/4138 empty the Delta_V wall,
-  excluding degrees 20/19/16/15; the other two collision walls remain open.
+  THM-4130 later excludes the survivor; THM-4134/4138 empty the Delta_V wall;
+  THM-4140/4141 empty the Delta_D wall; and THM-4143 empties the two-term
+  wall. Thus this exact-M=8 trichotomy is now empty on the stated seam.
+  M>=9, entry, other cells, JC(2), and DC(2) remain OPEN.
 source: long-precise-frontiers / 2026-08-24
 audit: >
   PASS. The primary certificate expands the complete support, enumerates all
@@ -433,9 +435,10 @@ The elliptic specialization `(31)` is an isogeny and hence unramified. The
 allocation of the fourteen generic ramification units among the rational,
 node, and boundary charts is a new exact target, not a conclusion here.
 
-## 8. Precise remaining frontiers
+## 8. Historical frontiers and later closure
 
-The maximum-eight problem is now reduced to three explicit collision walls:
+At the time of this theorem, the maximum-eight problem was reduced to three
+explicit collision walls:
 
 1. stable reduction of the repeated quadratic edge `Delta_D=0` in `(7a)`;
 2. stable reduction of the cuspidal cubic edge `Delta_V=0` in `(7b)`;
@@ -443,8 +446,10 @@ The maximum-eight problem is now reduced to three explicit collision walls:
 THM-4130 later excludes the smooth survivor `(7d)`, after
 THM-4103/4120/4126 fix its boundary response, degree, and nonproperness.
 THM-4134 later stratifies `Delta_V=0` and excludes degrees `20,19`; THM-4138
-then excludes its horizontal-BC degrees `16,15`, emptying that wall. The
-`Delta_D=0` and `delta+theta=0` walls, weight at least nine, and JC(2) remain
-open.
+then excludes its horizontal-BC degrees `16,15`, emptying that wall.
+THM-4140/4141 empty `Delta_D=0`, and THM-4143 empties
+`delta+theta=0`. Consequently every alternative `(7a)--(7d)` is now excluded
+on this exact-`M=8` seam. Weight at least nine, entry, other reduced cells,
+`JC(2)`, and `DC(2)` remain open.
 
 **QED.**

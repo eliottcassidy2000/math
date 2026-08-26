@@ -6,9 +6,9 @@ status: >
   AUDITED. On the live delta-only exact-M=8 wall Delta_D=0, the complete
   weight-eight response is a square, the strict critical resultant has
   degree fourteen, and every hypothetical Keller realization has exactly
-  eighteen reduced affine critical points. This is a critical ledger, not
-  an exclusion: stable reduction, the boundary packet, the finite response
-  degree, the wall itself, JC(2), and DC(2) remain OPEN.
+  eighteen reduced affine critical points. This theorem is a critical ledger,
+  not an exclusion; THM-4141 later supplies the boundary and monodromy argument
+  and empties this wall. JC(2) and DC(2) remain OPEN.
 source: codex-planar-jacobian-cycle6-63-20260825
 depends_on:
   - THM-3992-reduced-two-three-cusp-jet-repair-and-first-node-residual
@@ -43,8 +43,9 @@ independent_audit: >
 # THM-4140 -- the `Delta_D` wall has critical length eighteen
 
 **PROVED RELATIVE TO THM-3992/4053 + VERIFIED-EXACT + INDEPENDENTLY
-AUDITED; THE WALL AND JC(2) REMAIN OPEN.** Work over `C` and retain the exact
-reduced `(2,3)` cell and maximum-weight-eight hypotheses of THM-4053.
+AUDITED; THIS LEDGER ALONE DOES NOT EXCLUDE THE WALL.** THM-4141 later closes
+the wall; JC(2) remains open. Work over `C` and retain the exact reduced
+`(2,3)` cell and maximum-weight-eight hypotheses of THM-4053.
 
 ## 1. Theorem and inheritance
 
@@ -303,10 +304,10 @@ python3 -B -O 04-computation/jc23_delta_d_collision_wall_critical_length_thm4140
 Both routes emit the semantic digest
 `1917ba89584d8537a7df2c686f5713a07362bca88ed129a93b1cfb1c95db21fa`.
 
-This theorem supplies the exact nodal fixed-sheet budget for the next
-`Delta_D` attack. It does **not** determine the wall's stable boundary
-packet, finite horizontal ramification defect, generic cover degree, or
-nonproperness transport. Until those are known, THM-4138's orbit-merger
-lemma cannot be applied. The `Delta_D` wall, the `delta+theta=0` wall,
-maximum residual weight at least nine, other cells, `JC(2)`, and `DC(2)` all
-remain open. **QED.**
+This theorem supplies the exact nodal fixed-sheet budget used in the next
+`Delta_D` attack. It does **not by itself** determine the wall's stable
+boundary packet, finite horizontal ramification defect, generic cover degree,
+or nonproperness transport. THM-4141 later supplies those missing coordinates
+and empties the wall; THM-4143 later empties `delta+theta=0`. Maximum residual
+weight at least nine, other cells, entry, `JC(2)`, and `DC(2)` remain open.
+**QED.**

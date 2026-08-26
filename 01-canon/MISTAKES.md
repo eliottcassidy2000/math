@@ -9,6 +9,30 @@ Format per entry:
 - Why it was wrong
 - The correct framing
 
+## MISTAKE-509 (2026-08-25, exploratory two-term Jacobian-wall response) -- an unlabelled boundary subset was treated as a realizable response
+
+- **What failed:** an exploratory monodromy argument allowed an arbitrary
+  subset of the two-term wall's geometric boundary punctures to map to the
+  target origin. It then tried to derive numerical constraints in the case
+  where both handle permutations were identities. The packet alone does not
+  authorize those subsets: it forgets residue fields and horizontal-image
+  constraints.
+- **Minimal witness / first failed implication:** the two index-two punctures
+  satisfy `K w^2=q-1/2`, so they form one irreducible quadratic closed point
+  over `C(q)`. Galois equivariance forces them to respond together. Selecting
+  exactly one of them is a geometric subset but not a response defined over
+  the base. If their finite images coincided, that image would be a forbidden
+  finite `C(q)`-point of the target generic fibre.
+- **Repair / strongest survivor:** retain the residue-field label and the
+  target Mordell--Weil sidecar before allocating responses. The exhaustive
+  degrees are then `20` (the pair maps to the origin), `16` (two distinct
+  conjugate finite carriers), and `18` on `K=0`. THM-4143 excludes these by
+  the one-pivot commutator and exact orbit-merger budgets; it does not use the
+  discarded arbitrary-subset claim.
+- **Reusable rule:** a geometric ramification packet is not a response
+  classification. Carry the closed-point residue degree, Galois orbit, target
+  image, and horizontal carrier through every monodromy allocation.
+
 ## MISTAKE-508 (2026-08-25, concurrent THM-4140 reservation) -- a stale identifier check created a duplicate canonical ID
 
 - **What failed:** after

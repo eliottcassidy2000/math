@@ -8,8 +8,8 @@ status: >
   a secondary stratum. The source has genus eight and infinity packet
   (7,7,2,2,1), forcing degree 15 or 19. THM-4140's critical length eighteen
   and seam-independent punctured monodromy exclude both degrees. Hence this
-  entire wall is empty. The two-term collision wall, M>=9, other cells,
-  entry, JC(2), and DC(2) remain OPEN.
+  entire wall is empty. THM-4143 later empties the two-term collision wall.
+  M>=9, other cells, entry, JC(2), and DC(2) remain OPEN.
 source: codex-planar-jacobian-cycle6-63-20260825
 depends_on:
   - THM-3827-generic-fibre-genus-floor-for-nonlinear-cubic-plane-atlases
@@ -22,6 +22,7 @@ depends_on:
 related:
   - THM-4130-theta-only-extremal-seam-critical-monodromy-obstruction
   - THM-4134-delta-v-collision-wall-strict-transform-and-high-branch-exclusion
+  - THM-4143-two-term-collision-wall-critical-boundary-monodromy-exclusion
 script: 04-computation/jc23_delta_d_collision_wall_boundary_monodromy_thm4141.py
 output: 05-knowledge/results/jc23_delta_d_collision_wall_boundary_monodromy_thm4141.out
 independent_audit_script: 04-computation/jc23_delta_d_collision_wall_boundary_monodromy_thm4141_independent_audit.py
@@ -407,10 +408,10 @@ Both degree alternatives in `(18)` are impossible. Therefore
 the delta-only exact-M=8 Delta_D=0 wall is empty.         (30)
 ```
 
-Together with THM-4130 and THM-4134/4138, this leaves only the two-term wall
+Together with THM-4130 and THM-4134/4138, this left only the two-term wall
 `delta*theta!=0, delta+theta=0` inside THM-4053's exact maximum-eight
-trichotomy. It does not treat that wall, `M>=9`, another reduced cell, chart
-entry, `JC(2)`, or `DC(2)`.
+trichotomy. THM-4143 later empties that last wall. This theorem does not treat
+`M>=9`, another reduced cell, chart entry, `JC(2)`, or `DC(2)`.
 
 Replay with
 

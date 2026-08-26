@@ -347,13 +347,12 @@ lift/phase clocks.
   tuple is now at least `(8,5,4,3,3)` for `ell=(3,5,7,11,13)`. The requested
   challenges `(3,9),(5,6),(7,5),(11,4),(13,4)` all remain **OPEN**; the public
   `131199`-field file is a named finite population, not a world census.
-- **Jacobian/Dixmier:** `JC(2),DC(2)` remain **OPEN**. On the smooth
-  nonresonant theta-only exact-`M=8` `2:3` seam, THM-4120/4126 force degree
-  `21` and `(28,42)`; [THM-4130](../01-canon/theorems/THM-4130-theta-only-extremal-seam-critical-monodromy-obstruction.md)
-  empties it. THM-4122/4124 bound poles and remove integral ratios;
-  THM-4134/4138 empty the `Delta_V=0` wall, excluding all four degree
-  alternatives `20,19,16,15`. The other two collision walls, `M>=9`, other
-  cells and entries remain open;
+- **Jacobian/Dixmier:** `JC(2),DC(2)` remain **OPEN**. On THM-4053's
+  exact-`M=8` live reduced `2:3` seam, THM-4130 empties the smooth branch,
+  THM-4134/4138 the `Delta_V` wall, THM-4140/4141 the `Delta_D` wall, and
+  [THM-4143](../01-canon/theorems/THM-4143-two-term-collision-wall-critical-boundary-monodromy-exclusion.md)
+  the two-term wall. Thus the trichotomy is empty. `M>=9`, other cells and
+  entries remain open;
   `(72,108)` has `rho<=2` conditional on width six.
   Exceptional quartic: THM-3703/3737 give grammar/image, THM-4034 the
   conductor, and THM-4039/4043/4046 reach `J_7`, obstruct `J_8`, and close
