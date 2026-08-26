@@ -306,6 +306,17 @@ THM-4029/4030/4031/4032, S79.
 
 **Action:** before deletion, transfer, or a commuting square inducts positivity, compute its positive-carrier kernel; test a negative preimage of zero and whether known positive ghosts span failure. Commutation transports invisibility, not order reflection. A positive left inverse, order-reflecting quotient, or target factorization discharges the audit; otherwise name a transverse selector. **Evidence:** THM-3122, THM-2551, THM-3127.
 
+## Price deletion by the atoms it removes
+
+**Trigger/action:** when induction deletes a label or vertex, retain the
+removed-atom support mask before recomputing the child statistic. Sum its
+weights as a defect coordinate; only then test monotonicity, repair, or deck
+transport. **Counterindications:** signed cancellation, moving endpoints, or
+non-atomic quotients may require the full owner/wall incidence, and a
+nonnegative deletion defect is not an equivalence. **Evidence:** THM-4160's
+exact Haar one-deletion repair set system and THM-4167's tagged-OCF deletion
+support moment/parity holonomy.
+
 ## Audit and close sections under their next native operation
 
 **Action:** apply the next target operation before scalarizing; retain moving labels/cocycles, test observer equality for congruence, and type every sidecar update. Adaptive overflow is honest without a uniform finite observer. Pre-scalar co-support/transition/circuit defects may stop or update the route. Require lawful composition/basepoint; walks are not chronology. **Evidence:** THM-2292/3144/2658/3156/3285--3324/3511/3732/4006.

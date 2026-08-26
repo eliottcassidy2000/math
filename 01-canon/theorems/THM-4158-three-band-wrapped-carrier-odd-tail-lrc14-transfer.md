@@ -22,6 +22,7 @@ related:
   - THM-4150-safe-set-haar-measure-universal-odd-tail-lrc14-transfer
   - THM-4154-mod-six-fixed-clock-and-haar-pool-inheritance-correction
   - THM-4156-divisor-complete-anchor-pool-haar-odd-tail-transfer
+  - THM-4160-anchored-haar-deletion-cover-and-content-tower
 script: 04-computation/lrc14_three_band_wrapped_carrier_odd_tail_transfer_thm4158.py
 output: 05-knowledge/results/lrc14_three_band_wrapped_carrier_odd_tail_transfer_thm4158.out
 independent_audit_script: 04-computation/lrc14_three_band_wrapped_carrier_odd_tail_transfer_thm4158_independent_audit.py

@@ -18,7 +18,7 @@ AP/GW equality atom, C27 petal/two-block discharge, K33/F7 state lift,
 covering/boundary-moment positivity, or a rigorous Fejer/Toeplitz certificate.
 Every technique below is a possible tooth in that zipper.
 
-### Current response carrier -- THM-3910/4129/4132/4136/4142/4148/4150--4158
+### Current response carrier -- THM-3910/4129/4132/4136/4142/4148/4150--4160
 
 - **Move:** use an auxiliary runner only to select a marked deep center, then
   delete it before transporting the neighborhood.  Preserving the eleven-body
@@ -48,6 +48,11 @@ Every technique below is a possible tooth in that zipper.
   the resulting fixed carrier maximal: three bands persist for `m>=2`, a
   fourth survives only at `m=1`, and the `m=7` anchored specialization closes
   `38,620,298,376` divisor-complete bodies outside both THM-4148/4151 gates.
+  THM-4160 classifies the orthogonal one-old-deletion repair of THM-4156:
+  exactly ten singleton newcomers give `8,880,300` new primitive bodies,
+  while no forced newcomer set of size `2..8` works by that mechanism. Exact
+  carrier masks then place `9,036,418` content-one cores outside every
+  THM-4158 alphabet; the retained content coordinate exposes a dilation hostile.
 - **Preserves:** body safety, literal root `t`, integer fibre multiplicity,
   compact/open endpoint status, and the cubic mixed danger response.
 - **Forgets / guardrail:** an ordinary tournament, complete pairwise Gram
@@ -55,13 +60,15 @@ Every technique below is a possible tooth in that zipper.
   `t=12` versus `36`, has identical full one/two incidence data but different
   safe response by `17/61992`.  THM-4002's equal-Graver-fibre and
   half-translate hostiles independently show that relation length and full
-  Fourier power lose relative phase.  Endpoint equality remains atomic data.
-- **Next pull:** leave the saturated fixed-carrier lane: seek moving carriers,
-  mixed-parity tails, or physical entry into the THM-4158 seam. Retain the
-  safe-tooth rank, divisor owners, compact/open endpoints, and physical sheet
-  labels.
+  Fourier power lose relative phase. THM-4160's deletion incidence is a set
+  system/hypergraph, not an intrinsic tournament. Endpoint equality remains
+  atomic data.
+- **Next pull:** the singleton-deletion lane is exhausted. Test two old
+  deletions, moving optional pools, mixed-parity tails, or physical entry.
+  Retain safe-tooth rank, omitted-label masks, divisor owners, endpoints,
+  and physical sheet labels.
 - **Pointers:** THM-3910, THM-4002, THM-4129, THM-4132, THM-4136, THM-4142,
-  THM-4148, THM-4150--4158; THM-2221, THM-3377,
+  THM-4148, THM-4150--4160; THM-2221, THM-3377,
   THM-3380, THM-3729;
   `lrc14-fixed-radius-auxiliary-center-t-sheet-response-and-tournament-cubic-sidecar-root-20260823.md`.
 

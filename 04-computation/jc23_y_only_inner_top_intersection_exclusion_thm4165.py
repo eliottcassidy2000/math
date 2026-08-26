@@ -8,7 +8,10 @@ imported and no assert statements are used.
 """
 from hashlib import sha256
 from math import gcd
+import sys
 import sympy as sp
+
+sys.stdout.reconfigure(newline="\n")
 
 CHECKS = 0
 

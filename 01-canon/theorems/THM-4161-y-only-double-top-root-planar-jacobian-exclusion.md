@@ -9,8 +9,8 @@ status: >
   (g,L,packet)=(9,21,(8,5,3,2,2,2,1)); the J_top=0 ordinary-node stratum has
   (8,20,(8,3,2,2,2,2,2,1)); its unique cusp has
   (8,18,(8,3,3,2,2,2,1)). THM-4164 subsequently closes the triple-root
-  locus off `I_C=0`; the common `I_C=0,Disc(C)=0` intersections, other cells,
-  entry, M>=10, JC(2), and DC(2) remain OPEN.
+  locus off `I_C=0`, and THM-4165 closes the common intersection. The zeta=0
+  wall, other cells, entry, M>=10, JC(2), and DC(2) remain OPEN.
 source: codex-lrc14-jc-sharp-fronts-20260825b
 depends_on:
   - THM-3827-generic-fibre-genus-floor-for-nonlinear-cubic-plane-atlases
@@ -531,8 +531,8 @@ There is no remaining `J_C` exception: its ordinary-node and cusp strata are
 both included above.
 
 THM-4159 subsequently closes `I_C=0` away from the top collision, and
-THM-4164 closes the triple-root locus away from `I_C=0`. Their common
-`I_C=0,Disc(C)=0` intersections remain outside all three theorems.
+THM-4164 closes the triple-root locus away from `I_C=0`. THM-4165 closes
+their common `I_C=0,Disc(C)=0` intersection.
 
 ## 7. Supplementary direct-root chart audit
 

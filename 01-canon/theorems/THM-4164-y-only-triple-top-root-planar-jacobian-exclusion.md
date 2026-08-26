@@ -8,8 +8,8 @@ status: >
   supports no nonautomorphic planar Keller pair. For J=15a^2+356 nonzero
   the genus is 9, affine critical length is 20, and packet is
   (8,7,2,2,2,1); on J=0 the genus is 8, length is 19, and packet is
-  (8,4,2,2,2,2,1). The intersection I_C=0, other cells, entry, M>=10,
-  JC(2), and DC(2) remain OPEN.
+  (8,4,2,2,2,2,1). THM-4165 subsequently closes the I_C=0 intersection.
+  The zeta=0 wall, other cells, entry, M>=10, JC(2), and DC(2) remain OPEN.
 source: codex-lrc14-jc-sharp-fronts-20260825b
 depends_on:
   - THM-3827-generic-fibre-genus-floor-for-nonlinear-cubic-plane-atlases
@@ -26,6 +26,7 @@ related:
   - THM-4157-repeated-top-edge-wall-planar-jacobian-exclusion
   - THM-4159-inner-resultant-wall-planar-jacobian-exclusion
   - THM-4161-y-only-double-top-root-planar-jacobian-exclusion
+  - THM-4165-y-only-inner-top-triple-intersection-planar-jacobian-exclusion
 script: 04-computation/jc23_y_only_triple_top_root_exclusion_thm4164.py
 output: 05-knowledge/results/jc23_y_only_triple_top_root_exclusion_thm4164.out
 independent_audit_script: 04-computation/jc23_y_only_triple_top_root_exclusion_thm4164_independent_audit.py
@@ -334,14 +335,15 @@ the theorem in all stated scope.
 
 ## 6. Scope and replay
 
-The only remaining top-discriminant intersection in this chart is
+The inner intersection excluded from this theorem is
 
 ```text
 I_C=0, equivalently 5805a^4+1013888=0.
 ```
 
-No claim is made about that inner wall, another reduced cell, entry, exact
-weight at least ten, `JC(2)`, or `DC(2)`.
+THM-4165 subsequently closes that inner wall. No claim is made about the
+zeta=0 wall, another reduced cell, entry, exact weight at least ten, `JC(2)`,
+or `DC(2)`.
 
 Primary replay:
 

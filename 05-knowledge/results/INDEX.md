@@ -174,18 +174,58 @@
   `fa657f2aef9a093ca0b3fffd385a6f3683df49a3899df78cee66dfe0e5a0c9d3` /
   `7577edb6de80f4b6f7e4b32c1c70cd539252ecdc981aaf4f839cda65dd59286f` /
   `435c75c9215201cb`.
-- The THM-4159/4161/4164 Y-only wall suites, including eight independent
-  source-chart audits and the supplementary direct-root pair below ->
+- `lrc14_anchored_deletion_cover_thm4160.py`, a no-import global-wall audit,
+  and a checked-integer C++ referee -> matching exact deletion-cover ledgers
+  [THM-4160 PROVED RELATIVE TO THM-4150/4156 + VERIFIED-EXACT +
+  INDEPENDENTLY AUDITED; LRC(14) OPEN]. Deleting one old label from the
+  THM-4156 pool admits exactly ten singleton newcomers and gives `8,880,300`
+  new primitive eleven-bodies, `11,100,375` including the old family. The
+  same mechanism forces no newcomer set of size `2` through `8`, while
+  `9,703,274` bodies remain beyond both named THM-4148/4151 gates at every
+  positive common content. A separate two-path overlap census proves that at
+  content one exactly `9,036,418` cores lie outside every THM-4158 carrier,
+  including `7,267,924` singleton-newcomer cores; `2,063,957` overlap the
+  carrier union. The hostile `H` outside at content one with `2H subset P_35`
+  prevents an all-content promotion. Primary script/output/semantic SHA-256:
+  `6cafff20874f4854bcf6f95303a607e13844a53bc066bfaca6ae2d9b150feea8` /
+  `cc80874f70b021abc25fb6fc90ba2e9fe8b4e3b4aca82d00b09cfe84011c387f` /
+  `7306501ecd70b0c4796963ea61c67cd9b2ec55e5189dcbcee83dc0c8ee0f4e3d`;
+  independent Python script/output:
+  `7829055606a1dcb2d12f3d5a0315d1be8bb1cd1e281473ebe53930268f4a2280` /
+  `c55ba8d63608bbd56fee419d7afd3ccd3ebd7dc3a1dc841464b0305c7e36c7cf`;
+  C++ source/output:
+  `419439d1c2aa7fcf6dd75ced8d4d0880e992b74d83eedb4368bd55f8c2cce266` /
+  `b1b3aeeccbcb26546bc3732560ad30d8d0f9ca4da2f1170cd1df4f1ec0a31738`.
+  Carrier-overlap script/output/semantic:
+  `954179cb6a87a254bf6435a6d32f4e7e4a51f05a714cd380622a88375a29d884` /
+  `9479922dc562f7d873cf3de78622957aeb3bffb252a4d89b93f6d4771b644ff3` /
+  `3e1a60dbe4e29904d8eb342e952c634b5c1565cce8a2dd98be6802504ad65e7d`;
+  independent overlap script/output:
+  `dc94fe602dfed2f3e64b160a117acf8fc26e8ffd63ddfb863ef4187ef606ecf6` /
+  `86a9746211c33d97e6188f58159ecdc8ee34152a612f7091c78ccd31e21fdbeb`.
+
+- The THM-4159/4161/4164/4165 Y-only wall suites and the supplementary
+  direct-root pair below ->
   concordant exact exclusions [PROVED RELATIVE TO THM-4155 + VERIFIED-EXACT
   + INDEPENDENTLY AUDITED; JC(2) OPEN]. THM-4159 closes `I_C=0` when
   `zeta*Disc(C)!=0`; THM-4161 closes every nontriple double-top root with
   `zeta*I_C!=0`, including its ordinary-node and unique cusp subwalls; THM-4164
-  closes the triple-top-root locus with `zeta*I_C!=0`. The common
-  `I_C=0,Disc(C)=0` intersections remain open. The supplementary direct-root
+  closes the triple-top-root locus with `zeta*I_C!=0`; and THM-4165 closes the
+  common `I_C=Disc(C)=0` intersection in four exhaustive strata with
+  `(L,g)=(20,9),(19,9),(19,9),(19,8)`. Together these theorems exhaust the
+  `zeta!=0` Y-only coefficient locus. The supplementary direct-root
   chart `C=zeta(W-r)^2(W-u)` independently reconstructs the generic THM-4161
   packet `(8,5,3,2,2,2,1)`, `(g,L)=(9,21)`, and both response failures; it
-  does not replace THM-4161's separate `J_C=0` closure. Supplementary
-  primary script/output/semantic SHA-256:
+  does not replace THM-4161's separate `J_C=0` closure. THM-4165 primary
+  script/output/semantic SHA-256:
+  `5b12569e9cf12753026566a7886fe47419f2ba267f6c807bfe05167d11521eee` /
+  `dbc10308c5ee706934630f125d137d579ce1912cb26382197cfac3f4061f69a2` /
+  `65a99510c4e6cf2349ed4870a7bd3ddaf5c795d6f26ce6883236dd25567bbaa9`;
+  independent script/output/semantic:
+  `5deac85bcd8ccae317fc26afd35d34653ba57ce916229f0fc5c5d6605b97ddd6` /
+  `a4eaf246e5f582ff3356cf85fb09f2fc6f31e0c4430d4183aee3808779ad2bb2` /
+  `9a66f5791221cad1c16e59fbe890fc094e1711a35016f718d1a8c0049393c072`.
+  Supplementary direct-root primary script/output/semantic SHA-256:
   `6f2181240b8fd5897f922f3c26067f4c91031f869b77e8bb14dfc89df438cbfd` /
   `6ace665c7d3d9449fd04b0cad9913ef3c1bce955b6ae04513a5fb9102195269b` /
   `9e00cdbf68489a26e824458a177af856cda10244c613f062662896b96b4556ff`;
@@ -204,6 +244,21 @@
   `98420f520cba0fdb7bd817a53c82ae6a0afdad8b4cdb9dd9d254127d93634a92` /
   `ef1e2ebcba654c808eebf9c1b0ba316a6c3fbc9de905b820356acce9fcd7bf9e` /
   `e1212aecd45106af21a8452c442d7023eeec55adda3772f9f62e99977f4fa57f`.
+
+- `tournament_capacity_deletion_holonomy_thm4167.py` and an independent
+  literal C++ referee -> matching exact restriction/deck ledgers [THM-4167
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY AUDITED; PRIME ORDER-ELEVEN
+  TOURNAMENT STRATUM OPEN]. Every exposure-capacity coordinate is a positive
+  tagged OCF sum. Vertex deletion removes exactly the atoms using that vertex,
+  so `(n-2)c=A+Omega` with the nonnegative outside-support moment `Omega`.
+  Quadratic Johnson numerator and denominator supports have sizes three and
+  four: the weighted child tilt contracts by `1/2` from odd parent order and
+  amplifies by `2` from even parent order. Script/output SHA-256:
+  `a44adacdd1b7cdccccb9a81225f99073a8e468136b306c7369c1e8770d3e1f8a` /
+  `34cd665df7d7b3c00293d8f50a3280c240841c22e1746efdd5a0d81baec0a99c`;
+  independent C++ source/output:
+  `236e807a7bc4120a2fdd1fe803ac7adb35d9bd1bd05a49452041adc50038c1b1` /
+  `9cc785a952b98373d5cae3894ab00d789847d6cd27057a0d7bd75defff708ce1`.
 
 - `tournament_rooted_pair_mixed_twoear_tensor_thm4162.py`, the order-eleven
   tensor engine/aggregator, and an independent literal child-DP engine ->
@@ -305,9 +360,9 @@
   `T^56(6T+1)^2Q18`, and
   `(g,L,packet)=(9,22,(8,3,3,3,2,2,2,1))`. The full response `n=24` fails
   `4<16`, while finite `(n,beta)=(18,3)` has merger capacity `16<17`.
-  THM-4159/4161/4164 subsequently close the inner and top-face collision
-  strata away from their common `I_C=0,Disc(C)=0` intersections. Primary script/output
-  SHA-256:
+  THM-4159/4161/4164/4165 subsequently exhaust the `zeta!=0` inner and
+  top-face collision strata, including their common `I_C=Disc(C)=0`
+  intersection. Primary script/output SHA-256:
   `4e9e8ca0c1a3f864003ee5869882f15439669858cbaf22096b02724a376d8e32` /
   `8d78bc243e4027c76f6116d35c5dcd16191e45221ef4a80bfa98240bae976513`;
   independent:

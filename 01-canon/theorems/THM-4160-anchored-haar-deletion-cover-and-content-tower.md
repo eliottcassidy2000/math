@@ -9,7 +9,10 @@ status: >
   11,100,375 bodies in total with every distinct positive odd tail pair.
   This one-deletion mechanism admits no forced newcomer set of size 2--8.
   Exactly 9,703,274 bodies remain beyond both named THM-4148/4151 gates at
-  every positive common body content.
+  every positive common body content. FINITE-EXACT at content one, exactly
+  9,036,418 cores lie outside every THM-4158 wrapped-carrier alphabet,
+  including 7,267,924 of the new singleton-newcomer cores; this last
+  separation is not dilation invariant.
 source: codex-lrc14-jc-sharp-fronts-20260825b
 depends_on:
   - THM-4150-safe-set-haar-measure-universal-odd-tail-lrc14-transfer
@@ -31,6 +34,10 @@ content_tower_script: 04-computation/lrc14_anchored_deletion_cover_thm4160_conte
 content_tower_output: 05-knowledge/results/lrc14_anchored_deletion_cover_thm4160_content_tower_audit.out
 anchor_audit_script: 04-computation/lrc14_anchored_deletion_cover_thm4160_anchor_minimality_audit.py
 anchor_audit_output: 05-knowledge/results/lrc14_anchored_deletion_cover_thm4160_anchor_minimality_audit.out
+carrier_overlap_script: 04-computation/lrc14_anchored_deletion_wrapped_carrier_overlap_thm4160.py
+carrier_overlap_output: 05-knowledge/results/lrc14_anchored_deletion_wrapped_carrier_overlap_thm4160.out
+carrier_overlap_independent_audit_script: 04-computation/lrc14_anchored_deletion_wrapped_carrier_overlap_thm4160_independent_audit.py
+carrier_overlap_independent_audit_output: 05-knowledge/results/lrc14_anchored_deletion_wrapped_carrier_overlap_thm4160_independent_audit.out
 script_sha256: 6cafff20874f4854bcf6f95303a607e13844a53bc066bfaca6ae2d9b150feea8
 output_sha256: cc80874f70b021abc25fb6fc90ba2e9fe8b4e3b4aca82d00b09cfe84011c387f
 semantic_sha256: 7306501ecd70b0c4796963ea61c67cd9b2ec55e5189dcbcee83dc0c8ee0f4e3d
@@ -46,6 +53,11 @@ content_tower_semantic_sha256: b3c557dc73505fbe46a3c3586612af64e23af1d2956b719ec
 anchor_audit_script_sha256: 59c214e97ed94e8c2f49da4052ada5949125669c3abcc31a5a0fa2fad6e93f62
 anchor_audit_output_sha256: af29bca2ed5ec371c97f049e6f95cdbacabb5a093b0b1050629fafebb39a294e
 anchor_audit_semantic_sha256: 78c304f62c71a4c08881081a4b94270dd4b53df495bd29fbf9f72f2eb1b995d3
+carrier_overlap_script_sha256: 954179cb6a87a254bf6435a6d32f4e7e4a51f05a714cd380622a88375a29d884
+carrier_overlap_output_sha256: 9479922dc562f7d873cf3de78622957aeb3bffb252a4d89b93f6d4771b644ff3
+carrier_overlap_semantic_sha256: 3e1a60dbe4e29904d8eb342e952c634b5c1565cce8a2dd98be6802504ad65e7d
+carrier_overlap_independent_audit_script_sha256: dc94fe602dfed2f3e64b160a117acf8fc26e8ffd63ddfb863ef4187ef606ecf6
+carrier_overlap_independent_audit_output_sha256: 86a9746211c33d97e6188f58159ecdc8ee34152a612f7091c78ccd31e21fdbeb
 hash_basis: raw LF bytes
 primary_audit: >
   PASS. Exact Fraction interval intersections reconstruct all 27 leave-one
@@ -66,6 +78,11 @@ sidecar_audits: >
   PASS. Literal and grouped-binomial content censuses agree exactly, including
   maximum histograms and bounded-height constants. A separate complete anchor
   census proves the fixed-pool height-143 minimality statement.
+carrier_overlap_audits: >
+  PASS. A literal 11,100,375-body carrier-mask census and an independent
+  inclusion-exclusion/subset-DP audit reproduce the content-one overlap,
+  deduplicate all multiple-carrier witnesses, and exhibit a dilation hostile.
+  Normal, optimized, and hash-seeded outputs byte-match.
 ---
 
 # THM-4160 -- anchored Haar deletion covers
@@ -370,11 +387,45 @@ only those two declared sufficient criteria.
 
 Every body here omits the label `7`, so this family is disjoint from
 THM-4158's **named `m=7` specialization**, whose anchor set requires `7`.
-No disjointness from THM-4158's full minimum-indexed or global wrapped-carrier
-families is claimed: its abstract theorem applies to arbitrary finite
-subsets of `P_m`, and some overlap may occur. Thus `9,703,274` is a count
-beyond the two explicitly named min/max gates, not a count of rows new to all
-known canonical mechanisms.
+The full wrapped-carrier overlap can also be classified at content one.
+
+**FINITE-EXACT content-one overlap.** Put
+
+```text
+C={H:there exists m>=1 with H subset P_m},                (25a)
+```
+
+where `P_m` is THM-4158's exact alphabet, and call `H` canonical when
+`H subset P_min(H)`. Exact literal carrier masks and an independent
+inclusion-exclusion/subset-DP route agree:
+
+|content-one family|canonical|in `C`|outside `C`|
+|:---|---:|---:|---:|
+|old THM-4156|422,222|451,581|1,768,494|
+|ten new classes|1,298,364|1,612,376|7,267,924|
+|total|1,720,586|2,063,957|9,036,418|
+
+Every core contains `120`, while `min(P_m)=m`; hence `m<=120` is an
+exhaustive carrier search. Intersecting one 120-bit membership mask per label
+counts each body once even when several `m` witness it. There are `1,664,667`
+such multiple-witness bodies, so summing carrier incidences would overcount.
+
+All `1,397,101` nonpositive-defect bodies are canonical and lie in `C`.
+Among the `9,703,274` positive-defect bodies, `666,856` lie in `C` and the
+remaining `9,036,418` lie outside every content-one wrapped carrier. Thus the
+last number is a genuine content-one separation from all THM-4158 alphabets,
+not merely from its named `m=7` specialization.
+
+This separation is deliberately **not** promoted through the content tower.
+For the hostile core
+
+```text
+H={20,30,40,42,60,63,120,126,143,168,264},               (25b)
+```
+
+`H` lies in no `P_m`, whereas `2H subset P_35`. The all-content statement in
+the first half of this section therefore remains only the separation from the
+named THM-4148/4151 gates.
 
 The output freezes all maximum histograms. If height means `max(cH)<=X`,
 primitivity of the cores makes content representations unique, and
@@ -475,6 +526,13 @@ python3 -B 04-computation/lrc14_anchored_deletion_cover_thm4160_content_tower_au
 python3 -B 04-computation/lrc14_anchored_deletion_cover_thm4160_anchor_minimality_audit.py
 ```
 
+Content-one wrapped-carrier overlap replay:
+
+```bash
+python3 -B 04-computation/lrc14_anchored_deletion_wrapped_carrier_overlap_thm4160.py
+python3 -B 04-computation/lrc14_anchored_deletion_wrapped_carrier_overlap_thm4160_independent_audit.py
+```
+
 The source-to-target contract is
 
 ```text
@@ -483,7 +541,7 @@ target:       anchored eleven-bodies with every distinct positive odd pair
 map:          omitted repair -> safe-set inclusion -> THM-4150 transfer
 preserved:    exact Haar threshold, anchors, divisor completeness, content
 destroyed:    body-specific extra safe phases and component addresses
-sidecar:      safe-comb discrepancy, repair graph, content min/max census
+sidecar:      safe-comb discrepancy, repair graph, carrier masks, content census
 positive:     q=386 has 18 repairs; {5,66} survives at r=252
 hostile:      q=235 has only seven singleton repairs; no triple has any
 decisive test: complete finite cutoff plus two independent exact geometries. (31)

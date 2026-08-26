@@ -6,7 +6,10 @@ chart directly, tests terminal factors by nonzero resultants, and reconstructs
 the local differential packets without importing the primary audit.
 """
 from hashlib import sha256
+import sys
 import sympy as sp
+
+sys.stdout.reconfigure(newline="\n")
 
 CHECKS = 0
 

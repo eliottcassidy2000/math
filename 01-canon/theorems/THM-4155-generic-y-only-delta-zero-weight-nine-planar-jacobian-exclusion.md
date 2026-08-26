@@ -8,9 +8,10 @@ status: >
   locus zeta*(4Theta*K0^2-27zeta^2)*Disc(C)!=0, where K0=2848/45 and
   C(w)=zeta*w^3+Theta*w^2+Phi*w-1376/135, contains no nonautomorphic
   planar Keller pair. Its normalized genus is 9, affine critical length is
-  22, and labelled infinity packet is (8,3,3,3,2,2,2,1). The top-face
-  collision and inner-resultant walls, other coefficient cells, entry,
-  M>=10, JC(2), and DC(2) remain OPEN.
+  22, and labelled infinity packet is (8,3,3,3,2,2,2,1).
+  THM-4159/4161/4164/4165 subsequently close every zeta!=0 inner/top
+  boundary. The zeta=0 wall, other coefficient cells, entry, M>=10, JC(2),
+  and DC(2) remain OPEN.
 source: codex-lrc14-planar-jc-breakthrough-20260825
 depends_on:
   - THM-3827-generic-fibre-genus-floor-for-nonlinear-cubic-plane-atlases
