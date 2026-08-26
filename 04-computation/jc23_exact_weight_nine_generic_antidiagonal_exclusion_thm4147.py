@@ -386,6 +386,8 @@ def main() -> None:
                 f"{name}: residual leading row changed")
         require(sp.gcd(residual, residual.diff()).degree() == 0,
                 f"{name}: positive control residual is not squarefree")
+        require(residual.eval(-sp.Rational(1, 6)) != 0,
+                f"{name}: residual meets the universal T=-1/6 fibre")
         if name == "A":
             require((sp.degree(f_case, X), sp.degree(h_case, X)) == (7, 8),
                     "anti critical X-degrees changed")
@@ -537,6 +539,7 @@ def main() -> None:
         "xt_resultant=T^42*(6T+1)^2*Q19",
         "xt_endpoints=-12288*(Delta+Theta)^6;-1458*(Delta+Theta)*eta^4*(4ThetaK^2-27eta^2)^2",
         "critical_length=23",
+        "open=eta*Delta*(Delta+Theta)*(4ThetaK^2-27eta^2)*Disc(Q19)*Q19(-1/6)!=0",
         "raw=genus11;packet=8,8,4,2,2,2,1",
         "normalized=genus10;packet=7,7,4,2,2,2,1",
         "responses=full25;finite19;carrier_index3",
@@ -556,7 +559,8 @@ def main() -> None:
     print("anti_xt_resultant=T^42*(6T+1)^2*Q19")
     print("anti_xt_Q19_constant=-12288*(Delta+Theta)^6")
     print("anti_xt_Q19_leading=-1458*(Delta+Theta)*eta^4*(4*Theta*K^2-27*eta^2)^2")
-    print("anti_open_gates=eta*(Delta+Theta)*(4*Theta*K^2-27*eta^2)!=0")
+    print("anti_open_gates=eta*Delta*(Delta+Theta)*(4*Theta*K^2-27*eta^2)!=0")
+    print("anti_critical_open=Disc_T(Q19)*Q19(-1/6)!=0")
     print("universal_pairs=T0:X^2=-6,value0,hess6;T-1/6:X^2=6,value1/2,hess-6")
     print("anti_raw_polygon=" + repr(polygon))
     print("anti_lower_planes=" + repr(lower_planes(support)))

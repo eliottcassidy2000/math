@@ -21,12 +21,10 @@ Then read the routed frontier, guardrails, and theorem. Logs and reflections are
 ## Seventeen high-signal facts to reuse, not re-derive
 
 1. **LRC(14) is first open.** Direct `<=6`; projected caps `1579/216`.
-   THM-3378 leaves ledger/wall/families `372913/109/12` at `z1=216`.
-   THM-3349--3360 close the 561-body lane; THM-3366 leaves projected rows/counts `4,056/200,069,517,203` (`k=2`) and `1,897/2,548,893,834` (`k=3`).
-   THM-3368 is a Horn tariff, not a proof; rung, physical entry and LRC remain open.
-   THM-4066 closes affine rays. THM-4129/4136 close fixed `U`/`2U`;
-   THM-4142/4148 give `7,726,160`/`60,301,653,510` bodies.
-   Arbitrary bodies, entry and LRC stay open.
+   THM-3378 leaves `372913/109/12`; THM-3366 keeps `k=2,3` finite but entry
+   open. THM-4142/4148/4151 give large body families, the cap
+   `16M<=156m+13`, eventual translation, and density `(35/39)^10`.
+   Arbitrary thirteen-speed bodies and LRC stay open.
 2. **The `q <= 25` period claim is refuted.** THM-762/764 exhibit `26*{1,...,12} union {339}`, whose first good period is `27`.
 3. **Good-period existence is a maximum statement, not an average or count.**
    The tight AP at its resonant ruler defeats the tempting mean arguments; see
@@ -64,8 +62,9 @@ Then read the routed frontier, guardrails, and theorem. Logs and reflections are
     seven and FC(3) remain open.
 12. **JC is false from dimension three; JC(2), DC(2) remain open.** THM-1300
     is exact; THM-2084 closes named cells. THM-4130/4138/4141/4143 empty live
-    exact `M=8`; THM-4147 excludes critical-open exact-`M=9` `P/Y/B`. Their
-    walls, `M>=10`, other cells, and entry stay open.
+    exact `M=8`; THM-4147 excludes critical-open exact-`M=9` `P/Y/B` and a
+    generic anti-diagonal subchamber. Remaining walls, `M>=10`, cells, and
+    entry stay open.
 13. **Complete period-14 coordinates can still be globally blind.** THM-2043
     proves parity-Hasse completeness for reduced period-14 functions. The
     audited Goddyn--Wong family in THM-2058 preserves the packet, every fixed

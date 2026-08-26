@@ -3,10 +3,11 @@
 **Status.** The join-rank, quotient-descent, and signed-cover statements below
 are **PROVED ELEMENTARY**. Their LRC use is present in THM-4151, with
 THM-4148/4136 as the prior carrier mechanism. Their planar-Jacobian inputs are
-the proved THM-4138 and THM-4146 formulas. THM-4147 now applies the merger-rank
-mechanism to exclude the dense generic eta-only exact-`M=9` chamber. The
-zeta-only and mixed chambers, their cubic carrier, and specialization walls
-remain **OPEN**.
+the proved THM-4138 and THM-4146 formulas. THM-4147 applies merger and
+commutator rank to all three critical-open exact-`M=9` chambers `P/Y/B`.
+The repaired anti-diagonal artifact then supplies the algebraic input for a
+generic `eta+zeta=0` extension; its canon status is stated in THM-4147. The
+remaining coefficient/resultant/discriminant walls remain **OPEN**.
 
 ## 1. One capacity lemma, two different lattices
 
@@ -147,14 +148,34 @@ decisive test: equations (3)--(5), then sheet monodromy on a base generator.
 
 ## 5. Exact `M=9` consumer and next parity test
 
-THM-4147's eta-only chamber has two labelled transposition meridians and a
-strict merger deficit, so the coarse support-minus-one consequence of `(4)`
-already excludes its finite-carrier degree. For the remaining zeta-only and
-mixed chambers, the next lawful audit is not another support census. Compute
-every labelled generator's complete cycle partition and test `(4)`. Also use
+THM-4147's three generic rows have finite response data
 
 ```text
-sign(g)=(-1)^(n-c(g)).                                  (11)
+P: (n,beta,L)=(21,2,24),
+Y: (n,beta,L)=(20,3,24),
+B: (n,beta,L)=(21,3,25).                              (11)
+```
+
+In each row `L>n+beta`, so `(4)` excludes transitivity. Their full responses
+use the sharper commutator bound
+
+```text
+ind([X,Y])<=2|supp(X) intersect supp(Y)|.              (12)
+```
+
+The anti-diagonal calculation has normalized packet
+`(7,7,4,2,2,2,1)`, critical length `23`, and two exact deficits:
+
+```text
+full:   n=25, defect=18, commutator index<=4;
+finite: n=19, beta=3, merger capacity=17<18.           (13)
+```
+
+For remaining specialization walls, compute every labelled generator's
+complete cycle partition and test `(4)`, not just its support. Also use
+
+```text
+sign(g)=(-1)^(n-c(g)).                                  (14)
 ```
 
 For a punctured-surface relation
@@ -166,13 +187,12 @@ product_i [A_i,B_i] product_l M_l=1,
 commutators are even, so
 
 ```text
-sum_l (n-c(M_l)) = 0 mod 2.                             (12)
+sum_l (n-c(M_l)) = 0 mod 2.                             (15)
 ```
 
 In the THM-4138 model, two simple transposition meridians force the remaining
-puncture monodromy to have even cycle rank. In the open cubic-carrier chambers,
-`(12)` can shave one merger unit when a support upper bound has the wrong
-parity. Any further promotion still requires cubic polynomial-section and
-loop-avoidance theorems, labelled-generator completeness, all specialization
-walls, frozen outputs, and an independent audit. Neither `(4)` nor `(12)`
-supplies entry into the reduced seam or proves `JC(2)`.
+puncture monodromy to have even cycle rank. On unresolved walls, `(15)` can
+shave one merger unit when a support upper bound has the wrong parity, but it
+does not replace critical-scheme, packet-completeness, or carrier transport
+audits. Neither `(4)` nor `(15)` supplies entry into the reduced seam or proves
+`JC(2)`.

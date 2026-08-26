@@ -230,6 +230,8 @@ def critical_control(name, delta, phi, theta, eta, zeta, expected_degree):
           f"{name}: endpoint failure")
     check(sy.gcd(residual, residual.diff()).degree() == 0,
           f"{name}: residual is not squarefree")
+    check(residual.eval(-sy.Rational(1, 6)) != 0,
+          f"{name}: residual meets the universal T=-1/6 fibre")
 
     # Restore the two coordinate strata directly, and audit that the
     # universal -1/6 factor has precisely the advertised common roots.
@@ -435,6 +437,7 @@ def main():
     print("support_hostiles: K=epsilon,Theta=Delta,eta=zeta preserve polygons: PASS")
     print(f"midpoint_eta_equals_zeta: T^{midpoint_control['valuation']}*(6T+1)^2*Q{midpoint_control['degree']}: PASS")
     print(f"top_collision_eta_plus_zeta_zero: T^{collision_val}*(6T+1)^2*Q{sy.degree(collision_strict,Tc)}: CHANGES_STRICT_TRANSFORM")
+    print("critical_open_extra_gate=Q(-1/6)!=0: PASS")
     print("verdict=ALGEBRAIC_LEDGERS_PASS")
 
 

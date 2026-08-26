@@ -1,5 +1,5 @@
 THM-4147 GENERIC CROSS-CHECK + ANTI-DIAGONAL EXTENSION
-checks=81
+checks=85
 complete_weight9_support=((0, 2), (0, 3), (1, 0), (1, 2), (2, 0), (2, 1), (3, 0), (3, 1), (4, 0))
 forced_K=2848/45-(7/6)Delta
 control=P;residual_degree=20;critical_length=24;sha256=348f8137fdad377d6bab5c8a40745bfc3dedc61126d47327610ab8c34e37484a
@@ -12,7 +12,8 @@ anti_source_R19_leading=1327104*eta^5*(Delta+Theta)^4
 anti_xt_resultant=T^42*(6T+1)^2*Q19
 anti_xt_Q19_constant=-12288*(Delta+Theta)^6
 anti_xt_Q19_leading=-1458*(Delta+Theta)*eta^4*(4*Theta*K^2-27*eta^2)^2
-anti_open_gates=eta*(Delta+Theta)*(4*Theta*K^2-27*eta^2)!=0
+anti_open_gates=eta*Delta*(Delta+Theta)*(4*Theta*K^2-27*eta^2)!=0
+anti_critical_open=Disc_T(Q19)*Q19(-1/6)!=0
 universal_pairs=T0:X^2=-6,value0,hess6;T-1/6:X^2=6,value1/2,hess-6
 anti_raw_polygon=((0, 1), (2, 0), (5, 3), (1, 5), (0, 5))
 anti_lower_planes=((Fraction(0, 1), Fraction(1, 4), Fraction(-1, 4)), (Fraction(1, 9), Fraction(2, 9), Fraction(-2, 9)))
@@ -24,5 +25,5 @@ anti_full=commutator_index<=4<18
 anti_finite=merger_capacity17<n-1=18
 drop_telemetry=(('anti_sum_zero', 30, 2, 17), ('anti_critical_infinity', 42, 2, 18))
 generic_crosscheck=THM4147_PYB_endpoints_and_lengths:PASS
-semantic_sha256=12b74aabd408ad6254590528d9dccbd1ab3133b3aec6d857f3dc4e98b3cb2e71
+semantic_sha256=f6dbab29b287dca1829d0a1470030d45b2cd71113b39e3fbf50f3969f8d49d12
 verdict=PASS

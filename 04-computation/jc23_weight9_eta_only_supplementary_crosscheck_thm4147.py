@@ -1,12 +1,12 @@
 #!/usr/bin/env python3
-"""Primary exact certificate for THM-4147.
+"""Supplementary eta-row exact cross-check for THM-4147.
 
-The proved theorem concerns the generic eta-only exact-weight-nine chamber
-on the live reduced (2,3) seam.  The general identities are checked over a
-symbolic coefficient ring.  A rational coefficient point then certifies
-that the critical-length open set is nonempty.  The Newton packet and the
-two permutation contradictions are exact and parameter-independent on the
-stated open chamber.
+THM-4147 already proves all three generic exact-weight-nine chambers. This
+separate certificate corroborates its eta-only row on a narrower explicit
+open set, using the older quadratic-carrier route and a disjoint witness.
+It adds audit redundancy, not theorem scope. The general identities are
+checked over a symbolic coefficient ring, and the Newton packet and two
+permutation contradictions are exact on the stated open set.
 
 The final two top-support cases are also evaluated at the same rational
 control point, but those lines are explicitly scouts rather than theorem

@@ -1,18 +1,17 @@
 ---
 id: THM-4147
-title: "Generic exact-weight-nine planar Jacobian monodromy exclusion"
+title: "Generic exact-weight-nine and anti-diagonal planar Jacobian monodromy exclusion"
 status: >
   PROVED RELATIVE TO THM-3827/3992/3997/4007/4103/4120/4122/4130/4141/4143
-  + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED. The three critical-open
-  exact-M=9 coefficient chambers P, Y, and B on the live b=d=0 reduced
-  (2,3) seam contain no nonautomorphic planar Keller pair. Their exact
-  Newton genera are 10,11,11, affine critical lengths are 24,24,25, and
-  labelled infinity packets are (8,5,4,3,2,2,1), (11,8,2,2,2,1), and
-  (8,8,4,2,2,2,1). Prime quadratic/cubic carrier transport and two sharp
-  permutation inequalities exclude every finite and full response.
-  Coefficient contractions, the repeated top-edge wall eta+zeta=0,
-  critical-resultant endpoint/discriminant walls, entry, other cells,
-  M>=10, JC(2), and DC(2) remain OPEN.
+  + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED. The critical-open
+  exact-M=9 chambers P,Y,B and the generic anti-diagonal subchamber A on the
+  live b=d=0 reduced (2,3) seam contain no nonautomorphic planar Keller pair.
+  Their genera are 10,11,11,10; critical lengths 24,24,25,23; and packets
+  (8,5,4,3,2,2,1), (11,8,2,2,2,1), (8,8,4,2,2,2,1), and
+  (7,7,4,2,2,2,1). Prime quadratic/cubic carrier transport and sharp merger
+  and commutator inequalities exclude every finite and full response.
+  Remaining coefficient/critical walls, entry, other cells, M>=10, JC(2),
+  and DC(2) remain OPEN.
 source: codex-frontier-synthesis-creative-20260825ag
 depends_on:
   - THM-3827-generic-fibre-genus-floor-for-nonlinear-cubic-plane-atlases
@@ -32,11 +31,30 @@ script: 04-computation/jc23_weight9_generic_monodromy_thm4147.py
 output: 05-knowledge/results/jc23_weight9_generic_monodromy_thm4147.out
 independent_audit_script: 04-computation/jc23_weight9_generic_monodromy_thm4147_independent_audit.py
 independent_audit_output: 05-knowledge/results/jc23_weight9_generic_monodromy_thm4147_independent_audit.out
-script_sha256: 141fe2dbeaab13ab1293737e0dca5f6e208c181aa9f9f26b01534a36ec2407e9
-output_sha256: 8e3de3d0bb92b676c4e1f605a08cb218bce3faa19f54514cc34d3e096d71b87a
-independent_audit_script_sha256: b995e885469feed32e04102552dab7ca7d3f58333beef0462525a2c740dd9345
-independent_audit_output_sha256: 58353654fc5399df5c1e9872bd261a415ca7da1ecf804879464339e80cd86eb3
-semantic_sha256: c8f8e922d9a3322955abe0be82881124d7bac3eb143277acafad26f70a5d47fa
+script_sha256: e4666241bcee9df55632b7b484e8e06d7a855ed2cabbaedda233a4d6ec056691
+output_sha256: 2c9772af2e66d9e6f0b312904ca72c94349822cf12884033a767601c36751096
+independent_audit_script_sha256: f0be79df97daa9dc589c96a6c410f2a80dd3d99147e53cc4cbe1ecabc64b8ce2
+independent_audit_output_sha256: 32b34a68bf25df98d5de0e41eca857c72ed305cb6335d8702e24187b15077e6a
+semantic_sha256: e88dc5ce513e71cf18701434e3c5c14d9e5e22a06655cbc05e89580da4df1a17
+extension_script: 04-computation/jc23_exact_weight_nine_generic_antidiagonal_exclusion_thm4147.py
+extension_output: 05-knowledge/results/jc23_exact_weight_nine_generic_antidiagonal_exclusion_thm4147.out
+extension_script_sha256: 2cbf9a8efb3e048770e8e0dc4815fe0b7c452dbf745c4b4adb56cd7142d8c9f1
+extension_output_sha256: 08c53522d7adb4bf0ee44547f1ca517a3a4b906441e202e61a775bbc23f30faf
+extension_semantic_sha256: f6dbab29b287dca1829d0a1470030d45b2cd71113b39e3fbf50f3969f8d49d12
+extension_independent_audit_script: 04-computation/jc23_weight9_antidiagonal_generic_independent_audit_thm4147.py
+extension_independent_audit_output: 05-knowledge/results/jc23_weight9_antidiagonal_generic_independent_audit_thm4147.out
+extension_independent_audit_script_sha256: c57d3fb5652ac118ffb923da302f5cc42f8699b4a3175ac2aa7a9f7511fed108
+extension_independent_audit_output_sha256: 279bf80b41ef152c717043dff4502878839d19d172a5a7c08fed2325422e5954
+extension_independent_semantic_sha256: 6b219119e493f6391e52af1f517d2141e374b4ce7848b19292ee3713342758c6
+supplementary_eta_script: 04-computation/jc23_weight9_eta_only_supplementary_crosscheck_thm4147.py
+supplementary_eta_output: 05-knowledge/results/jc23_weight9_eta_only_supplementary_crosscheck_thm4147.out
+supplementary_eta_script_sha256: 96960d6120176820a11387fac81efe02a5f807b3f5612cd0f1ddb8e25f1e97a6
+supplementary_eta_output_sha256: ae712c0cdb751fbbc2b5e285c66bf3d18e08ed96dba8d3d6a3abb71f3e29a0d4
+supplementary_eta_independent_script: 04-computation/jc23_weight9_eta_only_supplementary_crosscheck_thm4147_independent_audit.py
+supplementary_eta_independent_output: 05-knowledge/results/jc23_weight9_eta_only_supplementary_crosscheck_thm4147_independent_audit.out
+supplementary_eta_independent_script_sha256: 57d0b714b240e8c904fe3e2d1a7451033c66fff13f14adfb997c3142329061dc
+supplementary_eta_independent_output_sha256: 0af28bd29d2a9921205b8423db2f1f68d35abd42c8602f7ceee9a65057623e8a
+supplementary_eta_semantic_sha256: 8d00d0a84d02b99a33b3c71ea39c97fcbf19a14b22c5a6e558c17b5c80aa6cfe
 hash_basis: raw LF bytes
 primary_audit: >
   PASS. The exact certificate enumerates the complete weight-nine monomial
@@ -54,12 +72,29 @@ independent_audit: >
   identified the source-completeness dependency, the cubic-carrier Hurwitz
   deletion, and the dominated valued-support point repaired below. Normal,
   optimized, and hash-seeded executions byte-match.
+extension_audit: >
+  PASS after scope repair. The anti-diagonal certificate binds Delta!=0,
+  residual discriminant and Q_19(-1/6), derives the ordinary boundary node,
+  the two index-seven branches, critical length 23, and both strict
+  permutation deficits. Normal, optimized, and hash-seeded replays agree.
+extension_independent_audit: >
+  ACCEPT. A clean-room source-chart implementation uses the disjoint control
+  Delta=-64/105, K=64, Phi=1, Theta=2, eta=3, reconstructs both resultants,
+  derives the differential orders rather than importing the packet, and
+  reproduces the cubic carrier and degree 25/19 contradictions. A separate
+  symbolic face audit verifies that every non-top Newton face remains
+  generically squarefree under (1a), including K=0 and Theta=0.
+supplementary_eta_audit: >
+  ACCEPT AS REDUNDANCY ONLY. Two disjoint eta-row implementations recover
+  critical length 24, genus 10, the complete packet and the quadratic-carrier
+  contradictions. They add no scope beyond the P/Y/B theorem.
 ---
 
-# THM-4147 -- generic exact-weight-nine monodromy exclusion
+# THM-4147 -- generic exact-weight-nine and anti-diagonal exclusion
 
 **PROVED RELATIVE TO THM-3827/3992/3997/4007/4103/4120/4122/4130/4141/4143
-+ VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED; JC(2) REMAINS OPEN.**
++ VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED, INCLUDING THE GENERIC
+ANTI-DIAGONAL EXTENSION; JC(2) REMAINS OPEN.**
 Work over `C` in the live `b=d=0` reduced `(2,3)` seam.
 
 ## 1. The theorem and inheritance
@@ -75,6 +110,16 @@ Work over `C` in the live `b=d=0` reduced `(2,3)` seam.
 >
 > In every row the critical-open condition of Section 3 is also imposed.
 > The coefficient `Phi` is unrestricted.
+
+Section 9 proves a fourth dense-open exclusion on the repeated top-edge wall:
+
+```text
+A: zeta=-eta,
+   eta*Delta*(Delta+Theta)*(4Theta K^2-27eta^2)!=0.     (1a)
+```
+
+It has its own exact critical-open condition. The exceptional divisors and
+critical discriminant inside that wall remain outside the theorem.
 
 The inheritance pass is deliberately label-sensitive:
 
@@ -152,8 +197,8 @@ R(T)=Res_X(G_X/T,G_T).                                  (7)
 ```
 
 The **critical-open condition** in a chamber means that the appropriate row
-below holds, both endpoints of the displayed residual are nonzero, and its
-`T`-discriminant is nonzero:
+below holds, both endpoints and the value at `T=-1/6` of the displayed
+residual are nonzero, and its `T`-discriminant is nonzero:
 
 ```text
 P: R=T^56(6T+1)^2 Q_20(T);
@@ -215,7 +260,8 @@ Y: Res_s(A,C)=p^8 R_20(p);
 B: Res_s(A,C)=p^8 R_21(p),                             (15)
 ```
 
-with nonzero endpoints and squarefree residuals at the controls. Its
+with nonzero endpoints, nonzero value at `T=-1/6`, and squarefree residuals
+at the controls. Its
 collapsed `p=0` and `t=0` strata restore the same two universal pairs.
 Thus the critical-open affine lengths are exactly
 
@@ -394,8 +440,12 @@ Pairwise disjoint inverse neighborhoods give distinct closed lifts.
 Choose a contractible tree in `U` joining nearby punctured neighborhoods of
 the two nodal values to one reference value. Over it the proper marked family
 and the finite-etale cover `(25a)` trivialize. Transport preserves all
-closed lifts; sheet labels change only by simultaneous conjugation. This
-proves `(24)`.
+closed lifts; sheet labels change only by simultaneous conjugation. Choose
+the inherited distinguished paths first and transport both parallel Milnor
+cores in this one marked trivialization. Small simultaneous pushes avoid the
+carrier throughout, preserve their intersection number one, and therefore
+produce the same handle generators used below rather than unrelated loop
+classes. This proves `(24)`.
 
 The inherited target vanishing cycles from THM-4130 have intersection number
 one. Simultaneous small parallel pushes represent them by loops avoiding
@@ -513,14 +563,15 @@ The support cancellations `K=-1376/135`, `Theta=Delta`, and
 R=T^42(6T+1)^2Q_19(T),                                  (34)
 ```
 
-so the repeated top edge is a genuine wall and is not crossed here.
+so the repeated top edge is a genuine strict-transform wall. Sections 1--7
+do not cross it; Section 9 treats its dense open subchamber `A` separately.
 
-The theorem also does not cross the coefficient contractions excluded in
-`(1)`, a zero leading endpoint or residual discriminant in `(8)`, another
-reduced cell, entry into this seam, exact weight at least ten, `JC(2)`, or
-`DC(2)`.
+The theorem does not cross the remaining coefficient contractions excluded
+in `(1),(1a)`, a zero leading endpoint, `Q_d(-1/6)=0`, a residual
+discriminant, another reduced cell, entry into this seam, exact weight at
+least ten, `JC(2)`, or `DC(2)`.
 
-The primary certificate performs `15,101` exact checks. Normal, optimized,
+The primary certificate performs `15,104` exact checks. Normal, optimized,
 and fixed-hash-seed runs byte-match. The clean-room audit reconstructs the
 source polynomial before valuation, uses the disjoint control `(10)`, and
 checks all `533,417` ordered pairs in `S_1,...,S_6`; `22,818` nonzero
@@ -529,8 +580,148 @@ pairs attain equality in `(30)`.
 The primary semantic digest is
 
 ```text
-c8f8e922d9a3322955abe0be82881124d7bac3eb143277acafad26f70a5d47fa.
+e88dc5ce513e71cf18701434e3c5c14d9e5e22a06655cbc05e89580da4df1a17.
 ```
+
+## 9. Generic anti-diagonal extension
+
+On `A`, the exact top row contracts as
+
+```text
+eta(P^3Y-Y^3)=eta X T^2 P^3.                          (35)
+```
+
+Let `Q_19` be the residual in the `(X,T)` critical projection. Add to
+`(1a)` the critical-open conditions
+
+```text
+Disc_T(Q_19)!=0,                    Q_19(-1/6)!=0.     (36)
+```
+
+The endpoint identities are
+
+```text
+Res_source=p^6 R_19(p),
+R_19(0)=46656 eta(4Theta K^2-27eta^2),
+[p^19]R_19=1327104 eta^5(Delta+Theta)^4;
+
+Res_X=T^42(6T+1)^2 Q_19(T),
+Q_19(0)=-12288(Delta+Theta)^6,
+[T^19]Q_19=-1458(Delta+Theta)eta^4
+                  (4Theta K^2-27eta^2)^2.             (37)
+```
+
+Thus `(1a),(36)` give nineteen reduced residual critical points, while the
+two Morse pairs at `T=0` and the two at `T=-1/6` remain separated. Hence
+
+```text
+L_A=19+2+2=23.                                        (38)
+```
+
+The exact rational control
+
+```text
+(Delta,Theta,Phi,eta,zeta)=(1,19/11,11/7,23/13,-23/13)
+```
+
+has squarefree `Q_19` with nonzero value at `-1/6`, so this open chamber is
+nonempty.
+
+Before normalization the Newton polygon is the `B` polygon and has Pick
+genus eleven. At its repeated top point, put
+
+```text
+s=z^-1,                         p=(1-a)z^-2.
+```
+
+If `L(a,z)=z^11 F_Q(z^-1,(1-a)z^-2)`, its tangent cone is
+
+```text
+Q a(eta a-(Delta+Theta)z).                             (39)
+```
+
+The two factors are distinct on `(1a)`, so this is one ordinary node with
+branches `a~0` and `a~((Delta+Theta)/eta)z`. Moreover
+
+```text
+omega=Q ds/(F_Q)_p = Q z^7 dz/L_a.                    (40)
+```
+
+On each branch `L_a` has order one in `z`; therefore `omega` has order six
+and both normalized branches have ramification index seven. Replacing the
+two raw index-eight branches gives the candidate packet
+
+```text
+(7,7,4,2,2,2,1),                 defect=18.           (41)
+```
+
+The finite critical scheme and THM-3827 first give geometric connectedness,
+exactly as in Section 4. The ordinary node gives normalization genus at most
+ten. Conversely the displayed defect and THM-4103's Keller residue identity
+give, by Riemann--Hurwitz over the elliptic target, `2g-2>=18`, so `g>=10`.
+Consequently `g=10`, `(41)` is complete, and there is no hidden ramification.
+
+The nonrational boundary equation is the separable cubic
+
+```text
+-eta W^3+K W^2=q-1/2.                                 (42)
+```
+
+For completeness, a direct face audit gives the other non-top equations
+
+```text
+2q+(1-2q)W,                 eta+Delta W,
+H_0(p)-q,
+H_0(p)=Delta p^4-(1376/135)p^3+(8/3)p^2-3p.           (42a)
+```
+
+The first two are squarefree torus labels when `eta*Delta!=0`; the vertical
+quartic is generically squarefree over `C(q)` because
+`gcd(H_0-q,H_0')=1`.  The cubic in `(42)` has discriminant
+
+```text
+(q-1/2)(4K^3-27eta^2(q-1/2)),                         (42b)
+```
+
+so it remains generically irreducible and separable even when `K=0`.
+Likewise `Theta=0` changes no non-top face.  The exceptional values displayed
+in `(42b)` and the finitely many critical values of `H_0` are deletions in the
+pencil base, not new coefficient gates.
+
+THM-4120/4122 and Section 6's finite-separable-carrier lemma apply without
+change. If the cubic point maps to the origin, `n=25`; otherwise its three
+conjugate index-two branches give `n=19,beta=3`. In the full response,
+
+```text
+ind([X,Y])<=2(25-23)=4<18.                            (43)
+```
+
+In the finite response, the maximum merger capacity is
+
+```text
+2*19-23-1+3=17<18=n-1.                               (44)
+```
+
+Both responses are impossible. This proves the generic anti-diagonal
+extension. The divisors omitted in `(1a),(36)`, including the exact drop
+strata recorded by the certificate, remain open. **QED.**
+
+## 10. Supplementary eta-row cross-check
+
+The two `eta_only_supplementary_crosscheck` artifacts give a disjoint exact
+audit of row `P`; they add no theorem scope. On the narrower open locus where
+the saturated critical scheme has twenty points and the `T=-1/6` fibre is
+exactly `X^2=6`, the witness
+
+```text
+(Delta,Phi,Theta,eta)=(2,5,7,11),       K=2743/45
+```
+
+reconstructs `(g,L,packet)=(10,24,(8,5,4,3,2,2,1))`. The quadratic carrier
+can then use THM-4138 directly. A one-point support intersection makes the
+degree-25 commutator a three-cycle, while degree 21 has merger capacity at
+most nineteen. These independent mechanisms corroborate row `P` but are not
+dependencies for rows `Y,B,A`.
 
 Replay with:
 
@@ -541,4 +732,8 @@ PYTHONHASHSEED=271828 python3 -B 04-computation/jc23_weight9_generic_monodromy_t
 python3 -B 04-computation/jc23_weight9_generic_monodromy_thm4147_independent_audit.py
 python3 -B -O 04-computation/jc23_weight9_generic_monodromy_thm4147_independent_audit.py
 PYTHONHASHSEED=271828 python3 -B 04-computation/jc23_weight9_generic_monodromy_thm4147_independent_audit.py
+python3 -B 04-computation/jc23_exact_weight_nine_generic_antidiagonal_exclusion_thm4147.py
+python3 -B 04-computation/jc23_weight9_antidiagonal_generic_independent_audit_thm4147.py
+python3 -B 04-computation/jc23_weight9_eta_only_supplementary_crosscheck_thm4147.py
+python3 -B 04-computation/jc23_weight9_eta_only_supplementary_crosscheck_thm4147_independent_audit.py
 ```

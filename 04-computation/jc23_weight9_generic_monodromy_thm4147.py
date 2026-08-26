@@ -356,6 +356,8 @@ def main():
                     f"{name}: primary residual leading row changed")
         require(qpoly.LC() != 0 and sp.gcd(qpoly, qpoly.diff()).degree() == 0,
                 f"{name}: control is not resultant-generic")
+        require(qpoly.eval(-sp.Rational(1, 6)) != 0,
+                f"{name}: residual meets the universal T=-1/6 fibre")
 
         # Independent rational (s,p) projection.
         t = p - s ** 2
@@ -424,6 +426,7 @@ def main():
             f"Pick=({area2},{boundary},{genus});packet={packet};defect={defect};"
             f"primary=T^56*(6T+1)^2*Q{qpoly.degree()};"
             f"independent=p^{p_valuation}*R{independent_poly.degree()};"
+            "Tminus1over6=universal-only;"
             f"L={critical_length};finite=(n={finite_degree},beta={beta},"
             f"cap1={finite_one_handle_capacity}<{finite_degree - 1});"
             f"full=(n={full_degree},k<={overlap_cap},"
@@ -550,6 +553,7 @@ def main():
     print("midpoint_cancellation_eta_equals_zeta="
           "support_midpoint_deleted,T^56*(6T+1)^2*Q21:HARMLESS")
     print("commutator_overlap_hostile=S_n exhaustive through n=5:PASS")
+    print("critical_open_extra_gate=Q(-1/6)!=0:PASS")
     print(f"semantic_sha256={sha256(semantic.encode()).hexdigest()}")
     print("verdict=PASS")
 

@@ -1,5 +1,5 @@
 THM4147 GENERIC EXACT-M=9 CERTIFICATE
-checks=15101
+checks=15104
 forced_row: K=2848/45-(7/6)Delta; control Delta=1 gives K=5591/90
 top_row: eta*p^3*y+zeta*y^3, (eta,zeta)!=(0,0)
 cubic_carrier_discriminant=(q-1/2)*(4K^3-27zeta^2*(q-1/2)):PASS
@@ -39,5 +39,6 @@ case=both_top_terms
 top_collision_eta_plus_zeta_zero=T^42*(6T+1)^2*Q19:EXCLUDED_FROM_CHAMBER
 midpoint_cancellation_eta_equals_zeta=support_midpoint_deleted,T^56*(6T+1)^2*Q21:HARMLESS
 commutator_overlap_hostile=S_n exhaustive through n=5:PASS
-semantic_sha256=c8f8e922d9a3322955abe0be82881124d7bac3eb143277acafad26f70a5d47fa
+critical_open_extra_gate=Q(-1/6)!=0:PASS
+semantic_sha256=e88dc5ce513e71cf18701434e3c5c14d9e5e22a06655cbc05e89580da4df1a17
 verdict=PASS

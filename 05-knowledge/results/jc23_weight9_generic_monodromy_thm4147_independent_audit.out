@@ -35,4 +35,5 @@ cubic_carrier_discriminant=(q-1/2)*(4K^3-27zeta^2*(q-1/2)): PASS
 support_hostiles: K=epsilon,Theta=Delta,eta=zeta preserve polygons: PASS
 midpoint_eta_equals_zeta: T^56*(6T+1)^2*Q21: PASS
 top_collision_eta_plus_zeta_zero: T^42*(6T+1)^2*Q19: CHANGES_STRICT_TRANSFORM
+critical_open_extra_gate=Q(-1/6)!=0: PASS
 verdict=ALGEBRAIC_LEDGERS_PASS

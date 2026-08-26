@@ -22,21 +22,20 @@
   `84adc34f0dc8ffb415455827a227f86cab1bea3169d73d3912721bd815e1b514` /
   `ff11c60c57deec04`.
 
-- `jc23_exact_m9_eta_generic_monodromy_thm4147.py` and an independent
-  `(s,p)`-chart audit -> concordant exact mechanisms [THM-4147 PROVED
-  RELATIVE TO THM-3827/3992/4053/4103/4120/4122/4130/4138 + VERIFIED-EXACT +
-  INDEPENDENTLY VERIFIED-EXACT; JC(2) OPEN]. On the live reduced `(2,3)` seam,
-  the dense generic eta-only exact-weight-nine chamber `Eta!=0,Zeta=0` is
-  empty of nonautomorphic Keller pairs. Its critical length is `24`, source
-  genus `10`, and infinity packet `(8,5,4,3,2,2,1)`. Rational target response
-  and the inherited quadratic carrier leave degrees `25,21`; one-pivot
-  commutator and merger-capacity contradictions exclude them. The eta
-  specialization walls and the zeta-only/mixed cubic-carrier chambers remain
-  open, as do entry, `JC(2)`, and `DC(2)`. Primary script/output SHA-256:
-  `0186b5ae1728b9b5dde8b18e09b42a2512b53602b03ad604a73bbded2b5bccec` /
+- `jc23_weight9_eta_only_supplementary_crosscheck_thm4147.py` and an
+  independent `(s,p)`-chart replay -> concordant eta-row mechanisms
+  [SUPPLEMENTARY VERIFIED-EXACT + INDEPENDENTLY VERIFIED-EXACT; NO NEW
+  THEOREM SCOPE]. They corroborate THM-4147's `P` chamber on a narrower
+  explicit open set with a disjoint witness, exact critical length `24`,
+  genus `10`, packet `(8,5,4,3,2,2,1)`, and the older quadratic-carrier
+  route to degrees `25,21`. The primary one-pivot commutator proof and the
+  independent merger replay add audit redundancy; THM-4147's stronger
+  `P/Y/B` theorem remains the authoritative scope. Primary script/output
+  SHA-256:
+  `96960d6120176820a11387fac81efe02a5f807b3f5612cd0f1ddb8e25f1e97a6` /
   `ae712c0cdb751fbbc2b5e285c66bf3d18e08ed96dba8d3d6a3abb71f3e29a0d4`;
   independent:
-  `05b47167b7c5c3ae06e24d23d906e2e2fa7e3b43ef40b3e109df42b4c49ee62a` /
+  `57d0b714b240e8c904fe3e2d1a7451033c66fff13f14adfb997c3142329061dc` /
   `0af28bd29d2a9921205b8423db2f1f68d35abd42c8602f7ceee9a65057623e8a`;
   shared semantic SHA-256:
   `8d00d0a84d02b99a33b3c71ea39c97fcbf19a14b22c5a6e558c17b5c80aa6cfe`.
@@ -68,23 +67,37 @@
   SymPy audit -> concordant exact ledgers [THM-4147 PROVED RELATIVE TO
   THM-3827/3992/3997/4007/4103/4120/4122/4130/4141/4143 + VERIFIED-EXACT +
   INDEPENDENTLY HOSTILE-AUDITED; JC(2) OPEN]. On the live `b=d=0` reduced
-  `(2,3)` seam, the three critical-open exact-`M=9` chambers `P,Y,B` have
+  `(2,3)` seam, the critical-open exact-`M=9` chambers `P,Y,B` have
   Newton genera `10,11,11`, affine critical lengths `24,24,25`, and complete
   packets `(8,5,4,3,2,2,1)`, `(11,8,2,2,2,1)`, and
   `(8,8,4,2,2,2,1)`. Prime quadratic/cubic residue fields give finite
   responses `(n,beta)=(21,2),(20,3),(21,3)`, each satisfying
   `L=n+beta+1`; a finite-separable carrier lemma retains all fixed sheets
   across the cubic Hurwitz collisions. Full responses of degrees `25,26,27`
-  fail `ind([X,Y])<=2|supp X intersect supp Y|`. Coefficient contractions,
-  `eta+zeta=0`, resultant/discriminant walls, entry, other cells, `M>=10`,
-  `JC(2)`, and `DC(2)` remain open. Primary script/output SHA-256:
-  `141fe2dbeaab13ab1293737e0dca5f6e208c181aa9f9f26b01534a36ec2407e9` /
-  `8e3de3d0bb92b676c4e1f605a08cb218bce3faa19f54514cc34d3e096d71b87a`;
+  fail `ind([X,Y])<=2|supp X intersect supp Y|`. A repaired, independently
+  audited extension crosses the generic anti-diagonal subchamber
+  `A: zeta=-eta`, with the additional Delta/endpoint/discriminant gates:
+  `(g,L,packet)=(10,23,(7,7,4,2,2,2,1))`; its full degree `25` has
+  commutator index at most `4<18`, and its finite `(n,beta)=(19,3)` has
+  merger capacity `17<18`. Remaining coefficient/critical walls, entry,
+  other cells, `M>=10`, `JC(2)`, and `DC(2)` remain open. Generic primary
+  script/output SHA-256:
+  `e4666241bcee9df55632b7b484e8e06d7a855ed2cabbaedda233a4d6ec056691` /
+  `2c9772af2e66d9e6f0b312904ca72c94349822cf12884033a767601c36751096`;
   independent:
-  `b995e885469feed32e04102552dab7ca7d3f58333beef0462525a2c740dd9345` /
-  `58353654fc5399df5c1e9872bd261a415ca7da1ecf804879464339e80cd86eb3`;
+  `f0be79df97daa9dc589c96a6c410f2a80dd3d99147e53cc4cbe1ecabc64b8ce2` /
+  `32b34a68bf25df98d5de0e41eca857c72ed305cb6335d8702e24187b15077e6a`;
   primary semantic SHA-256:
-  `c8f8e922d9a3322955abe0be82881124d7bac3eb143277acafad26f70a5d47fa`.
+  `e88dc5ce513e71cf18701434e3c5c14d9e5e22a06655cbc05e89580da4df1a17`.
+  Anti-diagonal primary script/output:
+  `2cbf9a8efb3e048770e8e0dc4815fe0b7c452dbf745c4b4adb56cd7142d8c9f1` /
+  `08c53522d7adb4bf0ee44547f1ca517a3a4b906441e202e61a775bbc23f30faf`;
+  independent:
+  `c57d3fb5652ac118ffb923da302f5cc42f8699b4a3175ac2aa7a9f7511fed108` /
+  `279bf80b41ef152c717043dff4502878839d19d172a5a7c08fed2325422e5954`;
+  semantic ledgers:
+  `f6dbab29b287dca1829d0a1470030d45b2cd71113b39e3fbf50f3969f8d49d12` /
+  `6b219119e493f6391e52af1f517d2141e374b4ce7848b19292ee3713342758c6`.
 
 - `tournament_rooted_pair_expansion_two_defect_thm4145.py` and independent
   standard-library C++ audit -> matching structural identities [THM-4145

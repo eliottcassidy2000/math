@@ -1,11 +1,12 @@
 #!/usr/bin/env python3
-"""Independent exact audit for THM-4147.
+"""Independent eta-row supplementary cross-check for THM-4147.
 
 This replay uses the rational (s,p) chart rather than the primary (X,T)
 critical projection.  It reconstructs the Newton boundary by supporting
 inequalities, checks the primitive edge equations, and replays the merger
-hostile with a separate permutation implementation.  It imports no primary
-code and uses no Python assertions.
+hostile with a separate permutation implementation. It corroborates one row
+of the stronger P/Y/B theorem and adds no new theorem scope. It imports no
+primary code and uses no Python assertions.
 """
 
 from __future__ import annotations

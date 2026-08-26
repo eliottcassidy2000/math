@@ -74,8 +74,9 @@ is the safe control `M(S_13)=99/338`. No cited result proves LRC(14).
 - **Owner/tail lane (PROVED):** THM-4025/4031 give survivor tails;
   THM-4029/4038 the 60-phase law; THM-4033/4042 clocks through `P=11`
   (`P=17` hostile). THM-4129/4136 close fixed `U`/`2U`; THM-4142/4148 give
-  `7,726,160` pool and `60,301,653,510` gate bodies; THM-4148 uses
-  width `W>=2/189`. Bodies, entry and LRC(14) remain open.
+  `7,726,160` pool and `60,301,653,510` gate bodies. THM-4151 strengthens
+  this to `16M<=156m+13`, eventual translation of every finite pattern, and
+  eleven-body density `(35/39)^10`. Other bodies, entry and LRC(14) remain open.
   See the [proof map](LRC14-PROOF-MAP.md).
 - **PROVED:** [THM-2928](../01-canon/theorems/THM-2928-critical-seven-comb-grid-tensorization-and-drift-tariff.md)/2941: literal zero/one/two/three-drift sectors are empty; `k=2,3` are finite.
 - **Orthogonal routes.** THM-1017 is HYP-6820; THM-2047/2050 keep phase/exit; THM-731/2048 prune; THM-1290 ends at `55`; HYP-8900 nonuniform.
@@ -351,8 +352,8 @@ lift/phase clocks.
 - **Jacobian/Dixmier:** `JC(2),DC(2)` remain **OPEN**. THM-4130/4138/4141/4143
   empty the live exact-`M=8` seam. At exact `M=9`,
   [THM-4147](../01-canon/theorems/THM-4147-generic-exact-weight-nine-planar-jacobian-monodromy-exclusion.md)
-  excludes critical-open `P/Y/B`; their coefficient/resultant walls,
-  `M>=10`, other cells, and entry remain open;
+  excludes critical-open `P/Y/B` and a generic anti-diagonal subchamber;
+  remaining coefficient/critical walls, `M>=10`, other cells, and entry remain open;
   `(72,108)` has `rho<=2` conditional on width six.
   Exceptional quartic: THM-3703/3737 give grammar/image, THM-4034 the
   conductor, and THM-4039/4043/4046 reach `J_7`, obstruct `J_8`, and close

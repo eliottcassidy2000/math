@@ -1,0 +1,19 @@
+THM-4147 ANTI-DIAGONAL GENERIC CLEAN-ROOM AUDIT
+checks=88
+control=Delta:-64/105,K:64,Phi:1,Theta:2,eta:3,zeta:-3
+open_gates=Delta:-64/105;eta:3;Delta+Theta:146/105;4ThetaK^2-27eta^2:32525;PASS
+source_critical=p^6*R19;degree19;squarefree;length23;PASS
+source_R19_sha256=83aa550e150429205d6a9a65d68fba378162d579ff2fdc923c184cd3472c6948
+xt_critical=T^42*(6T+1)^2*Q19;degree19;squarefree;Q19(-1/6)!=0;length23;PASS
+xt_Q19_sha256=c335157c11d44656c38851847b3e51a3e1a9ee3e0a7330b741a804c18031c840
+universal_pairs=T0:X^2=-6,value0,hessian6;T-1/6:X^2=6,value1/2,hessian-6;PASS
+raw_polygon=((0, 1), (2, 0), (5, 3), (1, 5), (0, 5));Pick=(31, 11, 11);packet=(8, 8, 4, 2, 2, 2, 1)
+top_edge_initial=3*Q*(edge_coordinate-1)^2
+ordinary_node_tangent=Q*a*(eta*a-(Delta+Theta)*z);delta=1;PASS
+branch_differential=Q*z^7*dz/L_a;orders=(6,6);indices=(7,7);PASS
+normalized=genus:10;packet:(7, 7, 4, 2, 2, 2, 1);defect:18
+cubic_carrier=-3*w^3+64*w^2-(q-1/2);irreducible_over_QQ(q);separable;beta=3;PASS
+full_budget=n25,L23,overlap<=2,commutator_index<=4<defect18;PASS
+finite_budget=n19,L23,beta3,merger_capacity17<n-1=18;PASS
+semantic_sha256=6b219119e493f6391e52af1f517d2141e374b4ce7848b19292ee3713342758c6
+verdict=PASS
