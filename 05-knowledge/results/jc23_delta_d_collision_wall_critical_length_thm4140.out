@@ -1,0 +1,10 @@
+THM4140_DELTA_D_CRITICAL_PRIMARY
+wall=delta=5696/(15(6r^2+7));kappa=delta*r^2;phi=2delta*r;r!=0;6r^2+7!=0
+critical_resultant=T^42*(6T+1)^2*Q14;degree_Q14=14
+Q14_monic_coefficient_sha256=1ef62ff920010fcc5eb64c2a8e09e90a03b6c1b4b0b49beb17f4c63ec509ec74
+universal=T=-1/6,X^2=6,length=2,value=1/2
+omitted=T=0,X^2=-6,length=2,value=0
+positive_control=r=1;Q14_squarefree_mod_101=YES
+hostile_gate=r=0=>kappa=0;EXCLUDED_FROM_LIVE_WALL
+semantic_sha256=1917ba89584d8537a7df2c686f5713a07362bca88ed129a93b1cfb1c95db21fa
+verdict=affine_critical_length=18;DeltaD_wall=OPEN;JC2=OPEN

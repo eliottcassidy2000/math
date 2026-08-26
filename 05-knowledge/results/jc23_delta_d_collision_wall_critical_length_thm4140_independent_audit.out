@@ -1,0 +1,10 @@
+THM4140_DELTA_D_CRITICAL_INDEPENDENT
+coordinates=s=XT;p=T+s^2;t=p-s^2
+gradient_pair=A_degree_s_5;B_degree_s_2
+critical_resultant=p^2*R14;degree_R14=14
+R14_monic_coefficient_sha256=e5d793f30b0db3def23bab3f1ed08ab247b98fb01ab91477099f757b4c623848
+positive_controls=103:v_p=2,sqfree14;107:v_p=2,sqfree14;109:v_p=2,sqfree14
+p=0_direct=s^2=1/6,length=2,value=1/2
+t=0_restored=X^2=-6,length=2,value=0
+semantic_sha256=1917ba89584d8537a7df2c686f5713a07362bca88ed129a93b1cfb1c95db21fa
+verdict=affine_critical_length=18;DeltaD_wall=OPEN;JC2=OPEN
