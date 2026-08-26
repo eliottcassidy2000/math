@@ -25,6 +25,7 @@ related:
   - THM-4135-strong-tournament-centrality-complete-order-nine
   - THM-4168-prime-order-eleven-nontrivial-automorphism-johnson-centrality
   - THM-4169-prime-parent-one-vertex-augmentation-and-quartic-johnson-transfer
+  - THM-4177-root-split-johnson-current-and-source-sink-boundary-census
 script: 04-computation/tournament_multideletion_support_tomography_thm4172.py
 output: 05-knowledge/results/tournament_multideletion_support_tomography_thm4172.out
 independent_audit_script: 04-computation/tournament_multideletion_support_tomography_thm4172_independent_audit.cpp

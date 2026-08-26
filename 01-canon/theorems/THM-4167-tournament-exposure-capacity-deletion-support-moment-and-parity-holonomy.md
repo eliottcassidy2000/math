@@ -23,6 +23,7 @@ related:
   - THM-4133-strong-cyclic-substitution-johnson-centrality-counterexample
   - THM-4137-strong-tournament-centrality-complete-order-ten
   - THM-4163-order-eleven-homogeneous-pair-johnson-centrality
+  - THM-4177-root-split-johnson-current-and-source-sink-boundary-census
 script: 04-computation/tournament_capacity_deletion_holonomy_thm4167.py
 output: 05-knowledge/results/tournament_capacity_deletion_holonomy_thm4167.out
 independent_audit_script: 04-computation/tournament_capacity_deletion_holonomy_thm4167_independent_audit.cpp

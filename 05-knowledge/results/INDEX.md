@@ -1,5 +1,26 @@
 # Script Results Index
 
+- `tournament_root_split_source_sink_census_thm4177.cpp` and an independent
+  Python referee -> root-split/current/odd-path structure and source/sink
+  boundary descent [THM-4177 PROVED STRUCTURAL + FINITE-EXACT COMPLETE
+  `q=3..8` PARENT-CLASS BY ATTACHMENT-PRESENTATION CENSUS + INDEPENDENTLY
+  AUDITED THROUGH `q=6`; THE `|T|>=4` SIGN LAW AND ASYMMETRIC ORDER-ELEVEN
+  BANK ARE OPEN]. Capacity root coordinates split into mutual-bit-free affine
+  currents; every pair coordinate is twice a weighted odd-path sum. Universal
+  source padding strictly raises `G_+` for bases of order at least three, and
+  universal sink padding dually raises `G_-`, reducing any minimal sign-law
+  counterexample to the source/sink-free interior; `C3` is the exact zero
+  boundary. The full `q=3..8` census checks `1,823,696` presentations and has
+  no no-sink `G_+<=0` or no-source `G_-<=0` child. At `q=8`, 15 negative
+  spanning-path self gates are all compensated, so layerwise positivity is
+  false. Counts are presentations, not child orbits or classes. Primary
+  source/output SHA-256:
+  `dcd53fac7254b692fc3ab3c75fe415d8dfeab4cd1dcce459a72ae48e881633dd` /
+  `8bb53672d638b576f18103f665f6a29432967a4ac078609a3683c7752126535d`;
+  independent source/output:
+  `f40ad9ca8648d40aa052a6988d3480eadd11ca031a1e16d6331860a8723c8cb0` /
+  `4dad8495c4fdf4a4258bfbfee9c779ba3e0d29956e3e9320573addf073014e45`.
+
 - `jc23_repeated_top_rows_bc_complete_exclusion_thm4176.py` and a narrow
   independent PARI/GP resultant audit -> complete repeated-top-wall exclusion
   [THM-4176 PROVED RELATIVE TO ITS STATED TRANSPORT PACKAGE + VERIFIED-EXACT +

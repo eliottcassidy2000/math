@@ -26,6 +26,7 @@ related:
   - THM-4144-order-eleven-large-homogeneous-module-johnson-centrality
   - THM-4163-order-eleven-homogeneous-pair-johnson-centrality
   - THM-4168-prime-order-eleven-nontrivial-automorphism-johnson-centrality
+  - THM-4177-root-split-johnson-current-and-source-sink-boundary-census
 external_input: >
   CITED: J. H. Schmerl and W. T. Trotter, "Critically indecomposable
   partially ordered sets, graphs, tournaments and other binary relational
@@ -398,6 +399,7 @@ sidecar for exact-coset questions.
 This theorem proves a complete finite reduction. It does **not** evaluate the
 7.92-billion-presentation gate/coset bank, prove order-eleven Johnson
 centrality, count order-eleven rooted or unrooted classes, or locate actual
-maximizers outside the three critical controls. Combined with THM-4168, the
-remaining open prime stratum is asymmetric; the number of still-open
-presentations or classes has not been computed. QED.
+maximizers outside the three critical controls. THM-4177 later gives a root
+current, odd-path atoms, and source/sink-padding descent, but does not evaluate
+this bank. Combined with THM-4168, the remaining open prime stratum is
+asymmetric; its presentation/class count has not been computed. QED.

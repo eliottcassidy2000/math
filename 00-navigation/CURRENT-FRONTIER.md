@@ -259,14 +259,14 @@ THM-2070 refutes the general HYP-8890/8895 bypasses.  Transfer
   [THM-4144](../01-canon/theorems/THM-4144-order-eleven-large-homogeneous-module-johnson-centrality.md)/4162/
   [4163](../01-canon/theorems/THM-4163-order-eleven-homogeneous-pair-johnson-centrality.md)
   close nonprimes; [THM-4168](../01-canon/theorems/THM-4168-prime-order-eleven-nontrivial-automorphism-johnson-centrality.md)
-  closes `12,155` symmetric primes. THM-4167 gives one-deletion holonomy;
-  [THM-4172](../01-canon/theorems/THM-4172-multideletion-support-tomography-and-same-parity-johnson-holonomy.md)
-  gives all-depth tomography/even-depth barycentres and certifies them
-  plus `1,002` children of one asymmetric parent—not the full bank.
+  closes `12,155` symmetric primes. THM-4167/[4172](../01-canon/theorems/THM-4172-multideletion-support-tomography-and-same-parity-johnson-holonomy.md)
+  give deletion tomography and certify those plus `1,002` one-parent children.
   [THM-4169](../01-canon/theorems/THM-4169-prime-parent-one-vertex-augmentation-and-quartic-johnson-transfer.md)
-  gives quadratic `(H,c)`, quartic gates, and via **CITED** Schmerl--Trotter a
-  `7,921,973,322`-presentation cover plus critical controls—not an orbit/class
-  count. The asymmetric bank is **OPEN**; THM-4133 refutes order twelve.
+  gives quartic gates and a **CITED** `7,921,973,322`-presentation cover—not
+  classes.
+  [THM-4177](../01-canon/theorems/THM-4177-root-split-johnson-current-and-source-sink-boundary-census.md)
+  gives root-current/odd-path/padding descent and a `q<=8` census; its
+  `|T|>=4` sign law and asymmetric bank are **OPEN**. THM-4133 refutes order 12.
   THM-4114 separates positive faces from submodular ear cuts; THM-4118 adds
   exact response gcds and stateful unit-component intervals. At `n=5`, all
   `544` parents have gcd `2` yet gaps, and `400` lack an `M-2` neighbor.
