@@ -5,7 +5,8 @@ status: >
   PROVED exact eleven-coordinate A5 response difference; a stronger all-order
   right-context monotonicity with strict non-singleton boundary; the sharp
   uniform arbitrary-context inequality F_n(B,C)>=10764H(B)^2H(C)^2 for every
-  n>=5; and the exact uniform positivity threshold n>=5, with lower-bound
+  n>=5; an explicit exponentially growing uniform lower bound for every later
+  tail n>=6; and the exact uniform positivity threshold n>=5, with lower-bound
   equality iff n=5 and B=C=P1 + VERIFIED-EXACT + INDEPENDENTLY AUDITED. This
   proves only the cycle-first transitive-tail prefix family; general (OS+),
   the no-sink/no-source gate law, and the order-eleven asymmetric bank remain
@@ -99,6 +100,21 @@ A=A_5=C3 triangleright P_5.                              (2)
 > ```text
 > F_n(B,C)>0 for every nonempty B,C    iff n>=5.         (5)
 > ```
+
+There is also a quantitative gain after the crossing. For `r>=1`, put
+
+```text
+x_r=2^(r+1)-2,
+Q_r=10700+15308x_r+4979x_r^2.                           (5a)
+```
+
+Then every nonempty `B,C` satisfies
+
+```text
+F_(5+r)(B,C)>Q_r H(B)^2H(C)^2.                          (5b)
+```
+
+In particular `F_n(B,C)>61232H(B)^2H(C)^2` for every `n>=6`.
 
 The exact equality value is THM-4193's crossing value
 `F_5(P_1,P_1)=10764`.
@@ -463,6 +479,37 @@ case. THM-4187 Theorem 2, equation (20a), gives
 ```text
 Theta(P_r,B,C)>=0.                                      (42)
 ```
+
+The same argument gives more than strictness. THM-4187 equations `(28)`
+and `(30)` give the exact universal-source padding law
+
+```text
+W(P_1 triangleright X)=2W(X)+2H(X).
+```
+
+Hamilton count is unchanged by a transitive prefix, so iteration yields
+
+```text
+W(B')=2^rW(B)+2(2^r-1)H(B)>=x_rH(B).                  (42a)
+```
+
+Apply `(37)` to `B'`, use `(42a)`, and note that the displayed quadratic in
+`W(B')/H(B)` is increasing on the nonnegative half-line. This gives
+
+```text
+F_5(B',P_1)
+ >=H(B)^2[10700+15308x_r+4979x_r^2]+64q_11(B').       (42b)
+```
+
+Here `q_11(B')>0`: THM-4208's rooted total is
+`sum_i U_i^1=(W(B')+2H(B'))/2>0`. Theorem 1, `(41)`, and `(42)` therefore
+give
+
+```text
+F_(5+r)(B,C)>Q_rH(B)^2H(C)^2,                         (42c)
+```
+
+which proves `(5b)`; `x_1=2` gives `Q_1=61232`.
 
 This proves `(4)` for every `n>=5`. For `r>=1`, the tournament
 `B'=P_r triangleright B` is not a singleton, so the first term in `(41)` is
