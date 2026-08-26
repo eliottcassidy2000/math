@@ -8,8 +8,8 @@ status: >
   53092739331/40435524866>1. Its unique rational and exact-coset support-floor
   optimizer is the noncentral layer t=-2; the central t=0 exact-coset floor
   loses by 2,224. Thus all-order strong rational and exact-coset centrality is
-  REFUTED. Orders ten and eleven are not classified, so no globally minimal
-  counterexample order is claimed.
+  REFUTED. THM-4137 later proves order ten positive, but order eleven remains
+  unclassified, so no globally minimal counterexample order is claimed.
 source: codex-frontier-synthesis-creative-20260825q
 depends_on:
   - THM-4123-balanced-cardinality-ear-average-growth-and-johnson-layer-lattice
@@ -17,6 +17,7 @@ depends_on:
   - THM-4131-strong-tournament-centrality-through-order-eight
 related:
   - THM-3235-tournament-substitution-blowup-scaling-and-decimation
+  - THM-4137-strong-tournament-centrality-complete-order-ten
 script: 04-computation/tournament_strong_cyclic_substitution_centrality_counterexample_thm4133.py
 output: 05-knowledge/results/tournament_strong_cyclic_substitution_centrality_counterexample_thm4133.out
 script_sha256: 7bd4c518464d4c48baf9cb9c1c8c2012a9f79f029c8e07141c0e51c338ffeeb2
@@ -146,9 +147,10 @@ criterion itself, now serving as a counterexample generator.
 ## 4. Scope and replay
 
 The theorem refutes only all-order centrality of the THM-4128 rational and
-THM-4123 exact-coset **support floors**. It does not classify orders ten or
-eleven, prove that twelve is globally minimal, classify all substitution
-failures, or settle actual response maxima or interval completeness.
+THM-4123 exact-coset **support floors**. It does not itself classify orders ten
+or eleven, prove that twelve is globally minimal, classify all substitution
+failures, or settle actual response maxima or interval completeness. THM-4137
+later classifies order ten positively; order eleven remains open.
 
 Run
 

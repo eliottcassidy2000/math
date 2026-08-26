@@ -27,6 +27,7 @@ related:
   - THM-4131-strong-tournament-centrality-through-order-eight
   - THM-4133-strong-cyclic-substitution-johnson-centrality-counterexample
   - THM-4135-strong-tournament-centrality-complete-order-nine
+  - THM-4137-strong-tournament-centrality-complete-order-ten
   - HYP-9029-strong-interval-tiling-law
 script: 04-computation/tournament_johnson_slice_hoeffding_variance_thm4127.py
 output: 05-knowledge/results/tournament_johnson_slice_hoeffding_variance_thm4127.out
@@ -394,9 +395,9 @@ THM-4128 subsequently rewrites all these rational slice floors as one strict
 quadratic in `t=n-2m` and gives its exact nearest-grid optimizer. Exact cosets
 and actual maxima remain separate sidecars.
 
-THM-4131/4135 later verify central rational and exact-coset optimizers through
-order nine. THM-4133 refutes the all-order extension at twelve; orders
-ten/eleven remain unclassified. The order-six/eight actual-max hostiles keep
+THM-4131/4135/4137 later verify central rational and exact-coset optimizers
+through order ten. THM-4133 refutes the all-order extension at twelve; order
+eleven remains unclassified. The order-six/eight actual-max hostiles keep
 that separate sidecar load-bearing.
 
 The smaller THM-4123 packet `(H,F_1,W)` is insufficient: order-five codes

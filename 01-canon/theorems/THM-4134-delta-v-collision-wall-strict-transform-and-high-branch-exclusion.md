@@ -9,8 +9,9 @@ status: >
   20; on one secondary wall it has genus 7, packet (7,3,2,2,2,2,1), affine
   critical length 18 and degree 15 or 19. Critical strict transforms lose one
   or two roots respectively. Monodromy excludes the full-boundary degrees 20
-  and 19. The lower degrees 16 and 15 with a finite horizontal BC carrier
-  remain OPEN; the collision wall, JC(2), and DC(2) are not closed.
+  and 19. THM-4138 later excludes the finite horizontal-BC degrees 16 and 15;
+  together the two theorems empty this collision wall. JC(2), DC(2), and the
+  other collision walls remain open.
 source: codex-frontier-synthesis-creative-20260825r
 depends_on:
   - THM-3996-etale-node-address-balance-cycle-and-nonproperness-dichotomy
@@ -19,6 +20,8 @@ depends_on:
   - THM-4120-jc23-extremal-target-degree-twenty-one-response
   - THM-4122-planar-keller-asymptotic-width-and-resonant-shear-contraction
   - THM-4130-theta-only-extremal-seam-critical-monodromy-obstruction
+related:
+  - THM-4138-delta-v-horizontal-carrier-monodromy-exclusion
 script: 04-computation/jc23_delta_v_collision_wall_strict_transform_thm4134.py
 output: 05-knowledge/results/jc23_delta_v_collision_wall_strict_transform_thm4134.out
 independent_audit_script: 04-computation/jc23_delta_v_collision_wall_strict_transform_thm4134_independent_audit.py
@@ -245,6 +248,10 @@ This theorem excludes the two full-boundary branches and types the exact
 survivors. It does not empty either survivor in `(20)`, prove the BC point
 finite for an arbitrary map outside this chart, cross the other two collision
 walls, treat `M>=9`, or prove `JC(2)` or `DC(2)`.
+
+THM-4138 later excludes both theorem-local survivors in `(20)`. Combined,
+THM-4134 and THM-4138 empty the theta-only exact-`M=8` `Delta_V=0` wall; the
+other two collision walls and the broader entry problems remain open.
 
 Run
 

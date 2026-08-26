@@ -23,6 +23,7 @@ related:
   - THM-4044-sixty-clock-hasse-alias-and-planar-jc-boundary-firewall
   - THM-4130-theta-only-extremal-seam-critical-monodromy-obstruction
   - THM-4134-delta-v-collision-wall-strict-transform-and-high-branch-exclusion
+  - THM-4138-delta-v-horizontal-carrier-monodromy-exclusion
 script: 04-computation/jc23_theta_boundary_response_thm4103.py
 output: 05-knowledge/results/jc23_theta_boundary_response_thm4103.out
 independent_audit_script: 04-computation/jc23_theta_boundary_response_thm4103_independent_audit.py
@@ -512,8 +513,8 @@ directions but discards multiplicity and target image. Those representations
 may become useful only with the full edge/Puiseux sidecar.
 
 THM-4120 later completes the labelled response, and THM-4130 then excludes
-the smooth theta-only survivor by critical monodromy. THM-4134 later excludes
-degrees `20,19` on `Delta_V=0` but leaves horizontal-BC degrees `16,15`.
-The other two walls, those residual branches, and `JC(2)` remain **OPEN**.
+the smooth theta-only survivor by critical monodromy. THM-4134/4138 later
+exclude all four degree alternatives `20,19,16,15` on `Delta_V=0`, emptying
+that wall. The other two walls and `JC(2)` remain **OPEN**.
 
 **QED.**

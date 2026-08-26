@@ -125,7 +125,7 @@
     sign gauge and label dependence.
 39. **The invariant lattice is exact only through `n<=6`.** THM-1966 adds an
     independent signed coordinate at `n=7`.
-40. **`H>=disc` remains open; rooted response needs its root.** THM-1950 reduces to strong tournaments; THM-3729 is covariant under `(K,u)->(DKD,Du)`, but switching means do not control fixed `u=1`, and unsigned square energy fails at order five. Johnson support-floor centrality holds through order nine (THM-4135) but is refuted all-order at twelve (THM-4133); orders ten/eleven and actual maxima stay separate.
+40. **`H>=disc` remains open; rooted response needs its root.** THM-1950 reduces to strong tournaments; THM-3729 is covariant under `(K,u)->(DKD,Du)`, but switching means do not control fixed `u=1`, and unsigned square energy fails at order five. Johnson support-floor centrality holds through order ten (THM-4137) but is refuted all-order at twelve (THM-4133); order eleven and actual maxima stay separate.
 41. **Do not manufacture tournaments from ties.** Without an intrinsic binary
     relation and honest tie semantics, use the actual carrier. THM-2221's
     pinned-context observable is a symmetric cut semimetric plus core kernel.

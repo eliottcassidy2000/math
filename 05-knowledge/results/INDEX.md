@@ -1,5 +1,53 @@
 # Script Results Index
 
+- `jc23_delta_v_horizontal_carrier_monodromy_exclusion_thm4138.py` and
+  independent clean-room elliptic/topological audit -> concordant exact
+  mechanisms [THM-4138 PROVED RELATIVE TO THM-4120/4122/4130/4134 +
+  VERIFIED-EXACT + INDEPENDENTLY
+  AUDITED; JC(2) OPEN]. The degree-16 packet `(7,5,3,2,2,1)` and degree-15
+  packet `(7,3,2,2,2,2,1)` are impossible. The BC degree tower forces the
+  rational elliptic surface `I2+2I1+IV*` with `MW=ZP`; pole data selects
+  `+-3P`. Puncture-avoiding vanishing loops, two BC transpositions, and merger
+  capacities `14<15` and `13<14` contradict transitivity. Combined with
+  THM-4134, this empties the theta-only exact-`M=8` `Delta_V=0` wall.
+  The other two collision walls, `M>=9`, entry, other cells, `JC(2)`, and
+  `DC(2)` remain open. Primary script/output SHA-256:
+  `61744bea33439e2a1be80ed86e9fa5a0ca8bb82b90be1575af05b0840afed9e2` /
+  `f8f72753eb04eb6e1a00706f6ff1177f287e6c783084de5d7816cd6003e0f97c`;
+  independent:
+  `107c9d0d7ce86f68e9ea64ccf0d882917b288d8cc9c342da28a27be68adb72fe` /
+  `88a3a9d6368017800a046e2705ad069e29db9483334b0e395c2ace8202bd77fb`;
+  shared semantic ledger:
+  `187c7e26f7b8ec16fa3a286502a3d87cc7edf6e4a8b6804047f0e5b46fa88449`.
+
+- `tournament_strong_centrality_order_ten_thm4137.py` and independent
+  clean-room C++ full-universe census -> concordant complete profiles
+  [THM-4137 FINITE-EXACT + VERIFIED-EXACT + INDEPENDENTLY AUDITED]. Among all
+  `9,733,056` order-ten tournament isomorphism classes, exactly `9,355,949`
+  are strong; every strong class has unique rational and exact-coset Johnson
+  support-floor optimizer `t=0`, with zero failures and zero coset reorders.
+  The minimum strict coset margin is `24`; the worst normalized tilt is
+  `34499248/37325237`, attained by one reversal pair. Actual response maxima
+  remain separate: `3,146,972` strong classes are noncentral-only. The
+  independent route locally filters strongness from the full universe and
+  reproduces the reversal pair and complete response profile. Primary
+  script/output SHA-256:
+  `45a5b18d1d88686054b6328ea93c068df3d59476111aa8b6f0d48f93e8028581` /
+  `715b90f8a5257af0a81fd26c847c3ce1d2bb4182eecc2cd093af9c93fb977a52`;
+  independent:
+  `8d531fcad7e0149bb6ccb70e876d504b0912341321e9cde0f08e9746b8286d19` /
+  `c2c87368b8cc2db63682fcf0c78578ba48e6b1539992c1095a557b499b843eb2`;
+  primary/independent semantic ledgers:
+  `39a9adba9b2c4d3917e07ef24df62fc02d9203c53e32b8d0de7f02b61e66c114` /
+  `2984d66aad38b7b7a5fa4de0ec14e6e08ff383bf277eaa2ae4290dca1841f045`;
+  primary certificate digest:
+  `c57ff382a892fd7136714605ed73940ef7bb0dba39af4cf5e98ff816ee5ffa6c`;
+  independent full-profile digest:
+  `8b2d93cd83ccafa86315b540cbeba5338812ad4d6393712bd403163b954ebab9`.
+  Together with THM-4135 this proves support-floor centrality through order
+  ten. Order eleven remains open; THM-4133 refutes the all-order extension at
+  twelve, and no central actual-maximizer theorem follows.
+
 - `lrc14_fixed_body_universal_odd_tail_completion_thm4136.py` and independent
   active-wall clean-room referee -> concordant exact mechanisms [THM-4136
   PROVED ELEMENTARY UNIVERSAL FIXED-BODY COMPLETION + VERIFIED-EXACT +
@@ -43,8 +91,9 @@
   `5ed81bd2ab3054d1a05471c42fe724c14eb0df278dbc3ee3b7d6d38253fff530` /
   `b217807222b0b8cd2b2234f37a9bf40129469671ff64d6ea28dd0fcd88657b04`;
   semantic: `0b3d2c65723e0ecc78cbf02d1735320794a6bd6e5f7c3a371ee94432e19c5b49`.
-  THM-4133 refutes the all-order extension at order twelve; orders ten and
-  eleven remain unclassified.
+  THM-4137 later extends the positive range through order ten; order eleven
+  remains unclassified, while THM-4133 refutes the all-order extension at
+  order twelve.
 
 - `jc23_delta_v_collision_wall_strict_transform_thm4134.py` and independent
   rational-coordinate elimination audit -> concordant semantic ledgers
@@ -54,9 +103,10 @@
   multiplicity gives a generic genus-eight packet `(7,5,3,2,2,1)` with
   degree alternatives `{16,20}` and a secondary genus-seven packet
   `(7,3,2,2,2,2,1)` with alternatives `{15,19}`. Monodromy excludes the
-  full-boundary `20,19` branches. The finite horizontal BC carriers at
-  `16,15`, the other collision walls, `M>=9`, `JC(2)`, and `DC(2)` remain
-  open. Primary script/output SHA-256:
+  full-boundary `20,19` branches. THM-4138 later excludes the finite
+  horizontal-BC degrees `16,15`; together they empty this `Delta_V=0` wall.
+  The other collision walls, `M>=9`, `JC(2)`, and `DC(2)` remain open. Primary
+  script/output SHA-256:
   `4aad959ef19bd96015b219970368ebd241b5c57c534ea001238d796e4f322604` /
   `a0c3479c7ab4d56d210541d2992fd89fc3e0e5e0fc23ade07c0d5938bb6dffc0`;
   independent:
@@ -74,7 +124,9 @@
   `53092739331/40435524866` exceeds one; both rational and exact-coset floors
   optimize uniquely at noncentral `t=-2`, whose exact-coset value beats the
   center by `2,224`. This **REFUTES** all-order strong rational and exact-
-  coset centrality, without classifying orders ten or eleven. Primary
+  coset centrality. This theorem itself does not classify orders ten or
+  eleven; THM-4137 later proves order ten positive, while order eleven remains
+  open. Primary
   script/output SHA-256:
   `7bd4c518464d4c48baf9cb9c1c8c2012a9f79f029c8e07141c0e51c338ffeeb2` /
   `52d6c229b46ac1f38afb61d54073eac2400757205f38f26a0c646b7a8cdf5bf1`;
@@ -124,8 +176,8 @@
   independent: `693484165663f5e05d35fb7b6dfd9ae0cc01a49c72f2db74db74017d93ab5b94` /
   `6efb87263c698375a1ce5da57251434ad3f71fe01060db96fa54d19b8a340542`;
   semantic: `8e5ef116e577c3d3ab5dd4bea50953581a457ffbaae4f80504060c8793fed578`.
-  THM-4135 extends the positive range through order nine, while THM-4133
-  refutes the all-order extension at order twelve. Orders ten and eleven,
+  THM-4135/4137 extend the positive range through order ten, while THM-4133
+  refutes the all-order extension at order twelve. Order eleven,
   actual-maximizer classification, and intervals remain open.
 
 - `jc23_theta_only_extremal_seam_critical_monodromy_thm4130.py` and independent
@@ -138,10 +190,9 @@
   injections and degree-`21` transitivity force the vanishing-cycle supports
   to meet once, hence a three-cycle commutator, contradicting boundary type
   `(7,3,3,3,2,2,1)`. The `Delta_V=0` hostile drops the eliminant degree to
-  `15`. THM-4134 later reduces that `Delta_V=0` wall and excludes its
-  full-boundary degrees `20,19`, while finite horizontal carriers at `16,15`
-  survive. The other collision walls, `M>=9`, other cells, `JC(2)`, and
-  `DC(2)` remain open. Primary script/output SHA-256:
+  `15`. THM-4134/4138 later reduce and empty that `Delta_V=0` wall, excluding
+  degrees `20,19,16,15`. The other collision walls, `M>=9`, other cells,
+  `JC(2)`, and `DC(2)` remain open. Primary script/output SHA-256:
   `9cc246bb07894f548ef5ff4814ca92e9384a77de54617e3311df341458420fb3` /
   `020f79bcc07384e02623053adcaee20edb240ee5bef363f1f3bbe86056cafefd`;
   independent:
@@ -1035,8 +1086,9 @@
   excluded by complete-model CM mismatch. The sole nonresonant survivor is
   `p*y^2`-only, whose unique elliptic component is `j=0`; its generic fibre
   degree must be `a^2-ab+b^2` and its ramification budget is `14`. Three
-  collision walls remain; THM-4134 stratifies `Delta_V=0`, excluding degrees
-  `20,19` but leaving horizontal-BC degrees `16,15`. Primary script/output SHA-256:
+  collision walls remain in this theorem; THM-4134/4138 later empty
+  `Delta_V=0`, excluding degrees `20,19,16,15`, while the other two walls
+  remain open. Primary script/output SHA-256:
   `5d5d117d76200a4857d9f12bd1500511fa82d3c28880101816c78688487e11d4` /
   `fcc0bf5e890781ecc0e0313844c4f760104f96fe4201be7cfe9f443111bc970e`;
   independent script/output/semantic:

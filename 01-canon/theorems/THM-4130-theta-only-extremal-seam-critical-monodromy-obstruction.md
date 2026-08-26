@@ -18,6 +18,7 @@ related:
   - THM-4122-planar-keller-asymptotic-width-and-resonant-shear-contraction
   - THM-4124-planar-keller-integral-degree-ratio-all-vertex-shear
   - THM-4134-delta-v-collision-wall-strict-transform-and-high-branch-exclusion
+  - THM-4138-delta-v-horizontal-carrier-monodromy-exclusion
 script: 04-computation/jc23_theta_only_extremal_seam_critical_monodromy_thm4130.py
 output: 05-knowledge/results/jc23_theta_only_extremal_seam_critical_monodromy_thm4130.out
 independent_audit_script: 04-computation/jc23_theta_only_extremal_seam_critical_monodromy_thm4130_independent_audit.py
@@ -570,6 +571,6 @@ This theorem empties only the smooth nonresonant theta-only exact `M=8` seam
 inside the inherited reduced `(2,3)` cell. It does not treat the theta-only
 collision wall `Delta_V=0`, the delta-only collision wall, the two-term
 collision wall, maximum residual weight at least nine, any other pole-depth
-cell, arbitrary planar Keller maps, DC(2), or JC(2) as a whole. THM-4134 later
-reduces the `Delta_V=0` wall and excludes its full-boundary degrees `20,19`,
-but leaves finite horizontal-carrier alternatives at degrees `16,15`.
+cell, arbitrary planar Keller maps, DC(2), or JC(2) as a whole. THM-4134/4138
+later reduce and empty the `Delta_V=0` wall, excluding all four degree
+alternatives `20,19,16,15`.

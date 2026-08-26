@@ -6,8 +6,9 @@ status: >
   tournament isomorphism classes of order nine have only central maximizers
   t=+-1 of the THM-4128 rational support floor and the THM-4123 exact-coset
   floor. The minimum central-versus-outer coset margin is 90. Actual response
-  maxima are noncentral-only in 3,248 classes. THM-4133 refutes the all-order
-  extension at order twelve; orders ten and eleven remain unclassified.
+  maxima are noncentral-only in 3,248 classes. THM-4137 later extends the
+  positive range through order ten; order eleven remains open, while THM-4133
+  refutes the all-order extension at order twelve.
 source: codex-frontier-synthesis-creative-20260825s
 depends_on:
   - THM-4123-balanced-cardinality-ear-average-growth-and-johnson-layer-lattice
@@ -15,6 +16,7 @@ depends_on:
   - THM-4131-strong-tournament-centrality-through-order-eight
 related:
   - THM-4133-strong-cyclic-substitution-johnson-centrality-counterexample
+  - THM-4137-strong-tournament-centrality-complete-order-ten
 script: 04-computation/tournament_strong_centrality_order_nine_thm4135.py
 output: 05-knowledge/results/tournament_strong_centrality_order_nine_thm4135.out
 independent_audit_script: 04-computation/tournament_strong_centrality_order_nine_thm4135_independent_audit.cpp
@@ -46,9 +48,9 @@ independent_audit: >
 **FINITE-EXACT + VERIFIED-EXACT + INDEPENDENTLY AUDITED.**
 
 THM-4131 proves rational and exact-coset Johnson centrality through order
-eight. The complete next census gives the last currently classified positive
-order and supplies the structured extremum from which THM-4133's eventual
-counterexample was found.
+eight. The complete next census closes order nine and supplies the structured
+extremum from which THM-4133's eventual counterexample was found; THM-4137
+later closes order ten.
 
 ## 1. Statement
 
@@ -163,10 +165,10 @@ reproduce the THM-4128 rational, coset-reordering and support/actual hostiles.
 
 ## 5. Scope and replay
 
-This theorem is complete only at order nine. THM-4133 now refutes all-order
-strong rational and exact-coset centrality at order twelve. Orders ten and
-eleven remain unclassified, and no actual-maximizer or interval-completeness
-claim is made.
+This theorem is complete only at order nine. THM-4137 later closes order ten,
+and THM-4133 refutes all-order strong rational and exact-coset centrality at
+order twelve. Order eleven remains unclassified, and no actual-maximizer or
+interval-completeness claim is made.
 
 Run the primary audit with
 

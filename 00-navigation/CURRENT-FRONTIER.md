@@ -250,11 +250,11 @@ THM-2070 refutes the general HYP-8890/8895 bypasses.  Transfer
   `80,407,80,689`). THM-4111/4115 force unbounded full-cut maxima via exact
   Walsh variance, factor `(n+1)(n+2)/(4n)` (`C3` sharp), and `F_1` surplus.
   THM-4123/4127 give slice means/lattices and beat the cube centrally;
-  THM-4128/4131/4135
-  prove strong rational/coset centrality through order nine;
+  THM-4128/4131/4135/4137
+  prove strong rational/coset centrality through order ten;
   THM-4133
-  **REFUTES** all-order centrality at twelve. Orders ten/eleven, actual maxima
-  and intervals remain **OPEN**.
+  **REFUTES** all-order centrality at twelve. Order eleven, actual maxima and
+  intervals remain **OPEN**.
   THM-4114 separates positive faces from submodular ear cuts; THM-4118 adds
   exact response gcds and stateful unit-component intervals. At `n=5`, all
   `544` parents have gcd `2` yet gaps, and `400` lack an `M-2` neighbor.
@@ -350,9 +350,9 @@ lift/phase clocks.
   nonresonant theta-only exact-`M=8` `2:3` seam, THM-4120/4126 force degree
   `21` and `(28,42)`; [THM-4130](../01-canon/theorems/THM-4130-theta-only-extremal-seam-critical-monodromy-obstruction.md)
   empties it. THM-4122/4124 bound poles and remove integral ratios;
-  THM-4134
-  excludes `Delta_V=0` degrees `20,19` but leaves `16,15`. Other walls,
-  `M>=9`, cells and entries remain open;
+  THM-4134/4138 empty the `Delta_V=0` wall, excluding all four degree
+  alternatives `20,19,16,15`. The other two collision walls, `M>=9`, other
+  cells and entries remain open;
   `(72,108)` has `rho<=2` conditional on width six.
   Exceptional quartic: THM-3703/3737 give grammar/image, THM-4034 the
   conductor, and THM-4039/4043/4046 reach `J_7`, obstruct `J_8`, and close

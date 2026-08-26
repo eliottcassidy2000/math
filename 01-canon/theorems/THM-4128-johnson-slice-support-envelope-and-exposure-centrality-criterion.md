@@ -22,6 +22,7 @@ related:
   - THM-4131-strong-tournament-centrality-through-order-eight
   - THM-4133-strong-cyclic-substitution-johnson-centrality-counterexample
   - THM-4135-strong-tournament-centrality-complete-order-nine
+  - THM-4137-strong-tournament-centrality-complete-order-ten
   - HYP-9029-strong-interval-tiling-law
 script: 04-computation/tournament_johnson_slice_support_envelope_thm4128.py
 output: 05-knowledge/results/tournament_johnson_slice_support_envelope_thm4128.out
@@ -314,8 +315,8 @@ PYTHONHASHSEED=0 python3 -B 04-computation/tournament_johnson_slice_support_enve
 All six streams match their frozen outputs byte-for-byte. THM-4131 later
 verifies that every rational and exact-coset floor optimizer is central for
 every strong tournament of orders four through eight, with a strict central
-coset margin; THM-4135 extends this through order nine. THM-4133 **REFUTES**
-the all-order extension at order twelve. Orders ten and eleven,
+coset margin; THM-4135/4137 extend this through order ten. THM-4133 **REFUTES**
+the all-order extension at order twelve. Order eleven,
 actual-maximizer classification, slice intervals, and global `H`-spectrum
 completeness remain **OPEN**.
 **QED.**

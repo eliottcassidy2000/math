@@ -12,8 +12,9 @@ status: >
   is (2,3), so rho=1. The global mapping degree is 21 and the polynomial
   degrees are (2G,3G) with G>=14, hence at least (28,42); the higher-DE-weight
   branch has G>=15 and degrees at least (30,45). THM-4130 later excludes this
-  smooth seam. JC(2), collision walls, other depth cells, and maximum
-  residual weight at least nine remain OPEN.
+  smooth seam, and THM-4134/4138 empty the Delta_V wall. JC(2), the other two
+  collision walls, other depth cells, and maximum residual weight at least
+  nine remain OPEN.
 source: planar-jacobian-squeeze / 2026-08-25
 audit: >
   PASS. Two independent agents checked the full-boundary restriction,
@@ -29,6 +30,8 @@ related:
   - THM-3996-etale-node-address-balance-cycle-and-nonproperness-dichotomy
   - THM-4124-planar-keller-integral-degree-ratio-all-vertex-shear
   - THM-4130-theta-only-extremal-seam-critical-monodromy-obstruction
+  - THM-4134-delta-v-collision-wall-strict-transform-and-high-branch-exclusion
+  - THM-4138-delta-v-horizontal-carrier-monodromy-exclusion
 external:
   - "Nguyen Van Chau, Non-proper value set and the Jacobian condition, Ann. Polon. Math. 84 (2004), Corollary 2, arXiv:math/0305088."
 ---
@@ -249,4 +252,6 @@ Keller pairs. A triangular target move can change the displayed pencil and
 embedded curves; THM-4124 does not by itself put this local gauge in a
 target-orbit-minimal form. The theorem classifies the only possible
 nonproperness set inside the seam. THM-4130 later proves that neither nodal
-option is realizable by a nonautomorphic Keller pair in this seam.
+option is realizable by a nonautomorphic Keller pair in this seam. THM-4134
+and THM-4138 later empty the separate `Delta_V=0` collision wall; the other
+two collision walls remain open.

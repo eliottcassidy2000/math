@@ -26,6 +26,7 @@ related:
   - THM-4131-strong-tournament-centrality-through-order-eight
   - THM-4133-strong-cyclic-substitution-johnson-centrality-counterexample
   - THM-4135-strong-tournament-centrality-complete-order-nine
+  - THM-4137-strong-tournament-centrality-complete-order-ten
   - HYP-2879-strong-ear-atom-calculus
   - HYP-9029-strong-interval-tiling-law
 script: 04-computation/tournament_balanced_cardinality_ear_average_layer_lattice_thm4123.py
@@ -392,9 +393,9 @@ arrangement of the field and edge weights, slice variance, response
 connectivity, and the location of a global maximum. THM-4127 later restores
 exact two-energy slice variance and central dominance; THM-4128 then
 optimizes the rational floor across all nonconstant layers by a
-nearest-parity-grid rule. THM-4131/4135 verify rational/coset centrality
-through order nine, while THM-4133 refutes the all-order extension at twelve;
-orders ten/eleven and actual maxima remain open. None proves an interval. The
+nearest-parity-grid rule. THM-4131/4135/4137 verify rational/coset centrality
+through order ten, while THM-4133 refutes the all-order extension at twelve;
+order eleven and actual maxima remain open. None proves an interval. The
 layer lattice restores one arithmetic coordinate but not interval
 connectivity; THM-4118's state-labelled unit components remain the relevant
 sidecar for propagation.
