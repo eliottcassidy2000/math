@@ -1,6 +1,7 @@
 # Start Here
 
-**Rolling brief — refreshed 2026-08-26; update whenever a headline changes.** This is a router, not a proof source; the startup packet prints the commit and [`CURRENT-FRONTIER.md`](CURRENT-FRONTIER.md) owns status links.
+**Rolling brief — refreshed 2026-08-26.** This is a router, not a proof source;
+[`CURRENT-FRONTIER.md`](CURRENT-FRONTIER.md) owns status links.
 
 ## The five-minute orientation
 
@@ -16,91 +17,71 @@ Run the bounded packet before reading large files:
 python3 agents/start_session.py --topic "<target statement or object>"
 ```
 
-Then read the routed frontier, guardrails, and theorem. Logs and reflections are searchable history, not warm-up.
+Then read the routed frontier, guardrails, and theorem; logs are history.
 
 ## Seventeen high-signal facts to reuse, not re-derive
 
-1. **LRC(14) is first open.** Direct `<=6`; projected caps `1579/216`.
-   THM-3378 leaves `372913/109/12`. THM-4142/4148/4151 give large families;
-   THM-4154 corrects three inherited pools. THM-4156 genuinely adds
-   `2,220,075` divisor-complete bodies, `1,875,709` beyond both current gates.
-   Entry, arbitrary thirteen-speed bodies, and LRC stay open.
+1. **LRC(14) is first open.** Direct `<=6`; projected caps `1579/216`, with
+   THM-3378 leaving `372913/109/12`. THM-4154 corrects three inherited pools;
+   THM-4156 adds `2,220,075` divisor-complete bodies. THM-4158's exact wrapped
+   carrier raises the minimum-indexed density to `0.3421696706978653...` and
+   gives `38,620,298,376` anchored `m=7` bodies. Entry and LRC stay open.
 2. **The `q <= 25` period claim is refuted.** THM-762/764 exhibit `26*{1,...,12} union {339}`, whose first good period is `27`.
-3. **Good-period existence is a maximum statement, not an average or count.**
-   The tight AP at its resonant ruler defeats the tempting mean arguments; see
-   MISTAKE-127/129/130.
-4. **The twelve-speed tight/sporadic locus is finite but not classified.**
-   THM-763 gives a huge finite height; THM-1171 handles the AP locus; THM-1284
-   eliminates the first-gap single-far stratum. Non-AP and deeper multi-defect
-   branches remain.
+3. **Good-period existence is a maximum statement.** The tight resonant AP
+   defeats average/count arguments; see MISTAKE-127/129/130.
+4. **The tight/sporadic locus is finite but unclassified.** THM-763 bounds
+   height; THM-1171/1284 close AP and first-gap single-far strata.
 5. **Exact LRC(14) computation is sound through height 55.** THM-1290, rerun
    after MISTAKE-194, also empties `(1/14,3/41)` through height 64.
 6. **The 13-speed floor is isolated from above.** THM-1289 imports the
-   Giri–Kravitz one-sided accumulation theorem. Its gap is ineffective; it does
-   not make the whole first window finite without an additional conjecture.
-7. **NC2 and GMC(2) are proved.** THM-2022 uses algebraic torus descent, a
-   lowest balanced face, THM-2111's effective constant-term seed, and
-   good-prime Kummer/Lucas/Frobenius amplification of the *whole* face.
-   The root-imported `GMC2Main.gmc2` is unconditional and kernel-pure through
-   `GMC2DvdKOmegaWiring.singlePolyCrux_holds`; its axiom audit is standard.
-   THM-2101's three additive proofs, including the purely t-adic packet route,
-   retain partial wrappers; THM-2801 gives `SIC(1)` true / `SIC(n>=2)` false, not `JC(2)`.
-8. **Support return is not coefficient noncancellation.** THM-2070 gives a
-   cofinite aperiodic return set with infinitely many zero odd constant terms.
-   HYP-8930's fixed-support unique-channel lemma survives. HYP-8931 is vacuous:
-   `lambda=0, delta=-1, F=empty`; `98/116` is a bounded census, not a theorem (MISTAKE-240).
-9. **Whole-packet Frobenius is not an LRC proof.** THM-3255/3267 give rank and
-   phase; THM-3285 gives a literal `R-M-R` horn. Its FINITE-EXACT `13`-label
-   normal atlas has two middle completions but no outer co-support. A two-axis
-   atom, current and LRC(14) remain OPEN.
+   ineffective one-sided gap; it does not make the first window finite.
+7. **NC2 and GMC(2) are proved.** THM-2022 combines torus descent, a lowest
+   balanced face, THM-2111's seed, and whole-face good-prime amplification.
+   Root theorem `GMC2Main.gmc2` is unconditional through
+   `GMC2DvdKOmegaWiring.singlePolyCrux_holds`; THM-2101 retains partial
+   wrappers. THM-2801 is not `JC(2)`.
+8. **Support return is not coefficient noncancellation.** THM-2070 has
+   infinitely many zero odd constants. HYP-8930 survives; HYP-8931 is vacuous
+   (`lambda=0, delta=-1, F=empty`), and `98/116` is only a census (MISTAKE-240).
+9. **Whole-packet Frobenius is not an LRC proof.** THM-3255/3267 give
+   rank/phase; THM-3285's FINITE-EXACT `13`-label `R-M-R` horn has two middle
+   completions but no outer co-support. Atom, current and LRC remain open.
 10. **Type pair structure.** THM-3423 is a graph, not a tournament;
-    THM-4071/4076 control Stern pairs. THM-4144/4162/4163 close all
-    nonprime order-eleven tournaments; only the prime stratum remains.
+    THM-4144/4162/4163 close all nonprime order-eleven tournaments; only the
+    prime stratum remains.
 11. **Support is not multiplicity.** THM-2000/2005/2352/3359/3362/3382
-    separate collision, phase and harmonic address. THM-3425 makes joint
-    period plus parity the primitive half cap-six breaker. Composite rank
-    seven and FC(3) remain open.
+    separate collision, phase and address; THM-3425 needs period plus parity.
+    Composite rank seven and FC(3) remain open.
 12. **JC is false from dimension three; JC(2), DC(2) remain open.** THM-1300
-    is exact; THM-2084 closes cells; THM-4130/4138/4141/4143 empty `M=8`;
-    THM-4147 excludes `M=9` `P/Y/B/A`; THM-4157 adds `B/C` opens and all
-    deepest `D`, including `H_30=0`. THM-4155 handles a Y-only slice;
-    THM-4159 closes its inner wall away from the top discriminant, and
-    THM-4161/4164 close its double/triple top wall away from the inner
-    endpoint. For `zeta!=0`, only `I_C=D_C=0` remains in that chart.
-13. **Complete period-14 coordinates can still be globally blind.** THM-2043
-    proves parity-Hasse completeness for reduced period-14 functions. The
-    audited Goddyn--Wong family in THM-2058 preserves the packet, every fixed
-    lift depth, threshold, and owner sector but exits strictly at `47/113`.
-    [THM-2047](../01-canon/theorems/THM-2047-phase-height-toric-arrangement-for-lrc.md)
-    proves the labelled phase-height carrier. THM-2050 further shows complete
-    local germs at all period-14 unit phases can agree while global maxima
-    differ; a global termination sidecar is mandatory.
-14. **The peel obstruction is quantized.** THM-2048 decomposes discrepancy into
-    the old `6mu^2` floor plus an exact integer fiber-occupancy variance tax. It
-    strictly improves the uniform tail test but is not a universal proof.
-15. **Every counterexample is in a finite labelled code/deck/fan atlas.** THM-2051--2059 bound support/height and retain deck, fan, and clock data; THM-2081--2087 and THM-2088--2093 preserve owner addresses inside a finite box.
-    MISTAKE-260/MISTAKE-261 expose a `28,393`-dimensional landing kernel;
-    THM-2363/THM-2368 and THM-2371/THM-2376 are typed sidecars, not arrival.
+    is exact; THM-2084 closes cells. THM-4130/4138/4141/4143 empty `M=8`;
+    THM-4147/4157 close the stated `M=9` chambers. In the THM-4155 Y-only chart,
+    THM-4159/4161/4164 leave only `I_C=D_C=0` when `zeta!=0`.
+13. **Complete period-14 coordinates can be globally blind.** THM-2058 keeps
+    every fixed-depth packet coordinate but exits at `47/113`; THM-2043/2047/
+    2050 separate local completeness from global maxima.
+14. **The peel obstruction is quantized.** THM-2048 adds an exact integer
+    fiber-occupancy variance tax to `6mu^2`; it is not a universal proof.
+15. **Every counterexample is in a finite labelled atlas.** THM-2051--2059
+    bound support; THM-2081--2087 and THM-2088--2093 retain owner data.
+    MISTAKE-260/MISTAKE-261 expose the `28,393`-kernel; THM-2363/THM-2368 and
+    THM-2371/THM-2376 are typed sidecars, not arrival.
 16. **Use the native operation carrier, not shared syntax.** THM-2176/2191
-    expose the knot continuation carrier; MISTAKE-230--235 forbid syntax-only
-    bridges. THM-4065's Rule-30 spatial transfer proves infinitely many isolated
-    fixed-column zeros and next depth `1420878968`; THM-4085 proves
-    distinct-address iid/Haar extremes, not named-seed prizes.
-17. **Sun 2-4-6-8 is refuted:** THM-4026; THM-4027/4028/4036/4037 separate
-    local support, mean, energy and parity from coverage; THM-4040 gives
-    uniqueness only in one CRT class. Global classification remains open.
+    expose knot continuation; MISTAKE-230--235 forbid syntax-only bridges.
+    THM-4065/4085 prove Rule-30 spatial/address results, not named-seed prizes.
+17. **Sun 2-4-6-8 is refuted:** THM-4026. THM-4027/4028/4036/4037 separate
+    local invariants from coverage; THM-4040 gives one-CRT-class uniqueness.
 ## Where to go by topic
 
 | Topic | Read first | Then use |
 |---|---|---|
-| LRC(14) proof | [`CURRENT-FRONTIER.md#lrc14`](CURRENT-FRONTIER.md#lrc14) | [`LRC14-PROOF-MAP.md`](LRC14-PROOF-MAP.md), THM-2053--2196 and THM-3285; effectivize circuit carries while preserving owner/tie, endpoint origin, positive-Haar current, joint continuation, and equality skeleton |
+| LRC(14) proof | [`CURRENT-FRONTIER.md#lrc14`](CURRENT-FRONTIER.md#lrc14) | [`LRC14-PROOF-MAP.md`](LRC14-PROOF-MAP.md); preserve owner/tie, origin, current, continuation, equality |
 | LRC / Frobenius wildcard | [HYP-8800](../05-knowledge/hypotheses/HYP-8800-lrc14-face-carry-frobenius-transfer.md) | THM-2041 packets; keep seed and pointwise exit explicit |
 | LRC literature | [`CORE-PAPERS.md#lonely-runner-conjecture`](../05-knowledge/reference/CORE-PAPERS.md#lonely-runner-conjecture) | [`LRC-TECHNIQUE-INDEX.md`](LRC-TECHNIQUE-INDEX.md), source paper |
 | NC2 / GMC | [`CURRENT-FRONTIER.md#nc2-and-gaussian-moments`](CURRENT-FRONTIER.md#nc2-and-gaussian-moments) | THM-2022/2101/2111/3365, formal interfaces; FC(3) open |
 | Jacobian / Dixmier / Poisson | [`CURRENT-FRONTIER.md#other-active-portfolio`](CURRENT-FRONTIER.md#other-active-portfolio) | [`CORE-PAPERS.md#jacobian-dixmier-and-poisson`](../05-knowledge/reference/CORE-PAPERS.md#jacobian-dixmier-and-poisson), THM-1300/2063/2071/2102/2118/2202/3279/3289/3367 |
 | Tournaments | [`CURRENT-FRONTIER.md#tournaments`](CURRENT-FRONTIER.md#tournaments) | [`TOURNAMENT-INVARIANT-ZOO-ATLAS-klein-S399.md`](TOURNAMENT-INVARIANT-ZOO-ATLAS-klein-S399.md), [`THE-ZOO.md`](THE-ZOO.md) with its freshness banner |
 | Integer sequences / additive bases | [`CURRENT-FRONTIER.md#integer-sequences`](CURRENT-FRONTIER.md#integer-sequences) | THM-2000/2005/3359, THM-4026--4028/HYP-1953; keep support, local data, height, and carry distinct |
-| Pythagorean/Pell/power sums | [THM-3357](../01-canon/theorems/THM-3357-berggren-three-branch-walsh-level-collapse-and-parent-circuit.md) | THM-3333--3336/3339/3341/3345--3347/3353/3356/3358/3370/3375/3376; retain content/unit, branch order, ancestry, positivity chamber, and consumer labels |
+| Pythagorean/Pell/power sums | [THM-3357](../01-canon/theorems/THM-3357-berggren-three-branch-walsh-level-collapse-and-parent-circuit.md) | THM-3333--3336/3339/3341/3345--3347/3353/3356/3358/3370/3375/3376; retain content, branch order, ancestry, chamber, consumers |
 | ABC / IUT | [`CURRENT-FRONTIER.md#abc-iut`](CURRENT-FRONTIER.md#abc-iut) | [`CORE-PAPERS-ABC-IUT.md`](../05-knowledge/reference/CORE-PAPERS-ABC-IUT.md), THM-3833 |
 | Broad portfolio | [`PROBLEM-LEDGER.md`](PROBLEM-LEDGER.md) | THM-2176/2177/2191; [`PROBLEM-ATLAS-2026-07-20.md`](PROBLEM-ATLAS-2026-07-20.md) only as historical provenance |
 | Formalization | relevant theorem's `formalization` field | `00-navigation/*FORMALIZATION*`, then a clean build/axiom audit |
@@ -117,5 +98,5 @@ Then read the routed frontier, guardrails, and theorem. Logs and reflections are
 
 ## Maintaining this brief
 
-Only put session-independent facts here. When a headline changes, update this page, `CURRENT-FRONTIER.md`, and any stale startup banner in the same commit.
-Preserve old arguments in historical files and expose supersession; the startup script prints current commits, so do not duplicate a stale commit diary here.
+Keep only session-independent facts. Update this page and `CURRENT-FRONTIER.md`
+together; preserve superseded arguments only in historical files.

@@ -77,8 +77,11 @@ is the safe control `M(S_13)=99/338`. No cited result proves LRC(14).
   THM-4150/4152/4153 give abstract Haar transfers at `4/63,4/77,4/91`, but
   THM-4154 shows their displayed pools were already closed at `x=1/12`.
   THM-4156 instead forces anchors `{120,126,143}` and closes `2,220,075`
-  divisor-complete bodies, `1,875,709` beyond both current gates. Entry,
-  arbitrary bodies, and LRC(14) remain open.
+  divisor-complete bodies. [THM-4158](../01-canon/theorems/THM-4158-three-band-wrapped-carrier-odd-tail-lrc14-transfer.md)
+  proves the complete three-band carrier alphabet, density
+  `0.3421696706978653...`, and a `38,620,298,376`-body anchored `m=7`
+  specialization. Its census is minimum-indexed, not the total carrier union;
+  entry, arbitrary bodies, and LRC(14) remain open.
   See the [proof map](LRC14-PROOF-MAP.md).
 - **PROVED:** [THM-2928](../01-canon/theorems/THM-2928-critical-seven-comb-grid-tensorization-and-drift-tariff.md)/2941: literal zero/one/two/three-drift sectors are empty; `k=2,3` are finite.
 - **Orthogonal routes.** THM-1017 is HYP-6820; THM-2047/2050 keep phase/exit; THM-731/2048 prune; THM-1290 ends at `55`; HYP-8900 nonuniform.

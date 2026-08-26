@@ -1,5 +1,30 @@
 # Script Results Index
 
+- `lrc14_three_band_wrapped_carrier_odd_tail_transfer_thm4158.py` and an
+  independent no-import endpoint/wall implementation -> matching exact
+  certificates [THM-4158 PROVED ELEMENTARY COMPLETE WRAPPED-CARRIER ALPHABET
+  + VERIFIED-EXACT + INDEPENDENTLY AUDITED; LRC(14) OPEN]. For every `m>=2`,
+  the complete alphabet safe throughout
+  `J_m=[1/(14m),8/(7(12m+1))]` is exactly
+  `[m,floor(13(12m+1)/16)] union [15m,floor(27(12m+1)/16)] union
+  [29m,floor(41(12m+1)/16)]`; every subbody accepts every distinct positive
+  odd tail pair after doubling. The canonical minimum-indexed eleven-body
+  subfamily has density `0.34216967069786529458...`, strictly above the
+  THM-4151 first-band density; it is not the total union over carrier
+  parameters. At `m=7`, mandatory anchors `{7,120,126,143}` give
+  `38,620,298,376` primitive divisor-complete bodies outside the stated
+  THM-4148/4151 gates and disjoint from THM-4156's explicit family. The full
+  `P_7` safe set has measure `22/3381<4/63`; individual subbody Haar gates are
+  unclassified. Primary script/output SHA-256:
+  `8a95c6123aa048b13047cde1cf46694484b429a21572c189480f30a1a77f9936` /
+  `50eb8105f5e4bc548610be8e2de1e7c1b189eb59d3ecac28a1a424578e6f7ef5`;
+  independent script/output:
+  `795a0d4b74e5741184c2eeb0342a462951e16bd1962e7b7812dad69ccaef1ea1` /
+  `63f1ee1329ac9e48844be850f3b4bfdc39737d61b586e2e90e85f85f47dd34c1`;
+  primary semantic SHA-256/FNV-64:
+  `b1d8f0a1cad02303d3560e1deb471794d3b9fdcff0b1e1cffe12379674f6cdb6` /
+  `416565bf17102710`.
+
 - `tournament_rooted_pair_mixed_twoear_tensor_thm4162.py`, the order-eleven
   tensor engine/aggregator, and an independent literal child-DP engine ->
   concordant exact certificates [THM-4162 PROVED ELEMENTARY ROOTED ENDPOINT
