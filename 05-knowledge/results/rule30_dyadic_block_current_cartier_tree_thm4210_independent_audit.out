@@ -1,0 +1,8 @@
+PASS  scalar coarse law on 140 blocks
+PASS  scalar child law on 132 comparisons
+PASS  scalar parity law on 266 comparisons
+PASS  physical O contrast (2,0) vs (8,3) with center prefix 101010
+PASS  scalar physical cubic alias with opposite marked coefficient
+PASS  distinct endpoint response times through distance 12
+PASS  scalar odd-detail kernel has identically zero center
+PASS  THM-4210 independent audit complete

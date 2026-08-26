@@ -1,0 +1,19 @@
+PASS  independent direct/packed center prefix through time 160
+PASS  exact coarse Rule-150/current law on 774 blocks
+PASS  exact two-child scale law on 612 current comparisons
+PASS  lossless E/O inversion across 165 current steps
+PASS  even/odd spatial-coset laws on 300 comparisons
+PASS  dyadic flip words and 134 signed shell prefixes
+      delta_0=0
+      delta_1=10
+      delta_2=0001
+      delta_3=00011001
+      delta_4=0100111101101011
+      delta_5=10101001101001000000011000000101
+PASS  minimal O_0=1 hostile changes current but never the marked center
+PASS  bounded E coefficient windows fail for cutoffs 0,...,8
+PASS  fixed cyclic-character banks fail for moduli 1,...,12
+PASS  physical cubic alias J^(2,1)_1 vs J^(2,1)_3
+PASS  all 256 binary center words of length nine are realized
+PASS  opposite ambient tails share the physical current through t=12
+PASS  THM-4210 exact audit complete
