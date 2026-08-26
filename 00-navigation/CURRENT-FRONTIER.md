@@ -362,15 +362,15 @@ lift/phase clocks.
   challenges `(3,9),(5,6),(7,5),(11,4),(13,4)` all remain **OPEN**; the public
   `131199`-field file is a named finite population, not a world census.
 - **Jacobian/Dixmier:** `JC(2),DC(2)` remain **OPEN**. THM-4130--4143 empty
-  exact `M=8`; THM-4147/4157 close stated `M=9` chambers.
-  THM-4176/4180 exhaust repeated-top exact `M=9` by the `Delta!=0/0` split;
-  source completeness makes `eta=0` a lower-weight filtration exit.
-  [THM-4183](../01-canon/theorems/THM-4183-p-only-delta-zero-planar-jacobian-exclusion.md)
-  closes P-only `Delta=0`, including its `Theta=0` blowdown;
-  [THM-4186](../01-canon/theorems/THM-4186-complete-p-only-generic-coefficient-critical-wall-planar-jacobian-exclusion.md)
-  closes `zeta=0,eta*Delta*K*Theta!=0`, `Phi` arbitrary, across all critical
-  walls. Y-only is `eta=0,zeta!=0`; `eta=zeta=0` exits `M=9`. P-only
-  `Delta!=0,K*Theta=0`, mixed B, other cells, `M>=10`, and entry stay open.
+  `M=8`; THM-4147/4157 close named `M=9` chambers; THM-4176/4180
+  exhaust repeated-top. `eta=0` is a lower-weight exit.
+  [THM-4183](../01-canon/theorems/THM-4183-p-only-delta-zero-planar-jacobian-exclusion.md),
+  [THM-4186](../01-canon/theorems/THM-4186-complete-p-only-generic-coefficient-critical-wall-planar-jacobian-exclusion.md), and
+  [THM-4189](../01-canon/theorems/THM-4189-complete-p-only-theta-zero-planar-jacobian-exclusion.md)
+  close P-only `zeta=0,eta*K!=0` for all `Delta,Phi,Theta`, even with
+  projection collisions. P-only `K=0`
+  (`Delta=5696/105`), mixed B, other cells, `M>=10`, and entry remain open.
+  Y-only is `eta=0,zeta!=0`; `eta=zeta=0` exits `M=9`.
   Exceptional quartic: THM-3703/3737 give grammar/image, THM-4034 the
   conductor, and THM-4039/4043/4046 reach `J_7`, obstruct `J_8`, and close
   critical `H`. [THM-4054](../01-canon/theorems/THM-4054-exceptional-affine-simple-zero-retained-packet.md)
