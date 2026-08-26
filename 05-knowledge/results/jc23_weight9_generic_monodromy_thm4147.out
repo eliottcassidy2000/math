@@ -1,0 +1,43 @@
+THM4147 GENERIC EXACT-M=9 CERTIFICATE
+checks=15101
+forced_row: K=2848/45-(7/6)Delta; control Delta=1 gives K=5591/90
+top_row: eta*p^3*y+zeta*y^3, (eta,zeta)!=(0,0)
+cubic_carrier_discriminant=(q-1/2)*(4K^3-27zeta^2*(q-1/2)):PASS
+case=p3y_only
+  polygon=((0, 1), (2, 0), (4, 2), (4, 3), (3, 4), (1, 5), (0, 5))
+  lower_planes=[(Fraction(0, 1), Fraction(1, 4), Fraction(-1, 4)), (Fraction(1, 9), Fraction(2, 9), Fraction(-2, 9)), (Fraction(1, 5), Fraction(1, 5), Fraction(-2, 5)), (Fraction(1, 2), Fraction(0, 1), Fraction(-1, 1))]
+  Pick=area2:29,boundary:11,genus:10
+  packet=(8, 5, 4, 3, 2, 2, 1), defect=18
+  primary=T^56*(6T+1)^2*Q20; independent=p^4*R20; critical_length=24
+  Q_constant=-48855523690236429/8031810176; Q_leading=819618123356419715846022983/4892490731700
+  primary_residual_sha256=3c40a35e9eafe9de0a1cc9eb588fe2ac07c35d85e0a2554b24cd7a9137d05217
+  independent_residual_sha256=0d3c5ebc11c437a340b2442fd42d4ec64f5671afb616060bebfda4c06b705f7e
+  finite_response: n=21, beta=2, one_handle_capacity=19 < n-1=20
+  full_response: n=25, overlap<=1, commutator_index<=2 < defect=18
+case=y3_only
+  polygon=((0, 1), (2, 0), (5, 3), (3, 4), (0, 5))
+  lower_planes=[(Fraction(1, 12), Fraction(1, 4), Fraction(-1, 4)), (Fraction(1, 9), Fraction(2, 9), Fraction(-2, 9))]
+  Pick=area2:30,boundary:10,genus:11
+  packet=(11, 8, 2, 2, 2, 1), defect=20
+  primary=T^56*(6T+1)^2*Q20; independent=p^8*R20; critical_length=24
+  Q_constant=-247516870919344263/52523350144; Q_leading=7208896275055396331984341191408/8968208160085625
+  primary_residual_sha256=f50bba959648a586b42b789fdbfb712cd3b708949b87ab5c6908968f11d7b187
+  independent_residual_sha256=940f5aa44db29228b2f948468f9e428d7b6019d63d4fd5e08a2d90b43d357170
+  finite_response: n=20, beta=3, one_handle_capacity=18 < n-1=19
+  full_response: n=26, overlap<=2, commutator_index<=4 < defect=20
+case=both_top_terms
+  polygon=((0, 1), (2, 0), (5, 3), (1, 5), (0, 5))
+  lower_planes=[(Fraction(0, 1), Fraction(1, 4), Fraction(-1, 4)), (Fraction(1, 9), Fraction(2, 9), Fraction(-2, 9))]
+  Pick=area2:31,boundary:11,genus:11
+  packet=(8, 8, 4, 2, 2, 2, 1), defect=20
+  primary=T^56*(6T+1)^2*Q21; independent=p^8*R21; critical_length=25
+  Q_constant=-17665966045197965362987008/25748143198497941; Q_leading=397724187424872745954457533317316608/195872524257804233125
+  primary_residual_sha256=ff4940ae354f753b5d508f5396bc8dc8b302beeb9afb465802724f6500724c67
+  independent_residual_sha256=6ab5a69c9fe10dbece054751ca0a3afc0db53d0f05cad6a3878f2c2e2dcaae0d
+  finite_response: n=21, beta=3, one_handle_capacity=19 < n-1=20
+  full_response: n=27, overlap<=2, commutator_index<=4 < defect=20
+top_collision_eta_plus_zeta_zero=T^42*(6T+1)^2*Q19:EXCLUDED_FROM_CHAMBER
+midpoint_cancellation_eta_equals_zeta=support_midpoint_deleted,T^56*(6T+1)^2*Q21:HARMLESS
+commutator_overlap_hostile=S_n exhaustive through n=5:PASS
+semantic_sha256=c8f8e922d9a3322955abe0be82881124d7bac3eb143277acafad26f70a5d47fa
+verdict=PASS
