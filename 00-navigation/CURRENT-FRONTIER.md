@@ -360,12 +360,12 @@ lift/phase clocks.
   `131199`-field file is a named finite population, not a world census.
 - **Jacobian/Dixmier:** `JC(2),DC(2)` remain **OPEN**. THM-4130--4143 empty
   exact `M=8`; THM-4147/4157 close stated `M=9` chambers.
-  [THM-4173](../01-canon/theorems/THM-4173-repeated-top-row-a-complete-planar-jacobian-exclusion.md)
-  closes row `A`; [THM-4176](../01-canon/theorems/THM-4176-complete-repeated-top-wall-planar-jacobian-exclusion.md)
-  closes `zeta=-eta`, `eta*Delta!=0` via B/C towers and row `D`.
+  [THM-4176](../01-canon/theorems/THM-4176-complete-repeated-top-wall-planar-jacobian-exclusion.md)/
+  [4180](../01-canon/theorems/THM-4180-repeated-top-delta-zero-planar-jacobian-exclusion.md)
+  close repeated-top `zeta=-eta`, `eta!=0` by the `Delta!=0/0` split.
   THM-4155/4159/4161/4164/4165 close Y-only for `zeta!=0`.
-  Repeated-top `eta*Delta=0`, `zeta=0` Y-only, other cells, `M>=10`, and entry
-  stay open.
+  Repeated-top `eta=0`, `zeta=0` Y-only, other cells, `M>=10`, and entry stay
+  open.
   Exceptional quartic: THM-3703/3737 give grammar/image, THM-4034 the
   conductor, and THM-4039/4043/4046 reach `J_7`, obstruct `J_8`, and close
   critical `H`. [THM-4054](../01-canon/theorems/THM-4054-exceptional-affine-simple-zero-retained-packet.md)

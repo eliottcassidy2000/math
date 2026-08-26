@@ -29,6 +29,7 @@ related:
   - THM-4159-inner-resultant-wall-planar-jacobian-exclusion
   - THM-4161-y-only-double-top-root-planar-jacobian-exclusion
   - THM-4164-y-only-triple-top-root-planar-jacobian-exclusion
+  - THM-4180-repeated-top-delta-zero-planar-jacobian-exclusion
 script: 04-computation/jc23_repeated_top_rows_bc_complete_exclusion_thm4176.py
 output: 05-knowledge/results/jc23_repeated_top_rows_bc_complete_exclusion_thm4176.out
 independent_audit_script: 04-computation/jc23_repeated_top_rows_bc_complete_exclusion_thm4176_independent.gp
@@ -668,3 +669,6 @@ sha256sum \
 The inherited row-A and row-D proof and replay bundles remain bound by
 THM-4173 and THM-4157 respectively; the universal `T=0` identity used by the
 primary length audit is bound there rather than duplicated here.
+
+THM-4180 later closes the complementary `Delta=0,eta!=0` slice; together the
+two theorems exclude the full repeated-top locus `zeta=-eta,eta!=0`.

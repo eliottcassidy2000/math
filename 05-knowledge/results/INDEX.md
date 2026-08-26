@@ -1,5 +1,24 @@
 # Script Results Index
 
+- `jc23_repeated_top_delta_zero_complete_exclusion_thm4180.py` and an
+  independent normalized `(X,T)` audit -> complete Delta-zero repeated-top
+  exclusion [THM-4180 PROVED RELATIVE TO ITS STATED TRANSPORT PACKAGE +
+  VERIFIED-EXACT + INDEPENDENTLY NORMALIZED-AUDITED; JC(2), DC(2) OPEN]. On
+  `zeta=-eta`, `Delta=0`, `eta!=0`, the contracted Newton polygon keeps genus
+  eleven; the lost horizontal Delta-face is replaced by the diagonal
+  `W=sp` face and its rational index-four place. The exhaustive rows are
+  `A/B/C`; row `D` is empty because `Btop=7168/135`. Exact source resultants
+  give open-row critical lengths `23/21/19`, and the complete row-A inner
+  wall has degree tower `18/17/16` with terminal coprime obstruction. All
+  packet-response inequalities are strict. With THM-4176 this closes the
+  entire repeated-top locus `zeta=-eta`, `eta!=0`; `eta=0` and entry remain
+  open. Primary source/output SHA-256:
+  `d373ef7bb19df199d10818782ce0e8c8e9d396919594b6dd35e423907e4c4094` /
+  `33d2c9be7e49db4193a7f085f717b33e163e896462ab0fc1d0597c24c7dd8905`;
+  independent source/output:
+  `51eff7406f396bacaf81f69396b8a3c2dac006dba31d45b0bde42e560661e0ff` /
+  `5f442520f5a4f9d6cab138900d2a5b5bf069d7da1580054a2b95969d45a26ba3`.
+
 - `lrc14_q50_seventh_deletion_primitive_anchor_completion_thm4179.py` and an
   independent joint-wall C++20 engine -> blocker descent and all-six-anchor
   completion [THM-4179 PROVED RELATIVE TO THM-4150/4178 + VERIFIED-EXACT +
