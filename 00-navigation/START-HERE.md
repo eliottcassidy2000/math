@@ -22,11 +22,9 @@ Then read the routed frontier, guardrails, and theorem; logs are history.
 ## Seventeen high-signal facts to reuse, not re-derive
 
 1. **LRC(14) is first open.** Direct `<=6`; projected caps `1579/216` leave
-   `372913/109/12`. THM-4174/4175/4188 uniformly transfer the disjoint
-   `|A_0 intersection B|=3,2,0` slices with counts
-   `888030/6660225/1491665` (`9039920` per newcomer) through THM-4188's exact
-   `15/19/23` resonances. At `q=50`, THM-4179's `1071961` exactly-one slice
-   raises the total to `10111881`. Entry/arbitrary bodies/LRC stay open.
+   `372913/109/12`. THM-4174/4175/4191/4190 transfer four disjoint fixed-pool
+   slices (`888030/6660225/8436285/1071961`), totaling `17056501` per
+   newcomer via THM-4188's `15/19/23` resonances. Entry/other bodies/LRC stay open.
 2. **The `q <= 25` period claim is refuted.** THM-762/764 exhibit `26*{1,...,12} union {339}`, whose first good period is `27`.
 3. **Good-period existence is a maximum statement.** The tight resonant AP
    defeats average/count arguments; see MISTAKE-127/129/130.
@@ -56,8 +54,8 @@ Then read the routed frontier, guardrails, and theorem; logs are history.
     Composite rank seven and FC(3) remain open.
 12. **JC is false from dimension three; JC(2), DC(2) remain open.** THM-2084
     closes cells; THM-4130--4165 close named `M<=9` chambers. THM-4176/4180
-    exhaust repeated-top; THM-4183/4186/4189 close P-only `zeta=0,eta*K!=0`
-    despite projection collisions. P-only `K=0`, other walls/cells, and
+    exhaust repeated-top; THM-4183/4186/4189/4192 close all P-only
+    `zeta=0,eta!=0`, despite projection collisions. Other walls/cells and
     entry survive; `eta=zeta=0` exits `M=9`.
 13. **Complete period-14 coordinates can be globally blind.** THM-2058 keeps
     every fixed-depth packet coordinate but exits at `47/113`; THM-2043/2047/

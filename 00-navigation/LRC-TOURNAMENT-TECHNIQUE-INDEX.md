@@ -80,12 +80,13 @@ Every technique below is a possible tooth in that zipper.
   transfer, and overlap-aware union—not presentation addition—gives
   `1,071,961` exactly-one-original-anchor bodies. Maximal deletion identifies
   the unrestricted repair test with the body's own Haar threshold.
-  THM-4185 then closes all `1,491,665` good zero-original ten-bodies at
-  `q=50` through its `32/297/24` minimal-anchor hierarchy. THM-4188 transports
-  that entire slice to every newcomer: the q50 E5/E6/E7 inclusions fail at
-  exactly `15/19/23` nested resonance labels, and shallower native E6/E5
-  hypergraphs have no covers within the residual `6/5/4` budgets there.
-  Together THM-4174/4175/4188 give `9,039,920` disjoint cores per newcomer.
+  THM-4185 closes `1,491,665` good zero-original ten-bodies at `q=50`;
+  THM-4188 transports them to every newcomer through exact `15/19/23`
+  resonances. THM-4191 then projects lawful repair decks to all `8,436,285`
+  zero-original bodies. THM-4190 uses failure-mask subset and safe-mask
+  superset zeta duality to close THM-4179's `1,071,961` exactly-one bodies at
+  all resonances. With THM-4174/4175, the uniform disjoint total is
+  `17,056,501` cores per newcomer.
 - **Preserves:** body safety, literal root `t`, integer fibre multiplicity,
   compact/open endpoint status, and the cubic mixed danger response.
 - **Forgets / guardrail:** an ordinary tournament, complete pairwise Gram

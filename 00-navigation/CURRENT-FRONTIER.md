@@ -73,13 +73,13 @@ is the safe control `M(S_13)=99/338`. No cited result proves LRC(14).
   `2^(c(F)-1)`. Safety/arrival stay open.
 - **Owner/tail lane (PROVED):** THM-4025/4031, 4029/4038, and 4033/4042
   give tails, the 60-phase law, and clocks; THM-4129/4136 close fixed `U/2U`.
-  THM-4142--4154 give Haar transfers. THM-4174/4175 uniformly transfer
-  the original-anchor-count `3/2` slices (`888,030/6,660,225` bodies).
-  [THM-4188](../01-canon/theorems/THM-4188-all-newcomer-zero-original-anchor-hierarchy-and-resonance-filtration.md)
-  deforms THM-4185's `1,491,665` zero-original `32/297/24` hierarchy to every
-  `q notin P` via exact `15/19/23` resonances and native repairs. This gives
-  `9,039,920` cores per newcomer; at `q=50`, THM-4179's exactly-one slice gives
-  the four-slice total `10,111,881`. Entry, arbitrary bodies, and LRC(14) stay open.
+  THM-4174/4175 transfer the original-count `3/2` slices (`888,030/6,660,225`).
+  [THM-4191](../01-canon/theorems/THM-4191-complete-all-body-zero-original-newcomer-haar-transfer.md)
+  closes all `8,436,285` zero-original bodies, and
+  [THM-4190](../01-canon/theorems/THM-4190-every-newcomer-exactly-one-original-direct-body-completion.md)
+  deforms THM-4179's `1,071,961` exactly-one slice to every `q notin P`.
+  Together they give `17,056,501` per newcomer via THM-4188's `15/19/23`
+  resonance engine. Fixed-pool scope is not entry; other bodies and LRC stay open.
   [Proof map](LRC14-PROOF-MAP.md).
 - **PROVED:** [THM-2928](../01-canon/theorems/THM-2928-critical-seven-comb-grid-tensorization-and-drift-tariff.md)/2941: literal zero/one/two/three-drift sectors are empty; `k=2,3` are finite.
 - **Orthogonal routes.** THM-1017 is HYP-6820; THM-2047/2050 keep phase/exit; THM-731/2048 prune; THM-1290 ends at `55`; HYP-8900 nonuniform.
@@ -367,12 +367,14 @@ lift/phase clocks.
   `M=8`; THM-4147/4157 close named `M=9` chambers; THM-4176/4180
   exhaust repeated-top. `eta=0` is a lower-weight exit.
   [THM-4183](../01-canon/theorems/THM-4183-p-only-delta-zero-planar-jacobian-exclusion.md),
-  [THM-4186](../01-canon/theorems/THM-4186-complete-p-only-generic-coefficient-critical-wall-planar-jacobian-exclusion.md), and
+  [THM-4186](../01-canon/theorems/THM-4186-complete-p-only-generic-coefficient-critical-wall-planar-jacobian-exclusion.md),
   [THM-4189](../01-canon/theorems/THM-4189-complete-p-only-theta-zero-planar-jacobian-exclusion.md)
-  close P-only `zeta=0,eta*K!=0` for all `Delta,Phi,Theta`, even with
-  projection collisions. P-only `K=0`
-  (`Delta=5696/105`), mixed B, other cells, `M>=10`, and entry remain open.
-  Y-only is `eta=0,zeta!=0`; `eta=zeta=0` exits `M=9`.
+  close P-only `zeta=0,eta*K!=0`; and
+  [THM-4192](../01-canon/theorems/THM-4192-complete-p-only-k-zero-planar-jacobian-exclusion.md)
+  closes `K=0`. Thus all P-only `zeta=0,eta!=0` is empty, with arbitrary
+  `Delta,Phi,Theta` and projection collisions. Mixed B, other cells,
+  `M>=10`, and entry remain open. Y-only is `eta=0,zeta!=0`;
+  `eta=zeta=0` exits `M=9`.
   Exceptional quartic: THM-3703/3737 give grammar/image, THM-4034 the
   conductor, and THM-4039/4043/4046 reach `J_7`, obstruct `J_8`, and close
   critical `H`. [THM-4054](../01-canon/theorems/THM-4054-exceptional-affine-simple-zero-retained-packet.md)
