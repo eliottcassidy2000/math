@@ -1,0 +1,8 @@
+symbolic_bridge identity=0 degrees=(7,8) leading=8*C*T^7
+universal_points T0=2 hessian=6 Tm1over6=2 hessian=-6
+row_a_control C=30/11 D_A=100055397466/3764475 resultant=T^42*(6T+1)^2*Q19 degree=19
+length residual=21 restored=23
+budgets finite=17<18 full=4<18
+forbidden_gates discQ19=unused discR19=unused Q19(-1/6)=unused
+checks 21
+THM4173_AUDIT_PASS

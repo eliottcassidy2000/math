@@ -395,7 +395,7 @@ its local/proper mechanism.
 
 **Proof.** First compactify the pencil graph, resolve it, and take the
 relative normalization. The generic map is nonconstant between smooth
-projective curves and hence finite. Shrink the `q)-line so that both
+projective curves and hence finite. Shrink the `q`-line so that both
 resolved families are proper and smooth, the resolved morphism is fibrewise
 quasifinite, and therefore the proper morphism is finite. Delete the finite
 set where a family is singular, the map changes degree or has a vertical
