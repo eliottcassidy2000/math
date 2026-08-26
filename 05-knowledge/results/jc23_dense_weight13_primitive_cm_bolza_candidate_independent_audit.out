@@ -1,0 +1,8 @@
+DENSE_WEIGHT13_CANDIDATE_INDEPENDENT_AUDIT
+implementation=stdlib_only_no_sympy
+faces=(M13,V6,T8);global_genus=20;packet_degree=47
+collisions=8;exact_units=(A,B,U,Z,A+B);A_equals_B_safe
+chains=(AE:3,BD:2);main_nodes=13*A311;multiplicities=1
+CM_type=(5,6,9,10,11,12);stabilizer=(1);Bolza_genus=2
+checks=113
+verdict=INDEPENDENT_EXACT_INPUTS_PASS
