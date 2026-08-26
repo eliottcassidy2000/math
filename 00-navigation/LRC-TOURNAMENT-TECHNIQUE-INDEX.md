@@ -80,13 +80,14 @@ Every technique below is a possible tooth in that zipper.
   transfer, and overlap-aware union—not presentation addition—gives
   `1,071,961` exactly-one-original-anchor bodies. Maximal deletion identifies
   the unrestricted repair test with the body's own Haar threshold.
-  THM-4185 closes `1,491,665` good zero-original ten-bodies at `q=50`;
-  THM-4188 transports them to every newcomer through exact `15/19/23`
-  resonances. THM-4191 then projects lawful repair decks to all `8,436,285`
-  zero-original bodies. THM-4190 uses failure-mask subset and safe-mask
-  superset zeta duality to close THM-4179's `1,071,961` exactly-one bodies at
-  all resonances. With THM-4174/4175, the uniform disjoint total is
-  `17,056,501` cores per newcomer.
+  THM-4188 transports `1,491,665` good zero-original bodies through exact
+  `15/19/23` resonances. THM-4190 independently closes the `1,071,961`
+  exactly-one slice by dual zeta coordinates. THM-4191 then corrects the
+  object: the full unprojected repair deck closes every one of the
+  `C(30,10)=30,045,015` fixed-pool ten-bodies. THM-4201 retains the projected
+  incidence sidecar and classifies the exactly-one certificate depth: 65 of
+  69 resonance-anchor rows close at E5; the four A3 exceptions have
+  `2/1/3/4` seven-covers and close at E6 with `tau=10/9/10/10`.
 - **Preserves:** body safety, literal root `t`, integer fibre multiplicity,
   compact/open endpoint status, and the cubic mixed danger response.
 - **Forgets / guardrail:** an ordinary tournament, complete pairwise Gram
@@ -99,15 +100,15 @@ Every technique below is a possible tooth in that zipper.
   /4179 require labelled hyperedge overlaps: none is an intrinsic tournament.
   Symmetric deletion tomography recovers support-size statistics but not the
   incidence deck controlling `tau`. Endpoint equality remains atomic data.
-- **Next pull:** deform THM-4179's exactly-one-original slice away from
-  `q=50`, or replace the fixed pool by an entry theorem; do not repeat the
-  completed THM-4174/4175/4188 all-`q` slices. Arbitrary-body entry and
-  mixed/even tails remain separate.
+- **Next pull:** replace the fixed pool by a physical-entry theorem or isolate
+  which outside-pool coordinate can inherit the full repair-deck obstruction.
+  Mixed/even tails remain separate.
   Retain safe-tooth rank, omitted-label masks, divisor owners, endpoints,
   labelled hyperedge incidence, and physical sheet labels.
 - **Pointers:** THM-3910, THM-4002, THM-4129, THM-4132, THM-4136, THM-4142,
   THM-4148, THM-4150, THM-4156, THM-4158, THM-4160, THM-4166, THM-4170,
-  THM-4172, THM-4174, THM-4175, THM-4178, THM-4179, THM-4185, THM-4188;
+  THM-4172, THM-4174, THM-4175, THM-4178, THM-4179, THM-4185, THM-4188,
+  THM-4190, THM-4191, THM-4201;
   THM-2221, THM-3377,
   THM-3380, THM-3729;
   `lrc14-fixed-radius-auxiliary-center-t-sheet-response-and-tournament-cubic-sidecar-root-20260823.md`.

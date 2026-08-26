@@ -22,9 +22,9 @@ Then read the routed frontier, guardrails, and theorem; logs are history.
 ## Seventeen high-signal facts to reuse, not re-derive
 
 1. **LRC(14) is first open.** Direct `<=6`; projected caps `1579/216` leave
-   `372913/109/12`. THM-4174/4175/4191/4190 transfer four disjoint fixed-pool
-   slices (`888030/6660225/8436285/1071961`), totaling `17056501` per
-   newcomer via THM-4188's `15/19/23` resonances. Entry/other bodies/LRC stay open.
+   `372913/109/12`. THM-4191 transfers all `C(30,10)=30045015` fixed-pool
+   ten-bodies per newcomer; THM-4201 stratifies one projected certificate.
+   Physical entry, bodies outside the pool, and LRC stay open.
 2. **The `q <= 25` period claim is refuted.** THM-762/764 exhibit `26*{1,...,12} union {339}`, whose first good period is `27`.
 3. **Good-period existence is a maximum statement.** The tight resonant AP
    defeats average/count arguments; see MISTAKE-127/129/130.

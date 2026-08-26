@@ -73,13 +73,12 @@ is the safe control `M(S_13)=99/338`. No cited result proves LRC(14).
   `2^(c(F)-1)`. Safety/arrival stay open.
 - **Owner/tail lane (PROVED):** THM-4025/4031, 4029/4038, and 4033/4042
   give tails, the 60-phase law, and clocks; THM-4129/4136 close fixed `U/2U`.
-  THM-4174/4175 transfer the original-count `3/2` slices (`888,030/6,660,225`).
-  [THM-4191](../01-canon/theorems/THM-4191-complete-all-body-zero-original-newcomer-haar-transfer.md)
-  closes all `8,436,285` zero-original bodies, and
-  [THM-4190](../01-canon/theorems/THM-4190-every-newcomer-exactly-one-original-direct-body-completion.md)
-  deforms THM-4179's `1,071,961` exactly-one slice to every `q notin P`.
-  Together they give `17,056,501` per newcomer via THM-4188's `15/19/23`
-  resonance engine. Fixed-pool scope is not entry; other bodies and LRC stay open.
+  [THM-4191](../01-canon/theorems/THM-4191-complete-full-pool-newcomer-haar-transfer.md)
+  transfers all `C(30,10)=30,045,015` fixed-pool ten-bodies per newcomer:
+  q50 depth seven off THM-4188's 23 resonances, native depth six on them.
+  [THM-4201](../01-canon/theorems/THM-4201-exactly-one-newcomer-projected-repair-depth-stratification.md)
+  sharpens the exactly-one projected certificate to 65 depth-five rows and
+  four depth-six rows. Fixed-pool safety is not entry; LRC(14) stays open.
   [Proof map](LRC14-PROOF-MAP.md).
 - **PROVED:** [THM-2928](../01-canon/theorems/THM-2928-critical-seven-comb-grid-tensorization-and-drift-tariff.md)/2941: literal zero/one/two/three-drift sectors are empty; `k=2,3` are finite.
 - **Orthogonal routes.** THM-1017 is HYP-6820; THM-2047/2050 keep phase/exit; THM-731/2048 prune; THM-1290 ends at `55`; HYP-8900 nonuniform.
