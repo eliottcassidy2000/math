@@ -6,9 +6,9 @@ status: >
   + INDEPENDENTLY AUDITED.
   In the inherited b=d=0 reduced (2,3) exact-M=10 seam, the zeta=0
   wall with upsilon*xi*(upsilon+xi) nonzero contains no nonautomorphic
-  planar Keller pair when D_V=Theta^2-4Kxi is nonzero or when
-  K=Theta=0. The split-conic collision D_V=0,K!=0, other cells, seam
-  entry, M>=11, JC(2), and DC(2) remain OPEN.
+  planar Keller pair. This includes the split-conic collision
+  D_V=Theta^2-4Kxi=0. The other three top walls, other cells, seam entry,
+  M>=11, JC(2), and DC(2) remain OPEN.
 source: codex-planar-jacobian-weight-ten-wall-session-20260826
 depends_on:
   - THM-3992-reduced-two-three-cusp-jet-repair-and-first-node-residual
@@ -32,6 +32,14 @@ independent_audit_script: 04-computation/jc23_weight10_zeta_zero_genus2_exclusio
 independent_audit_output: 05-knowledge/results/jc23_weight10_zeta_zero_genus2_exclusion_thm4220_independent_audit.out
 independent_audit_script_sha256: 086f1c68595fa908b03e14a80d94cf927d29783ced64a315e6968d7296be4272
 independent_audit_output_sha256: 0e9b59e310d6daa22fcc34cfb72752cab3c4cc3bab05054217f049fdd4ca547e
+strict_transform_supplement_script: 04-computation/jc23_weight10_zeta_zero_split_conic_strict_transform_thm4220_supplement.py
+strict_transform_supplement_output: 05-knowledge/results/jc23_weight10_zeta_zero_split_conic_strict_transform_thm4220_supplement.out
+strict_transform_supplement_script_sha256: 35f3eddfa8c76f545655119bc582d58657495326a0734b94c9cd5639608b026b
+strict_transform_supplement_output_sha256: 05d37b4315a5eecac9d8f9e43f4ff16cca707566c06438f00e348fb22aacb1f1
+strict_transform_independent_audit_script: 04-computation/jc23_weight10_zeta_zero_split_conic_strict_transform_thm4220_independent_audit.py
+strict_transform_independent_audit_output: 05-knowledge/results/jc23_weight10_zeta_zero_split_conic_strict_transform_thm4220_independent_audit.out
+strict_transform_independent_audit_script_sha256: 8ab80a59c667bae3f5bbe0b0419b5b232125b41d1a23638283bd50e0fa9ef3c9
+strict_transform_independent_audit_output_sha256: 1435156e4800e8d67947f528964ac81f4b24cf2163afba0e90c021861db346bb
 ---
 
 # THM-4220 -- weight-ten zeta-zero genus-two exclusion
@@ -55,25 +63,18 @@ D_V=Theta^2-4Kxi.                                      (1)
 > zeta=0,             upsilon*xi*(upsilon+xi)!=0,       (2)
 > ```
 >
-> either additional condition
->
-> ```text
-> D_V!=0                         or       K=Theta=0      (3)
-> ```
->
 > excludes a nonautomorphic planar Keller pair.
 
-Every lower coefficient is arbitrary subject only to `(2)--(3)` and the
-inherited normal-form relation. Because `xi` and `upsilon` are nonzero, this
-is still exact `M=10`; setting `zeta=0` is not a filtration exit. The
-complement of `(3)` inside `(2)` is exactly
+Every lower coefficient is arbitrary subject only to `(2)` and the inherited
+normal-form relation. Because `xi` and `upsilon` are nonzero, this is still
+exact `M=10`; setting `zeta=0` is not a filtration exit. The proof stratifies
+into the exhaustive rows
 
 ```text
-D_V=0,                         K!=0.                    (4)
+D_V!=0;              K=Theta=0;              D_V=0,K!=0.            (3)
 ```
 
-That split-conic collision remains **OPEN**. The theorem proves neither seam
-entry nor `JC(2)`.
+All three are closed. The theorem proves neither seam entry nor `JC(2)`.
 
 The inheritance pass is:
 
@@ -350,21 +351,101 @@ conservation now gives
 deg(phi_generic)=sum_i m_i deg(phi_i^*L)=0.            (30)
 ```
 
-This contradicts generic finiteness and nonconstancy. Both strata in `(3)`
-are excluded.
+This contradicts generic finiteness and nonconstancy. The first two strata in
+`(3)` are excluded.
 
-## 7. Exact failure boundary
+## 7. Split-conic strict transform
 
-On `(4)`, necessarily `K,Theta,xi` are nonzero and
+It remains to treat `D_V=0,K!=0`. Put
 
 ```text
-K+Theta P+xi P^2=xi(P+Theta/(2xi))^2.                  (31)
+alpha=-Theta/(2xi),       K=xi alpha^2,
+K+Theta P+xi P^2=xi(P-alpha)^2.                        (31)
 ```
 
-The side conic splits and the `UD` edge scheme has a double root. The
-one-step regular model above is no longer valid. A strict-transform audit
-must retain the first lower term normal to that edge and prove that no new
-positive-genus component carries degree. This theorem makes no claim there.
+Thus the side conic splits into two rational branches `V_+,V_-`, and the
+`UD` edge has a double root. Retain the first term normal to that edge. Write
+
+```text
+A(P)=Phi+eta P,
+B(P)=-3P+(8/3)P^2-(1376/135)P^3+Delta P^4+upsilon P^5. (32)
+```
+
+In the side chart `(25)`, set `x=S^-1`, `u=P-alpha`. Multiplying the exact
+equation by `x^4` gives
+
+```text
+F_loc=(1-sigma^30 P x^2)
+      (x^2-xi P^2u^2-sigma^15 xP^3A(P)-sigma^30x^2B(P))
+      -sigma^30x^2/2=0.                                (33)
+```
+
+At `sigma=0`, this is the ordinary node
+
+```text
+x^2-xi(alpha+u)^2u^2=0.                               (34)
+```
+
+Over `C` its two factors are the two rational side branches. The first
+off-face row has exact order `sigma^15` and coefficient
+
+```text
+-x alpha^3 A_0,                    A_0=Phi+eta alpha.   (35)
+```
+
+There are two exhaustive cases.
+
+### 7.1 `A_0!=0`: rational `A_29` resolution
+
+At the scale `x=sigma^15X`, `u=sigma^15U`, the central exceptional chart is
+the smooth conic
+
+```text
+X^2-xi alpha^2U^2-alpha^3A_0X=0.                      (36)
+```
+
+It is rational. It is the central chart/component within the resolution
+ledger below, not an additional component beyond that ledger. Completing
+the square and then applying the formal Morse lemma gives
+
+```text
+(x'-sqrt(xi)alpha u)(x'+sqrt(xi)alpha u)
+  =sigma^30(alpha^6A_0^2/4+O(sigma^15)).               (37)
+```
+
+The parenthesized coefficient is a unit. Hence this is an `A_29` smoothing;
+its resolution is a multiplicity-one rational path between `V_+` and `V_-`.
+The two roots of the inherited internal `BD` edge label `C--V_+` and
+`C--V_-` separately.
+
+After contracting rational paths, the graph has vertices `R,C,V_+,V_-`, ten
+`R--C` edges, one edge from `C` to each `V` branch, and one `V_+--V_-` edge.
+Thus `b_1=10`, and the total genus is `2+10=12`.
+
+### 7.2 `A_0=0`: simultaneous normalization
+
+Now `A(P)=eta u`. Equation `(33)` lies in `(x,u)^2`; in Weierstrass form its
+linear `x` coefficient is divisible by `u` and its constant coefficient by
+`u^2`. Its discriminant is
+
+```text
+u^2(4xi alpha^2+O(u,sigma^15)).                        (38)
+```
+
+The factor in parentheses is a unit with a square root over the complete
+complex local ring. Formal normalization therefore separates two smooth
+rational sheets. No vertical component and no positive genus are created.
+
+Here the Newton polygon still has arithmetic genus `12`, but the persistent
+outer node lowers the geometric genus of the smooth normalization to `11`.
+The contracted graph has the same four vertices and the first twelve edges
+above, but no `V_+--V_-` path; hence `b_1=9` and `g=2+9=11`.
+
+In both cases every new strict-transform or normalization component is
+rational and the inherited simple genus-two curve `C` is still the only
+positive-genus component. Section 6 therefore applies unchanged: every
+specialized component map has degree zero, contradicting the finite
+nonconstant generic map. This closes the third and final stratum in `(3)`.
 
 The typed connection is
 
@@ -373,10 +454,10 @@ source:       complete zeta-zero exact-M=10 lower model;
 target:       degree of a specialized cover of a good elliptic curve;
 map:          Q=sigma^30 regular specialization;
 preserved:    multiplicities, all component genera, and generic degree;
-destroyed:    rational-chain parametrizations and off-face coefficients;
-sidecars:     genus-two simplicity and reduced edge schemes;
+destroyed:    rational-chain parametrizations;
+sidecars:     genus-two simplicity, edge schemes, split-node normalization;
 decisive test: every special component has map degree zero;
-hostile:      D_V=0,K!=0 split conic / double outer root.            (32)
+hostile:      all three top-unit walls outside (2).                  (39)
 ```
 
 ## 8. Verification
@@ -388,7 +469,10 @@ the exact `A_29` and side charts, component and graph genera, base-change
 heights, target scaling, degree ledger, and hostile split factorization.
 The clean-room audit independently enumerates the lower-support and collision
 deletions, reconstructs the regular-model slopes, and rechecks component
-completeness and the degree-zero obstruction.
+completeness and the degree-zero obstruction. The strict-transform supplement
+derives `(33)` from the exact source, verifies the first `sigma^15` row, the
+exceptional conic and `A_29` thickness, the persistent-node normalization,
+and both graph-genus ledgers; its global gluing was independently accepted.
 
 Replay with
 
@@ -400,6 +484,14 @@ PYTHONHASHSEED=4220 python3 -B 04-computation/jc23_weight10_zeta_zero_genus2_exc
 python3 -B 04-computation/jc23_weight10_zeta_zero_genus2_exclusion_thm4220_independent_audit.py
 python3 -B -O 04-computation/jc23_weight10_zeta_zero_genus2_exclusion_thm4220_independent_audit.py
 PYTHONHASHSEED=4220 python3 -B 04-computation/jc23_weight10_zeta_zero_genus2_exclusion_thm4220_independent_audit.py
+
+python3 -B 04-computation/jc23_weight10_zeta_zero_split_conic_strict_transform_thm4220_supplement.py
+python3 -B -O 04-computation/jc23_weight10_zeta_zero_split_conic_strict_transform_thm4220_supplement.py
+PYTHONHASHSEED=4220 python3 -B 04-computation/jc23_weight10_zeta_zero_split_conic_strict_transform_thm4220_supplement.py
+
+python3 -B 04-computation/jc23_weight10_zeta_zero_split_conic_strict_transform_thm4220_independent_audit.py
+python3 -B -O 04-computation/jc23_weight10_zeta_zero_split_conic_strict_transform_thm4220_independent_audit.py
+PYTHONHASHSEED=4220 python3 -B 04-computation/jc23_weight10_zeta_zero_split_conic_strict_transform_thm4220_independent_audit.py
 ```
 
 Compare stdout with the frozen output. **QED.**

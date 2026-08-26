@@ -1,0 +1,9 @@
+checks=25
+scope=D_V=0;K!=0;alpha=-Theta/(2*xi);K=xi*alpha^2
+local_equation=exact;first_off_face=sigma^15;A0=Phi+eta*alpha
+A0_nonzero=formal_Morse_A29;29_P1_path;normalized_genus=12
+A0_zero=two_Hensel_sheets;no_joining_path;normalized_genus=11
+attachments=10*(R-C)+(C-V+)+(C-V-)+optional(V+-V-)
+positive_genus=C_genus2_only;all_new_components=rational_multiplicity1
+degree_specialization=0;residual_split_conic_wall=closed
+semantic_sha256=95681fe8710f37ffc8df3073d76f0b046216cfa7becb4d552b2c7c3b65709c71

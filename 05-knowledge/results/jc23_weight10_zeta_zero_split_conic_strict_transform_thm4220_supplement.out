@@ -1,0 +1,10 @@
+checks=23
+scope=D_V=0;K!=0;alpha=-Theta/(2xi);K=xi*alpha^2
+local=[1-sigma^30*P*x^2]*(x^2-xi*P^2*u^2-sigma^15*x*P^3*A(P)-sigma^30*x^2*B(P))-sigma^30*x^2/2
+first_off_face=sigma^15;coefficient=-x*alpha^3*A0;A0=Phi+eta*alpha
+A0_nonzero=exceptional_conic_genus0;Morse_thickness=30;A29_rational_chain
+A0_zero=persistent_ordinary_node;formal_normalization=two_rational_sheets
+graphs=A0_nonzero:(b1,g)=(10,12);A0_zero:(b1,g_normalized)=(9,11)
+positive_genus_inventory=C_genus2_only;new_components=rational_multiplicity1
+status=VERIFIED_EXACT_STRICT_TRANSFORM;independent_gluing_audit=ACCEPT
+semantic_sha256=2b464a27cbb59db32269f0cbe25c08c3ccb557aba207526d9bfc1980786e6753
