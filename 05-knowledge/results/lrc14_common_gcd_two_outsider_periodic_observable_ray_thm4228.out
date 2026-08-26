@@ -1,0 +1,9 @@
+THM-4228 primary pool-cell activation audit
+pair_overlap_controls=79851 equalities=1 beta_floor=66/91 osc_ceiling=1650/8281 equality_ratio=1:13
+fixed_cells=7133 atom_support=2721 zeta_operations=152170990
+repairs=5852925 strict_edges=5052990 equalities=0 semantic_ledger=b270307777887d42
+bodies=14307150 checks=44319858349 max_checks=821129 E3466=821120 E3467=821923 sharp_certificate_g=3467
+predecessor_cover={88,95,170,193,240,252,264,286,290} activating_repair={8,16,85,132,143,145,168,176}
+repair_mass=1920678988176/18241159416480 repair_components=224 surplus297=96171514659792
+activation_ratio=210474916344000/60714340063 residual3466=-19506842821/8172402168912345 residual3467=21700654421/16349520092105655
+checks=PASS analytic_constants,overlap_hostiles,pool_cells,all_repairs,activation_filtration,all_bodies,predecessor_cover,direct_witness

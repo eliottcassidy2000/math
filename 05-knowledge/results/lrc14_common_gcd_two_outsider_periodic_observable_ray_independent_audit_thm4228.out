@@ -1,0 +1,10 @@
+THM-4228 independent fixed-wall activation audit
+literal_pair_controls=5021 beta_equalities=1 beta_floor=66/91 osc_ceiling=1650/8281
+finite_max_pair_osc=990/8281 at=1:13
+fixed_walls=7134 fixed_cells=7133 support=2721 raw_contributions=2493648782
+repairs=5852925 strict_edges=5052990 equalities=0 semantic_ledger=b270307777887d42
+bodies=14307150 checks=44319858349 max_checks=821129 E3466=821120 E3467=821923 sharp_certificate_g=3467
+predecessor_cover={88,95,170,193,240,252,264,286,290} activating_repair={8,16,85,132,143,145,168,176}
+repair_mass=1920678988176/18241159416480 repair_components=224 surplus297=96171514659792
+activation_ratio=210474916344000/60714340063 residual3466=-19506842821/8172402168912345 residual3467=21700654421/16349520092105655
+checks=PASS literal_pair_walls,independent_fixed_walls,reverse_colex,raw_incidence_scatter,all_repairs,semantic_ledger,activation_filtration,all_bodies,predecessor_cover,direct_witness
