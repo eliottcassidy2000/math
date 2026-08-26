@@ -12,6 +12,15 @@
 > exact defect ledger is symmetric baseline minus rooted-state covariance and
 > variance; regular score first fails to force those sidecars at order seven.
 
+> **Current addendum (2026-08-26).** [THM-4208](../01-canon/theorems/THM-4208-cycle-prefix-arbitrary-context-recurrence-endpoint-energy-and-eventual-positivity.md)
+> gives the complementary cycle-prefix view: every fixed arbitrary context
+> produces one exact four-mode C-finite response, and a rooted endpoint-energy
+> injection forces its leading coefficient positive. Equality of that energy
+> is exactly transitivity. A strong no-sink converse pair with identical
+> `(H,W,G_+)` and unsigned capacity tensor shows that ordered endpoint/fan
+> chirality is a necessary lower-jet sidecar. Uniform tail-five positivity
+> remains open.
+
 *klein-2026-07-21-S399. Owner directive: "keep adding to the zoo, go back through past work
 thoroughly and look for all possible ideas and threads relating to them, make sure none are lost,
 procedurally generate new frames / methods / angles of attack / things to compute, find the things

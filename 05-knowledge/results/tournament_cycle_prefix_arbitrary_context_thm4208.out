@@ -1,0 +1,21 @@
+TOURNAMENT_CYCLE_PREFIX_ARBITRARY_CONTEXT_PRIMARY
+PASS
+factor_universe_orders=1..5 labelled_count=1099
+unary_rows_n=1..8 count=8792
+cycle_tail_state_checks=8
+moment_rows count=1099 zero_exactly_transitive=153
+dual_moment_rows count=1099
+rooted_chirality_rows=1099 square_equality_universal_source=361
+fan_endpoint_collapse_rows=1099
+context_universe_each_factor_orders=1..4 labelled_count=75
+ordered_context_pairs=5625 context_rows_n=0..8=50625
+n0_correction_checks=5625 recurrence_checks=28125
+response_jet_checks=5625
+ordinal_moment_checks=5625
+ordinal_dual_moment_checks=5625
+leading_factor_checks=5625
+semantic_sha256=fa8ef7de9d3a4239d67df4dfffec92347fc3a761a36f756a5cfcdc4867e28f0a
+lollipop_a_range=1..64 checks=64 a0=3204
+lollipop_first_values=16524,77112,336312,1410696,5791176,23494536
+hostile_labels=('110011110111101', '110001101110111')
+hostile_responses=(9377256, 9389016)

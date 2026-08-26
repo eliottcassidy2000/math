@@ -245,33 +245,30 @@ THM-2070 refutes the general HYP-8890/8895 bypasses.  Transfer
   reading. THM-4088/4095 show bare order loses magnitude/type; THM-4093 needs cycles.
 - THM-4094 reduces completeness, via exact deletion and carries `49,63,343`,
   to lanes `p` (`p!=7`) and `7p` (`p!=3`).
-- THM-4099 makes insertion compositional; scalar marginals lose mixed response.
+- THM-4099 makes insertion compositional; marginals lose mixed response.
 - [THM-4097](../01-canon/theorems/THM-4097-order-nine-strong-ear-spectrum-solid-interval-and-lane-extension.md)
-  computes `1,482` order-nine values and cut basis `{3,4}`; THM-4102/4104
-  extend the interval prefix to `80,405`, and THM-4111--4137 add cut/centrality
-  results through order ten.
+  and THM-4102/4104/4111--4137 handle the order-nine/ten interval-cut route.
   [THM-4144](../01-canon/theorems/THM-4144-order-eleven-large-homogeneous-module-johnson-centrality.md)/4162/
   [4163](../01-canon/theorems/THM-4163-order-eleven-homogeneous-pair-johnson-centrality.md)
   close nonprimes; [THM-4168](../01-canon/theorems/THM-4168-prime-order-eleven-nontrivial-automorphism-johnson-centrality.md)
-  closes `12,155` symmetric primes. THM-4167/[4172](../01-canon/theorems/THM-4172-multideletion-support-tomography-and-same-parity-johnson-holonomy.md)
-  add tomography and `1,002` one-parent children.
+  closes symmetric primes; THM-4167/[4172](../01-canon/theorems/THM-4172-multideletion-support-tomography-and-same-parity-johnson-holonomy.md)
+  add tomography.
   [THM-4169](../01-canon/theorems/THM-4169-prime-parent-one-vertex-augmentation-and-quartic-johnson-transfer.md)
-  gives quartic gates and a **CITED** `7,921,973,322`-presentation cover, not classes.
+  gives a **CITED** presentation cover, not classes;
   [THM-4177](../01-canon/theorems/THM-4177-root-split-johnson-current-and-source-sink-boundary-census.md)
-  gives padding descent and a `q<=8` census.
+  gives padding descent.
   [THM-4181](../01-canon/theorems/THM-4181-ordinal-sum-capacity-transfer-and-parity-component-exchange.md)
-  gives exact rank-two ordinal transfer and a positive factor-order-`<=7`
-  remainder census.
+  gives rank-two transfer plus a finite positive census;
   [THM-4184](../01-canon/theorems/THM-4184-path-cover-parity-ordinal-cocycle-and-lollipop-positivity.md)
-  gives parity, rank-one separation, the normalized cocycle, and lollipops.
-  THM-4187 proves transitive-left `(OS+)`; THM-4193 crosses the cycle-first
-  transitive-context wall exactly at tail length five.
+  gives parity, separation, the cocycle, and lollipops. THM-4187 proves
+  transitive-left `(OS+)`; THM-4193 proves transitive-context tail-five.
   [THM-4202](../01-canon/theorems/THM-4202-vertex-transitive-ordinal-remainder-positivity.md)
-  proves `R_+(A,B)>0` for vertex-transitive `A,B`, `|B|>=3`; its one-sided
-  formula isolates an odd-right variance/covariance defect. Arbitrary
-  contexts, general `(OS+)`, and the asymmetric bank stay **OPEN**.
-  THM-4114/4118 expose face/cut and gcd gaps: at `n=5`, all `544` parents have
-  gcd `2` yet gaps, and `400` lack an `M-2` neighbor. Completeness is **OPEN**.
+  proves VT-pair positivity and the all-order one-sided defect;
+  [THM-4208](../01-canon/theorems/THM-4208-cycle-prefix-arbitrary-context-recurrence-endpoint-energy-and-eventual-positivity.md)
+  proves fixed-context C-finite eventuality, endpoint-energy equality iff
+  transitive, and FINITE-EXACT order-eight jets. Uniform arbitrary-context
+  `n=5`, `(OS+)`, and bank remain **OPEN**.
+  THM-4114/4118 leave face/cut and gcd gaps; completeness is **OPEN**.
 - Corrected HYP-8835: optimal support is uniquely odd; positive `Mp=0` gives a
   replicator integral. Pure optimum means Condorcet winner, not transitivity;
   source-over-`C3` is hostile and RPS levels are circles, not `T^2`.

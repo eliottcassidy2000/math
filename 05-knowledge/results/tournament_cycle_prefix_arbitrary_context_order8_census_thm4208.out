@@ -1,0 +1,22 @@
+TOURNAMENT_CYCLE_PREFIX_ORDER8_CENSUS_EXACT_128
+classes 7412
+max_H 661
+absolute_dot_bound 963776444032763562568
+ratio_cross_product_bound 183984884847066925795584715858888
+ordered_pairs 54937744
+negative 0
+bound_failures 0
+bound_equality 1
+minimum_slack 0 B - C -
+minimum_ratio_numerator 10764 denominator 1 B - C - H 1 1
+minimum_positive_slack 57600 B 1 C -
+minimum_positive_ratio_numerator 68364 denominator 1 B 1 C - H 1 1
+order8_sector_ordered_pairs 47334400
+order8_sector_negative 0
+order8_sector_bound_failures 0
+order8_sector_bound_equality 0
+order8_sector_minimum_slack 8794063641716 B 1111111111111111111111111111 C 1111111111111111111111111111
+order8_sector_minimum_ratio_numerator 158038868458804096 denominator 103829067 B 1111110110011111011101111111 C 1111011110111111111111111111 H 477 37
+order8_sector_minimum_positive_slack 8794063641716 B 1111111111111111111111111111 C 1111111111111111111111111111
+order8_sector_minimum_positive_ratio_numerator 158038868458804096 denominator 103829067 B 1111110110011111011101111111 C 1111011110111111111111111111 H 477 37
+PASS

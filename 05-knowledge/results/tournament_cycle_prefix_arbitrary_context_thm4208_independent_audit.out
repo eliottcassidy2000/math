@@ -1,0 +1,163 @@
+THM-4208 clean-room independent replay
+engine=literal labelled adjacency + Hamilton-subset DP + odd-path capacity DP
+primary_transfer_imports=NONE
+label_convention=little-endian pairs (0,1),(0,2),...; bit 1 means i->j
+endpoint_universe=all labelled tournaments orders 1..5
+endpoint_tournaments=1099
+endpoint_vertex_inequalities=5405
+endpoint_injection_objects=70531
+endpoint_distinct_images=70531
+endpoint_empty_first_component_objects=7887
+endpoint_two_path_covers_including_empty=78418
+endpoint_literal_capacity_coordinates=10650
+endpoint_literal_odd_path_cover_objects=31322
+endpoint_transitive_labels=153
+endpoint_energy_equalities=153
+endpoint_aggregate_E=2699532
+endpoint_record_fnv64=666fd1937c159c01
+endpoint_injection=PASS
+literal_permutation_vs_subset_capacity=PASS
+endpoint_energy_iff_transitive=PASS
+recurrence_record=b=1:0;c=1:0;F=-216,-468,-900,-1332,-180,10764,68364,
+recurrence_record=b=1:0;c=2:0;F=-684,-1368,-2232,-1512,10584,79128,397080,
+recurrence_record=b=1:0;c=2:1;F=-684,-1368,-2232,-1512,10584,79128,397080,
+recurrence_record=b=1:0;c=3:0;F=-1600,-2716,-2428,9236,78932,
+recurrence_record=b=1:0;c=3:1;F=-1600,-2716,-2428,9236,78932,
+recurrence_record=b=1:0;c=3:2;F=18132,86496,376800,1575600,6453744,
+recurrence_record=b=1:0;c=3:3;F=-1600,-2716,-2428,9236,78932,
+recurrence_record=b=1:0;c=3:4;F=-1600,-2716,-2428,9236,78932,
+recurrence_record=b=1:0;c=3:5;F=18132,86496,376800,1575600,6453744,
+recurrence_record=b=1:0;c=3:6;F=-1600,-2716,-2428,9236,78932,
+recurrence_record=b=1:0;c=3:7;F=-1600,-2716,-2428,9236,78932,
+recurrence_record=b=2:0;c=1:0;F=-468,-900,-1332,-180,10764,68364,328716,
+recurrence_record=b=2:0;c=2:0;F=-1384,-2248,-1528,10568,79112,397064,1763336,
+recurrence_record=b=2:0;c=2:1;F=-1384,-2248,-1528,10568,79112,397064,1763336,
+recurrence_record=b=2:0;c=3:0;F=-2824,-2536,9128,78824,407720,
+recurrence_record=b=2:0;c=3:1;F=-2824,-2536,9128,78824,407720,
+recurrence_record=b=2:0;c=3:2;F=85848,376152,1574952,6453096,26147112,
+recurrence_record=b=2:0;c=3:3;F=-2824,-2536,9128,78824,407720,
+recurrence_record=b=2:0;c=3:4;F=-2824,-2536,9128,78824,407720,
+recurrence_record=b=2:0;c=3:5;F=85848,376152,1574952,6453096,26147112,
+recurrence_record=b=2:0;c=3:6;F=-2824,-2536,9128,78824,407720,
+recurrence_record=b=2:0;c=3:7;F=-2824,-2536,9128,78824,407720,
+recurrence_record=b=2:1;c=1:0;F=-468,-900,-1332,-180,10764,68364,328716,
+recurrence_record=b=2:1;c=2:0;F=-1384,-2248,-1528,10568,79112,397064,1763336,
+recurrence_record=b=2:1;c=2:1;F=-1384,-2248,-1528,10568,79112,397064,1763336,
+recurrence_record=b=2:1;c=3:0;F=-2824,-2536,9128,78824,407720,
+recurrence_record=b=2:1;c=3:1;F=-2824,-2536,9128,78824,407720,
+recurrence_record=b=2:1;c=3:2;F=85848,376152,1574952,6453096,26147112,
+recurrence_record=b=2:1;c=3:3;F=-2824,-2536,9128,78824,407720,
+recurrence_record=b=2:1;c=3:4;F=-2824,-2536,9128,78824,407720,
+recurrence_record=b=2:1;c=3:5;F=85848,376152,1574952,6453096,26147112,
+recurrence_record=b=2:1;c=3:6;F=-2824,-2536,9128,78824,407720,
+recurrence_record=b=2:1;c=3:7;F=-2824,-2536,9128,78824,407720,
+recurrence_record=b=3:0;c=1:0;F=-916,-1348,-196,10748,68348,
+recurrence_record=b=3:0;c=2:0;F=-2356,-1636,10460,79004,396956,
+recurrence_record=b=3:0;c=2:1;F=-2356,-1636,10460,79004,396956,
+recurrence_record=b=3:0;c=3:0;F=-3076,8588,78284,407180,1831052,
+recurrence_record=b=3:0;c=3:1;F=-3076,8588,78284,407180,1831052,
+recurrence_record=b=3:0;c=3:2;F=373164,1571964,6450108,26144124,105314172,
+recurrence_record=b=3:0;c=3:3;F=-3076,8588,78284,407180,1831052,
+recurrence_record=b=3:0;c=3:4;F=-3076,8588,78284,407180,1831052,
+recurrence_record=b=3:0;c=3:5;F=373164,1571964,6450108,26144124,105314172,
+recurrence_record=b=3:0;c=3:6;F=-3076,8588,78284,407180,1831052,
+recurrence_record=b=3:0;c=3:7;F=-3076,8588,78284,407180,1831052,
+recurrence_record=b=3:1;c=1:0;F=-916,-1348,-196,10748,68348,
+recurrence_record=b=3:1;c=2:0;F=-2356,-1636,10460,79004,396956,
+recurrence_record=b=3:1;c=2:1;F=-2356,-1636,10460,79004,396956,
+recurrence_record=b=3:1;c=3:0;F=-3076,8588,78284,407180,1831052,
+recurrence_record=b=3:1;c=3:1;F=-3076,8588,78284,407180,1831052,
+recurrence_record=b=3:1;c=3:2;F=373164,1571964,6450108,26144124,105314172,
+recurrence_record=b=3:1;c=3:3;F=-3076,8588,78284,407180,1831052,
+recurrence_record=b=3:1;c=3:4;F=-3076,8588,78284,407180,1831052,
+recurrence_record=b=3:1;c=3:5;F=373164,1571964,6450108,26144124,105314172,
+recurrence_record=b=3:1;c=3:6;F=-3076,8588,78284,407180,1831052,
+recurrence_record=b=3:1;c=3:7;F=-3076,8588,78284,407180,1831052,
+recurrence_record=b=3:2;c=1:0;F=-4248,-7488,-10080,2880,106560,
+recurrence_record=b=3:2;c=2:0;F=-14724,-21204,-12132,101916,729180,
+recurrence_record=b=3:2;c=2:1;F=-14724,-21204,-12132,101916,729180,
+recurrence_record=b=3:2;c=3:0;F=-37908,-32724,77436,715068,3695868,
+recurrence_record=b=3:2;c=3:1;F=-37908,-32724,77436,715068,3695868,
+recurrence_record=b=3:2;c=3:2;F=753660,3378060,14190588,58140540,235479996,
+recurrence_record=b=3:2;c=3:3;F=-37908,-32724,77436,715068,3695868,
+recurrence_record=b=3:2;c=3:4;F=-37908,-32724,77436,715068,3695868,
+recurrence_record=b=3:2;c=3:5;F=753660,3378060,14190588,58140540,235479996,
+recurrence_record=b=3:2;c=3:6;F=-37908,-32724,77436,715068,3695868,
+recurrence_record=b=3:2;c=3:7;F=-37908,-32724,77436,715068,3695868,
+recurrence_record=b=3:3;c=1:0;F=-916,-1348,-196,10748,68348,
+recurrence_record=b=3:3;c=2:0;F=-2356,-1636,10460,79004,396956,
+recurrence_record=b=3:3;c=2:1;F=-2356,-1636,10460,79004,396956,
+recurrence_record=b=3:3;c=3:0;F=-3076,8588,78284,407180,1831052,
+recurrence_record=b=3:3;c=3:1;F=-3076,8588,78284,407180,1831052,
+recurrence_record=b=3:3;c=3:2;F=373164,1571964,6450108,26144124,105314172,
+recurrence_record=b=3:3;c=3:3;F=-3076,8588,78284,407180,1831052,
+recurrence_record=b=3:3;c=3:4;F=-3076,8588,78284,407180,1831052,
+recurrence_record=b=3:3;c=3:5;F=373164,1571964,6450108,26144124,105314172,
+recurrence_record=b=3:3;c=3:6;F=-3076,8588,78284,407180,1831052,
+recurrence_record=b=3:3;c=3:7;F=-3076,8588,78284,407180,1831052,
+recurrence_record=b=3:4;c=1:0;F=-916,-1348,-196,10748,68348,
+recurrence_record=b=3:4;c=2:0;F=-2356,-1636,10460,79004,396956,
+recurrence_record=b=3:4;c=2:1;F=-2356,-1636,10460,79004,396956,
+recurrence_record=b=3:4;c=3:0;F=-3076,8588,78284,407180,1831052,
+recurrence_record=b=3:4;c=3:1;F=-3076,8588,78284,407180,1831052,
+recurrence_record=b=3:4;c=3:2;F=373164,1571964,6450108,26144124,105314172,
+recurrence_record=b=3:4;c=3:3;F=-3076,8588,78284,407180,1831052,
+recurrence_record=b=3:4;c=3:4;F=-3076,8588,78284,407180,1831052,
+recurrence_record=b=3:4;c=3:5;F=373164,1571964,6450108,26144124,105314172,
+recurrence_record=b=3:4;c=3:6;F=-3076,8588,78284,407180,1831052,
+recurrence_record=b=3:4;c=3:7;F=-3076,8588,78284,407180,1831052,
+recurrence_record=b=3:5;c=1:0;F=-4248,-7488,-10080,2880,106560,
+recurrence_record=b=3:5;c=2:0;F=-14724,-21204,-12132,101916,729180,
+recurrence_record=b=3:5;c=2:1;F=-14724,-21204,-12132,101916,729180,
+recurrence_record=b=3:5;c=3:0;F=-37908,-32724,77436,715068,3695868,
+recurrence_record=b=3:5;c=3:1;F=-37908,-32724,77436,715068,3695868,
+recurrence_record=b=3:5;c=3:2;F=753660,3378060,14190588,58140540,235479996,
+recurrence_record=b=3:5;c=3:3;F=-37908,-32724,77436,715068,3695868,
+recurrence_record=b=3:5;c=3:4;F=-37908,-32724,77436,715068,3695868,
+recurrence_record=b=3:5;c=3:5;F=753660,3378060,14190588,58140540,235479996,
+recurrence_record=b=3:5;c=3:6;F=-37908,-32724,77436,715068,3695868,
+recurrence_record=b=3:5;c=3:7;F=-37908,-32724,77436,715068,3695868,
+recurrence_record=b=3:6;c=1:0;F=-916,-1348,-196,10748,68348,
+recurrence_record=b=3:6;c=2:0;F=-2356,-1636,10460,79004,396956,
+recurrence_record=b=3:6;c=2:1;F=-2356,-1636,10460,79004,396956,
+recurrence_record=b=3:6;c=3:0;F=-3076,8588,78284,407180,1831052,
+recurrence_record=b=3:6;c=3:1;F=-3076,8588,78284,407180,1831052,
+recurrence_record=b=3:6;c=3:2;F=373164,1571964,6450108,26144124,105314172,
+recurrence_record=b=3:6;c=3:3;F=-3076,8588,78284,407180,1831052,
+recurrence_record=b=3:6;c=3:4;F=-3076,8588,78284,407180,1831052,
+recurrence_record=b=3:6;c=3:5;F=373164,1571964,6450108,26144124,105314172,
+recurrence_record=b=3:6;c=3:6;F=-3076,8588,78284,407180,1831052,
+recurrence_record=b=3:6;c=3:7;F=-3076,8588,78284,407180,1831052,
+recurrence_record=b=3:7;c=1:0;F=-916,-1348,-196,10748,68348,
+recurrence_record=b=3:7;c=2:0;F=-2356,-1636,10460,79004,396956,
+recurrence_record=b=3:7;c=2:1;F=-2356,-1636,10460,79004,396956,
+recurrence_record=b=3:7;c=3:0;F=-3076,8588,78284,407180,1831052,
+recurrence_record=b=3:7;c=3:1;F=-3076,8588,78284,407180,1831052,
+recurrence_record=b=3:7;c=3:2;F=373164,1571964,6450108,26144124,105314172,
+recurrence_record=b=3:7;c=3:3;F=-3076,8588,78284,407180,1831052,
+recurrence_record=b=3:7;c=3:4;F=-3076,8588,78284,407180,1831052,
+recurrence_record=b=3:7;c=3:5;F=373164,1571964,6450108,26144124,105314172,
+recurrence_record=b=3:7;c=3:6;F=-3076,8588,78284,407180,1831052,
+recurrence_record=b=3:7;c=3:7;F=-3076,8588,78284,407180,1831052,
+recurrence_universe=all 121 ordered labelled factor pairs through order 3 at n=0; 9 pairs through order 2 also at n=1,2
+recurrence_contexts=121
+recurrence_windows=139
+recurrence_n0_windows=121
+recurrence_record_fnv64=b797f8838c560ae1
+arbitrary_context_recurrence_including_n0=PASS
+signed_controls=R(C3,1):-72,F4(1,1):-180,F5(1,1):10764 PASS
+lollipop_a=0 actual=3204 expected=3204
+lollipop_a=1 actual=16524 expected=16524
+lollipop_a=2 actual=77112 expected=77112
+lollipop_a=3 actual=336312 expected=336312
+lollipop_a=4 actual=1410696 expected=1410696
+lollipop_a=5 actual=5791176 expected=5791176
+lollipop_a=6 actual=23494536 expected=23494536
+lollipop_a=7 actual=94701960 expected=94701960
+lollipop_a=8 actual=380381832 expected=380381832
+lollipop_universe=a=0..8 (direct total orders 6..14)
+lollipop_a0_boundary=direct 3204; formal a>=1 expression at a=0 is 3240
+lollipop_record_fnv64=73c3d1e870d60659
+lollipop_formula_with_a0_exception=PASS
+analysis_cache_entries=1602
+OVERALL=PASS
