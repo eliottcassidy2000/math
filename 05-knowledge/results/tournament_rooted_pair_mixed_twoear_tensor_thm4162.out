@@ -1,0 +1,10 @@
+complete 2 4 PASS
+complete 3 24 PASS
+complete 4 256 PASS
+complete 5 5120 PASS
+C3_pair 5 internal_cap 6 caps [[0, 2, 4, 6], [2, 0, 4, 4], [4, 4, 0, 2], [6, 4, 2, 0]]
+q7_gcd6_hostile 111100110011111111101 2 1111001110011111111110100100 387 (6, 6, 6, 6, 6, 6, 6)
+q10_parent_endpoint_entries 10240
+q10_new_double_clone_entries 4608
+q10_cut_tensor_coordinates 55 plus_inherited_internal_cap
+TOTAL [(2, 4), (3, 24), (4, 256), (5, 5120)] PASS
