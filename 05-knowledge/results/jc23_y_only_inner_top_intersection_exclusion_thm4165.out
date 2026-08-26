@@ -1,0 +1,18 @@
+COMPLETE I_C=D_C=0 PRIMARY CANONICAL AUDIT
+checks=170
+parameter=D_C=u*F(u,Phi)/12301875;repeated_root_R=0
+critical_identity=N=(108000/u)*E*J^2_mod_F
+root_identity=E=u^2*(5696r+135u)^3*(356r^2+15)/15
+strata=smooth_generic:L20;smooth_J:L19;triple:L19;ordinary_node:L19
+source_AB=p^7R16_generic;p^8R15_J;p^7R15_triple_node
+normalized=T^56*(6T+1)^2*(Q16_generic,Q15_exceptional)
+terminal_firewalls=three_squarefree_pairwise_disjoint_polynomials;all_endpoint_gcds_one
+actual_row_firewalls=AB_and_normalized_first_last_numerators_denominators_coprime
+infinity_and_type_gates=source_normalized_leads;F_irreducible;root_chart_surjective
+universal_values=G(0,+/-sqrt(-6))=0;G(-1/6,+/-sqrt(6))=1/2
+node_cusp_firewall=PASS
+packets=smooth[8,5,3,2,2,2,1];triple[8,7,2,2,2,1];node[8,3,2,2,2,2,2,1]
+genera=smooth9;triple9;node8
+monodromy=all_full_and_finite_responses_excluded
+semantic_sha256=65a99510c4e6cf2349ed4870a7bd3ddaf5c795d6f26ce6883236dd25567bbaa9
+verdict=PASS

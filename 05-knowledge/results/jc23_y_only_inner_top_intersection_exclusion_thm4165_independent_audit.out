@@ -1,0 +1,16 @@
+COMPLETE I_C=D_C=0 INDEPENDENT CANONICAL AUDIT
+checks=153
+alternative_source_pair=A,C0
+source_AC=p^9R16_generic;p^10R15_J;p^9R15_triple_node
+normalized=T^56*(6T+1)^2*(Q16_generic,Q15_exceptional)
+rootchart=R(u,r)=0;E=unit*alpha^3*beta
+strata=smooth_generic:L20;smooth_J:L19;triple:L19;ordinary_node:L19
+terminal_firewalls=all_resultants_nonzero;walls_pairwise_disjoint
+actual_row_firewalls=AC_and_normalized_first_last_numerators_denominators_coprime
+infinity_and_type_gates=source_normalized_leads;F_irreducible;root_chart_surjective
+universal_values=G(0,+/-sqrt(-6))=0;G(-1/6,+/-sqrt(6))=1/2
+node_cusp_resultant=NONZERO
+packets=smooth[8,5,3,2,2,2,1];triple[8,7,2,2,2,1];node[8,3,2,2,2,2,2,1]
+monodromy=all_responses_excluded
+semantic_sha256=9a66f5791221cad1c16e59fbe890fc094e1711a35016f718d1a8c0049393c072
+verdict=ACCEPT
