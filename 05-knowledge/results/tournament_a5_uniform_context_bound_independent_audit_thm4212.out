@@ -1,0 +1,39 @@
+THM-4212 clean-room literal audit
+engine=labelled adjacency + Hamilton-subset DP + odd-directed-path capacity DP + direct G_+ kernel
+transfer_or_response_jet_imports=NONE
+label_convention=little-endian pairs; bit 1 means i->j
+literal_record=B=1:0;C=1:0;HB=1;HC=1;F=10764;slack=0;right_slack=0
+literal_record=B=1:0;C=2:0;HB=1;HC=1;F=79128;slack=68364;right_slack=68364
+literal_record=B=1:0;C=2:1;HB=1;HC=1;F=79128;slack=68364;right_slack=68364
+literal_record=B=1:0;C=3:0;HB=1;HC=1;F=407828;slack=397064;right_slack=397064
+literal_record=B=1:0;C=3:1;HB=1;HC=1;F=407828;slack=397064;right_slack=397064
+literal_record=B=1:0;C=3:2;HB=1;HC=3;F=26147760;slack=26050884;right_slack=26050884
+literal_record=B=1:0;C=3:3;HB=1;HC=1;F=407828;slack=397064;right_slack=397064
+literal_record=B=1:0;C=3:4;HB=1;HC=1;F=407828;slack=397064;right_slack=397064
+literal_record=B=1:0;C=3:5;HB=1;HC=3;F=26147760;slack=26050884;right_slack=26050884
+literal_record=B=1:0;C=3:6;HB=1;HC=1;F=407828;slack=397064;right_slack=397064
+literal_record=B=1:0;C=3:7;HB=1;HC=1;F=407828;slack=397064;right_slack=397064
+literal_record=B=2:0;C=1:0;HB=1;HC=1;F=68364;slack=57600;right_slack=0
+literal_record=B=2:0;C=2:0;HB=1;HC=1;F=397064;slack=386300;right_slack=328700
+literal_record=B=2:0;C=2:1;HB=1;HC=1;F=397064;slack=386300;right_slack=328700
+literal_record=B=2:1;C=1:0;HB=1;HC=1;F=68364;slack=57600;right_slack=0
+literal_record=B=2:1;C=2:0;HB=1;HC=1;F=397064;slack=386300;right_slack=328700
+literal_record=B=2:1;C=2:1;HB=1;HC=1;F=397064;slack=386300;right_slack=328700
+literal_record=B=3:0;C=1:0;HB=1;HC=1;F=328700;slack=317936;right_slack=0
+literal_record=B=3:1;C=1:0;HB=1;HC=1;F=328700;slack=317936;right_slack=0
+literal_record=B=3:2;C=1:0;HB=3;HC=1;F=635328;slack=538452;right_slack=0
+literal_record=B=3:3;C=1:0;HB=1;HC=1;F=328700;slack=317936;right_slack=0
+literal_record=B=3:4;C=1:0;HB=1;HC=1;F=328700;slack=317936;right_slack=0
+literal_record=B=3:5;C=1:0;HB=3;HC=1;F=635328;slack=538452;right_slack=0
+literal_record=B=3:6;C=1:0;HB=1;HC=1;F=328700;slack=317936;right_slack=0
+literal_record=B=3:7;C=1:0;HB=1;HC=1;F=328700;slack=317936;right_slack=0
+literal_universe=all labelled B,C of orders 1..3 with |B|+|C|<=4
+literal_rows=25
+literal_equalities=1
+minimum_uniform_slack=0
+minimum_right_context_slack=0
+minimum_unary_slack=0
+named_controls=F(1,1):10764,F(P2,1):68364,F(1,P2):79128 PASS
+literal_record_fnv64=e4cb1b28cb67338b
+analysis_cache_entries=52
+OVERALL=PASS

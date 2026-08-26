@@ -260,17 +260,16 @@ THM-2070 refutes the general HYP-8890/8895 bypasses.  Transfer
   [THM-4181](../01-canon/theorems/THM-4181-ordinal-sum-capacity-transfer-and-parity-component-exchange.md)
   gives rank-two transfer plus a finite positive census;
   [THM-4184](../01-canon/theorems/THM-4184-path-cover-parity-ordinal-cocycle-and-lollipop-positivity.md)
-  gives parity, separation, the cocycle, and lollipops. THM-4187 proves
-  transitive-left `(OS+)`; THM-4193 proves transitive-context tail-five.
+  gives parity, the cocycle, and lollipops; THM-4187 proves transitive-left
+  `(OS+)`; THM-4193 proves transitive-context tail-five.
   [THM-4202](../01-canon/theorems/THM-4202-vertex-transitive-ordinal-remainder-positivity.md)
   proves VT-pair positivity and the all-order one-sided defect;
   [THM-4208](../01-canon/theorems/THM-4208-cycle-prefix-arbitrary-context-recurrence-endpoint-energy-and-eventual-positivity.md)
-  proves fixed-context C-finite eventuality, endpoint-energy equality iff
-  transitive, and FINITE-EXACT order-eight jets. Uniform arbitrary-context
-  `n=5`, `(OS+)`, and bank remain **OPEN**.
-  THM-4212 is a **RESERVED / UNPROVED EMPTY STUB** for an independent analytic
-  audit of the tail-five uniform arbitrary-context bound; it is not a result
-  or dependency.
+  proves C-finite eventuality and endpoint energy.
+  [THM-4212](../01-canon/theorems/THM-4212-cycle-prefix-uniform-arbitrary-context-threshold-and-tail-five-lower-bound.md)
+  proves `F_n(B,C)>=10764H(B)^2H(C)^2` for `n>=5` (equality only at
+  `n=5,B=C=P_1`), hence uniform positivity iff `n>=5`. General `(OS+)` and
+  the order-eleven bank remain **OPEN**.
   THM-4114/4118 leave face/cut and gcd gaps; completeness is **OPEN**.
 - Corrected HYP-8835: optimal support is uniquely odd; positive `Mp=0` gives a
   replicator integral. Pure optimum means Condorcet winner, not transitivity;

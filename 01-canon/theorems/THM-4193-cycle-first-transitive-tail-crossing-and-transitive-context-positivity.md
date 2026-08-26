@@ -7,9 +7,10 @@ status: >
   five, with the sharp failure boundary at tail lengths zero through four +
   FINITE-EXACT unique source-free singleton survivor through order eight and
   positive arbitrary-context factor-class census through order seven +
-  VERIFIED-EXACT + INDEPENDENTLY AUDITED. Universal arbitrary-context prefix
-  positivity, its classification for general left factors, general (OS+),
-  and the order-eleven asymmetric bank remain OPEN.
+  VERIFIED-EXACT + INDEPENDENTLY AUDITED. The universal arbitrary-context
+  threshold for this cycle-prefix family is subsequently proved in THM-4212.
+  Classification for general left factors, general (OS+), and the
+  order-eleven asymmetric bank remain OPEN.
 source: root-tournament-os-plus-extension-20260826
 depends_on:
   - THM-4184-path-cover-parity-ordinal-cocycle-and-lollipop-positivity
@@ -17,6 +18,7 @@ depends_on:
 related:
   - THM-4181-ordinal-sum-capacity-transfer-and-parity-component-exchange
   - THM-4133-strong-cyclic-substitution-johnson-centrality-counterexample
+  - THM-4212-cycle-prefix-uniform-arbitrary-context-threshold-and-tail-five-lower-bound
 script: 04-computation/tournament_cycle_first_transitive_tail_crossing_thm4193.py
 output: 05-knowledge/results/tournament_cycle_first_transitive_tail_crossing_thm4193.out
 independent_audit_script: 04-computation/tournament_cycle_first_transitive_tail_crossing_independent_audit_thm4193.py
@@ -82,8 +84,10 @@ context family.  The mechanism is a competition between a positive
 `4^(n+b+c)` transitive-gate term and the cycle-first negative `2^(n+b+c)`
 curvature.  Five tail vertices are exactly where the former wins uniformly.
 
-Equation `(3)` does **not** classify all `A` satisfying `(2)` for arbitrary
-`B,C`.  That universal prefix problem and general `(OS+)` remain open.
+Equation `(3)` does **not**, inside this theorem, handle arbitrary `B,C` or
+classify all `A` satisfying `(2)`. THM-4212 subsequently proves the sharp
+arbitrary-context threshold for this `A_n` family. Classification for general
+left factors and general `(OS+)` remain open.
 
 ## 1. Conventions and inherited algebra
 
@@ -344,9 +348,9 @@ F_(A_5)(B,C)>=10764 H(B)^2H(C)^2                         (29)
 
 also holds throughout this bank, again with equality only at `(1,1)`.
 
-Equations `(28)--(29)` are evidence for a possible arbitrary-context
-extension, not an all-order theorem.  In particular, they do not prove that
-`F_(A_5)(B,C)>=0` for all tournaments `B,C`, and they do not imply `(OS+)`.
+Equations `(28)--(29)` are evidence within this theorem, not its all-order
+proof. THM-4212 subsequently proves `(29)` for all tournaments `B,C` and
+propagates it to every `n>=5`. Neither result implies general `(OS+)`.
 
 ## 6. Audits and type firewall
 
@@ -379,11 +383,12 @@ first survivor:
               (C3 triangleright P_5,1,1), defect 10764.
 ```
 
-Nothing here proves arbitrary-context prefix positivity for `A_5`, a
-classification of left factors satisfying `(2)`, arbitrary-left local
-positivity, general `(OS+)`, THM-4177's no-sink/no-source gate law, the
-order-eleven asymmetric bank, exact Johnson cosets, or actual response
-maximizers.
+Nothing proved inside THM-4193 alone establishes arbitrary-context prefix
+positivity for `A_5`; THM-4212 subsequently does so and proves the sharp
+threshold for all `A_n`. A classification of general left factors satisfying
+`(2)`, arbitrary-left local positivity, general `(OS+)`, THM-4177's
+no-sink/no-source gate law, the order-eleven asymmetric bank, exact Johnson
+cosets, and actual response maximizers remain open.
 
 ## 7. Replay
 
@@ -409,5 +414,6 @@ PYTHONHASHSEED=4193 python3 -B \
   04-computation/tournament_cycle_first_transitive_tail_crossing_independent_audit_thm4193.py
 ```
 
-**QED for the exact singleton crossing, sharp all-order transitive-context
-positivity threshold, and the stated finite-exact sidecars only.**
+**QED here for the exact singleton crossing, sharp all-order
+transitive-context positivity threshold, and the stated finite-exact
+sidecars. THM-4212 is the subsequent arbitrary-context closure.**

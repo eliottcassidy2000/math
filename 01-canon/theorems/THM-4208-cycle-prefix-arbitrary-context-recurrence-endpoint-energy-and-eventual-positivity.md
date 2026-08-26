@@ -13,9 +13,10 @@ status: >
   context pair; exact 11-jet response factorization; and an exact C3/right-
   lollipop positive family + FINITE-EXACT A5 lower bound on all 54,937,744
   ordered factor-class pairs through order eight + VERIFIED-EXACT +
-  INDEPENDENTLY AUDITED. The uniform arbitrary-context n=5 lower bound,
-  general (OS+), the no-sink/no-source gate law, and the order-eleven
-  asymmetric bank remain OPEN.
+  INDEPENDENTLY AUDITED. The uniform arbitrary-context threshold and sharp
+  n=5 lower bound are subsequently proved in THM-4212. General (OS+), the
+  no-sink/no-source gate law, and the order-eleven asymmetric bank remain
+  OPEN.
 source: codex-tournament-normalized-holonomy-20260826
 depends_on:
   - THM-4177-root-split-johnson-current-and-source-sink-boundary-census
@@ -25,6 +26,7 @@ depends_on:
   - THM-4193-cycle-first-transitive-tail-crossing-and-transitive-context-positivity
 related:
   - THM-4202-vertex-transitive-ordinal-remainder-positivity
+  - THM-4212-cycle-prefix-uniform-arbitrary-context-threshold-and-tail-five-lower-bound
 script: 04-computation/tournament_cycle_prefix_arbitrary_context_thm4208.py
 output: 05-knowledge/results/tournament_cycle_prefix_arbitrary_context_thm4208.out
 independent_audit_script: 04-computation/tournament_cycle_prefix_arbitrary_context_thm4208_independent_audit.cpp
@@ -86,7 +88,8 @@ transitive, gives an exact variance/covariance defect at every right order.
 Here `A_n` is non-vertex-transitive for `n>=1`, both contexts are arbitrary,
 and the retained rooted response jet records precisely the coordinates
 killed by uniformity. Neither theorem proves the uniform arbitrary-context
-`n=5` claim or general `(OS+)`.
+`n=5` claim inside this file; THM-4212 subsequently proves that claim and the
+sharp all-context threshold. General `(OS+)` remains open.
 
 ## 1. Conventions and exact scope
 
@@ -557,8 +560,8 @@ Using the fan/endpoint collapse `(16c)`, the two energy inequalities become
 ```
 
 and equality in either line holds exactly for transitive tournaments. This
-is the orientation-aware fan inequality available to the open uniform
-`A_5` problem.
+is the orientation-aware fan inequality available to the then-open uniform
+`A_5` problem; THM-4212 subsequently uses it to close that problem.
 
 ## 5. Ordinal defect law and eventual positivity
 
@@ -590,7 +593,7 @@ Delta_U(B triangleright C)
 Thus the endpoint-energy mechanism is a converse-dual pair. The subsequent
 leading-coefficient factorization uses `Delta_V` because `alpha` is a
 right-factor endpoint statistic; `(32a)--(34b)` supplies the symmetric
-left-jet control relevant to the still-open uniform bound.
+left-jet control used by THM-4212 to close the uniform bound.
 
 The first unary coefficient in `(14)` satisfies
 
@@ -618,8 +621,10 @@ F_(n+1)-F_n
  =3mathsf A4^n+[mathsf B(n+2)+mathsf C]2^n,              (37)
 ```
 
-which is eventually positive. The threshold is context-dependent. This does
-not recover THM-4193's uniform tail-five result outside transitive contexts.
+which is eventually positive. This corollary alone gives a context-dependent
+threshold and does not recover a uniform tail-five result outside transitive
+contexts; THM-4212 subsequently supplies the missing lower-jet argument and
+proves the sharp uniform threshold `n>=5`.
 
 ## 6. Exact C3/right-lollipop family
 
@@ -813,27 +818,36 @@ ratio cross-product bound
 ```
 
 Equations `(50)--(55)` extend THM-4193's finite census by one factor order.
-They are evidence for, not a proof of, the universal arbitrary-context
-inequality `(52)`.
+They are evidence within this theorem, not its proof of the universal
+arbitrary-context inequality `(52)`. THM-4212 subsequently proves `(52)`
+analytically for all factors.
 
 ## 9. Scope firewall and honest frontier
 
 The following remain **OPEN**:
 
 ```text
-F_5(B,C)>=10764H(B)^2H(C)^2 for all nonempty B,C,
-F_5(B,C)>0 for all nonempty B,C,
-one context-independent eventual threshold,
 R_+(C3,Y)>0 for every no-sink Y,
 general (OS+), the no-sink/no-source gate law,
 the all-strong residual and order-eleven asymmetric bank.                (56)
 ```
 
+THM-4212 subsequently proves
+
+```text
+F_n(B,C)>=10764H(B)^2H(C)^2 for all n>=5 and nonempty B,C,
+F_n(B,C)>0 for every nonempty B,C iff n>=5,
+```
+
+with lower-bound equality exactly at `n=5,B=C=P_1`.
+
 The endpoint-energy theorem controls the leading tail coefficient. It does
 not sign the transient coefficients `gamma,delta` or the base remainder.
 The rooted-chirality hostile shows why those lower jets cannot be inferred
-from unsigned scalar data. Fixed-context eventuality therefore cannot be
-promoted to the uniform tail-five conjecture.
+from unsigned scalar data. Fixed-context eventuality by itself therefore
+cannot be promoted to a uniform statement; THM-4212 closes the gap by using
+the coordinatewise Start/End identities, dual endpoint energy, and mixed
+same-vertex rooted moments.
 
 ## 10. Replay
 

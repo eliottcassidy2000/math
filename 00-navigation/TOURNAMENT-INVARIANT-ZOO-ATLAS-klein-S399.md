@@ -18,8 +18,9 @@
 > injection forces its leading coefficient positive. Equality of that energy
 > is exactly transitivity. A strong no-sink converse pair with identical
 > `(H,W,G_+)` and unsigned capacity tensor shows that ordered endpoint/fan
-> chirality is a necessary lower-jet sidecar. Uniform tail-five positivity
-> remains open.
+> chirality is a necessary lower-jet sidecar. [THM-4212](../01-canon/theorems/THM-4212-cycle-prefix-uniform-arbitrary-context-threshold-and-tail-five-lower-bound.md)
+> uses that sidecar and the dual endpoint energy to prove the sharp uniform
+> arbitrary-context threshold `n>=5` for the cycle-prefix family.
 
 *klein-2026-07-21-S399. Owner directive: "keep adding to the zoo, go back through past work
 thoroughly and look for all possible ideas and threads relating to them, make sure none are lost,

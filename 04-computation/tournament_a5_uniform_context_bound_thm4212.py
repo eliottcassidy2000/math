@@ -285,7 +285,7 @@ def main() -> None:
     same(unary_floor.subs({w: h, q11: 0}), nontrivial_unary_floor, "w=h unary boundary")
 
     lines = [
-        "theorem=THM-4212-candidate",
+        "theorem=THM-4212",
         "symbolic_D_coordinates=11",
         "D_coordinate_audit=PASS",
         "right_context_canonicalization=PASS",

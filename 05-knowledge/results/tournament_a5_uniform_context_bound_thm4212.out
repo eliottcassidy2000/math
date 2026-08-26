@@ -1,0 +1,12 @@
+theorem=THM-4212
+symbolic_D_coordinates=11
+D_coordinate_audit=PASS
+right_context_canonicalization=PASS
+right_context_debt_decomposition=PASS
+right_context_LB_numerator=2*(794h^2+6505hw+3065w^2)z^2+(37096h^2+62387hw+21067w^2)zk-12*(2h+w)^2k^2
+right_context_nontrivial_terminal_numerator=38636h^2+75349hw+27185w^2
+unary_identity_audit=PASS
+unary_floor=-64h^2+15308hw+4979w^2+64q11
+nontrivial_unary_floor_at_w=h_q11=0=20223h^2
+equality_boundary=B=C=P1
+semantic_sha256=084a9322dd282f2d52180b4876d0a2dd48304572c975959556a8897630b2e6fd
