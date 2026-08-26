@@ -77,8 +77,8 @@ is the safe control `M(S_13)=99/338`. No cited result proves LRC(14).
   transfers all `C(30,10)=30,045,015` fixed-pool ten-bodies per newcomer:
   q50 depth seven off THM-4188's 23 resonances, native depth six on them.
   [THM-4201](../01-canon/theorems/THM-4201-exactly-one-newcomer-projected-repair-depth-stratification.md)
-  sharpens the exactly-one projected certificate to 65 depth-five rows and
-  four depth-six rows. Fixed-pool safety is not entry; LRC(14) stays open.
+  classifies 65 projected depth-five rows and four depth-six rows.
+  Entry/two-newcomer scope and LRC(14) stay open.
   [Proof map](LRC14-PROOF-MAP.md).
 - **PROVED:** [THM-2928](../01-canon/theorems/THM-2928-critical-seven-comb-grid-tensorization-and-drift-tariff.md)/2941: literal zero/one/two/three-drift sectors are empty; `k=2,3` are finite.
 - **Orthogonal routes.** THM-1017 is HYP-6820; THM-2047/2050 keep phase/exit; THM-731/2048 prune; THM-1290 ends at `55`; HYP-8900 nonuniform.
@@ -268,9 +268,10 @@ THM-2070 refutes the general HYP-8890/8895 bypasses.  Transfer
   gives parity, rank-one separation, the normalized cocycle, and lollipops.
   [THM-4187](../01-canon/theorems/THM-4187-universal-source-padding-supermodularity-and-transitive-left-ordinal-positivity.md)
   proves source-padding supermodularity, transitive-left local positivity and
-  strict `(OS+)`, the `G_-` dual, and a terminal-`C3` bound; cycle-first is
-  negative. General `(OS+)` and the asymmetric bank stay **OPEN**; THM-4133
-  refutes order 12.
+  strict `(OS+)`, the `G_-` dual, and a terminal-`C3` bound.
+  [THM-4193](../01-canon/theorems/THM-4193-cycle-first-transitive-tail-crossing-and-transitive-context-positivity.md)
+  proves `C3 triangleright P_n` transitive-context positive iff `n>=5`.
+  Arbitrary contexts/general `(OS+)` stay **OPEN**.
   THM-4114/4118 expose face/cut and gcd gaps: at `n=5`, all `544` parents have
   gcd `2` yet gaps, and `400` lack an `M-2` neighbor. Completeness is **OPEN**.
 - Corrected HYP-8835: optimal support is uniquely odd; positive `Mp=0` gives a
@@ -370,8 +371,8 @@ lift/phase clocks.
   [THM-4189](../01-canon/theorems/THM-4189-complete-p-only-theta-zero-planar-jacobian-exclusion.md)
   close P-only `zeta=0,eta*K!=0`; and
   [THM-4192](../01-canon/theorems/THM-4192-complete-p-only-k-zero-planar-jacobian-exclusion.md)
-  closes `K=0`. Thus all P-only `zeta=0,eta!=0` is empty, with arbitrary
-  `Delta,Phi,Theta` and projection collisions. Mixed B, other cells,
+  closes `K=0` with degree-drop/projection hostiles. Thus all
+  P-only `zeta=0,eta!=0` is empty. Mixed B, other cells,
   `M>=10`, and entry remain open. Y-only is `eta=0,zeta!=0`;
   `eta=zeta=0` exits `M=9`.
   Exceptional quartic: THM-3703/3737 give grammar/image, THM-4034 the

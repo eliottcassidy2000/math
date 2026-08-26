@@ -9,6 +9,29 @@ Format per entry:
 - Why it was wrong
 - The correct framing
 
+## MISTAKE-517 (2026-08-26, THM-4191 scope promotion) -- a widened theorem was still added as one disjoint stratum
+
+- **What failed:** THM-4191 was strengthened from the zero-original stratum to
+  every `B in binom(P,10)` and its canonical slug changed, but THM-4190 and
+  current navigation still added the entire renamed theorem to three older
+  subfamilies as though its scope were only `8,436,285` zero-original bodies.
+  The live route also pointed to the deleted pre-strengthening slug.
+- **Minimal witness / first failed implication:** THM-4191 now includes every
+  THM-4174, THM-4175, and THM-4190 body.  Therefore the four theorem scopes are
+  not disjoint and `17,056,501` is not their union size.  It remains the sum of
+  four historically named disjoint **strata/subfamilies** only when the
+  zero-original stratum, rather than all of THM-4191, is selected.
+- **Repair / strongest survivor:** the current strongest count is
+  `C(30,10)=30,045,015` fixed-pool bodies for every outside newcomer. THM-4190
+  remains a valid independent direct-body/zeta proof with exact margins on its
+  `1,071,961` subfamily; the earlier theorems retain their anchor and resonance
+  structure. None supplies physical entry, a second uncontrolled label, or
+  LRC(14).
+- **Reusable rule:** after strengthening a theorem, re-audit every additive
+  synthesis as a statement about sets, not theorem names. Scope inclusion can
+  turn a formerly disjoint sum into double counting even when every summand's
+  numerical statement remains true.
+
 ## MISTAKE-516 (2026-08-26, THM-4200 status quantifier) -- "nonsingle" again failed to exclude the balanced switching class
 
 - **What failed:** the first promoted THM-4200 frontmatter and opening said

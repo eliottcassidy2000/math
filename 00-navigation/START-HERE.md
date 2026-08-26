@@ -47,15 +47,15 @@ Then read the routed frontier, guardrails, and theorem; logs are history.
    completions but no outer co-support. Atom, current and LRC remain open.
 10. **Order-eleven asymmetric bank is OPEN.** THM-4144/4162/4163 close
     nonprimes; THM-4168 closes `12,155` symmetric primes. THM-4169 counts
-    presentations, not classes. THM-4187 proves transitive-left strict `(OS+)`,
-    not general `(OS+)` or the asymmetric bank.
+    presentations, not classes. THM-4187 proves transitive-left strict `(OS+)`;
+    THM-4193 gives the `C3 triangleright P_n`, `n>=5` context threshold.
 11. **Support is not multiplicity.** THM-2000/2005/2352/3359/3362/3382
     separate collision, phase and address; THM-3425 needs period plus parity.
     Composite rank seven and FC(3) remain open.
 12. **JC is false from dimension three; JC(2), DC(2) remain open.** THM-2084
     closes cells; THM-4130--4165 close named `M<=9` chambers. THM-4176/4180
     exhaust repeated-top; THM-4183/4186/4189/4192 close all P-only
-    `zeta=0,eta!=0`, despite projection collisions. Other walls/cells and
+    `zeta=0,eta!=0`; THM-4192 retains degree-drop/projection hostiles. Other
     entry survive; `eta=zeta=0` exits `M=9`.
 13. **Complete period-14 coordinates can be globally blind.** THM-2058 keeps
     every fixed-depth packet coordinate but exits at `47/113`; THM-2043/2047/

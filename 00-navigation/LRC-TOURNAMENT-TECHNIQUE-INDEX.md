@@ -100,9 +100,9 @@ Every technique below is a possible tooth in that zipper.
   /4179 require labelled hyperedge overlaps: none is an intrinsic tournament.
   Symmetric deletion tomography recovers support-size statistics but not the
   incidence deck controlling `tau`. Endpoint equality remains atomic data.
-- **Next pull:** replace the fixed pool by a physical-entry theorem or isolate
-  which outside-pool coordinate can inherit the full repair-deck obstruction.
-  Mixed/even tails remain separate.
+- **Next pull:** use the now-complete one-newcomer pool theorem to test two
+  uncontrolled labels, a moving-pool exchange, or a physical entry map. Do
+  not enumerate another original-count slice. Mixed/even tails remain separate.
   Retain safe-tooth rank, omitted-label masks, divisor owners, endpoints,
   labelled hyperedge incidence, and physical sheet labels.
 - **Pointers:** THM-3910, THM-4002, THM-4129, THM-4132, THM-4136, THM-4142,
