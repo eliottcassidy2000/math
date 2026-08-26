@@ -1,0 +1,11 @@
+AUDIT complete_mixed_offanti_Delta_zero_exact_M9
+scope=Delta=0,K=2848/45,Phi/Theta arbitrary,eta*zeta*(eta+zeta)!=0
+source_resultants=p^6R21,p^7R20,p^8R19,p^9R18,p^10R17
+endpoint_cascade=D,J,S,T0;lengths=25,24,23,22,21
+terminal_T0=squarefree_and_coprime_to_scope_units_and_next_row
+universal_coordinate_points=2+2;Hessian=+6,-6
+polygon=((0,1),(2,0),(5,3),(1,5),(0,4));Pick=(30,10,11)
+packet=(8,8,4,2,2,2,1);defect=20;carrier=prime_cubic
+full_caps=4,6,8,10,12<20;finite_caps=3,5,7,9<17
+checks=62
+COMPLETE_MIXED_OFFANTI_DELTA_ZERO_ACCEPT

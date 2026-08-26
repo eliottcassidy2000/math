@@ -1,0 +1,18 @@
+AUDIT mixed_off_anti_Delta0_source_tower
+scope=Delta=0,K=2848/45,eta*zeta*(eta+zeta)!=0
+pair_AB_degrees=(6,3);pair_AC0_degrees=(6,7)
+pair_resultants=p^6*R21 and p^8*R21;residual_identical=YES
+hessian_bridges=AB:pJ=2t^2Hess;AC0:pJ=2t^4Hess
+chart_loss=p0/t0_empty_for_AB;X_infinity_empty_off_anti
+universal_fibres=T0:2,Hess+6;P0:2,Hess-6
+tower=R21,R20,R19,R18,R17;affine_lengths=25,24,23,22,21
+I=4*theta*k0^2-27*zeta^2
+I0:zeta=5696u/135,theta=3u^2
+J=8544phi-1215u^3-22784u
+M=547499520eta+u*(2460375u^4-204543360u^2+5580439552)
+N=27064125u^4-5739517440u^2+47239069696
+terminal_N_gcds=squarefree,u,eta,offanti,next-coefficient:ALL_ONE
+polygon=((0,1),(2,0),(5,3),(1,5),(0,4));Pick=(30,10,11)
+packet=(8,8,4,2,2,2,1);full_n=27;defect=20
+checks=62
+MIXED_OFF_ANTI_DELTA0_SOURCE_TOWER_ACCEPT

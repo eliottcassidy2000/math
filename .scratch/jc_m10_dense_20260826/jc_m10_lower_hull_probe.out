@@ -1,0 +1,49 @@
+PASS complete b=d=0 monomial universe through M=10
+MONOMIALS p^1y^0:w2,p^2y^0:w4,p^3y^0:w6,p^0y^2:w6,p^2y^1:w7,p^4y^0:w8,p^1y^2:w8,p^3y^1:w9,p^0y^3:w9,p^5y^0:w10,p^2y^2:w10
+PASS robust generic lower hull across 256 lower-support subsets
+GENERIC_FACE (Fraction(1, 10), Fraction(1, 5), Fraction(-1, 5)) ((0, 1, 0), (0, 6, 1), (2, 0, 0), (2, 5, 1), (4, 4, 1))
+GENERIC_FACE (Fraction(1, 6), Fraction(1, 6), Fraction(-1, 3)) ((2, 0, 0), (4, 4, 1), (5, 3, 1))
+PASS main Pick ledger (30,10,11)
+PASS tail Pick ledger (6,6,1)
+PASS global Pick ledger (36,12,13)
+PICK main ([(0, 1), (2, 0), (4, 4), (0, 6)], 30, 10, 11)
+PICK tail ([(2, 0), (5, 3), (4, 4)], 6, 6, 1)
+PICK global ([(0, 1), (2, 0), (5, 3), (4, 4), (0, 6)], 36, 12, 13)
+PASS generic infinity packet
+PASS packet defect saturates 2g-2=24
+PACKET (9, 9, 6, 2, 2, 2, 1) n 31 defect 24
+PASS ten main attachments are transverse off a+b=0
+PASS main face factorization
+PASS tail normalization b W^2=1-zeta T^3
+PASS cyclotomic quintic face is smooth
+PASS cyclotomic face genus two
+PASS order-five automorphism has rational minimal polynomial Phi_5
+CYCLOTOMIC_FACE b*Y^2=1-a*X^5 genus=2 eigencharacters=zeta5,zeta5^2
+PASS tail attachment point has exact order three
+TAIL_ATTACHMENTS (0,1),(0,-1); difference is nonzero 3-torsion
+TAIL_MAP_OBSTRUCTION Hom survives; any compatible Eisenstein endomorphism is divisible by 1-zeta_3, hence degree divisible by 3
+PASS lawful source critical pair is polynomial
+PASS source critical s-degrees are (6,3)
+PASS source-infinity leading rows exclude finite p!=0 loss
+PASS p=0 has no source critical point
+PASS t=0 has no source critical point
+PASS source resultant exceptional powers are p^6 and p^8
+PASS two independent source projections give the same R25
+PASS R25 nonzero constant endpoint
+PASS R25 nonzero leading endpoint
+PASS R25 control is squarefree
+SOURCE_R25 degree 25 constant -189675421056/5 leading 2731549392000000000 digest 64353cd027215e41765ea0f46cad79f94435079808e1ce41e10675421b4c3857
+PASS X,T projection has Sylvester factor T^72
+PASS X,T projection is T^72(6T+1)^2 Q25
+PASS Q25 nonzero zero endpoint
+PASS Q25 nonzero universal-fibre endpoint
+PASS Q25 control is squarefree
+TARGET_Q25 degree 25 constant -768867187500000000 at_-1/6 -1100752588157520645361077864812824646096209729/6071976554829712588800000 digest 7093d9c75299b9ca0abafd1bb001f74f3260a696a3a2979199c7bea517aa1b3f
+PASS critical length and cubic finite-carrier ledger
+PASS finite response strict deficit 23<24
+PASS full response strict deficit 4<24
+RESPONSE L=29 finite=(n,beta,cap,target)= (25, 3, 23, 24) full=(n,cap,defect)= (31, 4, 24)
+PASS zeta=0 has only main face and optional rational side plane
+ZETA_ZERO_SIGNATURES [((Fraction(1, 10), Fraction(1, 5), Fraction(-1, 5)),), ((Fraction(1, 10), Fraction(1, 5), Fraction(-1, 5)), (Fraction(1, 2), Fraction(0, 1), Fraction(-1, 1)))]
+ZETA_ZERO_SIDE 1-(SP)^2*(kappa+theta*P+b*P^2)=0; normalization Y^2=quadratic(P), genus 0
+ALL M10 LOWER-HULL SCRATCH CHECKS PASSED
