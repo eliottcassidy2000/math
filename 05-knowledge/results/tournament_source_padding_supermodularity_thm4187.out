@@ -1,0 +1,22 @@
+TOURNAMENT_SOURCE_PADDING_SUPERMODULARITY_PRIMARY
+class_counts q1=1 q2=1 q3=2 q4=4 q5=12 q6=56
+padding_formula_checks 76
+ordered_pair_supermodularity_checks 5776
+ordered_pair_zero 1
+ordered_pair_minimum_positive (16, 1, 2, '', '1')
+ordered_pair_stream_sha256 6a9d450d416f0b17606dbb703c0744fcb4882f03f30d5548fe901143ac691132
+transitive_left_remainder_checks 608
+transitive_left_remainder_zeros [(1, 1, ''), (1, 2, '1'), (2, 1, '')]
+transitive_left_theta_checks 46208
+transitive_left_theta_zeros [(1, 1, 1, '', '')]
+transitive_right_dual_remainder_checks 608
+transitive_right_dual_remainder_zeros [(1, '', 1), (2, '1', 1), (1, '', 2)]
+transitive_left_no_sink_os_checks 440
+terminal_c3_identity_checks 76
+terminal_c3_telescoping_checks 608
+terminal_c3_os_checks 608
+terminal_c3_os_equality [(1, 1, '', 648)]
+cycle_first_negative_remainder_formula_checks 64
+cycle_first_negative_theta_formula_checks 144
+minimal_cycle_first_theta_hostile -216
+PASS
