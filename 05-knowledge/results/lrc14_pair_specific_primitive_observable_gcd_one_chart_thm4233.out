@@ -1,0 +1,9 @@
+THM-4233 primary integer common-grid sweep
+pair=3713,5149 gcd=1 pool_max=290 outside_pool=1
+grid=267655318 raw_points=17726 unique_points=17724 duplicate_excess=2 collision_ticks=95591185,172064133 safe_cells=7595 unsafe_cells=10128 components=7595
+safe_ticks=196644720 beta=98322360/133827659 beta_minus_66_over_91=16387038/1739759567
+primitive_min_raw=-2057535171948 at_tick=207775767 primitive_max_raw=2057535171948 at_tick=59879551 raw_den=71639369253681124
+omega=277071798/4823550313337 thm4228_threshold=1650/28710227 threshold_margin=82934716896/2826229070241355051
+semantic_ledger_fnv1a64_le_words=4725493ac81fe903
+hostile_1_13_beta=66/91 hostile_1_13_omega=990/8281 fibonacci_2584_4181_omega=42967355/553336008694 fibonacci_predecessor_pass=0
+transfer=PASS beta>=66/91,omega<=(1650/8281)/3467,THM-4228-E3467,gcd-one,outside-pool
