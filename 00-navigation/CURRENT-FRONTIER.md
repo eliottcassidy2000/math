@@ -268,11 +268,12 @@ THM-2070 refutes the general HYP-8890/8895 bypasses.  Transfer
   gives exact rank-two ordinal transfer and a positive factor-order-`<=7`
   remainder census.
   [THM-4184](../01-canon/theorems/THM-4184-path-cover-parity-ordinal-cocycle-and-lollipop-positivity.md)
-  balances path-cover parity at every order, makes nonadjacent ordinal blocks
-  rank one, proves the normalized cocycle and an infinite transitive-spine/
-  `C3` positive family, and retains a finite no-sink-third census. `(OS+)`,
-  all-order local/sign laws, and the asymmetric bank remain **OPEN**;
-  THM-4133 refutes order 12.
+  gives parity, rank-one separation, the normalized cocycle, and lollipops.
+  [THM-4187](../01-canon/theorems/THM-4187-universal-source-padding-supermodularity-and-transitive-left-ordinal-positivity.md)
+  proves source-padding supermodularity, transitive-left local positivity and
+  strict `(OS+)`, the `G_-` dual, and a terminal-`C3` bound; cycle-first is
+  negative. General `(OS+)` and the asymmetric bank stay **OPEN**; THM-4133
+  refutes order 12.
   THM-4114/4118 expose face/cut and gcd gaps: at `n=5`, all `544` parents have
   gcd `2` yet gaps, and `400` lack an `M-2` neighbor. Completeness is **OPEN**.
 - Corrected HYP-8835: optimal support is uniquely odd; positive `Mp=0` gives a
@@ -367,11 +368,11 @@ lift/phase clocks.
   THM-4176/4180 exhaust repeated-top exact `M=9` by the `Delta!=0/0` split;
   source completeness makes `eta=0` a lower-weight filtration exit.
   [THM-4183](../01-canon/theorems/THM-4183-p-only-delta-zero-planar-jacobian-exclusion.md)
-  closes P-only `zeta=Delta=0,eta!=0`, including the `Theta=0` index-`3+5`
-  to index-`7` blowdown. THM-4155/4159/4161/4164/4165 close Y-only for
-  `zeta!=0`.
-  Other P/B coefficient and critical walls, `zeta=0` Y-only, other cells,
-  `M>=10`, and entry stay open.
+  closes P-only `Delta=0`, including its `Theta=0` blowdown;
+  [THM-4186](../01-canon/theorems/THM-4186-complete-p-only-generic-coefficient-critical-wall-planar-jacobian-exclusion.md)
+  closes `zeta=0,eta*Delta*K*Theta!=0`, `Phi` arbitrary, across all critical
+  walls. Y-only is `eta=0,zeta!=0`; `eta=zeta=0` exits `M=9`. P-only
+  `Delta!=0,K*Theta=0`, mixed B, other cells, `M>=10`, and entry stay open.
   Exceptional quartic: THM-3703/3737 give grammar/image, THM-4034 the
   conductor, and THM-4039/4043/4046 reach `J_7`, obstruct `J_8`, and close
   critical `H`. [THM-4054](../01-canon/theorems/THM-4054-exceptional-affine-simple-zero-retained-packet.md)

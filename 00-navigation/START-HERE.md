@@ -47,18 +47,17 @@ Then read the routed frontier, guardrails, and theorem; logs are history.
    rank/phase; THM-3285's FINITE-EXACT `13`-label `R-M-R` horn has two middle
    completions but no outer co-support. Atom, current and LRC remain open.
 10. **Order-eleven asymmetric bank is OPEN.** THM-4144/4162/4163 close
-    nonprimes and THM-4168 closes `12,155` symmetric primes. THM-4169's
-    **CITED** cover counts presentations, not classes. THM-4177/4181/4184 give
-    finite padding evidence, exact ordinal transfer/parity collapse, and one
-    infinite lollipop family, not the open sign law.
+    nonprimes; THM-4168 closes `12,155` symmetric primes. THM-4169 counts
+    presentations, not classes. THM-4187 proves transitive-left strict `(OS+)`,
+    not general `(OS+)` or the asymmetric bank.
 11. **Support is not multiplicity.** THM-2000/2005/2352/3359/3362/3382
     separate collision, phase and address; THM-3425 needs period plus parity.
     Composite rank seven and FC(3) remain open.
 12. **JC is false from dimension three; JC(2), DC(2) remain open.** THM-2084
-    closes cells; THM-4130--4143 empty `M=8`, and THM-4147--4165 close named
-    `M=9` chambers. THM-4176/4180 exhaust repeated-top exact `M=9` (`eta=0`
-    exits the filtration); THM-4183 closes P-only `zeta=Delta=0,eta!=0`.
-    Other walls/cells and entry survive.
+    closes cells; THM-4130--4165 close named `M<=9` chambers. THM-4176/4180
+    exhaust repeated-top; THM-4183/4186 close P-only `zeta=0,eta!=0` when
+    `Delta=0` or `Delta*K*Theta!=0`, across all critical walls. `eta=zeta=0`
+    exits `M=9`; other walls/cells and entry survive.
 13. **Complete period-14 coordinates can be globally blind.** THM-2058 keeps
     every fixed-depth packet coordinate but exits at `47/113`; THM-2043/2047/
     2050 separate local completeness from global maxima.
