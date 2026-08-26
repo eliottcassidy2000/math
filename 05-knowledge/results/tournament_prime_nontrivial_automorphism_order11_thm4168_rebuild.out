@@ -26,6 +26,6 @@ canonical_counts
 5x2.canon 24
 11.canon 4
 all.union 12155
-census_sha256 23bd0908762e66c999ca1138895f3a9068a03eb7efc7cc8ad2c3bbff03c738d3
+census_sha256 1201bc580a5647068a9ed7e5e752aa53c358085de3b27feb5852dd937a98399f
 canonical_d6_sha256 b0e87b8faf6238275aa238fbc7d4f2b8e5d8c47c7b3d38d06e19ef0a8d49e2cd
 frozen_d6_byte_match=1

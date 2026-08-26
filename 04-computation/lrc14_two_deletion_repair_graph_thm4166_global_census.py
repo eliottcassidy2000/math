@@ -11,8 +11,12 @@ the primary script's sequential leave-two Fraction intersections.
 from fractions import Fraction as F
 from itertools import combinations
 from math import comb, floor, gcd, lcm
+import sys
 
 import numpy as np
+
+
+sys.stdout.reconfigure(newline="\n")
 
 
 THRESHOLD = F(4, 63)

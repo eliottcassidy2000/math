@@ -204,6 +204,41 @@
   `dc94fe602dfed2f3e64b160a117acf8fc26e8ffd63ddfb863ef4187ef606ecf6` /
   `86a9746211c33d97e6188f58159ecdc8ee34152a612f7091c78ccd31e21fdbeb`.
 
+- `lrc14_two_deletion_repair_graph_thm4166.py`, a complete exact lattice
+  census, two independent C++ routes, and two grouped carrier-overlap audits
+  -> concordant certificates [THM-4166 PROVED RELATIVE TO THM-4150/4156 +
+  VERIFIED-EXACT + INDEPENDENTLY AUDITED; LRC(14) OPEN]. For the fixed
+  THM-4156 pool, the repair graph on 27 optional labels satisfies the needed
+  seven-set condition exactly when `tau(Gamma_q)>7`. Exactly `1,032`
+  newcomers qualify, last `q=8,265`; the analytic tail bound excludes every
+  `q>=49,494`. They close `916,446,960` bodies, `907,566,660` strict beyond
+  THM-4160, or `918,667,035` with the old family. FINITE-EXACT at content
+  one, `82,886,202` new bodies overlap at least one THM-4158 carrier and
+  `833,560,758` lie outside all of them; the strict outside count is
+  `826,292,834`. Every stable or affine-transition body is canonical.
+  A strict `q=18` hostile outside at content one has its double in `P_35`,
+  so the carrier split is not an all-content theorem. Primary Python
+  source/output and q<=200 semantic ledger SHA-256:
+  `544b2af5b0d1068885145f81fcb31d1ee6fd231979686434a450917e793fbc26` /
+  `276be2254d9e9311fb00a60d7e8397af5d179943aab134fe5530ace319860c86` /
+  `13404c6c2986bd5a14bad57519eb30792adc8e8ea33146b7c68969e33b255394`;
+  independent C++ source/output:
+  `534670dcadbe852a6b63e5e9a229fef9e457b0a7532743aba7231d0f02ef0f3b` /
+  `9dda2b76fe4701c03359da9ae4dc1405da1939cf79354d1f99cc977e2653dbe5`;
+  global Python source/output and independent C++ source/output:
+  `56a4bfbf472dbc3df9554f58e9cc83ae3c3f52f37c5a2729f0338c8ae0e0d059` /
+  `baae4adc57739c852dec2a8c666328cea2c4031934547e2afa4044a314c9bff6` /
+  `8976593096bccd304c338ff4c8a72583357de9cc45d2caddd6e472ed98dc063f` /
+  `41bc97d70cdb8fce3997e89e1f6d6088a1ce26e03c31d45c2ce8bf6b16327c12`.
+  Carrier-overlap primary source/output/semantic:
+  `f62ff96d51f69ca80d8ea8683cb7df7435ebf4620313b496c74e9751cc8b60e1` /
+  `cff9bada469e2545d10affa4c5b5b0219d9f3d4a8499c15be1698f657e7e0515` /
+  `9ef359c186477c930d3b5b606199bcc486d4c07a35b2a015965c6390e06342e1`;
+  independent source/output/semantic:
+  `06524e958bf878d9d8d4eccb96a4807d4efc333bb5148a983f685e8ec010bc5a` /
+  `eb43e1599b584eaa001916b66f009cdb199ac7183b2747f5684df7730791d1e5` /
+  `b6493fab4db6a2937d04a362b6dd7d6aa1108f0b3b75b6cf42a22edd753f8668`.
+
 - The THM-4159/4161/4164/4165 Y-only wall suites and the supplementary
   direct-root pair below ->
   concordant exact exclusions [PROVED RELATIVE TO THM-4155 + VERIFIED-EXACT
@@ -247,8 +282,8 @@
 
 - `tournament_capacity_deletion_holonomy_thm4167.py` and an independent
   literal C++ referee -> matching exact restriction/deck ledgers [THM-4167
-  PROVED + VERIFIED-EXACT + INDEPENDENTLY AUDITED; PRIME ORDER-ELEVEN
-  TOURNAMENT STRATUM OPEN]. Every exposure-capacity coordinate is a positive
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY AUDITED; ASYMMETRIC PRIME
+  ORDER-ELEVEN STRATUM OPEN AFTER THM-4168]. Every exposure-capacity coordinate is a positive
   tagged OCF sum. Vertex deletion removes exactly the atoms using that vertex,
   so `(n-2)c=A+Omega` with the nonnegative outside-support moment `Omega`.
   Quadratic Johnson numerator and denominator supports have sizes three and
@@ -259,6 +294,29 @@
   independent C++ source/output:
   `236e807a7bc4120a2fdd1fe803ac7adb35d9bd1bd05a49452041adc50038c1b1` /
   `9cc785a952b98373d5cae3894ab00d789847d6cd27057a0d7bd75defff708ce1`.
+
+- `tournament_prime_nontrivial_automorphism_order11_thm4168_census.cpp`
+  and its rebuild, evaluator, artifact, and literal-child-DP audits ->
+  concordant exact certificates [THM-4168 FINITE-EXACT + VERIFIED-EXACT +
+  INDEPENDENTLY AUDITED; ASYMMETRIC PRIME ORDER ELEVEN OPEN]. The four
+  complete automorphism cycle types `3^2 1^5`, `3^3 1^2`, `5^2 1`, and
+  `11` produce a deduplicated union of exactly `12,155` prime isomorphism
+  classes. Every class passes both Johnson support-floor gates: zero rational
+  and coset failures, maximum strict load `201109364/381606521`, and minimum
+  central-over-outer exact-coset margin `852`. Census/rebuild/evaluator/
+  artifact/independent source SHA-256:
+  `1201bc580a5647068a9ed7e5e752aa53c358085de3b27feb5852dd937a98399f` /
+  `24e6ff6bf10e09261f7aa4a1a5f42856fac0daa1d481c7b023377ac61e90e38b` /
+  `56f726d08d40d3390818331d916ed43982dc94d52cee1f7e8453a8e4622c2902` /
+  `08c73d5d230de217e1e41dc5c0d46c693ed81fb5e837e9e79431959b5e003d87` /
+  `7afd23fbe250fe1db8f805c22dc0f2dfae383fa44767dedc89cf573c32121d37`.
+  Canonical digraph6/labels and rebuild/evaluator/artifact/independent output
+  SHA-256: `b0e87b8faf6238275aa238fbc7d4f2b8e5d8c47c7b3d38d06e19ef0a8d49e2cd` /
+  `17062afaf0be31fef492a0e3d1c5ef810b1997713a7a30c75d9997b1602fbace` /
+  `aaa31cb52cf84b07d99690e84ed64cb684f886df6b7dc98bad3d198df161f831` /
+  `6512fa2abe9c3b53b80992355ceea81afe3d9c7edeb1a2b0738c722eb1220879` /
+  `872f97cbddd737e7e3f4eaf3a629070fcf75bc0d115d1e469ae481544b75bce9` /
+  `a23df4cfdd5bcff44ee2614a599f9e8e4f4eadd4f058ec95ffb2de315c902029`.
 
 - `tournament_rooted_pair_mixed_twoear_tensor_thm4162.py`, the order-eleven
   tensor engine/aggregator, and an independent literal child-DP engine ->

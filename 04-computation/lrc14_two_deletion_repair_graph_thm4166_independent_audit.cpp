@@ -17,6 +17,11 @@
 
 #include <boost/multiprecision/cpp_int.hpp>
 
+#ifdef _WIN32
+#include <fcntl.h>
+#include <io.h>
+#endif
+
 // Independent exact C++ audit for THM-4166.
 //
 // Unlike the primary sequential interval-intersection implementation, this
@@ -325,6 +330,9 @@ std::string semantic_row(const GraphRecord& row) {
 }  // namespace
 
 int main() {
+#ifdef _WIN32
+  _setmode(_fileno(stdout), _O_BINARY);
+#endif
   try {
     const Rat threshold = make_rat(4, 63);
     const Rat density = make_rat(6, 7);

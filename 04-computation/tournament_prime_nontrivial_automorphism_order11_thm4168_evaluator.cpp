@@ -14,6 +14,11 @@
 #include <utility>
 #include <vector>
 
+#ifdef _WIN32
+#include <fcntl.h>
+#include <io.h>
+#endif
+
 namespace {
 constexpr int N=11, SZ=1<<N, FULL=SZ-1, E=N*(N-1)/2;
 struct P { bool strong=false; int64_t H=0,W2=0,D4x4=0,Chdx4=0; double rho=0; int64_t coset_margin=std::numeric_limits<int64_t>::max(); uint16_t inner_bad_mask=0; int64_t max_inner_lattice=0; std::array<int64_t,N+1> layer_lattice{}; std::array<int64_t,N+1> layer_floor{}; };
@@ -164,6 +169,9 @@ static uint64_t expand_pair(uint64_t qz, int root) {
 } // namespace
 
 int main(int argc,char**argv){
+#ifdef _WIN32
+  _setmode(_fileno(stdout), _O_BINARY);
+#endif
   if(argc>1 && std::string(argv[1])=="--quotient-stdin") {
     std::string s; uint64_t quotients=0, rooted=0, strong_count=0, failures=0, ties=0, coset_failures=0;
     uint64_t semantic=14695981039346656037ull,semantic_sum64=0,semantic_xor64=0;

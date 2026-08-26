@@ -30,14 +30,14 @@ artifact_audit_script: 04-computation/tournament_prime_nontrivial_automorphism_o
 artifact_audit_output: 05-knowledge/results/tournament_prime_nontrivial_automorphism_order11_thm4168_artifact_audit.out
 independent_audit_script: 04-computation/tournament_prime_nontrivial_automorphism_order11_thm4168_independent_audit.cpp
 independent_audit_output: 05-knowledge/results/tournament_prime_nontrivial_automorphism_order11_thm4168_independent_audit.out
-census_script_sha256: 23bd0908762e66c999ca1138895f3a9068a03eb7efc7cc8ad2c3bbff03c738d3
+census_script_sha256: 1201bc580a5647068a9ed7e5e752aa53c358085de3b27feb5852dd937a98399f
 rebuild_script_sha256: 24e6ff6bf10e09261f7aa4a1a5f42856fac0daa1d481c7b023377ac61e90e38b
-evaluator_script_sha256: 8b5fa56144b0453e71f9f0ca93725cb4b30021b3e484c39dc2c54a4a285b23ca
-artifact_audit_script_sha256: d25fb736bbc148d845e0b51f4a631512c067b8100fb0c5474e1815c2eeb43746
-independent_audit_script_sha256: a8548018678978dd1ad9c2d4e1a32dc4b75ef6bc3eee54219e440d390c8e6557
+evaluator_script_sha256: 56f726d08d40d3390818331d916ed43982dc94d52cee1f7e8453a8e4622c2902
+artifact_audit_script_sha256: 08c73d5d230de217e1e41dc5c0d46c693ed81fb5e837e9e79431959b5e003d87
+independent_audit_script_sha256: 7afd23fbe250fe1db8f805c22dc0f2dfae383fa44767dedc89cf573c32121d37
 canonical_digraph6_sha256: b0e87b8faf6238275aa238fbc7d4f2b8e5d8c47c7b3d38d06e19ef0a8d49e2cd
 canonical_labels_sha256: 17062afaf0be31fef492a0e3d1c5ef810b1997713a7a30c75d9997b1602fbace
-rebuild_output_sha256: 6ee1f016a3858acb5141885a634e30c155fc9605318df74c46bb254f6eafe8bd
+rebuild_output_sha256: aaa31cb52cf84b07d99690e84ed64cb684f886df6b7dc98bad3d198df161f831
 evaluator_output_sha256: 6512fa2abe9c3b53b80992355ceea81afe3d9c7edeb1a2b0738c722eb1220879
 artifact_audit_output_sha256: 872f97cbddd737e7e3f4eaf3a629070fcf75bc0d115d1e469ae481544b75bce9
 independent_audit_output_sha256: a23df4cfdd5bcff44ee2614a599f9e8e4f4eadd4f058ec95ffb2de315c902029
@@ -55,6 +55,12 @@ independent_audit: >
   automorphism distribution, and byte-matches the frozen union. A separate
   literal all-ear child DP verifies both converse-paired extrema and the
   asymmetric hostile without using the endpoint-capacity evaluator.
+portability_audit: >
+  PASS. The census now imports the standard algorithm header required by
+  std::sort; strict GCC compilation succeeds. Every C++ path forces binary
+  stdout on Windows, the Python label path forces LF, and exact attributes
+  keep source, digraph6, and label bytes LF. No full GCC/nauty rebuild is
+  claimed on this host.
 ---
 
 # THM-4168 -- nontrivial-symmetry prime order-eleven centrality

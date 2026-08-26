@@ -8,6 +8,11 @@
 #include <stdexcept>
 #include <string>
 
+#ifdef _WIN32
+#include <fcntl.h>
+#include <io.h>
+#endif
+
 namespace {
 constexpr int N = 11;
 constexpr int CHILD = 12;
@@ -156,6 +161,9 @@ void audit(const std::string& label) {
 }  // namespace
 
 int main(int argc, char** argv) {
+#ifdef _WIN32
+  _setmode(_fileno(stdout), _O_BINARY);
+#endif
   try {
     if (argc < 2) {
       std::cerr << "usage: labels...\n";

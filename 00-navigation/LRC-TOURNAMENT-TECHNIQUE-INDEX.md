@@ -18,7 +18,7 @@ AP/GW equality atom, C27 petal/two-block discharge, K33/F7 state lift,
 covering/boundary-moment positivity, or a rigorous Fejer/Toeplitz certificate.
 Every technique below is a possible tooth in that zipper.
 
-### Current response carrier -- THM-3910/4129/4132/4136/4142/4148/4150--4160
+### Current response carrier -- THM-3910/4129/4132/4136/4142/4148/4150--4166
 
 - **Move:** use an auxiliary runner only to select a marked deep center, then
   delete it before transporting the neighborhood.  Preserving the eleven-body
@@ -53,6 +53,11 @@ Every technique below is a possible tooth in that zipper.
   while no forced newcomer set of size `2..8` works by that mechanism. Exact
   carrier masks then place `9,036,418` content-one cores outside every
   THM-4158 alphabet; the retained content coordinate exposes a dilation hostile.
+  THM-4166 replaces the two-deletion proposal by an exact repair graph on
+  the 27 optional labels. Its condition `tau(Gamma_q)>7` admits exactly
+  `1,032` newcomers and closes `916,446,960` bodies. At content one,
+  `833,560,758` are outside every THM-4158 carrier; all stable and affine-
+  transition bodies are canonical, while the outside split is not dilation-stable.
 - **Preserves:** body safety, literal root `t`, integer fibre multiplicity,
   compact/open endpoint status, and the cubic mixed danger response.
 - **Forgets / guardrail:** an ordinary tournament, complete pairwise Gram
@@ -61,14 +66,16 @@ Every technique below is a possible tooth in that zipper.
   safe response by `17/61992`.  THM-4002's equal-Graver-fibre and
   half-translate hostiles independently show that relation length and full
   Fourier power lose relative phase. THM-4160's deletion incidence is a set
-  system/hypergraph, not an intrinsic tournament. Endpoint equality remains
+  system and THM-4166's repair object is an undirected graph, not an intrinsic
+  tournament. Endpoint equality remains
   atomic data.
-- **Next pull:** the singleton-deletion lane is exhausted. Test two old
-  deletions, moving optional pools, mixed-parity tails, or physical entry.
+- **Next pull:** the fixed-pool two-deletion lane is exact. Test the `d=3`
+  repair hypergraph and its seven-set transversal obstruction, moving optional
+  pools, mixed-parity tails, or physical entry.
   Retain safe-tooth rank, omitted-label masks, divisor owners, endpoints,
   and physical sheet labels.
 - **Pointers:** THM-3910, THM-4002, THM-4129, THM-4132, THM-4136, THM-4142,
-  THM-4148, THM-4150--4160; THM-2221, THM-3377,
+  THM-4148, THM-4150--4160, THM-4166; THM-2221, THM-3377,
   THM-3380, THM-3729;
   `lrc14-fixed-radius-auxiliary-center-t-sheet-response-and-tournament-cubic-sidecar-root-20260823.md`.
 

@@ -1,0 +1,18 @@
+THM4166_VS_THM4158_GROUPED_CONTENT_ONE_OVERLAP_AUDIT
+status=PASS;scope=FINITE_EXACT_undilated_core_body_labels_only
+qualifier_input_sha256=baae4adc57739c852dec2a8c666328cea2c4031934547e2afa4044a314c9bff6
+algorithm=maximal_carrier_rows_plus_inclusion_exclusion;minmax_subset_formula;no_916M_body_scan
+qualifiers=1032;last=8265;anchor_carriers=108;maximal_row_histogram=((0, 117), (1, 612), (2, 182), (3, 59), (4, 34), (5, 28))
+carrier_nonzero_qualifiers=915;carrier_zero_qualifiers=117
+old=total:2220075;canonical:422222;global:451581;outside:1768494
+all_new=total:916446960;canonical:49558619;global:82886202;outside:833560758
+strict_beyond_THM4160=total:907566660;canonical:48260255;global:81273826;outside:826292834
+combined=total:918667035;canonical:49980841;global:83337783;outside:835329252
+combined_gate_total=stable:25260264;affine:35140;beyond:893371631
+combined_gate_overlap=stable:25260264;affine:35140;beyond:58042379
+strict_gate_overlap=stable:23863163;affine:35140;beyond:57375523
+THM4148_named_gate_hits=0
+named_m7_disjoint=q7_absent_from_pool_and_qualifiers;full_union:81573425553543;structured_union:39538965411
+scale_hostile=(18,20,30,40,42,60,120,126,143,168,264);content1:none;content2:least_m35
+scope_warning=outside_carrier_counts_are_not_dilation_invariant;LRC14_OPEN
+semantic_sha256=9ef359c186477c930d3b5b606199bcc486d4c07a35b2a015965c6390e06342e1

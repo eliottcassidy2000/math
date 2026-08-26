@@ -7,9 +7,13 @@ status: >
   The exact two-deletion repair graph qualifies 1,032 and only 1,032
   newcomer labels for the fixed THM-4156 anchored pool. They close
   916,446,960 primitive divisor-complete eleven-bodies, or 918,667,035
-  together with the old THM-4156 family. The last qualifier is q=8,265;
+  together with the old THM-4156 family; 907,566,660 are strict additions
+  beyond THM-4160's ten newcomer classes. The last qualifier is q=8,265;
   an exact analytic supergraph excludes every q>=49,494 and the complete
   intervening census proves that no qualifier re-enters after 8,265.
+  FINITE-EXACT at content one, 833,560,758 of the new bodies lie outside
+  every THM-4158 carrier; 826,292,834 are both strict beyond THM-4160 and
+  outside every carrier. This carrier separation is not dilation invariant.
 source: codex-lrc14-jc-sharp-fronts-20260825b
 depends_on:
   - THM-4150-safe-set-haar-measure-universal-odd-tail-lrc14-transfer
@@ -19,6 +23,7 @@ related:
   - THM-4148-first-window-width-universal-odd-tail-lrc14-transfer
   - THM-4151-scale-sensitive-first-window-odd-tail-lrc14-transfer
   - THM-4154-mod-six-fixed-clock-and-haar-pool-inheritance-correction
+  - THM-4158-three-band-wrapped-carrier-odd-tail-lrc14-transfer
   - THM-4160-anchored-haar-deletion-cover-and-content-tower
 script: 04-computation/lrc14_two_deletion_repair_graph_thm4166.py
 output: 05-knowledge/results/lrc14_two_deletion_repair_graph_thm4166.out
@@ -28,14 +33,24 @@ global_census_script: 04-computation/lrc14_two_deletion_repair_graph_thm4166_glo
 global_census_output: 05-knowledge/results/lrc14_two_deletion_repair_graph_thm4166_global_census.out
 global_census_independent_source: 04-computation/lrc14_two_deletion_repair_graph_thm4166_global_census_independent.cpp
 global_census_independent_output: 05-knowledge/results/lrc14_two_deletion_repair_graph_thm4166_global_census_independent_cpp.out
-script_sha256: e5f91aaaff3876568dbcace7623bdf5c03c8643cc450c5d2945d74ff449d1e55
+carrier_overlap_script: 04-computation/lrc14_two_deletion_wrapped_carrier_overlap_thm4166.py
+carrier_overlap_output: 05-knowledge/results/lrc14_two_deletion_wrapped_carrier_overlap_thm4166.out
+carrier_overlap_independent_audit_script: 04-computation/lrc14_two_deletion_wrapped_carrier_overlap_thm4166_independent_audit.py
+carrier_overlap_independent_audit_output: 05-knowledge/results/lrc14_two_deletion_wrapped_carrier_overlap_thm4166_independent_audit.out
+script_sha256: 544b2af5b0d1068885145f81fcb31d1ee6fd231979686434a450917e793fbc26
 output_sha256: 276be2254d9e9311fb00a60d7e8397af5d179943aab134fe5530ace319860c86
-independent_audit_source_sha256: bc3c3547ebdc6e9191dd5f390a01d759d2223b7faf5eeffa2d065b29621e61b1
+independent_audit_source_sha256: 534670dcadbe852a6b63e5e9a229fef9e457b0a7532743aba7231d0f02ef0f3b
 independent_audit_output_sha256: 9dda2b76fe4701c03359da9ae4dc1405da1939cf79354d1f99cc977e2653dbe5
-global_census_script_sha256: 4cc8b067458a365c3d7f13fe9af1b0168157f66d573eeeaa99b211f9f1a0fa5a
+global_census_script_sha256: cda309760677e9d330dc45c2663cfd9a2cfca87f4f4367db776d98bbae5be0d2
 global_census_output_sha256: b9a06d4cb1c66bf9f41ef07ef5aa224c216ead6882a8694161844737ddf36708
-global_census_independent_source_sha256: 17acfe56f3d121858877ff8eeb701b2a70bde75c52a1d2e9079ddd4b931f75f6
+global_census_independent_source_sha256: c559361efd605dd5735f4521fde27517d3401b0dfadc6fcd9f9029c2c9c6cfda
 global_census_independent_output_sha256: 3ff8ab357211c5f51cc9f73001bc5e77c375298baee9e032903b15ee32ed1cb1
+carrier_overlap_script_sha256: f62ff96d51f69ca80d8ea8683cb7df7435ebf4620313b496c74e9751cc8b60e1
+carrier_overlap_output_sha256: cff9bada469e2545d10affa4c5b5b0219d9f3d4a8499c15be1698f657e7e0515
+carrier_overlap_semantic_sha256: 9ef359c186477c930d3b5b606199bcc486d4c07a35b2a015965c6390e06342e1
+carrier_overlap_independent_audit_script_sha256: 06524e958bf878d9d8d4eccb96a4807d4efc333bb5148a983f685e8ec010bc5a
+carrier_overlap_independent_audit_output_sha256: eb43e1599b584eaa001916b66f009cdb199ac7183b2747f5684df7730791d1e5
+carrier_overlap_independent_semantic_sha256: b6493fab4db6a2937d04a362b6dd7d6aa1108f0b3b75b6cf42a22edd753f8668
 q_le_200_semantic_ledger_sha256: 13404c6c2986bd5a14bad57519eb30792adc8e8ea33146b7c68969e33b255394
 global_semantic_word_xor_mul64: 995aa971af1069e4
 hash_basis: raw LF bytes
@@ -64,12 +79,22 @@ global_census_independent_audit: >
   semantic fingerprint. A separate depth-seven vertex-cover recursion agrees
   with maximum-independent-set duality on all 49,463 graphs. O0, O2, and
   UBSan outputs byte-match under warnings-as-errors builds.
+portability_audit: >
+  PASS. Both core Python paths force LF stdout, both C++ paths force binary stdout
+  on Windows, and exact-path attributes keep their checked-out sources LF.
+  These changes preserve every frozen output byte and semantic fingerprint.
+carrier_overlap_audits: >
+  PASS. Two independent grouped exact routes parse the frozen 1,032-label
+  census and avoid a 916-million-body scan. Maximal-carrier inclusion-
+  exclusion agrees with a one-time 888,030-subset carrier-mask compression
+  and with direct minimum-indexed counting. Normal, optimized, and hash-
+  seeded replays byte-match both frozen outputs.
 ---
 
 # THM-4166 -- two-deletion repair graphs
 
 **PROVED RELATIVE TO THM-4150/4156 + VERIFIED-EXACT GLOBAL CENSUS + FOUR
-CROSS-CHECKING AUDITS; LRC(14) REMAINS OPEN.**
+CORE AUDITS + TWO CARRIER-OVERLAP AUDITS; LRC(14) REMAINS OPEN.**
 
 ## 1. Statement
 
@@ -390,7 +415,7 @@ integer. Among all 17,361,513 finite edge comparisons in `(26)`, there is no
 threshold equality. The smallest strict surplus and deficit are
 
 ```text
-+109205/929387072269656 at (q,r,s)=(42,798,145,168),
++109205/929387072269656 at (q,r,s)=(42798,145,168),
 -3737/5186443642380      at (q,r,s)=(878,95,193).        (34)
 ```
 
@@ -456,6 +481,58 @@ Applying THM-4150 to `cH` proves `(5)` at every content. The body speeds are
 even and the tails odd, so no body--tail collision occurs; the tails are
 distinct by hypothesis. Equations `(6)--(7)` give the counts. **QED.**
 
+## 7A. Exact content-one intersection with THM-4158
+
+The theorem's Haar certificate is invariant under common content, but
+membership in a displayed wrapped alphabet `P_m` is not. The following
+classification is therefore explicitly for the undilated body labels.
+Call a body **global-carried** when it is contained in at least one exact
+THM-4158 alphabet, and **canonical** when it is contained in
+`P_(min H)`. The anchor `120` makes `1<=m<=120` a complete carrier search.
+
+Two independent grouped censuses give:
+
+|family|total|canonical|global-carried|outside every carrier|
+|---|---:|---:|---:|---:|
+|all 1,032 newcomer classes|916,446,960|49,558,619|82,886,202|833,560,758|
+|strictly beyond THM-4160|907,566,660|48,260,255|81,273,826|826,292,834|
+|old THM-4156 plus all newcomers|918,667,035|49,980,841|83,337,783|835,329,252|
+
+The union column is deduplicated: `69,768,295` new bodies belong to at least
+two carrier parameters, while the full carrier-incidence count is
+`830,026,747`. Thus overlap multiplicity cannot be substituted for body
+count. Every one of the `833,560,758` outside bodies lies beyond both
+THM-4151 min/max gates. More precisely, for all new bodies the
+`stable / affine-transition / beyond` totals are
+
+```text
+24,915,898 / 35,140 / 891,495,922,
+```
+
+whereas the global-carried counts are
+
+```text
+24,915,898 / 35,140 / 57,935,164.
+```
+
+The only transition labels are `q=18,27,829`, and every stable or transition
+body is canonical; the additional `33,327,583` global-but-not-canonical
+bodies are all beyond. All new bodies miss the named THM-4148 gate. Since neither
+the fixed pool nor the 1,032 qualifiers contains `7`, this content-one family
+is disjoint from THM-4158's named minimum-`7` seam. Consequently the exact
+disjoint unions have sizes `81,573,425,553,543` with the full seam and
+`39,538,965,411` with its structured anchored subfamily.
+
+This separation does **not** ascend the content tower. The admitted strict
+two-deletion body
+
+```text
+H={18,20,30,40,42,60,120,126,143,168,264}
+```
+
+lies in no `P_m`, while `2H` first lies in `P_35`. The counts above are
+therefore FINITE-EXACT content-one counts, not new all-content families.
+
 ## 8. Reproduction and scope
 
 Primary replay:
@@ -474,6 +551,15 @@ python3 -B 04-computation/lrc14_two_deletion_repair_graph_thm4166_global_census.
 python3 -B -O 04-computation/lrc14_two_deletion_repair_graph_thm4166_global_census.py
 PYTHONHASHSEED=314159 python3 -B \
   04-computation/lrc14_two_deletion_repair_graph_thm4166_global_census.py
+```
+
+Carrier-overlap replays:
+
+```bash
+python3 -B 04-computation/lrc14_two_deletion_wrapped_carrier_overlap_thm4166.py
+python3 -B -O 04-computation/lrc14_two_deletion_wrapped_carrier_overlap_thm4166.py
+python3 -B 04-computation/lrc14_two_deletion_wrapped_carrier_overlap_thm4166_independent_audit.py
+python3 -B -O 04-computation/lrc14_two_deletion_wrapped_carrier_overlap_thm4166_independent_audit.py
 ```
 
 For each C++ source, replace `SOURCE` and `BINARY` below by the corresponding

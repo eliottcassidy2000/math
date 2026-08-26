@@ -12,7 +12,19 @@ scripts/*.ps1 text eol=crlf
 04-computation/ak_strict_saturated_2x3_thm3903/ladder_modular_exhaust.cpp text eol=lf
 04-computation/lrc14_anchored_deletion_cover_thm4160_independent_audit.cpp text eol=lf
 04-computation/lrc14_three_band_wrapped_carrier_odd_tail_transfer_thm4158_independent_cpp_audit.cpp text eol=lf
+04-computation/lrc14_two_deletion_repair_graph_thm4166_global_census_independent.cpp text eol=lf
+04-computation/lrc14_two_deletion_repair_graph_thm4166_independent_audit.cpp text eol=lf
+04-computation/lrc14_two_deletion_wrapped_carrier_overlap_thm4166.py text eol=lf
+04-computation/lrc14_two_deletion_wrapped_carrier_overlap_thm4166_independent_audit.py text eol=lf
 04-computation/tournament_capacity_deletion_holonomy_thm4167_independent_audit.cpp text eol=lf
+04-computation/tournament_prime_nontrivial_automorphism_order11_thm4168_census.cpp text eol=lf
+04-computation/tournament_prime_nontrivial_automorphism_order11_thm4168_evaluator.cpp text eol=lf
+04-computation/tournament_prime_nontrivial_automorphism_order11_thm4168_independent_audit.cpp text eol=lf
+04-computation/tournament_prime_nontrivial_automorphism_order11_thm4168_rebuild.sh text eol=lf
+05-knowledge/results/tournament_prime_nontrivial_automorphism_order11_thm4168.d6 text eol=lf
+05-knowledge/results/tournament_prime_nontrivial_automorphism_order11_thm4168.labels text eol=lf
+05-knowledge/results/lrc14_two_deletion_wrapped_carrier_overlap_thm4166.out text eol=lf
+05-knowledge/results/lrc14_two_deletion_wrapped_carrier_overlap_thm4166_independent_audit.out text eol=lf
 
 # ─── Concurrency: union-merge only for genuinely append-only archives ─────────
 # The built-in `union` driver preserves both sides without understanding truth.

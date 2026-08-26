@@ -24,6 +24,7 @@ related:
   - THM-4151-scale-sensitive-first-window-odd-tail-lrc14-transfer
   - THM-4154-mod-six-fixed-clock-and-haar-pool-inheritance-correction
   - THM-4158-three-band-wrapped-carrier-odd-tail-lrc14-transfer
+  - THM-4166-two-deletion-repair-graph-haar-odd-tail-transfer
 script: 04-computation/lrc14_anchored_deletion_cover_thm4160.py
 output: 05-knowledge/results/lrc14_anchored_deletion_cover_thm4160.out
 independent_audit_script: 04-computation/lrc14_anchored_deletion_cover_thm4160_independent_audit.py

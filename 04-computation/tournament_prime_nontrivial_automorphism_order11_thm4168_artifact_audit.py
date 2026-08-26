@@ -9,6 +9,9 @@ import sys
 from pathlib import Path
 
 
+sys.stdout.reconfigure(newline="\n")
+
+
 N = 11
 ROOT = Path(__file__).resolve().parents[1]
 LABELS = ROOT / "05-knowledge/results/tournament_prime_nontrivial_automorphism_order11_thm4168.labels"

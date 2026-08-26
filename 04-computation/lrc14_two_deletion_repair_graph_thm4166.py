@@ -11,6 +11,10 @@ edge by definition.
 from fractions import Fraction as F
 from itertools import combinations
 from math import comb, floor
+import sys
+
+
+sys.stdout.reconfigure(newline="\n")
 
 
 DELTA = F(1, 14)

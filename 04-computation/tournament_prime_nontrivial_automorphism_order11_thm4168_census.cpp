@@ -1,3 +1,4 @@
+#include <algorithm>
 #include <array>
 #include <cstdint>
 #include <cstdlib>
@@ -7,6 +8,11 @@
 #include <sstream>
 #include <string>
 #include <vector>
+
+#ifdef _WIN32
+#include <fcntl.h>
+#include <io.h>
+#endif
 
 namespace {
 
@@ -139,6 +145,9 @@ std::string score_key(const std::array<uint16_t, N>& out) {
 } // namespace
 
 int main(int argc, char** argv) {
+#ifdef _WIN32
+  _setmode(_fileno(stdout), _O_BINARY);
+#endif
   std::string type = "3x2";
   bool emit = false, emit_d6 = false;
   uint64_t residue = 0, modulus = 1;
