@@ -23,8 +23,9 @@ Then read the routed frontier, guardrails, and theorem; logs are history.
 
 1. **LRC(14) is first open.** Direct `<=6`; projected caps `1579/216` leave
    `372913/109/12`. THM-4191 transfers all `C(30,10)=30,045,015` fixed-pool
-   bodies per newcomer; THM-4207 closes all `C(30,9)` fixed `(50,51)` cores
-   and odd-tail families. Arbitrary pairs and LRC(14) remain open.
+   bodies per newcomer; THM-4207 closes fixed `(50,51)` cores; THM-4211 closes
+   the fixed-`50` cofinal range `r>=5682` and an all-outsider 18-label chart.
+   Arbitrary pairs and LRC(14) remain open.
 2. **The `q <= 25` period claim is refuted.** THM-762/764 exhibit `26*{1,...,12} union {339}`, whose first good period is `27`.
 3. **Good-period existence is a maximum statement.** The tight resonant AP
    defeats average/count arguments; see MISTAKE-127/129/130.
@@ -56,8 +57,8 @@ Then read the routed frontier, guardrails, and theorem; logs are history.
 12. **JC is false from dimension three; JC(2), DC(2) remain open.** THM-2084
     closes cells; THM-4130--4165 close named `M<=9` chambers. THM-4176/4180
     exhaust repeated-top; THM-4183/4186/4189/4192 close all P-only
-    `zeta=0,eta!=0`; THM-4192 retains degree-drop/projection hostiles. Other
-    entry survive; `eta=zeta=0` exits `M=9`.
+    `zeta=0,eta!=0`; THM-4209 closes mixed `K=0` except the anti repeated
+    tangent `Theta=-Delta`. Other walls/entry survive; `eta=zeta=0` exits `M=9`.
 13. **Complete period-14 coordinates can be globally blind.** THM-2058 keeps
     every fixed-depth packet coordinate but exits at `47/113`; THM-2043/2047/
     2050 separate local completeness from global maxima.

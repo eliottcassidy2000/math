@@ -1,0 +1,15 @@
+AUDIT complete_K0_generic_mixed_B_source
+scope=K=0,Delta=5696/105,Phi/Theta arbitrary,eta*zeta*(eta+zeta)!=0
+source_pair=(deg_s A,deg_s B)=(6,3);LC=(3zeta p^2,9zeta p^2)
+hessian_bridge=ideal_zero;p0/t0=open_chart_empty
+resultant=p^6*R21;R0=2^6*3^9*zeta^3
+RLC=2^2*3^12*eta^3*zeta^2*(eta+zeta)^4
+normalized_degrees=(8,9);universal_coordinate_points=2+2
+faces_independent_of_Phi_Theta=YES;packet=(8,8,4,2,2,2,1)
+carrier=zeta*W^3=q-1/2;L=25;full_cap=4<20;finite_cap=19<20
+anti_next: zeta=-eta gives R19, LC=1327104*eta^5*(Delta+Theta)^4
+anti_Theta=-Delta: R17, LC=777924*Phi^4*eta^5
+anti_Theta=-Delta_Phi=0: R15
+anti_packet=(7,7,4,2,2,2,1);L=23;full_cap=4<18;finite_cap=17<18
+checks=43
+COMPLETE_K0_GENERIC_MIXED_B_SOURCE_ACCEPT

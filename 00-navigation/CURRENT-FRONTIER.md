@@ -75,9 +75,9 @@ is the safe control `M(S_13)=99/338`. No cited result proves LRC(14).
   [THM-4191](../01-canon/theorems/THM-4191-complete-full-pool-newcomer-haar-transfer.md)
   transfers all `C(30,10)` pool bodies per newcomer; THM-4201 profiles depth.
   [THM-4207](../01-canon/theorems/THM-4207-two-newcomer-sharp-depth-transition-base-surplus-composition-and-variable-pool-chart-number.md)
-  proves `tau(E8(50,51))=8` but `tau(E9(50,51))>9`, closing all `C(30,9)`
-  fixed-pair cores and THM-4150 families. Entry, arbitrary pairs, and
-  LRC(14) stay open. [Proof map](LRC14-PROOF-MAP.md).
+  closes fixed `(50,51)`; [THM-4211](../01-canon/theorems/THM-4211-fixed-fifty-cofinal-two-newcomer-haar-tail-and-eighteen-label-chart.md)
+  gives fixed-`50` `r>=5682`, fixed `(49,50)`, and an all-outsider 18-chart.
+  `5682` is activation-only; entry, arbitrary pairs, and LRC(14) stay open.
 - **PROVED:** [THM-2928](../01-canon/theorems/THM-2928-critical-seven-comb-grid-tensorization-and-drift-tariff.md)/2941: literal zero/one/two/three-drift sectors are empty; `k=2,3` are finite.
 - **Orthogonal routes.** THM-1017 is HYP-6820; THM-2047/2050 keep phase/exit; THM-731/2048 prune; THM-1290 ends at `55`; HYP-8900 nonuniform.
 - **PROVED micro-staircase:** THM-3316 closes every prime and THM-3317 proves
@@ -363,15 +363,11 @@ lift/phase clocks.
 - **Jacobian/Dixmier:** `JC(2),DC(2)` remain **OPEN**. THM-4130--4143 empty
   `M=8`; THM-4147/4157 close named `M=9` chambers; THM-4176/4180
   exhaust repeated-top. `eta=0` is a lower-weight exit.
-  [THM-4183](../01-canon/theorems/THM-4183-p-only-delta-zero-planar-jacobian-exclusion.md),
-  [THM-4186](../01-canon/theorems/THM-4186-complete-p-only-generic-coefficient-critical-wall-planar-jacobian-exclusion.md),
-  [THM-4189](../01-canon/theorems/THM-4189-complete-p-only-theta-zero-planar-jacobian-exclusion.md)
-  close P-only `zeta=0,eta*K!=0`; and
-  [THM-4192](../01-canon/theorems/THM-4192-complete-p-only-k-zero-planar-jacobian-exclusion.md)
-  closes `K=0` with degree-drop/projection hostiles. Thus all
-  P-only `zeta=0,eta!=0` is empty. Mixed B, other cells,
-  `M>=10`, and entry remain open. Y-only is `eta=0,zeta!=0`;
-  `eta=zeta=0` exits `M=9`.
+  THM-4183/4186/4189/[4192](../01-canon/theorems/THM-4192-complete-p-only-k-zero-planar-jacobian-exclusion.md)
+  close all P-only `zeta=0,eta!=0`.
+  [THM-4209](../01-canon/theorems/THM-4209-generic-mixed-b-k-zero-exact-weight-nine-planar-jacobian-exclusion.md)
+  closes mixed `K=0` except the anti repeated tangent `Theta=-Delta`, whose
+  exact residual drops are `17/15`. Other cells, `M>=10`, and entry stay open.
   Exceptional quartic: THM-3703/3737 give grammar/image, THM-4034 the
   conductor, and THM-4039/4043/4046 reach `J_7`, obstruct `J_8`, and close
   critical `H`. [THM-4054](../01-canon/theorems/THM-4054-exceptional-affine-simple-zero-retained-packet.md)

@@ -1,0 +1,22 @@
+JC23_K0_MIXED_SOURCE_REFEREE
+DELTA 5696/105 K 0 SOURCE_COMPLETE True
+GRADIENT_IDENTITIES True TRANSFORM_DET p*(p - s**2)**2 HESSIAN_BRIDGE p*detD(A,B)=2*t^2*detHess mod(A,B) on pt!=0
+SOURCE_GENERIC (6, 21, 1259712*zeta**3, 2125764*eta**3*zeta**2*(eta + zeta)**4, 6, 3)
+SOURCE_ANTI (6, 19, -1259712*eta**3, 16384*eta**5*(105*Theta + 5696)**4/1500625, 6, 3)
+HOSTILE_ETA_ZERO (6, 20, 1259712*zeta**3, 40870620168192*zeta**7/1225, 6, 3)
+HOSTILE_ZETA_ZERO (4, 18, -31104*Theta**2, -65610*Theta*eta**6, 5, 2)
+HOSTILE_ANTI_THETA_MINUS_DELTA (6, 17, -1259712*eta**3, 777924*Phi**4*eta**5, 6, 3)
+HOSTILE_ANTI_THETA_MINUS_DELTA_PHI_ZERO (6, 15, -1259712*eta**3, 229431851352064*eta**5/50625, 6, 3)
+HOSTILE_BOTH_TOP_ZERO_WEIGHT_EXIT (4, 15, -31104*Theta**2, 746586112*Theta**2*(105*Theta + 5696)**4/12762815625, 5, 2)
+NORMALIZED_GENERIC_CONTROL ('generic', 8, 9, 79, 56, 2, 21, -1121008359375, 3418472483277075, True)
+NORMALIZED_ANTI_CONTROL ('anti', 7, 8, 63, 42, 2, 19, -237422107664326323909922816/446698546875, -14460857172414/35, True)
+NO_LOSS p=0:A=-s,B=-6 t=0:no-common-zero source-infinity generic=(3*zeta*p^2,9*zeta*p^2) source-infinity anti=(-3*eta*p^2,-9*eta*p^2)
+UNIVERSAL T0:X^2=-6,G=0,Hess=6 T-1/6:X^2=6,G=1/2,Hess=-6
+HULL ((0, 1), (2, 0), (5, 3), (1, 5), (0, 5)) VERTEX_COEFFS (-1, -(Q - 2)/2, -Q*zeta, Q*eta, 5696*Q/105) PICK (31, 11, 11)
+EDGES (((0, 1), (2, 0), 1, 2, 2, 1, 1), ((2, 0), (5, 3), -1, 1, -2, 3, 2), ((5, 3), (1, 5), -1, -2, -11, 2, 8), ((1, 5), (0, 5), 0, -1, -5, 1, 4), ((0, 5), (0, 1), 1, 0, 0, 4, 1))
+GENERIC_PACKET (8, 8, 4, 2, 2, 2, 1) SUM 27 DEFECT 20 L 25
+ANTI_TANGENT -Q*a*(105*Theta*u - 105*a*eta + 5696*u)/105
+ANTI_PACKET (7, 7, 4, 2, 2, 2, 1) SUM 25 DEFECT 18 L 23
+CARRIER pure cubic degree 3; separable over C(q); q=1/2 deleted
+RESPONSES generic finite 19<20 full 4<20 anti finite 17<18 full 4<18
+VERDICT ACCEPT proposed generic and anti K=0 rows relative to inherited bridges
