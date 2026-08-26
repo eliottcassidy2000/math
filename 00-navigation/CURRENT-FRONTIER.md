@@ -73,11 +73,13 @@ is the safe control `M(S_13)=99/338`. No cited result proves LRC(14).
   `2^(c(F)-1)`. Safety/arrival stay open.
 - **Owner/tail lane (PROVED):**
   [THM-4191](../01-canon/theorems/THM-4191-complete-full-pool-newcomer-haar-transfer.md)
-  transfers all `C(30,10)` pool bodies per newcomer; THM-4201 profiles depth.
+  /4201 give one-newcomer pool/depth.
   [THM-4207](../01-canon/theorems/THM-4207-two-newcomer-sharp-depth-transition-base-surplus-composition-and-variable-pool-chart-number.md)
   closes fixed `(50,51)`; [THM-4211](../01-canon/theorems/THM-4211-fixed-fifty-cofinal-two-newcomer-haar-tail-and-eighteen-label-chart.md)
-  gives fixed-`50` `r>=5682`, fixed `(49,50)`, and an all-outsider 18-chart.
-  `5682` is activation-only; entry, arbitrary pairs, and LRC(14) stay open.
+  gives the fixed-`50` tail, `(49,50)`, and an 18-chart;
+  [THM-4214](../01-canon/theorems/THM-4214-two-newcomer-pascal-complete-eleven-body-haar-charts.md)
+  glues them into a `167,960`-face outsider star. `5682` is activation-only;
+  leaf-leaf pairs, entry, and LRC(14) stay open.
 - **PROVED:** [THM-2928](../01-canon/theorems/THM-2928-critical-seven-comb-grid-tensorization-and-drift-tariff.md)/2941: literal zero/one/two/three-drift sectors are empty; `k=2,3` are finite.
 - **Orthogonal routes.** THM-1017 is HYP-6820; THM-2047/2050 keep phase/exit; THM-731/2048 prune; THM-1290 ends at `55`; HYP-8900 nonuniform.
 - **PROVED micro-staircase:** THM-3316 closes every prime and THM-3317 proves

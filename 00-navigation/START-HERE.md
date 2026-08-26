@@ -22,10 +22,9 @@ Then read the routed frontier, guardrails, and theorem; logs are history.
 ## Seventeen high-signal facts to reuse, not re-derive
 
 1. **LRC(14) is first open.** Direct `<=6`; projected caps `1579/216` leave
-   `372913/109/12`. THM-4191 transfers all `C(30,10)=30,045,015` fixed-pool
-   bodies per newcomer; THM-4207 closes fixed `(50,51)` cores; THM-4211 closes
-   the fixed-`50` cofinal range `r>=5682` and an all-outsider 18-label chart.
-   Arbitrary pairs and LRC(14) remain open.
+   `372913/109/12`. THM-4191 gives all one-newcomer bodies; THM-4207 gives
+   `(50,51)`; THM-4211/4214 give the fixed-`50` tail and `167,960`-face
+   outsider charts. Leaf-leaf pairs and LRC(14) remain open.
 2. **The `q <= 25` period claim is refuted.** THM-762/764 exhibit `26*{1,...,12} union {339}`, whose first good period is `27`.
 3. **Good-period existence is a maximum statement.** The tight resonant AP
    defeats average/count arguments; see MISTAKE-127/129/130.
