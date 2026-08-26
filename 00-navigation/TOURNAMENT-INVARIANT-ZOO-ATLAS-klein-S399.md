@@ -27,7 +27,12 @@
 > yields an intrinsic tail-five-separated multi-cycle language with geometric
 > floor `10764(9^m-1)/8` and final-tail-six `(OS+)`. The adjacent-cycle word
 > `C3 triangleright C3 triangleright P5` has defect `-338580`, so the ordered
-> block positions remain a load-bearing sidecar.
+> block positions remain a load-bearing sidecar. [THM-4215](../01-canon/theorems/THM-4215-adjacent-cycle-sharp-uniform-context-threshold-seven.md)
+> closes that boundary sharply: `C3 triangleright C3 triangleright P_n` is
+> uniformly positive exactly for `n>=7`, with crossing floor `967788`, and is
+> an `(OS+)` left factor for `n>=8`; the bare `n=7` sign remains open.
+> [THM-4216](../01-canon/theorems/THM-4216-tail-five-nonsingleton-right-factor-positivity.md)
+> independently sharpens the separated language to final tail five.
 
 *klein-2026-07-21-S399. Owner directive: "keep adding to the zoo, go back through past work
 thoroughly and look for all possible ideas and threads relating to them, make sure none are lost,

@@ -8,8 +8,10 @@ status: >
   right factor exactly when n>=6. At tail five the exact four-debt
   decomposition gives the strict polynomial floor and the uniform
   non-singleton bound 2730H(C)^2. Consequently THM-4213's separated
-  multi-cycle language needs final tail five, not six. General (OS+),
-  adjacent-cycle thresholds, and arbitrary-left bare positivity remain open.
+  multi-cycle language needs final tail five, not six. THM-4215 separately
+  closes the two-adjacent-cycle threshold. General (OS+), thresholds for three
+  or more consecutive cycle components, and arbitrary-left bare positivity
+  remain open.
 source: root-frontier-synthesis-20260826
 depends_on:
   - THM-4187-universal-source-padding-supermodularity-and-transitive-left-ordinal-positivity
@@ -18,6 +20,7 @@ depends_on:
   - THM-4213-uniform-prefix-ordinal-semigroup-and-tail-five-cycle-language
 related:
   - THM-4193-cycle-first-transitive-tail-crossing-and-transitive-context-positivity
+  - THM-4215-adjacent-cycle-sharp-uniform-context-threshold-seven
 script: 04-computation/tournament_tail_five_nonsingleton_right_factor_positivity_thm4216.py
 output: 05-knowledge/results/tournament_tail_five_nonsingleton_right_factor_positivity_thm4216.out
 independent_audit_script: 04-computation/tournament_tail_five_nonsingleton_right_factor_positivity_independent_audit_thm4216.cpp
@@ -303,9 +306,10 @@ The theorem proves a bare-remainder sign only for the cycle-first
 transitive-tail family and for THM-4213's tail-five-separated language. It
 does not prove that every member of the uniformly positive ideal has positive
 bare remainder; the singleton hostile `(4)` explicitly refutes that
-shortcut. It does not classify the neutral semigroup, settle adjacent-cycle
-thresholds, prove the all-order no-sink/no-source gate law, or prove general
-`(OS+)`.
+shortcut. It does not classify the neutral semigroup, settle thresholds for
+three or more consecutive cycle components, prove the all-order
+no-sink/no-source gate law, or prove general `(OS+)`. THM-4215 separately
+settles the two-adjacent-cycle uniform threshold.
 
 The connection contract is
 

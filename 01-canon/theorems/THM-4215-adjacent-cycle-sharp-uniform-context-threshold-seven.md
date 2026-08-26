@@ -2,28 +2,33 @@
 id: THM-4215
 title: "Adjacent-cycle sharp uniform-context threshold seven"
 status: >
-  RESERVED / COMPLETE PROVISIONAL PROOF UNDER INDEPENDENT THEOREM AUDIT.
-  No statement in this file is yet a proved dependency. The candidate proof
-  gives the exact singleton formula for C3 triangleright C3 triangleright P_n;
-  negative singleton witnesses for every n<=6; the sharp all-context bound
-  F_Z7(B,C)>=967788H(B)^2H(C)^2 with equality only for singleton contexts;
-  and, by the exact ordinal telescope and neutral transitive-tail propagation,
-  uniform positivity exactly for n>=7. Primary symbolic and clean-room literal
-  replay streams pass; status promotion awaits an external theorem referee.
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY AUDITED. For
+  Z_n=C3 triangleright C3 triangleright P_n, uniform contextual positivity
+  holds exactly when n>=7. At the crossing,
+  F_Z7(B,C)>=967788H(B)^2H(C)^2, with equality exactly at B=C=P1; every later
+  tail is strict. The exact singleton formula is negative for every n<=6.
+  The ordinal telescope also proves bare (OS+) for n>=8; whether Z7 itself
+  has positive bare remainder against every no-sink right factor remains OPEN.
 source: adjacent-cycle-threshold-20260826
-related:
+depends_on:
   - THM-4187-universal-source-padding-supermodularity-and-transitive-left-ordinal-positivity
   - THM-4208-cycle-prefix-arbitrary-context-recurrence-endpoint-energy-and-eventual-positivity
-  - THM-4212-cycle-prefix-uniform-arbitrary-context-threshold-and-tail-five-lower-bound
   - THM-4213-uniform-prefix-ordinal-semigroup-and-tail-five-cycle-language
+related:
+  - THM-4212-cycle-prefix-uniform-arbitrary-context-threshold-and-tail-five-lower-bound
+  - THM-4216-tail-five-nonsingleton-right-factor-positivity
 script: 04-computation/tournament_adjacent_cycle_threshold_thm4215.py
 output: 05-knowledge/results/tournament_adjacent_cycle_threshold_thm4215.out
 independent_audit_script: 04-computation/tournament_adjacent_cycle_threshold_independent_audit_thm4215.cpp
 independent_audit_output: 05-knowledge/results/tournament_adjacent_cycle_threshold_independent_audit_thm4215.out
+theorem_referee_script: 04-computation/tournament_adjacent_cycle_threshold_theorem_referee_thm4215.py
+theorem_referee_output: 05-knowledge/results/tournament_adjacent_cycle_threshold_theorem_referee_thm4215.out
 script_sha256: 5b18e3cd48524df0342197dbfda43d1625a6255939a5f4cde7b0a316d19f7281
 output_sha256: 3d0f912f778bfcf63acc3a3baa87adb9c9c16addd6cd9264250b886d5dc2d831
 independent_audit_script_sha256: 8ffee22c9b1f395984ae75ebb85a23f6bb6a018862e60cd3d67c68160d1d4c90
 independent_audit_output_sha256: d455e574d4cb2686baf690db189f974a2f83b4c7648069f44c23ae03db5de06b
+theorem_referee_script_sha256: 5dd48583f3d466f7ffa6c21b049ddb704248a5825b6a7a83e5d4aac4dd1df016
+theorem_referee_output_sha256: 581c1f1cede2b4613d686f15dcc927bbd50169bc727b160f141b995f7674c8af
 hash_basis: raw LF bytes
 primary_audit: >
   PASS. Exact ordinal reconstruction supplies the Z7 prefix coordinates and
@@ -32,21 +37,24 @@ primary_audit: >
   coefficient debt, and proves the right-context and singleton-middle bounds.
   Normal and python -O streams byte-match.
 independent_audit: >
-  PASS COMPUTATIONAL REFEREE; EXTERNAL THEOREM AUDIT PENDING. A standalone
+  ACCEPT. A standalone
   warning-clean C++17 engine imports no response jet, endpoint inequality, or
   ordinal capacity transfer. From literal labelled adjacency and subset path
   DP it rebuilds Hamilton counts, odd-path capacities, G_+, all eight
   singleton boundary rows, the Z7 invariants, and five representative context
   rows including both one-sided C3 controls. Clang O0/O3 and ASan/UBSan streams
   byte-match.
+theorem_referee: >
+  ACCEPT. A separate clean-room Python referee reconstructs the raw Z7 rooted
+  coordinates and all eleven response coefficients, verifies all seven
+  coefficient debts and inequality directions, derives the singleton formula
+  for every n from universal-sink recurrences, and checks the right boundary,
+  middle gap, equality ledger, exact telescope, and n>=8 (OS+) consequence.
 ---
 
 # THM-4215 -- adjacent-cycle sharp uniform-context threshold seven
 
-**RESERVED / COMPLETE PROVISIONAL PROOF UNDER INDEPENDENT THEOREM AUDIT.**
-
-No statement below enters the proved dependency graph until the frontmatter
-is promoted after external theorem audit.
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY AUDITED.**
 
 THM-4213 found that a uniformly positive suffix does not by itself preserve
 positivity:
@@ -55,8 +63,8 @@ positivity:
 C3 triangleright C3 triangleright P_5
 ```
 
-has singleton contextual defect `-338580`.  This proof candidate determines
-the exact repair.  Two singleton tail vertices are both necessary and
+has singleton contextual defect `-338580`.  This theorem determines the exact
+repair.  Two singleton tail vertices are both necessary and
 sufficient: the sharp adjacent-cycle threshold is seven.
 
 The mechanism is again finite but not finite-order.  At `Z_7`, the exact left
@@ -81,7 +89,7 @@ Z_n=C3 triangleright C3 triangleright P_n,              (2)
 
 where `P_0` means that the final factor is omitted.
 
-> **Candidate Theorem 1 (sharp adjacent-cycle threshold and floor).** For
+> **Theorem 1 (sharp adjacent-cycle threshold and floor).** For
 > every `n>=7` and all nonempty tournaments `B,C`,
 >
 > ```text
@@ -105,7 +113,8 @@ at the crossing `n=7`.  For every `n>7`, inequality `(3)` is strict; no claim
 is made here that `967788` is the optimal floor at those later tails.
 
 As an immediate `(OS+)` consequence, `Z_n` is a left factor with positive
-ordinal remainder against every no-sink tournament whenever `n>=8`.
+ordinal remainder against every no-sink tournament whenever `n>=8`. This is
+not asserted to be sharp: the corresponding bare sign for `Z_7` remains open.
 
 ## 2. Exact `Z_7` response difference
 
@@ -139,7 +148,7 @@ Let `lambda` be the eleven-coordinate left response jet in THM-4208 equation
 D(B)=lambda(A triangleright B)-lambda(B)=(D_0,...,D_10). (8)
 ```
 
-> **Candidate Lemma 2 (exact adjacent-cycle response difference).** The
+> **Lemma 2 (exact adjacent-cycle response difference).** The
 > coordinates in `(8)` are
 >
 > ```text
@@ -414,6 +423,48 @@ F_(Z_n)(P_1,P_1)
  =108[2*4^n-(12n+102)2^n+1].                           (36)
 ```
 
+This is an all-order identity, not an extrapolation from the displayed
+boundary rows. Put `T_m=Z_m`, and for its rooted left state let
+
+```text
+w_m=W(T_m),                    M_m=sum_i(U_i^0+U_i^1)^2,
+r_m=q_01+q_11,                 K_m=L_0^++L_1^+.
+```
+
+At `m=0`, direct reconstruction gives
+
+```text
+(w_0,M_0,r_0,K_0)=(126,4131,2106,27540).
+```
+
+Appending one universal sink gives the exact transfer
+
+```text
+w'=2w+18,                      M'=4M+81,
+r'=2M+81,
+K'=2K+2(w+18)(w+9)+12r+9w.
+```
+
+Solving these four recurrences yields
+
+```text
+w_m=144*2^m-18,
+M_m=4158*4^m-27,
+r_m=2079*4^m+27,
+K_m=33210*4^m-(648m+5508)2^m-162.
+```
+
+For `T_(n+1)`, the singleton response uses
+
+```text
+L_1^+=66420*4^n-(648n+5508)2^n-162,
+q_11=4158*4^n+54,              s_1=144*2^n.
+```
+
+Substitution into `2L_1^++8q_11-8s_1^2` simplifies exactly to `(36)`.
+The external theorem referee independently derived the same four recurrences
+and closed form for arbitrary `n`.
+
 At the eight boundary values this is
 
 ```text
@@ -440,7 +491,7 @@ F_(Z_n)(B,C)
 ```
 
 Hamilton paths factor at the ordinal cut, so `H(B')=H(B)`.  The first term
-in `(39)` obeys the proved-candidate `Z_7` floor.  THM-4187 gives
+in `(39)` obeys the proved `Z_7` floor.  THM-4187 gives
 
 ```text
 F_(P_r)(B,C)>=0.                                       (40)
@@ -464,7 +515,7 @@ adjacent-cycle `(OS+)` corollary.
 
 ## 6. Connection contract and scope firewall
 
-The proved-candidate connection is
+The proved connection is
 
 ```text
 source:       actual adjacent-cycle prefix and ordered context pair,
@@ -481,11 +532,11 @@ decisive tests:
               and one-sided nontransitive C3 context controls.
 ```
 
-Once promoted, `(3)` says `Z_n` lies in THM-4213's uniformly positive ideal
+Equation `(3)` says `Z_n` lies in THM-4213's uniformly positive ideal
 for exactly the tails `n>=7`.  It can therefore serve as a new certified block
 inside any ordinal word whose other factors lie in the nonnegative semigroup.
 
-This candidate does not classify that semigroup or ideal; does not determine
+This theorem does not classify that semigroup or ideal; does not determine
 the threshold for three or more consecutive cycle components; and does not
 prove `(OS+)` for `Z_7`, arbitrary source-free tournaments, the all-strong
 residual, the no-sink/no-source gate law, or the order-eleven asymmetric bank.
@@ -527,5 +578,16 @@ The independent engine builds every composite from labelled adjacency and
 recomputes Hamilton paths, odd-directed-path capacities, `G_+`, `R_+`, and
 `F` without ordinal capacity transfer or response jets.
 
-**Candidate QED for `(3)--(5)` and `(41)`; promotion awaits independent
-theorem audit.**
+External all-order theorem referee:
+
+```bash
+python3 -B \
+  04-computation/tournament_adjacent_cycle_threshold_theorem_referee_thm4215.py
+python3 -O -B \
+  04-computation/tournament_adjacent_cycle_threshold_theorem_referee_thm4215.py
+```
+
+Both streams byte-match the frozen referee output. The referee imports no
+repository tournament code and returns `OVERALL=ACCEPT`.
+
+**QED for `(3)--(5)` and `(41)`.**

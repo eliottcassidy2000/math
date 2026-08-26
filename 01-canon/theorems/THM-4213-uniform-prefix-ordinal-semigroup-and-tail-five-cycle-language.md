@@ -10,9 +10,10 @@ status: >
   every such word with final transitive run at least six is an (OS+) left
   factor; and C3 triangleright C3 triangleright P5 is an exact good-suffix
   hostile with singleton defect -338580 + VERIFIED-EXACT + INDEPENDENTLY
-  AUDITED. General (OS+), classification of all uniformly positive prefixes,
-  adjacent-cycle thresholds, the no-sink/no-source gate law, and the
-  order-eleven asymmetric bank remain OPEN.
+  AUDITED. THM-4215 subsequently closes the two-adjacent-cycle threshold.
+  General (OS+), classification of all uniformly positive prefixes,
+  thresholds for three or more consecutive cycle components, the
+  no-sink/no-source gate law, and the order-eleven asymmetric bank remain OPEN.
 source: codex-tournament-osplus-extension-20260826
 depends_on:
   - THM-4184-path-cover-parity-ordinal-cocycle-and-lollipop-positivity
@@ -21,6 +22,7 @@ depends_on:
 related:
   - THM-4193-cycle-first-transitive-tail-crossing-and-transitive-context-positivity
   - THM-4208-cycle-prefix-arbitrary-context-recurrence-endpoint-energy-and-eventual-positivity
+  - THM-4215-adjacent-cycle-sharp-uniform-context-threshold-seven
 script: 04-computation/tournament_uniform_prefix_semigroup_thm4213.py
 output: 05-knowledge/results/tournament_uniform_prefix_semigroup_thm4213.out
 independent_audit_script: 04-computation/tournament_uniform_prefix_semigroup_independent_audit_thm4213.cpp
@@ -337,9 +339,10 @@ Theorems 1--3 prove a closure calculus and one regular strong-component
 language. Corollary 4 proves `(OS+)` only for its final-tail-six subclass.
 They do not classify `N` or `U`; do not show that an arbitrary positive
 singleton defect is uniformly positive; and do not determine the threshold
-for adjacent or more general strong components. General `(OS+)`, the
-no-sink/no-source gate law, the all-strong residual, and the order-eleven
-asymmetric bank remain **OPEN**.
+for three or more consecutive cycle components or more general strong
+components. THM-4215 separately closes the two-adjacent-cycle threshold.
+General `(OS+)`, the no-sink/no-source gate law, the all-strong residual, and
+the order-eleven asymmetric bank remain **OPEN**.
 
 ## 7. Replay
 

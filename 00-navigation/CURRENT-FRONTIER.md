@@ -256,25 +256,28 @@ THM-2070 refutes the general HYP-8890/8895 bypasses.  Transfer
   closes symmetric primes; THM-4167/[4172](../01-canon/theorems/THM-4172-multideletion-support-tomography-and-same-parity-johnson-holonomy.md)
   add tomography.
   [THM-4169](../01-canon/theorems/THM-4169-prime-parent-one-vertex-augmentation-and-quartic-johnson-transfer.md)
-  gives a **CITED** presentation cover, not classes;
+  is **CITED** presentation-only;
   [THM-4177](../01-canon/theorems/THM-4177-root-split-johnson-current-and-source-sink-boundary-census.md)
-  gives padding descent.
+  gives padding descent;
   [THM-4181](../01-canon/theorems/THM-4181-ordinal-sum-capacity-transfer-and-parity-component-exchange.md)
-  gives rank-two transfer plus a finite positive census;
+  gives transfer/census;
   [THM-4184](../01-canon/theorems/THM-4184-path-cover-parity-ordinal-cocycle-and-lollipop-positivity.md)
-  gives parity, the cocycle, and lollipops; THM-4187 proves transitive-left
-  `(OS+)`; THM-4193 proves transitive-context tail-five.
+  gives parity/cocycle/lollipops; THM-4187 gives transitive-left `(OS+)` and
+  THM-4193 transitive-context tail-five;
   [THM-4202](../01-canon/theorems/THM-4202-vertex-transitive-ordinal-remainder-positivity.md)
-  proves VT-pair positivity and the all-order one-sided defect;
+  gives VT/one-sided positivity;
   [THM-4208](../01-canon/theorems/THM-4208-cycle-prefix-arbitrary-context-recurrence-endpoint-energy-and-eventual-positivity.md)
-  proves C-finite eventuality and endpoint energy.
+  gives C-finite response/endpoint energy;
   [THM-4212](../01-canon/theorems/THM-4212-cycle-prefix-uniform-arbitrary-context-threshold-and-tail-five-lower-bound.md)
-  proves uniform threshold `n>=5`;
+  gives cycle threshold `5`;
   [THM-4213](../01-canon/theorems/THM-4213-uniform-prefix-ordinal-semigroup-and-tail-five-cycle-language.md)
-  gives the `m`-cycle floor and adjacent-cycle hostile; [THM-4216](../01-canon/theorems/THM-4216-tail-five-nonsingleton-right-factor-positivity.md)
-  gives sharp bare thresholds `5/6` (non-singleton/all) and final-tail-five
-  `(OS+)`. General `(OS+)` remains **OPEN**.
-  THM-4114/4118 leave face/cut and gcd gaps; completeness is **OPEN**.
+  gives semigroup/`m`-cycle floor/adjacent hostile;
+  [THM-4215](../01-canon/theorems/THM-4215-adjacent-cycle-sharp-uniform-context-threshold-seven.md)
+  gives adjacent threshold `7`, floor `967788`, and `(OS+)` from `8` (`Z_7`
+  bare open);
+  [THM-4216](../01-canon/theorems/THM-4216-tail-five-nonsingleton-right-factor-positivity.md)
+  gives bare `5/6` and final-tail-five `(OS+)`. General `(OS+)` and
+  THM-4114/4118 completeness remain **OPEN**.
 - Corrected HYP-8835: optimal support is uniquely odd; positive `Mp=0` gives a
   replicator integral. Pure optimum means Condorcet winner, not transitivity;
   source-over-`C3` is hostile and RPS levels are circles, not `T^2`.
