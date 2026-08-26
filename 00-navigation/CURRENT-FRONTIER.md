@@ -1,6 +1,6 @@
 # Current Frontier
 
-**State — 2026-08-25.** Proof links; statuses: **PROVED**, **CITED**,
+**State — 2026-08-26.** Proof links; statuses: **PROVED**, **CITED**,
 **FINITE-EXACT**, **VERIFIED**, **CONDITIONAL**, **OPEN**, **RESERVED**,
 **REFUTED**, **SUPERSEDED**.
 
@@ -356,7 +356,15 @@ lift/phase clocks.
   [THM-4157](../01-canon/theorems/THM-4157-repeated-top-edge-wall-planar-jacobian-exclusion.md)
   adds `B/C` critical opens and all `D` with `eta!=0`, including `J=0` and
   the zero-Hessian wall `H_30=0`; row-`A` wall `4Theta K^2-27eta^2=0` is next.
-  THM-4155 handles a Y-only slice. Other walls, cells, `M>=10`, and entry stay open.
+  THM-4155 handles the coefficient-open Y-only slice. On its inner/top
+  boundaries, [THM-4159](../01-canon/theorems/THM-4159-inner-resultant-wall-planar-jacobian-exclusion.md)
+  closes `I_C=0,D_C!=0`, while
+  [THM-4161](../01-canon/theorems/THM-4161-y-only-double-top-root-planar-jacobian-exclusion.md)
+  and [THM-4164](../01-canon/theorems/THM-4164-y-only-triple-top-root-planar-jacobian-exclusion.md)
+  close every double/triple point of `D_C=0,I_C!=0`. Thus for `zeta!=0`
+  that Y-only chart has been squeezed to the codimension-two intersection
+  `I_C=D_C=0`. That intersection, other walls/cells, `M>=10`, and entry stay
+  open.
   Exceptional quartic: THM-3703/3737 give grammar/image, THM-4034 the
   conductor, and THM-4039/4043/4046 reach `J_7`, obstruct `J_8`, and close
   critical `H`. [THM-4054](../01-canon/theorems/THM-4054-exceptional-affine-simple-zero-retained-packet.md)

@@ -1,6 +1,6 @@
 # Start Here
 
-**Rolling brief — refreshed 2026-08-25; update whenever a headline changes.** This is a router, not a proof source; the startup packet prints the commit and [`CURRENT-FRONTIER.md`](CURRENT-FRONTIER.md) owns status links.
+**Rolling brief — refreshed 2026-08-26; update whenever a headline changes.** This is a router, not a proof source; the startup packet prints the commit and [`CURRENT-FRONTIER.md`](CURRENT-FRONTIER.md) owns status links.
 
 ## The five-minute orientation
 
@@ -63,7 +63,10 @@ Then read the routed frontier, guardrails, and theorem. Logs and reflections are
 12. **JC is false from dimension three; JC(2), DC(2) remain open.** THM-1300
     is exact; THM-2084 closes cells; THM-4130/4138/4141/4143 empty `M=8`;
     THM-4147 excludes `M=9` `P/Y/B/A`; THM-4157 adds `B/C` opens and all
-    deepest `D`, including `H_30=0`. THM-4155 handles a Y-only slice.
+    deepest `D`, including `H_30=0`. THM-4155 handles a Y-only slice;
+    THM-4159 closes its inner wall away from the top discriminant, and
+    THM-4161/4164 close its double/triple top wall away from the inner
+    endpoint. For `zeta!=0`, only `I_C=D_C=0` remains in that chart.
 13. **Complete period-14 coordinates can still be globally blind.** THM-2043
     proves parity-Hasse completeness for reduced period-14 functions. The
     audited Goddyn--Wong family in THM-2058 preserves the packet, every fixed
