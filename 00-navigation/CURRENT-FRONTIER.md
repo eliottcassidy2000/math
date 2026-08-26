@@ -73,12 +73,12 @@ is the safe control `M(S_13)=99/338`. No cited result proves LRC(14).
   `2^(c(F)-1)`. Safety/arrival stay open.
 - **Owner/tail:** THM-4156/4191 close zero/one layers. [THM-4231](../01-canon/theorems/THM-4231-arbitrary-pair-cofinal-depth-six-haar-repair-and-exact-outsider-lift.md)
   fills every `C(32,11)` chart for distinct `q,r>=1290` by a direct cutoff
-  `1307` plus an audited 289-pair triangle, and closes `q=1,r>=543`.
+  `1307` plus an audited 289-pair triangle, and closes `q=1,r>=542`.
   [THM-4227](../01-canon/theorems/THM-4227-two-outsider-scale-separated-depth-eight-haar-wedge.md)/
   [4228](../01-canon/theorems/THM-4228-common-gcd-two-outsider-periodic-observable-haar-ray.md)
-  retain scale/gcd methods; [THM-4233](../01-canon/theorems/THM-4233-pair-specific-primitive-observable-oscillation-haar-charts.md)
-  adds a primitive-ratio compiler; [THM-4234](../01-canon/theorems/THM-4234-fixed-fifty-twenty-label-pair-haar-charts.md)
-  closes 66 fixed-`50` pairs and one triple. Other rays have smaller label
+  retain scale/gcd methods; coverage-subsumed [THM-4233](../01-canon/theorems/THM-4233-pair-specific-primitive-observable-oscillation-haar-charts.md)
+  retains a primitive-ratio compiler. [THM-4234](../01-canon/theorems/THM-4234-fixed-fifty-twenty-label-pair-haar-charts.md)
+  closes 66 residual fixed-`50` pair charts and one triple. Other rays have smaller label
   `2..1289`; arbitrary entry stays open.
 - **PROVED:** [THM-2928](../01-canon/theorems/THM-2928-critical-seven-comb-grid-tensorization-and-drift-tariff.md)/2941: literal zero/one/two/three-drift sectors are empty; `k=2,3` are finite.
 - **Orthogonal routes.** THM-1017 is HYP-6820; THM-2047/2050 keep phase/exit; THM-731/2048 prune; THM-1290 ends at `55`; HYP-8900 nonuniform.

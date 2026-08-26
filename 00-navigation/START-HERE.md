@@ -22,8 +22,9 @@ Then read the routed frontier, guardrails, and theorem; logs are history.
 ## Seventeen high-signal facts
 
 1. **LRC(14) is first open.** THM-4231 closes distinct `q,r>=1290` and
-   `q=1,r>=543`; THM-4233 adds a primitive-ratio compiler and THM-4234 closes
-   66 fixed-`50` pairs plus one triple. Arbitrary entry remains open.
+   `q=1,r>=542`; coverage-subsumed THM-4233 retains a primitive-ratio
+   compiler, while THM-4234 closes 66 residual fixed-`50` pair charts plus
+   one triple. Arbitrary entry remains open.
 2. **The `q <= 25` period claim is refuted.** THM-762/764 exhibit `26*{1,...,12} union {339}`, whose first good period is `27`.
 3. **Good-period existence is a maximum statement.** The tight resonant AP
    defeats average/count arguments; see MISTAKE-127/129/130.

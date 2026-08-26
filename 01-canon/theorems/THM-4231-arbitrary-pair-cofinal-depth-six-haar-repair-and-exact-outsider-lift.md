@@ -10,8 +10,9 @@ status: >
   1307 is the exact minimum of the direct component-discrepancy/Bonferroni
   certificate; two independent literal censuses patch its unique exceptional
   body down to 1290. Neither value is claimed as the minimal literal threshold.
-  The exact
-  fixed-one ray is independently closed for every r>=543. The
+  The exact fixed-one ray is independently closed for every r>=542 by
+  combining its certificate census with a literal check of the unique
+  threshold-543 body at r=542. The
   depth-six activation transition 17547/17548 remains a valid but superseded
   repair-hypergraph sidecar. Finite pair entry and LRC(14) remain OPEN.
 source: codex-frontier-synthesis-20260826
@@ -81,7 +82,8 @@ audit: >
   289 exceptional pairs in the hybrid 1290 quadrant. Independent midpoint and
   endpoint implementations also
   agree on the complete fixed-one-ray census and its unique threshold-543
-  extremizer. The old activation artifacts independently retain the
+  certificate extremizer; independent literal controls close that body at
+  r=542. The old activation artifacts independently retain the
   17547/17548 cover transition.
 ---
 
@@ -130,7 +132,7 @@ already implied all fixed-pool subsets by heredity.
 
 The least-used sidecar is the exact component count of the literal body safe
 set `G_B`. Once `(M_B,c_B)` is retained for every labelled body, no deletion
-repair is needed at the optimal cofinal cutoff. The old depth-six repair deck
+repair is needed at the proved direct/hybrid cutoff. The old depth-six repair deck
 remains an independently useful incidence and activation sidecar.
 
 ## 3. Direct-body Bonferroni theorem
@@ -172,7 +174,8 @@ If `q,r>=kappa_body(B)`, then
 (6c_B/49)(1/q+1/r)<=12c_B/(49kappa_body(B))<=s_B/63.
 ```
 
-Since `(5/7)M_B-alpha=s_B/63`, equation `(6)` proves `(3)` as soon as
+Since `(5/7)M_B-alpha=s_B/63`, equation `(6)` proves the `q,r>=1307`
+subcase as soon as
 
 ```text
 max_(B in binom(P,9)) kappa_body(B)<=1307.              (9)
@@ -415,7 +418,7 @@ c_B*^(1)=528,
 (54M_B*^(1)-4) ticks=136,848,943,395,468.              (26d)
 ```
 
-Therefore every `B union {1,r}` is safe for every `r>=543`. The primary
+Therefore every `B union {1,r}` is direct-safe for every `r>=543`. The primary
 midpoint/split-zeta census and an independent endpoint-event/down-set census
 each exhaust all `14,307,150` bodies and recover the same extremizer, mass,
 component count, surplus, cutoff, and unique second cutoff `530`. Their
@@ -429,9 +432,13 @@ mu(G_(B* union {1,542}))=689745548341/3874102039080,
 63mu-4=443770815701/61493683160>0.                      (26e)
 ```
 
-Thus `543` is certificate-sharp, not literal-sharp. With the zero/one layers,
-this also fills all `C(32,11)` faces of every chart `P union {1,r}` for
-`r>=543`, and THM-4150 again supplies the odd-tail LRC(14) families.
+The unique second certificate cutoff is `530`, so every body other than `B*`
+is already direct-safe at `r=542`; equation `(26e)` supplies the missing
+literal `B*` case. Thus the whole fixed-one ray is safe for every `r>=542`.
+The value `543` is certificate-sharp, while `542` is not claimed
+literal-minimal. With the zero/one layers, this also fills all `C(32,11)`
+faces of every chart `P union {1,r}` for `r>=542`, and THM-4150 again supplies
+the odd-tail LRC(14) families.
 
 ## 10. Pair-plane and method boundaries
 
@@ -451,8 +458,9 @@ THM-4228's common-gcd theorem forces both coordinates at least `3467`.
 Consequently their body-safety regions lie inside `(3)` and are now subsumed
 as coverage. Their methods remain distinct and potentially useful below the
 quadrant: sequential component birth retains scale order, while the periodic
-observable retains common divisor and primitive pair shape. Reserved
-primitive-shape charts are not proved input.
+observable retains common divisor and primitive pair shape. THM-4233 now
+proves a coverage-subsumed primitive-shape method sidecar; other exploratory
+primitive charts are not proved input.
 
 ## 11. Boolean sidecar and connection contract
 

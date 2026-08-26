@@ -14,8 +14,10 @@ and [THM-4228](../01-canon/theorems/THM-4228-common-gcd-two-outsider-periodic-ob
 were independently audited before use here. LRC(14), JC(2), Mahler's `3/2`
 problem, and the classification of Sun's `2-4-6-8` holes remain **OPEN**.
 
-Reserved THM-4229/4230 files are not proved inputs. Historical drafts
-and scratch packets below are evidence only at the status explicitly stated.
+Incoming THM-4229 is proved finite-chart input and THM-4230 is a proved
+relative M12 squeeze; neither closes arbitrary LRC entry or the hidden M12
+locus. Historical drafts and scratch packets below are evidence only at the
+status explicitly stated.
 
 ## Inheritance pass
 
@@ -105,8 +107,13 @@ is important not to call `(4)` a finite reduction before those tails are proved.
 The first ray is now proved by two independent full censuses:
 
 ```text
-q=1, r>=543,        max_B kappa_1(B)=543.               (4a)
+q=1, r>=542,        max_B kappa_1(B)=543.               (4a)
 ```
+
+Here `543` is the exact certificate maximum. Its unique extremal body is
+literally safe at `r=542`, while every other body has certificate cutoff at
+most `530`; this closes the ray from `542` without claiming literal
+minimality.
 
 The same `B*` is the unique extremizer, but is literally safe at `r=542`.
 Thus only `1,258` unbounded outsider rays remain, plus a finite initial segment
@@ -122,8 +129,9 @@ B={20,170,190,193,240,252,264,286,290}.                 (4b)
 ```
 
 The load-bearing ray has a separate exact replay, but the full range lacks an
-independent census. Hence the resulting finite-box claim `max(q,r)>=931` is
-**VERIFIED-SCRATCH**, not proved canon, pending that audit.
+independent census. Hence the exterior safety claim `max(q,r)>=931` is
+**VERIFIED-SCRATCH**, not proved canon, pending that audit; its finite
+remainder is the box `max(q,r)<=930`.
 
 [THM-4227](../01-canon/theorems/THM-4227-two-outsider-scale-separated-depth-eight-haar-wedge.md)
 and [THM-4228](../01-canon/theorems/THM-4228-common-gcd-two-outsider-periodic-observable-haar-ray.md)
@@ -163,7 +171,7 @@ the composite threshold
 theta(B)=min(kappa_body(B),rho(B)),                      (8)
 ```
 
-the exact repair-or-direct analytic maximum is `1307`, with every optimizer
+the exact repair-or-direct certificate maximum is `1307`, with every optimizer
 resolved by the direct branch. The `17547/17548` transition is a useful exact hypergraph
 sidecar, but its old safety headline is superseded. This is a concrete version
 of the Sun-inspired multiplicity lesson: count certificates only after testing
@@ -217,11 +225,28 @@ x=P^2.                                                   (11)
 ```
 
 Therefore the M11/M13 statement “every positive-genus source component is
-Hom-orthogonal to the good elliptic target” cannot be copied to M12. A viable
-M12 proof must retain the quartic quotient, polarization or integral Hom
-lattice, attachment images, and the actual carrier-response degree. Any
-claimed divisibility mismatch here remains **OPEN** until that integral audit
-is complete; reserved THM-4230 is not evidence.
+Hom-orthogonal to the good elliptic target” cannot be copied to M12.
+THM-4230 now performs the needed visible integral audit on the exact gate
+
+```text
+U Z (W^2-4UZ)(U+W+Z) != 0.
+```
+
+Its visible `j=0` Hom lattice is saturated and contributes degrees divisible
+by four, while the complete carrier responses are `42` and `34`. Hence every
+hypothetical Keller point on this gate lies in the hidden locus
+
+```text
+H_0={kappa:Hom(A_12(kappa),E_0)!=0}.
+```
+
+This is a proved squeeze, not an M12 exclusion: `H_0` is countable and proper
+but nonempty, with `W=0` giving
+`A_12~E_0^2 x E_1728^2`. The next owner is therefore an extra correspondence,
+not a coefficient. It must retain the polarized integral Hom lattice, all
+twelve attachment evaluations, and the node-annihilator condition. The
+independent support audit also restores the omitted fixed point `(2,0,1)` at
+gap one; this repairs completeness without changing the theorem.
 
 ## 3. Mahler: exact pairwise first defects
 
@@ -263,15 +288,20 @@ tail negligible. These are tuple-mass statements, fully compatible with a
 density-one hole set. They neither repair the known hole nor imply positive
 support density.
 
-The best LRC transfer is to define an intrinsic repair multiplicity
+The best LRC transfer begins only after fixing a depth `d`, a finite labelled
+deck `R_d(q,r)`, a lawfulness predicate `Lawful_(q,r)(R)`, and an exact signed
+Haar margin `sigma_(q,r)(R)`. Then define the typed multiplicity
 
 ```text
-c_(q,r)(B)=#{lawful labelled repairs R:R intersect B=empty}, (16)
+c_(d;q,r)(B)=#{R in R_d(q,r):Lawful_(q,r)(R),
+               R intersect B=empty, sigma_(q,r)(R)>0}.       (16)
 ```
 
+The strict/non-strict margin convention must be frozen with the deck. This is
 not the order-dependent number resolved by a greedy separator. Its first and
-second moments should reveal whether most residual bodies have many robust
-certificates and isolate a small exceptional support for direct treatment.
+second moments can supply only Cauchy--Schwarz and Markov support/concentration
+bounds; Sun's exponents and zero-fibre conclusions do not transfer. Those
+bounds may still isolate a small exceptional support for direct treatment.
 
 ## Connection contracts
 
@@ -322,13 +352,16 @@ test:         one complete wall with simultaneous collision deletions.
 
 ```text
 source:       multiplicity fibres with first/second moments
-target:       intrinsic repair counts c_(q,r)(B)
+target:       typed intrinsic repair counts c_(d;q,r)(B)
 map:          low/high truncation and collision energy
 preserved:    total certificate incidence and concentration
 destroyed:    exact margins, phases, and outsider labels unless retained
 sidecar:      labelled repair list with exact Haar surplus
 test:         full c(B) histogram on a frozen residual universe.
 ```
+
+Only the moment inequalities transfer through this contract, not the Sun
+exponents or a classification of zero fibres.
 
 ### Sun zero fibres -> JC coefficient walls
 
@@ -350,9 +383,11 @@ source-first resultant, component, genus, attachment, and degree audit.
    wasteful.
 4. **JC anchor:** apply owner descent to the cheapest of `A=0`, `B=0`, `Z=0`,
    `A+B=0`, selecting by replacement-face genus rather than coefficient name.
-5. **JC hostile:** compute the M12 elliptic quotient's integral Hom and
-   polarization lattice before using any degree-mod-four proposal.
-6. **Multiplicity niche:** emit the intrinsic `c_(q,r)(B)` histogram, second
+5. **JC hostile:** on the M12 `W=0` split, compute the hidden Prym Hom lattice,
+   all twelve attachment evaluations, and the node-annihilator sublattice;
+   test whether its degree form represents `34` or `42`.
+6. **Multiplicity niche:** freeze `(d,R_d,Lawful,sigma)` and emit the intrinsic
+   `c_(d;q,r)(B)` histogram, second
    moment, minimum margin, and failure masks on the fixed-small-ray residuals;
    compare it with direct `(M_B,c_B)` thresholds before invoking repair.
 7. **Boolean wildcard:** compare lower-zeta mass, upper-zeta forced-failure

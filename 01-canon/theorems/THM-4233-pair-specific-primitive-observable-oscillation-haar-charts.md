@@ -65,13 +65,14 @@ alpha=4/63.                                              (2)
 > mu(G_(B union {3713g,5149g}))>=4/63.                  (3)
 > ```
 
-In particular, `g=1` is a genuinely coprime comparable pair. Both labels are
-below the [THM-4231](THM-4231-arbitrary-pair-cofinal-depth-six-haar-repair-and-exact-outsider-lift.md)
-quadrant, their gcd is below the
+In particular, `g=1` is a genuinely coprime comparable pair. Its coverage is
+subsumed by the [THM-4231](THM-4231-arbitrary-pair-cofinal-depth-six-haar-repair-and-exact-outsider-lift.md)
+quadrant because both labels exceed `1290`. Its gcd is below the
 [THM-4228](THM-4228-common-gcd-two-outsider-periodic-observable-haar-ray.md)
 gate, and the pair is outside the
 [THM-4227](THM-4227-two-outsider-scale-separated-depth-eight-haar-wedge.md)
-scale-separated wedge.
+scale-separated wedge, so the exact primitive-observable certificate remains
+a method sidecar not supplied by those earlier mechanisms.
 
 There is also an analytic infinite chart. For `k>=1`, define
 
@@ -87,7 +88,7 @@ u_k=5k+2,                 v_k=7k+3.                      (4)
 > ```
 
 The conclusion `(5)` is numerically subsumed by THM-4231, since already
-`u_k,v_k>17548`. Its new content is the cyclotomic-zero mechanism that makes
+`u_k,v_k>1290`. Its new content is the cyclotomic-zero mechanism that makes
 the primitive-observable oscillation `O(1/k)` without a common divisor.
 
 For every body in `(3)` or `(5)`,

@@ -320,7 +320,7 @@ test:       after complete pair closure, first unresolved triple remainder;
 This contract describes a shared workflow. It does not identify omitted
 speed labels with JC coefficients.
 
-## 5. The LRC graph is complete; the next object is a typed hypergraph
+## 5. The fixed-50 petal-pair graph is `K_12`; next is a typed hypergraph
 
 Let
 
@@ -363,19 +363,23 @@ closest literal wall/body.
 
 ### 5.1 How the incoming arbitrary-pair theorems fit
 
-The four recent mechanisms cover different parameter geometry:
+The five recent mechanisms cover different parameter geometry:
 
 | Theorem | Body pool | Outsider region | Retained sidecar | Principal loss |
 |:---|:---|:---|:---|:---|
 | THM-4227 | full `P` | ordered scale-separated wedge | first-comb component growth | asymmetric; misses comparable scales |
 | THM-4228 | full `P` | `gcd(q,r)>=3467` | joint primitive-period observable | misses coprime pairs |
-| THM-4231 | full `P` | symmetric `q,r>=17548` | Bonferroni mass plus components | loses finite pair correlation |
-| THM-4234 | restricted `C` plus petals, center `50` | every finite outsider on 66 pairs; one triple | failure masks, cyclic adjacency, literal walls | fixed center and restricted chart |
+| THM-4231 | full `P` | symmetric `q,r>=1290` | Bonferroni mass/components plus a 289-pair literal patch | loses most finite pair correlation |
+| THM-4233 | full `P` | one coprime ray and a canceled-resonance family | pair-specific `(beta,omega)` and cyclotomic cancellation | coverage subsumed by THM-4231 |
+| THM-4234 | restricted `C` plus petals, center `50` | every finite outsider on 66 pairs; all 220 triple tails for `r>=589`; one universal triple | failure masks, cyclic adjacency, literal walls | fixed center and restricted chart |
 
-No row subsumes another. Their synthesis is a parameter-space atlas: use the
-analytic full-pool regions as exterior charts and exact fixed-center event
-sweeps as interior charts. A missing transition theorem would retain a
-primitive phase/correlation sidecar while moving the center away from `50`.
+THM-4231 subsumes THM-4227/4228/4233 in coverage, but not in their retained
+scale, gcd, primitive-phase, or cyclotomic coordinates. THM-4234 is the
+genuine residual fixed-center chart. Their synthesis is a parameter-space
+atlas: use the analytic full-pool region as the exterior chart and exact
+fixed-center event sweeps as interior charts. A missing transition theorem
+would retain a primitive phase/correlation sidecar while moving the center
+away from `50`.
 
 ## 6. Failure anatomy and ranked tests
 

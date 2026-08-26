@@ -114,10 +114,11 @@ alternative E8 certificate, not that boundary. The least-used decisive
 sidecar is the exact number of positive-length circular components of each
 fixed-`50` base safe set.
 
-The theorem is orthogonal to THM-4231. That theorem handles arbitrary
-distinct `q,r>=17548` over the whole thirty-label pool. Here one newcomer is
+The theorem is complementary to THM-4231. That theorem handles arbitrary
+distinct `q,r>=1290` over the whole thirty-label pool. Here one newcomer is
 fixed at `50`, the body chart is restricted, and every admissible finite
-second newcomer is handled for all pairs and for `(4)`.
+second newcomer is handled for all pairs and for `(4)`. Thus this theorem
+occupies a genuine residual chart on the `q=50` ray.
 
 ## 2. Exact tail lemma and endpoint convention
 
