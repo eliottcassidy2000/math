@@ -1,0 +1,8 @@
+THM-4227 primary prefix certificate
+deletions=5852925 strict_edges=5267460 equalities=0
+prefix_edges=549 ledger=4257f9e48be9706d bodies=14307150 checks=407411762 max=549 covers=0
+min_num=11314922220 min_edge=30,40,42,126,170,190,193,264 components=170
+first_q=6342592 first_r=276085148833 tail=17019288/391*(q+170)
+quality_prefix_edges=859307 ledger=232b38cfc255acfb bodies=14307150 checks=45855551044 max=859307 closest=88,95,170,193,240,252,264,286,290 missed=8,16,85,132,143,145,168,176 covers=0
+quality_first_q=3391 dominant=60,84,170,240,252,264,286,290 delta=16269324968430 components=130 tail=321902813232/10633545731*(q+130) half_corner=106590 optimized_corner=106033
+checks=PASS pool_cells,all_eight_deletions,prefix_no_cover,component_slack_envelope,quality_prefix

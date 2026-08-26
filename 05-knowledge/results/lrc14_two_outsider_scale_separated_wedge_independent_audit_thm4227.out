@@ -1,0 +1,13 @@
+THM-4227 independent fixed-geometry audit
+fixed_walls=7134 fixed_cells=7133 low_support=2718
+eight_deletions=5852925 strict_edges=5267460 equalities=0 ledger=ed44e240af3d3a59
+min_strict_num=944928 min_edge=15,16,20,40,170,190,193,240
+nine_bodies=14307150 checks=413986509 max=501 closest=16,42,60,88,95,132,143,170,176 missed=8,15,20,63,84,85,120,240 covers=0
+prefix_edges=549 ledger=4257f9e48be9706d checks=407411762 max=549 covers=0
+prefix_min_num=11314922220 prefix_min_edge=30,40,42,126,170,190,193,264 components=170 first_q=6342592 first_q_edge=30,40,42,126,170,190,193,264
+prefix_tail=17019288/391*(q+170) at_first_q=276085148833
+quality_prefix_edges=859307 ledger=232b38cfc255acfb checks=45855551044 max=859307 covers=0
+quality_first_q=3391 tail=321902813232/10633545731*(q+130) half_corner=106590 optimized_corner=106033 optimized_edge=60,84,170,240,252,264,286,290
+epsilon=4/8513189685 curve_A=1593356379615 curve_twice_B=521215695
+simple_q=3186712759230 simple_multiplier=521215695
+checks=PASS independent_geometry,all_eight_deletions,strict_minimum,all_nine_bodies,prefix_certificate,component_envelope,quality_prefix,analytic_constants
