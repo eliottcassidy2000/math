@@ -32,6 +32,31 @@
   `b1f40b89b9a4335b5ad261346c09e419893a1f8211b7c14c65db58073e74a91b` /
   `b5e048cd4b1d262e943ebbf56eb53cebd39aa7eee96328001e9940b21c5b081e`.
 
+- `lrc14_q50_divisor_complete_anchor_triple_exchange_thm4178.py` and an
+  independent
+  C++20 joint-wall audit -> THM-4175 tomography specialized to the exact
+  `q=50` anchor-triple exchange split [THM-4178 VERIFIED-EXACT + INDEPENDENTLY
+  AUDITED; PROVED RELATIVE GENUINE TWO-ANCHOR ODD-TAIL TRANSFER; LRC(14) OPEN].
+  The deletion-mass deck is the Boolean subset-zeta transform of the labelled
+  atom weights, with Möbius inverse. Exactly six
+  primitive divisor-complete anchor triples occur in the THM-4156 pool. At
+  `d=6`, the original anchor has `tau=8`; the five exchanges have exact
+  transversal numbers `8,7,8,8,7`, so three transfer all `888,030` anchored
+  seven-choice cores at every content and two have exact seven-cover
+  certificate blocks.
+  Two positive rows are one-anchor controls already covered all-`q` by
+  THM-4175; the third yields `binom(25,7)=480,700` bodies with two original
+  anchors exchanged, disjoint from the THM-4174/4175 body families. Its other
+  choices split into `354,200` one-anchor and `53,130` all-anchor overlaps.
+  All twelve `d=5,6` threshold-equality counts vanish. The primary path uses
+  `7,134` pool walls plus exact `q`-prefix integration; the C++ path uses
+  `7,214` joint walls and direct atom lengths, with labelled-atom FNV-1a-64
+  `0ccd305ae47c79ea`. Source/output and independent source/output SHA-256:
+  `ff9748f07cbc1bab20832860ff5f52bca59573262725a4e69c5b42ab2d078251` /
+  `b5411413f063c3eb9ad22ff2b69e7795c2b744c03de54c2871573f51c7439a13` /
+  `96483771eb2cc38b89e765ccc6d1d8e03fc2e983a279ecf94099c20d32fae806` /
+  `1f082c7e1d24ef267ec9adf1383c9e6e1c235631a581f02409ba5299fc657edd`.
+
 - `lrc14_multideletion_all_newcomers_exact_thm4174.py` and three second-path
   residual/transversal audits -> exact completion of the fixed THM-4156
   newcomer lane [THM-4174 PROVED RELATIVE TO THM-4150/4156/4158/4170 +

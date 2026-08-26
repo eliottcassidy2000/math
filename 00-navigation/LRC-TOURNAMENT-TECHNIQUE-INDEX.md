@@ -18,7 +18,7 @@ AP/GW equality atom, C27 petal/two-block discharge, K33/F7 state lift,
 covering/boundary-moment positivity, or a rigorous Fejer/Toeplitz certificate.
 Every technique below is a possible tooth in that zipper.
 
-### Current response carrier -- fixed-response/Haar ladder through THM-4174
+### Current response carrier -- fixed-response/Haar ladder through THM-4178
 
 - **Move:** use an auxiliary runner only to select a marked deep center, then
   delete it before transporting the neighborhood.  Preserving the eleven-body
@@ -66,6 +66,15 @@ Every technique below is a possible tooth in that zipper.
   `q=50` has transversal numbers `1,5,8` at `d=4,5,6`. Hence there is no
   remaining newcomer in this fixed pool, and every `q>=3693` core is outside
   every THM-4158 alphabet at every content.
+  THM-4175 upgrades deletion masses to exact labelled-atom tomography and
+  closes every one-anchor exchange for every newcomer by total depth six,
+  giving `6,660,225` bodies per newcomer.
+  THM-4178 changes the anchor coordinate while retaining the full labelled
+  failure-atom deck. At `q=50`, the five nonoriginal primitive
+  divisor-complete anchors have exact six-deletion transversal numbers
+  `8,7,8,8,7`. Its only new sector beyond THM-4174/4175 is `480,700`
+  genuine two-anchor bodies; the two seven-cover rows are certificate blocks,
+  not unsafe bodies.
 - **Preserves:** body safety, literal root `t`, integer fibre multiplicity,
   compact/open endpoint status, and the cubic mixed danger response.
 - **Forgets / guardrail:** an ordinary tournament, complete pairwise Gram
@@ -74,19 +83,19 @@ Every technique below is a possible tooth in that zipper.
   safe response by `17/61992`.  THM-4002's equal-Graver-fibre and
   half-translate hostiles independently show that relation length and full
   Fourier power lose relative phase. THM-4160's deletion incidence is a set
-  system, THM-4166's repair object is an undirected graph, and THM-4170/4174
+  system, THM-4166's repair object is an undirected graph, and THM-4170/4174/4175/4178
   require labelled hyperedge overlaps: none is an intrinsic tournament.
   Symmetric deletion tomography recovers support-size statistics but not the
   incidence deck controlling `tau`. Endpoint equality remains atomic data.
-- **Next pull:** the fixed-pool newcomer lane is exact through `d=6`; do not
-  extend mechanically to `d=7`. Change a coordinate by testing anchor exchange
-  or moving optional pools, and seek an arbitrary-body or physical-entry
-  reduction. Mixed/even-parity tails are another genuinely separate lane.
+- **Next pull:** extend only THM-4178's genuine two-anchor slice across
+  THM-4170's 61 residual newcomer labels; do not duplicate THM-4175's all-`q`
+  one-anchor audit. Moving pools, arbitrary-body entry, and mixed/even tails
+  remain separate.
   Retain safe-tooth rank, omitted-label masks, divisor owners, endpoints,
   labelled hyperedge incidence, and physical sheet labels.
 - **Pointers:** THM-3910, THM-4002, THM-4129, THM-4132, THM-4136, THM-4142,
   THM-4148, THM-4150, THM-4156, THM-4158, THM-4160, THM-4166, THM-4170,
-  THM-4172, THM-4174; THM-2221, THM-3377,
+  THM-4172, THM-4174, THM-4175, THM-4178; THM-2221, THM-3377,
   THM-3380, THM-3729;
   `lrc14-fixed-radius-auxiliary-center-t-sheet-response-and-tournament-cubic-sidecar-root-20260823.md`.
 
