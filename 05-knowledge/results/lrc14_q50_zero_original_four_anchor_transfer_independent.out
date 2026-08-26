@@ -1,0 +1,126 @@
+AUDIT q50_zero_original_four_anchor_joint_wall_cpp20
+JOINT_GEOMETRY denominator=91205797082400 walls=7214 atoms=7213 labelled_atom_fnv1a64_le=0ccd305ae47c79ea
+FOUR_ANCHORS 32 all_contain_286=yes
+ANCHOR 10,63,168,286
+ANCHOR 15,40,252,286
+ANCHOR 15,80,252,286
+ANCHOR 15,240,252,286
+ANCHOR 20,63,168,286
+ANCHOR 30,63,168,286
+ANCHOR 40,63,84,286
+ANCHOR 40,63,168,286
+ANCHOR 40,63,252,286
+ANCHOR 40,85,252,286
+ANCHOR 40,95,252,286
+ANCHOR 40,145,252,286
+ANCHOR 40,193,252,286
+ANCHOR 42,63,240,286
+ANCHOR 60,63,168,286
+ANCHOR 63,80,84,286
+ANCHOR 63,80,168,286
+ANCHOR 63,80,252,286
+ANCHOR 63,84,240,286
+ANCHOR 63,168,170,286
+ANCHOR 63,168,190,286
+ANCHOR 63,168,240,286
+ANCHOR 63,168,286,290
+ANCHOR 63,240,252,286
+ANCHOR 80,85,252,286
+ANCHOR 80,95,252,286
+ANCHOR 80,145,252,286
+ANCHOR 80,193,252,286
+ANCHOR 85,240,252,286
+ANCHOR 95,240,252,286
+ANCHOR 145,240,252,286
+ANCHOR 193,240,252,286
+GLOBAL_LAYER d=6 candidates=593775 edges=85324 equalities=0 min_edge_delta=17425422 max_nonedge_delta=-131971518 edge_fnv1a64_le=e9951e7b4a3fba86
+GLOBAL_LAYER d=7 candidates=2035800 edges=821737 equalities=0 min_edge_delta=17425422 max_nonedge_delta=-20115648 edge_fnv1a64_le=808ca531b29c5e83
+D6_ROW anchor=10,63,168,286 edges=31992 tau_gt_6=yes search_nodes=4747
+D6_ROW anchor=15,40,252,286 edges=39272 tau_gt_6=yes search_nodes=5665
+D6_ROW anchor=15,80,252,286 edges=29411 tau_gt_6=yes search_nodes=7417
+D6_ROW anchor=15,240,252,286 edges=27403 tau_gt_6=yes search_nodes=6625
+D6_ROW anchor=20,63,168,286 edges=34902 tau_gt_6=yes search_nodes=3829
+D6_ROW anchor=30,63,168,286 edges=35545 tau_gt_6=yes search_nodes=3199
+D6_ROW anchor=40,63,84,286 edges=48122 tau_gt_6=yes search_nodes=2299
+D6_ROW anchor=40,63,168,286 edges=34147 tau_gt_6=yes search_nodes=3247
+D6_ROW anchor=40,63,252,286 edges=39064 tau_gt_6=yes search_nodes=4363
+D6_ROW anchor=40,85,252,286 edges=31077 tau_gt_6=yes search_nodes=7375
+D6_ROW anchor=40,95,252,286 edges=26140 tau_gt_6=yes search_nodes=7429
+D6_ROW anchor=40,145,252,286 edges=28092 tau_gt_6=yes search_nodes=6583
+D6_ROW anchor=40,193,252,286 edges=24311 tau_gt_6=yes search_nodes=6451
+D6_ROW anchor=42,63,240,286 edges=32855 tau_gt_6=yes search_nodes=3745
+D6_ROW anchor=60,63,168,286 edges=35134 tau_gt_6=yes search_nodes=3007
+D6_ROW anchor=63,80,84,286 edges=36821 tau_gt_6=yes search_nodes=4057
+D6_ROW anchor=63,80,168,286 edges=24955 tau_gt_6=yes search_nodes=4957
+D6_ROW anchor=63,80,252,286 edges=29319 tau_gt_6=yes search_nodes=6553
+D6_ROW anchor=63,84,240,286 edges=34611 tau_gt_6=yes search_nodes=2863
+D6_ROW anchor=63,168,170,286 edges=28733 tau_gt_6=yes search_nodes=4357
+D6_ROW anchor=63,168,190,286 edges=29873 tau_gt_6=yes search_nodes=3211
+D6_ROW anchor=63,168,240,286 edges=23491 tau_gt_6=yes search_nodes=4027
+D6_ROW anchor=63,168,286,290 edges=25199 tau_gt_6=yes search_nodes=3853
+D6_ROW anchor=63,240,252,286 edges=27199 tau_gt_6=yes search_nodes=4963
+D6_ROW anchor=80,85,252,286 edges=22518 tau=6 blockers=1 enum_nodes=3178 enum_levels=1,6,29,109,327,822,1884
+D6_BLOCKER anchor=80,85,252,286 K=88,95,145,168,193,240
+D7_ROW anchor=80,85,252,286 edges=202280 tau=7 cover=8,88,95,145,168,193,240
+D6_ROW anchor=80,95,252,286 edges=18188 tau=6 blockers=3 enum_nodes=3762 enum_levels=1,6,31,119,368,950,2287
+D6_BLOCKER anchor=80,95,252,286 K=8,88,145,168,193,240
+D6_BLOCKER anchor=80,95,252,286 K=85,88,145,168,193,240
+D6_BLOCKER anchor=80,95,252,286 K=88,145,168,170,193,240
+D7_ROW anchor=80,95,252,286 edges=175101 tau=7 cover=8,85,88,145,168,193,240
+D6_ROW anchor=80,145,252,286 edges=20742 tau=6 blockers=3 enum_nodes=2823 enum_levels=1,6,23,76,238,676,1803
+D6_BLOCKER anchor=80,145,252,286 K=8,88,95,168,193,240
+D6_BLOCKER anchor=80,145,252,286 K=85,88,95,168,193,240
+D6_BLOCKER anchor=80,145,252,286 K=88,95,168,170,193,240
+D7_ROW anchor=80,145,252,286 edges=192626 tau=7 cover=8,85,88,95,168,193,240
+D6_ROW anchor=80,193,252,286 edges=17440 tau=6 blockers=3 enum_nodes=2873 enum_levels=1,6,23,80,259,728,1776
+D6_BLOCKER anchor=80,193,252,286 K=8,88,95,145,168,240
+D6_BLOCKER anchor=80,193,252,286 K=85,88,95,145,168,240
+D6_BLOCKER anchor=80,193,252,286 K=88,95,145,168,170,240
+D7_ROW anchor=80,193,252,286 edges=178835 tau=7 cover=8,85,88,95,145,168,240
+D6_ROW anchor=85,240,252,286 edges=21007 tau=6 blockers=2 enum_nodes=3761 enum_levels=1,6,25,103,341,952,2333
+D6_BLOCKER anchor=85,240,252,286 K=16,88,95,145,168,193
+D6_BLOCKER anchor=85,240,252,286 K=80,88,95,145,168,193
+D7_ROW anchor=85,240,252,286 edges=194302 tau=7 cover=8,80,88,95,145,168,193
+D6_ROW anchor=95,240,252,286 edges=16634 tau=6 blockers=5 enum_nodes=4115 enum_levels=1,6,32,125,399,1065,2487
+D6_BLOCKER anchor=95,240,252,286 K=8,80,88,145,168,193
+D6_BLOCKER anchor=95,240,252,286 K=16,85,88,145,168,193
+D6_BLOCKER anchor=95,240,252,286 K=80,85,88,145,168,193
+D6_BLOCKER anchor=95,240,252,286 K=16,88,145,168,170,193
+D6_BLOCKER anchor=95,240,252,286 K=80,88,145,168,170,193
+D7_ROW anchor=95,240,252,286 edges=166779 tau=7 cover=8,80,85,88,145,168,193
+D6_ROW anchor=145,240,252,286 edges=18130 tau=6 blockers=5 enum_nodes=3385 enum_levels=1,6,23,82,273,821,2179
+D6_BLOCKER anchor=145,240,252,286 K=8,80,88,95,168,193
+D6_BLOCKER anchor=145,240,252,286 K=16,85,88,95,168,193
+D6_BLOCKER anchor=145,240,252,286 K=16,88,95,168,170,193
+D6_BLOCKER anchor=145,240,252,286 K=80,85,88,95,168,193
+D6_BLOCKER anchor=145,240,252,286 K=80,88,95,168,170,193
+D7_ROW anchor=145,240,252,286 edges=180334 tau=7 cover=8,80,85,88,95,168,193
+D6_ROW anchor=193,240,252,286 edges=15729 tau=6 blockers=5 enum_nodes=3425 enum_levels=1,6,23,84,285,844,2182
+D6_BLOCKER anchor=193,240,252,286 K=8,80,88,95,145,168
+D6_BLOCKER anchor=193,240,252,286 K=16,85,88,95,145,168
+D6_BLOCKER anchor=193,240,252,286 K=16,88,95,145,168,170
+D6_BLOCKER anchor=193,240,252,286 K=80,85,88,95,145,168
+D6_BLOCKER anchor=193,240,252,286 K=80,88,95,145,168,170
+D7_ROW anchor=193,240,252,286 edges=168585 tau=7 cover=8,80,85,88,95,145,168
+BLOCKER_BODY index=0 selector=8,80 labels=8,80,88,95,145,168,193,240,252,286 presentations=6 d7_witnesses=243 first_witness=10,15,20,42,85,143,170
+BLOCKER_BODY index=1 selector=16,85 labels=16,85,88,95,145,168,193,240,252,286 presentations=4 d7_witnesses=439 first_witness=8,40,42,63,80,120,143
+BLOCKER_BODY index=2 selector=16,170 labels=16,88,95,145,168,170,193,240,252,286 presentations=3 d7_witnesses=736 first_witness=8,40,42,63,80,120,143
+BLOCKER_BODY index=3 selector=80,85 labels=80,85,88,95,145,168,193,240,252,286 presentations=8 d7_witnesses=278 first_witness=8,16,42,63,120,132,143
+BLOCKER_BODY index=4 selector=80,170 labels=80,88,95,145,168,170,193,240,252,286 presentations=6 d7_witnesses=514 first_witness=8,10,15,16,20,85,120
+WITNESS_PATTERN mask=1 count=238 example=10,15,20,42,85,143,170
+WITNESS_PATTERN mask=2 count=117 example=8,40,42,80,120,143,170
+WITNESS_PATTERN mask=4 count=329 example=8,40,42,80,85,120,143
+WITNESS_PATTERN mask=6 count=284 example=8,40,42,63,80,120,143
+WITNESS_PATTERN mask=8 count=68 example=8,16,42,63,120,132,170
+WITNESS_PATTERN mask=10 count=11 example=8,63,84,120,143,170,176
+WITNESS_PATTERN mask=16 count=219 example=8,10,15,16,20,85,120
+WITNESS_PATTERN mask=20 count=91 example=8,10,15,20,85,120,143
+WITNESS_PATTERN mask=21 count=5 example=10,15,20,85,120,143,176
+WITNESS_PATTERN mask=24 count=172 example=8,16,42,63,120,132,143
+WITNESS_PATTERN mask=30 count=27 example=8,15,30,60,120,143,176
+BANK_REPAIR labels=8,10,15,20,143,176,290 pattern=30 mass_ticks=5824951409854 delta=2148750491202
+BANK_REPAIR labels=10,15,20,85,120,143,176 pattern=21 mass_ticks=5804420655774 delta=855312984162
+COMMON_ONE_REPAIR_BANK no EXPLICIT_TWO_REPAIR_BANK yes
+ZERO_ORIGINAL_BODY_UNION presentations=3230304 distinct=1138494 histogram=1:262761,2:332137,3:204900,4:178178,5:59560,6:66399,7:13188,8:11229,9:6149,10:2666,11:658,12:493,13:140,15:36
+Q50_FOUR_DISJOINT_ORIGINAL_ANCHOR_SLICES 9758710
+VERDICT PASS
