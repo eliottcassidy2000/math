@@ -9,6 +9,26 @@ Format per entry:
 - Why it was wrong
 - The correct framing
 
+## MISTAKE-508 (2026-08-25, concurrent THM-4140 reservation) -- a stale identifier check created a duplicate canonical ID
+
+- **What failed:** after
+  `THM-4140-delta-d-collision-wall-affine-critical-length-eighteen` had been
+  promoted, a concurrent empty LRC(14) reservation also used YAML identifier
+  `THM-4140` in
+  `THM-4140-common-safe-arc-clock-pool-universal-odd-tail-lrc14-completion`.
+  The reservation was honest about being unproved, but the duplicate ID made
+  theorem-number lookup ambiguous.
+- **Minimal witness / first failed implication:** two distinct files on the
+  same live history had the literal frontmatter row `id: THM-4140`; therefore
+  a theorem ID alone no longer selected one statement.
+- **Repair / strongest survivor:** the proved Delta-D theorem retains
+  `THM-4140`. The later empty LRC(14) namespace is renumbered to `THM-4142`;
+  its candidate statement and `RESERVED / UNPROVED EMPTY STUB` status are
+  otherwise unchanged.
+- **Reusable rule:** an ID reservation must check the fetched remote history
+  immediately before committing, and concurrent lookup must use both the
+  YAML ID and the full slug/file path.
+
 ## MISTAKE-507 (2026-08-25, legacy snark/tournament synthesis audit) -- finite conflict-girth data, pair-indexed Lie carriers, flows, and arithmetic analogies were conflated
 
 - **What failed:** THM-264 promoted its exhaustive `n<=6` conflict-graph

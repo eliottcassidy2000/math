@@ -1,16 +1,17 @@
 ---
-id: THM-4140
+id: THM-4142
 title: "Common safe-arc/clock pool universal odd-tail LRC(14) completion"
 status: >
   RESERVED / UNPROVED EMPTY STUB. Candidate statement: a complete explicit
   pool of 26 body speeds shares the THM-4136 safe arc and all three residual
   clocks, so every one of its 7,726,160 eleven-element subsets has universal
-  two-odd-tail LRC(14) completion. No proof is canonicalized here.
+  two-odd-tail LRC(14) completion. No proof is canonicalized here. Renumbered
+  from a colliding THM-4140 reservation by MISTAKE-508.
 source: codex-frontier-synthesis-creative-20260825y
 depends_on: []
 ---
 
-# THM-4140 -- common safe-arc/clock pool odd-tail completion
+# THM-4142 -- common safe-arc/clock pool odd-tail completion
 
 **RESERVED / UNPROVED EMPTY STUB.**
 
