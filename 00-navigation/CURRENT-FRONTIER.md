@@ -253,12 +253,12 @@ THM-2070 refutes the general HYP-8890/8895 bypasses.  Transfer
   THM-4102/4104 give intervals to `80,265` and prefix to `80,405`.
   THM-4111/4115 force unbounded full-cut maxima;
   THM-4123/4127 give central slice gains;
-  THM-4128/4131/4135/4137 prove centrality through order ten;
+  THM-4128/4131/4135/4137 prove centrality through order ten.
   [THM-4144](../01-canon/theorems/THM-4144-order-eleven-large-homogeneous-module-johnson-centrality.md)
-  closes order-eleven module sizes `3..9` (margin `>=380`).
-  [THM-4145](../01-canon/theorems/THM-4145-rooted-homogeneous-pair-expansion-two-defect-formula.md)
-  reduces pairs to `93,559,490` rooted mixed-two-ear presentations; pairs/
-  primes remain open. THM-4133 **REFUTES** all-order centrality
+  closes module sizes `3..9`; THM-4162/
+  [4163](../01-canon/theorems/THM-4163-order-eleven-homogeneous-pair-johnson-centrality.md)
+  close `93,559,490` rooted pair presentations (margin `>=380`). Only primes
+  remain. THM-4133 **REFUTES** all-order centrality
   at twelve; actual maxima and intervals remain **OPEN**.
   THM-4114 separates positive faces from submodular ear cuts; THM-4118 adds
   exact response gcds and stateful unit-component intervals. At `n=5`, all

@@ -1,5 +1,33 @@
 # Script Results Index
 
+- `tournament_rooted_pair_mixed_twoear_tensor_thm4162.py`, the order-eleven
+  tensor engine/aggregator, and an independent literal child-DP engine ->
+  concordant exact certificates [THM-4162 PROVED ELEMENTARY ROOTED ENDPOINT
+  TENSOR + ENUMERATION-FREE EXACT JOHNSON COSETS + VERIFIED-EXACT +
+  INDEPENDENTLY AUDITED; THM-4163 FINITE-EXACT + VERIFIED-EXACT +
+  INDEPENDENTLY AUDITED]. The parent table plus a `4,608`-entry double-clone
+  slice reconstructs all `55` child capacities; exact layer moments and
+  Johnson lattices then cost `O(N^3)` without enumerating cuts. The complete
+  order-eleven pair covering has `9,355,949` strong quotient classes and all
+  ten roots: `93,559,490` presentations, zero rational/coset failures, and
+  minimum central-over-outer margin `380`. Exactly `1,454` presentations have
+  a non-2 interior lattice; the first has `d_m=6` for `2<=m<=9`, so parity is
+  not a proof. Together with THM-4144, every nontrivial homogeneous-module
+  stratum is closed; prime tournaments, actual maximizers, and order at least
+  twelve remain outside scope. Tensor script/output SHA-256:
+  `2ebe3e743e0479b420dc3443adee71a729efb756aa13e93d5f45509a59353d57` /
+  `e10247ea988ffc01031691dd0f6c361655822ed41e2ed76fd4462f970f75d2f1`;
+  engine/aggregator/aggregate:
+  `2cc8a6ef46a189db9b77c8cc929fd02659e571d0a63410c339f8949c17d8dec0` /
+  `6d5d1e0210573095d3bddaee2436f3dd5e9488365073364100468bd89a148e8b` /
+  `54f054d4ee6d2e5776da473aff0abb8f9c12e274789cb8bbca7be270f514abfb`;
+  literal source/shard-zero output:
+  `f88d4b3414e2f5326b84ddea49c1f097f4409c7deb01048fac06e54d971b2d9b` /
+  `18e009fb99a10bbee7dab03d26244138aa07244c4ac1d8958b93a328af21c22e`;
+  ordered raw-summary/boundary manifests:
+  `ec09112ccf6b7c527dcf194490628c184402f5674909a7b7f03e9530c1d68c39` /
+  `dd1380ab4f6204f27c54a94a6402b8dd3c44a7f9f604da9556544e62e598fc3b`.
+
 - `jc23_weight9_repeated_top_wall_thm4157.py` with factor, `J=0`, and
   `H_30=0` companions plus six clean-room audits -> concordant exact wall
   ledgers [THM-4157 PROVED RELATIVE TO THM-3827/3992/3997/4007/4103/4120/
@@ -260,7 +288,8 @@
   pass independently; the directed-triangle hostile has actual count `5`
   versus square-only `4`. The order-eleven pair stratum is thereby reduced
   to `93,559,490` rooted presentations, whose full Johnson data is a mixed
-  two-ear field; centrality remains open. Primary script/output SHA-256:
+  two-ear field; THM-4162/4163 later close that field exactly. Primary
+  script/output SHA-256:
   `475f152a5c3a5d03691f953c08be68fb17157a6e66444d18de0876ed78d8db86` /
   `f282d82707fb5364b9c42cfe88b56b250d111c73f3121678564b590074c1c503`;
   independent:
@@ -279,9 +308,9 @@
   strong and pass both gates; these are presentations, not target-class
   counts. The sharp tilt is `3201028/5617819<1` and the minimum strict
   central-over-outer coset margin is `380`. A sink deletion hostile proves
-  strongness is load-bearing. THM-4145 later reduces the pair residual to a
-  rooted mixed-two-ear census; prime tournaments have no substitution
-  reduction. Actual-maximizer centrality is not claimed. Primary Python/engine/output
+  strongness is load-bearing. THM-4145 reduces the pair residual to a rooted
+  mixed-two-ear census and THM-4162/4163 close it; prime tournaments have no
+  substitution reduction. Actual-maximizer centrality is not claimed. Primary Python/engine/output
   SHA-256:
   `e72c8710a5de2aad77e7710880857f1b47148adf82b6fb4278417a30a982edfd` /
   `03dfb092830313d71d41c35dcf7fb7d300db9850bbd52b1291ace7e674bf63bc` /
@@ -405,7 +434,7 @@
   `8b2d93cd83ccafa86315b540cbeba5338812ad4d6393712bd403163b954ebab9`.
   Together with THM-4135 this proves support-floor centrality through order
   ten. THM-4144 later closes the order-eleven homogeneous-module strata of
-  sizes `3..9`; pair-module and prime strata remain. THM-4133 refutes the
+  sizes `3..9`, and THM-4162/4163 close pairs; only primes remain. THM-4133 refutes the
   all-order extension at twelve, and no central actual-maximizer theorem
   follows.
 
@@ -455,8 +484,8 @@
   `b217807222b0b8cd2b2234f37a9bf40129469671ff64d6ea28dd0fcd88657b04`;
   semantic: `0b3d2c65723e0ecc78cbf02d1735320794a6bd6e5f7c3a371ee94432e19c5b49`.
   THM-4137 later extends the positive range through order ten, and THM-4144
-  closes order-eleven homogeneous modules of sizes `3..9`; pair and prime
-  strata remain, while THM-4133 refutes the all-order extension at twelve.
+  closes order-eleven homogeneous modules of sizes `3..9`; THM-4162/4163
+  close pairs, leaving primes, while THM-4133 refutes the all-order extension.
 
 - `jc23_delta_v_collision_wall_strict_transform_thm4134.py` and independent
   rational-coordinate elimination audit -> concordant semantic ledgers
@@ -542,8 +571,8 @@
   semantic: `8e5ef116e577c3d3ab5dd4bea50953581a457ffbaae4f80504060c8793fed578`.
   THM-4135/4137 extend the positive range through order ten, while THM-4133
   refutes the all-order extension at order twelve. THM-4144 closes
-  order-eleven homogeneous modules of sizes `3..9`; pair/prime strata,
-  actual-maximizer classification, and intervals remain open.
+  order-eleven homogeneous modules of sizes `3..9`, and THM-4162/4163 close
+  pairs; prime tournaments, actual-maximizer classification, and intervals remain open.
 
 - `jc23_theta_only_extremal_seam_critical_monodromy_thm4130.py` and independent
   `(s,p)` elimination/permutation audit -> concordant semantic ledgers
