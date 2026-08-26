@@ -1,0 +1,13 @@
+THM-4233 independent ordered-safe-teeth tail audit
+formula_rows=854 contiguous=1..850 far=1000,5000,10000,50000
+k=1 grid=980 safe_ticks=720 components=14 extrema_ticks=91/889 amplitude=13860 omega=99/3430
+k=2 grid=2856 safe_ticks=2096 components=24 extrema_ticks=1836/1020 amplitude=70176 omega=43/2499
+k=850 grid=354370184 safe_ticks=260353602 components=8748 extrema_ticks=303588548/50781636 amplitude=3173630482688 omega=93298168/1845869992183
+k=1000 grid=490406084 safe_ticks=360298350 components=10290 extrema_ticks=420373082/70033002 amplitude=5166508096928 omega=258222116/6010049160941
+k=5000 grid=12252030084 safe_ticks=9001491488 components=51432 extrema_ticks=10500464970/1751565114 amplitude=645155895342960 omega=379473110/44147127400173
+k=10000 grid=49004060084 safe_ticks=36002982918 components=102862 extrema_ticks=42002330026/7001730058 amplitude=5160654569526064 omega=526576342/122515400645009
+k=50000 grid=1225020300084 safe_ticks=900014914350 components=514290 extrema_ticks=1050018650082/175001650002 amplitude=645016263704828928 omega=645011103616/750331365158025441
+k=747 omega_minus_threshold=12591073311/326326757250667264
+k=748 threshold_minus_omega=336393488/8724097409553253
+semantic_ledger_fnv1a64_le_words=83c13873d6a23452
+result=PASS independent interval intersection; formula and crossing reproduced

@@ -1,0 +1,14 @@
+THM-4233 resonance-zero exact common-grid audit
+formula_rows=1003 contiguous=1..1000 far=5000,10000,50000
+k=1 grid=980 extrema_ticks=91/889 amplitude=13860 omega=99/3430
+k=2 grid=2856 extrema_ticks=1836/1020 amplitude=70176 omega=43/2499
+k=3 grid=5712 extrema_ticks=4267/1445 amplitude=205530 omega=2015/159936
+k=4 grid=9548 extrema_ticks=7678/1870 amplitude=445984 omega=724/73997
+k=5 grid=14364 extrema_ticks=12069/2295 amplitude=822474 omega=5077/636804
+k=6 grid=20160 extrema_ticks=17440/2720 amplitude=1365120 omega=79/11760
+k=747 omega=4575651/79563540224 omega_minus_threshold=12591073311/326326757250667264
+k=748 omega=144518186/2516324606159 threshold_minus_omega=336393488/8724097409553253
+threshold_shift_coefficients=PASS all_positive residues=0..6
+consecutive_monotonicity=PASS all_coefficients_positive k>=1
+semantic_ledger_fnv1a64_le_words=388cbaa2d0d3242d
+result=PASS exact formula all k tested; exact gate iff k>=748 by analytic macrostate proof

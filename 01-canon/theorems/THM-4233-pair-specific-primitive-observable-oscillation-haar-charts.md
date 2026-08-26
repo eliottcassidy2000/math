@@ -5,10 +5,12 @@ status: >
   PROVED ANALYTIC REDUCTION + FINITE-EXACT + INDEPENDENTLY AUDITED FIXED-PAIR
   CERTIFICATE. For the displayed thirty-label pool, every nine-body is
   Haar-safe after adjoining every common dilation of the coprime pair
-  (3713,5149). A second analytic chart proves the same conclusion for every
-  dilation of (5k+2,7k+3), k>=180785. The adjacent coprime family has limiting
-  primitive oscillation 36/2401 and is a rigorous hostile control. Arbitrary
-  finite pair entry and LRC(14) remain OPEN.
+  (3713,5149). A second chart proves the same conclusion for every dilation
+  of (5k+2,7k+3), exactly when k>=748 for the sufficient primitive-oscillation
+  gate. Its period-seven primitive formula is proved for every k>=1. The
+  adjacent coprime family has limiting primitive oscillation 36/2401 and is a
+  rigorous hostile control. Arbitrary finite pair entry and LRC(14) remain
+  OPEN.
 source: codex-lrc14-pair-specific-oscillation-20260826
 depends_on:
   - THM-4150-safe-set-haar-measure-universal-odd-tail-lrc14-transfer
@@ -26,6 +28,14 @@ primary_script_sha256: 9c02b42562d3b911e9df2a553844c6e1acb1ab6d64dee176d9d76c861
 primary_output_sha256: 03e0c222ee7ba9e2384de76c33217c05887990c64ec24c7635ca59bc05b9df07
 independent_audit_script_sha256: b6691337c81199e7459fbabfeec10e49d0899ee40368d7b1d729deabd7a0ad20
 independent_audit_output_sha256: e43dc469c08d89a5e5ca20e0c734bf56f44d35aa84d5d4cac8ef304464487253
+exact_tail_script: 04-computation/lrc14_resonance_zero_exact_tail_thm4233.py
+exact_tail_output: 05-knowledge/results/lrc14_resonance_zero_exact_tail_thm4233.out
+exact_tail_independent_audit_script: 04-computation/lrc14_resonance_zero_exact_tail_thm4233_independent_audit.py
+exact_tail_independent_audit_output: 05-knowledge/results/lrc14_resonance_zero_exact_tail_thm4233_independent_audit.out
+exact_tail_script_sha256: 721dbbf9d11a0814f7f8edfec43bc38d073abc5d915e93ad34af18b9bbbbe6b5
+exact_tail_output_sha256: 56b6aa79076cf4ebbb51c12883323631f61615f72f5687068b7f553ba711b319
+exact_tail_independent_audit_script_sha256: 27a7fb1b283b864480754c9ef3d839dcd3463a0de26b99442b21962e21ab9531
+exact_tail_independent_audit_output_sha256: 9e6eeaa21bb98d2895664d616f7b39b181fd1f943b306caa9cc6771728f7ab2a
 hash_basis: raw LF bytes
 audit: >
   PASS / ACCEPT. The primary integer common-grid sweep and an independent
@@ -33,7 +43,11 @@ audit: >
   fixed-pair mass, primitive extrema, oscillation, threshold margins,
   collision ticks, and hostile controls. Their independently serialized
   semantic ledgers are 4725493ac81fe903 and 635148be446ddc28. O0/O3 replays
-  match; the independent path also passes ASan/UBSan.
+  match; the independent path also passes ASan/UBSan. For the exact tail, a
+  second common-grid sweep checks k=1..1000 and far controls, while an ordered
+  safe-teeth intersection independently checks k=1..850 and the same crossing;
+  their ledgers are 388cbaa2d0d3242d and 83c13873d6a23452. The infinite
+  residue law itself is supplied by the analytic seven-macrostate proof below.
 ---
 
 # THM-4233 -- pair-specific primitive-observable oscillation Haar charts
@@ -80,15 +94,16 @@ There is also an analytic infinite chart. For `k>=1`, define
 u_k=5k+2,                 v_k=7k+3.                      (4)
 ```
 
-> **Canceled-resonance ray family.** For every `k>=180785`, every integer
+> **Canceled-resonance ray family.** For every `k>=748`, every integer
 > `g>=1`, and every `B in binom(P,9)`,
 >
 > ```text
 > mu(G_(B union {g u_k,g v_k}))>=4/63.                  (5)
 > ```
 
-The conclusion `(5)` is numerically subsumed by THM-4231, since already
-`u_k,v_k>1290`. Its new content is the cyclotomic-zero mechanism that makes
+The conclusion `(5)` is numerically subsumed by THM-4231, since at `k>=748`
+already `u_k,v_k>1290`. Its new content is the cyclotomic-zero mechanism that
+makes
 the primitive-observable oscillation `O(1/k)` without a common divisor.
 
 For every body in `(3)` or `(5)`,
@@ -454,7 +469,313 @@ which is `(40)`. Since `|d_r|<=18`, `L_k>=980` for `k>=1`, and
 
 every member of the family satisfies `beta_(u_k,v_k)>beta_0`.
 
-### 5.3. Primitive bound and the explicit tail
+### 5.3. Exact primitive law and the sharp gate transition
+
+The cyclotomic cancellation admits an exact event proof, not merely the
+coarse norm estimate below. Retain `L_k=14u_kv_k`, and put
+
+```text
+S_k=L_k beta_(u_k,v_k)=(72u_kv_k+d_r)/7.              (48a)
+```
+
+For a tick `x in [0,L_k]`, let `Q_k(x)` be the joint-safe tick length in
+`[0,x]` and define the two opposite raw primitives
+
+```text
+C_k(x)=L_k Q_k(x)-S_k x=L_k^2 H_(u_k,v_k)(x/L_k),
+D_k(x)=S_k x-L_k Q_k(x)=-C_k(x).                       (48b)
+```
+
+For `k=7q+r`, define the following seven quadratics:
+
+```text
+R_0=25284q^2+ 2997q+   67,
+R_1=25284q^2+10011q+  990,
+R_2=25284q^2+17368q+ 2924,
+R_3=25284q^2+24823q+ 6045,
+R_4=25284q^2+32033q+10136,
+R_5=25284q^2+39243q+15231,
+R_6=25284q^2+46453q+21330.                             (48c)
+```
+
+Then, for every `k>=1`, the exact primitive law is
+
+```text
+max C_k=-min C_k=A_k=2u_k R_r(q),
+omega_(u_k,v_k)=R_r(q)/(49u_k v_k^2).                  (48d)
+```
+
+The minimizing tick for `C_k` is
+
+```text
+x_- =u_k(98q-13) mod L_k,             r=0,1,
+x_- =u_k(98q+85),                     r=2,...,6,       (48e)
+x_+ =L_k-x_-.
+```
+
+Here `x_+` is the maximizing tick. The modular convention includes `k=1`,
+where `x_-=889` and `x_+=91` on the grid `L_1=980`.
+
+#### 5.3.1. Seven finite macrostates
+
+The identity `5v_k-7u_k=1` is the entire reason the exact event order is
+finite. On the first half-circle the macro index ranges through
+
+```text
+0<=h<=q+floor((5q+r)/2).                               (48e')
+```
+
+Index a safe tooth of the `v_k`-comb by `j=7h+s`, `0<=s<=6`. In common
+ticks it is
+
+```text
+I_(h,s)=[u_k(98h+14s+1),u_k(98h+14s+13)].             (48f)
+```
+
+On the first half-circle, the only `u_k`-danger tooth that can meet this
+interval has index `i=5h+a_s`, where
+
+```text
+(a_0,...,a_6)=(0,1,2,2,3,4,5).                        (48g)
+```
+
+Indeed, `u_k/v_k=5/7-1/(7v_k)`. The center displacement, `u_k`-danger
+center minus `I_(h,s)` center, is
+
+```text
+s=0: 14h-35k-14,       s=1: 14h-7k,
+s=2: 14h+21k+14,       s=3: 14h-49k-14,
+s=4: 14h-21k,          s=5: 14h+7k+14,
+s=6: 14h+35k+28.                                      (48h)
+```
+
+The safe and danger half-widths are `6u_k` and `v_k`, so their difference
+and sum are `23k+9` and `37k+15`. Comparing `(48h)` with those two numbers
+gives the complete overlap word
+
+```text
+                 s=0  1  2  3  4  5  6
+h<=q-1            L   C  C  0  C  C  R
+h=q, r<=2         L   C  R  0  C  C  0
+h=q, r>=3         L   C  C  0  C  C  0
+h>=q+1            L   C  R  0  C  C  0,              (48i)
+```
+
+where `L,C,R,0` mean partial-left, contained, partial-right, and disjoint.
+The nonzero overlap lengths are
+
+```text
+O_0=14h+2k+1,       O_C=14k+6,
+O_(2,R)=16k+1-14h,  O_(6,R)=2k-13-14h.                (48j)
+```
+
+Thus a seven-tooth block contains `360k+156` joint-safe ticks before the
+boundary and `360k+148` after it. This is a finite event-order derivation of
+the purported quasipolynomial; no interpolation or eventuality assertion is
+being used.
+
+Below, `V_s` and `R_s` denote respectively the left and right endpoint of
+`I_(h,s)`, while `U_s^+` and `U_s^-` denote the intervening `u_k`-comb safe
+start and safe end in this block. This notation names endpoint events, not
+new runners.
+
+#### 5.3.2. The global positive deficit
+
+The function `D_k` rises on unsafe cells and falls on safe cells. Its local
+maxima are therefore safe starts. Let `X_h` be its value at the `s=6` safe
+start. Directly subtracting the ten other possible starts in the pre-block
+and using
+
+```text
+b_k=S_k/L_k=beta_(u_k,v_k)>=2511/3430                 (48k)
+```
+
+gives the following positive lower bounds after division by `L_k`:
+
+| candidate | pre-block lower bound for `(X_h-D)/L_k` |
+|---|---:|
+| `U^+_0` | `(13738k+11167)/3430` |
+| `V_1` | `(599k+318)/49` |
+| `U^+_1` | `3(1432k+1031)/686` |
+| `V_2` | `6(285k+163)/245` |
+| `U^+_2` | `(29222k+19763)/3430` |
+| `V_3` | `(425k+366)/245` |
+| `V_4` | `2(1285k+612)/245` |
+| `U^+_4` | `9(296k+1149)/3430` |
+| `V_5` | `(1285k+612)/245` |
+| `U^+_5` | `(10406k+14639)/3430` |
+
+In the post-block the corresponding list is
+
+```text
+(3021k-5983)/3430,       (354k+73)/49,
+(10763k-1685)/3430,      (485k-247)/245,
+(425k+366)/245,          2(1285k+612)/245,
+9(296k+1149)/3430,       (1285k+612)/245,
+(10406k+14639)/3430.                                  (48l)
+```
+
+It is positive for `k>=2`; `k=1` is the displayed direct control. The common
+`r>=3` hybrid starts have one of the pre-block types already listed. Thus the
+only blockwise contender is `X_h`. From `(48j)` and `(48a)`,
+
+```text
+X_(h+1)-X_h=L_k(2+d_r/v_k)>0             before,
+X_(h+1)-X_h=L_k(-4+d_r/v_k)<0            after.        (48m)
+```
+
+At the one hybrid boundary, `X_q-X_(q-1)` is respectively
+
+```text
+-98(21q-1)(35q+2),       -98(5q+1)(49q+10),
+ 14(35q+12)(49q+1),       28(35q+17)(49q+15),
+196(7q+4)(35q+22),        28(35q+27)(49q+41),
+ 28(35q+32)(49q+54)                                  (48n)
+```
+
+for `r=0,...,6`. The next difference is negative in every residue; its seven
+factorizations are
+
+```text
+-56(35q+2)(49q-1),       -392(5q+1)(49q+10),
+-392(7q+3)(35q+12),       -28(35q+17)(98q+57),
+ -28(35q+22)(98q+65),     -28(35q+27)(98q+73),
+ -28(35q+32)(98q+81).                                (48o)
+```
+
+Consequently the global safe-start maximum is at `h=q-1` for `r=0,1` and
+at `h=q` for `r=2,...,6`. Substitution gives `D_k(x_-)=A_k` with `(48c)`.
+
+#### 5.3.3. The opposite extremum
+
+It remains essential not to confuse the largest positive deficit with the
+oscillation. Let `E_h` be `D_k` at the `s=0` safe end and put
+`E_0=D_k(13u_k)`. In a pre-block, subtracting `E_h` from the ten other safe
+ends gives the positive lower bounds
+
+```text
+9(952k+197)/3430,       (1285k+612)/245,
+(826k-2525)/3430,       2(1285k+612)/245,
+(425k+366)/245,         3(9128k+2299)/3430,
+6(285k+163)/245,        23(854k+113)/3430,
+(599k+318)/49,          (11900k-1699)/3430,           (48p)
+```
+
+for `k>=7`; `k<=6` is an exact direct check. In a post-block the nine exact
+gaps from `E_h`, in endpoint order, are
+
+```text
+-14(1-b_k)h+(-16+26b_k)k-9+13b_k,
+-2((23-35b_k)k+9-14b_k),
+-14(1-b_k)h+(-90+124b_k)k-41+55b_k,
+-14h+(-150+210b_k)k-65+84b_k,
+(-28+14b_k)h+(-152+222b_k)k-74+97b_k,
+-14h+(-196+280b_k)k-83+112b_k,
+(-28+14b_k)h+(-226+320b_k)k-106+139b_k,
+-14h+(-242+350b_k)k-101+140b_k,
+-14h+(-302+420b_k)k-125+168b_k.                      (48q)
+```
+
+The pre-block baselines themselves satisfy
+
+```text
+E_(h+1)-E_h=L_k(2+d_r/v_k)>0,                          (48q')
+```
+
+so every pre-block baseline is at least `E_0`; the pre-block table includes
+the common candidates of the `r>=3` hybrid. For the post-block comparison,
+write `h=q+n`, `n>=1`. Then
+
+the block baseline is
+
+```text
+(E_h-E_0)/L_k=2q+10n+(q+n)d_r/v_k,             r<=2,
+(E_h-E_0)/L_k=2q+10n+5-2r+(q+n)d_r/v_k,        r>=3. (48r)
+```
+
+After adding `(48r)` to `(48q)`, three rows increase in `n` and six decrease.
+It is therefore enough to test `n=1` and
+`n=floor((5q+r)/2)`. Clearing positive denominators leaves coefficientwise
+positive polynomials, except for the following seven elementary survivors:
+
+```text
+392q^2-81q-3,
+512785q^3+41587q^2+524q-4,
+344715q^3+7973q^2-904q-4,
+8q-1,                 392q^2+143q-1,
+72030q^3+111916q^2+43088q-297,
+72030q^3+124656q^2+44094q-8847.                       (48s)
+```
+
+Each is positive at `q=1` and has positive forward difference thereafter.
+The boundary `r<=2` uses the same calculation at `n=0`. For `r>=3`, the
+only extra hybrid end has positive gap from `E_0` equal to
+
+```text
+28(7q+3)(35q+17)(119q+66),
+28(35q+22)(833q^2+1056q+334),
+28(35q+27)(833q^2+1293q+502),
+28(35q+32)(833q^2+1530q+702)                          (48t)
+```
+
+in residues `3,4,5,6`. Hence `E_0` is the first-half minimum. Explicitly,
+
+```text
+E_0=u_k(13d_r-7028k^2-5686k-1146)/7<0.               (48u)
+```
+
+Finally, `A_k+E_0` factors, for `r=0,...,6`, as
+
+```text
+28q(35q+2)(49q+11),          196q(5q+1)(49q+10),
+14(35q+12)(98q^2+67q+1),      28(q+1)(35q+17)(49q+15),
+196(q+1)(7q+4)(35q+22),       28(q+1)(35q+27)(49q+41),
+28(q+1)(35q+32)(49q+54).                              (48v)
+```
+
+Thus `-E_0<=A_k`, with equality only for `k=1`. Reflection of both combs
+gives `D_k(L_k-x)=-D_k(x)`, so the second half supplies `-A_k` and no larger
+absolute extremum. This completes the proof of `(48d)--(48e)`.
+
+The exact formula is strictly decreasing with `k`. Cross-multiplying the
+successive residue expressions in `(48d)` gives positive denominators and,
+up to positive common factors, the following coefficient-positive
+numerators (the last row compares residue six at `q` with residue zero at
+`q+1`):
+
+```text
+r=0: 2(3277365q^3+1000825q^2+78768q+1454),
+r=1:   5966485q^3+5339726q^2+1527989q+138652,
+r=2: 284122335q^4+473196283q^3+290531045q^2+77845533q+7667748,
+r=3: 304710910q^4+682023258q^3+568329489q^2+208868341q+28551678,
+r=4: 304710910q^4+857824478q^3+902405315q^2+420381265q+73168566,
+r=5: 304710910q^4+1033625698q^3+1311680461q^2+738025641q+155354760,
+r=6: 312946340q^4+1239225729q^3+1836580907q^2+1207368844q+297073440.
+                                                                    (48w)
+```
+
+At the unique crossing,
+
+```text
+omega_747=4575651/79563540224,
+omega_747-T=12591073311/326326757250667264>0,
+
+omega_748=144518186/2516324606159,
+T-omega_748=336393488/8724097409553253>0.              (48x)
+```
+
+Therefore
+
+```text
+omega_(u_k,v_k)<=T                  iff k>=748.         (48y)
+```
+
+Together with `(47)`, Section 2 proves `(5)` for every `k>=748` and every
+common dilation `g>=1`; THM-4150 gives the odd-tail consequence `(6)`. The
+failure at `k=747` is failure of this sufficient transfer gate, not an
+unsafe-set witness.
+
+### 5.4. Coarse analytic mechanism
 
 By `(37)`, define the one-periodic fast primitive
 
@@ -511,11 +832,11 @@ T-22549313113/392362010781125
  =28971847951/229893926442909103375>0.                  (54)
 ```
 
-Equations `(47)`, `(52)`, and `(54)` verify the pair-specific gate `(14)`
-for every `k>=180785`. Section 2 proves `(5)` for every common dilation
-`g>=1`, and THM-4150 gives the odd-tail consequence `(6)`.
+Equations `(47)`, `(52)`, and `(54)` give an independent, deliberately coarse
+analytic proof of the gate for every `k>=180785`. The finite macrostate
+argument in Section 5.3 is what sharpens this to the exact transition `748`.
 
-### 5.4. General unimodular resonance-zero template
+### 5.5. General unimodular resonance-zero template
 
 The cancellation above is not isolated. Let `a,c` be positive integers and
 `b,d` be integers such that
@@ -567,8 +888,8 @@ omega_(u,v)
 
 Whenever the lower density and upper oscillation in `(60)` pass `(14)`, the
 THM-4228 deck supplies every common dilation. The family `(4)` is the
-instance `(a,b,c,d)=(5,2,7,3)`; its exact quasipolynomial `(40)` improves the
-last term of `(60)` and yields the displayed cutoff.
+instance `(a,b,c,d)=(5,2,7,3)`; its exact density `(40)` and primitive law
+`(48d)` yield the sharp displayed cutoff.
 
 ## 6. Exact audit and reproduction
 
@@ -579,10 +900,16 @@ search truncation or floating comparison. The positive control `(1,2)`, the
 sharp-density hostile `(1,13)`, and the failed-gate Fibonacci predecessor in
 `(25)` test the density, primitive normalization, and inequality direction.
 
-The primary implementation uses the common integer grid and midpoint cell
-classification. The independent implementation builds reduced-rational safe
-teeth, intersects intervals directly, and integrates its own rational
-primitive. Reproduce from the repository root with
+For the fixed pair, the primary implementation uses the common integer grid
+and midpoint cell classification. The independent implementation builds
+reduced-rational safe teeth, intersects intervals directly, and integrates
+its own rational primitive. For the canceled family, a new common-grid path
+checks the formula at every `k=1,...,1000` and at `5000,10000,50000`; its
+independent path intersects the two ordered safe-tooth families without
+constructing or classifying the endpoint-cell union, checking every
+`k=1,...,850` and the same far controls. These finite sweeps audit, but do
+not replace, the infinite macrostate proof in Section 5.3. Reproduce from the
+repository root with
 
 ```bash
 clang++ -std=c++20 -O3 -DNDEBUG \
@@ -594,9 +921,15 @@ clang++ -std=c++20 -O3 -DNDEBUG \
   04-computation/lrc14_pair_specific_primitive_observable_gcd_one_chart_independent_audit_thm4233.cpp \
   -o /tmp/thm4233-independent
 /tmp/thm4233-independent
+
+python3 \
+  04-computation/lrc14_resonance_zero_exact_tail_thm4233.py
+
+python3 \
+  04-computation/lrc14_resonance_zero_exact_tail_thm4233_independent_audit.py
 ```
 
-Both output streams must byte-match their frozen files.
+All four output streams must byte-match their frozen files.
 Repeating both compilations with `-O0` gives the same two output streams; the
 independent executable also passes combined AddressSanitizer/UBSan replay.
 
@@ -622,9 +955,9 @@ The proof and failure boundaries are:
 2. Equation `(27)` is an obstruction to one proof mechanism, not a claim
    that adjacent pairs are unsafe. Common dilation still reduces their
    discrepancy, and THM-4231 handles their sufficiently large coordinates.
-3. The canceled family proves an `O(1/k)` mechanism and the conservative
-   analytic cutoff `180785`. Exploratory data suggesting a permanent exact
-   residue-class transition at `k=748` remain **OPEN** and are not used.
+3. The canceled family has the exact period-seven primitive law `(48d)` and
+   passes this sufficient gate exactly for `k>=748`. For `k<=747`, gate
+   failure is not danger; another repair or direct safe-set argument may work.
 4. The deck `E_3467` is sufficient, not necessary. Missing `(14)` says only
    that this transfer does not fire.
 5. Arbitrary finite pair entry, replacement of the fixed pool, and full
