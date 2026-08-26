@@ -23,7 +23,8 @@ Then read the routed frontier, guardrails, and theorem; logs are history.
 
 1. **LRC(14) is first open.** Caps `1579/216` leave `372913/109/12`.
    THM-4156/4191 close zero/one-outsider layers; THM-4231 fills all
-   `C(32,11)` charts for distinct `q,r>=17548`. Finite entry remains open.
+   `C(32,11)` charts for distinct `q,r>=17548`. THM-4227/4228 add a scale
+   wedge and all gcd-`>=3467` pairs. Finite entry remains open.
 2. **The `q <= 25` period claim is refuted.** THM-762/764 exhibit `26*{1,...,12} union {339}`, whose first good period is `27`.
 3. **Good-period existence is a maximum statement.** The tight resonant AP
    defeats average/count arguments; see MISTAKE-127/129/130.

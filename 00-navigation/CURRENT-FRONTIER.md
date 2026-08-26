@@ -73,8 +73,11 @@ is the safe control `M(S_13)=99/338`. No cited result proves LRC(14).
   `2^(c(F)-1)`. Safety/arrival stay open.
 - **Owner/tail:** THM-4156/4191 close the zero/one-outsider layers; THM-4207
   closes fixed `(50,51)` and THM-4211 a fixed-`50` tail. [THM-4231](../01-canon/theorems/THM-4231-arbitrary-pair-cofinal-depth-six-haar-repair-and-exact-outsider-lift.md)
-  fills all `C(32,11)` charts for distinct `q,r>=17548`. The cutoff is
-  activation-only; finite pair entry and LRC(14) stay open.
+  fills all `C(32,11)` charts for distinct `q,r>=17548`.
+  [THM-4227](../01-canon/theorems/THM-4227-two-outsider-scale-separated-depth-eight-haar-wedge.md)
+  reaches a directed wedge from `3391`; [THM-4228](../01-canon/theorems/THM-4228-common-gcd-two-outsider-periodic-observable-haar-ray.md)
+  covers gcd `>=3467`. These thresholds are certificate-only; finite pair
+  entry and LRC(14) stay open.
 - **PROVED:** [THM-2928](../01-canon/theorems/THM-2928-critical-seven-comb-grid-tensorization-and-drift-tariff.md)/2941: literal zero/one/two/three-drift sectors are empty; `k=2,3` are finite.
 - **Orthogonal routes.** THM-1017 is HYP-6820; THM-2047/2050 keep phase/exit; THM-731/2048 prune; THM-1290 ends at `55`; HYP-8900 nonuniform.
 - **PROVED micro-staircase:** THM-3316 closes every prime and THM-3317 proves

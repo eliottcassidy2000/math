@@ -7,7 +7,8 @@ status: >
   adjoining any ordered pair of outsiders in an explicit scale-separated
   wedge. The proof combines a complete depth-eight no-nine-cover census with
   two sequential component-discrepancy estimates. This gives infinite
-  two-outsider LRC(14) families but not arbitrary pair entry or full LRC(14).
+  two-outsider LRC(14) families but not arbitrary finite pair entry or full
+  LRC(14).
 source: codex-lrc14-two-outsider-wedge-20260826
 depends_on:
   - THM-4150-safe-set-haar-measure-universal-odd-tail-lrc14-transfer
@@ -18,6 +19,7 @@ related:
   - THM-4207-two-newcomer-sharp-depth-transition-base-surplus-composition-and-variable-pool-chart-number
   - THM-4211-fixed-fifty-cofinal-two-newcomer-haar-tail-and-eighteen-label-chart
   - THM-4214-two-newcomer-pascal-complete-eleven-body-haar-charts
+  - THM-4231-arbitrary-pair-cofinal-depth-six-haar-repair-and-exact-outsider-lift
 script: 04-computation/lrc14_two_outsider_scale_separated_prefix_certificate_thm4227.cpp
 output: 05-knowledge/results/lrc14_two_outsider_scale_separated_prefix_certificate_thm4227.out
 full_layer_scout_script: 04-computation/lrc14_two_newcomer_deletion_staircase_probe_20260826.cpp
@@ -108,7 +110,9 @@ r>=106,033.                                             (7)
 Equation `(4)` gives the clean cofinal linear tail, whose own corner is
 `106,590`; the same assertions hold after swapping `q,r`. Equations `(5)--(7)` give
 infinite thirteen-speed LRC(14) families with two genuinely variable body
-outsiders. They do not give arbitrary pair entry or full LRC(14).
+outsiders. THM-4231 separately covers every distinct `q,r>=17548`; this wedge
+can enter with one coordinate as low as `3391` when the other is sufficiently
+large. Neither theorem gives arbitrary finite pair entry or full LRC(14).
 
 ## 2. Inheritance pass and faithful coordinate
 
@@ -351,9 +355,10 @@ Neither `Q` nor `(7)` is asserted to be a minimal literal entry threshold.
 They are sharp only within this explicitly ordered prefix certificate: `Q` is
 the boundary of its half-slack activation filtration, while `(7)` is the
 optimized joint-loss corner on the resulting prefix. Exact joint geometry or
-a different subdeck can improve them. The theorem says
-nothing about an arbitrary pair, a pair with one label inside `P`, physical
-entry of a general LRC(14) row into this chart, or LRC(14).
+a different subdeck can improve them. The theorem says nothing about pairs
+outside its wedge, a pair with one label inside `P`, physical entry of a
+general LRC(14) row into this chart, or LRC(14). THM-4231 independently covers
+the cofinal northeast quadrant, but finite pair entry remains open.
 
 ## 6. Exact audit and replay
 

@@ -9,7 +9,8 @@ status: >
   observable and proves the sharp universal density floor 66/91. The number
   3467 is sharp only for the sufficient activation-deck certificate, not for
   literal Haar safety. THM-4150 transfers the body result to infinite
-  odd-tail LRC(14) families. Arbitrary pair entry and LRC(14) remain OPEN.
+  odd-tail LRC(14) families. Arbitrary finite pair entry and LRC(14) remain
+  OPEN.
 source: codex-lrc14-common-gcd-ray-20260826
 depends_on:
   - THM-4150-safe-set-haar-measure-universal-odd-tail-lrc14-transfer
@@ -19,6 +20,7 @@ related:
   - THM-4207-two-newcomer-sharp-depth-transition-base-surplus-composition-and-variable-pool-chart-number
   - THM-4211-fixed-fifty-cofinal-two-newcomer-haar-tail-and-eighteen-label-chart
   - THM-4227-two-outsider-scale-separated-depth-eight-haar-wedge
+  - THM-4231-arbitrary-pair-cofinal-depth-six-haar-repair-and-exact-outsider-lift
 primary_script: 04-computation/lrc14_common_gcd_two_outsider_periodic_observable_ray_thm4228.cpp
 primary_output: 05-knowledge/results/lrc14_common_gcd_two_outsider_periodic_observable_ray_thm4228.out
 independent_audit_script: 04-computation/lrc14_common_gcd_two_outsider_periodic_observable_ray_independent_audit_thm4228.cpp
@@ -96,8 +98,10 @@ min_(w in 2c(B union {q,r}) union {a,b})||wx||>=1/14. (6)
 ```
 
 The eleven even body labels and two odd tails in `(6)` are distinct, so these
-are infinite thirteen-speed LRC(14) families. This is not arbitrary pair
-entry and not full LRC(14).
+are infinite thirteen-speed LRC(14) families. THM-4231 separately covers the
+entire northeast quadrant of distinct pairs `q,r>=17548`; the present theorem
+reaches below that quadrant along large-gcd rays. It proves neither arbitrary
+finite pair entry nor full LRC(14).
 
 The closest proved mechanism is THM-4170's endpoint discrepancy bound for one
 comb. The canonical hostile is THM-4207's comparable pair `(50,51)`, where
@@ -242,9 +246,13 @@ maximal. Equations `(20)--(21)` prove the sharp general estimate
 osc(H_A)<=beta(1-beta).                                (22)
 ```
 
+Sharpness is attained when `A` is a single arc: taking `I=A` in `(20)` gives
+exactly `beta(1-beta)`.
+
 Now let `U` be a union of `c` positive-length circular intervals and let
-`m_g(y)=gy` on the circle. On each interval component `[x,z]`, periodicity
-gives
+`m_g(y)=gy` on the circle. For each interval component, choose an oriented
+real lift `[x,z]` with `x<z<=x+1` (equivalently, split a component at zero).
+Periodicity gives
 
 ```text
 integral_x^z (1_A(gy)-beta)dy
@@ -482,8 +490,9 @@ The boundary is strict:
 
 1. `3467` is sharp only for the sufficient universal-density/primitive-
    oscillation activation deck. Exact pair geometry can succeed earlier.
-2. The theorem says nothing about distinct pairs with gcd below `3467`, even
-   if both labels are individually enormous or comparable.
+2. The theorem says nothing about distinct pairs with gcd below `3467`.
+   THM-4231 separately handles such pairs when both labels are at least
+   `17548`; smaller-coordinate entry remains open in general.
 3. The diagonal `u=v` analytically collapses to one comb and does not provide
    two distinct outsider labels.
 4. No arbitrary LRC(14) row is proved to enter this fixed-pool chart.
