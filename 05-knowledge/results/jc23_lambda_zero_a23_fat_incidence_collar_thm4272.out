@@ -1,0 +1,24 @@
+A23 INFINITY-JET PRIMARY EXACT AUDIT
+theorem=THM-4272_PROVED_RELATIVE
+scope=raw_A23_contact_E0_jet_and_honest_fat_incidence_Bstar_collar
+toric_chart=Ctilde=b^12-U*r^6-W*r^5-Z*r^4 R:r=1 PASS
+contact_family=b^12-(U+W+Z) finite_free_rank=12 PASS
+Bstar=Spec(C[U,W,Z,(U*Z*D)^-1]) Lambda_not_inverted
+C_smoothness_gates=U,Z,D torus_syzygy_and_edge_discriminants PASS
+Lambda_role=Res(X-1,U*X^2+W*X+Z)=R_C_transversality_only PASS
+Lambda0_contact=finite_flat_rank12_nonetale_allowed PASS
+wall_C=b^12-U*r^4*(r^2-1) dC_dr_at_Q=-2U PASS
+wall_intersection=Spec(C[b]/(b^12)) one_branch=12Q
+raw_union=two_smooth_branches_contact_order_12 analytic_type=A23 delta=12
+homogeneous_lambda=(T^2+R^2)^2 wall_points=t:+i,-i PASS
+fixed_normalization=R_selects_Q_epsilon_not_Q_minus_epsilon PASS
+hidden_resultants=A0:6,B0:-2 nonzero=PASS
+E0_differential_basis=dx/y^3,y*dx/y^3,x*y*dx/y^3,y^2*dx/y^3
+E0_vanishing_orders=6,3,1,0 ramification_indices=7,4,2,1
+length12_restriction=NONCONSTANT_FOR_EVERY_NONCONSTANT_C0_TO_E0_MAP
+hostile_full_canonical_order12=mixes_x^3dx/y^3_with_y^2dx/y^3 PASS
+tau_contact_characters=0..11_once PASS
+incidence_collar=GEOMETRIC_THM4268_NERON_ROSATI_ARGUMENT_NOT_MECHANIZED
+proved_split=A_HONEST_FAT_INCIDENCE_COLLAR_ACROSS_LAMBDA0
+open_split=B_RAW_KELLER_DESCENT_NO_WALL_CANDIDATE_EXCLUSION_NO_JC2
+verdict=PROVED_RELATIVE_EXACT_AUDIT_PASS

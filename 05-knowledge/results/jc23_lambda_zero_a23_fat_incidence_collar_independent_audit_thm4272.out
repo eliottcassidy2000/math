@@ -1,0 +1,22 @@
+A23 INFINITY-JET INDEPENDENT CLEAN-ROOM AUDIT
+theorem=THM-4272_PROVED_RELATIVE
+engine=python_standard_library_no_sympy_no_primary_import
+Bstar_C_smoothness=U*Z*D_nonzero_without_Lambda PASS
+torus_syzygy=2Z*pbr-(4ZS2+3WP)*sbr=-3D*P2 PASS
+C_edge_discriminants=-256Z3,D,46656U5 PASS
+Lambda_role=quadratic_at_X1_R_C_resultant_not_C_gate PASS
+toric_exponents=(12,0),(0,6),(0,5),(0,4) PASS
+contact_family=b^12-(U+W+Z) finite_flat_rank12_at_Lambda0 PASS
+wall_branch_derivative_coefficient=-2U C_smooth=PASS
+analytic_type=two_smooth_branches_order12=>A23 delta12
+homogeneous_lambda_coefficients=1,2,1 PASS
+quartic_norms_A0_B0=6,-2 nonzero=PASS
+E0_orders=6,3,1,0 max_ramification=7 PASS
+one_contact_branch=12Q_epsilon other_sign_not_on_R PASS
+full_canonical_order12_hostile=PASS
+tau_jet_characters=12_distinct PASS
+hostiles=order11,zero_hidden_coefficient,full_canonical_cancellation DETECTED
+incidence_collar=THM4268_GEOMETRIC_PROPERNESS_INPUT_NOT_MECHANIZED
+proved_split=A_HONEST_FAT_INCIDENCE_COLLAR_ACROSS_LAMBDA0
+open_split=B_RAW_MODEL_DESCENT_NO_KELLER_WALL_OR_JC_CONCLUSION
+verdict=INDEPENDENT_PASS

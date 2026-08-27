@@ -56,7 +56,8 @@ Then read the routed frontier, guardrails, and theorem; logs are history.
     `A*B*(A+B)=0`; THM-4226 closes `M=13`. On `M=12`, `W=0`, THM-4259
     makes the glue explicit and THM-4260 excludes all `1,512` inherited
     incidences; THM-4268 gives a non-effective Zariski/formal `W=0` collar.
-    Its complement, walls and entry remain open.
+    THM-4272 crosses `U+Z=0` for honest incidence via an `A_23` jet;
+    raw Keller descent there, other walls and entry remain open.
 13. **Complete period-14 coordinates can be globally blind.** THM-2058 keeps
     every fixed-depth packet coordinate but exits at `47/113`; THM-2043/2047/
     2050 separate local completeness from global maxima.

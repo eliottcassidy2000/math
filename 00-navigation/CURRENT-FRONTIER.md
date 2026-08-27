@@ -356,8 +356,10 @@ lift/phase clocks.
   proves the reduced wall roots simple relative to THM-4260; only its formal
   root-section/transverse-Jacobian consequence is conditional on a coherent lift.
   [THM-4268](../01-canon/theorems/THM-4268-relative-abelian-map-incidence-properness-and-w0-collar.md)
-  instead uses proper incidence for a non-effective Zariski/formal collar.
-  Its complement, walls and `M=12` entry stay open.
+  gives a non-effective proper-incidence collar.
+  [THM-4272](../01-canon/theorems/THM-4272-lambda-zero-a23-contact-and-e0-infinity-jet-obstruction.md)
+  crosses `Lambda=0` for honest incidence via an `A_23` contact and `E_0`
+  ramification `1,2,4,7`; raw Keller descent, endpoints, complement and entry stay open.
   Exceptional quartic: THM-3703/3737 give grammar/image, THM-4034 the
   conductor, and THM-4039/4043/4046 reach `J_7`, obstruct `J_8`, and close
   critical `H`. [THM-4054](../01-canon/theorems/THM-4054-exceptional-affine-simple-zero-retained-packet.md)
