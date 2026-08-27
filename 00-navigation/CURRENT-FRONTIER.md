@@ -77,8 +77,9 @@ is the safe control `M(S_13)=99/338`. No cited result proves LRC(14).
   leave `181,126` edges and `chi_50>=23`.
   THM-4245 makes the scalar gate cofinally redundant.
   [THM-4252](../01-canon/theorems/THM-4252-exact-signed-endpoint-cocycle-residual-edge-closure.md)
-  retains signed endpoints, closes three edges, and leaves `181,123`, maximum
-  endpoint `768`, combined cutoff `769`. Bulk phase/deck and entry remain open.
+  closes three signed-endpoint edges; [THM-4254](../01-canon/theorems/THM-4254-fixed-ceiling-band-signed-endpoint-cocycle-cascade.md)
+  closes all 59 residual edges with second endpoint `755..768`, leaving
+  `181,064`, maximum `754`, cutoff `755`. Bulk phase/deck and entry remain open.
 - **PROVED:** [THM-2928](../01-canon/theorems/THM-2928-critical-seven-comb-grid-tensorization-and-drift-tariff.md)/2941: literal zero/one/two/three-drift sectors are empty; `k=2,3` are finite.
 - **Orthogonal routes.** THM-1017 is HYP-6820; THM-2047/2050 keep phase/exit; THM-731/2048 prune; THM-1290 ends at `55`; HYP-8900 nonuniform.
 - **PROVED micro-staircase:** THM-3316 closes every prime and THM-3317 proves
