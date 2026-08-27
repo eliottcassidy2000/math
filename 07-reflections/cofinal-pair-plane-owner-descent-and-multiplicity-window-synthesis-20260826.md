@@ -153,6 +153,14 @@ cutoff. This is useful negative structure too: all other THM-4238 tail rows
 were already caught by one of the two ray orientations, so its genuinely new
 payload is exactly the joint-phase literal bridge.
 
+The subsequent fixed-`50` primary atlas is signal, not canon: it has no
+frozen output or independent implementation, and THM-4240/4242 remain honest
+empty reservations. Its cutoff `626` begins just beyond the aggregate
+residual's exact 592-edge fixed-`50` slice, whose other endpoints stop at
+`625`; the restricted four-petal computation therefore removes no universal
+edge. The lawful generated task is the full `8,469,832,800`-case literal
+slice, not promotion of the attractive restricted chart.
+
 ### What survives from the tournament ancestry
 
 The residual relation is intrinsic but undirected:
@@ -301,7 +309,7 @@ its marked attachment orbit to
 ```text
 C_0:X^6+Y^4=1,
 Q_j=tau^j Q_0=(A zeta_6^j,B zeta_4^j),
-A^6=U/(U+Z),  B^4=Z/(U+Z),  U/Z=A^6/B^4.              (11a)
+A^6=U/(U+Z),  B^4=Z/(U+Z),  R_mark=U/Z=A^6/B^4.       (11a)
 ```
 
 The `tau`-characters on `H^0(C_0,Omega^1)` are
@@ -313,32 +321,45 @@ F_h(Q)=h([tau Q-Q])                                    (11b)
 ```
 
 is nonconstant: otherwise its induced Jacobian map
-`h o (tau_*-1)` would vanish, forcing `h=0`. The Rosati degree form is positive
-definite, hence has only finitely many lattice points of either fixed degree
-`34` or `42`; every corresponding `F_h` has a finite zero fibre. All-node
-equality implies `F_h(Q_0)=O`. Therefore only finitely many marked points
-`Q_0`, and hence finitely many ratios `U/Z`, can survive either response
-degree on `W=0`.
+`h o (tau_*-1)` would vanish, forcing `h=0`. For a base point `Q_*`, the
+curve-degree form `d_C0(h)=deg(Q |-> h([Q-Q_*]))` is positive definite, hence
+has finitely many lattice points at `34` or `42`; every corresponding `F_h`
+has a finite zero fibre. All-node equality implies `F_h(Q_0)=O`. Therefore
+only finitely many admissible marked points `Q_0`, and hence finitely many
+ratios `R_mark`, can survive either response degree on `W=0`.
 
 This reduces the hostile to an unidentified finite ratio set. It neither
 enumerates nor excludes that set. The first integral obstruction is already
-two-primary: for the free involution `rho:(X,Y)->(-X,-Y)`, the quotient
+two-primary: for the free involution `rho:(X,Y)->(-X,-Y)`, the quotient in
+invariant coordinates is
 
 ```text
-D:C_0/rho,       b^2=ac,       a^3+c^2=1
+D_rho:C_0/rho, v_rho^2=u_rho*w_rho, u_rho^3+w_rho^2=1.
 ```
 
-has `ker(J(D)->J(C_0))=<eta>`, where
+It has `ker(J(D_rho)->J(C_0))=<eta>`, where
 `eta=[P_++P_--2R_infinity]` and
-`div_D(a)=2(P_++P_--2R_infinity)`. Thus the hidden Hodge plane does not supply
-integral descent. The smallest decisive sidecar is `(L,H,T,e(t))`: saturated
-Hom lattice, Hermitian degree Gram, `tau` action, and one adjacent-node
-evaluation vector. Exact inventory:
+`div_(D_rho)(u_rho)=2(P_++P_--2R_infinity)`.
+
+The incoming explicit construction fills part of this sidecar. It gives a
+full-rank hidden Eisenstein sublattice
+
+```text
+L_exp=O f direct-sum O Tf,
+H_exp=[6,-4-2omega; -4-2omega^2,6], det(H_exp)=24.
+```
+
+No degree-`34` vector occurs, and all 192 degree-`42` vectors fail attachment
+collapse. Because `f` and `Tf` descend to `D_rho`, the quotient Gram is
+`H_exp/2` with determinant `6`. This still does not determine the saturated
+overlattice or mixed visible-hidden cosets. The smallest decisive remaining
+sidecar is `(L_sat/L_exp, gluing, T, e_mixed)`, not another Hodge-character
+count. Exact inventory:
 [script](../04-computation/jc23_w0_node_hom_inventory_20260826.py),
 [output](../05-knowledge/results/jc23_w0_node_hom_inventory_20260826.out),
 with SHA-256 respectively
-`7cc4d3d468ea68b42e87303fd176c7dcd92843621c88aef13633c1e2fce4035a` and
-`2c077a07330c5373019fd6e8b93f0f7cc2afbb15cb014578f073f4e40200d92e`.
+`336df014c1a9137c2bd1c95030f037f83353e5eb6e2a1d48c5600abfd0f3cc8f` and
+`abb85d7bef45ceaaa9168355212825afc413b46d4febbac3067d6abf3b6de280`.
 
 ## 3. Mahler: exact pairwise first defects
 
@@ -471,13 +492,14 @@ source-first resultant, component, genus, attachment, and degree audit.
 2. **LRC structure:** stratify the residual by the deficit pair
    `(K(a)-b,K(b)-a)`, primitive ratio, gcd, and fixed-pool failure mask; test
    THM-4233's `(beta,omega)` observable only where it preserves new phase.
-3. **LRC fixed-50 niche:** run the full-pool fixed-`q=50` compiler and compare
-   its extremal petal count with THM-4234's pair/triple positive controls.
+3. **LRC fixed-50 niche:** independently replay/freeze the unpromoted
+   higher-petal atlas, then separately batch the 592 full-pool residual edges
+   (`8,469,832,800` bodies); restricted petal safety is not universal closure.
 4. **JC anchor:** apply owner descent to the cheapest of `A=0`, `B=0`, `Z=0`,
    `A+B=0`, selecting by replacement-face genus rather than coefficient name.
-5. **JC hostile:** construct the `W=0` sidecar `(L,H,T,e(t))`, enumerate the
-   finite degree-`34/42` Hom vectors, and solve their four Cayley--Hamilton-
-   reduced node equations for the finite surviving ratios `R_mark=U/Z`.
+5. **JC hostile:** determine the hidden saturation/overlattice and integral
+   visible-hidden gluing, enumerate the `d_C0=34/42` mixed cosets, and solve
+   their reduced node equations for the finite surviving `R_mark=U/Z`.
 6. **Multiplicity niche:** freeze `(d,R_d,Lawful,sigma)` and emit the intrinsic
    `c_(d;q,r)(B)` histogram, second
    moment, minimum margin, and failure masks on the fixed-small-ray residuals;

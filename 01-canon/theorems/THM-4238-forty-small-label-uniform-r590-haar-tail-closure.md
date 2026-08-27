@@ -43,13 +43,13 @@ script_sha256:
   - 8c01adbc5235b7dab7e1b2bdc06a429da6fd69286d5c9b7fbd00813394ecdee7
   - 6013bea2008da53bb3bf6b47b45a7e2064963dec1f7a1ad2c09db8b560a983fe
   - c42a7abbae49580208f47ff54eb952a749907191a6e350ac16a54ec51cc0ae86
-  - 63aa6215bfc9efd0484e439b95bca138122ce89ad2e4d42e2eab9f311a9cd43d
+  - 2d658ba4b92369067833b8314a22ccf8c95978789862b989f4fcdf46fb90aa92
 output_sha256:
   - 7e74a9e562feace0e7863de882f1dc254affa9570304cf78f8103b070436a352
   - 43c5a1820cc25a65e4b60fef95f9bd4e964a0d18d25b9c1683d6d6a996be2f8f
   - fe197226122a90e8f3b94f1974062034cc191920c16e82e740a2086ba20b7ab4
   - 8008c00a1467089b2187d1fdbe1524589fc3c5ddd86300edbbb7337362ee1ee4
-  - da639d3e473a03ac8d4b2fe8b5bf57c1a380efe862cb01f2b218972101df5c29
+  - dddb249d331ab88c47e12506aaf0f2a348f39778587ec0bbf5983e8ff513dbcd
 hash_basis: raw LF bytes
 audit: >
   PASS. Two structurally different exact engines exhaust the same
@@ -268,6 +268,12 @@ This is an exact aggregate proof graph, not a claim that any surviving edge
 is unsafe or that `770` is literal-minimal. THM-4234 still restricts `q=50`
 to its petal family; THM-4227/4228/4233 retain scale, gcd, and primitive-phase
 mechanisms inside the finite remainder.
+
+The same postprocessor isolates exactly `592` aggregate-residual edges
+incident to `50`, all with the other endpoint at most `625`. A full-pool
+literal discharge of this slice would require
+`592 binom(30,9)=8,469,832,800` body cases and, if all were positive, leave
+`180,570` edges. This is a task size and a conditional count, not a closure.
 
 ## 6. Verification and scope firewall
 

@@ -66,6 +66,11 @@ for edge in aggregate_residual:
     layers[edge[1]].append(edge)
 max_endpoint = max(layers)
 top_layer = layers[max_endpoint]
+fixed50_slice = [edge for edge in aggregate_residual if 50 in edge]
+fixed50_max_other = max(
+    b if a == 50 else a for a, b in fixed50_slice
+)
+fixed50_literal_cases = len(fixed50_slice) * 14_307_150
 encoded = b"".join(
     f"{a},{b}\n".encode("ascii") for a, b in aggregate_residual
 )
@@ -79,6 +84,9 @@ assert edge_sha256 == (
 )
 assert max_endpoint == 769
 assert top_layer == [(616, 769), (721, 769)]
+assert len(fixed50_slice) == 592
+assert fixed50_max_other == 625
+assert fixed50_literal_cases == 8_469_832_800
 
 print("LRC14_THM4231_THM4238_CROSS_RESIDUAL")
 print(
@@ -98,6 +106,11 @@ print(
 print(
     f"TOP_LAYER ENDPOINT {max_endpoint} COUNT {len(top_layer)} EDGES "
     + " ".join(f"{a},{b}" for a, b in top_layer)
+)
+print(
+    f"FIXED50_SLICE COUNT {len(fixed50_slice)} MAX_OTHER {fixed50_max_other} "
+    f"FULL_LITERAL_CASES {fixed50_literal_cases} "
+    f"HYPOTHETICAL_REMAINDER {len(aggregate_residual)-len(fixed50_slice)}"
 )
 print("CUTOFF 770 UNCHANGED LITERAL_MINIMALITY_NOT_CLAIMED")
 print("VERDICT EXACT_CROSS_THEOREM_PROOF_GRAPH LRC14_OPEN")
