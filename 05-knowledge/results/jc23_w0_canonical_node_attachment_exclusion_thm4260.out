@@ -1,0 +1,54 @@
+JC W=0 FINAL 1512 CANONICAL-NODE COMPILER
+status=FINITE_EXACT_PROOF_CANDIDATE_RELATIVE_TO_THM4247_4249_4253
+revision=d526261faf8fb33a3b210b19c7d0039b8ef18ca8
+dependency_attachment=04-computation/jc23_w0_hidden_degree12_attachment_audit_thm4247.py sha256=9dc1f8614db388f463acb93951285fb4b8245cf20c976d1d2129cb883ccf9c28
+dependency_projector=04-computation/jc23_w0_cyclic_projector_squeeze_thm4249.py sha256=64cefef1ab610cdeab05eeaaeff25ae03bb2c69095f734e86d69b92fdccfea10
+dependency_torsion=04-computation/jc23_w0_cyclic_projector_squeeze_thm4249_independent_audit.py sha256=1c1ae0d47f5218af5978cb840c0f6f9c564a6df338a7b650700cbca774e5e3c4
+carrier=bipartite_class_ratio_incidence_graph tournament=NOT_USED
+orientation_gauge=NONE ties=NOT_APPLICABLE
+node_gauge=one_C12_orbit_of_24_radical_choices rho_shift_(3,2)_exchanges_other_orbit
+node_class_firewall=rho=(-omega^2)T^2_on_a_u0 fixes_each_of_280_classes PASS
+projector=ell=m-m_after_iota coefficients=(2b+omega^2*d,2c+d)
+projector_eigenline=integral_hidden_P_L(m)=ell collapse_implies_ell(Q_j)=O
+denominator_form=d_ell(t)=t*D(t^2) char0_degree_bound=4K-1
+wall_factor=t^2-1 iota_fixed_points=t:+-1 marked_wall=Z/U:0
+class_profiles_d34={(4, 10): 36, (7, 9): 52, (13, 7): 32, (16, 6): 24, (19, 5): 24, (25, 3): 8}
+class_profiles_d42={(9, 11): 24, (12, 10): 36, (21, 7): 32, (27, 5): 12}
+classes=d34:176 d42:104 total:280 all_source_target_orbits_size24
+incidences=d34:864 d42:648 total:1512
+ratio_vertices=d34:55 d42:34 cross_degree_overlap:7 union:82
+class_incidence_degrees_d34=1:36,3:52,6:32,7:24,9:24,12:8
+class_incidence_degrees_d42=3:24,4:36,9:32,12:12
+ratio_class_degrees_d34=8:12,12:18,16:12,24:6,26:6,60:1
+ratio_class_degrees_d42=12:9,16:18,36:7
+class_ledger_sha256=d95cc8b06d88e1b18159db224e79d156d9fe35d4067b9676f9300fa17933a7a2
+edge_ledger_sha256=9642bfaf19497e7ed02f04093e1c970f8fa1f317c4ea8f0fecaf2895a841003e
+ratio_token_ledger_sha256=69f35a4c5f80111f9d58df75e35f7ef57a6d249aec317ff44fe73f9c84d37b83
+embedding_mode=proof_plus_hostile
+denominator_audit=397	34	3	8	11	2	1,0,-1	521ed9abf05b69f46c876e54b3a186db30783dddd1b2a39bad19252672df2d7e
+denominator_audit=397	34	5	24	19	2	1,0,-1	b788d76ea9cd2e6adab4eb43673c5c397a529efbcaaf53282e37b259419aec29
+denominator_audit=397	34	6	24	23	2	1,0,-1	7db9f28aa093825d0711e08f90a60108b059de0afd97255094836992e7e0c4f4
+denominator_audit=397	34	7	32	27	2	1,0,-1	5f42879933c0c181cfdfb0cf249545b07fd7d137664f15f5cea558e9d8cc092c
+denominator_audit=397	34	9	52	35	2	1,0,-1	8b11bebcea5ea66082379ab66d63e0bdcb97012d3625512f0b93f351eb56c97c
+denominator_audit=397	34	10	36	39	2	1,0,-1	8990e1134df48532e2fea0c04f4392a18436d2c989a7261bef1b26256658e5c7
+denominator_audit=397	42	5	12	19	2	1,0,-1	e92bfde8b00b1f9699ae1d8c0a338062e8ea7e03d2370699fad19376b5384fc5
+denominator_audit=397	42	7	32	27	2	1,0,-1	89b7d783416332f4b47f349f07fb5b3e88c44663fc2990c5c6e78fe2816da6f6
+denominator_audit=397	42	10	36	39	2	1,0,-1	34ea932fcc058e1747455d0c3c8757a8fbcbb222969f0033ee75d0c2a7490089
+denominator_audit=397	42	11	24	43	2	1,0,-1	9babe101bfecc7f00204a81bf1c799f9fbf221d395502ec9fb8e637ac5c74152
+denominator_audit=577	34	3	8	11	2	1,0,-1	f5299245b1aa4d711af8578bf4088d3a6a35d5b939ae6db7f105473434d6e017
+denominator_audit=577	34	5	24	19	2	1,0,-1	2c42c10a89d63ff0792e959c777ef688ab2f87abcdec67d5a9a2a0cec1c64321
+denominator_audit=577	34	6	24	23	2	1,0,-1	6f69a39ee611e39854f1c3eb2334ced07cad730ed5d95d2c308108eddefda426
+denominator_audit=577	34	7	32	27	2	1,0,-1	b5542b7f43644730a3f63d36dd9bcc5e35274294bc89f75118e2a31dfcfcbbd3
+denominator_audit=577	34	9	52	35	2	1,0,-1	29d59aa2409f97e182e387efba128aae516bd8eb80308a0a02d6668dd6b9d372
+denominator_audit=577	34	10	36	39	2	1,0,-1	e86bbd0b3223cf425a58c8e3e3d62c0a984cedc8a08119d3d6f04d64e517173d
+denominator_audit=577	42	5	12	19	2	1,0,-1	6bf71dfe152458aa448475d05aa93f2400c17e74c5eb8406748a28574f295894
+denominator_audit=577	42	7	32	27	2	1,0,-1	00f52ab3d6c78d58632a3b3d318957627ae73ba596a1c5411925753a5f25653c
+denominator_audit=577	42	10	36	39	2	1,0,-1	bdf47442e8d1fc4f5af8a628709e72b8ea7787f6347d0fe227a4579cbe41eaf4
+denominator_audit=577	42	11	24	43	2	1,0,-1	b47a305fea501898ad0feae67185b72e4d5841ee9362e716be1ddb0d47bcbfbe
+denominator_audit_sha256=63208069e8c76ba6693ea13e3b28806d4a3f4397115d9721b399347803b8bfa1
+proof_embedding=q397 every_denominator_attains_4K-1 reciprocal_gcd=t^2-1
+hostile_embeddings=q577 same_exact_result
+consequence=all_280_hidden_projectors_fail_off_wall hence_all_1512_incidences_excluded
+candidate_theorem=S34_empty_and_S42_empty_on_W0_gate
+scope=relative_W0_gate_only other_hidden_Hom_parameters_M12_entry_JC2_DC2_OPEN
+checks=PASS exact_integer_lattice exact_torsion_module exact_GF(t)_group_law no_floating_point

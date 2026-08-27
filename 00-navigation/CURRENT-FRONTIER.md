@@ -373,8 +373,11 @@ lift/phase clocks.
   THM-4222/[4232](../01-canon/theorems/THM-4232-weight-eleven-u-zero-primitive-cm-planar-jacobian-exclusion.md)/[4248](../01-canon/theorems/THM-4248-weight-eleven-z-zero-owner-descent-planar-jacobian-exclusion.md) close `M=11` off `A*B*(A+B)=0`; THM-4226 closes dense `M=13`.
   [THM-4230](../01-canon/theorems/THM-4230-exact-weight-twelve-cyclotomic-prym-planar-jacobian-squeeze.md)
   reduces its `M=12` gate to a proper countable nonempty hidden-`E_0` locus.
-  At `W=0`, THM-4241/4247/4249 leave `176/132` classes in `55/34` ratio envelopes.
-  THM-4253 leaves `176/104` classes and `1,512` incidences. [THM-4258](../01-canon/theorems/THM-4258-w0-three-sample-attachment-recurrence-and-two-torsion-sidecar.md) makes each a three-sample test (`4,536` total; degrees `<=120/150`). Glue normalization, emptiness, entry, and JC(2) stay open.
+  At `W=0`, THM-4241/4247/4249/4253 leave `176/104` classes and `1,512`
+  incidences; THM-4258 makes each collapse test three-sample.
+  [THM-4260](../01-canon/theorems/THM-4260-w0-canonical-node-reciprocal-denominator-attachment-exclusion.md)
+  excludes all `280` classes, so `S_34=S_42=empty` in the gate interior.
+  Walls, off-fibre, `M=12` entry, and `JC(2)` stay open.
   Exceptional quartic: THM-3703/3737 give grammar/image, THM-4034 the
   conductor, and THM-4039/4043/4046 reach `J_7`, obstruct `J_8`, and close
   critical `H`. [THM-4054](../01-canon/theorems/THM-4054-exceptional-affine-simple-zero-retained-packet.md)
