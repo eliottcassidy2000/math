@@ -1,0 +1,160 @@
+FACTORIAL FIXED-PRIME EXPONENT ORBIT INDEPENDENT ATLAS
+universe odd_cores=(3, 5, 7, 9, 11, 13) ell=1..12
+representation=U(2^ell) signed-five coordinates; closure=schoolbook occupied-position sets
+K includes exponent class 0 when it closes; here 0 never closes because residue 1 is hostile
+
+LEAST NONEMPTY AND LEAST UNIVERSAL SUFFIX LEVELS
+b=3 first_nonempty_ell=2 R={3} least_universal_ell=3 R_universal={3,7}
+b=5 first_nonempty_ell=3 R={5,7} least_universal_ell=4 R_universal={5,7,13,15}
+b=7 first_nonempty_ell=3 R={7} least_universal_ell=4 R_universal={3,5,7,15}
+b=9 first_nonempty_ell=4 R={9,15} least_universal_ell=5 R_universal={9,15,19,25,29,31}
+b=11 first_nonempty_ell=4 R={3,15} least_universal_ell=5 R_universal={3,7,9,15,19,21,27,31}
+b=13 first_nonempty_ell=4 R={5,15} least_universal_ell=5 R_universal={5,15,21,31}
+
+MINIMAL FIXED-PRIME CONGRUENCE FAMILIES (least exponent periods)
+b=3 mod=4 p_classes={3} k_mod=2 K={1}
+b=3 mod=4 empty_p_classes={1}
+b=5 mod=8 p_classes={5,7} k_mod=2 K={1}
+b=5 mod=8 empty_p_classes={1,3}
+b=7 mod=8 p_classes={7} k_mod=2 K={1}
+b=7 mod=8 empty_p_classes={1,3,5}
+b=9 mod=16 p_classes={9,15} k_mod=2 K={1}
+b=9 mod=16 p_classes={3,5,11,13} k_mod=4 K={2}
+b=9 mod=16 empty_p_classes={1,7}
+b=11 mod=16 p_classes={15} k_mod=2 K={1}
+b=11 mod=16 p_classes={3} k_mod=4 K={1}
+b=11 mod=16 p_classes={11} k_mod=4 K={3}
+b=11 mod=16 empty_p_classes={1,5,7,9,13}
+b=13 mod=16 p_classes={15} k_mod=2 K={1}
+b=13 mod=16 p_classes={5} k_mod=4 K={1}
+b=13 mod=16 p_classes={13} k_mod=4 K={3}
+b=13 mod=16 empty_p_classes={1,3,7,9,11}
+
+LEAST-UNIVERSAL ORBIT SIGNATURE ATLAS
+b=3 ell=3 mod=8 R={3,7}
+  p={3,7} k_mod=2 K={1}
+  empty p={1,5}
+  fixed-prime empty hostile: p=5, p_mod=5, K=empty
+b=5 ell=4 mod=16 R={5,7,13,15}
+  p={5,7,13,15} k_mod=2 K={1}
+  empty p={1,3,9,11}
+  fixed-prime empty hostile: p=11, p_mod=11, K=empty
+b=7 ell=4 mod=16 R={3,5,7,15}
+  p={7,15} k_mod=2 K={1}
+  p={3,5} k_mod=4 K={1}
+  p={11,13} k_mod=4 K={3}
+  empty p={1,9}
+  fixed-prime empty hostile: p=17, p_mod=1, K=empty
+b=9 ell=5 mod=32 R={9,15,19,25,29,31}
+  p={9,15,25,31} k_mod=2 K={1}
+  p={19,29} k_mod=8 K={1,2,6}
+  p={5,11} k_mod=8 K={2,3,6}
+  p={3,13} k_mod=8 K={2,5,6}
+  p={21,27} k_mod=8 K={2,6,7}
+  empty p={1,7,17,23}
+  fixed-prime empty hostile: p=17, p_mod=17, K=empty
+b=11 ell=5 mod=32 R={3,7,9,15,19,21,27,31}
+  p={15,31} k_mod=2 K={1}
+  p={7,9} k_mod=4 K={1}
+  p={23,25} k_mod=4 K={3}
+  p={3} k_mod=8 K={1,2,3,5}
+  p={19} k_mod=8 K={1,2,5,7}
+  p={27} k_mod=8 K={1,3,6,7}
+  p={21} k_mod=8 K={1,6}
+  p={13} k_mod=8 K={2,3}
+  p={29} k_mod=8 K={2,7}
+  p={11} k_mod=8 K={3,5,6,7}
+  p={5} k_mod=8 K={5,6}
+  empty p={1,17}
+  fixed-prime empty hostile: p=17, p_mod=17, K=empty
+b=13 ell=5 mod=32 R={5,15,21,31}
+  p={15,31} k_mod=2 K={1}
+  p={5,21} k_mod=4 K={1}
+  p={13,29} k_mod=4 K={3}
+  empty p={1,3,7,9,11,17,19,23,25,27}
+  fixed-prime empty hostile: p=17, p_mod=17, K=empty
+
+MAXIMAL EMPTY CYCLIC SUBGROUPS AT FIRST/UNIVERSAL LEVELS
+b=3 ell=2: H={1} generators={1}
+b=3 ell=3: H={1,5} generators={5}
+b=5 ell=3: H={1,3} generators={3}
+b=5 ell=4: H={1,3,9,11} generators={3,11}
+b=7 ell=3: H={1,3} generators={3}; H={1,5} generators={5}
+b=7 ell=4: H={1,9} generators={9}
+b=9 ell=4: H={1,7} generators={7}
+b=9 ell=5: H={1,7,17,23} generators={7,23}
+b=11 ell=4: H={1,7} generators={7}; H={1,5,9,13} generators={5,13}
+b=11 ell=5: H={1,17} generators={17}
+b=13 ell=4: H={1,7} generators={7}; H={1,3,9,11} generators={3,11}
+b=13 ell=5: H={1,7,17,23} generators={7,23}; H={1,3,9,11,17,19,25,27} generators={3,11,19,27}
+
+MAXIMAL AFFINE GROUP COSETS INSIDE R AT LEAST-UNIVERSAL LEVEL
+b=3 ell=3: coordinates={(1,0),(1,1)},values={3,7}
+b=5 ell=4: coordinates={(0,1),(0,3),(1,0),(1,2)},values={5,7,13,15}
+b=7 ell=4: coordinates={(0,1),(1,3)},values={3,5}; coordinates={(1,0),(1,2)},values={7,15}
+b=9 ell=5: coordinates={(0,2),(0,6),(1,0),(1,4)},values={9,15,25,31}; coordinates={(0,3),(1,7)},values={19,29}
+b=11 ell=5: coordinates={(0,5),(1,1)},values={21,27}; coordinates={(0,6),(1,2)},values={7,9}; coordinates={(1,0),(1,4)},values={15,31}; coordinates={(1,3),(1,7)},values={3,19}
+b=13 ell=5: coordinates={(0,1),(0,5)},values={5,21}; coordinates={(1,0),(1,4)},values={15,31}
+
+SELECTED ALL-BASE LEVEL SUMMARIES
+b=3 ell=2 |R|=1/2 nonempty_bases=1/2 subgroups=2 empty_subgroups=1 collar=1 collar_hit_subgroups=1 compressed_bases=0 single_coset_bases=1 period_compression={1:1}
+b=3 ell=3 |R|=2/4 nonempty_bases=2/4 subgroups=4 empty_subgroups=2 collar=1 collar_hit_subgroups=1 compressed_bases=0 single_coset_bases=2 period_compression={1:2}
+b=3 ell=4 |R|=5/8 nonempty_bases=6/8 subgroups=6 empty_subgroups=2 collar=2 collar_hit_subgroups=2 compressed_bases=2 single_coset_bases=6 period_compression={1:4,2:2}
+b=3 ell=8 |R|=107/128 nonempty_bases=126/128 subgroups=14 empty_subgroups=2 collar=32 collar_hit_subgroups=10 compressed_bases=2 single_coset_bases=6 period_compression={1:124,2:2}
+b=3 ell=10 |R|=457/512 nonempty_bases=510/512 subgroups=18 empty_subgroups=2 collar=128 collar_hit_subgroups=14 compressed_bases=2 single_coset_bases=6 period_compression={1:508,2:2}
+b=3 ell=12 |R|=1904/2048 nonempty_bases=2046/2048 subgroups=22 empty_subgroups=2 collar=512 collar_hit_subgroups=18 compressed_bases=2 single_coset_bases=6 period_compression={1:2044,2:2}
+b=5 ell=3 |R|=2/4 nonempty_bases=2/4 subgroups=4 empty_subgroups=2 collar=1 collar_hit_subgroups=1 compressed_bases=0 single_coset_bases=2 period_compression={1:2}
+b=5 ell=4 |R|=4/8 nonempty_bases=4/8 subgroups=6 empty_subgroups=3 collar=1 collar_hit_subgroups=1 compressed_bases=2 single_coset_bases=4 period_compression={1:2,2:2}
+b=5 ell=5 |R|=9/16 nonempty_bases=12/16 subgroups=8 empty_subgroups=3 collar=2 collar_hit_subgroups=2 compressed_bases=6 single_coset_bases=12 period_compression={1:6,2:2,4:4}
+b=5 ell=8 |R|=98/128 nonempty_bases=124/128 subgroups=14 empty_subgroups=3 collar=16 collar_hit_subgroups=8 compressed_bases=6 single_coset_bases=8 period_compression={1:118,2:2,4:4}
+b=5 ell=10 |R|=432/512 nonempty_bases=508/512 subgroups=18 empty_subgroups=3 collar=64 collar_hit_subgroups=12 compressed_bases=6 single_coset_bases=8 period_compression={1:502,2:2,4:4}
+b=5 ell=12 |R|=1842/2048 nonempty_bases=2044/2048 subgroups=22 empty_subgroups=3 collar=256 collar_hit_subgroups=16 compressed_bases=6 single_coset_bases=8 period_compression={1:2038,2:2,4:4}
+b=7 ell=3 |R|=1/4 nonempty_bases=1/4 subgroups=4 empty_subgroups=3 collar=0 collar_hit_subgroups=0 compressed_bases=0 single_coset_bases=1 period_compression={1:1}
+b=7 ell=4 |R|=4/8 nonempty_bases=6/8 subgroups=6 empty_subgroups=2 collar=1 collar_hit_subgroups=1 compressed_bases=0 single_coset_bases=6 period_compression={1:6}
+b=7 ell=5 |R|=9/16 nonempty_bases=12/16 subgroups=8 empty_subgroups=3 collar=1 collar_hit_subgroups=1 compressed_bases=6 single_coset_bases=8 period_compression={1:6,2:6}
+b=7 ell=8 |R|=102/128 nonempty_bases=124/128 subgroups=14 empty_subgroups=3 collar=11 collar_hit_subgroups=7 compressed_bases=6 single_coset_bases=12 period_compression={1:118,2:2,4:4}
+b=7 ell=10 |R|=449/512 nonempty_bases=508/512 subgroups=18 empty_subgroups=3 collar=43 collar_hit_subgroups=11 compressed_bases=6 single_coset_bases=12 period_compression={1:502,2:2,4:4}
+b=7 ell=12 |R|=1902/2048 nonempty_bases=2044/2048 subgroups=22 empty_subgroups=3 collar=171 collar_hit_subgroups=15 compressed_bases=6 single_coset_bases=12 period_compression={1:2038,2:2,4:4}
+b=9 ell=4 |R|=2/8 nonempty_bases=6/8 subgroups=6 empty_subgroups=2 collar=1 collar_hit_subgroups=1 compressed_bases=0 single_coset_bases=6 period_compression={1:6}
+b=9 ell=5 |R|=6/16 nonempty_bases=12/16 subgroups=8 empty_subgroups=3 collar=1 collar_hit_subgroups=1 compressed_bases=2 single_coset_bases=4 period_compression={1:10,2:2}
+b=9 ell=6 |R|=15/32 nonempty_bases=24/32 subgroups=10 empty_subgroups=4 collar=2 collar_hit_subgroups=2 compressed_bases=6 single_coset_bases=8 period_compression={1:18,2:2,4:4}
+b=9 ell=8 |R|=76/128 nonempty_bases=120/128 subgroups=14 empty_subgroups=4 collar=8 collar_hit_subgroups=6 compressed_bases=14 single_coset_bases=16 period_compression={1:106,2:2,4:4,8:8}
+b=9 ell=10 |R|=373/512 nonempty_bases=504/512 subgroups=18 empty_subgroups=4 collar=32 collar_hit_subgroups=10 compressed_bases=14 single_coset_bases=16 period_compression={1:490,2:2,4:4,8:8}
+b=9 ell=12 |R|=1677/2048 nonempty_bases=2040/2048 subgroups=22 empty_subgroups=4 collar=128 collar_hit_subgroups=14 compressed_bases=14 single_coset_bases=16 period_compression={1:2026,2:2,4:4,8:8}
+b=11 ell=4 |R|=2/8 nonempty_bases=3/8 subgroups=6 empty_subgroups=4 collar=0 collar_hit_subgroups=0 compressed_bases=0 single_coset_bases=3 period_compression={1:3}
+b=11 ell=5 |R|=8/16 nonempty_bases=14/16 subgroups=8 empty_subgroups=2 collar=1 collar_hit_subgroups=1 compressed_bases=0 single_coset_bases=6 period_compression={1:14}
+b=11 ell=6 |R|=18/32 nonempty_bases=28/32 subgroups=10 empty_subgroups=3 collar=2 collar_hit_subgroups=2 compressed_bases=6 single_coset_bases=8 period_compression={1:22,2:6}
+b=11 ell=8 |R|=88/128 nonempty_bases=120/128 subgroups=14 empty_subgroups=4 collar=6 collar_hit_subgroups=5 compressed_bases=14 single_coset_bases=16 period_compression={1:106,2:2,4:4,8:8}
+b=11 ell=10 |R|=408/512 nonempty_bases=504/512 subgroups=18 empty_subgroups=4 collar=26 collar_hit_subgroups=9 compressed_bases=14 single_coset_bases=16 period_compression={1:490,2:2,4:4,8:8}
+b=11 ell=12 |R|=1779/2048 nonempty_bases=2040/2048 subgroups=22 empty_subgroups=4 collar=102 collar_hit_subgroups=13 compressed_bases=14 single_coset_bases=16 period_compression={1:2026,2:2,4:4,8:8}
+b=13 ell=4 |R|=2/8 nonempty_bases=3/8 subgroups=6 empty_subgroups=4 collar=0 collar_hit_subgroups=0 compressed_bases=0 single_coset_bases=3 period_compression={1:3}
+b=13 ell=5 |R|=4/16 nonempty_bases=6/16 subgroups=8 empty_subgroups=5 collar=1 collar_hit_subgroups=1 compressed_bases=4 single_coset_bases=6 period_compression={1:2,2:4}
+b=13 ell=6 |R|=14/32 nonempty_bases=28/32 subgroups=10 empty_subgroups=3 collar=1 collar_hit_subgroups=1 compressed_bases=2 single_coset_bases=8 period_compression={1:26,2:2}
+b=13 ell=8 |R|=77/128 nonempty_bases=120/128 subgroups=14 empty_subgroups=4 collar=5 collar_hit_subgroups=5 compressed_bases=14 single_coset_bases=16 period_compression={1:106,2:2,4:4,8:8}
+b=13 ell=10 |R|=383/512 nonempty_bases=504/512 subgroups=18 empty_subgroups=4 collar=21 collar_hit_subgroups=9 compressed_bases=14 single_coset_bases=16 period_compression={1:490,2:2,4:4,8:8}
+b=13 ell=12 |R|=1718/2048 nonempty_bases=2040/2048 subgroups=22 empty_subgroups=4 collar=85 collar_hit_subgroups=13 compressed_bases=14 single_coset_bases=16 period_compression={1:2026,2:2,4:4,8:8}
+
+EXPONENT-CLASS LIFT TRANSITIONS
+base_transition_cells=24552 parent_exponent_cells=5592600 order_ratio_hist={1: 180, 2: 24372}
+b=3 A_ratio2=58970 B_ratio1=0 strict_base_transitions=4034 empty_to_nonempty=18 first_awaken=(ell 3->4,p 5->5,ord 2->4,K_high={3})
+b=5 A_ratio2=76061 B_ratio1=1 strict_base_transitions=3986 empty_to_nonempty=34 first_awaken=(ell 2->3,p 1->5,ord 1->2,K_high={1})
+b=7 A_ratio2=85556 B_ratio1=1 strict_base_transitions=3989 empty_to_nonempty=33 first_awaken=(ell 2->3,p 3->7,ord 2->2,K_high={1})
+b=9 A_ratio2=85549 B_ratio1=1 strict_base_transitions=3918 empty_to_nonempty=54 first_awaken=(ell 3->4,p 3->3,ord 2->4,K_high={2})
+b=11 A_ratio2=91986 B_ratio1=1 strict_base_transitions=3931 empty_to_nonempty=51 first_awaken=(ell 3->4,p 3->3,ord 2->4,K_high={1})
+b=13 A_ratio2=110886 B_ratio1=1 strict_base_transitions=3923 empty_to_nonempty=59 first_awaken=(ell 3->4,p 5->5,ord 2->4,K_high={1})
+
+REQUESTED EXACT HOSTILES
+b=9 ell=5 empty iff p mod32 in {1,7,17,23}
+b=11 ell=5 orbit nonempty iff p mod16 !=1
+b=13 ell=4 families: p=5,k=1 mod4; p=13,k=3 mod4; p=15,k=1 mod2; no others
+empty orbit is level-local: every b has an explicit empty-to-nonempty lift above
+
+ALGEBRAIC COLLAR-HIT GATE
+coordinates generator=(sigma,t), target=(tau,a), n=2^(ell-2)
+t=0: require a=0 and either sigma=1 or tau=0
+t!=0: require gcd(t,n)|a; if sigma=0 also tau=0; if sigma=1 also tau=(a/gcd(t,n)) mod2
+collar_formula_cells=3424530
+
+VERIFICATION COUNTS
+closure_cells=24570 coordinate_power_cells=1864153 K_records=24564
+status=PASS

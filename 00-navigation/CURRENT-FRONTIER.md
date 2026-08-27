@@ -398,14 +398,11 @@ lift/phase clocks.
   exact-square terminals, not chart entry. Later passport/accessory/jet lanes
   close only their named cells; nonzero passports, section/transfer, and
   global entry remain open. THM-3306 sidecars are FINITE-EXACT only.
-- **Factorial:** [THM-4244](../01-canon/theorems/THM-4244-even-multiplier-odd-core-complementary-pair-factorial-compiler.md)
-  compiles even `a=2^q b` by odd-core complementary overlaps;
-  [THM-4250](../01-canon/theorems/THM-4250-odd-core-suffix-lift-automaton-and-density-one-compiler.md)
-  gives `0/1/2` lifts, automata, density-one collars and `b=7` lanes;
-  suffix closure is sufficient only. THM-3483 reaches `r=10028`;
-  `d=9996,p=19` refutes only barcode completeness. THM-3182--3470 close
-  named cells; mixed entry remains. THM-4001 recovers fixed-arity
-  `{a_i^d}`; losses block FC/HFC.
+- **Factorial:** THM-4244 compiles even multipliers; THM-4250 gives suffix
+  lifts/automata, and [THM-4257](../01-canon/theorems/THM-4257-fixed-prime-exponent-orbit-density-one-compiler.md)
+  proves fixed-prime exponent density one plus `a=18,22,26` APs. Suffixes are
+  sufficient only. THM-3483 reaches `r=10028`; `d=9996,p=19` refutes only
+  barcode completeness. Mixed entry remains; THM-4001's losses block FC/HFC.
 - THM-1490 is one verified higher-dimensional Gaussian construction; newer
   three-real-Gaussian examples supersede “dimension four is sharp.”
 
