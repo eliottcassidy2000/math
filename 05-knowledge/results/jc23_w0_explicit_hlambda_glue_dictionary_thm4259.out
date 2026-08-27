@@ -1,0 +1,13 @@
+THM-4259 W=0 explicit H_lambda glue dictionary exact certificate
+symbolic_visible_projection=H_lambda+H_lambda_o_iota=-v PASS coordinates=('X=-x^-2', 'Y=-epsilon*y^2/x^3')
+symbolic_hidden_differentials=PASS formulas=('eta_f=(2/(3s))*x^-5*(A0+B0*y^2)dy', 'eta_g=kappa*(2/(3s))*x^-5*(A0-B0*y^2)dy', 'eta_ell=(2alpha/(3epsilon))*x^-5*(y^2+lambda^2(r-9))dy')
+good_prime=397 parameters(zeta12,a,s,r,lambda,alpha,epsilon)=(157, 161, 27, 363, 30, 92, 334) omega=34 kappa=177
+differential_system_determinant=313 nonzero=PASS residue_coefficients=(362, 328)
+hidden_degree12_shell=24 distinct_mod397=24 unique_lift=((-1, -1), (-1, -2))
+hidden_projection=H_lambda-H_lambda_o_iota=omega^2*f+(omega^2-omega)*g
+doubled_map=2*H_lambda=-v+omega^2*f+(omega^2-omega)*g
+normalized_dictionary=h=H_lambda+v-omega^2*g relation=2h=v+omega^2*f+g
+normalized_T_action=T*h=omega^2*h-omega*f PASS
+modular_logic=FINITE_CANDIDATE_IDENTIFICATION_NOT_ZERO_LIFT
+normalization_blocker=REMOVED mixed_1512_incidences=UNEVALUATED
+verdict=CONCRETE_GLUE_GENERATOR_PROVED JC2_OPEN W0_OPEN
