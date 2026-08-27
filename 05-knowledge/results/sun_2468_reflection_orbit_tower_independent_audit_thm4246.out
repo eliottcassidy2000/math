@@ -1,0 +1,10 @@
+SUN_2468_REFLECTION_ORBIT_TOWER_INDEPENDENT
+m=3 tuples=2187 fibre_mass=2187
+m=5 tuples=15625 fibre_mass=15625
+m=7 tuples=16807 fibre_mass=16807
+m=9 tuples=177147 fibre_mass=177147
+m=11 tuples=14641 fibre_mass=14641
+m=13 tuples=28561 fibre_mass=28561
+total_tuples=254968
+audit_sha256=40ca1850410f6275d2ee59bc04fb215f5617dfc1a5235fa6657f6fd72ea00954
+verdict=direct_tuple_orbits_match_weighted_tower

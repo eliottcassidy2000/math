@@ -311,7 +311,7 @@ lift/phase clocks.
 - **REFUTED + FINITE-EXACT:** [THM-4026](../01-canon/theorems/THM-4026-sun-two-four-six-eight-binomial-counterexample.md) certifies hole `896315812331399`; least hole is **OPEN**.
 - **PROVED:** [THM-4027](../01-canon/theorems/THM-4027-sun-two-four-six-eight-universal-modular-solubility.md)/[4028](../01-canon/theorems/THM-4028-sun-two-four-six-eight-average-order-criticality.md) give universal local support, mean `24.311...X^(25/24)` and fixed-AP/shell refinements; coverage remains **OPEN**.
 - **PROVED:** [THM-4036](../01-canon/theorems/THM-4036-sun-2468-energy-and-support-exponent.md) gives energy `X^(13/12+epsilon)` and `X^(1-epsilon)` positive/average-scale-rich targets, also in fixed APs; no positive density.
-- **PROVED + FINITE-EXACT:** [THM-4037](../01-canon/theorems/THM-4037-centered-binomial-parity-and-singular-fibres.md) gives centered parity, a degree-24 critical eliminant and eight singular primes; none classifies holes.
+- **PROVED:** THM-4037 gives parity; [THM-4246](../01-canon/theorems/THM-4246-sun-reflection-orbit-two-adic-tower-and-odd-cycle-firewall.md) gives `R=sum 2^d beta_d` and the bipartite firewall. Height is open.
 - **FINITE-EXACT + VERIFIED-EXACT:** [THM-4040](../01-canon/theorems/THM-4040-sun-2468-target-crt-class-singleton-census.md) finds the known target as the sole zero among `943,194,644` targets in one discovery class through `1.002*10^15`; not global minimality.
 
 ### Established landmarks
@@ -378,8 +378,7 @@ lift/phase clocks.
   reduces its `M=12` gate to a proper countable nonempty hidden-`E_0` locus.
   At `W=0`, [THM-4241](../01-canon/theorems/THM-4241-w0-hidden-cm-saturation-and-visible-hidden-index-four-gluing.md)
   saturates the hidden lattice but proves visible-hidden `Z`-index-four gluing;
-  the full lattice has degree-`34/42` vectors. Attachment equality is confined
-  to finite unenumerated marked-ratio sets `S_34,S_42`; entry and JC(2) stay open.
+  [THM-4247](../01-canon/theorems/THM-4247-w0-involution-degree-twelve-attachment-exclusion.md) leaves `34,176/16,128` raw vectors; `S_34,S_42`, entry and JC(2) stay open.
   Exceptional quartic: THM-3703/3737 give grammar/image, THM-4034 the
   conductor, and THM-4039/4043/4046 reach `J_7`, obstruct `J_8`, and close
   critical `H`. [THM-4054](../01-canon/theorems/THM-4054-exceptional-affine-simple-zero-retained-packet.md)

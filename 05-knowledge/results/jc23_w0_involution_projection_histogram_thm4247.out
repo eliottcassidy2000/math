@@ -1,0 +1,53 @@
+THM-4247 W=0 IOTA PROJECTION HISTOGRAM
+full_degree=34 full_count=36288
+hidden_projection_degree:count
+  12:1536
+  24:2304
+  36:5952
+  60:5760
+  72:8064
+  84:5376
+  108:4992
+  120:1728
+  132:576
+(visible_projection_degree,hidden_projection_degree):count
+  (4, 132):576
+  (16, 120):1728
+  (28, 108):4992
+  (52, 84):5376
+  (64, 72):8064
+  (76, 60):5760
+  (100, 36):5952
+  (112, 24):2304
+  (124, 12):1536
+eliminated_hidden_projection_hist={12: 1536, 132: 576}
+remaining_hidden_projection_hist={24: 2304, 36: 5952, 60: 5760, 72: 8064, 84: 5376, 108: 4992, 120: 1728}
+remaining_raw_vectors=34176
+full_degree=42 full_count=16992
+hidden_projection_degree:count
+  12:672
+  24:288
+  36:2304
+  60:288
+  72:3456
+  84:3072
+  108:3744
+  120:1728
+  132:576
+  156:672
+  168:192
+(visible_projection_degree,hidden_projection_degree):count
+  (0, 168):192
+  (12, 156):672
+  (36, 132):576
+  (48, 120):1728
+  (60, 108):3744
+  (84, 84):3072
+  (96, 72):3456
+  (108, 60):288
+  (132, 36):2304
+  (144, 24):288
+  (156, 12):672
+eliminated_hidden_projection_hist={12: 672, 168: 192}
+remaining_hidden_projection_hist={24: 288, 36: 2304, 60: 288, 72: 3456, 84: 3072, 108: 3744, 120: 1728, 132: 576, 156: 672}
+remaining_raw_vectors=16128

@@ -1,0 +1,9 @@
+LRC14_RESIDUAL_ODD_CYCLE_CORE_INDEPENDENT
+vertices=739 edges=181126 connected=PASS
+triangles=30912074 triangle_vertices=737
+triangle_free_edges=[(616, 756), (616, 760)]
+bridges=[(616, 756), (616, 760)] articulation_points=[616]
+biconnected_core_vertices=737 core_articulation_points=0
+fixed50_degree=556 induced_edges=150861 induced_triangles=26807003
+edge_triangle_sha256=d682ec7b70b7eecc641559e26d0afa1e23b0ede3ff90c025a637e6c02e208623
+verdict=odd_cycles_schedule_obligations_not_safety

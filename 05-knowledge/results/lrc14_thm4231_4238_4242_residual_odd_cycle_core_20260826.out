@@ -1,0 +1,19 @@
+LRC14_THM4231_4238_4242_RESIDUAL_ODD_CYCLE_CORE
+vertices_nonisolated=739 edges=181126
+components=[739]
+degree_min=1 degree_max=721
+degree_hist_top=[(633, 10), (576, 8), (581, 8), (596, 8), (540, 7), (588, 7), (569, 7), (575, 7), (574, 7), (582, 7), (6, 7), (557, 6)]
+triangles=30912074 triangle_vertices=737
+triangle_free_edges=2 examples=[(616, 756), (616, 760)]
+edge_triangle_min=0 edge_triangle_max=697
+bipartite=False chordal=False
+leaves=[756, 760] articulation_points=[616]
+bridges=[(616, 756), (616, 760)]
+biconnected_blocks=[(2, 616, 756), (2, 616, 760), (737, 1, 769)]
+triangle_free_equals_bridges=True
+edge_triangle_hist_low=[(0, 2), (1, 4), (2, 6), (3, 8), (4, 6), (5, 41), (6, 4), (7, 16), (8, 18), (9, 10), (11, 31), (12, 13)]
+edge_triangle_quantiles=[(0, 0), (1, 91), (5, 241), (25, 512), (50, 544), (75, 573), (95, 614), (99, 635), (100, 697)]
+edge_triangle_sha256=d682ec7b70b7eecc641559e26d0afa1e23b0ede3ff90c025a637e6c02e208623
+degeneracy=500 max_k_core_vertices=512
+fixed50_degree=556 neighbor_min=1 neighbor_max=589 induced_edges=150861 induced_triangles=26807003
+verdict=proof_obligation_graph_not_safety_graph

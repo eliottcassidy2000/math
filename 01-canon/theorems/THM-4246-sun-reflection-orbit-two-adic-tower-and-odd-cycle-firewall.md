@@ -2,19 +2,293 @@
 id: THM-4246
 title: "Sun reflection-orbit two-adic tower and odd-cycle firewall"
 status: >
-  RESERVED / UNPROVED EMPTY STUB. No theorem is asserted here. This namespace
-  is reserved for an independently audited reflection-orbit expansion of the
-  complete-period Sun 2-4-6-8 modular fibres, together with the exact natural
-  pair-incidence decomposition and its odd-cycle no-go. Promotion requires
-  proof-complete statements, repo-local exact companions, frozen outputs,
-  hostile controls, and current-frontier routing.
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY AUDITED. Complete-period fibres of
+  any packet of even-rank binomial atoms admit an exact power-of-two expansion
+  by coordinate-reflection orbit dimension. Modulo 2^j only dimensions below
+  j survive. This extends THM-4037's parity bit to the full finite two-adic
+  orbit tower. Every native reflection orbit graph is a hypercube and every
+  natural two-plus-two pair-incidence graph is bipartite, so directed
+  odd-cycle collections do not transfer from the tournament OCF. For the Sun
+  target, all dimension-two through dimension-four strata are positive at
+  every odd modulus 3 through 99, despite the integral fibre being empty.
+  This is a local multiplicity theorem and transfer firewall, not a height,
+  least-hole, LRC(14), or tournament theorem.
 source: root/sun-odd-cycles/2026-08-26
-depends_on: []
-related: []
+depends_on:
+  - THM-4037-centered-binomial-parity-and-singular-fibres
+related:
+  - THM-4026-sun-two-four-six-eight-binomial-counterexample
+  - THM-4036-sun-2468-energy-and-support-exponent
+  - THM-466-the-2-adic-digits-of-H-are-odd-cycle-collection-counts
+  - MISTAKE-225
+primary_script: 04-computation/sun_2468_reflection_orbit_tower_thm4246.py
+primary_output: 05-knowledge/results/sun_2468_reflection_orbit_tower_thm4246.out
+independent_script: 04-computation/sun_2468_reflection_orbit_tower_independent_audit_thm4246.py
+independent_output: 05-knowledge/results/sun_2468_reflection_orbit_tower_independent_audit_thm4246.out
+script_sha256:
+  - b62aa347ecd6b2855d52b1f28a43d242c76a2cc8c696fb1cc258185594f550fb
+  - c7dee4f072aec2b638f8fd3a493a40528f5eb8b77b70203f63eb64c7254217d7
+output_sha256:
+  - 178362f8a9728ac4b3bfb1c8c5cdd7b545c2f0b84b019691e53d5c73fea352f7
+  - 68124c2b24820189d162c3f823d5f44df665f2d7522608f6b99fa53ea5ff0723
+hash_basis: raw LF bytes
 ---
 
-# THM-4246 -- reserved Sun reflection-orbit tower and odd-cycle firewall
+# THM-4246 -- Sun reflection-orbit two-adic tower and odd-cycle firewall
 
-**RESERVED / UNPROVED EMPTY STUB.**
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY AUDITED.**
 
-This file contains no proved statement and is not a proved dependency.
+## 1. Statement
+
+Let `k_1,...,k_s` be positive even integers and let `m>=2`. For
+
+```text
+B_k(n)=C(n,k),
+P_i=P_(m,k_i),
+X_i=Z/P_i Z,
+iota_i(n)=k_i-1-n,
+```
+
+use THM-4037's exact periods and coordinate reflections. For a residue `a`
+modulo `m`, define
+
+```text
+epsilon_i(a) = number of fixed points n of iota_i with B_(k_i)(n)=a,
+g_i(a)       = number of nonfixed two-element iota_i-orbits of value a.
+```
+
+These are histograms on `Z/mZ`. If `*` denotes circular convolution, then the
+complete one-role histogram is exactly
+
+```text
+h_i=epsilon_i+2g_i.                                  (1)
+```
+
+For `J subset {1,...,s}`, put
+
+```text
+beta_J(t)=[t] ( *_(i in J) g_i ) * ( *_(i notin J) epsilon_i ),
+beta_d(t)=sum_(|J|=d) beta_J(t).                      (2)
+```
+
+Empty convolutions are the point mass at zero. For the complete-period fibre
+
+```text
+R_m(t)=#{(n_i) in product_i X_i:
+         sum_i B_(k_i)(n_i)=t mod m},                 (3)
+```
+
+one has the exact orbit expansion
+
+```text
+R_m(t)=sum_(d=0)^s 2^d beta_d(t).                    (4)
+```
+
+Moreover `beta_d(t)` is exactly the number of coordinate-reflection orbits
+inside the fibre `(3)` having `d` active, nonfixed coordinates. Consequently,
+for every `j>=1`,
+
+```text
+R_m(t)=sum_(0<=d<j) 2^d beta_d(t)  (mod 2^j).        (5)
+```
+
+Thus the first `j` binary digits are determined by the first `j` orbit
+dimensions, with ordinary carries between their integer coefficients.
+
+If `m` is even, every `epsilon_i` vanishes and only `beta_s` can be nonzero;
+in particular `2^s|R_m(t)`. If `m` is odd, every `epsilon_i` is a single
+point mass, so `beta_0` is a single target indicator and `(5)` at `j=1`
+recovers exactly THM-4037's parity law.
+
+For Sun's ranks `(2,4,6,8)`, write the coefficients as `beta_0,...,beta_4`.
+Then
+
+```text
+R_m(t)=beta_0(t)+2beta_1(t)+4beta_2(t)
+       +8beta_3(t)+16beta_4(t).                      (6)
+```
+
+This is the promised full finite two-adic tower above the old parity bit.
+
+## 2. Proof of the orbit expansion
+
+THM-4037 proves
+
+```text
+B_(k_i)(iota_i(n))=B_(k_i)(n) mod m.                 (7)
+```
+
+The fixed-point equation is
+
+```text
+2n=k_i-1 mod P_i.                                    (8)
+```
+
+Because `k_i-1` is odd and `P_i` is even exactly when `m` is even, `(8)` has
+no solution for even `m` and one solution for odd `m`. Every remaining index
+belongs to a unique two-element orbit. Counting values by these disjoint
+pieces proves `(1)`.
+
+The fibre histogram in `(3)` is `h_1*...*h_s`. Expanding the product of
+the `s` factors `epsilon_i+2g_i` gives
+
+```text
+*_(i=1)^s h_i
+=sum_(J subset {1,...,s}) 2^|J|
+   ( *_(i in J)g_i )*( *_(i notin J)epsilon_i ).      (9)
+```
+
+Taking the coefficient at `t` and grouping by `|J|` proves `(4)`.
+
+For the orbit interpretation, let `(C_2)^s` act on the product of period
+sets by the independent reflections. A tuple with nonfixed-coordinate set
+`J` has stabilizer generated by the other coordinates and hence orbit size
+`2^|J|`. Choosing one two-element coordinate orbit for every `i in J` and
+the unique allowed fixed point for every `i notin J` gives precisely one
+such product orbit. Its atom sum is counted by `(2)`. This proves the claim
+about `beta_d`, and reduction of `(4)` modulo `2^j` proves `(5)`. **QED.**
+
+## 3. The odd-cycle firewall
+
+Give each coordinate-reflection orbit its natural Schreier graph: join a
+tuple to the result of applying one coordinate reflection when that
+reflection changes the tuple. An orbit with `d` active coordinates is the
+hypercube `Q_d`. It is bipartite, so it has no odd cycle. Thus the powers of
+two in `(4)` are orbit cardinalities, not weights of directed odd-cycle
+collections.
+
+There is a second exact no-go that does not use modular periods. Let four
+integer-valued atom maps `f_i:A_i->Z` be split as `1+2` and `3+4`, and assume
+the target representation fibre is finite (equivalently, the relevant
+complementary pair blocks are finite and only finitely many are nonempty).
+Define
+
+```text
+L_u={(a_1,a_2):f_1(a_1)+f_2(a_2)=u},
+H_v={(a_3,a_4):f_3(a_3)+f_4(a_4)=v},
+ell_u=|L_u|,                    h_v=|H_v|.             (10)
+```
+
+For target `n`, make the labelled pair-incidence graph `Gamma_n` whose left
+and right vertices are the pair addresses occurring in a representation and
+whose edges are the four-role representations. Complementary pair sums give
+the exact decomposition
+
+```text
+Gamma_n = disjoint union_u K_(ell_u,h_(n-u)),          (11)
+```
+
+with empty factors omitted. Hence
+
+```text
+number of representations = |E(Gamma_n)|
+                           = sum_u ell_u h_(n-u),
+cycle rank(Gamma_n)        = sum_u(ell_u-1)(h_(n-u)-1),
+#C4(Gamma_n)               = sum_u C(ell_u,2)C(h_(n-u),2),
+#odd cycles(Gamma_n)       = 0.                        (12)
+```
+
+Formula `(11)` is immediate: a low pair of sum `u` is compatible with every
+high pair of sum `n-u` and with no other high-sum block. The standard
+complete-bipartite formulas prove `(12)`.
+
+This also types THM-4036's second moment. If `e_u=ell_u h_(n-u)`, then
+
+```text
+a(n)^2 = sum_u e_u^2 + 2sum_(u<v)e_u e_v,             (13)
+```
+
+and each `e_u^2` splits into identical edges, pairs sharing a low endpoint,
+pairs sharing a high endpoint, and disjoint pairs in the same block; the
+last term is `4#C4`. The cross-block term in `(13)` is invisible to every
+within-block cycle count. Energy, codegrees, block addresses, and height are
+therefore typed, lawful Sun observables, though none is asserted complete;
+odd cycles are not.
+
+THM-466's tournament formula has the superficially similar form
+
+```text
+H(T)=sum_d alpha_d 2^d,
+```
+
+but there `alpha_d` counts disjoint directed odd-cycle collections in an
+intrinsically oriented complete graph. Here `beta_d` counts reflection
+orbits in symmetric value fibres, and both native graph carriers are
+bipartite. The source, target, and preserved predicates differ. MISTAKE-225
+therefore remains load-bearing: fixed-point parity may transfer; tournament
+odd-cycle semantics may not.
+
+## 4. Exact Sun controls and the height hostile
+
+The primary companion constructs the exact periods from THM-4037, enumerates
+every one-role reflection orbit, and checks `(1)--(6)` by a separately
+assembled full-histogram convolution for every modulus `2<=m<=100` and every residue: `5,049`
+modular fibres. At even moduli it also checks that all dimensions below four
+vanish and every count is divisible by `16`.
+
+For the THM-4026 integer hole
+
+```text
+N=896315812331399,
+```
+
+the odd-modulus audit `3<=m<=99` finds
+
+```text
+zero counts among 49 moduli by dimension: [46,7,0,0,0],
+least positive beta_d:                    [1,1,8,29,16]. (14)
+```
+
+Thus `beta_2(N),beta_3(N),beta_4(N)` are positive at every audited odd
+modulus even though the bounded positive integral fibre is empty. The
+valuation histogram of the complete-period counts is
+
+```text
+v_2(R_m(N)): 0:3, 1:17, 2:14, 3:7, 4:4, 5:2, 6:1, 7:1. (15)
+```
+
+This is a hostile control, not an extrapolation: complete local orbit strata
+still forget the legal positive section and height.
+
+The independent companion does not build convolutions. It directly
+enumerates all period-box tuples for `m=3,5,7,9,11,13`, selects one canonical
+representative per coordinate-reflection orbit, and reconstructs each fibre
+from its orbit size. It checks `254,968` tuples. Both paths produce the same
+row digest
+
+```text
+40ca1850410f6275d2ee59bc04fb215f5617dfc1a5235fa6657f6fd72ea00954. (16)
+```
+
+Normal and optimized Python replays are byte-identical.
+
+## 5. Connection contract and scope
+
+```text
+source: complete-period role-labelled even-binomial fibre
+target: coordinate-reflection orbit stratification
+map: tuple -> its product C2-orbit and active-coordinate set
+preserves: atom sum mod m, role labels, orbit size; aggregate strata
+           reconstruct all 2-adic count digits
+destroys: positive chamber, numeric height, bounded lift, integral pair-sum
+          address/height
+needed sidecars: exact periods, legal lower bounds, height, block address
+cheapest hostile: THM-4026 target, locally populated but integrally empty
+```
+
+No statement here proves eventual Sun coverage, leastness of the known hole,
+an integer-hole classifier, an LRC(14) certificate, or a tournament identity.
+For LRC, odd cycles become admissible only after declaring an intrinsic
+non-bipartite proof-obligation relation and retaining owner/phase sidecars;
+cycle abundance in a sufficient-certificate graph is not safety.
+
+## 6. Reproduction
+
+```text
+python -B 04-computation/sun_2468_reflection_orbit_tower_thm4246.py
+python -B -O 04-computation/sun_2468_reflection_orbit_tower_thm4246.py
+python -B 04-computation/sun_2468_reflection_orbit_tower_independent_audit_thm4246.py
+python -B -O 04-computation/sun_2468_reflection_orbit_tower_independent_audit_thm4246.py
+```
+
+The script and output hashes in the frontmatter use raw LF bytes. **QED.**

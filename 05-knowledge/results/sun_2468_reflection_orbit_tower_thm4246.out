@@ -1,0 +1,24 @@
+SUN_2468_REFLECTION_ORBIT_TOWER
+ranks=2,4,6,8 target=896315812331399
+audit_moduli=2..100 count=99 residues=5049
+audit_odd_moduli=3..99 count=49
+audit_sha256=7352619c36af5caf390484c3f63f12f02c4f3857ec788d4db68491fd343b62b3
+target_zero_counts_by_dimension=[46, 7, 0, 0, 0]
+target_zero_moduli_by_dimension=[[3, 9, 11, 13, 15, 17, 19, 21, 23, 25, 27, 29, 31, 33, 37, 39, 41, 43, 45, 47, 49, 51, 53, 55, 57, 59, 61, 63, 65, 67, 69, 71, 73, 75, 77, 79, 81, 83, 85, 87, 89, 91, 93, 95, 97, 99], [19, 29, 57, 59, 79, 87, 95], [], [], []]
+target_min_positive_by_dimension=[1, 1, 8, 29, 16]
+target_v2_hist=[(0, 3), (1, 17), (2, 14), (3, 7), (4, 4), (5, 2), (6, 1), (7, 1)]
+independent_range_sha256=40ca1850410f6275d2ee59bc04fb215f5617dfc1a5235fa6657f6fd72ea00954
+m=2 target_residue=1 periods_fixed=[(4, []), (8, []), (8, []), (16, [])] fingerprint=none beta=[0, 0, 0, 0, 128] R=2048 v2=11
+m=3 target_residue=2 periods_fixed=[(3, [2]), (9, [6]), (9, [7]), (9, [8])] fingerprint=0 beta=[0, 9, 22, 29, 16] R=594 v2=1
+m=4 target_residue=3 periods_fixed=[(8, []), (16, []), (16, []), (32, [])] fingerprint=none beta=[0, 0, 0, 0, 1024] R=16384 v2=14
+m=5 target_residue=4 periods_fixed=[(5, [3]), (5, [4]), (25, [15]), (25, [16])] fingerprint=4 beta=[1, 12, 52, 116, 104] R=2825 v2=0
+m=7 target_residue=5 periods_fixed=[(7, [4]), (7, [5]), (7, [6]), (49, [28])] fingerprint=5 beta=[1, 6, 31, 93, 81] R=2177 v2=0
+m=8 target_residue=7 periods_fixed=[(16, []), (32, []), (32, []), (64, [])] fingerprint=none beta=[0, 0, 0, 0, 8192] R=131072 v2=17
+m=11 target_residue=9 periods_fixed=[(11, [6]), (11, [7]), (11, [8]), (11, [9])] fingerprint=10 beta=[0, 2, 9, 62, 16] R=792 v2=3
+m=13 target_residue=5 periods_fixed=[(13, [7]), (13, [8]), (13, [9]), (13, [10])] fingerprint=12 beta=[0, 1, 8, 62, 92] R=2002 v2=1
+m=16 target_residue=7 periods_fixed=[(32, []), (64, []), (64, []), (128, [])] fingerprint=none beta=[0, 0, 0, 0, 65536] R=1048576 v2=20
+m=17 target_residue=14 periods_fixed=[(17, [9]), (17, [10]), (17, [11]), (17, [12])] fingerprint=13 beta=[0, 2, 17, 119, 191] R=4080 v2=4
+m=23 target_residue=19 periods_fixed=[(23, [12]), (23, [13]), (23, [14]), (23, [15])] fingerprint=7 beta=[0, 2, 29, 202, 570] R=10856 v2=3
+m=31 target_residue=27 periods_fixed=[(31, [16]), (31, [17]), (31, [18]), (31, [19])] fingerprint=19 beta=[0, 3, 49, 451, 1587] R=29202 v2=1
+m=499 target_residue=207 periods_fixed=[(499, [250]), (499, [251]), (499, [252]), (499, [253])] fingerprint=120 beta=[0, 3, 885, 123433, 7703687] R=124250002 v2=1
+verdict=exact_boolean_orbit_tower_native_orbit_graphs_bipartite

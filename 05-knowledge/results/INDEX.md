@@ -1,5 +1,58 @@
 # Script Results Index
 
+- `lrc14_thm4231_4238_4242_residual_odd_cycle_core_20260826.py` and a
+  dependency-free graph referee -> exact odd-cycle-core diagnostic on the
+  current `181,126`-edge proof residual [FINITE-EXACT + INDEPENDENTLY AUDITED;
+  NO SAFETY CLAIM, LRC(14) OPEN]. The graph is connected on 739 nonisolated
+  endpoints and contains `30,912,074` triangles. Exactly two edges are in no
+  triangle, `(616,756)` and `(616,760)`; they are precisely the two bridges
+  and attach the only leaves. Removing them leaves one biconnected 737-vertex
+  core in which every edge lies in a triangle. The fixed-50 neighbourhood has
+  degree 556, `150,861` induced edges and `26,807,003` triangles. Thus odd
+  cycles schedule highly coupled proof obligations but do not certify safety.
+  Source/output SHA-256:
+  `c472a4e4f79300541201bc271e3aa1069d194bc61ea75e5f5106d68b4c00e803` /
+  `8353e6c92ad59e6e2b69fad27cd5baceae7280765b8f428592deb8b95c427bf5`;
+  independent source/output:
+  `918536a7bbbc9faacff0484418ed97513b45b5879efdd6af9072cd5facb3bdc1` /
+  `707290483580e20059ec145567fab0801f420157b5448f4aae485cc5a54ba0db`.
+
+- `jc23_w0_involution_projection_histogram_thm4247.py` plus two exact
+  degree-twelve attachment certificates -> involution theta refinement and
+  attachment-wall exclusion [THM-4247 PROVED RELATIVE TO THM-4230/4241 +
+  VERIFIED-EXACT + HOSTILE-AUDITED; JC(2), DC(2) OPEN]. The full `W=0` Hom
+  lattice splits the `36,288/16,992` raw degree-`34/42` vectors by hidden
+  projection degree, always a positive multiple of twelve. The 24-vector
+  degree-twelve shell has two unit/`T` orbits; exact characteristic-zero
+  denominators and four good reductions leave only reciprocal roots
+  `t=+-1`, which lie on excluded `Z=0`. Together with the degree-four-fibre
+  and inherited pure-hidden rows, this removes `2,112/864` raw vectors and
+  leaves `34,176/16,128`; the finite marked-ratio sets remain unenumerated.
+  Source SHA-256: `fcfb1334edbc4f1ea897a2f08caca27256631317d29ab60503d14c3b53b60c30`,
+  `9dc1f8614db388f463acb93951285fb4b8245cf20c976d1d2129cb883ccf9c28`,
+  `19497a9d81875b64e3edf6f8ca2bfc492acdbfd1aed4582a18fbf65b9a50f41c`;
+  output SHA-256: `da4bb1e48c0f6cedb4e1d26a4ab63a5074cb6101976d7b97544b622ef6150251`,
+  `219eaf90c319dcd5f0f9ab98cbb7e8b9b1db75b96b4df5c90e0d9b593015fa7c`,
+  `bff39073b8e387a80dac850d231dee68c7f0e04531e4cf3153dde733fab841db`.
+
+- `sun_2468_reflection_orbit_tower_thm4246.py` and a direct tuple-orbit
+  referee -> complete-period two-adic reflection tower and odd-cycle firewall
+  [THM-4246 PROVED + VERIFIED-EXACT + INDEPENDENTLY AUDITED; SUN HEIGHT AND
+  LEASTNESS OPEN]. For every even-rank packet, `R_m(t)=sum_d 2^d beta_d(t)`,
+  where `beta_d` counts reflection orbits with `d` active coordinates; modulo
+  `2^j` only `d<j` remains. Native orbit graphs are hypercubes and natural
+  two-plus-two pair-incidence graphs are disjoint unions of complete
+  bipartite blocks, so tournament OCF semantics do not transfer. All
+  dimension-two through four strata at the known hole are positive for every
+  odd modulus `3..99`, a sharp local/height hostile. The primary checks 5,049
+  fibres; the direct referee checks 254,968 tuples with common digest
+  `40ca1850...a00954`. Source/output SHA-256:
+  `b62aa347ecd6b2855d52b1f28a43d242c76a2cc8c696fb1cc258185594f550fb` /
+  `178362f8a9728ac4b3bfb1c8c5cdd7b545c2f0b84b019691e53d5c73fea352f7`;
+  independent source/output:
+  `c7dee4f072aec2b638f8fd3a493a40528f5eb8b77b70203f63eb64c7254217d7` /
+  `68124c2b24820189d162c3f823d5f44df665f2d7522608f6b99fa53ea5ff0723`.
+
 - `kakeya4d_quadratic_carrier_thm4235.py` -> exact affine-placement and full
   projective quadratic Kakeya carrier over `F_61` [THM-4235 FINITE-EXACT +
   VERIFIED + INDEPENDENTLY AUDITED; EUCLIDEAN KAKEYA IN `R^4` OPEN].  The
