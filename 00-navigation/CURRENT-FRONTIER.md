@@ -66,6 +66,8 @@ is the safe control `M(S_13)=99/338`. No cited result proves LRC(14).
   union leaves `23,373`, max `644`, top
   `(220,644),(256,644),(258,644),(294,644),(366,644),(416,644),(512,644)`;
   physical entry and LRC(14) remain open.
+- **RESERVED / UNPROVED:** [THM-4283](../01-canon/theorems/THM-4283-endpoint-644-carrier-response-and-signature-fibre-surgery.md)
+  is a namespace only, outside the proof graph.
 - **PROVED:** [THM-2928](../01-canon/theorems/THM-2928-critical-seven-comb-grid-tensorization-and-drift-tariff.md)/2941: literal zero/one/two/three-drift sectors are empty; `k=2,3` are finite.
 - **Orthogonal routes.** THM-1017 is HYP-6820; THM-2047/2050 keep phase/exit; THM-731/2048 prune; THM-1290 ends at `55`; HYP-8900 nonuniform.
 - **PROVED micro-staircase:** THM-3316/3317 close primes/sparse fragility;
