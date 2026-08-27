@@ -142,11 +142,12 @@ exact quotient-kernel/pair-difference test and normalized-fibre audit).
 
 ## Complete decks from hostiles
 
-**Action/boundary:** append common-active repairs disjoint from missed bodies;
-rescan all. Pair-active decks do not transfer; greedy need not minimize.
+**Action/boundary:** append common-active repairs disjoint from missed bodies.
+For finite failures, quotient repairs by response bits; certify minima by a
+packing and cover. Rescan pair/layer changes: the quotient loses margins.
 
 **Evidence:** literal-audited THM-4267 (`9805+1`/2 hostiles), THM-4269
-(`3158+5`/6), and THM-4273 (all `2,172` minimum one-atom completions).
+(`3158+5`/6), THM-4273/4274, and THM-4276 (`5,852,925 -> 330`, minimum six).
 
 ## Certify before projection
 
