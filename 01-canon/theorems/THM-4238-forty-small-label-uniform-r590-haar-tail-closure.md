@@ -34,8 +34,8 @@ outputs:
   - 05-knowledge/results/lrc14_small_label_hybrid_literal_thm4238.out
   - 05-knowledge/results/lrc14_small_label_artifact_manifest_thm4238.out
 script_sha256:
-  - db5b058ead2ae0dfeba2b47eca1d4b7b67c7f83dc5764b8718299a4190977cbf
-  - f0f9a214d7776719fea1077c527f239f8d4fbcb0344ed8b807c9a3d5df1bdbdc
+  - 4687b1fa748e77456d8ca8790f5c52eb1e3ac65d256d9f24b22672b77eac7267
+  - a12f577756ec564669ddf74502c5a8731ffd0f681254ef98344f2db2ed05ef1d
   - 8c01adbc5235b7dab7e1b2bdc06a429da6fd69286d5c9b7fbd00813394ecdee7
   - 6013bea2008da53bb3bf6b47b45a7e2064963dec1f7a1ad2c09db8b560a983fe
   - c42a7abbae49580208f47ff54eb952a749907191a6e350ac16a54ec51cc0ae86
@@ -103,9 +103,14 @@ faces, and `(4)` closes the two-outsider faces. Hence all
 binom(32,11)=129,024,480                                 (5)
 ```
 
-eleven-faces are safe. By THM-4150, for every such face `H`, every positive
-integer `c`, and every two distinct positive odd integers `a,b`, there is an
-`x in R/Z` with
+eleven-faces are safe. For the multiplication map `m_c:x|->cx`,
+
+```text
+G_(cH)=m_c^(-1)(G_H),              mu(G_(cH))=mu(G_H).  (5a)
+```
+
+Indeed, `m_c` preserves Haar measure. Apply THM-4150 to `cH`. For every two
+distinct positive odd integers `a,b`, there is an `x in R/Z` with
 
 ```text
 min_(v in 2cH union {a,b})||vx||>=1/14.                  (6)
@@ -249,8 +254,10 @@ geometry kernels whose frozen source hashes are, respectively,
 
 The first two hashes are the primary executable and its direct-body include;
 the third is the independent template. The checked-in 137-entry manifest
-freezes every generated per-`q` source and output from the audited run.
-Reproduce on the audited clang/libomp toolchain with
+freezes every generated per-`q` source and output from the original audited
+run. The current drivers isolate each replay in a fresh temporary directory,
+so unrelated `/tmp` files cannot enter a ledger. Reproduce on the audited
+clang/libomp toolchain with
 
 ```bash
 JOBS=3 sh 04-computation/lrc14_small_label_cofinal_primary_driver_thm4238.sh "$PWD"
@@ -261,10 +268,12 @@ cmp /tmp/lrc14-small-label-literal-endpoint.out /tmp/lrc14-small-label-literal-m
 python3 -B 04-computation/lrc14_small_label_cofinal_audit_thm4238.py
 ```
 
-The two full censuses were also replayed at the stated low/high optimization
-levels with byte-matching outputs. On the audited Apple M2 host, the primary
-and independent wall-clock times were about `156s` and `104s`; both literal
-paths and the final audit take under one second.
+Set `OPT_LEVEL=-O2` for the primary low-level replay and `OPT_LEVEL=-O0` for
+the independent low-level replay; the displayed defaults are `-O3`. These
+`-O2/-O3` and `-O0/-O3` pairs byte-match their respective frozen ledgers. On
+the audited Apple M2 host, the primary and independent `-O3` wall-clock times
+were about `156s` and `104s`; both literal paths and the final audit take under
+one second.
 
 No claim is made here for:
 

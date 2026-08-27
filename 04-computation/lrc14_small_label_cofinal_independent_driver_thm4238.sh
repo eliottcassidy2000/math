@@ -5,7 +5,11 @@ repo=${1:-/Users/e/Documents/GitHub/math}
 cxx=${CXX:-clang++}
 libomp_prefix=${LIBOMP_PREFIX:-/opt/homebrew/opt/libomp}
 jobs=${JOBS:-3}
+opt_level=${OPT_LEVEL:--O3}
+ledger=${LEDGER_PATH:-/tmp/lrc14-small-label-independent-ledger.out}
 template="$repo/04-computation/lrc14_fixed_one_outsider_cofinal_tail_independent_audit_thm4231.cpp"
+run_dir=$(mktemp -d /tmp/lrc14-small-label-independent.XXXXXX)
+trap 'rm -rf -- "$run_dir"' EXIT HUP INT TERM
 
 printf '%s\n' \
   '2 563' '3 587' '4 589' '5 528' '6 614' '7 557' '9 547' \
@@ -19,13 +23,15 @@ xargs -P "$jobs" -n 2 sh -c '
   cxx="$2"
   libomp_prefix="$3"
   template="$4"
-  q="$5"
-  k="$6"
+  opt_level="$5"
+  run_dir="$6"
+  q="$7"
+  k="$8"
   km1=$((k-1))
   d=$((14*q))
-  src="/tmp/lrc14-small-label-independent-q${q}.cpp"
-  bin="/tmp/lrc14-small-label-independent-q${q}"
-  out="/tmp/lrc14-small-label-independent-q${q}.out"
+  src="$run_dir/q${q}.cpp"
+  bin="$run_dir/q${q}"
+  out="$run_dir/q${q}.out"
   LC_ALL=C sed \
     -e "s/q=1/q=${q}/g" \
     -e "s/q1/q${q}/g" \
@@ -36,11 +42,11 @@ xargs -P "$jobs" -n 2 sh -c '
     -e "s/push_back(1)/push_back(${q})/g" \
     -e "s/i64{14});/i64{${d}});/" \
     "$template" > "$src"
-  "$cxx" -O3 -std=c++20 -Xpreprocessor -fopenmp \
+  "$cxx" "$opt_level" -std=c++20 -Xpreprocessor -fopenmp \
     -I"$libomp_prefix/include" -L"$libomp_prefix/lib" \
     -Wl,-rpath,"$libomp_prefix/lib" -lomp "$src" -o "$bin"
   OMP_NUM_THREADS=4 "$bin" > "$out"
-' sh "$repo" "$cxx" "$libomp_prefix" "$template"
+' sh "$repo" "$cxx" "$libomp_prefix" "$template" "$opt_level" "$run_dir"
 
 awk '
   /^LRC14_FIXED_Q/ {q=$1; sub("LRC14_FIXED_Q","",q); sub("_RAY.*","",q)}
@@ -50,5 +56,4 @@ awk '
   /^EXTREMAL_FIXED_GEOMETRY/ {mass=$3; comp=$5; surp=$7}
   /^COMMUTATIVE_DIGEST/ {dx=$3; ds=$5}
   /^VERDICT/ {print q,D,walls,cells,keys,b,pos,kmin,minw,kmax,cnt,maxw,k2,c2,mass,comp,surp,dx,ds,$3}
-' /tmp/lrc14-small-label-independent-q*.out | sort -n \
-  > /tmp/lrc14-small-label-independent-ledger.out
+' "$run_dir"/q*.out | sort -n > "$ledger"
