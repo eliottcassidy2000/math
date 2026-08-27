@@ -218,7 +218,10 @@ the exact residual frontier has `864+648=1,512` incidences.
    forces divisibility of both hidden coefficients and hence another
    forbidden divided degree. The cheapest next lane is a ratio shared by the
    largest number of actual `(d)` ideals, so one proof removes many
-   incidences rather than one map-ratio pair.
+   incidences rather than one map-ratio pair. The incoming THM-4251 namespace
+   is only a **RESERVED / UNPROVED EMPTY STUB** for an independent hidden
+   degree-24 audit; if promoted, it should serve as a hostile control on the
+   `K=2` determinant route, never as a present dependency.
 3. **Attack the three `M=11` walls separately.** `A=0` asks for the new
    genus-five CM type, `B=0` for the genus-four elliptic quotient, and
    `A+B=0` for a nontransverse stable model. They are different geometries,
