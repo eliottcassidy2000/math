@@ -1,6 +1,0 @@
-limit=10000 positive_higher=True cumulative_tuples=156043 first_n=73
-fibre_size=7 closed_walk_length=3
-representation=2,8,6,8
-representation=9,7,6,8
-representation=12,5,6,8
-representation=2,8,6,8
