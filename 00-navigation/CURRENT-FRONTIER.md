@@ -71,15 +71,13 @@ is the safe control `M(S_13)=99/338`. No cited result proves LRC(14).
   THM-4105/4106 are reciprocal decoders; THM-4107/4108 are tournament/radical
   firewalls. THM-4110 finds `64` AP13 sheets; THM-4116 gives
   `2^(c(F)-1)`. Safety/arrival stay open.
-- **Owner/tail:** THM-4156/4191 close layers 0/1. [THM-4231](../01-canon/theorems/THM-4231-arbitrary-pair-cofinal-depth-six-haar-repair-and-exact-outsider-lift.md)
-  closes `max(q,r)>=770`; THM-4238 and
-  [THM-4242](../01-canon/theorems/THM-4242-fixed-fifty-direct-r590-tail-and-twenty-three-label-chart.md)
-  leave `181,126` edges and `chi_50>=23`.
-  THM-4245 makes the scalar gate cofinally redundant.
-  [THM-4252](../01-canon/theorems/THM-4252-exact-signed-endpoint-cocycle-residual-edge-closure.md)
-  closes three signed-endpoint edges; [THM-4254](../01-canon/theorems/THM-4254-fixed-ceiling-band-signed-endpoint-cocycle-cascade.md)
-  closes all 59 residual edges with second endpoint `755..768`, leaving
-  `181,064`, maximum `754`, cutoff `755`. Bulk phase/deck and entry remain open.
+- **Owner/tail:** THM-4156/4191 close layers 0/1; [THM-4231](../01-canon/theorems/THM-4231-arbitrary-pair-cofinal-depth-six-haar-repair-and-exact-outsider-lift.md)
+  closes `max(q,r)>=770`. THM-4238/[THM-4242](../01-canon/theorems/THM-4242-fixed-fifty-direct-r590-tail-and-twenty-three-label-chart.md)
+  leave `181,126`; THM-4245 makes the scalar gate cofinally redundant.
+  THM-4252 closes three edges; [THM-4254](../01-canon/theorems/THM-4254-fixed-ceiling-band-signed-endpoint-cocycle-cascade.md)
+  closes the 59-edge ceiling band. [THM-4256](../01-canon/theorems/THM-4256-uniform-two-three-outsider-ray-endpoint-cocycle-closure.md)
+  closes the strict-above-pool `2:3` ray and removes 73 current residual edges,
+  leaving `180,991`, maximum `754`. Bulk phase/deck and entry remain open.
 - **PROVED:** [THM-2928](../01-canon/theorems/THM-2928-critical-seven-comb-grid-tensorization-and-drift-tariff.md)/2941: literal zero/one/two/three-drift sectors are empty; `k=2,3` are finite.
 - **Orthogonal routes.** THM-1017 is HYP-6820; THM-2047/2050 keep phase/exit; THM-731/2048 prune; THM-1290 ends at `55`; HYP-8900 nonuniform.
 - **PROVED micro-staircase:** THM-3316 closes every prime and THM-3317 proves
