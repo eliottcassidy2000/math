@@ -1,0 +1,30 @@
+jc23_confluent_sample_matroids_thm4275
+scope=ABSTRACT_F4_SIDECARS_NOT_GEOMETRIC_REALIZATION
+ambient_words=64
+visible_words=16
+ambient_sample_rule=rank=min(number_of_residues_mod_4,3)
+visible_sample_rule=rank=number_of_parities_seen
+ambient_subset_rank_counts={0: 1, 1: 28, 2: 294, 3: 3773}
+visible_subset_rank_counts={0: 1, 1: 126, 2: 3969}
+ambient_pair_rank_counts={1: 12, 2: 54}
+ambient_triple_rank_counts={1: 4, 2: 108, 3: 108}
+visible_pair_rank_counts={1: 30, 2: 36}
+visible_triple_rank_counts={1: 40, 2: 180}
+ambient_all_subset_checks=4096
+visible_all_subset_checks=4096
+ambient_regular_image_fibre_cells=246289
+visible_regular_image_fibre_cells=64009
+visible_one_edge=image_4_fibre_4_zero_fibre_has_3_nonzero_words
+visible_one_edge_nonzero_zero_fibre_hostiles=36
+visible_opposite_parity_faithful_pairs=36
+visible_opposite_parity_gap_counts={1: 12, 3: 12, 5: 12}
+visible_same_parity_unfaithful_pairs=30
+contact_evaluation_rank_counts_F13={1: 1, 12: 12}
+contact_fourier_basis_checks=1728
+contact_a0_value_rank=1
+contact_a0_full_hasse_rank=12
+contact_hostile=b_has_zero_coalesced_values_but_first_hasse_coefficient_1
+transverse_series_shell=8
+transverse_minimum_complete_depth=6
+transverse_truncation_pair_checks=512
+status=PASS

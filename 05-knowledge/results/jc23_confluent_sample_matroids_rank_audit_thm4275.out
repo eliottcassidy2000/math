@@ -1,0 +1,16 @@
+jc23_confluent_sample_matroids_rank_audit_thm4275
+method=direct_F4_coordinate_row_reduction_no_word_enumeration
+ambient_subset_rank_counts={0: 1, 1: 28, 2: 294, 3: 3773}
+visible_subset_rank_counts={0: 1, 1: 126, 2: 3969}
+ambient_subset_rank_sum=11935
+visible_subset_rank_sum=8064
+ambient_pair_rank_counts={1: 12, 2: 54}
+ambient_triple_rank_counts={1: 4, 2: 108, 3: 108}
+visible_pair_rank_counts={1: 30, 2: 36}
+visible_triple_rank_counts={1: 40, 2: 180}
+opposite_parity_pairs=36
+opposite_parity_gap_counts={1: 12, 3: 12, 5: 12}
+same_parity_pairs=30
+contact_rank_counts_F13={1: 1, 12: 12}
+contact_matrix_cells=1872
+status=PASS

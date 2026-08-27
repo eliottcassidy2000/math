@@ -1,5 +1,26 @@
 # Script Results Index
 
+- `jc23_confluent_sample_matroids_thm4275.py` -> opposite-parity attachment
+  observers, exact sample matroids, and fat-contact value/jet transition
+  [THM-4275 PROVED RELATIVE TO THM-4258/4264/4272 + VERIFIED-EXACT +
+  INDEPENDENTLY AUDITED; no new incidence excluded, JC(2)/DC(2) OPEN]. Any
+  even/odd pair has the same fibres
+  as the full twelve-edge word on all 1,512 inherited visible incidences, so
+  all 36 unordered pairs work, with minimum-gap census `1:12,3:12,5:12`.
+  The 64-word ambient matroid is controlled by residues modulo four; the
+  16-word visible matroid is controlled by parity. A one-edge quotient has
+  four equal fibres yet its zero fibre contains three nonzero words. At the
+  rank-twelve fat contact, generic Fourier evaluations drop from rank twelve
+  to one on collision while normal-Hasse coefficients retain rank twelve.
+  The audit checks every 4,096 sample subset in both modules, 1,728 Fourier
+  cells, and 512 transverse truncation pairs; an independent direct row-rank
+  path reproduces every matroid/contact rank. Primary source/output SHA-256:
+  `28df3d1549e3112b44eda7fcb4f377db1bfedebfaf6e3d4a47cba7dc060a01df` /
+  `cc76f44caaffaece2ea85f59f0d077f9789f9e39835e500f6cdaae3e9a98759f`;
+  independent source/output:
+  `d24525bae78053809cafefeb3014bff2f267c152e8020f73eb8784b19c686ef6` /
+  `cc9d6fe1acbbe01ebc5879f7e5c973c49cd2778afc8cf401edb90e9aabe02cfa`.
+
 - `confined_confluent_observer_transport_audit_thm4274.py` -> exact finite
   controls for the confined-observer theorem [THM-4274 PROVED ABSTRACT LEMMA
   + VERIFIED FINITE CONTROLS; no Jacobian, p-adic-density, Rule-30, or LRC(14)
