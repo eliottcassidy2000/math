@@ -53,11 +53,9 @@ Then read the routed frontier, guardrails, and theorem; logs are history.
     Composite rank seven and FC(3) remain open.
 12. **JC is false from dimension three; JC(2), DC(2) remain open.**
     THM-2084/4218/4220 reach `M=10`; THM-4222/4232/4248 close `M=11` off
-    `A*B*(A+B)=0`; THM-4226 closes `M=13`. On `M=12`, `W=0`, THM-4259
-    makes the glue explicit and THM-4260 excludes all `1,512` inherited
-    incidences; THM-4268 gives a non-effective Zariski/formal `W=0` collar.
-    THM-4272 crosses `U+Z=0` for honest incidence via an `A_23` jet;
-    raw Keller descent there, other walls and entry remain open.
+    `A*B*(A+B)=0`; THM-4226 closes `M=13`. On `M=12`, `W=0`, THM-4260
+    exhausts `1,512` incidences, THM-4268 gives a non-effective collar, and
+    THM-4272 crosses `U+Z=0` honestly via `A_23`; raw descent/entry stay open.
 13. **Complete period-14 coordinates can be globally blind.** THM-2058 keeps
     every fixed-depth packet coordinate but exits at `47/113`; THM-2043/2047/
     2050 separate local completeness from global maxima.

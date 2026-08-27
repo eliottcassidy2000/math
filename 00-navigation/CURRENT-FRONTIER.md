@@ -346,20 +346,15 @@ lift/phase clocks.
   challenges `(3,9),(5,6),(7,5),(11,4),(13,4)` all remain **OPEN**; the public
   `131199`-field file is a named finite population, not a world census.
 - **Jacobian/Dixmier:** `JC(2),DC(2)` remain **OPEN**. THM-4130--4220 close
-  the routed `M=8--10` chambers; THM-4222/4232/4248 close `M=11` off
-  `A*B*(A+B)=0`, and THM-4226 closes dense `M=13`. THM-4230 reduces `M=12`
-  to a hidden-`E_0` locus. At `W=0`, THM-4241/4247/4249/4253 leave `280`
-  classes and `1,512` incidences; THM-4258/4259 and THM-4264 give observers.
-  [THM-4260](../01-canon/theorems/THM-4260-w0-canonical-node-reciprocal-denominator-attachment-exclusion.md)
-  excludes all classes in the gate interior.
-  [THM-4265](../01-canon/theorems/THM-4265-w0-reduced-wall-factor-and-transverse-jacobian-reduction.md)
-  proves the reduced wall roots simple relative to THM-4260; only its formal
-  root-section/transverse-Jacobian consequence is conditional on a coherent lift.
-  [THM-4268](../01-canon/theorems/THM-4268-relative-abelian-map-incidence-properness-and-w0-collar.md)
-  gives a non-effective proper-incidence collar.
+  `M=8--10`; THM-4222/4232/4248 close `M=11` off `A*B*(A+B)=0`, THM-4226
+  closes dense `M=13`, and THM-4230 reduces `M=12` to hidden `E_0`. At `W=0`,
+  THM-4241/4247/4249/4253/4260
+  exhaust all `1,512` gate incidences; THM-4258/4259/4264 are observers.
+  THM-4265 proves reduced roots simple (lift consequence conditional), and
+  THM-4268 gives a non-effective collar;
   [THM-4272](../01-canon/theorems/THM-4272-lambda-zero-a23-contact-and-e0-infinity-jet-obstruction.md)
-  crosses `Lambda=0` for honest incidence via an `A_23` contact and `E_0`
-  ramification `1,2,4,7`; raw Keller descent, endpoints, complement and entry stay open.
+  crosses `Lambda=0` for honest incidence via `A_23` and ramification
+  `1,2,4,7`. Raw Keller descent, endpoints, complement and entry stay open.
   Exceptional quartic: THM-3703/3737 give grammar/image, THM-4034 the
   conductor, and THM-4039/4043/4046 reach `J_7`, obstruct `J_8`, and close
   critical `H`. [THM-4054](../01-canon/theorems/THM-4054-exceptional-affine-simple-zero-retained-packet.md)
