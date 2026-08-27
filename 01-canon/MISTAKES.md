@@ -9,6 +9,23 @@ Format per entry:
 - Why it was wrong
 - The correct framing
 
+## MISTAKE-526 (2026-08-26, THM-4242 hardening follow-through) -- an in-body source hash was not updated with the hardened replay
+
+- **What failed:** the THM-4242 cross-residual checker was changed from bare
+  Python `assert` statements to optimization-safe `require` gates, and its
+  frontmatter was updated to the new source hash.  The reproduction table in
+  the theorem body still displayed the superseded pre-hardening hash.
+- **Minimal witness / first failed implication:** the current script and YAML
+  both hash to `1406ca5231655c237f4d4c2d4e0f3cba8e03017cebc03bd70ecf7c1955647d15`,
+  while the body table retained `07d5b2e2...fe7009`.  Thus the mathematical
+  replay was sound, but the theorem had two incompatible source identities.
+- **Repair / strongest survivor:** the body table now matches the current
+  script and YAML.  The frozen output hash and every THM-4242 mathematical
+  conclusion are unchanged.
+- **Reusable rule:** when hardening or otherwise changing a canonical script,
+  search the consuming theorem for every copy of its hash, not only YAML
+  metadata, and replay after updating the complete hash surface.
+
 ## MISTAKE-525 (2026-08-26, THM-4241 replay portability audit) -- a Smith-normal-form unit sign was treated as canonical
 
 - **What failed:** THM-4241's Python certificate compared the signed diagonal

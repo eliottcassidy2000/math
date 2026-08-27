@@ -440,7 +440,7 @@ stream with the correspondingly named frozen output in `05-knowledge/results`.
 | fibre independent source | `76492bbcce17868f24d93da7772aa7e5b5572e9e712f2682db893c7cb868292e` |
 | fibre primary output | `268c483f7cdf35d03e5660d840332954cf5a5460774ef0cbaff751d18aa98ce1` |
 | fibre independent output | `6d976c65a7b5ef7d4f95c9d2b91f185d16fee97ef4f5e711d35b8f02036494e8` |
-| cross-residual source | `07d5b2e29cfd00a119d9b7217dee8e6cda4cd035edebe442b35c234fe8fe7009` |
+| cross-residual source | `1406ca5231655c237f4d4c2d4e0f3cba8e03017cebc03bd70ecf7c1955647d15` |
 | cross-residual output | `79567c4a6e3becde07a03ece58be16ecf955ec24383505e90c3227bc417166bb` |
 
 The primary/independent output hash pairs for `k=5,...,9` are respectively
