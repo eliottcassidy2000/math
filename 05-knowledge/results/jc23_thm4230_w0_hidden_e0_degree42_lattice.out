@@ -6,6 +6,7 @@ hermitian_gram=[[6,-4-2omega],[-4-2omega^2,6]] det=24
 four_maps=f,Tf,f+Tf,T(f+Tf)=Tf-omega*f (up to O-units)
 degree42_vectors=192 unit_tau_orbits=16 determinant_norms={13: 48, 49: 48, 61: 48, 73: 48}
 degree34_vectors=0 reason=all_L_degrees_divisible_by_6
+characteristic_zero_denominator_bound=map_degree:42,X_pole_degree:84,coarse:14,odd_refinement:13
 finite_field=q:313,z:29,p:135,s:21 reps:16 denominator_degrees:13 reciprocal_gcd_degrees:0 denominator_sha256:030b2914934a99696461406d869f59aad735e2f6256a082dd76c7b54591b84c5
 finite_field=q:349,z:24,p:246,s:28 reps:16 denominator_degrees:13 reciprocal_gcd_degrees:0 denominator_sha256:8f085c395d9f3d9ba4028f11773c6bcc172aa309c8d6f598bfcb01780dc11d94
 finite_field=q:373,z:69,p:297,s:33 reps:16 denominator_degrees:13 reciprocal_gcd_degrees:0 denominator_sha256:7ede4e76aa3638407f7b945d48ed849dab5b9a21eb18b108b94d93b59d1fcf26

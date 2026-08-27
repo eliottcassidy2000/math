@@ -71,14 +71,11 @@ is the safe control `M(S_13)=99/338`. No cited result proves LRC(14).
   THM-4105/4106 are reciprocal decoders; THM-4107/4108 are tournament/radical
   firewalls. THM-4110 finds `64` AP13 sheets; THM-4116 gives
   `2^(c(F)-1)`. Safety/arrival stay open.
-- **Owner/tail:** THM-4156/4191 close zero/one layers. [THM-4231](../01-canon/theorems/THM-4231-arbitrary-pair-cofinal-depth-six-haar-repair-and-exact-outsider-lift.md)
-  fills every `C(32,11)` chart for distinct `q,r>=1290` by a direct cutoff
-  `1307` plus an audited 289-pair triangle, and closes `q=1,r>=542`.
-  [THM-4227](../01-canon/theorems/THM-4227-two-outsider-scale-separated-depth-eight-haar-wedge.md)/
-  [4228](../01-canon/theorems/THM-4228-common-gcd-two-outsider-periodic-observable-haar-ray.md)
-  retain scale/gcd methods; coverage-subsumed [THM-4233](../01-canon/theorems/THM-4233-pair-specific-primitive-observable-oscillation-haar-charts.md)
-  retains a primitive-ratio/unimodular compiler and proves its exact
-  period-seven sufficient-gate transition at `k=748`. [THM-4234](../01-canon/theorems/THM-4234-fixed-fifty-twenty-label-pair-haar-charts.md)
+- **Owner/tail:** [THM-4231](../01-canon/theorems/THM-4231-arbitrary-pair-cofinal-depth-six-haar-repair-and-exact-outsider-lift.md)
+  fills every chart for distinct `q,r>=1290` and `q=1,r>=542`; THM-4227/4228
+  retain scale/gcd methods. Coverage-subsumed [THM-4233](../01-canon/theorems/THM-4233-pair-specific-primitive-observable-oscillation-haar-charts.md)
+  retains its primitive/unimodular compiler and exact sufficient gate `k>=748`.
+  [THM-4234](../01-canon/theorems/THM-4234-fixed-fifty-twenty-label-pair-haar-charts.md)
   closes 66 residual fixed-`50` pair charts and one triple. Other rays have
   smaller label `2..1289`; arbitrary entry stays open.
 - **PROVED:** [THM-2928](../01-canon/theorems/THM-2928-critical-seven-comb-grid-tensorization-and-drift-tariff.md)/2941: literal zero/one/two/three-drift sectors are empty; `k=2,3` are finite.
@@ -275,8 +272,9 @@ THM-2070 refutes the general HYP-8890/8895 bypasses.  Transfer
   [THM-4223](../01-canon/theorems/THM-4223-cyclic-cut-cover-boolean-mobius-hierarchy-and-two-bad-owner-obstruction.md)
   gives lower owner-set Mobius and the first naive-pair failure at order nine;
   [THM-4224](../01-canon/theorems/THM-4224-order-ten-minimal-plus-min-two-bad-owner-obstruction.md)
-  makes `+min` failure minimal at order ten, rules out fixed `product+K min`,
-  and leaves a hostile family HYP-positive;
+  makes `+min` first fail at order ten, resolves its tail fibers, rules out
+  fixed additive multiples of normalized `rho` (with or without `min`), and
+  verifies 97 fixed-gauge order-eleven presentations—not a class census;
   [THM-4225](../01-canon/theorems/THM-4225-bad-owner-upper-zeta-successor-rook-hierarchy.md)
   gives upper zeta as cycle-free successor rooks. The `27/25` candidate,
   HYP-9081, `(OS+)`, and THM-4114/4118 remain **OPEN**.
@@ -376,8 +374,10 @@ lift/phase clocks.
   dense and complete `zeta=0` exact `M=10`, including the split conic;
   THM-4222/[4232](../01-canon/theorems/THM-4232-weight-eleven-u-zero-primitive-cm-planar-jacobian-exclusion.md) close `M=11` off four walls; THM-4226 closes dense `M=13`.
   [THM-4230](../01-canon/theorems/THM-4230-exact-weight-twelve-cyclotomic-prym-planar-jacobian-squeeze.md)
-  reduces its `M=12` gate to a proper countable nonempty hidden-`E_0` locus;
-  that locus, walls, entry, and JC(2) stay open.
+  reduces its `M=12` gate to a proper countable hidden-`E_0` locus; at `W=0`,
+  an explicit rank-two lattice has no degree-`34` or attachment-collapsing
+  degree-`42` map. Saturation/gluing, the rest of the locus, walls, entry, and
+  JC(2) stay open.
   Exceptional quartic: THM-3703/3737 give grammar/image, THM-4034 the
   conductor, and THM-4039/4043/4046 reach `J_7`, obstruct `J_8`, and close
   critical `H`. [THM-4054](../01-canon/theorems/THM-4054-exceptional-affine-simple-zero-retained-packet.md)

@@ -61,8 +61,8 @@ explicit_w0_map_independent_audit_script_sha256: e648e25d9cc8860fcab911dded2eb12
 explicit_w0_map_independent_audit_output_sha256: 3853c7cd9971065c13e981324793f72fa70c677440e6f13c621fc577059cdc2c
 explicit_w0_lattice_script: 04-computation/jc23_thm4230_w0_hidden_e0_degree42_lattice.py
 explicit_w0_lattice_output: 05-knowledge/results/jc23_thm4230_w0_hidden_e0_degree42_lattice.out
-explicit_w0_lattice_script_sha256: 6c249f8403c1fc41c9010c55747d1d703688022283f9cac9ddb730025aef6ef7
-explicit_w0_lattice_output_sha256: 5e57d1301cc94015bd8c088617b5b896165145c025d09768c2a74995afecc02b
+explicit_w0_lattice_script_sha256: e33c8c8edba33e132abcfd8691be5df6d2fc918328d911275fe05642cfa82935
+explicit_w0_lattice_output_sha256: 5d6bcc4fc2ec94e52a7a528c0593401629d4543bd875cd66569beede3c67cedc
 hash_basis: raw LF bytes
 audit: >
   PASS. The primary SymPy certificate executes 16,548 exact checks over all
@@ -508,7 +508,8 @@ c=(t-t^-1)/2.                                          (34j)
 
 Thus they split into the two six-point fibres at `t` and `-1/t`, exchanged
 by `tau`; within either fibre, `sigma` and `iota` generate the three CM
-rotates and their negatives. If `f_a` took one common value on a six-point
+rotates and their negatives. Here `t=+-1` would force `Z=0`, so the gate makes
+both fibres genuine and disjoint. If `f_a` took one common value on a six-point
 fibre, that value would lie in both `E_0[3]` and `E_0[2]`, hence would be the
 origin. But `(34e)` is affine there: `t=0,infinity` would force a vanished
 gate endpoint, while `t=+-i` is exactly `U+Z=0`, excluded by `(3)`. Therefore
@@ -578,27 +579,59 @@ determinant norms 13,49,61,73, each with multiplicity 48. (34q)
 ```
 
 For a representative `h=af+bg`, attachment collapse is equivalent to
-`h(A)=Th(A)=O`. If `d_h(t)` is the reduced `X`-denominator, this would force
-a common root of
+`h(A)=Th(A)=O`. Write `X_h=xA_h(t)` and let `d_h(t)` be the reduced
+denominator of `A_h` over `K=Q(a,s,omega)`. This would force a common root of
 
 ```text
 d_h(t)             and             t^deg(d_h)d_h(-1/t). (34r)
 ```
 
-All sixteen representatives have `deg d_h=13`. In each of four exact good
-reductions
+There is a characteristic-zero degree bound missing from a bare modular
+test. Both coefficient pairs `(X/x,Y/y)` for `f,g` lie in
+`t^-1 K[t^2]`, and `c=y^2/x^3=(t^2-1)/(2t)` is odd. In the coefficient-form
+addition law
+
+```text
+A_(P+Q)=c((B_Q-B_P)/(A_Q-A_P))^2-A_P-A_Q,
+B_(P+Q)=((B_Q-B_P)/(A_Q-A_P))(A_P-A_(P+Q))-B_P,
+```
+
+odd pairs map to odd pairs; doubling, negation, and multiplication by
+`omega` preserve this. Hence `A_h(-t)=-A_h(t)`. On the smooth projective
+normalization of `C_0`, both points over `t=0` map to `O` under `f` and `g`,
+so every nonzero degree-42 `h` also maps them to `O`. Thus `A_h` has a pole at
+zero. Coprimality of its numerator and denominator now forces `d_h` itself to
+be odd, so `deg d_h` is odd.
+
+If a finite root of `d_h` has multiplicity `e`, it contributes at least `6e`
+to the pole divisor of `X_h=xA_h`, except that `t=0` contributes `6e-2`;
+at `t=+-i` the contribution is `6e+2`. Indeed `t=+-1` has three points of
+ramification two, `t=+-i` has one point of ramification six and
+`ord(x)=-2`, and every other fibre has six unramified points. Therefore the
+finite poles contribute at least
+
+```text
+6 deg(d_h)-2 <= deg((X_h)_infinity)=2 deg(h)=84.
+```
+
+So `deg d_h<=14`, and oddness sharpens this to `deg d_h<=13`.
+
+In each of four exact good reductions
 
 ```text
 (q,xi_12,a,s)=(313,29,135,21), (349,24,246,28),
                (373,69,297,33), (397,157,161,27),     (34s)
 ```
 
-the gcd in `(34r)` has degree zero. The embeddings satisfy the cyclotomic,
-quadratic-root, and sixth-root equations with nonzero derivatives, and the
-denominator degree is preserved. Thus a characteristic-zero common factor,
-whose resultant would reduce to zero in every good embedding, is impossible.
-This is a finite-exact exclusion of attachment collapse for every degree-42
-vector in `L_exp`.
+the reduced denominator has degree `13` and the gcd in `(34r)` has degree
+zero. The embeddings satisfy the cyclotomic, quadratic-root, and sixth-root
+equations with nonzero derivatives. Specialization cannot increase reduced
+denominator degree, so the characteristic-zero bound forces `deg d_h=13` and
+proves degree preservation. A characteristic-zero common factor would make
+the resultant zero in any good specialization where these coefficients are
+defined, contradicting the displayed gcd-one reductions. One prime suffices
+logically; four are hostile controls. This is a finite-exact exclusion of
+attachment collapse for every degree-42 vector in `L_exp`.
 
 On the rank-one line there is also a symbolic control. The two norm-seven
 CM kernels have `X`-coordinates satisfying
@@ -689,10 +722,10 @@ importing the primary implementation. The dedicated saturation certificate
 exhausts all sixteen coefficient pairs on all four elements of `F_4`. The two
 explicit-map paths respectively use exact SymPy elimination and a hand-written
 quotient ring. The hidden-lattice certificate checks the characteristic-zero
-addition/Gram identities, the complete bounded degree-42 census, four good
-finite-field attachment resultants, and the independent symbolic norm-seven
-resultant. Its finite-field statement is **FINITE-EXACT**; the map and
-rank-one identities are exact algebra.
+addition/Gram identities and pole-budget ledger, the complete bounded
+degree-42 census, four good finite-field attachment resultants, and the
+independent symbolic norm-seven resultant. Its finite-field statement is
+**FINITE-EXACT**; the degree bound, map, and rank-one identities are exact.
 
 The computations do not prove the stated standard CM/Prym/Torelli inputs,
 classify `H_0`, handle walls, prove entry, or prove `JC(2)`. These are explicit

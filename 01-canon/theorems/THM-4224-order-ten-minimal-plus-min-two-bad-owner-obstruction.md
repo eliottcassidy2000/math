@@ -4,30 +4,42 @@ title: "Order-ten minimal plus-min two-bad-owner obstruction"
 status: >
   PROVED / REFUTED / FINITE-EXACT / VERIFIED-EXACT / OPEN FIREWALL.
   Refutes B_ij<=End_i End_j+min(End_i,End_j) first at strong order ten and
-  on an infinite two-reversal family; proves no fixed multiple of the min
-  term can repair the product bound; and proves the same family has a
-  strictly positive exact HYP-9081 five-copy gap in every order. The
-  multiplicative candidate 25B_ij<=27End_iEnd_j is only FINITE-EXACT through
-  order nine and valid on this family; it remains OPEN and would not by
-  itself imply HYP-9081.
+  resolves every tail fiber of an infinite two-reversal family; proves no
+  fixed multiple of either the min term or the two-owner successor-rook count
+  can repair the product bound; and proves the family has a strictly positive
+  exact HYP-9081 five-copy gap in every order. In the fixed transitive-order
+  gauge, all 97 strong labelled order-eleven presentations with exactly two
+  reversed arcs satisfy HYP-9081, 25B_ij<=27End_iEnd_j, and the coefficient-one
+  successor-rook repair. This sphere is not an isomorphism-class census. At
+  order eleven all three assertions remain OPEN outside it; globally the
+  coefficient-one rook repair is refuted by the order-twelve X_7.
 source: codex-five-copy-switching-continuation-20260826
 depends_on:
   - THM-4219-no-sink-endpoint-energy-floor-and-near-ordinal-sharpness
   - THM-4223-cyclic-cut-cover-boolean-mobius-hierarchy-and-two-bad-owner-obstruction
+  - THM-4225-bad-owner-upper-zeta-successor-rook-hierarchy
 related:
   - HYP-9081-strong-tournament-five-copy-endpoint-energy-inequality
 script: 04-computation/tournament_plus_min_obstruction_thm4224.cpp
 output: 05-knowledge/results/tournament_plus_min_obstruction_thm4224.out
 script_sha256: 4c0b1ac8f80cf41d9091420c852e1bd7595fed94105ff577535d4939fc88afb6
 output_sha256: fd7392cb630dbcd27bc4c8317fcc0a4c3c998cf321e4cb26e34eb88b43b2ab37
+secondary_script: 04-computation/tournament_order11_tail_fiber_thm4224.py
+secondary_output: 05-knowledge/results/tournament_order11_tail_fiber_thm4224.out
+secondary_script_sha256: 3c9ad5de462dcc71d4312bba12b42086d4e1e43520b5209b4a807f762d059c18
+secondary_output_sha256: 6f88b500029fa9b9ddaff00503e5b26676880073a6e34ef121e8cc1e05cef451
 hash_basis: raw LF bytes
 audit: >
   PASS. A literal scan of all 10! linear orders and all 9! cyclic orders of
   the order-ten witness independently counts H, every End_i and D_i, c,
   N_89, and B_89. A separate subset-DP engine checks every displayed family
   formula for m=1..12. Homebrew nauty 2.9.3 supplies every strong class
-  through order nine for the exact ratio census. Optimized/unoptimized and
-  sanitizer controls are frozen in the output.
+  through order nine for the exact ratio census. A standard-library companion
+  checks the algebraic consequences of the proved interior-tail identities,
+  independently checks X_m through m=7, and exhausts the fixed-gauge
+  exactly-two-reversal order-eleven sphere:
+  97 strong labelled presentations and 5,335 pair rows. Optimized/unoptimized,
+  hash-seed, and sanitizer controls are frozen in the outputs.
 ---
 
 # THM-4224 -- order-ten minimal plus-min two-bad-owner obstruction
@@ -404,17 +416,181 @@ Boolean nonnegativity, total cyclic mass, reversal moments, owner marginals,
 a feasible strong score sequence, and even `(21)` do not logically force
 HYP-9081. Actual successor-compatible switching data remain indispensable.
 
-## 5. Audit and exact scope
+## 5. Interior tail fibers and the order-eleven two-reversal sphere
 
-The audit has three independent lanes:
+### 5.1 Every interior tail fiber
+
+Fix `1<=t<m` and put `u=2^(t-1)`. The endpoint `x_t`, rather than only the
+terminal `r=x_m`, has a closed profile:
+
+```text
+End_(x_t)=5u,                 N_(x_t,z)=32u,
+B_(x_t,z)=27u-4.                                      (37)
+```
+
+To end a Hamilton path at `x_t`, every later tail vertex
+`x_(t+1),...,x_m` is forced into the increasing block before `z`; after the
+unique descent `z->3`, an arbitrary subset of the earlier tail lies in that
+block and its complement forms the final increasing suffix to `x_t`. The
+five core paths `(8)` and the `2^(t-1)` earlier-tail choices give the first
+formula in `(37)`.
+
+For a two-path cover ending at `{x_t,z}`, no later tail vertex can lie in the
+`x_t`-component: without `z` it has no descent to a smaller tail vertex.
+Consequently every later tail vertex lies in the `z`-component. This component
+is nonempty beyond its core, so the seven terminal exclusions `(12)` disappear.
+The full core partition sum `32` and the same earlier-tail choices give
+`N_(x_t,z)=32u`. Substitution into `(6)`, using `c=1` and `End_z=5`, gives the
+last formula in `(37)`.
+
+With `P_(t,z)=End_(x_t)End_z=25u`, the three exact diagnostics are
+
+```text
+B_(x_t,z)-P_(t,z)=2^t-4,
+B_(x_t,z)-P_(t,z)-min(End_(x_t),End_z)=2^t-9,
+27P_(t,z)-25B_(x_t,z)=100.                              (38)
+```
+
+Thus the product bound fails on the interior fiber exactly for `t>=3`, the
+`+min` repair fails exactly for `t>=4`, and the open `27/25` candidate has
+constant positive cross-multiplied slack `100`. At `t=3`, the order-nine row
+has `B/P=104/100`; at `t=4`, the order-ten row has
+`B=212>200+5`. The mechanism is the forced nonempty later tail: it removes
+the seven exclusions present at the terminal fiber, rather than changing the
+core partition count.
+
+### 5.2 Successor rooks do not give an all-order local repair
+
+Use THM-4225's two-owner successor-rook count
+
+```text
+rho_ij=d_i^- d_j^- - kappa_ij.                           (39)
+```
+
+On an interior tail pair and on the terminal pair respectively,
+
+```text
+rho_(x_t,z)=(t+3)(m+3)-(t+2),
+rho_(r,z)=m^2+5m+7.                                     (40)
+```
+
+Indeed `d_(x_t)^-=t+3`, `d_z^-=m+3`, and their common-inneighbour count is
+`t+2`; put `t=m` for the terminal formula. Since
+
+```text
+B_(r,z)-End_r End_z=2^m-11,                             (41)
+```
+
+while both `rho_(r,z)` and `rho_(r,z)+min(End_r,End_z)` grow only
+quadratically, no fixed `K>=0` can make either
+
+```text
+B_ij<=End_i End_j+K rho_ij,
+B_ij<=End_i End_j+K(rho_ij+min(End_i,End_j))             (42)
+```
+
+valid for all strong tournaments.
+
+The coefficient-one boundary is exact:
+
+```text
+End_r End_z+rho_(r,z)-B_(r,z)=m^2+5m+18-2^m,
+End_r End_z+min(End_r,End_z)+rho_(r,z)-B_(r,z)
+                                      =m^2+5m+23-2^m.   (43)
+```
+
+Both margins are nonnegative exactly for `m<=6`. Direct evaluation handles
+that finite range; at `m=7` both are negative, and the forward difference
+`2m+6-2^m` is then strictly decreasing. Thus the order-eleven `X_6` is the
+last terminal survivor,
+
+```text
+(B,P,min,rho)=(853,800,5,73),       margins=(20,25),     (44)
+```
+
+whereas order twelve `X_7` is the first terminal failure,
+
+```text
+(B,P,min,rho)=(1717,1600,5,91),     margins=(-26,-21).   (45)
+```
+
+Thus no fixed additive multiple of the normalized two-rook count `rho`, with
+or without `min`, captures the weighted successor completions lost by that
+local pair statistic. This does not refute the raw upper-zeta bound
+`B_ij<=Z_ij=(n-3)!rho_ij`, which is tautological.
+
+### 5.3 Exact fixed-gauge order-eleven sphere
+
+Fix the labelled transitive order `0<...<10` and reverse exactly two of its
+`55` arcs. Among the `binom(55,2)=1485` resulting labelled presentations,
+exactly `97` are strong. The exact reachability classification is the disjoint
+union
+
+```text
+{ {(0,10),e}: e notin {(0,10),(0,1),(9,10)} }
+union
+{ {(0,b),(c,10)}: 1<=c<=b<=9 },                         (46)
+```
+
+of sizes `52` and `45`. Their total `97` equals `n^2-2n-2` at `n=11`; the
+companion compares `(46)` with direct strong-connectivity tests on all `1485`
+candidates.
+
+> **Finite-exact order-eleven sphere.** On all `97` strong presentations and
+> all `97*55=5,335` unordered owner pairs, the five-copy gap is strictly
+> positive and
+>
+> ```text
+> 25B_ij<=27End_iEnd_j,              B_ij<=End_iEnd_j+rho_ij.  (47)
+> ```
+
+There are four product failures and three `+min` failures inside the sphere.
+The largest local ratio is `107/100`, uniquely at the interior pair
+`(x_5,z)` of `X_6`, where `(B,P)=(428,400)`. The largest positive normalized
+rook excess is `53/73`, at the terminal pair of `X_6`.
+
+The smallest five-copy gap is `27,894,642`, attained by three labelled
+presentations of one tournament: a transitive ten-vertex prefix plus a final
+vertex beating exactly prefix vertices `0` and `8`. There the exact target
+and energy are `1,134,462,087` and `221,313,489`, so their reduced ratio is
+`378154029/73771163>5`, while the largest local `B/P` is only `1`. Local
+pair severity and global five-copy closeness are therefore genuinely
+different coordinates even in this small shell.
+
+This sphere is presentation-dependent. In the fixed gauge `X_6` has reversal
+set `{(0,3),(3,10)}`, but swapping labels `0,1` gives the isomorphic
+three-reversal presentation `{(0,1),(1,3),(3,10)}`. Hence `(47)` is neither an
+isomorphism-class census nor a radius-two ball. For arbitrary strong order
+eleven, both inequalities in `(47)` and HYP-9081 remain **OPEN** outside this
+sphere. All-order `27/25`, HYP-9081, and `(OS+)` also remain **OPEN**; the
+coefficient-one rook repair is globally **REFUTED** by `(45)`.
+
+## 6. Audit and exact scope
+
+The audit has four independent lanes:
 
 1. a literal order-ten engine scans all `10!` linear permutations and the
    `9!` cyclic representatives beginning at vertex zero, with no subset DP;
 2. a subset Hamilton-path DP checks `(7)`, `(24)--(29)` for `m=1,...,12`;
 3. `gentourng -c` supplies every strong isomorphism class through order nine
-   for the exact ratio census `(23)`.
+   for the exact ratio census `(23)`;
+4. the standard-library companion checks the algebraic consequences of
+   `(37)--(45)`, independently verifies every interior tail pair for
+   `m=2,...,7`, and exhausts the exact sphere `(46)`, including its 5,335 pair
+   rows and gauge controls. The all-`m` quantifier comes from the prose
+   forced-tail bijection, not this finite replay.
 
-The stored output freezes commands, values, compiler controls, and hashes.
+Replay the new lane with
+
+```bash
+python3 -B 04-computation/tournament_order11_tail_fiber_thm4224.py
+python3 -B -O 04-computation/tournament_order11_tail_fiber_thm4224.py
+PYTHONHASHSEED=4224 python3 -B \
+  04-computation/tournament_order11_tail_fiber_thm4224.py
+```
+
+All streams byte-match the frozen output. The stored outputs freeze commands,
+values, compiler controls, and hashes.
 The all-order family formulas and positivity are proved above; the literal
 and finite DP ranges are audits, not the source of their quantifiers.
 

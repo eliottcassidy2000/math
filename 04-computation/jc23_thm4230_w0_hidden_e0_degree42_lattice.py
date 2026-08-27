@@ -11,7 +11,8 @@ the rank-two Eisenstein lattice L=O f + O g (O=Z[zeta_3]), and the twelve
 attachment points.  It proves/certifies only statements about this explicit
 sub-lattice L; saturation in the full hidden Hom lattice is not asserted.
 
-The attachment certificate uses exact finite fields, not floating point.
+The attachment certificate combines an analytic characteristic-zero pole
+budget with exact finite fields; it uses no floating point.
 For h in L the twelve attachments are one tau orbit and T^2=-zeta_3.  A
 common attachment value is therefore O, and collapse is equivalent to a
 simultaneous pole of h and T h.  If d_h(t) is the reduced X-coordinate
@@ -268,6 +269,30 @@ def enumerate_degree_42() -> tuple[list[LatticeVector], list[LatticeVector], Cou
 # ---------------------------------------------------------------------------
 
 
+def denominator_degree_budget() -> dict[str, int]:
+    """Freeze the integer ledger behind the characteristic-zero bound.
+
+    The proof in THM-4230 shows that the reduced denominator of A_h=X_h/x
+    is odd and that its finite roots contribute at least 6*deg(d_h)-2 to
+    the X-pole divisor. A degree-42 map has total X-pole degree 84.
+    """
+
+    map_degree = 42
+    total_x_pole_degree = 2 * map_degree
+    coarse_denominator_bound = (total_x_pole_degree + 2) // 6
+    largest_odd_denominator_degree = 13
+    require(total_x_pole_degree == 84, "X-pole budget changed")
+    require(coarse_denominator_bound == 14, "coarse denominator bound changed")
+    require(largest_odd_denominator_degree <= coarse_denominator_bound,
+            "odd denominator refinement changed")
+    return {
+        "map_degree": map_degree,
+        "total_x_pole_degree": total_x_pole_degree,
+        "coarse_denominator_bound": coarse_denominator_bound,
+        "largest_odd_denominator_degree": largest_odd_denominator_degree,
+    }
+
+
 Point = Optional[tuple[object, object]]
 
 
@@ -479,6 +504,7 @@ def rank_one_resultant_certificate() -> dict[str, int | str]:
 def main() -> None:
     symbolic = symbolic_tau_and_gram()
     vectors, representatives, determinant_norms = enumerate_degree_42()
+    degree_budget = denominator_degree_budget()
     rank_one = rank_one_resultant_certificate()
 
     embeddings = (
@@ -517,6 +543,13 @@ def main() -> None:
         f"determinant_norms={dict(sorted(determinant_norms.items()))}"
     )
     print("degree34_vectors=0 reason=all_L_degrees_divisible_by_6")
+    print(
+        "characteristic_zero_denominator_bound="
+        f"map_degree:{degree_budget['map_degree']},"
+        f"X_pole_degree:{degree_budget['total_x_pole_degree']},"
+        f"coarse:{degree_budget['coarse_denominator_bound']},"
+        f"odd_refinement:{degree_budget['largest_odd_denominator_degree']}"
+    )
     for embedding, digest in finite_rows:
         q, z, p, scale = embedding
         print(
