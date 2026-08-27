@@ -1,12 +1,12 @@
 ---
-id: THM-4277
+id: THM-4278
 title: "Endpoint 520,688 minimum one-atom carrier augmentation"
 status: RESERVED / UNPROVED EMPTY STUB
 source: codex-creative-frontiers-20260827
 depends_on: []
 ---
 
-# THM-4277 -- endpoint `(520,688)` minimum one-atom carrier augmentation
+# THM-4278 -- endpoint `(520,688)` minimum one-atom carrier augmentation
 
 **RESERVED / UNPROVED EMPTY STUB.** No mathematical claim is made here. This
 namespace is reserved for the independently audited classification of all
