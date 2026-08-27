@@ -33,7 +33,7 @@ fibre_primary_script: 04-computation/lrc14_five_fiber_certificate_census_thm4242
 fibre_independent_script: 04-computation/lrc14_five_fiber_certificate_census_independent_audit_thm4242.cpp
 cross_residual_script: 04-computation/lrc14_thm4231_4238_4242_cross_residual_postprocess_20260826.py
 cross_residual_output: 05-knowledge/results/lrc14_thm4231_4238_4242_cross_residual_postprocess_20260826.out
-cross_residual_script_sha256: 07d5b2e29cfd00a119d9b7217dee8e6cda4cd035edebe442b35c234fe8fe7009
+cross_residual_script_sha256: 1406ca5231655c237f4d4c2d4e0f3cba8e03017cebc03bd70ecf7c1955647d15
 cross_residual_output_sha256: 79567c4a6e3becde07a03ece58be16ecf955ec24383505e90c3227bc417166bb
 hash_basis: raw LF bytes
 audit: >
@@ -43,8 +43,9 @@ audit: >
   bodies and checks every one of their 258 literal rows by two independent
   integrators. The selected chart agrees on all 16 higher faces and all
   88,007,232 literal comparisons. An exact proof-graph postprocess removes 36
-  fixed-fifty edges from the inherited residual. No computation uses floating
-  point or sampling.
+  fixed-fifty edges from the inherited residual; explicit runtime gates remain
+  active under Python optimization, and normal/optimized transcripts match.
+  No computation uses floating point or sampling.
 ---
 
 # THM-4242 -- fixed-fifty direct r590 tail, twenty-three-label chart, and gcd-fibre tariff

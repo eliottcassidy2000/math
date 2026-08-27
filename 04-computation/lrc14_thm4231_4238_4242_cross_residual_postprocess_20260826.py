@@ -11,6 +11,11 @@ import runpy
 from collections import defaultdict
 
 
+def require(condition, message):
+    if not condition:
+        raise RuntimeError(message)
+
+
 BASE_POSTPROCESS = (
     "04-computation/"
     "lrc14_thm4231_4238_cross_residual_postprocess_20260826.py"
@@ -22,8 +27,11 @@ with contextlib.redirect_stdout(sink):
 
 base_residual = base["aggregate_residual"]
 edge_fnv = base["edge_fnv"]
-assert len(base_residual) == 181_162
-assert edge_fnv(base_residual) == 0x7E5F6AF58A370E3A
+require(len(base_residual) == 181_162, "base residual count changed")
+require(
+    edge_fnv(base_residual) == 0x7E5F6AF58A370E3A,
+    "base residual fingerprint changed",
+)
 
 # THM-4242 proves every pool body safe on the entire fixed-50 ray r>=590.
 # Its intersection with the current finite proof residual is exactly this
@@ -34,41 +42,49 @@ proved_intersection = [
     if 50 in edge and (edge[1] if edge[0] == 50 else edge[0]) >= 590
 ]
 expected_intersection = [(50, r) for r in range(590, 626)]
-assert proved_intersection == expected_intersection
-assert edge_fnv(proved_intersection) == 0xF50A5ABB6075F4ED
+require(proved_intersection == expected_intersection, "proved ray shape changed")
+require(
+    edge_fnv(proved_intersection) == 0xF50A5ABB6075F4ED,
+    "proved ray fingerprint changed",
+)
 
 proved_set = set(proved_intersection)
 aggregate_residual = [
     edge for edge in base_residual if edge not in proved_set
 ]
-assert len(aggregate_residual) == 181_126
-assert edge_fnv(aggregate_residual) == 0xBDF59726990A6C92
+require(len(aggregate_residual) == 181_126, "aggregate residual count changed")
+require(
+    edge_fnv(aggregate_residual) == 0xBDF59726990A6C92,
+    "aggregate residual fingerprint changed",
+)
 
 fixed50_slice = [edge for edge in aggregate_residual if 50 in edge]
 fixed50_max_other = max(
     b if a == 50 else a for a, b in fixed50_slice
 )
-assert len(fixed50_slice) == 556
-assert fixed50_max_other == 589
+require(len(fixed50_slice) == 556, "fixed-50 slice count changed")
+require(fixed50_max_other == 589, "fixed-50 slice endpoint changed")
 
 layers = defaultdict(list)
 for edge in aggregate_residual:
     layers[edge[1]].append(edge)
 max_endpoint = max(layers)
 top_layer = layers[max_endpoint]
-assert max_endpoint == 769
-assert top_layer == [(616, 769), (721, 769)]
+require(max_endpoint == 769, "top residual endpoint changed")
+require(top_layer == [(616, 769), (721, 769)], "top residual layer changed")
 
 encoded = b"".join(
     f"{a},{b}\n".encode("ascii") for a, b in aggregate_residual
 )
 edge_sha256 = hashlib.sha256(encoded).hexdigest()
-assert edge_sha256 == (
-    "c0e2fe1c69cfe8cfe6e633a1eca0d8d37ca991ecdaa04b98d7c595a99b9be6bf"
+require(
+    edge_sha256
+    == "c0e2fe1c69cfe8cfe6e633a1eca0d8d37ca991ecdaa04b98d7c595a99b9be6bf",
+    "aggregate residual SHA-256 changed",
 )
 
 removed_body_cases = len(proved_intersection) * 14_307_150
-assert removed_body_cases == 515_057_400
+require(removed_body_cases == 515_057_400, "removed body-case count changed")
 
 print("LRC14_THM4231_THM4238_THM4242_CROSS_RESIDUAL")
 print(
