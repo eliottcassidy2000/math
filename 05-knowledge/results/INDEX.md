@@ -1,5 +1,19 @@
 # Script Results Index
 
+- `confined_confluent_observer_transport_audit_thm4274.py` -> exact finite
+  controls for the confined-observer theorem [THM-4274 PROVED ABSTRACT LEMMA
+  + VERIFIED FINITE CONTROLS; no Jacobian, p-adic-density, Rule-30, or LRC(14)
+  consequence]. The theorem identifies preservation of full certificate
+  fibres with the exact kernel/pair-difference test, proves monic-prefix and
+  rectangular normal-Hasse completeness, retains cleared Bezout/resultant,
+  fixed-basis modular, total-capacity, and normalized-fibre sidecars, and
+  makes uniform integrability the exact sequential density gate. The audit
+  checks 340 field-gcd pairs, 324 candidate partition pairs, 348 modular-box
+  cells, all 512 target subsets, and sharp empty/nonmonic/torsion/resultant/
+  specialization/order/hazard/heavy-fibre hostiles. Source/output SHA-256:
+  `6a9307c753edc86cb862b07f69decd26c28c1cd9e798c31200244ccc9fd12bc9` /
+  `4ba8a9ecd01b5d84f3d0bddb555657b7e7319eb0040aad00ef7e3dabd14b519f`.
+
 - `lrc14_endpoint_542_732_minimum_one_atom_primary_thm4273.cpp` and literal
   joint-wall referee -> exact minimum carrier augmentation at historical
   `(542,732)` [THM-4273 PROVED RELATIVE TO THM-4254/4261 + FINITE-EXACT +

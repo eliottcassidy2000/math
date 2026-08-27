@@ -137,7 +137,8 @@ universal; merged marginals do not multiply; specialization gives no entry.
 
 **Evidence:** THM-4261/4262 (pair/ray repair); THM-4255/4263
 (graph jets, fibre weights, hazards); THM-4260/4264 (specialized exclusion,
-local observer, open normal lift).
+local observer, open normal lift); THM-4274 (complete observer first, then an
+exact quotient-kernel/pair-difference test and normalized-fibre audit).
 
 ## Complete decks from hostiles
 
