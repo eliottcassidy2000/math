@@ -21,9 +21,8 @@ Then read the routed frontier, guardrails, and theorem; logs are history.
 
 ## Seventeen high-signal facts
 
-1. **LRC(14) is first open.** THM-4266/4267/4269/4270 now leave exactly `177,323`
-   fixed-pool outsider-pair edges, maximum `688` with unique top `(520,688)`;
-   bulk/physical entry stay open.
+1. **LRC(14) is first open.** THM-4266/4267/4269/4270 leave `177,323`
+   fixed-pool pairs; the top is uniquely `(520,688)`. Bulk/entry stay open.
 2. **The `q <= 25` period claim is refuted.** THM-762/764 exhibit `26*{1,...,12} union {339}`, whose first good period is `27`.
 3. **Good-period existence is a maximum statement.** The tight resonant AP
    defeats average/count arguments; see MISTAKE-127/129/130.
