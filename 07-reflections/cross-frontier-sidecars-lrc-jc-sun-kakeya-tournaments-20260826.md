@@ -21,6 +21,7 @@ related:
   - THM-4227-two-outsider-scale-separated-depth-eight-haar-wedge
   - THM-4228-common-gcd-two-outsider-periodic-observable-haar-ray
   - THM-4231-arbitrary-pair-cofinal-depth-six-haar-repair-and-exact-outsider-lift
+  - THM-4233-pair-specific-primitive-observable-oscillation-haar-charts
   - THM-4234-fixed-fifty-twenty-label-pair-haar-charts
   - THM-4232-weight-eleven-u-zero-primitive-cm-planar-jacobian-exclusion
 script: 04-computation/sun_kakeya_lrc_jc_tournament_crossfeed_20260826.py
@@ -98,10 +99,11 @@ Boolean marginal or congruence   versus      ordered/Archimedean address.
 ```
 
 THM-4229/4234 succeed because they keep mass **and** circular component count
-until each certified finite outsider wall is checked. THM-4230 succeeds because it
-keeps the rational character decomposition **and** the integral polarized
-Hom lattice and node orbit. These are instances of the same research move,
-not maps between the two conjectures.
+until each certified finite outsider wall is checked. THM-4230 keeps the
+rational character decomposition, saturates the visible `E_0` Hom lattice
+through `J(B)`, and retains the connected Prym and node data; the hidden Prym
+Hom/node-annihilator lattice remains open. These are instances of the same
+research move, not maps between the two conjectures.
 
 ## 3. Exact companion observations
 
@@ -309,16 +311,17 @@ a complex obstruction.
 ```text
 source:     omitted LRC labels added to the fixed chart C;
 target:     one JC coefficient/modulus wall added to the open M12 chamber;
-map:        interior invariant -> finite boundary stratification;
-preserved:  direct target consequence (Haar margin / specialized degree);
+map:        no cross-problem object map; shared workflow is interior -> boundary strata;
+preserved:  none across problems; the target predicate is recomputed on every stratum;
 destroyed:  phase address / node Abel evaluation if only the interior scalar remains;
 sidecar:    LRC wall atoms and components / JC attachments and polarized Hom lattice;
 test:       after complete pair closure, first unresolved triple remainder;
             on the JC side, hidden-Hom node-annihilator strata.
 ```
 
-This contract describes a shared workflow. It does not identify omitted
-speed labels with JC coefficients.
+This is a workflow analogy, not a mathematical transfer: it does not identify
+omitted speed labels with JC coefficients. Its common proof obligation is to
+recompute the direct consequence on every boundary stratum.
 
 ## 5. The fixed-50 petal-pair graph is `K_12`; next is a typed hypergraph
 
@@ -369,7 +372,7 @@ The five recent mechanisms cover different parameter geometry:
 |:---|:---|:---|:---|:---|
 | THM-4227 | full `P` | ordered scale-separated wedge | first-comb component growth | asymmetric; misses comparable scales |
 | THM-4228 | full `P` | `gcd(q,r)>=3467` | joint primitive-period observable | misses coprime pairs |
-| THM-4231 | full `P` | symmetric `q,r>=1290` | Bonferroni mass/components plus a 289-pair literal patch | loses most finite pair correlation |
+| THM-4231 | full `P` | every `max(q,r)>=770`; exact 181,194-pair combined residual (pure-ray cutoff `825`) | fixed-ray mass/components, both orientations, plus literal joint walls | loses literal phase on the finite residual |
 | THM-4233 | full `P` | one coprime ray and a canceled-resonance family | pair-specific `(beta,omega)` and cyclotomic cancellation | coverage subsumed by THM-4231 |
 | THM-4234 | restricted `C` plus petals, center `50` | every finite outsider on 66 pairs; all 220 triple tails for `r>=589`; one universal triple | failure masks, cyclic adjacency, literal walls | fixed center and restricted chart |
 

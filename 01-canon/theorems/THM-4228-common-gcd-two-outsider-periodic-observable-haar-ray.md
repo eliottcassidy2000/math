@@ -99,7 +99,8 @@ min_(w in 2c(B union {q,r}) union {a,b})||wx||>=1/14. (6)
 
 The eleven even body labels and two odd tails in `(6)` are distinct, so these
 are infinite thirteen-speed LRC(14) families. The later THM-4231 covers every
-distinct `q,r>=1290`, so the present safety region is now subsumed. Its exact
+distinct outsider pair with `max(q,r)>=770`, so the present safety region is
+now subsumed. Its exact
 primitive-pair density and common-divisor mechanism remain distinct sidecars.
 It proves neither arbitrary finite pair entry nor full LRC(14).
 
@@ -491,8 +492,8 @@ The boundary is strict:
 1. `3467` is sharp only for the sufficient universal-density/primitive-
    oscillation activation deck. Exact pair geometry can succeed earlier.
 2. The theorem says nothing about distinct pairs with gcd below `3467`.
-   THM-4231 separately handles every such pair when both labels are at least
-   `1290`; smaller-coordinate entry remains open in general.
+   THM-4231 separately handles every such pair with maximum label at least
+   `770`; its exact finite combined residual remains open.
 3. The diagonal `u=v` analytically collapses to one comb and does not provide
    two distinct outsider labels.
 4. No arbitrary LRC(14) row is proved to enter this fixed-pool chart.

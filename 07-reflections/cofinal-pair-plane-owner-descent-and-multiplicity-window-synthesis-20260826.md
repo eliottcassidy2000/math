@@ -93,45 +93,73 @@ certificate-sharp direct theorem, not a claimed literal threshold.
 
 ### Pair-plane reduction
 
-Every still-uncovered pair now has
-
-```text
-min(q,r)<=1289.                                         (4)
-```
-
-For genuine outsiders, the infinite remainder is exactly the `1,259` rays
-indexed by `q in {1,...,1289}\P`, not the previous finite-box-plus-rays
-region. A cofinal theorem on each ray would leave a finite exact remainder. It
-is important not to call `(4)` a finite reduction before those tails are proved.
-
-The first ray is now proved by two independent full censuses:
-
-```text
-q=1, r>=542,        max_B kappa_1(B)=543.               (4a)
-```
-
-Here `543` is the exact certificate maximum. Its unique extremal body is
-literally safe at `r=542`, while every other body has certificate cutoff at
-most `530`; this closes the ray from `542` without claiming literal
-minimality.
-
-The same `B*` is the unique extremizer, but is literally safe at `r=542`.
-Thus only `1,258` unbounded outsider rays remain, plus a finite initial segment
-on the `q=1` ray.
-
-A broader exact primary also scans all `1,276` labels
-`q in {1,...,1306}\P` against all bodies: `18,255,923,400` cases. Every
-limiting surplus is positive and the global tail maximum is
+For each `q in {1,...,1306}\P`, retaining the exact mass and component count
+of every `G_(B union {q})` gives a fixed-ray cutoff `K(q)`. A primary
+split-zeta census and a clean-room truncated-Boolean census exhaust
+`1,276*14,307,150=18,255,923,400` cases. Every limiting surplus is positive,
+and the unique oriented maximum is
 
 ```text
 K=931 at q=1305,
-B={20,170,190,193,240,252,264,286,290}.                 (4b)
+B={20,170,190,193,240,252,264,286,290}.                 (4)
 ```
 
-The load-bearing ray has a separate exact replay, but the full range lacks an
-independent census. Hence the exterior safety claim `max(q,r)>=931` is
-**VERIFIED-SCRATCH**, not proved canon, pending that audit; its finite
-remainder is the box `max(q,r)<=930`.
+The global `931` is not the symmetric boundary. For outsiders `a<b`, use both
+orientations: the pair is certified if `b>=K(a)` or `a>=K(b)`. The complete
+table leaves exactly
+
+```text
+181,242 residual pairs,
+FNV=8a4e1370fb023907,
+largest endpoint edge={744,824}.                        (4a)
+```
+
+Thus every genuine outsider pair with `max(a,b)>=825` is proved safe, while
+`825` is exact only for this sufficient certificate. The separate fixed-one
+literal patch still improves its ray to `r>=542` even though `K(1)=543`.
+The primary full-range transcript agrees on the universe, positivity, `(4)`,
+and the normalized minimum; targeted primary replays give
+`K(744),K(824),K(825)=825,781,711`. Full-table digest agreement is not claimed.
+The result is a genuine finite reduction, but no edge of `(4a)` is thereby
+asserted literally unsafe.
+
+A native joint-wall census then audits exactly the 45 residual edges whose
+larger endpoint is at least `770`. It exhausts
+
+```text
+45 binom(30,9)=643,821,750
+```
+
+cases and finds every one strictly safe. `-O2/-O3` builds byte-agree, and a
+separate direct midpoint scanner reproduces every unique minimizer. Combining
+these with the inherited full-pool closures `{1,542}`, `{49,50}`, and
+`{50,51}` leaves
+
+```text
+181,194 residual pairs,
+FNV=3874fecac4ecbd8a,
+largest endpoint layer={{616,769},{721,769}}.           (4b)
+```
+
+Thus every genuine outsider pair with `max(a,b)>=770` is proved safe. The
+number `770` is exact only for the combined proof graph; the two pairs in
+`(4b)` are unclosed, not asserted unsafe.
+
+### What survives from the tournament ancestry
+
+The residual relation is intrinsic but undirected:
+
+```text
+{a,b} is an edge iff b<K(a) and a<K(b), for a<b.
+```
+
+It is therefore not a tournament. Label order may orient proof obligations,
+and the deficit pair `(K(a)-b,K(b)-a)` ranks which ray estimate nearly failed,
+but that orientation is a scheduler rather than a preserved mathematical
+target. The literal sweep is the required sidecar because it restores the
+joint phase erased by both ray bounds. The boundary owner moving from `744`
+to the pair of owners `616,721` after the 45-edge peel is useful signal: the
+old top hub encoded certificate slack, not demonstrated danger.
 
 [THM-4227](../01-canon/theorems/THM-4227-two-outsider-scale-separated-depth-eight-haar-wedge.md)
 and [THM-4228](../01-canon/theorems/THM-4228-common-gcd-two-outsider-periodic-observable-haar-ray.md)
@@ -148,7 +176,13 @@ with equality only at ratio `1:13` or its swap. These coordinates are natural
 inputs for the fixed-ray problem, where symmetric Bonferroni discards too much
 phase information.
 
-### Why the repair route disappeared at the optimum
+THM-4233 is likewise coverage-subsumed but method-new: its pair-specific
+`(beta,omega)` observable and cyclotomic cancellation retain primitive phase.
+THM-4234 is instead a complementary restricted chart on the residual `q=50`
+ray; its petal pair/triple results are positive controls inside the finite
+full-pool residual, not a full-pool closure.
+
+### Why the repair route disappeared at the certificate optimum
 
 The old depth-six activation transition remains exact:
 
@@ -247,6 +281,56 @@ not a coefficient. It must retain the polarized integral Hom lattice, all
 twelve attachment evaluations, and the node-annihilator condition. The
 independent support audit also restores the omitted fixed point `(2,0,1)` at
 gap one; this repairs completeness without changing the theorem.
+
+### W=0 finite-ratio survivor
+
+There is a further **PROVED RELATIVE** reduction on the explicit hostile wall,
+but not an exclusion. Assume the THM-4230 sole-positive-genus and node-
+compatibility interface, origin-preserving identifications with a fixed
+`E_0`, characteristic zero, and `UZ(U+Z)!=0`. Normalize the main component and
+its marked attachment orbit to
+
+```text
+C_0:X^6+Y^4=1,
+Q_j=tau^j Q_0=(A zeta_6^j,B zeta_4^j),
+A^6=U/(U+Z),  B^4=Z/(U+Z),  U/Z=A^6/B^4.              (11a)
+```
+
+The `tau`-characters on `H^0(C_0,Omega^1)` are
+`5,7,8,9,10,11,11`, so `tau_*-1` is an isogeny of `J(C_0)`. For nonzero
+`h in Hom(J(C_0),E_0)`, the map
+
+```text
+F_h(Q)=h([tau Q-Q])                                    (11b)
+```
+
+is nonconstant: otherwise its induced Jacobian map
+`h o (tau_*-1)` would vanish, forcing `h=0`. The Rosati degree form is positive
+definite, hence has only finitely many lattice points of either fixed degree
+`34` or `42`; every corresponding `F_h` has a finite zero fibre. All-node
+equality implies `F_h(Q_0)=O`. Therefore only finitely many marked points
+`Q_0`, and hence finitely many ratios `U/Z`, can survive either response
+degree on `W=0`.
+
+This reduces the hostile to an unidentified finite ratio set. It neither
+enumerates nor excludes that set. The first integral obstruction is already
+two-primary: for the free involution `rho:(X,Y)->(-X,-Y)`, the quotient
+
+```text
+D:C_0/rho,       b^2=ac,       a^3+c^2=1
+```
+
+has `ker(J(D)->J(C_0))=<eta>`, where
+`eta=[P_++P_--2R_infinity]` and
+`div_D(a)=2(P_++P_--2R_infinity)`. Thus the hidden Hodge plane does not supply
+integral descent. The smallest decisive sidecar is `(L,H,T,e(t))`: saturated
+Hom lattice, Hermitian degree Gram, `tau` action, and one adjacent-node
+evaluation vector. Exact inventory:
+[script](../04-computation/jc23_w0_node_hom_inventory_20260826.py),
+[output](../05-knowledge/results/jc23_w0_node_hom_inventory_20260826.out),
+with SHA-256 respectively
+`7cc4d3d468ea68b42e87303fd176c7dcd92843621c88aef13633c1e2fce4035a` and
+`2c077a07330c5373019fd6e8b93f0f7cc2afbb15cb014578f073f4e40200d92e`.
 
 ## 3. Mahler: exact pairwise first defects
 
@@ -372,20 +456,20 @@ source-first resultant, component, genus, attachment, and degree audit.
 
 ## Procedurally generated next tasks
 
-1. **LRC anchor:** independently audit the full `18,255,923,400`-case ray
-   census; if `931` survives, promote the finite-box reduction with its
-   orientation proof and retain `931` as certificate-only.
-2. **LRC entry:** refine the remaining `q<=1289` thresholds by reversing
-   orientation and retaining primitive phase rather than only symmetric loss.
-3. **LRC finite closure:** after those ray tails, enumerate their finite
-   remainders with a native joint-wall or exact direct-margin verifier, using
-   primitive-pair-specific oscillation where the universal gcd floor is
-   wasteful.
+1. **LRC anchor:** scan the exact `181,194`-edge combined residual with native
+   joint endpoint geometry, beginning at its two top edges `{616,769}` and
+   `{721,769}`; retain literal minimum margin and extremal body for every
+   discharged edge.
+2. **LRC structure:** stratify the residual by the deficit pair
+   `(K(a)-b,K(b)-a)`, primitive ratio, gcd, and fixed-pool failure mask; test
+   THM-4233's `(beta,omega)` observable only where it preserves new phase.
+3. **LRC fixed-50 niche:** run the full-pool fixed-`q=50` compiler and compare
+   its extremal petal count with THM-4234's pair/triple positive controls.
 4. **JC anchor:** apply owner descent to the cheapest of `A=0`, `B=0`, `Z=0`,
    `A+B=0`, selecting by replacement-face genus rather than coefficient name.
-5. **JC hostile:** on the M12 `W=0` split, compute the hidden Prym Hom lattice,
-   all twelve attachment evaluations, and the node-annihilator sublattice;
-   test whether its degree form represents `34` or `42`.
+5. **JC hostile:** construct the `W=0` sidecar `(L,H,T,e(t))`, enumerate the
+   finite degree-`34/42` Hom vectors, and solve their four Cayley--Hamilton-
+   reduced node equations for the finite surviving ratios `t=U/Z`.
 6. **Multiplicity niche:** freeze `(d,R_d,Lawful,sigma)` and emit the intrinsic
    `c_(d;q,r)(B)` histogram, second
    moment, minimum margin, and failure masks on the fixed-small-ray residuals;

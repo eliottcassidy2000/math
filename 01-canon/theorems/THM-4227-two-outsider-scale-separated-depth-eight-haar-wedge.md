@@ -110,7 +110,8 @@ r>=106,033.                                             (7)
 Equation `(4)` gives the clean cofinal linear tail, whose own corner is
 `106,590`; the same assertions hold after swapping `q,r`. Equations `(5)--(7)` give
 infinite thirteen-speed LRC(14) families with two genuinely variable body
-outsiders. The later THM-4231 covers every distinct `q,r>=1290`, so this
+outsiders. The later THM-4231 covers every distinct outsider pair with
+`max(q,r)>=770`, so this
 wedge's safety region is now subsumed. Its sequential scale-order mechanism
 remains distinct and may be useful on fixed-small-label rays. Neither theorem
 gives arbitrary finite pair entry or full LRC(14).

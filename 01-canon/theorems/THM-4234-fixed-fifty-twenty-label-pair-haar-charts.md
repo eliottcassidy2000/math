@@ -115,10 +115,11 @@ sidecar is the exact number of positive-length circular components of each
 fixed-`50` base safe set.
 
 The theorem is complementary to THM-4231. That theorem handles arbitrary
-distinct `q,r>=1290` over the whole thirty-label pool. Here one newcomer is
-fixed at `50`, the body chart is restricted, and every admissible finite
-second newcomer is handled for all pairs and for `(4)`. Thus this theorem
-occupies a genuine residual chart on the `q=50` ray.
+distinct outsiders with `max(q,r)>=770` over the whole thirty-label pool.
+Here one newcomer is fixed at `50`, the body chart is restricted, and every
+admissible finite second newcomer is handled for all pairs and for `(4)`.
+Thus this theorem contributes genuine residual information on the `q=50`
+ray below `770`; above that value its coverage is subsumed.
 
 ## 2. Exact tail lemma and endpoint convention
 

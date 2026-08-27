@@ -1,33 +1,68 @@
 ---
 id: THM-4231
-title: "Hybrid cofinal pair quadrant, fixed-one ray, and sharp Haar sidecars"
+title: "Literal-patched all-ray cofinite pair reduction and sharp Haar sidecars"
 status: >
-  PROVED RELATIVE TO THM-4150/4156/4170/4191 + VERIFIED-EXACT +
-  INDEPENDENTLY AUDITED. For the displayed thirty-label pool, every nine-body
-  becomes 1/14-Haar-safe after adjoining any two distinct integers q,r at
-  least 1290. Together with the inherited zero- and one-outsider layers, this
-  fills all C(32,11)=129,024,480 eleven-bodies in every such chart. The value
-  1307 is the exact minimum of the direct component-discrepancy/Bonferroni
-  certificate; two independent literal censuses patch its unique exceptional
-  body down to 1290. Neither value is claimed as the minimal literal threshold.
+  PROVED RELATIVE TO THM-4150/4156/4170/4191/4207/4211 + VERIFIED-EXACT +
+  TARGETED INDEPENDENT BOUNDARY AUDIT. For the displayed thirty-label pool,
+  every nine-body becomes 1/14-Haar-safe after adjoining any two distinct
+  outsiders q,r with max(q,r)>=770. A complete clean-room census of
+  18,255,923,400 fixed-ray/body cases first leaves exactly 181,242 pairs
+  unresolved by both orientations, with certificate cutoff 825. A cumulative
+  literal census then exhausts all 45 certificate edges whose larger endpoint
+  is at least 770: all 643,821,750 pair/body cases are strictly safe. Together
+  with three inherited full-pool literal closures, the exact remaining proof
+  residual has 181,194 edges, all in max(q,r)<=769. The complete per-ray table
+  has targeted, not full-table, confirmation by the independent split-zeta
+  implementation.
+  The older q,r>=1290 hybrid theorem and its direct cutoff 1307 remain
+  independently audited sidecars; none of 770, 825, 1290, or 1307 is claimed
+  as a minimal literal threshold.
   The exact fixed-one ray is independently closed for every r>=542 by
   combining its certificate census with a literal check of the unique
   threshold-543 body at r=542. The
   depth-six activation transition 17547/17548 remains a valid but superseded
-  repair-hypergraph sidecar. Finite pair entry and LRC(14) remain OPEN.
+  repair-hypergraph sidecar. The 181,194-pair finite remainder and LRC(14)
+  remain OPEN.
 source: codex-frontier-synthesis-20260826
 depends_on:
   - THM-4150-safe-set-haar-measure-universal-odd-tail-lrc14-transfer
   - THM-4156-divisor-complete-anchor-pool-haar-odd-tail-transfer
   - THM-4170-triple-deletion-matching-eventual-haar-odd-tail-transfer
   - THM-4191-complete-full-pool-newcomer-haar-transfer
-related:
   - THM-4207-two-newcomer-sharp-depth-transition-base-surplus-composition-and-variable-pool-chart-number
   - THM-4211-fixed-fifty-cofinal-two-newcomer-haar-tail-and-eighteen-label-chart
+related:
   - THM-4214-two-newcomer-pascal-complete-eleven-body-haar-charts
   - THM-4223-cyclic-cut-cover-boolean-mobius-hierarchy-and-two-bad-owner-obstruction
   - THM-4227-two-outsider-scale-separated-depth-eight-haar-wedge
   - THM-4228-common-gcd-two-outsider-periodic-observable-haar-ray
+  - THM-4233-pair-specific-primitive-observable-oscillation-haar-charts
+all_ray_primary_script: 04-computation/lrc14_all_fixed_outsider_ray_census_primary_thm4231.cpp
+all_ray_primary_output: 05-knowledge/results/lrc14_all_fixed_outsider_ray_census_primary_thm4231.out
+all_ray_primary_script_sha256: 5e4dba0dc8724514aa4d2864ce5fa2b2449c28e39bda5d67672a1723820a39f8
+all_ray_primary_output_sha256: a3dcb030aa7891921fa52c1bffc8497b095058e4a666802e1ccd2b14dee1e5d4
+all_ray_independent_audit_script: 04-computation/lrc14_all_fixed_outsider_ray_census_independent_audit_thm4231.cpp
+all_ray_independent_audit_output: 05-knowledge/results/lrc14_all_fixed_outsider_ray_census_independent_audit_thm4231.out
+all_ray_independent_audit_script_sha256: a1ce292a085eee393cbc067f1a493ed8f63324b2fb3d34d460c34c38963dec74
+all_ray_independent_audit_output_sha256: dd276f7927a7332907c9bc6215c967817dd463c63fc032c8094a28f16b36dc41
+all_ray_symmetric_postprocess_script: 04-computation/lrc14_all_fixed_outsider_ray_symmetric_postprocess_thm4231.py
+all_ray_symmetric_postprocess_output: 05-knowledge/results/lrc14_all_fixed_outsider_ray_symmetric_postprocess_thm4231.out
+all_ray_symmetric_postprocess_script_sha256: afcc7ada2718e755169feef1fdc20d70fae8dad57aa8ba4839e34404511bb881
+all_ray_symmetric_postprocess_output_sha256: 7c4cf0be6ee2301e11aca8803ac1dd290d607a206faabc82b6d658f807d80d43
+all_ray_primary_boundary_output: 05-knowledge/results/lrc14_all_fixed_outsider_ray_primary_boundary_targets_thm4231.out
+all_ray_primary_boundary_output_sha256: 4b59d5a66a198b3fc1f4b942b1642d1cae742f8e14ffaa3c4441f75a6d95c195
+literal_boundary_census_script: 04-computation/lrc14_literal_boundary_45_cumulative_auditor_thm4231.cpp
+literal_boundary_census_output: 05-knowledge/results/lrc14_literal_boundary_45_cumulative_auditor_thm4231.out
+literal_boundary_census_script_sha256: bdb8e46c1f5eed18e0fcabf48b20938be4074e236ff8af37ecd5492c6d51357d
+literal_boundary_census_output_sha256: a44372cdfc6eba17d25945dc0d1a7de90e0b1bec273dd45f0c3be99552551239
+literal_boundary_controls_script: 04-computation/lrc14_literal_boundary_45_cumulative_controls_thm4231.py
+literal_boundary_controls_output: 05-knowledge/results/lrc14_literal_boundary_45_cumulative_controls_thm4231.out
+literal_boundary_controls_script_sha256: 581194f9cb517a02d3db733989a4ba66429ec4ef4d1fbf26b4029154d51533ca
+literal_boundary_controls_output_sha256: fbba123507da124bf7ae345b63aac7827735395b593851175c6825bf8975cd34
+literal_boundary_postprocess_script: 04-computation/lrc14_literal_boundary_45_residual_postprocess_thm4231.py
+literal_boundary_postprocess_output: 05-knowledge/results/lrc14_literal_boundary_45_residual_postprocess_thm4231.out
+literal_boundary_postprocess_script_sha256: f73724902da4b79dc17f7751acfd94df21b104166113ea03165d41ac77eb0e0d
+literal_boundary_postprocess_output_sha256: 88539ac6f2f889b8293e9057977c432077d0df9b2dc8500a5ba8cd3773652db5
 direct_primary_script: 04-computation/lrc14_two_outsider_direct_body_cofinal_primary_thm4231.cpp
 direct_primary_output: 05-knowledge/results/lrc14_two_outsider_direct_body_cofinal_primary_thm4231.out
 direct_primary_script_sha256: 48ccab283874ff35f362e6d3c71b36e958dbe0dc444307dadb23b0ec62194bea
@@ -72,9 +107,9 @@ activation_primary_script_sha256: 794f0df69956e46c5c73ad6489498b1bd404b9d3643722
 activation_primary_output_sha256: ddaa2fdd3c822126a5c51c48b526450f34cd22537a40421bba42524ed5c51834
 activation_independent_audit_script_sha256: a52740967b84dcef6be68e9ad362cdc51ea9552234c6f5cd8e725a87f0d947f9
 activation_independent_audit_output_sha256: 0e7dffe54514f3d46d8076b7dda0c69418ec774c6d47ba95aa2b50bb73f76cec
-hash_basis: raw LF bytes
+hash_basis: LF-normalized bytes
 audit: >
-  PASS / ACCEPT. The primary midpoint-cell split-zeta program and a separate
+  PASS / ACCEPT WITH SCOPED INDEPENDENCE. The primary midpoint-cell split-zeta program and a separate
   endpoint-toggle flat-coefficient implementation each exhaust all
   C(30,9)=14,307,150 bodies and recover the same seven-field labelled ledger,
   unique threshold-1307 extremizer, adjacent ceiling slacks, and exact
@@ -83,14 +118,23 @@ audit: >
   endpoint implementations also
   agree on the complete fixed-one-ray census and its unique threshold-543
   certificate extremizer; independent literal controls close that body at
-  r=542. The old activation artifacts independently retain the
-  17547/17548 cover transition.
+  r=542. A primary split-zeta full-range census and a clean-room truncated
+  Boolean-lattice census each exhaust all 18,255,923,400 fixed-ray/body cases
+  and agree on positivity, the unique oriented maximum 931, and the normalized
+  minimum. The clean-room path freezes the complete K(q) table and its
+  181,242-edge two-orientation residual; primary reruns independently confirm
+  its load-bearing q=744,824,825 boundary. Full-table digest agreement is not
+  claimed. A cumulative joint-wall census exhausts all 45 certificate edges
+  with endpoint at least 770 and finds all 643,821,750 cases strictly safe;
+  `-O2/-O3` builds byte-agree, and a separate direct midpoint scan confirms
+  all 45 unique extremizers. The old activation artifacts independently
+  retain the 17547/17548 cover transition.
 ---
 
-# THM-4231 -- hybrid cofinal pair quadrant, fixed-one ray, and sharp Haar sidecars
+# THM-4231 -- literal-patched all-ray cofinite pair reduction and sharp Haar sidecars
 
-**PROVED RELATIVE TO THM-4150/4156/4170/4191 + VERIFIED-EXACT +
-INDEPENDENTLY AUDITED; LRC(14) REMAINS OPEN.**
+**PROVED RELATIVE TO THM-4150/4156/4170/4191/4207/4211 + VERIFIED-EXACT + TARGETED
+INDEPENDENT BOUNDARY AUDIT; LRC(14) REMAINS OPEN.**
 
 ## 1. Statement
 
@@ -116,10 +160,21 @@ alpha=4/63.                                              (2)
 > mu(G_(B union {q,r}))>=alpha.                          (3)
 > ```
 
-Neither outsider is fixed. The theorem is uniform on the complete northeast
-quadrant off the diagonal. It does not prove a pair with one label below
-`1290`, a minimal literal threshold, physical entry of an arbitrary LRC row
-into this pool, or LRC(14).
+More strongly:
+
+> **Cofinite arbitrary-pair theorem.** For every two distinct outsiders
+> `q,r notin P` with `max(q,r)>=770` and every `B in binom(P,9)`,
+>
+> ```text
+> mu(G_(B union {q,r}))>=alpha.                          (3a)
+> ```
+
+Equation `(3)` is retained as an independently literal-audited hybrid
+subtheorem. Equation `(3a)` reduces the combined certificate-plus-literal
+proof remainder to exactly `181,194` finite outsider pairs with maximum at
+most `769`; it does not assert that any residual pair is unsafe, prove a
+minimal literal threshold, give physical entry of an arbitrary LRC row into
+this pool, or prove LRC(14).
 
 ## 2. Inheritance and corrected object
 
@@ -440,29 +495,168 @@ literal-minimal. With the zero/one layers, this also fills all `C(32,11)`
 faces of every chart `P union {1,r}` for `r>=542`, and THM-4150 again supplies
 the odd-tail LRC(14) families.
 
-## 10. Pair-plane and method boundaries
+## 10. Complete fixed-ray atlas and exact certificate residual
 
-Every outsider pair not covered by `(3)` has
+For every
 
 ```text
-min(q,r)<=1289.                                         (27)
+q in {1,...,1306}\P,        B in binom(P,9),             (27)
 ```
 
-For genuine outsiders, these are the `1,259` rays indexed by
-`q in {1,...,1289}\P`. A cofinal theorem on each ray would leave one finite
-exact remainder. Neither that full ray theorem nor the finite census is proved
-here.
+put
 
-THM-4227's directed wedge starts with one coordinate at least `3391`, and
-THM-4228's common-gcd theorem forces both coordinates at least `3467`.
-Consequently their body-safety regions lie inside `(3)` and are now subsumed
-as coverage. Their methods remain distinct and potentially useful below the
-quadrant: sequential component birth retains scale order, while the periodic
-observable retains common divisor and primitive pair shape. THM-4233 now
-proves a coverage-subsumed primitive-shape method sidecar; other exploratory
-primitive charts are not proved input.
+```text
+V_(q,B)=G_(B union {q}),
+M_(q,B)=m_(q,B)/D_q,
+c_(q,B)=#components(V_(q,B)),
+s_(q,B)=54m_(q,B)-4D_q,
+K_q(B)=ceil(54c_(q,B)D_q/(7s_(q,B))).                   (28)
+```
 
-## 11. Boolean sidecar and connection contract
+THM-4170 gives
+
+```text
+mu(V_(q,B) intersect G_r)
+ >=(6/7)M_(q,B)-6c_(q,B)/(49r),                         (29)
+```
+
+so `r>=K_q(B)` proves the target. Define `K(q)=max_B K_q(B)`. A primary
+split-zeta census and a clean-room endpoint-event/truncated-Mobius census each
+exhaust
+
+```text
+1276 binom(30,9)=18,255,923,400                         (30)
+```
+
+ray/body cases. Every `s_(q,B)` is positive. Both paths agree on the unique
+oriented maximum
+
+```text
+max_q K(q)=931,
+q=1305,
+B={20,170,190,193,240,252,264,286,290},                 (31)
+```
+
+and on the normalized surplus minimum, attained at `q=50` and
+`B={8,15,80,84,88,95,120,145,170}`. The clean-room ledger freezes
+
+```text
+full XOR/SUM=e2b35ef11bbc30a7/da92ed0c54582151,
+FNV(q,K(q),least maximizing body)=e5b533495b4d0d6f.    (32)
+```
+
+Full-table digest agreement with the primary is not claimed. The primary
+transcript independently agrees on the full case universe, positivity, `(31)`,
+and the normalized minimum, and fresh primary replays check the load-bearing
+values
+
+```text
+K(744)=825,             K(824)=781,             K(825)=711. (33)
+```
+
+For outsiders `a<b`, the two orientations certify the pair whenever
+
+```text
+b>=K(a)  or  a>=K(b).                                  (34)
+```
+
+The exact residual graph of this certificate therefore has an edge precisely
+when both strict reverse inequalities hold. Exact postprocessing of the frozen
+`K(q)` table gives
+
+```text
+|E_res|=181,242,
+FNV(E_res)=8a4e1370fb023907,
+max endpoint=824,
+unique edge at endpoint 824={744,824}.                  (35)
+```
+
+It follows that for every two distinct outsiders `a,b notin P`, every
+`B in binom(P,9)`, and
+
+```text
+max(a,b)>=825,                                          (36)
+```
+
+one has `mu(G_(B union {a,b}))>=4/63`. Indeed, if both labels are at most
+`1306`, `(34)--(35)` applies. If `a<b`, `a<=1306<b`, then
+`b>931>=K(a)`. If `1307<=a<b`, the hybrid quadrant `(3)` applies. Section 8
+therefore fills every `C(32,11)` face in each chart `P union {a,b}` satisfying
+`(36)`, and THM-4150 supplies the corresponding odd-tail families.
+
+The value `825` is the exact cutoff of this two-orientation fixed-ray
+certificate because `{744,824}` survives both inequalities. It is not claimed
+literal-minimal, and no residual pair is asserted unsafe.
+
+## 11. Literal boundary peel and combined residual
+
+Inside the certificate graph `(35)`, put
+
+```text
+L={ (a,b) in E_res : b>=770 }.                          (36a)
+```
+
+Exact postprocessing gives `|L|=45`. A fresh cumulative joint-wall census
+builds the literal geometry for every pair in `L` and exhausts
+
+```text
+45 binom(30,9)=643,821,750                              (36b)
+```
+
+pair/body cases. Every case has `63mu-4>0`; there are no zero or negative
+cases, and every pair has a unique minimizing body. The complete labelled
+ledger has
+
+```text
+XOR/SUM=fb8c4e194710163a/1990d28492857d56,
+ordered FNV=029d6427584abd92.                           (36c)
+```
+
+Independent `-O2/-O3` builds byte-agree. A separate direct midpoint-wall
+scanner, which uses neither the Boolean coefficient table nor its Mobius
+transform, reproduces the body, component count, and reduced margin of all 45
+minimizers.
+
+Three further full-pool closures already lie in proved canon:
+
+```text
+H={{1,542},{49,50},{50,51}},                            (36d)
+```
+
+from Section 9, THM-4211 equation `(7)`, and THM-4207 equation `(5)`,
+respectively. All 48 pairs in `L union H` are distinct members of `E_res`.
+Removing them gives the exact combined proof residual
+
+```text
+|E_rem|=181,194,
+FNV(E_rem)=3874fecac4ecbd8a,
+max endpoint=769,
+endpoint-769 layer={{616,769},{721,769}}.               (36e)
+```
+
+Therefore `(3a)` holds. For `a<b<=1306`, either `(34)` certifies the pair or
+it belongs to `E_res`; if also `b>=770`, `(36a)--(36c)` closes it literally.
+If `a<=1306<b`, then `b>931>=K(a)`. If `1307<=a<b`, the hybrid quadrant `(3)`
+applies. Section 8 then fills every `C(32,11)` face in each such chart, and
+THM-4150 supplies the corresponding odd-tail families.
+
+The value `770` is exact only for this certificate-plus-literal proof graph:
+the two pairs in the last line of `(36e)` remain unclosed by it. Neither pair
+is asserted unsafe, and `770` is not claimed literal-minimal.
+
+## 12. Pair-plane and method boundaries
+
+The unbounded two-outsider problem is now reduced to the exact finite label
+graph `(36e)`, not merely to a family of rays. Literal or stronger
+pair-correlated treatment of its `181,194` edges remains open.
+
+THM-4227's scale wedge, THM-4228's common-gcd region, and THM-4233's displayed
+primitive families are coverage-subsumed by `(3a)`. Their scale order, common
+divisor, primitive shape, and cyclotomic-zero methods remain useful inside the
+finite residual. THM-4234 supplies complementary restricted positive controls
+on the residual `q=50` chart; it is not a full-pool closure.
+
+## 13. Boolean sidecar and connection contract
 
 Equation `(16)` is a lower Boolean zeta transform plus a cyclic transition
 count. This is the lawful transfer from THM-4223's owner-refined Boolean
@@ -471,17 +665,17 @@ next operation. There is no intrinsic pairwise orientation on the cells, so no
 tournament is imposed.
 
 ```text
-source:       cyclic pool cells (F_i,ell_i) and adjacent mask unions
-target:       every labelled nine-body and its two-outsider threshold
-map:          disjointness zeta -> (M_B,c_B) -> kappa_body
-preserved:    body labels, exact mass, components, uniform q/r quantifier
+source:       fixed-q cyclic failure masks and adjacent mask unions
+target:       every labelled (q,B), its K(q), and the patched residual graph
+map:          disjointness zeta -> (M_(q,B),c_(q,B)) -> K(q) -> E_res -> E_rem
+preserved:    q/body labels, exact mass, components, both pair orientations
 destroyed:    component addresses and literal q/r phase alignment
 sidecar:      adjacent mask unions and literal endpoint sweep
-hostile:      unique direct extremizer B*; its 289-pair triangle is literally safe
-decisive test: max_B kappa_body(B).                       (28)
+hostile:      {616,769},{721,769}, unclosed but not asserted unsafe
+decisive test: max endpoint and exact digest of E_rem.     (37)
 ```
 
-## 12. Reproduction
+## 14. Reproduction
 
 From the repository root, compile both C++ paths with C++20, optimization, and
 OpenMP, then compare stdout byte-for-byte with their frozen outputs:
@@ -521,12 +715,48 @@ OMP_NUM_THREADS=12 /tmp/thm4231-q1-referee
 
 python3 -B \
   04-computation/lrc14_fixed_one_outsider_cofinal_tail_literal_controls_thm4231.py
+
+g++ -O3 -fopenmp -std=c++20 \
+  04-computation/lrc14_all_fixed_outsider_ray_census_primary_thm4231.cpp \
+  -o /tmp/thm4231-all-q-primary
+OMP_NUM_THREADS=12 /tmp/thm4231-all-q-primary 1 1306
+
+g++ -O3 -fopenmp -std=c++20 -Wall -Wextra -Werror \
+  04-computation/lrc14_all_fixed_outsider_ray_census_independent_audit_thm4231.cpp \
+  -o /tmp/thm4231-all-q-referee
+OMP_NUM_THREADS=12 /tmp/thm4231-all-q-referee
+
+python3 -B \
+  04-computation/lrc14_all_fixed_outsider_ray_symmetric_postprocess_thm4231.py
+
+OMP_NUM_THREADS=12 /tmp/thm4231-q1-primary 744
+OMP_NUM_THREADS=12 /tmp/thm4231-q1-primary 824
+OMP_NUM_THREADS=12 /tmp/thm4231-q1-primary 825
+
+g++ -O3 -fopenmp -std=c++20 -Wall -Wextra -Werror \
+  04-computation/lrc14_literal_boundary_45_cumulative_auditor_thm4231.cpp \
+  -o /tmp/thm4231-literal-boundary
+OMP_NUM_THREADS=12 /tmp/thm4231-literal-boundary
+
+python3 -B \
+  04-computation/lrc14_literal_boundary_45_cumulative_controls_thm4231.py
+
+python3 -B \
+  04-computation/lrc14_literal_boundary_45_residual_postprocess_thm4231.py
 ```
 
 The frozen referee transcript is the `1306` invocation above; the no-argument
 mode performs a binary-search diagnostic and emits additional lines. The
-primary output is stable under `-O2/-O3` and one/twelve threads. The referee
-uses a structurally different geometry and census. The older Python activation
-paths reproduce the exact sidecar `(20)`.
+primary output is stable under `-O2/-O3` and one/twelve threads. The all-ray
+referee uses a structurally different endpoint geometry and truncated
+Boolean-lattice census; its full run is intentionally expensive. The
+postprocessor freezes the complete `K(q)` table and exact two-orientation
+graph. The three final primary invocations reproduce the sharp boundary
+controls in their concatenated frozen output. The cumulative literal source
+imports the clean-room geometry engine but rebuilds each two-outsider joint
+wall arrangement; its output covers exactly the 45 edges in `(36a)`. The
+direct-control script independently midpoint-scans all 45 extremal eleven-
+speed sets, and the final postprocessor verifies `(36d)--(36e)`. The older
+Python activation paths reproduce the exact sidecar `(20)`.
 
 **QED.**

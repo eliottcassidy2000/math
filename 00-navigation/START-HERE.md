@@ -21,10 +21,9 @@ Then read the routed frontier, guardrails, and theorem; logs are history.
 
 ## Seventeen high-signal facts
 
-1. **LRC(14) is first open.** THM-4231 closes distinct `q,r>=1290` and
-   `q=1,r>=542`; coverage-subsumed THM-4233 retains its primitive compiler
-   and exact sufficient gate `k>=748`; THM-4234 closes 66 residual fixed-`50`
-   pairs plus one triple. Arbitrary entry remains open.
+1. **LRC(14) is first open.** THM-4231 closes `max(q,r)>=770`, leaving 181,194
+   pairs below (ray cutoff `825`; fixed-one `542`). THM-4238 takes 40 small
+   rays to `590`; THM-4233 retains gate `k>=748`. Entry remains open.
 2. **The `q <= 25` period claim is refuted.** THM-762/764 exhibit `26*{1,...,12} union {339}`, whose first good period is `27`.
 3. **Good-period existence is a maximum statement.** The tight resonant AP
    defeats average/count arguments; see MISTAKE-127/129/130.
@@ -56,9 +55,10 @@ Then read the routed frontier, guardrails, and theorem; logs are history.
 12. **JC is false from dimension three; JC(2), DC(2) remain open.**
     THM-2084 and THM-4130--4217 close named chambers; THM-4218/4220 close exact
     `M=10`; THM-4222/4232 close `M=11` off four walls; THM-4226 closes dense
-    `M=13`. On THM-4230's hidden-`E_0` locus, the `W=0`
-    rank-two lattice has no degree-34 or attachment-collapsing degree-42 map;
-    saturation, the remaining locus, walls, entry, and JC(2) stay open.
+    `M=13`. THM-4230 reduces one `M=12` gate to a countable proper, nonempty
+    hidden-`E_0` locus. On `W=0`, an explicit Eisenstein sublattice excludes
+    degrees `34/42`; full Hom leaves finitely many `U/Z`. Saturation, gluing,
+    entry, and JC(2) stay open.
 13. **Complete period-14 coordinates can be globally blind.** THM-2058 keeps
     every fixed-depth packet coordinate but exits at `47/113`; THM-2043/2047/
     2050 separate local completeness from global maxima.

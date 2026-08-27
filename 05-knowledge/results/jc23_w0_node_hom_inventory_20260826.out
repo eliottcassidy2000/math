@@ -1,0 +1,13 @@
+W0_GATE U*Z*(U+Z)!=0
+SOURCE_NODES P_j=S_j^2; S_j^12=1/(U+Z); j=0..11
+VISIBLE_EA_IMAGES (S_j^-4,2Z); ORBIT_SIZE 3; CHARACTER 8
+VISIBLE_EB_IMAGES (S_j^4,2Z*S_j^6); ORBIT_SIZE 6; CHARACTER 10
+HIDDEN_PRIMITIVE_E0_CHARACTERS 5,11
+NORMALIZED_CURVE C0:X^6+Y^4=1
+NORMALIZED_NODES Q_j=(A*zeta_6^j,B*zeta_4^j); A^6=U/(U+Z); B^4=Z/(U+Z)
+MARKED_RATIO A^6/B^4=U/Z
+TAU_HOLOMORPHIC_CHARACTERS 5,7,8,9,10,11,11
+TAU_MINUS_ONE_ISOGENY YES
+MISSING hidden_saturation_overlattice; integral_visible_hidden_gluing; mixed_coset_attachment_evaluation
+FINITE_RESIDUAL for each n in {34,42}, only finitely many U/Z can satisfy node equality
+VERDICT FULL_HOM_SURVIVORS_REDUCE_TO_FINITE_RATIO_SETS

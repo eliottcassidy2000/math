@@ -11,8 +11,10 @@ status: >
   there. The hidden Hom locus is nonempty at W=0, where an explicit rank-two
   Eisenstein sublattice has Gram determinant 24; degree 34 is absent and all
   192 degree-42 vectors fail attachment collapse inside this sublattice.
-  Its saturation in the full hidden Hom lattice, exclusion on the locus, the
-  whole M=12 gate, seam entry, JC(2), and DC(2) are OPEN.
+  Across the full Hom lattice, either response degree can collapse the nodes
+  for only finitely many coefficient ratios U/Z. Hidden saturation, integral
+  visible-hidden gluing, mixed attachment cancellation, exclusion on the
+  locus, the whole M=12 gate, seam entry, JC(2), and DC(2) are OPEN.
 source: codex-jc-lrc-niche-crossfeed-20260826
 depends_on:
   - THM-3992-reduced-two-three-cusp-jet-repair-and-first-node-residual
@@ -63,6 +65,10 @@ explicit_w0_lattice_script: 04-computation/jc23_thm4230_w0_hidden_e0_degree42_la
 explicit_w0_lattice_output: 05-knowledge/results/jc23_thm4230_w0_hidden_e0_degree42_lattice.out
 explicit_w0_lattice_script_sha256: e33c8c8edba33e132abcfd8691be5df6d2fc918328d911275fe05642cfa82935
 explicit_w0_lattice_output_sha256: 5d6bcc4fc2ec94e52a7a528c0593401629d4543bd875cd66569beede3c67cedc
+w0_inventory_script: 04-computation/jc23_w0_node_hom_inventory_20260826.py
+w0_inventory_output: 05-knowledge/results/jc23_w0_node_hom_inventory_20260826.out
+w0_inventory_script_sha256: 336df014c1a9137c2bd1c95030f037f83353e5eb6e2a1d48c5600abfd0f3cc8f
+w0_inventory_output_sha256: abb85d7bef45ceaaa9168355212825afc413b46d4febbac3067d6abf3b6de280
 hash_basis: raw LF bytes
 audit: >
   PASS. The primary SymPy certificate executes 16,548 exact checks over all
@@ -112,6 +118,16 @@ E_0:Y^2=X^3+1.                                         (2)
 > `kappa in H_0`. The set `H_0` is countable and proper, but nonempty:
 > `0 in H_0`, witnessed by the gate-interior locus `W=0`. Hence the
 > complement of `H_0` contains no such pair.
+
+> **Explicit-lattice addendum.** On `W=0`, the hidden rational Hom space
+> contains the full-rank Eisenstein sublattice `L_exp` of Section 6.1. It has
+> no degree-`34` vector, and all its 192 degree-`42` vectors fail attachment
+> collapse.
+
+> **Finite marked-wall addendum.** On `W=0`, under the inherited
+> origin-fibre/node-compatibility interface, either response degree `34` or
+> `42` can satisfy equality at all twelve attachments for only finitely many
+> coefficient ratios `U/Z`.
 
 This proves neither exclusion on `H_0` nor exclusion of the whole gate.
 Walls, other cells, seam entry, `JC(2)`, and `DC(2)` remain open.
@@ -660,6 +676,62 @@ the explicit rank-two sublattice `L_exp`. They do **not** prove that
 `L_exp=Hom(A_12,E_0)`, nor do they settle the integral gluing with the visible
 lattice. Saturation of the hidden lattice and the full attachment degree form
 are the precise surviving `W=0` problems.
+### 6.2. Finite full-Hom ratio reduction and the quotient bridge
+
+Retain `C_0:x^6+y^4=1` from `(34a)`. The attachment orbit is
+
+```text
+Q_j=tau^jQ_0=(A xi_6^j,B xi_4^j),
+A^6=U/(U+Z),       B^4=Z/(U+Z),       r=U/Z=A^6/B^4. (34w)
+```
+
+The holomorphic `tau`-characters are `5,7,8,9,10,11,11`. Hence
+`tau_*-1` has no tangent-space kernel and is an isogeny of `J(C_0)`. For
+nonzero `h in Hom(J(C_0),E_0)`, put
+
+```text
+F_h(Q)=h([tau Q-Q]).                                  (34x)
+```
+
+This map is nonconstant: otherwise its induced Jacobian homomorphism
+`h o (tau_*-1)` would vanish, and surjectivity would force `h=0`. The Rosati
+degree form on `Hom(J(C_0),E_0)` is positive definite, so only finitely many
+vectors have either fixed degree `34` or `42`; each corresponding zero fibre
+of `(34x)` is finite. If all twelve nodes have one target image, then
+`F_h(Q_0)=O`. Therefore, for `d in {34,42}`, the set
+
+```text
+S_d={r in C\{0,-1}: some degree-d h maps all Q_j equally} (34y)
+```
+
+is finite. The sets are not enumerated or proved empty. Section 6.1 proves
+that neither set receives a witness from a pure map in `L_exp`; mixed
+visible-hidden maps and hidden saturation/gluing vectors remain untested.
+
+There is also a precise bridge to the quotient sidecar. For
+`rho:(x,y)->(-x,-y)`, let
+
+```text
+D=C_0/rho: b^2=ac, a^3+c^2=1,   pi:C_0->D.           (34z)
+```
+
+The function `t=(1+y^2)/x^3` from `(34b)` changes sign under `rho`, whereas
+`x/t` and `y/t` are fixed. Thus `f_a`, `Tf_a`, and all of `L_exp` descend
+through `pi`. The descended `f_a:D->E_0` has degree `3`, and the descended
+degree Gram is
+
+```text
+H_exp/2=[3,-2-omega; -2-omega^2,3],       det=6.
+```
+
+This does not prove saturation. Let `P_+=(0,0,1)`, `P_-=(0,0,-1)`, and let
+`R_infinity` be the unique point at infinity. Directly,
+`div_D(a)=2P_++2P_--4R_infinity`; hence
+`eta=[P_++P_--2R_infinity]` is two-torsion. Connectedness of the etale double
+cover makes `eta` nonzero and gives
+`ker(pi^*:J(D)->J(C_0))=<eta>`. The missing data are the hidden
+saturation/overlattice, integral visible-hidden gluing, and mixed/coset
+attachment evaluation.
 
 ## 7. Relative exclusion and hostiles
 
@@ -693,11 +765,15 @@ The exact strongest survivor is
 
 ```text
 hypothetical exact-M12 Keller parameter => kappa in H_0,
-H_0 countable, proper, nonempty.                        (37)
+H_0 countable, proper, nonempty;
+on W=0, L_exp has no degree-34/collapsing degree-42 map;
+full-Hom degree 34/42 node equality => U/Z in finite S_34/S_42. (37)
 ```
 
-Classification of `H_0`, its node-annihilating degree lattice, the walls,
-all-gate `M=12`, seam entry, `JC(2)`, and `DC(2)` remain **OPEN**.
+Classification of `H_0`, enumeration/exclusion of `S_34,S_42`, hidden
+saturation/overlattices, integral visible-hidden gluing, mixed attachment
+cancellation, the other walls, all-gate `M=12`, seam entry, `JC(2)`, and
+`DC(2)` remain **OPEN**.
 
 ## 8. Verification and firewall
 
@@ -710,6 +786,7 @@ python3 -B 04-computation/jc23_exact_weight12_visible_e0_saturation_thm4230.py
 python3 -B 04-computation/jc23_weight12_w0_hidden_e0_explicit_map_thm4230.py
 python3 -B 04-computation/jc23_weight12_w0_hidden_e0_explicit_map_thm4230_independent_audit.py
 python3 -B 04-computation/jc23_thm4230_w0_hidden_e0_degree42_lattice.py
+python3 -B 04-computation/jc23_w0_node_hom_inventory_20260826.py
 ```
 
 The primary certificate covers every variable support row, lower-row subset
@@ -726,6 +803,10 @@ addition/Gram identities and pole-budget ledger, the complete bounded
 degree-42 census, four good finite-field attachment resultants, and the
 independent symbolic norm-seven resultant. Its finite-field statement is
 **FINITE-EXACT**; the degree bound, map, and rank-one identities are exact.
+The `W=0` inventory checks the normalized attachment orbit, visible node
+images, complete character ledger, marked ratio, and `tau_*-1` isogeny input;
+the finite-fibre conclusion then uses the displayed standard
+Abel--Jacobi/Rosati argument.
 
 The computations do not prove the stated standard CM/Prym/Torelli inputs,
 classify `H_0`, handle walls, prove entry, or prove `JC(2)`. These are explicit
