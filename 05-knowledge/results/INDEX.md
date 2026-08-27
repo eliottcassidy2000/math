@@ -1,5 +1,30 @@
 # Script Results Index
 
+- `lrc14_endpoint_520_688_minimum_one_atom_*_thm4278.cpp`, family survey,
+  and overlap postprocessor -> complete minimum-one-atom classification at
+  former top `(520,688)` [THM-4278 PROVED RELATIVE TO THM-4266 + FINITE-EXACT
+  + INDEPENDENTLY AUDITED; structural only; current proof-graph contribution
+  zero; LRC(14) OPEN]. THM-4266's 5,934 active carrier masks miss exactly two
+  bodies. Their nineteen-label common complement has `75,582` rank-eight
+  candidates; exactly `72` are active, FNV `ed1bfbaf6eaa06a3`, and these are
+  precisely all one-atom completions. The least is
+  `{8,40,42,63,80,84,120,143}`, with mass
+  `1559831620541/24511557965895 > 4/63`; the augmented deck covers all
+  `14,307,150` bodies. The 72-family has connected one-swap graph with 318
+  edges and transversal number two, but `(416,704)` is the sharp hostile:
+  its analogous active family splits `5871+1`, with even the isolated mask's
+  best one-swap neighbor inactive. The response-hypergraph lemma identifies
+  minimum augmentation with finite set cover and connects this one-response
+  stage to THM-4276's exact minimum-six 27-obligation stage. The 72 masks have
+  zero overlap with THM-4271's full 5,398-mask discovery prefix. Primary,
+  literal, and event source/output SHA-256 pairs:
+  `d5b64aa6157a0db7020f40ffd958de558356d7dcf1bb4906cbe225ee96306e2a` /
+  `4ae51e53de00505389f80d2bfb62b06f4d61ada598146647a1057d8c8b71a647`;
+  `2e9ee3361938f1ad36d0acdae481a93c8e4f3ac7e8544d7558bd896b43320c5d` /
+  `b51281cdf13ffa8e60195a6432fe7f91959ce892b7f7f5cb89e92c4bee84b09d`;
+  `2c48cb50a352a37093412427e817df198ef93bdd4e6cfc8558b51d183389a9e1` /
+  `c1efea110ddd901d1e8aeeb156932b801a6be0b8584314cec4cc929ada8e7b5e`.
+
 - `jc23_confluent_sample_matroids_thm4275.py` -> opposite-parity attachment
   observers, exact sample matroids, and fat-contact value/jet transition
   [THM-4275 PROVED RELATIVE TO THM-4258/4264/4272 + VERIFIED-EXACT +

@@ -1,0 +1,12 @@
+lrc14_endpoint_520_688_one_atom_overlap_postprocess_thm4278
+common_active_repairs=72
+thm4271_full_prefix=5398
+prefix_overlap=0
+thm4271_novel_overlap=0
+least_repair=0x00048ec1
+gcd_profile={1: 70, 2: 2}
+odd_label_count_profile={0: 2, 1: 40, 2: 29, 3: 1}
+sum_mod14_profile={0: 5, 1: 5, 2: 5, 3: 8, 4: 3, 5: 4, 6: 4, 7: 9, 8: 8, 9: 6, 10: 3, 11: 5, 12: 3, 13: 4}
+no_single_gcd_parity_or_sum_mod14_classifier=PASS
+current_proof_graph_contribution_after_thm4271=0
+status=PASS
