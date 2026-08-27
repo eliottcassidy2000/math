@@ -1,0 +1,24 @@
+THM4280 INTEGRAL THREE-CHANNEL FAT-CONTACT OBSERVER EXACT AUDIT
+status=FINITE_EXACT PASS
+base_ring=O=Z[omega]
+field_tower=Q < K=Q(omega) < K(kappa), kappa^2=-omega
+normalized_channel_rows=degrees_1_2_4_7_on_[u,f,g,h]
+normalized_complex_determinant=kappa
+selected_complex_kappa=-sqrt(3)/2 + I/2
+complex_subset_rank_census={0: 1, 1: 4, 2: 6, 3: 4, 4: 1}
+complex_matroid=U_4_4_on_1_2_4_7
+complex_full_observer=(1,2,4,7)_ONLY
+complex_pure_witnesses=1:kappa*f-g;2:u;4:v;7:kappa*f+g
+arithmetic_block_rank_census={0: 1, 1: 2, 2: 4, 3: 6, 4: 3}
+arithmetic_rank_law=2*hit_{1,7}+hit_2+hit_4
+arithmetic_minimal_full_observers=(1,2,4);(2,4,7)
+arithmetic_all_two_channel_observers=RANK_DEFICIENT
+integral_kernel_c1=integral_kernel_c7=O*u+O*v
+integral_kernel_coordinates=[a,-omega^2*e,-e,2e]
+base_change_hostile_124=kappa*f+g_pure_degree_7
+base_change_hostile_247=kappa*f-g_pure_degree_1
+actual_ramification_spectrum=1,2,4
+five_Q_nonconstancy=SHARP_v_constant_on_4Q_not_5Q
+degree_34_42_c1_zero_test=PASS_by_degree_mod_4
+target_translation_sidecar=value_at_Q_REQUIRED
+raw_Keller_descent=NOT_ADDRESSED

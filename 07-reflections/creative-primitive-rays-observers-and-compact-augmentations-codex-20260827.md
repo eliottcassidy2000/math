@@ -172,6 +172,63 @@ certifies optimum six. This quotient preserves the closure predicate but
 forgets margins and pairwise transfer, so every selected mask must be rescanned
 on every new arithmetic fibre.
 
+### 7. Incoming four-channel signal and the integral three-channel sharpening
+
+Late in the session, [THM-4279](../01-canon/theorems/THM-4279-four-channel-formal-log-hasse-observer-for-e0-hom-at-fat-contact.md)
+arrived with a clean formal-log reformulation of THM-4272's special-fibre jet
+obstruction. After translating the target value, coefficients in degrees
+`1,2,4,7` recover the complete chosen-embedding complexified Hom class. The
+first response was to audit the explicit lattice rather than treating the
+complex dimension count as the last word.
+
+That audit produced
+[THM-4280](../01-canon/theorems/THM-4280-integral-three-channel-fat-contact-observer-and-sharp-five-jet-bound.md).
+On the exact basis `M=O<u,f,g,h>` with
+`2h=v+omega^2 f+g`, the normalized rows are
+
+```text
+       [ 0  1  -kappa  (omega^2-kappa)/2 ]
+       [ 1  0     0               0       ]
+       [ 0  0     0              1/2      ]
+       [ 0  1   kappa  (omega^2+kappa)/2 ],
+```
+
+whose determinant is `kappa`. This confirms the four-channel theorem after
+complexification. The unexpected extra structure appears before base change.
+For
+
+```text
+A=p+omega^2 d/2,                 B=q+d/2,
+c_1=A-kappa B,                   c_7=A+kappa B,
+```
+
+the field separation `kappa notin Q(omega)` forces either hidden channel to
+vanish only on `O u direct-sum O v`. Channels `2,4` are the two visible
+coordinates there. Consequently `{1,2,4}` and `{2,4,7}` are exactly the two
+minimal inherited arithmetic observers; every pair has an explicit hostile.
+
+This is a useful non-generic phenomenon: one exact algebraic coefficient can
+carry two coordinates over a smaller field. It is also deliberately fragile.
+After adjoining `kappa`, the vector `kappa f+g` becomes a pure degree-seven
+hostile to `{1,2,4}`, so THM-4279's four-channel complex-linear minimum remains
+correct. The source, target, base field, and lattice sidecar are all essential.
+
+The same calculation improves the actual ramification spectrum from the
+complexified possibility set `{1,2,4,7}` to the exact integral set
+`{1,2,4}`, attained by `f,u,v`. Therefore global morphisms are faithfully
+determined by restriction to `5Q`, and `v` proves that `4Q` is insufficient.
+On the special degree shells `34,42`, channel one cannot vanish: its kernel is
+visible and hence has degree divisible by four. Those maps are therefore
+unramified at `Q` and nonconstant already on `2Q`. This shortens the honest-map
+contact obligation but does not supply the missing raw Keller descent.
+
+Two exact implementations audit the theorem. The primary symbolic route and
+an independent standard-library field implementation agree in normal,
+optimized, and fixed-hash modes. The latter checks all sixteen active subsets,
+all 4,096 length-twelve subsets, and every Eisenstein residue tuple modulo
+four. Three independent proof audits found the same kernel, minimal triples,
+base-change hostile, and degree-shell corollary.
+
 ## Cross-frontier synthesis
 
 The strongest shared pattern is **complete incidence before quotient**:
@@ -181,6 +238,7 @@ The strongest shared pattern is **complete incidence before quotient**:
 | LRC frozen deck | body-by-repair incidence | response pattern | deck closure | exact margin and pair identity |
 | JC attachment word | twelve sample values | selected samples | full word fibre | parity orbit if chosen badly |
 | fat contact | normal Hasse coefficients | coalesced point values | none at collision | multiplicity/jet order |
+| actual `E_0` Hom lattice | four formal-log channels | arithmetic triple `1,2,4` | complete Hom class | target value, global-Hom membership, and base field |
 | finite map | candidate fibre partition | scalar density | negligible-family transport only with UI | zero predicate |
 
 The table gives a procedural research rule:
@@ -235,15 +293,20 @@ use fibres.
 
 ### Niche: planar JC(2)
 
-1. Replace coalesced point observers by a rectangular normal-Hasse atlas on a
-   bounded algebraic collar and compute the first exact rank-drop stratum.
-2. Seek an effective bound on transverse contact order from the actual Keller
+1. Recast the missing raw Keller descent at the degree-`34/42` contact as a
+   first-channel preservation problem: THM-4280 shows that an honest map
+   cannot lose `c_1`. Any proof must use a saturated raw graph, not merely the
+   resolved nodes or cleared equations.
+2. Extend the exact channel matrix over a bounded algebraic collar and compute
+   the first transverse rank/field-drop stratum. Keep the arithmetic base
+   field explicit; the three-channel theorem is not stable after adjoining
+   `kappa`.
+3. Seek an effective bound on transverse contact order from the actual Keller
    and degree hypotheses. The `E_N-D_N=-W^N` hostile forbids deriving such a
    bound from simple special roots alone.
-3. For every proposed quotient, compute `ker(lambda) intersect (W-W)` on the
-   finite candidate image before using its zero fibre.
-4. Separate normal lifting, wall passage, and off-fibre exclusion. None follows
-   from the proved `W=0` gate or sample matroids.
+4. Separate target translation, global-Hom membership, normal lifting, wall
+   passage, and off-fibre exclusion. None follows from the special-fibre
+   observer by itself.
 
 ### Wildcard
 
@@ -259,10 +322,12 @@ use fibres.
 
 ## Close-out truth
 
-The session produced proved abstract observer machinery, two exact JC
+The session produced proved abstract observer machinery, three exact JC
 observer/matroid refinements, and a complete LRC one-atom classification, and
-integrated incoming minimum-six progress. It did **not** prove LRC(14), the
-planar Jacobian conjecture, Dixmier(2), any Rule-30 prize, or any external
-p-adic-density theorem. The most actionable new frontier is the response
-hypergraph at endpoint 670, paired with a normal-Hasse contact-order atlas on
-the JC side.
+integrated incoming minimum-six progress. Its sharpest late result is the
+arithmetic three-channel theorem: faithful `5Q` restriction for every global
+special-fibre morphism and a one-channel `2Q` obstruction on degrees `34,42`.
+It did **not** prove LRC(14), the planar Jacobian conjecture, Dixmier(2), any
+Rule-30 prize, or any external p-adic-density theorem. The most actionable
+frontiers are the response hypergraph at endpoint 670 and a saturated
+first-channel descent for the raw `A_23` contact.

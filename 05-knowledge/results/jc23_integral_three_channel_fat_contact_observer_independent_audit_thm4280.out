@@ -1,0 +1,23 @@
+THM4280 DEPENDENCY-FREE FORMAL-LOG OBSERVER REFEREE
+status=FINITE_EXACT_INDEPENDENT_AUDIT_PASS
+dependencies=PYTHON_STANDARD_LIBRARY_ONLY
+field=Q(omega,kappa),omega^2+omega+1=0,kappa^2=-omega
+complex_active_degrees=1,2,4,7
+complex_subset_ranks=empty:0;1:1;2:1;4:1;7:1;1,2:2;1,4:2;1,7:2;2,4:2;2,7:2;4,7:2;1,2,4:3;1,2,7:3;1,4,7:3;2,4,7:3;1,2,4,7:4
+complex_active_rank_census=0:1,1:4,2:6,3:4,4:1
+complex_length12_rank_census=0:256,1:1024,2:1536,3:1024,4:256
+complex_matroid=U_4_4_PLUS_8_LOOPS
+complex_pure_hostiles=1:kappa*f-g;2:u;4:v;7:kappa*f+g
+arithmetic_subset_ranks=empty:0;1:2;2:1;4:1;7:2;1,2:3;1,4:3;1,7:2;2,4:2;2,7:3;4,7:3;1,2,4:4;1,2,7:3;1,4,7:3;2,4,7:4;1,2,4,7:4
+arithmetic_rank_law=2*hit_{1,7}+hit_2+hit_4
+arithmetic_rank_census=0:1,1:2,2:4,3:6,4:3
+arithmetic_minimal_full_observers=1,2,4|2,4,7
+arithmetic_necessity_hostiles=missing2:u;missing4:v;missing1and7:f
+c1_integral_kernel=O*u+O*v
+c1_zero_degree_mod4_residues=0
+degree34_mod4=2 degree42_mod4=2
+degree34_42_c1_zero=IMPOSSIBLE
+degree34_42_channel1_zero_test=PASS
+base_change_hostile=three_channels_fail_after_adjoining_kappa
+raw_Keller_descent=NOT_ADDRESSED
+verdict=PASS

@@ -1,5 +1,26 @@
 # Script Results Index
 
+- `jc23_integral_three_channel_fat_contact_observer*_thm4280.py` -> exact
+  arithmetic compression of the THM-4279 formal-log observer [THM-4280
+  PROVED RELATIVE TO THM-4241/4259/4272/4279 + VERIFIED-EXACT +
+  INDEPENDENTLY AUDITED; no new incidence or raw Keller descent;
+  JC(2)/DC(2) OPEN]. On the actual `O=Z[omega]` Hom lattice,
+  `ker(c_1)=ker(c_7)=O u direct-sum O v`, because
+  `kappa=zeta_12^5 notin Q(omega)`. Hence `{1,2,4}` and `{2,4,7}` are exactly
+  the two minimal inherited channel triples; all two-channel subsets fail.
+  The normalized four-channel determinant is `kappa`, and the complexified
+  hostile `kappa f+g` proves that all four channels remain necessary after
+  scalar extension. Actual ramification indices are exactly `{1,2,4}`, so
+  restriction to `5Q_epsilon` is faithful on global morphisms and the bound
+  is sharp at `v`. For degrees `34,42`, channel one alone is a
+  collapse-to-constant zero test, forcing unramifiedness at `Q_epsilon` and
+  nonconstancy already on `2Q_epsilon`. Primary source/output SHA-256:
+  `0db05f57a3aee190e71e44cee0a6e70ccf4ded5fc847ead7d5e7af4aacaaaf01` /
+  `8a30a8f8880ab470f38331ffb1387252d504cc067c6264674ee128c4bb5daa0a`;
+  standard-library referee source/output:
+  `86d5de3bb737a06343c030a30942e8fe269b515a5d418e6c10aeeba452292747` /
+  `726ed51dcd2c6acab3bd64d8b8f839904969eeb0db6eda4050292fbc9c35da26`.
+
 - `lrc14_endpoint_520_688_minimum_one_atom_*_thm4278.cpp`, family survey,
   and overlap postprocessor -> complete minimum-one-atom classification at
   former top `(520,688)` [THM-4278 PROVED RELATIVE TO THM-4266 + FINITE-EXACT
