@@ -8,11 +8,11 @@ status: >
   complete Hom class; equivalently, with the target-value sidecar, restriction
   to 5Q_epsilon is faithful on global C_0->E_0 morphisms. The only other
   minimal inherited triple is 2,4,7. Actual local ramification indices are
-  exactly 1,2,4, and the length-five bound is sharp. On degree 34 or 42 the
-  degree-one channel alone is a collapse-to-constant zero test, so every such
-  map is unramified at Q_epsilon and already nonconstant on 2Q_epsilon. This
-  arithmetic compression is not stable under scalar extension: all four
-  channels remain necessary on the chosen-embedding complexification. No new
+  exactly 1,2,4, and the length-five bound is sharp. A direct corollary
+  classifies ramification-four degree shells by Eisenstein norms, makes 3Q
+  sharp on every degree 8s^2 shell, and gives exact hidden/visible-coset
+  observers. Degree-34/42 maps are already nonconstant on 2Q_epsilon. This
+  arithmetic compression is not stable under scalar extension. No new
   incidence, raw Keller descent, exact-M=12 entry, JC(2), or DC(2) is proved.
 source: codex-creative-frontiers-20260827
 depends_on:
@@ -26,25 +26,28 @@ related:
 scripts:
   - 04-computation/jc23_integral_three_channel_fat_contact_observer_thm4280.py
   - 04-computation/jc23_integral_three_channel_fat_contact_observer_independent_audit_thm4280.py
+  - 04-computation/jc23_integral_three_channel_contact_shell_corollary_thm4280.py
 outputs:
   - 05-knowledge/results/jc23_integral_three_channel_fat_contact_observer_thm4280.out
   - 05-knowledge/results/jc23_integral_three_channel_fat_contact_observer_independent_audit_thm4280.out
+  - 05-knowledge/results/jc23_integral_three_channel_contact_shell_corollary_thm4280.out
 script_sha256:
   - 0db05f57a3aee190e71e44cee0a6e70ccf4ded5fc847ead7d5e7af4aacaaaf01
   - 86d5de3bb737a06343c030a30942e8fe269b515a5d418e6c10aeeba452292747
+  - 400f8ca05a0798197716f9190e57fa5a53803cf6c2acb3b1325d1dc8fbdeebea
 output_sha256:
   - 8a30a8f8880ab470f38331ffb1387252d504cc067c6264674ee128c4bb5daa0a
   - 726ed51dcd2c6acab3bd64d8b8f839904969eeb0db6eda4050292fbc9c35da26
+  - 55e333c03f6d58049a3dba557d96b70c25b0472764f5e25c76fcece8b2a81bb6
 hash_basis: raw LF bytes
 audit: >
-  PASS. Three independent algebraic derivations agree. The primary SymPy
-  audit verifies the normalized four-by-four matrix, every complex and
-  arithmetic subset rank, the two minimal triples, the integral visible
-  kernel, and both scalar-extension hostiles. A standard-library-only referee
-  implements Q(omega,kappa) and exact Gaussian elimination independently,
-  audits all 16 active subsets and all 4,096 length-twelve subsets, and
-  exhausts all 256 Eisenstein residue tuples modulo four for the degree-shell
-  consequence. Normal, optimized, and fixed-hash-seed outputs byte-match.
+  PASS. Two independent downstream algebra audits agree after inheriting the
+  normalized geometric channel matrix from THM-4259/4272/4279; neither script
+  independently rederives that matrix. The primary SymPy and standard-library
+  implementations verify every stated rank, kernel, hostile, residue, and
+  length-twelve census. A third optimization-safe audit checks the direct
+  norm-shell corollary's mod-two descent, examples, and bounded hostiles.
+  Normal, optimized, and fixed-hash-seed outputs byte-match.
 ---
 
 # THM-4280 -- integral three-channel observer and sharp `5Q` bound
@@ -132,6 +135,12 @@ deg(m) in {34,42},                                     (9)
 one has `c_1(m)!=0`. Hence every such map is unramified at `Q` and already
 nonconstant on `2Q`. Here `c_1` is only a zero test on these two degree
 shells; it is not a complete one-channel fibre observer.
+
+More generally, Section 6A proves that ramification four occurs on a
+degree-`d` shell exactly when `d=4N(e)` for a nonzero `e in O`. It follows in
+particular that every degree-`8s^2` shell has sharp uniform contact `3Q`.
+That section also gives exact one-channel observers on affine hidden cosets
+and a sharp two-channel observer on affine visible cosets.
 
 ## 2. Exact normalized channel matrix
 
@@ -335,6 +344,132 @@ formal logarithm begins in degree one, proving the final assertion of Section
 1. This is stronger than the general sharp `5Q` bound on these two shells,
 but weaker than recovering their complete fibres from one channel.
 
+## 6A. Per-consumer observers and exact norm-shell contact thresholds
+
+The preceding observer has sharper forms once its consumer is specified. Put
+
+```text
+H=O f direct-sum O g,                  V=O u direct-sum O v.       (28a)
+```
+
+On every affine `H`-coset in `M`, either `c_1` alone or `c_7` alone is an
+injective difference observer. Indeed, restricting the matrix `(11)` to `H`
+gives
+
+```text
+c_1(pf+qg)=p-kappa q,                  c_7(pf+qg)=p+kappa q.       (28b)
+```
+
+Here `p,q in O subset K`, while `kappa notin K` by `(17)`, so either
+vanishing equation forces `p=q=0`. The difference identity `(14)` of
+THM-4279 then shows that, with the target-value sidecar, restriction to `2Q`
+is faithful on global morphisms whose Hom classes lie in a fixed affine
+`H`-coset. This is sharp for every nontrivial such consumer: `1Q` retains
+only the common target value, whereas every nonzero hidden difference has
+nonzero degree-one channel.
+
+On every affine `V`-coset, the pair `(c_2,c_4)` is an injective difference
+observer by `(21)`. With the target-value sidecar it factors through `5Q`.
+The length-five bound is sharp for this consumer because `v` has pure support
+`{4}`, as proved after `(26)`. These are distinct restricted consumers;
+neither assertion promotes the indicated channels to an observer on all of
+`M`.
+
+There is also an exact degree-shell refinement. For a nonconstant based
+actual Hom class,
+
+```text
+e_Q(m)=4    iff    m=e v for some e in O-{0}.                       (28c)
+```
+
+In fact, the third case of `(26)` has `c_1=c_2=0`. Equation `(20)` first
+puts the class in `V`, and `(21)` then kills its `u`-coordinate. The converse
+follows from the pure support of `v`. Since `u,v` are orthogonal of degree
+four, as used in `(27)`, a degree-`d` shell contains a ramification-four map
+if and only if
+
+```text
+d=4N(e) for some nonzero e in O.                                    (28d)
+```
+
+Consequently, for every nonempty actual degree-`d` shell:
+
+- if `4` does not divide `d`, `(27)` forces `c_1!=0`; every map has
+  `e_Q=1`, and `2Q` is the sharp uniform noncollapse contact;
+- if `d=4n` and `n` is not an Eisenstein norm, `(28c)` excludes
+  ramification four, so every map is nonconstant on `3Q`;
+- if `n=N(e)`, the pure map `ev` shows that the inherited `5Q` bound is
+  necessary as well as sufficient on that shell.
+
+The middle bound is sharp whenever
+
+```text
+n=N(a)+N(e),                  a!=0,                  n notin N(O), (28e)
+```
+
+because `au+ev` has degree `4n`, kills `c_1` by `(20)`, and has
+`c_2=a!=0` by `(21)`. Thus its first formal-log exponent is two by `(26)`.
+
+In particular, for every integer `s>=1`, the degree-`8s^2` shell has sharp
+uniform contact `3Q`. To see that `2s^2` is not an Eisenstein norm, write
+
+```text
+N(A+B omega)=A^2-AB+B^2.                                            (28f)
+```
+
+Modulo two, the three nonzero pairs `(A,B)` all have norm one. Hence an
+even norm forces both `A` and `B` even; iterating shows that the `2`-adic
+valuation of every nonzero Eisenstein norm is even. But
+`v_2(2s^2)=1+2v_2(s)` is odd. Therefore `(28c)` bounds ramification by two
+on degree `8s^2`, while
+
+```text
+m_s=s u+s v,
+deg(m_s)=4(s^2+s^2)=8s^2,
+(c_1,c_2,c_4)(m_s)=(0,s,s)                            (28g)
+```
+
+shows that `2Q` does not suffice.
+
+Further concrete sharp-three shells are
+
+```text
+degree 8:   u+v;                         8=4(1+1),
+degree 20:  u+2v;                       20=4(1+4),
+degree 24:  (1-omega)(u+v);             24=4(3+3),
+degree 32:  2u+2v;                      32=4(4+4).      (28h)
+```
+
+The quotients `2,5,6,8` are not Eisenstein norms: `2,6,8` have odd
+`2`-adic valuation, while `5=2 mod 3` and
+`N(A+B omega)=(A+B)^2 mod 3`. Thus `(28h)` supplies honest sharpness
+witnesses, not only congruence obstructions.
+
+The connection ledger for this addendum is
+
+```text
+source:              actual global C_0->E_0 Hom classes modulo translation,
+                     in a fixed H/V coset or a fixed degree shell;
+target:              selected formal-log coefficients, equivalently the
+                     stated truncation 2Q, 3Q, or 5Q;
+map:                 translate by m(Q), apply log_E, retain the labelled
+                     b-coefficients;
+preserved predicate: equality inside the named affine consumer, or
+                     noncollapse on the named degree shell;
+destroyed data:      target value, directions outside the named consumer,
+                     and the complete Hom class for a shell zero test;
+restoring sidecars:  m(Q), actual global-Hom membership, the fixed coset or
+                     degree, Q, b, and omega_E;
+sharp hostiles:      v on norm shells; s(u+v) on degree 8s^2;
+local-map hostile:   exp_E(b^3), inherited from THM-4279.             (28i)
+```
+
+Everything remains confined to the exact characteristic-zero
+`W=Lambda=0` fibre. The statements are not observers on arbitrary local
+maps, are not stable under unrestricted scalar extension, and supply no
+transverse `W`-jet, resolved-to-raw Keller descent, new incidence deletion,
+physical exact-`M=12` entry, `JC(2)`, or `DC(2)` conclusion.
+
 ## 7. Exact audits and reproduction
 
 The primary symbolic audit verifies `(11)--(13)`, all sixteen complex and
@@ -352,9 +487,15 @@ PYTHONHASHSEED=0 python3 -B 04-computation/jc23_integral_three_channel_fat_conta
 python3 -B 04-computation/jc23_integral_three_channel_fat_contact_observer_independent_audit_thm4280.py
 python3 -B -O 04-computation/jc23_integral_three_channel_fat_contact_observer_independent_audit_thm4280.py
 PYTHONHASHSEED=0 python3 -B 04-computation/jc23_integral_three_channel_fat_contact_observer_independent_audit_thm4280.py
+
+python3 -B 04-computation/jc23_integral_three_channel_contact_shell_corollary_thm4280.py
+python3 -B -O 04-computation/jc23_integral_three_channel_contact_shell_corollary_thm4280.py
+PYTHONHASHSEED=0 python3 -B 04-computation/jc23_integral_three_channel_contact_shell_corollary_thm4280.py
 ```
 
 All three modes byte-match the maintained output for each implementation.
+The corollary audit is a finite hostile control; the mod-two descent and
+all-shell statement are proved symbolically in Section 6A.
 
 ## 8. Scope and firewalls
 

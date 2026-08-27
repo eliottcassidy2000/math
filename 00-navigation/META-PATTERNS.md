@@ -154,8 +154,8 @@ connected 72-family but a `5871+1` hostile), and THM-4276
 
 **Action/boundary:** recompute witnesses per consumer after restriction.
 THM-4281/4282 separate classifier, deck, and carrier; THM-4280
-separates complex, integral, and shell observers. Essentiality does not
-transfer; this grammar gives no LRC--Jacobian map.
+separates complex, integral, affine-coset, and degree-shell observers.
+Essentiality does not transfer; this grammar gives no LRC--Jacobian map.
 
 ## Certify before projection
 
