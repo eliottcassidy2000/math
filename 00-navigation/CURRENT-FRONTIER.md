@@ -72,13 +72,13 @@ is the safe control `M(S_13)=99/338`. No cited result proves LRC(14).
   firewalls. THM-4110 finds `64` AP13 sheets; THM-4116 gives
   `2^(c(F)-1)`. Safety/arrival stay open.
 - **Owner/tail:** THM-4156/4191 close layers 0/1. [THM-4231](../01-canon/theorems/THM-4231-arbitrary-pair-cofinal-depth-six-haar-repair-and-exact-outsider-lift.md)
-  closes `max(q,r)>=770`, leaving `181,194` pairs. THM-4238 removes 32;
-  closes `q in {2,...,49}\P,r>=590`, leaving `181,162`.
+  closes `max(q,r)>=770`; THM-4238 and
   [THM-4242](../01-canon/theorems/THM-4242-fixed-fifty-direct-r590-tail-and-twenty-three-label-chart.md)
-  removes 36 fixed-`50` edges, leaves `181,126`; `chi_50>=23`.
-  [THM-4245](../01-canon/theorems/THM-4245-primitive-observable-component-floor-and-cofinal-gate-redundancy.md)
-  makes THM-4233's scalar gate cofinally redundant (`max>=1466`).
-  Addressed phase/deck and entry remain open.
+  leave `181,126` edges and `chi_50>=23`.
+  THM-4245 makes the scalar gate cofinally redundant.
+  [THM-4252](../01-canon/theorems/THM-4252-exact-signed-endpoint-cocycle-residual-edge-closure.md)
+  retains signed endpoints, closes three edges, and leaves `181,123`, maximum
+  endpoint `768`, combined cutoff `769`. Bulk phase/deck and entry remain open.
 - **PROVED:** [THM-2928](../01-canon/theorems/THM-2928-critical-seven-comb-grid-tensorization-and-drift-tariff.md)/2941: literal zero/one/two/three-drift sectors are empty; `k=2,3` are finite.
 - **Orthogonal routes.** THM-1017 is HYP-6820; THM-2047/2050 keep phase/exit; THM-731/2048 prune; THM-1290 ends at `55`; HYP-8900 nonuniform.
 - **PROVED micro-staircase:** THM-3316 closes every prime and THM-3317 proves

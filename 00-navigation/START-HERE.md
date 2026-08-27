@@ -21,8 +21,8 @@ Then read the routed frontier, guardrails, and theorem; logs are history.
 
 ## Seventeen high-signal facts
 
-1. **LRC(14) is first open.** THM-4231 closes `max(q,r)>=770`;
-   THM-4238/4242 leave `181,126` edges; THM-4242 proves `chi_50>=23`.
+1. **LRC(14) is first open.** THM-4231/4238/4242 leave `181,126` edges;
+   THM-4252 leaves `181,123` with cutoff `769`; THM-4242 proves `chi_50>=23`.
 2. **The `q <= 25` period claim is refuted.** THM-762/764 exhibit `26*{1,...,12} union {339}`, whose first good period is `27`.
 3. **Good-period existence is a maximum statement.** The tight resonant AP
    defeats average/count arguments; see MISTAKE-127/129/130.
