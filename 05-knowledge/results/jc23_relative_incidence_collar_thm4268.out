@@ -1,0 +1,18 @@
+theorem=THM-4268
+face=-P**6*U - P**5*S**2*W - P**4*S**4*Z + 1
+dS=-2*P**4*S*(P*W + 2*S**2*Z)
+dP=-P**3*(6*P**2*U + 5*P*S**2*W + 4*S**4*Z)
+torus_critical_identity=2Z*Pbracket-(4ZS^2+3WP)*Sbracket+3DP^2=0
+torus_critical_gate=D
+edge_discriminants={quadratic:D,quartic:-256*Z^3,sextic:46656*U^5}
+edge_resultant_at_X1=Lambda
+contact_equation=1-Lambda*S^12
+contact_derivative=-12*Lambda*S^11
+contact_divisor=finite_etale_rank_12_on_gate
+w0_kummer_map=[U:Z]=[4*T^2*R^2:(T^2-R^2)^2]
+w0_kummer_sum=U+Z=(T^2+R^2)^2
+w0_branch_fibres={U0:[0,infinity],Z0:[1,-1],UplusZ0:[i,-i]}
+w0_generic_orbit={t,-t,1/t,-1/t}
+nonproper_hostile=W*X-1_special_fibre=unit_generic_fibre=point
+properness_input=abelian_target_Neron_extension_not_symbolic_specialization
+scope=no_explicit_collar_equation_no_boundary_crossing_no_M12_entry_no_JC2

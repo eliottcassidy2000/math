@@ -352,8 +352,10 @@ lift/phase clocks.
   [THM-4260](../01-canon/theorems/THM-4260-w0-canonical-node-reciprocal-denominator-attachment-exclusion.md)
   excludes all classes in the gate interior.
   [THM-4265](../01-canon/theorems/THM-4265-w0-reduced-wall-factor-and-transverse-jacobian-reduction.md)
-  proves the wall roots simple and reduces any coherent lift to a transverse
-  Jacobian, but constructs none. Walls, normal lift and `M=12` entry stay open.
+  proves simple wall roots conditional on a coherent lift.
+  [THM-4268](../01-canon/theorems/THM-4268-relative-abelian-map-incidence-properness-and-w0-collar.md)
+  instead uses proper incidence for a non-effective Zariski/formal collar.
+  Its complement, walls and `M=12` entry stay open.
   Exceptional quartic: THM-3703/3737 give grammar/image, THM-4034 the
   conductor, and THM-4039/4043/4046 reach `J_7`, obstruct `J_8`, and close
   critical `H`. [THM-4054](../01-canon/theorems/THM-4054-exceptional-affine-simple-zero-retained-packet.md)

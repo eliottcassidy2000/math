@@ -1,0 +1,8 @@
+theorem=THM-4268-independent
+critical_and_contact_box_checks=38880
+kummer_projective_checks=360
+critical_identity=pass
+contact_substitution=pass
+kummer_V4_invariance=pass
+hostile=Spec(R[X]/(W*X-1))_special_empty_generic_nonempty
+scope=algebra_audit_only_properness_is_theorem_proof
