@@ -1,5 +1,40 @@
 # Script Results Index
 
+- `jc23_w0_degree42_norm3_profile_exclusion_thm4253.py` and a clean-room
+  lattice/ideal/incidence reconstruction -> complete degree-42 norm-three
+  profile exclusion [THM-4253 PROVED COROLLARY TO THM-4249 + VERIFIED-EXACT +
+  INDEPENDENTLY AUDITED; `W=0`, `M=12`, JC(2), DC(2) OPEN]. The profile
+  `(N(d),K)=(3,13)`, equivalently `(q(v),q(ell))=(12,156)`, has `672`
+  vectors in `28` size-24 orbits. Since `d` is associated to the ramified
+  prime above three, `ker(d*pi)=E_0[3]`; its sole gate-admissible ratio is
+  `1/3`, already excluded by THM-4249. Thus the degree-42 residual sharpens
+  from `3,168/132` to `2,496/104` vectors/orbits. Its incidence count remains
+  `648`: the 28 profile incidences were among the 132 common-`1/3` incidences
+  already removed. Four good-field controls run `2,688` direct hidden-origin
+  tests per field with no hit. Primary source/output SHA-256:
+  `b9cf49556a8f4229a02d8e4e0d6300172596286ce9dbf185d535d22d952daf5e` /
+  `09714e2d7f846582dcd86cbcbf716ac6a403de0e8e02dc8c5185415f25ee3f35`;
+  independent source/output:
+  `6196a7c1a8cb674e32266a213a624da2c901032b6724f97f422f36cf87ed236d` /
+  `7d74814f8d1f706448572dd234e9329cafd6ddb7c1ab2a3631d364c6c3dd9154`.
+
+- `jc23_w0_hidden_degree24_attachment_audit_thm4251.py` and a dependency-free
+  denominator/orbit referee -> hidden degree-24 attachment exclusion
+  [THM-4251 PROVED RELATIVE TO THM-4230/4241/4247 + VERIFIED-EXACT +
+  INDEPENDENTLY AUDITED; THM-4249 SUBSUMES THE ROW CONSEQUENCE; `W=0`, `M=12`,
+  JC(2), DC(2) OPEN]. The complete shell has 24 maps, exactly twice the
+  degree-six shell, in two free size-12 unit/source orbits. Both representatives
+  have reduced denominator `t(t^2-1)L(t^2)^2`; the reciprocal gcd is exactly
+  `t^2-1`, whose roots force the excluded wall `Z=0`. Relative to THM-4247
+  alone this removes `2,304/288` degree-`34/42` vectors, but it is an
+  independent hostile control and must not be subtracted again from the
+  stronger THM-4249 frontier. Primary source/output SHA-256:
+  `7adc5b697f7007ca19ec08766f60c378d9987e6203dd705adb4d8068a029bd50` /
+  `643e01337a5512157f05fa42f654293085326d03514978e3bc8924e8d505adbb`;
+  independent source/output:
+  `b8c571d4eeef84e1ef5bb30ba5fbd1b8012fcac3c0ea5eca6f46b11b65e6e0ff` /
+  `0293b9aa8ceca98da25556aa68e3fc8e7f9ad454f294f658cf1b3f20f29b36d5`.
+
 - `jc23_w0_cyclic_projector_squeeze_thm4249.py` plus three independent or
   complementary exact paths -> integral cyclic-projector, CM-torsion, and
   common-ratio squeeze [THM-4249 PROVED RELATIVE TO THM-4230/4241 +

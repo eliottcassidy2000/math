@@ -1,0 +1,12 @@
+THM-4253 DEGREE-42 NORM-THREE PROFILE EXCLUSION AUDIT
+formal_input=THM-4249_PROVED ratio_1/3_notin_S42
+profile=(N(d),K):(3,13) equivalent=(q(v),q(ell)):(12,156)
+vector_orbit_ledger=3168/132-672/28=2496/104
+incidence_overlap=pre:780 common_1/3:132 profile_subset:28 post:648
+field=(313, 29, 135, 21) roots=[81, 85, 228, 232] raw_hidden_origin_tests=2688 hits=0 sha256=4ce02946e6d4ce0baae6ab1f5eab08e13e8ebd3cdad28ca5b193d5e58e75df96
+field=(349, 24, 246, 28) roots=[163, 167, 182, 186] raw_hidden_origin_tests=2688 hits=0 sha256=991e226f2987aea1e3213512f24a269f4e8deff99bbc6d555c20f1354d8aedf8
+field=(373, 69, 297, 33) roots=[129, 133, 240, 244] raw_hidden_origin_tests=2688 hits=0 sha256=9e9e5a12efe955d3080d682d5fdd4ae81028e45d69998ade8fe28f98cbaed0c0
+field=(397, 157, 161, 27) roots=[18, 22, 375, 379] raw_hidden_origin_tests=2688 hits=0 sha256=a5251c5381a5f006b2162dd3b94a989fe7650121151f322513a88719e1853fea
+conclusion=profile_deleted vectors672 orbits28
+refined_degree42_frontier=vectors2496 orbits104 incidences648
+scope=remaining_104_orbits_648_incidences_W0_M12_entry_JC2_OPEN

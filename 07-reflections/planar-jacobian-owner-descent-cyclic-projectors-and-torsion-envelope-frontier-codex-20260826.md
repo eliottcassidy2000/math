@@ -1,9 +1,12 @@
 # Planar Jacobian: owner descent, cyclic projectors, and the torsion-envelope frontier
 
-**Current status (2026-08-26).** This session produced two canonical results:
+**Current status (2026-08-26).** This session produced four canonical results:
 [THM-4248](../01-canon/theorems/THM-4248-weight-eleven-z-zero-owner-descent-planar-jacobian-exclusion.md)
-and
-[THM-4249](../01-canon/theorems/THM-4249-w0-cyclic-projector-missing-eigenline-attachment-squeeze.md).
+and [THM-4249](../01-canon/theorems/THM-4249-w0-cyclic-projector-missing-eigenline-attachment-squeeze.md),
+followed by the independently useful low-shell control
+[THM-4251](../01-canon/theorems/THM-4251-w0-hidden-degree-twenty-four-attachment-exclusion.md)
+and the strict frontier refinement
+[THM-4253](../01-canon/theorems/THM-4253-w0-degree-forty-two-norm-three-profile-exclusion.md).
 They are local advances inside the inherited reduced `(2,3)` seam. They do
 not prove seam entry or `JC(2)`.
 
@@ -169,6 +172,17 @@ orbits and retain direct per-orbit nonvanishing as a hostile control. Thus
 `1/3` is excluded, the final ratio envelopes have cardinalities `55/34`, and
 the exact residual frontier has `864+648=1,512` incidences.
 
+THM-4253 then uses the information already present in that exclusion more
+efficiently. The degree-42 profile `(N(d),K)=(3,13)` consists of 672 vectors
+in 28 orbits, and `d` is associated to the unique Eisenstein prime above
+three. Consequently its visible kernel is exactly `E_0[3]`; after removing
+the gate walls, its only ratio is `1/3`. The entire profile therefore vanishes,
+leaving 2,496 vectors and 104 orbits. The incidence number stays 648 because
+these 28 incidences were already inside the common-ratio row removed by
+THM-4249. THM-4251 supplies a separate direct-denominator proof for the hidden
+degree-24 shell. Its row is already subsumed by THM-4249, so it is retained as
+an independent hostile control rather than counted as a second decrement.
+
 ## Typed connection ledger
 
 | source | target | map | preserved predicate | destroyed information | needed sidecar | cheapest decisive test |
@@ -179,6 +193,7 @@ the exact residual frontier has `864+648=1,512` incidences.
 | hidden shell | two-torsion hostile | cyclic determinant/adjugate | simultaneous attachment collapse | individual target values up to units | explicit `f,g` formulas | quartic-versus-sixth-root resultant |
 | residual `d` coordinate | marked ratio | `P=v(Q_0)`, then `X^3` | necessary collapse condition | hidden coordinates of the map | CM ideal and gate orbits | kernel union/intersection census |
 | common `E[3]` ratio | all degree-42 map orbits | ramified-prime determinant descent | collapse of `H,TH` and integrality | behavior at other target-torsion primes | hidden-degree divisibility and good reduction | order-18 point at `q=397` |
+| norm-three profile | common-ratio exclusion | `(d*pi)=(3)` and `ker[d*pi]=E_0[3]` | all admissible profile ratios | incidence multiplicity already deleted | class/incidence overlap ledger | compare `780-132` with `(780-28)-(132-28)` |
 | ratio envelope | exact attachment question | map-ratio incidence graph | every possible witness | algebraic equality of mixed maps | explicit normalized full basis | good-prime pole-ideal evaluation |
 
 ## Hostile probes and stopping reasons
@@ -207,7 +222,7 @@ the exact residual frontier has `864+648=1,512` incidences.
 
 ## Sharp next fronts
 
-1. **Evaluate the 1,512 incidences.** Use the explicit basis `[u,f,g,h]` over
+1. **Evaluate the 1,512 incidences on 176/104 map classes.** Use the explicit basis `[u,f,g,h]` over
    a good finite-field embedding, represent each mixed map by pole ideals or
    reduced function-field coordinates, and test equality on one canonical
    twelve-node orbit. A characteristic-zero degree bound must accompany any
@@ -218,10 +233,11 @@ the exact residual frontier has `864+648=1,512` incidences.
    forces divisibility of both hidden coefficients and hence another
    forbidden divided degree. The cheapest next lane is a ratio shared by the
    largest number of actual `(d)` ideals, so one proof removes many
-   incidences rather than one map-ratio pair. The incoming THM-4251 namespace
-   is only a **RESERVED / UNPROVED EMPTY STUB** for an independent hidden
-   degree-24 audit; if promoted, it should serve as a hostile control on the
-   `K=2` determinant route, never as a present dependency.
+   incidences rather than one map-ratio pair. THM-4253 shows that a ratio
+   exclusion can erase a whole ideal profile even when the incidence ledger
+   has already charged that ratio. THM-4251 is now a proved independent
+   hostile control on the low-shell denominator route, not a dependency for
+   the remaining profile attack and not a second current-frontier subtraction.
 3. **Attack the three `M=11` walls separately.** `A=0` asks for the new
    genus-five CM type, `B=0` for the genus-four elliptic quotient, and
    `A+B=0` for a nontransverse stable model. They are different geometries,

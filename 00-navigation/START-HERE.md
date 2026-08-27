@@ -54,8 +54,9 @@ Then read the routed frontier, guardrails, and theorem; logs are history.
 12. **JC is false from dimension three; JC(2), DC(2) remain open.**
     THM-2084/4218/4220 reach `M=10`; THM-4222/4232/4248 close `M=11` off
     `A*B*(A+B)=0`; THM-4226 closes `M=13`. On `M=12`, `W=0`,
-    THM-4230/4241/4249 leave `176/132` classes, `55/34` ratios, and `1,512`
-    incidences. Emptiness and entry stay open.
+    THM-4230/4241/4249 leave `176/132` classes; THM-4251 audits a subsumed row
+    and THM-4253 leaves `176/104` classes and `864/648=1,512` incidences.
+    Emptiness and entry stay open.
 13. **Complete period-14 coordinates can be globally blind.** THM-2058 keeps
     every fixed-depth packet coordinate but exits at `47/113`; THM-2043/2047/
     2050 separate local completeness from global maxima.

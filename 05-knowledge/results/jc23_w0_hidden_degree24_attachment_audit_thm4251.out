@@ -1,0 +1,15 @@
+THM-4251 W=0 HIDDEN DEGREE-24 ATTACHMENT AUDIT
+degree24_vectors=24 degree6_halves=24
+orbit_count=2 orbit_sizes={12: 2}
+orbit_representatives=2f,2(f+Tf)
+symbolic={'f_line': 'p**3 + u', 'f_plus_norm': '2916', 'f_minus_norm': '4', 'sum_line': '101*p*u*z**3 + 58*p*u*z**2 - 109*p*u*z - 125*p*u + 59*p*z**3 + 4*p*z**2 - 115*p*z - 116*p - 47*u*z**3 - 23*u*z**2 + 50*u*z + 51*u - 36*z**3 + 7*z**2 + 56*z + 41', 'sum_coefficient_norms': "('1771561', '1771561')", 'sum_denominator_norm': '1771561', 'sum_plus_norm': '5165871876', 'sum_minus_norm': '7086244', 'raw_denominator': 't*(t^2-1)*L(t^2)^2', 'raw_reciprocal_gcd': 't^2-1'}
+embedding=(313, 29, 135, 21) rows=[(((-2, -2), (-2, -2)), 7, (1, 0, 312), 'ab16a43654759047c61ef3d30be258425a266cd3ab2223183bd478a884c844bf'), (((-2, -2), (0, 0)), 7, (1, 0, 312), 'fec32b18ded5237cb3730e93af898b98d4c787ece1ac92f9d6049b325da8f446')]
+embedding=(349, 24, 246, 28) rows=[(((-2, -2), (-2, -2)), 7, (1, 0, 348), '2280f863c44742898b2af796dce41c794f1989951540bc1d2d92bae153a093fe'), (((-2, -2), (0, 0)), 7, (1, 0, 348), 'efa96fdcbf2af3c3e63b4c5d6a7f954394dd023e3923d7d502677d0cef55515e')]
+embedding=(373, 69, 297, 33) rows=[(((-2, -2), (-2, -2)), 7, (1, 0, 372), '95bf59332b6d1fcaeffdae76ae919dfd5567f05f8a8862c2d6b368db1eabe0d7'), (((-2, -2), (0, 0)), 7, (1, 0, 372), 'f0c82574312288f584468d67833b83ae4ec367dcd23a3853a81267b3b3ed12c0')]
+embedding=(397, 157, 161, 27) rows=[(((-2, -2), (-2, -2)), 7, (1, 0, 396), '0a84ef7e3cf64fbfa6b4bdb5c4e30d3ca311794fb0c0a0a6cc2ca953fa6847c0'), (((-2, -2), (0, 0)), 7, (1, 0, 396), 'dc8f242e6ed3a5a26abe01f777ffe419be137c95fe3838ddc7bf84128f88a359')]
+denominator_degree=7 reciprocal_gcd=t^2-1
+gate_wall=t=+-1 => Z/U=0
+thm4247_only_projection_row_deletion=degree34:2304 degree42:288
+thm4247_only_raw_remainder=degree34:31872 degree42:15840
+current_stronger_residual=governed_by_THM4249
+result=PASS

@@ -1,0 +1,12 @@
+THM4253 NORM-THREE PROFILE INDEPENDENT AUDIT
+degree42_residual_vectors=3168 orbits=132 all_orbit_sizes=24
+vector_profile={(3, 13): 672, (9, 11): 576, (12, 10): 864, (21, 7): 768, (27, 5): 288}
+orbit_profile={(3, 13): 28, (9, 11): 24, (12, 10): 36, (21, 7): 32, (27, 5): 12}
+norm3_profile=vectors:672 orbits:28
+ideal_logic=d~pi, (d*pi)=(pi^2)=(3), ker[d*pi]=E[3]
+E3_unit_orbits={1: 1, 2: 1, 6: 1} admissible_ratio=1/3
+after_profile=vectors:2496 orbits:104
+ratio_counts_per_map_orbit={3: 1, 9: 4, 12: 5, 21: 10, 27: 13}
+incidences=raw:780 raw_after_profile:752 final_after_R1/3:648
+max_retained_coordinate=6 coordinate_bounds=21,21,42
+consequence=THM4249_R1/3_exclusion_removes_entire_(Nd,K)=(3,13)_profile

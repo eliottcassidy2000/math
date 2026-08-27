@@ -1,0 +1,15 @@
+INDEPENDENT HIDDEN DEGREE-24 REFEREE AUDIT
+imports_repository_code=False
+shell {'gram_charpoly': '(lambda - 6)*(lambda - 3)*(lambda**2 - 15*lambda + 18)', 'hermitian_lambda_min': '6-sqrt(12)>2', 'degree6': 24, 'degree24': 24, 'all_even': True, 'orbit_sizes': (12, 12), 'seeds': (((2, 0), (0, 0)), ((2, 0), (2, 0)))}
+symbolic SymbolicRow(name='f', line='-2*p*z**3 + 4*p*z + 3*p + u + z**3 - 2*z - 1', line_norms=('1', '1', '2916', '4'), a_at_one_norm='144', ab_resultant_norm='36', numerator_at_zero_norm='1')
+symbolic SymbolicRow(name='f+Tf', line='-3*p*u*z**3 - 4*p*u*z**2 + 2*p*u - 4*p*z**3 - 5*p*z**2 + 5*p*z + p + u*z**3 + 2*u*z**2 - u - 2*z**3 + 4*z**2 + 2*z - 5', line_norms=('1', '1', '2916', '4'), a_at_one_norm='144', ab_resultant_norm='36', numerator_at_zero_norm='1')
+finite (313, 29, 135, 21) (('f', (1, 0, 312), (1, 0, 76, 0, 75, 0, 161, 0)), ('f+Tf', (1, 0, 312), (1, 0, 206, 0, 98, 0, 8, 0))) bbed9c9620aea1f3eb9c4b76752761bf2ccda03623f7d3e776effeca772b3029
+finite (349, 24, 246, 28) (('f', (1, 0, 348), (1, 0, 332, 0, 80, 0, 285, 0)), ('f+Tf', (1, 0, 348), (1, 0, 106, 0, 225, 0, 17, 0))) a4981c50d4d3a04413252d446117a5bf479f5e6e4e201992d53bb789845d710a
+finite (373, 69, 297, 33) (('f', (1, 0, 372), (1, 0, 89, 0, 70, 0, 213, 0)), ('f+Tf', (1, 0, 372), (1, 0, 204, 0, 137, 0, 31, 0))) 7b64ea668b3326a6b757a2b227e2efef1cf695a466b9e00be9719a3a2328b271
+finite (397, 157, 161, 27) (('f', (1, 0, 396), (1, 0, 33, 0, 255, 0, 108, 0)), ('f+Tf', (1, 0, 396), (1, 0, 16, 0, 353, 0, 27, 0))) 1df67a0bdab68d20c819b4e498555307b20720bbac39c407af21482bfefef3bf
+projection34 [(12, 1536), (24, 2304), (36, 5952), (60, 5760), (72, 8064), (84, 5376), (108, 4992), (120, 1728), (132, 576)]
+projection42 [(12, 672), (24, 288), (36, 2304), (60, 288), (72, 3456), (84, 3072), (108, 3744), (120, 1728), (132, 576), (156, 672), (168, 192)]
+thm4247_only_row_subtraction {'previous': (34176, 16128), 'removed_qell24': (2304, 288), 'new': (31872, 15840)}
+current_stronger_residual governed_by_THM4249
+gate common reciprocal roots=t:+1,-1 => Z/U=0; gate UZ!=0 excludes both
+verdict PASS relative to THM-4230/4241/4247 geometric inputs
