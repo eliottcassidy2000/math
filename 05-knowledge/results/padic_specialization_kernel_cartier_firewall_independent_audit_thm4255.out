@@ -1,0 +1,8 @@
+EXHAUSTIVE_KERNEL_PREIMAGE PASS field=F2 elements=512
+IDENTITIES ker(ev)=(u-f); ev^-1((f^n))=(u-f)+(f^n) PASS
+CARTIER_NONCOMMUTATION PASS C0_before={1: 1} C1_before={0: 100} after=0
+SHORT_JET PASS raw_rank=2/3 graph_normal_rank=5/5 rectangle_rank=5/9 tail_quotient_injective=yes
+PROP6_2_HOSTILE PASS pre_order=5 post_order=10 pivot=38 admissible_windows=[]
+PROP12_3_HOSTILE PASS pivot=46 admissible_windows=[]
+RESTRICTED_ASSOCIATED_GRADE_HOSTILE PASS hidden_order=7 full_graph_quotient_strict=yes
+CLEANROOM_STANDARD_LIBRARY_AUDIT: PASS

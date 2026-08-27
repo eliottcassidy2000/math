@@ -1,5 +1,21 @@
 # Script Results Index
 
+- `padic_specialization_kernel_cartier_firewall_thm4255.py` and an independent
+  finite-field clean-room referee -> specialization graph kernel, restricted
+  short-jet criterion, transverse Hasse recovery, and Cartier firewall
+  [THM-4255 PROVED + VERIFIED-EXACT + INDEPENDENTLY AUDITED; EXTERNAL DENSITY
+  CLAIMS OPEN]. The primary verifies triangular truncations through degree
+  nine, 54 graph-plus-tail cells, five Cartier controls, 14 Hasse controls,
+  and abstract hostile pivots `38/46`. The referee exhausts all 512 elements
+  of a `3x3` monomial box over `F_2` and independently obtains short-jet ranks
+  `2/3`, `5/5`, and `5/9`. Both normal/optimized/hash-seed runs byte-match.
+  Primary source/output SHA-256:
+  `f2f6b5edf6cdc61d73b0c535aa1995b366ddc0734a0587a24dbf9805f54e2f7b` /
+  `99c664cebf53cb4e10a068a11ef35f91f5dd06ead69f48890a16354cb43a59bd`;
+  independent source/output:
+  `e4fa806af39fead477eb51e88864c9af667d3afc1c16b3411e6071f597c811c5` /
+  `cade91738365f0b79901584981677821eeb253763299ccaf3a28c8cf01601169`.
+
 - `jc23_w0_degree42_norm3_profile_exclusion_thm4253.py` and a clean-room
   lattice/ideal/incidence reconstruction -> complete degree-42 norm-three
   profile exclusion [THM-4253 PROVED COROLLARY TO THM-4249 + VERIFIED-EXACT +

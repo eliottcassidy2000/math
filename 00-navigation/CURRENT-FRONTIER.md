@@ -342,8 +342,8 @@ lift/phase clocks.
 
 ## Other active portfolio
 
-- **P-adic zeta:** the pinned 22 claims stay **AUTHOR-CLAIMED / UNREFEREED**;
-  THM-4089 proves only a formula optimum/four-cell obstruction, not its gates.
+- **P-adic zeta:** [THM-4255](../01-canon/theorems/THM-4255-specialization-kernel-and-transverse-hasse-jet-repair.md) finds a density graph-kernel gap;
+  its claims and the old 22 stay **OPEN / UNREFEREED**.
 - **Matching logic:** THM-4090 gives a two-sort Figure-2 calculus
   counterexample relative to cited soundness; one-sort completeness remains a
   preprint claim, and no arithmetic/tournament transfer follows.

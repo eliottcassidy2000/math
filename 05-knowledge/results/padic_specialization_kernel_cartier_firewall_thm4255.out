@@ -1,0 +1,21 @@
+THM-4255 SPECIALIZATION KERNEL / CARTIER FIREWALL AUDIT
+triangular degree=1 dim=3 eval_rank=2 graph_kernel_dim=1
+triangular degree=2 dim=6 eval_rank=3 graph_kernel_dim=3
+triangular degree=3 dim=10 eval_rank=4 graph_kernel_dim=6
+triangular degree=4 dim=15 eval_rank=5 graph_kernel_dim=10
+triangular degree=5 dim=21 eval_rank=6 graph_kernel_dim=15
+triangular degree=6 dim=28 eval_rank=7 graph_kernel_dim=21
+triangular degree=7 dim=36 eval_rank=8 graph_kernel_dim=28
+triangular degree=8 dim=45 eval_rank=9 graph_kernel_dim=36
+triangular degree=9 dim=55 eval_rank=10 graph_kernel_dim=45
+cartier p=2 C0(u-f)=u C1(u-f)=-1 specialized=(f,-1) C(ev(u-f))=(0,0)
+cartier p=3 C0(u-f)=u C1(u-f)=-1 specialized=(f,-1) C(ev(u-f))=(0,0)
+cartier p=5 C0(u-f)=u C1(u-f)=-1 specialized=(f,-1) C(ev(u-f))=(0,0)
+cartier p=7 C0(u-f)=u C1(u-f)=-1 specialized=(f,-1) C(ev(u-f))=(0,0)
+cartier p=11 C0(u-f)=u C1(u-f)=-1 specialized=(f,-1) C(ev(u-f))=(0,0)
+transverse_hasse tests=14 graph_orders=1..6 result=PASS
+ell_adic_strictness_hostile source=u-1 primitive specialization=u->1+5*f^7 image=5*f^7
+prop6_2_window_hostile F=23^-1*(u-1)*z u=1+f^15 z=f^23 pivot=38 allowed_j=[0,10] representations=[]
+prop12_3_window_hostile F=29^-1*(u-1)*z u=1+f^17 z=f^29 pivot=46 allowed_j=[-1,13] representations=[]
+summary truncations=9 preimage_cells=54 cartier_tests=5 hasse_tests=14
+result=PASS
