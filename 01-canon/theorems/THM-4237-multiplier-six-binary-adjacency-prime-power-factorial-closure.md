@@ -2,7 +2,7 @@
 id: THM-4237
 title: "Multiplier-six binary adjacency and prime-power factorial closure"
 status: >
-  RESERVED / PROVISIONAL PROOF CANDIDATE UNDER AUDIT.  In THM-3474's exact
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY AUDITED. In THM-3474's exact
   prime-power reset compiler with multiplier a=6, the positive candidate
   degree intersection is empty exactly when the binary expansion of p^k has
   adjacent one-bits.  Hence every prime p=3 mod 4, p>=7, and every odd k
@@ -29,13 +29,20 @@ output_sha256:
   - 126a0d484c27175dc33b15db6e45f1fb4864f1f11a6446cd84001d52db93b356
   - 4d3a849e32e5a1a37cdbafcd3016e74fd87afa04ff9caa22fa2cfe11fb31f9e3
 hash_basis: raw LF bytes
+audit: >
+  Adversarial audit PASS. For a=6, THM-3474 gives reset range T=3 at p=7
+  and T=5 thereafter; carry-free splitting eliminates odd multipliers and
+  identifies the even pair with adjacent binary support. Empty degree
+  barcode and zero coordinate capacity give rational coprimality, while the
+  explicit v=(N+1)C/A scaling transfers THM-3124's resonance root to the
+  same polynomial pair. Both independent normal/optimized replays byte-match
+  their frozen outputs and hashes; surviving-address hostiles construct no
+  factor.
 ---
 
 # THM-4237 -- multiplier-six binary adjacency and prime-power factorial closure
 
-**RESERVED / PROVISIONAL PROOF CANDIDATE UNDER AUDIT.**  The proof below is
-complete, but the theorem remains outside the proved dependency graph until
-an adversarial audit explicitly promotes it.
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY AUDITED.**
 
 ## 1. Statement
 
@@ -87,11 +94,11 @@ In particular, if
 p=3 (mod 4),                       k odd,                   (7)
 ```
 
-then `p^k=3 (mod 4)`, its final two binary digits are `11`, and `(5)` holds.
+then `p^k ≡ 3 (mod 4)`, its final two binary digits are `11`, and `(5)` holds.
 For every exact quadratic
 
 ```text
-q(x)=a+bx+cx^2,                    abc!=0,                  (8)
+q(x)=A+Bx+Cx^2,                    ABC!=0,                  (8)
 ```
 
 at least one of
@@ -181,15 +188,23 @@ binary submask of `aH=6H`.  It separately proves that the coordinate-root
 capacity is zero.  Thus `(4)` and `Adj(H)` leave no positive degree address,
 which proves the rational coprimality `(5)`.
 
-THM-3124's symbolic resonance reduction then says that three consecutive
-zero moments for the exact support `{0,1,2}` at the exponents in `(9)` would
-give a common root of precisely the pair in `(5)`.  Coprimality excludes that
-root and proves `(9)`.
+THM-3124's symbolic resonance reduction says that three consecutive zero
+moments at `(9)` first force `B/A=-1/d`, where `d=N+1`. Put
+
+```text
+u=C/A,                 v=du,
+q=(A/d)(d-x+v x^2),    L(q^n)=(A/d)^n A_n^d(v).          (16a)
+```
+
+Thus the same `v` would be a common complex root of the rational polynomial
+pair in `(5)`. A common complex root of two rational polynomials has a
+positive-degree minimal polynomial common to both, contradicting their
+rational gcd `1`. This proves `(9)`.
 
 Finally, `(7)` gives
 
 ```text
-p^k=3^k=3 (mod 4),                                         (17)
+p^k ≡ 3^k ≡ 3 (mod 4),                                     (17)
 ```
 
 because `k` is odd.  The two low binary bits are therefore both one, so
