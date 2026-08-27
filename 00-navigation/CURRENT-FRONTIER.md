@@ -64,8 +64,9 @@ is the safe control `M(S_13)=99/338`. No cited result proves LRC(14).
   [THM-4266](../01-canon/theorems/THM-4266-three-round-learned-carrier-endpoint-descent.md)
   and THM-4267/4269 close `3,037+63+53`.
   [THM-4270](../01-canon/theorems/THM-4270-uniform-four-primitive-outsider-rays-common-deck-closure.md)
-  closes `146` more on four rays: residual `177,323`, uniquely topped by
-  `(520,688)`; bulk/entry remain open.
+  closes `146` more on four rays; [THM-4271](../01-canon/theorems/THM-4271-fourth-round-learned-carrier-endpoint-descent.md)
+  then closes `2,419` by a fourth carrier round. Residual `174,904`, max
+  `671`, topped exactly by `(256,671),(384,671)`; bulk/entry remain open.
 - **PROVED:** [THM-2928](../01-canon/theorems/THM-2928-critical-seven-comb-grid-tensorization-and-drift-tariff.md)/2941: literal zero/one/two/three-drift sectors are empty; `k=2,3` are finite.
 - **Orthogonal routes.** THM-1017 is HYP-6820; THM-2047/2050 keep phase/exit; THM-731/2048 prune; THM-1290 ends at `55`; HYP-8900 nonuniform.
 - **PROVED micro-staircase:** THM-3316/3317 close primes/sparse fragility;
