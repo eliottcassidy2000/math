@@ -1,0 +1,7 @@
+VISIBLE-GATED TWO-EDGE INDEPENDENT BINARY-RANK AUDIT
+ambient_rank=18 nullity=6 words=64
+projected_rank=20 nullity=4 words=16
+ambient_two_prefix_zero nullity=2 words=4
+projected_one_prefix_zero nullity=2 words=4
+projected_two_prefix_zero nullity=0 words=1
+VISIBLE_TWO_EDGE_RANK_AUDIT: PASS scope=F4_module_only

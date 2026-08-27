@@ -1,0 +1,9 @@
+MULTIGRAPH PASS basis=16 value_rank=4 kernel_dim=12 rectangular_hasse_rank=16 compatible_levels=6 incompatible_detected=yes
+FILTERED_HOSTILE PASS global_image_order=1 first_short_jet_zero=true
+REGULAR_FACTOR PASS weights=(4, 4, 4, 4) all_target_subsets=16 nonsaturated_zero_fibre=4
+HAZARD PASS fresh_hazards=(Fraction(1, 8), Fraction(1, 8), Fraction(1, 8), Fraction(1, 8)) fresh_defect=2401/4096 merged_hazards=(Fraction(1, 8), Fraction(0, 1), Fraction(0, 1), Fraction(0, 1)) merged_defect=7/8
+HEAVY_FIBRE_HOSTILE PASS rows=((4, Fraction(1, 4), Fraction(16, 19)), (8, Fraction(1, 8), Fraction(256, 263)), (12, Fraction(1, 12), Fraction(4096, 4107)))
+RULE30_FACTOR PASS max_fibres_N1_12=(2, 2, 3, 2, 2, 3, 2, 2, 3, 2, 2, 3) N3_weight_histogram_0_1_2_3=(3, 3, 1, 1) weighted_identity_checks=12
+GRAPH_CHANNEL PASS value_rank=1 source_cartier_descends=no value_plus_hasse_rank=2
+CARTIER_WINDOWS PASS prop6_pivot=38 prop12_pivot=46
+GRAPH_FACTOR_DENSITY_AUDIT: PASS

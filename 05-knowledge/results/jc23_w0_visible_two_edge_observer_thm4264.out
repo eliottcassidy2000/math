@@ -1,0 +1,10 @@
+VISIBLE-GATED TWO-EDGE F4 RECURRENCE AUDIT
+ambient_words=64 period_profile={1: 1, 3: 3, 6: 12, 12: 48}
+ambient_two_prefix_hostile=0,0,w,1,0,0,1,w2,0,0,w2,w
+ambient_hostile_visible_projector=w,1,w2,w,1,w2,w,1,w2,w,1,w2
+projected_words=16 period_profile={1: 1, 3: 3, 6: 12}
+projected_order_two_recurrence=PASS
+projected_first_two_zero_implies_zero=PASS
+one_edge_hostile=0,1,0,w,0,w2,0,1,0,w,0,w2
+scope=cyclic_module_only; geometric_1512_incidence_values_not_evaluated
+VISIBLE_TWO_EDGE_RECURRENCE_AUDIT: PASS
