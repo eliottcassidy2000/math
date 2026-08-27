@@ -7,24 +7,33 @@ status: >
   3:5, 7:8, 8:9, and 11:12 are Haar-safe at every strict-above-pool scale.
   One frozen 8,192-repair carrier supplies four ratio-specific common decks;
   each deck covers all 14,307,150 bodies throughout its finite bridge, while
-  THM-4231 supplies the cofinite tail. In the exact earlier proof order after
-  THM-4261/4262, the four-ray component contains 152 residual edges and leaves
-  180,470; this is an order-relative component ledger, not the current
-  post-THM-4266/4267 contribution. No other ratio, smaller scale, physical
-  entry, or LRC(14) follows.
+  THM-4231 supplies the cofinite tail. After exact overlap accounting against
+  THM-4266/4267/4269, the current contribution is 146 edges and the residual
+  has 177,323 edges with unique top edge (520,688). The earlier
+  post-THM-4261/4262 component had 152 edges; exactly six are already owned by
+  THM-4266. No other ratio, smaller scale, physical entry, or LRC(14) follows.
 source: codex-creative-frontiers-20260827
 depends_on:
   - THM-4231-arbitrary-pair-cofinal-depth-six-haar-repair-and-exact-outsider-lift
   - THM-4256-uniform-two-three-outsider-ray-endpoint-cocycle-closure
   - THM-4261-semantic-endpoint-band-prefix-union-lift
   - THM-4262-uniform-three-four-outsider-ray-common-deck-closure
+  - THM-4266-three-round-learned-carrier-endpoint-descent
+  - THM-4267-uniform-four-five-outsider-ray-common-deck-closure
+  - THM-4269-uniform-five-six-outsider-ray-common-deck-closure
 common_header: 04-computation/lrc14_two_three_outsider_ray_thm4256/independent_common.hpp
 primary_script: 04-computation/lrc14_four_primitive_rays_common_deck_bridge_thm4270.cpp
 primary_output: 05-knowledge/results/lrc14_four_primitive_rays_common_deck_bridge_thm4270.out
+primary_script_sha256: 9910c832b9c7a1f3ae1cb089799a9b625bbb72ec00677bafb00368be6c35a48b
+primary_output_sha256: d50608147c4214fe9fb5f1b336f165b10ca5e96680ace4c08a758fe2421d87c4
 independent_script: 04-computation/lrc14_four_primitive_rays_literal_wall_audit_thm4270.cpp
 independent_output: 05-knowledge/results/lrc14_four_primitive_rays_literal_wall_audit_thm4270.out
+independent_script_sha256: de94d6dc80ec539fa6ec751e11b3bca5df307d6bbaa4085c3b066a05ae4fcf26
+independent_output_sha256: 2514e7d7a0fa8259ce3a1a181cd9455f857fc5a393fcae57a34f6182a992ad36
 postprocess_script: 04-computation/lrc14_four_primitive_rays_residual_postprocess_thm4270.py
 postprocess_output: 05-knowledge/results/lrc14_four_primitive_rays_residual_postprocess_thm4270.out
+postprocess_script_sha256: b8cd34922a769478a29cfacb16fefc56bdd10451e0c5946c64f2d3107b31ba93
+postprocess_output_sha256: adb20bedd251a05c2536b48460a6ccdc2266ec7c14fd38c547c6b00085adb49c
 hash_basis: raw LF bytes
 audit: >
   PASS / ACCEPT. The primary uses exact primitive-period prefix integrals.
@@ -193,48 +202,76 @@ row as the primary: `L_g` changes with `g`, so those integers use
 scale-dependent normalizations. The invariant comparisons are every sign,
 the four common-deck hashes, and the exact body scans; all agree.
 
-## 5. Exact earlier-order component ledger
+## 5. Exact current proof-graph contribution
 
-Start with the exact residual after THM-4261 and THM-4262:
-
-```text
-count=180622,
-FNV=0cef4e2887c8f24e,
-SHA256=fa1c5672b0f2cd2490413e9b69a4720
-       bf1dc4eef8aee694c1c73d390aba58e11.               (10)
-```
-
-Semantic selection of the four proved bridge rays finds respectively
+The post-THM-4266 residual is
 
 ```text
-32, 46, 43, 31                                        (11)
+count=177585,
+FNV=6ce05d05eb01daed,
+SHA256=009614651bb81e9763b2a9ff4b580497
+       bfb6978a6c69d18cf986346e369374d9.                (10)
 ```
 
-still-open edges. The four lists are pairwise disjoint. Their 152-edge union
-has
+The postprocessor reconstructs THM-4267 semantically from `(10)`, checks its
+63-edge `4:5` deletion, and recovers
 
 ```text
-FNV=80ed45e7e179d8ff,
-SHA256=46b1c987fe337d879a721efab99da8265
-       d126d12798788295b0829f6bd5741fd.                 (12)
+count=177522,
+FNV=33142f955cc93379,
+SHA256=d277aebe296153ead14a77207ea1499c
+       961c8b06796b7e62f324e34f7a9ef087.                (11)
 ```
 
-Deleting exactly that union leaves
+It then reconstructs THM-4269's disjoint 53-edge `5:6` component and recovers
 
 ```text
-count=180470,
-FNV=d9afdc10f8e2aa88,
-SHA256=e2ba42307e4c628ea9ef517a858456e4
-       dd64e0b7a034fd6dd74ff707a8838f3f,
-maximum endpoint=732.                                 (13)
+count=177469,
+FNV=4d1feae0c1e653d5,
+SHA256=289cede32347b364123827e7dea02d728
+       b71e8c87d079a9892d3e0492b4a08ae.                (12)
 ```
 
-The postprocessor asserts every per-ray count/FNV/SHA, the disjoint union,
-and the updated ledger. The theorem closes all bridge scales in `(1)`; only
-152 were new in the declared post-THM-4261/4262 proof order because those two
-earlier theorems already owned the others. Later THM-4266/4267 close a larger
-region, so `(10)--(13)` are retained component controls rather than a claim
-that all 152 are new on the current proof surface.
+Semantic selection of the four proved bridge rays in `(12)` finds
+
+```text
+ratio       3:5   7:8   8:9   11:12
+new edges    32    44    40      30.                   (13)
+```
+
+The four lists are pairwise disjoint. Their 146-edge union has
+
+```text
+FNV=3115735824bdb7f5,
+SHA256=b2fcda2e0e602a4284d243d486ae426f
+       7376de0be429c30d1bb40ee6c455f750.                (14)
+```
+
+In the earlier post-THM-4261/4262 order the component had 152 edges. The six
+now-owned overlaps are exactly
+
+```text
+(602,688), (616,704),
+(616,693), (632,711), (640,720),
+(638,696),                                               (15)
+```
+
+all closed by THM-4266; THM-4267's `4:5` component is ratio-disjoint.
+THM-4269's `5:6` component is likewise ratio-disjoint.
+Deleting exactly the current 146-edge union gives
+
+```text
+count=177323,
+FNV=f1dcc8033fa727d9,
+SHA256=8c0b1fac01d00bd54784178034f4e5f2
+       1c2a29ea95a9cb0ed5a63b06fbc20872,
+maximum endpoint=688, unique top edge=(520,688).        (16)
+```
+
+The current postprocessor asserts both inherited ledgers, every per-ray
+count/FNV/SHA, the pairwise-disjoint union, and the updated ledger. Thus
+`(13)--(16)`, rather than the older 152-edge component, are the exact current
+proof-graph consequence.
 
 ## 6. Reproduction and scope
 

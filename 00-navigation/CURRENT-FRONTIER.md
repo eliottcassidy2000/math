@@ -67,8 +67,10 @@ is the safe control `M(S_13)=99/338`. No cited result proves LRC(14).
   [THM-4266](../01-canon/theorems/THM-4266-three-round-learned-carrier-endpoint-descent.md)
   closes `3,037`; [THM-4267](../01-canon/theorems/THM-4267-uniform-four-five-outsider-ray-common-deck-closure.md)
   closes `63` via `4:5`; [THM-4269](../01-canon/theorems/THM-4269-uniform-five-six-outsider-ray-common-deck-closure.md)
-  closes `53` via `5:6`. Residual `177,469`, max `688`, uniquely `(520,688)`;
-  bulk/entry remain open.
+  closes `53` via `5:6`.
+  [THM-4270](../01-canon/theorems/THM-4270-uniform-four-primitive-outsider-rays-common-deck-closure.md)
+  closes `146` current edges on the `3:5`, `7:8`, `8:9`, and `11:12` rays.
+  Residual `177,323`, max `688`, uniquely `(520,688)`; bulk/entry remain open.
 - **PROVED:** [THM-2928](../01-canon/theorems/THM-2928-critical-seven-comb-grid-tensorization-and-drift-tariff.md)/2941: literal zero/one/two/three-drift sectors are empty; `k=2,3` are finite.
 - **Orthogonal routes.** THM-1017 is HYP-6820; THM-2047/2050 keep phase/exit; THM-731/2048 prune; THM-1290 ends at `55`; HYP-8900 nonuniform.
 - **PROVED micro-staircase:** THM-3316/3317 close primes/sparse fragility;
@@ -356,7 +358,8 @@ lift/phase clocks.
   [THM-4260](../01-canon/theorems/THM-4260-w0-canonical-node-reciprocal-denominator-attachment-exclusion.md)
   excludes all classes in the gate interior.
   [THM-4265](../01-canon/theorems/THM-4265-w0-reduced-wall-factor-and-transverse-jacobian-reduction.md)
-  proves simple wall roots conditional on a coherent lift.
+  proves the reduced wall roots simple relative to THM-4260; only its formal
+  root-section/transverse-Jacobian consequence is conditional on a coherent lift.
   [THM-4268](../01-canon/theorems/THM-4268-relative-abelian-map-incidence-properness-and-w0-collar.md)
   instead uses proper incidence for a non-effective Zariski/formal collar.
   Its complement, walls and `M=12` entry stay open.

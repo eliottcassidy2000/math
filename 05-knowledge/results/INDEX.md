@@ -1,13 +1,34 @@
 # Script Results Index
 
+- `lrc14_four_primitive_rays_common_deck_bridge_thm4270.cpp`, detached
+  literal-wall audit, and current proof-graph postprocessor -> four uniform
+  primitive outsider-ray closures [THM-4270 PROVED RELATIVE TO
+  THM-4231/4256/4261/4262/4266/4267/4269 + FINITE-EXACT + INDEPENDENTLY AUDITED;
+  LRC(14) OPEN]. One frozen 8,192-mask carrier supplies ratio-specific common
+  decks for `3:5`, `7:8`, `8:9`, and `11:12`; each deck covers all
+  `14,307,150` bodies throughout its finite bridge. Literal joint walls
+  reproduce all deck hashes and body scans. Exact current overlap accounting
+  gives 146 novel edges and residual `177,323`, FNV `f1dcc8033fa727d9`,
+  SHA-256 `8c0b1fac01d00bd54784178034f4e5f21c2a29ea95a9cb0ed5a63b06fbc20872`,
+  with unique top `(520,688)`. Source/output SHA-256 pairs:
+  `9910c832b9c7a1f3ae1cb089799a9b625bbb72ec00677bafb00368be6c35a48b` /
+  `d50608147c4214fe9fb5f1b336f165b10ca5e96680ace4c08a758fe2421d87c4`;
+  `de94d6dc80ec539fa6ec751e11b3bca5df307d6bbaa4085c3b066a05ae4fcf26` /
+  `2514e7d7a0fa8259ce3a1a181cd9455f857fc5a393fcae57a34f6182a992ad36`;
+  `b8cd34922a769478a29cfacb16fefc56bdd10451e0c5946c64f2d3107b31ba93` /
+  `adb20bedd251a05c2536b48460a6ccdc2266ec7c14fd38c547c6b00085adb49c`.
+
 - `jc23_w0_reduced_wall_factor_thm4265.py` -> reduced-wall scout
-  [FINITE-EXACT; THM-4265 RESERVED / UNPROVED].  Reusing THM-4260's
+  [THM-4265 PROVED RELATIVE TO THM-4260 + VERIFIED-EXACT + INDEPENDENTLY
+  AUDITED; off-`W=0` problem open]. Reusing THM-4260's
   clean-room class compiler, both `p=397` and hostile `p=577` computations
   find `t=+1,-1` as simple roots of every one of the `280` reduced
   denominators; the degree profile is
-  `11:8,19:36,23:24,27:64,35:52,39:72,43:24`.  This identifies the local
-  transverse determinant to compute, but supplies no `W` deformation,
-  `W` derivative, or off-fibre exclusion.  Source/output SHA-256:
+  `11:8,19:36,23:24,27:64,35:52,39:72,43:24`. The characteristic-zero
+  proof is already forced by oddness and `gcd(d,d*)=t^2-1`; the modular runs
+  are corroboration. Conditional on a coherent lift, the simple roots reduce
+  first-order separation to a transverse Jacobian, but no `W` deformation,
+  `W` derivative, or off-fibre exclusion is supplied. Source/output SHA-256:
   `41849ca35164391ec08820b63e9d4ae89de6358696501c7e51508ca5c4e7b54b` /
   `9e5225503e81ea71a0ea2d222c60949f809c6910936c209af28c3ac968fa4ef0`.
 
