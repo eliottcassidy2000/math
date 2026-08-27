@@ -15,7 +15,8 @@ audit: >
   induction inequalities and strictness, the factorial-unit contraction,
   both Cartier digit recurrences, residual gcd induction, Newton-edge use,
   and the D=201 Frobenius hostile.  Fresh normal and optimized runs byte-match
-  the stored transcript and declared hashes after the MISTAKE-355 repair.
+  the stored transcript and declared hashes after the THM-3260 repair now
+  recorded as MISTAKE-523.
 source: root/factorial-composite-newton-2026-08-02
 depends_on:
   - THM-3124-quadratic-factorial-moment-recurrence-and-shifted-window-census

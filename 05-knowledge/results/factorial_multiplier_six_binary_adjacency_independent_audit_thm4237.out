@@ -1,0 +1,4 @@
+independent_odd_height_cells=16384 set_containment=True odd_low_bit_overlap=True even_shift_adjacency=True
+independent_prime_power_cells=1273 classification=True congruence_family=True
+independent_semantic_sha256=697b3b692fc4e76acaf74e0742386f8101667cf636e2521872e8eb5a983aa560
+hostile_rebuilt=H:529,bits:[0, 4, 9],candidates:(2, 4),difference_for_t2:[2, 6, 11]

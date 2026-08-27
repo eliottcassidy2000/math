@@ -9,6 +9,33 @@ Format per entry:
 - Why it was wrong
 - The correct framing
 
+## MISTAKE-523 (2026-08-26, THM-3260 correction-lineage audit) -- a repaired carry proof pointed to an unrelated reused mistake ID
+
+- **What failed:** the first THM-3260 proof treated `18` low ternary digit
+  triples, "for each incoming bit," as an induction without naming the joint
+  carry state.  The proof was repaired on a concurrent branch under the then
+  available label `MISTAKE-355`, but another correction later reached main
+  under that same legacy ID.  THM-3260 retained the old reference even though
+  current MISTAKE-355 concerns THM-3159's reflected-pole sign.
+- **Minimal witness / first failed implication:** the old bounded check of
+  `6,412,320` terms did not prove an unbounded digit induction, and an ID-only
+  link to a different correction did not preserve its repair lineage.  The
+  missing state simultaneously records the Cantor deficit `rho`, the carry
+  `d` from doubling the Bessel index, and the carry `g` from the following
+  addition.
+- **Repair / strongest survivor:** THM-3260 already contains the repaired
+  twelve-state proof with `(rho,d,g) in {0,1,2}x{0,1}x{0,1}` and potential
+  `H=0` for `rho=0`, `H=rho-d-g` otherwise.  All `216` valid local transitions
+  satisfy its displayed inequality.  Kummer and Legendre then give
+  `2v_3 C(N-k,j)>=j-k`, `2v_3 C(N-1-k,j)>=j-k-1`, and strict separation for
+  `k>0`; both Cartier recurrences and residual coprimality remain valid.  This
+  entry supplies a collision-free current lineage; the theorem's mathematical
+  conclusion and four declared hashes are unchanged.
+- **Reusable rule:** correction references need an ID plus theorem/subject,
+  just as theorem dependencies need an ID plus slug.  After resolving a
+  concurrent ID collision, search every surviving inbound reference rather
+  than assuming the numeric label still names the same repair.
+
 ## MISTAKE-522 (2026-08-26, THM-4230 certificate audit) -- a support helper omission was described as full-support coverage
 
 - **What failed:** THM-4230's verification prose said that its primary

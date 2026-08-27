@@ -1,0 +1,6 @@
+odd_height_universe=1<=H<65536,H_odd limits=3,5 cells=65536 exact_adjacency_classification=True
+survivor_histograms={3: (((), 31781), ((2,), 987)), 5: (((), 31781), ((2, 4), 987))}
+prime_power_universe=7<=p<500,p_prime,1<=k<=25 cells=2300 classification=True congruence_family=True
+prime_power_semantic_sha256=b5e409464c8c75e0fece8bae461ae5c40798b5d54c51e07d4c46e93f04d2da06
+boundary_controls=[(13, 1, 13, '0b1101', True, ()), (7, 2, 49, '0b110001', True, ()), (23, 2, 529, '0b1000010001', False, (2, 4)), (17, 1, 17, '0b10001', False, (2, 4))]
+sharp_hostile=p:23,k:2,H:529,binary:0b1000010001,surviving_t:(2,4),candidate_degrees:(1058,2116),meaning=compiler_not_actual_factor
