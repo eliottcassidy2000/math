@@ -1,5 +1,18 @@
 # Script Results Index
 
+- `jc23_w0_three_sample_attachment_observer_thm4258.py` -> exact cyclic
+  observer and incidence workload [THM-4258 PROVED COROLLARY TO THM-4249/4253
+  + VERIFIED-EXACT; `W=0`, `M=12`, JC(2), DC(2) OPEN]. On the `a_u=0`
+  residual, `(T-omega^2)(T^2+omega)m=0`, so three consecutive attachment
+  differences vanish iff all twelve do. A uniform table for the `1,512` live
+  incidences uses `4,536`, not the naive `18,144`, group-value rows. Exact map-orbit degrees
+  satisfy `q((T-1)m)<=120/150`; the pulled Gram also proves six-divisibility
+  and the spectral bound `(2+sqrt(3))q(m)`. After both projectors collapse,
+  the two-torsion recurrence has `64` ambient `F_4` patterns; geometric
+  surjectivity is not claimed. Source/output SHA-256:
+  `be5a1c821e85011b3226313f7c0f0461c10afc1609ff8e867be697e8f1d8d3d3` /
+  `9042b3a1017ac2205b9a76ff89b2624d4109cf757a530442bf6efe6c5e1fbfb0`.
+
 - `padic_specialization_kernel_cartier_firewall_thm4255.py` and an independent
   finite-field clean-room referee -> specialization graph kernel, restricted
   short-jet criterion, transverse Hasse recovery, and Cartier firewall

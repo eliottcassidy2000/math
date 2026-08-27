@@ -612,7 +612,7 @@ new homotopy group, `p=2` statement, or LRC/GMC consequence.
 
 ## August 2026 preprint intake
 - [August 14 intake](CORE-PAPERS-INTAKE-2026-08-14.md): preprints/Rule 30.
-- August 25--27: [p-adic/matching audit](CORE-PAPERS-INTAKE-2026-08-25-PADIC-ZETA-MATCHING-LOGIC.md), [specialization audit](CORE-PAPERS-INTAKE-2026-08-26-PADIC-ZETA-DENSITY.md), and [density/percolation intake](CORE-PAPERS-INTAKE-2026-08-26-PADIC-DENSITY-PERCOLATION.md). Long's claims remain **PREPRINT / UNDER AUDIT**; THM-4255 proves scoped kernel/repair algebra but the proposed `u-f` map is absent. Chen--Rosu is unrefereed v1; Cerf is unrelated percolation.
+- August 25--27: [p-adic/matching](CORE-PAPERS-INTAKE-2026-08-25-PADIC-ZETA-MATCHING-LOGIC.md), [superseded specialization](CORE-PAPERS-INTAKE-2026-08-26-PADIC-ZETA-DENSITY.md), [density/percolation](CORE-PAPERS-INTAKE-2026-08-26-PADIC-DENSITY-PERCOLATION.md). Long is **PREPRINT / UNDER AUDIT**; no `u-f` map. Chen--Rosu is unrefereed; Cerf unrelated.
 
 ## Maintenance rule
 

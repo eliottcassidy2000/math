@@ -341,7 +341,7 @@ lift/phase clocks.
 
 ## Other active portfolio
 
-- **P-adic zeta:** claims remain **PREPRINT / UNDER AUDIT**. [THM-4255](../01-canon/theorems/THM-4255-specialization-kernel-and-transverse-hasse-jet-repair.md) proves section-kernel calculus and finds no torsor `u=f` map. Next: type modules; restore artifacts.
+- **P-adic zeta:** claims remain **PREPRINT / UNDER AUDIT**. [THM-4255](../01-canon/theorems/THM-4255-specialization-kernel-and-transverse-hasse-jet-repair.md) proves kernel repairs; no torsor `u=f` map. Next: type modules; restore artifacts.
 - **Matching logic:** THM-4090 gives a two-sort Figure-2 calculus
   counterexample relative to cited soundness; one-sort completeness remains a
   preprint claim, and no arithmetic/tournament transfer follows.
@@ -374,8 +374,7 @@ lift/phase clocks.
   [THM-4230](../01-canon/theorems/THM-4230-exact-weight-twelve-cyclotomic-prym-planar-jacobian-squeeze.md)
   reduces its `M=12` gate to a proper countable nonempty hidden-`E_0` locus.
   At `W=0`, THM-4241/4247/4249 leave `176/132` classes in `55/34` ratio envelopes.
-  THM-4251 checks a subsumed row; THM-4253 removes the norm-three profile, yielding `176/104` classes and `864/648=1,512` incidences (that row was already charged at ratio `1/3`).
-  Emptiness, entry, and JC(2) stay open.
+  THM-4253 leaves `176/104` classes and `1,512` incidences. [THM-4258](../01-canon/theorems/THM-4258-w0-three-sample-attachment-recurrence-and-two-torsion-sidecar.md) makes each a three-sample test (`4,536` total; degrees `<=120/150`). Glue normalization, emptiness, entry, and JC(2) stay open.
   Exceptional quartic: THM-3703/3737 give grammar/image, THM-4034 the
   conductor, and THM-4039/4043/4046 reach `J_7`, obstruct `J_8`, and close
   critical `H`. [THM-4054](../01-canon/theorems/THM-4054-exceptional-affine-simple-zero-retained-packet.md)

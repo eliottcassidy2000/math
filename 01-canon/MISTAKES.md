@@ -9,6 +9,25 @@ Format per entry:
 - Why it was wrong
 - The correct framing
 
+## MISTAKE-528 (2026-08-26, THM-4258 observer census) -- a pre-sieve degree histogram was labeled as the live shell
+
+- **What failed:** the first three-sample observer summary attached the
+  degree-42 `q((T-1)m)` histogram before THM-4253's norm-three deletion to
+  the post-THM-4253 frontier and called it a `104`-orbit distribution.
+- **Minimal witness / first failed implication:** the displayed multiplicities
+  sum to `132`, not `104`. They include exactly the `28` orbits with
+  `(N(d),K)=(3,13)` already removed by THM-4253.
+- **Repair / strongest survivor:** [THM-4258](theorems/THM-4258-w0-three-sample-attachment-recurrence-and-two-torsion-sidecar.md)
+  freezes three separate exact histograms: the `132`-orbit pre-sieve shell,
+  the `28` deleted orbits, and the `104`-orbit live shell, with
+  `pre=deleted+live` coefficientwise. The live maximum remains `150`; no
+  incidence or Jacobian conclusion was affected because the mistake was
+  caught before promotion.
+- **Reusable rule:** apply every inherited deletion before computing a live
+  orbit statistic, and require histogram multiplicities to sum to the claimed
+  orbit count. Preserve the deleted histogram as an overlap sidecar rather
+  than silently subtracting only its cardinality.
+
 ## MISTAKE-527 (2026-08-26, p-adic-density Cartier audit) -- a universal torsor identity was mistaken for a chosen-section specialization
 
 - **What failed:** the first audit of the external `p-adic-zeta-density`

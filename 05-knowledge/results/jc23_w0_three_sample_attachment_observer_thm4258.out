@@ -1,0 +1,19 @@
+THM-4258 W=0 three-sample attachment observer exact certificate
+dependencies=THM-4249_residual+THM-4253_norm3_profile_deletion
+operator=P0(T)=(T-omega^2)(T^2+omega) annihilates a_u=0 PASS
+attachment_recurrence=delta[j+3]-omega^2*delta[j+2]+omega*delta[j+1]-delta[j]=O
+three_consecutive_zero_deltas=all_twelve_zero_deltas IFF
+observer=F_m=(T-1)m samples=(F_m,T*F_m,T^2*F_m)at_Q0
+observer_gram_M0=(((18, 0), (-20, -10), (-10, 4)), ((-10, 10), (18, 0), (4, -10)), ((-14, -4), (14, 10), (12, 0))) q(F_m)_in_6Z=PASS spectral_bound=(2+sqrt(3))*q(m)
+degree34_map_orbits=176 observer_degree_hist={30:8,36:4,42:10,48:6,54:7,60:8,66:21,72:6,78:19,84:13,90:16,96:10,102:20,108:9,114:17,120:2} max=120
+degree42_live_map_orbits=104 observer_degree_hist={36:1,42:2,54:8,66:6,72:6,78:3,84:4,90:14,96:4,102:10,108:9,114:4,120:4,126:12,132:4,138:10,144:2,150:1} max=150
+degree42_deleted_orbits=28 observer_degree_hist={30:2,36:2,48:4,54:2,66:2,72:2,102:2,108:2,120:2,126:4,138:2,144:2}
+degree34_live_incidences=864 incidence_degree_hist={30:12,36:12,42:18,48:30,54:33,60:36,66:99,72:42,78:90,84:84,90:114,96:60,102:105,108:60,114:63,120:6}
+degree42_live_incidences=648 incidence_degree_hist={36:3,42:6,54:30,66:24,72:42,78:9,84:36,90:90,96:30,102:60,108:69,114:30,120:36,126:84,132:30,138:60,144:6,150:3}
+uniform_observer_table_rows naive=1512*12=18144 three_sample=1512*3=4536 reduction=13608 minimality=NOT_CLAIMED
+two_torsion_condition=after_visible_and_hidden_projector_collapse_only
+F4_abstract_recurrence_patterns=64 telescoping_sum=PASS period_profile={1:1,3:3,6:12,12:48}
+two_sample_hostile_delta=(0, 0, 2, 1, 0, 0, 1, 3, 0, 0, 3, 2) first_nonzero_index=2
+abstract_64_pattern_surjectivity_from_geometric_maps=NOT_CLAIMED
+mixed_attachment_values=UNEVALUATED normalization_dictionary=NOT_IN_THIS_THEOREM
+verdict=EXACT_OBSERVER_COMPRESSION JC2_OPEN W0_OPEN
