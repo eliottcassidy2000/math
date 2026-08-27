@@ -1,0 +1,6 @@
+limit=10000 positive_higher=False cumulative_tuples=210751 first_n=2
+fibre_size=3 closed_walk_length=3
+representation=2,3,6,7
+representation=2,3,5,8
+representation=2,4,5,7
+representation=2,3,6,7
