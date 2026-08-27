@@ -1,0 +1,19 @@
+two_reversal_sphere_audit
+status=PROVED_CLASSIFICATION+SYMBOLIC_TYPE_B_TAIL+FINITE_EXACT_FULL_SPHERE
+dependency_sha256=3c9ad5de462dcc71d4312bba12b42086d4e1e43520b5209b4a807f762d059c18
+n=3 candidates=3 strong=1 pairs=3 formula_rows=0 product_fail=0 plus_min_fail=0 rho_fail=0 27over25_fail=0 Gmin=0 Gmin_mult=1 Gmin_presentations=[((0, 1), (1, 2))] rho_rows=[] Gtarget=135 Genergy=27 maxB=0 maxP=1
+n=4 candidates=15 strong=6 pairs=36 formula_rows=1 product_fail=0 plus_min_fail=0 rho_fail=0 27over25_fail=0 Gmin=44 Gmin_mult=6 Gmin_presentations=[((0, 1), (1, 3)), ((0, 2), (0, 3)), ((0, 2), (1, 3)), ((0, 2), (2, 3)), ((0, 3), (1, 2)), ((0, 3), (1, 3))] rho_rows=[] Gtarget=999 Genergy=191 maxB=1 maxP=1
+n=5 candidates=45 strong=13 pairs=130 formula_rows=4 product_fail=0 plus_min_fail=0 rho_fail=0 27over25_fail=0 Gmin=510 Gmin_mult=5 Gmin_presentations=[((0, 2), (0, 4)), ((0, 2), (1, 4)), ((0, 2), (2, 4)), ((0, 3), (2, 4)), ((0, 4), (2, 4))] rho_rows=[] Gtarget=6975 Genergy=1293 maxB=1 maxP=1
+n=6 candidates=105 strong=22 pairs=330 formula_rows=10 product_fail=0 plus_min_fail=0 rho_fail=0 27over25_fail=0 Gmin=3186 Gmin_mult=3 Gmin_presentations=[((0, 3), (3, 5)), ((0, 4), (3, 5)), ((0, 5), (3, 5))] rho_rows=[] Gtarget=46431 Genergy=8649 maxB=1 maxP=1
+n=7 candidates=210 strong=33 pairs=693 formula_rows=20 product_fail=0 plus_min_fail=0 rho_fail=0 27over25_fail=0 Gmin=19842 Gmin_mult=3 Gmin_presentations=[((0, 4), (4, 6)), ((0, 5), (4, 6)), ((0, 6), (4, 6))] rho_rows=[] Gtarget=317367 Genergy=59505 maxB=1 maxP=1
+n=8 candidates=378 strong=46 pairs=1288 formula_rows=35 product_fail=0 plus_min_fail=0 rho_fail=0 27over25_fail=0 Gmin=122778 Gmin_mult=3 Gmin_presentations=[((0, 5), (5, 7)), ((0, 6), (5, 7)), ((0, 7), (5, 7))] rho_rows=[] Gtarget=2283543 Genergy=432153 maxB=1 maxP=1
+n=9 candidates=630 strong=61 pairs=2196 formula_rows=56 product_fail=2 plus_min_fail=0 rho_fail=0 27over25_fail=0 Gmin=753810 Gmin_mult=3 Gmin_presentations=[((0, 6), (6, 8)), ((0, 7), (6, 8)), ((0, 8), (6, 8))] rho_rows=[] Gtarget=17329095 Genergy=3315057 maxB=104 maxP=100
+n=10 candidates=990 strong=78 pairs=3510 formula_rows=84 product_fail=3 plus_min_fail=2 rho_fail=0 27over25_fail=0 Gmin=4597146 Gmin_mult=3 Gmin_presentations=[((0, 7), (7, 9)), ((0, 8), (7, 9)), ((0, 9), (7, 9))] rho_rows=[] Gtarget=137695671 Genergy=26619705 maxB=212 maxP=200
+n=11 candidates=1485 strong=97 pairs=5335 formula_rows=120 product_fail=4 plus_min_fail=3 rho_fail=0 27over25_fail=0 Gmin=27894642 Gmin_mult=3 Gmin_presentations=[((0, 8), (8, 10)), ((0, 9), (8, 10)), ((0, 10), (8, 10))] rho_rows=[] Gtarget=1134462087 Genergy=221313489 maxB=428 maxP=400
+n=12 candidates=2145 strong=118 pairs=7788 formula_rows=165 product_fail=5 plus_min_fail=4 rho_fail=1 27over25_fail=0 Gmin=168653178 Gmin_mult=3 Gmin_presentations=[((0, 9), (9, 11)), ((0, 10), (9, 11)), ((0, 11), (9, 11))] rho_rows=[(((0, 3), (3, 11)), (10, 11))] Gtarget=9601837623 Genergy=1886636889 maxB=860 maxP=800
+n=13 candidates=3003 strong=141 pairs=10998 formula_rows=220 product_fail=6 plus_min_fail=5 rho_fail=2 27over25_fail=0 Gmin=1017163410 Gmin_mult=3 Gmin_presentations=[((0, 10), (10, 12)), ((0, 11), (10, 12)), ((0, 12), (10, 12))] rho_rows=[(((0, 3), (3, 12)), (10, 12)), (((0, 3), (3, 12)), (11, 12))] Gtarget=82851799815 Genergy=16366927281 maxB=1724 maxP=1600
+n=14 candidates=4095 strong=166 pairs=15106 formula_rows=286 product_fail=7 plus_min_fail=6 rho_fail=3 27over25_fail=0 Gmin=6124242906 Gmin_mult=3 Gmin_presentations=[((0, 11), (11, 13)), ((0, 12), (11, 13)), ((0, 13), (11, 13))] rho_rows=[(((0, 3), (3, 13)), (10, 13)), (((0, 3), (3, 13)), (11, 13)), (((0, 3), (3, 13)), (12, 13))] Gtarget=724627321911 Genergy=143700615801 maxB=3452 maxP=3200
+totals_presentations=782 totals_pairs=47413 totals_typeB_tail_formula_rows=1001
+hostile_transitive_n7_G=-10922
+audit_digest=7639efac9d283f450a20dc0cc3b6b1186222004bad962eff9492e39e3bc79558
+all_checks=PASS

@@ -8,8 +8,10 @@ status: >
   Delta_V>=3(W+2H)^2/8, with equality exactly at a transitive prefix followed
   by C3. THM-4223/4224 refute the local two-bad-owner product bound and every
   fixed smaller-endpoint repair, but THM-4224 proves its hostile family has a
-  positive all-order five-copy gap. FINITE-EXACT support through strong order
-  nine and exact sharp families do not prove the hypothesis.
+  positive all-order five-copy gap. THM-4239 adds FINITE-EXACT positivity on
+  every fixed-gauge two-reversal presentation through order fourteen. This
+  specialized support, the full strong census through order nine, and exact
+  sharp families do not prove the hypothesis.
 source: codex-endpoint-gap-session-20260826
 depends_on:
   - THM-4208-cycle-prefix-arbitrary-context-recurrence-endpoint-energy-and-eventual-positivity
@@ -17,6 +19,7 @@ related:
   - THM-4219-no-sink-endpoint-energy-floor-and-near-ordinal-sharpness
   - THM-4223-cyclic-cut-cover-boolean-mobius-hierarchy-and-two-bad-owner-obstruction
   - THM-4224-order-ten-minimal-plus-min-two-bad-owner-obstruction
+  - THM-4239-all-n-strong-two-reversal-presentation-sphere-and-tail-fiber-product-boundary
 ---
 
 # HYP-9081 -- strong-tournament five-copy endpoint-energy inequality
@@ -243,6 +246,9 @@ at `C3`. The minimum gaps are
 The exact `T(n,1)` and `T(n,2)` formulae in THM-4219 prove positivity on
 those all-order families and show sharpness of the coefficient `5`.
 THM-4224 adds a two-reversal family on which every fixed local min repair
-fails while the exact global five-copy gap stays positive. None controls
+fails while the exact global five-copy gap stays positive. THM-4239 verifies
+every fixed-gauge strong two-reversal presentation through order fourteen,
+with the same minimum-gap sequence and exact `T(n,1)` minimizers, but proves
+no all-order sphere minimum. None of these specialized results controls
 arbitrary strong tournaments, so Hypothesis 1 and Conditional theorem 2
 remain open.

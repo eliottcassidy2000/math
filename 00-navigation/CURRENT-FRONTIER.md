@@ -269,15 +269,14 @@ THM-2070 refutes the general HYP-8890/8895 bypasses.  Transfer
   proves `Delta_V>=n(n-1)H^2` and coefficient-`5` sharp towers;
   [THM-4221](../01-canon/theorems/THM-4221-cycle-left-source-padding-no-sink-low-capacity-response-sector.md)
   proves an exact source-padding increment and low-`W/H` no-sink sector;
-  [THM-4223](../01-canon/theorems/THM-4223-cyclic-cut-cover-boolean-mobius-hierarchy-and-two-bad-owner-obstruction.md)
-  gives lower owner-set Mobius and the first naive-pair failure at order nine;
-  [THM-4224](../01-canon/theorems/THM-4224-order-ten-minimal-plus-min-two-bad-owner-obstruction.md)
-  makes `+min` first fail at order ten, resolves its tail fibers, rules out
-  fixed additive multiples of normalized `rho` (with or without `min`), and
-  verifies 97 fixed-gauge order-eleven presentations—not a class census;
-  [THM-4225](../01-canon/theorems/THM-4225-bad-owner-upper-zeta-successor-rook-hierarchy.md)
-  gives upper zeta as cycle-free successor rooks. The `27/25` candidate,
-  HYP-9081, `(OS+)`, and THM-4114/4118 remain **OPEN**.
+  THM-4223 gives lower owner-set Mobius and the first naive-pair failure at
+  order nine; THM-4224 makes `+min` first fail at ten and isolates `X_m`;
+  [THM-4239](../01-canon/theorems/THM-4239-all-n-strong-two-reversal-presentation-sphere-and-tail-fiber-product-boundary.md)
+  classifies the whole fixed-gauge sphere, proves exact all-order type-B tail
+  profiles and strict `25B<27P`, with finite sphere through `14` and `27/25`
+  through `18`; THM-4225 gives
+  upper zeta rooks. General `27/25`, HYP-9081, `(OS+)`, and THM-4114/4118
+  remain **OPEN**.
 - Corrected HYP-8835: optimal support is uniquely odd; positive `Mp=0` gives a
   replicator integral. Pure optimum means Condorcet winner, not transitivity;
   source-over-`C3` is hostile and RPS levels are circles, not `T^2`.
