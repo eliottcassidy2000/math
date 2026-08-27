@@ -1,5 +1,41 @@
 # Script Results Index
 
+- `jc23_w0_cyclic_projector_squeeze_thm4249.py` plus three independent or
+  complementary exact paths -> integral cyclic-projector, CM-torsion, and
+  common-ratio squeeze [THM-4249 PROVED RELATIVE TO THM-4230/4241 +
+  VERIFIED-EXACT + INDEPENDENTLY AUDITED; `W=0`, `M=12`, JC(2), DC(2)
+  OPEN]. Every degree-`34/42` attachment-collapse candidate has zero
+  `u`-eigenline coordinate, leaving `4,224/3,168` vectors in `176/132`
+  size-24 source-target orbits. Exact torsion unions give raw `55/35` marked
+  ratios and `1,644` map-ratio incidences. A uniform ramified-prime
+  hidden-projector argument and an order-18 point over `F_397` exclude the
+  common degree-42 ratio `1/3` for all 132 map orbits, leaving final
+  envelopes `55/34` and exactly `1,512` incidences. Primary source/output
+  SHA-256: `64cefef1ab610cdeab05eeaaeff25ae03bb2c69095f734e86d69b92fdccfea10` /
+  `10b26a5e47fcf75594b3956dbbb96d8458b9169c6cef47d95548624891f58a64`;
+  shell/envelope audit: `1c1ae0d47f5218af5978cb840c0f6f9c564a6df338a7b650700cbca774e5e3c4` /
+  `ec91ec63a3a2e58670d8d5b40d84027110b66c1c70b0f30d55953ac6021a4704`;
+  ratio-exclusion paths: `408acb2025e40fbebcfd90ee7ecf5725a8c1cc961ee969d439f49ae713fb4d07` /
+  `23188f7b34dac946af984971353eafab7698865ae342f36bda7a40e389f7e42a`
+  and `0903c89f249c3428e17a1d15733fd03ec8f27a329d01f5b2bdfe6da09cdbb11e` /
+  `e321e56720110d780e25bae4701e9712464bda6115ed8df13a65dbe0a0576722`.
+
+- `jc23_weight11_z0_owner_descent_exclusion_thm4248.py` and an independent
+  Newton-hull referee -> exact-`M=11`, `Z=0` owner-descent exclusion
+  [THM-4248 PROVED RELATIVE TO THM-4222/4232 AND THE CITED PRIMITIVE-CM
+  INPUT + VERIFIED-EXACT + INDEPENDENTLY AUDITED; JC(2), DC(2) OPEN]. Two
+  exact engines exhaust all `26,624` optional-support/collision patterns and
+  five first-owner strata. Each stratum has one genus-five primitive
+  `Q(zeta_11)` component and only rational side or exceptional components;
+  simplicity and resolved degree conservation exclude a nonautomorphic
+  Keller map whenever `A*B*(A+B)!=0`. Exactly the walls `A=0`, `B=0`, and
+  `A+B=0` remain. Primary source/output SHA-256:
+  `c99e41ad2a814b9a5aa92e3c5d717eb1c0c3a85fe893c2a528626ad51beddbfe` /
+  `029bad30ae3c9ebe3cfdd12413ede27001f249f58da9c80c25bd699f7623da9d`;
+  independent source/output:
+  `760bd05bc6b5deea5df51f6b97d8bdc59c4710ba861f48c18ceec0e0385a223a` /
+  `b6c71aff2def9a0abb44d443b84fd0b1c27bda95be406d823802efcb90f8bc0d`.
+
 - `lrc14_thm4231_4238_4242_residual_odd_cycle_core_20260826.py` and a
   dependency-free graph referee -> exact odd-cycle-core diagnostic on the
   current `181,126`-edge proof residual [FINITE-EXACT + INDEPENDENTLY AUDITED;

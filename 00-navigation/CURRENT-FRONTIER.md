@@ -375,14 +375,10 @@ lift/phase clocks.
   THM-4222/[4232](../01-canon/theorems/THM-4232-weight-eleven-u-zero-primitive-cm-planar-jacobian-exclusion.md)/[4248](../01-canon/theorems/THM-4248-weight-eleven-z-zero-owner-descent-planar-jacobian-exclusion.md) close `M=11` off `A*B*(A+B)=0`; THM-4226 closes dense `M=13`.
   [THM-4230](../01-canon/theorems/THM-4230-exact-weight-twelve-cyclotomic-prym-planar-jacobian-squeeze.md)
   reduces its `M=12` gate to a proper countable nonempty hidden-`E_0` locus.
-  At `W=0`, [THM-4241](../01-canon/theorems/THM-4241-w0-hidden-cm-saturation-and-visible-hidden-index-four-gluing.md)
-  proves the integral glue, and
-  [THM-4247](../01-canon/theorems/THM-4247-w0-involution-degree-twelve-attachment-exclusion.md)
-  independently excludes the degree-twelve hidden projection.
-  [THM-4249](../01-canon/theorems/THM-4249-w0-cyclic-projector-missing-eigenline-attachment-squeeze.md)
-  forces zero `u` coordinate, leaves `176/132` classes, and puts `S_34,S_42`
-  in exact `55/34`-ratio torsion envelopes. Next: `1,512` map-ratio incidences
-  on one node orbit. Emptiness, entry, and JC(2) stay open.
+  At `W=0`, [THM-4241](../01-canon/theorems/THM-4241-w0-hidden-cm-saturation-and-visible-hidden-index-four-gluing.md) gives the glue; [4247](../01-canon/theorems/THM-4247-w0-involution-degree-twelve-attachment-exclusion.md) excludes hidden degree twelve; [4249](../01-canon/theorems/THM-4249-w0-cyclic-projector-missing-eigenline-attachment-squeeze.md)
+  leaves `176/132` zero-`u` classes in `55/34` ratio envelopes.
+  Next: `1,512` tests. Emptiness, entry, and
+  JC(2) stay open.
   Exceptional quartic: THM-3703/3737 give grammar/image, THM-4034 the
   conductor, and THM-4039/4043/4046 reach `J_7`, obstruct `J_8`, and close
   critical `H`. [THM-4054](../01-canon/theorems/THM-4054-exceptional-affine-simple-zero-retained-packet.md)
