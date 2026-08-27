@@ -76,7 +76,8 @@ is the safe control `M(S_13)=99/338`. No cited result proves LRC(14).
   `181,194` pairs. THM-4238 removes exactly 32, leaving `181,162`, and closes
   all `q in {2,...,49}\P`, `r>=590`. The pure-ray/fixed-one cutoffs are `825/542`;
   THM-4227/4228/4233 retain scale/gcd/primitive methods, with gate `k>=748`.
-  THM-4234 closes fixed-`50` charts. Finite closure and entry stay open.
+  THM-4234/4240 give fixed-`50` charts through four petals, `chi_50>=22`.
+  Closure and entry stay open.
 - **PROVED:** [THM-2928](../01-canon/theorems/THM-2928-critical-seven-comb-grid-tensorization-and-drift-tariff.md)/2941: literal zero/one/two/three-drift sectors are empty; `k=2,3` are finite.
 - **Orthogonal routes.** THM-1017 is HYP-6820; THM-2047/2050 keep phase/exit; THM-731/2048 prune; THM-1290 ends at `55`; HYP-8900 nonuniform.
 - **PROVED micro-staircase:** THM-3316 closes every prime and THM-3317 proves

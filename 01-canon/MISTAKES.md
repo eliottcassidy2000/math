@@ -9,6 +9,32 @@ Format per entry:
 - Why it was wrong
 - The correct framing
 
+## MISTAKE-524 (2026-08-26, THM-4240 concurrent-promotion audit) -- a reserved theorem was cited as proved and tied witnesses were reported as identical
+
+- **What failed:** the promoted THM-4240 status and final firewall said that
+  THM-4242 strengthened its chart-number conclusions. At the merge point,
+  THM-4242 was still explicitly `RESERVED / UNPROVED EMPTY STUB`, with empty
+  dependencies and no theorem body. Its atlas audit also said every numerical
+  field agreed, although eleven tied maximizing bodies differ between traversal
+  orders and their body-dependent component counts differ with them.
+- **Minimal witnesses / first failed implications:** opening THM-4242 gives the
+  maintained sentence "No mathematical claim is made here." A reserved name
+  can protect a namespace for concurrent work, but it cannot supply a proved
+  consequence or strengthen another theorem. For the global cutoff witness,
+  the primary engine selects `{168,193,240,252,286}` with `532` components,
+  while the referee selects `{8,193,240,252,286}` with `500`; both give cutoff
+  `608`. Thus tied objective values do not identify auxiliary witness data.
+- **Repair / strongest survivor:** the two forward claims and the proved
+  theorem's related-edge to THM-4242 are removed. The audit now distinguishes
+  consequence-bearing fields, which agree in all `495` rows, from tied witness
+  bodies and their component counts. THM-4240's exact four-petal atlas,
+  independently audited selected chart, and `chi_50>=22` conclusion are
+  unchanged. THM-4242 remains an honest empty reservation.
+- **Reusable rule:** after every concurrent rebase, resolve theorem names to
+  current status and body before writing a forward consequence. A reservation
+  is a namespace lock, not mathematical signal. When extremizers tie, compare
+  invariant/consequence fields separately from traversal-dependent witnesses.
+
 ## MISTAKE-523 (2026-08-26, THM-3260 correction-lineage audit) -- a repaired carry proof pointed to an unrelated reused mistake ID
 
 - **What failed:** the first THM-3260 proof treated `18` low ternary digit

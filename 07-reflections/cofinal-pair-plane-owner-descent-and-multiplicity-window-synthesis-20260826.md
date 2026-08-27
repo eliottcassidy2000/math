@@ -153,13 +153,13 @@ cutoff. This is useful negative structure too: all other THM-4238 tail rows
 were already caught by one of the two ray orientations, so its genuinely new
 payload is exactly the joint-phase literal bridge.
 
-The subsequent fixed-`50` primary atlas is signal, not canon: it has no
-frozen output or independent implementation, and THM-4240/4242 remain honest
-empty reservations. Its cutoff `626` begins just beyond the aggregate
+The subsequent THM-4240 promotion proves the independently audited
+four-petal atlas and a selected twenty-two-label chart, `chi_50>=22`. This is
+a real restricted-chart advance, but it removes no universal full-`P` pair
+edge. The separate primary cutoff `626` begins just beyond the aggregate
 residual's exact 592-edge fixed-`50` slice, whose other endpoints stop at
-`625`; the restricted four-petal computation therefore removes no universal
-edge. The lawful generated task is the full `8,469,832,800`-case literal
-slice, not promotion of the attractive restricted chart.
+`625`; THM-4242 remains an empty reservation. The lawful generated universal
+task is still the full `8,469,832,800`-case literal slice.
 
 ### What survives from the tournament ancestry
 
@@ -176,6 +176,19 @@ target. The literal sweep is the required sidecar because it restores the
 joint phase erased by both ray bounds. The boundary owner moving from `744`
 to the pair of owners `616,721` after the 45-edge peel is useful signal: the
 old top hub encoded certificate slack, not demonstrated danger.
+
+The newly promoted
+[THM-4239](../01-canon/theorems/THM-4239-all-n-strong-two-reversal-presentation-sphere-and-tail-fiber-product-boundary.md)
+sharpens the usable tournament lesson. A fixed-gauge two-reversal shell can be
+classified at all orders, and within its proved type-B tail fibre every local
+product obstruction collapses to `b=c=3`, with sharp limiting ratio `27/25`.
+For LRC this suggests indexing the residual by a **defect radius** (number and
+kind of outsider/petal wall changes) plus fibre coordinates before asking for
+a single global estimate. It is a task generator, not a transfer theorem: the
+LRC residual is symmetric, and THM-4239 counts labelled presentations rather
+than isomorphism classes. For JC it gives the parallel warning that coefficient
+wall distance is chart-dependent until the underlying degeneration is
+identified modulo its natural equivalences.
 
 [THM-4227](../01-canon/theorems/THM-4227-two-outsider-scale-separated-depth-eight-haar-wedge.md)
 and [THM-4228](../01-canon/theorems/THM-4228-common-gcd-two-outsider-periodic-observable-haar-ray.md)
@@ -492,9 +505,9 @@ source-first resultant, component, genus, attachment, and degree audit.
 2. **LRC structure:** stratify the residual by the deficit pair
    `(K(a)-b,K(b)-a)`, primitive ratio, gcd, and fixed-pool failure mask; test
    THM-4233's `(beta,omega)` observable only where it preserves new phase.
-3. **LRC fixed-50 niche:** independently replay/freeze the unpromoted
-   higher-petal atlas, then separately batch the 592 full-pool residual edges
-   (`8,469,832,800` bodies); restricted petal safety is not universal closure.
+3. **LRC fixed-50 niche:** extend proved THM-4240 toward five petals, while
+   separately batching the 592 full-pool residual edges (`8,469,832,800`
+   bodies); restricted chart growth is not universal closure.
 4. **JC anchor:** apply owner descent to the cheapest of `A=0`, `B=0`, `Z=0`,
    `A+B=0`, selecting by replacement-face genus rather than coefficient name.
 5. **JC hostile:** determine the hidden saturation/overlattice and integral

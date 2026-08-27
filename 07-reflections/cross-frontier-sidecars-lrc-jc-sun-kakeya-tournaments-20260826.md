@@ -247,6 +247,21 @@ positive. The LRC analogue is methodological only: a repair-deck cover or a
 bad local pair statistic is not body unsafety; the direct Haar consequence
 must be recomputed.
 
+[THM-4239](../01-canon/theorems/THM-4239-all-n-strong-two-reversal-presentation-sphere-and-tail-fiber-product-boundary.md)
+now supplies the positive counterpart. Its fixed-gauge radius-two sphere has
+an all-order presentation classification, while the all-order local failures
+inside the proved type-B tail fibre concentrate in the single coordinate
+`b=c=3`; there `27/25` is the sharp limiting product constant. The transferable
+move is **defect-radius plus fibre coordinates**, not the tournament itself:
+stratify an LRC petal/residual calculation by the number and type of altered
+walls, then seek a unique hostile fibre before launching a global census. For
+JC coefficient walls, codimension plays the defect-radius role. The theorem's
+fixed-gauge warning is equally important: presentation radius is not an
+isomorphism invariant, just as a convenient coefficient chart is not the
+moduli quotient. In both transfers the cheapest hostile probe compares two
+presentations/charts of the same underlying object before treating the radius
+as intrinsic.
+
 ### Contract C: the `C_60`/AP phase packet to LRC addresses
 
 ```text
@@ -376,11 +391,13 @@ The five recent mechanisms cover different parameter geometry:
 | THM-4233 | full `P` | one coprime ray and a canceled-resonance family | pair-specific `(beta,omega)` and cyclotomic cancellation | coverage subsumed by THM-4231 |
 | THM-4234 | restricted `C` plus petals, center `50` | every finite outsider on 66 pairs; all 220 triple tails for `r>=589`; one universal triple | failure masks, cyclic adjacency, literal walls | fixed center and restricted chart |
 | THM-4238 | full `P` | 40 small labels with `r>=590`; exactly 32 new residual edges | complete ray census plus literal endpoint/midpoint bridge | aggregate residual still has 181,162 edges |
+| THM-4240 | restricted `C` plus four petals, center `50` | all 495 quadruple tails at `608`; one universal four-petal chart | independent event atlas, finite-head invoices, Pascal inheritance | proves `chi_50>=22`, not a full-`P` pair edge |
 
 THM-4231 subsumes THM-4227/4228/4233 in coverage, but not in their retained
 scale, gcd, primitive-phase, or cyclotomic coordinates. THM-4234 is the
 genuine residual fixed-center chart; THM-4238 supplies the exact 32-edge
-small-ray splice. Their synthesis is a parameter-space
+small-ray splice, and THM-4240 grows the restricted fixed-center chart by one
+petal. Their synthesis is a parameter-space
 atlas: use the analytic full-pool region as the exterior chart and exact
 fixed-center event sweeps as interior charts. A missing transition theorem
 would retain a primitive phase/correlation sidecar while moving the center

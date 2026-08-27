@@ -9,8 +9,9 @@ status: >
   {63,132,176,264} has all three newly exposed triple finite heads and its
   quadruple finite head exhausted, proving chi_50>=22. The independent
   atlas has 990 direct extremizer replays; the selected chart has 27,159,132
-  literal comparisons and twelve direct replays. THM-4242 strengthens the
-  chart-number conclusion. Arbitrary entry and LRC(14) remain OPEN.
+  literal comparisons and twelve direct replays. Arbitrary entry and LRC(14)
+  remain OPEN. MISTAKE-524 withdraws a prior forward claim about reserved
+  THM-4242; no result here depends on that empty stub.
 source: codex-lrc14-breakthrough-20260826
 depends_on:
   - THM-4150-safe-set-haar-measure-universal-odd-tail-lrc14-transfer
@@ -23,7 +24,6 @@ depends_on:
 related:
   - THM-4231-arbitrary-pair-cofinal-depth-six-haar-repair-and-exact-outsider-lift
   - THM-4238-forty-small-label-uniform-r590-haar-tail-closure
-  - THM-4242-fixed-fifty-direct-r626-tail-and-twenty-three-label-chart
 primary_script: 04-computation/lrc14_fixed_fifty_four_petal_haar_chart_thm4240.cpp
 atlas_independent_script: 04-computation/lrc14_fixed_fifty_all_quadruple_limiting_independent_audit_thm4240.cpp
 selected_independent_script: 04-computation/lrc14_fixed_fifty_selected_four_petal_independent_audit_thm4240.cpp
@@ -43,10 +43,11 @@ audit: >
   PASS / ACCEPT. The primary midpoint-cell/core-subset-zeta engine and the
   independent grouped-event/petal-batched complement-scatter engine agree on
   all 495 consequence-bearing atlas records. Eleven displayed cutoff bodies
-  differ only because tied maximizers are traversed in opposite orders; the
-  cutoff and every numerical field agree. A second grouped-event implementation
-  agrees field-for-field on the four selected finite heads and directly replays
-  every minimum, cutoff, and closest literal body.
+  differ because tied maximizers are traversed in opposite orders, and their
+  body-dependent component counts differ too. Every consequence-bearing field
+  agrees. A second grouped-event implementation agrees field-for-field on the
+  four selected finite heads and directly replays every minimum, cutoff, and
+  closest literal body.
 ---
 
 # THM-4240 -- fixed-fifty four-petal cofinal atlas and twenty-two-label chart
@@ -249,8 +250,8 @@ tracks exact safe/failing state through event toggles, batches petal lanes, and
 uses complement scatter. It replays the minimum and cutoff profile of every
 quadruple directly, for `990` body-local controls. It agrees with every
 consequence-bearing field. Eleven cutoff-body displays choose the other member
-of a tied maximizing fibre; all eleven cutoff values and numerical fields
-agree.
+of a tied maximizing fibre, so their body-dependent component counts also
+differ. The cutoffs and all consequence-bearing fields agree.
 
 The selected-chart referee is a third grouped-event implementation. It audits
 the three triple lanes and one quadruple lane simultaneously, then directly
@@ -287,5 +288,5 @@ point or sampling.
 
 This theorem does not prove that `608` is a minimal literal tail, that
 `chi_50=22`, replacement of the fixed center `50`, physical entry, or
-LRC(14). THM-4242 strengthens two of those intermediate conclusions while
-preserving the same firewalls. **QED.**
+LRC(14). MISTAKE-524 records and withdraws the former sentence treating the
+still-reserved THM-4242 as a strengthening. **QED.**
