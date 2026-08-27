@@ -65,9 +65,11 @@ is the safe control `M(S_13)=99/338`. No cited result proves LRC(14).
   THM-4276's exact minimum-six augmentation closes `163` through endpoint
   670. [THM-4277](../01-canon/theorems/THM-4277-uniform-two-dimensional-outsider-rectangle-common-deck-closure.md)
   gives a common-active deck on the `50*51` rectangle
-  `450<=q<=499,600<=r<=650` and closes `2,419` more. Residual
-  `172,322`, max `670`, topped exactly by `(256,670),(384,670)`; bulk/entry
-  remain open.
+  `450<=q<=499,600<=r<=650` and closes `2,419` more.
+  [THM-4281](../01-canon/theorems/THM-4281-rectangle-common-joint-deck-endpoint-670-bridge.md)
+  combines `148,063` common-deck rows with carrier closure through 664; the
+  exact union has `148,099` rows. Residual `24,223`, max `663`, top
+  `(256,663),(366,663),(520,663)`; physical entry and LRC(14) remain open.
 - **PROVED:** [THM-2928](../01-canon/theorems/THM-2928-critical-seven-comb-grid-tensorization-and-drift-tariff.md)/2941: literal zero/one/two/three-drift sectors are empty; `k=2,3` are finite.
 - **Orthogonal routes.** THM-1017 is HYP-6820; THM-2047/2050 keep phase/exit; THM-731/2048 prune; THM-1290 ends at `55`; HYP-8900 nonuniform.
 - **PROVED micro-staircase:** THM-3316/3317 close primes/sparse fragility;
