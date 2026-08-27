@@ -142,12 +142,13 @@ exact quotient-kernel/pair-difference test and normalized-fibre audit).
 
 ## Complete decks from hostiles
 
-**Action/boundary:** append common-active repairs disjoint from missed bodies.
-For finite failures, quotient repairs by response bits; certify minima by a
-packing and cover. Rescan pair/layer changes: the quotient loses margins.
+**Action/boundary:** quotient eligible repairs by missed-body response; certify
+set-cover minima by packing/cover, then rescan every pair because margins and
+exchange components do not transfer.
 
-**Evidence:** literal-audited THM-4267 (`9805+1`/2 hostiles), THM-4269
-(`3158+5`/6), THM-4273/4274, and THM-4276 (`5,852,925 -> 330`, minimum six).
+**Evidence:** THM-4267/4269, THM-4273/4278 (minimum one; the latter has a
+connected 72-family but a `5871+1` hostile), and THM-4276
+(`5,852,925 -> 330`, minimum six).
 
 ## Certify before projection
 
