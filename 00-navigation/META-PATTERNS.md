@@ -125,6 +125,20 @@ MISTAKE-310/401/466. Quantifier order is a sidecar: fixed-fibre richness need
 not survive optimization, witness selection, or sort projection; see
 THM-4090/4094/4095.
 
+## Re-evaluate a certificate after every fibre-changing operation
+
+**Trigger/action:** when a quotient, specialization, dilation, or migrated
+reset changes the test fibre, select the semantic target first and recompute
+the certificate there. Retain scale, normal jets, normalized fibre weights,
+or the fresh-event filtration—whichever coordinate the operation discarded.
+
+**Counterindications:** a union is not a common deck; a chosen section is not
+universal; merged marginals do not multiply; specialization gives no entry.
+
+**Evidence:** THM-4261/4262 (pair/ray repair); THM-4255/4263
+(graph jets, fibre weights, hazards); THM-4260/4264 (specialized exclusion,
+local observer, open normal lift).
+
 ## Certify before projection
 
 **Trigger/action:** build lawful ambient edge/primitive face first.

@@ -1,6 +1,6 @@
 # Start Here
 
-**Rolling brief — refreshed 2026-08-26.** This is a router, not a proof source;
+**Rolling brief — refreshed 2026-08-27.** This is a router, not a proof source;
 [`CURRENT-FRONTIER.md`](CURRENT-FRONTIER.md) owns status links.
 
 ## The five-minute orientation
@@ -21,8 +21,8 @@ Then read the routed frontier, guardrails, and theorem; logs are history.
 
 ## Seventeen high-signal facts
 
-1. **LRC(14) is first open.** THM-4231/4238/4242 leave `181,126` edges;
-   THM-4252 leaves `181,123` with cutoff `769`; THM-4242 proves `chi_50>=23`.
+1. **LRC(14) is first open.** THM-4261/4262 close `297+72` disjoint current
+   outsider-pair edges, leaving `180,622`, maximum `732`; bulk/entry stay open.
 2. **The `q <= 25` period claim is refuted.** THM-762/764 exhibit `26*{1,...,12} union {339}`, whose first good period is `27`.
 3. **Good-period existence is a maximum statement.** The tight resonant AP
    defeats average/count arguments; see MISTAKE-127/129/130.
@@ -53,10 +53,10 @@ Then read the routed frontier, guardrails, and theorem; logs are history.
     Composite rank seven and FC(3) remain open.
 12. **JC is false from dimension three; JC(2), DC(2) remain open.**
     THM-2084/4218/4220 reach `M=10`; THM-4222/4232/4248 close `M=11` off
-    `A*B*(A+B)=0`; THM-4226 closes `M=13`. On `M=12`, `W=0`,
-    THM-4230/4241/4249 leave `176/132` classes; THM-4251 audits a subsumed row
-    and THM-4253 leaves `176/104` classes and `864/648=1,512` incidences.
-    Emptiness and entry stay open.
+    `A*B*(A+B)=0`; THM-4226 closes `M=13`. On `M=12`, `W=0`, THM-4259
+    makes the glue explicit and THM-4260 excludes all `1,512` inherited
+    gate-interior incidences; THM-4264 gives an orthogonal two-difference
+    observer. Normal lift, walls and `M=12` entry remain open.
 13. **Complete period-14 coordinates can be globally blind.** THM-2058 keeps
     every fixed-depth packet coordinate but exits at `47/113`; THM-2043/2047/
     2050 separate local completeness from global maxima.

@@ -1,6 +1,6 @@
 # Current Frontier
 
-**State — 2026-08-26.** Proof links; statuses: **PROVED**, **CITED**,
+**State — 2026-08-27.** Proof links; statuses: **PROVED**, **CITED**,
 **FINITE-EXACT**, **VERIFIED**, **CONDITIONAL**, **OPEN**, **RESERVED**,
 **REFUTED**, **SUPERSEDED**.
 
@@ -26,27 +26,15 @@ THM-2051/2052 leave a rank-`>=11` sparse code; failed gates are not danger.
 
 ### Exact live obligation
 
-Direct frontier: `<=6`; projected caps `1579/216`. At `z1=216`, THM-3361
-closes the three `L720720` rows; THM-3378 leaves 12 rows in the next family
-(`372913/109/12`). THM-3349--3360 close all 561 reflected six-level `k=1`
-bodies and prove the edge floor; THM-3381 blocks residue-blind phase/tree
-transfer. Arbitrary `k<=1`, projected `k=2,3`, rung and physical entry remain.
-THM-3356/3366 leave k2/k3 `4056/1897`; THM-3385--3398 give the q2--7/all-q
-mode/cochain laws. THM-3414--3416 give ZMC rank-4/5/6 bases; THM-3425 gives
-primitive cap-six support; [THM-3453](../01-canon/theorems/THM-3453-global-literal-half-twist-cap-seven-support-classification.md)
-allows 15-atom cap-seven support only at zero current.
-
-THM-3665--3674 and THM-3701/3705/3706/3710/3713/3718 supply rank-12 charts,
-tariffs, detectors and a selector. Owner/root/word transport and semantic
-arrival remain missing (MISTAKE-281/300/310/313); the thirty-chart Euclidean
-word/coboundary reconstructs one packet, but stripping is chart-dependent.
-THM-2363/THM-2368 do not recover the `28,393` semantic roots.
-THM-3731 gives 165 valuation orbits: repeats obstruct a valuation-only owner;
-pairwise-distinct positive coefficients repair only that narrow defect.
+Direct frontier: `<=6`, projected caps `1579/216`. THM-3361 closes three
+`L720720` rows; THM-3378 leaves `12` next-family rows. THM-3349--3453 give
+six-level/support controls; arbitrary `k<=1`, projected `k=2,3`, rung and
+physical entry remain. THM-3665--3731 give rank-12 charts and `165` valuation
+orbits, but owner/word transport and semantic arrival remain missing
+(MISTAKE-281/300/310/313); THM-2363 and THM-2368 miss the `28,393` roots.
 [THM-4009](../01-canon/theorems/THM-4009-euclidean-covering-transference-short-relation-compression.md)
-gives a Graver row with square sum `<=195`; THM-4019 refutes THM-4015's
-sharp arbitrary-lattice character bound for `d>=7`. The weaker `d/2` bound
-and owner/phase remain open.
+gives square sum `<=195`; THM-4019 refutes the sharp arbitrary-lattice bound
+for `d>=7`. The weaker `d/2` bound and owner/phase remain open.
 [THM-3742](../01-canon/theorems/THM-3742-square-triangular-pell-mod13-central-sign-projective-cycle.md)
 is a wrong-torsor Pell `C14`; [THM-3744](../01-canon/theorems/THM-3744-pell-prefix-loneliness-constant-carry-exact-formula.md)
 is the safe control `M(S_13)=99/338`. No cited result proves LRC(14).
@@ -74,17 +62,13 @@ is the safe control `M(S_13)=99/338`. No cited result proves LRC(14).
 - **Owner/tail:** THM-4156/4191 close layers 0/1; [THM-4231](../01-canon/theorems/THM-4231-arbitrary-pair-cofinal-depth-six-haar-repair-and-exact-outsider-lift.md)
   closes `max(q,r)>=770`. THM-4238/[THM-4242](../01-canon/theorems/THM-4242-fixed-fifty-direct-r590-tail-and-twenty-three-label-chart.md)
   leave `181,126`; THM-4245 makes the scalar gate cofinally redundant.
-  THM-4252 closes three edges; [THM-4254](../01-canon/theorems/THM-4254-fixed-ceiling-band-signed-endpoint-cocycle-cascade.md)
-  closes the 59-edge ceiling band. [THM-4256](../01-canon/theorems/THM-4256-uniform-two-three-outsider-ray-endpoint-cocycle-closure.md)
-  closes the strict-above-pool `2:3` ray and removes 73 current residual edges,
-  leaving `180,991`, maximum `754`. Bulk phase/deck and entry remain open.
+  THM-4252/[4254](../01-canon/theorems/THM-4254-fixed-ceiling-band-signed-endpoint-cocycle-cascade.md)/[4256](../01-canon/theorems/THM-4256-uniform-two-three-outsider-ray-endpoint-cocycle-closure.md)
+  leave `180,991`; [THM-4261](../01-canon/theorems/THM-4261-semantic-endpoint-band-prefix-union-lift.md)/[4262](../01-canon/theorems/THM-4262-uniform-three-four-outsider-ray-common-deck-closure.md)
+  close `297+72` disjoint band/ray edges. Residual `180,622`, max `732`; bulk/entry open.
 - **PROVED:** [THM-2928](../01-canon/theorems/THM-2928-critical-seven-comb-grid-tensorization-and-drift-tariff.md)/2941: literal zero/one/two/three-drift sectors are empty; `k=2,3` are finite.
 - **Orthogonal routes.** THM-1017 is HYP-6820; THM-2047/2050 keep phase/exit; THM-731/2048 prune; THM-1290 ends at `55`; HYP-8900 nonuniform.
-- **PROVED micro-staircase:** THM-3316 closes every prime and THM-3317 proves
-  all-`n` sparse fragility.  THM-3325 exposes a genuinely composite failure of
-  the boundary projection: the even flat modulo `2p` has many boundary blockers
-  but only zero is full-cell, by a `nu_2`-descending activation graph.  The
-  speed/residue realization and physical lift remain open.
+- **PROVED micro-staircase:** THM-3316/3317 close primes/sparse fragility;
+  THM-3325 gives a composite boundary-projection hostile. Realization remains open.
 - **Foreign-base phase.** The FINITE-EXACT `C_221` stalk has a typed
   `4/17 <-> 13/17` two-cycle, but no exclusive source, lawful return, or
   semantic endpoint current.
@@ -93,17 +77,11 @@ is the safe control `M(S_13)=99/338`. No cited result proves LRC(14).
 
 ### Mandatory controls and perspective prompts
 
-- `26*{1,...,12} union {339}` and `{1,...,12,5460}` refute bounded-`q`
-  scans; AP13 and its lift share germs but not maxima.
-- THM-2058 preserves every fixed lift depth but escapes at `47/113`;
-  finite jets/Farey rays fail.
-- THM-3333--3347 and THM-3353--3457 type the Gaussian/Farey/Pell spine,
-  compilers, shells, periodic mass and static ray order. Origin, content,
-  owner/phase and time remain sidecars; no global transduction or LRC row.
-- THM-3459 detects mask overlap, but the `q=6` control pair has identical
-  masks; the star cochain remains.
-- Test gaps, clocks, residues, endpoints, circuits and proof obligations;
-  record every quotient loss.
+- `26*{1,...,12} union {339}` and `{1,...,12,5460}` defeat bounded-`q` scans;
+  THM-2058 defeats every fixed lift depth at `47/113`.
+- THM-3333--3457 type the Gaussian/Farey/Pell spine but retain origin,
+  owner/phase and time; THM-3459's `q=6` control has identical masks.
+- Test gaps, clocks, residues, endpoints, circuits and quotient losses.
 
 ## Mahler `3/2`
 
@@ -341,7 +319,8 @@ lift/phase clocks.
 
 ## Other active portfolio
 
-- **P-adic zeta:** claims remain **PREPRINT / UNDER AUDIT**. [THM-4255](../01-canon/theorems/THM-4255-specialization-kernel-and-transverse-hasse-jet-repair.md) proves kernel repairs; no torsor `u=f` map. Next: type modules; restore artifacts.
+- **P-adic zeta:** external density claims remain **PREPRINT / UNDER AUDIT**.
+  [THM-4255](../01-canon/theorems/THM-4255-specialization-kernel-and-transverse-hasse-jet-repair.md)/[4263](../01-canon/theorems/THM-4263-moving-multigraph-filtered-jet-and-finite-factor-density-transport.md) prove graph/jet kernels, finite-factor UI transport and conditional hazards. MISTAKE-527 forbids chosen-section refutations; the external Cartier steps still need a typed audit.
 - **Matching logic:** THM-4090 gives a two-sort Figure-2 calculus
   counterexample relative to cited soundness; one-sort completeness remains a
   preprint claim, and no arithmetic/tournament transfer follows.
@@ -354,7 +333,7 @@ lift/phase clocks.
 - **Knots:** THM-2176/2191/2281 and THM-2242/2330--2383: localization, owner/ANOVA/rectangle/reference inversion; realization/stable diagonal open. THM-2646: modular/exponent `B3` conjugacy, not Markov invariance.
 - **Flows:** [THM-2177](../01-canon/theorems/THM-2177-planar-counterexample-to-goemans-unsplittable-cost-flow-conjecture.md): planar `58<60` refutes exact `d_max`; planar `2d_max` survives.
 - **Hensel:** THM-3446/3449/[3452](../01-canon/theorems/THM-3452-unequal-depth-noncommuting-smooth-hensel-heisenberg-orbit-law.md): weighted/equal/unequal banks; dyadic repair.
-- **Rule 30:** [THM-4210](../01-canon/theorems/THM-4210-rule30-lossless-dyadic-block-current-cartier-tree.md) gives the forward current tree; THM-4204/4206 are inverse/Haar carriers. All prizes remain **OPEN**.
+- **Rule 30:** [THM-4210](../01-canon/theorems/THM-4210-rule30-lossless-dyadic-block-current-cartier-tree.md) gives the forward current tree; THM-4204/4206 are inverse/Haar carriers. THM-4263 adds a fibre-cap density pullback, not a prize solution. All prizes remain **OPEN**.
 - **Two Hopf problems:** the `S2 x S2` curvature and `S6` complex-structure
   preprints are distinct **PREPRINT CLAIM / UNDER AUDIT**. Only the recorded
   mixed/Hessian identities are exact in the first lane; the `2Z` orbit in the
@@ -374,10 +353,12 @@ lift/phase clocks.
   [THM-4230](../01-canon/theorems/THM-4230-exact-weight-twelve-cyclotomic-prym-planar-jacobian-squeeze.md)
   reduces its `M=12` gate to a proper countable nonempty hidden-`E_0` locus.
   At `W=0`, THM-4241/4247/4249/4253 leave `176/104` classes and `1,512`
-  incidences; THM-4258 makes each collapse test three-sample.
+  incidences; THM-4258/4259 give three-sample tests and explicit glue.
   [THM-4260](../01-canon/theorems/THM-4260-w0-canonical-node-reciprocal-denominator-attachment-exclusion.md)
-  excludes all `280` classes, so `S_34=S_42=empty` in the gate interior.
-  Walls, off-fibre, `M=12` entry, and `JC(2)` stay open.
+  excludes all `280` classes in the gate interior.
+  [THM-4264](../01-canon/theorems/THM-4264-w0-visible-incidence-two-edge-attachment-observer.md)
+  gives an orthogonal two-difference/`16`-word observer. Walls, normal lift,
+  `M=12` entry and `JC(2)` stay open.
   Exceptional quartic: THM-3703/3737 give grammar/image, THM-4034 the
   conductor, and THM-4039/4043/4046 reach `J_7`, obstruct `J_8`, and close
   critical `H`. [THM-4054](../01-canon/theorems/THM-4054-exceptional-affine-simple-zero-retained-packet.md)
@@ -401,7 +382,8 @@ lift/phase clocks.
 - **Factorial:** THM-4244 compiles even multipliers; THM-4250 gives suffix
   lifts/automata, and [THM-4257](../01-canon/theorems/THM-4257-fixed-prime-exponent-orbit-density-one-compiler.md)
   proves fixed-prime exponent density one plus `a=18,22,26` APs. Suffixes are
-  sufficient only. THM-3483 reaches `r=10028`; `d=9996,p=19` refutes only
+  sufficient only; THM-4263 supplies exact conditional hazards, not marginal
+  independence. THM-3483 reaches `r=10028`; `d=9996,p=19` refutes only
   barcode completeness. Mixed entry remains; THM-4001's losses block FC/HFC.
 - THM-1490 is one verified higher-dimensional Gaussian construction; newer
   three-real-Gaussian examples supersede “dimension four is sharp.”

@@ -3,20 +3,25 @@ id: THM-4264
 title: "W=0 visible-incidence two-edge attachment observer"
 status: >
   PROVED COROLLARY TO THM-4249/4253/4258 + VERIFIED-EXACT. On every one of
-  the current 1,512 visible map-ratio incidences, two consecutive attachment
+  the inherited 1,512 visible map-ratio incidences, two consecutive attachment
   differences vanish iff all twelve vanish. Thus the concrete observer table
   has 3,024 group-value rows, improving THM-4258's ungated three-edge table of
   4,536. After the proof reaches the two-torsion sidecar, the visible-projector
   relation cuts the ambient 64 recurrence words to exactly 16, with period
   profile {1:1,3:3,6:12}; one edge is module-theoretically insufficient.
-  No incidence is evaluated or excluded. W=0, M=12, normal lift, seam entry,
-  JC(2), and DC(2) remain OPEN.
+  No incidence is evaluated or excluded by this theorem. Incoming THM-4260
+  independently excludes the whole 1,512-edge carrier by reciprocal
+  denominators, so this observer is now an orthogonal proof/control mechanism,
+  not the live proof-graph workload. M=12, normal lift, seam entry, JC(2), and
+  DC(2) remain OPEN.
 source: root/cross-frontier-overnight/2026-08-27
 depends_on:
   - THM-4249-w0-cyclic-projector-missing-eigenline-attachment-squeeze
   - THM-4253-w0-degree-forty-two-norm-three-profile-exclusion
   - THM-4258-w0-three-sample-attachment-recurrence-and-two-torsion-sidecar
   - THM-4259-w0-explicit-hlambda-normalization-and-glue-dictionary
+related:
+  - THM-4260-w0-canonical-node-reciprocal-denominator-attachment-exclusion
 mistake_firewall:
   - MISTAKE-521
 script: 04-computation/jc23_w0_visible_two_edge_observer_thm4264.py
@@ -60,7 +65,7 @@ pi=omega^2-1,       P=v(Q_0),
 V=P_v(T)m=dv,       H=P_L(T)m=2ell.                    (2)
 ```
 
-Every one of the current `864+648=1,512` map-ratio incidences retains its
+Every one of the inherited `864+648=1,512` map-ratio incidences retains its
 actual visible ideal `(d)` and satisfies
 
 ```text
@@ -75,7 +80,7 @@ source-target orbit quotient.
 
 ## 2. Two-edge theorem
 
-For every current incidence in `(1)--(3)`,
+For every inherited incidence in `(1)--(3)`,
 
 ```text
 delta_j=O for all j mod 12
@@ -217,7 +222,7 @@ P_v delta=(omega,1,omega^2,omega,1,omega^2,
 This identifies the exact load-bearing gate rather than weakening the
 ambient theorem.
 
-## 4. Exact workload
+## 4. Exact alternative workload
 
 THM-4258's intrinsic difference map is
 
@@ -240,7 +245,14 @@ difference rows. THM-4258's observer-degree ceilings `120/150` remain valid.
 
 THM-4259 supplies the explicit `H_lambda` normalization and glue dictionary,
 so `(22)` is concretely evaluable without a two-torsion halving ambiguity.
-No row has been evaluated here; consequently no incidence is removed.
+No row is evaluated here; consequently this theorem itself removes no
+incidence.
+
+THM-4260 arrived independently and excludes every one of these 1,512
+incidences by a reciprocal-denominator obstruction before direct observer
+evaluation. Therefore `(22)` is now an alternative verifier and reusable
+mechanism, not a remaining proof-graph workload. It would become relevant
+again only in a route that does not inherit THM-4260's denominator theorem.
 
 ## 5. Independent audits and scope
 
