@@ -351,16 +351,16 @@ lift/phase clocks.
   `131199`-field file is a named finite population, not a world census.
 - **Jacobian/Dixmier:** `JC(2),DC(2)` remain **OPEN**. THM-4130--4220 close
   `M=8--10`; THM-4222/4232/4248 close `M=11` off `A*B*(A+B)=0`, THM-4226
-  closes dense `M=13`, and THM-4230 reduces `M=12` to hidden `E_0`. At `W=0`,
-  THM-4241/4247/4249/4253/4260
-  exhaust all `1,512` gate incidences; THM-4258/4259/4264/4275 give exact
-  recurrence observers, with any opposite-parity pair preserving full fibres.
-  THM-4265 proves reduced roots simple (lift consequence conditional), and
-  THM-4268 gives a non-effective collar;
+  closes dense `M=13`; THM-4230 reduces `M=12` to hidden `E_0`. At `W=0`,
+  THM-4241/4247/4249/4253/4260 close all `1,512` gates;
+  THM-4258/4259/4264/4275 give exact observers; opposite-parity pairs preserve
+  fibres. THM-4265 proves wall roots simple
+  (lift conditional); THM-4268 gives a non-effective collar.
   [THM-4272](../01-canon/theorems/THM-4272-lambda-zero-a23-contact-and-e0-infinity-jet-obstruction.md)
-  crosses `Lambda=0` for honest incidence via `A_23` and ramification
-  `1,2,4,7`; THM-4275 replaces coalesced point values by twelve Hasse
-  channels. Raw Keller descent, endpoints, complement and entry stay open.
+  crosses `Lambda=0` via `A_23` and orders
+  `1,2,4,7`; [THM-4279](../01-canon/theorems/THM-4279-four-channel-formal-log-hasse-observer-for-e0-hom-at-fat-contact.md)
+  compresses its global-Hom restriction to formal-log degrees `1,2,4,7`,
+  with target/Hom sidecars. Raw descent/entry stay open.
   Exceptional quartic: THM-3703/3737 give grammar/image, THM-4034 the
   conductor, and THM-4039/4043/4046 reach `J_7`, obstruct `J_8`, and close
   critical `H`. [THM-4054](../01-canon/theorems/THM-4054-exceptional-affine-simple-zero-retained-packet.md)
