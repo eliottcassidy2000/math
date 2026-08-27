@@ -1,0 +1,34 @@
+THM-4249 W=0 cyclic-projector squeeze independent audit
+arithmetic=exact_standard_library no_floating_point no_sampling
+basis=[u,f,g,h] relation=2h=v+omega^2*f+g
+T_action=u:-omega*u;f:g;g:-omega*f;h:omega^2*h-omega*f
+projector_coefficients Pu=[(1, 0), (0, -1), (-1, -1), (-1, 0)] Pv=[(0, -1), (-1, 0), (-1, 0), (1, 1)] PL=[(1, 1), (0, 0), (1, 1), (0, 0), (1, 1)]
+projectors=Pu:m->a*u Pv:m->d*v PL:m->2*ell PASS_on_all_53280_vectors
+reconstruction=2I=2Pu+Pv+PL T_order=12 degree_invariant=PASS
+degree_identity=q(m)=4N(a)+N(d)+3K q(2ell)=12K
+raw_shells=d34:36288 d42:16992
+raw_orbits=d34:648[sizes24:216,72:432] d42:344[sizes12:16,24:142,72:186]
+hidden_q12=vectors:24 orbits:2 sizes:{12:2} reps:[((-2, -1), (-1, -1)), ((-1, -1), (-1, 0))]
+hidden_q24=vectors:24 orbits:2 sizes:{12:2} reps:[((-2, -2), (-2, -2)), ((-2, -2), (0, 0))]
+geometric_inputs=collapse_nonzero_a_implies_Na>=7;collapse_nonzero_d_implies_Nd>=3;hidden_q12_q24_nocollapse
+hostile_nonzero_a_d34=profiles:{(7, 0, 2):288,(7, 3, 1):576} reps:{(7, 3, 1): ((-3, -2), (-2, -1), (0, -1), (-1, 1)), (7, 0, 2): ((-3, -2), (-1, -1), (-1, -1), (0, 0))}
+hostile_nonzero_a_d42=profiles:{(9, 0, 2):144,(9, 3, 1):288} reps:{(9, 3, 1): ((-3, -3), (-2, -1), (0, -1), (-1, 1)), (9, 0, 2): ((-3, -3), (-1, -1), (-1, -1), (0, 0))}
+a_zero_raw=d34:5184 d42:3600
+sieve_stages=d34:5184->4608->4224->4224 d42:3600->3600->3360->3168
+final_profiles_d34={(4, 10):864,(7, 9):1248,(13, 7):768,(16, 6):576,(19, 5):576,(25, 3):192} final_profiles_d42={(3, 13):672,(9, 11):576,(12, 10):864,(21, 7):768,(27, 5):288}
+final_orbits=d34:176_all_size24 d42:132_all_size24 total:308
+pure_hidden_degree42=192_vectors_16_raw_orbits removed_by_THM4230
+torsion_pi=omega^2-1:(-2, -1) norm:3 ratio_formula=R:-1/(X^3+1)
+maximal_c_d34=[(75, (-10, -5)), (57, (-8, -7)), (48, (-8, -4)), (57, (-8, -1)), (39, (-7, -5)), (39, (-7, -2)), (21, (-5, -4)), (21, (-5, -1))] maximal_c_d42=[(81, (-9, -9)), (63, (-9, -6)), (63, (-9, -3)), (36, (-6, -6))]
+ideal_nesting=every_residual_d_class_divides_a_listed_maximal_d PASS
+torsion_union_d34=points:336 pair_intersections:{3:28} unit_orbits:{1:1,2:1,3:1,6:55}
+torsion_union_d42=points:216 pair_intersections:{9:6} unit_orbits:{1:1,2:1,3:1,6:35}
+common_intersections=d34:E[pi]_size3 d42:E[3]_size9
+excluded_ratios=E[pi]_nonzero:R=-1;E[2]_nonzero:Z=0;origin:nonaffine
+E3_extra=one_mu6_orbit_size6 psi3:3X(X^3+4) R=1/3
+torsion_ratio_envelopes=S34_at_most55 S42_at_most35
+map_specific_ratio_counts_d34={(4, 1):36,(7, 3):52,(13, 6):32,(16, 7):24,(19, 9):24,(25, 12):8} map_specific_ratio_counts_d42={(3, 1):28,(9, 4):24,(12, 5):36,(21, 10):32,(27, 13):12}
+node_root_orbits=24_choices_two_C12_orbits rho_shift_(3,2)_exchanges PASS
+decisive_attachment_incidences=d34:864 d42:780 total:1644 one_canonical_node_orbit
+scope=conditional_arithmetic_audit_of_named_geometric_filters;M12_entry_JC2_OPEN
+result=PASS

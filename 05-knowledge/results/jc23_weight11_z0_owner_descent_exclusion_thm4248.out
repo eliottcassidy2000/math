@@ -1,0 +1,15 @@
+THM4248_WEIGHT11_Z0_OWNER_DESCENT_EXACT_CERTIFICATE
+scope=exact_M11,b=d=0,reduced_(2,3),Z=0,A*B*(A+B)!=0,U_arbitrary,all_lower_coefficients
+owner_strata=U!=0/K!=0;U!=0/K=0;U=0/Delta!=0/K!=0;U=0/Delta!=0/K=0;U=0/Delta=0
+hull_cases=26624;per_stratum=8192,8192,4096,4096,2048;fixed_residual=(2,0,1);failures=0
+faces=M11+V_(5|4|3)+optional_TK;face_Pick=M(33,5,15),TK(2,4,0),V5(5,7,0),V4(4,6,0),V3(3,5,0)
+packets=K!=0:(10,10,5,5,2,2,1)/degree35;K=0:(10,10,7,5,1)/degree33;defect=28
+edge_schemes=all_exact;edge_discriminants=all_exact;hidden_extra_units=none
+regular_models=U!=0:Q=sigma^330,A329;U=0:Q=sigma^132,A131;all_components_multiplicity_one
+chains=MV:(5,8,19)_by_owner;MT:(74_at_330,29_at_132);all_rational
+CM=genus5,Q(zeta11),type(4,5,8,9,10),stabilizer(1),Hom_to_E0_zero_by_cited_primitive_CM
+genus=15;dual_rank=10;special_degree=0;generic_finite_degree_positive=>contradiction
+hostiles=A0_genus5_face;B0_genus4_face;A+B=0_double_edge;K=0_face_deletion
+proof_inputs=THM3992/3997/4012/4045/4222/4232;Milne_primitive_CM;proper_flat_degree_conservation
+nonclaims=other_three_M11_walls,other_cells,seam_entry,JC2,DC2
+checks=28250

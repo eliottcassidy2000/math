@@ -52,12 +52,10 @@ Then read the routed frontier, guardrails, and theorem; logs are history.
     separate collision, phase and address; THM-3425 needs period plus parity.
     Composite rank seven and FC(3) remain open.
 12. **JC is false from dimension three; JC(2), DC(2) remain open.**
-    THM-2084 and THM-4130--4217 close named chambers; THM-4218/4220 close exact
-    `M=10`; THM-4222/4232 close `M=11` off four walls; THM-4226 closes dense
-    `M=13`. THM-4230 reduces one `M=12` gate to a countable proper, nonempty
-    hidden-`E_0` locus. On `W=0`, THM-4241 saturates the hidden lattice but
-    finds visible-hidden `Z`-index-four gluing and full degree-`34/42` vectors.
-    Only finite marked-ratio sets `S_34,S_42` remain; entry and JC(2) stay open.
+    THM-2084/4218/4220 reach `M=10`; THM-4222/4232/4248 close `M=11` off
+    `A*B*(A+B)=0`; THM-4226 closes `M=13`. On `M=12`, `W=0`,
+    THM-4230/4241/4249 leave `176/132` classes, `55/34` ratios, and `1,512`
+    incidences. Emptiness and entry stay open.
 13. **Complete period-14 coordinates can be globally blind.** THM-2058 keeps
     every fixed-depth packet coordinate but exits at `47/113`; THM-2043/2047/
     2050 separate local completeness from global maxima.

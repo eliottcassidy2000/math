@@ -1,0 +1,30 @@
+W=0 tau-projector squeeze exact certificate
+basis=[u,f,g,h] h=(v+omega^2*f+g)/2
+tau=u:-omega; f:g; g:-omega*f; h:omega^2*h-omega*f
+rosati_isometry=PASS tau_order=12 tau_trace_operator=0
+projectors=P_u:m->a*u; P_v:m->d*v; P_hidden:m->2*ell PASS
+full_theta degree34:36288 degree42:16992
+hidden_degree6 vectors:24 unit_tau_orbits:2 cyclic_det_norms:1:24
+hidden_degree12 vectors:24 unit_tau_orbits:2 cyclic_det_norms:4:24
+hidden_degree24 vectors:24 unit_tau_orbits:2 cyclic_det_norms:16:24
+hidden_degree24=2*hidden_degree6 EXACT
+hidden_two_torsion_boundary_resultant=-108
+hidden_degree12_24_attachment_collapse=EXCLUDED_ON_GATE
+nonzero_u_profiles degree34:[(7, 0, 2), (7, 3, 1)]
+nonzero_u_profiles degree42:[(9, 0, 2), (9, 3, 1)]
+nonzero_u_degree34_42_attachment_collapse=EXCLUDED
+raw_a0 degree34:5184 degree42:3600
+spectral_residual degree34_vectors:4224 orbits:176 orbit_sizes:24:176
+spectral_residual degree42_vectors:3168 orbits:132 orbit_sizes:24:132
+degree34_Nd_K_distribution={(4, 10): 864, (7, 9): 1248, (13, 7): 768, (16, 6): 576, (19, 5): 576, (25, 3): 192}
+degree42_Nd_K_distribution={(3, 13): 672, (9, 11): 576, (12, 10): 864, (21, 7): 768, (27, 5): 288}
+degree34_d_ideal_classes={4: 1, 7: 2, 13: 2, 16: 1, 19: 2, 25: 1}
+degree42_d_ideal_classes={3: 1, 9: 1, 12: 1, 21: 2, 27: 1}
+remaining_torsion_condition=[d*(omega^2-1)]v(Q0)=O
+marked_ratio_from_v_Xcube R=-1/(X^3+1)
+degree42_Nd3_X0_ratio=-1 EXCLUDED_GATE
+degree42_Nd3_ratio=1/3
+torsion_ratio_envelopes degree34:55 degree42:35
+trace_zero_normalization: common_attachment_value_in_E0[12]
+destroyed_data=mixed_attachment_cancellation; explicit ratio polynomials; walls; entry
+verdict=S34_S42_OPEN residual_orbits=176+132

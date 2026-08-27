@@ -1,0 +1,15 @@
+THM4248_WEIGHT11_Z0_OWNER_DESCENT_INDEPENDENT_AUDIT
+implementation=stdlib_only;imports_primary=false;imports_sympy=false
+scope=exact_M11,b=d=0,reduced_(2,3),Z=0,A*B*(A+B)!=0,U_arbitrary,all_lower_coefficients
+owner_strata=5;K_Delta_boundary=5696/105;Delta=0=>K=2848/45
+hull_cases=26624;per_stratum=8192,8192,4096,4096,2048;fixed_residual=(2,0,1);failures=0
+formal_faces=main+three_vertical_owners+optional_K_tail;formal_edge_schemes=PASS;formal_discriminants=PASS
+Pick_faces=M(33,5,15),TK(2,4,0),V5(5,7,0),V4(4,6,0),V3(3,5,0)
+packet_degrees=35,33,35,33,35;packets=35_if_K_nonzero,33_if_K_zero;defect=28
+regular_models=Q330/A329_or_Q132/A131;lifted_gcds=PASS;unimodular_fans=PASS;multiplicity=1
+CM=genus5,type(4,5,8,9,10),stabilizer(1),full_H1;Hom_to_E0_zero_by_cited_primitive_CM
+genus=15;dual_rank=10;all_other_components=rational;special_degree=0
+hostiles=A0_genus5;B0_genus4;A+B0_double_edge;K0_packet_change
+proof_inputs=THM3992/3997/4012/4045/4222/4232;Milne_primitive_CM;proper_flat_degree_conservation
+nonclaims=other_three_M11_walls,other_cells,seam_entry,JC2,DC2
+checks=27997
