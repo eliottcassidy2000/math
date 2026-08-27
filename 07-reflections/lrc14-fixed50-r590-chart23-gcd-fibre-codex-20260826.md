@@ -24,7 +24,7 @@ The concept board was
 
 ```text
 fixed-fifty body atlas | exceptional literal bridge | face hypergraph
-component tariff | gcd fibre | small-label owner ray.  (1)
+component tariff | gcd fibre | finite pair residual.   (1)
 ```
 
 ## What moved
@@ -63,8 +63,10 @@ The closest new row is still separated from threshold by
 This is the mechanism behind the boundary reduction `626 -> 590`: analytic
 cofinal control for the bulk, a complete literal invoice for the exceptions.
 It aligns fixed `q=50` with THM-4238's `r>=590` boundary for genuine
-`q<=49`. It does not interpolate in the newcomer label and does not close the
-first-owner rays `q=51..1289`.
+`q<=49`. Against the concurrent exact proof graph it removes precisely the 36
+edges `(50,r)`, `590<=r<=625`, lowering the residual from `181,162` to
+`181,126`. The remaining fixed-`50` slice has `556` edges and max other
+endpoint `589`; the global cutoff `770` is unchanged.
 
 ### 2. Face completion raised the chart to 23 labels
 
@@ -162,14 +164,13 @@ certificate cannot be read as a counterexample.
 
 ## Next sharp fronts
 
-1. **First-owner rays `51..1289` (Anchor, OPEN).** Order the two newcomers
-   and fix the smaller one. Build a body atlas at selected owners, then apply
-   the same exceptional-gap bridge to a common large-`r` interface. Start at
-   gcd-rich owners suggested by the fibre weights, not by consecutive labels.
-2. **Full fixed-`50` finite head (Anchor, OPEN).** THM-4242 closes all pool
-   bodies only for `r>=590`; its 23-chart closes all `r` only on a subset.
-   Construct the joint failure hypergraph for `r<590` and retain literal
-   failure atoms rather than separate body marginals.
+1. **Exact `181,126`-edge graph (Anchor, OPEN).** The residual is finite with
+   largest endpoint `769`; its top edges are `(616,769)` and `(721,769)`.
+   Rank rays by certificate deficit, gcd profile, and literal case cost, then
+   remove intersections by an exact proof-graph postprocess.
+2. **Fixed-`50` remainder (Anchor, OPEN).** Its `556` edges all have other
+   endpoint at most `589`. Construct the joint failure hypergraph there and
+   retain literal failure atoms rather than separate body marginals.
 3. **A 24-label chart (Niche, OPEN).** For a sixth petal `e`, exactly
    `10+10+5+1=26` new faces contain `e` at sizes three through six. Rank
    candidates first by minimum limiting surplus, finite-row cost, and

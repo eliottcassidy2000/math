@@ -2,14 +2,15 @@
 id: THM-4242
 title: "Fixed-fifty direct r590 tail, twenty-three-label chart, and gcd-fibre tariff"
 status: >
-  PROVED RELATIVE TO THM-4150/4156/4170/4191/4211/4229/4234/4240 +
+  PROVED RELATIVE TO THM-4150/4156/4170/4191/4211/4229/4231/4234/4238/4240 +
   FINITE-EXACT + INDEPENDENTLY AUDITED; LRC(14) OPEN. Every nine-body in
   the thirty-label pool is safe after adjoining 50 and every r>=590. The
   selected five-petal set {10,15,20,30,264} has every triple, quadruple,
   and quintuple finite head exhausted, proving chi_50>=23. A separate
   gcd-weighted fibre tariff is proved for every modulus h>=2; its prime p<=7
-  corollary and p=5 census are only sufficient certificates. Arbitrary pair
-  entry and LRC(14) remain OPEN.
+  corollary and p=5 census are only sufficient certificates. Intersecting the
+  direct ray with the current exact pair residual removes 36 more edges and
+  leaves 181,126. Arbitrary pair entry and LRC(14) remain OPEN.
 source: codex-lrc14-breakthrough-20260826
 depends_on:
   - THM-4150-safe-set-haar-measure-universal-odd-tail-lrc14-transfer
@@ -19,10 +20,9 @@ depends_on:
   - THM-4211-fixed-fifty-cofinal-two-newcomer-haar-tail-and-eighteen-label-chart
   - THM-4229-fixed-fifty-nineteen-label-petal-haar-charts
   - THM-4234-fixed-fifty-twenty-label-pair-haar-charts
-  - THM-4240-fixed-fifty-twenty-two-label-four-petal-haar-chart
-related:
   - THM-4231-arbitrary-pair-cofinal-depth-six-haar-repair-and-exact-outsider-lift
   - THM-4238-forty-small-label-uniform-r590-haar-tail-closure
+  - THM-4240-fixed-fifty-twenty-two-label-four-petal-haar-chart
 atlas_primary_script: 04-computation/lrc14_fixed_fifty_four_petal_haar_chart_thm4240.cpp
 atlas_independent_script: 04-computation/lrc14_fixed_fifty_high_petal_batched_independent_audit_thm4242.cpp
 bridge_primary_script: 04-computation/lrc14_fixed_fifty_r590_bridge_primary_thm4242.cpp
@@ -31,6 +31,10 @@ chart_primary_script: 04-computation/lrc14_fixed_fifty_five_petal_chart_primary_
 chart_independent_script: 04-computation/lrc14_fixed_fifty_five_petal_chart_independent_audit_thm4242.cpp
 fibre_primary_script: 04-computation/lrc14_five_fiber_certificate_census_thm4242.cpp
 fibre_independent_script: 04-computation/lrc14_five_fiber_certificate_census_independent_audit_thm4242.cpp
+cross_residual_script: 04-computation/lrc14_thm4231_4238_4242_cross_residual_postprocess_20260826.py
+cross_residual_output: 05-knowledge/results/lrc14_thm4231_4238_4242_cross_residual_postprocess_20260826.out
+cross_residual_script_sha256: 07d5b2e29cfd00a119d9b7217dee8e6cda4cd035edebe442b35c234fe8fe7009
+cross_residual_output_sha256: 79567c4a6e3becde07a03ece58be16ecf955ec24383505e90c3227bc417166bb
 hash_basis: raw LF bytes
 audit: >
   PASS / ACCEPT. Independent grouped-event, dual core-first, complement-scatter,
@@ -38,12 +42,14 @@ audit: >
   every consequence-bearing count. The r590 bridge agrees on all 24 exceptional
   bodies and checks every one of their 258 literal rows by two independent
   integrators. The selected chart agrees on all 16 higher faces and all
-  88,007,232 literal comparisons. No computation uses floating point or sampling.
+  88,007,232 literal comparisons. An exact proof-graph postprocess removes 36
+  fixed-fifty edges from the inherited residual. No computation uses floating
+  point or sampling.
 ---
 
 # THM-4242 -- fixed-fifty direct r590 tail, twenty-three-label chart, and gcd-fibre tariff
 
-**PROVED RELATIVE TO THM-4150/4156/4170/4191/4211/4229/4234/4240 +
+**PROVED RELATIVE TO THM-4150/4156/4170/4191/4211/4229/4231/4234/4238/4240 +
 FINITE-EXACT + INDEPENDENTLY AUDITED; LRC(14) REMAINS OPEN.**
 
 ## 1. Statement and inheritance
@@ -99,6 +105,10 @@ that individually safe newcomer marginals do not compose. The corrected near
 miss is MISTAKE-520: zero-newcomer faces are inherited from full-pool heredity,
 not from an unrelated cardinality certificate. The least-used sidecar here is
 the component count of the unprojected circular safe set.
+
+MISTAKE-524 correctly forbade THM-4240 from citing THM-4242 while this file was
+an empty reservation. The present audited promotion depends on THM-4240, not
+conversely, and does not undo that correction lineage.
 
 The live concept board was
 
@@ -212,7 +222,20 @@ agree. Together with `(9)` outside the finite gaps, this proves `(3)`.
 
 This lowers the direct fixed-`50` boundary from the raw analytic value `626`
 to the same `590` boundary used by THM-4238's genuine small-first-outsider
-theorem. It does not address the remaining first-owner rays `51<=q<=1289`.
+theorem.
+
+The concurrent THM-4231/4238 exact proof graph had `181,162` finite residual
+pair edges. Its intersection with `(3)` is exactly
+
+```text
+{(50,r):590<=r<=625},             36 edges.            (15a)
+```
+
+Removing them leaves `181,126` edges. The fixed-`50` slice falls from `592`
+to `556` edges and now has largest other endpoint `589`; the global top layer
+remains `{(616,769),(721,769)}`. This postprocess removes
+`36*binom(30,9)=515,057,400` pair/body cases without recomputing their masses.
+It does not close the finite residual or lower THM-4231's `770` cutoff.
 
 ## 4. A universal five-petal chart
 
@@ -348,8 +371,10 @@ Across `k=5,...,9`, the two programs agree on all
 792+924+792+495+220=3,223                             (23)
 ```
 
-labelled atlas lanes; all displayed masses, components, surpluses, cutoffs,
-and extremizers agree, modulo harmless tied traversal where applicable.
+labelled atlas lanes. They agree on every consequence-bearing lane field:
+nonstrict count, minimum surplus, and maximum cutoff. Body-local controls
+replay the global minimum and cutoff masses/components for each `k`. Tied
+auxiliary witnesses are not claimed identical.
 
 The bridge primary is a small body-local literal integrator driven by the
 analytic atlas. The bridge referee independently reconstructs the exceptional
@@ -389,6 +414,9 @@ g++ -std=c++20 -O3 -DNDEBUG -fopenmp \
   04-computation/lrc14_fixed_fifty_five_petal_chart_independent_audit_thm4242.cpp \
   -o /tmp/lrc14-thm4242-chart-independent
 /tmp/lrc14-thm4242-chart-independent
+
+python3 \
+  04-computation/lrc14_thm4231_4238_4242_cross_residual_postprocess_20260826.py
 ```
 
 The higher-petal atlas is reproduced by running the THM-4240 primary with
@@ -411,6 +439,8 @@ stream with the correspondingly named frozen output in `05-knowledge/results`.
 | fibre independent source | `76492bbcce17868f24d93da7772aa7e5b5572e9e712f2682db893c7cb868292e` |
 | fibre primary output | `268c483f7cdf35d03e5660d840332954cf5a5460774ef0cbaff751d18aa98ce1` |
 | fibre independent output | `6d976c65a7b5ef7d4f95c9d2b91f185d16fee97ef4f5e711d35b8f02036494e8` |
+| cross-residual source | `07d5b2e29cfd00a119d9b7217dee8e6cda4cd035edebe442b35c234fe8fe7009` |
+| cross-residual output | `79567c4a6e3becde07a03ece58be16ecf955ec24383505e90c3227bc417166bb` |
 
 The primary/independent output hash pairs for `k=5,...,9` are respectively
 
