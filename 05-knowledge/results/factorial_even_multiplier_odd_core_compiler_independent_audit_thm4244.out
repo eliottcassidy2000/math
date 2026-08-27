@@ -1,0 +1,25 @@
+support_barcode_universe=even_2<=a<130,primes_a<p<280,1<=k<=9
+support_barcode_cells=23715 fixed_orbit_checks=23715 one_visible_blocks=74196 two_visible_blocks=248202
+support_barcode_semantic_sha256=9803225db960da7e197fa4812e9ca6c422afe9a290f94830156c9ed65bc7a8e9
+support_suffix_universe=even_2<=a<=192,a=2^q*b,2^(ell-1)>=b,H=m*2^ell-1,1<=m<=96
+support_suffix_heights=9216 orbit_checks=142944
+support_suffix_semantic_sha256=60d73780ce448c590fa6853e34d2012fe93d3f2dcf0612dd7cd1d8ebc0eb835b
+support_power_two_invariance_universe=odd_1<=b<=25,odd_1<=H<384,1<=q<=5
+support_power_two_invariance_cells=12480 overlap_shift_checks=74880
+support_power_two_invariance_semantic_sha256=65e5e7e3a2bd00a4a865932333710db3525751c0f16228371ff80f31a24dd43d
+support_a14_cells=16384 prime_odd_exponent_cells=504
+support_a14_semantic_sha256=3cd9c432bad8193caada998354a55a17dba78ca0a347bcc49818953150755462
+support_hostile=(2, 5, 1, 5, 1, ())
+support_hostile=(4, 5, 1, 5, 2, ())
+support_hostile=(12, 17, 1, 17, 8, (4, 8))
+support_hostile=(14, 17, 1, 17, 8, (2, 4, 6, 8))
+support_hostile=(14, 19, 1, 19, 9, ())
+support_hostile=(14, 23, 1, 23, 11, ())
+support_hostile=(14, 23, 2, 529, 11, (2, 4, 6, 8, 10))
+support_hostile=(14, 29, 2, 841, 13, (4, 10))
+support_hostile=(14, 73, 1, 73, 13, (2, 4, 6, 8, 10, 12))
+sympy_nonconverse_candidate_row=a:14,p:17,k:1,C:(2, 4, 6, 8)
+sympy_modular_nonconverse=q:1000003,N:238,degrees:237/238,gcd_degree:0
+sympy_modular_nonconverse=q:1000033,N:238,degrees:237/238,gcd_degree:0
+overall_semantic_sha256=1f9b4d9c2edbbe6e249d6210a55e50f0b5cf798344656c70c5b338dd9cb35d1a
+status=PASS runtime_require_gates=True optimization_invariant=True

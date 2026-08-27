@@ -400,13 +400,13 @@ lift/phase clocks.
   exact-square terminals, not chart entry. Later passport/accessory/jet lanes
   close only their named cells; nonzero passports, section/transfer, and
   global entry remain open. THM-3306 sidecars are FINITE-EXACT only.
-- **Factorial:** THM-4237: `6p^k` closes on adjacent bits.
-  [THM-4243](../01-canon/theorems/THM-4243-multiplier-ten-double-overlap-prime-power-factorial-closure.md)
-  closes `10p^k` iff both overlap pairs hit; 20 mod-64 suffixes force, not
-  classify. THM-3483 reaches `r=10028`; `d=9996,p=19` refutes only barcode
-  completeness. THM-3182--3470 close named
-  cells; support five/mixed entry remains. THM-4001 recovers known-arity
-  `{a_i^d}`; typed losses block FC/HFC.
+- **Factorial:** [THM-4244](../01-canon/theorems/THM-4244-even-multiplier-odd-core-complementary-pair-factorial-compiler.md)
+  compiles even `a=2^q b` by odd-core complementary overlaps;
+  THM-4237/4243 are `b=3/5`; `-1` suffixes suffice; survivors need not
+  be factors. THM-3483 reaches `r=10028`;
+  `d=9996,p=19` refutes only barcode completeness. THM-3182--3470 close
+  named cells; mixed entry remains. THM-4001 recovers fixed-arity
+  `{a_i^d}`; losses block FC/HFC.
 - THM-1490 is one verified higher-dimensional Gaussian construction; newer
   three-real-Gaussian examples supersede “dimension four is sharp.”
 

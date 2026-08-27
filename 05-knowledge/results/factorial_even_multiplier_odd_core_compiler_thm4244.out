@@ -1,0 +1,25 @@
+barcode_universe=even_2<=a<162,primes_a<p<320,1<=k<=12
+barcode_cells=43104 truncated_cells=14172 fixed_point_checks=43104 automatic_pair_checks=247152
+barcode_semantic_sha256=8e2bab06baf9f0bf42bbac862e36c46185916eccba848feee6d6c8ba191c09fb
+universal_suffix_universe=even_2<=a<=256,a=2^q*b,2^(ell-1)>=b,H=m*2^ell-1,1<=m<=128
+universal_suffix_heights=16384 pair_checks=341376
+universal_suffix_semantic_sha256=9a3556c6f9fafc14b9a7aab5077598a93970798013b06797808feb60b938bccb
+power_two_invariance_universe=odd_1<=b<=33,odd_1<=H<512,1<=q<=6
+power_two_invariance_cells=26112 overlap_shift_checks=208896
+power_two_invariance_semantic_sha256=34b45fce2a40c52de5d2a4bb7a7e5d65922809575f11d51bfcb293aca2a499ee
+a14_suffix_heights=32768 prime_odd_exponent_cells=770
+a14_semantic_sha256=9fdc6ab945fbd250c2eb86918cc5e3616aeea2de6e7e87a9312096b33f68736e
+hostile=(2, 5, 1, 5, 1, (), ())
+hostile=(4, 5, 1, 5, 2, (), ())
+hostile=(12, 17, 1, 17, 8, (4, 8), (34, 0))
+hostile=(14, 17, 1, 17, 8, (2, 4, 6, 8), (0, 0, 0))
+hostile=(14, 19, 1, 19, 9, (), (36, 12, 16))
+hostile=(14, 23, 1, 23, 11, (), (4, 68, 136))
+hostile=(14, 23, 2, 529, 11, (2, 4, 6, 8, 10), (0, 0, 0))
+hostile=(14, 29, 2, 841, 13, (4, 10), (1536, 0, 4608))
+hostile=(14, 73, 1, 73, 13, (2, 4, 6, 8, 10, 12), (0, 0, 0))
+nonconverse_candidate_row=a:14,p:17,k:1,C:(2, 4, 6, 8)
+modular_nonconverse=q:1000003,N:238,degrees:237/238,gcd_degree:0
+modular_nonconverse=q:1000033,N:238,degrees:237/238,gcd_degree:0
+overall_semantic_sha256=1dae76d4629be3569c54244f4a1d2bc07a508950d9e8246133ef9b18362c3c1d
+status=PASS runtime_require_gates=True optimization_invariant=True
