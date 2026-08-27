@@ -1,0 +1,11 @@
+THM-4265 W0 REDUCED WALL FACTOR
+revision=bafd69bdd607fe4dfa704edc63bef23cbf2e2ce9
+dependency=04-computation/jc23_w0_canonical_node_attachment_exclusion_independent_audit_thm4260.py sha256=238af711b734a0e054a3da6d8a836f5f2996e34550d5e507111718d5eff2314f
+classes=d34:176 d42:104 total:280
+q=397 wall_values_zero=280/280 wall_derivatives_nonzero=280/280 derivative_even=280/280 degree_profile=11:8,19:36,23:24,27:64,35:52,39:72,43:24 wall_ledger_sha256=58809890f97d24628406ad9f8d28b31f61a7f45baae34c6c7c0f61ec67d49571 groups=10
+q=577 wall_values_zero=280/280 wall_derivatives_nonzero=280/280 derivative_even=280/280 degree_profile=11:8,19:36,23:24,27:64,35:52,39:72,43:24 wall_ledger_sha256=e50dc1d8b22eba1d9b12e9c5a984d4740b52c3f99c5765bf9bec91aee81fb9da groups=10
+proof_prime=397 characteristic_zero_wall_factors=t-1,t+1 both_simple
+hostile_prime=577 same_reduced_wall_result
+local_observer=det(d_t,d_W;dstar_t,dstar_W)_at_(W=0,t=+-1)
+scope=no_W_deformation_no_transverse_derivative_no_off_fibre_exclusion
+verdict=PASS
