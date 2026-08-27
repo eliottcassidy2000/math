@@ -344,21 +344,16 @@ lift/phase clocks.
   tuple is now at least `(8,5,4,3,3)` for `ell=(3,5,7,11,13)`. The requested
   challenges `(3,9),(5,6),(7,5),(11,4),(13,4)` all remain **OPEN**; the public
   `131199`-field file is a named finite population, not a world census.
-- **Jacobian/Dixmier:** `JC(2),DC(2)` remain **OPEN**. THM-4130--4143 empty
-  `M=8`; THM-4147/4157 close named `M=9` chambers; THM-4176/4180 exhaust
-  repeated-top. THM-4183/4186/4189/4192 and THM-4205/4209 close the named
-  `K=0` faces; THM-4217 closes mixed off-anti `Delta=0`. THM-4218/4220 close
-  dense and complete `zeta=0` exact `M=10`, including the split conic;
-  THM-4222/[4232](../01-canon/theorems/THM-4232-weight-eleven-u-zero-primitive-cm-planar-jacobian-exclusion.md)/[4248](../01-canon/theorems/THM-4248-weight-eleven-z-zero-owner-descent-planar-jacobian-exclusion.md) close `M=11` off `A*B*(A+B)=0`; THM-4226 closes dense `M=13`.
-  [THM-4230](../01-canon/theorems/THM-4230-exact-weight-twelve-cyclotomic-prym-planar-jacobian-squeeze.md)
-  reduces its `M=12` gate to a proper countable nonempty hidden-`E_0` locus.
-  At `W=0`, THM-4241/4247/4249/4253 leave `176/104` classes and `1,512`
-  incidences; THM-4258/4259 give three-sample tests and explicit glue.
+- **Jacobian/Dixmier:** `JC(2),DC(2)` remain **OPEN**. THM-4130--4220 close
+  the routed `M=8--10` chambers; THM-4222/4232/4248 close `M=11` off
+  `A*B*(A+B)=0`, and THM-4226 closes dense `M=13`. THM-4230 reduces `M=12`
+  to a hidden-`E_0` locus. At `W=0`, THM-4241/4247/4249/4253 leave `280`
+  classes and `1,512` incidences; THM-4258/4259 and THM-4264 give observers.
   [THM-4260](../01-canon/theorems/THM-4260-w0-canonical-node-reciprocal-denominator-attachment-exclusion.md)
-  excludes all `280` classes in the gate interior.
-  [THM-4264](../01-canon/theorems/THM-4264-w0-visible-incidence-two-edge-attachment-observer.md)
-  gives an orthogonal two-difference/`16`-word observer. Walls, normal lift,
-  `M=12` entry and `JC(2)` stay open.
+  excludes all classes in the gate interior.
+  [THM-4265](../01-canon/theorems/THM-4265-w0-reduced-wall-factor-and-transverse-jacobian-reduction.md)
+  proves the wall roots simple and reduces any coherent lift to a transverse
+  Jacobian, but constructs none. Walls, normal lift and `M=12` entry stay open.
   Exceptional quartic: THM-3703/3737 give grammar/image, THM-4034 the
   conductor, and THM-4039/4043/4046 reach `J_7`, obstruct `J_8`, and close
   critical `H`. [THM-4054](../01-canon/theorems/THM-4054-exceptional-affine-simple-zero-retained-packet.md)
