@@ -144,8 +144,8 @@ local observer, open normal lift).
 **Action/boundary:** append common-active repairs disjoint from missed bodies;
 rescan all. Pair-active decks do not transfer; greedy need not minimize.
 
-**Evidence:** THM-4267 (`9805+1`/2 hostiles) and THM-4269 (`3158+5`/6), both
-literal-audited.
+**Evidence:** literal-audited THM-4267 (`9805+1`/2 hostiles), THM-4269
+(`3158+5`/6), and THM-4273 (all `2,172` minimum one-atom completions).
 
 ## Certify before projection
 

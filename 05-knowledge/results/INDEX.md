@@ -1,5 +1,21 @@
 # Script Results Index
 
+- `lrc14_endpoint_542_732_minimum_one_atom_primary_thm4273.cpp` and literal
+  joint-wall referee -> exact minimum carrier augmentation at historical
+  `(542,732)` [THM-4273 PROVED RELATIVE TO THM-4254/4261 + FINITE-EXACT +
+  INDEPENDENTLY AUDITED; no current proof-graph deletion]. THM-4261's 3,227
+  active masks miss exactly two bodies with an eight-label intersection.
+  Their twenty-label common complement has `125,970` rank-eight candidates;
+  exactly `2,172` are active, FNV `829ae906d6b54c9a`, and these are precisely
+  all one-atom deck completions. The least is
+  `{8,16,42,63,84,88,120,126}`, with exact mass
+  `2395416707526053/37693075789228860 > 4/63`. Zero atoms fail and one
+  succeeds. THM-4266 already owns the edge. Source/output SHA-256 pairs:
+  `d976add2ce9dd6d07cf4163d9fa9f968aaba9e18a21b6f820f21de6fc9045966` /
+  `3dae51b727fabcca0e2f7d05318113227c93a1b085db2b446da7b5127248fb4b`;
+  `0ac6d0b3297b2627842a1ec1b0de43e896c53faead1e0e6ccb3d470d37b19b65` /
+  `fc3fd82468b06c1cbc10e1fc242a57fe247e03ae9d30d130879b595e8423b4ba`.
+
 - `lrc14_four_primitive_rays_common_deck_bridge_thm4270.cpp`, detached
   literal-wall audit, and current proof-graph postprocessor -> four uniform
   primitive outsider-ray closures [THM-4270 PROVED RELATIVE TO
