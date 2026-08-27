@@ -1,0 +1,22 @@
+THM-4250 INDEPENDENT ODD-CORE SUFFIX CLOSURE AUDIT
+odd cores: 3..63, odd
+direct census lengths: 1..13
+two-lift cells: 253921
+two-lift child histogram: {0: 53371, 1: 27619, 2: 172931}
+two-lift digest: 4d0747e118fd219f8a68210424999cfd7b4c0b9c7a302a9e8edd87389b6ef703
+run cells: 253921
+density inequalities: 403
+L-1 hostile count: 5
+first L-1 hostiles: ((3, 1, 1), (5, 2, 3), (9, 3, 7), (17, 4, 15), (33, 5, 31))
+run/density digest: 246efa152c9c5debed4f28660e47670e4947644ee711a5e58073907fcb424c26
+negative-interval certified residues: 8235
+first outside closed row: (3, 3, 5, 3)
+first outside failed row: (3, 1, 1, 1)
+negative-interval digest: e64f5e090add357c57b65da54b9c1a2e807140a91e1f55afc09a6ddd700f35a5
+b=3 closed counts l=1..30: (0, 1, 2, 5, 11, 24, 51, 107, 222, 457, 935, 1904, 3863, 7815, 15774, 31781, 63939, 128488, 257963, 517523, 1037630, 2079441, 4165647, 8342240, 16702191, 33433039, 66912446, 133899917, 267921227, 536038872)
+b=5 closed counts l=1..30: (0, 0, 2, 4, 9, 20, 46, 98, 207, 432, 897, 1842, 3764, 7656, 15525, 31385, 63314, 127498, 256406, 515065, 1033760, 2073338, 4156040, 8327097, 16678336, 33395425, 66853144, 133806342, 267773530, 535805565)
+b=7 closed counts l=1..30: (0, 0, 1, 4, 9, 21, 47, 102, 216, 449, 928, 1902, 3870, 7845, 15856, 31960, 64296, 129179, 259256, 519868, 1041817, 2086833, 4178531, 8364478, 16740325, 33498024, 67022541, 134085600, 268233215, 536561199)
+sequence/automaton digest: 88e46daf1f772dade96cab0d38b730ffb8d4c846cdcb3c37867c5f0785b7686b
+hostile controls: {'carry_parity_load_b3_l1': {'parent': False, 'children': (False, True), 'predicted_lifts': (1,)}, 'zero_child_b5_l1': (), 'short_run_b5': False, 'negative_outside_close': True, 'negative_outside_fail': False}
+b=3 formula: closed(l)=2^(l-1)-F_l, F_1=F_2=1
+PASS
