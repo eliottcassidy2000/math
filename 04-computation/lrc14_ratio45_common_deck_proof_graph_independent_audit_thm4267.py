@@ -1,18 +1,18 @@
 #!/usr/bin/env python3
 """Detached semantic proof-graph audit for reserved THM-4267.
 
-Reads only the frozen post-THM-4256 and post-THM-4266 edge lists, selects the
-strict 4:5 ray by the defining integer relation, and recomputes all removals
-and fingerprints without importing any canonical proof-graph code.
+Reads only the canonical frozen post-THM-4256 and post-THM-4266 edge lists,
+selects the strict 4:5 ray by the defining integer relation, and recomputes
+all removals and fingerprints without importing any proof-graph code.
 """
 
 from __future__ import annotations
 
+import argparse
 import hashlib
 from pathlib import Path
 
 
-ROOT = Path("/tmp/lrc4254_carrier_cegar_descent/results")
 FNV_OFFSET = 0xCBF29CE484222325
 FNV_PRIME = 0x100000001B3
 MASK64 = (1 << 64) - 1
@@ -51,8 +51,15 @@ def fp(label: str, edges: list[tuple[int, int]]) -> None:
 
 
 def main() -> None:
-    post4256 = read_edges(ROOT / "post_thm4256_residual.csv")
-    post4266 = read_edges(ROOT / "thm4266_final_residual.csv")
+    parser = argparse.ArgumentParser()
+    parser.add_argument("--repo", type=Path, default=Path("."))
+    args = parser.parse_args()
+    root = (
+        args.repo.resolve()
+        / "05-knowledge/results/lrc14_three_round_learned_carrier_thm4266"
+    )
+    post4256 = read_edges(root / "post_thm4256_residual.csv")
+    post4266 = read_edges(root / "thm4266_final_residual.csv")
 
     assert len(post4256) == 180_991
     assert fnv(post4256) == "021bf0ed1581657f"
