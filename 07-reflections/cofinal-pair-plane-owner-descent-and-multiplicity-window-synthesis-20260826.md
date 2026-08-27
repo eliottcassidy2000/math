@@ -145,6 +145,14 @@ Thus every genuine outsider pair with `max(a,b)>=770` is proved safe. The
 number `770` is exact only for the combined proof graph; the two pairs in
 `(4b)` are unclosed, not asserted unsafe.
 
+Incoming THM-4238 provides the next exact splice. Its 40-ray theorem
+intersects `(4b)` in precisely the 32 literal rows
+`(6,590..613)` and `(25,590..597)`. Removing them leaves an aggregate
+`181,162`-edge residual, FNV `7e5f6af58a370e3a`, with the same top layer and
+cutoff. This is useful negative structure too: all other THM-4238 tail rows
+were already caught by one of the two ray orientations, so its genuinely new
+payload is exactly the joint-phase literal bridge.
+
 ### What survives from the tournament ancestry
 
 The residual relation is intrinsic but undirected:
@@ -456,7 +464,7 @@ source-first resultant, component, genus, attachment, and degree audit.
 
 ## Procedurally generated next tasks
 
-1. **LRC anchor:** scan the exact `181,194`-edge combined residual with native
+1. **LRC anchor:** scan the exact `181,162`-edge aggregate residual with native
    joint endpoint geometry, beginning at its two top edges `{616,769}` and
    `{721,769}`; retain literal minimum margin and extremal body for every
    discharged edge.
@@ -469,7 +477,7 @@ source-first resultant, component, genus, attachment, and degree audit.
    `A+B=0`, selecting by replacement-face genus rather than coefficient name.
 5. **JC hostile:** construct the `W=0` sidecar `(L,H,T,e(t))`, enumerate the
    finite degree-`34/42` Hom vectors, and solve their four Cayley--Hamilton-
-   reduced node equations for the finite surviving ratios `t=U/Z`.
+   reduced node equations for the finite surviving ratios `r=U/Z`.
 6. **Multiplicity niche:** freeze `(d,R_d,Lawful,sigma)` and emit the intrinsic
    `c_(d;q,r)(B)` histogram, second
    moment, minimum margin, and failure masks on the fixed-small-ray residuals;

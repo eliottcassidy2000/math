@@ -8,18 +8,20 @@ status: >
   thirty-label anchor pool P, the exact Haar safe set of B union {q,r}
   has mass at least 4/63. Together with the inherited zero- and one-outsider
   layers, this closes every eleven-face of P union {q,r} and hence its
-  universal odd-tail Haar completions. It is not physical entry.
+  universal odd-tail Haar completions. Relative also to THM-4231, these rays
+  remove exactly 32 edges from its 181,194-edge proof residual, leaving an
+  exact aggregate residual of 181,162 edges. It is not physical entry.
 source: root/lrc-small-label-entry/2026-08-26
 depends_on:
   - THM-4150-safe-set-haar-measure-universal-odd-tail-lrc14-transfer
   - THM-4156-divisor-complete-anchor-pool-haar-odd-tail-transfer
   - THM-4170-triple-deletion-matching-eventual-haar-odd-tail-transfer
   - THM-4191-complete-full-pool-newcomer-haar-transfer
+  - THM-4231-arbitrary-pair-cofinal-depth-six-haar-repair-and-exact-outsider-lift
 related:
   - THM-4207-two-newcomer-sharp-depth-transition-base-surplus-composition-and-variable-pool-chart-number
   - THM-4227-two-outsider-scale-separated-depth-eight-haar-wedge
   - THM-4228-common-gcd-two-outsider-periodic-observable-haar-ray
-  - THM-4231-arbitrary-pair-cofinal-depth-six-haar-repair-and-exact-outsider-lift
   - THM-4233-pair-specific-primitive-observable-oscillation-haar-charts
   - THM-4234-fixed-fifty-twenty-label-pair-haar-charts
 scripts:
@@ -28,22 +30,26 @@ scripts:
   - 04-computation/lrc14_small_label_hybrid_literal_endpoint_thm4238.py
   - 04-computation/lrc14_small_label_hybrid_literal_midpoint_thm4238.py
   - 04-computation/lrc14_small_label_cofinal_audit_thm4238.py
+  - 04-computation/lrc14_thm4231_4238_cross_residual_postprocess_20260826.py
 outputs:
   - 05-knowledge/results/lrc14_small_label_cofinal_primary_ledger_thm4238.out
   - 05-knowledge/results/lrc14_small_label_cofinal_independent_ledger_thm4238.out
   - 05-knowledge/results/lrc14_small_label_hybrid_literal_thm4238.out
   - 05-knowledge/results/lrc14_small_label_artifact_manifest_thm4238.out
+  - 05-knowledge/results/lrc14_thm4231_4238_cross_residual_postprocess_20260826.out
 script_sha256:
   - 4687b1fa748e77456d8ca8790f5c52eb1e3ac65d256d9f24b22672b77eac7267
   - a12f577756ec564669ddf74502c5a8731ffd0f681254ef98344f2db2ed05ef1d
   - 8c01adbc5235b7dab7e1b2bdc06a429da6fd69286d5c9b7fbd00813394ecdee7
   - 6013bea2008da53bb3bf6b47b45a7e2064963dec1f7a1ad2c09db8b560a983fe
   - c42a7abbae49580208f47ff54eb952a749907191a6e350ac16a54ec51cc0ae86
+  - 63aa6215bfc9efd0484e439b95bca138122ce89ad2e4d42e2eab9f311a9cd43d
 output_sha256:
   - 7e74a9e562feace0e7863de882f1dc254affa9570304cf78f8103b070436a352
   - 43c5a1820cc25a65e4b60fef95f9bd4e964a0d18d25b9c1683d6d6a996be2f8f
   - fe197226122a90e8f3b94f1974062034cc191920c16e82e740a2086ba20b7ab4
   - 8008c00a1467089b2187d1fdbe1524589fc3c5ddd86300edbbb7337362ee1ee4
+  - da639d3e473a03ac8d4b2fe8b5bf57c1a380efe862cb01f2b218972101df5c29
 hash_basis: raw LF bytes
 audit: >
   PASS. Two structurally different exact engines exhaust the same
@@ -51,7 +57,9 @@ audit: >
   count, extremal threshold, multiplicity, witness, mass, component count,
   and surplus. Endpoint-toggle and common-grid midpoint integrators then
   byte-agree on the only 32 rows below the analytic envelope; all are
-  strictly safe. Optimized-level replays preserve the frozen ledgers.
+  strictly safe. Exact postprocessing confirms that those same 32 rows are
+  precisely the intersection with THM-4231's patched residual. Optimized-level
+  replays preserve the frozen ledgers.
 ---
 
 # THM-4238 -- forty small-label uniform-r590 Haar tail closure
@@ -231,15 +239,35 @@ new.
 
 The boundary body `B_0 union {6,590}` is primitive and contains a multiple of
 every integer `2,...,14`. Thus this is not a MISTAKE-511 missing-divisor-clock
-family. The new coverage is also not subsumed by the nearby rays:
+family. After THM-4231's later cofinite promotion, most of `(4)` is
+coverage-subsumed, but its literal bridge is not. Exact cross-postprocessing
+gives
 
-- THM-4231 treats `q=1` or two labels at least `1290`;
-- THM-4234 fixes `50` and restricts the bodies to its petal family;
-- THM-4233's proved primitive/cancelled gate has both labels above `1290`;
-- THM-4227 requires a directed coordinate at least `3391`, and its swapped
-  inequality is impossible for `q<=49`;
-- THM-4228 requires a common gcd at least `3467`, whereas here
-  `gcd(q,r)<=q<=49`.
+```text
+E_rem(THM-4231) intersect region(4)
+ ={(6,r):590<=r<=613} union {(25,r):590<=r<=597}.      (16a)
+```
+
+These are exactly the 32 literal rows in `(15)`, not merely a set of the same
+size. Removing them from THM-4231's exact residual yields
+
+```text
+|E_aggregate|=181,162,
+FNV(E_aggregate)=7e5f6af58a370e3a,
+SHA256("a,b\n" edge stream)
+ =3a21737c3b7794f1f9faeae8c6683e16e7055877eb20fa05855ebfe8aa467c6c. (16b)
+```
+
+The cutoff remains `770`, with top layer
+
+```text
+{{616,769},{721,769}}.                                 (16c)
+```
+
+This is an exact aggregate proof graph, not a claim that any surviving edge
+is unsafe or that `770` is literal-minimal. THM-4234 still restricts `q=50`
+to its petal family; THM-4227/4228/4233 retain scale, gcd, and primitive-phase
+mechanisms inside the finite remainder.
 
 ## 6. Verification and scope firewall
 
@@ -266,6 +294,7 @@ python3 -B 04-computation/lrc14_small_label_hybrid_literal_endpoint_thm4238.py >
 python3 -B 04-computation/lrc14_small_label_hybrid_literal_midpoint_thm4238.py > /tmp/lrc14-small-label-literal-midpoint.out
 cmp /tmp/lrc14-small-label-literal-endpoint.out /tmp/lrc14-small-label-literal-midpoint.out
 python3 -B 04-computation/lrc14_small_label_cofinal_audit_thm4238.py
+python3 -B 04-computation/lrc14_thm4231_4238_cross_residual_postprocess_20260826.py
 ```
 
 Set `OPT_LEVEL=-O2` for the primary low-level replay and `OPT_LEVEL=-O0` for

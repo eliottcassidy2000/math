@@ -21,9 +21,9 @@ Then read the routed frontier, guardrails, and theorem; logs are history.
 
 ## Seventeen high-signal facts
 
-1. **LRC(14) is first open.** THM-4231 closes `max(q,r)>=770`, leaving 181,194
-   pairs below (ray cutoff `825`; fixed-one `542`). THM-4238 takes 40 small
-   rays to `590`; THM-4233 retains gate `k>=748`. Entry remains open.
+1. **LRC(14) is first open.** THM-4231 closes `max(q,r)>=770`; THM-4238 removes
+   32 more edges, leaving 181,162 (ray cutoff `825`; fixed-one `542`). Its 40
+   small rays reach `590`; THM-4233 retains gate `k>=748`. Entry remains open.
 2. **The `q <= 25` period claim is refuted.** THM-762/764 exhibit `26*{1,...,12} union {339}`, whose first good period is `27`.
 3. **Good-period existence is a maximum statement.** The tight resonant AP
    defeats average/count arguments; see MISTAKE-127/129/130.

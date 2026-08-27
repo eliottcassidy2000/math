@@ -372,17 +372,26 @@ The five recent mechanisms cover different parameter geometry:
 |:---|:---|:---|:---|:---|
 | THM-4227 | full `P` | ordered scale-separated wedge | first-comb component growth | asymmetric; misses comparable scales |
 | THM-4228 | full `P` | `gcd(q,r)>=3467` | joint primitive-period observable | misses coprime pairs |
-| THM-4231 | full `P` | every `max(q,r)>=770`; exact 181,194-pair combined residual (pure-ray cutoff `825`) | fixed-ray mass/components, both orientations, plus literal joint walls | loses literal phase on the finite residual |
+| THM-4231 | full `P` | every `max(q,r)>=770`; exact 181,194-pair own residual (pure-ray cutoff `825`) | fixed-ray mass/components, both orientations, plus literal joint walls | loses literal phase on the finite residual |
 | THM-4233 | full `P` | one coprime ray and a canceled-resonance family | pair-specific `(beta,omega)` and cyclotomic cancellation | coverage subsumed by THM-4231 |
 | THM-4234 | restricted `C` plus petals, center `50` | every finite outsider on 66 pairs; all 220 triple tails for `r>=589`; one universal triple | failure masks, cyclic adjacency, literal walls | fixed center and restricted chart |
+| THM-4238 | full `P` | 40 small labels with `r>=590`; exactly 32 new residual edges | complete ray census plus literal endpoint/midpoint bridge | aggregate residual still has 181,162 edges |
 
 THM-4231 subsumes THM-4227/4228/4233 in coverage, but not in their retained
 scale, gcd, primitive-phase, or cyclotomic coordinates. THM-4234 is the
-genuine residual fixed-center chart. Their synthesis is a parameter-space
+genuine residual fixed-center chart; THM-4238 supplies the exact 32-edge
+small-ray splice. Their synthesis is a parameter-space
 atlas: use the analytic full-pool region as the exterior chart and exact
 fixed-center event sweeps as interior charts. A missing transition theorem
 would retain a primitive phase/correlation sidecar while moving the center
 away from `50`.
+
+The niche THM-4237 factorial-adjacency theorem contributes no direct LRC or
+JC implication. Its transferable lesson is type discipline: a surviving
+candidate degree is not a factor, just as an unclosed LRC edge is not unsafe
+and a represented JC degree is not attachment collapse. Across all three
+lanes, the missing datum is the next-operation witness, not another scalar
+address.
 
 ## 6. Failure anatomy and ranked tests
 

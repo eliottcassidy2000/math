@@ -37,6 +37,7 @@ related:
   - THM-4227-two-outsider-scale-separated-depth-eight-haar-wedge
   - THM-4228-common-gcd-two-outsider-periodic-observable-haar-ray
   - THM-4233-pair-specific-primitive-observable-oscillation-haar-charts
+  - THM-4238-forty-small-label-uniform-r590-haar-tail-closure
 all_ray_primary_script: 04-computation/lrc14_all_fixed_outsider_ray_census_primary_thm4231.cpp
 all_ray_primary_output: 05-knowledge/results/lrc14_all_fixed_outsider_ray_census_primary_thm4231.out
 all_ray_primary_script_sha256: 5e4dba0dc8724514aa4d2864ce5fa2b2449c28e39bda5d67672a1723820a39f8
@@ -649,6 +650,11 @@ is asserted unsafe, and `770` is not claimed literal-minimal.
 The unbounded two-outsider problem is now reduced to the exact finite label
 graph `(36e)`, not merely to a family of rays. Literal or stronger
 pair-correlated treatment of its `181,194` edges remains open.
+
+The later THM-4238 intersects this graph in exactly 32 edges—`(6,590..613)`
+and `(25,590..597)`—so the aggregate proved residual has `181,162` edges,
+FNV `7e5f6af58a370e3a`, and the same endpoint-`769` top layer. This is a
+cross-theorem corollary; `(36e)` remains the exact output of THM-4231 alone.
 
 THM-4227's scale wedge, THM-4228's common-gcd region, and THM-4233's displayed
 primitive families are coverage-subsumed by `(3a)`. Their scale order, common

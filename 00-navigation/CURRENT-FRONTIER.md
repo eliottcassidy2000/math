@@ -72,9 +72,9 @@ is the safe control `M(S_13)=99/338`. No cited result proves LRC(14).
   firewalls. THM-4110 finds `64` AP13 sheets; THM-4116 gives
   `2^(c(F)-1)`. Safety/arrival stay open.
 - **Owner/tail:** THM-4156/4191 close zero/one layers. [THM-4231](../01-canon/theorems/THM-4231-arbitrary-pair-cofinal-depth-six-haar-repair-and-exact-outsider-lift.md)
-  closes `max(q,r)>=770` after exact ray/literal censuses; `181,194` pairs
-  remain below. The pure-ray cutoff is `825`, the
-  fixed-one cutoff `542`. THM-4238 closes all `q in {2,...,49}\P`, `r>=590`;
+  closes `max(q,r)>=770` after exact ray/literal censuses; its residual has
+  `181,194` pairs. THM-4238 removes exactly 32, leaving `181,162`, and closes
+  all `q in {2,...,49}\P`, `r>=590`. The pure-ray/fixed-one cutoffs are `825/542`;
   THM-4227/4228/4233 retain scale/gcd/primitive methods, with gate `k>=748`.
   THM-4234 closes fixed-`50` charts. Finite closure and entry stay open.
 - **PROVED:** [THM-2928](../01-canon/theorems/THM-2928-critical-seven-comb-grid-tensorization-and-drift-tariff.md)/2941: literal zero/one/two/three-drift sectors are empty; `k=2,3` are finite.
