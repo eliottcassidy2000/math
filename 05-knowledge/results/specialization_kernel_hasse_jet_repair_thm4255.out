@@ -1,0 +1,12 @@
+THM-4255 specialization-kernel / Hasse-jet exact audit
+primes=(2, 3, 5, 7)
+truncations=2..8, u_degrees=1..6
+principal_kernel_cases=504
+full_hasse_jet_cases=504
+prescribed_order_hostiles=2016
+maximum_tested_order_jump=7
+unit_separated_joint_section_cases=91
+universal_slope_finite_box_cases=168
+kronecker_sharp_boundary_cases=168
+ordinary_derivative_characteristic_p_hostiles=4
+ALL CHECKS PASSED

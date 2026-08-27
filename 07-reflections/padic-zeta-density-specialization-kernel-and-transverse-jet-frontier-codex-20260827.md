@@ -1,11 +1,16 @@
 # P-adic-zeta density: specialization kernel and transverse-jet frontier
 
+> **SUPERSEDED REFLECTION / HISTORICAL PROVENANCE ONLY.** MISTAKE-527 records
+> that this session mistook a universal torsor identity for `u->f`. The exact
+> graph-kernel algebra survives, but the asserted manuscript gap and downstream
+> dependency collapse do not. See THM-4255 and the corrected 2026-08-26 source
+> audit before reusing any claim below.
+
 **Session date:** 2026-08-26--27
 
-**Status:** THM-4255 is `PROVED + VERIFIED-EXACT + INDEPENDENTLY AUDITED`.
-The external density manuscript's Propositions 6.2/12.3 and their dependent
-headlines are `OPEN / unsupported by that manuscript`, not refuted. LRC(14),
-JC(2), DC(2), and all Rule-30 prizes remain `OPEN`.
+**Historical status (SUPERSEDED):** THM-4255's algebra remains proved; the
+external verdict in this reflection was withdrawn. LRC(14), JC(2), DC(2), and
+all Rule-30 prizes remain `OPEN`.
 
 ## 1. Outcome first
 

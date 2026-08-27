@@ -9,6 +9,36 @@ Format per entry:
 - Why it was wrong
 - The correct framing
 
+## MISTAKE-527 (2026-08-26, p-adic-density Cartier audit) -- a universal torsor identity was mistaken for a chosen-section specialization
+
+- **What failed:** the first audit of the external `p-adic-zeta-density`
+  Propositions 6.2/12.3 treated their free torsor coordinate `u` as if the
+  proof had evaluated it along a graph such as `u=f`.  The valid hostile
+  `u-f` was then used to declare coefficientwise pole-symbol vanishing and
+  all downstream density claims unsupported by this mechanism.
+- **Minimal witness / first failed implication:** the manuscript contains no
+  map `u->f` or `u->u(q)` in either proof.  Section 6 states the identity on
+  the whole flat torsor chart, and the predecessor source explicitly says
+  that `F_lambda` is an invariant scalar independent of the torsor point,
+  with fibre variables retained in the coefficient algebra.  Pulling a zero
+  scalar coefficient to that chart gives the zero element; it does not give
+  the nonzero element `u-f`.  Section 12 likewise asserts digitization in a
+  universal finite-free coefficient lattice before `z=q^ell`.
+- **Repair / strongest survivor:** [THM-4255--specialization-kernel and
+  transverse Hasse-jet repair](theorems/THM-4255-specialization-kernel-and-transverse-hasse-jet-repair.md)
+  proves `ker(ev_g)=(u-g)` and all sharp repairs, but applies them only after
+  the source map is typed.  The `u-f` objection does **not** refute either
+  proposition.  Proposition 6.2 still owes an explicit completed-chart
+  presentation; Proposition 12.3 owes a named universal coefficient-module
+  diagram.  Both and every downstream density theorem remain external
+  preprint claims under specialist audit for their full proof, not retracted
+  on this objection.
+- **Reusable rule:** before applying a specialization kernel, exhibit the
+  specialization.  A universal pullback identity, a chosen-section value,
+  and a scalar contraction after specialization have different kernels.
+  Audit the ambient ring/module and arrow direction before transporting a
+  zero or a filtration order.
+
 ## MISTAKE-526 (2026-08-26, THM-4242 hardening follow-through) -- an in-body source hash was not updated with the hardened replay
 
 - **What failed:** the THM-4242 cross-residual checker was changed from bare

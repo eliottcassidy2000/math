@@ -1,5 +1,13 @@
 # 2026-08-26 intake: p-adic-zeta density and the specialization/Cartier gap
 
+> **SUPERSEDED / DO NOT USE AS CURRENT SOURCE STATUS.** MISTAKE-527 repairs
+> this audit: the manuscript does not display the torsor specialization
+> `u->f` assumed below. Its actual block substitutions have stated
+> anti-aliasing bounds. Use the corrected
+> [density/percolation intake](CORE-PAPERS-INTAKE-2026-08-26-PADIC-DENSITY-PERCOLATION.md)
+> and [source audit](p-adic-zeta-density-specialization-kernel-audit-20260826.md).
+> The text below is retained only as provenance for the failed first reading.
+
 **Audit date:** 2026-08-26--27. This is a source and dependency audit. It
 separates statements proved in repo canon from claims made in an external
 unrefereed manuscript. A broken proof step makes its dependants unsupported;
@@ -24,9 +32,9 @@ The two supplied links do not identify the same work.
   `cd100ccf2103093d65a07e7ce77bda4f753594dba7cfb8e7f34a3ca20e4f6b87` /
   `eed1b53981e12967ee8db0781c7bc784fec2a443b27a57543fe549eae204d62a`.
 
-**External status:** **AUTHOR-CLAIMED / UNREFEREED RESEARCH DRAFT; TWO
-LOAD-BEARING PROPOSITIONS OPEN.** No density or irrationality headline is
-promoted to proved canon by this intake.
+**Historical status at the failed first reading (SUPERSEDED):** no density or
+irrationality headline was promoted. The claimed two-proposition proof gap is
+not established; see the warning above.
 
 ## 2. Exact specialization failure
 

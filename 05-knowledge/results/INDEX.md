@@ -3,10 +3,10 @@
 - `padic_specialization_kernel_cartier_firewall_thm4255.py` and an independent
   finite-field clean-room referee -> specialization graph kernel, restricted
   short-jet criterion, transverse Hasse recovery, and Cartier firewall
-  [THM-4255 PROVED + VERIFIED-EXACT + INDEPENDENTLY AUDITED; EXTERNAL DENSITY
-  CLAIMS OPEN]. The primary verifies triangular truncations through degree
+  [THM-4255 PROVED + VERIFIED-EXACT + INDEPENDENTLY AUDITED; EXTERNAL SOURCE
+  APPLICATION SUPERSEDED BY MISTAKE-527]. The primary verifies triangular truncations through degree
   nine, 54 graph-plus-tail cells, five Cartier controls, 14 Hasse controls,
-  and abstract hostile pivots `38/46`. The referee exhausts all 512 elements
+  and counterfactual chosen-section pivots `38/46`. The referee exhausts all 512 elements
   of a `3x3` monomial box over `F_2` and independently obtains short-jet ranks
   `2/3`, `5/5`, and `5/9`. Both normal/optimized/hash-seed runs byte-match.
   Primary source/output SHA-256:
@@ -15,6 +15,24 @@
   independent source/output:
   `e4fa806af39fead477eb51e88864c9af667d3afc1c16b3411e6071f597c811c5` /
   `cade91738365f0b79901584981677821eeb253763299ccaf3a28c8cf01601169`.
+- `specialization_kernel_hasse_jet_repair_thm4255.py` -> matching `.out`
+  [THM-4255 PROVED EXACT ALGEBRA + VERIFIED-EXACT; external p-adic density
+  claims remain PREPRINT CLAIM / UNDER SPECIALIST AUDIT]. For
+  `ev_g:A[u][[f]]->A[[f]]`, the exact kernel is `(u-g)` and
+  `ev_g^(-1)(f^N)=f^N+(u-g)`, so one section can inflate order arbitrarily.
+  Normal Hasse jets have kernel `(u-g)^(r+1)` and are sharply injective at the
+  degree cap; unit-separated sections, the injective universal-slope pencil
+  `u->lambda f`, and finite-box Kronecker substitution give alternative exact
+  repairs. The companion checks `504` principal kernels, `504` full Hasse-jet
+  maps, `2,016` order hostiles, `91` section families, `168` universal-slope
+  boxes, `168` sharp Kronecker boundaries, and four characteristic-`p`
+  ordinary-derivative failures. Together with the preceding restricted-source
+  and Cartier controls, the proposed `u-f` hostile does not refute
+  the external Props 6.2/12.3 because their written identities are universal,
+  not chosen-section specializations; exact source typing remains audit-open.
+  Source/output SHA-256:
+  `8f60050e6f52afd469622d3ee53bff2c65332871951b5c0c0a4d8b96881b5979` /
+  `fa0d507204427ee929e79f3144670350936cf7056d4f46450b8bc80b7306f32a`.
 
 - `jc23_w0_degree42_norm3_profile_exclusion_thm4253.py` and a clean-room
   lattice/ideal/incidence reconstruction -> complete degree-42 norm-three
