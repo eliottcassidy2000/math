@@ -1,0 +1,12 @@
+LANE labels=10,15,264 total=7462728 fiber_certified=1174281 uncertified=6288447
+LANE labels=10,20,264 total=7648368 fiber_certified=1301511 uncertified=6346857
+LANE labels=10,30,264 total=7611240 fiber_certified=1207865 uncertified=6403375
+LANE labels=15,20,264 total=8038212 fiber_certified=1342809 uncertified=6695403
+LANE labels=15,30,264 total=7351344 fiber_certified=1250898 uncertified=6100446
+LANE labels=20,30,264 total=8149596 fiber_certified=1381857 uncertified=6767739
+LANE labels=10,15,20,264 total=3144456 fiber_certified=1071132 uncertified=2073324
+LANE labels=10,15,30,264 total=2947392 fiber_certified=1005639 uncertified=1941753
+LANE labels=10,20,30,264 total=3238704 fiber_certified=1100898 uncertified=2137806
+LANE labels=15,20,30,264 total=3058776 fiber_certified=1043367 uncertified=2015409
+LANE labels=10,15,20,30,264 total=979200 fiber_certified=566370 uncertified=412830
+SUMMARY total=59630016 fiber_certified=12446627 uncertified=47183389 cached_divisible_systems=76727 weakest_nonnegative_scaled_gap=13356/7454160 E=4 D=2,3,10,17,24,29,54 status=FINITE-EXACT-INDEPENDENT-SUFFICIENT-CERTIFICATE

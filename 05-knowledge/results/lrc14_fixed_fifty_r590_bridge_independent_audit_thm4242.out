@@ -1,0 +1,32 @@
+AUDIT architecture=dual-core-first-O-superset literal=grouped-endpoint-plus-midpoint threshold=590 denominator=91205797082400 cells=7213
+ANALYTIC k=4 core_size=5 cores=8568 profiles=4241160 nonstrict=0 max_cutoff=608 max_body=8,170,190,193,240,252,264,286,290 max_mass=17478909485864 max_components=500 max_delta=579037923907056 exceptional_bodies=10
+EXCEPTION k=4 body=168,170,190,193,240,252,264,286,290 mass=18169518380550 components=532 delta=616330804220100 cutoff=608 literal_rows=18
+EXCEPTION k=4 body=8,170,190,193,240,252,264,286,290 mass=17478909485864 components=500 delta=579037923907056 cutoff=608 literal_rows=18
+EXCEPTION k=4 body=8,170,176,190,193,240,252,286,290 mass=17078804636358 components=478 delta=557432262033732 cutoff=604 literal_rows=14
+EXCEPTION k=4 body=120,170,190,193,240,252,264,286,290 mass=18181595470770 components=528 delta=616982967091980 cutoff=603 literal_rows=13
+EXCEPTION k=4 body=95,170,176,193,240,252,264,286,290 mass=18329545127228 components=530 delta=624972248540712 cutoff=597 literal_rows=7
+EXCEPTION k=4 body=20,95,170,193,240,252,264,286,290 mass=17455825842596 components=490 delta=577791407170584 cutoff=597 literal_rows=7
+EXCEPTION k=4 body=80,170,190,193,240,252,264,286,290 mass=18354042240160 components=530 delta=626295092639040 cutoff=596 literal_rows=6
+EXCEPTION k=4 body=40,170,190,193,240,252,264,286,290 mass=18272368686376 components=526 delta=621884720734704 cutoff=596 literal_rows=6
+EXCEPTION k=4 body=120,170,176,190,193,240,252,286,290 mass=18066825784384 components=514 delta=610785404027136 cutoff=593 literal_rows=3
+EXCEPTION k=4 body=80,143,170,190,193,240,252,264,290 mass=18013297309172 components=510 delta=607894866365688 cutoff=591 literal_rows=1
+ANALYTIC k=5 core_size=4 cores=3060 profiles=2423520 nonstrict=0 max_cutoff=626 max_body=170,176,190,193,240,252,264,286,290 max_mass=18257430123108 max_components=552 max_delta=621078038318232 exceptional_bodies=13
+EXCEPTION k=5 body=170,176,190,193,240,252,264,286,290 mass=18257430123108 components=552 delta=621078038318232 cutoff=626 literal_rows=36
+EXCEPTION k=5 body=20,170,190,193,240,252,264,286,290 mass=17339691661776 components=502 delta=571520161406304 cutoff=619 literal_rows=29
+EXCEPTION k=5 body=132,170,176,190,193,240,252,286,290 mass=17708519115198 components=518 delta=591436843891092 cutoff=617 literal_rows=27
+EXCEPTION k=5 body=20,170,176,190,193,240,252,286,290 mass=17092822019754 components=486 delta=558189200737116 cutoff=613 literal_rows=23
+EXCEPTION k=5 body=20,168,170,190,193,240,264,286,290 mass=16923971813466 components=472 delta=549071289597564 cutoff=605 literal_rows=15
+EXCEPTION k=5 body=60,170,190,193,240,252,264,286,290 mass=17990500389050 components=516 delta=606663832679100 cutoff=599 literal_rows=9
+EXCEPTION k=5 body=20,143,170,190,193,240,252,264,290 mass=17230173972432 components=478 delta=565606206181728 cutoff=595 literal_rows=5
+EXCEPTION k=5 body=15,170,176,190,193,240,252,286,290 mass=17429629216356 components=486 delta=576376789353624 cutoff=594 literal_rows=4
+EXCEPTION k=5 body=8,170,176,190,240,252,264,286,290 mass=17642093346212 components=496 delta=587849852365848 cutoff=594 literal_rows=4
+EXCEPTION k=5 body=30,170,190,193,240,252,264,286,290 mass=18196650561156 components=520 delta=617795941972824 cutoff=593 literal_rows=3
+EXCEPTION k=5 body=132,143,170,176,190,193,240,252,290 mass=17543047231760 components=490 delta=582501362185440 cutoff=592 literal_rows=2
+EXCEPTION k=5 body=15,170,190,193,240,252,264,286,290 mass=17870696262948 components=504 delta=600194409869592 cutoff=591 literal_rows=1
+EXCEPTION k=5 body=20,132,170,190,193,240,252,286,290 mass=17073924629662 components=468 delta=557168741672148 cutoff=591 literal_rows=1
+ANALYTIC k=6 core_size=3 cores=816 profiles=753984 nonstrict=0 max_cutoff=596 max_body=20,170,176,190,240,252,264,286,290 max_mass=17788405790064 max_components=504 max_delta=595750724333856 exceptional_bodies=1
+EXCEPTION k=6 body=20,170,176,190,240,252,264,286,290 mass=17788405790064 components=504 delta=595750724333856 cutoff=596 literal_rows=6
+LITERAL k=4 bodies=10 rows=93 grouped_checks=93 midpoint_checks=93 replay_failures=0 integrator_mismatches=0 failures=0 equalities=0 min_delta=19602806007394008 min_denominator=3374614492048800 min_mass=525416888501416 min_r=592 min_body=8,170,176,190,193,240,252,286,290 max_grouped_walls=5396 max_raw_events=5420
+LITERAL k=5 bodies=13 rows=159 grouped_checks=159 midpoint_checks=159 replay_failures=0 integrator_mismatches=0 failures=0 equalities=0 min_delta=19496164866693354 min_denominator=3374614492048800 min_mass=523724171982358 min_r=592 min_body=20,170,176,190,193,240,252,286,290 max_grouped_walls=5448 max_raw_events=5472
+LITERAL k=6 bodies=1 rows=6 grouped_checks=6 midpoint_checks=6 replay_failures=0 integrator_mismatches=0 failures=0 equalities=0 min_delta=21278381646417084 min_denominator=3374614492048800 min_mass=552013327216068 min_r=592 min_body=20,170,176,190,240,252,264,286,290 max_grouped_walls=5042 max_raw_events=5066
+SUMMARY analytic_profiles=7418664 analytic_nonstrict=0 analytic_max_cutoff=626 exceptional_bodies=24 literal_rows=258 grouped_checks=258 midpoint_checks=258 replay_failures=0 integrator_mismatches=0 failures=0 equalities=0 min_delta=19496164866693354 min_denominator=3374614492048800 min_mass=523724171982358 min_r=592 min_body=20,170,176,190,193,240,252,286,290 max_grouped_walls=5448 max_raw_events=5472
