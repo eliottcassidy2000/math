@@ -71,13 +71,13 @@ is the safe control `M(S_13)=99/338`. No cited result proves LRC(14).
   THM-4105/4106 are reciprocal decoders; THM-4107/4108 are tournament/radical
   firewalls. THM-4110 finds `64` AP13 sheets; THM-4116 gives
   `2^(c(F)-1)`. Safety/arrival stay open.
-- **Owner/tail:** [THM-4231](../01-canon/theorems/THM-4231-arbitrary-pair-cofinal-depth-six-haar-repair-and-exact-outsider-lift.md)
-  fills every chart for distinct `q,r>=1290` and `q=1,r>=542`; THM-4227/4228
-  retain scale/gcd methods. Coverage-subsumed [THM-4233](../01-canon/theorems/THM-4233-pair-specific-primitive-observable-oscillation-haar-charts.md)
-  retains its primitive/unimodular compiler and exact sufficient gate `k>=748`.
-  [THM-4234](../01-canon/theorems/THM-4234-fixed-fifty-twenty-label-pair-haar-charts.md)
-  closes 66 residual fixed-`50` pair charts and one triple. Other rays have
-  smaller label `2..1289`; arbitrary entry stays open.
+- **Owner/tail:** [THM-4238](../01-canon/theorems/THM-4238-forty-small-label-uniform-r590-haar-tail-closure.md)
+  closes every `q in {2,...,49}\P`, `r>=590`, and pool nine-body;
+  [THM-4231](../01-canon/theorems/THM-4231-arbitrary-pair-cofinal-depth-six-haar-repair-and-exact-outsider-lift.md)
+  closes distinct `q,r>=1290` and `q=1,r>=542`. [THM-4234](../01-canon/theorems/THM-4234-fixed-fifty-twenty-label-pair-haar-charts.md)
+  closes 66 fixed-`50` petals and one triple; THM-4227/4228 retain scale/gcd,
+  while coverage-subsumed THM-4233 retains gate `k>=748`. General
+  `q=50..1289` and entry remain open.
 - **PROVED:** [THM-2928](../01-canon/theorems/THM-2928-critical-seven-comb-grid-tensorization-and-drift-tariff.md)/2941: literal zero/one/two/three-drift sectors are empty; `k=2,3` are finite.
 - **Orthogonal routes.** THM-1017 is HYP-6820; THM-2047/2050 keep phase/exit; THM-731/2048 prune; THM-1290 ends at `55`; HYP-8900 nonuniform.
 - **PROVED micro-staircase:** THM-3316 closes every prime and THM-3317 proves
@@ -398,12 +398,12 @@ lift/phase clocks.
   exact-square terminals, not chart entry. Later passport/accessory/jet lanes
   close only their named cells; nonzero passports, section/transfer, and
   global entry remain open. THM-3306 sidecars are FINITE-EXACT only.
-- **Factorial:** THM-3483 closes exact-support quadratics through `r=10028`;
-  the `d=9996`, `p=19` row refutes only barcode completeness. THM-3182--3470
-  close named carrier/character/shear cells, while support five, ancestry,
-  positivity, and mixed cells remain open. THM-4001 exactly recovers a
-  known-arity multiset `{a_i^d}` from `k` coordinatewise cyclotomic responses;
-  diagonal/unknown-arity/root/nonmultiplicative losses block FC/HFC transfer.
+- **Factorial:** [THM-4237](../01-canon/theorems/THM-4237-multiplier-six-binary-adjacency-prime-power-factorial-closure.md)
+  closes the `6p^k` compiler exactly at adjacent binary ones, including every
+  `p=3 mod 4`, odd `k`. THM-3483 closes quadratics through `r=10028`; its
+  `d=9996,p=19` only refutes barcode completeness. THM-3182--3470 close named
+  cells; support five/mixed entry remains. THM-4001 recovers known-arity
+  `{a_i^d}`; typed losses block FC/HFC.
 - THM-1490 is one verified higher-dimensional Gaussian construction; newer
   three-real-Gaussian examples supersede “dimension four is sharp.”
 
