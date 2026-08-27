@@ -1,5 +1,64 @@
 # Script Results Index
 
+- `jc23_w0_reduced_wall_factor_thm4265.py` -> reduced-wall scout
+  [FINITE-EXACT; THM-4265 RESERVED / UNPROVED].  Reusing THM-4260's
+  clean-room class compiler, both `p=397` and hostile `p=577` computations
+  find `t=+1,-1` as simple roots of every one of the `280` reduced
+  denominators; the degree profile is
+  `11:8,19:36,23:24,27:64,35:52,39:72,43:24`.  This identifies the local
+  transverse determinant to compute, but supplies no `W` deformation,
+  `W` derivative, or off-fibre exclusion.  Source/output SHA-256:
+  `41849ca35164391ec08820b63e9d4ae89de6358696501c7e51508ca5c4e7b54b` /
+  `9e5225503e81ea71a0ea2d222c60949f809c6910936c209af28c3ac968fa4ef0`.
+
+- `jc23_w0_visible_two_edge_observer_thm4264.py` and independent binary-rank
+  audit -> visible-gated two-edge observer [THM-4264 PROVED COROLLARY TO
+  THM-4249/4253/4258 + VERIFIED-EXACT; no incidence excluded].  On every
+  inherited incidence, two consecutive attachment differences vanish iff
+  all twelve do, reducing the alternative table to `3,024` rows.  The
+  visible projector cuts the ambient `64` two-torsion recurrence words to
+  `16`, with periods `1:1,3:3,6:12`; one edge is sharply insufficient.
+  THM-4260 makes this an orthogonal verifier, not the live workload.
+  Primary source/output SHA-256:
+  `7aa38c69f60fd854d2c51b7b32036e13dd164544dcec68d772aa470cc9bc97d4` /
+  `f941b7d18567a0e62660ec8b7cc3cee0649364d491422cfc75beb3c898b614a4`;
+  independent source/output:
+  `57bdd4c44bdf1cea8a4836d3ec735a867eb75a3fd2773a09f496e45f47271de5` /
+  `4ae1bc8d76d17c68d26c9e14425d51dba9c15a694a47c6805e1fdd3be0c2d124`.
+
+- `jc23_w0_canonical_node_attachment_exclusion_thm4260.py` and its
+  independent native-polynomial audit -> complete gate-interior `W=0`
+  attachment exclusion [THM-4260 PROVED RELATIVE TO THM-4247/4249/4253 +
+  VERIFIED-EXACT + INDEPENDENTLY AUDITED; boundary walls, off-fibre `M=12`,
+  JC(2), DC(2) OPEN].  The exact compiler rebuilds all `176/104` residual
+  classes and `1,512` incidences.  For each anti-invariant hidden projection,
+  a pole bound gives `deg(d_ell)<=4K-1`; reduction at `p=397` attains that
+  bound, and a monic local-DVR argument lifts the reduced reciprocal gcd
+  `t^2-1` to characteristic zero.  Its roots lie on the excluded `Z=0` wall,
+  so all `280` classes are impossible before their ratio neighbours are
+  consulted.  A `p=577` replay is a hostile field control.  Primary
+  source/output SHA-256:
+  `cff97177dc253d63b09ed2ab9bfd3a3da74512a86c01fa400350083b63ef780a` /
+  `829313e434bf60e4e4712d744e940cb577262ea08fefb5621e86b30790275d07`;
+  independent source/output:
+  `238af711b734a0e054a3da6d8a836f5f2996e34550d5e507111718d5eff2314f` /
+  `481594bbddfba2451e3f7780916ffd6dd04ca7c394ae3b56311ceb5c3d1731f8`.
+
+- `jc23_w0_explicit_hlambda_glue_dictionary_thm4259.py` -> concrete mixed
+  glue normalization [THM-4259 PROVED RELATIVE TO THM-4230/4241 +
+  VERIFIED-EXACT; `W=0`, `M=12`, JC(2), DC(2) OPEN].  On a fixed algebraic
+  branch, exact addition gives `H_lambda+H_lambda o iota=-v`; differential
+  comparison, a coercively complete 24-vector degree-12 shell, and an
+  injective finite-candidate reduction at `p=397` give
+  `H_lambda-H_lambda o iota=omega^2f+(omega^2-omega)g`.  Hence
+  `h=H_lambda+v-omega^2g` satisfies `2h=v+omega^2f+g` and
+  `Th=omega^2h-omega f`.  This makes THM-4258's translation-invariant
+  observer table concrete but evaluates none of its `1,512` incidences;
+  THM-4260 subsequently bypasses that table by excluding every map class.
+  Source/output SHA-256:
+  `0661009e9e17510ab632faa267d5e5b69e1e0e2b4b2718e675a52cf1f8a44be4` /
+  `012b14c8f144d01b540a4970a4e65a35375d39e71af334a923550aa1a92ee29f`.
+
 - `jc23_w0_three_sample_attachment_observer_thm4258.py` -> exact cyclic
   observer and incidence workload [THM-4258 PROVED COROLLARY TO THM-4249/4253
   + VERIFIED-EXACT; `W=0`, `M=12`, JC(2), DC(2) OPEN]. On the `a_u=0`

@@ -18,6 +18,8 @@ depends_on:
 related:
   - THM-4241-w0-hidden-cm-saturation-and-visible-hidden-index-four-gluing
   - THM-4255-specialization-kernel-and-transverse-hasse-jet-repair
+  - THM-4259-w0-explicit-hlambda-normalization-and-glue-dictionary
+  - THM-4260-w0-canonical-node-reciprocal-denominator-attachment-exclusion
 mistake_firewall:
   - MISTAKE-528
 script: 04-computation/jc23_w0_three_sample_attachment_observer_thm4258.py
@@ -282,34 +284,36 @@ but not the underlying object: formal arcs and elliptic attachment orbits are
 different categories. No p-adic-zeta or Jacobian theorem transfers through
 the analogy alone.
 
-## 5. Concrete normalization not supplied here
+## 5. Concrete normalization supplied subsequently
 
 Equations `(7)--(12)` reduce the task to three evaluations, but this theorem
-does not supply them in concrete normalized coordinates. THM-4241 gives the
-explicit degree-four map `H_lambda`, then says only that scaling by an
-`O`-unit and changing representatives by `D=V direct-sum L` normalizes its
+itself does not supply them in concrete normalized coordinates. THM-4241
+gives the explicit degree-four map `H_lambda`, then says only that scaling by
+an `O`-unit and changing representatives by `D=V direct-sum L` normalizes its
 glue class to
 
 ```text
 2h=v+omega^2 f+g.                                      (22)
 ```
 
-THM-4241 itself does not freeze the change-of-basis dictionary from
-`H_lambda` to the specific `[u,f,g,h]` coefficients used by the residual
-census. A separate finite-coordinate certificate can supply it. Until that
-certificate is canonized, halving the explicit value of
-`v+omega^2f+g` leaves the two-torsion ambiguity measured by Section 3.
+THM-4259 subsequently closes exactly that normalization gap.  For one fixed
+algebraic branch it proves, as Hom-class identities,
 
-The cheapest decisive bridge is now finite and explicit:
+```text
+H_lambda+H_lambda composed_with iota=-v,
+H_lambda-H_lambda composed_with iota=omega^2f+(omega^2-omega)g,
+h=H_lambda+v-omega^2g.                                 (23)
+```
 
-1. compute the visible and hidden projections of `H_lambda` and express
-   `2H_lambda-v_0=A f+B g` for the correct visible unit multiple `v_0`;
-2. identify the target unit and `D`-translate sending that concrete glue
-   generator to `(22)`;
-3. freeze the resulting basis-change and `T` matrices; and
-4. evaluate only `F_m(Q_0),(TF_m)(Q_0),(T^2F_m)(Q_0)` using the
-   translation-normalized definition `(5)` for the `1,512`
-   incidence rows, with the existing ratio-overlap ledger retained.
+Thus `(22)` and the required `T` matrix hold for a concrete rational-map
+dictionary.  Translation constants of curve-map representatives cancel in
+`F_m(Q)=m([tau Q-Q])`.
+
+THM-4260 subsequently bypasses that direct `4,536`-row table: its necessary
+anti-invariant projection and reciprocal-denominator obstruction exclude all
+`280` residual classes, hence all `1,512` incidences, on the gate-interior
+`W=0` fibre.  The table remains an orthogonal possible hostile replay, not a
+live proof obligation.  No row is evaluated by THM-4258 or THM-4259.
 
 ## 6. Scope and reproduction
 
