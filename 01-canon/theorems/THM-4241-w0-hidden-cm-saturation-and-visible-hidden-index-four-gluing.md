@@ -21,6 +21,7 @@ related:
 mistake_firewall:
   - MISTAKE-521
   - MISTAKE-522
+  - MISTAKE-525
 scripts:
   - 04-computation/jc23_w0_hidden_cm_saturation_gluing_thm4241.py
   - 04-computation/jc23_w0_prime_ideals_independent_audit_thm4241.gp
@@ -30,7 +31,7 @@ outputs:
   - 05-knowledge/results/jc23_w0_prime_ideals_independent_audit_thm4241.out
   - 05-knowledge/results/jc23_w0_full_theta_independent_audit_thm4241.out
 script_sha256:
-  - b2ead203e325b19ee0813b30d1f41c42263a1c86496506bde3a1341352459b7f
+  - f27f9a502ceb0664096b0f90d54591c697de28a510415cd8cc2671ab4862c913
   - 7a124feb0fb99e086c0fd2a20c4c293b1de740c540c0454afa908f401e7adb08
   - 18b9366623af1c9ca402204c7f4f20f736c4c549d8c55070b7c984d42e8bfeea
 output_sha256:

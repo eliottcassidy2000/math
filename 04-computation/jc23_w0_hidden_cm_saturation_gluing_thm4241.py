@@ -204,7 +204,9 @@ for i in range(4):
         )
 require(quadratic_gram.det() == 324, "quadratic determinant changed")
 quadratic_smith = smith_normal_form(quadratic_gram, domain=sp.ZZ)
-require(tuple(quadratic_smith[i, i] for i in range(4)) == (3, 3, 6, 6),
+# Smith diagonal entries are defined only up to multiplication by units.
+# SymPy versions differ on the sign of the final entry for this matrix.
+require(tuple(abs(quadratic_smith[i, i]) for i in range(4)) == (3, 3, 6, 6),
         "quadratic Smith factors changed")
 
 

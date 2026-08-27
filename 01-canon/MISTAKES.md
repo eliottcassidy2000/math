@@ -9,6 +9,25 @@ Format per entry:
 - Why it was wrong
 - The correct framing
 
+## MISTAKE-525 (2026-08-26, THM-4241 replay portability audit) -- a Smith-normal-form unit sign was treated as canonical
+
+- **What failed:** THM-4241's Python certificate compared the signed diagonal
+  returned by SymPy's Smith-normal-form routine with `(3,3,6,6)`.  On the
+  current environment the same integral matrix is returned with diagonal
+  `(3,3,6,-6)`, so the frozen certificate stopped before reaching any of its
+  mathematical checks.
+- **Minimal witness / first failed implication:** Smith invariant factors over
+  `Z` are defined only up to multiplication by units.  The matrices with last
+  diagonal entries `6` and `-6` encode the same quotient, prime support, and
+  determinant magnitude; a library presentation sign is not theorem data.
+- **Repair / strongest survivor:** the checker now compares absolute diagonal
+  entries.  Its complete normal and optimized transcripts remain byte-identical
+  to the frozen output, and every THM-4241 lattice, gluing, theta, and degree
+  conclusion is unchanged.
+- **Reusable rule:** normalize Smith factors up to units before comparing
+  outputs across implementations or library versions; separately check the
+  determinant sign only when an oriented invariant actually consumes it.
+
 ## MISTAKE-524 (2026-08-26, THM-4240 concurrent-promotion audit) -- a reserved theorem was cited as proved and tied witnesses were reported as identical
 
 - **What failed:** the promoted THM-4240 status and final firewall said that
