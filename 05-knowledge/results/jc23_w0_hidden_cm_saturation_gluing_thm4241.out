@@ -1,0 +1,20 @@
+W=0 saturation and gluing exact certificate
+field=Q(zeta12) omega=zeta12^4 T=zeta12^5 T^2=-omega
+scalar_degree=Tr_Qsqrt3/Q((3+sqrt3)*x*xbar) trace_gram=PASS
+prime2=(1-zeta12^3) norm=4 square=unit*2
+prime3=(zeta12+zeta12^3) norm=9 square=unit*3
+quadratic_smith=[3,3,6,6] norm_integral_overideals=O,P2^-1,P3^-1,(P2*P3)^-1
+candidate_degrees=6,3,2,1
+P2_inverse_Rosati_integral=PASS P3_inverse_Rosati_integral=FAIL_denominator_3
+bielliptic_controls=CS_bound:5<7 central_involution_quotient_genera:3,2,4
+degree3_pole_classifier=only_zero_or_infinity_patterns; endpoint_differences=-4,-4*i
+hidden_saturation=PROVED_THM4241
+explicit_glue_map_identity=PASS degree=4 pole_divisor=4_points_times_2
+eigendifferential_controls=F0:lambda**(-2),Fprime0:c/(6*lambda**4)
+full_quotient=O/2O cardinality=4 underlying_Z_index=4
+full_hermitian_determinant=96
+theta_through_42={0: 1, 4: 60, 6: 72, 8: 324, 10: 864, 12: 276, 14: 2592, 16: 2868, 18: 1152, 20: 5832, 22: 9504, 24: 2556, 26: 15552, 28: 15456, 30: 6480, 32: 22356, 34: 36288, 36: 7836, 38: 49248, 40: 44280, 42: 16992}
+degree34_example=h-f+g count=36288
+degree42_example=-f-omega*g+(1-omega)*h count=16992
+attachment_boundary=FINITE_UNENUMERATED_S_34_S_42
+result=PASS

@@ -110,7 +110,10 @@ Format per entry:
   `4(N(a)+N(b))` after the ramified double cover. The remaining primitive
   hidden-`E_0` locus is nonempty, but a separate isotypic/CM/Torelli argument
   proves it countable and proper. Hence the `34/42` response excludes only
-  its complement; it does not close the whole `M=12` gate or `JC(2)`.
+  its complement; it does not close the whole `M=12` gate or `JC(2)`. THM-4241
+  later saturates the hidden lattice but finds a separate visible-hidden
+  `Z`-index-four glue class and full-lattice degree-`34/42` vectors. The exact
+  surviving attachment task is the finite unenumerated pair `S_34,S_42`.
 - **Reusable rule:** a rational isogeny packet records factors, not an
   integral map lattice. Audit the gluing kernel before using degree
   divisibility, and distinguish character support, Hodge multiplicity,

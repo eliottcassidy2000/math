@@ -1,0 +1,12 @@
+W=0 PARI ideal audit
+polynomial=x^4 - x^2 + 1
+discriminant=144
+class_number=1
+omega=x^2 - 1 T=x^3 - x T^2=-x^2 + 1
+sqrt3=-x^3 + 2*x scalar_trace_q(1+T)=6
+pi2=-x^3 + 1 norm=4 pi2^2/2=-x^3
+pi3=x^3 + x norm=9 pi3^2/3=x^2 - 1
+prime_decomposition_2=[[2, [0, 1, 0, -1]~, 2, 2, [0, 1, 0, 1; 1, -1, -1, 1; 0, 1, 0, -1; -1, -1, -1, -1]]]
+prime_decomposition_3=[[3, [-1, 0, 0, -1]~, 2, 2, [-1, 0, 0, 1; 0, -2, -1, 0; 0, 1, -1, 0; -1, 0, 0, -2]]]
+minkowski_bound_18_over_pi2=1.8237813055620798859898303377750975003
+result=PASS

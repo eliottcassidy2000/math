@@ -12,9 +12,11 @@ status: >
   Eisenstein sublattice has Gram determinant 24; degree 34 is absent and all
   192 degree-42 vectors fail attachment collapse inside this sublattice.
   Across the full Hom lattice, either response degree can collapse the nodes
-  for only finitely many coefficient ratios U/Z. Hidden saturation, integral
-  visible-hidden gluing, mixed attachment cancellation, exclusion on the
-  locus, the whole M=12 gate, seam entry, JC(2), and DC(2) are OPEN.
+  for only finitely many coefficient ratios U/Z. THM-4241 subsequently proves
+  hidden saturation and integral visible-hidden index-four gluing, and finds
+  full-lattice vectors of both response degrees. Enumeration of the finite
+  ratio sets, exclusion on the locus, the whole M=12 gate, seam entry, JC(2),
+  and DC(2) are OPEN.
 source: codex-jc-lrc-niche-crossfeed-20260826
 depends_on:
   - THM-3992-reduced-two-three-cusp-jet-repair-and-first-node-residual
@@ -30,6 +32,7 @@ related:
   - THM-4222-dense-weight-eleven-primitive-cm-planar-jacobian-exclusion
   - THM-4226-dense-weight-thirteen-primitive-cm-bolza-planar-jacobian-exclusion
   - THM-4232-weight-eleven-u-zero-primitive-cm-planar-jacobian-exclusion
+  - THM-4241-w0-hidden-cm-saturation-and-visible-hidden-index-four-gluing
 external: >
   Tim Dokchitser, "Models of curves over DVRs," arXiv:1807.00025v2,
   Definitions 3.7, 3.9, and 3.12 and Theorem 3.14, through THM-4045, supplies
@@ -714,8 +717,10 @@ S_d={R_mark in C\{0,-1}: for some admissible Q_0=(A,B) satisfying
 ```
 
 is finite. The sets are not enumerated or proved empty. Section 6.1 proves
-that neither set receives a witness from a pure map in `L_exp`; mixed
-visible-hidden maps and hidden saturation/gluing vectors remain untested.
+that neither set receives a witness from a pure map in `L_exp`. THM-4241
+subsequently saturates the hidden lattice, proves the visible-hidden
+index-four glue, and exhibits degree-`34/42` full-lattice vectors; their
+attachment-resultant tests remain open.
 
 There is also a precise bridge to the quotient sidecar. For
 `rho:(x,y)->(-x,-y)`, use the invariant coordinates
@@ -781,10 +786,10 @@ on W=0, L_exp has no degree-34/collapsing degree-42 map;
 full-Hom d_C0(h) in {34,42} node equality => U/Z in finite S_34/S_42. (37)
 ```
 
-Classification of `H_0`, enumeration/exclusion of `S_34,S_42`, hidden
-saturation/overlattices, integral visible-hidden gluing, mixed attachment
-cancellation, the other walls, all-gate `M=12`, seam entry, `JC(2)`, and
-`DC(2)` remain **OPEN**.
+THM-4241 subsequently closes hidden saturation/overlattices and proves the
+integral visible-hidden gluing index is four. Classification of `H_0`,
+enumeration/exclusion of `S_34,S_42`, mixed attachment cancellation, the
+other walls, all-gate `M=12`, seam entry, `JC(2)`, and `DC(2)` remain **OPEN**.
 
 ## 8. Verification and firewall
 
