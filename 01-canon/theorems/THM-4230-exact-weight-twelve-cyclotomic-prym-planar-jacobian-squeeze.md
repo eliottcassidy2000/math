@@ -676,32 +676,41 @@ the explicit rank-two sublattice `L_exp`. They do **not** prove that
 `L_exp=Hom(A_12,E_0)`, nor do they settle the integral gluing with the visible
 lattice. Saturation of the hidden lattice and the full attachment degree form
 are the precise surviving `W=0` problems.
+
 ### 6.2. Finite full-Hom ratio reduction and the quotient bridge
 
 Retain `C_0:x^6+y^4=1` from `(34a)`. The attachment orbit is
 
 ```text
 Q_j=tau^jQ_0=(A xi_6^j,B xi_4^j),
-A^6=U/(U+Z),       B^4=Z/(U+Z),       r=U/Z=A^6/B^4. (34w)
+A^6=U/(U+Z), B^4=Z/(U+Z), R_mark=U/Z=A^6/B^4.       (34w)
 ```
 
 The holomorphic `tau`-characters are `5,7,8,9,10,11,11`. Hence
-`tau_*-1` has no tangent-space kernel and is an isogeny of `J(C_0)`. For
-nonzero `h in Hom(J(C_0),E_0)`, put
+`tau_*-1` has no tangent-space kernel and is an isogeny of `J(C_0)`. Fix a
+base point `Q_* in C_0` and, for `h in Hom(J(C_0),E_0)`, define the curve
+degree
+
+```text
+d_C0(h)=deg(Q |-> h([Q-Q_*])).
+```
+
+This is the positive-definite Rosati degree form on the Hom lattice. For
+nonzero `h`, put
 
 ```text
 F_h(Q)=h([tau Q-Q]).                                  (34x)
 ```
 
 This map is nonconstant: otherwise its induced Jacobian homomorphism
-`h o (tau_*-1)` would vanish, and surjectivity would force `h=0`. The Rosati
-degree form on `Hom(J(C_0),E_0)` is positive definite, so only finitely many
-vectors have either fixed degree `34` or `42`; each corresponding zero fibre
-of `(34x)` is finite. If all twelve nodes have one target image, then
-`F_h(Q_0)=O`. Therefore, for `d in {34,42}`, the set
+`h o (tau_*-1)` would vanish, and surjectivity would force `h=0`. Thus every
+zero fibre of `(34x)` is finite. Positive definiteness of `d_C0` leaves only
+finitely many vectors with `d_C0(h)=34` or `42`. If all twelve nodes have one
+target image, then `F_h(Q_0)=O`. Therefore, for `d in {34,42}`, the set
 
 ```text
-S_d={r in C\{0,-1}: some degree-d h maps all Q_j equally} (34y)
+S_d={R_mark in C\{0,-1}: for some admissible Q_0=(A,B) satisfying
+     (34w), some h with d_C0(h)=d maps all Q_j equally}. (34y)
 ```
 
 is finite. The sets are not enumerated or proved empty. Section 6.1 proves
@@ -709,15 +718,17 @@ that neither set receives a witness from a pure map in `L_exp`; mixed
 visible-hidden maps and hidden saturation/gluing vectors remain untested.
 
 There is also a precise bridge to the quotient sidecar. For
-`rho:(x,y)->(-x,-y)`, let
+`rho:(x,y)->(-x,-y)`, use the invariant coordinates
+`u_rho=x^2`, `v_rho=xy`, `w_rho=y^2`, and let
 
 ```text
-D=C_0/rho: b^2=ac, a^3+c^2=1,   pi:C_0->D.           (34z)
+D_rho=C_0/rho: v_rho^2=u_rho*w_rho,
+u_rho^3+w_rho^2=1,                    pi:C_0->D_rho. (34z)
 ```
 
 The function `t=(1+y^2)/x^3` from `(34b)` changes sign under `rho`, whereas
 `x/t` and `y/t` are fixed. Thus `f_a`, `Tf_a`, and all of `L_exp` descend
-through `pi`. The descended `f_a:D->E_0` has degree `3`, and the descended
+through `pi`. The descended `f_a:D_rho->E_0` has degree `3`, and the descended
 degree Gram is
 
 ```text
@@ -726,10 +737,10 @@ H_exp/2=[3,-2-omega; -2-omega^2,3],       det=6.
 
 This does not prove saturation. Let `P_+=(0,0,1)`, `P_-=(0,0,-1)`, and let
 `R_infinity` be the unique point at infinity. Directly,
-`div_D(a)=2P_++2P_--4R_infinity`; hence
+`div_(D_rho)(u_rho)=2P_++2P_--4R_infinity`; hence
 `eta=[P_++P_--2R_infinity]` is two-torsion. Connectedness of the etale double
 cover makes `eta` nonzero and gives
-`ker(pi^*:J(D)->J(C_0))=<eta>`. The missing data are the hidden
+`ker(pi^*:J(D_rho)->J(C_0))=<eta>`. The missing data are the hidden
 saturation/overlattice, integral visible-hidden gluing, and mixed/coset
 attachment evaluation.
 
@@ -767,7 +778,7 @@ The exact strongest survivor is
 hypothetical exact-M12 Keller parameter => kappa in H_0,
 H_0 countable, proper, nonempty;
 on W=0, L_exp has no degree-34/collapsing degree-42 map;
-full-Hom degree 34/42 node equality => U/Z in finite S_34/S_42. (37)
+full-Hom d_C0(h) in {34,42} node equality => U/Z in finite S_34/S_42. (37)
 ```
 
 Classification of `H_0`, enumeration/exclusion of `S_34,S_42`, hidden

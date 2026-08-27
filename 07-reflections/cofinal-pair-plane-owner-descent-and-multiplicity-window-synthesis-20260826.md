@@ -477,7 +477,7 @@ source-first resultant, component, genus, attachment, and degree audit.
    `A+B=0`, selecting by replacement-face genus rather than coefficient name.
 5. **JC hostile:** construct the `W=0` sidecar `(L,H,T,e(t))`, enumerate the
    finite degree-`34/42` Hom vectors, and solve their four Cayley--Hamilton-
-   reduced node equations for the finite surviving ratios `r=U/Z`.
+   reduced node equations for the finite surviving ratios `R_mark=U/Z`.
 6. **Multiplicity niche:** freeze `(d,R_d,Lawful,sigma)` and emit the intrinsic
    `c_(d;q,r)(B)` histogram, second
    moment, minimum margin, and failure masks on the fixed-small-ray residuals;

@@ -254,7 +254,7 @@ size. Removing them from THM-4231's exact residual yields
 ```text
 |E_aggregate|=181,162,
 FNV(E_aggregate)=7e5f6af58a370e3a,
-SHA256("a,b\n" edge stream)
+SHA256(lexicographic "a,b\n" edge stream)
  =3a21737c3b7794f1f9faeae8c6683e16e7055877eb20fa05855ebfe8aa467c6c. (16b)
 ```
 
