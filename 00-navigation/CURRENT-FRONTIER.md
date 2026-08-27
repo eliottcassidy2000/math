@@ -59,17 +59,13 @@ is the safe control `M(S_13)=99/338`. No cited result proves LRC(14).
   THM-4105/4106 are reciprocal decoders; THM-4107/4108 are tournament/radical
   firewalls. THM-4110 finds `64` AP13 sheets; THM-4116 gives
   `2^(c(F)-1)`. Safety/arrival stay open.
-- **Owner/tail:** THM-4156/4191 close layers 0/1; [THM-4231](../01-canon/theorems/THM-4231-arbitrary-pair-cofinal-depth-six-haar-repair-and-exact-outsider-lift.md)
-  closes `max(q,r)>=770`. THM-4256/4261/4262 leave `180,622` fixed-pool pairs.
-  THM-4266/4267/4269/4270 close `3,037+63+53+146`; THM-4271 closes `2,419`;
-  THM-4276's exact minimum-six augmentation closes `163` through endpoint
-  670. [THM-4277](../01-canon/theorems/THM-4277-uniform-two-dimensional-outsider-rectangle-common-deck-closure.md)
-  gives a common-active deck on the `50*51` rectangle
-  `450<=q<=499,600<=r<=650` and closes `2,419` more.
-  [THM-4281](../01-canon/theorems/THM-4281-rectangle-common-joint-deck-endpoint-670-bridge.md)
-  combines `148,063` common-deck rows with carrier closure through 664; the
-  exact union has `148,099` rows. Residual `24,223`, max `663`, top
-  `(256,663),(366,663),(520,663)`; physical entry and LRC(14) remain open.
+- **Owner/tail:** THM-4231 closes `max(q,r)>=770`; THM-4256--4281 descend
+  the fixed pool to `24,223`, max 663.
+  [THM-4282](../01-canon/theorems/THM-4282-inactive-signature-deck-surgery-endpoint-663.md)
+  combines signature surgeries with carrier closure through 645. Its 850-row
+  union leaves `23,373`, max `644`, top
+  `(220,644),(256,644),(258,644),(294,644),(366,644),(416,644),(512,644)`;
+  physical entry and LRC(14) remain open.
 - **PROVED:** [THM-2928](../01-canon/theorems/THM-2928-critical-seven-comb-grid-tensorization-and-drift-tariff.md)/2941: literal zero/one/two/three-drift sectors are empty; `k=2,3` are finite.
 - **Orthogonal routes.** THM-1017 is HYP-6820; THM-2047/2050 keep phase/exit; THM-731/2048 prune; THM-1290 ends at `55`; HYP-8900 nonuniform.
 - **PROVED micro-staircase:** THM-3316/3317 close primes/sparse fragility;

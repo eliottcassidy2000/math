@@ -150,6 +150,13 @@ exchange components do not transfer.
 connected 72-family but a `5871+1` hostile), and THM-4276
 (`5,852,925 -> 330`, minimum six).
 
+## Recompute essentiality per consumer
+
+**Action/boundary:** recompute witnesses per consumer after restriction.
+THM-4281/4282 separate classifier, deck, and carrier; THM-4280
+separates complex, integral, and shell observers. Essentiality does not
+transfer; this grammar gives no LRC--Jacobian map.
+
 ## Certify before projection
 
 **Trigger/action:** build lawful ambient edge/primitive face first.

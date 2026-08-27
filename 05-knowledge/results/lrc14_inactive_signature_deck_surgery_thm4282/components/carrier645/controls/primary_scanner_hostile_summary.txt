@@ -1,0 +1,84 @@
+THM4282 FINAL8951 CURRENT SCANNER HOSTILE INSPECTION
+STATUS: PRIMARY REPRODUCTION PASS; ONE ORDERED-HASH MISMATCH AND ONE SCOPE-GUARD DEFECT
+
+Audited source SHA256:
+  final8951_joint_exposure_scan.cpp
+  960b4bc92668373ce1103ac1bc5b76b48999dcffd32a5f446e6f1d53be698325
+
+Pinned source inputs:
+  joint421 count 421, ordered FNV 20d63dd42fe8150e
+  joint421 SHA256 fcde04de68ab614743176ed153e0db2754cf878470c96f525d29c07a88388bc2
+  base carrier count 8951, ordered FNV 188f82ab9dd1695a
+  base carrier SHA256 a5dac3c7e5a2715e4c9ef8bb1b54bc98792e904f7b0b5ef55e4dd4313ebc87f6
+
+Cumulative stage identities in the current files:
+  +2  => 8953 masks, ordered FNV ad5249bee4b989b9
+  +9  => 8962 masks, ordered FNV 5b9e9a81c1582d06
+  +31 => 8993 masks, ordered FNV 05ff3d7ecbaa740c
+  +3  => 8996 masks, ordered FNV fd899660f14b311c
+
+Stage block identities:
+  seed2       count 2,  block FNV ee96f129959176d2
+  small9      count 9,  block FNV 961b2940d74358b2
+  greedy31    count 31, block FNV a06f95d5527ca66f (numeric-sorted order)
+  through6483 count 3,  block FNV 4c5056ee8b0694f1
+
+Endpoint 650, exact 26-row residual slice:
+  +2: 403 failures total; pair-ledger FNV 15d2807de5709ca8.
+      (256,650): 368, FNV 597463fcb5b36b46
+      (294,650):   2, FNV 39ed3bd5b7f41151, exact min 1, witness 0002409f
+      (366,650):  18, FNV d44829a29524905f, exact min 4,
+                  witnesses 10459084 2009120b 20494209 3008408b
+      (416,650):  14, FNV 9ed8596575d1e38f, exact min 3,
+                  witnesses 0084c4c4 0200c325 12650202
+      (512,650):   1, FNV acd6d04d579aa070, exact min 1, witness 000c9681
+  +11: only (256,650), 358 failures, FNV 609ee065cee1f551;
+       pair-ledger FNV aa42abf905fc23ce.
+  +42: all 26 close; pair-ledger FNV a0b6a9f77ab5415f.
+
+Endpoint 648, exact 7-row residual slice:
+  +42: only (256,648), 6 failures, FNV a6791f0534ec17fd;
+       exact min 3, witnesses 00524a81 0128d00c 04410e81;
+       pair-ledger FNV 3a35cecbb1677b2c.
+  +45: all 7 close; pair-ledger FNV 5e89a6960a2b24eb.
+
+Scope comparison against combined_residual_520_367.csv:
+  continuation_650_pairs.csv is ordered-identical to the exact r=650 slice (26).
+  continuation_649_646_pairs.csv is set-identical to the exact 646<=r<=649 slice (20),
+  but grouped by r rather than canonical combined-residual order.
+  continuation_645_pairs.csv is ordered-identical to the exact r=645 slice (2).
+
+Defects / limitations:
+  1. The scanner does not pin additions count/FNV/content or pair-ledger
+     count/FNV/content. PASS means only all supplied rows closed. A caller can
+     supply an incomplete easy subset and still obtain PASS ALL_PAIRS_CLOSED.
+  2. The current greedy31 block is numeric-sorted. The frozen greedy packet used
+     selection order, so its 8993-carrier FNV 35f344c2991c58dc does not match
+     the current file's 05ff3d7ecbaa740c. Cover truth is order-invariant, but
+     all order-sensitive active-carrier and pair-ledger FNVs must be regenerated
+     or the original selection order restored.
+  3. Activity is imported from response_pattern_atlas/build_active_universe;
+     this scanner is not a detached literal-activity implementation.
+
+Output artifact SHA256 values:
+  endpoint650_plus2.out  2ceaffae5a4e8f03bd70f5b6f4f7acb13d47bec83e7cdf0896f6b3327911311b
+  endpoint650_plus11.out eed3f9020ed356e3bda794e4aa6ef32a7df15ae6a18a5093664e6bf742d5c1df
+  endpoint650_plus42.out 13d799b9460de9b4ca20073b8dd4124b566c447b8b53183e7a77faa808c7ca57
+  endpoint648_plus42.out b4e8f0dfbfbf19731fb7e19c3dd517396311f0762b4b58d30b9363a23c67edd4
+  endpoint648_plus45.out 3b0e24e81e418b471507c61eac332a2948dda84937a641adde5cd740b124c2d5
+
+Reproduction (from /private/tmp/math-wt-cross-frontier-bridge):
+  AUD=/private/tmp/thm4282-current-scanner-hostile-inspect
+  clang++ -std=c++20 -O3 -DNDEBUG -I . \
+    04-computation/lrc14_inactive_signature_deck_surgery_thm4282/final8951_joint_exposure_scan.cpp \
+    -o "$AUD/final8951_joint_exposure_scan"
+  JOINT=05-knowledge/results/lrc14_joint421_global_common_carrier_thm4281/joint_iter39_shrunk_forward_masks.txt
+  CARRIER=/private/tmp/thm4281-sig663-active.TwcWXY/endpoint663-active-response-packet/inputs/final8951_carrier.txt
+  "$AUD/final8951_joint_exposure_scan" "$JOINT" "$CARRIER" \
+    04-computation/lrc14_inactive_signature_deck_surgery_thm4282/continuation_650_pairs.csv \
+    04-computation/lrc14_inactive_signature_deck_surgery_thm4282/carrier_through650_additions.txt \
+    > "$AUD/endpoint650_plus42.out"
+  "$AUD/final8951_joint_exposure_scan" "$JOINT" "$CARRIER" \
+    "$AUD/endpoint648_pairs.csv" \
+    04-computation/lrc14_inactive_signature_deck_surgery_thm4282/carrier_through648_additions.txt \
+    > "$AUD/endpoint648_plus45.out"
