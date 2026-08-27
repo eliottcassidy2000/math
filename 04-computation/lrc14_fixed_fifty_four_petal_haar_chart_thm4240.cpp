@@ -140,8 +140,13 @@ struct BaseStats {
     int nonstrict=0;
     i128 min_delta=0;
     u32 min_body=0;
+    i64 min_mass=0;
+    i64 min_components=0;
     int max_cutoff=0;
     u32 cutoff_body=0;
+    i64 cutoff_mass=0;
+    i64 cutoff_components=0;
+    i128 cutoff_delta=0;
 };
 
 BaseStats base_stats(const BaseArrangement& arrangement,
@@ -172,6 +177,8 @@ BaseStats base_stats(const BaseArrangement& arrangement,
                 initialized=true;
                 result.min_delta=delta;
                 result.min_body=body;
+                result.min_mass=mass[allowed];
+                result.min_components=components;
             }
             if (delta<=0) {
                 ++result.nonstrict;
@@ -183,6 +190,9 @@ BaseStats base_stats(const BaseArrangement& arrangement,
                 if (cutoff>result.max_cutoff) {
                     result.max_cutoff=cutoff;
                     result.cutoff_body=body;
+                    result.cutoff_mass=mass[allowed];
+                    result.cutoff_components=components;
+                    result.cutoff_delta=delta;
                 }
             }
         }
@@ -237,8 +247,13 @@ int main(int argc,char** argv) {
                       << " nonstrict=" << stats.nonstrict
                       << " min_delta=" << decimal(stats.min_delta)
                       << " min_body=" << c_labels(stats.min_body)
+                      << " min_mass=" << stats.min_mass
+                      << " min_components=" << stats.min_components
                       << " max_cutoff=" << stats.max_cutoff
                       << " cutoff_body=" << c_labels(stats.cutoff_body)
+                      << " cutoff_mass=" << stats.cutoff_mass
+                      << " cutoff_components=" << stats.cutoff_components
+                      << " cutoff_delta=" << decimal(stats.cutoff_delta)
                       << '\n';
         }
         std::cout << "PETAL_BASE_SUMMARY k=" << petal_count
@@ -285,8 +300,13 @@ int main(int argc,char** argv) {
                           << " nonstrict=" << stats.nonstrict
                           << " min_delta=" << decimal(stats.min_delta)
                           << " min_body=" << c_labels(stats.min_body)
+                          << " min_mass=" << stats.min_mass
+                          << " min_components=" << stats.min_components
                           << " max_cutoff=" << stats.max_cutoff
                           << " cutoff_body=" << c_labels(stats.cutoff_body)
+                          << " cutoff_mass=" << stats.cutoff_mass
+                          << " cutoff_components=" << stats.cutoff_components
+                          << " cutoff_delta=" << decimal(stats.cutoff_delta)
                           << '\n';
             }
         require(quadruples==495,"quadruple count changed");
@@ -336,8 +356,13 @@ int main(int argc,char** argv) {
                       << " nonstrict=" << stats.nonstrict
                       << " min_delta=" << decimal(stats.min_delta)
                       << " min_body=" << c_labels(stats.min_body)
+                      << " min_mass=" << stats.min_mass
+                      << " min_components=" << stats.min_components
                       << " max_cutoff=" << stats.max_cutoff
-                      << " cutoff_body=" << c_labels(stats.cutoff_body) << '\n';
+                      << " cutoff_body=" << c_labels(stats.cutoff_body)
+                      << " cutoff_mass=" << stats.cutoff_mass
+                      << " cutoff_components=" << stats.cutoff_components
+                      << " cutoff_delta=" << decimal(stats.cutoff_delta) << '\n';
         }
         const std::uint16_t required=static_cast<std::uint16_t>(star|bit(extra));
         const BaseStats stats=base_stats(arrangement,required,5);
@@ -353,8 +378,13 @@ int main(int argc,char** argv) {
                   << " nonstrict=" << stats.nonstrict
                   << " min_delta=" << decimal(stats.min_delta)
                   << " min_body=" << c_labels(stats.min_body)
+                  << " min_mass=" << stats.min_mass
+                  << " min_components=" << stats.min_components
                   << " max_cutoff=" << stats.max_cutoff
-                  << " cutoff_body=" << c_labels(stats.cutoff_body) << '\n';
+                  << " cutoff_body=" << c_labels(stats.cutoff_body)
+                  << " cutoff_mass=" << stats.cutoff_mass
+                  << " cutoff_components=" << stats.cutoff_components
+                  << " cutoff_delta=" << decimal(stats.cutoff_delta) << '\n';
         std::cout << "CANDIDATE extra=" << O[extra]
                   << " profiles=64260"
                   << " nonstrict=" << candidate_nonstrict
