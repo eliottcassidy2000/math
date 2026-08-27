@@ -139,6 +139,14 @@ universal; merged marginals do not multiply; specialization gives no entry.
 (graph jets, fibre weights, hazards); THM-4260/4264 (specialized exclusion,
 local observer, open normal lift).
 
+## Complete decks from hostiles
+
+**Action/boundary:** append common-active repairs disjoint from missed bodies;
+rescan all. Pair-active decks do not transfer; greedy need not minimize.
+
+**Evidence:** THM-4267 (`9805+1`/2 hostiles) and THM-4269 (`3158+5`/6), both
+literal-audited.
+
 ## Certify before projection
 
 **Trigger/action:** build lawful ambient edge/primitive face first.
