@@ -1,0 +1,92 @@
+==================================================================================
+HYP-1981 open part -- reachable observer-source classes vs A000568(n-1)
+claude-2026-06-01 ; faithful to THM-381 / S511
+==================================================================================
+
+--- n=4: m=3 runners, safe-arc L=1-2/n=1/2 ; A000568(3)=2
+  |R_geom| = 1 / 2   (STRICT SUBSET) [saturation: half-sample gives 1]
+  |R_arith| = 1  (subset of R_geom: True)  systems reaching open-cell=108, boundary-only=1
+  transitive classes in R_geom = 1 (expect exactly 1)
+  EXCLUDED classes (1):
+      scores=(1, 1, 1)  3-cycles=1  [REGULAR/rotational]
+
+--- n=5: m=4 runners, safe-arc L=1-2/n=3/5 ; A000568(4)=4
+  |R_geom| = 2 / 4   (STRICT SUBSET) [saturation: half-sample gives 2]
+  |R_arith| = 2  (subset of R_geom: True)  systems reaching open-cell=203, boundary-only=2
+  transitive classes in R_geom = 1 (expect exactly 1)
+  EXCLUDED classes (2):
+      scores=(0, 2, 2, 2)  3-cycles=1
+      scores=(1, 1, 1, 3)  3-cycles=1
+
+--- n=6: m=5 runners, safe-arc L=1-2/n=2/3 ; A000568(5)=12
+  |R_geom| = 4 / 12   (STRICT SUBSET) [saturation: half-sample gives 4]
+  |R_arith| = 4  (subset of R_geom: True)  systems reaching open-cell=124, boundary-only=2
+  transitive classes in R_geom = 1 (expect exactly 1)
+  EXCLUDED classes (8):
+      scores=(0, 1, 3, 3, 3)  3-cycles=1
+      scores=(0, 2, 2, 3, 3)  3-cycles=2
+      scores=(0, 2, 2, 2, 4)  3-cycles=1
+      scores=(1, 1, 2, 2, 4)  3-cycles=2
+      scores=(1, 1, 2, 3, 3)  3-cycles=3
+      scores=(1, 1, 1, 3, 4)  3-cycles=1
+      scores=(1, 2, 2, 2, 3)  3-cycles=4
+      scores=(1, 2, 2, 2, 3)  3-cycles=4
+
+--- n=7: m=6 runners, safe-arc L=1-2/n=5/7 ; A000568(6)=56
+  |R_geom| = 6 / 56   (STRICT SUBSET) [saturation: half-sample gives 6]
+  |R_arith| = 6  (subset of R_geom: True)  systems reaching open-cell=27, boundary-only=1
+  transitive classes in R_geom = 1 (expect exactly 1)
+  EXCLUDED classes (50):
+      scores=(0, 1, 2, 4, 4, 4)  3-cycles=1
+      scores=(0, 1, 3, 3, 4, 4)  3-cycles=2
+      scores=(0, 1, 3, 3, 3, 5)  3-cycles=1
+      scores=(0, 2, 2, 3, 4, 4)  3-cycles=3
+      scores=(0, 2, 2, 3, 3, 5)  3-cycles=2
+      scores=(0, 2, 2, 3, 4, 4)  3-cycles=3
+      scores=(0, 2, 2, 2, 4, 5)  3-cycles=1
+      scores=(0, 2, 3, 3, 3, 4)  3-cycles=4
+      scores=(0, 2, 3, 3, 3, 4)  3-cycles=4
+      scores=(0, 2, 3, 3, 3, 4)  3-cycles=4
+      scores=(0, 3, 3, 3, 3, 3)  3-cycles=5
+      scores=(1, 1, 2, 3, 3, 5)  3-cycles=3
+      scores=(1, 1, 2, 3, 4, 4)  3-cycles=4
+      scores=(1, 1, 2, 2, 4, 5)  3-cycles=2
+      scores=(1, 1, 3, 3, 3, 4)  3-cycles=5
+      scores=(1, 1, 2, 3, 3, 5)  3-cycles=3
+      scores=(1, 1, 2, 3, 4, 4)  3-cycles=4
+      scores=(1, 1, 1, 3, 4, 5)  3-cycles=1
+      scores=(1, 1, 3, 3, 3, 4)  3-cycles=5
+      scores=(1, 1, 3, 3, 3, 4)  3-cycles=5
+      scores=(1, 1, 2, 3, 4, 4)  3-cycles=4
+      scores=(1, 1, 1, 4, 4, 4)  3-cycles=2
+      scores=(1, 2, 2, 2, 3, 5)  3-cycles=4
+      scores=(1, 2, 2, 2, 4, 4)  3-cycles=5
+      scores=(1, 2, 3, 3, 3, 3)  3-cycles=7
+      scores=(1, 2, 2, 3, 3, 4)  3-cycles=6
+      scores=(1, 2, 2, 3, 3, 4)  3-cycles=6
+      scores=(1, 2, 2, 3, 3, 4)  3-cycles=6
+      scores=(1, 2, 2, 3, 3, 4)  3-cycles=6
+      scores=(1, 2, 2, 2, 4, 4)  3-cycles=5
+      scores=(1, 2, 2, 2, 4, 4)  3-cycles=5
+      scores=(1, 2, 2, 3, 3, 4)  3-cycles=6
+      scores=(1, 2, 2, 2, 3, 5)  3-cycles=4
+      scores=(1, 2, 2, 2, 3, 5)  3-cycles=4
+      scores=(1, 2, 3, 3, 3, 3)  3-cycles=7
+      scores=(1, 2, 2, 3, 3, 4)  3-cycles=6
+      scores=(1, 2, 2, 3, 3, 4)  3-cycles=6
+      scores=(1, 2, 2, 3, 3, 4)  3-cycles=6
+      scores=(1, 2, 3, 3, 3, 3)  3-cycles=7
+      scores=(1, 2, 2, 3, 3, 4)  3-cycles=6
+      scores=(1, 2, 2, 3, 3, 4)  3-cycles=6
+      scores=(1, 2, 3, 3, 3, 3)  3-cycles=7
+      scores=(2, 2, 2, 2, 3, 4)  3-cycles=7
+      scores=(2, 2, 2, 2, 3, 4)  3-cycles=7
+      scores=(2, 2, 2, 2, 3, 4)  3-cycles=7
+      scores=(2, 2, 2, 2, 2, 5)  3-cycles=5
+      scores=(2, 2, 2, 3, 3, 3)  3-cycles=8
+      scores=(2, 2, 2, 3, 3, 3)  3-cycles=8
+      scores=(2, 2, 2, 2, 3, 4)  3-cycles=7
+      scores=(2, 2, 2, 3, 3, 3)  3-cycles=8
+
+==================================================================================
+n<=4 theorem: R_geom == {transitive}, size 1, strictly inside A000568(n-1).
