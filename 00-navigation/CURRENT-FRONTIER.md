@@ -1,6 +1,6 @@
 # Current Frontier
 
-**State — 2026-08-27.** Proof links; statuses: **PROVED**, **CITED**,
+**State — 2026-08-29.** Proof links; statuses: **PROVED**, **CITED**,
 **FINITE-EXACT**, **VERIFIED**, **CONDITIONAL**, **OPEN**, **RESERVED**,
 **REFUTED**, **SUPERSEDED**.
 
@@ -59,15 +59,12 @@ is the safe control `M(S_13)=99/338`. No cited result proves LRC(14).
   THM-4105/4106 are reciprocal decoders; THM-4107/4108 are tournament/radical
   firewalls. THM-4110 finds `64` AP13 sheets; THM-4116 gives
   `2^(c(F)-1)`. Safety/arrival stay open.
-- **Owner/tail:** THM-4231 closes `max(q,r)>=770`; THM-4256--4281 descend
-  the fixed pool to `24,223`, max 663.
+- **Owner/tail:** THM-4231 closes `max(q,r)>=770` and
   [THM-4282](../01-canon/theorems/THM-4282-inactive-signature-deck-surgery-endpoint-663.md)
-  combines signature surgeries with carrier closure through 645. Its 850-row
-  union leaves `23,373`, max `644`, top
-  `(220,644),(256,644),(258,644),(294,644),(366,644),(416,644),(512,644)`;
-  physical entry and LRC(14) remain open.
-- **RESERVED / UNPROVED:** [THM-4283](../01-canon/theorems/THM-4283-endpoint-644-carrier-response-and-signature-fibre-surgery.md)
-  is a namespace only, outside the proof graph.
+  leaves `23,373` fixed-pool rows. One-mask
+  [THM-4283](../01-canon/theorems/THM-4283-endpoint-644-carrier-response-and-signature-fibre-surgery.md)
+  closes 63 more and leaves `23,310`, uniquely topped by `(256,638)`, whose
+  pair-local response minimum is nine. Physical entry/LRC(14) stay open.
 - **PROVED:** [THM-2928](../01-canon/theorems/THM-2928-critical-seven-comb-grid-tensorization-and-drift-tariff.md)/2941: literal zero/one/two/three-drift sectors are empty; `k=2,3` are finite.
 - **Orthogonal routes.** THM-1017 is HYP-6820; THM-2047/2050 keep phase/exit; THM-731/2048 prune; THM-1290 ends at `55`; HYP-8900 nonuniform.
 - **PROVED micro-staircase:** THM-3316/3317 close primes/sparse fragility;
@@ -354,11 +351,13 @@ lift/phase clocks.
   THM-4258/4259/4264/4275 give exact observers; opposite-parity pairs preserve
   fibres. THM-4265 proves wall roots simple
   (lift conditional); THM-4268 gives a non-effective collar.
-  [THM-4272](../01-canon/theorems/THM-4272-lambda-zero-a23-contact-and-e0-infinity-jet-obstruction.md)
-  crosses `Lambda=0` via `A_23` and orders
-  `1,2,4,7`; [THM-4279](../01-canon/theorems/THM-4279-four-channel-formal-log-hasse-observer-for-e0-hom-at-fat-contact.md)
-  compresses its global-Hom restriction to formal-log degrees `1,2,4,7`,
-  with target/Hom sidecars. Raw descent/entry stay open.
+  THM-4272 crosses `Lambda=0` via `A_23`; THM-4279/4280 give integral
+  formal-log orders `{1,2,4}` and sharp faithful `5Q`.
+  [THM-4285](../01-canon/theorems/THM-4285-universal-two-eisenstein-norm-shell-and-exact-contact-trichotomy.md)
+  completes shell noncollapse (`2Q/3Q/5Q`).
+  [THM-4284](../01-canon/theorems/THM-4284-a23-conductor-defect-and-degree-shell-first-character-nondescent.md)
+  makes the missing datum the anti-diagonal cotangent: common-tangent
+  preservation already suffices at degree `34/42`, but remains open.
   Exceptional quartic: THM-3703/3737 give grammar/image, THM-4034 the
   conductor, and THM-4039/4043/4046 reach `J_7`, obstruct `J_8`, and close
   critical `H`. [THM-4054](../01-canon/theorems/THM-4054-exceptional-affine-simple-zero-retained-packet.md)

@@ -1,5 +1,43 @@
 # Script Results Index
 
+- `lrc14_endpoint638_carrier_response_thm4283/*` -> one-mask carrier descent
+  and exact next response wall [THM-4283 PROVED RELATIVE TO THM-4282 +
+  FINITE-EXACT + DETACHED LITERAL-WALL AUDIT PASS; physical entry and LRC(14)
+  OPEN]. Appending `014c9084={15,42,85,120,143,145,176,193}` to the
+  8,996 carrier closes 63 rows: all endpoints `644..639` and eight of nine
+  endpoint-638 rows. The exact complement has `23,310` rows and unique top
+  `(256,638)`. At `(256,644)`, two failed bodies have 367 active full
+  responders and exact minimum one. The new singleton has 40 failures, 315
+  response classes, no one-mask responder, and exact pair-local minimum nine;
+  its witness is not globally appended. The detached all-body transcript has
+  ledger `cbe0c99a6d552e23` and zero failures. Packet `SHA256SUMS` SHA-256:
+  `5e4f27ac7854121dcde44f51a1fab076848d8feb15bd2e30a168b295543162d2`.
+
+- `jc23_a23_conductor_graph_spectrum_thm4284.py` -> exact formal-local
+  conductor/graph audit [THM-4284 PROVED FORMAL-LOCAL RELATIVE TO
+  THM-4272/4280 + FINITE-EXACT; Keller application and JC(2) OPEN].  For
+  `A_m=k[[b,q]]/(q(q-b^m))`, a branch-log difference of order `s` has
+  saturated graph `A_ell`, `ell=min(m,s)`, so full raw descent is `ell=m`
+  but first-character descent is only `ell>=2`.  At the raw `A_23` contact,
+  actual orders `1,2,4` yield graph types `A_1,A_3,A_7`; degree `34/42`
+  gives `A_1` and the exceptional quotient `q/b^11`.  Exact Groebner
+  saturation, truncated conductor dimensions, cotangent, unsaturated-line,
+  and transverse-`W` controls pass.  Source/output SHA-256:
+  `2029c54c17b2c6b9a57982e13644767c3105faab47dd3f13906ddea65373a723` /
+  `9ead08564cd036220996f2cc70e20c50530daebbb485a19ac7031bd1ca696f1e`.
+
+- `jc23_two_eisenstein_norm_universal_shell_thm4285.py` -> exact A2
+  direct-sum shell audit [THM-4285 PROVED RELATIVE TO THM-4280 +
+  FINITE-EXACT; JC(2) OPEN].  The proved theta identity gives
+  `r(n)=12(sigma(n)-3 sigma(n/3))=12 sigma(m)>0` for `n=3^a m`,
+  `3` not dividing `m`; hence every `n` is a sum of two Eisenstein norms.
+  THM-4280's minimal uniform noncollapse contact is therefore exactly `2Q`
+  off multiples of four, `5Q` on `d=4N(e)`, and `3Q` on every remaining
+  `d=4n` shell.  Direct A2 convolution agrees with an independent divisor
+  sieve through `n=4096`.  Source/output SHA-256:
+  `95132bdd059d8199f5b57323c4ae7b67368a6c8142e66f583c87da5ac689fe22` /
+  `d45dfe9b247be56d0d80acd4ac7f27a7855c2b5dbc1e7c9cf21bb1d1e0729fc2`.
+
 - `jc23_integral_three_channel_fat_contact_observer*_thm4280.py` -> exact
   arithmetic compression of the THM-4279 formal-log observer [THM-4280
   PROVED RELATIVE TO THM-4241/4259/4272/4279 + VERIFIED-EXACT +

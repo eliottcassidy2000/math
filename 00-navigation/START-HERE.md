@@ -1,6 +1,6 @@
 # Start Here
 
-**Rolling brief — refreshed 2026-08-27.** This is a router, not a proof source;
+**Rolling brief — refreshed 2026-08-29.** This is a router, not a proof source;
 [`CURRENT-FRONTIER.md`](CURRENT-FRONTIER.md) owns status links.
 
 ## The five-minute orientation
@@ -21,8 +21,8 @@ Then read the routed frontier, guardrails, and theorem; logs are history.
 
 ## Seventeen high-signal facts
 
-1. **LRC(14) is first open.** THM-4282 leaves `23,373` fixed-pool pairs,
-   max endpoint `644` (seven rows); physical entry stays open.
+1. **LRC(14) is first open.** THM-4283 leaves `23,310` rows, top
+   `(256,638)`; physical entry stays open.
 2. **The `q <= 25` period claim is refuted.** THM-762/764 exhibit `26*{1,...,12} union {339}`, whose first good period is `27`.
 3. **Good-period existence is a maximum statement.** The tight resonant AP
    defeats average/count arguments; see MISTAKE-127/129/130.
@@ -55,7 +55,8 @@ Then read the routed frontier, guardrails, and theorem; logs are history.
     THM-2084/4218/4220 reach `M=10`; THM-4222/4232/4248 close `M=11` off
     `A*B*(A+B)=0`; THM-4226 closes `M=13`. On `M=12`, `W=0`, THM-4260
     exhausts `1,512` incidences, THM-4268 gives a non-effective collar, and
-    THM-4272 crosses `U+Z=0` honestly via `A_23`; raw descent/entry stay open.
+    THM-4272 crosses `U+Z=0` via `A_23`; THM-4284/4285 reduce the live bridge
+    to common-tangent preservation. Keller graph preservation/entry stay open.
 13. **Complete period-14 coordinates can be globally blind.** THM-2058 keeps
     every fixed-depth packet coordinate but exits at `47/113`; THM-2043/2047/
     2050 separate local completeness from global maxima.
