@@ -352,9 +352,10 @@ lift/phase clocks.
   an independent audit. At `Lambda=0`, THM-4272 gives the `A_23` wall and
   [THM-4289](../01-canon/theorems/THM-4289-a23-blowdown-observer-kahler-dualizing-quotient.md)
   identifies the exact ambient-Kahler loss `c/J_f`. THM-4291's abstract
-  degree-`42` genus-five tail has Keller order eight; THM-4292 proves every
-  separable or repeated `A_23` tail Keller-constant. The normalized wall
-  response degree, four coefficient walls, seam entry, and `JC(2)` stay open.
+  degree-`42` genus-five tail has Keller order eight, and THM-4292 makes every
+  `A_23` tail constant. THM-4293 replaces `34/42` by `34-2r/42-2r` and
+  excludes every noncritical order except `r=3`. That stratum, the repeated
+  discriminant, four coefficient walls, seam entry, and `JC(2)` stay open.
   Exceptional quartic: THM-3703/3737 give grammar/image, THM-4034 the
   conductor, and THM-4039/4043/4046 reach `J_7`, obstruct `J_8`, and close
   critical `H`. [THM-4054](../01-canon/theorems/THM-4054-exceptional-affine-simple-zero-retained-packet.md)

@@ -7,10 +7,12 @@ status: >
   genuine weighted exceptional face normalizes to a smooth genus-five tail
   carrying an abstract deck-equivariant degree-42 map to E0. The Keller
   invariant differential nevertheless vanishes there to vertical order
-  eight, so an actual Keller extension is constant on that tail. A general
-  positive-order statement is proved only for generically separable
-  divisorial faces; repeated-root refinements, full degree persistence,
-  exact-M=12 exclusion, and JC(2) remain open.
+  eight, so an actual Keller extension is constant on that tail. THM-4292
+  extends constancy to every repeated face. THM-4293 supersedes the
+  required-degree interpretation: this literal wall specialization has total
+  response degree 30 or 22, so the abstract degree-42 map is degree-mismatched.
+  The curve/map and order-eight statements remain proved; exact-M=12 and
+  JC(2) remain open.
 source: root/jc2-signal-20260830
 depends_on:
   - THM-4103-jc23-theta-boundary-ramification-and-degree-response
@@ -22,6 +24,8 @@ related:
   - THM-4284-a23-conductor-defect-and-degree-shell-first-character-nondescent
   - THM-4289-a23-blowdown-observer-kahler-dualizing-quotient
   - THM-4290-exact-weight-twelve-deck-equivariant-visible-quotient-exclusion
+  - THM-4292-lambda-zero-repeated-face-keller-extinction
+  - THM-4293-lambda-zero-normalized-response-degree-stratification
 script: 04-computation/jc23_lambda_zero_genus5_degree42_tail_thm4291.py
 output: 05-knowledge/results/jc23_lambda_zero_genus5_degree42_tail_thm4291.out
 script_sha256: 505ee506f08fbffb77452981d4b7f69ed6edc7c32421e095fb9e790b04ae526c
@@ -56,8 +60,8 @@ external: >
 
 **PROVED FORMAL-LOCAL RELATIVE TO THM-4103/4230 + VERIFIED-EXACT +
 INDEPENDENTLY AUDITED. THE ABSTRACT TAIL MAP IS NOT A KELLER
-SPECIALIZATION. REPEATED-ROOT REFINEMENTS, DEGREE PERSISTENCE, `M=12`, AND
-`JC(2)` REMAIN OPEN.**
+SPECIALIZATION. THM-4293 PROVES IT ALSO EXCEEDS THE LITERAL TOTAL RESPONSE
+DEGREE `30/22`. `M=12` AND `JC(2)` REMAIN OPEN.**
 
 ## 1. Statement and scope
 
@@ -95,8 +99,9 @@ a=7168/135.                                                          (2)
 >    character `10` occurs.
 > 2. For two explicit algebraic values of `U`, the abstract curve with action
 >    `(T_5,delta)` admits a nonconstant equivariant map to
->    `E_0:Y^2=X^3+1` of degree exactly `42`. Thus genus, deck character,
->    isogeny class, and degree alone do not exclude tail transfer.
+>    `E_0:Y^2=X^3+1` of degree exactly `42`. This is an abstract curve/action
+>    hostile, but THM-4293 proves that it is not degree-compatible with the
+>    literal wall response.
 > 3. The actual Keller pullback of the good-target invariant differential is
 >
 >    ```text
@@ -106,23 +111,24 @@ a=7168/135.                                                          (2)
 >    Hence it vanishes to exact vertical order eight on this tail. On every
 >    resolution where the Keller map extends, its restriction to the strict
 >    transform of `T_5` is constant. In particular, the degree-`42` map in
->    part 2 is an exact hostile to curve/action-only reasoning but is **not**
->    the Keller specialization.
+>    part 2 is **not** the Keller specialization.
 > 4. More generally, every divisorial face above this contact whose prepared
 >    quadratic initial form is generically separable has strictly positive
 >    Keller-differential order. Repeated initial roots and their subsequent
 >    Newton faces are not covered.
 
 The closest proved mechanism is THM-4103's Keller residue identity. The
-canonical hostile is the degree-`42` map in part 2. The corrected near miss is
-the replacement of a hypothetical genus-eleven smoothing by the literal
-equation below. The least-used decisive sidecar is not another character: it
-is the **vertical order of the Keller differential**.
+abstract hostile is the degree-`42` map in part 2; MISTAKE-531 and THM-4293
+correct its former required-degree interpretation. The other corrected near
+miss is the replacement of a hypothetical genus-eleven smoothing by the
+literal equation below. The least-used decisive sidecar is the **vertical
+order of the Keller differential**.
 
-This theorem proves no Keller point exists on the displayed coefficient
-specialization only if degree persistence to the remaining component is
-separately supplied. No such result is claimed here. It neither promotes the
-reserved THM-4290 nor closes exact `M=12` or `JC(2)`.
+THM-4292/4293 now prove that all tail degree vanishes and the literal response
+has degree `30` or `22`, excluding this `r=6` specialization by the central
+deck eigenspace. Those later consequences are not dependencies of the
+formal-local curve/map calculation proved here. Exact `M=12` and `JC(2)`
+remain open.
 
 ## 2. The literal infinity equation
 
@@ -470,16 +476,16 @@ test:       equation (38), then repeated-root Newton refinement.             (45
 
 Thus:
 
-1. A tail-free proof based only on genus, characters, isogeny class, or degree
-   is false: `(32)` is a minimal exact hostile at the required degree.
-   On this tail equivariance excludes degree `34` but permits degree `42`.
+1. The abstract tail supports an equivariant degree-`42` map, so character
+   absence alone is false. THM-4293 proves that the literal wall response is
+   instead `30/22`; `(32)` is not a required-degree hostile.
 2. For the displayed genuine tail, the Keller differential repairs the false
    inference and proves constancy.
 3. For every generically separable exceptional face, `(44)` supplies the same
    repair.
-4. Repeated-root faces remain open. Until they are controlled, one cannot put
-   all degree `34/42` on the genus-seven face and cannot invoke THM-4249's
-   degree-divisible-by-four deck eigenspace as a complete exclusion.
+4. THM-4292 later closes every repeated-root tail, and THM-4293 puts the
+   corrected degree `30/22` on the genus-seven face, excluding this `r=6`
+   specialization. The `r=3` and repeated-discriminant wall strata remain.
 5. The raw `A_23` residue at `sigma=0` is dualizing and may have poles; this
    theorem does not turn it into the ambient-regular Kähler form required by
    THM-4284/4288. There is no contradiction with their descent firewall.

@@ -9,6 +9,30 @@ Format per entry:
 - Why it was wrong
 - The correct framing
 
+## MISTAKE-531 (2026-08-30, THM-4230 degree interface at `Lambda=0`) -- a double top-edge root was counted twice with the simple-root response index
+
+- **What failed:** the exact-`M=12` response packet `42`, with finite-carrier
+  alternative `34`, was transported from `Lambda!=0` to `Lambda=0`. This
+  treats the colliding top-edge punctures as two simple points of local index
+  `11` even though their common edge root is double.
+- **First failed implication:** the edge-length/index rule used in THM-4230
+  assumes a nonzero edge derivative. On `W=Lambda=0`, `Z=-U`, the top edge is
+  `QU(1-w)^2(1+w)`. If the two normalized branches meet to order `r`, then
+  `ord_z(Fbar_w)=r`; the exact residue has order `10-r`, so each local map
+  index is `11-r`, not `11`.
+- **Minimal witness:** THM-4291's allowed genus-five specialization has
+  `r=6`. Its normalized genus is `12=7+5`, and its total response degree is
+  `30` or `22`, not `42` or `34`. The abstract equivariant degree-`42` tail
+  map is therefore already degree-mismatched to the literal wall family.
+- **Repaired statement:** on every noncritical stratum of THM-4293,
+  `d_full=42-2r`, `d_finite=34-2r`, and `g=18-r`. THM-4292 puts all this
+  degree on the central component. Deck/Eisenstein arithmetic excludes every
+  such stratum except `r=3`; the repeated-discriminant locus needs its own
+  normalized pole-divisor audit.
+- **Scope:** this does not alter THM-4230/4290 on `Lambda!=0`, nor the abstract
+  curve/map and differential-order calculations of THM-4291. It corrects the
+  wall-degree transport and the interpretation of the degree-`42` hostile.
+
 ## MISTAKE-530 (2026-08-29, THM-4283 proof-graph prose) -- two frozen SHA-256 identities were mistyped in the theorem body
 
 - **What failed:** THM-4283 displayed incorrect SHA-256 strings for its
