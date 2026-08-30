@@ -152,10 +152,14 @@ connected 72-family but a `5871+1` hostile), and THM-4276
 
 ## Recompute essentiality per consumer
 
-**Action/boundary:** recompute witnesses per consumer after restriction.
-THM-4281/4282 separate classifier, deck, and carrier; THM-4280
-separates complex, integral, affine-coset, and degree-shell observers.
-Essentiality does not transfer; this grammar gives no LRC--Jacobian map.
+**Trigger/action:** name downstream consumers before witness selection and
+intersect their admissibility coordinates with the source response universe.
+Recompute after restriction.
+
+**Boundary/evidence:** a greedy or source-minimum cover need not survive a
+consumer; classifier, deck, carrier, and union differ. THM-4283's 127 greedy
+decks miss four eligible rows; consumer-aware covers close 640.
+THM-4280--4282 are controls; transfer needs a lawful map.
 
 ## Certify before projection
 
