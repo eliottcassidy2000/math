@@ -1,16 +1,41 @@
 # Script Results Index
 
-- `lrc14_endpoint638_carrier_response_thm4283/*` -> one-mask carrier descent
-  and exact next response wall [THM-4283 PROVED RELATIVE TO THM-4282 +
-  FINITE-EXACT + DETACHED LITERAL-WALL AUDIT PASS; physical entry and LRC(14)
-  OPEN]. Appending `014c9084={15,42,85,120,143,145,176,193}` to the
-  8,996 carrier closes 63 rows: all endpoints `644..639` and eight of nine
-  endpoint-638 rows. The exact complement has `23,310` rows and unique top
-  `(256,638)`. At `(256,644)`, two failed bodies have 367 active full
-  responders and exact minimum one. The new singleton has 40 failures, 315
-  response classes, no one-mask responder, and exact pair-local minimum nine;
-  its witness is not globally appended. The detached all-body transcript has
-  ledger `cbe0c99a6d552e23` and zero failures. Packet `SHA256SUMS` SHA-256:
+- `lrc14_endpoint_carrier_signature_surgery_thm4283/*` -> current endpoint
+  carrier and complete top-signature-fibre proof graph [THM-4283 PROVED
+  RELATIVE TO THM-4282 + FINITE-EXACT + DETACHED LITERAL-WALL AUDITS PASS;
+  physical entry and LRC(14) OPEN]. Twelve explicit common decks realize the
+  complete 640-row top-signature fibre. A separately typed 9,006-mask carrier
+  closes all 64 rows at endpoints `638..644`; the two sets overlap in 13 rows,
+  so their exact union removes 691 post-THM4282 rows. The current complement
+  has `22,682` rows, maximum endpoint `637`, and top
+  `(100,637),(294,637),(520,637)`. The union is not one common deck. Packet
+  `SHA256SUMS` SHA-256:
+  `51aab45c9e098740a0f3b9985f8c45cbcdac1a25d8cc9bcc35e4d1281b79d135`.
+
+- `lrc14_signature_response_congruence_thm4286/*` -> inactive-signature
+  response nonfactorization and two alternate common-deck surgeries
+  ([THM-4286](../../01-canon/theorems/THM-4286-signature-response-nonfactorization-and-two-deck-surgeries.md)):
+  **PROVED RELATIVE TO THM-4282/THM-4283 + FINITE-EXACT + DETACHED
+  LITERAL-WALL AUDITS PASS; zero current ledger decrement; physical entry and
+  LRC(14) OPEN.** Across 17,604 inactive-signature fibres, the four audited
+  THM-4282 predicates have respectively `6,15,34,48` mixed fibres. Two
+  different exact 421-mask decks certify disjoint 36-row post-THM4282 sets,
+  but all 72 rows lie inside current THM-4283's 691-row proof union. They are
+  alternative certificate nodes, not a common deck on their union; the
+  current residual therefore remains `22,682` with the same endpoint-637
+  top. Packet `SHA256SUMS` SHA-256:
+  `cd20dfa49fd678263e4fae238eba37abf314dde83d8485342ca8f477b10eb403`.
+
+- `lrc14_endpoint638_carrier_response_thm4283/*` -> independently produced
+  narrow sibling audit of THM-4283's one-mask endpoint prefix and exact next
+  response wall [FINITE-EXACT + DETACHED LITERAL-WALL AUDIT PASS]. Its
+  artifact-local 63-row closure and `23,310`-row complement predate the
+  strengthened 691-row proof union and are not the current ledger. At
+  `(256,644)`, two failed bodies have 367 active full responders and exact
+  minimum one; the endpoint-638 singleton has 40 failures, 315 response
+  classes, no one-mask responder, and exact pair-local minimum nine. The
+  detached all-body transcript has ledger `cbe0c99a6d552e23` and zero
+  failures. Packet `SHA256SUMS` SHA-256:
   `5e4f27ac7854121dcde44f51a1fab076848d8feb15bd2e30a168b295543162d2`.
 
 - `jc23_a23_conductor_graph_spectrum_thm4284.py` -> exact formal-local

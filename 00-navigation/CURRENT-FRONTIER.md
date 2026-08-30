@@ -8,9 +8,9 @@
 
 ### Headline
 
-**OPEN.** THM-2923 closes all `3,432` seven-in-window roots; the direct
-remainder has at most six in-window speeds.
-THM-2051/2052 leave a rank-`>=11` sparse code; failed gates are not danger.
+**OPEN.** THM-2923 closes all `3,432` seven-window roots; the remainder has
+at most six speeds. THM-2051/2052 leave a sparse code of rank `>=11`; failed
+gates are not danger.
 
 ### Proved reductions and terminals
 
@@ -60,8 +60,9 @@ is the safe control `M(S_13)=99/338`. No cited result proves LRC(14).
   firewalls. THM-4110 finds `64` AP13 sheets; THM-4116 gives
   `2^(c(F)-1)`. Safety/arrival stay open.
 - **Owner/tail:** [THM-4283](../01-canon/theorems/THM-4283-endpoint-644-carrier-response-and-signature-fibre-surgery.md)
-  closes 691 typed rows, leaving `22,682`, max `637`, top
-  `(100,637),(294,637),(520,637)`; physical entry/LRC(14) stay open.
+  leaves `22,682`, top `r=637` at `q=100,294,520`. THM-4286: response
+  nonfactorization, two exact 36-row decks, zero new rows (subsumed). THM-4287
+  is **RESERVED**; entry/LRC(14) stay open.
 - **PROVED:** [THM-2928](../01-canon/theorems/THM-2928-critical-seven-comb-grid-tensorization-and-drift-tariff.md)/2941: literal zero/one/two/three-drift sectors are empty; `k=2,3` are finite.
 - **Orthogonal routes.** THM-1017 is HYP-6820; THM-2047/2050 keep phase/exit; THM-731/2048 prune; THM-1290 ends at `55`; HYP-8900 nonuniform.
 - **PROVED micro-staircase:** THM-3316/3317 close primes/sparse fragility;

@@ -1,6 +1,6 @@
 # Start Here
 
-**Rolling brief — refreshed 2026-08-29.** This is a router, not a proof source;
+**Rolling brief — refreshed 2026-08-29.** Router only;
 [`CURRENT-FRONTIER.md`](CURRENT-FRONTIER.md) owns status links.
 
 ## The five-minute orientation
@@ -9,20 +9,20 @@
 2. **Do not chase old shortcuts:** uniform good period `q <= 25` is false; uniform emptiness of the twelve-speed sporadic branch remains open.
 3. **Major closures:** THM-2022 proves NC2/GMC(2), and THM-2801 makes the Special Image boundary true at one pair and false from two; neither settles the restricted planar-JC sectors.
 4. **Truth discipline:** corrected canon outranks canon, exact computation, hypothesis, synthesis, and historical prose.
-5. **Research posture:** use Anchor / Niche / Wildcard; demand mechanisms, hostile controls, and preserved/lost coordinates.
+5. **Research posture:** Anchor / Niche / Wildcard; require mechanisms, hostiles, and preserved/lost coordinates.
 
-Run the bounded packet before reading large files:
+Run this bounded packet first:
 
 ```bash
 python3 agents/start_session.py --topic "<target statement or object>"
 ```
 
-Then read the routed frontier, guardrails, and theorem; logs are history.
+Then read frontier, guardrails, theorem; logs are history.
 
 ## Seventeen high-signal facts
 
-1. **LRC(14) is first open.** THM-4283 leaves `22,682` rows, max endpoint
-   `637`; physical entry stays open.
+1. **LRC(14) is first open.** Residual `22,682`, max `637` (THM-4283);
+   THM-4286 adds zero, THM-4287 is **RESERVED**, and entry stays open.
 2. **The `q <= 25` period claim is refuted.** THM-762/764 exhibit `26*{1,...,12} union {339}`, whose first good period is `27`.
 3. **Good-period existence is a maximum statement.** The tight resonant AP
    defeats average/count arguments; see MISTAKE-127/129/130.
