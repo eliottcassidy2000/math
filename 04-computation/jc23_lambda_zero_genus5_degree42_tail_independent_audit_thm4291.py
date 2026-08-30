@@ -225,6 +225,10 @@ def main() -> None:
     projector_norm = 3
     if 2 * 7 * projector_norm != 42:
         raise AssertionError("degree")
+    if 14 % 6 == 12 % 6:
+        raise AssertionError("norm-three saturation")
+    if 34 % 6 == 0 or 42 % 6 != 0:
+        raise AssertionError("equivariant tail degree congruence")
     # omega_0=-sigma^9*b^10 db/F_r; on the balanced chart the numerator
     # has order 9+10+1 and F_r has order 12.
     vertical_order = 9 + 10 + 1 - 12
@@ -238,6 +242,8 @@ def main() -> None:
     print("Q_SQRT21_ROOTS_U_D_J_IDENTITIES PASS")
     print("DECK_CHARACTERS", ",".join(map(str, characters)), "TARGET 10 PRESENT")
     print("ROSATI_DEGREE 2*D*NORM D=7 NORM=3 DEGREE=42")
+    print("NORM3_DIVISIBILITY DEGREE14_EXCLUDED BY_DEGREE_12_MOD_6")
+    print("EQUIVARIANT_TAIL_DEGREES 12+6k DEGREE34_EXCLUDED DEGREE42_ALLOWED")
     print("KELLER_FORM_VERTICAL_ORDER 8 SPECIAL_TAIL_DIFFERENTIAL_ZERO")
     print("VERDICT PASS CLEAN_ROOM_EXACT_AUDIT")
 

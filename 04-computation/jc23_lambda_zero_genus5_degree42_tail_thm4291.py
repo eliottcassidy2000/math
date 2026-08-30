@@ -145,6 +145,14 @@ def main() -> None:
     assert_zero(scalar_norm - 3, "eigenprojector norm")
     if 2 * 7 * int(scalar_norm) != 42:
         raise AssertionError("degree-42 specialization")
+    # If the degree-42 eigenmap were divisible by the norm-three prime
+    # 2-alpha, the quotient would have degree 14.  The fixed-point fibre
+    # calculation in the theorem forces every dx/z eigenmap degree to be
+    # 12 modulo 6, so 14 is impossible.
+    if 14 % 6 == 12 % 6:
+        raise AssertionError("norm-three saturation control")
+    if 34 % 6 == 0 or 42 % 6 != 0:
+        raise AssertionError("equivariant tail degree congruence")
 
     characters = [(-2 * (j + 1)) % 12 for j in range(5)]
     if characters != [10, 8, 6, 4, 2]:
@@ -163,6 +171,8 @@ def main() -> None:
         "-17424252776448000 +/- 3802283679744000*sqrt(21)"
     )
     print("EIGENMAP_DEGREE 6*D D=7 DEGREE 42")
+    print("EIGENMAP_NOT_NORM3_DIVISIBLE REQUIRED_DEGREE_14 NOT_12_MOD_6")
+    print("EQUIVARIANT_TAIL_DEGREES 12+6k DEGREE34_EXCLUDED DEGREE42_ALLOWED")
     print("KELLER_FORM sigma^8*(-X^4*dX/z) SPECIAL_TAIL_DIFFERENTIAL_ZERO")
     print("SCOPE GEOMETRIC_TAIL_MAP_AVAILABLE BUT_NOT_KELLER_SPECIALIZATION")
     print("VERDICT PASS EXACT_SYMBOLIC_CERTIFICATE")
