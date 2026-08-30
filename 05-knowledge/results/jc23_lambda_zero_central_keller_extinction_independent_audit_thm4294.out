@@ -1,0 +1,12 @@
+THM4294_LAMBDA_ZERO_CENTRAL_EXTINCTION_INDEPENDENT_V1
+UNIVERSE exact_M12 W=Lambda=0 Z=-U U!=0 characteristic_zero
+SPARSE_IDENTITY G0=(S^2-P)C GP=-C+(S^2-P)C_P PASS
+C=1-U*P^6+U*S^4*P^4 CP=-6*U*P^5+4*U*S^4*P^3
+GENERIC_NONVANISH P=0:1 P=S^2:1 critical_remainder=1+(4/27)U*S^12
+EXPONENT_LEDGER Q=12 ds=-1 original=11 eta_conversion=2 eta_vertical=9
+CENTRAL_MAP constant_by_good_invariant_form_reduction
+COMPONENT_LEDGER C+THM4292_tails+rational_exceptionals ALL_CONSTANT
+DEGREE_LEDGER positive_generic=sum_multiplicity_times_zero IMPOSSIBLE
+R3_CONTROL target_parameter_order=2 differential_order=1 NONCONSTANT
+SCOPE W_Lambda_zero_slice_closed general_Lambda_wall_seam_entry_JC2_open
+CHECKS=14

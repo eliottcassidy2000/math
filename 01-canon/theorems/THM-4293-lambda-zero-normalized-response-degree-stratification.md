@@ -7,8 +7,10 @@ status: >
   the two collision indices from 11 to 11-r. The normalized response degrees
   are 42-2r or 34-2r, not 42 or 34, and the normalized genus is 18-r. Uniform
   tail extinction and the exact deck eigenlattice exclude every noncritical
-  stratum r=1,...,6 except r=3. The repeated-discriminant locus and r=3 remain
-  open; exact-M=12 entry and JC(2) are not proved.
+  stratum r=1,...,6 except r=3. THM-4294 subsequently excludes both r=3 and
+  the repeated-discriminant locus on this `W=Lambda=0` slice by
+  central-component extinction. The general coefficient wall, exact-M=12
+  entry, and JC(2) are not proved.
 source: root/jc2-signal-20260830
 depends_on:
   - THM-4103-jc23-theta-boundary-ramification-and-degree-response
@@ -19,6 +21,7 @@ depends_on:
 related:
   - THM-4249-w0-cyclic-projector-missing-eigenline-attachment-squeeze
   - THM-4291-lambda-zero-genus-five-tail-degree-forty-two-equivariant-hostile
+  - THM-4294-lambda-zero-central-keller-extinction
 primary_script: 04-computation/jc23_lambda_zero_normalized_response_degree_stratification_thm4293.py
 primary_output: 05-knowledge/results/jc23_lambda_zero_normalized_response_degree_stratification_thm4293.out
 primary_script_sha256: 810ca8458fe56ae413f89cd76f900eecf58a7470d982a4e9c25354d944da7708
@@ -40,8 +43,9 @@ audit: >
 
 **PROVED RELATIVE TO THM-4103/4120/4230/4290/4292 + VERIFIED-EXACT +
 INDEPENDENTLY AUDITED. FIVE OF THE SIX NONCRITICAL `Lambda=0` COLLISION
-STRATA ARE EXCLUDED. ONLY `r=3` AND THE REPEATED-DISCRIMINANT LOCUS SURVIVE
-THIS WALL AUDIT. `JC(2)` REMAINS OPEN.**
+STRATA FAIL THE DEGREE SIEVE; `r=3` SURVIVES IT. THM-4294 LATER CLOSES THE
+SURVIVOR AND REPEATED LOCUS ON THIS SLICE. THE GENERAL `Lambda=0` WALL AND
+`JC(2)` REMAIN OPEN.**
 
 ## 1. Statement
 
@@ -318,9 +322,12 @@ each of two local indices.
 
 ## 8. Scope and reproduction
 
-This theorem closes five noncritical strata of the `W=Lambda=0`, `U!=0`
-wall. It does not close `r=3`, the repeated-discriminant locus `(23)`, the
-walls `U=0`, `Z=0`, or `D=0`, exact-`M=12` seam entry, `JC(2)`, or `DC(2)`.
+This theorem's degree sieve closes five noncritical strata of the
+`W=Lambda=0`, `U!=0` wall. It does not itself close `r=3` or the
+repeated-discriminant locus `(23)`; THM-4294 later closes both by a different
+central-differential mechanism on this slice. The general `Lambda=0` wall,
+the walls `U=0`, `Z=0`, and `D=0`, exact-`M=12` seam entry, `JC(2)`, and
+`DC(2)` remain open.
 
 Run
 

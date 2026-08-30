@@ -28,7 +28,8 @@ Format per entry:
   `d_full=42-2r`, `d_finite=34-2r`, and `g=18-r`. THM-4292 puts all this
   degree on the central component. Deck/Eisenstein arithmetic excludes every
   such stratum except `r=3`; the repeated-discriminant locus needs its own
-  normalized pole-divisor audit.
+  normalized pole-divisor audit at this stage. THM-4294 later bypasses both
+  survivors by proving the central component itself Keller-constant.
 - **Scope:** this does not alter THM-4230/4290 on `Lambda!=0`, nor the abstract
   curve/map and differential-order calculations of THM-4291. It corrects the
   wall-degree transport and the interpretation of the degree-`42` hostile.

@@ -7,9 +7,9 @@ status: >
   exceptional divisorial component above the unique A23 contact has strictly
   positive Keller-differential order, including every repeated-root and
   subsequent Newton-Puiseux face. Hence every such component is
-  Keller-constant in characteristic zero. This proves uniform local tail
-  extinction, but does not by itself close the wall, prove seam entry, or
-  prove JC(2).
+  Keller-constant in characteristic zero. THM-4294 combines this uniform tail
+  extinction with exact central order nine to close the `W=Lambda=0` slice.
+  The general coefficient wall, seam entry, and JC(2) remain open.
 source: root/jc2-signal-20260830
 depends_on:
   - THM-4103-jc23-theta-boundary-ramification-and-degree-response
@@ -19,6 +19,7 @@ depends_on:
 related:
   - THM-4289-a23-blowdown-observer-kahler-dualizing-quotient
   - THM-4290-exact-weight-twelve-deck-equivariant-visible-quotient-exclusion
+  - THM-4294-lambda-zero-central-keller-extinction
 primary_script: 04-computation/jc23_lambda_zero_repeated_face_keller_extinction_thm4292.py
 primary_output: 05-knowledge/results/jc23_lambda_zero_repeated_face_keller_extinction_thm4292.out
 primary_script_sha256: e334a32d20c1b0d8421622c94dbb6d38aa380730d663f416a5cf15481534ab19
@@ -40,8 +41,9 @@ audit: >
 # THM-4292 -- Lambda-zero repeated-face Keller extinction
 
 **PROVED RELATIVE TO THM-4103/4230/4272/4291 + VERIFIED-EXACT +
-INDEPENDENTLY AUDITED. THE REPEATED-TAIL GAP IS CLOSED LOCALLY. THE COMPLETE
-WALL, SEAM ENTRY, AND `JC(2)` REMAIN OPEN.**
+INDEPENDENTLY AUDITED. THE REPEATED-TAIL GAP IS CLOSED LOCALLY. THM-4294
+LATER CLOSES THE `W=Lambda=0` SLICE; THE GENERAL WALL, SEAM ENTRY, AND `JC(2)`
+REMAIN OPEN.**
 
 ## 1. Statement
 
@@ -415,7 +417,9 @@ This theorem closes the repeated-tail obstruction left by THM-4291 and proves
 that no positive-genus exceptional tail can carry Keller degree. It does not
 by itself determine the response degree on `Lambda=0`, descend the resolved
 graph through the raw `A_23` contact, close the wall, prove exact-`M=12` seam
-entry, or prove `JC(2)` or `DC(2)`.
+entry, or prove `JC(2)` or `DC(2)`. THM-4294 later closes this
+`W=Lambda=0` slice without raw contact descent by proving the central map
+constant and conserving degree.
 
 Run
 

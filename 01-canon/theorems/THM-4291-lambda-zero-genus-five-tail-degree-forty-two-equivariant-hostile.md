@@ -26,6 +26,7 @@ related:
   - THM-4290-exact-weight-twelve-deck-equivariant-visible-quotient-exclusion
   - THM-4292-lambda-zero-repeated-face-keller-extinction
   - THM-4293-lambda-zero-normalized-response-degree-stratification
+  - THM-4294-lambda-zero-central-keller-extinction
 script: 04-computation/jc23_lambda_zero_genus5_degree42_tail_thm4291.py
 output: 05-knowledge/results/jc23_lambda_zero_genus5_degree42_tail_thm4291.out
 script_sha256: 505ee506f08fbffb77452981d4b7f69ed6edc7c32421e095fb9e790b04ae526c
@@ -485,7 +486,9 @@ Thus:
    repair.
 4. THM-4292 later closes every repeated-root tail, and THM-4293 puts the
    corrected degree `30/22` on the genus-seven face, excluding this `r=6`
-   specialization. The `r=3` and repeated-discriminant wall strata remain.
+   specialization. THM-4294 then proves exact order nine on that central face
+   and closes the `r=3` and repeated-discriminant strata on the same
+   `W=Lambda=0` slice. The general `Lambda=0` coefficient wall is not claimed.
 5. The raw `A_23` residue at `sigma=0` is dualizing and may have poles; this
    theorem does not turn it into the ambient-regular Kähler form required by
    THM-4284/4288. There is no contradiction with their descent firewall.
