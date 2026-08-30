@@ -237,6 +237,7 @@ u64 scan_body_cover(const std::vector<u32>& deck, u64& checks,
 
 }  // namespace
 
+#ifndef SINGLETON_LITERAL_LIBRARY_ONLY
 int main(int argc, char** argv) {
     try {
         std::cout.setf(std::ios::unitbuf);
@@ -356,3 +357,4 @@ int main(int argc, char** argv) {
         return 1;
     }
 }
+#endif

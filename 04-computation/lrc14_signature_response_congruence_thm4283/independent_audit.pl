@@ -53,10 +53,18 @@ sub slurp_raw {
     return $bytes;
 }
 
+sub canonical_lf {
+    my ($bytes) = @_;
+    $bytes =~ s/\r\n/\n/g;
+    return $bytes;
+}
+
 for my $name (sort keys %inputs) {
     my ($path, $expected_hash) = @{$inputs{$name}};
     die "missing input $path\n" unless -f $path;
-    my $actual_hash = sha256_hex(slurp_raw($path));
+    # Packet hashes are over canonical LF text; tolerate Git-for-Windows CRLF
+    # checkout transport for older CSVs.
+    my $actual_hash = sha256_hex(canonical_lf(slurp_raw($path)));
     die "$name SHA-256 changed: $actual_hash\n"
         unless $actual_hash eq $expected_hash;
 }
@@ -82,12 +90,14 @@ open my $signature_handle, "<", $signature_path
     or die "cannot open $signature_path: $!\n";
 my $header = <$signature_handle>;
 chomp $header;
+$header =~ s/\r\z//;
 die "signature header changed\n"
     unless $header eq "q,r,inactive_count,w0,w1,w2,w3,w4,w5,w6";
 my $line_number = 1;
 while (my $line = <$signature_handle>) {
     ++$line_number;
     chomp $line;
+    $line =~ s/\r\z//;
     my @fields = split /,/, $line, -1;
     die "bad signature row $line_number\n" unless @fields == 10;
     my ($q, $r, $inactive_count, @words) = @fields;
@@ -130,6 +140,7 @@ for my $name (@target_names) {
     while (my $line = <$handle>) {
         ++$row_number;
         chomp $line;
+        $line =~ s/\r\z//;
         die "bad $name row $row_number\n" unless $line =~ /^(\d+),(\d+)$/;
         my $pair = "$1,$2";
         die "duplicate $name pair $pair\n" if exists $pairs{$pair};

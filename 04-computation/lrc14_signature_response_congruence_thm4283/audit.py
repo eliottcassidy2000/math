@@ -98,7 +98,10 @@ def fail(message: str) -> None:
 
 
 def file_sha256(path: Path) -> str:
-    return hashlib.sha256(path.read_bytes()).hexdigest()
+    # The frozen packet hashes canonical LF text.  Git-for-Windows may expose
+    # an older CSV with CRLF when that packet predates the repository-wide CSV
+    # attribute, so normalize only the transport newline before hashing.
+    return hashlib.sha256(path.read_bytes().replace(b"\r\n", b"\n")).hexdigest()
 
 
 def require_input(spec: InputSpec) -> None:
