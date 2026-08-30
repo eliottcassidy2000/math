@@ -1,0 +1,15 @@
+THM4292_LAMBDA_ZERO_REPEATED_FACE_KELLER_EXTINCTION_INDEPENDENT_V1
+UNIVERSE exact_M12 W=0 Z=-U char0 U!=0 local_q=0_prepared_factor
+LITERAL_RECONSTRUCTION F=q*(h-b^12)+q^2*V-t^12/2 V(0,0)=2U PASS
+NEWTON_TRICHOTOMY lambda<6tau lambda=6tau lambda>6tau PASS
+BETA_LT_S slopes=1/11,1/5,1/3,1/2,5/7 terminal_discriminant=x^2+4U NONZERO_ROOTS_SIMPLE
+BETA_EQ_S discriminant=(c-X^6)^2+4U special=X^6*(X^6-2c) ONLY_MULTIPLE_ROOT_X0
+CRITICAL_COEFFICIENTS C1=alpha11/c^2 C2=upsilon5/c^2+8/(3c) C3=eta/c^2 C4=(Delta+32/9-3c)/c^2
+MAXIMAL_CANCELLATION c=5152/405 Delta=4672/135 upsilon5=-8c/3 U=-c^2/4 C1=C2=C3=C4=0
+MAXIMAL_WITNESS s=1 beta=6 canceled_gaps=14,28 b_gap=30 O_t6_gap=42 form_order=18
+EQUALITY_RATIOS j1=7/5 j2=2 j3=3 j4=5 NONZERO_ROOTS_SIMPLE X0_ADVANCES_BETA
+FORM_ORDERS b=6s+2beta j1=(5s+9beta)/2 j2=2s+4beta j3=(3s+7beta)/2 j4=s+3beta ALL_POSITIVE
+CONTROLS grid=7080 randomized=4096 seed=4292
+RESTRICTED_THM4291 C2=8/(3a)!=0 equality_beta_over_s=2 collision_order=10s
+SCOPE repeated_faces_extinguished degree_persistence_and_JC2_not_claimed
+VERDICT PASS STANDARD_LIBRARY_EXACT_INDEPENDENT_AUDIT

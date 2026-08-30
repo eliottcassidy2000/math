@@ -1,0 +1,15 @@
+THM-4292 PRIMARY EXACT AUDIT: PASS
+critical_coefficients:
+  C1=alpha_11/c**2
+  C2_after_C1=0=(8*c + 3*upsilon_5)/(3*c**2)
+  C3_after_C1_C2=0=eta/c**2
+  C4_after_C1_C2_C3=0=-(-9*Delta + 27*c - 32)/(9*c**2)
+maximal_cancellation:
+  c=5152/405, Delta=4672/135, upsilon_5=-41216/1215
+equality_rows: j,s,beta,beta/s,form_order
+  1,5,7,7/5,44
+  2,4,8,2,40
+  3,3,9,3,36
+  4,2,10,5,32
+maximal_hostile: s=1,beta=6,b_gap=30,t2_gap=14,t4_gap=28,form_order=18
+scope: all divisorial refinements of the local prepared quadratic; U!=0; characteristic zero
