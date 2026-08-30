@@ -205,7 +205,7 @@ Therefore
 ```text
 K={p in U_4282:638<=second(p)<=644},
 |K|=64, FNV=c230e22462f7f3ab,
-SHA256=36baf650ff0d7f8db8c8fb264693f5668302e61a8bd34dbb29f21767dcd31f00.
+SHA256=36baf6505a470f0bd63e306b5bafc895fb37841187d6a407cb67f7d5e5a2c2a3.
                                                                (9)
 ```
 
@@ -369,7 +369,7 @@ The carrier family `(9)` and common family `(18)` overlap in
 ```text
 |G intersect K|=13,
 FNV=c9171a79d21e375d,
-SHA256=4660a98fc1c7ca28b2f895cb06cd7269728237a443249662284fd70cdaa67f67.
+SHA256=4660a98fcfc14a2f4319df70a3fec52f8848771312121b970bd017eceaa67f67.
                                                                (20)
 ```
 

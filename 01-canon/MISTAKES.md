@@ -9,6 +9,24 @@ Format per entry:
 - Why it was wrong
 - The correct framing
 
+## MISTAKE-530 (2026-08-29, THM-4283 proof-graph prose) -- two frozen SHA-256 identities were mistyped in the theorem body
+
+- **What failed:** THM-4283 displayed incorrect SHA-256 strings for its
+  64-row carrier band and 13-row carrier/common overlap.  The strings did not
+  match the maintained ledgers.
+- **Exact correction:** `carrier_band64.csv` has SHA-256
+  `36baf6505a470f0bd63e306b5bafc895fb37841187d6a407cb67f7d5e5a2c2a3`;
+  `carrier_common_overlap.csv` has SHA-256
+  `4660a98fcfc14a2f4319df70a3fec52f8848771312121b970bd017eceaa67f67`.
+  The packet `SHA256SUMS`, primary Python transcript, independent Ruby
+  transcript, and both source pins already carried these correct values.
+- **Impact / repair:** this was prose transcription only.  The `64/13/691`
+  counts, FNVs, proof-graph union, residual `22,682`, and theorem mechanism
+  are unchanged.  The two theorem-body strings are corrected.
+- **Reusable rule:** displayed artifact identities must be copied from, and
+  checked against, the frozen manifest or two agreeing executable replays;
+  matching prefixes are not an identity audit.
+
 ## MISTAKE-529 (2026-08-29, historical HYP-1556/HYP-1557 tournament-topos synthesis) -- a repeated numeral and a carrier-category switch were treated as a Lawvere bridge
 
 - **What failed:** the historical reflection

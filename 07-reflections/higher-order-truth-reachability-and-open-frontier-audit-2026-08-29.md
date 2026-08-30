@@ -48,8 +48,9 @@ recursive orbit in F_2
 The decisive finite step is not merely that every finite layer can see only
 finitely much.  Its equivalence relation is proved stable under the successor
 `S`, and coprincipal predicates separate points outside the target union.
-Without those two facts the impredicative `Reach` formula would not identify
-the intended external orbit.
+Without those two facts the argument would not force
+`theta=exists u (Reach(u) and Z(u))` to equal the external orbit-observable
+union `A=union_n Z(u_n)`.
 
 The exact source audit, typo repairs, free-rank boundary, and the positive
 etale-finite boundary of Abbadini--Almeida--Arrieta are recorded in

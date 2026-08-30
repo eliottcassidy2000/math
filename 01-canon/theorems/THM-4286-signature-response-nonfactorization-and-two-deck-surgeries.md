@@ -327,7 +327,7 @@ ledger is
 |C_4283|=691,
 |G_396|=36,                 |C_4283 intersect G_396|=36,
 |G_2|=36,                   |C_4283 intersect G_2|=36,
-G_396 intersect G_2=empty.                              (21)
+G_396 intersect G_2=empty.                              (20)
 ```
 
 Consequently
@@ -335,7 +335,7 @@ Consequently
 ```text
 |G_396 union G_2|=72,
 G_396 union G_2 subset C_4283,
-|C_4283 union G_396 union G_2|=691.                     (22)
+|C_4283 union G_396 union G_2|=691.                     (21)
 ```
 
 The alternate-node 72-row union has FNV `4f8f4c79707540a6` and SHA-256
@@ -363,19 +363,19 @@ preserved predicate: common activity plus disjoint cover of every nine-body;
 destroyed by I_E:    appended-mask margins and response validity;
 required sidecars:   actual deck, deleted indices, labelled bodies, pair,
                      exact margins, and certificate-node type;
-cheapest hostile:    any mixed fibre in (7)--(9).       (23)
+cheapest hostile:    any mixed fibre in (7)--(9).       (22)
 ```
 
 Ye--Xu's very recent preprint on higher-order truth uses finite observer
 equivalences only after proving they are successor congruences and preserve
-the separating predicates.  Equation `(23)` is the finite analogue of that
+the separating predicates.  Equation `(22)` is the finite analogue of that
 validity gate: the old signature quotient fails before any reachability
 closure can be sound.  The paper supplied the research lens, not a logical
 dependency; its exact source status and two repairable typographical errors
 are recorded in
 `05-knowledge/reference/CORE-PAPERS-HEYTING-HIGHER-ORDER-TRUTH-2026-08-29.md`.
 
-The refined data in `(23)` are exact only for the fixed surgery menus tested
+The refined data in `(22)` are exact only for the fixed surgery menus tested
 here.  No finite Nerode quotient, transition closure over all decks, or
 minimal global certificate language is proved.  No common deck is asserted
 on the 72-row union, no current ledger decrement or carrier replacement is
