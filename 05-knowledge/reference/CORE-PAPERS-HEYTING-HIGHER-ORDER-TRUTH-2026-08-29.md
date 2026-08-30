@@ -139,6 +139,12 @@ constructed first.
 
 ## Repo consumers and guardrails
 
+- [THM-4289](../../01-canon/theorems/THM-4289-a23-blowdown-observer-kahler-dualizing-quotient.md)
+  applies only the finite-observer congruence test. A depth predicate `P_j`
+  factors through a linear jet observer exactly when its kernel lies in
+  contact depth `j`; `P_(s+1)` is descent to curve `D_s`. The fixed `A_23`
+  chain has twelve order states, so the
+  paper's infinite-antichain/completion obstruction does not activate.
 - [THM-4286](../../01-canon/theorems/THM-4286-signature-response-nonfactorization-and-two-deck-surgeries.md)
   uses only the finite-observer audit principle: a response predicate factors
   through a signature quotient iff every signature fibre is pure.  Its exact

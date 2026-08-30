@@ -1,6 +1,6 @@
 # Current Frontier
 
-**State — 2026-08-29.** Proof links; statuses: **PROVED**, **CITED**,
+**State — 2026-08-30.** Proof links; statuses: **PROVED**, **CITED**,
 **FINITE-EXACT**, **VERIFIED**, **CONDITIONAL**, **OPEN**, **RESERVED**,
 **REFUTED**, **SUPERSEDED**.
 
@@ -343,19 +343,17 @@ lift/phase clocks.
   challenges `(3,9),(5,6),(7,5),(11,4),(13,4)` all remain **OPEN**; the public
   `131199`-field file is a named finite population, not a world census.
 - **Jacobian/Dixmier:** `JC(2),DC(2)` remain **OPEN**. THM-4130--4220 close
-  `M=8--10`; THM-4222/4232/4248 close `M=11` off `A*B*(A+B)=0`, THM-4226
-  closes dense `M=13`; THM-4230 reduces `M=12` to hidden `E_0`. At `W=0`,
-  THM-4241/4247/4249/4253/4260 close all `1,512` gates;
-  THM-4258/4259/4264/4275 give exact observers; opposite-parity pairs preserve
-  fibres. THM-4265 proves wall roots simple
-  (lift conditional); THM-4268 gives a non-effective collar.
-  THM-4272 crosses `Lambda=0` via `A_23`; THM-4279/4280 give integral
-  formal-log orders `{1,2,4}` and sharp faithful `5Q`.
-  [THM-4285](../01-canon/theorems/THM-4285-universal-two-eisenstein-norm-shell-and-exact-contact-trichotomy.md)
-  completes shell noncollapse (`2Q/3Q/5Q`).
-  [THM-4284](../01-canon/theorems/THM-4284-a23-conductor-defect-and-degree-shell-first-character-nondescent.md)
-  isolates common tangent; THM-4288 gives its dual-number fibre and defect
-  `c_C'-c_R'-c_E'`. Ambient bridge open.
+  `M=8--10`; THM-4222/4232/4248 close `M=11` off its walls, and THM-4226
+  closes dense `M=13`.
+  [THM-4290](../01-canon/theorems/THM-4290-exact-weight-twelve-deck-equivariant-visible-quotient-exclusion.md)
+  closes the complete exact-`M=12` gate `U*Z*D*Lambda!=0`: deck equivariance
+  forces the special map through `C/<tau^6>`, so its degree is divisible by
+  four, contradicting `34/42`. THM-4260's `W=0` incidence exhaustion remains
+  an independent audit. At `Lambda=0`, THM-4272 gives the `A_23` wall and
+  [THM-4289](../01-canon/theorems/THM-4289-a23-blowdown-observer-kahler-dualizing-quotient.md)
+  identifies the exact ambient-Kahler loss `c/J_f`; the resolved Keller
+  degree/allocation bridge is still missing. The `A_23` wall, the other three
+  coefficient walls, seam entry, and `JC(2)` remain open.
   Exceptional quartic: THM-3703/3737 give grammar/image, THM-4034 the
   conductor, and THM-4039/4043/4046 reach `J_7`, obstruct `J_8`, and close
   critical `H`. [THM-4054](../01-canon/theorems/THM-4054-exceptional-affine-simple-zero-retained-packet.md)

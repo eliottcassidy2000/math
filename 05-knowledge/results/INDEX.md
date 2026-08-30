@@ -54,6 +54,30 @@
   failures. Packet `SHA256SUMS` SHA-256:
   `5e4f27ac7854121dcde44f51a1fab076848d8feb15bd2e30a168b295543162d2`.
 
+- `jc23_exact_weight12_deck_equivariance_thm4290.py` -> exact cyclic-character
+  audit [THM-4290 PROVED RELATIVE TO THM-4012/4230 + FINITE-EXACT; complete
+  exact-`M=12` gate closed; coefficient walls and JC(2) OPEN]. The base-change
+  deck generator acts by `(S,P)->(xi*S,xi^2*P)` and by `[-omega]` on `E_0`.
+  Its sixth power forces the specialized positive-genus map through
+  `C/<tau^6>`, whose saturated Hom degree is a multiple of four, contradicting
+  both responses `34/42`. The nonzero limiting invariant differential has
+  character ten; only its vanishing `sigma^2` twist descends. Source/output
+  SHA-256: `697043b3eac9d27de03117c70b4835fba232a117560f53cd914a65d5fa07c7e5` /
+  `72d69aab65b3fde8a5dbfe4d6f5387419db940dc550388bf771295ac6edd5d93`.
+
+- `jc23_a23_blowdown_kahler_dualizing_observer_thm4289.py` -> exact
+  formal-local blowdown/Kahler audit [THM-4289 PROVED FORMAL-LOCAL RELATIVE TO
+  THM-4272/4279/4280/4284/4288 + FINITE-EXACT; Keller ambient-form bridge and
+  JC(2) OPEN]. On `D_s:b*z*(z-b^s)=0`, function and ambient-Kahler descent have
+  matched length-`s` obstructions, while normalized regular dualizing forms
+  lose exactly `c/J_f~=k[[b]]/(b^s)`; `bz*eta=(0,0,db)` is the sharp hostile.
+  The endpoint loses `m-1` characters. Observer fibre-purity is exactly
+  `ker(q) subset F^j`, giving sharp complexified failures at predicate depths
+  eight and two (curves `D_7` and `D_1`) and finite order-state sets.
+  Source/output SHA-256:
+  `47ae505c1569ce96008855c5c6025b9b6d2a826d00372f054ba7e939ce888c8b` /
+  `157c94029c1990947d02a9738863de991dcd225af94422443c5baf417124e283`.
+
 - `jc23_a23_partial_normalization_differential_thm4288.py` -> exact
   formal-local partial-normalization and last-blowdown audit [THM-4288
   PROVED FORMAL-LOCAL RELATIVE TO THM-4272/4280/4284; Keller Cartesian square

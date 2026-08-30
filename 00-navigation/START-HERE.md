@@ -1,6 +1,6 @@
 # Start Here
 
-**Rolling brief — refreshed 2026-08-29.** Router only;
+**Rolling brief — refreshed 2026-08-30.** Router only;
 [`CURRENT-FRONTIER.md`](CURRENT-FRONTIER.md) owns status links.
 
 ## The five-minute orientation
@@ -53,10 +53,12 @@ Then read frontier, guardrails, theorem; logs are history.
     Composite rank seven and FC(3) remain open.
 12. **JC is false from dimension three; JC(2), DC(2) remain open.**
     THM-2084/4218/4220 reach `M=10`; THM-4222/4232/4248 close `M=11` off
-    `A*B*(A+B)=0`; THM-4226 closes `M=13`. On `M=12`, `W=0`, THM-4260
-    exhausts `1,512` incidences, THM-4268 gives a non-effective collar, and
-    THM-4272 crosses `U+Z=0` via `A_23`; THM-4284/4285 reduce the live bridge
-    to common-tangent preservation. Keller graph preservation/entry stay open.
+    `A*B*(A+B)=0`; THM-4226 closes `M=13`. THM-4290 now closes the complete
+    exact-`M=12` gate `UZD Lambda!=0`: deck equivariance forces the special
+    map through a degree-two quotient and makes its degree divisible by four,
+    contradicting `34/42`. At `Lambda=0`, THM-4289 identifies the exact
+    Kahler/dualizing loss, but the Keller degree/allocation bridge and the
+    remaining coefficient walls stay open.
 13. **Complete period-14 coordinates can be globally blind.** THM-2058 keeps
     every fixed-depth packet coordinate but exits at `47/113`; THM-2043/2047/
     2050 separate local completeness from global maxima.
