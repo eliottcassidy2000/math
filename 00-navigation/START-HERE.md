@@ -21,8 +21,8 @@ Then read frontier, guardrails, theorem; logs are history.
 
 ## Seventeen high-signal facts
 
-1. **LRC(14) is first open.** Residual `22,682`, max `637` (THM-4283);
-   THM-4286 adds zero, THM-4287 is **RESERVED**, and entry stays open.
+1. **LRC(14) is first open.** THM-4287 leaves `22,647` rows, max `636`;
+   THM-4286 adds zero, and physical entry stays open.
 2. **The `q <= 25` period claim is refuted.** THM-762/764 exhibit `26*{1,...,12} union {339}`, whose first good period is `27`.
 3. **Good-period existence is a maximum statement.** The tight resonant AP
    defeats average/count arguments; see MISTAKE-127/129/130.

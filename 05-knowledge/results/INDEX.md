@@ -1,5 +1,20 @@
 # Script Results Index
 
+- `lrc14_repaired_carrier_endpoint637_descent_thm4287/*` -> exact
+  endpoint-637 carrier attribution, complete endpoint-636 hostile boundary,
+  and current two-index signature-ideal surgery
+  ([THM-4287](../../01-canon/theorems/THM-4287-repaired-carrier-endpoint-637-descent.md)):
+  **PROVED RELATIVE TO THM-4283 + FINITE-EXACT + DETACHED LITERAL-WALL
+  AUDITS PASS; physical entry and LRC(14) OPEN.** The inherited 8,996-mask
+  carrier closes all three current endpoint-637 rows; the repaired 9,006-mask
+  carrier has exactly 101 failures on two endpoint-636 rows. A separately
+  typed delete-two/add-two 421-mask deck closes the complete 33-row current
+  ideal `I_E(p) subset {275,345}`. The one-row overlap gives 35 new deletions,
+  leaving `22,647`, maximum endpoint `636`, on six top rows. Python/Ruby
+  proof-graph consumers and two import-free literal audits agree. Packet
+  `SHA256SUMS` SHA-256:
+  `e5cb5fd9f2584de6977b5753a02c2c35faff319f6ecad309961715a379b86265`.
+
 - `lrc14_endpoint_carrier_signature_surgery_thm4283/*` -> current endpoint
   carrier and complete top-signature-fibre proof graph [THM-4283 PROVED
   RELATIVE TO THM-4282 + FINITE-EXACT + DETACHED LITERAL-WALL AUDITS PASS;

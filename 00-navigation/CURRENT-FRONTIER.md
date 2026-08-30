@@ -59,10 +59,9 @@ is the safe control `M(S_13)=99/338`. No cited result proves LRC(14).
   THM-4105/4106 are reciprocal decoders; THM-4107/4108 are tournament/radical
   firewalls. THM-4110 finds `64` AP13 sheets; THM-4116 gives
   `2^(c(F)-1)`. Safety/arrival stay open.
-- **Owner/tail:** [THM-4283](../01-canon/theorems/THM-4283-endpoint-644-carrier-response-and-signature-fibre-surgery.md)
-  leaves `22,682`, top `r=637` at `q=100,294,520`. THM-4286: response
-  nonfactorization, two exact 36-row decks, zero new rows (subsumed). THM-4287
-  is **RESERVED**; entry/LRC(14) stay open.
+- **Owner/tail:** [THM-4287](../01-canon/theorems/THM-4287-repaired-carrier-endpoint-637-descent.md)
+  joins 3-row carrier and 33-row deck closures (overlap one), leaving `22,647`,
+  max `636`; 101 carrier failures remain. THM-4286 adds zero rows. Entry stays open.
 - **PROVED:** [THM-2928](../01-canon/theorems/THM-2928-critical-seven-comb-grid-tensorization-and-drift-tariff.md)/2941: literal zero/one/two/three-drift sectors are empty; `k=2,3` are finite.
 - **Orthogonal routes.** THM-1017 is HYP-6820; THM-2047/2050 keep phase/exit; THM-731/2048 prune; THM-1290 ends at `55`; HYP-8900 nonuniform.
 - **PROVED micro-staircase:** THM-3316/3317 close primes/sparse fragility;
