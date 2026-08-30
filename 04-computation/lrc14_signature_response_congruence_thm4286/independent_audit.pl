@@ -1,5 +1,5 @@
 #!/usr/bin/env perl
-# Independent standard-library replay of the THM-4283 quotient-purity census.
+# Independent standard-library replay of the THM-4286 quotient-purity census.
 
 use strict;
 use warnings;
@@ -169,7 +169,7 @@ my %expected = (
     union850 => "17502,48,54,2351,770,1581",
 );
 
-print "THM-4283 INDEPENDENT PERL REPLAY\n";
+print "THM-4286 INDEPENDENT PERL REPLAY\n";
 my @nonsingletons = grep { scalar(@{$_}) > 1 } values %fibres;
 my $nonsingleton_rows = 0;
 $nonsingleton_rows += scalar(@{$_}) for @nonsingletons;

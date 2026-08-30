@@ -1,8 +1,6 @@
 # Core papers: imported results, consumers, and guardrails
 
-> **Freshness:** sources were checked **2026-07-21** unless dated later. Recheck **PREPRINT**, **RADAR**, and **SEMINAR ONLY** before priority claims.
-
-This maps imported claims, consumers, and exclusions; links—not bare IDs—are canonical.
+> **Freshness:** checked **2026-07-21** unless dated later; recheck **PREPRINT/RADAR/SEMINAR ONLY** before priority claims.
 
 ## Fast frontier snapshot
 
@@ -15,6 +13,7 @@ This maps imported claims, consumers, and exclusions; links—not bare IDs—are
 - **Hopf preprints:** [Brendle--Hung `S2 x S2`](CORE-PAPERS-BRENDLE-HUNG-S2XS2-2026-08-24.md) and [Hopf/S6](CORE-PAPERS-HOPF-S6-2026-08-24.md) are distinct **CLAIMS / UNDER AUDIT**; THM-3990/3991/3993 prove only local obstructions.
 - **Kakeya `R^4`:** **OPEN**; `3.0543` is PREPRINT v1. See the [source/status and THM-4035 boundary audit](CORE-PAPERS-KAKEYA-4D-2026-08-24.md).
 - **Apex cubic:** [2608.22870v1](https://arxiv.org/abs/2608.22870) is a computer-assisted **PREPRINT UNDER AUDIT**; see [audit](CORE-PAPERS-APEX-CUBIC-2026-08-25.md).
+- **Higher-order truth:** [Ye--Xu preprint audit](CORE-PAPERS-HEYTING-HIGHER-ORDER-TRUTH-2026-08-29.md).
 ## Rule 30
 
 - **Sources/status:** [announcement](https://writings.stephenwolfram.com/2019/10/announcing-the-rule-30-prizes/); [active prizes](https://rule30prize.org/) checked 2026-08-15; openness is repo inference.

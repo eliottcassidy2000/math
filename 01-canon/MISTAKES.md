@@ -9,6 +9,47 @@ Format per entry:
 - Why it was wrong
 - The correct framing
 
+## MISTAKE-529 (2026-08-29, historical HYP-1556/HYP-1557 tournament-topos synthesis) -- a repeated numeral and a carrier-category switch were treated as a Lawvere bridge
+
+- **What failed:** the historical reflection
+  [*The Fundamental Truths in Every Language*](../07-reflections/the-fundamental-truths-in-every-language.md)
+  said that `2=|Omega_Set|` explains or forces the OCF evaluation point and
+  promoted OCF to a Lawvere/Y-combinator fixed point.  Adjacent historical
+  analyses also used "the tournament topos" for both a duality groupoid and
+  a category of orientation-preserving embeddings, while carrying Booleanity
+  and geometric-morphism language across that switch.
+- **Minimal witnesses / first failed implications:** Lawvere's theorem needs
+  a weakly point-surjective map `A -> B^A`; none is constructed.  The proved
+  OCF mechanism in [THM-002](theorems/THM-002-ocf.md) instead produces the
+  integer weight `2^psi(sigma)`, or two choices per nontrivial odd-cycle
+  component.  Equality of that numeral with `|Omega_Set|` supplies no map.
+  The proposed integer endomap is not total because
+  [THM-343](theorems/THM-343-H7-impossible.md) proves that `H=7` is
+  unrealizable, and `Omega_h` is not canonical: the canonical six-vertex bit
+  codes `24` and `81` both have `H=23`, while their odd-cycle conflict graphs
+  are respectively `K_11` and `K_9` minus one edge.  "Over `F_2`" also
+  changes integer activity `2` to zero: for the directed triangle,
+  `I(K_1,2)=3` over the integers but `I(K_1,0)=1` over `F_2`.
+- **Topos carrier witness:** for the embedding category, let the subterminal
+  `U(T)` hold exactly when `|T|<=1`.  At a two-vertex tournament, both `U`
+  and `not U` are false because a one-vertex tournament embeds into it; hence
+  excluded middle fails.  The isomorphism/duality-only groupoid does give a
+  Boolean presheaf topos, but it has discarded embeddings, deletions, and
+  Hamiltonian-path probes.  These are different carriers.
+- **Repair / strongest survivor:** [THM-002](theorems/THM-002-ocf.md) and the
+  numerical coincidence `2=|Omega_Set|` survive, the latter only as analogy.
+  HYP-1556 is retracted as an explanation and HYP-1557 is refuted as
+  ill-typed: `H` is a function on tournaments, whereas the displayed fixed
+  point is a number and feeds integers to an operation expecting a
+  tournament.  Name the reversible groupoid `G_iso` and the embedding
+  category `G_emb` separately.  Claims that complement, Walsh, or OCF induce
+  geometric morphisms require explicit base functors and exactness checks.
+- **Reusable rule:** a Lawvere application must exhibit the weakly
+  point-surjective arrow and type every input/output.  Equal numerals do not
+  identify mechanisms.  When the morphisms of a carrier category change,
+  re-audit Booleanity, representables, restriction maps, and every transported
+  operation.
+
 ## MISTAKE-528 (2026-08-26, THM-4258 observer census) -- a pre-sieve degree histogram was labeled as the live shell
 
 - **What failed:** the first three-sample observer summary attached the

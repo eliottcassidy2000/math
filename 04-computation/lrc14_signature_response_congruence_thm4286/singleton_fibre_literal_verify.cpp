@@ -206,6 +206,27 @@ void add_i128(FnvLocal& ledger, i128 value) {
     ledger.add(static_cast<u64>(bits >> 64));
 }
 
+bool fraction_less_exact(i128 a, i128 b, i128 c, i128 d) {
+    require(a >= 0 && b > 0 && c >= 0 && d > 0,
+            "fraction comparison domain error");
+    bool reversed = false;
+    while (true) {
+        const i128 qa = a / b;
+        const i128 qc = c / d;
+        if (qa != qc) return reversed ? qa > qc : qa < qc;
+        a %= b;
+        c %= d;
+        if (a == 0 || c == 0) {
+            if (a == 0 && c == 0) return false;
+            const bool current_less = a == 0;
+            return reversed ? !current_less : current_less;
+        }
+        std::swap(a, b);
+        std::swap(c, d);
+        reversed = !reversed;
+    }
+}
+
 u64 scan_body_cover(const std::vector<u32>& deck, u64& checks,
                     u64& max_checks, u64& failures, u64& row_fnv) {
     FnvLocal cover;
@@ -253,6 +274,9 @@ int main(int argc, char** argv) {
                     replacement < (u32{1} << 30) &&
                     std::find(deck.begin(), deck.end(), replacement) == deck.end(),
                 "invalid replacement");
+        require(index == 396 && target_q == 366 && target_r == 644 &&
+                    replacement == UINT32_C(0x042022c9),
+                "target surgery identity changed");
         const auto wanted = singleton_signature(index);
         std::vector<std::pair<int, int>> fibre;
         bool target_found = false;
@@ -283,7 +307,7 @@ int main(int argc, char** argv) {
         i128 minimum_grid = 1;
         std::pair<int, int> minimum_pair{};
         bool minimum_set = false;
-        std::cout << "THM4283_SINGLETON_FIBRE_LITERAL_V1\n";
+        std::cout << "THM4286_SINGLETON_FIBRE_LITERAL_V1\n";
         for (const auto [q, r] : fibre) {
             fibre_ledger.add(q); fibre_ledger.add(r);
             const LiteralPair pair = build_literal_pair(q, r);
@@ -306,8 +330,9 @@ int main(int argc, char** argv) {
             require(inactive == 1 && inactive_index == index &&
                         old_margin < 0 && new_margin > 0,
                     "literal fibre/replacement check failed");
-            if (!minimum_set || new_margin * minimum_grid <
-                                minimum_margin * pair.grid) {
+            if (!minimum_set || fraction_less_exact(
+                                    new_margin, pair.grid,
+                                    minimum_margin, minimum_grid)) {
                 minimum_set = true;
                 minimum_margin = new_margin;
                 minimum_grid = pair.grid;
@@ -322,7 +347,13 @@ int main(int argc, char** argv) {
                       << decimal(new_margin) << " DEN " << decimal(pair.grid)
                       << '\n';
         }
-        require(equalities == 0, "unexpected equality");
+        require(equalities == 0 && fibre.size() == 36 &&
+                    fibre_ledger.state == UINT64_C(0x3d92ab45b46a72c0) &&
+                    row_ledger.state == UINT64_C(0xfa465909a2160ff3) &&
+                    minimum_pair == std::pair<int, int>{238, 366} &&
+                    minimum_margin == static_cast<i128>(17966230546068) &&
+                    minimum_grid == static_cast<i128>(1112710724405280),
+                "literal fibre summary changed");
 
         std::vector<u32> rebuilt;
         rebuilt.reserve(421);
@@ -335,7 +366,12 @@ int main(int argc, char** argv) {
         u64 checks = 0, max_checks = 0, failures = 0, body_row_fnv = 0;
         const u64 cover_fnv = scan_body_cover(rebuilt, checks, max_checks,
                                                failures, body_row_fnv);
-        require(failures == 0, "rebuilt deck body failure");
+        require(failures == 0 && checks == UINT64_C(405170463) &&
+                    max_checks == 421 &&
+                    mask_fnv(rebuilt) == UINT64_C(0x1b2cd4f2728db49a) &&
+                    cover_fnv == UINT64_C(0xca0b92afe4227d44) &&
+                    body_row_fnv == UINT64_C(0x9f7975fb737b4599),
+                "rebuilt deck body scan changed");
         std::cout << "SUMMARY TARGET " << target_q << ',' << target_r
                   << " INDEX " << index << " OLD_MASK " << std::hex
                   << deck[index] << " REPLACEMENT " << replacement << std::dec

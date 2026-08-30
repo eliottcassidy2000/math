@@ -242,7 +242,7 @@ def main() -> None:
     ):
         fail("base signature-fibre census changed")
 
-    print("THM-4283 SIGNATURE-RESPONSE FACTORIZATION AUDIT")
+    print("THM-4286 SIGNATURE-RESPONSE FACTORIZATION AUDIT")
     print("STATUS FINITE-EXACT DERIVED FROM AUDITED THM-4282 LEDGERS")
     for spec in (SIGNATURE,) + TARGETS:
         print(

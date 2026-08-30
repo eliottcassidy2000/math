@@ -169,6 +169,8 @@ int main(int argc, char** argv) {
         const int target_q = std::stoi(argv[4]);
         const int target_r = std::stoi(argv[5]);
         require(target_index < deck.size(), "target index out of range");
+        require(target_index == 396 && target_q == 366 && target_r == 644,
+                "target surgery identity changed");
         const auto wanted = singleton_signature(target_index);
         std::vector<std::pair<int, int>> fibre;
         bool target_found = false;
@@ -281,7 +283,28 @@ int main(int argc, char** argv) {
             pattern_ledger.add(p.multiplicity);
             for (u64 word : bits) pattern_ledger.add(word);
         }
-        std::cout << "THM4283_SINGLETON_FIBRE_CEGAR_V1\n"
+        require(fibre.size() == 36 &&
+                    fibre_ledger.state == UINT64_C(0x3d92ab45b46a72c0) &&
+                    deck[target_index] == UINT32_C(0x082022c9) &&
+                    target_disjoint == UINT64_C(497420) &&
+                    retained_checks == UINT64_C(13677671) &&
+                    obligations.size() == 8 &&
+                    obligation_ledger.state == UINT64_C(0xe3fd616a4aa21839) &&
+                    body_union == UINT32_C(0x33dfdc06) &&
+                    one_mask_responders.size() == 495 &&
+                    mask_fnv(one_mask_responders) ==
+                        UINT64_C(0x3c76be2ab12086ed) &&
+                    active_incidences == 1193 && equalities == 0 &&
+                    patterns.size() == 83 &&
+                    pattern_ledger.state == UINT64_C(0xbb249b742c391810) &&
+                    fibre_wide == std::vector<u32>{UINT32_C(0x042022c9),
+                                                   UINT32_C(0x0c202289)} &&
+                    mask_fnv(fibre_wide) == UINT64_C(0x72f8883feafa2f41) &&
+                    greedy.size() == 1 &&
+                    greedy.front().first == UINT32_C(0x042022c9) &&
+                    covered_count == 36,
+                "singleton response audit changed");
+        std::cout << "THM4286_SINGLETON_FIBRE_CEGAR_V1\n"
                   << "TARGET " << target_q << ',' << target_r
                   << " INDEX " << target_index << " MASK " << std::hex
                   << std::setw(8) << std::setfill('0') << deck[target_index]

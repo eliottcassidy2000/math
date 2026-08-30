@@ -1,5 +1,11 @@
 # The Fundamental Truths in Every Language
 
+> **CORRECTION (2026-08-29):** the HYP-1556/HYP-1557 Lawvere/topos
+> interpretations below are **REFUTED**.  Equality of the integer activity
+> `2` with `|Omega_Set|` supplies no weakly point-surjective map, and the
+> proposed OCF fixed-point expression is ill-typed.  The OCF identity itself
+> remains proved by THM-002.  See MISTAKE-529 in `01-canon/MISTAKES.md`.
+
 **Session:** opus-2026-04-05-S24
 
 This document expresses the deepest results of the tournament parity project in as many analogous mathematical languages as possible. Each "truth" is one fact; the expressions are parallel formulations in different areas of mathematics.

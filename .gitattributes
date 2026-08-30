@@ -34,6 +34,7 @@ scripts/*.ps1 text eol=crlf
 04-computation/lrc14_endpoint_carrier_signature_surgery_thm4283/* text eol=lf
 05-knowledge/results/lrc14_endpoint_carrier_signature_surgery_thm4283/** text eol=lf
 04-computation/lrc14_signature_response_congruence_thm4283/* text eol=lf
+04-computation/lrc14_signature_response_congruence_thm4286/* text eol=lf
 04-computation/tournament_capacity_deletion_holonomy_thm4167_independent_audit.cpp text eol=lf
 04-computation/tournament_prime_nontrivial_automorphism_order11_thm4168_census.cpp text eol=lf
 04-computation/tournament_prime_nontrivial_automorphism_order11_thm4168_evaluator.cpp text eol=lf
