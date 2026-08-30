@@ -56,7 +56,7 @@ Then read frontier, guardrails, theorem; logs are history.
     `A*B*(A+B)=0`; THM-4226 closes `M=13`. THM-4290 closes exact-`M=12`
     `UZD Lambda!=0` by deck degree. At `Lambda=0`, THM-4292 kills all tails;
     THM-4293 excludes all noncritical orders but `r=3` using true degrees
-    `34-2r/42-2r`. It and repeated/coefficient walls stay open.
+    `34-2r/42-2r`. `r=3`/repeated/coefficient walls stay open.
 13. **Complete period-14 coordinates can be globally blind.** THM-2058 keeps
     every fixed-depth packet coordinate but exits at `47/113`; THM-2043/2047/
     2050 separate local completeness from global maxima.

@@ -307,16 +307,6 @@ def main() -> None:
         critical_poly.coeff_monomial(z**3) - qinv * eta / a6**2,
         "critical z3 coefficient",
     )
-    for discriminant_order in range(13, 22):
-        if discriminant_order % 2 == 0:
-            local_total = 2 * (11 - discriminant_order // 2)
-            need(discriminant_order <= 20 and local_total == 22 - discriminant_order,
-                 f"open even m={discriminant_order} formula")
-        else:
-            local_total = 22 - discriminant_order
-            need(discriminant_order <= 21 and local_total > 0,
-                 f"open odd m={discriminant_order} formula")
-
     # THM-4291 specialization: all free weights 7--11 and Delta vanish.
     a_tail = sp.Rational(7168, 135)
     tail_factor = sp.factor(a_tail**2 + 4 * U)
@@ -357,8 +347,8 @@ def main() -> None:
     print("MOD4_SURVIVORS=r=1,3,5; EXACT_4N_SURVIVOR=r=3; N=9,7")
     print(
         "REPEATED_DISCRIMINANT=OPEN; "
-        "c1=...=c5=0,c6^2+4U=0; m=ord_z(Disc(W2))>12; "
-        "rational-response=42-m,34-m; even-nonsquare-extra=20,12"
+        "c1=...=c5=0,c6^2+4U=0; "
+        "NO_NORMALIZED_RESPONSE_FORMULA_PROMOTED"
     )
     print(
         "REPEATED_INITIALS="
