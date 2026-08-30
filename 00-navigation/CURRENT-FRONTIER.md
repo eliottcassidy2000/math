@@ -61,7 +61,8 @@ is the safe control `M(S_13)=99/338`. No cited result proves LRC(14).
   `2^(c(F)-1)`. Safety/arrival stay open.
 - **Owner/tail:** [THM-4287](../01-canon/theorems/THM-4287-repaired-carrier-endpoint-637-descent.md)
   joins 3-row carrier and 33-row deck closures (overlap one), leaving `22,647`,
-  max `636`; 101 carrier failures remain. THM-4286 adds zero rows. Entry stays open.
+  max `636`; 101 carrier failures remain. THM-4286 adds zero rows, but one
+  normalized repair margin ranks its index-396 fibre exactly `1..36`. Entry stays open.
 - **PROVED:** [THM-2928](../01-canon/theorems/THM-2928-critical-seven-comb-grid-tensorization-and-drift-tariff.md)/2941: literal zero/one/two/three-drift sectors are empty; `k=2,3` are finite.
 - **Orthogonal routes.** THM-1017 is HYP-6820; THM-2047/2050 keep phase/exit; THM-731/2048 prune; THM-1290 ends at `55`; HYP-8900 nonuniform.
 - **PROVED micro-staircase:** THM-3316/3317 close primes/sparse fragility;
@@ -353,8 +354,8 @@ lift/phase clocks.
   [THM-4285](../01-canon/theorems/THM-4285-universal-two-eisenstein-norm-shell-and-exact-contact-trichotomy.md)
   completes shell noncollapse (`2Q/3Q/5Q`).
   [THM-4284](../01-canon/theorems/THM-4284-a23-conductor-defect-and-degree-shell-first-character-nondescent.md)
-  makes the missing datum the anti-diagonal cotangent: common-tangent
-  preservation already suffices at degree `34/42`, but remains open.
+  isolates common tangent; THM-4288 gives its dual-number fibre and defect
+  `c_C'-c_R'-c_E'`. Ambient bridge open.
   Exceptional quartic: THM-3703/3737 give grammar/image, THM-4034 the
   conductor, and THM-4039/4043/4046 reach `J_7`, obstruct `J_8`, and close
   critical `H`. [THM-4054](../01-canon/theorems/THM-4054-exceptional-affine-simple-zero-retained-packet.md)

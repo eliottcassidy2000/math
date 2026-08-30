@@ -31,15 +31,16 @@
   response nonfactorization and two alternate common-deck surgeries
   ([THM-4286](../../01-canon/theorems/THM-4286-signature-response-nonfactorization-and-two-deck-surgeries.md)):
   **PROVED RELATIVE TO THM-4282/THM-4283 + FINITE-EXACT + DETACHED
-  LITERAL-WALL AUDITS PASS; zero current ledger decrement; physical entry and
+  LITERAL-WALL AUDITS PASS; zero ledger decrement; physical entry and
   LRC(14) OPEN.** Across 17,604 inactive-signature fibres, the four audited
   THM-4282 predicates have respectively `6,15,34,48` mixed fibres. Two
   different exact 421-mask decks certify disjoint 36-row post-THM4282 sets,
-  but all 72 rows lie inside current THM-4283's 691-row proof union. They are
-  alternative certificate nodes, not a common deck on their union; the
-  current residual therefore remains `22,682` with the same endpoint-637
-  top. Packet `SHA256SUMS` SHA-256:
-  `cd20dfa49fd678263e4fae238eba37abf314dde83d8485342ca8f477b10eb403`.
+  but all 72 rows lie inside THM-4283's 691-row proof union. On the index-396
+  fibre, one normalized exact repair margin has 36 distinct values and
+  bijectively ranks the rows as `{1,...,36}`. These are alternative
+  certificate nodes, not a common deck on their union; later THM-4287 owns
+  the live `22,647`-row residual. Packet `SHA256SUMS` SHA-256:
+  `68a647e25a6e9950d2f9a341146ed3afae526ec9e6935125198616f57fd4449c`.
 
 - `lrc14_endpoint638_carrier_response_thm4283/*` -> independently produced
   narrow sibling audit of THM-4283's one-mask endpoint prefix and exact next
@@ -52,6 +53,15 @@
   detached all-body transcript has ledger `cbe0c99a6d552e23` and zero
   failures. Packet `SHA256SUMS` SHA-256:
   `5e4f27ac7854121dcde44f51a1fab076848d8feb15bd2e30a168b295543162d2`.
+
+- `jc23_a23_partial_normalization_differential_thm4288.py` -> exact
+  formal-local partial-normalization and last-blowdown audit [THM-4288
+  PROVED FORMAL-LOCAL RELATIVE TO THM-4272/4280/4284; Keller Cartesian square
+  and JC(2) OPEN]. For `1<=ell<m`, the relative differential has length
+  `min(m-ell,2ell)` and the closed fibre is `k[t]/t^2`; the terminal plane
+  triple point has sole equal-value defect `c_C'-c_R'-c_E'`. Source/output
+  SHA-256: `a7ef08760646f3e757112373ef456d9a5e0fc8413fe21a90860f4c44e7720bbc` /
+  `723e9b457bae9bc53db0859fa06486622cc7659fae23ebbe59bf04aecf899a8a`.
 
 - `jc23_a23_conductor_graph_spectrum_thm4284.py` -> exact formal-local
   conductor/graph audit [THM-4284 PROVED FORMAL-LOCAL RELATIVE TO

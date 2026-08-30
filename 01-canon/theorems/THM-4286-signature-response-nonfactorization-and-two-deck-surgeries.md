@@ -6,21 +6,23 @@ status: >
   LITERAL-WALL AUDITS PASS. The old 421-bit inactive-signature quotient does
   not determine the four audited THM-4282 response predicates. Two separate
   rebuilt 421-mask common decks close 36 post-THM4282 rows each. The two
-  36-row sets are disjoint, but current THM-4283's strengthened 691-row
+  36-row sets are disjoint, but THM-4283's strengthened 691-row
   proof union contains all 72. Thus they are alternate exact proof nodes and
-  contribute zero current ledger rows; the residual remains 22,682 with top
-  (100,637), (294,637), (520,637). No physical entry or LRC(14) follows.
+  contribute zero ledger rows. On the index-396 fibre, one normalized exact
+  repair margin bijectively ranks all 36 rows. Later THM-4287 leaves 22,647
+  rows with maximum endpoint 636. No physical entry or LRC(14) follows.
 source: root/arxiv-2608-26874-session/2026-08-29
 depends_on:
   - THM-4282-inactive-signature-deck-surgery-endpoint-663
   - THM-4283-endpoint-644-carrier-response-and-signature-fibre-surgery
 related:
+  - THM-4287-repaired-carrier-endpoint-637-descent
   - THM-2050-period14-top-germs-do-not-determine-global-loneliness
   - THM-3731-lrc14-valuation-owner-equivariance-and-semantic-packet-boundary
   - THM-4210-rule30-lossless-dyadic-block-current-cartier-tree
 artifact_root: 05-knowledge/results/lrc14_signature_response_congruence_thm4286
 artifact_manifest: 05-knowledge/results/lrc14_signature_response_congruence_thm4286/SHA256SUMS
-artifact_manifest_sha256: cd20dfa49fd678263e4fae238eba37abf314dde83d8485342ca8f477b10eb403
+artifact_manifest_sha256: 68a647e25a6e9950d2f9a341146ed3afae526ec9e6935125198616f57fd4449c
 primary_scripts:
   - 04-computation/lrc14_signature_response_congruence_thm4286/audit.py
   - 04-computation/lrc14_signature_response_congruence_thm4286/independent_audit.pl
@@ -34,11 +36,11 @@ primary_scripts:
   - 04-computation/lrc14_signature_response_congruence_thm4286/proof_graph_consequence.py
   - 04-computation/lrc14_signature_response_congruence_thm4286/proof_graph_subsumption_independent.pl
 primary_script_sha256:
-  - b5b0fd718bd21c0a5298e621628277062f1d0adb020a997eab47a38bc439d9bf
+  - 35ec4df4c0c491fdbfea4fae03b07c83907358b51e121ba6593ddb513f3cce30
   - 70220425e407efafa9e13731fc39d9b0b4e59771542016f35d352e93f340f680
   - 6762851220c79fedb1ae93d6c9f6d0f9b578b442978e14742af48a82ed7ff0b1
   - 3222146d18c0bd4cec1f752305ba114bf2eb85ce4c6f20803bcac014ad912d6f
-  - d327044d5a1f480e955c04feb430c20a0147623b9e91c29751746187a3550b5b
+  - 249e1cdb867428fe9789d58c2f0a07994ce4d4247aee98df51f2f909ffb1911e
   - b3ae1e3f72fa8c228cf936407e95fcb514aa0e6673c1eac40e407e1e8d33f68b
   - 64e94f746913d0de3b0011309db54a6c27805b8053088d625c43c5e6fd478652
   - 410eab3cc33aff1cb09983efdea0d1a6c62089f945cb907333d521573495017e
@@ -63,7 +65,7 @@ primary_output_sha256:
   - cca57303845e016a86efdd86607f45d329e925aeabfeb6b150c0dcae635d2615
   - f394a1c2d329def695f497befff7ec5b08590146d19ea891223aef079c701722
   - 173592b9e36f152fbb4d484f1b5dfccddad04bdae8026639488e1ab6b9f012ff
-  - c79a2fc8f79914a9100ede49e0e99ccc54f273c858af3cb7eee0be596cba56fe
+  - 578dbca7f676a08efef2391930d2c1c5488a2c5f3b0fc595f4a15d9b2be21686
   - 63e74271425d03ebdfad909d6691d60caff301d79091d15d4834b8e14978dbfe
   - 2a662d17bd63053249479fc4ea18741b74f04ffdfd4d98fd43f1329106351628
   - 440bf995b6c727493ffec6e656c37aa61eaf8d65130bf6b14b43b9ce1561b868
@@ -121,15 +123,15 @@ D_107,318,374 = (E with indices 107,318,374 deleted), followed by
 ```
 
 Each deck proves 36 rows of `U_4282`, and the two row sets are disjoint.
-Current THM-4283's strengthened proof union contains both sets in full:
+THM-4283's strengthened proof union contains both sets in full:
 
 ```text
 |G_396 union G_2|=72,
 G_396 union G_2 subset C_4283.                         (4)
 ```
 
-Consequently THM-4286 contributes zero new rows to the current ledger.  The
-post-THM4283 residual stays
+Consequently THM-4286 contributes zero new rows at the THM-4283 stage.  That
+stage's residual is
 
 ```text
 count=22,682,
@@ -142,7 +144,8 @@ top={(100,637),(294,637),(520,637)}.                   (5)
 The decks in `(3)` are separate common-deck certificate nodes.  Equation
 `(4)` is a typed set union only; no single deck or carrier is asserted on the
 72-row union.  Their value is independent certificate structure and the
-response-congruence obstruction below, not a ledger decrement.
+response-congruence obstruction below, not a ledger decrement.  THM-4287
+subsequently updates the live residual to `22,647`, maximum endpoint `636`.
 
 ## 2. The old inactive signature does not determine current responses
 
@@ -229,6 +232,21 @@ A separate literal exhaustive engine enumerates all `C(30,8)=5,852,925`
 rank-eight masks, independently recovers the 495 responders, 83 activity
 classes and the two masks in `(12)`, and refines the 36 rows into 35 response
 profiles.  The sole profile collision is `(301,366)/(366,547)`.
+
+The normalized exact margin of the least replacement `042022c9` is stronger:
+it assumes 36 pairwise distinct rational values.  Sorting them increasingly
+defines a bijection
+
+```text
+ord_396:F_396 -> {1,...,36},
+rank-ledger FNV=ca0203a00e6ab716.                    (12a)
+```
+
+The complete ordered row ledger is frozen in
+`singleton_fibre_literal_exhaustive.out`.  Thus one scalar exact-margin
+coordinate, not merely the 495-bit Boolean response word, separates this
+whole fibre.  This is fibre- and replacement-specific; it is not a global
+ranking of signature fibres.
 
 Appending the least mask in `(12)` gives `D_396` in `(3)`, with ordered FNV
 `1b2cd4f2728db49a`.  A detached literal-wall implementation proves all 36

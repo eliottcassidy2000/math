@@ -247,7 +247,7 @@ def main() -> None:
     for spec in (SIGNATURE,) + TARGETS:
         print(
             f"INPUT {spec.name} ROWS {spec.count} SHA256 {spec.sha256} "
-            f"PATH {spec.path.relative_to(REPO)}"
+            f"PATH {spec.path.relative_to(REPO).as_posix()}"
         )
     print(
         "BASE ROWS 24223 FIBRES 17604 NONSINGLETON_FIBRES 803 "

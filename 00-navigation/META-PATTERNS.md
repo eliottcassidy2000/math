@@ -135,10 +135,10 @@ or the fresh-event filtration—whichever coordinate the operation discarded.
 **Counterindications:** a union is not a common deck; a chosen section is not
 universal; merged marginals do not multiply; specialization gives no entry.
 
-**Evidence:** THM-4261/4262 (pair/ray repair); THM-4255/4263
-(graph jets, fibre weights, hazards); THM-4260/4264 (specialized exclusion,
-local observer, open normal lift); THM-4274 (complete observer first, then an
-exact quotient-kernel/pair-difference test and normalized-fibre audit).
+**Evidence:** THM-4255/4260--4264/4274; THM-4286 (old inactivity fibres mix
+repair responses); THM-4288 (resolved values lose the next blowdown's
+derivative circuit). Neither a local section nor nodal value agreement is an
+operation-stable congruence.
 
 ## Complete decks from hostiles
 

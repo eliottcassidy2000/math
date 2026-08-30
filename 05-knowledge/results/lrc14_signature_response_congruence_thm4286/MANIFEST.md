@@ -2,9 +2,10 @@
 
 Status: **PROVED RELATIVE TO THM-4282/THM-4283 + FINITE-EXACT + DETACHED
 LITERAL-WALL AUDITS PASS.**  This packet supplies two alternate exact
-common-deck proof nodes on 72 disjoint post-THM4282 rows.  Current THM-4283
-already contains all 72, so this packet contributes zero current ledger
-rows.  It proves neither physical entry nor LRC(14).
+common-deck proof nodes on 72 disjoint post-THM4282 rows.  THM-4283 already
+contains all 72, so this packet contributes zero ledger rows.  Later THM-4287
+updates the live residual to `22,647` with maximum endpoint `636`.  This
+packet proves neither physical entry nor LRC(14).
 
 ## Consequence
 
@@ -54,7 +55,10 @@ not one common deck and is not interchangeable with THM-4283's carrier.
 - `singleton_fibre_literal_exhaustive.out` independently enumerates all
   `5,852,925` rank-eight masks with literal walls, recovers the `495`
   responders, `83` activity classes and two fibre-wide masks, and finds 35
-  row-response profiles with sole collision `(301,366)/(366,547)`.
+  row-response profiles with sole collision `(301,366)/(366,547)`.  More
+  sharply, the normalized exact margin of replacement `042022c9` has 36
+  distinct values and orders the fibre bijectively as `{1,...,36}`, with
+  rank-ledger FNV `ca0203a00e6ab716`.
 - `two_mask_fibre_cegar.out` computes the complete 20-obligation response
   quotient and proves exact fibre-wide replacement minimum three.
 - `two_mask_fibre_literal.out` independently checks the five-row fibre, the
@@ -99,6 +103,6 @@ and `REPRODUCTION.md` gives the complete commands.
   detached literal-wall check.  Body coverage is global for each named deck.
 - Exact minimum three applies to the named 20-obligation fibre-wide response
   problem.  It is not a global minimum over all possible deck changes.
-- The current residual is inherited unchanged from THM-4283 and is still a
-  fixed-pool proof graph.  No arrival, owner, phase, physical-entry, or
+- The residual printed here is the frozen THM-4283-stage proof graph; THM-4287
+  owns the later live residual.  No arrival, owner, phase, physical-entry, or
   LRC(14) conclusion follows.

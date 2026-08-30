@@ -201,6 +201,49 @@ int main(int argc, char** argv) {
                                                          {366, 547}},
                 "row-response refinement changed");
 
+        struct MarginOrdinal {
+            i128 numerator = 0;
+            i128 denominator = 1;
+            int q = 0;
+            int r = 0;
+        };
+        const u32 ordinal_mask = fibre_wide.front();
+        const IndexedRepair ordinal_repair = index_repair(ordinal_mask, cells);
+        std::vector<MarginOrdinal> margin_ordinals;
+        margin_ordinals.reserve(literal.size());
+        for (const FibreLiteral& row : literal) {
+            const i128 m = repair_margin(
+                ordinal_repair, row.prefix, row.grid);
+            require(m > 0, "fibre-wide ordinal margin is not positive");
+            const i128 divisor = gcd_i128(m, row.grid);
+            margin_ordinals.push_back(
+                {m / divisor, row.grid / divisor, row.q, row.r});
+        }
+        std::sort(margin_ordinals.begin(), margin_ordinals.end(),
+                  [](const MarginOrdinal& left, const MarginOrdinal& right) {
+                      const i128 lhs = left.numerator * right.denominator;
+                      const i128 rhs = right.numerator * left.denominator;
+                      if (lhs != rhs) return lhs < rhs;
+                      return std::pair{left.q, left.r} <
+                             std::pair{right.q, right.r};
+                  });
+        FnvLocal ordinal_ledger;
+        ordinal_ledger.add(ordinal_mask);
+        for (std::size_t i = 0; i < margin_ordinals.size(); ++i) {
+            if (i) {
+                require(margin_ordinals[i - 1].numerator *
+                                margin_ordinals[i].denominator !=
+                            margin_ordinals[i].numerator *
+                                margin_ordinals[i - 1].denominator,
+                        "normalized margin ordinal collision");
+            }
+            ordinal_ledger.add(i + 1);
+            ordinal_ledger.add(margin_ordinals[i].q);
+            ordinal_ledger.add(margin_ordinals[i].r);
+            add_i128(ordinal_ledger, margin_ordinals[i].numerator);
+            add_i128(ordinal_ledger, margin_ordinals[i].denominator);
+        }
+
         std::cout << "THM4286_SINGLETON_FIBRE_LITERAL_EXHAUSTIVE_V1\n"
                   << "TARGET " << target_q << ',' << target_r << " INDEX "
                   << index << " OLD_MASK " << std::hex << deck[index]
@@ -229,7 +272,15 @@ int main(int argc, char** argv) {
                   << collisions.front()[0].first << ','
                   << collisions.front()[0].second << ';'
                   << collisions.front()[1].first << ','
-                  << collisions.front()[1].second
+                  << collisions.front()[1].second << "\nMARGIN_ORDINALS "
+                  << "REPLACEMENT " << std::hex << std::setw(8)
+                  << std::setfill('0') << ordinal_mask << std::dec
+                  << " COUNT " << margin_ordinals.size() << " FNV "
+                  << std::hex << ordinal_ledger.state << std::dec << " ROWS";
+        for (std::size_t i = 0; i < margin_ordinals.size(); ++i)
+            std::cout << ' ' << i + 1 << ':' << margin_ordinals[i].q << ','
+                      << margin_ordinals[i].r;
+        std::cout
                   << "\nVERDICT PASS DETACHED_LITERAL_EXHAUSTIVE_CENSUS\n";
         return 0;
     } catch (const std::exception& error) {
