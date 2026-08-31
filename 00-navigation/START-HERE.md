@@ -1,6 +1,6 @@
 # Start Here
 
-**Rolling brief — refreshed 2026-08-30.** Router only;
+**Rolling brief — refreshed 2026-08-31.** Router only;
 [`CURRENT-FRONTIER.md`](CURRENT-FRONTIER.md) owns status links.
 
 ## The five-minute orientation
@@ -21,8 +21,8 @@ Then read frontier, guardrails, theorem; logs are history.
 
 ## Seventeen high-signal facts
 
-1. **LRC(14) is first open.** THM-4287 leaves `22,647` rows, max `636`;
-   THM-4286 adds zero, and physical entry stays open.
+1. **LRC(14) is first open.** THM-4295 leaves fixed-pool residual `22,529`,
+   max `632`; physical entry stays open.
 2. **The `q <= 25` period claim is refuted.** THM-762/764 exhibit `26*{1,...,12} union {339}`, whose first good period is `27`.
 3. **Good-period existence is a maximum statement.** The tight resonant AP
    defeats average/count arguments; see MISTAKE-127/129/130.

@@ -1,6 +1,6 @@
 # Current Frontier
 
-**State — 2026-08-30.** Proof links; statuses: **PROVED**, **CITED**,
+**State — 2026-08-31.** Proof links; statuses: **PROVED**, **CITED**,
 **FINITE-EXACT**, **VERIFIED**, **CONDITIONAL**, **OPEN**, **RESERVED**,
 **REFUTED**, **SUPERSEDED**.
 
@@ -59,10 +59,10 @@ is the safe control `M(S_13)=99/338`. No cited result proves LRC(14).
   THM-4105/4106 are reciprocal decoders; THM-4107/4108 are tournament/radical
   firewalls. THM-4110 finds `64` AP13 sheets; THM-4116 gives
   `2^(c(F)-1)`. Safety/arrival stay open.
-- **Owner/tail:** [THM-4287](../01-canon/theorems/THM-4287-repaired-carrier-endpoint-637-descent.md)
-  joins 3-row carrier and 33-row deck closures (overlap one), leaving `22,647`,
-  max `636`; 101 carrier failures remain. THM-4286 adds zero rows, but one
-  normalized repair margin ranks its index-396 fibre exactly `1..36`. Entry stays open.
+- **Owner/tail:** [THM-4295](../01-canon/theorems/THM-4295-lrc14-endpoint-636-minimum-fourteen-exchange-and-recursive-signature-ideals.md)
+  proves append minimum `14`; its carrier closes live `636..633`, then a
+  zero-response body stops appends. Three ideal decks leave residual `22,529`,
+  max `632`. Fixed-pool only; entry/LRC(14) stay open.
 - **PROVED:** [THM-2928](../01-canon/theorems/THM-2928-critical-seven-comb-grid-tensorization-and-drift-tariff.md)/2941: literal zero/one/two/three-drift sectors are empty; `k=2,3` are finite.
 - **Orthogonal routes.** THM-1017 is HYP-6820; THM-2047/2050 keep phase/exit; THM-731/2048 prune; THM-1290 ends at `55`; HYP-8900 nonuniform.
 - **PROVED micro-staircase:** THM-3316/3317 close primes/sparse fragility;
