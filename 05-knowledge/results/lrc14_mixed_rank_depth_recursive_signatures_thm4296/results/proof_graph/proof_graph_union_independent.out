@@ -1,0 +1,12 @@
+INDEPENDENT_CPP_TYPED_PROOF_GRAPH_AUDIT_V2
+CURRENT rows=22647 fnv=df5374d4aca67677 max=636 top=(100,636) (256,636) (294,636) (338,636) (372,636) (384,636)
+SINGLETON type=110_separate_421_mask_common_decks rows=1219 fnv=3706723fd3574334
+J19 type=one_422_mask_two_replacement_common_deck rows=36 fnv=5c8af37cf2f002e7
+ENDPOINT type=one_9019_mask_mixed_rank_exchange_carrier rows=70 fnv=213e8d6fcbd0f1cd
+INTERSECTION singleton_j19=0 singleton_endpoint=2 rows=(410,626) (506,626) j19_endpoint=2 rows=(338,628) (338,636) triple=0
+MEMBERSHIP_PROFILE singleton_only=1217 j19_only=34 endpoint_only=66 singleton_and_endpoint=2 j19_and_endpoint=2
+TYPED_UNION rows=1321 fnv=69bcc5c5fc86ac8e max=636 top=(100,636) (256,636) (294,636) (338,636) (372,636) (384,636)
+FINAL rows=21326 fnv=a05a372bf57ea064 max=626 top=(100,626) (256,626)
+LEDGER_EQUALITY endpoint_bytes=PASS union_bytes=PASS final_bytes=PASS j19_derivation=PASS raw_descent_scan=PASS complete_endpoint_prefix=PASS partition=PASS
+TYPE_GUARD no_single_common_deck_claim_for_1321 j19_not_421 singleton_margins_use_literal_corrected_ledger
+VERDICT PASS FINITE_EXACT_TYPED_PROOF_GRAPH_UNION LRC14_OPEN

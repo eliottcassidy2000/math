@@ -1,0 +1,3 @@
+RAW_SCAN rows=72 successes=70 failed_pairs=2
+FAILED_PAIR_SET (100,626) (256,626)
+WROTE 05-knowledge\results\lrc14_mixed_rank_depth_recursive_signatures_thm4296\results\proof_graph\endpoint_success70.csv

@@ -1,5 +1,34 @@
 # Script Results Index
 
+- `lrc14_mixed_rank_depth_recursive_signatures_thm4296/*` -> deletion-depth
+  filtration, exact mixed-rank carrier descent, and recursive signature ideals
+  ([THM-4296](../../01-canon/theorems/THM-4296-lrc14-mixed-rank-deletion-depth-and-recursive-signature-closure.md)):
+  **PROVED RELATIVE TO THM-4287 + THM-4295 + FINITE-EXACT + DETACHED LITERAL-WALL
+  AUDITS PASS; physical entry and LRC(14) OPEN.** Active deletions form an
+  upset, and one endpoint-632 body has exact deletion depth nine. A 14-for-14
+  exchange followed by mixed rank-eight/rank-nine repairs gives one
+  9,019-mask carrier closing 70 rows through endpoint 626. Separately, 110
+  singleton decks and one two-replacement index-19 deck close complete
+  signature ideals. That `S/J/K` subgraph removes 1,321 rows. After importing
+  THM-4295's separately pinned index-294/index-372 nodes and auditing all
+  overlaps, the aggregate typed union removes 1,324 and leaves `21,323`,
+  maximum endpoint `626`, on `(100,626),(256,626)`. This is not one common
+  deck. Packet `SHA256SUMS` SHA-256:
+  `feeb84e57c937c7ed6a44a5c9caa85236ddfbcaed1823b489d2b31540de6653a`.
+
+- `lrc14_endpoint636_exchange_recursive_ideals_thm4295/*` -> endpoint-636
+  append-only Pareto carrier and recursive signature ideals
+  ([THM-4295](../../01-canon/theorems/THM-4295-lrc14-endpoint-636-minimum-fourteen-exchange-and-recursive-signature-ideals.md)):
+  **PROVED RELATIVE TO THM-4287 + FINITE-EXACT + DETACHED LITERAL-WALL AUDITS
+  PASS; physical entry and LRC(14) OPEN.** The row-aware rank-eight append
+  minimum is exactly 14. Its distinct 9,020-mask carrier is downstream-optimal
+  within that append-only operation and leaves 37 endpoint-632 misses; the
+  complete `H19/H294/H372` ideals have exact replacement minima `2/4/4`.
+  Its four-node complement of size `22,529` is theorem-local, not the current
+  aggregate residual; the append-only Pareto result and larger deck identities
+  remain live. Packet `SHA256SUMS` SHA-256:
+  `ac6f86ff077d425e1089992a4de2ce8322ce8162429f6841c5eed76623c93f00`.
+
 - `lrc14_repaired_carrier_endpoint637_descent_thm4287/*` -> exact
   endpoint-637 carrier attribution, complete endpoint-636 hostile boundary,
   and current two-index signature-ideal surgery

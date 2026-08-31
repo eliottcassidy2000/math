@@ -21,8 +21,11 @@ Then read frontier, guardrails, theorem; logs are history.
 
 ## Seventeen high-signal facts
 
-1. **LRC(14) is first open.** THM-4295 leaves fixed-pool residual `22,529`,
-   max `632`; physical entry stays open.
+1. **LRC(14) is first open.** THM-4295 proves the endpoint-636 append-only
+   minimum and independent recursive ideals; THM-4296 changes operation through
+   a 14-for-14 exchange and mixed-rank descent. Their exactly audited typed
+   join leaves `21,323` fixed-pool rows, max `626`, on
+   `(100,626),(256,626)`; physical entry stays open.
 2. **The `q <= 25` period claim is refuted.** THM-762/764 exhibit `26*{1,...,12} union {339}`, whose first good period is `27`.
 3. **Good-period existence is a maximum statement.** The tight resonant AP
    defeats average/count arguments; see MISTAKE-127/129/130.

@@ -1,0 +1,29 @@
+S&J rows=0 fnv=cbf29ce484222325
+S&E rows=2 fnv=42f12accaf5cd9bd
+S&C rows=0 fnv=cbf29ce484222325
+S&H19 rows=0 fnv=cbf29ce484222325
+S&H294 rows=18 fnv=5f10a36c14e47705
+S&H372 rows=52 fnv=00010d9f5d39b3a6
+J&E rows=2 fnv=e73907a6fe947f51
+J&C rows=1 fnv=3cca6e55a5ca6ab6
+J&H19 rows=36 fnv=5c8af37cf2f002e7
+J&H294 rows=0 fnv=cbf29ce484222325
+J&H372 rows=0 fnv=cbf29ce484222325
+E&C rows=10 fnv=9926701692e6f8d4
+E&H19 rows=2 fnv=e73907a6fe947f51
+E&H294 rows=1 fnv=84ecefdee9169b2a
+E&H372 rows=1 fnv=998afbd26bc5c074
+C&H19 rows=1 fnv=3cca6e55a5ca6ab6
+C&H294 rows=1 fnv=84ecefdee9169b2a
+C&H372 rows=1 fnv=998afbd26bc5c074
+H19&H294 rows=0 fnv=cbf29ce484222325
+H19&H372 rows=0 fnv=cbf29ce484222325
+H294&H372 rows=0 fnv=cbf29ce484222325
+OURS rows=1321 fnv=69bcc5c5fc86ac8e
+INCOMING rows=118 fnv=4cc16b6090fa8461
+COVERED rows=115 fnv=b76619cbdaab8bfa
+ADDED rows=3 fnv=e6305a4005d31bda
+UNION rows=1324 fnv=f55ee025df29bb65
+COMPLEMENT rows=21323 fnv=09a0dfc4515d556b
+MAX 626 TOP (100,626) (256,626)
+TYPE_GUARD typed_row_set_join_only_no_common_deck_no_LRC14

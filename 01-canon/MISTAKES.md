@@ -9,6 +9,31 @@ Format per entry:
 - Why it was wrong
 - The correct framing
 
+## MISTAKE-532 (2026-08-31, THM-4296 promotion audit) -- pair-dependent margin numerators were compared as though they had a common scale
+
+- **What failed:** the discovery transcripts for the singleton-signature
+  surgeries and the index-19 surgery selected a "weakest pair" by comparing
+  endpoint-cocycle margin numerators across different ordered pairs. The
+  associated literal grids vary with the pair, so the raw numerators are not
+  values in one common unit.
+- **First failed implication:** positivity of each numerator is a valid
+  activity test after retaining its own grid; ordering two positive
+  numerators from different grids is not. The scale-invariant comparison is
+  the exact fraction `margin/(63*grid)`. A detached literal-wall audit changes
+  38 of the 110 singleton weakest-row annotations and changes the second
+  index-19 witness annotation from `(338,636)` to `(179,347)`.
+- **Strongest survivor:** every sign is unchanged. The 110 successful
+  singleton ideals, their 1,219-row union, all replacement masks, every body
+  response, the 36-row index-19 ideal, its exact minimum-two cover, and all
+  proof-graph residual identities remain valid.
+- **Repair:** THM-4296 uses the detached literal fractions for weakest-margin
+  diagnostics and treats the primary annotations as noncanonical discovery
+  metadata. The maintained detached singleton checker no longer labels a
+  comparison against the discovery annotations as a primary-extremum check.
+- **Reusable rule:** exact integers are comparable across rows only after
+  their denominator or grid scale is proved common. Preserve the ordered pair,
+  numerator, and denominator until that proof is available.
+
 ## MISTAKE-531 (2026-08-30, THM-4230 degree interface at `Lambda=0`) -- a double top-edge root was counted twice with the simple-root response index
 
 - **What failed:** the exact-`M=12` response packet `42`, with finite-carrier

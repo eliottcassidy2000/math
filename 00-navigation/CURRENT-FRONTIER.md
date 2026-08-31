@@ -59,10 +59,13 @@ is the safe control `M(S_13)=99/338`. No cited result proves LRC(14).
   THM-4105/4106 are reciprocal decoders; THM-4107/4108 are tournament/radical
   firewalls. THM-4110 finds `64` AP13 sheets; THM-4116 gives
   `2^(c(F)-1)`. Safety/arrival stay open.
-- **Owner/tail:** [THM-4295](../01-canon/theorems/THM-4295-lrc14-endpoint-636-minimum-fourteen-exchange-and-recursive-signature-ideals.md)
-  proves append minimum `14`; its carrier closes live `636..633`, then a
-  zero-response body stops appends. Three ideal decks leave residual `22,529`,
-  max `632`. Fixed-pool only; entry/LRC(14) stay open.
+- **Owner/tail:** [THM-4296](../01-canon/theorems/THM-4296-lrc14-mixed-rank-deletion-depth-and-recursive-signature-closure.md),
+  with independent Pareto and index-294/index-372 inputs from
+  [THM-4295](../01-canon/theorems/THM-4295-lrc14-endpoint-636-minimum-fourteen-exchange-and-recursive-signature-ideals.md),
+  upgrades the rank-eight zero response to exact deletion depth nine, gives a
+  9,019-mask mixed-rank carrier, and joins 113 separate signature decks. Their
+  typed row-set union removes 1,324 rows and leaves `21,323`, max `626`, on
+  `(100,626),(256,626)`; no common deck or entry follows.
 - **PROVED:** [THM-2928](../01-canon/theorems/THM-2928-critical-seven-comb-grid-tensorization-and-drift-tariff.md)/2941: literal zero/one/two/three-drift sectors are empty; `k=2,3` are finite.
 - **Orthogonal routes.** THM-1017 is HYP-6820; THM-2047/2050 keep phase/exit; THM-731/2048 prune; THM-1290 ends at `55`; HYP-8900 nonuniform.
 - **PROVED micro-staircase:** THM-3316/3317 close primes/sparse fragility;
