@@ -14,7 +14,7 @@
   overlaps, the aggregate typed union removes 1,324 and leaves `21,323`,
   maximum endpoint `626`, on `(100,626),(256,626)`. This is not one common
   deck. Packet `SHA256SUMS` SHA-256:
-  `feeb84e57c937c7ed6a44a5c9caa85236ddfbcaed1823b489d2b31540de6653a`.
+  `0a2dd5497fac511366203e80c60809931c68b5f5dbdca241bbfbce8f381e99f5`.
 
 - `lrc14_endpoint636_exchange_recursive_ideals_thm4295/*` -> endpoint-636
   append-only Pareto carrier and recursive signature ideals

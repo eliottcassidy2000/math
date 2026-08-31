@@ -486,11 +486,38 @@ checks them again in the final carrier scan.
 
 ## 8. Packet identity
 
-After the replays, verify every frozen packet byte:
+After the replays, verify every frozen packet byte. On an LF checkout the
+direct check is:
 
 ```bash
 (cd "$incoming" && sha256sum -c SHA256SUMS)
 (cd "$packet" && sha256sum -c SHA256SUMS)
+```
+
+On a Windows checkout with `core.autocrlf=true`, four THM-4295 witness files
+may be materialized with CRLF although their Git blobs and declared hash basis
+are LF. This verifier computes the declared canonical-LF identity without
+rewriting either packet:
+
+```bash
+python3 - "$incoming" "$packet" <<'PY'
+from hashlib import sha256
+from pathlib import Path
+import sys
+
+def lf(data: bytes) -> bytes:
+    return data.replace(b"\r\n", b"\n").replace(b"\r", b"\n")
+
+for root_arg in sys.argv[1:]:
+    root = Path(root_arg)
+    manifest = lf((root / "SHA256SUMS").read_bytes())
+    for line in manifest.decode("ascii").splitlines():
+        expected, relative = line.split("  ", 1)
+        actual = sha256(lf((root / relative).read_bytes())).hexdigest()
+        assert actual == expected, (root, relative, expected, actual)
+    print(root, "entries", len(manifest.splitlines()),
+          "manifest_sha256", sha256(manifest).hexdigest(), "PASS")
+PY
 ```
 
 No command in this reproduction establishes physical entry or LRC(14).

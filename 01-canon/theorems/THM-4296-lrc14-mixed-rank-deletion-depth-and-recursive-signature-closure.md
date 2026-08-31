@@ -24,7 +24,7 @@ related:
   - THM-4282-inactive-signature-deck-surgery-endpoint-663
 artifact_root: 05-knowledge/results/lrc14_mixed_rank_depth_recursive_signatures_thm4296
 artifact_manifest: 05-knowledge/results/lrc14_mixed_rank_depth_recursive_signatures_thm4296/SHA256SUMS
-artifact_manifest_sha256: feeb84e57c937c7ed6a44a5c9caa85236ddfbcaed1823b489d2b31540de6653a
+artifact_manifest_sha256: 0a2dd5497fac511366203e80c60809931c68b5f5dbdca241bbfbce8f381e99f5
 primary_scripts:
   - 04-computation/lrc14_mixed_rank_depth_recursive_signatures_thm4296/detached_exchange_audit.cpp
   - 04-computation/lrc14_mixed_rank_depth_recursive_signatures_thm4296/exact_cover.py
@@ -40,7 +40,7 @@ primary_scripts:
   - 04-computation/lrc14_mixed_rank_depth_recursive_signatures_thm4296/incoming_thm4295_typed_union_independent.cpp
 primary_script_sha256:
   - 4c5176be7b7e56cdfc248fa8b32fb5362741c7b12efe64766eb86d1c2bb02b18
-  - 29535bb91e6e32263f24afacb6f8698ca5814e02d52e829d03a8c0c566e1701f
+  - 70b37156edf552c1c132acab52bb1a31f8e056d56e271a958a2a6de03f990738
   - 335f38142d668965eb087da201307b0033214eb460443568a5067cc8e8436b58
   - f9984e19cabb7d32c962656ebf658f0b0512be976825d90f1cda90f8a6cd5abe
   - 90a315809c533670a7b4d4d498ec2835e1d4c5c50a4b4e760e8aff22b60e40b6

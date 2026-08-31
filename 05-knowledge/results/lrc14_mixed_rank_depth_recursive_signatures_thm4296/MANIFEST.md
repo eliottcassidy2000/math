@@ -143,7 +143,7 @@ fractions. This does not affect any sign, cover, deck, or proof-graph result.
 | THM-4295 index 294 | one separate 422-mask common deck | 21 | `eadefa2fae582ca7` |
 | THM-4295 index 372 | one separate 421-mask common deck | 54 | `47ab2af18f07ff59` |
 
-The only cross-node overlaps are
+Among this theorem's three local nodes, the only overlaps are
 
 ```text
 singleton / endpoint: (410,626), (506,626)
