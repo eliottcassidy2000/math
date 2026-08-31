@@ -9,6 +9,25 @@ Format per entry:
 - Why it was wrong
 - The correct framing
 
+## MISTAKE-533 (2026-08-31, THM-4296 endpoint-628 audit) -- a fifteen-pattern enumeration was labelled as 32,767 subsets of eleven realized classes
+
+- **What failed:** the theorem and frozen endpoint-628 transcript described
+  `32,767` tested subsets as subsets of the eleven realized response classes.
+  Eleven classes have only `2^11-1=2,047` nonempty subsets.
+- **First failed implication:** the implementation indexes the complete
+  fifteen-element space of possible nonzero four-bit response patterns and
+  loops over its `2^15-1=32,767` nonempty subsets. A candidate containing any
+  of the four unrealized patterns is rejected; the remaining candidates are
+  exactly the 2,047 nonempty subsets of the eleven realized classes.
+- **Strongest survivor:** the enumeration is exhaustive, the one-addition
+  lower bound is valid, and the displayed two-mask witness still proves exact
+  minimum two. No carrier, row set, or residual changes.
+- **Repair:** the source transcript and theorem now distinguish the fifteen
+  possible patterns from the eleven realized classes.
+- **Reusable rule:** when a bitmask enumerates an ambient pattern alphabet,
+  report the alphabet size and realized support separately; the loop bound is
+  not automatically the number of subsets of realized objects.
+
 ## MISTAKE-532 (2026-08-31, THM-4296 promotion audit) -- pair-dependent margin numerators were compared as though they had a common scale
 
 - **What failed:** the discovery transcripts for the singleton-signature

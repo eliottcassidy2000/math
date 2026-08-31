@@ -5,7 +5,8 @@ status: >
   PROVED RELATIVE TO THM-4287 + FINITE-EXACT + DETACHED LITERAL-WALL
   AUDITS PASS. The row-aware rank-eight append-only carrier minimum at the
   101 endpoint-636 obligations is fourteen. A downstream-optimal fourteen-mask
-  carrier closes every live row through endpoint 633 and first fails at 632,
+  suffix gives a 9,020-mask carrier closing every live row through endpoint 633
+  and first failing at 632,
   where one body has no rank-eight response at all. Three separately typed
   recursive signature-ideal decks close 36, 21, and 54 rows. Their proof union
   with the ten-row carrier node removes 118 rows and leaves 22,529, maximum

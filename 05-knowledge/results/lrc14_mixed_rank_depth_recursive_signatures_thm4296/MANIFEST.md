@@ -98,8 +98,10 @@ witnesses gives a 9,012-mask carrier, FNV `be9cf87002d6114a`.
 
 At `r=629`, a detached implementation reproduces the 419 response classes,
 the exact `7/2` rational dual lower bound, the four-mask witness, and the
-9,017-mask carrier identity. At `r=628`, exhaustive search of every subset of
-the eleven nonzero response classes proves minimum two.
+9,017-mask carrier identity. At `r=628`, the implementation scans all 32,767
+nonempty subsets of the fifteen possible nonzero response patterns, rejects
+subsets using any of the four unrealized patterns, and thereby exhausts every
+subset of the eleven realized classes. The exact minimum is two.
 
 The final scan completes the entire inherited `r>=626` prefix: 72 rows. It
 closes 70 and fails only at

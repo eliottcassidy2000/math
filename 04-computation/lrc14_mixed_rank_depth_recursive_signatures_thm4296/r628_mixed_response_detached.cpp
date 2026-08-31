@@ -183,7 +183,8 @@ int main() {
                       << " MARGIN_TICKS63 " << decimal(value.ticks) << '\n';
         }
         std::cout << "MINIMUM_ADDITIONS " << best.size
-                  << " LOWER exhaustive-all-32767-response-class-subsets"
+                  << " LOWER exhaustive-all-32767-nonempty-pattern-subsets-"
+                     "15-pattern-space-11-realized"
                   << " PREFERRED_RANK8 " << best.rank8 << " WITNESS_FNV "
                   << std::hex << witness_ledger.state << std::dec << '\n'
                   << "SCOPE IMPORT_FREE_LITERAL_WALL_FIXED_PAIR_LABELLED_"

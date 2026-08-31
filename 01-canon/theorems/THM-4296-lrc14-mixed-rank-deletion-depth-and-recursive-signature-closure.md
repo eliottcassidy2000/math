@@ -24,7 +24,7 @@ related:
   - THM-4282-inactive-signature-deck-surgery-endpoint-663
 artifact_root: 05-knowledge/results/lrc14_mixed_rank_depth_recursive_signatures_thm4296
 artifact_manifest: 05-knowledge/results/lrc14_mixed_rank_depth_recursive_signatures_thm4296/SHA256SUMS
-artifact_manifest_sha256: 0a2dd5497fac511366203e80c60809931c68b5f5dbdca241bbfbce8f381e99f5
+artifact_manifest_sha256: c3612e076e3b7b0965f339c6b856691e85719921d50b5081f9b40635aac76ca2
 primary_scripts:
   - 04-computation/lrc14_mixed_rank_depth_recursive_signatures_thm4296/detached_exchange_audit.cpp
   - 04-computation/lrc14_mixed_rank_depth_recursive_signatures_thm4296/exact_cover.py
@@ -285,8 +285,9 @@ descent. Each row's `minimum` is for the displayed boundary obligation set.
 
 At `r=629`, a complete 419-class quotient has exact rational dual value
 `7/2`, hence lower bound four; the four displayed masks cover all 28 bodies.
-At `r=628`, exhaustive testing of all 32,767 subsets of its eleven nonzero
-response classes rejects one addition and accepts the displayed two.
+At `r=628`, exhaustive testing of all 32,767 nonempty subsets of the fifteen
+possible nonzero response patterns (eleven realized) rejects one addition and
+accepts the displayed two.
 
 The final carrier has
 
@@ -425,8 +426,10 @@ overlap with `S` does not merge the index-294 or index-372 decks.
 
 ## 9. Audit correction and scope
 
-MISTAKE-532 records one non-load-bearing diagnostic error discovered during
-promotion. The discovery cocycle printed a weakest row by comparing margin
+MISTAKE-532 records one non-load-bearing margin diagnostic error discovered
+during promotion. MISTAKE-533 corrects the endpoint-628 subset-space label:
+the scan has 15 possible patterns and 11 realized classes. The discovery
+cocycle printed a weakest row by comparing margin
 numerators whose pair-dependent grids were not equal. That comparison is not
 scale invariant: 38 of the 110 singleton annotations and the second
 index-19 annotation change after comparing the exact fractions
