@@ -1,0 +1,7 @@
+ENDPOINT590_PACKET_VERIFY PASS
+baseline_rows=13 body_tests=185992950 failures=100 failed_row=210,590
+cover_size=9 rank9=9 uncovered=0 cover_fnv=d1cf49e4b811b958
+proved_full_universe_lower=9 exact_cover_upper=9 optimum=9
+exchange=9_for_9 target_rows=493 body_tests=7053424950 failures=0
+typed_union=2113 residual=20534 next_endpoint=589 next_rows=28
+solver_reported_optimum=9 role=CORROBORATIVE_NOT_PROOF_DEPENDENCY

@@ -1,0 +1,12 @@
+{
+  "cover_size": 9,
+  "exact_union_hex": "fffffffffffffffffffffffff",
+  "message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+  "mip_dual_bound": 8.999999999999977,
+  "mip_gap": 0.0,
+  "mip_node_count": 1,
+  "scope": "chosen_cover_bitwise_exact; minimum_only_solver_reported; no independently certified integer lower bound",
+  "signature_count": 14368,
+  "status": 0,
+  "success": true
+}
