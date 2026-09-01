@@ -21,8 +21,8 @@ Then read frontier, guardrails, theorem; logs are history.
 
 ## Seventeen high-signal facts
 
-1. **LRC(14) is first open.** THM-4300 leaves `21,023` rows, max `596`,
-   on nine rows. Its carrier/decks are sufficient certificates; entry is open.
+1. **LRC(14) is first open.** THM-4303 leaves `20,989` rows, max `595` on
+   exactly three rows. Carrier certificates are not entry.
 2. **The `q <= 25` period claim is refuted.** THM-762/764 exhibit `26*{1,...,12} union {339}`, whose first good period is `27`.
 3. **Good-period existence is a maximum statement.** The tight resonant AP
    defeats average/count arguments; see MISTAKE-127/129/130.
@@ -54,9 +54,9 @@ Then read frontier, guardrails, theorem; logs are history.
 12. **JC is false from dimension three; JC(2), DC(2) remain open.**
     THM-2084 reaches `M=10`; THM-4248 closes `M=11` off-wall; THM-4226 dense
     `M=13`; THM-4290 closes the `M=12` interior, THM-4297 closes its full
-    `Lambda=0`, `U*Z*D!=0` wall, and THM-4299 closes
-    `D=0`, `U*Z*Lambda!=0`. The `U=0`, `Z=0`, cubic
-    `D=Lambda=0` corner, and seam entry remain open.
+    `Lambda=0`, `U*Z*D!=0`; THM-4299 closes off-corner `D=0`; THM-4301/4304
+    make every reduced cubic-corner first-face carrier constant. Refinements
+    above its double sections, `U=0`, `Z=0`, and seam entry remain open.
 13. **Complete period-14 coordinates can be globally blind.** THM-2058 keeps
     every fixed-depth packet coordinate but exits at `47/113`; THM-2043/2047/
     2050 separate local completeness from global maxima.

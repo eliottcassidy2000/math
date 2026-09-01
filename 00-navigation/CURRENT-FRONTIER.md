@@ -59,11 +59,11 @@ is the safe control `M(S_13)=99/338`. No cited result proves LRC(14).
   THM-4105/4106 are reciprocal decoders; THM-4107/4108 are tournament/radical
   firewalls. THM-4110 finds `64` AP13 sheets; THM-4116 gives
   `2^(c(F)-1)`. Safety/arrival stay open.
-- **Owner/tail:** [THM-4300](../01-canon/theorems/THM-4300-lrc14-size-preserving-response-staircase-and-index-297-ideal.md)
-  exchanges 69 responses for 69 masks inactive on the complete 354-row
-  endpoint-`>=597` prefix, retaining size 9,019. A separate two-replacement
-  deck closes the 42-row index-297 ideal. The typed union is 1,624; `21,023`
-  remain, max `596` on nine rows. Consumers stay separate; entry stays open.
+- **Owner/tail:** THM-4302 proves mixed/rank-eight response minima `4/6` at
+  `(210,596)` and retains carrier size `9,019`. [THM-4303](../01-canon/theorems/THM-4303-lrc14-endpoint-595-twenty-five-row-carrier-closure.md)
+  replays its complete 28-row endpoint-595 boundary and closes exactly 25.
+  Union `1,658`; residual `20,989`, max `595` on three rows. Fixed-pool
+  certificate only; no entry.
 - **PROVED:** [THM-2928](../01-canon/theorems/THM-2928-critical-seven-comb-grid-tensorization-and-drift-tariff.md)/2941: literal zero/one/two/three-drift sectors are empty; `k=2,3` are finite.
 - **Orthogonal routes.** THM-1017 is HYP-6820; THM-2047/2050 keep phase/exit; THM-731/2048 prune; THM-1290 ends at `55`; HYP-8900 nonuniform.
 - **PROVED micro-staircase:** THM-3316/3317 close primes/sparse fragility;
@@ -343,17 +343,14 @@ lift/phase clocks.
   tuple is now at least `(8,5,4,3,3)` for `ell=(3,5,7,11,13)`. The requested
   challenges `(3,9),(5,6),(7,5),(11,4),(13,4)` all remain **OPEN**; the public
   `131199`-field file is a named finite population, not a world census.
-- **Jacobian/Dixmier:** `JC(2),DC(2)` remain **OPEN**. THM-4130--4220 close
-  `M=8--10`; THM-4222/4232/4248 close `M=11` off its walls, and THM-4226
-  closes dense `M=13`.
-  [THM-4290](../01-canon/theorems/THM-4290-exact-weight-twelve-deck-equivariant-visible-quotient-exclusion.md)
-  and [THM-4297](../01-canon/theorems/THM-4297-general-lambda-zero-central-and-tail-keller-extinction.md)
-  close exact `M=12` for `U*Z*D!=0`.
-  [THM-4299](../01-canon/theorems/THM-4299-d-zero-square-face-elliptic-splitting-and-off-corner-extinction.md)
-  closes `D=0`, `U*Z*Lambda!=0` by elliptic splitting and Morse-tail
-  extinction. [THM-4298](../01-canon/theorems/THM-4298-weighted-face-source-normal-unimodular-visibility-transform.md)
-  observes all walls in `G`-rows `6,7,8` but proves no row existence. The
-  `U=0`, `Z=0`, cubic `D=Lambda=0` corner, and seam entry remain open.
+- **Jacobian/Dixmier:** `JC(2),DC(2)` remain **OPEN**. THM-4130--4248 close
+  `M=8--11` off named walls; THM-4226 closes dense `M=13`. THM-4290/4297
+  close exact `M=12` for `U*Z*D!=0`; [THM-4299](../01-canon/theorems/THM-4299-d-zero-square-face-elliptic-splitting-and-off-corner-extinction.md)
+  closes off-corner `D=0`. [THM-4301](../01-canon/theorems/THM-4301-cubic-corner-first-face-keller-extinction.md)
+  kills separable/horizontal cubic first faces; [THM-4304](../01-canon/theorems/THM-4304-cubic-corner-repeated-first-face-rationality.md)
+  makes every reduced repeated carrier a rational double section. Refinements
+  above those sections remain. THM-4298 sees `G`-rows `6,7,8` but proves no
+  rows. `U=0`, `Z=0`, and seam entry remain open.
   Exceptional quartic: THM-3703/3737 give grammar/image, THM-4034 the
   conductor, and THM-4039/4043/4046 reach `J_7`, obstruct `J_8`, and close
   critical `H`. [THM-4054](../01-canon/theorems/THM-4054-exceptional-affine-simple-zero-retained-packet.md)
