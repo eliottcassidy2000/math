@@ -1,0 +1,8 @@
+30612208 00c22289 02209125 02508125 1038220a 00510a89
+0280c125 028085d0 1210b208 126c8008 0246a088 28c42202
+101c1016 121c0007 18472200 082a0a88 03308124 14a1020a
+12658200 32209208 30b48100 08168281
+ordered_mask_fnv=a9732e5fd06361c8
+response_union=all 145 tagged obligations
+lower_certificate=on the 430 inclusion-maximal rank8 response types, the deterministic CP-SAT feasibility model with 145 coverage constraints and sum(x)<=21 is INFEASIBLE (OR-Tools 9.15.6755, num_search_workers=1, subsolver=max_lp, random_seed=0, 496 branches)
+conclusion=exact rank8-only response-cover minimum 22

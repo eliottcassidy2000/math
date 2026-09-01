@@ -1,0 +1,10 @@
+scope=complete 14619-type active rank8/rank9 pair-tagged response atlas
+obligation_index=0..115:(96,595), 116..128:(100,595), 129..144:(210,595), in frozen failure-ledger order
+denominator=10000
+weights=4:2165 10:1007 12:917 13:185 16:3983 17:4283 26:1211 27:5 28:1103 32:2069 34:293 36:941 37:125 38:545 42:959 43:2693 50:1769 52:2315 53:1829 55:1001 58:713 64:1523 68:809 69:3893 73:959 81:1871 87:767 91:3317 94:185 97:3755 98:1823 100:3941 101:347 107:293 117:3893 118:2123 120:1253 121:809 123:917 124:1151 127:4373 128:581 129:767 130:47 132:1487 133:1055 136:3893 137:1871 138:2363 139:3893 141:4235 142:1823
+weight_sum=90128
+maximum_realized_response_load=9999
+saturated_at_maximum=10 response types
+exact_inequality=for every realized response S, sum_(i in S) w_i <= 9999 < 10000; hence every k-cover satisfies 90128 <= 10000*k, so k >= ceil(90128/10000)=10
+upper_certificate=the ten masks in mixed_cover.txt cover all 145 obligations
+conclusion=exact mixed rank8/rank9 response-cover minimum 10

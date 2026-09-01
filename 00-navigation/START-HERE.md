@@ -1,6 +1,6 @@
 # Start Here
 
-**Rolling brief — refreshed 2026-08-31.** Router only;
+**Rolling brief — refreshed 2026-09-01.** Router only;
 [`CURRENT-FRONTIER.md`](CURRENT-FRONTIER.md) owns status links.
 
 ## The five-minute orientation
@@ -21,8 +21,9 @@ Then read frontier, guardrails, theorem; logs are history.
 
 ## Seventeen high-signal facts
 
-1. **LRC(14) is first open.** THM-4303 leaves `20,989` rows, max `595` on
-   exactly three rows. Carrier certificates are not entry.
+1. **LRC(14) is first open.** THM-4305's exact five-mask response repair leaves
+   `20,986` rows, max `594`; size `9,019` needs three further deletions.
+   Carrier certificates are not entry.
 2. **The `q <= 25` period claim is refuted.** THM-762/764 exhibit `26*{1,...,12} union {339}`, whose first good period is `27`.
 3. **Good-period existence is a maximum statement.** The tight resonant AP
    defeats average/count arguments; see MISTAKE-127/129/130.

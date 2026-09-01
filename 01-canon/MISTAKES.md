@@ -9,6 +9,37 @@ Format per entry:
 - Why it was wrong
 - The correct framing
 
+## MISTAKE-535 (2026-09-01, THM-4305 higher-rank response scout) -- a rank-at-most-nine wall geometry was queried on rank-ten-or-higher masks
+
+- **What failed:** the first endpoint-595 higher-rank scout imported
+  THM-4296's hostile-response geometry, which deliberately retains only
+  literal failure classes of cardinality at most nine. It then queried masks
+  of ranks 10--15 and provisionally treated negative margins and a two-mask
+  formal-concept obstruction as exact arbitrary-rank results.
+- **First failed implication / minimal witness:** for masks of rank at most
+  nine, an omitted class of larger cardinality cannot be a subset of the mask,
+  so the truncation is exact. At higher rank it can be a subset and contributes
+  positive mass. On the three rows the truncated/full class counts are
+  `2381/2453`, `2451/2519`, and `2462/2543`; the omitted classes reach ranks
+  `15,15,25`. Thus a negative truncated margin is only a lower estimate, not
+  an inactivity certificate. Every omitted class queried as its own support
+  already witnesses unequal truncated and full mass.
+- **Strongest survivor:** positive activity in the truncated calculation is a
+  valid one-sided certificate because restoring positive widths only raises
+  mass. More importantly, the advertised conclusion was not canonized before
+  audit. Full-class NextClosure and independent intersection-closure replays
+  later reproduced the two-mask obstruction, and THM-4305's unrestricted
+  exact model strengthened it to response minimum five.
+- **Repair:** every arbitrary-rank program in THM-4305 retains all literal
+  failure classes and freezes the full counts `2453/2519/2543`. Rank-eight/
+  rank-nine atlas programs may use the smaller geometry, but state that rank
+  scope explicitly. The earlier scout output remains noncanonical.
+- **Reusable rule:** a support-cardinality filter is a theorem hypothesis on
+  the queried mask, not an implementation detail. Before widening rank, audit
+  the largest omitted class, prove it cannot lie below the mask, or rebuild
+  the full upset sum. A negative value under a positive-term truncation never
+  proves inactivity outside the truncation's rank range.
+
 ## MISTAKE-534 (2026-08-31, THM-4300 index-297 scout) -- the terminal lexicographic row was reported as the maximum endpoint
 
 - **What failed:** the discovery transcript for the index-297 singleton ideal
