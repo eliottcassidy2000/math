@@ -1,0 +1,7 @@
+RANK2_ARBITRARY_PAIR_PACKET_VERIFY PASS
+thm4231_remainder=181194 coarse_positive=181087 exact_fallback=107
+global_normalized_min_pair=50,70 body=031c7400 ticks=245428469244 grid=91205797082400
+rank2_certified_surplus=973922497/22801449270600 actual_haar_surplus_at_least_same
+overflow_control=713,719 grid=9351275651380222560
+consequence=fixed_pool_arbitrary_two_outsider_haar_theorem_relative_to_THM4231
+scope=no_physical_entry_no_LRC14

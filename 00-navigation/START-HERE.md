@@ -21,9 +21,9 @@ Then read frontier, guardrails, theorem; logs are history.
 
 ## Seventeen high-signal facts
 
-1. **LRC(14) is first open.** THM-4309--4318 keep a 3,925-mask carrier through
-   590; THM-4320 closes endpoint 589. Typed `2,141/20,506`; next: 66 rows at
-   `588`, no entry.
+1. **LRC(14) is first open.** [THM-4326](../01-canon/theorems/THM-4326-lrc14-rank-two-wall-graph-complete-typed-universe-closure.md)
+   closes one fixed pool's arbitrary two-outsider chart and THM-4150 odd-tail
+   families by rank-two wall mass; arbitrary-row entry is open.
 2. **The `q <= 25` period claim is refuted.** THM-762/764 exhibit `26*{1,...,12} union {339}`, whose first good period is `27`.
 3. **Good-period existence is a maximum statement.** The tight resonant AP
    defeats average/count arguments; see MISTAKE-127/129/130.

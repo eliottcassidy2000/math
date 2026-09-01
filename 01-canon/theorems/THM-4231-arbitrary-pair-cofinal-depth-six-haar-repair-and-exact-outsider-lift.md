@@ -21,9 +21,12 @@ status: >
   combining its certificate census with a literal check of the unique
   threshold-543 body at r=542. The
   depth-six activation transition 17547/17548 remains a valid but superseded
-  repair-hypergraph sidecar. The 181,194-pair finite remainder and LRC(14)
-  remain OPEN.
+  repair-hypergraph sidecar. THM-4326 subsequently closes the exact
+  181,194-pair remainder by a rank-two wall graph. Arbitrary-row entry and
+  LRC(14) remain OPEN.
 source: codex-frontier-synthesis-20260826
+superseded_remainder_by:
+  - THM-4326-lrc14-rank-two-wall-graph-complete-typed-universe-closure
 depends_on:
   - THM-4150-safe-set-haar-measure-universal-odd-tail-lrc14-transfer
   - THM-4156-divisor-complete-anchor-pool-haar-odd-tail-transfer
@@ -647,9 +650,14 @@ is asserted unsafe, and `770` is not claimed literal-minimal.
 
 ## 12. Pair-plane and method boundaries
 
-The unbounded two-outsider problem is now reduced to the exact finite label
-graph `(36e)`, not merely to a family of rays. Literal or stronger
-pair-correlated treatment of its `181,194` edges remains open.
+**Current addendum (THM-4326).** The rank-at-most-two wall graph now closes
+every edge of `(36e)`, so the fixed-pool unbounded two-outsider problem is
+proved. The paragraph below records this theorem's original frontier; it is
+historical, not current.
+
+At this theorem's promotion, the unbounded two-outsider problem was reduced
+to the exact finite label graph `(36e)`, not merely to a family of rays, and
+pair-correlated treatment of its `181,194` edges remained open.
 
 The later THM-4238 intersects this graph in exactly 32 edges—`(6,590..613)`
 and `(25,590..597)`—so the aggregate proved residual has `181,162` edges,

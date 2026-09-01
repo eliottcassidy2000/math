@@ -84,7 +84,7 @@
     `boundary Delta^12`; do not infer endpoint emptiness or export the cap.
 27g. **Copies are not common atoms.** THM-2806 has bare-only `D3`/empty `M`; THM-2818's positive copies fail native/source/endpoint sidecars. Neither pays THM-2772.
 27h. **A generator-valued endpoint germ is not a physical allocation action.** THM-2825/2859 lack the source carrier and `C13` action needed to turn their missing-corner or decorated-arrow data into a row exclusion; neither implies LRC(14).
-27i. **Successor quotients lose coordinates.** THM-3731 lacks tied owners; THM-3718 lacks arrival. 27j. **Carrier compression is family-relative.** THM-4313's 36 is pool-only; THM-4314 treats deletions `<=2`; THM-4318's nine is fixed-hypergraph and singleton-only; ninefold deletion needs 493 rows. THM-4320 bypasses failure on one finite layer. No entry/LRC(14).
+27i. **Successor quotients lose coordinates.** THM-3731 lacks owners; THM-3718 lacks arrival. 27j. **Carrier compression is family-relative.** THM-4313/4314/4318 are pool/deletion/hypergraph relative; THM-4320--4324 bypass finite layers. 27k. **Rank-two wall closure is not entry.** THM-4326 closes fixed-pool pairs, but `L2` drops rank `>=3` and is only a full-mass lower bound. THM-4150 adds two odd tails; no arbitrary parity, owner/arrival map, or LRC(14) follows.
 ## NC2 / GMC
 
 28. **Scalar moments do not linearly separate return atoms.** MISTAKE-211/THM-2631;

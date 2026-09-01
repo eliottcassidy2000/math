@@ -56,17 +56,11 @@ for `d>=7`. THM-3742 is a wrong-torsor Pell `C14`; THM-3744's safe control is
   THM-4105/4106 are reciprocal decoders; THM-4107/4108 are tournament/radical
   firewalls. THM-4110 finds `64` AP13 sheets; THM-4116 gives
   `2^(c(F)-1)`. Safety/arrival stay open.
-- **Owner/tail:** THM-4305 gives response minima `5/10/22`;
-  [THM-4313](../01-canon/theorems/THM-4313-lrc14-endpoint-592-fortythree-response-size-preserving-exchange.md)
-  keeps a 3,925-mask carrier through 592 over 467 rows.
-  [THM-4314](../01-canon/theorems/THM-4314-lrc14-endpoint-591-complete-layer-closure-and-deletion-boundary.md)
-  closes 13 rows unchanged and classifies deletions through size two.
-  [THM-4318](../01-canon/theorems/THM-4318-lrc14-endpoint-590-exact-nine-response-size-preserving-exchange.md)
-  proves response minimum nine and a nine-for-nine exchange over 493 rows.
-  [THM-4319](../01-canon/theorems/THM-4319-lrc14-endpoint-590-fortyone-body-response-critical-core.md)
-  isolates a 41-body nine-critical core with pairwise `chi=4`.
-  THM-4320 closes all 28 endpoint-589 rows literally, without surgery. Typed
-  `2,141/20,506`; 66 at `588`, no entry.
+- **Fixed-pool pair closure:** THM-4309--4324 are carrier/endpoint sidecars.
+  [THM-4326](../01-canon/theorems/THM-4326-lrc14-rank-two-wall-graph-complete-typed-universe-closure.md)
+  closes THM-4231's `181,194`-pair remainder by rank-two wall mass
+  (`181,087` degree-bound, `107` exact). With THM-4150 this proves the fixed
+  pool's arbitrary-pair odd-tail families, not arbitrary-row entry.
 - **PROVED:** [THM-2928](../01-canon/theorems/THM-2928-critical-seven-comb-grid-tensorization-and-drift-tariff.md)/2941: literal zero/one/two/three-drift sectors are empty; `k=2,3` are finite.
 - **Orthogonal routes.** THM-1017 is HYP-6820; THM-2047/2050 keep phase/exit; THM-731/2048 prune; THM-1290 ends at `55`; HYP-8900 nonuniform.
 - **PROVED micro-staircase:** THM-3316/3317 close primes/sparse fragility;
