@@ -1,0 +1,11 @@
+THM-4304 PRIMARY EXACT AUDIT: PASS
+UNIVERSE exact_M12 D=Lambda=0 UZ!=0 characteristic_zero literal_first_faces
+DEGREE deg_q(face)<=3; repeated_irreducible=>deg_q(K)=1=>rational_graph
+REGIME_A gamma/tau=1,2,3 quadratic_square strict_z_boundary
+REGIME_B empty k1:gamma=11/2:need=13/2 k2:gamma=5:need=7 k3:gamma=9/2:need=15/2
+REGIME_C discriminant=-(820125*U**2 + 141926400*U - 24696061952)/121500
+U_+1=-315392/3645 + 217088*sqrt(265)/18225; gcd=y + 15/256 + 3*sqrt(265)/256; multiplicity=2
+U_-1=-217088*sqrt(265)/18225 - 315392/3645; gcd=y - 3*sqrt(265)/256 + 15/256; multiplicity=2
+HOSTILE weights=(1, 3, 16) face_weights=(48, 48, 48, 48, 52) repeated=yes rational=yes
+CONTROL U=1 discriminant=24553315427/121500
+SCOPE reduced_first_face_carriers_constant refinement_tails_open
