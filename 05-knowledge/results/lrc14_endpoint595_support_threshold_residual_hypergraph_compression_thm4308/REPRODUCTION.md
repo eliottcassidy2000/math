@@ -1,4 +1,4 @@
-# THM-4307 reproduction
+# THM-4308 reproduction
 
 Run from the repository root.  The commands below reconstruct the inherited
 carrier rather than trusting a serialized carrier file.  They operate only on
@@ -6,13 +6,13 @@ the fixed thirty-label pool and do not construct a physical lonely-runner
 entry.
 
 ```powershell
-$code = '04-computation/lrc14_endpoint595_support_threshold_residual_hypergraph_compression_thm4307'
-$packet = '05-knowledge/results/lrc14_endpoint595_support_threshold_residual_hypergraph_compression_thm4307'
+$code = '04-computation/lrc14_endpoint595_support_threshold_residual_hypergraph_compression_thm4308'
+$packet = '05-knowledge/results/lrc14_endpoint595_support_threshold_residual_hypergraph_compression_thm4308'
 $old = '05-knowledge/results/lrc14_mixed_rank_depth_recursive_signatures_thm4296'
 $t4300 = '05-knowledge/results/lrc14_size_preserving_response_staircase_thm4300'
 $t4302 = '05-knowledge/results/lrc14_endpoint596_response_exchange_thm4302'
 $t4303 = '05-knowledge/results/lrc14_endpoint595_twentyfive_closure_thm4303'
-$scratch = '.scratch/lrc14_thm4307_replay'
+$scratch = '.scratch/lrc14_thm4308_replay'
 New-Item -ItemType Directory -Force $scratch | Out-Null
 ```
 

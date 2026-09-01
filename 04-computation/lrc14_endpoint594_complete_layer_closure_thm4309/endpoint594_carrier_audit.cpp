@@ -1,8 +1,8 @@
-// Direct raw replay of the THM-4307 3,925-mask carrier on the exact
-// THM-4306 endpoint-594 residual layer, promoted for THM-4308.
+// Direct raw replay of the THM-4308 3,925-mask carrier on the exact
+// endpoint-594 layer, promoted for THM-4309.
 
 #define ENDPOINT595_REPAIRED_RAW_MAIN endpoint594_strict_hidden_main
-#include "04-computation/lrc14_endpoint595_support_threshold_residual_hypergraph_compression_thm4307/strict_repair_raw_audit.cpp"
+#include "04-computation/lrc14_endpoint595_support_threshold_residual_hypergraph_compression_thm4308/strict_repair_raw_audit.cpp"
 #undef ENDPOINT595_REPAIRED_RAW_MAIN
 
 namespace {

@@ -1,8 +1,8 @@
 #!/usr/bin/env python3
-"""Typed consequence consumer for THM-4308 endpoint-594 closure.
+"""Typed consequence consumer for THM-4309 endpoint-594 closure.
 
 This consumer treats only proved row closure as a typed consequence;
-it never identifies the THM-4307 carrier with the THM-4306 rebuilt deck.
+it never identifies the THM-4308 carrier with the THM-4306 rebuilt deck.
 """
 
 from __future__ import annotations
@@ -115,7 +115,7 @@ def main() -> None:
     require(identity(carrier_target) == (
         25, "cce015c81f7121d9",
         "920638d6fb23a8f6492d34cf50e7dc247c2eddfe7ba3f2088c59155e1a56167e",
-    ), "THM-4307 top layer changed")
+    ), "THM-4308 top layer changed")
     require(prior_union.isdisjoint(prior_residual) and
             prior_union | prior_residual == universe,
             "inherited typed partition changed")

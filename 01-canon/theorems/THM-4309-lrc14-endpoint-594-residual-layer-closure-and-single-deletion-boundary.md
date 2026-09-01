@@ -1,11 +1,11 @@
 ---
-id: THM-4308
+id: THM-4309
 title: "LRC(14) endpoint-594 residual-layer closure and exact single-deletion boundary"
 status: >
-  PROVED RELATIVE TO THM-4306/4307 + FINITE-EXACT + DIRECT FULL-UNIVERSE
-  RAW AUDIT AND OPTIMIZATION-LEVEL REPRODUCIBILITY PASS. The THM-4307
+  PROVED RELATIVE TO THM-4306/4308 + FINITE-EXACT + DIRECT FULL-UNIVERSE
+  RAW AUDIT AND OPTIMIZATION-LEVEL REPRODUCIBILITY PASS. The THM-4308
   3,925-mask carrier closes all 25 rows in the complete endpoint-594 layer of
-  the THM-4307 residual. The 22 rows still residual after THM-4306 raise the
+  the THM-4308 residual. The 22 rows still residual after THM-4306 raise the
   combined typed union to 2,036 and leave 20,611, maximum endpoint 593 on 16
   rows. On the new 25-row carrier layer alone,
   exactly 3,911 of the 3,925 single-mask deletions are safe and 14 are unsafe.
@@ -14,18 +14,18 @@ status: >
 source: root + endpoint594_scout / LRC14 continuation session, 2026-09-01
 depends_on:
   - THM-4306-lrc14-index-265-recursive-ideal-two-mask-replacement
-  - THM-4307-lrc14-endpoint-595-support-threshold-residual-hypergraph-compression
+  - THM-4308-lrc14-endpoint-595-support-threshold-residual-hypergraph-compression
 related:
   - THM-4305-lrc14-endpoint-595-pair-tagged-response-exchange
   - THM-4302-lrc14-endpoint-596-response-minimum-four-and-size-preserving-exchange
-artifact_root: 05-knowledge/results/lrc14_endpoint594_complete_layer_closure_thm4308
-artifact_manifest: 05-knowledge/results/lrc14_endpoint594_complete_layer_closure_thm4308/SHA256SUMS
-artifact_manifest_sha256: fdb26a62222d9507e2a4056bcad2d4269d308a923a627360eda539e902e36ba9
+artifact_root: 05-knowledge/results/lrc14_endpoint594_complete_layer_closure_thm4309
+artifact_manifest: 05-knowledge/results/lrc14_endpoint594_complete_layer_closure_thm4309/SHA256SUMS
+artifact_manifest_sha256: 0ede54afd7f2ac5ff84fb977a5f32cea0679725723aba9bc6d45a7918eff60ea
 primary_scripts:
-  - 04-computation/lrc14_endpoint594_complete_layer_closure_thm4308/endpoint594_carrier_audit.cpp
-  - 04-computation/lrc14_endpoint594_complete_layer_closure_thm4308/endpoint594_all_singleton_quotient.cpp
-  - 04-computation/lrc14_endpoint594_complete_layer_closure_thm4308/endpoint594_singleton_quotient.cpp
-  - 04-computation/lrc14_endpoint594_complete_layer_closure_thm4308/typed_endpoint594_consumer.py
+  - 04-computation/lrc14_endpoint594_complete_layer_closure_thm4309/endpoint594_carrier_audit.cpp
+  - 04-computation/lrc14_endpoint594_complete_layer_closure_thm4309/endpoint594_all_singleton_quotient.cpp
+  - 04-computation/lrc14_endpoint594_complete_layer_closure_thm4309/endpoint594_singleton_quotient.cpp
+  - 04-computation/lrc14_endpoint594_complete_layer_closure_thm4309/typed_endpoint594_consumer.py
 audit: >
   PASS / ACCEPT, subject to the frozen SHA256SUMS. The raw verifier
   reconstructs the carrier from canonical component ledgers and scans all
@@ -35,17 +35,17 @@ audit: >
   The typed consumer checks the inherited partition and new row consequence.
 ---
 
-# THM-4308 -- LRC(14) endpoint-594 residual-layer closure and exact single-deletion boundary
+# THM-4309 -- LRC(14) endpoint-594 residual-layer closure and exact single-deletion boundary
 
-**PROVED RELATIVE TO THM-4306/4307 + FINITE-EXACT + DIRECT FULL-UNIVERSE
+**PROVED RELATIVE TO THM-4306/4308 + FINITE-EXACT + DIRECT FULL-UNIVERSE
 RAW AUDIT AND OPTIMIZATION-LEVEL REPRODUCIBILITY PASS. LRC(14) REMAINS OPEN.**
 
 ## 1. Carrier target, typed target, and inherited carrier
 
-Retain THM-4307's complete endpoint-594 residual layer
+Retain THM-4308's complete endpoint-594 residual layer
 
 ```text
-K_594^(4307): size=25,
+K_594^(4308): size=25,
 FNV=cce015c81f7121d9,
 SHA256=920638d6fb23a8f6492d34cf50e7dc247c2eddfe7ba3f2088c59155e1a56167e.
                                                                     (1)
@@ -62,15 +62,15 @@ SHA256=2a46ac360974ee95b5c468f1f76fb9ddd6b5165fa6e410dd3b6bad02ca93dd54.
                                                                     (2)
 ```
 
-Retain THM-4307's fixed-pool carrier
+Retain THM-4308's fixed-pool carrier
 
 ```text
-C_595^(4307): size=3,925, rank8=3,858, rank9=67,
+C_595^(4308): size=3,925, rank8=3,858, rank9=67,
 FNV=6fbd0bffcf0ed78b, all 421 joint masks retained.       (3)
 ```
 
 This theorem tests `(3)` directly on every row of `(1)`. It does not identify
-the THM-4306 rebuilt deck with `C_595^(4307)`.
+the THM-4306 rebuilt deck with `C_595^(4308)`.
 
 ## 2. Direct raw closure of the full 25-row layer
 
@@ -96,8 +96,8 @@ and empty failure ledgers.  Their common transcript SHA-256 is
 `c3fea5ada25f87506c7658a500b31cedb184970a68e4b03f4f25ccb3afc79650`,
 and their common pair-ledger SHA-256 is
 `22a4dc5dfa98561893fdfbacb1c103867b936e9f9f457b221d0698051ca74086`.
-Consequently `C_595^(4307)` closes the full 25-row layer `(1)`. Together with
-THM-4307, the same carrier closes its inherited 391-row target and these 25
+Consequently `C_595^(4308)` closes the full 25-row layer `(1)`. Together with
+THM-4308, the same carrier closes its inherited 391-row target and these 25
 additional rows, a 416-row union.
 
 ## 3. Typed consequence
@@ -151,13 +151,13 @@ at least two joint witnesses=357,299,749.                 (9)
 On the zero-joint branch it counts all nonjoint witnesses. On the one-joint
 branch it tests whether any nonjoint witness remains. The at-least-two branch
 cannot become empty after one deletion. This is a complete decision of `(8)`
-for every mask in `C_595^(4307)`.
+for every mask in `C_595^(4308)`.
 
 There are exactly 17 singleton obligations: 3 with a joint witness and 14
 with a nonjoint witness. They protect exactly 14 distinct masks, with ordered
 mask FNV `0141fea29da37882`; the complete ordered
 `(q,r,body,witness)` FNV is `541dc881d5cf3d42`. Hence, on
-`K_594^(4307)` alone,
+`K_594^(4308)` alone,
 
 ```text
 safe single-mask deletions=3,911,
@@ -173,13 +173,13 @@ bodies `054e5001` and `0d4c5001`; the pair-tagged failure FNV is
 
 ## 5. Scope firewall
 
-- The carrier replay covers all 25 rows in THM-4307's endpoint-594 residual
+- The carrier replay covers all 25 rows in THM-4308's endpoint-594 residual
   layer. Only the 22-row subset `(2)` is a new typed consequence over
   THM-4306; the three-row overlap is audited explicitly rather than counted
   twice.
 - The exact `3,911/14` split concerns deleting one mask from
-  `C_595^(4307)` on the 25-row layer only. It says nothing about simultaneous
-  deletions or preservation of THM-4307's older 391-row target.
+  `C_595^(4308)` on the 25-row layer only. It says nothing about simultaneous
+  deletions or preservation of THM-4308's older 391-row target.
 - Compiler-level O2/O3 agreement is reproducibility of one algorithm, not two
   structurally independent proofs.
 - Carrier failures are proof obligations, not physical danger witnesses.

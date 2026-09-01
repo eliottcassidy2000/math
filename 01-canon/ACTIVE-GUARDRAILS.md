@@ -84,7 +84,7 @@
     `boundary Delta^12`; do not infer endpoint emptiness or export the cap.
 27g. **Copies are not common atoms.** THM-2806 has bare-only `D3`/empty `M`; THM-2818's positive copies fail native/source/endpoint sidecars. Neither pays THM-2772.
 27h. **A generator-valued endpoint germ is not a physical allocation action.** THM-2825/2859 lack the source carrier and `C13` action needed to turn their missing-corner or decorated-arrow data into a row exclusion; neither implies LRC(14).
-27i. **Successor quotients lose coordinates.** THM-3731 cannot choose between tied minimum-depth owners; THM-3718 still lacks transport/arrival. 27j. **Carrier compression is family-relative; decks stay separate.** THM-4307's 3,925 minimum is only in `R\(D_350\H)`; THM-4306 supplies typed rows via another deck; THM-4308's `3,911/14` is one-deletion/new-layer-only. No entry or LRC(14).
+27i. **Successor quotients lose coordinates.** THM-3731 cannot choose between tied minimum-depth owners; THM-3718 still lacks transport/arrival. 27j. **Carrier compression is family-relative; decks stay separate.** THM-4308's 3,925 minimum is only in `R\(D_350\H)`; THM-4306 supplies typed rows via another deck; THM-4309's `3,911/14` is one-deletion/new-layer-only. No entry or LRC(14).
 ## NC2 / GMC
 
 28. **Scalar moments do not linearly separate return atoms.** MISTAKE-211/THM-2631;

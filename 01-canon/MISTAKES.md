@@ -9,7 +9,7 @@ Format per entry:
 - Why it was wrong
 - The correct framing
 
-## MISTAKE-536 (2026-09-01, THM-4308 endpoint-594 scout) -- a zero-joint quotient counted unaudited joint masks as safe deletions
+## MISTAKE-536 (2026-09-01, THM-4309 endpoint-594 scout) -- a zero-joint quotient counted unaudited joint masks as safe deletions
 
 - **What failed:** the first endpoint-594 singleton program skipped every
   body having an active joint witness, correctly classified `3,493/11` safe/
@@ -22,7 +22,7 @@ Format per entry:
   quotient. Deleting its sole joint witness can expose it. The skipped branch
   contains exactly three singleton obligations, protecting joint masks
   `003c2403`, `14248083`, and `20a09640`.
-- **Repair:** THM-4308's complete quotient partitions all
+- **Repair:** THM-4309's complete quotient partitions all
   `25*binom(30,9)=357,678,750` row-body cases into zero, one, and at least two
   active-joint-hit branches. It finds 17 singleton obligations on 14 distinct
   masks, proving the corrected all-mask split `3,911/14` on the fixed 25-row
@@ -30,8 +30,8 @@ Format per entry:
   retained only as a narrower independent control for nonjoint masks.
 - **Compounding lineage issue:** the scratch source called this the THM-4305
   carrier and included paths that disappeared after the concurrent rebase.
-  The 3,925-mask carrier belongs to THM-4307. Canonical sources and reproduction
-  commands were retargeted to THM-4307 and replayed before promotion.
+  The 3,925-mask carrier belongs to THM-4308. Canonical sources and reproduction
+  commands were retargeted to THM-4308 and replayed before promotion.
 - **Reusable rule:** if an optimization skips obligations because one witness
   class is present, its conclusion is conditional on not deleting that class.
   Partition by total witness multiplicity before making an all-element
