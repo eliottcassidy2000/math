@@ -1,0 +1,15 @@
+THM-4297 PRIMARY EXACT AUDIT: PASS
+Lambda_wall: Z=-U - W, D=(2*U + W)**2, delta=2*U + W
+contact: algebra=b^12, derivative=-delta, analytic_type=A23
+central: gcd_degree=0, S0_resultant=46656*U**6, good_differential_order=9
+repeat_condition: c^2+2*delta=0
+repeated_discriminant=-X**6*(-X**6 + 2*c)
+critical_coefficients: C1=alpha_11/c**2; C2=(8*c + 3*upsilon_5)/(3*c**2); C3=eta/c**2; C4=-(-9*Delta + 27*c - 32)/(9*c**2)
+W_nonzero_maximal_hostile: U=1, W=-13599602/164025, Z=13435577/164025, c=5152/405
+equality_rows: j,s,beta,beta/s,form_order
+  1,5,7,7/5,44
+  2,4,8,2,40
+  3,3,9,3,36
+  4,2,10,5,32
+positive_order_grid_checks=8064
+scope: Lambda=0, U*Z*D!=0, exact-M12 reduced seam, characteristic zero

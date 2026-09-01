@@ -1,5 +1,29 @@
 # Script Results Index
 
+- `jc2_weighted_face_source_normal_visibility_thm4298.out` and its
+  independent audit -> lossless integral coefficient transform from a
+  residual weight face to its consecutive source-normal diagonal
+  ([THM-4298](../../01-canon/theorems/THM-4298-weighted-face-source-normal-unimodular-visibility-transform.md)):
+  **PROVED + VERIFIED-EXACT + INDEPENDENTLY AUDITED; seam entry and JC(2)
+  OPEN.** The transform and alternating-binomial inverse are unimodular over
+  `Z`; a weight-`M` face has a minimal lossless leading flag on rows
+  `ceil(M/2)..floor(2M/3)`, with later same-diagonal echoes redundant. At
+  `M=12`, rows `6,7,8` give
+  `(h0,h1,h2)=(U,6U+W,15U+5W+Z)` and exact equations for `U=0`, `Z=0`,
+  `Lambda=0`, and `D=0`. No Darboux lift or row existence is inferred.
+
+- `jc23_general_lambda_zero_keller_extinction_thm4297.out` and its
+  independent audit -> exact transport from the `W=0` repeated-face model to
+  the full `Lambda=0`, `U*Z*D!=0` exact-`M=12` wall
+  ([THM-4297](../../01-canon/theorems/THM-4297-general-lambda-zero-central-and-tail-keller-extinction.md)):
+  **PROVED RELATIVE TO THM-4103/4230/4272/4292/4294 + VERIFIED-EXACT +
+  INDEPENDENTLY AUDITED; JC(2) OPEN.** On the wall,
+  `D=(2U+W)^2`; the extra `W` term is exactly `-Wr^4q^3/2` and reaches a
+  repeated normalized face only at `t^6`, after its first decisive splitter.
+  Every exceptional tail and the order-nine central component are constant,
+  so proper-flat degree conservation excludes the wall. Together with
+  THM-4290, exact `M=12` is closed for `U*Z*D!=0`.
+
 - `lrc14_mixed_rank_depth_recursive_signatures_thm4296/*` -> deletion-depth
   filtration, exact mixed-rank carrier descent, and recursive signature ideals
   ([THM-4296](../../01-canon/theorems/THM-4296-lrc14-mixed-rank-deletion-depth-and-recursive-signature-closure.md)):

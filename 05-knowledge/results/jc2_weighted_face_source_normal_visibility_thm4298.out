@@ -1,0 +1,12 @@
+THM-4298 WEIGHTED-FACE VISIBILITY PRIMARY AUDIT: PASS
+termwise_invariant_checks=68921
+unimodular_weights=200; matrix_entries=77486; range=0..200_except_1
+mixed_face_channels=884; mixed_weight_range=0..100
+M12_transform=[[1, 0, 0], [6, 1, 0], [15, 5, 1]]
+M12_inverse=[[1, 0, 0], [-6, 1, 0], [15, -5, 1]]
+M12_channels: h0=U; h1=6U+W; h2=15U+5W+Z
+M12_walls: U=h0; Z=h2-5h1+15h0; Lambda=h2-4h1+10h0
+M12_discriminant: D=h1^2+8h0h1-24h0^2-4h0h2
+M12_wall_triples=4913
+hostile: p^6_packet=(1,6,15); p^3y^2_packet=(0,1,5)
+scope: lossless face observer; no Darboux lift, seam entry, or JC2 conclusion
