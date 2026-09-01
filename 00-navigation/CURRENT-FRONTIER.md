@@ -351,8 +351,9 @@ lift/phase clocks.
   rational double sections; THM-4307 closes balanced towers. THM-4308's
   finite row-eight gate plus
   [THM-4312](../01-canon/theorems/THM-4312-source-normal-cubic-corner-repeated-face-collapse.md)
-  leaves only `k=1`, with positive formal differential order on both first
-  carriers. Row-nine/all-row, later `k=1`, and seam remain.
+  leaves `k=1`. THM-4315/4316 kill ten row-nine points at row ten;
+  THM-4317 resolves local models. Only that normalized corner lane closes.
+  `U=0`, `Z=0`, seam, `JC(2)`, and `DC(2)` remain open.
   Exceptional quartic: THM-3703/3737 give grammar/image, THM-4034 the
   conductor, and THM-4039/4043/4046 reach `J_7`, obstruct `J_8`, and close
   critical `H`. [THM-4054](../01-canon/theorems/THM-4054-exceptional-affine-simple-zero-retained-packet.md)

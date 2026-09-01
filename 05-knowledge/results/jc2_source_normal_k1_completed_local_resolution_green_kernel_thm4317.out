@@ -1,0 +1,16 @@
+THM-4317 K1 COMPLETED-LOCAL RESOLUTION AND GREEN KERNEL: PASS
+L1_INITIAL wt(x,t,z)=(6,4,1) N=16 rho*t*(U*x^2-z^12+L1*t^3)
+L2_INITIAL wt(x,t,z)=(6,3,1) N=15 rho*t*(U*x^2+upsilon*t^2*x+C*t^4-z^12)
+FINITE_BOUNDARY L1=two_A55 L2=two_A56 critical_order_F=72 quotients=(56,57)
+LITERAL_Z Fcrit=-(kappa^12/2)*z^72+O(z^78); reparametrized remainder O(z^126)
+INFINITY L1=smooth_mu3_cover quotient=1/3(1,1) one_minus3_curve
+INFINITY L2=smooth_mu2_cover two_quotients=1/2(1,1)=A1
+RESOLUTION_COUNTS L1=2*55+1=111 L2=2*56+2=114 all_rational
+A_CHAIN nu_i(u)=r-i nu_i(v)=i nu_i(z)=1 negative_intersection=Dirichlet_path_L
+GREEN K_ij=min(i,j)*(r-max(i,j))/r expected_visits=2*K_ij audited_r=56,57
+POISSON a_i=E_i[a_Xtau]+(1/2)E_i[sum_(n<tau)b_Xn]
+MARTINGALE a(X_(n^tau))+(1/2)sum_(k<n^tau)b(X_k)
+QUOTIENT_FIREWALL minus3_and_A1_quotient_curves_not_part_of_unbiased_A_chain
+CONSEQUENCE conditional_on_actual_Keller_lift completed_local_k1_divisors_are_constant
+CHECKS=59
+SCOPE conditional completed-local geometry over row8 k1 datum; no all-row lift, seam entry, JC2, or DC2

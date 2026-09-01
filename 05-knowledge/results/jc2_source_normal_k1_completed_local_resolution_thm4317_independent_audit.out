@@ -1,0 +1,17 @@
+THM-4317 INDEPENDENT FRACTION/SPARSE AUDIT: PASS
+L1_INITIAL weight=16 rho*t*(U*x^2-z^12+L1*t^3)
+L2_INITIAL weight=15 rho*t*(U*x^2+ups*t^2*x+C*t^4-z^12)
+L2_RECENTER C=D+Theta-rho*zeta 4U*L2=4U*C-ups^2
+BOUNDARY_BRANCHES c2*kappa^2=1 two_distinct=yes t=kappa*z^6+O(z^12) q=3*kappa^12*z^60+O(z^66)
+CRITICAL_VALUE literal_z=-kappa^12*z^72/2+3*c3*kappa^15*z^78+O(z^84) q_correction_starts_z126
+BOUNDARY_TYPES L1=two_A55 L2=two_A56
+L1_INFINITY saturation=u^3 equation=U*V^2+L1*u-u^10 action=1/3(1,1) resolution=one_minus3
+L2_INFINITY saturation=u^5 equation=U*V^2+ups*V+C-u^8 discriminant=-4U*L2 roots=2 actions=two_A1
+CHARTS z_nonzero_plus_sigma_infinity_exhaust_carrier x_chart_adds_none
+RATIONAL_CURVES minimal_L1=111 minimal_L2=114 later_point_blowups=P1
+A_CHAIN r=56,57 nu_i(u)=r-i nu_i(v)=i nu_i(z)=1
+GREEN inverse_Cartan=min(i,j)*(r-max(i,j))/r expected_visits=2*inverse_Cartan
+POISSON a_i=E_boundary+(1/2)*E_accumulated_contact martingale_with_compensator=yes
+UNBIASED_PATH_SCOPE boundary_A55_A56_only infinity_minus3_and_A1_quotients_separate
+SCOPE finite_row8_k1_completed_local conditional_actual_Keller_lift no_all_row no_JC2
+CHECKS=15333

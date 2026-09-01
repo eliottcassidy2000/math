@@ -1,0 +1,23 @@
+THM-4315 STUDENT--STEIN ROW-NINE INDEPENDENT AUDIT: PASS
+implementation=stdlib Fraction + sparse parameter/Laurent polynomials; no primary import; no CAS
+Student_law=mu_m(dx) proportional (x^2+6)^(-(m+1)) dx; audited m=2..24
+Stein_operator=A_m(theta)=(x^2+6)theta'-2m*x*theta; D_m=A_m/(2m)
+Pearson_generator=L_m(f)=(x^2+6)f''-2m*x*f'; stationary monomial means vanish
+row9_cokernel=[12155, 0, 4290, 0, 5148, 0, 11880, 0, 45360, 0]
+G9=x^6*((20U+10W+4Z)+(10alpha11+6beta11)x+(5upsilon5+4xi10)x^2+(eta+zeta3)x^3)
+E9_normalization=Student_cokernel(target)=E9/328050
+corner_E9_alpha=verified_exact
+Q_degree=5; Q_content=853066687500; Q_squarefree=YES; Q_forbidden_gcd=1
+high_contact_degree=3; mod19_Bezout=s*Q+t*R=1
+P2_row9=ambient:75 columns:160 rank:59 left_nullity:16
+P3_row9=ambient:85 columns:251 rank:73 left_nullity:12
+terminal_depth_rank=3; augmented_rank=3; affine_dimension=7
+fixed_source_fibres=J8:A7 J9:A7; G9_rank_on_J8=7; truncation_J9_to_J8_image_dimension=0
+stochastic_scope=sequential independent uniform affine-coordinate proposal at the fixed compatible F19 source
+F19_proposal_increments=(5, 6, 7, 8, 2, 7, 3); survival_through_row8=19^-28; survival_through_row9=19^-38
+F19_positive_point=(4, 1, 5, 8, 6, 7, 9, 4, 12, 14, 12, 15, 4); L1=5; projection_and_affine_ranks_preserved=YES
+full_fibre_uniform_marginals_projectively_consistent=NO; pushforward_from_J9_is_delta_on_J8
+proposal_caveat=these exponents are proposal-dependent acceptance fractions, not intrinsic source probabilities or an extinction theorem
+consequence=L1=0 high-contact cubic is incompatible with row-nine bracket lift
+scope=finite row-nine bracket/depth gate only; no all-row lift, termination, seam entry, JC2, or DC2
+CHECKS=59879

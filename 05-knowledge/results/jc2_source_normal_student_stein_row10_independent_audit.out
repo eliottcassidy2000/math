@@ -1,0 +1,19 @@
+JC2 SOURCE-NORMAL STUDENT--STEIN ROW-TEN INDEPENDENT AUDIT: PASS
+implementation=stdlib Fraction + sparse Laurent/x polynomials; no primary import; no CAS
+source=p=t(1+x^2*t), y=x*t*p; G4..G10 reconstructed directly
+transport=bracket particular + exact Student tangent solve through G9
+Student_law=mu_m(dx) proportional (x^2+6)^(-(m+1)) dx; audited m=2..20
+Stein_operator=A_m(theta)=(x^2+6)theta'-2m*x*theta; D_m=A_m/(2m)
+Pearson_generator=L_m(f)=(x^2+6)f''-2m*x*f'; stationary monomial means vanish
+row10_cokernel=[46189, 0, 14586, 0, 15444, 0, 30888, 0, 99792, 0, 489888]
+G10=U*x^8+alpha11*x^9+(upsilon5+xi10)*x^10 on the audited corner
+E10=143*P10(Phi^2)/(2518243204518514160156250*Phi^4) verified as a Laurent identity
+P10_ascending=[-2955996966894649715961849999793382752256, -49516799750570385919467992383488000, -114199708075156991490870528000000, 68842335386673891964107421875]
+P10_degree=3; P10_content=1; P10_squarefree=YES
+Q_degree=5; gcd(P10,Q)=1
+forbidden_degree=3; forbidden=X*(14625X+404652032)*(820125X+13056802816)
+mod23_P10_Q_Bezout=(-X^4-10X^3-2X^2+10X+2)*P10+(5X^2-10X+2)*Q=1
+mod23_P10_F_Bezout=(-4X^2-7X+7)*P10+(-11X^2-3X-10)*F=1
+consequence=the audited exact cubic corner has no row-ten bracket lift
+scope=finite row-ten bracket necessity only; depth-10, all-row lift, seam entry, JC2, and DC2 remain unclaimed
+CHECKS=361

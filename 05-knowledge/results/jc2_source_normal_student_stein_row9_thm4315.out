@@ -1,0 +1,20 @@
+THM-4315 STUDENT--STEIN ROW-NINE PRIMARY EXACT AUDIT: PASS
+STEIN D_m(theta)=((x^2+6)*theta'-2*m*x*theta)/(2*m)
+STATIONARY mu_m(dx)=c_m*(x^2+6)^(-(m+1))*dx
+MOMENT for 0<=2r<=m: E_m[X^(2r)]=6^r*(2r-1)!!/prod_(j=1)^r(2m-2j+1); odd degrees <=m have mean0
+COKERNEL_m9=[12155, 0, 4290, 0, 5148, 0, 11880, 0, 45360, 0]
+FILTER mu_m --survive 6/(X^2+6)--> mu_(m+1); survival=(2m+1)/(2m+2)
+G9=20*U*x**6 + 10*W*x**6 + 4*Z*x**6 + 10*alpha11*x**7 + 6*beta11*x**7 + eta*x**9 + 5*upsilon5*x**8 + x**9*zeta3 + 4*x**8*xi10
+E9_GATE=613527750*Phi**2 - 511211250*Phi*alpha11 - 3154140000*Phi*eta - 255605625*eta**2 + 6736896000*xi10 - 46483785515008=0
+P2_ROW9 ambient=75 columns=160 rank=59 left_nullity=16
+P3_ROW9 ambient=85 columns=251 rank=73 left_nullity=12
+ROW9_TERMINAL tangent_rank=3 affine_dimension=7 no_extra_corner_equation=yes
+FIBRE_TRANSITION dim_J8=7 dim_J9=7 truncation_image_dim=0
+STOCHASTIC_NO_GO nondegenerate_full_fibre_marginals_projectively_consistent=no
+CORNER_Q=316016952601619726458584136962890625*X**5 + 14163685391496771581808513584548828125000*X**4 + 137633556412285429978153325875719168000000000*X**3 - 6709927871370175861935855782936495259648000000*X**2 + 16759499408238096044037088463875607198378754048000*X + 44257795605986960276324945338517826145242081533100032
+CORNER_Q degree=5 squarefree=yes forbidden_gcd=1 source_points=10_over_algebraic_closure
+HIGH_CONTACT gcd(Q,R)=1 mod19_Bezout=yes L1_zero_row9_lift=no
+F19_PROPOSAL increments=(5,6,7,8,2,7,3) survival_row8=19^-28 survival_row9=19^-38
+F19_SURVIVOR (Delta,Theta,K,Phi,eta,zeta3,upsilon5,xi10,U,W,Z,alpha11,beta11)=(4,1,5,8,6,7,9,4,12,14,12,15,4) L1=5
+CHECKS=163
+SCOPE exact residual_weight<=12 row9 projected finite gate; no row10/all-row lift, termination, seam entry, JC2, or DC2
