@@ -9,6 +9,46 @@ Format per entry:
 - Why it was wrong
 - The correct framing
 
+## MISTAKE-538 (2026-09-01, THM-4311 promotion audit) -- a hostile transcript returned process success while its reproduction recipe required exit two
+
+- **What failed:** the endpoint-593 baseline program correctly printed its
+  unique hostile failure and `VERDICT HOSTILE_FAIL`, but then returned zero
+  unconditionally. The reproduction recipe required exit code two, matching
+  the repository convention for an expected nonempty failure ledger, so an
+  exact reproduction would throw after producing the correct bytes.
+- **First failed implication:** a semantically correct transcript does not by
+  itself validate the command protocol. Output bytes and process status are
+  separate audited coordinates.
+- **Repair:** before theorem promotion, the canonical source was changed to
+  return `0` iff the failure ledger is empty and `2` otherwise. Fresh O3 and
+  O2 builds both returned two on the hostile baseline, and their transcripts,
+  pair ledgers, and failure ledgers byte-matched the frozen packet. No
+  mathematical count or hash changed.
+- **Reusable rule:** every hostile control must freeze both its semantic
+  witness and its expected exit status; replay tests should compare each
+  coordinate independently.
+
+## MISTAKE-537 (2026-09-01, THM-4311 inherited-target seam) -- a stale typed target omitted three carrier rows
+
+- **What failed:** the preliminary endpoint-593 exchange replay preserved
+  `391+22+16=429` rows, using only the endpoint-594 rows newly typed by
+  THM-4310. THM-4310's stronger carrier theorem closes all 25 endpoint-594
+  rows, including `(173,594)`, `(381,594)`, and `(383,594)`, so the inherited
+  carrier target actually has `391+25+16=432` rows.
+- **First failed implication:** typed-set novelty and carrier preservation are
+  different predicates. A row already supplied by another proof object need
+  not be added again to the typed union, but it remains part of this carrier's
+  proved closure and must survive a carrier exchange.
+- **Repair:** the 429-row artifacts were quarantined. The singleton quotient
+  was recomputed on all 432 rows; the same deletion `0006e281` remained safe.
+  Independent O3/O2 raw replays of the exchanged carrier then scanned
+  `432*binom(30,9)=6,180,688,800` cases and found zero failures. Only the
+  16 endpoint-593 rows are added to the typed union.
+- **Reusable rule:** at every proof-graph seam, maintain separate ledgers for
+  the carrier's preservation target and for newly consumed typed rows. Form
+  the former from all inherited carrier consequences, not by subtracting
+  overlaps from the latter.
+
 ## MISTAKE-536 (2026-09-01, THM-4310 endpoint-594 scout) -- a zero-joint quotient counted unaudited joint masks as safe deletions
 
 - **What failed:** the first endpoint-594 singleton program skipped every
