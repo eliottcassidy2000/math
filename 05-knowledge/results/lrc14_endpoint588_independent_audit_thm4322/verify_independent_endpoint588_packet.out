@@ -1,0 +1,7 @@
+INDEPENDENT_ENDPOINT588_PACKET_VERIFY PASS
+manifest_files=30
+rows=66 body_tests=944271900 failures=144867 failed_rows=10
+failure_fnv=6f51fa88f3b09cdc pair_fnv=204a72794170e186
+literal_positive=144867 minimum_ticks=706240375488648 minimum_q=210 minimum_body=06b82090
+typed_union=2207 residual=20440 next_endpoint=587 next_rows=10
+scope=FINITE_EXACT_NO_PHYSICAL_ENTRY_NO_LRC14
