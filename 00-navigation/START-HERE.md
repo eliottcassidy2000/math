@@ -53,9 +53,10 @@ Then read frontier, guardrails, theorem; logs are history.
     Composite rank seven and FC(3) remain open.
 12. **JC is false from dimension three; JC(2), DC(2) remain open.**
     THM-2084 reaches `M=10`; THM-4248 closes `M=11` off-wall; THM-4226 dense
-    `M=13`; THM-4290 closes the `M=12` interior and THM-4297 closes its full
-    `Lambda=0`, `U*Z*D!=0` wall. The `U=0`, `Z=0`, `D=0` walls and seam
-    entry remain open.
+    `M=13`; THM-4290 closes the `M=12` interior, THM-4297 closes its full
+    `Lambda=0`, `U*Z*D!=0` wall, and THM-4299 closes
+    `D=0`, `U*Z*Lambda!=0`. The `U=0`, `Z=0`, cubic
+    `D=Lambda=0` corner, and seam entry remain open.
 13. **Complete period-14 coordinates can be globally blind.** THM-2058 keeps
     every fixed-depth packet coordinate but exits at `47/113`; THM-2043/2047/
     2050 separate local completeness from global maxima.

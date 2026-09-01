@@ -1,0 +1,21 @@
+THM-4299 EXACT CERTIFICATE
+square_face: D=0, C=(1-L)(1+L), Lambda=(a+b)^2
+factor_polygon: 2A=6 boundary=6 interior=1; two smooth j=0 elliptics
+deck: tau swaps factors; tau^2 source=[-omega], target=[omega^2], difference=1
+contacts_off_corner: R-E+=6 transverse, R-E-=6 transverse, E+-E-=6 (A11)
+genus: central=7, full_special=18
+m  s  beta  genus  good_form_order
+ 1 11     1      5              104
+ 2  5     1      4               50
+ 3  3     1      4               32
+ 4  2     1      3               23
+ 5  7     5      3               88
+ 6  1     1      2               14
+ 7  5     7      2               80
+ 8  1     2      1               19
+ 9  1     3      1               24
+10  1     5      0               34
+11  1    11      0               64
+hostile: (U,W,Z)=(1,2,1), kappa=t-4t^2+..., genus=5, order=104
+corner: (1,-2,1), three pairwise length-6 branches; first face cubic
+ALL THM-4299 EXACT CHECKS PASSED

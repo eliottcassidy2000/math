@@ -344,18 +344,15 @@ lift/phase clocks.
   `131199`-field file is a named finite population, not a world census.
 - **Jacobian/Dixmier:** `JC(2),DC(2)` remain **OPEN**. THM-4130--4220 close
   `M=8--10`; THM-4222/4232/4248 close `M=11` off its walls, and THM-4226
-  closes dense `M=13`. THM-4290 closes exact `M=12` on
-  `U*Z*D*Lambda!=0` by deck equivariance. THM-4272/4289 and THM-4291--4294
-  give the `A_23` contact, Kahler firewall, tail extinction, corrected wall
-  packet, and central order nine on `W=Lambda=0`.
+  closes dense `M=13`.
   [THM-4290](../01-canon/theorems/THM-4290-exact-weight-twelve-deck-equivariant-visible-quotient-exclusion.md)
   and [THM-4297](../01-canon/theorems/THM-4297-general-lambda-zero-central-and-tail-keller-extinction.md)
-  together close exact `M=12` for `U*Z*D!=0`; the latter transports tail
-  extinction across all `Lambda=0` because the new term first appears at
-  `t^6`. [THM-4298](../01-canon/theorems/THM-4298-weighted-face-source-normal-unimodular-visibility-transform.md)
-  recovers the weight-12 face and all four walls losslessly from `G`-rows
-  `6,7,8`, but proves no row existence. The `U=0`, `Z=0`, `D=0` walls and
-  seam entry remain open.
+  close exact `M=12` for `U*Z*D!=0`.
+  [THM-4299](../01-canon/theorems/THM-4299-d-zero-square-face-elliptic-splitting-and-off-corner-extinction.md)
+  closes `D=0`, `U*Z*Lambda!=0` by elliptic splitting and Morse-tail
+  extinction. [THM-4298](../01-canon/theorems/THM-4298-weighted-face-source-normal-unimodular-visibility-transform.md)
+  observes all walls in `G`-rows `6,7,8` but proves no row existence. The
+  `U=0`, `Z=0`, cubic `D=Lambda=0` corner, and seam entry remain open.
   Exceptional quartic: THM-3703/3737 give grammar/image, THM-4034 the
   conductor, and THM-4039/4043/4046 reach `J_7`, obstruct `J_8`, and close
   critical `H`. [THM-4054](../01-canon/theorems/THM-4054-exceptional-affine-simple-zero-retained-packet.md)

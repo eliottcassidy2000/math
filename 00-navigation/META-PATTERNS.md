@@ -330,7 +330,14 @@ THM-4029/4030/4031/4032, S79.
 
 ## Divide exceptional multiplicity before judging a wall
 
-**Action:** when a leading row/degree vanishes on a wall, retain the transverse parameter, divide the proved exceptional multiplicity, and recompute support plus the first normal coefficient (reciprocally at infinity). Strict transforms activate inert terms but need units and lose root labels/Keller data; lower terms may reopen the prior layer and force retuning. Resultant-cycle parity is not cover inertia. **Evidence:** THM-3231/3233/3237/3257/3263/3265.
+**Action:** when a leading row/degree vanishes on a wall, retain the transverse
+parameter, divide the proved exceptional multiplicity, and recompute support
+plus the first normal coefficient (reciprocally at infinity). Strict transforms
+activate inert terms but need units and lose root labels/Keller data; lower
+terms may reopen the prior layer and force retuning. Resultant-cycle parity is
+not cover inertia. **Evidence:** THM-3231/3233/3237/3257/3263/3265; THM-4299
+divides the unit `r-1`, retains the critical value, and isolates its nonunit
+cubic corner.
 
 ## Refine vertices and lifetimes before quotienting
 

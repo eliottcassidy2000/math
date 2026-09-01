@@ -1,0 +1,18 @@
+THM-4299 INDEPENDENT AUDIT
+factorization, polygons, characters, and contact ledgers: PASS
+parametric Morse input and all m=1..11 tail ledgers: PASS
+m  s  beta  genus  good_form_order
+ 1 11     1      5              104
+ 2  5     1      4               50
+ 3  3     1      4               32
+ 4  2     1      3               23
+ 5  7     5      3               88
+ 6  1     1      2               14
+ 7  5     7      2               80
+ 8  1     2      1               19
+ 9  1     3      1               24
+10  1     5      0               34
+11  1    11      0               64
+hostile m=1 critical value: t-4t^2+O(t^3); order=104
+D=Lambda=0 cubic boundary identity: PASS
+ALL THM-4299 INDEPENDENT CHECKS PASSED
