@@ -344,14 +344,15 @@ lift/phase clocks.
   tuple is now at least `(8,5,4,3,3)` for `ell=(3,5,7,11,13)`. The requested
   challenges `(3,9),(5,6),(7,5),(11,4),(13,4)` all remain **OPEN**; the public
   `131199`-field file is a named finite population, not a world census.
-- **Jacobian/Dixmier:** `JC(2),DC(2)` remain **OPEN**. THM-4130--4248 close
-  `M=8--11` off named walls; THM-4226 closes dense `M=13`. THM-4290/4297
-  close exact `M=12` for `U*Z*D!=0`; [THM-4299](../01-canon/theorems/THM-4299-d-zero-square-face-elliptic-splitting-and-off-corner-extinction.md)
-  closes off-corner `D=0`. [THM-4301](../01-canon/theorems/THM-4301-cubic-corner-first-face-keller-extinction.md)
-  kills separable/horizontal cubic first faces; [THM-4304](../01-canon/theorems/THM-4304-cubic-corner-repeated-first-face-rationality.md)
-  makes every reduced repeated carrier a rational double section. Refinements
-  above those sections remain. THM-4298 sees `G`-rows `6,7,8` but proves no
-  rows. `U=0`, `Z=0`, and seam entry remain open.
+- **Jacobian/Dixmier:** `JC(2),DC(2)` are **OPEN**. THM-4130--4248 close
+  `M=8--11` off-wall; THM-4226 closes dense `M=13`. THM-4290/4297 and
+  [THM-4299](../01-canon/theorems/THM-4299-d-zero-square-face-elliptic-splitting-and-off-corner-extinction.md)
+  reduce `M=12` to `U=0`, `Z=0`, and the cubic corner. THM-4301/4304 leave
+  rational double sections; THM-4307 closes balanced towers. THM-4308's
+  finite row-eight gate plus
+  [THM-4312](../01-canon/theorems/THM-4312-source-normal-cubic-corner-repeated-face-collapse.md)
+  leaves only `k=1`, with positive formal differential order on both first
+  carriers. Row-nine/all-row, later `k=1`, and seam remain.
   Exceptional quartic: THM-3703/3737 give grammar/image, THM-4034 the
   conductor, and THM-4039/4043/4046 reach `J_7`, obstruct `J_8`, and close
   critical `H`. [THM-4054](../01-canon/theorems/THM-4054-exceptional-affine-simple-zero-retained-packet.md)

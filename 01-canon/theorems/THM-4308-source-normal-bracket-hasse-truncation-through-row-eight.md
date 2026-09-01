@@ -35,6 +35,7 @@ related:
   - THM-3992-reduced-two-three-cusp-jet-repair-and-first-node-residual
   - THM-3997-reduced-two-three-hasse-repair-and-zero-residual-no-go
   - THM-4005-reduced-two-three-live-seam-invariant-support-atlas
+  - THM-4312-source-normal-cubic-corner-repeated-face-collapse
 primary_script: 04-computation/jc2_source_normal_bracket_hasse_rows8_thm4308.py
 primary_output: 05-knowledge/results/jc2_source_normal_bracket_hasse_rows8_thm4308.out
 primary_script_sha256: 3703758f87a628583cf0f2f9e8fb1973f8ee65c875ab679acc20a9867c27e7f1
@@ -440,6 +441,11 @@ prove any of the following:
 5. that residual weight is at most twelve outside the declared universe;
 6. any coefficient wall, exact-M12 boundary case, or emptiness result;
 7. `JC(2)` or `DC(2)`.
+
+THM-4312 later intersects this finite response with THM-4304's exact cubic
+corner. It excludes four of the five repeated regimes and classifies the two
+possible first splitters of the surviving `k=1` lane. That corollary does not
+alter any finite-versus-infinite firewall above.
 
 Reproduce from the repository root:
 

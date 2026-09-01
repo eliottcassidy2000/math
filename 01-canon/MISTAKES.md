@@ -9,6 +9,61 @@ Format per entry:
 - Why it was wrong
 - The correct framing
 
+## MISTAKE-540 (2026-09-01, THM-4312 k1 splitter scout) -- a ramified toric cover was mistaken for the weighted exceptional carrier
+
+- **What failed:** the first `k=1` splitter calculation substituted
+  `sigma=lambda^3`, `z=lambda*w_0` at primitive weights `(3,1)` and treated
+  `w_0` as a coordinate on the weighted exceptional divisor. This produced
+  `V^2=w_0(w_0^9-L_1)`, a squarefree degree-ten curve, and the provisional
+  genus-four claim.
+- **First failed implication / missing coordinate:** that substitution is a
+  ramified `mu_3` cover of `P(3,1)`, not its function field. The invariant
+  quotient coordinate is `w=sigma/z^3=w_0^(-3)`. If `Q` has excess two and
+  `V=Q/z^2`, the actual residue is
+  `aV^2=w^(-2)-L_1w`; after `Y=wV` it is
+  `aY^2=1-L_1w^3`, which has genus one and `j=0`.
+- **Strongest survivor:** the splitter `beta=s/3`, primitive ledger
+  `(s,beta,gamma)=(3,1,4)`, orders `v(F_q)=10` and
+  `v(phi^*eta_0)>=28`, and conditional Keller constancy all survive. The
+  quotient repair makes the carrier elliptic rather than genus four, so the
+  differential mechanism is more, not less, essential.
+- **Repair:** THM-4312 works in the invariant function field of each weighted
+  exceptional divisor. It also treats the genuine `L_1=0` locus: the next
+  coefficient never vanishes there and the actual `P(2,1)` quotient is the
+  genus-one `j=1728` curve `aY^2=1-L_2w^4`.
+- **Reusable rule:** before computing genus on a toric or weighted blowup,
+  write the invariant function field and the finite stabilizer explicitly.
+  A convenient root-coordinate base change can multiply branch points and
+  inflate genus; geometry on that cover does not descend automatically.
+
+## MISTAKE-539 (2026-09-01, THM-4304 double-section refinement) -- the ambient cubic A2 algebra was retained after triple roots had been excluded
+
+- **What failed:** THM-4304 correctly proved that every literal repeated
+  first-face factor has multiplicity exactly two, but its refinement firewall
+  still assigned the translated section the two-dimensional quotient
+  `C[[Q]]/(Q^2)=span{1,Q}`. Navigation therefore asked future work to retain
+  two intrinsic `T^1` coordinates above each double section.
+- **First failed implication / minimal witness:** a double root has local
+  equation `Q^2` times a unit, so its derivative ideal is `(2Q)=(Q)` and
+  `T^1=C[[Q]]/(Q)` has dimension one. The displayed two-dimensional quotient
+  is instead the Jacobian algebra of the triple root `Q^3`. THM-4304 Section 6
+  had already excluded precisely that case.
+- **Strongest survivor:** THM-4304's multiplicity classification, rationality
+  of every reduced first-face carrier, exact coefficient values, and all
+  frozen computations remain valid. The raw constant and `Q`-linear Taylor
+  rows are also valid ambient data; they are not two independent intrinsic
+  deformation coordinates after the simple factor is isolated.
+- **Repair:** THM-4307 recenters at the unique critical root and replaces the
+  raw pair by one critical-value/discriminant coordinate. For the balanced
+  sections it computes a smooth formal discriminant graph, the unique splitter
+  `beta=5s`, and a smooth rational normalized chart. THM-4301's original A2
+  quotient is retained only as a preclassification ambient-cubic statement
+  and now carries an explicit supersession note.
+- **Reusable rule:** recompute the local Jacobian/deformation algebra after a
+  multiplicity classification. Ambient polynomial degree does not determine
+  the singularity type at the surviving root, and raw Taylor rows need not be
+  independent after critical recentering.
+
 ## MISTAKE-538 (2026-09-01, THM-4311 promotion audit) -- a hostile transcript returned process success while its reproduction recipe required exit two
 
 - **What failed:** the endpoint-593 baseline program correctly printed its
@@ -76,34 +131,6 @@ Format per entry:
   class is present, its conclusion is conditional on not deleting that class.
   Partition by total witness multiplicity before making an all-element
   deletion claim, and re-resolve object ownership after every rebase.
-
-## MISTAKE-537 (2026-09-01, THM-4304 double-section refinement) -- the ambient cubic A2 algebra was retained after triple roots had been excluded
-
-- **What failed:** THM-4304 correctly proved that every literal repeated
-  first-face factor has multiplicity exactly two, but its refinement firewall
-  still assigned the translated section the two-dimensional quotient
-  `C[[Q]]/(Q^2)=span{1,Q}`. Navigation therefore asked future work to retain
-  two intrinsic `T^1` coordinates above each double section.
-- **First failed implication / minimal witness:** a double root has local
-  equation `Q^2` times a unit, so its derivative ideal is `(2Q)=(Q)` and
-  `T^1=C[[Q]]/(Q)` has dimension one. The displayed two-dimensional quotient
-  is instead the Jacobian algebra of the triple root `Q^3`. THM-4304 Section 6
-  had already excluded precisely that case.
-- **Strongest survivor:** THM-4304's multiplicity classification, rationality
-  of every reduced first-face carrier, exact coefficient values, and all
-  frozen computations remain valid. The raw constant and `Q`-linear Taylor
-  rows are also valid ambient data; they are not two independent intrinsic
-  deformation coordinates after the simple factor is isolated.
-- **Repair:** THM-4307 recenters at the unique critical root and replaces the
-  raw pair by one critical-value/discriminant coordinate. For the balanced
-  sections it computes a smooth formal discriminant graph, the unique splitter
-  `beta=5s`, and a smooth rational normalized chart. THM-4301's original A2
-  quotient is retained only as a preclassification ambient-cubic statement
-  and now carries an explicit supersession note.
-- **Reusable rule:** recompute the local Jacobian/deformation algebra after a
-  multiplicity classification. Ambient polynomial degree does not determine
-  the singularity type at the surviving root, and raw Taylor rows need not be
-  independent after critical recentering.
 
 ## MISTAKE-535 (2026-09-01, THM-4305 higher-rank response scout) -- a rank-at-most-nine wall geometry was queried on rank-ten-or-higher masks
 

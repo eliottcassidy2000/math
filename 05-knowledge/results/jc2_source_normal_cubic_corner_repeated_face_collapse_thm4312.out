@@ -1,0 +1,19 @@
+THM-4312 PRIMARY EXACT AUDIT: PASS
+GATES Delta=896/15 Theta=512/75 zeta3=-3*Phi/2 upsilon5=-731648/2025
+CORNER xi10=(4343625*Phi^2+124805668864)/12798000
+CORNER Phi*eta=2091705253888/107983125-(2839/1185)*Phi^2
+CORNER U=Z=-13*(820125*Phi^2+13056802816)/57591000 W=-2U Phi!=0
+EXCLUDE balanced Delta_residual=128/9
+EXCLUDE k2 repeated_residual=-1839105572864/4100625
+EXCLUDE k3 Delta+Theta=1664/25
+SURVIVE_ONLY k1 beta11=-alpha11 alpha11^2=4U(upsilon5+xi10)
+K1_SQUARE -143*(14625*Phi^2+404652032)*(820125*Phi^2+13056802816)/6824533500000
+K1_GRAPH rho=-alpha11/(2U) m=(eta+zeta3-alpha11*upsilon5/(2U))*t+O(t^2)
+CONTROL Phi=1 xi10=124810012489/12798000 eta=2091446550013/107983125 U=-169749098233/57591000 alpha11^2=-755609801217839887891/6824533500000
+CONTROL_K1 rho^2=-98333997651/30863472406 L1_norm=270260378011253985379632330934787603/719758107151040278729687500
+HIGH_CONTACT L1=0 exact_cubic_R_degree=3 roots_avoid_Phi0_U0_c20=yes gcd_R_L2numerator=1 mod17_Bezout=yes
+CASE_L1 beta=s/3 primitive_weights=3,1,4 invariant=w=sigma/z^3 curve=Y^2-(1-L1*w^3) genus=1 j=0 Fq=10 good_form_lower_bound=28
+CASE_L2 beta=s/2 primitive_weights=2,1,3 invariant=w=sigma/z^2 curve=Y^2-(1-L2*w^4) genus=1 j=1728 Fq=9 good_form_lower_bound=20
+CONSEQUENCE formal_good_order_positive actual_exact_M12_Keller_lift_implies_first_carrier_constant
+SCOPE finite_row8_projection first_exceptional_only no_completed_local_tower no_all_row_lift no_seam_entry no_JC2 no_DC2
+CHECKS=53

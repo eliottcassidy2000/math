@@ -1,0 +1,26 @@
+THM4312_SOURCE_NORMAL_CUBIC_CORNER_INDEPENDENT_V2
+GATES Delta=896/15 Theta=512/75 zeta3=-3Phi/2 upsilon5=-731648/2025
+CORNER xi10=(4343625r+124805668864)/12798000; Phi*eta=(2091705253888-258703875r)/107983125
+CORNER U=Z=-13(820125r+13056802816)/57591000; W=-2U; Phi!=0
+EXCLUSIONS balanced_Delta_residual=128/9; k2_square_residual=-1839105572864/4100625; k3_c4=1664/25
+K1 rho^2=c2/U; alpha11=-2U*rho; beta11=2U*rho
+SPARSE_SOURCE P0=U*y*(y-rho)^2
+SPARSE_SOURCE P1(rho)=rho*L; L=eta+zeta3+upsilon5*rho
+SPARSE_SOURCE P2=6Uy^5-12Urho*y^4+(6Urho^2+4upsilon5)y^3+(4eta+3zeta3)y^2+c4y
+CRITICAL_GRAPH a=-upsilon5/(2U); b=-(4eta+4rho*upsilon5+3zeta3)/(2U); L2=DERIVED
+WEIGHTED_QUOTIENT w=sigma/z^3 V=Q/z^2 Y=wV; UY^2=1-Lw^3
+WEIGHTED_QUOTIENT L!=0 squarefree_cubic=yes genus=1 j=0
+RAMIFIED_COVER sigma=lambda^3,z=lambda*w0 gives degree-10 genus-4 cover; not the P(3,1) invariant quotient
+ORDERS primitive=(s,beta,gamma)=(3,1,4) d=4 Fq=10 good_form_lower_bound=28
+CONTROL Phi=1 xi10=124810012489/12798000 eta=2091446550013/107983125 U=-169749098233/57591000
+CONTROL rho^2=-98333997651/30863472406 L_norm=270260378011253985379632330934787603/719758107151040278729687500 corner=PASS cubic_squarefree=PASS
+HIGH_CONTACT R(r)=7547170421607067494140625r^3+164114458618573873612800000000r^2+2284603892441775363795663716352000r+2970579390109346274816679296272171008
+HIGH_CONTACT L2=[4U^2c4-2Ualpha(4eta+3zeta)-Uupsilon5^2+4alpha^2upsilon5]/(4U^2)
+HIGH_CONTACT on_L=0 L2=c4+c3*zeta3/upsilon5-upsilon5^2/(4U)=-S/[676262246400(820125r+13056802816)]
+HIGH_CONTACT S(r)=8970234157828125r^2+61293210070929408000r-1395571970793868500140032
+HIGH_CONTACT gcd(R,forbidden)=1 gcd(R,S)=1; mod17 (-5r-8)R+(-r^2+r-5)S=1
+SECOND_QUOTIENT w=sigma/z^2 V=Q/z^3 Y=wV; UY^2=1-L2w^4
+SECOND_QUOTIENT L2!=0 squarefree_quartic=yes genus=1 j=1728
+SECOND_ORDERS primitive=(s,beta,gamma)=(2,1,3) d=6 Fq=9 good_form_lower_bound=20
+CHECKS=60
+SCOPE finite row-eight/corner intersection plus first and high-contact second k1 quotients; no all-row lift, seam entry, JC2, or DC2

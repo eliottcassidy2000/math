@@ -54,11 +54,12 @@ Then read frontier, guardrails, theorem; logs are history.
     separate collision, phase and address; THM-3425 needs period plus parity.
     Composite rank seven and FC(3) remain open.
 12. **JC is false from dimension three; JC(2), DC(2) remain open.**
-    THM-2084 reaches `M=10`; THM-4248 closes `M=11` off-wall; THM-4226 dense
-    `M=13`; THM-4290 closes the `M=12` interior, THM-4297 closes its full
-    `Lambda=0`, `U*Z*D!=0`; THM-4299 closes off-corner `D=0`; THM-4301/4304
-    make every reduced cubic-corner first-face carrier constant. Refinements
-    above its double sections, `U=0`, `Z=0`, and seam entry remain open.
+    THM-2084 reaches `M=10`; THM-4248/4226 close `M=11/13`;
+    THM-4290/4297/4299 reduce `M=12` to
+    `U=0`, `Z=0`, and the cubic corner. THM-4301/4304 leave rational double
+    sections; THM-4307 closes balanced towers. THM-4308/4312 leave finite
+    row-eight `k=1` with positive formal differential order. All-row/later
+    `k=1` and seam remain.
 13. **Complete period-14 coordinates can be globally blind.** THM-2058 keeps
     every fixed-depth packet coordinate but exits at `47/113`; THM-2043/2047/
     2050 separate local completeness from global maxima.
