@@ -9,6 +9,34 @@ Format per entry:
 - Why it was wrong
 - The correct framing
 
+## MISTAKE-536 (2026-09-01, THM-4308 endpoint-594 scout) -- a zero-joint quotient counted unaudited joint masks as safe deletions
+
+- **What failed:** the first endpoint-594 singleton program skipped every
+  body having an active joint witness, correctly classified `3,493/11` safe/
+  unsafe deletions among the 3,504 nonjoint masks, but then subtracted the 11
+  protected masks from the full carrier size 3,925. This produced the false
+  provisional claim that `3,914` of all `3,925` single-mask deletions were
+  safe.
+- **First failed implication:** a body with a joint hit remains covered after
+  deleting a nonjoint mask, so it may be skipped only for the nonjoint
+  quotient. Deleting its sole joint witness can expose it. The skipped branch
+  contains exactly three singleton obligations, protecting joint masks
+  `003c2403`, `14248083`, and `20a09640`.
+- **Repair:** THM-4308's complete quotient partitions all
+  `25*binom(30,9)=357,678,750` row-body cases into zero, one, and at least two
+  active-joint-hit branches. It finds 17 singleton obligations on 14 distinct
+  masks, proving the corrected all-mask split `3,911/14` on the fixed 25-row
+  layer. O2/O3 transcripts and ledgers agree. The old zero-joint program is
+  retained only as a narrower independent control for nonjoint masks.
+- **Compounding lineage issue:** the scratch source called this the THM-4305
+  carrier and included paths that disappeared after the concurrent rebase.
+  The 3,925-mask carrier belongs to THM-4307. Canonical sources and reproduction
+  commands were retargeted to THM-4307 and replayed before promotion.
+- **Reusable rule:** if an optimization skips obligations because one witness
+  class is present, its conclusion is conditional on not deleting that class.
+  Partition by total witness multiplicity before making an all-element
+  deletion claim, and re-resolve object ownership after every rebase.
+
 ## MISTAKE-535 (2026-09-01, THM-4305 higher-rank response scout) -- a rank-at-most-nine wall geometry was queried on rank-ten-or-higher masks
 
 - **What failed:** the first endpoint-595 higher-rank scout imported

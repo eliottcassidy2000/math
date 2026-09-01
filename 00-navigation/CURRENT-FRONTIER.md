@@ -17,27 +17,24 @@ gates are not danger.
 - **CITED:** LRC through 13 total runners; see
   [Sungkawichai–Trakulthongchai](../05-knowledge/reference/CORE-PAPERS.md#lonely-runner-conjecture).
 - **PROVED + FINITE-EXACT:** THM-741/2883/2888/2892/2893/885 close `2002` nine- and `3003` eight-body roots; audited THM-2923 closes `3432` seven-body roots.  Prior splits are intermediate.
-- **PROVED:** THM-965/2051--2092/2074 give the relation, pair floor, rank atlas
-  and ledger; THM-2148/2168 reach scalar `5+3`. THM-2054 decorrelates
-  margins at `H=2^19` subject to MISTAKE-080/082. THM-1252--1274 saturate
-  six-comb arguments; endpoint/child transport remains. Routes: THM-2081,
-  THM-2082, THM-2083, THM-2085, THM-2086, THM-2085/2087, THM-2088,
-  THM-2089, THM-2090, THM-2092.
+- **PROVED:** THM-965/2051--2092/2074 give the relation, pair-floor, rank, and
+  ledger reductions; THM-2148/2168 reach scalar `5+3`. THM-2054 decorrelates
+  at `H=2^19` subject to MISTAKE-080/082. THM-1252--1274 saturate six-comb
+  arguments; endpoint/child transport remains. Routes: THM-2081, THM-2082,
+  THM-2083, THM-2085, THM-2086, THM-2085/2087, THM-2088, THM-2089,
+  THM-2090, THM-2092.
 
 ### Exact live obligation
 
-Direct frontier: `<=6`, projected caps `1579/216`. THM-3361 closes three
-`L720720` rows; THM-3378 leaves `12` next-family rows. THM-3349--3453 give
-six-level/support controls; arbitrary `k<=1`, projected `k=2,3`, rung and
-physical entry remain. THM-3665--3731 give rank-12 charts and `165` valuation
-orbits, but owner/word transport and semantic arrival remain missing
-(MISTAKE-281/300/310/313); THM-2363 and THM-2368 miss the `28,393` roots.
+Direct frontier: `<=6`, projected caps `1579/216`; THM-3378 leaves `12`
+next-family rows. THM-3349--3453 give six-level/support controls, but arbitrary
+`k<=1`, projected `k=2,3`, rung, and entry remain. THM-3665--3731 give rank-12
+charts and `165` valuation orbits; owner/word transport and arrival remain
+(MISTAKE-281/300/310/313); THM-2363 and THM-2368 miss `28,393` roots.
 [THM-4009](../01-canon/theorems/THM-4009-euclidean-covering-transference-short-relation-compression.md)
-gives square sum `<=195`; THM-4019 refutes the sharp arbitrary-lattice bound
-for `d>=7`. The weaker `d/2` bound and owner/phase remain open.
-[THM-3742](../01-canon/theorems/THM-3742-square-triangular-pell-mod13-central-sign-projective-cycle.md)
-is a wrong-torsor Pell `C14`; [THM-3744](../01-canon/theorems/THM-3744-pell-prefix-loneliness-constant-carry-exact-formula.md)
-is the safe control `M(S_13)=99/338`. No cited result proves LRC(14).
+gives square sum `<=195`; THM-4019 refutes its sharp arbitrary-lattice target
+for `d>=7`. THM-3742 is a wrong-torsor Pell `C14`; THM-3744's safe control is
+`M(S_13)=99/338`. No cited result proves LRC(14).
 
 ### Independent routes that remain live
 
@@ -59,14 +56,12 @@ is the safe control `M(S_13)=99/338`. No cited result proves LRC(14).
   THM-4105/4106 are reciprocal decoders; THM-4107/4108 are tournament/radical
   firewalls. THM-4110 finds `64` AP13 sheets; THM-4116 gives
   `2^(c(F)-1)`. Safety/arrival stay open.
-- **Owner/tail:** [THM-4305](../01-canon/theorems/THM-4305-lrc14-endpoint-595-pair-tagged-response-exchange.md)
-  proves response minima `5/10/22` (arbitrary/mixed-8-9/rank-eight) on the 145
-  endpoint-595 failures. [THM-4307](../01-canon/theorems/THM-4307-lrc14-endpoint-595-support-threshold-residual-hypergraph-compression.md)
-  repairs the support-`<=350` deletion by an exact 37-mask retention cover;
-  its 3,925-mask carrier closes the 391-row target, with optimality only in
-  that fixed family. [THM-4306](../01-canon/theorems/THM-4306-lrc14-index-265-recursive-ideal-two-mask-replacement.md)
-  separately closes the 367-row index-265 ideal with replacement minimum two.
-  Typed union `2,014`; residual `20,633`, max `594` on 22 rows. No entry.
+- **Owner/tail:** THM-4305 proves response minima `5/10/22`;
+  [THM-4307](../01-canon/theorems/THM-4307-lrc14-endpoint-595-support-threshold-residual-hypergraph-compression.md)
+  gives a family-relative 3,925-mask carrier on 391 rows;
+  [THM-4308](../01-canon/theorems/THM-4308-lrc14-endpoint-594-residual-layer-closure-and-single-deletion-boundary.md)
+  extends it across 25 endpoint-594 rows with split `3,911/14`. THM-4306
+  separately closes `H_265`. Typed `2,036/20,611`, max `593` on 16 rows; no entry.
 - **PROVED:** [THM-2928](../01-canon/theorems/THM-2928-critical-seven-comb-grid-tensorization-and-drift-tariff.md)/2941: literal zero/one/two/three-drift sectors are empty; `k=2,3` are finite.
 - **Orthogonal routes.** THM-1017 is HYP-6820; THM-2047/2050 keep phase/exit; THM-731/2048 prune; THM-1290 ends at `55`; HYP-8900 nonuniform.
 - **PROVED micro-staircase:** THM-3316/3317 close primes/sparse fragility;

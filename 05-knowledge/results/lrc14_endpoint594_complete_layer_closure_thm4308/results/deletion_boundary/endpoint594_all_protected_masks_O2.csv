@@ -1,0 +1,15 @@
+witness_hex,witness_rank,witness_class,private_obligations,row_count,row_bits_hex
+00108576,9,nonjoint,1,1,100
+003c2403,8,joint,1,1,2
+00b0832c,9,nonjoint,2,1,1
+00c045d4,9,nonjoint,1,1,1
+00c18750,9,nonjoint,1,1,4
+08412a89,9,nonjoint,1,1,100
+10c48125,9,nonjoint,2,2,202000
+14248083,8,joint,1,1,4
+1a560800,8,nonjoint,1,1,1
+20a09640,8,joint,1,1,100
+28070a88,9,nonjoint,1,1,1000
+2a920402,8,nonjoint,2,2,3
+31444108,8,nonjoint,1,1,1
+38408409,8,nonjoint,1,1,1

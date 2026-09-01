@@ -21,11 +21,10 @@ Then read frontier, guardrails, theorem; logs are history.
 
 ## Seventeen high-signal facts
 
-1. **LRC(14) is first open.** THM-4305 proves exact arbitrary-rank response
-   minimum five at endpoint 595. THM-4307 compresses a rank-eight/nine repair
-   to a 3,925-mask carrier on the 391-row target; THM-4306 separately adds 353
-   typed rows. Combined union `2,014`; residual `20,633`, max `594` on 22
-   rows. Family-relative carriers and separate decks are not physical entry.
+1. **LRC(14) is first open.** THM-4305 has response minimum five;
+   THM-4307/4308 give a 3,925-mask carrier through 25 endpoint-594 rows and
+   deletion split `3,911/14`. With separate THM-4306: typed `2,036/20,611`,
+   max `593` on 16 rows. No physical entry.
 2. **The `q <= 25` period claim is refuted.** THM-762/764 exhibit `26*{1,...,12} union {339}`, whose first good period is `27`.
 3. **Good-period existence is a maximum statement.** The tight resonant AP
    defeats average/count arguments; see MISTAKE-127/129/130.
