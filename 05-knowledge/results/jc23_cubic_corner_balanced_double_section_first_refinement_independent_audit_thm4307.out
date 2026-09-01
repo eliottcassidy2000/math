@@ -1,0 +1,14 @@
+THM4307_BALANCED_REFINEMENT_INDEPENDENT_V1
+STRICT_TRANSFORM exact rows=18 plus separate -y*z^12/t^8
+LOCAL_ALGEBRA double Q^2 derivative ideal=(Q) dimension=1; triple Q^3 dimension=2 excluded
+epsilon=+1 U=(-315392/3645)+(217088/18225)sqrt265 rho=(-15/256)+(-3/256)sqrt265 a=(-6784/135)+(128/135)sqrt265 g=(-707/3072)+(65/3072)sqrt265
+epsilon=+1 nonzero_norms rho=-135/4096 a=13893632/6075 g=-269/4096
+epsilon=+1 graph m=((-173/72)+(43/360)sqrt265)*x+((11975/27648)+(-53621/7326720)sqrt265)*x^2+O(x^3) chi_norm=269/135
+epsilon=-1 U=(-315392/3645)+(-217088/18225)sqrt265 rho=(-15/256)+(3/256)sqrt265 a=(-6784/135)+(-128/135)sqrt265 g=(-707/3072)+(-65/3072)sqrt265
+epsilon=-1 nonzero_norms rho=-135/4096 a=13893632/6075 g=-269/4096
+epsilon=-1 graph m=((-173/72)+(-43/360)sqrt265)*x+((11975/27648)+(53621/7326720)sqrt265)*x^2+O(x^3) chi_norm=269/135
+VALUATION H_excess-T2_excess=2(beta-5s)
+BOUNDARY radicand square_part*squarefree_quadratic; normalization_genus=0
+BALANCED_NORMAL_CHART smooth; completed_local_refinement_carriers_rational
+REGIME_A_HOSTILE k=3 Delta=0 U=135/28672 rho=-14336/135 curve=V^2-(w^4-8/3) I=-32 J=0 j=1728 Fq_order=21 good_form_order=10
+VERDICT PASS BALANCED_FORMAL_LOCAL_EXTINCTION REGIME_A_POSITIVE_GENUS_CONTROL

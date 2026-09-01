@@ -42,8 +42,9 @@ audit: >
 # THM-4301 -- Cubic-corner first-face Keller extinction
 
 **PROVED RELATIVE TO THM-4103 + THM-4230 + THM-4299 + VERIFIED-EXACT +
-INDEPENDENTLY AUDITED. THE REPEATED-FACE TOWER, CUBIC-CORNER EXTINCTION,
-SEAM ENTRY, `JC(2)`, AND `DC(2)` REMAIN OPEN.**
+INDEPENDENTLY AUDITED. THM-4307 LATER CLOSES THE BALANCED REPEATED-FACE
+TOWERS; THE THREE REGIME-A TOWERS, CUBIC-CORNER EXTINCTION, SEAM ENTRY,
+`JC(2)`, AND `DC(2)` REMAIN OPEN.**
 
 ## 1. Statement and inheritance
 
@@ -331,6 +332,13 @@ The raw two coordinates are the constant and `q`-linear rows in `(5)`, but
 the `q^2 A(t)` translation feeds the depressed-cubic pair nonlinearly.
 Therefore the required sidecar is the full prepared pair plus discriminant;
 the raw quotient `(27)` is not valuation-complete.
+
+This is the correct ambient algebra before the repeated multiplicity is
+classified. THM-4304 later proves that every literal repeated factor is only
+double, not triple. At such an actual section the simple factor is a unit and
+THM-4307 corrects the intrinsic algebra to
+`C[[Q]]/(partial_Q Q^2)=C[[Q]]/(Q)`: one critical-value/discriminant
+coordinate, not the two-coordinate ambient cubic model.
 
 This also gives a strict firewall against a tempting LRC analogy. THM-4300
 may delete a mask only after proving it inactive on every row of its consumer.

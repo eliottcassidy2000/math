@@ -1,0 +1,18 @@
+THM-4307 PRIMARY EXACT AUDIT: PASS
+UNIVERSE exact_M12 D=Lambda=0 UZ!=0 balanced_repeated_cubic beta>2s
+LOCAL_TYPE double_root_A1 T1_basis=1; triple_A2_basis=1,Q excluded
+STRICT_TRANSFORM G=p+t^2*R2+t^4*R4+t^6*R6+t^8*R8+t^10*R10+t^12*R12+t^16*R16-y*z^12/t^8
+epsilon=+1 U=-315392/3645 + 217088*sqrt(265)/18225 rho=-3*sqrt(265)/256 - 15/256 a=16*(-6360 + 120*sqrt(265))/2025 g=(-7070 + 650*sqrt(265))/30720
+epsilon=+1 critical_value_mod_I2=(-7070 + 650*sqrt(265))/30720*T-(-3*sqrt(265)/256 - 15/256)*H
+epsilon=+1 discriminant_graph m=(-865 + 43*sqrt(265))/360*x+(3173375 - 53621*sqrt(265))/7326720*x^2+O(x^3) smooth=yes
+epsilon=+1 normalized_conic=V^2-((-3*sqrt(265)/256 - 15/256)/(16*(-6360 + 120*sqrt(265))/2025))*(w^2-((-865 + 43*sqrt(265))/360)) genus=0 squarefree=yes
+epsilon=-1 U=-217088*sqrt(265)/18225 - 315392/3645 rho=-15/256 + 3*sqrt(265)/256 a=16*(-6360 - 120*sqrt(265))/2025 g=(-650*sqrt(265) - 7070)/30720
+epsilon=-1 critical_value_mod_I2=(-650*sqrt(265) - 7070)/30720*T-(-15/256 + 3*sqrt(265)/256)*H
+epsilon=-1 discriminant_graph m=(-865 - 43*sqrt(265))/360*x+(53621*sqrt(265) + 3173375)/7326720*x^2+O(x^3) smooth=yes
+epsilon=-1 normalized_conic=V^2-((-15/256 + 3*sqrt(265)/256)/(16*(-6360 - 120*sqrt(265))/2025))*(w^2-((-865 - 43*sqrt(265))/360)) genus=0 squarefree=yes
+SPLITTER 2s<beta<5s H_first square; beta=5s conic; beta>5s t^2_first square
+PULLBACK m/x=(z/sigma^5)^2; discriminant has two smooth formal branches z/sigma^5=+/-sqrt(chi)+O(sigma^12)
+GOOD_FORM beta<5s order=5s+beta; beta>5s order=2beta; balanced normal chart smooth
+BALANCED_CONSEQUENCE completed_local_refinement_carriers_rational Keller_constant
+REGIME_A_HOSTILE k=3 Delta=0 U=135/28672 rho=-14336/135 weights=1,2,9 curve=V^2-(w^4-8/3) genus=1 j=1728 Fq_order=21 good_form_order=10
+SCOPE no_seam_entry no_U0 no_Z0 no_JC2 no_DC2

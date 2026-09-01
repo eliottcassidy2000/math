@@ -8,14 +8,16 @@ status: >
   exactly two, and has rational reduced normalization. The literal repeated
   locus consists of three quadratic-section regimes and two balanced cubic
   coefficient values U_+/-; a (1,3,16) cubic realizes the latter. Thus every
-  reduced first-face carrier is Keller-constant. Positive-genus components
-  created by refinements above a nonreduced section remain open.
+  reduced first-face carrier is Keller-constant. THM-4307 later corrects the
+  local algebra to A1, closes the balanced completed-local refinements, and
+  leaves the three Regime-A refinement towers open.
 source: root / alternating LRC14-JC2 session, 2026-09-01
 depends_on:
   - THM-4301-cubic-corner-first-face-keller-extinction
 related:
   - THM-4230-exact-weight-twelve-cyclotomic-prym-planar-jacobian-squeeze
   - THM-4299-d-zero-square-face-elliptic-splitting-and-off-corner-extinction
+  - THM-4307-cubic-corner-balanced-double-section-first-refinement
 primary_script: 04-computation/jc23_cubic_corner_repeated_first_face_rationality_thm4304.py
 primary_output: 05-knowledge/results/jc23_cubic_corner_repeated_first_face_rationality_thm4304.out
 primary_script_sha256: 029673d009905c0e11d46b9cc02090628ac201fb2c5ab550aadc0123fb13e4f2
@@ -36,9 +38,9 @@ audit: >
 # THM-4304 -- Cubic-corner repeated first-face rationality
 
 **PROVED RELATIVE TO THM-4301 + VERIFIED-EXACT + INDEPENDENTLY AUDITED.
-EVERY REDUCED FIRST-FACE CARRIER IS CONSTANT. REFINEMENT TAILS ABOVE A
-NONREDUCED SECTION, THE CUBIC CORNER, SEAM ENTRY, `JC(2)`, AND `DC(2)`
-REMAIN OPEN.**
+EVERY REDUCED FIRST-FACE CARRIER IS CONSTANT. THM-4307 LATER CLOSES THE
+BALANCED COMPLETED-LOCAL TAILS; THE THREE REGIME-A TAILS, SEAM ENTRY,
+`JC(2)`, AND `DC(2)` REMAIN OPEN.**
 
 ## 1. Statement
 
@@ -68,10 +70,11 @@ factor** means an irreducible factor `K` which depends on `q` and satisfies
 > regimes in Section 4 and the two balanced cubic values in Section 6.
 > There are no other repeated first faces.
 
-This does **not** say that resolving or refining the nonreduced section adds
-only rational curves. The constant and linear coefficients of the translated
-prepared cubic can create later discriminant covers. Those refinement tails
-remain open.
+This theorem alone does **not** say that resolving or refining a nonreduced
+section adds only rational curves. Higher rows can create later discriminant
+covers. THM-4307 later closes the two balanced completed-local towers and
+exhibits a positive-genus Regime-A refinement, so the qualification is
+essential.
 
 The inheritance pass is:
 
@@ -79,8 +82,9 @@ The inheritance pass is:
 - canonical hostile: THM-4301's irreducible genus-four separable cubic;
 - corrected near miss: rationality of the reduced repeated carrier does not
   classify components born above its nilpotent thickening;
-- least-used sidecar: `gcd(f,f_q)` locates the section, while the two
-  translated `T^1` coordinates retain the transverse deformation.
+- least-used sidecar: `gcd(f,f_q)` locates the section, while the translated
+  critical-value/discriminant coordinate retains the transverse deformation.
+  THM-4307 corrects the provisional two-coordinate description below.
 
 ## 2. Degree-three lemma and rational graph
 
@@ -291,20 +295,23 @@ Disc_y(p_1)=24553315427/121500!=0.                         (23)
 
 ## 8. Refinement firewall
 
-The theorem classifies the **reduced first-face carrier** only. Translating
-the repeated section to `Q=0` makes the first face divisible by `Q^2`, but
-higher-weight terms contribute both a constant and a `Q`-linear coefficient.
-For a cubic singularity these are the two coordinates
+The theorem classifies the **reduced first-face carrier** only. Translating an
+actual repeated section to `Q=0` gives a double root with a distinct simple
+factor. After that factor is made a unit, its intrinsic local algebra is
 
 ```text
-T^1=C[[Q]]/(Q^2)=span{1,Q}.                               (24)
+T^1=C[[Q]]/(partial_Q Q^2)=C[[Q]]/(Q)=span{1}.             (24)
 ```
 
-The gcd records neither coordinate. Their relative valuations and the
-depressed-cubic discriminant can create positive-genus exceptional covers
-after further blowups or base change. Therefore this theorem strengthens
-THM-4301 to constancy of every reduced literal first-face component, but it
-does not extinguish the refinement tower or close the cubic corner.
+The earlier two-dimensional quotient `C[[Q]]/(Q^2)=span{1,Q}` is the A2
+algebra of a triple root `Q^3`; Section 6 excludes that multiplicity. Raw
+constant and linear Taylor rows remain computational data, but critical
+recentering combines them into one discriminant coordinate. THM-4307 carries
+out that repair: the balanced coordinate has a smooth formal graph and only
+rational completed-local refinements, whereas an exact Regime-A section can
+produce a genus-one cover. Thus the present theorem proves constancy of every
+reduced literal first-face component but does not by itself close later
+refinements.
 
 ## 9. Reproduction and scope
 
@@ -319,6 +326,8 @@ python3 -B -O 04-computation/jc23_cubic_corner_repeated_first_face_rationality_i
 
 The universe is the literal exact-`M=12` corner `(1)` over `C`. The result
 does not cross `U=0` or `Z=0`, classify later refinements, complete the
-component inventory, prove seam entry, or prove `JC(2)` or `DC(2)`.
+component inventory, prove seam entry, or prove `JC(2)` or `DC(2)`. See
+THM-4307 for the balanced completed-local classification and the surviving
+Regime-A boundary.
 
 **QED.**
