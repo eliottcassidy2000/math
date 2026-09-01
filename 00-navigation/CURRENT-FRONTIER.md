@@ -60,8 +60,11 @@ for `d>=7`. THM-3742 is a wrong-torsor Pell `C14`; THM-3744's safe control is
   build a 3,925-mask carrier across 432 rows through endpoint 593.
   [THM-4313](../01-canon/theorems/THM-4313-lrc14-endpoint-592-fortythree-response-size-preserving-exchange.md)
   exchanges 43-for-43 across all 467 rows at size 3,925; response cover
-  `8..43`. THM-4306 separately closes `H_265`. Typed `2,087/20,560`,
-  max `591` on 13 rows; no entry.
+  `8..43`.
+  [THM-4314](../01-canon/theorems/THM-4314-lrc14-endpoint-591-complete-layer-closure-and-deletion-boundary.md)
+  closes the next 13 rows unchanged and exactly classifies deletions through
+  size two (2 unsafe singletons, 7,869 unsafe pairs). THM-4306 separately
+  closes `H_265`. Typed `2,100/20,547`, max `590` on 13 rows; no entry.
 - **PROVED:** [THM-2928](../01-canon/theorems/THM-2928-critical-seven-comb-grid-tensorization-and-drift-tariff.md)/2941: literal zero/one/two/three-drift sectors are empty; `k=2,3` are finite.
 - **Orthogonal routes.** THM-1017 is HYP-6820; THM-2047/2050 keep phase/exit; THM-731/2048 prune; THM-1290 ends at `55`; HYP-8900 nonuniform.
 - **PROVED micro-staircase:** THM-3316/3317 close primes/sparse fragility;
