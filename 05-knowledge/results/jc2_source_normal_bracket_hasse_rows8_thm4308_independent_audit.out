@@ -1,0 +1,28 @@
+THM4308_SOURCE_NORMAL_BRACKET_HASSE_ROWS8_INDEPENDENT_V1
+GAUGE a=1 gamma=-1/2 I=3/4; K=2848/45-(7/6)Delta
+G4=Delta+Phi*x+(K-1376/45)*x^2+(8/3)*x^4
+G5=upsilon5+eta*x+(4Delta+Theta)*x^2+3Phi*x^3+(2K-1376/45)*x^4
+G6=U+alpha11*x+(5upsilon5+xi10)*x^2+(4eta+zeta3)*x^3+(6Delta+3Theta)*x^4+3Phi*x^5+(K-1376/135)*x^6
+G7=(6U+W)*x^2+(5alpha11+beta11)*x^3+(10upsilon5+4xi10)*x^4+(6eta+3zeta3)*x^5+(4Delta+3Theta)*x^6+Phi*x^7
+G8=(15U+5W+Z)*x^4+(10alpha11+4beta11)*x^5+(10upsilon5+6xi10)*x^6+(4eta+3zeta3)*x^7+(Delta+Theta)*x^8
+BRACKET_OPERATOR_ROWS=[(4, 8, 13, 8, 5), (5, 9, 15, 9, 6), (6, 10, 17, 10, 7), (7, 11, 19, 11, 8), (8, 12, 21, 12, 9)]
+TANGENT_COKERNELS={5: [21, 0, 14, 0, 36, 0], 6: [77, 0, 42, 0, 84, 0, 360], 7: [143, 0, 66, 0, 108, 0, 360, 0], 8: [715, 0, 286, 0, 396, 0, 1080, 0, 5040]}
+E5=2025upsilon5+9000Delta+1350Theta+184832=0; raw=(7/24300)E5
+E6=200475U+109350xi10-5593860Delta-529200Theta-137763328=0; raw=(7/6561000)E6
+E7=801900W+1782000Delta^2+156163200Delta+868725Phi^2+27390480Theta-3434400xi10+12891824128=0; raw=(1/4374000)E7
+E8=21651300Z-225022050Delta^2-59073300DeltaTheta-9512522400Delta+34749000Phi^2+39092625Phi*eta+940522560Theta+185376600xi10-1112446017536=0; raw=(1/275562000)E8
+P2_PROJECTION=63x131 rank=51 left_nullity=12
+P3_PROJECTION=72x204 rank=63 left_nullity=9
+HASSE_IFF Delta=896/15; Theta=512/75; zeta3=-3Phi/2; terminal_rank=2; terminal_affine_dim=7
+TERMINAL c89=(1215xi10-348032)/495; c810=27(eta+zeta3)/40
+RESPONSE K=-32/5; upsilon5=-731648/2025
+RESPONSE U=(475515904-109350xi10)/200475
+RESPONSE W=-(4343625Phi^2-17172000xi10+143826305024)/4009500
+RESPONSE Z=(12506118074368-173745000Phi^2-195463125Phi*eta-926883000xi10)/108256500
+NUMERIC_INTERIOR U=475515904/200475; W=-35956576256/1002375; Z=3126529518592/27064125
+NUMERIC_INTERIOR Lambda=443979321344/5412825; Dtop=5173344945126466650112/27128402296875
+NUMERIC_REPLAY J[t^0..t^7],P-G[t^0..t^8],P2,P3=PASS; c89=-348032/495; c810=0
+BRACKET_HOSTILES augmented_ranks=[(5, 6), (6, 7), (7, 8), (8, 9)]; one-coordinate perturbations=REJECT
+HASSE_HOSTILES Delta+1:-1/3; Theta+1:2475; zeta3+1:3/10; bracket/P replay=PASS
+CHECKS=2645
+SCOPE finite weight<=12 fixed-gauge jet and pi_<=8(P2/P3) only; no all-row B2 lift, Keller pair, wall forcing, seam entry, JC2, or DC2

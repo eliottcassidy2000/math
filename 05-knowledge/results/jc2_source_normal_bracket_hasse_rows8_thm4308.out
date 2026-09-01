@@ -1,0 +1,30 @@
+THM-4308 SOURCE-NORMAL BRACKET/HASSE ROW-EIGHT PRIMARY AUDIT: PASS
+gauge: a=1 gamma=-1/2 I=3/4 b=d=0; p=t(1+x^2*t); y=x*t*p; u=x^2*t
+caps: deg(A_n)<=n+1 and deg(C_n)<=n+2 for n=4..8
+G4=-7*Delta*x**2/6 + Delta + Phi*x + 8*x**4/3 + 1472*x**2/45
+G5=-7*Delta*x**4/3 + 4*Delta*x**2 + 3*Phi*x**3 + Theta*x**2 + eta*x + upsilon5 + 96*x**4
+G6=-7*Delta*x**6/6 + 6*Delta*x**4 + 3*Phi*x**5 + 3*Theta*x**4 + U + alpha11*x + 4*eta*x**3 + 5*upsilon5*x**2 + 7168*x**6/135 + x**3*zeta3 + x**2*xi10
+G7=4*Delta*x**6 + Phi*x**7 + 3*Theta*x**6 + 6*U*x**2 + W*x**2 + 5*alpha11*x**3 + beta11*x**3 + 6*eta*x**5 + 10*upsilon5*x**4 + 3*x**5*zeta3 + 4*x**4*xi10
+G8=Delta*x**8 + Theta*x**8 + 15*U*x**4 + 5*W*x**4 + Z*x**4 + 10*alpha11*x**5 + 4*beta11*x**5 + 4*eta*x**7 + 10*upsilon5*x**6 + 3*x**7*zeta3 + 6*x**6*xi10
+E5=9000*Delta + 1350*Theta + 2025*upsilon5 + 184832=0
+E6=-5593860*Delta - 529200*Theta + 200475*U + 109350*xi10 - 137763328=0
+E7=1782000*Delta**2 + 156163200*Delta + 868725*Phi**2 + 27390480*Theta + 801900*W - 3434400*xi10 + 12891824128=0
+E8=-225022050*Delta**2 - 59073300*Delta*Theta - 9512522400*Delta + 34749000*Phi**2 + 39092625*Phi*eta + 940522560*Theta + 21651300*Z + 185376600*xi10 - 1112446017536=0
+tangent_cokernels: G5=(21,0,14,0,36,0); G6=(77,0,42,0,84,0,360)
+tangent_cokernels: G7=(143,0,66,0,108,0,360,0); G8=(715,0,286,0,396,0,1080,0,5040)
+P2_projection: ambient=63 columns=131 rank=51 left_nullity=12
+P3_projection: ambient=72 columns=204 rank=63 left_nullity=9
+Hasse_parameters: Delta=896/15; Theta=512/75; zeta3=-3*Phi/2
+Hasse_terminal: [x^9]C8=(1215*xi10-348032)/495; [x^10]C8=27*(eta+zeta3)/40
+finite_iff: E5--E8 plus Hasse_parameters; terminal tangent rank=2; affine_dimension=7
+response_U=475515904/200475 - 6*xi10/11
+response_W=-13*Phi**2/12 + 424*xi10/99 - 35956576256/1002375
+response_Z=-130*Phi**2/81 - 65*Phi*eta/36 - 22886*xi10/2673 + 3126529518592/27064125
+interior_control: U=475515904/200475; W=-35956576256/1002375; Z=3126529518592/27064125
+interior_control: Lambda=443979321344/5412825; D=5173344945126466650112/27128402296875
+interior_control: J_rows=0..7 PASS; P/G_rows=0..8 PASS; projected_P2/P3=PASS
+bracket_unit_hostiles: delta(E5,E6,E7,E8)=(2025,200475,801900,21651300)
+Hasse_unit_hostiles: Delta_residual=-1/3; zeta3_residual=3/10; Theta_eliminant_delta=2475
+observer_hostile: p^6_packet=(1,6,15); p^3*y^2_packet=(0,1,5)
+CHECKS=152
+scope: exact row-eight projected finite jets only; no full B2 lift, termination, seam entry, JC2, or DC2
