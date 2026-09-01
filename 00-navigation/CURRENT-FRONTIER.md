@@ -65,7 +65,8 @@ for `d>=7`. THM-3742 is a wrong-torsor Pell `C14`; THM-3744's safe control is
   proves response minimum nine and a nine-for-nine exchange over 493 rows.
   [THM-4319](../01-canon/theorems/THM-4319-lrc14-endpoint-590-fortyone-body-response-critical-core.md)
   isolates a 41-body nine-critical core with pairwise `chi=4`.
-  Typed `2,113/20,534`, max `589` on 28 rows; no entry.
+  THM-4320 closes all 28 endpoint-589 rows literally, without surgery. Typed
+  `2,141/20,506`; 66 at `588`, no entry.
 - **PROVED:** [THM-2928](../01-canon/theorems/THM-2928-critical-seven-comb-grid-tensorization-and-drift-tariff.md)/2941: literal zero/one/two/three-drift sectors are empty; `k=2,3` are finite.
 - **Orthogonal routes.** THM-1017 is HYP-6820; THM-2047/2050 keep phase/exit; THM-731/2048 prune; THM-1290 ends at `55`; HYP-8900 nonuniform.
 - **PROVED micro-staircase:** THM-3316/3317 close primes/sparse fragility;
