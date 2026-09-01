@@ -1,0 +1,15 @@
+{
+  "scope": "all 37,497 exported retained-pool columns only",
+  "pool_mask_count": 37497,
+  "pool_mask_fnv64": "557039eeb8db4ed4",
+  "scale": 1000000000,
+  "nonzero_weights": 234,
+  "dual_numerator": 35261737295,
+  "dual_value_decimal": "35.261737295",
+  "maximum_column_numerator": 1000000000,
+  "maximum_column_value_decimal": "1.000000000",
+  "maximum_column_mask_hex": "0014b08c",
+  "column_violations": 0,
+  "consequence": "Every integral cover from this pool has at least 36 masks by exact integer weak duality.",
+  "limitation": "The certificate says nothing about rank-8/rank-9 responders omitted from the retained pool."
+}

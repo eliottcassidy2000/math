@@ -1,0 +1,10 @@
+{
+  "scope": "fixed 2,468 endpoint-592 failures, exported 37,497-candidate pool",
+  "selected": 43,
+  "mask_fnv64": "ca3cb80f471f2e7e",
+  "covered_obligations": 2468,
+  "missing_obligations": 0,
+  "cover_csv_sha256": "de7938a803d1d0f1bc99df6e1f5cb3ee6e90cf02c91fe3594e3d18f2061e3a8e",
+  "retained_pool_membership": "all 43 masks occur in retained_pool_masks.csv",
+  "limitation": "Coverage is exact for the fixed failures; no full-universe optimality is asserted."
+}

@@ -1,0 +1,14 @@
+{
+  "lp_objective": 35.2617374149702,
+  "dual_sum": 35.261737414970234,
+  "dual_min": 0.0,
+  "dual_max": 1.0,
+  "positive_duals": 234,
+  "minimum_reduced_cost": -4.973799150320701e-14,
+  "rc_le_1e-8": 281,
+  "rc_le_1e-4": 281,
+  "rc_le_1e-3": 286,
+  "rc_le_1e-2": 308,
+  "rc_le_5e-2": 428,
+  "rc_le_1e-1": 651
+}
