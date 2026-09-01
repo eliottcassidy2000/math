@@ -1,6 +1,6 @@
 # Active Guardrails
 
-**Short hazard sheet — refreshed 2026-08-25.** Read this at startup; search [`MISTAKES.md`](MISTAKES.md) for witnesses, repairs, and lineage. This records current prohibitions, not the whole history.
+**Short hazard sheet — refreshed 2026-09-01.** Read this at startup; search [`MISTAKES.md`](MISTAKES.md) for witnesses, repairs, and lineage. This records current prohibitions, not the whole history.
 
 ## Universal
 
@@ -84,7 +84,7 @@
     `boundary Delta^12`; do not infer endpoint emptiness or export the cap.
 27g. **Copies are not common atoms.** THM-2806 has bare-only `D3`/empty `M`; THM-2818's positive copies fail native/source/endpoint sidecars. Neither pays THM-2772.
 27h. **A generator-valued endpoint germ is not a physical allocation action.** THM-2825/2859 lack the source carrier and `C13` action needed to turn their missing-corner or decorated-arrow data into a row exclusion; neither implies LRC(14).
-27i. **Successor quotients lose coordinates.** THM-3731 lets pairwise-distinct positive coefficients choose a blocker-relabeling-equivariant, common-positive-dilation-invariant owner label; the labelled valuation lift cannot choose one of two minimum-depth owners on its 15 tied orbits, and THM-3718 still lacks owner-supported drift, word/root transport and arrival.
+27i. **Successor quotients lose coordinates.** THM-3731 cannot choose between minimum-depth owners on 15 tied orbits; THM-3718 still lacks owner-supported drift, word/root transport, and arrival. 27j. **Carrier compression is family-relative; decks remain separate.** THM-4305's 3,925 is minimum only in `R\(D_350\H)`. THM-4306's 422-mask deck is separate: union only typed rows. Neither gives physical entry or LRC(14).
 ## NC2 / GMC
 
 28. **Scalar moments do not linearly separate return atoms.** MISTAKE-211/THM-2631;

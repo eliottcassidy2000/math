@@ -59,12 +59,14 @@ is the safe control `M(S_13)=99/338`. No cited result proves LRC(14).
   THM-4105/4106 are reciprocal decoders; THM-4107/4108 are tournament/radical
   firewalls. THM-4110 finds `64` AP13 sheets; THM-4116 gives
   `2^(c(F)-1)`. Safety/arrival stay open.
-- **Owner/tail:** THM-4302 retains size `9,019` through endpoint 596; THM-4303
-  exposes three endpoint-595 failures. [THM-4305](../01-canon/theorems/THM-4305-lrc14-endpoint-595-pair-tagged-response-exchange.md)
-  proves response minima `5/10/22` (arbitrary/mixed-8-9/rank-eight), closes
-  endpoint 595 at size `9,024`, and leaves `20,986` rows, max `594`.
-  Common-inactive capacity is two, so size `9,019` needs three finer deletions.
-  No physical entry.
+- **Owner/tail:** [THM-4305](../01-canon/theorems/THM-4305-lrc14-endpoint-595-pair-tagged-response-exchange.md)
+  proves response minima `5/10/22` (arbitrary/mixed-8-9/rank-eight) on the 145
+  endpoint-595 failures. [THM-4307](../01-canon/theorems/THM-4307-lrc14-endpoint-595-support-threshold-residual-hypergraph-compression.md)
+  repairs the support-`<=350` deletion by an exact 37-mask retention cover;
+  its 3,925-mask carrier closes the 391-row target, with optimality only in
+  that fixed family. [THM-4306](../01-canon/theorems/THM-4306-lrc14-index-265-recursive-ideal-two-mask-replacement.md)
+  separately closes the 367-row index-265 ideal with replacement minimum two.
+  Typed union `2,014`; residual `20,633`, max `594` on 22 rows. No entry.
 - **PROVED:** [THM-2928](../01-canon/theorems/THM-2928-critical-seven-comb-grid-tensorization-and-drift-tariff.md)/2941: literal zero/one/two/three-drift sectors are empty; `k=2,3` are finite.
 - **Orthogonal routes.** THM-1017 is HYP-6820; THM-2047/2050 keep phase/exit; THM-731/2048 prune; THM-1290 ends at `55`; HYP-8900 nonuniform.
 - **PROVED micro-staircase:** THM-3316/3317 close primes/sparse fragility;
