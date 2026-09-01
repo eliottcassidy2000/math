@@ -1,8 +1,8 @@
-// Complete exact one-mask deletion quotient for the THM-4308 C3925 carrier
-// on the fixed endpoint-594 layer, promoted for THM-4309.
+// Complete exact one-mask deletion quotient for the THM-4309 C3925 carrier
+// on the fixed endpoint-594 layer, promoted for THM-4310.
 
 #define ENDPOINT595_REPAIRED_RAW_MAIN endpoint594_all_singleton_hidden_main
-#include "04-computation/lrc14_endpoint595_support_threshold_residual_hypergraph_compression_thm4308/strict_repair_raw_audit.cpp"
+#include "04-computation/lrc14_endpoint595_support_threshold_residual_hypergraph_compression_thm4309/strict_repair_raw_audit.cpp"
 #undef ENDPOINT595_REPAIRED_RAW_MAIN
 
 #include <atomic>

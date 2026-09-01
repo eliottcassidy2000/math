@@ -57,9 +57,9 @@ for `d>=7`. THM-3742 is a wrong-torsor Pell `C14`; THM-3744's safe control is
   firewalls. THM-4110 finds `64` AP13 sheets; THM-4116 gives
   `2^(c(F)-1)`. Safety/arrival stay open.
 - **Owner/tail:** THM-4305 proves response minima `5/10/22`;
-  [THM-4308](../01-canon/theorems/THM-4308-lrc14-endpoint-595-support-threshold-residual-hypergraph-compression.md)
+  [THM-4309](../01-canon/theorems/THM-4309-lrc14-endpoint-595-support-threshold-residual-hypergraph-compression.md)
   gives a family-relative 3,925-mask carrier on 391 rows;
-  [THM-4309](../01-canon/theorems/THM-4309-lrc14-endpoint-594-residual-layer-closure-and-single-deletion-boundary.md)
+  [THM-4310](../01-canon/theorems/THM-4310-lrc14-endpoint-594-residual-layer-closure-and-single-deletion-boundary.md)
   extends it across 25 endpoint-594 rows with split `3,911/14`. THM-4306
   separately closes `H_265`. Typed `2,036/20,611`, max `593` on 16 rows; no entry.
 - **PROVED:** [THM-2928](../01-canon/theorems/THM-2928-critical-seven-comb-grid-tensorization-and-drift-tariff.md)/2941: literal zero/one/two/three-drift sectors are empty; `k=2,3` are finite.

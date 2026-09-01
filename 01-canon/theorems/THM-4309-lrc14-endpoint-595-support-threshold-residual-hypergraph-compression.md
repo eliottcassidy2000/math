@@ -1,5 +1,5 @@
 ---
-id: THM-4308
+id: THM-4309
 title: "LRC(14) endpoint-595 support-threshold residual-hypergraph compression"
 status: >
   PROVED RELATIVE TO THM-4302/4303/4305 + FINITE-EXACT + COMPLETE RESPONSE-DUAL,
@@ -18,22 +18,22 @@ depends_on:
 related:
   - THM-4300-lrc14-size-preserving-response-staircase-and-index-297-ideal
   - THM-4296-lrc14-mixed-rank-deletion-depth-and-recursive-signature-closure
-artifact_root: 05-knowledge/results/lrc14_endpoint595_support_threshold_residual_hypergraph_compression_thm4308
-artifact_manifest: 05-knowledge/results/lrc14_endpoint595_support_threshold_residual_hypergraph_compression_thm4308/SHA256SUMS
-artifact_manifest_sha256: 5848c649e8812415434f4c43bc87b66e718dfd2e5e6061d1464d481686c72efe
+artifact_root: 05-knowledge/results/lrc14_endpoint595_support_threshold_residual_hypergraph_compression_thm4309
+artifact_manifest: 05-knowledge/results/lrc14_endpoint595_support_threshold_residual_hypergraph_compression_thm4309/SHA256SUMS
+artifact_manifest_sha256: 2548a7e70e03c3dc6c3907214fe56da55c6b2e527c78b75fd4e0976b75cc794d
 primary_scripts:
-  - 04-computation/lrc14_endpoint595_support_threshold_residual_hypergraph_compression_thm4308/response_atlas.cpp
-  - 04-computation/lrc14_endpoint595_support_threshold_residual_hypergraph_compression_thm4308/independent_complement_response_audit.cpp
-  - 04-computation/lrc14_endpoint595_support_threshold_residual_hypergraph_compression_thm4308/solve_response_cover.py
-  - 04-computation/lrc14_endpoint595_support_threshold_residual_hypergraph_compression_thm4308/joint_certificate_audit.py
-  - 04-computation/lrc14_endpoint595_support_threshold_residual_hypergraph_compression_thm4308/activity_support_census.cpp
-  - 04-computation/lrc14_endpoint595_support_threshold_residual_hypergraph_compression_thm4308/final_full_prefix_raw_audit.cpp
-  - 04-computation/lrc14_endpoint595_support_threshold_residual_hypergraph_compression_thm4308/residual_retention_atlas.cpp
-  - 04-computation/lrc14_endpoint595_support_threshold_residual_hypergraph_compression_thm4308/solve_residual_retention.py
-  - 04-computation/lrc14_endpoint595_support_threshold_residual_hypergraph_compression_thm4308/k350_retention_certificate.cpp
-  - 04-computation/lrc14_endpoint595_support_threshold_residual_hypergraph_compression_thm4308/independent_repaired_threshold_replay.cpp
-  - 04-computation/lrc14_endpoint595_support_threshold_residual_hypergraph_compression_thm4308/verify_k350_retention.py
-  - 04-computation/lrc14_endpoint595_support_threshold_residual_hypergraph_compression_thm4308/typed_union_consumer.py
+  - 04-computation/lrc14_endpoint595_support_threshold_residual_hypergraph_compression_thm4309/response_atlas.cpp
+  - 04-computation/lrc14_endpoint595_support_threshold_residual_hypergraph_compression_thm4309/independent_complement_response_audit.cpp
+  - 04-computation/lrc14_endpoint595_support_threshold_residual_hypergraph_compression_thm4309/solve_response_cover.py
+  - 04-computation/lrc14_endpoint595_support_threshold_residual_hypergraph_compression_thm4309/joint_certificate_audit.py
+  - 04-computation/lrc14_endpoint595_support_threshold_residual_hypergraph_compression_thm4309/activity_support_census.cpp
+  - 04-computation/lrc14_endpoint595_support_threshold_residual_hypergraph_compression_thm4309/final_full_prefix_raw_audit.cpp
+  - 04-computation/lrc14_endpoint595_support_threshold_residual_hypergraph_compression_thm4309/residual_retention_atlas.cpp
+  - 04-computation/lrc14_endpoint595_support_threshold_residual_hypergraph_compression_thm4309/solve_residual_retention.py
+  - 04-computation/lrc14_endpoint595_support_threshold_residual_hypergraph_compression_thm4309/k350_retention_certificate.cpp
+  - 04-computation/lrc14_endpoint595_support_threshold_residual_hypergraph_compression_thm4309/independent_repaired_threshold_replay.cpp
+  - 04-computation/lrc14_endpoint595_support_threshold_residual_hypergraph_compression_thm4309/verify_k350_retention.py
+  - 04-computation/lrc14_endpoint595_support_threshold_residual_hypergraph_compression_thm4309/typed_union_consumer.py
 audit: >
   PASS / ACCEPT, subject to the frozen SHA256SUMS. The response atlas scans
   both complete rank universes; an independent complement-generated path
@@ -43,7 +43,7 @@ audit: >
   threshold, residual hypergraph, and repaired carrier.
 ---
 
-# THM-4308 -- LRC(14) endpoint-595 support-threshold residual-hypergraph compression
+# THM-4309 -- LRC(14) endpoint-595 support-threshold residual-hypergraph compression
 
 **PROVED RELATIVE TO THM-4302/4303/4305 + FINITE-EXACT + COMPLETE
 RESPONSE-DUAL, RESIDUAL-HYPERGRAPH, AND FULL-PREFIX RAW AUDITS PASS. LRC(14)
@@ -302,11 +302,11 @@ the residual endpoint-595 layer.  Unioning only these row consequences with
 THM-4302 gives
 
 ```text
-|T_4308|=1,661,
+|T_4309|=1,661,
 FNV=5bdd2ebf09e9404a,
 SHA256=de00493a80ca88eb4ed802be00fce19967f0978508439bd07afc7393708a4b62,
 
-|U\T_4308|=20,986,
+|U\T_4309|=20,986,
 FNV=606bf18913a49a14,
 SHA256=67561f7f0c5c3a32155811e9978b42b2393c10ea8964387eb712cea6a6683f50.
                                                                     (20)

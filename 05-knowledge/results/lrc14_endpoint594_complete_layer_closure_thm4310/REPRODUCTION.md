@@ -1,20 +1,20 @@
-# THM-4309 reproduction
+# THM-4310 reproduction
 
-Run from the repository root. These commands reconstruct the THM-4308 carrier
+Run from the repository root. These commands reconstruct the THM-4309 carrier
 from its canonical component ledgers and consume the complete 25-row
-endpoint-594 residual layer of THM-4308. The typed consumer separately marks
+endpoint-594 residual layer of THM-4309. The typed consumer separately marks
 the 22 rows not already supplied by THM-4306. These operations do not merge
 proof objects or construct a physical lonely-runner entry.
 
 ```powershell
-$code = '04-computation/lrc14_endpoint594_complete_layer_closure_thm4309'
-$packet = '05-knowledge/results/lrc14_endpoint594_complete_layer_closure_thm4309'
+$code = '04-computation/lrc14_endpoint594_complete_layer_closure_thm4310'
+$packet = '05-knowledge/results/lrc14_endpoint594_complete_layer_closure_thm4310'
 $old = '05-knowledge/results/lrc14_mixed_rank_depth_recursive_signatures_thm4296'
 $t4300 = '05-knowledge/results/lrc14_size_preserving_response_staircase_thm4300'
 $t4302 = '05-knowledge/results/lrc14_endpoint596_response_exchange_thm4302'
 $t4306 = '05-knowledge/results/lrc14_index265_recursive_ideal_thm4306'
-$t4308 = '05-knowledge/results/lrc14_endpoint595_support_threshold_residual_hypergraph_compression_thm4308'
-$scratch = '.scratch/lrc14_thm4309_replay'
+$t4309 = '05-knowledge/results/lrc14_endpoint595_support_threshold_residual_hypergraph_compression_thm4309'
+$scratch = '.scratch/lrc14_thm4310_replay'
 New-Item -ItemType Directory -Force $scratch, "$scratch/typed" | Out-Null
 
 $common = @(
@@ -27,9 +27,9 @@ $common = @(
   "$t4300/inputs/repairs76.txt",
   "$t4302/inputs/additions4.txt",
   "$t4302/inputs/delete73.txt",
-  "$t4308/inputs/additions10.txt",
-  "$t4308/inputs/final_delete5104.txt",
-  "$t4308/results/proof_graph/residual_top594.csv"
+  "$t4309/inputs/additions10.txt",
+  "$t4309/inputs/final_delete5104.txt",
+  "$t4309/results/proof_graph/residual_top594.csv"
 )
 ```
 
@@ -125,7 +125,7 @@ python -B "$code/typed_endpoint594_consumer.py" `
   --prior-union "$t4306/results/proof_graph/typed_union2014.csv" `
   --prior-residual "$t4306/results/proof_graph/final_residual20633.csv" `
   --top594 "$t4306/results/proof_graph/residual_top594.csv" `
-  --carrier-target "$t4308/results/proof_graph/residual_top594.csv" `
+  --carrier-target "$t4309/results/proof_graph/residual_top594.csv" `
   --pair-audit "$scratch/endpoint594_pair_audit_O3.csv" `
   --failures "$scratch/endpoint594_failures_O3.csv" `
   --output-dir "$scratch/typed" `

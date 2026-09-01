@@ -3,7 +3,7 @@
 **Session status (2026-09-01):** the abstract deletion statements below are
 **PROVED** for finite carrier systems; the numerical specialization is
 **FINITE-EXACT** and promoted as
-[THM-4308](../01-canon/theorems/THM-4308-lrc14-endpoint-595-support-threshold-residual-hypergraph-compression.md).
+[THM-4309](../01-canon/theorems/THM-4309-lrc14-endpoint-595-support-threshold-residual-hypergraph-compression.md).
 The recursive singleton-ideal sidecar is **FINITE-EXACT** and promoted as
 [THM-4306](../01-canon/theorems/THM-4306-lrc14-index-265-recursive-ideal-two-mask-replacement.md).
 LRC(14) remains **OPEN**.

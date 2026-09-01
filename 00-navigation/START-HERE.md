@@ -22,7 +22,7 @@ Then read frontier, guardrails, theorem; logs are history.
 ## Seventeen high-signal facts
 
 1. **LRC(14) is first open.** THM-4305 has response minimum five;
-   THM-4308/4309 give a 3,925-mask carrier through 25 endpoint-594 rows and
+   THM-4309/4310 give a 3,925-mask carrier through 25 endpoint-594 rows and
    deletion split `3,911/14`. With separate THM-4306: typed `2,036/20,611`,
    max `593` on 16 rows. No physical entry.
 2. **The `q <= 25` period claim is refuted.** THM-762/764 exhibit `26*{1,...,12} union {339}`, whose first good period is `27`.
