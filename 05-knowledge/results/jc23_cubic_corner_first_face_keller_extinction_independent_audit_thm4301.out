@@ -1,0 +1,15 @@
+THM4301_CUBIC_FIRST_FACE_INDEPENDENT_V1
+LITERAL_Q_LINEAR orders=1,2,3,4,5,6,8,10 terminal_coefficient=8/3
+UNIVERSAL min(2gamma,12tau-gamma)<=8tau checks=33280
+ell lower_bound
+  1 8*s+10*beta
+  2 7*s+9*beta
+  3 6*s+8*beta
+  4 5*s+7*beta
+  5 4*s+6*beta
+  6 3*s+5*beta
+  8 1*s+3*beta
+HORIZONTAL_BINOMIALS ell1:components1 ell2:components2 ell3:components3 ell4:components4 ell5:components1 ell6:components6 ell8:components4
+HOSTILE Delta=2048/45 discriminant_degree=12 squarefree=yes
+HOSTILE irreducible=yes finite_branch=12 infinity_branch=0 genus=4 form_order=7
+VERDICT PASS DEPENDENCY_FREE EXACT AUDIT

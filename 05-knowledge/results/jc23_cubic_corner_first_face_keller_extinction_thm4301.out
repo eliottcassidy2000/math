@@ -1,0 +1,18 @@
+THM-4301 PRIMARY EXACT AUDIT: PASS
+UNIVERSE exact_M12 D=Lambda=0 UZ!=0 characteristic_zero
+q_linear=h(t)-z^12; h_orders=1,2,3,4,5,6,8; terminal=8/3*t^8
+universal_bound: min(2gamma,12tau-gamma)<=8tau checks=33280
+ell  lower_bound
+  1  8*s+10*beta
+  2  7*s+9*beta
+  3  6*s+8*beta
+  4  5*s+7*beta
+  5  4*s+6*beta
+  6  3*s+5*beta
+  8  1*s+3*beta
+q_horizontal: z^(12-ell)=unit*sigma^ell; every component genus=0
+hostile: weights=(1,2,12) face_weight=36 Delta=2048/45
+hostile_discriminant=(24553315427*x**12 - 1282042880*x**8 + 247770240*x**4 + 486000)/121500
+hostile_cover: degree=3 finite_branch=12 infinity_branch=0 genus=4
+hostile_good_form_order=7
+SCOPE q_separable_first_faces_extinct q_horizontal_rational q_repeated_open
