@@ -1,0 +1,6 @@
+ENDPOINT586_INDEPENDENT_PACKET_VERIFY PASS
+manifest_files=35
+frontier_rows=12 carrier_failures=4090 direct_positive=4090
+typed_union=2229 residual=20418 next_endpoint=585 next_rows=23
+agreement=SCOUT_PAIR_FAILURE_AND_LITERAL_DETAIL_BYTE_IDENTICAL
+scope=FINITE_EXACT_NO_PHYSICAL_ENTRY_NO_LRC14
