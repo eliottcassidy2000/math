@@ -59,10 +59,11 @@ is the safe control `M(S_13)=99/338`. No cited result proves LRC(14).
   THM-4105/4106 are reciprocal decoders; THM-4107/4108 are tournament/radical
   firewalls. THM-4110 finds `64` AP13 sheets; THM-4116 gives
   `2^(c(F)-1)`. Safety/arrival stay open.
-- **Owner/tail:** [THM-4296](../01-canon/theorems/THM-4296-lrc14-mixed-rank-deletion-depth-and-recursive-signature-closure.md),
-  with THM-4295, proves depth nine and a 9,019-mask mixed carrier. Their typed
-  join removes 1,324 rows and leaves `21,323`, max `626`, on
-  `(100,626),(256,626)`; consumers stay separate and entry stays open.
+- **Owner/tail:** [THM-4300](../01-canon/theorems/THM-4300-lrc14-size-preserving-response-staircase-and-index-297-ideal.md)
+  exchanges 69 responses for 69 masks inactive on the complete 354-row
+  endpoint-`>=597` prefix, retaining size 9,019. A separate two-replacement
+  deck closes the 42-row index-297 ideal. The typed union is 1,624; `21,023`
+  remain, max `596` on nine rows. Consumers stay separate; entry stays open.
 - **PROVED:** [THM-2928](../01-canon/theorems/THM-2928-critical-seven-comb-grid-tensorization-and-drift-tariff.md)/2941: literal zero/one/two/three-drift sectors are empty; `k=2,3` are finite.
 - **Orthogonal routes.** THM-1017 is HYP-6820; THM-2047/2050 keep phase/exit; THM-731/2048 prune; THM-1290 ends at `55`; HYP-8900 nonuniform.
 - **PROVED micro-staircase:** THM-3316/3317 close primes/sparse fragility;

@@ -24,6 +24,22 @@
   so proper-flat degree conservation excludes the wall. Together with
   THM-4290, exact `M=12` is closed for `U*Z*D!=0`.
 
+- `lrc14_size_preserving_response_staircase_thm4300/*` -> exact endpoint-597
+  response staircase, size-preserving inactive exchange, index-297 common
+  deck, and typed proof graph
+  ([THM-4300](../../01-canon/theorems/THM-4300-lrc14-size-preserving-response-staircase-and-index-297-ideal.md)):
+  **PROVED RELATIVE TO THM-4287/4295/4296 + FINITE-EXACT + DETACHED
+  LITERAL-WALL AUDITS PASS; physical entry and LRC(14) OPEN.** Sixty-nine
+  responses close the complete 354-row endpoint-`>=597` prefix; deleting 69
+  original masks that are strictly inactive throughout preserves coverage
+  and restores the carrier to 9,019 masks. A direct replay checks
+  `5,064,731,100` labelled body-pair instances with zero failures. Separately,
+  index 297 has a 42-row ideal and exact replacement minimum two. The typed
+  union is 1,624; its `21,023`-row complement has maximum endpoint 596 on
+  nine rows. The carrier and every deck remain separate. Packet `SHA256SUMS`
+  SHA-256:
+  `16ee3b81d212bd5496de4433a733f43f2a91eca040f9e3f00f60f1aa08142cae`.
+
 - `lrc14_mixed_rank_depth_recursive_signatures_thm4296/*` -> deletion-depth
   filtration, exact mixed-rank carrier descent, and recursive signature ideals
   ([THM-4296](../../01-canon/theorems/THM-4296-lrc14-mixed-rank-deletion-depth-and-recursive-signature-closure.md)):

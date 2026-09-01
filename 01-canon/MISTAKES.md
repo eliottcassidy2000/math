@@ -9,6 +9,28 @@ Format per entry:
 - Why it was wrong
 - The correct framing
 
+## MISTAKE-534 (2026-08-31, THM-4300 index-297 scout) -- the terminal lexicographic row was reported as the maximum endpoint
+
+- **What failed:** the discovery transcript for the index-297 singleton ideal
+  printed `MAX_ENDPOINT 437`, even though its own 42-row ledger contains
+  `(59,550)`.
+- **Minimal witness / first failed implication:** the ideal was ordered by
+  `(q,r)`, so its terminal row is `(427,437)`. Reading
+  `ideal.back().second` therefore returns the endpoint of the greatest
+  *lexicographic pair*, not `max{r:(q,r) in H_297}`. The two operations agree
+  only under an additional ordering hypothesis that was absent here.
+- **Strongest survivor:** the wrong value was a printed discovery diagnostic.
+  It did not feed the ideal, private-body scan, common-activity intersection,
+  response quotient, exact dual, replacement witnesses, literal margins,
+  rebuilt-deck body scan, or typed row-set join. All of those independently
+  reproduce; the true maximum is 550 at `(59,550)`.
+- **Repair:** THM-4300's detached audit maintains the maximum of the second
+  coordinate directly. The scout source now uses an explicit maximum by
+  endpoint; its stale pre-repair transcript remains provenance only.
+- **Reusable rule:** a terminal element is an extremum only for the exact key
+  that ordered the container. Record coordinatewise extrema separately and
+  include a witness attaining each one.
+
 ## MISTAKE-533 (2026-08-31, THM-4296 endpoint-628 audit) -- a fifteen-pattern enumeration was labelled as 32,767 subsets of eleven realized classes
 
 - **What failed:** the theorem and frozen endpoint-628 transcript described
