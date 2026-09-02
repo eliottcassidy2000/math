@@ -335,20 +335,20 @@ lift/phase clocks.
   challenges `(3,9),(5,6),(7,5),(11,4),(13,4)` all remain **OPEN**; the public
   `131199`-field file is a named finite population, not a world census.
 - **Jacobian/Dixmier:** `JC(2),DC(2)` are **OPEN**. THM-4130--4248 close
-  `M=8--11` off-wall and THM-4226 closes dense `M=13`. For `M=12`,
-  THM-4290/4297/4299 close the interior and square wall; THM-4301--4317 close
-  only the normalized cubic-corner lane.
+  `M=8--11` off-wall; THM-4226 closes dense `M=13`. At `M=12`,
+  THM-4290/4297/4299 close the interior/square wall and THM-4301--4317 the
+  normalized cubic corner.
   [THM-4327](../01-canon/theorems/THM-4327-generic-exact-weight-twelve-endpoint-wall-extinction.md)
   closes generic `U=0` and `Z=0` endpoint strata, including `Lambda=0`.
   [THM-4334](../01-canon/theorems/THM-4334-beta-zero-exact-weight-twelve-endpoint-wall-extinction.md)
-  closes `Z=beta_11=0,UWzeta_3!=0`; its cyclic-nine genus-three face has
-  order 34 and its repeated ladder splits before the `t^6` correction.
+  closes `Z=beta_11=0,UWzeta_3!=0`.
   [THM-4337](../01-canon/theorems/THM-4337-zeta-zero-exact-weight-twelve-endpoint-wall-extinction.md)
-  closes `Z=zeta_3=0,U beta_11!=0` for all `W,K,Lambda`; its genus ledgers
-  are `(3+3)+11=17` or `6+11=17`, and its `A_23` contact splits early.
+  closes `Z=zeta_3=0,U beta_11!=0` for all `W,K,Lambda`.
   [THM-4339](../01-canon/theorems/THM-4339-clean-interior-cubic-edge-planar-jacobian-extinction.md)
   closes `Z=beta_11=zeta_3=0,U*K*W*(U+W)!=0`; its elliptic-tail order is
-  `26`. Root exits, `U+W=0`, the `U=0` cusps, and seam entry remain.
+  `26`. [THM-4340](../01-canon/theorems/THM-4340-u-zero-repeated-cusp-planar-jacobian-extinction.md)
+  closes all `U=0,WZ!=0`, including both repeated cusps. The `WZ=0` wall,
+  cubic root exits, `U+W=0`, and seam entry remain.
   Exceptional quartic: THM-3703/3737 give grammar/image, THM-4034 the
   conductor, and THM-4039/4043/4046 reach `J_7`, obstruct `J_8`, and close
   critical `H`. [THM-4054](../01-canon/theorems/THM-4054-exceptional-affine-simple-zero-retained-packet.md)

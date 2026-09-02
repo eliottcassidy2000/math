@@ -1,5 +1,18 @@
 # Script Results Index
 
+- `jc2_m12_u0_repeated_cusp_extinction_thm4340.out` and its independent
+  clean-room audit -> exact closure of the residual U-zero cusp walls
+  ([THM-4340](../../01-canon/theorems/THM-4340-u-zero-repeated-cusp-planar-jacobian-extinction.md)):
+  **PROVED RELATIVE TO THM-4230/4327 + VERIFIED-EXACT + INDEPENDENTLY
+  AUDITED; JC(2) OPEN.** Exact Morse forms `x^2=z^5-psi(tz)` and
+  `x^2=X^3-psi(tX)` exhaust every critical-value order on `U=0,WZ!=0`.
+  Positive-genus tail orders are `115/2,70,95,19`; later orders are rational
+  or horizontally persistent. The corrected normalized genera are
+  `17,16,16,15,15` and `16,15,15`. The `Lambda=0` A23 owner is disjoint.
+  Script/output SHA-256 pairs are `9f0ddd47...a357e` /
+  `4cf0e26b...f159953` and `8beb9aa6...d6b228` /
+  `938625e0...d634d24`.
+
 - `jc2_m12_clean_cubic_edge_extinction_thm4339.out`, its import-free
   independent audit, and its hostile-referee probe -> exact clean
   labelled-cubic residual extinction

@@ -1,0 +1,23 @@
+THM4340 U0 M12 REPEATED-CUSP PRIMARY CERTIFICATE
+SPARSE_FACTOR_CHECKS=H5:15+base;E3:12+base
+H5_FACTOR=Phi=(1-S^2*q)*(A(S,q)-z^5)-S^2*q^6/2;q=sigma^12*z
+H5_MORSE=Phi/unit=x^2+psi(q)-z^5;psi(0)=0
+H5_RESIDUE=sigma^50*z^4*(-dS/Phi_z)=sigma^50*z^4*(dz/Phi_S)
+H5_T1=basis[1,z,z^2,z^3];available_normal_coefficients=h1*z+h2*z^2+h3*z^3
+H5_HOSTILE=E5=0;W=u=1;alpha=2;S0=-1;Delta=Z=5936/105;K=-8/3
+H5_HOSTILE_HASSE=0,0,0
+H5_HOSTILE_FIRST_CRITICAL_VALUE=h4=-528019/18225;r=4;rational_tail
+E3_FACTOR=Phi=(1-V^2*q^3)*(A(V,q)-X^3)-V^2*q^6/2;q=sigma^4*X
+E3_MORSE=Phi/unit=x^2+psi(q)-X^3;psi(0)=0
+E3_RESIDUE=sigma^14*X^3*(-dV/Phi_X)=sigma^14*X^3*(dX/Phi_V)
+E3_T1=basis[1,X];available_normal_coefficient=f2(V0)*X
+E3_HOSTILE=E3=0;e=W=-1376/135;eta=2752/135;V0=1;Phi=-16/3;xi=8/3;Hasse=0
+E3_HOSTILE_FIRST_CRITICAL_VALUE=h2=-3;r=2;rational_tail
+CONDUCTOR_J=(2,3):basis_t^2,length1;(2,5):basis_t^4,t^6,length2
+GENERAL_BUFFER=odd_m;B=(m-1)/2 gives tail coefficient B+1-m/2=1/2
+H5_TAILS=r1:b=3,a=15/2,order=115/2,genus=2;r2:b=8,a=20,order=70,genus=1;r3:b=18,a=45,order=95,genus=1;r4:b=48,a=120,order=170,genus=0
+E3_TAILS=r1:b=2,a=3,order=19,genus=1;r2:b=8,a=12,order=34,genus=0
+NORMALIZED_GLOBAL_GENUS=H5:r1->17,r2->16,r3->16,r4->15,r>=5->15;E3:r1->16,r2->15,r>=3->15
+VALUATION_DIRECTION=N=v(z^m-psi)>=min(mb,r(s+b));hostile:m3,r1,t=pi^2,z=pi(1+pi),N=4>3
+PERSISTENT_BOUNDARY=ord_q(psi)>=m gives x^2=z^m*unit and no positive-genus tail
+RESULT=PASS

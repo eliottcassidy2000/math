@@ -53,8 +53,8 @@ Then read frontier, guardrails, theorem; logs are history.
     Composite rank seven and FC(3) remain open.
 12. **JC is false from dimension three; JC(2), DC(2) remain open.**
     THM-2084: `M=10`; THM-4248/4226 close `M=11/13`;
-    THM-4290--4339 close `M=12` lanes/cubic residual;
-    root exits and seam entry remain.
+    THM-4290--4340 close many `M=12` lanes, including the cubic interior and
+    `U=0,WZ!=0`; endpoint exits and seam entry remain.
 13. **Complete period-14 coordinates can be globally blind.** THM-2058 keeps
     every fixed-depth packet coordinate but exits at `47/113`; THM-2043/2047/
     2050 separate local completeness from global maxima.
