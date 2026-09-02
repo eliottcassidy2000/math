@@ -1,0 +1,22 @@
+LRC14 r7=7 MINORITY ENDPOINT PIERCE HOSTILE -- FINITE-EXACT
+h=420 anchor=840 primitive=1 missing_thm366=()
+W=11,1691,3371,5051,6731,8411,10091,525,945,1365,1575,9009
+core=120,75,135,195,225,1287 tails=11,1691,3371,5051,6731,8411,10091
+thm771_metric=max_tail:10091 seven_max_core:9009 passes=True
+half_turn_grid=11760 anchor_blocked=840 odd_blocked=10920 survivors=0
+D_partition={1: 10080} C_partition={1: 840}
+unit_bank_p=8 clocks=8 represented_sign_classes=4 anchor_killed=False survivors=0
+unit_bank_p=9 clocks=6 represented_sign_classes=3 anchor_killed=False survivors=0
+unit_bank_p=10 clocks=8 represented_sign_classes=1 anchor_killed=True survivors=0
+unit_bank_p=11 clocks=10 represented_sign_classes=5 anchor_killed=False survivors=0
+unit_bank_p=12 clocks=8 represented_sign_classes=1 anchor_killed=True survivors=0
+unit_bank_p=13 clocks=12 represented_sign_classes=6 anchor_killed=False survivors=0
+unit_bank_p=14 clocks=12 represented_sign_classes=1 anchor_killed=True survivors=0
+mc7_scales=78 closures=0 minimum=1 minimizers=7,21
+endpoint_theta=1/22 core_numerators=10,9,3,3,5,11 core_min=3/22
+owner_danger=11:-;1691:0;3371:2;5051:2;6731:4;8411:6;10091:6
+endpoint_owner=11 tight_sheets=0,5
+thm771_defect=F:3 Q:1 Omega:2 sigma:0 free_sheets=1,3,5
+safe_lifts=k1:t=23/154:clearance=15/154,k3:t=67/154:clearance=21/154,k5:t=111/154:clearance=11/154
+STATUS FINITE-EXACT METHOD HOSTILE; SAFETY INHERITED FROM THM-771
+RESULT PASS

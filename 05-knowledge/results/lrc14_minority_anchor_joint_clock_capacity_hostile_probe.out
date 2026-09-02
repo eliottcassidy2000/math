@@ -1,0 +1,20 @@
+LRC14 MINORITY ANCHOR JOINT CLOCK/CAPACITY HOSTILE -- EXACT AUDIT
+h=420 anchor=840 modulus=11760
+W=11,1691,3371,5051,6731,8411,10091,525,945,1365,1575,1287
+primitive=1 distinct_odds=12 missing_thm366=[]
+D_partition_universe=10080 multiplicity={1: 10080}
+C_partition_universe=840 multiplicity={1: 840}
+grid_total=11760 anchor_blocked=840 odd_blocked=10920 safe=0
+unit_bank_p=8 clocks=8 represented_sign_classes=4 anchor_killed=False survivors=0
+unit_bank_p=9 clocks=6 represented_sign_classes=3 anchor_killed=False survivors=0
+unit_bank_p=10 clocks=8 represented_sign_classes=2 anchor_killed=True survivors=0
+unit_bank_p=11 clocks=10 represented_sign_classes=5 anchor_killed=False survivors=0
+unit_bank_p=12 clocks=8 represented_sign_classes=1 anchor_killed=True survivors=0
+unit_bank_p=13 clocks=12 represented_sign_classes=6 anchor_killed=False survivors=0
+unit_bank_p=14 clocks=12 represented_sign_classes=2 anchor_killed=True survivors=0
+mc7_represented_divisors=71 failures=0 minimum=8/7 minimizers=7,21,35,105
+C_cover_unique_masks=60 mask_size_hist={18: 48, 20: 8, 30: 4}
+C_cover_counts=size1:0,size2:0,size3:0,size4:16
+C_minimal_classes=15,225;45,195;75,165;105,135
+positive_control=6/17 minimum=2/17 tight=11,1575
+VERDICT PASS_FINITE_EXACT_METHOD_HOSTILE_NOT_LRC_COUNTEREXAMPLE

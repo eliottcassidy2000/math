@@ -1,0 +1,24 @@
+LRC14_UNIT_EQUALITY_WALL_SAFE_BAND_EXACT_AUDIT
+STATUS=FINITE-EXACT_CERTIFICATE_AUDIT_NOT_LRC14
+RANGE=d=2,3,4,5,6,7; |C|=13-d; |T|=d; gcd(t,d)=1 for every tail
+SAFE_BAND={z: selected tail is safe on all d lifts}=[d/14,1-d/14]
+PREIMAGE_DISTANCE<=d/(14w)
+COFINAL_CONDITION=max(T)>=(14-d)*max(C)
+ACTUAL_MARGIN_CONDITION=w>=d*R/[14*(M(C)-1/14)]
+THRESHOLDS=d2:12R,d3:11R,d4:10R,d5:9R,d6:8R,d7:7R
+SYMBOLIC_PHASES=2166 BAND_CHECKS=12996
+TRANSLATED_GRID_CHECKS=12996 ENDPOINT_CHECKS=35
+PREIMAGE_PHASES=180 PREIMAGE_CHECKS=46800 PREIMAGE_EQUALITY_CHECKS=130
+CORE_ATLAS d=2 cores=1 min_excess_over_1/12=0
+CORE_ATLAS d=3 cores=11 min_excess_over_1/11=0
+CORE_ATLAS d=4 cores=55 min_excess_over_1/10=0
+CORE_ATLAS d=5 cores=165 min_excess_over_1/9=0
+CORE_ATLAS d=6 cores=330 min_excess_over_1/8=0
+CORE_ATLAS d=7 cores=462 min_excess_over_1/7=0
+CORE_ATLAS_TOTAL=1024
+D5_NEW_CONSEQUENCE=max(T)>=9*max(C)
+D5_CONTROL C=(1, 2, 3, 4, 5, 6, 7, 8) T=(72, 1, 9, 7, 8) R=8 selected=72 threshold=72
+D5_CONTROL core_phase=1/9 moved_phase=107/1008 movement=5/1008
+D5_CONTROL raw_capacity=1 masks=((72, ()), (1, (0,)), (9, (1,)), (7, (2,)), (8, (3,))) free_labels=(4,)
+D5_CONTROL witness=4139/5040 clearance=107/1008
+CHECKS=100376 RESULT=PASS
