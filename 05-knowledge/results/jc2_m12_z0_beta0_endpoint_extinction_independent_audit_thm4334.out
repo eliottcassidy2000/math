@@ -1,0 +1,39 @@
+THM4334_BETA0_ENDPOINT_INDEPENDENT_AUDIT=PASS
+STATUS=FINITE-EXACT_INDEPENDENT_AUDIT
+TARGET=Z=0;beta_11=0;U*W*zeta_3!=0;Lambda=U+W_arbitrary;all_other_lower_rows_arbitrary
+UNIVERSE_ROWS=16 forbidden_rows=((0,1),(1,1)) wall_absent=((0,4),(1,3))
+FIXED_REQUIRED_ROWS=((1,0),(2,0),(3,0),(6,0),(3,2),(0,3))
+OPTIONAL_ROWS=((0, 2), (2, 1), (4, 0), (1, 2), (3, 1), (5, 0), (2, 2), (4, 1))
+COLLISION_POINTS=((2, 3, 1), (2, 4, 1), (2, 5, 1), (2, 6, 1), (3, 4, 1), (3, 5, 1)) hostile_overcount=true
+TARGET_HOSTILES=16384 optional_bits=8 collision_bits=6
+TARGET_FACE_COMPLEX=((Fraction(1, 12), Fraction(1, 6), Fraction(-1, 6)), (Fraction(2, 9), Fraction(1, 9), Fraction(-4, 9))) multiplicity=16384 unique=true
+INDEPENDENT_DUAL_CERT=5_unavoidable_anchors;rank2_witnesses=M,K9;26_support_points_dominated;two_face_projection_cover=true
+INDEPENDENT_ANCHOR_OWNERS=(0,7,1):U_p;(4,5,1):W_s2;(5,3,1):zeta_s2;all_unique_after_Z=beta=0
+INDEPENDENT_DUAL_SLACK_PROFILE=Counter({(Fraction(0, 1), Fraction(1, 3)): 2, (Fraction(0, 1), Fraction(0, 1)): 2, (Fraction(5, 6), Fraction(11, 9)): 1, (Fraction(2, 3), Fraction(10, 9)): 1, (Fraction(1, 2), Fraction(1, 1)): 1, (Fraction(1, 3), Fraction(8, 9)): 1, (Fraction(1, 6), Fraction(7, 9)): 1, (Fraction(0, 1), Fraction(2, 3)): 1, (Fraction(5, 12), Fraction(7, 9)): 1, (Fraction(1, 4), Fraction(2, 3)): 1, (Fraction(1, 12), Fraction(5, 9)): 1, (Fraction(1, 1), Fraction(1, 1)): 1, (Fraction(5, 6), Fraction(8, 9)): 1, (Fraction(2, 3), Fraction(7, 9)): 1, (Fraction(1, 2), Fraction(2, 3)): 1, (Fraction(1, 3), Fraction(5, 9)): 1, (Fraction(1, 6), Fraction(4, 9)): 1, (Fraction(5, 12), Fraction(4, 9)): 1, (Fraction(1, 4), Fraction(1, 3)): 1, (Fraction(1, 12), Fraction(2, 9)): 1, (Fraction(1, 2), Fraction(1, 3)): 1, (Fraction(1, 3), Fraction(2, 9)): 1, (Fraction(1, 6), Fraction(1, 9)): 1, (Fraction(1, 4), Fraction(0, 1)): 1})
+INDEPENDENT_DUAL_SHA256=dc07b372cf46f1259c2988308ca476c58d3cbef4ecf16be50b3ee98fbd3132b0
+INDEPENDENT_DIRECT_HULL_CONTROLS=11 all_match=true
+FACE_CORES=M:(S^2-P)*(1-U*P^6-W*S^2*P^5);MERGED:S^2*(1-W*S^2*P^5-zeta*S^3*P^3)
+FACE_IDENTITIES=('central:y^2=W*x*(x^6-U)', 'merged:P^9=(zeta^2/W^3)*x^3/(1-x)^2', 'central:P*C_P-5*C=-(U*P^6+5)', 'merged:P*B_P-3*B=-(2W*S^2*P^5+3)')
+KUMMER_VALUATIONS=central:n2:(1x7,-7);merged:n9:(3,-2,-1)
+FACE_GENERA=central:3,merged:3 torus_determinants=(-12,-9)
+PICK_LEDGERS={'M': (36, 10, 14), 'central': (12, 8, 3), 'merged': (9, 5, 3), 'global': (45, 13, 17)}
+GRAPH_LAMBDA_NONZERO=vertices(R,C,K9):3 edges(R-C:12,C-K9:1):13 b1=11
+GENUS_CONSEQUENCE=3+3+11=17=global;no_unlisted_positive_genus_component
+HEIGHT_BASE=36 scaled_planes=M:(3, 6, -6),K9:(8, 4, -16);normal_height_coefficient=-1
+GOOD_DIFFERENTIAL_ORDERS=M:27,K9:34 all_positive=true
+EDGE_SCHEMES=('X-1', '1-zeta*X^3', '-zeta-W*X', '(X-1)*(U*X+W)', 'U-X^6', '1-W*X')
+EDGE_GATE_LAMBDA_NONZERO=U*W*zeta_3*(U+W);all_simple_and_toric_noncorner=true
+PACKET_LAMBDA_NONZERO=(11, 11, 10, 2, 2, 2, 1) finite/full_responses=(33,39) consistency_only=true
+CONSEQUENCE_OBJECT=components(R:g0,C:g3,K9:g3);graph_b1=11;global_g=17;positive_orders=(27,34);only_rational_resolution_chains
+LAMBDA_ZERO_CONTACT=Ctilde=b^12-U*r^5*(r-1);intersection_length=12;partial_r=-U;unique_torus_contact=A23
+LAMBDA_ZERO_SHARED_EDGE=1-WX_simple_noncorner;top_and_shared_relative_interiors_orbit_disjoint=true
+LAMBDA_ZERO_CORRECTION=+(U/2)*r^4*(r-1)^3 exact_q_order=3;base_change_index=3
+LAMBDA_ZERO_IMPORTED_TAIL_COEFFICIENTS=((Fraction(6, 1), Fraction(2, 1)), (Fraction(5, 2), Fraction(9, 2)), (Fraction(2, 1), Fraction(4, 1)), (Fraction(3, 2), Fraction(7, 2)), (Fraction(1, 1), Fraction(3, 1))) all_positive=true;simple_packet_transported=false
+LAMBDA_ZERO_SHORT_LADDER=zeta_3!=0_forces_C2_or_C3_before_t^6_correction
+RELATIVE_THEOREM_SIGNAL=THM4327_good_differential_plus_proper_flat_degree_mechanism_has_all_new_inputs;Lambda0_uses_THM4292/4297_tail_import
+CONTROL_BETA_RESTORED=THM4327_faces(M,V7,T3)_all_16384_masks
+HOSTILE_W0=8192_masks_unique_planes(M,W0);W0_face_optional_owners=((2,2),(4,1));stable_factorization_lost
+HOSTILE_ZETA0_BETA0_WNZ=16384_masks_face_complex_types=2 counts=(14336,2048)
+HOSTILE_LAMBDA0_SIMPLE_MODEL=top_edge_U*(X-1)^2;simple_packet_forbidden;separate_A23_inputs_pass
+OPEN=W0_beta0;zeta0_intersections;seam_entry;JC2;DC2
+CHECKS=214

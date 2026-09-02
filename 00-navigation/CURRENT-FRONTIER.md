@@ -335,20 +335,16 @@ lift/phase clocks.
   challenges `(3,9),(5,6),(7,5),(11,4),(13,4)` all remain **OPEN**; the public
   `131199`-field file is a named finite population, not a world census.
 - **Jacobian/Dixmier:** `JC(2),DC(2)` are **OPEN**. THM-4130--4248 close
-  `M=8--11` off-wall; THM-4226 closes dense `M=13`. THM-4290/4297 and
-  [THM-4299](../01-canon/theorems/THM-4299-d-zero-square-face-elliptic-splitting-and-off-corner-extinction.md)
-  reduce `M=12` to `U=0`, `Z=0`, and the cubic corner. THM-4301/4304 leave
-  rational double sections; THM-4307 closes balanced towers. THM-4308's
-  finite row-eight gate plus
-  [THM-4312](../01-canon/theorems/THM-4312-source-normal-cubic-corner-repeated-face-collapse.md)
-  leaves `k=1`. THM-4315/4316 kill ten row-nine points at row ten;
-  THM-4317 resolves local models. Only that normalized corner lane closes.
+  `M=8--11` off-wall and THM-4226 closes dense `M=13`. For `M=12`,
+  THM-4290/4297/4299 close the interior and square wall; THM-4301--4317 close
+  only the normalized cubic-corner lane.
   [THM-4327](../01-canon/theorems/THM-4327-generic-exact-weight-twelve-endpoint-wall-extinction.md)
-  closes `U=0,WZ!=0` off both repeated cusps, including `Lambda=0`,
-  and `Z=0` under `U beta_11 zeta_3!=0`, with arbitrary `W` and `Lambda`.
-  Open: `U=0` with `WZ=0` or either repeated cusp, and `Z=0,U!=0` with
-  `beta_11 zeta_3=0`. THM-4328 proves Student visibility is lossless at
-  even weights and zero at odd weights, not seam entry. `JC(2),DC(2)` remain open.
+  closes generic `U=0` and `Z=0` endpoint strata, including `Lambda=0`.
+  [THM-4334](../01-canon/theorems/THM-4334-beta-zero-exact-weight-twelve-endpoint-wall-extinction.md)
+  closes `Z=beta_11=0,UWzeta_3!=0`; its cyclic-nine genus-three face has
+  order 34 and its repeated ladder splits before the `t^6` correction.
+  Residual: `U=0` with `WZ=0` or a repeated cusp; `Z=0,U!=0` with
+  `zeta_3=0` or `beta_11=W=0`; and seam entry. THM-4328 is odd-face blind.
   Exceptional quartic: THM-3703/3737 give grammar/image, THM-4034 the
   conductor, and THM-4039/4043/4046 reach `J_7`, obstruct `J_8`, and close
   critical `H`. [THM-4054](../01-canon/theorems/THM-4054-exceptional-affine-simple-zero-retained-packet.md)

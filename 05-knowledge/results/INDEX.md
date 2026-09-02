@@ -1,5 +1,18 @@
 # Script Results Index
 
+- `jc2_m12_z0_beta0_endpoint_extinction_thm4334.out` and its clean-room
+  independent audit -> exact beta-owner endpoint extinction
+  ([THM-4334](../../01-canon/theorems/THM-4334-beta-zero-exact-weight-twelve-endpoint-wall-extinction.md)):
+  **PROVED RELATIVE TO THM-4292/4297/4327 + VERIFIED-EXACT + INDEPENDENTLY
+  AUDITED; JC(2) OPEN.** On `Z=beta_11=0`, `U*W*zeta_3!=0`, every one of
+  `16,384` hostile support states has exactly the main face and a connected
+  genus-three cyclic-nine Kummer face. Their good-form orders are `27,34`;
+  the complete genus ledger is `3+3+11=17`. At `Lambda=0`, `zeta_3!=0`
+  forces the repeated critical ladder to split through `C_2` or `C_3` before
+  the `t^6` correction. Script/output SHA-256 pairs:
+  `3d6dce09...5fbd32a2` / `912ce9c8...ae72ea8`, and
+  `e566081d...2736da2` / `07aabbd8...250da988`.
+
 - `lrc14_rank3_endpoint_appender_control_thm4331.out` and its independent
   audit -> exact endpoint-address improvement for a THM-4333 hostile-derived
   physical row

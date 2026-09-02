@@ -1,0 +1,18 @@
+THM4334_BETA0_ENDPOINT_PRIMARY=PASS
+wall=Z=0,beta_11=0,U*W*zeta_3!=0;Lambda=U+W_arbitrary
+universe_rows=16 required=6 absent=2 optional=8 collision_bits=6
+hostile_states=16384 lower_complexes=1
+faces=((Fraction(1, 12), Fraction(1, 6), Fraction(-1, 6)), (Fraction(2, 9), Fraction(1, 9), Fraction(-4, 9)))
+face_supports={(Fraction(1, 12), Fraction(1, 6), Fraction(-1, 6)): ((0, 1, 0), (0, 7, 1), (2, 0, 0), (2, 6, 1), (4, 5, 1)), (Fraction(2, 9), Fraction(1, 9), Fraction(-4, 9)): ((2, 0, 0), (4, 5, 1), (5, 3, 1))}
+pick_ledgers={'main': (36, 10, 14), 'central': (12, 8, 3), 'beta0': (9, 5, 3), 'global': (45, 13, 17)}
+face_normalizations=R:rational,C:genus3,T9:cyclic9_genus3
+T9_kummer=S^9=(W^3/zeta^5)*(1-x)^5/x^3 branch_orders=(-3,5,-2)
+dual_graph=vertices3 edges13 connected1 b1=11
+orders_L36=(27,34)
+edges=('X-1', '1-zeta*X^3', '-W*X-zeta', '(X-1)*(U*X+W)', 'U-X^6', '1-W*X')
+simple_edge_gate=U*W*zeta_3*(U+W)!=0
+Lambda0_contact=A23 tail_orders_all_positive=true response_packet_not_transported
+Lambda0_short_ladder=zeta_3!=0_forces_C2_or_C3_before_t^6_correction
+source_infinity_packet=(11, 11, 10, 2, 2, 2, 1)
+RELATIVE_CONSEQUENCE=all_special_components_constant=>no_nonautomorphic_pair
+CHECKS=53
