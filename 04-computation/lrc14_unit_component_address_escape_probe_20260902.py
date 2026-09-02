@@ -155,8 +155,9 @@ def main() -> None:
     )
 
     # Initial segments C={1,...,13-d}.  Their first component and both
-    # endpoint denominators are closed-form.  Address data lowers the least
-    # admissible d-unit threshold for d=2,3,4,6.
+    # endpoint denominators are closed-form. Address data lowers the least
+    # selected-tail d-unit threshold for d=2,3,4,6. For d=6 this does not
+    # improve the whole row: six distinct positive units force max(T)>=17.
     expected_address_units = (17, 17, 17, 16, 13, 12)
     expected_raw_units = (23, 20, 19, 16, 17, 12)
     quotient_phases = (Q(6, 77), Q(23, 280), Q(3, 34), Q(3, 32), Q(3, 26), Q(1, 8))
@@ -280,7 +281,8 @@ def main() -> None:
     print("INITIAL_SEGMENT_ROWS")
     for row in initial_rows:
         print(row)
-    print("RAW_WIDTH_STRICTLY_IMPROVED_AT=d=2,3,4,6")
+    print("SELECTED_TAIL_THRESHOLD_STRICTLY_IMPROVED_AT=d=2,3,4,6")
+    print("D6_ROW_LEVEL_CAVEAT=six_distinct_positive_6_units_force_max_tail_at_least_17")
     print(
         "MINORITY_WALL_P5="
         f"C={wall_core}:T={wall_tails}:components={len(wall_components)}:"

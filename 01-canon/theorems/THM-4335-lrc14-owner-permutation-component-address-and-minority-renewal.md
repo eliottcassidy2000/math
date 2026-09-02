@@ -10,7 +10,8 @@ status: >
   core-safe quotient phase. On each positive component, owners have constant
   affine tooth addresses; endpoint denominators and pairwise determinants
   give sharper necessary width inequalities and sufficient escape tests.
-  Initial-segment unit cutoffs become (17,17,17,16,13,12). A p=5 h=420 row
+  Initial-segment selected-tail thresholds become (17,17,17,16,13,12). A
+  p=5 h=420 row
   passes the inherited marginal gates but is closed by owner disappearance.
   Separately, every physical minority-anchor component has an exact shortest
   tooth-cover renewal budget with odd endpoint tolls and gcd-quantized
@@ -32,8 +33,8 @@ component_script: 04-computation/lrc14_unit_component_address_escape_probe_20260
 component_output: 05-knowledge/results/lrc14_unit_component_address_escape_probe_20260902.out
 component_independent_script: 04-computation/lrc14_unit_component_address_escape_probe_20260902_independent_audit.py
 component_independent_output: 05-knowledge/results/lrc14_unit_component_address_escape_probe_20260902_independent_audit.out
-component_script_sha256: f1aca8fb78e89d9faaaaa37f1cdc396da9e61071c96b2313ace1c4b01f2f2be4
-component_output_sha256: ffc79071892a908f2f4f7d03d6a0122c6125fe84bbd73939ece4238bb36e176f
+component_script_sha256: 8b8e92c9bd0647cccdb6a78729d3b88a4b9447053d14893e28de49a519cf2111
+component_output_sha256: 77d6f33a336cddab5b426fd1912343fef3245db1d52fdd1b0051cd251d3224fd
 component_independent_script_sha256: 5b36be9aea4ac0d6d04b07ac16ec1e530cf0619cc39a57f0510bacc1e0e4f9c1
 component_independent_output_sha256: 29359f4cd3e04bcd2e1aabb0ea799c25aaf1e88dbc5888894ad46c2c1ef2a575
 owner_script: 04-computation/lrc14_p5_owner_permutation_apex_obstruction_probe_20260902.py
@@ -229,7 +230,7 @@ This is a geometric equality hostile, not an unsafe full row.
 Put
 
 ```text
-R_C=max C,       mu=M(C)>1/14,       rho=(mu-1/14)/R_C, (19)
+R_C=max C,       m_C=M(C)>1/14,       rho=(m_C-1/14)/R_C, (19)
 ```
 
 and choose a core maximizer `theta_0`. Strict failure necessarily gives,
@@ -250,7 +251,7 @@ Either reversed nonstrict inequality is therefore a safety certificate.
 When `|C|=13-d`, cited lower-dimensional LRC gives
 
 ```text
-mu>=1/(14-d),               rho>=d/[14(14-d)R_C].     (22)
+m_C>=1/(14-d),              rho>=d/[14(14-d)R_C].     (22)
 ```
 
 Hence every strict counterexample on this equality branch obeys
@@ -368,17 +369,26 @@ I_m=[1/14,13/(14m)],        W=d/(14m),
 (Q_L,Q_R)=(14,14m).                                  (32)
 ```
 
-The least admissible `d`-unit cutoffs from `(14)--(15)`, compared with the
-width-only cutoff `wW>=d/7`, are
+Indeed, throughout this interval every speed `c=1,...,m` stays in its
+closed safe band `[1/14,13/14]`; immediately to the left speed `1` fails,
+and immediately to the right speed `m` fails. Thus `(32)` is the whole
+connected component, including its two safe boundary points.
+
+For one selected `d`-unit tail, the least admissible thresholds from
+`(14)--(15)`, compared with the width-only threshold `wW>=d/7`, are
 
 | `d` | 2 | 3 | 4 | 5 | 6 | 7 |
 |---:|---:|---:|---:|---:|---:|---:|
-| width-only least unit | 23 | 20 | 19 | 16 | 17 | 12 |
-| addressed least unit | 17 | 17 | 17 | 16 | 13 | 12 |
+| width-only selected-tail threshold | 23 | 20 | 19 | 16 | 17 | 12 |
+| addressed selected-tail threshold | 17 | 17 | 17 | 16 | 13 | 12 |
 
-Thus the endpoint address strictly improves the raw-width certificate for
-`d=2,3,4,6`. The exact probe gives a literal safe lift at every displayed
-addressed cutoff.
+Thus the endpoint address numerically improves the selected-tail threshold
+for `d=2,3,4,6`. The `d=6` entry is not a new row-level gain: six distinct
+positive `6`-units already force `max T>=17`, so some tail always triggers
+the raw-width certificate; the exact control at selected tail `13` also
+contains tail `17`. The exact probe gives a literal safe lift at every
+displayed addressed threshold, while isolating a genuine endpoint gain for
+`d=2,3,4`.
 
 There is also a `p=5` minority-wall component control. Take
 
@@ -731,5 +741,3 @@ python3 -B 04-computation/lrc14_p5_owner_permutation_apex_obstruction_probe_2026
 python3 -B 04-computation/lrc14_minority_owner_renewal_probe_owner_walk_20260902.py \
   | diff -u 05-knowledge/results/lrc14_minority_owner_renewal_probe_owner_walk_20260902.out -
 ```
-
-No mathematical claim, proof, or dependency is asserted by this reservation.

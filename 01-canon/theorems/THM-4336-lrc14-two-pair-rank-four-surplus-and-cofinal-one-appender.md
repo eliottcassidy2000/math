@@ -280,7 +280,8 @@ delta_Q=m_Q-7/81,
 epsilon_Q(s)=(6/7)delta_Q-6C'_Q/(49s),                (23)
 ```
 
-where `1715` is the largest seven-label sum in `P`. If
+where `1715` is the largest seven-label sum in `P`. If positive integers
+`s,t` satisfy
 
 ```text
 s>C'_Q/(7delta_Q),

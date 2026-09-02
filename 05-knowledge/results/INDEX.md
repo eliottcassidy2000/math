@@ -1,5 +1,26 @@
 # Script Results Index
 
+- `lrc14_unit_component_address_escape_probe_20260902.out`, its independent
+  audit, the `p5` owner-permutation probe, and the minority-renewal probe ->
+  exact sheet-owner, addressed-tooth, and deterministic renewal controls
+  ([THM-4335](../../01-canon/theorems/THM-4335-lrc14-owner-permutation-component-address-and-minority-renewal.md)):
+  **PROVED ELEMENTARY + VERIFIED-EXACT + INDEPENDENT COMPONENT AUDIT;
+  LRC(14) OPEN.** Exactly `d` distinct `d`-unit tails cover all sheets iff
+  their active owners permute `Z/dZ`; component endpoint denominators and
+  pair determinants sharpen width-only escape. The physical minority form
+  has an exact shortest-cover renewal budget. The new `p=5` and two `h=420`
+  controls are safe, but no uniform transition-reuse bound is proved.
+
+- `lrc14_rank4_two_appender_pair_probe_20260902.out` and its cleanroom wall
+  audit -> exact rank-four retained-mass surplus for two residual pairs
+  ([THM-4336](../../01-canon/theorems/THM-4336-lrc14-two-pair-rank-four-surplus-and-cofinal-one-appender.md)):
+  **PROVED RELATIVE TO THM-4150/4170/4231/4333 + FINITE-EXACT + SCOPED
+  INDEPENDENT AUDIT; LRC(14) OPEN.** Flat enumeration of all `5,852,925`
+  eight-label bodies and direct-cell optimization prove `L_4/D>7/81` for
+  residual pairs `(50,70)` and `(509,640)`. One new core appender at least
+  `6021` or `5295`, respectively, gives an infinite thirteen-speed safe
+  family; the other `181,192` residual pairs remain open at rank four.
+
 - `jc2_m12_z0_beta0_endpoint_extinction_thm4334.out` and its clean-room
   independent audit -> exact beta-owner endpoint extinction
   ([THM-4334](../../01-canon/theorems/THM-4334-beta-zero-exact-weight-twelve-endpoint-wall-extinction.md)):
