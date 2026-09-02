@@ -1,0 +1,26 @@
+THM4328 EXACT SEAM-COVARIANT STUDENT--STEIN FACE VISIBILITY
+SEAM kappa=4*gamma^2/a; q=(a/(4*gamma))*(kappa*x^2+6)
+LIVE_SEAM gamma=-a^3/2 => kappa=a^5=A5
+STEIN D_m=-(a/(2*gamma))*((kappa*x^2+6)*theta'-2*m*kappa*x*theta)/(2*m)
+IMAGE im(D_m)=ker(ell_m,kappa) on degree <=m; audited m=1..24
+MOMENTS ell(x^(2r))=6^r*(2r-1)!!/(kappa^r*prod_j(2m-2j+1)); ell(odd)=0
+STATIONARY mu_m,kappa proportional to (kappa*x^2+6)^(-(m+1)); probability reading requires real kappa>0
+FILTER retain 6/(kappa*x^2+6); survival=(2m+1)/(2m+2)
+FACE even weight: lossless diagonal Stein rescaling; odd weight: zero composite
+M12 e0=h0; e1=6*h1/(13*kappa); e2=36*h2/(65*kappa^2)
+M12 determinant=216/(845*kappa^3)
+M12 U=0 iff e0=0
+M12 Z=0 iff 13*kappa^2*e2-78*kappa*e1+108*e0=0
+M12 Lambda=0 iff 65*kappa^2*e2-312*kappa*e1+360*e0=0
+M12 D=0 iff 169*kappa^2*e1^2+624*kappa*e0*e1-864*e0^2-260*kappa^2*e0*e2=0
+HOSTILE weight19 p^8*y=x*t^10*(1+x^2*t)^9: no row <=9 and every raw Stein moment is zero
+U_CONTROL Phi=1 eta=0 xi=237757952/54675 alpha=-189841784364917/5646560625
+U_CONTROL upsilon5=-731648/2025 E5=35245115050720811582989632889/31883646891800390625!=0
+U_CONTROL W=-169749098233/9841500 Z=5200771070534/66430125 D*Lambda!=0
+Z_CONTROL Phi=1 eta=0 xi=1563243041171/115860375 alpha=207913052665031843/2393096045625
+Z_CONTROL beta=1 zeta3=-3/2 U=-5200771070534/1042743375 W=10155617023591/463441500
+Z_CONTROL U+W=70597468930183/4170973500 and U*beta*zeta3*(U+W)!=0
+TRANSVERSAL dU/dxi=-6/11 dZ/dxi=-22886/2673 dE9/dalpha=-511211250*Phi
+CHECKS=71016
+SEMANTIC_SHA256=95527d31e118108182eb8c6f367e8465906803d40ea788f9dc3726d4b3e66c20
+ALL THM4328 EXACT CHECKS PASSED

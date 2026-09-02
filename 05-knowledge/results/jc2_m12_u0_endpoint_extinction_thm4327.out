@@ -1,0 +1,37 @@
+THM-4327 U=0 ENDPOINT FINITE CERTIFICATE
+MODE=primary
+UNIVERSE_ROWS=15
+FILTERS=U=0;W*Z!=0;optional lower rows arbitrary;active collisions hostile-deleted
+COLLISIONS=(2, 3, 1);(2, 4, 1);(2, 5, 1);(3, 4, 1);(3, 5, 1);(4, 5, 1)
+CASE_A gate=u!=0,E5=a^2-4Wu!=0 (a arbitrary) planes=(0,1/5,-1/5);(1/12,1/6,-1/6) hostiles=4500 polygon=46/14/17 packet=11,11,5,5,2,2,2,2,1 responses=41/33 L=60 orders=M:45,H5:50
+CASE_A_GRAPH_LAMBDA_NONZERO V=3 E=13 b1=11 vertices=R,C,H5 edges=R-C:12,C-H5:1
+CASE_A_HEIGHTS H5:normal=(0, 12, -1),offset=-12;M:normal=(5, 10, -1),offset=-10
+CASE_B gate=u=0,a!=0,d!=0 planes=(-1/4,1/4,-1/4);(0,1/5,-1/5);(1/12,1/6,-1/6) hostiles=1080 polygon=45/13/17 packet=11,11,5,5,2,2,2,2,1 responses=41/33 L=60 orders=M:45,H5:50,V4a:65
+CASE_B_GRAPH_LAMBDA_NONZERO V=4 E=14 b1=11 vertices=R,C,H5,V4a edges=R-C:12,C-H5:1,H5-V4a:1
+CASE_B_HEIGHTS V4a:normal=(-15, 15, -1),offset=-15;H5:normal=(0, 12, -1),offset=-12;M:normal=(5, 10, -1),offset=-10
+CASE_C gate=u=0,a!=0,d=0 planes=(-2/3,1/3,-1/3);(0,1/5,-1/5);(1/12,1/6,-1/6) hostiles=720 polygon=44/12/17 packet=11,11,5,5,2,2,2,2,1 responses=41/33 L=60 orders=M:45,H5:50,V3a:90
+CASE_C_GRAPH_LAMBDA_NONZERO V=4 E=14 b1=11 vertices=R,C,H5,V3a edges=R-C:12,C-H5:1,H5-V3a:1
+CASE_C_HEIGHTS V3a:normal=(-40, 20, -1),offset=-20;H5:normal=(0, 12, -1),offset=-12;M:normal=(5, 10, -1),offset=-10
+CASE_D gate=u=0,a=0,d!=0 planes=(-1/8,1/4,-1/4);(1/12,1/6,-1/6) hostiles=720 polygon=44/12/17 packet=11,11,9,2,2,2,2,1 responses=40/32 L=24 orders=M:18,V4W:23
+CASE_D_GRAPH_LAMBDA_NONZERO V=3 E=13 b1=11 vertices=R,C,V4W edges=R-C:12,C-V4W:1
+CASE_D_HEIGHTS V4W:normal=(-3, 6, -1),offset=-6;M:normal=(2, 4, -1),offset=-4
+CASE_E gate=u=0,a=0,d=0,E3=eta^2-4eW!=0 (eta arbitrary) planes=(-1/3,1/3,-1/3);(1/12,1/6,-1/6) hostiles=480 polygon=42/12/16 packet=11,11,4,4,2,2,2,2,1 responses=39/31 L=12 orders=M:9,V3W:14
+CASE_E_GRAPH_LAMBDA_NONZERO V=3 E=13 b1=11 vertices=R,C,V3W edges=R-C:12,C-V3W:1
+CASE_E_HEIGHTS V3W:normal=(-4, 4, -1),offset=-4;M:normal=(1, 2, -1),offset=-2
+TOTAL_HOSTILES=7500
+POSITIVE_FACE_ORDERS=all_strictly_positive
+HEIGHT_CHARTS=all_minimal_L_integral_primitive;height_normal_coefficient=-1
+TORUS_SMOOTHNESS=R,C,H5,V4a,V3a,V4W,V3W_symbolic_Euler_certificates
+EDGE_SCHEMES=common[X-1,1-ZX4,(X-1)(WX+Z),1-WX];A[W+aX+uX2,u-X5];B[W+aX,a+dX,d-X4,1-aX];C[W+aX,a+eX,e-X3,1-aX];D[W+dX,d-X4];E[e+etaX+WX2,e-X3]
+EDGE_GATE_LEDGER=common:W*Z*Lambda;A:u*E5;B:a*d;C:a;D:d;E:E3;internal:W_and_a_when_present
+CASE_E_FACE=-1+e*P^3+eta*S*P^4+W*S^2*P^5
+CASE_E_NORMAL_FORM=T=S*P;X=P^-1;Y=2W*T+eta;Y^2=4W*X^3+E3;genus=1
+CASE_E_CHANGE=(S,P)->(X=P^-1,V=SP)_det=1;Y=2WV+eta_etale_for_W!=0
+TORUS_COMPLETION=t=P-S^2;C_mod_t=1-Lambda*S^12_nonzero
+LAMBDA_ZERO=top_edge_double_root;one_A23_contact;all_five_imported_tail_orders_positive
+THM4297_IMPORT=checked_A=W,Ueff=W/2_and_order_table_only;critical_ladder_not_rederived
+HOSTILE_E5_ZERO=(2,5)_cusp_delta_2;repeated-tail-audit-required
+HOSTILE_E3_ZERO=e+eta*X+W*X^2_has_double_root;repeated-tail-audit-required
+HOSTILE_CM_TRANSFER=explicit_nonconstant_j0_quotient_verified
+CHECKS=8364
+RESULT=PASS

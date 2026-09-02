@@ -1,0 +1,48 @@
+THM4327_Z0_ENDPOINT_EXACT_AUDIT=PASS
+universe_rows=16 forbidden_rows=((0,1),(1,1)) wall_absent_row=(0,4)
+fixed_points=((2,0,0),(0,1,0),(2,0,1))
+collision_points=((2, 3, 1), (2, 4, 1), (2, 5, 1), (2, 6, 1), (3, 4, 1), (3, 5, 1))
+collision_masks_are_hostile_overcount=true
+source_normal_coefficients_U_W=((1, 0), (6, 1), (15, 5), (20, 10), (15, 10), (6, 5), (1, 1))
+source_normal_top=t^6*(1+x^2*t)^5*(U+(U+W)*x^2*t)
+source_normal_flag=((U),(6U+W),(15U+5W)) Zwall=h2-5h1+15h0=0
+THEOREM_Z_gate=Z=0;U*beta*zeta!=0;W_arbitrary;Lambda0_A23_covered
+symbolic_face_normal_forms=central_hyperelliptic,beta_Kummer,zeta_rational,W0beta_Kummer:PASS
+W_NONZERO_hostiles=16384 optional_rows=8 collision_bits=6
+W_NONZERO_faces=((Fraction(1, 12), Fraction(1, 6), Fraction(-1, 6)), (Fraction(1, 7), Fraction(1, 7), Fraction(-2, 7)), (Fraction(1, 3), Fraction(0, 1), Fraction(-2, 3)))
+W_NONZERO_pick={'M': (36, 10, 14), 'central': (12, 8, 3), 'beta': (7, 3, 3), 'zeta': (3, 5, 0), 'global': (46, 14, 17)}
+W_NONZERO_normalizations=(central:y^2=W*x*(x^6-U),beta:P^7=(beta^2/W^3)*x^3/(1-x)^2,zeta:rational)
+W_NONZERO_GP_witnesses=('central:P*C_P-5*C=-(U*P^6+5);C|R=1-(U+W)*P^6', 'beta:P*B_P-4*B=-(W*S^2*P^5+4)')
+W_NONZERO_edges=('X-1', '1-zeta*X^3', '-beta*X-zeta', '-W*X-beta', '(X-1)*(U*X+W)', 'U-X^6', '1-W*X', '1-beta*X')
+W_NONZERO_edge_squarefree_gate_Lambda_nonzero=U*W*beta*zeta*(U+W)!=0
+W_NONZERO_graph_Lambda_nonzero_V_E_cc_b1=(4, 14, 1, 11)
+W_NONZERO_graph_edges=R-C:12,C-B:1,B-T:1
+W_NONZERO_orders_L84=(63, 70, 98)
+W_NONZERO_packet_Lambda_nonzero=(11, 11, 7, 4, 2, 2, 2, 1) responses=(34,40)
+LAMBDA_ZERO_Ctilde=b^12-U*r^5*(r-1);partial_r_at_contact=-U;contact=A23
+LAMBDA_ZERO_transport=A=U;U_eff=U/2;correction=+(U/2)*r^4*q^3;normalized_entry=t^6
+LAMBDA_ZERO_tail_orders=('6s+2beta_v', '(5s+9beta_v)/2', '2s+4beta_v', '(3s+7beta_v)/2', 's+3beta_v') all_positive=true
+LAMBDA_ZERO_packets_transported=false
+W_ZERO_hostiles=8192 optional_rows=8 collision_bits=5
+W_ZERO_faces=((Fraction(1, 12), Fraction(1, 6), Fraction(-1, 6)), (Fraction(1, 9), Fraction(1, 6), Fraction(-2, 9)), (Fraction(1, 3), Fraction(0, 1), Fraction(-2, 3)))
+W_ZERO_pick={'M': (24, 14, 6), 'beta': (18, 8, 6), 'zeta': (3, 5, 0), 'global': (45, 13, 17)}
+W_ZERO_normalizations=(M:rational_factors,beta:S^3=(1-U*P^6)/(beta*P^4)_genus6,zeta:rational)
+W_ZERO_GP_witness='W0beta:P*B_P-4*B=-(2*U*P^6+4)'
+W_ZERO_edges=('X-1', '1-zeta*X^3', '-beta*X-zeta', '-U*X-beta', 'U*(X-1)', 'U-X^6', '1-U*X^6', '1-beta*X')
+W_ZERO_edge_squarefree_gate=U*beta*zeta!=0
+W_ZERO_graph_V_E_cc_b1=(9, 19, 1, 11)
+W_ZERO_graph_edges=R-L_i:12,L_i-B:6,B-T:1
+W_ZERO_orders_L36=(27, 28, 42)
+W_ZERO_packet=(17, 11, 4, 2, 2, 2, 1) responses=(33,39)
+BROAD_overatlas_masks=131072 optional_rows=11 collision_bits=6
+BROAD_face_complexes=51 supporting_planes=32
+BROAD_order_formula=L*(5/6-a-b-c)
+BROAD_min_order_coefficient=3/4 unique_plane=(Fraction(1, 12), Fraction(1, 6), Fraction(-1, 6))
+BROAD_all_primary_face_orders_positive=true
+positive_controls=(U,W,beta,zeta)=(2,1,1,1),(1,0,1,1),(1,-1,1,1)
+Lambda0_top_edge=U*(X-1)^2_replaced_by_audited_A23_tail_ledger
+hostile_beta0_faces=((Fraction(1, 12), Fraction(1, 6), Fraction(-1, 6)), (Fraction(2, 9), Fraction(1, 9), Fraction(-4, 9)))
+hostile_zeta0_faces=((Fraction(1, 12), Fraction(1, 6), Fraction(-1, 6)), (Fraction(1, 7), Fraction(1, 7), Fraction(-2, 7)))
+edge_gate_certificate=generic:U*W*beta*zeta*(U+W);W0:U*beta*zeta
+scope=finite_exact_Newton_order_response_A23_inputs_relative_geometric_imports_no_seam_entry_no_JC2
+CHECKS=2798

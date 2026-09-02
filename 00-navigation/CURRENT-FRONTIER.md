@@ -349,7 +349,12 @@ lift/phase clocks.
   [THM-4312](../01-canon/theorems/THM-4312-source-normal-cubic-corner-repeated-face-collapse.md)
   leaves `k=1`. THM-4315/4316 kill ten row-nine points at row ten;
   THM-4317 resolves local models. Only that normalized corner lane closes.
-  `U=0`, `Z=0`, seam, `JC(2)`, and `DC(2)` remain open.
+  [THM-4327](../01-canon/theorems/THM-4327-generic-exact-weight-twelve-endpoint-wall-extinction.md)
+  closes `U=0,WZ!=0` off both repeated cusps, including `Lambda=0`,
+  and `Z=0` under `U beta_11 zeta_3!=0`, with arbitrary `W` and `Lambda`.
+  Open: `U=0` with `WZ=0` or either repeated cusp, and `Z=0,U!=0` with
+  `beta_11 zeta_3=0`. THM-4328 proves Student visibility is lossless at
+  even weights and zero at odd weights, not seam entry. `JC(2),DC(2)` remain open.
   Exceptional quartic: THM-3703/3737 give grammar/image, THM-4034 the
   conductor, and THM-4039/4043/4046 reach `J_7`, obstruct `J_8`, and close
   critical `H`. [THM-4054](../01-canon/theorems/THM-4054-exceptional-affine-simple-zero-retained-packet.md)

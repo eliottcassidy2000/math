@@ -53,11 +53,9 @@ Then read frontier, guardrails, theorem; logs are history.
     separate collision, phase and address; THM-3425 needs period plus parity.
     Composite rank seven and FC(3) remain open.
 12. **JC is false from dimension three; JC(2), DC(2) remain open.**
-    THM-2084 reaches `M=10`; THM-4248/4226 close `M=11/13`;
-    THM-4290/4297/4299 reduce `M=12` to
-    `U=0`, `Z=0`, and the cubic corner. THM-4308/4312 isolate row-eight
-    `k=1`; THM-4315/4316 kill its ten row-nine points at row ten. THM-4317
-    resolves local models. Walls, seam, `JC(2)`, `DC(2)` remain.
+    THM-2084: `M=10`; THM-4248/4226 close `M=11/13`;
+    THM-4290--4327 close interior/cubic/generic-endpoint `M=12`;
+    contacts/seam entry remain; THM-4328 odd-face blind.
 13. **Complete period-14 coordinates can be globally blind.** THM-2058 keeps
     every fixed-depth packet coordinate but exits at `47/113`; THM-2043/2047/
     2050 separate local completeness from global maxima.
