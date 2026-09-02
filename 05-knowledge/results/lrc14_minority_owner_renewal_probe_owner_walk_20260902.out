@@ -1,0 +1,39 @@
+small_independent_audit_components 46124
+transition_control 10 (3, 13) 6 ((13, 4), (3, 1)) q (2,)
+spanning_control
+ h 10
+ speeds (1,)
+ counts {'components': 20, 'missing': 18, 'spanning': 2, 'transition': 0, 'repeated_owner_chain': 0, 'max_chain': 1, 'min_q': 0}
+ span_hist {1: 2}
+ safe_mass 103/140
+ tail_load_on_anchor_safe 17/140
+ collision_excess 0
+ anchor_tail_overlap_sum 3/140
+ first_missing (1, Fraction(1, 14), Fraction(1, 14), (1,))
+ first_span (0, 1, 0)
+ first_transition None
+joint_hostile_P1287
+ h 420
+ speeds (11, 1691, 3371, 5051, 6731, 8411, 10091, 525, 945, 1365, 1575, 1287)
+ counts {'components': 840, 'missing': 726, 'spanning': 110, 'transition': 4, 'repeated_owner_chain': 0, 'max_chain': 3, 'min_q': 4}
+ span_hist {11: 110}
+ safe_mass 40658735591942981351123086/398972017902567297281548455
+ tail_load_on_anchor_safe 168607/114660
+ collision_excess 380492304506146084744918091/531962690536756396375397940
+ anchor_tail_overlap_sum 27953/114660
+ first_missing (5, Fraction(939, 141274), Fraction(1, 14), (10091,))
+ first_span (0, 11, 0)
+ first_transition (147, ((1365, 239), (525, 92), (11, 2)), (420, 4))
+joint_hostile_P9009
+ h 420
+ speeds (11, 1691, 3371, 5051, 6731, 8411, 10091, 525, 945, 1365, 1575, 9009)
+ counts {'components': 840, 'missing': 726, 'spanning': 110, 'transition': 4, 'repeated_owner_chain': 0, 'max_chain': 3, 'min_q': 4}
+ span_hist {11: 110}
+ safe_mass 121248049749916267681082/1184830779754208960448075
+ tail_load_on_anchor_safe 20381/13860
+ collision_excess 3391845433830986967627383/4739323119016835841792300
+ anchor_tail_overlap_sum 3379/13860
+ first_missing (5, Fraction(939, 141274), Fraction(1, 14), (10091,))
+ first_span (0, 11, 0)
+ first_transition (147, ((1365, 239), (525, 92), (11, 2)), (420, 4))
+PASS
