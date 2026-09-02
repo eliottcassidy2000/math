@@ -1,0 +1,24 @@
+LRC14 P5 OWNER-PERMUTATION APEX OBSTRUCTION -- EXACT AUDIT
+STATUS=SYMBOLIC_LEMMA_AUDIT_PLUS_ONE_VERIFIED_EXACT_ROW_NOT_LRC14
+FORMULA_CHECKS=72044 GAUGE_CHECKS=47716 PAIR_INTERSECTION_CHECKS=40690 TOTAL_REQUIRE_CALLS=710910
+BOUNDARY=activity equality gives empty strict mask; d=7 half-integer ownership left undefined
+h=420 d=5 anchor=840 primitive=1 r5=5 missing_thm366=()
+core=13,168,349,375,711,737,1073,1099
+tails=1,21,23,327,689
+core_maximum=90/181 theta0=7/181 R=1099 rho=1079/2784866
+apex=w1:n0:err7/181:owner0;w21:n1:err34/181:owner4;w23:n1:err20/181:owner3;w327:n13:err64/181:owner1;w689:n27:err64/181:owner2
+owner_moments_mod5=(0, 0, 0, 4) exact_permutation=1
+apex_slacks=w1:2447/7693;w21:32058/198919;w23:331029/1392433;w327:-171471/1392433;w689:-366770/1392433
+generic_MCb_threshold=994595/1079 max_tail=689 fires=0
+unit_bank_p=8 anchor_killed=0 represented=(1, 3, 5, 7)
+unit_bank_p=9 anchor_killed=0 represented=(1, 5, 7)
+unit_bank_p=10 anchor_killed=1 represented=(1, 3, 7, 9)
+unit_bank_p=11 anchor_killed=0 represented=(1, 3, 5, 7, 9)
+unit_bank_p=12 anchor_killed=1 represented=(1, 7, 11)
+unit_bank_p=13 anchor_killed=0 represented=(1, 3, 5, 7, 9, 11)
+unit_bank_p=14 anchor_killed=1 represented=(1, 5, 9, 11)
+adaptive_scales=70 minimum=1 minimizers=(5,) closures=()
+half_turn_clearances=(Fraction(11, 336), Fraction(11, 336)) full_grid_survivors=1416
+endpoint_theta=59/1526 endpoint_masks=((1, (0,)), (21, (4,)), (23, (3,)), (327, ()), (689, ()))
+witness_sheet=2 witness=3111/7630 clearance=551/7630 margin=3/3815
+RESULT=PASS
