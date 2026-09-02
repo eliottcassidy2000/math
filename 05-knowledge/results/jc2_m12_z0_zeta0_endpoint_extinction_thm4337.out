@@ -1,0 +1,32 @@
+THM4337_ZETA0_ENDPOINT_PRIMARY=PASS
+wall=Z=0;zeta_3=0;U*beta_11!=0;W_and_K_arbitrary
+THM4327_Z_SCRIPT_SHA256=6aa9087afd413833d3168b27efe3e65e779ab796a9b537ef1e624a6380fac551
+K=[y^2]H
+W_NONZERO_hostiles=16384;optional=8;inherited_deletion_bits=6
+W_NONZERO_complexes=Counter({((Fraction(1, 12), Fraction(1, 6), Fraction(-1, 6)), (Fraction(1, 7), Fraction(1, 7), Fraction(-2, 7))): 8192, ((Fraction(1, 12), Fraction(1, 6), Fraction(-1, 6)), (Fraction(1, 7), Fraction(1, 7), Fraction(-2, 7)), (Fraction(1, 1), Fraction(-1, 2), Fraction(-2, 1))): 8192})
+W_ZERO_hostiles=4096;optional=8;inherited_deletion_bits=4
+W_ZERO_complexes=Counter({((Fraction(1, 12), Fraction(1, 6), Fraction(-1, 6)), (Fraction(1, 9), Fraction(1, 6), Fraction(-2, 9))): 2048, ((Fraction(1, 12), Fraction(1, 6), Fraction(-1, 6)), (Fraction(1, 9), Fraction(1, 6), Fraction(-2, 9)), (Fraction(1, 1), Fraction(-1, 2), Fraction(-2, 1))): 2048})
+Kface_equality=((2, 0, 0), (4, 2, 1), (5, 4, 1))
+ledgers={'M_W': (36, 10, 14), 'C_W': (12, 8, 3), 'B_W': (7, 3, 3), 'K': (2, 4, 0), 'G_W_K0': (43, 11, 17), 'G_W_K1': (45, 13, 17), 'M_0': (24, 14, 6), 'B_0': (18, 8, 6), 'G_0_K0': (42, 10, 17), 'G_0_K1': (44, 12, 17)}
+packets={'G_W_K0': (11, 11, 7, 7, 1), 'G_W_K1': (11, 11, 7, 5, 2, 2, 1), 'G_0_K0': (17, 11, 7, 1), 'G_0_K1': (17, 11, 5, 2, 2, 1)}
+orders_W_L84=(63, 70, 196)
+orders_W0_L36=(27, 28, 84)
+normalizations_W=(C:genus3,B7:genus3,Kface:rational)
+normalizations_W0=(six_M_lines,B9:genus6,Kface:rational)
+Kface_parameter=V=S*P;P=(1-K*V^2)/(beta*V^3)
+GP_witnesses=('P*C_P-5*C=-(U*P^6+5)', 'P*B7_P-4*B7=-(W*S^2*P^5+4)', 'P*B9_P-4*B9=-(2*U*P^6+4)', 'P*Kf_P-4*Kf=2*K*S^2*P^2-4')
+edges_W_K0=('X-1', '1-beta*X', '-W*X-beta', '(X-1)*(U*X+W)', 'U-X^6', '1-W*X')
+edges_W_K1=('X-1', '1-K*X^2', '-beta*X-K', '-W*X-beta', '(X-1)*(U*X+W)', 'U-X^6', '1-W*X', '1-beta*X')
+edges_W0_K0=('X-1', '1-beta*X', '-U*X-beta', 'U*(X-1)', 'U-X^6', '1-U*X^6')
+edges_W0_K1=('X-1', '1-K*X^2', '-beta*X-K', '-U*X-beta', 'U*(X-1)', 'U-X^6', '1-U*X^6', '1-beta*X')
+simple_edge_gates=W:U*W*beta*(U+W)!=0;W0:U*beta!=0;K_nonzero_only_when_Kface_present
+Lambda0_contact=Ctilde=b^12-U*r^5*(r-1);d_r=-U;A23;do_not_transport_packet
+Lambda0_deepest=c1=alpha+beta=0_and_beta!=0=>C1=alpha/c^2!=0
+Lambda0_early_splitter=min(b^12*q,C1*t);threshold_nu_over_s=7/5
+Lambda0_orders=b^12*q:6s+2nu;C1*t:(5s+9nu)/2;both_before_t^6
+Lambda0_base_transport=global_L84_over_local_L12_index7
+beta0_W_nonzero_atlas=2_complexes;optional_T=(1/2,0,-1);order_L12=16
+beta0_W_nonzero_tail_hostile=A(P)=(P-1)^2(P+1);repeated_nonzero_outer_edge
+beta0_W0_atlas=12_complexes;9_planes;minimum_order_coefficient=3/4
+beta0_W0_sharp_hostile=U+alpha*X+xi*X^2=(X+1)^2
+CHECKS=69

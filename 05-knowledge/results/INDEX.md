@@ -20,6 +20,19 @@
   residual pairs `(50,70)` and `(509,640)`. One new core appender at least
   `6021` or `5295`, respectively, gives an infinite thirteen-speed safe
   family; the other `181,192` residual pairs remain open at rank four.
+- `jc2_m12_z0_zeta0_endpoint_extinction_thm4337.out` and its import-free
+  clean-room audit -> exact zeta-owner endpoint extinction
+  ([THM-4337](../../01-canon/theorems/THM-4337-zeta-zero-exact-weight-twelve-endpoint-wall-extinction.md)):
+  **PROVED RELATIVE TO THM-4292/4297/4327 + VERIFIED-EXACT + INDEPENDENTLY
+  AUDITED; JC(2) OPEN.** On `Z=zeta_3=0`, `U*beta_11!=0`, for arbitrary
+  `W,K,Lambda`, the `W!=0` faces have genera `3,3` and the `W=0` face genus
+  `6`; graph `b1=11` completes genus `17`. Good-form orders are
+  `63,70,196` or `27,28,84`. At `Lambda=0`, `b^12q` or `C_1t` splits the
+  `A_23` contact before every `t^6` correction. The primary
+  `16,384/4,096`-state conservative over-atlases and a 293-plane clean-room
+  reconstruction agree. Script/output SHA-256 pairs:
+  `8d43b5cb...3427cec2` / `04bfaf69...5451934e`, and
+  `0a0a31fb...c50a7a5d` / `96a8502e...3ebe080f`.
 
 - `jc2_m12_z0_beta0_endpoint_extinction_thm4334.out` and its clean-room
   independent audit -> exact beta-owner endpoint extinction

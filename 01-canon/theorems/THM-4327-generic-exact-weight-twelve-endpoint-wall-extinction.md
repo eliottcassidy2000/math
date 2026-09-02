@@ -30,6 +30,7 @@ related:
   - THM-4299-d-zero-square-face-elliptic-splitting-and-off-corner-extinction
   - THM-4328-seam-covariant-student-stein-face-visibility
   - THM-4334-beta-zero-exact-weight-twelve-endpoint-wall-extinction
+  - THM-4337-zeta-zero-exact-weight-twelve-endpoint-wall-extinction
 mistake_firewall:
   - MISTAKE-487
   - MISTAKE-522
@@ -644,8 +645,9 @@ Z=0:  U=0; or beta=0; or zeta=0.                        (42)
 
 Intersections among these walls may refine the list further.  Neither
 Theorem U nor Theorem Z asserts entry into the exact-weight-twelve seam.
-THM-4334 subsequently closes the part `beta=0,U*W*zeta!=0`, including its
-`Lambda=0` contact.  The live residual inventory is maintained in
+THM-4334 subsequently closes `beta=0,U*W*zeta!=0`, including its
+`Lambda=0` contact, and THM-4337 closes `zeta=0,U*beta!=0` for arbitrary
+`W,K,Lambda`.  The live residual inventory is maintained in
 `00-navigation/CURRENT-FRONTIER.md`.
 
 ## 10. The source-normal/Stein gate is strictly weaker

@@ -9,8 +9,9 @@ status: >
   Kummer curve; together with the central genus-three component and graph
   b1=11 it accounts for the full genus seventeen. Their good-form orders are
   34 and 27. At Lambda=0 the sole A23 contact splits through C2 or C3 before
-  the t^6 correction, so every component is Keller-constant. The zeta_3=0
-  owner wall, seam entry, JC(2), and DC(2) remain open.
+  the t^6 correction, so every component is Keller-constant. THM-4337 closes
+  the complementary zeta_3=0 wall away from beta_11=0; seam entry, JC(2),
+  and DC(2) remain open.
 source: root + jc boundary agents / planar-Jacobian continuation session, 2026-09-02
 depends_on:
   - THM-4292-lambda-zero-repeated-face-keller-extinction
@@ -21,6 +22,7 @@ related:
   - THM-4297-general-lambda-zero-central-and-tail-keller-extinction
   - THM-4327-generic-exact-weight-twelve-endpoint-wall-extinction
   - THM-4328-seam-covariant-student-stein-face-visibility
+  - THM-4337-zeta-zero-exact-weight-twelve-endpoint-wall-extinction
 mistake_firewall:
   - MISTAKE-487
   - MISTAKE-522
@@ -470,14 +472,14 @@ particular this theorem does not cover the other `Z=0` owner stratum
 `zeta_3=0`, any `U=0` intersection, either repeated `U=0` cusp, seam entry,
 `JC(2)`, or `DC(2)`.
 
-Three generated tasks survive the concept-board comparison:
+The first generated task--recomputing the `zeta_3=0` lower hull before edge
+specialization--is completed by THM-4337.  Two tasks survive the
+concept-board comparison:
 
-1. recompute the `zeta_3=0` lower hull and attach its first normal Hasse row
-   before doing any edge specialization;
-2. for the open repeated `(2,5)` and `(2,3)` cusps, recenter at the unique
+1. for the open repeated `(2,5)` and `(2,3)` cusps, recenter at the unique
    critical section and compute the invariant critical-value series, stable
    tails, and conductor/Kahler sidecar;
-3. retain raw odd source-normal flags
+2. retain raw odd source-normal flags
    `beta_11=h_1-5h_0` and `zeta_3=h_1-4h_0`; THM-4328's scalar Student
    observer kills those odd faces and cannot distinguish the owner walls.
 
@@ -498,5 +500,6 @@ python3 -B -O 04-computation/jc2_m12_z0_beta0_endpoint_extinction_independent_au
 
 What is proved here is only the relative extinction of `(1)`.  The source
 infinity packet is a consistency check off contact and is never transported
-through `Lambda=0`.  The other endpoint owners, exact-seam entry, `JC(2)`, and
-`DC(2)` remain open. **QED.**
+through `Lambda=0`.  THM-4337 closes the complementary `zeta_3=0` owner wall
+away from `beta_11=0`; the residual owner intersections, exact-seam entry,
+`JC(2)`, and `DC(2)` remain open. **QED.**
