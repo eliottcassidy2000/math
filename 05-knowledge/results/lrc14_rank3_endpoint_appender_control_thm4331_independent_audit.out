@@ -1,0 +1,12 @@
+THM4331 RANK3 ENDPOINT APPENDER CONTROL INDEPENDENT
+PROVENANCE pair=50,70 body_mask=011cd402 deleted=193
+S=1,9,20,100,140,160,170,190,240,286,290,336
+stages=12 components=362
+mass=64917367/577007200
+component=227/476,937/1960 width=39/33320
+owners=170,140 denominators=476,1960
+simple_ratio=4690/39 simple_cutoff=121
+additive_ratio=4673/39 additive_strict_cutoff=120
+coarse_component_bound=52434
+global_reserve_bound=52407
+CHECKS=30

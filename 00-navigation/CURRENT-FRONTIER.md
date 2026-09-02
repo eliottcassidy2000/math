@@ -53,13 +53,8 @@ for `d>=7`. THM-3742 is a wrong-torsor Pell `C14`; THM-3744's safe control is
   cores and physical entry remain open.
 - **Quantifier/type controls (PROVED):** THM-4095--4116 preserve field, gap,
   ray, parity-sheet and component-count data; none supplies safety or arrival.
-- **Fixed-pool and anchored dyadic entry (PROVED + FINITE-EXACT):**
-  [THM-4326](../01-canon/theorems/THM-4326-lrc14-rank-two-wall-graph-complete-typed-universe-closure.md)
-  closes the fixed pool after arbitrary outsider pairs.
-  [THM-4330](../01-canon/theorems/THM-4330-lrc14-affine-two-adic-root-types-and-anchored-pool-entry-sieve.md)
-  identifies the minimum-valuation graph as `K_(m,14-m)`, closes `1+13` for
-  every anchor, and leaves `2+12` first. Its degree-two projective pool sieve
-  closes at most two outsiders. Re-referencing and arbitrary entry remain open.
+- **Fixed pool/entry:** THM-4326/4329 close the chart; [THM-4330](../01-canon/theorems/THM-4330-lrc14-affine-two-adic-root-types-and-anchored-pool-entry-sieve.md) closes `1+13`; THM-4331 gives endpoint escape; THM-4332 is the literal boundary. Entry is open.
+- **Residual rank three (PROVED RELATIVE + FINITE-EXACT):** [THM-4333](../01-canon/theorems/THM-4333-lrc14-rank-three-surplus-and-cofinal-third-tail-completion.md) proves `L_3/D>2/27` on `181,194` residual pairs, with cutoff `3,370,132,808` and reserve `>1/189`; elsewhere only `4/63` is inherited.
 - **PROVED:** [THM-2928](../01-canon/theorems/THM-2928-critical-seven-comb-grid-tensorization-and-drift-tariff.md)/2941: literal zero/one/two/three-drift sectors are empty; `k=2,3` are finite.
 - **Orthogonal routes.** THM-1017 is HYP-6820; THM-2047/2050 keep phase/exit; THM-731/2048 prune; THM-1290 ends at `55`; HYP-8900 nonuniform.
 - **PROVED micro-staircase:** THM-3316/3317 close primes/sparse fragility;

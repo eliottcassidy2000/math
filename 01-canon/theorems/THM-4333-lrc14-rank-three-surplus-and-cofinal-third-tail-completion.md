@@ -2,29 +2,30 @@
 id: THM-4333
 title: "LRC(14) rank-three surplus and cofinal third-tail completion"
 status: >
-  PROVED RELATIVE TO THM-4231/4326/4150/4170 + FINITE-EXACT + O2/O3
+  PROVED RELATIVE TO THM-4231/4326/4150/4170/4331 + FINITE-EXACT + O2/O3
   INVARIANT + INDEPENDENT HOSTILE AUDIT; LRC(14) OPEN. On every pair in
   THM-4231's exact 181,194-pair remainder, every fixed-pool nine-body has
   retained rank-three safe mass strictly above 2/27. This gives
   1,060,514,892,450 eight-pool/two-outsider cores with the same strict
   floor, a uniform cofinal third-core-outside cutoff 3,370,132,808, and a
   new two-sheet reserve above 1/189 that admits any further speed s at the
-  explicit bound s>=27 times the sum of the preceding twelve speeds. These
-  are structured residual-pair families, not arbitrary-row entry or
-  LRC(14).
+  explicit bound s>=27(C-1), where C is the sum of the preceding twelve
+  speeds. These are structured residual-pair families, not arbitrary-row
+  entry or LRC(14).
 source: root + hypergraph_scout + cofinal_transfer_scout / LRC14 continuation session, 2026-09-01
 depends_on:
   - THM-4231-arbitrary-pair-cofinal-depth-six-haar-repair-and-exact-outsider-lift
   - THM-4326-lrc14-rank-two-wall-graph-complete-typed-universe-closure
   - THM-4150-safe-set-haar-measure-universal-odd-tail-lrc14-transfer
   - THM-4170-triple-deletion-matching-eventual-haar-odd-tail-transfer
+  - THM-4331-lrc14-safe-component-endpoint-denominator-odd-wall-escape
 related:
   - THM-4329-lrc14-complete-thirty-label-fixed-outsider-and-thirty-two-label-pascal-chart
-  - THM-4331-lrc14-safe-component-endpoint-denominator-odd-wall-escape
+  - THM-4330-lrc14-affine-two-adic-root-types-and-anchored-pool-entry-sieve
   - THM-4332-lrc14-fixed-pool-single-constraint-implication-rigidity
 artifact_root: 05-knowledge/results/lrc14_rank3_surplus_third_tail_thm4333
 artifact_manifest: 05-knowledge/results/lrc14_rank3_surplus_third_tail_thm4333/SHA256SUMS
-artifact_manifest_sha256: 611a8887a583be77c868732de2801969428b48ec1ff7f141e0cda64df99e2150
+artifact_manifest_sha256: 796c8fcd9a02875eb5dadfd206c599ea4265f651ac5da63eb9ed83296508f67e
 audit: >
   PASS / ACCEPT WITH SCOPED INDEPENDENCE. Full O2/O3 runs give byte-identical
   181,194-row screen and 67,198-row exact-fallback ledgers. The closed
@@ -40,7 +41,7 @@ audit: >
 
 # THM-4333 -- rank-three surplus and cofinal third-tail completion
 
-**PROVED RELATIVE TO THM-4231/4326/4150/4170 + FINITE-EXACT + O2/O3
+**PROVED RELATIVE TO THM-4231/4326/4150/4170/4331 + FINITE-EXACT + O2/O3
 INVARIANT + INDEPENDENT HOSTILE AUDIT. LRC(14) REMAINS OPEN.**
 
 ## 1. Rank-m failure hypergraphs
@@ -313,34 +314,45 @@ mu(U_phys)=1/2 int N(y)dy
 Multiplication by `d` preserves Haar measure. Equation `(26)` and
 `1/2(2/27-4/63)=1/189` prove `(28)`. **QED.**
 
-Every positive-length safe component has two walls, while the speeds in
-`2dH union {a,b}` contribute at most
+Put
 
 ```text
 C=2d sum_(h in H)h+a+b                                (31)
 ```
 
-danger teeth. Thus `U_phys` has at most `C` positive-length components.
-Applying `(19)` to `U_phys` shows that every positive integer
+so `C` is the sum of the speeds in `(27)`. The global reserve corollary of
+THM-4331 applies to `(28)` and shows that every positive integer
 
 ```text
-s>=27C                                                 (32)
+s>=27(C-1)                                             (32)
 ```
 
 satisfies
 
 ```text
-mu(G_(2dH union {a,b,s}))>0.                           (33)
+G_(2dH union {a,b,s}) is nonempty.                     (33)
 ```
 
-At equality in `(32)`, the discrepancy error is at most `2/441`, while
-`(6/7)mu(U_phys)>2/441`; strictness comes from `(28)`. Also `s>C`, so the
-new speed is distinct from every preceding speed.
+Here `C>=6`, so `(32)` gives `s>C`; the new speed is distinct from every
+preceding speed. In the application below, `(27)` has twelve speeds.
 
 Apply this with `H=K union {q,r}` from `(17)`. It gives a second explicit
 thirteen-speed family. The appended `s` may have either parity. Restricting
 it to odd integers produces exactly ten distinct even speeds and three
 distinct odd tails.
+
+The endpoint address can be much sharper than the global reserve. For the
+hostile-derived core
+
+```text
+K={10,80,85,95,120,143,145,168},       (q,r)=(50,70),
+```
+
+and physical tails `(1,9)`, THM-4331 Section 6 independently reconstructs a
+component that certifies every appended integer `s>=120`. The global reserve
+bound is `52,407` for this row, and the earlier discrepancy bound was
+`52,434`. This is one VERIFIED-EXACT addressed control, not a uniform
+replacement for `(23)` or `(32)`.
 
 ## 5. Audit and scope
 

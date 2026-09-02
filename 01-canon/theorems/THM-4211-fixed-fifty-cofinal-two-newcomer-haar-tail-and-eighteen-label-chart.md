@@ -22,6 +22,8 @@ related:
   - THM-4203-fixed-pool-seventeen-body-depth-eight-haar-completion
   - THM-4207-two-newcomer-sharp-depth-transition-base-surplus-composition-and-variable-pool-chart-number
   - THM-4214-two-newcomer-pascal-complete-eleven-body-haar-charts
+  - THM-4326-lrc14-rank-two-wall-graph-complete-typed-universe-closure
+  - THM-4329-lrc14-complete-thirty-label-fixed-outsider-and-thirty-two-label-pascal-chart
 cofinal_primary_script: 04-computation/lrc14_fixed50_pair_and_cofinal_chart_primary_thm4211.cpp
 cofinal_primary_output: 05-knowledge/results/lrc14_fixed50_depth9_cofinal_chart_primary_thm4211.out
 depth_eight_output: 05-knowledge/results/lrc14_fixed50_depth8_reserve_obstruction_thm4211.out
@@ -572,3 +574,9 @@ It does **not** prove that `5682` is a minimal literal threshold, safety for
 every second newcomer on the full pool, an arbitrary two-newcomer theorem,
 entry of an arbitrary LRC(14) instance into these families, arbitrary
 thirteen-speed safety, or LRC(14).
+
+**Forward consolidation (2026-09-01).** THM-4326 later proves the arbitrary
+two-outsider theorem over this full fixed pool, and THM-4329 completes every
+eleven-face of the resulting thirty-two-label Pascal chart. Those results
+supersede the fixed-chart question left open here, but still do not supply
+arbitrary-row entry or LRC(14).

@@ -191,10 +191,12 @@ argument to every `h in C` to prove `(6)`. **QED.**
 - THM-4326 uses retained Haar mass, not safe-set containment, so it is not
   contradicted. Literal implication from an unscaled pool subset cannot be
   its arbitrary-row entry map.
-- THM-4330 is still a reserved namespace. This theorem is the self-contained
-  unscaled literal base lemma; it neither proves nor depends on the proposed
-  affine two-adic, singleton-root, or projective entry statements there.
-  Any later promotion of THM-4330 must coordinate the overlap explicitly.
+- THM-4330 is now proved and uses a different operation: a positive-rational
+  common refactorization of the whole eleven-body, followed by Haar-measure
+  invariance and the at-most-two-outsider pool chart. The present theorem
+  forbids only unscaled pointwise containment `G_P subset G_h` for an outside
+  singleton. Thus THM-4330's projective entry sieve and this literal
+  implication no-go are compatible and neither subsumes the other.
 
 ## 5. Reproduction
 

@@ -77,13 +77,12 @@
     three-event lift still has empty inherited word at four.  THM-2701/2710
     make the unshifted/half literal languages nilpotent by six; THM-2707's SCC
     is support, not semantic current.  The `BABA` debt `A->2B` is erased by
-    Boolean/mod-two views.  Change phase, guard, slope, word, or edge—not only
-    the carry alphabet.  No row is excluded.
+    Boolean/mod-two views. Change phase, guard, slope, word, edge, or carry alphabet. No row is excluded.
 27f. **A disconnected label nerve is not physical Cech topology.** THM-2672 has twelve-fold components on all `534` maximal fixed configurations; THM-2687 restores a `12/13` cap after edge switching. Carry-forgetting still turns thirteen disjoint `Delta^11`s into a false `boundary Delta^12`; do not infer endpoint emptiness or export the cap.
-27g. **Copies are not common atoms.** THM-2806 has bare-only `D3`/empty `M`; THM-2818's positive copies fail native/source/endpoint sidecars. Neither pays THM-2772.
-27h. **A generator-valued endpoint germ is not a physical allocation action.** THM-2825/2859 lack the source carrier and `C13` action needed to turn their missing-corner or decorated-arrow data into a row exclusion; neither implies LRC(14).
+27g. **Copies are not common atoms.** THM-2806 has bare-only `D3`/empty `M`; THM-2818's positive copies fail native/source/endpoint sidecars. Neither pays THM-2772. 27h. **A generator-valued endpoint germ is not a physical allocation action.** THM-2825/2859 lack the source carrier and `C13` action needed to turn their missing-corner or decorated-arrow data into a row exclusion; neither implies LRC(14).
 27i. **Successor quotients lose coordinates.** THM-3731 lacks owners; THM-3718 lacks arrival. 27j. **Carrier compression is family-relative.** THM-4313/4314/4318 are pool-relative; THM-4320--4324 bypass layers.
-27k. **Rank-two wall closure is not entry.** THM-4326's `L2` drops rank `>=3`; THM-4150 adds two odd tails, not arbitrary parity. 27l. **Re-referencing changes the runner.** THM-4330 closes root `1+13`, but a selected degree-two anchor in `12+2` proves only that anchor; fixed-pool labels are not projective.
+27k. **Rank two is not entry.** THM-4326 drops rank `>=3`. 27l. **Do not re-reference.** THM-4330's anchor proves only itself. 27m. **Pascal closure is chart-relative.** THM-4329 gives no row map.
+27n. **Endpoint escape is sufficient.** THM-4331's additive certificates need strictness; its one-endpoint certificate permits equality. 27o. **Literal differs from projective.** THM-4332 is pointwise; THM-4330 rescales. 27p. **Rank three is residual-only.** THM-4333 proves `>2/27` on `181,194` pairs; higher rank, entry, and LRC(14) are open.
 ## NC2 / GMC
 
 28. **Scalar moments do not linearly separate return atoms.** MISTAKE-211/THM-2631;

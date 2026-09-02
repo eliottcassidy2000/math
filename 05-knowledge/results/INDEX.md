@@ -1,5 +1,51 @@
 # Script Results Index
 
+- `lrc14_rank3_endpoint_appender_control_thm4331.out` and its independent
+  audit -> exact endpoint-address improvement for a THM-4333 hostile-derived
+  physical row
+  ([THM-4331](../../01-canon/theorems/THM-4331-lrc14-safe-component-endpoint-denominator-odd-wall-escape.md)):
+  **PROVED ELEMENTARY + VERIFIED-EXACT + INDEPENDENTLY AUDITED; LRC(14)
+  OPEN.** Global-wall and successive safe-band intersection paths agree on
+  `362` components, mass `64917367/577007200`, component
+  `[227/476,937/1960]`, and strict appender cutoff `120`, versus global
+  reserve `52,407` and the prior coarse bound `52,434`.
+
+- `lrc14_rank3_surplus_third_tail_thm4333/*` -> exact rank-three
+  failure-hypergraph surplus, cofinal third-core-outsider cutoff, and
+  independent `(50,70)` hostile replay
+  ([THM-4333](../../01-canon/theorems/THM-4333-lrc14-rank-three-surplus-and-cofinal-third-tail-completion.md)):
+  **PROVED RELATIVE TO THM-4231/4326/4150/4170/4331 + FINITE-EXACT + O2/O3
+  INVARIANT + INDEPENDENT HOSTILE AUDIT; LRC(14) OPEN.** All `181,194`
+  residual pairs have retained `L_3/D>2/27`; the uniform sufficient third
+  outsider cutoff is `3,370,132,808`. Packet `SHA256SUMS` SHA-256:
+  `796c8fcd9a02875eb5dadfd206c599ea4265f651ac5da63eb9ed83296508f67e`.
+
+- `lrc14_fixed_pool_implication_rigidity_thm4332.out` and its independent
+  audit -> exact fixed-pool singleton-implication boundary
+  ([THM-4332](../../01-canon/theorems/THM-4332-lrc14-fixed-pool-single-constraint-implication-rigidity.md)):
+  **PROVED FINITE-EXACT + INDEPENDENT EXACT AUDIT; LRC(14) OPEN.** The two
+  arrangements exhaust `h=1,...,591` and return exactly the thirty pool
+  labels; the analytic component-length cutoff handles every `h>=592`.
+  Thus `G_P subset G_h` iff `h in P`, excluding only literal unscaled
+  implication entry.
+
+- `lrc14_entry_parity_affine_classification_probe.out` -> minimum-two-adic
+  root types, anchored `2+12` seam, and projective fixed-pool entry checks
+  ([THM-4330](../../01-canon/theorems/THM-4330-lrc14-affine-two-adic-root-types-and-anchored-pool-entry-sieve.md)):
+  **PROVED RELATIVE + VERIFIED-EXACT; LRC(14) OPEN.** All `935,790`
+  assertions pass. The intrinsic cut is `K_(m,14-m)`, root `1+13` closes,
+  and lawful positive-rational body refactorization closes at most two pool
+  outsiders without re-referencing.
+
+- `lrc14_rank2_wall_graph_complete_pair_closure_thm4326/*` -> complete
+  fixed-pool arbitrary two-outsider rank-two wall audit
+  ([THM-4326](../../01-canon/theorems/THM-4326-lrc14-rank-two-wall-graph-complete-typed-universe-closure.md)):
+  **PROVED RELATIVE TO THM-4231/4150 + FINITE-EXACT + CLEAN-ROOM
+  INDEPENDENT AUDIT; LRC(14) OPEN.** The residual `181,194` pairs split into
+  `181,087` degree certificates and `107` exact optimizations. Packet
+  `SHA256SUMS` SHA-256:
+  `b5d04c30a1169e904f9a66b4470cfd39dd13efd3a9ab9ba43eb482926dbae9d8`.
+
 - `jc2_weighted_face_source_normal_visibility_thm4298.out` and its
   independent audit -> lossless integral coefficient transform from a
   residual weight face to its consecutive source-normal diagonal

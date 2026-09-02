@@ -3,7 +3,7 @@ id: THM-4330
 title: "LRC(14) affine two-adic root types and anchored fixed-pool entry sieve"
 status: >
   PROVED RELATIVE TO CITED LRC THROUGH THIRTEEN TOTAL RUNNERS,
-  THM-2060/4150/4156/4191/4326 + VERIFIED-EXACT.  The graph of pairwise
+  THM-2060/4150/4156/4191/4326/1042/4331/4332 + VERIFIED-EXACT.  The graph of pairwise
   differences of minimum two-adic valuation is the complete bipartite graph
   between the two primitive parity classes.  Its degree at a prescribed
   runner is exactly that runner's number of odd primitive relatives.  The
@@ -15,8 +15,10 @@ status: >
   projective refactorization into at most two labels outside the fixed pool
   closes the seam; hence a counterexample in this branch has at least three
   outsiders after every such refactorization.  The actual primitive tail
-  ratio gives the sharper sufficient test mu(G_H)>=mu(C_(p,q)).  LRC(14)
-  and arbitrary-row entry remain open.
+  ratio gives the sharper sufficient test mu(G_H)>=mu(C_(p,q)). The
+  displayed `H={1,...,11}`, tails `(1,9)` row fails all displayed projective,
+  mass, component, and literal-pool gates but is safe with clearance `1/12`, so
+  the gate union is not complete. LRC(14) and arbitrary-row entry remain open.
 source: root + parity_entry + entry_corpus_audit / LRC14 continuation session, 2026-09-01
 depends_on:
   - LRCUpTo13
@@ -26,11 +28,16 @@ depends_on:
   - THM-4156-divisor-complete-anchor-pool-haar-odd-tail-transfer
   - THM-4191-complete-full-pool-newcomer-haar-transfer
   - THM-4326-lrc14-rank-two-wall-graph-complete-typed-universe-closure
+  - THM-1042-component-length-obstruction-to-additive-certificates
+  - THM-4331-lrc14-safe-component-endpoint-denominator-odd-wall-escape
+  - THM-4332-lrc14-fixed-pool-single-constraint-implication-rigidity
 related:
   - THM-639-hamiltonian-path-frame-for-runner-families
   - THM-2061-lrc14-dyadic-two-tail-folded-seam
   - THM-2888-eight-body-first-apex-global-pair-cap-atlas
   - THM-4203-fixed-pool-seventeen-body-depth-eight-haar-completion
+  - THM-4329-lrc14-complete-thirty-label-fixed-outsider-and-thirty-two-label-pascal-chart
+  - THM-4333-lrc14-rank-three-surplus-and-cofinal-third-tail-completion
 script: 04-computation/lrc14_entry_parity_affine_classification_probe.py
 output: 05-knowledge/results/lrc14_entry_parity_affine_classification_probe.out
 script_sha256: 3e791e1a1a92028d8edd5bb70e90b3af248d97dab2a78991ff02dc7f4d4cdbfe
@@ -47,7 +54,7 @@ audit: >
 # THM-4330 -- affine two-adic root types and anchored pool entry
 
 **PROVED RELATIVE TO CITED LRC THROUGH THIRTEEN TOTAL RUNNERS,
-THM-2060/4150/4156/4191/4326 + VERIFIED-EXACT.  LRC(14) REMAINS OPEN.**
+THM-2060/4150/4156/4191/4326/1042/4331/4332 + VERIFIED-EXACT.  LRC(14) REMAINS OPEN.**
 
 ## 1. Statement and inheritance pass
 
@@ -357,6 +364,45 @@ where `B_2(u)=u^2-u+1/6` on `[0,1)`.  Its maximum is `4/63`, uniquely at
 `(p,q)=(1,9)`; it is zero at `(1,3)` and `(1,5)`.  Thus `(24)` is strictly
 stronger than the uniform THM-4150 test on every submaximal ratio.
 
+### A combined-gate survivor
+
+The present sufficient gates are not complete, even in a highly structured
+degree-two row. Take
+
+```text
+V_0={0,2,4,...,22} union {1,9}                         (28)
+```
+
+with prescribed anchor `0`. Its body is `H_0={1,...,11}` and its odd-tail
+ratio is `(1,9)`. Section 4's exact scan shows that every lawful projective
+image of `H_0` has at most six pool labels, below the required nine. Also
+
+```text
+mu(G_(H_0))=10931/194040<4/63=mu(C_(1,9)),             (29)
+```
+
+so `(24)` fails. THM-1042 gives maximum positive component width `1/77`.
+Every endpoint denominator is divisible by `14`, hence for `b=9`
+
+```text
+bW<=9/77<3/14<=2/7-1/min(Q_L,Q_R),                    (30)
+bW<=9/77<1/7<=2/7-1/Q_L-1/Q_R.
+```
+
+so no THM-4331 component passes either. THM-4332 separately prevents an
+unscaled pool subset from pointwise implying the outside labels needed by
+this body.
+
+Nevertheless the row is strongly safe: at `x=5/24`, direct reduction gives
+
+```text
+min_(v in V_0\{0})||vx||=1/12>1/14.                   (31)
+```
+
+Thus failure of the combined projective, mass, component, and literal-pool
+certificates is not danger. A bounded residual-clock sidecar is genuinely
+missing from this gate atlas.
+
 ## 6. Connection contract and scope firewall
 
 ```text
@@ -385,6 +431,12 @@ Scope firewalls:
 4. The scalar condition `(24)` is sufficient, not necessary.  When it fails,
    THM-2061's component locations and dyadic owner words remain load-bearing.
 5. No arbitrary-row entry, owner/arrival transfer, or proof of LRC(14) follows.
+
+THM-4332 supplies the exact literal boundary at scale `lambda=1`:
+`G_P subset G_h` holds only for `h in P`. This does not contradict the
+whole-body positive-rational Haar refactorization in Section 3. THM-4333's
+rank-three surplus is likewise a fixed residual-pair mass theorem, not an
+affine entry map.
 
 The successful research move is to pay the affine rank first and then audit
 the physical action: the quotient graph exposes the exact parity type, while

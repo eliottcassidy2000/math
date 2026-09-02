@@ -13,7 +13,7 @@ proof status.
 
 - `1/14` — the floor; attained by {1..13} (AP) and {1..11,13,24} (Goddyn–Wong; =GW; THM-1115/1120; F₂(13) acceleration). Tight locus = exactly these two up to dilation (THM-1120).
 - `3/41` — first value above the floor known; {1..11,13,36}; the N=13 mediant 3/(3N+2). First: opus-S118/HYP-4506 (2026-07-06); re-derived opus-S395/THM-1230 (07-19). Gap (1/14, 3/41) empty in all searches (THM-1235/1240, ~12,400 families; NOT a theorem).
-- `2/27` — slack-1 D=2 rung; ATTAINED by {1..12,26} = K₂(13) (kind-pasteur-S128c86, MISTAKE-188 correction to THM-1235). Also the Farey neighbour of 1/14.
+- `2/27` — slack-1 D=2 rung, attained by {1..12,26} (S128c86/MISTAKE-188); also THM-4333's strict residual rank-three target, not a full-mass minimum.
 - `3/40` — k=3 Kravitz rung s/(13s+1); attained by {1..12,39} = K₃(13) (S128c86 table).
 - `4/53` — attained by {1..11,13,48} = F₄(13) (opus-S395 ladder m/(12m+5)) and K₄(13)={1..12,52} (S128c86).
 - `1/13` — {1..12,14}, {1..12,15} etc. (slack-1 D=1); also the 12-speed floor (below).
@@ -41,6 +41,13 @@ proof status.
 
 ## Thresholds, measures, bounds (LRC(14) machinery)
 
+- `4/63` — sharp two-odd-tail comb maximum at primitive `(1,9)` and fixed-pool Haar target; THM-4150/4326/4329/4330/4333.
+- `1/189` — strict THM-4333 two-sheet reserve boundary `1/2(2/27-4/63)`; equality is not proved.
+- `27(C-1)` — THM-4331 sufficient appender bound for `mu(G_A)>1/189`, `C=sum(A)`; used by THM-4333.
+- `120` — strict endpoint certificate for THM-4333 control `S={1,9,20,100,140,160,170,190,240,286,290,336}`, versus global/prior bounds `52,407/52,434`; not minimal.
+- `7/81` — OPEN rank-four/two-cofinal target `(7/6)^2(4/63)` generated from THM-4333.
+- `1895053421/13927125214482480` — THM-4333 uniform certified surplus above `2/27`, from `(509,640)`; not a full-mass minimum.
+- `3,370,132,808` — THM-4333 uniform sufficient third-core-outsider cutoff on `E_rem`; not minimal.
 - `2/21` — the continuum four-comb BAD-measure ceiling, equality iff 4-term AP (THM-1203, codex-S77, Lean-certified). Re-proved redundantly by two agents (MISTAKE-183).
 - `1/343` — |B| the bad-set/slack-simplex volume (codex THM-1183; grid artifact 0.003367 corrected in MISTAKE-176).
 - `477/1078` — μ_{1/7}({1..13}) exact (opus-S130 three-gap; = rhoGlobFloorRat(13)).

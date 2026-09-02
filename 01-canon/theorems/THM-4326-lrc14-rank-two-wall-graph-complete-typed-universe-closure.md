@@ -19,6 +19,10 @@ related:
   - THM-4286-signature-response-nonfactorization-and-two-deck-surgeries
   - THM-4287-repaired-carrier-endpoint-637-descent
   - THM-4324-lrc14-endpoint-586-direct-literal-closure
+  - THM-4329-lrc14-complete-thirty-label-fixed-outsider-and-thirty-two-label-pascal-chart
+  - THM-4330-lrc14-affine-two-adic-root-types-and-anchored-pool-entry-sieve
+  - THM-4332-lrc14-fixed-pool-single-constraint-implication-rigidity
+  - THM-4333-lrc14-rank-three-surplus-and-cofinal-third-tail-completion
 artifact_root: 05-knowledge/results/lrc14_rank2_wall_graph_complete_pair_closure_thm4326
 artifact_manifest: 05-knowledge/results/lrc14_rank2_wall_graph_complete_pair_closure_thm4326/SHA256SUMS
 artifact_manifest_sha256: b5d04c30a1169e904f9a66b4470cfd39dd13efd3a9ab9ba43eb482926dbae9d8
@@ -329,6 +333,12 @@ minimum full safe mass, and does not turn a carrier failure into physical
 danger. It supplies neither a parity normalization nor a map from an
 arbitrary normalized thirteen-speed row to the fixed `9+2` chart. It proves
 no owner, arrival, or termination theorem. LRC(14) remains open.
+
+**Forward uses (2026-09-01).** THM-4329 closes every eleven-face of the
+thirty-two-label chart, THM-4330 uses this theorem inside its projective
+anchored entry sieve, and THM-4333 restores failure rank three to obtain a
+strict residual `2/27` surplus. None turns the fixed chart into arbitrary
+entry.
 
 ## 7. Exact replay
 
