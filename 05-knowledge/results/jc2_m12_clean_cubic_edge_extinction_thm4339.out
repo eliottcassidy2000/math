@@ -1,0 +1,11 @@
+THM4339_CLEAN_CUBIC_EDGE_PRIMARY=PASS
+gate=Z=beta_11=zeta_3=0;U*W*K*(U+W)!=0
+lower_atlas=8192/8192:M,T
+pick=M(36,10,14);C(12,8,3);T(6,6,1);global(42,14,15)
+orders=M:9;T:16;double_conic:28;triple_elliptic:26;triple_B1_rational:46
+double=B(a)!=0:rational_bridge;B(a)=0:persistent_node
+triple=B(a)!=0:elliptic_tail;B(a)=0:rational_delta_constant
+generic_genera=squarefree_or_smoothed:15;persistent_collision:14
+taxes=infinity_exit+zero_exit+localized_collision
+edges=X-1;1-KX^2;A(X);(X-1)(UX+W);U-X^6;internal:1-WX
+checks=45

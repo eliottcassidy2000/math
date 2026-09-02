@@ -1,0 +1,31 @@
+THM4339_CLEAN_CUBIC_EDGE_INDEPENDENT_AUDIT=PASS
+A=K+Theta*P+xi*P^2+W*P^3
+Disc=-27*K**2*W**2 + 18*K*Theta*W*xi - 4*K*xi**3 - 4*Theta**3*W + Theta**2*xi**2
+Delta0=xi^2-3*W*Theta
+4*Delta0^3-Delta1^2=27*W^2*Disc
+double_root=(9*W*K-xi*Theta)/(2*Delta0)
+double_Hasse_numerator=81*K**2*W**2*alpha - 54*K*Theta*W**2*eta - 18*K*Theta*W*alpha*xi + 18*K*W*eta*xi**2 + 36*Phi*Theta**2*W**2 - 24*Phi*Theta*W*xi**2 + 4*Phi*xi**4 + 6*Theta**2*W*eta*xi + Theta**2*alpha*xi**2 - 2*Theta*eta*xi**3
+triple_gates=Delta0=0;2*xi^3-9*W*xi*Theta+27*W^2*K=0
+triple_Hasse_numerator=9*Phi*W**2 - 3*W*eta*xi + alpha*xi**2
+critical_value=[-B(a)^2/4]*delta^2+O(delta^3);delta=sigma^6
+induced_discriminant_Hasse=-W**3*a**4*(a - c)**3*(Phi + a**2*alpha + a*eta)**2
+double_face=-Phi*Y*a**3 - W*X**2*a**3 + W*X**2*a**2*c + Y**2 - Y*a**5*alpha - Y*a**4*eta
+triple_face=-Phi*Y*a**3 - W*X**3*a**2 + Y**2 - Y*a**5*alpha - Y*a**4*eta
+triple_B_simple_zero_face=-W*X**3*a**2 - X*Y*a**3*j1 + Y**2
+triple_B_simple_zero_normalization=Z^2=a^2*W*X+a^6*j1^2/4;rational
+good_form_orders=double:28,triple:26,triple_B_simple_zero:46
+B(a)=0=>exact_horizontal_critical_section;critical_value_identically_zero
+triple_B_double_zero=>normal term always later by 6+r/2;horizontal cusp
+Tface_ledgers={0: (6, 6, 1), 1: (4, 4, 1), 2: (2, 4, 0)}
+global_ledgers={0: (42, 14, 15), 1: (40, 12, 15), 2: (38, 12, 14), 3: (36, 10, 14)}
+edges_KWU_Lambda_open=(edge_x - 1, -K*edge_x**2 + 1, K + Theta*edge_x + W*edge_x**3 + edge_x**2*xi, (edge_x - 1)*(U*edge_x + W), U - edge_x**6, -W*edge_x + 1)
+face_orders_L12=M:9,T:16
+global_relative_gate=U*K*W*(U+W)!=0;all_cubic_root_strata_PASS
+three_tax=3-N_tor=(3-deg(A))+ord_0(A)+deg(gcd(Q,Qprime))
+simple_interior=(0, P**3 + P**2 + P + 2, -83, -83)
+double_interior=(0, (P - 1)**2*(P + 1), 0, 0)
+triple_interior=(0, (P - 1)**3, 0, 0)
+one_root_exit=(1, P**2 + P + 1, -3, -3)
+exit_plus_interior_double=(1, (P - 1)**2, 0, 0)
+double_endpoint_only=(2, P + 1, 1, 0)
+all_three_exit=(3, 1, 1, 0)

@@ -1,0 +1,5 @@
+THM4339_HOSTILE_REFEREE_LOCAL_PROBE=PASS
+double_tangent=-B1*b*d*x - C0*b**2*d**2 - W*a**3*x**2 + W*a**2*c*x**2 - b**2*d**2/2 + b**2
+double_tangent_discriminant=-x**2*(-B1**2*d**2 + 4*C0*W*a**3*d**2 - 4*C0*W*a**2*c*d**2 + 2*W*a**3*d**2 - 4*W*a**3 - 2*W*a**2*c*d**2 + 4*W*a**2*c)
+general_triple_simple_zero_face=-B1*X*Y - W*X**3*a**2 + Y**2
+orders={'double_conic': 28, 'triple_elliptic': 26, 'triple_simple_zero_cubic': 46}

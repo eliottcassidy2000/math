@@ -1,5 +1,21 @@
 # Script Results Index
 
+- `jc2_m12_clean_cubic_edge_extinction_thm4339.out`, its import-free
+  independent audit, and its hostile-referee probe -> exact clean
+  labelled-cubic residual extinction
+  ([THM-4339](../../01-canon/theorems/THM-4339-clean-interior-cubic-edge-planar-jacobian-extinction.md)):
+  **PROVED RELATIVE TO THM-4220/4230/4327/4337 + VERIFIED-EXACT +
+  INDEPENDENTLY AUDITED; JC(2) OPEN.** On
+  `Z=beta_11=zeta_3=0,U*K*W*(U+W)!=0`, the cubic edge is exhausted by a
+  squarefree elliptic face, double-root rational bridge/horizontal node, or
+  triple-root elliptic-tail/horizontal-conductor alternative. The sole new
+  elliptic tail has good-form order `26`; horizontal delta-one conductors
+  simultaneously normalize to genus `14`. The referee corrected the
+  smoothed-double graph to `b1=12`. Script/output SHA-256 pairs are
+  `2adb27b9...e8f5b8` / `b951b059...09434f`,
+  `a152a359...af99c9` / `132060e7...6c121`, and
+  `7390db87...870553` / `f653ab5c...e2f0e`.
+
 - `lrc14_unit_component_address_escape_probe_20260902.out`, its independent
   audit, the `p5` owner-permutation probe, and the minority-renewal probe ->
   exact sheet-owner, addressed-tooth, and deterministic renewal controls

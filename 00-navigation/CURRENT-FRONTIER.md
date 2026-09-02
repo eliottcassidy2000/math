@@ -346,8 +346,9 @@ lift/phase clocks.
   [THM-4337](../01-canon/theorems/THM-4337-zeta-zero-exact-weight-twelve-endpoint-wall-extinction.md)
   closes `Z=zeta_3=0,U beta_11!=0` for all `W,K,Lambda`; its genus ledgers
   are `(3+3)+11=17` or `6+11=17`, and its `A_23` contact splits early.
-  Residual: `U=0` with `WZ=0` or a repeated cusp; `Z=0,U!=0` with
-  `beta_11=0` and `W*zeta_3=0`; and seam entry. THM-4328 is odd-face blind.
+  [THM-4339](../01-canon/theorems/THM-4339-clean-interior-cubic-edge-planar-jacobian-extinction.md)
+  closes `Z=beta_11=zeta_3=0,U*K*W*(U+W)!=0`; its elliptic-tail order is
+  `26`. Root exits, `U+W=0`, the `U=0` cusps, and seam entry remain.
   Exceptional quartic: THM-3703/3737 give grammar/image, THM-4034 the
   conductor, and THM-4039/4043/4046 reach `J_7`, obstruct `J_8`, and close
   critical `H`. [THM-4054](../01-canon/theorems/THM-4054-exceptional-affine-simple-zero-retained-packet.md)
