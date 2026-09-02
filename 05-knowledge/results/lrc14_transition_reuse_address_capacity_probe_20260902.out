@@ -1,0 +1,28 @@
+parametrization_orbit_reflection_checks 7220
+h10_control
+ uses ((6, 13, 4, 3, 1, 1, 2, 0), (13, 3, 2, 13, 9, 1, 2, 1))
+ capacity (2, 2, 2)
+h420_P1287
+ transition_components (147, 310, 529, 692)
+ uses ((147, 1365, 239, 525, 92, 1, 420, 0), (147, 525, 92, 11, 2, 38, 4, 0), (310, 11, 4, 1575, 583, 113, 4, 0), (529, 1575, 992, 11, 7, 113, 4, 1), (692, 11, 9, 525, 433, 38, 4, 1), (692, 525, 433, 1365, 1126, 1, 420, 1))
+ used_pair_multiplicities (((11, 525), ((147, 525, 11, 4), (692, 11, 525, 4))), ((11, 1575), ((310, 11, 1575, 4), (529, 1575, 11, 4))), ((525, 1365), ((147, 1365, 525, 420), (692, 525, 1365, 420))))
+ used_pair_gcd_d_filtered_unfiltered_component_actual (((11, 525), 1, 2, 4, 4, 4, 2), ((11, 1575), 1, 2, 2, 4, 2, 2), ((525, 1365), 105, 1, 210, 210, 210, 2))
+ capacity_filtered_unfiltered_pair_component (21176, 28344, 15376)
+h420_P9009
+ transition_components (147, 310, 529, 692)
+ uses ((147, 1365, 239, 525, 92, 1, 420, 0), (147, 525, 92, 11, 2, 38, 4, 0), (310, 11, 4, 1575, 583, 113, 4, 0), (529, 1575, 992, 11, 7, 113, 4, 1), (692, 11, 9, 525, 433, 38, 4, 1), (692, 525, 433, 1365, 1126, 1, 420, 1))
+ used_pair_multiplicities (((11, 525), ((147, 525, 11, 4), (692, 11, 525, 4))), ((11, 1575), ((310, 11, 1575, 4), (529, 1575, 11, 4))), ((525, 1365), ((147, 1365, 525, 420), (692, 525, 1365, 420))))
+ used_pair_gcd_d_filtered_unfiltered_component_actual (((11, 525), 1, 2, 4, 4, 4, 2), ((11, 1575), 1, 2, 2, 4, 2, 2), ((525, 1365), 105, 1, 210, 210, 210, 2))
+ capacity_filtered_unfiltered_pair_component (27404, 35628, 17430)
+gcd_crt_family
+ a 1 gcd 1 lcm 39 phase_rows ((8, 0, (), ()), (10, 2, (6,), (13,))) bare_actual 2 primitive_actual 2 primitive_safe_band 2
+ a 3 gcd 3 lcm 117 phase_rows ((8, 0, (), ()), (10, 6, (6, 26, 46), (13, 33, 53))) bare_actual 6 primitive_actual 6 primitive_safe_band 6
+ a 9 gcd 9 lcm 351 phase_rows ((8, 0, (), ()), (10, 18, (6, 26, 46, 66), (13, 33, 53, 73))) bare_actual 18 primitive_actual 16 primitive_safe_band 16
+ a 27 gcd 27 lcm 1053 phase_rows ((8, 0, (), ()), (10, 54, (6, 26, 46, 66), (13, 33, 53, 73))) bare_actual 54 primitive_actual 46 primitive_safe_band 46
+coprime_actual_family
+ N 1 u_v_h (15, 17, 42) gcd_lcm (1, 255) candidate_events 4 actual_events 2 proved_subfamily_events 2 actual_k_head (5, 78)
+ N 2 u_v_h (29, 31, 84) gcd_lcm (1, 899) candidate_events 6 actual_events 6 proved_subfamily_events 4 actual_k_head (5, 11, 75, 92, 156, 162)
+ N 5 u_v_h (71, 73, 210) gcd_lcm (1, 5183) candidate_events 14 actual_events 12 proved_subfamily_events 10 actual_k_head (17, 23, 29, 183, 189, 195, 224, 230)
+ N 10 u_v_h (141, 143, 420) gcd_lcm (1, 20163) candidate_events 26 actual_events 24 proved_subfamily_events 20 actual_k_head (29, 35, 41, 47, 53, 59, 363, 369)
+ N 25 u_v_h (351, 353, 1050) gcd_lcm (1, 123903) candidate_events 62 actual_events 62 proved_subfamily_events 50 actual_k_head (59, 65, 71, 77, 83, 89, 95, 101)
+PASS
