@@ -53,8 +53,8 @@ for `d>=7`. THM-3742 is a wrong-torsor Pell `C14`; THM-3744's safe control is
   cores and physical entry remain open.
 - **Quantifier/type controls (PROVED):** THM-4095--4116 preserve field, gap,
   ray, parity-sheet and component-count data; none supplies safety or arrival.
-- **Fixed pool/entry:** THM-4326/4329 close the chart; THM-4330 closes `1+13` and forces `420|h` on minority survivors. THM-4335 makes equality capacity a located-owner/component problem. Branch and entry open.
-- **Residual ranks:** THM-4333 proves all-remainder `L_3/D>2/27`. THM-4336 proves `L_4/D>7/81` and one-appender cutoffs `6021/5295` on two pairs; `181,192` rank-four pairs remain.
+- **Fixed pool/entry:** THM-4326/4329 close the chart; THM-4330 closes `1+13` and forces `420|h`; THM-4335 locates owners. S611 proves addressed reuse one but speed-pair reuse unbounded. The `2+12` branch and entry remain open.
+- **Residual ranks:** THM-4333 proves all-remainder `L_3/D>2/27`; THM-4338 proves all-remainder `L_4/D>7/81` by a cubic incidence majorant and lowers the structured uniform appender cutoff to `12,274`. Fixed-pool rank four is closed, not arbitrary entry.
 - **PROVED:** [THM-2928](../01-canon/theorems/THM-2928-critical-seven-comb-grid-tensorization-and-drift-tariff.md)/2941: literal zero/one/two/three-drift sectors are empty; `k=2,3` are finite.
 - **Orthogonal routes.** THM-1017 is HYP-6820; THM-2047/2050 keep phase/exit; THM-731/2048 prune; THM-1290 ends at `55`; HYP-8900 nonuniform.
 - **PROVED micro-staircase:** THM-3316/3317 close primes/sparse fragility;
