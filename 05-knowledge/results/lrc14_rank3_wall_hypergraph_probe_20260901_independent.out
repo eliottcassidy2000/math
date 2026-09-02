@@ -1,0 +1,21 @@
+LRC14_RANK3_WALL_HYPERGRAPH_INDEPENDENT_20260901
+METHOD exact rational walls; floor(14*v*t) classification; OR-Tools CP-SAT optimization and exhaustive feasibility enumeration
+ENV python=3.10.0 ortools=9.15.6755
+SCOPE pool=30 body=9 fixed_outsiders=50,70 endpoint=769 typed_rows=737
+CONTROLS one_speed_mass=6/7 small_flat_vs_cpsat=PASS
+GEOMETRY cells=3675468 full_masks=1588972 rank3_masks=318178 sha256=f038de8682d4df2115bb441ebdbb03ab22103008a5f3eb303fa349ae00209931
+SCAN above=729 equal=0 below=8 row_sha256=a0e2baada3b840a337cca36ce0671a5a9c90a16d0cbe1019b35cb533357b4ef7
+SCAN_MIN third=110 ratio=13507940069/250565376600 mass=4916890185116 grid=91205797082400
+BELOW third=45 bodies=1 min_L3=5695715557838 min_L3_body=011cd402 min_full=8532036046280 min_full_body=011cd402 L3_on_min_full=5695715557838 strict_margin=172695082586040 enumeration_branches=1768501
+BELOW third=55 bodies=12 min_L3=5675739761552 min_L3_body=01157402 min_full=8727917748942 min_full_body=01147502 L3_on_min_full=5775188679222 strict_margin=185035629853746 enumeration_branches=2511180
+BELOW third=65 bodies=422 min_L3=5283618277274 min_L3_body=0118d602 min_full=8008906282968 min_full_body=011c5502 L3_on_min_full=5504897894044 strict_margin=139737907497384 enumeration_branches=3791586
+BELOW third=90 bodies=1729 min_L3=4988110294158 min_L3_body=011cd402 min_full=7833187320400 min_full_body=0010f446 L3_on_min_full=5629040135468 strict_margin=128667612855600 enumeration_branches=6526983
+BELOW third=110 bodies=32756 min_L3=4916890185116 min_L3_body=0039e402 min_full=7102274663484 min_full_body=00384583 L3_on_min_full=5211836270586 strict_margin=82620115469892 enumeration_branches=11195112
+BELOW third=130 bodies=5549 min_L3=4959498584862 min_L3_body=01195403 min_full=7716576995232 min_full_body=00386503 L3_on_min_full=5612712929062 strict_margin=121321162370016 enumeration_branches=7834024
+BELOW third=220 bodies=36 min_L3=5565919723280 min_L3_body=1038e402 min_full=8443011348084 min_full_body=10386502 L3_on_min_full=5640519131270 strict_margin=167086526599692 enumeration_branches=3552642
+BELOW third=260 bodies=6 min_L3=5690436205252 min_L3_body=01117403 min_full=9417264298140 min_full_body=01116503 L3_on_min_full=5738779053692 strict_margin=228464462453220 enumeration_branches=2558465
+CANDIDATES total=40511 all_full_strict=PASS sha256=19a9aebd4e3433ff4c57ad3fdf646757a78bd4d855baf132d169ebdb1e85608f
+GLOBAL_FULL_MIN third=110 body=00384583 ratio=1021183/13113800 mass=7102274663484 L3=5211836270586 grid=91205797082400
+CONCLUSION FINITE_EXACT all 737 typed thirds and all nine-subset bodies have full safe mass strictly greater than 4/63
+LOSS fixed pair and pool only; no arbitrary third outsider; no physical-entry or LRC(14) implication
+RUNTIME_SECONDS 2631.262
