@@ -1,5 +1,19 @@
 # Script Results Index
 
+- `odd_self_similar_cusp_reciprocal_duality_thm4341.out` and its independent
+  symbolic audit -> odd-cusp tail reciprocity and exact natural indexing
+  ([THM-4341](../../01-canon/theorems/THM-4341-odd-self-similar-cusp-reciprocal-tail-duality.md)):
+  **PROVED FORMAL-LOCAL + VERIFIED-EXACT + INDEPENDENTLY AUDITED.** For
+  `m=2g+1`, split orders `r` and `m-r` reciprocate the Newton slope and swap
+  tail genus with persistent delta. Complementary residue-order
+  contributions have constant product; `B=g` is the sharp integral positive
+  buffer. Oriented types occupy doubled-triangular natural-number blocks;
+  reciprocal pairs occupy triangular blocks, with odd-square rank `h` and a
+  required orientation bit. This is not a global JC extension. Script/output
+  SHA-256 pairs: `3bb06e3c...6eb25b` / `d5cc1aba...f20afc`,
+  `9e1d9b62...84c2bc` / `d07e9b50...a1bc40`, and referee
+  `2975f895...d0515` / `c9c95a41...693fda`.
+
 - `jc2_m12_u0_repeated_cusp_extinction_thm4340.out` and its independent
   clean-room audit -> exact closure of the residual U-zero cusp walls
   ([THM-4340](../../01-canon/theorems/THM-4340-u-zero-repeated-cusp-planar-jacobian-extinction.md)):

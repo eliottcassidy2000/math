@@ -1,0 +1,6 @@
+THM4341 ODD CUSP INDEPENDENT SYMBOLIC AUDIT
+SYMBOLIC_TAILS=6480;g=1..80;squarefree=PASS;odd_degree=PASS
+INDEX_BIJECTIONS=oriented:6480;reciprocal_pairs:3240
+RECIPROCAL_CHECK=lambda_product=1;tail_genus_equals_complement_delta;order_product=PASS
+SCOPE_HOSTILES=even_m_two_infinities;c_zero_nonsquarefree;char3_inseparable
+RESULT=PASS

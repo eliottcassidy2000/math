@@ -1,0 +1,12 @@
+THM4341 ODD SELF-SIMILAR CUSP PRIMARY CERTIFICATE
+FINITE_REPLAY=g1..250;oriented_rows=62750;reciprocal_pairs=31375
+TAIL_NORMALIZATION=Y0^2=Z^epsilon*(Z^(m-r)-c);epsilon=r mod 2;c!=0
+GENUS_PARTITION=g_tail=g-floor(r/2)=floor((m-r)/2);delta_persist=floor(r/2)
+RECIPROCAL_INVOLUTION=r<->m-r;lambda<->1/lambda;tail_genus<->persistent_delta
+DIFFERENTIAL_EXCESS=chi*d*lambda;chi=B+1-m/2;product_under_reciprocity=(chi*d)^2
+SHARP_BUFFER=m=2g+1;integer_B>=g_positive;B=g-1_negative
+ORIENTED_INDEX=n=g(g-1)+r;blocks=2T_(g-1)+1..2T_g
+RECIPROCAL_QUOTIENT=N=T_(g-1)+h;h=(abs(2r-m)+1)/2;orientation=sign(2r-m)
+ODD_SQUARE_COMPRESSION=(2h-1)^2->h;orientation_bit_required
+HOSTILES=even_m_gives_even_branch_degree_two_infinities;slope_1/2_shared_by_(3,1)_and_(9,3)
+RESULT=PASS
