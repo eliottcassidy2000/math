@@ -21,9 +21,9 @@ Then read frontier, guardrails, theorem; logs are history.
 
 ## Seventeen high-signal facts
 
-1. **LRC(14) is first open.** [THM-4326](../01-canon/theorems/THM-4326-lrc14-rank-two-wall-graph-complete-typed-universe-closure.md)
-   closes one fixed pool's arbitrary two-outsider chart and THM-4150 odd-tail
-   families by rank-two wall mass; arbitrary-row entry is open.
+1. **LRC(14) is first open.** THM-4326 closes fixed-pool pairs;
+   [THM-4330](../01-canon/theorems/THM-4330-lrc14-affine-two-adic-root-types-and-anchored-pool-entry-sieve.md)
+   closes root `1+13` and makes `2+12` first unresolved. Entry remains open.
 2. **The `q <= 25` period claim is refuted.** THM-762/764 exhibit `26*{1,...,12} union {339}`, whose first good period is `27`.
 3. **Good-period existence is a maximum statement.** The tight resonant AP
    defeats average/count arguments; see MISTAKE-127/129/130.

@@ -51,16 +51,15 @@ for `d>=7`. THM-3742 is a wrong-torsor Pell `C14`; THM-3744's safe control is
   ratio-two depth-`<=6` and ratio-`>=12/5` suppliers, and proves direct AP8
   plus five and primitive non-AP plus six thirteen-speed families. Arbitrary
   cores and physical entry remain open.
-- **Quantifier/type controls (PROVED):** [THM-4095](../01-canon/theorems/THM-4095-exact-arithmetic-field-transport-gapped-pair-margins-and-order-tournament-blindness.md)
-  gives field transport and gap `(0,1/15)`; THM-4096 isolates one ray point.
-  THM-4105/4106 are reciprocal decoders; THM-4107/4108 are tournament/radical
-  firewalls. THM-4110 finds `64` AP13 sheets; THM-4116 gives
-  `2^(c(F)-1)`. Safety/arrival stay open.
-- **Fixed-pool pair closure:** THM-4309--4324 are carrier/endpoint sidecars.
+- **Quantifier/type controls (PROVED):** THM-4095--4116 preserve field, gap,
+  ray, parity-sheet and component-count data; none supplies safety or arrival.
+- **Fixed-pool and anchored dyadic entry (PROVED + FINITE-EXACT):**
   [THM-4326](../01-canon/theorems/THM-4326-lrc14-rank-two-wall-graph-complete-typed-universe-closure.md)
-  closes THM-4231's `181,194`-pair remainder by rank-two wall mass
-  (`181,087` degree-bound, `107` exact). With THM-4150 this proves the fixed
-  pool's arbitrary-pair odd-tail families, not arbitrary-row entry.
+  closes the fixed pool after arbitrary outsider pairs.
+  [THM-4330](../01-canon/theorems/THM-4330-lrc14-affine-two-adic-root-types-and-anchored-pool-entry-sieve.md)
+  identifies the minimum-valuation graph as `K_(m,14-m)`, closes `1+13` for
+  every anchor, and leaves `2+12` first. Its degree-two projective pool sieve
+  closes at most two outsiders. Re-referencing and arbitrary entry remain open.
 - **PROVED:** [THM-2928](../01-canon/theorems/THM-2928-critical-seven-comb-grid-tensorization-and-drift-tariff.md)/2941: literal zero/one/two/three-drift sectors are empty; `k=2,3` are finite.
 - **Orthogonal routes.** THM-1017 is HYP-6820; THM-2047/2050 keep phase/exit; THM-731/2048 prune; THM-1290 ends at `55`; HYP-8900 nonuniform.
 - **PROVED micro-staircase:** THM-3316/3317 close primes/sparse fragility;
