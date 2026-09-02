@@ -58,6 +58,7 @@ related:
   - THM-4203-fixed-pool-seventeen-body-depth-eight-haar-completion
   - THM-4329-lrc14-complete-thirty-label-fixed-outsider-and-thirty-two-label-pascal-chart
   - THM-4333-lrc14-rank-three-surplus-and-cofinal-third-tail-completion
+  - THM-4335-lrc14-owner-permutation-component-address-and-minority-renewal
 script: 04-computation/lrc14_entry_parity_affine_classification_probe.py
 output: 05-knowledge/results/lrc14_entry_parity_affine_classification_probe.out
 script_sha256: 2f026c4a09e3d44bf699f9cb92e4bcfd4658bb1ba82d6c6c4bff77bf3353e5f5

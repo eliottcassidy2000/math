@@ -1,6 +1,6 @@
 # Current Frontier
 
-**State — 2026-09-01.** Proof links; statuses: **PROVED**, **CITED**,
+**State — 2026-09-02.** Proof links; statuses: **PROVED**, **CITED**,
 **FINITE-EXACT**, **VERIFIED**, **CONDITIONAL**, **OPEN**, **RESERVED**,
 **REFUTED**, **SUPERSEDED**.
 
@@ -53,8 +53,8 @@ for `d>=7`. THM-3742 is a wrong-torsor Pell `C14`; THM-3744's safe control is
   cores and physical entry remain open.
 - **Quantifier/type controls (PROVED):** THM-4095--4116 preserve field, gap,
   ray, parity-sheet and component-count data; none supplies safety or arrival.
-- **Fixed pool/entry:** THM-4326/4329 close the chart. [THM-4330](../01-canon/theorems/THM-4330-lrc14-affine-two-adic-root-types-and-anchored-pool-entry-sieve.md) closes `1+13`; minority survivors need `420|h` and, at `r_5=5`, `max(T)<9max(C)`. Marginals lose owners. THM-4331/4332 give endpoint/literal boundaries. Entry open.
-- **Residual rank three (PROVED RELATIVE/FINITE-EXACT):** [THM-4333](../01-canon/theorems/THM-4333-lrc14-rank-three-surplus-and-cofinal-third-tail-completion.md) gives residual-pair `L_3/D>2/27` and reserve `>1/189`; others only inherit `4/63`.
+- **Fixed pool/entry:** THM-4326/4329 close the chart; THM-4330 closes `1+13` and forces `420|h` on minority survivors. THM-4335 makes equality capacity a located-owner/component problem. Branch and entry open.
+- **Residual ranks:** THM-4333 proves all-remainder `L_3/D>2/27`. THM-4336 proves `L_4/D>7/81` and one-appender cutoffs `6021/5295` on two pairs; `181,192` rank-four pairs remain.
 - **PROVED:** [THM-2928](../01-canon/theorems/THM-2928-critical-seven-comb-grid-tensorization-and-drift-tariff.md)/2941: literal zero/one/two/three-drift sectors are empty; `k=2,3` are finite.
 - **Orthogonal routes.** THM-1017 is HYP-6820; THM-2047/2050 keep phase/exit; THM-731/2048 prune; THM-1290 ends at `55`; HYP-8900 nonuniform.
 - **PROVED micro-staircase:** THM-3316/3317 close primes/sparse fragility;

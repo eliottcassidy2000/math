@@ -23,6 +23,7 @@ related:
   - THM-4329-lrc14-complete-thirty-label-fixed-outsider-and-thirty-two-label-pascal-chart
   - THM-4330-lrc14-affine-two-adic-root-types-and-anchored-pool-entry-sieve
   - THM-4332-lrc14-fixed-pool-single-constraint-implication-rigidity
+  - THM-4336-lrc14-two-pair-rank-four-surplus-and-cofinal-one-appender
 artifact_root: 05-knowledge/results/lrc14_rank3_surplus_third_tail_thm4333
 artifact_manifest: 05-knowledge/results/lrc14_rank3_surplus_third_tail_thm4333/SHA256SUMS
 artifact_manifest_sha256: 796c8fcd9a02875eb5dadfd206c599ea4265f651ac5da63eb9ed83296508f67e

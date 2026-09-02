@@ -21,6 +21,7 @@ related:
   - THM-4052-lrc14-affine-component-width-escape-cones
   - THM-4151-scale-sensitive-first-window-odd-tail-lrc14-transfer
   - THM-4333-lrc14-rank-three-surplus-and-cofinal-third-tail-completion
+  - THM-4335-lrc14-owner-permutation-component-address-and-minority-renewal
 endpoint_control_script: 04-computation/lrc14_rank3_endpoint_appender_control_thm4331.py
 endpoint_control_output: 05-knowledge/results/lrc14_rank3_endpoint_appender_control_thm4331.out
 endpoint_control_independent_script: 04-computation/lrc14_rank3_endpoint_appender_control_thm4331_independent_audit.py

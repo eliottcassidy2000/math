@@ -45,7 +45,9 @@ proof status.
 - `1/189` — strict THM-4333 two-sheet reserve boundary `1/2(2/27-4/63)`; equality is not proved.
 - `27(C-1)` — THM-4331 sufficient appender bound for `mu(G_A)>1/189`, `C=sum(A)`; used by THM-4333.
 - `120` — strict endpoint certificate for THM-4333 control `S={1,9,20,100,140,160,170,190,240,286,290,336}`, versus global/prior bounds `52,407/52,434`; not minimal.
-- `7/81` — OPEN rank-four/two-cofinal target `(7/6)^2(4/63)` generated from THM-4333.
+- `7/81` — rank-four target `(7/6)^2(4/63)` generated from THM-4333; THM-4336 proves a strict retained-mass excess for `(50,70)` and `(509,640)` only, while the other `181,192` residual pairs remain open at rank four.
+- `6021`, `5295` — THM-4336 sufficient one-core-appender cutoffs for every eight-pool body on residual pairs `(50,70)` and `(509,640)`, respectively; not minimal and not all-pair bounds.
+- `(17,17,17,16,13,12)` — THM-4335 least `d`-unit component-address cutoffs on the first safe component of `{1,...,13-d}`, for `d=2,...,7`; raw-width cutoffs are `(23,20,19,16,17,12)`.
 - `1895053421/13927125214482480` — THM-4333 uniform certified surplus above `2/27`, from `(509,640)`; not a full-mass minimum.
 - `3,370,132,808` — THM-4333 uniform sufficient third-core-outsider cutoff on `E_rem`; not minimal.
 - `2/21` — the continuum four-comb BAD-measure ceiling, equality iff 4-term AP (THM-1203, codex-S77, Lean-certified). Re-proved redundantly by two agents (MISTAKE-183).
