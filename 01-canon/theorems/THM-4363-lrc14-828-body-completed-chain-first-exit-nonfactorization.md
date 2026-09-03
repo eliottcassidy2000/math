@@ -11,7 +11,7 @@ status: >
 source: root + 828-body consumer scout / next-sharp session, 2026-09-02
 depends_on: []
 related:
-  - THM-4349-adaptive-modular-clock-complete-finite-certificate
+  - THM-4349-lrc14-adaptive-owner-clock-completeness-and-twelve-height-tail-cutoff
   - THM-4359-source-normal-row-eight-constructible-response-affine-modification
 mistake_firewall:
   - MISTAKE-522
