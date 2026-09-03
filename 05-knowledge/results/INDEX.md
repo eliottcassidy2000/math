@@ -1,5 +1,18 @@
 # Script Results Index
 
+- `jc2_source_normal_zeta_zero_row10_delayed_depth_extinction_thm4360.out`
+  and its import-free referee -> full zeta-zero-plane row-ten extinction
+  ([THM-4360](../../01-canon/theorems/THM-4360-source-normal-zeta-zero-row-ten-delayed-depth-extinction.md)):
+  **PROVED FINITE-ROW RELATIVE TO THM-4308/4315/4357 + VERIFIED-EXACT +
+  INDEPENDENTLY AUDITED; JC(2) OPEN.** Row nine cuts the three-dimensional
+  source plane to two affine planes and row-ten scalar compatibility leaves
+  two affine beta-lines. The selected tangent violates the prior `P_2`
+  functional by `9854451712/1430375`, uniformly including the beta-zero
+  boundary. Beta moves five jet coordinates but lies in every final
+  consumer kernel. Script/output SHA-256 pairs:
+  `9d2553e3...012ee40` / `c1727c0a...bb89dc5` and
+  `d2eb8ba0...19f4a6d6` / `6323c3e8...25dc4fb`.
+
 - `jc2_source_normal_row8_constructible_response_affine_modification_thm4359.out`
   and its import-free referee -> constructible response affine modification
   ([THM-4359](../../01-canon/theorems/THM-4359-source-normal-row-eight-constructible-response-affine-modification.md)):
