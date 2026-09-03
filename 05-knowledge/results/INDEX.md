@@ -1,5 +1,16 @@
 # Script Results Index
 
+- `lrc14_active_first_exit_scale_collision_thm4367.out` and its import-free
+  referee -> active first-exit ray/scale classification
+  ([THM-4367](../../01-canon/theorems/THM-4367-lrc14-active-first-exit-scale-collision-classification.md)):
+  **PROVED ELEMENTARY RELATIVE TO THM-4365 + VERIFIED-EXACT + INDEPENDENTLY
+  AUDITED; LRC(14) OPEN.** Metric exits are exactly indexed by reduced
+  `(kappa,b)`; each fibre is one scale class modulo 14 and has at most 241
+  cells, with all equality classes explicit. The physical binder still needs
+  scale, and `P->P+2` splits an equal-exit quartet. Script/output SHA-256:
+  `03f8b6f1...9a64d6` / `97a32cb6...d1c33c` and
+  `7651b566...2a27dc` / `87e53af1...85c956`.
+
 - `jc2_source_normal_u_zero_row11_hierarchy_selected_extinction_thm4366.out`
   and its import-free referee -> `U=0` source-pullback row-eleven extinction
   ([THM-4366](../../01-canon/theorems/THM-4366-source-normal-u-zero-row-eleven-hierarchy-selected-extinction.md)):

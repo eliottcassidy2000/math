@@ -1,0 +1,28 @@
+THM4367 ACTIVE FIRST-EXIT COLLISION CLEANROOM REFEREE
+scope odd P>=11019 in THM-4365 common quotient fibre; strict |rho|<3371
+classification c=3371-rho=ag; P=bg; gcd(a,b)=1; a even; b odd
+kappa=(a+1303b)/3371; gcd(kappa,14)=1; g*kappa=1 mod 14
+scale_window ceil(11019/b)<=g<=floor(6740/a)
+metric_exit kappa/(14b); physical_binder bg; physical_address (g*kappa-1)/14
+strict_boundary_controls ((43823, -3371, (3371, 43823)), (50565, 3371, (3371, 50565)))
+strict_active_endpoint_controls ((47595, 3369, 2, 1314, Fraction(18397, 666330)), (46793, -3369, 6740, 1292, Fraction(18089, 655102)))
+direct_three_period_records 10110 first_active 11045
+direct_three_period_sha256 62d48127f59c6eca326621d3b67a4ccac323c4eb267a0bdaf47e4fcd54ee76c9
+reverse_b_le_50001 4634 11373 241
+reverse_summary_sha256 040488ad14efebce184ca6abcc8cb7ff27d3215ed4c9eeb8450fc8c915f7d64e
+least_occupied_primitive_denominator (34, 75, 29) scales (155, 169, 183, 197)
+least_collision_records ((11625, -1899, 5270, 321), (12675, -2375, 5746, 350), (13725, -2851, 6222, 379), (14775, -3327, 6698, 408)) exit 29/1050
+least_parameter_in_nonsingleton_class (11085, 196, 2217, 857, (5, 19, 33))
+least_participating_records ((11085, 2391, 980, 306), (42123, -353, 3724, 1163), (73161, -3097, 6468, 2020)) exit 857/31038
+least_second_parameter_collision (11625, 12675, 34, 75, 29)
+plus_two_dynamic_hostile ((11627, 707, 321, Fraction(4495, 162778)), (12677, 231, 350, Fraction(4901, 177478)), (13727, -245, 379, Fraction(5307, 192178)), (14777, -721, 408, Fraction(5713, 206878)))
+same_residue_phase_hostile ((48679, 1, Fraction(18817, 681506)), (95873, 1, Fraction(37059, 1342222)))
+sharp_global_multiplicity 241
+a2_cycle_t_0_to_6 ((0, 1, 1, 239), (1, 3, 5, 241), (2, 5, 3, 241), (3, 7, None, 0), (4, 9, 11, 240), (5, 11, 9, 241), (6, 13, 13, 240))
+equality_iff a=2; b=401+6742t; kappa=155+2606t; t>=1; t mod 7 in {0,1,2,5}
+least_241_class (2, 7143, 2761) scale_count 241 scale_endpoints (5, 3365) exit 2761/100002
+infinite_241_family_controls ((0, 7143, 2761, 241, 35715, 24036195, Fraction(2761, 100002)), (1, 54337, 21003, 241, 271685, 182844005, Fraction(21003, 760718)), (2, 101531, 39245, 241, 507655, 341651815, Fraction(39245, 1421434)), (17, 809441, 312875, 241, 4047205, 2723768965, Fraction(312875, 11332174)))
+sidecar_separation same metric; distinct binder P=bg and address n=(g*kappa-1)/14
+checks 478870
+PASS
+NO_LRC14_DECREMENT; NO_COUNTEREXAMPLE; ACTIVE METRIC COINCIDENCE ONLY
