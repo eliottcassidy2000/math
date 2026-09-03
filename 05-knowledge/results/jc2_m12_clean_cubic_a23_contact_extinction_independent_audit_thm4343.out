@@ -1,0 +1,6 @@
+THM4343 U+W=0 A23-CUBIC INDEPENDENT AUDIT=PASS
+top_images=[(0, 5, 'W'), (0, 6, 'U'), (1, 5, 'alpha'), (2, 4, 'xi'), (2, 5, 'upsilon'), (3, 4, 'eta'), (4, 3, 'Theta'), (4, 4, 'Delta'), (5, 3, 'Phi'), (6, 2, 'K'), (6, 3, 'p3'), (8, 2, 'p2'), (10, 1, 'p')]
+edge_orbits=distinct;closures_share_(4,5)
+terminal_coefficients=(Fraction(-13271552, 164025), Fraction(13271552, 164025), Fraction(1856, 81), Fraction(4672, 135), Fraction(-4672, 135), Fraction(41216, 1215))
+terminal_discriminant=-3947729324424178958336/32688603759375
+genus=15,15,14

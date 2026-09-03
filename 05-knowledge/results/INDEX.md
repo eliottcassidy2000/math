@@ -1,5 +1,19 @@
 # Script Results Index
 
+- `jc2_m12_clean_cubic_a23_contact_extinction_thm4343.out`, its independent
+  audit, and hostile referee -> exact clean-cubic `U+W=0` extinction
+  ([THM-4343](../../01-canon/theorems/THM-4343-disjoint-a23-cubic-contact-planar-jacobian-extinction.md)):
+  **PROVED RELATIVE TO THM-4230/4292/4297/4327/4339 + VERIFIED-EXACT +
+  TWICE INDEPENDENTLY AUDITED; JC(2) OPEN.** Cubic, top `A23`, and internal
+  roots have distinct toric owners even when all numerical labels equal one.
+  Their modifications commute on disjoint formal supports. Deep A23
+  repetition forces `B(P)=0`; the terminal packet has nonzero cubic
+  discriminant. Component genera are `15`, or `14` after a horizontal
+  normalization; all positive-genus orders are positive. Script/output
+  SHA-256 pairs: `a7cc2816...db13c6` / `11b52dd6...1c9e65`,
+  `aa5335ef...f2099a` / `3fa6f762...8c236`, and
+  `0699b211...5f53a0` / `63d3a261...5a46f7`.
+
 - `jc2_m12_clean_cubic_zero_exit_extinction_thm4342.out` and two import-free
   hostile audits -> exact `K=0` Laurent zero-exit extinction
   ([THM-4342](../../01-canon/theorems/THM-4342-clean-cubic-zero-exit-planar-jacobian-extinction.md)):

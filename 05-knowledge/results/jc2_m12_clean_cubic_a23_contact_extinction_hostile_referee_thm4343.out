@@ -1,0 +1,7 @@
+THM-4343 hostile finite/exact referee audit: PASS
+Pick=(2A=42,B=14,I=15)
+owner supports=cubic/top/internal distinct; common vertex avoided by units
+terminal discriminant=-3947729324424178958336/32688603759375
+terminal discriminant mod 11=2
+genus ledgers=squarefree15 raw-singular15 horizontal14 bridge15 tail15
+scope note=proper-flat/disjoint-support gluing remains a prose theorem step

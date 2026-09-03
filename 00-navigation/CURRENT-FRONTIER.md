@@ -338,17 +338,17 @@ lift/phase clocks.
   `M=8--11`; THM-4226 closes dense `M=13`. At `M=12`, THM-4290/4297/4299
   close the interior/square wall and THM-4301--4317 the cubic corner.
   [THM-4327](../01-canon/theorems/THM-4327-generic-exact-weight-twelve-endpoint-wall-extinction.md)
-  closes generic `U=0`/`Z=0` endpoints and `Lambda=0`.
+  closes generic `U=0`/`Z=0` endpoints.
   [THM-4334](../01-canon/theorems/THM-4334-beta-zero-exact-weight-twelve-endpoint-wall-extinction.md)
-  closes `Z=beta_11=0,UWzeta_3!=0`.
-  [THM-4337](../01-canon/theorems/THM-4337-zeta-zero-exact-weight-twelve-endpoint-wall-extinction.md)
-  closes `Z=zeta_3=0,U beta_11!=0` for all `W,K,Lambda`.
+  and [THM-4337](../01-canon/theorems/THM-4337-zeta-zero-exact-weight-twelve-endpoint-wall-extinction.md)
+  close beta/zeta owners.
   [THM-4339](../01-canon/theorems/THM-4339-clean-interior-cubic-edge-planar-jacobian-extinction.md)
-  closes `Z=beta_11=zeta_3=0,U*K*W*(U+W)!=0`.
+  and [THM-4343](../01-canon/theorems/THM-4343-disjoint-a23-cubic-contact-planar-jacobian-extinction.md)
+  close the clean cubic gate for `U+W!=0` and `U+W=0`.
   [THM-4340](../01-canon/theorems/THM-4340-u-zero-repeated-cusp-planar-jacobian-extinction.md)
-  closes `U=0,WZ!=0`; the `WZ=0` wall remains.
+  closes `U=0,WZ!=0`; `WZ=0` remains.
   [THM-4342](../01-canon/theorems/THM-4342-clean-cubic-zero-exit-planar-jacobian-extinction.md)
-  closes `K=0`. The `W=0` drop, `U+W=0`, and seam entry remain.
+  closes `K=0`; `W=0` drop and seam entry remain.
   Exceptional quartic: THM-3703/3737 give grammar/image, THM-4034 the
   conductor, and THM-4039/4043/4046 reach `J_7`, obstruct `J_8`, and close
   critical `H`. [THM-4054](../01-canon/theorems/THM-4054-exceptional-affine-simple-zero-retained-packet.md)
