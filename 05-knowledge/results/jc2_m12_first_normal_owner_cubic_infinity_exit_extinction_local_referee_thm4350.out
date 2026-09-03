@@ -1,0 +1,13 @@
+THM4350_LOCAL_REPLACEMENT_FAN_AUDIT=PASS
+gate=Z=beta_11=zeta_3=W=xi_10=0;U*K!=0;(alpha_11,Theta)!=(0,0)
+exact_fans=40:M,D6,D7,T;24:M,D6,D8;40:M,D12,T
+boundary_exact_fan=24:M,H6_on_alpha=Theta=0
+over_atlas=64:M,D6,D7,T;64:M,D6,D8
+pick=D6g0,D7g3,D8g3,D12g3,Tg0;global_genus=14
+graphs=alphaTheta:E20,V10,b1=11;one_owner:E19,V9,b1=11
+D6_root=U+alpha*v_is_simple;no_critical_series
+carriers=D7:Z^2=alpha^2P^8+4ThetaP;D8:Z^2=alpha^2P^8+4K;D12:Y^2=Theta*P*(1-UP^6)
+least_integral_orders=M9,D6_5,D7_41,D8_26,D12_11,T8
+next_boundary=alpha=Theta=0:H6_genus2_or_even_A5_depth<=3
+stops=K0_joint_exit;U0_endpoint;seam_entry;JC2;DC2
+checks=213

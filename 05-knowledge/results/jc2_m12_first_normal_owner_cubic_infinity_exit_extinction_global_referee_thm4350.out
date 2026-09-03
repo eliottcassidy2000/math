@@ -1,0 +1,14 @@
+THM4350_GLOBAL_EXACT_AUDIT=PASS
+gate=Z=beta_11=zeta_3=W=xi_10=0;U*K!=0
+exact_supports=128;fan_counts=alphaTheta11:40,10:24,01:40,00:24
+conservative_over_atlas=512_keyed_configs;fan_count_each=128
+over_atlas_distinct_supports=336;synthetic_distinct_supports=208
+canonical_exact_embedding=128_configs;other_coupling_illegal_configs=384
+clean_owner_union=(alpha,Theta)!=(0,0);exact_supports=104
+maximal_clean_locus=clean_owner_union OR [alpha=Theta=0 and eta^2!=4KU]
+face_genera=D7/F10/F01:3;F00:2
+face_orders=M:9@12,D6:5@6,D7:41@42,T:8@6,F10:26@24,F01:11@12,F00:6@6
+global_pick=11/10/01:genus14;00:genus13;graph_b1=11_all
+sole_collision=alpha=Theta=0,eta^2=4KU;F00_splits;M_attachments=3+3;A5_delta=3
+collision_critical_depths=r1/r2/r3;tail_genera=2/1/1;form_orders=68/64/60
+collision_status=exact_even_A5_local_closure;no_remaining_normal-series wall

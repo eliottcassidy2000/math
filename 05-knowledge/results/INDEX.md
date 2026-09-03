@@ -1,5 +1,20 @@
 # Script Results Index
 
+- `jc2_m12_first_normal_owner_cubic_infinity_exit_extinction_thm4350.out`
+  and two independent exact audits -> first-normal-owner `xi_10=0`
+  extinction ([THM-4350](../../01-canon/theorems/THM-4350-first-normal-owner-cubic-infinity-exit-planar-jacobian-extinction.md)):
+  **PROVED RELATIVE TO THM-4230/4327/4344 + VERIFIED-EXACT + TWICE
+  INDEPENDENTLY AUDITED; JC(2) OPEN.** The 104 exact supports split into
+  three fans according to `(alpha_11,Theta)=11,10,01`. Owner deletion merges
+  `D6+E11 -> E01` or `E11+T -> E10`; each replacement is a rigid smooth
+  genus-three carrier of positive form order, while graph genus remains 11.
+  The hostile quotient distinguishes 512 keyed configurations, 336 distinct
+  supports, 128 exact supports, and 208 additional synthetic supports.
+  Script/output SHA-256 pairs: `b9257f90...8af5f640` /
+  `9da80a44...5e45b33`, `14c8a1e0...e12d72c` /
+  `c6260cef...dd0f750`, and `6b740591...9011aa2` /
+  `0753f4db...6071c48f`.
+
 - `jc2_m12_clean_cubic_infinity_exit_extinction_thm4344.out` and two
   import-free hostile audits -> exact `W=0` Laurent infinity-exit extinction
   ([THM-4344](../../01-canon/theorems/THM-4344-clean-cubic-infinity-exit-planar-jacobian-extinction.md)):
