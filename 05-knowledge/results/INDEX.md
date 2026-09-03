@@ -1,5 +1,19 @@
 # Script Results Index
 
+- `jc2_source_normal_row8_constructible_response_affine_modification_thm4359.out`
+  and its import-free referee -> constructible response affine modification
+  ([THM-4359](../../01-canon/theorems/THM-4359-source-normal-row-eight-constructible-response-affine-modification.md)):
+  **PROVED FINITE-ROW COROLLARY RELATIVE TO THM-4308 + VERIFIED-EXACT +
+  INDEPENDENTLY AUDITED; JC(2) OPEN.** The effective response has smooth
+  hypersurface closure `V(F)` but actual image
+  `V(F) cap (D(zeta_3) union V(G0))`. It is an isomorphism off `zeta_3=0`
+  and an affine modification with one-dimensional exceptional fibres. The
+  exact generic/special algebraic circuits and the separate complete
+  zero-wall nonface clutters expose three specialization-only
+  incompatibilities. Script/output SHA-256 pairs:
+  `3311b86e...017284bb` / `11adca06...c2fa776d` and
+  `39e64790...29978eba` / `5bf2daae...7095ff63`.
+
 - `jc2_source_normal_s4339_row10_delayed_depth_extinction_thm4358.out`
   and its import-free referee -> delayed prior-depth extinction
   ([THM-4358](../../01-canon/theorems/THM-4358-source-normal-s4339-row-ten-delayed-depth-extinction.md)):

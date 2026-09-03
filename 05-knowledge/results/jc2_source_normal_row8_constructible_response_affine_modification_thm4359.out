@@ -1,0 +1,29 @@
+THM-4359 PRIMARY: ROW-EIGHT CONSTRUCTIBLE RESPONSE / AFFINE MODIFICATION
+fixed Delta=896/15 Theta=512/75 K=-32/5 upsilon5=-731648/2025
+closure kernel: (F)
+F=1184625*zeta^2+19318500*U+2460375*W+42434609152
+smoothness: dF/dW=2460375
+generic Jacobian det d(zeta,U,Z)/d(Phi,xi,eta)=-65*Phi/44
+on zeta!=0: response is an isomorphism onto V(F)
+inverse Phi=-2*zeta/3
+inverse xi=237757952/54675-11*U/6
+inverse eta=54/(65*zeta)*(Z-5200877686784/66430125-125873*U/8019+520*zeta^2/729)
+special image: zeta=0, F=0, G0=0
+G0=-1042743375*U+66430125*Z-5200877686784
+affine modification: 2*G0=zeta*(159924375*eta-94770000*zeta)
+effective source ring=A[G0/zeta], A=Q[zeta,U,Z]
+actual image=V(F) intersect (D(zeta) union V(G0))
+missing closure locus=V(F,zeta) intersect D(G0)
+phantom=(0,0,-42434609152/2460375,0): F=0 G0=-5200877686784
+extended kernel: 109350*xi+200475*U-475515904, 482625*zeta^2-4293000*xi+1002375*W+35956576256
+response circuits: [('zeta', 'U', 'W')]
+extended circuits: [('xi', 'U'), ('zeta', 'xi', 'W'), ('zeta', 'U', 'W')]
+special circuits: [('zeta',), ('xi', 'U'), ('xi', 'W'), ('xi', 'Z'), ('U', 'W'), ('U', 'Z'), ('W', 'Z')]
+response-only minimal nonfaces: [('zeta', 'U', 'W'), ('zeta', 'U', 'Z'), ('zeta', 'W', 'Z')]
+extended minimal nonfaces: [('xi', 'U'), ('zeta', 'xi', 'W'), ('zeta', 'xi', 'Z'), ('zeta', 'U', 'W'), ('zeta', 'U', 'Z'), ('zeta', 'W', 'Z')]
+special zero addresses: 0,xi_U,xi_W,xi_Z pairwise distinct
+live hostile U=W=Z=0: xi=237757952/54675, Phi^2=-13056802816/820125
+live hostile xi=W=Z=0: Phi^2=-143826305024/4343625
+specialization firewall: (zeta,F) is strictly contained in (zeta,F,G0)
+SCOPE finite-row-eight-only; no all-row lift, seam entry, Keller pair, JC(2), or DC(2)
+PASS checks=84

@@ -1,0 +1,19 @@
+THM-4359 INDEPENDENT EXACT REFEREE
+closure4: principal prime smooth hypersurface (F)
+F=1184625zeta_3^2+19318500U+2460375W+42434609152
+closure5: prime smooth complete intersection (R1,R2)
+kernel identity: 11F=27R2+1060R1
+image4: V(F) intersect (D(zeta_3) union V(G0))
+image5: V(R1,R2) intersect (D(zeta_3) union V(R7))
+phantom closure point: PASS
+effective fibres: A^0 generic, A^1 exceptional
+full finite-row8 fibres: A^9 generic, A^10 exceptional
+global circuits4: {z,U,W}
+global circuits5: {x,U}; {z,x,W}; {z,U,W}
+special circuits: loop {z}; all pairs among remaining line coordinates
+wall nonfaces4: {z,U,W}; {z,U,Z}; {z,W,Z}
+wall nonfaces5: {x,U}; {z,x,W}; {z,x,Z}; {z,U,W}; {z,U,Z}; {z,W,Z}
+proper-subset controls: distinct special addresses and two feasible triples PASS
+TERMINOLOGY algebraic circuits != pointed affine zero-wall nonfaces
+SCOPE effective A3 isomorphism only; no all-row, seam, Keller, JC(2), or DC(2) claim
+PASS checks=93
