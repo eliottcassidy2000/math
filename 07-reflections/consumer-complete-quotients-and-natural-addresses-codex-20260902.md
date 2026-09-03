@@ -65,6 +65,7 @@ corresponding unpaid gluing consumers.
 | THM-4363's four `h=420` rows | 828 statuses plus all 282 completed physical chains | first missing-component exit | missing physical prefix; `P=761,1015` have the same local role packet but teeth `(761,21),(1015,28)` and different exits |
 | THM-4365's odd tail | the same constant quotient `Q` | metric exit `E_x` | residue/address and reciprocal scale; `P=48679,95873` even share `rho=1` but have different exits |
 | THM-4367's strict-active cells | primitive ray `(a,b)`, equivalently `(kappa,b)` | metric exit `E_x=kappa/(14b)` | scale `g`; the quotient is exact for the exit, but the four scales over `29/1050` have different physical binders and split after `P->P+2` |
+| THM-4396's three-sheet comb | finite two-factor spectrum plus exact ordered-pair geometry | local failure-mass upper certificate | third-sheet incidence; `(1,5,11)` has positive slack on an open interval for every finite pair degree |
 | THM-4364/4368 diagonal packets | boundary pair `(u,v)` or its triangular address | complete fixed-order trace | source exponents inside the fibre `mu(N,n0)`; reducing `(u,v)` to its primitive ray instead destroys trace scale |
 | THM-4366's `U=0` pullback | two fixed-bank rank-one hierarchy flags | joint source restriction | ambient independence does not prevent the two opposite-module consumers from becoming proportional by `-4/3` on the selected source graph |
 | THM-4361's six sign-sheet points | `Y=P^2` | signed `H_C` | sign sheet; the two points over one `Y` have opposite values |
@@ -343,6 +344,23 @@ length `L_w(C)`.  It therefore cannot determine failure measure.  There is no
 LRC-to-tournament theorem here: the useful statement is a loss ledger linking
 one genuine orientation bit to the raw and Fourier representations.
 
+THM-4396 gives a pointwise version of the same discipline.  After smoothing
+two sheet indicators, write `X=f_i f_j-g_i g_j`.  Forgetting the exact third
+indicator but retaining only `0<=f_k<=1` has the optimal envelope
+
+```text
+sup_(0<=z<=1) zX=X_+.                                   (20)
+```
+
+This “quotient-sharp” statement is relative to the declared information loss;
+it is not global optimality of the resulting numerical bound.  The equality
+comb `(1,5,11)` proves the distinction: an open region has `f_k=1` and
+`X<0`, so replacing `f_kX` by `X_+` loses a strictly positive amount for every
+finite pair of Fejer degrees.  A smaller bound must restore some third-sheet
+incidence, couple pair views, or change the representation.  Merely raising
+the cutoff cannot repair a quotient that has erased the sign-bearing
+interface.
+
 ## 6. Generated sharp tasks
 
 1. **LRC operation closure.** THM-4367 resolves the static exit-collision
@@ -376,6 +394,11 @@ one genuine orientation bit to the raw and Fourier representations.
    invariance only after checking their exact set-theoretic quantifiers. These
    lemmas separate renumbering, static quotienting, and composition-compatible
    state before another domain-specific code is introduced.
+8. **Hybrid third-sheet closure.** Refine THM-4396 by adjoining the least
+   third-sheet occupancy sidecar on its 24 rational pair pieces. Test whether
+   one certified negative patch suffices, or whether exactness forces the full
+   triple-incidence partition. The `(1,5,11)` open intervals are the mandatory
+   hostile; `(11,13,17)` is the positive finite-certificate control.
 
 The reusable rule is: name the consumer, test one quotient fibre, retain the
 first interface it reads, and only then encode the surviving structured tuple
