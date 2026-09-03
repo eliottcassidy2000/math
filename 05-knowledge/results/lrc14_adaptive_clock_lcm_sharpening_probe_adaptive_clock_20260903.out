@@ -1,0 +1,18 @@
+adaptive-clock LCM sharpening exact audit
+height D_digits Q_digits simple_factor old_factor
+1 4 5 4 29584
+2 10 10 4 115600
+11 57 58 8 6859808
+12 61 62 8 8160800
+40 210 211 4 45212176
+72 378 379 4 146410000
+128 665 666 4 462594064
+256 1335 1335 4 1850032144
+height_audit_1_256=PASS
+eleven_body_checks_h11_18=31824
+wall_doubling_checks=40600
+long_block_checks=2566368
+adjacent_owner_rigidity_checks=880594
+same_clock_top_bit_repair=h=11 Q_digits=58 c=8 r_parity=1 at_r=(True, False)/(False, True) at_r_plus_1=(True, False)/(True, False)
+H72=body_clock_digits=378 height_clock_digits=379 height_over_body=8 old_over_body=1171280000
+PASS

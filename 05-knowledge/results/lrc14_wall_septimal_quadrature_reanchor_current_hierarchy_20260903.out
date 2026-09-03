@@ -1,0 +1,11 @@
+LRC14 SIGNED-WALL SEPTIMAL QUADRATURE / REANCHOR AUDIT
+SCOPE=FINITE-EXACT CONTROLS; STRICT danger ||s*x||<1/14; LRC14_OPEN
+mask_formula {'cases': 35000, 'strict_endpoint_occurrences': 26424}
+crt_calculus {'intersection_cases': 4065, 'union_cases': 1500, 'maximum_fold': 6}
+septimal_measure {'odd_speed_cases': 107143, 'anchor_cases': 192000, 'independent_fraction_anchor_cases': 10800, 'lift_fibres': 212, 'odd_exact_one_seventh': 13608, 'odd_valuation_safe': 93535}
+sharp_seven_partition {'u_cases': 57}
+distinct_valuation_intersections {'direct_cases': 3104, 'independent_fraction_cases': 152, 'maximum_fold': 4}
+owner_blocks_and_finite_rigidity {'k1_unit_residues': 42, 'k1_class_sizes': (6, 6, 6, 6, 6, 6, 6), 'k1_canonical_tiler': (1, 9, 11, 13, 15, 17, 19), 'k1_positive_owners': (0, 3, 5, 1, 6, 2, 4), 'formula_direct_checks': 2450, 'k2_unique_masks_and_covers': (147, 21), 'k3_unique_masks_and_covers': (1029, 147), 'k4_target_masks': 7203, 'k4_speed1_disjoint_partners': 46, 'k4_speed1_completions': 1, 'k4_completion': (1, 4801, 4803, 9603, 9605, 14405, 14407)}
+coarse_defect_and_retained_hostile {'critical_wall_lower_partition_points': 14, 'critical_exact_height_tails': 5, 'critical_deeper_tails': 0, 'actual_safe_time': '15/182', 'actual_clearance': '1/14', 'actual_binders': (13,), 'permutation_intervals': (('1/18', '3/38', (0, 3, 5, 1, 6, 2, 4)), ('35/38', '17/18', (6, 3, 1, 5, 0, 4, 2))), 'permutation_measure': '8/171', 'defect_measure': '163/171', 'owner_points_checked': 156, 'parallel_tiler': (1, 15, 29, 43, 57, 71, 85), 'parallel_permutation_measure': '7122/46835', 'parallel_owner_points_checked': 580, 'coarse_profiles': 40, 'coarse_lift_points_checked': 26440}
+reanchor_and_hostiles {'no_matching_height_lower_tails': 6, 'no_matching_height_safe_time': '13/98', 'no_matching_height_clearance': '13/98', 'reanchor_h': 420, 'reanchor_tail_count': 12, 'reanchor_multiples': 10, 'reanchor_nonmultiples': 1, 'safe_wall': (1, -1), 'safe_time': '13/98', 'clearance': '1/14', 'binding_speeds': (7, 91, 105), 'anchor_plus_four_cover': (5, 7, (71, 81, 83, 87)), 'anchor_plus_five_cover': (11, 420, (159, 331, 523, 665, 835))}
+PASS

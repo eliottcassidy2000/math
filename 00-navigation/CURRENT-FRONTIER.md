@@ -54,11 +54,11 @@ for `d>=7`. THM-3742 is a wrong-torsor Pell `C14`; THM-3744's safe control is
 - **Quantifier/type controls (PROVED):** THM-4095--4116 preserve field, gap,
   ray, parity-sheet and component-count data; none supplies safety or arrival.
 - **Seam/entry:** THM-4326/4329 close the fixed chart; THM-4330/4335 leave
-  anchored `2+12` with `420|h`. THM-4347 closes bodies through height `40`;
-  THM-4349 makes one adaptive clock complete, not universally empty.
-  THM-4348 leaves `7u|h`/triple overlaps. THM-4363/4365/4367 give
-  quotient/exit/ray-scale laws; metric fibres fail shift closure. Keep
-  prefix/scale/address; entry/seam remain open.
+  anchored `2+12`, and THM-4347 closes height `40`. THM-4349/4371 give a
+  complete clock only. THM-4370/4372 force seven lower tails and a `4/7`
+  deeper rebate; lower one-shell hostiles remain. THM-4373 proves the
+  signed-`(1,2,1)` scale-three `6/77` bound; the nonresonant sector and
+  entry/seam remain open.
 - **Residual ranks:** THM-4333/4338 close fixed-pool ranks three/four, not arbitrary entry.
 - **PROVED:** [THM-2928](../01-canon/theorems/THM-2928-critical-seven-comb-grid-tensorization-and-drift-tariff.md)/2941: literal zero/one/two/three-drift sectors are empty; `k=2,3` are finite.
 - **Orthogonal routes.** THM-1017 is HYP-6820; THM-2047/2050 keep phase/exit; THM-731/2048 prune; THM-1290 ends at `55`; HYP-8900 nonuniform.

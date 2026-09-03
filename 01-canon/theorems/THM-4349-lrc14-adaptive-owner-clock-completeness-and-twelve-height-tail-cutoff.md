@@ -25,6 +25,7 @@ related:
   - THM-4079-lrc14-antipodal-outlier-absorption-and-adaptive-clock
   - THM-4087-lrc-literal-open-two-comb-compiler
   - THM-4347-lrc14-dyadic-owner-word-closure-through-forty
+  - THM-4371-lrc14-minimal-wall-lcm-adaptive-owner-clock
 ---
 
 # THM-4349 -- adaptive owner clocks are complete on the dyadic seam
@@ -59,6 +60,11 @@ When these conditions hold, condition 1 may use the explicit clock
 ```text
 N_H=28(42h+1)^2 lcm(1,...,12h).                        (3a)
 ```
+
+**Subsequent sharpening.** THM-4371 proves that the same equivalence already
+holds at the much smaller exact wall-LCM clock
+`7 lcm({2c:c in H} union {a<12h:a odd})`.  The bound `(3a)` remains a valid
+deliberately coarse clock, but is no longer the best proved explicit bound.
 
 This bound is intentionally coarse but depends only on the body height, not
 on the detailed geometry of `H`.  Thus the four conditions are also

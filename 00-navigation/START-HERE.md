@@ -1,6 +1,6 @@
 # Start Here
 
-**Rolling brief — 2026-09-02.**
+**Rolling brief — 2026-09-03.**
 [`CURRENT-FRONTIER.md`](CURRENT-FRONTIER.md) owns status.
 
 ## The five-minute orientation
@@ -21,8 +21,9 @@ Then read frontier, guardrails, theorem; logs are history.
 
 ## Seventeen high-signal facts
 
-1. **LRC(14) is first open.** THM-4347 closes height `40`; THM-4349 completes
-   the clock test. The `7u|h`, entry, and `2+12` walls remain open.
+1. **LRC(14) is first open.** THM-4347 closes height `40`; THM-4371 sharpens
+   the complete clock; THM-4370/4372/4373 add septimal/resonant constraints. Entry and
+   `2+12` remain open.
 2. **The `q <= 25` period claim is refuted.** THM-762/764 exhibit `26*{1,...,12} union {339}`, whose first good period is `27`.
 3. **Good-period existence is a maximum statement.** The tight resonant AP
    defeats average/count arguments; see MISTAKE-127/129/130.

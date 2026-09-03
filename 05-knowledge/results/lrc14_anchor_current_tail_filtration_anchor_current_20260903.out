@@ -1,0 +1,62 @@
+sharp_current_binomial_and_tail_identity
+ g(d)=1/2*(1_{d>=3}+binom(d-1,3))
+ E[g(|C|)]=1/2*P(|C|>=3)+1/2*sum_{j=4}^12 binom(j-2,2)*P(|C|>=j)
+ tail_weights=0,0,1/2,1/2,3/2,3,5,15/2,21/2,14,18,45/2
+
+critical_septimal_fibre_transport
+ universal_Lambda_12=0,0,0,0,2,11/2,15,38,78,279/2,227,345,498
+ universal_tail_weights=0,0,0,2,7/2,19/2,23,40,123/2,175/2,118,153
+ exact_bound=core_g(C)>=1/7*integral_half L_{N_a}(|C_{>a}|)
+ sparse_shell_bound>=(6-N_a)_+/7*integral_half g(|C_{>a}|)
+ uniform_bound>=2/7*integral_half g(|C_{>a}|)*1_{|C_{>a}|>=4}
+ dynamic_program_rows=169
+ all_L_n_even_extensions_convex=True
+
+physical_fibre_witnesses
+ critical_six_family=(1, 3, 5, 7, 9, 11, 13, 21, 35)
+ critical_six_snapshot={'anchor': (1, 0, 0, 0, 0, 0, 0), 'high': (3, 3, 3, 3, 3, 3, 3), 'exact_shell': (6, -1, -1, -1, -1, -1, -1), 'total': (9, 2, 2, 2, 2, 2, 2), 'safe_cost': Fraction(0, 1)}
+ exactly_six_edges_erase_level3_on_all_six_safe_vertices
+ level3_family=(1, 3, 5, 7, 9, 11, 13, 15, 17, 19, 21, 35)
+ level3_snapshot={'anchor': (1, 0, 0, 0, 0, 0, 0), 'high': (3, 3, 3, 3, 3, 3, 3), 'exact_shell': (9, -2, -2, -2, -1, -1, -1), 'total': (12, 1, 1, 1, 2, 2, 2), 'safe_cost': Fraction(0, 1)}
+ level3_mean_current=3_but_all_six_safe_vertices_have_zero_rebate
+ level4_family=(1, 3, 5, 7, 9, 11, 13, 17, 19, 21, 35, 49)
+ level4_snapshot={'anchor': (1, 0, 0, 0, 0, 0, 0), 'high': (4, 4, 4, 4, 4, 4, 4), 'exact_shell': (8, -2, -2, -1, -1, -1, -1), 'total': (12, 2, 2, 3, 3, 3, 3), 'safe_cost': Fraction(2, 1)}
+ level4_safe_cost=2=sharp_uniform_fibre_envelope
+
+counterexample_locus_four_sevenths_sharpness
+ upper_five_family=(1, 3, 7, 21, 35)
+ upper_snapshot={'anchor': (1, 0, 0, 0, 0, 0, 0), 'high': (3, 3, 3, 3, 3, 3, 3), 'exact_shell': (2, -1, 0, -1, 0, 0, 0), 'total': (5, 2, 3, 2, 3, 3, 3), 'safe_cost': Fraction(2, 1)}
+ edge_w1=(1, 0, 0, -1, 0, 0, 0) endpoints=(0,3) residue_type=3
+ edge_w3=(1, -1, 0, 0, 0, 0, 0) endpoints=(0,1) residue_type=3
+ global_core=2/245 high=1/70 exact_bound=2/245 ratio=4/7
+ primitive_7_2_3_family=(5, 7, 9, 11, 15, 17, 21, 29, 31, 49, 147, 245)
+ primitive_valuation_counts=(7,2,3) gcd_with_anchor=1
+ primitive_upper_projection=(5, 2, 3, 2, 3, 3, 3)
+ primitive_lower_current=(7, 0, -1, 0, -1, -1, -1)
+ primitive_total=(12, 2, 2, 2, 2, 2, 2)
+ primitive_safe_cost=0; local_control_not_strict_counterexample
+
+minimal_exact_failure_of_naive_high_shell_independence
+ high_only=(7,21,35): core_g=3/245=(6/7)*high_g
+ add_speed_1: core_g=1/98 high_g=1/70 naive_slack=-1/490 exact_transport_bound=1/98
+ twelve_tail_max35_family=(1, 5, 7, 9, 11, 13, 17, 19, 21, 29, 31, 35)
+ twelve_tail_core=23423/8369690 naive_slack=-79063/8369690
+
+integrated_physical_controls
+ level3: core=5261/237405 high=1/70 high_level3_mass=1/35 exact_bound=0 uniform_bound=0
+ level4: core=2005/143374 high=6/245 high_level3_mass=2/245 exact_bound=2/343 uniform_bound=2/343
+
+common_dilation_residual_wall_controls
+ every_tail_event_obeys T_j(strip)=(q*T_j(full)+T_j(residual_wall))/D
+ m=1 D=1=7*0+1 full=7133471/11316305 residual=1067/11760 strip=1067/11760 core=58624589/108636528 fibre_bound=0
+ m=13 D=13=7*1+6 full=7133471/11316305 residual=58624589/108636528 strip=635529553/7061374320 core=346886941/641943120 fibre_bound=0
+ m=49 D=7=7*1+0 full=7133471/11316305 residual=0 strip=7133471/79214135 core=42800826/79214135 fibre_bound=42800826/79214135
+ m=127 D=127=7*18+1 full=7133471/11316305 residual=1067/11760 strip=6212602607/68984195280 core=37273036609/68984195280 fibre_bound=0
+
+deterministic_exact_profile_sweep
+ profiles=90 minimum_exact_fibre_slack=0
+
+canonical_hostile_scope
+ W_9=(1,9,...,9^11) occupies one 7-adic shell; for h=1 C_{>a}=0,
+ and for 7|h the projection M_a is already zero.  Hence this shell/transducer
+ lower bound is exactly silent on the THM-4346 geometric-chain hostile.

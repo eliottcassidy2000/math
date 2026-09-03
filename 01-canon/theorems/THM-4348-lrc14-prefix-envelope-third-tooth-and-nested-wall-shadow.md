@@ -27,6 +27,7 @@ depends_on:
   - THM-4335-lrc14-owner-permutation-component-address-and-minority-renewal
 related:
   - THM-4331-lrc14-safe-component-endpoint-denominator-odd-wall-escape
+  - THM-4370-lrc14-septimal-wall-quadrature-and-valuation-reanchor
 script: 04-computation/lrc14_third_tooth_competition_probe_third_tooth_20260902.py
 output: 05-knowledge/results/lrc14_third_tooth_competition_probe_third_tooth_20260902.out
 reflection: 07-reflections/lrc14-third-tooth-competition-third_tooth_20260902.md
@@ -462,6 +463,12 @@ the equality case `(28f)` is impossible. Indeed all displayed speeds would
 share `d`; primitivity forces `d=1`, after which `420|h` contradicts
 `H=+-7 mod 21`. Thus such a row is safe on `X_u`. The exact untreated
 wall-shadow resonance is `7u|h`.
+
+**Subsequent refinement.** THM-4370 replaces uniform counting on `X_u` by a
+consistent probability measure on a physical septimal wall subtree.  It does
+not empty `7u|h`, but it forces any anchored `2+12` counterexample to have at
+least seven odd speeds of valuation strictly below `nu_7(h)` and gives exact
+generalized-CRT formulas for arbitrary wall-mask intersections.
 
 The divisibility hypothesis is the exact boundary-crossing condition.  In
 the general, not necessarily odd-tail setting, it cannot be dropped:
