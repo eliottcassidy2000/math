@@ -1,5 +1,21 @@
 # Script Results Index
 
+- `lrc14_minimal_ternary_unit_norm18_shell_thm4393.out` and its
+  dependency-free clean-room referee -> complete minimal primitive
+  full-support ternary-unit norm-`18` shell
+  ([THM-4393](../../01-canon/theorems/THM-4393-lrc14-minimal-ternary-unit-norm-eighteen-shell.md)):
+  **PROVED ELEMENTARY + VERIFIED-EXACT + INDEPENDENTLY AUDITED; LRC(14)
+  OPEN.** Six coefficient patterns have globally sharp sector maxima; the
+  shell maximum is `36/1225`, uniquely at `{1,11,175}`. Exact cube-slice
+  bulks reduce every sector to a finite proof window. Ten height-free
+  multiple-relation rays exist and nine have positive comb mass because a
+  live component may carry defect `+/-3`; none has two simultaneous zero
+  defects. The proof windows contain 4,913 sector triples, 4,916 relation
+  rays, and 99,476 grouped carriers (298,428 shifted-sheet arcs).
+  Primary/referee run 923,085/189,085 checks. Script/output SHA-256 pairs:
+  `0d5fb1c0...0d17` / `9176e308...e73` and
+  `bd11c07b...f15c` / `481c2b5e...fa60`.
+
 - `lrc14_raw_carrier_boxspline_fourier_duality_thm4392.out` and its
   dependency-free clean-room referee -> exact primal/dual formula for one
   three-speed scale-three failure comb

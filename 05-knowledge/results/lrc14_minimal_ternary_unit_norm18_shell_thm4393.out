@@ -1,0 +1,18 @@
+LRC14 MINIMAL TERNARY-UNIT L1=18 SHELL
+implementation=standalone exact Fraction; raw carriers versus literal phase cells
+minimality=no primitive full-support ternary-unit relation of l1<=16
+patterns=1116,1413,1710,2511,477,558
+row=1116 I0=9/784 I3=9/784 bulk=9/392 threshold=400 height=400 all=501 minimal=497 rays=497 positive=497 components=10730 maximum=36/1225 maximizers={1,11,175} masses=12/1225,12/1225,12/1225 zeros=none
+row=1413 I0=9/637 I3=27/5096 bulk=3/182 threshold=3692/11 height=335 all=876 minimal=866 rays=867 positive=864 components=15456 maximum=12/497 maximizers={5,7,71} masses=3/497,6/497,3/497 zeros={7,11,47},{7,25,29}
+row=1710 I0=9/490 I3=27/6860 bulk=6/343 threshold=2891/13 height=222 all=495 minimal=485 rays=486 positive=485 components=6962 maximum=12/413 maximizers={1,7,59} masses=3/413,6/413,3/413 zeros=none
+row=2511 I0=9/539 I3=9/2695 bulk=6/385 threshold=10285/26 height=395 all=1439 minimal=1429 rays=1430 positive=1428 components=32904 maximum=318/14399 maximizers={11,17,121} masses=57/14399,12/847,57/14399 zeros={7,11,43}
+row=477 I0=54/2401 I3=9/4802 bulk=6/343 threshold=357 height=357 all=789 minimal=785 rays=785 positive=784 components=15756 maximum=144/5831 maximizers={11,17,49} masses=22/5831,100/5831,22/5831 zeros={7,25,29}
+row=558 I0=27/1225 I3=9/4900 bulk=3/175 threshold=18450/49 height=376 all=855 minimal=851 rays=851 positive=851 components=17668 maximum=172/7175 maximizers={1,25,41} masses=22/7175,128/7175,22/7175 zeros=none
+incidence_H=400 sector_incidences=6724 relation_rays=6727 physical_triples=6717 positive_combs=6714 multiplicities=1:6710,2:7
+cross_pattern_overlaps=7
+within_pattern_duplicate_rays=3
+multiple_relation_nonempty=9
+global_maximum=36/1225 at=1116:{1,11,175}
+checks=923085
+semantic_sha256=efb4b729ca88ae3cf97d5201738331e2a3ac5e306932aff552a8d3d5cc014803
+verdict=PASS
