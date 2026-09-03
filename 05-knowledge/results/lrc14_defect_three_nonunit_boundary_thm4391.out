@@ -1,0 +1,9 @@
+L1_16_PRIMITIVE_FULL_SUPPORT_PATTERNS=((1, 1, 14), (1, 2, 13), (1, 4, 11), (1, 5, 10), (1, 7, 8), (2, 7, 7), (4, 5, 7))
+COEFFICIENT_ONE_FIVE plus EXTRA=(2,7,7),(4,5,7)
+PATTERN=(7, 7, 2) maximum=304/12397 winner=(1, 23, 77) parts={-3: Fraction(31, 12397), 0: Fraction(22, 1127), 3: Fraction(31, 12397)} bulk=6/343 cutoff=366 presentations=1754 triples=877 maximizing_presentations=2
+PATTERN=(5, 7, 4) maximum=2178/91945 winner=(5, 37, 71) parts={-3: Fraction(2, 2485), 0: Fraction(58, 2627), 3: Fraction(2, 2485)} bulk=6/343 cutoff=416 presentations=2389 triples=2388 maximizing_presentations=1
+WINNER_SHORT_OWNER_DEGENERATE_RELATIONS (1, 23, 77) ((8, 3, -1),)
+WINNER_SHORT_OWNER_DEGENERATE_RELATIONS (5, 37, 71) ((8, -3, 1),)
+CHECKS_AT_LEAST=128986
+TAIL_ENVELOPE=6/343+18/(7W)
+STATUS=PASS; these two sectors only; universal comb bound and LRC14 OPEN

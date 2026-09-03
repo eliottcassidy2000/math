@@ -1,5 +1,19 @@
 # Script Results Index
 
+- `lrc14_defect_three_nonunit_boundary_thm4391.out` and its dependency-free
+  referee -> the two nonunit norm-`16` sectors and complete shell
+  ([THM-4391](../../01-canon/theorems/THM-4391-lrc14-nonunit-defect-three-sectors-and-complete-norm-sixteen-shell.md)):
+  **PROVED ELEMENTARY RELATIVE TO THM-4373/4387 + VERIFIED-EXACT +
+  INDEPENDENTLY AUDITED; LRC(14) OPEN.** The even coefficient forces the
+  coprime affine chart; integrality is `ell | mk+p delta`. The exact maxima
+  are `304/12397` at `{1,23,77}` for `(2,7,7)` and `2178/91945` at
+  `{5,37,71}` for `(4,5,7)`, both unique as unordered speed sets. With
+  THM-4387 this closes all seven ternary-unit norm-`16` patterns. Each winner
+  has a shorter relation, but every such relation is owner-degenerate modulo
+  three, so bare shortest-vector length is insufficient. Script/output
+  SHA-256 pairs: `db8ad29b...7eeb` / `819f9fc0...70f7` and
+  `ba27d72d...bbcf` / `89199e58...aa5f`.
+
 - `lrc14_defect_three_coefficient_one_boundary_thm4387.out` and its
   dependency-free clean-room referee -> exact three-state roof and sharp
   coefficient-one norm-`16` atlas

@@ -1,0 +1,4 @@
+LRC14 L1=16 EXTRA-SECTOR INDEPENDENT CLEANROOM REFEREE
+{"non_coefficient_one":[[2,7,7],[4,5,7]],"patterns_l1_16":[[1,1,14],[1,2,13],[1,4,11],[1,5,10],[1,7,8],[2,7,7],[4,5,7]],"sectors":[{"areas":["9/4802","117/2401","9/4802"],"bulk":"6/343","cutoff":366,"maximum":"304/12397","name":"277","parts":["31/12397","22/1127","31/12397"],"presentations":1754,"shape":[7,7,2],"shorter_relations":[[1,10,-3],[8,3,-1]],"unordered_triples":877,"winner":[1,23,77],"winner_presentations":2},{"areas":["9/3430","171/1715","9/3430"],"bulk":"6/343","cutoff":416,"maximum":"2178/91945","name":"457","parts":["2/2485","58/2627","2/2485"],"presentations":2389,"shape":[5,7,4],"shorter_relations":[[8,-3,1]],"unordered_triples":2388,"winner":[5,37,71],"winner_presentations":1}],"status":"VERIFIED-EXACT CLEANROOM; UNIVERSAL LRC14 REMAINS OPEN"}
+explicit_checks=106812
+semantic_sha256=cec5837eeb60260325a9a077c85c503c2c7eb594508f60e1ff02793f0d84c51a
