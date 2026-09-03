@@ -9,6 +9,26 @@ Format per entry:
 - Why it was wrong
 - The correct framing
 
+## MISTAKE-542 (2026-09-03, concurrent THM-4399 reservations) -- a clean rebase did not detect a YAML-ID collision
+
+- **What failed:** two sessions checked the live namespace and then reserved
+  `THM-4399` under different filenames within the same short push window. Git
+  rebased both files without a textual conflict because their paths differed.
+- **First failed implication / minimal witness:** a clean fetch/rebase and a
+  nonconflicting filename do not imply that a frontmatter identifier remains
+  unique. Immediately after the push, `rg '^id: THM-4399$'` returned both the
+  late-weight-eighteen response stub and the weight-fourteen boundary stub.
+- **Strongest survivor:** both files were explicit `RESERVED / UNPROVED EMPTY
+  STUB` records with no proved dependencies, so no mathematical claim or proof
+  edge became false.
+- **Repair:** the weight-fourteen row-eleven boundary reservation was moved to
+  `THM-4400`; the earlier live `THM-4399` reservation keeps its identifier.
+- **Reusable rule:** after the final rebase and immediately before every push,
+  search the candidate YAML ID across the entire theorem corpus as well as the
+  candidate filename. Legacy collisions prevent using global zero-duplicate as
+  a gate; the new identifier must occur exactly once. This semantic namespace
+  check must follow, not precede, integration of concurrent commits.
+
 ## MISTAKE-541 (2026-09-03, THM-4380 duplicate evidence ledger) -- pre-canonical hashes survived in the theorem body
 
 - **What failed:** THM-4380's frontmatter correctly named the committed

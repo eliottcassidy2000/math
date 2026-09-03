@@ -1,5 +1,5 @@
 ---
-id: THM-4399
+id: THM-4400
 title: "Source-normal weight-fourteen row-eleven boundary stratification"
 status: RESERVED / UNPROVED EMPTY STUB
 source: root / JC2 and August-preprint continuation session, 2026-09-03
@@ -8,7 +8,7 @@ related:
   - THM-4395-source-normal-weight-fourteen-row-ten-global-affine-absorption
 ---
 
-# THM-4399 -- source-normal weight-fourteen row-eleven boundary stratification
+# THM-4400 -- source-normal weight-fourteen row-eleven boundary stratification
 
 **RESERVED / UNPROVED EMPTY STUB.**
 
