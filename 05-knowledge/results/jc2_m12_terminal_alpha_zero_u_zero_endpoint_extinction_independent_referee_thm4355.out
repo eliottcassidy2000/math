@@ -1,0 +1,14 @@
+THM4355_TERMINAL_ALPHA_ZERO_INDEPENDENT_REFEREE=PASS
+scope=Z=beta_11=zeta_3=W=xi_10=U=alpha_11=0;K!=0
+exact_supports=64;theta_nonzero=40;theta_zero=24;exact_fans=12
+fan_counts=BU+FUT+T:20,C4e+BETA+FET+T:8,BDT+T:8,C3e+BETA+FET+T:2,CTH+BTH+T:2,BU+FUE+EETA:6,BU+EU:6,C4e+BETA+EETA:4,BDELTA+EDELTA:4,C3e+BETA+EETA:2,CPHI+BPHI+EDELTA:1,BDEEP:1
+hostile_atlas=128_supports;hostile_fans=17
+collision_walls=A4:L5,A15:L15,A2:L3,A3:L4
+A4_depths=1,2,3,4;orders=115,35,95,85;genus_restored=2
+A2_depths=1,2;orders=13,11;genus_restored=1
+A3_depth=1;order=12;two_ends=same_complement;graph_increment=1;genus_restored=8
+A15_depths=1,2,4;orders=116,16,14;ends=different_complements;graph_increment=0;genus_restored=9
+source_target_bases=A4:5/30,A2:3/6,A3:4/12,A15:8/24
+verdict=PASS_RELATIVE_TO_INHERITED_TOROIDAL_GOOD_TARGET_PROPER_FLAT_INTERFACES
+nonconsequence=JC2_DC2_AND_SEAM_ENTRY_REMAIN_OPEN
+CHECKS=774

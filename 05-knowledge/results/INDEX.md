@@ -1,5 +1,19 @@
 # Script Results Index
 
+- `jc2_m12_terminal_alpha_zero_u_zero_endpoint_extinction_thm4355.out` and
+  its independent clean-room referee -> terminal `alpha_11=0,U=0`
+  endpoint extinction
+  ([THM-4355](../../01-canon/theorems/THM-4355-terminal-alpha-zero-u-zero-endpoint-planar-jacobian-extinction.md)):
+  **PROVED RELATIVE TO THM-4230/4327/4341/4344/4352 + VERIFIED-EXACT +
+  INDEPENDENTLY HOSTILE-AUDITED; JC(2) OPEN.** The 64 exact supports split
+  into 40 `Theta!=0` and 24 `Theta=0` supports in twelve fans. The complete
+  collision list is odd `A4/A2`, same-complement even `A3`, and
+  different-complement two-branch `A15`; their positive-genus tails have
+  positive primitive orders. With THM-4354 this closes all `U=0,K!=0`.
+  Script/output SHA-256 pairs: `9e27fb39...03d12c98` /
+  `f81477c1...6952b9a7` and `b9a5b3f0...18bee4ea` /
+  `78e1fede...f3a0730b`.
+
 - `jc2_m12_first_normal_owner_u_zero_endpoint_extinction_thm4354.out` and its
   independent clean-room referee -> first-normal-owner `U=0` endpoint
   extinction

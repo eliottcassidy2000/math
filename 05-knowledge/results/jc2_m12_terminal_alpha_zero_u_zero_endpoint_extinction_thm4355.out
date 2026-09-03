@@ -1,0 +1,17 @@
+THM4355_TERMINAL_ALPHA_ZERO_U_ZERO_ENDPOINT_CERTIFICATE=PASS
+gate=Z=beta=zeta=W=xi=U=alpha=0;K!=0
+seam=K=2848/45-(7/6)*Delta
+literal_source=16_rows;Theta_nonzero=9_rows/19_points;Theta_zero=8_rows/18_points
+exact_supports=64;Theta_nonzero=40;Theta_zero=24
+exact_fans=12;Theta_nonzero=5[20,8,8,2,2];Theta_zero=7[6,6,4,4,2,1,1]
+natural_support_index=bijective_1_through_64;odd_square_triangular=yes
+hostile_scope=Theta_nonzero:128_keyed/96_supports/9_fans;Theta_zero:128_keyed/72_supports/11_fans
+hostile_union=256_keyed/168_distinct_supports/20_fans;adversarial_not_realizability
+clean_global_genera=Theta_nonzero:11,10,9,10,8;Theta_zero:11,11,10,8,10,7,6
+collision_walls=A4:eta^2=4*u*Theta;A15:Delta+Theta=0;A2:Phi^2=4*e*Theta;A3:Phi^2=4*K*Delta
+A4=depths_1,2,3,4;one_end;genera_2,1,1,0;delta_0,1,1,2;orders_115,35,95,85
+A15=depths_1,2,4;two_ends_to_distinct_complements;packets_2rational7nodes,2rational6nodes,genus3;orders_116,16,14
+A2=depths_1,2;one_end;genera_1,0;delta_0,1;orders_13,11
+A3=forced_depth_1;two_ends_same_complement;genus_1;delta_0;order_12;graph_plus_1
+critical_depth_rigidity=A4_c4=-99/43;A2_c2=-99/43;A15_deep_product=1472/15;A3_c1=e=-1376/135
+theta_checks=438;boundary_and_union_checks=331;CHECKS=769

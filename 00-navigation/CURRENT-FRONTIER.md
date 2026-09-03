@@ -352,9 +352,8 @@ lift/phase clocks.
   THM-4340/4342/4344 close `U=0,WZ!=0`, `K=0`, and
   `W=0,U*K*xi_10!=0`, respectively; `U=0,WZ=0` remains.
   THM-4350/4351 close `W=xi_10=0,U*K!=0`; THM-4353 closes `K=0,U!=0`.
-  [THM-4354](../01-canon/theorems/THM-4354-first-normal-owner-u-zero-endpoint-planar-jacobian-extinction.md)
-  closes `U=0,K*alpha_11!=0`; `alpha_11=0`, `U=K=0`, and seam
-  entry remain.
+  THM-4354/4355 close all `U=0,K!=0`. The `U=K=0` corner and seam entry
+  remain.
   Exceptional quartic: THM-3703/3737 give grammar/image, THM-4034 the
   conductor, and THM-4039/4043/4046 reach `J_7`, obstruct `J_8`, and close
   critical `H`. [THM-4054](../01-canon/theorems/THM-4054-exceptional-affine-simple-zero-retained-packet.md)
