@@ -58,7 +58,10 @@ for `d>=7`. THM-3742 is a wrong-torsor Pell `C14`; THM-3744's safe control is
   close ternary-unit shells through norm `20`; 4398 closes 14 one-zero shapes
   through norm `14` (one equality comb). THM-4392/4396 give Poisson duality
   and an 11-site/pair closure of `(11,13,17)` whose quotient is strict on
-  equality. Arbitrary nonresonance and entry are open.
+  equality. THM-4409 restores third-sheet component incidence: its rational
+  degree-zero max-flow certificate closes all `2,910` ternary-unit triples
+  through height `79` and is exact on `(1,5,11)` for every finite pair degree.
+  Universal height, arbitrary nonresonance, and entry are open.
 - **Residual ranks:** THM-4333/4338 close fixed-pool ranks three/four, not arbitrary entry.
 - **PROVED:** [THM-2928](../01-canon/theorems/THM-2928-critical-seven-comb-grid-tensorization-and-drift-tariff.md)/2941: literal zero/one/two/three-drift sectors are empty; `k=2,3` are finite.
 - **Orthogonal routes.** THM-1017 is HYP-6820; THM-2047/2050 keep phase/exit; THM-731/2048 prune; THM-1290 ends at `55`; HYP-8900 nonuniform.

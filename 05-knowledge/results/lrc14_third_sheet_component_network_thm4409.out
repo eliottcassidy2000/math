@@ -1,0 +1,29 @@
+LRC THIRD-SHEET DEGREE-ZERO COMPONENT-BIT CENSUS
+status=PASS FINITE_EXACT; LRC14=OPEN
+universe=sorted primitive distinct positive odd speeds prime_to_3; max_speed<=79
+eligible_speed_count=27; triples=2910
+certificate=6/343+(48/49)*touch_pair_length-(1/49)*disjoint_third_length
+closed=2909; failed=1
+network_capacity=max_transport_flow(contact_graph; component_lengths)
+edge_capacity=sum_over_contact_edges(min(pair_component_length,third_component_length))
+network_strict_improvements_over_edge_capacity=0
+capacity_closed=2910; capacity_failed=0; capacity_exact=1747; capacity_target_equalities=1
+physical_controls=strict:2909,equality:1,above:0
+raw_carrier_controls=all_triples; carrier_count_range=(0, 22)
+unique_failure=(1, 5, 11); best_pair=(0, 2); upper=1506/18865; exact_control=6/77
+failure_sidecar=network_capacity:6/77,edge_capacity:6/77,touch_length:6/77,disjoint_third_length:24/35,pair_pieces:12,touches:6,third_pieces:32,disjoint:26,edges/nested/crossing:(6, 6, 0)
+equality_network_rows=(((0, 1), '6/77', (6, 6, 0)), ((0, 2), '6/77', (6, 6, 0)), ((1, 2), '6/77', (6, 6, 0)))
+contact_bit_equality_slack=36/18865
+pair_success_counts=(((0, 1), 2535), ((0, 2), 2854), ((1, 2), 2833))
+capacity_pair_success_counts=(((0, 1), 2818), ((0, 2), 2855), ((1, 2), 2859))
+best_pair_counts=(((0, 1), 198), ((0, 2), 952), ((1, 2), 1760))
+capacity_best_pair_counts=(((0, 1), 400), ((0, 2), 533), ((1, 2), 1977))
+capacity_weakest_strict=triple:(1, 11, 23),pair:(0, 1),upper:12/161,margin:6/1771
+weakest_closed=triple:(5, 49, 59),pair:(1, 2),upper:11022/141659,margin:180/1558249
+strongest_margin=triple:(13, 19, 31),pair:(0, 1),upper:0/1,margin:6/77
+exact_masses_used_for_selection=no; physical_and_raw_masses_postselection_controls=yes
+optimization_safe_checks=yes
+checks=43723
+rows_sha256=c003bef602ccaee59ff17bfb9030f5eb9b34b88f73e0d2ff1d9560df2d85371c
+semantic_sha256=dde6b24ed458a109e95f1cf5529e0633426f40b6d089f9a3eee50709da5c807e
+verdict=PASS

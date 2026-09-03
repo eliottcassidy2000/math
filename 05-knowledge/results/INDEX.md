@@ -33,6 +33,21 @@
   datum is exactly third-sheet incidence. Primary/referee hashes:
   `1b35c8a4...25d4` / `16146a74...ab6b` and `7862e0b5...3044` /
   `7b5e01b5...1384` (raw LF bytes).
+
+- `lrc14_third_sheet_component_network_thm4409.out` and its standalone
+  clean-room audit -> third-sheet contact restores a finite max-flow sidecar
+  to the exact-pair hybrid
+  ([THM-4409](../../01-canon/theorems/THM-4409-lrc14-third-sheet-component-network-certificate.md)):
+  **PROVED ANALYTICALLY + VERIFIED-EXACT + INDEPENDENTLY AUDITED; LRC(14)
+  OPEN.** The signed identity `mu=sum(G+R-L)` and feasible overlap flows give
+  `G+Cap(1-g)-max(0,G-Cap(g))`. At degree zero this is a rational
+  component-length capacity. Minimizing over coordinate pairs closes all
+  `2,910` primitive distinct ternary-unit triples through height `79`, and the
+  nested-matching graphs of `(1,5,11)` make the certificate exactly `6/77`
+  for every finite anisotropic pair degree. Universal height, entry, and
+  synchronization remain open. Primary/referee hashes: `03cbe0a2...66bf` /
+  `793049ba...577b` and `fe7fbe70...348` / `4e121a5d...d799` (raw LF bytes).
+
 - `lrc14_norm18_vanishing_carrier_gap_thm4402.out` and its dependency-free
   exact referee -> an infinite minimal norm-`18` family with vanishing live
   component length

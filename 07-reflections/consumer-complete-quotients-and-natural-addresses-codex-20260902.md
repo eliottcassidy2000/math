@@ -66,6 +66,7 @@ corresponding unpaid gluing consumers.
 | THM-4365's odd tail | the same constant quotient `Q` | metric exit `E_x` | residue/address and reciprocal scale; `P=48679,95873` even share `rho=1` but have different exits |
 | THM-4367's strict-active cells | primitive ray `(a,b)`, equivalently `(kappa,b)` | metric exit `E_x=kappa/(14b)` | scale `g`; the quotient is exact for the exit, but the four scales over `29/1050` have different physical binders and split after `P->P+2` |
 | THM-4396's three-sheet comb | finite two-factor spectrum plus exact ordered-pair geometry | local failure-mass upper certificate | third-sheet incidence; `(1,5,11)` has positive slack on an open interval for every finite pair degree |
+| THM-4409's graph refinement | third-sheet component identities, contact graph, and separate vertex capacities for `g,1-g` | sharper local failure-mass upper certificate | overlap endpoints, edge integrals, and coupling of the two flows; `(1,19,79)` is already a strict fibre |
 | THM-4364/4368 diagonal packets | boundary pair `(u,v)` or its triangular address | complete fixed-order trace | source exponents inside the fibre `mu(N,n0)`; reducing `(u,v)` to its primitive ray instead destroys trace scale |
 | THM-4366's `U=0` pullback | two fixed-bank rank-one hierarchy flags | joint source restriction | ambient independence does not prevent the two opposite-module consumers from becoming proportional by `-4/3` on the selected source graph |
 | THM-4361's six sign-sheet points | `Y=P^2` | signed `H_C` | sign sheet; the two points over one `Y` have opposite values |
@@ -361,6 +362,17 @@ incidence, couple pair views, or change the representation.  Merely raising
 the cutoff cannot repair a quotient that has erased the sign-bearing
 interface.
 
+THM-4409 performs the next refinement step without restoring the full triple
+partition.  On each sheet it retains the bipartite contact graph between pair
+components and third-sheet components, together with vertex integrals of `g`
+and `1-g`.  Actual overlap integrals form a feasible fractional flow, so two
+maximum-flow capacities preserve the upper-bound consumer.  At degree zero
+the formula collapses to a rational component-length capacity.  The sidecar
+is exactly sufficient on `(1,5,11)` because every graph is a nested matching,
+yet it is not consumer-complete: `(1,19,79)` has physical mass `108/10507`
+and best graph bound `8/553`.  This is a useful middle quotient—strictly more
+informative than sheet blindness and strictly cheaper than overlap geometry.
+
 ## 6. Generated sharp tasks
 
 1. **LRC operation closure.** THM-4367 resolves the static exit-collision
@@ -394,11 +406,11 @@ interface.
    invariance only after checking their exact set-theoretic quantifiers. These
    lemmas separate renumbering, static quotienting, and composition-compatible
    state before another domain-specific code is introduced.
-8. **Hybrid third-sheet closure.** Refine THM-4396 by adjoining the least
-   third-sheet occupancy sidecar on its 24 rational pair pieces. Test whether
-   one certified negative patch suffices, or whether exactness forces the full
-   triple-incidence partition. The `(1,5,11)` open intervals are the mandatory
-   hostile; `(11,13,17)` is the positive finite-certificate control.
+8. **Component-network height frontier.** Determine whether the minimum of
+   THM-4409's three rational degree-zero capacities stays at most `6/77` at
+   arbitrary height, or find the first exact hostile above `79`.  Separately,
+   refine the strict fibre `(1,19,79)` by adding one coupled-flow or edge-mass
+   coordinate and test whether it is the minimal consumer-complete repair.
 
 The reusable rule is: name the consumer, test one quotient fibre, retain the
 first interface it reads, and only then encode the surviving structured tuple
