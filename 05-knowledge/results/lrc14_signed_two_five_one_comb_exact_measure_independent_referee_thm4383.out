@@ -1,0 +1,28 @@
+THM-4383 CLEAN-ROOM EXACT AUDIT
+status=PASS
+scope=primitive distinct positive odd 3-units admitting signed abs-coefficients (2,5,1)
+relation=5*b=2*sigma*p+tau*q, sigma,tau in {+1,-1}
+owner_defect=delta=2*sigma*n_p+tau*n_q-5*n_b=0
+quotient=k=b*n_p-p*n_b; K=q*n_p-p*n_q=5*tau*k; owner_gate=3_not_dividing_k
+A=3*abs(q-p)/70; B=3*(q+p)/70
+measure=6/245+10/(p*q)*(E(B)-E(A))
+large_product_ceiling_at_425=404/12495; target=12/371; strict=True
+small_product_presentations=75
+sign_counts=(+1,+1):40,(+1,-1):19,(-1,+1):16,(-1,-1):0
+endpoint_gcd_counts=1:69,5:6
+gcd5_presentations=6
+gcd5_row=(5,7,25,+1,+1),mu=4/175
+gcd5_row=(5,13,55,+1,+1),mu=12/385
+gcd5_row=(5,11,65,-1,+1),mu=12/455
+gcd5_row=(25,11,5,+1,+1),mu=4/175
+gcd5_row=(35,13,5,+1,-1),mu=6/245
+gcd5_row=(55,23,5,+1,+1),mu=12/385
+gcd5_hostile=(p,b,q,x)=(5,7,25,13/1050);K=-5;middle_numerator=1;endpoint_K_gate=FalsePositive
+full_x_total_components=2190
+full_x_wall_cells=97809; failure_cells=2190
+small_product_max=12/371; unique=(p,b,q,sigma,tau)=(1,11,53,+1,+1)
+cross_duplicate_251=vectors:24,pairs:276,positive_rays:60,unique_positive_rays:45,eligible_rays:0
+cross_251x121=vectors:24x12,pairs:288,positive_rays:60,unique_positive_rays:39,eligible_rays:0
+cross_251x141=vectors:24x12,pairs:288,positive_rays:72,unique_positive_rays:51,eligible_rays:0
+bounded_hostile_height=199; triples=47499; signed251=825; duplicate=0; overlap121=0; overlap141=0
+optimization_safe_runtime_checks=971507

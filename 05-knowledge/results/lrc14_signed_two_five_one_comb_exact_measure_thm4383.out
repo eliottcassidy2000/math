@@ -1,0 +1,22 @@
+status=PASS
+tuple=(1,11,53) measure=12/371 physical_cells=385
+lattice=(n1,n11,n53)=t*(1,11,53)+k*(0,-1,-5), 3_does_not_divide_k
+nonzero_components=k=-2,-1,1,2; each_length=3/371
+delta_hostile=y=1/53 n=(0,0,1) owners=(0,0,1) delta=-1
+gcd5_hostile=(p,b,q)=(5,7,25) measure=4/175
+formula=6/245+10/(p*q)*(E(B)-E(A))
+strict_bulk_threshold=p*q>=425
+finite_rows=75 direct_controls=21 g5_controls=2
+branch_kinds=2p-q,q-2p,sum
+collision_rays=251x251:45,251x121:39,251x141:51; valid=0
+top10:
+  (p,b,q)=(1,11,53) mu=12/371
+  (p,b,q)=(55,23,5) mu=12/385
+  (p,b,q)=(5,13,55) mu=12/385
+  (p,b,q)=(47,19,1) mu=10/329
+  (p,b,q)=(59,25,7) mu=12/413
+  (p,b,q)=(31,11,7) mu=6/217
+  (p,b,q)=(1,25,127) mu=24/889
+  (p,b,q)=(29,13,7) mu=38/1421
+  (p,b,q)=(193,77,1) mu=36/1351
+  (p,b,q)=(1,19,97) mu=18/679

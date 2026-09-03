@@ -1,5 +1,17 @@
 # Script Results Index
 
+- `lrc14_signed_two_five_one_comb_exact_measure_thm4383.out` and its
+  optimization-safe full-circle clean-room referee -> sharp signed-`(2,5,1)`
+  triple-comb bound
+  ([THM-4383](../../01-canon/theorems/THM-4383-lrc14-signed-two-five-one-comb-exact-measure-and-sharp-maximum.md)):
+  **PROVED ELEMENTARY RELATIVE TO THM-4373 + VERIFIED-EXACT + INDEPENDENTLY
+  AUDITED; LRC(14) OPEN.** Labeled owners kill the bounded integer defect;
+  the coprime `(p,b)` quotient and middle-integrality sidecar handle the
+  endpoint-`gcd=5` seam. The unique primitive maximum is `12/371` at
+  `{1,11,53}`. The referee executes 971,507 live checks, including 97,809
+  full-`x` wall cells. Script/output SHA-256 pairs: `4edcec46...6d9d` /
+  `7b12211f...fd0e` and `9278e8eb...b60b` / `51392fcb...f3a2`.
+
 - `jc2_source_normal_weight12_row12_extinction_thm4380.out` and the checked-in
   strict-`Phi*U!=0` clean-room referee -> full fixed source-normal
   residual-weight-at-most-twelve extinction
