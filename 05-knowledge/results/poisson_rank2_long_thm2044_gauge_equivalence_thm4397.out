@@ -1,0 +1,15 @@
+THM-4397 RANK-TWO POISSON GAUGE EQUIVALENCE
+source_generator=K=q^3*(63*(xq)^2+318*xq+601)/840
+source_map=U_K:(x,q,p,z)->(x,q,p+K_x,z+K_q)
+target_map=tau:(r,t,d,s)->(r,s,d,-t)
+identity=Phi_repo=tau o Phi_paper o U_K
+K_x= q**4*(21*q*x + 53)/140
+K_q= q**2*(105*q**2*x**2 + 424*q*x + 601)/280
+paper_profile_(terms,degree)= ((2, 3), (47, 15), (139, 23), (22, 11))
+repo_profile_(terms,degree)= ((2, 3), (35, 21), (246, 48), (78, 30))
+fibre_transport=paper fibre under U_K^{-1} equals THM-2044 fibre
+scope=polynomial symplectic right-equivalence over Q
+weyl_gauge=U_K and tau lift to exact A2 Weyl automorphisms
+consequence=finite A2 quantizability and termination are gauge-invariant
+NO_CLAIM=DC2_or_JC2_or_existence_of_an_A2_quantization
+RESULT=PASS
