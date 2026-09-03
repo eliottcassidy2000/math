@@ -1,0 +1,39 @@
+THM-4401 INDEPENDENT CASIMIR-LEAF AUDIT
+source: Long arXiv:2608.23777 core formulas; no THM-4401 primary import
+base field: characteristic zero; rho is inverted in the nonzero-leaf block
+
+NONZERO CASIMIR LEAF R=rho
+coordinate ring = K[t,t^-1,u], with t=1/x and u=t(1+xy)
+x=1/t, y=u-t, beta=5*t^2-3*t*u-rho*t^3
+S = -3*rho*u**2 + 2*t + 4*u
+T = rho*u**3/2 - t*u/2 - u**2/2
+Jac_(t,u)(S,T) = -t (reversing S,T changes the sign)
+P_rho(U) = rho*U^3-2*U^2+S*U+4*T
+P_rho(u)=0 and P_rho'(u)=2*t
+the Laurent leaf is exactly the simple-marked-root locus t!=0
+for rho!=0 the full incidence completion is finite flat of degree 3
+Disc_U(P_rho) = -4*S**3*rho + 4*S**2 - 144*S*T*rho - 432*T**2*rho**2 + 128*T
+pullback Disc = 4*t^2*(9*rho**2*u**2 - 8*rho*t - 12*rho*u + 4)
+the second factor is the discriminant of the two unmarked roots
+unique triple-root target: (S,T)=(4/(3*rho),-2/(27*rho**2)), root=2/(3*rho)
+geometric image of the punctured leaf = A^2 minus that triple-root point
+
+R=0 BOUNDARY
+R=x*alpha and 1=alpha/2+x(3*y+x*beta)/2, so CRT gives two components
+x=0 component: (S,T)=(y,-beta/2-2*y^2), a polynomial automorphism
+alpha=0 component: K[t,t^-1,u] with the rho=0 formulas above
+P_0(U)=-2*U^2+S*U+4*T
+standard quadratic discriminant Delta_2=S^2+32*T, pullback Delta_2=4*t^2
+the rho=0 specialization of the cubic discriminant is 4*Delta_2=16*t^2
+after b=S, Delta_2=S^2+32*T, the Laurent map is (t,b)->(b,4*t^2)
+target (S,T)=(0,1/8) has one plane point and the Kummer pair t=+/-1
+
+PUNCTURE / COMPLETION FIREWALL
+adjoining t=0 gives the unique polynomial extension on this (t,u)-plane
+its Jacobian is -t, so the added line is ramified, not Keller
+on that line P_rho(u)=P_rho'(u)=0: it is the marked-root ramification divisor
+unmarked-root collisions may occur with t!=0 and do not spoil etaleness
+scope: this does not exclude another affine modification or another cubic filling
+
+CHECKS 51
+PASS

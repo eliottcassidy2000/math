@@ -1,0 +1,15 @@
+PASS 36 exact gates
+R=rho leaf ring (rho!=0): k[t,t^-1,u]
+S = -3*rho*u**2 + 2*t + 4*u
+T = rho*u**3/2 - t*u/2 - u**2/2
+Jac_(t,u)(S,T) = -t
+marked-root polynomial = S*U + 4*T + U**3*rho - 2*U**2
+P'(u) on incidence = 2*t
+discriminant = -4*(S**3*rho - S**2 + 36*S*T*rho + 108*T**2*rho**2 - 32*T)
+discriminant pullback = -4*t**2*(-9*rho**2*u**2 + 8*rho*t + 12*rho*u - 4)
+rho!=0 completion: finite flat degree 3; critical divisor t=0
+rho=0 curved completion: finite flat degree 2; S^2+32*T=4*t^2
+rho=0 plane component: (y,beta)->(S,T)=(y,-beta/2-2*y^2), an automorphism
+fixed (T,S)=(1/8,0): R(h)= -h*(h - 2)*(h + 2)/2
+fixed-slice deleted factor = -(3*h**2 - 4)/4
+literal planar four-output Poisson bracket matrix determinant = 1
