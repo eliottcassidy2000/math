@@ -5,7 +5,7 @@ status: RESERVED / UNPROVED EMPTY STUB
 source: root + quartic_niche / JC2 continuation session, 2026-09-03
 depends_on: []
 related:
-  - THM-4034-exceptional-quartic-explicit-normalization
+  - THM-4034-exceptional-quartic-global-conductor-degree-178
 ---
 
 # THM-4381 -- Exceptional quartic seminormalization and conductor-fibre classification
