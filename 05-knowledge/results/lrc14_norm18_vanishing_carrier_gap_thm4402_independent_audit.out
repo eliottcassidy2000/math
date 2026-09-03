@@ -1,0 +1,17 @@
+LRC14 NORM-18 VANISHING RAW-CARRIER GAP -- INDEPENDENT EXACT AUDIT
+family: m=6t+5, t>=2; w=(1,m,16m-1); c=C=(1,-16,1)
+symbolic relation: 1-16m+(16m-1)=0; ||c||_1=18
+explicit lift: n=(0,1,16); w cross n=C; owners=(0,1,2); defect=0
+literal component: (221/[14W],227/[14W]), W=16m-1
+exact component length: 3/[7(16m-1)]
+analytic minimality: no nonzero relation has l1<=16; odd l1 is impossible
+hostile scan: 1002 admissible m values; full relation minimum=18 throughout
+sample m=17 W=271 L=3/1897 shortest_relation_vectors=4
+sample m=101 W=1615 L=3/11305 shortest_relation_vectors=2
+sample m=1001 W=16015 L=3/112105 shortest_relation_vectors=2
+sample m=6000005 W=96000079 L=3/672000553 shortest_relation_vectors=2
+sample m=60000005 W=960000079 L=3/6720000553 shortest_relation_vectors=2
+conclusion: infimum of positive live-carrier lengths in this minimal norm-18 shell is 0
+scope: refutes only a uniform per-component lower quantum; not a total-comb bound or LRC(14)
+checks=21084
+PASS

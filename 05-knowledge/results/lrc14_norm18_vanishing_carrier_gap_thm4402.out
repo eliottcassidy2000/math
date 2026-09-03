@@ -1,0 +1,29 @@
+THM-4402 LRC14 NORM-18 VANISHING LIVE-CARRIER GAP
+family: m=6t+5, t>=2; w=(1,m,16m-1)
+primitive distinct positive odd ternary-unit speed triple: PASS
+relation/carrier: c=C=(1,-16,1), ||c||_1=18
+explicit lift: n=(0,1,16), w cross n=C, c dot n=0
+speed residues mod 3: (1, 2, 1)
+owner residues mod 3: (0, 1, 2)
+coefficient vectors exhausted through l1=17: 7174
+largest nonidentity integer root m: 16
+all relation norms are even for odd speeds: PASS
+carrier formula terms:
+  q1 = 3/7
+  q2 = 3/(7*m)
+  q3 = 3/(7*(16*m - 1))
+  q4 = (3*m - 11)/(14*m)
+  q5 = 8*(3*m - 14)/(7*(16*m - 1))
+  q6 = 17*(3*m - 1)/(14*m*(16*m - 1))
+differences q_i-3/[7(16m-1)]:
+  d1 = 6*(8*m - 1)/(7*(16*m - 1))
+  d2 = 3*(15*m - 1)/(7*m*(16*m - 1))
+  d3 = 0
+  d4 = (48*m**2 - 185*m + 11)/(14*m*(16*m - 1))
+  d5 = (24*m - 115)/(7*(16*m - 1))
+  d6 = (45*m - 17)/(14*m*(16*m - 1))
+L_w(C)= 3/(7*(16*m - 1))
+limit as m tends to infinity: 0
+scope: no uniform positive lower gap for a live component in the minimal norm-18 shell
+NO_CLAIM=LRC14_or_any_scale-dependent_owner-conditioned_bound
+RESULT=PASS

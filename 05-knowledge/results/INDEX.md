@@ -13,6 +13,19 @@
   datum is exactly third-sheet incidence. Primary/referee hashes:
   `1b35c8a4...25d4` / `16146a74...ab6b` and `7862e0b5...3044` /
   `7b5e01b5...1384` (raw LF bytes).
+- `lrc14_norm18_vanishing_carrier_gap_thm4402.out` and its dependency-free
+  exact referee -> an infinite minimal norm-`18` family with vanishing live
+  component length
+  ([THM-4402](../../01-canon/theorems/THM-4402-lrc14-norm-eighteen-vanishing-live-carrier-gap.md)):
+  **PROVED ELEMENTARY RELATIVE TO THM-4386 + VERIFIED-EXACT + INDEPENDENTLY
+  AUDITED; LRC(14) OPEN.** For every `m=5 mod 6`, `m>=17`, the triple
+  `(1,m,16m-1)` has shortest relation `(1,-16,1)` of norm `18`, and the
+  explicit zero-defect carrier has length `3/[7(16m-1)]`. Hence no uniform
+  positive component quantum exists even after fixing pattern, defect, and
+  owners. This blocks only proof routes whose last step needs that quantum;
+  scale-sensitive and aggregate bounds remain open. Primary/referee hashes:
+  `d1dccd6e...22fd` / `fb470ef1...fe77` and `f8d1187f...3525` /
+  `e583efb5...e2b5` (raw LF bytes).
 
 - `lrc14_one_zero_relation_residue_dichotomy_small_norm_atlas_thm4398.out`
   and its standalone independent audit -> the complete one-zero-mod-three

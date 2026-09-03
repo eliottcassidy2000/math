@@ -182,7 +182,8 @@ w_m=(1,m,16m-1), c=C=(1,-16,1), m=5 (mod 6), m>=17
 has primitive minimal relation norm `18`, but its live carrier component is
 `3/[7(16m-1)]`, which tends to zero.  This is an algebraic obstruction to a
 uniform-gap transfer, not an obstruction to `LRC(14)` itself.  The independent
-audit and canonical status are handled separately from this source intake.
+audit and exact no-go scope are in
+[THM-4402](../../01-canon/theorems/THM-4402-lrc14-norm-eighteen-vanishing-live-carrier-gap.md).
 
 ### Tournament firewall
 
