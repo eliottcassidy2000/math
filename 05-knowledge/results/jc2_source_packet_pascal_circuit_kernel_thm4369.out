@@ -1,0 +1,15 @@
+THM-4369 source-packet Pascal circuit primary: PASS
+checks=11772233
+ambient_triangle_cases=40 relation_coordinates=437060 summed_kernel_rank=10660
+source_cone_cases=1475 source_nodes=183872 source_local_relations=157922
+boundary_normal_form_coordinates=1405508 ballot_abs_coefficient_sum=16546290751
+direct_modular_rank_cases=253 primes=101,1009
+source_monomial_realizers=1136236 within_type_fibre_relations=952364
+ambient_kernel=local_cells;source_kernel=source-internal_cells
+source_image_G=(1+w)^rho*Z[w]_{<=R-rho}
+source_image_F=(1-z)^(rho-1)*Z[z]_{<=R-rho}
+local_source_circuit:ell=10;addresses=12-17+18;types=(N,n0):(4,6)-(5,6)+(4,7);monomials=p^2y^2-u p^5+u p^2y^2
+wall_crossing_hostile:ell=10;addresses=11-16+17;pair=(1,6)_invalid_since_n0=5<N=6
+source_prefix:ell=10,R=8;nodes=10;rank=5;nullity=5;boundary_addresses=11,23,31,32,33
+ballot_probe:ell=10,R=8,parent=(2,4);normal=(2, 6):1,(3, 6):-2,(4, 5):3,(5, 4):-1
+semantic_digest=9debeff6c401879cda7f9b4e58eee61604c25be1fc3a78ba21d1e923d5f3f5b6

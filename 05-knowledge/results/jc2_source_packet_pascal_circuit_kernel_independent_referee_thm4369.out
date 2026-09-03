@@ -1,0 +1,17 @@
+THM-4369 clean-room independent verifier: PASS
+checks=5090486
+ambient_cases=28 ambient_local_cells=3654 ambient_boundary_coefficients=7714
+source_cases=615 source_nodes=31612 source_local_circuits=24787
+boundary_matrix_coordinates=89705 boundary_normal_coordinates=151368
+source_monomial_realizers=130151 within_fibre_differences=98539 independent_lift_choices=502344
+literal_ballot_cases=144 literal_stopped_paths=82371
+universe:ambient_R=1..28;source_ell=2..42;R=f..f+14;literal_ballot_d,H=1..12
+kernel:ambient=all_local_cells;source=source_internal_local_cells;integral_unit_pivots=yes
+image:G=(1+w)^rho*Z[w]_{<=R-rho};F=(1-z)^(rho-1)*Z[z]_{<=R-rho}
+named_circuit:ell=10;types=(2,4)-(2,5)+(3,4);addresses=12-17+18;monomials=p^2y^2-u*p^5+u*p^2y^2
+wall_hostile:ell=10;(1,5)-(1,6)+(2,5);addresses=11-16+17;(1,6)_not_source
+top_only_hostile:ell=10;R=8;top_nodes=3;full_boundary=5;missing_wall_valuation=0
+ballot_probe:ell=10;R=8;(2,4)->(2, 6):1,(3, 6):-2,(4, 5):3,(5, 4):-1
+reflection_hostile:ell=10;(3,6)_source;(6,3)_not_source;address_sum=65
+scope:finite_packet_kernel_only;JC(2)=OPEN
+semantic_digest=fe941e6531831a96180f0fe06b5ceedefb1e81ba108d755ecdd2a574fa958061
