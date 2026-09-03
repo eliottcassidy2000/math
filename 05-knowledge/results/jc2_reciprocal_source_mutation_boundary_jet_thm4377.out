@@ -1,0 +1,30 @@
+THM-4377 reciprocal source mutation and boundary-jet audit
+universe: ell=2..90, rho<=w<=180, 0<=d<s
+bilateral cases checked: 332295
+explicit assertions: 13370117
+observed wall-pattern counts: a=588, ab=16875, ac=2457, b=297660, none=14715
+largest symmetric e-fibre defect: 88
+first maximum control (ell,w,d): (89, 88, 44)
+
+no-match boundary control ell=3, (u,v)=(2,1)<->(1,2)
+  plus e=(1,), minus e=(0,)
+  matched e=()
+
+THM-4375 first hostile ell=10, (u,v)=(5,4)<->(4,5)
+  plus e=(2, 3, 4), minus e=(0, 1, 2, 3)
+  matched e=(2, 3)
+  b-wall e=(4,)
+  a-wall e=(0, 1), c-wall e=()
+  graded difference H_+-H_-=r^4-r-1
+
+two-target-wall control ell=15, (u,v)=(6,5)<->(5,6)
+  plus e=(5,), minus e=(3, 4, 5, 6)
+  a-wall e=(3, 4), c-wall e=(6,)
+
+full boundary-jet control ell=10, (u,v)=(12,8)<->(8,12)
+  plus e=(0, 1, 2, 3, 4, 5, 6, 7, 8), minus e=(0,)
+  matched e=(0,)
+  cokernel b-degrees=(0, 1, 2, 3, 4, 5, 6, 7)
+  stable graded defect=r^8+r^7+r^6+r^5+r^4+r^3+r^2+r
+
+PASS: mutation, three-wall decomposition, sharp clocks, and graded cokernel agree
