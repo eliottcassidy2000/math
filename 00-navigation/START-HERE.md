@@ -52,17 +52,16 @@ Then read frontier, guardrails, theorem; logs are history.
 11. **Support is not multiplicity.** THM-2000/2005/2352/3359/3362/3382
     separate collision, phase and address; THM-3425 needs period plus parity.
     Composite rank seven and FC(3) remain open.
-12. **JC fails from dimension three; JC(2), DC(2) are open.** THM-2084 gives
-    `M=10`; THM-4248/4226 close `M=11/13`; THM-4290--4356 close the staged
-    `M=12` atlas. THM-4380 closes the complete fixed THM-4308
-    residual-weight-at-most-twelve source family by row twelve; THM-4385
-    identifies its row-ten projection as `E minus E[2]`. THM-4389 shows that
-    weight thirteen deforms that fixed curve into a non-isotrivial pencil,
-    and THM-4388 closes the complete fixed residual-weight-at-most-thirteen
-    family by row twelve. At weight fourteen THM-4390 absorbs row nine;
+12. **JC fails from dimension three; JC(2), DC(2) are open.** THM-2084/4248/
+    4226 close named `M=10/11/13` cases; THM-4290--4356 stage `M=12`.
+    THM-4380/4388 close the complete fixed weight-12/13 families by row 12;
+    THM-4385/4389 describe the intervening elliptic carrier/pencil. THM-4390
+    absorbs weight-14 row nine;
     THM-4395 makes row ten globally `A^6` with `A^8` fibres, even at `Phi=0`.
-    Row eleven, higher weights, and chart/seam entry remain open; THM-4381
-    covers one exceptional restriction.
+    THM-4399/4403 extend two selected weight-18 channels through rows 11/12
+    (`A^4` source, `A^9` terminal); complete weights 15--18 and entry are open.
+    THM-4397/4401 identify Long's gauge and punctured planar shadows; THM-4404
+    proves fixed-`x` two-forms miss THM-4381's seminormal line.
 13. **Complete period-14 coordinates can be globally blind.** THM-2058 keeps
     every fixed-depth packet coordinate but exits at `47/113`; THM-2043/2047/
     2050 separate local completeness from global maxima.

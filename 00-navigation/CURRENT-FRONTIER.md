@@ -339,26 +339,21 @@ lift/phase clocks.
   tuple is now at least `(8,5,4,3,3)` for `ell=(3,5,7,11,13)`. The requested
   challenges `(3,9),(5,6),(7,5),(11,4),(13,4)` all remain **OPEN**; the public
   `131199`-field file is a named finite population, not a world census.
-- **Jacobian/Dixmier:** `JC(2),DC(2)` are **OPEN**. THM-4130--4248 close
-  `M=8--11`; THM-4226 closes dense `M=13`; THM-4290--4378 give the named
-  `M=12` cells, depth hierarchy, and reciprocal wall packet. In the complete
-  fixed THM-4308 chart, [THM-4380](../01-canon/theorems/THM-4380-source-normal-weight-twelve-row-twelve-extinction.md)
-  closes residual weight at most twelve by row twelve, while THM-4385
-  identifies its row-ten projection as `E minus E[2]`.
-  [THM-4389](../01-canon/theorems/THM-4389-source-normal-weight-thirteen-row-ten-nonisotrivial-elliptic-pencil.md)
-  shows that weight thirteen deforms the fixed curve into a non-isotrivial
-  pencil with rational total carrier.
-  [THM-4388](../01-canon/theorems/THM-4388-source-normal-weight-thirteen-row-twelve-depth-extinction.md)
-  closes that complete weight-at-most-thirteen family: `Phi=0` dies by
-  row-twelve bracket compatibility; `Phi!=0` has exactly 26 reduced geometric
-  row-twelve bracket points, all disjoint from joint depth. At weight fourteen,
+- **Jacobian/Dixmier:** `JC(2),DC(2)` are **OPEN**. THM-4130--4378 close the
+  named `M=8--12` cells; THM-4226 closes dense `M=13`. In the fixed THM-4308
+  chart, THM-4380/4388 close the complete weight-12/13 families by row twelve;
+  THM-4385/4389 identify their row-ten elliptic carrier/pencil. At weight 14,
   THM-4390 absorbs row nine and THM-4395 makes row ten globally `A^6` with
-  `A^8` fibres even at `Phi=0`; the old elliptic carrier disappears. Row
-  eleven, weights at least fifteen, and chart/seam entry remain open.
+  `A^8` fibres. THM-4399/4403 use two selected weight-18 channels to reach
+  rows eleven/twelve on a global `A^4` source with `A^9` terminal fibres.
+  Complete weights 15--18, row thirteen, and entry remain open. THM-4397
+  identifies Long's map with THM-2044; THM-4401 proves its natural planar
+  reductions are punctured cubic/Kummer models.
   Exceptional quartic:
   THM-3703/3737/4034 give grammar, image, and conductor; THM-4039--4067 reach
   `J_7`, obstruct `J_8`, and isolate the graph/seminormal gap. THM-4381 gives
-  86 nodes, one plane triple, and `S^sn=S+K r`, without global entry.
+  86 nodes, one plane triple, and `S^sn=S+K r`. THM-4404 proves fixed-`x`
+  descended two-forms miss `K[r']`; moving-graph transgression/entry are open.
 - **Weyl boundary:** THM-2049 gives a formal beta-adic lift; finite termination remains.
 - **Planar source fibres:** THM-2063/THM-2084--2480 (including
   THM-2371/THM-2376) close the named
