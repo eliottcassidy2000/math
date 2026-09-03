@@ -1,0 +1,10 @@
+THM-4364 INDEPENDENT BOUNDARY REFEREE: PASS
+exact condition: q<ceil(ell/3) and m+q>=ell
+admissible-depth condition: d<=m+q-ell
+P0 parameter triples checked: 11031
+one-generator closed-form columns checked: 5022057
+admissible projected columns checked: 2118784
+unit boundaries checked: first excluded order, row, and depth through ell=120
+special stencils: q=2 triangular and q=3 tetrahedral (m=9,10)
+total grouped assertions: 7528886
+script_sha256=145d4379255f1c363a978e21a43f3efe9ab7d5610491479545428c02cd5788cd

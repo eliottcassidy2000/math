@@ -353,8 +353,8 @@ lift/phase clocks.
   THM-4340--4356 close all remaining endpoints, ending with the full
   `Z=beta_11=zeta_3=W=xi_10=0` endpoint. THM-4357--4360 stratify the source
   response and close its zeta-zero plane. THM-4361 closes beta-zero by joint
-  depth; THM-4362 proves the shared sharp tetrahedral stencil. Other strata
-  and seam entry remain open.
+  depth; THM-4362/4364 prove the sharp diagonal-stencil hierarchy. Other
+  strata and seam entry remain open.
   Exceptional quartic: THM-3703/3737 give grammar/image, THM-4034 the
   conductor, and THM-4039/4043/4046 reach `J_7`, obstruct `J_8`, and close
   critical `H`. [THM-4054](../01-canon/theorems/THM-4054-exceptional-affine-simple-zero-retained-packet.md)

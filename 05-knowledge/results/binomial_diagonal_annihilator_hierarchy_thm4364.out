@@ -1,0 +1,19 @@
+GENERAL BINOMIAL-DIAGONAL HIERARCHY EXACT VERIFIER
+finite_difference_identity_checks=6970
+partial_boundary_identity_checks=2300
+main_parameter_cases=648
+visible_generator_annihilation_checks=543816
+unit_hostile_checks=1296
+P0_phase_cases=5582
+P0_phase_checks=5582
+sharp_boundary_checks=650
+P0_order_bound_unit_hostile=(ell,q,m;a,b,c,e)=(8,3,5;0,0,1,2); value=-1
+P0_row_bound_unit_hostile=(ell,q,m;a,b,c,e)=(8,2,5;0,0,4,0); value=-1
+row8_P2_triangular_stencil=[15, -10, 6, -3, 1]
+row8_P2_triangular_unit_hostile=(3, 0, 4, 1); value=1
+row9_P2_tetrahedral_stencil=[35, -20, 10, -4, 1]
+row9_P2_tetrahedral_unit_hostile=(3, 0, 5, 1); value=1
+row10_P3_tetrahedral_stencil=[56, -35, 20, -10, 4, -1]
+row10_P3_tetrahedral_unit_hostile=(4, 0, 7, 0); value=-1
+checks=560623
+PASS

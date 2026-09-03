@@ -1,5 +1,17 @@
 # Script Results Index
 
+- `binomial_diagonal_annihilator_hierarchy_thm4364.out` and its import-free
+  referee -> sharp binomial diagonal hierarchy
+  ([THM-4364](../../01-canon/theorems/THM-4364-sharp-binomial-diagonal-annihilator-hierarchy.md)):
+  **PROVED FINITE DEPTH-MODULE THEOREM RELATIVE TO THM-4308 + VERIFIED-EXACT
+  + INDEPENDENTLY AUDITED; JC(2) OPEN.** For `ell>=2`, the alternating
+  `q`-simplex functional annihilates `pi_m(P_d)` exactly under its order,
+  endpoint, and depth inequalities. Each first-excluded boundary has a unit
+  hostile. This contains the triangular and both tetrahedral consumers.
+  Script/output SHA-256 pairs: `67b6605b...90abf5` /
+  `ce6713e2...0fa658` and `145d4379...5788cd` /
+  `f5090ba7...ddcecb`.
+
 - `lrc14_828_completed_chain_first_exit_nonfactorization_thm4363.out` and
   its import-free referee -> completed-chain quotient hostile
   ([THM-4363](../../01-canon/theorems/THM-4363-lrc14-828-body-completed-chain-first-exit-nonfactorization.md)):
