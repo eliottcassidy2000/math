@@ -1,0 +1,12 @@
+THM-4352 INDEPENDENT EVEN-CUSP REFEREE: PASS
+symbolic universe: 1<=g<=90, 1<=r<2g over Q(c)
+exact checks: 397940
+verified: squarefree even branch degree, two smooth infinity points, genus and delta deficit
+verified: conditional same-complement graph +1 and both hostile incidence alternatives
+verified: parity-twisted reciprocity, excess product/threshold, conductor sharpness
+verified: primitive displayed valuation and both natural-index inverses
+scope repair: B must be integral for the B>=g threshold
+scope repair: call d*r/(m-r) a possibly fractional pre-clearing scale,
+              or impose divisibility before calling it an actual sigma-order
+scope repair: state the inverse maps g=ceil(sqrt(n)), r=n-(g-1)^2 and
+              g=min{q:T_q>=N}, h=N-T_(g-1); side bit gives r=h or 2g-h

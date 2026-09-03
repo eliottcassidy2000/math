@@ -1,5 +1,19 @@
 # Script Results Index
 
+- `even_self_similar_cusp_reciprocal_parity_attachment_thm4352.out` and its
+  symbolic hostile referee -> even-cusp parity/attachment law
+  ([THM-4352](../../01-canon/theorems/THM-4352-even-self-similar-cusp-reciprocal-parity-and-attachment-law.md)):
+  **PROVED FORMAL-LOCAL + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.**
+  For `m=2g`, the tail has two marked infinity points and intrinsic identity
+  `g_tail+delta_persistent=g-1`; the missing graph unit occurs only for two
+  distinct nodes into one connected complement. Reciprocity inverts slope
+  with a parity defect, while oriented types occupy exact odd-length square
+  blocks `n=(g-1)^2+r` and reciprocal orbits exact triangular blocks. The
+  primary checks 3,751,004 identities and the independent symbolic referee
+  397,940. Script/output SHA-256 pairs: `24616ce6...336500e0` /
+  `0e7298c0...4dcacbb0` and `55666a09...92f27d305` /
+  `6de1de07...f77c37b`.
+
 - `jc2_m12_double_normal_owner_zero_cubic_infinity_exit_extinction_thm4351.out`
   and its import-free hostile referee -> terminal `E00` owner extinction
   ([THM-4351](../../01-canon/theorems/THM-4351-double-normal-owner-zero-cubic-infinity-exit-planar-jacobian-extinction.md)):
