@@ -1,0 +1,13 @@
+field=THM3683_exceptional_quartic;restriction_algebra=THM3703
+conductor=c=L^2*h172;degrees_c_h_radical=178,172,175;radical_squarefree=True
+S_mod_c_dimension=89;low_degree_independent=86;top_degrees=175,176,177;top_gap_rank_exact=1;reduced_image_rank_exact=87
+top_gap_pivots=0;top_gap_hash=e151624adbac4c6360f981854c3005ad57ce68458b6a7dbad70552d96208922e;top_gap_rank_mod137_alpha44=1
+r=L*h172;r_degree=175;r_in_S=False;r_hash=14cfcb911fdc4d6e269a2fca79bed6ab9f3522fee8b0774b44a8c711a9ac22e2;r_normal_form_degree=169;r_normal_form_hash=37b8ab91013dc55ea07e0dcedb6829c2a7e9817fc5d6ad3ec651592748c7c9cc;r_squared_in_c=True
+retained_fibre_gcd=x*(x^2-1);retained_fibre=-1,0,1;B_derivatives=0,0,0;C_derivatives=3,3,3;E_derivatives=-9,4,9;retained_tangents_distinct=True
+derived_nilradical_dimension=2;reduced_conductor_fibres=87;classification_over_algebraic_closure=one_ordinary_triple_plus_86_ordinary_nodes
+seminormalization=S+K*r;seminormal_defect_length=1;seminormal_conductor=r*K[x];normalization_delta=88;delta_split=86+2
+hostile_mod137_alpha44_multifibres=0,1,136;hostile_mod137_alpha92_multifibres=0,1,136|44,134;hostile_tangent_proportional_pairs=0
+GOOD_REDUCTION_ROLE=inherited_THM4034_squarefree_coprime_certificate
+FINITE_FIELD_FIBRE_CENSUS_ROLE=hostile_control_only;exact_rank_is_over_K
+NO_CLAIM=global_Keller_pair_or_general_quartic_or_chart_entry_or_JC2_or_DC2
+RESULT=PASS
