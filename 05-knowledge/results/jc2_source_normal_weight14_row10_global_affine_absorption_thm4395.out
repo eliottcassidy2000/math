@@ -1,0 +1,16 @@
+THM-4395 weight-fourteen row-ten global affine absorption
+imports=THM4390_primary_helpers;inherited_operators=THM4308_R8_and_THM4315_R9
+universe=complete_fixed_residual_weight_at_most_14
+row9=c14_global_graph;row9_depth=automatic
+row10_bracket=shape(11,7),rank7,pivots(0..6),conditions2
+row10_xi_equation=13365000*Phi**2 + 15035625*Phi*eta + 6014250*c42 + 50787000*c70 + 57672000*xi10 - 964604821504
+row10_depth=shape(36,11),rank3,pivots(8,9,10),condition=-91*Phi+15*beta11+18*eta
+row10_beta_graph=91*Phi/15 - 6*eta/5
+row10_remaining_bracket=14643240750*Phi**2 + 122625090000*Phi*alpha11 + 20802470625*Phi*c51 - 270071263125*Phi*eta + 20802470625*alpha11*eta - 89131914000*c42 - 194981256000*c70 + 61312545000*eta**2 + 2707389207937024
+row10_c42_graph=80347*Phi**2/489064 + 84105*Phi*alpha11/61133 + 228285*Phi*c51/978128 - 2963745*Phi*eta/978128 + 228285*alpha11*eta/978128 - 133732*c70/61133 + 84105*eta**2/122266 + 169211825496064/5570744625
+global_source_projection=A6_coordinates=(Phi,eta,alpha11,c51,c23,c70)
+terminal_fibre=A8;boundary_localization=none;Phi_zero_included=yes
+rational_control=(Phi,eta,alpha11,c51,c23,c70,beta11,c42,xi10,c14)=(1, 2, 3, 5, 7, 11, 11/3, 2705560867462399/89131914000, 4294106984995001/316913472000, 218733048242820581/2707381887750)
+old_elliptic_and_weight13_carriers=both_nonzero_at_control
+scope=fixed_source_normal_chart_through_row10_only;row11_and_entry_open
+checks=29;result=PASS

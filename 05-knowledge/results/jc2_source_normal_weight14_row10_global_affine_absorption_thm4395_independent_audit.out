@@ -1,0 +1,15 @@
+THM-4395 weight-14 row-ten global affine absorption independent audit
+imports=audited_THM4308_R8_and_THM4315_R9; THM4395_primary_import=no
+universe=complete_fixed_residual_weight_at_most_14
+row9=c14_global_graph; row9_depth=automatic
+row10_bracket=two_conditions; xi10_global_graph=yes
+row10_depth=-91*Phi+15*beta11+18*eta; beta11_global_graph=yes
+row10_remaining_bracket=c42_global_graph coefficient=-89131914000
+triangular_graph_denominators=c14:216513000,xi10:57672000,beta11:15,c42:89131914000;resolved_xi10:316913472000,resolved_c14:10829527551000;parameter_localization=none
+row10_universe=P2(88x193,rank68),P3(99x304,rank83),joint(36x11,rank3,pivots8,9,10)
+source_projection=A6(Phi,eta,alpha11,c51,c23,c70);terminal_fibre=A8
+Phi_zero_control=PASS
+dense_control=(1, 2, 3, 5, 7, 11, 4294106984995001/316913472000, 11/3, 2705560867462399/89131914000, 218733048242820581/2707381887750);old_elliptic_D=-814948800613227916_nonzero
+field=characteristic_zero finite_field_used=no
+scope=fixed_source_normal_chart_through_row10_only;row11_and_entry_open
+checks=80 result=PASS

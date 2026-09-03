@@ -195,8 +195,9 @@ THM-4388 proves extinction by row twelve only before the weight-fourteen
 face is present. The new channels already change the selected row-seven and
 row-eight responses and erase the old row-nine source equation. Nothing here
 transports THM-4388's later coefficient graphs, 26-point bracket scheme, or
-depth obstruction to `(1)`. The next sharp calculation is the complete
-row-ten bracket and projected-depth fibre over the graph `(5)`.
+depth obstruction to `(1)`. THM-4395 performs the next calculation: through
+row ten the complete family is a global `A^6` source graph with `A^8`
+terminal fibres, including at `Phi=0`. Row eleven remains open.
 
 Artifacts:
 
