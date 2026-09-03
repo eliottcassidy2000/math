@@ -1,5 +1,19 @@
 # Script Results Index
 
+- `lrc14_minimal_ternary_unit_norm20_shell_thm4394.out` and its standalone
+  clean-room referee -> complete minimal primitive full-support ternary-unit
+  norm-`20` shell
+  ([THM-4394](../../01-canon/theorems/THM-4394-lrc14-minimal-ternary-unit-norm-twenty-shell.md)):
+  **PROVED ELEMENTARY RELATIVE TO THM-4393 + VERIFIED-EXACT + INDEPENDENTLY
+  AUDITED; LRC(14) OPEN.** Seven sectors have globally sharp unique winners;
+  the shell maximum is `36/1295` at `{1,11,185}`. Exact cube-slice bounds
+  reduce every infinite sector to heights at most 476. A global
+  coefficient-pair audit finds exactly 13 multiply-related rays (eight cross,
+  five within); twelve are positive, `{1,19,41}` is empty, and no positive
+  carrier has joint defect `(0,0)`. Primary/referee run 2,096,217/3,846,013
+  checks. Script/output SHA-256 pairs: `a9336358...dd6e` /
+  `1c999e41...7e90` and `e005c4dd...8387` / `0dd60423...edf5`.
+
 - `lrc14_minimal_ternary_unit_norm18_shell_thm4393.out` and its
   dependency-free clean-room referee -> complete minimal primitive
   full-support ternary-unit norm-`18` shell

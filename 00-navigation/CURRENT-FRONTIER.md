@@ -56,9 +56,9 @@ for `d>=7`. THM-3742 is a wrong-torsor Pell `C14`; THM-3744's safe control is
 - **Seam/entry:** THM-4326/4329 close the fixed chart; 4330 leaves `2+12`;
   4347 closes height `40`; 4349/4371 are clocks, not entry. THM-4386 gives the
   raw-carrier lattice sum and completes all thirteen ternary-unit
-  `||c||_1<=14` patterns. THM-4387/4391 close norm `16`; THM-4393 closes the
-  six minimal norm-`18` sectors with defect `0,+/-3`. THM-4392 proves exact
-  box-spline/Poisson duality and refutes shortest-orbit sufficiency;
+  `||c||_1<=14` patterns. THM-4387/4391 close norm `16`; THM-4393/4394 close
+  the minimal norm `18/20` sectors with defect `0,+/-3`. THM-4392 proves exact
+  box-spline/Poisson duality and refutes shortest-orbit sufficiency. Arbitrary
   nonresonance and entry are open.
 - **Residual ranks:** THM-4333/4338 close fixed-pool ranks three/four, not arbitrary entry.
 - **PROVED:** [THM-2928](../01-canon/theorems/THM-2928-critical-seven-comb-grid-tensorization-and-drift-tariff.md)/2941: literal zero/one/two/three-drift sectors are empty; `k=2,3` are finite.

@@ -1,0 +1,20 @@
+LRC14 MINIMAL TERNARY-UNIT L1=20 CLEAN-ROOM SHELL
+status=PROVED_ELEMENTARY_CANDIDATE+VERIFIED_EXACT; LRC14=OPEN
+minimality=no primitive full-support ternary-unit relation of l1<=18
+patterns=1-2-17,1-5-14,1-8-11,2-5-13,2-7-11,4-5-11,5-7-8
+defects=-3,0,3; affine_carrier=C_delta+k*c; allowed_k_mod3=1,2
+row=1-2-17 I0=9/833 I3=9/833 bulk=18/833 threshold=22015/53 height=415 all=1029 minimal=1012 rays=1013 positive=1012 components=21652 maximum=36/1295 maximizers={1,11,185} relation=2,-17,1 delta_counts=4,4,4 masses=12/1295,12/1295,12/1295 zeros=none
+row=1-5-14 I0=9/686 I3=9/1372 bulk=6/343 threshold=21903/47 height=466 all=1567 minimal=1549 rays=1550 positive=1549 components=37274 maximum=24/1043 maximizers={1,11,149} relation=5,-14,1 delta_counts=2,4,2 masses=6/1043,12/1043,6/1043 zeros=none
+row=1-8-11 I0=9/539 I3=45/8624 bulk=39/2156 threshold=1158696/3385 height=342 all=1071 minimal=1056 rays=1057 positive=1056 components=21946 maximum=412/16093 maximizers={11,19,121} relation=8,-11,1 delta_counts=2,4,2 masses=92/16093,12/847,92/16093 zeros=none
+row=2-5-13 I0=9/637 I3=18/3185 bulk=54/3185 threshold=4009005/11332 height=353 all=977 minimal=964 rays=965 positive=963 components=18460 maximum=166/6853 maximizers={7,11,89} relation=5,13,-2 delta_counts=2,2,2 masses=50/6853,6/623,50/6853 zeros={1,19,41}
+row=2-7-11 I0=9/539 I3=18/3773 bulk=6/343 threshold=1547469/4369 height=354 all=1160 minimal=1147 rays=1147 positive=1147 components=24512 maximum=608/24563 maximizers={11,29,121} relation=7,-11,2 delta_counts=2,4,2 masses=130/24563,12/847,130/24563 zeros=none
+row=4-5-11 I0=9/539 I3=81/21560 bulk=87/5390 threshold=118580/249 height=476 all=2092 minimal=2079 rays=2080 positive=2078 components=55166 maximum=894/41503 maximizers={11,49,121} relation=5,-11,4 delta_counts=2,4,2 masses=153/41503,12/847,153/41503 zeros={1,19,41}
+row=5-7-8 I0=279/13720 I3=81/27440 bulk=6/343 threshold=185955/499 height=372 all=1549 minimal=1538 rays=1538 positive=1538 components=32424 maximum=216/8855 maximizers={13,23,55} relation=7,8,-5 delta_counts=1,2,1 masses=8/1771,136/8855,8/1771 zeros=none
+incidence_H=476 sector_incidences=13492 relation_rays=13497 physical_triples=13484 positive_combs=13483 multiplicities=1:13476,2:8
+multiple_relations=13 cross_pattern=8 within_pattern=5
+multiple_empty={1,19,41}; nonempty_joint_defects_never_include=(0,0)
+global_maximum=36/1295 at=1-2-17:{1,11,185}
+checks=3846013
+semantic_sha256=066c8ca1a78ec9576a524da351d2badb72bc6a777ee04dd705e47f9501df9889
+verdict=PASS
+

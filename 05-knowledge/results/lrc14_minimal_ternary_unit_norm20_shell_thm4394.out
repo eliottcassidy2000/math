@@ -1,0 +1,29 @@
+LRC14 MINIMAL TERNARY-UNIT L1=20 SHELL
+height=500 short_patterns=26 shell=((1, 2, 17), (1, 5, 14), (1, 8, 11), (2, 5, 13), (2, 7, 11), (4, 5, 11), (5, 7, 8))
+row=(1, 2, 17) all=1493 minimal=1476 rays=1477 I0=9/833 I3=9/833 bulk=18/833 maximum=36/1295 winners=((1, 11, 185),) masses=(Fraction(12, 1295), Fraction(12, 1295), Fraction(12, 1295)) threshold=22015/53 closed_at_H=True proof_height=415 proof_all=1029 proof_minimal=1012 proof_rays=1013 proof_positive=1012 proof_components=21652 proof_zeros=()
+row=(1, 5, 14) all=1818 minimal=1800 rays=1801 I0=9/686 I3=9/1372 bulk=6/343 maximum=24/1043 winners=((1, 11, 149),) masses=(Fraction(6, 1043), Fraction(12, 1043), Fraction(6, 1043)) threshold=21903/47 closed_at_H=True proof_height=466 proof_all=1567 proof_minimal=1549 proof_rays=1550 proof_positive=1549 proof_components=37274 proof_zeros=()
+row=(1, 8, 11) all=2310 minimal=2295 rays=2296 I0=9/539 I3=45/8624 bulk=39/2156 maximum=412/16093 winners=((11, 19, 121),) masses=(Fraction(92, 16093), Fraction(12, 847), Fraction(92, 16093)) threshold=1158696/3385 closed_at_H=True proof_height=342 proof_all=1071 proof_minimal=1056 proof_rays=1057 proof_positive=1056 proof_components=21946 proof_zeros=()
+row=(2, 5, 13) all=1956 minimal=1943 rays=1944 I0=9/637 I3=18/3185 bulk=54/3185 maximum=166/6853 winners=((7, 11, 89),) masses=(Fraction(50, 6853), Fraction(6, 623), Fraction(50, 6853)) threshold=4009005/11332 closed_at_H=True proof_height=353 proof_all=977 proof_minimal=964 proof_rays=965 proof_positive=963 proof_components=18460 proof_zeros=((1, 19, 41),)
+row=(2, 7, 11) all=2317 minimal=2304 rays=2304 I0=9/539 I3=18/3773 bulk=6/343 maximum=608/24563 winners=((11, 29, 121),) masses=(Fraction(130, 24563), Fraction(12, 847), Fraction(130, 24563)) threshold=1547469/4369 closed_at_H=True proof_height=354 proof_all=1160 proof_minimal=1147 proof_rays=1147 proof_positive=1147 proof_components=24512 proof_zeros=()
+row=(4, 5, 11) all=2312 minimal=2299 rays=2300 I0=9/539 I3=81/21560 bulk=87/5390 maximum=894/41503 winners=((11, 49, 121),) masses=(Fraction(153, 41503), Fraction(12, 847), Fraction(153, 41503)) threshold=118580/249 closed_at_H=True proof_height=476 proof_all=2092 proof_minimal=2079 proof_rays=2080 proof_positive=2078 proof_components=55166 proof_zeros=((1, 19, 41),)
+row=(5, 7, 8) all=2820 minimal=2809 rays=2809 I0=279/13720 I3=81/27440 bulk=6/343 maximum=216/8855 winners=((13, 23, 55),) masses=(Fraction(8, 1771), Fraction(136, 8855), Fraction(8, 1771)) threshold=185955/499 closed_at_H=True proof_height=372 proof_all=1549 proof_minimal=1538 proof_rays=1538 proof_positive=1538 proof_components=32424 proof_zeros=()
+H=500 incidences=14926 rays=14931 triples=14918 positive=14917
+cross={(13, 31, 37): ((2, 7, 11), (5, 7, 8)), (11, 29, 41): ((2, 7, 11), (5, 7, 8)), (13, 23, 41): ((1, 5, 14), (1, 8, 11)), (5, 13, 49): ((1, 2, 17), (1, 8, 11)), (1, 19, 41): ((2, 5, 13), (4, 5, 11)), (11, 29, 79): ((1, 2, 17), (1, 5, 14)), (17, 37, 53): ((1, 5, 14), (1, 8, 11)), (7, 11, 65): ((1, 2, 17), (1, 8, 11))}
+within={(25, 29, 43): {(1, 8, 11): ((1, 11, -8), (11, -8, -1))}, (17, 23, 53): {(2, 5, 13): ((2, -13, 5), (13, -5, -2))}, (13, 23, 47): {(4, 5, 11): ((5, -11, 4), (11, 4, -5))}, (7, 11, 97): {(1, 2, 17): ((1, 17, -2), (17, -2, -1))}, (13, 23, 67): {(1, 5, 14): ((1, 14, -5), (14, -5, -1))}}
+multiple=(1, 19, 41) relations={(2, 5, 13): ((13, -5, 2),), (4, 5, 11): ((4, -11, 5),)} measure=0
+multiple=(5, 13, 49) relations={(1, 2, 17): ((17, 1, -2),), (1, 8, 11): ((11, -8, 1),)} measure=32/4459
+multiple=(7, 11, 65) relations={(1, 2, 17): ((17, 1, -2),), (1, 8, 11): ((8, -11, 1),)} measure=6/455
+multiple=(7, 11, 97) relations={(1, 2, 17): ((1, 17, -2), (17, -2, -1))} measure=18/679
+multiple=(11, 29, 41) relations={(2, 7, 11): ((11, -7, 2),), (5, 7, 8): ((5, 8, -7),)} measure=138/8323
+multiple=(11, 29, 79) relations={(1, 2, 17): ((17, -1, -2),), (1, 5, 14): ((1, -14, 5),)} measure=360/16037
+multiple=(13, 23, 41) relations={(1, 5, 14): ((14, 1, -5),), (1, 8, 11): ((11, -8, 1),)} measure=38/6601
+multiple=(13, 23, 47) relations={(4, 5, 11): ((5, -11, 4), (11, 4, -5))} measure=102/7567
+multiple=(13, 23, 67) relations={(1, 5, 14): ((1, 14, -5), (14, -5, -1))} measure=282/20033
+multiple=(13, 31, 37) relations={(2, 7, 11): ((11, -7, 2),), (5, 7, 8): ((8, 5, -7),)} measure=142/8029
+multiple=(17, 23, 53) relations={(2, 5, 13): ((2, -13, 5), (13, -5, -2))} measure=2592/145061
+multiple=(17, 37, 53) relations={(1, 5, 14): ((14, -5, -1),), (1, 8, 11): ((1, 11, -8),)} measure=90/6307
+multiple=(25, 29, 43) relations={(1, 8, 11): ((1, 11, -8), (11, -8, -1))} measure=120/8729
+global=(Fraction(36, 1295), (1, 2, 17), ((1, 11, 185),))
+producer_checks=20; inherited_live_checks=2096197
+semantic_sha256=38fb6463fa0aaaf661d2c915fc5ede9523387cd8774fb3f346edc927482ef800
+verdict=PASS
