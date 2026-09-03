@@ -1,0 +1,15 @@
+THM-4378 independent quadratic-module referee
+design=Z[q] + z Z[q] recurrence with z^2=z-q; no primary import
+scope=finite bilateral packet quotient; JC(2), DC(2), bracket and seam OPEN
+
+band quotient blocks=1475, reconstructed packets=137475
+eigen/Smith depths=33, local coefficient boxes=13447
+source-fibre parity bridge cases=10364
+verified quotient spine=1,z,q,zq,... and reciprocal (A,B)->(A+B,-B)
+verified eigen sum parity cokernel=(Z/2)^ceil(D/2), no 4-torsion
+verified difference surjects Q_minus; norm has one even-top Z/2
+verified weighted gamma nonzero iff odd imbalance; full 2d jet kills it
+verified ell=2 diagonal J=id boundary
+smallest hostile ell=3,R=2: trace(C)=0, trace(bare-swap C)=2
+
+PASS checks=1018359

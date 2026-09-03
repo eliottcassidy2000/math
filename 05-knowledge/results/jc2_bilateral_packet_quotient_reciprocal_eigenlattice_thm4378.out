@@ -1,0 +1,39 @@
+THM-4378 exact bilateral packet quotient / reciprocal eigenlattice
+status=PROVED ELEMENTARY RELATIVE TO THM-4368, THM-4369, THM-4375
+scope=internal finite packet quotient only; JC(2), DC(2), bracket and seam remain OPEN
+
+universe:
+  ell=2..80, quotient excess depth D=0..30
+  reciprocal/eigen Smith blocks D=0..60
+  exact packet blocks=2449, packet reconstructions=349184
+  signed packet/circuit intertwining checks=61056
+  source-fibre parity bridge cases=18325
+
+ell>=3 theorem:
+  tau0=2*rho-1, D=R-tau0, q=z(1-z)
+  Q_(ell,R)=q^(rho-1) Z[z]_(<=D)
+  unimodular spine: q^k from (rho+k,rho+k),
+                     z*q^k from (rho+k+1,rho+k)
+  iota(e_(u,v))=(-1)^(u-v)e_(v,u), J(f)(z)=f(1-z)
+  Q_plus=q^(rho-1) Z[q]_(<=floor(D/2))
+  Q_minus=q^(rho-1)(2z-1)Z[q]_(<=floor((D-1)/2))
+  Q/(Q_plus direct_sum Q_minus)=(Z/2)^(ceil(D/2))
+  saturation(Q_plus direct_sum Q_minus)=Q
+  (1-J)Q=Q_minus
+  Q_plus/(1+J)Q = Z/2 if D is even, 0 if D is odd
+  Q/(1-J)Q is free of rank floor(D/2)+1
+  Q/(1+J)Q = Z^ceil(D/2) plus Z/2 exactly when D is even
+  fibre-weighted gluing class nonzero iff mu_plus-mu_minus is odd
+  postclock class follows beta parity and vanishes at the full 2d jet
+  audited Smith 2-blocks=930, even-top norm 2-blocks=31
+
+ell=2 boundary:
+  B_2 is the diagonal ray; Q=Z[q]_(<=floor(D/2)); J=id
+  no eigen gluing; Q/(1+J)Q=(Z/2)^(floor(D/2)+1)
+
+smallest hostile ell=3,R=2:
+  C=e_(1,1)-e_(1,2)+e_(2,1), trace(C)= [0]
+  plain swap trace= [2] so unsigned reflection does not descend
+  signed iota fixes C; Q basis {1,z}, eigenbasis {1,2z-1}, index=2
+
+PASS checks=31439084
