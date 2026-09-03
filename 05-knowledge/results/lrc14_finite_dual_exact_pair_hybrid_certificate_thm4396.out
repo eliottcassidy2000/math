@@ -1,0 +1,22 @@
+LRC THM4396 TWO-FACTOR FEJER / EXACT-PAIR HYBRID CERTIFICATE
+status=PASS RIGOROUS_INTERVAL; scope=fixed_local_three_speed_comb; LRC14=OPEN
+comb=(11,13,17); smoothed_speeds=(11,13); exact_speed=17; degrees=(5,9)
+finite_resonance_sites=11; nonzero_sinc_terms=9; exact_sinc_zeros=2
+character_counts=weight6:3,weight-3:8
+finite_spectrum=((-5, -1, 4), (-4, 6, -2), (-3, -4, 5), (-2, 3, -1), (-1, -7, 6), (0, 0, 0), (1, 7, -6), (2, -3, 1), (3, 4, -5), (4, -6, 2), (5, 1, -4))
+low_sum_interval=[0.012578340838550376,0.012578340838550377]
+ordered_distinct_pair_pieces=24; pair_domain_measure=120/1001
+pair_product_interval=[0.054902598885952923,0.054902598885952924]
+exact_pair_remainder_interval=[0.064977520994166956,0.064977520994166957]
+hybrid_upper_interval=[0.077555861832717332,0.077555861832717333]
+target=6/77; certified_gap_interval=[0.000366216089360589,0.000366216089360590]
+coarse_L1_upper_interval=[0.567219642819278636,0.567219642819278637]; closes_6/77=no
+physical_control_exact=20/1547; used_by_certificate=no
+sharp_hostile=(1,5,11); exact=6/77; strict_for=all_3_coordinate_pairs_and_all_finite_degree_pairs
+hostile_open_intervals=(((0, 1), 2, (0, 1, 2), Fraction(67, 462), Fraction(73, 462)), ((0, 2), 1, (0, 1, 2), Fraction(1, 14), Fraction(17, 210)), ((1, 2), 0, (0, 1, 2), Fraction(0, 1), Fraction(11, 210)))
+preserved=dual_character,sinc_signs_and_zeros,resonance_equation,two_frequency_windows,ordered_pair_sheet_geometry
+lost=third_sheet_incidence_in_remainder,negative_tail_cancellation,carrier_owner_and_entry_data
+optimization_safe_checks=yes
+checks=2610
+semantic_sha256=e43ff3cc900d96cda2cdf6091d56657fd1bbe0be30b2ca62c5ab1d4e61526437
+verdict=PASS

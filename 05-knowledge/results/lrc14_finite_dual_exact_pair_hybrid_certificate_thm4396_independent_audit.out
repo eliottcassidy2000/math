@@ -1,0 +1,20 @@
+LRC14 HYBRID FOURIER/EXACT-PAIR CLEAN-ROOM AUDIT
+status=PASS local_certificate_only; LRC14=OPEN
+identity=two_finite_Fejer_factors_plus_one_exact_indicator
+pointwise=f_k*X<=X_+; quotient_sharp=sup_[0,1](zX)=X_+
+spectrum_sites=11 character_counts=-3:8,6:3 sinc_killed=2 live=9
+pair_pieces=24 pair_measure=120/1001
+M=[0.012578340838550376,0.012578340838550377]
+pair_product=[0.054902598885952923,0.054902598885952924]
+R=[0.064977520994166956,0.064977520994166957]
+M_plus_R=[0.077555861832717332,0.077555861832717333]
+six_over_77_minus_bound=[0.000366216089360589,0.000366216089360590]
+epsilon_5=[0.108950255634203925,0.108950255634203926]
+epsilon_9=[0.075930178359372161,0.075930178359372162]
+sheet_blind_bound=[0.567219642819278636,0.567219642819278637]
+raw_controls=(11,13,17):20/1547;(1,5,11):6/77
+equality_obstruction=all_3_pairs_all_finite_degrees_strict_slack
+equality_nonclaim=does_not_obstruct_other_hybrid_or_primal_certificates
+checks=7706
+semantic_sha256=7b61023ffc4e91f94123b5b01f0c47b3c7fb79da3d633f9186283fdbd761c9b3
+verdict=PASS

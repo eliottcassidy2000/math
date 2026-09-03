@@ -1,5 +1,19 @@
 # Script Results Index
 
+- `lrc14_finite_dual_exact_pair_hybrid_certificate_thm4396.out` and its
+  standalone referee -> a finite dual/exact-pair primal upper certificate
+  ([THM-4396](../../01-canon/theorems/THM-4396-lrc14-finite-dual-exact-pair-hybrid-certificate.md)):
+  **PROVED ANALYTICALLY RELATIVE TO THM-4392 + RIGOROUS-INTERVAL VERIFIED +
+  INDEPENDENTLY AUDITED; LRC(14) OPEN.** Eleven resonance sites and 24 exact
+  ordered-pair pieces give
+  `mu(F_(11,13,17))<=0.077555861832717333<6/77`, with certified gap at least
+  `0.000366216089360589`. The positive-part envelope is quotient-sharp after
+  forgetting the third sheet, and is strictly above `6/77` on `(1,5,11)` for
+  every coordinate pair and every pair of finite Fejer degrees. The missing
+  datum is exactly third-sheet incidence. Primary/referee hashes:
+  `1b35c8a4...25d4` / `16146a74...ab6b` and `7862e0b5...3044` /
+  `7b5e01b5...1384` (raw LF bytes).
+
 - `lrc14_one_zero_relation_residue_dichotomy_small_norm_atlas_thm4398.out`
   and its standalone independent audit -> the complete one-zero-mod-three
   relation presentation atlas through coefficient norm `14`
