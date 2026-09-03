@@ -1,9 +1,9 @@
 # Attachment address before quotient: a JC/LRC synthesis
 
 **Status: RESEARCH SYNTHESIS / TASK GENERATOR, NOT A THEOREM.** The planar
-Jacobian inputs below are proved only where their cited canon says so;
-THM-4355 is still under audit while this note is written. The LRC discussion
-proposes tests and proves no LRC(14) row safe.
+Jacobian inputs below are now proved in THM-4352/4354/4355/4356. The bounded
+LRC test generated here has also been run and is recorded as a FINITE-EXACT
+sidecar; it proves no new LRC(14) row safe.
 
 ## The signal
 
@@ -15,9 +15,9 @@ incidence graph, tournament, or support mask would conflate:
    simple adjacency changes graph genus from ten to zero.
 2. THM-4352's even cusp has two tail ends entering one connected complement.
    The two attachments add one graph cycle.
-3. The THM-4355 `A15` candidate has two tail ends entering two different
+3. The THM-4355/4356 `A15` packet has two tail ends entering two different
    complementary components. The attachments join the components and add no
-   graph cycle. Its `A3` candidate returns to the THM-4352 behavior.
+   graph cycle. THM-4355's `A3` returns to the THM-4352 behavior.
 
 The reusable object is therefore not “two ends” but
 
@@ -131,16 +131,29 @@ signal—attachment maps vary but every physical consumer agrees—would justify
 compression on that lane. Merely finding more cycles is not progress unless
 one of those consumers changes.
 
+### Exact outcome
+
+The test produced the pair `P=1287,9009` in the `h=420` safe-control bank.
+Their completed owner/status quotient is identical, but 209 partial component
+itineraries differ. On component 9, the next path changes from
+`C3->P->D5->C2` to `C3->D4`, changing the local exit and signed-current
+consumer. Every changed trace is nevertheless still missing, and the global
+first missing component is unchanged. Thus the probe proves a precise
+nonfactorization, not an LRC advance: partial attachment addresses are needed
+by continuation/current consumers, while completed-cover status alone does
+not need them on this pair. Full data and two exact implementations are in
+[the finite-exact sidecar](lrc14-partial-attachment-address-nonfactorization-codex-20260902.md).
+
 ## Procedurally generated tasks
 
-- **Anchor:** finish the THM-4355 collision audit, then enumerate the
-  `U=K=0` endpoint from the literal source rather than specializing either
-  neighboring fan.
+- **Anchor:** THM-4355 and the literal `U=K=0` reconstruction are complete;
+  pull the closed endpoint atlas back through the source-normal row-eight
+  response before spending work on another abstract wall.
 - **Niche:** package `(1)` as a small attachment-rank lemma only if a second
   non-Jacobian consumer genuinely uses it.
-- **Wildcard:** run the bounded LRC fibre test above on the smallest live
-  owner/arrival bank; record a counterexample pair if the coarse quotient is
-  blind.
+- **Wildcard:** after the hostile pair above, instantiate the `h=420,u=3`
+  collar deletion and test the remaining 828 components with an actual
+  counterexample-conditioned ten-tail family.
 - **Hostile:** force two marked endpoints to different components while
   keeping their unordered owner labels fixed. Any proposed `+1` cycle rule
   must reject this configuration.

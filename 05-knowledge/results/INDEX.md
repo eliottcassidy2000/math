@@ -13,6 +13,17 @@
   `c96e4a4d...08337d9c` / `5fb0a8dc...cb88b6b` and
   `558f4331...30f5118` / `f05c0d23...5d0a5e1a`.
 
+- `lrc14_partial_attachment_address_nonfactorization_probe_20260902.out`
+  and an independent referee -> partial-attachment quotient hostile
+  ([reflection](../../07-reflections/lrc14-partial-attachment-address-nonfactorization-codex-20260902.md)):
+  **FINITE-EXACT SIDECAR; NOT A THEOREM; LRC(14) OPEN.** The safe controls
+  `P=1287,9009` have the same completed owner/status quotient but different
+  partial itineraries on 209 of 840 components. Component 9 changes its next
+  blocker, local exit, signed current, and cubic consumer, while the global
+  first missing component is unchanged. Script/output SHA-256 pairs:
+  `ba8f5a8c...0faeaa77` / `c63a7192...46024c4` and
+  `d4a12dcd...5ca6cc12` / `6077796f...1f419fb`.
+
 - `jc2_m12_terminal_alpha_zero_u_zero_endpoint_extinction_thm4355.out` and
   its independent clean-room referee -> terminal `alpha_11=0,U=0`
   endpoint extinction

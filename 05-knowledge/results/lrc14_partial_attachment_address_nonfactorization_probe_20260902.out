@@ -1,0 +1,42 @@
+LRC14_PARTIAL_ATTACHMENT_ADDRESS_NONFACTORIZATION_PROBE=FINITE_EXACT
+gate=h=420;420|h;row={2h} union COMMON union {P}
+common=11,1691,3371,5051,6731,8411,10091,525,945,1365,1575
+controls
+ P=1287;statuses=(('missing', 726), ('renew', 4), ('span', 110));coarse_equal_to_first=True;attachment_equal_to_first=True;first_exit=(5, 5, 0, Fraction(939, 141274), Fraction(1, 14), (10091,));core_energy=103565349065690759276041319/79794403580513459456309691;core_q_cubic=14783540775565989336572164/153450776116372037415980175
+ P=9009;statuses=(('missing', 726), ('renew', 4), ('span', 110));coarse_equal_to_first=True;attachment_equal_to_first=False;first_exit=(5, 5, 0, Fraction(939, 141274), Fraction(1, 14), (10091,));core_energy=58621224727881646861397/45136410657303198493260;core_q_cubic=16362496058066898986258/169261539964886994349725
+minimum_two_row_safe_control_hostile
+ P_pair=(1287,9009)
+ statuses=(('missing', 726), ('renew', 4), ('span', 110))
+ coarse=(((0, 'missing', ()), 363), ((0, 'renew', ('C2', 'C0', 'D0')), 1), ((0, 'renew', ('D0', 'C3')), 1), ((0, 'span', ('D0',)), 55), ((1, 'missing', ()), 363), ((1, 'renew', ('C3', 'D0')), 1), ((1, 'renew', ('D0', 'C0', 'C2')), 1), ((1, 'span', ('D0',)), 55))
+ coarse_sha256=33ac4293f77a205ca52441a1cd387d9c8877ba6d44fe9687e1c3d59319dc41d3
+ coarse_equal=True
+ attachment_equal=False
+ attachment_symmetric_difference=2229
+ status_map_equal=True
+ changed_component_traces=209
+ role_changed_component_traces=208
+ changed_nonmissing_component_traces=0
+ first_changed_components=(7, 9, 11, 13, 14, 18, 24, 26, 28, 29, 33, 39)
+ first_role_changed_components=(7, 9, 11, 13, 14, 18, 24, 26, 28, 29, 33, 39)
+ first_attachment_difference=(420, 0, 'C0', 'R', 12, 56, 56, 35, 'D1', 113, 'missing')
+ reached_next_blocker_change=('role', 420, 0, 'C3', 'R', 0, 9, 9, 17, 'P', 14, 'D4', 73, 'missing', 'missing')
+ local_trace_A_k9=('missing', (('C3', 17), ('P', 14), ('D5', 92), ('C2', 15)))
+ local_trace_B_k9=('missing', (('C3', 17), ('D4', 73)))
+ local_exit_A_k9=(Fraction(211, 19110), Fraction(1, 14), (1365,))
+ local_exit_B_k9=(Fraction(1023, 94234), Fraction(1, 14), (6731,))
+ one_sided_signed_current=(Fraction(239, 22050), Fraction(1021, 94234), Fraction(766, 70637), (3, 1, 2), (2, 1, 1), (2, 1, 1), (1, 1, 0))
+ first_exit_A=(5, 5, 0, Fraction(939, 141274), Fraction(1, 14), (10091,))
+ first_exit_B=(5, 5, 0, Fraction(939, 141274), Fraction(1, 14), (10091,))
+ first_exit_changed=False
+ core_energy_A=103565349065690759276041319/79794403580513459456309691
+ core_energy_B=58621224727881646861397/45136410657303198493260
+ core_energy_delta=-11655225554668397928097/13640068988121958881420460
+ signed_current_changed=True
+ core_q_cubic_A=14783540775565989336572164/153450776116372037415980175
+ core_q_cubic_B=16362496058066898986258/169261539964886994349725
+ core_q_cubic_delta=-394136575599552666161942/1196916053707701891844645365
+seven_u_divides_h_resonant_side_blowup
+ symbolic_grid_checks=896
+ h420_u3_witness=(420, 3, Fraction(1, 42), Fraction(93, 3920), Fraction(281, 11760), Fraction(279, 3920), Fraction(267, 3920))
+ split=inner_attachment_killed_by_u;outer_attachment_killed_by_13u
+VERDICT=PASS
