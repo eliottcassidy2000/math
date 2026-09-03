@@ -1,0 +1,12 @@
+THM-4375 CLEAN-ROOM INDEPENDENT REFEREE
+universe=ell_cone_2..60,u_v_1..80;ell_blocks_2..70,tau_1..240;
+         primitive_p_q_1..30,scale_1..90;ell_fibres_2..100
+method=import-free exponent tuples + direct path/block/orbit counts + coefficient recurrences
+ell=2 control=fixed-only,singleton-fibres,common-series z/(1-z^2)
+ell=3 hostile=(2,3)<->(3,2),fibres=1<->3,first-sharp-block=4
+ell=10 hostile=Addr32<->Addr33,fibres=4<->3
+ell=10 ray=4/5,scales=1..4,fibres=(4,3),(3,7),(2,8),(1,9)
+carrier=looped path-power with absent long pairs and honest fixed ties; not a tournament
+scope=no JC(2) or DC(2) consequence
+checks=3338648
+PASS

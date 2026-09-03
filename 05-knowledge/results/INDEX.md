@@ -1,5 +1,16 @@
 # Script Results Index
 
+- `jc2_bilateral_source_cone_reciprocal_orbits_thm4375.out` and its
+  import-free referee -> reciprocal path-band, address, ray, and fibre laws
+  ([THM-4375](../../01-canon/theorems/THM-4375-bilateral-source-cone-reciprocal-orbits-and-fibre-imbalance.md)):
+  **PROVED ELEMENTARY RELATIVE TO THM-4368 + VERIFIED-EXACT + INDEPENDENTLY
+  AUDITED; JC(2) OPEN.** Bilaterally source-realizable types are the looped
+  path-power band `u,v>=rho`, `|u-v|<=s-1`, not a tournament. Reciprocal
+  orbits, centered triangular addresses, primitive-ray scale intervals, and
+  source-fibre imbalance are exact; the sharp endpoint is `(2s-1,1)`.
+  Script/output SHA-256 pairs: `e1467c3f...fcd5a` / `54c6250c...b9f5a9`
+  and `256b0193...e0e0` / `1938da0b...ee76e`.
+
 - `lrc14_seventeen_step_metric_exit_observability_thm4374.out` and its
   direct-decoder referee -> sharp delayed metric observability
   ([THM-4374](../../01-canon/theorems/THM-4374-lrc14-seventeen-step-metric-exit-observability-and-shift-congruence-rigidity.md)):

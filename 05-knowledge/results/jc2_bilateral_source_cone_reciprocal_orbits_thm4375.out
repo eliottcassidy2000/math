@@ -1,0 +1,11 @@
+RECIPROCAL SOURCE-CONE AUDIT: PASS
+assertions=6375878
+ell_range=2..90; pair boxes through 5*s+17
+orbit_parameter_j=0..79; block window=tau0-4..tau0+5*s+44
+primitive_coprime_rays=1..49 squared; scale_window=1..120
+fibre_window=w=rho..5*s+29, d=0..s-1
+edge_ell2=loop-only, fixed addresses w^2+(w-1)^2, mu=1
+edge_ell3=one orbit per block; oriented counts alternate 1,2; sharp fibre starts (3,2)
+ell10_fixed_control=(u,v,Addr,mu)=(4,4,25,3)
+ell10_first_nontrivial_orbit=(4,5)<->(5,4), Addr=32<->33, mu=4<->3
+ell10_ray_4_over_5_scales=1..4 with mu ladder (4,3),(3,7),(2,8),(1,9)
