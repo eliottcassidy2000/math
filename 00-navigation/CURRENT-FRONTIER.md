@@ -350,8 +350,10 @@ lift/phase clocks.
   [THM-4388](../01-canon/theorems/THM-4388-source-normal-weight-thirteen-row-twelve-depth-extinction.md)
   closes that complete weight-at-most-thirteen family: `Phi=0` dies by
   row-twelve bracket compatibility; `Phi!=0` has exactly 26 reduced geometric
-  row-twelve bracket points, all disjoint from joint depth. Weight at least
-  fourteen and chart/seam entry remain open. Exceptional quartic:
+  row-twelve bracket points, all disjoint from joint depth. THM-4390 restores
+  the complete weight-fourteen face: it globally absorbs the old row-nine
+  equation into a `c14` graph, with depth automatic. Row ten, weight at least
+  fifteen, and chart/seam entry remain open. Exceptional quartic:
   THM-3703/3737/4034 give grammar, image, and conductor; THM-4039--4067 reach
   `J_7`, obstruct `J_8`, and isolate the graph/seminormal gap. THM-4381 gives
   86 nodes, one plane triple, and `S^sn=S+K r`, without global entry.

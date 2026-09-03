@@ -1,0 +1,15 @@
+THM-4390 weight-14 row-nine face absorption independent audit
+imports=audited_THM4308_R8_and_THM4315_R9; THM4390_primary_import=no
+universe=complete_fixed_residual_weight_at_most_14
+weight13_face=(p^5*y,p^2*y^3) channels=(c51,6*c51+c23) complete=yes
+weight13_odd_Student_diagonal=(0,0,0) row9_derivatives=(0,0)
+weight14_face=(p^7,p^4*y^2,p*y^4) complete=yes
+pascal_channels=(c70,7*c70+c42,21*c70+6*c42+c14) determinant=1
+pascal_inverse=(h0,h1-7*h0,h2-6*h1+21*h0)
+Student_diagonal=(1,2/5,36/85) lossless=yes
+rows_through_8=old_Hasse_gate_exactly
+row9_condition=E9-(3339765000*c70+898128000*c42+216513000*c14)
+row9_projected_P2_P3_depth=automatic terminal_rank=3 pivots=(7,8,9)
+c14_absorption=global_affine_graph pivot_coefficient=-216513000 boundary_loss=none
+field=characteristic_zero finite_field_used=no
+checks=51 result=PASS

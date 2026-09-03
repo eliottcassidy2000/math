@@ -1,0 +1,16 @@
+THM-4390 weight-fourteen row-nine face absorption
+imports=audited_THM4308_R8_and_THM4315_R9
+field=characteristic_zero
+universe=complete_fixed_residual_weight_at_most_14
+weight13_face=c51*p^5*y+c23*p^2*y^3;odd_row9_invisible=yes
+weight14_face=c70*p^7+c42*p^4*y^2+c14*p*y^4;complete=yes
+channels=(c70,7*c70+c42,21*c70+6*c42+c14);unimodular=yes
+Student_diagonal=(1,2/5,36/85);lossless=yes
+row8_gate=(Delta=896/15,Theta=512/75,zeta3=-3*Phi/2);unchanged=yes
+row8_depth=P2(63x131,rank51),P3(72x204,rank63),terminal(21x9,rank2)
+row9_equation=E9-(3339765000*c70+898128000*c42+216513000*c14)
+row9_c14_graph=8263*Phi**2/2916 - 85*Phi*alpha11/36 - 1180*Phi*eta/81 - 112*c42/27 - 11245*c70/729 - 85*eta**2/72 + 748544*xi10/24057 - 5810473189376/27064125
+row9_depth=P2(75x160,rank59),P3(85x251,rank73),terminal(28x10,rank3);automatic=yes
+rational_control=(Phi,eta,alpha11,xi10,c70,c42,c14)=(1, 2, 3, 5, 7, 11, -1056627491057/4920750);old_E9_nonzero=yes
+scope=fixed_source_normal_chart_through_row9_only;row10_and_entry_open
+checks=66;result=PASS
