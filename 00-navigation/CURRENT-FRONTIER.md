@@ -55,10 +55,9 @@ for `d>=7`. THM-3742 is a wrong-torsor Pell `C14`; THM-3744's safe control is
   ray, parity-sheet and component-count data; none supplies safety or arrival.
 - **Seam/entry:** THM-4326/4329 close the fixed chart; 4330 leaves `2+12`;
   4347 closes height `40`; 4349/4371 are clocks, not entry. THM-4386 gives the
-  exact rank-two raw-carrier lattice sum, makes
-  independent zero-defect overlaps empty, and sharply completes all thirteen
-  ternary-unit `||c||_1<=14` patterns. Norm `16` needs defect `0,+/-3`;
-  nonresonance and entry remain open.
+  raw-carrier lattice sum and completes all thirteen ternary-unit
+  `||c||_1<=14` patterns. THM-4387 closes the five coefficient-one norm-`16`
+  patterns with defect `0,+/-3`; two shapes, nonresonance, and entry are open.
 - **Residual ranks:** THM-4333/4338 close fixed-pool ranks three/four, not arbitrary entry.
 - **PROVED:** [THM-2928](../01-canon/theorems/THM-2928-critical-seven-comb-grid-tensorization-and-drift-tariff.md)/2941: literal zero/one/two/three-drift sectors are empty; `k=2,3` are finite.
 - **Orthogonal routes.** THM-1017 is HYP-6820; THM-2047/2050 keep phase/exit; THM-731/2048 prune; THM-1290 ends at `55`; HYP-8900 nonuniform.

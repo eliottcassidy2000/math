@@ -1,5 +1,20 @@
 # Script Results Index
 
+- `lrc14_defect_three_coefficient_one_boundary_thm4387.out` and its
+  dependency-free clean-room referee -> exact three-state roof and sharp
+  coefficient-one norm-`16` atlas
+  ([THM-4387](../../01-canon/theorems/THM-4387-lrc14-defect-three-boundary-master-formula-and-five-sector-atlas.md)):
+  **PROVED ELEMENTARY RELATIVE TO THM-4373 + VERIFIED-EXACT + INDEPENDENTLY
+  AUDITED; LRC(14) OPEN.** The chart-labelled address is the affine torsor
+  state `(delta,k)`, where `delta in {-3,0,3}` and `3` does not divide `k`.
+  The exact six-term roof and analytic tail give the five sharp maxima,
+  headed by `4/133` at `{1,5,19}`; that winner has no defect-zero mass.
+  Defect splits are chart-dependent, and endpoint normalization needs its
+  torsion sidecar. The independent replay executes 19,757,759 live checks.
+  Shapes `(2,7,7)` and `(4,5,7)` are excluded. Script/output SHA-256 pairs:
+  `d4fcd040...bc46` / `1a1286e8...fdbc` and `b257ea62...38fd` /
+  `261294b0...ddb6`.
+
 - `lrc14_raw_carrier_formula_referee_thm4386.out`, the complete short-shell
   sidecars, and a dependency-free clean-room referee -> exact raw-carrier
   lattice sum and complete primitive ternary-unit `l1<=14` shell

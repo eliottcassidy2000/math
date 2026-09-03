@@ -1,0 +1,25 @@
+status=PASS
+audit=clean_room_no_producer_import
+all_l1_16_shapes=((1, 1, 14), (1, 2, 13), (1, 4, 11), (1, 5, 10), (1, 7, 8), (2, 7, 7), (4, 5, 7))
+included_coefficient_one_shapes=((1, 1, 14), (1, 2, 13), (1, 4, 11), (1, 5, 10), (1, 7, 8))
+explicitly_omitted_shapes=((2, 7, 7), (4, 5, 7))
+pattern=(1, 14) max=4/133 winner=(1, 5, 19) bulk=6/343 cutoff=205 presentations=298 triples=149 parts=((-3, Fraction(2, 133)), (0, Fraction(0, 1)), (3, Fraction(2, 133))) integrals=((-3, Fraction(9, 1372)), (0, Fraction(9, 686)), (3, Fraction(9, 1372)))
+pattern=(2, 13) max=228/11165 winner=(1, 11, 145) bulk=9/637 cutoff=409 presentations=1295 triples=1295 parts=((-3, Fraction(48, 11165)), (0, Fraction(12, 1015)), (3, Fraction(48, 11165))) integrals=((-3, Fraction(9, 2548)), (0, Fraction(9, 637)), (3, Fraction(9, 2548)))
+pattern=(4, 11) max=218/10465 winner=(7, 13, 115) bulk=15/1078 cutoff=372 presentations=1270 triples=1270 parts=((-3, Fraction(31, 10465)), (0, Fraction(12, 805)), (3, Fraction(31, 10465))) integrals=((-3, Fraction(9, 4312)), (0, Fraction(9, 539)), (3, Fraction(9, 4312)))
+pattern=(5, 10) max=16/715 winner=(1, 11, 65) bulk=18/1225 cutoff=335 presentations=1105 triples=1104 parts=((-3, Fraction(23, 5005)), (0, Fraction(6, 455)), (3, Fraction(23, 5005))) integrals=((-3, Fraction(9, 4900)), (0, Fraction(9, 490)), (3, Fraction(9, 4900)))
+pattern=(7, 8) max=36/1309 winner=(1, 11, 85) bulk=6/343 cutoff=257 presentations=792 triples=792 parts=((-3, Fraction(5, 1309)), (0, Fraction(26, 1309)), (3, Fraction(5, 1309))) integrals=((-3, Fraction(9, 5488)), (0, Fraction(9, 392)), (3, Fraction(9, 5488)))
+observed_defect_states=(((1, 14), (-3, 0, 3)), ((2, 13), (-3, 0, 3)), ((4, 11), (-3, 0, 3)), ((5, 10), (-3, 0, 3)), ((7, 8), (-3, 0, 3)))
+gcd_census=(((1, 14), (1, 7)), ((2, 13), (1, 13)), ((4, 11), (1, 11)), ((5, 10), (1, 5)), ((7, 8), (1,)))
+endpoint_torsion_seams=(((2, 13), 13, 1, ((-3, 4, 1, 8), (0, 1, 1, 2), (3, -2, 1, 9))), ((4, 11), 11, 1, ((-3, 4, 1, 4), (0, 1, 1, 1), (3, -2, 1, 9))), ((1, 14), 7, 2, ((-3, 2, 1, 6), (3, -1, 1, 4))), ((5, 10), 5, 2, ((-3, 8, 1, 3), (3, -7, 1, 2))))
+hostile_boundary_witnesses=(((1, 14), (19, 1, 5), Fraction(211, 266), (15, 1, 4), (Fraction(1, 14), Fraction(-55, 266), Fraction(-9, 266)), (0, 2, 1), 3, -4), ((2, 13), (5, 1, 23), Fraction(34, 161), (1, 0, 5), (Fraction(9, 161), Fraction(34, 161), Fraction(-1, 7)), (1, 0, 2), -3, 1), ((4, 11), (19, 7, 1), Fraction(213, 1862), (2, 1, 0), (Fraction(17, 98), Fraction(-53, 266), Fraction(213, 1862)), (1, 2, 0), 3, -5), ((5, 10), (13, 7, 5), Fraction(509, 1274), (5, 3, 2), (Fraction(19, 98), Fraction(-37, 182), Fraction(-3, 1274)), (1, 0, 2), 3, -4), ((7, 8), (23, 17, 25), Fraction(2189, 5474), (9, 7, 10), (Fraction(47, 238), Fraction(-65, 322), Fraction(-15, 5474)), (0, 1, 2), 3, -8))
+duplicate_fibre_5_10=((17, 5, 35, 1, -1), (35, 17, 5, 1, -1)) measure=18/4165 state_charts=(((17, 5, 35, 1, -1), ((-3, Fraction(1, 4165)), (0, Fraction(16, 4165)), (3, Fraction(1, 4165)))), ((35, 17, 5, 1, -1), ((-3, Fraction(9, 4165)), (0, Fraction(0, 1)), (3, Fraction(9, 4165)))))
+finite_new_sector_intersections=((((1, 14), (5, 10)), ((5, 23, 47),)), (((2, 13), (4, 11)), ((1, 17, 47),)))
+old_new_relation_rays=((((1, 14), (1, 4)), ((1, 5, 19),)), (((1, 14), (5, 8)), ((1, 23, 37),)), (((2, 13), (1, 10)), ((5, 7, 43),)), (((2, 13), (2, 5)), ((1, 5, 23),)), (((2, 13), (4, 7)), ((5, 7, 29), (5, 17, 31))), (((4, 11), (1, 8)), ((5, 11, 29),)), (((4, 11), (1, 10)), ((1, 7, 17), (5, 13, 37))), (((4, 11), (2, 5)), ((1, 7, 17), (1, 7, 19))), (((4, 11), (4, 7)), ((1, 5, 31), (5, 13, 17))), (((5, 10), (1, 4)), ((5, 7, 13),)), (((5, 10), (2, 7)), ((1, 7, 25), (5, 11, 23))), (((5, 10), (2, 11)), ((1, 7, 25), (5, 19, 37))), (((5, 10), (5, 8)), ((1, 5, 35), (5, 13, 25), (11, 17, 25))))
+new_new_relation_rays=((((1, 14), (5, 10)), ((5, 23, 47),)), (((2, 13), (4, 11)), ((1, 17, 47),)))
+winner_chart_transport=((-3, 4, -1, Fraction(2, 133)), (3, -4, 1, Fraction(2, 133)))
+sector_labelled_triples=4610
+physical_union_triples=4608
+definition_level_measures=4608
+optimization_safe_checks=yes
+explicit_checks=19757759
+scope=coefficient_one_l1_16_only; LRC(14)=OPEN
