@@ -1,5 +1,20 @@
 # Script Results Index
 
+- `lrc14_one_zero_relation_residue_dichotomy_small_norm_atlas_thm4398.out`
+  and its standalone independent audit -> the complete one-zero-mod-three
+  relation presentation atlas through coefficient norm `14`
+  ([THM-4398](../../01-canon/theorems/THM-4398-lrc14-one-zero-relation-residue-dichotomy-and-small-norm-atlas.md)):
+  **PROVED ELEMENTARY RELATIVE TO THM-4386/4393 + VERIFIED-EXACT +
+  INDEPENDENTLY AUDITED; LRC(14) OPEN.** The residue dichotomy gives defect
+  `0` and two live affine classes in the all-unit case, versus nonzero defect
+  and one live class in the exactly-one-zero case. All 14 one-zero
+  presentation sectors have sharp global maximum at most `6/77`; five rows
+  attain equality, all at the same physical comb `{1,5,11}`. Exact
+  cube-slice tails reduce them to 300 sector triples and 313 relation rays;
+  every chart dictionary equals a definition-level physical-circle
+  dictionary. Primary/referee hashes: `ac37abac...5cbb` / `a2a29363...f866`
+  and `587434c3...dbad` / `bdd53528...7b0` (raw LF bytes).
+
 - `lrc14_minimal_ternary_unit_norm20_shell_thm4394.out` and its standalone
   clean-room referee -> complete minimal primitive full-support ternary-unit
   norm-`20` shell

@@ -1,0 +1,29 @@
+LRC THM4398 ONE-ZERO RELATION DICHOTOMY AND NORM-AT-MOST-14 ATLAS
+status=PASS VERIFIED_EXACT; scope=one_zero_mod3_relation_presentations_l1<=14; LRC14=OPEN
+residue_types=all_unit_or_exactly_one_zero; weighted_types=all_equal_or_zero_plus_opposites
+owner_gate=all_unit:defect0,two_live_k_classes; one_zero:defect_nonzero,one_live_k_class
+truth_table_relation_types={'all_unit': 16, 'one_zero': 48}; owner_rows={'all_unit': 96, 'one_zero': 288}
+patterns=((1, 2, 3), (1, 1, 6), (1, 3, 4), (2, 3, 5), (1, 2, 9), (1, 3, 8), (1, 5, 6), (2, 3, 7), (3, 4, 5), (1, 1, 12), (1, 3, 10), (1, 4, 9), (1, 6, 7), (3, 4, 7))
+pattern=(1, 2, 3); maximum=8/245; unique_winner=(1, 5, 7); defect_masses={-1:4/245,1:4/245}; slice_integrals={1:1/147}; bulk=2/441; threshold=945/31; proof_height=30; triples=51; relations=55; relation_chart_carrier_incidences=72
+pattern=(1, 1, 6); maximum=6/77; unique_winner=(1, 5, 11); defect_masses={-1:3/77,1:3/77}; slice_integrals={1:17/588}; bulk=17/882; threshold=8316/569; proof_height=14; triples=2; relations=2; relation_chart_carrier_incidences=4
+pattern=(1, 3, 4); maximum=6/77; unique_winner=(1, 5, 11); defect_masses={-1:3/77,1:3/77}; slice_integrals={1:1/56}; bulk=1/84; threshold=792/61; proof_height=12; triples=3; relations=3; relation_chart_carrier_incidences=4
+pattern=(2, 3, 5); maximum=6/77; unique_winner=(1, 5, 11); defect_masses={-2:0/1,-1:3/77,1:3/77,2:0/1}; slice_integrals={1:1/49,2:1/2940}; bulk=61/4410; threshold=83160/3109; proof_height=26; triples=20; relations=22; relation_chart_carrier_incidences=32
+pattern=(1, 2, 9); maximum=46/665; unique_winner=(5, 7, 19); defect_masses={-2:8/665,-1:3/133,1:3/133,2:8/665}; slice_integrals={1:1/49,2:5/588}; bulk=17/882; threshold=143640/4181; proof_height=34; triples=22; relations=22; relation_chart_carrier_incidences=46
+pattern=(1, 3, 8); maximum=58/833; unique_winner=(5, 7, 17); defect_masses={-2:8/833,-1:3/119,1:3/119,2:8/833}; slice_integrals={1:53/2352,2:5/784}; bulk=17/882; threshold=25704/755; proof_height=34; triples=27; relations=27; relation_chart_carrier_incidences=60
+pattern=(1, 5, 6); maximum=58/833; unique_winner=(5, 7, 17); defect_masses={-2:8/833,-1:3/119,1:3/119,2:8/833}; slice_integrals={1:19/980,2:1/196}; bulk=4/245; threshold=1190/37; proof_height=32; triples=27; relations=28; relation_chart_carrier_incidences=70
+pattern=(2, 3, 7); maximum=6/77; unique_winner=(1, 5, 11); defect_masses={-2:0/1,-1:3/77,1:3/77,2:0/1}; slice_integrals={1:23/1029,2:4/1029}; bulk=6/343; threshold=539/19; proof_height=28; triples=18; relations=19; relation_chart_carrier_incidences=36
+pattern=(3, 4, 5); maximum=6/91; unique_winner=(1, 7, 13); defect_masses={-2:0/1,-1:3/91,1:3/91,2:0/1}; slice_integrals={1:39/1960,2:2/735}; bulk=19/1260; threshold=28080/833; proof_height=33; triples=38; relations=41; relation_chart_carrier_incidences=88
+pattern=(1, 1, 12); maximum=12/161; unique_winner=(1, 11, 23); defect_masses={-2:3/161,-1:3/161,1:3/161,2:3/161}; slice_integrals={1:3/196,2:3/196}; bulk=1/49; threshold=1932/61; proof_height=31; triples=8; relations=8; relation_chart_carrier_incidences=18
+pattern=(1, 3, 10); maximum=12/161; unique_winner=(1, 11, 23); defect_masses={-2:3/161,-1:3/161,1:3/161,2:3/161}; slice_integrals={1:9/490,2:11/980}; bulk=29/1470; threshold=57960/1853; proof_height=31; triples=20; relations=20; relation_chart_carrier_incidences=44
+pattern=(1, 4, 9); maximum=6/77; unique_winner=(1, 5, 11); defect_masses={-2:3/77,-1:0/1,1:0/1,2:3/77}; slice_integrals={1:71/3528,2:11/1176}; bulk=26/1323; threshold=6237/212; proof_height=29; triples=17; relations=19; relation_chart_carrier_incidences=44
+pattern=(1, 6, 7); maximum=46/665; unique_winner=(5, 7, 19); defect_masses={-2:8/665,-1:3/133,1:3/133,2:8/665}; slice_integrals={1:25/1372,2:11/1372}; bulk=6/343; threshold=13965/421; proof_height=33; triples=23; relations=23; relation_chart_carrier_incidences=56
+pattern=(3, 4, 7); maximum=8/119; unique_winner=(5, 11, 17); defect_masses={-2:1/119,-1:3/119,1:3/119,2:1/119}; slice_integrals={1:167/8232,2:1/168}; bulk=6/343; threshold=4998/145; proof_height=34; triples=24; relations=24; relation_chart_carrier_incidences=54
+global_maximum=6/77
+equality_presentations=((1, 1, 6), (1, 3, 4), (2, 3, 5), (2, 3, 7), (1, 4, 9))
+equality_physical_comb=(1,5,11); presentation_overlap=yes; sector_values_must_not_be_added
+physical_controls=definition_level_for_every_triple_in_every_proof_window
+tail=one_coset_unimodal_sum<=slice_integral/3+3/(7*max_speed)
+inherited_thm4393_checks=3538
+local_checks=4823
+optimization_safe_checks=yes
+verdict=PASS

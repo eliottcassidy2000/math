@@ -1,11 +1,11 @@
 # Consumer-complete quotients and natural addresses
 
 **Synthesis status, 2026-09-03.** This note combines PROVED/FINITE-EXACT
-THM-4361 and THM-4363--4368 with the proved quotient and tournament controls
-THM-840, THM-851, THM-2294, THM-4088, and THM-4095. It proves only the
-elementary factorization lemmas below and records exact corollaries of those
-theorems. It asserts no LRC-to-JC-to-tournament transfer, no LRC(14)
-decrement, and no planar-Jacobian consequence.
+THM-4361, THM-4363--4368, and THM-4386--4394 with the proved quotient and
+tournament controls THM-840, THM-851, THM-2294, THM-4088, and THM-4095. It
+proves only the elementary factorization and residue lemmas below and records
+exact corollaries of those theorems. It asserts no LRC-to-JC-to-tournament
+transfer, no LRC(14) decrement, and no planar-Jacobian consequence.
 
 ## 1. The right question about a natural-number code
 
@@ -275,6 +275,73 @@ metric value; allowing unreduced endpoints also introduces a scale fibre.
 THM-4367 proves that one particular LRC consumer is constant on that scale
 fibre. THM-4368 proves that one particular Jacobian consumer is not. This is
 the rigorous overlap behind the analogy; there is no cross-problem theorem.
+
+### The raw LRC carrier and the one honest tournament bit
+
+THM-4386 supplies a second exact addressing example.  For a primitive
+three-speed comb, nearest-integer data `n` modulo the common translation
+`n -> n+tw` have the chart-independent image
+
+```text
+C=w cross n in Lambda_w={C in Z^3:C dot w=0}.            (16)
+```
+
+The map `Z^3/Zw -> Lambda_w` is an integral isomorphism.  Thus `C`, not a
+chosen relation chart, is the consumer-complete component address for the
+local length `L_w(C)` and the raw-carrier sum.  If a primitive relation
+`c dot w=0` is selected, a Bezout section rewrites one defect fibre as
+
+```text
+C=C_delta+k c.                                          (17)
+```
+
+Here `(delta,k)` is a chart-labelled affine coordinate: changing the Bezout
+section translates `k`, and changing the relation changes the whole chart.
+It is not an intrinsic group law on physical components.  THM-4393/4394's
+multiple-relation rays make the warning literal: the same raw `C` can receive
+different `(delta,k)` presentations, so sector totals must not be added.
+
+There is nevertheless one intrinsic binary relation in the distinct-owner
+gate.  Write
+
+```text
+o_i=-w_i^(-1)n_i mod 3,        {o_1,o_2,o_3}=F_3,
+i -> j iff o_j-o_i=1 mod 3.                              (18)
+```
+
+This orients the three labelled speed vertices as a directed 3-cycle.  An
+affine relabelling `o_i -> o_i+t` preserves it, while negation reverses it.
+The two live raw-carrier cosets modulo three are therefore the two opposite
+orientations.  This is an honest tournament observable because the pairwise
+rule is intrinsic after the positive-speed gauge and owner labels are fixed.
+
+The coefficient residues say exactly when a relation chart can still see
+that orientation.  Since `w_i` is a unit modulo three, a primitive relation
+has either all three `c_i` nonzero modulo three or exactly one zero modulo
+three; two zeros would force the third.  In the all-nonzero case the three
+`c_iw_i` are equal, so distinct owners force
+
+```text
+delta=c dot n=0 mod 3.                                  (19)
+```
+
+Each defect fibre then retains two live `k` classes, the two reversed owner
+cycles.  The scalar defect forgets their orientation.  If exactly one
+coefficient is zero modulo three, the other two weighted residues are
+opposite; distinct owners instead force `delta!=0 mod 3`.  Its sign relative
+to the zero-coordinate label retains the orientation, and only one `k` class
+is live on each defect fibre.  This is a proved elementary residue dichotomy;
+it does not say that either relation type bounds the comb by itself.
+
+THM-4392 is the dual version of the same information loss.  Fourier transform
+of the **unoriented union** of the two raw cosets gives character weights `6`
+on equal weighted residues and `-3` on all-distinct residues.  The transform
+retains the two-coset union exactly but no longer names which directed owner
+cycle a primal component used.  Conversely, keeping only the tournament
+orientation discards raw scale, the exact lattice point `C`, and the metric
+length `L_w(C)`.  It therefore cannot determine failure measure.  There is no
+LRC-to-tournament theorem here: the useful statement is a loss ledger linking
+one genuine orientation bit to the raw and Fourier representations.
 
 ## 6. Generated sharp tasks
 
