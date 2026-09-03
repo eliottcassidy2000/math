@@ -1,5 +1,25 @@
 # Script Results Index
 
+- `poisson_rank2_casimir_leaf_natural_cubic_hostile.out` -> exact hostile to
+  the natural `W=1+xy` Casimir-leaf incidence. The universal depressed cubic
+  is exact, but the valid etale
+  source point `(1,-4/3,2)` maps to its double root `W=-1/3`. Hence this
+  primitive coordinate loses normalization data. THM-4401 passes the hostile
+  with `U=x^(-1)(1+xy)`, whose cubic derivative is the unit `2/x`; the
+  puncture rescaling is load-bearing. Script/output SHA-256:
+  `6dc1f71d...4415` / `56bec002...849a` (raw LF bytes).
+
+- `poisson_rank2_long_thm2044_gauge_equivalence_thm4397.out` and an
+  independent reconstruction -> exact symplectic/Weyl gauge equivalence of
+  Long's arXiv:2608.23777v1 map and THM-2044
+  ([THM-4397](../../01-canon/theorems/THM-4397-rank-two-poisson-counterexample-symplectic-gauge-equivalence.md)):
+  **PROVED + VERIFIED-EXACT + INDEPENDENTLY AUDITED; DC(2)/JC(2) OPEN.** A
+  Hamiltonian momentum translation and target quarter-turn identify the full
+  maps and transport their reduced three-point fibre. The paper gauge is
+  smaller, but finite `A_2` quantizability is gauge-invariant. Primary/referee
+  hashes: `d72d527b...e8ba` / `ef2a2e8d...3f9e` and
+  `01d94738...e79` / `3d0b8206...3a2a` (raw LF bytes).
+
 - `lrc14_finite_dual_exact_pair_hybrid_certificate_thm4396.out` and its
   standalone referee -> a finite dual/exact-pair primal upper certificate
   ([THM-4396](../../01-canon/theorems/THM-4396-lrc14-finite-dual-exact-pair-hybrid-certificate.md)):

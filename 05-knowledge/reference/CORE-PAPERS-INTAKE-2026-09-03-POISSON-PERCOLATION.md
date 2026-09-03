@@ -65,6 +65,49 @@ THM-2045.  Rank two here means two canonical pairs and four commutative
 variables.  Neither the preprint, `(1)`, nor its `A_4` appendix proves `DC(2)`
 or planar `JC(2)`.
 
+### Casimir-leaf cubic hostile
+
+An exact scout tested the most natural cubic-incidence refinement of the
+three-dimensional core.  On `R=a!=0`, use `W=1+xy` and target coordinates
+`(T,S)`.  Direct elimination gives
+
+```text
+P(W)=K W^3+(S^2+24T)W+8T,
+K=aS^3-S^2+36aST+108a^2T^2-32T,
+P(1+xy)=0.                                                (1a)
+```
+
+But `(1a)` is not globally a simple-root presentation.  The rational source
+point
+
+```text
+(x,y,beta)=(1,-4/3,2)
+```
+
+has `(R,T,S)=(4,1/27,-2/3)` and `W=-1/3`, while
+
+```text
+P(Z)=-4(3Z-2)(3Z+1)^2/27.
+```
+
+Thus `P_W=0` at a valid source point even though the normalized core
+determinant and the leaf Jacobian there are both one.  The natural incidence
+has lost normalization/branch data; its derivative divisor cannot simply be
+deleted.
+
+[THM-4401](../../01-canon/theorems/THM-4401-rank-two-poisson-casimir-leaf-cubic-incidence-boundary.md)
+passes this hostile by using the genuinely different marked root
+
+```text
+U=x^(-1)(1+xy),       rho U^3-2U^2+S U+4T=0,
+```
+
+whose derivative on the source is `2/x`, a unit on every nonzero Casimir
+leaf.  The failed `W` coordinate therefore identifies the puncture rescaling
+as load-bearing.  The scout remains a **VERIFIED-EXACT** warning against
+silently changing primitive elements.  Reproduce it with
+`04-computation/poisson_rank2_casimir_leaf_natural_cubic_hostile.py`.
+
 ## 2. Kozma--Nitzan's gluing program
 
 For independent bond percolation on a finite weighted graph, the paper's main
