@@ -1,0 +1,15 @@
+THM-4388 independent weight-13 row-12 audit
+imports=audited_THM4308_R8_and_THM4315_R9; primary_THM4388_import=no
+field=algebraically_closed_characteristic_zero
+face=c51*p^5*y+c23*p^2*y^3 channels=(c51,6*c51+c23) lossless=yes
+Phi_zero=F_degree2_squarefree; row11_c51_unit=323*eta/432; row11_depth=automatic
+Phi_zero_row12=c23_coefficients=(323*eta/360,-5/7); compatibility_mod_F=unit; survivors=0
+Phi_nonzero_row10=D-707284001250*Phi^2*c51; old_elliptic_carrier_absorbed=yes
+Phi_nonzero_row11=c23_coefficient=323*Phi/504; localized_graph=lawful
+row12_bracket=13_reduced_quotient_points,26_signed_geometric_lifts
+row12_depth=N=(272008125-43740000*r)*Y+10213932924928
+row12_extinction=substituted_degrees=(6,5); mod11_Bezout=1; survivors=0
+finite_field_roles=F23_positive_carrier_and_hostile_depth_control; F11_good_reduction_Bezout_for_Q_coprimality
+normalization_bridge=Phi_hat=-alpha*A5^3*f/2 eta_hat=-alpha*A5^4*h/2 alpha^2=A5
+type_note=coefficient_atlas_mu2_only; no_physical_P1_X_to_Ebar_map
+checks=172 result=PASS
