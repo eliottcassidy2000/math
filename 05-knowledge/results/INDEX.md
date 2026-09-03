@@ -1,5 +1,18 @@
 # Script Results Index
 
+- `jc2_source_normal_u_zero_row11_depth_hierarchy_completeness_thm4376.out`
+  and its sparse-rational referee -> restricted depth completeness with fatal
+  bracket sidecar
+  ([THM-4376](../../01-canon/theorems/THM-4376-source-normal-u-zero-row-eleven-depth-hierarchy-completeness-and-bracket-blindness.md)):
+  **PROVED FINITE-ROW RELATIVE TO THM-4308/4315/4364/4366 + VERIFIED-EXACT +
+  INDEPENDENTLY AUDITED; JC(2) OPEN.** On the counterfactual determinant-row-
+  only extension of the already bracket-dead `U=0` carrier, the hierarchy and
+  full-annihilator restricted affine row spaces agree. Their compatibility
+  ideal is the old six-point `Q(Phi^2)`, while the omitted bracket residual is
+  coprime to it. This adds no survivor or exclusion. Script/output SHA-256:
+  `1fd8656d...a9dd` / `e0357c42...8b5a` and
+  `0e7cce85...4770` / `91bd64e0...1b5`.
+
 - `jc2_bilateral_source_cone_reciprocal_orbits_thm4375.out` and its
   import-free referee -> reciprocal path-band, address, ray, and fibre laws
   ([THM-4375](../../01-canon/theorems/THM-4375-bilateral-source-cone-reciprocal-orbits-and-fibre-imbalance.md)):

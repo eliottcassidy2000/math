@@ -352,8 +352,9 @@ lift/phase clocks.
   close the cubic gate for `U+W!=0` and `U+W=0`.
   THM-4340--4356 close endpoints through `Z=beta_11=zeta_3=W=xi_10=0`.
   THM-4357--4361 close zeta/beta-zero. THM-4362/4364/4368/4369/4375 give
-  the diagonal hierarchy, clocks, Pascal kernel/basis, and reciprocal
-  path-band/fibre law; THM-4366 closes `U=0` to row 11. Other strata/seam remain open.
+  hierarchy/clocks, Pascal kernel, and reciprocal path-band;
+  THM-4366/4376 close `U=0` and show depth is bracket-blind.
+  Other strata/seam remain open.
   Exceptional quartic: THM-3703/3737 give grammar/image, THM-4034 the
   conductor, and THM-4039/4043/4046 reach `J_7`, obstruct `J_8`, and close
   critical `H`. [THM-4054](../01-canon/theorems/THM-4054-exceptional-affine-simple-zero-retained-packet.md)
