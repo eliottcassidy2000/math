@@ -1,25 +1,215 @@
 ---
 id: THM-4399
 title: "Source-normal row-eleven late weight-eighteen response absorption"
-status: RESERVED / UNPROVED EMPTY STUB
-source: root / JC2 and arXiv:2608.23777 continuation session, 2026-09-03
-depends_on: []
-related:
+status: >
+  PROVED FINITE-ROW RELATIVE TO THM-4395 + VERIFIED-EXACT + INDEPENDENTLY
+  AUDITED. The complete fixed residual-weight-at-most-fourteen row-eleven
+  bracket cuts the row-ten affine base by one irreducible quartic F=0 and adds
+  no depth condition. Adjoining only lambda18*p^3*y^4 replaces this by a
+  global constant-pivot graph, leaving source A^6 and terminal fibre A^8.
+  This is not the complete weight-at-most-eighteen family; row twelve, entry,
+  all-row lifting, Keller pairs, JC(2), and DC(2) remain OPEN.
+source: root + independent referee / JC2 and arXiv:2608.23777 session, 2026-09-03
+depends_on:
   - THM-4395-source-normal-weight-fourteen-row-ten-global-affine-absorption
   - THM-4328-seam-covariant-student-stein-face-visibility
+related:
+  - THM-4400-source-normal-weight-fourteen-row-eleven-boundary-stratification
+  - THM-4403-source-normal-two-channel-weight-eighteen-row-twelve-affine-continuation
   - THM-2044-explicit-rank-two-poisson-counterexample-by-symplectic-suspension
+mistake_firewall:
+  - MISTAKE-287
+  - MISTAKE-541
+  - MISTAKE-542
+primary_script: 04-computation/jc2_source_normal_row11_late_weight18_response_thm4399.py
+primary_output: 05-knowledge/results/jc2_source_normal_row11_late_weight18_response_thm4399.out
+primary_script_sha256: ddf6b8928b5002c8fd6cf9e58a41b494070d5767864534d72227ccfcd4913b24
+primary_output_sha256: 36d9aa85c92f02ca129e2137be6c25bf4dfef7d9a804f8c766cc6baf057f65a2
+independent_audit_script: 04-computation/jc2_source_normal_row11_late_weight18_response_thm4399_independent_audit.py
+independent_audit_output: 05-knowledge/results/jc2_source_normal_row11_late_weight18_response_thm4399_independent_audit.out
+independent_audit_script_sha256: be854c2ecc2042f4684d5a8b1449f7f1190ba2d7a202931babb85eaf64682073
+independent_audit_output_sha256: 2aa843e861ab08f21b8de1330a62df49948b9504efeb7fa08367eb593143e5ae
+hash_basis: raw LF bytes
+audit: >
+  PASS. The primary imports THM-4395 and executes 60 theorem-specific exact
+  checks. The 104-check independent audit imports no THM-4395/4399 code and
+  reconstructs the literal source from THM-4308/4315. Both certify the same
+  quartic, response table, all bracket/depth equations, dense and Phi=eta=0
+  controls, and fibre dimensions. Normal, optimized, and fixed-hash-seed
+  streams byte-match the frozen LF outputs. No finite-field inference is used.
 ---
 
 # THM-4399 -- source-normal row-eleven late weight-eighteen response absorption
 
-**RESERVED / UNPROVED EMPTY STUB.**
+**PROVED FINITE-ROW RELATIVE TO THM-4395 + VERIFIED-EXACT + INDEPENDENTLY
+AUDITED. THIS IS A RESTRICTED ONE-CHANNEL CONTINUATION THROUGH ROW ELEVEN,
+NOT THE COMPLETE WEIGHT-AT-MOST-EIGHTEEN FAMILY. IT PROVES NO CHART OR SEAM
+ENTRY, ALL-ROW LIFT, POLYNOMIAL TERMINATION, KELLER PAIR, `JC(2)`, OR
+`DC(2)` CLAIM.**
 
-This file reserves the theorem identifier and filename only. It contains no
-proved claim, proof, dependency, or consequence. The intended candidate first
-computes the complete fixed source-normal residual-weight-at-most-fourteen
-row-eleven bracket/depth cokernel, then tests whether adjoining the single
-later channel `lambda*p^3*y^4` absorbs that cokernel without changing rows
-through ten. Promotion requires exhaustive exact coefficient checks, boundary
-controls, an independent reconstruction, and explicit firewalls: the slice is
-not the complete weight-at-most-eighteen family and proves no chart entry,
-all-row lift, Keller pair, `JC(2)`, or `DC(2)`.
+## 1. The weight-fourteen row-eleven obstruction
+
+Work over a characteristic-zero field in THM-4395's fixed source-normal
+chart. The complete residual-weight-at-most-fourteen source is
+
+```text
+H_14=H_12+c51*p^5*y+c23*p^2*y^3
+           +c70*p^7+c42*p^4*y^2+c14*p*y^4.              (1)
+```
+
+After the global row-nine and row-ten graphs, its source base is
+
+```text
+(Phi,eta,alpha11,c51,c23,c70) in A^6.                   (2)
+```
+
+The row-eleven bracket matrix has shape `12 x 8`, rank eight, and pivots
+`(0,...,7)`. Its left cokernel has dimension four, but the inherited source
+residual occupies only one line: after tangent selection every nonzero
+coefficient is a rational multiple of one primitive polynomial `F`. The
+selected residual ideal is exactly `(F)`.
+
+Both certificates print the complete 36-term `F`. It has total degree four
+and multidegree
+
+```text
+(4,4,2,2,1,2) in (Phi,eta,alpha11,c51,c23,c70).          (3)
+```
+
+Its dependence on the old response coordinate is
+
+```text
+F=21736146783278091456000000*Phi*c23+F_0,               (4)
+```
+
+where `F_0` is the explicit polynomial in the frozen transcripts and
+`F_0 mod Phi` is nonzero. The certificates factor `F` exactly over `Q` and
+find it irreducible. Structurally, `(4)` is primitive and degree one in
+`c23` over the UFD generated by the other five coordinates, so Gauss' lemma
+gives the same conclusion. Equation `(4)` also explains why `c23` is not a
+global pivot: its coefficient vanishes precisely on `Phi=0`.
+
+After bracket selection, projected depth is automatic over the source ring:
+
+```text
+P_2: 102 x 228, rank 77;
+P_3: 114 x 361, rank 94;
+joint: 45 x 12, rank 4, pivots (8,9,10,11).              (5)
+```
+
+There is no depth source condition, and the terminal fibre is `A^8`.
+
+## 2. A constant late response
+
+Under the source-normal substitution
+
+```text
+p=t(1+x^2*t),                    y=x*t*p,                (6)
+```
+
+the residual-weight-18 monomial `p^3*y^4` has exact `t`-valuation eleven:
+
+```text
+[t^j](p^3*y^4)=0 for j<11,       [t^11](p^3*y^4)=x^4.   (7)
+```
+
+Thus
+
+```text
+H_late=H_14+lambda18*p^3*y^4                            (8)
+```
+
+changes no row through ten. At row eleven its response in the unique active
+quotient is the nonzero constant
+
+```text
+C_18=6864046352614134144000000.                         (9)
+```
+
+The complete row-eleven source equation is consequently
+
+```text
+F+C_18*lambda18=0,                                      (10)
+```
+
+and the augmented source projection is the global graph
+
+```text
+lambda18=-F/C_18.                                       (11)
+```
+
+No source parameter is inverted. Substitution of `(11)` kills all twelve
+literal bracket coefficients. The depth matrices remain `(5)`, all 45 depth
+equations vanish after terminal selection, and every terminal fibre remains
+`A^8`. Hence this restricted row-eleven source is globally `A^6`.
+
+## 3. Sharp valuation-eleven boundary
+
+Every source monomial first appearing at row eleven is
+
+```text
+p^(11-2b)*y^b,                    0<=b<=5.               (12)
+```
+
+The complete response table is:
+
+| `b` | monomial | weight | Student ratio | quotient response |
+|---:|---|---:|---:|---:|
+| 0 | `p^11` | 22 | `1` | `25358837913824440032000000` |
+| 1 | `p^9*y` | 21 | `0` | `0` |
+| 2 | `p^7*y^2` | 20 | `2/7` | `7245382261092697152000000` |
+| 3 | `p^5*y^3` | 19 | `0` | `0` |
+| 4 | `p^3*y^4` | 18 | `36/133` | `C_18` |
+| 5 | `p*y^5` | 17 | `0` | `0` |
+
+The last two columns agree up to one nonzero scale. This is THM-4328's
+Student--Stein parity diagonal in the literal row-eleven quotient. Therefore
+`p^3*y^4` is the least-weight exact-valuation-eleven monomial transverse to
+the obstruction. The cheaper weight-17 hostile `mu17*p*y^5` is exactly
+invisible, so its row-eleven equation remains `F=0` for every `mu17`.
+
+## 4. Controls and mechanism
+
+At the dense base point
+
+```text
+(Phi,eta,alpha11,c51,c23,c70)=(1,2,3,5,7,11),
+F=2074612777259675413868913342459971 !=0,               (13)
+```
+
+and at the hostile boundary corner
+
+```text
+(Phi,eta,alpha11,c51,c23,c70)=(0,0,1,2,3,4),
+F=2076357619690857742751501214596096 !=0.               (14)
+```
+
+Neither point lies on the old hypersurface; at both, the nonzero value from
+`(11)` kills every bracket and depth residual exactly.
+
+Long's rank-two Poisson construction uses a late Hamiltonian primitive to pay
+a residual two-form without changing its already fixed three-dimensional
+core. Equations `(7)--(11)` are the finite-row analogue: a later source
+channel is invisible to all solved rows and supplies a constant direction in
+the first live compatibility quotient. This is a mechanism-level connection,
+not a descent theorem. The present row is not a symplectic suspension and
+does not yield a planar Keller map.
+
+The monomial in `(8)` has later coefficients, so row twelve cannot be inferred
+from this theorem. THM-4403 separately analyzes one restricted two-channel
+continuation. Moreover `(8)` omits all other residual weights and the other
+weight-eighteen face monomials; it is not a classification of the complete
+weight-at-most-eighteen source.
+
+## 5. Reproduction
+
+```text
+python3 -B 04-computation/jc2_source_normal_row11_late_weight18_response_thm4399.py
+python3 -B -O 04-computation/jc2_source_normal_row11_late_weight18_response_thm4399.py
+python3 -B 04-computation/jc2_source_normal_row11_late_weight18_response_thm4399_independent_audit.py
+python3 -B -O 04-computation/jc2_source_normal_row11_late_weight18_response_thm4399_independent_audit.py
+```
+
+The independent audit reconstructs the complete fixed source and the row-nine
+through row-eleven elimination from THM-4308/4315 only. It imports neither
+the THM-4395 nor THM-4399 implementation.
