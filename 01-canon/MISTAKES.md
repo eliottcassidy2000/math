@@ -9,26 +9,32 @@ Format per entry:
 - Why it was wrong
 - The correct framing
 
-## MISTAKE-543 (2026-09-03, concurrent THM-4404 reservations) -- a second cross-path YAML collision survived clean integration
+## MISTAKE-543 (2026-09-03, concurrent THM-4404 reservations) -- a semantic collision survived clean integration, then a non-fail-fast shell pushed it
 
 - **What failed:** the exceptional-quartic and LRC14 sessions independently
-  reserved `THM-4404` under different filenames.  Both commits integrated
-  cleanly because Git detects path conflicts, not semantic identifier
-  collisions.
-- **First failed implication / minimal witness:** after rebasing a later
-  theorem promotion, `agents/check_docs.py` found two files with the exact
-  frontmatter line `id: THM-4404`.  A successful rebase was again not a proof
-  that the shared theorem namespace was unique.
-- **Strongest survivor:** both colliding files were honest `RESERVED /
-  UNPROVED EMPTY STUB` records.  No result, dependency edge, or mathematical
-  claim depended on the duplicated identifier.
-- **Repair:** the later LRC14 reservation was moved atomically to the next free
-  identifier `THM-4405`; the earlier exceptional-quartic reservation keeps
-  `THM-4404`.
-- **Reusable rule:** every reservation session must rerun the global document
-  checker after its final integration, not only search its own candidate ID.
-  If another concurrently integrated reservation has collided elsewhere, fix
-  that semantic conflict before pushing any otherwise-valid theorem work.
+  reserved `THM-4404` under different filenames. Git integrated both because
+  their paths differed. After the rejected LRC push triggered a fetch/rebase,
+  `agents/check_docs.py` correctly reported both YAML IDs; however, the
+  PowerShell command joined that checker and `git push` with semicolons and did
+  not inspect the external exit code, so it briefly pushed the duplicate
+  reservation despite printing the failure.
+- **First failed implication / minimal witness:** neither a successful rebase
+  nor merely running a mandatory gate proves the namespace safe. The gate must
+  pass after integration, and its nonzero status must stop later mutations.
+  The witness was the pair
+  `THM-4404-exceptional-quartic-descended-two-form-seminormal-cokernel.md` and
+  `THM-4404-lrc14-one-zero-relation-norm-sixteen-through-twenty-atlas.md`.
+- **Strongest survivor:** both files were honest `RESERVED / UNPROVED EMPTY
+  STUB` records with no proved dependencies. No mathematical claim or
+  proof-graph edge used the collided identifier.
+- **Repair:** the LRC reservation was moved atomically to verified-free
+  `THM-4405`; the earlier exceptional-quartic reservation keeps `THM-4404`.
+  Commit `f9cf44a69` restored the unique namespace.
+- **Reusable rule:** rerun the global document checker after the final rebase,
+  not only before it, and make that gate fail-fast. In PowerShell, follow every
+  external checker with
+  `if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }` before commit or push;
+  semicolon sequencing is not error propagation.
 
 ## MISTAKE-542 (2026-09-03, concurrent THM-4399 reservations) -- a clean rebase did not detect a YAML-ID collision
 
