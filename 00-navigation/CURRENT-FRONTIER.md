@@ -1,6 +1,6 @@
 # Current Frontier
 
-**State — 2026-09-02.** Proof links; statuses: **PROVED**, **CITED**,
+**State — 2026-09-03.** Proof links; statuses: **PROVED**, **CITED**,
 **FINITE-EXACT**, **VERIFIED**, **CONDITIONAL**, **OPEN**, **RESERVED**,
 **REFUTED**, **SUPERSEDED**.
 
@@ -349,12 +349,12 @@ lift/phase clocks.
   close beta/zeta owners.
   [THM-4339](../01-canon/theorems/THM-4339-clean-interior-cubic-edge-planar-jacobian-extinction.md)
   and [THM-4343](../01-canon/theorems/THM-4343-disjoint-a23-cubic-contact-planar-jacobian-extinction.md)
-  close the clean cubic gate for `U+W!=0` and `U+W=0`.
-  THM-4340--4356 close all remaining endpoints, ending with the full
+  close the cubic gate for `U+W!=0` and `U+W=0`.
+  THM-4340--4356 close remaining endpoints, ending with
   `Z=beta_11=zeta_3=W=xi_10=0` endpoint. THM-4357--4360 stratify the source
   response and close its zeta-zero plane. THM-4361 closes beta-zero by joint
-  depth; THM-4362/4364 prove the sharp diagonal-stencil hierarchy. Other
-  strata and seam entry remain open.
+  depth; THM-4362/4364 give the diagonal hierarchy; THM-4366 closes `U=0`
+  through row 11. Other strata/seam entry remain open.
   Exceptional quartic: THM-3703/3737 give grammar/image, THM-4034 the
   conductor, and THM-4039/4043/4046 reach `J_7`, obstruct `J_8`, and close
   critical `H`. [THM-4054](../01-canon/theorems/THM-4054-exceptional-affine-simple-zero-retained-packet.md)

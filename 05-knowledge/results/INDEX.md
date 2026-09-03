@@ -1,5 +1,17 @@
 # Script Results Index
 
+- `jc2_source_normal_u_zero_row11_hierarchy_selected_extinction_thm4366.out`
+  and its import-free referee -> `U=0` source-pullback row-eleven extinction
+  ([THM-4366](../../01-canon/theorems/THM-4366-source-normal-u-zero-row-eleven-hierarchy-selected-extinction.md)):
+  **PROVED FINITE-ROW RELATIVE TO THM-4308/4315/4364 + VERIFIED-EXACT +
+  INDEPENDENTLY AUDITED; JC(2) OPEN.** The `Phi=0` boundary survives row nine
+  and dies at row ten. On `Phi!=0`, joint row-ten depth leaves six strict
+  points with affine-eight terminal fibres; a coprime row-eleven residual
+  kills all six. The new opposite-order hierarchy consumer is an alternative,
+  not an extra cut. Script/output SHA-256 pairs:
+  `3d942317...74027` / `e9d10af6...2d118` and
+  `ce32acf1...9a6c3` / `26bcaa88...194f4`.
+
 - `lrc14_cofinite_828_quotient_fibre_centered_residue_exit_thm4365.out`
   and its import-free referee -> cofinite quotient fibre and residue exit law
   ([THM-4365](../../01-canon/theorems/THM-4365-lrc14-cofinite-828-quotient-fibre-and-centered-residue-exit-law.md)):

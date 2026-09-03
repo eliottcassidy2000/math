@@ -1,0 +1,18 @@
+THM-4366 CLEAN-ROOM REFEREE: PASS
+CHECKS=461
+SOURCE_REBUILT=literal residual-H expansion and bracket recursion rows4..11
+PHI0_E9=(-11/243)*(5646560625*eta^2+379697122115584)
+PHI0_ROW9=two A2 source components; terminal fibre A7
+PHI0_G10_RESIDUAL8=-11388581281792/332150625
+PHI_NONZERO_ROW9=Gm_x_A2 source graph; terminal fibre A7
+ROW10_BRACKET=eta,beta solved; source parameter Phi remains
+ROW10_DEPTH=P2 88x193 rank68 null20; P3 99x304 rank83 null16; each rank=aug3
+JOINT_DEPTH=Q(Phi^2)=0; squarefree cubic, nonzero roots, six sign sheets; terminal fibre A8
+CONSUMERS=new A L(10,11,3)=(-4/3)*old C L(10,10,3) after opposite selection
+HIERARCHY_SCAN=only nonzero admissible cross-consumers A(11,3),C(10,3)
+STRICT_GATES=Phi,W,Z,alpha^2-4W*ups nonzero on Q
+ROW11=rank8 selector on A8 terminal fibre; Q residual plus coprime quartic R
+MOD7_Q=-Y^3+3Y^2+3Y+2
+MOD7_R=-2Y^4+3Y^3+3Y^2+3Y-2
+MOD7_BEZOUT=(3Y^3-2Y^2-3Y)Q+(2Y^2-2Y+3)R=1
+SCOPE=finite source-normal residual-weight<=12 projected-depth calculation only
