@@ -1,7 +1,7 @@
 # Start Here
 
-**Rolling brief — refreshed 2026-09-02.** Router only;
-[`CURRENT-FRONTIER.md`](CURRENT-FRONTIER.md) owns status links.
+**Rolling brief — 2026-09-02.**
+[`CURRENT-FRONTIER.md`](CURRENT-FRONTIER.md) owns status.
 
 ## The five-minute orientation
 
@@ -51,10 +51,9 @@ Then read frontier, guardrails, theorem; logs are history.
 11. **Support is not multiplicity.** THM-2000/2005/2352/3359/3362/3382
     separate collision, phase and address; THM-3425 needs period plus parity.
     Composite rank seven and FC(3) remain open.
-12. **JC is false from dimension three; JC(2), DC(2) remain open.**
-    THM-2084: `M=10`; THM-4248/4226 close `M=11/13`;
-    THM-4290--4340 close many `M=12` lanes, including the cubic interior and
-    `U=0,WZ!=0`; endpoint exits and seam entry remain.
+12. **JC fails from dimension three; JC(2), DC(2) are open.** THM-2084 gives
+    `M=10`; THM-4248/4226 close `M=11/13`; THM-4290--4344 close many `M=12`
+    lanes. Endpoint intersections and seam entry remain.
 13. **Complete period-14 coordinates can be globally blind.** THM-2058 keeps
     every fixed-depth packet coordinate but exits at `47/113`; THM-2043/2047/
     2050 separate local completeness from global maxima.
@@ -67,8 +66,8 @@ Then read frontier, guardrails, theorem; logs are history.
 16. **Use the native operation carrier, not shared syntax.** THM-2176/2191
     expose knot continuation; MISTAKE-230--235 forbid syntax-only bridges.
     THM-4065/4085/4204/4206/4210 do not solve a prize.
-17. **Sun 2-4-6-8 is refuted:** THM-4026. THM-4027/4028/4036/4037 separate
-    local invariants from coverage; THM-4040 gives one-CRT-class uniqueness.
+17. **Sun 2-4-6-8 is refuted:** THM-4026; later results are scoped.
+
 ## Where to go by topic
 
 | Topic | Read first | Then use |

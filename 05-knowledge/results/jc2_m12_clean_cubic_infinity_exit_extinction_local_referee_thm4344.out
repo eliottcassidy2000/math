@@ -1,0 +1,9 @@
+THM-4344 W=0 D6 hostile referee exact audit: PASS
+root_chart=(v^2-sigma*x)(x^6-D(v,sigma*x))
+generic_D6=genus2; repeated_D6=two rational 3+1 branches; A5_delta=3
+critical_hostile=(h1,h2,h3)=(0,0,-1376/135)
+tail_table=[(1, 1, 6, 2, 0, 12, Fraction(28, 5), 56, 14), (2, 0, 4, 1, 1, 12, Fraction(13, 2), 52, 13), (3, 1, 4, 1, 1, 12, Fraction(8, 1), 48, 13), (4, 0, 2, 0, 2, 12, Fraction(11, 1), 44, 12), (5, 1, 2, 0, 2, 12, Fraction(20, 1), 40, 12)]
+persistent_r>=6=two horizontal sheets; graph/genus=11/11
+local_delta=floor(r/2)+g_tail+one_graph_cycle=3 for r=1,...,5
+residue=sigma^5*x^5dx/y; tau_orders=(56,52,48,44,40)
+checks=110

@@ -1,0 +1,10 @@
+PASS W0 GLOBAL HOSTILE REFEREE CHECKS
+realizable_atlas=192/192:M,D6,T
+conservative_over_atlas=512/512:M,D6,T
+coupling=(Delta,K-e,Theta,Theta-Delta):8;(u,xi-u):3;(Phi,eta,alpha):8
+unique_owners=(2,6,1):-U;(4,4,1):-xi;(4,2,1):-K
+pick=global14;RH=26;generic_graph=E20,V9,b1=12
+infinity_complement=z*rho=tau^12;h^2=1-z^(6-r)c(rho);two_etale_signs
+finite_complements=three_charts_of_smooth_projective_conic_or_horizontal_split
+simultaneous_signs=M-D6:3+3;D6-T:1+1_matching;corrections_add
+seam=K=2848/45-(7/6)Delta;K!=0_iff_Delta!=5696/105

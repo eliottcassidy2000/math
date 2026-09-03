@@ -352,7 +352,9 @@ lift/phase clocks.
   [THM-4340](../01-canon/theorems/THM-4340-u-zero-repeated-cusp-planar-jacobian-extinction.md)
   closes `U=0,WZ!=0`; `WZ=0` remains.
   [THM-4342](../01-canon/theorems/THM-4342-clean-cubic-zero-exit-planar-jacobian-extinction.md)
-  closes `K=0`; `W=0` drop and seam entry remain.
+  closes `K=0`.
+  [THM-4344](../01-canon/theorems/THM-4344-clean-cubic-infinity-exit-planar-jacobian-extinction.md)
+  closes `W=0,U*K*xi_10!=0`; exit intersections and seam entry remain.
   Exceptional quartic: THM-3703/3737 give grammar/image, THM-4034 the
   conductor, and THM-4039/4043/4046 reach `J_7`, obstruct `J_8`, and close
   critical `H`. [THM-4054](../01-canon/theorems/THM-4054-exceptional-affine-simple-zero-retained-packet.md)

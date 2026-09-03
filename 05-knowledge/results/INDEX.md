@@ -1,5 +1,19 @@
 # Script Results Index
 
+- `jc2_m12_clean_cubic_infinity_exit_extinction_thm4344.out` and two
+  import-free hostile audits -> exact `W=0` Laurent infinity-exit extinction
+  ([THM-4344](../../01-canon/theorems/THM-4344-clean-cubic-infinity-exit-planar-jacobian-extinction.md)):
+  **PROVED RELATIVE TO THM-4230/4327/4339 + VERIFIED-EXACT + TWICE
+  INDEPENDENTLY HOSTILE-AUDITED; JC(2) OPEN.** The cubic degree drop exposes
+  a genus-two `D6` face. Its even `A5` collision has tail genera
+  `2,1,1,0,0`, two proved attachments, and positive nonrational form orders.
+  Exact support gives `192/192` `M,D6,T` fans; `512/512` is a conservative
+  over-atlas. The infinity complement, all finite-bridge charts, and
+  simultaneous sign incidence are explicit. Script/output SHA-256 pairs:
+  `c65a442f...9e0f5a` / `dd9101db...f3373e`,
+  `eb282dad...351e7e` / `763a16da...224b41`, and
+  `cb6f7a3e...356610` / `0d4cbd9f...a3bd7`.
+
 - `jc2_m12_clean_cubic_a23_contact_extinction_thm4343.out`, its independent
   audit, and hostile referee -> exact clean-cubic `U+W=0` extinction
   ([THM-4343](../../01-canon/theorems/THM-4343-disjoint-a23-cubic-contact-planar-jacobian-extinction.md)):

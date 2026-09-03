@@ -1,0 +1,14 @@
+THM4344_CLEAN_CUBIC_INFINITY_EXIT=PASS
+gate=Z=beta_11=zeta_3=W=0;U*K*xi_10!=0
+conservative_over_atlas=512/512:M,D6,T
+faces=M:(P-S^2)(UP^6-1);D6:S^2(1-UP^6-alpha*SP^5-xi*S^2P^4);T:S^2(1-S^2P^2A)
+pick=M(24,14,6);D6(12,10,2);T(4,6,0);global(40,14,14)
+packet=(11,6,6,3,3,2,2,1);graph_b1=12;generic_genus=2+12=14
+face_orders=M:9@L12;D6:5@L6;T:8@L6
+root_infinity=X^6=U+alpha*V+xi*V^2;Y^2=4xi*X^6+(alpha^2-4Uxi)
+infinity_repeat=y^2=x^6-psi(sigma*x);omega=sigma^5*x^5dx/y
+tail_table={1: (1, 6, 2, 0, Fraction(28, 5), Fraction(56, 1), 14), 2: (0, 4, 1, 1, Fraction(13, 2), Fraction(52, 1), 13), 3: (1, 4, 1, 1, Fraction(8, 1), Fraction(48, 1), 13), 4: (0, 2, 0, 2, Fraction(11, 1), Fraction(44, 1), 12), 5: (1, 2, 0, 2, Fraction(20, 1), Fraction(40, 1), 12)}
+r3_hostile=(h1,h2,h3)=(0, 0, -1376/135)
+finite_repeat=-Phi*YY*a**3 - XX**2*a**2*xi + YY**2 - YY*a**5*alpha - YY*a**4*eta;bridge_order=28_or_horizontal_node
+boundaries=K0_zero_exit;xi0_second_infinity_exit;U0_endpoint_intersection
+checks=51
