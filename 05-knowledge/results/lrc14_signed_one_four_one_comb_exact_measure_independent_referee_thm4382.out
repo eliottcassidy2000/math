@@ -1,0 +1,51 @@
+THM-4382 clean-room exact verifier
+scope=primitive distinct positive odd 3-units with a signed-(1,4,1) relation
+classification_limit=199
+primitive_unit_triples=47499
+signed_141_triples=515
+signed_121_triples=1023
+signed_sector_overlap=0
+pair_congruence_checks=9900
+owner_cells_checked=13381
+definition_measure_cases=39
+large_product_regime=pq>=289
+ceiling_at_pq_289=3385/84966
+sharp_target=12/301
+small_product_regime=pq<289 cases=31
+p b q branch measure ceiling
+1 5 19 mean 4/133 955/5586
+1 7 29 difference 6/203 1045/8526
+1 11 43 mean 12/301 1171/12642
+1 13 53 difference 12/371 1261/15582
+1 17 67 mean 12/469 1387/19698
+1 19 77 difference 18/539 211/3234
+1 23 91 mean 18/637 229/3822
+1 25 101 difference 24/707 1693/29694
+1 29 115 mean 24/805 1819/33810
+1 31 125 difference 24/875 1909/36750
+1 35 139 mean 30/973 2035/40866
+1 37 149 difference 32/1043 2125/43806
+1 41 163 mean 36/1141 2251/47922
+1 43 173 difference 36/1211 2341/50862
+1 47 187 mean 40/1309 2467/54978
+1 49 197 difference 6/197 2557/57918
+1 53 211 mean 48/1477 2683/62034
+1 55 221 difference 48/1547 2773/64974
+1 59 235 mean 48/1645 2899/69090
+1 61 245 difference 54/1715 61/1470
+1 65 259 mean 54/1813 445/10878
+1 67 269 difference 60/1883 3205/79086
+1 71 283 mean 60/1981 3331/83202
+5 7 23 mean 4/115 1819/33810
+5 13 47 mean 12/329 2899/69090
+5 11 49 difference 12/343 61/1470
+7 1 11 difference 0 211/3234
+7 5 13 mean 4/637 229/3822
+7 11 37 mean 62/1813 445/10878
+11 7 17 mean 4/187 2467/54978
+13 1 17 difference 2/91 2773/64974
+unique_maximizer=(1, 11, 43) measure=12/301
+larger_controls=(1,73,293,difference),(1,77,307,mean),(1,79,317,difference),(1,83,331,mean),(5,19,71,mean),(5,17,73,difference),(5,23,97,difference),(5,31,119,mean)
+semantic_sha256=9ac93740215e9ab84eac7271cf582568b0075244fb67209d1a511eb92be566dd
+checks=116699
+PASS

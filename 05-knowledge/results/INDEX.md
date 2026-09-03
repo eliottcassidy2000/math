@@ -1,5 +1,17 @@
 # Script Results Index
 
+- `lrc14_signed_one_four_one_comb_exact_measure_thm4382.out` and its
+  full-circle clean-room referee -> sharp signed-`(1,4,1)` triple-comb bound
+  ([THM-4382](../../01-canon/theorems/THM-4382-lrc14-signed-one-four-one-comb-exact-measure-and-sharp-maximum.md)):
+  **PROVED ELEMENTARY RELATIVE TO THM-4373 + VERIFIED-EXACT + INDEPENDENTLY
+  AUDITED; LRC(14) OPEN.** Labeled owner compatibility kills the bounded
+  nearest-integer defect, leaving `K=4k`, `3 does not divide k`, and an
+  exact period-three quadrature. The unique primitive maximum is
+  `12/301` at `{1,11,43}`; the universal nonresonant sector and seam
+  entry remain open. Script/output SHA-256 pairs:
+  `f4411755...87ff` / `53b86fbd...126` and
+  `7915d60b...c915` / `54dcf24e...072`.
+
 - `lrc14_sixteen_step_labeled_binder_observability_thm4379.out` and its
   integer-rational referee -> sharp labeled physical-record decoder
   ([THM-4379](../../01-canon/theorems/THM-4379-lrc14-sixteen-step-labeled-binder-observability-and-phase-decoder.md)):

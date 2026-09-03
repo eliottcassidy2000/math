@@ -1,0 +1,45 @@
+SIGNED-(1,4,1) SCALE-THREE EXACT AUDIT
+formula/direct/permutation checks through endpoint 249: 782
+independent wall-cell checks through q=61: 50
+literal owner/determinant cells through q=61: 7512
+signed-(1,2,1) overlap in audited unit sector: 0
+large-product bound at pq=289: 3385/84966
+gap to 12/301: 101/3653538
+small endpoint pairs pq<289: 31
+SMALL PAIRS, DESCENDING EXACT MEASURE
+p=1 q=43 b=11 branch=mean triple=(1, 11, 43) measure=12/301
+p=5 q=47 b=13 branch=mean triple=(5, 13, 47) measure=12/329
+p=5 q=49 b=11 branch=difference triple=(5, 11, 49) measure=12/343
+p=5 q=23 b=7 branch=mean triple=(5, 7, 23) measure=4/115
+p=7 q=37 b=11 branch=mean triple=(7, 11, 37) measure=62/1813
+p=1 q=101 b=25 branch=difference triple=(1, 25, 101) measure=24/707
+p=1 q=77 b=19 branch=difference triple=(1, 19, 77) measure=18/539
+p=1 q=211 b=53 branch=mean triple=(1, 53, 211) measure=48/1477
+p=1 q=53 b=13 branch=difference triple=(1, 13, 53) measure=12/371
+p=1 q=269 b=67 branch=difference triple=(1, 67, 269) measure=60/1883
+p=1 q=163 b=41 branch=mean triple=(1, 41, 163) measure=36/1141
+p=1 q=245 b=61 branch=difference triple=(1, 61, 245) measure=54/1715
+p=1 q=221 b=55 branch=difference triple=(1, 55, 221) measure=48/1547
+p=1 q=139 b=35 branch=mean triple=(1, 35, 139) measure=30/973
+p=1 q=149 b=37 branch=difference triple=(1, 37, 149) measure=32/1043
+p=1 q=187 b=47 branch=mean triple=(1, 47, 187) measure=40/1309
+p=1 q=197 b=49 branch=difference triple=(1, 49, 197) measure=6/197
+p=1 q=283 b=71 branch=mean triple=(1, 71, 283) measure=60/1981
+p=1 q=19 b=5 branch=mean triple=(1, 5, 19) measure=4/133
+p=1 q=115 b=29 branch=mean triple=(1, 29, 115) measure=24/805
+p=1 q=259 b=65 branch=mean triple=(1, 65, 259) measure=54/1813
+p=1 q=173 b=43 branch=difference triple=(1, 43, 173) measure=36/1211
+p=1 q=29 b=7 branch=difference triple=(1, 7, 29) measure=6/203
+p=1 q=235 b=59 branch=mean triple=(1, 59, 235) measure=48/1645
+p=1 q=91 b=23 branch=mean triple=(1, 23, 91) measure=18/637
+p=1 q=125 b=31 branch=difference triple=(1, 31, 125) measure=24/875
+p=1 q=67 b=17 branch=mean triple=(1, 17, 67) measure=12/469
+p=13 q=17 b=1 branch=difference triple=(1, 13, 17) measure=2/91
+p=11 q=17 b=7 branch=mean triple=(7, 11, 17) measure=4/187
+p=7 q=13 b=5 branch=mean triple=(5, 7, 13) measure=4/637
+p=7 q=11 b=1 branch=difference triple=(1, 7, 11) measure=0
+unique maximum: triple=(1, 11, 43) measure=12/301
+same-endpoint hostile: {(1, 5, 43): Fraction(6, 301), (1, 11, 43): Fraction(12, 301)}
+first positive comb outside (1,2,1)/(1,4,1): ((1, 5, 23), Fraction(2, 161))
+height-199 residual after both sectors: rows=45961 max=(Fraction(12, 371), (1, 11, 53))
+PASS
