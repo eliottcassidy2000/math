@@ -349,12 +349,14 @@ lift/phase clocks.
   give the exact Laurent wall jet and signed reciprocal quotient.
   [THM-4380](../01-canon/theorems/THM-4380-source-normal-weight-twelve-row-twelve-extinction.md)
   closes the complete fixed THM-4308 residual-weight-at-most-twelve source
-  family by row twelve; its nonzero branch has a checked-in independent
-  implementation.
+  family by row twelve.
   [THM-4385](../01-canon/theorems/THM-4385-source-normal-row-ten-elliptic-sign-quotient.md)
   identifies the row-ten projection as the elliptic etale locus `E minus
   E[2]`, with the seven-to-fourteen lift explained by its sign quotient.
-  Chart/seam entry and residual weights at least thirteen remain open.
+  [THM-4389](../01-canon/theorems/THM-4389-source-normal-weight-thirteen-row-ten-nonisotrivial-elliptic-pencil.md)
+  makes `p^5*y` transverse and `p^2*y^3` tangent at row ten: the fixed curve
+  becomes a non-isotrivial pencil, smooth at every rational parameter. Higher
+  rows and entry remain open.
   Exceptional quartic: THM-3703/3737/4034 give grammar, image, and conductor;
   THM-4039--4060 reach `J_7`, obstruct `J_8`, close critical `H`, and solve
   the simple-zero formal lane. THM-4063/4067 retain the ramification no-go and

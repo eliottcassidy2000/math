@@ -1,5 +1,18 @@
 # Script Results Index
 
+- `jc2_source_normal_weight13_row10_elliptic_pencil_thm4389.out` and its
+  dependency-free reversed-section referee -> weight-thirteen row-ten
+  non-isotrivial elliptic pencil
+  ([THM-4389](../../01-canon/theorems/THM-4389-source-normal-weight-thirteen-row-ten-nonisotrivial-elliptic-pencil.md)):
+  **PROVED FINITE-ROW RELATIVE TO THM-4308/4315/4380/4385 + VERIFIED-EXACT +
+  INDEPENDENTLY AUDITED; JC(2) OPEN.** The `p^5*y` coefficient changes the
+  compatibility by `-707284001250 Phi^2 rho`, while `p^2*y^3` is tangent
+  through row ten. The fixed THM-4385 curve becomes a non-isotrivial
+  genus-one double-cover pencil; every rational parameter is smooth, although
+  finitely many algebraic fibres are singular. The primary/referee execute
+  78/201 live checks. Script/output SHA-256 pairs: `2e7171c3...5808` /
+  `c33f5bc1...e414` and `151fdc41...a3c2` / `772d2453...aca6`.
+
 - `lrc14_small_defect_short_relation_master_atlas_thm4384.out`, its boundary
   sidecar, and its clean-room referee -> one-determinant master formula and
   ten-sector sharp atlas
