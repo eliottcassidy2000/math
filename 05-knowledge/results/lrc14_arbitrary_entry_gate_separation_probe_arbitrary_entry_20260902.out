@@ -1,0 +1,11 @@
+LRC14 ARBITRARY-ENTRY GATE SEPARATION -- EXACT CONTROLS
+combined_gate_survivor_body=1,2,3,4,8,9,10,11,12,13,14 projective_pool_max_hits=6 at_scale=10 body_mass=20411/360360 cross_mass_1_9=4/63
+owner_word_repair=clock_23 packet=4,9,10,13,14,19 universal_over_all_odd_tail_residue_pairs=1 control_tails=1,9 witness=2/23 clearance=2/23
+ap_gate_survivor_body=1_to_11 projective_pool_max_hits=6 at_scale=10 body_mass=10931/194040 cross_mass_1_9=4/63 witness=5/24 clearance=1/12
+deletion_direction_hostile=G_1_to_11_subset_G_1_to_10 time=1/11 deleted_body_clearance=1/11 restored_speed_11_clearance=0
+literal_pool_nonentry=point_199/21280_in_G_POOL_and_D_1 so_full_pool_does_not_imply_outside_singleton_1
+reference_hostile=V_even_0_to_22_plus_1,9 anchor_0_tails=1,9 cross_mass=4/63 gate=FAIL anchor_22_tails=13,21 cross_mass=2/49 gate=PASS anchor_change_does_not_transfer_target
+clock_43_boundary_is_mass_easy=body_11,14,19,23,25,26,29,34,36,37,40 body_mass=2331354986167/16756505465700 gt_4/63=1 projective_hits=3 projective_scales=5
+clock_43_boundary_is_mass_easy=body_12,18,19,22,25,26,28,31,34,37,40 body_mass=11062658951/106198378650 gt_4/63=1 projective_hits=3 projective_scales=5,6
+clock_43_boundary_is_mass_easy=body_19,22,25,26,28,29,31,34,36,37,40 body_mass=1400226987157/10423779319800 gt_4/63=1 projective_hits=3 projective_scales=5,6
+RESULT=PASS

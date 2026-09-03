@@ -1,0 +1,233 @@
+NESTED_WALL_TRANSDUCER
+ exact_nonboundary_checks=16800
+ state_update=sD=7Q+R;phase_next=D*phase+Q_mod_2;residual_radius=R/14
+OPTIMAL_CURRENT_ENVELOPE
+ g(0..12)=0,0,0,1/2,1,5/2,11/2,21/2,18,57/2,85/2,121/2,83
+ pointwise_minimum_over_all_depth_pairs=PASS
+AP_STEP_MULTIPLIER_1
+ h=420 primitive_gcd=1 speeds=1,3,5,7,9,11,13,15,17,19,21,45
+ full_half_energy=35666/15015
+ core_energy=39490603/19399380
+ strip_energy=15361/45220
+ core_b3=-14821441/31951920
+ core_nonlinear_rebate=4321979/7796880
+ pure_cubic_current_rebate=80188291/325909584
+ sum_current_correction=125588039/407386980
+ optimal_current_only_rebate=58624589/108636528
+ core_q_cubic=526429/5819814
+ quadratic_current_rebate=14844239/126977760
+ positive_quadratic_certificate=-3392354543/9777287520
+ optimal_current_only_certificate=2572403/33948915
+ variance_certificate=-71225183/162954792
+ core_abs_current=3831193/6789783
+ core_max_abs_current=12
+ strip_max_abs_current=12
+ core_states=40
+ strip_states=36
+ euclidean_strip_formula=D:1=7*0+1;residual_energy:15361/45220;strip:15361/45220
+AP_STEP_MULTIPLIER_3
+ h=420 primitive_gcd=3 speeds=3,9,15,21,27,33,39,45,51,57,63,135
+ full_half_energy=35666/15015
+ core_energy=79044269/38798760
+ strip_energy=6115/18088
+ core_b3=-1048409/2282280
+ core_nonlinear_rebate=2915273/5290740
+ pure_cubic_current_rebate=3182401249/13036383360
+ sum_current_correction=4000831423/13036383360
+ optimal_current_only_rebate=48508217/90530440
+ core_q_cubic=10667147/116396280
+ quadratic_current_rebate=2588609/22221108
+ positive_quadratic_certificate=-838099049/2444321880
+ optimal_current_only_certificate=1038199/13579566
+ variance_certificate=-201343327/465585120
+ core_abs_current=154627813/271591320
+ core_max_abs_current=12
+ strip_max_abs_current=12
+ core_states=38
+ strip_states=27
+ euclidean_strip_formula=D:1=7*0+1;residual_energy:6115/18088;strip:6115/18088
+AP_STEP_MULTIPLIER_9
+ h=420 primitive_gcd=3 speeds=9,27,45,63,81,99,117,135,153,171,189,405
+ full_half_energy=35666/15015
+ core_energy=829278337/407386980
+ strip_energy=27682315/81477396
+ core_b3=-160634041/349188840
+ core_nonlinear_rebate=134708653/244432188
+ pure_cubic_current_rebate=434745601/1777688640
+ sum_current_correction=1998163543/6518191680
+ optimal_current_only_rebate=873838921/1629547920
+ core_q_cubic=74216081/814773960
+ quadratic_current_rebate=25923881/222211080
+ positive_quadratic_certificate=-23313211/67897830
+ optimal_current_only_certificate=372640189/4888643760
+ variance_certificate=-2117975917/4888643760
+ core_abs_current=173195342/305540235
+ core_max_abs_current=12
+ strip_max_abs_current=12
+ core_states=40
+ strip_states=33
+ euclidean_strip_formula=D:3=7*0+3;residual_energy:27682315/27159132;strip:27682315/81477396
+AP_STEP_MULTIPLIER_11
+ h=420 primitive_gcd=1 speeds=11,33,55,77,99,121,143,165,187,209,231,495
+ full_half_energy=35666/15015
+ core_energy=2028136351/995834840
+ strip_energy=15568979/45961608
+ core_b3=-11662141/25105080
+ core_nonlinear_rebate=1657765097/2987504520
+ pure_cubic_current_rebate=11778748649/47800072320
+ sum_current_correction=4915164301/15933357440
+ optimal_current_only_rebate=1615099217/2987504520
+ core_q_cubic=44995053/497917420
+ quadratic_current_rebate=795167/6789783
+ positive_quadratic_certificate=-1037921299/2987504520
+ optimal_current_only_certificate=37884073/497917420
+ variance_certificate=-95094331/217273056
+ core_abs_current=129535999/229808040
+ core_max_abs_current=12
+ strip_max_abs_current=12
+ core_states=40
+ strip_states=40
+ euclidean_strip_formula=D:11=7*1+4;residual_energy:366857027/271591320;strip:15568979/45961608
+AP_STEP_MULTIPLIER_13
+ h=420 primitive_gcd=1 speeds=13,39,65,91,117,143,169,195,221,247,273,585
+ full_half_energy=35666/15015
+ core_energy=46679551/22926540
+ strip_energy=17114215/50438388
+ core_b3=-17533501/37761360
+ core_nonlinear_rebate=11244353/20271888
+ pure_cubic_current_rebate=474362699/1925829360
+ sum_current_correction=148462709/481457340
+ optimal_current_only_rebate=346886941/641943120
+ core_q_cubic=21750623/240728670
+ quadratic_current_rebate=1352670871/11554976160
+ positive_quadratic_certificate=-802516087/2310995232
+ optimal_current_only_certificate=3051089/40121445
+ variance_certificate=-421285087/962914680
+ core_abs_current=22613081/40121445
+ core_max_abs_current=12
+ strip_max_abs_current=12
+ core_states=40
+ strip_states=40
+ euclidean_strip_formula=D:13=7*1+6;residual_energy:39490603/19399380;strip:17114215/50438388
+AP_STEP_MULTIPLIER_17
+ h=420 primitive_gcd=1 speeds=17,51,85,119,153,187,221,255,289,323,357,765
+ full_half_energy=35666/15015
+ core_energy=240990501/118385960
+ strip_energy=1568522797/4617052440
+ core_b3=-25210993/54318264
+ core_nonlinear_rebate=512023147/923410488
+ pure_cubic_current_rebate=866137339/3517754240
+ sum_current_correction=22772967641/73872839040
+ optimal_current_only_rebate=50893471/94225560
+ core_q_cubic=41718133/461705244
+ quadratic_current_rebate=18417923/157399515
+ positive_quadratic_certificate=-4808025991/13851157320
+ optimal_current_only_certificate=58474279/769508740
+ variance_certificate=-8077176787/18468209760
+ core_abs_current=236584519/419732040
+ core_max_abs_current=12
+ strip_max_abs_current=12
+ core_states=40
+ strip_states=40
+ euclidean_strip_formula=D:17=7*2+3;residual_energy:92756527/90530440;strip:1568522797/4617052440
+AP_STEP_MULTIPLIER_19
+ h=420 primitive_gcd=1 speeds=19,57,95,133,171,209,247,285,323,361,399,855
+ full_half_energy=35666/15015
+ core_energy=10504103413/5160235080
+ strip_energy=1753302139/5160235080
+ core_b3=-145140899/312741520
+ core_nonlinear_rebate=17166543103/30961410480
+ pure_cubic_current_rebate=60982422937/247691283840
+ sum_current_correction=76349921887/247691283840
+ optimal_current_only_rebate=1393482851/2580117540
+ core_q_cubic=1398797051/15480705240
+ quadratic_current_rebate=988047049/8444021040
+ positive_quadratic_certificate=-366344653/1055502630
+ optimal_current_only_certificate=784281737/10320470160
+ variance_certificate=-27079911869/61922820960
+ core_abs_current=2908539379/5160235080
+ core_max_abs_current=12
+ strip_max_abs_current=12
+ core_states=40
+ strip_states=40
+ euclidean_strip_formula=D:19=7*2+5;residual_energy:154349641/90530440;strip:1753302139/5160235080
+AP_STEP_MULTIPLIER_23
+ h=420 primitive_gcd=1 speeds=23,69,115,161,207,253,299,345,391,437,483,1035
+ full_half_energy=35666/15015
+ core_energy=2544090895/1249320072
+ strip_energy=2117457509/6246600360
+ core_b3=-386835859/832880048
+ core_nonlinear_rebate=4158876877/7495920432
+ pure_cubic_current_rebate=73871924519/299836817280
+ sum_current_correction=92483150561/299836817280
+ optimal_current_only_rebate=1688176621/3123300180
+ core_q_cubic=6911777/76488984
+ quadratic_current_rebate=1196823767/10221709680
+ positive_quadratic_certificate=-4882222441/14054850810
+ optimal_current_only_certificate=950168599/12493200720
+ variance_certificate=-6560646119/14991840864
+ core_abs_current=704211433/1249320072
+ core_max_abs_current=12
+ strip_max_abs_current=12
+ core_states=40
+ strip_states=40
+ euclidean_strip_formula=D:23=7*3+2;residual_energy:36415537/54318264;strip:2117457509/6246600360
+AP_STEP_MULTIPLIER_49
+ h=420 primitive_gcd=7 speeds=49,147,245,343,441,539,637,735,833,931,1029,2205
+ full_half_energy=35666/15015
+ core_energy=71332/35035
+ strip_energy=35666/105105
+ core_b3=-2163437/4659655
+ core_nonlinear_rebate=630664/1137045
+ pure_cubic_current_rebate=234122131/950569620
+ sum_current_correction=293112973/950569620
+ optimal_current_only_rebate=42800826/79214135
+ core_q_cubic=21473489/237642405
+ quadratic_current_rebate=7586357/64811565
+ positive_quadratic_certificate=-247555934/712927215
+ optimal_current_only_certificate=6022397/79214135
+ variance_certificate=-6115517/13978965
+ core_abs_current=911224/1616615
+ core_max_abs_current=12
+ strip_max_abs_current=12
+ core_states=40
+ strip_states=40
+ euclidean_strip_formula=D:7=7*1+0;residual_energy:0;strip:35666/105105
+AP_STEP_MULTIPLIER_127
+ h=420 primitive_gcd=1 speeds=127,381,635,889,1143,1397,1651,1905,2159,2413,2667,5715
+ full_half_energy=35666/15015
+ core_energy=5016181579/2463721260
+ strip_energy=55735891/164248084
+ core_b3=-269147287/579699120
+ core_nonlinear_rebate=109843135/198040752
+ pure_cubic_current_rebate=7281617393/29564655120
+ sum_current_correction=15953688581/51738146460
+ optimal_current_only_rebate=37273036609/68984195280
+ core_q_cubic=2337561827/25869073230
+ quadratic_current_rebate=13213134569/112883228640
+ positive_quadratic_certificate=-86233801699/248343103008
+ optimal_current_only_certificate=327781841/4311512205
+ variance_certificate=-923846587/2111761080
+ core_abs_current=142956157/253618365
+ core_max_abs_current=12
+ strip_max_abs_current=12
+ core_states=40
+ strip_states=40
+ euclidean_strip_formula=D:127=7*18+1;residual_energy:15361/45220;strip:55735891/164248084
+COMMON_DILATION_AUDIT
+ observables=constant,current_energy,cross_current_sum,q_cubic,free_sheet_count,symmetric_bonf3
+ signed_pair_covariance_control=base_pair_1,45
+ multipliers=1,3,9,11,13,17,19,23,49,127
+ all_remainders_mod_7=0,1,2,3,4,5,6
+ nontrivial_gcd_controls=3,9,49
+ full_half_current_energy=INVARIANT
+ anchor_strip_current_energy=NOT_INVARIANT
+ D13_complement_relation=strip13=(2*full-strip1)/13
+ D49_reduced_D7_exact_independence=strip49=full/7
+ D127_nested_relation=strip127=(18*full+strip1)/127
+ exact_variance_certificate_m1=-71225183/162954792<0
+ exact_positive_quadratic_certificate_m1=-3392354543/9777287520<0
+ exact_optimal_current_only_certificate_m1=2572403/33948915>0
+ exact_q_cubic_m1=526429/5819814>0
+ verdict=full_pair_kernel_does_not_determine_anchor_strip
+PASS

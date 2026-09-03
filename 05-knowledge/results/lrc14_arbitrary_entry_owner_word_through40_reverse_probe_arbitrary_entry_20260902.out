@@ -1,0 +1,26 @@
+LRC14 ARBITRARY ENTRY OWNER-WORD CLOSURE, EXACT MAXIMA 31..40
+clock_order=descending clocks=15..43
+maximum=31 searched=30045015 divisor_complete=522173 primitive=522173 nonprimitive=0 uncertified=0
+selected_clock_histogram=38:27,39:65,40:126,41:16905,42:127067,43:377983
+maximum=32 searched=44352165 divisor_complete=893833 primitive=893307 nonprimitive=526 uncertified=0
+selected_clock_histogram=27:1,28:2,34:6,36:3,37:19,38:74,39:29,40:427,41:35672,42:177379,43:680221
+maximum=33 searched=64512240 divisor_complete=2260900 primitive=2260900 nonprimitive=0 uncertified=0
+selected_clock_histogram=34:1,35:1,37:5,38:23,39:311,40:379,41:39636,42:363455,43:1857089
+maximum=34 searched=92561040 divisor_complete=1366695 primitive=1365734 nonprimitive=961 uncertified=0
+selected_clock_histogram=28:7,30:2,32:3,35:2,36:5,37:18,38:165,39:185,40:515,41:52926,42:210685,43:1102182
+maximum=35 searched=131128140 divisor_complete=1623006 primitive=1623006 nonprimitive=0 uncertified=0
+selected_clock_histogram=28:2,37:15,38:119,39:218,40:1617,41:24117,42:319325,43:1277593
+maximum=36 searched=183579396 divisor_complete=9005059 primitive=9000516 nonprimitive=4543 uncertified=0
+selected_clock_histogram=27:5,28:21,29:1,30:14,31:1,32:10,33:20,34:26,35:3,37:173,38:1159,39:858,40:3582,41:233644,42:1362790,43:7402752
+maximum=37 searched=254186856 divisor_complete=3959314 primitive=3959314 nonprimitive=0 uncertified=0
+selected_clock_histogram=26:1,27:5,28:21,29:21,31:7,32:8,33:5,34:15,35:45,38:204,39:568,40:785,41:163437,42:1183622,43:2610570
+maximum=38 searched=348330136 divisor_complete=4644109 primitive=4638715 nonprimitive=5394 uncertified=0
+selected_clock_histogram=27:20,28:97,29:33,30:7,31:61,32:67,33:1,34:120,35:111,36:48,37:848,39:1523,40:6724,41:183189,42:630646,43:3820614
+maximum=39 searched=472733756 divisor_complete=17211708 primitive=17211708 nonprimitive=0 uncertified=0
+selected_clock_histogram=28:3,29:4,30:4,31:8,32:16,33:52,34:23,35:97,36:76,37:475,38:730,40:4961,41:318750,42:4770660,43:12115849
+maximum=40 searched=635745396 divisor_complete=31798791 primitive=31787450 nonprimitive=11341 uncertified=0
+selected_clock_histogram=23:3,25:3,26:14,27:79,28:170,29:61,30:38,31:181,32:343,33:135,34:729,35:1167,36:643,37:3813,38:11236,39:18388,41:2229089,42:9252711,43:20279988
+non_divisor_complete_control=H_1_to_11 missing=12,13,14 universal_owner_clock=12 tails=1,9 witness=5/24 clearance=1/12
+grand_searched=2257174140 grand_divisor_complete=73285588 grand_uncertified=0
+owner_literal_packet_audits=18128
+RESULT=PASS
