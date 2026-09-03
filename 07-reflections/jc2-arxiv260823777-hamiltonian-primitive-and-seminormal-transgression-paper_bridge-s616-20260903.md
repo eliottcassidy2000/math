@@ -1,0 +1,310 @@
+# A Hamiltonian primitive is a non-descent sidecar
+
+**FINITE-EXACT bridge note, 2026-09-03.**  This note compares the exact
+two-form correction in arXiv:2608.23777 with the exceptional-quartic
+seminormal transgression of THM-4067/4381.  It proves one new statement in
+the fixed-`x` quadratic normal slice: descended target two-forms fill exactly
+the `88`-dimensional kernel of the retained functional in `N/dS` and miss the
+unique seminormal derivative line.  It does not identify that slice with the
+full moving-graph complex and makes no claim about `JC(2)`.
+
+**Current disposition.** The fixed-`x` rank-`88` statement was subsequently
+independently reconstructed and promoted as THM-4404. The primitive-torsor
+portion remains a research bridge pending its separate clean-room audit.
+
+## 1. The paper's correction as a primitive torsor
+
+Use the paper's polynomial source coordinates
+
+```text
+N=Q[x,y,beta],                 Q_0=y+x beta/3,
+R=2x-3x^2 y-x^3 beta=x(2-3xQ_0),
+A=Q[R,T,S] subset N.
+```
+
+Its exact residual two-form is
+
+```text
+Xi=Theta-dT wedge dS=dR wedge dH.                       (1)
+```
+
+For any inclusion `A subset N` and any `R in A`, define the fixed-carrier
+Hamiltonian primitive quotient
+
+```text
+HP_R(A subset N)=(dR wedge dN)/(dR wedge dA).           (2)
+```
+
+The relevant centralizer in the paper is exact:
+
+```text
+Z_R(N)={h in N:dR wedge dh=0}=Q[R].                     (3)
+```
+
+To see this, pass through the polynomial coordinate change
+`(x,y,beta) <-> (x,Q_0,beta)`.  Since `R` is independent of `beta`, the
+`d beta` coefficients in `dR wedge dh=0` force `h_beta=0`.  In
+`Q(R,x)`, one has
+
+```text
+Q_0=(2x-R)/(3x^2).
+```
+
+The remaining Jacobian equation says that `h` is constant in `x` at fixed
+`R`, hence `h=f(R)` for `f in Q(R)`.  Specializing `Q_0=0` gives
+`h(x,0)=f(2x) in Q[x]`, so `f` has no denominator and belongs to `Q[R]`.
+This proves `(3)`.
+
+Since `Q[R] subset A`, equations `(2)--(3)` give
+
+```text
+HP_R(A subset N) ~= N/A,
+[dR wedge dh]       <-> [h].                           (4)
+```
+
+In particular, all solutions of `(1)` form the affine primitive torsor
+
+```text
+Prim_R(Xi)=H+Q[R].                                     (5)
+```
+
+The class of the primitive does not descend to the three-dimensional output
+core.  On the exact core fibre
+
+```text
+(R,T,S)=(0,1/8,0)
+```
+
+the three source points have
+
+```text
+H values =(-1/48,-1097/192,-1097/192).                 (6)
+```
+
+Their first difference is `-1093/192`, which is nonzero.  Every element of
+`A=Q[R,T,S]`, and every ambiguity `f(R)` in `(5)`, has one common value on
+this fibre.  Thus no member of `Prim_R(Xi)` lies in `A`:
+
+```text
+boxed: [Xi] !=0 in HP_R(A subset N),
+       and the Hamiltonian correction is necessarily non-descended.       (7)
+```
+
+The independent coordinate `D_0` is what makes this legal in four source
+dimensions.  The paper sets `D=D_0+H`; on the three-point fibre `D=0`, the
+three `D_0=-H` values compensate `(6)`.  Thus `H` is not an innocuous exact
+term inside the core output algebra.  It is a branch-sensitive sidecar paid
+by a second canonical coordinate.
+
+## 2. Wedge contraction is the graph transgression
+
+Return to the exceptional quartic and use the exact objects of
+THM-3703/3737/4381:
+
+```text
+T=K[b,c,e]/(c^2e-b(b+4)),
+gamma_s:T -> K[x,s]/(s^2),
+gamma_s(P)=gamma_0(P)+s gamma_1(P),
+S=gamma_0(T) subset N=K[x],
+E_x=N/dS.
+```
+
+For an actual target two-form `dP wedge dQ`, contraction with the normal
+vector followed by evaluation on the `x` tangent is the density
+
+```text
+tau(P,Q)=P' gamma_1(Q)-Q' gamma_1(P).                   (8)
+```
+
+Thus the s615 expression called a first-output transgression is literally
+the one-parameter contraction of a two-form.  The paper's identity `(1)`
+adds two such channels:
+
+```text
+tau_total=tau(R,H)+tau(T,S).                            (9)
+```
+
+This is the precise bridge.  A Hamiltonian primitive is a second wedge-slot
+transgression, not merely a scalar correction.
+
+## 3. Every descended two-form misses the seminormal line
+
+At the retained triple `x=(-1,0,1)`, the common target point is
+`(B,C,E)=(0,0,-3)`.  The surface relation
+
+```text
+C^2E=B(B+4)
+```
+
+has `partial/partial B=-4` there, so `(C,E)` are regular local coordinates.
+The exact ordinary and normal rows are
+
+```text
+B'             =( 0,0, 0),     gamma_1(B)=( 0,0, 0),
+C'             =( 3,3, 3),     gamma_1(C)=( 2,0,-2),
+E'             =(-9,4, 9),     gamma_1(E)=(-2,4,-2).
+```
+
+Their base wedge is
+
+```text
+C' gamma_1(E)-E' gamma_1(C)=(12,12,12).                (10)
+```
+
+For arbitrary `P,Q in T`, the two gradients with respect to `(C,E)` are
+evaluated at the same target point on all three branches.  The chain rule
+and `(10)` therefore give
+
+```text
+tau(P,Q)_ret
+ =12 det(partial(P,Q)/partial(C,E))_(0,0,-3) (1,1,1).  (11)
+```
+
+The retained functional
+
+```text
+Lambda(v)=5v_(-1)/18-v_0+13v_1/18
+```
+
+kills constants.  It also kills `dS`, since every target derivative row is
+in the span of `C'` and `E'`.  Hence it descends to a nonzero functional on
+`E_x`, and `(11)` proves the cutoff-free upper bound
+
+```text
+image(Omega_T^2 -> E_x) subset ker Lambda.              (12)
+```
+
+This includes every finite sum of decomposable forms and every attempted
+paper-style pair `dR wedge dH` whose two members still descend from the same
+target surface.
+
+The companion scout supplies the matching lower bound.  It takes the three
+fixed carriers `B,C,E`, pairs them with all actual target monomials of
+restriction degree at most `180`, reduces the densities `(8)` together with
+`dS` at the good quartic fibre
+
+```text
+(p,alpha)=(421,126),
+```
+
+and finds `88` independent quotient columns.  Their deterministic selected
+label hash is
+
+```text
+f8d4aa75b7de2b95baee0abd70d89b874bed98816e66e2695816547769aa8ad2.
+```
+
+A nonzero minor after good reduction proves the corresponding exact minor
+is nonzero.  THM-3703 gives `dim_K E_x=89`, while `(12)` gives the exact
+upper bound `88`.  Therefore
+
+```text
+boxed: image(Omega_T^2 -> E_x)=ker Lambda,
+       dim image=88,             dim coker=1.            (13)
+```
+
+THM-4381 and the s615 derivative argument give
+
+```text
+S^sn/S=K[r],                  Lambda(r') !=0.
+```
+
+Consequently `[r']` spans the cokernel in `(13)`.  The earlier raw sidecar
+calculation had rank `89` because it used individual `gamma_1(P)` values.
+Wedge assembly destroys exactly one direction by antisymmetry and target
+descent:
+
+```text
+raw representative sidecars gamma_1(T):     rank 89;
+descended target two-form transgression:     rank 88;
+missing quotient:                            K[r'].      (14)
+```
+
+This is stronger than the admissible-kernel hostile in the s615 note.  No
+descended target two-form, admissible or otherwise, pays the seminormal line
+in this fixed-`x` slice.
+
+## 4. Why the paper does not immediately descend to `JC(2)`
+
+The paper's Casimir fibres give a second exact boundary.  In coordinates
+`(x,Q_0,beta)`, for `lambda !=0`,
+
+```text
+N/(R-lambda) ~= Q[x,x^(-1),beta].                      (15)
+```
+
+Indeed `x` is a unit on the fibre and
+`Q_0=(2x-lambda)/(3x^2)`.  At `lambda=0`, the two factors of `R` are
+comaximal and Chinese remaindering gives
+
+```text
+N/(R) ~= Q[Q_0,beta] x Q[x,x^(-1),beta].               (16)
+```
+
+The affine-plane component `x=0` carries
+
+```text
+S=y,                  T=-beta/2-2y^2,
+```
+
+which is a polynomial automorphism with inverse
+`y=S, beta=-2T-4S^2`.  The other two points in the paper's collision lie on
+the punctured-plane component in `(16)`.  Thus direct symplectic-leaf
+reduction produces either `G_m x A^1` or a plane component on which the map
+is already invertible.  It does not extract a planar Keller collision.
+
+This identifies two independent requirements for a useful rank reduction:
+
+1. the residual Hamiltonian primitive must descend, or acquire a compensator
+   that can itself be eliminated; and
+2. the chosen Casimir must have an `A^2` fibre carrying the noninjective
+   part, not merely a punctured or reducible fibre.
+
+The paper satisfies neither requirement because it is solving the
+four-dimensional Poisson problem, where neither is needed.
+
+## 5. Connection contract and next tests
+
+| field | exact comparison |
+|---|---|
+| source | paper: `N=Q[x,y,beta]`; quartic: actual target two-forms `Omega_T^2` |
+| target | paper: `HP_R=(dR wedge dN)/(dR wedge dA)`; quartic: `E_x=N/dS` |
+| map | paper: `h -> dR wedge dh`; quartic: `dP wedge dQ -> P'gamma_1(Q)-Q'gamma_1(P)` |
+| preserved predicate | exact residual-form equality, target descent, and retained cokernel response |
+| destroyed information | individual normal sidecars, global invertibility, convergence, and entry into an arbitrary planar chart |
+| missing sidecar | a non-descended primitive together with an independent compensator coordinate, or a new compiler for which the base wedge is not constant |
+| cheapest decisive test | first compute the retained base wedge; then test a positive `88`-minor; for rank reduction, classify the Casimir fibre before attempting elimination |
+
+The next useful experiments are correspondingly narrow:
+
+1. vary the normal compiler and ask whether
+   `C' gamma_1(E)-E' gamma_1(C)` leaves the constant retained line;
+2. construct a first-order lift of the seminormal generator `r` with an
+   explicit compensator and test whether eliminating that compensator
+   preserves a planar polynomial ring; and
+3. in any paper-inspired volume-preserving core, demand a coordinate Casimir
+   and test the restriction to its `A^2` fibres before solving a Hamiltonian
+   primitive equation.
+
+## 6. Reproduction and boundary
+
+```bash
+python3 -B 04-computation/jc2_exceptional_quartic_descended_two_form_transgression_scout_s616.py
+python3 -B -O 04-computation/jc2_exceptional_quartic_descended_two_form_transgression_scout_s616.py
+PYTHONHASHSEED=17 python3 -B 04-computation/jc2_exceptional_quartic_descended_two_form_transgression_scout_s616.py
+```
+
+Normal, optimized, and fixed-hash-seed modes byte-match the stored
+transcript.  The scout performs `357` theorem-specific dynamic checks.  Raw
+LF hashes are
+
+```text
+script: 69e35d86e8781f020b214ff0a149a868caafa9afb0f30812c2a7b905eeebf37d
+output: 6227a6b7a0676b8b5b53a8142ff47b018532ea701b4c2735ff6fd0bcee324414
+```
+
+The rank-`88` conclusion is now `PROVED + VERIFIED-EXACT + INDEPENDENTLY
+AUDITED` in THM-4404, still only in the representative-level fixed-`x`
+quadratic slice. It is not identified with THM-4067's moving-endpoint graph
+family. The note constructs no global planar pair and proves no consequence
+for `JC(2)`, which remains open.

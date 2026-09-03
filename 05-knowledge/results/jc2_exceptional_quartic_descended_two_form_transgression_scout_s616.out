@@ -1,0 +1,16 @@
+scope=descended_target_two_forms;fixed_x_first_normal_slice;not_full_THM4067
+source=Omega^2_T;T=K[b,c,e]/(c^2e-b(b+4));target=E_x=K[x]/dS
+map=tau(dP_wedge_dQ)=Pprime*gamma1(Q)-Qprime*gamma1(P) mod dS
+retained_base_wedge=Cprime*gamma1(E)-Eprime*gamma1(C)=(12,12,12)
+exact_upper_bound=Lambda(tau(Omega))=0_for_every_descended_target_two_form
+good_reduction=p421,alpha126;target_cutoff=180
+ambient_degree=201;ambient_dimension=202;dS_rank=113;E_x_dimension=89
+individual_BCE_quotient_ranks=85,83,81
+combined_wedge_quotient_rank=88;positive_minor_plus_exact_upper_bound=ker_Lambda
+selected_column_count=88
+selected_column_hash=f8d4aa75b7de2b95baee0abd70d89b874bed98816e66e2695816547769aa8ad2
+seminormal_class_rprime=missed_because_Lambda(rprime)_nonzero
+destroyed_information=representative_level_gamma1_without_wedge_pairing
+needed_sidecar=non_descended_primitive_or_independent_target_coordinate
+scout_check_count=357
+RESULT=PASS
