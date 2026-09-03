@@ -1,5 +1,18 @@
 # Script Results Index
 
+- `jc2_diagonal_boundary_address_simplex_stream_rank_thm4368.out` and its
+  import-free referee -> simplex-stream rank and triangular boundary address
+  ([THM-4368](../../01-canon/theorems/THM-4368-diagonal-boundary-valuation-triangular-address-and-simplex-stream-rank.md)):
+  **PROVED RELATIVE TO THM-4364 + VERIFIED-EXACT + INDEPENDENTLY AUDITED;
+  JC(2) OPEN.** Complete fixed-order streams invert the diagonal; consecutive
+  fixed-row order banks have unit minors and an exact triangular rank clock.
+  A normalized packet is classified by its two boundary valuations, whose
+  source overlap and triangular address are explicit. Reflection swaps the
+  valuations but need not preserve the source cone; order and primitive-ray
+  quotients have sharp hostiles. Script/output SHA-256:
+  `b24b707f...77203` / `14945ef3...59ee8` and
+  `f80ea546...aed69` / `a86f08dd...345d4`.
+
 - `lrc14_active_first_exit_scale_collision_thm4367.out` and its import-free
   referee -> active first-exit ray/scale classification
   ([THM-4367](../../01-canon/theorems/THM-4367-lrc14-active-first-exit-scale-collision-classification.md)):

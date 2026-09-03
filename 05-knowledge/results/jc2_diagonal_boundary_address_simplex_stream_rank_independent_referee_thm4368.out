@@ -1,0 +1,9 @@
+PASS
+checks=14325934
+edge_ell=2=PASS
+N=1_q=N-1_q=N=PASS
+zero_off_diagonal=PASS
+source_overlap_fibres=PASS
+fixed_row_pascal_unit_minors=PASS
+hierarchy_rank_clock=PASS
+thm4366_singleton_directions=PASS
