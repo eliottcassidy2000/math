@@ -1,5 +1,18 @@
 # Script Results Index
 
+- `lrc14_sixteen_step_labeled_binder_observability_thm4379.out` and its
+  integer-rational referee -> sharp labeled physical-record decoder
+  ([THM-4379](../../01-canon/theorems/THM-4379-lrc14-sixteen-step-labeled-binder-observability-and-phase-decoder.md)):
+  **PROVED ELEMENTARY RELATIVE TO THM-4363/4365/4367 + VERIFIED-EXACT +
+  INDEPENDENTLY AUDITED; LRC(14) OPEN.** The declared labeled first-exit
+  record exposes `P` after a sharp 16 shifts/17 observations on the fixed
+  odd tail; `11123,58317` collide through horizon 15. The closed marked phase
+  interval includes both physical boundary ties, and strict-active metric
+  fibres are labeled-record singletons already at horizon zero. No safe-time
+  or seam consequence follows. Script/output SHA-256 pairs:
+  `cd876cca...04a2` / `f4d8ac12...5845` and
+  `6bcd4012...f4fd` / `3712cbc3...850d`.
+
 - `jc2_source_normal_u_zero_row11_depth_hierarchy_completeness_thm4376.out`
   and its sparse-rational referee -> restricted depth completeness with fatal
   bracket sidecar

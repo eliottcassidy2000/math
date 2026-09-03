@@ -1,0 +1,15 @@
+THM-4379 labeled first-exit binder observer primary: PASS
+checks=4374628
+constants=A:3371,S:1303,M:47194,N:23597,tail:11019
+direct_geometry_rows=47194
+first_marked_hit=0:3372,1:1303,2:1303,3:1303,4:1303,5:1303,6:1303,7:1303,8:1303,9:1303,10:1303,11:1303,12:1303,13:1303,14:1303,15:1303,16:680
+unresolved_phase_cells=0:20225,1:18922,2:17619,3:16316,4:15013,5:13710,6:12407,7:11104,8:9801,9:8498,10:7195,11:5892,12:4589,13:3286,14:1983,15:680,16:0
+global_full_record_horizon=16_shifts_17_observations;sharp
+sharp_h15_same_phase_pair=11123,58317;phase=22927
+sharp_h16_binders=((11155, 308, 'R', 0),),((58349, 1611, 'R', 0),)
+boundaries=P=43823,rho=-3371,n=1210,binders=((3371, 93, 'R', 0), (43823, 1210, 'L', 0));P=50565,rho=3371,n=1396,binders=((3371, 93, 'R', 0), (50565, 1396, 'R', 0))
+active_structural_types=6106;points=13427;pairs=281073
+active_full_record_max_fibre=0:1,1:1,2:1,3:1,4:1,5:1,6:1,7:1,8:1,9:1,10:1,11:1,12:1,13:1,14:1,15:1,16:1
+metric_comparison=241,94x15,49,1_at_H17;full_physical=1_from_H0_on_active_fibres
+role_normalized_metric_hostile=253031,258645;equal_through_H16
+scope=THM-4365 fixed h=420 odd P>=11019 tail;all rows safe;LRC(14) OPEN

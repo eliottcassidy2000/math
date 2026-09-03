@@ -1,0 +1,13 @@
+THM-4379 clean-room labeled-binder referee: PASS
+checks=5109296
+constants=A:3371,S:1303,M:47194,N:23597,tail:11019,component:23
+direct_integer_geometry_rows=47194;all_13_distances=yes
+closed_visible_phase=J:[0,3371];J_H:[0,3371+1303H]_for_H<=15;H16:all
+first_hits=0:3372,1:1303,2:1303,3:1303,4:1303,5:1303,6:1303,7:1303,8:1303,9:1303,10:1303,11:1303,12:1303,13:1303,14:1303,15:1303,16:680
+unresolved=0:20225,1:18922,2:17619,3:16316,4:15013,5:13710,6:12407,7:11104,8:9801,9:8498,10:7195,11:5892,12:4589,13:3286,14:1983,15:680,16:0
+whole_tail_partition=H0..15:one_infinite_blind_fibre_plus_singletons;H16:all_singletons
+sharp_W15_pair=11123,58317;phase=22927;W16_binders=11155@308R,58349@1611R
+boundaries=43823:-3371:1210:L+3371@93R;50565:+3371:1396:R+3371@93R
+strict_active_shapes=6106;points=13427;pairs=281073;full_record_max_fibre=1
+role_normalized_hostile=253031,258645;equal_through_W16;split_at_W17
+scope=relative_to_THM-4365/4367_fixed_h420_odd_tail;all_safe;LRC(14)_OPEN
