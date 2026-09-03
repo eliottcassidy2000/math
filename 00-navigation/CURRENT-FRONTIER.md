@@ -339,33 +339,30 @@ lift/phase clocks.
   challenges `(3,9),(5,6),(7,5),(11,4),(13,4)` all remain **OPEN**; the public
   `131199`-field file is a named finite population, not a world census.
 - **Jacobian/Dixmier:** `JC(2),DC(2)` are **OPEN**. THM-4130--4248 close
-  `M=8--11`; THM-4226 closes dense `M=13`. At `M=12`, THM-4290/4297/4299
-  close the interior/square wall and THM-4301--4317 the cubic corner.
-  [THM-4327](../01-canon/theorems/THM-4327-generic-exact-weight-twelve-endpoint-wall-extinction.md)
-  closes generic `U=0`/`Z=0` endpoints.
-  [THM-4334](../01-canon/theorems/THM-4334-beta-zero-exact-weight-twelve-endpoint-wall-extinction.md)
-  and [THM-4337](../01-canon/theorems/THM-4337-zeta-zero-exact-weight-twelve-endpoint-wall-extinction.md)
-  close beta/zeta owners.
-  [THM-4339](../01-canon/theorems/THM-4339-clean-interior-cubic-edge-planar-jacobian-extinction.md)
-  and [THM-4343](../01-canon/theorems/THM-4343-disjoint-a23-cubic-contact-planar-jacobian-extinction.md)
-  close the cubic gate for `U+W!=0` and `U+W=0`.
-  THM-4340--4356 close endpoints through `Z=beta_11=zeta_3=W=xi_10=0`.
-  THM-4357--4361 close zeta/beta-zero. THM-4362/4364/4368/4369/4375 give
-  hierarchy/clocks, Pascal kernel, and reciprocal path-band;
-  THM-4366/4376 close `U=0` and show depth is bracket-blind.
-  Other strata/seam remain open.
-  Exceptional quartic: THM-3703/3737 give grammar/image, THM-4034 the
-  conductor, and THM-4039/4043/4046 reach `J_7`, obstruct `J_8`, and close
-  critical `H`. [THM-4054](../01-canon/theorems/THM-4054-exceptional-affine-simple-zero-retained-packet.md)
-  gives cutoff-five saturation/mixed escape;
-  [THM-4058](../01-canon/theorems/THM-4058-exceptional-affine-triangle-period-and-simple-zero-monomial-ladder.md)
-  makes frozen-`a` failure an all-`m` ladder;
-  [THM-4060](../01-canon/theorems/THM-4060-exceptional-simple-zero-mixed-form-cokernel-collapse-and-formal-pair-lift.md)
-  solves simple zeros formally. THM-4063's graph connection is conditional and
-  its `e>=2` no-go survives. [THM-4067](../01-canon/theorems/THM-4067-seminormal-period-kernel-and-figure-eight-completeness-obstruction.md)
-  identifies the universal gap `S_Gamma/Acal`, specializing to a seminormal
-  defect for reduced curve-function realizations, and refutes the displayed
-  figure-eight antecedent. Global entry/`JC(2)` stay open.
+  `M=8--11`; THM-4226 closes dense `M=13`. At `M=12`, THM-4290--4361
+  close the named interior, cubic-corner, endpoint, and zeta/beta-zero cells.
+  THM-4362/4364/4366/4368/4369/4375/4376 give the depth hierarchy, clocks,
+  `U=0` extinction, Pascal kernel, reciprocal path-band, and
+  depth-versus-bracket firewall.
+  [THM-4377](../01-canon/theorems/THM-4377-reciprocal-source-mutation-and-boundary-jet-cokernel.md)
+  and [THM-4378](../01-canon/theorems/THM-4378-bilateral-packet-quotient-reciprocal-eigenlattice.md)
+  give the exact Laurent wall jet and signed reciprocal quotient.
+  [THM-4380](../01-canon/theorems/THM-4380-source-normal-weight-twelve-row-twelve-extinction.md)
+  closes the complete fixed THM-4308 residual-weight-at-most-twelve source
+  family by row twelve; its nonzero branch has a checked-in independent
+  implementation.
+  [THM-4385](../01-canon/theorems/THM-4385-source-normal-row-ten-elliptic-sign-quotient.md)
+  identifies the row-ten projection as the elliptic etale locus `E minus
+  E[2]`, with the seven-to-fourteen lift explained by its sign quotient.
+  Chart/seam entry and residual weights at least thirteen remain open.
+  Exceptional quartic: THM-3703/3737/4034 give grammar, image, and conductor;
+  THM-4039--4060 reach `J_7`, obstruct `J_8`, close critical `H`, and solve
+  the simple-zero formal lane. THM-4063/4067 retain the ramification no-go and
+  identify the graph/seminormal gap, without global entry.
+  [THM-4381](../01-canon/theorems/THM-4381-exceptional-quartic-seminormalization-and-conductor-fibre-classification.md)
+  classifies that restriction curve as 86 ordinary nodes plus one ordinary
+  plane triple and proves `S^sn=S+K r`; it supplies no global entry or Keller
+  pair. Global entry/`JC(2)` stay open.
 - **Weyl boundary:** THM-2049 gives a formal beta-adic lift; finite termination remains.
 - **Planar source fibres:** THM-2063/THM-2084--2480 (including
   THM-2371/THM-2376) close the named
