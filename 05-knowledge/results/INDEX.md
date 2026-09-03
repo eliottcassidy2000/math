@@ -1,5 +1,17 @@
 # Script Results Index
 
+- `lrc14_cofinite_828_quotient_fibre_centered_residue_exit_thm4365.out`
+  and its import-free referee -> cofinite quotient fibre and residue exit law
+  ([THM-4365](../../01-canon/theorems/THM-4365-lrc14-cofinite-828-quotient-fibre-and-centered-residue-exit-law.md)):
+  **PROVED FINITE-EXACT PARAMETRIC THEOREM + INDEPENDENTLY AUDITED; LRC(14)
+  OPEN.** Every odd `P>=11019` lies in one 828-status/completed-chain fibre;
+  `11017` is the sharp predecessor. From `P>=10141`, first exit has an exact
+  centered-residue law modulo `47194`; `10139` is sharp. Its 3,370 active odd
+  cells yield infinitely many exits on the common fibre. Every row is safe.
+  Script/output SHA-256 pairs: `a7ea9bb5...c754bd5` /
+  `d404f524...9367cf` and `33d9bb29...2e67ed` /
+  `1115c92f...da2d2`.
+
 - `binomial_diagonal_annihilator_hierarchy_thm4364.out` and its import-free
   referee -> sharp binomial diagonal hierarchy
   ([THM-4364](../../01-canon/theorems/THM-4364-sharp-binomial-diagonal-annihilator-hierarchy.md)):

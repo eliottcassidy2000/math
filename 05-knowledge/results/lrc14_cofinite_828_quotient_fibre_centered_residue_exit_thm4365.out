@@ -1,0 +1,19 @@
+LRC14_828_PARAMETER_FIBRE=COFINITE_ODD_AND_RESIDUE_CLASSIFIED
+scope=exact h=420 fixed bank; LRC14_OPEN; all eventual rows are safe controls
+base_census=(('missing', 546), ('renew', 6), ('span', 276));completed=282
+completed_min_reach=1/28665;hits=((216, Fraction(47, 182), 945, 244), (496, Fraction(323, 546), 945, 559), (776, Fraction(505, 546), 945, 874))
+missing_min_of_max_gaps=7003/594127807;hits=((410, Fraction(57597, 117754), Fraction(69103, 141274)), (429, Fraction(72171, 141274), Fraction(60157, 117754)))
+phase_free_threshold=12120;margin_at_12120=137/1028689860120;failure_at_12119=6044/7200234893033
+sharp_eventual_odd_Q_onset=11019;hostile_predecessor=11017
+P11017_differences=((147, 'missing', 'renew', ((1691, 296), (11017, 1929), (10091, 1767), (525, 92), (11, 2))), (692, 'missing', 'renew', ((11, 9), (525, 433), (10091, 8324), (11017, 9088), (1691, 1395))))
+first_exit_sharp_odd_onset=10141;hostile_predecessor=10139;hostile_chain=((945, 26), (3371, 93), (10139, 280), (6731, 186), (10091, 279));hostile_rho=-3203
+eventual_first_exit: x1=1303/47194; rho=<1303P>_47194; active iff |rho|<3371; n=(1303P-rho)/47194; exit=x1+(3371-rho)/(47194P), else x1
+odd_residue_cells=23597;active=3370;inactive=20227;inverse1303=1485
+explicit_rho1_family=((1, 48679, 1344, Fraction(18817, 681506)), (2, 95873, 2647, Fraction(37059, 1342222)), (3, 143067, 3950, Fraction(55301, 2002938)))
+complete_grid_controls=((241, 214, Fraction(121, 240)), (255, 222, Fraction(121, 240)), (761, 218, Fraction(281, 560)), (1015, 170, Fraction(281, 560)))
+bounded_P_lt_2001:tested=993;fibre=365;signatures=51;multiplicities=((1,50),(315,1))
+bounded_fibre_sha256=2e5723566319a13e618f56f75037bba65ceec30becffc39d52a210155aa26b12
+bounded_signature_sha256=1b3fe9df546ef71e377b35ef748a490669fcb94ea3dc13cab87e241ef64aeb1a
+checks=2772267
+CONCLUSION=FINITE_STATE_PERIODIC_ACTIVITY;AFFINE_ADDRESS;RECIPROCAL_AFFINE_METRIC_EXIT;INFINITE_CONSUMER_RANGE_ON_ONE_Q_FIBRE
+NO_LRC14_DECREMENT;NO_COUNTEREXAMPLE;NO_ARBITRARY_BANK_CLASSIFICATION

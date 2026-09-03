@@ -1,0 +1,24 @@
+THM4365 COFINITE FIBRE CLEANROOM REFEREE
+fixed_census {'missing': 546, 'renew': 6, 'span': 276}
+status_stream 4860 4d34447b9eca8c8a9302a0f799a56300b4b96135cd0c3a245a97960975f9a347
+completed_stream 10940 64704c712a0e3e70ca0ecb3264834b3f61c4d473ddc20ea8c44ccc5c2c616d11
+completed_min_reach 1/28665 ((Fraction(1, 28665), 216, 1, 945, 244), (Fraction(1, 28665), 496, 1, 945, 559), (Fraction(1, 28665), 776, 1, 945, 874))
+missing_min_largest_gap 7003/594127807 ((410, Fraction(7003, 594127807), Fraction(57597, 117754), Fraction(69103, 141274)), (429, Fraction(7003, 594127807), Fraction(72171, 141274), Fraction(60157, 117754)))
+alignment_free_threshold 84875401/7003 least_integer 12120 least_odd 12121
+exact_odd_cofinite_threshold 11019 finite_rows_checked 551
+hostile_q_predecessor 11017 (147, 692)
+hostile_q_chain_147 ((1691, 296), (11017, 1929), (10091, 1767), (525, 92), (11, 2))
+hostile_q_chain_692 ((11, 9), (525, 433), (10091, 8324), (11017, 9088), (1691, 1395))
+k23_prefix_margins (Fraction(13, 105840), Fraction(92, 4459833))
+k23_next_fixed_gap 2110/158831407
+k23_analytic_tail_threshold 22690201/2110 least_odd 10755
+k23_finite_band 10141..10753 active 42
+k23_finite_min_margin (10465, -3171, 289, Fraction(19, 493079405))
+k23_hostile_10139 -3203 280 31/68245609 ((945, 26), (3371, 93), (10139, 280), (6731, 186), (10091, 279)) 3907/141274
+centered_convention -23597<rho<=23597 half_class 23597
+odd_classes 23597 active 3370 boundary 2
+boundary_controls ((43823, -3371, 1210, (3371, 43823)), (50565, 3371, 1396, (3371, 50565)))
+rho_one_class 1485 infinite_controls ((48679, 1344, Fraction(18817, 681506)), (95873, 2647, Fraction(37059, 1342222)), (803783, 22192, Fraction(310689, 11252962)))
+endpoint_rule open; |rho|=3371 inactive and safe with binders {3371,P}
+scope Q stable for every odd P>=11019; 12121 is sufficient but not minimal
+PASS
