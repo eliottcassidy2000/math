@@ -1,0 +1,10 @@
+THM4342 KZERO ROOT-EXIT HOSTILE REFEREE=PASS
+seam_relation=K=0=>Delta=5696/105
+full_disc=Theta^2*(xi^2-4WTheta);saturated_disc=xi^2-4WTheta
+exit_models=m1:y^2=P(Theta+xiP+WP^2);m2:y^2=xi+WP;m3:y^2=WP
+m1_double_face=Y^2-B(a)Y-a^3W X^2
+m1_double_normal_gate=4W^2Phi-2Wxi*eta+xi^2alpha
+horizontal_node_disc=x^2*(delta^2 B1^2+4q0 a^3W)
+form_transform=-sigma^16*P^e*y^2*dy/E_P
+m3_normal_excess=6+r/2
+checks=27

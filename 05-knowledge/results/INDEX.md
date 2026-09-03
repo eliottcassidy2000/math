@@ -1,5 +1,17 @@
 # Script Results Index
 
+- `jc2_m12_clean_cubic_zero_exit_extinction_thm4342.out` and two import-free
+  hostile audits -> exact `K=0` Laurent zero-exit extinction
+  ([THM-4342](../../01-canon/theorems/THM-4342-clean-cubic-zero-exit-planar-jacobian-extinction.md)):
+  **PROVED RELATIVE TO THM-4230/4327/4339 + VERIFIED-EXACT + TWICE
+  HOSTILE-AUDITED; JC(2) OPEN.** Exit depths `1,2,3` have genera `15,14,14`.
+  Only depth one retains an elliptic face, of order `16`; its double root is
+  a rational bridge or horizontal node. Every complementary blowup chart is
+  explicit. The seam forces `Delta=5696/105`. Script/output SHA-256 pairs:
+  `55dd4f19...807214` / `7ced3151...dbc5dc`,
+  `afca0243...71b460` / `524bc6be...da487d`, and
+  `182af72a...c65249` / `8d6d8f0b...718da0`.
+
 - `odd_self_similar_cusp_reciprocal_duality_thm4341.out` and its independent
   symbolic audit -> odd-cusp tail reciprocity and exact natural indexing
   ([THM-4341](../../01-canon/theorems/THM-4341-odd-self-similar-cusp-reciprocal-tail-duality.md)):

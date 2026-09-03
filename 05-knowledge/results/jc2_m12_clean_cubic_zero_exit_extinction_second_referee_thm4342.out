@@ -1,0 +1,8 @@
+PASS THM4342 KZERO SECOND HOSTILE AUDIT
+SEAM=K0_forces_Delta_5696/105;Delta-absent_hull_masks_are_conservative_only
+SATURATION=Theta^2_exit_factor_removed;only_Q1_discriminant_remains
+BLOWUPS=m1_one_chart;m2_two_charts_glued;m3_second_complement_empty
+DOUBLE_GATE=4W^2Phi-2Wxi_eta+xi^2alpha=4W^2J(a)
+HORIZONTAL=discriminant_x^2_times_DVR_unit
+DIFFERENTIAL=b=P^e*y_preserves_sigma_order
+LEDGERS=Pick_15_14_14;RH_28_26_26;graph_11
