@@ -351,8 +351,9 @@ lift/phase clocks.
   close the clean cubic gate for `U+W!=0` and `U+W=0`.
   THM-4340/4342/4344 close `U=0,WZ!=0`, `K=0`, and
   `W=0,U*K*xi_10!=0`, respectively; `U=0,WZ=0` remains.
-  THM-4350/4351 close all `W=xi_10=0,U*K!=0`; exit intersections and seam
-  entry remain.
+  THM-4350/4351 close all `W=xi_10=0,U*K!=0`; THM-4353 closes the simultaneous
+  `K=0,U!=0` endpoint, including its smooth repeated boundary tangency. The
+  `U=0,WZ=0` intersection and seam entry remain.
   Exceptional quartic: THM-3703/3737 give grammar/image, THM-4034 the
   conductor, and THM-4039/4043/4046 reach `J_7`, obstruct `J_8`, and close
   critical `H`. [THM-4054](../01-canon/theorems/THM-4054-exceptional-affine-simple-zero-retained-packet.md)

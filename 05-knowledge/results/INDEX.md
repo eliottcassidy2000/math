@@ -1,5 +1,19 @@
 # Script Results Index
 
+- `jc2_m12_simultaneous_zero_endpoint_extinction_thm4353.out` and its
+  independent clean-room referee -> full simultaneous `K=W=xi_10=0`
+  endpoint extinction
+  ([THM-4353](../../01-canon/theorems/THM-4353-simultaneous-zero-endpoint-planar-jacobian-extinction.md)):
+  **PROVED RELATIVE TO THM-4230/4327/4344 + VERIFIED-EXACT + INDEPENDENTLY
+  HOSTILE-AUDITED; JC(2) OPEN.** The 48 exact supports have eight fans. The
+  only positive-genus faces are smooth genus-three carriers of orders 41 or
+  11; every `Theta=0` face is rational. On
+  `eta^2=4*alpha_11*Phi`, two index-two punctures become one index-three
+  puncture: the branch is smoothly tangent to the boundary, two ordinary
+  blowups are rational, and no collision tail occurs. Script/output SHA-256
+  pairs: `35b61f17...9cf5350f` / `1837e483...eb7c16d4` and
+  `6ea7db7d...f723fd23` / `cfd0e2ab...c18ddd0`.
+
 - `even_self_similar_cusp_reciprocal_parity_attachment_thm4352.out` and its
   symbolic hostile referee -> even-cusp parity/attachment law
   ([THM-4352](../../01-canon/theorems/THM-4352-even-self-similar-cusp-reciprocal-parity-and-attachment-law.md)):

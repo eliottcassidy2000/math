@@ -1,0 +1,19 @@
+THM-4353 PRIMARY EXACT CERTIFICATE
+scope=Z=beta_11=zeta_3=W=xi_10=K=0;U!=0;Delta=5696/105
+source=literal_16_rows;surviving_rows=10;specialized_support_points=22
+exact_supports=48;exact_fans=8;split=16,16,6,2,2,2,2,2
+hostile_atlas=128_keyed;96_distinct_supports;all_48_exact_embed
+hostile_fans=8;split=32,32,24,8,8,8,8,8
+faces=M,D6,E11,E01,Eeta,EPhi,N;all_literal_primitive_charts=verified
+carrier=E11:g3:base42:order41;E01:g3:base12:order11
+rational_faces=M_components,D6,Eeta,EPhi,N
+global_genera=Theta_nonzero:14;Theta_zero_with_owner:11;no_owner:6
+graph_betti=Theta_nonzero_or_normal_owner:11;no_owner:6
+sole_edge_discriminant=eta^2-4*alpha_11*Phi
+generic_N_packet=11,6,4,2,2,1;repeated_N_packet=11,6,4,3,1
+repeated_edge=residue_order2;index3;persistent_tangency;H_R=unit;no_tail
+blowups=two_ordinary;first_complement_empty;second_points_reciprocal_units
+K_zero_transition=prunes_rational_T_leaf;V_and_E_drop_together;b1_preserved
+proper_flat_input=all_noncarrier_components_rational;carrier_orders_positive
+CHECKS 431
+VERDICT ACCEPT full simultaneous-zero-endpoint gate relative to inherited interfaces

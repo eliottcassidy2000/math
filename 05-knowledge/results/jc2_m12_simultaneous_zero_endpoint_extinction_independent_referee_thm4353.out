@@ -1,0 +1,11 @@
+K0_FULL_INDEPENDENT_REFEREE=PASS_WITH_PACKET_CORRECTION
+source_rows=16;exact_supports=48;exact_fans=8
+hostile=128_keyed/96_distinct;exact_embeds=48
+faces=M,D6,E11,E01,Eeta,EPhi,N;primitive_initials=7
+carrier=E11_g3_disc=-53971714048*Theta^8*alpha^12;
+carrier=E01_g3_disc=46656*Theta^12*U^5
+orders=M9@12,D6_5@6,E11_41@42,E01_11@12,Eeta_6@6,EPhi_7@6,N_11@6
+collision=boundary_tangency_R=(P-a)^2*unit;H_R=unit;two_ordinary_blowups
+PACKET_CORRECTION:generic=(11,6,4,2,2,1);repeated=(11,6,4,3,1);defect=20
+no_base_change_for_tangency=yes;exceptionals=P1,P1
+checks=637
