@@ -1,5 +1,19 @@
 # Script Results Index
 
+- `lrc14_small_defect_short_relation_master_atlas_thm4384.out`, its boundary
+  sidecar, and its clean-room referee -> one-determinant master formula and
+  ten-sector sharp atlas
+  ([THM-4384](../../01-canon/theorems/THM-4384-lrc14-small-defect-short-relation-master-formula-and-sharp-sector-atlas.md)):
+  **PROVED ELEMENTARY RELATIVE TO THM-4373 + VERIFIED-EXACT + INDEPENDENTLY
+  AUDITED; LRC(14) OPEN.** For `m>=h+1`, `m+h<=13`, and `3` prime to `hm`,
+  labeled owners kill the bounded defect and leave a complete integer address
+  `k`. Parity gives exactly ten patterns; all 747 exceptional presentations
+  and their sharp maxima are classified. Sectors overlap and cannot be added.
+  A literal `m+h=15` hostile realizes defect `+/-3`. Script/output SHA-256:
+  primary `743f49a9...ad60` / `352923f4...837f`; boundary
+  `287a9669...207e` / `8ab0876f...0d50`; referee `b7da6c44...e29a` /
+  `f1bf7d03...19a0`.
+
 - `lrc14_signed_two_five_one_comb_exact_measure_thm4383.out` and its
   optimization-safe full-circle clean-room referee -> sharp signed-`(2,5,1)`
   triple-comb bound

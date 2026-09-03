@@ -55,9 +55,9 @@ for `d>=7`. THM-3742 is a wrong-torsor Pell `C14`; THM-3744's safe control is
   ray, parity-sheet and component-count data; none supplies safety or arrival.
 - **Seam/entry:** THM-4326/4329 close fixed chart; 4330/4335 leave `2+12`;
   4347 closes height `40`. THM-4349/4371 are clocks; 4374/4379 decode `P`,
-  not entry. THM-4370/4372 give seven lower tails/`4/7`; 4373/4382/4383
-  close signed `(1,2,1)`/`(1,4,1)`/`(2,5,1)` at
-  `6/77`/`12/301`/`12/371`. Other sectors and entry remain open.
+  not entry. THM-4370/4372 give seven lower tails/`4/7`; THM-4384 subsumes
+  4373/4382/4383: all ten parity-compatible `m+h<=13` relations reduce to one
+  determinant. At `m+h=15`, defect `+/-3` occurs; other sectors/entry are open.
 - **Residual ranks:** THM-4333/4338 close fixed-pool ranks three/four, not arbitrary entry.
 - **PROVED:** [THM-2928](../01-canon/theorems/THM-2928-critical-seven-comb-grid-tensorization-and-drift-tariff.md)/2941: literal zero/one/two/three-drift sectors are empty; `k=2,3` are finite.
 - **Orthogonal routes.** THM-1017 is HYP-6820; THM-2047/2050 keep phase/exit; THM-731/2048 prune; THM-1290 ends at `55`; HYP-8900 nonuniform.
