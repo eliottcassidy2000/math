@@ -1,0 +1,11 @@
+THM-4385 EXACT: SOURCE-NORMAL ROW-TEN ELLIPTIC SIGN QUOTIENT PASS
+CHECKS=21
+CUBIC projective_smooth_over_Q=yes genus=1 rational_origin=(0,0,1)
+BOUNDARY D(0,eta)=19*eta*F0; source_projection=affine_cubic_minus_origin=elliptic_curve_minus_E[2]
+INVOLUTION sigma(P,eta,T)=(-P,-eta,T); fixed_divisor=origin_plus_three_points_at_infinity=E[2]
+QUOTIENT ratio=eta/P; P^2*A(ratio)=B(ratio); fixed_field=Q(ratio); branch_polynomial=A*B squarefree_degree=4
+ROW11 K_degree=7 squarefree=yes gcd(K,A*B)=1 etale_lifts=14
+ROW12 J_degree=2 gcd(K,J)=1 surviving_lifts=0
+MOD7 affine_singular_ideal=unit infinity_gcd=1 branch_gcd=1
+SCOPE geometric corollary of THM-4380 only; no chart/seam entry, all-weight lift, Keller pair, JC2, or DC2
+RESULT=PASS
