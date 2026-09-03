@@ -609,9 +609,10 @@ new homotopy group, `p=2` statement, or LRC/GMC consequence.
   which proves both all-`m` statements that verification left open and
   generalizes them to an infinite family.
 
-## August 2026 preprint intake
+## 2026 preprint intake
 - [August 14 intake](CORE-PAPERS-INTAKE-2026-08-14.md): preprints/Rule 30.
-- August 25--27: [p-adic/matching](CORE-PAPERS-INTAKE-2026-08-25-PADIC-ZETA-MATCHING-LOGIC.md), [superseded specialization](CORE-PAPERS-INTAKE-2026-08-26-PADIC-ZETA-DENSITY.md), [density/percolation](CORE-PAPERS-INTAKE-2026-08-26-PADIC-DENSITY-PERCOLATION.md). Long is **PREPRINT / UNDER AUDIT**; no `u-f` map. Chen--Rosu is unrefereed; Cerf unrelated.
+- August 25--27: [p-adic/matching](CORE-PAPERS-INTAKE-2026-08-25-PADIC-ZETA-MATCHING-LOGIC.md), [specialization](CORE-PAPERS-INTAKE-2026-08-26-PADIC-ZETA-DENSITY.md), [density/percolation](CORE-PAPERS-INTAKE-2026-08-26-PADIC-DENSITY-PERCOLATION.md).
+- September 3: [Poisson gauge and percolation gluing](CORE-PAPERS-INTAKE-2026-09-03-POISSON-PERCOLATION.md).
 
 ## Maintenance rule
 

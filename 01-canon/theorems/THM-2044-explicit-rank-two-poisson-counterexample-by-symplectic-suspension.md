@@ -15,6 +15,7 @@ related:
   - THM-2042
   - THM-2045
   - THM-2046
+  - THM-4397
   - HYP-8802
   - HYP-8803
 script: 04-computation/poisson_rank2_symplectic_suspension_codex_20260721.py
@@ -176,3 +177,9 @@ multiplication position and first-order dual momenta would force a planar
 Keller mate, contradicting THM-2045. HYP-8803 identifies the surviving
 nonfiltered problem as polynomial extension across the `x=0` divisor of an
 exact localized Ore-Weyl chart.
+
+THM-4397 proves that Long's later arXiv:2608.23777v1 presentation is exactly
+this map up to an explicit polynomial Hamiltonian source translation and a
+linear symplectic target quarter-turn.  The smaller presentation is useful for
+computation, but it is the same right-left equivalence class and does not alter
+the planar or `A_2` scope boundary.

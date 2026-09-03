@@ -1,0 +1,28 @@
+THM-4397 INDEPENDENT GAUGE-EQUIVALENCE AUDIT
+convention: {p,x}={z,q}=1; A_U sends (p,z) to (p+U_x,z+U_q)
+U = -q**3*(63*q**2*x**2 + 318*q*x + 601)/840
+U_x = -q**4*(21*q*x + 53)/140
+U_q = -q**2*(105*q**2*x**2 + 424*q*x + 601)/280
+A_U classical canonical relations: PASS
+exact Weyl lift [p+U_x,z+U_q]=0 and mixed canonical relations: PASS
+ell o A_U = beta: PASS
+D_repo o A_U = D_paper: PASS
+H_paper(e)-H_repo(e) = q**4*(18*q**2*x**2 + 78*q*x + 125)/20
+K(r,t,d,s)=(r,-s,d,t) is symplectic: PASS
+Phi_paper = K o Phi_repo o A_U: PASS
+paper six Poisson identities by direct expansion: PASS
+paper term counts (R,T,D,S): (2, 47, 139, 22)
+paper total degrees (R,T,D,S): (3, 15, 23, 11)
+repo term counts (R,T,D,S): (2, 35, 246, 78)
+core determinant: 1 PASS
+core reduced Groebner basis:
+  (4*E - 27*X**2 + 1)/4
+  (3*X + 2*Y)/2
+  X*(X - 1)*(X + 1)
+three paper-source points transported by A_U:
+  (0, 0, 1/24, -1/8) -> (0, 0, 1/24, -1/8)
+  (1, 2/3, 247/96, -89/64) -> (1, 2/3, 224839/90720, -173417/60480)
+  (-1, -2/3, 247/96, -89/64) -> (-1, -2/3, 224839/90720, -173417/60480)
+common target transport: (0, 0, 0, -1/8) -> (0, 1/8, 0, 0) PASS
+exact fibre is reduced of cardinality three and transports bijectively: PASS
+THM-4397 INDEPENDENT AUDIT: PASS
