@@ -1,5 +1,21 @@
 # Script Results Index
 
+- `lrc14_raw_carrier_formula_referee_thm4386.out`, the complete short-shell
+  sidecars, and a dependency-free clean-room referee -> exact raw-carrier
+  lattice sum and complete primitive ternary-unit `l1<=14` shell
+  ([THM-4386](../../01-canon/theorems/THM-4386-lrc14-canonical-component-relation-and-zero-defect-incidence.md)):
+  **PROVED ELEMENTARY RELATIVE TO THM-4373/4384 + VERIFIED-EXACT +
+  INDEPENDENTLY AUDITED; LRC(14) OPEN.** The map `[n] -> w cross n` identifies
+  `Z^3/Zw` with `ker(C dot w)` and makes the owner gate coordinatewise mod
+  three. Two independent zero-defect relations force owner collision. The
+  three patterns omitted by THM-4384 have sharp maxima `564/20405`, `12/539`,
+  and `444/18179`, completing all thirteen patterns in the declared shell.
+  The referee runs 99,241 live checks; arbitrary triples and entry remain
+  open. Script/output SHA-256 pairs: raw `b4e4bf1a...6b34d` /
+  `513963ce...978d`; incidence `3b576101...163a` / `8a057fa6...54c1`;
+  shell `243cc63c...b649` / `9612f910...d0cf`; independent
+  `d52dc856...f75c` / `0985a1ad...cfb`.
+
 - `jc2_source_normal_weight13_row10_elliptic_pencil_thm4389.out` and its
   dependency-free reversed-section referee -> weight-thirteen row-ten
   non-isotrivial elliptic pencil

@@ -1,0 +1,7 @@
+RAW_CARRIER_FORMULA exact_triples=2916 base_components=15366
+SNF diag(1,1,0) on every control
+CONTROL (1, 5, 11) rows={(-1, -2, 1): Fraction(3, 77), (1, 2, -1): Fraction(3, 77)} sum=6/77
+CONTROL (1, 11, 25) rows={(-5, 5, -2): Fraction(19, 1925), (5, -5, 2): Fraction(19, 1925)} sum=38/1925
+CONTROL (1, 11, 175) rows={(-35, 35, -2): Fraction(3, 1225), (-34, 19, -1): Fraction(3, 1225), (-32, -13, 1): Fraction(3, 1225), (-31, -29, 2): Fraction(3, 1225), (-2, 32, -2): Fraction(3, 1225), (-1, 16, -1): Fraction(3, 1225), (1, -16, 1): Fraction(3, 1225), (2, -32, 2): Fraction(3, 1225), (31, 29, -2): Fraction(3, 1225), (32, 13, -1): Fraction(3, 1225), (34, -19, 1): Fraction(3, 1225), (35, -35, 2): Fraction(3, 1225)} sum=36/1225
+CONTROL (35, 55, 77) rows={(-22, 7, 5): Fraction(4, 2695), (-11, -7, 10): Fraction(1, 245), (-11, 14, -5): Fraction(2, 539), (11, -14, 5): Fraction(2, 539), (11, 7, -10): Fraction(1, 245), (22, -7, -5): Fraction(4, 2695)} sum=10/539
+PASS
