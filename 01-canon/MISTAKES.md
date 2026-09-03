@@ -9,6 +9,27 @@ Format per entry:
 - Why it was wrong
 - The correct framing
 
+## MISTAKE-541 (2026-09-03, THM-4380 duplicate evidence ledger) -- pre-canonical hashes survived in the theorem body
+
+- **What failed:** THM-4380's frontmatter correctly named the committed
+  primary script/output hashes, but its replay section repeated the older
+  pre-check-in scratch pair after the canonical artifacts had been normalized.
+- **First failed implication / minimal witness:** a passing replay and one
+  correct metadata ledger do not make a second displayed digest
+  self-updating. Direct SHA-256 checks gave
+  `15cd1294...ac6a` and `5b37b424...9429`, while the body still displayed
+  `e623430d...d5dd` and `13b950b3...3a1`.
+- **Strongest survivor:** all source equations, ranks, fourteen-point count,
+  row-twelve Bezout extinction, output bytes, and frontmatter hashes were
+  already correct. This was a duplicated-provenance defect, not a
+  mathematical or executable-evidence failure.
+- **Repair:** the body now repeats the actual committed hashes and explicitly
+  supersedes the scratch pair. No script, output, theorem status, or
+  proof-graph dependency changed.
+- **Reusable rule:** when promotion rewrites or normalizes an artifact,
+  search the theorem for every copy of its old digest; audit duplicated
+  in-body evidence ledgers against the final committed bytes.
+
 ## MISTAKE-540 (2026-09-01, THM-4312 k1 splitter scout) -- a ramified toric cover was mistaken for the weighted exceptional carrier
 
 - **What failed:** the first `k=1` splitter calculation substituted

@@ -422,11 +422,15 @@ LF hashes are
 
 ```text
 primary script:
-e623430da0a3c1b0d2421bfbf5877103fe23d01c233bd94d1c98f846732cd5dd
+15cd129452c3da033fa59985dda435077fe4526dbdf9d9df6feae32a8cb0ac6a
 
 primary output:
-13b950b355388346fa208f5bd0c027f19d1945faf498ab27aad7abdabc2fe3a1
+5b37b424137dba93fe7e7c4c621cf96d0068a9247a8bc9a3ff962bbf74279429
 ```
+
+These canonical hashes supersede the pre-check-in scratch pair recorded in
+the first promoted body; see MISTAKE-541. The theorem, output, and
+frontmatter values were unchanged by that documentation-only repair.
 
 Replay from the repository root with
 
