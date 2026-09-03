@@ -1,0 +1,12 @@
+U0_FIRST_NORMAL_OWNER_INDEPENDENT_REFEREE=PASS
+gate=Z=beta=zeta=W=xi=U=0;K*alpha!=0
+source_rows=16;exact_supports=64;exact_fans=6
+exact_fan_counts=C5T20,C5Z12,C4T16,C4Z8,C3T4,C3Z4
+hostile=256_keyed/168_distinct;fan_counts=64,64,32,32,32,32
+faces=C5,C4,C3,B,E11,T,E10;primitive_initials=7
+middle=2_rational_components/11_transverse_nodes/graph_b1_10
+carriers=E11_g3,E10_g3;global_genus=13
+orders=C5_25@30,C4_13@12,C3_9@6,B_49@66,E11_41@42,T_8@6,E10_26@24
+packets=Theta(10,8,5,3,2,2,1);zero(10,10,5,2,2,1);defect=24
+natural_address=n=1+8c+4u+2Phi+eta;range=1..64;bijective=yes
+checks=870

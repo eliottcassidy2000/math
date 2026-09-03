@@ -1,5 +1,19 @@
 # Script Results Index
 
+- `jc2_m12_first_normal_owner_u_zero_endpoint_extinction_thm4354.out` and its
+  independent clean-room referee -> first-normal-owner `U=0` endpoint
+  extinction
+  ([THM-4354](../../01-canon/theorems/THM-4354-first-normal-owner-u-zero-endpoint-planar-jacobian-extinction.md)):
+  **PROVED RELATIVE TO THM-4230/4327/4344 + VERIFIED-EXACT + INDEPENDENTLY
+  HOSTILE-AUDITED; JC(2) OPEN.** The 64 exact supports have six fans. Their
+  reducible middle face has two rational components meeting in eleven
+  transverse nodes, hence graph genus ten; the sole carrier is smooth of
+  genus three and has form order 41 or 26. The exact natural address
+  `n=1+8c+4u+2Phi+eta` bijects the supports with `1..64`, and
+  `((2n-1)^2-1)/8=T(n-1)`. Script/output SHA-256 pairs:
+  `630909a2...173cdd0` / `f8c5c28b...aa018f2` and
+  `b324a2b6...9218b5c7` / `32657943...00323af0`.
+
 - `jc2_m12_simultaneous_zero_endpoint_extinction_thm4353.out` and its
   independent clean-room referee -> full simultaneous `K=W=xi_10=0`
   endpoint extinction
