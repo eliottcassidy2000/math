@@ -59,10 +59,10 @@ Then read frontier, guardrails, theorem; logs are history.
     identifies its row-ten projection as `E minus E[2]`. THM-4389 shows that
     weight thirteen deforms that fixed curve into a non-isotrivial pencil,
     and THM-4388 closes the complete fixed residual-weight-at-most-thirteen
-    family by row twelve. THM-4390 absorbs row nine at weight fourteen;
-    THM-4395 makes its row-ten source globally `A^6`, with `A^8` fibres even
-    at `Phi=0`. Row eleven, higher weights, and chart/seam entry remain open;
-    THM-4381 classifies only one exceptional restriction.
+    family by row twelve. At weight fourteen THM-4390 absorbs row nine;
+    THM-4395 makes row ten globally `A^6` with `A^8` fibres, even at `Phi=0`.
+    Row eleven, higher weights, and chart/seam entry remain open; THM-4381
+    covers one exceptional restriction.
 13. **Complete period-14 coordinates can be globally blind.** THM-2058 keeps
     every fixed-depth packet coordinate but exits at `47/113`; THM-2043/2047/
     2050 separate local completeness from global maxima.

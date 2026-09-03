@@ -1,0 +1,14 @@
+scope=independent_direct_matrix_audit;representative_level_fixed_x;not_THM4067
+imports=audited_THM3703_only;primary_scout_import=no;THM4034_import=no
+field_specialization=p421,alpha126;quartic_root=yes
+gamma1_generator_degrees=22,13,10
+gamma1_C_retained_values=(2,0,-2);Lambda_gamma1_C=-8/9
+nondescent_tangency_defect_degree=42;mod421_hash=5ff697cdc557fc1db4c7e8c06420cb7d37091f350122f30aff0099989e08e2e5
+target_cutoff=180;target_columns=146
+ambient_degree=172;ambient_dimension=173;dS_rank=84;E_x_dimension=89
+rank_ladder=cutoff:columns:combined_rank:quotient_rank=30:3:87:3;60:12:95:11;90:28:108:24;120:54:125:41;150:93:148:64;180:146:173:89
+combined_rank=173;sidecar_quotient_rank=89;E_x_surjective=yes
+selected_sidecar_hash=e2d88c2341b620cbac9248d682c14509bcd94d115d70a68592d3942d1835d0bd
+logic=good_reduction_full_minor_implies_characteristic_zero_surjectivity
+typing=gamma1_on_target_representatives;descent_to_S_not_assumed_or_used
+RESULT=PASS
