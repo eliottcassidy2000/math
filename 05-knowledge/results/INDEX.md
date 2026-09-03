@@ -1,5 +1,17 @@
 # Script Results Index
 
+- `lrc14_seventeen_step_metric_exit_observability_thm4374.out` and its
+  direct-decoder referee -> sharp delayed metric observability
+  ([THM-4374](../../01-canon/theorems/THM-4374-lrc14-seventeen-step-metric-exit-observability-and-shift-congruence-rigidity.md)):
+  **PROVED ELEMENTARY RELATIVE TO THM-4365/4367 + VERIFIED-EXACT +
+  INDEPENDENTLY AUDITED; LRC(14) OPEN.** On the common odd tail, `W_17`
+  (18 observations) identifies `P`, while `P=253031,258645` collide through
+  `W_16`. Strict-active metric-fibre maxima fall `241 -> 94 -> 49 -> 1`, and
+  equality is the only output-compatible forward-shift congruence. This does
+  not create a safe time or enter the seam. Script/output SHA-256 pairs:
+  `d4c73423...376ba` / `9239480f...e40c` and
+  `8cc318c4...7124d` / `03fb2f11...aa1c5`.
+
 - `jc2_source_packet_pascal_circuit_kernel_thm4369.out` and its import-free
   referee -> complete integral packet-relation kernel and boundary normal form
   ([THM-4369](../../01-canon/theorems/THM-4369-source-packet-pascal-circuit-kernel-and-boundary-basis.md)):
