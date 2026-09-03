@@ -62,7 +62,12 @@ retain color/amplitude/owner, and test phase-invisible same-axis dilation.
 
 ## Correct the object before sharpening the technique
 
-**Action:** when elaborate methods stall at one residual, test whether the optimized object is wrong: mean versus maximum, intrinsic shadow versus marked observer, scalar versus profile. Stronger bounds cannot restore lost information, though valid local estimates survive the reframe. **Evidence:** the `L -> M` and observer reframes in [S399 §1](../07-reflections/lrc14-history-synthesis-patterns-and-reframings-opus-S399.md), and MISTAKE-209.
+**Action:** when a method stalls, test its object: mean versus maximum, shadow
+versus marked observer, scalar versus profile, or capped carrier versus enlarged
+family. Stronger bounds cannot recover discarded coordinates; valid local
+estimates may survive the reframe. **Evidence:** [S399 §1](../07-reflections/lrc14-history-synthesis-patterns-and-reframings-opus-S399.md),
+MISTAKE-209, and THM-4385/4388/4389: the capped elliptic curve remains a slice,
+but the first omitted face turns its equation into a coefficient graph.
 
 ## Compute the repair quotient before testing the residual defect
 

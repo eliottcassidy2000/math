@@ -332,13 +332,15 @@ replaced by a row-ten emptiness claim.
 | simultaneous sign as deck involution | only on central fibre `a=0` |
 | `P=0` boundary | two old points, now each with free `(a,b)` |
 
-The next sharp computation is row eleven for this pencil. Its source row sees
-`5(3a+2b)x^9`; one should determine whether it cuts `(18)` by a divisor over
-the `a`-line, solves the previously tangent `b` direction, or produces a
-new higher-genus total carrier. A second useful test is whether the row-eleven
-divisor descends under the affine deck involution `(19)`; failure would locate
-the precise row at which even the moving ratio quotient stops being a lawful
-consumer.
+THM-4388 now performs this next computation. Row eleven solves the previously
+tangent `b` direction rather than cutting out a divisor in the row-ten
+pencil. At row twelve the bracket equations leave thirteen reduced quotient
+points, or twenty-six geometric sign lifts, and the joint projected depth
+equation is disjoint from all of them. Thus the moving genus-one pencil is a
+correct row-ten fibrewise description, but it is not the terminal carrier of
+the complete weight-thirteen calculation. The next source-face question is
+weight fourteen, where new channels can enter rows already used here; the
+separate chart/seam entry problem also remains open.
 
 ## 8. Reproduction and independent audit
 

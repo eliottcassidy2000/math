@@ -340,32 +340,22 @@ lift/phase clocks.
   challenges `(3,9),(5,6),(7,5),(11,4),(13,4)` all remain **OPEN**; the public
   `131199`-field file is a named finite population, not a world census.
 - **Jacobian/Dixmier:** `JC(2),DC(2)` are **OPEN**. THM-4130--4248 close
-  `M=8--11`; THM-4226 closes dense `M=13`. At `M=12`, THM-4290--4361
-  close the named interior, cubic-corner, endpoint, and zeta/beta-zero cells.
-  THM-4362/4364/4366/4368/4369/4375/4376 give the depth hierarchy, clocks,
-  `U=0` extinction, Pascal kernel, reciprocal path-band, and
-  depth-versus-bracket firewall.
-  [THM-4377](../01-canon/theorems/THM-4377-reciprocal-source-mutation-and-boundary-jet-cokernel.md)
-  and [THM-4378](../01-canon/theorems/THM-4378-bilateral-packet-quotient-reciprocal-eigenlattice.md)
-  give the exact Laurent wall jet and signed reciprocal quotient.
-  [THM-4380](../01-canon/theorems/THM-4380-source-normal-weight-twelve-row-twelve-extinction.md)
-  closes the complete fixed THM-4308 residual-weight-at-most-twelve source
-  family by row twelve.
-  [THM-4385](../01-canon/theorems/THM-4385-source-normal-row-ten-elliptic-sign-quotient.md)
-  identifies the row-ten projection as the elliptic etale locus `E minus
-  E[2]`, with the seven-to-fourteen lift explained by its sign quotient.
+  `M=8--11`; THM-4226 closes dense `M=13`; THM-4290--4378 give the named
+  `M=12` cells, depth hierarchy, and reciprocal wall packet. In the complete
+  fixed THM-4308 chart, [THM-4380](../01-canon/theorems/THM-4380-source-normal-weight-twelve-row-twelve-extinction.md)
+  closes residual weight at most twelve by row twelve, while THM-4385
+  identifies its row-ten projection as `E minus E[2]`.
   [THM-4389](../01-canon/theorems/THM-4389-source-normal-weight-thirteen-row-ten-nonisotrivial-elliptic-pencil.md)
-  makes `p^5*y` transverse and `p^2*y^3` tangent at row ten: the fixed curve
-  becomes a non-isotrivial pencil, smooth at every rational parameter. Higher
-  rows and entry remain open.
-  Exceptional quartic: THM-3703/3737/4034 give grammar, image, and conductor;
-  THM-4039--4060 reach `J_7`, obstruct `J_8`, close critical `H`, and solve
-  the simple-zero formal lane. THM-4063/4067 retain the ramification no-go and
-  identify the graph/seminormal gap, without global entry.
-  [THM-4381](../01-canon/theorems/THM-4381-exceptional-quartic-seminormalization-and-conductor-fibre-classification.md)
-  classifies that restriction curve as 86 ordinary nodes plus one ordinary
-  plane triple and proves `S^sn=S+K r`; it supplies no global entry or Keller
-  pair. Global entry/`JC(2)` stay open.
+  shows that weight thirteen deforms the fixed curve into a non-isotrivial
+  pencil with rational total carrier.
+  [THM-4388](../01-canon/theorems/THM-4388-source-normal-weight-thirteen-row-twelve-depth-extinction.md)
+  closes that complete weight-at-most-thirteen family: `Phi=0` dies by
+  row-twelve bracket compatibility; `Phi!=0` has exactly 26 reduced geometric
+  row-twelve bracket points, all disjoint from joint depth. Weight at least
+  fourteen and chart/seam entry remain open. Exceptional quartic:
+  THM-3703/3737/4034 give grammar, image, and conductor; THM-4039--4067 reach
+  `J_7`, obstruct `J_8`, and isolate the graph/seminormal gap. THM-4381 gives
+  86 nodes, one plane triple, and `S^sn=S+K r`, without global entry.
 - **Weyl boundary:** THM-2049 gives a formal beta-adic lift; finite termination remains.
 - **Planar source fibres:** THM-2063/THM-2084--2480 (including
   THM-2371/THM-2376) close the named
