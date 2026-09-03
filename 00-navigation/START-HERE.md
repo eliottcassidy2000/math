@@ -21,8 +21,8 @@ Then read frontier, guardrails, theorem; logs are history.
 
 ## Seventeen high-signal facts
 
-1. **LRC(14) is first open.** THM-4338 closes fixed-pool residual rank four;
-   arbitrary entry and the anchored `2+12` branch remain open.
+1. **LRC(14) is first open.** THM-4347 closes height `40`; THM-4349 completes
+   the clock test. The `7u|h`, entry, and `2+12` walls remain open.
 2. **The `q <= 25` period claim is refuted.** THM-762/764 exhibit `26*{1,...,12} union {339}`, whose first good period is `27`.
 3. **Good-period existence is a maximum statement.** The tight resonant AP
    defeats average/count arguments; see MISTAKE-127/129/130.

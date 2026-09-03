@@ -8,6 +8,8 @@ technique: LTI-323
 tournament_technique: LTT-223
 reflection: 07-reflections/lrc14-green-current-lorentzian-exchange-angles-codex-20260628.md
 related:
+  - THM-4345-lrc14-halfperiodic-anchor-strip-euclidean-remainder-and-current-envelope
+  - THM-4346-lrc14-halfturn-current-brownian-kernel-and-cubic-moment-boundary
   - HYP-3236
   - HYP-3235
   - HYP-3234
@@ -188,6 +190,36 @@ functional.  This makes the Green-current proposal sharper: try to derive the
 conductance Dirichlet form as a finite shadow of the Fejer/autocorrelation
 certificate, but do not identify the Green scalar, Fejer kernel, and cap until
 the lost coordinates have sidecars.
+
+## 2026-09-02 Execution Note: Brownian Current and Anchor Conditioning
+
+THM-4346 executes the stochastic core of Angle A on the physical half-turn
+current.  After gcd reduction its signed two-speed kernel is an explicit
+mod-14 formula; the nonzero residue numerator has rank three and is twice a
+three-step Brownian covariance after reordering.  For an arbitrary odd speed
+family, Fourier expansion gives an exact Dirichlet-convolution square norm,
+whose `7`-adic speed shells are literal orthogonal reverse-martingale
+differences.  Thus “Green current” is now a proved representation, not merely
+an analogy.
+
+The same theorem supplies a sharp obstruction to treating that representation
+as a scalar certificate.  A physical `9`-power family lies below the required
+quadratic-energy threshold, and an abstract pair of exchangeable sheet laws
+agrees on every labelled tensor through degree three while disagreeing on
+free-sheet mass.  The abstract laws are not runner-realizable, so the survivor
+is not “quartics solve LRC”; it is that current moments require an arithmetic
+or geometric realizability sidecar.
+
+THM-4345 identifies one such sidecar exactly.  Conditioning any half-periodic
+observable on the danger strip of an even anchor is a Euclidean quotient plus
+one residual-wall integral, with an associative fourteen-state radius/phase
+transducer.  On the canonical physical hostile, exact variance and even its
+positive-part quadratic refinement remain negative, while the nonlinear
+absolute-current envelope is positive.  Accordingly, the next Green-current
+target is the anchor-conditioned histogram (or its tail probabilities),
+transported through the residual-wall transducer.  Effective resistance or
+all-ones energy without this wall address has now been decisively shown too
+coarse for the anchored `2+12` branch.
 
 ## Angle B: Lorentzian / Valuated Exchange Certificate
 
