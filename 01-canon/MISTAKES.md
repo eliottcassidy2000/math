@@ -9,6 +9,27 @@ Format per entry:
 - Why it was wrong
 - The correct framing
 
+## MISTAKE-543 (2026-09-03, concurrent THM-4404 reservations) -- a second cross-path YAML collision survived clean integration
+
+- **What failed:** the exceptional-quartic and LRC14 sessions independently
+  reserved `THM-4404` under different filenames.  Both commits integrated
+  cleanly because Git detects path conflicts, not semantic identifier
+  collisions.
+- **First failed implication / minimal witness:** after rebasing a later
+  theorem promotion, `agents/check_docs.py` found two files with the exact
+  frontmatter line `id: THM-4404`.  A successful rebase was again not a proof
+  that the shared theorem namespace was unique.
+- **Strongest survivor:** both colliding files were honest `RESERVED /
+  UNPROVED EMPTY STUB` records.  No result, dependency edge, or mathematical
+  claim depended on the duplicated identifier.
+- **Repair:** the later LRC14 reservation was moved atomically to the next free
+  identifier `THM-4405`; the earlier exceptional-quartic reservation keeps
+  `THM-4404`.
+- **Reusable rule:** every reservation session must rerun the global document
+  checker after its final integration, not only search its own candidate ID.
+  If another concurrently integrated reservation has collided elsewhere, fix
+  that semantic conflict before pushing any otherwise-valid theorem work.
+
 ## MISTAKE-542 (2026-09-03, concurrent THM-4399 reservations) -- a clean rebase did not detect a YAML-ID collision
 
 - **What failed:** two sessions checked the live namespace and then reserved
