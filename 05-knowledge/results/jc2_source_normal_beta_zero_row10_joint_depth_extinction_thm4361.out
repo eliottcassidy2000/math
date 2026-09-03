@@ -1,0 +1,12 @@
+THM-4361 PRIMARY: BETA-ZERO ROW-TEN JOINT DEPTH EXTINCTION PASS
+CHECKS=91
+ROW9_DEPTH P2=75x160/rank59/null16 P3=85x251/rank73/null12 terminal_rank=3 fibre=A7
+ROW10_BRACKET xi=-1928704/10125 q_degree=3 six_sign_sheets=6
+ROW10_DEPTH P2=88x193/rank68/null20 terminal=3/aug3; P3=99x304/rank83/null16 terminal=3/aug3; joint=3/aug4
+TETRAHEDRAL=(56,-35,20,-10,4,-1)=alternating_binomials_m_choose_3
+H_C_OFF_Q=-Phi*d(Phi^2)/132327846238037905244160+q(Phi^2)/(248114711696321072332800000*Phi)
+H_C_ON_Q=-Phi*d(Phi^2)/132327846238037905244160
+COPRIME gcd(q,qprime)=gcd(q,d)=gcd(q,W)=1; q(0)!=0
+SIGN_ADDRESS=three_Phi_squared_roots_times_two_sign_sheets
+F29_CONTROL=(Phi,xi,eta,alpha,beta)=(1,7,8,8,0); q=0; d=23
+SCOPE finite row10 joint projected P2/P3 extinction only; no all-row B2 lift, termination, seam entry, Keller pair, JC2, or DC2

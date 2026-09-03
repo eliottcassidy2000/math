@@ -350,10 +350,10 @@ lift/phase clocks.
   and [THM-4343](../01-canon/theorems/THM-4343-disjoint-a23-cubic-contact-planar-jacobian-extinction.md)
   close the clean cubic gate for `U+W!=0` and `U+W=0`.
   THM-4340--4356 close all remaining endpoints, ending with the full
-  `Z=beta_11=zeta_3=W=xi_10=0` endpoint. THM-4357--4359 isolate and kill
-  `S_4339` and identify its response/specialization defect. THM-4360 closes
-  the full beta-moving zeta-zero source plane at row ten. Other source strata
-  and seam entry stay open.
+  `Z=beta_11=zeta_3=W=xi_10=0` endpoint. THM-4357--4360 stratify the source
+  response and close its zeta-zero plane. THM-4361 closes beta-zero by joint
+  depth; THM-4362 proves the shared sharp tetrahedral stencil. Other strata
+  and seam entry remain open.
   Exceptional quartic: THM-3703/3737 give grammar/image, THM-4034 the
   conductor, and THM-4039/4043/4046 reach `J_7`, obstruct `J_8`, and close
   critical `H`. [THM-4054](../01-canon/theorems/THM-4054-exceptional-affine-simple-zero-retained-packet.md)

@@ -1,0 +1,11 @@
+THM-4362 CLEAN-ROOM REFEREE: PASS
+annihilating (m,d) pairs exhaustively checked: 78
+projected generator columns checked: 85281
+boundary witnesses checked: m=7..100, plus 13 nested depths each
+partial hostile-sign identities checked: N=5..100
+stencil m=9:  35,-20,10,-4,1
+stencil m=10: 56,-35,20,-10,4,-1
+figurate checks: cumulative triangular, fourth difference, centered T identity
+general diagonal/order hierarchy columns checked: 2443599
+total assertions grouped as checks: 2639852
+script_sha256=2d11c433436dc93159f8d867617cd72aeece88ec6826be8970f0df0ed15f99d2

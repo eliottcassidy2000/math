@@ -1,0 +1,13 @@
+THM-4362 TETRAHEDRAL DIAGONAL DEPTH ANNIHILATOR: PASS
+L_m=sum_(n=5)^m (-1)^(n-5) C(m+3-n,3) h_(n,2n-10)
+UNIVERSAL_RANGE=m>=7 and d<=m-7
+SHARP_HOSTILE=d=m-6; (a,b,c,e)=(d,0,(10+d-3(d mod 2))/2,d mod 2)
+SHARP_HOSTILE_VALUE=(-1)^(d+7)
+M9_P2_STENCIL=(35,-20,10,-4,1); columns=160
+M10_P3_STENCIL=(56,-35,20,-10,4,-1); columns=304
+FIGURATE=C(r,3)=sum_(q=1)^(r-2) T(q); fourth finite difference vanishes
+FINITE_DIFFERENCE_CHECKS=837
+ENUMERATED_ZERO_COLUMNS=85281
+SHARP_HOSTILES=31
+CHECKS=86508
+SCOPE finite projected depth modules only; no all-row membership, seam entry, Keller pair, JC2, or DC2

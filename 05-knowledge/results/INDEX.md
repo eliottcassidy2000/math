@@ -1,5 +1,29 @@
 # Script Results Index
 
+- `tetrahedral_diagonal_depth_annihilator_thm4362.out` and its import-free
+  referee -> universal sharp tetrahedral depth stencil
+  ([THM-4362](../../01-canon/theorems/THM-4362-tetrahedral-diagonal-annihilator-and-sharp-depth-threshold.md)):
+  **PROVED FINITE DEPTH-MODULE THEOREM RELATIVE TO THM-4308 + VERIFIED-EXACT
+  + INDEPENDENTLY AUDITED; JC(2) OPEN.** For every `m>=7`, the alternating
+  tetrahedral functional on `(n,2n-10)` annihilates `pi_m(P_d)` exactly for
+  `d<=m-7`. A generator-by-generator fourth-difference proof and an explicit
+  one-depth-beyond monomial of value `+/-1` make the threshold sharp. Its
+  `m=9,10` rows are the THM-4358/4361 consumers. Script/output SHA-256 pairs:
+  `0d2d1aa8...73663c7` / `3de17aff...55fd9da` and
+  `2d11c433...15f99d2` / `d65b7cc6...138f6dd`.
+
+- `jc2_source_normal_beta_zero_row10_joint_depth_extinction_thm4361.out`
+  and its import-free referee -> beta-zero joint-depth extinction
+  ([THM-4361](../../01-canon/theorems/THM-4361-source-normal-beta-zero-row-ten-joint-depth-extinction.md)):
+  **PROVED FINITE-ROW RELATIVE TO THM-4308/4315/4357 + VERIFIED-EXACT +
+  INDEPENDENTLY AUDITED; JC(2) OPEN.** Row ten leaves exactly six source
+  points, arranged as three `Phi^2` roots times a sign sheet. Each projected
+  depth module is separately compatible, but after `P_2` selects the shared
+  terminal coordinates, a primitive tetrahedral `P_3` functional is nonzero
+  at all six by exact coprimality. Script/output SHA-256 pairs:
+  `e39e01dc...30c602` / `5c5f9474...e556925` and
+  `71d6c94b...4f569` / `34ebf094...88f40`.
+
 - `jc2_source_normal_zeta_zero_row10_delayed_depth_extinction_thm4360.out`
   and its import-free referee -> full zeta-zero-plane row-ten extinction
   ([THM-4360](../../01-canon/theorems/THM-4360-source-normal-zeta-zero-row-ten-delayed-depth-extinction.md)):

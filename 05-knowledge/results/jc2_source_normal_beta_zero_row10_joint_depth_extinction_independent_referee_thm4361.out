@@ -1,0 +1,7 @@
+THM-4361 CLEAN-ROOM REFEREE: PASS
+checks=112
+row9_depth=(P2 75x160 rank59 null16; P3 85x251 rank73 null12; terminal_rank3; fibre=A7)
+row10_bracket=xi:-1928704/10125; q_degree=3; six_sign_sheets
+row10_depth=(P2 88x193 rank68 null20; P3 99x304 rank83 null16)
+tetrahedral=(56,-35,20,-10,4,-1); joint_P2_P3_obstruction=true
+mod31_bezout=(q,qprime)=1;(q,d)=1;(q,W)=1; F29_control=(1,7,8,8,0)
