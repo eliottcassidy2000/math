@@ -1,5 +1,18 @@
 # Script Results Index
 
+- `jc2_source_normal_weight12_row12_extinction_thm4380.out` and the checked-in
+  strict-`Phi*U!=0` clean-room referee -> full fixed source-normal
+  residual-weight-at-most-twelve extinction
+  ([THM-4380](../../01-canon/theorems/THM-4380-source-normal-weight-twelve-row-twelve-extinction.md)):
+  **PROVED FINITE-ROW RELATIVE TO THM-4308/4315 + VERIFIED-EXACT;
+  NONZERO BRANCH INDEPENDENTLY IMPLEMENTED; FULL SECOND FAMILY
+  IMPLEMENTATION PENDING; JC(2) OPEN.** The `Phi=0` stratum dies at row eleven;
+  the strict nonzero stratum has fourteen reduced row-eleven points with
+  affine-eight fibres, all killed at row twelve. The branch referee rebuilds
+  source rows, bracket recursion, and complete projected depth with 138 live
+  checks. Script/output SHA-256 pairs: `15cd1294...ac6a` /
+  `5b37b424...9429` and `33563c6a...504` / `daba777f...532`.
+
 - `lrc14_signed_one_four_one_comb_exact_measure_thm4382.out` and its
   full-circle clean-room referee -> sharp signed-`(1,4,1)` triple-comb bound
   ([THM-4382](../../01-canon/theorems/THM-4382-lrc14-signed-one-four-one-comb-exact-measure-and-sharp-maximum.md)):

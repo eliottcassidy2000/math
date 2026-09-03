@@ -32,12 +32,20 @@ primary_script: 04-computation/jc2_source_normal_weight12_row12_extinction_thm43
 primary_output: 05-knowledge/results/jc2_source_normal_weight12_row12_extinction_thm4380.out
 primary_script_sha256: 15cd129452c3da033fa59985dda435077fe4526dbdf9d9df6feae32a8cb0ac6a
 primary_output_sha256: 5b37b424137dba93fe7e7c4c621cf96d0068a9247a8bc9a3ff962bbf74279429
+branch_referee_script: 04-computation/jc2_source_normal_weight12_phi_u_nonzero_independent_referee_thm4380.py
+branch_referee_output: 05-knowledge/results/jc2_source_normal_weight12_phi_u_nonzero_independent_referee_thm4380.out
+branch_referee_script_sha256: 33563c6adedf9a55c80635d8f979a07fd04c3124dea96017a3da962a94074504
+branch_referee_output_sha256: daba777fd57a7c85fca35e32d7b618588ab4c9c9f027d8320ece950a1332e532
 hash_basis: raw LF bytes
 audit: >
-  PASS WITH RATIONALITY-WORDING AND RELATED-SLUG REPAIRS; FULL SECOND
-  IMPLEMENTATION PENDING. The primary has 314 exact checks. An independent
-  theorem/code/branch-algebra review and triple replay found no proof failure;
-  it is an audit, not an independent full implementation. The
+  PASS WITH INDEPENDENT PHI*U!=0 BRANCH IMPLEMENTATION; FULL SECOND
+  FAMILY IMPLEMENTATION PENDING. The primary has 314 exact checks. An
+  independent theorem/code/branch-algebra review and triple replay found no
+  proof failure. A separate checked-in clean-room implementation now rebuilds
+  the source rows, bracket recursion, complete P_2/P_3 projections, fourteen-
+  point carrier, and row-twelve cut on the strict Phi*U!=0 branch, with 138
+  explicit checks live under normal and optimized Python. It does not rebuild
+  the separate Phi=0 stratum. The
   primary rebuilds THM-4308's capped source rows, bracket selectors, and
   P_2/P_3 projection matrices; checks at every new row that degrees 0 through
   the row exhaust the bracket polynomial; audits both Phi strata, terminal
@@ -440,15 +448,40 @@ python3 -B -O 04-computation/jc2_source_normal_weight12_row12_extinction_thm4380
 PYTHONHASHSEED=17 python3 -B 04-computation/jc2_source_normal_weight12_row12_extinction_thm4380.py
 ```
 
-Scratch broadcast commit `84590342a2` independently corroborates the
-`P*U!=0` portion: the nonempty row-ten curve, squarefree degree-seven
-eliminant, avoidance of `A*B*U`, fourteen row-eleven points, all 45 depth
-residuals with affine-eight fibres, and the mod-29 row-twelve coprimality
-cut. No checked-in artifact accompanied that broadcast, and it did not
-rebuild the `P=0` stratum or the full inherited source construction. It is
-therefore corroborating evidence, not a proof dependency or a full
-clean-room audit. An independent full-family implementation remains pending;
-this is stated in the status rather than hidden.
+A checked-in clean-room referee independently corroborates the `P*U!=0`
+portion. Starting only from the THM-4308 source polynomial and boundary rows,
+it reconstructs `G_4,...,G_12`, the Student bracket recursion, the complete
+projected `P_2/P_3` matrices, the squarefree degree-seven eliminant and its
+avoidance of `A*B*U`, all 45 row-eleven depth residuals with affine-eight
+fibres, and the row-twelve cut. Its independently selected degree-seven
+Student obstruction `T_29` is related to the canonical quadratic `J_29` by
+
+```text
+T_29 = R_29 J_29 mod K_29,        gcd(K_29,R_29)=1,
+```
+
+so the two certificates cut exactly the same seven ratio roots. Replay with
+
+```text
+python3 -B 04-computation/jc2_source_normal_weight12_phi_u_nonzero_independent_referee_thm4380.py
+python3 -B -O 04-computation/jc2_source_normal_weight12_phi_u_nonzero_independent_referee_thm4380.py
+```
+
+Both modes execute 138 explicit checks and reproduce the same frozen output.
+Raw-LF referee hashes are
+
+```text
+referee script:
+33563c6adedf9a55c80635d8f979a07fd04c3124dea96017a3da962a94074504
+
+referee output:
+daba777fd57a7c85fca35e32d7b618588ab4c9c9f027d8320ece950a1332e532
+```
+
+This is a genuine independent implementation of the strict nonzero branch,
+but it does not rebuild the `P=0` stratum. An independent full-family
+implementation therefore remains pending; this is stated in the status
+rather than hidden.
 
 Finally, `(3)` is strictly conditional on entry into the fixed THM-4308
 source-normal residual-weight-at-most-twelve finite chart. It proves no chart

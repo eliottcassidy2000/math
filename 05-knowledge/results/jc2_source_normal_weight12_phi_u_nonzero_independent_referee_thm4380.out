@@ -1,0 +1,27 @@
+THM4380 CLEANROOM PASS
+checks=138
+source_rows=G9,G10,G11,G12 direct from H(p,y)
+depth_universes=row8:(63, 131)/51,(72, 204)/63 row9:(75, 160)/59,(85, 251)/73 row10:(88, 193)/68,(99, 304)/83 row11:(102, 228)/77,(114, 361)/94
+row10_depth_H=7231154026500*Phi**3 + 50541940696500*Phi**2*eta + 6793915500000*Phi*eta**2 - 631918028977864704*Phi + 353642000625*eta**3 - 91584545734393856*eta
+row11_source_S=35898624648545625000000*Phi**6 + 80771905459227656250000*Phi**5*eta + 45434196820815556640625*Phi**4*eta**2 - 5082182716551483162762000000*Phi**4 - 5505874934614720684004250000*Phi**3*eta - 25542319832479532261250000*Phi**2*eta**2 + 180538621736589027573735673036800*Phi**2 - 587624076165543057966366720000*Phi*eta - 47729893443978941421649920000*eta**2 + 12360863815079359770761606339756032
+row11_eliminant=21252176198679866250754006276839556755825*lambda**7 + 799311827675117522149997435401077574131600*lambda**6 + 14384863896403857958176347858723924433398460*lambda**5 + 142730433788981669223548142320603830110956220*lambda**4 + 786944231209420107856657052701244375708027892*lambda**3 + 1852564642916723756803328543705267257790149632*lambda**2 - 147733098192443646925107791876239203619548432*lambda + 3714269896529642422852685702214695613036368
+row11_forbidden_gcds=squarefree:0 A:0 B:0 U:0
+row11_geometric_points=14 (7 simple lambda roots, nonzero Y, two Phi sign sheets)
+row11_depth=annihilator_rows:45 ranks_P2_P3_joint:4/3/4 pivots:(8, 9, 10, 11) residuals_mod_HS:0 affine_fibre:8
+row12_student_parity=1 degree=7 gcd_degree=0
+E29=8*lambda**7 + 9*lambda**6 - 10*lambda**5 + 12*lambda**4 + 2*lambda**3 + 8*lambda**2 - 12*lambda + 3
+T29=8*lambda**7 - 13*lambda**6 + 9*lambda**5 - 2*lambda**4 + 2*lambda**3 + 12*lambda**2 - 2*lambda + 8
+a29=-6*lambda**6 - 10*lambda**5 - 13*lambda**4 - 14*lambda**3 + lambda**2 - 11*lambda - 8
+b29=6*lambda**6 + 12*lambda**5 - 14*lambda**4 - 6*lambda**3 + 8*lambda**2 - 8*lambda + 14
+bezout29=a29*E29+b29*T29=1
+A29=-9*lambda**3 - 4*lambda**2 - 11*lambda - 5
+B29=13 - 8*lambda
+U29=5*lambda**3 - 2*lambda**2 + 1
+J29=-11*lambda**2 + 8*lambda + 5
+canonical_bezout29=(11*lambda+11)*E29+(8*lambda**6+7*lambda**5+13*lambda**4+12*lambda**3-3*lambda**2+8*lambda+11)*J29=1
+R29=9*lambda**6 - 4*lambda**5 - 5*lambda**4 - 5*lambda**3 + 5*lambda**2 - 14*lambda + 6
+student_vs_canonical=T29=R29*J29 mod E29; gcd(E29,R29)=1
+row12_selector=rank:8 nonzero_residuals:4
+u_positive_phi1_eta0=-219007077871/32440500
+verdict=all 14 genuine row-11 bracket+joint-depth points die at row 12
+scope=FINITE-EXACT; residual_weight<=12; source-normal D(Phi*U); no chart/seam entry, all-row membership, termination, Keller pair, JC2, or DC2
