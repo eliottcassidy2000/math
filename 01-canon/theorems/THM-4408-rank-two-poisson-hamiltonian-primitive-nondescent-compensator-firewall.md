@@ -1,25 +1,451 @@
 ---
 id: THM-4408
 title: "Rank-two Poisson Hamiltonian primitive non-descent and compensator firewall"
-status: RESERVED / UNPROVED EMPTY STUB
-source: root / JC2 and arXiv:2608.23777 continuation session, 2026-09-03
+status: >
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY AUDITED, for Christopher D. Long's
+  fixed polynomial coordinates, carrier R, and core A=Q[R,T,S]. The exact
+  residual two-form has primitive torsor H+Q[R], no member of which descends
+  to A. On the reduced three-point core fibre the obstruction is the
+  nontrivial idempotent partition 1+2. For B=A[D0+H] inside N[D0], one has
+  B intersect N=A and D0 belongs to B iff H belongs to A. These are
+  fixed-embedding statements, not arbitrary symplectic-gauge, stable-
+  cancellation, planar-Keller, JC(2), or DC(2) obstructions.
+source: root + primitive_descent_independent / JC2 and arXiv:2608.23777 continuation session, 2026-09-03
 depends_on: []
 related:
+  - THM-2044-explicit-rank-two-poisson-counterexample-by-symplectic-suspension
   - THM-4397-rank-two-poisson-counterexample-symplectic-gauge-equivalence
   - THM-4401-rank-two-poisson-casimir-leaf-cubic-incidence-boundary
   - THM-4404-exceptional-quartic-descended-two-form-seminormal-cokernel
+primary_source: https://arxiv.org/abs/2608.23777v1
+proof_reflection: 07-reflections/jc2-arxiv260823777-hamiltonian-primitive-and-seminormal-transgression-paper_bridge-s616-20260903.md
+independent_audit_reflection: 07-reflections/jc2-arxiv260823777-primitive-descent-independent-addendum-s616-20260903.md
+primary_script: 04-computation/poisson_rank2_long_primitive_descent_independent_s616.py
+primary_output: 05-knowledge/results/poisson_rank2_long_primitive_descent_independent_s616.out
+primary_script_sha256: fbcd74b04b046cabf144fe161c9cf148dc333c0cdfccb81ab7b38cde52bbea5f
+primary_output_sha256: f499b2b6169f79f697c13ee2ab531958794587deedda3b72ade895619d93dbfc
+hash_basis: raw LF bytes
+audit: >
+  PASS. The direct proof derives the polynomial centralizer and fibre
+  obstruction from Long's displayed formulas. The clean-room certificate
+  copies those formulas from the TeX source without importing THM-4397 or
+  the earlier bridge calculation. It checks 45 exact identities: the
+  adapted coordinate change, oriented core Jacobian, all three coefficients
+  and signs of the residual two-form, the function-field centralizer
+  certificate, reduced Groebner fibre, Hamiltonian residue and idempotent,
+  original-coordinate three-point fibre, and constant-D0/constant-D controls.
+  Normal, optimized, and fixed-hash-seed runs byte-match the frozen LF output.
 ---
 
-# THM-4408 -- rank-two Poisson Hamiltonian primitive non-descent and compensator firewall
+# THM-4408 -- the Hamiltonian primitive is a non-descended compensator sidecar
 
-**RESERVED / UNPROVED EMPTY STUB.**
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY AUDITED, IN LONG'S FIXED
+`(R,T,S)` CORE AND POLYNOMIAL GAUGE. THE CONCLUSION CONCERNS AN EMBEDDED
+OUTPUT SUBRING. IT IS NOT A STABLE-CANCELLATION THEOREM AND HAS NO PLANAR
+`JC(2)` OR `DC(2)` CONSEQUENCE.**
 
-This file reserves the theorem identifier and filename only. It contains no
-proved claim, proof, dependency, or consequence. The intended candidate
-computes Long's fixed-carrier primitive torsor, proves that every primitive is
-non-descended on the three-dimensional core, and identifies the exact algebraic
-obstruction to eliminating the independent compensator coordinate. Promotion
-requires a direct proof and exact audit of the centralizer, the reduced three-
-point fibre and its `1+2` idempotent residue, plus gauge and additive-quotient
-firewalls. It proves no arbitrary symplectic-gauge, stable-cancellation,
-planar-Keller, `JC(2)`, or `DC(2)` assertion.
+## 1. Exact core and residual form
+
+Work over `Q`. In the polynomial source coordinates of Christopher D. Long's
+[*An Explicit Counterexample to the Rank-Two Poisson
+Conjecture*](https://arxiv.org/abs/2608.23777v1), put
+
+```text
+N=Q[x,y,beta],                    q0=y+x beta/3,
+u=xy,
+R=2x-3x^2y-x^3 beta=x(2-3xq0),
+S=y+3x(1+u)^2 beta+3xy^2(4+3u),
+T=-((1+u)^3 beta+y^2(1+u)(4+3u))/2,                  (1)
+
+H=y^4(18u^2+78u+125)/20
+  +3 beta y^2(u^3+5u^2+10u-5)/10
+  -beta^2(9u+2)/6-x^2 beta^3/6.
+```
+
+The adapted change `(x,y,beta) <-> (x,q0,beta)` is a polynomial
+automorphism. Direct expansion gives the oriented core identity
+
+```text
+det partial(R,T,S)/partial(x,y,beta)=1.                (2)
+```
+
+Let `D0` be Long's independent fourth source coordinate. His source
+symplectic form first splits as
+
+```text
+omega=dR wedge dD0+Theta,                              (3)
+```
+
+and the exact coefficient identity, with the paper's target order, is
+
+```text
+Theta=dR wedge dH+dT wedge dS.                         (4)
+```
+
+Thus the residual form that the correction must pay is
+
+```text
+Xi:=Theta-dT wedge dS=dR wedge dH,                     (5)
+```
+
+and the corrected coordinate is
+
+```text
+D=D0+H.
+```
+
+Equations `(3)--(5)` imply
+
+```text
+omega=dR wedge dD+dT wedge dS.                         (6)
+```
+
+The signs in `(4)--(6)` are load-bearing: using `dS wedge dT` instead would
+reverse the second summand.
+
+## 2. Additively typed primitive quotient and centralizer
+
+For a `Q`-vector subspace `M subset N`, define the **additive exact-wedge
+image**
+
+```text
+E_R(M)={dR wedge dh:h in M} subset Omega^2_(N/Q).      (7)
+```
+
+In particular, if `A=Q[R,T,S] subset N`, define
+
+```text
+HP_R(A subset N):=E_R(N)/E_R(A).                       (8)
+```
+
+Both quotients in this section are additive `Q`-vector-space quotients.
+The notation in `(7)--(8)` does **not** mean the `N`-submodule generated by
+exact wedges, and `N/A` below is not a quotient ring because `A` is not an
+ideal.
+
+The exact polynomial centralizer of the carrier is
+
+```text
+Z_R(N):={h in N:dR wedge dh=0}=Q[R].                   (9)
+```
+
+To prove `(9)`, use `(x,q0,beta)`. Since
+
+```text
+R=2x-3x^2q0,                    R_q0=-3x^2,
+```
+
+the `dq0 wedge d beta` coefficient of `dR wedge dh=0` forces
+`h_beta=0`. In the function field,
+
+```text
+Q(x,q0)=Q(R,x),                 q0=(2x-R)/(3x^2).      (10)
+```
+
+The remaining wedge coefficient is precisely differentiation at fixed `R`.
+More explicitly,
+
+```text
+x Jac_(x,q0)(R,h)=3x^3 (partial h/partial x)|_R.       (11)
+```
+
+Therefore `h=f(R)` for some `f in Q(R)`. Specializing `q0=0` gives
+
+```text
+f(2x)=h(x,0) in Q[x].                                  (12)
+```
+
+If `f=P/V` is reduced, then `(12)` makes `V(2x)` divide `P(2x)` in
+`Q[x]`; coprimality forces `V` to be constant. Hence `f in Q[R]`, proving
+`(9)`.
+
+The map
+
+```text
+N/A -> HP_R(A subset N),            [h] |-> [dR wedge dh] (13)
+```
+
+is now well defined and surjective. If its image vanishes, then for some
+`a in A`,
+
+```text
+dR wedge d(h-a)=0.
+```
+
+By `(9)`, `h-a in Q[R] subset A`, so `h in A`. Thus `(13)` is injective and
+
+```text
+boxed: HP_R(A subset N) ~= N/A                         (14)
+```
+
+as additive `Q`-vector spaces.
+
+From `(5)` and `(9)`, the complete set of **polynomial primitives in this
+fixed carrier and gauge** is
+
+```text
+Prim_R(Xi)={K in N:dR wedge dK=Xi}=H+Q[R].             (15)
+```
+
+This does not classify rational primitives or primitives after changing the
+carrier, core algebra, or source symplectic gauge.
+
+## 3. Every polynomial primitive is non-descended
+
+Consider the exact core fibre
+
+```text
+m=(R,T-1/8,S) subset A,              C=N/mN.           (16)
+```
+
+With lexicographic order `beta>y>x`, direct reduction gives
+
+```text
+beta-(27x^2-1)/4,
+y+3x/2,
+x^3-x.                                                 (17)
+```
+
+The last polynomial is squarefree, so this is a reduced three-point fibre:
+
+```text
+C ~= Q[x]/(x^3-x) ~= Q x Q x Q,                       (18)
+```
+
+with points, in the order `x=0,1,-1`,
+
+```text
+(x,y,beta)=(0,0,-1/4),
+             (1,-3/2,13/2),
+             (-1,3/2,13/2).                            (19)
+```
+
+The exact normal form of the correction is
+
+```text
+Hbar=-1/48-(1093/192)x^2 in C.                         (20)
+```
+
+Consequently its three values are
+
+```text
+(h0,h1,h1)=(-1/48,-1097/192,-1097/192),               (21)
+```
+
+and `h1-h0=-1093/192` is nonzero. Every element of `A` has one common
+residue on the fibre `(16)`, while adding `f(R)` to `H` adds the same scalar
+`f(0)` at all three points. Therefore
+
+```text
+H+f(R) notin A                 for every f in Q[R],    (22)
+```
+
+and `(14)--(15)` give
+
+```text
+boxed: [Xi] !=0 in HP_R(A subset N),
+       no polynomial primitive of Xi descends to A.    (23)
+```
+
+The sign in `(21)` agrees with the original four source coordinates. On the
+target fibre `(R,T,D,S)=(0,1/8,0,0)`, equation `D=D0+H` gives
+
+```text
+D0=(1/48,1097/192,1097/192),                           (24)
+```
+
+and Long's inverse coordinate formulas recover exactly
+
+```text
+(x,q,p,z)=(0,0,1/24,-1/8),
+          (1,2/3,247/96,-89/64),
+          (-1,-2/3,247/96,-89/64).                     (25)
+```
+
+## 4. The obstruction is the exact `1+2` fibre idempotent
+
+Equation `(20)` contains more information than nonconstancy. Normalize it by
+the two distinct values in `(21)`:
+
+```text
+e=(Hbar-h0)/(h1-h0)=x^2.                               (26)
+```
+
+Since `x^3=x` in `C`,
+
+```text
+e^2=e,                   e=(0,1,1) under (18).          (27)
+```
+
+Equivalently,
+
+```text
+(Hbar+1/48)(Hbar+1097/192)=0,                          (28)
+Q[Hbar] ~= Q x Q subset Q x Q x Q,
+```
+
+where the smaller product embeds as triples `(a,b,b)`. Thus the primitive
+sidecar separates the branch partition
+
+```text
+{x=0} | {x=1,x=-1}.                                    (29)
+```
+
+It does not distinguish the two nonzero branches. In particular,
+non-descent of a correction does not imply that it separates every collision.
+
+## 5. Exact compensator-intersection lemma
+
+The preceding fibre witness feeds a general algebraic firewall.
+
+**Lemma.** Let `k` be a field, let `A subset N` be an injective inclusion of
+`k`-algebras, let `H in N`, and let `D0` be an indeterminate over `N`. Put
+
+```text
+D=D0+H,                     B=A[D] subset N[D0].        (30)
+```
+
+Then
+
+```text
+boxed: B intersect N=A,
+       D0 in B iff H in A.                              (31)
+```
+
+**Proof.** The element `D=D0+H` is transcendental over `N`. If
+
+```text
+b=a_0+a_1D+...+a_mD^m in B,             a_m!=0,
+```
+
+has `m>0`, then its coefficient of `D0^m` in `N[D0]` is the nonzero element
+`a_m`. Hence `b notin N`. This proves `B intersect N=A`. If `D0 in B`, then
+`H=D-D0` belongs to `B intersect N=A`; the converse follows from
+`D0=D-H`. This proves `(31)`. `square`
+
+For Long's fixed core, `(22)` and `(31)` imply
+
+```text
+D0 notin A[D0+H].                                      (32)
+```
+
+More generally, replacing `H` by any primitive `H+f(R)` does not change this
+conclusion because `f(R) in A`.
+
+### 5.1 Constant and descended graph controls
+
+Suppose one tries to remove the extra coordinate on a source graph already
+descending through the core,
+
+```text
+D0=g(R,T,S),                    g in A.                 (33)
+```
+
+The fourth output restricts to `D=g+H`, which does not belong to `A` by
+`(22)`. Conversely, imposing a descended target graph
+
+```text
+D=a(R,T,S),                     a in A                  (34)
+```
+
+pulls back to
+
+```text
+D0=a-H,                                                 (35)
+```
+
+which is polynomial in the source but is not core-descended. Equation `(35)`
+moves the sidecar into the source graph; it does not eliminate it.
+
+On the explicit fibre `(16)`, the constant source slice `D0=c` gives the two
+fourth-output values
+
+```text
+D=c-1/48                  on x=0,
+D=c-1097/192              on x=1,-1.                   (36)
+```
+
+Thus it splits the threefold core collision as `1+2`, rather than removing
+all noninjectivity. A constant target slice `D=d` instead requires
+
+```text
+D0=d+1/48,                d+1097/192, d+1097/192       (37)
+```
+
+on the three branches. This is exactly the branch-sensitive graph `D0=d-H`.
+
+## 6. Fibrewise-descent hostile and scope firewalls
+
+The implication used in `(21)--(23)` is one-way: two different values on one
+core fibre prove non-descent. Its converse is false even if every reduced
+geometric fibre is inspected. The cusp normalization
+
+```text
+Q[t^2,t^3] subset Q[t]                                  (38)
+```
+
+is bijective on algebraically closed points, so `t` is constant on every
+reduced point fibre. Nevertheless `t notin Q[t^2,t^3]`, because degree `1`
+does not lie in the numerical semigroup generated by `2,3`. The fibre over
+the cusp is scheme-theoretically `Q[t]/(t^2)`, and its nilpotent direction
+retains precisely the information lost by the reduced-point test.
+
+Several boundaries are essential:
+
+1. **Fixed embedding, not stable cancellation.** The theorem concerns
+   `B=A[D0+H]` as a particular embedded subring of `N[D0]`. Abstractly,
+   `B=A[D]` is itself a polynomial extension of `A`. Equations `(31)--(32)`
+   neither prove nor disprove a stable-cancellation statement, an ambient
+   polynomial equivalence, or the existence of unrelated coordinates.
+
+2. **Fixed gauge, not a symplectic invariant.** THM-4397 exhibits an exact
+   Hamiltonian source gauge relating Long's presentation to THM-2044 and
+   redistributing terms between the uncorrected fourth coordinate and the
+   displayed correction. The formula `H`, and the presentation of its class,
+   are not absolute invariants under arbitrary source symplectomorphisms.
+   This theorem says only that no `A`-valued translation in the fixed core
+   removes the class.
+
+3. **No planar Keller pair.** The core is three-dimensional and the
+   compensator construction is four-dimensional. Taking a constant or graph
+   slice in `(33)--(37)` does not produce a polynomial endomorphism of
+   `A^2` with constant nonzero Jacobian. THM-4401 proves that the natural
+   two-dimensional Casimir reductions are punctured cubic-incidence surfaces,
+   while the affine-plane component at `R=0` is already automorphic.
+
+4. **No `JC(2)` or `DC(2)` consequence.** Neither the nonzero class in
+   `(23)` nor failure of the narrow recovery test `(32)` implies a planar
+   counterexample or a rank-two Weyl counterexample. `JC(2)` and `DC(2)`
+   remain open.
+
+## 7. Exact audit and reproduction
+
+The direct proof above was independently reconstructed from the TeX formulas
+without importing THM-4397 or the earlier bridge implementation. The exact
+certificate verifies:
+
+- the adapted coordinate automorphism and factorization of `R`;
+- the determinant-one identity `(2)`;
+- all three coefficients and the sign of `(4)--(5)`;
+- the function-field identities `(10)--(12)` used in the all-degree
+  centralizer proof;
+- the reduced Groebner basis `(17)`, residue `(20)`, idempotent `(26)--(28)`,
+  and every point in `(19),(21),(25)`; and
+- the constant-`D0` and constant-`D` branch differences `(36)--(37)`, with
+  the cusp numerical-semigroup hostile `(38)`.
+
+Replay from the repository root:
+
+```text
+python3 -B 04-computation/poisson_rank2_long_primitive_descent_independent_s616.py
+python3 -B -O 04-computation/poisson_rank2_long_primitive_descent_independent_s616.py
+PYTHONHASHSEED=17 python3 -B 04-computation/poisson_rank2_long_primitive_descent_independent_s616.py
+```
+
+All three modes byte-match the frozen LF output and perform `45` exact
+dynamic checks. Raw LF SHA-256 hashes are
+
+```text
+script: fbcd74b04b046cabf144fe161c9cf148dc333c0cdfccb81ab7b38cde52bbea5f
+output: f499b2b6169f79f697c13ee2ab531958794587deedda3b72ade895619d93dbfc
+```

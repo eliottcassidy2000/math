@@ -1,0 +1,31 @@
+LONG HAMILTONIAN PRIMITIVE DESCENT -- INDEPENDENT EXACT AUDIT
+source_form_convention: omega=dR^dD0+Theta; Theta=dR^dH+dT^dS
+Xi_convention: Xi=Theta-dT^dS=dR^dH
+core_jacobian_det_RTS: 1
+kernel_certificate:
+  R=2*x-3*x^2*q0, R_q0=-3*x^2
+  x*Jac(R,h)=3*x^3*(partial h/partial x at fixed R)
+  ker(h -> dR^dh)=Q[R] (function-field constancy + q0=0 specialization)
+additive_exact_wedge_quotient: (dR^dN)/(dR^dA) ~= N/A
+primitive_torsor: H+Q[R]
+core_fibre_groebner_basis:
+  beta - 27*x**2/4 + 1/4
+  3*x/2 + y
+  x**3 - x
+H_fibre_residue: -1093*x**2/192 - 1/48
+H_fibre_values: -1/48, -1097/192, -1097/192
+branch_separation: -1093/192
+normalized_residue: x^2; idempotent modulo x^3-x
+minimal_polynomial_on_fibre: (48*Z + 1)*(192*Z + 1097)/9216
+paper_original_points:
+  0, 0, 1/24, -1/8
+  1, 2/3, 247/96, -89/64
+  -1, -2/3, 247/96, -89/64
+destabilization_boundary:
+  A-descended D0 graphs cannot make D descend; D=constant needs D0=d-H
+  exact algebra lemma: A[D0+H] intersect N=A, so D0 is recoverable iff H in A
+hostile_controls:
+  H does not separate x=+1 from x=-1
+  reduced-fibre constancy is not sufficient: Q[t^2,t^3] subset Q[t]
+scope: fixed Long gauge/core; no obstruction to arbitrary source symplectic regauging
+checks: 45
