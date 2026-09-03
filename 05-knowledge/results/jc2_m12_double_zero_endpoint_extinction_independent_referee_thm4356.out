@@ -1,0 +1,14 @@
+THM4356_INDEPENDENT_REFEREE=PASS
+gate=Z=beta=zeta=W=xi=U=K=0;Delta=5696/105
+literal_rows=16;lifted_universe=20;mandatory=10
+exact_supports=48;exact_fans=15;exact_planes=12;ledger_rows=19
+hostile_atlas=1024_point_decoupled_supports;fans=52;planes=24
+face_orders=C4A13,C5A25,C4E10,BA49,BU22,BE13,BDT17,FUT25,ED10,E11_41,FUP31,N11
+clean_positive_genus=BDT2,FUT2,E11_3;all_orders_positive
+collision_divisors=3:A4_eta2-4uTheta,A15_Delta+Theta,N_eta2-4alphaPhi
+A4=depths1,2,3;orders115,35,95;one_end;no_graph_increment
+A15=depths1,2;orders116,16;lambda2=-2Delta;ends=R,C;graph_increment0
+N=smooth_boundary_tangency;H_R_unit;packet_2+2_to_3;two_rational_blowups
+specialization_and_source_target_base_firewalls=PASS
+JC2_DC2_SEAM_ENTRY=NOT_CLAIMED
+CHECKS=956

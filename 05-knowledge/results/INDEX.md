@@ -1,5 +1,18 @@
 # Script Results Index
 
+- `jc2_m12_double_zero_endpoint_extinction_thm4356.out` and its independent
+  clean-room referee -> double-zero endpoint extinction
+  ([THM-4356](../../01-canon/theorems/THM-4356-double-zero-endpoint-planar-jacobian-extinction.md)):
+  **PROVED RELATIVE TO THM-4230/4327/4341/4344/4352 + VERIFIED-EXACT +
+  INDEPENDENTLY HOSTILE-AUDITED; JC(2) OPEN.** The 48 exact supports have
+  fifteen fans and twelve planes. The complete collision list is odd `A4`,
+  different-complement two-branch `A15`, and smooth `N`-boundary tangency;
+  all positive-genus carriers and tails have positive primitive orders.
+  With THM-4350/4351/4353/4354/4355 this closes the full
+  `Z=beta_11=zeta_3=W=xi_10=0` endpoint. Script/output SHA-256 pairs:
+  `c96e4a4d...08337d9c` / `5fb0a8dc...cb88b6b` and
+  `558f4331...30f5118` / `f05c0d23...5d0a5e1a`.
+
 - `jc2_m12_terminal_alpha_zero_u_zero_endpoint_extinction_thm4355.out` and
   its independent clean-room referee -> terminal `alpha_11=0,U=0`
   endpoint extinction

@@ -1,0 +1,16 @@
+THM4356_DOUBLE_ZERO_ENDPOINT_AUDIT=PASS
+gate=Z=beta=zeta=W=xi=U=K=0;Delta=5696/105
+literal_rows=16;surviving_rows=9;possible_support_points=20
+exact_supports=48;exact_fans=15;exact_planes=12
+split=alpha_nonzero:24/6fans;alpha_zero_theta_nonzero:16/3fans;terminal:8/8fans
+hostile=128_keyed;96_distinct_supports;23_fans;17_planes
+positive_carriers=E11:g3/order41;FUT,FET:g2/order25;BDT-C:g2/order17
+collision_divisors=L5=eta^2-4uTheta;L15=Delta+Theta;LN=eta^2-4alphaPhi
+A4=depths1,2,3;orders115,35,95;one_end;no_graph_increment
+A15=depths1,2;orders116,16;ends_to_R_and_C;graph_increment0
+Nwall=smooth_boundary_tangency;unit_H_R;packet_2+2_to_3;rational_blowups
+smallest_theorem_ready=alpha=Theta=0;8_supports;8_fans;all_components_rational
+canonical_hostile=alpha=u=eta=0;Theta=-5696/105;BDT_A15
+global_ledgers=19;all_Pick_packet_graph_checks_pass
+CHECKS=625
+RESULT=PASS
