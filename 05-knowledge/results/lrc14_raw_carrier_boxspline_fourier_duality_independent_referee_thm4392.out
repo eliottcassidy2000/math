@@ -1,0 +1,19 @@
+THM4392 BOXSPLINE-FOURIER CLEAN-ROOM AUDIT
+status=PASS exact_local_identity; LRC14=OPEN
+normalization=B=L/||w||; covol(Lambda)=||w||; covol(3Lambda)=9||w||
+poisson_constants=one_ninth_times_twenty_seven_equals_three
+finite_character_counts=((-3, 144), (6, 72))
+mod3_role=two_primal_cosets_to_character_weights_6_or_minus3
+mod7_role=interval_sinc_zero_only_for_nonzero_multiples; hhat(0)=1/7
+physical_controls=(((1, 5, 11), Fraction(6, 77), 2, 6), ((5, 19, 23), Fraction(2, 665), 2, 6), ((11, 13, 17), Fraction(20, 1547), 2, 6), ((101, 103, 107), Fraction(36488, 7791847), 10, 30), ((1, 11, 175), Fraction(36, 1225), 12, 36))
+shortest_orbit=norm2_14;m7_6;orbit=+/-(-2,3,-1);same_residue_profile=(2,1,2)
+hostile_measures=20/1547,36488/7791847 difference=14198572/1721998187 ratio=5565605/2015962
+near_minimal_counts=(((11, 13, 17), ((6, 2), (12, 2), (24, 4), (48, 6), (96, 12))), ((101, 103, 107), ((6, 2), (12, 2), (24, 2), (48, 4), (96, 4))))
+termwise_verdict=identity_on_shared_embedded_lattice_does_not_intertwine_gates
+termwise_nonclaim=arbitrary_bijections_or_blockwise_correspondences_not_excluded
+convergence=THM1092_absolute_full_support_plus_direct_rank1_zero_strata
+fejer_rows=NUMERIC_DIAGNOSTIC_NOT_USED
+low_dual_high_primal_hybrid=CONJECTURAL_NOT_USED
+checks=1492
+semantic_sha256=d4a38be69d85079f771c43055bd8f70eaee978c3d31aaf86ac0d2383cafb4506
+verdict=PASS

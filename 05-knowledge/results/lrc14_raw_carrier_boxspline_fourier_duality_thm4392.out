@@ -1,0 +1,14 @@
+status=PASS
+scope=local_three_tail_scale_three_comb_only; LRC(14)=OPEN
+identity=raw_mod3_coset_boxspline_sum_equals_six_sheet_mod7_sinc_resonance_sum
+finite_character_weight_counts=((-3, 144), (6, 72))
+exact_raw_vs_original_six_sheet=(((1, 5, 11), Fraction(6, 77), 2, 6), ((5, 19, 23), Fraction(2, 665), 2, 6), ((11, 13, 17), Fraction(20, 1547), 2, 6), ((101, 103, 107), Fraction(36488, 7791847), 10, 30), ((1, 11, 175), Fraction(36, 1225), 12, 36))
+shortest_vector_obstruction=(((11, 13, 17), Fraction(20, 1547), (((-5, -1, 4), Fraction(10, 1547)), ((5, 1, -4), Fraction(10, 1547)))), ((101, 103, 107), Fraction(36488, 7791847), (((-41, 8, 31), Fraction(4, 11021)), ((-35, -1, 34), Fraction(10, 11021)), ((-29, -10, 37), Fraction(47, 72821)), ((-23, -19, 40), Fraction(26, 72821)), ((-17, -28, 43), Fraction(5, 72821)), ((17, 28, -43), Fraction(5, 72821)), ((23, 19, -40), Fraction(26, 72821)), ((29, 10, -37), Fraction(47, 72821)), ((35, 1, -34), Fraction(10, 11021)), ((41, -8, -31), Fraction(4, 11021)))), (14, ((-2, 3, -1), (2, -3, 1))), (6, ((-2, 3, -1), (2, -3, 1))), ((6, 2, 2), (12, 2, 2), (24, 4, 2), (48, 6, 4), (96, 12, 4)), (('raw_deleted_but_fourier_live', (-2, 3, -1)), ('raw_live_but_fourier_killed', (-35, -1, 34), Fraction(10, 11021))))
+fejer_diagnostic w=(1, 5, 11) exact=6/77 rows=((24, '0.050790833614', '0.027131244308', 68, 151), (48, '0.063560034371', '0.014362043551', 288, 567), (96, '0.071132909256', '0.006789168666', 1238, 2149), (192, '0.074488794566', '0.003433283356', 5098, 8377))
+fejer_diagnostic w=(11, 13, 17) exact=20/1547 rows=((24, '0.012060330756', '0.000867917466', 46, 83), (48, '0.012367314733', '0.000560933489', 172, 333), (96, '0.012654333545', '0.000273914677', 736, 1267), (192, '0.012787652242', '0.000140595980', 3020, 4953))
+fejer_diagnostic w=(101, 103, 107) exact=36488/7791847 rows=((24, '0.008037272656', '0.003354429166', 2, 15), (48, '0.006433455266', '0.001750611776', 22, 53), (96, '0.005558947200', '0.000876103710', 98, 175), (192, '0.005116397177', '0.000433553687', 420, 657))
+mod7_note=only_nonzero_multiples_of_7_are_killed; hhat(0)=1/7_survives
+shortest_vector_verdict=bare_lambda1_and_m7_and_complete_minimizer_orbit_do_not_determine_measure
+proof_status=boxspline_poisson_identity_PROVED_IN_REPORT; finite_checks_EXACT; Fejer_rows_NUMERIC_DIAGNOSTIC
+optimization_safe_checks=yes
+explicit_checks=1119

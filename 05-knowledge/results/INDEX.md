@@ -1,5 +1,21 @@
 # Script Results Index
 
+- `lrc14_raw_carrier_boxspline_fourier_duality_thm4392.out` and its
+  dependency-free clean-room referee -> exact primal/dual formula for one
+  three-speed scale-three failure comb
+  ([THM-4392](../../01-canon/theorems/THM-4392-lrc14-raw-carrier-box-spline-fourier-poisson-duality.md)):
+  **PROVED ANALYTICALLY RELATIVE TO THM-1092 + VERIFIED-EXACT +
+  INDEPENDENTLY AUDITED; LRC(14) OPEN.** Poisson summation sends the two live
+  raw-carrier cosets to lattice weights `6` (equal weighted residues) and
+  `-3` (all distinct). Mod three supplies the character; mod seven supplies
+  sinc zeros. Triples `{11,13,17}` and `{101,103,107}` have the same residue
+  profile and complete shortest orbit but unequal comb mass, so that data is
+  insufficient. The natural identity on the embedded lattice also fails to
+  intertwine primal deletion and Fourier zeros; arbitrary reindexings are not
+  excluded. Primary/referee run 1,119/1,492 checks. Script/output SHA-256
+  pairs: `eac06db7...427` / `9fc7a420...799` and
+  `0e473ce0...f36` / `6b15cc99...52c`.
+
 - `lrc14_defect_three_nonunit_boundary_thm4391.out` and its dependency-free
   referee -> the two nonunit norm-`16` sectors and complete shell
   ([THM-4391](../../01-canon/theorems/THM-4391-lrc14-nonunit-defect-three-sectors-and-complete-norm-sixteen-shell.md)):
