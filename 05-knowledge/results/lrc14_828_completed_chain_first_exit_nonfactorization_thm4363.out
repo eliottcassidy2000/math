@@ -1,0 +1,59 @@
+THM4363_LRC14_H420_U3_COMPLETED_CHAIN_FIRST_EXIT_NONFACTORIZATION=FINITE_EXACT
+CLAIM=DECLARED_FINITE_QUOTIENT_NONFACTORIZATION;NOT_AN_LRC14_DECREMENT
+anchor=840;u=3;13u=39;fixed_nine=(11, 1691, 3371, 5051, 6731, 8411, 10091, 525, 945);P=(241, 255, 761, 1015)
+collars=(19, 20, 259, 260, 299, 300, 539, 540, 579, 580, 819, 820);count=12;residual_count=828
+collar_cover_records=((19, ((3, 0),)), (20, ((39, 1),)), (259, ((39, 12),)), (260, ((3, 1),)), (299, ((3, 1),)), (300, ((39, 14),)), (539, ((39, 25),)), (540, ((3, 2),)), (579, ((3, 2),)), (580, ((39, 27),)), (819, ((39, 38),)), (820, ((3, 3),)))
+gate_P241={'gcd': 1, 'denominator_missing': (), 'halfturn': ((Fraction(5879, 11760), Fraction(829, 11760), (5051,)), (Fraction(5881, 11760), Fraction(829, 11760), (5051,))), 'complete_grid_safe_count': 214, 'complete_grid_first': (49, Fraction(121, 240)), 'unit_banks': ((8, ()), (9, ()), (10, ()), (11, ()), (12, ()), (13, ()), (14, ())), 'unit_sign_counts': ((8, 4), (9, 3), (10, 3), (11, 5), (12, 2), (13, 6), (14, 2)), 'capacity_count': 58, 'capacity_min': (Fraction(10, 7), 7), 'capacity_minimizers': (7, 21, 35, 105), 'r_counts': ((3, 8), (5, 10), (7, 10)), 'mc9': (8, 3, 1, 1, 2)}
+halfturn_scope_P241=fixed_clocks_blocked:2;complete_translated_grid_safe_count:214;complete_translated_grid_first:(49, Fraction(121, 240))
+gate_P255={'gcd': 1, 'denominator_missing': (), 'halfturn': ((Fraction(5879, 11760), Fraction(829, 11760), (5051,)), (Fraction(5881, 11760), Fraction(829, 11760), (5051,))), 'complete_grid_safe_count': 222, 'complete_grid_first': (49, Fraction(121, 240)), 'unit_banks': ((8, ()), (9, ()), (10, ()), (11, ()), (12, ()), (13, ()), (14, ())), 'unit_sign_counts': ((8, 4), (9, 3), (10, 3), (11, 5), (12, 1), (13, 6), (14, 2)), 'capacity_count': 61, 'capacity_min': (Fraction(10, 7), 7), 'capacity_minimizers': (7, 21, 35, 105), 'r_counts': ((3, 7), (5, 9), (7, 10)), 'mc9': (7, 4, 1, 1, 2)}
+halfturn_scope_P255=fixed_clocks_blocked:2;complete_translated_grid_safe_count:222;complete_translated_grid_first:(49, Fraction(121, 240))
+gate_P761={'gcd': 1, 'denominator_missing': (), 'halfturn': ((Fraction(5879, 11760), Fraction(829, 11760), (5051,)), (Fraction(5881, 11760), Fraction(829, 11760), (5051,))), 'complete_grid_safe_count': 218, 'complete_grid_first': (21, Fraction(281, 560)), 'unit_banks': ((8, ()), (9, ()), (10, ()), (11, ()), (12, ()), (13, ()), (14, ())), 'unit_sign_counts': ((8, 4), (9, 3), (10, 3), (11, 5), (12, 2), (13, 6), (14, 3)), 'capacity_count': 58, 'capacity_min': (Fraction(10, 7), 7), 'capacity_minimizers': (7, 21, 35, 105), 'r_counts': ((3, 8), (5, 10), (7, 10)), 'mc9': (8, 3, 1, 1, 2)}
+halfturn_scope_P761=fixed_clocks_blocked:2;complete_translated_grid_safe_count:218;complete_translated_grid_first:(21, Fraction(281, 560))
+gate_P1015={'gcd': 1, 'denominator_missing': (), 'halfturn': ((Fraction(5879, 11760), Fraction(829, 11760), (5051,)), (Fraction(5881, 11760), Fraction(829, 11760), (5051,))), 'complete_grid_safe_count': 170, 'complete_grid_first': (21, Fraction(281, 560)), 'unit_banks': ((8, ()), (9, ()), (10, ()), (11, ()), (12, ()), (13, ()), (14, ())), 'unit_sign_counts': ((8, 4), (9, 3), (10, 3), (11, 5), (12, 2), (13, 6), (14, 2)), 'capacity_count': 61, 'capacity_min': (Fraction(9, 7), 7), 'capacity_minimizers': (7, 35), 'r_counts': ((3, 8), (5, 9), (7, 9)), 'mc9': (8, 3, 1, 1, 2)}
+halfturn_scope_P1015=fixed_clocks_blocked:2;complete_translated_grid_safe_count:170;complete_translated_grid_first:(21, Fraction(281, 560))
+declared_common_quotient
+status_counts=(('missing', 546), ('renew', 6), ('span', 276))
+completed_count=282;completed_exact_equal_all=True
+completed_contains_parameter=(False, False, False, False)
+coarse=(((0, 'missing', ()), 273), ((0, 'renew', ('C1', 'M')), 2), ((0, 'renew', ('M', 'C1')), 1), ((0, 'span', ('D0',)), 49), ((0, 'span', ('M',)), 32), ((0, 'span', ('U',)), 57), ((1, 'missing', ()), 273), ((1, 'renew', ('C1', 'M')), 1), ((1, 'renew', ('M', 'C1')), 2), ((1, 'span', ('D0',)), 49), ((1, 'span', ('M',)), 32), ((1, 'span', ('U',)), 57))
+status_map_equal_all=True;coarse_equal_all=True
+status_ascii_bytes=4860;status_ascii_sha256=4d34447b9eca8c8a9302a0f799a56300b4b96135cd0c3a245a97960975f9a347
+completed_ascii_bytes=10940;completed_ascii_sha256=64704c712a0e3e70ca0ecb3264834b3f61c4d473ddc20ea8c44ccc5c2c616d11
+global_pair=(241, 255);changed_partial_traces=134;role_changed=132;changed_nonmissing=0;attachment_symmetric_difference=1661;first_changed_components=(23, 28, 31, 33, 35, 36, 45, 46, 52, 56, 59, 66, 69, 89, 92, 94, 101, 102, 112, 115)
+address_pair=(761, 1015);changed_partial_traces=160;role_changed=154;changed_nonmissing=0;attachment_symmetric_difference=1529;first_changed_components=(23, 28, 33, 38, 47, 51, 52, 54, 55, 57, 66, 67, 87, 91, 95, 97, 105, 109, 110, 118)
+first_residual_exit_consumer
+component=23;I23=(Fraction(323, 11760), Fraction(67, 2352))
+global_pair=(241, 255);local_roles=(('C1', 'D2'),('P', 'D3'))
+P241_det_q=((239, 970),);P255_det_q=((343, 504),)
+P241_trace=(((23, 23, 0, 0), 0, ('C1', 945, 26, 'R'), Fraction(323, 11760), Fraction(73, 2646), ((945, 26),), ('D2', 3371, 93), 'missing'), ((23, 23, 0, 1), 0, ('D2', 3371, 93, 'R'), Fraction(73, 2646), Fraction(1303, 47194), ((3371, 93),), 'EXIT', 'missing'))
+P255_trace=(((23, 23, 0, 0), 0, ('P', 255, 7, 'R'), Fraction(323, 11760), Fraction(33, 1190), ((255, 7),), ('D3', 5051, 140), 'missing'), ((23, 23, 0, 1), 0, ('D3', 5051, 140, 'R'), Fraction(33, 1190), Fraction(1961, 70714), ((5051, 140),), 'EXIT', 'missing'))
+P241_attachments_k23=((23, 23, 0, 'C1', 945, 26, 'R', 0, 0, Fraction(323, 11760), Fraction(73, 2646), ((945, 26),), 'D2', 3371, 93, 'missing'), (23, 23, 0, 'D2', 3371, 93, 'R', 0, 0, Fraction(73, 2646), Fraction(1303, 47194), ((3371, 93),), None, None, None, 'missing'))
+P255_attachments_k23=((23, 23, 0, 'P', 255, 7, 'R', 0, 0, Fraction(323, 11760), Fraction(33, 1190), ((255, 7),), 'D3', 5051, 140, 'missing'), (23, 23, 0, 'D3', 5051, 140, 'R', 0, 0, Fraction(33, 1190), Fraction(1961, 70714), ((5051, 140),), None, None, None, 'missing'))
+P241_exit=(23, 23, 0, Fraction(1303, 47194), Fraction(1, 14), (3371,))
+P255_exit=(23, 23, 0, Fraction(1961, 70714), Fraction(1, 14), (5051,))
+P241_exit_current=(Fraction(1950, 70637), Fraction(2603, 94234), ((1, 2, -1), (2, 2, 0)), ((0, 2, -2), (1, 2, -1)), ((0, 2, -2), (1, 2, -1)))
+P255_exit_current=(Fraction(33, 1190), Fraction(3919, 141274), ((1, 2, -1), (1, 2, -1)), ((0, 2, -2), (0, 2, -2)), ((0, 2, -2), (0, 2, -2)))
+address_pair=(761, 1015);local_roles=(('C1', 'P'),('C1', 'P'))
+P761_det_q=((59, 880),);P1015_det_q=((70, 980),)
+P761_trace=(((23, 23, 0, 0), 0, ('C1', 945, 26, 'R'), Fraction(323, 11760), Fraction(73, 2646), ((945, 26),), ('P', 761, 21), 'missing'), ((23, 23, 0, 1), 0, ('P', 761, 21, 'R'), Fraction(73, 2646), Fraction(295, 10654), ((761, 21),), 'EXIT', 'missing'))
+P1015_trace=(((23, 23, 0, 0), 0, ('C1', 945, 26, 'R'), Fraction(323, 11760), Fraction(73, 2646), ((945, 26),), ('P', 1015, 28), 'missing'), ((23, 23, 0, 1), 0, ('P', 1015, 28, 'R'), Fraction(73, 2646), Fraction(393, 14210), ((1015, 28),), 'EXIT', 'missing'))
+P761_attachments_k23=((23, 23, 0, 'C1', 945, 26, 'R', 0, 0, Fraction(323, 11760), Fraction(73, 2646), ((945, 26),), 'P', 761, 21, 'missing'), (23, 23, 0, 'P', 761, 21, 'R', 0, 0, Fraction(73, 2646), Fraction(295, 10654), ((761, 21),), None, None, None, 'missing'))
+P1015_attachments_k23=((23, 23, 0, 'C1', 945, 26, 'R', 0, 0, Fraction(323, 11760), Fraction(73, 2646), ((945, 26),), 'P', 1015, 28, 'missing'), (23, 23, 0, 'P', 1015, 28, 'R', 0, 0, Fraction(73, 2646), Fraction(393, 14210), ((1015, 28),), None, None, None, 'missing'))
+P761_exit=(23, 23, 0, Fraction(295, 10654), Fraction(1, 14), (761,))
+P1015_exit=(23, 23, 0, Fraction(393, 14210), Fraction(1, 14), (1015,))
+P761_exit_current=(Fraction(393, 14210), Fraction(1956, 70637), ((1, 1, 0), (0, 1, -1)), ((0, 1, -1), (0, 1, -1)), ((0, 1, -1), (0, 1, -1)))
+P1015_exit_current=(Fraction(3907, 141274), Fraction(295, 10654), ((1, 1, 0), (1, 1, 0)), ((1, 1, 0), (0, 1, -1)), ((1, 1, 0), (0, 1, -1)))
+sharp_address_formulas
+x0=73/2646;P_equals_36n_plus_r_rows={761: (21, 5, 13, 26, Fraction(295, 10654)), 1015: (28, 7, 7, 14, Fraction(393, 14210))}
+activity_iff=abs(73P-2646n)<189 iff abs(18n-73r)<189 iff abs(P-147r)<378
+wall_formula=b(P,n)=1/36+(18-7r)/(252P)
+address_determinant=7;wall_cross_numerator=352
+global_current_controls
+P241=core_energy:46329296364474240687668280565/38460902525807487457941271062;core_q_cubic:26580465679448740713803748449/288456768943556155934559532965;max_abs_current:10
+P255=core_energy:1651827193711949011499438647/1356504860868728810757264747;core_q_cubic:449864898197514984721808212/4844660217388317181275945525;max_abs_current:10
+P761=core_energy:7776112882487806028727909815/6391951697344288699605439458;core_q_cubic:420796336991505628017424966256/4554265584357805698468875613825;max_abs_current:10
+P1015=core_energy:333296460036801149061391122053/277684524460186838907957724680;core_q_cubic:15823836915085712145370885841/173552827787616774317473577925;max_abs_current:10
+all_core_energies_distinct=True
+all_core_q_cubics_distinct=True
+VERDICT=PASS_DECLARED_COMPLETED_CHAIN_QUOTIENT_DOES_NOT_FACTOR_FIRST_RESIDUAL_EXIT;LOCAL_ORIGIN_OWNER_TIE_FRONTIER_CONTINUATION_LABELS_DO_NOT_FACTOR_EXIT_ADDRESS
+SCOPE=FINITE_FOUR_SAFE_CONTROLS;ONLY_TWO_FIXED_HALF_TURN_CLOCKS_BLOCKED;COMPLETE_TRANSLATED_GRID_HAS_SAFE_POINTS_214_222_218_170;LRC14_OPEN;NO_DECREMENT

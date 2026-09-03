@@ -57,7 +57,8 @@ for `d>=7`. THM-3742 is a wrong-torsor Pell `C14`; THM-3744's safe control is
   anchored `2+12` with `420|h`. THM-4347 closes bodies through height `40`;
   THM-4349 makes one adaptive clock complete, not universally empty.
   THM-4348 leaves `7u|h` and at least three wall overlaps; THM-4345/4346 make
-  nonlinear anchor-conditioned current the live statistic. Entry and seam remain open.
+  nonlinear current live; THM-4363 makes missing-prefix/address data mandatory.
+  Entry and seam remain open.
 - **Residual ranks:** THM-4333/4338 close fixed-pool ranks three/four, not arbitrary entry.
 - **PROVED:** [THM-2928](../01-canon/theorems/THM-2928-critical-seven-comb-grid-tensorization-and-drift-tariff.md)/2941: literal zero/one/two/three-drift sectors are empty; `k=2,3` are finite.
 - **Orthogonal routes.** THM-1017 is HYP-6820; THM-2047/2050 keep phase/exit; THM-731/2048 prune; THM-1290 ends at `55`; HYP-8900 nonuniform.

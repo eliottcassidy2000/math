@@ -1,0 +1,36 @@
+THM4363 CLEANROOM EXACT REFEREE
+fixed (11, 1691, 3371, 5051, 6731, 8411, 10091, 525, 945)
+parameters (241, 255, 761, 1015)
+collars (19, 20, 259, 260, 299, 300, 539, 540, 579, 580, 819, 820)
+residual_components 828
+collar (0, -1, Fraction(41, 42), 820, 'L', 3, (Fraction(1, 11760), Fraction(547, 11760)), 819, 'R', 38, (Fraction(391, 152880), Fraction(1, 11760)))
+collar (0, 1, Fraction(1, 42), 19, 'R', 0, (Fraction(547, 11760), Fraction(1, 11760)), 20, 'L', 1, (Fraction(1, 11760), Fraction(391, 152880)))
+collar (1, -1, Fraction(13, 42), 260, 'L', 1, (Fraction(1, 11760), Fraction(547, 11760)), 259, 'R', 12, (Fraction(391, 152880), Fraction(1, 11760)))
+collar (1, 1, Fraction(5, 14), 299, 'R', 1, (Fraction(547, 11760), Fraction(1, 11760)), 300, 'L', 14, (Fraction(1, 11760), Fraction(391, 152880)))
+collar (2, -1, Fraction(9, 14), 540, 'L', 2, (Fraction(1, 11760), Fraction(547, 11760)), 539, 'R', 25, (Fraction(391, 152880), Fraction(1, 11760)))
+collar (2, 1, Fraction(29, 42), 579, 'R', 2, (Fraction(547, 11760), Fraction(1, 11760)), 580, 'L', 27, (Fraction(1, 11760), Fraction(391, 152880)))
+gates 241 missing_denominators () fixed_halfturn_data ((Fraction(5879, 11760), Fraction(829, 11760), (5051,)), (Fraction(5881, 11760), Fraction(829, 11760), (5051,))) complete_grid_safe_count 214 complete_grid_first (49, Fraction(121, 240)) unit_sign_counts {8: 4, 9: 3, 10: 3, 11: 5, 12: 2, 13: 6, 14: 2} capacity_count 58 capacity_min 10/7 capacity_argmin (7, 21, 35, 105)
+gates 255 missing_denominators () fixed_halfturn_data ((Fraction(5879, 11760), Fraction(829, 11760), (5051,)), (Fraction(5881, 11760), Fraction(829, 11760), (5051,))) complete_grid_safe_count 222 complete_grid_first (49, Fraction(121, 240)) unit_sign_counts {8: 4, 9: 3, 10: 3, 11: 5, 12: 1, 13: 6, 14: 2} capacity_count 61 capacity_min 10/7 capacity_argmin (7, 21, 35, 105)
+gates 761 missing_denominators () fixed_halfturn_data ((Fraction(5879, 11760), Fraction(829, 11760), (5051,)), (Fraction(5881, 11760), Fraction(829, 11760), (5051,))) complete_grid_safe_count 218 complete_grid_first (21, Fraction(281, 560)) unit_sign_counts {8: 4, 9: 3, 10: 3, 11: 5, 12: 2, 13: 6, 14: 3} capacity_count 58 capacity_min 10/7 capacity_argmin (7, 21, 35, 105)
+gates 1015 missing_denominators () fixed_halfturn_data ((Fraction(5879, 11760), Fraction(829, 11760), (5051,)), (Fraction(5881, 11760), Fraction(829, 11760), (5051,))) complete_grid_safe_count 170 complete_grid_first (21, Fraction(281, 560)) unit_sign_counts {8: 4, 9: 3, 10: 3, 11: 5, 12: 2, 13: 6, 14: 2} capacity_count 61 capacity_min 9/7 capacity_argmin (7, 35)
+residual_census {'missing': 546, 'renew': 6, 'span': 276}
+completed_count 282
+status_ascii_sha256 4d34447b9eca8c8a9302a0f799a56300b4b96135cd0c3a245a97960975f9a347
+status_ascii_bytes 4860
+completed_ascii_sha256 64704c712a0e3e70ca0ecb3264834b3f61c4d473ddc20ea8c44ccc5c2c616d11
+completed_ascii_bytes 10940
+first_missing 241 k 23 component (Fraction(323, 11760), Fraction(67, 2352)) physical_chain ((945, 26), (3371, 93)) role_chain ('C1', 'D2') det_q ((239, 970),) exit 1303/47194 clearance 1/14 binding (3371,)
+selection_signature 241 ((Fraction(323, 11760), 'C1', 1, ('C1',), 0), (Fraction(73, 2646), 'D2', 1, ('D2',), 0))
+first_missing 255 k 23 component (Fraction(323, 11760), Fraction(67, 2352)) physical_chain ((255, 7), (5051, 140)) role_chain ('P', 'D3') det_q ((343, 504),) exit 1961/70714 clearance 1/14 binding (5051,)
+selection_signature 255 ((Fraction(323, 11760), 'P', 1, ('P',), 0), (Fraction(33, 1190), 'D3', 1, ('D3',), 0))
+first_missing 761 k 23 component (Fraction(323, 11760), Fraction(67, 2352)) physical_chain ((945, 26), (761, 21)) role_chain ('C1', 'P') det_q ((59, 880),) exit 295/10654 clearance 1/14 binding (761,)
+selection_signature 761 ((Fraction(323, 11760), 'C1', 1, ('C1',), 0), (Fraction(73, 2646), 'P', 1, ('P',), 0))
+first_missing 1015 k 23 component (Fraction(323, 11760), Fraction(67, 2352)) physical_chain ((945, 26), (1015, 28)) role_chain ('C1', 'P') det_q ((70, 980),) exit 393/14210 clearance 1/14 binding (1015,)
+selection_signature 1015 ((Fraction(323, 11760), 'C1', 1, ('C1',), 0), (Fraction(73, 2646), 'P', 1, ('P',), 0))
+sharp_role_equal_761_1015 True
+sharp_selection_signature_761 ((Fraction(323, 11760), 'C1', 1, ('C1',), 0), (Fraction(73, 2646), 'P', 1, ('P',), 0))
+sharp_selection_signature_1015 ((Fraction(323, 11760), 'C1', 1, ('C1',), 0), (Fraction(73, 2646), 'P', 1, ('P',), 0))
+sharp_x0 73/2646
+sharp_rows {761: (21, 5, 13, 26, Fraction(295, 10654)), 1015: (28, 7, 7, 14, Fraction(393, 14210))}
+sharp_determinant 7 wall_cross 352
+PASS

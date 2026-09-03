@@ -1,5 +1,18 @@
 # Script Results Index
 
+- `lrc14_828_completed_chain_first_exit_nonfactorization_thm4363.out` and
+  its import-free referee -> completed-chain quotient hostile
+  ([THM-4363](../../01-canon/theorems/THM-4363-lrc14-828-body-completed-chain-first-exit-nonfactorization.md)):
+  **PROVED FINITE-EXACT FOUR-ROW NONFACTORIZATION + INDEPENDENTLY AUDITED;
+  LRC(14) OPEN.** Four primitive `h=420` rows have the same 828-component
+  status word and all 282 completed physical chains, but pairwise different
+  first exits. Even equal local roles, owner/tie data, and continuation in
+  the sharp pair do not recover the discarded Euclidean tooth address.
+  All four rows have many safe complete-grid clocks; there is no decrement.
+  Script/output SHA-256 pairs: `d7497ce7...c3e77d8` /
+  `28a8697c...f6b189` and `febd3555...a25629f` /
+  `a93a5541...48c5de2`.
+
 - `tetrahedral_diagonal_depth_annihilator_thm4362.out` and its import-free
   referee -> universal sharp tetrahedral depth stencil
   ([THM-4362](../../01-canon/theorems/THM-4362-tetrahedral-diagonal-annihilator-and-sharp-depth-threshold.md)):
