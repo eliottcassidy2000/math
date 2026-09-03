@@ -1,0 +1,21 @@
+THM-4403 two-channel weight-18 row-twelve independent audit
+imports=audited_THM4308_R8_and_THM4315_R9;late_candidates_import=no
+universe=complete_weight_le_14_plus_lambda18_p3y4_plus_nu18_y6
+row10_source=A6(Phi,eta,alpha11,c51,c23,c70);terminal=A8
+row11_bracket=12x8_rank8;primitive_quartic_F=yes
+row11_dF_dc23=21736146783278091456000000*Phi
+row11_lambda_response=6864046352614134144000000;parameter_localization=none
+row11_depth=P2(102x228,rank77),P3(114x361,rank94),joint(45x12,rank4,pivots8,9,10,11)
+row12_bracket=13x8_rank8;source_conditions=nu_graph_and_L
+row12_nu_response=29652680243293059502080000000
+row12_L=-23839*Phi - 675*alpha11 - 675*c23 + 4266*eta;c23_pivot=-675
+valuation12_monomials=(p12,p10y,p8y2,p6y3,p4y4,p2y5,y6)
+valuation12_response_rank=1;ratios_to_y6=(3059/1080, 0, 133/180, 0, 19/30, 0, 1)
+valuation12_odd_responses=zero;L_payable_by_same_row_source=no
+row12_G=-95023209310875*Phi**2 - 157540468455000*Phi*alpha11 - 21622415197500*Phi*c51 - 4375612912500*Phi*eta - 21622415197500*alpha11*eta - 368130186720000*c70 - 78770234227500*eta**2 + 178582220348850176;c70_pivot=-368130186720000
+row12_depth=P2(117x267,rank87),P3(130x424,rank105),joint(55x13,rank4,pivots9,10,11,12)
+source_projection=A4(Phi,eta,alpha11,c51);terminal_fibre=A9
+dense_control=PASS;Phi_eta_zero_control=PASS;off_L_hostile=PASS
+field=characteristic_zero;finite_field_used=no
+scope=restricted_two_channel_weight18_tail_through_row12_only;complete_weights15_to18_and_entry_open
+checks=123 result=PASS
