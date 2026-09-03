@@ -18,6 +18,7 @@ depends_on:
 related:
   - THM-4357-source-normal-row-eight-endpoint-pullback-stratification
   - THM-4255-specialization-kernel-and-transverse-hasse-jet-repair
+  - THM-3406-affine-modification-power-jets-and-principal-part-transgression
 mistake_firewall:
   - MISTAKE-522
   - MISTAKE-527
@@ -72,7 +73,8 @@ full map after quotienting those nine silent directions.
 
 The inheritance pass is:
 
-- closest proved mechanism: THM-4308's explicit source response;
+- closest formula: THM-4308's explicit source response; closest geometric
+  mechanism: THM-3406's `B[I/g]` affine modification;
 - canonical hostile: a point satisfying the global closure equation but
   absent from the actual image;
 - corrected near miss: elimination and then specialization need not equal
@@ -178,6 +180,11 @@ Restoring `alpha_11,beta_11` and the seven terminal directions makes the
 full finite-family fibres `A^9` generically and `A^10` on the exceptional
 line. In particular, the full THM-4308 response map itself is not an
 isomorphism.
+
+This is exactly THM-3406's ring pattern `B[I/g]` at its first denominator
+level, with `B=A`, `g=z`, and the second center generator `G0`. THM-3406's
+principal-part tower suggests a higher transverse-jet question along `z=0`;
+no such higher-level statement is asserted here.
 
 Equation `(12)` also gives the exact specialization failure
 

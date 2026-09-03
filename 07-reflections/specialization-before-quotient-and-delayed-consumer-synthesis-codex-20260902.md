@@ -143,11 +143,13 @@ For the `beta_11=0,Phi!=0` graph, use the generic inverse from THM-4359 before
 opening a large depth matrix. In both lanes, test the previous-row depth
 consumer after the next row selects a tangent.
 
-**Niche.** Search other triangular response maps in the repo for the template
-`(5)`. A positive result must name the rank-drop divisor, center ideal,
-exceptional fibre, closure-only phantom, and the first theorem consumer that
-uses the restored coordinate. Merely recognizing an affine modification is
-not progress unless a gate or continuation changes.
+**Niche.** THM-3406 identifies the full principal-part tower for
+`B[I/g]`; THM-4359 is its first-level pattern with `g=zeta_3,G0 in I`.
+Compute the next transverse response jets along `zeta_3=0`, retaining the
+center arm and denominator depth. More generally, search triangular response
+maps for `(5)`. A positive result must name the divisor, center, exceptional
+fibre, closure-only phantom, and first consumer that uses the restored
+coordinate; recognition alone is not progress.
 
 **Wildcard.** On the LRC `h=420,u=3` control, apply an actual
 counterexample-conditioned ten-tail consumer to the 828 components remaining
