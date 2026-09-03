@@ -1,0 +1,13 @@
+THM4351_DOUBLE_NORMAL_OWNER_ZERO_AUDIT=PASS
+gate=Z=beta_11=zeta_3=W=xi_10=alpha_11=Theta=0;U*K!=0
+exact_supports=24;fan=M,F00;global_genus=13
+generic=L00!=0;F00_genus=2;form_order=6@sigma;graph_b1=11
+collision=L00=eta^2-4KU=0;two_rational_signs;A5_delta=3;attachments=3+3
+critical_coefficients=(u+Phi*a),(Delta-Phi^2/(4K)),e=-1376/135
+critical_depths=1,2,3_all_realizable;critical_point_correction_starts=rho^9
+tails=r1:g2/d0,r2:g1/d1,r3:g1/d1;two_ended=yes
+common_base=sigma=tau^[2(6-r)];rho=tau^12*X;chains=A11+A11
+common_form_orders=r1:68,r2:64,r3:60
+primitive_form_orders=r1:34,r2:16,r3:10;primitive_chains=A5,A2,A1
+genus_conservation=b1(11)+tail_genus+persistent_delta=13
+verdict=full_F00_corner_extinct_relative_to_inherited_proper_flat_interface

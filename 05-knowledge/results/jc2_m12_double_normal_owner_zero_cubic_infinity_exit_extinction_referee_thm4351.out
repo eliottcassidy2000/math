@@ -1,0 +1,15 @@
+THM-4351 F00 hostile referee: PASS
+SCOPE Z=beta11=zeta3=W=xi10=alpha11=Theta=0; U*K!=0
+EXACT_SUPPORTS=24; FAN=M,E00
+HOSTILE_ATLAS=128_KEYED/72_DISTINCT; FAN=M,E00
+PICK M=(24,14,6) E00=(12,10,2) GLOBAL=(36,12,13)
+PACKET=(11,7,7,2,2,1); FACE_BASE_ORDER M=12/9 E00=6/6
+GENERIC E00: y^2=4K+(eta^2-4KU)P^6; genus=2
+COLLISION eta^2=4KU: critical c1=u+Phi*a
+critical c2=Delta-Phi^2/(4K); c3=-1376/135; r<=3
+TAILS r=1:g2 r=2:g1 r=3:g1; primitive_orders=34,16,10
+COMMON_COVER orders=68,64,60; z*rho=tau^12; not primitive
+ATTACHMENTS primitive surfaces=A5,A2,A1; two etale signs; M split=3+3
+GENUS generic=11+2=13; collision=11+g_tail+floor(r/2)=13
+CHECKS=293
+RESULT=PASS

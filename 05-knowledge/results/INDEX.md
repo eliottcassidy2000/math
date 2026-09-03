@@ -1,5 +1,18 @@
 # Script Results Index
 
+- `jc2_m12_double_normal_owner_zero_cubic_infinity_exit_extinction_thm4351.out`
+  and its import-free hostile referee -> terminal `E00` owner extinction
+  ([THM-4351](../../01-canon/theorems/THM-4351-double-normal-owner-zero-cubic-infinity-exit-planar-jacobian-extinction.md)):
+  **PROVED RELATIVE TO THM-4230/4327/4344/4350 + VERIFIED-EXACT + TWICE
+  INDEPENDENTLY HOSTILE-AUDITED; JC(2) OPEN.** All 24 exact supports have
+  fan `M,E00`. Off `eta^2=4KU`, `E00` is genus two of order six. On equality
+  it splits at an exact `A5`; the fixed cubic coefficient forces depths
+  `1,2,3`, with tail genera `2,1,1`, two sign attachments, and positive
+  primitive orders `34,16,10`. The uniform common-cover orders
+  `68,64,60` are explicitly nonprimitive. Script/output SHA-256 pairs:
+  `b7058b43...f7aef847` / `eb65b391...706bc59` and
+  `a7e25fa5...40a1f0df` / `0b5e4757...9ebf821c`.
+
 - `jc2_m12_first_normal_owner_cubic_infinity_exit_extinction_thm4350.out`
   and two independent exact audits -> first-normal-owner `xi_10=0`
   extinction ([THM-4350](../../01-canon/theorems/THM-4350-first-normal-owner-cubic-infinity-exit-planar-jacobian-extinction.md)):
