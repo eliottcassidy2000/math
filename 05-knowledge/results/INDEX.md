@@ -1,5 +1,19 @@
 # Script Results Index
 
+- `jc2_source_normal_row8_endpoint_pullback_stratification_thm4357.out`
+  and its independent symbolic referee -> source-normal row-eight pullback
+  filter
+  ([THM-4357](../../01-canon/theorems/THM-4357-source-normal-row-eight-endpoint-pullback-stratification.md)):
+  **PROVED FINITE-ROW COROLLARY RELATIVE TO THM-4308 + VERIFIED-EXACT +
+  INDEPENDENTLY AUDITED; JC(2) OPEN.** On `zeta_3=0`, the source response
+  traces an affine endpoint-response line whose `U,W,Z` zeros are three
+  distinct rational points. Six named late gates have nonempty pullbacks of
+  dimensions `4,4,3,3,2,4`; eight are empty. The unique smallest survivor
+  among them is the squarefree affine plane `S_4339`, leaving a two-parameter
+  row-nine test. Script/output SHA-256 pairs:
+  `0ebd463a...bbfde87` / `a1399884...dd185c2` and
+  `af9b9c62...da3c295c` / `3a9d6b17...269a92b`.
+
 - `jc2_m12_double_zero_endpoint_extinction_thm4356.out` and its independent
   clean-room referee -> double-zero endpoint extinction
   ([THM-4356](../../01-canon/theorems/THM-4356-double-zero-endpoint-planar-jacobian-extinction.md)):

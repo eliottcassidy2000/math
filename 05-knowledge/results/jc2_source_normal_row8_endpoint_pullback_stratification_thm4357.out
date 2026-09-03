@@ -1,0 +1,48 @@
+THM-4357 PRIMARY: SOURCE-NORMAL ROW-EIGHT ENDPOINT PULLBACK
+fixed Delta=896/15 Theta=512/75 K=-32/5 u=-731648/2025
+zeta=0 trident: U=-6/11(xi-xi_U), W=424/99(xi-xi_W), Z=-22886/2673(xi-xi_Z)
+xi_U=237757952/54675
+xi_W=4494572032/536625
+xi_Z=1563264759296/115860375
+root differences=-58347587584/14488875,-28604827277312/3128230125,-3491293831168/682288875
+unit residual <zeta,xi,W>: W(0,0)=-35956576256/1002375
+unit residual <Z,zeta,W>: Z(Phi=0,xi=xi_W)=634780696576/14488875
+pairwise control W=xi=0: Phi^2=-143826305024/4343625
+S_4339 constants: U=-5200877686784/1042743375 W=2539122786304/115860375 Lambda=17651227389952/1042743375
+S_4339 cubic discriminant=483125535259306642688385993911761371136/7776331997934642451171875
+VERBATIM GATES
+THM-4327-U: U=0, WZ!=0; u!=0 implies E5!=0; u=a=d=0 implies E3!=0
+THM-4327-Z: Z=0, U*beta*zeta!=0
+THM-4334: Z=beta_11=0, U*W*zeta_3!=0
+THM-4337: Z=0, zeta_3=0, U*beta_11!=0; W and Lambda=U+W arbitrary; K=[y^2]H arbitrary
+THM-4339: Z=0, beta_11=0, zeta_3=0; U*K*W*Lambda!=0, Lambda=U+W
+THM-4340: U=0, WZ!=0
+THM-4342: Z=beta_11=zeta_3=K=0, U*W*(U+W)!=0
+THM-4344: Z=beta_11=zeta_3=W=0, U*K*xi_10!=0
+THM-4350: Z=beta_11=zeta_3=W=xi_10=0, U*K!=0, (alpha,Theta)!=(0,0)
+THM-4351: Z=beta_11=zeta_3=W=xi_10=alpha=Theta=0, U*K!=0
+THM-4352: formal-local law; no endpoint coefficient gate
+THM-4353: Z=beta_11=zeta_3=W=xi_10=K=0, U!=0
+THM-4354: Z=beta_11=zeta_3=W=xi_10=U=0, K*alpha!=0
+THM-4355: Z=beta_11=zeta_3=W=xi_10=U=alpha=0, K!=0
+THM-4356: Z=beta_11=zeta_3=W=xi_10=U=K=0, Delta=D=5696/105
+PULLBACK CLASSIFICATION
+dimension convention: source pullback in A^5; full row-eight jet adds A^7
+NONEMPTY 4327-U source-dim=4 jet-dim=11 witness=(0,0,xi_U,0,0)
+NONEMPTY 4327-Z source-dim=4 jet-dim=11 witness=(1,eta_g,0,0,1)
+NONEMPTY 4334 source-dim=3 jet-dim=10 witness=(1,eta_g,0,0,0)
+NONEMPTY 4337 source-dim=3 jet-dim=10 witness=(0,0,xi_Z,0,1)
+NONEMPTY 4339 source-dim=2 jet-dim=9 witness=(0,0,xi_Z,0,0)
+NONEMPTY 4340 source-dim=4 jet-dim=11 witness=(0,0,xi_U,0,0)
+eta_g=12505944329368/195463125
+EMPTY 4342: K=-32/5 and Delta!=5696/105
+EMPTY 4344: <Z,zeta,W>=<1>
+EMPTY 4350: <zeta,xi,W>=<1>
+EMPTY 4351: Theta=512/75 and <zeta,xi,W>=<1>
+N/A 4352: formal-local law, no endpoint coefficient gate
+EMPTY 4353: K=-32/5 and <zeta,xi,W>=<1>
+EMPTY 4354: <zeta,xi,W>=<1>
+EMPTY 4355: <zeta,xi,W>=<1>
+EMPTY 4356: K=-32/5, Delta!=5696/105, and <zeta,xi,W>=<1>
+SCOPE finite-row-eight-only; no all-row lift, seam entry, Keller pair, JC(2), or DC(2)
+PASS checks=61

@@ -1,0 +1,18 @@
+THM-4357 INDEPENDENT SYMBOLIC REFEREE
+unit ideal 1: <zeta_3,xi_10,W>=<1>
+Bezout 1: 1=(W-(13Phi/18)zeta_3-(424/99)xi_10)/(-35956576256/1002375)
+Groebner 1: [1]
+unit ideal 2: <Z,zeta_3,W>=<1>
+Bezout 2: 1=(Z+(11443/5724)W-13(6641Phi+3180eta)zeta_3/34344)/(634780696576/14488875)
+Groebner 2: [1]
+DIMENSION LEDGER
+4327-U/4340: Jacobian rank=1, source-dim=4, full-row8-jet-dim=11
+4327-Z: Jacobian rank=1, source-dim=4, full-row8-jet-dim=11
+4334: Jacobian rank=2, source-dim=3, full-row8-jet-dim=10
+4337: Jacobian rank=2, source-dim=3, full-row8-jet-dim=10
+4339: Jacobian rank=3, source-dim=2, full-row8-jet-dim=9
+S_4339 cubic discriminant=483125535259306642688385993911761371136/7776331997934642451171875
+WITNESSES all equalities and strict owner inequalities PASS
+EMPTY GATES 4342,4344,4350,4351,4353,4354,4355,4356 PASS
+SCOPE finite-row-eight-only; no all-row lift, seam entry, Keller pair, JC(2), or DC(2)
+PASS checks=61
