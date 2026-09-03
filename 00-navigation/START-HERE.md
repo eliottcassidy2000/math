@@ -53,7 +53,8 @@ Then read frontier, guardrails, theorem; logs are history.
     Composite rank seven and FC(3) remain open.
 12. **JC fails from dimension three; JC(2), DC(2) are open.** THM-2084 gives
     `M=10`; THM-4248/4226 close `M=11/13`; THM-4290--4356 close the staged
-    `M=12` atlas. THM-4357 leaves `S_4339` at row nine; seam entry remains.
+    `M=12` atlas. THM-4357/4358 kill finite `S_4339` at row ten; seam entry
+    remains.
 13. **Complete period-14 coordinates can be globally blind.** THM-2058 keeps
     every fixed-depth packet coordinate but exits at `47/113`; THM-2043/2047/
     2050 separate local completeness from global maxima.

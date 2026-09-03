@@ -1,5 +1,17 @@
 # Script Results Index
 
+- `jc2_source_normal_s4339_row10_delayed_depth_extinction_thm4358.out`
+  and its import-free referee -> delayed prior-depth extinction
+  ([THM-4358](../../01-canon/theorems/THM-4358-source-normal-s4339-row-ten-delayed-depth-extinction.md)):
+  **PROVED FINITE-ROW RELATIVE TO THM-4308/4315/4357 + VERIFIED-EXACT +
+  INDEPENDENTLY AUDITED; JC(2) OPEN.** Row nine cuts `S_4339` to two
+  conjugate affine lines and leaves an affine-seven terminal fibre. The
+  row-ten scalar has two apparent survivors, but its unique selected tangent
+  violates a primitive row-nine `P_2` functional by
+  `9854451712/1430375`. Script/output SHA-256 pairs:
+  `258edfae...ecb1d5c` / `8b599092...dba6fe` and
+  `d0aa3ed1...fb01ae94` / `6d31642a...a24485c`.
+
 - `jc2_source_normal_row8_endpoint_pullback_stratification_thm4357.out`
   and its independent symbolic referee -> source-normal row-eight pullback
   filter
