@@ -592,12 +592,12 @@ def main() -> None:
 
     # The exact THM-4130 overlap: alpha^2=A5 is the sign sheet.  This is a
     # coefficient-atlas map, not a map from the physical source P1_X.
-    A5, alpha_root, f, h = sp.symbols("A5 alpha_root f h", nonzero=True)
-    phi_hat = -alpha_root * A5**3 * f / 2
-    eta_hat = -alpha_root * A5**4 * h / 2
-    check(exact(eta_hat / phi_hat - A5 * h / f) == 0, "normalization quotient r")
+    A5, alpha_root, f21, f31 = sp.symbols("A5 alpha_root f21 f31", nonzero=True)
+    phi_hat = -alpha_root * A5**3 * f21 / 2
+    eta_hat = -alpha_root * A5**4 * f31 / 2
+    check(exact(eta_hat / phi_hat - A5 * f31 / f21) == 0, "normalization quotient r")
     check(
-        exact(phi_hat**2).subs(alpha_root**2, A5) == A5**7 * f**2 / 4,
+        exact(phi_hat**2).subs(alpha_root**2, A5) == A5**7 * f21**2 / 4,
         "normalization sign square",
     )
     check(phi_hat.subs(alpha_root, -alpha_root) == -phi_hat, "normalization Phi sign")
@@ -615,7 +615,8 @@ def main() -> None:
     print("row12_depth=N=(272008125-43740000*r)*Y+10213932924928")
     print("row12_extinction=substituted_degrees=(6,5); mod11_Bezout=1; survivors=0")
     print("finite_field_roles=F23_positive_carrier_and_hostile_depth_control; F11_good_reduction_Bezout_for_Q_coprimality")
-    print("normalization_bridge=Phi_hat=-alpha*A5^3*f/2 eta_hat=-alpha*A5^4*h/2 alpha^2=A5")
+    print("normalization_channels=f21=[p^2*y](R/gamma),f31=[p^3*y](R/gamma)")
+    print("normalization_bridge=Phi_hat=-alpha*A5^3*f21/2 eta_hat=-alpha*A5^4*f31/2 alpha^2=A5")
     print("type_note=coefficient_atlas_mu2_only; no_physical_P1_X_to_Ebar_map")
     print(f"checks={CHECKS} result=PASS")
 

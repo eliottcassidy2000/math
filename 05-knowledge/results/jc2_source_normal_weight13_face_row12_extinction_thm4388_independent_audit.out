@@ -10,6 +10,7 @@ row12_bracket=13_reduced_quotient_points,26_signed_geometric_lifts
 row12_depth=N=(272008125-43740000*r)*Y+10213932924928
 row12_extinction=substituted_degrees=(6,5); mod11_Bezout=1; survivors=0
 finite_field_roles=F23_positive_carrier_and_hostile_depth_control; F11_good_reduction_Bezout_for_Q_coprimality
-normalization_bridge=Phi_hat=-alpha*A5^3*f/2 eta_hat=-alpha*A5^4*h/2 alpha^2=A5
+normalization_channels=f21=[p^2*y](R/gamma),f31=[p^3*y](R/gamma)
+normalization_bridge=Phi_hat=-alpha*A5^3*f21/2 eta_hat=-alpha*A5^4*f31/2 alpha^2=A5
 type_note=coefficient_atlas_mu2_only; no_physical_P1_X_to_Ebar_map
 checks=172 result=PASS
