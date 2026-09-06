@@ -1,0 +1,12 @@
+RESERVED THM-4431 H99 -- NO-IMPORT MIDDLE-COORDINATE AUDIT
+status=FINITE_EXACT_PASS; all_height_requires_separate_colored_basis_and_classification_proof
+universe_rows=5409; multi_direction_rows=3500; exactly_three_direction_rows=1791
+normal_forms={-2: 684, 1: 1107}
+leader=(Fraction(18, 301), (5, 37, 43), (Fraction(240, 11137), Fraction(18, 301), Fraction(2822, 55685)))
+linear_tail_at_99=2560/33957; radical_squared=96/26411<4/1089; target=6/77
+wide_control=((19, 23, 29), 6, 3, (1, (Fraction(156, 4669), Fraction(192, 3857), Fraction(3840, 88711)), (8, 10, 11)))
+wide_control=((5, 191, 199), 16, 3, (1, (Fraction(4404, 266063), Fraction(48, 1393), Fraction(6526, 190045)), (8, 65, 73)))
+wide_control=((7, 611, 613), 48, 13, None)
+semantic_sha256=6ecbb5a2e079338af842a2f5d6c474ccdb8eb359941d9a8b192490d677115729
+checks=65789
+verdict=PASS_FINITE_ONLY; four_or_more_directions=OPEN; LRC14=OPEN
