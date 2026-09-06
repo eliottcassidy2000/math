@@ -21,6 +21,13 @@
   384061 actual unitless5+8 scales safe beyond the listed scalar gates;
   the [C-only residue theorem](long_frontier_sep06_anchor.md) proves a
   uniform negative full response at the smallest original Laurent phase.
+  [THM-4456](../../01-canon/theorems/THM-4456-sharp-finite-length-signed-root-stability-asymptotics.md)
+  proves the sharp finite-length optimum K3+2.172201096.../N+o(1/N),
+  with an exact radical coefficient and first-order tail rigidity.
+  The [four-anchor all-root theorem](long_frontier_sep06_residue_tail.md)
+  and [exact coefficient domains](long_frontier_sep06_fibre_domain.md)
+  close every nonnegative-root shape in that model fibre, without an
+  interlacer assumption; they do not identify every shape with an actual row.
   LRC14 and general Laurent two-rung separation remain OPEN.
 - [Extended third-session portfolio](third_20260906_board.md): **PROVED + INDEPENDENTLY AUDITED** first milestones.
   [Balanced grids](third_20260906_grid.md) force the six-component scale below97,097 in a hypothetical failure;

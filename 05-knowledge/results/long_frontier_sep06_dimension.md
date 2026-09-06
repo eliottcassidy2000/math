@@ -1,7 +1,7 @@
 # The sharp first-order finite-length penalty for signed-root stability
 
-**Status: PROOF CANDIDATE, exact identities and controls passed; independent
-audit pending.** For lists of total length at most N, the infimum of the
+**Status: PROVED ANALYTICALLY + FINITE-EXACT + INDEPENDENTLY AUDITED.**
+For lists of total length at most N, the infimum of the
 sharp signed-root stability quotient is
 
     K3+C/N+o(1/N),
@@ -278,6 +278,14 @@ Normal and optimized outputs are byte-identical, with 117 explicit gates.
 * Source SHA256: `badb2489aeb8e4a27a0e5b61c203323dfb988be693488637056a1f9f3c19e667`.
 * Output SHA256: `d2e72609bb6b248bed6d721e75e0a2b0350316b046cd6bed5ad06ddae8973e30`.
 * Semantic digest: `15251e617e95cae1f478f4ec83c7ce9b884fde71c9521555a5c78f4c65f21c88`.
+
+The [independent referee](long_frontier_sep06_dimension_audit.md) passed the
+complete analytic proof, all length and sign quantifiers, the ordered
+splitting term, approximate-infimum argument, and asymptotic equality
+conditions, including the final first-moment consequence. The source and
+normal, optimized, and frozen outputs and their exact hashes were independently
+replayed: PASS. Root also read the complete proof and checked the added
+first-moment deduction. All three primary artifacts are frozen.
 
 No finite-N equality theorem or actual Laurent-row transport is inferred
 from this abstract normalized moment result.

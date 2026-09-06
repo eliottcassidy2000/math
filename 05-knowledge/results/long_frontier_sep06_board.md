@@ -94,9 +94,37 @@ and its frozen evidence remain preserved.
   now target the other phases; the earlier effective negative tail stays
   inherited, and general finite-phase negativity remains open.
 
-The separate namespace [THM-4456](../../01-canon/theorems/THM-4456-sharp-finite-length-signed-root-stability-asymptotics.md)
-is **RESERVED / UNPROVED EMPTY STUB**, for the finite-length asymptotic
-candidate now under independent audit. It has no proved dependencies.
+- **PROVED** [THM-4456 / sharp finite-length asymptotics](../../01-canon/theorems/THM-4456-sharp-finite-length-signed-root-stability-asymptotics.md):
+  the infimum over length<=N is K3+C/N+o(1/N), with exact
+  C=-22-(16/3)sqrt6+10sqrt2+(40/3)sqrt3=2.172201096... .
+  Sharp first-order sequences use N-o(N) negative coordinates with
+  asymptotically uniform dust in both square norm and first norm.
+  Producer117 and full independent audit pass; the reservation is
+  promoted. Fixed-N equality and an all-N coefficient inequality do
+  not follow; a separate one-atom-boundary hostile is under audit.
+
+- **PROVED** [all-root four-anchor sign](long_frontier_sep06_residue_tail.md)
+  and [exact admissible domains](long_frontier_sep06_fibre_domain.md):
+  with(e1,e2,e3,e4)=(13,55,84,35), every nonnegative-root B has negative
+  full response at every original first-row zero, without either
+  interlacer assumption. Its exact fifth-coefficient domain[0,kappa]
+  has4.3<kappa<4.4; the C-only domain ends at4<rho<4.1; the D/simultaneous
+  domain ends at14sqrt2-16. The algebraic sign certificate covers[0,5],
+  and f6 is an exact hostile outside the domain. Producers174+42 and
+  independent audits pass. Only f1 is identified with the inherited
+  actual factorial row; the rest are model coefficients.
+
+## Next research state
+
+The sharp constant, all minimizing sequences and first finite-length
+order are closed in the specified signed-root problem. The next cheap
+test is an explicit rational rectangle in(e3,e4) around(84,35): retain
+the same original-root elimination, complete response and phase intervals,
+and certify all coefficients over that rectangle. For actual Laurent
+rows, a generic integration recurrence must retain the interior factorial
+amplitudes; matching only the carry and leading coefficient is insufficient.
+For LRC, use the actual translated packet and offset information; the
+new safe scale family does not close arbitrary two-component entries.
 
 The heartbeat continues this board quietly unless there is substantive
 progress, a correction, completion, failure or required user action. At
