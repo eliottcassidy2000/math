@@ -1,0 +1,15 @@
+V_RESIDUES (18, 10, 11, 3, 6, 1) BANK_NUMERATORS (3, 5, 6, 10, 11, 12, 13, 17, 18, 20) ALLOWED_SPEED_RESIDUES (1, 3, 5, 6, 10, 11, 12, 13, 17, 18, 20, 22)
+GAP_NUMERATOR_BY_GMOD23 (23, 6, 4, 10, 5, 5, 6, 4, 5, 7, 8, 6, 6, 8, 7, 5, 4, 6, 5, 5, 10, 4, 6)
+LITERAL_UNION_BANK 1426 small(t,g) pairs, coprime and noncoprime
+INCOMING t 36883259192 L 12003612721 g1_Lcap 15148481453 strict_gate_slack 176112649040 phase 11/23 eta 13/23 branch 17639819613 clearance 3/23
+ASPECT_RATIO_GOOD_GMOD23 (1, 2, 4, 5, 6, 7, 8, 9, 11, 12, 14, 15, 16, 17, 18, 19, 21, 22) uniform_nonzero_Lcap 9089088872
+MIXED_NONUNIT_DIRECT_CONTROL U (2, 3, 4, 5, 6, 7, 12003612719) phase 26509842545/212078740354 clearance 17507133005/212078740354
+ACTUAL_MIXED_SHAPE (185370716505, 189592176609, 193905909065, 198314972625, 201676672560, 205114343115) EDGES [(0, 5), (1, 5), (2, 5), (3, 5), (4, 5)]
+ACTUAL_MIXED_SHAPE (2, 3, 6, 331, 109561, 36264691, 12003612721) EDGES [(0, 1), (0, 2), (1, 3), (3, 4), (4, 5), (5, 6)]
+ACTUAL_MIXED_ROW sum 43300016482122890820283 coefficient_min 36446911794129044 amplitude_ratio_min 3112005545498710680/3102632035080254131 phase 26509842545/212078740354 clearance 26509924715/212078740354 mixed_supports 231
+ACTUAL_MIXED_BODY_GCD_MAXIMA_12_TO_7 (1, 1, 1, 1, 2, 3)
+ALL_ODD_OVERLAP denominator12_bank (1, 2, 3, 5, 6, 7, 9, 10, 11) gap 1/6 less_than23gap 6/23
+INCOMING5+8_ALIGNMENT t 4912751 phase 1403643/9825502 clearance 696962/4912751 general_scope odd V, all U seven-units, 7 does not divide t, maxU<t
+EQUALITY_CONTROL t 56 L 23 endpoint_clearance 1/14 epsilon 1/2958897468039744 perturbed_clearance 9189122571553/128647716001728
+SCOPE: exact bank/gluing sidecar; no universal finite-bank completeness or optimality; actual entry unnecessary
+PASS 3398 always-active exact gates

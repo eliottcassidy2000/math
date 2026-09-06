@@ -1,0 +1,147 @@
+{
+  "schema": 1,
+  "created_utc": "2026-09-06T17:35:08.231184+00:00",
+  "baseline_commit": "9828addf6",
+  "incoming_review_commits": [
+    "0cae7d4af",
+    "1b25c849a",
+    "e1a71979d"
+  ],
+  "hash_basis": "raw LF bytes; manifest and maintained synthesis/navigation excluded",
+  "scope": "Independently audited explicit residue phase class and actual mixed unitless LRC entry; fixed h4 positive-branch four-window algebraic amplitude representation; explicit e4 floor and uniform Laurent model tail. Generic gluing, fixed-row noncancellation and incoming sharp global stability are credited suppliers. Full joint-profile status of the phase-bank entry is not claimed. General targets and finite-phase model negativity remain OPEN.",
+  "artifacts": [
+    {
+      "path": "04-computation/continuing1_20260906_lrc_phase_bank.py",
+      "bytes": 9607,
+      "sha256": "5f4cf70ec86a5b65b392b5b2994afd5b1b0821672113de5eace9d2643d712872"
+    },
+    {
+      "path": "04-computation/continuing1_20260906_phase_bank_audit.py",
+      "bytes": 11271,
+      "sha256": "4986aa7f5a23b1ac69e550dcb22f39a3fb84ed97906a95902835a251b1dd25a5"
+    },
+    {
+      "path": "04-computation/continuing2_20260906_effective_anchor.py",
+      "bytes": 4803,
+      "sha256": "3d67e31dbdcd6226da0a086cbbfb4a8d142db24984fe5e58508a370e19bc6927"
+    },
+    {
+      "path": "04-computation/continuing2_20260906_effective_anchor_audit.py",
+      "bytes": 6910,
+      "sha256": "f8646767fc4e36756abce07c8f12d5d82faab514873a921e74ec4157b4b59a42"
+    },
+    {
+      "path": "04-computation/continuing2_20260906_laurent_sparse_amplitude.py",
+      "bytes": 9868,
+      "sha256": "2afc7df14b92e70a700a9a06a17b34ee2331eabde89902dcf408f597dccb9e28"
+    },
+    {
+      "path": "04-computation/continuing2_20260906_laurent_sparse_amplitude_audit.py",
+      "bytes": 9388,
+      "sha256": "6f196a8d7ea2e1086d1ed4514e63b9ee0a56f2f6ce4731cb987d05489e7c7814"
+    },
+    {
+      "path": "04-computation/continuing2_20260906_laurent_sparse_amplitude_certificate.json",
+      "bytes": 43203,
+      "sha256": "df8471af42220b5b26f7e4ff78dd9611d7999c0578e36603a6a7a33ba3c0afa2"
+    },
+    {
+      "path": "05-knowledge/results/continuing1_20260906_lrc_phase_bank.md",
+      "bytes": 13201,
+      "sha256": "3bb704890f54c62c2cd258ff288e5e941554ea3dd74e01bb03e28ae28d37c745"
+    },
+    {
+      "path": "05-knowledge/results/continuing1_20260906_lrc_phase_bank.out",
+      "bytes": 1779,
+      "sha256": "7223e6ab65192653bb492dbe77b38ce894541b261243951d293caaa6a8ef2006"
+    },
+    {
+      "path": "05-knowledge/results/continuing1_20260906_phase_bank_audit.md",
+      "bytes": 10638,
+      "sha256": "b33a64d8aec7da7ed0a9afefd63cc9dc1d11682864d723388b54ee22eb1de3c0"
+    },
+    {
+      "path": "05-knowledge/results/continuing1_20260906_phase_bank_audit.out",
+      "bytes": 871,
+      "sha256": "b55d2d450bd2004bcf41f2f8f6f1eb5206c447073fd66b3af20ae1aed51a1594"
+    },
+    {
+      "path": "05-knowledge/results/continuing2_20260906_effective_anchor.md",
+      "bytes": 7282,
+      "sha256": "0cb76b76191d582f74ef54ba5c0122d1fef0d48a979bbf432bf18004eda19198"
+    },
+    {
+      "path": "05-knowledge/results/continuing2_20260906_effective_anchor.out",
+      "bytes": 481,
+      "sha256": "a6c7117385f0ae039f18e5a08215bf1974db212b6f7ca9948a1376bbc5c969a8"
+    },
+    {
+      "path": "05-knowledge/results/continuing2_20260906_effective_anchor_audit.md",
+      "bytes": 7203,
+      "sha256": "c721b44ed974c6f3931a2685e82f36bbbf233171bd1deec8d743eb18bf670e98"
+    },
+    {
+      "path": "05-knowledge/results/continuing2_20260906_effective_anchor_audit.out",
+      "bytes": 381,
+      "sha256": "bd0a9c51514ac7aeb18f821ae8dbcda7c5c4540280fa29a10052f976d2a8efa6"
+    },
+    {
+      "path": "05-knowledge/results/continuing2_20260906_laurent_sparse_amplitude.md",
+      "bytes": 12484,
+      "sha256": "762521a1adfffc6692c56c1573f7844f30d2fb3239b55ea4cab3f92f2c05c2d4"
+    },
+    {
+      "path": "05-knowledge/results/continuing2_20260906_laurent_sparse_amplitude.out",
+      "bytes": 1389,
+      "sha256": "7b95d9102c18309ce245d9017f3456b0f75447117f1ec6ac363393c63f183777"
+    },
+    {
+      "path": "05-knowledge/results/continuing2_20260906_laurent_sparse_amplitude_audit.md",
+      "bytes": 8616,
+      "sha256": "468c35092723e09c160e60a32e8e80211ac95e9bac0d581f04df9709f9a32202"
+    },
+    {
+      "path": "05-knowledge/results/continuing2_20260906_laurent_sparse_amplitude_audit.out",
+      "bytes": 693,
+      "sha256": "ded2bc088c181204eca38460e392db4068688a0371ee2e573055707c96b0ef06"
+    }
+  ],
+  "filing_revisions": [
+    {
+      "path": "05-knowledge/results/continuing1_20260906_lrc_phase_bank.md",
+      "outside_draft_sha256": "93f2b2b925ce6dc9f06f8fadcfb07eb507752cf0dc58e371ac0e28d837099af1",
+      "filed_sha256": "3bb704890f54c62c2cd258ff288e5e941554ea3dd74e01bb03e28ae28d37c745",
+      "reason": "Portable links/reproduction commands, explicit audit promotion where approved, ASCII residue notation, and current comparison with the independently audited effective anchor. Mathematical sources, outputs and certificate bytes unchanged."
+    },
+    {
+      "path": "05-knowledge/results/continuing1_20260906_phase_bank_audit.md",
+      "outside_draft_sha256": "17a2eb8e0f279ac9d54affd0de930df38ca98e8ee9aa0fd555cbcc420b24c1f2",
+      "filed_sha256": "b33a64d8aec7da7ed0a9afefd63cc9dc1d11682864d723388b54ee22eb1de3c0",
+      "reason": "Portable links/reproduction commands, explicit audit promotion where approved, ASCII residue notation, and current comparison with the independently audited effective anchor. Mathematical sources, outputs and certificate bytes unchanged."
+    },
+    {
+      "path": "05-knowledge/results/continuing2_20260906_laurent_sparse_amplitude.md",
+      "outside_draft_sha256": "8e5112bbfc7ab4c14151dbc643efce0bb1c9940ccd1787947b6ee06738488a4c",
+      "filed_sha256": "762521a1adfffc6692c56c1573f7844f30d2fb3239b55ea4cab3f92f2c05c2d4",
+      "reason": "Portable links/reproduction commands, explicit audit promotion where approved, ASCII residue notation, and current comparison with the independently audited effective anchor. Mathematical sources, outputs and certificate bytes unchanged."
+    },
+    {
+      "path": "05-knowledge/results/continuing2_20260906_laurent_sparse_amplitude_audit.md",
+      "outside_draft_sha256": "3b9bd3aacb985e30bf9f95559ea6cc6d7cafab2caceeb3afc3889f2bbf564e20",
+      "filed_sha256": "468c35092723e09c160e60a32e8e80211ac95e9bac0d581f04df9709f9a32202",
+      "reason": "Portable links/reproduction commands, explicit audit promotion where approved, ASCII residue notation, and current comparison with the independently audited effective anchor. Mathematical sources, outputs and certificate bytes unchanged."
+    },
+    {
+      "path": "05-knowledge/results/continuing2_20260906_effective_anchor.md",
+      "outside_draft_sha256": "14eeea20c250bd53337ca1dd1049f6b14a5eae6098e64adc132f24c8b3bca023",
+      "filed_sha256": "0cb76b76191d582f74ef54ba5c0122d1fef0d48a979bbf432bf18004eda19198",
+      "reason": "Portable links/reproduction commands, explicit audit promotion where approved, ASCII residue notation, and current comparison with the independently audited effective anchor. Mathematical sources, outputs and certificate bytes unchanged."
+    },
+    {
+      "path": "05-knowledge/results/continuing2_20260906_effective_anchor_audit.md",
+      "outside_draft_sha256": "2262687f3877eb8ffbbd0ff76afbb48abeba3fb956a240adf67ee1377700a353",
+      "filed_sha256": "c721b44ed974c6f3931a2685e82f36bbbf233171bd1deec8d743eb18bf670e98",
+      "reason": "Portable links/reproduction commands, explicit audit promotion where approved, ASCII residue notation, and current comparison with the independently audited effective anchor. Mathematical sources, outputs and certificate bytes unchanged."
+    }
+  ]
+}

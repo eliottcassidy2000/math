@@ -9,6 +9,26 @@ Format per entry:
 - Why it was wrong
 - The correct framing
 
+## 2026-09-06 continuation -- phase packets and quantified boundaries
+
+- [The phase-bank review](../05-knowledge/results/continuing1_20260906_phase_bank_audit.md)
+  caught an overbroad improvement narrative: a mixed physical row can still
+  have two all-odd primitive shapes, whose actual half-phase arcs already
+  give a stronger single-phase proof. The new actual control has both shapes
+  mixed and unitless; only the stated supplier-only gate is shown to fail.
+  Noncoprime scales retain their effective-order gcd. At an equality endpoint,
+  strict safety follows by perturbation using the other component's strict
+  margin; the bank point itself can have clearance exactly1/14.
+- [The four-window repair](../05-knowledge/results/continuing2_20260906_laurent_sparse_amplitude.md)
+  crosses the failed single-window cone at the same amplitude degree three.
+  A negative interpolant coefficient did not exclude mixing derivative
+  orders. Its positive-branch algebraic coefficients are not a rational or
+  all-eight-branch identity; the h4 all-even cone remains unexcluded.
+- [The effective anchor](../05-knowledge/results/continuing2_20260906_effective_anchor.md)
+  retains both weak interlacers and the top carried cancellation. The lower
+  Laurent term obeys the tail estimate only for s>=1. An explicit finite
+  phase interval is still continuous, not an exhaustive computational proof.
+
 ## 2026-09-06 continuation -- phase operation, branch and coefficient field
 
 The [actual Laurent cone audit](../05-knowledge/results/continuing1_20260906_laurent_cone_separator.md)

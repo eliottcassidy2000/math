@@ -1,0 +1,6 @@
+PASS: explicit e4>1/100 within both-anchor, both-weak-interlacer model.
+Independent raw E/O convolution and Laurent support: -1 through8; q[-1]=28.
+D endpoint upper bound -7815143/1920000
+Tail ratio 734462481750246368/6215625 ; strict integer endpoint 118163898523
+No finite-phase or general actual Laurent noncancellation assertion.
+PASS 124 always-active independent exact gates

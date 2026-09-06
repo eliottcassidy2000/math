@@ -1,0 +1,17 @@
+ACTUAL support=(-27,1,15) firstmass=14 doubledmass=28; all source coefficients and carries retained
+P=s^4-60s^3+84s^2-10s+1/11; H degree24 selected coefficient9
+ATOMS (z_power,derivative_order)= [(0, 0), (1, 7), (1, 8), (3, 2)] normalizers= 1,32920473600,131681894400,5184
+REFINEMENTS 43
+ROOT 1 89619707921724626095459/9043340675316531203145728,6646374067170322315/670671957528665915392
+ROOT 2 5522615331912831947596241/45872716489953119666438144,145331982418758735463059/1207176749735608412274688
+ROOT 3 86478528558079646042430925/66470897244960162247081984,43239264279039823021215463/33235448622480081123540992
+ROOT 4 92746488770623176357152491/1583550363594728857927680,1669436797871217174428744839/28503906544705119442698240
+DETERMINANT_SIGN negative; all four Cramer numerator signs negative
+COEFFICIENT 0 millionth_enclosure= 984869 984870
+COEFFICIENT 1 millionth_enclosure= 421733 421734
+COEFFICIENT 2 millionth_enclosure= 4973466 4973467
+COEFFICIENT 3 millionth_enclosure= 5162 5163
+EXACT_FORM T=beta0 J0+beta1 z J7/(9)_7^2+beta2 z J8/(9)_8^2+beta3 z^3 J2/(9)_2^2 on the four positive branches
+FIELD p(s) irreducible mod3; Norm(s)=1/11 nonsquare, hence p(z^2) irreducible over Q
+SCOPE positive real algebraic coefficients; not an all-eight-root identity; no universal h or rational-coefficient claim
+PASS 439 always-active gates; no floating point or optimization in this producer

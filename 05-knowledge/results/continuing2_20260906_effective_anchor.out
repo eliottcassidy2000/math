@@ -1,0 +1,7 @@
+PROVED MODEL: both exact anchors and both weak interlacers force e4>1/100.
+Root identities, coefficient mass and top cancellation are formal polynomial identities.
+D endpoint upper bound: -7815143/1920000
+delta0 = 2607579/7000 ; H = 17194291313831660508/390625
+Every original positive phase s >= 118163898523 has Q(-s)<0.
+Finite-phase negativity and general actual noncancellation remain OPEN.
+PASS: 78 always-active exact gates; one strict control and one rejected weak boundary.

@@ -1,0 +1,7 @@
+CRAMER 0 coefficient in 984869/1000000 98487/100000 numerator in -365451/1000000 -7309/20000
+CRAMER 1 coefficient in 421733/1000000 210867/500000 numerator in -156491/1000000 -15649/100000
+CRAMER 2 coefficient in 2486733/500000 4973467/1000000 numerator in -46137/25000 -1845479/1000000
+CRAMER 3 coefficient in 2581/500000 5163/1000000 numerator in -479/250000 -383/200000
+FIELD p irreducible; norm r=1/11 nonsquare; p(z^2) irreducible degree8
+SCOPE fixed actual row; common positive algebraic coefficients on four positive branches; rational odd-atom/all-eight identities excluded
+PASS 644 always-active gates; literal fibers, symbolic windows, outward-dyadic elimination; no producer import

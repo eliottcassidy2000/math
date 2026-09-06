@@ -25,6 +25,12 @@
   forced cross-divisor score; they are explicitly safe.
   [Manifest](second_20260906_manifest.json) freezes all proof and audit artifacts.
   LRC14, general Laurent returns and general higher-jet partitions remain OPEN.
+- [Three further scoped continuations](continuing1_20260906_synthesis.md): **PROVED + INDEPENDENTLY AUDITED.**
+  A [phase bank](continuing1_20260906_lrc_phase_bank.md) covers an explicit mixed, unitless actual 6+7 class;
+  a [four-window amplitude identity](continuing2_20260906_laurent_sparse_amplitude.md) repairs the next actual row;
+  an [effective two-anchor tail](continuing2_20260906_effective_anchor.md) gives e4>1/100 and explicit phase cutoff118163898523.
+  Generic gluing and underlying fixed-row noncancellation are inherited; general LRC14 and finite-phase model negativity remain OPEN.
+  [Manifest](continuing2_20260906_manifest.json):19 frozen artifacts, six independently replayed programs.
 - [Actual Laurent phase obstruction and repair](continuing1_20260906_synthesis.md):
   **PROVED + INDEPENDENTLY AUDITED.** On support (-21,1,12), an exact separator
   excludes every positive integer Laurent weighting of all coupled windows;

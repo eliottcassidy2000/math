@@ -55,7 +55,7 @@ gives square sum `<=195`; THM-4019 refutes its sharp arbitrary-lattice target.
   THM-4452: one-v2 clock-four cap `1/110`; [inert gates](../05-knowledge/results/creative_20260906_inert_pareto.md) `40/469,716/4221`; [ranked capacities](../05-knowledge/results/continuing1_20260906_profiles.md) retain all sums; physical gain OPEN.
   THM-4442/4446 force gcd-one packs above `91^6`; hostiles refute prescribed-component
   selection. No universal body mass/component floor reaches these gates; entry remains open.
-- **Transport/incidence:** [No-unit pair-gcd classes](../05-knowledge/results/continuing1_20260906_synthesis.md).
+- **Transport/incidence:** [No-unit and phase classes](../05-knowledge/results/continuing1_20260906_synthesis.md).
   [Endpoint entry](../05-knowledge/results/second_20260906_entry.md) and [balanced hostiles](../05-knowledge/results/second_20260906_decoder.md) retain actual profiles; entry OPEN.
   [Sparse transport](../05-knowledge/results/synthesis_20260905_lrc_sparse_transport.md) retains weights and the selector gap.
 - **Residual ranks:** THM-4333/4338 close fixed-pool ranks three/four, not arbitrary entry.
