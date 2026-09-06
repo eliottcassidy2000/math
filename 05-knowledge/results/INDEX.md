@@ -1,5 +1,18 @@
 # Script Results Index
 
+- `exceptional_quartic_integral_residue_gap_nongeometric_thm4421.out` ->
+  exact audit of the apparent mod-three exceptional-quartic obstruction
+  ([THM-4421](../../01-canon/theorems/THM-4421-exceptional-quartic-integral-residue-gap-is-nongeometric.md)):
+  **PROVED ELEMENTARY RELATIVE TO THM-4411 + VERIFIED-EXACT; JC(2)/DC(2)
+  OPEN.** In the fixed integral compiler, the collision period is
+  `F(h)=8O(h)+18E(h)`, so `3` not dividing `O(h)` forces the sharp gap
+  `F(h) in 2Z minus 6Z`. The tangent and full motion lattices have three-
+  torsion, but actual zero-period polynomial transgressions kill the first
+  class, two visible kernel directions cancel the remaining residue, and the
+  lawful target rescaling `C -> C/3` removes every Smith factor. Thus this
+  residue gap is not a characteristic-zero geometric obstruction. Script/
+  output SHA-256: `934a1b8f...09e` / `be73681c...85e` (raw LF bytes).
+
 - `lrc14_six_separated_contact_capacity_collapse_thm4414.out` and its
   independent raw-carrier audit -> all-height collapse of the THM-4409
   degree-zero max-flow

@@ -1,0 +1,24 @@
+status=PASS
+checks=137041
+tangents=((3, -9), (3, 4), (3, 9))
+primitive_relation=(5, -18, 13)
+wedge_determinantal_divisors=(1, 3)
+wedge_smith_nonzero=(1, 3); coker=Z+(Z/3)
+full_determinantal_divisors=(1, 1, 1, 3, 9)
+full_smith_nonzero=(1, 1, 1, 3, 3); coker=Z+(Z/3)^2
+wedge_box_saturation=137; wedge_box_image=49
+formula_polynomials_checked=16807
+sharp_residue_gap=2
+primitive_visible_zero_pairs=[(-9, 4), (9, -4)]
+sharp_split_h=x^2-2x; values=(3,0,-1); ell=2
+visible_collision_h=9x-4x^2; values=(-13,0,5); ell=0
+actual_wedge_kernel_vectors_checked=211
+polynomial_collision_kernel_checked=425; integral_motion=141
+constant_h=1: rho=1, integral_motion=False, solution=(Fraction(0, 1), Fraction(4, 1), Fraction(-2, 3), Fraction(0, 1), Fraction(2, 3))
+visible_mixed_h=9x-4x^2: rho=2, integral_motion=False, solution=(Fraction(-12, 1), Fraction(-16, 1), Fraction(14, 3), Fraction(-4, 1), Fraction(-2, 3))
+sum_h=1+9x-4x^2: rho=0, integral_motion=True, solution=(Fraction(-12, 1), Fraction(-12, 1), Fraction(4, 1), Fraction(-4, 1), Fraction(0, 1))
+monomial_periods_degrees_1_to_16=(8, 18, 8, 18, 8, 18, 8, 18, 8, 18, 8, 18, 8, 18, 8, 18)
+mod3_tangent_rank=1; endpoint_tangents_zero_mod3
+after_C_to_C_over_3_wedge_smith_nonzero=(1,1)
+after_C_to_C_over_3_full_smith_nonzero=(1,1,1,1,1)
+verdict=conditional_residue_gap_plus_unconditional_transfer_no_go

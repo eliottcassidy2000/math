@@ -352,14 +352,14 @@ lift/phase clocks.
   Complete weights 15--20, row fourteen, and entry remain open. THM-4397
   identifies Long's map with THM-2044; THM-4401 proves its natural planar
   reductions are punctured cubic/Kummer models.
-  Exceptional quartic:
-  THM-3703/3737/4034 give grammar, image, and conductor; THM-4039--4067 reach
-  `J_7`, obstruct `J_8`, and isolate the graph/seminormal gap. THM-4381 gives
-  86 nodes, one plane triple, and `S^sn=S+K r`. THM-4404 proves fixed-`x`
-  descended two-forms miss `K[r']`; THM-4411 identifies that period with
-  first-order collision failure for variable compiler normals, and THM-4412
-  realizes `r` only through a non-descended suspension. Higher moving-graph
-  transgression/entry are open.
+  Exceptional quartic: THM-3703/3737/4034 give grammar, image, and conductor;
+  THM-4039--4067 reach `J_7`, obstruct `J_8`, and isolate the graph/seminormal
+  gap. THM-4381 gives 86 nodes, one plane triple, and `S^sn=S+K r`.
+  THM-4404/4411/4412 identify the fixed-`x` descended-form gap, its collision
+  period, and a non-descended suspension. THM-4421 finds a sharp
+  `2Z minus 6Z` gap in one integral model but proves it nongeometric: actual
+  transgressions miss the torsion and `C -> C/3` removes it. Moving-graph
+  transgression/entry remain open.
 - **Weyl boundary:** THM-2049 gives a formal beta-adic lift; finite termination remains.
 - **Planar source fibres:** THM-2063/THM-2084--2480 (including
   THM-2371/THM-2376) close the named

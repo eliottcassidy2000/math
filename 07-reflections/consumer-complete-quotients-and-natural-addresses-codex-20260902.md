@@ -419,6 +419,18 @@ destroy contact zeros and hinge magnitudes without helping the mass consumer.
 The open arithmetic target is consequently an explicit choice among three
 raw-carrier projection sums, not a generic network optimization.
 
+THM-4421 tests whether THM-4413's residue-forced transversality transfers to
+the exceptional-quartic collision period.  In one integral compiler it does:
+`F(h)=8O(h)+18E(h)`, so the nonzero odd-coefficient residue forces the sharp
+gap `F(h) in 2Z minus 6Z`.  The hostile is the missing invariance sidecar.
+The visible kernel direction `9x-4x^2` preserves the collision, actual
+polynomial transgressions annihilate the first Smith class, and the lawful
+target rescaling `C -> C/3` removes all three-torsion.  Unlike LRC, where the
+speed/owner lattice and roof functional are canonical, this Jacobian lattice
+is a coordinate choice.  The transferable principle is therefore stricter:
+a residue alphabet forces geometric transversality only when its integral
+lattice is intrinsic and stable under every allowed coordinate change.
+
 ## 6. Generated sharp tasks
 
 1. **LRC operation closure.** THM-4367 resolves the static exit-collision
