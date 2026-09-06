@@ -374,8 +374,8 @@
   [DOI 10.1016/S0019-3577(98)80020-7](https://doi.org/10.1016/S0019-3577(98)80020-7).
 - **Imported role:** classifies Laurent polynomials whose every positive power
   has zero constant term.  Its one-variable theorem is a stronger historical
-  route to the nonzero constant-term seed; the current internal dependency is
-  the elementary Galois-orbit proof in THM-2067.
+  route to the nonzero constant-term seed. THM-2067 is the internal
+  bare-existence proof; THM-2111 supplies the effective seed.
 - **Repo consumers:**
   [THM-1630, exact citation identification](../../01-canon/theorems/THM-1630-tnc-is-duistermaat-van-der-kallen-theorem-2.md),
   [THM-1645, angular/radial split](../../01-canon/theorems/THM-1645-gmc2-angular-layer-is-dvdk-the-gap-is-purely-radial.md),
@@ -383,9 +383,10 @@
   [THM-2022](../../01-canon/theorems/THM-2022-gmc2-frobenius-lowest-balanced-face.md),
   and [THM-2070, failed-bypass correction](../../01-canon/theorems/THM-2070-horizontal-wick-embedding-and-dihedral-return-cancellation.md).
 - **Does not prove:** the Gaussian radial/factorial step, Frobenius survival of
-  a complete Wick face, or an effective first return. Lean now root-imports
-  the height supplier and positive/two-charge/fixed-support unique-channel
-  leaves; general complex `DvdK1` remains the sole formal premise.
+  a complete Wick face, or an effective first return. The current Lean
+  front door `GMC2Main` discharges `DvdK1` through
+  `GMC2DvdKOmegaWiring.singlePolyCrux_holds`; the older partial wrappers
+  are not the completed theorem's frontier.
   HYP-8931's proposed class bypass is vacuous (MISTAKE-240). THM-2070 refutes
   the general semigroup/saddle bypass: support return is not noncancellation.
 

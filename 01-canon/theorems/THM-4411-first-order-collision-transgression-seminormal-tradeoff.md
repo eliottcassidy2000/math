@@ -46,6 +46,15 @@ NOT AN IDENTIFICATION WITH THE FULL MOVING-GRAPH COMPLEX, AN ADMISSIBLE
 SOURCE-NORMAL `JC(2)` DIRECTION, CHART OR SEAM ENTRY, A KELLER PAIR, `JC(2)`,
 OR `DC(2)`.**
 
+**PROVED FORMAL-LOCAL EXTENSION — 2026-09-05.** The
+[labelled-triple compensation theorem](../../05-knowledge/results/synthesis_20260905_transgression.md)
+integrates the local coefficient constraint: one additional `x` coefficient
+makes the endpoint/common-target Jacobian invertible with determinant `-288`,
+giving unique formal compensation at every order. The compatible tangent
+`h=4x^2-9x` nevertheless needs a nonzero second-order correction; its straight
+pencil does not preserve the triple modulo `s^3`. This does not supply
+polynomial termination, a descended primitive, or the full graph complex.
+
 ## 1. A coordinate-free collision--transgression lemma
 
 Let `k` be a field, let `V` be a two-dimensional `k`-vector space, and fix a

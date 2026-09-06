@@ -9,6 +9,30 @@ Format per entry:
 - Why it was wrong
 - The correct framing
 
+## MISTAKE-544 (2026-09-05, THM-1755 trinomial tunability) -- a small census hid semigroup carries and unbounded relation height
+
+- **False claims:** THM-1755 / `tnc-angular-uniform-tunable-dichotomy`
+  extrapolated its bounded census to the exact middle-charge-one family
+  `{-a,1,a+2}` and a uniform bounded-height signed charge relation for every
+  tunable three-term support. Neither follows from nonunique minimal return.
+- **Clean witness / first failed implication:** `{-3,1,9}` first returns at
+  mass four with `CT(f^4)=4(T^3+1)`, despite being outside the claimed family.
+  For coprime `A<B`, `g>2B`, `gcd(g,AB)=1`, the tunable primitive support
+  `{-AB,A(g-B),B(g-A)}` has shortest nonzero signed relation of norm exactly
+  `2B`. Thus no uniform bound `h(3)` exists; `{-12,27,40}` already needs eight.
+- **Mechanism / strongest survivor:** the singleton/tunable dichotomy is
+  correct. With `g=gcd(a+b,a+c)`, `A=(a+b)/g`, `B=(a+c)/g`, tunability is
+  exactly `a-AB in <A,B>`, and its first mass is `g`. The first return slice
+  generates every later slice iff `a` is a multiple of `AB`; otherwise two
+  residue-carry floors count the missing channels. The free two-ray case
+  requires `a=AB`, not merely two channels at the first mass.
+- **Repair / new frontier:** the theorem now carries a current correction
+  before its historical prose. The [proved replacement and exact controls](../05-knowledge/results/synthesis_20260905_moments_trinomial.md)
+  include a two-extra-channel hostile `{-13,1,8}`. Uniform two-rung
+  coprimality remains OPEN; its 2,275-support exact gcd census is bounded.
+  No NC2/GMC(2) result is retracted, and no density interpretation of “thin”
+  is established by the old census.
+
 ## MISTAKE-543 (2026-09-03, concurrent THM-4404 reservations) -- a semantic collision survived clean integration, then a non-fail-fast shell pushed it
 
 - **What failed:** the exceptional-quartic and LRC14 sessions independently

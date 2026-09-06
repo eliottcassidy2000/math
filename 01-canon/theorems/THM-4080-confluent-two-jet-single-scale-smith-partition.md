@@ -12,7 +12,9 @@ status: >
   extends the earlier p<n<=2p pair band to a quadratic range. The bound s<p
   is load-bearing: at s=p the derivative-row matroid loses one rank and the
   displayed profile already fails for p=2 and p=3. Larger clusters and the
-  complete global Smith form remain open.
+  complete global Smith form remain open. The independently audited
+  2026-09-05 extension linked below closes the complete-residue s=p boundary
+  with a one-unit saturation correction and extends consecutive n to p^2.
 source: codex-frontier-synthesis-creative-20260825e / integral-observer wildcard
 audit: >
   PASS. The primary DVR path checks 132 single-scale profiles across
@@ -41,6 +43,14 @@ hash_basis: raw LF bytes
 ---
 
 # THM-4080 -- a complete two-jet Smith layer inside one p-adic scale
+
+**PROVED EXTENSION — 2026-09-05.** At `s=p`, the complete exponent list is
+`0,0,e,...,(p-2)e,(p-1)e+1,(p+1)e,...,(2p-2)e,(2p-1)e-1`, with empty ranges
+omitted. Thus the consecutive-node partition is now known through `n<=p^2`.
+The old formula still fails at `s=p`; saturation of its missing derivative
+line costs exactly one `p`, not one scale `e`.
+[Full proof, exact controls and independent audit](../../05-knowledge/results/synthesis_20260905_wildcard_smith_boundary.md).
+Larger multiscale clusters and higher jets remain open.
 
 **PROVED + VERIFIED-EXACT + INDEPENDENTLY VERIFIED-EXACT.** THM-4010
 determines the zero layer, the first positive layer, and a two-node cluster.

@@ -11,6 +11,14 @@ one-pair roof on the raw carrier lattice. Neither result proves the universal
 
 ## Inheritance and portfolio
 
+**Concurrent integration:** after this report was pushed in `566677ae1`,
+incoming `f79035888` promoted
+[THM-4414 / six-separated-contact-capacity-collapse](../../01-canon/theorems/THM-4414-lrc14-six-separated-contact-capacity-collapse.md)
+with the same sharp factor-two lemma and all-height degree-zero conclusion.
+These are overlapping proofs, not two distinct advances. This report also
+records arbitrary-phase/intersection closure, star structure, the weighted
+distortion boundary, and the explicit carrier-selector formulation.
+
 The independent raw-address review is recorded in
 [the cross-lane audit](synthesis_20260905_moments_lrc_audit.md); it reconstructs
 the three sheet preimages and the clipped-tooth minimum independently.

@@ -1,12 +1,28 @@
 ---
 id: THM-1755
-title: "THE ANGULAR UNIFORM PIECE: the tunable/unique-minimal dichotomy collapses all charge patterns to a THIN resonance-characterised family. For fixed charge-count, MOST patterns are unique-minimal -- 0 has a single minimal charge-representation, so CT(m0) is a positive monomial in the gauge params and TNC holds by THM-1655 (positivity) with NO resultant and NO Groebner, uniformly in the span. The TUNABLE patterns (non-unique minimal rep) are a THIN, arithmetically-characterised subset: a charge-triple {-N,c,M} is tunable iff 0 has two minimal representations, which requires a SMALL-COEFFICIENT CHARGE RESONANCE (primitive relation alpha(-N)+beta*c+gamma*M=0 with |alpha|+|beta|+|gamma| <= 6 in every case found; e.g. the c=1 family is EXACTLY {-N,1,N+2}). Only 7 tunable triples exist for N<=5, M<=7. On each tunable pattern the finite-place certificate (THM-1735) closes TNC with a good prime bounded by the resonance. So the angular half of GMC(2) is UNIFORM: generic = THM-1655 positivity (elementary, span-independent), tunable = THM-1735 finite-place on a thin characterised family. This is the angular half of HYP-8540. The RADIAL half (klein cross-shell) is framed as a resultant tower below"
-status: PROGRESS on the angular uniform (HYP-8540): the tunable/unique-minimal dichotomy is proved (unique-minimal => THM-1655) and the tunable subset is characterised as resonance-thin (verified N<=5, M<=7). A clean closed-form of the tunable-resonance condition is the remaining angular step.
+title: Corrected trinomial tunability dichotomy; bounded-resonance and single-family claims refuted
+status: PROVED singleton/tunable dichotomy with exact semigroup replacement linked below; REFUTED single-family and uniform bounded signed-relation claims (MISTAKE-544); historical thinness and coefficient-uniformity extrapolations are not proved.
 author: opus-2026-07-20-S428
 depends_on: [THM-1655 (binomial/unique-minimal positivity), THM-1735 (finite-place), THM-1715 (positivity), THM-1740 (bounded GMC(2) = finite Groebner), klein cross-shell]
 ---
 
-# THM-1755 — The angular uniform piece: tunable/unique-minimal dichotomy
+> **CURRENT CORRECTION — 2026-09-05, MISTAKE-544.** The singleton/tunable
+> dichotomy survives, but the exact `{-N,1,N+2}` classification and every
+> uniform bounded-height resonance explanation are **REFUTED**. For primitive
+> `{-a,b,c}`, define `g=gcd(a+b,a+c)`, `A=(a+b)/g`, `B=(a+c)/g`. The first
+> return is tunable iff `a-AB in <A,B>`, and then its mass is `g`. The exact
+> all-level carry profile and an unbounded shortest-relation family are
+> [proved and independently audited here](../../05-knowledge/results/synthesis_20260905_moments_trinomial.md).
+> `{-3,1,9}` refutes the old single-family claim; `{-12,27,40}` needs signed
+> relation norm eight, and the family makes this norm arbitrarily large.
+> “Generic,” “thin,” and finite-place uniformity in the historical prose
+> below are not established by its finite census. The general two-rung
+> coefficient claim remains OPEN; current NC2/GMC(2) status is in THM-2022.
+
+# THM-1755 — The angular uniform piece: corrected dichotomy and historical proposal
+
+The sections below preserve the original proposal and failed extrapolations
+for provenance. Their universal claims are superseded by the correction above.
 
 HYP-8540 factored unbounded GMC(2) into an **angular** uniform bound (mine) and a **radial**
 uniform bound (klein's shell lemma). This note works the angular half.

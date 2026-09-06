@@ -26,6 +26,15 @@
   `min_i E_i<=6/77` remains open and is finite-exact through height 149.
   Primary/referee hashes: `591c2a2f...cedd` / `cc70d23d...b65e` and
   `f29e52f2...dc64` / `0f5b3fb4...847a` (raw LF bytes).
+- [2026-09-05 cross-frontier synthesis](synthesis_20260905_overview.md):
+  **PROVED + VERIFIED-EXACT + INDEPENDENTLY AUDITED** scoped advances:
+  all-height sparse-comb edge-minimum transport and its exact raw-roof loss;
+  complete trinomial tunability, carry profile, and unbounded signed-relation
+  hostile (MISTAKE-544); complete-residue two-jet Smith boundary and consecutive
+  `n<=p^2`; formal labelled-triple compensation with a second-order hostile.
+  Matching scripts, transcripts and cross-lane audits use
+  `synthesis_20260905_*`. LRC(14), uniform trinomial two-rung coprimality,
+  higher/multiscale Smith layers, graph entry, JC(2), and DC(2) remain OPEN.
 
 - `lrc14_owner_transversality_norm18_empty_atlas_thm4413.out` and its
   independent affine-fibre audit -> arithmetic roof transversality and the

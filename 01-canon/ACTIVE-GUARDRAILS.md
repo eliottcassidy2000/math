@@ -1,6 +1,6 @@
 # Active Guardrails
 
-**Short hazard sheet — refreshed 2026-09-01.** Read this at startup; search [`MISTAKES.md`](MISTAKES.md) for witnesses, repairs, and lineage. This records current prohibitions, not the whole history.
+**Short hazard sheet — refreshed 2026-09-05.** Read this at startup; search [`MISTAKES.md`](MISTAKES.md) for witnesses, repairs, and lineage. This records current prohibitions, not the whole history.
 
 ## Universal
 
@@ -115,6 +115,7 @@
 36b. **A Newton-face Wronskian is not DvdK.** MISTAKE-244/THM-2102: retain the
      proper-power first-defect quotient; a collapsed linear edge polynomial is
      not automatically a weighted-linear coordinate or a terminating descent.
+36c. **Tunable is not short-resonant.** MISTAKE-544 repairs THM-1755: trinomial tunability is `a-AB in <A,B>`; shortest signed relations are unbounded. Later channels have two residue carries; two initial channels do not imply a free semigroup or two-rung noncancellation.
 
 ## Tournaments
 

@@ -1,6 +1,6 @@
 # Current Frontier
 
-**State — 2026-09-03.** Proof links; statuses: **PROVED**, **CITED**,
+**State — 2026-09-05.** Proof links; statuses: **PROVED**, **CITED**,
 **FINITE-EXACT**, **VERIFIED**, **CONDITIONAL**, **OPEN**, **RESERVED**,
 **REFUTED**, **SUPERSEDED**.
 
@@ -62,6 +62,7 @@ for `d>=7`. THM-3742 is a wrong-torsor Pell `C14`; THM-3744's safe control is
   THM-4413 proves non-tangency, the sharp floor `1/(7w_2w_3)`, and the complete
   minimal-norm-18 empty atlas `{(7,11,43),(7,11,47),(7,25,29)}`. Arbitrary
   nonresonance and entry remain open.
+- **Transport extension:** [sparse-contact proof](../05-knowledge/results/synthesis_20260905_lrc_sparse_transport.md) adds star structure, arbitrary-phase intersection closure, weighted limits, and the exact carrier-selector gap.
 - **Residual ranks:** THM-4333/4338 close fixed-pool ranks three/four, not arbitrary entry.
 - **PROVED:** [THM-2928](../01-canon/theorems/THM-2928-critical-seven-comb-grid-tensorization-and-drift-tariff.md)/2941: literal zero/one/two/three-drift sectors are empty; `k=2,3` are finite.
 - **Orthogonal routes.** THM-1017 is HYP-6820; THM-2047/2050 keep phase/exit; THM-731/2048 prune; THM-1290 ends at `55`; HYP-8900 nonuniform.
@@ -148,20 +149,16 @@ and Lucas--Frobenius leaves `Q^p`: **whole-layer preservation**, not atoms.
   These are scoped certificates, not scalar atom separation.  The unbounded
   shared-line/general-norm problem, multiplier access, translated/non-AP
   triples, and the physical endpoint jet remain open.
-- THM-3115--3275 develop partition-Hasse failure/re-entry, reset atoms,
-  carries, PRS charts, selected-root jets, contact flags, and face-blind
-  localization.  THM-3238 closes one `4,319`-state reset bank for `D>=14`, not
-  the physical carrier or other faces.  THM-3286 gives the named-face Helly
-  defect. THM-3732's `F12/F13` graph has `239/568/six-sink`; the raw equal-
-  magnitude relation is empty on 567 edges, non-full on one, and absent on
-  every length-two path.  Identity rows have five full edges and one positive
-  three-edge 12-row corridor, refuting a universal identity no-subatlas claim.
-  Injective upset size plus dynamic root transport preserves that corridor
-  and kills magnitude matching; the core survivor is only an `S`-half without
-  root 17.  The common raw reset relation is terminating and confluent to six
-  normal forms, but 192 states have multiple histories (maximum 840), and the
-  hostile normalizing edge retains neither named-row nor raw-magnitude data.
-  Other gauges/faces, cross-face routing, `FC(3)`, and `SFC(3)` remain OPEN.
+- THM-3115--3275 supply Hasse/reset/PRS and contact data. THM-3238 closes
+  one `4,319`-state bank for `D>=14`, not the physical carrier; THM-3286 gives
+  the named-face Helly defect. THM-3732's fixed `F12/F13` graph has
+  `239/568/six-sink`: raw magnitude is empty on 567 edges, non-full on one,
+  and absent at length two. Identity has five full edges and a three-edge,
+  12-row corridor preserved by upset size/root transport; its core is only
+  an `S`-half without root 17. Reset is confluent to six forms, but 192 states
+  have multiple histories (maximum 840), and normalization loses named-row
+  and magnitude data. Other gauges/faces, cross-face routing, `FC(3)` and
+  `SFC(3)` remain OPEN.
 
 ### Live work
 
@@ -170,6 +167,11 @@ THM-2639.  THM-2101's additive routes are corroborative, not `GMC2Main.gmc2`
 dependencies.  HYP-8931 is vacuous by its empty level set (MISTAKE-240), while
 THM-2070 refutes the general HYP-8890/8895 bypasses.  Transfer
 `seed/selector/preserver/exit` without mistaking a preserver for a seed.
+
+[Trinomial classification](../05-knowledge/results/synthesis_20260905_moments_trinomial.md)
+proves tunability iff `a-AB in <A,B>` and the exact two-carry channel profile.
+THM-1755's bounded-relation claim is refuted (MISTAKE-544); uniform two-rung
+coprimality is OPEN, with FINITE-EXACT gcd evidence on 2,275 collided supports.
 
 ## Tournaments
 
@@ -323,7 +325,7 @@ lift/phase clocks.
   counterexample relative to cited soundness; one-sort completeness remains a
   preprint claim, and no arithmetic/tournament transfer follows.
 - **Integral observers:** THM-4000 compiles consecutive values; THM-4010 gives kernel `(F^k)`, index `product(j!)^(k^2)`, rank `k min(m+1,p)`, and its first positive exponent.
-  THM-4080 gives the full two-jet partition `e*{0,0,1,...,s-1,s+1,...,2s-1}` at one exact scale and every consecutive `p`-primary layer through `n<=p(p-1)`; the `s=p` wall and larger clusters remain **OPEN**.
+  THM-4080 gives the two-jet single-scale partition for `s<p`. The [complete-residue extension](../05-knowledge/results/synthesis_20260905_wildcard_smith_boundary.md) closes `s=p` with an exact one-unit saturation correction, extending consecutive layers through `n<=p^2`. Larger multiscale clusters and higher jets remain **OPEN**.
 - **Even-graph spectrum:** THM-4083 closes `D=3,4`; THM-4084/[4200](../01-canon/theorems/THM-4200-even-graph-four-edge-d5-frustration-firewall.md)
   force any new `D=5` equality/counterexample into `b=0`, frustration `>=5`.
   Full `D=5` is **OPEN** beyond `n=6,7,8` (MISTAKE-496).
@@ -358,8 +360,11 @@ lift/phase clocks.
   THM-4404/4411/4412 identify the fixed-`x` descended-form gap, its collision
   period, and a non-descended suspension. THM-4421 finds a sharp
   `2Z minus 6Z` gap in one integral model but proves it nongeometric: actual
-  transgressions miss the torsion and `C -> C/3` removes it. Moving-graph
-  transgression/entry remain open.
+  transgressions miss the torsion and `C -> C/3` removes it. The
+  [formal triple extension](../05-knowledge/results/synthesis_20260905_transgression.md)
+  integrates compatibility using one `x` compensator and gives a second-order
+  straight-pencil hostile. Polynomial termination, full graph transgression,
+  and entry remain open.
 - **Weyl boundary:** THM-2049 gives a formal beta-adic lift; finite termination remains.
 - **Planar source fibres:** THM-2063/THM-2084--2480 (including
   THM-2371/THM-2376) close the named

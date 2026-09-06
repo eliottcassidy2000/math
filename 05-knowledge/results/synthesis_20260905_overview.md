@@ -15,6 +15,16 @@ That first-order result is inherited in this report. The original shared
 checkout, with extensive unrelated edits, was preserved; the research ran
 in an isolated current worktree.
 
+Integration also read `54bb1c2a0`: THM-4412 supplies the seminormal
+suspension boundary, and THM-4413 closes its named LRC norm-eighteen atlas.
+THM-4414 was still an empty reservation for a related six-separated contact
+proposal; no proof or dependency was taken from that stub. Incoming
+`f79035888` subsequently promoted that same gap-two/flow conclusion as
+THM-4414. It is a concurrent corroborating proof, not another distinct advance.
+The independent prime-wall report in `09c725138` likewise explicitly credits
+this session's already-pushed Smith closure; its precision and dyadic-cluster
+extensions are additional incoming work, with their own audit status.
+
 ## 1. What the repository's strongest mechanisms actually retain
 
 The useful common theme is not that its problems are secretly equivalent.
@@ -192,7 +202,10 @@ prize implication is asserted without an additional map.
 3. **Wildcard: the first multiscale Smith cluster.** At `n=p^2+1`, isolate
    the single overfull residue class and measure the saturation of its new
    derivative directions. Do not extrapolate the one-rank correction to a
-   cluster whose rescaled nodes repeat modulo p.
+   cluster whose rescaled nodes repeat modulo p. The incoming
+   [dyadic three-node analysis](confluent-twojet-prime-wall-synthesis-sep05.md)
+   supplies a candidate for the first `p=2` instance; audit it before repeating
+   that calculation, then address higher primes/more general clusters.
 4. **Formal-local continuation.** Intersect the newly constructed triple
    hypersurface with the actual admissible source-normal coefficient space.
    Ask whether the needed compensator belongs to that space and whether its
@@ -213,4 +226,10 @@ Cross-lane reviews audit proofs and typed consequences as well as rerunning
 code. The inherited global conjectures remain open where marked above.
 The current navigation and affected theorem files point to the new scoped
 results; the false THM-1755 extrapolations retain an explicit correction
-lineage. The evidence manifest records file hashes after the final audit.
+lineage in MISTAKE-544. A stale CORE-PAPERS formal-premise sentence was also
+aligned with the existing `GMC2Main`/`singlePolyCrux_holds` code and current
+canon; this session did not rerun or claim a new Lean build. Several research
+method cards were condensed, retaining their mechanisms, limitations and
+evidence, to keep startup within the repository's documentation budget.
+The [evidence manifest](synthesis_20260905_manifest.json) records file hashes
+after the final audit.

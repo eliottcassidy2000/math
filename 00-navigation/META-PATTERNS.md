@@ -78,6 +78,8 @@ shears erase Laurent constants.
 **Caution/evidence:** nonlinear/singular repairs need `ker(A^*)` and interface
 data; THM-3990/3989/3955/3957 and MISTAKE-480.
 
+**Further evidence:** [2026-09-05 synthesis](../05-knowledge/results/synthesis_20260905_overview.md): derivative rank loses saturation cost; a collision tangent kernel loses quadratic correction.
+
 ## Classify the target over the exceptional stratum before closing by density
 
 **Trigger/action:** before closing a dense-generic result, name the target map
@@ -319,17 +321,23 @@ THM-4029/4030/4031/4032, S79.
 
 ## Type a shared sum as a weighted fiber before transferring it
 
-**Trigger/action:** for two “sums over a kernel,” record `Z(M,A,b,w)=sum_{x in M,Ax=b}w(x)`: monoid, fibre, regularization, weight ring and target. LRC's infinite Fejer/sinc fibre and a GMC moment's finite multinomial/factorial fibre share syntax, not types or quantifiers. Transfer only through a target-preserving map intertwining fibres and weights. **Evidence:** MISTAKE-226/234/235; THM-2059/2330/2334/2337/2340.
+**Action:** type `sum_{x in M,Ax=b}w(x)` by monoid, fibre, regularization,
+weight ring and target. Transfer only by a map preserving fibres and weights;
+LRC's infinite sinc sum is not a finite Wick moment. **Evidence:**
+MISTAKE-226/234/235; THM-2059/2330/2334/2337/2340.
 
 ## Interpolant death, mechanism survival (the first-untested-point law)
 
-**Trigger / action:** before adopting a fitted recurrence, prove a structural sublemma or pre-register and attack its first untested prediction. Short interpolants have many competitors; detrend availability (THM-2447) and distinguish thresholds from closed forms. **Evidence:** S135's 24 breaks/6 survivors; MISTAKE-055; THM-2444/2453/2454, THM-2467, THM-1286, THM-790.
+**Action:** test the first unfit term; prove structure and detrend availability. Thresholds are not formulas. **Evidence:** S135's 24 breaks/6 survivors; MISTAKE-055; THM-2447/2444/2453/2454/2467/1286/790.
 
 ## Normalize repeated-response towers before scalarizing
 
-**Trigger/action:** classify repeated state as fixed/moving jet, transfer, or arithmetic section; when scales stabilize, conjugate to one carrier and compute the first exact valuation, rank, or layer defect. Compare `gr(ker)` with `ker(gr)` and retain transitions/eigenvalue fibres before taking limits or inducting.
+**Action:** classify repeated jets, transfers or arithmetic sections; conjugate
+stable scales to one carrier. Compute the first exact defect and compare
+`gr(ker)` with `ker(gr)` before taking limits.
 
-**Counterindications:** moving boundaries blind fixed banks, and normalization need not preserve the target. Retain integrality/positivity, the first forbidden rank, and the longest lost layer; closeness gives neither termination nor equality rigidity.
+**Boundary:** retain transitions, eigenvalue fibres, integrality and positivity.
+Moving boundaries blind fixed banks; closeness does not imply termination.
 
 **Evidence:** THM-3181/3202/3186/3235/3268/3383/3397/3410--3413/3465/3466; THM-4080's `s=p` wall, THM-4082's exact divergent bit, and THM-4083's missing Hamilton layer.
 
@@ -346,35 +354,39 @@ cubic corner.
 
 ## Refine vertices and lifetimes before quotienting
 
-**Action:** if labels disconnect or faces use different lifts, components, phases, or times, split components and retain transitions, lifetimes, and baseline before quotienting; facewise witnesses need not recenter or cross baseline. Quotient only after good-cover, section, monotonicity, or factorization control. **Evidence:** THM-2658/2672, THM-2983/2985, THM-2984/MISTAKE-334, repaired THM-2991/MISTAKE-335; THM-3381 retains `Delta=hj-mL`, slope, and tree degree, refuting `|h|`-only transfer.
+**Action:** split labels by lift, component, phase and time before quotienting.
+Retain transitions and baseline; local witnesses need not cross it. Require
+section, good-cover or factorization control. **Evidence:** THM-2658/2672/
+2983/2985/2984, MISTAKE-334/335 and repaired THM-2991; THM-3381 needs
+`Delta=hj-mL`, slope and tree degree, not just `|h|`.
 
 ## Pay algebraic rank, then audit the physical action
 
-**Trigger / action:** if a finite response looks compressible, compute its Hankel/circulant rank and minimal carrier, then type the observable, action, positivity, and basepoint. Full rank blocks false compression; a signed inverse still needs a physical realization. **Evidence:** THM-2810/2815 and THM-2835/2839.
+**Action:** before compression, compute response rank; retain action, positivity and basepoint. A signed inverse needs realization. **Evidence:** THM-2810/2815/2835/2839.
 
 ## Dominate product kernels, then exhaust the short histogram core
 
-**Trigger / action:** when a multilayer signed observable factors through a finite nonnegative alphabet, delete inactive symbols, dominate negative responses by one positive mode, bound contraction ratios, and enumerate short histograms. Phases, coupling, zero dominant coordinates, and ratio-one walls can retain carry data. **Evidence:** THM-3107/2159; THM-2418.
+**Action:** delete inactive nonnegative symbols, dominate negatives, then enumerate short histograms. Retain phase, coupling and zero/ratio-one walls. **Evidence:** THM-3107/2159/2418.
 
 ## Audit the positive kernel before lifting through a flat square
 
-**Action:** before deletion, transfer, or a commuting square inducts positivity, compute its positive-carrier kernel; test a negative preimage of zero and whether known positive ghosts span failure. Commutation transports invisibility, not order reflection. A positive left inverse, order-reflecting quotient, or target factorization discharges the audit; otherwise name a transverse selector. **Evidence:** THM-3122, THM-2551, THM-3127.
+**Action:** test negative preimages of zero before transferring positivity. Commutation need not reflect order; require a positive inverse, target factorization or transverse selector. **Evidence:** THM-3122/2551/3127.
 
 ## Price deletion by the atoms it removes
 
-**Trigger/action:** when induction deletes a label or vertex, retain the
-removed-atom support mask before recomputing the child statistic. Sum its
-weights as a defect coordinate; only then test monotonicity, repair, or deck
-transport. **Counterindications:** signed cancellation, moving endpoints, or
-non-atomic quotients may require the full owner/wall incidence, and a
-nonnegative deletion defect is not an equivalence. **Evidence:** THM-4160's
-exact Haar one-deletion repair set system and THM-4167's tagged-OCF deletion
-support moment/parity holonomy.
+**Action:** retain deleted-atom masks and weights before recomputing. Signed or moving carriers may need full owner incidence; nonnegative defect is not an equivalence. **Evidence:** THM-4160's Haar repair and THM-4167's tagged-OCF moments/parity.
 
 ## Audit and close sections under their next native operation
 
-**Action:** apply the next target operation before scalarizing; retain moving labels/cocycles, test observer equality for congruence, and type every sidecar update. Adaptive overflow is honest without a uniform finite observer. Pre-scalar co-support/transition/circuit defects may stop or update the route. Require lawful composition/basepoint; walks are not chronology. **Evidence:** THM-2292/3144/2658/3156/3285--3324/3511/3732/4006.
+**Action:** test the next target operation before scalarizing. Retain moving
+labels, cocycles, co-support and basepoint; observer equality must be a lawful
+congruence. Adaptive state need not be uniformly finite; walks need not be
+chronology. **Evidence:** THM-2292/3144/2658/3156/3285--3324/3511/3732/4006.
 
 ## Exteriorize a commutative response against the lost relation
 
-**Action:** when multiplicative `F_T` forgets join order and marked deletions factor, contract `r(z)(A-A^T)r(w)^T`; close `q=sum r_v`. Rank-one `+J/-J` cross blocks exteriorize first responses. Stop for nonconstant cross blocks, bad deletion laws, target-bearing ties, or contraction kernels; currents need not be injective or chronological. **Evidence:** THM-3369/3372 derive `q`, THM-3377 carries it, and THM-3380's self-converse `ABBA/BAAB` kills both first currents, prompting iteration.
+**Action:** when joins forget order and deletions factor, contract
+`r(z)(A-A^T)r(w)^T` and retain `q=sum r_v`. Rank-one cross blocks permit
+this; nonconstant blocks, ties or contraction kernels may not. Currents need
+not be injective. **Evidence:** THM-3369/3372/3377; THM-3380's `ABBA/BAAB`
+hostile kills both first currents.

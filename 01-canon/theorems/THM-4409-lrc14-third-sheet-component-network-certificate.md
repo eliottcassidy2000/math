@@ -7,7 +7,9 @@ status: >
   components gives a max-flow refinement of THM-4396. At Fejer degree zero it
   is a rational component-length capacity; it closes every primitive distinct
   ternary-unit triple through height 79 and is exact on the equality comb
-  (1,5,11). Universal height, entry, synchronization, and LRC(14) remain OPEN.
+  (1,5,11). The 2026-09-05 extension below proves its degree-zero edge-minimum
+  flow identity at every height. The universal sharp 6/77 inequality, entry,
+  synchronization, and LRC(14) remain OPEN.
 source: root + lrc_defect3_extra_cleanroom / LRC14 continuation session, 2026-09-03
 depends_on:
   - THM-4392-lrc14-raw-carrier-box-spline-fourier-poisson-duality
@@ -203,8 +205,15 @@ w=(1,11,23), pair=(1,11), U_net=12/161,
 ```
 
 Across all `8,730` pair choices, maximum flow equals the sum of edgewise
-minimum capacities. That equality is only **FINITE-EXACT through height 79**;
-no universal interval-graph identity is claimed.
+minimum capacities. This was initially FINITE-EXACT through height 79.
+The [2026-09-05 sparse transport extension](../../05-knowledge/results/synthesis_20260905_lrc_sparse_transport.md)
+now proves it at **every height**: the graphs are star forests and their
+edge minima are simultaneously feasible. More generally, gaps at least twice
+each shore's maximum interval length suffice; finite intersections inherit
+that separation. The extension also identifies the exact raw-lattice roof
+formula and the carrier-dependent selector lost by minimizing after summing.
+It does not prove the universal sharp `6/77` inequality; arbitrary weighted
+flows do not inherit the unweighted identity.
 
 The first strict information-loss hostile in lexicographic order is
 

@@ -1,0 +1,108 @@
+{
+  "date": "2026-09-05",
+  "hash_basis": "raw file bytes",
+  "proof_scope": "See four reports; finite checks are not universal proofs.",
+  "reproduction": "Each script: python3 -B <path>; all six stdout streams independently replayed and matched frozen transcripts.",
+  "files": [
+    {
+      "path": "04-computation/synthesis_20260905_lrc_sparse_transport.py",
+      "sha256": "8faa67e5cb1e713951c5fda82d327068d75dcb9381a35adf0595e8bb9805e2da",
+      "bytes": 10408
+    },
+    {
+      "path": "04-computation/synthesis_20260905_moments_trinomial.py",
+      "sha256": "9b979a778acc1b725a34b4d1417245aab9850c45660a0e6d77db636f7b05653e",
+      "bytes": 7249
+    },
+    {
+      "path": "04-computation/synthesis_20260905_transgression.py",
+      "sha256": "883f6a7d78c83dc27cc8800adb2dd5d57dacf39df310c8810efa9c4a7e801838",
+      "bytes": 7322
+    },
+    {
+      "path": "04-computation/synthesis_20260905_wildcard_moments_audit.py",
+      "sha256": "931fd24457c5dcc8f88c2abf55039e5d914c49a02da630ccd52d1693b6a310c2",
+      "bytes": 3913
+    },
+    {
+      "path": "04-computation/synthesis_20260905_wildcard_smith_boundary.py",
+      "sha256": "5bc8ccd4620d96fc348641ff6e6ed3f700443b7190e1b9b2e53143cbdb02faba",
+      "bytes": 12046
+    },
+    {
+      "path": "04-computation/synthesis_20260905_wildcard_transgression_audit.py",
+      "sha256": "99ec079783ab8327103d2155e0341343611cf914e1456e01d070b96196ad397c",
+      "bytes": 3652
+    },
+    {
+      "path": "05-knowledge/results/synthesis_20260905_lrc_audit_smith_boundary.md",
+      "sha256": "f87f6e609316dbc3782ff350726f66417ab84d9eb619b815f18a9ce13d59bc26",
+      "bytes": 4292
+    },
+    {
+      "path": "05-knowledge/results/synthesis_20260905_lrc_sparse_transport.md",
+      "sha256": "9e0bcfc4aa7043bf50776d33ae3ba5b09a5bcb8ba061803660d3ade9ab2f0966",
+      "bytes": 18116
+    },
+    {
+      "path": "05-knowledge/results/synthesis_20260905_lrc_sparse_transport.out",
+      "sha256": "e23754d48ffb2ad64e0c622b61e33cfb6e1502dc01d0b7c816c0ee4c9551ee1c",
+      "bytes": 1349
+    },
+    {
+      "path": "05-knowledge/results/synthesis_20260905_moments_lrc_audit.md",
+      "sha256": "515472422c40d92f4614beb09465d815a974cfd84a0761f8f261d8cfdc2b0c99",
+      "bytes": 3142
+    },
+    {
+      "path": "05-knowledge/results/synthesis_20260905_moments_trinomial.md",
+      "sha256": "f4367ad290a6313e10f1faff5700b2bf9af517429dfbe30535f05d417f6bc4ba",
+      "bytes": 15880
+    },
+    {
+      "path": "05-knowledge/results/synthesis_20260905_moments_trinomial.out",
+      "sha256": "e21ec48936d5e52b935a68049b1fbcdc13d99f26101e0f6cc6ab52df272d78dd",
+      "bytes": 1069
+    },
+    {
+      "path": "05-knowledge/results/synthesis_20260905_moments_trinomial_optimized.out",
+      "sha256": "e21ec48936d5e52b935a68049b1fbcdc13d99f26101e0f6cc6ab52df272d78dd",
+      "bytes": 1069
+    },
+    {
+      "path": "05-knowledge/results/synthesis_20260905_overview.md",
+      "sha256": "4f078c66360a0978efb7c81a280d95b4b0de46c637f0082766274b1342f0e589",
+      "bytes": 15642
+    },
+    {
+      "path": "05-knowledge/results/synthesis_20260905_transgression.md",
+      "sha256": "0aef0b7698d84e4f4826ee9ab51af58636f9d04510cee3450e40aec0021975ad",
+      "bytes": 10812
+    },
+    {
+      "path": "05-knowledge/results/synthesis_20260905_transgression.out",
+      "sha256": "e8f85c2ad37806376cda07a630d4901801caf33e31f64ea3c7f14c64ddb0c008",
+      "bytes": 1063
+    },
+    {
+      "path": "05-knowledge/results/synthesis_20260905_wildcard_moments_audit.out",
+      "sha256": "7396938c9440a4f332b7f65f89686e1049ecb4f0e324c901188b40f6d831143b",
+      "bytes": 287
+    },
+    {
+      "path": "05-knowledge/results/synthesis_20260905_wildcard_smith_boundary.md",
+      "sha256": "a4bb97f27eafcaed847d8fe73369f4735ee12b08ba1b686c29d2dc036fbb88db",
+      "bytes": 10949
+    },
+    {
+      "path": "05-knowledge/results/synthesis_20260905_wildcard_smith_boundary.out",
+      "sha256": "b5e3ae9d90d6bd116bfcf3d5f9c74e489be37d7f9f9da5302b678a1074aa2285",
+      "bytes": 1053
+    },
+    {
+      "path": "05-knowledge/results/synthesis_20260905_wildcard_transgression_audit.out",
+      "sha256": "fb37a265b61015837807d936ae787f17d295247eb204abd05816d82fec9799c7",
+      "bytes": 649
+    }
+  ]
+}
