@@ -1,0 +1,6 @@
+PASS: independent positive-count enumeration of trinomial classification
+primitive supports: 678 ; collided: 29
+all-level carry tests: k=1,2,3 on every collided support
+shortest-relation family cases: 6
+exact_checks: 1073
+Scope: supports with 1<=a<=12,1<=b<c<=12; six relation controls.

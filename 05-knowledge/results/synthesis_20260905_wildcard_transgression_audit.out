@@ -1,0 +1,16 @@
+constant ('0', '0', '0') c2=-259/9
+quadratic ('0', '0', '0') c2=-102511/144
+constant ('1', '0', '0') c2=-295/9
+quadratic ('1', '0', '0') c2=-105583/144
+constant ('0', '1', '0') c2=-275/9
+quadratic ('0', '1', '0') c2=-95087/144
+constant ('0', '0', '1') c2=-295/9
+quadratic ('0', '0', '1') c2=-110767/144
+constant ('-3', '7', '11') c2=-659/9
+quadratic ('-3', '7', '11') c2=-132143/144
+constant ('17', '-23', '5') c2=-683/9
+quadratic ('17', '-23', '5') c2=-366767/144
+constant ('2/3', '-7/5', '13/11') c2=-16673/495
+quadratic ('2/3', '-7/5', '13/11') c2=-6859033/7920
+PASS: independent literal truncated-ring curvature and determinant
+exact_checks: 70

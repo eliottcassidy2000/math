@@ -1,0 +1,19 @@
+PROVED local first-order gate: 5*h(-1)-18*h(0)+13*h(1)=0
+Endpoint repair matrix rank: 5 ; augmented determinant: -288
+Left-kernel obstruction factor: 4/13
+constant: obstruction=0
+linear hostile: obstruction=8
+quadratic survivor: obstruction=0
+fixed-endpoint vanishing: obstruction=0
+constant first-order (endpoints,C,E): (-2/3, 0, 2/3, 0, 4)
+constant second-order x compensator: -(36*a + 16*b + 36*c + 259)/9
+constant exceptional second-order compensator: 0
+constant exceptional third-order x compensator: 0
+quadratic survivor first-order (endpoints,C,E): (-14/3, 4, 2/3, 12, 16)
+quadratic survivor second-order x compensator: -(3072*a - 7424*b + 8256*c + 102511)/144
+quadratic survivor exceptional second-order compensator: (2695680*alpha**2 - 1684224*alpha - 1089575)/1296
+Single x-compensator formal Jacobian: invertible in characteristic zero
+Two-form response: Lambda(tau_h(dC wedge dE)) = (2/3)*L(h)
+Adding tau_x to the THM-4404 image fills its one-dimensional cokernel;
+every first-order collision-preserving direction still kills Lambda.
+Exact checks: 30

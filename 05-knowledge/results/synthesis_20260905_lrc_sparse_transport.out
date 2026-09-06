@@ -1,0 +1,18 @@
+status=PROVED_ANALYTICALLY report; FINITE_EXACT independent computational checks
+theorem=gap >= 2*maximum component length on each shore makes edge minima feasible
+comb_application=every positive integer speed, arbitrary phases, radius<=1/6, every finite intersection partition
+base_universe=2910 primitive distinct odd ternary-unit triples through 79
+base_min_capacity_exact=1747; target_equalities=1
+sample_universe=deterministic stress probes; count=430; max_height=3419
+sample_target_failures=[]
+sample_max_capacity=(Fraction(171554, 2802163), (581, 635, 689), Fraction(171554, 2802163))
+branching_vertices_checked=4468
+maxflow_independent_controls=4 triples, all 18 sheet/pair choices
+raw_roof_independent_controls=457 triples
+strict_loss_hostile=(1,19,79); capacities=(Fraction(12, 553), Fraction(8, 553), Fraction(184, 10507)); mass=108/10507
+strict_loss_raw_carriers=[((-16, 5, -1), '5/1501', ('3/553', '3/553', '5/1501')), ((-7, 17, -4), '1/553', ('3/553', '1/553', '3/553')), ((7, -17, 4), '1/553', ('3/553', '1/553', '3/553')), ((16, -5, 1), '5/1501', ('3/553', '3/553', '5/1501'))]
+generic_gap_hostile=gap 3/2, edge-min sum 2, maxflow 17/10
+weighted_gap_six_hostile=center 31/500, edge-min sum 31/250
+checks=217719
+rows_sha256=7204bf105e6697efeb548244e0204d38031942e07215b8adc0631bb36fbad5e9
+LRC14=OPEN; all-height sharp 6/77 bound=OPEN
