@@ -71,8 +71,8 @@
     },
     {
       "path": "05-knowledge/results/synthesis_20260905_overview.md",
-      "sha256": "4f078c66360a0978efb7c81a280d95b4b0de46c637f0082766274b1342f0e589",
-      "bytes": 15642
+      "sha256": "c6710ffc659de21d530816e2559e855178791db68e365ee6fba49f289ca7eb78",
+      "bytes": 18378
     },
     {
       "path": "05-knowledge/results/synthesis_20260905_transgression.md",
@@ -103,6 +103,11 @@
       "path": "05-knowledge/results/synthesis_20260905_wildcard_transgression_audit.out",
       "sha256": "fb37a265b61015837807d936ae787f17d295247eb204abd05816d82fec9799c7",
       "bytes": 649
+    },
+    {
+      "path": "05-knowledge/results/synthesis_20260905_incoming_audit.md",
+      "sha256": "0394d6e109dae31e14b5c9fb98c0ac575422a0113fc577b1af3234e3da6969ea",
+      "bytes": 6381
     }
   ]
 }

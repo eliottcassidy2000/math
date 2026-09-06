@@ -141,7 +141,8 @@ existing local CRT decomposition, it extends the complete consecutive-node
 range from `n<=p(p-1)` to `n<=p^2`.
 
 The next boundary is genuinely different: `n=p^2+1` creates a second scale
-inside a residue cluster. Higher jets also need a new saturation analysis.
+inside a residue cluster. The incoming dyadic law, independently accepted
+below, now handles `p=2,n=5`; odd primes and higher jets need further analysis.
 
 ### D. The exceptional triple: formal integration and a second-order failure
 
@@ -199,20 +200,63 @@ prize implication is asserted without an additional map.
    has an inherited mechanism; the two-carry hostile is the first mandatory
    test for any proposed hypergeometric or resultant identity. More support
    enumeration alone does not prove the uniform coefficient claim.
-3. **Wildcard: the first multiscale Smith cluster.** At `n=p^2+1`, isolate
+3. **Wildcard: the first odd-prime multiscale Smith cluster.** At `n=p^2+1`, isolate
    the single overfull residue class and measure the saturation of its new
    derivative directions. Do not extrapolate the one-rank correction to a
    cluster whose rescaled nodes repeat modulo p. The incoming
    [dyadic three-node analysis](confluent-twojet-prime-wall-synthesis-sep05.md)
-   supplies a candidate for the first `p=2` instance; audit it before repeating
-   that calculation, then address higher primes/more general clusters.
+   passed this session's independent proof audit and handles `p=2,n=5`.
+   Address odd primes or later dyadic collision trees next; the explicit
+   `(0,8)->(0,8,16)` hostile rules out an unchanged Smith-prefix recursion.
 4. **Formal-local continuation.** Intersect the newly constructed triple
    hypersurface with the actual admissible source-normal coefficient space.
    Ask whether the needed compensator belongs to that space and whether its
    formal series terminates. The full graph primitive comparison remains a
    separate, now more precisely typed question.
 
-## 5. Evidence and integration
+## 5. Incoming advances and independent follow-on audits
+
+Three concurrent reports changed the portfolio during integration. Their
+proofs were independently reviewed in this session; they remain labelled
+as their authors currently label them, and empty theorem reservations are
+not proof dependencies. Details and scope are saved in the
+[incoming-work audit](synthesis_20260905_incoming_audit.md).
+
+- **Even graphs, PROVED CANDIDATE:** the
+  [D5/D6 cumulative cycle gaps](even-graph-d5-d6-closure-synthesis-sep05.md)
+  have accepted all-order inductions relative to their stated exhaustive
+  finite bases. Among nonbalanced signings, exactly the one-negative-edge
+  switching classes minimize the cumulative negative-cycle count. The
+  useful recovered coordinate is the full vector by cycle length: a
+  negative `k`-cycle appears in exactly `binom(n-k,r-k)` induced `r`-vertex
+  subgraphs. This weighted restriction repairs the long-cycle loss in
+  vertex deletion. It is a connection to the repository's response and
+  deletion methods, with an exact map rather than a scalar analogy.
+- **Width-two moments, CONDITIONAL in the source:** the
+  [parabolic seed bound](nc2-width-two-parabolic-seed-synthesis-sep05.md)
+  passed an independent algebraic and primary-source audit. For
+  `f=z^-2 R(z)`, `R(0)!=0`, `deg R>=3`, its first nonzero return satisfies
+  `m*<=c_R<=s_R<=deg R`, where `s_R` counts distinct roots of `R` and
+  `c_R` counts distinct nonpole critical points of `-R(0)z/R(z)`.
+  The map turns return order into parabolic petal cycles, which need
+  distinct critical points by the cited classical theorem. The overlapping
+  collided trinomial family `(-2,b,2b+2)` with odd `b` is already covered
+  by our free-channel case and THM-2639; the incoming result adds arbitrary
+  support at width two, not a proof of the wider-trinomial two-rung claim.
+- **Integral observers, PROVED CANDIDATE in the source:** the
+  [precision and dyadic extensions](confluent-twojet-prime-wall-synthesis-sep05.md)
+  also passed independent proof review. The largest Smith exponent gives
+  sharp coefficient-recovery precision, and independent rectangular grids
+  have all exponent sums. The all-depth three-node dyadic formula gives
+  the consecutive `p=2,n=5` partition
+  `(0,0,0,0,2,2,2,2,5,7)`. Coupled grids or same-residue subsets cannot
+  inherit the tensor or CRT conclusion without their source lattice.
+
+These additions are credited to incoming work. They are not counted again
+among this session's four advances, and their reserved canon stubs have not
+been promoted here.
+
+## 6. Evidence and integration
 
 The four main companions and an independent literal transgression audit are
 saved under `04-computation/synthesis_20260905_*`, with matching outputs here.
