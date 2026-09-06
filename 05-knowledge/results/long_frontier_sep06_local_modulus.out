@@ -1,0 +1,6 @@
+IDENTITY |M-Delta/3|<=2Delta^(3/2)/sqrt(3)+Delta^2; all actual finite lists
+LOCAL Delta<=1/256 implies Delta/4<=M<=5Delta/12
+SHARP minimizing-sequence liminf gap/Delta>=A; liminf gap/M>=3A; equal-three family attains both
+EQUALITY convergence to sharp ratios iff h=o(m); liminf equality alone does not imply full-sequence equality
+SCOPE sharp local asymptotic moduli; globally optimal modulus remains OPEN
+PASS explicit_gates=15 semantic_sha256=8bc555dee04e5483a9798da2d28b7642965a588e2f4670d092e7de67675f38f8

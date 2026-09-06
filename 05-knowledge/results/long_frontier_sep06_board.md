@@ -13,15 +13,17 @@ The [previous board](open_frontier_sep06_board.md) routes the audited
 sharp-constant closure, component envelope, cross-divisor criteria and
 their actual5+8 hostile, linear-anchor cancellation and quadratic repair.
 Current canon and explicit corrections outrank that board's history.
-The initial geometric paper remains a source of research-method analogy;
-no geometric theorem has been transported into these arithmetic problems.
+The initial [Heule--Scheucher empty-hexagon paper](https://arxiv.org/abs/2403.00737)
+remains a source of research-method analogy: faithful finite encodings and
+complete certificates. No geometric theorem has been transported into
+these arithmetic problems.
 
 | Lane / object | Closest mechanism, hostile and corrected near miss | Retained sidecar and next decisive test |
 |---|---|---|
-| Anchor: actual LRC phase packets | The new denominator23 bank closes mixed unitless6+7 cases;5+8 and6+7 actual entries refute scalar forcing | Keep both actual safe packets and the affine offset; prove a new residue/phase family or expose the exact obstruction |
-| Niche: two-anchor Laurent model | e4>1/100 and a uniform effective negative tail are proved; the linear-anchor family is an exact cancellation hostile | Eliminate e5 at the original P-root, retaining every carried term and both interlacers; seek full finite-phase sign or exact hostile |
-| Niche: actual endpoint39 | The complete carried quotient closes endpoint33; phase-square cones can miss actual amplitudes | Use literal count fibres and characteristic coefficients to test a uniform endpoint39 theorem, not a relaxed model |
-| Wildcard: near-minimizing signed roots | THM-4454 proves sharp K3; a formal two-atom zero and the one-atom energy boundary are hostile to compactness shortcuts | Preserve the quotient denominator and signed dust; classify all sequences approaching K3 or find another limiting family |
+| Anchor: actual LRC phase packets | The fifth-clock word closes384061 unitless5+8 scales; an incoming actual6+7 pair has different located joins with identical profiles | Retain both packets and signed offsets; seek adaptive component/clock choice beyond the proved families |
+| Niche: two-anchor Laurent model | Smallest branch and tail>=75000 are closed; all nonnegative-root four-anchor shapes are closed | Certify an explicit rectangle around(e3,e4)=(84,35), keeping the original zero and full response; general remaining phases lie in(1/80,75000) |
+| Niche: actual all-channel return | Incoming exact families reach endpoint63; qualitative beta-step propagation has two exact model hostiles | Preserve interior factorial amplitudes or prove a coupled inequality; another endpoint table alone is not the next target |
+| Wildcard: finite-length and global rigidity | THM-4455/4456 close all minimizers and sharp1/N order; one-atom hostiles defeat the all-N bound at N4,5 | Global optimal modulus and the all-N>=6 question remain; keep competing singular boundaries and distinguish sharp-ratio convergence from a liminf |
 | Bridge: exact boundary data | Cross-divisor and component lengths lose phase placement; linear anchoring loses higher coefficients | State the source, map, target predicate, lost coordinate and decisive control before claiming any transfer |
 | Process: incoming consequences | Other sessions sharpened the preceding results within minutes | Fetch at coherent checkpoints; search statement/constants and replace subsumed targets before another computation |
 
@@ -101,7 +103,10 @@ and its frozen evidence remain preserved.
   asymptotically uniform dust in both square norm and first norm.
   Producer117 and full independent audit pass; the reservation is
   promoted. Fixed-N equality and an all-N coefficient inequality do
-  not follow; a separate one-atom-boundary hostile is under audit.
+  do not follow. The [independently audited finite-length hostile](long_frontier_sep06_finite_dimension.md)
+  refutes N(R-K3)>=C at N4 and5, and finite-N optimality of the equal-three
+  family at N4 through7 within the declared controls. N>=6 for the proposed
+  coefficient inequality remains open; no global optimizer is claimed.
 
 - **PROVED** [all-root four-anchor sign](long_frontier_sep06_residue_tail.md)
   and [exact admissible domains](long_frontier_sep06_fibre_domain.md):
@@ -114,6 +119,49 @@ and its frozen evidence remain preserved.
   independent audits pass. Only f1 is identified with the inherited
   actual factorial row; the rest are model coefficients.
 
+- **PROVED / REFUTED / FINITE-EXACT, independently audited:**
+  [all-channel integration step](long_frontier_sep06_allh.md) gives exact
+  first/doubled beta integrations, including the lower carry. Two explicit
+  coefficient models refute qualitative same-root sign propagation even
+  with correct carry/top anchors, strict negative-root geometry and the
+  exact step; one retains both primitive masses7 and8. The interior actual
+  factorial amplitudes are missing. Eight genuine fixed-row controls keep
+  the correct sign. No genuine Laurent counterexample is claimed.
+
+## Incoming integration at the first long checkpoint
+
+Fetched commits3f8be74da7 and1b58b515ef extend the current frontier. Root
+read their complete [synthesis](continuing3_20260906_synthesis.md), theorem
+statements and new correction entries before integrating:
+
+- [Actual endpoint families](continuing3_20260906_laurent_endpoints.md)
+  now include39,45,51,57,63. The incoming39 certificate agrees with this
+  session's independent certificate; the new maximum is63 for the stated
+  five progression families, not arbitrary supports of width<=63. Further
+  endpoint tables alone are no longer a useful next target.
+- [Finite-phase bounds](continuing3_20260906_laurent_finite_phase.md)
+  prove the smallest branch without interlacers, with sQ<-400 on a larger
+  containing box, and reduce the two-interlacer tail threshold to75000.
+  This supersedes the first-branch sign scope and118163898523 threshold;
+  this session's C/D residue envelopes remain distinct useful constraints.
+  General unresolved phases are confined to(1/80,75000). A Newton-plus-
+  first-rooted hostile loses the B real-rootedness predicate.
+- [Moment and entire-product characterization](continuing3_20260906_stability_near_minimizers.md)
+  independently recovers THM-4455 and adds M=p4-2p3/sqrt3+1/3 and the
+  limiting entire product (1+s/sqrt3)^3 exp((1-sqrt3)s). These additions
+  connect directly to THM-4456's local mass/splitting expansion. The
+  [sharp local modulus corollary](long_frontier_sep06_local_modulus.md)
+  is now independently audited: liminf(R-K3)/Delta3>=A=4.053382428...,
+  liminf(R-K3)/M>=3A, both sharp. The exact global remainder bound is
+  |M-Delta3/3|<=2Delta3^(3/2)/sqrt3+Delta3^2. Sharp-ratio convergence
+  requires h=o(m); a liminf equality alone does not. Global optimal
+  moduli remain open. All15 exact gates and independent replay pass.
+- [Located packet obstruction](continuing3_20260906_lrc_packet_obstruction.md)
+  keeps actual6+7 equality and all profiles while scales412164 and412183
+  change the first physical safe denominator from29 to31. The larger-unit
+  theorem already makes the family safe. It is a structural counterpart
+  to this session's positive fifth-clock word, not a new safety closure.
+
 ## Next research state
 
 The sharp constant, all minimizing sequences and first finite-length
@@ -121,7 +169,8 @@ order are closed in the specified signed-root problem. The next cheap
 test is an explicit rational rectangle in(e3,e4) around(84,35): retain
 the same original-root elimination, complete response and phase intervals,
 and certify all coefficients over that rectangle. For actual Laurent
-rows, a generic integration recurrence must retain the interior factorial
+rows beyond the incoming endpoint63 families, an integration recurrence
+must retain the interior factorial
 amplitudes; matching only the carry and leading coefficient is insufficient.
 For LRC, use the actual translated packet and offset information; the
 new safe scale family does not close arbitrary two-component entries.
