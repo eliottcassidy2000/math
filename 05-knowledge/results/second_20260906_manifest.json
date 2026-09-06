@@ -41,8 +41,8 @@
     },
     {
       "path": "05-knowledge/results/second_20260906_decoder.md",
-      "sha256": "3bd6e7c5bd2f4c16c2c1e11b8f89b8228a42a5ecac0a722eb0d10ef16537df9b",
-      "bytes": 12838
+      "sha256": "0788ad08f3fac368d297e10e23c6b711c759dfc4d091de11b14f51719321352b",
+      "bytes": 13537
     },
     {
       "path": "05-knowledge/results/second_20260906_decoder.out",
@@ -51,8 +51,8 @@
     },
     {
       "path": "05-knowledge/results/second_20260906_entry.md",
-      "sha256": "00f41d0d1cee94bb698dd080e31110d16873746a6caeaa33e810cc6694a57e8c",
-      "bytes": 11608
+      "sha256": "5fb5c45bdc1a465981f969456f81ad96358327d17e8ad0f785168048477a166b",
+      "bytes": 13365
     },
     {
       "path": "05-knowledge/results/second_20260906_entry.out",
@@ -61,8 +61,8 @@
     },
     {
       "path": "05-knowledge/results/second_20260906_entry_audit.md",
-      "sha256": "df9360e740a735931e7768be51ca24162a5b0f73d5551e47cebd92b5c9821dca",
-      "bytes": 7232
+      "sha256": "1bb7289ec3e8f102ba41a7a0569321ca785ea0a6ffa5aa68a6f774e2b0e332fa",
+      "bytes": 8474
     },
     {
       "path": "05-knowledge/results/second_20260906_entry_audit.out",
@@ -96,13 +96,13 @@
     },
     {
       "path": "05-knowledge/results/second_20260906_overview.md",
-      "sha256": "2e2061939a8b7b32717857de814dd19e1662c676ffa6899ebcbf972cd4dd30ea",
-      "bytes": 11563
+      "sha256": "440a516c565674275b87804773a4d85e8784b79ad87efde4bdc5574f5a7d98dc",
+      "bytes": 12719
     },
     {
       "path": "05-knowledge/results/second_20260906_root_audit.md",
-      "sha256": "8b6ecc5f07923825b3d9949c4853f0895b5da9e2a3b51c575764658803125de3",
-      "bytes": 5466
+      "sha256": "a98b43828fa760c322a3dd2499ef44f427a2b89e7f9920d04c1cacf1912193f7",
+      "bytes": 5970
     },
     {
       "path": "05-knowledge/results/second_20260906_root_audit.out",
@@ -144,5 +144,11 @@
     "root_seven_subsets": 3432,
     "laurent_exact_characteristic_coefficients": 155,
     "documentation": "agents/check_docs.py PASS before final checkpoint"
-  }
+  },
+  "incoming_integrated": "8e560f2142fe001cbc390265d791e81b27162772",
+  "incoming_consequences": [
+    "Leaf cofactor cutoffs also apply to D/gcd(D,min V) by the incoming cross-divisor criterion; native formula overlap credited.",
+    "Balanced actual entries refute the proposed forced cross-divisor score, since lcm(D,v)>=min V>3Q/28.",
+    "Incoming anchored Laurent model obstruction does not alter the actual endpoint33 coefficient theorem."
+  ]
 }

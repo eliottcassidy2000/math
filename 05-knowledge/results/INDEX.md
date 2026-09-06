@@ -3,13 +3,15 @@
 - [Three proved continuations and an actual balanced obstruction](second_20260906_overview.md):
   **PROVED + FINITE-EXACT + INDEPENDENTLY AUDITED.** [Leaf cofactors and nonunit entry](second_20260906_entry.md)
   extend five unbalanced decoder types to explicit maximum-endpoint gcd subclasses,
-  with new cutoffs 698294,4854,26 for 3+10,4+9,5+8 (2+11 is inherited).
+  with new cutoffs 698294,4854,26 for 3+10,4+9,5+8, also after incoming
+  cross-divisor cancellation (2+11 is inherited).
   [Endpoint33](second_20260906_laurent.md) has first nonzero moment g or 2g
   for every allowed g and nonzero complex coefficients; all 155 characteristic
   coefficients are independently reconstructed. [Mixed(2,2,1)](second_20260906_smith.md)
   gives every projective Smith factor and the single active intrinsic dyadic bit.
   [Balanced actual entries](second_20260906_decoder.md) pass every retained
-  gcd profile yet fail all maximum-endpoint native gates; they are explicitly safe.
+  gcd profile yet fail all maximum-endpoint native gates and the incoming
+  forced cross-divisor score; they are explicitly safe.
   [Manifest](second_20260906_manifest.json) freezes all proof and audit artifacts.
   LRC14, general Laurent returns and general higher-jet partitions remain OPEN.
 

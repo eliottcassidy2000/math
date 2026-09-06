@@ -122,3 +122,23 @@ Both runs pass **207,160 always-active gates**, with byte-identical LF
 `68bb61eb1f4f7ae8065075ea9ab26c6e61f97a57c57be2b77daa6052a32de1cb`.
 Output SHA256:
 `8f36195a7d3c6fb8a39be07c522e1c2dd0e72cfd8140d13f6b84d837a7dc1ed0`.
+
+## Incoming cross-divisor integration — independent acceptance
+
+**PASS.** I read the complete independently audited incoming
+[open_frontier_sep06_decoder.md](open_frontier_sep06_decoder.md) at
+`origin/main` commit `8e560f2142` through `git show`, including its native
+and cross-divisor proofs. Its native criterion overlaps the present entry
+mechanism; the leaf-cofactor bound is the additional input here. Taking
+`v=min V`, `d=gcd(D,v)`, and `H=D/d`, one has `d|delta` and exactly
+`lcm(D,v)=Hv`. Every numerical cutoff in the present table is therefore
+sufficient for **H**, under the same actual-entry hypotheses: if `M_a` is
+the proved bound on `min V`, the table ensures `C_b H<=Q` and
+`H v<=H M_a<=aQ/[7(b+1)]`, which are precisely the incoming cross-divisor
+conditions. The original cutoffs on `D` remain valid weaker subclasses
+because `H<=D`. This combination preserves the inherited weak conclusion
+when `g>C_b` and the strict construction in the remaining branch. The two
+balanced controls have `d=1` for all six endpoint partners, so this incoming
+cancellation does not change their recorded failures. This is an analytic
+integration check; the frozen independent computation and its stated finite
+universe above are unchanged.

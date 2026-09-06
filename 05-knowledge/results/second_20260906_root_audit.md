@@ -81,6 +81,14 @@ checks every rational numerator at denominators 2,...,22 and all odd
 sixteenth phases in the mixed row. These are failures of specified
 sufficient certificates, not counterexamples to safety.
 
+The incoming cross-divisor criterion in `8e560f2142` asks for
+`lcm(D,v)<=3Q/28` at this split. Since every smaller label is already above
+that threshold, `lcm(D,v)>=v` rules out its score for every choice, including
+shared-factor cancellation. The independently verified actual box, full
+entry and subset profiles therefore refute the proposed implication that
+those data always force a qualifying score. This additional consequence
+uses no unverified search or assumption about which pair is selected.
+
 ## Reproduction
 
 ```bash

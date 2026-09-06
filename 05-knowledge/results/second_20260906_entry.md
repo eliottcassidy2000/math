@@ -183,6 +183,44 @@ three rows. The leaf calculation strengthens them to `698294,4854,26`.
 
 ## 4. Actual controls and boundaries
 
+### Incoming cross-divisor strengthening
+
+Concurrent commit `8e560f2142` supplies the audited
+[cross-component divisor criterion](open_frontier_sep06_decoder.md), Sections
+2--3. Its native formula overlaps Theorem 2 and also permits a selected pair
+away from the maximum, while retaining the full maximum in the phase bound.
+That native mechanism is therefore credited as concurrent overlapping work.
+The leaf-cofactor inequality and its sharper numerical bounds are the
+additional input here.
+
+**Corollary 4.** Every numerical gcd cutoff in the table remains sufficient
+after replacing D by
+
+    H=D/gcd(D,min V).
+
+Indeed put `v=min V` and `d=gcd(D,v)`. The divisor d divides delta, so
+`c<=C_b D/d=C_b H` in the remaining gcd branch, and (3) gives
+`t>Q L/(H v)`. Equivalently, the incoming conditions are
+`C_b H<=Q` and `lcm(D,v)=Hv<=aQ/[7(b+1)]`. Each table cutoff pays both by
+the same proved bound on min V. Thus the original D-cutoffs are valid
+weaker subclasses, and the sharper cancellation form is an immediate
+combination of the two independently audited mechanisms. The
+[independent entry audit](second_20260906_entry_audit.md) accepts this combination.
+
+The [balanced actual hostile](second_20260906_decoder.md) also settles the
+incoming question of whether actual equality, height and all retained
+profiles always force a qualifying cross-divisor score: **they do not**.
+For every smaller label v and every maximum-endpoint gcd D, even allowing
+all shared-factor cancellation,
+
+    lcm(D,v) >= v >= min V > 3Q/28.
+
+This fails the balanced score's second condition for every choice. It is
+a refutation of that sufficient-score implication, with an explicit safe
+physical row, not a refutation of safety or of the criterion.
+
+### Actual controls
+
 The standalone exact certificate gives all six actual split types
 with a unit-free larger shape. The common nested larger bank is
 

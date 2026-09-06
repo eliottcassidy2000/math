@@ -31,6 +31,13 @@ has sufficiently small gcd D:
 | 4+9 | `D<=4,854` | New subclass; crude substitution gave 725 |
 | 5+8 | `D<=26` | New subclass; crude substitution gave 2 |
 
+After integrating concurrent commit `8e560f2142`, every table cutoff also
+applies to the stronger quotient `H=D/gcd(D,min V)`. The incoming
+[cross-divisor theorem](open_frontier_sep06_decoder.md) supplies the cancellation;
+our leaf bound supplies the improved constants. Its native entry formula
+overlaps this session's formula and is credited as concurrent work. The
+table's literal D-cutoffs remain valid weaker subclasses.
+
 The conclusion is an actual full-row phase with clearance at least `1/14`,
 relative to the named inherited proper-component LRC and gcd suppliers.
 Strict clearance is proved in the constructive scale branch. There are six
@@ -141,6 +148,17 @@ exclusion, box, and seven-subset gcds are independently reconstructed in
 the [root audit](second_20260906_root_audit.md). Thus retaining more of the
 same gcd profile cannot by itself prove the failed sufficient inequalities.
 A new phase argument could still certify these rows and the residual class.
+
+This answers the incoming [decoder score question](open_frontier_sep06_board.md)
+negatively in the balanced case: actual equality, physical height and all
+retained profiles do not force a qualifying cross-divisor score. For every
+smaller label v and every endpoint gcd D, `lcm(D,v)>=v>=min V>3Q/28`,
+so no shared-factor cancellation can pay that score. This is an exact
+obstruction to the proposed forced-score implication, not a negative answer
+to LRC(14). The incoming [linearly anchored Laurent obstruction](open_frontier_sep06_laurent.md)
+independently reinforces the normalization boundary: its genuine first
+coefficients still permit model cancellation, whereas the endpoint33 proof
+retains the entire actual carried row.
 
 ## 5. Connection board and remaining decisive tests
 

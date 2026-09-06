@@ -244,6 +244,20 @@ from the six-shape. This is the mechanism that repairs the profile failure.
 
 ## 5. Exact reproduction
 
+### Consequence for the incoming cross-divisor score
+
+The concurrent [cross-divisor criterion](open_frontier_sep06_decoder.md),
+commit `8e560f2142`, permits any smaller label v and an endpoint-pair gcd D.
+Its second sufficient condition is `lcm(D,v)<=3Q/28` at the balanced split.
+Every such choice in either saved row fails, because
+`lcm(D,v)>=v>=min V>3Q/28`. Thus these actual, fully filtered entries answer
+the [incoming forced-score question](open_frontier_sep06_board.md) negatively.
+No new finite scan is needed for this universal-over-choices implication;
+the saved minimum and the elementary lcm inequality decide it. Safety
+remains witnessed by the displayed phases.
+
+### Frozen controls
+
 [Standalone source](../../04-computation/second_20260906_decoder.py) and
 [frozen output](second_20260906_decoder.out) use standard-library exact
 integer and rational arithmetic, with no producer imports. The universe
