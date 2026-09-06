@@ -1,0 +1,29 @@
+LRC14_GENERAL_SHORE_ATTACHMENT_THM4448_PRIMARY
+STATUS=FINITE_EXACT_SUPPORT_FOR_PROVED_ATTACHMENT;LRC14_OPEN
+tail=(1, 5, 11) failure_components=((Fraction(25, 154), Fraction(31, 154), (0, 1, 2)), (Fraction(123, 154), Fraction(129, 154), (2, 1, 0))) measure=6/77
+  interval=(25/154,31/154) owners=(0, 1, 2) left=((11, 2, 'enter'),) right=((11, 2, 'exit'),)
+  interval=(123/154,129/154) owners=(2, 1, 0) left=((11, 9, 'enter'),) right=((11, 9, 'exit'),)
+tail=(2, 11, 20) failure_components=((Fraction(5, 56), Fraction(3, 28), (0, 1, 2)), (Fraction(123, 280), Fraction(129, 280), (1, 2, 0)), (Fraction(151, 280), Fraction(157, 280), (1, 0, 2)), (Fraction(25, 28), Fraction(51, 56), (2, 1, 0))) measure=11/140
+  interval=(5/56,3/28) owners=(0, 1, 2) left=((20, 2, 'enter'),) right=((2, 0, 'exit'),)
+  interval=(123/280,129/280) owners=(1, 2, 0) left=((20, 9, 'enter'),) right=((20, 9, 'exit'),)
+  interval=(151/280,157/280) owners=(1, 0, 2) left=((20, 11, 'enter'),) right=((20, 11, 'exit'),)
+  interval=(25/28,51/56) owners=(2, 1, 0) left=((2, 2, 'enter'),) right=((20, 18, 'exit'),)
+decoder_pairs=5855 sharp_pair_danger_gap=(Fraction(29, 196), 1, 28) unique=True
+all_coprime_pairs=19314 sharp_unfiltered_gap=(Fraction(15, 98), 1, 14) unique=True
+scope_guard=29/196_requires_THM3818_inert_sum_decoder_filter
+unfiltered_cone_integer=7*h>=45*M_A and 7*h>=15*maxT
+uniform_cone=2*h*rho>=29/196;rho=min(1/(84*M_A),1/(28*maxT))
+uniform_cone_integer=14*h>=87*M_A and 14*h>=29*maxT
+HEAD tail=(1, 5, 11)
+  H=13 counts={'bodies': 286, 'containments': 0, 'components': 4904, 'literal_rows': 286, 'scalar_low': 12} max_low_kappa=(7, (1, 3, 4, 7, 8, 9, 10, 11, 12, 13), (7, 13)) min_escape=(Fraction(13324, 315315), (1, 2, 3, 4, 5, 7, 8, 9, 11, 13), (0, Fraction(1, 14), Fraction(1, 14), Fraction(1, 14), (1, 2))) max_overlap=(Fraction(18, 385), (1, 2, 3, 4, 5, 7, 8, 9, 10, 13))
+  H=14 counts={'bodies': 1001, 'containments': 0, 'components': 18412, 'literal_rows': 286, 'scalar_low': 12} max_low_kappa=(7, (1, 3, 4, 7, 8, 9, 10, 11, 12, 13), (7, 13)) min_escape=(Fraction(13324, 315315), (1, 2, 3, 4, 5, 7, 8, 9, 11, 13), (0, Fraction(1, 14), Fraction(1, 14), Fraction(1, 14), (1, 2))) max_overlap=(Fraction(47, 770), (1, 2, 3, 4, 7, 8, 9, 10, 13, 14))
+  H=16 counts={'bodies': 8008, 'containments': 0, 'components': 181038, 'literal_rows': 286, 'scalar_low': 15} max_low_kappa=(7, (1, 3, 4, 7, 9, 10, 11, 12, 13, 16), (7, 13)) min_escape=(Fraction(13324, 315315), (1, 2, 3, 4, 5, 7, 8, 9, 11, 13), (0, Fraction(1, 14), Fraction(1, 14), Fraction(1, 14), (1, 2))) max_overlap=(Fraction(76, 1155), (1, 2, 3, 4, 7, 8, 9, 13, 14, 15))
+  H=18 counts={'bodies': 43758, 'containments': 0, 'components': 1127280, 'literal_rows': 286, 'scalar_low': 44} max_low_kappa=(7, (1, 5, 6, 7, 8, 9, 10, 11, 13, 17), (7, 13)) min_escape=(Fraction(13324, 315315), (1, 2, 3, 4, 5, 7, 8, 9, 11, 13), (0, Fraction(1, 14), Fraction(1, 14), Fraction(1, 14), (1, 2))) max_overlap=(Fraction(76, 1155), (1, 2, 3, 4, 7, 8, 9, 13, 14, 15))
+HEAD tail=(2, 11, 20)
+  H=13 counts={'bodies': 286, 'containments': 0, 'components': 4904, 'literal_rows': 286, 'scalar_low': 13} max_low_kappa=(7, (1, 3, 5, 6, 7, 8, 9, 10, 11, 13), (7, 13)) min_escape=(Fraction(3779, 84084), (1, 2, 3, 5, 7, 8, 9, 11, 12, 13), (0, Fraction(1, 14), Fraction(1, 14), Fraction(1, 14), (1, 2))) max_overlap=(Fraction(9, 130), (1, 2, 3, 4, 5, 6, 7, 8, 12, 13))
+  H=14 counts={'bodies': 1001, 'containments': 0, 'components': 18412, 'literal_rows': 286, 'scalar_low': 13} max_low_kappa=(7, (1, 3, 5, 6, 7, 8, 9, 10, 11, 13), (7, 13)) min_escape=(Fraction(3779, 84084), (1, 2, 3, 5, 7, 8, 9, 11, 12, 13), (0, Fraction(1, 14), Fraction(1, 14), Fraction(1, 14), (1, 2))) max_overlap=(Fraction(11, 140), (1, 2, 3, 4, 5, 6, 7, 8, 12, 14))
+  H=16 counts={'bodies': 8008, 'containments': 0, 'components': 181038, 'literal_rows': 286, 'scalar_low': 18} max_low_kappa=(7, (1, 3, 5, 6, 7, 8, 9, 10, 11, 13), (7, 13)) min_escape=(Fraction(3779, 84084), (1, 2, 3, 5, 7, 8, 9, 11, 12, 13), (0, Fraction(1, 14), Fraction(1, 14), Fraction(1, 14), (1, 2))) max_overlap=(Fraction(11, 140), (2, 3, 4, 5, 6, 7, 8, 12, 14, 15))
+  H=18 counts={'bodies': 43758, 'containments': 0, 'components': 1127280, 'literal_rows': 286, 'scalar_low': 47} max_low_kappa=(7, (1, 5, 6, 7, 8, 9, 10, 11, 13, 17), (7, 13)) min_escape=(Fraction(3779, 84084), (1, 2, 3, 5, 7, 8, 9, 11, 12, 13), (0, Fraction(1, 14), Fraction(1, 14), Fraction(1, 14), (1, 2))) max_overlap=(Fraction(11, 140), (3, 4, 5, 6, 7, 8, 12, 14, 15, 17))
+equality_overlap_controls=(((1, 5, 11), (1, 2, 3, 4, 7, 8, 9, 13, 14, 19), Fraction(6, 77), False), ((2, 11, 20), (1, 2, 3, 4, 5, 6, 7, 8, 12, 14), Fraction(11, 140), False))
+hostile_component_controls=[((1, 5, 11), 53, Fraction(2, 11), Fraction(3, 154), 53), ((2, 11, 20), 121, Fraction(1, 10), Fraction(1, 140), 121)]
+CONCLUSION=EXACT_ADDRESS_CRITERION;SHARP_DECODER_GAP_CONE;PREDETERMINED_COMPONENT_REFUTED_COFINALLY

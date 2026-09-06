@@ -1,0 +1,14 @@
+LRC14_GENERAL_SHORE_ATTACHMENT_THM4448_INDEPENDENT
+STATUS=FINITE_EXACT_REPLAY_PLUS_EXACT_STRUCTURAL_CONTROLS;LRC14_OPEN
+tail=(1, 5, 11) cells=((Fraction(25, 154), Fraction(31, 154), (0, 1, 2)), (Fraction(123, 154), Fraction(129, 154), (2, 1, 0))) mass=6/77
+tail=(2, 11, 20) cells=((Fraction(5, 56), Fraction(3, 28), (0, 1, 2)), (Fraction(123, 280), Fraction(129, 280), (1, 2, 0)), (Fraction(151, 280), Fraction(157, 280), (1, 0, 2)), (Fraction(25, 28), Fraction(51, 56), (2, 1, 0))) mass=11/140
+strict_touch_control=(1,13) singleton_good=((Fraction(1, 14), Fraction(1, 14)), (Fraction(13, 14), Fraction(13, 14))) strict_gap=1/7 closed_merge_spurious=15/91
+full_failure_overlap_control=T(1, 5, 11) body=(1, 2, 3, 4, 7, 8, 9, 13, 14, 19) overlap=6/77
+full_failure_overlap_control=T(2, 11, 20) body=(1, 2, 3, 4, 5, 6, 7, 8, 12, 14) overlap=11/140
+unfiltered_pairs=19314 max=15/98 leaders=[(1, 14)]
+decoder_filtered_pairs=5855 max=29/196 leaders=[(1, 28)]
+decoder_seam_scope=46837_positive_scale_triples_plus_5855_scale_one_equals_52692
+general_r_margin_and_pullback_scale_tests=45 r=1..9 h=1..5
+nonunit_tail_control=T(3, 6, 9) distinct_base_speeds=8 rho=1/672 local_branch_endpoints_safe=True
+hostile_progressions=(((1, 5, 11), 53, 2310, Fraction(2, 11), Fraction(3, 154)), ((2, 11, 20), 121, 210, Fraction(1, 10), Fraction(1, 140))) sampled_k=(0,1,2,17,199) exact=True
+CONCLUSION=INDEPENDENT_CHECKS_PASS;GENERAL_ATTACHMENT_TYPED;LRC14_OPEN

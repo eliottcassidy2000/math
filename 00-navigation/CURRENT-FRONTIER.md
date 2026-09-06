@@ -43,13 +43,15 @@ gives square sum `<=195`; THM-4019 refutes its sharp arbitrary-lattice target.
   ray, parity-sheet and component-count data; none supplies safety or arrival.
 - **Seam/entry:** THM-4326/4329 close the fixed chart; 4330 leaves `2+12`;
   4347 closes height 40. Arbitrary entry and synchronization remain open.
-- **Pack/tail frontier (PROVED + CITED):** THM-4441/4444/4445 classify
-  low tail circuits, leaving `(1,4,5)`, `(2,11,20)`, and boundary
-  `(1,5,11)`. [THM-4447](../01-canon/theorems/THM-4447-lrc14-composite-clock-capacity-and-small-clock-reduction.md)
-  gives exact clock capacity: arbitrary-tail ten-pack clocks `c>=5` close;
-  only typed `c=2,3,4` remain. THM-4442/[4446](../01-canon/theorems/THM-4446-lrc14-primitive-ten-pack-descent-and-dilation-rays.md)
-  close bounded scale-three bodies/rays; a live pack is gcd-one with cross
-  height above `91^6`. Address entry remains open.
+- **Pack/tail frontier (PROVED + CITED):** THM-4441/4444/4445 leave
+  `(1,4,5)`, `(2,11,20)` and boundary `(1,5,11)`.
+  [THM-4447](../01-canon/theorems/THM-4447-lrc14-composite-clock-capacity-and-small-clock-reduction.md)
+  closes clocks `c>=5` and leaves typed `c=2,3,4`.
+  [THM-4448](../01-canon/theorems/THM-4448-lrc14-general-shore-attachment-and-decoder-pair-cones.md)
+  gives cone `14h>=87 max A,29 max T`.
+  THM-4442/[4446](../01-canon/theorems/THM-4446-lrc14-primitive-ten-pack-descent-and-dilation-rays.md)
+  force gcd-one packs with cross height `>91^6`; its hostiles
+  refute prescribed-component selection. Opposite-scale entry remains open.
 - **Transport/incidence:** [overnight synthesis](../05-knowledge/results/overnight_20260906_synthesis.md)
   retains cap, midpoint and owner-line refinements. The
   [sparse proof](../05-knowledge/results/synthesis_20260905_lrc_sparse_transport.md)

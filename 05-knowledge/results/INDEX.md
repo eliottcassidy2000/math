@@ -10,6 +10,14 @@
   `limsup n sup P(no-three-line)<=10`. The [ninth source period](overnight8_20260906_jc_collision_period.md)
   preserves the J8 obstruction under every contact-preserving O(t9) map.
   [Manifest](overnight8_20260906_manifest.json): 24 frozen artifacts.
+- [THM-4448: general shore attachment and decoder-pair cones](../../01-canon/theorems/THM-4448-lrc14-general-shore-attachment-and-decoder-pair-cones.md):
+  **PROVED RELATIVE TO LRCUpTo13 + FINITE-EXACT + INDEPENDENTLY AUDITED;
+  LRC(14) OPEN.** A lower-runner witness carries one safe inverse sheet on a
+  closed quotient arc; any scaled \(r\)-shore attaches once its longest open
+  danger component is no longer than that arc. The THM-3818 pair atlas has gap `29/196`
+  at `(1,28)`, giving `14h>=87 max A,29 max T`; without its arithmetic
+  filter the sharp bounded-ratio gap is `15/98`. Cofinal families show that
+  cross height cannot certify a prescribed component.
 
 - [Seventh overnight mathematical synthesis](overnight_20260906_synthesis.md):
   **PROVED + INDEPENDENTLY AUDITED.** [Endpoint27](overnight7_20260906_laurent_quartic_carry.md)
