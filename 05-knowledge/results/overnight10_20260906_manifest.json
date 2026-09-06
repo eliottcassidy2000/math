@@ -1,0 +1,70 @@
+{
+  "schema": 1,
+  "created_utc": "2026-09-06T11:13:19.511351+00:00",
+  "baseline_commit": "0d6ff3d1c",
+  "incoming_review_commit": "6dd59c9c4",
+  "hash_basis": "raw LF bytes; self and maintained synthesis/reference/navigation files excluded",
+  "scope": "Uniform exponential random saturated-board success bound from a bounded-change defect; exact native Boolean cycle-sector token graph, complete rectangular adjacency spectrum, parity-invisible zero modes and integral pendant-cap cokernel preservation. Independent analytic and exact audits; no global extremal or ambient-spectrum closure.",
+  "artifacts": [
+    {
+      "path": "04-computation/overnight10_20260906_boolean_independent_audit.py",
+      "bytes": 8421,
+      "sha256": "f588933bec981dca1ac912192dfd0986f53f9953ed47827e22df8434b593ca70"
+    },
+    {
+      "path": "04-computation/overnight10_20260906_boolean_tokens.py",
+      "bytes": 12132,
+      "sha256": "985c110fe0e985d9c2c598e4aa35caf3f99756b4ca7cf00e487a41359bbb3356"
+    },
+    {
+      "path": "04-computation/overnight10_20260906_no3line_defect.py",
+      "bytes": 10466,
+      "sha256": "74ce43c6435da3c4662b5397c9e89ef86874452fcb1b445521a57b55816399d6"
+    },
+    {
+      "path": "04-computation/overnight10_20260906_no3line_exponential_audit.py",
+      "bytes": 10665,
+      "sha256": "a504620d2aca6635ef68f00025f1d3a716055797e88d12e9e204ee8ee2c1fcae"
+    },
+    {
+      "path": "05-knowledge/results/overnight10_20260906_boolean_independent_audit.md",
+      "bytes": 7886,
+      "sha256": "68d8e9dbc9d80737279a1b299227fd9a812b40c8544a2974285f08d077a37b7e"
+    },
+    {
+      "path": "05-knowledge/results/overnight10_20260906_boolean_independent_audit.out",
+      "bytes": 1400,
+      "sha256": "c5cfb1ba4da87f1dc69267e2fbffa540aede40fc18af45ec05f5e73c90ce5c23"
+    },
+    {
+      "path": "05-knowledge/results/overnight10_20260906_boolean_tokens.md",
+      "bytes": 15451,
+      "sha256": "e9c79ca68e24749868a5d1f08ca853672ad16ffaaa7d123ffb823a1553a4087d"
+    },
+    {
+      "path": "05-knowledge/results/overnight10_20260906_boolean_tokens.out",
+      "bytes": 1152,
+      "sha256": "c35252acd8ab1cb4d98156570ad5c7281f476c21670c79e0f4e85fd9721ac4b3"
+    },
+    {
+      "path": "05-knowledge/results/overnight10_20260906_no3line_defect.md",
+      "bytes": 16966,
+      "sha256": "36a50185f862cd28c623b8d1bc1335701c273466da1e6c18b99a206f2814ade7"
+    },
+    {
+      "path": "05-knowledge/results/overnight10_20260906_no3line_defect.out",
+      "bytes": 954,
+      "sha256": "b729b941bb7e4b8b2decb6486a1713554c59915ee31717982847495da7faa295"
+    },
+    {
+      "path": "05-knowledge/results/overnight10_20260906_no3line_exponential_audit.md",
+      "bytes": 10115,
+      "sha256": "fe353d936a679fde803fc1cb0193a5a0c1355461d48ce9d9e419444d836e4921"
+    },
+    {
+      "path": "05-knowledge/results/overnight10_20260906_no3line_exponential_audit.out",
+      "bytes": 1484,
+      "sha256": "062c56e46f7f080ce2815cc146b5b710ada7f59a488b2f43b487de4004a7306f"
+    }
+  ]
+}

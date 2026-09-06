@@ -5,7 +5,7 @@ This is the maintained continuation surface for the user's overnight request.
 Read current canon and incoming corrections before continuing any lane.
 The starting commit was `62e1b34d8`; the isolated worktree is `C:/w/s0905`.
 The extensively dirty original checkout is outside this session's edits.
-The ninth checkpoint incorporates incoming canon through `6dd59c9c4`,
+The tenth checkpoint incorporates incoming canon through `6dd59c9c4`,
 including proved THM-4437/4440/4441/4442/4443/4444/4445/4446/4447/4448.
 THM-4449 remains RESERVED and is not a dependency. The universal
 **ternary-unit local network bound is now closed without a parity assumption**:
@@ -26,11 +26,11 @@ independence heuristic and the corrected asymptotic constant; see the
 | Live object / representation | Predicate | Operation and retained coordinate | Cheapest next decisive test |
 |---|---|---|---|
 | Anchor: body safe set and three-sheet tail comb | One literal safe completion | Signed-pair virtual walls, exact owner words and protected inverse sheets | Use the sharp fibre margin to select a component outside the incoming attachment cone |
-| Grid sets as degree-two bipartite graphs | No collinear triple | Actual colored overlap graphs, injection denominators and repeated crossing cells | Two diagonal directions give covariance -2n/5 and zero-event bound 91/(20n); test a bounded-change statistic with the same zero set |
+| Grid sets as degree-two bipartite graphs | No collinear triple | Positive-part diagonal excess keeps the selected zero event and has transposition change at most four | Uniform success probability is at most exp(-n/900); test fixed-row conditioning without assuming the exact mean stays unchanged |
 | Niche: trinomial return channels | First two return polynomials have no common torus zero | One quadratic pullback preserves the original zero and completes alpha parity | All A2 completed-alpha responses are negative; one coupled beta-skip coefficient remains |
 | Wildcard: residue-decorated jet cluster | Full partition versus largest precision loss | Minimal-weight minors, reciprocal jets and a divided reflected companion | Every three-node prime-order Deuring zero loses exactly one digit; intermediate ideals need their own simultaneous companions |
 | Formal exceptional triple | Collision repair and nonzero constant source Jacobian | Leading wedge period under common branch motion | Every collision-preserving O(t9) map retains the obstruction; earlier source jets need the complete contact and density response |
-| Signed Hamilton-cycle parity vectors | Exact minimum and equality classes | Difference with a transposed signing; typed zero deletions | All cumulative gaps are closed; independently audit quantitative stability before using it |
+| Native Boolean disjoint-cycle sectors | Exact adjacency spectrum and integral kernel | Sorted cycle lengths become path tokens; a two-state cap removes a pendant pair | Full rectangles have sine-determinant spectra; the cap preserves cokernel, while general boundaries and ambient spectra remain open |
 
 Each new result is compared to all six objects. Similar language is not
 an implication: the maps and losses must be specified in the linked reports.
@@ -461,6 +461,39 @@ an implication: the maps and losses must be specified in the linked reports.
     geometry polynomials. This is a random-density bound, not a finite
     negative-covariance theorem or an extremal asymptotic closure.
 
+36. **PROVED exponential random-grid success bound, independently audited:**
+    [The diagonal excess defect](overnight10_20260906_no3line_defect.md)
+    `F=sum_d (Y_d-2)_+` has the same selected-direction zero event as the
+    triple count, but every row or column transposition changes it by at
+    most four. The exact rook-polynomial mean obeys
+    `mu>=2n/15` and `alpha*n-17<=mu<=alpha*n+16`, with
+    `alpha=1-5/e^2`, uniformly over all cycle types. For every n>=4,
+    `P(X=0)<=exp(-n^2/[900(n-1)])<=exp(-n/900)`; the limiting negative
+    log rate is at least `alpha^2/16=0.006533633740764...`.
+    The proof exposes2(n-1) permutation labels and retains conditional
+    interval length four. Primary/audit gates55,520/134,368 pass, including
+    literal transpositions, exact reveal trees and384 cycle profiles.
+    Mixtures inherit the uniform bound, not an unproved concentration law
+    around their own mean. The earlier covariance theorems remain structural
+    results; this strengthens their probability consequence without settling
+    the extremal no-three-in-line asymptotic problem.
+37. **PROVED exact native Boolean sector and integral cap extension:**
+    [Disjoint-cycle sectors](overnight10_20260906_boolean_tokens.md)
+    with c cycles of lengths3..M and isolates are path-token graphs under
+    `b_i=l_i-3+i`, with the exact cap `sum b_i<=n-3c+c(c+1)/2`.
+    For n>=cM their full adjacency spectrum consists of sums of c distinct
+    path eigenvalues, with sine-determinant eigenvectors. For odd h>=3,
+    c3,M3h-1 has balanced parity and at least h-1 independent zero modes;
+    h3 has exactly two in56 states. The
+    [independent audit and cap theorem](overnight10_20260906_boolean_independent_audit.md)
+    show that n=cM-2 deletes a pendant pair, giving an integral unimodular
+    congruence to an edge block plus the cap. The entire cokernel and nullity
+    survive; at n22 the54-state sector has parity27+27 and nullity2.
+    Primary/audit gates8,338/17,463 pass. The classical token/exterior
+    framework is cited explicitly; the native identification is local.
+    Directed multiplicities, Laplacian diagonal potentials, and ambient
+    boundary edges are separate, so no full ambient spectrum is claimed.
+
 These are repository-scoped advances and recovered mechanisms, not claims
 of external literature priority. In particular, conditioning grid occupancy
 by row and column saturation already appears in the cited construction work.
@@ -486,6 +519,8 @@ independence heuristic and the later corrected conjectural constant.
 | Complete beta roots -> one alpha-completed carrier | Quadratic pullback keeps negative-phase roots real and the exact original zero coefficient | Higher pullback degrees and positive phases fail; beta-skip paths still need their coupled response |
 | Reciprocal top jets -> Legendre residue curve -> exact loss | Frobenius identifies the Deuring zero; an integral divided reflection and degree-bounded Wronskian cap simultaneous loss at one digit | One numerator can cancel arbitrarily deeply; intermediate ideals need additional witnesses |
 | Colored line overlaps -> random-grid zero event | Injection counts grade patterns by v-2c; a repeated cell supplies the crossing correction for two directions | Fixed-K independence cannot justify the growing sum; repeated cells and uniform remainders must survive |
+| Diagonal triple zero -> bounded-change defect | Replace binom(Y,3) by (Y-2)+, preserving its zero set; couple actual permutation completions | A mean needs its concentration law; cycle mixtures do not inherit concentration around an arbitrary mixture mean |
+| Native cycle lengths -> path tokens -> capped cokernel | Sorted lengths preserve Boolean moves; additive exterior powers give adjacency, and a pendant-pair basis change preserves the integral cokernel | Multiplicities, Laplacian degree and ambient boundary are lost; nonzero spectra are not preserved by the cap |
 | Common branch motion -> retained wedge period | Alternation removes tangent reparametrization; the tangent relation cancels common target motion | Dropping collision contact or testing one form loses the equivalence; unrestricted earlier source jets remain |
 | Real parabolic collinearity -> integral observer | The determinant of three points `(u,u^2)` is the ordinary Vandermonde product | Modulo a prime, zero area only records congruence; integral depth must accompany that reduction |
 
@@ -543,6 +578,12 @@ The [ninth checkpoint manifest](overnight9_20260906_manifest.json) freezes
 two-direction covariance. The LRC margin correction is incorporated before
 promotion; the pre-audit overclaim is retained only as correction provenance.
 
+The [tenth checkpoint manifest](overnight10_20260906_manifest.json) freezes
+12 artifacts for the exponential defect theorem and native Boolean sectors.
+Root independently checked the Boolean theorem, exact eigenvectors and
+pendant congruence; the producer separately accepted that cap proof. The
+new external references supply only the classical configuration framework.
+
 ## Procedural direction generator
 
 Use `objects x representations x invariants x operations x quotient losses
@@ -563,10 +604,11 @@ test. Do not simply increase the last census bound. Current unfilled cells:
   Work on the outer distribution of named palettes, especially the exact
   random-pairing carrier for all-C4 skeletons. A conditional dependency graph
   does not pay the outer cumulants; the n4/n5/n6 controls must remain live.
-  The ninth theorem retains repeated cells and proves the two-direction
-  covariance. The next zero-event test should change the statistic while
-  preserving its zero set, to make transposition concentration available;
-  additional unbounded triple moments need not be the cheapest route.
+  The ninth theorem proves two-direction covariance; the tenth positive-part
+  defect now gives a uniform exponential zero-event bound. The next test is
+  to freeze an entire shore first and recompute the conditional mean from
+  its retained row subsets. A smaller reveal budget helps only after proving
+  a mean bound uniform in that frozen configuration.
 - **Moments / path and Laguerre factors / root response / doubling.**
   Individual rows have simple negative roots. Incoming signed duplication
   supplies a cross-row SOS for real-rooted ordinary cores and closes all AP
@@ -587,6 +629,12 @@ test. Do not simply increase the last census bound. Current unfilled cells:
   Wronskian closes the exact prime-order largest loss at every Deuring lift.
   Look for simultaneous companions of intermediate minors; do not reopen
   the now-closed next-digit question for this largest-factor observer.
+- **Boolean sectors / operator restriction / boundary kernel.** The native
+  disjoint-cycle graph has an exact token cap, and full rectangles have the
+  complete additive-path spectrum. The first two-state resource boundary
+  preserves the integral cokernel by pendant elimination. Test further caps
+  by their actual boundary matrix, keeping parity-invisible resonances;
+  neither ambient Fourier modes nor an uncorrected Laplacian transfers.
 - **Formal triple / earlier source jets / differentiated clock.** The actual
   fifth-order source module is K[x]; the full descended retained image is
   ker L. Source payment is possible but cannot alter J8. A ninth-order term

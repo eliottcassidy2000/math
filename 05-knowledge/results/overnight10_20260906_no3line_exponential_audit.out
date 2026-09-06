@@ -1,0 +1,18 @@
+STATUS: PASS; independent rook, board, conditional-prefix, and rational constant audit
+BOARD UNIVERSE: all 70086 distinct boards n3..6; all literal transpositions and determinants n<=5
+{"boards": 6, "mean": "1/3", "n": 3, "shape": [3], "zero_probability": "2/3"}
+{"boards": 18, "mean": "2/3", "n": 4, "shape": [2, 2], "zero_probability": "5/9"}
+{"boards": 72, "mean": "5/6", "n": 4, "shape": [4], "zero_probability": "25/72"}
+{"boards": 600, "mean": "29/25", "n": 5, "shape": [2, 3], "zero_probability": "47/200"}
+{"boards": 1440, "mean": "17/15", "n": 5, "shape": [5], "zero_probability": "101/360"}
+{"boards": 1350, "mean": "332/225", "n": 6, "shape": [2, 2, 2], "zero_probability": "134/675"}
+{"boards": 16200, "mean": "221/150", "n": 6, "shape": [2, 4], "zero_probability": "356/2025"}
+{"boards": 7200, "mean": "263/180", "n": 6, "shape": [3, 3], "zero_probability": "1351/7200"}
+{"boards": 43200, "mean": "53/36", "n": 6, "shape": [6], "zero_probability": "961/5400"}
+ROOK CYCLE TYPES n2..18: 384
+CONDITIONAL PREFIXES: {"maximum_width": "2", "nodes": 878}
+RATIONAL CONSTANT CERTIFICATE: {"alpha_interval": ["0.32332358381693654", "0.32332358381693654"], "lower_error_bound": "16.58860107369864", "upper_error_bound": "15.971983154613959"}
+EXACT FINITE BOUND: P(X=0)<=P(F=0)<=exp[-n^2/(900(n-1))], n>=4
+ASYMPTOTIC RATE: alpha^2/16, alpha=1-5e^-2; no all-slope zero equivalence
+SEMANTIC SHA256: 42bdbe1ee0a1c93eb8a8cb6eaece5afbf0d4d48d07f94ec4bf5bf5793745c4b2
+ACTIVE GATES: 134368

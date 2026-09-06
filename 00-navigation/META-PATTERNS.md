@@ -209,9 +209,8 @@ THM-2680 lacks a THM-2682 two-simplex and THM-2658 needs a gain section.
 ## Existence is a maximum or tail question, not automatically a mean question
 
 **Trigger / action:** for existence, covering, or near-extremality, identify the actual max/tail event before averaging and test whether a saturated exceptional rung is mean-invisible.
-**Mechanism / counterindication:** means erase rare structure unless a separate sharp inequality recovers the required tail.
-**Evidence:** S399 1,2,5; MISTAKE-129/171; THM-4111/4115: cut
-mean+variance/support forces a maximum, not an interval.
+**Mechanism / counterindication:** means erase rare structure without a tail inequality. For a zero event, seek a lower-change statistic with the same zero set and retain its randomness for concentration; a mixture need not inherit concentration around its own mean.
+**Evidence:** S399 1,2,5; MISTAKE-129/171; THM-4111/4115 use cut mean+variance/support for a maximum, not an interval. The [diagonal defect](../05-knowledge/results/overnight10_20260906_no3line_defect.md) replaces cubic counts by excess and gives an exponential zero-event bound.
 
 ## Respect symmetries by searching orbit representatives
 

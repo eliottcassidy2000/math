@@ -1,5 +1,15 @@
 # Script Results Index
 
+- [Tenth overnight synthesis](overnight_20260906_synthesis.md):
+  **PROVED + INDEPENDENTLY AUDITED.** [Diagonal excess](overnight10_20260906_no3line_defect.md)
+  gives `P(no-three-line)<=exp(-n/900)` for every n>=4, uniformly over
+  saturated-board cycle types, with asymptotic exponent at least0.0065336.
+  [Native Boolean sectors](overnight10_20260906_boolean_tokens.md) have exact
+  path-token spectra and extra zero modes; the [cap theorem](overnight10_20260906_boolean_independent_audit.md)
+  preserves their integral cokernel after a two-state deletion.
+  [Manifest](overnight10_20260906_manifest.json):12 frozen artifacts.
+  Extremal grid asymptotics and full ambient Boolean spectra remain OPEN.
+
 - [Ninth overnight synthesis](overnight_20260906_synthesis.md):
   **PROVED + INDEPENDENTLY AUDITED.** [Virtual pair walls](overnight9_20260906_lrc_virtual_pair_wall.md)
   select explicit safe LRC components; the [sharp margin](overnight9_20260906_lrc_virtual_pair_wall_margin.md)

@@ -1,0 +1,18 @@
+NATIVE BOOLEAN TRIANGLE SECTORS: EXACT CONTROLS
+literal n=6 c=1 M=6: states=4 triangles=80 cap=inactive PASS
+literal n=8 c=2 M=4: states=3 triangles=168 cap=inactive PASS
+  multiplicity matrix=[[0, 12, 0], [4, 0, 3], [0, 8, 0]]
+literal n=10 c=2 M=5: states=6 triangles=720 cap=inactive PASS
+literal n=12 c=3 M=4: states=4 triangles=880 cap=inactive PASS
+literal n=24 c=3 M=8: states=56 triangles=113344 cap=inactive PASS
+literal n=7 c=2 M=4: states=2 triangles=70 cap=active PASS
+literal n=9 c=2 M=5: states=5 triangles=420 cap=active PASS
+literal complete universe: 115682 triangle toggles
+c=2,M=5: chi=lambda^2*(lambda^2-1)*(lambda^2-5)
+c=3,M=8: 56 states; parity=28+28; nullity=2; mode sets=[(1, 5, 7), (2, 4, 8)]
+matrix/cyclotomic spectra: all 36 cases 1<=c<=N<=8 PASS
+balanced resonance family h=3,5,7,9: exact cyclotomic controls PASS
+P4 two-token Laplacian chi coefficients=[1, -12, 52, -100, 84, -24, 0]
+additive one-particle Laplacian chi coefficients=[1, -18, 128, -456, 844, -744, 224]
+hostiles: active vertex cap, multiplicity, multiplicative compound, Laplacian potential, longer cycle, ambient boundary PASS
+PASS 8338 always-active gates

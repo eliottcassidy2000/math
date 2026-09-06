@@ -338,8 +338,8 @@ lift/phase clocks.
 
 ## Other active portfolio
 
-- **No-three-line:** [two diagonal directions](../05-knowledge/results/overnight9_20260906_no3line_two_diagonals.md)
-  give `Var S=364n/45+O(1)` and `limsup n sup P(success)<=91/20`; extremal asymptotics stay OPEN.
+- **No-three-line:** [diagonal excess](../05-knowledge/results/overnight10_20260906_no3line_defect.md)
+  gives uniform `P(success)<=exp(-n/900)` for n>=4; asymptotic rate>=0.0065336. Extremal asymptotics OPEN.
 - **P-adic zeta:** external density claims remain **PREPRINT / UNDER AUDIT**.
   [THM-4255](../01-canon/theorems/THM-4255-specialization-kernel-and-transverse-hasse-jet-repair.md)/[4263](../01-canon/theorems/THM-4263-moving-multigraph-filtered-jet-and-finite-factor-density-transport.md) prove graph/jet kernels, finite-factor UI transport and conditional hazards. MISTAKE-527 forbids chosen-section refutations; the external Cartier steps still need a typed audit.
 - **Matching logic:** THM-4090 gives a two-sort Figure-2 calculus
@@ -367,7 +367,9 @@ lift/phase clocks.
   antibalanced values; their worst-scale asymptotic isolation loss is `6/n`.
   The [Boolean consumer](../05-knowledge/results/overnight_hexagon_sep05_boolean_consumer.md)
   proves all-order Fourier failure, a conductance comparison and exact
-  thinning; its exact spectrum and tournament transfer stay OPEN.
+  thinning. [Native cycle sectors](../05-knowledge/results/overnight10_20260906_boolean_tokens.md)
+  have token-path spectra and resonant kernels; a two-state cap preserves
+  their integral cokernel. Full ambient spectrum and tournament transfer OPEN.
 - **AMM:** [THM-4086](../01-canon/theorems/THM-4086-rule-a-transition-clock-and-phase-cocycle.md) proves a fixed-policy `R=32768` clock/cocycle; no global monotonicity, all-`R`, or `C*` result.
 - **Knots:** THM-2176/2191/2281 and THM-2242/2330--2383: localization, owner/ANOVA/rectangle/reference inversion; realization/stable diagonal open. THM-2646: modular/exponent `B3` conjugacy, not Markov invariance.
 - **Flows:** [THM-2177](../01-canon/theorems/THM-2177-planar-counterexample-to-goemans-unsplittable-cost-flow-conjecture.md): planar `58<60` refutes exact `d_max`; planar `2d_max` survives.

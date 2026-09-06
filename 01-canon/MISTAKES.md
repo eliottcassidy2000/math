@@ -9,6 +9,24 @@ Format per entry:
 - Why it was wrong
 - The correct framing
 
+## 2026-09-06 overnight -- preserve the zero event before sharpening its moments
+
+- **Reframed assumption:** a stronger no-three-line tail bound need not use
+  higher moments of the cubic triple count. The positive-part defect(Y-2)+
+  detects the same selected zero event and has bounded one-point changes.
+- **Exact mechanism:** [the defect theorem](../05-knowledge/results/overnight10_20260906_no3line_defect.md)
+  couples actual permutation completions. A transposition removes and adds
+  at most four points, giving net change four, not eight; n5 attains four.
+  Conditional martingale values have interval length four, which must not
+  be weakened to the enclosing interval[-4,4]. The resulting exponential
+  bound is uniform in the cycle type; concentration around an arbitrary
+  mixture's own mean was not proved and is not inferred.
+- **Separate spectrum boundary:** [native Boolean sectors](../05-knowledge/results/overnight10_20260906_boolean_tokens.md)
+  use additive exterior adjacency. Their Laplacian needs the missing
+  occupied-edge diagonal, and ambient restriction adds boundary degree.
+  Balanced parity alone misses the explicit56-state nullity2. A pendant-pair
+  cap preserves the integral cokernel, not the complete nonzero spectrum.
+
 ## 2026-09-06 overnight -- a one-sided sharp family does not prove a global profile
 
 - **Failed implication, repaired before filing:** equality examples dense

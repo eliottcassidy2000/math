@@ -31,55 +31,19 @@
 
 ### Vaaler — *Some extremal functions in Fourier analysis*
 
-- **Primary / freshness:** J. D. Vaaler, *Bulletin of the American Mathematical
-  Society (N.S.)* **12** (1985), 183--216, Theorem 19. **PUBLISHED / stable.**
-- **Imported role:** supplies the one-dimensional degree-`H` trigonometric
-  majorant/minorant sandwich for an interval that THM-2085 tensors with signed
-  coordinate defects.
-- **Repo consumer:** [THM-2085](../../01-canon/theorems/THM-2085-explicit-height-57-rank-seven-selberg-gate.md).
-- **Does not prove:** the relative-Hunter inequality, the signed tensor
-  bookkeeping, `H=57`, optimality of that height, or LRC(14). Those are
-  repo-derived arguments and constants.
+- **CITED:** Theorem 19 supplies the degree-H interval sandwich; THM-2085 supplies its signed tensor use and constants.
+- [Primary records, consumers and full boundaries](CORE-PAPERS-LRC-GEOMETRY.md#vaaler); no LRC(14) closure.
 
 ### Ungar — *2N noncollinear points determine at least 2N directions*
 
-- **Primary / freshness:** Peter Ungar, *Journal of Combinatorial Theory,
-  Series A* **33** (1982), 343–347,
-  [DOI 10.1016/0097-3165(82)90045-0](https://doi.org/10.1016/0097-3165(82)90045-0).
-  **PUBLISHED / stable; bibliographic record checked 2026-07-21.**
-- **Imported role:** historical alternate lens only.  Applying the
-  even-cardinality direction bound to the symmetric signed-column
-  configuration can supply a nonradial secant whose perpendicular projection
-  has a repeated absolute speed.  The current proof of THM-2053 does **not**
-  depend on Ungar: its adjacent-normalized-column construction produces the
-  full-support repeat projection elementarily.  The standing lower-dimensional
-  LRC citation, not this paper, is the remaining external input to the torus
-  floor `M_T>=1/13`.
-- **Repo consumers:**
-  [THM-2053, rank-two geodesic terminal](../../01-canon/theorems/THM-2053-rank-two-parameter-plane-geodesic-terminal.md),
-  [HYP-8846, finite tangent-disk completion](../hypotheses/HYP-8846-lrc14-pointed-plane-transport.md).
-- **Does not prove:** LRC(14), the repeat-projection lemma now used in
-  THM-2053, the determinant gate, necessity of that gate, or emptiness of any
-  tangent disk. The anisotropic estimate and disk identity are separate
-  in-repo arguments; disk membership remains only an uncertified case.
+- **CITED:** Historical direction-count lens; THM-2053 now proves its repeat projection independently.
+- [Primary records, consumers and full boundaries](CORE-PAPERS-LRC-GEOMETRY.md#ungar); no LRC(14) closure.
 
 ### Malikiosis--Santos--Schymura — *Linearly-exponential checking is enough...*
 
-- **Primary / freshness:** [arXiv:2411.06903v2](https://arxiv.org/abs/2411.06903),
-  published as *Forum of Mathematics, Sigma* **13** (2025), e164,
-  [DOI 10.1017/fms.2025.10107](https://doi.org/10.1017/fms.2025.10107).
-- **Imported role:** reduces LRC up to `n+1` runners to an explicit finite
-  integer-velocity range of order
-  `binom(n+1,2)^(n-1) <= n^(2n)`, dramatically improving Tao's earlier
-  `n^(O(n^2))` range.  The zonotope formulation is the standard finite-check
-  backend used in the repo.
-- **Repo consumers:**
-  [finite-check feasibility ledger](../../00-navigation/LRC14-FINITE-CHECK-FEASIBILITY-LEDGER-2026-07-19.md),
-  [LRC14 frontier](../../00-navigation/LRC14-FRONTIER-2026-07-15.md),
-  [THM-599 torus-band theorem](../../01-canon/theorems/THM-599-torus-band-theorem.md).
-- **Does not prove:** LRC(14), a feasible small practical search, or the shifted
-  theorem unconditionally in every dimension; the paper's shifted statement
-  retains its stated Lonely Vector Problem dependency.
+- **CITED:** Finite velocity range of order binom(n+1,2)^(n-1); shifted claims retain their Lonely Vector dependency.
+- [Primary records, consumers and full boundaries](CORE-PAPERS-LRC-GEOMETRY.md#malikiosis); no LRC(14) closure.
+
 ### 2026-08-23 primary pins: lonely-runner polyhedra and Khinchin flatness
 - Beck--Hoşten--Schymura [arXiv:1606.01783](https://arxiv.org/abs/1606.01783) pins the line-plus-box formulation; Codenotti--Freyer [arXiv:2307.09429](https://arxiv.org/abs/2307.09429) pins integral-dual width; Averkov--Hofscheier--Nill [arXiv:1911.03511](https://arxiv.org/abs/1911.03511) records Barvinok's bound used by [THM-3743](../../01-canon/theorems/THM-3743-lonely-runner-polyhedron-khinchin-flatness-relation-reduction.md). None proves LRC(14), sharpness/sparsity, or recursive slicing.
 - [Banaszczyk (1993)](https://doi.org/10.1007/BF01445125) supplies THM-4009's input `2 mu(L) lambda_1(L*)<=d`; the inball/sidecars are local and LRC(14) is open.
@@ -552,6 +516,12 @@ new homotopy group, `p=2` statement, or LRC/GMC consequence.
   [the exact certificate](../results/tv-fusion-homogenization-lemma-boxeph.md)
   independently confirms this. Larger blocks remain OPEN. The AMM12592
   deadline transfer is refuted there; "rigid face" is repo terminology.
+
+### Token graphs and additive exterior paths — checked 2026-09-06
+
+- **PUBLISHED / CITED:** [Fabila-Monroy et al., Token Graphs](https://arxiv.org/abs/0910.4774), Graphs and Combinatorics28 (2012),365-380, defines the configuration graph.
+- [Mallory--Raz--Tamon--Zaslavsky](https://people.math.binghamton.edu/zaslav/Tpapers/xbal.pdf), EJC20(2) (2013),P43, Section3 and Fact13, printedpp4-6,9, supplies additive exterior adjacency and positive path signs.
+- **Consumer:** [native Boolean cycle sectors](../results/overnight10_20260906_boolean_tokens.md). The native identification, resource cap and pendant-pair cokernel calculation are proved locally. No ambient Boolean spectrum or Laplacian transfer is imported.
 
 ### Auer--Top — Legendre elliptic curves over finite fields
 

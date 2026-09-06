@@ -1,0 +1,20 @@
+DIAGONAL POSITIVE-PART DEFECT: EXACT CONTROLS
+positive-part alternating truncations: y0..80,K3..16 PASS
+n=2 type=(2,): boards=1 EF=0 F0=1 X0=1
+  n=2 largest literal swap change=0
+n=3 type=(3,): boards=6 EF=1/3 F0=4 X0=2
+  n=3 largest literal swap change=1
+n=4 type=(2, 2): boards=18 EF=2/3 F0=10 X0=9
+n=4 type=(4,): boards=72 EF=5/6 F0=25 X0=2
+  n=4 largest literal swap change=3
+n=5 type=(2, 3): boards=600 EF=29/25 F0=141 X0=0
+n=5 type=(5,): boards=1440 EF=17/15 F0=404 X0=32
+  n=5 largest literal swap change=4
+complete labelled universe: 2137 boards; 41918 swaps
+sharp n5 identity+shift control: swapping rows0,2 changes F5 to F1
+n4 type=(4,): 425 Doob nodes, max conditional range=2
+n4 type=(2, 2): 425 Doob nodes, max conditional range=2
+all 384 cycle profiles with total shore size2..18 PASS
+rational Taylor bounds: n*alpha-17 <= EF <= n*alpha+16 PASS
+concentration denominator16(n-1); all-n exponent n^2/[900(n-1)]
+PASS 55520 always-active gates
