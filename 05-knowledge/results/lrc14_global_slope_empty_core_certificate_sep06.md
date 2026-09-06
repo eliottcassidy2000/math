@@ -151,8 +151,8 @@ F_v(w)<=15c/98                                        (6)
 for every relation except the norm-four pattern reduces to the finite box
 `max_i |v_i|<=18`. The box must include *all* primitive magnitude patterns,
 of support two or three and even norm, with at most one zero residue modulo
-three. It is not a norm-twenty or height census. The full-support norms can
-reach fifty-four. The earlier convex-speed vertex compiler applies unchanged
+three. It is not a norm-twenty or height census. Full-support norms are
+bounded by fifty-four. The earlier convex-speed vertex compiler applies unchanged
 after choosing a nonzero pivot coordinate. The support-two rectangle formula
 provides a separate path for that boundary.
 
@@ -183,6 +183,12 @@ strict count bound `T_delta/3+1`. Summing gives
 ```text
 N=|Lambda(w)| <F_v(w)+B_v.
 ```
+
+Here the allowed defect list is nonempty: it contains zero in the unit
+case, while an eligible nonunit relation has even norm at least six, so
+it contains both `-1` and `1`. Without this observation the sum of the
+individual strict inequalities should be written non-strict for an empty
+list. The uniform strict intercept below would still give (7).
 
 In the unit case,
 

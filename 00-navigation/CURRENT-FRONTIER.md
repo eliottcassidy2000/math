@@ -42,22 +42,20 @@ gives square sum `<=195`; THM-4019 refutes its sharp arbitrary-lattice target.
 - **Quantifier/type controls (PROVED):** THM-4095--4116 preserve field, gap,
   ray, parity-sheet and component-count data; none supplies safety or arrival.
 - **Seam/entry:** THM-4326/4329 close the fixed chart; 4330 leaves `2+12`;
-  4347 closes height 40. THM-4386--4414 close the named small shells and turn
-  degree-zero networks into raw projection sums `E_i`.
-  [THM-4418](../01-canon/theorems/THM-4418-lrc14-sharp-pair-arithmetic-and-forty-four-thirteenths-tail.md)
-  gives sharp pair mass/component bounds and closes `c/b>=44/13`. THM-4420
-  closes both unit near-doubling rays; THM-4422 closes every signed norm-four
-  family and gives exact deficit/Beatty rows. THM-4425 closes rank-one support
-  and dual width `<=16`; THM-4423 proves all-height `N<=112`.
-  [THM-4428](../01-canon/theorems/THM-4428-lrc14-two-direction-network-closure-and-sharp-one-direction-gap.md)
-  and THM-4431 close one/two/three directions structurally. The assembled
+  4347 closes height 40. Arbitrary entry and synchronization remain open.
+- **Universal local scale-three closure (PROVED + FINITE-EXACT + AUDITED):**
   [THM-4434](../01-canon/theorems/THM-4434-lrc14-universal-scale-three-network-projection-bound.md)
-  proves universal `min_i E_i<=6/77`, uniquely sharply at `(1,5,11)`, and
-  all three strict off norm four. The local network is closed; its consumer
-  still needs `mu(G_C)>=6/77`, arbitrary entry and synchronization.
+  proves `min_i E_i<=6/77` for every primitive distinct positive odd
+  ternary-unit triple, with sole equality `(1,5,11)` and every projection
+  strict outside norm four. The THM-4409/4414/4422 local target is closed;
+  THM-4423/4425/4428 retain sharper subclass results.
+  The consumer still needs the actual ten-core's `mu(G_C)>=6/77` or joint
+  safe phase; arbitrary body measure, mixed parity and entry remain separate.
 - **Transport/incidence:** [overnight synthesis](../05-knowledge/results/overnight_20260906_synthesis.md)
-  combines cap `204/5957`, midpoint payments and owner-line closure, now aimed
-  at body floors rather than local projection. The [sparse proof](../05-knowledge/results/synthesis_20260905_lrc_sparse_transport.md)
+  combines cap bound `204/5957`, midpoint payments and owner-line closure. A
+  two-dimensional owner polygon can still matter for sharper counts and
+  weighted capacities; THM-4434 closes its local `6/77` target. The
+  [sparse proof](../05-knowledge/results/synthesis_20260905_lrc_sparse_transport.md)
   retains phase intersections, weighted limits and the selector gap.
 - **Residual ranks:** THM-4333/4338 close fixed-pool ranks three/four, not arbitrary entry.
 - **PROVED:** [THM-2928](../01-canon/theorems/THM-2928-critical-seven-comb-grid-tensorization-and-drift-tariff.md)/2941: literal zero/one/two/three-drift sectors are empty; `k=2,3` are finite.

@@ -81,7 +81,7 @@ min_i E_i(w)<=6/77,                                    (4)
 ```
 
 with equality if and only if `w=(1,5,11)`. If `w` has no signed primitive
-relation with coefficient magnitudes `(1,1,2)), then the stronger assertion
+relation with coefficient magnitudes `(1,1,2)`, then the stronger assertion
 holds:
 
 ```text
@@ -96,7 +96,27 @@ c=2a+b,       c=a+2b,       or       2b=a+c.           (6)
 
 They are all covered by THM-4422, including the unique equality in (4).
 
+THM-4414 also gives the sharp physical conclusion
+`mu(F_w)<=min_i E_i(w)<=6/77`. Equality holds exactly at `(1,5,11)`,
+where all three projections and the physical mass equal `6/77`. Common
+odd ternary-unit dilation preserves physical Haar mass and permutes sheet
+labels, so physical equality for nonprimitive tails is equivalent to
+primitive reduction `{1,5,11}`. The norm-four exception is necessary:
+`(1,5,7)` has projections `(8/245,6/49,4/35)`.
+
 ## 2. A relation-independent slice integral
+
+The complete address construction is retained from the
+[affine-slice proof](../../05-knowledge/results/lrc14_empty_core_certificate_sep06.md)
+and its [actual-zero-coordinate addendum](../../05-knowledge/results/lrc14_pair_relation_empty_core_certificate_sep06.md).
+If `b.w=1`, any integer carrier has the lift `n=-b cross C`, so
+`C=w cross n`. The strict roofs mean the three intervals
+`((n_i-r)/w_i,(n_i+r)/w_i)` overlap pairwise and hence jointly. Thus
+`e=n-yw` lies in the open error cube for some `y`. The integer defect
+`delta=v.n=v.e` is lift-independent, and `v cross C=delta w` identifies
+one affine carrier line of full primitive step `v`. The owner-residue
+proof in the linked notes retains every defect and multiplier; no
+primitive-direction cutoff is assumed.
 
 Put `r=3/14` and let `v dot w=0` be a primitive nonzero integer relation.
 Write `S=||v||_1` and `M=max_i|v_i|`. Choose `i` with `v_i!=0` and map the
@@ -216,13 +236,19 @@ B_v<=2S/7+4/3.                                         (17)
 ```
 
 For unit relations, the defects are multiples of three in
-`|delta|<3S/14), giving
+`|delta|<3S/14`, giving
 `B_v=4|D|/3<4S/21+4/3`. For one-zero relations, deleting the multiples of
 three gives `B_v=|D|<2S/7+4/3`. By (16),
 
 ```text
 N<15c/98+2S/7+4/3.                                     (18)
 ```
+
+The allowed defect list is nonempty: zero occurs in the unit case, while
+an eligible nonunit relation has even norm at least six and permits `+/-1`.
+Thus the strict summed count has no empty-list exception. The bound (18)
+actually gives `N<2c/11` at the following threshold, which pays every
+projection strictly.
 
 Consequently THM-4422's automatic gate `N<=2c/11` holds whenever
 
@@ -340,6 +366,13 @@ the same Haar measure. If the tails have a common divisor, multiplication by
 that odd ternary unit reduces to the primitive case without changing Haar
 measure or sheet labels up to permutation.
 
+More sharply, it suffices that `mu(G_C)>=min_i E_i(T_0)`, where `T_0`
+is the primitive tail reduction. Any failure in this exact typed domain
+would force `mu(G_C)<mu(F_T)<=min_i E_i(T_0)<=6/77`. The
+[consumer audit](../../05-knowledge/results/lrc14_universal_haar_consumer_empty_core_certificate_sep06.md)
+retains the actual core, weak safety/strict danger endpoints, and the
+THM-4032 hostile to lifting an arbitrary core witness.
+
 This corollary does **not** prove that an arbitrary ten-speed body has measure
 at least `6/77`, nor that a general fourteen-runner instance admits the
 required `3C union T` decomposition. Those are now the sharp body/entry
@@ -368,3 +401,18 @@ audit routes are recorded in
 The universal degree-zero projection and typed triple-comb targets are proved.
 The quantitative body floor, arbitrary entry, synchronization, and
 `LRC(14)` remain **OPEN**.
+
+## 8. Concurrent proof and reservation lineage
+
+The empty-core session reserved this namespace honestly before the native
+head was complete. Its root and two subagent referees audited the whole
+analytic argument and compiler sources; the independently concurrent
+[hexagon-session referee](../../05-knowledge/results/lrc14_universal_referee_overnight_hexagon_sep05.md)
+reviewed the assembled candidate at `2e1ef24c4a`. That referee read the
+frozen native output rather than rerunning the full census. Dense geometry
+then supplied the separate import-free coefficient audit recorded above,
+and the projection session promoted the same theorem concurrently with the
+empty-core root. These are audits of one shared result, not separate novelty.
+Both integrations retain the stronger physical equality and exact consumer.
+No Lean formalization is claimed. The norm-54 wording in the earlier slice
+note was corrected to an upper bound; the complete primitive box is unchanged.

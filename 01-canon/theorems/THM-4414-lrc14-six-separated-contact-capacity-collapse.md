@@ -183,7 +183,7 @@ problem. It is the explicit projection inequality
 min_(i=1,2,3) E_i(w)<=6/77.                              (14)
 ```
 
-Equation `(14)` remains **OPEN**.
+Equation `(14)` is now **PROVED** by [THM-4434](THM-4434-lrc14-universal-scale-three-network-projection-bound.md) in the odd ternary-unit domain, with sole primitive equality `(1,5,11)`.
 
 ## 4. Exact crossing-hinge loss
 

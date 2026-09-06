@@ -8,8 +8,9 @@ status: >
   at most 6/77. Equality occurs only for (1,5,11), up to permutation. An exact
   endpoint-pair parametrization and a period-three quadrature identity reduce
   the infinite family to a uniform pq>=81 estimate and thirteen explicit
-  smaller endpoint pairs. This proves the resonant sector only; the universal
-  nonresonant 6/77 bound and LRC(14) remain open.
+  smaller endpoint pairs. This theorem proves the resonant sector;
+  THM-4434 subsequently closes the universal odd ternary-unit 6/77 bound.
+  LRC(14) remains open.
 source: root/adaptive_clock / LRC14 continuation session, 2026-09-03
 depends_on:
   - THM-2060-crt-tail-coset-saturation
@@ -26,6 +27,14 @@ hash_basis: raw LF bytes
 ---
 
 # THM-4373 -- the signed-(1,2,1) scale-three sector has maximum `6/77`
+
+**Current continuation (2026-09-06):**
+[THM-4434](THM-4434-lrc14-universal-scale-three-network-projection-bound.md)
+extends the sharp physical bound and the body-specific corollary below to
+every distinct positive odd ternary-unit tail triple, with the same
+primitive equality locus. This leaves the actual core's measure and phase
+entry unresolved. The resonant proof below remains an independent sharp
+subclass argument.
 
 **PROVED + VERIFIED-EXACT.**  For a positive integer `w` prime to three and
 `j in Z/3Z`, put
@@ -385,7 +394,8 @@ rational interval intersection and a complete wall-cell calculation on one
   finite maximum remains `(1,5,11)` and whose nonresonant maximum remains
   `(1,11,43)` with measure `12/301`.
 
-The finite nonresonant census is evidence only.  The universal inequality
-`mu(F_(a,b,c))<=6/77` for nonresonant triples remains **OPEN**, so this theorem
-does not give an all-tail scale-three transfer or prove LRC(14).
+The finite nonresonant census here is evidence only. The separate THM-4434
+now proves `mu(F_(a,b,c))<=6/77` for every odd ternary-unit triple, using an
+analytic reduction and independently checked exact head. It gives the
+body-specific all-tail transfer in this domain; LRC(14) remains **OPEN**.
 **QED.**

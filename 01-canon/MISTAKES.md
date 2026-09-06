@@ -9,6 +9,32 @@ Format per entry:
 - Why it was wrong
 - The correct framing
 
+## MISTAKE-545 (2026-09-06, empty-core research probe) -- three live directions do not force an additive circuit
+
+- **Refuted probe:** three primitive directions in the complete LRC raw
+  support were proposed to force independent live carriers `u,v,u+v`.
+  This was a research candidate, never a proved canon dependency.
+- **Minimal height-ordered witness:** `w=(41,47,49)` has complete support
+  `+/-{(11,5,-14),(14,-7,-5),(17,-19,4)}`. The positive representatives
+  satisfy `u+z=2v`; no independent live pair has live sum. The complete
+  H499 census supplies the claimed minimality in this ordered universe.
+- **First failed implication / missing coordinate:** convex saturation
+  preserves the primitive arithmetic-progression circuit as well as the
+  additive one. Direction count loses the circuit coefficients and the
+  owner-coset lattice index; it cannot identify the configuration with A2.
+- **Strongest survivor and repair:** in a centrally symmetric convex region
+  of a rank-two lattice with a proper invisible subgroup, exactly three live
+  primitive directions have circuit type `(1,1,1)` or `(1,1,2)`. The
+  [colored-diamond proof](../05-knowledge/results/empty_core_colored_diamond_sep06.md)
+  proves the general adjacent determinant bound `det<=r-1`; the
+  [exact LRC bridge and hostile](../05-knowledge/results/lrc14_empty_core_circuit_frontier_sep06.md)
+  retain the index-three owner lattice. Concurrent THM-4431 owns that shared
+  namespace. THM-4434 instead bounds all complete defect slices and does
+  not assume an additive circuit.
+- **New question:** which weighted boundary information survives the
+  general colored fan? A compulsory progression alone can have zero
+  curvature payment, so retain the incoming affine deficit remainder.
+
 ## MISTAKE-544 (2026-09-05, THM-1755 trinomial tunability) -- a small census hid semigroup carries and unbounded relation height
 
 - **False claims:** THM-1755 / `tnc-angular-uniform-tunable-dichotomy`

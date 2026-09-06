@@ -20,6 +20,15 @@
   `49e33442...3b9` (raw LF repository bytes). The exact triple-comb consumer
   applies when the inherited body has Haar measure at least `6/77`; proving
   that body floor and arbitrary entry/synchronization are the next barriers.
+- [THM-4434: universal scale-three network projection bound](../../01-canon/theorems/THM-4434-lrc14-universal-scale-three-network-projection-bound.md):
+  **PROVED ANALYTICALLY + FINITE-EXACT + INDEPENDENTLY AUDITED.** All
+  primitive distinct positive odd ternary-unit triples satisfy `min_i E_i<=6/77`,
+  with equality only at `(1,5,11)`. Zonotope area and a short integer relation
+  reduce the proof to the complete 308-pattern coefficient box and native
+  verification of all 1,317,935 triples through height 601. The physical
+  triple-comb bound and body-specific Haar transfer follow; LRC(14) remains
+  open. The [research board](empty_core_overnight_sep06_board.md) also routes
+  the independent colored-lattice proof and carry-aware trinomial return.
 - [Overnight incidence/carry/Smith synthesis](overnight_20260906_synthesis.md)
   routes the audited no-three-in-line seed and new results: sharp LRC
   full-cap network bound `204/5957` and all-height owner-line count closure;

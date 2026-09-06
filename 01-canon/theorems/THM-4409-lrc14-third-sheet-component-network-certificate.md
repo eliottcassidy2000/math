@@ -8,7 +8,8 @@ status: >
   is a rational component-length capacity; it closes every primitive distinct
   ternary-unit triple through height 79 and is exact on the equality comb
   (1,5,11). The 2026-09-05 extension below proves its degree-zero edge-minimum
-  flow identity at every height. The universal sharp 6/77 inequality, entry,
+  flow identity at every height. THM-4434 subsequently proves the universal
+  sharp 6/77 inequality for odd ternary-unit triples. Entry,
   synchronization, and LRC(14) remain OPEN.
 source: root + lrc_defect3_extra_cleanroom / LRC14 continuation session, 2026-09-03
 depends_on:
@@ -35,6 +36,12 @@ audit: >
 ---
 
 # THM-4409 -- LRC14 third-sheet component-network certificate
+
+**Current continuation (2026-09-06):**
+[THM-4434](THM-4434-lrc14-universal-scale-three-network-projection-bound.md)
+closes the universal selected degree-zero `6/77` target for distinct
+positive odd ternary-unit triples, with sole primitive equality `(1,5,11)`.
+The network construction and weighted-flow boundaries below are unchanged.
 
 **PROVED ANALYTICALLY + VERIFIED-EXACT + INDEPENDENTLY AUDITED.** This is a
 local three-speed theorem and a finite census, not a proof of arbitrary
@@ -220,8 +227,8 @@ The self-contained proof in
 recovers that identity and closes every ordered odd ternary-unit triple
 `a<b<c` with `c/b>=44/13`, using the fixed pair `(a,b)`. These statements
 concern constant length capacities; arbitrary weighted capacities retain
-their separate flow problem. The universal sharp `6/77` inequality remains
-open in the complementary comparable-speed region.
+their separate flow problem. THM-4434 now closes the universal sharp `6/77`
+inequality also in the complementary comparable-speed region.
 
 The first strict information-loss hostile in lexicographic order is
 
@@ -257,9 +264,8 @@ Normal, optimized, and fixed-hash-seed streams byte-match the frozen LF
 outputs. The primary records `43,723` live checks; the referee records
 `3,294,491`. Neither relies on `assert`.
 
-After THM-4418, the remaining sharp question is whether the minimum of the
-three rational capacities in `(11)` stays at most `6/77` for ordered triples
-`a<b<c` in the region `c/b<44/13` at unbounded height, or which exact triple
-is its first hostile. Even a universal local theorem would still lack chart
-entry and synchronization with the other eleven speeds. `LRC(14)` remains
-**OPEN**.
+THM-4434 now proves that the minimum of the three rational capacities in
+`(11)` stays at most `6/77` at every height in the odd ternary-unit domain.
+The exact next consumer retains the actual safe core and its measure or
+joint phase intersection. Arbitrary chart entry and synchronization remain
+missing; `LRC(14)` remains **OPEN**.

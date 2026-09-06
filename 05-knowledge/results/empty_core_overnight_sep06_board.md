@@ -32,11 +32,11 @@ The least-used sidecar is the owner residue in the index-three sublattice.
 
 | Lane / object | Operation and predicate | Lost coordinate / next decisive test |
 |---|---|---|
-| Anchor: complete LRC carrier lattice | Count primitive directions and retain all raw multiples | Direction count is not lattice rank; derive an all-height tail before any finite head |
-| Anchor: projection deficits | Compare all three exact sums and their maximum deficit | Physical mass and the selected network differ; audit actual sums |
+| Anchor: actual ten-speed safe core | Intersect all exact safe components with the triple-comb complement | THM-4434 closes the universal local bound; body mass alone can be too small |
+| Anchor: parity and short resonances | Recover which integer relation norms oddness excludes | Mixed-parity `(2,5,7)` exceeds `6/77`; retain the additive norm-three relation |
 | Niche: trinomial first-return slice | Tune the first moment and inspect the next admissible slice | A first two-channel slice need not generate a free semigroup; retain carries |
 | Wildcard: colored convex carrier hull | Replace unweighted additive hexagon by primitive circuit coefficients | A2 shape is not automatic; seek smallest missing circuit type |
-| Bridge: owner-coset lattice area | Separate continuous area from arithmetic boundary error | Short invisible relations can affect discrepancy; hostile low-norm nonlive directions |
+| Bridge: owner-coset lattice area | Generalize the zonotope slice bound to variable error radius | Preserve residue density and low-norm resonance; the area alone is insufficient |
 | Research process: minimal trusted certificate | Independently compile exact witnesses and retain proof directions | Small size alone is not completeness; compare source and consequence objects |
 
 Three independent agents handle fixed-direction bounds, owner-coset audit,
@@ -91,19 +91,34 @@ not a claimed map between the two mathematical problems.
   **FINITE-EXACT + independent compiler agreement** on 308 patterns,
   uniformly giving slope `<=15/98` outside the norm-four exception.
 - [Global area/short-relation reduction](lrc14_global_slope_empty_core_certificate_sep06.md):
-  root has audited the zonotope area, discrepancy, primitive relation bound
-  `S<4sqrt(c/3)`, and parity reduction to `c<=601`. The primary full head
-  passes on 1,317,935 rows. A separate native six-sheet interval verification
-  of the whole head is the remaining audit before declaring the universal
-  local network target closed.
+  **PROVED + FINITE-EXACT + INDEPENDENTLY AUDITED.** Root and a second
+  referee audited the zonotope area, discrepancy, primitive relation bound
+  `S<4sqrt(c/3)`, and parity reduction to `c<=601`. The separate native
+  interval engine passes all 1,317,935 rows, independently of the raw census.
+  [THM-4434](../../01-canon/theorems/THM-4434-lrc14-universal-scale-three-network-projection-bound.md)
+  is promoted: the universal local network and physical triple-comb bound
+  is `6/77`, with sole primitive equality `(1,5,11)`. Every projection is
+  strict outside norm four. LRC(14) remains open.
+
+The [actual consumer](lrc14_universal_haar_consumer_empty_core_certificate_sep06.md)
+now accepts every odd ternary-unit triple when the actual core has
+`mu(G_C)>=6/77`. Initial exact hostile probes already reject both tempting
+unqualified extensions: mixed parity admits `(2,5,7)` with physical mass
+`22/245>6/77`; a ten-body universal Haar floor fails on
+`C={1,2,3,4,5,7,8,9,11,13}`, with inherited exact mass `21514/315315`.
+The latter is a recovered old object applied to the new gate, not a new
+measure calculation. The agents are freezing independently audited
+parity/body notes and a variable-radius generalization.
 
 ## Next continuation
 
-1. Finish the native interval head audit and integrate the universal local
-   network proof if it passes; otherwise retain its smallest exact hostile.
-2. Re-read the actual THM-4409/4370 consumers before transporting the new
-   certificate toward entry or synchronization. A local bound alone does not
-   prove LRC(14).
+1. Finish the exact body/parity boundary probes. Preserve isolated safe
+   endpoints and the actual body-to-tail phase map; recover existing named
+   hostiles before claiming novelty. Another local triple census is no
+   longer the anchor.
+2. Seek an actual entry-produced core measure theorem or joint safe-component
+   intersection. The THM-4370/4372 weighted seven-fibre current has no proved
+   transport map from the unweighted three-sheet bound.
 3. Use the complete colored fan and incoming affine-baseline deficit result
    together; repeated progressions alone can have zero curvature.
 4. Pursue three or more first-channel Laurent polynomials, comparing the
