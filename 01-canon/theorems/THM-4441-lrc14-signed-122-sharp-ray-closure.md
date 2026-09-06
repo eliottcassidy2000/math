@@ -6,8 +6,8 @@ status: >
   AUDITED. Every primitive sorted distinct positive ternary-unit triple with
   a signed coefficient-magnitude (1,2,2) relation satisfies sharp
   min_i E_i<=46/665 and physical failure mass<=51/770. Both are below 6/77.
-  The (1,1,1), (1,1,2), entry, synchronization, and LRC(14) problems remain
-  open.
+  Concurrent synthesis closes (1,1,1) and (1,1,2); entry, synchronization,
+  and LRC(14) remain open.
 source: root low-circuit continuation + independent referee, 2026-09-06
 depends_on:
   - THM-4414-lrc14-six-separated-contact-capacity-collapse
@@ -33,8 +33,9 @@ hash_basis: raw LF repository bytes
 
 **PROVED ELEMENTARY RELATIVE TO THM-4414 + FINITE-EXACT + INDEPENDENTLY
 AUDITED.** The norm-five signed circuit is not an actual `6/77` hostile.
-The two lower circuit families, chart entry, synchronization, and `LRC(14)`
-remain **OPEN**.
+The concurrent [parity-free closure and exact threshold classification](../../05-knowledge/results/overnight4_20260906_lrc_parityfree_native.md#5-combined-nonadditive-ceiling-and-exact-old-threshold-classification)
+also closes the two lower circuit families and combines them with this theorem.
+Chart entry, synchronization, and `LRC(14)` remain **OPEN**.
 
 ## 1. Sharp statement
 

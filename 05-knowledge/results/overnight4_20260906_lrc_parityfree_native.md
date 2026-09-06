@@ -206,8 +206,75 @@ checks the profile, strict quadrature, coarea constants, and finite base.
 Thus (B) is an all-height theorem, not a height-32 extrapolation.
 
 The old odd-domain maximum `6/77` at `(1,5,11)` remains a sharper result
-on that smaller domain. General nonadditive arbitrary-parity sharp bounds
-below `6/55` are a separate question; (B) settles only the norm-four sector.
+on that smaller domain. Statement (B) settles the norm-four sector; the
+incoming results now extend it to all nonadditive triples as follows.
 For nonprimitive ternary-unit triples, divide by their common divisor,
 which is prime to three and permutes sheet labels while preserving Haar
 measure. Equality in (B) is then exactly those allowed positive dilates.
+
+## 5. Combined nonadditive ceiling and exact old-threshold classification
+
+**PROVED, relative to the named incoming theorems and independently audited
+finite bases.** Continue to assume `1<=a<b<c`, `gcd(a,b,c)=1`, and `3` not
+dividing `abc`. The complete physical mass and selected minimum satisfy:
+
+```text
+If a+b!=c: mu(F_w)<=min_i E_i(w)<=11/140,
+with equality for either quantity iff w=(2,11,20).             (D)
+
+For either Q(w)=mu(F_w) or Q(w)=min_i E_i(w):
+Q(w)>6/77 iff [a+b=c and w!=(1,4,5)] or w=(2,11,20);
+Q(w)=6/77 iff w=(1,5,11);
+Q(w)<6/77 otherwise.                                         (E)
+```
+
+For (D), every nonadditive triple either has a signed `(1,1,2)` relation,
+has a signed `(1,2,2)` relation, or has none of the three low patterns.
+The first case is (B). Incoming
+[THM-4441 / signed-122 sharp ray closure](../../01-canon/theorems/THM-4441-lrc14-signed-122-sharp-ray-closure.md)
+gives `min E<=46/665<6/77` and physical mass `<=51/770<6/77` in the second.
+Incoming [THM-4437 / all-parity reduction](../../01-canon/theorems/THM-4437-lrc14-all-parity-network-reduction-to-three-low-circuits.md)
+gives `min E<6/77` in the third. These cases exhaust the domain even if
+some relation classes overlap; neither smaller bound can introduce another
+equality in (D). Both incoming results were promoted before `058a8ded9`.
+This is a synthesis of proved components, not an extrapolation from a new
+nonadditive census.
+
+For (E), the generic and norm-five cases are already strict. On norm four,
+(C) is strictly below `6/77` for `c>=35`; at 35 its upper bound is
+`19/245`, with margin `1/2695`. The complete 88-row norm-four base `c<=34`
+has exactly one triple above the threshold, `(2,11,20)`, and exactly one
+equal, `(1,5,11)`, for both quantities.
+
+On the additive line, the independent
+[third-checkpoint discrepancy proof](overnight3_20260906_lrc_additive_audit.md)
+gives `mu(F_w)>=9/98-6/(7c)>6/77` for `c>=62`; at 62 the lower bound is
+`237/3038`, with margin `3/33418`. The complete 146-row additive base
+`c<=61` has both quantities strictly above `6/77` except `(1,4,5)`, where
+both equal `1/28`. Since `mu<=min E`, the physical lower bound also proves
+the selected lower bound. These strict tails and exhaustive finite bases
+establish both directions and the equality boundary in (E).
+
+The [finite-base verifier](../../04-computation/overnight4_20260906_lrc_threshold_classification.py)
+independently enumerates both coefficient-identity universes and reads the
+hash-pinned full native-audited head. Its
+[transcript](overnight4_20260906_lrc_threshold_classification.out) passes
+475 always-active gates, identically in ordinary and optimized Python.
+An independent norm-five reconstruction also checked these two subbases
+and tail margins. Reproduce from the repository root:
+
+```bash
+python3 04-computation/overnight4_20260906_lrc_threshold_classification.py
+python3 -O 04-computation/overnight4_20260906_lrc_threshold_classification.py
+```
+
+```text
+SHA-256, LF bytes:
+source da16bcf875e4b111fd31d3d7a341357c674e678b21e5d4ccffe3f52c34297e96
+output 0629e2ab0cd320c08197219adf9377848976d66efb87f8b10bc077a4049eced9
+```
+
+For common ternary-unit dilates, apply (D)-(E) to the primitive reduction.
+The map preserves Haar measure and permutes sheet labels. The classification
+concerns a local tail statistic; it does not supply a body-safe anchor,
+chart entry, or a proof of LRC(14).

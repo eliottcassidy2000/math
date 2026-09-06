@@ -1,0 +1,5 @@
+FINITE-EXACT inherited literal head subbases; all-height statements require the analytic proof
+additive_head61=146; both values above6/77 except(1,4,5), both1/28
+norm4_head34=88; both above only(2,11,20), both equal only(1,5,11)
+strict_tail_margins norm4_c35=1/2695 additive_c62=3/33418
+PASS_OPTIMIZATION_LIVE_GATES 475

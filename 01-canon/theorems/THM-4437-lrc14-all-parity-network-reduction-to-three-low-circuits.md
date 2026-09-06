@@ -7,8 +7,9 @@ status: >
   ternary-unit triple having no signed relation with coefficient magnitudes
   (1,1,1), (1,1,2), or (1,2,2) has every complete network projection at most
   6/77 and its minimum strictly below 6/77. The only individual equalities
-  are named below. This is a local reduction; the three circuit families,
-  arbitrary entry, synchronization, and LRC(14) remain open.
+  are named below. This is a local reduction; the linked concurrent
+  synthesis closes the low circuits. Arbitrary entry, synchronization,
+  and LRC(14) remain open.
 source: root mixed-parity continuation + independent referee, 2026-09-06
 depends_on:
   - THM-4414-lrc14-six-separated-contact-capacity-collapse
@@ -46,8 +47,11 @@ audit: >
 
 **PROVED ELEMENTARY RELATIVE TO THM-4414/4422 + FINITE-EXACT +
 INDEPENDENTLY AUDITED.** This removes parity from the generic local theorem.
-It does not close the three explicitly retained low-circuit families or prove
-entry into the scale-three chart. `LRC(14)` remains **OPEN**.
+This theorem retains three low-circuit families and does not prove entry into
+the scale-three chart. The concurrent [parity-free closure and exact threshold
+classification](../../05-knowledge/results/overnight4_20260906_lrc_parityfree_native.md#5-combined-nonadditive-ceiling-and-exact-old-threshold-classification)
+now combines this theorem with the proved additive, norm-four, and THM-4441
+norm-five results. All local ceilings are closed; `LRC(14)` remains **OPEN**.
 
 ## 1. Statement
 

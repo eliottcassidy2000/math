@@ -52,11 +52,13 @@ layer-cake error gives physical cutoff 34. The independent physical branch
 below keeps its sufficient cutoff 50, so this new result is compatible
 additional evidence rather than a hidden premise. The incoming
 [parity probe](lrc14_parity_empty_core_sep06.md) independently verifies all
-20,648 triples through height 79 and still labels general unbounded parity
-ceilings open. Its `THM-4437 / all-parity-network-reduction-to-three-low-circuits`
-namespace is explicitly **RESERVED / UNPROVED EMPTY STUB**. That proposed
-three-circuit reduction overlaps our separated patterns but is not used as
-a proved dependency here.
+20,648 triples through height 79. At that original `d7027ffb2` baseline,
+THM-4437 was **RESERVED / UNPROVED EMPTY STUB**, so it was not used here.
+By incoming `058a8ded9`, [THM-4437 / all-parity reduction](../../01-canon/theorems/THM-4437-lrc14-all-parity-network-reduction-to-three-low-circuits.md)
+and [THM-4441 / signed-122 closure](../../01-canon/theorems/THM-4441-lrc14-signed-122-sharp-ray-closure.md)
+are **PROVED**. They strengthen the generic and norm-five branches below;
+the original independent proof remains valid. Together with our norm-four
+refinement they give the [sharp nonadditive bound and exact old-threshold classification](overnight4_20260906_lrc_parityfree_native.md#5-combined-nonadditive-ceiling-and-exact-old-threshold-classification).
 
 Explicitly define
 
@@ -456,6 +458,7 @@ run provenance; the independent analytic, coefficient, physical-head, and
 native-network audits above establish the current proved status. The niche
 agent's independent whole-line norm-four roof proof and root's saturated
 plane-area derivation supply separate checks of the short-relation mechanism.
-No theorem ID, shared navigation entry, canonical namespace promotion, or
-Git mutation was made by the author of this lane. In particular the incoming
-THM-4437 reservation remains a related proposal, not a proved dependency.
+The author of this lane did not reserve a theorem ID or mutate Git. Root's
+checkpoint integrates the independently audited proof and the later incoming
+promotions described in Section 1. THM-4437 is not a dependency of the
+original proof; it is a proved input to the later combined corollary.

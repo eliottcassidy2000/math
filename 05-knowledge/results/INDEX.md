@@ -10,7 +10,7 @@
   **PROVED ELEMENTARY RELATIVE TO THM-4414 + FINITE-EXACT + INDEPENDENTLY
   AUDITED; LRC(14) OPEN.** The complete carrier set is one primitive ray;
   sharp bounds are `min E<=46/665` and physical mass `<=51/770`, both below
-  `6/77`. Only `(1,1,1)` and `(1,1,2)` remain possible low-circuit hostiles.
+  `6/77`. The concurrent synthesis below classifies the remaining low-circuit hostiles.
 
 - [THM-4437: all-parity reduction to three low circuits](../../01-canon/theorems/THM-4437-lrc14-all-parity-network-reduction-to-three-low-circuits.md):
   **PROVED ELEMENTARY RELATIVE TO THM-4414/4422 + FINITE-EXACT +
@@ -21,7 +21,7 @@
   independent 9,720,930-row head close the proof. Exactly three nonlow
   individual coordinates attain equality, beginning at `(7,16,22)`; the
   referee caught this boundary and repaired the proposed all-strict wording.
-  The three low circuits and actual body-phase entry remain separate.
+  The synthesis below closes the low circuits; actual body-phase entry remains open.
 
 - [Unbounded three-channel Laurent return family](trinomial_width15_empty_core_returns_sep06.md):
   **PROVED ANALYTICALLY + FINITE-EXACT + INDEPENDENTLY AUDITED.** For
@@ -46,7 +46,9 @@
 - [Fourth overnight synthesis](overnight_20260906_synthesis.md):
   **PROVED + FINITE-EXACT + INDEPENDENTLY AUDITED** [all-parity local ceiling](overnight4_20260906_lrc_parityfree_probe.md)
   `min E<=6/55`, equality only `(1,10,11)`, and [sharp norm four](overnight4_20260906_lrc_parityfree_native.md)
-  `11/140` at `(2,11,20)`. The physical coarea identity retains a primitive
+  `11/140` at `(2,11,20)`, now sharp for all nonadditive triples via incoming
+  THM-4437/4441. The exact `6/77` exceedance classification is additive except
+  `(1,4,5)`, or `(2,11,20)`; equality is only `(1,5,11)`. Physical coarea retains a primitive
   plane basis. [Actual body/event codes](overnight4_20260906_lrc_body_event.md)
   give a sufficient divisor gate and exact phase/anchor hostiles; entry stays
   open. [Formal cycle defects](overnight4_20260906_no3line_cycle_defect.md)

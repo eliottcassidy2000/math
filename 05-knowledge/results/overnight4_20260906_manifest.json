@@ -2,10 +2,9 @@
   "schema": 1,
   "created_utc": "2026-09-06T08:13:17.001190+00:00",
   "baseline_commit": "9c2ffd7c9",
-  "incoming_review_commit": "72a7db79b",
-  "reservation_only_update": "533bf3d6e",
+  "incoming_review_commit": "058a8ded9",
   "hash_basis": "raw LF bytes; self and maintained synthesis excluded",
-  "scope": "Fourth overnight checkpoint: proved sharp parity-free local6/55 and norm-four11/140; exact physical coarea; independently audited affine body-event corollaries/phase hostiles; proved formal no-three-line cycle defects and homogeneous-square/cumulant obstructions; independent incoming terminal-cluster precision audit. No global entry, LRC14, general trinomial, or grid asymptotic closure.",
+  "scope": "Fourth overnight checkpoint: proved sharp parity-free local6/55 and norm-four11/140; exact physical coarea; independently audited affine body-event corollaries/phase hostiles; proved formal no-three-line cycle defects and homogeneous-square/cumulant obstructions; independent incoming terminal-cluster precision audit. No global entry, LRC14, general trinomial, or grid asymptotic closure. Incoming THM4437/4441 plus the independent norm-four theorem yield sharp nonadditive11/140 and exact old6/77 classification.",
   "maintained_surface": {
     "path": "05-knowledge/results/overnight_20260906_synthesis.md",
     "hash_policy": "Intentionally mutable; versioned by Git."
@@ -40,6 +39,11 @@
       "path": "04-computation/overnight4_20260906_lrc_parityfree_probe.py",
       "bytes": 10645,
       "sha256": "1405ce106b74d533c3f8e330fc95855996594913e031e5f80ea323092445d866"
+    },
+    {
+      "path": "04-computation/overnight4_20260906_lrc_threshold_classification.py",
+      "bytes": 2941,
+      "sha256": "da16bcf875e4b111fd31d3d7a341357c674e678b21e5d4ccffe3f52c34297e96"
     },
     {
       "path": "04-computation/overnight4_20260906_no3line_cycle_defect.py",
@@ -93,8 +97,8 @@
     },
     {
       "path": "05-knowledge/results/overnight4_20260906_lrc_parityfree_audit.md",
-      "bytes": 11418,
-      "sha256": "3ebab3970ba6ccb4898e75a3fec63de44c76921237db53e897669d75119245aa"
+      "bytes": 11548,
+      "sha256": "9b12d480ba94aefd0f4ee869a7eb15ebf09d4006a3d49fe8ef9413fc6738bef2"
     },
     {
       "path": "05-knowledge/results/overnight4_20260906_lrc_parityfree_audit.out",
@@ -103,8 +107,8 @@
     },
     {
       "path": "05-knowledge/results/overnight4_20260906_lrc_parityfree_native.md",
-      "bytes": 10740,
-      "sha256": "a9ecee4e12b349cf1a7f63921b9776211683273bf76a9edefba2dcecafa0b0b8"
+      "bytes": 14131,
+      "sha256": "c8d5434af9581c6625648ca61579e021ed7284eab388bf8e1cc3c497d7e5b88c"
     },
     {
       "path": "05-knowledge/results/overnight4_20260906_lrc_parityfree_native.out",
@@ -113,8 +117,8 @@
     },
     {
       "path": "05-knowledge/results/overnight4_20260906_lrc_parityfree_probe.md",
-      "bytes": 20534,
-      "sha256": "baae86fc887c085af4abc6ed34c6ee85f15d903ef1d2182f1c7113e553379785"
+      "bytes": 21032,
+      "sha256": "527c3114a6a0686d7f1076e1cbd87ca4151b661d66cb9101a4c2bc8c517efb91"
     },
     {
       "path": "05-knowledge/results/overnight4_20260906_lrc_parityfree_probe.out",
@@ -125,6 +129,11 @@
       "path": "05-knowledge/results/overnight4_20260906_lrc_parityfree_probe_head63.tsv",
       "bytes": 391589,
       "sha256": "c3d33fdd136245aafe512b04963a6eb6f1b5db6f1a572a3e8535ef59d01a09fa"
+    },
+    {
+      "path": "05-knowledge/results/overnight4_20260906_lrc_threshold_classification.out",
+      "bytes": 320,
+      "sha256": "0629e2ab0cd320c08197219adf9377848976d66efb87f8b10bc077a4049eced9"
     },
     {
       "path": "05-knowledge/results/overnight4_20260906_no3line_cycle_defect.md",
@@ -166,5 +175,6 @@
       "bytes": 3189,
       "sha256": "2f47860b7d6664ae1a86d242b858ab706ec360d7649963757b48c1ea724e4e12"
     }
-  ]
+  ],
+  "integrated_utc": "2026-09-06T08:36:27.549135+00:00"
 }

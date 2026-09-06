@@ -2,7 +2,7 @@
 
 **Status: ANALYTIC AUDIT PASS after the empty-defect correction;
 FINITE-EXACT independent physical head and coefficient-box PASS.** This
-audits the corrected [candidate](overnight4_20260906_lrc_parityfree_probe.md):
+audits the corrected [theorem](overnight4_20260906_lrc_parityfree_probe.md):
 for every primitive sorted distinct positive ternary-unit triple,
 `mu(F_w)<=min_i E_i(w)<=6/55`, with either equality only at `(1,10,11)`.
 There is no oddness hypothesis. The selected-network finite columns are
@@ -22,8 +22,10 @@ even-norm cutoff are not. The incoming
 `(2,5,7)` and `(2,11,20)` as distinct omitted obstructions. The incoming
 [additive theorem](lrc14_additive_parity_empty_core_sep06.md) is a proved,
 independently audited dependency only for the selected additive projection.
-THM-4437 / all-parity-network-reduction-to-three-low-circuits was inspected
-as a **RESERVED / UNPROVED EMPTY STUB** and is not used in this proof graph.
+At the original `d7027ffb2` baseline, THM-4437 was inspected as a
+**RESERVED / UNPROVED EMPTY STUB** and was not used in this proof graph.
+It is now **PROVED** in incoming `058a8ded9`; the main report records the
+stronger incoming generic/norm-five results and the combined corollary.
 
 Dropping parity initially lost one premise of THM-4434's strict count:
 the allowed defect list need not be nonempty. Pattern `(0,1,2)` has no

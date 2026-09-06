@@ -1,19 +1,11 @@
 # Meta-Patterns for Mathematical Research
 
-**Status:** CURRENT. Compact defaults from repeated successes and failures;
-new cards require distinct-thread evidence or a severe repaired failure.
+**Status:** CURRENT. Cards require distinct-thread evidence or a severe
+repaired failure; retain triggers and counterindications.
 
 ## Separate unbounded local support from a height-bounded modular cover
 
-**Trigger/action:** residue tests may cover a proved height box even when the
-unbounded map is locally onto; retain bounds and an exact terminal test.
-
-**Counterindications:** do not extrapolate beyond the box; without height or
-no-reentry proof the cover is unsound. Prefer a genuine one-modulus
-obstruction when available.
-
-**Evidence:** THM-4026/4027's bounded-zero/all-modulus pair; independently,
-THM-2059 and THM-2043/2050 require height/exit sidecars for LRC joins.
+**Trigger/action:** a locally onto map may still have a modular cover in a proved height box. Retain the bound and terminal test; extrapolation needs no-reentry. Prefer a single-modulus obstruction when available. **Evidence:** THM-4026/4027; THM-2059 and THM-2043/2050 need height/exit data for LRC joins.
 
 ## Separate observer type, recurrence class, and finite head
 
@@ -21,20 +13,20 @@ THM-2059 and THM-2043/2050 require height/exit sidecars for LRC joins.
 
 ## Peel the distinguished prime, then force a small torsion collision
 
-**Action:** for density-`1/p` combs on `D=pq`, split transverse sections from vertical spikes and Möbius-count only base loads/status bits. If a wall forces unbounded primitive-unit denominator `d`, retain clean residues `S`: for `r|d`, `2<=r<=7`, `|S|>d/r`, two share an order-`r` coset and every unit phase separates them by at least `1/7`. First prove the high wall and finite low-pair reduction; zero-high relaxations and multiple movers survive. **Evidence:** THM-2928/2941, THM-2072.
+**Action:** for density-`1/p` combs on `D=pq`, separate transverse sections and vertical spikes; Möbius-count base loads/status. If a wall forces unbounded primitive-unit denominator `d`, keep clean residues `S`: `r|d`, `2<=r<=7`, `|S|>d/r` force an order-`r` coset collision, separated by every unit phase by at least `1/7`. Prove high-wall/finite-low-pair reduction first; zero-high and multiple-mover relaxations survive. **Evidence:** THM-2928/2941, THM-2072.
 
 ## Inventory retained power classes before classifying base-curve genus
 
-**Action:** before a high-genus eliminant, inventory typed base-field power classes and valuations on one smooth fibre, then take the cheapest connected Kummer lift; odd valuations force genus. Verify field, units, irreducibility, and realization. **Evidence:** THM-2617/2636 and the latter's `q`/`T` typing repair.
+**Action:** before a high-genus eliminant, inventory base-field power classes/valuations on one smooth fibre; choose a connected Kummer lift. Odd valuations force genus. Check field, units, irreducibility, realization. **Evidence:** THM-2617/2636 and its `q`/`T` repair.
 
 ## Globalize a moving-factor orbit before localizing positivity
 
-**Trigger/action:** if an action moves a clean cell's factor, build its lawful orbit and use the cell only as a nonnegative witness. **Mechanism/caution:** fixed projectors duplicate gates unless proved invariant; orbit counts still need an anchor.
+**Trigger/action:** if an action moves a clean factor, build its lawful orbit; the cell is a nonnegative witness. Fixed projectors duplicate gates without invariance; orbit counts need an anchor.
 **Evidence:** THM-2403/2365/2370 and MISTAKE-260/266.
 
 ## Demodulate, then average a complete subgroup
 
-**Trigger/action:** for a finite unitary grading, demodulate the target character and average Hermitian differences over the complete subgroup. **Mechanism/caution:** orthogonality recovers isotypic norms, but labels, alias range, and cross-phase selectors are load-bearing.
+**Trigger/action:** demodulate a finite unitary grading's target character; average Hermitian differences over the full subgroup. Orthogonality recovers isotypic norms only with labels, alias range, and cross-phase selectors.
 **Evidence:** THM-2369, THM-2374/2383, THM-2375, and the audited GMC2 complete-orbit reflection.
 
 ## Separate descent, ambient scale, and regularity debt
@@ -43,7 +35,7 @@ THM-2059 and THM-2043/2050 require height/exit sidecars for LRC joins.
 
 ## Localize a metric by common contexts before hunting catalysts
 
-**Action:** when common nonexpansive factors contract distance, form `d_ctx(x,y)=inf_z d(x+z,y+z)`; retain left/right/two-sided contexts when noncommutative. In a commutative metric monoid it is the greatest translation-invariant pseudometric below `d`. Without properness, integrality, or cancellation it may collapse; homogenization gaps alone do not exhibit catalysts. **Evidence:** THM-2191/2183/840/853.
+**Action:** for common nonexpansive factors, form `d_ctx(x,y)=inf_z d(x+z,y+z)` (distinguish left/right contexts when noncommutative). For commutative metric monoids this is the greatest translation-invariant pseudometric below `d`; it can collapse without properness, integrality, or cancellation. Homogenization gaps do not exhibit catalysts. **Evidence:** THM-2191/2183/840/853.
 
 ## Expose the obstruction first, choose the scale second
 
@@ -70,10 +62,9 @@ THM-4418's sheet-phase mass/count bounds pay the omitted-comb tail. The maps dif
 
 ## Correct the object before sharpening the technique
 
-**Action:** when a method stalls, test its object: mean versus maximum, shadow
-versus marked observer, scalar versus profile, or capped carrier versus enlarged
-family. Stronger bounds cannot recover discarded coordinates; valid local
-estimates may survive the reframe. **Evidence:** [S399 §1](../07-reflections/lrc14-history-synthesis-patterns-and-reframings-opus-S399.md),
+**Action:** when a method stalls, test mean/maximum, shadow/marked observer,
+scalar/profile, or capped/enlarged carrier. Bounds cannot recover lost data;
+local estimates may survive. **Evidence:** [S399 §1](../07-reflections/lrc14-history-synthesis-patterns-and-reframings-opus-S399.md),
 MISTAKE-209, and THM-4385/4388/4389: the capped elliptic curve remains a slice,
 but the first omitted face turns its equation into a coefficient graph.
 
@@ -98,7 +89,7 @@ THM-3955/3957 and MISTAKE-471 are conductor hostiles.
 
 ## Type every analogy and every implication
 
-**Action:** when formulas look identical or an analogy suggests an iff, ledger types and directions: nodes/exponents, support/multiplicity, labels/classes, scalar/polynomial identities, graph/tournament spectra, and rank/dimension. Rank matches require ambient modules and maps; spectra require normalization and exceptional-prime scope. Analogies may generate conjectures only with the missing map explicit.
+**Action:** ledger analogy types/directions: nodes/exponents, support/multiplicity, labels/classes, scalar/polynomial, graph/tournament, rank/dimension. Rank needs ambient modules/maps; spectra need normalization/prime scope. State the missing map before conjecturing an iff.
 **Evidence:** MISTAKE-209, 211, 212, 214–216, 222–225, 227–229 in [`MISTAKES.md`](../01-canon/MISTAKES.md).
 
 ## Audit saturation and basis covariance before naming a lattice bridge
@@ -111,7 +102,7 @@ needs `GL_n(Z)` covariance, an invariant form and target-preserving map.
 
 ## Preserve the selected side, not only the walls
 
-**Action:** for hyperplane, hypertorus, resonance, or forbidden-band models, distinguish bare arrangement, ordinary/thickened complements, and selected inequality cells; retain owner, sign, side, height, and deletion unit. Posets/cohomology forget the feasible side and extremal cell, and suffice only if the target ignores every lost label and side. **Evidence:** MISTAKE-224 and [THM-1002](../01-canon/theorems/THM-1002-pair-sum-denominator-bound-and-the-bounded-gap-case.md).
+**Action:** distinguish bare arrangements, ordinary/thickened complements, and selected inequality cells; retain owner, sign, side, height, deletion unit. Posets/cohomology suffice only for targets invariant under their lost labels/sides. **Evidence:** MISTAKE-224 and [THM-1002](../01-canon/theorems/THM-1002-pair-sum-denominator-bound-and-the-bounded-gap-case.md).
 
 ## Find the hidden second coordinate in a nearly true theorem
 
@@ -126,7 +117,7 @@ test target-changing translates. Mixed `CT[P^r Pbar^s]` restores grade
 
 ## Refine and saturate before transporting a factor or shadow
 
-**Action:** before transporting a Fourier, resultant, image, factor, or curvature shadow, refine to complete atoms/full coefficient ideal, construct there, and saturate chart/wall artifacts. Early smoothing/elimination creates leakage and false components. Division is not functorial: Lorentzian factors and copied masks need a typed strict transform, lawful action, saturated ideal, or multiplicative functor.
+**Action:** before transporting a shadow, refine to complete atoms/coefficient ideals, construct, and saturate chart/wall artifacts. Early smoothing/elimination leaks or creates false components. Division is not functorial: Lorentzian factors/copied masks need a typed strict transform, lawful action, saturated ideal, or multiplicative functor.
 **Evidence:** THM-2452/2345/2576, MISTAKE-287/215/223, THM-2348/2033, and open THM-2942/2969.
 
 ## Controlled forgetting and unlabeled quotients require a sidecar

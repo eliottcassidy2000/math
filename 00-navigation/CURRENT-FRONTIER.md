@@ -47,8 +47,8 @@ gives square sum `<=195`; THM-4019 refutes its sharp arbitrary-lattice target.
   [THM-4434](../01-canon/theorems/THM-4434-lrc14-universal-scale-three-network-projection-bound.md)
   gives odd `6/77`. The [parity-free theorem](../05-knowledge/results/overnight4_20260906_lrc_parityfree_probe.md)
   gives sharp `min E<=6/55`, equality `(1,10,11)`; [norm four](../05-knowledge/results/overnight4_20260906_lrc_parityfree_native.md)
-  has sharp `11/140` at `(2,11,20)`. Incoming THM-4437 bounds every
-  projection by `6/77` outside `(111),(112),(122)`; THM-4441 closes `(122)`.
+  combines with THM-4437/4441 to give sharp nonadditive `11/140` at `(2,11,20)`
+  and classify every `6/77` exceedance: additive except `(1,4,5)`, or `(2,11,20)`.
   Universal body floors fail; [actual event codes](../05-knowledge/results/overnight4_20260906_lrc_body_event.md)
   retain residues and the chosen anchor. [THM-4442](../01-canon/theorems/THM-4442-lrc14-bounded-ten-body-parity-free-scale-three-completion.md)
   closes every tail over ten-bodies in `[13]`; arbitrary entry remains open.
