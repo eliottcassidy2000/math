@@ -1,0 +1,14 @@
+STATUS: EXACT ONE-PARAMETER CURVE CERTIFICATE; no Keller realization claimed
+U=t^4+t; V=t^6+t^2+lambda*t; intrinsic pole pair=(4,6)
+full divided-difference algebra length=12 for every lambda
+C = 128*L**3 - 288*L - 283
+E = L**4 + 2*L**2 + 4*L + 1
+T = (L - 2)*(3125*L**5 + 6250*L**4 - 6625*L**3 - 24604*L**2 - 18669*L - 4371)
+exceptional root counts: cusp=3, triple=4, tangency=6; pairwise disjoint
+generic complement: six ordinary nodes
+lambda=1: six nodes; lambda=2: one tacnode+four nodes
+lambda=-1: one ordinary triple+three nodes; collision ideal reduced
+projection discriminant = -12288*C*E^6*T^2
+sole Keller support: generic, triple and tangency strata excluded
+three cusp parameters OPEN; necessary n_cusp+sum_node_overlaps=1, d<=2a
+ALL GATES PASS: 214

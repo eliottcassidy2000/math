@@ -9,6 +9,31 @@ Format per entry:
 - Why it was wrong
 - The correct framing
 
+## 2026-09-06 planar Jacobian session -- chart factors and projection losses
+
+- In the [Hamiltonian probe](../05-knowledge/results/planar_jc48_sep06_hamiltonian.md),
+  a draft renamed `2xt(1+u)` as `2y`, dropping a factor of t. With
+  `p=t(1+x^2t),y=xtp`, the correct bracket is `{u,p}=2xp=2yp^2/(p^3-y^2)`.
+  At x=1,t=2 the proposed values are12 and24. Literal source derivatives
+  caught the error before freezing; all finite-jet calculations used those
+  derivatives and survived. The all-order pole test uses the weighted
+  Euler residue, not a lone partial derivative. The repaired fixed-source
+  and universal-source carrier criteria and their non-nilpotence proof
+  are independently audited. Future substitutions must retain the actual
+  birational denominators before concluding source-form preservation.
+- In the [curve family](../05-knowledge/results/planar_jc48_sep06_curve_probe.md),
+  lambda=-1 has a reduced collision scheme but repeated roots in its
+  projected resultant: three source parameters each have two partners at
+  one ordinary triple image. A projection discriminant alone therefore
+  does not identify tangency or nonreduced collision. Retaining the full
+  pair algebra and actual fibre separates triple, cusp and tangency loci.
+  The resulting family exclusion still leaves three cusp parameters open.
+- The [nodal exclusion](../05-knowledge/results/planar_jc48_sep06_infinity.md)
+  was recovered independently but is already a consequence of public
+  Paper II Corollaries5.2 and4.2. Its shorter proof and connection are
+  recorded without counting a new literature exclusion. The current
+  withdrawn Jelonek abstract is not the correct version3 theorem.
+
 ## 2026-09-06 extended second round -- joint positions and conserved defects
 
 - [Joint overlap positions](../05-knowledge/results/long_frontier2_sep06_lrc.md)

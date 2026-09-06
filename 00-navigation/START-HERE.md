@@ -58,9 +58,9 @@ Then read frontier, guardrails, theorem; logs are history.
     4226 close named `M=10/11/13` cases; THM-4290--4356 stage `M=12`.
     THM-4380/4388 close fixed weights 12/13 by row 12; THM-4385/4389 give the
     elliptic carrier/pencil. THM-4390/4395 reach weight-14 rows 9/10.
-    THM-4399/4403/4410 take a selected tail through rows 11--13 (`A^4` source,
-    `A^9` terminal); THM-4415 leaves one unpaid row-14 condition. Complete
-    weights 15--22 and entry are open.
+    THM-4399/4403/4410 reach selected row13 (`A^4` source,
+    `A^9` terminal); THM-4426/4438 reach row15. [Weight22 transport](../05-knowledge/results/planar_jc48_sep06_board.md)
+    changes the prefix; complete weights15--22, termination and entry are open.
     THM-4397/4401 give Long's gauge/punctured shadows. THM-4404/4411 make the
     fixed-`x` seminormal miss the collision period; THM-4412 needs a
     non-descended suspension.

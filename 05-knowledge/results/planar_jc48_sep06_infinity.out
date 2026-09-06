@@ -1,0 +1,8 @@
+STATUS: FINITE-EXACT LOCAL PASSPORT CONTROLS; geometric proof is analytic
+actual-subset pairs by d: {2: 4, 3: 36, 4: 196, 5: 900}
+raw-labeled pair digest: 90e1f46065dcec63638d3897f3b3b43b71c651d9af1ebbc75d7cc50aaee2607f
+declared Euler graphs: 7 exact debt rows: 777
+one-component finite passport survivors: [(2, 1, 0)]
+hostiles: deleted fixed sheets; degree-two Euler survivor
+intrinsic cubic parameter rows: [('-3', ['0', '-3', '0', '1']), ('-1', ['0', '-1', '0', '1']), ('0', ['0', '0', '0', '1']), ('1', ['0', '1', '0', '1']), ('2', ['0', '2', '0', '1']), ('5', ['0', '5', '0', '1'])]
+ALL GATES PASS: 4223

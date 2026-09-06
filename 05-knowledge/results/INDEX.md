@@ -18,6 +18,16 @@
   General LRC14, arbitrary-height actual response positivity and the full
   free-coefficient model remain OPEN.
 
+- [48-hour planar Jacobian session](planar_jc48_sep06_board.md):
+  **PROVED + INDEPENDENTLY AUDITED**, with inherited results distinguished.
+  Weight22 moving-prefix transport replaces the row15 weight24 payer;
+  collision periods in three dimensions retain a quadratic quotient;
+  component-labelled response torsion carries an intrinsic connection.
+  Exact source-form Hamiltonians fail local nilpotence. An explicit (4,6)
+  curve family is excluded as sole support except at three cusp parameters;
+  its nodal antecedent is credited as recovered work.
+  [Manifest](planar_jc48_sep06_manifest.json):26 frozen artifacts,
+  seven programs,5475 exact gates. Full JC(2) and termination remain OPEN.
 
 - [Extended session: coefficient regions and adaptive overlaps](long_frontier2_sep06_board.md):
   **PROVED + FINITE-EXACT + INDEPENDENTLY AUDITED.** A full coefficient

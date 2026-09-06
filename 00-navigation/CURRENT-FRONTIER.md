@@ -399,11 +399,10 @@ lift/phase clocks.
   split conic bundle with a `Q`-section. On `Phi=eta=0,alpha11=1`, the
   simultaneous
   bracket/depth locus is a `Q`-rational `G_m`; it fixes `c51=1087/135` and has
-  `A^10` fibre everywhere. THM-4438 closes row 15 on this `G_m`: observable
-  `145r0+30r2+20r4+24r6`, sole depth debt `Q=0`, terminal `A^10`. Its first
-  visible frozen-prefix payer is weight-24 `p^3y^6`; lower-weight
-  prefix-changing deformations are untested. Global depth, later rows,
-  termination and entry remain open.
+  `A^10` fibre everywhere. THM-4438 closes row 15 on this `G_m`.
+  [Weight22 transport](../05-knowledge/results/planar_jc48_sep06_board.md)
+  changes the prefix, preserving row15 and `A^10` fibres. Full depth,
+  later rows, termination and entry remain open.
   THM-4397/4401 give Long's gauge and punctured planar shadows.
   Exceptional quartic: THM-3703/3737/4034 give grammar/image/conductor;
   THM-4381 gives 86 nodes, one plane triple, and `S^sn=S+K r`.

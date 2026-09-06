@@ -1,0 +1,9 @@
+ONE_ARM 2 theta_order 1 derivative_orders [1, 2, 3, 4]
+ONE_ARM 3 theta_order 2 derivative_orders [2, 3, 4, 5]
+ONE_ARM 4 theta_order 3 derivative_orders [3, 4, 5, 6]
+ONE_ARM 5 theta_order 4 derivative_orders [4, 5, 6, 7]
+COLLIDED_ARM -1 orders [1, 2, 3, 4] residual_arm_zero True
+COLLIDED_ARM 1 orders [1, 2, 3, 4] residual_arm_zero True
+POSITIVE coordinate; HOSTILES unequal component jets and singular intersecting components
+EXPLICIT_GATES 278
+PASS component-labelled torsion and canonical connection controls; universal proof separate

@@ -220,6 +220,8 @@
 
 ### Planar Keller target geometry — Lang; Jelonek--Lasoń; Nguyen; Shioda; Miranda--Persson
 
+[Planar JC source checks](CORE-PAPERS-PLANAR-JC.md).
+
 - **CITED:** [Lang](https://doi.org/10.1016/0022-4049(91)90128-O) proves Newton similarity; [Jelonek--Lasoń](https://arxiv.org/abs/1411.5011), Theorem 3.2/Corollary 3.5, give `D-1`/chart-width bounds; [Nguyen](https://arxiv.org/abs/math/0305088), Theorem 1, gives component degree pair `(M d,M e)`. THM-4122 divides out cover inflation; THM-4124 turns integral similarity into a target shear.
 - **CITED:** [Shioda](https://rikkyo.repo.nii.ac.jp/records/10027) supplies the Mordell--Weil framework; [Miranda--Persson](https://www.math.colostate.edu/~miranda/preprints/Miranda-Persson1986_Article_OnExtremalRationalEllipticSurf.pdf), Theorem 4.1/Table 5.2, classify `X_211` as `II*+I1+I1` with section group one. THM-4120 uses this only on one smooth theta seam.
 - **Boundary:** raw `M` is not intrinsic; `rho<=2` at `(72,108)` needs width six; base change can enlarge Mordell--Weil; and `Q^2-cP^3` is not a target automorphism. First route any escaping divisor into the nonproperness set.

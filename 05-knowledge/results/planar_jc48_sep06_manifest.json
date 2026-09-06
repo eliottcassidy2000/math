@@ -1,0 +1,150 @@
+{
+  "session": "planar-jacobian-sep06",
+  "status": "PROVED scoped results; relative-exactness and nodal precedents credited; JC(2) OPEN",
+  "created_utc": "2026-09-06",
+  "artifact_count": 26,
+  "program_count": 7,
+  "exact_gates_per_complete_normal_or_optimized_run": 5475,
+  "verification": "Each of the seven programs replayed normally and with optimization; both raw stdout streams match its frozen output byte for byte. Independent analytic audits are separately pinned. Finite gate counts do not replace the universal proofs.",
+  "program_gates": {
+    "weight14": 169,
+    "weight14_audit": 93,
+    "collision": 257,
+    "torsion": 278,
+    "infinity": 4223,
+    "hamiltonian": 241,
+    "curve_probe": 214
+  },
+  "artifacts": [
+    {
+      "path": "04-computation/planar_jc48_sep06_collision.py",
+      "bytes": 8662,
+      "sha256": "c6363ae79380172c134fcf73b9b8d16b80520a4d6b4c32d65e2046335e4cf5ba"
+    },
+    {
+      "path": "04-computation/planar_jc48_sep06_curve_probe.py",
+      "bytes": 7308,
+      "sha256": "97c28adbf35451a8e521486680a2b79267073430fdc8fe69a96e9435ffa923a1"
+    },
+    {
+      "path": "04-computation/planar_jc48_sep06_hamiltonian.py",
+      "bytes": 8449,
+      "sha256": "ba65f911e64907cd41d7a950263e281a8da370045c9da40668796f1245a8df6b"
+    },
+    {
+      "path": "04-computation/planar_jc48_sep06_infinity.py",
+      "bytes": 5419,
+      "sha256": "a1a90e2827316bf1da3fe4c99570c093101dda892b387c27e1ef193bc9e82e21"
+    },
+    {
+      "path": "04-computation/planar_jc48_sep06_torsion.py",
+      "bytes": 6259,
+      "sha256": "3c01beaeca3abf4567de0a31d2939ae7e1858b0b85746986ccf674f6b336332c"
+    },
+    {
+      "path": "04-computation/planar_jc48_sep06_weight14.py",
+      "bytes": 6460,
+      "sha256": "a4a140ab538620e7885d8b77758c02e16a5c3a8de7e53e3daac51f01bda321f7"
+    },
+    {
+      "path": "04-computation/planar_jc48_sep06_weight14_audit.py",
+      "bytes": 5164,
+      "sha256": "03784e94c50a07772b0a1dce3a7961a3c0c2f51fd666073801c02f87e23808d0"
+    },
+    {
+      "path": "05-knowledge/results/planar_jc48_sep06_collision.md",
+      "bytes": 13746,
+      "sha256": "a9af26ee0489f7f28147d8e943d817d166c23802827c40160857bebb14a92eb3"
+    },
+    {
+      "path": "05-knowledge/results/planar_jc48_sep06_collision.out",
+      "bytes": 1676,
+      "sha256": "0d45a4b8e9a1769584b4e2ab426e2d1829c3514627bfc418ceba30966365d8f2"
+    },
+    {
+      "path": "05-knowledge/results/planar_jc48_sep06_collision_audit.md",
+      "bytes": 7368,
+      "sha256": "335002d0db81132794c64e7885d48b1a36b13180d9a03b82176293f8f6169d29"
+    },
+    {
+      "path": "05-knowledge/results/planar_jc48_sep06_curve_probe.md",
+      "bytes": 16293,
+      "sha256": "e517ba35483403d4d6e608e4e41b8532271d00ff064c22dc7c21e5be3c3a077e"
+    },
+    {
+      "path": "05-knowledge/results/planar_jc48_sep06_curve_probe.out",
+      "bytes": 759,
+      "sha256": "9d227fc32a01f24d13105ea4938cd0485c00ffe95225c723df4e6e293c4f786f"
+    },
+    {
+      "path": "05-knowledge/results/planar_jc48_sep06_curve_probe_audit.md",
+      "bytes": 5341,
+      "sha256": "a0c979f4a6a311c4d0bab80ddb1b9fcb0778d20ac5aed824b6b5bddab3d9a471"
+    },
+    {
+      "path": "05-knowledge/results/planar_jc48_sep06_hamiltonian.md",
+      "bytes": 15307,
+      "sha256": "637d8737bb1f315a9a53ac58ed3bab22dcfe1a89c05d13d126f260c03dd53a9d"
+    },
+    {
+      "path": "05-knowledge/results/planar_jc48_sep06_hamiltonian.out",
+      "bytes": 1320,
+      "sha256": "842d3d0b6c8300900c44cb34317dde4f7f64adac72ac18067cb8eafc736952a3"
+    },
+    {
+      "path": "05-knowledge/results/planar_jc48_sep06_hamiltonian_audit.md",
+      "bytes": 8905,
+      "sha256": "2893e56b6789bd782290502c03cce5ffd8dfa57a4bd3ee6a057a94271d240826"
+    },
+    {
+      "path": "05-knowledge/results/planar_jc48_sep06_infinity.md",
+      "bytes": 17734,
+      "sha256": "686d693197501e49a9a1e445b28607ff41be94e56ef9bcc51e99e750c1e0d1dd"
+    },
+    {
+      "path": "05-knowledge/results/planar_jc48_sep06_infinity.out",
+      "bytes": 609,
+      "sha256": "d725ea2e517b82788b6a5faf9a8ca10079263003027012264fde98dac6a1b646"
+    },
+    {
+      "path": "05-knowledge/results/planar_jc48_sep06_infinity_audit.md",
+      "bytes": 9738,
+      "sha256": "de6b040e924437d628cd82b17da44aafe1692c9d868111026a51bedb8018c8c2"
+    },
+    {
+      "path": "05-knowledge/results/planar_jc48_sep06_torsion.md",
+      "bytes": 13318,
+      "sha256": "6ea3b8dcfa73c90edd9018dcba009e261ca618078d490a5961691eb997e8ff4c"
+    },
+    {
+      "path": "05-knowledge/results/planar_jc48_sep06_torsion.out",
+      "bytes": 538,
+      "sha256": "4798029319d16097ce37fe1db3e1379255f7fe13e74f414b85bf348a2abfdda3"
+    },
+    {
+      "path": "05-knowledge/results/planar_jc48_sep06_torsion_audit.md",
+      "bytes": 10013,
+      "sha256": "2d92ac9302a937a158cf9ed87fab4d0ca1f7f91f2604bae01487c23d7636613f"
+    },
+    {
+      "path": "05-knowledge/results/planar_jc48_sep06_weight14.md",
+      "bytes": 12471,
+      "sha256": "0d3f25d88bc6d9be4bfe11ba3c511f8d07719648b7a935fb962c2df078b28d4a"
+    },
+    {
+      "path": "05-knowledge/results/planar_jc48_sep06_weight14.out",
+      "bytes": 1570,
+      "sha256": "74d12cf42c23d9402fdb892faab12fd4ce7309d43561b3dc63ee92e9c6b2e132"
+    },
+    {
+      "path": "05-knowledge/results/planar_jc48_sep06_weight14_audit.md",
+      "bytes": 3990,
+      "sha256": "3cb082933bb24f10362e318a7dee31b1a1d3fec862f363287705ea7b9ac0a281"
+    },
+    {
+      "path": "05-knowledge/results/planar_jc48_sep06_weight14_audit.out",
+      "bytes": 201,
+      "sha256": "1a1d5ca435e313273f5f406d395dc5ce7e7e10b17fa9466a3a974ee2e37c1929"
+    }
+  ]
+}

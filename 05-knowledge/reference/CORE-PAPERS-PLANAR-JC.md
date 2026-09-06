@@ -1,0 +1,52 @@
+# Focused planar Jacobian source checks
+
+**Status: SOURCE SIDECAR / refreshed September 6, 2026.** Use with
+[CORE-PAPERS](CORE-PAPERS.md#jacobian-dixmier-and-poisson) and the
+[current 48-hour board](../results/planar_jc48_sep06_board.md). This is
+not a claim that the planar conjecture is resolved.
+
+## Relative exactness
+
+Philippe Bonnet, *Relative exactness modulo a polynomial map and algebraic
+(C^p,+)-actions*, Bull. Soc. Math. France131(2003),373–398:
+[published text](https://www.numdam.org/article/BSMF_2003__131_3_373_0.pdf),
+[author text](https://arxiv.org/html/math/0602223).
+Proposition1.2 and Theorem1.5 concern relative-exactness torsion and
+vanishing under fiber hypotheses. The introduction credits Gavrilov for
+connected reduced plane fibers and Bonnet–Dimca, *Relative differential
+forms and complex polynomials*, Bull. Sci. Math.124(2000),557–571, for the
+plane torsion analysis. The latter has not been compared theorem by theorem
+in this session. The new repo response note therefore makes no priority
+claim. A unit gradient identifies its quotient C_P with relative one-forms
+by contraction with the Hamiltonian derivation; generic vanishing still
+requires polynomial extension.
+
+## Nonproperness and the version guard
+
+Zbigniew Jelonek, *A note on the Jacobian Conjecture*, Colloq. Math.170(2022),
+85–90: [published DOI](https://doi.org/10.4064/cm8671-12-2021),
+[correct author version3](https://arxiv.org/html/2011.03472v3).
+Theorem1.1 excludes nonproperness support without self-intersections;
+Theorem1.2 requires smooth support for its surjectivity statement.
+Theorem3.1 gives the local cyclic model over a smooth discriminant.
+The [current arXiv record](https://arxiv.org/abs/2011.03472) is withdrawn
+and identifies versions4–5 as incorrect, while accepting1–3. Do not import
+the stronger connectedness assertion from the withdrawn abstract.
+
+## Public manuscript antecedents, independently checked
+
+[Paper II, One-place curves and page density](https://supermindai.github.io/Jacobian-Conjecture/publication/02-one-place-curves-and-page-density.pdf)
+has the general ledger in Corollary5.2 and the single actual-page exclusion
+in Corollary4.2. Its stated zero specialization term at ordinary crossings
+already implies the irreducible wholly-nodal exclusion.
+[Paper III, Disjoint components and Suzuki pencils](https://supermindai.github.io/Jacobian-Conjecture/publication/03-disjoint-components-and-suzuki-pencils.pdf),
+Lemmas5.1 and6.2, supplies the smooth-stratum and node local-page arguments.
+These are public repository manuscripts, not asserted peer-reviewed
+publications. Both full proof passages were read by the producing agent
+and independent referee. The session's nodal note gives the local argument
+and a shorter purity finish independently; it is a recovered corollary.
+The commuting-node calculation does not supply a cusp or tangent
+specialization rule, a general exclusion for disconnected supports, or
+arbitrary JC(2). The later explicit curve-family note retains the actual
+fibre at one exceptional point and derives its exclusion from Euler
+integration without inserting such a specialization rule.
