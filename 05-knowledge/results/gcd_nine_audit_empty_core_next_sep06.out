@@ -1,0 +1,28 @@
+profile 2 (1, 1, 2, 2) budget 3 divisor_exits [] safe_realization_tails [62, 118, 87, 115] witness 1/28
+profile 2 (1, 2, 2, 2) budget 5/2 divisor_exits [] safe_realization_tails [62, 59, 87, 115] witness 1/28
+profile 2 (2, 2, 2, 2) budget 2 divisor_exits [] safe_realization_tails [31, 59, 87, 115] witness 1/28
+profile 3 (1, 3, 3, 3) budget 2 divisor_exits [] safe_realization_tails [138, 88, 130, 172] witness 1/42
+profile 3 (3, 3, 3, 3) budget 4/3 divisor_exits [] safe_realization_tails [46, 88, 130, 172] witness 1/42
+profile 4 (1, 2, 4, 4) budget 2 divisor_exits [] safe_realization_tails [244, 234, 173, 229] witness 1/56
+profile 4 (1, 4, 4, 4) budget 7/4 divisor_exits [(4, 3)] safe_realization_tails [244, 117, 173, 229] witness 1/56
+profile 4 (2, 2, 4, 4) budget 3/2 divisor_exits [] safe_realization_tails [122, 234, 173, 229] witness 1/56
+profile 4 (2, 4, 4, 4) budget 5/4 divisor_exits [] safe_realization_tails [122, 117, 173, 229] witness 1/56
+profile 4 (4, 4, 4, 4) budget 1 divisor_exits [] safe_realization_tails [61, 117, 173, 229] witness 1/56
+profile 6 (2, 3, 3, 6) budget 4/3 divisor_exits [] safe_realization_tails [273, 350, 518, 343] witness 1/84
+profile 6 (2, 3, 6, 6) budget 7/6 divisor_exits [] safe_realization_tails [273, 350, 259, 343] witness 1/84
+profile 6 (2, 6, 6, 6) budget 1 divisor_exits [] safe_realization_tails [273, 175, 259, 343] witness 1/84
+profile 6 (3, 3, 6, 6) budget 1 divisor_exits [] safe_realization_tails [182, 350, 259, 343] witness 1/84
+profile 8 (2, 4, 8, 8) budget 5/4 divisor_exits [] safe_realization_tails [484, 466, 345, 457] witness 1/112
+profile 8 (2, 8, 8, 8) budget 5/4 divisor_exits [(4, 3)] safe_realization_tails [484, 233, 345, 457] witness 1/112
+profile 8 (4, 4, 8, 8) budget 1 divisor_exits [] safe_realization_tails [242, 466, 345, 457] witness 1/112
+profile 8 (4, 8, 8, 8) budget 1 divisor_exits [] safe_realization_tails [242, 233, 345, 457] witness 1/112
+profile 8 (8, 8, 8, 8) budget 1 divisor_exits [] safe_realization_tails [121, 233, 345, 457] witness 1/112
+profile 9 (3, 9, 9, 9) budget 1 divisor_exits [] safe_realization_tails [408, 262, 388, 514] witness 1/126
+clock9_phase_hostile core=(1,3,...,17), tails=(1,5,6,7), y=1/2, killed [(0, 8), (3, 5), (1, 4, 7), (2, 6)]
+clock9_hostile full-row safety witness x=1/14; no unsafe row claimed
+PROVED bound from companion: every nine-subset gcd belongs to {1,2,3,4,6,8,9}
+FINITE universe: c=2..12; all sorted inherited gcd/order quadruples
+inherited_profiles 20 after_all_divisor_absorption 18
+all20 gcd profiles have explicit safe primitive realizations; no unsafe row claimed
+semantic_sha256 1be9a4748b3e48af0bf32daf8d8f3d7f0765ddda3839e2ba24bbe73d9d253a32
+explicit_checks 192

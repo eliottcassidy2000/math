@@ -1,0 +1,10 @@
+PASS sharp degree-five signed duplication margin
+Sharp constant: (81-8sqrt(6))/87
+Equality roots: scalar*(1,1,-t,-t,-t), t=1-sqrt(6)/3
+Two-level normalized orbits: 4; zero-energy boundary: 1; negative tangent controls: 81
+Full rational universe: 126 seeds; 16 rejections; 98 unique rows
+Full rational ratio range: 37/41 7/3
+Zero-root boundary universe: 35 seeds; 4 infeasible seeds; 23 unique rows
+Inherited hostile: 18501/26101; quartic bound 7/9 fails; sharp degree-five bound passes
+Exact gates: 1341
+Trace SHA256: 2cd366878ba3d4aab4977b4e3ad79f7a2db8ccd6457f768e188412de01705137

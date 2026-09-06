@@ -10,6 +10,29 @@
   have covariance `-2n/5+O(1)` and zero-event limsup constant91/20.
   [Manifest](overnight9_20260906_manifest.json):21 frozen artifacts; global
   conjectures and actual decoder entry remain OPEN.
+- [Hereditary LRC gcd hierarchy](lrc14_recursive_gcd_empty_core_next_sep06.md):
+  **PROVED RELATIVE TO CITED LOWER-RUNNER LRC + FINITE-EXACT +
+  INDEPENDENTLY AUDITED.** Twelve- through seven-speed subsets of a
+  primitive strict counterexample have gcd ceilings `1,2,4,9,32,96`.
+  Balanced CRT intersections and all-divisor tree cuts improve the scalar
+  bounds; independent product and rectangular compilers agree on every
+  retained signature. [Nine-body phase hostile](gcd_nine_audit_empty_core_next_sep06.md)
+  and [full independent audit](gcd_pair_hunter_audit_empty_core_next_sep06.md)
+  retain the distinction between arithmetic profiles and actual failures.
+- [Sharp duplication margins in every degree](signed_degree5_empty_core_next_sep06_uniform.md):
+  **PROVED ANALYTICALLY + INDEPENDENTLY AUDITED.** At `e_2(r)=0`, the
+  actual square's normalized negative fourth coefficient has a sharp
+  explicit degree-n constant and a complete equality classification.
+  Its strict uniform infimum is `(13-8sqrt(2))/3>1/3`, approached by a
+  two-root polynomial times a linear exponential. The
+  [degree-five theorem](signed_degree5_empty_core_next_sep06.md) is the
+  independently audited first new case, not a separate general closure.
+- [Two Laurent signed-transport boundaries](laurent_transport_empty_core_next_sep06.md):
+  **EXACT REFUTATIONS / PROVED + FINITE-EXACT.** Full PF kernels and both
+  Euler identities do not force skip negativity; generic strict interlacing
+  fails already in degree four. The coupled hostile still has negative full
+  response. The actual composition recurrence and same-zero margin remain
+  live; general actual doubled-row noncancellation is OPEN.
 
 - [Eighth overnight synthesis](overnight_20260906_synthesis.md):
   **PROVED + INDEPENDENTLY AUDITED.** [Alpha completion](overnight8_20260906_alpha_completion.md)

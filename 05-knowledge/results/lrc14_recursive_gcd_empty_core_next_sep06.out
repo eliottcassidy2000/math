@@ -1,0 +1,10 @@
+SCOPE: analytic pivot + finite-exact complete arithmetic compiler; LRC14 OPEN
+tails 1 body 12 gcds [1] profiles 1 candidate_clocks 1 proposals 1
+tails 2 body 11 gcds [1, 2] profiles 2 candidate_clocks 2 proposals 2
+tails 3 body 10 gcds [1, 2, 3, 4] profiles 5 candidate_clocks 5 proposals 14
+tails 4 body 9 gcds [1, 2, 3, 4, 6, 8, 9] profiles 19 candidate_clocks 11 proposals 161
+tails 5 body 8 gcds [1, 2, 3, 4, 5, 6, 8, 9, 10, 12, 15, 16, 18, 24, 30, 32] profiles 110 candidate_clocks 31 proposals 2721
+tails 6 body 7 gcds [1, 2, 3, 4, 5, 6, 8, 9, 10, 11, 12, 15, 16, 17, 18, 20, 22, 23, 24, 25, 27, 29, 30, 32, 33, 34, 36, 40, 44, 45, 46, 48, 50, 51, 54, 58, 60, 64, 66, 72, 88, 90, 96] profiles 1217 candidate_clocks 138 proposals 397280
+literal_pair_cases 3760 explicit_gates 4618
+named_safe_maximum_clock_realizations {"(32, (1, 1, 2, 4, 4))": [481, 929, 2754, 7300, 9092], "(9, (1, 1, 1, 3))": [136, 262, 388, 1542], "(96, (1, 1, 4, 4, 6, 12))": [1441, 2785, 16516, 21892, 40902, 97932], "(96, (1, 3, 4, 4, 6, 12))": [1441, 8355, 16516, 21892, 40902, 97932]}
+profile_json_sha256 7af5425db35516037e03bb2d114c34bd1f2c8971cdee91866dc77b754b13f557

@@ -174,7 +174,7 @@ of `[13]`. It does not close the arbitrary ten-bodies left here. The
 original empty-hexagon paper motivates finding a smaller legal certificate;
 the actual cross-lane map here is gcd inheritance, not a polygon analogy.
 
-### Scale-three entry corollary and the concurrent reserved target
+### Scale-three entry corollary and the concurrent descent theorem
 
 If `V=3C union T` is a primitive set of thirteen distinct positive speeds,
 `|C|=10`, `|T|=3`, and `gcd(C)>1`, then `M(V)>=1/14`. Indeed the ten-pack
@@ -184,12 +184,13 @@ no bound on the entries of C or T is used. More generally a primitive row
 `3dC union T` is safe for every integer `d>=2`.
 
 Incoming [THM-4446, primitive ten-pack descent and dilation rays](../../01-canon/theorems/THM-4446-lrc14-primitive-ten-pack-descent-and-dilation-rays.md)
-is still **RESERVED / UNPROVED EMPTY STUB** at the checked revision
-`bf5a1cf355`. Its intended nonprimitive-ten-pack target is a direct consumer
-of the theorem here. This paragraph proves the stated corollary independently;
-it does not use or promote the reservation, nor assert arbitrary chart entry.
-The independent clock-certificate referee checked both corollaries and the
-reservation boundary after integration: **PASS**.
+was RESERVED at the initial comparison `bf5a1cf355` and is now **PROVED**
+by incoming `32a2afb93c`. Its nonprimitive-ten-pack safety conclusion is a
+direct consumer of the theorem here; its phase-uniform fibre statement,
+bounded-body dilation rays and typed entry restrictions add separate scope.
+This paragraph proves its own stated corollary independently and does not
+assert arbitrary chart entry. The independent clock-certificate referee
+checked both corollaries and the status boundary: **PASS**.
 
 ## 5. Exact controls and scope
 

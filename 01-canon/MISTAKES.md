@@ -252,6 +252,26 @@ live theorem surfaces were corrected.
 
 These are rejected proof shortcuts, not retractions of scoped canon.
 
+- **Padded intersections need padded sizes:** at clock6 and body phase
+  `1/2`, tails2 and3 have empty actual bad sets, but their capacity-sized
+  padded order3/order2 blocks must meet once. Subtracting that credit from
+  the actual size sum gives an invalid bound of minus one. Retain padded
+  sizes throughout Hunter's tree inequality. Likewise three identical
+  singleton sets refute subtracting a cycle of all three pair overlaps.
+  The [CRT/tree audit](../05-knowledge/results/gcd_pair_hunter_audit_empty_core_next_sep06.md)
+  proves the lawful bound and uses it in the complete gcd hierarchy.
+- **Euler/PF and generic interlacing lose the composition law:** a q6/h3
+  full-support coupled model satisfies both incoming Euler identities and
+  retains all three real-rooted kernels and the original coefficient zero,
+  yet its grouped skip is positive. Its full response remains below the
+  negative virtual response, so the sign failure does not refute transport.
+  Independently, `F=(1-3u)(1-2u)(1+u)(1+u/4)` has `[u^2]F=0`, and
+  `J=u(1-5u/2)(1+3u/4)` strictly interlaces F, but `[u^4]J^2=-11/16`.
+  Degree four is minimal for this square hostile. The
+  [exact proof and surviving coefficient-lowering operation](../05-knowledge/results/laurent_transport_empty_core_next_sep06.md)
+  retain the actual recurrence and quantify the negative margin as the
+  next test; neither an actual Laurent-support counterexample nor an LRC
+  implication is claimed.
 - **Quartic constant outside its dimension:** the sharp normalized signed
   duplication margin `7/9` for a real-rooted quartic with vanishing middle
   coefficient fails in degree five. The reciprocal roots
