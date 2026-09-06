@@ -368,9 +368,10 @@ lift/phase clocks.
   THM-4381 gives 86 nodes, one plane triple, and `S^sn=S+K r`.
   THM-4404/4411/4412 give the fixed-`x` descended-form gap, collision period,
   and non-descended suspension. THM-4421's integral `2Z minus 6Z` gap is
-  nongeometric. A [formal triple extension](../05-knowledge/results/synthesis_20260905_transgression.md)
-  integrates one `x` compensator but has a second-order straight-pencil
-  hostile. Full graph transgression, termination, and entry remain open.
+  nongeometric. THM-4424 proves the inherited `D2,D4,D6,kappa` debts are the
+  successive `s2--s5` coefficients of one transverse collision-discriminant
+  graph; the exceptional constant pencil has exact contact order five.
+  Full graph transgression, termination, and entry remain open.
 - **Weyl boundary:** THM-2049 gives a formal beta-adic lift; finite termination remains.
 - **Planar source fibres:** THM-2063/THM-2084--2480 (including
   THM-2371/THM-2376) close the named

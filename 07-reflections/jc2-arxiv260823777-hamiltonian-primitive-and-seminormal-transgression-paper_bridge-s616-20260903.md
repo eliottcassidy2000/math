@@ -17,6 +17,10 @@ proves that the missing seminormal period is exactly the first-order
 collision-persistence obstruction for every variable compiler normal
 `Q -> Q+s h`; THM-4412 realizes the missing jet by the algebraic suspension
 `D=z+r` and proves that its auxiliary coordinate cannot descend to the core.
+THM-4424 subsequently identifies the inherited `D_2,D_4,D_6,kappa`
+two-form obstruction ladder with successive transverse coefficients of the
+formal labelled-triple discriminant and proves exact fifth-order contact at
+the exceptional quartic.
 
 ## 1. The paper's correction as a primitive torsor
 
@@ -301,6 +305,58 @@ B_susp intersect K[x]=S,                 z notin B_susp. (14d)
 The extra coordinate repairs the jet only by retaining a non-descended
 sidecar. This is the jet-level analogue of Long's value-level compensator.
 
+### 3.2 The debt ladder is collision-discriminant curvature
+
+THM-4424 resolves the next-order experiment more rigidly than a single
+second-order hostile. Let `chi_Q(s)` be the unique `x` coefficient for which
+
+```text
+Q_s=Q+s+chi_Q(s)x
+```
+
+retains the labelled triple after its three source sections and common target
+are allowed to move. The invertible six-variable Jacobian makes `chi_Q` a
+well-defined transverse graph coordinate. If
+
+```text
+chi_Q(s)=sum chi_n(Q)s^n,
+```
+
+then on the successive inherited zero strata one has exactly
+
+```text
+chi_2=(9/8)delta_2,
+chi_3=(9/12)delta_4,
+chi_4=(9/16)delta_6,
+chi_5=(9/20)delta_8,                                  (14e)
+```
+
+where the consistently oriented residuals are
+
+```text
+delta_2=D_2, delta_4=D_4, delta_6=-D_6, delta_8=-kappa. (14f)
+```
+
+Thus the historical zero-second-debt plane, zero-fourth-debt parabola, and
+exceptional sixth-debt quartic are literally successive osculation strata
+of the same collision hypersurface. At an exceptional root,
+
+```text
+chi_1=chi_2=chi_3=chi_4=0,       chi_5=-9kappa/20 !=0. (14g)
+```
+
+The uncorrected constant pencil retains the triple modulo `s^5` but cannot
+do so modulo `s^6`. This explains the reappearance of the old parabola and
+quartic in the deformation calculation. It is also the closest exact
+analogue here of Long's correction: the first unavoidable non-descended
+coordinate is a scalar multiple of the same two-form invoice that prevents
+the target lift.
+
+Only the four displayed levels are proved. Their common first-exit conormal
+calculation explains the factor `9/(4n)` exactly; extending the identification
+to every future debt or to another compiler remains open. The local
+discriminant graph still supplies no descended target primitive.
+
 ## 4. Why the paper does not immediately descend to `JC(2)`
 
 The paper's Casimir fibres give a second exact boundary.  In coordinates
@@ -353,13 +409,14 @@ four-dimensional Poisson problem, where neither is needed.
 | cheapest decisive test | first compute the retained base wedge; then test a positive `88`-minor; for rank reduction, classify the Casimir fibre before attempting elimination |
 
 The first two experiments proposed in the original bridge are now resolved
-by THM-4411/4412. The next useful experiments are correspondingly narrower:
+by THM-4411/4412/4424. The next useful experiments are correspondingly
+narrower:
 
 1. intersect the collision-period kernel with the **actual admissible**
    source-normal coefficient directions, rather than all lawful compiler
    normals;
-2. lift `(14b)` to second order and determine whether a new curvature period
-   appears even when the first-order obstruction vanishes;
+2. derive an adjoint or Stokes formula for the finite pattern `(14e)`, then
+   test whether it survives in another compiler rather than extrapolating it;
 3. test whether a different planar compiler can represent the missing jet by
    two descended wedge slots without an auxiliary coordinate; and
 4. in any paper-inspired volume-preserving core, demand a coordinate Casimir
@@ -385,7 +442,8 @@ output: 6227a6b7a0676b8b5b53a8142ff47b018532ea701b4c2735ff6fd0bcee324414
 
 The rank-`88` conclusion is `PROVED + VERIFIED-EXACT + INDEPENDENTLY AUDITED`
 in THM-4404. THM-4411 identifies its retained period with first-order
-collision persistence for variable compiler normals, and THM-4412 supplies
-the exact stabilized seminormal sidecar. None is identified with the full
+collision persistence for variable compiler normals, THM-4412 supplies the
+exact stabilized seminormal sidecar, and THM-4424 identifies four successive
+debt residuals with collision-discriminant curvature. None is identified with the full
 THM-4067 moving-graph family. This note constructs no global planar pair and
 proves no consequence for `JC(2)`, which remains open.

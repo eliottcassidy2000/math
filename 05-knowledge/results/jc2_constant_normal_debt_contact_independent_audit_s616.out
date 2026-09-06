@@ -1,0 +1,15 @@
+constant_normal_debt_contact_independent_audit
+engine=SymPy_direct_series;imports_primary=no;formal_unknowns=endpoints,common_CE,x_compensator
+implicit_J=compiler_derived;det=-288;uncompensated_rank=5
+general_contact_s1=0
+general_contact_s2=-(36*a + 16*b + 36*c + 259)/9=(9/8)*D2
+zero_D2_contact_s3=16*(729*p - 42120*r**2 + 15192*r + 5717)/2187=(3/4)*D4
+zero_D2_D4_contact_s4=16*(72783360*r**4 - 77822208*r**3 - 28419741*r**2 + 7849770*r - 1276420)/177147=(9/16)*delta6
+exceptional_contact_s5=64*(104569906176*alpha**3 + 87403912326*alpha**2 - 19653044202*alpha + 4049817787)/129140163=(9/20)*delta8=-9/20*kappa8
+constant_period_coefficients=-delta2,-delta4,-delta6,-delta8
+adjoint_first_exit=n*contact_s^n=-(9/4)*constant_period_s^(n-1);n=2,3,4,5
+contact_payload_sha256=d753e2c9cfd88a8f641a91e6fe4b794663341e078df90ace8120586dbc6653d5
+nested_strata=D2_zero_plane,D4_zero_parabola,D6_exceptional_quartic,D8_exit
+scope=formal_local_labelled_triple_and_inherited_retained_debts_only
+NO_CLAIM=all_order_identity_or_global_discriminant_or_target_lift_or_Keller_pair_or_JC2
+checks=78;result=PASS
