@@ -1,0 +1,7 @@
+COMPLETE NATIVE KERNEL {"block_determinant": "1", "block_rank": 1, "boolean_edges": 1, "classes": 2, "even": 1, "index": 0, "labels": 2, "n": 3, "nullity": 0, "odd": 1}
+COMPLETE NATIVE KERNEL {"block_rank": 1, "boolean_edges": 2, "classes": 3, "even": 2, "index": 1, "labels": 8, "n": 4, "nullity": 1, "odd": 1}
+COMPLETE NATIVE KERNEL {"block_rank": 3, "boolean_edges": 8, "classes": 7, "even": 4, "gauge_hostile_block": [[4, 2], [4, 4]], "index": 1, "labels": 64, "n": 5, "nullity": 1, "odd": 3}
+COMPLETE NATIVE KERNEL {"block_rank": 6, "boolean_edges": 31, "classes": 16, "even": 10, "gauge_hostile_block": [[8, 4], [4, 4]], "index": 4, "labels": 1024, "n": 6, "nullity": 4, "odd": 6}
+COMPLETE NATIVE KERNEL {"block_determinant": "1076", "block_rank": 27, "boolean_edges": 205, "classes": 54, "even": 27, "gauge_hostile_block": [[12, 6], [4, 4]], "index": 0, "labels": 32768, "n": 7, "nullity": 0, "odd": 27}
+SEMANTIC SHA256 2e874388a92fe612a00bc38f32c77013e04e48795e22307f1a02d3cc2bbcb1d6
+FINITE-EXACT n3..7; no all-order nullity or gap claim

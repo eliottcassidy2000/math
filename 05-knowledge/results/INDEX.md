@@ -96,6 +96,12 @@
   conditional connected expansion with the required outer mixture terms.
   General trinomial separation and no-three-in-line asymptotics remain open.
   [Frozen proofs, sources and independent audits](overnight6_20260906_manifest.json).
+- **Audited seventh-wave mechanism transfers:**
+  [quantitative body pair packets](lrc14_quantitative_pair_packet_overnight_hexagon_sep05.md) give actual safe-measure floors and an unbounded primitive family with margin1/12 despite failure of all clocks through14;
+  [weighted midpoint deletion](nc2_weighted_midpoint_overnight_hexagon_sep05.md) proves all-root one-factor doubling signs and exact multiplicity inheritance, while a cubic hostile refutes abstract joint transport;
+  [self-complementary parity dictionary](overnight_hexagon_sep05_boolean_selfdual.md) identifies the native index with complement-fixed switching classes and recovers the ordinary self-complementary count at one lower order;
+  [native diagonal obstruction](eulerian-boolean-kernel-overnight-hexagon-sep05.md) rules out every row/column weight repair from n=5;
+  [full Fourier repair](eulerian-boolean-fourier-repair-overnight-hexagon-sep05.md) is explicitly CONDITIONAL on a retained square block, FINITE-EXACT through n=7. No global entry, joint moment-sign or Boolean-nullity closure is implied.
 
 - [THM-4444: signed `(1,1,2)` sharp one-ray classification](../../01-canon/theorems/THM-4444-lrc14-signed-112-sharp-one-ray-classification.md):
   **PROVED ELEMENTARY RELATIVE TO THM-4414 + FINITE-EXACT + INDEPENDENTLY

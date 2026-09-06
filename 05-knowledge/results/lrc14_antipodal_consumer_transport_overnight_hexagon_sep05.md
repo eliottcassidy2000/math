@@ -28,6 +28,14 @@ actual body phases**. The live concept board is: safe-set autocorrelation;
 strict effective danger; actual tail valuation; owner inactivity; singleton
 contacts; component ancestry.
 
+After this sidecar was checkpointed, incoming
+[THM-4442 — bounded ten-body parity-free completion](../../01-canon/theorems/THM-4442-lrc14-bounded-ten-body-parity-free-scale-three-completion.md)
+was read in full. Its point-existence theorem subsumes the first two fixed
+body families below and additionally handles all-even tails. The third body
+has height eighteen, outside that theorem's `[13]` body universe. The
+quantitative retained-packet continuation uses this proof's actual phase
+geometry, rather than repeating the bounded-tail enumeration.
+
 The transfer preserves both body-safe phases and a single tail's antiphase
 relation. It discards the exact permutation of owner labels, but one inactive
 tail is enough to ensure a missing sheet, so those labels can be recovered

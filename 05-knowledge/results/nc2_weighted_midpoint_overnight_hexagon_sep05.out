@@ -1,0 +1,11 @@
+WEIGHTED MIDPOINT DELETION AND THE JOINT-TRANSPORT BOUNDARY
+scope=PROVED full-support weighted PF and all-root one-factor sign; abstract joint implication REFUTED
+network universe: 135 cases; 639 literal endpoints; 675 weighted rows including 21 zero rows
+independent Toeplitz controls: 35100 minors of sizes2,3 from index sets0..3
+one-factor roots: 168 strictly negative doubled values; 15 shared-root zeros; all multiplicities retained
+square-pencil degeneration: 87 exact allowed/boundary/hostile rows, r=1..6
+joint hostile: first root-1, virtual-2, actual162, defect164; both individual and joint PF predicates survive
+narrow degree boundary: 729 exact quadratic controls; failure first exhibited in cubic degree
+OPEN actual binomial joint signed transport; the cubic hostile is not a binomial-row counterexample
+trace_sha256=67d2a13a236fe2f00399382fa661e28d44c92dcf840c60c9dd060fd1bb093870
+PASS explicit_gates=38974

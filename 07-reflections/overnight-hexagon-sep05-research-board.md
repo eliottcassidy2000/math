@@ -4,8 +4,30 @@
 is explicit below; this file is provenance, not proved canon. Session began
 at 2026-09-06 04:37 UTC from `62e1b34d82a4` in an isolated worktree.
 The startup and first/second-wave sections preserve idea provenance. The
-[sixth-wave board](#sixth-wave-current-board) is the current portfolio
+[seventh-wave board](#seventh-wave-current-board) is the current portfolio
 at the latest checkpoint; proved truth lives in canon.
+
+## Seventh-wave current board
+
+**2026-09-06, ongoing overnight session.** Incoming proof and byte-budget
+repairs are integrated at checkpoints, not confused with new mathematics.
+The six live concepts now have these sharper predicates:
+
+| Lane | Audited advance | Next decisive obligation |
+|---|---|---|
+| Anchor: actual body geometry | Located pair packets give quantitative safe measure; a residue-lift family has unbounded body/tail heights and margin1/12 | General gap-band and three-phase suppliers are new candidates, not universal entry |
+| Tail circuit classification | Our norm4 proof is independent confirmation of incoming4444 and global parity synthesis | Stop redoing scalar ceilings; preserve actual component location and tail valuation |
+| Laurent endpoint paths | Weighted deletion is PF; square-pencil degeneration forces one-factor sign and multiplicity | Entire joint cut classes have positive finite evidence only; exact endpoint relations remain unpaid |
+| Native Boolean kernel | A four-entry all-order obstruction kills diagonal rescaling; full Fourier repair works conditionally and in the complete n<=7 bank | Stress the canonical free-pair block, and seek integral native elimination |
+| Dual involutions | The parity index counts self-complementary two-graphs; odd-order Eulerian projection and SC(4k) are recovered exactly | Fixed weighted modes are not Boolean modes; retain the whole parity basis |
+| Observer ideals | Complete dyadic three-node three-jet Smith law is audited canon4443 | Park the solved slice; use attained-cost certificates on genuinely new observers |
+
+The new cross-lane comparison is between genuine algebraic closure and a
+lossy shadow: weighted PF survives a vertex deletion but not arbitrary
+joint endpoint forgetting; Fourier bases survive duality but not Boolean
+edge flattening; rational body residue packets survive independent height
+lifts but not tail-only normalization. Cheap explicit hostiles delimit
+each successful map before a new general conjecture is entertained.
 
 ## Sixth-wave current board
 

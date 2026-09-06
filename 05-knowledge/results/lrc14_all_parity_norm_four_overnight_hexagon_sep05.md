@@ -7,6 +7,17 @@ oddness changes the sharp constant to `11/140`, uniquely at `(2,11,20)`.
 Every other primitive member is at most `6/77`, with equality only at
 `(1,5,11)`.
 
+**Concurrent credit.** Incoming
+[THM-4444 — signed-112 sharp one-ray classification](../../01-canon/theorems/THM-4444-lrc14-signed-112-sharp-one-ray-classification.md)
+is now **PROVED** at `fd73e66105`, with the same sharp statement and a
+finer three-cone classification. This note is an independent co-discovery,
+proof/referee sidecar, not a competing theorem-ID claim. Its distinct
+mechanism is the exact endpoint-product discrepancy and forty-row head,
+including the ten endpoint-gcd-two rows. The incoming
+[native synthesis](overnight4_20260906_lrc_parityfree_native.md) independently
+closes the universal local ceiling and the complete old-threshold locus;
+the parity table below is a corollary, not a second global closure claim.
+
 Combining this family with the incoming **PROVED** generic reduction,
 additive theorem and norm-five theorem gives the all-parity ceiling `6/55`
 and the three sharp primitive parity constants below. No arbitrary-body

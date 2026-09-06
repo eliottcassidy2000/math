@@ -1,0 +1,12 @@
+EXACT PRIMAL/DUAL {'n': 3, 'orbits': 2, 'parity_index': 0, 'self_complementary_two_graph_orbits': 0, 'fixed_modes_failing_Boolean': 0, 'Eulerian_members_per_cut_class': {1: 2}}
+EXACT PRIMAL/DUAL {'n': 4, 'orbits': 3, 'parity_index': 1, 'self_complementary_two_graph_orbits': 1, 'fixed_modes_failing_Boolean': 1, 'Eulerian_members_per_cut_class': {0: 1, 4: 2}}
+EXACT PRIMAL/DUAL {'n': 5, 'orbits': 7, 'parity_index': 1, 'self_complementary_two_graph_orbits': 1, 'fixed_modes_failing_Boolean': 1, 'Eulerian_members_per_cut_class': {1: 7}}
+EXACT PRIMAL/DUAL {'n': 6, 'orbits': 16, 'parity_index': 4, 'self_complementary_two_graph_orbits': 4, 'fixed_modes_failing_Boolean': 4, 'Eulerian_members_per_cut_class': {0: 10, 16: 6}}
+RECOVERED SELF-COMPLEMENTARY n 4 COUNT 1 = PARITY INDEX n 5
+RECOVERED SELF-COMPLEMENTARY n 8 COUNT 10 = PARITY INDEX n 9
+RECOVERED SELF-COMPLEMENTARY n 12 COUNT 720 = PARITY INDEX n 13
+RECOVERED SELF-COMPLEMENTARY n 16 COUNT 703760 = PARITY INDEX n 17
+RECOVERED SELF-COMPLEMENTARY n 20 COUNT 9168331776 = PARITY INDEX n 21
+GATES 398 SEMANTIC SHA256 18f878ce55bd8686ee112df72dd45f5fefd678a09e2138cee22720c2b367a317
+PROVED all-n invariant trace dictionary; self-complementary zero modes are WEIGHTED only
+OPEN constructive native Boolean kernel dictionary and exact all-n nullity
