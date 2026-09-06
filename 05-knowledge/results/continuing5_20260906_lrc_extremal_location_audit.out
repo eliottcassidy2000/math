@@ -1,0 +1,10 @@
+Displayed tuple: t16704, e4, primitive pair(3,308), word(12,16,72,58,64,9,9).
+126 projected words PASS; literal marginal costs (2388, 2400, 2448, 2436, 2432, 2394, 2394); E=188.
+Spatial native-wall sweep: 622 boundaries,45 components,measure1/49; separate credit43*4=172.
+Independent phase universe:156 raw walls +156 open cells; exactly90 active intersection walls.
+Wall count histogram: {84: 32, 85: 80, 86: 34, 87: 10}
+Open-cell count histogram: {84: 16, 85: 72, 86: 53, 87: 15}
+Uniform count [84,87]; min at53/539; max at74/77; actual pair credit336>E188.
+16 literal full-grid lift controls PASS; conditional weak-safe lower count148.
+Only the displayed selected-pair/word control is eliminated; clock16704 is not globally excluded.
+PASS: 425 always-active exact gates.

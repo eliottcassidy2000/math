@@ -1,0 +1,8 @@
+STATUS PROVED actual bounded entry class; FINITE-EXACT correlated overlap supplier; row already safe
+V (227923228170, 233244393030, 238819956210, 278808413994, 302746510145, 722214566370) U (15747768383257, 16242462678019, 17331342857551, 17932429893073, 18576708811387, 20820874976521, 28993554873847) GROUPS (107, 149, 167, 173, 179, 191, 197) P 722214566370 H 3102310371501629
+CLASS 967<=t<=1042, gcd(t,H)=1; g=1; actual rank11 equality, all4095 full profiles, all individual pair-interval credits0
+ACTUAL t968 sum 2075281984219247 rank 11 edges 11 crossings 105 126 margins 858481264080 55157421217140/55083317447977
+LOCATED_PAIR107_167 intervals39 measure2553/125083 walls78 probes156 uniform_min15 max23 individual_min_sum0 excess5 certified_safe10 literal_quarter_safe335
+PHYSICAL first7 packet (1, 2, 3, 4, 5, 6) clearance 1/7 quarter_first 13/3872 clearance 885/3872
+SCOPE relative interval positions repair separate-rounding loss; no unresolved-entry or general LRC14 claim
+PASS 4629 always-active exact gates; raw LF

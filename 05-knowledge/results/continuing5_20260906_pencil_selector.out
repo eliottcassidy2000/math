@@ -1,0 +1,9 @@
+C_upper C middle-root boxes [(-1503/278, -2341/433), (9/869, 2/193)]
+C_upper D middle-root boxes [(-924/641, -271/188), (124/507, 79/323)]
+D_upper C middle-root boxes [(-10587/2395, -389/88), (130/489, 109/410)]
+D_upper D middle-root boxes [(-125/897, -17/122), (232/897, 217/839)]
+positive_lower C middle-root boxes [(-4695/1259, -4516/1211), (298/867, 309/899)]
+positive_lower D middle-root boxes [(163/2101, 9/116), (177/530, 176/527)]
+NONNESTED D survives (155/2, 9, 1/10) opposite determinant -21973980341/10210252500
+NONNESTED C survives (155/2, 37/4, 13/50) opposite determinant -11640479453184647/52276492800000000
+PASS 119 always-active exact gates

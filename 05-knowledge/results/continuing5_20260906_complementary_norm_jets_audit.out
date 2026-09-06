@@ -1,0 +1,9 @@
+LOW_HEIGHT 1 samples 3 boundaries 1
+LOW_HEIGHT 2 samples 9 boundaries 2
+LOW_HEIGHT 3 samples 19 boundaries 3
+LOW_HEIGHT 4 samples 33 boundaries 4
+AUDIT PASS general leading jet formula; exact order r-1 iff complementary regular norm is nonzero
+COROLLARY H=h-r in0..6: seven exact boundary diagonals at every height; sign(-1)^(r-1)
+INDEPENDENT 64 positive interpolation points plus4 noninteger Sylvester resultants; all10 low-height jets and reflections
+SCOPE all-h coefficient positivity remains open; no global actual sign inferred from negative-parameter jets
+PASS 706 always-active exact gates; raw LF

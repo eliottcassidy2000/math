@@ -1,0 +1,7 @@
+STATUS FINITE-EXACT selected edge boundary repair plus PROVED translated-grid transfer
+INPUT t16704 e4 n4176 pair3,308 word (12, 16, 72, 58, 64, 9, 9) forced12,16 profiles126 excess188
+GEOMETRY intervals45 measure1/49 lengths43/2156+2/4312 walls90 cells90
+LOCATED minimum84 at53/539 maximum87 at74/77; separate43; physical credits336 versus172
+CONSUMER any actual selected edge with total excess<=188 gives at least148 weak-safe lifts
+SCOPE no physical realization of the word and no elimination of whole clock16704; no other edge candidates tested
+PASS 320 always-active exact gates; raw LF

@@ -1,0 +1,9 @@
+Independent atlas5855 x sheetdivisors5: candidates988, complete row-by-row agreement.
+Candidates SHA256 8610d17932b51afbaaeec4699f5a21e2362441f58b9c28235c48182106d45bc1
+Prefix107: native enter/exit sweeps and literal extremum owners agree; first survivor index106.
+Selected pair(e,p,q)=(4,23,323), forced(4,4): sep180, located180, relaxed Epair207, inherited M188.
+Selected native partition:692 walls+692 cells, min45 at0, max92; location alone supplies no gain.
+Conditioning:26334 five-slot completions,2422 valid full words,max134 at(4,4,3,9,36,58,64).
+Conditional credit180 exceeds134 by46; no actual or full-conditioned survivor is claimed.
+Candidates107..987 located profiles not audited; whole-clock elimination remains unproved here.
+PASS: 6517 always-active exact gates.

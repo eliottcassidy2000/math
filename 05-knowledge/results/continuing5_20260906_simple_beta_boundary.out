@@ -1,0 +1,13 @@
+Residue division through moment 8 and all three Gram identities pass.
+Double zero: C forces x>=75 and then x=75; D/B ordinary H3 determinant=-37/16.
+r=(7-sqrt(7))/2: y=49/4 + 49*sqrt(7)/2; D/B H3=-5*sqrt(7)/2 - 5/4.
+r=(7+sqrt(7))/2: y=49/4 - 49*sqrt(7)/2; D/B H3=-5/4 + 5*sqrt(7)/2.
+C-only hostile B=v^2(v-3)(v-5)^2 retained: C/B=2/(3v)+1/(3(v-3)), D(5)=-25/4.
+(x,y,z)=(84,35,0), C/B leading Gram minors: [1, 2, 11, 188, 7125].
+(x,y,z)=(84,35,0), D/B leading Gram minors: [1, 3, 26, 705, 30600].
+(x,y,z)=(84,35,1), C/B leading Gram minors: [1, 2, 11, 170, 6069].
+(x,y,z)=(84,35,1), D/B leading Gram minors: [1, 3, 26, 646, 24617].
+Zero-root atoms: C weights 3/7 and 4/7; D weights 1/7 and 6/7. Original O14/E14 and inverse carry28 retained.
+Compactness supplies a positive mutual beta-root gap, with no explicit constant and no positive distance from zero.
+No B-only simplicity, universal strict reference, boundary sign, or general Laurent noncancellation claimed.
+PASS: 89 always-active exact gates.

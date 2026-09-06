@@ -37,6 +37,59 @@ Format per entry:
   The move uses a connected interval in one coefficient line, not global
   convexity of the B-only or weak two-interlacer coefficient domain.
 
+## 2026-09-06 continuation -- ordered fibres and joint choices
+
+- [Simple beta boundary](../05-knowledge/results/continuing5_20260906_simple_beta_boundary.md):
+  repeated beta roots are impossible in the full weak two-interlacer model,
+  even though B=v^2(v-3)(v-5)^2 is a lawful C-only example. The missing
+  condition is the separate D/B residue Gram determinant, not a Newton
+  moment of D. Compactness gives a positive mutual beta gap, but the valid
+  simple-zero point(84,35,0) refutes a positive distance from the origin.
+  The reduced quartic zero-atom geometry retains the original O14/E14
+  carriers; it is not a lower-height factorial response theorem.
+- [Exact coefficient selector](../05-knowledge/results/continuing5_20260906_pencil_selector.md):
+  convexity does not imply that a fibre reaches zero. At(x,y)=(311/4,21/2)
+  the full fibre contains1/5 but starts in(163/2101,9/116)>0. Nor is either
+  interlacer redundant globally: D survives alone at(155/2,9,1/10), and C
+  survives alone at(155/2,37/4,13/50), with genuine positive beta roots.
+  The first failed step was choosing a zero endpoint or a fixed active
+  channel without an order certificate. The repaired selector retains a
+  strict reference and the two middle roots of each resultant. The
+  [proved sign rectangle](../05-knowledge/results/continuing5_20260906_moments_rectangle.md)
+  removes both interlacers only after its local beta-geometry cap is proved;
+  its z6 positive-response hostile prevents dropping that cap globally.
+- [Correlated rounding](../05-knowledge/results/continuing5_20260906_lrc_correlated_overlap.md):
+  the actual967..1042 class has zero lower counts for every separate pair
+  interval. At968 the minimum count of the located39-interval union is15,
+  while the sum of the separate minima is0. The first failed implication
+  commutes minimization with summation. Relative endpoint residues restore
+  a positive uniform count; the row is already safe at denominator7.
+  The [incoming extremal control](../05-knowledge/results/continuing5_20260906_lrc_extremal_location.md)
+  improves172 to336 against cost188, but eliminating one pair and word does
+  not by itself eliminate every eligible case atclock16704. The first
+  remaining located candidate(23,323) has unchanged credit180, while its
+  true compatible-word cost is134 rather than the relaxed188. The
+  [complete compiler](../05-knowledge/results/continuing5_20260906_lrc_clock16704_complete.md)
+  then retains both coordinates for all988 candidates and removes the
+  entire clock:8201 clocks, maximum14904. Neither relaxation alone was
+  the completed proof, and the remaining clocks are not asserted failures.
+- [Repair-word hostiles](../05-knowledge/results/continuing5_20260906_wildcard_swap_compiler.md):
+  all5040 column permutations of the fixed-row p7 C14 fail; one specified
+  row swap yields a complete120-orbit repair class. Cycle type loses row
+  addresses. Nine repaired-class orbits need a plateau move, and66 saved
+  bare swaps increase the score before affine completion. Strict descent
+  and bare-swap monotonicity are false extensions of the completed-move
+  theorem. Atp11 all ten reciprocal zero-output swaps fail; the surviving
+  all-prime result is the factor-and-carry iff, not universal one-swap
+  success. The modular-line support bound retains the occupied levels of
+  the final affine-image line, not their untransformed lengths.
+- Frozen JSON checkout bytes: temporarily stashing these new artifacts
+  before a clean incoming fast-forward restored three JSON files as CRLF
+  before their new LF rules were installed. Exact raw-blob comparison caught
+  the change; the original LF blobs were restored and verified before the
+  owned stash was removed. The new patterns now preserve future checkouts.
+  This was checkout conversion, not normalization of emitted program output.
+
 ## 2026-09-06 continuation -- eighth norms, interval rounding and column ratios
 
 - [Degree-seven hostile and degree-eight repair](../05-knowledge/results/continuing4_20260906_moments_packet.md):

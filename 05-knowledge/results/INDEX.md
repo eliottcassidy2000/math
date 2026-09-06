@@ -1,5 +1,24 @@
 # Script Results Index
 
+- [Current continuing synthesis](continuing5_20260906_synthesis.md):
+  **PROVED + FINITE-EXACT + INDEPENDENTLY AUDITED.** All988 clock16704
+  candidates close by compatible words plus located overlaps; the connected
+  seven-complement necessary set is now8201 clocks, maximum14904. The anchored rectangle
+  83<=x<=85,34<=y<=36 has negative response at every original phase for all
+  nonnegative-root beta geometry. Ordered resultant roots exactly select
+  fibres with a strict reference; fibres need not reach zero or have nested
+  interlacer channels. Beta roots are all simple in the full model, leaving
+  zero/shared-root sign boundaries. A complementary-norm iff gives seven exact boundary
+  diagonals at arbitrary height. Joint interval positions restore an LRC
+  credit15 from separate zeros; the incoming16704 selected control improves
+  from172 to336. A complete p7 no-three-line repair class has nonincreasing
+  swap-and-affine paths, with a linear all-prime modular-line swap barrier
+  and an exact reciprocal decoder. [Manifest](continuing5_20260906_manifest.json):
+  58 artifacts, eighteen engines,222270 gates in each normal/optimized mode.
+  General LRC14, arbitrary-height actual response positivity and the full
+  free-coefficient model remain OPEN.
+
+
 - [Extended session: coefficient regions and adaptive overlaps](long_frontier2_sep06_board.md):
   **PROVED + FINITE-EXACT + INDEPENDENTLY AUDITED.** A full coefficient
   prism has negative response at every original Laurent zero, without
@@ -13,7 +32,7 @@
   exact programs and the complete coefficient certificate. General
   LRC14, boundary sign closure and sharp global modulus lower bounds remain OPEN.
 
-- [Current continuing synthesis](continuing4_20260906_synthesis.md):
+- [Previous continuing synthesis](continuing4_20260906_synthesis.md):
   **PROVED + FINITE-EXACT + INDEPENDENTLY AUDITED.** Degree-eight Hankels
   exactly decode the weak two-interlacer model and give compact coefficient
   fibres; a genuine degree-seven moment surrogate has positive response.

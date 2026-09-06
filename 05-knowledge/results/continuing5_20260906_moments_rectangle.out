@@ -1,0 +1,10 @@
+Uniform coefficient prism: 83<=x<=85,34<=y<=36,0<=z<=5; every original positive phase has full Q<0.
+Nonnegative beta geometry gives z<540/109<5, with no interlacer hypothesis.
+Original phase endpoint extrema: [{"max": "8209141/8334727632", "min": "10751/13618836", "s": "1/102", "sign": 1}, {"max": "-999683/1540000000", "min": "-16413/19250000", "s": "1/100", "sign": -1}, {"max": "-25265/505197", "min": "-500/6237", "s": "1/9", "sign": -1}, {"max": "155206477/1540000000", "min": "1116939/19250000", "s": "13/100", "sign": 1}, {"max": "1679/77", "min": "876/77", "s": "1", "sign": 1}, {"max": "-41189/9625", "min": "-541029/9625", "s": "8/5", "sign": -1}, {"max": "-2058747/1232", "min": "-14019065/308", "s": "19/2", "sign": -1}]
+Raw first-branch upper: -728550005046322718853208807/1704830652000000000000000
+Positive transform 1/9 13/100 81 coefficients; minimum 10396002758034286225411/24500000000000000
+Positive transform 1 8/5 81 coefficients; minimum 1992478168568/49
+Positive transform 19/2 None 81 coefficients; minimum 165789872820/49
+All15 literal actual channels PASS; exact degree8 domain rejects both positive-response hostiles.
+Certificate SHA256 1e86411634a8f62f98a512d741d4b8df8ba5a069fb262d92bafe64e40569a4f8
+PASS 438 always-active exact gates; actual LF stdout

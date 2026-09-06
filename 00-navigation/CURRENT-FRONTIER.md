@@ -55,8 +55,8 @@ gives square sum `<=195`; THM-4019 refutes its sharp arbitrary-lattice target.
   THM-4452: one-v2 clock-four cap `1/110`; [inert gates](../05-knowledge/results/creative_20260906_inert_pareto.md) `40/469,716/4221`; [ranked capacities](../05-knowledge/results/continuing1_20260906_profiles.md) retain all sums; physical gain OPEN.
   THM-4442/4446 force gcd-one packs above `91^6`; hostiles refute prescribed-component
   selection. No universal body mass/component floor reaches these gates; entry remains open.
-- **Entry:** [Connected-complement grids](../05-knowledge/results/third_20260906_grid_refined.md):8,202 scales, `t<=16704,g<=90`;
-  [rooted pairs](../05-knowledge/results/third_20260906_decoder.md) close `maxU<=28`; [joint overlaps](../05-knowledge/results/long_frontier2_sep06_board.md) retain phase positions. Entry OPEN.
+- **Entry:** [Connected-complement grids](../05-knowledge/results/continuing5_20260906_lrc_clock16704_complete.md):8,201 scales, `t<=14904,g<=90`;
+  [rooted pairs](../05-knowledge/results/third_20260906_decoder.md) close `maxU<=28`; [combined overlap/cost](../05-knowledge/results/continuing5_20260906_synthesis.md) removes16704. Entry OPEN.
   [Sparse transport](../05-knowledge/results/synthesis_20260905_lrc_sparse_transport.md) retains weights and the selector gap.
 - **Residual ranks:** THM-4333/4338 close fixed-pool ranks three/four, not arbitrary entry.
 - **PROVED:** [THM-2928](../01-canon/theorems/THM-2928-critical-seven-comb-grid-tensorization-and-drift-tariff.md)/2941: literal zero/one/two/three-drift sectors are empty; `k=2,3` are finite.
@@ -155,7 +155,7 @@ and Lucas--Frobenius leaves `Q^p`: **whole-layer preservation**, not atoms.
 
 ### Live work
 
-Publish THM-2022; formalize THM-2639. [Boundary reduction and coefficient prism](../05-knowledge/results/long_frontier2_sep06_board.md): PROVED; general sign OPEN.
+Publish THM-2022; formalize THM-2639. [Simple beta roots, phase prism and norm jets](../05-knowledge/results/continuing5_20260906_synthesis.md): PROVED; general sign OPEN.
 [THM-4456](../01-canon/theorems/THM-4456-sharp-finite-length-signed-root-stability-asymptotics.md): optimum K3+C/N+o(1/N), C=2.172201096...; rigidity THM-4455, PROVED.
 [THM-4417](../01-canon/theorems/THM-4417-width-two-laurent-first-return-parabolic-critical-bound.md)
 proves first return `<=M+N` for `min(M,N)=2`; width one is THM-2111.
@@ -340,7 +340,7 @@ lift/phase clocks.
 ## Other active portfolio
 
 - **No-three-line:** [fixed rows](../05-knowledge/results/overnight11_20260906_no3line_rowfreeze.md)
-  give rate>=0.0130673. [Affine-column decoder](../05-knowledge/results/continuing4_20260906_wildcard_affine_columns.md): interval union and one-swap repair. Extremal asymptotics OPEN.
+  give rate>=0.0130673. [Swap compiler](../05-knowledge/results/continuing5_20260906_wildcard_swap_compiler.md): complete p7 class; linear swap barrier. Extremal asymptotics OPEN.
 - **P-adic zeta:** external density claims remain **PREPRINT / UNDER AUDIT**.
   [THM-4255](../01-canon/theorems/THM-4255-specialization-kernel-and-transverse-hasse-jet-repair.md)/[4263](../01-canon/theorems/THM-4263-moving-multigraph-filtered-jet-and-finite-factor-density-transport.md) prove graph/jet kernels, finite-factor UI transport and conditional hazards. MISTAKE-527 forbids chosen-section refutations; the external Cartier steps still need a typed audit.
 - **Matching logic:** THM-4090 gives a two-sort Figure-2 calculus

@@ -1,0 +1,7 @@
+PASS actual entry class and full profiles; all separate pair-interval minima vanish.
+Physical968: rank11, 231 crossings,4095 profiles, sum 2075281984219247 margins 858481264080 55157421217140/55083317447977
+Independent individual-danger partition: 548 walls and 548 cells; active intersection walls 78
+Exact located overlap minimum15, maximum23; separate minimum sum0; uniform physical safe count>=10.
+Literal quarter lifts335; first13/3872 clearance885/3872; first physical denominator7 with full nonzero packet.
+SCOPE: located counts at t968 only; bounded class entry and zero separate credits for967..1042; row already safe.
+PASS 5881 always-active exact gates; raw LF, no producer imports

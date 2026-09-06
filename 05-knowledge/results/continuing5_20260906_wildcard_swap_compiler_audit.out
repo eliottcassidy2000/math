@@ -1,0 +1,14 @@
+p=3: 6 column permutations; 1 cosets; radius {0: 1}.
+p=5: 120 column permutations; 6 cosets; radius {0: 1, 1: 5}.
+p=7: 5040 column permutations; 120 cosets; radius {0: 1, 1: 21, 2: 98}.
+All 120 row-assisted compilers pass; 66 saved bare swaps increase X before their affine completion.
+All 20328 one-row/one-column/affine-column words fail; the recorded larger word succeeds.
+3190 modular lines, 3572 actual-safe subsets, all native capacity controls pass.
+Reciprocal p=3: successful zero-output swaps [1].
+Reciprocal p=5: successful zero-output swaps [1, 4].
+Reciprocal p=7: successful zero-output swaps [1].
+Reciprocal p=11: successful zero-output swaps [].
+Reciprocal p=13: successful zero-output swaps [1].
+Independent grid-line geometry cases: 10206; reciprocal zero swaps: 34.
+All-prime proofs audited separately; conditional existence and completed-move monotonicity retained.
+PASS: 78940 always-active exact gates.

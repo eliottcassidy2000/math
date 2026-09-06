@@ -1,0 +1,22 @@
+p=3: quotient distance profile {0: 1}; full successes 2
+p=5: quotient distance profile {0: 1, 1: 5}; full successes 4
+p=7: quotient distance profile {0: 1, 1: 21, 2: 98}; full successes 0
+p7 rho=(0 5): all 120 orbits have a nonincreasing actual-triple compiler with <=3 swaps; nine need a plateau move.
+p7 row swap (0,5), column swaps (0,1),(1,2), affine (6,3): exact success; smaller one-per-shore box empty.
+p=5: all-prime total-swap lower bound 1 for any board containing a full modular line.
+p=7: all-prime total-swap lower bound 1 for any board containing a full modular line.
+p=11: all-prime total-swap lower bound 2 for any board containing a full modular line.
+p=13: all-prime total-swap lower bound 2 for any board containing a full modular line.
+p=17: all-prime total-swap lower bound 4 for any board containing a full modular line.
+p=19: all-prime total-swap lower bound 4 for any board containing a full modular line.
+p=23: all-prime total-swap lower bound 6 for any board containing a full modular line.
+p=29: all-prime total-swap lower bound 8 for any board containing a full modular line.
+p=31: all-prime total-swap lower bound 9 for any board containing a full modular line.
+reciprocal p=3: successful swaps of output0 with a: [1]
+reciprocal p=5: successful swaps of output0 with a: [1, 4]
+reciprocal p=7: successful swaps of output0 with a: [1]
+reciprocal p=11: successful swaps of output0 with a: []
+reciprocal p=13: successful swaps of output0 with a: [1]
+Certificate SHA256: cb41dab50c3505c48dac732f67013337bb936bddf1f0d762a08e48e3a337a982
+No unrestricted all-prime success or algorithmic running-time claim.
+PASS: 73164 always-active exact gates.

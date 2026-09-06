@@ -1,0 +1,6 @@
+AUDIT PASS full closed coefficient prism x83..85 y34..36 z0..5; every positive original phase Q<0
+PATH raw row polarization;9-grid same-root Laurent cancellation; value-to-Bernstein dual map;243 exact coefficient matches
+BERNSTEIN_MINIMA ['10396002758034286225411/24500000000000000', '1992478168568/49', '165789872820/49'] FIRST_RAW_BOUND -728550005046322718853208807/1704830652000000000000000
+SCOPE beta nonnegative-root cap540/109; all escaping and weak boundaries; no interlacer needed; outside rectangle remains open
+CONTROLS all15 charge-solved channels, exact phase corners, z1 full rectangle nonvacuity, both domain hostiles
+PASS 566 always-active exact gates; raw LF normal/-O

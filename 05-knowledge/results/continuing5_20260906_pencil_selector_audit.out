@@ -1,0 +1,8 @@
+PASS exact selector proof audit: strict reference, inertia(2,2,1zero), middle quartic roots, and weak endpoints.
+C_upper {'C': [['-1503/278', '-2341/433'], ['9/869', '2/193']], 'D': [['-924/641', '-271/188'], ['124/507', '79/323']]}
+D_upper {'C': [['-10587/2395', '-389/88'], ['130/489', '109/410']], 'D': [['-125/897', '-17/122'], ['232/897', '217/839']]}
+positive_lower {'C': [['-4695/1259', '-4516/1211'], ['298/867', '309/899']], 'D': [['163/2101', '9/116'], ['177/530', '176/527']]}
+All six quartics independently reconstructed from five Hankel and five 9x9 Sylvester determinants each.
+Full two-channel nonnesting and a positive lower endpoint retained; no global reference supplier inferred.
+Producer certificate SHA256 4f4ea7bdcb823f05b6d74b818597a8e4a4a007cc87f8bcf0fc5bfa9033761b8d
+PASS 182 always-active exact gates; no producer imports or SymPy

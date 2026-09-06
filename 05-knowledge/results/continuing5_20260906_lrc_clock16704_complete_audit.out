@@ -1,0 +1,9 @@
+FULL 346104 19073 pairs 161 wordhash 9c16fb52aee96a36a94b3ebd2c1f9ea0d43441a6f08f9b93d8e4a89a30616129
+DECISIONS 835 153 WORST (18, [6, 132, 221, 72, 6, 174, 226], 180, 33, 68, 86)
+Every one of171 forced-pair maxima/owners and988 decisions independently matches the frozen certificate.
+All153 located profiles: independent raw-interval event sweep plus literal extremum owners.
+Worst-row native partition 464 walls and 464 cells; min33,max68; strict endpoint conventions retained.
+Full t-grid multiplicity:27 literal phase/unit controls; both previous coordinate hostiles retained.
+Inherited8202-clock set minus16704:8201 clocks,maximum14904,newSHA ddbe0e091d36d54c8f6a7c8ea631bbf363d799b9adaa2ec4fe4cf56250d11a76
+Scoped physical conclusion: clock16704 is excluded in the inherited actual decoder domain; LRC14 remains open.
+PASS: 8493 always-active exact gates.

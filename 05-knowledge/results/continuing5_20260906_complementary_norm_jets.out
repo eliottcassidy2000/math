@@ -1,0 +1,7 @@
+height 6 exact diagonals [5, 4, 3, 2, 1, 0]
+height 7 exact diagonals [6, 5, 4, 3, 2, 1, 0]
+height 8 exact diagonals [6, 5, 4, 3, 2, 1, 0]
+height 9 exact diagonals [6, 5, 4, 3, 2, 1, 0]
+height 10 exact diagonals [6, 5, 4, 3, 2, 1, 0]
+exact jet triples 34
+PASS 276 always-active exact gates

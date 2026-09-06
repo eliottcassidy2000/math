@@ -1,6 +1,7 @@
 # Continuing synthesis: exact geometry and the information lost by reductions
 
-**CURRENT CHECKPOINT, 2026-09-06; PROVED + FINITE-EXACT + INDEPENDENTLY AUDITED.** This cycle
+**PREVIOUS CHECKPOINT, 2026-09-06; PROVED + FINITE-EXACT + INDEPENDENTLY AUDITED.**
+Current routing is the [coefficient-sign and located-certificate synthesis](continuing5_20260906_synthesis.md). This cycle
 starts at a5b2011be and integrates incoming work through e7a36aee1. LRC(14),
 general actual Laurent two-rung noncancellation, and the free two-anchor
 finite-phase sign problem remain OPEN. The results below are scoped changes

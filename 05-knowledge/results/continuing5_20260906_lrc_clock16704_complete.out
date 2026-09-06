@@ -1,0 +1,9 @@
+CANDIDATE PROOF: every retained connected-seven-complement row atclock16704 is weakly safe; independent audit pending
+WORDS complete346104 valid19073 conditional_margin_types161/171 globalmax188 valid_sha e585b7c1aa6f5bfd55abc2d3caaf2b245789a9ace580d8abd46a629d0fa49eef
+EDGES atlas5855 times5 divisors; filters {"component_cost": 28060, "forced_margin": 227, "paired_cost": 0} remaining988; Csep835 located153; no survivors
+MINIMUM_LOCATED_SURPLUS {"candidate": [6, 132, 221, 72, 6, 174, 226], "conditional": 180, "credit": 198, "max_phase": "17/22", "maximum": 68, "min_phase": "0", "minimum": 33, "surplus": 18, "walls": 86}
+MINIMUM_ALL_SURPLUS 4 NATIVE_CONTROLS [[6, 132, 221, 51, 86, 33, 68], [4, 3, 308, 45, 90, 84, 87], [4, 23, 323, 49, 98, 45, 92]]
+SCALE_SET deletion16704 count8201 maximum14904 sha256 ddbe0e091d36d54c8f6a7c8ea631bbf363d799b9adaa2ec4fe4cf56250d11a76
+CERTIFICATE_SHA256 8ab0b9fe8791707ac780f32030103eeec71de6830613619c8333672563a15345
+SCOPE one new clock only; general chosen-six connected-seven complement, weak safety, no LRC14 closure
+PASS 30532 always-active exact gates; raw LF
