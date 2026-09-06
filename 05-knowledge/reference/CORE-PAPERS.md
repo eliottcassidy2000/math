@@ -24,10 +24,10 @@
 
 ### Sungkawichai--Trakulthongchai — *Eleven, twelve, and thirteen lonely runners*
 
-- **Primary / freshness:** [arXiv:2604.23906v1](https://arxiv.org/abs/2604.23906), submitted 2026-04-26. **PREPRINT v1; not peer reviewed as of this check.**
+- **Primary / freshness:** [arXiv:2604.23906v2](https://arxiv.org/abs/2604.23906v2), revised 2026-09-01. **PREPRINT; v2 abstract and Theorem 1.3 checked 2026-09-06:** still proves through twelve nonzero speeds.
 - **Imported role:** a computer-assisted divisibility sieve proves LRC for `k=10,11,12` nonzero speeds; it also gives a finite-field polynomial shortcut when `k+1` and a sufficiently large auxiliary modulus are odd primes, and identifies the initial improper-tuple computation as the extension bottleneck.
 - **Repo consumers:** [LRC14 frontier](../../00-navigation/LRC14-FRONTIER-2026-07-15.md), [finite-check feasibility ledger](../../00-navigation/LRC14-FINITE-CHECK-FEASIBILITY-LEDGER-2026-07-19.md), [THM-1288, literal Conjecture 7.1 refutation](../../01-canon/theorems/THM-1288-c71-refuted-divisor-aligned-clusters.md), and [THM-523](../../01-canon/theorems/THM-523-lrc14-singular-series-proof-skeleton.md).
-- **Does not prove:** `k=13`, the standard fourteen-runner case. Conjecture 7.1 is false as literally written by THM-1288's exact family; do not use it as an inverse theorem. The prime shortcut also does not cross the composite `k+1=14` lift wall.
+- **Does not prove:** `k=13`, the standard fourteen-runner case. The v1 Conjecture 7.1 is false as literally written by THM-1288's exact family; do not use it as an inverse theorem. The prime shortcut also does not cross the composite `k+1=14` lift wall.
 
 ### Vaaler — *Some extremal functions in Fourier analysis*
 

@@ -1,7 +1,7 @@
 ---
 id: THM-737  # originally filed as THM-735; ceded to kps-S128c3 (Bonferroni multi-peel) after a three-way same-hour collision; mac-mini set the cession precedent (their 735 -> 736)
-title: The pack-clock sampling lemma (measure form of the detuned dispatch) — every 13-family c·R ∪ D (c ≥ 2, d = |D| detuned) has 1/14-safe measure L ≥ |G_R|·(1 − d/7 − Σᵢ gcd(uᵢ,c)/c); uniform-in-c tower closure with the EXACT constant (tower bound-exact for c < 7), and the d ≥ 2 generalization of THM-668 (its open item 4) for all c > 7d/(7−d), with NO congruence condition on the detuned elements
-status: PROVED (5-line counting proof below) + VERIFIED-EXACT (all bounds checked as Fraction inequalities; tower c = 2,4,6 EQUALITY; λ-form equality at c=2 recovers M = 1/13 exactly)
+title: The pack-clock sampling lemma with the necessary gcd-aware exception budget
+status: PROVED gcd-aware measure inequality and coprime specialization; REFUTED former unqualified coprime extension, repaired 2026-09-06
 source: opus-2026-07-13-S272 (owner prompt: prove the uniform-in-c closure of the compressed tower; prior-art check found THM-668 already gives the tower M ≥ 1/13 — this theorem is the measure-level form and the d ≥ 2 extension)
 depends_on: []   # at λ = 1/14 the pack input |G_R| > 0 is a finite exact computation (no LRC citation); the λ→1/13 corollary for |R| = 12 packs uses LRC(13) (named citation per policy)
 related:
@@ -13,6 +13,17 @@ related:
 ---
 
 # THM-737 — the pack-clock sampling lemma (measure form of the detuned dispatch)
+
+**CORRECTION — 2026-09-06.** The gcd-aware displayed inequality and its
+proof are valid. The former title, scalar cutoff paragraph, and scope prose
+incorrectly extended the coprime specialization to every nonmultiple
+exception. For `R={1,...,12}`, `c=4`, `D={26}`, the actual measure is
+`6617/388080`, below the falsely claimed `3|G_R|/4=6617/258720`. Its true
+order is `c/gcd(c,26)=2`; the corrected exact floor `|G_R|/2` is attained.
+The [independently checked repair and effective-order certificate](../../05-knowledge/results/lrc14_effective_clock_empty_core_sep06.md)
+preserve the original mechanism and give its sharp integer form
+`L>=|G_R| max(0,1-sum_i ceil(q_i/7)/q_i)`, `q_i=c/gcd(c,u_i)`.
+No loneliness result is refuted by this measure witness.
 
 ## Statement
 
@@ -27,11 +38,13 @@ and in the coprime case (`gᵢ = 1` for all `i`), with the sharp integer count,
 
 > **`L_λ(v) ≥ |G_R^λ| · (1 − d·(⌊2λc⌋ + 1)/c)`,  (⌊2λc⌋+1 → 2λc when 2λc ∈ ℤ).**
 
-At `λ = 1/14` (LRC(14)): `L(v) ≥ |G_R|·(1 − d·(⌊c/7⌋+1)/c) > 0` whenever `c > 7d/(7−d)`
+For `1<=d<=6`, when every `gᵢ=1` and `|G_R|>0`, at `λ = 1/14` (LRC(14)): `L(v) ≥ |G_R|·(1 − d·(⌊c/7⌋+1)/c) > 0` whenever `c > 7d/(7−d)`
 (d = 1: **all c ≥ 2**; d = 2: all c ≥ 3; d = 3: c ≥ 6; d = 4: c ≥ 10; d = 5: c ≥ 18; d = 6: c ≥ 43).
-No covering, primitivity, ratio, or congruence hypothesis on `D` is needed; `|G_R^{1/14}| > 0`
-is a finite exact computation for any concrete `R` (and holds for every `|R| ≤ 12` by LRC(≤13)
-+ fattening, if a citation is preferred).
+No covering, primitivity or ratio hypothesis is needed. The scalar cutoff
+above requires every exception coprime to `c`; other gcd strata retain the
+displayed gcd budget. A concrete `R` has an exactly computable safe measure;
+positivity for every `|R|<=12` follows from cited LRC through thirteen total
+runners and the strict margin above `1/14`.
 
 ## Proof
 
@@ -69,13 +82,16 @@ Partition `[0,1)` into the `c` **branches** `t = (j+s)/c`, `j = 0..c−1`, `s �
 
 1. **Relation to THM-668** (the point-witness dispatch, PROVED + Lean): THM-668 gives
    `M(g·H ∪ {δ}) ≥ 1/13` via LRC(13) + branch pigeonhole — a stronger *threshold* on a point
-   witness, whose Lipschitz fattening yields only `L ≳ 1/(1092c)`, **decaying in c**. THM-735
-   gives the **uniform measure floor** `L ≥ |G|(1 − 1/c) ≥ |G|/2` — the covering route's residue
-   object (`L`) itself, non-decaying (true `L` is increasing in `c`, opus-S271 scan). The two
+   witness, whose Lipschitz fattening yields only `L ≳ 1/(1092c)`, **decaying in c**. THM-737
+   gives `L >= |G|(1-ceil(q/7)/q) >= |G|/2` for one nonmultiple exception,
+   where `q=c/gcd(c,u)>=2`. The special factor `1-1/c` requires `q=c<=7`.
+   This is a uniform measure floor for the actual gcd orbit. The two
    are complementary: point-threshold vs measure-uniformity.
-2. **The d ≥ 2 zone of THM-668 item 4** is closed for `c > 7d/(7−d)` with no congruence
-   condition; the remaining d ≥ 2 zone is the finitely many small `c` per `d` (e.g. d = 2:
-   only c = 2), which stay with THM-668's finite/decidable branch-walk program.
+2. **The `2<=d<=6` zone of THM-668 item 4** is closed for `c > 7d/(7−d)` when every exception is coprime to `c`;
+   arbitrary gcd strata require the original budget, as THM-761 also states.
+   Only the remaining **coprime** zone is confined to finitely many small
+   `c` per `d` (for d=2, only c=2). No unqualified finite-clock conclusion
+   follows after discarding the effective orders.
 3. **What it does NOT close:** bodies with no coherent sub-pack — `gcd-incoherent` families
    (e.g. klein-S289's `{1,90..101}`: max common-factor pack too small, d would exceed 6).
    Those remain with the perspective certificates (THM-731/732 + HYP-6520: empirically
@@ -83,8 +99,9 @@ Partition `[0,1)` into the `c` **branches** `t = (j+s)/c`, `j = 0..c−1`, `s �
 4. **Perspective reading (owner's frame, opus-S270/271):** the pack is ONE perspective — all
    pack pairs are c-commensurate, so the double-counted (cycle) sector of the `(n−1)²`
    decomposition degenerates and the pack shares a single clock; the detuned runner, sampled
-   from that clock, is an **equally-spaced c-point sweep** of the circle, and equal spacing
-   converts equidistribution into exact counting. This is the frozen-fan/sweeper dichotomy
+   from that clock, visits **`q=c/gcd(c,u)` equally spaced points**, each repeated
+   `gcd(c,u)` times among the `c` branches. Equal spacing and the retained
+   multiplicity convert equidistribution into exact counting. This is the frozen-fan/sweeper dichotomy
    with the roles inverted: from the pack's clock, the detuned element is the sweeper, and
    sweeps are countable.
 5. **Lean shape:** interval measures (finite rational interval arithmetic) + the lattice-in-arc

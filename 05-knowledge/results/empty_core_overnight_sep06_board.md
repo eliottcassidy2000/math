@@ -1,219 +1,172 @@
 # Empty-core overnight research board
 
-**Status: CURRENT SESSION BOARD — 2026-09-06.** Current mathematical status
-belongs to the linked proof/results files and canon, not this synthesis.
+**Status: CURRENT SESSION BOARD — 2026-09-06, 03:15 America/Denver.**
+Current mathematical status belongs to the linked proof/results files and
+canon, not this synthesis. LRC(14) and general trinomial two-rung detection
+remain **OPEN**.
 Worktree: `/tmp/math-wt-empty-core-overnight-20260905`.
 Starting revision: `a80f2e90aa37`. Overnight continuation is scheduled in the
 current Codex task at 30-minute intervals through 08:00 America/Denver on
 September 6, 2026. Stop and pause that continuation after the morning report.
 
-## Inheritance and source
+## Inheritance and the source operation
 
 Heule–Scheucher, [arXiv:2403.00737v1](https://arxiv.org/pdf/2403.00737),
 Section 4.1 supplies the inspiration: a smaller retained empty triangle and
 an extremal replacement can certify existence of an empty hexagon. This is
-**CITED**, not an LRC theorem. We use the question of which data may legally
-be discarded, retaining all arithmetic residues and raw multipliers.
+**CITED**, not an LRC theorem. The working question is which data may legally
+be discarded when replacing a large object by a small certificate.
 
-The closest proved mechanism is
-[THM-4414](../../01-canon/theorems/THM-4414-lrc14-six-separated-contact-capacity-collapse.md),
-which identifies the local networks with exact raw projection sums.
-[THM-4422](../../01-canon/theorems/THM-4422-lrc14-projection-deficit-and-beatty-row-reduction.md)
-gives the exact maximum-deficit consumer and closes signed norm-four rays.
-Incoming [one-ray](lrc14_one_ray_overnight_hexagon_sep05.md) and
-[two-ray](lrc14_two_ray_overnight_hexagon_sep05.md) audited result notes are
-the immediate predecessors. THM-4428 was a **RESERVED** empty stub at
-inheritance; incoming `4d1ad2a390` independently promotes it. The inherited equality control is
-`(1,5,11)`; the first multi-ray obstruction is `(17,23,25)`; the corrected
-near miss is replacement of complete support by one selected ray.
-The least-used sidecar is the owner residue in the index-three sublattice.
+The original inheritance was [THM-4414](../../01-canon/theorems/THM-4414-lrc14-six-separated-contact-capacity-collapse.md)
+and [THM-4422](../../01-canon/theorems/THM-4422-lrc14-projection-deficit-and-beatty-row-reduction.md); its current
+consumer is [THM-4434](../../01-canon/theorems/THM-4434-lrc14-universal-scale-three-network-projection-bound.md).
+The current anchor instead combines
+[THM-765(B), hereditary primitivity](../../01-canon/theorems/THM-765-safe-component-tooth-deck-and-hereditary-primitivity.md),
+[THM-761, multi-exception sheets](../../01-canon/theorems/THM-761-multi-exception-sheet-covering-bound.md),
+and the exact effective orders retained in
+[THM-4004](../../01-canon/theorems/THM-4004-lrc14-three-detuned-divisor-comb-profile.md).
+The canonical hostile is now the actual clock orbit of
+`4{1,...,12} union {26}`: a nonmultiple exception need not be coprime.
+The corrected near miss is
+[THM-737](../../01-canon/theorems/THM-737-pack-clock-sampling-measure-dispatch.md)
+and its unqualified coprime specialization,
+which has been repaired at its live source. The least-used sidecar is the
+orbit multiplicity together with hereditary deletion gcds.
+
+For the Laurent niche, the closest proved mechanisms are complete first-row
+real roots
+([THM-4436](../../01-canon/theorems/THM-4436-complete-factorial-row-simple-negative-roots-and-trinomial-phase-wall.md)),
+the signed duplication identity
+([THM-4440](../../01-canon/theorems/THM-4440-signed-duplication-sos-and-real-rooted-laurent-return.md)), and the
+[carry-aware trace form](trinomial_trace_sign_empty_core_certificate_sep06.md).
+The hostile is the lower carry on `(-15,1,9)`; the missing multiplier reverses
+its raw second-row sign. Incoming virtual Hadamard doubling adds a faithful
+midpoint-path object, but its universal signed transport is still OPEN.
 
 ## Portfolio and live concepts
 
-| Lane / object | Operation and predicate | Lost coordinate / next decisive test |
+| Lane / object | Current predicate and operation | Retained sidecar / next decisive test |
 |---|---|---|
-| Anchor: actual ten-speed safe core | Intersect all exact safe components with the triple-comb complement | THM-4434 closes the universal local bound; body mass alone can be too small |
-| Anchor: parity and short resonances | Recover which integer relation norms oddness excludes | Mixed-parity `(2,5,7)` exceeds `6/77`; retain the additive norm-three relation |
-| Niche: complete trinomial return pair | Test the carry-corrected remainder in the first-row quotient algebra | Retain both carries and trace-form inertia; individual negative roots lose cross-row signs |
-| Wildcard: colored convex carrier hull | Retain the complete primitive fan and weighted boundary data | The three-direction circuit classification is closed; affine progressions can still have zero curvature |
-| Bridge: owner-coset lattice area | Use variable-radius coarea to force bounded relation patterns from persistent deviation | The count theorem is proved; preserve actual component phases when seeking an LRC consumer |
-| Research process: minimal trusted certificate | Independently compile exact witnesses and retain proof directions | Small size alone is not completeness; compare source and consequence objects |
+| Anchor: hereditary common clocks | Every ten-subset of a primitive strict LRC(14) counterexample has gcd at most four | Exact orders and branch multiplicities; classify the actual phase obstruction in the four residual profiles |
+| Anchor: body components and local tails | Local triple ceilings are proved; bounded scale-three ten-cores are closed by THM-4442 | Full component addresses and isolated endpoints; arbitrary core entry remains open |
+| Niche: complete cubic first-return row | New `(-21,2g-21,3g-21)` family has detection exactly `g` or `2g` | Both carries and the quotient trace form; compare actual and virtual doubled rows |
+| Wildcard: quartic reciprocal roots | Sharp normalized duplication margin `7/9`, equality and quantitative stability | Root sign partition and pair discriminants; degree five defeats the same constant |
+| Bridge: positive-dimensional certificates | Coarea forces bounded relation types; Hermite minors certify all first-root signs | Distinguish finite patterns from finite heights, and exact identities from sampled signs |
+| Research process: retained products | Compose the actual fibres or coefficient product before scalar compression | Every new map needs a preserved target and a cheap hostile boundary |
 
-Three independent agents handle fixed-direction bounds, owner-coset audit,
-and Laurent returns. Root handles full-network/circuit census, hostile
-extraction, cross-lane comparisons, and integration. No tournament is forced:
-the intrinsic pairwise observable here is an integer determinant, with signs
-and ties preserved.
+The root and three agents have independently audited the current results.
+No tournament is forced: determinant signs, root signs, and ties remain in
+their intrinsic types.
 
-## First comparison after computation
+## Current audited advances
 
-The complete height-499 exploratory census contains 753,853 primitive sorted
-odd ternary-unit triples. Among 710,364 with at least two primitive live
-directions, every projection passes `6/77`. Only `(19,23,29)` misses the
-sufficient count gate `N<=2c/11`. These are **FINITE-EXACT** observations,
-not all-height conclusions. Source and output:
-[census](../../04-computation/lrc14_empty_core_census_sep06.cpp),
-[output](lrc14_empty_core_census_sep06.out).
+1. [Effective-clock reduction](lrc14_effective_clock_empty_core_sep06.md),
+   with [independent audit](lrc14_effective_clock_audit_empty_core_sep06.md):
+   **PROVED RELATIVE TO CITED LOWER-RUNNER LRC + INDEPENDENTLY AUDITED**.
+   A primitive thirteen-speed strict counterexample has every twelve-subset
+   of gcd one, every eleven-subset of gcd at most two, and every ten-subset
+   of gcd at most four. For ten-subset gcd `c>1`, the only necessary sorted
+   effective-order profiles are `(2;1,2,2)`, `(2;2,2,2)`, `(3;3,3,3)`,
+   `(4;2,4,4)`. None is claimed to realize a failure. The all-height proof
+   uses deletion inheritance and `beta(q)=ceil(q/7)/q`, not enumeration.
+   Its 147 exact controls include two interval engines and all arc cells.
+   The current primary lower-runner Theorem 1.3 was checked in v2.
+2. [Cubic Laurent family](trinomial_cubic_empty_core_sep06.md):
+   **PROVED ANALYTICALLY + INDEPENDENTLY AUDITED**. For integer `g>=11`,
+   `gcd(g,21)=1`, and arbitrary nonzero complex coefficients on
+   `(-21,2g-21,3g-21)`, the first nonzero moment is `g` or `2g`, both
+   attainable. Three signed Hermite minors are positive for every parameter.
+   The [independent rational certificate](trinomial_cubic_audit_empty_core_sep06.md)
+   proves its degree bounds before checking identities at 25 points;
+   120 primary and 205 independent gates pass. The
+   [exact real-rooted-core overlap](trinomial_cubic_sector_empty_core_sep06.md)
+   proves that at least two of the three first roots lie outside THM-4440's
+   sector for every admissible g, and all three do for `g>=22` (55 gates).
+3. [Sharp quartic margin and stability](signed_duplication_stability_empty_core_sep06.md):
+   **PROVED ANALYTICALLY + INDEPENDENTLY AUDITED**. A real-rooted exact
+   quartic `G=a_0 prod(1+r_i s)` with `a_0!=0` and `[s^2]G=0` satisfies
+   `-[s^4]G^2 >= (7/9) a_0^2 sum_(i<j) r_i^2 r_j^2`.
+   Equality is exactly the two repeated same-sign pairs with positive
+   magnitude ratio `2+sqrt(3)` or its reciprocal. An exact remainder
+   controls pair splitting and relative scale near equality. The degree-five
+   witness `(1,1,-1/6,-1/6,-13/60)` gives `18501/26101<7/9`; the dimension
+   restriction is essential. All 543 exact controls and full proof audits pass.
 
-The proposed implication "at least three live directions imply an additive
-circuit `u+v=z` with independent `u,v`" is **REFUTED**. The first height-ordered
-hostile is `(41,47,49)`, with complete support
-`+/-{(11,5,-14),(14,-7,-5),(17,-19,4)}`. These positive representatives form
-an arithmetic progression. All 7,646 exactly-three-direction rows through
-499 have primitive circuit coefficient multiset `(1,1,1)` or `(1,1,2)`;
-universal exhaustion of these two types was the initial question. The
-[colored-diamond proof](empty_core_colored_diamond_sep06.md) now closes it
-for any proper invisible subgroup. Concurrent THM-4431 owns the shared
-classification namespace; the independent proofs are credited together.
+These change every lane. Deletion gcds turn an arbitrary large clock into
+four small residual profiles, but leave body addresses unbounded. The cubic
+trace certificate retains all actual doubled coefficients in a small matrix;
+its relation to the virtual carrier still needs a signed comparison. The
+quartic equality theorem shows that the subset-product norm loses realizable
+root geometry; retaining pair discriminants recovers sharpness and stability.
+Coarea and finite identity certificates both compress infinite parameter
+sets only after a separate analytic reduction. These are shared proof
+operations, not an asserted equivalence of the mathematical problems.
 
-This changes each lane: fixed-direction estimates must use determinants
-without assuming A2; deficit/area methods must retain the AP circuit; the
-Laurent lane must retain an analogous extra carry rather than declaring a
-free semigroup from the first slice; the trusted certificate should include
-the complete raw support. The common research operation is a loss audit,
-not a claimed map between the two mathematical problems.
+## Incoming work and recovered routes
 
-## Audited progress and the next decisive gate
+The universal odd local network ceiling `6/77`, uniquely sharp at `(1,5,11)`,
+is already THM-4434. The original three-direction additive-circuit guess was
+refuted by `(41,47,49)`; the
+[colored-diamond proof](empty_core_colored_diamond_sep06.md) retains both
+circuit types and shares the promoted THM-4431 namespace. Those routes are
+closed at their stated local scope; another census is not the current anchor.
 
-- [Three through six directions](lrc14_empty_core_three_ray_sep06.md):
-  **PROVED + FINITE-EXACT + AUDITED** at all heights. The general sufficient
-  height is `c>=7r^2+13r`. The four-through-six extensions go beyond the
-  independently concurrent THM-4431 three-direction work.
-- [All short relations through norm twenty](lrc14_pair_relation_empty_core_certificate_sep06.md):
-  **PROVED + FINITE-EXACT + AUDITED**, including actual zero coordinates.
-  A local network failure must have shortest relation norm at least 22.
-- [Two-channel trinomial return](trinomial_two_channel_empty_core_returns_sep06.md):
-  **PROVED + FINITE-EXACT + AUDITED**. First nonzero moment is `g` or `2g`,
-  with both carries retained. Concurrent THM-4432 explicitly credits this
-  overlap. Incoming width-eight certificates cover an orthogonal endpoint
-  bound; first-channel count and width must not be identified.
-- [Complete coefficient box](lrc14_coefficient_box_empty_core_three_ray_sep06.md):
-  **FINITE-EXACT + independent compiler agreement** on 308 patterns,
-  uniformly giving slope `<=15/98` outside the norm-four exception.
-- [Global area/short-relation reduction](lrc14_global_slope_empty_core_certificate_sep06.md):
-  **PROVED + FINITE-EXACT + INDEPENDENTLY AUDITED.** Root and a second
-  referee audited the zonotope area, discrepancy, primitive relation bound
-  `S<4sqrt(c/3)`, and parity reduction to `c<=601`. The separate native
-  interval engine passes all 1,317,935 rows, independently of the raw census.
-  [THM-4434](../../01-canon/theorems/THM-4434-lrc14-universal-scale-three-network-projection-bound.md)
-  is promoted: the universal local network and physical triple-comb bound
-  is `6/77`, with sole primitive equality `(1,5,11)`. Every projection is
-  strict outside norm four. LRC(14) remains open.
+Incoming [parity-free proof and audit](overnight4_20260906_lrc_parityfree_probe.md)
+now proves the global local-triple ceiling `6/55`, sole primitive equality
+`(1,10,11)`, using the previously proved
+[additive family](lrc14_additive_parity_empty_core_sep06.md) and low circuits.
+[THM-4441](../../01-canon/theorems/THM-4441-lrc14-signed-122-sharp-ray-closure.md)
+closes signed `(1,2,2)`;
+[THM-4444](../../01-canon/theorems/THM-4444-lrc14-signed-112-sharp-one-ray-classification.md)
+closes signed `(1,1,2)`, with sharp `11/140` only at `(2,11,20)`.
+The root read the current canon and relevant proof/audit statements.
+These local claims do not supply arbitrary body entry.
+[THM-4442](../../01-canon/theorems/THM-4442-lrc14-bounded-ten-body-parity-free-scale-three-completion.md)
+closes every ten-subset of `[13]` at scale three with every distinct
+positive ternary-unit tail triple, by an analytic cutoff and two exact
+engines on 174,045 residual rows. Body heights beyond this input are open.
 
-The [actual consumer](lrc14_universal_haar_consumer_empty_core_certificate_sep06.md)
-now accepts every odd ternary-unit triple when the actual core has
-`mu(G_C)>=6/77`. Initial exact hostile probes already reject both tempting
-unqualified extensions: mixed parity admits `(2,5,7)` with physical mass
-`22/245>6/77`; a ten-body universal Haar floor fails on
-`C={1,2,3,4,5,7,8,9,11,13}`, with inherited exact mass `21514/315315`.
-The latter is a recovered old object applied to the new gate, not a new
-measure calculation. The completed
-[body audit](lrc14_haar_body_empty_core_sep06.md) also recovers the stronger
-THM-544 body with mass `14249/252252` and a THM-2923 body that defeats every
-unit clock through denominator eighteen, yet its completion is safe at
-`9/19`. The [parity audit](lrc14_parity_empty_core_sep06.md) independently
-compares native intervals and raw formulas on all 20,648 ternary-unit
-triples through 79: one-even and two-even finite maxima are `6/55` and
-`11/140`. Both general mixed all-height candidates remain OPEN. The
-[additive-ray theorem](lrc14_additive_parity_empty_core_sep06.md) now proves
-`6/55` sharply for every primitive ternary-unit `a+b=c`, with equality only
-at `(1,10,11)`. Its two independent finite heads and full analytic proof
-passed root and sibling audits. The
-[variable-radius coarea lemma](variable_radius_empty_core_sep06.md) is also
-PROVED and independently audited: it gives two-sided count error and a
-sharp leading constant, retaining all speed-residue cases. Incoming
-`eb50ee68df` now promotes
-[THM-4437](../../01-canon/theorems/THM-4437-lrc14-all-parity-network-reduction-to-three-low-circuits.md):
-every parity has `min E<6/77` outside the signed magnitude patterns
-`(1,1,1)`, `(1,1,2)`, `(1,2,2)`. Individual projections may equal the
-ceiling at three named rows; the strict minimum is the actual consumer.
-Root read the complete theorem, its 750-pattern and height-611 universes,
-and the independent-audit scope. Our additive result supplies the sharp
-`6/55` input on the first retained family only.
+The [body audit](lrc14_haar_body_empty_core_sep06.md) recovers THM-544's
+`14249/252252` Haar hostile and a clock-filtered THM-2923 body that defeats
+both the measure and largest-component gates, yet has a safe completion at
+`9/19`. [THM-4052](../../01-canon/theorems/THM-4052-lrc14-affine-component-width-escape-cones.md)
+already proves escape when largest tail `c>=11 max(C)`; this was recovered,
+not counted anew. The
+[variable-radius coarea result](variable_radius_empty_core_sep06.md)
+proves a sharp area constant and quantitative bounded-resonance converse,
+which bounds relation patterns, not heights.
 
-Incoming `50e2a436cd` promotes the shared colored-lattice and two-channel
-namespaces and adds
-[THM-4436](../../01-canon/theorems/THM-4436-complete-factorial-row-simple-negative-roots-and-trinomial-phase-wall.md):
-every complete factorial return row has simple negative roots. This puts
-all remaining trinomial cancellation on one negative phase ray; it does
-not prove that rows at different masses have disjoint roots. Incoming
-`d2f64b8098` independently promotes THM-4434 from this session's proof
-artifacts, with a further import-free coefficient referee. The root merged
-both integrations under the same theorem and preserved the audit lineage.
-
-This changes every lane again: the anchor now retains body phase, parity
-retains newly allowed short relations, the area lane asks for a reusable
-radius-dependent coarea estimate, the colored fan retains weights beyond
-direction counts, and the Laurent lane can study common negative roots
-directly. These are shared operations on lost coordinates, not an asserted
-mathematical equivalence between LRC and Laurent moments.
+The preceding [quadratic family](trinomial_width15_empty_core_returns_sep06.md)
+closes `(-15,2g-15,3g-15)` for integer `g>=8`, `gcd(g,15)=1`.
+Incoming [Hadamard transport](nc2_hadamard_transport_overnight_hexagon_sep05.md)
+proves a stronger signed-defect inequality on that same family and a general
+negative virtual row. It explicitly leaves universal actual transport OPEN.
+Its finite bank overlaps small parameters of the new cubic family; the
+unbounded cubic theorem is not subsumed. Conversely, our actual negativity
+does not imply its stronger actual-versus-virtual comparison. The exact
+sector note makes the separate THM-4440 overlap explicit.
 
 ## Next continuation
 
-The completed [trinomial family proof](trinomial_width15_empty_core_returns_sep06.md)
-now gives exact first detection `g` or `2g` for
-`(-15,2g-15,3g-15)`, integral `g>=8`, `gcd(g,15)=1`. Every support lies
-beyond the previously closed endpoint-eight strip. Root and the
-[independent rational recurrence referee](trinomial_width15_audit_empty_core_certificate_sep06.md)
-accept the complete rows, carry factor, symbolic identities and strictly
-positive shifted coefficients. The quadratic quotient has negative trace
-and positive norm, hence two strictly negative root values. No theorem for
-the entire endpoint-fifteen strip or arbitrary trinomial follows.
-
-The [Hermite trace test](trinomial_trace_sign_empty_core_certificate_sep06.md)
-retains exactly the missing root signs, including their invariance under
-changing the first anchor. A lower carry makes canonical second-row values
-positive in the actual support `(-15,1,9)`; multiplying by `tau^-1` restores
-the correct negative values. The
-[endpoint-four note](trinomial_root_sign_empty_core_returns_sep06.md)
-is a sign upgrade on an already closed family. Incoming `e5a45df05f`
-independently supplies the same correction and a 221-support sign bank.
-The [literature review](trinomial_doubled_row_literature_empty_core_three_ray_sep06.md)
-found no checked transport from neighboring orthogonal rows to this doubled
-pair; its explicit parameter signs and degree changes are retained.
-
-The [coarea corollary](variable_radius_empty_core_sep06.md#6-quantitative-bounded-resonance)
-also proves a quantitative converse: fixed positive normalized count
-deviation at large height forces a bounded shortest relation norm. This
-means finitely many relation patterns, not finitely many speed triples.
-Together these results change the live lanes: the anchor needs component
-locations; the parity lane needs its actual low circuits; the colored fan
-needs weights; coarea controls resonance types; and the Laurent lane can
-compress to a small matrix only after retaining the full carries. These
-are shared proof operations, with no asserted equivalence of the problems.
-
-1. The exact body/parity boundary probes are complete. Preserve isolated safe
-   endpoints and the actual body-to-tail phase map inside `c<11 max(C)`;
-   recover existing named hostiles before claiming novelty. Another local
-   triple census is no longer the anchor.
-2. Seek an actual entry-produced core theorem or joint safe-component
-   intersection. Neither measure nor largest component alone suffices.
-   The THM-4370/4372 weighted seven-fibre current has no proved transport map
-   from the unweighted three-sheet bound. THM-4437 now leaves only the three
-   low circuits in the parity lane; recover incoming work before treating
-   any of their remaining profiles as new.
-3. Use the complete colored fan and incoming affine-baseline deficit result
-   together; repeated progressions alone can have zero curvature.
-4. Pursue three or more first-channel Laurent polynomials using the
-   carry-corrected Hermite form. Compare every proposed extension with the
-   incoming width-eight theorem, the independently certified 221-support
-   sign bank, and the new `(-15,2g-15,3g-15)` family. THM-4440 currently
-   reserves a signed-duplication direction only; inspect promotion and its
-   actual hypotheses before treating it as a proved connection.
-5. Fetch incoming commits at coherent checkpoints, revisit every board item,
-   and push only reviewed session paths. Use the META-PATTERNS cards
-   "Search the statement before the method", "Correct the object before
-   sharpening the technique", and "Retain the local profile until its global
-   counting weights are known". No new meta-pattern is promoted yet.
-
-## Recovered width route after the Haar obstruction
-
-A cheap component-width derivation was recovered exactly in
-[THM-4052](../../01-canon/theorems/THM-4052-lrc14-affine-component-width-escape-cones.md):
-three ternary-unit tails of any parity escape a ten-core when `c>=11M`.
-This is existing progress, not a new theorem. The
-[consumer addendum](lrc14_universal_haar_consumer_empty_core_certificate_sep06.md)
-combines it with THM-4434 and shows the same clock-filtered inherited body
-fails both the Haar and largest-component gates, although its phase `9/19`
-works. The next anchor should retain both complete component lists in the
-strict relative cone `c<11M`, instead of searching for another scalar floor.
+1. Recover incoming changes first. For the anchor, retain the actual safe
+   component map in the four effective-order profiles; clock four and the
+   order-one clock-two profile can absorb an even exception into an eleven
+   body. Test whether deletion inheritance yields useful constraints on
+   nine-subsets, without promoting a new scalar budget to phase sufficiency.
+2. For the Laurent niche, probe the actual-minus-virtual signed defect in
+   the cubic quotient. The source is the midpoint-path inclusion, the target
+   is all first-root signs, and the retained sidecar is the complete carry.
+   Coefficientwise nonnegativity alone is not a sign argument at negative
+   roots. Compare complexity with the existing actual-sign certificate
+   before pursuing another high-degree elimination.
+3. For the wildcard, classify the first degree-five failure of the quartic
+   margin by its sign partition. Use the exact hostile already found before
+   proposing a general constant. The general THM-4440 terminal bound `1/3`
+   survives; arbitrary subset vectors need not be realizable by roots.
+4. After every meaningful computation, compare its changed object with all
+   six board concepts. Use the existing META-PATTERNS cards “Search the
+   statement before the method” and “Retain the product and shared labels
+   before taking scalar totals.” No new meta-pattern is promoted here.
+5. Push small reviewed checkpoints. At or after 08:00 America/Denver,
+   complete the morning report, verify no local commit remains unpushed,
+   and pause the saved overnight continuation.

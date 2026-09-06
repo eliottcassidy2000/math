@@ -1,0 +1,9 @@
+PASS signed duplication quartic stability
+Tuned universe: 56 root triples; rejected 6 ; unique quartic rows 44
+Tuned normalized ratio range: 39/49 5/3
+Sharp Q(sqrt(2)) carrier: H=(1+sqrt(2)s-s^2)^2; E=18; doubled=-14; ratio=7/9
+Degree-five hostile: (1,1,-1/6,-1/6,-13/60); ratio=18501/26101<7/9
+Inherited Hermite k=2 limit at first-coefficient zero: normalized ratio=5/3
+Additional controls: inherited mixed pair signs, 3/1 root signs, gauges, shifts, nonreal and noninterior boundaries
+Exact gates: 543
+Trace SHA256: 9837c6d36b6b69b8073cbea3a8c9a47a2ca2f949d9ee1cad37fe6791ee8c913a

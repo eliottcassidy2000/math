@@ -1,0 +1,11 @@
+measure core 6617/194040
+measure primitive 6617/388080
+measure hostile 6617/388080
+false_coprime_floor 6617/258720 corrected_floor 6617/388080
+arc_universe q=1..70, endpoints and all event cells, PASS
+order_universe c=2..420, all sorted divisor words, hereditary pair-lcm and eleven-gcd filters
+surviving_words [(2, (1, 2, 2)), (2, (2, 2, 2)), (3, (3, 3, 3)), (4, (2, 4, 4))]
+phase_only_hostile body=(1+8j:j=0..9), y=3/8, tails=(3,5,7), masks [2, 1, 0]
+SCOPE: clocks/phase budgets only; no claimed unsafe speed row
+semantic_sha256 f7515199e28d2576094e045cd5f9e4b02a4eae95192dd523d81f8fb2f0681c81
+explicit_checks 147

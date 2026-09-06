@@ -122,6 +122,22 @@ Format per entry:
 
 Independent concurrent [consumer reconstruction](../05-knowledge/results/overnight3_20260906_lrc_consumers.md) also recovers THM-530 Section A and retains the complete weak-safe geometry; its adjacent-family formula gives the exact 42-residue oscillations around the additive bulk.
 
+### 2026-09-06 clock continuation: nonmultiple detuning is not coprimality
+
+THM-737's gcd-aware measure inequality was sound, but its title, cutoff
+paragraph and scope prose applied the coprime specialization without that
+hypothesis. The explicit thirteen-speed witness is
+`4{1,...,12} union {26}`. Its measure `6617/388080` is below the falsely
+asserted coprime floor `6617/258720`. The exception is a nonmultiple of four
+but has orbit order two, with two copies per branch residue. Dilation
+recovers the old exact tower `2{1,...,12} union {13}`. This witness is not
+claimed minimal and does not refute loneliness. The repaired sharp floor
+uses `q_i=c/gcd(c,u_i)` and `sum ceil(q_i/7)/q_i`; here it attains the actual
+half-body measure. The [repair and exact certificate](../05-knowledge/results/lrc14_effective_clock_empty_core_sep06.md)
+retain the branch multiplicities and connect them to hereditary deletion
+gcds. Independent interval and audit paths confirmed the error before the
+live theorem surfaces were corrected.
+
 ## MISTAKE-545 (2026-09-06, empty-core research probe) -- three live directions do not force an additive circuit
 
 - **Refuted probe:** three primitive directions in the complete LRC raw
@@ -152,6 +168,17 @@ Independent concurrent [consumer reconstruction](../05-knowledge/results/overnig
 
 These are rejected proof shortcuts, not retractions of scoped canon.
 
+- **Quartic constant outside its dimension:** the sharp normalized signed
+  duplication margin `7/9` for a real-rooted quartic with vanishing middle
+  coefficient fails in degree five. The reciprocal roots
+  `(1,1,-1/6,-1/6,-13/60)` have `e_2=0` and ratio `18501/26101<7/9`.
+  Degree five is the first degree above the proved domain; no height
+  minimality is asserted. The failed implication treats `e_4` as the full
+  product of exactly two positive and two negative roots. Retaining degree
+  and sign partition repairs the statement: the quartic theorem, equality
+  and stability are proved, while the general THM-4440 bound `1/3` survives.
+  The next question is the sharp degree-dependent bound on realizable root
+  products. [Proof, hostile and independent audit](../05-knowledge/results/signed_duplication_stability_empty_core_sep06.md).
 - **Four-node metric quotient:** at prime three, `(0,9,27,81)` and
   `(0,9,54,81)` have the same entire labeled distance tree, determinant
   valuation 64, and largest Smith exponent 22, but intermediate exponents

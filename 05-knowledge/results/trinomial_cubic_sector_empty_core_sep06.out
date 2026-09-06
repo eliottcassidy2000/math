@@ -1,0 +1,19 @@
+core_real_rooted_sector -4/27 <= tau < 0
+quadratic_threshold_polynomial u**2 - 107*u/27 + 32/243
+cubic_threshold_polynomial u**3 - 139*u**2/9 + 2066*u/81 - 512/2187
+cubic_positive_shift_u14 [1, 239/9, 14666/81, 161272/2187]
+named_control (-15, 1, 9) g 8 first_degree 2 sector_roots 1
+named_control (-15, 7, 18) g 11 first_degree 2 sector_roots 0
+named_control (-15, 11, 24) g 13 first_degree 2 sector_roots 0
+named_control (-21, 1, 12) g 11 first_degree 3 sector_roots 1
+named_control (-21, 5, 18) g 13 first_degree 3 sector_roots 1
+named_control (-21, 11, 27) g 16 first_degree 3 sector_roots 1
+named_control (-21, 13, 30) g 17 first_degree 3 sector_roots 1
+named_control (-21, 17, 36) g 19 first_degree 3 sector_roots 1
+named_control (-21, 19, 39) g 20 first_degree 3 sector_roots 1
+named_control (-21, 23, 45) g 22 first_degree 3 sector_roots 0
+named_control (-21, 25, 48) g 23 first_degree 3 sector_roots 0
+semantic_sha256 f6d97101bd54257e2cee92743863aa409c08cc035082e719c3abd64004d68908
+explicit_checks 55
+PASS: exact gauge-sector boundary and named Sturm controls
+SCOPE: THM4440 sector overlap only; full doubled-row signs need separate proofs

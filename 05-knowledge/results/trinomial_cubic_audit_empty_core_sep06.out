@@ -1,0 +1,9 @@
+PASS: independent stdlib Fraction recurrence and companion traces
+identity_parameters 11..35 inclusive; 25 distinct exact specializations
+proved_degree_bounds residue_coefficients [6,5,4]; signed_minors [6,14,24]
+certificate_bank four factors, 38 positive coefficients; original producer hash 7ebdffa7cd529cc1d641dc319954c23a594cff5b4e98ae538e21ed18849b77f5
+named_literal_rows g=11,13,16,22; nonprimitive g=12 has first return 4
+PROVED via degree argument: three signed Hermite minors positive for every real g>=11
+first-return interpretation: integer g>=11, gcd(g,21)=1 only
+semantic_sha256 5df58bf57f9eaeee1eaf3e11669b6f49516f1670b9935077269b9fbd821c169c
+explicit_checks 205

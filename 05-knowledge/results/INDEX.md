@@ -31,6 +31,27 @@
   confirms THM-4443 and identifies the two-jet cancellation step that fails.
   [Frozen manifest](overnight5_20260906_manifest.json). These are independent
   confirmations, not additional claims of first closure.
+- [Effective-clock gcd reduction](lrc14_effective_clock_empty_core_sep06.md):
+  **PROVED RELATIVE TO CITED LOWER-RUNNER LRC + INDEPENDENTLY AUDITED**.
+  Any primitive thirteen-speed strict counterexample has every twelve-subset
+  gcd one, eleven-subset gcd at most two, and ten-subset gcd at most four.
+  Only four exact order profiles survive; body and tail heights are arbitrary.
+  The same 147-gate certificate repairs THM-737's false noncoprime extension.
+  [Independent audit](lrc14_effective_clock_audit_empty_core_sep06.md).
+- [Unbounded cubic Laurent family](trinomial_cubic_empty_core_sep06.md):
+  **PROVED ANALYTICALLY + INDEPENDENTLY AUDITED**. For integer `g>=11`,
+  `gcd(g,21)=1`, support `(-21,2g-21,3g-21)` has first nonzero moment
+  exactly `g` or `2g`, both attainable. Three Hermite minors have uniform
+  signs, verified by a separate degree-bounded rational certificate.
+  [Independent audit](trinomial_cubic_audit_empty_core_sep06.md) and
+  [exact THM-4440 sector comparison](trinomial_cubic_sector_empty_core_sep06.md)
+  retain the scope beyond real-rooted cores; general trinomial detection is OPEN.
+- [Sharp quartic duplication and stability](signed_duplication_stability_empty_core_sep06.md):
+  **PROVED ANALYTICALLY + INDEPENDENTLY AUDITED**. A vanishing quartic middle
+  coefficient forces normalized doubled magnitude at least `7/9`; equality
+  is exactly two repeated opposite-sign pairs, with an exact stability
+  remainder. An explicit degree-five hostile defeats the same constant;
+  the inherited general `1/3` bound remains valid. All 543 exact gates pass.
 
 - [THM-4442: bounded ten-body parity-free scale-three completion](../../01-canon/theorems/THM-4442-lrc14-bounded-ten-body-parity-free-scale-three-completion.md):
   **PROVED ELEMENTARY + FINITE-EXACT + INDEPENDENTLY AUDITED; LRC(14)
