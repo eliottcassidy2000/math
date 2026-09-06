@@ -179,10 +179,8 @@ of 221 supports are FINITE-EXACT; unbounded two-row separation remains OPEN.
 
 [THM-4432](../01-canon/theorems/THM-4432-trinomial-two-channel-two-rung-noncancellation-with-carries.md)
 closes two-first-channel trinomials at arbitrary endpoints with all carries.
-[THM-4436](../01-canon/theorems/THM-4436-complete-factorial-row-simple-negative-roots-and-trinomial-phase-wall.md)
-puts every complete moment fibre's simple cancellation roots on the negative
-real `tau` ray, including all proportional resonances. Off that ray detection
-equals support return. Cross-mass coprimality on the ray is still OPEN.
+Off the negative `tau` ray, THM-4436 gives detection at support return,
+including proportional resonances; general cross-mass coprimality stays OPEN.
 
 [THM-4440](../01-canon/theorems/THM-4440-signed-duplication-sos-and-real-rooted-laurent-return.md)
 proves an exact signed-subset SOS: an interior zero coefficient of a
@@ -190,6 +188,9 @@ real-rooted polynomial has a strictly negative doubled coefficient in its
 square. It gives width-linear return for real-rooted Laurent cores and
 all-mass doubled-row coprimality for AP trinomials, with unbounded-channel
 sharp examples; general non-real-rooted cores remain outside this theorem.
+[Endpoint21](../05-knowledge/results/overnight6_20260906_laurent_cubic_carry.md)
+has detection `g` or `2g` on `(-21,2g-21,3g-21)`, `g>=11`, `gcd(g,21)=1`:
+all carried quotient characteristic coefficients have audited positive certificates.
 
 ## Tournaments
 
@@ -355,7 +356,8 @@ lift/phase clocks.
   gives the arbitrary-multiplicity inverse denominator and complete dyadic
   three-node three-jet full Smith law (eight attained symbolic costs);
   metric-only precision fails at uniform3 and heterogeneous(2,2,1).
-  Other higher-node full multiscale partitions remain OPEN.
+  [Reciprocal shell jets](../05-knowledge/results/overnight6_20260906_jets_sidecar.md)
+  give exact residue budgets and all-depth envelopes; higher-node full partitions stay OPEN.
 - **Even-graph spectrum:** THM-4083 closes `D=3,4`;
   [THM-4416](../01-canon/theorems/THM-4416-even-graph-cumulative-d5-d6-spectral-gap.md)
   closes `D=5,6`; [THM-4427](../01-canon/theorems/THM-4427-all-cumulative-signed-cycle-gaps-by-transposition-rigidity.md)

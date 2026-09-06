@@ -5,8 +5,8 @@ This is the maintained continuation surface for the user's overnight request.
 Read current canon and incoming corrections before continuing any lane.
 The starting commit was `62e1b34d8`; the isolated worktree is `C:/w/s0905`.
 The extensively dirty original checkout is outside this session's edits.
-The sixth checkpoint incorporates incoming canon through `6f450d8cb`,
-including proved THM-4437/4440/4441/4442/4443/4444. The universal
+The sixth checkpoint incorporates incoming canon through `09e5d42dc`,
+including proved THM-4437/4440/4441/4442/4443/4444/4445. The universal
 **ternary-unit local network bound is now closed without a parity assumption**:
 sharp `6/55`, with the stronger odd bound `6/77` retained. Actual LRC entry
 and body-to-tail noncontainment remain open. The universal ten-body `6/77`
@@ -414,8 +414,8 @@ test. Do not simply increase the last census bound. Current unfilled cells:
 
 ## Incoming work and scope
 
-Incoming work has been inspected through `6f450d8cb`; THM-4440/4442/4444
-are promoted. THM-4445 remains RESERVED. These are
+Incoming work has been inspected through `09e5d42dc`; THM-4440/4442/4444/4445
+are promoted. THM-4446 remains RESERVED and unused. These are
 inherited results, independently connected where indicated, rather than
 additional discoveries counted for this task:
 
@@ -439,6 +439,11 @@ additional discoveries counted for this task:
   [THM-4444 / signed-112 classification](../../01-canon/theorems/THM-4444-lrc14-signed-112-sharp-one-ray-classification.md)
   independently confirms our sharp norm-four and old-threshold loci and
   adds finer per-cone maxima. Its larger literal head is a separate audit.
+  [THM-4445 / additive sharp band](../../01-canon/theorems/THM-4445-lrc14-signed-111-sharp-obstruction-classification.md)
+  independently confirms the additive old-threshold classification and adds
+  the sharp lower bound `31/392` away from `(1,4,5)`, uniquely attained at
+  `(1,7,8)`. Its lower quadrature sidecar proves a persistent obstruction
+  separated from `6/77` by `5/4312`; it does not supply body noncontainment.
   [THM-4442 / bounded ten-body completion](../../01-canon/theorems/THM-4442-lrc14-bounded-ten-body-parity-free-scale-three-completion.md)
   now completes every ternary-unit tail over all 286 ten-subsets of `[13]`,
   with no parity or tail-primitivity assumption. A fixed-sheet connectedness

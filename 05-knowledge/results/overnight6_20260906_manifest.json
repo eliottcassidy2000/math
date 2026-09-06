@@ -2,7 +2,7 @@
   "schema": 1,
   "created_utc": "2026-09-06T09:03:37.262513+00:00",
   "baseline_commit": "f5f0f7f75",
-  "incoming_review_commit": "6f450d8cb",
+  "incoming_review_commit": "09e5d42dc",
   "hash_basis": "raw LF bytes; self and maintained synthesis excluded",
   "scope": "Proved all-height endpoint21 carried Laurent family; proved exact reciprocal-jet shell updates, adaptive precision and dilation envelope, unbounded local terminal-pair cancellation; proved palette-conditioned grid kernels and cumulants with outer corrections. Independent analytic and exact audits. No global conjecture closure.",
   "artifacts": [
