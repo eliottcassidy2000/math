@@ -353,8 +353,9 @@ lift/phase clocks.
   proves the largest factor metric-only at every node count via terminal
   clusters. [THM-4443](../01-canon/theorems/THM-4443-arbitrary-jet-precision-and-dyadic-unit-boundary.md)
   gives the arbitrary-multiplicity inverse denominator and complete dyadic
-  three-node three-jet unit law; metric-only precision fails at uniform3
-  and heterogeneous(2,2,1). Full multiscale partitions remain OPEN.
+  three-node three-jet full Smith law (eight attained symbolic costs);
+  metric-only precision fails at uniform3 and heterogeneous(2,2,1).
+  Other higher-node full multiscale partitions remain OPEN.
 - **Even-graph spectrum:** THM-4083 closes `D=3,4`;
   [THM-4416](../01-canon/theorems/THM-4416-even-graph-cumulative-d5-d6-spectral-gap.md)
   closes `D=5,6`; [THM-4427](../01-canon/theorems/THM-4427-all-cumulative-signed-cycle-gaps-by-transposition-rigidity.md)

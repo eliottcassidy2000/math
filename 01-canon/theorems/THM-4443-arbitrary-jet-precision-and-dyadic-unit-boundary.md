@@ -77,3 +77,27 @@ no-primary-import referee compares all largest integer factors on126
 literal matrices, with1,262 explicit gates. Both normal/optimized pairs
 match and the root replayed the referee. General higher-node full
 partitions and other-prime higher-jet metric classifications remain OPEN.
+
+## Full dyadic three-node three-jet partition (sixth-wave extension)
+
+The [independently audited symbolic-minor continuation](../../05-knowledge/results/three-node-threejet-dyadic-smith-overnight-hexagon-sep05.md)
+now determines every factor, not only the worst loss. With the same e,d,L,
+let D_j be the dyadic valuation of the j-th determinantal ideal. Then
+
+```text
+D_0=D_1=D_2=D_3=0, D_4=e,
+D_5=min(5e,4e+1,3e+d+1), D_6=min(9e,7e+d+1),
+D_7=min(13e+d,12e+4d+1),
+D_8=27e+9d-L, D_9=27e+9d.
+```
+
+The Smith exponents are D_j-D_(j-1). Thus metric plus worst loss recovers
+the full dyadic partition in this precise observer; all unit dependence
+is confined to its last two factors. The proof expands all886 residual
+minors of ranks1,...,4, proves a complete monomial lower envelope for both
+unbounded depths, and attains its eight costs by explicitly factored
+minors. D_8 uses the inverse formula and D_9 the confluent determinant.
+The second D_7 slope is essential: e=5,d=1 gives65, not66. The
+continuation records4,943 primary gates,1,110 independent gates, all raw
+manifests and normal/optimized reproduction commands. No other-prime or
+higher-node full classification is silently included.

@@ -1,0 +1,14 @@
+NATIVE FRACTIONAL FLOW {'n': 3, 'q': 2, 'labelled_unordered_cross_orbit_pairs': 1, 'edges': 1, 'rho': '1/2', 'gap_lower': '2'}
+NATIVE FRACTIONAL FLOW {'n': 4, 'q': 3, 'labelled_unordered_cross_orbit_pairs': 19, 'edges': 2, 'rho': '2', 'gap_lower': '1/2'}
+NATIVE FRACTIONAL FLOW {'n': 5, 'q': 7, 'labelled_unordered_cross_orbit_pairs': 1650, 'edges': 8, 'rho': '50081/7875', 'gap_lower': '7875/50081'}
+CLOSED BURNSIDE RANK partitions through16 914
+EULERIAN ORBIT COUNTS n1..16 [1, 1, 2, 3, 7, 16, 54, 243, 2038, 33120, 1182004, 87723296, 12886193064, 3633057074584, 1944000150734320, 1967881448329407496]
+ONE-TREE LOWER n 8 q_lower 16384/315 rho_lower 16069/35280
+ONE-TREE LOWER n 12 q_lower 35184372088832/467775 rho_lower 35184371621057/205821000
+ONE-TREE LOWER n 16 q_lower 1237940039285380274899124224/638512875 rho_lower 1237940039285380274260611349/715134420000
+ONE-TREE LOWER n 20 q_lower 11417981541647679048466287755595961091061972992/9280784638125 rho_lower 11417981541647679048466287755595951810277334867/21160188974925000
+SEMANTIC SHA256 6ddd5dd6adaf696dc8d390d250d01d839135053dd16dca12dc3a904adddacc7e
+CHECKS 928
+PROVED flow representation, one-tree obstruction, closed Burnside rank and uniform-orbit lift
+FINITE-EXACT fractional congestion n3..5 only
+OPEN polynomial all-order Boolean triangle gap / fractional congestion

@@ -1,0 +1,12 @@
+EXHAUSTIVE FIXED-PAIR CONTROL {"class_sizes": [1], "classes": 1, "fixed_pairs": 1, "labels": 1, "n": 1}
+EXHAUSTIVE FIXED-PAIR CONTROL {"class_sizes": [1], "classes": 1, "fixed_pairs": 2, "labels": 1, "n": 2}
+EXHAUSTIVE FIXED-PAIR CONTROL {"class_sizes": [1, 1], "classes": 2, "fixed_pairs": 12, "labels": 2, "n": 3}
+EXHAUSTIVE FIXED-PAIR CONTROL {"class_sizes": [1, 3, 4], "classes": 3, "fixed_pairs": 72, "labels": 8, "n": 4}
+EXHAUSTIVE FIXED-PAIR CONTROL {"class_sizes": [1, 1, 10, 10, 12, 15, 15], "classes": 7, "fixed_pairs": 840, "labels": 64, "n": 5}
+INDEPENDENT LITERAL RANK BANK 271
+PREPROCESS {"classes": "623045225369818212764392744508736687716211191500581246494929916017252505791800234321992704", "fixed_pair_integer_bits": 407, "n": 30, "partitions": 5604}
+SEEDED SAMPLE CONTROLS 64 seed 240300737
+CHECKS 545
+SEMANTIC SHA256 bd53537ed6ab901a5bffd55f2afcfda27a8c6e1d9e64c0b0e17a7a7604d358f2
+PROVED exact uniform-orbit law; subexponential preprocessing; expected polynomial time per sample
+NOT uniform labelled graphs; no isomorphism oracle, Markov mixing claim, or Boolean gap bound

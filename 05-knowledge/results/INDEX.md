@@ -17,6 +17,16 @@
   AUDITED; LRC(14) OPEN.** The complete carrier set is one primitive ray;
   sharp bounds are `min E<=46/665` and physical mass `<=51/770`, both below
   `6/77`. The concurrent synthesis below classifies the remaining low-circuit hostiles.
+  `6/77`. Only `(1,1,1)` and `(1,1,2)` remain possible low-circuit hostiles.
+- **PROVED + INDEPENDENTLY AUDITED sixth-wave connections:**
+  [full dyadic three-node three-jet Smith form](three-node-threejet-dyadic-smith-overnight-hexagon-sep05.md) extends THM-4443 from worst loss to all nine factors using886 symbolic minors and eight attained costs;
+  [all-parity norm-four closure](lrc14_all_parity_norm_four_overnight_hexagon_sep05.md) combines with incoming generic/additive/norm-five proofs to give sharp local parity ceilings6/77,6/55,11/140, not LRC entry;
+  [independent norm-five proof](lrc14_norm_five_overnight_hexagon_sep05.md) credits incoming THM-4441;
+  [antipodal actual consumer](lrc14_antipodal_consumer_transport_overnight_hexagon_sep05.md) transports inherited safe-pair suppliers to scale3 and retains actual tail valuation and singleton contacts;
+  [native Boolean flow](overnight_hexagon_sep05_boolean_flow.md) rules out one-tree polynomial certificates and preserves the correct fractional endpoint measure;
+  [native parity index](overnight_hexagon_sep05_boolean_peck.md) proves forced adjacency zero modes, an ordered-digraph-pair index identity and the exact n=4 failure of the proposed unitary-Peck source;
+  [direct uniform orbit sampler](eulerian-uniform-orbit-sampler-overnight-hexagon-sep05.md) gives exact class-uniform samples with subexponential preprocessing and expected polynomial time per sample;
+  [Hadamard midpoint transport](nc2_hadamard_transport_overnight_hexagon_sep05.md) proves a virtual root sign, coefficientwise injection and an unbounded width15 actual-below-virtual certificate. General signed transport, LRC entry and native spectral gap remain OPEN.
 
 - [THM-4437: all-parity reduction to three low circuits](../../01-canon/theorems/THM-4437-lrc14-all-parity-network-reduction-to-three-low-circuits.md):
   **PROVED ELEMENTARY RELATIVE TO THM-4414/4422 + FINITE-EXACT +

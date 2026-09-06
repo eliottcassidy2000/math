@@ -1,0 +1,15 @@
+COMPLETE ALL-PARITY ENDPOINT HEAD pq<81 40
+ENDPOINT GCD {1: 30, 2: 10} NUMBER EVEN COORDINATES {0: 13, 1: 17, 2: 10}
+SEMANTIC SHA256 655a1ab5058c76bec9dbe36da3562b3974490f7facaed3eefc520b47c465c142
+SHARP min-projection AND actual 11/140 EQUALITY [(2, 11, 20)]
+OLD6/77 EQUALITY [(1, 5, 11)] SOLE ABOVE-TARGET EXCEPTION [(2, 11, 20)]
+TAIL AT81 925/11907 MARGIN TO6/77 31/130977
+CONTROL (1, 11, -1) (1, 5, 11) E (Fraction(6, 77), Fraction(6, 77), Fraction(6, 77)) ACTUAL 6/77
+CONTROL (2, 20, 1) (2, 11, 20) E (Fraction(131, 1540), Fraction(11, 140), Fraction(3, 35)) ACTUAL 11/140
+CONTROL (1, 121, 1) (1, 61, 121) E (Fraction(3292, 51667), Fraction(50, 847), Fraction(54, 847)) ACTUAL 50/847
+CONTROL (2, 124, -1) (2, 61, 124) E (Fraction(27, 434), Fraction(27, 434), Fraction(27, 434)) ACTUAL 27/434
+CONTROL (4, 202, 1) (4, 103, 202) E (Fraction(9259, 145642), Fraction(169, 2828), Fraction(45, 707)) ACTUAL 169/2828
+CONTROL (1, 101, -1) (1, 50, 101) E (Fraction(6, 101), Fraction(6, 101), Fraction(6, 101)) ACTUAL 6/101
+CHECKS 471 INDEPENDENT RAW/LITERAL CHECKS 895
+PROVED all-parity signed112; min E=actual; unique11/140 maximum and one6/77 exception
+OPEN actual arbitrary-body entry/synchronization; no body Haar floor supplied

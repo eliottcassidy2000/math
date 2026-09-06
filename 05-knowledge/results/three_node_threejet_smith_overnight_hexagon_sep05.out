@@ -1,0 +1,17 @@
+RANK 1 ALL MINORS 36 PARETO (e,d-1,constant) [(1, 0, 0)]
+RANK 2 ALL MINORS 225 PARETO (e,d-1,constant) [(3, 1, 2), (4, 0, 1), (5, 0, 0)]
+RANK 3 ALL MINORS 400 PARETO (e,d-1,constant) [(7, 1, 2), (9, 0, 0)]
+RANK 4 ALL MINORS 225 PARETO (e,d-1,constant) [(12, 4, 5), (13, 1, 1)]
+ATTAIN (2,) (3,) weight 1 polynomial ((0, 3),)
+ATTAIN (0, 2) (3, 4) weight 5 polynomial ((0, 3),)
+ATTAIN (1, 2) (3, 4) weight 4 polynomial ((0, 6),)
+ATTAIN (2, 5) (3, 4) weight 3 polynomial ((1, -18), (2, 18))
+ATTAIN (0, 1, 2) (3, 4, 5) weight 9 polynomial ((0, 1),)
+ATTAIN (1, 2, 5) (3, 4, 5) weight 7 polynomial ((1, 30), (2, -90), (3, 60))
+ATTAIN (0, 1, 2, 5) (3, 4, 5, 6) weight 13 polynomial ((1, -3), (2, 18), (3, -30), (4, 15))
+ATTAIN (1, 2, 4, 5) (3, 4, 5, 6) weight 12 polynomial ((4, 90), (5, -360), (6, 540), (7, -360), (8, 90))
+LITERAL FULL9x9 CONTROLS 180 e0..8,d1..5,t=1,3,5,9
+SHALLOW-EXTRAPOLATION HOSTILE e5,d1: D7=65, not13e+d=66
+ALL SYMBOLIC MINORS 886 LITERAL MATRICES 180
+GATES 4943 SEMANTIC eeda3bff9cdf5fda28ac628354f960e30a3e4d2b3a64fc92e69d66cb4e3e2a5d
+PASS finite symbolic lower-envelope certificate and unbounded attained factors

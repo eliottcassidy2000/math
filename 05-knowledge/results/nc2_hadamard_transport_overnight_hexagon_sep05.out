@@ -1,0 +1,13 @@
+HADAMARD VIRTUAL DOUBLING AND ACTUAL MIDPOINT DEFECT
+scope=PROVED virtual sign and coefficientwise injection; universal rootwise defect sign OPEN
+midpoint DP: 144 indexed parameter cases, 864 endpoints; noncoprime and x=0 controls retained
+head sign bank: 638 rows, 1271 roots; every raw actual-minus-virtual and virtual value negative
+wide sign bank: 229 rows, 1179 roots; every raw actual-minus-virtual and virtual value negative
+distinct parameter tuples across sign banks: 865
+width15 transport: exact QQ(g) remainder; negative trace degree14 and positive norm degree28
+normalized J8(g+8) coefficients ascending=[6125645057051520, 12034697527782432, 10201889583700128, 4869196582429116, 1429776792747576, 264251996637293, 29995884527077, 1910812086079, 52280181899]
+normalized H17(g+8) coefficients ascending=[27980705457857779017431040000, 129606169329790770184888320000, 279645693006312789283020672000, 373283266981277312702725847040, 345245041446809237995675606272, 234786712697965473817049185536, 121567718498181067427346760176, 48950734143194515722993145488, 15518027333658322643713019208, 3895067236434511745716269584, 774080737740725721410066523, 121107178444378407108097279, 14733717736479881488597143, 1364604058681152300831099, 92919484392931900170801, 4383443302572859621693, 127917243625172147877, 1738714564090842281]
+width15 independent replay: 29 exact Fraction points g=8..36; algebraic nonprimitive points are not first-return claims
+hostiles: actual!=virtual at(-3,1,9); positive coefficient ordering has no negative-root implication
+trace_sha256=bbe0f30470377ea72ee78a8b80f2ae152dece0f1b2ba32b195f0cfb18f33ab88
+PASS explicit_gates=20908

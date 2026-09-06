@@ -4,8 +4,33 @@
 is explicit below; this file is provenance, not proved canon. Session began
 at 2026-09-06 04:37 UTC from `62e1b34d82a4` in an isolated worktree.
 The startup and first/second-wave sections preserve idea provenance. The
-[fourth-wave board](#fourth-wave-current-board) is the current portfolio
+[sixth-wave board](#sixth-wave-current-board) is the current portfolio
 at the latest checkpoint; proved truth lives in canon.
+
+## Sixth-wave current board
+
+**2026-09-06, ongoing overnight session.** The main conjectures remain open.
+Incoming THM-4441 now proves the norm-five ray ceiling; THM-4442 closes an
+explicit bounded ten-body branch (not arbitrary entry); incoming4444/4445
+are RESERVED classifications, not proof dependencies. Our independently
+audited norm-four sidecar is supplied as a parallel proof, not a competing
+theorem namespace. The earlier sections below preserve historical status.
+
+| Live concept | New retained coordinate / consequence | Next actual obligation |
+|---|---|---|
+| Anchor: safe body phases | Local parity ceilings are now sharp:0/1/2 even speeds give6/77,6/55,11/140; pair-shift consumer recovers earlier Haar hostiles | Keep body and tail in the same phase coordinate; test adaptive antiphase contacts, including singleton endpoints |
+| Complete rays and discrepancy | Independent norm-four proof uses full gcd, including even endpoints; incoming norm-five proof has constant physical bulk3/56 | Do not normalize only the tail in a geometric consumer; connect to bounded incoming4442 |
+| Laurent midpoint paths | Virtual square sign follows4440; actual-minus-virtual has nonnegative coefficients by a missed-midpoint injection | Negative-phase evaluation remains OPEN; preserve skipped levels and both carries |
+| Full observer ideals | Eight attained minor costs determine every dyadic three-node three-jet factor; metric plus worst loss suffices here | Probe genuinely different observers/prime walls, not another shallow dilation fit |
+| Native orbit measure | One-tree congestion is exponentially large; exact fixed-pair mixture samples classes uniformly | Fractional congestion still couples stabilizers and intermediate edges; sampling is not mixing |
+| Intrinsic graph parity | Invariant unitary-Peck source fails at n=4; audited twisted parity index equals an ordered-digraph-pair count at n=4k+1 | Construct native adjacency kernel vectors or test saturation; do not conflate with Laplacian or weighted Fourier gaps |
+
+The cross-lane move is to retain the defect produced by a lossy operation:
+intermediate minor versus determinant, missed midpoint versus squared
+auxiliary row, stabilizer versus uniform labels, and antiphase contact
+versus body measure. Each now has a cheap hostile and an exact sidecar.
+The paper's separation of encoding, solving and coverage remains relevant;
+none of these conclusions relies on treating a relaxation as an equivalence.
 
 ## Paper intake and boundaries
 

@@ -1,0 +1,14 @@
+COMPLETE PRODUCT HEAD h<84 {'I': 41, 'II': 82} DISTINCT TRIPLES 123
+SEMANTIC SHA256 dea274b801cbe33aae0357cca970f5ce5eb2ce6aa4486fc59c39e128b3c9d384
+NETWORK SHARP 46/665 EQUALITY [(2, 19, 20)] TAIL AT84 61/882 MARGIN 1/83790
+PHYSICAL SHARP 51/770 EQUALITY [(1, 11, 20)] TAIL AT53 589/8904 MARGIN 41/489720
+UNCOLORED HOSTILE (2, 19, 20) relation (1, 2, -2) carrier (-8, 4, -3) cross (2, 19, 20)
+CONTROL II (1, 19) (2, 19, 20) E (Fraction(48, 665), Fraction(11, 140), Fraction(46, 665)) PHYSICAL 173/2660
+CONTROL II (10, 1) (1, 11, 20) E (Fraction(51, 770), Fraction(3, 35), Fraction(3, 35)) PHYSICAL 51/770
+CONTROL I (1, 100) (1, 100, 202) E (Fraction(533, 10100), Fraction(6, 101), Fraction(6, 101)) PHYSICAL 533/10100
+CONTROL I (5, 17) (5, 17, 44) E (Fraction(25, 476), Fraction(9, 154), Fraction(73, 1309)) PHYSICAL 25/476
+CONTROL II (100, 1) (1, 101, 200) E (Fraction(1069, 20200), Fraction(3, 50), Fraction(3, 50)) PHYSICAL 1069/20200
+CONTROL II (1, 100) (2, 100, 101) E (Fraction(529, 10100), Fraction(6, 101), Fraction(6, 101)) PHYSICAL 529/10100
+CHECKS 1680 INDEPENDENT RAW/LITERAL CHECKS 3555
+PROVED all-parity signed(1,2,2): min E<=46/665; actual mass<=51/770; distinct equality triples
+OPEN other low circuits and actual arbitrary-body entry/synchronization

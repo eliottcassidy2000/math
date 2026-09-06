@@ -35,6 +35,14 @@ Format per entry:
   modulo16. THM-4439 remains valid on its original complete uniform domain.
   The next question must specify both node metric and observer, then test
   the actual precision envelope rather than only its determinant.
+- **Sixth-wave scale probe:** the proposed shallow fit `D_7=13e+d` for
+  the three-node three-jet seventh determinantal exponent fails at e=5,d=1:
+  the exact value is65, not66. A four-derivative minor has the competing
+  cost `12e+4d+1`. The repaired full formula is the minimum of both costs,
+  proved by all886 symbolic minors and eight attained costs in the
+  [full-partition continuation](../05-knowledge/results/three-node-threejet-dyadic-smith-overnight-hexagon-sep05.md).
+  A small scale bank had hidden the second slope; the false fit was never
+  promoted. Preserve independent dilation weights before taking valuations.
 
 ## 2026-09-06 overnight -- empty fibers and fixed-roof transfers
 
