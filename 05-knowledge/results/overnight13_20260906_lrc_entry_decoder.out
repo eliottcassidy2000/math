@@ -1,0 +1,12 @@
+STATUS: PASS; exact actual-entry decoder, both mixed orientations
+LITERAL UNIVERSE: 323 physical rows Qtoy4..7; 3230 3+2 splits; 71528 complete bounded relation rows
+POSITIVE TOY CONTROLS: Q30 four labels and Q40 five labels, literal full relation spans
+CASE: canonical_unit domain= True entry= True supports= 121 crossings= 0
+CASE: unitless domain= True entry= True supports= 121 crossings= 0
+CASE: opposite_orientation_hostile domain= True entry= False supports= 121 crossings= 1
+CASE: physical_box_firewall domain= False entry= None supports= 0 crossings= 0
+HOSTILE: all110 first-orientation tests negative, omitted relation t-1-3Q=0
+FIREWALL: outside Q^2 box, actual W=V_dec can have an internal primitive pair height>Q
+CERTIFICATE SHA256: af177ea9703390a8169d9466d04a5e4d8bb53f66833cfbfd223c94a0006cb847
+SCOPE:121 fixed-support arithmetic tests; bit cost depends on integer height; no LRC14 closure
+ACTIVE GATES: 25286

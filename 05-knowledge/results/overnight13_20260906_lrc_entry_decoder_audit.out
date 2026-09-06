@@ -1,0 +1,9 @@
+STATUS: INDEPENDENT ANALYTIC AND EXACT PASS; complete actual 11+2 equality decoder
+UNIVERSES: 3708 complement-box integers; 3105 literal physical toy rows; 18939 complete partitions; 335957 literal relation rows; 0 toy equality partitions
+FULL CERTIFICATES: [{"domain": true, "name": "canonical_unit", "positive_counts": [0, 0], "rank": 11}, {"domain": true, "name": "unitless", "positive_counts": [0, 0], "rank": 11}, {"domain": true, "name": "opposite_orientation_hostile", "positive_counts": [0, 1], "rank": 12}, {"actual_equal": true, "decoder_rank": 11, "domain": false, "name": "physical_box_firewall"}]
+POSITIVE LITERAL TOYS: [{"Q": 53, "literal_relations": 34, "rank": 2, "row": [1, 3, 319, 957]}, {"Q": 101, "literal_relations": 2299, "rank": 3, "row": [1, 3, 9, 1819, 5457]}]
+SMALL HOSTILES: Q41 opposite orientation raises rank 3 to 4; Q7 outside-box equality rank 3 survives internal height 9
+ACTUAL HEIGHT-GATE CONTROL: K=355^5>Q; g=1000K+1; decoder rank 11; explicit crossing raises rank to 12 inside Q^2 box
+SCOPE: actual-entry equality only; no safe-phase conclusion; finite-box necessity is retained
+SEMANTIC SHA256: fa48a890a7c472282a315bb15617d217c91d75d264b750d1421f94e8342d0f14
+ACTIVE GATES: 31754

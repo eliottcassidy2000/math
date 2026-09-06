@@ -358,7 +358,7 @@ lift/phase clocks.
   [THM-4443](../01-canon/theorems/THM-4443-arbitrary-jet-precision-and-dyadic-unit-boundary.md): jet inverse denominators and full dyadic3-node3-jet factors (eight costs); metric precision fails at uniform3 and(2,2,1).
   [Four jets](../05-knowledge/results/overnight8_20260906_jets_residue.md): allodd precision and full p7 factors with an AP bit.
   [Deuring](../05-knowledge/results/overnight9_20260906_jets_deuring.md):3-node loss `(3m-1)e-[H_p(a)=0]`, oddp,m=(p+1)/2,e>=1.
-  [Full p11/p13 laws](../05-knowledge/results/overnight11_20260906_smith_prime_banks.md) need an extra p13 AP bit; general intermediate ideals OPEN.
+  [Full p11/p13 laws](../05-knowledge/results/overnight11_20260906_smith_prime_banks.md) and [p31 ideal](../05-knowledge/results/overnight13_20260906_jets_p31_intermediate.md) need extra residue data; general partitions OPEN.
 - **Even-graph spectrum:** THM-4083 closes `D=3,4`;
   [THM-4416](../01-canon/theorems/THM-4416-even-graph-cumulative-d5-d6-spectral-gap.md)
   closes `D=5,6`; [THM-4427](../01-canon/theorems/THM-4427-all-cumulative-signed-cycle-gaps-by-transposition-rigidity.md)

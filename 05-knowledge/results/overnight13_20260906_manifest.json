@@ -1,0 +1,75 @@
+{
+  "schema": 1,
+  "created_utc": "2026-09-06T13:52:22.345507+00:00",
+  "baseline_commit": "979f07450",
+  "incoming_review_commit": "fe9984169",
+  "hash_basis": "raw LF bytes; self and maintained synthesis/reference/navigation files excluded",
+  "scope": "Complete 121-test equality decoder for the actual 11+2 LRC branch; universal minimum odd Hermite packets and an all-depth p31 intermediate ideal invisible to Deuring and AP bits. Both independently audited; no global LRC or full general Smith classification.",
+  "artifacts": [
+    {
+      "path": "04-computation/overnight13_20260906_jets_p31_intermediate.py",
+      "bytes": 8453,
+      "sha256": "5dc0b2cb3af6e6e282c17eae5df81a2bc68117c6a29563e813cffd82fdc63525"
+    },
+    {
+      "path": "04-computation/overnight13_20260906_jets_p31_intermediate_audit.py",
+      "bytes": 11922,
+      "sha256": "476d544142ccd82963149407d7aea1f7d5b4df6f53d1bca2768e5aec23739914"
+    },
+    {
+      "path": "04-computation/overnight13_20260906_lrc_entry_decoder.py",
+      "bytes": 11447,
+      "sha256": "9b8fe6804a037a0f93a29396940e510691ee3b2765be1eeca1271ed28e5b7b6c"
+    },
+    {
+      "path": "04-computation/overnight13_20260906_lrc_entry_decoder_audit.py",
+      "bytes": 14499,
+      "sha256": "a580b7865ff4691ed481f55772d70ce5426c0c40eb864f19ebd5476974ed78a1"
+    },
+    {
+      "path": "04-computation/overnight13_20260906_lrc_entry_decoder_certificates.json",
+      "bytes": 190184,
+      "sha256": "af177ea9703390a8169d9466d04a5e4d8bb53f66833cfbfd223c94a0006cb847"
+    },
+    {
+      "path": "05-knowledge/results/overnight13_20260906_jets_p31_intermediate.md",
+      "bytes": 11252,
+      "sha256": "1e92441fa02bcd43520e8ae88152e9034e8f73e0fd9eb5ffa2fed4894cb7efaf"
+    },
+    {
+      "path": "05-knowledge/results/overnight13_20260906_jets_p31_intermediate.out",
+      "bytes": 1183,
+      "sha256": "efee820e2d67773205f14dbf3a7eed3d2361cdf67ac79c11241f6a34a2ffbda2"
+    },
+    {
+      "path": "05-knowledge/results/overnight13_20260906_jets_p31_intermediate_audit.md",
+      "bytes": 12743,
+      "sha256": "9abf9e181c2e13f3995c9f5e648c977135d25f659500c5e779a8b075dbf497d0"
+    },
+    {
+      "path": "05-knowledge/results/overnight13_20260906_jets_p31_intermediate_audit.out",
+      "bytes": 959,
+      "sha256": "857da5af360c621e0f19be27749ddbf96bb6e81ad97373ecf2462ee310292a90"
+    },
+    {
+      "path": "05-knowledge/results/overnight13_20260906_lrc_entry_decoder.md",
+      "bytes": 15300,
+      "sha256": "968ad0f5cf1394c33103cce69e9b27a13b9f8e12c0b6cff574a018df5923bdba"
+    },
+    {
+      "path": "05-knowledge/results/overnight13_20260906_lrc_entry_decoder.out",
+      "bytes": 924,
+      "sha256": "8932a324412f5c0b7ce8cfc243146af374454a2239aa6059030f00af261bd57d"
+    },
+    {
+      "path": "05-knowledge/results/overnight13_20260906_lrc_entry_decoder_audit.md",
+      "bytes": 9286,
+      "sha256": "e258211a5c4840d18cc626921c7dd15f840f8ec8713f01ddbc1bb4da19f0c647"
+    },
+    {
+      "path": "05-knowledge/results/overnight13_20260906_lrc_entry_decoder_audit.out",
+      "bytes": 1219,
+      "sha256": "7861e9ddc8bd460025b01b77728430ac51472cd52e4c955733541a24ab4f7123"
+    }
+  ]
+}

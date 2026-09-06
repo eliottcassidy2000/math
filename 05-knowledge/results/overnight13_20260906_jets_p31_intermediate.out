@@ -1,0 +1,17 @@
+Universal odd-minor packet and p31 residual E29=631e+1+kappa
+q14 coefficients increasing (2070, -44505, 449995, -2838430, 12489092, -40589549, 100591491, -193344684, 290017026, -338353197, 302737071, -201824714, 94976336, -28310254, 4044322)
+content 19380 shifted K 23038504627568008043520
+exceptional residues/divided units [(3, 11), (11, 3), (15, 17), (17, 20), (21, 14), (29, 28)]
+all admissible second-digit packet lifts 899
+individual q1 lift 809 v31(q1,q2) 2 1
+individual q1 lift 879 v31(q1,q2) 3 1
+individual q1 lift 821 v31(q1,q2) 2 1
+individual q1 lift 141 v31(q1,q2) 2 1
+individual q1 lift 83 v31(q1,q2) 2 1
+individual q1 lift 153 v31(q1,q2) 2 1
+a 3 full e1 partition (0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 2, 4, 5, 7, 8, 10, 11, 13, 14, 16, 17, 19, 20, 22, 24, 26, 27, 29, 30, 31, 32, 33, 35, 36, 38, 39, 41, 43, 43, 45, 47)
+kernel exponent at precision43 762
+a 4 full e1 partition (0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 2, 4, 5, 7, 8, 10, 11, 13, 14, 16, 17, 19, 20, 22, 24, 26, 27, 29, 30, 31, 32, 33, 35, 36, 38, 39, 41, 42, 44, 45, 47)
+kernel exponent at precision43 761
+original full Hasse matrix controls 118
+PASS 97294 always-active gates

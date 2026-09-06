@@ -1,0 +1,12 @@
+Independent universal Hermite packet and all-depth p31 E29 audit
+universal signed rational determinants 84 s0..6; m=s+1,s+2,s+4
+T14 content 19380 K 23038504627568008043520
+exceptional residues [3, 11, 15, 17, 21, 29] divided units [11, 3, 17, 20, 14, 28]
+rational/higher-digit packet controls 116 literal large minors 6
+all minor index pairs 24601600 minimal 2 next 6
+a 3 full Hasse e1 Smith valuations (0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 2, 4, 5, 7, 8, 10, 11, 13, 14, 16, 17, 19, 20, 22, 24, 26, 27, 29, 30, 31, 32, 33, 35, 36, 38, 39, 41, 43, 43, 45, 47)
+a 3 D45 633 kernel exponent mod31^43 762
+a 4 full Hasse e1 Smith valuations (0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 2, 4, 5, 7, 8, 10, 11, 13, 14, 16, 17, 19, 20, 22, 24, 26, 27, 29, 30, 31, 32, 33, 35, 36, 38, 39, 41, 42, 44, 45, 47)
+a 4 D45 632 kernel exponent mod31^43 761
+fresh full original Hasse controls 32 depths0..3 and higher lifts
+PASS 44617 always-active gates

@@ -1,5 +1,11 @@
 # Script Results Index
 
+- [Thirteenth overnight synthesis](overnight_20260906_synthesis.md):
+  **PROVED + INDEPENDENTLY AUDITED.** [Complete121-test decoder](overnight13_20260906_lrc_entry_decoder.md)
+  decides actual11+2 equality inside the physical box. [Universal Hermite packets](overnight13_20260906_jets_p31_intermediate.md)
+  give an all-depth p31 intermediate ideal invisible to Deuring and AP bits.
+  [Manifest](overnight13_20260906_manifest.json):13 frozen artifacts.
+
 - [Twelfth overnight synthesis](overnight_20260906_synthesis.md):
   **PROVED + INDEPENDENTLY AUDITED.** [Signed semigroup boxes](overnight12_20260906_lrc_gcd_semigroup.md)
   close actual LRC entry with an endpoint gcd<=76,388,115;

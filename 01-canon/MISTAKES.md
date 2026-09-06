@@ -9,6 +9,20 @@ Format per entry:
 - Why it was wrong
 - The correct framing
 
+## 2026-09-06 overnight -- complete orientations and simultaneous packets
+
+- [The complete entry decoder](../05-knowledge/results/overnight13_20260906_lrc_entry_decoder.md)
+  needs both ways a triple crosses the actual components:110 plus11 tests.
+  The row(3Q+1)U union(1,3) passes the first110 but has the bounded crossing
+  (3Q+1)-1-3Q=0. An out-of-box powers-of355 equality row separately refutes
+  importing the internal-pair-height necessity without the physical sum bound.
+- [The p31 intermediate ideal](../05-knowledge/results/overnight13_20260906_jets_p31_intermediate.md)
+  separates full observers with identical metric, Deuring and AP bits.
+  A derivative shift retains a determinant only up to a rational scalar;
+  its integer content is not a unit. At a879 one primitive packet has
+  valuation3 while its reciprocal has1: the common ideal uses both and
+  the divided companion, with the whole next band retained at shallow depth.
+
 ## 2026-09-06 overnight -- retain relation support and conditional history
 
 - [Signed coefficient boxes](../05-knowledge/results/overnight12_20260906_lrc_gcd_semigroup.md)

@@ -5,7 +5,7 @@ This is the maintained continuation surface for the user's overnight request.
 Read current canon and incoming corrections before continuing any lane.
 The starting commit was `62e1b34d8`; the isolated worktree is `C:/w/s0905`.
 The extensively dirty original checkout is outside this session's edits.
-The twelfth checkpoint incorporates incoming canon through `fe9984169`,
+The thirteenth checkpoint incorporates incoming canon through `fe9984169`,
 including proved THM-4437/4440/4441/4442/4443/4444/4445/4446/4447/4448/4449/4450/4451/4452/4453.
 All these incoming statuses are scoped to their stated theorems. The universal
 **ternary-unit local network bound is now closed without a parity assumption**:
@@ -28,7 +28,7 @@ independence heuristic and the corrected asymptotic constant; see the
 | Anchor: actual decoder entry and body safe sets | One literal safe completion | Bounded crossing relations force scale separation; retain primitive core coordinates and coprime grids | Endpoint gcd at most76,388,115 closes actual entry; connected edges bound six-coordinate gcd by31,950, but reducing support remains owed |
 | Grid sets as degree-two bipartite graphs | No collinear triple | Freeze all rows, retain induced matching polynomials, then expose one column permutation | Saturated-board entropy and adaptive uniform-column restart bounds now follow; purposeful column optimization lies outside their scope |
 | Niche: trinomial return channels | First two return polynomials have no common torus zero | One quadratic pullback preserves the original zero and completes alpha parity | All A2 completed-alpha responses are negative; one coupled beta-skip coefficient remains |
-| Wildcard: residue-decorated jet cluster | Full partition versus largest precision loss | Minimum and next-weight bands retain integral content; divided companions prevent deeper common cancellation | Full p11/p13 laws close; p13 needs an intermediate AP bit invisible to Deuring, so test higher-prime packets separately |
+| Wildcard: residue-decorated jet cluster | Full partition versus largest precision loss | Minimum and next-weight bands retain integral content; divided companions prevent deeper common cancellation | The universal odd Hermite packet gives a p31 intermediate ideal missed by both Deuring and AP; adjacent even ideals could determine the changing factors |
 | Formal exceptional triple | Collision repair and nonzero constant source Jacobian | Leading wedge period under common branch motion | Every collision-preserving O(t9) map retains the obstruction; earlier source jets need the complete contact and density response |
 | Native Boolean disjoint-cycle sectors | Exact adjacency spectrum and integral kernel | Sorted cycle lengths become path tokens; a two-state cap removes a pendant pair | Full rectangles have sine-determinant spectra; the cap preserves cokernel, while general boundaries and ambient spectra remain open |
 
@@ -571,6 +571,35 @@ an implication: the maps and losses must be specified in the linked reports.
     These results neither prove extremal nonexistence nor bound the runtime
     of purposeful within-board optimization.
 
+44. **PROVED complete actual 11+2 equality decoder, independently audited:**
+    [The full121-test criterion](overnight13_20260906_lrc_entry_decoder.md)
+    decides `W_(Q,3)=V_dec` for each primitive thirteen-speed row in the
+    physical Q² box whose actual atlas graph is11+2. Check all internal
+    pair heights and all121 mixed triples using the minimal distinguished
+    coefficient. The number of arithmetic operations is fixed; bit cost
+    still depends on input height. With canonical core U, the row
+    `(3Q+1)U union (1,3)` passes the old110 orientation tests but has the
+    omitted crossing `(3Q+1)-1-3Q=0`. Dropping the physical box also makes
+    the necessary internal-height gate false. Primary/referee gates25,286/
+    31,754 pass, including363 retained support certificates and18,939
+    independently enumerated toy partitions with literal rational spans.
+    This decides entry equality, not safe-phase existence or the enormous
+    finite collection of possible physical rows.
+45. **PROVED universal odd Hermite packet and a new p31 residue coordinate:**
+    [The intermediate-ideal theorem](overnight13_20260906_jets_p31_intermediate.md)
+    transports complete Hermite cofactors through a derivative/degree shift,
+    retaining its rational scalar and integer coefficient content. For the
+    full48-row bank at nodes0,31^e,31^e a, e>=1 and a,a-1 units,
+    `v31(D45)=631e+1+kappa`, where kappa marks the cross-ratio orbit
+    {3,11,15,17,21,29}. All six residues are Deuring-ordinary and non-AP.
+    An exact divided companion proves the loss at every lift; a polynomial
+    rank obstruction controls the complete next band even at depth1.
+    At a3/a4, e1 the largest exponent is47 for both, but mod31^43 kernels
+    have orders31^762/31^761. That full-kernel comparison is FINITE-EXACT;
+    the intermediate ideal is all-depth. Primary/referee gates97,294/44,617
+    pass using distinct full-matrix algorithms. Metric, Deuring and AP data
+    together do not classify the complete observer. A full p31 law remains open.
+
 These are repository-scoped advances and recovered mechanisms, not claims
 of external literature priority. In particular, conditioning grid occupancy
 by row and column saturation already appears in the cited construction work.
@@ -703,6 +732,12 @@ branch; the original-body gates are8/91 and20/117 in its two stated forms.
 This complements the signed-box closure; neither supplies a universal mass
 floor. Root read the complete proof after the concurrent push. Earlier reservation statements above describe their own
 checkpoint state, not the current status.
+
+The [thirteenth manifest](overnight13_20260906_manifest.json) freezes13 more
+artifacts, including all363 mixed-support certificates. Both complete proofs
+and audits were read by root; both portable independent verifiers pass in
+normal and optimized Python. The next bridge tests concern support loss in
+gcd descent, the other decoder component sizes, and adjacent even Smith ideals.
 
 ## Procedural direction generator
 
