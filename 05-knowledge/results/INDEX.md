@@ -77,6 +77,20 @@
   dictionary. Primary/referee hashes: `ac37abac...5cbb` / `a2a29363...f866`
   and `587434c3...dbad` / `bdd53528...7b0` (raw LF bytes).
 
+- `lrc14_one_zero_relation_norm16_to20_atlas_thm4405.out` and its standalone
+  clean-room audit -> the remaining one-zero-mod-three presentation sectors
+  through coefficient norm `20`
+  ([THM-4405](../../01-canon/theorems/THM-4405-lrc14-one-zero-relation-norm-sixteen-through-twenty-atlas.md)):
+  **PROVED ELEMENTARY RELATIVE TO THM-4398 + VERIFIED-EXACT + INDEPENDENTLY
+  AUDITED; LRC(14) OPEN.** All 26 new norm-16/18/20 shapes have unique row
+  maxima at most `6/77`; five attain equality, always at the same physical
+  comb `(1,5,11)`. Combined with THM-4398 this closes all 40 one-zero
+  presentation shapes through norm 20, with ten equality presentations but
+  one physical equality comb. The 646 labelled chart dictionaries agree
+  carrier-by-carrier with definition-level physical-circle dictionaries.
+  Primary/referee hashes: `66d53f2c...7d09` / `9c7f810d...c835` and
+  `62a75808...df0d` / `da073906...bfb` (raw LF bytes).
+
 - `lrc14_minimal_ternary_unit_norm20_shell_thm4394.out` and its standalone
   clean-room referee -> complete minimal primitive full-support ternary-unit
   norm-`20` shell

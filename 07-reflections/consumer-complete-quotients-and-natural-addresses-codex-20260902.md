@@ -345,6 +345,16 @@ length `L_w(C)`.  It therefore cannot determine failure measure.  There is no
 LRC-to-tournament theorem here: the useful statement is a loss ledger linking
 one genuine orientation bit to the raw and Fourier representations.
 
+THM-4405 stress-tests the orientation/defect distinction across all 40
+one-zero presentation shapes through norm 20.  Every new row maximum lies in
+the all-unit `(1,1,2)` sector, yet the common equality comb `(1,5,11)` moves
+its two masses between defect pairs `+/-1`, `+/-2`, `0`, and `+/-3` as the
+relation chart changes.  What persists is the two-entry raw-carrier
+dictionary; what moves is the scalar coordinate assigned by a chosen
+relation.  In tournament language, the directed owner cycle survives while
+its numerical chart label does not.  This is a finite structural compression,
+not a claim that future coefficient norms inherit the same winners.
+
 THM-4396 gives a pointwise version of the same discipline.  After smoothing
 two sheet indicators, write `X=f_i f_j-g_i g_j`.  Forgetting the exact third
 indicator but retaining only `0<=f_k<=1` has the optimal envelope

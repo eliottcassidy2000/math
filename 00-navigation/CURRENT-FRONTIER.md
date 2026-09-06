@@ -55,8 +55,9 @@ for `d>=7`. THM-3742 is a wrong-torsor Pell `C14`; THM-3744's safe control is
   ray, parity-sheet and component-count data; none supplies safety or arrival.
 - **Seam/entry:** THM-4326/4329 close the fixed chart; 4330 leaves `2+12`;
   4347 closes height `40`; 4349/4371 are clocks, not entry. THM-4386--4394
-  close ternary-unit shells through norm `20`; 4398 closes 14 one-zero shapes
-  through norm `14` (one equality comb). THM-4392/4396 give Poisson duality
+  close ternary-unit shells through norm `20`; THM-4398/4405 close all 40
+  one-zero presentation shapes through norm `20` (one physical equality
+  comb). THM-4392/4396 give Poisson duality
   and an 11-site/pair closure of `(11,13,17)` whose quotient is strict on
   equality. THM-4409 restores third-sheet component incidence: its rational
   degree-zero max-flow certificate closes all `2,910` ternary-unit triples
