@@ -1,0 +1,10 @@
+THM-4434 COEFFICIENT-BOX IMPORT-FREE CUBE-EDGE REFEREE
+arithmetic=exact Fraction; repository_imports=0; optimizable_assertions=0
+universe=308; full_support=293; support_two=15
+oriented_sectors=4905
+maximum=15/98; equality_patterns=[(1, 7, 8)]; norm_four_hostile=2/7
+actual_zero=(0, 1, 5):2/21,(0, 1, 7):4/49,(0, 1, 11):8/77,(0, 1, 13):8/91,(0, 1, 17):8/119,(0, 5, 7):6/49,(0, 5, 11):2/21,(0, 5, 13):116/1365,(0, 5, 17):32/357,(0, 7, 11):50/539,(0, 7, 13):68/637,(0, 7, 17):90/833,(0, 11, 13):128/1001,(0, 11, 17):428/3927,(0, 13, 17):24/221
+semantic_sha256=3be81c2522a1df6a146e50634754620103f9d2d8840d17f34c9e9a4954e849f7
+analytic_constants=M19:142/931:margin1/1862; threshold:308S/31+4312/93; S56:56056/93; g58:3023/372
+checks=437776
+verdict=PASS
