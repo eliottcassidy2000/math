@@ -183,6 +183,13 @@ puts every complete moment fibre's simple cancellation roots on the negative
 real `tau` ray, including all proportional resonances. Off that ray detection
 equals support return. Cross-mass coprimality on the ray is still OPEN.
 
+[THM-4440](../01-canon/theorems/THM-4440-signed-duplication-sos-and-real-rooted-laurent-return.md)
+proves an exact signed-subset SOS: an interior zero coefficient of a
+real-rooted polynomial has a strictly negative doubled coefficient in its
+square. It gives width-linear return for real-rooted Laurent cores and
+all-mass doubled-row coprimality for AP trinomials, with unbounded-channel
+sharp examples; general non-real-rooted cores remain outside this theorem.
+
 ## Tournaments
 
 ### Reliable structural toolkit
@@ -343,7 +350,10 @@ lift/phase clocks.
   THM-4435 gives dyadic blindness and Hermite precision;
   [THM-4439](../01-canon/theorems/THM-4439-all-node-twojet-metric-precision-by-terminal-clusters.md)
   proves the largest factor metric-only at every node count via terminal
-  clusters. Full multiscale partitions/higher jets remain OPEN.
+  clusters. [THM-4443](../01-canon/theorems/THM-4443-arbitrary-jet-precision-and-dyadic-unit-boundary.md)
+  gives the arbitrary-multiplicity inverse denominator and complete dyadic
+  three-node three-jet unit law; metric-only precision fails at uniform3
+  and heterogeneous(2,2,1). Full multiscale partitions remain OPEN.
 - **Even-graph spectrum:** THM-4083 closes `D=3,4`;
   [THM-4416](../01-canon/theorems/THM-4416-even-graph-cumulative-d5-d6-spectral-gap.md)
   closes `D=5,6`; [THM-4427](../01-canon/theorems/THM-4427-all-cumulative-signed-cycle-gaps-by-transposition-rigidity.md)
@@ -354,7 +364,9 @@ lift/phase clocks.
   n>=16: adjacent/disjoint two-edge equality switches at `n=2k-3`.
   Cumulative seconds are exactly the minimum of adjacent, disjoint and
   antibalanced values; their worst-scale asymptotic isolation loss is `6/n`.
-  Booleanized adjacency and tournament transfer stay open.
+  The [Boolean consumer](../05-knowledge/results/overnight_hexagon_sep05_boolean_consumer.md)
+  proves all-order Fourier failure, a conductance comparison and exact
+  thinning; its exact spectrum and tournament transfer stay OPEN.
 - **AMM:** [THM-4086](../01-canon/theorems/THM-4086-rule-a-transition-clock-and-phase-cocycle.md) proves a fixed-policy `R=32768` clock/cocycle; no global monotonicity, all-`R`, or `C*` result.
 - **Knots:** THM-2176/2191/2281 and THM-2242/2330--2383: localization, owner/ANOVA/rectangle/reference inversion; realization/stable diagonal open. THM-2646: modular/exponent `B3` conjugacy, not Markov invariance.
 - **Flows:** [THM-2177](../01-canon/theorems/THM-2177-planar-counterexample-to-goemans-unsplittable-cost-flow-conjecture.md): planar `58<60` refutes exact `d_max`; planar `2d_max` survives.

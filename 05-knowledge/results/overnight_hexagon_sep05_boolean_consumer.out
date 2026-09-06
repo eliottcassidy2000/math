@@ -1,0 +1,14 @@
+ROW n,D,q,degree_min,max,affine_rank,overlaps,raw_loop_sum,cmin,cmax,gap_lower,empty_upper,poly_sha (3, 2, 2, 1, 1, 2, 0, 0, 1, 1, Fraction(2, 1), Fraction(2, 1), '3c2193991ba68cdd800598d7561a18edb6588edd5b8cf245fcc663762dfbf5a1')
+ROW n,D,q,degree_min,max,affine_rank,overlaps,raw_loop_sum,cmin,cmax,gap_lower,empty_upper,poly_sha (4, 2, 3, 1, 2, 3, 0, 0, 4, 12, Fraction(1, 3), Fraction(3, 2), '3bda7a75c03b705ea8d11782a16b7dde8ec5d9f996a951ff64ab2919c3ec05c9')
+ROW n,D,q,degree_min,max,affine_rank,overlaps,raw_loop_sum,cmin,cmax,gap_lower,empty_upper,poly_sha (4, 3, 3, 2, 2, 2, 0, 5, 3, 12, Fraction(2, 3), Fraction(3, 1), '606ffb0119fe8ee64bd3298c15c631837652de8c54c156ad351faecca69c88d1')
+ROW n,D,q,degree_min,max,affine_rank,overlaps,raw_loop_sum,cmin,cmax,gap_lower,empty_upper,poly_sha (5, 2, 7, 1, 3, 3, 0, 0, 10, 60, Fraction(1, 10), Fraction(7, 6), 'e1cb5f3b5d974a31736c472e6c06555886ccbd5aec332d1ffba251bf6e126a40')
+ROW n,D,q,degree_min,max,affine_rank,overlaps,raw_loop_sum,cmin,cmax,gap_lower,empty_upper,poly_sha (5, 3, 7, 2, 5, 3, 0, 29, 10, 120, Fraction(3, 20), Fraction(7, 3), '8a28c38a97e136b4dcbd63d42203958c579f8ed819fa7f756d567cb677df6bf9')
+ROW n,D,q,degree_min,max,affine_rank,overlaps,raw_loop_sum,cmin,cmax,gap_lower,empty_upper,poly_sha (5, 4, 7, 3, 6, 3, 6, 29, 10, 120, Fraction(1, 4), Fraction(7, 2), '75ccec12e6f4a72c2e30be5ca4bbab0aa013ab423ee1de9418fe4bd800d32ebc')
+ROW n,D,q,degree_min,max,affine_rank,overlaps,raw_loop_sum,cmin,cmax,gap_lower,empty_upper,poly_sha (6, 2, 16, 1, 7, 3, 0, 0, 20, 1440, Fraction(1, 180), Fraction(16, 15), '8e3b91456e3844cfc657ac15b7aad3d365d530858c8784b778d0ce15d1bb094d')
+ROW n,D,q,degree_min,max,affine_rank,overlaps,raw_loop_sum,cmin,cmax,gap_lower,empty_upper,poly_sha (6, 3, 16, 2, 12, 3, 0, 136, 20, 1800, Fraction(4, 225), Fraction(32, 15), 'd8b116fcb7b128f91c36a0abbd7c2bd20707311da688c6b0e30a877d03d43f6f')
+ROW n,D,q,degree_min,max,affine_rank,overlaps,raw_loop_sum,cmin,cmax,gap_lower,empty_upper,poly_sha (6, 4, 16, 3, 13, 3, 23, 136, 20, 6120, Fraction(2, 153), Fraction(16, 5), 'e6dde29c267a2c1d3bf17d7403e135616ece2b882cb6cfe919e04df6028d155e')
+ROW n,D,q,degree_min,max,affine_rank,overlaps,raw_loop_sum,cmin,cmax,gap_lower,empty_upper,poly_sha (6, 5, 16, 4, 14, 3, 44, 280, 20, 6120, Fraction(16, 765), Fraction(64, 15), 'bbd60f4b72d9c9059013a2107597ad454aa16098eac60601fcdb87772690aa46')
+EXACT_BOOLEAN_GAPS n5_D2=2-sqrt(2) n5_D4=(9-sqrt(17))/2
+semantic_sha256 3ec28083073c6221af814f2c36fc29ea47a951dfe1c3a42b10ef1ccc4388ca25
+explicit_failure_gates 965
+PASS exact Boolean consumer controls; no exact all-order Boolean gap claim

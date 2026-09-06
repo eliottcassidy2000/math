@@ -1,0 +1,13 @@
+COMPLETE PRIMITIVE SUM-RAY HEAD c<33 ROWS 42
+SEMANTIC SHA256 5e040041c63bc297cab146d0363f02e1c97492c0660e8ac2a850f7a2a426568c
+SHARP min-projection AND actual-mass 6/55 EQUALITY [(1, 10, 11)]
+TAIL AT33 418639/3841992 394783/3841992 < 6/55
+CONTROL (2, 5, 7) E (Fraction(22, 245), Fraction(6, 49), Fraction(1, 10)) ACTUAL 22/245
+CONTROL (1, 10, 11) E (Fraction(6, 55), Fraction(12, 77), Fraction(23, 154)) ACTUAL 6/55
+CONTROL (2, 47, 49) E (Fraction(214, 2303), Fraction(6, 49), Fraction(3727, 32242)) ACTUAL 214/2303
+CONTROL (1, 49, 50) E (Fraction(223, 2450), Fraction(3, 25), Fraction(3, 25)) ACTUAL 223/2450
+CONTROL (7, 43, 50) E (Fraction(102, 1075), Fraction(283, 2450), Fraction(5668, 52675)) ACTUAL 9523/105350
+CONTROL (31, 67, 98) E (Fraction(2334, 22981), Fraction(1200, 10633), Fraction(68370, 712411)) ACTUAL 9360/101773
+CHECKS 13906 INDEPENDENT RAW/LITERAL CHECKS 1062
+PROVED sharp sum-ray6/55; every primitive sum ray c>=49 actually exceeds6/77
+OPEN arbitrary-body entry/synchronization; no inherited6/55 Haar floor

@@ -9,6 +9,33 @@ Format per entry:
 - Why it was wrong
 - The correct framing
 
+## MISTAKE-547 (2026-09-06, higher-jet hostile probe) -- changing the observer changes its cancellation budget
+
+- **Refuted extrapolation, never a proved dependency:** complete uniform
+  two-jet worst precision is metric-only by THM-4439. It does not remain
+  so after adding a third jet everywhere, or deleting a derivative at one
+  node while keeping the node metric and all remaining multiplicities.
+- **Minimal uniform witness:** at three nodes and three jets, isometric
+  `(0,4,8)` and `(0,4,12)` have largest dyadic exponents18 and19.
+  Values-only and uniform two-jet observations are metric-only at all node
+  counts, and any two-node uniform multiplicity is metric-only. No global
+  diameter-minimality is asserted.
+- **Earlier heterogeneous boundary:** ordered nodes `(0,8,4)` and `(4,12,0)`
+  with the same multiplicities `(2,2,1)` have weighted-isometric metrics
+  but largest exponents9 and8. The full lists are `(0,0,4,7,9)` and
+  `(0,0,4,8,8)`.
+- **First failed implication / missing coordinate:** the simultaneous
+  terminal reciprocal cancellation budget is not invariant under a change
+  of observed derivative orders. Quadratic reciprocal jets can cancel at
+  both closest-pair nodes; unit data lost by the metric become visible.
+- **Strongest survivor / repair:**
+  [THM-4443, arbitrary-jet precision and dyadic unit boundary](theorems/THM-4443-arbitrary-jet-precision-and-dyadic-unit-boundary.md)
+  gives the exact inverse-series denominator for arbitrary multiplicities
+  and a complete dyadic three-node three-jet law with four unit classes
+  modulo16. THM-4439 remains valid on its original complete uniform domain.
+  The next question must specify both node metric and observer, then test
+  the actual precision envelope rather than only its determinant.
+
 ## MISTAKE-546 (2026-09-06, universal triple-bound consumer probes) -- parity and body measure are separate inputs
 
 - **Refuted extensions, never canon dependencies:** the THM-4434 odd

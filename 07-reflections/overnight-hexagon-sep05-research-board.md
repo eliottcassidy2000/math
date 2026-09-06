@@ -250,3 +250,68 @@ on the complete native object before deciding whether a missing coordinate
 is essential. A maximum can forget unit data while a sum still needs signed
 frequency groups. This is evidence for a transfer question, not an identification
 of p-adic clusters with Laurent frequencies or graph switching classes.
+
+## Fifth-wave current board: change the observer, keep the exact operation
+
+**2026-09-06, approximately08:00 UTC.** The overnight session continues.
+The fourth-wave reservation descriptions above are historical: incoming
+4438 is now PROVED on its exact row-fifteen boundary; the fresh pull also
+promotes4437's all-parity reduction. Incoming additive sharp6/55 is proved and
+is credited once. THM-4440 is now PROVED after the complete independent
+written audit of signed duplication and all consumers. THM-4443 records
+the independently audited arbitrary-jet inverse and unit boundary. The
+fresh pull reserved4441/4442 for norm-five rays/bounded bodies; our unpublished
+higher-jet identifier was moved to4443 before pushing, retaining those owners.
+
+The live six-concept portfolio is now:
+
+- **Anchor / body-to-tail phase:** incoming clock-filtered height18 ten-body
+  hostile refutes a global measure-floor repair, not merely the unfiltered
+  floor. Our component first-exit compiler remains valid. The next object
+  must retain an actual entry-produced body component and its addressed tail
+  exit; another unconditional Haar floor is the wrong target.
+- **Parity / complete-ray discrepancy:** the incoming additive theorem
+  closes the sharp6/55 family. Our exact boundary-jump identity reduces its
+  network head to42 rows and proves actual spoiled mass tends uniformly to
+  9/98, with error<=2/(3ab); every primitive sum triple of height>=49 is
+  genuinely above6/77. This changes the norm-five target: first prove a
+  complete support dictionary, then keep the endpoint score in quadrature.
+- **Laurent / centered subset products:** a coefficient in the square of
+  a real-rooted polynomial is an exact quadratic form on all k-subset
+  products. Its centered subset-distance kernel has a positive rational
+  SOS. This proves strict doubled-coefficient negativity at an interior
+  zero, a width-linear return theorem for real-rooted Laurent cores, and
+  all-mass doubled-row coprimality for AP trinomials. Non-real-rooted
+  compressed cores remain outside the theorem despite their channel
+  polynomials being real-rooted. Incoming path/Hadamard rows are a possible
+  transport question, not a proved extension.
+- **Wildcard / higher jets:** changing uniform jet multiplicity from2 to3
+  immediately destroys metric-only worst precision at three nodes. The
+  new exact inverse lemma works for arbitrary multiplicity-labelled nodes;
+  a complete dyadic three-node three-jet formula needs one of four unit
+  classes modulo16. Literal9x9 Smith lists confirm losses18/19 for isometric
+  triples at scale4. Even heterogeneous(2,2,1) observations fail, with
+  losses9/8. Uniformity of the earlier2jet theorem is load-bearing.
+- **Native Boolean graph:** analytic all-order failure of the old single-
+  edge Fourier mode, cross-length support overlap and orbit volumes explain
+  the quotient loss. A Dirichlet comparison and exact reciprocal-
+  multiplicity thinning survive. A single rooted cycle-decomposition tree
+  has exponentially forced canonical-path congestion; a sharper bound must
+  distribute flow rather than just choose a different root.
+- **Incoming relative response / parked orthogonal lane:**4438 closes a
+  rank-one row-fifteen response on the inherited rationalG_m, not arbitrary
+  entry or source termination. It is an audited finite-row continuation,
+  not a JC2 result. Its response-rank versus observable distinction matches
+  our instruction to retain the actual consumer; no cross-problem map is
+  being asserted without a coefficient correspondence.
+
+Every new object was compared with the others. Two lessons have concrete
+evidence across distinct lanes: complete-object centering can force a sign
+even with positive individual pairs, while a changed observer can expose
+unit data previously erased by a maximum. Boundary scores in the LRC ray,
+directed multiplicities in Boolean thinning and local reciprocal jets in
+interpolation are explicit retained coordinates, not generic warnings.
+The Hermite-polynomial Gaussian limit of the Laurent SOS is now proved and
+independently audited, with explicit classical Mehler credit. It is unrelated
+merely by name to Hermite interpolation: the exact generating-function map
+justifies this transfer, not the shared name.

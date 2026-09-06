@@ -104,6 +104,16 @@ forces body members `8,10,13,14` and a multiple of three. The `209` cases
 are generated completely, not sampled. Equation (3) is a finite positive
 control only, not a repaired universal Haar theorem.
 
+Incoming commit `910dad3281880a9ec940d28a24fb784892b66c76` independently
+recovers the same height-thirteen bank in
+[the empty-core body report](lrc14_haar_body_empty_core_sep06.md), and its
+Section 2 refutes even the global small-clock-filtered repair. For
+`C=(1,3,4,10,11,13,14,16,17,18)` and `T=(1,5,11)`, no reduced clock of
+denominator at most fourteen is safe, yet
+`mu(G_C)=534689/7796880<6/77`. Our height-fourteen positive control is
+therefore genuinely bounded. The incoming report retains a later exact
+physical witness, not an LRC counterexample.
+
 ## 2. Exact component synchronization using one endpoint and one exit
 
 Let `C` be any finite nonempty positive integer body, let `T` have exactly

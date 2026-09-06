@@ -3,15 +3,16 @@ id: THM-4078
 title: "Even-graph triangle quotient spectrum and Boolean noncommutation"
 status: >
   PROVED + VERIFIED-EXACT + INDEPENDENTLY VERIFIED-EXACT, with one separately
-  marked FINITE-EXACT conjectural sidecar. Fourier orbit sums indexed by
+  marked historical FINITE-EXACT sidecar, whose cumulative first-gap
+  conjecture was subsequently proved by THM-4083/4416/4427. Fourier orbit sums indexed by
   unlabeled signed switching classes form a complete joint eigenbasis for all
   multiplicity-weighted cycle operators. The triangle quotient Laplacian has
   exact gap 2(n-2), uniquely attained by the single-negative-edge switching
   orbit; its normalized gap is 12/(n(n-1)), while the exact lazy relaxation
   time is n(n-1)/6. The quotient is bipartite. Loop-deleted Boolean supports
   B_3 and B_4 fail to commute for every n>=4. The D=2 gap is proved for all
-  n; the analogous cumulative diameter-layer single-edge extension for D>=3
-  is verified only through n=8 and remains CONJECTURAL.
+  n. The original D>=3 census remains a finite audit, while later canon
+  closes all cumulative first gaps. Booleanized spectra remain OPEN.
 source: codex-frontier-synthesis-creative-20260825d / even-graph spectral lane
 audit: >
   PASS. The primary primal path constructs every Eulerian graph through n=6,
@@ -225,7 +226,17 @@ boxed: B_3 B_4 != B_4 B_3 for every n>=4.                     (20)
 This sharpens THM-4073's order-four counterexample to the full possible
 range. At `n=3`, `B_4` does not exist.
 
-## 5. Proved spectral reduction; conjectural cumulative extremum
+## 5. Proved spectral reduction; historical cumulative conjecture and its continuation
+
+**Current continuation:** the cumulative first-gap question below is now
+proved: [THM-4083, cumulative D3/D4 gaps](THM-4083-even-graph-cumulative-d3-d4-spectral-gap.md),
+[THM-4416, cumulative D5/D6 gaps](THM-4416-even-graph-cumulative-d5-d6-spectral-gap.md),
+and [THM-4427, all remaining cumulative gaps](THM-4427-all-cumulative-signed-cycle-gaps-by-transposition-rigidity.md).
+Their stated small-order equality exceptions remain in force. The second
+weights for n>=16 are treated by
+[THM-4433, signed-cycle second minima and cross-scale stability](THM-4433-signed-hamilton-second-minimum-and-cross-scale-stability.md).
+These are continuations, not circular dependencies of this original
+Fourier reduction. Booleanization is still outside their spectral claims.
 
 For every `2<=D<=n-1`, the proved equations `(7)`--`(8)` reduce the natural
 weighted diameter-layer Laplacian gap to
@@ -234,9 +245,10 @@ weighted diameter-layer Laplacian gap to
 2 min_([H] nontrivial) sum_(k=3)^(D+1) c_k^-(H).              (21)
 ```
 
-For `D=2`, Section 2 proves the minimum in `(21)`. For `D>=3`, the following
-extension is **CONJECTURAL; FINITE-EXACT THROUGH `n=8` ONLY**. The exact dual
-census supports
+For `D=2`, Section 2 proves the minimum in `(21)`. **Historical scope of
+the original 2026-08-25 proof:** the following D>=3 extension was then
+conjectural, with this theorem's census **FINITE-EXACT THROUGH `n=8` ONLY**.
+That exact dual census supports
 
 ```text
 min_([H] nontrivial) sum_(k=3)^(D+1)c_k^-(H)
@@ -255,8 +267,9 @@ c_k^-(H)=N_(n,k) for odd k,        c_k^-(H)=0 for even k.     (23)
 ```
 
 Thus the tempting per-length lower bound already fails completely at `k=4`;
-only the cumulative prefix conjecture survives this hostile. No all-`n` claim
-from `(22)` enters the proved dependency graph.
+only the cumulative prefix statement survives this hostile. The original
+finite census does not prove an all-`n` claim; the continuation cited above
+supplies the later proofs.
 
 ## 6. Exact audits and loss ledger
 
@@ -281,5 +294,6 @@ The source is THM-4073's multiplicity-weighted commuting lift. The map is the
 Fourier transform followed by the switching and relabeling quotients. It
 preserves the full negative-cycle vector `(c_3^-,...,c_n^-)`; Booleanization
 destroys multiplicities, and `(17)`--`(20)` show that commutativity is lost.
-The theorem proves the complete spectral reduction and its triangle
-specialization, not the cumulative conjecture `(22)`.
+This theorem's original proof establishes the complete spectral reduction
+and its triangle specialization. The later cited continuation proves `(22)`;
+no Boolean spectral equality follows from either proof.

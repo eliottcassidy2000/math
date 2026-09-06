@@ -1,0 +1,16 @@
+UNIFORM3 e 0 A (0, 0, 0, 0, 0, 0, 1, 4, 4) B (0, 0, 0, 0, 0, 0, 1, 4, 4)
+UNIFORM3 e 1 A (0, 0, 0, 1, 4, 4, 5, 11, 11) B (0, 0, 0, 1, 4, 4, 5, 11, 11)
+UNIFORM3 e 2 A (0, 0, 0, 2, 6, 8, 11, 18, 18) B (0, 0, 0, 2, 6, 8, 11, 17, 19)
+UNIFORM3 e 3 A (0, 0, 0, 3, 8, 12, 17, 25, 25) B (0, 0, 0, 3, 8, 12, 17, 23, 27)
+UNIFORM3 e 4 A (0, 0, 0, 4, 10, 16, 23, 31, 33) B (0, 0, 0, 4, 10, 16, 23, 29, 35)
+UNIFORM3 e 5 A (0, 0, 0, 5, 12, 20, 28, 38, 41) B (0, 0, 0, 5, 12, 20, 28, 36, 43)
+MIXED221 e 0 A (0, 0, 0, 2, 2) B (0, 0, 0, 2, 2)
+MIXED221 e 1 A (0, 0, 2, 5, 5) B (0, 0, 2, 5, 5)
+MIXED221 e 2 A (0, 0, 4, 7, 9) B (0, 0, 4, 8, 8)
+MIXED221 e 3 A (0, 0, 5, 10, 13) B (0, 0, 5, 11, 12)
+MIXED221 e 4 A (0, 0, 6, 13, 17) B (0, 0, 6, 14, 16)
+MIXED221 e 5 A (0, 0, 7, 16, 21) B (0, 0, 7, 17, 20)
+NAMED DYADIC UNIT/GAP CONTROLS 65
+LITERAL INTEGER SMITH MATRICES 126 EXPLICIT GATES 1262
+FULL INTEGER FACTOR/RECIPROCAL SEMANTIC SHA256 d54493b4774724f76a87c0df3633f9e12ce3182424ba67925aa1c8bd701b2e59
+PASS uniform3 metric hostile; mixed221 earlier type boundary; arbitrary-multiplicity inverse denominators

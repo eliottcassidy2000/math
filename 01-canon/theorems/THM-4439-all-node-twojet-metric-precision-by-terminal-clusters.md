@@ -61,4 +61,9 @@ referee gives7,944 fresh reciprocal/tree comparisons and176 literal integer
 Smith comparisons, including full terminal p-clusters with nearby outsiders,
 signed/deep nodes, n=1/2, and the metric twins. Full proof and boundary
 reviews passed. The unbounded theorem is the cluster argument, not a
-finite extrapolation. General higher-Hasse-jet precision remains OPEN.
+finite extrapolation. The audited continuation
+[THM-4443](THM-4443-arbitrary-jet-precision-and-dyadic-unit-boundary.md)
+gives the arbitrary-multiplicity inverse denominator and proves that
+metric-only precision fails already at uniform three jets/three nodes,
+and at heterogeneous(2,2,1). It retains a complete dyadic three-node unit
+law; general other-prime/higher-node metric classifications remain OPEN.

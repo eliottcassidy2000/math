@@ -1,0 +1,14 @@
+SIGNED DUPLICATION SOS / REAL-ROOTED LAURENT CORE / ALL-MASS AP
+status=FINITE-EXACT CHECKER of independently audited analytic proof; no repository proof imports
+integrals: 41 distance increments; all 528 SOS weights k=1..32
+Gram identity: 4353 exact distance entries; n=1..35, every k=1..n
+signed exhaustive head: 3829 rows, 546 equalities; n=2..7 multisets in -2..2
+direct coefficient/kernel/SOS replay: 140 signed vector rows; n=2..8
+tuned rational-root carriers: 2913 exact zeros; n=3..16; strict quantitative margin
+AP exact fibre/gcd controls: 360 rows; spacing=2..16, all a, first three admissible masses
+sharp unbounded-channel family: h=1..20; h=5 support=(-10,1,12), width=22
+literal arbitrary-support core controls: 558 rows, 86 first-rung cancellations; degree=1..6
+hostiles: mixed individual pair signs; nonreal quadratic +2; zero-root equality; cubic wall (0,-224), discriminant -23
+Hermite scaled duplication: k=1..32 exact polynomial SOS/root-sign certificates and constant gcds; recurrence checked through64
+trace_sha256=8cf72b05bb0c4c3123a7e1727afdbc0af0e6f32f9ece04be46cba6abcbd53503
+PASS explicit_gates=29613

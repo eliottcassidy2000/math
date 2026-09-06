@@ -26,6 +26,12 @@
   [bounded literature recovery](trinomial_doubled_row_literature_empty_core_three_ray_sep06.md)
   records why individual real roots and neighboring orthogonality do not
   automatically compare doubled rows.
+- **PROVED + INDEPENDENTLY AUDITED fifth wave:**
+  [THM-4440 signed duplication](../../01-canon/theorems/THM-4440-signed-duplication-sos-and-real-rooted-laurent-return.md) gives a rational SOS, real-rooted-core width bound, all-mass AP-trinomial coprimality and a recovered classical Hermite sign identity;
+  [THM-4443 arbitrary-jet precision](../../01-canon/theorems/THM-4443-arbitrary-jet-precision-and-dyadic-unit-boundary.md) gives the exact arbitrary-multiplicity inverse denominator and first uniform/nonuniform metric failures;
+  [additive boundary discrepancy](lrc14_sum_ray_boundary_discrepancy_overnight_hexagon_sep05.md) strengthens the incoming sharp theorem with an exact jump term and an unbounded actual-parity obstruction;
+  [Boolean consumer](overnight_hexagon_sep05_boolean_consumer.md) retains conductance/volume after two multiplicity losses. Global LRC entry, general trinomial separation and exact Boolean spectrum remain OPEN.
+
 - [Sharp additive mixed-parity bound](lrc14_additive_parity_empty_core_sep06.md):
   **PROVED + FINITE-EXACT + INDEPENDENTLY AUDITED.** The complete family
   `a+b=c` has selected network and physical mass at most `6/55`, with sole

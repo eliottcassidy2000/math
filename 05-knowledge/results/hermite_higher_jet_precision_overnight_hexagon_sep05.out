@@ -1,0 +1,18 @@
+Complete three-node diameter<=80 head: 3160
+All four unit branches at17 scales;1000 signed/unit-affine pairs PASS
+Uniform hostile scale 0 Smith [(0, 0, 0, 0, 0, 0, 1, 4, 4), (0, 0, 0, 0, 0, 0, 1, 4, 4)]
+Mixed hostile scale 0 Smith [(0, 0, 0, 2, 2), (0, 0, 0, 2, 2)]
+Uniform hostile scale 1 Smith [(0, 0, 0, 1, 4, 4, 5, 11, 11), (0, 0, 0, 1, 4, 4, 5, 11, 11)]
+Mixed hostile scale 1 Smith [(0, 0, 2, 5, 5), (0, 0, 2, 5, 5)]
+Uniform hostile scale 2 Smith [(0, 0, 0, 2, 6, 8, 11, 18, 18), (0, 0, 0, 2, 6, 8, 11, 17, 19)]
+Mixed hostile scale 2 Smith [(0, 0, 4, 7, 9), (0, 0, 4, 8, 8)]
+Uniform hostile scale 3 Smith [(0, 0, 0, 3, 8, 12, 17, 25, 25), (0, 0, 0, 3, 8, 12, 17, 23, 27)]
+Mixed hostile scale 3 Smith [(0, 0, 5, 10, 13), (0, 0, 5, 11, 12)]
+Uniform hostile scale 4 Smith [(0, 0, 0, 4, 10, 16, 23, 31, 33), (0, 0, 0, 4, 10, 16, 23, 29, 35)]
+Mixed hostile scale 4 Smith [(0, 0, 6, 13, 17), (0, 0, 6, 14, 16)]
+Uniform hostile scale 5 Smith [(0, 0, 0, 5, 12, 20, 28, 38, 41), (0, 0, 0, 5, 12, 20, 28, 36, 43)]
+Mixed hostile scale 5 Smith [(0, 0, 7, 16, 21), (0, 0, 7, 17, 20)]
+Independent literal inverse plus Smith matrices: 49
+Two-node positive controls: 112
+GATES 5947 SEMANTIC 5171c7dd09d84dff6187a1ea1710d54c5f5c531b6c02ef197e4fa849e5abf3ca
+PASS exact inverse and dyadic boundary controls; general theorem is analytic.
