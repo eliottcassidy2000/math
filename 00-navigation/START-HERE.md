@@ -21,10 +21,10 @@ Then read frontier, guardrails, theorem; logs are history.
 
 ## Nineteen high-signal facts
 
-1. **LRC(14) is first open.** THM-4347 closes height `40`; THM-4434/4437
-   reduce scale-three tails to `(111),(112),(122)`; [THM-4441](../01-canon/theorems/THM-4441-lrc14-signed-122-sharp-ray-closure.md)
-   removes `(122)` and [THM-4442](../01-canon/theorems/THM-4442-lrc14-bounded-ten-body-parity-free-scale-three-completion.md)
-   closes all tails over ten-bodies in `[13]`. Entry, `2+12`, and universal `(111),(112)` remain open.
+1. **LRC(14) is first open.** THM-4347 closes height `40`. The
+   [local synthesis](../05-knowledge/results/overnight4_20260906_lrc_parityfree_native.md)
+   closes every scale-three tail ceiling; [THM-4442](../01-canon/theorems/THM-4442-lrc14-bounded-ten-body-parity-free-scale-three-completion.md)
+   completes every tail over ten-bodies in `[13]`. Entry and `2+12` remain open.
 2. **The `q <= 25` period claim is refuted.** THM-762/764 exhibit `26*{1,...,12} union {339}`, whose first good period is `27`.
 3. **Good-period existence is a maximum statement.** The tight resonant AP
    defeats average/count arguments; see MISTAKE-127/129/130.

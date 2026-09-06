@@ -5,8 +5,8 @@ This is the maintained continuation surface for the user's overnight request.
 Read current canon and incoming corrections before continuing any lane.
 The starting commit was `62e1b34d8`; the isolated worktree is `C:/w/s0905`.
 The extensively dirty original checkout is outside this session's edits.
-Fourth-checkpoint mathematics incorporates incoming canon through `058a8ded9`,
-including proved THM-4437/4440/4441/4443. The universal
+Fourth-checkpoint mathematics incorporates incoming canon through `b637305db`,
+including proved THM-4437/4440/4441/4442/4443. The universal
 **ternary-unit local network bound is now closed without a parity assumption**:
 sharp `6/55`, with the stronger odd bound `6/77` retained. Actual LRC entry
 and body-to-tail noncontainment remain open. The universal ten-body `6/77`
@@ -341,8 +341,8 @@ test. Do not simply increase the last census bound. Current unfilled cells:
 
 ## Incoming work and scope
 
-Incoming work has been inspected through `058a8ded9`; the former THM-4440
-reservation is now promoted. THM-4442 remains RESERVED and unused. These are
+Incoming work has been inspected through `b637305db`; the former THM-4440
+and THM-4442 reservations are promoted. THM-4444/4445 remain RESERVED. These are
 inherited results, independently connected where indicated, rather than
 additional discoveries counted for this task:
 
@@ -363,6 +363,13 @@ additional discoveries counted for this task:
   low circuits. [THM-4441 / signed-122 sharp closure](../../01-canon/theorems/THM-4441-lrc14-signed-122-sharp-ray-closure.md)
   gives sharp selected `46/665` at `(2,19,20)` and physical `51/770` at
   `(1,11,20)`. These proved inputs complete the combined corollary above.
+  [THM-4442 / bounded ten-body completion](../../01-canon/theorems/THM-4442-lrc14-bounded-ten-body-parity-free-scale-three-completion.md)
+  now completes every ternary-unit tail over all 286 ten-subsets of `[13]`,
+  with no parity or tail-primitivity assumption. A fixed-sheet connectedness
+  argument makes `7cL>=3` sufficient on a body component of length `L`;
+  exact geometry and an independently audited 174,045-row residual close
+  the bounded family. Root read the analytic proof; the full census was
+  audited by its incoming referee, not rerun here. General entry stays open.
 - [THM-4432 / two-channel two-rung noncancellation with carries](../../01-canon/theorems/THM-4432-trinomial-two-channel-two-rung-noncancellation-with-carries.md)
   closes every first row with exactly two channels at all endpoints.
   [THM-4436 / complete factorial-row simple negative roots](../../01-canon/theorems/THM-4436-complete-factorial-row-simple-negative-roots-and-trinomial-phase-wall.md)
