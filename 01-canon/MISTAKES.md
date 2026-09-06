@@ -9,6 +9,32 @@ Format per entry:
 - Why it was wrong
 - The correct framing
 
+## 2026-09-06 extended session -- local limits and lost amplitudes
+
+- [The finite-length hostile](../05-knowledge/results/long_frontier_sep06_finite_dimension.md)
+  refutes extrapolating the sharp asymptotic coefficient into the bound
+  N(R-K3)>=C at every length. Exact eligible rows of lengths4 and5 violate
+  it; a competing one-atom limit explains the failure. The proved
+  THM-4456 asymptotic remains valid. The proposed inequality for N>=6
+  and exact finite-length optimizers remain OPEN.
+- [The all-channel step hostile](../05-knowledge/results/long_frontier_sep06_allh.md)
+  refutes sign propagation from the exact beta-integration step, strict
+  negative-root geometry, and the correct lower carry and leading
+  coefficient alone. Explicit model transitions at x1 to2 and x3 to4
+  reverse the response sign at the first-row zero; the latter retains
+  primitive masses7 and8. The lost coordinates are the actual interior
+  factorial amplitudes. The exact recurrence survives, and its genuine
+  controls pass. No actual Laurent counterexample or all-channel closure
+  follows from these models.
+- [The local-modulus audit](../05-knowledge/results/long_frontier_sep06_local_modulus_audit.md)
+  distinguishes convergence to a sharp ratio from equality of its liminf.
+  Convergence to the sharp constant is equivalent to h=o(m) along a
+  minimizing sequence. Liminf equality alone permits alternating sharp
+  and split subsequences, so it cannot force that whole-sequence relation.
+  The repaired local theorem states both sharp liminf bounds and the
+  correctly quantified convergence criterion. Global optimal moduli
+  remain OPEN.
+
 ## 2026-09-06 continuation -- residue positivity needs its support endpoint
 
 [The two-residue floor](../05-knowledge/results/continuing3_20260906_residue_floor.md)

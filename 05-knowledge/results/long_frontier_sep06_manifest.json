@@ -1,0 +1,357 @@
+{
+  "schema_version": 1,
+  "session": "long-frontier-sep06",
+  "status": "PROVED / REFUTED / FINITE-EXACT, with scope specified in each proof and independent audit",
+  "created_utc": "2026-09-06",
+  "initial_head": "f0521b87281f06da396889e8c510b5729f72bb56",
+  "incoming_integrated_through": "1b58b515ef5fe7cb9d41ff0ce1c06be5861afd92",
+  "hash_basis": "SHA-256 of raw LF repository file bytes, not JSON-normalized or semantic output hashes. The manifest does not hash itself.",
+  "artifact_count": 46,
+  "program_count": 12,
+  "explicit_checks_per_complete_normal_run": 41008,
+  "scope": "The theorem notes contain analytic proofs; computations check identities, declared finite universes, and hostile/positive controls. Finite checks alone are not claimed to establish the universal results. LRC(14), general actual Laurent all-channel separation, general two-anchor finite-phase negativity and globally optimal stability moduli remain open.",
+  "mutable_navigation": "05-knowledge/results/long_frontier_sep06_board.md",
+  "incoming_manifest": "05-knowledge/results/continuing3_20260906_manifest.json",
+  "programs": [
+    {
+      "source": "04-computation/long_frontier_sep06_allh.py",
+      "frozen_output": "05-knowledge/results/long_frontier_sep06_allh.out",
+      "audit": "05-knowledge/results/long_frontier_sep06_allh_audit.md",
+      "explicit_checks": 142,
+      "reproduce": "python3 04-computation/long_frontier_sep06_allh.py",
+      "optimized_reproduce": "python3 -O 04-computation/long_frontier_sep06_allh.py",
+      "validation": "Normal and optimized outputs match the frozen output; independently replayed and analytically audited as recorded in the linked audit."
+    },
+    {
+      "source": "04-computation/long_frontier_sep06_anchor.py",
+      "frozen_output": "05-knowledge/results/long_frontier_sep06_anchor.out",
+      "audit": "05-knowledge/results/long_frontier_sep06_anchor_audit.md",
+      "explicit_checks": 106,
+      "reproduce": "python3 04-computation/long_frontier_sep06_anchor.py",
+      "optimized_reproduce": "python3 -O 04-computation/long_frontier_sep06_anchor.py",
+      "validation": "Normal and optimized outputs match the frozen output; independently replayed and analytically audited as recorded in the linked audit."
+    },
+    {
+      "source": "04-computation/long_frontier_sep06_anchor_audit.py",
+      "frozen_output": "05-knowledge/results/long_frontier_sep06_anchor_audit.out",
+      "audit": "05-knowledge/results/long_frontier_sep06_anchor_audit.md",
+      "explicit_checks": 28,
+      "reproduce": "python3 04-computation/long_frontier_sep06_anchor_audit.py",
+      "optimized_reproduce": "python3 -O 04-computation/long_frontier_sep06_anchor_audit.py",
+      "validation": "Normal and optimized outputs match the frozen output; independently replayed and analytically audited as recorded in the linked audit."
+    },
+    {
+      "source": "04-computation/long_frontier_sep06_dimension.py",
+      "frozen_output": "05-knowledge/results/long_frontier_sep06_dimension.out",
+      "audit": "05-knowledge/results/long_frontier_sep06_dimension_audit.md",
+      "explicit_checks": 117,
+      "reproduce": "python3 04-computation/long_frontier_sep06_dimension.py",
+      "optimized_reproduce": "python3 -O 04-computation/long_frontier_sep06_dimension.py",
+      "validation": "Normal and optimized outputs match the frozen output; independently replayed and analytically audited as recorded in the linked audit."
+    },
+    {
+      "source": "04-computation/long_frontier_sep06_endpoint39.py",
+      "frozen_output": "05-knowledge/results/long_frontier_sep06_endpoint39.out",
+      "audit": "05-knowledge/results/long_frontier_sep06_endpoint39_audit.md",
+      "explicit_checks": 421,
+      "reproduce": "python3 04-computation/long_frontier_sep06_endpoint39.py",
+      "optimized_reproduce": "python3 -O 04-computation/long_frontier_sep06_endpoint39.py",
+      "validation": "Normal and optimized outputs match the frozen output; independently replayed and analytically audited as recorded in the linked audit."
+    },
+    {
+      "source": "04-computation/long_frontier_sep06_endpoint39_audit.py",
+      "frozen_output": "05-knowledge/results/long_frontier_sep06_endpoint39_audit.out",
+      "audit": "05-knowledge/results/long_frontier_sep06_endpoint39_audit.md",
+      "explicit_checks": 744,
+      "reproduce": "python3 04-computation/long_frontier_sep06_endpoint39_audit.py",
+      "optimized_reproduce": "python3 -O 04-computation/long_frontier_sep06_endpoint39_audit.py",
+      "validation": "Normal and optimized outputs match the frozen output; independently replayed and analytically audited as recorded in the linked audit."
+    },
+    {
+      "source": "04-computation/long_frontier_sep06_fibre_domain.py",
+      "frozen_output": "05-knowledge/results/long_frontier_sep06_fibre_domain.out",
+      "audit": "05-knowledge/results/long_frontier_sep06_fibre_domain_audit.md",
+      "explicit_checks": 42,
+      "reproduce": "python3 04-computation/long_frontier_sep06_fibre_domain.py",
+      "optimized_reproduce": "python3 -O 04-computation/long_frontier_sep06_fibre_domain.py",
+      "validation": "Normal and optimized outputs match the frozen output; independently replayed and analytically audited as recorded in the linked audit."
+    },
+    {
+      "source": "04-computation/long_frontier_sep06_finite_dimension.py",
+      "frozen_output": "05-knowledge/results/long_frontier_sep06_finite_dimension.out",
+      "audit": "05-knowledge/results/long_frontier_sep06_finite_dimension_audit.md",
+      "explicit_checks": 445,
+      "reproduce": "python3 04-computation/long_frontier_sep06_finite_dimension.py",
+      "optimized_reproduce": "python3 -O 04-computation/long_frontier_sep06_finite_dimension.py",
+      "validation": "Normal and optimized outputs match the frozen output; independently replayed and analytically audited as recorded in the linked audit."
+    },
+    {
+      "source": "04-computation/long_frontier_sep06_local_modulus.py",
+      "frozen_output": "05-knowledge/results/long_frontier_sep06_local_modulus.out",
+      "audit": "05-knowledge/results/long_frontier_sep06_local_modulus_audit.md",
+      "explicit_checks": 15,
+      "reproduce": "python3 04-computation/long_frontier_sep06_local_modulus.py",
+      "optimized_reproduce": "python3 -O 04-computation/long_frontier_sep06_local_modulus.py",
+      "validation": "Normal and optimized outputs match the frozen output; independently replayed and analytically audited as recorded in the linked audit."
+    },
+    {
+      "source": "04-computation/long_frontier_sep06_minimizers.py",
+      "frozen_output": "05-knowledge/results/long_frontier_sep06_minimizers.out",
+      "audit": "05-knowledge/results/long_frontier_sep06_minimizers_audit.md",
+      "explicit_checks": 91,
+      "reproduce": "python3 04-computation/long_frontier_sep06_minimizers.py",
+      "optimized_reproduce": "python3 -O 04-computation/long_frontier_sep06_minimizers.py",
+      "validation": "Normal and optimized outputs match the frozen output; independently replayed and analytically audited as recorded in the linked audit."
+    },
+    {
+      "source": "04-computation/long_frontier_sep06_phase.py",
+      "frozen_output": "05-knowledge/results/long_frontier_sep06_phase.out",
+      "audit": "05-knowledge/results/long_frontier_sep06_phase_audit.md",
+      "explicit_checks": 38683,
+      "reproduce": "python3 04-computation/long_frontier_sep06_phase.py",
+      "optimized_reproduce": "python3 -O 04-computation/long_frontier_sep06_phase.py",
+      "validation": "Normal and optimized outputs match the frozen output; independently replayed and analytically audited as recorded in the linked audit."
+    },
+    {
+      "source": "04-computation/long_frontier_sep06_residue_tail.py",
+      "frozen_output": "05-knowledge/results/long_frontier_sep06_residue_tail.out",
+      "audit": "05-knowledge/results/long_frontier_sep06_residue_tail_audit.md",
+      "explicit_checks": 174,
+      "reproduce": "python3 04-computation/long_frontier_sep06_residue_tail.py",
+      "optimized_reproduce": "python3 -O 04-computation/long_frontier_sep06_residue_tail.py",
+      "validation": "Normal and optimized outputs match the frozen output; independently replayed and analytically audited as recorded in the linked audit."
+    }
+  ],
+  "artifacts": [
+    {
+      "path": "01-canon/theorems/THM-4455-three-atom-minimizing-sequence-rigidity.md",
+      "bytes": 3601,
+      "sha256": "236861673c1639aa5a6457c2f7292808e7d172d63b44c6a121590593c0a50318"
+    },
+    {
+      "path": "01-canon/theorems/THM-4456-sharp-finite-length-signed-root-stability-asymptotics.md",
+      "bytes": 3439,
+      "sha256": "e08093d87b4e83aac0bd724688c9b4ba693c0e963941ab0d9dba83f5d220e0c8"
+    },
+    {
+      "path": "04-computation/long_frontier_sep06_allh.py",
+      "bytes": 9429,
+      "sha256": "7cc83c7518c27e70db33936809e119a315dc16e1ceb9573ea40bce939d42b1ad"
+    },
+    {
+      "path": "04-computation/long_frontier_sep06_anchor.py",
+      "bytes": 11244,
+      "sha256": "8b1fb8a11a86df1f82a1e54552913b35d2d7bd7b9b4a38cb3c843531dc6db8ff"
+    },
+    {
+      "path": "04-computation/long_frontier_sep06_anchor_audit.py",
+      "bytes": 4354,
+      "sha256": "6934a68c347b21af11a0f448ecb5d91e63786e1c795c300fde129584775309c2"
+    },
+    {
+      "path": "04-computation/long_frontier_sep06_dimension.py",
+      "bytes": 8006,
+      "sha256": "badb2489aeb8e4a27a0e5b61c203323dfb988be693488637056a1f9f3c19e667"
+    },
+    {
+      "path": "04-computation/long_frontier_sep06_endpoint39.py",
+      "bytes": 8147,
+      "sha256": "a92bab693c728ab98257f20842d53eafd33faef0cd8023c35633b143d07e1c9f"
+    },
+    {
+      "path": "04-computation/long_frontier_sep06_endpoint39_audit.py",
+      "bytes": 4126,
+      "sha256": "70d54aed3f47800b2e110f834f1b6c4ef45be8b14eb4bbbf8b4cf9a1fdb49622"
+    },
+    {
+      "path": "04-computation/long_frontier_sep06_fibre_domain.py",
+      "bytes": 3992,
+      "sha256": "dacdf6a3323cce90e14002a03bcbd87b105790717fdf243db754c06ef1b93f29"
+    },
+    {
+      "path": "04-computation/long_frontier_sep06_finite_dimension.py",
+      "bytes": 5751,
+      "sha256": "bc3ba159919527741e8b7439823759f13575916549ecdb666b9667f9fb5054f1"
+    },
+    {
+      "path": "04-computation/long_frontier_sep06_local_modulus.py",
+      "bytes": 2654,
+      "sha256": "4757c9d537a3d73ad3093fd94a695fc32eb915264e2b93dcb3c5a3e1e5033366"
+    },
+    {
+      "path": "04-computation/long_frontier_sep06_minimizers.py",
+      "bytes": 4927,
+      "sha256": "6d3be5780138c24f58312733270981d3375eae93b9281b26710529bf955dc7cd"
+    },
+    {
+      "path": "04-computation/long_frontier_sep06_phase.py",
+      "bytes": 10306,
+      "sha256": "51b8acf006ea19cac1804d06758b24045b0cff0f4b4598c459e032250bbcbe43"
+    },
+    {
+      "path": "04-computation/long_frontier_sep06_residue_tail.py",
+      "bytes": 11332,
+      "sha256": "a89ede31236a8caeaace4e89e7aa8c47efffc97a417944bf3badf6d54cc46acd"
+    },
+    {
+      "path": "05-knowledge/results/long_frontier_sep06_allh.md",
+      "bytes": 11013,
+      "sha256": "cf872a45d073495d5a3c04d5c9453e3fa73b6c185003fb3dffe80496a8f5d0fa"
+    },
+    {
+      "path": "05-knowledge/results/long_frontier_sep06_allh.out",
+      "bytes": 49730,
+      "sha256": "bb012dd9cf4b00b904d1cf74746e3455dc753db16fb308bd94d67f4e68bdf07e"
+    },
+    {
+      "path": "05-knowledge/results/long_frontier_sep06_allh_audit.md",
+      "bytes": 7028,
+      "sha256": "afa6b8d5f0806821121b4287aabe29771c960e0c98457f883f50b2f215c3588a"
+    },
+    {
+      "path": "05-knowledge/results/long_frontier_sep06_anchor.md",
+      "bytes": 9172,
+      "sha256": "ecc55dd9be122d6ac261a3a722d0d87373cf3f91343e739c1888d6b7fd61051b"
+    },
+    {
+      "path": "05-knowledge/results/long_frontier_sep06_anchor.out",
+      "bytes": 1874,
+      "sha256": "a851496e1fdb59ffa0fd38376c44140a32477b4638b84d0a1eee8c35ad0968ca"
+    },
+    {
+      "path": "05-knowledge/results/long_frontier_sep06_anchor_audit.md",
+      "bytes": 4142,
+      "sha256": "267f0cecd3ee5f24a194b1986cb8af657057452412a3ff434e3eb3c8dde84942"
+    },
+    {
+      "path": "05-knowledge/results/long_frontier_sep06_anchor_audit.out",
+      "bytes": 484,
+      "sha256": "2ad110db23aa09a06dfe657138211511391ae748c73e3fbe13b56056358d3b8d"
+    },
+    {
+      "path": "05-knowledge/results/long_frontier_sep06_dimension.md",
+      "bytes": 11586,
+      "sha256": "c5055ee6e2378dee10c3bc820f72376bc56e266072d93852c399be201d94050a"
+    },
+    {
+      "path": "05-knowledge/results/long_frontier_sep06_dimension.out",
+      "bytes": 2301,
+      "sha256": "d2e72609bb6b248bed6d721e75e0a2b0350316b046cd6bed5ad06ddae8973e30"
+    },
+    {
+      "path": "05-knowledge/results/long_frontier_sep06_dimension_audit.md",
+      "bytes": 6787,
+      "sha256": "8111009f0c8788d8f2afba3a347c9f92b61ff41bb7775302712acb1c60809569"
+    },
+    {
+      "path": "05-knowledge/results/long_frontier_sep06_endpoint39.md",
+      "bytes": 11598,
+      "sha256": "1bdc1fc79b4bafc12293c092c6ec2af2c576d961f9383b0619ad8e69e7d1d935"
+    },
+    {
+      "path": "05-knowledge/results/long_frontier_sep06_endpoint39.out",
+      "bytes": 34206,
+      "sha256": "4c686cea98965eb7b4ea785f87a73592dc959ec6d19f47ebc6ad7e7dd0c5a5bb"
+    },
+    {
+      "path": "05-knowledge/results/long_frontier_sep06_endpoint39_audit.md",
+      "bytes": 4334,
+      "sha256": "5f21411404c695abe7fa6296991d553dc07051e71ecff248312ef006efa44714"
+    },
+    {
+      "path": "05-knowledge/results/long_frontier_sep06_endpoint39_audit.out",
+      "bytes": 583,
+      "sha256": "28eb66a2361d52b7bfcdacd857cf4ac6fbf0878bc04a279c784f52bca019cdfb"
+    },
+    {
+      "path": "05-knowledge/results/long_frontier_sep06_fibre_domain.md",
+      "bytes": 10802,
+      "sha256": "b3b85cfa3d11a8aed4d838c0b64409def889bc00ca7f5b53161f3bc88c81e226"
+    },
+    {
+      "path": "05-knowledge/results/long_frontier_sep06_fibre_domain.out",
+      "bytes": 1331,
+      "sha256": "41d5f6db13170eac6926051272ad429326e0b3e0ce8fb9c70ac5ec62d828e6bf"
+    },
+    {
+      "path": "05-knowledge/results/long_frontier_sep06_fibre_domain_audit.md",
+      "bytes": 5006,
+      "sha256": "83a5f2712101d27df57814ae67e26e820888385ec3fec1217729636732f6931a"
+    },
+    {
+      "path": "05-knowledge/results/long_frontier_sep06_finite_dimension.md",
+      "bytes": 7660,
+      "sha256": "85f35c992bced4c548f00f3e8d535943507fb072fd07257b0936756b86233f9a"
+    },
+    {
+      "path": "05-knowledge/results/long_frontier_sep06_finite_dimension.out",
+      "bytes": 6746,
+      "sha256": "490e74d700b33019a726f75e78b3672aff13b1e3ecc4737cfe22f83583d9d024"
+    },
+    {
+      "path": "05-knowledge/results/long_frontier_sep06_finite_dimension_audit.md",
+      "bytes": 4562,
+      "sha256": "43e59eb50556b4862764b6502e71c02181b28443d2f8549fe6db94182fd6d7af"
+    },
+    {
+      "path": "05-knowledge/results/long_frontier_sep06_local_modulus.md",
+      "bytes": 6354,
+      "sha256": "27e0797f15e449144a932f60f669e7c1e90486aca0aebfd3b270af40af375c14"
+    },
+    {
+      "path": "05-knowledge/results/long_frontier_sep06_local_modulus.out",
+      "bytes": 510,
+      "sha256": "4ada2b28cb6d07de820419b5f65c5b2bc6da863eb1a4c5086345713cfd793206"
+    },
+    {
+      "path": "05-knowledge/results/long_frontier_sep06_local_modulus_audit.md",
+      "bytes": 7275,
+      "sha256": "5fec7c6b6d82ae4e787ebc76c659445dd0dd9b2e3ea1d0458de425f53571ffdb"
+    },
+    {
+      "path": "05-knowledge/results/long_frontier_sep06_minimizers.md",
+      "bytes": 10993,
+      "sha256": "b9ff08bfffd7c4a15c7aabddffda440e36afdd526cc6e2bb2aa9eb647b1d027b"
+    },
+    {
+      "path": "05-knowledge/results/long_frontier_sep06_minimizers.out",
+      "bytes": 653,
+      "sha256": "19d6c54228a78db3b7231e30e9d6897bdc9a71ba904dd5159b9c861ab2040b20"
+    },
+    {
+      "path": "05-knowledge/results/long_frontier_sep06_minimizers_audit.md",
+      "bytes": 7143,
+      "sha256": "302abf7f4c38a93046887d00c8117d48800bd8cc293972de94b6ac6cc73536e3"
+    },
+    {
+      "path": "05-knowledge/results/long_frontier_sep06_phase.md",
+      "bytes": 14404,
+      "sha256": "316447212dfca27565610b71f70939ddd17cef5434f9c82d56fb24a0d9393e27"
+    },
+    {
+      "path": "05-knowledge/results/long_frontier_sep06_phase.out",
+      "bytes": 2012,
+      "sha256": "c3a77805e6b9d240c93df8c0904295dcfb81c5f77a5244a5d0697363fb6c1191"
+    },
+    {
+      "path": "05-knowledge/results/long_frontier_sep06_phase_audit.md",
+      "bytes": 7643,
+      "sha256": "b98bc17a92a3991e764b42f2808336df99b67bcf1f09d43dafb207cc43b55ca3"
+    },
+    {
+      "path": "05-knowledge/results/long_frontier_sep06_residue_tail.md",
+      "bytes": 11993,
+      "sha256": "106a26e75b458a9abf76ea82e9e9aa14af4647fb95e37cd257b3f142762cfba9"
+    },
+    {
+      "path": "05-knowledge/results/long_frontier_sep06_residue_tail.out",
+      "bytes": 3286,
+      "sha256": "859a7b8a9d6610c45656ebff8b436bfe96a520df43a56325c9db048ed46a08ac"
+    },
+    {
+      "path": "05-knowledge/results/long_frontier_sep06_residue_tail_audit.md",
+      "bytes": 7173,
+      "sha256": "18c23f27e64b8b1f3f7579c9084ec674e9e54006484f968e62368f859b0b469d"
+    }
+  ]
+}

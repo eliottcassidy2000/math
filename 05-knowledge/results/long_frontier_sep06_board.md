@@ -103,7 +103,7 @@ and its frozen evidence remain preserved.
   asymptotically uniform dust in both square norm and first norm.
   Producer117 and full independent audit pass; the reservation is
   promoted. Fixed-N equality and an all-N coefficient inequality do
-  do not follow. The [independently audited finite-length hostile](long_frontier_sep06_finite_dimension.md)
+  not follow. The [independently audited finite-length hostile](long_frontier_sep06_finite_dimension.md)
   refutes N(R-K3)>=C at N4 and5, and finite-N optimality of the equal-three
   family at N4 through7 within the declared controls. N>=6 for the proposed
   coefficient inequality remains open; no global optimizer is claimed.
@@ -178,3 +178,12 @@ new safe scale family does not close arbitrary two-component entries.
 The heartbeat continues this board quietly unless there is substantive
 progress, a correction, completion, failure or required user action. At
 the cutoff, finish and push a coherent checkpoint and pause the heartbeat.
+
+The [frozen checkpoint manifest](long_frontier_sep06_manifest.json) pins
+46 proof, source, output and audit artifacts, including THM-4455 and
+THM-4456. Its12 programs contain41008 explicit exact checks per complete
+normal run; each has matching normal, optimized and frozen output, as
+recorded in the independent audits. The manifest excludes this evolving
+board and incoming artifacts, which have their own manifest. Incoming
+commits through1b58b515ef are integrated. The rational-rectangle expansion
+above is the next unstarted experiment, not a claimed result.

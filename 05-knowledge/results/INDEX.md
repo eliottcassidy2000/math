@@ -28,6 +28,12 @@
   and [exact coefficient domains](long_frontier_sep06_fibre_domain.md)
   close every nonnegative-root shape in that model fibre, without an
   interlacer assumption; they do not identify every shape with an actual row.
+  [Sharp local moduli](long_frontier_sep06_local_modulus.md) connect distance
+  and moment residual with exact asymptotic constants. The
+  [all-channel method hostile](long_frontier_sep06_allh.md) and
+  [finite-length hostile](long_frontier_sep06_finite_dimension.md) delimit
+  two tempting extrapolations. The [46-artifact manifest](long_frontier_sep06_manifest.json)
+  pins the proofs, independent audits and12 exact programs.
   LRC14 and general Laurent two-rung separation remain OPEN.
 - [Extended third-session portfolio](third_20260906_board.md): **PROVED + INDEPENDENTLY AUDITED** first milestones.
   [Balanced grids](third_20260906_grid.md) force the six-component scale below97,097 in a hypothetical failure;
