@@ -52,8 +52,9 @@ gives square sum `<=195`; THM-4019 refutes its sharp arbitrary-lattice target.
   THM-4450 sharpens odd-3-unit one-even entry to `124/693` and retains complete component addresses.
   THM-4451 gives sharp strict physical component caps `17/693,19/1001`
   (quotient `34/693,38/1001`) and repairs an a.e.-topology near miss.
+  THM-4452 gives the colored one-v2 clock-four cap `1/110` and direct odd-3-unit original-body component entry `2/55`.
   THM-4442/4446 force gcd-one packs above `91^6`; hostiles refute prescribed-component
-  selection. No universal body mass/component floor reaches them; entry remains open.
+  selection. No universal body mass/component floor reaches these gates; entry remains open.
 - **Transport/incidence:** [overnight synthesis](../05-knowledge/results/overnight_20260906_synthesis.md)
   retains cap/event refinements; [virtual walls](../05-knowledge/results/overnight9_20260906_lrc_virtual_pair_wall_margin.md)
   give sharp fibre margin `abs(||dy||-1/3)/2`. [Actual unit-core entry](../05-knowledge/results/overnight11_20260906_lrc_unit_component.md) closes its rank-eleven subclass.

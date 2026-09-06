@@ -70,6 +70,11 @@
   response. The actual composition recurrence and same-zero margin remain
   live; general actual doubled-row noncancellation is OPEN.
 
+- [THM-4452: colored one-v2 clock-four component caps](../../01-canon/theorems/THM-4452-lrc14-clock-four-one-v2-strict-component-width-caps.md):
+  **PROVED + FINITE-EXACT + INDEPENDENTLY AUDITED; LRC(14) OPEN.**
+  Colored sheet saturation gives the universal bound
+  `min(1/(14r),1/(7 max(a,b)))`; sharp caps are `1/98` and `1/110`, yielding
+  quotient body-component gates `2/49` and `2/55`.
 - [THM-4451: strict clock-two component-width caps](../../01-canon/theorems/THM-4451-lrc14-dyadic-three-tail-strict-component-width-caps.md):
   **PROVED + FINITE-EXACT + INDEPENDENTLY AUDITED; LRC(14) OPEN.**
   Physical failure components have sharp widths `17/693` for odd triples and

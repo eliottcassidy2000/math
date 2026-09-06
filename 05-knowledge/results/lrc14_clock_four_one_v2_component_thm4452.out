@@ -1,0 +1,7 @@
+Q4_ONE_V2_COMPONENT_ALL_HEIGHT_AUDIT
+status=PROVED_ANALYTIC_REDUCTION_PLUS_EXACT_RATIONAL_BOX
+all_odd_box_rows=84;max=1/98;equality=[(5, 3, 7), (3, 7, 13), (1, 7, 9)]
+odd_3unit_box_rows=30;max=1/110;equality=[(5, 1, 11)]
+q4_quotient_caps=2/49,2/55
+q2_quotient_caps=34/693,38/1001
+PASS

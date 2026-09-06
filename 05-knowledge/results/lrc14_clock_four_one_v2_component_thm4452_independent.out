@@ -1,0 +1,14 @@
+all odd
+  rows 84 target 1/98 maximum 1/98
+  equality [(1, (7, 9)), (3, (7, 13)), (5, (3, 7))]
+  runner_up 1/105
+  equality_widths (1, (7, 9)) [Fraction(1, 98), Fraction(1, 98), Fraction(1, 98), Fraction(1, 98), Fraction(1, 98), Fraction(1, 98), Fraction(1, 98), Fraction(1, 98)] [Fraction(2, 49), Fraction(2, 49)]
+  equality_widths (3, (7, 13)) [Fraction(1, 98), Fraction(1, 98), Fraction(1, 98), Fraction(1, 98), Fraction(1, 98), Fraction(1, 98), Fraction(1, 98), Fraction(1, 98)] [Fraction(2, 49), Fraction(2, 49)]
+  equality_widths (5, (3, 7)) [Fraction(1, 98), Fraction(1, 98), Fraction(1, 98), Fraction(1, 98), Fraction(1, 98), Fraction(1, 98), Fraction(1, 98), Fraction(1, 98)] [Fraction(2, 49), Fraction(2, 49)]
+odd 3-unit
+  rows 30 target 1/110 maximum 1/110
+  equality [(5, (1, 11))]
+  runner_up 17/2002
+  equality_widths (5, (1, 11)) [Fraction(1, 110), Fraction(1, 110), Fraction(1, 110), Fraction(1, 110), Fraction(1, 110), Fraction(1, 110), Fraction(1, 110), Fraction(1, 110)] [Fraction(2, 55), Fraction(2, 55)]
+row_value_sha256 c89171e8804cc822d3c896c8fd5bc4088aa429a97167e304f8e5109a494a8a83
+PASS
