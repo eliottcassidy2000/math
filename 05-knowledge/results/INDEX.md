@@ -1,5 +1,11 @@
 # Script Results Index
 
+- [THM-4444: signed `(1,1,2)` sharp one-ray classification](../../01-canon/theorems/THM-4444-lrc14-signed-112-sharp-one-ray-classification.md):
+  **PROVED ELEMENTARY RELATIVE TO THM-4414 + FINITE-EXACT + INDEPENDENTLY
+  AUDITED; LRC(14) OPEN.** Here `min E=physical mass`; only `(2,11,20)` is
+  above `6/77`, and only `(1,5,11)` equals it. All 28,438 rows through height
+  611 and the analytic tail are independently replayed.
+
 - [THM-4442: bounded ten-body parity-free scale-three completion](../../01-canon/theorems/THM-4442-lrc14-bounded-ten-body-parity-free-scale-three-completion.md):
   **PROVED ELEMENTARY + FINITE-EXACT + INDEPENDENTLY AUDITED; LRC(14)
   OPEN.** Every ten-subset of `[13]` accepts every distinct ternary-unit tail
@@ -22,6 +28,7 @@
   individual coordinates attain equality, beginning at `(7,16,22)`; the
   referee caught this boundary and repaired the proposed all-strict wording.
   The synthesis below closes the low circuits; actual body-phase entry remains open.
+  Subsequent THM-4441/4444 classify `(1,2,2)/(1,1,2)`; additive entry remains.
 
 - [Unbounded three-channel Laurent return family](trinomial_width15_empty_core_returns_sep06.md):
   **PROVED ANALYTICALLY + FINITE-EXACT + INDEPENDENTLY AUDITED.** For

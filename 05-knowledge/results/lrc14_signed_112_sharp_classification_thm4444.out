@@ -1,0 +1,13 @@
+normalized_sign_directions 12 viable_sorted_cones [(1, -2, 1), (1, 2, -1), (2, 1, -1)]
+H611_rows 28438 counts_F1_F2_F3 {1: 9482, 3: 4742, 2: 14214}
+H68_rows 361 counts_F1_F2_F3 {1: 121, 3: 61, 2: 179}
+family 1 sharp (Fraction(58, 833), [((5, 7, 17), (Fraction(58, 833), Fraction(12, 119), Fraction(346, 4165)), (1, 2))])
+family 2 sharp (Fraction(11, 140), [((2, 11, 20), (Fraction(131, 1540), Fraction(11, 140), Fraction(3, 35)), (1, 2))])
+family 3 sharp (Fraction(6, 77), [((1, 5, 11), (Fraction(6, 77), Fraction(6, 77), Fraction(6, 77)), (1,))])
+global_sharp 11/140 unique_at (2, 11, 20)
+target_6_over_77_failures [((2, 11, 20), Fraction(11, 140))]
+target_6_over_77_equalities [((1, 5, 11), Fraction(6, 77))]
+selected_and_physical_continuum_integral 9/196
+deleted_third_tail 3/49 + 4/(7c) crossing_heights_F1_F2_F3 (68, Fraction(560, 17), Fraction(308, 9))
+explicit_checks 3938072
+PASS

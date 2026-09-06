@@ -12,7 +12,7 @@ source: root component-address continuation + independent referee, 2026-09-06
 depends_on: []
 related:
   - THM-737-pack-clock-sampling-measure-dispatch
-  - THM-3818-scaled-inert-cube-classes-recover-support-two-pair-packet
+  - THM-3818-scaled-inert-cubeclass-support-two-pair-packet
   - THM-4437-lrc14-all-parity-network-reduction-to-three-low-circuits
 geometry_script: 04-computation/lrc14_bounded_ten_body_geometry_thm4442.py
 geometry_script_sha256: b03fd618d24faaf7edc1ec6e901cabcd4739886be6f472c61ba4a2f2baf7d0a5
@@ -148,7 +148,7 @@ bodies at the clock where the uniform counting bound has no margin.
 It does not prove that an arbitrary unresolved LRC(14) row enters a form
 \(3C\cup T\) with \(C\subseteq[13]\), nor resolve the owner/arrival and
 crossing-height obligations retained by
-[THM-3818](THM-3818-scaled-inert-cube-classes-recover-support-two-pair-packet.md).
+[THM-3818](THM-3818-scaled-inert-cubeclass-support-two-pair-packet.md).
 This is a local consumer after bounded entry, not entry itself.
 
 ## 6. Reproduction

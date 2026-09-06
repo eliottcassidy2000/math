@@ -6,13 +6,14 @@ status: >
   AUDITED. Every primitive sorted distinct positive ternary-unit triple with
   a signed coefficient-magnitude (1,2,2) relation satisfies sharp
   min_i E_i<=46/665 and physical failure mass<=51/770. Both are below 6/77.
-  Concurrent synthesis closes (1,1,1) and (1,1,2); entry, synchronization,
-  and LRC(14) remain open.
+  THM-4444 and the linked synthesis classify the lower circuits; entry,
+  synchronization, and LRC(14) remain open.
 source: root low-circuit continuation + independent referee, 2026-09-06
 depends_on:
   - THM-4414-lrc14-six-separated-contact-capacity-collapse
 related:
   - THM-4437-lrc14-all-parity-network-reduction-to-three-low-circuits
+  - THM-4444-lrc14-signed-112-sharp-one-ray-classification
 primary_script: 04-computation/lrc14_signed_122_sharp_ray_closure_thm4441.py
 primary_output: 05-knowledge/results/lrc14_signed_122_sharp_ray_closure_thm4441.out
 primary_script_sha256: ebc145f97c57a040027be964ded10972911759a1ab6027ea7a32eb6d9c31403b
@@ -34,7 +35,7 @@ hash_basis: raw LF repository bytes
 **PROVED ELEMENTARY RELATIVE TO THM-4414 + FINITE-EXACT + INDEPENDENTLY
 AUDITED.** The norm-five signed circuit is not an actual `6/77` hostile.
 The concurrent [parity-free closure and exact threshold classification](../../05-knowledge/results/overnight4_20260906_lrc_parityfree_native.md#5-combined-nonadditive-ceiling-and-exact-old-threshold-classification)
-also closes the two lower circuit families and combines them with this theorem.
+classifies the lower circuits; THM-4444 gives the sharp `(1,1,2)` theorem.
 Chart entry, synchronization, and `LRC(14)` remain **OPEN**.
 
 ## 1. Sharp statement

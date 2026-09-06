@@ -43,15 +43,14 @@ gives square sum `<=195`; THM-4019 refutes its sharp arbitrary-lattice target.
   ray, parity-sheet and component-count data; none supplies safety or arrival.
 - **Seam/entry:** THM-4326/4329 close the fixed chart; 4330 leaves `2+12`;
   4347 closes height 40. Arbitrary entry and synchronization remain open.
-- **Scale-three local bounds CLOSED; entry OPEN:**
-  [THM-4434](../01-canon/theorems/THM-4434-lrc14-universal-scale-three-network-projection-bound.md)
-  gives odd `6/77`. The [parity-free theorem](../05-knowledge/results/overnight4_20260906_lrc_parityfree_probe.md)
-  gives sharp `min E<=6/55`, equality `(1,10,11)`; [norm four](../05-knowledge/results/overnight4_20260906_lrc_parityfree_native.md)
-  combines with THM-4437/4441 to give sharp nonadditive `11/140` at `(2,11,20)`
-  and classify every `6/77` exceedance: additive except `(1,4,5)`, or `(2,11,20)`.
-  Universal body floors fail; [actual event codes](../05-knowledge/results/overnight4_20260906_lrc_body_event.md)
-  retain residues and the chosen anchor. [THM-4442](../01-canon/theorems/THM-4442-lrc14-bounded-ten-body-parity-free-scale-three-completion.md)
-  closes every tail over ten-bodies in `[13]`; arbitrary entry remains open.
+- **Scale-three local classification CLOSED; entry OPEN:** the [combined theorem](../05-knowledge/results/overnight4_20260906_lrc_parityfree_native.md)
+  gives sharp parity-free `6/55`; [THM-4441](../01-canon/theorems/THM-4441-lrc14-signed-122-sharp-ray-closure.md)
+  removes `(122)`, while [THM-4444](../01-canon/theorems/THM-4444-lrc14-signed-112-sharp-one-ray-classification.md)
+  leaves from `(112)` only hostile `(2,11,20)` and boundary `(1,5,11)`.
+  All additive rows but `(1,4,5)`, plus `(2,11,20)`, exceed `6/77`.
+  [THM-4442](../01-canon/theorems/THM-4442-lrc14-bounded-ten-body-parity-free-scale-three-completion.md)
+  closes bounded ten-bodies; [event codes](../05-knowledge/results/overnight4_20260906_lrc_body_event.md)
+  retain the anchor. Entry remains open.
 - **Transport/incidence:** [overnight synthesis](../05-knowledge/results/overnight_20260906_synthesis.md)
   retains cap, midpoint and owner-line refinements. The
   [sparse proof](../05-knowledge/results/synthesis_20260905_lrc_sparse_transport.md)

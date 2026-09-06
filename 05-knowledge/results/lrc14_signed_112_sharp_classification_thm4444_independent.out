@@ -1,0 +1,9 @@
+INDEPENDENT_LITERAL_SIGNED_112_REFEREE=PASS
+pinned_engine_sha256 b99af309ff6f8643dedf923f5ee8d86d67b32ff2b0d6510209c565820894f399
+directions 12 viable_sorted [(1, -2, 1), (1, 2, -1), (2, 1, -1)]
+H611_rows 28438 family_counts {1: 9482, 2: 14214, 3: 4742}
+family_leaders {1: (Fraction(58, 833), [((5, 7, 17), (Fraction(58, 833), Fraction(12, 119), Fraction(346, 4165)))]), 3: (Fraction(6, 77), [((1, 5, 11), (Fraction(6, 77), Fraction(6, 77), Fraction(6, 77)))]), 2: (Fraction(11, 140), [((2, 11, 20), (Fraction(131, 1540), Fraction(11, 140), Fraction(3, 35)))])}
+above_6_77 [((2, 11, 20), Fraction(11, 140))]
+equal_6_77 [((1, 5, 11), Fraction(6, 77))]
+continuum_selected_integral 9/196 universal_target_tail_height 35
+new_checks 199075 engine_checks 7484368

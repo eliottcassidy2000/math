@@ -7,9 +7,9 @@ status: >
   ternary-unit triple having no signed relation with coefficient magnitudes
   (1,1,1), (1,1,2), or (1,2,2) has every complete network projection at most
   6/77 and its minimum strictly below 6/77. The only individual equalities
-  are named below. This is a local reduction; the linked concurrent
-  synthesis closes the low circuits. Arbitrary entry, synchronization,
-  and LRC(14) remain open.
+  are named below. THM-4441/4444 and the linked synthesis subsequently
+  classify all low circuits. Arbitrary entry, synchronization, and LRC(14)
+  remain open.
 source: root mixed-parity continuation + independent referee, 2026-09-06
 depends_on:
   - THM-4414-lrc14-six-separated-contact-capacity-collapse
@@ -17,6 +17,7 @@ depends_on:
 related:
   - THM-4434-lrc14-universal-scale-three-network-projection-bound
   - THM-4441-lrc14-signed-122-sharp-ray-closure
+  - THM-4444-lrc14-signed-112-sharp-one-ray-classification
 coefficient_script: 04-computation/lrc14_all_parity_coefficient_box_thm4437.py
 coefficient_output: 05-knowledge/results/lrc14_all_parity_coefficient_box_thm4437.out
 coefficient_script_sha256: 36fde3f9e00b094d43927c4a0fd23a723370804649b8748d1171d00297580153
@@ -308,7 +309,8 @@ This theorem isolates the generic mixed-parity obstruction at the three
 lowest signed circuits. [THM-4441](THM-4441-lrc14-signed-122-sharp-ray-closure.md)
 subsequently proves the sharper `min E<=46/665<6/77` on the whole `(1,2,2)`
 family. Only `(1,1,1)` and `(1,1,2)` remain possible local hostiles. The
-additive sharp `6/55` theorem does not restore the old target. Arbitrary
+additive sharp `6/55` theorem does not restore the old target. THM-4444 then
+reduces `(1,1,2)` to hostile `(2,11,20)` and boundary `(1,5,11)`. Arbitrary
 entry, synchronization, and `LRC(14)` remain **OPEN**.
 
 ## 7. Reproduction
