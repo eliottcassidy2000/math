@@ -1,5 +1,16 @@
 # Script Results Index
 
+- [Eighth overnight synthesis](overnight_20260906_synthesis.md):
+  **PROVED + INDEPENDENTLY AUDITED.** [Alpha completion](overnight8_20260906_alpha_completion.md)
+  is uniform in A2 channel count; the coupled beta-skip sign stays OPEN.
+  [Four-jet/Deuring laws](overnight8_20260906_jets_residue.md) give allodd
+  precision, a full p7 residue partition and the prime-order ceiling packet.
+  [Random saturated grids](overnight8_20260906_no3line_diagonal_density.md)
+  have diagonal variance `(40/9)n+O(1)` uniformly in cycle type and
+  `limsup n sup P(no-three-line)<=10`. The [ninth source period](overnight8_20260906_jc_collision_period.md)
+  preserves the J8 obstruction under every contact-preserving O(t9) map.
+  [Manifest](overnight8_20260906_manifest.json): 24 frozen artifacts.
+
 - [Seventh overnight mathematical synthesis](overnight_20260906_synthesis.md):
   **PROVED + INDEPENDENTLY AUDITED.** [Endpoint27](overnight7_20260906_laurent_quartic_carry.md)
   closes the complete five-first-channel carried family; [midpoint identities](overnight7_20260906_laurent_midpoint_transport.md)

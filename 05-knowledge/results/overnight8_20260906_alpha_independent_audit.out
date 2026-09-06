@@ -1,0 +1,4 @@
+Fresh general A2 rows 48 cover B3,5,8,9; both residues; x0 included
+Fresh mixed-product rows [[1, 2, 6, 3], [2, 3, 10, 5], [3, 2, 12, 3], [4, 6, 19, 1], [5, 2, 18, 3], [6, 6, 25, 1], [7, 2, 24, 3], [8, 6, 31, 1]] all rootwise skip signs negative, FINITE-EXACT only
+RECORD_SHA256 81aa72058e04ecff7edb604dc4c6496204a6dcaad710cbd6a5fab7b0d2881787
+PASS_OPTIMIZATION_LIVE_GATES 446

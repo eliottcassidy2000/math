@@ -1,0 +1,13 @@
+MINOR_AUDIT 12804 weight classes; 9 independently interpolated exact polynomials
+LOCAL_SMITH 91 full matrices; own p-integral Gaussian elimination
+literal_sha256 412964b708a5a3a37967900c5290dd6d9ca451ea2804ac3140fd136e59fa8d6a
+DEURING_CONTROL 3 [2]
+DEURING_CONTROL 5 []
+DEURING_CONTROL 7 [2, 4, 6]
+DEURING_CONTROL 11 [2, 6, 10]
+DEURING_CONTROL 13 []
+DEURING_CONTROL 19 [2, 10, 18]
+DEURING_CONTROL 23 [2, 3, 8, 11, 12, 13, 16, 21, 22]
+DEURING_CONTROL 31 [2, 12, 13, 14, 16, 18, 19, 20, 30]
+PACKETS 155 independent polynomial/recursive-series controls; 33 full observer ceiling checks
+PASS 26520 explicit gates; no primary mathematical imports

@@ -541,23 +541,24 @@ new homotopy group, `p=2` statement, or LRC/GMC consequence.
 
 ### Kontorovich — *TV Homogenization Inequalities*
 
-- **Primary / freshness:** [arXiv:2601.04079v3](https://arxiv.org/abs/2601.04079),
-  submitted 2026-01, revised 2026-02. **PREPRINT.**
-- **Imported role:** homogenization (each Bernoulli parameter mapped to the
-  block mean) reduces TV distance up to a universal constant. Lemma 1.4
-  PROVES `delta_N <= 2(delta_I + delta_J)` for a block partition; the
-  product form `delta_N <= delta_I + delta_J - delta_I delta_J` is the
-  paper's stated CONJECTURE ("no pathway" via its methods). The repo PROVES
-  that conjecture's first case (`|I|=|J|=1`, i.e. `n=2`) by an exact
-  positivity certificate, with the equality face characterized — see
-  `05-knowledge/results/tv-fusion-homogenization-lemma-boxeph.md`.
-- **Does not prove:** the product-form conjecture beyond `n=2` (OPEN); any
-  AMM 12592 deadline bound (transfer refuted in the repo note); "rigid face"
-  is repo/user terminology, not the paper's.
-- **Repo consumer:** [THM-3291](../../01-canon/theorems/THM-3291-two-block-tv-homogenization-rigidity.md)
-  proves the `n=2` case from a box constraint plus AM-GM and classifies the
-  equality locus; its 62 nontrivial equality points are boxeph's 351 minus the
-  degenerate faces, an exact two-implementation cross-confirmation.
+- **PREPRINT:** [arXiv:2601.04079v3](https://arxiv.org/abs/2601.04079),
+  Jan2026, revised Feb2026. Replacing Bernoulli parameters by block means
+  reduces TV up to a universal constant. Lemma1.4 proves
+  `delta_N<=2(delta_I+delta_J)`; the stronger
+  `delta_N<=delta_I+delta_J-delta_I*delta_J` is its CONJECTURE.
+- **Repo:** [THM-3291](../../01-canon/theorems/THM-3291-two-block-tv-homogenization-rigidity.md)
+  proves only singleton blocks (`n=2`) by a box constraint and AM-GM.
+  Its 62 nontrivial equality points equal boxeph's351 minus degenerate faces;
+  [the exact certificate](../results/tv-fusion-homogenization-lemma-boxeph.md)
+  independently confirms this. Larger blocks remain OPEN. The AMM12592
+  deadline transfer is refuted there; "rigid face" is repo terminology.
+
+### Auer--Top — Legendre elliptic curves over finite fields
+
+- **CITED:** [primary Section3, pp5--6](https://arxiv.org/pdf/math/0106273#page=5)
+  identifies Deuring roots with supersingular Legendre parameters. The
+  [higher-jet consumer](../results/overnight8_20260906_jets_residue.md)
+  imports only this identification; its precision laws are proved locally.
 
 ### Zhao's GVC in three variables — the supplied object, and its dictionary
 

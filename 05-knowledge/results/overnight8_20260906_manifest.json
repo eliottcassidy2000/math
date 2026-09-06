@@ -1,0 +1,130 @@
+{
+  "schema": 1,
+  "created_utc": "2026-09-06T10:07:40.586889+00:00",
+  "baseline_commit": "10828c7be",
+  "incoming_review_commit": "e0fb6554d",
+  "hash_basis": "raw LF bytes; self and maintained synthesis excluded",
+  "scope": "Proved all-A2 completed-alpha negative response and coupled beta-skip reduction (remaining sign OPEN); all-odd four-jet precision, full p7 equilateral partition and prime-order Deuring ceiling packet; uniform random saturated-grid diagonal mean/variance and O(1/n) zero-event upper bound; collision-preserving ninth-source wedge-period invariance. Independent analytic and exact audits; no global conjecture closure.",
+  "artifacts": [
+    {
+      "path": "04-computation/overnight8_20260906_alpha_completion.py",
+      "bytes": 6685,
+      "sha256": "f98fa964b8a39177051c85de33c59c45987a4d71817f31d7ccc7f8f367cbe300"
+    },
+    {
+      "path": "04-computation/overnight8_20260906_alpha_independent_audit.py",
+      "bytes": 4339,
+      "sha256": "d8a2f6d927c2127318e13b9d541c1e914a3b152b654bab66b53f15c71392a95c"
+    },
+    {
+      "path": "04-computation/overnight8_20260906_jc_collision_period.py",
+      "bytes": 5431,
+      "sha256": "a7295b4fe6b4053b5cd71678acd0bc73d8df53107bba0bc699c5c78b0d4cac42"
+    },
+    {
+      "path": "04-computation/overnight8_20260906_jc_collision_period_audit.py",
+      "bytes": 12313,
+      "sha256": "01600a2c46790da5716a71017202e05181add970fdab598eae76e354c0bc96c4"
+    },
+    {
+      "path": "04-computation/overnight8_20260906_jets_independent_audit.py",
+      "bytes": 9772,
+      "sha256": "4e3d99d9ef917ca5026a4348e71058471e54ee20ff8af91a19a5ffb026197ca1"
+    },
+    {
+      "path": "04-computation/overnight8_20260906_jets_residue.py",
+      "bytes": 13800,
+      "sha256": "102225c5476d59b3aec02c5b479093d105298000b9411fdb4526f9423efd3b65"
+    },
+    {
+      "path": "04-computation/overnight8_20260906_no3line_diagonal_density.py",
+      "bytes": 14893,
+      "sha256": "ead04c2f82c7c77a4f94c5b2ca379c7cc56dcdb37e252f4276a3826b2972c200"
+    },
+    {
+      "path": "04-computation/overnight8_20260906_no3line_independent_audit.py",
+      "bytes": 7759,
+      "sha256": "563739706a1e5aa3dcdbd06112f713e167947eb6886c80ed3198d97d6d2807cf"
+    },
+    {
+      "path": "05-knowledge/results/overnight8_20260906_alpha_completion.md",
+      "bytes": 13063,
+      "sha256": "a548622d93ec60aa9ba32e48ed0ee999895222c04c9c91a8bceaf14926c53d5b"
+    },
+    {
+      "path": "05-knowledge/results/overnight8_20260906_alpha_completion.out",
+      "bytes": 988,
+      "sha256": "dd632e05fa7130a1dd82bfac3676d3619984e921e95c52315a8f5ee5dea6c6b0"
+    },
+    {
+      "path": "05-knowledge/results/overnight8_20260906_alpha_independent_audit.md",
+      "bytes": 5949,
+      "sha256": "76f71b533c5e8f8354d9cfbb5bdeb361282d3b509597b502bd84711df3f30eca"
+    },
+    {
+      "path": "05-knowledge/results/overnight8_20260906_alpha_independent_audit.out",
+      "bytes": 377,
+      "sha256": "88c85e6acd003311f1ea61c2d7126be2355501d0bf410c447e0b86eaba81ee35"
+    },
+    {
+      "path": "05-knowledge/results/overnight8_20260906_jc_collision_period.md",
+      "bytes": 12551,
+      "sha256": "49b7eec3ac05df948249610019f71261dee0edfb0cd2023aac911dca82cdebbe"
+    },
+    {
+      "path": "05-knowledge/results/overnight8_20260906_jc_collision_period.out",
+      "bytes": 393,
+      "sha256": "b267f206667e1bc7104a864eabf3c4f02dd1828e1c9f2919096180bcfd755d47"
+    },
+    {
+      "path": "05-knowledge/results/overnight8_20260906_jc_collision_period_audit.md",
+      "bytes": 9426,
+      "sha256": "1876e9d5d30f054fbf50541f4624af7450f031eb13673bd97dd2c28228d843a7"
+    },
+    {
+      "path": "05-knowledge/results/overnight8_20260906_jc_collision_period_audit.out",
+      "bytes": 875,
+      "sha256": "24893fd9f63d3788dab4ed677e8846a0593a423773fee2d324a8fd24a05fec18"
+    },
+    {
+      "path": "05-knowledge/results/overnight8_20260906_jets_independent_audit.md",
+      "bytes": 9768,
+      "sha256": "a99c66c48a87deb0aba08ffa681ae424ea7dcc55fcdd19430d6b3f6934e07114"
+    },
+    {
+      "path": "05-knowledge/results/overnight8_20260906_jets_independent_audit.out",
+      "bytes": 642,
+      "sha256": "a32847a7def96f074895538bbc4cffc6af908eb975481871c9a41955f9e60efa"
+    },
+    {
+      "path": "05-knowledge/results/overnight8_20260906_jets_residue.md",
+      "bytes": 19291,
+      "sha256": "9f2b0a8563be842e8e3c84b6989e2f99def8d5eacf232ac2a38e416df8ab2159"
+    },
+    {
+      "path": "05-knowledge/results/overnight8_20260906_jets_residue.out",
+      "bytes": 1095,
+      "sha256": "f77f84da627c5c1f33468326baf24cc93c1bcf222028a935a956728f1d878061"
+    },
+    {
+      "path": "05-knowledge/results/overnight8_20260906_no3line_diagonal_density.md",
+      "bytes": 18465,
+      "sha256": "f64f9661c29b79f5adaa976491fb9e2bb88e6452c04dbeb997607b4a989e0b0f"
+    },
+    {
+      "path": "05-knowledge/results/overnight8_20260906_no3line_diagonal_density.out",
+      "bytes": 2196,
+      "sha256": "87e151596665aac1ec36d10f348a9555bc68e981d43ad317cb017bfdb431e553"
+    },
+    {
+      "path": "05-knowledge/results/overnight8_20260906_no3line_independent_audit.md",
+      "bytes": 12151,
+      "sha256": "996095d45d0d7162fffe08ec52401ca8691593fb1aeccea313752051cebf1821"
+    },
+    {
+      "path": "05-knowledge/results/overnight8_20260906_no3line_independent_audit.out",
+      "bytes": 1024,
+      "sha256": "b51ca52a7e37226531eda9cb39746cc73cf02e8386f40fc1d6cc48093a0fe874"
+    }
+  ]
+}

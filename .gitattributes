@@ -22,6 +22,7 @@ scripts/*.ps1 text eol=crlf
 04-computation/overnight5_20260906_*.cpp text eol=lf
 05-knowledge/results/overnight6_20260906_*.json text eol=lf
 05-knowledge/results/overnight7_20260906_*.json text eol=lf
+05-knowledge/results/overnight8_20260906_*.json text eol=lf
 04-computation/ak_strict_saturated_2x3_thm3903/ladder_modular_exhaust.cpp text eol=lf
 04-computation/lrc14_anchored_deletion_cover_thm4160_independent_audit.cpp text eol=lf
 04-computation/lrc14_three_band_wrapped_carrier_odd_tail_transfer_thm4158_independent_cpp_audit.cpp text eol=lf

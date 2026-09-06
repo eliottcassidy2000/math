@@ -1,0 +1,6 @@
+SYMBOLIC normal vectors [(2/3, -2, 0), (0, 4, 0), (-2/3, -2, 0)] weighted wedge zero; all-form converse and single-form hostile PASS
+FRESH_COLLISIONS 449 120 old agreesmodt10 but failsmodt11 [('zero', True), ('constant_graph', True), ('kernel_graph', True), ('split_graph', False), ('reparam_common_w', True), ('split_w', False), ('w_Lzero_but_not_constant', False), ('one_form_hidden_split', False)]
+LITERAL_DENSITIES 449 controls 432 all lower coefficients and three period slots PASS
+FRESH_COLLISIONS 467 169 old agreesmodt10 but failsmodt11 [('zero', True), ('constant_graph', True), ('kernel_graph', True), ('split_graph', False), ('reparam_common_w', True), ('split_w', False), ('w_Lzero_but_not_constant', False), ('one_form_hidden_split', False)]
+LITERAL_DENSITIES 467 controls 432 all lower coefficients and three period slots PASS
+PASS_OPTIMIZATION_LIVE_GATES 1871

@@ -25,6 +25,28 @@ Format per entry:
   for every target two-form. Formal units and earlier source jets are not
   excluded. A t9*x term changes J8 but also has a nonzero collision period;
   an earlier escape must satisfy both consumers.
+- **Eighth repair:** [the ninth-source wedge period](../05-knowledge/results/overnight8_20260906_jc_collision_period.md)
+  now proves that collision-preserving O(t9) maps also retain the old
+  obstruction. Tangential motion vanishes inside a wedge; the tangent
+  relation kills common target motion. Vanishing for every base two-form
+  is equivalent to the ninth collision conditions here. One form is blind:
+  h=x,k=x gives period16A+4B+81C, zero at(A,B,C)=(1,-4,0) despite a split.
+
+## 2026-09-06 overnight -- a union of matching hits is weighted after conditioning
+
+- **Failed shortcut, repaired before promotion:** a single target matching
+  has conditional factorial moments at most2^k. Its K-target union may
+  assign several hits to one column permutation assignment, so replacing
+  two by2K in that bound is invalid.
+- **Exact hostile:** take the same cyclic two-matchings as source and target,
+  fix the row labels, and uniformly permute columns at n7. The second
+  factorial moment is49/3, greater than16. The assignment matrix has
+  diagonal weight2 and neighboring weights1.
+- **Survivor and repair:** individual bounds stay valid. Holder gives
+  `E[A^(sum Y_i)]<=exp(2(A^K-1))`, enough for fixed-K joint Poisson
+  convergence. The [diagonal-density theorem](../05-knowledge/results/overnight8_20260906_no3line_diagonal_density.md)
+  instead proves its uniform variance and O(1/n) zero-event bound from
+  finite colored overlaps; no Poisson independence premise enters it.
 
 ## MISTAKE-547 (2026-09-06, higher-jet hostile probe) -- changing the observer changes its cancellation budget
 

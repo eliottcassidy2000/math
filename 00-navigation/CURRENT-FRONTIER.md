@@ -187,8 +187,8 @@ polynomials, width-linear real-core return and all-mass AP-trinomial
 coprimality, with sharp unbounded-channel examples; general cores stay OPEN.
 [Endpoint27](../05-knowledge/results/overnight7_20260906_laurent_quartic_carry.md)
 detects at `g` or `2g` on `(-27,2g-27,3g-27)`, `g>=14`, `gcd(g,27)=1`.
-[Midpoint identities](../05-knowledge/results/overnight7_20260906_laurent_midpoint_transport.md)
-retain three groups; uniform signs are OPEN.
+[Alpha completion](../05-knowledge/results/overnight8_20260906_alpha_completion.md)
+proves the full A2 parity response negative at the original zero; beta-skip is OPEN.
 
 ## Tournaments
 
@@ -336,6 +336,8 @@ lift/phase clocks.
 
 ## Other active portfolio
 
+- **No-three-line:** [random saturated grids](../05-knowledge/results/overnight8_20260906_no3line_diagonal_density.md)
+  have `Var S=(40/9)n+O(1)` and `limsup n sup P(success)<=10`; extremal asymptotics stay OPEN.
 - **P-adic zeta:** external density claims remain **PREPRINT / UNDER AUDIT**.
   [THM-4255](../01-canon/theorems/THM-4255-specialization-kernel-and-transverse-hasse-jet-repair.md)/[4263](../01-canon/theorems/THM-4263-moving-multigraph-filtered-jet-and-finite-factor-density-transport.md) prove graph/jet kernels, finite-factor UI transport and conditional hazards. MISTAKE-527 forbids chosen-section refutations; the external Cartier steps still need a typed audit.
 - **Matching logic:** THM-4090 gives a two-sort Figure-2 calculus
@@ -354,8 +356,9 @@ lift/phase clocks.
   gives the arbitrary-multiplicity inverse denominator and complete dyadic
   three-node three-jet full Smith law (eight attained symbolic costs);
   metric precision fails at uniform3 and heterogeneous(2,2,1).
-  [Odd-prime uniform3](../05-knowledge/results/overnight7_20260906_oddjets.md)
-  has metric-only factors with primes3/5 corrections.
+  [Higher jets](../05-knowledge/results/overnight8_20260906_jets_residue.md)
+  give allodd four-jet precision and full p7 factors with an AP residue bit;
+  the Deuring packet detects prime-order ceiling saturation.
 - **Even-graph spectrum:** THM-4083 closes `D=3,4`;
   [THM-4416](../01-canon/theorems/THM-4416-even-graph-cumulative-d5-d6-spectral-gap.md)
   closes `D=5,6`; [THM-4427](../01-canon/theorems/THM-4427-all-cumulative-signed-cycle-gaps-by-transposition-rigidity.md)
@@ -407,9 +410,9 @@ lift/phase clocks.
   THM-4404/4411/4412 give the fixed-`x` descended-form gap, collision period,
   and non-descended suspension. THM-4421's integral `2Z minus 6Z` gap is
   nongeometric. THM-4424 proves the inherited `D2,D4,D6,kappa` debts are the
-  successive `s2--s5` collision coefficients. The [fifth source theorem](../05-knowledge/results/overnight7_20260906_jc_fifth_module.md)
-  admits polynomial payment; full descended response is ker L. All O(t10)
-  graph repairs preserve J8; earlier jets, termination and entry remain open.
+  successive `s2--s5` collision coefficients. The [ninth-source period](../05-knowledge/results/overnight8_20260906_jc_collision_period.md)
+  keeps the J8 obstruction under all collision-preserving O(t9) map changes;
+  earlier jets, termination and entry remain open.
 - **Weyl boundary:** THM-2049 gives a formal beta-adic lift; finite termination remains.
 - **Planar source fibres:** THM-2063/THM-2084--2480 (including
   THM-2371/THM-2376) close the named

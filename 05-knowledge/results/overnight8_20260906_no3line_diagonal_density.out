@@ -1,0 +1,13 @@
+STATUS: PASS; exact controls plus companion all-size proof, no census extrapolation
+MATCHING CARRIERS: 21 all cycle types, 2<=n<=8, degrees 0..6
+{"P_S_zero": "2/3", "S_zero_X_positive": null, "conditional_gates": 30, "cov_Y0_Y1": "-1/3", "hist_S": {"0": 24, "1": 12}, "hist_X_if_n4": {}, "labels": 36, "mean_S": "1/3", "parts": [3], "variance_S": "2/9"}
+{"P_S_zero": "25/72", "S_zero_X_positive": [[[0, 0], [0, 2], [1, 2], [1, 3], [2, 1], [2, 3], [3, 0], [3, 1]], 1], "conditional_gates": 144, "cov_Y0_Y1": "-1/3", "hist_S": {"0": 200, "1": 288, "2": 40, "4": 32, "5": 16}, "hist_X_if_n4": {"0": 16, "1": 192, "2": 272, "4": 64, "5": 32}, "labels": 576, "mean_S": "1", "parts": [4], "variance_S": "49/36"}
+{"P_S_zero": "5/9", "S_zero_X_positive": [[[0, 2], [0, 3], [1, 2], [1, 3], [2, 0], [2, 1], [3, 0], [3, 1]], 4], "conditional_gates": 144, "cov_Y0_Y1": "-1/3", "hist_S": {"0": 320, "1": 128, "2": 32, "4": 96}, "hist_X_if_n4": {"0": 288, "2": 128, "4": 64, "6": 64, "8": 32}, "labels": 576, "mean_S": "1", "parts": [2, 2], "variance_S": "19/9"}
+{"P_S_zero": "101/360", "S_zero_X_positive": null, "conditional_gates": 840, "cov_Y0_Y1": "-3/10", "hist_S": {"0": 4040, "1": 5600, "2": 1620, "4": 2080, "5": 740, "8": 80, "10": 200, "11": 20, "14": 20}, "hist_X_if_n4": {}, "labels": 14400, "mean_S": "5/3", "parts": [5], "variance_S": "461/120"}
+{"P_S_zero": "47/200", "S_zero_X_positive": null, "conditional_gates": 840, "cov_Y0_Y1": "-3/10", "hist_S": {"0": 3384, "1": 6672, "2": 1800, "3": 96, "4": 1416, "5": 480, "6": 72, "10": 336, "11": 144}, "hist_X_if_n4": {}, "labels": 14400, "mean_S": "5/3", "parts": [2, 3], "variance_S": "1969/450"}
+INDEPENDENT NON-INDUCED UNION-COPY VARIANCES: [((3,), '2/9'), ((4,), '49/36'), ((2, 2), '19/9'), ((5,), '461/120'), ((2, 3), '1969/450'), ((8,), '1335953/88200'), ((2, 2, 2, 2), '228169/14700')]
+VARIANCE COEFFICIENTS: single=98/15; cross=-94/45; total=40/9; Chebyshev=10
+CONDITIONAL WEIGHTED-UNION HOSTILE: n=7, factorial second moment=49/3>16; Holder survives
+SCOPE: uniform random-label density bound; no nonexistence, CLT, or exponential rate
+SEMANTIC SHA256: 8ffd51855c5588de5979cfc6f8aac3e201e24372ec6dc4a3cdb47e4fe8c82264
+ACTIVE GATES: 23124

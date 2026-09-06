@@ -1,0 +1,9 @@
+ANALYTIC_THEOREM A=2 complete-alpha beta-hit response is strictly negative at every first-row zero
+OPEN full beta-skip response; no universal actual doubled-row conclusion
+COEFFICIENT_MAPS 384 parameter rows, 3 exact phases each; nonprimitive and x=0 included
+COUPLED_MAPS 18 A2B3 rows; two contiguous identities and single mixed-product response
+FINITE_SIGNS 32 primitive indexed rows; 240 complete roots; 1200 response signs
+BANK [[5,1,17,5],[5,3,19,5],[5,4,20,5],[5,7,23,5],[5,13,29,5],[5,31,47,5],[6,1,20,6],[6,3,22,6],[6,4,23,6],[6,13,32,6],[6,31,50,6],[7,1,23,7],[7,4,26,7],[7,7,29,7],[7,31,53,7],[8,1,26,8],[8,3,28,8],[8,4,29,8],[8,7,32,8],[8,13,38,8],[8,31,56,8],[9,1,29,9],[9,3,31,9],[9,4,32,9],[9,7,35,9],[9,13,41,9],[9,31,59,9],[10,1,32,10],[10,3,34,10],[10,7,38,10],[10,13,44,10],[10,31,62,10]]
+SAME_CONSTRAINT_HOSTILE h1g5rho-2: OstarB=0,OstarC=15,OstarD=10,EstarB=-16
+PASS 5638 explicit gates
+semantic_sha256 f2b2cbf3308feb6568785245f439916d8823bb1c09dee0bbd1cbfef862be311d

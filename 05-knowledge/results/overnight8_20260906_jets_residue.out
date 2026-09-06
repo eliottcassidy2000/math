@@ -1,0 +1,17 @@
+CUBIC_IDENTITIES resultant4116; exact joint cap beta=1 atp3,p5,or p7 AP, otherwise0
+FOURJET_CONTROLS rational 1065 literal12x12Smith 51
+P7_TWINS (0,7,14) (0, 0, 0, 0, 1, 2, 4, 6, 7, 8, 10, 10) ; (0,7,21) (0, 0, 0, 0, 1, 2, 4, 6, 7, 8, 9, 11)
+P7_TWINS_KERNEL modulo7^10 exponent48versus47; determinant48both
+P7_MINIMAL_WEIGHT ranks1..6 [64, 784, 3136, 4900, 3136, 784] total12804; only9 equality-weight minors expanded
+P7_FULL_PARTITION controls 175 residue bit AP; e0 mask separately retained
+GENERAL_PACKET controls 208 saturated 158 cancelled 50
+GENERAL_PACKET complete-residue F=X^p-X has zero packet; arbitrary exact loss not inferred
+DEURING 3 m 2 roots [2] ordinary_count 0
+DEURING 5 m 3 roots [] ordinary_count 3
+DEURING 7 m 4 roots [2, 4, 6] ordinary_count 2
+DEURING 11 m 6 roots [2, 6, 10] ordinary_count 6
+DEURING 13 m 7 roots [] ordinary_count 11
+DEURING 19 m 10 roots [2, 10, 18] ordinary_count 14
+DEURING 23 m 12 roots [2, 3, 8, 11, 12, 13, 16, 21, 22] ordinary_count 12
+DEURING 31 m 16 roots [2, 12, 13, 14, 16, 18, 19, 20, 30] ordinary_count 20
+PASS_OPTIMIZATION_LIVE_GATES 20319
