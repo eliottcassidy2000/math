@@ -43,6 +43,11 @@ versus selecting one pair after summation. Our uniform tail proves one
 fixed pair suffices in an infinite region. It does not erase the remaining
 selector issue on comparable speeds.
 
+The final incoming [THM-4420, near-doubling rays](../01-canon/theorems/THM-4420-lrc14-near-doubling-ray-network-closure.md)
+closes both ternary-unit families (1,m,2m+/-1), bounding every projection.
+Their ratios are at most 11/5, so these are complementary infinite subsets
+inside the comparable-speed region, not instances of our 44/13 tail.
+
 The signed-cycle problem has a different native object: a switching class
 of a signed complete graph. Its cycle parity genuinely defines the
 observable; there is no reason to replace it by a tournament. The old
@@ -118,6 +123,10 @@ subjects, not a theorem identifying their objects or conjectures.
    THM-4413 owner transversality; test whether the same pair minimizes each
    active roof. A lower bound on a live component and an upper bound on
    total mass have different directions and need not contradict each other.
+   The incoming near-doubling proof suggests a bounded next test: on primitive
+   arithmetic progressions (a,m,2m-a), compare every raw roof with the fixed
+   outer-pair projection. Equality would transfer existing norm-four physical
+   closure to the network certificate; this transfer remains unproved here.
 2. **Moment niche.** The remaining general width starts at three. A product
    of three small roots divided by one root is not a local root swap.
    Construct the actual correspondence and identify a justified critical
@@ -152,8 +161,8 @@ outputs retain explicit failure gates. No new Lean formalization is claimed.
 
 Source and output pairs are preserved in each theorem's evidence manifest.
 The original shared checkout's five untracked outputs were left untouched.
-The isolated worktree began at 3eb2b8a66e56, read incoming work through
-05d61bbedf, and pushed evidence/reservations at 09c725138c before promotion.
+The isolated worktree began at 3eb2b8a66e56, integrated incoming work through
+72c8c40395, and pushed evidence/reservations at 09c725138c before promotion.
 Final integration includes THM-4414's independent canonical capacity proof
 and its height-149 raw-projection audit; the 44/13 tail remains an additional
 all-height result.
