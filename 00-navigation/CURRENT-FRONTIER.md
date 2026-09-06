@@ -61,13 +61,25 @@ for `d>=7`. THM-3742 is a wrong-torsor Pell `C14`; THM-3744's safe control is
   [THM-4418](../01-canon/theorems/THM-4418-lrc14-sharp-pair-arithmetic-and-forty-four-thirteenths-tail.md)
   gives sharp pair mass/component bounds and closes `c/b>=44/13`. THM-4420
   closes both unit near-doubling rays; THM-4422 closes every signed norm-four
-  family and gives exact deficit/Beatty rows. Fixed convex averages fail;
+  family and gives exact deficit/Beatty rows; fixed convex averages fail.
+  THM-4425 closes every complete rank-one carrier set at every height and
+  proves the exact zonotope width/layer and half-body sumset dichotomies. It
+  also closes every row whose shortest primitive relation has `l1` norm at
+  most 14: full-support relations collapse to rank one, and one-zero relations
+  are count-automatic except for the directly closed `(19,23,29)` `A_2`
+  control. Every remaining hostile has shortest dual width at least 16.
+  THM-4423 verifies all 753,853 triples through height 499 and, by a 38-shell
+  splice into the norm-four theorem, proves every row with `N<=112` at every
+  height. Its 4,599 dense H499 rows comprise 4,598 norm-four rays and the
+  unique rank-two `A_2` hexagon `(19,23,29)`.
   [THM-4428](../01-canon/theorems/THM-4428-lrc14-two-direction-network-closure-and-sharp-one-direction-gap.md)
-  closes all one/two-direction networks, sharply `12/161` off norm four in
-  the one-ray case. The target remains open in `c/b<44/13` with at least
-  three directions; `(19,23,29)` is the first H79 dense multi-ray.
-  Arbitrary nonresonance and entry remain open.
-- **Transport/incidence:** [overnight synthesis](../05-knowledge/results/overnight_20260906_synthesis.md) combines sharp cap bound `204/5957`, midpoint payments, and strict all-height owner-line closure. A residual failure needs two-dimensional owner polygons, an affine collinear triple, and unpaid count surplus.
+  closes all one- and exactly-two-direction networks, sharply `12/161` off
+  norm four in the one-ray case. Any remaining projection hostile has
+  `c>=503`, `N>=114`, `c/b<44/13`, shortest dual width at least 16, and at
+  least three primitive carrier directions. The half-body bound still loses
+  coordinate owner and hinge depth; arbitrary nonresonance and entry remain
+  open.
+- **Transport/incidence:** [overnight synthesis](../05-knowledge/results/overnight_20260906_synthesis.md) combines sharp full-cap bound `204/5957`, midpoint payments, and strict all-height owner-line closure. A residual failure therefore needs a two-dimensional owner polygon with at least three directions, an affine collinear triple, and unpaid count surplus. The earlier [sparse-contact proof](../05-knowledge/results/synthesis_20260905_lrc_sparse_transport.md) adds star structure, arbitrary-phase intersection closure, weighted limits, and the exact carrier-selector gap.
 - **Residual ranks:** THM-4333/4338 close fixed-pool ranks three/four, not arbitrary entry.
 - **PROVED:** [THM-2928](../01-canon/theorems/THM-2928-critical-seven-comb-grid-tensorization-and-drift-tariff.md)/2941: literal zero/one/two/three-drift sectors are empty; `k=2,3` are finite.
 - **Orthogonal routes.** THM-1017 is HYP-6820; THM-2047/2050 keep phase/exit; THM-731/2048 prune; THM-1290 ends at `55`; HYP-8900 nonuniform.
@@ -382,7 +394,15 @@ lift/phase clocks.
   THM-4390/4395 reach rows nine/ten; THM-4399/4403/4410 carry one selected tail
   through rows 11--13 on a global `A^4` with `A^9` fibres. THM-4415 proves
   prefix-preserving row-14 Hamiltonians have response rank one against two
-  conditions, leaving `J_14`. Complete weights 15--22 and entry remain open.
+  conditions, leaving `J_14`. THM-4426 restores the complete omitted
+  weight-18 pair `z=[p^9]H,h=[p^6y^2]H`. The global unpaid bracket locus is a
+  rationally split conic bundle with a `Q`-defined section over every
+  characteristic-zero base point. On `Phi=eta=0,alpha11=1`, the simultaneous
+  bracket/depth locus is a `Q`-rational `G_m`; it fixes `c51=1087/135` and has
+  `A^10` fibre everywhere. The earlier two real quadratic conjugates are its
+  `h=0` slice, while `h=0,z=1` remains a rational depth hostile. The global
+  row-14 depth cover, complete weights 15--22, row-15 relative response,
+  all-row termination, and entry remain open.
   THM-4397/4401 give Long's gauge and punctured planar shadows.
   Exceptional quartic: THM-3703/3737/4034 give grammar/image/conductor;
   THM-4381 gives 86 nodes, one plane triple, and `S^sn=S+K r`.

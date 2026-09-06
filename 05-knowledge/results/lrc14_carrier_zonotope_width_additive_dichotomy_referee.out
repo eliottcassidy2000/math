@@ -1,0 +1,18 @@
+LRC CARRIER ZONOTOPE WIDTH + ADDITIVE DICHOTOMY REFEREE
+status=PASS proved-identities+finite-controls; universal_projection=OPEN; LRC14=OPEN
+support=Z_w=-w_cross[-3/14,3/14]^3
+area=9*norm(w)*(a+b+c)/49 covol(Lambda)=norm(w) covol(3Lambda)=9*norm(w)
+two_live_cosets_bulk=2*(a+b+c)/49 area_triples=165 residue_points=16
+width_Lambda=3*mu1/7 width_3Lambda=mu1/7 layers=abs(t)<3*mu1/14
+layer_control w=(1, 5, 11) mu=4 type=unit N=2 layers=(0,) directions=1 n=(1, 2, -1) z=(0, -1, -2)
+layer_control w=(1, 19, 23) mu=6 type=unit N=4 layers=(0,) directions=1 n=(4, 1, -1) z=(-1, -20, -24)
+layer_control w=(1, 5, 61) mu=6 type=one-zero N=4 layers=(-1, 1) directions=2 n=(5, -1, 0) z=(-1, -5, -60)
+layer_control w=(17, 23, 25) mu=8 type=one-zero N=4 layers=(-1, 1) directions=2 n=(1, -4, 3) z=(8, 11, 12)
+layer_control w=(19, 23, 29) mu=10 type=one-zero N=6 layers=(-2, -1, 1, 2) directions=3 n=(3, -5, 2) z=(-10, -12, -15)
+layer_control w=(1, 17, 131) mu=14 type=unit N=4 layers=(0,) directions=1 n=(5, -8, 1) z=(2, 35, 270)
+layer_control w=(71, 95, 97) mu=16 type=unit N=16 layers=(-3, 0, 3) directions=5 n=(8, -7, 1) z=(281, 376, 384)
+A2_exact=w:(19,23,29),u:(1, 8, -7),v:(10, -7, -1),u+v:(11, 1, -8)
+two_shell_A2=w:(85, 97, 107),N:12,inner_triangle:((-17, 16, -1), (-2, -17, 17), (19, 1, -16)),A=P_union_minus2P,P_plus_P=minusA
+half_body_H79 triples=2910 nonempty=2874 rank2_inner_cores=0 max_core_ratio=2/3 row=(1, 19, 37) h=2 m=3 rank=1
+dense_bulk_H79 rows=114 smallest_excess=(Fraction(72, 49), (1, 5, 7), 2, Fraction(26, 49), Fraction(356, 539))
+checks=9178 verdict=PASS

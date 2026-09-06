@@ -1,0 +1,11 @@
+THM-4425 INDEPENDENT RANK-ONE REFEREE
+status=PASS exact-line-dictionary+arithmetic-tail+finite-base; LRC14=OPEN
+small_live_primitive_patterns=[(1, 1, 2)] next_possible_max_abs=4
+exact_identity=Lambda(w)={k*u:abs(k)<B and k_mod_3_nonzero}
+analytic_chain=B<3c/28; N=2R_<(B)<c/7+4/3<=2c/11
+real_threshold=308/9 first_eligible_height=35
+H31 triples=165 empty=25 rank_at_most_one=158 nonnorm4=108 exact_dictionaries=133
+H79 triples=2910 empty=36 rank_at_most_one=1304 nonnorm4=1106 exact_dictionaries=1268 tail_controls=998
+H79 best_nonnorm4_density=4/23 w=(1, 19, 23) N=4 u=(4, 1, -1) B=9/4
+unique_equality=(1,5,11) checks=29689
+verdict=PASS

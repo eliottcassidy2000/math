@@ -1,0 +1,10 @@
+LRC14 RANK-ONE CARRIER CLOSURE THM-4425 VERIFIER
+status=PASS PROVED_RELATIVE+FINITE_EXACT_BASE; universal_projection=OPEN; LRC14=OPEN
+small_coefficient_patterns=[(1, 1, 2)] signed_parity_controls=24
+analytic_non_norm4_gate=max_abs_u>=4 B<3c/28 N<c/7+4/3
+automatic_height_threshold=308/9 first_eligible_height=35
+finite_base_values=(1, 5, 7, 11, 13, 17, 19, 23, 25, 29, 31) triples=165 empty=25 rank_at_most_one=158 non_norm4_nonempty=108
+finite_base_leader=w:(1, 5, 11),best:6/77,carriers:2,direction:(1, 2, -1),sums:('6/77', '6/77', '6/77')
+finite_base_equality=[(1,5,11)] semantic_rows=158
+checks=1069
+verdict=PASS

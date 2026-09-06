@@ -1,0 +1,73 @@
+LRC14 LOW-CARRIER EXACT SHELL LADDER THM-4423 VERIFIER
+status=PASS FINITE_EXACT_RELATIVE; universal_projection=OPEN; LRC14=OPEN
+frozen_h499_sha256=f47c6c89a4fbadf9df66b2d169855175bfda53b26ba2e0194904ba99a9f63a18 rows_sha256=a6d482622d2c96a9981239c66aa40aeb21cd570e46fd1cd6d5239d831eb72144
+universe=eligible shells above 499; counts=92..112 even; both_kernels=YES
+shells=(503, 505, 509, 511, 515, 517, 521, 523, 527, 529, 533, 535, 539, 541, 545, 547, 551, 553, 557, 559, 563, 565, 569, 571, 575, 577, 581, 583, 587, 589, 593, 595, 599, 601, 605, 607, 611, 613)
+shell=503 triples=13861 carrier_range=(12, 142) relevant_counts={92: 3, 94: 2, 96: 2, 98: 2, 100: 4, 102: 1, 104: 3, 106: 2, 108: 2, 110: 2, 112: 4}
+shell=505 triples=13500 carrier_range=(14, 144) relevant_counts={92: 3, 94: 1, 96: 2, 98: 2, 100: 3, 104: 3, 106: 2, 108: 2, 110: 1, 112: 2}
+shell=509 triples=14196 carrier_range=(14, 144) relevant_counts={94: 2, 96: 2, 98: 2, 100: 4, 102: 1, 104: 3, 106: 2, 108: 2, 110: 2, 112: 4}
+shell=511 triples=14088 carrier_range=(14, 146) relevant_counts={94: 2, 96: 1, 98: 1, 100: 3, 102: 1, 104: 4, 106: 2, 108: 1, 110: 1, 112: 3}
+shell=515 triples=13974 carrier_range=(14, 146) relevant_counts={94: 1, 96: 1, 98: 2, 100: 4, 102: 1, 104: 1, 106: 2, 108: 2, 110: 2, 112: 2}
+shell=517 triples=14598 carrier_range=(14, 148) relevant_counts={96: 2, 98: 2, 100: 3, 102: 1, 104: 4, 106: 2, 108: 2, 110: 1, 112: 2}
+shell=521 triples=14878 carrier_range=(14, 148) relevant_counts={96: 2, 98: 2, 100: 4, 102: 1, 104: 3, 106: 2, 108: 2, 110: 2, 112: 4}
+shell=523 triples=15051 carrier_range=(14, 148) relevant_counts={96: 2, 98: 2, 100: 3, 102: 1, 104: 4, 106: 2, 108: 2, 110: 2, 112: 3}
+shell=527 triples=15170 carrier_range=(14, 148) relevant_counts={96: 2, 98: 1, 100: 4, 102: 1, 104: 3, 106: 1, 108: 2, 110: 2, 112: 4}
+shell=529 triples=15379 carrier_range=(14, 152) relevant_counts={98: 2, 100: 3, 102: 1, 104: 4, 106: 2, 108: 2, 110: 2, 112: 2}
+shell=533 triples=15492 carrier_range=(14, 152) relevant_counts={98: 2, 100: 4, 102: 1, 104: 3, 106: 2, 108: 1, 110: 2, 112: 3}
+shell=535 triples=15158 carrier_range=(16, 152) relevant_counts={98: 2, 100: 3, 104: 3, 106: 2, 108: 2, 110: 1, 112: 2}
+shell=539 triples=15512 carrier_range=(14, 152) relevant_counts={100: 4, 102: 1, 104: 3, 106: 1, 108: 1, 110: 2, 112: 3}
+shell=541 triples=16110 carrier_range=(14, 154) relevant_counts={100: 3, 102: 1, 104: 4, 106: 2, 108: 2, 110: 2, 112: 3}
+shell=545 triples=15660 carrier_range=(14, 154) relevant_counts={100: 4, 102: 1, 104: 1, 106: 2, 108: 2, 110: 2, 112: 2}
+shell=547 triples=16471 carrier_range=(14, 156) relevant_counts={100: 3, 102: 1, 104: 4, 106: 2, 108: 2, 110: 2, 112: 3}
+shell=551 triples=16602 carrier_range=(16, 156) relevant_counts={102: 1, 104: 3, 106: 2, 108: 1, 110: 2, 112: 4}
+shell=553 triples=16510 carrier_range=(14, 158) relevant_counts={102: 1, 104: 4, 106: 2, 108: 1, 110: 1, 112: 3}
+shell=557 triples=17020 carrier_range=(16, 158) relevant_counts={102: 1, 104: 3, 106: 2, 108: 2, 110: 2, 112: 4}
+shell=559 triples=17108 carrier_range=(16, 160) relevant_counts={102: 1, 104: 4, 106: 2, 108: 2, 110: 2, 112: 2}
+shell=563 triples=17391 carrier_range=(16, 160) relevant_counts={104: 3, 106: 2, 108: 2, 110: 2, 112: 4}
+shell=565 triples=16912 carrier_range=(16, 160) relevant_counts={104: 3, 106: 2, 108: 2, 110: 1, 112: 2}
+shell=569 triples=17766 carrier_range=(16, 160) relevant_counts={104: 3, 106: 2, 108: 2, 110: 2, 112: 4}
+shell=571 triples=17955 carrier_range=(16, 164) relevant_counts={104: 4, 106: 2, 108: 2, 110: 2, 112: 3}
+shell=575 triples=17414 carrier_range=(16, 162) relevant_counts={106: 2, 108: 2, 110: 2, 112: 2}
+shell=577 triples=18336 carrier_range=(16, 164) relevant_counts={106: 2, 108: 2, 110: 2, 112: 3}
+shell=581 triples=18176 carrier_range=(16, 164) relevant_counts={106: 1, 108: 1, 110: 2, 112: 4}
+shell=583 triples=18582 carrier_range=(16, 166) relevant_counts={108: 2, 110: 1, 112: 2}
+shell=587 triples=18915 carrier_range=(16, 166) relevant_counts={108: 2, 110: 2, 112: 4}
+shell=589 triples=19050 carrier_range=(16, 168) relevant_counts={108: 2, 110: 2, 112: 3}
+shell=593 triples=19306 carrier_range=(16, 168) relevant_counts={108: 2, 110: 2, 112: 4}
+shell=595 triples=18340 carrier_range=(16, 170) relevant_counts={110: 1, 112: 1}
+shell=599 triples=19701 carrier_range=(16, 170) relevant_counts={110: 2, 112: 4}
+shell=601 triples=19900 carrier_range=(16, 172) relevant_counts={110: 2, 112: 3}
+shell=605 triples=19170 carrier_range=(16, 172) relevant_counts={112: 1}
+shell=607 triples=20301 carrier_range=(16, 172) relevant_counts={112: 3}
+shell=611 triples=20392 carrier_range=(16, 172) relevant_counts={112: 3}
+shell=613 triples=20706 carrier_range=(16, 176) relevant_counts={112: 3}
+ladder_rows_sha256=c66c18cdf85cc7128703d7f758f383fa6013ff4feb30feda624526779b73628e row_count=482
+checks=30402720
+count=92 shell_counts={503: 3, 505: 3} rows=6 relations={'c=2b-a': 2, 'c=a+2b': 4} hostile=0
+  extremizer=w:(133, 319, 505),best:28788/470155,margin:86322/5171705,sums:('1092/14645', '28788/470155', '2311014/29995889'),relation:c=2b-a
+count=94 shell_counts={503: 2, 505: 1, 509: 2, 511: 2, 515: 1} rows=8 relations={'c=2b-a': 5, 'c=a+2b': 3} hostile=0
+  extremizer=w:(157, 173, 503),best:33846/552797,margin:101520/6080767,sums:('282/3521', '33846/552797', '917732/13661983'),relation:c=a+2b
+count=96 shell_counts={503: 2, 505: 2, 509: 2, 511: 1, 515: 1, 517: 2, 521: 2, 523: 2, 527: 2} rows=16 relations={'c=2a+b': 1, 'c=2b-a': 8, 'c=a+2b': 7} hostile=0
+  extremizer=w:(145, 191, 527),best:32758/534905,margin:98152/5883955,sums:('288/3689', '32758/534905', '6730492/102166855'),relation:c=a+2b
+count=98 shell_counts={503: 2, 505: 2, 509: 2, 511: 1, 515: 2, 517: 2, 521: 2, 523: 2, 527: 1, 529: 2, 533: 2, 535: 2} rows=22 relations={'c=2a+b': 4, 'c=2b-a': 10, 'c=a+2b': 8} hostile=0
+  extremizer=w:(151, 191, 533),best:34494/563381,margin:103464/6197191,sums:('42/533', '34494/563381', '7116926/107605771'),relation:c=a+2b
+count=100 shell_counts={503: 4, 505: 3, 509: 4, 511: 3, 515: 4, 517: 3, 521: 4, 523: 3, 527: 4, 529: 3, 533: 4, 535: 3, 539: 4, 541: 3, 545: 4, 547: 3} rows=56 relations={'c=2a+b': 17, 'c=2b-a': 24, 'c=a+2b': 15} hostile=0
+  extremizer=w:(157, 191, 539),best:5182/84623,margin:1412/84623,sums:('300/3773', '5182/84623', '7514436/113140951'),relation:c=a+2b
+count=102 shell_counts={503: 1, 505: 0, 509: 1, 511: 1, 515: 1, 517: 1, 521: 1, 523: 1, 527: 1, 529: 1, 533: 1, 535: 0, 539: 1, 541: 1, 545: 1, 547: 1, 551: 1, 553: 1, 557: 1, 559: 1} rows=18 relations={'c=2b-a': 18} hostile=0
+  extremizer=w:(197, 359, 521),best:43986/718459,margin:131976/7903049,sums:('101706/1309273', '43986/718459', '3007862/36846683'),relation:c=2b-a
+count=104 shell_counts={503: 3, 505: 3, 509: 3, 511: 4, 515: 1, 517: 4, 521: 3, 523: 4, 527: 3, 529: 4, 533: 3, 535: 3, 539: 3, 541: 4, 545: 1, 547: 4, 551: 3, 553: 4, 557: 3, 559: 4, 563: 3, 565: 3, 569: 3, 571: 4} rows=77 relations={'c=2a+b': 26, 'c=2b-a': 34, 'c=a+2b': 17} hostile=0
+  extremizer=w:(161, 365, 569),best:39268/641263,margin:117706/7053893,sums:('108398/1453795', '39268/641263', '18093426/234060995'),relation:c=2b-a
+count=106 shell_counts={503: 2, 505: 2, 509: 2, 511: 2, 515: 2, 517: 2, 521: 2, 523: 2, 527: 1, 529: 2, 533: 2, 535: 2, 539: 1, 541: 2, 545: 2, 547: 2, 551: 2, 553: 2, 557: 2, 559: 2, 563: 2, 565: 2, 569: 2, 571: 2, 575: 2, 577: 2, 581: 1} rows=51 relations={'c=2a+b': 18, 'c=2b-a': 25, 'c=a+2b': 8} hostile=0
+  extremizer=w:(167, 205, 577),best:41298/674513,margin:123876/7419643,sums:('318/4039', '41298/674513', '9173074/138275165'),relation:c=a+2b
+count=108 shell_counts={503: 2, 505: 2, 509: 2, 511: 1, 515: 2, 517: 2, 521: 2, 523: 2, 527: 2, 529: 2, 533: 1, 535: 2, 539: 1, 541: 2, 545: 2, 547: 2, 551: 1, 553: 1, 557: 2, 559: 2, 563: 2, 565: 2, 569: 2, 571: 2, 575: 2, 577: 2, 581: 1, 583: 2, 587: 2, 589: 2, 593: 2} rows=56 relations={'c=2a+b': 19, 'c=2b-a': 29, 'c=a+2b': 8} hostile=0
+  extremizer=w:(163, 215, 593),best:41434/676613,margin:17740/1063249,sums:('324/4151', '41434/676613', '9581524/145471795'),relation:c=a+2b
+count=110 shell_counts={503: 2, 505: 1, 509: 2, 511: 1, 515: 2, 517: 1, 521: 2, 523: 2, 527: 2, 529: 2, 533: 2, 535: 1, 539: 2, 541: 2, 545: 2, 547: 2, 551: 2, 553: 1, 557: 2, 559: 2, 563: 2, 565: 1, 569: 2, 571: 2, 575: 2, 577: 2, 581: 2, 583: 1, 587: 2, 589: 2, 593: 2, 595: 1, 599: 2, 601: 2} rows=60 relations={'c=2a+b': 25, 'c=2b-a': 26, 'c=a+2b': 9} hostile=0
+  extremizer=w:(169, 215, 599),best:6198/101231,margin:130140/7794787,sums:('330/4193', '6198/101231', '2013880/30470531'),relation:c=a+2b
+count=112 shell_counts={503: 4, 505: 2, 509: 4, 511: 3, 515: 2, 517: 2, 521: 4, 523: 3, 527: 4, 529: 2, 533: 3, 535: 2, 539: 3, 541: 3, 545: 2, 547: 3, 551: 4, 553: 3, 557: 4, 559: 2, 563: 4, 565: 2, 569: 4, 571: 3, 575: 2, 577: 3, 581: 4, 583: 2, 587: 4, 589: 3, 593: 4, 595: 1, 599: 4, 601: 3, 605: 1, 607: 3, 611: 3, 613: 3} rows=112 relations={'c=2a+b': 48, 'c=2b-a': 51, 'c=a+2b': 13} hostile=0
+  extremizer=w:(175, 391, 607),best:45532/743575,margin:136498/8179325,sums:('124742/1661359', '45532/743575', '22649136/290737825'),relation:c=2b-a
+first_non_norm_four=NONE
+maximal_norm_four_only_count=112
+maximal_proved_count=112
+next_frontier=count:114,shells:(503, 505, 509, 511, 515, 517, 521, 523, 527, 529, 533, 535, 539, 541, 545, 547, 551, 553, 557, 559, 563, 565, 569, 571, 575, 577, 581, 583, 587, 589, 593, 595, 599, 601, 605, 607, 611, 613, 617, 619, 623, 625),first_slice:(114,503)
+first_hostile=NONE
+verdict=PASS

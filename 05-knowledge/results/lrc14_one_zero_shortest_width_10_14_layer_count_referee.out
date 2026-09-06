@@ -1,0 +1,17 @@
+LRC14 ONE-ZERO SHORTEST WIDTH 10--14 LAYER-COUNT REFEREE
+arithmetic=exact integers/Fraction; standalone_no_repo_import=true; optimizable_assertions=0
+scope=sorted primitive distinct positive odd ternary-unit triples w=(a,b,c)
+layer_equality=carriers are exactly beta*m+k*n for beta in {-2,-1,1,2}, one k class mod3
+analytic=ell_1+ell_2<=3c/14 for every feasible signed pattern of norm 10,12,14
+large_coefficient=M>=8 uses two single-roof bounds; special_M<8 signed_patterns=49
+special_shape_suprema=10:(2, 3, 5):13/70,12:(0, 5, 7):9/49,12:(1, 5, 6):3/14,12:(2, 3, 7):4/21,12:(3, 4, 5):71/420,14:(1, 6, 7):19/98,14:(3, 4, 7):121/588
+count_tail=half_count<c/14+2<=c/11 for c>=103; complete remaining base H101
+finite_base=H101; values=34; eligible=5937; line_reconstructions=2395
+mu10_shortest_onezero=373; nonautomatic=1; max_base_density=6/29@(19, 23, 29)
+mu12_shortest_onezero=1288; nonautomatic=0; max_base_density=10/61@(49, 59, 61)
+mu14_shortest_onezero=578; nonautomatic=0; max_base_density=14/91@(77, 83, 91)
+unique_nonautomatic=mu10@(19,23,29):N=6; A2=true
+A2_projection=(156/4669,192/3857,3840/88711); min<6/77
+consequence=every shortest one-zero row with mu<=14 satisfies the THM-4422 projection target
+checks=28434
+verdict=PASS

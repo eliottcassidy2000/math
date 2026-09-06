@@ -26,6 +26,52 @@
   genera. Each theorem links full proofs, explicit universes, hostile controls,
   reproduction commands and source/output manifests. Global LRC(14), wider
   Laurent returns, four-node/higher-jet Smith laws remain OPEN.
+- The one- and two-memory source-normal row-fourteen companions
+  ([THM-4426](../../01-canon/theorems/THM-4426-source-normal-row-fourteen-weight-eighteen-memory-repair.md)):
+  **PROVED FINITE-ROW REPAIR RELATIVE TO THM-4410/4415 + VERIFIED-EXACT +
+  INDEPENDENTLY AUDITED; JC(2)/DC(2) OPEN.** Restoring `z=[p^9]H` alone makes
+  the unpaid class quadratic and gives two real conjugate boundary survivors.
+  Restoring adjacent `h=[p^6*y^2]H` completes the weight-eighteen face: the
+  global bracket locus is a rationally split conic with a Q-defined section
+  over every characteristic-zero base point. On `Phi=eta=0,alpha11=1`, the
+  simultaneous bracket/depth locus is a Q-rational `G_m`, fixes
+  `c51=1087/135`, kills all 15 bracket and 78 depth coefficients, and has
+  terminal fibre `A^10` everywhere. The old `h=0,z=1` bracket solution remains
+  a depth hostile. One-memory hashes: `99071f87...2ed` / `80487782...f11`;
+  two-memory hashes: `c647bdf2...d52a` / `c9ac320b...b0e7`; independent
+  polarization audit: `07c8be7d...b616` / `af99b4f5...f4bb` (raw LF bytes).
+
+- The rank-one, width, half-body, and one-zero shortest-relation outputs
+  ([THM-4425](../../01-canon/theorems/THM-4425-lrc14-all-height-rank-one-carrier-closure.md)):
+  **PROVED ELEMENTARY RELATIVE TO THM-4414/4422 + VERIFIED-EXACT +
+  INDEPENDENTLY AUDITED; LRC(14) OPEN.** Every complete rank-one live carrier
+  set closes at every height, uniquely sharply at `(1,5,11)`. The exact
+  zonotope has two-coset bulk `2(a+b+c)/49` and width `mu1/7` relative to
+  `3Lambda`; a ternary-unit relation of `l1` norm at most 14 forces rank one.
+  Every row of shortest dual `l1` width at most 14 is closed. In the one-zero
+  sector, all rows are count-automatic except the strict `A2` control
+  `(19,23,29)` at width ten; the full-support sector collapses to rank one.
+  The half-body class satisfies `2h-1<=m`, sharpened to `3h-3<=m` in affine
+  dimension two, with a sharp two-shell `A2` control at `(85,97,107)`.
+  Primary hashes: `f001d624...c571` / `ba61466c...805d`; rank-one referee:
+  `0123a7b2...86d9` / `a5811639...15c5`; geometry referee:
+  `7df1d419...8dbf` / `c5c91e52...dba1`; one-zero referee:
+  `babbe014...b11fc` / `d972435f...6fe32`; four-layer referee:
+  `d2176e34...9ece` / `9973ed3d...ff81` (raw LF bytes).
+
+- The height-499 atlas, dense geometry classifier, and low-carrier shell
+  ladder
+  ([THM-4423](../../01-canon/theorems/THM-4423-lrc14-height-499-atlas-and-ninety-carrier-global-closure.md)):
+  **FINITE-EXACT THROUGH HEIGHT 499 + PROVED ALL-HEIGHT `N<=112` COROLLARY
+  RELATIVE TO THM-4414/4418/4422/4425; LRC(14) OPEN.** All 753,853 eligible
+  triples pass, uniquely sharply at `(1,5,11)`. Among 4,599 nonautomatic rows,
+  4,598 are signed norm-four rank-one rows and the unique rank-two row is the
+  `(19,23,29)` `A2` hexagon. A 38-shell continuation reconstructs all 482
+  nonautomatic rows with even carrier count 92 through 112; every one is
+  signed norm four. Any remaining hostile has `c>=503`, `N>=114`, rank at
+  least two, and `c/b<44/13`. Atlas hashes: `981911d2...e0` /
+  `f47c6c89...a18`; ladder: `ed9ea158...d00` / `63932f2a...b4f`; dense
+  classifier: `3e7882e9...cde` / `107f45ad...891` (raw LF bytes).
 
 - `lrc14_projection_deficit_beatty_row_reduction_thm4422.out` -> exact deficit
   dual, one-dimensional carrier rows, signed norm-four closure, and a fixed-

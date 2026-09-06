@@ -1,0 +1,55 @@
+LRC14 HEIGHT-499 PROJECTION ATLAS THM-4423 VERIFIER
+status=PASS FINITE_EXACT; low_carrier_splice=PROVED; universal_statement=OPEN; LRC14=OPEN
+universe=sorted primitive distinct positive odd ternary-unit triples; max_speed<=499
+eligible_speed_count=167; triples=753853; independently_audited_rows=2918
+certificate=network_capacity<=edgewise_min_envelope; selection_uses_no_physical_mass
+hostile_count=0; target_rows=[((1, 5, 11), (60, 60, 60), 770)]; physical_above_count=0
+pair_success_counts=(750105, 751734, 751687); selected_pair_counts=(15931, 76291, 661631)
+carrier_count_range=(0, 142)
+strongest_beyond_79=triple:(1, 67, 133),best:60/931,envelopes:('60/931', '60/931', '60/931'),carriers:20
+top_rows=
+  triple=(1, 5, 11) best=6/77 envelopes=('6/77', '6/77', '6/77') carriers=2
+  triple=(1, 11, 23) best=12/161 envelopes=('12/161', '12/161', '12/161') carriers=4
+  triple=(1, 25, 49) best=24/343 envelopes=('24/343', '24/343', '24/343') carriers=8
+  triple=(5, 7, 17) best=58/833 envelopes=('346/4165', '12/119', '58/833') carriers=4
+  triple=(5, 7, 19) best=46/665 envelopes=('362/4655', '46/665', '12/133') carriers=4
+  triple=(7, 13, 19) best=64/931 envelopes=('12/133', '64/931', '146/1729') carriers=4
+  triple=(1, 13, 25) best=12/175 envelopes=('12/175', '12/175', '12/175') carriers=4
+  triple=(5, 11, 17) best=8/119 envelopes=('12/119', '8/119', '122/1309') carriers=4
+  triple=(1, 23, 47) best=22/329 envelopes=('508/7567', '22/329', '24/329') carriers=8
+  triple=(1, 7, 13) best=6/91 envelopes=('6/91', '6/91', '6/91') carriers=2
+  triple=(5, 29, 53) best=24/371 envelopes=('24/371', '24/371', '24/371') carriers=8
+  triple=(1, 67, 133) best=60/931 envelopes=('60/931', '60/931', '60/931') carriers=20
+  triple=(5, 37, 79) best=178/2765 envelopes=('6656/102305', '178/2765', '36/553') carriers=12
+  triple=(1, 53, 107) best=48/749 envelopes=('48/749', '48/749', '48/749') carriers=16
+  triple=(7, 23, 53) best=166/2597 envelopes=('24/371', '166/2597', '24/371') carriers=8
+  triple=(5, 41, 77) best=172/2695 envelopes=('36/539', '172/2695', '1472/22099') carriers=12
+  triple=(1, 65, 131) best=58/917 envelopes=('3772/59605', '58/917', '60/917') carriers=20
+  triple=(11, 17, 23) best=16/253 envelopes=('12/161', '16/253', '194/2737') carriers=4
+  triple=(1, 109, 217) best=96/1519 envelopes=('96/1519', '96/1519', '96/1519') carriers=32
+  triple=(1, 47, 95) best=6/95 envelopes=('6/95', '6/95', '6/95') carriers=14
+unweighted_average_claim_refuted=triple:(1, 5, 7),sum:66/245,target_sum:18/77,envelopes:('4/35', '6/49', '8/245')
+last_twenty_shell_maxima=
+  shell=443 triple=(1, 221, 443) best=192/3101 carriers=64
+  shell=445 triple=(1, 223, 445) best=192/3115 carriers=64
+  shell=449 triple=(19, 215, 449) best=3658/59717 carriers=68
+  shell=451 triple=(19, 235, 451) best=3676/59983 carriers=68
+  shell=455 triple=(23, 239, 455) best=4492/73255 carriers=68
+  shell=457 triple=(23, 217, 457) best=4510/73577 carriers=68
+  shell=461 triple=(19, 221, 461) best=3756/61313 carriers=68
+  shell=463 triple=(7, 235, 463) best=1392/22687 carriers=68
+  shell=467 triple=(1, 233, 467) best=202/3269 carriers=68
+  shell=469 triple=(1, 235, 469) best=204/3283 carriers=68
+  shell=473 triple=(5, 239, 473) best=204/3311 carriers=68
+  shell=475 triple=(7, 241, 475) best=204/3325 carriers=68
+  shell=479 triple=(23, 251, 479) best=4728/77119 carriers=72
+  shell=481 triple=(23, 229, 481) best=4750/77441 carriers=72
+  shell=485 triple=(19, 233, 485) best=3958/64505 carriers=72
+  shell=487 triple=(19, 253, 487) best=3972/64771 carriers=72
+  shell=491 triple=(11, 251, 491) best=2316/37807 carriers=72
+  shell=493 triple=(11, 241, 493) best=2328/37961 carriers=72
+  shell=497 triple=(5, 251, 497) best=1072/17395 carriers=72
+  shell=499 triple=(5, 247, 499) best=154/2495 carriers=72
+rows_sha256=a6d482622d2c96a9981239c66aa40aeb21cd570e46fd1cd6d5239d831eb72144
+checks=47467792
+verdict=PASS
