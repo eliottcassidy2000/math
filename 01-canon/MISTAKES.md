@@ -46,6 +46,28 @@ Format per entry:
   Balanced parity alone misses the explicit56-state nullity2. A pendant-pair
   cap preserves the integral cokernel, not the complete nonzero spectrum.
 
+## 2026-09-06 overnight -- primitive full rows can contain nonprimitive lifted bodies
+
+- **Failed implication, repaired before publication:** primitivity of
+  `3C union {8,14,u}` does not imply `gcd(C)=1`, even when all ten body
+  residues were independently lifted in a phase-preserving modulus.
+- **Exact witness, without a minimality claim:** in the
+  [phase-packet supplier](../05-knowledge/results/lrc14_phase_packet_supplier_overnight_hexagon_sep05.md),
+  take `P=120120`, `B=(1,3,4,7,9,12,15,30,33,39)` and
+  `n=(9,10,2,12,13,6,16,15,8,11)`. Then `C_i=B_i+Pn_i`
+  has gcd17, while the full row with appender1 has gcd1.
+- **Mechanism and missing coordinate:** the fixed tail8 protects full-row
+  primitivity, but says nothing about the content of the selected body.
+  Likewise an accepted appender divisible by3 is not a three-unit tail.
+- **Strongest survivor:** the general margin1/8 certificate and uniform
+  actual safe-measure floor `2/(91 max C)` are unchanged, with the original
+  distinctness restrictions and `72` not dividing the appender.
+- **Repaired comparison:** the exact primitive-body clock-three frontier
+  subfamily uses `n_1=0` and a three-unit appender. Nine body heights and
+  the appender remain unbounded. The AP8 supplier already contains1.
+  Future entry comparisons must retain selected-body content separately
+  from full-row content; no proved theorem required retraction here.
+
 ## 2026-09-06 overnight -- a one-sided sharp family does not prove a global profile
 
 - **Failed implication, repaired before filing:** equality examples dense

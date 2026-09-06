@@ -1,0 +1,10 @@
+NATIVE STRUCTURE {"cycle_families": 1, "n": 3, "native_even_nullity": 0, "q": 2, "triangle_crossrank": 1, "triangle_integer_pivots": 1}
+NATIVE STRUCTURE {"cycle_families": 3, "n": 4, "native_even_nullity": 1, "q": 3, "triangle_crossrank": 1, "triangle_integer_pivots": 1}
+NATIVE STRUCTURE {"complement_sectors": [[-1, 2, 1, 1], [1, 2, 2, 0]], "cycle_families": 7, "n": 5, "native_even_nullity": 1, "q": 7, "triangle_crossrank": 3, "triangle_integer_pivots": 1}
+NATIVE STRUCTURE {"cycle_families": 15, "n": 6, "native_even_nullity": 4, "q": 16, "triangle_crossrank": 6, "triangle_integer_pivots": 1}
+NATIVE STRUCTURE {"cycle_families": 31, "n": 7, "native_even_nullity": 0, "q": 54, "triangle_crossrank": 27, "triangle_integer_pivots": 2}
+COMPLETE CYCLE-FAMILY CASES 57
+SEMANTIC SHA256 129349f1675c743935e121ec5717409afb12c12006889c5898d69befcbca2025
+PASS EXPLICIT GATES 21295
+PROVED creation minors and complement-character index; FINITE-EXACT controls n3..7
+OPEN full native nullity, opposite-character kernels, and Laplacian gap

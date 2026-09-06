@@ -36,6 +36,20 @@
   full-row witness elsewhere; both satisfy all the global gcd ceilings.
   The rational-grid realization lemma retains the distinction between
   choosing tails and finding a common phase for already fixed tails.
+- [Empty-hexagon-seeded overnight synthesis](overnight-hexagon-sep05-synthesis.md):
+  **PROVED + INDEPENDENTLY AUDITED**, with finite and open scopes separated.
+  [Phase suppliers](lrc14_phase_packet_supplier_overnight_hexagon_sep05.md)
+  give an unbounded margin1/8 quartet family and AP8/outlier physical
+  safe-measure floors independent of tail height; arbitrary entry is OPEN.
+  [Whole midpoint classes](nc2_midpoint_classes_overnight_hexagon_sep05.md)
+  give2B-3 nonempty classes and B-1 reversal orbits; universal rootwise signs
+  remain OPEN despite776 distinct exact-bank rows.
+  [Native cycle creation](overnight_hexagon_sep05_boolean_native_structure.md)
+  gives all-order unitriangular minors and complement-localized indices.
+  [Complete n8 Fourier stress](eulerian-n8-fourier-stress-overnight-hexagon-sep05.md)
+  is **FINITE-EXACT**: weighted nullity43, Boolean nullity19, and a
+  nonsingular112-square repair block; universal native rank/gap stay OPEN.
+
 - [Ninth overnight synthesis](overnight_20260906_synthesis.md):
   **PROVED + INDEPENDENTLY AUDITED.** [Virtual pair walls](overnight9_20260906_lrc_virtual_pair_wall.md)
   select explicit safe LRC components; the [sharp margin](overnight9_20260906_lrc_virtual_pair_wall_margin.md)

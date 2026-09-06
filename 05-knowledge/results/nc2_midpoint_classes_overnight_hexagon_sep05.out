@@ -1,0 +1,10 @@
+WHOLE MIDPOINT RESIDUE AND CROSSING CLASSES
+scope=PROVED exact decomposition/reversal/nonvacuity and cited class root geometry; rootwise signs FINITE-EXACT only
+structural boundary bank: 144 indexed coprime cases, x=0 and corner residues retained
+head: 638 indexed rows; 4392 nonzero labelled classes; 2515 reversal orbits; 8755 labelled first-root values negative
+wide: 140 indexed rows; 1628 nonzero labelled classes; 884 reversal orbits; 7378 labelled first-root values negative
+distinct tuples across banks: 776; no universal class-sign inference
+hostiles: noncoprime cut omits108t; shared negative binomial factor/interlacing/middle signs still allow mixed coefficient1454400000>0
+OPEN all-height class signs and actual joint weighted pencil; no trinomial closure claimed
+trace_sha256=27b31c14547cbc70393506f4fcab3b8e289acb42d1c3cfc1fe4228fbd29878f6
+PASS explicit_gates=144664

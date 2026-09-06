@@ -4,8 +4,46 @@
 is explicit below; this file is provenance, not proved canon. Session began
 at 2026-09-06 04:37 UTC from `62e1b34d82a4` in an isolated worktree.
 The startup and first/second-wave sections preserve idea provenance. The
-[seventh-wave board](#seventh-wave-current-board) is the current portfolio
+[eighth-wave board](#eighth-wave-current-board) is the current portfolio
 at the latest checkpoint; proved truth lives in canon.
+
+## Eighth-wave current board
+
+**2026-09-06, overnight handoff.** The compact
+[session synthesis](../05-knowledge/results/overnight-hexagon-sep05-synthesis.md)
+routes the proof-bearing results and precise next obligations. Incoming
+4445–4448 are now PROVED on their stated domains; historical reservation
+descriptions below are not current status. LRC(14) and the other named
+global conjectures remain OPEN.
+
+| Live concept | Final audited signal | Next unsolved obligation |
+|---|---|---|
+| Anchor: native phase occupancy | A three-phase packet defeats its own edgeless pair graph; a four-point packet accepts exactly71 residues modulo72 at margin1/8 | Supply a useful packet from arbitrary primitive clock-three entry |
+| Body geometry and scale | AP8 plus two variable outliers gives an absolute positive physical safe-measure floor, with no tail-height ceiling; a second budget reaches1/13 | Retain two-comb overlap at the1/12 density wall, or locate another actual core |
+| Whole path cut classes | The defect splits into2B-3 nonempty classes and B-1 reversal orbits, with full real-rooted factors;776 distinct sign-bank rows survive | Relative root placement or a faithful joint pencil, not generic one-factor compatibility |
+| Native graph kernels | Complete n8: weighted nullity43 versus Boolean19; the112-square free-pair block is exactly nonsingular | Universal transversality or a native residual-rank proof; no Laplacian-gap conclusion |
+| Component and complement operations | All-order unitriangular isolated-cycle creation; integral elimination; forced odd-order index localized in one complement character | Keep the signed residual matrix and possible extra balanced-character kernels |
+| Simultaneous observer ideals | Incoming divided-reflection/Deuring argument turns our4443 inverse formula into a one-digit all-lift law | Intermediate ideals need their own attained simultaneous witness |
+
+The new LRC scope hostile is deliberate: independent quartet lifts can have
+body gcd17 while the full row has gcd1. The certificate is valid, but exact
+primitive-body/three-unit-tail frontier comparison uses `n_1=0` and `3∤u`.
+This is not a mathematical failure of the1/8 or safe-measure statements.
+The proof note retains the witness and the strongest general survivor.
+
+The final cross-lane comparison has concrete maps: phase sets to indexed
+physical packets; unrestricted paths to residue/crossing classes; graph
+components to a unitriangular minor; top reciprocal numerators to a divided
+companion. Each preserves its own native target and loses different data.
+Neither pairwise summaries, scalar root counts, weighted Fourier modes nor
+one cancelled numerator can replace the corresponding whole object.
+This is a useful procedural rule with explicit hostiles, not an assertion
+that the four mathematical objects are isomorphic.
+
+All final-wave proof notes have independent written audits. Exact producers
+retain hostile controls and optimization-live checks; source audits, full
+finite censuses and independent reproductions are labelled separately.
+No new scarce theorem namespace is needed for these owned sidecars.
 
 ## Seventh-wave current board
 
