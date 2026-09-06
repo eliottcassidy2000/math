@@ -17,7 +17,9 @@ I mod(I x,I q){return (x%q+q)%q;}
 I inv(I b,I m){for(I k=0;k<m;k++)if(b*k%m==1%m)return k;std::abort();}
 void show(const char*s,const Best&b){I g=std::gcd(b.val.p,b.val.q);std::cout<<s<<" value="<<b.val.p/g<<"/"<<b.val.q/g<<" w="<<b.w[0]<<","<<b.w[1]<<","<<b.w[2]<<" N="<<b.n<<" directions="<<b.d<<"\n";}
 int main(int argc,char**argv){
- int H=argc>1?std::atoi(argv[1]):199;I rows=0,multi=0,noCircuit=0,aboveCount=0,aboveMax=0;
+ int H=argc>1?std::atoi(argv[1]):199;
+ if(H<5||H>999){std::cerr<<"Require integer height 5<=H<=999 (bounded exact arithmetic).\n";return 2;}
+ I rows=0,multi=0,noCircuit=0,aboveCount=0,aboveMax=0;
  Best maxE,meanE,nOverC,minE;std::map<int,I> classes;V firstNo{};std::vector<V> firstPoints;
  std::map<V,std::pair<I,V>> circuits;
  for(I c=5;c<=H;c+=2)if(c%3)for(I b=3;b<c;b+=2)if(b%3){I g=std::gcd(b,c),m=c/g,iv=inv(b/g,m);

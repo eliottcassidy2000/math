@@ -22,8 +22,8 @@ which identifies the local networks with exact raw projection sums.
 gives the exact maximum-deficit consumer and closes signed norm-four rays.
 Incoming [one-ray](lrc14_one_ray_overnight_hexagon_sep05.md) and
 [two-ray](lrc14_two_ray_overnight_hexagon_sep05.md) audited result notes are
-the immediate predecessors. THM-4428 remains a **RESERVED** empty stub and
-is not used as a proved dependency. The inherited equality control is
+the immediate predecessors. THM-4428 was a **RESERVED** empty stub at
+inheritance; incoming `4d1ad2a390` independently promotes it. The inherited equality control is
 `(1,5,11)`; the first multi-ray obstruction is `(17,23,25)`; the corrected
 near miss is replacement of complete support by one selected ray.
 The least-used sidecar is the owner residue in the index-three sublattice.
@@ -61,7 +61,10 @@ hostile is `(41,47,49)`, with complete support
 `+/-{(11,5,-14),(14,-7,-5),(17,-19,4)}`. These positive representatives form
 an arithmetic progression. All 7,646 exactly-three-direction rows through
 499 have primitive circuit coefficient multiset `(1,1,1)` or `(1,1,2)`;
-universal exhaustion of these two types is **OPEN**.
+universal exhaustion of these two types was the initial question. The
+[colored-diamond proof](empty_core_colored_diamond_sep06.md) now closes it
+for any proper invisible subgroup. Concurrent THM-4431 owns the shared
+classification namespace; the independent proofs are credited together.
 
 This changes each lane: fixed-direction estimates must use determinants
 without assuming A2; deficit/area methods must retain the AP circuit; the
@@ -70,17 +73,41 @@ free semigroup from the first slice; the trusted certificate should include
 the complete raw support. The common research operation is a loss audit,
 not a claimed map between the two mathematical problems.
 
+## Audited progress and the next decisive gate
+
+- [Three through six directions](lrc14_empty_core_three_ray_sep06.md):
+  **PROVED + FINITE-EXACT + AUDITED** at all heights. The general sufficient
+  height is `c>=7r^2+13r`. The four-through-six extensions go beyond the
+  independently concurrent THM-4431 three-direction work.
+- [All short relations through norm twenty](lrc14_pair_relation_empty_core_certificate_sep06.md):
+  **PROVED + FINITE-EXACT + AUDITED**, including actual zero coordinates.
+  A local network failure must have shortest relation norm at least 22.
+- [Two-channel trinomial return](trinomial_two_channel_empty_core_returns_sep06.md):
+  **PROVED + FINITE-EXACT + AUDITED**. First nonzero moment is `g` or `2g`,
+  with both carries retained. Concurrent THM-4432 explicitly credits this
+  overlap. Incoming width-eight certificates cover an orthogonal endpoint
+  bound; first-channel count and width must not be identified.
+- [Complete coefficient box](lrc14_coefficient_box_empty_core_three_ray_sep06.md):
+  **FINITE-EXACT + independent compiler agreement** on 308 patterns,
+  uniformly giving slope `<=15/98` outside the norm-four exception.
+- [Global area/short-relation reduction](lrc14_global_slope_empty_core_certificate_sep06.md):
+  root has audited the zonotope area, discrepancy, primitive relation bound
+  `S<4sqrt(c/3)`, and parity reduction to `c<=601`. The primary full head
+  passes on 1,317,935 rows. A separate native six-sheet interval verification
+  of the whole head is the remaining audit before declaring the universal
+  local network target closed.
+
 ## Next continuation
 
-1. Independently audit and finish the fixed-direction analytic tail plus
-   complete finite heads; distinguish result notes from reserved canon.
-2. Follow the owner-coset discrepancy signal: why does the count gate have
-   only one multi-ray exception in the current box?
-3. Prove or refute the two primitive circuit types for complete three-ray
-   support using a colored convex-lattice model; first test abstract bodies
-   before specializing to the speed hexagon.
-4. Complete the nonfree two-channel Laurent-return theorem and audit the
-   first failed implication of the old tunability claim.
+1. Finish the native interval head audit and integrate the universal local
+   network proof if it passes; otherwise retain its smallest exact hostile.
+2. Re-read the actual THM-4409/4370 consumers before transporting the new
+   certificate toward entry or synchronization. A local bound alone does not
+   prove LRC(14).
+3. Use the complete colored fan and incoming affine-baseline deficit result
+   together; repeated progressions alone can have zero curvature.
+4. Pursue three or more first-channel Laurent polynomials, comparing the
+   new carry-sign proof with incoming width-eight symbolic certificates.
 5. Fetch incoming commits at coherent checkpoints, revisit every board item,
    and push only reviewed session paths. Use the META-PATTERNS cards
    "Search the statement before the method", "Correct the object before

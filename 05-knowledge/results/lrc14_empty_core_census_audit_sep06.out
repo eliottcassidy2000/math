@@ -1,0 +1,15 @@
+INDEPENDENT H79 DIRECT BOX: 2910 rows; direction counts [(0, 36), (1, 1268), (2, 698), (3, 796), (4, 108), (5, 4)]
+MULTI LEADERS maxE,minE,meanE,N/c: [(Fraction(18, 301), (5, 37, 43)), (Fraction(12, 343), (35, 47, 49)), (Fraction(1088, 24087), (11, 31, 37)), (Fraction(6, 29), (19, 23, 29))]
+THREE-RAY CIRCUITS [((1, 1, 1), 505), ((1, 1, 2), 291)] ADDITIVE HOSTILES 266
+LITERAL CONTROL (1, 5, 11) N 2 E ('6/77', '6/77', '6/77')
+LITERAL CONTROL (1, 5, 7) N 2 E ('8/245', '6/49', '4/35')
+LITERAL CONTROL (17, 23, 25) N 4 E ('106/4025', '12/425', '2546/68425')
+LITERAL CONTROL (19, 23, 29) N 6 E ('156/4669', '192/3857', '3840/88711')
+LITERAL CONTROL (41, 47, 49) N 6 E ('276/16121', '376/14063', '10/287')
+LITERAL CONTROL (5, 37, 43) N 6 E ('240/11137', '18/301', '2822/55685')
+LITERAL CONTROL (35, 47, 49) N 8 E ('12/343', '12/343', '606/16121')
+LITERAL CONTROL (11, 31, 37) N 6 E ('216/8029', '144/2849', '5128/88319')
+LITERAL CONTROL (5, 49, 251) N 10 E ('1076/86093', '30/1757', '30/1757')
+FINITE ABSTRACT BOX5: live x mod3!=0; symmetric closed hull; three primitive directions: [((1, 1, 1), 10), ((1, 1, 2), 19)]
+OPEN: arbitrary height, universal colored circuit classification, LRC14
+EXPLICIT CHECKS 4534

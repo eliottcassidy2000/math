@@ -1,0 +1,18 @@
+PROVED: complete supports with 3,4,5,6 primitive directions have every E_i<6/77
+GENERAL TAIL: r>=2 and c>=7r^2+13r imply every E_i<6/77
+EXACT ENVELOPE TAIL CUTOFFS {3: 99, 4: 159, 5: 233, 6: 319}
+COMPLETE ENUMERATION 190951 primitive sorted distinct positive odd ternary-unit triples c<319
+HEAD 3 rays; universe 5409 selected 1791 every-projection leader (Fraction(18, 301), (5, 37, 43), (Fraction(240, 11137), Fraction(18, 301), Fraction(2822, 55685))) maximum raw count (10, (13, 77, 95))
+HEAD 4 rays; universe 23210 selected 5004 every-projection leader (Fraction(30, 581), (1, 67, 83), (Fraction(808, 38927), Fraction(30, 581), Fraction(30, 581))) maximum raw count (16, (85, 149, 155))
+HEAD 5 rays; universe 72458 selected 13656 every-projection leader (Fraction(36, 623), (7, 77, 89), (Fraction(12, 539), Fraction(232, 4361), Fraction(36, 623))) maximum raw count (24, (143, 205, 217))
+HEAD 6 rays; universe 190951 selected 22971 every-projection leader (Fraction(48, 1001), (13, 121, 143), (Fraction(240, 11011), Fraction(48, 1001), Fraction(500, 11011))) maximum raw count (30, (161, 247, 301))
+COUNT-GATE MISSES WITHIN DECLARED PROOF HEADS [(3, (19, 23, 29), 6, (Fraction(156, 4669), Fraction(192, 3857), Fraction(3840, 88711)))]
+CONTROL (1, 5, 103) rays 3 raw count 6 directions ((7, -22, 1), (8, 19, -1), (23, 16, -1)) E ('62/3605', '16/721', '18/721')
+CONTROL (1, 5, 175) rays 4 raw count 8 directions ((5, 34, -1), (10, -37, 1), (20, 31, -1), (35, 28, -1)) E ('24/1225', '24/1225', '24/1225')
+CONTROL (1, 5, 233) rays 5 raw count 10 directions ((2, -47, 1), (13, 44, -1), (17, -50, 1), (28, 41, -1), (43, 38, -1)) E ('30/1631', '26/1631', '30/1631')
+CONTROL (1, 5, 319) rays 6 raw count 12 directions ((1, -64, 1), (14, 61, -1), (16, -67, 1), (29, 58, -1), (44, 55, -1), (59, 52, -1)) E ('36/2233', '36/2233', '36/2233')
+CONTROL (107, 127, 149) rays 3 raw count 14 directions ((5, 4, -7), (53, -47, 2), (58, -43, -5)) E ('416/18923', '424/15943', '400158/14173327')
+CONTROL (41, 47, 49) rays 3 raw count 6 directions ((11, 5, -14), (14, -7, -5), (17, -19, 4)) E ('276/16121', '376/14063', '10/287')
+SEMANTIC SHA256 62736b63fe86379f818205650fafc9f2a1cfc7730cbf1506d6a4b1b4168f64a8
+CHECKS 4682652 LITERAL CHECKS 43428
+OPEN: seven or more directions below their quadratic height cutoff; entry; synchronization; LRC14

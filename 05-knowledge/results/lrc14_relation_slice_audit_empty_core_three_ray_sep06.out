@@ -1,0 +1,8 @@
+PASS independent short-relation slice certificate audit
+POLYTOPE COMPILER: all 73 patterns, every signed permutation, exact 2D clipping and third cross coordinate
+RESIDUES: complete F3 kernel and affine defect fibers, both owner classes
+DIRECT SPEED UNIVERSE 16089 maximum height 139
+HEAD MEMBERSHIPS 4083 UNIQUE HEAD ROWS 1944
+EXACT CONSUMER: full integer boxes; three projections; physical mass; unique equality [(1, 5, 11)]
+COMPLETE HEAD SEMANTIC SHA256 ff9eb3c383b719cd5e2fd767d3ec8858f1b851df4c6f4d97dca0fa390c788168
+CHECKS 13383

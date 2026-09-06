@@ -1,0 +1,8 @@
+PASS independent actual-zero-coordinate relation addendum audit
+PATTERNS 11; all rectangle slopes independently verified by clipped polygons and closed formula
+COMPLETE SPEED UNIVERSE 2910 height<=79
+HEAD MEMBERSHIPS 209 UNIQUE HEAD ROWS 182
+EXACT CONSUMERS: all raw integer-box carriers, all three projections, physical mass
+UNIQUE EQUALITY [(1, 5, 11)]
+COMPLETE HEAD SEMANTIC SHA256 e57cd661d136ac45511b795207fcf3ab2dc1df5a7f16f28487cb56407eba097d
+CHECKS 210

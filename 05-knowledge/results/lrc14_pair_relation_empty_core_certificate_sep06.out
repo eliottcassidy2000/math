@@ -1,0 +1,17 @@
+pair (1, 5) defects (-1, 1) error_lengths (Fraction(2, 35), Fraction(2, 35)) slope 2/21 intercept 2 cutoff 231/10 head_rows 6
+pair (1, 7) defects (-1, 1) error_lengths (Fraction(3, 49), Fraction(3, 49)) slope 4/49 intercept 2 cutoff 539/27 head_rows 5
+pair (1, 11) defects (-2, -1, 1, 2) error_lengths (Fraction(3, 77), Fraction(3, 77), Fraction(3, 77), Fraction(3, 77)) slope 8/77 intercept 4 cutoff 154/3 head_rows 15
+pair (1, 13) defects (-2, -1, 1, 2) error_lengths (Fraction(3, 91), Fraction(3, 91), Fraction(3, 91), Fraction(3, 91)) slope 8/91 intercept 4 cutoff 2002/47 head_rows 12
+pair (1, 17) defects (-2, -1, 1, 2) error_lengths (Fraction(3, 119), Fraction(3, 119), Fraction(3, 119), Fraction(3, 119)) slope 8/119 intercept 4 cutoff 2618/75 head_rows 9
+pair (1, 19) defects (-4, -2, -1, 1, 2, 4) error_lengths (Fraction(2, 133), Fraction(3, 133), Fraction(3, 133), Fraction(3, 133), Fraction(3, 133), Fraction(2, 133)) slope 34/399 intercept 6 cutoff 13167/212 head_rows 19
+pair (5, 7) defects (-2, -1, 1, 2) error_lengths (Fraction(4, 49), Fraction(11, 49), Fraction(11, 49), Fraction(4, 49)) slope 6/49 intercept 4 cutoff 539/8 head_rows 58
+pair (5, 11) defects (-2, -1, 1, 2) error_lengths (Fraction(10, 77), Fraction(15, 77), Fraction(15, 77), Fraction(10, 77)) slope 2/21 intercept 4 cutoff 231/5 head_rows 13
+pair (5, 13) defects (-2, -1, 1, 2) error_lengths (Fraction(1, 7), Fraction(15, 91), Fraction(15, 91), Fraction(1, 7)) slope 116/1365 intercept 4 cutoff 30030/727 head_rows 12
+pair (7, 11) defects (-2, -1, 1, 2) error_lengths (Fraction(13, 77), Fraction(20, 77), Fraction(20, 77), Fraction(13, 77)) slope 50/539 intercept 4 cutoff 539/12 head_rows 13
+pair (7, 13) defects (-4, -2, -1, 1, 2, 4) error_lengths (Fraction(2, 91), Fraction(16, 91), Fraction(3, 13), Fraction(3, 13), Fraction(16, 91), Fraction(2, 91)) slope 68/637 intercept 6 cutoff 21021/263 head_rows 47
+patterns 11 head_memberships 209
+unique_head_rows 182 support_classes {'empty': 21, 'multi': 32, 'norm4': 16, 'other_one': 113}
+head_equalities ((1, 5, 11),)
+complete_head_digest e57cd661d136ac45511b795207fcf3ab2dc1df5a7f16f28487cb56407eba097d
+explicit_checks 3144
+PASS: all support-two primitive relation shells through l1=20 satisfy the network target
