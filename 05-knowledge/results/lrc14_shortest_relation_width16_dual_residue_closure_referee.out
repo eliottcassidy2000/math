@@ -1,0 +1,20 @@
+LRC14 SHORTEST-RELATION WIDTH-16 DUAL-RESIDUE CLOSURE REFEREE
+arithmetic=exact integers/Fraction; standalone_no_repo_import=true; optimizable_assertions=0
+scope=sorted primitive distinct positive odd ternary-unit triples with mu1=16
+residue_types=unit:three geometric layers/six coset-layers; onezero:four geometric/coset-layers
+unit_shapes=(1, 1, 14),(1, 2, 13),(1, 4, 11),(1, 5, 10),(1, 7, 8),(2, 7, 7),(4, 5, 7)
+onezero_shapes=(0, 5, 11),(2, 3, 11),(2, 5, 9),(3, 5, 8),(5, 5, 6)
+signed_feasible=unit:51/144; onezero:32/96
+analytic_unit=ell_-3+ell_0+ell_3<=45c/196; automatic tail c>=209
+analytic_onezero=ell_1+ell_2<=11c/56; automatic tail c>=79
+finite_base=H205; values=69; eligible=51873; admitting=6228
+shortest_rows=5230; unit_rows=2210; onezero_rows=3106; mixed_rows=86; line_reconstructions=5358
+dense_rows=0; verdict_count=ALL_AUTOMATIC
+first_shell_row=(43, 53, 61):N=6:directions=2
+unit_density_leader=(71, 95, 97):N=16:ratio=16/97
+onezero_density_leader=(109, 119, 125):N=18:ratio=18/125
+phase_blind_count_hostiles=(53, 71, 73):N=10:bound=14,(55, 71, 73):N=8:bound=14,(61, 103, 109):N=14:bound=20
+endpoint_phase_words=(53, 71, 73):((1, 2), (2, 2), (2, 1)),(55, 71, 73):((1, 1), (2, 2), (1, 1)),(61, 103, 109):((2, 2), (3, 3), (2, 2))
+cheapest_extra_invariant=(beta,live k-residue set,open-endpoint floor pairs)
+checks=35279
+verdict=PASS

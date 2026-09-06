@@ -35,6 +35,16 @@
   genera. Each theorem links full proofs, explicit universes, hostile controls,
   reproduction commands and source/output manifests. Global LRC(14), wider
   Laurent returns, four-node/higher-jet Smith laws remain OPEN.
+- The colored-lattice basis and exactly-three-direction closure
+  ([THM-4431](../../01-canon/theorems/THM-4431-colored-lattice-basis-and-three-direction-lrc-network-closure.md)):
+  **PROVED ELEMENTARY RELATIVE TO THM-4386/4414 + FINITE-EXACT +
+  INDEPENDENTLY AUDITED; LRC(14) OPEN.** Every complete three-direction live
+  carrier body contains a live basis of its index-three owner lattice; the
+  third ray is `u+v` or `-2u+v`. Pairwise determinant floors and reciprocal
+  summation close all three projections above height 99, while an independent
+  5,409-row head closes the rest. Referee hashes: `227576fe...d8bb` /
+  `7dc3cfe7...0eb`; 65,789 optimization-live gates (raw LF bytes). Four or
+  more directions, chart entry, and synchronization remain open.
 - The one- and two-memory source-normal row-fourteen companions
   ([THM-4426](../../01-canon/theorems/THM-4426-source-normal-row-fourteen-weight-eighteen-memory-repair.md)):
   **PROVED FINITE-ROW REPAIR RELATIVE TO THM-4410/4415 + VERIFIED-EXACT +
@@ -57,16 +67,17 @@
   set closes at every height, uniquely sharply at `(1,5,11)`. The exact
   zonotope has two-coset bulk `2(a+b+c)/49` and width `mu1/7` relative to
   `3Lambda`; a ternary-unit relation of `l1` norm at most 14 forces rank one.
-  Every row of shortest dual `l1` width at most 14 is closed. In the one-zero
-  sector, all rows are count-automatic except the strict `A2` control
-  `(19,23,29)` at width ten; the full-support sector collapses to rank one.
+  Every row of shortest dual `l1` width at most 16 is closed. Through width
+  14 the sole nonautomatic row is the strict `A2` control `(19,23,29)`;
+  width 16 is count-automatic for unit, one-zero, and mixed minimizers.
   The half-body class satisfies `2h-1<=m`, sharpened to `3h-3<=m` in affine
   dimension two, with a sharp two-shell `A2` control at `(85,97,107)`.
   Primary hashes: `f001d624...c571` / `ba61466c...805d`; rank-one referee:
   `0123a7b2...86d9` / `a5811639...15c5`; geometry referee:
   `7df1d419...8dbf` / `c5c91e52...dba1`; one-zero referee:
   `babbe014...b11fc` / `d972435f...6fe32`; four-layer referee:
-  `d2176e34...9ece` / `9973ed3d...ff81` (raw LF bytes).
+  `d2176e34...9ece` / `9973ed3d...ff81`; width-sixteen referee:
+  `1db47154...5fad5` / `a5a2db3b...f251` (raw LF bytes).
 
 - The height-499 atlas, dense geometry classifier, and low-carrier shell
   ladder

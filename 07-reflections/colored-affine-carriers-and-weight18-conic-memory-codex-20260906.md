@@ -111,8 +111,18 @@ control is exactly the first case: its shortest dual relation is
 norms 16, 18, and 20; confusing those carrier norms with the dual width is a
 type error. Exact two-chord analysis now closes all one-zero shortest widths
 through fourteen, with this `A_2` row the unique nonautomatic case. Together
-with the full-support central-layer theorem, every surviving hostile has
-shortest dual width at least sixteen.
+with the full-support central-layer theorem, every surviving hostile first
+had shortest dual width at least sixteen.
+
+The width-sixteen shell is now closed exactly as well. Its unit minimizers
+occupy three geometric dual layers and its one-zero minimizers occupy four;
+exact chord envelopes plus the complete height-205 base prove `N<2c/11` for
+all `5,230` shortest-shell rows. The first row `(43,53,61)` is already a
+mixed, two-direction control. Three apparent chord-ceiling hostiles disappear
+only after restoring each open endpoint's residue phase. Thus the natural
+next coordinate was not another direction invariant but the floor pair of an
+open one-dimensional chord. Parity advances the genuine residual to shortest
+dual width at least eighteen.
 
 The independent H499 classification supporting
 [THM-4423](../01-canon/theorems/THM-4423-lrc14-height-499-atlas-and-ninety-carrier-global-closure.md)
@@ -160,6 +170,13 @@ Three small circuits now prevent a cosmetic `A_2` model:
 
 The correct rank-two object is a colored affine circuit with primitive
 coefficients and offsets, not an unlabeled hexagon.
+
+The colored-lattice descent now makes this precise for complete bodies with
+exactly three directions: some two live rays form a basis of the index-three
+owner lattice, and the third is, up to gauge, only `u+v` or `-2u+v`. The
+reciprocal determinant bound then closes every such network at all heights.
+The arithmetic-progression hostile was therefore signal: it supplied the
+second normal form rather than refuting a finite classification.
 
 ## 5. Adjacent triangular addresses rationalize row fourteen
 
@@ -249,22 +266,24 @@ proves the combined chord bound `ell_1+ell_2<=3c/14`, and isolates the strict
 
 ## 8. Procedurally generated next tasks
 
-1. Audit the reserved exactly-three-direction theorem candidate. Its missing
-   all-height hinge is a colored-lattice basis descent and the classification
-   of complete three-ray circuits as `(1,1,1)` or `(1,1,2)`; finite H99
-   evidence is not a substitute for that lemma.
-2. Classify the first surviving shortest-width shell `mu_1=16`. Determine
-   whether its extra layers admit a new all-height count bound or require a
-   baseline-aware affine-circuit invariant.
+1. Extend the live-basis descent to four or more directions: classify the
+   colored fan around a native basis and ask which consecutive determinant
+   words can coexist in one complete convex roof body. Preserve affine
+   offsets; the two three-ray normal forms are boundary controls.
+2. Audit the universal slice-slope candidate: prove the monotone-section
+   discrepancy bound with actual-zero endpoint jumps, independently replay
+   the complete coefficient box, and verify the full height-601 head by a
+   genuinely separate six-sheet or coordinate-pair implementation.
 3. On the true residual `c>=503, N>=114`, combine the compulsory colored AP
    count with anchored affine deficit values. Any proposed inequality must
    pass both the dense `A_2` row and the flat count-safe family.
 4. Start the `N=114` shell at `(114,503)`, but classify primitive affine
    circuits and owner-colored baselines rather than merely extending the
    height census.
-5. For the complete weight-eighteen Jacobian face, freeze the rational conic
-   parametrization and determine whether the row-fifteen relative response
-   is generically soluble or cuts a genuine divisor on that curve.
+5. For the complete weight-eighteen Jacobian face, freeze the row-fifteen
+   relative response on the rational conic and determine the first allowable
+   source weight: current scratch evidence points to a weight-24 payer and a
+   genuine obstruction through weight 23.
 6. Test every natural-number state with the collision pair `p^9,p^8y` and
    every tournament state with parallel carrier ties before using it in a
    proof graph.

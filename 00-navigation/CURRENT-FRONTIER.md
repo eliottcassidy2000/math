@@ -48,15 +48,16 @@ gives square sum `<=195`; THM-4019 refutes its sharp arbitrary-lattice target.
   gives sharp pair mass/component bounds and closes `c/b>=44/13`. THM-4420
   closes both unit near-doubling rays; THM-4422 closes every signed norm-four
   family and gives exact deficit/Beatty rows; fixed convex averages fail.
-  THM-4425 closes rank-one support and every shortest dual width `<=14`; only
+  THM-4425 closes rank-one support and every shortest dual width `<=16`; only
   the directly closed `(19,23,29)` `A_2` is not count-automatic. THM-4423
   verifies 753,853 triples through height 499 and proves all-height `N<=112`;
   its 4,599 dense rows have 4,598 norm-four rays and that unique `A_2`.
   [THM-4428](../01-canon/theorems/THM-4428-lrc14-two-direction-network-closure-and-sharp-one-direction-gap.md)
   closes all one- and exactly-two-direction networks, sharply `12/161` off
-  norm four in the one-ray case. Any remaining projection hostile has
-  `c>=503`, `N>=114`, `c/b<44/13`, shortest dual width at least 16, and at
-  least three primitive carrier directions. Owner/hinge depth and entry remain.
+  norm four in the one-ray case. THM-4431 closes exactly three directions via
+  a live owner-lattice basis and two circuit types. Any remaining hostile has
+  `c>=503`, `N>=114`, `c/b<44/13`, dual width `>=18`, and at least four
+  primitive carrier directions. Owner/hinge depth and entry remain.
 - **Transport/incidence:** [overnight synthesis](../05-knowledge/results/overnight_20260906_synthesis.md)
   combines cap bound `204/5957`, midpoint payments and owner-line closure. A
   residual needs a two-dimensional owner polygon, an affine collinear triple

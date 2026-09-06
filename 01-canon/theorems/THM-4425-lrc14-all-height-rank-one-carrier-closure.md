@@ -9,9 +9,10 @@ status: >
   the three signed norm-four directions, the carrier count itself is below
   the automatic deficit threshold from height 35 onward; the remaining
   finite base is inherited from THM-4422. In addition, every row whose
-  shortest primitive relation has l1 norm at most fourteen satisfies the
-  projection target: the one-zero sector is automatic except for the strict
-  A2 control (19,23,29), while the full-support sector reduces to rank one.
+  shortest primitive relation has l1 norm at most sixteen satisfies the
+  projection target: through width fourteen the one-zero sector is automatic
+  except for the strict A2 control (19,23,29), while every exact-width-sixteen
+  row is count-automatic, including unit, one-zero, and mixed minimizers.
   Equality is unique at (1,5,11).
   This is not a rank-two carrier theorem, chart-entry or synchronization
   result, or a proof of LRC(14).
@@ -42,6 +43,10 @@ one_zero_wide_script: 04-computation/lrc14_one_zero_shortest_width_10_14_layer_c
 one_zero_wide_output: 05-knowledge/results/lrc14_one_zero_shortest_width_10_14_layer_count_referee.out
 one_zero_wide_script_sha256: d2176e34ceb79d10af7f8e74936b8a696898437b6d1fd1ddd6fbd71174f79ece
 one_zero_wide_output_sha256: 9973ed3d57944dc2310209ec8b027dcbb985e7f1b83f1268cc0f4252174aff81
+width_sixteen_script: 04-computation/lrc14_shortest_relation_width16_dual_residue_closure_referee.py
+width_sixteen_output: 05-knowledge/results/lrc14_shortest_relation_width16_dual_residue_closure_referee.out
+width_sixteen_script_sha256: 1db47154cd76c0fa60639b2511110b71c249e876c6e0799b7aa82a480cd5fad5
+width_sixteen_output_sha256: a5a2db3b2ed684b280377dd7d4cf78786333381b1c21cd440da97348ece1f251
 hash_basis: raw LF bytes
 audit: >
   PASS. A standalone definition-level lattice enumerator checks all 165
@@ -62,7 +67,11 @@ audit: >
   byte-match the frozen LF artifact. Its four-layer companion proves the
   exact norm-ten/twelve/fourteen chord bound, reconstructs the finite base,
   and isolates the unique nonautomatic A2 row in 28,434 further gates.
-  Normal and optimized outputs again byte-match the frozen LF artifact.
+  Normal and optimized outputs again byte-match the frozen LF artifact. A
+  fourth standalone referee classifies every exact-width-sixteen coefficient
+  and residue type, proves its analytic tails, and reconstructs all 5,230
+  rows in the complete height-205 base in 35,279 further optimization-live
+  gates. Its normal and optimized outputs byte-match the frozen LF artifact.
 ---
 
 # THM-4425 -- LRC14 all-height rank-one carrier closure
@@ -70,7 +79,7 @@ audit: >
 **PROVED ELEMENTARY RELATIVE TO THM-4414/4422 + VERIFIED-EXACT +
 INDEPENDENTLY AUDITED.** Every one-direction live
 carrier configuration satisfies the local raw projection target, as does
-every row of shortest dual `l1` width at most fourteen. The proof does not
+every row of shortest dual `l1` width at most sixteen. The proof does not
 construct physical entry or synchronize the other eleven speeds; `LRC(14)`
 remains **OPEN**.
 
@@ -101,9 +110,10 @@ min_i S_i(w)<=6/77.                                     (3)
 Equality in `(3)` occurs only for `w=(1,5,11)`.
 
 Independently of the rank-one hypothesis, the same conclusion holds whenever
-the shortest primitive integer relation `n dot w=0` has `||n||_1<=14`.
+the shortest primitive integer relation `n dot w=0` has `||n||_1<=16`.
 The only non-count-automatic row in that added sector is the strict
-`A_2` control `(19,23,29)`.
+`A_2` control `(19,23,29)` at width ten; every exact-width-sixteen row
+satisfies the strict count gate `N<2c/11`.
 
 ## 2. Exact natural address on a carrier line
 
@@ -383,6 +393,66 @@ mu_1(w)<=14       implies       min_i S_i(w)<=6/77.     (22m)
 Every remaining projection hostile therefore has shortest dual l1 width at
 least sixteen.
 
+### 4.2. The complete width-sixteen shell is count-automatic
+
+Suppose now that the shortest primitive relation has exact norm sixteen.
+The residue dichotomy above is still exhaustive. Up to sign and coordinate
+permutation, the feasible magnitude shapes are
+
+```text
+unit:   (1,1,14),(1,2,13),(1,4,11),(1,5,10),(1,7,8),
+        (2,7,7),(4,5,7);
+one-zero:
+        (0,5,11),(2,3,11),(2,5,9),(3,5,8),(5,5,6).    (22n)
+```
+
+Choose `q` with `n dot q=1`, put `m=w cross q`, and write every carrier
+uniquely as `C=k n+beta m`. Equation `(20)` gives `|beta|<24/7`. The two
+owner cosets then give the exact disjoint layer dictionaries
+
+```text
+unit:     beta in {-3,0,3}, with two live k classes mod 3;
+one-zero: beta in {-2,-1,1,2}, with one live k class mod 3. (22o)
+```
+
+For a fixed layer the three roofs cut an open rational interval in `k`.
+Exact endpoint comparison on every signed coefficient cone gives
+
+```text
+unit:     ell_-3+ell_0+ell_3 <=45c/196;
+one-zero: ell_1+ell_2         <=11c/56.                (22p)
+```
+
+Counting the retained residue classes in these open chords proves the strict
+half-count bound `N/2<c/11` for `c>=209` in the unit case and for `c>=79`
+in the one-zero case. The complete eligible universe through height 205 has
+`51,873` rows. Exactly `5,230` have shortest width sixteen: `2,210` admit a
+unit minimizer, `3,106` admit a one-zero minimizer, and `86` admit both.
+Direct carrier enumeration and all `5,358` layer reconstructions agree point
+for point, and every one of these rows satisfies `11N<2c`.
+
+The first shell row is the genuinely two-direction mixed control
+
+```text
+(43,53,61), N=6,
+Lambda=+/-{(5,4,-7),(10,8,-14),(22,-19,1)}.            (22q)
+```
+
+Raw chord lengths with separate ceiling errors leave exactly three false
+hostiles, `(53,71,73)`, `(55,71,73)`, and `(61,103,109)`. Retaining the
+open-endpoint floor pair for each `(beta,k mod 3)` chord restores the exact
+counts. This is the cheapest lost coordinate: it records longitudinal phase,
+not new two-dimensional geometry.
+
+Combining this shell with `(22m)` proves
+
+```text
+mu_1(w)<=16       implies       min_i S_i(w)<=6/77.     (22r)
+```
+
+Every remaining projection hostile therefore has shortest dual `l1` width at
+least eighteen. The parity step is load-bearing: widths are even.
+
 ## 5. A half-body additive boundary dichotomy
 
 The same two live cosets supply a rigorous rank-versus-boundary statement.
@@ -431,10 +501,10 @@ boundary-depth refinement must preserve.
 
 Every counterexample to the remaining THM-4414 projection inequality must
 now contain two nonparallel live carrier directions and have shortest dual
-`l1` width at least sixteen. This is stronger than removing a list of guessed
+`l1` width at least eighteen. This is stronger than removing a list of guessed
 speed rays: it removes every rank-one carrier configuration, including
 directions of arbitrarily large coefficient norm, and every narrow
-multi-layer configuration through width fourteen.
+multi-layer configuration through width sixteen.
 
 The first finite two-dimensional dense control remains THM-4422's additive
 hexagon
@@ -465,6 +535,8 @@ python -B 04-computation/lrc14_one_zero_shortest_width_le8_automatic_count_refer
 python -B -O 04-computation/lrc14_one_zero_shortest_width_le8_automatic_count_referee.py
 python -B 04-computation/lrc14_one_zero_shortest_width_10_14_layer_count_referee.py
 python -B -O 04-computation/lrc14_one_zero_shortest_width_10_14_layer_count_referee.py
+python -B 04-computation/lrc14_shortest_relation_width16_dual_residue_closure_referee.py
+python -B -O 04-computation/lrc14_shortest_relation_width16_dual_residue_closure_referee.py
 ```
 
 The primary rank-one verifier performs 1,069 checks, its clean-room referee
@@ -472,3 +544,5 @@ performs 29,689, and the geometry referee performs 9,178. Ordinary and
 optimized outputs byte-match their respective frozen raw-LF artifacts. The
 one-zero-width referee adds 3,506 exact optimization-live checks.
 The four-layer referee adds 28,434 more.
+The width-sixteen referee adds 35,279 optimization-live gates, reconstructs
+all 5,230 shortest-shell rows, and has no repository imports or assertions.
