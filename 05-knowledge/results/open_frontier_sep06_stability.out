@@ -1,0 +1,15 @@
+PASS improved dimension-independent global duplication stability
+K0=(12sqrt2-16)/3; exactly twice the inherited bound; best global constant remains OPEN
+Proof certificates: energy-adjusted objective, signed secant, derivative/domain remainder, diagonal and two-atom boundaries
+Declared signed universe: 49 prefixes; 43 eligible; 6 exceptions
+EXCEPTION -2 1 zero prefix sum
+EXCEPTION -1 0 zero prefix sum
+EXCEPTION -1/2 -1/2 zero prefix sum
+EXCEPTION 0 -1 zero prefix sum
+EXCEPTION 0 0 zero energy
+EXCEPTION 1 -2 zero prefix sum
+Actual uniform-atom families: 21 with N=2,...,8 and L=2,8,100
+Other controls: 6 signed macro shapes; 3 one-atom boundary rows; 3 relaxed diagonal rows
+Relaxation obstruction: fractional number of equal roots between two and three; K0 sharp for this envelope only
+Exact gates: 341
+Trace SHA256: aa4036db4aaec90e3c438eb7e13fa1cf4367b67636fa30a073c0a3ba1cdcd391

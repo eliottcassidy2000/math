@@ -9,6 +9,28 @@ Format per entry:
 - Why it was wrong
 - The correct framing
 
+## 2026-09-06 continuation -- fixed anchors, root shape and integer packing
+
+- [Linear anchoring](../05-knowledge/results/open_frontier_sep06_laurent.md)
+  does not repair the abstract Euler/pencil model. The ratio64 corrected
+  control had negative response, but the same genuine first coefficients
+  `(13,12,11)` admit positive full response for every ratioR>=384 and exact
+  algebraic double cancellation between256 and384. The missing coordinate
+  is the higher coefficient law; root shape can still concentrate while
+  the original first-zero phase escapes to infinity. This is a model
+  obstruction, not an actual binomial-path counterexample.
+- [Stability compression](../05-knowledge/results/open_frontier_sep06_stability.md)
+  loses integer tail multiplicity. Its best constant corresponds formally
+  to a number of equal positive roots strictly between two and three.
+  That obstruction bounds the method, not the best constant for actual
+  finite normalized roots. Signed first-moment feasibility is a separate
+  constraint even when an integer square-mass packing exists.
+- [Cross-divisor controls](../05-knowledge/results/open_frontier_sep06_decoder.md)
+  must pass the inherited subset profiles before being called residual.
+  The billion-divisor5+8 actual entry fails1558 such checks and was already
+  closed. Four small unitless controls pass all profiles. Neither label
+  asserts an unsafe row or establishes universal entry.
+
 ## 2026-09-06 overnight -- unit placement and coherent grid normalization
 
 [The larger-unit closure](../05-knowledge/results/overnight15_20260906_lrc_larger_unit.md)
