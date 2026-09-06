@@ -24,8 +24,8 @@ Then read frontier, guardrails, theorem; logs are history.
 1. **LRC(14) is first open.** THM-4347 closes height `40`. The
    [local synthesis](../05-knowledge/results/overnight4_20260906_lrc_parityfree_native.md)
    closes every scale-three tail ceiling; [THM-4442](../01-canon/theorems/THM-4442-lrc14-bounded-ten-body-parity-free-scale-three-completion.md)
-   completes bounded ten-bodies; [THM-4444](../01-canon/theorems/THM-4444-lrc14-signed-112-sharp-one-ray-classification.md)
-   isolates the two `(112)` boundary packets. Entry and `2+12` remain open.
+   completes bounded ten-bodies. THM-4444 isolates the two `(112)` boundary
+   packets. Entry and `2+12` remain open.
 2. **The `q <= 25` period claim is refuted.** THM-762/764 exhibit `26*{1,...,12} union {339}`, whose first good period is `27`.
 3. **Good-period existence is a maximum statement.** The tight resonant AP
    defeats average/count arguments; see MISTAKE-127/129/130.
