@@ -54,7 +54,7 @@ gives square sum `<=195`; THM-4019 refutes its sharp arbitrary-lattice target.
   selection. No universal body floor reaches them; entry remains open.
 - **Transport/incidence:** [overnight synthesis](../05-knowledge/results/overnight_20260906_synthesis.md)
   retains cap/event refinements; [virtual walls](../05-knowledge/results/overnight9_20260906_lrc_virtual_pair_wall_margin.md)
-  give sharp fibre margin `abs(||dy||-1/3)/2` and selected safe components.
+  give sharp fibre margin `abs(||dy||-1/3)/2`. [Actual unit-core entry](../05-knowledge/results/overnight11_20260906_lrc_unit_component.md) closes its rank-eleven subclass.
   [Sparse transport](../05-knowledge/results/synthesis_20260905_lrc_sparse_transport.md) retains weights and the selector gap.
 - **Residual ranks:** THM-4333/4338 close fixed-pool ranks three/four, not arbitrary entry.
 - **PROVED:** [THM-2928](../01-canon/theorems/THM-2928-critical-seven-comb-grid-tensorization-and-drift-tariff.md)/2941: literal zero/one/two/three-drift sectors are empty; `k=2,3` are finite.
@@ -338,8 +338,8 @@ lift/phase clocks.
 
 ## Other active portfolio
 
-- **No-three-line:** [diagonal excess](../05-knowledge/results/overnight10_20260906_no3line_defect.md)
-  gives uniform `P(success)<=exp(-n/900)` for n>=4; asymptotic rate>=0.0065336. Extremal asymptotics OPEN.
+- **No-three-line:** [fixed rows](../05-knowledge/results/overnight11_20260906_no3line_rowfreeze.md)
+  give uniform asymptotic rate>=0.0130673; the earlier finite exp(-n/900) bound remains. Extremal asymptotics OPEN.
 - **P-adic zeta:** external density claims remain **PREPRINT / UNDER AUDIT**.
   [THM-4255](../01-canon/theorems/THM-4255-specialization-kernel-and-transverse-hasse-jet-repair.md)/[4263](../01-canon/theorems/THM-4263-moving-multigraph-filtered-jet-and-finite-factor-density-transport.md) prove graph/jet kernels, finite-factor UI transport and conditional hazards. MISTAKE-527 forbids chosen-section refutations; the external Cartier steps still need a typed audit.
 - **Matching logic:** THM-4090 gives a two-sort Figure-2 calculus
@@ -354,7 +354,8 @@ lift/phase clocks.
   [THM-4439](../01-canon/theorems/THM-4439-all-node-twojet-metric-precision-by-terminal-clusters.md): all-node metric largest factors.
   [THM-4443](../01-canon/theorems/THM-4443-arbitrary-jet-precision-and-dyadic-unit-boundary.md): jet inverse denominators and full dyadic3-node3-jet factors (eight costs); metric precision fails at uniform3 and(2,2,1).
   [Four jets](../05-knowledge/results/overnight8_20260906_jets_residue.md): allodd precision and full p7 factors with an AP bit.
-  [Deuring](../05-knowledge/results/overnight9_20260906_jets_deuring.md):3-node loss `(3m-1)e-[H_p(a)=0]`, oddp,m=(p+1)/2,e>=1; intermediate ideals OPEN.
+  [Deuring](../05-knowledge/results/overnight9_20260906_jets_deuring.md):3-node loss `(3m-1)e-[H_p(a)=0]`, oddp,m=(p+1)/2,e>=1.
+  [Full p11/p13 laws](../05-knowledge/results/overnight11_20260906_smith_prime_banks.md) need an extra p13 AP bit; general intermediate ideals OPEN.
 - **Even-graph spectrum:** THM-4083 closes `D=3,4`;
   [THM-4416](../01-canon/theorems/THM-4416-even-graph-cumulative-d5-d6-spectral-gap.md)
   closes `D=5,6`; [THM-4427](../01-canon/theorems/THM-4427-all-cumulative-signed-cycle-gaps-by-transposition-rigidity.md)

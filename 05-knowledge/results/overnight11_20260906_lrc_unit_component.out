@@ -1,0 +1,9 @@
+STATUS: PASS; scoped actual-entry primitive-unit eleven-component closure
+BOUNDED DIVISION: 5187 inclusive controls; 3865 scale-cleared crossing controls
+ATLAS: 5855 pairs; p<=177,q<=355; residual t<=677
+NONVACUOUS ACTUAL ENTRY CONTROL: (22, 1, 35184372088832, 1, 3, 'forced large pair scale', '33294484706755/70368744177664', '6836061357677/70368744177664')
+GENERAL CLOCK WITNESSES: 45 exact physical controls in both branches
+NONUNIT HOSTILE: primitive K= 237907127334685115 but all internal pair heights<=127
+CONCLUSION: literal unit in primitive eleven-component shape closes the actual W=Vdec branch
+SCOPE: no arbitrary gcd-one core closure; no decoder entry inferred from this finite bank
+ACTIVE GATES: 21260

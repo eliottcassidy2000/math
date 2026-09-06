@@ -9,6 +9,25 @@ Format per entry:
 - Why it was wrong
 - The correct framing
 
+## 2026-09-06 overnight -- conditioning and intermediate ideals retain new data
+
+- **Conditioning hostile:** [fixed-row means](../05-knowledge/results/overnight11_20260906_no3line_rowfreeze.md)
+  for C10 at n5 are11/10 and7/6 for two row orders, while the unconditional
+  mean is17/15. Reusing that mean after fixing rows is false. The repaired
+  uniform leading term uses row-induced matching polynomials and still
+  permits a stronger one-permutation exponential bound.
+- **Full-partition hostile:** [p13 Hasse banks](../05-knowledge/results/overnight11_20260906_smith_prime_banks.md)
+  at nodes(0,13,26)/(0,13,39) have identical metric, Deuring bit and largest
+  factor20, but different intermediate ideals and mod13^16 kernel orders.
+  Retain the rank11 AP packet and its divided companion. At shallow depth,
+  a two-digit ideal correction also requires checking the next weight band;
+  minimal-weight evaluations alone do not prove the lower bound.
+- **Entry reframe:** [the unit-core theorem](../05-knowledge/results/overnight11_20260906_lrc_unit_component.md)
+  turns an actual absent bounded crossing row into scale separation. The
+  old primitive nonunit shape only refutes K<=Q without a unit; incoming
+  hereditary gcd cuts already prove that shape safe. It is not a surviving
+  hypothetical counterexample after those cuts.
+
 ## 2026-09-06 overnight -- preserve the zero event before sharpening its moments
 
 - **Reframed assumption:** a stronger no-three-line tail bound need not use

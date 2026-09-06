@@ -1,0 +1,105 @@
+{
+  "schema": 1,
+  "created_utc": "2026-09-06T11:54:42.438570+00:00",
+  "baseline_commit": "900d8b6ea",
+  "incoming_review_commit": "384e5eca4",
+  "hash_basis": "raw LF bytes; self and maintained synthesis/reference/navigation files excluded",
+  "scope": "Actual rank-eleven decoder entry with a primitive unit core; uniform exponential no-three-line bound with every row fixed; complete p11 and p13 prime-order equilateral Hasse Smith partitions and the Deuring-blind intermediate AP ideal. All three independently audited; larger global problems remain open.",
+  "artifacts": [
+    {
+      "path": "04-computation/overnight11_20260906_lrc_unit_component.py",
+      "bytes": 7893,
+      "sha256": "d2fe7245e8d304557b036b72a03a76a46c06e871f60057e5a137892d1ce27bea"
+    },
+    {
+      "path": "04-computation/overnight11_20260906_lrc_unit_component_audit.py",
+      "bytes": 9204,
+      "sha256": "37d2d41531770f047cb3979c214ea0a57b5a8ef8574d1c2b3f4570734b2ba51d"
+    },
+    {
+      "path": "04-computation/overnight11_20260906_no3line_rowfreeze.py",
+      "bytes": 8261,
+      "sha256": "12e962f404d849ecba8b2acb1db0dd252d276bb7df2d7dec9c5f1d70dfa360f8"
+    },
+    {
+      "path": "04-computation/overnight11_20260906_no3line_rowfreeze_audit.py",
+      "bytes": 9636,
+      "sha256": "8996356d3ef8010895685ac55de1001f85267e3fc0d216bf90842473442f0178"
+    },
+    {
+      "path": "04-computation/overnight11_20260906_smith_prime_banks.py",
+      "bytes": 11488,
+      "sha256": "ed102132d643cbdea698f3705576dced1ac51f6a26cd9a4659390da5e5a453ff"
+    },
+    {
+      "path": "04-computation/overnight11_20260906_smith_prime_banks_audit.py",
+      "bytes": 13728,
+      "sha256": "c7e7909f60b94782731d0881e7838a74276bfdf9ce331746ea622c0ce643cd14"
+    },
+    {
+      "path": "04-computation/overnight11_20260906_smith_prime_banks_certificates.json",
+      "bytes": 81429,
+      "sha256": "05f79d3dba323be53a1308ea174f61cc2cb79dff053c61cd4c93ec80a15751ec"
+    },
+    {
+      "path": "05-knowledge/results/overnight11_20260906_lrc_unit_component.md",
+      "bytes": 13247,
+      "sha256": "79c65df3c10391e360c7194bda17135aafc3600075d2c789c2f9e59238374ed9"
+    },
+    {
+      "path": "05-knowledge/results/overnight11_20260906_lrc_unit_component.out",
+      "bytes": 715,
+      "sha256": "33ee43062b8f3035d2fa150972d9e817bfa72ec210f71b92db5f4fb282ea2608"
+    },
+    {
+      "path": "05-knowledge/results/overnight11_20260906_lrc_unit_component_audit.md",
+      "bytes": 8501,
+      "sha256": "093841768cbaa359155d64f3eacb89b58b8229246700e056b107ef5b34d3a832"
+    },
+    {
+      "path": "05-knowledge/results/overnight11_20260906_lrc_unit_component_audit.out",
+      "bytes": 567,
+      "sha256": "22e866526bc150cff6aac2ce41b5610946f2ea799fdaf98f600c64855544dac7"
+    },
+    {
+      "path": "05-knowledge/results/overnight11_20260906_no3line_rowfreeze.md",
+      "bytes": 13892,
+      "sha256": "0f6c101cb7221c5cdd867f9e915693e14d9b44f44b1e6f66b26fb7da6f43917b"
+    },
+    {
+      "path": "05-knowledge/results/overnight11_20260906_no3line_rowfreeze.out",
+      "bytes": 1279,
+      "sha256": "c48ea4c4a0755e08b69eee212390fc7ca75fb6742c60c90bc120ca60a92ca94d"
+    },
+    {
+      "path": "05-knowledge/results/overnight11_20260906_no3line_rowfreeze_audit.md",
+      "bytes": 9709,
+      "sha256": "434c37fb3c213c6e2198b7a8af1c0ac82d821b68f7922873f1f034277e3348d2"
+    },
+    {
+      "path": "05-knowledge/results/overnight11_20260906_no3line_rowfreeze_audit.out",
+      "bytes": 2333,
+      "sha256": "430d336aa115951c4f2b6e1494b0009d56175e7e3b1a92eefd840766ed834331"
+    },
+    {
+      "path": "05-knowledge/results/overnight11_20260906_smith_prime_banks.md",
+      "bytes": 14573,
+      "sha256": "c8aca201e7d6723f486d11687ee78f13333bda00c841127f7cad02b00012028a"
+    },
+    {
+      "path": "05-knowledge/results/overnight11_20260906_smith_prime_banks.out",
+      "bytes": 969,
+      "sha256": "1ef4498d01078e2085c65c025a73a00c5a342ade1aed188b74e9a45bfc18d621"
+    },
+    {
+      "path": "05-knowledge/results/overnight11_20260906_smith_prime_banks_audit.md",
+      "bytes": 11686,
+      "sha256": "c9faf066130bf5fa85d381ef7cfc9077b95ff8231a2f28daf1644275ccbef0d4"
+    },
+    {
+      "path": "05-knowledge/results/overnight11_20260906_smith_prime_banks_audit.out",
+      "bytes": 800,
+      "sha256": "5773f57284b42b8c5eabd982fec10210f24ccdc9bb80af14b6772fd02eee3f3b"
+    }
+  ]
+}

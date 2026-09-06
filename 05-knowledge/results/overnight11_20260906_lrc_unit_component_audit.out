@@ -1,0 +1,8 @@
+STATUS: PASS; independent actual-entry primitive-unit theorem referee
+BOUND CONTROLS: 4017 full interval points; 9085 cleared crossing identities
+PAIR UNIVERSE: 19314 all coprime p<q, p+q<=356; maximum residual t 677
+CLOCK CONTROLS: 47 physical branch witnesses; 714 closed-grid transports
+NONVACUITY: independently generated inert sums + decoder BFS + crossing dominance + literal witness
+HOSTILES: omitted K bound; noncoprime clock; primitive nonunit with K>Q
+SCOPE: inherited actual-box equality; cited eleven-speed LRC; weak clearance >=1/14
+ACTIVE GATES: 131958

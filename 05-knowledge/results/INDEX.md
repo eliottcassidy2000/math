@@ -1,5 +1,14 @@
 # Script Results Index
 
+- [Eleventh overnight synthesis](overnight_20260906_synthesis.md):
+  **PROVED + INDEPENDENTLY AUDITED.** [Unit-core actual entry](overnight11_20260906_lrc_unit_component.md)
+  closes the rank-eleven primitive-unit decoder subclass. [Fixed rows](overnight11_20260906_no3line_rowfreeze.md)
+  double the uniform no-three-line limiting rate to0.0130673.
+  [Full p11/p13 Smith laws](overnight11_20260906_smith_prime_banks.md)
+  expose a p13 intermediate AP ideal invisible to the Deuring bit.
+  [Manifest](overnight11_20260906_manifest.json):19 frozen artifacts,
+  including66 exact polynomial certificates. The global problems remain OPEN.
+
 - [Tenth overnight synthesis](overnight_20260906_synthesis.md):
   **PROVED + INDEPENDENTLY AUDITED.** [Diagonal excess](overnight10_20260906_no3line_defect.md)
   gives `P(no-three-line)<=exp(-n/900)` for every n>=4, uniformly over

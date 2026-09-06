@@ -1,0 +1,19 @@
+ROW-FROZEN DIAGONAL DEFECT: EXACT CONTROLS
+all 21 cycle profiles n2..8, all 2668 row subsets PASS
+n=2 type=(2,): row orders=2, conditional mean range=[0,0]
+n=3 type=(3,): row orders=6, conditional mean range=[1/3,1/3]
+n=4 type=(2, 2): row orders=24, conditional mean range=[2/3,2/3]
+n=4 type=(4,): row orders=24, conditional mean range=[5/6,5/6]
+n=5 type=(2, 3): row orders=120, conditional mean range=[11/10,37/30]
+n=5 type=(5,): row orders=120, conditional mean range=[11/10,7/6]
+n=6 type=(2, 2, 2): row orders=4, conditional mean range=[62/45,64/45]
+n=6 type=(2, 4): row orders=4, conditional mean range=[253/180,259/180]
+n=6 type=(3, 3): row orders=4, conditional mean range=[251/180,251/180]
+n=6 type=(6,): row orders=4, conditional mean range=[257/180,257/180]
+literal universe: 312 row orders, 41512 column labellings
+large exact n=96 components=48 row multiplier=1: floor(mean)=30, positive envelope PASS
+large exact n=96 components=48 row multiplier=5: floor(mean)=30, positive envelope PASS
+large exact n=97 components=1 row multiplier=1: floor(mean)=30, positive envelope PASS
+large exact n=97 components=1 row multiplier=5: floor(mean)=30, positive envelope PASS
+one-permutation concentration denominator8(n-1), limiting rate alpha^2/8
+PASS 54906 always-active gates

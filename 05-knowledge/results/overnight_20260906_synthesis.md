@@ -5,9 +5,9 @@ This is the maintained continuation surface for the user's overnight request.
 Read current canon and incoming corrections before continuing any lane.
 The starting commit was `62e1b34d8`; the isolated worktree is `C:/w/s0905`.
 The extensively dirty original checkout is outside this session's edits.
-The tenth checkpoint incorporates incoming canon through `6dd59c9c4`,
-including proved THM-4437/4440/4441/4442/4443/4444/4445/4446/4447/4448.
-THM-4449 remains RESERVED and is not a dependency. The universal
+The eleventh checkpoint incorporates incoming canon through `384e5eca4`,
+including proved THM-4437/4440/4441/4442/4443/4444/4445/4446/4447/4448/4449/4450.
+THM-4451 remains RESERVED and is not a dependency. The universal
 **ternary-unit local network bound is now closed without a parity assumption**:
 sharp `6/55`, with the stronger odd bound `6/77` retained. Actual LRC entry
 and body-to-tail noncontainment remain open. The universal ten-body `6/77`
@@ -25,10 +25,10 @@ independence heuristic and the corrected asymptotic constant; see the
 
 | Live object / representation | Predicate | Operation and retained coordinate | Cheapest next decisive test |
 |---|---|---|---|
-| Anchor: body safe set and three-sheet tail comb | One literal safe completion | Signed-pair virtual walls, exact owner words and protected inverse sheets | Use the sharp fibre margin to select a component outside the incoming attachment cone |
-| Grid sets as degree-two bipartite graphs | No collinear triple | Positive-part diagonal excess keeps the selected zero event and has transposition change at most four | Uniform success probability is at most exp(-n/900); test fixed-row conditioning without assuming the exact mean stays unchanged |
+| Anchor: actual decoder entry and body safe sets | One literal safe completion | Bounded crossing relations force scale separation; retain primitive core coordinates and coprime grids | The primitive-unit eleven-core subclass closes; test signed two-coordinate boxes and incoming hereditary gcd cuts |
+| Grid sets as degree-two bipartite graphs | No collinear triple | Freeze all rows, retain induced matching polynomials, then expose one column permutation | Uniform asymptotic exponential rate doubles to0.0130673; test search and counting consumers with the correct conditional measure |
 | Niche: trinomial return channels | First two return polynomials have no common torus zero | One quadratic pullback preserves the original zero and completes alpha parity | All A2 completed-alpha responses are negative; one coupled beta-skip coefficient remains |
-| Wildcard: residue-decorated jet cluster | Full partition versus largest precision loss | Minimal-weight minors, reciprocal jets and a divided reflected companion | Every three-node prime-order Deuring zero loses exactly one digit; intermediate ideals need their own simultaneous companions |
+| Wildcard: residue-decorated jet cluster | Full partition versus largest precision loss | Minimum and next-weight bands retain integral content; divided companions prevent deeper common cancellation | Full p11/p13 laws close; p13 needs an intermediate AP bit invisible to Deuring, so test higher-prime packets separately |
 | Formal exceptional triple | Collision repair and nonzero constant source Jacobian | Leading wedge period under common branch motion | Every collision-preserving O(t9) map retains the obstruction; earlier source jets need the complete contact and density response |
 | Native Boolean disjoint-cycle sectors | Exact adjacency spectrum and integral kernel | Sorted cycle lengths become path tokens; a two-state cap removes a pendant pair | Full rectangles have sine-determinant spectra; the cap preserves cokernel, while general boundaries and ambient spectra remain open |
 
@@ -494,6 +494,45 @@ an implication: the maps and losses must be specified in the linked reports.
     Directed multiplicities, Laplacian diagonal potentials, and ambient
     boundary edges are separate, so no full ambient spectrum is claimed.
 
+38. **PROVED actual LRC decoder-entry subclass, independently audited:**
+    [The primitive-unit eleven-component theorem](overnight11_20260906_lrc_unit_component.md)
+    closes every actual THM-3818 rank-eleven equality row `tV union g(p,q)`
+    whose primitive eleven-core V contains1. The full finite box and
+    `W_(Q,3)=V_dec`, with Q=91^6, are retained. The unit gives K=maxV<=Q.
+    A bounded quotient/remainder represents every x<=Q(K+1) on coordinates
+    1,K. In the small-t branch any insufficient pair scale would therefore
+    produce a forbidden crossing row of support at most three and height Q.
+    Its absence forces g>42K, and a complete coprime g-grid meets a protected
+    core-safe arc. The other scale branch follows symmetric cyclic gluing.
+    Primary/referee gates21,260/131,958 pass, including a genuine nonvacuous
+    decoder entry. This closes the unit-core scope of the old virtual
+    families; pairwise cross heights alone still do not certify their entry.
+39. **PROVED uniform bound after fixing every row, independently audited:**
+    [The row-conditioned theorem](overnight11_20260906_no3line_rowfreeze.md)
+    replaces the full rook polynomial by its row-induced prefix/suffix
+    family. For every fixed row order, `alpha*n-21<=mu<=alpha*n+20`, where
+    alpha=1-5/e^2, and `mu>=2(n-9)/15+2/[n(n-1)]`. The exact conditional
+    means do vary: C10 at n5 gives11/10 or7/6, so the old unconditional
+    mean17/15 cannot be substituted. One remaining uniform permutation
+    gives `P(X=0|rows)<=exp(-mu^2/[8(n-1)])`, doubling the uniform limiting
+    rate to alpha^2/8=0.013067267481528... . Primary/referee gates54,906/
+    134,492 pass. Rows may be chosen adversarially before the columns;
+    choosing them in response to the current random columns is outside scope.
+40. **PROVED full p11/p13 Smith partitions and a Deuring-blind ideal:**
+    [The prime-order banks](overnight11_20260906_smith_prime_banks.md)
+    determine every factor for three equilateral nodes, multiplicity
+    m=(p+1)/2, every depth and every admissible p-adic unit lift. The p11
+    partition needs only its Deuring bit. At p13 all residues are ordinary,
+    but the intrinsic AP classes a=2,7,12 alter the eleventh residual ideal.
+    A divided polynomial companion makes that extra loss exactly one at
+    every lift. The minimum bands and all needed next bands are certified
+    by66 integer polynomials; the next band is essential at shallow depth1.
+    Nodes(0,13,26) and(0,13,39) have the same largest factor20 but observer
+    kernel orders13^141 and13^140 modulo13^16. Primary/referee gates65,923/
+    260,363 pass, including two distinct full-matrix algorithms. Relative
+    to the earlier p3/p5/p7 laws, p13 is the least prime with this precise
+    Deuring-blind full-partition phenomenon; no general-prime law follows.
+
 These are repository-scoped advances and recovered mechanisms, not claims
 of external literature priority. In particular, conditioning grid occupancy
 by row and column saturation already appears in the cited construction work.
@@ -583,6 +622,25 @@ The [tenth checkpoint manifest](overnight10_20260906_manifest.json) freezes
 Root independently checked the Boolean theorem, exact eigenvectors and
 pendant congruence; the producer separately accepted that cap proof. The
 new external references supply only the classical configuration framework.
+
+The [eleventh checkpoint manifest](overnight11_20260906_manifest.json)
+freezes19 artifacts, including the complete Smith polynomial certificate
+beside its two independent evaluators. Root read all three full proofs and
+their audits; the portable independent transcripts are replayed before push.
+
+Incoming [hereditary gcd bounds](lrc14_recursive_gcd_empty_core_next_sep06.md)
+and their [independent classifier](gcd_pair_hunter_audit_empty_core_next_sep06.md)
+give necessary subset-gcd ceilings1,2,4,9,32,96 for subset sizes12 through7.
+The newer [joint residue shadows](lrc14_joint_shadow_empty_core_next_sep06.md)
+sharpen the last two to30,90 in every primitive strict counterexample. They remove the usual primorial
+normalization hostile from the live failure set, while leaving it a valid
+hostile to inferring K<=Q from primitive gcd alone. Incoming THM-4449 is
+now proved: its sharp dyadic three-tail masses are214/1449 and72/539.
+Those are conditional Haar entry levels, not newly proved universal body
+floors. Incoming THM-4450 further recovers absorbed-label overlap and
+requires containment of every closed body component, including isolated
+safe points, in the pulled open tail cells. One trapped component or an
+endpoint-only test is insufficient. THM-4451 is an unproved reservation.
 
 ## Procedural direction generator
 

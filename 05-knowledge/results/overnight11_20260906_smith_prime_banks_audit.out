@@ -1,0 +1,16 @@
+STATUS: PASS; full p11/p13 partitions, all-lift ideal proof, and precision hostile
+POLYNOMIALS: 66 ; COMPLETE DEGREE-BOUNDED DETERMINANT VALUES: 1092
+EXACT SHARED DERIVATIVE/DEGREE SHIFTS: 20
+INDEPENDENT BAND CONTENT TABLE:
+11 7 {1: 4, 2: 2}
+11 8 {1: 4, 2: 1}
+13 8 {2: 5}
+13 9 {2: 6}
+13 10 {1: 4, 2: 1}
+13 11 {1: 6}
+INDIVIDUAL DEEP q1 LIFTS (residue,a,vq1,vq2): [(2, 1536, 3, 1), (7, 1099, 3, 1), (12, 662, 3, 1)]
+FULL ORIGINAL HASSE MODULAR SMITH MATRICES: 296
+p13 HOSTILE: [0, 0, 0, 0, 0, 0, 0, 1, 2, 4, 5, 7, 8, 11, 12, 13, 14, 16, 16, 18, 20] [0, 0, 0, 0, 0, 0, 0, 1, 2, 4, 5, 7, 8, 11, 12, 13, 14, 15, 17, 18, 20]
+KERNEL ORDERS MOD13^16: 13^141 and13^140, with common largest factor20
+SCOPE: equilateral complete prime-order three-node banks only; no general-prime full law
+ACTIVE GATES: 260363

@@ -1,0 +1,18 @@
+STATUS: PASS; two exact full partitions and an intermediate-ideal Deuring hostile
+MINOR CERTIFICATE: 26 p11 plus 40 p13; all other minors controlled by weight gap
+NEXT-BAND CONTENT VALUATIONS:
+11 7 {1: 4, 2: 2}
+11 8 {1: 4, 2: 1}
+13 8 {2: 5}
+13 9 {2: 6}
+13 10 {1: 4, 2: 1}
+13 11 {1: 6}
+{"a": 2, "p": 11, "partition": [0, 0, 0, 0, 0, 0, 1, 2, 4, 5, 7, 9, 11, 11, 12, 14, 16, 16]}
+{"a": 3, "p": 11, "partition": [0, 0, 0, 0, 0, 0, 1, 2, 4, 5, 7, 9, 11, 11, 12, 14, 15, 17]}
+{"a": 2, "p": 13, "partition": [0, 0, 0, 0, 0, 0, 0, 1, 2, 4, 5, 7, 8, 11, 12, 13, 14, 16, 16, 18, 20]}
+{"a": 3, "p": 13, "partition": [0, 0, 0, 0, 0, 0, 0, 1, 2, 4, 5, 7, 8, 11, 12, 13, 14, 15, 17, 18, 20]}
+FULL MATRIX CONTROLS: 310
+HOSTILE: p13 a2/a3 both Deuring ordinary, largest 20; mod13^16 kernel orders 13^141/13^140
+ALL-LIFT SIDECAR: (q2+a^2 q1)/13=(a-1)(a^2-a+1)(4a^4-2a^3-a^2-2a+4)
+CERTIFICATE SHA256: 05f79d3dba323be53a1308ea174f61cc2cb79dff053c61cd4c93ec80a15751ec
+ACTIVE GATES: 65923
