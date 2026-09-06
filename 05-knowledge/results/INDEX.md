@@ -1,5 +1,16 @@
 # Script Results Index
 
+- **[THM-4454: sharp global signed-root stability](../../01-canon/theorems/THM-4454-sharp-global-signed-root-duplication-stability.md)**
+  solves the exact best constant at `4sqrt(3)/[3(1+sqrt(2))(1+sqrt(3))]`.
+  Every eligible finite list has strict inequality; an actual finite family
+  approaches the bound. The self-contained proof has mutual and third-reader
+  audits, with90+72 exact gates independently replayed.
+  [Current board](open_frontier_sep06_board.md) also routes the full inert
+  component envelope, nonunit decoder closures, an actual5+8 obstruction to
+  every new score, unbounded linearly anchored model cancellation and the
+  quadratic-anchor exclusion of escaping positive responses. LRC14 and
+  actual Laurent two-rung separation remain OPEN.
+
 - [Three proved continuations and an actual balanced obstruction](second_20260906_overview.md):
   **PROVED + FINITE-EXACT + INDEPENDENTLY AUDITED.** [Leaf cofactors and nonunit entry](second_20260906_entry.md)
   extend five unbalanced decoder types to explicit maximum-endpoint gcd subclasses,
@@ -43,7 +54,7 @@
   **PROVED + FINITE-EXACT + INDEPENDENTLY AUDITED.** The signed-duplication
   deficit bounds squared distance to the two-atom limit with explicit
   dimension-independent constant `(6sqrt(2)-8)/3`. The power is optimal;
-  the best constant remains OPEN. A three-positive-atom family defeats
+  THM-4454 now settles the best constant. A three-positive-atom family defeats
   the local two-atom constant as a global guess.
 - [AP8 optimal limiting margin](lrc14_ap8_asymptotic_empty_core_morning_sep06.md):
   **PROVED + FINITE-EXACT + INDEPENDENTLY AUDITED.** Two arbitrary outliers

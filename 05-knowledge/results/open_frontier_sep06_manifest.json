@@ -1,0 +1,173 @@
+{
+  "status": "PROVED and independently audited in the individual stated scopes; LRC14 and actual Laurent two-rung separation remain OPEN",
+  "canonical_theorem": "THM-4454 / 01-canon/theorems/THM-4454-sharp-global-signed-root-duplication-stability.md",
+  "hash_basis": "raw LF repository bytes",
+  "frozen_exact_gates": {
+    "components": 1659,
+    "decoder": 125030,
+    "laurent": 203,
+    "stability_intermediate": 341,
+    "stability_complement": 90,
+    "stability_packing": 72,
+    "quadratic_anchor": 57,
+    "decoder_residual": 5141
+  },
+  "audits": "Mutual regional/complement proof and source audits, third-reader global audit, separate canonical consolidation review, and root audits of all child-authored proof/source bundles; normal and optimized outputs match frozen artifacts. Optional body reconnaissance is separately scoped.",
+  "files": [
+    {
+      "path": "01-canon/theorems/THM-4454-sharp-global-signed-root-duplication-stability.md",
+      "sha256": "9f970806c4c2613469c23b1cc4a3903e38c9e22bfe1f3620fee42eac6443892c",
+      "bytes": 10222
+    },
+    {
+      "path": "04-computation/open_frontier_sep06_components.py",
+      "sha256": "132b21448bb1d8f4fb12e9f009b834f3b9eb6a49e1901399e79db41d16bb486b",
+      "bytes": 8456
+    },
+    {
+      "path": "04-computation/open_frontier_sep06_decoder.py",
+      "sha256": "0e9ff0799542c55a88584a0e2bac3d66fb031035a144a9fa4ac4219a153bf17d",
+      "bytes": 10643
+    },
+    {
+      "path": "04-computation/open_frontier_sep06_decoder_residual.py",
+      "sha256": "0bd89477d6cb63a94e8455f1bc90cc7af99ece5176111d8ecc622bde6b3064b2",
+      "bytes": 7980
+    },
+    {
+      "path": "04-computation/open_frontier_sep06_laurent.py",
+      "sha256": "37fdc13870f7cf3122f7eebd413cbbfcf8df6a3451744027a8172b1ecdf5f8f0",
+      "bytes": 14154
+    },
+    {
+      "path": "04-computation/open_frontier_sep06_quadratic_anchor.py",
+      "sha256": "ebe6101b08f748d710b7bb3894ce064e476ce80eaf2758995c2b07bf1e5ae9d7",
+      "bytes": 6747
+    },
+    {
+      "path": "04-computation/open_frontier_sep06_stability.py",
+      "sha256": "c431c98cba8aef4aa1462b69bc5c5eda38712358ba3bfbfef376be2dcb881a63",
+      "bytes": 10059
+    },
+    {
+      "path": "04-computation/open_frontier_sep06_stability_complement.py",
+      "sha256": "bc1c612f840d5e9f1e8135fa17086f3244442d13962e8e37b633080c77c2d5a1",
+      "bytes": 8843
+    },
+    {
+      "path": "04-computation/open_frontier_sep06_stability_packing.py",
+      "sha256": "a31fc847573b9fbc2799863057870c0be90c7645bf2c98b76da0c516c202c09b",
+      "bytes": 10959
+    },
+    {
+      "path": "05-knowledge/results/open_frontier_sep06_board.md",
+      "sha256": "3486ddbc93078688b1c2d99422cb75c44ea5fb4010f9358e10ff92f4967ca12a",
+      "bytes": 10463
+    },
+    {
+      "path": "05-knowledge/results/open_frontier_sep06_components.md",
+      "sha256": "9fbe9f40a573868b6f00dcdceeed45b070181a131b11bd482672de348176ffb8",
+      "bytes": 11553
+    },
+    {
+      "path": "05-knowledge/results/open_frontier_sep06_components.out",
+      "sha256": "5f04e3d6d846d30df99d96763471b7a12815ff5f4e95780255daadd0c560e710",
+      "bytes": 9552
+    },
+    {
+      "path": "05-knowledge/results/open_frontier_sep06_components_audit.md",
+      "sha256": "2ec95ebf2498fc24c17c63df82d219220522e4bc99b072aa6dbb8f1b94aa3d44",
+      "bytes": 2961
+    },
+    {
+      "path": "05-knowledge/results/open_frontier_sep06_decoder.md",
+      "sha256": "cfd46c51dfe35d5099f3b962e6897bd9fe24da3cbb10b360dade10b1e843b158",
+      "bytes": 13399
+    },
+    {
+      "path": "05-knowledge/results/open_frontier_sep06_decoder.out",
+      "sha256": "991d8161ab38777db0ab3788bcbf9ef3f455fe7c4d0fcc9610612e4d79ed36b9",
+      "bytes": 2534
+    },
+    {
+      "path": "05-knowledge/results/open_frontier_sep06_decoder_residual.md",
+      "sha256": "6338d6932dd960e7ce881d8e8bd3b039e7703b243afcc6641ed1304099a50eb9",
+      "bytes": 11770
+    },
+    {
+      "path": "05-knowledge/results/open_frontier_sep06_decoder_residual.out",
+      "sha256": "917151c281ab517daa60b9884b1431fce0f500297c6b10682a083261e16af6d1",
+      "bytes": 906
+    },
+    {
+      "path": "05-knowledge/results/open_frontier_sep06_laurent.md",
+      "sha256": "c1922078ecef1a9de04e0cea921735c7f72d83a3bf83bd22c2e84f5c045ed7fd",
+      "bytes": 13759
+    },
+    {
+      "path": "05-knowledge/results/open_frontier_sep06_laurent.out",
+      "sha256": "c9d40353e33585d6c1c86d465e09f2862345c8e5af83744595d4357af015e8dd",
+      "bytes": 4162
+    },
+    {
+      "path": "05-knowledge/results/open_frontier_sep06_laurent_audit.md",
+      "sha256": "fa597e03a4efd212f84ef720451a3b07f1750f9cd1a85a3071d89a4a86fa0545",
+      "bytes": 7305
+    },
+    {
+      "path": "05-knowledge/results/open_frontier_sep06_quadratic_anchor.md",
+      "sha256": "c3d50c96cc10be46dcb08da468c437b2154b206ca7a24c0d3dcf2efd2630be7a",
+      "bytes": 8707
+    },
+    {
+      "path": "05-knowledge/results/open_frontier_sep06_quadratic_anchor.out",
+      "sha256": "6e04d52afd8b8961cc9d95c498c0d36abf95b25c0d81ff7f50e9c1ac4c300fe4",
+      "bytes": 1842
+    },
+    {
+      "path": "05-knowledge/results/open_frontier_sep06_root_audit.md",
+      "sha256": "83b88c78933ac95d8c1fdd299e08ce0be9a8e3c83ab44f2285d851ab4c511201",
+      "bytes": 7661
+    },
+    {
+      "path": "05-knowledge/results/open_frontier_sep06_stability.md",
+      "sha256": "2b6196a2be636e87c6a075d9bc6afc0b9387bdf9039263dee9a8221e634dc7e2",
+      "bytes": 10432
+    },
+    {
+      "path": "05-knowledge/results/open_frontier_sep06_stability.out",
+      "sha256": "d72fdcf02afd9cdd53a55972ab775a7f2dc6e751f62afcfc75fc810a52bd63f4",
+      "bytes": 887
+    },
+    {
+      "path": "05-knowledge/results/open_frontier_sep06_stability_complement.md",
+      "sha256": "fdf49a8dad77d20e2c948b2b77ab0a85cd7f1cca1d254e6168b066ee94ffc914",
+      "bytes": 8275
+    },
+    {
+      "path": "05-knowledge/results/open_frontier_sep06_stability_complement.out",
+      "sha256": "c43d2e8da2947154415299d155766777a3384754221d4526dff92b00ed3dda9d",
+      "bytes": 1000
+    },
+    {
+      "path": "05-knowledge/results/open_frontier_sep06_stability_complement_audit.md",
+      "sha256": "91f9264925c740c523d9b0a38a729501c544e5d98792842949323f8309e05795",
+      "bytes": 4995
+    },
+    {
+      "path": "05-knowledge/results/open_frontier_sep06_stability_global_audit.md",
+      "sha256": "7ba2ad2387db75783b17174a5e2a10eeb37b13a009b3294bc389628d5e9a6b16",
+      "bytes": 8641
+    },
+    {
+      "path": "05-knowledge/results/open_frontier_sep06_stability_packing.md",
+      "sha256": "81d92a2e46956e5b93e064d281e823677862dd455dfbeb1d392298e61d3ef297",
+      "bytes": 9722
+    },
+    {
+      "path": "05-knowledge/results/open_frontier_sep06_stability_packing.out",
+      "sha256": "98bd68e9ffb7023bc838764768d6f56a3b840b21651381540f33ca9148ab654c",
+      "bytes": 1754
+    }
+  ]
+}

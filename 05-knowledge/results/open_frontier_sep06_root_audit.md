@@ -121,3 +121,16 @@ PASS, source
 output `917151c281ab517daa60b9884b1431fce0f500297c6b10682a083261e16af6d1`.
 The refuted statement is necessity of sufficient scores, not the proved
 criteria or actual LRC safety. The row's exact safe phase is retained.
+
+## Canonical consolidation
+
+The THM-4454 filename, YAML ID, current indexes and remote path history
+were checked unused before the honest empty reservation was pushed in
+0cae7d4aff. The [full canonical theorem](../../01-canon/theorems/THM-4454-sharp-global-signed-root-duplication-stability.md)
+then replaced that unproved stub. The regional author separately read the
+entire self-contained consolidation and checked Newton identities, the
+distance, both domains, every inequality, finite tuning and limiting energy
+and distance: PASS. Only cosmetic spacing was changed after that review.
+The empty dependency list is deliberate: the consolidated proof derives
+the target identities and both region arguments without importing an
+unproved hypothesis or a numerical search. It is not a Lean theorem.

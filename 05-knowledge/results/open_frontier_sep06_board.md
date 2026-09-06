@@ -3,6 +3,7 @@
 **Status: ACTIVE RESEARCH; SHARP GLOBAL STABILITY SOLVED.** LRC(14) and
 general actual trinomial two-rung noncancellation remain **OPEN**. The exact
 best signed-root stability constant K3 is now proved and independently audited.
+The canonical proof is [THM-4454 / sharp global signed-root duplication stability](../../01-canon/theorems/THM-4454-sharp-global-signed-root-duplication-stability.md).
 The user requested continuation of the previous long research session.
 The resumed schedule runs every thirty minutes through18:15 America/Denver
 on September6, then finishes/pushes its last coherent checkpoint and pauses.
@@ -109,6 +110,16 @@ Their [actual endpoint33 theorem](second_20260906_laurent.md) retains the
 full carried coefficient law and closes first return at g or2g; this is
 the next inheritance route for the still-open finite-phase anchor question.
 
+Commit e96d082e62 adds the [dual-pair entry route](continuing1_20260906_lrc_dual_pair.md)
+and independently reproves the ranked component envelope. Its
+[paired-body refinement](continuing1_20260906_profiles.md) reduces the
+extra physical test to rank-four threshold120/3325 when the body contains
+an even speed. The separately scoped exact scout of2496144 eleven-subsets
+of1..24, with dilations1,2, found no new physical certificate. That result
+reinforces the stopping reason for further blind body enumeration; it is
+not a universal redundancy theorem or a computation replayed by root.
+The incoming projective-jet theorem remains an orthogonal inheritance route.
+
 ## Precise next obligations
 
 - Decoder: the proposed forcing implication is now refuted. Retain the
@@ -129,6 +140,8 @@ packing obstruction cannot pay a signed coefficient, and an anchored
 polynomial model still need not be the actual binomial composition law.
 The [root audit](open_frontier_sep06_root_audit.md) records the independent
 checks of the three agent-authored proofs and exact reproduction hashes.
+The [frozen manifest](open_frontier_sep06_manifest.json) pins all current
+proof, audit, source and output artifacts from this session.
 
 ## Operational preservation
 

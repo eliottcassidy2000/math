@@ -156,11 +156,11 @@ and Lucas--Frobenius leaves `Q^p`: **whole-layer preservation**, not atoms.
 ### Live work
 
 Publish THM-2022; formalize THM-2639. [Endpoint33](../05-knowledge/results/second_20260906_laurent.md): g>=17,gcd(g,33)=1, first detection g or 2g; cone obstruction.
+[THM-4454](../01-canon/theorems/THM-4454-sharp-global-signed-root-duplication-stability.md): sharp stability constant `4sqrt(3)/[3(1+sqrt(2))(1+sqrt(3))]`, PROVED.
 [THM-4417](../01-canon/theorems/THM-4417-width-two-laurent-first-return-parabolic-critical-bound.md)
-proves first return `<=M+N` for `min(M,N)=2` using a two-root involution
-and parabolic critical-point budget; width one was THM-2111. The general
-sharp bound now remains at `min(M,N)>=3`. THM-2101's additive routes are corroborative, not `GMC2Main.gmc2`
-dependencies.  HYP-8931 is vacuous by its empty level set (MISTAKE-240), while
+proves first return `<=M+N` for `min(M,N)=2`; width one is THM-2111.
+The sharp bound for `min(M,N)>=3` remains OPEN. THM-2101 is corroborative, not a `GMC2Main.gmc2` dependency.
+HYP-8931 is vacuous by its empty level set (MISTAKE-240), while
 THM-2070 refutes the general HYP-8890/8895 bypasses.  Transfer
 `seed/selector/preserver/exit` without mistaking a preserver for a seed.
 

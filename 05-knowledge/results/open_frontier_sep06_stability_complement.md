@@ -7,6 +7,8 @@ this proves the exact best constant in the finite signed-root stability
 problem. The [independent complementary audit](open_frontier_sep06_stability_complement_audit.md)
 and [third-reader global audit](open_frontier_sep06_stability_global_audit.md)
 both passed; root separately audited the full regional proof and source.
+The consolidated canonical theorem is
+[THM-4454 / sharp global signed-root duplication stability](../../01-canon/theorems/THM-4454-sharp-global-signed-root-duplication-stability.md).
 
 ## 1. Exact target and inheritance
 
