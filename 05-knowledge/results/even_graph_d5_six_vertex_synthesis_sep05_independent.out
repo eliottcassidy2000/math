@@ -1,0 +1,22 @@
+n=6 classes=1024 minimum=64 minimizers=15 gap=128 PASS
+profile 0 0 0 0 multiplicity=1
+profile 4 12 24 24 multiplicity=15
+profile 6 18 36 36 multiplicity=60
+profile 8 20 32 24 multiplicity=45
+profile 8 24 40 32 multiplicity=180
+profile 8 24 48 32 multiplicity=15
+profile 10 18 36 36 multiplicity=20
+profile 10 22 36 28 multiplicity=180
+profile 10 26 36 28 multiplicity=180
+profile 10 30 36 20 multiplicity=12
+profile 12 20 40 24 multiplicity=45
+profile 12 24 24 32 multiplicity=15
+profile 12 24 32 32 multiplicity=180
+profile 14 18 36 36 multiplicity=60
+profile 16 12 48 24 multiplicity=15
+profile 20 0 72 0 multiplicity=1
+n=7 classes=32768 minimum=205 minimizers=21 gap=410 PASS
+D6 n=7 minimum=325 minimizers=21 gap=650 PASS
+n=8 classes=2097152 minimum=516 minimizers=28 gap=1032 PASS
+D6 n=8 minimum=1236 minimizers=28 gap=2472 PASS
+PASS: all 2130944 switching classes at n=6,7,8; direct parity only

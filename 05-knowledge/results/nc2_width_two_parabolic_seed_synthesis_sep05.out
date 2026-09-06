@@ -1,0 +1,16 @@
+FINITE-EXACT: direct Laurent convolution versus exact rational composition
+canonical parity/cancellation hostile {'degree': 4, 'first_moment': 4, 'constant_term': '-12', 'iterate_defect_order': 9, 'iterate_leading': '6', 'distinct_nonpole_critical_points': 4, 'distinct_roots_R': 4}
+nonunit endpoint / nonzero first moment {'degree': 4, 'first_moment': 1, 'constant_term': '3', 'iterate_defect_order': 3, 'iterate_leading': '-3', 'distinct_nonpole_critical_points': 4, 'distinct_roots_R': 4}
+sharp binomial degree 3 {'degree': 3, 'first_moment': 3, 'constant_term': '3', 'iterate_defect_order': 7, 'iterate_leading': '-2', 'distinct_nonpole_critical_points': 3, 'distinct_roots_R': 3}
+sharp binomial degree 5 {'degree': 5, 'first_moment': 5, 'constant_term': '10', 'iterate_defect_order': 11, 'iterate_leading': '-4', 'distinct_nonpole_critical_points': 5, 'distinct_roots_R': 5}
+sharp binomial degree 7 {'degree': 7, 'first_moment': 7, 'constant_term': '21', 'iterate_defect_order': 15, 'iterate_leading': '-6', 'distinct_nonpole_critical_points': 7, 'distinct_roots_R': 7}
+sharp binomial degree 9 {'degree': 9, 'first_moment': 9, 'constant_term': '36', 'iterate_defect_order': 19, 'iterate_leading': '-8', 'distinct_nonpole_critical_points': 9, 'distinct_roots_R': 9}
+sharp binomial degree 11 {'degree': 11, 'first_moment': 11, 'constant_term': '55', 'iterate_defect_order': 23, 'iterate_leading': '-10', 'distinct_nonpole_critical_points': 11, 'distinct_roots_R': 11}
+sharp binomial degree 13 {'degree': 13, 'first_moment': 13, 'constant_term': '78', 'iterate_defect_order': 27, 'iterate_leading': '-12', 'distinct_nonpole_critical_points': 13, 'distinct_roots_R': 13}
+repeated-root degree 4 {'degree': 4, 'first_moment': 1, 'constant_term': '6', 'iterate_defect_order': 3, 'iterate_leading': '-12', 'distinct_nonpole_critical_points': 1, 'distinct_roots_R': 1}
+repeated-root degree 6 {'degree': 6, 'first_moment': 1, 'constant_term': '15', 'iterate_defect_order': 3, 'iterate_leading': '-30', 'distinct_nonpole_critical_points': 1, 'distinct_roots_R': 1}
+repeated-root degree 8 {'degree': 8, 'first_moment': 1, 'constant_term': '28', 'iterate_defect_order': 3, 'iterate_leading': '-56', 'distinct_nonpole_critical_points': 1, 'distinct_roots_R': 1}
+repeated-root degree 10 {'degree': 10, 'first_moment': 1, 'constant_term': '45', 'iterate_defect_order': 3, 'iterate_leading': '-90', 'distinct_nonpole_critical_points': 1, 'distinct_roots_R': 1}
+signed coefficient-box audit {'cases': 480, 'degrees': '3..6', 'extremes': [-1, 1], 'nonconstant_interiors': [-1, 0, 1], 'constant_coefficient': 0, 'max_first_return_by_degree': {3: 3, 4: 4, 5: 5, 6: 6}}
+one-sided excluded control: R=1+z, rational involution exact
+PASS: every exact identity and strengthened critical-count bound verified

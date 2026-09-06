@@ -1,0 +1,28 @@
+CONFLUENT_TWOJET_PRIME_WALL_SYNTHESIS_SEP05
+scope=p prime; e>=1; p integer nodes a+p^e*u_i; complete residue system u_i mod p
+profile=(0,0,e,...,(p-2)e,(p-1)e+1,(p+1)e,...,(2p-2)e,(2p-1)e-1)
+middle_determinantal_valuation=old_weighted_tariff+1
+mechanism=divide_sum_of_derivative_rows_by_p;one_saturation_step
+full_wall_DVR_cases=30
+independent_all_minor_cases=4
+literal_divided_trace_witnesses=46
+new_band_direct_consecutive_cases=10
+consecutive_formula_rows_through_prime_19=1027
+direct_tensor_grid_cases=3
+complete_finite_precision_kernel_counts=[(1, 4), (2, 16), (3, 16)]
+dyadic_triple_DVR_cases=9
+dyadic_triple_at_e3=(0, 0, 4, 7, 12, 17)
+symbolic_triple_residual_minors=69
+wall(p=2,e=1)=(0, 0, 2, 2)
+wall(p=2,e=2)=(0, 0, 3, 5)
+wall(p=2,e=3)=(0, 0, 4, 8)
+wall(p=3,e=1)=(0, 0, 1, 3, 4, 4)
+wall(p=3,e=2)=(0, 0, 2, 5, 8, 9)
+wall(p=3,e=3)=(0, 0, 3, 7, 12, 14)
+wall(p=5,e=1)=(0, 0, 1, 2, 3, 5, 6, 7, 8, 8)
+wall(p=5,e=2)=(0, 0, 2, 4, 6, 9, 12, 14, 16, 17)
+wall(p=5,e=3)=(0, 0, 3, 6, 9, 13, 18, 21, 24, 26)
+hostile_repeated_residue(nodes=(0,2,4),p=2)=(0, 0, 2, 2, 5, 7)
+semantic_sha256=9401f0259daa64e6a5d63c01e111d984717f42cb61e6c6bf18f7f83e8f4439c0
+gates=441971
+RESULT=PASS

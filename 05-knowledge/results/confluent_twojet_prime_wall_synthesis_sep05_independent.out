@@ -1,0 +1,8 @@
+CONFLUENT_TWOJET_PRIME_WALL_INDEPENDENT_SYNTHESIS_SEP05
+sympy_version=1.9
+independent_wall_Smith_cases=12
+independent_dyadic_triple_Smith_cases=9
+complete_symbolic_residual_minors=69
+dyadic_triple_tariff_table={"1": {"1": 1, "2": 0, "3": 0, "4": 0, "5": 0}, "2": {"3": 2, "4": 0, "5": 1, "6": 0, "7": 1, "8": 0, "9": 4}, "3": {"7": 2, "8": 2, "9": 2, "10": 2, "11": 3}, "4": {"12": 4}}
+semantic_sha256=396d73ba5764eb359f82b00c637295c8cf38a41b339b5fde817e1aca4d760444
+RESULT=PASS

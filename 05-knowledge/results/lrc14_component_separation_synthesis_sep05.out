@@ -1,0 +1,17 @@
+ANALYTIC finite obligations: 49 Bernoulli residues; 7 count residues; 4 small mass pairs; q=5,7,11 count bases
+PAIR SHARP BOUNDS: T<=12/77 at p:q=1:11; N/b<=24/13 at p:q=11:13
+ALL-HEIGHT: star-forest capacity=edge-min sum; c/b>=44/13 implies U_(a,b)<6/77 for odd ternary units
+CONTROL (1, 5, 11) pair bounds ('6/77', '6/77', '6/77') physical 6/77
+CONTROL (1, 19, 79) pair bounds ('12/553', '8/553', '184/10507') physical 108/10507
+CONTROL (11, 13, 17) pair bounds ('16/1001', '6/119', '20/1547') physical 20/1547
+CONTROL (11, 13, 43) pair bounds ('12/301', '8/301', '12/301') physical 8/301
+CONTROL (11, 13, 47) pair bounds ('6/329', '6/329', '6/329') physical 6/329
+CONTROL (11, 13, 79) pair bounds ('1874/79079', '178/6083', '18/1027') physical 1126/79079
+CONTROL (1, 11, 331) pair bounds ('48/2317', '48/2317', '48/2317') physical 48/2317
+CONTROL (7, 11, 997) pair bounds ('18/997', '842/48853', '18/997') physical 842/48853
+FINITE-EXACT UNIVERSE: distinct positive odd ternary units, primitive, max<= 79
+ROWS 2910 TAIL ROWS 233 NETWORK BELOW/EQUAL/ABOVE 2909 1 0
+MAX SELECTED 6/77 (1, 5, 11)
+SEMANTIC SHA256 d45d809bf350ce2bce03c17cafffeffeb35e8ff3ce3c8ec3ddb609663d0a267d
+CHECKS 216039
+OPEN: c/b<44/13 at unbounded height; entry; synchronization; LRC(14)
