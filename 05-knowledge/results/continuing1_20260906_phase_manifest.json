@@ -1,0 +1,122 @@
+{
+  "schema": 1,
+  "created_utc": "2026-09-06T17:12:27.896486+00:00",
+  "baseline_commit": "e96d082e6",
+  "incoming_review_commit": "2763ed0df",
+  "hash_basis": "raw LF bytes; manifest and maintained synthesis/navigation excluded",
+  "scope": "Independently audited actual cubic all-integer phase-cone obstruction and positive algebraic amplitude-branch repair. The next h4 interpolant failure is separately producer FINITE-EXACT with a root carrier-square check. These are method boundaries, not new noncancellation-family closures. General Laurent two-rung separation remains OPEN.",
+  "artifacts": [
+    {
+      "path": "04-computation/continuing1_20260906_laurent_amplitude_audit.py",
+      "bytes": 7447,
+      "sha256": "6243467e1e012c6b21c24bababf8e17a771df7d6d0f0d09b14e464864717f013"
+    },
+    {
+      "path": "04-computation/continuing1_20260906_laurent_amplitude_h4_boundary.py",
+      "bytes": 4005,
+      "sha256": "67038e1b3bbe6870e0e4d46998de47823a47bb0fca9ef06b468aaec3ee5358d3"
+    },
+    {
+      "path": "04-computation/continuing1_20260906_laurent_cone_separator.py",
+      "bytes": 14301,
+      "sha256": "5bd98bc1fe072fcfc88b34af46b2310e1a4e184dcefdff6c5a508a820d82d00b"
+    },
+    {
+      "path": "04-computation/continuing1_20260906_laurent_cone_separator_audit.py",
+      "bytes": 12454,
+      "sha256": "57a90b04ead8c7ae2c068719590e815721f8ef4359f328bf85f1e70af80a0e9b"
+    },
+    {
+      "path": "04-computation/continuing1_20260906_laurent_cone_separator_certificate.json",
+      "bytes": 4776,
+      "sha256": "4b1ee5770b484e4164e692fbf2934f4099800b0b85d379ce01d8afef71040cc0"
+    },
+    {
+      "path": "04-computation/continuing1_20260906_laurent_real_power_boundary.py",
+      "bytes": 5678,
+      "sha256": "d5b03a6a0034c378e944185f192e3af4d0e4826100d2839c58fd615a663250e6"
+    },
+    {
+      "path": "05-knowledge/results/continuing1_20260906_laurent_amplitude_audit.md",
+      "bytes": 7585,
+      "sha256": "dadfa1eb29335ec70dac1ac40bd0c4a91ebe7d19fd20619d702334f4bb6fddf1"
+    },
+    {
+      "path": "05-knowledge/results/continuing1_20260906_laurent_amplitude_audit.out",
+      "bytes": 868,
+      "sha256": "24ed44c1c38b320c5513716a5d47a65b876d7239f106a1585407b67228f99489"
+    },
+    {
+      "path": "05-knowledge/results/continuing1_20260906_laurent_amplitude_h4_boundary.md",
+      "bytes": 3236,
+      "sha256": "c5d4021c916ca98f28413cafc4d60c0d689c170733eab4813f6e967c300de977"
+    },
+    {
+      "path": "05-knowledge/results/continuing1_20260906_laurent_amplitude_h4_boundary.out",
+      "bytes": 578,
+      "sha256": "5587d5476994f1dee7b7448e7755ec3604fd426aff93ebae38cada3987cfc545"
+    },
+    {
+      "path": "05-knowledge/results/continuing1_20260906_laurent_cone_separator.md",
+      "bytes": 16031,
+      "sha256": "50ac0f67deef1225ae049351a6e33984eec90f68f6fee7da51b2ac3f8eed3c23"
+    },
+    {
+      "path": "05-knowledge/results/continuing1_20260906_laurent_cone_separator.out",
+      "bytes": 3049,
+      "sha256": "207b86469f1b5e8b5bb18a5cd1cd2a931c4c0c596a5fe66ba354923fe3069fee"
+    },
+    {
+      "path": "05-knowledge/results/continuing1_20260906_laurent_cone_separator_audit.md",
+      "bytes": 8528,
+      "sha256": "482a8e775136089c62e1535e03bb71e7b5fbdd0bfe0dc3ebc603fc490bcf5199"
+    },
+    {
+      "path": "05-knowledge/results/continuing1_20260906_laurent_cone_separator_audit.out",
+      "bytes": 1439,
+      "sha256": "964631c09264dabe9c85371d2e24b2de22eb410b0ce28a390b9ae438d74018cd"
+    },
+    {
+      "path": "05-knowledge/results/continuing1_20260906_laurent_real_power_boundary.md",
+      "bytes": 7065,
+      "sha256": "55c2c7c5376030ff03aff4d6fbbd80cb8def314ecc188144cd6e034e0d2424d8"
+    },
+    {
+      "path": "05-knowledge/results/continuing1_20260906_laurent_real_power_boundary.out",
+      "bytes": 986,
+      "sha256": "f6d26209df03fe3d0c81eb54c8eef889304e409a708691a2c7fc9db602bd3075"
+    }
+  ],
+  "filing_revisions": [
+    {
+      "path": "05-knowledge/results/continuing1_20260906_laurent_cone_separator.md",
+      "outside_draft_sha256": "d419249be5c34a024ca0f191ceb93109348526c9049a8d5bb7cbefd5b0326206",
+      "filed_sha256": "50ac0f67deef1225ae049351a6e33984eec90f68f6fee7da51b2ac3f8eed3c23",
+      "reason": "Portable repository links/commands and explicit concurrent-result credit; no source/output/certificate changes."
+    },
+    {
+      "path": "05-knowledge/results/continuing1_20260906_laurent_cone_separator_audit.md",
+      "outside_draft_sha256": "ffd73407ce21cfb047333eb4a77c61bd5c5c1fb37b2255be46e6b954a9f7c24f",
+      "filed_sha256": "482a8e775136089c62e1535e03bb71e7b5fbdd0bfe0dc3ebc603fc490bcf5199",
+      "reason": "Portable repository links/commands and explicit concurrent-result credit; no source/output/certificate changes."
+    },
+    {
+      "path": "05-knowledge/results/continuing1_20260906_laurent_real_power_boundary.md",
+      "outside_draft_sha256": "3dd68a541898e6d4ad92a70cabf8bff6b6f36453772f069042ebb3fb9eab5553",
+      "filed_sha256": "55c2c7c5376030ff03aff4d6fbbd80cb8def314ecc188144cd6e034e0d2424d8",
+      "reason": "Portable repository links/commands and explicit concurrent-result credit; no source/output/certificate changes."
+    },
+    {
+      "path": "05-knowledge/results/continuing1_20260906_laurent_amplitude_h4_boundary.md",
+      "outside_draft_sha256": "0da14f11c6e21d2b4cd0fdeefec50cdfa0207cbff88e8765717022fa35ee0fe9",
+      "filed_sha256": "c5d4021c916ca98f28413cafc4d60c0d689c170733eab4813f6e967c300de977",
+      "reason": "Portable repository links/commands and explicit concurrent-result credit; no source/output/certificate changes."
+    },
+    {
+      "path": "05-knowledge/results/continuing1_20260906_laurent_amplitude_audit.md",
+      "outside_draft_sha256": "b24c41e8c90ab5d9ef5c7f1419488de6c82af78cb2e37dede32d11ee7d9bb3e7",
+      "filed_sha256": "dadfa1eb29335ec70dac1ac40bd0c4a91ebe7d19fd20619d702334f4bb6fddf1",
+      "reason": "Portable repository links/commands and explicit concurrent-result credit; no source/output/certificate changes."
+    }
+  ]
+}

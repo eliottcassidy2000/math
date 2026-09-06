@@ -25,6 +25,13 @@
   forced cross-divisor score; they are explicitly safe.
   [Manifest](second_20260906_manifest.json) freezes all proof and audit artifacts.
   LRC14, general Laurent returns and general higher-jet partitions remain OPEN.
+- [Actual Laurent phase obstruction and repair](continuing1_20260906_synthesis.md):
+  **PROVED + INDEPENDENTLY AUDITED.** On support (-21,1,12), an exact separator
+  excludes every positive integer Laurent weighting of all coupled windows;
+  a positive algebraic square-root-phase combination repairs the same response.
+  The chosen branch and coefficient field are essential. The next support's
+  simple interpolant fails (**FINITE-EXACT**); larger cones remain open.
+  [Phase manifest](continuing1_20260906_phase_manifest.json): 16 frozen artifacts.
 - [Continuing synthesis](continuing1_20260906_synthesis.md): **PROVED + INDEPENDENTLY AUDITED.**
   [No-unit pair-gcd entry](continuing1_20260906_lrc_dual_pair.md) closes four bounded-maximum classes and a high-minimum6+7 family;
   [projective higher jets](continuing1_20260906_jets_projective.md) give attained precision and an intrinsic p31 packet;

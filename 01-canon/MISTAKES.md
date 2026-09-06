@@ -9,6 +9,22 @@ Format per entry:
 - Why it was wrong
 - The correct framing
 
+## 2026-09-06 continuation -- phase operation, branch and coefficient field
+
+The [actual Laurent cone audit](../05-knowledge/results/continuing1_20260906_laurent_cone_separator.md)
+corrected a provisional root-sign sentence: the displayed alternating B(v)
+has positive roots; the unsigned polynomial has negative roots. The code and
+literal binomial identity were already correct. Integer phase multiplication
+is also a substantive restriction: its all-power separator fails at exponent
+1/2. A [positive amplitude repair](../05-knowledge/results/continuing1_20260906_laurent_real_power_boundary.md)
+works with real algebraic coefficients on the positive branch only. Dropping
+either qualifier yields a false extension; parity and the irreducible sextic
+give exact obstructions. Conversely the negative quadratic coefficient of
+the [next amplitude interpolant](../05-knowledge/results/continuing1_20260906_laurent_amplitude_h4_boundary.md)
+refutes only that degree-three single-window recipe, not every larger cone
+and not actual Laurent noncancellation. The missing coordinates are the
+selected amplitude branch, coefficient field, and allowed exponent bank.
+
 ## 2026-09-06 continuation -- whole-component boundary and actual atlas
 
 [The no-unit pair-gcd proof](../05-knowledge/results/continuing1_20260906_lrc_dual_pair.md)

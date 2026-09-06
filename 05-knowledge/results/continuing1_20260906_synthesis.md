@@ -6,7 +6,7 @@ isolated worktree is `C:/w/s0905`; the unrelated dirty original checkout
 is preserved. This session inherited clean `677bde8eb`, including the
 [incoming creative synthesis](creative_20260906_overview.md), after the
 [fifteen-checkpoint overnight portfolio](overnight_20260906_synthesis.md).
-The first push integrated concurrent commits through2763ed0df.
+The first push integrated concurrent commits through 2763ed0df.
 Read current canon, corrections and incoming commits before continuing.
 
 ## Audited mathematical progress
@@ -51,10 +51,45 @@ Read current canon, corrections and incoming commits before continuing.
    **FINITE-EXACT**, not independently enumerated or a universal redundancy
    theorem. Primary9724 and independent5643 head/geometry gates pass.
 
+4. **PROVED method obstruction; independently audited:**
+   [All-integer phase-cone separation](continuing1_20260906_laurent_cone_separator.md),
+   with [independent referee](continuing1_20260906_laurent_cone_separator_audit.md).
+   On actual support (-21,1,12), one exact functional separates the carried
+   doubled response from every nonnegative Laurent-polynomial weighting of
+   all seven coupled derivative windows, including all inverse powers and
+   the cone closure. Three-root spectral signs and discrete convexity prove
+   the infinitely many inequalities; a finite power bank only checks the
+   arithmetic. The doubled response is still negative at every first root.
+   This refutes a proposed universal sign certificate, not noncancellation.
+   The quadratic constant-cone control overlaps the incoming endpoint33 work.
+   Primary 1799 and independent 646 gates pass.
+5. **PROVED exact repair on a selected branch; independently audited:**
+   [Positive square-root phase](continuing1_20260906_laurent_real_power_boundary.md),
+   with [independent amplitude audit](continuing1_20260906_laurent_amplitude_audit.md).
+   On the same three positive first roots, the actual response equals
+   `(A+B sqrt(s)+C s)J_0`, with explicitly certified real algebraic A,B,C>0.
+   The integer-phase separator fails at exponent 1/2. The selected positive
+   amplitude branch and coefficient field are necessary: no nonnegative
+   half-Laurent identity works on all six algebraic branches, and none with
+   rational coefficients works even at one positive branch. This restores
+   the named row's sign mechanism, not a new endpoint-family closure.
+   Primary 35 and independent 55 gates pass.
+6. **FINITE-EXACT stopping boundary:**
+   [Next amplitude interpolant](continuing1_20260906_laurent_amplitude_h4_boundary.md).
+   For actual support (-27,1,15), the unique degree-three positive-amplitude
+   interpolant has its quadratic coefficient strictly between -0.344095
+   and -0.344094. The simple recipe already fails at the next row. Higher
+   powers and multiple windows remain unexcluded; all actual doubled
+   responses retain the known negative sign. The producer's 41 gates pass
+   in normal and optimized Python; root separately reconstructs the literal
+   carrier-square coefficient, without claiming an independent full audit.
+
 The [first continuation manifest](continuing1_20260906_manifest.json)
 freezes these20 proof/source/output artifacts. All producer and independent
 programs have matching normal/optimized outputs; the large body scout was
-also replayed in both modes. No famous open problem is declared solved.
+also replayed in both modes. The [phase manifest](continuing1_20260906_phase_manifest.json)
+freezes 16 further artifacts; all five programs match their frozen outputs
+in normal and optimized Python. No famous open problem is declared solved.
 
 ## Incoming comparisons at synchronization
 
@@ -68,8 +103,8 @@ to force its failed endpoint score.
 
 The incoming endpoint33 theorem closes a further infinite actual Laurent
 family; its constant-cone obstruction overlaps our initial quadratic probe,
-while the all-integer cubic obstruction under audit is stronger in a different
-direction. The complete mixed(2,2,1) Smith law complements the arbitrary
+while the audited all-integer cubic obstruction is stronger in a different
+direction and the positive-amplitude repair exposes its branch boundary. The complete mixed(2,2,1) Smith law complements the arbitrary
 projective precision theorem. Its mod4 bit needs depth>=2, while our mod31
 bit needs depth>=1: both retain only residues protected by the same reference
 change modulo the cluster depth. No stronger exact cross-ratio invariance is
@@ -79,8 +114,8 @@ asserted.
 
 | Live concept | Current predicate and retained coordinate | Next decisive test |
 |---|---|---|
-| Anchor: actual component equality | Pair gcd times the other component's global maximum; physical outside coefficient and full safe arc | Use the native delta criterion or a different selected pair on actual entries outside the new product gate |
-| Niche: actual trinomial midpoint | Original carry endpoints, first-row quotient, and the phase-multiplication operator | Complete the independently audited cone obstruction and test whether the original amplitude rather than its square changes the admissible sign certificates |
+| Anchor: actual component equality | Pair gcd times the other component's global maximum; physical outside coefficient and full safe arc | Test several explicit safe phases together on actual entries outside the scalar gates; compare with the full actual single-phase clearance |
+| Niche: actual trinomial midpoint | Original carry endpoints, first-row quotient, and the phase-multiplication operator | Test a sparse multi-window amplitude cone after the next single-window interpolant fails; retain coefficient field and selected branch |
 | Wildcard: projective higher jets | Primitive content and complete bank covariance; full local ideals before ordered-factor transport | Treat another nontrivial residue cluster, preserving possible factor interleaving rather than merely shifting indices |
 | Compact body versus open tail | Whole ranked lengths and odd common scale; phase placement still lost | Recover a structured physical family or retain endpoint incidence; broader blind body enumeration has no current positive signal |
 | No-three-in-line and native Boolean sectors | Conditional column laws and exact native operators remain essential | Wait for a concrete map from a new object before claiming a transfer; new phase/gcd certificates do not imply asymptotic grid existence |
@@ -97,8 +132,8 @@ The META-PATTERNS cards used were **Search the statement before the method**,
 the selected side, not only the walls**, and **Refine and saturate before
 transporting a factor or shadow**. No new universal method card is promoted
 from one similar-looking example. Here the relevant retained coordinates
-are actual component boundary, phase operation, primitive coefficient
-content, and literal open endpoints, respectively.
+are actual component boundary, amplitude branch and coefficient field,
+primitive coefficient content, and literal open endpoints, respectively.
 
 ## Repairs, limits, and continuation discipline
 

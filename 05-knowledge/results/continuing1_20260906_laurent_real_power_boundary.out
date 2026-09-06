@@ -1,0 +1,12 @@
+HALF_POWER r= 0 certified_integer_enclosure= -19914989775031856088736 -6371590793283941536065
+HALF_POWER r= 6 certified_integer_enclosure= -88591556071110678488277235694 -31956183471936284505432288886
+SQRT_ROOT 1 39579743193/250000000000,15831897293/100000000000
+SQRT_ROOT 2 347760017139/500000000000,69552094839/100000000000
+SQRT_ROOT 3 1048640776277/200000000000,2621601940693/500000000000
+AMPLITUDE_COEFFICIENT 0 millionth_enclosure= 1100291 1100292
+AMPLITUDE_COEFFICIENT 1 millionth_enclosure= 974426 974428
+AMPLITUDE_COEFFICIENT 2 millionth_enclosure= 29415 29416
+CONCLUSION the fixed separator is not nonnegative for all real exponents; theta=1/2 already fails
+REPAIR T=(A+B sqrt(s)+C s)J0 on the three positive roots, with explicitly positive real algebraic A,B,C
+SCOPE no nonnegative half-Laurent identity on all six roots; rational-coefficient positive-branch repair is also excluded; no all-parameter closure
+PASS 35 always-active gates; no floating-point roots or logarithms

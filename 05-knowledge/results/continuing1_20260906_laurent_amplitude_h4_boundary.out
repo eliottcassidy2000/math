@@ -1,0 +1,8 @@
+ACTUAL support=(-27,1,15) firstmass14 doubledmass28 P=s^4-60s^3+84s^2-10s+1/11
+MINIMAL_AMPLITUDE_INTERPOLANT quadratic_coefficient_enclosure= -344095 /1000000, -344094 /1000000
+ROOT 1 8419/849544,11993/1210189
+ROOT 2 259526/2155711,291249/2419213
+ROOT 3 11376199/8744207,1124341/864214
+ROOT 4 120947883/2065060,91906768/1569213
+SCOPE coefficient positivity of the unique degree<4 positive-branch interpolant fails; higher-degree or multi-window certificates remain open
+PASS 41 always-active gates; exact path convolution, literal charge fibers, rational interval interpolation
