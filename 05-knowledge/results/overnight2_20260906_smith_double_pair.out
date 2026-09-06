@@ -1,0 +1,40 @@
+RANK 1 MINORS 36 TERMS 53
+LOWER [(1, 0, 0, 0)]
+ROBUST [(1, 0, 0, 0)]
+WITNESS (1, 0, 0, 0) ((1,), (0,), 0, 0, 2)
+RANK 2 MINORS 225 TERMS 534
+LOWER [(3, 0, 1, 1), (3, 1, 0, 1), (4, 0, 0, 0)]
+ROBUST [(3, 0, 1, 1), (3, 1, 0, 1), (4, 0, 0, 0)]
+WITNESS (3, 0, 1, 1) ((1, 5), (0, 1), 0, 1, 6)
+WITNESS (3, 1, 0, 1) ((1, 3), (0, 1), 1, 0, -6)
+WITNESS (4, 0, 0, 0) ((0, 1), (0, 1), 0, 0, 1)
+RANK 3 MINORS 400 TERMS 1717
+LOWER [(6, 1, 1, 1), (7, 0, 1, 0), (7, 1, 0, 0)]
+ROBUST [(6, 1, 1, 1), (7, 0, 1, 0), (7, 1, 0, 0)]
+WITNESS (6, 1, 1, 1) ((1, 3, 5), (0, 1, 2), 1, 1, -24)
+WITNESS (7, 0, 1, 0) ((0, 1, 5), (0, 1, 2), 0, 1, 2)
+WITNESS (7, 1, 0, 0) ((0, 1, 3), (0, 1, 2), 1, 0, 2)
+RANK 4 MINORS 225 TERMS 2198
+LOWER [(11, 1, 1, 0), (12, 0, 4, 0), (12, 4, 0, 0)]
+ROBUST [(11, 1, 1, 0), (12, 0, 4, 0), (12, 4, 0, 0)]
+WITNESS (11, 1, 1, 0) ((0, 1, 3, 5), (0, 1, 2, 3), 1, 1, 4)
+WITNESS (12, 0, 4, 0) ((0, 1, 4, 5), (0, 1, 2, 3), 0, 4, 1)
+WITNESS (12, 4, 0, 0) ((0, 1, 2, 3), (0, 1, 2, 3), 4, 0, 1)
+RANK 5 MINORS 36 TERMS 1081
+LOWER [(17, 1, 4, 0), (17, 4, 1, 0)]
+ROBUST [(17, 1, 4, 0), (17, 4, 1, 0)]
+WITNESS (17, 1, 4, 0) ((0, 1, 3, 4, 5), (0, 1, 2, 3, 4), 1, 4, 2)
+WITNESS (17, 4, 1, 0) ((0, 1, 2, 3, 5), (0, 1, 2, 3, 4), 4, 1, 2)
+RANK 6 MINORS 1 TERMS 71
+LOWER [(24, 4, 4, 0)]
+ROBUST [(24, 4, 4, 0)]
+WITNESS (24, 4, 4, 0) ((0, 1, 2, 3, 4, 5), (0, 1, 2, 3, 4, 5), 4, 4, 1)
+SYMBOLIC_MINORS 923 NONZERO_COEFFICIENTS 14501
+SYMBOLIC_SHA256 b6800af922d7e9bc60b05550de834c1c0fc06940c67b09bc1e347db82a1beff7
+NUMERIC_UNIVERSE unit_lifts 6400 independent_rational 400 full_literal_all_minor_cases 4 CRT_boundary 36
+HOSTILE_shallow (0, 0, 1, 3, 4, 8, 10, 22) naive (0, 0, 1, 3, 4, 9, 9, 22)
+HOSTILE_scale (0, 0, 4, 10, 13, 19, 27, 31)
+HOSTILE_same_determinant (0, 0, 1, 3, 4, 7, 9, 16) (0, 0, 1, 3, 5, 6, 12, 13)
+NUMERIC_SHA256 56d974addfdd5c7439e1c314925d8470d54ed2737e0d8107156d5c2677df212a
+PASS universal symbolic certificate and independent exact specializations
+GATES 1359304

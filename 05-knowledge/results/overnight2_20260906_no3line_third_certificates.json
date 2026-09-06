@@ -1,0 +1,7448 @@
+{
+  "coefficients": {
+    "c4_squared": "11881/50400",
+    "c8": "172483/529200"
+  },
+  "contributions_by_union_size": {
+    "8": [
+      "768463/2116800",
+      "456371/2116800"
+    ],
+    "9": [
+      "-26177/705600",
+      "42631/2116800"
+    ]
+  },
+  "n4_literal_factorial_moments": {
+    "(2, 2)": [
+      "2",
+      "74/9",
+      "104/3"
+    ],
+    "(4,)": [
+      "2",
+      "61/18",
+      "6"
+    ]
+  },
+  "native_metadata_n4": [
+    4,
+    3,
+    12,
+    220,
+    108,
+    0,
+    112,
+    5
+  ],
+  "native_metadata_n8": [
+    8,
+    8,
+    648,
+    45139896,
+    20781112,
+    2939296,
+    21419488,
+    150
+  ],
+  "ordered_factor": 6,
+  "profiles": [
+    {
+      "grid_copies": 352800,
+      "key": 24,
+      "ordered_weighted_contributions_E_F": [
+        "52/3675",
+        "0"
+      ],
+      "profile_coefficients_A_B_D_E_F": [
+        "0",
+        "0",
+        "0",
+        "1",
+        "0"
+      ],
+      "signature": [
+        [
+          8,
+          4,
+          4,
+          true
+        ]
+      ],
+      "skeleton_copies": {
+        "(2, 2, 2, 2)": 0,
+        "(2, 2, 4)": 1,
+        "(2, 3, 3)": 0,
+        "(2, 6)": 0,
+        "(3, 5)": 0,
+        "(4, 4)": 2,
+        "(8,)": 0
+      },
+      "unordered_event_triples": 832
+    },
+    {
+      "grid_copies": 5644800,
+      "key": 25,
+      "ordered_weighted_contributions_E_F": [
+        "-209/4200",
+        "0"
+      ],
+      "profile_coefficients_A_B_D_E_F": [
+        "8",
+        "-2",
+        "-3",
+        "-4",
+        "0"
+      ],
+      "signature": [
+        [
+          8,
+          5,
+          4,
+          false
+        ]
+      ],
+      "skeleton_copies": {
+        "(2, 2, 2, 2)": 0,
+        "(2, 2, 4)": 0,
+        "(2, 3, 3)": 0,
+        "(2, 6)": 6,
+        "(3, 5)": 5,
+        "(4, 4)": 0,
+        "(8,)": 8
+      },
+      "unordered_event_triples": 11704
+    },
+    {
+      "grid_copies": 5644800,
+      "key": 26,
+      "ordered_weighted_contributions_E_F": [
+        "-209/4200",
+        "0"
+      ],
+      "profile_coefficients_A_B_D_E_F": [
+        "8",
+        "-2",
+        "-3",
+        "-4",
+        "0"
+      ],
+      "signature": [
+        [
+          8,
+          4,
+          5,
+          false
+        ]
+      ],
+      "skeleton_copies": {
+        "(2, 2, 2, 2)": 0,
+        "(2, 2, 4)": 0,
+        "(2, 3, 3)": 0,
+        "(2, 6)": 6,
+        "(3, 5)": 5,
+        "(4, 4)": 0,
+        "(8,)": 8
+      },
+      "unordered_event_triples": 11704
+    },
+    {
+      "grid_copies": 45158400,
+      "key": 27,
+      "ordered_weighted_contributions_E_F": [
+        "-49/960",
+        "0"
+      ],
+      "profile_coefficients_A_B_D_E_F": [
+        "16",
+        "-4",
+        "-6",
+        "-8",
+        "0"
+      ],
+      "signature": [
+        [
+          9,
+          5,
+          5,
+          false
+        ]
+      ],
+      "skeleton_copies": {
+        "(2, 2, 2, 2)": 0,
+        "(2, 2, 4)": 0,
+        "(2, 3, 3)": 0,
+        "(2, 6)": 12,
+        "(3, 5)": 10,
+        "(4, 4)": 0,
+        "(8,)": 16
+      },
+      "unordered_event_triples": 48020
+    },
+    {
+      "grid_copies": 88200,
+      "key": 396,
+      "ordered_weighted_contributions_E_F": [
+        "0",
+        "23/2450"
+      ],
+      "profile_coefficients_A_B_D_E_F": [
+        "0",
+        "-1/2",
+        "0",
+        "0",
+        "1/2"
+      ],
+      "signature": [
+        [
+          4,
+          2,
+          2,
+          true
+        ],
+        [
+          4,
+          2,
+          2,
+          true
+        ]
+      ],
+      "skeleton_copies": {
+        "(2, 2, 2, 2)": 6,
+        "(2, 2, 4)": 1,
+        "(2, 3, 3)": 0,
+        "(2, 6)": 0,
+        "(3, 5)": 0,
+        "(4, 4)": 0,
+        "(8,)": 0
+      },
+      "unordered_event_triples": 276
+    },
+    {
+      "grid_copies": 1411200,
+      "key": 428,
+      "ordered_weighted_contributions_E_F": [
+        "0",
+        "-479/14700"
+      ],
+      "profile_coefficients_A_B_D_E_F": [
+        "0",
+        "8",
+        "0",
+        "0",
+        "-2"
+      ],
+      "signature": [
+        [
+          4,
+          2,
+          2,
+          true
+        ],
+        [
+          4,
+          3,
+          2,
+          false
+        ]
+      ],
+      "skeleton_copies": {
+        "(2, 2, 2, 2)": 0,
+        "(2, 2, 4)": 8,
+        "(2, 3, 3)": 6,
+        "(2, 6)": 6,
+        "(3, 5)": 0,
+        "(4, 4)": 0,
+        "(8,)": 0
+      },
+      "unordered_event_triples": 3832
+    },
+    {
+      "grid_copies": 4233600,
+      "key": 429,
+      "ordered_weighted_contributions_E_F": [
+        "863/22050",
+        "863/22050"
+      ],
+      "profile_coefficients_A_B_D_E_F": [
+        "12",
+        "-11",
+        "3",
+        "2",
+        "2"
+      ],
+      "signature": [
+        [
+          4,
+          3,
+          2,
+          false
+        ],
+        [
+          4,
+          3,
+          2,
+          false
+        ]
+      ],
+      "skeleton_copies": {
+        "(2, 2, 2, 2)": 0,
+        "(2, 2, 4)": 0,
+        "(2, 3, 3)": 9,
+        "(2, 6)": 3,
+        "(3, 5)": 15,
+        "(4, 4)": 16,
+        "(8,)": 12
+      },
+      "unordered_event_triples": 13808
+    },
+    {
+      "grid_copies": 1411200,
+      "key": 460,
+      "ordered_weighted_contributions_E_F": [
+        "0",
+        "-479/14700"
+      ],
+      "profile_coefficients_A_B_D_E_F": [
+        "0",
+        "8",
+        "0",
+        "0",
+        "-2"
+      ],
+      "signature": [
+        [
+          4,
+          2,
+          2,
+          true
+        ],
+        [
+          4,
+          2,
+          3,
+          false
+        ]
+      ],
+      "skeleton_copies": {
+        "(2, 2, 2, 2)": 0,
+        "(2, 2, 4)": 8,
+        "(2, 3, 3)": 6,
+        "(2, 6)": 6,
+        "(3, 5)": 0,
+        "(4, 4)": 0,
+        "(8,)": 0
+      },
+      "unordered_event_triples": 3832
+    },
+    {
+      "grid_copies": 11289600,
+      "key": 461,
+      "ordered_weighted_contributions_E_F": [
+        "0",
+        "559/7350"
+      ],
+      "profile_coefficients_A_B_D_E_F": [
+        "32",
+        "-24",
+        "3",
+        "0",
+        "4"
+      ],
+      "signature": [
+        [
+          4,
+          2,
+          3,
+          false
+        ],
+        [
+          4,
+          3,
+          2,
+          false
+        ]
+      ],
+      "skeleton_copies": {
+        "(2, 2, 2, 2)": 0,
+        "(2, 2, 4)": 0,
+        "(2, 3, 3)": 18,
+        "(2, 6)": 12,
+        "(3, 5)": 35,
+        "(4, 4)": 32,
+        "(8,)": 32
+      },
+      "unordered_event_triples": 35776
+    },
+    {
+      "grid_copies": 4233600,
+      "key": 462,
+      "ordered_weighted_contributions_E_F": [
+        "863/22050",
+        "863/22050"
+      ],
+      "profile_coefficients_A_B_D_E_F": [
+        "12",
+        "-11",
+        "3",
+        "2",
+        "2"
+      ],
+      "signature": [
+        [
+          4,
+          2,
+          3,
+          false
+        ],
+        [
+          4,
+          2,
+          3,
+          false
+        ]
+      ],
+      "skeleton_copies": {
+        "(2, 2, 2, 2)": 0,
+        "(2, 2, 4)": 0,
+        "(2, 3, 3)": 9,
+        "(2, 6)": 3,
+        "(3, 5)": 15,
+        "(4, 4)": 16,
+        "(8,)": 12
+      },
+      "unordered_event_triples": 13808
+    },
+    {
+      "grid_copies": 45158400,
+      "key": 489,
+      "ordered_weighted_contributions_E_F": [
+        "20081/117600",
+        "0"
+      ],
+      "profile_coefficients_A_B_D_E_F": [
+        "112",
+        "-28",
+        "18",
+        "8",
+        "0"
+      ],
+      "signature": [
+        [
+          3,
+          2,
+          2,
+          false
+        ],
+        [
+          5,
+          3,
+          3,
+          false
+        ]
+      ],
+      "skeleton_copies": {
+        "(2, 2, 2, 2)": 0,
+        "(2, 2, 4)": 64,
+        "(2, 3, 3)": 120,
+        "(2, 6)": 84,
+        "(3, 5)": 130,
+        "(4, 4)": 128,
+        "(8,)": 112
+      },
+      "unordered_event_triples": 160648
+    },
+    {
+      "grid_copies": 11289600,
+      "key": 492,
+      "ordered_weighted_contributions_E_F": [
+        "0",
+        "-59/2100"
+      ],
+      "profile_coefficients_A_B_D_E_F": [
+        "0",
+        "16",
+        "0",
+        "0",
+        "-4"
+      ],
+      "signature": [
+        [
+          4,
+          2,
+          2,
+          true
+        ],
+        [
+          5,
+          3,
+          3,
+          false
+        ]
+      ],
+      "skeleton_copies": {
+        "(2, 2, 2, 2)": 0,
+        "(2, 2, 4)": 16,
+        "(2, 3, 3)": 12,
+        "(2, 6)": 12,
+        "(3, 5)": 0,
+        "(4, 4)": 0,
+        "(8,)": 0
+      },
+      "unordered_event_triples": 13216
+    },
+    {
+      "grid_copies": 67737600,
+      "key": 493,
+      "ordered_weighted_contributions_E_F": [
+        "26633/352800",
+        "26633/352800"
+      ],
+      "profile_coefficients_A_B_D_E_F": [
+        "48",
+        "-44",
+        "12",
+        "8",
+        "8"
+      ],
+      "signature": [
+        [
+          4,
+          3,
+          2,
+          false
+        ],
+        [
+          5,
+          3,
+          3,
+          false
+        ]
+      ],
+      "skeleton_copies": {
+        "(2, 2, 2, 2)": 0,
+        "(2, 2, 4)": 0,
+        "(2, 3, 3)": 36,
+        "(2, 6)": 12,
+        "(3, 5)": 60,
+        "(4, 4)": 64,
+        "(8,)": 48
+      },
+      "unordered_event_triples": 106532
+    },
+    {
+      "grid_copies": 67737600,
+      "key": 494,
+      "ordered_weighted_contributions_E_F": [
+        "26633/352800",
+        "26633/352800"
+      ],
+      "profile_coefficients_A_B_D_E_F": [
+        "48",
+        "-44",
+        "12",
+        "8",
+        "8"
+      ],
+      "signature": [
+        [
+          4,
+          2,
+          3,
+          false
+        ],
+        [
+          5,
+          3,
+          3,
+          false
+        ]
+      ],
+      "skeleton_copies": {
+        "(2, 2, 2, 2)": 0,
+        "(2, 2, 4)": 0,
+        "(2, 3, 3)": 36,
+        "(2, 6)": 12,
+        "(3, 5)": 60,
+        "(4, 4)": 64,
+        "(8,)": 48
+      },
+      "unordered_event_triples": 106532
+    },
+    {
+      "grid_copies": 940800,
+      "key": 583,
+      "ordered_weighted_contributions_E_F": [
+        "0",
+        "0"
+      ],
+      "profile_coefficients_A_B_D_E_F": [
+        "0",
+        "0",
+        "5",
+        "0",
+        "0"
+      ],
+      "signature": [
+        [
+          2,
+          2,
+          1,
+          false
+        ],
+        [
+          6,
+          3,
+          3,
+          true
+        ]
+      ],
+      "skeleton_copies": {
+        "(2, 2, 2, 2)": 0,
+        "(2, 2, 4)": 0,
+        "(2, 3, 3)": 10,
+        "(2, 6)": 0,
+        "(3, 5)": 5,
+        "(4, 4)": 0,
+        "(8,)": 0
+      },
+      "unordered_event_triples": 2152
+    },
+    {
+      "grid_copies": 940800,
+      "key": 584,
+      "ordered_weighted_contributions_E_F": [
+        "0",
+        "0"
+      ],
+      "profile_coefficients_A_B_D_E_F": [
+        "0",
+        "0",
+        "5",
+        "0",
+        "0"
+      ],
+      "signature": [
+        [
+          2,
+          1,
+          2,
+          false
+        ],
+        [
+          6,
+          3,
+          3,
+          true
+        ]
+      ],
+      "skeleton_copies": {
+        "(2, 2, 2, 2)": 0,
+        "(2, 2, 4)": 0,
+        "(2, 3, 3)": 10,
+        "(2, 6)": 0,
+        "(3, 5)": 5,
+        "(4, 4)": 0,
+        "(8,)": 0
+      },
+      "unordered_event_triples": 2152
+    },
+    {
+      "grid_copies": 7526400,
+      "key": 585,
+      "ordered_weighted_contributions_E_F": [
+        "0",
+        "0"
+      ],
+      "profile_coefficients_A_B_D_E_F": [
+        "0",
+        "0",
+        "10",
+        "0",
+        "0"
+      ],
+      "signature": [
+        [
+          3,
+          2,
+          2,
+          false
+        ],
+        [
+          6,
+          3,
+          3,
+          true
+        ]
+      ],
+      "skeleton_copies": {
+        "(2, 2, 2, 2)": 0,
+        "(2, 2, 4)": 0,
+        "(2, 3, 3)": 20,
+        "(2, 6)": 0,
+        "(3, 5)": 10,
+        "(4, 4)": 0,
+        "(8,)": 0
+      },
+      "unordered_event_triples": 12328
+    },
+    {
+      "grid_copies": 8467200,
+      "key": 615,
+      "ordered_weighted_contributions_E_F": [
+        "1619/22050",
+        "0"
+      ],
+      "profile_coefficients_A_B_D_E_F": [
+        "24",
+        "-6",
+        "-9",
+        "4",
+        "0"
+      ],
+      "signature": [
+        [
+          2,
+          2,
+          1,
+          false
+        ],
+        [
+          6,
+          4,
+          3,
+          false
+        ]
+      ],
+      "skeleton_copies": {
+        "(2, 2, 2, 2)": 0,
+        "(2, 2, 4)": 16,
+        "(2, 3, 3)": 0,
+        "(2, 6)": 18,
+        "(3, 5)": 15,
+        "(4, 4)": 32,
+        "(8,)": 24
+      },
+      "unordered_event_triples": 25904
+    },
+    {
+      "grid_copies": 11289600,
+      "key": 616,
+      "ordered_weighted_contributions_E_F": [
+        "0",
+        "0"
+      ],
+      "profile_coefficients_A_B_D_E_F": [
+        "32",
+        "-8",
+        "-12",
+        "0",
+        "0"
+      ],
+      "signature": [
+        [
+          2,
+          1,
+          2,
+          false
+        ],
+        [
+          6,
+          4,
+          3,
+          false
+        ]
+      ],
+      "skeleton_copies": {
+        "(2, 2, 2, 2)": 0,
+        "(2, 2, 4)": 16,
+        "(2, 3, 3)": 0,
+        "(2, 6)": 24,
+        "(3, 5)": 20,
+        "(4, 4)": 32,
+        "(8,)": 32
+      },
+      "unordered_event_triples": 33644
+    },
+    {
+      "grid_copies": 67737600,
+      "key": 617,
+      "ordered_weighted_contributions_E_F": [
+        "25049/352800",
+        "0"
+      ],
+      "profile_coefficients_A_B_D_E_F": [
+        "48",
+        "-12",
+        "-18",
+        "8",
+        "0"
+      ],
+      "signature": [
+        [
+          3,
+          2,
+          2,
+          false
+        ],
+        [
+          6,
+          4,
+          3,
+          false
+        ]
+      ],
+      "skeleton_copies": {
+        "(2, 2, 2, 2)": 0,
+        "(2, 2, 4)": 32,
+        "(2, 3, 3)": 0,
+        "(2, 6)": 36,
+        "(3, 5)": 30,
+        "(4, 4)": 64,
+        "(8,)": 48
+      },
+      "unordered_event_triples": 100196
+    },
+    {
+      "grid_copies": 11289600,
+      "key": 647,
+      "ordered_weighted_contributions_E_F": [
+        "0",
+        "0"
+      ],
+      "profile_coefficients_A_B_D_E_F": [
+        "32",
+        "-8",
+        "-12",
+        "0",
+        "0"
+      ],
+      "signature": [
+        [
+          2,
+          2,
+          1,
+          false
+        ],
+        [
+          6,
+          3,
+          4,
+          false
+        ]
+      ],
+      "skeleton_copies": {
+        "(2, 2, 2, 2)": 0,
+        "(2, 2, 4)": 16,
+        "(2, 3, 3)": 0,
+        "(2, 6)": 24,
+        "(3, 5)": 20,
+        "(4, 4)": 32,
+        "(8,)": 32
+      },
+      "unordered_event_triples": 33644
+    },
+    {
+      "grid_copies": 8467200,
+      "key": 648,
+      "ordered_weighted_contributions_E_F": [
+        "1619/22050",
+        "0"
+      ],
+      "profile_coefficients_A_B_D_E_F": [
+        "24",
+        "-6",
+        "-9",
+        "4",
+        "0"
+      ],
+      "signature": [
+        [
+          2,
+          1,
+          2,
+          false
+        ],
+        [
+          6,
+          3,
+          4,
+          false
+        ]
+      ],
+      "skeleton_copies": {
+        "(2, 2, 2, 2)": 0,
+        "(2, 2, 4)": 16,
+        "(2, 3, 3)": 0,
+        "(2, 6)": 18,
+        "(3, 5)": 15,
+        "(4, 4)": 32,
+        "(8,)": 24
+      },
+      "unordered_event_triples": 25904
+    },
+    {
+      "grid_copies": 67737600,
+      "key": 649,
+      "ordered_weighted_contributions_E_F": [
+        "25049/352800",
+        "0"
+      ],
+      "profile_coefficients_A_B_D_E_F": [
+        "48",
+        "-12",
+        "-18",
+        "8",
+        "0"
+      ],
+      "signature": [
+        [
+          3,
+          2,
+          2,
+          false
+        ],
+        [
+          6,
+          3,
+          4,
+          false
+        ]
+      ],
+      "skeleton_copies": {
+        "(2, 2, 2, 2)": 0,
+        "(2, 2, 4)": 32,
+        "(2, 3, 3)": 0,
+        "(2, 6)": 36,
+        "(3, 5)": 30,
+        "(4, 4)": 64,
+        "(8,)": 48
+      },
+      "unordered_event_triples": 100196
+    },
+    {
+      "grid_copies": 45158400,
+      "key": 675,
+      "ordered_weighted_contributions_E_F": [
+        "6361/47040",
+        "0"
+      ],
+      "profile_coefficients_A_B_D_E_F": [
+        "112",
+        "-28",
+        "-42",
+        "8",
+        "0"
+      ],
+      "signature": [
+        [
+          1,
+          1,
+          1,
+          false
+        ],
+        [
+          7,
+          4,
+          4,
+          false
+        ]
+      ],
+      "skeleton_copies": {
+        "(2, 2, 2, 2)": 0,
+        "(2, 2, 4)": 64,
+        "(2, 3, 3)": 0,
+        "(2, 6)": 84,
+        "(3, 5)": 70,
+        "(4, 4)": 128,
+        "(8,)": 112
+      },
+      "unordered_event_triples": 127220
+    },
+    {
+      "grid_copies": 67737600,
+      "key": 679,
+      "ordered_weighted_contributions_E_F": [
+        "23939/352800",
+        "0"
+      ],
+      "profile_coefficients_A_B_D_E_F": [
+        "48",
+        "-12",
+        "-18",
+        "8",
+        "0"
+      ],
+      "signature": [
+        [
+          2,
+          2,
+          1,
+          false
+        ],
+        [
+          7,
+          4,
+          4,
+          false
+        ]
+      ],
+      "skeleton_copies": {
+        "(2, 2, 2, 2)": 0,
+        "(2, 2, 4)": 32,
+        "(2, 3, 3)": 0,
+        "(2, 6)": 36,
+        "(3, 5)": 30,
+        "(4, 4)": 64,
+        "(8,)": 48
+      },
+      "unordered_event_triples": 95756
+    },
+    {
+      "grid_copies": 67737600,
+      "key": 680,
+      "ordered_weighted_contributions_E_F": [
+        "23939/352800",
+        "0"
+      ],
+      "profile_coefficients_A_B_D_E_F": [
+        "48",
+        "-12",
+        "-18",
+        "8",
+        "0"
+      ],
+      "signature": [
+        [
+          2,
+          1,
+          2,
+          false
+        ],
+        [
+          7,
+          4,
+          4,
+          false
+        ]
+      ],
+      "skeleton_copies": {
+        "(2, 2, 2, 2)": 0,
+        "(2, 2, 4)": 32,
+        "(2, 3, 3)": 0,
+        "(2, 6)": 36,
+        "(3, 5)": 30,
+        "(4, 4)": 64,
+        "(8,)": 48
+      },
+      "unordered_event_triples": 95756
+    },
+    {
+      "grid_copies": 5644800,
+      "key": 771,
+      "ordered_weighted_contributions_E_F": [
+        "529/9800",
+        "0"
+      ],
+      "profile_coefficients_A_B_D_E_F": [
+        "0",
+        "0",
+        "0",
+        "8",
+        "0"
+      ],
+      "signature": [
+        [
+          1,
+          1,
+          1,
+          false
+        ],
+        [
+          8,
+          4,
+          4,
+          true
+        ]
+      ],
+      "skeleton_copies": {
+        "(2, 2, 2, 2)": 0,
+        "(2, 2, 4)": 8,
+        "(2, 3, 3)": 0,
+        "(2, 6)": 0,
+        "(3, 5)": 0,
+        "(4, 4)": 16,
+        "(8,)": 0
+      },
+      "unordered_event_triples": 6348
+    },
+    {
+      "grid_copies": 67737600,
+      "key": 803,
+      "ordered_weighted_contributions_E_F": [
+        "-3833/19600",
+        "0"
+      ],
+      "profile_coefficients_A_B_D_E_F": [
+        "48",
+        "-12",
+        "-18",
+        "-24",
+        "0"
+      ],
+      "signature": [
+        [
+          1,
+          1,
+          1,
+          false
+        ],
+        [
+          8,
+          5,
+          4,
+          false
+        ]
+      ],
+      "skeleton_copies": {
+        "(2, 2, 2, 2)": 0,
+        "(2, 2, 4)": 0,
+        "(2, 3, 3)": 0,
+        "(2, 6)": 36,
+        "(3, 5)": 30,
+        "(4, 4)": 0,
+        "(8,)": 48
+      },
+      "unordered_event_triples": 91992
+    },
+    {
+      "grid_copies": 67737600,
+      "key": 835,
+      "ordered_weighted_contributions_E_F": [
+        "-3833/19600",
+        "0"
+      ],
+      "profile_coefficients_A_B_D_E_F": [
+        "48",
+        "-12",
+        "-18",
+        "-24",
+        "0"
+      ],
+      "signature": [
+        [
+          1,
+          1,
+          1,
+          false
+        ],
+        [
+          8,
+          4,
+          5,
+          false
+        ]
+      ],
+      "skeleton_copies": {
+        "(2, 2, 2, 2)": 0,
+        "(2, 2, 4)": 0,
+        "(2, 3, 3)": 0,
+        "(2, 6)": 36,
+        "(3, 5)": 30,
+        "(4, 4)": 0,
+        "(8,)": 48
+      },
+      "unordered_event_triples": 91992
+    },
+    {
+      "grid_copies": 33868800,
+      "key": 9511,
+      "ordered_weighted_contributions_E_F": [
+        "-23581/176400",
+        "0"
+      ],
+      "profile_coefficients_A_B_D_E_F": [
+        "168",
+        "54",
+        "-3",
+        "-4",
+        "0"
+      ],
+      "signature": [
+        [
+          2,
+          2,
+          1,
+          false
+        ],
+        [
+          3,
+          2,
+          2,
+          false
+        ],
+        [
+          3,
+          2,
+          2,
+          false
+        ]
+      ],
+      "skeleton_copies": {
+        "(2, 2, 2, 2)": 384,
+        "(2, 2, 4)": 272,
+        "(2, 3, 3)": 216,
+        "(2, 6)": 222,
+        "(3, 5)": 165,
+        "(4, 4)": 160,
+        "(8,)": 168
+      },
+      "unordered_event_triples": 188648
+    },
+    {
+      "grid_copies": 33868800,
+      "key": 9512,
+      "ordered_weighted_contributions_E_F": [
+        "-23581/176400",
+        "0"
+      ],
+      "profile_coefficients_A_B_D_E_F": [
+        "168",
+        "54",
+        "-3",
+        "-4",
+        "0"
+      ],
+      "signature": [
+        [
+          2,
+          1,
+          2,
+          false
+        ],
+        [
+          3,
+          2,
+          2,
+          false
+        ],
+        [
+          3,
+          2,
+          2,
+          false
+        ]
+      ],
+      "skeleton_copies": {
+        "(2, 2, 2, 2)": 384,
+        "(2, 2, 4)": 272,
+        "(2, 3, 3)": 216,
+        "(2, 6)": 222,
+        "(3, 5)": 165,
+        "(4, 4)": 160,
+        "(8,)": 168
+      },
+      "unordered_event_triples": 188648
+    },
+    {
+      "grid_copies": 67737600,
+      "key": 9513,
+      "ordered_weighted_contributions_E_F": [
+        "-142/1225",
+        "0"
+      ],
+      "profile_coefficients_A_B_D_E_F": [
+        "80",
+        "44",
+        "10",
+        "-8",
+        "0"
+      ],
+      "signature": [
+        [
+          3,
+          2,
+          2,
+          false
+        ],
+        [
+          3,
+          2,
+          2,
+          false
+        ],
+        [
+          3,
+          2,
+          2,
+          false
+        ]
+      ],
+      "skeleton_copies": {
+        "(2, 2, 2, 2)": 256,
+        "(2, 2, 4)": 160,
+        "(2, 3, 3)": 144,
+        "(2, 6)": 124,
+        "(3, 5)": 90,
+        "(4, 4)": 64,
+        "(8,)": 80
+      },
+      "unordered_event_triples": 163584
+    },
+    {
+      "grid_copies": 1058400,
+      "key": 12519,
+      "ordered_weighted_contributions_E_F": [
+        "0",
+        "197/7350"
+      ],
+      "profile_coefficients_A_B_D_E_F": [
+        "0",
+        "8",
+        "0",
+        "0",
+        "1"
+      ],
+      "signature": [
+        [
+          2,
+          2,
+          1,
+          false
+        ],
+        [
+          2,
+          2,
+          1,
+          false
+        ],
+        [
+          4,
+          2,
+          2,
+          true
+        ]
+      ],
+      "skeleton_copies": {
+        "(2, 2, 2, 2)": 48,
+        "(2, 2, 4)": 20,
+        "(2, 3, 3)": 9,
+        "(2, 6)": 9,
+        "(3, 5)": 0,
+        "(4, 4)": 0,
+        "(8,)": 0
+      },
+      "unordered_event_triples": 4728
+    },
+    {
+      "grid_copies": 2822400,
+      "key": 12551,
+      "ordered_weighted_contributions_E_F": [
+        "0",
+        "0"
+      ],
+      "profile_coefficients_A_B_D_E_F": [
+        "0",
+        "24",
+        "0",
+        "0",
+        "0"
+      ],
+      "signature": [
+        [
+          2,
+          1,
+          2,
+          false
+        ],
+        [
+          2,
+          2,
+          1,
+          false
+        ],
+        [
+          4,
+          2,
+          2,
+          true
+        ]
+      ],
+      "skeleton_copies": {
+        "(2, 2, 2, 2)": 96,
+        "(2, 2, 4)": 48,
+        "(2, 3, 3)": 24,
+        "(2, 6)": 24,
+        "(3, 5)": 0,
+        "(4, 4)": 0,
+        "(8,)": 0
+      },
+      "unordered_event_triples": 10240
+    },
+    {
+      "grid_copies": 1058400,
+      "key": 12552,
+      "ordered_weighted_contributions_E_F": [
+        "0",
+        "197/7350"
+      ],
+      "profile_coefficients_A_B_D_E_F": [
+        "0",
+        "8",
+        "0",
+        "0",
+        "1"
+      ],
+      "signature": [
+        [
+          2,
+          1,
+          2,
+          false
+        ],
+        [
+          2,
+          1,
+          2,
+          false
+        ],
+        [
+          4,
+          2,
+          2,
+          true
+        ]
+      ],
+      "skeleton_copies": {
+        "(2, 2, 2, 2)": 48,
+        "(2, 2, 4)": 20,
+        "(2, 3, 3)": 9,
+        "(2, 6)": 9,
+        "(3, 5)": 0,
+        "(4, 4)": 0,
+        "(8,)": 0
+      },
+      "unordered_event_triples": 4728
+    },
+    {
+      "grid_copies": 11289600,
+      "key": 12579,
+      "ordered_weighted_contributions_E_F": [
+        "0",
+        "8903/58800"
+      ],
+      "profile_coefficients_A_B_D_E_F": [
+        "0",
+        "80",
+        "0",
+        "0",
+        "4"
+      ],
+      "signature": [
+        [
+          1,
+          1,
+          1,
+          false
+        ],
+        [
+          3,
+          2,
+          2,
+          false
+        ],
+        [
+          4,
+          2,
+          2,
+          true
+        ]
+      ],
+      "skeleton_copies": {
+        "(2, 2, 2, 2)": 384,
+        "(2, 2, 4)": 176,
+        "(2, 3, 3)": 84,
+        "(2, 6)": 84,
+        "(3, 5)": 0,
+        "(4, 4)": 0,
+        "(8,)": 0
+      },
+      "unordered_event_triples": 71224
+    },
+    {
+      "grid_copies": 16934400,
+      "key": 12583,
+      "ordered_weighted_contributions_E_F": [
+        "0",
+        "6821/176400"
+      ],
+      "profile_coefficients_A_B_D_E_F": [
+        "0",
+        "32",
+        "0",
+        "0",
+        "4"
+      ],
+      "signature": [
+        [
+          2,
+          2,
+          1,
+          false
+        ],
+        [
+          3,
+          2,
+          2,
+          false
+        ],
+        [
+          4,
+          2,
+          2,
+          true
+        ]
+      ],
+      "skeleton_copies": {
+        "(2, 2, 2, 2)": 192,
+        "(2, 2, 4)": 80,
+        "(2, 3, 3)": 36,
+        "(2, 6)": 36,
+        "(3, 5)": 0,
+        "(4, 4)": 0,
+        "(8,)": 0
+      },
+      "unordered_event_triples": 27284
+    },
+    {
+      "grid_copies": 16934400,
+      "key": 12584,
+      "ordered_weighted_contributions_E_F": [
+        "0",
+        "6821/176400"
+      ],
+      "profile_coefficients_A_B_D_E_F": [
+        "0",
+        "32",
+        "0",
+        "0",
+        "4"
+      ],
+      "signature": [
+        [
+          2,
+          1,
+          2,
+          false
+        ],
+        [
+          3,
+          2,
+          2,
+          false
+        ],
+        [
+          4,
+          2,
+          2,
+          true
+        ]
+      ],
+      "skeleton_copies": {
+        "(2, 2, 2, 2)": 192,
+        "(2, 2, 4)": 80,
+        "(2, 3, 3)": 36,
+        "(2, 6)": 36,
+        "(3, 5)": 0,
+        "(4, 4)": 0,
+        "(8,)": 0
+      },
+      "unordered_event_triples": 27284
+    },
+    {
+      "grid_copies": 1411200,
+      "key": 12675,
+      "ordered_weighted_contributions_E_F": [
+        "0",
+        "209/7350"
+      ],
+      "profile_coefficients_A_B_D_E_F": [
+        "0",
+        "-4",
+        "0",
+        "0",
+        "4"
+      ],
+      "signature": [
+        [
+          1,
+          1,
+          1,
+          false
+        ],
+        [
+          4,
+          2,
+          2,
+          true
+        ],
+        [
+          4,
+          2,
+          2,
+          true
+        ]
+      ],
+      "skeleton_copies": {
+        "(2, 2, 2, 2)": 48,
+        "(2, 2, 4)": 8,
+        "(2, 3, 3)": 0,
+        "(2, 6)": 0,
+        "(3, 5)": 0,
+        "(4, 4)": 0,
+        "(8,)": 0
+      },
+      "unordered_event_triples": 1672
+    },
+    {
+      "grid_copies": 4233600,
+      "key": 13543,
+      "ordered_weighted_contributions_E_F": [
+        "-248/2205",
+        "-124/2205"
+      ],
+      "profile_coefficients_A_B_D_E_F": [
+        "24",
+        "2",
+        "6",
+        "-4",
+        "-2"
+      ],
+      "signature": [
+        [
+          2,
+          2,
+          1,
+          false
+        ],
+        [
+          2,
+          2,
+          1,
+          false
+        ],
+        [
+          4,
+          3,
+          2,
+          false
+        ]
+      ],
+      "skeleton_copies": {
+        "(2, 2, 2, 2)": 0,
+        "(2, 2, 4)": 16,
+        "(2, 3, 3)": 36,
+        "(2, 6)": 24,
+        "(3, 5)": 30,
+        "(4, 4)": 16,
+        "(8,)": 24
+      },
+      "unordered_event_triples": 19840
+    },
+    {
+      "grid_copies": 16934400,
+      "key": 13575,
+      "ordered_weighted_contributions_E_F": [
+        "0",
+        "0"
+      ],
+      "profile_coefficients_A_B_D_E_F": [
+        "96",
+        "-24",
+        "9",
+        "0",
+        "0"
+      ],
+      "signature": [
+        [
+          2,
+          1,
+          2,
+          false
+        ],
+        [
+          2,
+          2,
+          1,
+          false
+        ],
+        [
+          4,
+          3,
+          2,
+          false
+        ]
+      ],
+      "skeleton_copies": {
+        "(2, 2, 2, 2)": 0,
+        "(2, 2, 4)": 48,
+        "(2, 3, 3)": 90,
+        "(2, 6)": 72,
+        "(3, 5)": 105,
+        "(4, 4)": 96,
+        "(8,)": 96
+      },
+      "unordered_event_triples": 76344
+    },
+    {
+      "grid_copies": 8467200,
+      "key": 13576,
+      "ordered_weighted_contributions_E_F": [
+        "0",
+        "-9631/176400"
+      ],
+      "profile_coefficients_A_B_D_E_F": [
+        "48",
+        "-4",
+        "-3",
+        "0",
+        "-2"
+      ],
+      "signature": [
+        [
+          2,
+          1,
+          2,
+          false
+        ],
+        [
+          2,
+          1,
+          2,
+          false
+        ],
+        [
+          4,
+          3,
+          2,
+          false
+        ]
+      ],
+      "skeleton_copies": {
+        "(2, 2, 2, 2)": 0,
+        "(2, 2, 4)": 32,
+        "(2, 3, 3)": 36,
+        "(2, 6)": 42,
+        "(3, 5)": 45,
+        "(4, 4)": 48,
+        "(8,)": 48
+      },
+      "unordered_event_triples": 38524
+    },
+    {
+      "grid_copies": 67737600,
+      "key": 13603,
+      "ordered_weighted_contributions_E_F": [
+        "-137/630",
+        "-137/630"
+      ],
+      "profile_coefficients_A_B_D_E_F": [
+        "336",
+        "-52",
+        "24",
+        "-8",
+        "-8"
+      ],
+      "signature": [
+        [
+          1,
+          1,
+          1,
+          false
+        ],
+        [
+          3,
+          2,
+          2,
+          false
+        ],
+        [
+          4,
+          3,
+          2,
+          false
+        ]
+      ],
+      "skeleton_copies": {
+        "(2, 2, 2, 2)": 0,
+        "(2, 2, 4)": 192,
+        "(2, 3, 3)": 324,
+        "(2, 6)": 276,
+        "(3, 5)": 360,
+        "(4, 4)": 320,
+        "(8,)": 336
+      },
+      "unordered_event_triples": 306880
+    },
+    {
+      "grid_copies": 67737600,
+      "key": 13607,
+      "ordered_weighted_contributions_E_F": [
+        "-34913/176400",
+        "-34913/352800"
+      ],
+      "profile_coefficients_A_B_D_E_F": [
+        "96",
+        "8",
+        "24",
+        "-16",
+        "-8"
+      ],
+      "signature": [
+        [
+          2,
+          2,
+          1,
+          false
+        ],
+        [
+          3,
+          2,
+          2,
+          false
+        ],
+        [
+          4,
+          3,
+          2,
+          false
+        ]
+      ],
+      "skeleton_copies": {
+        "(2, 2, 2, 2)": 0,
+        "(2, 2, 4)": 64,
+        "(2, 3, 3)": 144,
+        "(2, 6)": 96,
+        "(3, 5)": 120,
+        "(4, 4)": 64,
+        "(8,)": 96
+      },
+      "unordered_event_triples": 139652
+    },
+    {
+      "grid_copies": 101606400,
+      "key": 13608,
+      "ordered_weighted_contributions_E_F": [
+        "-1711/17640",
+        "-1711/17640"
+      ],
+      "profile_coefficients_A_B_D_E_F": [
+        "144",
+        "-4",
+        "6",
+        "-8",
+        "-8"
+      ],
+      "signature": [
+        [
+          2,
+          1,
+          2,
+          false
+        ],
+        [
+          3,
+          2,
+          2,
+          false
+        ],
+        [
+          4,
+          3,
+          2,
+          false
+        ]
+      ],
+      "skeleton_copies": {
+        "(2, 2, 2, 2)": 0,
+        "(2, 2, 4)": 96,
+        "(2, 3, 3)": 144,
+        "(2, 6)": 132,
+        "(3, 5)": 150,
+        "(4, 4)": 128,
+        "(8,)": 144
+      },
+      "unordered_event_triples": 205320
+    },
+    {
+      "grid_copies": 16934400,
+      "key": 13699,
+      "ordered_weighted_contributions_E_F": [
+        "0",
+        "-6757/58800"
+      ],
+      "profile_coefficients_A_B_D_E_F": [
+        "0",
+        "48",
+        "0",
+        "0",
+        "-12"
+      ],
+      "signature": [
+        [
+          1,
+          1,
+          1,
+          false
+        ],
+        [
+          4,
+          2,
+          2,
+          true
+        ],
+        [
+          4,
+          3,
+          2,
+          false
+        ]
+      ],
+      "skeleton_copies": {
+        "(2, 2, 2, 2)": 0,
+        "(2, 2, 4)": 48,
+        "(2, 3, 3)": 36,
+        "(2, 6)": 36,
+        "(3, 5)": 0,
+        "(4, 4)": 0,
+        "(8,)": 0
+      },
+      "unordered_event_triples": 27028
+    },
+    {
+      "grid_copies": 33868800,
+      "key": 13731,
+      "ordered_weighted_contributions_E_F": [
+        "5351/58800",
+        "5351/58800"
+      ],
+      "profile_coefficients_A_B_D_E_F": [
+        "48",
+        "-44",
+        "12",
+        "8",
+        "8"
+      ],
+      "signature": [
+        [
+          1,
+          1,
+          1,
+          false
+        ],
+        [
+          4,
+          3,
+          2,
+          false
+        ],
+        [
+          4,
+          3,
+          2,
+          false
+        ]
+      ],
+      "skeleton_copies": {
+        "(2, 2, 2, 2)": 0,
+        "(2, 2, 4)": 0,
+        "(2, 3, 3)": 36,
+        "(2, 6)": 12,
+        "(3, 5)": 60,
+        "(4, 4)": 64,
+        "(8,)": 48
+      },
+      "unordered_event_triples": 64212
+    },
+    {
+      "grid_copies": 8467200,
+      "key": 14567,
+      "ordered_weighted_contributions_E_F": [
+        "0",
+        "-9631/176400"
+      ],
+      "profile_coefficients_A_B_D_E_F": [
+        "48",
+        "-4",
+        "-3",
+        "0",
+        "-2"
+      ],
+      "signature": [
+        [
+          2,
+          2,
+          1,
+          false
+        ],
+        [
+          2,
+          2,
+          1,
+          false
+        ],
+        [
+          4,
+          2,
+          3,
+          false
+        ]
+      ],
+      "skeleton_copies": {
+        "(2, 2, 2, 2)": 0,
+        "(2, 2, 4)": 32,
+        "(2, 3, 3)": 36,
+        "(2, 6)": 42,
+        "(3, 5)": 45,
+        "(4, 4)": 48,
+        "(8,)": 48
+      },
+      "unordered_event_triples": 38524
+    },
+    {
+      "grid_copies": 16934400,
+      "key": 14599,
+      "ordered_weighted_contributions_E_F": [
+        "0",
+        "0"
+      ],
+      "profile_coefficients_A_B_D_E_F": [
+        "96",
+        "-24",
+        "9",
+        "0",
+        "0"
+      ],
+      "signature": [
+        [
+          2,
+          1,
+          2,
+          false
+        ],
+        [
+          2,
+          2,
+          1,
+          false
+        ],
+        [
+          4,
+          2,
+          3,
+          false
+        ]
+      ],
+      "skeleton_copies": {
+        "(2, 2, 2, 2)": 0,
+        "(2, 2, 4)": 48,
+        "(2, 3, 3)": 90,
+        "(2, 6)": 72,
+        "(3, 5)": 105,
+        "(4, 4)": 96,
+        "(8,)": 96
+      },
+      "unordered_event_triples": 76344
+    },
+    {
+      "grid_copies": 4233600,
+      "key": 14600,
+      "ordered_weighted_contributions_E_F": [
+        "-248/2205",
+        "-124/2205"
+      ],
+      "profile_coefficients_A_B_D_E_F": [
+        "24",
+        "2",
+        "6",
+        "-4",
+        "-2"
+      ],
+      "signature": [
+        [
+          2,
+          1,
+          2,
+          false
+        ],
+        [
+          2,
+          1,
+          2,
+          false
+        ],
+        [
+          4,
+          2,
+          3,
+          false
+        ]
+      ],
+      "skeleton_copies": {
+        "(2, 2, 2, 2)": 0,
+        "(2, 2, 4)": 16,
+        "(2, 3, 3)": 36,
+        "(2, 6)": 24,
+        "(3, 5)": 30,
+        "(4, 4)": 16,
+        "(8,)": 24
+      },
+      "unordered_event_triples": 19840
+    },
+    {
+      "grid_copies": 67737600,
+      "key": 14627,
+      "ordered_weighted_contributions_E_F": [
+        "-137/630",
+        "-137/630"
+      ],
+      "profile_coefficients_A_B_D_E_F": [
+        "336",
+        "-52",
+        "24",
+        "-8",
+        "-8"
+      ],
+      "signature": [
+        [
+          1,
+          1,
+          1,
+          false
+        ],
+        [
+          3,
+          2,
+          2,
+          false
+        ],
+        [
+          4,
+          2,
+          3,
+          false
+        ]
+      ],
+      "skeleton_copies": {
+        "(2, 2, 2, 2)": 0,
+        "(2, 2, 4)": 192,
+        "(2, 3, 3)": 324,
+        "(2, 6)": 276,
+        "(3, 5)": 360,
+        "(4, 4)": 320,
+        "(8,)": 336
+      },
+      "unordered_event_triples": 306880
+    },
+    {
+      "grid_copies": 101606400,
+      "key": 14631,
+      "ordered_weighted_contributions_E_F": [
+        "-1711/17640",
+        "-1711/17640"
+      ],
+      "profile_coefficients_A_B_D_E_F": [
+        "144",
+        "-4",
+        "6",
+        "-8",
+        "-8"
+      ],
+      "signature": [
+        [
+          2,
+          2,
+          1,
+          false
+        ],
+        [
+          3,
+          2,
+          2,
+          false
+        ],
+        [
+          4,
+          2,
+          3,
+          false
+        ]
+      ],
+      "skeleton_copies": {
+        "(2, 2, 2, 2)": 0,
+        "(2, 2, 4)": 96,
+        "(2, 3, 3)": 144,
+        "(2, 6)": 132,
+        "(3, 5)": 150,
+        "(4, 4)": 128,
+        "(8,)": 144
+      },
+      "unordered_event_triples": 205320
+    },
+    {
+      "grid_copies": 67737600,
+      "key": 14632,
+      "ordered_weighted_contributions_E_F": [
+        "-34913/176400",
+        "-34913/352800"
+      ],
+      "profile_coefficients_A_B_D_E_F": [
+        "96",
+        "8",
+        "24",
+        "-16",
+        "-8"
+      ],
+      "signature": [
+        [
+          2,
+          1,
+          2,
+          false
+        ],
+        [
+          3,
+          2,
+          2,
+          false
+        ],
+        [
+          4,
+          2,
+          3,
+          false
+        ]
+      ],
+      "skeleton_copies": {
+        "(2, 2, 2, 2)": 0,
+        "(2, 2, 4)": 64,
+        "(2, 3, 3)": 144,
+        "(2, 6)": 96,
+        "(3, 5)": 120,
+        "(4, 4)": 64,
+        "(8,)": 96
+      },
+      "unordered_event_triples": 139652
+    },
+    {
+      "grid_copies": 16934400,
+      "key": 14723,
+      "ordered_weighted_contributions_E_F": [
+        "0",
+        "-6757/58800"
+      ],
+      "profile_coefficients_A_B_D_E_F": [
+        "0",
+        "48",
+        "0",
+        "0",
+        "-12"
+      ],
+      "signature": [
+        [
+          1,
+          1,
+          1,
+          false
+        ],
+        [
+          4,
+          2,
+          2,
+          true
+        ],
+        [
+          4,
+          2,
+          3,
+          false
+        ]
+      ],
+      "skeleton_copies": {
+        "(2, 2, 2, 2)": 0,
+        "(2, 2, 4)": 48,
+        "(2, 3, 3)": 36,
+        "(2, 6)": 36,
+        "(3, 5)": 0,
+        "(4, 4)": 0,
+        "(8,)": 0
+      },
+      "unordered_event_triples": 27028
+    },
+    {
+      "grid_copies": 101606400,
+      "key": 14755,
+      "ordered_weighted_contributions_E_F": [
+        "-8093/88200",
+        "8093/44100"
+      ],
+      "profile_coefficients_A_B_D_E_F": [
+        "144",
+        "-100",
+        "6",
+        "-8",
+        "16"
+      ],
+      "signature": [
+        [
+          1,
+          1,
+          1,
+          false
+        ],
+        [
+          4,
+          2,
+          3,
+          false
+        ],
+        [
+          4,
+          3,
+          2,
+          false
+        ]
+      ],
+      "skeleton_copies": {
+        "(2, 2, 2, 2)": 0,
+        "(2, 2, 4)": 0,
+        "(2, 3, 3)": 72,
+        "(2, 6)": 60,
+        "(3, 5)": 150,
+        "(4, 4)": 128,
+        "(8,)": 144
+      },
+      "unordered_event_triples": 194232
+    },
+    {
+      "grid_copies": 33868800,
+      "key": 14787,
+      "ordered_weighted_contributions_E_F": [
+        "5351/58800",
+        "5351/58800"
+      ],
+      "profile_coefficients_A_B_D_E_F": [
+        "48",
+        "-44",
+        "12",
+        "8",
+        "8"
+      ],
+      "signature": [
+        [
+          1,
+          1,
+          1,
+          false
+        ],
+        [
+          4,
+          2,
+          3,
+          false
+        ],
+        [
+          4,
+          2,
+          3,
+          false
+        ]
+      ],
+      "skeleton_copies": {
+        "(2, 2, 2, 2)": 0,
+        "(2, 2, 4)": 0,
+        "(2, 3, 3)": 36,
+        "(2, 6)": 12,
+        "(3, 5)": 60,
+        "(4, 4)": 64,
+        "(8,)": 48
+      },
+      "unordered_event_triples": 64212
+    },
+    {
+      "grid_copies": 67737600,
+      "key": 15587,
+      "ordered_weighted_contributions_E_F": [
+        "-38243/176400",
+        "0"
+      ],
+      "profile_coefficients_A_B_D_E_F": [
+        "336",
+        "-84",
+        "54",
+        "-8",
+        "0"
+      ],
+      "signature": [
+        [
+          1,
+          1,
+          1,
+          false
+        ],
+        [
+          2,
+          2,
+          1,
+          false
+        ],
+        [
+          5,
+          3,
+          3,
+          false
+        ]
+      ],
+      "skeleton_copies": {
+        "(2, 2, 2, 2)": 0,
+        "(2, 2, 4)": 160,
+        "(2, 3, 3)": 360,
+        "(2, 6)": 252,
+        "(3, 5)": 390,
+        "(4, 4)": 320,
+        "(8,)": 336
+      },
+      "unordered_event_triples": 305944
+    },
+    {
+      "grid_copies": 33868800,
+      "key": 15591,
+      "ordered_weighted_contributions_E_F": [
+        "-257/2800",
+        "-257/5600"
+      ],
+      "profile_coefficients_A_B_D_E_F": [
+        "48",
+        "4",
+        "12",
+        "-8",
+        "-4"
+      ],
+      "signature": [
+        [
+          2,
+          2,
+          1,
+          false
+        ],
+        [
+          2,
+          2,
+          1,
+          false
+        ],
+        [
+          5,
+          3,
+          3,
+          false
+        ]
+      ],
+      "skeleton_copies": {
+        "(2, 2, 2, 2)": 0,
+        "(2, 2, 4)": 32,
+        "(2, 3, 3)": 72,
+        "(2, 6)": 48,
+        "(3, 5)": 60,
+        "(4, 4)": 32,
+        "(8,)": 48
+      },
+      "unordered_event_triples": 64764
+    },
+    {
+      "grid_copies": 67737600,
+      "key": 15619,
+      "ordered_weighted_contributions_E_F": [
+        "-38243/176400",
+        "0"
+      ],
+      "profile_coefficients_A_B_D_E_F": [
+        "336",
+        "-84",
+        "54",
+        "-8",
+        "0"
+      ],
+      "signature": [
+        [
+          1,
+          1,
+          1,
+          false
+        ],
+        [
+          2,
+          1,
+          2,
+          false
+        ],
+        [
+          5,
+          3,
+          3,
+          false
+        ]
+      ],
+      "skeleton_copies": {
+        "(2, 2, 2, 2)": 0,
+        "(2, 2, 4)": 160,
+        "(2, 3, 3)": 360,
+        "(2, 6)": 252,
+        "(3, 5)": 390,
+        "(4, 4)": 320,
+        "(8,)": 336
+      },
+      "unordered_event_triples": 305944
+    },
+    {
+      "grid_copies": 101606400,
+      "key": 15623,
+      "ordered_weighted_contributions_E_F": [
+        "-50303/529200",
+        "0"
+      ],
+      "profile_coefficients_A_B_D_E_F": [
+        "144",
+        "-36",
+        "36",
+        "-8",
+        "0"
+      ],
+      "signature": [
+        [
+          2,
+          1,
+          2,
+          false
+        ],
+        [
+          2,
+          2,
+          1,
+          false
+        ],
+        [
+          5,
+          3,
+          3,
+          false
+        ]
+      ],
+      "skeleton_copies": {
+        "(2, 2, 2, 2)": 0,
+        "(2, 2, 4)": 64,
+        "(2, 3, 3)": 180,
+        "(2, 6)": 108,
+        "(3, 5)": 180,
+        "(4, 4)": 128,
+        "(8,)": 144
+      },
+      "unordered_event_triples": 201212
+    },
+    {
+      "grid_copies": 33868800,
+      "key": 15624,
+      "ordered_weighted_contributions_E_F": [
+        "-257/2800",
+        "-257/5600"
+      ],
+      "profile_coefficients_A_B_D_E_F": [
+        "48",
+        "4",
+        "12",
+        "-8",
+        "-4"
+      ],
+      "signature": [
+        [
+          2,
+          1,
+          2,
+          false
+        ],
+        [
+          2,
+          1,
+          2,
+          false
+        ],
+        [
+          5,
+          3,
+          3,
+          false
+        ]
+      ],
+      "skeleton_copies": {
+        "(2, 2, 2, 2)": 0,
+        "(2, 2, 4)": 32,
+        "(2, 3, 3)": 72,
+        "(2, 6)": 48,
+        "(3, 5)": 60,
+        "(4, 4)": 32,
+        "(8,)": 48
+      },
+      "unordered_event_triples": 64764
+    },
+    {
+      "grid_copies": 406425600,
+      "key": 15651,
+      "ordered_weighted_contributions_E_F": [
+        "205327/1058400",
+        "-205327/1058400"
+      ],
+      "profile_coefficients_A_B_D_E_F": [
+        "480",
+        "-56",
+        "120",
+        "16",
+        "-16"
+      ],
+      "signature": [
+        [
+          1,
+          1,
+          1,
+          false
+        ],
+        [
+          3,
+          2,
+          2,
+          false
+        ],
+        [
+          5,
+          3,
+          3,
+          false
+        ]
+      ],
+      "skeleton_copies": {
+        "(2, 2, 2, 2)": 0,
+        "(2, 2, 4)": 320,
+        "(2, 3, 3)": 648,
+        "(2, 6)": 408,
+        "(3, 5)": 600,
+        "(4, 4)": 512,
+        "(8,)": 480
+      },
+      "unordered_event_triples": 821308
+    },
+    {
+      "grid_copies": 3763200,
+      "key": 18531,
+      "ordered_weighted_contributions_E_F": [
+        "0",
+        "0"
+      ],
+      "profile_coefficients_A_B_D_E_F": [
+        "0",
+        "0",
+        "35",
+        "0",
+        "0"
+      ],
+      "signature": [
+        [
+          1,
+          1,
+          1,
+          false
+        ],
+        [
+          1,
+          1,
+          1,
+          false
+        ],
+        [
+          6,
+          3,
+          3,
+          true
+        ]
+      ],
+      "skeleton_copies": {
+        "(2, 2, 2, 2)": 0,
+        "(2, 2, 4)": 0,
+        "(2, 3, 3)": 70,
+        "(2, 6)": 0,
+        "(3, 5)": 35,
+        "(4, 4)": 0,
+        "(8,)": 0
+      },
+      "unordered_event_triples": 10960
+    },
+    {
+      "grid_copies": 11289600,
+      "key": 18659,
+      "ordered_weighted_contributions_E_F": [
+        "0",
+        "0"
+      ],
+      "profile_coefficients_A_B_D_E_F": [
+        "0",
+        "0",
+        "30",
+        "0",
+        "0"
+      ],
+      "signature": [
+        [
+          1,
+          1,
+          1,
+          false
+        ],
+        [
+          2,
+          2,
+          1,
+          false
+        ],
+        [
+          6,
+          3,
+          3,
+          true
+        ]
+      ],
+      "skeleton_copies": {
+        "(2, 2, 2, 2)": 0,
+        "(2, 2, 4)": 0,
+        "(2, 3, 3)": 60,
+        "(2, 6)": 0,
+        "(3, 5)": 30,
+        "(4, 4)": 0,
+        "(8,)": 0
+      },
+      "unordered_event_triples": 19244
+    },
+    {
+      "grid_copies": 11289600,
+      "key": 18691,
+      "ordered_weighted_contributions_E_F": [
+        "0",
+        "0"
+      ],
+      "profile_coefficients_A_B_D_E_F": [
+        "0",
+        "0",
+        "30",
+        "0",
+        "0"
+      ],
+      "signature": [
+        [
+          1,
+          1,
+          1,
+          false
+        ],
+        [
+          2,
+          1,
+          2,
+          false
+        ],
+        [
+          6,
+          3,
+          3,
+          true
+        ]
+      ],
+      "skeleton_copies": {
+        "(2, 2, 2, 2)": 0,
+        "(2, 2, 4)": 0,
+        "(2, 3, 3)": 60,
+        "(2, 6)": 0,
+        "(3, 5)": 30,
+        "(4, 4)": 0,
+        "(8,)": 0
+      },
+      "unordered_event_triples": 19244
+    },
+    {
+      "grid_copies": 33868800,
+      "key": 19555,
+      "ordered_weighted_contributions_E_F": [
+        "-6043/70560",
+        "0"
+      ],
+      "profile_coefficients_A_B_D_E_F": [
+        "168",
+        "-42",
+        "-63",
+        "-4",
+        "0"
+      ],
+      "signature": [
+        [
+          1,
+          1,
+          1,
+          false
+        ],
+        [
+          1,
+          1,
+          1,
+          false
+        ],
+        [
+          6,
+          4,
+          3,
+          false
+        ]
+      ],
+      "skeleton_copies": {
+        "(2, 2, 2, 2)": 0,
+        "(2, 2, 4)": 80,
+        "(2, 3, 3)": 0,
+        "(2, 6)": 126,
+        "(3, 5)": 105,
+        "(4, 4)": 160,
+        "(8,)": 168
+      },
+      "unordered_event_triples": 120860
+    },
+    {
+      "grid_copies": 67737600,
+      "key": 19683,
+      "ordered_weighted_contributions_E_F": [
+        "14561/88200",
+        "0"
+      ],
+      "profile_coefficients_A_B_D_E_F": [
+        "96",
+        "-24",
+        "-36",
+        "16",
+        "0"
+      ],
+      "signature": [
+        [
+          1,
+          1,
+          1,
+          false
+        ],
+        [
+          2,
+          2,
+          1,
+          false
+        ],
+        [
+          6,
+          4,
+          3,
+          false
+        ]
+      ],
+      "skeleton_copies": {
+        "(2, 2, 2, 2)": 0,
+        "(2, 2, 4)": 64,
+        "(2, 3, 3)": 0,
+        "(2, 6)": 72,
+        "(3, 5)": 60,
+        "(4, 4)": 128,
+        "(8,)": 96
+      },
+      "unordered_event_triples": 116488
+    },
+    {
+      "grid_copies": 101606400,
+      "key": 19715,
+      "ordered_weighted_contributions_E_F": [
+        "-5351/66150",
+        "0"
+      ],
+      "profile_coefficients_A_B_D_E_F": [
+        "144",
+        "-36",
+        "-54",
+        "-8",
+        "0"
+      ],
+      "signature": [
+        [
+          1,
+          1,
+          1,
+          false
+        ],
+        [
+          2,
+          1,
+          2,
+          false
+        ],
+        [
+          6,
+          4,
+          3,
+          false
+        ]
+      ],
+      "skeleton_copies": {
+        "(2, 2, 2, 2)": 0,
+        "(2, 2, 4)": 64,
+        "(2, 3, 3)": 0,
+        "(2, 6)": 108,
+        "(3, 5)": 90,
+        "(4, 4)": 128,
+        "(8,)": 144
+      },
+      "unordered_event_triples": 171232
+    },
+    {
+      "grid_copies": 33868800,
+      "key": 20579,
+      "ordered_weighted_contributions_E_F": [
+        "-6043/70560",
+        "0"
+      ],
+      "profile_coefficients_A_B_D_E_F": [
+        "168",
+        "-42",
+        "-63",
+        "-4",
+        "0"
+      ],
+      "signature": [
+        [
+          1,
+          1,
+          1,
+          false
+        ],
+        [
+          1,
+          1,
+          1,
+          false
+        ],
+        [
+          6,
+          3,
+          4,
+          false
+        ]
+      ],
+      "skeleton_copies": {
+        "(2, 2, 2, 2)": 0,
+        "(2, 2, 4)": 80,
+        "(2, 3, 3)": 0,
+        "(2, 6)": 126,
+        "(3, 5)": 105,
+        "(4, 4)": 160,
+        "(8,)": 168
+      },
+      "unordered_event_triples": 120860
+    },
+    {
+      "grid_copies": 101606400,
+      "key": 20707,
+      "ordered_weighted_contributions_E_F": [
+        "-5351/66150",
+        "0"
+      ],
+      "profile_coefficients_A_B_D_E_F": [
+        "144",
+        "-36",
+        "-54",
+        "-8",
+        "0"
+      ],
+      "signature": [
+        [
+          1,
+          1,
+          1,
+          false
+        ],
+        [
+          2,
+          2,
+          1,
+          false
+        ],
+        [
+          6,
+          3,
+          4,
+          false
+        ]
+      ],
+      "skeleton_copies": {
+        "(2, 2, 2, 2)": 0,
+        "(2, 2, 4)": 64,
+        "(2, 3, 3)": 0,
+        "(2, 6)": 108,
+        "(3, 5)": 90,
+        "(4, 4)": 128,
+        "(8,)": 144
+      },
+      "unordered_event_triples": 171232
+    },
+    {
+      "grid_copies": 67737600,
+      "key": 20739,
+      "ordered_weighted_contributions_E_F": [
+        "14561/88200",
+        "0"
+      ],
+      "profile_coefficients_A_B_D_E_F": [
+        "96",
+        "-24",
+        "-36",
+        "16",
+        "0"
+      ],
+      "signature": [
+        [
+          1,
+          1,
+          1,
+          false
+        ],
+        [
+          2,
+          1,
+          2,
+          false
+        ],
+        [
+          6,
+          3,
+          4,
+          false
+        ]
+      ],
+      "skeleton_copies": {
+        "(2, 2, 2, 2)": 0,
+        "(2, 2, 4)": 64,
+        "(2, 3, 3)": 0,
+        "(2, 6)": 72,
+        "(3, 5)": 60,
+        "(4, 4)": 128,
+        "(8,)": 96
+      },
+      "unordered_event_triples": 116488
+    },
+    {
+      "grid_copies": 203212800,
+      "key": 21603,
+      "ordered_weighted_contributions_E_F": [
+        "42071/105840",
+        "0"
+      ],
+      "profile_coefficients_A_B_D_E_F": [
+        "240",
+        "-60",
+        "-90",
+        "40",
+        "0"
+      ],
+      "signature": [
+        [
+          1,
+          1,
+          1,
+          false
+        ],
+        [
+          1,
+          1,
+          1,
+          false
+        ],
+        [
+          7,
+          4,
+          4,
+          false
+        ]
+      ],
+      "skeleton_copies": {
+        "(2, 2, 2, 2)": 0,
+        "(2, 2, 4)": 160,
+        "(2, 3, 3)": 0,
+        "(2, 6)": 180,
+        "(3, 5)": 150,
+        "(4, 4)": 320,
+        "(8,)": 240
+      },
+      "unordered_event_triples": 336568
+    },
+    {
+      "grid_copies": 176400,
+      "key": 236775,
+      "ordered_weighted_contributions_E_F": [
+        "2/49",
+        "1/49"
+      ],
+      "profile_coefficients_A_B_D_E_F": [
+        "2",
+        "3/2",
+        "-2",
+        "1",
+        "1/2"
+      ],
+      "signature": [
+        [
+          2,
+          2,
+          1,
+          false
+        ],
+        [
+          2,
+          2,
+          1,
+          false
+        ],
+        [
+          2,
+          2,
+          1,
+          false
+        ],
+        [
+          2,
+          2,
+          1,
+          false
+        ]
+      ],
+      "skeleton_copies": {
+        "(2, 2, 2, 2)": 16,
+        "(2, 2, 4)": 8,
+        "(2, 3, 3)": 0,
+        "(2, 6)": 4,
+        "(3, 5)": 0,
+        "(4, 4)": 4,
+        "(8,)": 2
+      },
+      "unordered_event_triples": 1200
+    },
+    {
+      "grid_copies": 2822400,
+      "key": 269543,
+      "ordered_weighted_contributions_E_F": [
+        "0",
+        "0"
+      ],
+      "profile_coefficients_A_B_D_E_F": [
+        "32",
+        "8",
+        "-2",
+        "0",
+        "0"
+      ],
+      "signature": [
+        [
+          2,
+          1,
+          2,
+          false
+        ],
+        [
+          2,
+          2,
+          1,
+          false
+        ],
+        [
+          2,
+          2,
+          1,
+          false
+        ],
+        [
+          2,
+          2,
+          1,
+          false
+        ]
+      ],
+      "skeleton_copies": {
+        "(2, 2, 2, 2)": 64,
+        "(2, 2, 4)": 48,
+        "(2, 3, 3)": 36,
+        "(2, 6)": 40,
+        "(3, 5)": 30,
+        "(4, 4)": 32,
+        "(8,)": 32
+      },
+      "unordered_event_triples": 17732
+    },
+    {
+      "grid_copies": 6350400,
+      "key": 270567,
+      "ordered_weighted_contributions_E_F": [
+        "0",
+        "883/22050"
+      ],
+      "profile_coefficients_A_B_D_E_F": [
+        "72",
+        "2",
+        "3",
+        "0",
+        "1"
+      ],
+      "signature": [
+        [
+          2,
+          1,
+          2,
+          false
+        ],
+        [
+          2,
+          1,
+          2,
+          false
+        ],
+        [
+          2,
+          2,
+          1,
+          false
+        ],
+        [
+          2,
+          2,
+          1,
+          false
+        ]
+      ],
+      "skeleton_copies": {
+        "(2, 2, 2, 2)": 96,
+        "(2, 2, 4)": 80,
+        "(2, 3, 3)": 81,
+        "(2, 6)": 75,
+        "(3, 5)": 75,
+        "(4, 4)": 72,
+        "(8,)": 72
+      },
+      "unordered_event_triples": 42384
+    },
+    {
+      "grid_copies": 2822400,
+      "key": 270599,
+      "ordered_weighted_contributions_E_F": [
+        "0",
+        "0"
+      ],
+      "profile_coefficients_A_B_D_E_F": [
+        "32",
+        "8",
+        "-2",
+        "0",
+        "0"
+      ],
+      "signature": [
+        [
+          2,
+          1,
+          2,
+          false
+        ],
+        [
+          2,
+          1,
+          2,
+          false
+        ],
+        [
+          2,
+          1,
+          2,
+          false
+        ],
+        [
+          2,
+          2,
+          1,
+          false
+        ]
+      ],
+      "skeleton_copies": {
+        "(2, 2, 2, 2)": 64,
+        "(2, 2, 4)": 48,
+        "(2, 3, 3)": 36,
+        "(2, 6)": 40,
+        "(3, 5)": 30,
+        "(4, 4)": 32,
+        "(8,)": 32
+      },
+      "unordered_event_triples": 17732
+    },
+    {
+      "grid_copies": 176400,
+      "key": 270600,
+      "ordered_weighted_contributions_E_F": [
+        "2/49",
+        "1/49"
+      ],
+      "profile_coefficients_A_B_D_E_F": [
+        "2",
+        "3/2",
+        "-2",
+        "1",
+        "1/2"
+      ],
+      "signature": [
+        [
+          2,
+          1,
+          2,
+          false
+        ],
+        [
+          2,
+          1,
+          2,
+          false
+        ],
+        [
+          2,
+          1,
+          2,
+          false
+        ],
+        [
+          2,
+          1,
+          2,
+          false
+        ]
+      ],
+      "skeleton_copies": {
+        "(2, 2, 2, 2)": 16,
+        "(2, 2, 4)": 8,
+        "(2, 3, 3)": 0,
+        "(2, 6)": 4,
+        "(3, 5)": 0,
+        "(4, 4)": 4,
+        "(8,)": 2
+      },
+      "unordered_event_triples": 1200
+    },
+    {
+      "grid_copies": 33868800,
+      "key": 302307,
+      "ordered_weighted_contributions_E_F": [
+        "453/1225",
+        "453/2450"
+      ],
+      "profile_coefficients_A_B_D_E_F": [
+        "336",
+        "92",
+        "-36",
+        "8",
+        "4"
+      ],
+      "signature": [
+        [
+          1,
+          1,
+          1,
+          false
+        ],
+        [
+          2,
+          2,
+          1,
+          false
+        ],
+        [
+          2,
+          2,
+          1,
+          false
+        ],
+        [
+          3,
+          2,
+          2,
+          false
+        ]
+      ],
+      "skeleton_copies": {
+        "(2, 2, 2, 2)": 768,
+        "(2, 2, 4)": 544,
+        "(2, 3, 3)": 360,
+        "(2, 6)": 432,
+        "(3, 5)": 300,
+        "(4, 4)": 352,
+        "(8,)": 336
+      },
+      "unordered_event_triples": 260928
+    },
+    {
+      "grid_copies": 5644800,
+      "key": 302311,
+      "ordered_weighted_contributions_E_F": [
+        "1609/14700",
+        "1609/29400"
+      ],
+      "profile_coefficients_A_B_D_E_F": [
+        "16",
+        "12",
+        "-16",
+        "8",
+        "4"
+      ],
+      "signature": [
+        [
+          2,
+          2,
+          1,
+          false
+        ],
+        [
+          2,
+          2,
+          1,
+          false
+        ],
+        [
+          2,
+          2,
+          1,
+          false
+        ],
+        [
+          3,
+          2,
+          2,
+          false
+        ]
+      ],
+      "skeleton_copies": {
+        "(2, 2, 2, 2)": 128,
+        "(2, 2, 4)": 64,
+        "(2, 3, 3)": 0,
+        "(2, 6)": 32,
+        "(3, 5)": 0,
+        "(4, 4)": 32,
+        "(8,)": 16
+      },
+      "unordered_event_triples": 12872
+    },
+    {
+      "grid_copies": 101606400,
+      "key": 303331,
+      "ordered_weighted_contributions_E_F": [
+        "19417/58800",
+        "0"
+      ],
+      "profile_coefficients_A_B_D_E_F": [
+        "1008",
+        "132",
+        "-48",
+        "8",
+        "0"
+      ],
+      "signature": [
+        [
+          1,
+          1,
+          1,
+          false
+        ],
+        [
+          2,
+          1,
+          2,
+          false
+        ],
+        [
+          2,
+          2,
+          1,
+          false
+        ],
+        [
+          3,
+          2,
+          2,
+          false
+        ]
+      ],
+      "skeleton_copies": {
+        "(2, 2, 2, 2)": 1536,
+        "(2, 2, 4)": 1280,
+        "(2, 3, 3)": 1044,
+        "(2, 6)": 1140,
+        "(3, 5)": 960,
+        "(4, 4)": 1024,
+        "(8,)": 1008
+      },
+      "unordered_event_triples": 699012
+    },
+    {
+      "grid_copies": 50803200,
+      "key": 303335,
+      "ordered_weighted_contributions_E_F": [
+        "4022/33075",
+        "2011/33075"
+      ],
+      "profile_coefficients_A_B_D_E_F": [
+        "144",
+        "44",
+        "-24",
+        "8",
+        "4"
+      ],
+      "signature": [
+        [
+          2,
+          1,
+          2,
+          false
+        ],
+        [
+          2,
+          2,
+          1,
+          false
+        ],
+        [
+          2,
+          2,
+          1,
+          false
+        ],
+        [
+          3,
+          2,
+          2,
+          false
+        ]
+      ],
+      "skeleton_copies": {
+        "(2, 2, 2, 2)": 384,
+        "(2, 2, 4)": 256,
+        "(2, 3, 3)": 144,
+        "(2, 6)": 192,
+        "(3, 5)": 120,
+        "(4, 4)": 160,
+        "(8,)": 144
+      },
+      "unordered_event_triples": 128704
+    },
+    {
+      "grid_copies": 33868800,
+      "key": 303363,
+      "ordered_weighted_contributions_E_F": [
+        "453/1225",
+        "453/2450"
+      ],
+      "profile_coefficients_A_B_D_E_F": [
+        "336",
+        "92",
+        "-36",
+        "8",
+        "4"
+      ],
+      "signature": [
+        [
+          1,
+          1,
+          1,
+          false
+        ],
+        [
+          2,
+          1,
+          2,
+          false
+        ],
+        [
+          2,
+          1,
+          2,
+          false
+        ],
+        [
+          3,
+          2,
+          2,
+          false
+        ]
+      ],
+      "skeleton_copies": {
+        "(2, 2, 2, 2)": 768,
+        "(2, 2, 4)": 544,
+        "(2, 3, 3)": 360,
+        "(2, 6)": 432,
+        "(3, 5)": 300,
+        "(4, 4)": 352,
+        "(8,)": 336
+      },
+      "unordered_event_triples": 260928
+    },
+    {
+      "grid_copies": 50803200,
+      "key": 303367,
+      "ordered_weighted_contributions_E_F": [
+        "4022/33075",
+        "2011/33075"
+      ],
+      "profile_coefficients_A_B_D_E_F": [
+        "144",
+        "44",
+        "-24",
+        "8",
+        "4"
+      ],
+      "signature": [
+        [
+          2,
+          1,
+          2,
+          false
+        ],
+        [
+          2,
+          1,
+          2,
+          false
+        ],
+        [
+          2,
+          2,
+          1,
+          false
+        ],
+        [
+          3,
+          2,
+          2,
+          false
+        ]
+      ],
+      "skeleton_copies": {
+        "(2, 2, 2, 2)": 384,
+        "(2, 2, 4)": 256,
+        "(2, 3, 3)": 144,
+        "(2, 6)": 192,
+        "(3, 5)": 120,
+        "(4, 4)": 160,
+        "(8,)": 144
+      },
+      "unordered_event_triples": 128704
+    },
+    {
+      "grid_copies": 5644800,
+      "key": 303368,
+      "ordered_weighted_contributions_E_F": [
+        "1609/14700",
+        "1609/29400"
+      ],
+      "profile_coefficients_A_B_D_E_F": [
+        "16",
+        "12",
+        "-16",
+        "8",
+        "4"
+      ],
+      "signature": [
+        [
+          2,
+          1,
+          2,
+          false
+        ],
+        [
+          2,
+          1,
+          2,
+          false
+        ],
+        [
+          2,
+          1,
+          2,
+          false
+        ],
+        [
+          3,
+          2,
+          2,
+          false
+        ]
+      ],
+      "skeleton_copies": {
+        "(2, 2, 2, 2)": 128,
+        "(2, 2, 4)": 64,
+        "(2, 3, 3)": 0,
+        "(2, 6)": 32,
+        "(3, 5)": 0,
+        "(4, 4)": 32,
+        "(8,)": 16
+      },
+      "unordered_event_triples": 12872
+    },
+    {
+      "grid_copies": 101606400,
+      "key": 304227,
+      "ordered_weighted_contributions_E_F": [
+        "173219/352800",
+        "173219/529200"
+      ],
+      "profile_coefficients_A_B_D_E_F": [
+        "840",
+        "238",
+        "15",
+        "12",
+        "8"
+      ],
+      "signature": [
+        [
+          1,
+          1,
+          1,
+          false
+        ],
+        [
+          1,
+          1,
+          1,
+          false
+        ],
+        [
+          3,
+          2,
+          2,
+          false
+        ],
+        [
+          3,
+          2,
+          2,
+          false
+        ]
+      ],
+      "skeleton_copies": {
+        "(2, 2, 2, 2)": 1920,
+        "(2, 2, 4)": 1360,
+        "(2, 3, 3)": 1116,
+        "(2, 6)": 1086,
+        "(3, 5)": 855,
+        "(4, 4)": 864,
+        "(8,)": 840
+      },
+      "unordered_event_triples": 692876
+    },
+    {
+      "grid_copies": 203212800,
+      "key": 304355,
+      "ordered_weighted_contributions_E_F": [
+        "653/2520",
+        "653/2520"
+      ],
+      "profile_coefficients_A_B_D_E_F": [
+        "480",
+        "200",
+        "-60",
+        "16",
+        "16"
+      ],
+      "signature": [
+        [
+          1,
+          1,
+          1,
+          false
+        ],
+        [
+          2,
+          2,
+          1,
+          false
+        ],
+        [
+          3,
+          2,
+          2,
+          false
+        ],
+        [
+          3,
+          2,
+          2,
+          false
+        ]
+      ],
+      "skeleton_copies": {
+        "(2, 2, 2, 2)": 1536,
+        "(2, 2, 4)": 960,
+        "(2, 3, 3)": 576,
+        "(2, 6)": 696,
+        "(3, 5)": 420,
+        "(4, 4)": 512,
+        "(8,)": 480
+      },
+      "unordered_event_triples": 548520
+    },
+    {
+      "grid_copies": 203212800,
+      "key": 304387,
+      "ordered_weighted_contributions_E_F": [
+        "653/2520",
+        "653/2520"
+      ],
+      "profile_coefficients_A_B_D_E_F": [
+        "480",
+        "200",
+        "-60",
+        "16",
+        "16"
+      ],
+      "signature": [
+        [
+          1,
+          1,
+          1,
+          false
+        ],
+        [
+          2,
+          1,
+          2,
+          false
+        ],
+        [
+          3,
+          2,
+          2,
+          false
+        ],
+        [
+          3,
+          2,
+          2,
+          false
+        ]
+      ],
+      "skeleton_copies": {
+        "(2, 2, 2, 2)": 1536,
+        "(2, 2, 4)": 960,
+        "(2, 3, 3)": 576,
+        "(2, 6)": 696,
+        "(3, 5)": 420,
+        "(4, 4)": 512,
+        "(8,)": 480
+      },
+      "unordered_event_triples": 548520
+    },
+    {
+      "grid_copies": 8467200,
+      "key": 400483,
+      "ordered_weighted_contributions_E_F": [
+        "0",
+        "-1243/11760"
+      ],
+      "profile_coefficients_A_B_D_E_F": [
+        "0",
+        "128",
+        "0",
+        "0",
+        "-2"
+      ],
+      "signature": [
+        [
+          1,
+          1,
+          1,
+          false
+        ],
+        [
+          1,
+          1,
+          1,
+          false
+        ],
+        [
+          2,
+          2,
+          1,
+          false
+        ],
+        [
+          4,
+          2,
+          2,
+          true
+        ]
+      ],
+      "skeleton_copies": {
+        "(2, 2, 2, 2)": 480,
+        "(2, 2, 4)": 248,
+        "(2, 3, 3)": 126,
+        "(2, 6)": 126,
+        "(3, 5)": 0,
+        "(4, 4)": 0,
+        "(8,)": 0
+      },
+      "unordered_event_triples": 74580
+    },
+    {
+      "grid_copies": 8467200,
+      "key": 400611,
+      "ordered_weighted_contributions_E_F": [
+        "0",
+        "293/6300"
+      ],
+      "profile_coefficients_A_B_D_E_F": [
+        "0",
+        "32",
+        "0",
+        "0",
+        "4"
+      ],
+      "signature": [
+        [
+          1,
+          1,
+          1,
+          false
+        ],
+        [
+          2,
+          2,
+          1,
+          false
+        ],
+        [
+          2,
+          2,
+          1,
+          false
+        ],
+        [
+          4,
+          2,
+          2,
+          true
+        ]
+      ],
+      "skeleton_copies": {
+        "(2, 2, 2, 2)": 192,
+        "(2, 2, 4)": 80,
+        "(2, 3, 3)": 36,
+        "(2, 6)": 36,
+        "(3, 5)": 0,
+        "(4, 4)": 0,
+        "(8,)": 0
+      },
+      "unordered_event_triples": 16408
+    },
+    {
+      "grid_copies": 8467200,
+      "key": 401507,
+      "ordered_weighted_contributions_E_F": [
+        "0",
+        "-1243/11760"
+      ],
+      "profile_coefficients_A_B_D_E_F": [
+        "0",
+        "128",
+        "0",
+        "0",
+        "-2"
+      ],
+      "signature": [
+        [
+          1,
+          1,
+          1,
+          false
+        ],
+        [
+          1,
+          1,
+          1,
+          false
+        ],
+        [
+          2,
+          1,
+          2,
+          false
+        ],
+        [
+          4,
+          2,
+          2,
+          true
+        ]
+      ],
+      "skeleton_copies": {
+        "(2, 2, 2, 2)": 480,
+        "(2, 2, 4)": 248,
+        "(2, 3, 3)": 126,
+        "(2, 6)": 126,
+        "(3, 5)": 0,
+        "(4, 4)": 0,
+        "(8,)": 0
+      },
+      "unordered_event_triples": 74580
+    },
+    {
+      "grid_copies": 25401600,
+      "key": 401635,
+      "ordered_weighted_contributions_E_F": [
+        "0",
+        "-11743/264600"
+      ],
+      "profile_coefficients_A_B_D_E_F": [
+        "0",
+        "112",
+        "0",
+        "0",
+        "-4"
+      ],
+      "signature": [
+        [
+          1,
+          1,
+          1,
+          false
+        ],
+        [
+          2,
+          1,
+          2,
+          false
+        ],
+        [
+          2,
+          2,
+          1,
+          false
+        ],
+        [
+          4,
+          2,
+          2,
+          true
+        ]
+      ],
+      "skeleton_copies": {
+        "(2, 2, 2, 2)": 384,
+        "(2, 2, 4)": 208,
+        "(2, 3, 3)": 108,
+        "(2, 6)": 108,
+        "(3, 5)": 0,
+        "(4, 4)": 0,
+        "(8,)": 0
+      },
+      "unordered_event_triples": 46972
+    },
+    {
+      "grid_copies": 8467200,
+      "key": 401667,
+      "ordered_weighted_contributions_E_F": [
+        "0",
+        "293/6300"
+      ],
+      "profile_coefficients_A_B_D_E_F": [
+        "0",
+        "32",
+        "0",
+        "0",
+        "4"
+      ],
+      "signature": [
+        [
+          1,
+          1,
+          1,
+          false
+        ],
+        [
+          2,
+          1,
+          2,
+          false
+        ],
+        [
+          2,
+          1,
+          2,
+          false
+        ],
+        [
+          4,
+          2,
+          2,
+          true
+        ]
+      ],
+      "skeleton_copies": {
+        "(2, 2, 2, 2)": 192,
+        "(2, 2, 4)": 80,
+        "(2, 3, 3)": 36,
+        "(2, 6)": 36,
+        "(3, 5)": 0,
+        "(4, 4)": 0,
+        "(8,)": 0
+      },
+      "unordered_event_triples": 16408
+    },
+    {
+      "grid_copies": 50803200,
+      "key": 402531,
+      "ordered_weighted_contributions_E_F": [
+        "0",
+        "1979/6615"
+      ],
+      "profile_coefficients_A_B_D_E_F": [
+        "0",
+        "160",
+        "0",
+        "0",
+        "20"
+      ],
+      "signature": [
+        [
+          1,
+          1,
+          1,
+          false
+        ],
+        [
+          1,
+          1,
+          1,
+          false
+        ],
+        [
+          3,
+          2,
+          2,
+          false
+        ],
+        [
+          4,
+          2,
+          2,
+          true
+        ]
+      ],
+      "skeleton_copies": {
+        "(2, 2, 2, 2)": 960,
+        "(2, 2, 4)": 400,
+        "(2, 3, 3)": 180,
+        "(2, 6)": 180,
+        "(3, 5)": 0,
+        "(4, 4)": 0,
+        "(8,)": 0
+      },
+      "unordered_event_triples": 126656
+    },
+    {
+      "grid_copies": 33868800,
+      "key": 433251,
+      "ordered_weighted_contributions_E_F": [
+        "55589/176400",
+        "55589/352800"
+      ],
+      "profile_coefficients_A_B_D_E_F": [
+        "336",
+        "-100",
+        "24",
+        "8",
+        "4"
+      ],
+      "signature": [
+        [
+          1,
+          1,
+          1,
+          false
+        ],
+        [
+          1,
+          1,
+          1,
+          false
+        ],
+        [
+          2,
+          2,
+          1,
+          false
+        ],
+        [
+          4,
+          3,
+          2,
+          false
+        ]
+      ],
+      "skeleton_copies": {
+        "(2, 2, 2, 2)": 0,
+        "(2, 2, 4)": 160,
+        "(2, 3, 3)": 288,
+        "(2, 6)": 240,
+        "(3, 5)": 360,
+        "(4, 4)": 352,
+        "(8,)": 336
+      },
+      "unordered_event_triples": 222356
+    },
+    {
+      "grid_copies": 16934400,
+      "key": 433379,
+      "ordered_weighted_contributions_E_F": [
+        "-10981/88200",
+        "-10981/176400"
+      ],
+      "profile_coefficients_A_B_D_E_F": [
+        "48",
+        "4",
+        "12",
+        "-8",
+        "-4"
+      ],
+      "signature": [
+        [
+          1,
+          1,
+          1,
+          false
+        ],
+        [
+          2,
+          2,
+          1,
+          false
+        ],
+        [
+          2,
+          2,
+          1,
+          false
+        ],
+        [
+          4,
+          3,
+          2,
+          false
+        ]
+      ],
+      "skeleton_copies": {
+        "(2, 2, 2, 2)": 0,
+        "(2, 2, 4)": 32,
+        "(2, 3, 3)": 72,
+        "(2, 6)": 48,
+        "(3, 5)": 60,
+        "(4, 4)": 32,
+        "(8,)": 48
+      },
+      "unordered_event_triples": 43924
+    },
+    {
+      "grid_copies": 50803200,
+      "key": 434275,
+      "ordered_weighted_contributions_E_F": [
+        "2767/18900",
+        "2767/18900"
+      ],
+      "profile_coefficients_A_B_D_E_F": [
+        "504",
+        "-142",
+        "-39",
+        "4",
+        "4"
+      ],
+      "signature": [
+        [
+          1,
+          1,
+          1,
+          false
+        ],
+        [
+          1,
+          1,
+          1,
+          false
+        ],
+        [
+          2,
+          1,
+          2,
+          false
+        ],
+        [
+          4,
+          3,
+          2,
+          false
+        ]
+      ],
+      "skeleton_copies": {
+        "(2, 2, 2, 2)": 0,
+        "(2, 2, 4)": 240,
+        "(2, 3, 3)": 288,
+        "(2, 6)": 366,
+        "(3, 5)": 465,
+        "(4, 4)": 512,
+        "(8,)": 504
+      },
+      "unordered_event_triples": 309904
+    },
+    {
+      "grid_copies": 101606400,
+      "key": 434403,
+      "ordered_weighted_contributions_E_F": [
+        "30743/132300",
+        "30743/264600"
+      ],
+      "profile_coefficients_A_B_D_E_F": [
+        "288",
+        "-104",
+        "12",
+        "16",
+        "8"
+      ],
+      "signature": [
+        [
+          1,
+          1,
+          1,
+          false
+        ],
+        [
+          2,
+          1,
+          2,
+          false
+        ],
+        [
+          2,
+          2,
+          1,
+          false
+        ],
+        [
+          4,
+          3,
+          2,
+          false
+        ]
+      ],
+      "skeleton_copies": {
+        "(2, 2, 2, 2)": 0,
+        "(2, 2, 4)": 128,
+        "(2, 3, 3)": 216,
+        "(2, 6)": 192,
+        "(3, 5)": 300,
+        "(4, 4)": 320,
+        "(8,)": 288
+      },
+      "unordered_event_triples": 245944
+    },
+    {
+      "grid_copies": 50803200,
+      "key": 434435,
+      "ordered_weighted_contributions_E_F": [
+        "10373/88200",
+        "-10373/176400"
+      ],
+      "profile_coefficients_A_B_D_E_F": [
+        "144",
+        "-20",
+        "-24",
+        "8",
+        "-4"
+      ],
+      "signature": [
+        [
+          1,
+          1,
+          1,
+          false
+        ],
+        [
+          2,
+          1,
+          2,
+          false
+        ],
+        [
+          2,
+          1,
+          2,
+          false
+        ],
+        [
+          4,
+          3,
+          2,
+          false
+        ]
+      ],
+      "skeleton_copies": {
+        "(2, 2, 2, 2)": 0,
+        "(2, 2, 4)": 96,
+        "(2, 3, 3)": 72,
+        "(2, 6)": 120,
+        "(3, 5)": 120,
+        "(4, 4)": 160,
+        "(8,)": 144
+      },
+      "unordered_event_triples": 124476
+    },
+    {
+      "grid_copies": 203212800,
+      "key": 435299,
+      "ordered_weighted_contributions_E_F": [
+        "-12637/52920",
+        "-12637/35280"
+      ],
+      "profile_coefficients_A_B_D_E_F": [
+        "480",
+        "-24",
+        "0",
+        "-16",
+        "-24"
+      ],
+      "signature": [
+        [
+          1,
+          1,
+          1,
+          false
+        ],
+        [
+          1,
+          1,
+          1,
+          false
+        ],
+        [
+          3,
+          2,
+          2,
+          false
+        ],
+        [
+          4,
+          3,
+          2,
+          false
+        ]
+      ],
+      "skeleton_copies": {
+        "(2, 2, 2, 2)": 0,
+        "(2, 2, 4)": 320,
+        "(2, 3, 3)": 432,
+        "(2, 6)": 432,
+        "(3, 5)": 480,
+        "(4, 4)": 448,
+        "(8,)": 480
+      },
+      "unordered_event_triples": 505480
+    },
+    {
+      "grid_copies": 50803200,
+      "key": 466019,
+      "ordered_weighted_contributions_E_F": [
+        "2767/18900",
+        "2767/18900"
+      ],
+      "profile_coefficients_A_B_D_E_F": [
+        "504",
+        "-142",
+        "-39",
+        "4",
+        "4"
+      ],
+      "signature": [
+        [
+          1,
+          1,
+          1,
+          false
+        ],
+        [
+          1,
+          1,
+          1,
+          false
+        ],
+        [
+          2,
+          2,
+          1,
+          false
+        ],
+        [
+          4,
+          2,
+          3,
+          false
+        ]
+      ],
+      "skeleton_copies": {
+        "(2, 2, 2, 2)": 0,
+        "(2, 2, 4)": 240,
+        "(2, 3, 3)": 288,
+        "(2, 6)": 366,
+        "(3, 5)": 465,
+        "(4, 4)": 512,
+        "(8,)": 504
+      },
+      "unordered_event_triples": 309904
+    },
+    {
+      "grid_copies": 50803200,
+      "key": 466147,
+      "ordered_weighted_contributions_E_F": [
+        "10373/88200",
+        "-10373/176400"
+      ],
+      "profile_coefficients_A_B_D_E_F": [
+        "144",
+        "-20",
+        "-24",
+        "8",
+        "-4"
+      ],
+      "signature": [
+        [
+          1,
+          1,
+          1,
+          false
+        ],
+        [
+          2,
+          2,
+          1,
+          false
+        ],
+        [
+          2,
+          2,
+          1,
+          false
+        ],
+        [
+          4,
+          2,
+          3,
+          false
+        ]
+      ],
+      "skeleton_copies": {
+        "(2, 2, 2, 2)": 0,
+        "(2, 2, 4)": 96,
+        "(2, 3, 3)": 72,
+        "(2, 6)": 120,
+        "(3, 5)": 120,
+        "(4, 4)": 160,
+        "(8,)": 144
+      },
+      "unordered_event_triples": 124476
+    },
+    {
+      "grid_copies": 33868800,
+      "key": 467043,
+      "ordered_weighted_contributions_E_F": [
+        "55589/176400",
+        "55589/352800"
+      ],
+      "profile_coefficients_A_B_D_E_F": [
+        "336",
+        "-100",
+        "24",
+        "8",
+        "4"
+      ],
+      "signature": [
+        [
+          1,
+          1,
+          1,
+          false
+        ],
+        [
+          1,
+          1,
+          1,
+          false
+        ],
+        [
+          2,
+          1,
+          2,
+          false
+        ],
+        [
+          4,
+          2,
+          3,
+          false
+        ]
+      ],
+      "skeleton_copies": {
+        "(2, 2, 2, 2)": 0,
+        "(2, 2, 4)": 160,
+        "(2, 3, 3)": 288,
+        "(2, 6)": 240,
+        "(3, 5)": 360,
+        "(4, 4)": 352,
+        "(8,)": 336
+      },
+      "unordered_event_triples": 222356
+    },
+    {
+      "grid_copies": 101606400,
+      "key": 467171,
+      "ordered_weighted_contributions_E_F": [
+        "30743/132300",
+        "30743/264600"
+      ],
+      "profile_coefficients_A_B_D_E_F": [
+        "288",
+        "-104",
+        "12",
+        "16",
+        "8"
+      ],
+      "signature": [
+        [
+          1,
+          1,
+          1,
+          false
+        ],
+        [
+          2,
+          1,
+          2,
+          false
+        ],
+        [
+          2,
+          2,
+          1,
+          false
+        ],
+        [
+          4,
+          2,
+          3,
+          false
+        ]
+      ],
+      "skeleton_copies": {
+        "(2, 2, 2, 2)": 0,
+        "(2, 2, 4)": 128,
+        "(2, 3, 3)": 216,
+        "(2, 6)": 192,
+        "(3, 5)": 300,
+        "(4, 4)": 320,
+        "(8,)": 288
+      },
+      "unordered_event_triples": 245944
+    },
+    {
+      "grid_copies": 16934400,
+      "key": 467203,
+      "ordered_weighted_contributions_E_F": [
+        "-10981/88200",
+        "-10981/176400"
+      ],
+      "profile_coefficients_A_B_D_E_F": [
+        "48",
+        "4",
+        "12",
+        "-8",
+        "-4"
+      ],
+      "signature": [
+        [
+          1,
+          1,
+          1,
+          false
+        ],
+        [
+          2,
+          1,
+          2,
+          false
+        ],
+        [
+          2,
+          1,
+          2,
+          false
+        ],
+        [
+          4,
+          2,
+          3,
+          false
+        ]
+      ],
+      "skeleton_copies": {
+        "(2, 2, 2, 2)": 0,
+        "(2, 2, 4)": 32,
+        "(2, 3, 3)": 72,
+        "(2, 6)": 48,
+        "(3, 5)": 60,
+        "(4, 4)": 32,
+        "(8,)": 48
+      },
+      "unordered_event_triples": 43924
+    },
+    {
+      "grid_copies": 203212800,
+      "key": 468067,
+      "ordered_weighted_contributions_E_F": [
+        "-12637/52920",
+        "-12637/35280"
+      ],
+      "profile_coefficients_A_B_D_E_F": [
+        "480",
+        "-24",
+        "0",
+        "-16",
+        "-24"
+      ],
+      "signature": [
+        [
+          1,
+          1,
+          1,
+          false
+        ],
+        [
+          1,
+          1,
+          1,
+          false
+        ],
+        [
+          3,
+          2,
+          2,
+          false
+        ],
+        [
+          4,
+          2,
+          3,
+          false
+        ]
+      ],
+      "skeleton_copies": {
+        "(2, 2, 2, 2)": 0,
+        "(2, 2, 4)": 320,
+        "(2, 3, 3)": 432,
+        "(2, 6)": 432,
+        "(3, 5)": 480,
+        "(4, 4)": 448,
+        "(8,)": 480
+      },
+      "unordered_event_triples": 505480
+    },
+    {
+      "grid_copies": 67737600,
+      "key": 494691,
+      "ordered_weighted_contributions_E_F": [
+        "157/588",
+        "0"
+      ],
+      "profile_coefficients_A_B_D_E_F": [
+        "560",
+        "-140",
+        "90",
+        "8",
+        "0"
+      ],
+      "signature": [
+        [
+          1,
+          1,
+          1,
+          false
+        ],
+        [
+          1,
+          1,
+          1,
+          false
+        ],
+        [
+          1,
+          1,
+          1,
+          false
+        ],
+        [
+          5,
+          3,
+          3,
+          false
+        ]
+      ],
+      "skeleton_copies": {
+        "(2, 2, 2, 2)": 0,
+        "(2, 2, 4)": 288,
+        "(2, 3, 3)": 600,
+        "(2, 6)": 420,
+        "(3, 5)": 650,
+        "(4, 4)": 576,
+        "(8,)": 560
+      },
+      "unordered_event_triples": 376800
+    },
+    {
+      "grid_copies": 203212800,
+      "key": 498787,
+      "ordered_weighted_contributions_E_F": [
+        "-239/1008",
+        "239/2016"
+      ],
+      "profile_coefficients_A_B_D_E_F": [
+        "480",
+        "-152",
+        "120",
+        "-16",
+        "8"
+      ],
+      "signature": [
+        [
+          1,
+          1,
+          1,
+          false
+        ],
+        [
+          1,
+          1,
+          1,
+          false
+        ],
+        [
+          2,
+          2,
+          1,
+          false
+        ],
+        [
+          5,
+          3,
+          3,
+          false
+        ]
+      ],
+      "skeleton_copies": {
+        "(2, 2, 2, 2)": 0,
+        "(2, 2, 4)": 192,
+        "(2, 3, 3)": 576,
+        "(2, 6)": 336,
+        "(3, 5)": 600,
+        "(4, 4)": 448,
+        "(8,)": 480
+      },
+      "unordered_event_triples": 501900
+    },
+    {
+      "grid_copies": 203212800,
+      "key": 499811,
+      "ordered_weighted_contributions_E_F": [
+        "-239/1008",
+        "239/2016"
+      ],
+      "profile_coefficients_A_B_D_E_F": [
+        "480",
+        "-152",
+        "120",
+        "-16",
+        "8"
+      ],
+      "signature": [
+        [
+          1,
+          1,
+          1,
+          false
+        ],
+        [
+          1,
+          1,
+          1,
+          false
+        ],
+        [
+          2,
+          1,
+          2,
+          false
+        ],
+        [
+          5,
+          3,
+          3,
+          false
+        ]
+      ],
+      "skeleton_copies": {
+        "(2, 2, 2, 2)": 0,
+        "(2, 2, 4)": 192,
+        "(2, 3, 3)": 576,
+        "(2, 6)": 336,
+        "(3, 5)": 600,
+        "(4, 4)": 448,
+        "(8,)": 480
+      },
+      "unordered_event_triples": 501900
+    },
+    {
+      "grid_copies": 11289600,
+      "key": 592995,
+      "ordered_weighted_contributions_E_F": [
+        "0",
+        "0"
+      ],
+      "profile_coefficients_A_B_D_E_F": [
+        "0",
+        "0",
+        "50",
+        "0",
+        "0"
+      ],
+      "signature": [
+        [
+          1,
+          1,
+          1,
+          false
+        ],
+        [
+          1,
+          1,
+          1,
+          false
+        ],
+        [
+          1,
+          1,
+          1,
+          false
+        ],
+        [
+          6,
+          3,
+          3,
+          true
+        ]
+      ],
+      "skeleton_copies": {
+        "(2, 2, 2, 2)": 0,
+        "(2, 2, 4)": 0,
+        "(2, 3, 3)": 100,
+        "(2, 6)": 0,
+        "(3, 5)": 50,
+        "(4, 4)": 0,
+        "(8,)": 0
+      },
+      "unordered_event_triples": 21872
+    },
+    {
+      "grid_copies": 67737600,
+      "key": 625763,
+      "ordered_weighted_contributions_E_F": [
+        "-3007/14700",
+        "0"
+      ],
+      "profile_coefficients_A_B_D_E_F": [
+        "160",
+        "-40",
+        "-60",
+        "-16",
+        "0"
+      ],
+      "signature": [
+        [
+          1,
+          1,
+          1,
+          false
+        ],
+        [
+          1,
+          1,
+          1,
+          false
+        ],
+        [
+          1,
+          1,
+          1,
+          false
+        ],
+        [
+          6,
+          4,
+          3,
+          false
+        ]
+      ],
+      "skeleton_copies": {
+        "(2, 2, 2, 2)": 0,
+        "(2, 2, 4)": 64,
+        "(2, 3, 3)": 0,
+        "(2, 6)": 120,
+        "(3, 5)": 100,
+        "(4, 4)": 128,
+        "(8,)": 160
+      },
+      "unordered_event_triples": 144336
+    },
+    {
+      "grid_copies": 67737600,
+      "key": 658531,
+      "ordered_weighted_contributions_E_F": [
+        "-3007/14700",
+        "0"
+      ],
+      "profile_coefficients_A_B_D_E_F": [
+        "160",
+        "-40",
+        "-60",
+        "-16",
+        "0"
+      ],
+      "signature": [
+        [
+          1,
+          1,
+          1,
+          false
+        ],
+        [
+          1,
+          1,
+          1,
+          false
+        ],
+        [
+          1,
+          1,
+          1,
+          false
+        ],
+        [
+          6,
+          3,
+          4,
+          false
+        ]
+      ],
+      "skeleton_copies": {
+        "(2, 2, 2, 2)": 0,
+        "(2, 2, 4)": 64,
+        "(2, 3, 3)": 0,
+        "(2, 6)": 120,
+        "(3, 5)": 100,
+        "(4, 4)": 128,
+        "(8,)": 160
+      },
+      "unordered_event_triples": 144336
+    },
+    {
+      "grid_copies": 2822400,
+      "key": 7576675,
+      "ordered_weighted_contributions_E_F": [
+        "-2749/9800",
+        "-2749/19600"
+      ],
+      "profile_coefficients_A_B_D_E_F": [
+        "56",
+        "10",
+        "4",
+        "-4",
+        "-2"
+      ],
+      "signature": [
+        [
+          1,
+          1,
+          1,
+          false
+        ],
+        [
+          1,
+          1,
+          1,
+          false
+        ],
+        [
+          2,
+          2,
+          1,
+          false
+        ],
+        [
+          2,
+          2,
+          1,
+          false
+        ],
+        [
+          2,
+          2,
+          1,
+          false
+        ]
+      ],
+      "skeleton_copies": {
+        "(2, 2, 2, 2)": 64,
+        "(2, 2, 4)": 64,
+        "(2, 3, 3)": 72,
+        "(2, 6)": 64,
+        "(3, 5)": 60,
+        "(4, 4)": 48,
+        "(8,)": 56
+      },
+      "unordered_event_triples": 32988
+    },
+    {
+      "grid_copies": 25401600,
+      "key": 8625251,
+      "ordered_weighted_contributions_E_F": [
+        "-16369/66150",
+        "-16369/132300"
+      ],
+      "profile_coefficients_A_B_D_E_F": [
+        "504",
+        "-70",
+        "36",
+        "-4",
+        "-2"
+      ],
+      "signature": [
+        [
+          1,
+          1,
+          1,
+          false
+        ],
+        [
+          1,
+          1,
+          1,
+          false
+        ],
+        [
+          2,
+          1,
+          2,
+          false
+        ],
+        [
+          2,
+          2,
+          1,
+          false
+        ],
+        [
+          2,
+          2,
+          1,
+          false
+        ]
+      ],
+      "skeleton_copies": {
+        "(2, 2, 2, 2)": 192,
+        "(2, 2, 4)": 352,
+        "(2, 3, 3)": 504,
+        "(2, 6)": 432,
+        "(3, 5)": 540,
+        "(4, 4)": 496,
+        "(8,)": 504
+      },
+      "unordered_event_triples": 261904
+    },
+    {
+      "grid_copies": 8467200,
+      "key": 8625379,
+      "ordered_weighted_contributions_E_F": [
+        "-1433/8820",
+        "-1433/17640"
+      ],
+      "profile_coefficients_A_B_D_E_F": [
+        "48",
+        "4",
+        "12",
+        "-8",
+        "-4"
+      ],
+      "signature": [
+        [
+          1,
+          1,
+          1,
+          false
+        ],
+        [
+          2,
+          1,
+          2,
+          false
+        ],
+        [
+          2,
+          2,
+          1,
+          false
+        ],
+        [
+          2,
+          2,
+          1,
+          false
+        ],
+        [
+          2,
+          2,
+          1,
+          false
+        ]
+      ],
+      "skeleton_copies": {
+        "(2, 2, 2, 2)": 0,
+        "(2, 2, 4)": 32,
+        "(2, 3, 3)": 72,
+        "(2, 6)": 48,
+        "(3, 5)": 60,
+        "(4, 4)": 32,
+        "(8,)": 48
+      },
+      "unordered_event_triples": 28660
+    },
+    {
+      "grid_copies": 25401600,
+      "key": 8658019,
+      "ordered_weighted_contributions_E_F": [
+        "-16369/66150",
+        "-16369/132300"
+      ],
+      "profile_coefficients_A_B_D_E_F": [
+        "504",
+        "-70",
+        "36",
+        "-4",
+        "-2"
+      ],
+      "signature": [
+        [
+          1,
+          1,
+          1,
+          false
+        ],
+        [
+          1,
+          1,
+          1,
+          false
+        ],
+        [
+          2,
+          1,
+          2,
+          false
+        ],
+        [
+          2,
+          1,
+          2,
+          false
+        ],
+        [
+          2,
+          2,
+          1,
+          false
+        ]
+      ],
+      "skeleton_copies": {
+        "(2, 2, 2, 2)": 192,
+        "(2, 2, 4)": 352,
+        "(2, 3, 3)": 504,
+        "(2, 6)": 432,
+        "(3, 5)": 540,
+        "(4, 4)": 496,
+        "(8,)": 504
+      },
+      "unordered_event_triples": 261904
+    },
+    {
+      "grid_copies": 25401600,
+      "key": 8658147,
+      "ordered_weighted_contributions_E_F": [
+        "-5368/33075",
+        "0"
+      ],
+      "profile_coefficients_A_B_D_E_F": [
+        "144",
+        "-36",
+        "36",
+        "-8",
+        "0"
+      ],
+      "signature": [
+        [
+          1,
+          1,
+          1,
+          false
+        ],
+        [
+          2,
+          1,
+          2,
+          false
+        ],
+        [
+          2,
+          1,
+          2,
+          false
+        ],
+        [
+          2,
+          2,
+          1,
+          false
+        ],
+        [
+          2,
+          2,
+          1,
+          false
+        ]
+      ],
+      "skeleton_copies": {
+        "(2, 2, 2, 2)": 0,
+        "(2, 2, 4)": 64,
+        "(2, 3, 3)": 180,
+        "(2, 6)": 108,
+        "(3, 5)": 180,
+        "(4, 4)": 128,
+        "(8,)": 144
+      },
+      "unordered_event_triples": 85888
+    },
+    {
+      "grid_copies": 2822400,
+      "key": 8659043,
+      "ordered_weighted_contributions_E_F": [
+        "-2749/9800",
+        "-2749/19600"
+      ],
+      "profile_coefficients_A_B_D_E_F": [
+        "56",
+        "10",
+        "4",
+        "-4",
+        "-2"
+      ],
+      "signature": [
+        [
+          1,
+          1,
+          1,
+          false
+        ],
+        [
+          1,
+          1,
+          1,
+          false
+        ],
+        [
+          2,
+          1,
+          2,
+          false
+        ],
+        [
+          2,
+          1,
+          2,
+          false
+        ],
+        [
+          2,
+          1,
+          2,
+          false
+        ]
+      ],
+      "skeleton_copies": {
+        "(2, 2, 2, 2)": 64,
+        "(2, 2, 4)": 64,
+        "(2, 3, 3)": 72,
+        "(2, 6)": 64,
+        "(3, 5)": 60,
+        "(4, 4)": 48,
+        "(8,)": 56
+      },
+      "unordered_event_triples": 32988
+    },
+    {
+      "grid_copies": 8467200,
+      "key": 8659171,
+      "ordered_weighted_contributions_E_F": [
+        "-1433/8820",
+        "-1433/17640"
+      ],
+      "profile_coefficients_A_B_D_E_F": [
+        "48",
+        "4",
+        "12",
+        "-8",
+        "-4"
+      ],
+      "signature": [
+        [
+          1,
+          1,
+          1,
+          false
+        ],
+        [
+          2,
+          1,
+          2,
+          false
+        ],
+        [
+          2,
+          1,
+          2,
+          false
+        ],
+        [
+          2,
+          1,
+          2,
+          false
+        ],
+        [
+          2,
+          2,
+          1,
+          false
+        ]
+      ],
+      "skeleton_copies": {
+        "(2, 2, 2, 2)": 0,
+        "(2, 2, 4)": 32,
+        "(2, 3, 3)": 72,
+        "(2, 6)": 48,
+        "(3, 5)": 60,
+        "(4, 4)": 32,
+        "(8,)": 48
+      },
+      "unordered_event_triples": 28660
+    },
+    {
+      "grid_copies": 67737600,
+      "key": 9669731,
+      "ordered_weighted_contributions_E_F": [
+        "-171959/176400",
+        "-171959/352800"
+      ],
+      "profile_coefficients_A_B_D_E_F": [
+        "1120",
+        "136",
+        "0",
+        "-16",
+        "-8"
+      ],
+      "signature": [
+        [
+          1,
+          1,
+          1,
+          false
+        ],
+        [
+          1,
+          1,
+          1,
+          false
+        ],
+        [
+          1,
+          1,
+          1,
+          false
+        ],
+        [
+          2,
+          2,
+          1,
+          false
+        ],
+        [
+          3,
+          2,
+          2,
+          false
+        ]
+      ],
+      "skeleton_copies": {
+        "(2, 2, 2, 2)": 1536,
+        "(2, 2, 4)": 1344,
+        "(2, 3, 3)": 1248,
+        "(2, 6)": 1248,
+        "(3, 5)": 1120,
+        "(4, 4)": 1088,
+        "(8,)": 1120
+      },
+      "unordered_event_triples": 687836
+    },
+    {
+      "grid_copies": 50803200,
+      "key": 9673827,
+      "ordered_weighted_contributions_E_F": [
+        "-22459/132300",
+        "-22459/264600"
+      ],
+      "profile_coefficients_A_B_D_E_F": [
+        "240",
+        "52",
+        "0",
+        "-8",
+        "-4"
+      ],
+      "signature": [
+        [
+          1,
+          1,
+          1,
+          false
+        ],
+        [
+          1,
+          1,
+          1,
+          false
+        ],
+        [
+          2,
+          2,
+          1,
+          false
+        ],
+        [
+          2,
+          2,
+          1,
+          false
+        ],
+        [
+          3,
+          2,
+          2,
+          false
+        ]
+      ],
+      "skeleton_copies": {
+        "(2, 2, 2, 2)": 384,
+        "(2, 2, 4)": 320,
+        "(2, 3, 3)": 288,
+        "(2, 6)": 288,
+        "(3, 5)": 240,
+        "(4, 4)": 224,
+        "(8,)": 240
+      },
+      "unordered_event_triples": 179672
+    },
+    {
+      "grid_copies": 67737600,
+      "key": 9702499,
+      "ordered_weighted_contributions_E_F": [
+        "-171959/176400",
+        "-171959/352800"
+      ],
+      "profile_coefficients_A_B_D_E_F": [
+        "1120",
+        "136",
+        "0",
+        "-16",
+        "-8"
+      ],
+      "signature": [
+        [
+          1,
+          1,
+          1,
+          false
+        ],
+        [
+          1,
+          1,
+          1,
+          false
+        ],
+        [
+          1,
+          1,
+          1,
+          false
+        ],
+        [
+          2,
+          1,
+          2,
+          false
+        ],
+        [
+          3,
+          2,
+          2,
+          false
+        ]
+      ],
+      "skeleton_copies": {
+        "(2, 2, 2, 2)": 1536,
+        "(2, 2, 4)": 1344,
+        "(2, 3, 3)": 1248,
+        "(2, 6)": 1248,
+        "(3, 5)": 1120,
+        "(4, 4)": 1088,
+        "(8,)": 1120
+      },
+      "unordered_event_triples": 687836
+    },
+    {
+      "grid_copies": 203212800,
+      "key": 9706595,
+      "ordered_weighted_contributions_E_F": [
+        "-173587/264600",
+        "-173587/264600"
+      ],
+      "profile_coefficients_A_B_D_E_F": [
+        "960",
+        "80",
+        "0",
+        "-32",
+        "-32"
+      ],
+      "signature": [
+        [
+          1,
+          1,
+          1,
+          false
+        ],
+        [
+          1,
+          1,
+          1,
+          false
+        ],
+        [
+          2,
+          1,
+          2,
+          false
+        ],
+        [
+          2,
+          2,
+          1,
+          false
+        ],
+        [
+          3,
+          2,
+          2,
+          false
+        ]
+      ],
+      "skeleton_copies": {
+        "(2, 2, 2, 2)": 768,
+        "(2, 2, 4)": 960,
+        "(2, 3, 3)": 1008,
+        "(2, 6)": 1008,
+        "(3, 5)": 960,
+        "(4, 4)": 896,
+        "(8,)": 960
+      },
+      "unordered_event_triples": 694348
+    },
+    {
+      "grid_copies": 50803200,
+      "key": 9707619,
+      "ordered_weighted_contributions_E_F": [
+        "-22459/132300",
+        "-22459/264600"
+      ],
+      "profile_coefficients_A_B_D_E_F": [
+        "240",
+        "52",
+        "0",
+        "-8",
+        "-4"
+      ],
+      "signature": [
+        [
+          1,
+          1,
+          1,
+          false
+        ],
+        [
+          1,
+          1,
+          1,
+          false
+        ],
+        [
+          2,
+          1,
+          2,
+          false
+        ],
+        [
+          2,
+          1,
+          2,
+          false
+        ],
+        [
+          3,
+          2,
+          2,
+          false
+        ]
+      ],
+      "skeleton_copies": {
+        "(2, 2, 2, 2)": 384,
+        "(2, 2, 4)": 320,
+        "(2, 3, 3)": 288,
+        "(2, 6)": 288,
+        "(3, 5)": 240,
+        "(4, 4)": 224,
+        "(8,)": 240
+      },
+      "unordered_event_triples": 179672
+    },
+    {
+      "grid_copies": 135475200,
+      "key": 9735267,
+      "ordered_weighted_contributions_E_F": [
+        "115943/352800",
+        "115943/352800"
+      ],
+      "profile_coefficients_A_B_D_E_F": [
+        "480",
+        "200",
+        "60",
+        "16",
+        "16"
+      ],
+      "signature": [
+        [
+          1,
+          1,
+          1,
+          false
+        ],
+        [
+          1,
+          1,
+          1,
+          false
+        ],
+        [
+          1,
+          1,
+          1,
+          false
+        ],
+        [
+          3,
+          2,
+          2,
+          false
+        ],
+        [
+          3,
+          2,
+          2,
+          false
+        ]
+      ],
+      "skeleton_copies": {
+        "(2, 2, 2, 2)": 1536,
+        "(2, 2, 4)": 960,
+        "(2, 3, 3)": 816,
+        "(2, 6)": 696,
+        "(3, 5)": 540,
+        "(4, 4)": 512,
+        "(8,)": 480
+      },
+      "unordered_event_triples": 463772
+    },
+    {
+      "grid_copies": 4233600,
+      "key": 12684387,
+      "ordered_weighted_contributions_E_F": [
+        "0",
+        "1259/14700"
+      ],
+      "profile_coefficients_A_B_D_E_F": [
+        "0",
+        "104",
+        "0",
+        "0",
+        "1"
+      ],
+      "signature": [
+        [
+          1,
+          1,
+          1,
+          false
+        ],
+        [
+          1,
+          1,
+          1,
+          false
+        ],
+        [
+          1,
+          1,
+          1,
+          false
+        ],
+        [
+          1,
+          1,
+          1,
+          false
+        ],
+        [
+          4,
+          2,
+          2,
+          true
+        ]
+      ],
+      "skeleton_copies": {
+        "(2, 2, 2, 2)": 432,
+        "(2, 2, 4)": 212,
+        "(2, 3, 3)": 105,
+        "(2, 6)": 105,
+        "(3, 5)": 0,
+        "(4, 4)": 0,
+        "(8,)": 0
+      },
+      "unordered_event_triples": 60432
+    },
+    {
+      "grid_copies": 16934400,
+      "key": 12815459,
+      "ordered_weighted_contributions_E_F": [
+        "0",
+        "-311/1960"
+      ],
+      "profile_coefficients_A_B_D_E_F": [
+        "0",
+        "128",
+        "0",
+        "0",
+        "-8"
+      ],
+      "signature": [
+        [
+          1,
+          1,
+          1,
+          false
+        ],
+        [
+          1,
+          1,
+          1,
+          false
+        ],
+        [
+          1,
+          1,
+          1,
+          false
+        ],
+        [
+          2,
+          2,
+          1,
+          false
+        ],
+        [
+          4,
+          2,
+          2,
+          true
+        ]
+      ],
+      "skeleton_copies": {
+        "(2, 2, 2, 2)": 384,
+        "(2, 2, 4)": 224,
+        "(2, 3, 3)": 120,
+        "(2, 6)": 120,
+        "(3, 5)": 0,
+        "(4, 4)": 0,
+        "(8,)": 0
+      },
+      "unordered_event_triples": 55980
+    },
+    {
+      "grid_copies": 16934400,
+      "key": 12848227,
+      "ordered_weighted_contributions_E_F": [
+        "0",
+        "-311/1960"
+      ],
+      "profile_coefficients_A_B_D_E_F": [
+        "0",
+        "128",
+        "0",
+        "0",
+        "-8"
+      ],
+      "signature": [
+        [
+          1,
+          1,
+          1,
+          false
+        ],
+        [
+          1,
+          1,
+          1,
+          false
+        ],
+        [
+          1,
+          1,
+          1,
+          false
+        ],
+        [
+          2,
+          1,
+          2,
+          false
+        ],
+        [
+          4,
+          2,
+          2,
+          true
+        ]
+      ],
+      "skeleton_copies": {
+        "(2, 2, 2, 2)": 384,
+        "(2, 2, 4)": 224,
+        "(2, 3, 3)": 120,
+        "(2, 6)": 120,
+        "(3, 5)": 0,
+        "(4, 4)": 0,
+        "(8,)": 0
+      },
+      "unordered_event_triples": 55980
+    },
+    {
+      "grid_copies": 16934400,
+      "key": 13732963,
+      "ordered_weighted_contributions_E_F": [
+        "-707/3600",
+        "-707/7200"
+      ],
+      "profile_coefficients_A_B_D_E_F": [
+        "280",
+        "-62",
+        "-30",
+        "-4",
+        "-2"
+      ],
+      "signature": [
+        [
+          1,
+          1,
+          1,
+          false
+        ],
+        [
+          1,
+          1,
+          1,
+          false
+        ],
+        [
+          1,
+          1,
+          1,
+          false
+        ],
+        [
+          1,
+          1,
+          1,
+          false
+        ],
+        [
+          4,
+          3,
+          2,
+          false
+        ]
+      ],
+      "skeleton_copies": {
+        "(2, 2, 2, 2)": 0,
+        "(2, 2, 4)": 144,
+        "(2, 3, 3)": 156,
+        "(2, 6)": 216,
+        "(3, 5)": 250,
+        "(4, 4)": 272,
+        "(8,)": 280
+      },
+      "unordered_event_triples": 138572
+    },
+    {
+      "grid_copies": 33868800,
+      "key": 13864035,
+      "ordered_weighted_contributions_E_F": [
+        "3851/12600",
+        "3851/25200"
+      ],
+      "profile_coefficients_A_B_D_E_F": [
+        "160",
+        "-72",
+        "0",
+        "16",
+        "8"
+      ],
+      "signature": [
+        [
+          1,
+          1,
+          1,
+          false
+        ],
+        [
+          1,
+          1,
+          1,
+          false
+        ],
+        [
+          1,
+          1,
+          1,
+          false
+        ],
+        [
+          2,
+          2,
+          1,
+          false
+        ],
+        [
+          4,
+          3,
+          2,
+          false
+        ]
+      ],
+      "skeleton_copies": {
+        "(2, 2, 2, 2)": 0,
+        "(2, 2, 4)": 64,
+        "(2, 3, 3)": 96,
+        "(2, 6)": 96,
+        "(3, 5)": 160,
+        "(4, 4)": 192,
+        "(8,)": 160
+      },
+      "unordered_event_triples": 107828
+    },
+    {
+      "grid_copies": 67737600,
+      "key": 13896803,
+      "ordered_weighted_contributions_E_F": [
+        "0",
+        "13207/88200"
+      ],
+      "profile_coefficients_A_B_D_E_F": [
+        "320",
+        "-112",
+        "-60",
+        "0",
+        "8"
+      ],
+      "signature": [
+        [
+          1,
+          1,
+          1,
+          false
+        ],
+        [
+          1,
+          1,
+          1,
+          false
+        ],
+        [
+          1,
+          1,
+          1,
+          false
+        ],
+        [
+          2,
+          1,
+          2,
+          false
+        ],
+        [
+          4,
+          3,
+          2,
+          false
+        ]
+      ],
+      "skeleton_copies": {
+        "(2, 2, 2, 2)": 0,
+        "(2, 2, 4)": 128,
+        "(2, 3, 3)": 96,
+        "(2, 6)": 216,
+        "(3, 5)": 260,
+        "(4, 4)": 320,
+        "(8,)": 320
+      },
+      "unordered_event_triples": 211312
+    },
+    {
+      "grid_copies": 16934400,
+      "key": 14781539,
+      "ordered_weighted_contributions_E_F": [
+        "-707/3600",
+        "-707/7200"
+      ],
+      "profile_coefficients_A_B_D_E_F": [
+        "280",
+        "-62",
+        "-30",
+        "-4",
+        "-2"
+      ],
+      "signature": [
+        [
+          1,
+          1,
+          1,
+          false
+        ],
+        [
+          1,
+          1,
+          1,
+          false
+        ],
+        [
+          1,
+          1,
+          1,
+          false
+        ],
+        [
+          1,
+          1,
+          1,
+          false
+        ],
+        [
+          4,
+          2,
+          3,
+          false
+        ]
+      ],
+      "skeleton_copies": {
+        "(2, 2, 2, 2)": 0,
+        "(2, 2, 4)": 144,
+        "(2, 3, 3)": 156,
+        "(2, 6)": 216,
+        "(3, 5)": 250,
+        "(4, 4)": 272,
+        "(8,)": 280
+      },
+      "unordered_event_triples": 138572
+    },
+    {
+      "grid_copies": 67737600,
+      "key": 14912611,
+      "ordered_weighted_contributions_E_F": [
+        "0",
+        "13207/88200"
+      ],
+      "profile_coefficients_A_B_D_E_F": [
+        "320",
+        "-112",
+        "-60",
+        "0",
+        "8"
+      ],
+      "signature": [
+        [
+          1,
+          1,
+          1,
+          false
+        ],
+        [
+          1,
+          1,
+          1,
+          false
+        ],
+        [
+          1,
+          1,
+          1,
+          false
+        ],
+        [
+          2,
+          2,
+          1,
+          false
+        ],
+        [
+          4,
+          2,
+          3,
+          false
+        ]
+      ],
+      "skeleton_copies": {
+        "(2, 2, 2, 2)": 0,
+        "(2, 2, 4)": 128,
+        "(2, 3, 3)": 96,
+        "(2, 6)": 216,
+        "(3, 5)": 260,
+        "(4, 4)": 320,
+        "(8,)": 320
+      },
+      "unordered_event_triples": 211312
+    },
+    {
+      "grid_copies": 33868800,
+      "key": 14945379,
+      "ordered_weighted_contributions_E_F": [
+        "3851/12600",
+        "3851/25200"
+      ],
+      "profile_coefficients_A_B_D_E_F": [
+        "160",
+        "-72",
+        "0",
+        "16",
+        "8"
+      ],
+      "signature": [
+        [
+          1,
+          1,
+          1,
+          false
+        ],
+        [
+          1,
+          1,
+          1,
+          false
+        ],
+        [
+          1,
+          1,
+          1,
+          false
+        ],
+        [
+          2,
+          1,
+          2,
+          false
+        ],
+        [
+          4,
+          2,
+          3,
+          false
+        ]
+      ],
+      "skeleton_copies": {
+        "(2, 2, 2, 2)": 0,
+        "(2, 2, 4)": 64,
+        "(2, 3, 3)": 96,
+        "(2, 6)": 96,
+        "(3, 5)": 160,
+        "(4, 4)": 192,
+        "(8,)": 160
+      },
+      "unordered_event_triples": 107828
+    },
+    {
+      "grid_copies": 67737600,
+      "key": 15830115,
+      "ordered_weighted_contributions_E_F": [
+        "16589/39200",
+        "-16589/235200"
+      ],
+      "profile_coefficients_A_B_D_E_F": [
+        "240",
+        "-44",
+        "60",
+        "24",
+        "-4"
+      ],
+      "signature": [
+        [
+          1,
+          1,
+          1,
+          false
+        ],
+        [
+          1,
+          1,
+          1,
+          false
+        ],
+        [
+          1,
+          1,
+          1,
+          false
+        ],
+        [
+          1,
+          1,
+          1,
+          false
+        ],
+        [
+          5,
+          3,
+          3,
+          false
+        ]
+      ],
+      "skeleton_copies": {
+        "(2, 2, 2, 2)": 0,
+        "(2, 2, 4)": 160,
+        "(2, 3, 3)": 312,
+        "(2, 6)": 192,
+        "(3, 5)": 300,
+        "(4, 4)": 288,
+        "(8,)": 240
+      },
+      "unordered_event_triples": 199068
+    },
+    {
+      "grid_copies": 4233600,
+      "key": 242322531,
+      "ordered_weighted_contributions_E_F": [
+        "16747/29400",
+        "16747/58800"
+      ],
+      "profile_coefficients_A_B_D_E_F": [
+        "140",
+        "-23",
+        "0",
+        "6",
+        "3"
+      ],
+      "signature": [
+        [
+          1,
+          1,
+          1,
+          false
+        ],
+        [
+          1,
+          1,
+          1,
+          false
+        ],
+        [
+          1,
+          1,
+          1,
+          false
+        ],
+        [
+          1,
+          1,
+          1,
+          false
+        ],
+        [
+          2,
+          2,
+          1,
+          false
+        ],
+        [
+          2,
+          2,
+          1,
+          false
+        ]
+      ],
+      "skeleton_copies": {
+        "(2, 2, 2, 2)": 96,
+        "(2, 2, 4)": 112,
+        "(2, 3, 3)": 120,
+        "(2, 6)": 120,
+        "(3, 5)": 140,
+        "(4, 4)": 152,
+        "(8,)": 140
+      },
+      "unordered_event_triples": 66988
+    },
+    {
+      "grid_copies": 16934400,
+      "key": 275876963,
+      "ordered_weighted_contributions_E_F": [
+        "7579/11025",
+        "7579/22050"
+      ],
+      "profile_coefficients_A_B_D_E_F": [
+        "560",
+        "-108",
+        "-30",
+        "8",
+        "4"
+      ],
+      "signature": [
+        [
+          1,
+          1,
+          1,
+          false
+        ],
+        [
+          1,
+          1,
+          1,
+          false
+        ],
+        [
+          1,
+          1,
+          1,
+          false
+        ],
+        [
+          1,
+          1,
+          1,
+          false
+        ],
+        [
+          2,
+          1,
+          2,
+          false
+        ],
+        [
+          2,
+          2,
+          1,
+          false
+        ]
+      ],
+      "skeleton_copies": {
+        "(2, 2, 2, 2)": 192,
+        "(2, 2, 4)": 368,
+        "(2, 3, 3)": 396,
+        "(2, 6)": 456,
+        "(3, 5)": 530,
+        "(4, 4)": 576,
+        "(8,)": 560
+      },
+      "unordered_event_triples": 242528
+    },
+    {
+      "grid_copies": 16934400,
+      "key": 276008035,
+      "ordered_weighted_contributions_E_F": [
+        "773/1764",
+        "773/3528"
+      ],
+      "profile_coefficients_A_B_D_E_F": [
+        "160",
+        "-72",
+        "0",
+        "16",
+        "8"
+      ],
+      "signature": [
+        [
+          1,
+          1,
+          1,
+          false
+        ],
+        [
+          1,
+          1,
+          1,
+          false
+        ],
+        [
+          1,
+          1,
+          1,
+          false
+        ],
+        [
+          2,
+          1,
+          2,
+          false
+        ],
+        [
+          2,
+          2,
+          1,
+          false
+        ],
+        [
+          2,
+          2,
+          1,
+          false
+        ]
+      ],
+      "skeleton_copies": {
+        "(2, 2, 2, 2)": 0,
+        "(2, 2, 4)": 64,
+        "(2, 3, 3)": 96,
+        "(2, 6)": 96,
+        "(3, 5)": 160,
+        "(4, 4)": 192,
+        "(8,)": 160
+      },
+      "unordered_event_triples": 77300
+    },
+    {
+      "grid_copies": 4233600,
+      "key": 276925539,
+      "ordered_weighted_contributions_E_F": [
+        "16747/29400",
+        "16747/58800"
+      ],
+      "profile_coefficients_A_B_D_E_F": [
+        "140",
+        "-23",
+        "0",
+        "6",
+        "3"
+      ],
+      "signature": [
+        [
+          1,
+          1,
+          1,
+          false
+        ],
+        [
+          1,
+          1,
+          1,
+          false
+        ],
+        [
+          1,
+          1,
+          1,
+          false
+        ],
+        [
+          1,
+          1,
+          1,
+          false
+        ],
+        [
+          2,
+          1,
+          2,
+          false
+        ],
+        [
+          2,
+          1,
+          2,
+          false
+        ]
+      ],
+      "skeleton_copies": {
+        "(2, 2, 2, 2)": 96,
+        "(2, 2, 4)": 112,
+        "(2, 3, 3)": 120,
+        "(2, 6)": 120,
+        "(3, 5)": 140,
+        "(4, 4)": 152,
+        "(8,)": 140
+      },
+      "unordered_event_triples": 66988
+    },
+    {
+      "grid_copies": 16934400,
+      "key": 277056611,
+      "ordered_weighted_contributions_E_F": [
+        "773/1764",
+        "773/3528"
+      ],
+      "profile_coefficients_A_B_D_E_F": [
+        "160",
+        "-72",
+        "0",
+        "16",
+        "8"
+      ],
+      "signature": [
+        [
+          1,
+          1,
+          1,
+          false
+        ],
+        [
+          1,
+          1,
+          1,
+          false
+        ],
+        [
+          1,
+          1,
+          1,
+          false
+        ],
+        [
+          2,
+          1,
+          2,
+          false
+        ],
+        [
+          2,
+          1,
+          2,
+          false
+        ],
+        [
+          2,
+          2,
+          1,
+          false
+        ]
+      ],
+      "skeleton_copies": {
+        "(2, 2, 2, 2)": 0,
+        "(2, 2, 4)": 64,
+        "(2, 3, 3)": 96,
+        "(2, 6)": 96,
+        "(3, 5)": 160,
+        "(4, 4)": 192,
+        "(8,)": 160
+      },
+      "unordered_event_triples": 77300
+    },
+    {
+      "grid_copies": 13547520,
+      "key": 305237091,
+      "ordered_weighted_contributions_E_F": [
+        "3419/4704",
+        "3419/9408"
+      ],
+      "profile_coefficients_A_B_D_E_F": [
+        "336",
+        "92",
+        "36",
+        "8",
+        "4"
+      ],
+      "signature": [
+        [
+          1,
+          1,
+          1,
+          false
+        ],
+        [
+          1,
+          1,
+          1,
+          false
+        ],
+        [
+          1,
+          1,
+          1,
+          false
+        ],
+        [
+          1,
+          1,
+          1,
+          false
+        ],
+        [
+          1,
+          1,
+          1,
+          false
+        ],
+        [
+          3,
+          2,
+          2,
+          false
+        ]
+      ],
+      "skeleton_copies": {
+        "(2, 2, 2, 2)": 768,
+        "(2, 2, 4)": 544,
+        "(2, 3, 3)": 504,
+        "(2, 6)": 432,
+        "(3, 5)": 372,
+        "(4, 4)": 352,
+        "(8,)": 336
+      },
+      "unordered_event_triples": 205140
+    },
+    {
+      "grid_copies": 33868800,
+      "key": 309431395,
+      "ordered_weighted_contributions_E_F": [
+        "-19177/88200",
+        "-19177/176400"
+      ],
+      "profile_coefficients_A_B_D_E_F": [
+        "240",
+        "52",
+        "0",
+        "-8",
+        "-4"
+      ],
+      "signature": [
+        [
+          1,
+          1,
+          1,
+          false
+        ],
+        [
+          1,
+          1,
+          1,
+          false
+        ],
+        [
+          1,
+          1,
+          1,
+          false
+        ],
+        [
+          1,
+          1,
+          1,
+          false
+        ],
+        [
+          2,
+          2,
+          1,
+          false
+        ],
+        [
+          3,
+          2,
+          2,
+          false
+        ]
+      ],
+      "skeleton_copies": {
+        "(2, 2, 2, 2)": 384,
+        "(2, 2, 4)": 320,
+        "(2, 3, 3)": 288,
+        "(2, 6)": 288,
+        "(3, 5)": 240,
+        "(4, 4)": 224,
+        "(8,)": 240
+      },
+      "unordered_event_triples": 153416
+    },
+    {
+      "grid_copies": 33868800,
+      "key": 310479971,
+      "ordered_weighted_contributions_E_F": [
+        "-19177/88200",
+        "-19177/176400"
+      ],
+      "profile_coefficients_A_B_D_E_F": [
+        "240",
+        "52",
+        "0",
+        "-8",
+        "-4"
+      ],
+      "signature": [
+        [
+          1,
+          1,
+          1,
+          false
+        ],
+        [
+          1,
+          1,
+          1,
+          false
+        ],
+        [
+          1,
+          1,
+          1,
+          false
+        ],
+        [
+          1,
+          1,
+          1,
+          false
+        ],
+        [
+          2,
+          1,
+          2,
+          false
+        ],
+        [
+          3,
+          2,
+          2,
+          false
+        ]
+      ],
+      "skeleton_copies": {
+        "(2, 2, 2, 2)": 384,
+        "(2, 2, 4)": 320,
+        "(2, 3, 3)": 288,
+        "(2, 6)": 288,
+        "(3, 5)": 240,
+        "(4, 4)": 224,
+        "(8,)": 240
+      },
+      "unordered_event_triples": 153416
+    },
+    {
+      "grid_copies": 3386880,
+      "key": 405900387,
+      "ordered_weighted_contributions_E_F": [
+        "0",
+        "4051/35280"
+      ],
+      "profile_coefficients_A_B_D_E_F": [
+        "0",
+        "32",
+        "0",
+        "0",
+        "4"
+      ],
+      "signature": [
+        [
+          1,
+          1,
+          1,
+          false
+        ],
+        [
+          1,
+          1,
+          1,
+          false
+        ],
+        [
+          1,
+          1,
+          1,
+          false
+        ],
+        [
+          1,
+          1,
+          1,
+          false
+        ],
+        [
+          1,
+          1,
+          1,
+          false
+        ],
+        [
+          4,
+          2,
+          2,
+          true
+        ]
+      ],
+      "skeleton_copies": {
+        "(2, 2, 2, 2)": 192,
+        "(2, 2, 4)": 80,
+        "(2, 3, 3)": 36,
+        "(2, 6)": 36,
+        "(3, 5)": 0,
+        "(4, 4)": 0,
+        "(8,)": 0
+      },
+      "unordered_event_triples": 16204
+    },
+    {
+      "grid_copies": 6773760,
+      "key": 439454819,
+      "ordered_weighted_contributions_E_F": [
+        "-1321/7056",
+        "-1321/14112"
+      ],
+      "profile_coefficients_A_B_D_E_F": [
+        "48",
+        "4",
+        "-12",
+        "-8",
+        "-4"
+      ],
+      "signature": [
+        [
+          1,
+          1,
+          1,
+          false
+        ],
+        [
+          1,
+          1,
+          1,
+          false
+        ],
+        [
+          1,
+          1,
+          1,
+          false
+        ],
+        [
+          1,
+          1,
+          1,
+          false
+        ],
+        [
+          1,
+          1,
+          1,
+          false
+        ],
+        [
+          4,
+          3,
+          2,
+          false
+        ]
+      ],
+      "skeleton_copies": {
+        "(2, 2, 2, 2)": 0,
+        "(2, 2, 4)": 32,
+        "(2, 3, 3)": 24,
+        "(2, 6)": 48,
+        "(3, 5)": 36,
+        "(4, 4)": 32,
+        "(8,)": 48
+      },
+      "unordered_event_triples": 26420
+    },
+    {
+      "grid_copies": 6773760,
+      "key": 473009251,
+      "ordered_weighted_contributions_E_F": [
+        "-1321/7056",
+        "-1321/14112"
+      ],
+      "profile_coefficients_A_B_D_E_F": [
+        "48",
+        "4",
+        "-12",
+        "-8",
+        "-4"
+      ],
+      "signature": [
+        [
+          1,
+          1,
+          1,
+          false
+        ],
+        [
+          1,
+          1,
+          1,
+          false
+        ],
+        [
+          1,
+          1,
+          1,
+          false
+        ],
+        [
+          1,
+          1,
+          1,
+          false
+        ],
+        [
+          1,
+          1,
+          1,
+          false
+        ],
+        [
+          4,
+          2,
+          3,
+          false
+        ]
+      ],
+      "skeleton_copies": {
+        "(2, 2, 2, 2)": 0,
+        "(2, 2, 4)": 32,
+        "(2, 3, 3)": 24,
+        "(2, 6)": 48,
+        "(3, 5)": 36,
+        "(4, 4)": 32,
+        "(8,)": 48
+      },
+      "unordered_event_triples": 26420
+    },
+    {
+      "grid_copies": 1128960,
+      "key": 7620103267,
+      "ordered_weighted_contributions_E_F": [
+        "-3091/5880",
+        "-3091/11760"
+      ],
+      "profile_coefficients_A_B_D_E_F": [
+        "56",
+        "10",
+        "-4",
+        "-4",
+        "-2"
+      ],
+      "signature": [
+        [
+          1,
+          1,
+          1,
+          false
+        ],
+        [
+          1,
+          1,
+          1,
+          false
+        ],
+        [
+          1,
+          1,
+          1,
+          false
+        ],
+        [
+          1,
+          1,
+          1,
+          false
+        ],
+        [
+          1,
+          1,
+          1,
+          false
+        ],
+        [
+          1,
+          1,
+          1,
+          false
+        ],
+        [
+          2,
+          2,
+          1,
+          false
+        ]
+      ],
+      "skeleton_copies": {
+        "(2, 2, 2, 2)": 64,
+        "(2, 2, 4)": 64,
+        "(2, 3, 3)": 56,
+        "(2, 6)": 64,
+        "(3, 5)": 52,
+        "(4, 4)": 48,
+        "(8,)": 56
+      },
+      "unordered_event_triples": 24728
+    },
+    {
+      "grid_copies": 1128960,
+      "key": 8693845091,
+      "ordered_weighted_contributions_E_F": [
+        "-3091/5880",
+        "-3091/11760"
+      ],
+      "profile_coefficients_A_B_D_E_F": [
+        "56",
+        "10",
+        "-4",
+        "-4",
+        "-2"
+      ],
+      "signature": [
+        [
+          1,
+          1,
+          1,
+          false
+        ],
+        [
+          1,
+          1,
+          1,
+          false
+        ],
+        [
+          1,
+          1,
+          1,
+          false
+        ],
+        [
+          1,
+          1,
+          1,
+          false
+        ],
+        [
+          1,
+          1,
+          1,
+          false
+        ],
+        [
+          1,
+          1,
+          1,
+          false
+        ],
+        [
+          2,
+          1,
+          2,
+          false
+        ]
+      ],
+      "skeleton_copies": {
+        "(2, 2, 2, 2)": 64,
+        "(2, 2, 4)": 64,
+        "(2, 3, 3)": 56,
+        "(2, 6)": 64,
+        "(3, 5)": 52,
+        "(4, 4)": 48,
+        "(8,)": 56
+      },
+      "unordered_event_triples": 24728
+    },
+    {
+      "grid_copies": 3386880,
+      "key": 8828062819,
+      "ordered_weighted_contributions_E_F": [
+        "-141/490",
+        "-141/980"
+      ],
+      "profile_coefficients_A_B_D_E_F": [
+        "48",
+        "4",
+        "-12",
+        "-8",
+        "-4"
+      ],
+      "signature": [
+        [
+          1,
+          1,
+          1,
+          false
+        ],
+        [
+          1,
+          1,
+          1,
+          false
+        ],
+        [
+          1,
+          1,
+          1,
+          false
+        ],
+        [
+          1,
+          1,
+          1,
+          false
+        ],
+        [
+          1,
+          1,
+          1,
+          false
+        ],
+        [
+          2,
+          1,
+          2,
+          false
+        ],
+        [
+          2,
+          2,
+          1,
+          false
+        ]
+      ],
+      "skeleton_copies": {
+        "(2, 2, 2, 2)": 0,
+        "(2, 2, 4)": 32,
+        "(2, 3, 3)": 24,
+        "(2, 6)": 48,
+        "(3, 5)": 36,
+        "(4, 4)": 32,
+        "(8,)": 48
+      },
+      "unordered_event_triples": 20304
+    },
+    {
+      "grid_copies": 2257920,
+      "key": 9767586915,
+      "ordered_weighted_contributions_E_F": [
+        "16/49",
+        "8/49"
+      ],
+      "profile_coefficients_A_B_D_E_F": [
+        "16",
+        "12",
+        "16",
+        "8",
+        "4"
+      ],
+      "signature": [
+        [
+          1,
+          1,
+          1,
+          false
+        ],
+        [
+          1,
+          1,
+          1,
+          false
+        ],
+        [
+          1,
+          1,
+          1,
+          false
+        ],
+        [
+          1,
+          1,
+          1,
+          false
+        ],
+        [
+          1,
+          1,
+          1,
+          false
+        ],
+        [
+          1,
+          1,
+          1,
+          false
+        ],
+        [
+          3,
+          2,
+          2,
+          false
+        ]
+      ],
+      "skeleton_copies": {
+        "(2, 2, 2, 2)": 128,
+        "(2, 2, 4)": 64,
+        "(2, 3, 3)": 64,
+        "(2, 6)": 32,
+        "(3, 5)": 32,
+        "(4, 4)": 32,
+        "(8,)": 16
+      },
+      "unordered_event_triples": 15360
+    },
+    {
+      "grid_copies": 40320,
+      "key": 106404351075,
+      "ordered_weighted_contributions_E_F": [
+        "431/840",
+        "431/1680"
+      ],
+      "profile_coefficients_A_B_D_E_F": [
+        "2",
+        "3/2",
+        "2",
+        "1",
+        "1/2"
+      ],
+      "signature": [
+        [
+          1,
+          1,
+          1,
+          false
+        ],
+        [
+          1,
+          1,
+          1,
+          false
+        ],
+        [
+          1,
+          1,
+          1,
+          false
+        ],
+        [
+          1,
+          1,
+          1,
+          false
+        ],
+        [
+          1,
+          1,
+          1,
+          false
+        ],
+        [
+          1,
+          1,
+          1,
+          false
+        ],
+        [
+          1,
+          1,
+          1,
+          false
+        ],
+        [
+          1,
+          1,
+          1,
+          false
+        ]
+      ],
+      "skeleton_copies": {
+        "(2, 2, 2, 2)": 16,
+        "(2, 2, 4)": 8,
+        "(2, 3, 3)": 8,
+        "(2, 6)": 4,
+        "(3, 5)": 4,
+        "(4, 4)": 4,
+        "(8,)": 2
+      },
+      "unordered_event_triples": 3448
+    }
+  ],
+  "scope": "n=8, full third factorial moment; coefficients c8 and c4^2 only",
+  "signed_contributions": {
+    "c4_squared": [
+      "5120467/705600",
+      "-4954133/705600"
+    ],
+    "c8": [
+      "25988161/2116800",
+      "-8432743/705600"
+    ]
+  }
+}

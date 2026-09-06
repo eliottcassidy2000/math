@@ -1,0 +1,13 @@
+n4 literal labels (4,) factorial moments 1,2,3 = ['2', '61/18', '6']
+n4 literal labels (2, 2) factorial moments 1,2,3 = ['2', '74/9', '104/3']
+n8 metadata n,min_edges,triples,unordered_total,degree_rejected,small_rejected,accepted,types: [8, 8, 648, 45139896, 20781112, 2939296, 21419488, 150]
+All 45,139,896 event triples replayed with literal degrees; profile counts match.
+Full third factorial moment coefficients: c8 = 172483/529200 ; c4^2 = 11881/50400
+Contribution from 8 union edges: ['768463/2116800', '456371/2116800']
+Contribution from 9 union edges: ['-26177/705600', '42631/2116800']
+c8 positive total 25988161/2116800 ; negative total -8432743/705600 ; net 172483/529200
+c4^2 positive total 5120467/705600 ; negative total -4954133/705600 ; net 11881/50400
+Raw contrasts: 2C8 minus C16 = 172483/264600 ; 4C4 minus 4(C4+C12) plus 3C16 = 11881/4200
+Certificate SHA256: f2c566ac1b2bcedb530af72f3a290479841e7db87844b331558bed68c93ba727
+Exact gates: 357857
+PASS: exhaustive geometric multiplicities; no independence, sampling, or density conclusion.

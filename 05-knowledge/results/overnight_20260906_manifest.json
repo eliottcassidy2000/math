@@ -150,11 +150,15 @@
       "path": "05-knowledge/results/overnight_20260906_smith_moments_audit.out",
       "bytes": 2030,
       "sha256": "9a32da57667d5da5d88c0158a43ce4cf34f6f21d2c1a321ab04efc09ae285154"
-    },
+    }
+  ],
+  "versioned_artifacts": [
     {
       "path": "05-knowledge/results/overnight_20260906_synthesis.md",
       "bytes": 17473,
-      "sha256": "3ce57057e454c8d44f8d98cfadbbeb9ccf9040f9bda8f4608689db66cb1b77fa"
+      "sha256": "3ce57057e454c8d44f8d98cfadbbeb9ccf9040f9bda8f4608689db66cb1b77fa",
+      "commit": "545a20c2b",
+      "verification": "git show <commit>:<path>; maintained file is intentionally mutable"
     }
   ]
 }

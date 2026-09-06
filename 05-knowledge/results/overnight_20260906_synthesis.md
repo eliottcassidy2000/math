@@ -16,11 +16,12 @@ independence heuristic and the corrected asymptotic constant; see the
 
 | Live object / representation | Predicate | Operation and retained coordinate | Cheapest next decisive test |
 |---|---|---|---|
-| Anchor: full LRC owner-colored lattice dictionary | Bound the minimum of three projection sums | Midpoint closure, owner, parity, convex completeness, and boundary offset | Retain affine baseline after the zero-curvature hostile; test positive surplus rows |
-| Grid sets as degree-two bipartite graphs | No collinear triple | Random shore labels, complete event unions, short-cycle expansion | Determine whether third moments actually see `c8` and `c4^2` |
+| Anchor: full LRC owner-colored lattice dictionary | Bound the minimum of three projection sums | Midpoint closure, owner, parity, convex completeness, and boundary offset | Owner lines are now closed; retain area and boundary in genuinely two-dimensional owner polygons |
+| Grid sets as degree-two bipartite graphs | No collinear triple | Random shore labels, complete event unions, short-cycle expansion | Nonzero third-moment terms are known at n8; test a scalable dependence or sign mechanism |
 | Niche: trinomial return channels | First two return polynomials have no common torus zero | Numerical semigroup normal form with both carry coordinates | Explain thirty positive symbolic resultants by a recurrence or positive basis |
-| Wildcard: odd-prime mixed two-jet cluster | All determinantal divisors | Competing saturation costs `d` and `e`, rather than appending factors | Test the four-node p=3 occupancy `(2,2)` with fixed metric and varied unit lifts |
+| Wildcard: odd-prime mixed two-jet cluster | All determinantal divisors | Weighted minor supports plus an attaining unit witness for every minimum | Occupancy `(2,2)` is closed at p3; test the nested `(3,1)` tree and its third-derivative loss |
 | Formal exceptional triple | Preserve common target at every order | Restrict the transverse compensator to admissible source coefficients | Test whether the lawful fifth-order module can have `L(h5)=-18*kappa/5` |
+| Signed Hamilton-cycle parity vectors | Exact minimum and equality classes | Difference with a transposed signing; typed zero deletions | All cumulative gaps are closed; independently audit quantitative stability before using it |
 
 Each new result is compared to all five objects. Similar language is not
 an implication: the maps and losses must be specified in the linked reports.
@@ -92,6 +93,44 @@ an implication: the maps and losses must be specified in the linked reports.
    whole deficit from curvature, not sufficiency in the remaining hard
    regime. The missing affine baseline now has an explicit residual to
    bound. Root accepted the proof and replayed 5,220 exact checks.
+7. **PROVED and independently audited, at every height:**
+   [owner-line count closure](overnight2_20260906_lrc_owner_lines.md).
+   If the full dictionary spans the plane and each owner color is
+   collinear, `N<2c/11`, hence every network projection is strictly below
+   `6/77`. Convex completeness forces the transverse basis determinant
+   `u cross r=+-w`; seven elementary chord identities and a complete
+   678-triple head close the remaining bounds. Every carrier is primitive,
+   and there are exactly `N/2` origin-directions, so this includes arbitrarily
+   many rays. The independent audit rebuilt both the finite head and the
+   chord bounds in different coordinates. Remaining owners must be
+   genuinely two-dimensional.
+8. **PROVED with a universal symbolic certificate and independent audit:**
+   [ternary four-node double-pair Smith law](overnight2_20260906_smith_double_pair.md).
+   For `x=3^e*(0,1,3^d*a,1+3^r*b)`, positive `e,d,r` and arbitrary unit
+   lifts, the pairwise distance tree determines every invariant. All 923
+   residual minors and 14,501 coefficients were reconstructed independently;
+   thirteen actual minors attain every lower-envelope branch. Three exact
+   switches replace the false shallow-depth continuation, and the sharp
+   precision loss is `7e+3max(d,r)`. The `(3,1)` occupancy stays open.
+9. **FINITE-EXACT n8 coefficients, with proved reduction and independent audit:**
+   [third line-event moment](overnight2_20260906_no3line_third.md).
+   The third factorial moment has nonzero coefficients
+   `172483/529200` for `c8` and `11881/50400` for `c4^2`. All 45,139,896
+   unordered triples of geometric events were covered twice, with full
+   incidence multiplicities and aggregate signed cancellation retained.
+   Independent cyclic-run counting checked all 1,050 skeleton profiles;
+   literal n4 labelings checked normalization. This establishes the
+   predicted first detection of longer cycles and cycle interactions at
+   a concrete size, without asserting a zero-event tail or an all-n sign.
+10. **Independent confirmation of an incoming all-order closure:**
+    [signed-cycle audit](overnight2_20260906_signed_cycle_audit.md) accepts
+    the transposition proof and independently rebuilds all 2,097,152 K8
+    switching classes using Gray-code bitsets. It recovers exactly two zero
+    classes, minimum 720, and 56 equality classes. The K9 computation is
+    logically redundant. Incoming THM-4427 independently promoted the same
+    all-`D>=7` cumulative closure during this audit; it is an inherited
+    theorem, not a second discovery. Booleanized spectra and tournament
+    transfer remain outside its scope.
 
 These are repository-scoped advances and recovered mechanisms, not claims
 of external literature priority. In particular, conditioning grid occupancy
@@ -126,6 +165,11 @@ command. All primary companions and independent executable audits passed;
 normal and optimized primary output comparisons passed. Mathematical scope
 comes from the proofs and explicit symbolic degree bounds, not from the
 number of computational checks. No Lean formalization is claimed.
+The [second checkpoint manifest](overnight2_20260906_manifest.json) records
+the owner-line closure, double-pair law, third-moment census, and signed-cycle
+audit. The first manifest retains the first checkpoint's frozen artifacts;
+this maintained synthesis is excluded from frozen current-file hashes and
+versioned by Git, with its original snapshot identified in the first manifest.
 
 ## Procedural direction generator
 
@@ -134,26 +178,28 @@ x scales`, but require each generated direction to name a falsification
 test. Do not simply increase the last census bound. Current unfilled cells:
 
 - **LRC / progression hypergraph / boundary deficit / deletion.** The
-  midpoint lower bound counts compulsory progressions. Retain the affine
-  contribution as well as the kink-crossing payment. Test the actual
-  surplus `N-2c/11`, since a curvature failure on count-safe rows does not
-  refute sufficiency on the hard positive-surplus regime.
+  entire owner-line class is now closed by its saturated transverse basis.
+  Pass to the full two-dimensional owner polygon and retain its lattice
+  area, boundary count, and affine offset. Test the actual surplus against
+  the canonical A2 owner triangle before any area-only inequality.
 - **No-three-in-line / paired forbidden events / cycle profile / conditioning.**
-  The second-moment structure is now closed. Compare `C16` with `C8+C8`
-  at `n=8` to probe the third moment, and recover the allowed `c4^2`
-  coefficient using an independent cycle contrast. Distinguish an allowed
-  term from a nonzero geometry-weighted coefficient. For tails, test a
-  convergent dependence argument rather than extrapolating finite moments.
+  The third-moment contrasts are now closed at n8. Recover a structural
+  expression for their geometry-weighted coefficients or identify a
+  dependence expansion with a controlled remainder. Large positive and
+  negative incidence contributions almost cancel, so one favorable witness
+  is insufficient. For tails, test convergence rather than extrapolating
+  finitely many moments.
 - **Moments / resultant / carry count / endpoint width.** Search for a
   coefficient-positive basis explaining the thirty symbolic certificates.
   Increasing the width bound is secondary to discovering a recurrence or
   sign mechanism that could survive unbounded width.
-- **Smith / cluster tree / saturation / adjoining.** First test two doubled
-  residues at `p=3`: `x=3^e*(0,1,3^d*a,1+3^r*b)`, with `d,r>=1` and unit
-  `a,b`. Occupancy `(2,2)` differs from the proved complete-residue
-  `(2,1,1)` cluster. Hold the full pairwise valuation tree fixed while
-  varying lifts, and compare all determinantal divisors. A discrepancy
-  would isolate information missed by every three-node restriction.
+- **Smith / cluster tree / saturation / adjoining.** Occupancy `(2,2)` is
+  now proved metric-only at every depth. Next test occupancy `(3,1)`, where
+  the inner triple has its own two-scale tree and a second divided
+  derivative can expose the characteristic-three third-derivative loss.
+  Continue to compare the whole weighted-minor envelope with actual
+  attaining witnesses; a support minimum alone would not rule out unit
+  cancellation.
 - **Formal triple / admissible source module / restriction.** A compensator
   existing in the ambient polynomial space need not lie in the actual
   source-normal chart. With the lower constant-pencil jet fixed, test the
@@ -169,7 +215,7 @@ The startup pull promoted the previously reviewed D5/D6, width-two moment,
 and prime-wall results to THM-4416/4417/4419. It also added THM-4418's
 arithmetic tail, THM-4420's near-doubling rays, THM-4422's projection deficits,
 and THM-4415's row-fourteen obstruction. These are inherited advances and
-are not counted again. A second inspected pull reached `a80f2e90a` and
+are not counted again. Inspected subsequent pulls through `4d1ad2a39`
 materially changed the continuation board:
 
 - The audited [one-ray](lrc14_one_ray_overnight_hexagon_sep05.md) and
@@ -198,30 +244,33 @@ materially changed the continuation board:
   all-order graph complex, or termination. The resulting next module test
   is written explicitly above.
 - The incoming [three-node Smith note](three-node-smith-overnight-hexagon-sep05.md)
-  remains **PROVISIONAL**. Its below-wall candidate already exhibits
+  is now promoted as **PROVED THM-4429**. Its below-wall formula exhibits
   `min(e,d)` and the threshold `d>=e`; at `p=3` it adds a shifted
   `min(e,d+1)` cost. The common balanced boundary agrees with THM-4419.
   It does not contain our four-or-more-node complete-residue theorem, and
-  neither result depends on the other. Its most useful next hostile is
-  the four-node occupancy `(2,2)` above; do not glue pair Smith lists across
-  a nonunit outer scale.
+  neither result depends on the other. Its suggested four-node occupancy
+  `(2,2)` is now closed above; the next shape is `(3,1)`. Do not glue pair
+  Smith lists across a nonunit outer scale.
 - The [signed-cycle transposition argument](overnight_hexagon_sep05_d7_d8_gap.md)
-  is a **PROOF CANDIDATE pending independent mathematical review**. Its
+  is now **PROVED THM-4427**, with its finite base and equality cases
+  additionally checked by our independent audit above. Its
   new operation compares a signing with a vertex transposition and makes
-  the two-star difference exactly countable. This is a promising distinct
-  lane for a later proof audit, not a proved dependency of this checkpoint.
+  the two-star difference exactly countable. The incoming second-minimum
+  stability note is a separate candidate and is not an audited dependency.
 - The [root-rotation note](nc2_root_rotation_obstruction_overnight_hexagon_sep05.md)
-  supplies proof-level method boundaries: a globally rational local root
+  is now **PROVED THM-4430** and supplies method boundaries: a globally rational local root
   rotation is a monomial dilation, while primitive binomials retain a
   nontrivial marked-packet field. This supports our choice to preserve
   carry channels instead of treating a product of roots as a single root
   swap. No general higher-endpoint first-return bound is supplied.
 
-THM-4423, THM-4425, THM-4426, and THM-4427--4430 were still **RESERVED**
-at this inspected commit. Result-note status and theorem-slot status are
-separate: the empty identifiers themselves provide no proof or dependency.
+THM-4427--4430 were promoted at `4d1ad2a39`. THM-4423, THM-4425,
+THM-4426, and the new THM-4431--4433 were still **RESERVED** at that
+inspected commit. The new slots concern colored-basis/three-ray closure,
+two-channel trinomial carries, and signed-Hamilton stability. They are
+follow-up signals, not proved dependencies of this checkpoint.
 
-A final incoming pull to `48aaa1924` added the
+The earlier incoming pull to `48aaa1924` added the
 [empty-core circuit board](empty_core_overnight_sep06_board.md) and its
 height-499 census. Its **FINITE-EXACT reported** multi-ray count gate has
 only the already cap-closed exception `(19,23,29)`; this session did not

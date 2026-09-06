@@ -1,0 +1,10 @@
+status=INDEPENDENT_EXACT_CONTROLS; all-order proof audited in companion report
+two_star_direct_rows=[(6, (0, 36, 32, 36, 0)), (7, (0, 192, 192, 192, 192, 0)), (8, (0, 1200, 1344, 1296, 1344, 1200, 0)), (9, (0, 8640, 10560, 10368, 10368, 10560, 8640, 0)), (10, (0, 70560, 92160, 93600, 92160, 93600, 92160, 70560, 0))]
+crossing_moment_cases=81
+complete_disagreement_graph_rows=(m,all_graphs,six_family_graphs):[(5, 1024, 32), (6, 32768, 44)]
+K6_complete_switching_classes=1024; transpositions=15360
+antibalanced_S7_coefficients_at_n8_plus_t=('1652', '244667/105', '2723/2', '1328/3', '189/2', '73/5', '3/2', '1/14')
+hostiles=K6_negative_C5_apex_20_below_24; K8_two_star_1296_below_1440
+K9_character_array=NOT_ALLOCATED; required_K8_base=separate_bitset_audit
+checks=32182
+RESULT=PASS

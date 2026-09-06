@@ -1,0 +1,6 @@
+method=packed_cycle_signs_gray_code; no_Walsh_or_repository_imports
+n=8 switching_classes=2097152 Hamilton_cycles=2520 minimum=720 zero_classes=2 equality_classes=56
+semantic_fnv64=e2dfba14125e7983
+spectrum_memory_bytes=4194304 cycle_incidence_memory_bytes=6720
+checks=2099699
+RESULT=PASS

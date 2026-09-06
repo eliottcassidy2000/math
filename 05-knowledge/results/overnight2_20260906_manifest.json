@@ -1,0 +1,124 @@
+{
+  "schema": 1,
+  "created_utc": "2026-09-06T06:13:26.067081+00:00",
+  "baseline_commit": "545a20c2b",
+  "incoming_review_commit": "4d1ad2a39",
+  "hash_basis": "raw LF bytes; self and maintained synthesis excluded",
+  "scope": "Second overnight checkpoint: strict all-height owner-line closure, universal ternary double-pair Smith law, finite-exact n8 third-moment coefficients, and independent all-order signed-cycle proof/K8 audit. Status and quantifiers are in the reports.",
+  "maintained_surface": {
+    "path": "05-knowledge/results/overnight_20260906_synthesis.md",
+    "hash_policy": "Intentionally mutable; versioned by Git rather than frozen here."
+  },
+  "artifacts": [
+    {
+      "path": "04-computation/overnight2_20260906_lrc_owner_lines.py",
+      "bytes": 5795,
+      "sha256": "73c6eacceb6a8d9cc7b30631fa0436060f47044c3d3c6697d5bd98f3439d66f3"
+    },
+    {
+      "path": "04-computation/overnight2_20260906_lrc_owner_lines_audit.py",
+      "bytes": 6792,
+      "sha256": "bd93b68bd6351485d1e2a75548108dbb0ffe451213e9cecc597f1bae0e203296"
+    },
+    {
+      "path": "04-computation/overnight2_20260906_no3line_third.cpp",
+      "bytes": 5150,
+      "sha256": "bc6b901088573ab2642cbca8b7cf4856110090869a18a5d6940d2110430ce83e"
+    },
+    {
+      "path": "04-computation/overnight2_20260906_no3line_third.py",
+      "bytes": 12339,
+      "sha256": "4a00e332070e7415cc6fe02999f226a1072dbcbbfbaac95120dceed706eb293e"
+    },
+    {
+      "path": "04-computation/overnight2_20260906_signed_cycle_audit.py",
+      "bytes": 9688,
+      "sha256": "4d39ab3ae0cabc726b24f2ddb35f3483654df29b3b91edc251ee066465eaa39d"
+    },
+    {
+      "path": "04-computation/overnight2_20260906_signed_cycle_audit_k8.cpp",
+      "bytes": 4726,
+      "sha256": "aedf2a78bb7045c1a663206ecc1c9279cd14d148bc4ef882775f0c409ae5558f"
+    },
+    {
+      "path": "04-computation/overnight2_20260906_smith_double_pair.py",
+      "bytes": 11766,
+      "sha256": "bd2b5d2a9e080dd7a5422892ef5a22a4798282c7ad593376712d03e1aa186a6d"
+    },
+    {
+      "path": "05-knowledge/results/overnight2_20260906_lrc_owner_lines.md",
+      "bytes": 14012,
+      "sha256": "23fa2411a8397062ee3643af8cd022d7f048e57a9a3f040df8fb1ab559e4de90"
+    },
+    {
+      "path": "05-knowledge/results/overnight2_20260906_lrc_owner_lines.out",
+      "bytes": 1192,
+      "sha256": "3697eb1ed2ce2f2bae20a9f161543d3490bd16710e7bacf31eb343a6af4d01bf"
+    },
+    {
+      "path": "05-knowledge/results/overnight2_20260906_lrc_owner_lines_audit.md",
+      "bytes": 10334,
+      "sha256": "a7e217436e2cc44bde18c623334d9d47b43762109cc97cf94a2ff5e96487283e"
+    },
+    {
+      "path": "05-knowledge/results/overnight2_20260906_lrc_owner_lines_audit.out",
+      "bytes": 1032,
+      "sha256": "213f988777d45b2d767bb7caedfb93e0d4968eb7dcd53993fbd7b7f579c0a8e4"
+    },
+    {
+      "path": "05-knowledge/results/overnight2_20260906_no3line_third.md",
+      "bytes": 11377,
+      "sha256": "bafbe0d79b620607ff9f5c12cf1ac3b6716dc4fb150c95be641e5c890db3c897"
+    },
+    {
+      "path": "05-knowledge/results/overnight2_20260906_no3line_third.out",
+      "bytes": 1058,
+      "sha256": "a8c1c4a7ecf28f19699f1b2700b73b72f9ccf0a893b53f0c0e3d1df73f708bc1"
+    },
+    {
+      "path": "05-knowledge/results/overnight2_20260906_no3line_third_audit.md",
+      "bytes": 8402,
+      "sha256": "d55e2802697492f4ef2afafc065051fc3fb234e8a0f90ccb87861b6b54c8accf"
+    },
+    {
+      "path": "05-knowledge/results/overnight2_20260906_no3line_third_certificates.json",
+      "bytes": 124973,
+      "sha256": "f2c566ac1b2bcedb530af72f3a290479841e7db87844b331558bed68c93ba727"
+    },
+    {
+      "path": "05-knowledge/results/overnight2_20260906_no3line_third_optimized.out",
+      "bytes": 1058,
+      "sha256": "a8c1c4a7ecf28f19699f1b2700b73b72f9ccf0a893b53f0c0e3d1df73f708bc1"
+    },
+    {
+      "path": "05-knowledge/results/overnight2_20260906_signed_cycle_audit.md",
+      "bytes": 16651,
+      "sha256": "305ec6a351f14c14dbbf5f99d5c753a1a7dc183b10eef1faa0f81f9a4ad9f29c"
+    },
+    {
+      "path": "05-knowledge/results/overnight2_20260906_signed_cycle_audit.out",
+      "bytes": 783,
+      "sha256": "d784dd19b7c869e84814d8b9bcd5afc3473a9d7da47034bcbb2579e7114a77b1"
+    },
+    {
+      "path": "05-knowledge/results/overnight2_20260906_signed_cycle_audit_k8.out",
+      "bytes": 289,
+      "sha256": "3d674902b9e8a4e690501762bfd2b33064c3b04e12d25d8e3a287cb4eba509c1"
+    },
+    {
+      "path": "05-knowledge/results/overnight2_20260906_smith_double_pair.md",
+      "bytes": 14211,
+      "sha256": "d7e8ebd18c108ef64fb8d98b10417424d27ab107d3ff2169c00536e7ad698d22"
+    },
+    {
+      "path": "05-knowledge/results/overnight2_20260906_smith_double_pair.out",
+      "bytes": 1959,
+      "sha256": "78fbfe52e3c8e7c51eda03b8b449beaffbe23469848ecc34d2b6c9a478a16fdd"
+    },
+    {
+      "path": "05-knowledge/results/overnight2_20260906_smith_double_pair_audit.md",
+      "bytes": 8335,
+      "sha256": "90b802166ff3c8a5ac92190fa9a405531f2882af4610e3bbbfe4f08e58526d83"
+    }
+  ]
+}

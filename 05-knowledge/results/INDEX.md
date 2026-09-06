@@ -2,11 +2,14 @@
 
 - [Overnight incidence/carry/Smith synthesis](overnight_20260906_synthesis.md)
   routes the audited no-three-in-line seed and new results: sharp LRC
-  full-cap network bound `204/5957`; short-cycle determination of every
-  line-event moment, with corrected permutation-pair sampling; symbolic
+  full-cap network bound `204/5957` and all-height owner-line count closure;
+  short-cycle determination of line-event moments, with nonzero `c8` and
+  `c4^2` third-moment terms at n8 and corrected permutation-pair sampling; symbolic
   two-rung detection for every trinomial with `min(M,N)<=8` and unbounded
   opposite endpoint; and the arbitrary-lift odd-prime mixed Smith cluster,
-  extending consecutive nodes to `n<=p(p+1)`. Independent proof reviews,
+  extending consecutive nodes to `n<=p(p+1)`, followed by the metric-only
+  ternary four-node `(2,2)` law. A new complete K8 audit confirms the
+  incoming all-cumulative signed-cycle closure. Independent proof reviews,
   exact companions, frozen outputs, and current next tests are linked there.
   LRC(14), planar JC2, general trinomial coprimality, and the no-three-in-line
   asymptotic conjecture remain **OPEN**.
