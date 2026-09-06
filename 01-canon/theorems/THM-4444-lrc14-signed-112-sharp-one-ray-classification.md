@@ -14,6 +14,7 @@ depends_on:
 related:
   - THM-4437-lrc14-all-parity-network-reduction-to-three-low-circuits
   - THM-4441-lrc14-signed-122-sharp-ray-closure
+  - THM-4445-lrc14-signed-111-sharp-obstruction-classification
 primary_script: 04-computation/lrc14_signed_112_sharp_classification_thm4444.py
 primary_output: 05-knowledge/results/lrc14_signed_112_sharp_classification_thm4444.out
 primary_script_sha256: 304babb2c2a19f5f8bdfb617f9284808ac8676e0a5edc7ea2f0583a3bc47779f

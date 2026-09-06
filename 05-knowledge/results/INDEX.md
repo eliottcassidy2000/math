@@ -1,5 +1,11 @@
 # Script Results Index
 
+- [THM-4445: signed `(1,1,1)` sharp obstruction classification](../../01-canon/theorems/THM-4445-lrc14-signed-111-sharp-obstruction-classification.md):
+  **PROVED ELEMENTARY RELATIVE TO THM-4414 + FINITE-EXACT + INDEPENDENTLY
+  AUDITED; LRC(14) OPEN.** Only `(1,4,5)` is at or below `6/77`; every other
+  additive row lies sharply in `[31/392,6/55]`. The constant continuum bulk
+  `9/98` proves this is a persistent body-phase obstruction.
+
 - [THM-4444: signed `(1,1,2)` sharp one-ray classification](../../01-canon/theorems/THM-4444-lrc14-signed-112-sharp-one-ray-classification.md):
   **PROVED ELEMENTARY RELATIVE TO THM-4414 + FINITE-EXACT + INDEPENDENTLY
   AUDITED; LRC(14) OPEN.** Here `min E=physical mass`; only `(2,11,20)` is

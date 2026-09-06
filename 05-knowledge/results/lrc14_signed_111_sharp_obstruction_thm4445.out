@@ -1,0 +1,39 @@
+SIGNED_111_EQUIVALENCE sorted positive signs force a+b=c
+RAW_RAY_CROSSCHECK c<=223 rows 1901
+SHARP_ALL_HEIGHT network=physical_upper 6/55 unique_equality (1, 10, 11)
+CONTINUUM network_range 9/98 39/392 physical 9/98 two_sided_error 4/(7c)
+UNIFORM_OLD_BOUND_FAILURE c>=43 margin_at_43 29/46354
+COMPLETE_C_LE_41 rows 66 AT_OR_BELOW_6_77 {'N': [((1, 4, 5), Fraction(1, 28))], 'P': [((1, 4, 5), Fraction(1, 28))]}
+LAST_ROWS_AT_OR_BELOW_6_77 {'N': (1, 4, 5), 'P': (1, 4, 5)}
+SHARP_NONEXCEPTION_LOWER_BOUNDS
+N 31/392 [(1, 7, 8)] finite_rows_c_le_44 77 tail_entry 45
+P 31/392 [(1, 7, 8)] finite_rows_c_le_44 77 tail_entry 45
+SHARP_PARITY_STRATUM_LEADERS_WITH_TAIL_CUTOFFS
+('N', 'all') (Fraction(6, 55), [(1, 10, 11)]) tail_entry 60
+('N', 3) (Fraction(2946, 28861), [(7, 31, 38)]) tail_entry 221
+('N', 5) (Fraction(6, 55), [(1, 10, 11)]) tail_entry 60
+('N', 6) (Fraction(223, 2156), [(4, 7, 11)]) tail_entry 145
+('P', 'all') (Fraction(6, 55), [(1, 10, 11)]) tail_entry 34
+('P', 3) (Fraction(222, 2275), [(1, 25, 26)]) tail_entry 100
+('P', 5) (Fraction(6, 55), [(1, 10, 11)]) tail_entry 34
+('P', 6) (Fraction(102, 1001), [(2, 11, 13)]) tail_entry 57
+THRESHOLD_CENSUS_C_LE_223
+('N', 3) {'lt': 0, 'eq': [], 'gt': 620}
+('N', 5) {'lt': 1, 'eq': [], 'gt': 638}
+('N', 6) {'lt': 0, 'eq': [], 'gt': 642}
+('P', 3) {'lt': 0, 'eq': [], 'gt': 620}
+('P', 5) {'lt': 1, 'eq': [], 'gt': 638}
+('P', 6) {'lt': 0, 'eq': [], 'gt': 642}
+COFINAL_RATIO_ONE_QUARTER_FAMILY
+((1, 4, 5), Fraction(1, 28), Fraction(1, 28), Fraction(24, 245), Fraction(4, 35))
+((4, 13, 17), Fraction(138, 1547), Fraction(138, 1547), Fraction(165, 1666), Fraction(4, 119))
+((7, 22, 29), Fraction(437, 4466), Fraction(2971, 31262), Fraction(141, 1421), Fraction(4, 203))
+((10, 31, 41), Fraction(4458, 44485), Fraction(4128, 44485), Fraction(57, 574), Fraction(4, 287))
+((13, 40, 53), Fraction(19363, 192920), Fraction(4413, 48230), Fraction(258, 2597), Fraction(4, 371))
+((16, 49, 65), Fraction(62, 637), Fraction(2333, 25480), Fraction(633, 6370), Fraction(4, 455))
+((19, 58, 77), Fraction(222, 2233), Fraction(27206, 296989), Fraction(375, 3773), Fraction(4, 539))
+((22, 67, 89), Fraction(13019, 131186), Fraction(84157, 918302), Fraction(867, 8722), Fraction(4, 623))
+last ((55, 166, 221), Fraction(702942, 7062055), Fraction(129684, 1412411), Fraction(1077, 10829), Fraction(4, 1547))
+SEMANTIC_SHA256 675efe996a569c6310a3259ac9288a89bc43d373049478d1a7e075a9271e7f4a
+EXPLICIT_CHECKS 295010
+PASS

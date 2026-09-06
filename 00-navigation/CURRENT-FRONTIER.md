@@ -43,8 +43,8 @@ gives square sum `<=195`; THM-4019 refutes its sharp arbitrary-lattice target.
   ray, parity-sheet and component-count data; none supplies safety or arrival.
 - **Seam/entry:** THM-4326/4329 close the fixed chart; 4330 leaves `2+12`;
   4347 closes height 40. Arbitrary entry and synchronization remain open.
-- **Scale-three local classification CLOSED; entry OPEN:** the [combined theorem](../05-knowledge/results/overnight4_20260906_lrc_parityfree_native.md)
-  gives sharp parity-free `6/55`; [THM-4441](../01-canon/theorems/THM-4441-lrc14-signed-122-sharp-ray-closure.md)
+- **Scale-three tail CLOSED; entry OPEN:** [THM-4445](../01-canon/theorems/THM-4445-lrc14-signed-111-sharp-obstruction-classification.md)
+  gives sharp additive `6/55`; [THM-4441](../01-canon/theorems/THM-4441-lrc14-signed-122-sharp-ray-closure.md)
   removes `(122)`, while [THM-4444](../01-canon/theorems/THM-4444-lrc14-signed-112-sharp-one-ray-classification.md)
   leaves from `(112)` only hostile `(2,11,20)` and boundary `(1,5,11)`.
   All additive rows but `(1,4,5)`, plus `(2,11,20)`, exceed `6/77`.

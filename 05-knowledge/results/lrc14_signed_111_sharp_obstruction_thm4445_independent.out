@@ -1,0 +1,13 @@
+CLEANROOM_SIGNED_111_REFEREE
+sign_classes 4 viable [(1, 1, -1)]
+raw_modular_rows_c_le_223 1901 parity_counts {'b_even': 639, 'a_even': 642, 'c_even': 620}
+sharp_maxima {('N', 'all'): (Fraction(6, 55), [(1, 10, 11)]), ('N', 'b_even'): (Fraction(6, 55), [(1, 10, 11)]), ('P', 'all'): (Fraction(6, 55), [(1, 10, 11)]), ('P', 'b_even'): (Fraction(6, 55), [(1, 10, 11)]), ('N', 'a_even'): (Fraction(223, 2156), [(4, 7, 11)]), ('P', 'a_even'): (Fraction(102, 1001), [(2, 11, 13)]), ('N', 'c_even'): (Fraction(2946, 28861), [(7, 31, 38)]), ('P', 'c_even'): (Fraction(222, 2275), [(1, 25, 26)])}
+sharp_nonexception_minima {'N': (Fraction(31, 392), [(1, 7, 8)]), 'P': (Fraction(31, 392), [(1, 7, 8)])}
+rows_at_or_below_6_77 {'N': [((1, 4, 5), Fraction(1, 28))], 'P': [((1, 4, 5), Fraction(1, 28))]}
+network_cutoffs {'c_even': 221, 'b_even': 60, 'a_even': 145}
+physical_cutoffs {'c_even': 100, 'b_even': 34, 'a_even': 57}
+lower_cutoffs_arithmetic_target_nonexception (42, 45) first_admissible_target_height 43
+exact_margins (Fraction(29, 46354), Fraction(1, 17640))
+cofinal_family_rows_checked {'b_even': 167, 'a_even': 166, 'c_even': 166}
+explicit_checks 417669
+PASS
