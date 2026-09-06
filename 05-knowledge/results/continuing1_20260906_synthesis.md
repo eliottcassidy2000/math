@@ -1,6 +1,10 @@
 # Continuing synthesis: pair gcds, phase powers, and projective jets
 
-**CURRENT, 2026-09-06.** The user's continued-session request resumes the
+**PREVIOUS CHECKPOINT, 2026-09-06.** Read the
+[current phase/rigidity synthesis](continuing3_20260906_synthesis.md) for
+later progress and the current portfolio. The nine scoped results below
+remain proved; their former next questions are checkpoint history.
+The user's continued-session request resumes the
 hourly follow-up on this task without the expired overnight cutoff. The
 isolated worktree is `C:/w/s0905`; the unrelated dirty original checkout
 is preserved. This session inherited clean `677bde8eb`, including the
@@ -165,7 +169,7 @@ interlacers do not turn an arbitrary model point into an actual binomial row.
 | Niche: actual trinomial midpoint | Original carry endpoints, first-row quotient, and the phase-multiplication operator | Seek uniform determinant signs over actual parameters or a finite-phase argument in the explicitly bounded two-anchor model |
 | Wildcard: projective higher jets | Primitive content and complete bank covariance; full local ideals before ordered-factor transport | Treat another nontrivial residue cluster, preserving possible factor interleaving rather than merely shifting indices |
 | Compact body versus open tail | Whole ranked lengths and odd common scale; phase placement still lost | Recover a structured physical family or retain endpoint incidence; broader blind body enumeration has no current positive signal |
-| Incoming sharp stability | THM-4454 closes the scalar optimum; negative dust first moment survives vanishing square mass | Study near-minimizing distributions only after retaining signed mass and integer tail multiplicity |
+| Incoming sharp stability | THM-4454 closes the scalar optimum; the signed net dust first moment survives vanishing square mass | THM-4455 and the current synthesis now classify all minimizing sequences; the effective sharp modulus remains open |
 | No-three-in-line and native Boolean sectors | Conditional column laws and exact native operators remain essential | Wait for a concrete map from a new object before claiming a transfer; new phase/gcd certificates do not imply asymptotic grid existence |
 
 The three incoming mechanisms were consumed rather than rederived: the

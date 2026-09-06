@@ -1,0 +1,9 @@
+AUDIT_FAMILY h 6 endpoint 39 distinct_parameter_values 73 max_required_degree 72 literal_Berkowitz_matches 438
+AUDIT_FAMILY h 7 endpoint 45 distinct_parameter_values 99 max_required_degree 98 literal_Berkowitz_matches 693
+AUDIT_FAMILY h 8 endpoint 51 distinct_parameter_values 129 max_required_degree 128 literal_Berkowitz_matches 1032
+AUDIT_FAMILY h 9 endpoint 57 distinct_parameter_values 163 max_required_degree 162 literal_Berkowitz_matches 1467
+AUDIT_FAMILY h 10 endpoint 63 distinct_parameter_values 201 max_required_degree 200 literal_Berkowitz_matches 2010
+TOTAL matrices 665 complete_fibres 18915 primitive_parameter_controls 397 positive_coefficients 3170
+METHOD: literal multinomial fibres -> exact rational quotient -> integer Berkowitz characteristic -> bounded-degree identity test.
+SCOPE: five fixed endpoints, all allowed integer g; all-h positivity and other actual support shapes remain OPEN.
+PASS 14789 always-active independent exact gates FULL_IDENTITY_AUDIT

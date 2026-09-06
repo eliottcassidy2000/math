@@ -1,0 +1,14 @@
+Boundary constants (rational enclosures, displayed):
+K3 0.3501345013 Ktwo 0.5915344185 Kdust 2.5326599155 Kone 0.7475468957
+Mixed-dust exact controls: L, c, quotient, square dust, positive/negative first mass
+65536 0 0.3501676458 0.0000081770 0.0000000000 0.7320437261
+65536 1 0.3502611460 0.0000312463 0.5773412491 1.3093649963
+65536 3 0.3506952453 0.0001384003 1.7319309453 2.4638618905
+16777216 64 0.3508069299 0.0001659890 36.9473504196 37.6792574706
+One-atom n=4096 quotient 0.7479876577
+Two-atom boundary controls: n, regime, quotient, mixing fraction
+256 dust 2.5326790928 1.0000000000
+256 imbalance 0.5915427429 0.0000026179
+256 mixed 0.8758113767 0.1464412147
+PASS 477 always-active exact gates; no census or optimum inference.
+Universal conclusions depend on the inherited regional sign proofs plus the new analytic limit arguments.

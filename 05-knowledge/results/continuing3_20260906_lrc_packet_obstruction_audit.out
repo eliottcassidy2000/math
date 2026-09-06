@@ -1,0 +1,6 @@
+BOUNDED_CLASS 412164 25880486141010 gcd(t,305613336829)=1; analytic monotonic margins and full physical box
+LITERAL_ROWS [(412164, 29, (5, 12, 17, 24), '3/29'), (412183, 31, (3, 28), '3/31')]
+EXACT_ENTRY both weighted ranks11, actual6+7 graph, all231 crossing supports excluded in each row
+PROFILES all4095 body/complement profiles reconstructed per row; canonical inherited JSON checked
+PACKETS six-shape first29; full rows first29 and31; all29 scale multipliers checked; U denominator2 survives
+PASS 8842 always-active gates; no primary imports, multiplicative atlas and rational-rank/unsafe-mask referee

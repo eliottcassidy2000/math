@@ -1,5 +1,15 @@
 # Script Results Index
 
+- [Continuing synthesis: phase transport and rigidity](continuing3_20260906_synthesis.md):
+  **PROVED + INDEPENDENTLY AUDITED.** Four further actual endpoint families
+  45,51,57,63 extend the concurrent endpoint39 result. Three-atom rigidity
+  gains moment-residual and entire-product equivalences. The anchored model's
+  smallest phase is settled and its negative tail starts at75000. A bounded
+  actual LRC6+7 class retains every profile but changes its first packet join
+  between two scales. The [26-artifact manifest](continuing3_20260906_manifest.json)
+  pins complete certificates and eight exact producers/referees. General
+  LRC14, all-h transport and the remaining model phase interval stay OPEN.
+
 - [Extended research session](long_frontier_sep06_board.md): **PROVED + INDEPENDENTLY AUDITED.**
   [THM-4455: every minimizing sequence](../../01-canon/theorems/THM-4455-three-atom-minimizing-sequence-rigidity.md)
   approaches three equal positive atoms in square norm; separate dust first

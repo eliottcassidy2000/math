@@ -1,0 +1,9 @@
+UNIFORM first phase: exactly one root in (1/110,1/90), no earlier positive root; no interlacer needed
+BOX 0<=e3<=130, 0<=e4<=152, 0<=e5<=72, 1/120<=s<=1/80: s Q(-s)<-400
+BERNSTEIN count=270 multidegree=(2,2,2,9) maximum= -22645374245632441/52254720000000
+TAIL original P(-s)=0 and e4>1/100: Q(-s)/(s^7 e4^2)<-120000 for s>=75000
+TAIL_ENVELOPE_AT_75000 -470440303496224131940323407036971853244343/3854347229003906250000000000000000000
+NEWTON_HOSTILE e3=104 e4=50 e5=37435088/3898125 s=15/2 Q(-s)= 78541969368658673/18480
+HOSTILE original P has four simple positive roots; beta B has only one real root; not a model counterexample
+REMAINING any unresolved original phase lies in (1/80,75000); full model sign remains OPEN
+PASS 341 always-active exact gates; no numerical optimization or external algebra package

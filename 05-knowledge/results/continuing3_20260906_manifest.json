@@ -1,0 +1,161 @@
+{
+  "schema": 1,
+  "created_utc": "2026-09-06T18:19:22.691531+00:00",
+  "baseline_commit": "f0521b872",
+  "incoming_review_commits": [
+    "7fedb2359",
+    "4db7150ab",
+    "28f41c846",
+    "da2c452c3"
+  ],
+  "hash_basis": "raw LF bytes; maintained boards, manifest and navigation excluded",
+  "scope": "Actual endpoint45/51/57/63 extension and concurrent endpoint39 reconstruction; concurrent three-atom rigidity reproof with moment-residual/product equivalences; two-anchor smallest-phase theorem and improved75000 tail; bounded actual LRC packet incompatibility. General LRC14, all-h Laurent transport and the remaining continuous model phase interval remain OPEN.",
+  "artifacts": [
+    {
+      "path": "04-computation/continuing3_20260906_laurent_endpoints.py",
+      "bytes": 5856,
+      "sha256": "3b5e9127cd02881afbd2a3cfe8041c990cd2a8688a4eeac86a4cb389c110eae8"
+    },
+    {
+      "path": "04-computation/continuing3_20260906_laurent_endpoints_audit.py",
+      "bytes": 6317,
+      "sha256": "94a1ab60946e16920f0c53104f104087cb376bb3679890ced9e7cd82c3871658"
+    },
+    {
+      "path": "04-computation/continuing3_20260906_laurent_endpoints_certificate.json",
+      "bytes": 923826,
+      "sha256": "b55bec0ba7f1063396af1a8db9be725f279fd01a403adb94b9b026b9490d8e62"
+    },
+    {
+      "path": "04-computation/continuing3_20260906_laurent_finite_phase.py",
+      "bytes": 12564,
+      "sha256": "8c49a16864d2b17c3fc888df0313e241b6fd5cdfb47c55a06920d709902269d5"
+    },
+    {
+      "path": "04-computation/continuing3_20260906_laurent_finite_phase_audit.py",
+      "bytes": 11547,
+      "sha256": "f56a5cfa459e24be65b2865379c8e18fd908e3e2b991a4afd002c11b34528167"
+    },
+    {
+      "path": "04-computation/continuing3_20260906_laurent_finite_phase_certificate.json",
+      "bytes": 35058,
+      "sha256": "afe514688067ab0fdc38f33ca650fbecdb0ddb40e08466b6395c7c5c29659385"
+    },
+    {
+      "path": "04-computation/continuing3_20260906_lrc_packet_obstruction.py",
+      "bytes": 9171,
+      "sha256": "66eacc9647b765c392fb080ed41a031fd50a307b6d58b49629d2cdf342832080"
+    },
+    {
+      "path": "04-computation/continuing3_20260906_lrc_packet_obstruction_audit.py",
+      "bytes": 9470,
+      "sha256": "2e5b3ca4327e97180e9295e0825ee934ec2ba39d8315228ea439057e0b63b534"
+    },
+    {
+      "path": "04-computation/continuing3_20260906_stability_near_minimizers.py",
+      "bytes": 14334,
+      "sha256": "b5a2ce85df71837e5b73b3609feee0d9fcfaa14f425e22b81b563a7a3574c598"
+    },
+    {
+      "path": "04-computation/continuing3_20260906_stability_near_minimizers_audit.py",
+      "bytes": 5115,
+      "sha256": "ac730d76df70cad414b1fbc6b0882b9ca8c2996f32e8847bbbd475c1c938c67f"
+    },
+    {
+      "path": "05-knowledge/results/continuing3_20260906_laurent_endpoints.md",
+      "bytes": 10556,
+      "sha256": "6ed09cead9e6d6fa5951920def4fdec6c7d26c5399006a54cd15dbc42f164a9e",
+      "pre_filing_sha256": "0901f1e9d1d83a2ec08f2e1a8f031082ddf346f33715f2aeaafb7a258ef50d54",
+      "filing_changes": "Proof-status promotion, concurrent credit, and portable links/commands only; mathematical argument unchanged."
+    },
+    {
+      "path": "05-knowledge/results/continuing3_20260906_laurent_endpoints.out",
+      "bytes": 1157,
+      "sha256": "f5ea177b5b3d3d49bd29dd677a35b8244a17ca5c38eb90e44867f5684b56c6e4"
+    },
+    {
+      "path": "05-knowledge/results/continuing3_20260906_laurent_endpoints_audit.md",
+      "bytes": 9629,
+      "sha256": "577631eb0620cd6f93e140e0ceb006d7bca783be95342dd3c9169644c8c98bda",
+      "pre_filing_sha256": "f82f0c0c968c3839e7dab5bd4161ec6b12a5ef7372ee6d62783cc3866a11bef0",
+      "filing_changes": "Proof-status promotion, concurrent credit, and portable links/commands only; mathematical argument unchanged."
+    },
+    {
+      "path": "05-knowledge/results/continuing3_20260906_laurent_endpoints_audit.out",
+      "bytes": 980,
+      "sha256": "5f138b8db1ecf383c1984ff1f7e12f549e087aa1d5a79288af8cd9d4896b3c46"
+    },
+    {
+      "path": "05-knowledge/results/continuing3_20260906_laurent_finite_phase.md",
+      "bytes": 13300,
+      "sha256": "dfeafc6c4a534a5e2f0665a5e458fdbf4edcef1c353b68039037a834cf9329cc",
+      "pre_filing_sha256": "c7971efe59e528349e98abbf8d5020d7e3449c352b8758bc3a50eba376a053de",
+      "filing_changes": "Proof-status promotion, concurrent credit, and portable links/commands only; mathematical argument unchanged."
+    },
+    {
+      "path": "05-knowledge/results/continuing3_20260906_laurent_finite_phase.out",
+      "bytes": 810,
+      "sha256": "85de04cb1e32eae863d12c321e0defe35fddd68ddc19182164f2400c27ad3133"
+    },
+    {
+      "path": "05-knowledge/results/continuing3_20260906_laurent_finite_phase_audit.md",
+      "bytes": 8292,
+      "sha256": "d5be9593cac4fc7dd64b7722b133249668156d3ba64704559fdad2c48c2a6e05",
+      "pre_filing_sha256": "6a058b7fb5b7f06ea1f8a51dec2a10f71e9e370bc200ff588cd6a5a22dac10f8",
+      "filing_changes": "Proof-status promotion, concurrent credit, and portable links/commands only; mathematical argument unchanged."
+    },
+    {
+      "path": "05-knowledge/results/continuing3_20260906_laurent_finite_phase_audit.out",
+      "bytes": 614,
+      "sha256": "30518ee02c155c3e0bd2dc573ffa8330c5ac7ab34dbb49549f67c085e6c16eee"
+    },
+    {
+      "path": "05-knowledge/results/continuing3_20260906_lrc_packet_obstruction.md",
+      "bytes": 12508,
+      "sha256": "2d850b0e5422f3667861ba45615600ae62cd2e199154c20a91a45bc3d6c6ac24",
+      "pre_filing_sha256": "70101a968d03afbd68409c38930b272ce8bc89a3d2589d9aac79a1d0eeeca7bf",
+      "filing_changes": "Proof-status promotion, concurrent credit, and portable links/commands only; mathematical argument unchanged."
+    },
+    {
+      "path": "05-knowledge/results/continuing3_20260906_lrc_packet_obstruction.out",
+      "bytes": 1692,
+      "sha256": "b3e340d2c5731d9e9b0bf48b78ff8f8b84db887cf1b5c375e129a364a63ee0f4"
+    },
+    {
+      "path": "05-knowledge/results/continuing3_20260906_lrc_packet_obstruction_audit.md",
+      "bytes": 7873,
+      "sha256": "2078164241fdd8946de36be52f0cb196ec45131259e8226fca1eecfc72d64083",
+      "pre_filing_sha256": "72e761bab178fb08cc297b87fe6b9965ed6e44a42244d0bce5902bccb74b0db1",
+      "filing_changes": "Proof-status promotion, concurrent credit, and portable links/commands only; mathematical argument unchanged."
+    },
+    {
+      "path": "05-knowledge/results/continuing3_20260906_lrc_packet_obstruction_audit.out",
+      "bytes": 607,
+      "sha256": "2f0003f0e3259fb7db17db35942a8a655029ebea7c56a2f49fdee762a5dbaa91"
+    },
+    {
+      "path": "05-knowledge/results/continuing3_20260906_stability_near_minimizers.md",
+      "bytes": 15413,
+      "sha256": "59c8815298c557637b01be9a3e52fbb79815bf6828b55dce9129a28f59f0f994",
+      "pre_filing_sha256": "5378d5699f85175074eee1037c6515f79ee92c8dfde55c3494ee722bbf51e086",
+      "filing_changes": "Proof-status promotion, concurrent credit, and portable links/commands only; mathematical argument unchanged."
+    },
+    {
+      "path": "05-knowledge/results/continuing3_20260906_stability_near_minimizers.out",
+      "bytes": 843,
+      "sha256": "3a0d5f4c830b62c55c48a9458f315f3ea601d68aeec40e9c634980ad2e6f8337"
+    },
+    {
+      "path": "05-knowledge/results/continuing3_20260906_stability_near_minimizers_audit.md",
+      "bytes": 8441,
+      "sha256": "06434234102870c5e7396ead511c7f87c5bed331da3644fcd4e35e224823772d",
+      "pre_filing_sha256": "2ef91021caacaddd07cbd895823f813caad7c7fe1845c72278a85d58bed40767",
+      "filing_changes": "Proof-status promotion, concurrent credit, and portable links/commands only; mathematical argument unchanged."
+    },
+    {
+      "path": "05-knowledge/results/continuing3_20260906_stability_near_minimizers_audit.out",
+      "bytes": 400,
+      "sha256": "7172844909f1602e68095bc283723c3a2c0b2fc93c8c30945a46ddab948713c5"
+    }
+  ]
+}

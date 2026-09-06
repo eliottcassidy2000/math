@@ -1,0 +1,6 @@
+EIGHT CORNER STURM RECORDS [[0, 0, 0, 2, 2], [0, 0, 72, 4, 4], [0, 152, 0, 4, 4], [0, 152, 72, 5, 5], [130, 0, 0, 4, 4], [130, 0, 72, 5, 5], [130, 152, 0, 6, 6], [130, 152, 72, 7, 7]]
+Separate convexity proves sQ(-s)<-400 throughout the complete coefficient/phase box.
+TAIL AT 75000 -470440303496224131940323407036971853244343/3854347229003906250000000000000000000
+NEWTON/REAL-FIRST-ROW HOSTILE Q 78541969368658673/18480
+PASS 663 always-active exact audit gates; producer never imported or executed.
+Accepted scope: first branch without interlacers; tail requires both inherited interlacers and the original root.

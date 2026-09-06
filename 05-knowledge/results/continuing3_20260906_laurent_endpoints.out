@@ -1,0 +1,10 @@
+FAMILY h=6 endpoint=39 g>=20: 258 strictly positive coefficients; 3/5 primitive literal controls; 105 complete fibres
+FAMILY h=7 endpoint=45 g>=23: 399 strictly positive coefficients; 3/5 primitive literal controls; 120 complete fibres
+FAMILY h=8 endpoint=51 g>=26: 584 strictly positive coefficients; 4/5 primitive literal controls; 135 complete fibres
+FAMILY h=9 endpoint=57 g>=29: 819 strictly positive coefficients; 4/5 primitive literal controls; 150 complete fibres
+FAMILY h=10 endpoint=63 g>=32: 1110 strictly positive coefficients; 4/5 primitive literal controls; 165 complete fibres
+CERTIFICATE coefficients=3170 bytes=923826 sha256=b55bec0ba7f1063396af1a8db9be725f279fd01a403adb94b9b026b9490d8e62
+PROOF: full polynomial identities and shifted positivity hold for every real x>=1; every real first root has q_x(root)<0.
+RELATIVE TO THM-4436: integral x>=1 has h simple negative first roots; gcd(g,6h+3)=1 gives first nonzero mass g or 2g.
+SCOPE: five new fixed-endpoint, unbounded-g families; all-h positivity and general trinomial separation remain OPEN.
+PASS 4451 always-active exact gates; no numerical roots and no repository producer imports.

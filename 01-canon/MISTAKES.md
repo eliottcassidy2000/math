@@ -9,6 +9,43 @@ Format per entry:
 - Why it was wrong
 - The correct framing
 
+## 2026-09-06 continuation -- lost moments, roots, and located clocks
+
+- [The three-atom proof](../05-knowledge/results/continuing3_20260906_stability_near_minimizers.md)
+  repairs a proposed separate negative-dust first-moment conclusion.
+  Vanishing tail square mass fixes only the signed net moment. The exact
+  mixed-dust family with parameter c=1 retains positive dust mass, while
+  c=L^(1/4) makes both separate masses diverge. The strongest survivor is
+  the signed net limit and the resulting exponential factor in the entire
+  product. The unresolved next question is an effective sharp rigidity
+  modulus. Incoming THM-4455 independently includes the same correction.
+- [The actual packet obstruction](../05-knowledge/results/continuing3_20260906_lrc_packet_obstruction.md)
+  disproves forcing positive compatibility at the first useful prescribed
+  component clock from equality entry and hereditary profiles. Two scales
+  t=412164 and412183 preserve all those data but change the denominator29
+  join from positive to zero. The missing coordinate is the scale residue.
+  The exact CRT criterion survives; a zero join rejects only that clock,
+  and adaptive choice of the opposite component's denominator2 is not
+  refuted. These rows were already closed by the larger-unit theorem.
+- [The finite-phase hostile](../05-knowledge/results/continuing3_20260906_laurent_finite_phase.md)
+  has both coefficient anchors, all four stated Newton inequalities and
+  four positive simple first roots, but positive doubled response at15/2.
+  Its beta polynomial has four nonreal roots. The first failed implication
+  was restoring beta-root/interlacer geometry from the relaxed predicates.
+  The survivor is the proved smallest-phase box and the tail conditioned
+  on the original first zero and both interlacers; full model negativity
+  in(1/80,75000) remains open. A genuine model point with positive response
+  at75000 away from the first-zero equation also shows why that equation
+  cannot be discarded from the tail theorem.
+- [Five endpoint certificates](../05-knowledge/results/continuing3_20260906_laurent_endpoints.md)
+  establish exactly five specified unbounded-parameter families. They do
+  not imply an all-h recurrence or arbitrary supports of width at most63.
+  Incoming endpoint39 matches our h=6 certificate coefficient for
+  coefficient; the extension is endpoints45,51,57,63. Likewise the core
+  three-atom classification is concurrent with THM-4455, not a second
+  distinct closure. Preserve independent proof provenance without
+  duplicating mathematical novelty.
+
 ## 2026-09-06 continuation -- phase packets and quantified boundaries
 
 - [The phase-bank review](../05-knowledge/results/continuing1_20260906_phase_bank_audit.md)
