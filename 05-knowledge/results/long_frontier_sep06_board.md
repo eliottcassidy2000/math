@@ -94,6 +94,10 @@ and its frozen evidence remain preserved.
   now target the other phases; the earlier effective negative tail stays
   inherited, and general finite-phase negativity remains open.
 
+The separate namespace [THM-4456](../../01-canon/theorems/THM-4456-sharp-finite-length-signed-root-stability-asymptotics.md)
+is **RESERVED / UNPROVED EMPTY STUB**, for the finite-length asymptotic
+candidate now under independent audit. It has no proved dependencies.
+
 The heartbeat continues this board quietly unless there is substantive
 progress, a correction, completion, failure or required user action. At
 the cutoff, finish and push a coherent checkpoint and pause the heartbeat.
