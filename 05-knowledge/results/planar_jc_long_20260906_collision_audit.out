@@ -1,0 +1,8 @@
+SYMBOLIC independently derived Jacobian=-288; compiler determinant; all-root Bezout PASS
+STRATUM {"name":"generic","chi_order":2,"period_order":1,"collision_through":5,"period_through":4}
+STRATUM {"name":"plane","chi_order":3,"period_order":2,"collision_through":5,"period_through":4}
+STRATUM {"name":"parabola","chi_order":4,"period_order":3,"collision_through":5,"period_through":4}
+STRATUM {"name":"quartic-field","chi_order":5,"period_order":4,"collision_through":5,"period_through":4}
+SOURCE_ESCAPE exact Jacobian and relation covariance; Catalan inverse through h6 PASS
+PASS checks=133
+SOURCE_SHA256 c548ccc11c05903e1cfb315c68fb0c93fc0aa2183dae36288c0890ece60c9c36

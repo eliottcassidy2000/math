@@ -1,0 +1,199 @@
+{
+  "session": "planar_jc_long_20260906",
+  "base": "2d3c53942d51",
+  "status": "audited round one; separate active scouts; JC2 OPEN",
+  "artifacts": [
+    {
+      "path": "04-computation/planar_jc_long_20260906_collision.py",
+      "sha256": "7320aecbc79c7c53c0118889a4c307f53102f6aa488a35641faac16873bf1e82",
+      "bytes": 10369,
+      "checkpoint_scope": "AUDITED_ROUND_ONE"
+    },
+    {
+      "path": "04-computation/planar_jc_long_20260906_collision_audit.py",
+      "sha256": "c548ccc11c05903e1cfb315c68fb0c93fc0aa2183dae36288c0890ece60c9c36",
+      "bytes": 9109,
+      "checkpoint_scope": "AUDITED_ROUND_ONE"
+    },
+    {
+      "path": "04-computation/planar_jc_long_20260906_depth.py",
+      "sha256": "15a885b1c0aa5bdd8b956414ac1acf79bc9bb392c53d483733971a2b8e688984",
+      "bytes": 9750,
+      "checkpoint_scope": "AUDITED_ROUND_ONE"
+    },
+    {
+      "path": "04-computation/planar_jc_long_20260906_memory_audit.py",
+      "sha256": "f246ef5640562e197c41b6f968e8db47d4b02f620066cd279665aa7bdfd2cdfe",
+      "bytes": 5452,
+      "checkpoint_scope": "AUDITED_ROUND_ONE"
+    },
+    {
+      "path": "04-computation/planar_jc_long_20260906_memory_depth_audit.py",
+      "sha256": "c9a479683792b1278a87ba8f68a54b34171ec1555f876cef429d089ffe4ffb7d",
+      "bytes": 5942,
+      "checkpoint_scope": "AUDITED_ROUND_ONE"
+    },
+    {
+      "path": "04-computation/planar_jc_long_20260906_memory_earlier.py",
+      "sha256": "467d09ff31347ee47e40fe791c6b87b5ea405593866d8d4a232141609df8c4fe",
+      "bytes": 4208,
+      "checkpoint_scope": "ACTIVE_SCOUT"
+    },
+    {
+      "path": "04-computation/planar_jc_long_20260906_memory_probe.py",
+      "sha256": "34fa2d312c5111ac6fc6c15e5dda4382021e3934eee67abb99b8e599923cda9f",
+      "bytes": 7889,
+      "checkpoint_scope": "AUDITED_ROUND_ONE"
+    },
+    {
+      "path": "04-computation/planar_jc_long_20260906_memory_valuation12.py",
+      "sha256": "92a9c87c9666e46340329bc2fe84a4aaf0003feb294dafb11bc2434e86f69923",
+      "bytes": 3523,
+      "checkpoint_scope": "ACTIVE_SCOUT"
+    },
+    {
+      "path": "04-computation/planar_jc_long_20260906_memory_valuation12_audit.py",
+      "sha256": "f20894ef56b3a4120526305a63a6b764c5e3dfa3a6e5092e490fcae04de2d504",
+      "bytes": 9233,
+      "checkpoint_scope": "ACTIVE_SCOUT"
+    },
+    {
+      "path": "04-computation/planar_jc_long_20260906_smatrix.py",
+      "sha256": "17751f9596a6be43a7fd8757350fee679347eb513a0b318f7b52cd5867128f6d",
+      "bytes": 10362,
+      "checkpoint_scope": "AUDITED_ROUND_ONE"
+    },
+    {
+      "path": "04-computation/planar_jc_long_20260906_smatrix_audit.py",
+      "sha256": "250fcc4636ec73baaa7ab8c029fd10e267efe84f07f1867cf8e98cf068c14d51",
+      "bytes": 11915,
+      "checkpoint_scope": "AUDITED_ROUND_ONE"
+    },
+    {
+      "path": "05-knowledge/reference/CORE-PAPERS-SMATRIX-2026-09-06.md",
+      "sha256": "99e785b4ca5fe96f7511a5ff9751acf2a60b8795bc552f24a8ebb0ab5ff97dd1",
+      "bytes": 1966,
+      "checkpoint_scope": "AUDITED_ROUND_ONE"
+    },
+    {
+      "path": "05-knowledge/results/planar_jc_long_20260906_board.md",
+      "sha256": "99eeda2552d98465347803d416b839b9cddaad8ef8b31583da2574336337ba88",
+      "bytes": 7467,
+      "checkpoint_scope": "AUDITED_ROUND_ONE"
+    },
+    {
+      "path": "05-knowledge/results/planar_jc_long_20260906_collision.md",
+      "sha256": "76c84af6709e5a9c118ee3c6105dd119f1380ba6a954421381e5012e75a8a31e",
+      "bytes": 17456,
+      "checkpoint_scope": "AUDITED_ROUND_ONE"
+    },
+    {
+      "path": "05-knowledge/results/planar_jc_long_20260906_collision.out",
+      "sha256": "069811ba7e42bc8b83d0a0bb76c589b0f673406f12ecfde8fa4cd83b96d62d6c",
+      "bytes": 968,
+      "checkpoint_scope": "AUDITED_ROUND_ONE"
+    },
+    {
+      "path": "05-knowledge/results/planar_jc_long_20260906_collision_audit.md",
+      "sha256": "09786f069d0958e33ba4e784952cd5f67045d94335e020d239a56e3eb434966b",
+      "bytes": 7990,
+      "checkpoint_scope": "AUDITED_ROUND_ONE"
+    },
+    {
+      "path": "05-knowledge/results/planar_jc_long_20260906_collision_audit.out",
+      "sha256": "1edd32e9922f196c411a6f2d6ceb308f9fff747feeb587863305f7d87feea4f5",
+      "bytes": 671,
+      "checkpoint_scope": "AUDITED_ROUND_ONE"
+    },
+    {
+      "path": "05-knowledge/results/planar_jc_long_20260906_depth.md",
+      "sha256": "b0e2544495726da1c89ab4ac1e1b51b9fb5ac795f4881e409e703e31de540829",
+      "bytes": 13284,
+      "checkpoint_scope": "AUDITED_ROUND_ONE"
+    },
+    {
+      "path": "05-knowledge/results/planar_jc_long_20260906_depth.out",
+      "sha256": "118a637741b660fc4549c8dd073f978a1442fd2204849d496319e3f7a615f851",
+      "bytes": 900,
+      "checkpoint_scope": "AUDITED_ROUND_ONE"
+    },
+    {
+      "path": "05-knowledge/results/planar_jc_long_20260906_memory.md",
+      "sha256": "8c3a434d4705dcb40c26745f1e0fba18b417f741095791aef2a61a79766514f1",
+      "bytes": 12355,
+      "checkpoint_scope": "AUDITED_ROUND_ONE"
+    },
+    {
+      "path": "05-knowledge/results/planar_jc_long_20260906_memory_audit.md",
+      "sha256": "1ebc55cb521689496e6a4a6b12c61a8417826a1d063aeb77c86038c241cfff40",
+      "bytes": 3723,
+      "checkpoint_scope": "AUDITED_ROUND_ONE"
+    },
+    {
+      "path": "05-knowledge/results/planar_jc_long_20260906_memory_audit.out",
+      "sha256": "1804a8fa4bf6928507b154ce791bd4f52c2a1f0af77244a4de1f40f65131a81c",
+      "bytes": 529,
+      "checkpoint_scope": "AUDITED_ROUND_ONE"
+    },
+    {
+      "path": "05-knowledge/results/planar_jc_long_20260906_memory_depth_audit.md",
+      "sha256": "d7b19dbd78ff0ea938bdb1dc0e500eeadf703d39bba37904b089fbadc8499e6e",
+      "bytes": 6625,
+      "checkpoint_scope": "AUDITED_ROUND_ONE"
+    },
+    {
+      "path": "05-knowledge/results/planar_jc_long_20260906_memory_depth_audit.out",
+      "sha256": "d582116fe1db0259c0121cbc4606984216fa6013396156625aee8d7309b13e29",
+      "bytes": 398,
+      "checkpoint_scope": "AUDITED_ROUND_ONE"
+    },
+    {
+      "path": "05-knowledge/results/planar_jc_long_20260906_memory_probe.out",
+      "sha256": "5549050c6ef1bb182af8b15977865bbaf354cf102c9a2609274170032eb76bfd",
+      "bytes": 1645,
+      "checkpoint_scope": "AUDITED_ROUND_ONE"
+    },
+    {
+      "path": "05-knowledge/results/planar_jc_long_20260906_memory_valuation12.md",
+      "sha256": "3fd8e8bdaae62a9e5fe726964b007b5fd420ba91ac58071a17d86b4d7e9d7da6",
+      "bytes": 2017,
+      "checkpoint_scope": "ACTIVE_SCOUT"
+    },
+    {
+      "path": "05-knowledge/results/planar_jc_long_20260906_memory_valuation12.out",
+      "sha256": "2d82e500846da473d69ed44109ceed8589180cca4e6651e1d52fb3006c75f781",
+      "bytes": 1665,
+      "checkpoint_scope": "ACTIVE_SCOUT"
+    },
+    {
+      "path": "05-knowledge/results/planar_jc_long_20260906_memory_valuation12_audit.out",
+      "sha256": "3e58af82a1e5133d056ff098f1ceb7fd8cb6795f226c8a40ef591171fc59a3a6",
+      "bytes": 944,
+      "checkpoint_scope": "ACTIVE_SCOUT"
+    },
+    {
+      "path": "05-knowledge/results/planar_jc_long_20260906_smatrix.md",
+      "sha256": "e1597fcd561e0da5581ac70f6d1531a5855dde9c23ed59ee7ca93727cb5bd2fb",
+      "bytes": 15795,
+      "checkpoint_scope": "AUDITED_ROUND_ONE"
+    },
+    {
+      "path": "05-knowledge/results/planar_jc_long_20260906_smatrix.out",
+      "sha256": "40b41ace5ffc917124bbe2995ad8c5a8bc0a85ec2faf8461e50b97609870d7e2",
+      "bytes": 1269,
+      "checkpoint_scope": "AUDITED_ROUND_ONE"
+    },
+    {
+      "path": "05-knowledge/results/planar_jc_long_20260906_smatrix_audit.md",
+      "sha256": "bf32cb80080486a959d84557958bf2b876533ee51e8e1369e9f504103dc88a87",
+      "bytes": 8314,
+      "checkpoint_scope": "AUDITED_ROUND_ONE"
+    },
+    {
+      "path": "05-knowledge/results/planar_jc_long_20260906_smatrix_audit.out",
+      "sha256": "49475a11995b66eb99d50d7dcd261fab6c2e65949e175b60f84e60b2b8817352",
+      "bytes": 1312,
+      "checkpoint_scope": "AUDITED_ROUND_ONE"
+    }
+  ]
+}

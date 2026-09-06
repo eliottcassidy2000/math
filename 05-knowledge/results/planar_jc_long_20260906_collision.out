@@ -1,0 +1,8 @@
+SYMBOLIC ["det(C,E)/det(x,q)=6(B+2)","gcd(F4,G3)=1","F4 irreducible over Q"]
+STRATUM ["generic","chi-order",2,"chi-leading","-259/9","Pi-order",1,"Pi-leading","2072/81","cutoff",6]
+STRATUM ["zero-chi2","chi-order",3,"chi-leading","91472/2187","Pi-order",2,"Pi-leading","-365888/6561","cutoff",6]
+STRATUM ["zero-chi2-chi3","chi-order",4,"chi-leading","-20422720/177147","Pi-order",3,"Pi-leading","326763520/1594323","cutoff",6]
+STRATUM ["exceptional-field","chi-order",5,"chi-leading",["259188338368/129140163","-46584993664/4782969","23019960448/531441","9180348416/177147"],"Pi-order",4,"Pi-leading",["-5183766767360/1162261467","931699873280/43046721","-460399208960/4782969","-183606968320/1594323"],"cutoff",6]
+SCOPE ["all target 2-form slots tested","formal unit density is allowed","source shear changes fixed dx wedge dt benchmark","no polynomial termination claim"]
+PASS [157]
+SOURCE_SHA256 ["7320aecbc79c7c53c0118889a4c307f53102f6aa488a35641faac16873bf1e82"]

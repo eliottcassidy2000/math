@@ -1,0 +1,12 @@
+DUAL_TESTER symbolic mixed-minor identity and complex/integral hostiles PASS
+SMITH {"m":2,"factors":[1,12],"torsion_order":12,"uniform_denominator":12}
+SMITH {"m":5,"factors":[1,1,2,6,120],"torsion_order":1440,"uniform_denominator":120}
+SMITH {"m":8,"factors":[1,1,1,1,2,6,12,5040],"torsion_order":725760,"uniform_denominator":5040}
+SMITH {"m":14,"factors":[1,1,1,1,1,1,1,2,2,6,12,12,840,720720],"torsion_order":2092278988800,"uniform_denominator":720720}
+SMITH {"m":24,"factors":[1,1,1,1,1,1,1,1,1,1,1,1,2,2,2,2,6,6,12,12,60,2520,55440,32125373280],"torsion_order":22336142462396619816960000,"uniform_denominator":32125373280}
+SMITH {"m":48,"factors":[1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,2,2,2,2,2,2,2,2,6,6,6,6,12,12,12,60,60,60,840,2520,27720,720720,32125373280,2656323860782282891200],"torsion_order":446900961331298616151042405705441501386773508768399360000000000,"uniform_denominator":2656323860782282891200}
+ACTUAL_BANK m=2 rhs=(x,2-x^2) solutions=(-1/4,x/3) common_denominator=12
+ROW14_BANK powers=(1,3,5,7,9,11,13) denominators=[28,182,2184,4004,20020,18018,16016] common_denominator=720720
+LOCALIZED_ROW14 invert=(2,3,7) residual_exponent=715=5*11*13
+UNIVERSE exact Smith m=2..48; every minor m=2..6; DP structural checks m=2..256
+PASS gates=2455

@@ -10,6 +10,7 @@ scripts/*.ps1 text eol=crlf
 *.csv text eol=lf
 *.md text eol=lf
 *.lean text eol=lf
+05-knowledge/results/planar_jc_long_20260906_*.json text eol=lf
 05-knowledge/results/overnight_20260906_*.json text eol=lf
 05-knowledge/results/overnight2_20260906_*.json text eol=lf
 04-computation/overnight2_20260906_*.cpp text eol=lf

@@ -1,0 +1,255 @@
+# Complete filtered source response through row fifteen
+
+**Status: PROVED FINITE-ROW + FINITE-EXACT + INDEPENDENTLY AUDITED.**
+The new result is a complete response classification, a sharp weight-22
+replacement threshold under an explicit valuation restriction, and the two
+remaining neutral source directions at that weight. The weight-22 transport
+itself is **RECOVERED**, independently reproduced from the incoming proved
+[compensated transport](planar_jc48_sep06_weight14.md), commit `d0208173b2`.
+This does not give minimal weight when earlier source valuations may vary,
+a later-row lift, polynomial termination, chart entry, or a result on JC(2).
+
+## Inheritance, novelty, and the connection
+
+The row operators and depth modules are those of
+[THM-4308](../../01-canon/theorems/THM-4308-source-normal-bracket-hasse-truncation-through-row-eight.md)
+and [THM-4315](../../01-canon/theorems/THM-4315-source-normal-student-stein-row-nine-high-contact-collapse.md).
+[THM-4410](../../01-canon/theorems/THM-4410-source-normal-least-weight-twenty-row-thirteen-affine-continuation.md)
+supplies the row-thirteen response ratio, while
+[THM-4415](../../01-canon/theorems/THM-4415-source-normal-row-fourteen-same-row-response-rank-obstruction.md)
+and [THM-4426](../../01-canon/theorems/THM-4426-source-normal-row-fourteen-weight-eighteen-memory-repair.md)
+separate a frozen-prefix obstruction from an earlier-memory repair.
+[THM-4438](../../01-canon/theorems/THM-4438-jc2-row-fifteen-relative-response-on-boundary-gm.md)
+is the actual positive row-fifteen existence input and the source of the
+rational no-response hostile.
+
+The closest proved mechanism is now the incoming compensated weight-22
+transport. Its report explicitly leaves minimality and general response
+classification open. The canonical hostile remains THM-4438's nonzero
+quartic at every rational point of its boundary `G_m`. The corrected near
+miss is treating a rank computed with an unchanged prefix as a rank for a
+moving prefix. The least-used sidecar is the *entire* earlier response
+kernel, including odd channels, carried through the joint raw equations.
+Exact-constant and statement searches found the incoming transport but no
+complete filtered classification below. MISTAKE-479 forbids an ill-typed
+Hamiltonian quotient; MISTAKE-509 requires realizable responses rather than
+arbitrary forgotten labels. Here all response coordinates are actual
+monomials in `K[p,y]`, and every raw bracket/depth constraint is retained.
+
+The five-concept board is valuation, residual weight, the earlier response
+kernel, joint raw depth constraints, and the nonlinear onset. The map sends
+an actual finite jet to another by a polynomial translation beginning at
+row twelve. It preserves the equations and projected depth to the declared
+orders, while changing source rows thirteen and fourteen. It discards all
+later equations. The crucial sidecar is agreement of the first four rows;
+the cheapest decisive test is the full linear system followed by a literal
+nonlinear coefficient check.
+
+The method connection to Yinjie Li's preprint
+[The S-matrix conjecture, v1, Sections 4.2 and 6.2–6.3](https://arxiv.org/html/2608.29750v1)
+is limited and concrete: keep simultaneous raw measurements before
+compressing them. Here this produces a three-dimensional response quotient
+and its exact kernel. The preprint additionally has a real norm and a total
+defect budget. Neither is supplied by these JC data, so no positivity or
+energy contradiction is imported from that argument.
+
+## Exact filtered classification
+
+Work over a characteristic-zero field. Write
+
+```
+p=t(1+x^2t), y=xtp, P(A,C)=C^2-A^3+(3/4)A+1/4.
+```
+
+Fix the first four rows of `(A,C)` to THM-4308's values with
+`Phi=0, Delta=896/15`, hence `K=-32/5`. Other background rows are arbitrary.
+Consider perturbations `(dA,dC)` supported on rows twelve through fifteen,
+with `deg_x dA_n<=n+1`, `deg_x dC_n<=n+2`. We require
+
+```
+J(A+dA,C+dC)-J(A,C) = 0 mod t^15,
+P(A+dA,C+dC)-P(A,C) = R(p,y) mod t^16,
+pi_15(dA) in pi_15(P_2), pi_15(dC) in pi_15(P_3).      (1)
+```
+
+The complete source universe with valuation at least thirteen and residual
+weight at most twenty-three is
+
+```
+R_low = r0 p^7y^3 + r1 p^5y^4 + r2 p^3y^5 + r3 py^6
+      + r4 p^4y^5 + r5 p^2y^6 + r6 y^7 + r7 py^7.    (2)
+```
+
+Adjoin the single positive control `r8 p^3y^6`, of weight twenty-four.
+Then (1) has a solution **if and only if**
+
+```
+r1 =  (27945/235202) r8,
+r3 = -(39123/470404) r8,
+r5 = -(52578/117601) r8.                              (3)
+```
+
+The five odd coefficients `r0,r2,r4,r6,r7` are arbitrary. Every admissible
+source has an affine ten-dimensional perturbation fibre. This is a complete
+classification in the declared finite universe, not merely a relation among
+the responses of one chosen transport.
+
+For the joint equations only through row fourteen, the two conditions are
+
+```
+r3=-(7/10)r1, r5=-(508/135)r1.                        (4)
+```
+
+Thus the earlier neutral even line is generated by
+
+```
+K22=p^5y^4-(7/10)py^6-(508/135)p^2y^6.
+```
+
+It has a nonzero later response. Equation (3) says precisely that
+`K22+(235202/27945)p^3y^6` is neutral through row fifteen. This last transport
+is the incoming proved result; equations (2)–(4) classify its entire
+filtered setting.
+
+To replace one unit of the positive control by a source of weight at most
+23, apply (3) with `r8=-1`. Every replacement is
+
+```
+L + r0 p^7y^3 + r2 p^3y^5 + r4 p^4y^5 + r6 y^7 + r7 py^7,
+L=-(27945/235202)p^5y^4
+  +(39123/470404)py^6+(52578/117601)p^2y^6.             (5)
+```
+
+At weight at most 22 the answer reduces exactly to
+
+```
+L + a p^3y^5 + b y^7.                                (6)
+```
+
+No replacement of a nonzero high response has weight at most 21 in this
+valuation-filtered universe. Indeed (3) forces a nonzero `p^5y^4`
+coefficient of weight 22. Equivalently, the weight-20 and weight-21 source
+images each have rank one, rising to rank two when the positive-control
+column is appended; the weight-22 source image already has rank three.
+This sharp threshold concerns deformations with valuation at least thirteen
+and fixed unknown rows through eleven. Lower valuations remain unclassified.
+
+## Why the response is exact
+
+The elementary filtered principle used here is as follows. If two polynomial
+pairs differ first in row `q`, then for `m<2q` their `P` difference through
+row `m` and their Jacobian difference through row `m-1` are exactly linear
+in that perturbation. The linear response depends only on background rows
+zero through `m-q`. Quadratic terms in `P` start at `2q`; those in the
+Jacobian start at `2q-1`. Cubic terms start still later. This applies to any
+fixed linear depth subspace after projection. It is an exact affine action
+on the finite equations, rather than an infinitesimal approximation.
+
+Here `q=12,m=15`. The first relevant Jacobian equation makes row twelve a
+multiple of `(A0',C0')`, since `x` and `x^2+2` are coprime. In each succeeding
+row a particular solution plus `theta_n(A0',C0')`, `deg theta_n<=n`, gives
+*every* capped solution. Hence rows twelve through fifteen supply exactly
+`13+14+15+16=58` tangent coordinates.
+
+The direct source equations for rows thirteen, fourteen and fifteen supply
+`14+15+16=45` raw scalar equations. The two complete projected depth modules
+at row fifteen supply all 91 independent left-null constraints. The script
+builds this 136-equation system before any quotient simplification. Its
+matrix on the 58 tangent coordinates has rank 48. After eliminating them,
+the matrix on the nine source coordinates has the following nonzero reduced
+rows:
+
+```
+[0,1,0,0,0,0,0,0,-27945/235202]
+[0,0,0,1,0,0,0,0, 39123/470404]
+[0,0,0,0,0,1,0,0, 52578/117601].                      (7)
+```
+
+This proves necessity, sufficiency, the five free odd directions, and the
+terminal dimension `58-48=10`. The independent rank computation through row
+fourteen gives (4). Every matrix has rational entries and all pivots used
+are nonzero rational constants, so the claims hold over every
+characteristic-zero field without parameter localization.
+
+Completeness of (2) is also checked without a source cutoff shortcut.
+For `p^a y^b`, valuation is `a+2b`, weight is `2a+3b`, and its leading row is
+`x^b`. Distinct monomials at the same valuation have different leading
+powers, so lower valuation cannot cancel. Enumerating
+`13<=a+2b<=15`, `2a+3b<=23` gives exactly (2). Terms above row fifteen do not
+affect (1); none of weight at most 23 have valuation above fifteen anyway.
+
+As a second positive check, the certificate solves (7) for `L-p^3y^6`,
+prints all eight correction polynomials, and evaluates the *literal*
+nonlinear differences `P(A+lambda*dA,C+lambda*dC)-P(A,C)` and
+`J(A+lambda*dA,C+lambda*dC)-J(A,C)` coefficient by coefficient with a symbolic
+scalar. All 16 `P` rows and 15 Jacobian rows pass. The quadratic `P` term at
+row 24 is nonzero for this displayed translation, giving a concrete boundary
+to an attempted all-row additive interpretation.
+
+## Consumer on the actual boundary
+
+Let `H_pre(s)` and `j(s)` be the full actual source and normalized high
+coefficient of THM-4438: its proved source is
+`H_pre(s)+j(s)p^3y^6`, for every `s` in the boundary `G_m`. All coefficients
+of `H_pre`, including the previous `kappa20` and `rho22`, remain their actual
+inherited values before adding the following expression.
+
+Among changes of valuation at least thirteen and weight at most twenty-two,
+with the unknown rows through eleven fixed to those of this boundary,
+the complete replacement family is
+
+```
+H_pre(s)+j(s)L+a p^3y^5+b y^7,   a,b in K.             (8)
+```
+
+Every source in (8) has exactly an affine ten-dimensional row-fifteen fibre
+relative to that fixed prefix. The new source parameter space is
+`G_m x A^2`: the unchanged coefficients `z,h` recover `s`, and the two new
+odd coefficients recover `a,b`. Formula (8) gives an exact finite lift on
+the entire boundary, with no additional denominator in `s`. A zero of
+`j(s)` is allowed and causes no rank singularity. For every rational
+`s!=0`, THM-4438's irreducible quartic ensures `j(s)!=0`; the sharp filtered
+replacement threshold therefore applies at all such rational points.
+The existence of the section `a=b=0` was already proved by the incoming
+transport. The complete relative family and its filtered threshold are the
+additional conclusions here.
+
+## Exact checks and stopping boundary
+
+Reproduce the [source](../../04-computation/planar_jc_long_20260906_memory_probe.py)
+and its [frozen output](planar_jc_long_20260906_memory_probe.out):
+
+```
+python3 -B 04-computation/planar_jc_long_20260906_memory_probe.py
+python3 -B -O 04-computation/planar_jc_long_20260906_memory_probe.py
+```
+
+The certificate pins its THM-4308/4315 implementations. These supply the
+inherited row operators and complete depth-generator matrices; it imports
+no transport producer or row-fourteen/fifteen solution. Its universe,
+response matrices, complete kernel, explicit translation and literal
+nonlinear checks are rebuilt. Hostiles include: weight 21 cannot replace
+the high channel; `y^7` is neutral and cannot pay a nonzero debt; the new
+monomial alone fails; changing the `rho22` compensator by one fails; and the
+quadratic variation is nonzero at row 24. Every check survives `-O`.
+
+What remains open is the complete lower-valuation source problem, later-row
+compatibility, compatible infinite lifts, polynomial termination, and
+actual chart entry. In particular the numerical minimum 22 is not asserted
+for arbitrary earlier source changes. The incoming Hamiltonian realization
+and non-local-nilpotence obstruction are separately proved in
+[its companion](planar_jc48_sep06_hamiltonian.md); they are not new claims
+of this response classification.
+
+The normal and optimized streams byte-match, with **191 active checks**.
+The [independent audit](planar_jc_long_20260906_memory_audit.md) reconstructs
+the full literal 128-variable system and the complete diagonal depth bank,
+without repository mathematical imports. Its **248** live gates and
+normal/optimized outputs pass with exactly the same source relation space.
+Raw SHA256 pins are
+
+```
+source 34fa2d312c5111ac6fc6c15e5dda4382021e3934eee67abb99b8e599923cda9f
+output 5549050c6ef1bb182af8b15977865bbaf354cf102c9a2609274170032eb76bfd
+semantic 2df74651889c49ad603989c77b2e82a9d647f820ba1686a65db565d5ed8e80b4
+```

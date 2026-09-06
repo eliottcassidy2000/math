@@ -1,0 +1,20 @@
+PLANAR DEPTH: complete diagonal image and sharp finite recognition
+field characteristic zero; exact Fraction arithmetic; no repo imports
+literal source-image/truncation universes: 1157
+inherited rank controls: m d ambient rank nullity
+8 2 63 51 12
+8 3 72 63 9
+14 2 150 108 42
+14 3 165 129 36
+15 2 168 119 49
+15 3 184 142 42
+independent Toeplitz determinants: 715
+fixed-support diagonal recognition universes: 1440
+sharp t^T controls: T=1..15, d=0..5; 90 positive lifts + 90 hostiles
+all-height recognition universes: 5040 (height2..8,T1..8,d0..3)
+height indexes planar surfaces, not ambient Jacobian dimension
+characteristic-three hostile: T=3,d=0, lift=(1-z)^2(1+2z)
+it matches 1 through degree 2 mod 3, fails degree 3; char-zero is essential
+SEMANTIC_SHA256 5717b8e8a0dfc00ff6bb749948e56732937ea27731a58bdf1d078cedf940d90f
+CHECKS 45048
+PASS; universal proof is analytic, finite checks are controls

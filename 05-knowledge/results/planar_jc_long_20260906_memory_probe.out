@@ -1,0 +1,24 @@
+DEPENDENCY jc2_source_normal_bracket_hasse_rows8_thm4308.py 3703758f87a628583cf0f2f9e8fb1973f8ee65c875ab679acc20a9867c27e7f1
+DEPENDENCY jc2_source_normal_student_stein_row9_thm4315.py c9625d0b974c4c579388ec14bcafaacfac5bf4a525d3d02c649d1bbf510b29fa
+UNIVERSE bracket45 depth91 tangent58 source9
+RANK tangent48 source3 joint51 terminal10
+MONOMIALS [(7, 3, 23), (5, 4, 22), (3, 5, 21), (1, 6, 20), (4, 5, 23), (2, 6, 22), (0, 7, 21), (1, 7, 23), (3, 6, 24)]
+RELATION_RREF [[0, 1, 0, 0, 0, 0, 0, 0, -27945/235202], [0, 0, 0, 1, 0, 0, 0, 0, 39123/470404], [0, 0, 0, 0, 0, 1, 0, 0, 52578/117601]]
+WEIGHT 20 rank 1 with_high 2
+WEIGHT 21 rank 1 with_high 2
+WEIGHT 22 rank 3 with_high 3
+WEIGHT 23 rank 3 with_high 3
+PREFIX_RREF [[0, 1, 0, 0, 0, 135/508, 0, 0, 0], [0, 0, 0, 1, 0, -189/1016, 0, 0, 0]]
+DELTA_A 12 -24219*x**6/470404
+DELTA_C 12 72657*x**5*(x**2 + 2)/1881616
+DELTA_A 13 -207*x**4*(441*x**4 + 490*x**2 - 60)/235202
+DELTA_C 13 621*x**5*(441*x**4 + 1606*x**2 + 608)/940808
+DELTA_A 14 -3*x**4*(978075*x**6 + 2573190*x**4 - 304888*x**2 + 147200)/2352020
+DELTA_C 14 9*x**5*(978075*x**6 + 5746500*x**4 + 4183508*x**2 - 270848)/9408080
+DELTA_A 15 -x**2*(3912300*x**10 - 8802675*x**8 + 13143708*x**6 - 20841156*x**4 + 44222160*x**2 - 92124320)/1764015
+DELTA_C 15 x*(195615*x**12 + 391230*x**10 - 9212432)/117601
+NONLINEAR first_quadratic_P_row24_nonzero
+HOSTILES single_new_monomial_fails odd_y7_neutral rho_plus1_fails weight21_fails
+SEMANTIC_SHA256 2df74651889c49ad603989c77b2e82a9d647f820ba1686a65db565d5ed8e80b4
+SCOPE exact_row15_filtered_replacement_valuation_at_least13_base_rows0to3_fixed_not_full_source_or_termination_or_JC2
+CHECKS 191 PASS

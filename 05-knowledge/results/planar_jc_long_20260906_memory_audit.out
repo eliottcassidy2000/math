@@ -1,0 +1,11 @@
+INDEPENDENT MEMORY AUDIT; no repository mathematical imports
+RAW rows P 78 J 70 depth 91 unknown128 source9
+RANK tangent118 source3 joint121 terminal10
+FULL_SOURCE_RELATIONS [[0, 1, 0, 0, 0, 0, 0, 0, -27945/235202], [0, 0, 0, 1, 0, 0, 0, 0, 39123/470404], [0, 0, 0, 0, 0, 1, 0, 0, 52578/117601]]
+WEIGHT 20 1 2
+WEIGHT 21 1 2
+WEIGHT 22 3 3
+WEIGHT 23 3 3
+SEMANTIC_SHA256 1b12898537e53b1e4e7d1dea207786c1e5856741ca86c48f145197f9b1d40467
+CHECKS 248 PASS
+SCOPE valuation>=13 source weights<=23 plus designated high term; rows<=15 only
