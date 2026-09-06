@@ -1,5 +1,13 @@
 # Script Results Index
 
+- [THM-4446: primitive ten-pack descent and dilation rays](../../01-canon/theorems/THM-4446-lrc14-primitive-ten-pack-descent-and-dilation-rays.md):
+  **PROVED RELATIVE TO LRCUpTo13/THM-3818/4052/4442 + VERIFIED-EXACT +
+  INDEPENDENTLY AUDITED; LRC(14) OPEN.** A primitive clock-three row whose
+  ten-pack has nontrivial gcd is lonely. All 286 THM-4442 bodies therefore
+  close on every integer dilation ray. Any live rank-eleven `d=3` pack is
+  gcd-one, has distinguished cross height above `91^6`, and lies below the
+  width cone `max T=11 max C`.
+
 - [THM-4445: signed `(1,1,1)` sharp obstruction classification](../../01-canon/theorems/THM-4445-lrc14-signed-111-sharp-obstruction-classification.md):
   **PROVED ELEMENTARY RELATIVE TO THM-4414 + FINITE-EXACT + INDEPENDENTLY
   AUDITED; LRC(14) OPEN.** Only `(1,4,5)` is at or below `6/77`; every other
@@ -68,6 +76,7 @@
   AUDITED; LRC(14) OPEN.** The complete carrier set is one primitive ray;
   sharp bounds are `min E<=46/665` and physical mass `<=51/770`, both below
   `6/77`. THM-4444/4445 above classify the remaining low-circuit hostiles.
+  `6/77`. The concurrent synthesis below classifies the remaining low-circuit hostiles.
 - **PROVED + INDEPENDENTLY AUDITED sixth-wave connections:**
   [full dyadic three-node three-jet Smith form](three-node-threejet-dyadic-smith-overnight-hexagon-sep05.md) extends THM-4443 from worst loss to all nine factors using886 symbolic minors and eight attained costs;
   [all-parity norm-four closure](lrc14_all_parity_norm_four_overnight_hexagon_sep05.md) combines with incoming generic/additive/norm-five proofs to give sharp local parity ceilings6/77,6/55,11/140, not LRC entry;

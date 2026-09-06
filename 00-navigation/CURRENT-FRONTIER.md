@@ -49,8 +49,10 @@ gives square sum `<=195`; THM-4019 refutes its sharp arbitrary-lattice target.
   leaves from `(112)` only hostile `(2,11,20)` and boundary `(1,5,11)`.
   All additive rows but `(1,4,5)`, plus `(2,11,20)`, exceed `6/77`.
   [THM-4442](../01-canon/theorems/THM-4442-lrc14-bounded-ten-body-parity-free-scale-three-completion.md)
-  closes bounded ten-bodies; [event codes](../05-knowledge/results/overnight4_20260906_lrc_body_event.md)
-  retain the anchor. Entry remains open.
+  closes bounded ten-bodies; [THM-4446](../01-canon/theorems/THM-4446-lrc14-primitive-ten-pack-descent-and-dilation-rays.md)
+  closes every integer dilation ray and forces a live rank-eleven pack to
+  have gcd one and distinguished cross height above `91^6`. Component-address
+  entry remains open.
 - **Transport/incidence:** [overnight synthesis](../05-knowledge/results/overnight_20260906_synthesis.md)
   retains cap, midpoint and owner-line refinements. The
   [sparse proof](../05-knowledge/results/synthesis_20260905_lrc_sparse_transport.md)

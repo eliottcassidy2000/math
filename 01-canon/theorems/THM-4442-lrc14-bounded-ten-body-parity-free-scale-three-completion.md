@@ -14,6 +14,7 @@ related:
   - THM-737-pack-clock-sampling-measure-dispatch
   - THM-3818-scaled-inert-cubeclass-support-two-pair-packet
   - THM-4437-lrc14-all-parity-network-reduction-to-three-low-circuits
+  - THM-4446-lrc14-primitive-ten-pack-descent-and-dilation-rays
 geometry_script: 04-computation/lrc14_bounded_ten_body_geometry_thm4442.py
 geometry_script_sha256: b03fd618d24faaf7edc1ec6e901cabcd4739886be6f472c61ba4a2f2baf7d0a5
 primary_script: 04-computation/lrc14_bounded_ten_body_parity_free_thm4442.py

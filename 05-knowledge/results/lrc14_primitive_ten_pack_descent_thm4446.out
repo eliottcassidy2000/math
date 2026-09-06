@@ -1,0 +1,18 @@
+PRIMITIVE TEN-PACK REDUCTION -- EXACT HOSTILE AUDIT
+threshold=1/14; danger teeth open; safe endpoints retained
+translated order-grid caps: exact ceil(m/7) for m=1..91
+boundary controls: m=7 -> 1 ; m=21 -> 3
+prime | full-order cap | p-divisible cap | worst bad | margin
+    2 |              1 |               2 |         5 |      1
+    3 |              2 |               3 |         6 |      3
+    5 |              3 |               5 |        13 |      2
+    7 |              3 |               7 |        17 |      4
+   11 |              5 |              11 |        27 |      6
+   13 |              6 |              13 |        32 |      7
+   17 |              8 |              17 |        42 |      9
+   19 |              9 |              19 |        47 |     10
+literal rows audited: 6292
+minimum actual safe lifts: 3
+minimum certified union-bound margin: 1
+literal-record sha256: 59a140894a1d595f6824b11aa775b7213831353965a60d5e5d95f87133c22b59
+PASS

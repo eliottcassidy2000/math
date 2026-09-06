@@ -22,9 +22,8 @@ Then read frontier, guardrails, theorem; logs are history.
 ## Nineteen high-signal facts
 
 1. **LRC(14) is first open.** THM-4347 closes height `40`.
-   THM-4441/4444/[4445](../01-canon/theorems/THM-4445-lrc14-signed-111-sharp-obstruction-classification.md)
-   classify ternary-unit triples; THM-4442
-   completes bounded ten-bodies. Entry and `2+12` remain open.
+   THM-4441/4444/4445 classify ternary-unit triples; THM-4442/[4446](../01-canon/theorems/THM-4446-lrc14-primitive-ten-pack-descent-and-dilation-rays.md)
+   close bounded ten-bodies and every dilation ray. Entry and `2+12` remain open.
 2. **The `q <= 25` period claim is refuted.** THM-762/764 exhibit `26*{1,...,12} union {339}`, whose first good period is `27`.
 3. **Good-period existence is a maximum statement.** The tight resonant AP
    defeats average/count arguments; see MISTAKE-127/129/130.

@@ -1,0 +1,9 @@
+TEN_BODY_ENTRY_BRIDGE_CLEANROOM_CHECKS
+open_grid_caps_m_1_to_210 PASS m_3_6_7_9_21 {3: 1, 6: 1, 7: 1, 9: 2, 21: 3}
+prime_margins_p_2_3_5_7 {2: (1, 1), 3: (2, 3), 5: (3, 2), 7: (3, 4)}
+literal_small_prime_records {2: (1, 32943, [((1, 4, 10), Fraction(23, 56)), ((1, 4, 10), Fraction(33, 56)), ((1, 4, 20), Fraction(57, 140)), ((1, 4, 20), Fraction(83, 140))]), 3: (3, 46812, [((1, 4, 7), Fraction(18, 49)), ((1, 4, 7), Fraction(31, 49)), ((1, 4, 10), Fraction(101, 280)), ((1, 4, 10), Fraction(179, 280))]), 5: (4, 38045, [((2, 5, 20), Fraction(23, 112)), ((2, 5, 20), Fraction(89, 112)), ((5, 7, 20), Fraction(23, 112)), ((5, 7, 20), Fraction(89, 112))]), 7: (10, 21220, [((1, 2, 7), Fraction(0, 1)), ((1, 2, 7), Fraction(3, 28)), ((1, 2, 7), Fraction(25, 28)), ((1, 2, 7), Fraction(1, 1))])}
+sharp_p2_full_row Cprime (1, 2, 3, 4, 6, 7, 8, 9, 10, 11) T (1, 4, 10) y 23/56 safe_labels [3]
+bounded_body_gcd_one_rows 286
+normalization_rows 292500
+explicit_checks 2189781
+PASS
