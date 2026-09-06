@@ -7,6 +7,11 @@ coefficients on 2026-09-06. No theorem ID is reserved here. The all-exponent pro
 closes the exactly-two-first-channel stratum of the corrected trinomial
 problem. Three or more first channels remain outside its scope.
 
+Canonical namespace: [THM-4432, trinomial two-channel two-rung noncancellation
+with carries](../../01-canon/theorems/THM-4432-trinomial-two-channel-two-rung-noncancellation-with-carries.md).
+The linked canon file controls namespace promotion; this note supplies the
+audited proof and evidence for the shared concurrent result.
+
 ## Inheritance and the research move
 
 The closest proved mechanism is [THM-2639,
@@ -324,7 +329,9 @@ After the independent proof and root audit, incoming commit `4d1ad2a390`
 reserved [THM-4432, trinomial two-channel two-rung noncancellation with
 carries](../../01-canon/theorems/THM-4432-trinomial-two-channel-two-rung-noncancellation-with-carries.md).
 That reservation explicitly credits concurrence with this empty-core
-overnight session. It is an **UNPROVED EMPTY STUB**, not a proof dependency.
+overnight session. It arrived as an **UNPROVED EMPTY STUB**, whose reserved
+state was not used as a proof dependency; the linked canon owns subsequent
+promotion status.
 This is one shared mathematical result with concurrent ownership, not
 separate novelty for each artifact. The present note remains an explicit
 audited proof with independently replayed evidence.
