@@ -3,7 +3,7 @@
 **CURRENT CHECKPOINT, 2026-09-06.** Four audited tracks extend the
 [previous nine-result checkpoint](continuing1_20260906_synthesis.md).
 This cycle inherited f0521b872 and integrated incoming work through
-da2c452c3 before filing, then01c8b6887 during the clean push rebase.
+da2c452c3 before filing, then01c8b6887 and93a38412b during clean push rebases.
 LRC(14), general actual Laurent two-rung
 noncancellation, and full negativity in the anchored model remain **OPEN**.
 No external priority or proof-assistant claim is made.
@@ -155,15 +155,47 @@ our prescribed-clock incompatibility: the lost offset must be retained
 and may need a different base point. The two results do not themselves
 force an adaptive word for every actual decoder entry.
 
+The final incoming [third-session board](third_20260906_board.md) changes
+three next questions. Its audited [grid overlap reduction](third_20260906_grid.md)
+proves weak safety for actual balanced entries with six-component scale
+t>=97097. Its [rooted gcd-product theorem](third_20260906_decoder.md) also
+closes every balanced equality entry with maxU<=28. Thus the balanced
+residual search can retain t<97097 and maxU>=29. Our packet examples have
+t>=412164: they remain valid obstructions to the stated unrestricted
+forcing, but do not refute a forcing theorem restricted to this newly
+smaller residual domain. This is a new hypothesis to retain in future probes.
+
+The incoming [all-height carried factors](third_20260906_laurent.md) apply
+to the exact same normalized quotient used by our five-family certificate.
+Negative-integer parameter degenerations force explicit polynomial divisors
+of every characteristic coefficient. For h=6 this compresses258 positive
+coefficients to208 residual coefficients. The all-height divisibility does
+not establish residual positivity. Deflating our h=7,...,10 certificates
+is now a concrete first test before attempting a uniform recurrence.
+
+The incoming [complete mixed(m,2,1) Smith law](third_20260906_smith.md)
+extends the older(2,2,1) theorem using our complete-bank projective transport.
+Clearing the growing multiplicity bank leaves exactly three residual rows,
+and three generators control the second determinantal ideal for every m.
+The next rank change should retain an additional intermediate ideal, rather
+than reopen this now-classified multiplicity family.
+
+The same incoming commit repairs the microscopic addendum of
+[THM-739 / exact Bernoulli overlap](../../01-canon/theorems/THM-739-pairwise-coprime-bad-overlap-exact-bernoulli-closed-form.md):
+tooth intersections require containment clipping and actual window placement.
+The main full-circle identity survives. Read that repair before transporting
+any overlap credit; different credits can only be summed with a valid
+pointwise multiplicity bound.
+
 ## Six live concepts and the next decisive work
 
 | Lane | Present object | Next test or stopping reason |
 |---|---|---|
-| Anchor: actual LRC equality | Two profile-identical rows with different joins; incoming fifth-clock word succeeds beyond scalar gates | Seek an adaptive component/clock argument retaining signed offsets and farther lifts. Test both packet rows and the unitless residual before generalizing. A generic CRT compiler would repeat an existing theorem. |
-| Niche: all-h carried response | Weight-bounded characteristic polynomials positive after x->x+1 for h<=10 | Find an operation in h preserving their sign, or a direct same-root argument. More endpoint tables alone would not establish that operation. |
+| Anchor: actual LRC equality | Incoming grid and rooted-product bounds leave t<97097,maxU>=29 in the balanced branch | Test adaptive signed-offset/farther-lift rules within this residual domain. Our existing prescribed-clock hostiles are outside it. A generic CRT compiler would repeat an existing theorem. |
+| Niche: all-h carried response | Positive characteristic certificates through h=10 and incoming all-height divisors | Test the deflated h=7,...,10 coefficients, then seek a positivity-preserving operation in h or direct same-root proof. Divisibility alone does not provide positivity. |
 | Niche: anchored finite phase | Smallest branch and tail closed; interval(1/80,2500) remains after the two-residue floor | Retain beta roots and both interlacers; test higher C/D residue moments. Challenge every necessary-inequality relaxation with the rational positive-response hostile. |
 | Wildcard: sharp three-atom rigidity | Moment residual plus complete entire-product limit | Seek an effective quotient-to-M estimate near the three-atom boundary, retaining separate dust and imbalance scales. Do not reopen the proved scalar optimum or the core iff. |
-| Projective higher jets | Complete multiplicity largest-Smith theorem and bracket residue packet | Preserve full local ideals in another nontrivial residue cluster before transporting ordered factors. This cycle adds no new Smith claim. |
+| Projective higher jets | Incoming full(m,2,1) classification uses fixed residual rank three and complete-bank covariance | Explore the next residual rank only with every required intermediate ideal; read the incoming second round first. No additional Smith theorem is claimed by this cycle. |
 | No-three-in-line and native operators | The recovered Guy-Kelly grid thread and exact Boolean sectors remain available | Require an explicit map preserving collinearity or the native operator. Analogy with packet counts, moments, or root signs currently supplies no such map, so no asymptotic transfer is claimed. |
 
 The results change the board in specific ways: the LRC example rules out
