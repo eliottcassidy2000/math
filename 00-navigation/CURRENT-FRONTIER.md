@@ -372,13 +372,14 @@ lift/phase clocks.
   prefix-preserving row-14 Hamiltonians have response rank one against two
   conditions, leaving `J_14`. THM-4426 restores the complete omitted
   weight-18 pair `z=[p^9]H,h=[p^6y^2]H`. The global unpaid bracket locus is a
-  rationally split conic bundle with a `Q`-defined section over every
-  characteristic-zero base point. On `Phi=eta=0,alpha11=1`, the simultaneous
+  split conic bundle with a `Q`-section over every characteristic-zero base
+  point. On `Phi=eta=0,alpha11=1`, the simultaneous
   bracket/depth locus is a `Q`-rational `G_m`; it fixes `c51=1087/135` and has
-  `A^10` fibre everywhere. The earlier two real quadratic conjugates are its
-  `h=0` slice, while `h=0,z=1` remains a rational depth hostile. The global
-  row-14 depth cover, complete weights 15--22, row-15 relative response,
-  all-row termination, and entry remain open.
+  `A^10` fibre everywhere. THM-4438 closes row 15 on this `G_m`: observable
+  `145r0+30r2+20r4+24r6`, sole depth debt `Q=0`, terminal `A^10`. Its first
+  visible frozen-prefix payer is weight-24 `p^3y^6`; lower-weight
+  prefix-changing deformations are untested. Global depth, later rows,
+  termination and entry remain open.
   THM-4397/4401 give Long's gauge and punctured planar shadows.
   Exceptional quartic: THM-3703/3737/4034 give grammar/image/conductor;
   THM-4381 gives 86 nodes, one plane triple, and `S^sn=S+K r`.

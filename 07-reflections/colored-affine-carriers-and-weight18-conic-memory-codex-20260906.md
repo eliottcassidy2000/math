@@ -295,10 +295,10 @@ proves the combined chord bound `ell_1+ell_2<=3c/14`, and isolates the strict
    to a body-weighted discrepancy. Test whether component endpoints supply a
    signed Euler--Maclaurin correction that forces a surviving address even
    when the scalar Haar floor is slightly below `6/77`.
-5. For the complete weight-eighteen Jacobian face, freeze the row-fifteen
-   relative response on the rational conic and determine the first allowable
-   source weight: current scratch evidence points to a weight-24 payer and a
-   genuine obstruction through weight 23.
+5. THM-4438 now closes row fifteen on the rational boundary with a rank-one
+   exact-valuation response and a weight-24 payer. The next honest test is the
+   global depth conic and lower-weight deformations that re-solve the prefix;
+   the theorem's weight-23 obstruction is only prefix-preserving.
 6. Test every natural-number state with the collision pair `p^9,p^8y` and
    every tournament state with parallel carrier ties before using it in a
    proof graph.

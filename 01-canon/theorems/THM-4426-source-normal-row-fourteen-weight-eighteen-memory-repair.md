@@ -20,6 +20,7 @@ depends_on:
 related:
   - THM-4403-source-normal-two-channel-weight-eighteen-row-twelve-affine-continuation
   - THM-4368-diagonal-boundary-valuation-triangular-address-and-simplex-stream-rank
+  - THM-4438-jc2-row-fifteen-relative-response-on-boundary-gm
 script: 04-computation/jc2_source_normal_row14_weight18_memory_independent_referee_thm4426.py
 output: 05-knowledge/results/jc2_source_normal_row14_weight18_memory_independent_referee_thm4426.out
 script_sha256: 99071f872ccd1d3a25541599cf9e866b439d7919b1c7a2b7cc9b18e3ccd662ed
@@ -364,9 +365,11 @@ nonzero factor `-1/70708728398177697468480000000` and represent the same
 cokernel class.
 
 The theorem proves only row-fourteen statements for the partial source `(4)`.
-It does not compute the global row-fourteen depth cover away from boundary
-`(10)`, establish full `B_2` membership, continue to row fifteen, prove
-polynomial termination or chart entry, or construct a Keller pair.
+THM-4438 subsequently continues the rational boundary through the row-fifteen
+bracket and projected depth after a valuation-fifteen response. Neither result
+computes the global row-fourteen depth cover away from boundary `(10)`,
+establishes full `B_2`, proves polynomial termination or chart entry, or
+constructs a Keller pair.
 
 ## 7. Triangular addresses retain an intercept sidecar
 
@@ -403,13 +406,13 @@ the Jacobian predicate to a separate tournament or lonely-runner predicate.
 
 The immediate consumers are now sharply ordered:
 
-1. form the row-fifteen relative response problem over the exact boundary
-   `G_m`, retaining `s` rather than specializing to one point;
+1. THM-4438 completes the row-fifteen relative response over `G_m`; next
+   determine whether its rank-one payer persists on a larger depth locus;
 2. compute the global projected-depth locus over the four-dimensional base
    conic `(9e)`, with special attention to the irreducible degeneration
    divisor `gamma=0` and its two components;
-3. restore the next omitted weight/intercept packets only after checking
-   which row-fifteen cokernel classes actually consume them.
+3. classify lower-weight deformations that alter the frozen prefix, then
+   continue to row sixteen only with the consumed intercepts retained.
 
 ## 9. Reproduction
 

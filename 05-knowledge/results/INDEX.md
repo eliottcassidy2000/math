@@ -18,6 +18,17 @@
   [THM-4435](../../01-canon/theorems/THM-4435-four-node-metric-blindness-and-universal-hermite-precision.md) all-node sharp two-jet precision and an all-scale four-node metric counterexample;
   [THM-4436](../../01-canon/theorems/THM-4436-complete-factorial-row-simple-negative-roots-and-trinomial-phase-wall.md) simple negative roots for every factorial return row, including all trinomial masses and proportional resonances. Cross-mass coprimality, chart entry/synchronization and global conjectures remain OPEN.
 
+- The row-fifteen source-normal boundary response
+  ([THM-4438](../../01-canon/theorems/THM-4438-jc2-row-fifteen-relative-response-on-boundary-gm.md)):
+  **PROVED FINITE-ROW RELATIVE TO THM-4426 + VERIFIED-EXACT + AUDITED;
+  JC(2)/DC(2) OPEN.** On the rational boundary `G_m`, the exact-valuation-15
+  packet maps with rank one to the six-dimensional bracket cokernel, through
+  `145r0+30r2+20r4+24r6`. Its `A^7` response kills all 16 bracket rows; the
+  91-row depth selector has sole debt `-4Q` and terminal `A^10`. Within the
+  frozen-prefix packet the first visible payer is weight-24 `p^3y^6`; the
+  weight-23 term is invisible. Script/output hashes are
+  `be992bd9...374` / `a86ba2e5...1cc`; 259 exact live checks.
+
 - The universal scale-three local network theorem
   ([THM-4434](../../01-canon/theorems/THM-4434-lrc14-universal-scale-three-network-projection-bound.md)):
   **PROVED ELEMENTARY RELATIVE TO THM-4414/4422 + FINITE-EXACT +
