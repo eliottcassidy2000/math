@@ -6,14 +6,13 @@ klein-2026-07-13-S294 (owner: prove the windowed overlap on [0,1/14)).
 
 W = |bad_c ∩ bad_c' ∩ [0,1/14)|, the LOCAL version of THM-739 the one-interval bound (S292) needs.
 
-FINDING: unlike the full circle (THM-739, clean B2 closed form), the WINDOW breaks the Fourier
-orthogonality -> W = (1/cc') * sum over resonances (j,k) whose overlap-arc lies in [0,1/14) of
-    ell_{j,k} = max(0, (c+c')/14 - |jc'-kc|)          [exact interval-overlap geometry, rigorous]
-a Farey/partial sum with NO one-line closed form. Its SIZE is governed by how jc'≈kc land in [0,1/14):
-  - CLOSE speeds (c'≈c = CLUSTERS): m_j≈j(c'-c) small for many j -> resonances pile up near 0 -> W LARGE.
-  - FAR speeds: m_j spread -> W ~ bulk (1/14)*|bad_c∩bad_c'| ≈ 1/686.
-CONSEQUENCE: the 2-speed one-interval refinement needs W small; it is NOT, for clusters. Pairwise
-decorrelation FAILS near 0 for close speeds => the near-0 equidistribution is intrinsically MULTI-speed.
+CORRECTION 2026-09-06: the original explanatory resonance formula was false:
+it omitted containment clipping, multiple resonant partners and clipping to
+the observation window. See the corrected microscopic addendum in THM-739
+(pairwise-coprime-bad-overlap slug). The numerical body below is unchanged
+and computes literal sampled masks; its finite observations are not an
+all-height window theorem. Printed historical conclusions retain that finite
+scope and do not supply a proof of near-origin asymptotics.
 """
 import numpy as np
 from math import gcd

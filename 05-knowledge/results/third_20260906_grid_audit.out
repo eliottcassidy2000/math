@@ -1,0 +1,14 @@
+AUDIT SCOPE: sufficient translated-grid weak-safety count and balanced actual-entry scale bound; no LRC(14) closure.
+Grid universe: all positive distinct U subsets of1..7 of size1..4, plus three repeated/seven-label controls; t1..18; every phase wall and open cell.
+Grid rows: 1818 exact phase rows: 67884
+Residue-wise abstract gcd-cap maxima: [(1, 429, [85, 78, 88, 71, 81, 64, 74]), (2, 426, [86, 79, 72, 85, 78, 65, 71]), (3, 438, [87, 80, 89, 73, 82, 66, 75]), (4, 435, [88, 81, 74, 86, 67, 79, 90]), (5, 447, [89, 82, 90, 75, 83, 68, 76]), (6, 445, [90, 83, 76, 87, 69, 80, 62])]
+Full-v7=1 relaxed ceilings: [151, 134, 152, 135, 146, 122] higher ceilings42,0
+Actual inert atlas: 5855 ratios;94 sums; literal arc sweeps: 270
+Pair grid phase rows: 82364
+Exact optimizer: (Fraction(6019965, 62), 5, 348, 51, Fraction(62, 3045))
+Uniform sufficient integer cutoff: t>=97097. Actual atlas minimum overlap1/70 at(1,10).
+Inherited microscopic-overlap correction: p1,q2 has measure1/14, not3/28; main Bernoulli formula passes all5855 rows.
+Windowed correction: p1,q14 on[0,1/14) has overlap1/98, while full-circle overlap/14 is1/686.
+atlas_semantic_sha256: 892c0c48d83510e123ebda349719b93706996d47c23da1df96c006903d29c5c6
+Exact gates: 303923
+PASS

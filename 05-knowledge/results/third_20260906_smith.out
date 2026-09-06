@@ -1,0 +1,13 @@
+PROVED SCOPE: complete (m,2,1) Hasse banks on homogeneous binary degree m+2, every integer m>=2.
+Residual universe: m2..20; distinct nonzero a,b in -10..10; all9 two-minors and full determinant.
+Integer residual rows: 7220 prime partitions: 28880
+Ladder universe: m2..48; p2,3,5,7 dividing m; e0,1,2,3,m*v_p(m),m*v_p(m)+2; every capped residue state.
+Attained ladder rows: 4889 literal full projective matrices: 200 capped reference rows: 120
+m3 p3 e3 residual ladder: [(0, 0, 0, 9, 12, 18), (0, 0, 0, 9, 13, 17), (0, 0, 0, 9, 14, 16), (0, 0, 0, 9, 15, 15)]
+Unequal multiplicity label hostile: (0,0,0,9,15,15) versus (0,0,0,9,12,18).
+Raw chart hostile at m3,p3,e1: infinite numerator valuation becomes1; capped state and full partition agree.
+Actual kernel consequence: adjacent capped states differ by factor p exactly between the two inner precision thresholds.
+Independent full-inverse small-bank value-attainment rows: 24
+semantic_sha256: 5f1e281fa4775fe5650438c991d28e46a12cce80720a1fb2caf5ae4e1defe876
+Exact gates: 284133
+PASS

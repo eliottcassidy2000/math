@@ -1,0 +1,5 @@
+THIRD_SESSION_INDEPENDENT_MIXED_SMITH_AUDIT
+full_integer_matrices=1750 full_prime_partitions=7000
+full_projective_controls=105 full_inverse_owner_controls=8
+adjacent_kernel_precision_checks=104106
+PASS gates=120392

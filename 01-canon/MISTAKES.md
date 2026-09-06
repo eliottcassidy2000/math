@@ -45,6 +45,24 @@ Format per entry:
   three-atom classification is concurrent with THM-4455, not a second
   distinct closure. Preserve independent proof provenance without
   duplicating mathematical novelty.
+## 2026-09-06 extended pass -- clipped overlap and its actual window
+
+The microscopic addendum to
+[THM-739 / pairwise-coprime bad overlap](theorems/THM-739-pairwise-coprime-bad-overlap-exact-bernoulli-closed-form.md)
+omitted containment clipping. At(1,2) its origin formula gave3/28 instead
+of1/14. The repaired length is
+`max(0,min(2p,p+q-14|k|))/(14pq)` for every resonant tooth pair; retaining
+only a nearest partner also fails when several small teeth meet one large
+tooth. Windowed overlap must clip each actual arc to the window. The old
+unquantified far-speed claim is false already at p1,q=14k: the windowed
+overlap is exactly1/98, while one fourteenth of full overlap is1/686.
+The full-circle Bernoulli identity and its explicit error bound survive;
+the claimed uniform upper bound1/49 does not, with(2,3) giving1/21.
+The theorem addendum and historical numerical script explanation are
+repaired; the script's sampled-mask computation is unchanged. The new
+[grid proof](../05-knowledge/results/third_20260906_grid.md) uses the clipped
+geometry and actual point counts. Its overlap credits are alternatives
+unless a pointwise forest or multiplicity argument permits their sum.
 
 ## 2026-09-06 continuation -- phase packets and quantified boundaries
 

@@ -3,6 +3,10 @@ id: THM-739
 title: The pairwise coprime bad-arc overlap in EXACT closed form — for coprime speeds c,c', the two 1/14-bad sets overlap with |bad_c ∩ bad_{c'}| = 1/49 + (1/cc')·[B₂({(c'−c)/14}) − B₂({(c'+c)/14})], a B₂-Bernoulli correction to independence; hence |bad_c ∩ bad_{c'}| ≤ 1/49 + 1/(4cc') and → 1/49 as cc'→∞. This is the pairwise coprime-overlap bound (klein-S292): the two bad sets are independent up to an explicit O(1/cc') Farey-scale term
 status: PROVED (klein-2026-07-13-S293). Rigorous 5-line Fourier derivation: expand both bad-arc indicators, integrate, only frequencies nc+mc'=0 survive; coprimality forces n=c'k, m=−ck; the k-sum is a cos/k² Bernoulli series = 2π²B₂. Verified numerically (NG=2²², |direct−formula| ≤ 8e-7 across 12 coprime pairs incl. (2,3),(90,101),(100,171); every overlap ≤ 1/49+1/(4cc')). The |B₂|≤1/6 range gives the difference ∈[−1/4,1/4], hence the ±1/(4cc') envelope.
 source: klein-2026-07-13-S293
+correction: >
+  2026-09-06: the microscopic addendum omitted containment clipping and
+  multiple resonances. The full-circle Bernoulli identity is unchanged.
+  Its claimed uniform upper bound 1/49 is false; retain the stated error term.
 depends_on:
   - THM-731   # the one-interval / disc route this feeds (the milder cancellation, klein-S292)
 related:
@@ -40,8 +44,8 @@ product-to-sum plus the classical `\sum_{k\ne0}\cos(2\pi\alpha k)/k^2 = 2\pi^2 B
 `B_2` ranges over `[-\tfrac1{12},\tfrac16]` on `[0,1]`, so the bracket lies in `[-\tfrac14,\tfrac14]` and
 $$\tfrac1{49}-\tfrac1{4cc'}\ \le\ |bad_c\cap bad_{c'}|\ \le\ \tfrac1{49}+\tfrac1{4cc'}.$$
 So the two `1/14`-bad sets are **independent up to an explicit `O(1/cc')`** term: `|bad_c\cap bad_{c'}|\to
-1/49=(1/7)^2` as `cc'\to\infty`. This is exactly the pairwise coprime-overlap bound `≤ 1/49` (klein-S292),
-now exact. (Small coprime speeds carry a real correction — e.g. `(2,3)`: overlap `0.0476` vs `1/49=0.0204`;
+1/49=(1/7)^2` as `cc'\to\infty`. This quantifies the earlier independence comparison. A uniform bound `≤1/49`
+is false; the positive correction cannot be discarded. (Small coprime speeds carry a real correction — e.g. `(2,3)`: overlap `0.0476` vs `1/49=0.0204`;
 `(90,101)`: `0.02041`.)
 
 ## Why it matters, and the two next steps
@@ -54,8 +58,9 @@ toward `0.105`; the `k`-speed version (all `\binom{k}{2}` pairwise overlaps `\ap
 
 **Two open extensions (same Fourier method):** (a) the **windowed** version
 `|bad_c\cap bad_{c'}\cap[0,1/14)|` (multiply by `1_{[0,1/14)}` — a convolution of the Fourier coefficients,
-still Bernoulli-shaped) is what the local one-interval bound literally needs; (b) `gcd(c,c')=g>1` replaces
-`n=c'k,m=-ck` by `n=(c'/g)k, m=-(c/g)k`, giving a `g`-fold-denser correction. Both are mechanical.
+still Bernoulli-shaped) is what the local one-interval bound literally needs; (b) for `gcd(c,c')=g>1`, substitution by the degree-g circle map gives exactly
+the primitive-pair formula at `(c/g,c'/g)`. Its correction multiplier is
+`g^2/(cc')`, with Bernoulli arguments `(c'±c)/(14g)`.
 
 ## Provenance in the fleet's B₂ line
 
@@ -64,31 +69,49 @@ three-gap closed form: the same `B_2({·/14})` kernel governs the disc, the deep
 pairwise bad-overlap. The recurring object across the covering endgame is `B_2` evaluated at Farey points
 `k/14`.
 
-## Addendum (klein-S294) — the microscopic resonance form, and why the WINDOWED overlap is not clean
+## Corrected microscopic resonance form — 2026-09-06
 
-The full-circle identity above has an exact *microscopic* companion. `bad_c ∩ bad_{c'}` is a union of arcs,
-one per resonant pair `(j,k)` (`0≤j<c`, `k` = nearest, `|jc'−kc| < (c+c')/14`); by elementary
-interval-overlap geometry each contributes length exactly
-$$\ell_{j,k} = \frac1{cc'}\max\!\Big(0,\ \tfrac{c+c'}{14} - |jc'-kc|\Big).$$
-Summing over all `c` residues `m_j = jc'-kc` (each hit once, coprimality) gives
-`|bad_c∩bad_{c'}| = (1/cc')Σ_{|m|<(c+c')/14}(\tfrac{c+c'}{14}-|m|)`, whose leading term is
-`(c+c')²/(196cc')` (`=1/49` at `c=c'`) with the `B_2` corrections above — a consistency check.
+**PROVED correction to the klein-S294 addendum.** The original addendum
+omitted the containment cap and restricted each tooth to a nearest partner.
+At `(p,q)=(1,2)`, its origin formula gave `3/28`; the actual intersection
+has length `1/14`. The old windowed formula also omitted clipping an overlap
+arc to the window. Those formulas and their proposed asymptotic derivation
+are SUPERSEDED. The full-circle Bernoulli proof above is unaffected.
 
-**The windowed overlap `W = |bad_c∩bad_{c'}∩[0,1/14)|` is the SAME sum restricted to the resonances whose
-arc lies in `[0,1/14)` — a Farey/partial sum with NO one-line closed form**, unlike the full circle (the
-window breaks the Fourier orthogonality; `\hat f` convolves against `\hat{1_{[0,1/14)}}`, so every
-frequency contributes). Its size is governed by *how the resonances `jc'≈kc` land in `[0,1/14)`*:
-- **Close speeds (`c'≈c`, i.e. CLUSTERS):** the small-`j` residues `m_j ≈ j(c'-c)` are all small, so many
-  terms carry the near-maximal weight `(c+c')/14 − |m_j|` — the resonances **pile up near `0`** and `W` is
-  LARGE (verified: `(99,101)` gives `W≈0.0051 ≈ 3.5×` the bulk `1/686`; `(50,99)`, `(23,45)` similar).
-- **Far speeds:** the `m_j` spread and `W → bulk = (1/14)|bad_c∩bad_{c'}| ≈ 1/686`.
+Let `p<q` be positive coprime integers. Every overlapping pair of circle
+teeth corresponds to exactly one signed integer `k` with
+`|k|<(p+q)/14`. Its intersection length is
 
-**Consequence (the honest negative).** The two-speed inclusion–exclusion refinement of the one-interval
-bound (S292/HYP-6550) needs `W` *small*; it is not, for clusters. So **pairwise decorrelation FAILS near
-`0` for close speeds** — the near-`0` equidistribution that `conc<7` needs is *intrinsically multi-speed*,
-not a sum of pairwise terms. This is precisely why the milder one-interval cancellation is still not
-elementary: clusters are exactly the close-speed regime where every low-order (pairwise) overlap is
-correlated. See HYP-6570.
+```text
+ell_k = max(0, min(2p,p+q-14|k|))/(14pq).
+```
 
-*Files: `04-computation/lrc14_pairwise_overlap_klein_S293.py`, `lrc14_windowed_overlap_klein_S294.py`
-(+.out). HYP-6560, HYP-6570.*
+The cap `2p` is the width of the smaller tooth in these units. Indeed the
+two half-widths are `1/(14p),1/(14q)`, and their center distance is
+`|k|/(pq)`; interval intersection is the smaller full width or the sum of
+half-widths minus distance, whichever is smaller. Coprimality gives each
+resonance once. Distinct tooth intersections have a positive gap, so the
+number of open circle components is exactly
+
+```text
+J=2 ceil((p+q)/14)-1.
+```
+
+The complete measure is therefore
+
+```text
+mu = [p + sum_(k=1)^(ceil((p+q)/14)-1)
+                  min(2p,p+q-14k)]/(7pq).
+```
+
+This agrees with the Bernoulli identity and, after primitive reduction,
+works for arbitrary distinct speeds. For a window, use the length of the
+intersection of **each actual overlap arc with that window**, including
+partial and wrapping arcs. No unproved near-origin equidistribution follows
+from the full-circle formula.
+
+The historical window script evaluates literal masks numerically; its
+computational body is unchanged, but its incorrect explanatory formula is
+marked superseded. Its finite samples are not a universal window theorem.
+The corrected exact geometry is independently checked in
+[the extended grid audit](../../05-knowledge/results/third_20260906_grid_audit.md).

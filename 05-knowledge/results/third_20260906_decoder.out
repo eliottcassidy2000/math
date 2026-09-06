@@ -1,0 +1,12 @@
+STATUS: PASS; rooted gcd divisibility forces uniform automatic decoder classes
+FINITE_ROOTED_PRODUCT_UNIVERSE: 55980 positive tuples of lengths2..6 over1..6; 324720 distinguished-root cases
+AUTOMATIC_CLASS: 2 11 minimum_bound 177 forced_pair_gcd 1 maxU 13520696477 old_maxU 13520696477
+AUTOMATIC_CLASS: 3 10 minimum_bound 31684 forced_pair_gcd 177 maxU 124998734 old_maxU 62323312
+AUTOMATIC_CLASS: 4 9 minimum_bound 6684150 forced_pair_gcd 35483 maxU 914513 old_maxU 257485
+AUTOMATIC_CLASS: 5 8 minimum_bound 1694040507 forced_pair_gcd 8350122 maxU 5397 old_maxU 1007
+AUTOMATIC_CLASS: 6 7 minimum_bound 468424857663 forced_pair_gcd 2170260903 maxU 28 old_maxU 3
+SHARP_THREE_COMPONENT: (31506, 31683, 31862) pair_gcds (177, 178, 179)
+ACTUAL_BOUNDARY_CONTROL: {"U": [2, 3, 4, 8, 16, 19, 28], "V": [302746510145, 314257784295, 321594541905, 329282060835, 384417661719, 995780689995], "all_large_subset_gcds": 1, "clearance": "1289/6502", "decoder_edges": 13, "g": 1, "inherited_profile_sha256": "935f3f687b6d7c89cc099e536f536238fd753bcc4c1747906d213cef387ca93f", "minimum_cleared_factor": 174684705, "mixed_supports": 231, "phase": "1301/6502", "profile_count": 4095, "selected_pair": [302746510145, 314257784295], "selected_pair_gcd": 1151127415, "sum": 8608905638154474, "t": 3251}
+MECHANISM: primitive rooted divisor-product bound plus inherited leaf cofactors and dual coefficient escape
+SCOPE: automatic balanced maxU<=28; universal decoder entry and LRC14 remain OPEN
+ACTIVE GATES: 911473
