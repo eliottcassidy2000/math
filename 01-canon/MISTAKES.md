@@ -341,6 +341,28 @@ live theorem surfaces were corrected.
 
 These are rejected proof shortcuts, not retractions of scoped canon.
 
+- **Compatible geometry and Euler coupling still lose relative scale:**
+  the q5/h4 model with B-roots `(1,64,4096,262144,16777216)` retains both
+  contiguous identities, the all-weight square pencil, full binomial
+  carriers, and the original joint zero. Scaling these roots by lambda
+  and retuning the phase leaves the ordinary carriers unchanged, but
+  scales the hit by lambda^2 and the skip by lambda. At the smallest
+  positive phase root, W<0<R_skip, so lambda0=-R_skip/W gives exact model
+  double cancellation. The rational scale2^-25 already makes its full
+  response positive. The missing coordinate is the relative crossing-edge
+  normalization: an actual variable change also scales the factor2t.
+  Fixing the genuine first coefficient restores a negative full response
+  in this named control, while positive class/skip signs survive. The
+  repaired next question keeps that anchor or the full composition law.
+  [Exact witness, strongest survivors and independent audit](../05-knowledge/results/combined_pencil_empty_core_morning_sep06.md).
+- **A local two-atom constant need not be global:** the quantitative
+  signed-duplication ratio along unequal two-atom limits approaches
+  `(64-44sqrt(2))/3`, about0.591534. An actual three-positive-atom family
+  with tuned negative dust has limiting ratio about0.350135. Thus the
+  first failed implication is promoting a local limiting Hessian to a
+  global bound. Retain the third positive coordinate; the proved global
+  constant `(6sqrt(2)-8)/3` survives and the best constant is OPEN.
+  [Uniform bound and exact three-atom obstruction](../05-knowledge/results/quantitative_stability_empty_core_morning_sep06.md).
 - **Vanishing moment gap loses its energy scale:** in normalized signed
   duplication the gap `g=(sqrt(2)-1)-p3+(2-sqrt(2))p4` tends to zero both
   at the sharp two-atom limit and at the one-atom zero-energy boundary.

@@ -420,6 +420,18 @@ fully specified target. Individual-factor signs concern their own roots;
 the zero-preserving lowering above acts at the original joint constraint,
 so transferring one conclusion to the other still requires a proof.
 
+### Subsequent combined-model resolution
+
+The independently audited [combined-model probe](combined_pencil_empty_core_morning_sep06.md)
+now performs that test and refutes full-response negativity, even with
+both Euler identities, the weighted pencil, common binomial carrier and
+original zero retained. A positive algebraic relative scale makes both
+model rows vanish exactly. This does not change any scoped witness above
+or refute actual binomial transport. It identifies the additional missing
+coordinate as the crossing-edge normalization, which a genuine change of
+phase variable must scale together with the hit factor. The next consumer
+must retain that anchor or the full coefficient law.
+
 ## 5. Verification, controls, and reproduction
 
 The standalone [source](../../04-computation/laurent_transport_empty_core_next_sep06.py)

@@ -1,5 +1,29 @@
 # Script Results Index
 
+- [Explicit uniform quadratic stability](quantitative_stability_empty_core_morning_sep06.md):
+  **PROVED + FINITE-EXACT + INDEPENDENTLY AUDITED.** The signed-duplication
+  deficit bounds squared distance to the two-atom limit with explicit
+  dimension-independent constant `(6sqrt(2)-8)/3`. The power is optimal;
+  the best constant remains OPEN. A three-positive-atom family defeats
+  the local two-atom constant as a global guess.
+- [AP8 optimal limiting margin](lrc14_ap8_asymptotic_empty_core_morning_sep06.md):
+  **PROVED + FINITE-EXACT + INDEPENDENTLY AUDITED.** Two arbitrary outliers
+  of minimum height H>=82 give margin at least `1/9-9/H`, uniformly over
+  all three 3-unit tail heights. Margin equals `1/9` exactly when neither
+  outlier is divisible by nine; otherwise an explicit positive measure
+  floor accompanies the lower margin. The old clock27 branch is credited.
+- [Combined-model double cancellation](combined_pencil_empty_core_morning_sep06.md):
+  **EXACT REFUTATION + INDEPENDENTLY AUDITED.** Both Euler identities,
+  all-weight PF pencils, the full common-binomial carriers and the original
+  zero still allow exact model double cancellation. A free relative scale
+  changes hit and crossing responses by different powers. Actual binomial
+  transport remains OPEN; its coefficient normalization is not discarded.
+- [Independent centered-division entry audit](lrc14_coprime_max_entry_empty_core_morning_sep06.md):
+  **PROVED INDEPENDENT REPROOF, SUBSUMED by incoming signed-box closure.**
+  A separate bounded-division argument and actual nonunit control audit
+  the coprime-maximum specialization; the incoming endpoint-gcd cutoff
+  `76,388,115` is strictly stronger and is retained as current truth.
+
 - [Thirteenth overnight synthesis](overnight_20260906_synthesis.md):
   **PROVED + INDEPENDENTLY AUDITED.** [Complete121-test decoder](overnight13_20260906_lrc_entry_decoder.md)
   decides actual11+2 equality inside the physical box. [Universal Hermite packets](overnight13_20260906_jets_p31_intermediate.md)

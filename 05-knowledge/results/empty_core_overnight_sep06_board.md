@@ -1,12 +1,12 @@
 # Empty-core overnight research board
 
-**Status: CURRENT SESSION BOARD — 2026-09-06, 05:47 America/Denver.**
+**Status: CURRENT SESSION BOARD — 2026-09-06 morning checkpoint.**
 Current mathematical status belongs to the linked proofs and canon, not this
 synthesis. LRC(14) and general trinomial two-rung detection remain **OPEN**.
 Worktree: `/tmp/math-wt-empty-core-overnight-20260905`; initial revision
-`a80f2e90aa37`. The current task continues every thirty minutes through
-08:00 America/Denver on September6. After that cutoff, finish and push the
-last coherent checkpoint, give the morning report, and pause the heartbeat.
+`a80f2e90aa37`. The overnight research has reached its 08:00 America/Denver cutoff.
+The audited results and continuation questions below form the final
+morning checkpoint.
 
 ## Source and inheritance
 
@@ -40,14 +40,62 @@ all local minima and integer multiplicities for the equality audit.
 
 | Lane / object | Current predicate and operation | Lost coordinate / next decisive test |
 |---|---|---|
-| Anchor: hereditary subset gcds | Exact bounds1,2,4,9,30,90 for twelve- through seven-speed subsets | Both new maxima have actual spoiled body-safe phases; retain a body component |
-| Anchor: simultaneous periodic bad sets | Balanced CRT intersections plus joint modulo8 shadows exclude32 and96 | Residual joint covers and body-phase selection |
-| Niche: completed-alpha Laurent carrier | Incoming all-A2 beta-hit sign is proved; coupled skip sign is open | Preserve the exact composition recurrence after the two new abstract hostiles |
-| Wildcard: actual root-product energy | Sharp constants, dimension-uniform stability, unique entire-function limit | Dust can have both signs; keep its signed first moment |
-| Bridge: same-constraint reduction | Moment normalization and coefficient lowering can preserve the actual zero | A real-rooted replacement alone does not preserve its indicated coefficient |
-| Research process: bounded complete certificate | Prove the finite universe before compiling it; audit with a different construction | Arithmetic consistency is not unsafe realization; finite controls are not proofs of unbounded claims |
+| Anchor: hereditary subset gcds and decoder edges | Global caps1,2,4,9,30,90; incoming actual-edge growth restores a finite six-core clock universe | A small five-label gcd does not supply a bounded three-label crossing |
+| Anchor: AP8 third-orbit phase packets | Arbitrary high outliers give margin1/9-9/H; exact equality branch classified | Extend beyond AP8 while retaining actual component measure and all tail heights |
+| Niche: combined Laurent abstraction | Both Euler identities, weighted pencils and the original zero survive an exact model double cancellation | Preserve the relative crossing-edge coefficient or full path recurrence |
+| Wildcard: actual root-product energy | Sharp degree constants and explicit dimension-independent quadratic stability | Best global stability constant is OPEN; the third positive atom defeats the local two-atom guess |
+| Bridge: same-zero operations and relative scale | Phase retuning keeps an ordinary carrier while changing raw hit/skip weights | Keep coefficient normalization, not just the carrier's root geometry |
+| Research process: faithful consequence certificates | Independent arithmetic, exact control universes, explicit subsumption by incoming proofs | Necessary entry filters and complete entry tests still need a phase conclusion |
 
-## Current audited progress
+## Audited morning advances
+
+1. [Explicit quantitative stability](quantitative_stability_empty_core_morning_sep06.md)
+   proves `J-c_* >= [(6sqrt(2)-8)/3] d^2` in every finite dimension.
+   Here `p1=p2=1`, `J=-[s^4]G(s)^2/e2(r_i^2)`, and d is the square-norm
+   distance to permutations of `(1/sqrt(2),1/sqrt(2),0,...)`.
+   The distance power two is optimal. A three-positive-atom family gives
+   an upper bound about0.350135 on the best constant, whereas the proved
+   constant is about0.161760. The sharper global constant remains OPEN.
+   Both the dust square mass and its signed first-moment error are bounded
+   linearly by the deficit. Full analytic audit and434 exact gates passed.
+2. [AP8 with arbitrary high outliers](lrc14_ap8_asymptotic_empty_core_morning_sep06.md)
+   gives `1/9-9/H <= M(3{1,...,8,v,w} union T) <=1/9` for H=min(v,w)>=82,
+   uniformly over all three distinct positive 3-unit tails T. The maximum
+   equals1/9 exactly when9 divides neither outlier. The old clock27 proof
+   already handles that equality branch. In the nine-divisible branch the
+   new supplier deduction gives physical safe measure at least53/(4536H)
+   at the lower margin, improved to4507/(4536H) when both outliers are
+   divisible by three. The strict branch converges to the optimal ceiling.
+   Full analytic audit and273 exact gates passed.
+3. [Combined-model obstruction](combined_pencil_empty_core_morning_sep06.md)
+   settles the previously untested abstraction: its q5/h4 geometric-root
+   witness retains both Euler identities, all-weight PF pencils, full
+   Laurent support, common binomial carriers and the original zero.
+   Rescaling beta roots and retuning the phase leaves the carriers fixed,
+   but the hit and skip scale as lambda^2 and lambda. An explicit rational
+   scale makes the full response positive; lambda0=-R_skip/W makes it
+   vanish exactly together with the first row. A genuine variable change
+   must also rescale2t, so this is not an actual Laurent counterexample.
+   The genuine first-coefficient anchor restores negative full response
+   in the named control while positive class/skip signs survive.
+   Two analytic audits, a root source audit and156 exact gates passed.
+4. [Centered-division entry audit](lrc14_coprime_max_entry_empty_core_morning_sep06.md)
+   is explicitly **SUBSUMED** as a closure by the incoming signed-box
+   theorem. It retains an independent simpler proof and a distinct actual
+   nonunit11+2 decoder row. The incoming result allows endpoint gcd up to
+   76,388,115, far beyond the coprime specialization. Root and the referee
+   independently accepted its exact signed-box and minimal-multiplier
+   lemmas. Our24,545-gate audit is verification, not a second new closure.
+
+Every lane now changes the others: actual decoder edges supply finite gcd
+information that unrestricted phase lifting lacks; AP8 phase packets turn
+measure into a useful existence theorem with all tail heights retained;
+root stability quantifies the same-square margin but cannot pay a freely
+rescaled crossing; the Laurent hostile shows exactly why ordinary-carrier
+invariance alone is insufficient. New directions should retain the missing
+coordinate exposed by these tests.
+
+## Audited overnight foundations
 
 1. [Joint-shadow hereditary gcd hierarchy](lrc14_joint_shadow_empty_core_next_sep06.md):
    **PROVED RELATIVE TO CITED LOWER-RUNNER LRC + FINITE-EXACT +
@@ -109,8 +157,9 @@ all local minima and integer multiplicities for the equality audit.
    [weighted midpoint deletion](nc2_weighted_midpoint_overnight_hexagon_sep05.md)
    supplies an extra actual-factor pencil invariant that our Euler hostile
    fails. Its separate Hadamard hostile loses our Euler/common-binomial
-   data. The combined model remains untested, with the original joint zero
-   and distinction from individual-factor roots kept explicit.
+   data. The morning combined-model theorem above now closes that abstract test
+   negatively, retaining the original joint zero and distinguishing it
+   from individual-factor roots and actual binomial normalization.
 
 These advances change all six concepts. Subset inheritance compresses clocks
 only while the tail count is below seven; forced intersections improve it
@@ -121,6 +170,30 @@ can omit the actual coefficient law. The successful small certificate retains
 the target coefficient, not just real roots or a scalar norm.
 
 ## Incoming connections and settled earlier routes
+
+The newest [signed-box closure](overnight12_20260906_lrc_gcd_semigroup.md)
+proves an exact central coefficient interval and selected three-label
+crossing criterion, then the endpoint-gcd safety cutoff76,388,115.
+The [decoder-edge descent](overnight12_20260906_lrc_decoder_descent.md)
+combines actual edge-loss divisibility with our seven-subset cap90 to
+produce6,121 possible physical six-core gcds, maximum31,950. This does not
+contradict the unrestricted seven-tail lifting obstruction: connected
+actual decoder edges are additional information. The subsequent
+[complete equality-entry decoder](overnight13_20260906_lrc_entry_decoder.md)
+uses55 internal height gates and all121 mixed supports, including the11
+opposite-orientation supports omitted by the selected pair tests. It is an
+exact pointwise test of W=V_dec in the physical box, not a classification
+of safe phases. Root read all three full analytic proofs and accepted their
+stated domains. Reproduction-path typos in the eleventh and twelfth reports
+were repaired without altering producer or output bytes.
+
+[THM-4453](../../01-canon/theorems/THM-4453-lrc14-inert-sum-five-ray-disjointness-and-dyadic-entry-closure.md)
+is now **PROVED**, replacing its earlier empty reservation. Within the
+odd-3-unit inert-pair class, body safe mass at least4/91 closes the doubled
+body/pair form, because the five high-overlap rays miss the inert atlas.
+Its original-body gates8/91 and20/117 retain their respective dyadic forms
+and inert-pair hypothesis. Root read the complete proof; no arbitrary
+body-measure supplier or all-pair closure is inferred.
 
 Incoming [THM-4446](../../01-canon/theorems/THM-4446-lrc14-primitive-ten-pack-descent-and-dilation-rays.md)
 is now PROVED. Its nonprimitive-ten-pack safety conclusion follows from
@@ -174,24 +247,19 @@ probes address that precise current target.
 
 ## Next continuation
 
-1. Fetch and recover incoming proof changes before deriving. Study actual
-   simultaneous masks for a useful residual small clock or an actual body
-   component. Clocks32 and96 are closed; clocks30 and90 have literal
-   spoiled body-safe phases, so another phase or additional structure is
-   necessary there. Seven-tail clock finiteness needs new information.
-2. In the Laurent niche, first give the combined weighted-pencil,
-   Euler/common-binomial model a cheap hostile probe at the original joint
-   zero. Neither current hostile retains all those predicates. Use the
-   exact composition recurrence and zero-preserving lowering for a faithful
-   magnitude estimate. Generic strict interlacing alone is already refuted.
-3. For the wildcard, the uniform qualitative stability and unique
-   exponential closure are now proved. Possible next objects are an explicit
-   stability modulus or another coefficient index, with a cheap boundary
-   probe first. Do not re-prove the sharp constants or assume dust has one sign.
-4. Compare every meaningful object with all six live concepts. Use existing
-   META-PATTERNS cards “Retain the product and shared labels before taking
-   scalar totals” and “Search the statement before the method.” No new
-   meta-pattern is promoted in this checkpoint.
-5. Push coherent reviewed checkpoints. At or after08:00 America/Denver,
-   complete the morning report, verify no local commit remains unpushed,
-   and pause the saved continuation.
+1. For actual11+2 entry, combine the complete121-support arithmetic decoder,
+   edge-loss paths and inherited subset profiles. Seek an eligible pair
+   whose exact box radius forces the coherent-grid threshold42K, or a
+   genuine bounded crossing. A five-label gcd below the cutoff alone does
+   not fit the support-three budget. For the phase lane, seek a non-AP8
+   supplier with a positive third-orbit density budget near its true ceiling.
+2. For Laurent transport, the unanchored combined model is now refuted.
+   Keep the relative crossing-edge normalization explicitly, then test the
+   full response at the original joint zero. The named genuine-linear-anchor
+   control survives; a universal anchored-model theorem remains OPEN.
+   The exact path recurrence is the faithful stronger target.
+3. For root stability, the qualitative modulus and quadratic power are
+   settled. Determine the best global constant between0.161760 and0.350135,
+   retaining a possible third positive atom and the energy denominator.
+   Alternatively change the vanishing coefficient index and probe the
+   one-atom energy boundary before proposing an all-degree analogue.
