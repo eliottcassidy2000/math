@@ -50,9 +50,8 @@ gives square sum `<=195`; THM-4019 refutes its sharp arbitrary-lattice target.
   All additive rows but `(1,4,5)`, plus `(2,11,20)`, exceed `6/77`.
   [THM-4442](../01-canon/theorems/THM-4442-lrc14-bounded-ten-body-parity-free-scale-three-completion.md)
   closes bounded ten-bodies; [THM-4446](../01-canon/theorems/THM-4446-lrc14-primitive-ten-pack-descent-and-dilation-rays.md)
-  closes every integer dilation ray and forces a live rank-eleven pack to
-  have gcd one and distinguished cross height above `91^6`. Component-address
-  entry remains open.
+  closes their dilation rays and forces live packs to be gcd-one with cross
+  height above `91^6`. Address entry remains open.
 - **Transport/incidence:** [overnight synthesis](../05-knowledge/results/overnight_20260906_synthesis.md)
   retains cap, midpoint and owner-line refinements. The
   [sparse proof](../05-knowledge/results/synthesis_20260905_lrc_sparse_transport.md)
