@@ -9,6 +9,8 @@
   **PROVED + INDEPENDENTLY AUDITED.** [Endpoint21 Laurent family](overnight6_20260906_laurent_cubic_carry.md)
   has first detection `g` or `2g` for every admissible `g>=11`; all carried
   quotient characteristic coefficients have an exact positivity certificate.
+  This is the same concurrent family as the independently audited Hermite
+  certificate below, not a separate first closure.
   [Reciprocal jet products](overnight6_20260906_jets_sidecar.md) give exact
   shell updates, a current-target residue budget and a finite all-depth
   envelope; simultaneous terminal-pair cancellation is unbounded locally.
@@ -42,7 +44,9 @@
   **PROVED ANALYTICALLY + INDEPENDENTLY AUDITED**. For integer `g>=11`,
   `gcd(g,21)=1`, support `(-21,2g-21,3g-21)` has first nonzero moment
   exactly `g` or `2g`, both attainable. Three Hermite minors have uniform
-  signs, verified by a separate degree-bounded rational certificate.
+  signs, verified by a separate degree-bounded rational certificate. This
+  independently proves the same concurrent [endpoint21 family](overnight6_20260906_laurent_cubic_carry.md);
+  the two routes are credited as one result.
   [Independent audit](trinomial_cubic_audit_empty_core_sep06.md) and
   [exact THM-4440 sector comparison](trinomial_cubic_sector_empty_core_sep06.md)
   retain the scope beyond real-rooted cores; general trinomial detection is OPEN.
@@ -63,8 +67,7 @@
   **PROVED ELEMENTARY RELATIVE TO THM-4414 + FINITE-EXACT + INDEPENDENTLY
   AUDITED; LRC(14) OPEN.** The complete carrier set is one primitive ray;
   sharp bounds are `min E<=46/665` and physical mass `<=51/770`, both below
-  `6/77`. The concurrent synthesis below classifies the remaining low-circuit hostiles.
-  `6/77`. Only `(1,1,1)` and `(1,1,2)` remain possible low-circuit hostiles.
+  `6/77`. THM-4444/4445 above classify the remaining low-circuit hostiles.
 - **PROVED + INDEPENDENTLY AUDITED sixth-wave connections:**
   [full dyadic three-node three-jet Smith form](three-node-threejet-dyadic-smith-overnight-hexagon-sep05.md) extends THM-4443 from worst loss to all nine factors using886 symbolic minors and eight attained costs;
   [all-parity norm-four closure](lrc14_all_parity_norm_four_overnight_hexagon_sep05.md) combines with incoming generic/additive/norm-five proofs to give sharp local parity ceilings6/77,6/55,11/140, not LRC entry;
@@ -84,8 +87,7 @@
   independent 9,720,930-row head close the proof. Exactly three nonlow
   individual coordinates attain equality, beginning at `(7,16,22)`; the
   referee caught this boundary and repaired the proposed all-strict wording.
-  The synthesis below closes the low circuits; actual body-phase entry remains open.
-  Subsequent THM-4441/4444 classify `(1,2,2)/(1,1,2)`; additive entry remains.
+  THM-4441/4444/4445 close the low-circuit classification; actual body-phase entry remains open.
 
 - [Unbounded three-channel Laurent return family](trinomial_width15_empty_core_returns_sep06.md):
   **PROVED ANALYTICALLY + FINITE-EXACT + INDEPENDENTLY AUDITED.** For

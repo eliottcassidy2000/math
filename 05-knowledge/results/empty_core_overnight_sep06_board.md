@@ -1,6 +1,6 @@
 # Empty-core overnight research board
 
-**Status: CURRENT SESSION BOARD — 2026-09-06, 03:15 America/Denver.**
+**Status: CURRENT SESSION BOARD — 2026-09-06, 03:30 America/Denver.**
 Current mathematical status belongs to the linked proof/results files and
 canon, not this synthesis. LRC(14) and general trinomial two-rung detection
 remain **OPEN**.
@@ -82,6 +82,11 @@ their intrinsic types.
    [exact real-rooted-core overlap](trinomial_cubic_sector_empty_core_sep06.md)
    proves that at least two of the three first roots lie outside THM-4440's
    sector for every admissible g, and all three do for `g>=22` (55 gates).
+   Fresh incoming [endpoint21 work](overnight6_20260906_laurent_cubic_carry.md)
+   independently proves the identical family and signs by quotient
+   characteristic coefficients. These are two audited certificates of one
+   shared result; its 19-point identity certificate is smaller than our
+   25-point Hermite certificate. Our all-height sector count is additional.
 3. [Sharp quartic margin and stability](signed_duplication_stability_empty_core_sep06.md):
    **PROVED ANALYTICALLY + INDEPENDENTLY AUDITED**. A real-rooted exact
    quartic `G=a_0 prod(1+r_i s)` with `a_0!=0` and `[s^2]G=0` satisfies
@@ -120,11 +125,21 @@ closes signed `(1,2,2)`;
 [THM-4444](../../01-canon/theorems/THM-4444-lrc14-signed-112-sharp-one-ray-classification.md)
 closes signed `(1,1,2)`, with sharp `11/140` only at `(2,11,20)`.
 The root read the current canon and relevant proof/audit statements.
-These local claims do not supply arbitrary body entry.
+[THM-4445](../../01-canon/theorems/THM-4445-lrc14-signed-111-sharp-obstruction-classification.md)
+now completes the additive threshold classification: every additive row
+except `(1,4,5)` is strictly above `6/77`, so the local obstruction persists
+at unbounded heights. Root read the full sharp theorem, both quadrature
+bounds and the native/referee universes. These local claims do not supply
+arbitrary body entry.
 [THM-4442](../../01-canon/theorems/THM-4442-lrc14-bounded-ten-body-parity-free-scale-three-completion.md)
 closes every ten-subset of `[13]` at scale three with every distinct
 positive ternary-unit tail triple, by an analytic cutoff and two exact
 engines on 174,045 residual rows. Body heights beyond this input are open.
+Our gcd cap now also closes every primitive row `3C union T` with
+`gcd(C)>1`, since its ten-pack gcd is at least six. This independently
+supplies the nonprimitive-ten-pack target of incoming
+[THM-4446](../../01-canon/theorems/THM-4446-lrc14-primitive-ten-pack-descent-and-dilation-rays.md),
+which remains RESERVED and is not used as a proved dependency.
 
 The [body audit](lrc14_haar_body_empty_core_sep06.md) recovers THM-544's
 `14249/252252` Haar hostile and a clock-filtered THM-2923 body that defeats

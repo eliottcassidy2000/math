@@ -19,6 +19,14 @@ of a weighted trace matrix. Each factors into positive terms after
 carry retained. This is one fixed family, not a result for every support
 of smaller endpoint twenty-one or a general higher-channel theorem.
 
+**Concurrent result:** incoming `e6122ca100` independently proves the
+same family, coefficient scope, exact detection law and three negative
+anchored values in
+[the carried-cubic characteristic-positivity theorem](overnight6_20260906_laurent_cubic_carry.md).
+This is one shared mathematical result with two independently audited
+certificates, not two distinct family closures. The comparison below
+retains the separate proof mechanisms and normalization.
+
 ## 1. Inheritance and actual coverage of the incoming duplication theorem
 
 The closest proved mechanism is the
@@ -67,8 +75,9 @@ are concurrent inherited evidence. The
 [endpoint-eight theorem](overnight_20260906_moments_width8.md) does not
 cover these supports: `min(21,3g-21)>=12`. The two-channel theorem
 [THM-4432](../../01-canon/theorems/THM-4432-trinomial-two-channel-two-rung-noncancellation-with-carries.md)
-does not cover four first channels. No prior unbounded closure of this
-family was recovered, and no literature-priority claim is made.
+does not cover four first channels. That initial search preceded the
+concurrent characteristic-positivity proof identified above. No
+literature-priority claim is made.
 
 The subsequently read
 [Hadamard-transport result](nc2_hadamard_transport_overnight_hexagon_sep05.md)
@@ -82,6 +91,39 @@ stronger finite defect-sign evidence there. It does not subsume the
 unbounded cubic actual-sign or first-detection conclusion proved here.
 Conversely, the present direct trace certificate does not prove that
 the actual row is below the virtual one.
+
+The concurrent carried-cubic proof instead tests all coefficients of the
+characteristic polynomial of multiplication by the anchored residue.
+Its three coefficient degrees are `6,12,18`; our three signed Hermite
+minor degrees are `6,14,24`. Both preserve the all-negative predicate
+because the quotient has three distinct real evaluation roots. The
+incoming route therefore has a smaller maximum identity degree, allowing
+19 distinct evaluation points where the independent audit here uses 25.
+The exact all-height real-core sector counts in our separate sidecar
+remain additional scope information; they do not create a second return
+theorem.
+
+For the normalization, put `p=P_g/72`, let `R_in` be the incoming
+residue, and let `B_i` be its characteristic coefficients. Its positive
+factor is `(2g)_14`, whereas ours is `(2g)_14/128`, so
+`R_g=128 R_in`. If `lambda_i` are the roots of the monic `p`, then
+
+```text
+D_1=128 B_1,
+D_2=128² sum_(i<j) R_in(lambda_i)R_in(lambda_j)(lambda_i-lambda_j)²,
+D_3=128³ disc(p) B_3.                                  (C)
+```
+
+Indeed the weighted trace form is
+`128 V^T diag(R_in(lambda_i)) V`. Its determinant is
+`128³ det(V)² product_i R_in(lambda_i)`, with
+`det(V)²=disc(p)` and `B_3=-product_i R_in(lambda_i)`;
+the minus sign in `D_3=-det H` gives `(C)`. This independently checks
+the discriminant factor and its sign. At `g=11`, `disc(p)=347303/3`,
+and exact rational substitution matches the incoming first and third
+characteristic coefficients with our inherited unnormalized minors.
+The incoming middle coefficient is the unweighted pair-product sum;
+our middle minor retains the squared node separations.
 
 The live board is: complete affine fibres; carry gauge; ordinary-core
 real-root sector; weighted trace inertia; translated symbolic positivity.
