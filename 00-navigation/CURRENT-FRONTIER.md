@@ -17,69 +17,51 @@ gates are not danger.
 - **CITED:** LRC through 13 total runners; see
   [Sungkawichai–Trakulthongchai](../05-knowledge/reference/CORE-PAPERS.md#lonely-runner-conjecture).
 - **PROVED + FINITE-EXACT:** THM-741/2883/2888/2892/2893/885 close `2002` nine- and `3003` eight-body roots; audited THM-2923 closes `3432` seven-body roots.  Prior splits are intermediate.
-- **PROVED:** THM-965/2051--2092/2074 give the relation, pair-floor, rank, and
-  ledger reductions; THM-2148/2168 reach scalar `5+3`. THM-2054 decorrelates
-  at `H=2^19` subject to MISTAKE-080/082. THM-1252--1274 saturate six-comb
-  arguments; endpoint/child transport remains. Routes: THM-2081, THM-2082,
-  THM-2083, THM-2085, THM-2086, THM-2085/2087, THM-2088, THM-2089,
-  THM-2090, THM-2092.
+- **PROVED:** THM-965/2051--2092/2074 give relation, pair-floor, rank and ledger
+  reductions; THM-2148/2168 reach scalar `5+3`. THM-2054 decorrelates at
+  `H=2^19` subject to MISTAKE-080/082; endpoint/child transport remains.
+  Routes: THM-2081, THM-2082, THM-2083, THM-2085, THM-2086,
+  THM-2085/2087, THM-2088, THM-2089, THM-2090, THM-2092; THM-2363 and THM-2368 miss `28,393` roots.
 
 ### Exact live obligation
 
-Direct frontier: `<=6`, projected caps `1579/216`; THM-3378 leaves `12`
-next-family rows. THM-3349--3453 give six-level/support controls, but arbitrary
-`k<=1`, projected `k=2,3`, rung, and entry remain. THM-3665--3731 give rank-12
-charts and `165` valuation orbits; owner/word transport and arrival remain
-(MISTAKE-281/300/310/313); THM-2363 and THM-2368 miss `28,393` roots.
+Direct frontier: `<=6`, projected caps `1579/216`; THM-3378 leaves 12 rows.
+THM-3349--3453/3665--3731 give support controls and 165 valuation orbits, but
+arbitrary rungs, owner/word transport and entry remain (MISTAKE-281/300/310/313).
 [THM-4009](../01-canon/theorems/THM-4009-euclidean-covering-transference-short-relation-compression.md)
-gives square sum `<=195`; THM-4019 refutes its sharp arbitrary-lattice target
-for `d>=7`. THM-3742 is a wrong-torsor Pell `C14`; THM-3744's safe control is
-`M(S_13)=99/338`. No cited result proves LRC(14).
+gives square sum `<=195`; THM-4019 refutes its sharp arbitrary-lattice target.
 
 ### Independent routes that remain live
 
 - **Short-relation/decoder lane (PROVED + CITED):** [THM-4009](../01-canon/theorems/THM-4009-euclidean-covering-transference-short-relation-compression.md) gives square norm `<=195`; THM-2052 is terminal at rank twelve.
   THM-3793/3818/[3825](../01-canon/theorems/THM-3825-prime-colour-valuation-two-cube-decoder.md) recover both scales at `91^6` except one congruence fibre. THM-3878/3910/4002--4004 leave 17 `11+2` types and owner/arrival.
-- **Affine/comb lane (PROVED):** THM-4024 gives profile
-  `(11,9,8,8,7,7,...)`; THM-4030--4041/4070--4079 close shapes; THM-4087
-  closes AP9 plus two outliers. THM-4092 closes AP8 plus three speeds at
-  `>=281` (all-even `>=85`); THM-4100 retains component ancestry and lowers
-  arbitrary parity to `93`. THM-4098 adds dilated weight-seven rows; THM-4109
-  gives AP7 odd-pair floors `197/232/268` at gaps `4/8/12`, with only `4,8`
-  beating `264` here. [THM-4112](../01-canon/theorems/THM-4112-antipodal-component-ancestry-chain-and-scale-separated-lrc-families.md)
-  iterates the parity-aware parent-gap envelope to arbitrary depth, gives
-  ratio-two depth-`<=6` and ratio-`>=12/5` suppliers, and proves direct AP8
-  plus five and primitive non-AP plus six thirteen-speed families. Arbitrary
-  cores and physical entry remain open.
+- **Affine/comb lane (PROVED):** THM-4024--4109 close the listed AP9/AP8/AP7
+  shapes with ancestry/parity floors. [THM-4112](../01-canon/theorems/THM-4112-antipodal-component-ancestry-chain-and-scale-separated-lrc-families.md)
+  iterates the parent-gap envelope and proves direct AP8-plus-five and
+  primitive non-AP-plus-six families; arbitrary cores and entry remain open.
 - **Quantifier/type controls (PROVED):** THM-4095--4116 preserve field, gap,
   ray, parity-sheet and component-count data; none supplies safety or arrival.
 - **Seam/entry:** THM-4326/4329 close the fixed chart; 4330 leaves `2+12`;
-  4347 closes height `40`; 4349/4371 are clocks. THM-4386--4405 close the
-  unit shells and norm-20 one-zero presentations. THM-4413 proves non-tangency
-  and the complete norm-18 empty atlas. THM-4409/4414 turn every degree-zero
-  network into raw projection sums `E_i`.
+  4347 closes height 40. THM-4386--4414 close the named small shells and turn
+  degree-zero networks into raw projection sums `E_i`.
   [THM-4418](../01-canon/theorems/THM-4418-lrc14-sharp-pair-arithmetic-and-forty-four-thirteenths-tail.md)
   gives sharp pair mass/component bounds and closes `c/b>=44/13`. THM-4420
   closes both unit near-doubling rays; THM-4422 closes every signed norm-four
   family and gives exact deficit/Beatty rows; fixed convex averages fail.
-  THM-4425 closes every complete rank-one carrier set at every height and
-  proves the exact zonotope width/layer and half-body sumset dichotomies. It
-  also closes every row whose shortest primitive relation has `l1` norm at
-  most 14: full-support relations collapse to rank one, and one-zero relations
-  are count-automatic except for the directly closed `(19,23,29)` `A_2`
-  control. Every remaining hostile has shortest dual width at least 16.
-  THM-4423 verifies all 753,853 triples through height 499 and, by a 38-shell
-  splice into the norm-four theorem, proves every row with `N<=112` at every
-  height. Its 4,599 dense H499 rows comprise 4,598 norm-four rays and the
-  unique rank-two `A_2` hexagon `(19,23,29)`.
+  THM-4425 closes rank-one support and every shortest dual width `<=14`; only
+  the directly closed `(19,23,29)` `A_2` is not count-automatic. THM-4423
+  verifies 753,853 triples through height 499 and proves all-height `N<=112`;
+  its 4,599 dense rows have 4,598 norm-four rays and that unique `A_2`.
   [THM-4428](../01-canon/theorems/THM-4428-lrc14-two-direction-network-closure-and-sharp-one-direction-gap.md)
   closes all one- and exactly-two-direction networks, sharply `12/161` off
   norm four in the one-ray case. Any remaining projection hostile has
   `c>=503`, `N>=114`, `c/b<44/13`, shortest dual width at least 16, and at
-  least three primitive carrier directions. The half-body bound still loses
-  coordinate owner and hinge depth; arbitrary nonresonance and entry remain
-  open.
-- **Transport/incidence:** [overnight synthesis](../05-knowledge/results/overnight_20260906_synthesis.md) combines sharp full-cap bound `204/5957`, midpoint payments, and strict all-height owner-line closure. A residual failure therefore needs a two-dimensional owner polygon with at least three directions, an affine collinear triple, and unpaid count surplus. The earlier [sparse-contact proof](../05-knowledge/results/synthesis_20260905_lrc_sparse_transport.md) adds star structure, arbitrary-phase intersection closure, weighted limits, and the exact carrier-selector gap.
+  least three primitive carrier directions. Owner/hinge depth and entry remain.
+- **Transport/incidence:** [overnight synthesis](../05-knowledge/results/overnight_20260906_synthesis.md)
+  combines cap bound `204/5957`, midpoint payments and owner-line closure. A
+  residual needs a two-dimensional owner polygon, an affine collinear triple
+  and unpaid surplus. The [sparse proof](../05-knowledge/results/synthesis_20260905_lrc_sparse_transport.md)
+  retains phase intersections, weighted limits and the selector gap.
 - **Residual ranks:** THM-4333/4338 close fixed-pool ranks three/four, not arbitrary entry.
 - **PROVED:** [THM-2928](../01-canon/theorems/THM-2928-critical-seven-comb-grid-tensorization-and-drift-tariff.md)/2941: literal zero/one/two/three-drift sectors are empty; `k=2,3` are finite.
 - **Orthogonal routes.** THM-1017 is HYP-6820; THM-2047/2050 keep phase/exit; THM-731/2048 prune; THM-1290 ends at `55`; HYP-8900 nonuniform.
@@ -94,9 +76,7 @@ for `d>=7`. THM-3742 is a wrong-torsor Pell `C14`; THM-3744's safe control is
 ### Mandatory controls and perspective prompts
 
 - `26*{1,...,12} union {339}` and `{1,...,12,5460}` defeat bounded-`q` scans;
-  THM-2058 defeats every fixed lift depth at `47/113`.
-- THM-3333--3457 type the Gaussian/Farey/Pell spine but retain origin,
-  owner/phase and time; THM-3459's `q=6` control has identical masks.
+  THM-2058 defeats fixed lift depth. THM-3333--3459 retain origin/owner/time.
 - Test gaps, clocks, residues, endpoints, circuits and quotient losses.
 
 ## Mahler `3/2`
