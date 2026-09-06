@@ -60,6 +60,14 @@ retain color/amplitude/owner, and test phase-invisible same-axis dilation.
 
 **Action:** before naming a lemma, search constants, quantifiers, shape, IDs, synonyms, and citations; different methods hide the same theorem. Independent rederivation remains useful as explicit verification. **Evidence:** MISTAKE-158/183/187/189/200 in [`MISTAKES.md`](../01-canon/MISTAKES.md).
 
+## Retain the local profile until its global counting weights are known
+
+**Action:** when deletion or intersection loses a scale-dependent term, search
+small exact profiles for a joint inequality and retain ambient occurrence counts.
+**Boundary:** individual layers may vanish; averaging supplies no entry map.
+**Evidence:** THM-4416's local cycle comparisons close D5/D6; independently,
+THM-4418's sheet-phase mass/count bounds pay the omitted-comb tail. The maps differ.
+
 ## Correct the object before sharpening the technique
 
 **Action:** when a method stalls, test its object: mean versus maximum, shadow

@@ -1,9 +1,12 @@
 # Width-two constant-term returns are parabolic petal cycles
 
-**Status: CONDITIONAL during independent review.** The argument below is a
-complete paper proof candidate, with its classical dynamical input checked in
-the primary lecture notes. It is not a scarce-ID reservation or canon entry.
-The exact algebraic audit is **FINITE-EXACT**. External priority is not claimed.
+**Status: PROVED relative to the CITED classical dynamical input.** The root
+and an independent observer audit checked the local involution, exact contact
+order, and critical-point budget; the cited Milnor statements were verified
+in the primary lecture notes. The exact algebraic audit is **FINITE-EXACT**.
+The canonical record is
+[THM-4417 — width-two Laurent first-return parabolic critical bound](../../01-canon/theorems/THM-4417-width-two-laurent-first-return-parabolic-critical-bound.md).
+External priority is not claimed.
 
 ## Inheritance and concept board
 
@@ -49,7 +52,7 @@ by replacing `z` with `z^-1` if needed. No coefficient sign, reality,
 squarefreeness, sparsity, or genericity assumption is present.
 
 Together with THM-2111's width-one case, this resolves the entire
-`min(M,N)<=2` region, subject to the independent review status above.
+`min(M,N)<=2` region.
 It leaves `min(M,N)>=3` open in this argument.
 
 ## 1. Local involution from exactly two small roots
@@ -250,7 +253,7 @@ not a claim of external novelty.
 
 ## Incoming-work integration: commit `566677ae1d`
 
-Before filing this candidate, the live remote supplied
+Before filing this result, the live remote supplied
 [`synthesis_20260905_moments_trinomial.md`](synthesis_20260905_moments_trinomial.md).
 That report proves an all-exponent support classification and an exact
 all-level carry profile for primitive trinomials. For charges `(-a,b,c)`

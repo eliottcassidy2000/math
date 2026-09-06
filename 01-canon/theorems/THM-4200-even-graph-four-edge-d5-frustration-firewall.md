@@ -9,7 +9,7 @@ status: >
   negative edge. Consequently every switching class that is neither balanced
   nor single-edge and lies at or below A_n has frustration index at least five
   and no balanced vertex deletion.
-  The complete D=5 single-edge conjecture remains OPEN.
+  THM-4416 separately proves the complete D5/D6 single-edge minimum and equality.
 source: open-frontiers-incoming-20260826b / recovered four-edge support lane
 depends_on:
   - THM-4084-even-graph-matching-character-profile-and-d5-firewall
@@ -32,13 +32,15 @@ hash_basis: raw LF bytes
 **PROVED + VERIFIED-EXACT + INDEPENDENTLY VERIFIED-EXACT.** THM-4084
 excluded every class that is neither balanced nor single-edge and has
 frustration index at most three
-from the still-open cumulative `D=5` single-edge conjecture. The next support
+from the then-open cumulative `D=5` single-edge conjecture. The next support
 layer has only eleven graph types. Exact cycle-containment inversion closes
 all eleven at once and raises that firewall from four to five.
 
 The equality boundary is load-bearing. A four-edge star does tie at the
 smallest order, but it is another representative of the single-edge class,
-not a new minimizing switching class.
+not a new minimizing switching class. The later
+[THM-4416](THM-4416-even-graph-cumulative-d5-d6-spectral-gap.md) closes all
+remaining D5 supports, and D6 as well, by a different local-profile argument.
 
 ## 1. Statement and inherited notation
 
@@ -239,8 +241,8 @@ decisive test: all eleven support types with exact nonnegative gap polynomials.
 This theorem treats only the cumulative `D=5` all-simple-cycle envelope. By
 MISTAKE-495 and THM-4069, it does not apply to a basis-dependent fundamental-
 cycle quotient. It excludes frustration index four; it does not control the
-frustration-at-least-five, no-balanced-deletion core. Hence the all-order D5
-single-edge conjecture and its spectral consequence remain **OPEN**.
+frustration-at-least-five, no-balanced-deletion core. That former residual
+and the all-order D5/D6 spectral gaps are now closed separately by THM-4416.
 
 Primary replay:
 

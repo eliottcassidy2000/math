@@ -3,7 +3,7 @@ id: THM-4083
 title: "Even-graph cumulative D3/D4 spectral gap"
 status: >
   PROVED + VERIFIED-EXACT + INDEPENDENTLY VERIFIED-EXACT for D=3 and D=4.
-  The cumulative single-edge statement for D>=5 remains OPEN.
+  THM-4416 separately closes D=5,6; the cumulative statement for D>=7 remains OPEN.
 source: codex-frontier-synthesis-creative-20260825e / cumulative signed-dual niche
 audit: >
   PASS. The proof-local path directly gauges and exhausts all 33,864 labelled
@@ -37,7 +37,9 @@ hash_basis: raw LF bytes
 dual from THM-4078 reduces a cumulative diameter-layer gap to a negative-cycle
 extremum. For `D=3` and `D=4`, balanced vertex deletion gives enough rigidity
 to solve that extremum for every admissible `n`. The analogous statement for
-`D>=5` is kept explicitly **OPEN** in Section 8.
+`D=5,6` is now closed separately by
+[THM-4416](THM-4416-even-graph-cumulative-d5-d6-spectral-gap.md).
+The remaining `D>=7` boundary is explicit in Section 8.
 
 ## 1. Typed signed-dual reduction
 
@@ -367,7 +369,7 @@ and D4 prefix on all `2^21` characters at `n=8` using integer Walsh
 transforms. THM-4078's older finite-exact Walsh sidecar supplies a third
 consistent census, but is not the sole base certificate here.
 
-For `D>=5` and `n>=D+1`, the statement
+For `D>=7` and `n>=D+1`, the statement
 
 ```text
 min_([H] nontrivial) S_D(H)=A_(n,D)                           (29)
@@ -393,9 +395,9 @@ sum_v S_D(H-v)=sum_(k=3)^(D+1)(n-k)c_k^-(H).                 (31)
 
 It underweights the longest layers and gives Hamiltonian cycles coefficient
 zero. A termwise repair is false: an antibalanced signing has no negative
-even cycles. Thus a long-cycle extension/stability inequality or a stronger
-shadow sidecar in the `b(H)=0` class is still required. The finite-exact box
-through `n=8` does not promote `(29)` for arbitrary `D`.
+even cycles. THM-4416 repairs D5/D6 with joint local-profile inequalities and
+exact subset multiplicities; larger D still needs such a sidecar. The
+finite-exact box through `n=8` does not prove `(29)` for arbitrary `D`.
 
 Finally, the source object is a signed switching character; the map
 

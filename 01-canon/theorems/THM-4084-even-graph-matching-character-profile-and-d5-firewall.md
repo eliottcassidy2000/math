@@ -8,10 +8,10 @@ status: >
   matching of size at least two lies strictly above the single-edge value,
   as does every nontrivial nonsingle class of frustration index at most three.
   Thus any
-  counterexample or additional equality class for the still-open D=5
+  counterexample or additional equality class for the originally open D=5
   single-edge conjecture has no balanced vertex deletion and has frustration
-  index at least four. The full D=5 conjecture remains OPEN beyond the
-  inherited exhaustive n=6,7,8 bases.
+  index at least four. THM-4416 now separately proves the complete D5/D6
+  minimum and single-edge equality classification at every admissible order.
 source: codex-frontier-synthesis-creative-20260825f / matching-character wildcard
 audit: >
   PASS. The primary path directly enumerates labelled matchings and simple
@@ -50,7 +50,9 @@ cycle counts. A matching of negative edges is unusually tractable because a
 cycle can meet it only in disjoint prescribed edges. This gives an exact
 profile in every cycle layer and, at `D=5`, removes the whole matching family
 and every nontrivial nonsingle class of frustration index at most three from
-the open search.
+the original search. The all-order closure now follows from
+[THM-4416](THM-4416-even-graph-cumulative-d5-d6-spectral-gap.md); the exact
+matching and low-frustration formulas proved here remain useful refinements.
 
 Throughout, `n>=6`, `1<=r<=floor(n/2)`, and `M_r` is a matching of `r`
 negative edges in the signed complete graph `K_n`. Let
@@ -341,10 +343,10 @@ the negative disjoint matching is antibalanced and has
 Thus neither the strict matching statement nor the unique-equality statement
 extends to that boundary.
 
-The all-`n` D5 minimum remains **OPEN**. Equations `(23)`--`(24)` do not
-control frustration-four-or-more classes with no balanced deletion. They
-identify the first genuinely hostile stratum and do not assume that the two
-coordinates are sufficient there.
+The all-`n` D5 minimum is now **PROVED** by the separate THM-4416 argument.
+Equations `(23)`--`(24)` themselves do not control frustration-four-or-more
+classes with no balanced deletion; they identify the original residual
+without asserting that those two coordinates suffice.
 
 Finally, `(9)` and `(26)` concern the multiplicity-weighted simple-cycle
 operators in the canonical diameter layer/all-simple-cycle envelope. By

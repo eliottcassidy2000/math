@@ -55,12 +55,18 @@ for `d>=7`. THM-3742 is a wrong-torsor Pell `C14`; THM-3744's safe control is
   ray, parity-sheet and component-count data; none supplies safety or arrival.
 - **Seam/entry:** THM-4326/4329 close the fixed chart; 4330 leaves `2+12`;
   4347 closes height `40`; 4349/4371 are clocks. THM-4386--4405 close the
-  unit shells and norm-20 one-zero presentations. THM-4413 proves non-tangency
-  and the complete norm-18 empty atlas. THM-4409/4414 turn every degree-zero
-  network into raw sums `E_i`; `min_i E_i<=6/77` stays open (finite-exact to
-  height `149`). THM-4420 proves every `E_i<=6/77` on both ternary-unit
-  near-doubling rays, uniquely sharply at `(1,5,11)`. Arbitrary nonresonance
-  and entry remain open.
+  unit shells and all 40 one-zero presentations through norm `20`. THM-4409's
+  third-sheet network closes 2,910 triples through height `79` and is exact
+  on `(1,5,11)`. THM-4414 collapses every degree-zero flow to a raw projection
+  sum `E_i`; `min_i E_i<=6/77` is open (finite-exact through height `149`).
+  THM-4413 proves non-tangency, the sharp floor `1/(7w_2w_3)`, and the complete
+  minimal-norm-18 empty atlas `{(7,11,43),(7,11,47),(7,25,29)}`.
+  [THM-4418](../01-canon/theorems/THM-4418-lrc14-sharp-pair-arithmetic-and-forty-four-thirteenths-tail.md)
+  gives sharp pair mass `12/77`, component count `24b/13`, and strict
+  degree-zero closure for every odd ternary-unit triple with `c/b>=44/13`.
+  THM-4420 proves every `E_i<=6/77` on both ternary-unit near-doubling rays,
+  uniquely sharply at `(1,5,11)`; these lie inside the comparable-speed region.
+  Universal height in `c/b<44/13`, arbitrary nonresonance, and entry are open.
 - **Transport extension:** [sparse-contact proof](../05-knowledge/results/synthesis_20260905_lrc_sparse_transport.md) adds star structure, arbitrary-phase intersection closure, weighted limits, and the exact carrier-selector gap.
 - **Residual ranks:** THM-4333/4338 close fixed-pool ranks three/four, not arbitrary entry.
 - **PROVED:** [THM-2928](../01-canon/theorems/THM-2928-critical-seven-comb-grid-tensorization-and-drift-tariff.md)/2941: literal zero/one/two/three-drift sectors are empty; `k=2,3` are finite.
@@ -161,8 +167,11 @@ and Lucas--Frobenius leaves `Q^p`: **whole-layer preservation**, not atoms.
 
 ### Live work
 
-Live: publish THM-2022, sharpen THM-2111 toward degree `M+N`, and formalize
-THM-2639.  THM-2101's additive routes are corroborative, not `GMC2Main.gmc2`
+Live: publish THM-2022 and formalize THM-2639.
+[THM-4417](../01-canon/theorems/THM-4417-width-two-laurent-first-return-parabolic-critical-bound.md)
+proves first return `<=M+N` for `min(M,N)=2` using a two-root involution
+and parabolic critical-point budget; width one was THM-2111. The general
+sharp bound now remains at `min(M,N)>=3`. THM-2101's additive routes are corroborative, not `GMC2Main.gmc2`
 dependencies.  HYP-8931 is vacuous by its empty level set (MISTAKE-240), while
 THM-2070 refutes the general HYP-8890/8895 bypasses.  Transfer
 `seed/selector/preserver/exit` without mistaking a preserver for a seed.
@@ -324,10 +333,16 @@ lift/phase clocks.
   counterexample relative to cited soundness; one-sort completeness remains a
   preprint claim, and no arithmetic/tournament transfer follows.
 - **Integral observers:** THM-4000 compiles consecutive values; THM-4010 gives kernel `(F^k)`, index `product(j!)^(k^2)`, rank `k min(m+1,p)`, and its first positive exponent.
-  THM-4080 gives the two-jet single-scale partition for `s<p`. The [complete-residue extension](../05-knowledge/results/synthesis_20260905_wildcard_smith_boundary.md) closes `s=p` with an exact one-unit saturation correction, extending consecutive layers through `n<=p^2`. Larger multiscale clusters and higher jets remain **OPEN**.
-- **Even-graph spectrum:** THM-4083 closes `D=3,4`; THM-4084/[4200](../01-canon/theorems/THM-4200-even-graph-four-edge-d5-frustration-firewall.md)
-  force any new `D=5` equality/counterexample into `b=0`, frustration `>=5`.
-  Full `D=5` is **OPEN** beyond `n=6,7,8` (MISTAKE-496).
+  THM-4080 closes one-scale `s<p`.
+  [THM-4419](../01-canon/theorems/THM-4419-twojet-prime-wall-precision-and-dyadic-triple-smith-law.md)
+  records the [independently concurrent](../05-knowledge/results/synthesis_20260905_wildcard_smith_boundary.md)
+  `s=p` closure and consecutive `n<=p^2`,
+  sharp precision/tensor laws, and every-depth dyadic triple partition.
+  General multiscale clusters and higher jets remain **OPEN**.
+- **Even-graph spectrum:** THM-4083 closes `D=3,4`;
+  [THM-4416](../01-canon/theorems/THM-4416-even-graph-cumulative-d5-d6-spectral-gap.md)
+  closes `D=5,6` for every admissible `n`, with exactly single-edge equality.
+  Finite local cycle comparisons repair deletion; `D>=7` remains **OPEN**.
 - **AMM:** [THM-4086](../01-canon/theorems/THM-4086-rule-a-transition-clock-and-phase-cocycle.md) proves a fixed-policy `R=32768` clock/cocycle; no global monotonicity, all-`R`, or `C*` result.
 - **Knots:** THM-2176/2191/2281 and THM-2242/2330--2383: localization, owner/ANOVA/rectangle/reference inversion; realization/stable diagonal open. THM-2646: modular/exponent `B3` conjugacy, not Markov invariance.
 - **Flows:** [THM-2177](../01-canon/theorems/THM-2177-planar-counterexample-to-goemans-unsplittable-cost-flow-conjecture.md): planar `58<60` refutes exact `d_max`; planar `2d_max` survives.

@@ -1,10 +1,13 @@
-# Full-residue two-jet Smith wall: proof candidate and exact audit
+# Full-residue two-jet Smith wall: proof and exact audit
 
-**Status: PROVED CANDIDATE / awaiting independent mathematical audit and
-canon promotion.** This note closes the `s=p` formula left open by
+**Status: PROVED + VERIFIED-EXACT + INDEPENDENTLY AUDITED.** The complete
+proof, independent mathematical review, and independent SymPy Smith/minor
+audit are incorporated in
+[THM-4419, two-jet prime-wall precision and dyadic triple Smith law](../../01-canon/theorems/THM-4419-twojet-prime-wall-precision-and-dyadic-triple-smith-law.md).
+This note closes the `s=p` formula left open by
 [THM-4080, confluent two-jet single-scale Smith partition](../../01-canon/theorems/THM-4080-confluent-two-jet-single-scale-smith-partition.md).
-The theorem identifier is deliberately unreserved here. Claims marked below
-are proved in this note; the separate computational census is FINITE-EXACT.
+The statements below are proved in their stated scopes; the separate
+computational census is FINITE-EXACT.
 
 **Concurrent-result integration (2026-09-05):** incoming commit `566677ae1d`
 already proves precisely the `s=p` partition and `n<=p^2` corollary in

@@ -50,6 +50,17 @@
   Matching scripts, transcripts and cross-lane audits use
   `synthesis_20260905_*`. LRC(14), uniform trinomial two-rung coprimality,
   higher/multiscale Smith layers, graph entry, JC(2), and DC(2) remain OPEN.
+- [September 5 cross-thread synthesis](../../07-reflections/portfolio-synthesis-sep05-return-orders-local-profiles-and-integral-depth.md):
+  [THM-4416](../../01-canon/theorems/THM-4416-even-graph-cumulative-d5-d6-spectral-gap.md)
+  proves all-order D5/D6 gaps;
+  [THM-4417](../../01-canon/theorems/THM-4417-width-two-laurent-first-return-parabolic-critical-bound.md)
+  proves the width-two linear first-return bound;
+  [THM-4418](../../01-canon/theorems/THM-4418-lrc14-sharp-pair-arithmetic-and-forty-four-thirteenths-tail.md)
+  closes the odd ternary-unit `c/b>=44/13` local LRC tail;
+  [THM-4419](../../01-canon/theorems/THM-4419-twojet-prime-wall-precision-and-dyadic-triple-smith-law.md)
+  gives precision/tensor and dyadic-triple Smith laws, with explicit credit
+  for the concurrent full-residue closure. Proofs and paired source/output
+  artifacts are linked from each theorem; global residuals remain explicit.
 
 - `lrc14_owner_transversality_norm18_empty_atlas_thm4413.out` and its
   independent affine-fibre audit -> arithmetic roof transversality and the

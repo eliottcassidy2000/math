@@ -11,10 +11,13 @@ status: >
   multiset union of these profiles over the residue classes modulo p. This
   extends the earlier p<n<=2p pair band to a quadratic range. The bound s<p
   is load-bearing: at s=p the derivative-row matroid loses one rank and the
-  displayed profile already fails for p=2 and p=3. Larger clusters and the
-  complete global Smith form remain open. The independently audited
-  2026-09-05 extension linked below closes the complete-residue s=p boundary
-  with a one-unit saturation correction and extends consecutive n to p^2.
+  displayed profile already fails for p=2 and p=3. THM-4419,
+  twojet-prime-wall-precision-and-dyadic-triple-smith-law, now proves the
+  corrected s=p profile and extends the consecutive-node range to n<=p^2;
+  the independently audited 2026-09-05 synthesis linked below proves the
+  same boundary correction. THM-4419 also closes one all-depth dyadic
+  triple family and gives sharp observer precision. Arbitrary larger
+  clusters, higher jet orders, and the complete global Smith form remain open.
 source: codex-frontier-synthesis-creative-20260825e / integral-observer wildcard
 audit: >
   PASS. The primary DVR path checks 132 single-scale profiles across
@@ -31,6 +34,7 @@ depends_on:
 related:
   - THM-4000-centered-base-split-cubic-observer-and-tripotent-crt-atlas
   - THM-4064-rule30-cyclotomic-kernel-character-and-c60-alias-obstruction
+  - THM-4419-twojet-prime-wall-precision-and-dyadic-triple-smith-law
 script: 04-computation/confluent_twojet_single_scale_smith_thm4080.py
 output: 05-knowledge/results/confluent_twojet_single_scale_smith_thm4080.out
 script_sha256: 10c4a24dd28912cac1b167c89abb7b5cc26d389c7ee5400beb34695068cba733
@@ -50,7 +54,8 @@ omitted. Thus the consecutive-node partition is now known through `n<=p^2`.
 The old formula still fails at `s=p`; saturation of its missing derivative
 line costs exactly one `p`, not one scale `e`.
 [Full proof, exact controls and independent audit](../../05-knowledge/results/synthesis_20260905_wildcard_smith_boundary.md).
-Larger multiscale clusters and higher jets remain open.
+General multiscale clusters and higher jets remain open; the scoped dyadic
+triple and sharp-precision continuation is recorded in THM-4419 below.
 
 **PROVED + VERIFIED-EXACT + INDEPENDENTLY VERIFIED-EXACT.** THM-4010
 determines the zero layer, the first positive layer, and a two-node cluster.
@@ -58,6 +63,12 @@ The later layers become transparent while a residue cluster occupies only one
 new p-adic scale: each minor pays for its column degrees and receives one
 unit of scale back for every derivative row. The residual confluent
 evaluation matroid says exactly when that lower tariff is attained.
+
+**Current continuation:**
+[THM-4419, two-jet prime-wall precision and dyadic triple Smith law](THM-4419-twojet-prime-wall-precision-and-dyadic-triple-smith-law.md)
+closes the corrected `s=p` wall by one derivative-lattice saturation step,
+and extends the complete consecutive-node `p`-partition to `n<=p^2`.
+The original `s<p` formula and its proof below retain their stated scope.
 
 ## 1. Statement
 
@@ -249,9 +260,20 @@ residual matroid uniform. The cheapest decisive hostile is `s=p`, where that
 sidecar fails and the derivative rank drops.
 
 This theorem determines every positive p-layer in the stated single-scale
-and consecutive quadratic scopes. It does not give the partition for a
-cluster of size at least `p`, the full Smith form for arbitrary `m,k`, or any
-automatic Rule-30, Jacobian, factorial, or LRC consequence.
+and consecutive quadratic scopes. The original argument stops at `s=p`;
+[THM-4419, two-jet prime-wall precision and dyadic triple Smith law](THM-4419-twojet-prime-wall-precision-and-dyadic-triple-smith-law.md)
+now proves the corrected boundary profile
+
+```text
+(0,0,e,...,(p-2)e,(p-1)e+1,
+ (p+1)e,...,(2p-2)e,(2p-1)e-1),
+```
+
+and hence the consecutive-node partition through `n<=p^2`. Its separate
+dyadic triple law closes nodes `(0,2^e,2^(e+1))` for every `e>=0`, but
+arbitrary multiscale clusters and the full Smith form for arbitrary `m,k`
+remain open. Neither result supplies an automatic Rule-30, Jacobian,
+factorial, or LRC consequence.
 
 ## 6. Exact audits
 

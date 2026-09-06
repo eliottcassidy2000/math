@@ -207,13 +207,21 @@ w=(1,11,23), pair=(1,11), U_net=12/161,
 Across all `8,730` pair choices, maximum flow equals the sum of edgewise
 minimum capacities. This was initially FINITE-EXACT through height 79.
 The [2026-09-05 sparse transport extension](../../05-knowledge/results/synthesis_20260905_lrc_sparse_transport.md)
-now proves it at **every height**: the graphs are star forests and their
-edge minima are simultaneously feasible. More generally, gaps at least twice
-each shore's maximum interval length suffice; finite intersections inherit
-that separation. The extension also identifies the exact raw-lattice roof
-formula and the carrier-dependent selector lost by minimizing after summing.
-It does not prove the universal sharp `6/77` inequality; arbitrary weighted
-flows do not inherit the unweighted identity.
+and the now-proved
+[THM-4414 — six-separated contact capacity collapse](THM-4414-lrc14-six-separated-contact-capacity-collapse.md)
+establish it at **every height**: the graphs are star forests and their edge
+minima are simultaneously feasible. More generally, gaps at least twice each
+shore's maximum interval length suffice; finite intersections inherit that
+separation. They also identify the exact raw-lattice roof formula and the
+carrier-dependent selector lost by minimizing after summing.
+
+The self-contained proof in
+[THM-4418 — sharp pair arithmetic and forty-four-thirteenths tail](THM-4418-lrc14-sharp-pair-arithmetic-and-forty-four-thirteenths-tail.md)
+recovers that identity and closes every ordered odd ternary-unit triple
+`a<b<c` with `c/b>=44/13`, using the fixed pair `(a,b)`. These statements
+concern constant length capacities; arbitrary weighted capacities retain
+their separate flow problem. The universal sharp `6/77` inequality remains
+open in the complementary comparable-speed region.
 
 The first strict information-loss hostile in lexicographic order is
 
@@ -249,8 +257,9 @@ Normal, optimized, and fixed-hash-seed streams byte-match the frozen LF
 outputs. The primary records `43,723` live checks; the referee records
 `3,294,491`. Neither relies on `assert`.
 
-The next sharp question is whether the minimum of the three rational
-capacities in `(11)` stays at most `6/77` beyond height `79`, or which exact
-triple is its first hostile. Even a universal local theorem would still lack
-chart entry and synchronization with the other eleven speeds. `LRC(14)`
-remains **OPEN**.
+After THM-4418, the remaining sharp question is whether the minimum of the
+three rational capacities in `(11)` stays at most `6/77` for ordered triples
+`a<b<c` in the region `c/b<44/13` at unbounded height, or which exact triple
+is its first hostile. Even a universal local theorem would still lack chart
+entry and synchronization with the other eleven speeds. `LRC(14)` remains
+**OPEN**.

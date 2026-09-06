@@ -17,7 +17,10 @@ status: >
   explicit nonzero multiple of CT(f^m_*). Beyond the small-root
   logarithmic identity the proof is Galois-free. For a=1 the bound is the
   sharp d=M+N. This supplies an unconditional effective seed bound for
-  THM-2022, but it does not prove the open sharp d bound for general a,b.
+  THM-2022. The separate parabolic-critical argument in
+  THM-4417-width-two-laurent-first-return-parabolic-critical-bound now proves
+  the sharp d bound for a=2. The general sharp d bound for a>=3 remains open;
+  this compound proof continues to give the stated binomial bound.
 source: codex-2026-07-22-gmc-paper-audit
 depends_on: []
 related:
@@ -27,6 +30,7 @@ related:
   - THM-1650-newton-polygon-of-the-effective-dvdk-bound
   - THM-2067-galois-orbit-product-closes-one-variable-dvdk
   - THM-2070-horizontal-wick-embedding-and-dihedral-return-cancellation
+  - THM-4417-width-two-laurent-first-return-parabolic-critical-bound
 script: 04-computation/tnc_compound_root_effective_bound_codex_20260722.py
 output: 05-knowledge/results/tnc_compound_root_effective_bound_codex_20260722.out
 script_sha256: 41aa720913c8bffeced16384b1dd6556537c0c129686ed16a7dba927bca75f3f
@@ -75,8 +79,11 @@ C=d=M+N.                                                   (2)
 
 Thus the theorem proves the sharp Sturmfels bound on the entire
 `min(M,N)=1` boundary, while giving a finite exponential-size bound in every
-bidegree.  It does **not** prove the conjectural bound `m<=M+N` when
-`min(M,N)>=2`.
+bidegree. This compound proof does **not** reach `m<=M+N` when
+`min(M,N)>=2`. The separate argument in
+[THM-4417, width-two Laurent first-return parabolic critical bound](THM-4417-width-two-laurent-first-return-parabolic-critical-bound.md)
+now proves it for `min(M,N)=2`, including a stronger distinct-critical-point
+bound. The remaining general sharp-width problem is `min(M,N)>=3`.
 
 Replacing `u` by `u^(-1)` preserves every constant term and exchanges `M`
 and `N`.  We may therefore orient the polynomial so that its negative width
@@ -413,7 +420,11 @@ trying to prove `A=O(1)` cannot improve `C` to `a+b`.
    `u^(-1)+u^N` has first return `N+1=d`, so (2) cannot be improved on that
    boundary.
 4. **The general estimate is deliberately crude.**  At `(M,N)=(2,2)`, for
-   example, (1) gives `C=6`, whereas the conjectural sharp bound is `4`.
+   example, (1) gives `C=6`, whereas the sharp bound is `4`.
+   [THM-4417, width-two Laurent first-return parabolic critical bound](THM-4417-width-two-laurent-first-return-parabolic-critical-bound.md)
+   proves the width bound on the entire `min(M,N)=2` boundary by converting
+   small-root contact to parabolic petal cycles; it does not change this
+   compound-family proof.
    Complement duality removes the earlier uniform pole-clearing loss, but the
    compound family still has `C` members.  Replacing that family-size degree by
    the original root degree `d`, or proving that contact beyond `d+1` forces
@@ -427,9 +438,10 @@ trying to prove `A=O(1)` cannot improve `C` to `a+b`.
    prime may still depend on the algebraic coefficients, so this is not a
    coefficient-uniform bound on the final Gaussian moment order.
 
-The surviving sharp problem is now concrete: replace the full compound-family
-degree `C` by enough structure to force contact degree at most `d`.  The
-theorem above proves a finite bound without claiming that open sharpening.
+For `min(M,N)>=3`, the surviving general sharp problem is concrete: replace
+the full compound-family degree `C` by enough structure to force contact
+degree at most `d`. The theorem above proves a finite bound without claiming
+that remaining open sharpening.
 
 ## 8. Paper-proof dependency audit
 

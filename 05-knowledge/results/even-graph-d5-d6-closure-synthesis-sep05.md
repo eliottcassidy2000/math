@@ -1,8 +1,9 @@
 # Cumulative signed-cycle gaps at D=5 and D=6
 
-**Status: PROVED CANDIDATE, pending final independent proof review and canon
-promotion.** Both finite bases and the local comparison lemmas have passed
-two independent exhaustive exact implementations. This note supplies the
+**Status: PROVED with FINITE-EXACT lemmas; INDEPENDENTLY AUDITED.** Canonical
+entry: [THM-4416](../../01-canon/theorems/THM-4416-even-graph-cumulative-d5-d6-spectral-gap.md).
+Both finite bases and local comparison lemmas passed two independent exhaustive
+exact implementations; the all-order proof passed an independent review. This supplies the
 all-order induction, including equality. It makes no external priority claim.
 
 ## Inheritance
