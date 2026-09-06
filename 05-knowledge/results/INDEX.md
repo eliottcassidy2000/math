@@ -10,6 +10,23 @@
   [Manifest](overnight10_20260906_manifest.json):12 frozen artifacts.
   Extremal grid asymptotics and full ambient Boolean spectra remain OPEN.
 
+- [Uniform stability and exponential closure](signed_uniform_stability_empty_core_next_sep06.md):
+  **PROVED ANALYTICALLY + FINITE-EXACT + INDEPENDENTLY AUDITED.**
+  Approaching the sharp uniform duplication margin is equivalent to two
+  normalized roots tending to `1/sqrt(2)` and vanishing square mass in the
+  rest, and to locally uniform convergence to
+  `(1+s/sqrt(2))^2 exp[(1-sqrt(2))s]`. Mixed-sign dust is possible; its
+  signed first moment is fixed. A short sphere inequality independently
+  proves the uniform constant and classifies its two equality boundaries.
+- [Joint shadows sharpen the hereditary gcd bounds](lrc14_joint_shadow_empty_core_next_sep06.md):
+  **PROVED RELATIVE TO CITED LOWER-RUNNER LRC + FINITE-EXACT +
+  INDEPENDENTLY AUDITED.** Three-mask residue constraints exclude clocks32 and96, improving the
+  eight- and seven-speed subset gcd ceilings to **30 and90**. The new
+  complete arithmetic relaxation has109 and1213 signatures. Exact actual
+  rows at both new maxima have a fully spoiled body-safe phase and a safe
+  full-row witness elsewhere; both satisfy all the global gcd ceilings.
+  The rational-grid realization lemma retains the distinction between
+  choosing tails and finding a common phase for already fixed tails.
 - [Ninth overnight synthesis](overnight_20260906_synthesis.md):
   **PROVED + INDEPENDENTLY AUDITED.** [Virtual pair walls](overnight9_20260906_lrc_virtual_pair_wall.md)
   select explicit safe LRC components; the [sharp margin](overnight9_20260906_lrc_virtual_pair_wall_margin.md)

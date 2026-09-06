@@ -6,11 +6,16 @@ unbounded in speed height. The finite computation enumerates complete
 arithmetic signatures after a proved cutoff; it does not enumerate or
 construct counterexamples to LRC(14).
 
+**Current strengthening:** [joint residue shadows](lrc14_joint_shadow_empty_core_next_sep06.md)
+improve the last two ceilings to **30 and90**. The complete CRT/Hunter
+relaxation and its frozen certificates below remain the input to that
+stronger theorem.
+
 Let `V` be a primitive set of thirteen distinct positive integer speeds,
 and put `M(V)=max_x min_(v in V)||vx||`. If `M(V)<1/14`, then every subset
 `P` of the indicated size satisfies:
 
-| `|P|` | largest possible `gcd(P)` after this sieve | number of retained gcd values | number of sorted signatures, including gcd one |
+| size of P | largest possible `gcd(P)` after this sieve | number of retained gcd values | number of sorted signatures, including gcd one |
 |---:|---:|---:|---:|
 | 12 | 1 | 1 | 1 |
 | 11 | 2 | 2 | 2 |

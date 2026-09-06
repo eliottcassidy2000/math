@@ -1,0 +1,108 @@
+STATUS: independent exact audit PASS; actual LRC(14) remains OPEN
+UNIVERSE: every affine unit capacity block at q=8,10,15,16,32;
+          every two q8 masks with one q32 mask; one q30 partition
+{
+  "block_counts": {
+    "8": 16,
+    "10": 20,
+    "15": 60,
+    "16": 64,
+    "32": 256
+  },
+  "clock30_partition": [
+    [
+      2,
+      3,
+      4,
+      17,
+      18,
+      19
+    ],
+    [
+      7,
+      8,
+      9,
+      22,
+      23,
+      24
+    ],
+    [
+      12,
+      13,
+      14,
+      27,
+      28,
+      29
+    ],
+    [
+      0,
+      1,
+      10,
+      11,
+      20,
+      21
+    ],
+    [
+      5,
+      6,
+      15,
+      16,
+      25,
+      26
+    ]
+  ],
+  "disjoint_order8_pairs": 72,
+  "full_clock32_union_bound": 31,
+  "maximum_triple_union": 20,
+  "new_five_tail_clocks": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    8,
+    9,
+    10,
+    12,
+    15,
+    16,
+    18,
+    24,
+    30
+  ],
+  "pair_minima": {
+    "16,32": 0,
+    "32,32": 0,
+    "8,16": 0,
+    "8,32": 0,
+    "8,8": 0
+  },
+  "six_tail_immediate_exclusions": [
+    [
+      32,
+      [
+        1,
+        1,
+        2,
+        4,
+        4,
+        32
+      ]
+    ],
+    [
+      64,
+      [
+        1,
+        1,
+        2,
+        4,
+        4,
+        32
+      ]
+    ]
+  ],
+  "triple_configurations": 34816
+}
+gates: 54792
+semantic_sha256: e5bd026c32fd2675df1318577e2aca7b1aec02ddedbfbc753696e0c7101e4b59

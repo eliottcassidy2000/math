@@ -270,6 +270,28 @@ live theorem surfaces were corrected.
 
 These are rejected proof shortcuts, not retractions of scoped canon.
 
+- **Vanishing moment gap loses its energy scale:** in normalized signed
+  duplication the gap `g=(sqrt(2)-1)-p3+(2-sqrt(2))p4` tends to zero both
+  at the sharp two-atom limit and at the one-atom zero-energy boundary.
+  The exact family `(1,t,-t/(1+t))`, after normalization and `t->0`, has
+  ratio D/E identically1. Thus a vanishing numerator alone cannot certify
+  near equality at `(13-8sqrt(2))/3`. Retaining the quotient excludes the
+  one-atom boundary. Conversely an explicit tuned mixed-sign dust family
+  approaches the sharp ratio with nonzero positive and negative dust first
+  moments, refuting single-sign dust rigidity. The repaired result is
+  square-norm two-atom stability and a fixed signed dust sum, equivalent
+  to a unique locally uniform exponential closure.
+  [Proof, exact hostiles and independent audits](../05-knowledge/results/signed_uniform_stability_empty_core_next_sep06.md).
+- **Separate pair minima need not occur together:** at clock32, the
+  signature with orders `(32,32,16,8,8)` has total padded size32 and every
+  pair type admits disjoint masks. A full cover would require a partition,
+  but two disjoint order8 masks occupy four classes modulo8, forcing an
+  intersection with each five-term order32 mask. The first false inference
+  is joint attainability from separate pair optima. Retaining three shadows
+  gives union at most31; a related clock96 case split improves the current
+  subset gcd ceilings to30 and90. Both new boundary clocks have exact actual
+  spoiled body-safe phases with safe full rows, so the next coordinate is
+  body-phase selection. [Proof and boundary realizations](../05-knowledge/results/lrc14_joint_shadow_empty_core_next_sep06.md).
 - **Padded intersections need padded sizes:** at clock6 and body phase
   `1/2`, tails2 and3 have empty actual bad sets, but their capacity-sized
   padded order3/order2 blocks must meet once. Subtracting that credit from
@@ -299,8 +321,10 @@ These are rejected proof shortcuts, not retractions of scoped canon.
   product of exactly two positive and two negative roots. Retaining degree
   and sign partition repairs the statement: the quartic theorem, equality
   and stability are proved, while the general THM-4440 bound `1/3` survives.
-  The next question is the sharp degree-dependent bound on realizable root
-  products. [Proof, hostile and independent audit](../05-knowledge/results/signed_duplication_stability_empty_core_sep06.md).
+  The [subsequent all-degree theorem](../05-knowledge/results/signed_degree5_empty_core_next_sep06_uniform.md)
+  now supplies the sharp degree-dependent constants and their uniform
+  infimum; the dimensional hostile remains valid.
+  [Original proof, hostile and independent audit](../05-knowledge/results/signed_duplication_stability_empty_core_sep06.md).
 - **Four-node metric quotient:** at prime three, `(0,9,27,81)` and
   `(0,9,54,81)` have the same entire labeled distance tree, determinant
   valuation 64, and largest Smith exponent 22, but intermediate exponents

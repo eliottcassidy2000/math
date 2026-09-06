@@ -234,6 +234,13 @@ such a deletion loses. In the ordinary-root picture the small reciprocal
 roots escape to infinity. No entire-function or arbitrary Laurent claim is
 needed to prove (2); (13) only explains the sharp uniform limit.
 
+The subsequent [uniform stability theorem](signed_uniform_stability_empty_core_next_sep06.md)
+classifies every near-minimizing sequence, including mixed-sign dust, and
+upgrades the coefficientwise extremal limit to a locally uniform polynomial
+closure. Its auxiliary sphere inequality gives a separate elementary proof
+of the strict uniform constant; the finite-degree constants and equality
+classification above remain additional scope.
+
 ## 6. Exact controls and audit manifest
 
 [Source](../../04-computation/signed_degree5_empty_core_next_sep06_uniform.py)

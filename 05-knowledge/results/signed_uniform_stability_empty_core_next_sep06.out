@@ -1,0 +1,17 @@
+PASS uniform signed-duplication stability and exponential closure
+Theorem: J->cstar iff two normalized +1/sqrt2 atoms plus dust square mass->0
+Equivalent closure: (1+s/sqrt2)^2 exp[(1-sqrt2)s], locally uniformly
+Sphere maximizers: one +1 atom OR two +1/sqrt2 atoms; one-atom ratio->1
+Declared exact universe: 6 sphere rows; 5 mixed-sign dust rows; 4 boundary rows
+MIXED L= 6 beta= (12)+(-6)sqrt(11/3) J= (79563/77509)+(-8720/77509)sqrt(11/3) E= (2273/6144)+(-79/2048)sqrt(11/3)
+MIXED L= 10 beta= (4)+(-2)sqrt(3) J= (247111/235449)+(-14480/78483)sqrt(3) E= (1503/4000)+(-27/500)sqrt(3)
+MIXED L= 25 beta= (5/2)+(-5/4)sqrt(12/5) J= (181256/134019)+(-370225/804114)sqrt(12/5) E= (548316/1500625)+(-19422/300125)sqrt(12/5)
+MIXED L= 100 beta= (40/19)+(-20/19)sqrt(21/10) J= (147900488479/59265573921)+(-26070959200/19755191307)sqrt(21/10) E= (89678133/292820000)+(-263223/7320500)sqrt(21/10)
+MIXED L= 400 beta= (160/79)+(-80/79)sqrt(81/40) J= (57613992385631/15902893508769)+(-34145122345600/15902893508769)sqrt(81/40) E= (60444765783/226060880000)+(-16202943/1412880500)sqrt(81/40)
+BOUNDARY t= 1/2 E= 72/343 gap= (-180/343)+(144/343)sqrt(2) J=1
+BOUNDARY t= 1/10 E= 24200/1367631 gap= (-60500/1367631)+(48400/1367631)sqrt(2) J=1
+BOUNDARY t= 1/100 E= 204020000/1030607060301 gap= (-510050000/1030607060301)+(408040000/1030607060301)sqrt(2) J=1
+BOUNDARY t= 1/1000 E= 2004002000000/1003006007006003001 gap= (-5010005000000/1003006007006003001)+(4008004000000/1003006007006003001)sqrt(2) J=1
+Mixed-sign dust limit: positive sum sqrt2-1; negative sum -2(sqrt2-1)
+Exact gates: 99
+Trace SHA256: edbb2b086b5981ffcd7f1fb0befd197550e2ee628f20862b30aa034441667167

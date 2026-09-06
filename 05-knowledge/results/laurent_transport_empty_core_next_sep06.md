@@ -394,6 +394,32 @@ mixed-product identity is claimed in this note.
 | Hit/skip signs to the full response | Exact lower carry and both parity classes | A positive skip requires its magnitude, not only its sign; survivor (8) |
 | Source-paper replacement method to this probe | A smallest useful witness retaining the proposed invariants | The analogy is methodological only; no geometric theorem is transported |
 
+### Incoming weighted-midpoint invariant
+
+The subsequently integrated [weighted midpoint theorem](nc2_weighted_midpoint_overnight_hexagon_sep05.md)
+proves a stronger predicate for the actual individual path factors: the
+full midpoint-deletion pencil is PF for every nonnegative weight. In the
+squared-root variable of Section2 this gives the real-rooted pencil
+`w B(v)^2-2v C(v)D(v)`. Root and `orthogonal_returns` read the incoming
+proof and compared its exact predicate with this note.
+
+Our Euler-coupled hostile fails that added predicate already at the B-roots
+v=1 and3: `C(v)D(v)<0`, so the defect `-2v C(v)D(v)` is positive. The
+incoming square-pencil degeneration lemma then excludes real-rootedness
+for arbitrarily large positive w. This pinpoints an actual-path invariant
+that the Euler/PF abstraction lost. The hostile remains a valid refutation
+of its stated weaker implication.
+
+Conversely the incoming cubic Hadamard hostile retains the whole weighted
+pencil but does not retain our two Euler identities and common binomial
+carrier. Neither hostile settles the model preserving both collections
+of predicates. A cheap next test can therefore retain the weighted pencil,
+the Euler relations, the common binomial factor and the original joint
+zero together. The exact composition recurrence remains available as the
+fully specified target. Individual-factor signs concern their own roots;
+the zero-preserving lowering above acts at the original joint constraint,
+so transferring one conclusion to the other still requires a proof.
+
 ## 5. Verification, controls, and reproduction
 
 The standalone [source](../../04-computation/laurent_transport_empty_core_next_sep06.py)

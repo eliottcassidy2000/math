@@ -1,0 +1,10 @@
+STATUS: PROVED c96 padded-mask exclusion; actual c90 common-phase cover; LRC14 remains OPEN
+c96_affine_mask_counts {8: 16, 16: 64, 24: 96, 32: 256, 96: 1536}
+literal_pair_cases 150016 literal_disjoint_shadow_triples 9216
+c96_case_union_bounds {"first": {"EA": 93, "EB": 93, "ED": 92, "avoid": 93}, "second": {"EA": 94, "EB": 94, "ED": 93, "avoid": 95}}
+c90_gcds (2, 2, 2, 3, 3, 6) q_start_unit [(45, 8, 1), (45, 23, 1), (45, 38, 1), (30, 3, 1), (30, 18, 1), (15, 0, 1)]
+c90_actual_tail_speeds (542, 55082, 25292, 211773, 30513, 51126) body_phase (126, 1009) full_row_safe_time (1, 1260)
+c90_mask_hex ['0xfe0000000007f00', '0x7f0000000003f800000', '0x3f8000000001fc000000000', '0xf8000003e000000f8', '0x7c000001f0000007c0000', '0x38007000e001c0038007']
+gates 191773
+mask_atlas_sha256 bfe4220ccb9f7fd43f1ecd74a054252a402220c20712eebaab77be42578ab602
+semantic_sha256 73edd07034335984d6bf0a1c1a9c78eb51a0d6c17b4602383c65269291440a31
