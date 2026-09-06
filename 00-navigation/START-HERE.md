@@ -54,16 +54,14 @@ Then read frontier, guardrails, theorem; logs are history.
     Composite rank seven and FC(3) remain open.
 12. **JC fails from dimension three; JC(2), DC(2) are open.** THM-2084/4248/
     4226 close named `M=10/11/13` cases; THM-4290--4356 stage `M=12`.
-    THM-4380/4388 close the complete fixed weight-12/13 families by row 12;
-    THM-4385/4389 describe the intervening elliptic carrier/pencil. THM-4390
-    absorbs weight-14 row nine;
-    THM-4395 makes row ten globally `A^6` with `A^8` fibres, even at `Phi=0`.
-    THM-4399/4403/4410 extend three selected late channels through rows 11--13
-    (`A^4` source, `A^9` terminal); complete weights 15--20 and entry are open.
-    THM-4397/4401 identify Long's gauge and punctured planar shadows. THM-4404/
-    4411 show the fixed-`x` seminormal miss is exactly first-order collision
-    failure; THM-4412 realizes the missing jet only after a non-descended
-    suspension.
+    THM-4380/4388 close fixed weights 12/13 by row 12; THM-4385/4389 give the
+    elliptic carrier/pencil. THM-4390/4395 reach weight-14 rows 9/10.
+    THM-4399/4403/4410 take a selected tail through rows 11--13 (`A^4` source,
+    `A^9` terminal); THM-4415 leaves one unpaid row-14 condition. Complete
+    weights 15--22 and entry are open.
+    THM-4397/4401 give Long's gauge/punctured shadows. THM-4404/4411 make the
+    fixed-`x` seminormal miss the collision period; THM-4412 needs a
+    non-descended suspension.
 13. **Complete period-14 coordinates can be globally blind.** THM-2058 keeps
     every fixed-depth packet coordinate but exits at `47/113`; THM-2043/2047/
     2050 separate local completeness from global maxima.

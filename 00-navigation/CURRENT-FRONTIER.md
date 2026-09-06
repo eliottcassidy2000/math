@@ -347,24 +347,19 @@ lift/phase clocks.
 - **Jacobian/Dixmier:** `JC(2),DC(2)` are **OPEN**. THM-4130--4378 close the
   named `M=8--12` cells; THM-4226 closes dense `M=13`. In the fixed THM-4308
   chart, THM-4380/4388 close the complete weight-12/13 families by row twelve;
-  THM-4385/4389 identify their row-ten elliptic carrier/pencil. At weight 14,
-  THM-4390 absorbs row nine and THM-4395 makes row ten globally `A^6` with
-  `A^8` fibres. THM-4399/4403/4410 use three selected late channels to reach
-  rows eleven--thirteen on a global `A^4` source with `A^9` terminal fibres.
-  Complete weights 15--20, row fourteen, and entry remain open. THM-4397
-  identifies Long's map with THM-2044; THM-4401 proves its natural planar
-  reductions are punctured cubic/Kummer models.
-  Exceptional quartic: THM-3703/3737/4034 give grammar, image, and conductor;
-  THM-4039--4067 reach `J_7`, obstruct `J_8`, and isolate the graph/seminormal
-  gap. THM-4381 gives 86 nodes, one plane triple, and `S^sn=S+K r`.
-  THM-4404/4411/4412 identify the fixed-`x` descended-form gap, its collision
-  period, and a non-descended suspension. THM-4421 finds a sharp
-  `2Z minus 6Z` gap in one integral model but proves it nongeometric: actual
-  transgressions miss the torsion and `C -> C/3` removes it. The
-  [formal triple extension](../05-knowledge/results/synthesis_20260905_transgression.md)
-  integrates compatibility using one `x` compensator and gives a second-order
-  straight-pencil hostile. Polynomial termination, full graph transgression,
-  and entry remain open.
+  THM-4385/4389 identify their row-ten elliptic carrier/pencil. For weight 14,
+  THM-4390/4395 reach rows nine/ten; THM-4399/4403/4410 carry one selected tail
+  through rows 11--13 on a global `A^4` with `A^9` fibres. THM-4415 proves
+  prefix-preserving row-14 Hamiltonians have response rank one against two
+  conditions, leaving `J_14`. Complete weights 15--22 and entry remain open.
+  THM-4397/4401 give Long's gauge and punctured planar shadows.
+  Exceptional quartic: THM-3703/3737/4034 give grammar/image/conductor;
+  THM-4381 gives 86 nodes, one plane triple, and `S^sn=S+K r`.
+  THM-4404/4411/4412 give the fixed-`x` descended-form gap, collision period,
+  and non-descended suspension. THM-4421's integral `2Z minus 6Z` gap is
+  nongeometric. A [formal triple extension](../05-knowledge/results/synthesis_20260905_transgression.md)
+  integrates one `x` compensator but has a second-order straight-pencil
+  hostile. Full graph transgression, termination, and entry remain open.
 - **Weyl boundary:** THM-2049 gives a formal beta-adic lift; finite termination remains.
 - **Planar source fibres:** THM-2063/THM-2084--2480 (including
   THM-2371/THM-2376) close the named
