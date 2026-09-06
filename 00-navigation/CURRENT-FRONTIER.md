@@ -62,8 +62,11 @@ for `d>=7`. THM-3742 is a wrong-torsor Pell `C14`; THM-3744's safe control is
   gives sharp pair mass/component bounds and closes `c/b>=44/13`. THM-4420
   closes both unit near-doubling rays; THM-4422 closes every signed norm-four
   family and gives exact deficit/Beatty rows. Fixed convex averages fail;
-  `min_i E_i<=6/77` stays open in `c/b<44/13`, with first H79 multi-ray
-  `(19,23,29)`. Arbitrary nonresonance and entry remain open.
+  [THM-4428](../01-canon/theorems/THM-4428-lrc14-two-direction-network-closure-and-sharp-one-direction-gap.md)
+  closes all one/two-direction networks, sharply `12/161` off norm four in
+  the one-ray case. The target remains open in `c/b<44/13` with at least
+  three directions; `(19,23,29)` is the first H79 dense multi-ray.
+  Arbitrary nonresonance and entry remain open.
 - **Transport/incidence:** [overnight synthesis](../05-knowledge/results/overnight_20260906_synthesis.md) combines audited one/two-ray closure, sharp full-cap bound `204/5957`, and midpoint payments. A residual failure needs at least three directions, an affine collinear triple, and unpaid count surplus.
 - **Residual ranks:** THM-4333/4338 close fixed-pool ranks three/four, not arbitrary entry.
 - **PROVED:** [THM-2928](../01-canon/theorems/THM-2928-critical-seven-comb-grid-tensorization-and-drift-tariff.md)/2941: literal zero/one/two/three-drift sectors are empty; `k=2,3` are finite.
@@ -172,6 +175,11 @@ sharp bound now remains at `min(M,N)>=3`. THM-2101's additive routes are corrobo
 dependencies.  HYP-8931 is vacuous by its empty level set (MISTAKE-240), while
 THM-2070 refutes the general HYP-8890/8895 bypasses.  Transfer
 `seed/selector/preserver/exit` without mistaking a preserver for a seed.
+
+[THM-4430](../01-canon/theorems/THM-4430-laurent-root-rotation-rigidity-and-marked-packet-genus.md)
+proves exact rational root rotations are only dilations. Primitive width-three
+marked-pair curves have explicit genus>=3 (genus65 for `z^-3+z^4`), so
+normalization does not supply the rational dynamics used at width two.
 
 [Trinomial classification](../05-knowledge/results/synthesis_20260905_moments_trinomial.md)
 proves tunability iff `a-AB in <A,B>` and the exact two-carry channel profile.
@@ -339,11 +347,17 @@ lift/phase clocks.
   `s=p`, sharp precision/tensors, and dyadic triples. The audited
   [odd-prime mixed cluster](../05-knowledge/results/overnight_20260906_smith_mixed_cluster.md)
   covers one doubled residue at arbitrary depths/lifts and extends
-  consecutive nodes to `n<=p(p+1)`. General cluster trees/higher jets are OPEN.
+  consecutive nodes to `n<=p(p+1)`.
+  [THM-4429](../01-canon/theorems/THM-4429-arbitrary-three-node-two-jet-smith-form-and-metric-precision.md)
+  gives the full integer Smith form at arbitrary three nodes; its complete
+  p-part and sharp precision depend only on the pairwise distance tree.
+  General multiscale clusters and higher jets remain **OPEN**.
 - **Even-graph spectrum:** THM-4083 closes `D=3,4`;
   [THM-4416](../01-canon/theorems/THM-4416-even-graph-cumulative-d5-d6-spectral-gap.md)
-  closes `D=5,6` for every admissible `n`, with exactly single-edge equality.
-  Finite local cycle comparisons repair deletion; `D>=7` remains **OPEN**.
+  closes `D=5,6`; [THM-4427](../01-canon/theorems/THM-4427-all-cumulative-signed-cycle-gaps-by-transposition-rigidity.md)
+  closes every `D>=7`, again with exactly single-edge equality. Transposition
+  rigidity plus a complete K8 base proves each layer `k>=8`; two zero-types
+  repair deletion. Booleanized adjacency and tournament transfer stay open.
 - **AMM:** [THM-4086](../01-canon/theorems/THM-4086-rule-a-transition-clock-and-phase-cocycle.md) proves a fixed-policy `R=32768` clock/cocycle; no global monotonicity, all-`R`, or `C*` result.
 - **Knots:** THM-2176/2191/2281 and THM-2242/2330--2383: localization, owner/ANOVA/rectangle/reference inversion; realization/stable diagonal open. THM-2646: modular/exponent `B3` conjugacy, not Markov invariance.
 - **Flows:** [THM-2177](../01-canon/theorems/THM-2177-planar-counterexample-to-goemans-unsplittable-cost-flow-conjecture.md): planar `58<60` refutes exact `d_max`; planar `2d_max` survives.

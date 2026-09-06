@@ -1,0 +1,12 @@
+n=5 cycles=12 splits=4 parity_position_gap_moment_agree=1 signed_edge_controls=1
+n=6 cycles=60 splits=5 parity_position_gap_moment_agree=1 signed_edge_controls=1
+K6_negative_C5_positive_apex=20 single_edge=24 hostile_retained=1
+n=7 cycles=360 splits=6 parity_position_gap_moment_agree=1 signed_edge_controls=1
+n=8 cycles=2520 splits=7 parity_position_gap_moment_agree=1 signed_edge_controls=1
+n=9 cycles=20160 splits=8 parity_position_gap_moment_agree=1 signed_edge_controls=1
+n=10 cycles=181440 splits=9 parity_position_gap_moment_agree=1 signed_edge_controls=1
+n=11 cycles=1814400 splits=10 parity_position_gap_moment_agree=1 signed_edge_controls=1
+classification_n=6 switching_classes=1024 rigid_classes=32 equality_exact=1 matching_hostile=1
+classification_n=7 switching_classes=32768 rigid_classes=44 equality_exact=1 matching_hostile=1
+classification_n=8 switching_classes=2097152 rigid_classes=58 equality_exact=1 matching_hostile=1
+RESULT=PASS

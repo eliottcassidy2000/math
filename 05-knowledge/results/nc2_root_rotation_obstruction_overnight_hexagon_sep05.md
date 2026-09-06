@@ -230,6 +230,14 @@ function field `C(z,S,P)` for the minimal hostile `R=1+z^7`. Then
 genus(X)=65.
 ```
 
+The **CITED** genus input is John Milnor, *Dynamics in One Complex Variable:
+Introductory Lectures*, IMS Preprint 1990/5, partially revised September 5,
+1991, [Theorem 5.1, Riemann-Hurwitz Formula](https://abel.math.harvard.edu/archive/118r_spring_05/docs/milnor.pdf#page=34),
+printed page 5-2, PDF page index 33. The theorem and its triangulation proof
+give `sum(e_x-1)=D*chi(target)-chi(source)` for a branched cover of compact
+Riemann surfaces. We use it both for the packet cover and for the self-map
+exclusion; the new work here is the explicit monodromy orbit calculation.
+
 In particular, `X` admits no holomorphic self-map of degree greater than
 one. This strengthens the rationality obstruction: it cannot be removed
 merely by replacing the z-sphere by the exact normalized packet curve.
@@ -279,6 +287,83 @@ The checker independently enumerates the entire 105-configuration
 permutation action and reproduces both cycle types, rather than trusting
 the table or numerical algebraic-curve software.
 
+### All primitive width-three binomials
+
+More generally, let `N>=1` and `gcd(3,N)=1`, and let `X_N` be the smooth
+compact normalized marked-packet curve for `f=z^-3+z^N`. Then the exact
+all-height formula is
+
+```text
+genus(X_N) = [N(N+1)(N+3)-2-floor(N^2/2)]/2.          (G)
+```
+
+It is at least three. Thus **every** such normalized curve admits no
+holomorphic self-map of degree greater than one. The cases `N=1,2` have
+genera three and thirteen even though reflection puts their first-return
+problems within the already solved width-one/two boundary. For the first
+primitive interior case `N=4`, (G) gives 65. This distinction matters: the
+obstruction concerns this exact marked-root object, not the existence of
+some other first-return proof.
+
+Proof. The connected cover `X_N -> P^1_t` has degree
+
+```text
+D=(N+3)*binom(N+2,2)=(N+3)(N+2)(N+1)/2.
+```
+
+Its monodromy and branch values are those proved in Section 2. A simple
+transposition fixes `(N+1)[1+binom(N,2)]` marked-pair configurations, so its
+ramification index sum is
+
+```text
+I=(N+1)(3N+2)/2.
+```
+
+There are `N+3` such simple branch values. At zero the permutation consists
+of a three-cycle on a block `A` and an N-cycle on a block `B`. The complete
+orbit count follows from the same six types:
+
+| Marked-root block | Pair's blocks | Number of induced cycles |
+|---|---|---:|
+| A | AA | 1 |
+| A | AB | 2 |
+| A | BB | floor(N/2) |
+| B | AA | 1 |
+| B | AB | N-1 |
+| B | BB | binom(N-1,2) |
+
+The only unordered two-point subsets of an N-cycle with period shorter
+than N are the opposite pairs for even N, with period N/2. Every other
+such pair has period N. Because both N and (when applicable) N/2 are
+coprime to three, adjoining the marked A element multiplies either period
+by three; this proves the third row. In the fifth row the relative B offset
+from the marked element gives `N-1` choices and the A element supplies the
+coprime three-cycle. In the sixth row the marked B element forces full
+period N, giving `binom(N-1,2)` cycles. Empty pair types at `N=1,2` contribute
+zero; no large-N assumption was used.
+
+The total number of zero-fiber cycles is therefore
+
+```text
+C_0=4+floor(N/2)+N(N-1)/2=4+floor(N^2/2).
+```
+
+There are no other branch values. Riemann-Hurwitz now gives
+
+```text
+2 genus(X_N)-2 = -2D+(N+3)I+(D-C_0)
+               = N(N+1)(N+3)-4-floor(N^2/2),
+```
+
+which is (G). Its genus is at least three, so the self-map exclusion follows
+exactly as in the minimal case. QED.
+
+For every coprime `N` in `1<=N<=20`, the checker independently constructs
+the complete marked-pair permutation action. It checks the full cycle-length
+multisets of both generators, not only their total orbit counts, against
+the formulas above. This finite replay checks all small parity and boundary
+cases; the unbounded theorem rests on the six-type argument.
+
 ## 5. A useful inherited width-two corollary, not a new proof mechanism
 
 If `P` is a complex polynomial with `P(0)!=0`, `e=deg P>=1`, and `k>=1`
@@ -303,13 +388,15 @@ python3 04-computation/nc2_root_rotation_obstruction_overnight_hexagon_sep05.py
 python3 -O 04-computation/nc2_root_rotation_obstruction_overnight_hexagon_sep05.py
 ```
 
-The companion output records 289 explicit failure gates: all 91 coprime
+The companion output records 373 explicit failure gates: all 91 coprime
 binomial widths `1<=M,N<=12`; exact critical-value residue separation; the
 primitive width-three degree formula for `4<=N<=20`; all three formal roots
 of the minimal hostile through degree 30 over `Q(omega)`; their independently
 checked defining equations; the trace and norm defect valuations; symbolic
 quadratic-division equations; nonprimitive dilation/collision controls; and
-the complete 105-state marked-pair cycle decomposition and genus calculation.
+the complete 105-state marked-pair cycle decomposition and genus calculation;
+and complete marked-pair actions on all 23,100 configurations for the fourteen
+primitive width-three binomials with `1<=N<=20`.
 Normal and optimized output are byte-identical. This finite replay checks
 the algebraic examples; the all-height algebraic-degree result comes from
 the proof, not the finite universe. No numerical root selection, external
@@ -318,6 +405,6 @@ priority, or new Lean verification is claimed.
 Raw-LF SHA-256 manifest:
 
 ```text
-script 5464cb524a43ca9a33d4c3b6adfd09491519781ed8a942bd5cc9f4f0a1a69a52
-output b0eb46ba5dca44a36469f7bf32cb32bceae1814acd2d0ddf7f764921975185dc
+script f078906ab85b5d8162b28d684137d3e4be3248b43d6bb9a8ac0fce1838607a49
+output 354c876c7aceaae0d07eb0a601f0a46cf97ddf7970c691ca529c6acc1925a661
 ```

@@ -6,7 +6,7 @@ status: >
   audited by direct cycle parity and integer Walsh transformation. For D=5
   at every n>=6 and D=6 at every n>=7, the cumulative negative-cycle minimum
   over nonbalanced switching classes is the single-edge value, attained only
-  by single-edge classes. D>=7 remains OPEN.
+  by single-edge classes. THM-4427 subsequently closes every D>=7.
 source: synthesis-sep05 / recovered local-profile sidecar and deletion induction
 depends_on:
   - THM-4078-even-graph-triangle-quotient-spectrum-and-boolean-noncommutation
@@ -64,5 +64,6 @@ n=6,7,8 bases, equality masks, and both local lemmas on 2,130,944 total
 switching classes. Induction is a paper proof, not finite extrapolation.
 
 The antibalanced signing still defeats individual even-layer lower bounds.
-D>=7, Booleanized quotient adjacency, tournament H>=disc, and LRC(14)
-are outside this theorem.
+The later [THM-4427, all cumulative gaps](THM-4427-all-cumulative-signed-cycle-gaps-by-transposition-rigidity.md)
+closes every D>=7. Booleanized quotient adjacency, tournament H>=disc, and
+LRC(14) are outside both theorems.

@@ -75,11 +75,12 @@ Then read frontier, guardrails, theorem; logs are history.
     expose knot continuation; MISTAKE-230--235 forbid syntax-only bridges.
     THM-4065/4085/4204/4206/4210 do not solve a prize.
 17. **Sun 2-4-6-8 is refuted:** THM-4026; later results are scoped.
-18. **Even-graph cumulative gaps now close through D=6.** THM-4416 proves
-    D5/D6 for all admissible orders; D>=7 remains open.
+18. **All cumulative even-graph gaps are closed.** THM-4427 adds every
+    D>=7 by transposition rigidity and deletion, with single-edge equality.
 19. **Two recovered boundaries have new continuations.** THM-4417 gives the
-    sharp linear Laurent-return bound at width two; THM-4419 records the
-    concurrent full-residue Smith closure, exact precision, and dyadic triples.
+    sharp linear Laurent-return bound at width two; THM-4430 explains the
+    higher-genus three-root obstruction. THM-4429 solves arbitrary three-node
+    two-jet Smith forms. THM-4428 closes one/two-direction LRC networks.
 
 ## Where to go by topic
 

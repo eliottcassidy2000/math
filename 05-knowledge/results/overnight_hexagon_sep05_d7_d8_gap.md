@@ -1,14 +1,17 @@
 # Transposition rigidity closes all remaining cumulative signed-cycle gaps
 
-**Status: PROOF CANDIDATE with FINITE-EXACT base, pending independent
-mathematical review.** The new analytic transposition argument proves the
+**Status: PROVED with FINITE-EXACT base, INDEPENDENTLY AUDITED.** The new
+analytic transposition argument proves the
 Hamilton-layer minimum at every order at least nine. Together with the
 independently audited K8 Hamilton base and the deletion lemma, it closes
 every cumulative layer D>=7, with exactly single-edge equality. The K9
 Walsh and independent path-attachment recurrences also agree exactly on
 every one of their 268,435,456 characters; this is an additional control,
-not an assumption of the analytic all-order proof. No scarce theorem
-identifier is reserved in this note.
+not an assumption of the analytic all-order proof. The canonical statement is
+[THM-4427, all-cumulative signed-cycle gaps by transposition
+rigidity](../../01-canon/theorems/THM-4427-all-cumulative-signed-cycle-gaps-by-transposition-rigidity.md)
+after independent mathematical review and literal parity/compiler-mode audits.
+The packet-genus lane and parent both checked the analytic argument.
 
 ## Inheritance, hostile, and board
 
@@ -166,7 +169,10 @@ For n=8, the independent checker builds cycles from all full vertex
 permutations, deduplicates their masks, and literally counts odd edge
 parity for every one of the 2,097,152 classes and 2,520 cycles. It uses
 no transform and imports no primary source. Its complete spectrum agrees
-with the primary path: FNV64 `e2dfba14125e7983`.
+with the primary path: FNV-style rolling digest `e2dfba14125e7983`.
+The explicit source seed is `1469598103934665603` and multiplier
+`1099511628211`; this is a reproducibility checksum, not a cryptographic
+certificate or the conventional FNV offset basis.
 
 For n=9, delete the last vertex from each Hamilton cycle. The result is a
 Hamilton path on K8 with distinct endpoints u,v. If t_u are the signs of
@@ -183,9 +189,17 @@ Hamilton cycles. The independent checker constructs these path channels
 directly, evaluates each on all 2^21 K8 classes, and then evaluates (4)
 on all 2^7 attachments. This is a distinct factorization of the computation
 and never builds the full K9 cycle-frequency vector. Its coefficient arrays
-use 112 MiB and its attachment buffer has 128 entries. The map from parent
+use 112 MiB and its attachment buffer has 128 entries. For the final full
+per-character comparison, loading the independent primary reference adds
+512 MiB, bringing the array total to 624 MiB. The map from parent
 and attachment bits to full K9 edge bits is a bijection, so all 2^28 classes
 are covered exactly once. All root/deletion incidences are retained.
+
+The final K9 comparison checked every signed sum, not just minima or a
+checksum: `full_reference_compared=1`. The independent keyed spectrum sum
+is `b68ca4e0ac0ebf9b`, agreeing with the primary path; the primary rolling
+digest is `402a35163eea3383`. K8 also passed all three paths, including
+per-character equality of the independent attachment recurrence.
 
 ## 2A. Analytic Hamilton-layer rigidity at every order at least nine
 
@@ -466,17 +480,68 @@ tournament H>=disc inequality, Boolean quotient gap, or LRC(14) theorem.
 
 ```bash
 g++ -O3 -std=c++17 -mpopcnt 04-computation/overnight_hexagon_sep05_hamilton_walsh.cpp -o /tmp/overnight_hexagon_sep05_hamilton_walsh
-/tmp/overnight_hexagon_sep05_hamilton_walsh 8
-/tmp/overnight_hexagon_sep05_hamilton_walsh 9
+/tmp/overnight_hexagon_sep05_hamilton_walsh 8 /tmp/overnight_hexagon_sep05_k8_spectrum.bin
+/tmp/overnight_hexagon_sep05_hamilton_walsh 9 /tmp/overnight_hexagon_sep05_k9_spectrum.bin
 g++ -O3 -std=c++17 -mpopcnt 04-computation/overnight_hexagon_sep05_hamilton_direct.cpp -o /tmp/overnight_hexagon_sep05_hamilton_direct
 /tmp/overnight_hexagon_sep05_hamilton_direct
 g++ -O3 -std=c++17 -mpopcnt 04-computation/overnight_hexagon_sep05_hamilton_extension.cpp -o /tmp/overnight_hexagon_sep05_hamilton_extension
-/tmp/overnight_hexagon_sep05_hamilton_extension 8
-/tmp/overnight_hexagon_sep05_hamilton_extension 9
+/tmp/overnight_hexagon_sep05_hamilton_extension 8 /tmp/overnight_hexagon_sep05_k8_spectrum.bin
+/tmp/overnight_hexagon_sep05_hamilton_extension 9 /tmp/overnight_hexagon_sep05_k9_spectrum.bin
+g++ -O3 -std=c++17 -mpopcnt 04-computation/overnight_hexagon_sep05_transposition_audit.cpp -o /tmp/overnight_hexagon_sep05_transposition_audit
+/tmp/overnight_hexagon_sep05_transposition_audit
+python3 04-computation/overnight_hexagon_sep05_transposition_symbolic.py
+python3 -O 04-computation/overnight_hexagon_sep05_transposition_symbolic.py
 ```
 
 The exploratory full-profile source is
 `04-computation/overnight_hexagon_sep05_d7_profile.py`; its local comparison
-search is not needed by the final all-order argument. Final outputs, hashes,
-and optimization-independent replay are to be frozen after the independent
-extension completes.
+search is not needed by the final all-order argument. Its reported floating
+ratio was only exploratory; the comparison `3c8-4c6>=0` is now checked
+independently with exact integer arrays in that source.
+
+The transposition checker enumerates every unoriented Hamilton cycle on
+K5 through K11 and every split `0<=r<=n-2`. Literal edge parity, three
+cycle-position contributions, and a separate enumeration of deleted-cycle
+crossing-gap moments/insertion counts all agree with (9). It also enumerates
+every switching class on K6, K7 and K8, obtaining exactly 32, 44 and 58
+classes satisfying (11), equal to `{B,A}` and the two signed edge families.
+The negative-C5/apex hostile gives 20 rather than 24, and two disjoint
+negative edges fail the rigidity predicate. Thus the algebraic threshold,
+equality classes and false overgeneralization all have explicit controls.
+
+The symbolic checker uses rational polynomial identities for (9), (10),
+(16), the deletion ratio and strict concavity. Positivity for all n>=9
+comes from the exact shifted polynomials with positive coefficients; its
+additional integer-endpoint checks through n=200 are finite corroboration,
+not the all-order proof. Normal and optimized Python outputs are identical.
+The independent C++ transposition audit also gives identical output under
+`-O0` and `-O3`; all failure gates are explicit, not removable assertions.
+
+Frozen output records are the same-stem `hamilton_walsh8.out`,
+`hamilton_direct8.out`, `hamilton_extension8.out`, `hamilton_walsh9.out`,
+`hamilton_extension9.out`, `transposition_audit.out` and
+`transposition_symbolic.out` in this results directory. Large native-endian
+temporary spectrum binaries are replay artifacts, not portable proof files;
+regenerate them on the same host as the independent comparison.
+
+### Frozen raw-LF SHA-256 manifest
+
+Paths below are relative to the repository root. The source and output
+hashes provide artifact integrity, not a substitute for the mathematical
+proof or independent full-spectrum comparison.
+
+```text
+c186bf9ef61d6557798a30439a4c1d0c407c894edf13515032ea1819d033812e  04-computation/overnight_hexagon_sep05_hamilton_walsh.cpp
+68a96abdac3f62538df92bdb0288e62e536e25f7819b0036a3965e583530a6be  04-computation/overnight_hexagon_sep05_hamilton_direct.cpp
+5f4a13e5ad564069c420b79d17376485e614a992ff727ecf051e7e2f8e8b266f  04-computation/overnight_hexagon_sep05_hamilton_extension.cpp
+7baa74c5779bdf6298d3892f76d26ff7c0988b111f2633333414b37dd369a5f3  04-computation/overnight_hexagon_sep05_transposition_audit.cpp
+8ca1a13e0063922a5f1f3a1f51e0ac30b10f0389d7c4d05253810e889e8ff287  04-computation/overnight_hexagon_sep05_transposition_symbolic.py
+5defbffc3cc6819a681b67b2ebfb147ae82c03ba5384e2d61fb95c705e1c0501  04-computation/overnight_hexagon_sep05_d7_profile.py
+6da47f2104e3aa035592311b1c43e7794fee701633e1909cfd337810d8e70657  05-knowledge/results/overnight_hexagon_sep05_hamilton_walsh8.out
+797c621ae68f29e0e5cd24419dcdc5fe268f34d7bdf201eb4b322b1a7617decd  05-knowledge/results/overnight_hexagon_sep05_hamilton_direct8.out
+9268b5950eb0d17e3b67c47c350248c280984d3d1b2f85c224acac7e4d1d1ffb  05-knowledge/results/overnight_hexagon_sep05_hamilton_extension8.out
+94d0d37617100bf1942013e49472fd112e1574bb587a997ff9f73075bc3f1c4d  05-knowledge/results/overnight_hexagon_sep05_hamilton_walsh9.out
+dd426ab3a48042e80e7224afb533dd10cd744b804ed9c68214adbb53edfa83bc  05-knowledge/results/overnight_hexagon_sep05_hamilton_extension9.out
+f99b3fea6ad7fad6393cd540fd4cc644bbb699dc77505cc795874eee5828680c  05-knowledge/results/overnight_hexagon_sep05_transposition_audit.out
+e23cdb095dd3bef7f31bf7e3f8a2e7054c58c339ee9078c6cdd937110325011d  05-knowledge/results/overnight_hexagon_sep05_transposition_symbolic.out
+```

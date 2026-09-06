@@ -2,7 +2,7 @@
 """Exact controls for the NC2 root-rotation/correspondence obstruction.
 
 Universe: coprime positive binomial widths M,N<=12; all primitive width-three
-binomials with 4<=N<=20; and the sharp (M,N)=(3,4) formal roots through s^30.
+binomials with 1<=N<=20; and the sharp (M,N)=(3,4) formal roots through s^30.
 The algebraic-degree theorem is proved in the companion note, not inferred
 from this finite computation. No floating point, random tests, or asserts.
 """
@@ -160,8 +160,8 @@ def main():
                       for pair in combinations([j for j in range(7) if j != i], 2)}
     require(len(configurations) == 105, "marked-pair degree over t")
 
-    def cycle_lengths(permutation):
-        remaining = set(configurations)
+    def cycle_lengths(permutation, universe):
+        remaining = set(universe)
         lengths = []
         while remaining:
             current = min(remaining)
@@ -174,8 +174,8 @@ def main():
             lengths.append(length)
         return sorted(lengths)
 
-    simple = cycle_lengths((1, 0, 2, 3, 4, 5, 6))
-    zero = cycle_lengths((1, 2, 0, 4, 5, 6, 3))
+    simple = cycle_lengths((1, 0, 2, 3, 4, 5, 6), configurations)
+    zero = cycle_lengths((1, 2, 0, 4, 5, 6, 3), configurations)
     require(simple == [1]*35+[2]*35, "simple branch marked-pair cycle type")
     require(zero == [3]+[4]*3+[6]+[12]*7, "zero branch marked-pair cycle type")
     ramification = 7*(105-len(simple)) + 105-len(zero)
@@ -183,6 +183,40 @@ def main():
     genus = (2-2*105+ramification)//2
     require(genus == 65, "Riemann-Hurwitz genus")
     print("marked_pair_curve: degree_over_t=105; simple_cycle_type=1^35,2^35; zero_cycle_type=3,4^3,6,12^7; genus=65")
+
+    genus_rows = []
+    full_configuration_count = 0
+    for N in range(1, 21):
+        if gcd(3, N) != 1:
+            continue
+        degree = N + 3
+        universe = {(i, pair) for i in range(degree)
+                    for pair in combinations([j for j in range(degree) if j != i], 2)}
+        cover_degree = (N+3)*(N+2)*(N+1)//2
+        require(len(universe) == cover_degree, (N, "full marked-pair universe"))
+        full_configuration_count += len(universe)
+        transposition = tuple([1, 0] + list(range(2, degree)))
+        zero_permutation = tuple((i+1) % 3 if i < 3 else 3+(i-2) % N
+                                 for i in range(degree))
+        simple_cycles = cycle_lengths(transposition, universe)
+        zero_cycles = cycle_lengths(zero_permutation, universe)
+        simple_index = (N+1)*(3*N+2)//2
+        require(simple_cycles == [1]*(cover_degree-2*simple_index)+[2]*simple_index,
+                (N, "complete simple cycle type"))
+        predicted_zero = [3] + [3*N]*(N+2+(N-1)//2) + [N]*comb(N-1, 2)
+        if N % 2 == 0:
+            predicted_zero += [3*N//2]
+        require(zero_cycles == sorted(predicted_zero), (N, "complete zero cycle type"))
+        require(len(zero_cycles) == 4+(N*N)//2, (N, "zero orbit count"))
+        ramification = (N+3)*(cover_degree-len(simple_cycles)) + cover_degree-len(zero_cycles)
+        twice_genus = 2-2*cover_degree+ramification
+        formula_numerator = N*(N+1)*(N+3)-2-(N*N)//2
+        require(twice_genus % 2 == 0 and formula_numerator % 2 == 0,
+                (N, "integral Riemann-Hurwitz genus"))
+        require(twice_genus == formula_numerator and twice_genus >= 6,
+                (N, "all-width-three genus formula and hyperbolicity"))
+        genus_rows.append((N, twice_genus//2))
+    print(f"full_width_three_genus_rows={genus_rows}; configurations={full_configuration_count}")
     print(f"checks={checks}; status=PASS; algebraic_degree_proof=companion_note_not_finite_inference")
 
 

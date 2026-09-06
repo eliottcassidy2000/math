@@ -42,12 +42,14 @@ def main():
     check(int(c4[-1]) == int(c6[-1]) == int(c8[-1]) == 0, 'antibalanced even control')
     for label, values in (
             ('3c8-c6',3*c8-c6), ('c8-c6',c8-c6),
-            ('3c8-2c6',3*c8-2*c6), ('c8-3c4-c6',c8-3*c4-c6),
+            ('3c8-2c6',3*c8-2*c6), ('3c8-4c6',3*c8-4*c6),
+            ('c8-3c4-c6',c8-3*c4-c6),
             ('c7+3c8-5c4-3c5-c6',c7+3*c8-5*c4-3*c5-c6)):
         m = int(values.min())
         arg = int(values.argmin())
         records[label] = {'minimum': m, 'mask': arg,
                           'profile': [int(c[arg]) for c in counts]}
+    check(int((3*c8-4*c6).min()) == 0, 'exact local ratio comparison')
     profiles = Counter(tuple(map(int, row)) for row in np.stack(counts, axis=1))
     records['profile_count'] = len(profiles)
     positive = c6>0

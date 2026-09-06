@@ -10,6 +10,19 @@
   exact companions, frozen outputs, and current next tests are linked there.
   LRC(14), planar JC2, general trinomial coprimality, and the no-three-in-line
   asymptotic conjecture remain **OPEN**.
+- [Overnight empty-hexagon-seeded portfolio](../../07-reflections/overnight-hexagon-sep05-research-board.md):
+  **PROVED + FINITE-EXACT + INDEPENDENTLY AUDITED**
+  [THM-4427](../../01-canon/theorems/THM-4427-all-cumulative-signed-cycle-gaps-by-transposition-rigidity.md)
+  closes every remaining cumulative signed-cycle gap;
+  [THM-4428](../../01-canon/theorems/THM-4428-lrc14-two-direction-network-closure-and-sharp-one-direction-gap.md)
+  closes one/two-direction LRC networks (rank-one overlap credited to 4425);
+  [THM-4429](../../01-canon/theorems/THM-4429-arbitrary-three-node-two-jet-smith-form-and-metric-precision.md)
+  gives arbitrary three-node integer Smith/precision laws;
+  [THM-4430](../../01-canon/theorems/THM-4430-laurent-root-rotation-rigidity-and-marked-packet-genus.md)
+  classifies exact rational root rotations and primitive width-three packet
+  genera. Each theorem links full proofs, explicit universes, hostile controls,
+  reproduction commands and source/output manifests. Global LRC(14), wider
+  Laurent returns, four-node/higher-jet Smith laws remain OPEN.
 
 - `lrc14_projection_deficit_beatty_row_reduction_thm4422.out` -> exact deficit
   dual, one-dimensional carrier rows, signed norm-four closure, and a fixed-

@@ -348,7 +348,16 @@
 
 ## Gaussian Moments Conjecture / NC2
 
-- **Milnor (primary, checked 2026-09-05):** [1991 lecture notes](https://abel.math.harvard.edu/archive/118r_spring_05/docs/milnor.pdf), §§7.2/7.5/10.3, give petal cycles distinct basin critical points and exclude the parabolic backward orbit. [THM-4417](../../01-canon/theorems/THM-4417-width-two-laurent-first-return-parabolic-critical-bound.md) supplies the new width-two Laurent map; wider support remains open.
+- **Milnor (primary, checked 2026-09-05/06):** [1991 lecture notes](https://abel.math.harvard.edu/archive/118r_spring_05/docs/milnor.pdf),
+  §§7.2/7.5/10.3 supply the parabolic critical budget in [THM-4417](../../01-canon/theorems/THM-4417-width-two-laurent-first-return-parabolic-critical-bound.md);
+  §5.1 supplies Riemann--Hurwitz for [THM-4430](../../01-canon/theorems/THM-4430-laurent-root-rotation-rigidity-and-marked-packet-genus.md).
+  Our Laurent maps/packet computations are not claims of the source;
+  width>=3 return bounds remain open.
+- **Heule--Scheucher (primary, checked 2026-09-05/06):** [*Happy Ending: An Empty Hexagon in Every Set of 30 Points*, arXiv:2403.00737v1](https://arxiv.org/pdf/2403.00737), §§3--5/7 and Appendix B.
+  Extremal replacement and separate encoding/proof/cube-cover checks motivate
+  the [overnight portfolio](../../07-reflections/overnight-hexagon-sep05-research-board.md).
+  SAT signotopes need not be realizable; the trusted geometric encoding was
+  not fully mechanized. No LRC transfer or replay of its large proof is claimed.
 
 ### [BGKP](https://arxiv.org/abs/2310.18020)
 - Thms. 1.4/2.11: `m<=n` gives Schur-ratio monotonicity including zeros; THM-3110 slides only, not its signed bank.

@@ -61,6 +61,10 @@ min(e+1,2e), min(3e+2,4e), 7e+2, 12e+4. Their consecutive differences
 prove the formula at every depth. Adjoining a node need not preserve
 earlier Smith factors; (0,8)->(0,8,16) is an exact hostile.
 
+The later [THM-4429, arbitrary three-node Smith form](THM-4429-arbitrary-three-node-two-jet-smith-form-and-metric-precision.md)
+closes every distinct integer triple and its metric-only p-adic precision
+law; four-node and higher-jet continuations remain open.
+
 Primary and independent SymPy/minor paths retain arbitrary residue lifts,
 nonunit scales, small-prime hostiles, tensor and finite-kernel controls.
 The main audit has 441,971 explicit checks. These precision results apply

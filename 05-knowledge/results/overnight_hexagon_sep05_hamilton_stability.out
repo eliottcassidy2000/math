@@ -1,0 +1,10 @@
+n=5 all_layers=3..5 adjacent_disjoint_counts_and_scale_transition=PASS
+n=6 all_layers=3..6 adjacent_disjoint_counts_and_scale_transition=PASS
+n=7 all_layers=3..7 adjacent_disjoint_counts_and_scale_transition=PASS
+n=8 all_layers=3..8 adjacent_disjoint_counts_and_scale_transition=PASS
+n=9 all_layers=3..9 adjacent_disjoint_counts_and_scale_transition=PASS
+exact_failure_gates=85 directly_enumerated_cycles=72238
+second_minimum_lower_n9=36/35
+second_minimum_lower_n_ge10=2*(n*n-9*n+22)/((n-2)*(n-3))
+second_minimum_upper_n_ge9=2*(n-4)/(n-2)
+RESULT=PASS
