@@ -69,6 +69,21 @@ def main():
          S.Rational(88,15)*x-S.Rational(12,5)*x**3,
          -S.Rational(1408,45)*x+S.Rational(64,15)*x**3+S.Rational(8,5)*x**5,
          -S.Rational(184,15)*x**5-S.Rational(2048,25)*x**3+S.Rational(98944,675)*x]
+    # Independently recover the fifth background row from THM4308's row5
+    # source at the boundary, before any valuation>=7 source face can enter.
+    # The m5 Student operator is injective, so these two identities determine
+    # A4,C4 uniquely among the degree-capped bracket solutions.
+    bracket4 = sum((4-i)*S.diff(A[i],x)*C[4-i]-i*A[i]*S.diff(C[4-i],x)
+                   for i in range(1,4))
+    check(S.expand(4*(S.diff(A[0],x)*C[4]-S.diff(C[0],x)*A[4])+bracket4)==0,
+          'inherited fifth row solves bracket4')
+    bracket5 = sum((5-i)*S.diff(A[i],x)*C[5-i]-i*A[i]*S.diff(C[5-i],x)
+                   for i in range(1,5))
+    source5 = (sum(C[i]*C[5-i] for i in range(1,5))-
+               sum(A[i]*A[j]*A[k] for i in range(5) for j in range(5) for k in range(5) if i+j+k==5))
+    target5 = -S.Rational(731648,2025)+S.Rational(6144,25)*x*x-S.Rational(1952,45)*x**4
+    check(S.expand(source5+(x*x+6)*bracket5/10-target5)==0,
+          'inherited fifth row solves predicted source5')
     da,dc,theta = {},{},[]
     for n in range(11,16):
         # Earlier perturbation rows determine the inhomogeneous bracket debt.
@@ -171,6 +186,13 @@ def main():
     bank[7,5]=S.Rational(112896720,383445497)
     bank[9,5]=S.Rational(217326816,383445497)
     check(dual*bank==S.zeros(5,6),'every affine family column retains all source relations')
+    inherited=S.zeros(15,1)
+    inherited[7]=-S.Rational(27945,235202)
+    inherited[9]=S.Rational(39123,470404)
+    inherited[11]=S.Rational(52578,117601)
+    inherited[14]=-1
+    check(bank[:,0]+S.Rational(52578,117601)*bank[:,5]==inherited,
+          'valuation13 replacement recovered on the exact even slice')
     lifts=S.zeros(70,6)
     for row,pivot in enumerate(piv):
         if pivot<70:

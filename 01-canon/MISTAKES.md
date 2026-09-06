@@ -53,6 +53,35 @@ Format per entry:
   fails while p43 has two successes; p113 refutes extending the43mod70 example
   to a uniform successful family. Longer repairs and other first moves remain open.
 
+## 2026-09-06 extended planar session -- hypotheses, topology, and delayed response
+
+- The first [S-matrix transfer summary](../05-knowledge/reference/CORE-PAPERS-SMATRIX-2026-09-06.md)
+  omitted the small inverse-Frobenius assumption in the external defect
+  budget. Cube entries alone are insufficient: the cited budget requires
+  even n>2, nonsingularity, entries in [0,1], and the stated inverse bound.
+  The repaired local consumers use exact algebraic measurements and do not
+  depend on that external inequality. A nonzero complex vector (1,i) is
+  the minimal hostile to transferring real bilinear positivity.
+- The [completed Hamiltonian theorem](../05-knowledge/results/planar_jc_long_20260906_hamiltonian.md)
+  does not identify the full D-adic completion with its Laurent chart:
+  D^N x^(2N) tends to zero in the former and has Laurent valuation -N.
+  Termwise agreement on finite inputs alone also needed a bridge before
+  inferring the [non-rational source specialization](../05-knowledge/results/planar_jc_long_20260906_nonrational.md).
+  The repair uses the injective map K[[s,tau]]→K[x][[t]], s↦xt,tau↦t,
+  then clears rational denominators. No injectivity of the entire D-adic
+  comparison map is required or claimed.
+- Non-local-nilpotence does not imply every formal time is non-rational:
+  S=x²t has the rational symplectic flow x/(1-lambda*x),
+  t(1-lambda*x)² and nonzero iterates delta^n(x)=n!x^(n+1).
+  The repaired non-rationality proof retains the generic invariant curve's
+  genus>=2 and the flow's infinite order. The rational hostile has genus zero.
+- Odd parity is not a complete source-response test. In the
+  [valuation-eleven family](../05-knowledge/results/planar_jc_long_20260906_memory_earlier.md),
+  py^5 is neutral through row13 and forced to vanish at row14. The repaired
+  seven-equation classification retains the full raw bracket/depth system
+  and its earlier coefficients. Its all-specialization claim uses an actual
+  polynomial inverse certificate, rather than rank over Q(xi10) alone.
+
 ## 2026-09-06 planar Jacobian session -- chart factors and projection losses
 
 - In the [Hamiltonian probe](../05-knowledge/results/planar_jc48_sep06_hamiltonian.md),

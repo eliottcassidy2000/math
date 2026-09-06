@@ -14,6 +14,8 @@
 - **Kakeya `R^4`:** **OPEN**; `3.0543` is PREPRINT v1. See the [source/status and THM-4035 boundary audit](CORE-PAPERS-KAKEYA-4D-2026-08-24.md).
 - **Apex cubic:** [2608.22870v1](https://arxiv.org/abs/2608.22870) is a computer-assisted **PREPRINT UNDER AUDIT**; see [audit](CORE-PAPERS-APEX-CUBIC-2026-08-25.md).
 - **Higher-order truth:** [Ye--Xu preprint audit](CORE-PAPERS-HEYTING-HIGHER-ORDER-TRUTH-2026-08-29.md).
+- **Planar repair:** [Li's method](CORE-PAPERS-SMATRIX-2026-09-06.md) inspires complete measurements, without importing its theorem.
+  [Curve inputs](CORE-PAPERS-JC-FLOW-CURVES-2026-09-06.md) support non-rationality of specified flows.
 ## Rule 30
 
 - **Sources/status:** [announcement](https://writings.stephenwolfram.com/2019/10/announcing-the-rule-30-prizes/); [active prizes](https://rule30prize.org/) checked 2026-08-15; openness is repo inference.
@@ -177,30 +179,26 @@
 
 ### Degtyarev — weight-eight/nine torus sextics and the stereographic trigonal model
 
-- **Primary / freshness:** A. Degtyarev,
+- **Primary:** A. Degtyarev,
   [*Irreducible plane sextics with large fundamental groups*](https://arxiv.org/abs/0712.2290),
   especially Sections 1.1 and 3.2--3.6, and
   [*Oka's conjecture on irreducible plane sextics. II*](https://arxiv.org/abs/math/0702546).
-  **PUBLISHED-era stable sources; exact cited sections pinned 2026-08-24.**
-- **Imported role:** over the complex plane, the first source classifies the
-  seven simple weight-eight singularity configurations and their four torus
-  structures, as well as the simple weight-nine `9A_2` row and its twelve
-  torus structures;
-  the stereographic construction supplies the two non-simple
-  `J_{2,0}+4A_2` and `J_{2,3}+3A_2` families from the four-cuspidal trigonal
-  curve on `Sigma_2`.
-- **Repo consumers:**
+  **PUBLISHED; cited sections pinned 2026-08-24.**
+- **Imported over C:** seven simple weight-eight configurations/four torus
+  structures; weight-nine `9A_2`/twelve torus structures. Stereographic
+  construction gives non-simple `J_{2,0}+4A_2`, `J_{2,3}+3A_2` from the
+  four-cuspidal trigonal curve on `Sigma_2`.
+- **Consumers:**
   [THM-3943](../../01-canon/theorems/THM-3943-rational-weight-eight-four-torus-sextics-have-no-one-place-line.md)
   and
   [THM-3945](../../01-canon/theorems/THM-3945-nonsimple-weight-eight-j-sextics-have-no-one-place-line.md).
-  Their complete genus-and-line synthesis is
+  Genus-and-line synthesis:
   [THM-3948](../../01-canon/theorems/THM-3948-classified-weight-eight-nine-sextics-have-no-polynomial-normalization.md).
-- **Does not prove:** a characteristic-zero base-change theorem making that
-  complex classification exhaustive, the repo's binary-sextic line-norm contradictions, the
-  uniform no-one-place-line statements, a classification of non-line affine
-  boundaries, a Keller obstruction for every torus sextic, or `JC(2)`.  Those
-  exact deductions are separated from the cited classification in
-  THM-3943/3945/3948 and their companions or cited genus ledger.
+- **Not imported:** exhaustive characteristic-zero base change; binary-sextic
+  line-norm contradictions; uniform no-one-place-line statements; non-line
+  affine-boundary classification; a Keller obstruction for every torus sextic;
+  or `JC(2)`. See THM-3943/3945/3948 and their cited genus ledger for the
+  separate local deductions and boundaries.
 
 ### Miyanishi -- affine pseudo-planes and the canonical-trivial exception
 

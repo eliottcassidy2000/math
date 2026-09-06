@@ -1,5 +1,17 @@
 # Script Results Index
 
+- [Extended planar Jacobian session with the S-matrix method](planar_jc_long_20260906_board.md):
+  **PROVED + FINITE-EXACT + INDEPENDENTLY AUDITED**, with cited curve inputs
+  and inherited transport explicitly separated. Sharp finite depth
+  recognition; complete valuation-eleven weight22 source family `G_m x A^9`;
+  all-clock moving collision period; generic dual-minor testers and all-index
+  integral Student Smith invariants. Actual completed Hamiltonian repairs
+  preserve every depth and source form, while an explicit infinite family
+  has no rational nonzero-time specialization. Maximal depth carrier is
+  `c+p^2R`. [Manifest](planar_jc_long_20260906_manifest.json) pins programs,
+  audits, outputs, and exact reproduction. General JC(2), termination,
+  lower valuation responses, and chart entry remain **OPEN**.
+
 - [Current continuing synthesis](continuing7_20260906_synthesis.md):
   **PROVED + FINITE-EXACT + INDEPENDENTLY AUDITED.** All singular shared-root
   fibres have negative original response; the degree-six C determinant

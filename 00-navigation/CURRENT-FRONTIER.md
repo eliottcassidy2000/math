@@ -387,31 +387,30 @@ lift/phase clocks.
   tuple is now at least `(8,5,4,3,3)` for `ell=(3,5,7,11,13)`. The requested
   challenges `(3,9),(5,6),(7,5),(11,4),(13,4)` all remain **OPEN**; the public
   `131199`-field file is a named finite population, not a world census.
-- **Jacobian/Dixmier:** `JC(2),DC(2)` are **OPEN**. THM-4130--4378 close the
-  named `M=8--12` cells; THM-4226 closes dense `M=13`. In the fixed THM-4308
-  chart, THM-4380/4388 close the complete weight-12/13 families by row twelve;
-  THM-4385/4389 identify their row-ten elliptic carrier/pencil. For weight 14,
-  THM-4390/4395 reach rows nine/ten; THM-4399/4403/4410 carry one selected tail
-  through rows 11--13 on a global `A^4` with `A^9` fibres. THM-4415 proves
-  prefix-preserving row-14 Hamiltonians have response rank one against two
-  conditions, leaving `J_14`. THM-4426 restores the complete omitted
-  weight-18 pair `z=[p^9]H,h=[p^6y^2]H`. The global unpaid bracket locus is a
-  split conic bundle with a `Q`-section. On `Phi=eta=0,alpha11=1`, the
-  simultaneous
-  bracket/depth locus is a `Q`-rational `G_m`; it fixes `c51=1087/135` and has
-  `A^10` fibre everywhere. THM-4438 closes row 15 on this `G_m`.
-  [Weight22 transport](../05-knowledge/results/planar_jc48_sep06_board.md)
-  changes the prefix, preserving row15 and `A^10` fibres. Full depth,
-  later rows, termination and entry remain open.
+- **Jacobian/Dixmier:** `JC(2),DC(2)` **OPEN**. THM-4130--4378 close named
+  `M=8--12` cells; THM-4226 closes dense `M=13`. In THM-4308's chart,
+  THM-4380/4388 close weight12/13 by row12; THM-4385/4389 give the row10
+  elliptic carrier/pencil. At weight14, THM-4390/4395 reach rows9/10;
+  THM-4399/4403/4410 carry a selected tail through rows11--13 on `A^4`,
+  with `A^9` fibres. THM-4415 leaves `J_14`: prefix-preserving Hamiltonians
+  have rank one against two conditions. THM-4426 restores weight18
+  `z=[p^9]H,h=[p^6y^2]H`: unpaid bracket gives a split conic bundle with
+  Q-section. At `Phi=eta=0,alpha11=1`, joint bracket/depth gives rational
+  `G_m`, fixed `c51=1087/135`, and `A^10` fibres. THM-4438 closes row15 there.
+  [Weight22 transport](../05-knowledge/results/planar_jc48_sep06_board.md) changes the prefix.
+  [Audited row15 response](../05-knowledge/results/planar_jc_long_20260906_board.md): valuation>=11,
+  low weight<=23 plus the designated weight24 channel; sharp replacement
+  weight22, source `G_m x A^9`, coordinate `A^10` fibres.
+  Fixed support has an optimal finite depth test; universal carrier flows
+  preserve depth formally; an explicit family has no rational nonzero time.
+  Later rows, polynomial termination, and entry remain **OPEN**.
   THM-4397/4401 give Long's gauge and punctured planar shadows.
   Exceptional quartic: THM-3703/3737/4034 give grammar/image/conductor;
-  THM-4381 gives 86 nodes, one plane triple, and `S^sn=S+K r`.
-  THM-4404/4411/4412 give the fixed-`x` descended-form gap, collision period,
-  and non-descended suspension. THM-4421's integral `2Z minus 6Z` gap is
-  nongeometric. THM-4424 proves the inherited `D2,D4,D6,kappa` debts are the
-  successive `s2--s5` collision coefficients. The [ninth-source period](../05-knowledge/results/overnight8_20260906_jc_collision_period.md)
-  keeps the J8 obstruction under all collision-preserving O(t9) map changes;
-  earlier jets, termination and entry remain open.
+  THM-4381 gives86 nodes, one plane triple, `S^sn=S+K r`. THM-4404/4411/4412
+  give fixed-x descended-form gap, collision period, non-descended suspension.
+  THM-4421's integral `2Z minus 6Z` gap is nongeometric. THM-4424 identifies
+  `D2,D4,D6,kappa` with collision coefficients `s2--s5`.
+  [Ninth-source period](../05-knowledge/results/overnight8_20260906_jc_collision_period.md): J8 persists under collision-preserving O(t9) changes; earlier jets/entry remain open.
 - **Weyl boundary:** THM-2049 gives a formal beta-adic lift; finite termination remains.
 - **Planar source fibres:** THM-2063/THM-2084--2480 (including
   THM-2371/THM-2376) close the named

@@ -10,4 +10,8 @@ WEIGHT 22 rank 5 with_high 5
 REPLACEMENTS r_high=-1 [(8, 2), (6, 3), (4, 4), (2, 5), (0, 6), (5, 4), (3, 5), (1, 6), (2, 6), (0, 7)] {(38329362/383445497 - 85731129*tau3/383445497, tau0, 200039301*tau3/766890994 - 44717589/383445497, tau1, 0, 112896720*tau3/383445497 - 192065985/766890994, tau2, 217326816*tau3/383445497 - 261093861/1533781988, tau3, tau4)}
 WEIGHT 23 rank 5 with_high 5
 REPLACEMENTS r_high=-1 [(10, 1), (8, 2), (6, 3), (4, 4), (2, 5), (0, 6), (7, 3), (5, 4), (3, 5), (1, 6), (4, 5), (2, 6), (0, 7), (1, 7)] {(tau0, 38329362/383445497 - 85731129*tau6/383445497, tau1, 200039301*tau6/766890994 - 44717589/383445497, tau2, 0, tau3, 112896720*tau6/383445497 - 192065985/766890994, tau4, 217326816*tau6/383445497 - 261093861/1533781988, tau5, tau6, tau7, tau8)}
-FINITE-EXACT; lower valuations and later rows untested
+CONTROLS six affine columns vanish in all271 original equations
+HOSTILES weight21_fails y6_forced_zero p8y2_off_graph_fails
+SEMANTIC_SHA256 a6a30cf1798d89c948bc0b737d0a6f3ae75c554f5eb7c69a57719ac29965aa08
+CHECKS 1646 PASS
+SCOPE exact_row15_valuation_at_least12_firstfive_backgroundrows_fixed_JC2_OPEN

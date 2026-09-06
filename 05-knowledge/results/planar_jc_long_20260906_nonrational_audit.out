@@ -1,0 +1,7 @@
+GENERIC_CURVES [[2,2],[3,3],[4,3],[5,4],[6,4],[7,5],[8,5],[9,6],[10,6],[11,7],[12,7],[13,8],[14,8],[15,9],[16,9],[17,10],[18,10],[19,11],[20,11],[21,12],[22,12],[23,13],[24,13],[25,14],[26,14],[27,15],[28,15],[29,16],[30,16],[31,17],[32,17]]
+COMPLETED_FLOW_CASES 45 a=2..10; five polynomial f; three nonzero scalar times
+ITERATES exact operator composition; invariant substitution; inverse/group-law PASS
+TOPOLOGY_BRIDGE sigma(s)=xt,sigma(tau)=t; three literal source flows agree through t13
+HOSTILE S=x²t: x/(1-Lx), t(1-Lx)²; non-LND but rational symplectic flow
+PASS checks=2268
+SOURCE_SHA256 86e64c180b3c42c40b892e144a38713c0a6e5268183ba361e72214c0c2226578

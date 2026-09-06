@@ -1,0 +1,7 @@
+UNIVERSE model_a=2..20; carrier_a=2..7; f=z,z^2,7+3z^2-z^3,2-2z^3
+MODELS (a,odd_degree,genus) [(2, 5, 2), (3, 7, 3), (4, 7, 3), (5, 9, 4), (6, 9, 4), (7, 11, 5), (8, 11, 5), (9, 13, 6), (10, 13, 6), (11, 15, 7), (12, 15, 7), (13, 17, 8), (14, 17, 8), (15, 19, 9), (16, 19, 9), (17, 21, 10), (18, 21, 10), (19, 23, 11), (20, 23, 11)]
+FLOW_CONTROLS a=2,3 through tau^4; scalar times1,2,3,-1; invariant and group law
+HOSTILE Hamiltonian_x^2t non_LND_rational_symplectic_flow; eight_nonzero_iterates
+CHECKS 226 PASS
+SCOPE finite identity controls; all-a all-f nonrationality uses analytic genus proof; JC2 OPEN
+SOURCE_SHA256 b6d50342c222b10e8843eb3d1a22ffec5869cb05bd8f5b79ad77cfb0dcdeef8f

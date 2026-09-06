@@ -1,0 +1,4 @@
+UNIVERSE generic_R_Rp_Ry coefficient identities;45 cusp monomials; two carrier hostiles
+METHOD quotient differentiation of x=yp/D,u=y²/D; no source-derivative producer import
+CHECKS 56 PASS
+SOURCE_SHA256 6a1f922324431c34614f28a86feb716405e5907abb6471a2140018826881380b
