@@ -64,7 +64,7 @@ for `d>=7`. THM-3742 is a wrong-torsor Pell `C14`; THM-3744's safe control is
   family and gives exact deficit/Beatty rows. Fixed convex averages fail;
   `min_i E_i<=6/77` stays open in `c/b<44/13`, with first H79 multi-ray
   `(19,23,29)`. Arbitrary nonresonance and entry remain open.
-- **Transport extension:** [sparse-contact proof](../05-knowledge/results/synthesis_20260905_lrc_sparse_transport.md) adds star structure, arbitrary-phase intersection closure, weighted limits, and the exact carrier-selector gap.
+- **Transport/incidence:** [overnight synthesis](../05-knowledge/results/overnight_20260906_synthesis.md) combines audited one/two-ray closure, sharp full-cap bound `204/5957`, and midpoint payments. A residual failure needs at least three directions, an affine collinear triple, and unpaid count surplus.
 - **Residual ranks:** THM-4333/4338 close fixed-pool ranks three/four, not arbitrary entry.
 - **PROVED:** [THM-2928](../01-canon/theorems/THM-2928-critical-seven-comb-grid-tensorization-and-drift-tariff.md)/2941: literal zero/one/two/three-drift sectors are empty; `k=2,3` are finite.
 - **Orthogonal routes.** THM-1017 is HYP-6820; THM-2047/2050 keep phase/exit; THM-731/2048 prune; THM-1290 ends at `55`; HYP-8900 nonuniform.
@@ -175,8 +175,11 @@ THM-2070 refutes the general HYP-8890/8895 bypasses.  Transfer
 
 [Trinomial classification](../05-knowledge/results/synthesis_20260905_moments_trinomial.md)
 proves tunability iff `a-AB in <A,B>` and the exact two-carry channel profile.
-THM-1755's bounded-relation claim is refuted (MISTAKE-544); uniform two-rung
-coprimality is OPEN, with FINITE-EXACT gcd evidence on 2,275 collided supports.
+THM-1755's bounded-relation claim is refuted (MISTAKE-544).
+[Audited symbolic certificates](../05-knowledge/results/overnight_20260906_moments_width8.md)
+prove two-rung detection and return `<=M+N` for trinomials with smaller
+endpoint `min(M,N)<=8`; the opposite endpoint is unbounded. General
+trinomial two-rung coprimality and arbitrary-support `min(M,N)>=3` remain OPEN.
 
 ## Tournaments
 
@@ -333,9 +336,10 @@ lift/phase clocks.
   THM-4080 closes one-scale `s<p`.
   [THM-4419](../01-canon/theorems/THM-4419-twojet-prime-wall-precision-and-dyadic-triple-smith-law.md)
   records the [independently concurrent](../05-knowledge/results/synthesis_20260905_wildcard_smith_boundary.md)
-  `s=p` closure and consecutive `n<=p^2`,
-  sharp precision/tensor laws, and every-depth dyadic triple partition.
-  General multiscale clusters and higher jets remain **OPEN**.
+  `s=p`, sharp precision/tensors, and dyadic triples. The audited
+  [odd-prime mixed cluster](../05-knowledge/results/overnight_20260906_smith_mixed_cluster.md)
+  covers one doubled residue at arbitrary depths/lifts and extends
+  consecutive nodes to `n<=p(p+1)`. General cluster trees/higher jets are OPEN.
 - **Even-graph spectrum:** THM-4083 closes `D=3,4`;
   [THM-4416](../01-canon/theorems/THM-4416-even-graph-cumulative-d5-d6-spectral-gap.md)
   closes `D=5,6` for every admissible `n`, with exactly single-edge equality.

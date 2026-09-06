@@ -1,0 +1,30 @@
+Exact full joint-incidence compiler: n=4,...,8, every even-cycle skeleton type
+Cycle parts denote numbers of row vertices, half the graph-cycle lengths.
+n= 4 grid_triples= 12 ordered_pairs= 144 incidence_types= 12 mean= 2
+  parts= (2, 2) Var[X3]= 56/9
+  parts= (4,) Var[X3]= 25/18
+n= 5 grid_triples= 52 ordered_pairs= 2704 incidence_types= 31 mean= 13/3
+  parts= (2, 3) Var[X3]= 1769/225
+  parts= (5,) Var[X3]= 163/30
+n= 6 grid_triples= 132 ordered_pairs= 17424 incidence_types= 38 mean= 154/25
+  parts= (2, 2, 2) Var[X3]= 285968/16875
+  parts= (2, 4) Var[X3]= 1313533/101250
+  parts= (3, 3) Var[X3]= 245599/22500
+  parts= (6,) Var[X3]= 247199/22500
+  affine variance coefficients (base,c4,c6)= ('247199/22500', '16091/8100', '-8/225')
+n= 7 grid_triples= 334 ordered_pairs= 111556 incidence_types= 38 mean= 334/35
+  parts= (2, 2, 3) Var[X3]= 681673/33075
+  parts= (2, 5) Var[X3]= 5137639/264600
+  parts= (3, 4) Var[X3]= 603016/33075
+  parts= (7,) Var[X3]= 4823011/264600
+  affine variance coefficients (base,c4,c6)= ('4823011/264600', '26219/22050', '1117/264600')
+n= 8 grid_triples= 648 ordered_pairs= 419904 incidence_types= 38 mean= 594/49
+  parts= (2, 2, 2, 2) Var[X3]= 1253017/43218
+  parts= (2, 2, 4) Var[X3]= 23436823/864360
+  parts= (2, 3, 3) Var[X3]= 181010659/6914880
+  parts= (2, 6) Var[X3]= 45250129/1728720
+  parts= (3, 5) Var[X3]= 116341013/4609920
+  parts= (4, 4) Var[X3]= 3635551/144060
+  parts= (8,) Var[X3]= 3635551/144060
+  affine variance coefficients (base,c4,c6)= ('3635551/144060', '33133/35280', '23/31360')
+PASS. Compiler formulas are exact; the universal short-cycle reduction needs its separate proof.

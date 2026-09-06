@@ -1,0 +1,18 @@
+status=PROVED_ANALYTICALLY local payment and complete flat family; FINITE_EXACT controls
+scalar_optimal_matching_cases=483
+named_rows=(w,N,D,B,remainder,invoice,criterion_passes)
+((19, 23, 29), 6, ('86/23', '50/19', '1342/437'), ('0', '0', '0'), ('86/23', '50/19', '1342/437'), '8/11', False)
+((23, 29, 37), 6, ('82/29', '70/23', '1410/667'), ('0', '0', '0'), ('82/29', '70/23', '1410/667'), '-8/11', True)
+((29, 35, 41), 10, ('12/7', '120/29', '3838/3045'), ('12/7', '120/29', '3838/3045'), ('0', '0', '0'), '28/11', True)
+((49, 59, 61), 10, ('1006/177', '646/147', '43420/8673'), ('0', '52/21', '2684/1239'), ('1006/177', '94/49', '24632/8673'), '-12/11', True)
+((1, 137, 277), 10, ('2660/411', '0', '0'), ('0', '0', '0'), ('2660/411', '0', '0'), '-444/11', True)
+((1, 499, 1001), 30, ('9970/499', '0', '0'), ('0', '0', '0'), ('9970/499', '0', '0'), '-152', True)
+family_controls=(5, 7, 11, 13, 17, 31, 43, 61, 79, 101, 137, 199, 499, 1001)
+family_w=(1,m,2m+3), odd m>=5, 3 does not divide m
+family_carriers=+- (m-3k,-2k-1,k), k=2 mod3, (5m-9)/42<k<(3m-1)/14
+all_same_owner_midpoint_curvatures=0; positive_D1_is_affine_baseline
+unbounded_cardinality=N=2(2m+3)/63+O(1)
+N10_hostile_m137_k=(17, 20, 23, 26, 29); D1=2660/411; B=(0,0,0)
+checks=5220
+semantic_sha256=0982d4f7bd03d23e95365d4f08a2b7e5e8d8ca77462fa3996bdd9afc9334a92c
+all_remaining_count_dense_full_rank_dictionaries_satisfy_payment_condition=OPEN; LRC14=OPEN

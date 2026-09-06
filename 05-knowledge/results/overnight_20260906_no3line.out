@@ -1,0 +1,22 @@
+Universe: all labelled row/column-degree-two boards, n=2,...,6
+No geometry/symmetry filters. Counts are not relabelling or D4 orbits.
+Independent pair-line and primitive-endpoint grid counts: n<=12, k=3,4
+n= 2 boards= 1 no3line= 1 square_orbits= 1 grid_nonaxis_triples= 0 quadruples= 0
+  cycle_row_sizes= (2,) count= 1 E[X3]= 0 E[X4]= 0 Var[X3]= 0 zero= 1
+n= 3 boards= 6 no3line= 2 square_orbits= 1 grid_nonaxis_triples= 2 quadruples= 0
+  cycle_row_sizes= (3,) count= 6 E[X3]= 2/3 E[X4]= 0 Var[X3]= 2/9 zero= 2
+n= 4 boards= 90 no3line= 11 square_orbits= 4 grid_nonaxis_triples= 12 quadruples= 2
+  cycle_row_sizes= (2, 2) count= 18 E[X3]= 2 E[X4]= 1/3 Var[X3]= 56/9 zero= 9
+  cycle_row_sizes= (4,) count= 72 E[X3]= 2 E[X4]= 1/6 Var[X3]= 25/18 zero= 2
+  n4 no3line examples= {(2, 2): ((0, 1), (2, 3), (0, 1), (2, 3)), (4,): ((0, 2), (2, 3), (0, 1), (1, 3))}
+  ordered-pair zero_probability= 5/27 uniform-board zero_probability= 11/90
+n= 5 boards= 2040 no3line= 32 square_orbits= 5 grid_nonaxis_triples= 52 quadruples= 14
+  cycle_row_sizes= (2, 3) count= 600 E[X3]= 13/3 E[X4]= 91/150 Var[X3]= 1769/225 zero= 0
+  cycle_row_sizes= (5,) count= 1440 E[X3]= 13/3 E[X4]= 7/12 Var[X3]= 163/30 zero= 32
+n= 6 boards= 67950 no3line= 50 square_orbits= 11 grid_nonaxis_triples= 132 quadruples= 54
+  cycle_row_sizes= (2, 2, 2) count= 1350 E[X3]= 154/25 E[X4]= 27/25 Var[X3]= 285968/16875 zero= 0
+  cycle_row_sizes= (2, 4) count= 16200 E[X3]= 154/25 E[X4]= 53/50 Var[X3]= 1313533/101250 zero= 4
+  cycle_row_sizes= (3, 3) count= 7200 E[X3]= 154/25 E[X4]= 21/20 Var[X3]= 245599/22500 zero= 4
+  cycle_row_sizes= (6,) count= 43200 E[X3]= 154/25 E[X4]= 21/20 Var[X3]= 247199/22500 zero= 42
+Active exact checks: 4094306
+PASS. No asymptotic independence or universal no-three-in-line bound claimed.

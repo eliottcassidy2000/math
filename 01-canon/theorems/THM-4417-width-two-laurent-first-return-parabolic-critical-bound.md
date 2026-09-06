@@ -69,3 +69,15 @@ For three or more small roots, the root-product quotient is not a local
 root-swap map; the argument stops there. This improves only the named
 lowest-face seed in NC2/GMC(2), not a uniform coefficient-independent final
 Gaussian-moment bound.
+
+## Audited trinomial continuation, 2026-09-06
+
+The [carry-sensitive trinomial theorem](../../05-knowledge/results/overnight_20260906_moments_width8.md)
+proves `m_*<=M+N` for at most three terms with `min(M,N)<=8`; the opposite
+endpoint is unbounded. The proof uses the exact semigroup classification,
+thirty polynomial-in-parameter resultant certificates, and five exhaustively
+derived opposite-endpoint exceptions. An independent Sylvester-determinant
+audit certifies each polynomial identity by a degree bound. It includes an
+unbounded sharp family with smaller endpoint three. This is a separate
+sparse-support continuation, not an extension of the two-root involution
+to arbitrary support; that general `min(M,N)>=3` problem remains open.

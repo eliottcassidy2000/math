@@ -1,0 +1,5 @@
+status=INDEPENDENT_EXACT_AUDIT_PASS; producer/repository imports=none
+universe=n4 ordered disjoint permutation pairs216; distinct uncolored boards90
+class_tables={(4, 4): (18, Fraction(2, 1), Fraction(56, 9), Fraction(1, 3), Fraction(1, 2)), (8,): (72, Fraction(2, 1), Fraction(25, 18), Fraction(1, 6), Fraction(1, 36))}
+uniform_board_zero=11/90; uniform_ordered_pair_zero=5/27
+decomposition_weight=2^(number of even-cycle components), checked on every board

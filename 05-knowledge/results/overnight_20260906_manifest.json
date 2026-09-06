@@ -1,0 +1,160 @@
+{
+  "schema": 1,
+  "created_utc": "2026-09-06T05:33:49.195765+00:00",
+  "baseline_commit": "62e1b34d82a4",
+  "incoming_review_commit": "a80f2e90a",
+  "hash_basis": "raw LF bytes; self excluded",
+  "scope": "First overnight checkpoint: six scoped mathematical results, exact companions, independent audits, and maintained continuation surface. This manifest proves file identity only; mathematical status and quantifiers live in the reports.",
+  "artifacts": [
+    {
+      "path": "04-computation/overnight_20260906_lrc_audit_no3line.py",
+      "bytes": 3269,
+      "sha256": "3cc627881ebb19d8fda3186787dfb3e91965f5cbe53e9650e8ea23d58fa35f9d"
+    },
+    {
+      "path": "04-computation/overnight_20260906_lrc_cap_carriers.py",
+      "bytes": 8040,
+      "sha256": "9a717d42f3cf1e2d29b2c9d5f5f6a492e3c42e5c9e599d2e009b6e816a35c166"
+    },
+    {
+      "path": "04-computation/overnight_20260906_lrc_midpoint_deficit.py",
+      "bytes": 6747,
+      "sha256": "95c9fc35d6ca6ff5905d0550365f3abed1b8e8c71e62ccb7aa97e511c1f2fbbc"
+    },
+    {
+      "path": "04-computation/overnight_20260906_moments_width8.py",
+      "bytes": 10288,
+      "sha256": "8fd1f99f8907b18a454b5524bf0aab08c68406ec9a8c7c1734ce1e18bc3b9df4"
+    },
+    {
+      "path": "04-computation/overnight_20260906_no3line.py",
+      "bytes": 8281,
+      "sha256": "015e4ec69f0449da66e81912e9ee1e9b5f9d35cffdd963552c177ba57c7a279d"
+    },
+    {
+      "path": "04-computation/overnight_20260906_no3line_pairprofiles.py",
+      "bytes": 5624,
+      "sha256": "ffc320c113962bb3b42e64a728b89e8f3649b888a9ab214f88571f54448a11fa"
+    },
+    {
+      "path": "04-computation/overnight_20260906_root_cap_audit.py",
+      "bytes": 2712,
+      "sha256": "90e39967a9ec5bedc51a21622d9155c26280d864965b94e1324eb8c155035c0f"
+    },
+    {
+      "path": "04-computation/overnight_20260906_smith_mixed_cluster.py",
+      "bytes": 11669,
+      "sha256": "3f2c90a6109177b66faba9a9378f7ac8f1ae80962966e173e2e6f67aaf86f7de"
+    },
+    {
+      "path": "04-computation/overnight_20260906_smith_moments_audit.py",
+      "bytes": 9111,
+      "sha256": "f3c257aa46bd3b5fe9eb933a09779ae77a9c7f955d203a68f7d7ddf012ed1ee8"
+    },
+    {
+      "path": "05-knowledge/results/overnight_20260906_lrc_audit_no3line.md",
+      "bytes": 4100,
+      "sha256": "8c6bd816508214271f88198520d4288495c96d527c3111c8d9c2b5b4ecdb49e6"
+    },
+    {
+      "path": "05-knowledge/results/overnight_20260906_lrc_audit_no3line.out",
+      "bytes": 459,
+      "sha256": "63efb6439b8686b3d00c0a143d1945f940438aea774711a5ad2b3cc44be396bf"
+    },
+    {
+      "path": "05-knowledge/results/overnight_20260906_lrc_cap_carriers.md",
+      "bytes": 14638,
+      "sha256": "b5eb41fb8c9b2b101f8888e211f9ccd9bfe6073f972f150a3faf901d490eff9f"
+    },
+    {
+      "path": "05-knowledge/results/overnight_20260906_lrc_cap_carriers.out",
+      "bytes": 1018,
+      "sha256": "0c1ccbdcb61acaa823c7bb85137ef752affc944a6b5ce5db2887ee6177478324"
+    },
+    {
+      "path": "05-knowledge/results/overnight_20260906_lrc_midpoint_deficit.md",
+      "bytes": 14939,
+      "sha256": "cf3d8c5a20e303d70674401421242a49bf3288e92cdbaaec6fc90eca81024a43"
+    },
+    {
+      "path": "05-knowledge/results/overnight_20260906_lrc_midpoint_deficit.out",
+      "bytes": 1419,
+      "sha256": "c25fae5edeba53d3c303a32f3f5120d66716b9b2e7df42e5a04641efb4541f36"
+    },
+    {
+      "path": "05-knowledge/results/overnight_20260906_moments_pairprofile_theorem.md",
+      "bytes": 12327,
+      "sha256": "ad1ee1eb1a7ee69b3aad26ab1e7b127ac9411d245e28389f29fe286796b46800"
+    },
+    {
+      "path": "05-knowledge/results/overnight_20260906_moments_smith_audit.md",
+      "bytes": 4658,
+      "sha256": "037fb86987a54dfd5d014adf5f61c17759bdd4ed9ca947b2c9580bca7885b48f"
+    },
+    {
+      "path": "05-knowledge/results/overnight_20260906_moments_width8.md",
+      "bytes": 13931,
+      "sha256": "5afd60f95d244fe9132975d9ae4d81227735158d4b0740b8343759dd4577a15a"
+    },
+    {
+      "path": "05-knowledge/results/overnight_20260906_moments_width8.out",
+      "bytes": 3151,
+      "sha256": "dd52d856395f080314ec0bd1fc1e59ea54fbec2f20f19f0a9fa8443eadecc405"
+    },
+    {
+      "path": "05-knowledge/results/overnight_20260906_moments_width8_certificates.json",
+      "bytes": 49369,
+      "sha256": "0e0006d444f38326ad0c6ee9fe30a6bd65c4457b9d29a96c77370c384cac659f"
+    },
+    {
+      "path": "05-knowledge/results/overnight_20260906_moments_width8_optimized.out",
+      "bytes": 3151,
+      "sha256": "dd52d856395f080314ec0bd1fc1e59ea54fbec2f20f19f0a9fa8443eadecc405"
+    },
+    {
+      "path": "05-knowledge/results/overnight_20260906_no3line.md",
+      "bytes": 10871,
+      "sha256": "c0fbaaed810e197c95ce3d1e121543bc74af2d3e41b3f25725638505f220d7cb"
+    },
+    {
+      "path": "05-knowledge/results/overnight_20260906_no3line.out",
+      "bytes": 1776,
+      "sha256": "ff84b6f58342e7be9213743e42eb748a0d16344de24bde01fe77cd89cfe9f876"
+    },
+    {
+      "path": "05-knowledge/results/overnight_20260906_no3line_pairprofiles.out",
+      "bytes": 1629,
+      "sha256": "89c9d5ba480439ee427c8cbde7a7220b5ddeba73e80f1dee948b556cbc032b9b"
+    },
+    {
+      "path": "05-knowledge/results/overnight_20260906_root_cap_audit.out",
+      "bytes": 395,
+      "sha256": "77fd174cbd702f81df02633e05426d09a716e5f7da6dc9493547e4510bd6d005"
+    },
+    {
+      "path": "05-knowledge/results/overnight_20260906_smith_mixed_cluster.md",
+      "bytes": 16623,
+      "sha256": "7137e7eb5b3841c939d28a3f07def889ea791cdf6d13d74ccad04732c6771196"
+    },
+    {
+      "path": "05-knowledge/results/overnight_20260906_smith_mixed_cluster.out",
+      "bytes": 1594,
+      "sha256": "4a7c801c9578f954395fa9bbc696f55133f31e131d821a917f807171735c6f10"
+    },
+    {
+      "path": "05-knowledge/results/overnight_20260906_smith_moments_audit.md",
+      "bytes": 2995,
+      "sha256": "dc0d2519c882eae4ef56eb7376ca34642520adfb0fc85d0aab55e4abdfb99461"
+    },
+    {
+      "path": "05-knowledge/results/overnight_20260906_smith_moments_audit.out",
+      "bytes": 2030,
+      "sha256": "9a32da57667d5da5d88c0158a43ce4cf34f6f21d2c1a321ab04efc09ae285154"
+    },
+    {
+      "path": "05-knowledge/results/overnight_20260906_synthesis.md",
+      "bytes": 16484,
+      "sha256": "0b0b1692bcadeeb59b3a351b58ed4392fd9df6804da8790953634ccc5eccc04d"
+    }
+  ]
+}

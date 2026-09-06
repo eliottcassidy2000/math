@@ -1,0 +1,39 @@
+family=(2, 1, 2) g>=3 degrees=(1, 2) resultant_degree=2 positive_shift_coefficients=3
+family=(3, 1, 2) g>=4 degrees=(1, 3) resultant_degree=3 positive_shift_coefficients=4
+family=(3, 1, 3) g>=4 degrees=(1, 2) resultant_degree=4 positive_shift_coefficients=5
+family=(4, 1, 2) g>=5 degrees=(2, 4) resultant_degree=8 positive_shift_coefficients=9
+family=(4, 1, 3) g>=5 degrees=(1, 2) resultant_degree=4 positive_shift_coefficients=5
+family=(4, 1, 4) g>=5 degrees=(1, 2) resultant_degree=6 positive_shift_coefficients=7
+family=(5, 1, 2) g>=6 degrees=(2, 5) resultant_degree=10 positive_shift_coefficients=11
+family=(5, 1, 3) g>=6 degrees=(1, 3) resultant_degree=6 positive_shift_coefficients=7
+family=(5, 1, 4) g>=6 degrees=(1, 2) resultant_degree=6 positive_shift_coefficients=7
+family=(5, 1, 5) g>=6 degrees=(1, 2) resultant_degree=8 positive_shift_coefficients=9
+family=(6, 1, 2) g>=7 degrees=(3, 6) resultant_degree=18 positive_shift_coefficients=19
+family=(6, 1, 3) g>=7 degrees=(2, 4) resultant_degree=16 positive_shift_coefficients=17
+family=(6, 1, 4) g>=7 degrees=(1, 3) resultant_degree=9 positive_shift_coefficients=10
+family=(6, 1, 5) g>=7 degrees=(1, 2) resultant_degree=8 positive_shift_coefficients=9
+family=(6, 1, 6) g>=7 degrees=(1, 2) resultant_degree=10 positive_shift_coefficients=11
+family=(6, 2, 3) g>=4 degrees=(1, 2) resultant_degree=2 positive_shift_coefficients=3
+family=(7, 1, 2) g>=8 degrees=(3, 7) resultant_degree=21 positive_shift_coefficients=22
+family=(7, 1, 3) g>=8 degrees=(2, 4) resultant_degree=16 positive_shift_coefficients=17
+family=(7, 1, 4) g>=8 degrees=(1, 3) resultant_degree=9 positive_shift_coefficients=10
+family=(7, 1, 5) g>=8 degrees=(1, 2) resultant_degree=8 positive_shift_coefficients=9
+family=(7, 1, 6) g>=8 degrees=(1, 2) resultant_degree=10 positive_shift_coefficients=11
+family=(7, 1, 7) g>=8 degrees=(1, 2) resultant_degree=12 positive_shift_coefficients=13
+family=(8, 1, 2) g>=9 degrees=(4, 8) resultant_degree=32 positive_shift_coefficients=33
+family=(8, 1, 3) g>=9 degrees=(2, 5) resultant_degree=20 positive_shift_coefficients=21
+family=(8, 1, 4) g>=9 degrees=(2, 4) resultant_degree=24 positive_shift_coefficients=25
+family=(8, 1, 5) g>=9 degrees=(1, 3) resultant_degree=12 positive_shift_coefficients=13
+family=(8, 1, 6) g>=9 degrees=(1, 2) resultant_degree=10 positive_shift_coefficients=11
+family=(8, 1, 7) g>=9 degrees=(1, 2) resultant_degree=12 positive_shift_coefficients=13
+family=(8, 1, 8) g>=9 degrees=(1, 2) resultant_degree=14 positive_shift_coefficients=15
+family=(8, 2, 3) g>=5 degrees=(1, 2) resultant_degree=2 positive_shift_coefficients=3
+symbolic_families= 30
+positive_shift_coefficients= 352
+opposite_endpoint_primitive_rectangle= 255
+opposite_endpoint_exceptions= [(9, 1, 6), (11, 1, 7), (13, 1, 8), (20, 1, 8), (12, 3, 8)]
+literal_convolution_controls= 30 + 10 exceptional rows + 2 sharp controls
+one_carry_remainder= 2*g*(g - 1)*(2*g - 1)*(23*g**2 - 47*g + 20)/(15*(g - 2)**2)
+checks= 604
+certificate_sha256= 0e0006d444f38326ad0c6ee9fe30a6bd65c4457b9d29a96c77370c384cac659f
+ALL EXACT GATES PASSED; general two-rung coprimality and arbitrary-support min(M,N)>=3 remain OPEN

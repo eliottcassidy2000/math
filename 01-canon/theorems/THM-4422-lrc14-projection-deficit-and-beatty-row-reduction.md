@@ -48,6 +48,26 @@ remains **OPEN**.
 
 ## 1. Raw projections and the exact deficit dual
 
+**Audited continuation (2026-09-06):** the
+[full-cap carrier theorem](../../05-knowledge/results/overnight_20260906_lrc_cap_carriers.md)
+proves the sharp stronger bound `min_i S_i<=204/5957`, uniquely at
+`(23,29,37)`, when the complete dictionary is noncollinear and has no
+three collinear points. Owner-colored convex midpoint closure gives at
+most eight carriers; independently replayed finite bases and a strict
+all-height tail close this class. The forced progression count for larger
+dictionaries does not alone pay the weighted deficits below. The independent
+[one-ray](../../05-knowledge/results/lrc14_one_ray_overnight_hexagon_sep05.md)
+and [two-ray](../../05-knowledge/results/lrc14_two_ray_overnight_hexagon_sep05.md)
+closures further leave at least three primitive directions and an affine
+collinear triple in any failure. Physical entry and LRC(14) remain open.
+
+The independently audited [midpoint payment continuation](../../05-knowledge/results/overnight_20260906_lrc_midpoint_deficit.md)
+proves `D_i=B_i+R_i` with optimal disjoint same-bucket curvature payment
+`B_i`. A complete infinite two-line family has unbounded compulsory
+progressions but `B_i=0`; its positive deficit is affine. Retaining `R_i`
+is therefore necessary to reconstruct the deficit. This does not refute
+curvature sufficiency after the already count-safe and cap classes are removed.
+
 Let `w=(a,b,c)` be sorted, primitive, distinct, positive, odd, and nonzero
 modulo three. Write
 

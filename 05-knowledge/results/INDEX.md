@@ -1,5 +1,16 @@
 # Script Results Index
 
+- [Overnight incidence/carry/Smith synthesis](overnight_20260906_synthesis.md)
+  routes the audited no-three-in-line seed and new results: sharp LRC
+  full-cap network bound `204/5957`; short-cycle determination of every
+  line-event moment, with corrected permutation-pair sampling; symbolic
+  two-rung detection for every trinomial with `min(M,N)<=8` and unbounded
+  opposite endpoint; and the arbitrary-lift odd-prime mixed Smith cluster,
+  extending consecutive nodes to `n<=p(p+1)`. Independent proof reviews,
+  exact companions, frozen outputs, and current next tests are linked there.
+  LRC(14), planar JC2, general trinomial coprimality, and the no-three-in-line
+  asymptotic conjecture remain **OPEN**.
+
 - `lrc14_projection_deficit_beatty_row_reduction_thm4422.out` -> exact deficit
   dual, one-dimensional carrier rows, signed norm-four closure, and a fixed-
   averaging no-go

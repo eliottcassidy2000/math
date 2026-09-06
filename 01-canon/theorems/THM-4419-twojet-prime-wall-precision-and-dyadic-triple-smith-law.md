@@ -66,3 +66,15 @@ nonunit scales, small-prime hostiles, tensor and finite-kernel controls.
 The main audit has 441,971 explicit checks. These precision results apply
 to the declared integral degree box; they supply no automatic statement
 for moving arithmetic modules, LRC(14), or the planar Jacobian conjecture.
+
+## Audited odd-prime continuation, 2026-09-06
+
+The [mixed-cluster theorem](../../05-knowledge/results/overnight_20260906_smith_mixed_cluster.md)
+now proves the full partition for `p+1` nodes covering every residue with
+one duplicated pair: odd prime `p`, outer depth `e>=1`, duplicate depth
+`d>=1`, and arbitrary integral lifts. Competing minors select `min(e,d)`;
+the old `2p`-entry Smith prefix survives adjoining exactly when `d>=e`.
+The sharp precision loss is `(2p+1)e+3d`. Local CRT extends consecutive
+nodes to `n<=p(p+1)` for odd primes. This is independently proof-audited
+and supported by 1,821,396 exact checks; general cluster trees and higher
+jets remain open. The original dyadic law is unchanged.

@@ -1,0 +1,15 @@
+status=PROVED_ANALYTICALLY cap bound; FINITE_EXACT sharp finite base
+universe=all primitive sorted distinct positive odd ternary-unit speeds c<=100
+counts={'all': 5409, 'cap': 1723, 'multi_cap': 1230}
+cap_cardinalities={0: 36, 2: 457, 4: 723, 6: 507}
+cardinalitywise_multi_cap_maxima={4: (Fraction(12, 413), (1, 7, 59)), 6: (Fraction(204, 5957), (23, 29, 37))}
+sharp_row=((23, 29, 37), (Fraction(276, 7511), Fraction(204, 5957), Fraction(7776, 172753)), [(-11, 10, -1), (-10, -1, 7), (-1, 11, -8), (1, -11, 8), (10, 1, -7), (11, -10, 1)])
+sharp_physical_mass=3100/172753
+universal_cap_bound=N<=8; universal_multi_cap_ceiling=204/5957
+strict_target_gap=2862/65527
+tail_from_c=101; tail_bound_at_101=24/707
+same_owner_midpoint_triples_checked=10610
+subset_hostile=((1, 11, 23), [(-2, -4, 2), (-1, -2, 1), (1, 2, -1), (2, 4, -2)], [(-2, -4, 2), (2, 4, -2)])
+checks=115344
+semantic_sha256=75860804ba5259e6fc842c3264210f3a84d2426b518c2df1dd6946a7cd9f4afc
+LRC14=OPEN; full carrier dictionaries with collinear triples remain

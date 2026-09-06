@@ -1,0 +1,5 @@
+Independent middle-coordinate carrier enumeration; integer-scaled projection roofs
+{'cap': 1723, 'cap_size_0': 36, 'cap_size_2': 457, 'cap_size_4': 723, 'cap_size_6': 507, 'multidirection_cap': 1230, 'universe': 5409}
+sharp= 204/5957 equality= [(23, 29, 37)]
+tail_at_c101= 24/707 target_gap= 2862/65527
+PASS; all-height consequence additionally uses the analytic full-dictionary midpoint lemma.
