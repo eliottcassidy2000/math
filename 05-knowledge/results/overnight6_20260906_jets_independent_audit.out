@@ -1,0 +1,5 @@
+INDEPENDENT_LITERAL_INVERSE_PROFILES [["uniform-A", 4, {"6": 3, "7": 4, "8": 1}], ["uniform-B", 4, {"6": 3, "7": 4, "8": 3}], ["weighted-A", 2, {"3": 2, "4": 1}], ["weighted-B", 2, {"3": 2, "4": 0}], ["signed-higher", 19, {"5": 11, "6": 14, "7": 16, "8": 19}], ["prime3-heterogeneous", 10, {"5": 4, "6": 6, "7": 8, "8": 10}], ["prime5-heterogeneous", 6, {"4": 4, "5": 5, "6": 6}], ["singleton", 0, {"0": 0}], ["seven-node", 31, {"18": 27, "19": 31, "20": 31}], ["family-h2", 33, {"12": 27, "13": 32, "14": 33}]]
+FAMILY h2..7 exact rational pair valuations=h+2; pair-local loss=4; global outsider baseline dominates
+BOUNDARIES current-depth pruning is not permanent; power valuations lose unit cancellation; nonunit division loses precision
+PASS 866 explicit gates; standard-library only
+semantic_sha256 56a1bba0e33516656c58c01fdec9212b8cbb92045ea24edb9eb8d7efa7feb406

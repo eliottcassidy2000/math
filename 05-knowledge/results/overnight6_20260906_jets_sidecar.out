@@ -1,0 +1,18 @@
+SCOPE arbitrary positive multiplicities; fixed-anchor tree-shell jets; exact adaptive precision and all-depth envelope
+CASE uniform-A p 2 loss 4 profile {6: 3, 7: 4, 8: 1}
+CASE uniform-B p 2 loss 4 profile {6: 3, 7: 4, 8: 3}
+CASE mixed-A p 2 loss 2 profile {3: 2, 4: 1}
+CASE mixed-B p 2 loss 2 profile {3: 2, 4: 0}
+CASE deep-pair p 2 loss 14 profile {6: 9, 7: 12, 8: 14}
+CASE ternary-twojet-A p 3 loss 22 profile {6: 18, 7: 22}
+CASE ternary-twojet-B p 3 loss 22 profile {6: 18, 7: 22}
+CASE unequal-prime5 p 5 loss 6 profile {4: 4, 5: 5, 6: 6}
+CASE seven-node-pair p 2 loss 31 profile {18: 27, 19: 31, 20: 31}
+CASE singleton p 2 loss 0 profile {0: 0}
+PRUNING_FIREWALL uniform A order2 is inactive now but gives33 at e4 versus lower-order32
+TERMINAL_PAIR_HOSTILE nodes (0, 2, -7, -5, 1, 7, 9) b2 1452032/33075 both valuations11
+UNBOUNDED_PAIR_BUDGET h>=2 r=2^h-1 outsiders1+2^(h+2)j; v2(b2)=h+2; controls h2..12
+PAIR_FIREWALL displayed-depth local loss4, uncorrected cost<=5; outside baseline >=3(r-1)(h+2)>5
+FORMAL_ORDER_HOSTILE same b0,b1 [Fraction(1, 1), Fraction(-2, 7)] different b2 947/17787 179/3675
+MOMENT_VALUATION_HOSTILE (vP1,vP2,vb2) [(0, 0, 4), (0, 0, 2)]
+PASS_OPTIMIZATION_LIVE_GATES 596

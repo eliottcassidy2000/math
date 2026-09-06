@@ -5,8 +5,8 @@ This is the maintained continuation surface for the user's overnight request.
 Read current canon and incoming corrections before continuing any lane.
 The starting commit was `62e1b34d8`; the isolated worktree is `C:/w/s0905`.
 The extensively dirty original checkout is outside this session's edits.
-Fourth-checkpoint mathematics incorporates incoming canon through `b637305db`,
-including proved THM-4437/4440/4441/4442/4443. The universal
+The sixth checkpoint incorporates incoming canon through `6f450d8cb`,
+including proved THM-4437/4440/4441/4442/4443/4444. The universal
 **ternary-unit local network bound is now closed without a parity assumption**:
 sharp `6/55`, with the stronger odd bound `6/77` retained. Actual LRC entry
 and body-to-tail noncontainment remain open. The universal ten-body `6/77`
@@ -25,9 +25,9 @@ independence heuristic and the corrected asymptotic constant; see the
 | Live object / representation | Predicate | Operation and retained coordinate | Cheapest next decisive test |
 |---|---|---|---|
 | Anchor: body safe set and three-sheet tail comb | One literal safe completion | Full affine event codes, component addresses, chosen deep anchor and weak endpoints | Event-cover failure must hand its actual owners to the component/first-exit compiler |
-| Grid sets as degree-two bipartite graphs | No collinear triple | Formal cycle defects before whole-event geometric averaging | Weight-four squares can average negatively; retain event labels before attempting a positive or convergent expansion |
-| Niche: trinomial return channels | First two return polynomials have no common torus zero | Complete path/PF factors, signed duplication SOS, both carries | Extend the proved AP/real-rooted-core coupling to another carried family |
-| Wildcard: residue-decorated jet cluster | Full partition versus largest precision loss | Competing inverse columns; terminal clusters with reciprocal coefficient data | Two-jet largest loss is metric-only; higher jets need unit data even for worst precision |
+| Grid sets as degree-two bipartite graphs | No collinear triple | Named row/column palettes and local injection kernels | Conditional cumulants are connected; retain the outer palette cumulants and covariance before unconditioning |
+| Niche: trinomial return channels | First two return polynomials have no common torus zero | Complete paths, signed duplication, carried quotient characteristic coefficients | Endpoint21 is closed; test a common operator for the grouped A2/B3 midpoint corrections |
+| Wildcard: residue-decorated jet cluster | Full partition versus largest precision loss | Integral reciprocal shell jets, current residue budget, all-depth slope envelope | Unbounded local cancellation can be irrelevant globally; test the metric baseline before retaining a coefficient |
 | Formal exceptional triple | Preserve common target at every order | Restrict the transverse compensator to admissible source coefficients | Test whether the lawful fifth-order module can have `L(h5)=-18*kappa/5` |
 | Signed Hamilton-cycle parity vectors | Exact minimum and equality classes | Difference with a transposed signing; typed zero deletions | All cumulative gaps are closed; independently audit quantitative stability before using it |
 
@@ -264,6 +264,47 @@ an implication: the maps and losses must be specified in the linked reports.
     matrix cases pass 6,806 gates. The two-jet theorem survives; its one-digit
     simultaneous cancellation argument does not extend to the quadratic
     reciprocal coefficient introduced by a third jet.
+22. **PROVED new unbounded four-channel Laurent family:**
+    [endpoint21 carried theorem](overnight6_20260906_laurent_cubic_carry.md)
+    proves first detection exactly `g` or `2g` for support
+    `(-21,2g-21,3g-21)`, every integral `g>=11`, `gcd(g,21)=1`, and all
+    nonzero complex coefficients. Both alternatives occur. All eight
+    doubled channels and the lower carry remain. The three characteristic
+    coefficients of the carried quotient have degrees6/12/18 and positive
+    coefficients after `g=s+11`; reality of the first roots makes the
+    normalized doubled value strictly negative. The
+    [raw-source/resultant audit](overnight6_20260906_laurent_cubic_carry_audit.md)
+    verifies degree-bounded interpolation, and a
+    [standard-library polynomial referee](overnight6_20260906_laurent_cubic_carry_referee.md)
+    independently reconstructs all39 rational coefficients. This closes
+    a fixed family outside endpoint8 and the ordinary-core SOS scope,
+    not every endpoint21 support or general two-rung separation.
+23. **PROVED exact jet updates and an unbounded local cancellation family:**
+    [normalized reciprocal theorem](overnight6_20260906_jets_sidecar.md)
+    refines incoming THM-4443 into fixed-anchor integral shell products.
+    Metric denominator powers plus truncated unit coefficients recover
+    worst precision; a certified metric baseline bounds the residues needed
+    at the current depth. All future dilations are encoded by at most
+    `max m_i` affine slopes, including unequal multiplicities. A terminal
+    dyadic pair can have simultaneous third-jet cancellation of arbitrarily
+    large valuation as outside nodes are added. Its local loss is still4,
+    and the outside metric baseline dominates: this refutes a local budget,
+    not another global metric theorem. An
+    [independent full-inverse referee](overnight6_20260906_jets_independent_audit.md)
+    accepts the proof and34 literal matrices.
+24. **PROVED conditional grid factorization with the missing mixture terms:**
+    [palette theorem](overnight6_20260906_no3line_palettes.md) conditions on
+    each named cycle's actual row and column labels. Whole-event probabilities
+    then factor into exact local injection kernels; genuine conditional
+    cumulants vanish on disconnected component-dependency graphs. Averaging
+    them alone fails: the n5 conditional third cumulant is negative while
+    the unconditional one is positive, with exact nonzero outer-cumulant
+    and covariance corrections. At n4 all randomness lies in the palettes;
+    at n6 a connected cross-cycle kernel is `1/54`. The positive cylinder
+    algebra retains actual label collision rules. The
+    [independent board referee](overnight6_20260906_no3line_palettes_audit.md)
+    verifies67,111 gates and the all-size proof. This repairs the earlier
+    false product/cumulant shortcut; it supplies no asymptotic zero-event bound.
 
 These are repository-scoped advances and recovered mechanisms, not claims
 of external literature priority. In particular, conditioning grid occupancy
@@ -281,7 +322,10 @@ independence heuristic and the later corrected conjectural constant.
 | Smith cluster tree -> weighted minors | Keep valuations of every row-bank alternative and compare their minima | A depth tree plus an appended factor list loses saturation changes in old factors |
 | Complete binomial paths -> trinomial roots | Ordered source/sink boundaries make Toeplitz minors nonnegative; a shifted ordinary coefficient product retains the full row | Prefix truncation destroys root location; separate rows still need a coupling |
 | Local triple bounds -> LRC completion | Compare actual body phases with the literal tail failure set or exact affine event codes | Local ceilings do not supply entry; count/gcd data lose event overlap, and full Bohr packets lose the chosen anchor |
-| Hermite inverse -> complete terminal clusters | Maximize over every terminal child before discarding unit residues; exact worst precision survives | Individual inverse entries and intermediate ideals remain residue-sensitive; the metric-only full partition is false |
+| Two-jet Hermite inverse -> terminal clusters | Complete terminal maximization preserves worst precision in its proved uniform observer | Higher jets need reciprocal coefficients; intermediate ideals need their own competing minors |
+| Carried quotient -> characteristic coefficients | Real first roots turn quotient multiplication into a real-spectrum operator; positive full characteristic coefficients exclude nonnegative responses | Trace and determinant alone miss a middle positive eigenvalue; retain every coefficient and the carry |
+| Jet shell products -> current/future precision | Integral truncated multiplication retains cancellation; a metric baseline prunes the current target, while slope-labelled intercepts retain future dilations | Current-depth pruning is not permanent; local cancellation is not the global loss |
+| Actual labels -> conditional cycle cumulants | Named palettes make internal permutations independent and give exact injection kernels | Outer palette cumulants/covariances survive unconditioning; formal disjoint-union products remain a different algebra |
 | Real parabolic collinearity -> integral observer | The determinant of three points `(u,u^2)` is the ordinary Vandermonde product | Modulo a prime, zero area only records congruence; integral depth must accompany that reduction |
 
 The shared research move is to restore the coordinate discarded before an
@@ -318,6 +362,11 @@ The [fifth checkpoint manifest](overnight5_20260906_manifest.json) freezes
 independent norm-five, generic-count, native-head and higher-jet audits.
 Their portable filed versions were rerun normally and with optimization;
 the native large-head transcript retains its original run and scoped limits.
+The [sixth checkpoint manifest](overnight6_20260906_manifest.json) freezes
+the new endpoint21 family, reciprocal-jet theorem, palette factorization,
+and their independent exact audits. Root also checked the cited Brillinger
+conditioning theorem on primary pages215--216; the cubic identity is proved
+directly in the palette report.
 
 ## Procedural direction generator
 
@@ -335,12 +384,12 @@ test. Do not simply increase the last census bound. Current unfilled cells:
   profile is still a required sidecar when comparing physical and network
   targets; its physical integral alone cannot replace the selected profile.
 - **No-three-in-line / formal cluster / geometry map / marked events.**
-  The cycle-defect coefficient formula is now explicit. The relevant
-  weight-four-square positivity and component-additive cumulant shortcuts
-  fail. Retain marked forbidden events and global label exclusion in the
-  next algebra, or derive a direct signed coefficient bound with a controlled
-  remainder. Formal locality does not prove analytic convergence or an
-  asymptotic zero-event probability.
+  The formal cycle defects and genuine conditional kernels are now explicit.
+  Work on the outer distribution of named palettes, especially the exact
+  random-pairing carrier for all-C4 skeletons. A conditional dependency graph
+  does not pay the outer cumulants; the n4/n5/n6 controls must remain live.
+  The next target is a controlled remainder or a useful tail bound, not
+  another demonstration of the already proved local factorization.
 - **Moments / path and Laguerre factors / root response / doubling.**
   Individual rows have simple negative roots. Incoming signed duplication
   supplies a cross-row SOS for real-rooted ordinary cores and closes all AP
@@ -365,8 +414,8 @@ test. Do not simply increase the last census bound. Current unfilled cells:
 
 ## Incoming work and scope
 
-Incoming work has been inspected through `b637305db`; the former THM-4440
-and THM-4442 reservations are promoted. THM-4444/4445 remain RESERVED. These are
+Incoming work has been inspected through `6f450d8cb`; THM-4440/4442/4444
+are promoted. THM-4445 remains RESERVED. These are
 inherited results, independently connected where indicated, rather than
 additional discoveries counted for this task:
 
@@ -387,6 +436,9 @@ additional discoveries counted for this task:
   low circuits. [THM-4441 / signed-122 sharp closure](../../01-canon/theorems/THM-4441-lrc14-signed-122-sharp-ray-closure.md)
   gives sharp selected `46/665` at `(2,19,20)` and physical `51/770` at
   `(1,11,20)`. These proved inputs complete the combined corollary above.
+  [THM-4444 / signed-112 classification](../../01-canon/theorems/THM-4444-lrc14-signed-112-sharp-one-ray-classification.md)
+  independently confirms our sharp norm-four and old-threshold loci and
+  adds finer per-cone maxima. Its larger literal head is a separate audit.
   [THM-4442 / bounded ten-body completion](../../01-canon/theorems/THM-4442-lrc14-bounded-ten-body-parity-free-scale-three-completion.md)
   now completes every ternary-unit tail over all 286 ten-subsets of `[13]`,
   with no parity or tail-primitivity assumption. A fixed-sheet connectedness
@@ -411,6 +463,11 @@ additional discoveries counted for this task:
   [endpoint-15 carried family](trinomial_width15_empty_core_returns_sep06.md)
   closes support `(-15,2g-15,3g-15)` for `g>=8`, `gcd(g,15)=1`; it does
   not close the whole endpoint-15 strip or general two-rung separation.
+  Incoming [Hadamard midpoint transport](nc2_hadamard_transport_overnight_hexagon_sep05.md)
+  combines our full path factors with signed duplication to prove virtual
+  negativity. Coefficientwise actual/virtual inclusion is proved, but the
+  rootwise signed transport remains open; a positive coefficient difference
+  need not stay positive at a negative cancellation phase.
 - [THM-4435 / four-node metric blindness and universal Hermite precision](../../01-canon/theorems/THM-4435-four-node-metric-blindness-and-universal-hermite-precision.md)
   proves a dyadic all-depth hostile and the largest Smith factor at any
   integer node set from `F'` and ordinary `F''`. Our ternary residue law
@@ -424,7 +481,12 @@ additional discoveries counted for this task:
   supplies an arbitrary-jet inverse formula and shows that the largest
   exponent itself can depend on units for three jets. An independent audit
   has passed 77 literal matrix cases and 6,806 gates; its fifth-checkpoint
-    artifacts are filed in the fifth checkpoint below.
+  artifacts are filed in the fifth checkpoint. Incoming
+  [full dyadic three-node three-jet partition](three-node-threejet-dyadic-smith-overnight-hexagon-sep05.md)
+  now expresses every factor via eight attained minor costs and the worst
+  loss. Root read the statement and normalization; its full symbolic audit
+  is supplied by the incoming referees. The new shell theorem above keeps
+  its general observer scope separate from this special full partition.
 - [THM-4433 / signed Hamilton second minimum and cross-scale stability](../../01-canon/theorems/THM-4433-signed-hamilton-second-minimum-and-cross-scale-stability.md)
   is newly **PROVED** in incoming canon. This task previously independently
   audited THM-4427's minimum, transposition mechanism, and finite K8 base;

@@ -43,6 +43,29 @@ Format per entry:
   [full-partition continuation](../05-knowledge/results/three-node-threejet-dyadic-smith-overnight-hexagon-sep05.md).
   A small scale bank had hidden the second slope; the false fit was never
   promoted. Preserve independent dilation weights before taking valuations.
+- **Overnight local/global repair:** even with three jets fixed, no
+  node-count-independent terminal-pair cancellation budget survives.
+  [The normalized-jet theorem](../05-knowledge/results/overnight6_20260906_jets_sidecar.md)
+  constructs `{0,2} union {1+2^(h+2)j:0<=j<2^h-1}` with both normalized
+  second coefficients of valuation `h+2`. Its pair-local loss is only4;
+  outside metric costs dominate. A local cancellation statistic does not
+  determine global precision. Current-depth residue pruning also cannot
+  erase future slopes: `(0,1,2)` has an initially inactive order-two term
+  that supplies loss33 rather than32 after dyadic dilation by `2^4`.
+
+## 2026-09-06 overnight -- conditional independence retains its mixing variable
+
+- **Failed shortcut:** conditioning on cycle palettes makes internal
+  permutations independent, but averaging their cumulants does not give
+  the unconditional cumulant. For `2C4` at n4 every conditional board is
+  deterministic, while unconditional third cumulant is16. At n5 the
+  conditional average is negative and the unconditional cumulant positive.
+- **Repair:** retain named row/column palettes, complete event unions,
+  ordinary-versus-factorial cumulant type, and outer cumulants/covariances.
+  The [palette theorem and independent audit](../05-knowledge/results/overnight6_20260906_no3line_palettes.md)
+  give exact local kernels in the actual positive cylinder algebra.
+  Formal unlabelled disjoint-union multiplication is still a different
+  operation. No tail estimate follows from conditional connectedness alone.
 
 ## 2026-09-06 overnight -- empty fibers and fixed-roof transfers
 

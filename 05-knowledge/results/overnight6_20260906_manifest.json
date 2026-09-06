@@ -1,0 +1,115 @@
+{
+  "schema": 1,
+  "created_utc": "2026-09-06T09:03:37.262513+00:00",
+  "baseline_commit": "f5f0f7f75",
+  "incoming_review_commit": "6f450d8cb",
+  "hash_basis": "raw LF bytes; self and maintained synthesis excluded",
+  "scope": "Proved all-height endpoint21 carried Laurent family; proved exact reciprocal-jet shell updates, adaptive precision and dilation envelope, unbounded local terminal-pair cancellation; proved palette-conditioned grid kernels and cumulants with outer corrections. Independent analytic and exact audits. No global conjecture closure.",
+  "artifacts": [
+    {
+      "path": "04-computation/overnight6_20260906_jets_independent_audit.py",
+      "bytes": 8318,
+      "sha256": "d452112ff59443d6b7475435c22e9d458b6ba1188ab0d8d2f95786523329b287"
+    },
+    {
+      "path": "04-computation/overnight6_20260906_jets_sidecar.py",
+      "bytes": 10489,
+      "sha256": "5e6cf9e03659d0b74cb69e059c211f4026590c942ec95a4d803c75c14c2e3f4b"
+    },
+    {
+      "path": "04-computation/overnight6_20260906_laurent_cubic_carry.py",
+      "bytes": 10285,
+      "sha256": "fa72339c02b4e2fa8bc2fe9f8c3528ee6a56a9cd04c284bccfad68e37348745f"
+    },
+    {
+      "path": "04-computation/overnight6_20260906_laurent_cubic_carry_audit.py",
+      "bytes": 5306,
+      "sha256": "edb2a7d3fa43324cd18210a074db76297a753cc4ba1886043c2ad0da838c09e6"
+    },
+    {
+      "path": "04-computation/overnight6_20260906_laurent_cubic_carry_referee.py",
+      "bytes": 7798,
+      "sha256": "2f8fd8cb6eb0540ba3ee31551a0e33eac18fdc7845495f6c8d66fe160876a9d1"
+    },
+    {
+      "path": "04-computation/overnight6_20260906_no3line_palettes.py",
+      "bytes": 15722,
+      "sha256": "cc0fc2774d8475766da8f90ab4a5bb12d070170bfc5ba2b4d3bbf0c74e05f80f"
+    },
+    {
+      "path": "04-computation/overnight6_20260906_no3line_palettes_audit.py",
+      "bytes": 12786,
+      "sha256": "9cff9a74ef208c54bc5964a315367d088761f47dc61148762f7210db8c61c926"
+    },
+    {
+      "path": "05-knowledge/results/overnight6_20260906_jets_independent_audit.md",
+      "bytes": 9066,
+      "sha256": "6cd8d4b6b95209edbdaa5b24e95810552524550b2d6c27a08a4d7b9aac45a48a"
+    },
+    {
+      "path": "05-knowledge/results/overnight6_20260906_jets_independent_audit.out",
+      "bytes": 868,
+      "sha256": "83ec0c72c24e28f1b962c9327a06e88f382b1e94ab10956f1fc27b5ee285af16"
+    },
+    {
+      "path": "05-knowledge/results/overnight6_20260906_jets_sidecar.md",
+      "bytes": 15362,
+      "sha256": "0406c12f1ec44e160056979cc7b12694ae17fdd9b604926d3123679a21438131"
+    },
+    {
+      "path": "05-knowledge/results/overnight6_20260906_jets_sidecar.out",
+      "bytes": 1200,
+      "sha256": "d8c60d7b394e0b35bef50ccaaee8f0bcecac808e3d5f468a07afc36ec101ab87"
+    },
+    {
+      "path": "05-knowledge/results/overnight6_20260906_laurent_cubic_carry.md",
+      "bytes": 15402,
+      "sha256": "fe7282bc73af07229bab3a406fd96be2c47c58939b6637a4c2d738cdb4b845b9"
+    },
+    {
+      "path": "05-knowledge/results/overnight6_20260906_laurent_cubic_carry.out",
+      "bytes": 6361,
+      "sha256": "e3563f0a7cb1e7b318702caeda9cb557c5c15f0a015fe613e3d7ac3cf514d04f"
+    },
+    {
+      "path": "05-knowledge/results/overnight6_20260906_laurent_cubic_carry_audit.md",
+      "bytes": 4672,
+      "sha256": "4f1abe9e627c1c71ebd09e31a80094f2c1292fe930f17dada4bb47d68de140c4"
+    },
+    {
+      "path": "05-knowledge/results/overnight6_20260906_laurent_cubic_carry_audit.out",
+      "bytes": 460,
+      "sha256": "937a222475587451726438f0b6919a5f12a8d4b4a3316f134965b11c30bd681d"
+    },
+    {
+      "path": "05-knowledge/results/overnight6_20260906_laurent_cubic_carry_referee.md",
+      "bytes": 7173,
+      "sha256": "f0d88ff38fd6fec21eb2df9e88cb21a2f9ea56ba6a92b687f988a9777279489b"
+    },
+    {
+      "path": "05-knowledge/results/overnight6_20260906_laurent_cubic_carry_referee.out",
+      "bytes": 576,
+      "sha256": "13c53421a1db90f431dc3eabdcab9f9f0e720cb1bdbb52472987b854313bd061"
+    },
+    {
+      "path": "05-knowledge/results/overnight6_20260906_no3line_palettes.md",
+      "bytes": 17733,
+      "sha256": "ddebd8f6c8d00753bac30397899a06502f616b521c2d4df9d0468d4957188257"
+    },
+    {
+      "path": "05-knowledge/results/overnight6_20260906_no3line_palettes.out",
+      "bytes": 879,
+      "sha256": "006b6f15076863925e168088e7aae264f68893b34231403548772cc07a5cd5b9"
+    },
+    {
+      "path": "05-knowledge/results/overnight6_20260906_no3line_palettes_audit.md",
+      "bytes": 11298,
+      "sha256": "a0732deba38635f60df1c2a608f12015df06c5f0d95d0ea16bb8a46c7cd0d52b"
+    },
+    {
+      "path": "05-knowledge/results/overnight6_20260906_no3line_palettes_audit.out",
+      "bytes": 1129,
+      "sha256": "885415823263c2fbfdd041931e332ef3e0ac5973a496f25801bac3124d2179fd"
+    }
+  ]
+}

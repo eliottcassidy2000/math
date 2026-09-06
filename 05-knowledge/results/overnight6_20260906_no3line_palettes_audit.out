@@ -1,0 +1,12 @@
+PRODUCER_SHA256 cc0fc2774d8475766da8f90ab4a5bb12d070170bfc5ba2b4d3bbf0c74e05f80f
+HEAD 4 all_types {(2, 2): 18, (4,): 72} palettes 36
+  HIST [(0, 18), (2, 8), (4, 4), (6, 4), (8, 2)]
+  CENTRAL (Fraction(2, 1), Fraction(56, 9), Fraction(16, 1)) TOTAL_CUMULANCE (Fraction(0, 1), Fraction(16, 1), Fraction(0, 1))
+HEAD 5 all_types {(2, 3): 600, (5,): 1440} palettes 100
+  HIST [(1, 20), (2, 120), (3, 160), (4, 130), (5, 44), (6, 28), (7, 28), (8, 18), (9, 4), (10, 4), (11, 20), (12, 8), (13, 8), (14, 4), (15, 4)]
+  CENTRAL (Fraction(13, 3), Fraction(1769, 225), Fraction(26159, 675)) TOTAL_CUMULANCE (Fraction(-871, 675), Fraction(6467, 360), Fraction(7949, 360))
+CONDITIONAL_N6 (Fraction(1, 3), Fraction(1, 3), Fraction(1, 3), Fraction(1, 9), Fraction(2, 9), Fraction(1, 6), Fraction(1, 9)) disconnected0 connected1/54
+ALL_C4_N6 boards1350 unique representations; all two-block/three-block decompositions PASS
+CYLINDER_GRAM 34x34 exactly A*Atranspose/6; two-shore positivity follows by tensor product
+MATCHING_KERNEL k2..9 s1..3; non-induced, degree-three, closed-cycle and s-factorial controls
+PASS_OPTIMIZATION_LIVE_GATES 67111

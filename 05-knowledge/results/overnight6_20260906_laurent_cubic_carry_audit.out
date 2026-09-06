@@ -1,0 +1,6 @@
+Independent 19-parameter raw-fiber/resultant interpolation: degrees6/12/18 PASS
+All3 full shifted characteristic polynomials strictly positive on g>=11 PASS
+Source fibers, Sturm roots, exact denominator cancellation, gcd and missing-middle hostiles PASS
+Polynomial identities use analytic weighted-degree bounds; no bounded extrapolation
+PASS_OPTIMIZATION_LIVE_GATES 218
+published_record_sha256 88d4c05a95fa48066151b72063c5f9fffb0cbecb18f79ca91c975da63f935315

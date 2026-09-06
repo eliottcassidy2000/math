@@ -1,0 +1,7 @@
+Standard-library exact Q[g] reduction: factorial contents and inverse carry PASS
+Independent symbolic B1/B2/B3 via principal minors/determinant: degrees 6/12/18 PASS
+All 39 shifted rational characteristic coefficients equal the published records and are positive
+Independent discriminant formula, literal source fibers, factorial weights and carry exponents PASS
+No interpolation, numerical roots, producer imports, or additional parameter census
+published_record_sha256=88d4c05a95fa48066151b72063c5f9fffb0cbecb18f79ca91c975da63f935315
+PASS: 130 optimization-live exact gates

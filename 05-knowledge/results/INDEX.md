@@ -5,6 +5,17 @@
   AUDITED; LRC(14) OPEN.** Only `(1,4,5)` is at or below `6/77`; every other
   additive row lies sharply in `[31/392,6/55]`. The constant continuum bulk
   `9/98` proves this is a persistent body-phase obstruction.
+- [Sixth overnight mathematical synthesis](overnight_20260906_synthesis.md):
+  **PROVED + INDEPENDENTLY AUDITED.** [Endpoint21 Laurent family](overnight6_20260906_laurent_cubic_carry.md)
+  has first detection `g` or `2g` for every admissible `g>=11`; all carried
+  quotient characteristic coefficients have an exact positivity certificate.
+  [Reciprocal jet products](overnight6_20260906_jets_sidecar.md) give exact
+  shell updates, a current-target residue budget and a finite all-depth
+  envelope; simultaneous terminal-pair cancellation is unbounded locally.
+  [Named grid palettes](overnight6_20260906_no3line_palettes.md) give a genuine
+  conditional connected expansion with the required outer mixture terms.
+  General trinomial separation and no-three-in-line asymptotics remain open.
+  [Frozen proofs, sources and independent audits](overnight6_20260906_manifest.json).
 
 - [THM-4444: signed `(1,1,2)` sharp one-ray classification](../../01-canon/theorems/THM-4444-lrc14-signed-112-sharp-one-ray-classification.md):
   **PROVED ELEMENTARY RELATIVE TO THM-4414 + FINITE-EXACT + INDEPENDENTLY
