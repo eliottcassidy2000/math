@@ -25,7 +25,8 @@ Then read frontier, guardrails, theorem; logs are history.
    the complete clock; THM-4370/4372/4373 add septimal/resonant constraints. Entry and
    `2+12` remain open. [THM-4434](../01-canon/theorems/THM-4434-lrc14-universal-scale-three-network-projection-bound.md)
    closes the universal local odd ternary-unit triple-comb/network bound
-   `6/77`; actual-body measure and phase entry remain separate obligations.
+   `6/77`; [THM-4437](../01-canon/theorems/THM-4437-lrc14-all-parity-network-reduction-to-three-low-circuits.md)
+   removes parity outside three low circuits. Body-phase entry remains open.
 2. **The `q <= 25` period claim is refuted.** THM-762/764 exhibit `26*{1,...,12} union {339}`, whose first good period is `27`.
 3. **Good-period existence is a maximum statement.** The tight resonant AP
    defeats average/count arguments; see MISTAKE-127/129/130.

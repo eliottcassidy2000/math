@@ -1,0 +1,23 @@
+CLEANROOM ALL-PARITY RAW HEAD H=611 BRUTE_CONTROL_ROWS=1205
+UNIVERSE rows=9720930 low_rows=67534 low_overlap_rows=0 positive_carrier_pairs=182289317
+TARGET all_min_gt=14220 nonlow_min_ge=0 nonlow_any_projection_gt=0 nonlow_any_projection_eq=3 first_failure=2,5,7
+NONLOW_PROJECTION_EQUALITY w=7,16,22 coordinate=1
+NONLOW_PROJECTION_EQUALITY w=14,17,22 coordinate=2
+NONLOW_PROJECTION_EQUALITY w=4,19,22 coordinate=2
+HOSTILE_2_5_7 mask=1 E=22/245,6/49,1/10 positive_carrier_pairs=1
+MAX_ALL_MIN 6/55 w=1,10,11 E=6/55,12/77,23/154
+MAX_NONLOW_MIN 3/70 w=2,11,40 E=3/70,3/70,3/70
+MAX_NONLOW_INDIVIDUAL 6/77 w=7,16,22 E=15/616,6/77,479/8624
+PARITY mask=1 rows=1387444 min_failures=0
+PARITY mask=2 rows=1396856 min_failures=1
+PARITY mask=3 rows=1387380 min_failures=4736
+PARITY mask=4 rows=1387352 min_failures=0
+PARITY mask=5 rows=1396836 min_failures=4740
+PARITY mask=6 rows=1387264 min_failures=4743
+PARITY mask=7 rows=1377798 min_failures=0
+CIRCUITS mask=0 rows=9653396 min_gt=0 min_eq=0
+CIRCUITS mask=1 rows=14220 min_gt=14219 min_eq=0
+CIRCUITS mask=2 rows=28438 min_gt=1 min_eq=1
+CIRCUITS mask=4 rows=24876 min_gt=0 min_eq=0
+COMMUTATIVE_HASH sum=11036112604704679290 xor=3479353455816149694
+PASS

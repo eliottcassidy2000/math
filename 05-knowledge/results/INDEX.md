@@ -1,5 +1,16 @@
 # Script Results Index
 
+- [THM-4437: all-parity reduction to three low circuits](../../01-canon/theorems/THM-4437-lrc14-all-parity-network-reduction-to-three-low-circuits.md):
+  **PROVED ELEMENTARY RELATIVE TO THM-4414/4422 + FINITE-EXACT +
+  INDEPENDENTLY AUDITED; LRC(14) OPEN.** For primitive distinct positive
+  ternary-unit triples outside signed coefficient patterns `(1,1,1)`,
+  `(1,1,2)`, `(1,2,2)`, every complete network projection is at most `6/77`
+  and the minimum is strict. A parity-free 750-pattern coefficient box and
+  independent 9,720,930-row head close the proof. Exactly three nonlow
+  individual coordinates attain equality, beginning at `(7,16,22)`; the
+  referee caught this boundary and repaired the proposed all-strict wording.
+  The three low circuits and actual body-phase entry remain separate.
+
 - [Sharp additive mixed-parity bound](lrc14_additive_parity_empty_core_sep06.md):
   **PROVED + FINITE-EXACT + INDEPENDENTLY AUDITED.** The complete family
   `a+b=c` has selected network and physical mass at most `6/55`, with sole

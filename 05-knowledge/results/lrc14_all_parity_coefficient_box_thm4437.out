@@ -1,0 +1,32 @@
+ALL_PARITY_COEFFICIENT_BOX
+UNIVERSE 750 support Counter({3: 701, 2: 49})
+RESIDUAL_LOW
+(1, 1, 1) (Fraction(2, 7), (0,), Fraction(4, 3), ((-1, 1, 1), (Fraction(1, 1), Fraction(1, 1), Fraction(0, 1))))
+(1, 1, 2) (Fraction(2, 7), (0,), Fraction(4, 3), ((-2, 1, 1), (Fraction(1, 1), Fraction(1, 1), Fraction(1, 1))))
+(1, 2, 2) (Fraction(3, 14), (0,), Fraction(4, 3), ((-2, 1, 2), (Fraction(1, 1), Fraction(1, 1), Fraction(1, 2))))
+TOP_NONLOW
+(Fraction(15, 98), (1, 7, 8), (-3, 0, 3), Fraction(4, 1), ((-8, 1, 7), (Fraction(1, 1), Fraction(1, 1), Fraction(1, 1))))
+(Fraction(1, 7), (1, 8, 8), (-3, 0, 3), Fraction(4, 1), ((-8, 1, 8), (Fraction(1, 1), Fraction(1, 1), Fraction(7, 8))))
+(Fraction(1, 7), (1, 5, 6), (-2, -1, 1, 2), Fraction(4, 1), ((-6, 1, 5), (Fraction(1, 1), Fraction(1, 1), Fraction(1, 1))))
+(Fraction(1, 7), (1, 2, 4), (0,), Fraction(4, 3), ((-4, 1, 2), (Fraction(3, 4), Fraction(1, 1), Fraction(1, 1))))
+(Fraction(1, 7), (1, 1, 4), (0,), Fraction(4, 3), ((-4, 1, 1), (Fraction(1, 2), Fraction(1, 1), Fraction(1, 1))))
+(Fraction(121, 882), (3, 4, 7), (-2, -1, 1, 2), Fraction(4, 1), ((-7, 3, 4), (Fraction(1, 1), Fraction(1, 1), Fraction(1, 1))))
+(Fraction(17, 126), (1, 4, 6), (-2, -1, 1, 2), Fraction(4, 1), ((-6, 1, 4), (Fraction(5, 6), Fraction(1, 1), Fraction(1, 1))))
+(Fraction(33, 245), (2, 7, 10), (-3, 0, 3), Fraction(4, 1), ((-10, 2, 7), (Fraction(9, 10), Fraction(1, 1), Fraction(1, 1))))
+(Fraction(72, 539), (4, 7, 11), (-3, 0, 3), Fraction(4, 1), ((-11, 4, 7), (Fraction(1, 1), Fraction(1, 1), Fraction(1, 1))))
+(Fraction(13, 98), (1, 14, 16), (-6, -3, 0, 3, 6), Fraction(20, 3), ((-16, 1, 14), (Fraction(15, 16), Fraction(1, 1), Fraction(1, 1))))
+(Fraction(37, 280), (1, 8, 10), (-3, 0, 3), Fraction(4, 1), ((-10, 1, 8), (Fraction(9, 10), Fraction(1, 1), Fraction(1, 1))))
+(Fraction(12, 91), (1, 13, 16), (-6, -3, 0, 3, 6), Fraction(20, 3), ((-16, 1, 13), (Fraction(7, 8), Fraction(1, 1), Fraction(1, 1))))
+(Fraction(12, 91), (1, 12, 13), (-5, -4, -2, -1, 1, 2, 4, 5), Fraction(8, 1), ((-13, 1, 12), (Fraction(1, 1), Fraction(1, 1), Fraction(1, 1))))
+(Fraction(11, 84), (3, 5, 8), (-2, -1, 1, 2), Fraction(4, 1), ((-8, 3, 5), (Fraction(1, 1), Fraction(1, 1), Fraction(1, 1))))
+(Fraction(32, 245), (1, 7, 10), (-3, 0, 3), Fraction(4, 1), ((-10, 1, 7), (Fraction(4, 5), Fraction(1, 1), Fraction(1, 1))))
+(Fraction(263, 2016), (3, 4, 8), (-2, -1, 1, 2), Fraction(4, 1), ((-8, 3, 4), (Fraction(7, 8), Fraction(1, 1), Fraction(1, 1))))
+(Fraction(41, 315), (2, 5, 6), (-2, -1, 1, 2), Fraction(4, 1), ((-6, 2, 5), (Fraction(1, 1), Fraction(1, 1), Fraction(4, 5))))
+(Fraction(108, 833), (2, 14, 17), (-6, -3, 0, 3, 6), Fraction(20, 3), ((-17, 2, 14), (Fraction(16, 17), Fraction(1, 1), Fraction(1, 1))))
+(Fraction(200, 1547), (2, 13, 17), (-6, -3, 0, 3, 6), Fraction(20, 3), ((-17, 2, 13), (Fraction(15, 17), Fraction(1, 1), Fraction(1, 1))))
+(Fraction(19, 147), (1, 6, 7), (-2, -1, 1, 2), Fraction(4, 1), ((-7, 1, 6), (Fraction(1, 1), Fraction(1, 1), Fraction(1, 1))))
+MAX_NONLOW 15/98 unique_pattern (1, 7, 8)
+SEMANTIC_SHA256 c1938023c52d2e22d00aa4b0f72ad6729f3a4c20f9a25a9cdb04286a8074abad
+CHECKS 1502 CLIPPER_CHECKS 516612 EDGE_CHECKS 2804
+PASS: every max-coefficient<=18 pattern outside the three low circuits has slope<=15/98
+SCOPE: coefficient box only; the low circuits and finite speed head remain separate obligations

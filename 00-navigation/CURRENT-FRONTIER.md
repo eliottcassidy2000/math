@@ -41,15 +41,15 @@ gives square sum `<=195`; THM-4019 refutes its sharp arbitrary-lattice target.
   primitive non-AP-plus-six families; arbitrary cores and entry remain open.
 - **Quantifier/type controls (PROVED):** THM-4095--4116 preserve field, gap,
   ray, parity-sheet and component-count data; none supplies safety or arrival.
+- **Seam/entry:** THM-4326/4329 close the fixed chart; 4330 leaves `2+12`;
+  4347 closes height 40. Arbitrary entry and synchronization remain open.
 - **Scale-three local bound CLOSED; entry OPEN:**
   [THM-4434](../01-canon/theorems/THM-4434-lrc14-universal-scale-three-network-projection-bound.md)
-  proves `min_i E_i<=6/77` for primitive odd ternary-unit triples, with
-  equality only `(1,5,11)`; every projection is strict off norm four.
-  THM-4418/4420/4422/4423/4425/4428/4431 retain sharper pair, ray, count,
-  colored-basis and width structure. The [consumer audit](../05-knowledge/results/overnight3_20260906_lrc_consumers.md)
-  recovers THM-530's body-floor hostile and the additive parity obstruction.
-  The [first-exit compiler](../05-knowledge/results/lrc14_ten_body_haar_hostile_overnight_hexagon_sep05.md)
-  retains actual safe components; arbitrary entry/synchronization remain open.
+  proves the sharp odd `min E<=6/77` bound; [THM-4437](../01-canon/theorems/THM-4437-lrc14-all-parity-network-reduction-to-three-low-circuits.md)
+  removes parity outside signed `(111),(112),(122)`. Low circuits and
+  body-phase entry remain open. The [consumer audit](../05-knowledge/results/overnight3_20260906_lrc_consumers.md)
+  and [component compiler](../05-knowledge/results/lrc14_ten_body_haar_hostile_overnight_hexagon_sep05.md)
+  retain the body-floor hostile and actual safe addresses.
 - **Transport/incidence:** [overnight synthesis](../05-knowledge/results/overnight_20260906_synthesis.md)
   retains cap, midpoint and owner-line refinements. The
   [sparse proof](../05-knowledge/results/synthesis_20260905_lrc_sparse_transport.md)

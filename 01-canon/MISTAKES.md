@@ -38,9 +38,14 @@ Format per entry:
   and finite-base universes. None of these witnesses refutes LRC(14).
 - **Repair continuation / next tests:** the
   [additive norm-three theorem](../05-knowledge/results/lrc14_additive_parity_empty_core_sep06.md)
-  now proves its sharp `6/55` ceiling. Retain the separate norm-four/five
-  parity questions and compare complete body components with tail-safe
-  lifts before taking Haar measure.
+  now proves its sharp `6/55` ceiling. [THM-4437](theorems/THM-4437-lrc14-all-parity-network-reduction-to-three-low-circuits.md)
+  proves the original `6/77` local target for every parity outside the signed
+  coefficient patterns `(1,1,1)`, `(1,1,2)`, `(1,2,2)`. Its referee also
+  repaired a too-strong intermediate wording: `(7,16,22)` has one projection
+  equal to `6/77`, although its minimum is strict; the complete nonlow
+  individual equality locus has three rows. Retain the three low circuits and
+  compare complete body components with tail-safe lifts before taking Haar
+  measure.
 
 Independent concurrent [consumer reconstruction](../05-knowledge/results/overnight3_20260906_lrc_consumers.md) also recovers THM-530 Section A and retains the complete weak-safe geometry; its adjacent-family formula gives the exact 42-residue oscillations around the additive bulk.
 

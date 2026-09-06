@@ -1,0 +1,7 @@
+CLEANROOM PARITY-FREE ANALYTIC CHECKS
+MOD3 relations 64 zero_count_cases {0: 16, 1: 48} live_observations 128
+DEFECT_COUNTS checked_S_through 10000 onezero_empty_exactly [1, 2, 3, 4]
+M_GE_19 142/931 TARGET 15/98
+CUTOFF threshold57 56980/93 quadratic58 2523/4 threshold58 57904/93 tail_c>=613 head_c<=611
+CHECKS 40271
+PASS

@@ -1,0 +1,18 @@
+FIRST_FAILURE w=2,5,7 E=22/245,6/49,1/10 mass=22/245 contacts=6
+MIXED_PARITY_HEAD H=611 rows=9720930 min_failures=14220 outside_low=0 low_rows=67534 outside_low_any_E_gt=0 outside_low_projection_equalities=3 first_failure=2,5,7
+OUTSIDE_LOW max_min=3/70 at=2,11,40 max_individual=6/77 at=7,16,22
+OUTSIDE_LOW_EQUALITY w=7,16,22 coordinate=1
+OUTSIDE_LOW_EQUALITY w=14,17,22 coordinate=2
+OUTSIDE_LOW_EQUALITY w=4,19,22 coordinate=2
+low_bits=1 rows=14220 min_failures=14219
+low_bits=2 rows=28438 min_failures=1
+low_bits=4 rows=24876 min_failures=0
+mask=1 rows=1387444 failures=0 equalities=0 max_min=41/616 at=7,8,22 E=41/616,6/77,6/77
+mask=2 rows=1396856 failures=1 equalities=0 max_min=11/140 at=2,11,20 E=131/1540,11/140,3/35
+mask=3 rows=1387380 failures=4736 equalities=0 max_min=2946/28861 at=7,31,38 E=857/8246,6/49,2946/28861
+mask=4 rows=1387352 failures=0 equalities=0 max_min=114/1771 at=2,22,23 E=114/1771,12/161,12/161
+mask=5 rows=1396836 failures=4740 equalities=0 max_min=6/55 at=1,10,11 E=6/55,12/77,23/154
+mask=6 rows=1387264 failures=4743 equalities=0 max_min=223/2156 at=4,7,11 E=6/49,41/308,223/2156
+mask=7 rows=1377798 failures=0 equalities=1 max_min=6/77 at=1,5,11 E=6/77,6/77,6/77
+SEMANTIC_FNV1A64 1890273116795662483
+PASS: outside the three low signed circuits every projection is at most 6/77 and the minimum is strict.
