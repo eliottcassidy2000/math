@@ -80,3 +80,44 @@ Root replay: normal, optimized and frozen outputs are byte-identical;
 `37fdc13870f7cf3122f7eebd413cbbfcf8df6a3451744027a8172b1ecdf5f8f0`;
 output SHA256
 `c9d40353e33585d6c1c86d465e09f2862345c8e5af83744595d4357af015e8dd`.
+
+## Sharp global continuation
+
+Root authored the [complementary proof](open_frontier_sep06_stability_complement.md);
+its independent review is the [sibling audit](open_frontier_sep06_stability_complement_audit.md).
+Root separately read the entire [regional packing proof](open_frontier_sep06_stability_packing.md)
+and source. Checked the strictly convex tail-square comparison, its failure
+to preserve p1, exact fixed-c domain and concavity, both factored boundaries,
+strict signed-tail loss and the tuned finite family inside the region.
+Normal/optimized/frozen72-gate replay PASS, source
+`a31fc847573b9fbc2799863057870c0be90c7645bf2c98b76da0c516c202c09b`,
+output `98bd68e9ffb7023bc838764768d6f56a3b840b21651381540f33ca9148ab654c`.
+The common objective and complementary domains prove global sharp K3.
+A [third reader](open_frontier_sep06_stability_global_audit.md) independently
+audited both arguments and the actual sharpness construction.
+
+## Quadratic-anchor repair and actual decoder obstruction
+
+For the [quadratic-anchor theorem](open_frontier_sep06_quadratic_anchor.md),
+root checked compactness of the weak-interlacing closure, the forced
+three-positive-root boundary, the middle-root sign including ties, and
+the repeated-root contradiction from D(5). The exact original-root
+relation and two highest carried Q coefficients imply the negative
+escaping-phase asymptotic and its uniform non-effective threshold.
+The source's four disjoint sign brackets exhaust the named control's
+degree-four first row; the full ordinary-carrier extraction agrees.
+Independent normal/optimized/frozen57-gate replay PASS, source
+`ebe6101b08f748d710b7bb3894ce064e476ce80eaf2758995c2b07bf1e5ae9d7`,
+output `6e04d52afd8b8961cc9d95c498c0d36abf95b25c0d81ff7f50e9c1ac4c300fe4`.
+
+For the [actual5+8 residual](open_frontier_sep06_decoder_residual.md),
+root checked the prime-support separation, actual spanning edges and
+absence of crossing edges, both80/140 mixed-support exclusion proofs,
+all inherited profile types, all140 native and35 endpoint failures,
+both universal gluing failures and exact favorable7-clock alignment.
+Source read in full; independent normal/optimized/frozen5141-gate replay
+PASS, source
+`0bd89477d6cb63a94e8455f1bc90cc7af99ece5176111d8ecc622bde6b3064b2`,
+output `917151c281ab517daa60b9884b1431fce0f500297c6b10682a083261e16af6d1`.
+The refuted statement is necessity of sufficient scores, not the proved
+criteria or actual LRC safety. The row's exact safe phase is retained.

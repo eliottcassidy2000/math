@@ -1,8 +1,8 @@
 # Open-frontier research board — September 6, 2026
 
-**Status: ACTIVE RESEARCH.** LRC(14), general actual trinomial two-rung
-noncancellation, and the best global signed-root stability constant are
-**OPEN**. Proved advances and continuing candidates are distinguished below.
+**Status: ACTIVE RESEARCH; SHARP GLOBAL STABILITY SOLVED.** LRC(14) and
+general actual trinomial two-rung noncancellation remain **OPEN**. The exact
+best signed-root stability constant K3 is now proved and independently audited.
 The user requested continuation of the previous long research session.
 The resumed schedule runs every thirty minutes through18:15 America/Denver
 on September6, then finishes/pushes its last coherent checkpoint and pauses.
@@ -21,7 +21,7 @@ theorem is being transferred into arithmetic or signed coefficients.
 | Anchor: actual decoder components | Exact signed boxes and all support orientations; a collective gcd is not an endpoint gcd | Retain gcd shared across opposite component labels; prove the coefficient gate and global phase width together |
 | Anchor: full safe-component lengths | Five inert mass/width profiles; open endpoints and isolated safe points matter | Replace the two scalars by all sorted component-prefix sums; first prove containment majorization and a finite all-height envelope |
 | Niche: anchored Laurent response | Unanchored exact double cancellation; genuine variable rescaling also changes2t | Fix the actual first coefficients, vary root shape, and isolate the original joint zero with exact full-response signs |
-| Wildcard: global stability | Explicit K=(6sqrt(2)-8)/3; a third positive atom defeats the local two-atom guess | Absorb the energy denominator before tail compression; audit a stronger global constant, then retain integer tail packing |
+| Wildcard: global stability — SOLVED | Explicit old constants lose integer tail mass; a third positive atom defeats the local guess | Complementary second-root regions prove sharp K3, with an actual finite dust family |
 | Bridge: normalization and packing data | A root carrier loses relative scale; mass/maximum lose the intermediate component profile | State precisely what additional coordinate performs the proof step; no syntax-only cross-domain transfer |
 | Process: current consequences | Incoming theorems can strictly subsume a candidate | Search statements/constants and inspect new commits before filing; distinguish reproof from new closure |
 
@@ -64,12 +64,15 @@ The active method cards are **Search the statement before the method**,
   The strict gain is on a concrete compact set;10599 declared body-template
   evaluations found no physical gain over the earlier joint mass/width gate.
   Independent analytic/source audit and1659-gate replay PASS.
-- **PROVED + FINITE-EXACT — [global root stability](open_frontier_sep06_stability.md):**
-  K0=(12sqrt(2)-16)/3=0.3235209161 doubles the previous constant.
-  Keeping the energy divisor inside the signed tail compression is the
-  mechanism. K0 is sharp for that relaxation; the best constant for actual
-  roots remains between K0 and the three-atom upper obstruction0.3501345012.
-  Root analytic/source audit and341-gate normal/optimized replay PASS.
+- **PROVED + FINITE-EXACT + INDEPENDENTLY AUDITED —
+  [sharp global root stability](open_frontier_sep06_stability_complement.md):**
+  K_best=K3=4sqrt(3)/[3(1+sqrt(2))(1+sqrt(3))]=0.3501345012.
+  Every finite eligible row satisfies the strict inequality; an explicit
+  finite normalized family approaches K3. The [packing region](open_frontier_sep06_stability_packing.md)
+  and complementary region exhaust the domain. Mutual analytic/source
+  audits and a [third-reader audit](open_frontier_sep06_stability_global_audit.md)
+  PASS;90+72 exact gates replay. The earlier doubled K0 bound remains a
+  valid intermediate result, optimal only for its unrestricted relaxation.
 - **PROVED MODEL OBSTRUCTION + INDEPENDENTLY AUDITED —
   [linearly anchored Laurent family](open_frontier_sep06_laurent.md):**
   at q5/h4 the genuine first coefficients(13,12,11), both Euler identities,
@@ -79,22 +82,47 @@ The active method cards are **Search the statement before the method**,
   PASS; the [separate audit](open_frontier_sep06_laurent_audit.md) also passed.
   Actual binomial rows
   retain higher coefficients absent from this model.
+- **PROVED + FINITE-EXACT + INDEPENDENTLY AUDITED —
+  [quadratic-anchor repair](open_frontier_sep06_quadratic_anchor.md):**
+  fixing e1=13,e2=55 and both contiguous interlacers forces e4>=kappa>0
+  on the compact weak closure. Every escaping original-root phase then
+  has negative full response. The uniform large-phase threshold is
+  non-effective; finite-phase negativity remains open. Root analytic/source
+  audit and57-gate replay PASS.
+- **REFUTED FORCING IMPLICATION + FINITE-EXACT —
+  [actual unitless5+8 residual](open_frontier_sep06_decoder_residual.md):**
+  all hereditary profiles and full equality entry coexist with failure of
+  every arbitrary-pair native test, every endpoint cross-divisor test, and
+  both universal arc-grid tests. An exact favorable7-clock alignment is
+  strictly safe. Root analytic/source audit and5141-gate replay PASS.
+
+## Incoming second cycle and its effect
+
+Commits ae647263ff and2763ed0df4 add
+[leaf cofactors](second_20260906_entry.md), improving uniform endpoint
+quotient D/gcd(D,minV) cutoffs to698294,4854,26 for3+10,4+9,5+8.
+Their minimum-cofactor theorem combines directly with this session's
+cross-divisor mechanism; the earlier crude cutoffs are superseded as best
+available sufficient bounds. The incoming balanced6+7 obstruction and our
+unbalanced5+8 obstruction independently defeat forced-score expectations.
+Their [actual endpoint33 theorem](second_20260906_laurent.md) retains the
+full carried coefficient law and closes first return at g or2g; this is
+the next inheritance route for the still-open finite-phase anchor question.
 
 ## Precise next obligations
 
-- Decoder: decide whether actual equality, physical height and all hereditary
-  profiles force a qualifying cross-divisor score. A failed sufficient score
-  is not an unsafe row. Retain the endpoint walk factor when moving from
-  collective gcd to a selected pair.
+- Decoder: the proposed forcing implication is now refuted. Retain the
+  actual translated component-safe phase packet, starting with the exact
+  7-clock alignment in the5+8 witness. The sufficient criteria remain true.
 - Component lengths: seek a physical body missed by the earlier two-scalar
   gate or a structural reason its safe-component vectors cannot realize
   the generic strict gain. The10599-template negative is bounded evidence.
-- Laurent: fixing e1=13 and the next genuine coefficient e2=55 fixes
-  p2=59 and blocks degree-one concentration. Test whether the higher anchor
-  removes this model obstruction, retaining the original root and full carry.
-- Stability: recover integer tail packing, starting with the region whose
-  two largest positive roots are at least1/sqrt(3). A formal fractional
-  multiplicity between two and three explains the present relaxation gap.
+- Laurent: obtain an explicit kappa or a full finite-phase sign certificate
+  with both anchors. Compare the complete carried quotient in the incoming
+  endpoint33 theorem; no free-shape proof is an actual binomial transfer.
+- Stability: the optimal constant is closed. Next possible question is the
+  structure and rate of all near-minimizing families; do not reopen the
+  scalar optimum or mistake its infeasible relaxed zeros for finite equality.
 
 Each new pull or result must be compared with all six concepts. A component
 packing obstruction cannot pay a signed coefficient, and an anchored

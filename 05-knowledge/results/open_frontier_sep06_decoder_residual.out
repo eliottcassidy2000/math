@@ -1,0 +1,4 @@
+FINITE-EXACT actual equality entry; cross-divisor necessity REFUTED; row SAFE
+{"Q":567869252041,"U":[25806,32538,44022,68034,249458,374187,748374,2245122],"V":[40341259,287243635,542783995,807423715,14321146945],"best_native_labels":[25806,2245122,40341259,25806],"best_native_score":"4730272820/108022718367","clearance":"696962/4912751","g":1,"maximum_U_pair_sum":88,"minimum_V_pair_gcd":115591,"minimum_endpoint_lcm":1041046529754,"mixed_support_counts":[80,140],"nontrivial_profiles":[[6,2,[1,1,1,1,1,1]],[6,3,[1,1,1,1,1,1]],[6,11,[1,1,1,1,1,1]],[6,17,[1,1,1,1,1,1]],[6,23,[1,1,1,1,1,1]],[6,29,[1,1,1,1,1,1]]],"phase":"1403643/9825502","physical_sum":78598806272076840,"subset_gcd_maxima":[1,1,1,1,1,29],"support_digest":"c02356cfd58eb15dd3c21bf8c9650dae30ead444d22aa8d56c1c2f33157a8e83","t":4912751}
+EXPLICIT_GATES 5141
+SEMANTIC_SHA256 85aa8f055fe3858412e68fb9fed52ad696ad7d40b96729c2dfd8f8a337c6cf80

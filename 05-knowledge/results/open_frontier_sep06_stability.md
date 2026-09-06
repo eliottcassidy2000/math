@@ -1,7 +1,10 @@
 # Retaining the energy divisor doubles the global stability constant
 
 **Status: PROVED ANALYTICALLY + FINITE-EXACT + INDEPENDENTLY AUDITED (analytic proof).**
-The best global constant remains **OPEN**. This improves, without editing,
+**Current update:** the [sharp global theorem](open_frontier_sep06_stability_complement.md)
+now proves K_best=K3. The K0 inequality below remains valid; its claim that
+the optimum is open is superseded by that mutually audited continuation.
+This intermediate improvement retains, without editing,
 the frozen [quantitative stability theorem](quantitative_stability_empty_core_morning_sep06.md).
 No theorem ID or external-priority claim.
 

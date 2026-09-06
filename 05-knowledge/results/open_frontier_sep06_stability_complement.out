@@ -1,0 +1,8 @@
+PASS complementary small-second-root region; combined with packing theorem gives exact global K3
+K3=4sqrt3/[3(1+sqrt2)(1+sqrt3)]; strict on every finite eligible normalized list
+Formal gates: signed secant bounds; derivative/domain remainder; diagonal; fixed b=1/sqrt3; two-atom ratio
+ACTUAL_PREFIX_UNIVERSE 49 ELIGIBLE 30 EXCEPTIONS 19
+EXCEPTIONS [["-2","0","zero energy"],["-2","2","zero prefix sum"],["-1","0","zero energy"],["-1","1","zero prefix sum"],["-1/2","0","zero energy"],["-1/2","1/2","zero prefix sum"],["0","-2","zero energy"],["0","-1","zero energy"],["0","-1/2","zero energy"],["0","0","zero prefix sum"],["0","1/2","zero energy"],["0","1","zero energy"],["0","2","zero energy"],["1/2","-1/2","zero prefix sum"],["1/2","0","zero energy"],["1","-1","zero prefix sum"],["1","0","zero energy"],["2","-2","zero prefix sum"],["2","0","zero energy"]]
+REGIONS {"complement": 16, "packing": 14}
+EXACT_GATES 90
+SEMANTIC_SHA256 81ddb22d7f5948976e3f7e11912bc534c6fab16249c6f3a84a8cdfee415bbf3c

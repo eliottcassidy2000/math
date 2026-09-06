@@ -25,6 +25,19 @@ was replaced. Failed sufficient pair-product gates still do not mean unsafety.
 
 ## 2026-09-06 continuation -- fixed anchors, root shape and integer packing
 
+- **Forcing the new score is refuted:** the [actual5+8 residual](../05-knowledge/results/open_frontier_sep06_decoder_residual.md)
+  satisfies the full physical entry and every inherited profile, while all
+  arbitrary-pair native tests and both whole-arc grid tests fail. Separating
+  the components' prime supports hides every mixed-subset gcd while keeping
+  large internal pair gcds. The row is strictly safe by an exact7-clock
+  alignment. Keep the translated phase packet; improving the same necessary
+  profiles cannot force this failed sufficient score. Incoming balanced6+7
+  work supplies an independent boundary in a different split.
+- **The stability relaxation gap is now repaired:** the [sharp global proof](../05-knowledge/results/open_frontier_sep06_stability_complement.md)
+  splits at the second positive root1/sqrt(3). The old envelope suffices
+  below that threshold; convex total-tail packing works above it. Their
+  identical objective yields exact K3 globally. The negative observation
+  about one unrestricted relaxation did not bound all possible proofs.
 - [Linear anchoring](../05-knowledge/results/open_frontier_sep06_laurent.md)
   does not repair the abstract Euler/pencil model. The ratio64 corrected
   control had negative response, but the same genuine first coefficients
