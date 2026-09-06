@@ -1,5 +1,13 @@
 # Script Results Index
 
+- [Twelfth overnight synthesis](overnight_20260906_synthesis.md):
+  **PROVED + INDEPENDENTLY AUDITED.** [Signed semigroup boxes](overnight12_20260906_lrc_gcd_semigroup.md)
+  close actual LRC entry with an endpoint gcd<=76,388,115;
+  [decoder descent](overnight12_20260906_lrc_decoder_descent.md) bounds six-clocks
+  by31,950 and gives6,121 necessary values. [Saturated-board counting](overnight12_20260906_no3line_count_restart.md)
+  transfers the exponential bound to entropy and conditional uniform-column
+  restarts. [Manifest](overnight12_20260906_manifest.json):19 frozen artifacts.
+
 - [Eleventh overnight synthesis](overnight_20260906_synthesis.md):
   **PROVED + INDEPENDENTLY AUDITED.** [Unit-core actual entry](overnight11_20260906_lrc_unit_component.md)
   closes the rank-eleven primitive-unit decoder subclass. [Fixed rows](overnight11_20260906_no3line_rowfreeze.md)

@@ -1,0 +1,105 @@
+{
+  "schema": 1,
+  "created_utc": "2026-09-06T13:47:12.378226+00:00",
+  "baseline_commit": "370f2aec4",
+  "incoming_review_commit": "fe9984169",
+  "hash_basis": "raw LF bytes; self and maintained synthesis/reference/navigation files excluded",
+  "scope": "Exact signed coefficient boxes close an actual LRC entry subclass without a unit; connected decoder edges give sharp hereditary gcd descent; saturated-board entropy and adaptive uniform-column restart bounds. All three independently audited. Global LRC14 and extremal no-three-line asymptotics remain open.",
+  "artifacts": [
+    {
+      "path": "04-computation/overnight12_20260906_lrc_decoder_descent.py",
+      "bytes": 6919,
+      "sha256": "a2e9d6052a77522b2cb9c09afaec4866ba4b92c503b72dffa0c402bb6f64b80e"
+    },
+    {
+      "path": "04-computation/overnight12_20260906_lrc_decoder_descent_audit.py",
+      "bytes": 5235,
+      "sha256": "4c5853d83f8dd204e4da5bf03b6e66e5a832686bbcba7fd208cfcc04e346b755"
+    },
+    {
+      "path": "04-computation/overnight12_20260906_lrc_decoder_descent_inherited_profiles.json",
+      "bytes": 26388,
+      "sha256": "935f3f687b6d7c89cc099e536f536238fd753bcc4c1747906d213cef387ca93f"
+    },
+    {
+      "path": "04-computation/overnight12_20260906_lrc_gcd_semigroup.py",
+      "bytes": 10766,
+      "sha256": "15a3fa8f511640c2fee3404cb5cc5b377af4164f8db3dcec7aa1702c2f15e4c3"
+    },
+    {
+      "path": "04-computation/overnight12_20260906_lrc_gcd_semigroup_audit.py",
+      "bytes": 9218,
+      "sha256": "3016fa28cc5c6ca0e9109582014861153308d66f5e5f4966cc6a4776b8dec8bb"
+    },
+    {
+      "path": "04-computation/overnight12_20260906_no3line_count_restart.py",
+      "bytes": 6570,
+      "sha256": "047e5cc5c9d374db311ddb41cce741be791de950302a4244c2a687bfa7556540"
+    },
+    {
+      "path": "04-computation/overnight12_20260906_no3line_count_restart_audit.py",
+      "bytes": 11014,
+      "sha256": "9c65c292dbd9dfd9a35928febd8af29404e577fbf8f31512ba4ace77fe0f860f"
+    },
+    {
+      "path": "05-knowledge/results/overnight12_20260906_lrc_decoder_descent.md",
+      "bytes": 11044,
+      "sha256": "169cd3fa6bf7be7762aa248379c6387eb67123b1533d1063dc0ab27250bd2b7b"
+    },
+    {
+      "path": "05-knowledge/results/overnight12_20260906_lrc_decoder_descent.out",
+      "bytes": 1721,
+      "sha256": "13e462e4b569f3929ff05ade52646aa95bb5577ce30a4ebd56043a9622cda466"
+    },
+    {
+      "path": "05-knowledge/results/overnight12_20260906_lrc_decoder_descent_audit.md",
+      "bytes": 5502,
+      "sha256": "2c8d825df4bd31de02aa397104d032eea894ad5fecc3e2145875c0d1537c7797"
+    },
+    {
+      "path": "05-knowledge/results/overnight12_20260906_lrc_decoder_descent_audit.out",
+      "bytes": 422,
+      "sha256": "3e8b159110436c692ec8aa1d8e1772911ebf925c95f94b0065fce5651c3ff7fd"
+    },
+    {
+      "path": "05-knowledge/results/overnight12_20260906_lrc_gcd_semigroup.md",
+      "bytes": 19708,
+      "sha256": "ff70aa5c628e4b2ba040a6047da9c73d6a836c99088f60b8376bb34c9fadc320"
+    },
+    {
+      "path": "05-knowledge/results/overnight12_20260906_lrc_gcd_semigroup.out",
+      "bytes": 1141,
+      "sha256": "b3f47f0f979c9b126dd6a67b2a83c0dc8dc30fe46b9834d389d3425f82f66ab8"
+    },
+    {
+      "path": "05-knowledge/results/overnight12_20260906_lrc_gcd_semigroup_audit.md",
+      "bytes": 8076,
+      "sha256": "a4a01a415cbaeb2c9ec528fc79512d5b6a1368796731247826a818c734ab1880"
+    },
+    {
+      "path": "05-knowledge/results/overnight12_20260906_lrc_gcd_semigroup_audit.out",
+      "bytes": 932,
+      "sha256": "8b2950db233f2a5806da82ba166e094ac9676aea19b37eb1314e9e695ae5c673"
+    },
+    {
+      "path": "05-knowledge/results/overnight12_20260906_no3line_count_restart.md",
+      "bytes": 8738,
+      "sha256": "5291656bce754a0fc0ae3ff3e89c9dd1a8d4ffa968df3df252ae4f139d0e236a"
+    },
+    {
+      "path": "05-knowledge/results/overnight12_20260906_no3line_count_restart.out",
+      "bytes": 1353,
+      "sha256": "ea63de7bd8a096569507f60043e5de8aa2d9ac100c98bb4fb709f9e6ca668bf4"
+    },
+    {
+      "path": "05-knowledge/results/overnight12_20260906_no3line_count_restart_audit.md",
+      "bytes": 12373,
+      "sha256": "810919ce4132c4bfe0b02c2c789e0e018fc72205948da78c53932c71e5f4a0ce"
+    },
+    {
+      "path": "05-knowledge/results/overnight12_20260906_no3line_count_restart_audit.out",
+      "bytes": 1052,
+      "sha256": "900f1691974ab628dd2c48e76e46719d069e39ab9e056660efc64605ef9ce6fa"
+    }
+  ]
+}

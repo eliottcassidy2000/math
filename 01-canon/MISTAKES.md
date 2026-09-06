@@ -9,6 +9,22 @@ Format per entry:
 - Why it was wrong
 - The correct framing
 
+## 2026-09-06 overnight -- retain relation support and conditional history
+
+- [Signed coefficient boxes](../05-knowledge/results/overnight12_20260906_lrc_gcd_semigroup.md)
+  permit a minimal-outside-coefficient test only with reduced pair height<=Q.
+  At Q2, pair(1,6), x3 is missing but2x=6 is present. The global core maximum
+  also cannot be replaced by a selected pair maximum when protecting an arc.
+- [Decoder gcd descent](../05-knowledge/results/overnight12_20260906_lrc_decoder_descent.md)
+  controls a selected subset's gcd, not a pair's gcd or relation support.
+  Sharp safe rows meet the scalar caps; an earlier scalar-only control failed
+  the full c90 profile. The corrected controls retain all subset profiles.
+- [Adaptive restart](../05-knowledge/results/overnight12_20260906_no3line_count_restart_audit.md)
+  requires uniform columns conditional on the full past. A uniform starting
+  offset followed by a cyclic pass through C8's24 permutations has uniform
+  marginals, guaranteed success by21, and mean79/8<12. Marginal probability
+  cannot be reused as a conditional hazard or as a general runtime bound.
+
 ## 2026-09-06 overnight -- conditioning and intermediate ideals retain new data
 
 - **Conditioning hostile:** [fixed-row means](../05-knowledge/results/overnight11_20260906_no3line_rowfreeze.md)

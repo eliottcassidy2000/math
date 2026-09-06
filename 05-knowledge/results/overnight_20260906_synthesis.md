@@ -5,9 +5,9 @@ This is the maintained continuation surface for the user's overnight request.
 Read current canon and incoming corrections before continuing any lane.
 The starting commit was `62e1b34d8`; the isolated worktree is `C:/w/s0905`.
 The extensively dirty original checkout is outside this session's edits.
-The eleventh checkpoint incorporates incoming canon through `384e5eca4`,
-including proved THM-4437/4440/4441/4442/4443/4444/4445/4446/4447/4448/4449/4450.
-THM-4451 remains RESERVED and is not a dependency. The universal
+The twelfth checkpoint incorporates incoming canon through `fe9984169`,
+including proved THM-4437/4440/4441/4442/4443/4444/4445/4446/4447/4448/4449/4450/4451/4452/4453.
+All these incoming statuses are scoped to their stated theorems. The universal
 **ternary-unit local network bound is now closed without a parity assumption**:
 sharp `6/55`, with the stronger odd bound `6/77` retained. Actual LRC entry
 and body-to-tail noncontainment remain open. The universal ten-body `6/77`
@@ -25,8 +25,8 @@ independence heuristic and the corrected asymptotic constant; see the
 
 | Live object / representation | Predicate | Operation and retained coordinate | Cheapest next decisive test |
 |---|---|---|---|
-| Anchor: actual decoder entry and body safe sets | One literal safe completion | Bounded crossing relations force scale separation; retain primitive core coordinates and coprime grids | The primitive-unit eleven-core subclass closes; test signed two-coordinate boxes and incoming hereditary gcd cuts |
-| Grid sets as degree-two bipartite graphs | No collinear triple | Freeze all rows, retain induced matching polynomials, then expose one column permutation | Uniform asymptotic exponential rate doubles to0.0130673; test search and counting consumers with the correct conditional measure |
+| Anchor: actual decoder entry and body safe sets | One literal safe completion | Bounded crossing relations force scale separation; retain primitive core coordinates and coprime grids | Endpoint gcd at most76,388,115 closes actual entry; connected edges bound six-coordinate gcd by31,950, but reducing support remains owed |
+| Grid sets as degree-two bipartite graphs | No collinear triple | Freeze all rows, retain induced matching polynomials, then expose one column permutation | Saturated-board entropy and adaptive uniform-column restart bounds now follow; purposeful column optimization lies outside their scope |
 | Niche: trinomial return channels | First two return polynomials have no common torus zero | One quadratic pullback preserves the original zero and completes alpha parity | All A2 completed-alpha responses are negative; one coupled beta-skip coefficient remains |
 | Wildcard: residue-decorated jet cluster | Full partition versus largest precision loss | Minimum and next-weight bands retain integral content; divided companions prevent deeper common cancellation | Full p11/p13 laws close; p13 needs an intermediate AP bit invisible to Deuring, so test higher-prime packets separately |
 | Formal exceptional triple | Collision repair and nonzero constant source Jacobian | Leading wedge period under common branch motion | Every collision-preserving O(t9) map retains the obstruction; earlier source jets need the complete contact and density response |
@@ -533,6 +533,44 @@ an implication: the maps and losses must be specified in the linked reports.
     to the earlier p3/p5/p7 laws, p13 is the least prime with this precise
     Deuring-blind full-partition phenomenon; no general-prime law follows.
 
+41. **PROVED signed semigroup bridge and nonunit actual-entry closure:**
+    [Exact coefficient boxes](overnight12_20260906_lrc_gcd_semigroup.md)
+    for coprime1<=a<b<=Q have largest complete central radius
+    `R=Q(a+b)-(a-1)(b-1)`, with R+1 missing and2R>Q(a+b).
+    This makes existence of any bounded three-label crossing equivalent
+    to testing its minimal outside coefficient. For an actual eleven-plus-two
+    decoder equality row, the absence of such a crossing forces a quantitative
+    lower bound on the tail scale. The native arc then closes the row whenever
+    some v<K=maxV has `gcd(v,K)<=76,388,115`. A primitive unit is unnecessary.
+    Both unit and unitless genuine entry controls pass; the global maximum
+    cannot be replaced by the selected pair maximum. Primary/referee gates
+    673,482/149,274 pass. All other rank-eleven entries remain open.
+42. **PROVED exact decoder-boundary gcd descent, with sharp safe controls:**
+    [Connected edges](overnight12_20260906_lrc_decoder_descent.md) give
+    `d/gcd(d,v) | u/gcd(u,v)` whenever d is the gcd of a selected subset,
+    and edge u-v leaves it. Combining the atlas coefficient bound355 with
+    incoming seven-subset gcd cap90 gives six/five/four-subset gcd caps
+    31,950 / 11,342,250 / 4,026,498,750 inside the connected eleven-core.
+    The complete inherited seven-clock set gives only6,121 possible
+    six-clocks. Safe actual entries attain all three scalar bounds and
+    pass every inherited full profile. Primary/referee gates221,166/61,138
+    pass. A small five-coordinate gcd is not a pair gcd or a support-three
+    relation; that precise bridge is the next unresolved obligation.
+43. **PROVED saturated-board entropy and conditional restart bounds:**
+    [Counting and search consumers](overnight12_20260906_no3line_count_restart.md)
+    preserve the selected zero event and its probability measure. If N_n
+    counts2n-point no-three-line grid sets and B_n all saturated boards,
+    `limsup log(N_n/B_n)/n <= -(1-5/e^2)^2/8` and
+    `log N_n <= 2n log n-(2+(1-5/e^2)^2/8)n+O(log n)`.
+    For adaptive skeleton/row choices followed by conditionally uniform
+    columns, the first-success time satisfies a geometric survival lower
+    bound and an exponential mean lower bound. Mere marginal uniformity
+    fails: a cyclic C8 search has mean79/8 instead of the purported12.
+    Primary/referee gates238,047/28,336 pass, including70,087 literal boards
+    through n6 and independently derived orbit/configuration multiplicities.
+    These results neither prove extremal nonexistence nor bound the runtime
+    of purposeful within-board optimization.
+
 These are repository-scoped advances and recovered mechanisms, not claims
 of external literature priority. In particular, conditioning grid occupancy
 by row and column saturation already appears in the cited construction work.
@@ -641,6 +679,30 @@ floors. Incoming THM-4450 further recovers absorbed-label overlap and
 requires containment of every closed body component, including isolated
 safe points, in the pulled open tail cells. One trapped component or an
 endpoint-only test is insufficient. THM-4451 is an unproved reservation.
+
+The [twelfth manifest](overnight12_20260906_manifest.json) freezes19 artifacts.
+All three independent programs replay from repository paths in normal and
+optimized Python. Transcripts are filed as LF; the descent referee's Windows
+CRLF capture was normalized, with its filed hash recorded in the manifest.
+
+Incoming THM-4451 and THM-4452 are now PROVED in
+[dyadic strict components](../../01-canon/theorems/THM-4451-lrc14-dyadic-three-tail-strict-component-width-caps.md)
+and [colored clock-four components](../../01-canon/theorems/THM-4452-lrc14-clock-four-one-v2-strict-component-width-caps.md).
+Root read both complete canon proofs. Their quotient escape widths are
+34/693 or38/1001 (clock two) and2/49 or2/55 (clock four); a universal body
+component of that width is still missing. Filling a deleted endpoint is
+lawful for mass but can change component widths. The incoming
+[72/539 comparison](lrc14_72_539_weighted_profile_shadow_20260906.md)
+identifies a weighted-profile scalar bridge while refuting label conjugacy.
+Incoming phase packets and native Boolean kernels strengthen their own
+scopes; they do not provide the absent general body supplier. Incoming
+[THM-4453](../../01-canon/theorems/THM-4453-lrc14-inert-sum-five-ray-disjointness-and-dyadic-entry-closure.md)
+is now PROVED: the five odd-3-unit high-overlap rays are disjoint from the
+inert atlas. Body mass>=4/91 therefore closes the doubled-body actual-pair
+branch; the original-body gates are8/91 and20/117 in its two stated forms.
+This complements the signed-box closure; neither supplies a universal mass
+floor. Root read the complete proof after the concurrent push. Earlier reservation statements above describe their own
+checkpoint state, not the current status.
 
 ## Procedural direction generator
 

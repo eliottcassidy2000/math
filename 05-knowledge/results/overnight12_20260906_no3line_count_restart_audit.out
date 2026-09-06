@@ -1,0 +1,16 @@
+Independent orbit, configuration, and conditional-restart audit
+n 2 row-multigraphs 1 boards 1 no-three 1 slope-one-zero 1
+n 3 row-multigraphs 1 boards 6 no-three 2 slope-one-zero 4
+n 4 row-multigraphs 6 boards 90 no-three 11 slope-one-zero 35
+n 5 row-multigraphs 22 boards 2040 no-three 32 slope-one-zero 545
+n 6 row-multigraphs 130 boards 67950 derangements 265 ordered-pairs 190800
+n 7 row-multigraphs 822 boards 3110940 derangements 1854 ordered-pairs 9344160
+n 8 row-multigraphs 6202 boards 187530840 derangements 14833 ordered-pairs 598066560
+stub n 2 simple-bijections 16 all-bijections 24 fiber 16
+stub n 3 simple-bijections 384 all-bijections 720 fiber 64
+stub n 4 simple-bijections 23040 all-bijections 40320 fiber 256
+component recurrence and configuration bound through n60
+adaptive history tree q=3/7 depth10 survival 3600125180877125/86658711170318336
+n4 C8 marginal-only hostile hits 2 of 24 largest-first-hit 21 mean-first-hit 79/8 selected-defect-mean 5/6
+alpha in (323/1000,324/1000); c=alpha^2/8>1/900
+PASS 28336 always-active gates

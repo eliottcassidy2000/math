@@ -1,0 +1,8 @@
+STATUS: INDEPENDENT PASS; exact signed boxes, selected three-label iff, and actual-entry closure
+UNIVERSES: 268 full signed boxes; 63962 literal test integers; 18630 full three-label cases; 8325 discrete scale cases
+ACTUAL ENTRY CONTROLS: [{"K": 22, "core": [1, 4, 6, 8, 10, 12, 14, 15, 16, 18, 22], "core_phase": "9/19", "full_phase": "66665126063049/140737488355328", "g": 35184372088832, "sum": 140737488355454}, {"K": 30, "core": [2, 3, 4, 5, 6, 10, 12, 14, 15, 20, 30], "core_phase": "1/8", "full_phase": "17036077561229/136288620489844", "g": 34072155122461, "sum": 136288620489965}]
+CUT-OFF: 76388115 ; all-scale atlas pairs: 5855
+SCOPE: 110 selected two-core/one-outside supports; not the eleven opposite-orientation supports
+SCOPE: source lower-dimensional LRC is CITED; incoming 90/30 hierarchy is INHERITED, not rerun
+SEMANTIC SHA256: 8d74244ac29f0272f5f55a8a92a64fe4ce8eac28e26c996496e51fa8bb8dfc16
+ACTIVE GATES: 149274

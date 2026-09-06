@@ -1,0 +1,12 @@
+STATUS: PASS; exact signed coefficient boxes and native actual-entry gcd criteria
+BOX UNIVERSE: 576 primitive pairs Qtoy2..17; 223530 literal membership points
+FULL CROSSING UNIVERSE: 7830 three-label coefficient boxes Qtoy2..6
+DISCRETE SCALE UNIVERSE: 4320 exact divisibility lower-bound controls
+UNIFORM GCD CUTOFF: 76388115 at Q= 567869252041 with residual coefficient cap 51714753855
+ACTUAL ENTRY CONTROL: (1, 4, 6, 8, 10, 12, 14, 15, 16, 18, 22) g= 35184372088832 phase= 33294484706755/70368744177664 best radius pair= (21011162325223, 15, 22, 21011162325224)
+ACTUAL ENTRY CONTROL: (2, 3, 4, 5, 6, 10, 12, 14, 15, 20, 30) g= 34072155122461 phase= 3981447444983/68144310244922 best radius pair= (16468208309007, 14, 15, 16468208309008)
+ARBITRARY PAIRS: interior(14,15) radius29Q-182 > maximum-pair(14,30) radius22Q-84
+GLOBAL ARC HOSTILE: V=(1,...,10,85), center1/12, selected max10 loses safety at7/85
+PRIMORIAL HIERARCHY EXCLUSIONS (subset size,gcd,inherited cap): [(7, 392430, 90), (8, 3810, 30), (9, 30, 9), (10, 5, 4)]
+SCOPE: actual W=Vdec and box retained; hierarchy constraints apply only under strict failure
+ACTIVE GATES: 673482

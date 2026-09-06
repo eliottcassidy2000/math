@@ -1,0 +1,11 @@
+STATUS: PASS; connected-decoder gcd descent and sharp safe actual-entry controls
+INHERITED ATLAS: 5855 pairs; 355 oriented coefficients
+NECESSARY SIX-SUBSET CLOCK UNIVERSE: 6121 values; maximum 31950
+INHERITED PROFILE SHA256: 935f3f687b6d7c89cc099e536f536238fd753bcc4c1747906d213cef387ca93f
+PHYSICAL CORE GCD BOUNDS: six=31950, five=11342250, four=4026498750
+{"hereditary_maxima": {"7": 90, "8": 6, "9": 6, "10": 3, "11": 2, "12": 1}, "k": 4, "maximum": 36238488750, "outside_scale": 41157447003117386077501, "physical_core": [4026498750, 12079496250, 16105995000, 36238488750, 90, 31950, 11342250, 2, 4, 6, 12], "primitive_core": [2013249375, 6039748125, 8052997500, 18119244375, 45, 15975, 5671125, 1, 2, 3, 6], "sum": 164629788012538006163068, "t": 2, "top_gcd": 4026498750}
+{"hereditary_maxima": {"7": 90, "8": 6, "9": 6, "10": 3, "11": 2, "12": 1}, "k": 5, "maximum": 113422500, "outside_scale": 128818300479240645001, "physical_core": [11342250, 34026750, 45369000, 102080250, 113422500, 90, 31950, 2, 4, 6, 12], "primitive_core": [5671125, 17013375, 22684500, 51040125, 56711250, 45, 15975, 1, 2, 3, 6], "sum": 515273201917268852818, "t": 2, "top_gcd": 11342250}
+{"hereditary_maxima": {"7": 90, "8": 6, "9": 6, "10": 3, "11": 2, "12": 1}, "k": 6, "maximum": 511200, "outside_scale": 580589523286718401, "physical_core": [31950, 95850, 127800, 287550, 319500, 511200, 90, 2, 4, 6, 12], "primitive_core": [15975, 47925, 63900, 143775, 159750, 255600, 45, 1, 2, 3, 6], "sum": 2322358093148247568, "t": 2, "top_gcd": 31950}
+SCOPE: no support-five Bezout to support-three crossing inference; no actual failure claim
+SEMANTIC SHA256: 42ffde7cf1df56385404951a77ca0dc7d7358a571b532db2f0a32640d76fc202
+ACTIVE GATES: 221166

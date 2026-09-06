@@ -1,0 +1,6 @@
+Independent connected-decoder gcd descent and sharp controls
+k 4 sharp gcd 4026498750 physical maximum 36238488750 subset maxima (90, 6, 6, 3, 2, 1) decoder rank11
+k 5 sharp gcd 11342250 physical maximum 113422500 subset maxima (90, 6, 6, 3, 2, 1) decoder rank11
+k 6 sharp gcd 31950 physical maximum 511200 subset maxima (90, 6, 6, 3, 2, 1) decoder rank11
+six-clock count 6121 maximum 31950
+PASS 61138 always-active gates

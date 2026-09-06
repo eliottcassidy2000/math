@@ -57,7 +57,7 @@ gives square sum `<=195`; THM-4019 refutes its sharp arbitrary-lattice target.
   selection. No universal body mass/component floor reaches these gates; entry remains open.
 - **Transport/incidence:** [overnight synthesis](../05-knowledge/results/overnight_20260906_synthesis.md)
   retains cap/event refinements; [virtual walls](../05-knowledge/results/overnight9_20260906_lrc_virtual_pair_wall_margin.md)
-  give sharp fibre margin `abs(||dy||-1/3)/2`. [Actual unit-core entry](../05-knowledge/results/overnight11_20260906_lrc_unit_component.md) closes its rank-eleven subclass.
+  give sharp fibre margin `abs(||dy||-1/3)/2`. [Actual entry](../05-knowledge/results/overnight12_20260906_lrc_gcd_semigroup.md) closes when some endpoint gcd<=76,388,115; support reduction remains open.
   [Sparse transport](../05-knowledge/results/synthesis_20260905_lrc_sparse_transport.md) retains weights and the selector gap.
 - **Residual ranks:** THM-4333/4338 close fixed-pool ranks three/four, not arbitrary entry.
 - **PROVED:** [THM-2928](../01-canon/theorems/THM-2928-critical-seven-comb-grid-tensorization-and-drift-tariff.md)/2941: literal zero/one/two/three-drift sectors are empty; `k=2,3` are finite.
@@ -342,7 +342,7 @@ lift/phase clocks.
 ## Other active portfolio
 
 - **No-three-line:** [fixed rows](../05-knowledge/results/overnight11_20260906_no3line_rowfreeze.md)
-  give uniform asymptotic rate>=0.0130673; the earlier finite exp(-n/900) bound remains. Extremal asymptotics OPEN.
+  give rate>=0.0130673, now with [counting/restart consumers](../05-knowledge/results/overnight12_20260906_no3line_count_restart.md). Extremal asymptotics OPEN.
 - **P-adic zeta:** external density claims remain **PREPRINT / UNDER AUDIT**.
   [THM-4255](../01-canon/theorems/THM-4255-specialization-kernel-and-transverse-hasse-jet-repair.md)/[4263](../01-canon/theorems/THM-4263-moving-multigraph-filtered-jet-and-finite-factor-density-transport.md) prove graph/jet kernels, finite-factor UI transport and conditional hazards. MISTAKE-527 forbids chosen-section refutations; the external Cartier steps still need a typed audit.
 - **Matching logic:** THM-4090 gives a two-sort Figure-2 calculus

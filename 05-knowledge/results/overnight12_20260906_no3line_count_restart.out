@@ -1,0 +1,16 @@
+Exact uncolored saturated boards and adaptive uniform-column restarts
+n 2 boards 1 full-success 1 slope-one-zero 1 cycle-profiles 1 ordered-pairs 2 column-orbits 1
+n 3 boards 6 full-success 2 slope-one-zero 4 cycle-profiles 1 ordered-pairs 12 column-orbits 1
+n 4 boards 90 full-success 11 slope-one-zero 35 cycle-profiles 2 ordered-pairs 216 column-orbits 6
+n 5 boards 2040 full-success 32 slope-one-zero 545 cycle-profiles 2 ordered-pairs 5280 column-orbits 22
+n 6 boards 67950 full-success 50 slope-one-zero 12155 cycle-profiles 4 ordered-pairs 190800 column-orbits 130
+conservative exponents: conditional uses rowfreeze only; uncolored takes max with tenth
+n 64 conditional exponent >= 218596225/2048385024 uncolored exponent >= 218596225/2048385024
+n 128 conditional exponent >= 6466849/15875000 uncolored exponent >= 6466849/15875000
+n 256 conditional exponent >= 59459521/31875000 uncolored exponent >= 59459521/31875000
+n 512 conditional exponent >= 325694209/63875000 uncolored exponent >= 325694209/63875000
+n 1024 conditional exponent >= 48360031/4125000 uncolored exponent >= 48360031/4125000
+n 2048 conditional exponent >= 278699303/11125000 uncolored exponent >= 278699303/11125000
+n 4096 conditional exponent >= 26487888001/511875000 uncolored exponent >= 26487888001/511875000
+literal board universe 70087
+PASS 238047 always-active gates
