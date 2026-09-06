@@ -534,6 +534,11 @@ new homotopy group, `p=2` statement, or LRC/GMC consequence.
 
 ## Probability and extraction
 
+### Fernandez--Procacci -- formal polymer connectedness (checked 2026-09-06)
+
+- **CITED, PUBLISHED:** [primary paper](https://webspace.science.uu.nl/~ferna107/papers/ferpro07.pdf), equations (2.3)--(2.4), DOI10.1007/s00220-007-0279-2: the formal logarithm retains connected incompatibility clusters.
+- **Consumer/boundary:** [cycle defects](../results/overnight4_20260906_no3line_cycle_defect.md) use only formal connectedness. Geometric weights, coefficient signs, convergence and no-three-in-line asymptotics are separate obligations.
+
 ### Kontorovich — *TV Homogenization Inequalities*
 
 - **Primary / freshness:** [arXiv:2601.04079v3](https://arxiv.org/abs/2601.04079),

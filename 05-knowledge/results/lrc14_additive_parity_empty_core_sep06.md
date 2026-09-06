@@ -5,8 +5,10 @@ head audit PASS.** For primitive positive ternary-unit triples with
 `a<b<c=a+b`, both the selected complete network projection and the physical
 scale-three failure mass are at most `6/55`, with equality exactly at
 `(a,b,c)=(1,10,11)`. This is a statement about the additive family. The
-`6/55` bound for arbitrary nonadditive mixed-parity triples remains **OPEN**;
-no body Haar floor, synchronization, or LRC conclusion follows.
+arbitrary-parity extension is now **PROVED** in the independently audited
+[complete ternary-unit theorem](overnight4_20260906_lrc_parityfree_probe.md),
+which uses this additive selected-projection theorem as one dependency.
+No body Haar floor, synchronization, or LRC conclusion follows.
 
 ## 1. Exact scope, inherited objects and hostile boundary
 

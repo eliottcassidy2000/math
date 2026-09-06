@@ -280,15 +280,15 @@ orthogonal sidecar (clock, divisibility, phase, owner, or rank).
 add a sidecar only when it eliminates a named family or state.
 **Evidence:** THM-2053/2055--2057 and MISTAKE-224.
 
-## Join compatibility and mixed response before comparing marginals
+## Retain the product and shared labels before taking scalar totals
 
-**Trigger/action:** when packets or hazards share a base, retain compatible
-fibres or subset-labelled gap/component states and compose before totals.
-Marginals can erase a mixed coefficient or connecting chain. Scalarize only
-after disjointness, factorization, or target-annihilation is proved.
-
-**Evidence:** THM-2059/2538/3492; independently, THM-4099's squarefree `UV`
-hostile and THM-4100's residual-component ancestry.
+**Trigger/action:** compose compatible fibres or subset-labelled states before marginals.
+For a quadratic expression, keep its product and test a square in the actual carry/event degree.
+**Counterindications:** nonnegative weights need not define a positive square
+functional; projections can erase a mixed coefficient, chain or fixed minimizer.
+**Evidence:** THM-2059/2538/3492 and THM-4099/4100's mixed ancestry; independently,
+[cycle-defect squares](../05-knowledge/results/overnight4_20260906_no3line_cycle_defect.md) and
+[trinomial opposite frequencies](../05-knowledge/results/nc2_channel_contiguous_overnight_hexagon_sep05.md) separate a formal square from a positive norm.
 
 ## Rank local extrema, then pass closure and effectivity
 **Action:** when sharp local caps share labels, rank the spectrum, force a finite bank, retain common fibres, then test cycle/Čech closure and membership in the target positive, integral, polynomial, or completed category. Compatible marginals may have bad triangles or glue only in a field/signed space; omit gates only after independence or target factorization. **Evidence:** THM-2258/2263/2270, THM-3388/3389, THM-3080/3081/3383, THM-3396.

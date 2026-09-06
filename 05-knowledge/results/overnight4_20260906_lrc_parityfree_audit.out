@@ -1,0 +1,13 @@
+SCOPE physical Haar failure, primitive distinct positive ternary units, all parities
+PRODUCER_SOURCE_SHA256 1405ce106b74d533c3f8e330fc95855996594913e031e5f80ea323092445d866
+RAW_HEAD_SHA256 c3d33fdd136245aafe512b04963a6eb6f1b5db6f1a572a3e8535ef59d01a09fa
+LITERAL_HEAD 10074 max 6/55 equality [(1, 10, 11)] old_bound_violations 151 first (2, 5, 7) second 383/3640 [(5, 8, 13)]
+LITERAL_HEAD_SEMANTIC_SHA256 10dc0483d65ccec0c4999932983c387bcbb5c081a4c47ed3d76d625df2a24c0e
+HEAD_PARITY_COUNTS [(0, 1325), (1, 4375), (2, 4374)]
+OWNER_FIBERS 192 method=literal nearest-integer owner words
+ERROR_POLYGON_BOX 747 supports {2: 49, 3: 698} slope 15/98 equality [(1, 7, 8)] empty_defects [(0, 1, 2)]
+BOX_SEMANTIC_SHA256 cf808062354debbefc1d8ead8ad0d10e9da5427cb42b8f083b6af24d0059c87c
+LOW_CIRCUITS [((1, 1, 1), ((0,), Fraction(2, 7), Fraction(4, 3))), ((1, 1, 2), ((0,), Fraction(2, 7), Fraction(4, 3))), ((1, 2, 2), ((0,), Fraction(3, 14), Fraction(4, 3)))]
+STRICT_TAILS general=64 norm3=50 norm4=18 norm5=34
+REPAIRED_CORNER (0,1,2): no admissible defect, hence N=physical_mass=0; do not assert 0<0
+PASS_OPTIMIZATION_LIVE_GATES 101824

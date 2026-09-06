@@ -43,11 +43,15 @@ gives square sum `<=195`; THM-4019 refutes its sharp arbitrary-lattice target.
   ray, parity-sheet and component-count data; none supplies safety or arrival.
 - **Seam/entry:** THM-4326/4329 close the fixed chart; 4330 leaves `2+12`;
   4347 closes height 40. Arbitrary entry and synchronization remain open.
-- **Scale-three local bound CLOSED; entry OPEN:** [THM-4434](../01-canon/theorems/THM-4434-lrc14-universal-scale-three-network-projection-bound.md)
-  is sharp for odd tails; [THM-4437](../01-canon/theorems/THM-4437-lrc14-all-parity-network-reduction-to-three-low-circuits.md)
-  reduces mixed parity to `(111),(112),(122)` and [THM-4441](../01-canon/theorems/THM-4441-lrc14-signed-122-sharp-ray-closure.md)
-  removes `(122)`. [THM-4442](../01-canon/theorems/THM-4442-lrc14-bounded-ten-body-parity-free-scale-three-completion.md)
-  closes every tail over ten-bodies in `[13]`; universal `(111),(112)` and entry remain open.
+- **Scale-three local bounds CLOSED; entry OPEN:**
+  [THM-4434](../01-canon/theorems/THM-4434-lrc14-universal-scale-three-network-projection-bound.md)
+  gives odd `6/77`. The [parity-free theorem](../05-knowledge/results/overnight4_20260906_lrc_parityfree_probe.md)
+  gives sharp `min E<=6/55`, equality `(1,10,11)`; [norm four](../05-knowledge/results/overnight4_20260906_lrc_parityfree_native.md)
+  has sharp `11/140` at `(2,11,20)`. Incoming THM-4437 bounds every
+  projection by `6/77` outside `(111),(112),(122)`; THM-4441 closes `(122)`.
+  Universal body floors fail; [actual event codes](../05-knowledge/results/overnight4_20260906_lrc_body_event.md)
+  retain residues and the chosen anchor. [THM-4442](../01-canon/theorems/THM-4442-lrc14-bounded-ten-body-parity-free-scale-three-completion.md)
+  closes every tail over ten-bodies in `[13]`; arbitrary entry remains open.
 - **Transport/incidence:** [overnight synthesis](../05-knowledge/results/overnight_20260906_synthesis.md)
   retains cap, midpoint and owner-line refinements. The
   [sparse proof](../05-knowledge/results/synthesis_20260905_lrc_sparse_transport.md)

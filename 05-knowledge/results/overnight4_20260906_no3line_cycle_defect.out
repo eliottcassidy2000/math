@@ -1,0 +1,23 @@
+FORMAL_BULK long-cycle lengths10,12,14,16 agree through weight9
+FOUR_CYCLE_DEFECT_DEGREE4 [('p1*p1*p1*p1', '1'), ('p1*p1*p2L', '-2'), ('p1*p1*p2R', '-2'), ('p1*p3', '4'), ('p2L*p2L', '1'), ('p2R*p2R', '1'), ('C4', '1'), ('p4L', '-2'), ('p4R', '-2')]
+FOUR_CYCLE_DEFECT_DEGREE5 [('p1*p1*p1*p1*p1', '-8'), ('p1*p1*p1*p2L', '16'), ('p1*p1*p1*p2R', '16'), ('p1*p1*p3', '-28'), ('p1*p2L*p2L', '-8'), ('p1*p2L*p2R', '-4'), ('p1*p2R*p2R', '-8'), ('p1*C4', '-4'), ('p1*p4L', '12'), ('p1*p4R', '12'), ('p2L*p3', '4'), ('p2R*p3', '4'), ('p5', '-4')]
+SIMPLIFIED_NEXT_DEFECT_T5 [('p1*p1*p3', '1'), ('p1*p2L*p2R', '-1'), ('p1*C4', '1'), ('p1*p4L', '-1'), ('p1*p4R', '-1'), ('p2L*p3', '1'), ('p2R*p3', '1'), ('p5', '-1')]
+POLYNOMIAL_COUNTS bulk 210 D4 9 D5 13 D8 45 D9 74 eight 108 quadratic 103
+MOMENT_AND_THIRD_CUMULANT_COEFFICIENTS ['172483/529200', '11881/50400']
+QUADRATIC_WEIGHTED_SQUARE_AND_CROSS 456371/2116800 42631/2116800
+NEGATIVE_FORMAL_SQUARE Q=p2L*(p1^2-p2L) -397/529200 three_nonnegative_geometry_weights ['16747/1058400', '2749/235200', '1/147']
+CUMULANT_ADDITIVITY_CONTRAST 2C8 - 2*(2C4+C8) + 4C4 11881/6300
+SIGNED_PROFILE_COUNTS [((0, -1), 55), ((0, 0), 42), ((0, 1), 53), ((1, -1), 50), ((1, 0), 47), ((1, 1), 53)]
+ACTUAL_CYCLE_GROUP (8, ()) [54, 8920304] ['738511/2116800', '81331/423360']
+ACTUAL_CYCLE_GROUP (8, (4,)) [9, 308176] ['0', '829/58800']
+ACTUAL_CYCLE_GROUP (8, (4, 4)) [1, 276] ['0', '23/2450']
+ACTUAL_CYCLE_GROUP (8, (6,)) [3, 15264] ['0', '0']
+ACTUAL_CYCLE_GROUP (8, (8,)) [1, 832] ['52/3675', '0']
+ACTUAL_CYCLE_GROUP (9, ()) [64, 11637480] ['-12853/141120', '57179/2116800']
+ACTUAL_CYCLE_GROUP (9, (4,)) [12, 456448] ['0', '-3737/105840']
+ACTUAL_CYCLE_GROUP (9, (4, 4)) [1, 1672] ['0', '209/7350']
+ACTUAL_CYCLE_GROUP (9, (6,)) [4, 72688] ['0', '0']
+ACTUAL_CYCLE_GROUP (9, (8,)) [1, 6348] ['529/9800', '0']
+GEOMETRY_CERTIFICATE_SHA256 f2c566ac1b2bcedb530af72f3a290479841e7db87844b331558bed68c93ba727
+FORMAL_SEMANTIC_SHA256 50a0f39da9447a60a63fb9397ab8c717ec2dc90063fa3a94baa01cf0c7dc1d9d
+PASS_OPTIMIZATION_LIVE_GATES 71420

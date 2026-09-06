@@ -1,0 +1,10 @@
+universe=primitive distinct positive sorted ternary-unit triples; no parity filter
+coefficient_box=(747, Counter({3: 698, 2: 49}), [(1, 7, 8)], 'cf808062354debbefc1d8ead8ad0d10e9da5427cb42b8f083b6af24d0059c87c')
+exact_owner_fibers=192
+empty_defect_rule=N=0 directly; strict N<F+B only for nonempty defect lists
+cutoff_constants=(Fraction(1540, 547), Fraction(21560, 1641), Fraction(27763, 26256))
+general_tail=c>=64; norm5_tail=c>=34; norm3_tail=c>=50; norm4_tail=c>=18
+complete_head63=(10074, Fraction(6, 55), [(1, 10, 11)], Fraction(6, 55), [(1, 10, 11)], 151, [((1, 10, 11), Fraction(6, 55), 4), ((5, 8, 13), Fraction(383, 3640), 4), ((2, 11, 13), Fraction(102, 1001), 4), ((4, 7, 11), Fraction(215, 2156), 4), ((2, 23, 25), Fraction(793, 8050), 8), ((1, 25, 26), Fraction(222, 2275), 8), ((5, 23, 28), Fraction(548, 5635), 8), ((5, 11, 16), Fraction(17, 176), 4), ((1, 52, 53), Fraction(66, 689), 16), ((4, 37, 41), Fraction(581, 6068), 12)])
+all_height_candidate=physical mass<=6/55, equality iff(1,10,11); proof audit required
+selected_network_extension=complete head PASS; additive fixed-projection and norm4 fixed-roof inputs under audit
+optimization_live_gates=229857

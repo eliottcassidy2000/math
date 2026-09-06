@@ -43,12 +43,22 @@
   [THM-4443 arbitrary-jet precision](../../01-canon/theorems/THM-4443-arbitrary-jet-precision-and-dyadic-unit-boundary.md) gives the exact arbitrary-multiplicity inverse denominator and first uniform/nonuniform metric failures;
   [additive boundary discrepancy](lrc14_sum_ray_boundary_discrepancy_overnight_hexagon_sep05.md) strengthens the incoming sharp theorem with an exact jump term and an unbounded actual-parity obstruction;
   [Boolean consumer](overnight_hexagon_sep05_boolean_consumer.md) retains conductance/volume after two multiplicity losses. Global LRC entry, general trinomial separation and exact Boolean spectrum remain OPEN.
+- [Fourth overnight synthesis](overnight_20260906_synthesis.md):
+  **PROVED + FINITE-EXACT + INDEPENDENTLY AUDITED** [all-parity local ceiling](overnight4_20260906_lrc_parityfree_probe.md)
+  `min E<=6/55`, equality only `(1,10,11)`, and [sharp norm four](overnight4_20260906_lrc_parityfree_native.md)
+  `11/140` at `(2,11,20)`. The physical coarea identity retains a primitive
+  plane basis. [Actual body/event codes](overnight4_20260906_lrc_body_event.md)
+  give a sufficient divisor gate and exact phase/anchor hostiles; entry stays
+  open. [Formal cycle defects](overnight4_20260906_no3line_cycle_defect.md)
+  explain the n8 coefficients and refute relevant-square positivity and
+  component-additive third cumulants. [Terminal-cluster audit](overnight4_20260906_smith_terminal_audit.md)
+  independently confirms incoming THM-4439. [Frozen manifest](overnight4_20260906_manifest.json).
 
 - [Sharp additive mixed-parity bound](lrc14_additive_parity_empty_core_sep06.md):
   **PROVED + FINITE-EXACT + INDEPENDENTLY AUDITED.** The complete family
   `a+b=c` has selected network and physical mass at most `6/55`, with sole
   primitive equality `(1,10,11)`. Strict quadrature tails and 136 exact base
-  rows close this family; general nonadditive mixed parity remains open.
+  rows close this family; the complete local parity-free extension is linked above.
   [Parity witnesses](lrc14_parity_empty_core_sep06.md) refute the old odd
   ceiling outside its scope, and [recovered ten-bodies](lrc14_haar_body_empty_core_sep06.md)
   refute the unqualified new Haar floor while retaining safe completions.

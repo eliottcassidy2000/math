@@ -36,6 +36,21 @@ Format per entry:
   The next question must specify both node metric and observer, then test
   the actual precision envelope rather than only its determinant.
 
+## 2026-09-06 overnight -- empty fibers and fixed-roof transfers
+
+- **Rejected provisional strict inequality:** after removing oddness from
+  the coefficient universe, `(0,1,2)` permits no admissible defect. At
+  `w=(1,2,4)`, `N=F=B=0`, so summing strict inequalities over that empty
+  list does not prove `N<F+B`. Split emptiness first, conclude `N=0`,
+  and use strict discrepancy only for a nonempty list. The repaired
+  [all-parity theorem](../05-knowledge/results/overnight4_20260906_lrc_parityfree_probe.md)
+  proves sharp `6/55`; the correctly scoped odd theorem was unaffected.
+- **Rejected norm-five fixed projection:** `(10,11,16)` has live carriers
+  `+-v,+-2v`, `v=(1,2,-2)`. The minimizing roof changes with the multiplier;
+  `min E-mu=1/1232>0`. The norm-four pointwise fixed-roof theorem survives,
+  but physical integral bounds do not automatically bound a selected sum.
+  [Full roof and event-sidecar controls](../05-knowledge/results/overnight4_20260906_lrc_body_event.md).
+
 ## MISTAKE-546 (2026-09-06, universal triple-bound consumer probes) -- parity and body measure are separate inputs
 
 - **Refuted extensions, never canon dependencies:** the THM-4434 odd
@@ -65,14 +80,14 @@ Format per entry:
   and finite-base universes. None of these witnesses refutes LRC(14).
 - **Repair continuation / next tests:** the
   [additive norm-three theorem](../05-knowledge/results/lrc14_additive_parity_empty_core_sep06.md)
-  now proves its sharp `6/55` ceiling. [THM-4437](theorems/THM-4437-lrc14-all-parity-network-reduction-to-three-low-circuits.md)
-  proves the original `6/77` local target for every parity outside the signed
-  coefficient patterns `(1,1,1)`, `(1,1,2)`, `(1,2,2)`. Its referee also
-  repaired a too-strong intermediate wording: `(7,16,22)` has one projection
-  equal to `6/77`, although its minimum is strict; the complete nonlow
-  individual equality locus has three rows. Retain the three low circuits and
-  compare complete body components with tail-safe lifts before taking Haar
-  measure.
+  proves its sharp `6/55` ceiling. [THM-4437](theorems/THM-4437-lrc14-all-parity-network-reduction-to-three-low-circuits.md)
+  bounds every projection by `6/77` outside `(111),(112),(122)`, with
+  strictly smaller minimum. Its referee repaired overly strict coordinate
+  wording: `(7,16,22)` is one of three individual equality rows. THM-4441
+  closes `(122)`. The [all-parity continuation](../05-knowledge/results/overnight4_20260906_lrc_parityfree_probe.md)
+  proves the universal local replacement `6/55`, while norm four has sharp
+  `11/140`. Compare complete body components with tail-safe lifts before
+  taking Haar measure; actual entry remains open.
 
 Independent concurrent [consumer reconstruction](../05-knowledge/results/overnight3_20260906_lrc_consumers.md) also recovers THM-530 Section A and retains the complete weak-safe geometry; its adjacent-family formula gives the exact 42-residue oscillations around the additive bulk.
 

@@ -1,0 +1,15 @@
+FINITE-EXACT all-parity native six-sheet interval audit H=63
+CONTROL w=1,5,7 E=8/245,6/49,4/35 mass=8/245 native_contacts=6
+CONTROL w=1,5,11 E=6/77,6/77,6/77 mass=6/77 native_contacts=6
+CONTROL w=1,19,23 E=12/437,12/161,12/161 mass=12/437 native_contacts=12
+CONTROL w=17,23,25 E=106/4025,12/425,2546/68425 mass=744/68425 native_contacts=12
+CONTROL w=19,23,29 E=156/4669,192/3857,3840/88711 mass=154/12673 native_contacts=18
+CONTROL w=1,1201,1205 E=310116/10130435,516/8435,516/8435 mass=310116/10130435 native_contacts=516
+CONTROL w=1,599,607 E=38940/2545151,132/4249,132/4249 mass=38940/2545151 native_contacts=132
+CONTROL w=5,1001,1003 E=156680/7028021,122/5015,848864/35140105 mass=767384/35140105 native_contacts=174
+UNIVERSE rows=10074 empty=1028 native_contacts=117864 old_physical_ceiling_failures=151
+MAX_SELECTED 6/55 w=1,10,11 E=6/55,12/77,23/154 native_contacts=12
+MAX_PHYSICAL 6/55 w=1,10,11 E=6/55,12/77,23/154 native_contacts=12
+EQUALITIES both=(1,10,11)
+PASS gates=181385; every raw E, physical mass and 3x contact count matches native intervals.
+SCOPE: finite H63 certificate; unbounded theorem requires the separate analytic reduction.

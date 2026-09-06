@@ -5,10 +5,12 @@ This is the maintained continuation surface for the user's overnight request.
 Read current canon and incoming corrections before continuing any lane.
 The starting commit was `62e1b34d8`; the isolated worktree is `C:/w/s0905`.
 The extensively dirty original checkout is outside this session's edits.
-Third-checkpoint mathematics incorporates incoming canon through `d2f64b809`.
-The universal **odd-triple local network bound is closed**; its global LRC
-application still needs entry and body-to-tail noncontainment. The tempting
-universal ten-body `6/77` floor is now **REFUTED** by recovered THM-530 canon.
+Fourth-checkpoint mathematics incorporates incoming canon through `72a7db79b`;
+`533bf3d6e` adds only the unproved THM-4440 reservation. The universal
+**ternary-unit local network bound is now closed without a parity assumption**:
+sharp `6/55`, with the stronger odd bound `6/77` retained. Actual LRC entry
+and body-to-tail noncontainment remain open. The universal ten-body `6/77`
+floor is refuted by recovered THM-530 canon.
 
 ## Portfolio and live concept board
 
@@ -20,10 +22,10 @@ independence heuristic and the corrected asymptotic constant; see the
 
 | Live object / representation | Predicate | Operation and retained coordinate | Cheapest next decisive test |
 |---|---|---|---|
-| Anchor: body safe set and three-sheet tail comb | One literal safe completion | Keep parity, all component addresses, common lift label, and weak endpoints | Scalar universal body floor is false; test exact noncontainment or a justified entry subclass |
-| Grid sets as degree-two bipartite graphs | No collinear triple | Random shore labels, complete event unions, short-cycle expansion | Nonzero third-moment terms are known at n8; test a scalable dependence or sign mechanism |
+| Anchor: body safe set and three-sheet tail comb | One literal safe completion | Full affine event codes, component addresses, chosen deep anchor and weak endpoints | Event-cover failure must hand its actual owners to the component/first-exit compiler |
+| Grid sets as degree-two bipartite graphs | No collinear triple | Formal cycle defects before whole-event geometric averaging | Weight-four squares can average negatively; retain event labels before attempting a positive or convergent expansion |
 | Niche: trinomial return channels | First two return polynomials have no common torus zero | Complete path/PF and Laguerre factorizations, simple negative roots, both carries | Couple the two rows: test a signed response or Gram identity at first roots |
-| Wildcard: odd-prime mixed two-jet cluster | All determinantal divisors | Weighted minors, leading unit residues, and competing attaining witnesses | The ternary `(3,1)` metric-only claim fails; generalize the intrinsic residue at tied minima |
+| Wildcard: residue-decorated two-jet cluster | Full partition versus largest precision loss | Competing minor ideals; maximize over complete terminal clusters | The largest loss is metric-only at every node count; isolate residues only for intermediate ideals |
 | Formal exceptional triple | Preserve common target at every order | Restrict the transverse compensator to admissible source coefficients | Test whether the lawful fifth-order module can have `L(h5)=-18*kappa/5` |
 | Signed Hamilton-cycle parity vectors | Exact minimum and equality classes | Difference with a transposed signing; typed zero deletions | All cumulative gaps are closed; independently audit quantitative stability before using it |
 
@@ -178,6 +180,61 @@ an implication: the maps and losses must be specified in the linked reports.
     with both endpoint carries retained. The all-parameter sign/separation
     assertion remains **OPEN**; individual real-rootedness does not prove it.
 
+15. **PROVED all-height arbitrary-parity local ceiling, independently audited:**
+    [complete ternary-unit theorem](overnight4_20260906_lrc_parityfree_probe.md)
+    gives `mu(F_w)<=min E<=6/55`, with either equality only at primitive
+    `(1,10,11)`. It replaces the odd coefficient universe with all 747
+    patterns, separates the three low-relation cases, and reduces the head
+    to 10,074 triples through height63. The [geometric/literal referee](overnight4_20260906_lrc_parityfree_audit.md)
+    and [native all-projection replay](overnight4_20260906_lrc_parityfree_native.md)
+    agree independently. The empty-defect pattern `(0,1,2)` is discharged
+    as exactly zero before using strict count bounds. The incoming additive
+    theorem is a proved dependency of the network upgrade; RESERVED
+    THM-4437 is not. Arbitrary entry and LRC(14) remain open.
+16. **PROVED exact physical coarea and sharp norm-four extension:**
+    [saturated plane proof](overnight4_20260906_lrc_parityfree_native.md)
+    identifies the complete line-profile integral with cube-section area
+    divided by primitive normal length. The low-pattern values are
+    `3r^2,2r^2,7r^2/4` for `(1,1,1),(1,1,2),(1,2,2)` respectively.
+    On norm four a fixed projection equals physical mass; strict quadrature
+    reduces the sharp arbitrary-parity ceiling `11/140`, uniquely at
+    `(2,11,20)`, to 82 triples through32. The [independent audit](overnight4_20260906_lrc_norm4_audit.md)
+    checks every head profile and all area constants. Norm five has no such
+    fixed projection: `(10,11,16)` has exact gap `min E-mu=1/1232`.
+17. **PROVED and independently audited event interface; actual entry OPEN:**
+    [body/event code](overnight4_20260906_lrc_body_event.md) preserves the
+    full body residue modulo `14w` at a tail endpoint. Its exact marginal
+    count depends on gcd and a short progression; one body blocks the whole
+    coset iff `14w` divides that body speed. A ten-body divisor corollary
+    supplies actual safe lifts for ternary-unit `w>=31` under its explicit
+    four-multiple/six-coprime hypotheses. The positive example survives all
+    small-clock divisor sieves. Exact controls refute marginal phase loss,
+    event-only necessity, and arbitrary selection of a full deep Bohr
+    packet. These are recovered interface corollaries and new sidecars,
+    not a claim of a new global LRC family or arbitrary chart entry. The
+    [interval referee](overnight4_20260906_lrc_body_event_audit.md) independently
+    reconstructs all event words, physical witnesses and complete packets.
+18. **PROVED formal cycle mechanism and exact third-cumulant obstructions:**
+    [cycle-defect proof](overnight4_20260906_no3line_cycle_defect.md)
+    factors the component-type series before geometric averaging. Its
+    universal short-cycle defects give an explicit degree-nine expression
+    for the `c4^2` coefficient and recover both inherited third-moment
+    coefficients. In the relevant weight-eight forest sector, geometric
+    averaging sends a homogeneous weight-four square to `-397/529200`.
+    Third cumulants retain the exact nonadditivity contrast `11881/6300`.
+    The missing data are whole-event incidence and global label exclusion;
+    a formal cluster expansion alone gives no sign or convergence bound.
+    The [BFS/Euler-log referee](overnight4_20260906_no3line_cycle_defect_audit.md)
+    independently accepts the proof and complete coefficient polynomials.
+19. **Independent confirmation of all-node metric precision:**
+    [terminal-cluster audit](overnight4_20260906_smith_terminal_audit.md)
+    accepts incoming THM-4439's largest Smith exponent formula for every
+    finite node set. Complete terminal residue clusters lose exactly one
+    digit; an individual node can cancel much more. Literal Smith forms
+    confirm that our ternary metric twins still have largest exponent22,
+    while the unit residue changes intermediate exponents and kernel size.
+    This is an independent audit and connection of incoming canon.
+
 These are repository-scoped advances and recovered mechanisms, not claims
 of external literature priority. In particular, conditioning grid occupancy
 by row and column saturation already appears in the cited construction work.
@@ -193,8 +250,8 @@ independence heuristic and the later corrected conjectural constant.
 | Moment carry channels -> symbolic certificates | Preserve the full integer channel line at the first and doubled return; eliminate the remaining nonzero coefficient | First-level channel count loses second-level carries; one example has two channels followed by five |
 | Smith cluster tree -> weighted minors | Keep valuations of every row-bank alternative and compare their minima | A depth tree plus an appended factor list loses saturation changes in old factors |
 | Complete binomial paths -> trinomial roots | Ordered source/sink boundaries make Toeplitz minors nonnegative; a shifted ordinary coefficient product retains the full row | Prefix truncation destroys root location; separate rows still need a coupling |
-| Local odd-triple bound -> LRC completion | Compare the actual body lift with the literal tail failure set, keeping their common phase | Parity-free tails change the bound; scalar body mass loses safe component addresses and isolated points |
-| Hermite inverse -> full Smith partition | Largest inverse denominator gives exact worst precision | Intermediate ideals can change while the largest factor and determinant stay fixed; retain unit residues |
+| Local triple bounds -> LRC completion | Compare actual body phases with the literal tail failure set or exact affine event codes | Local ceilings do not supply entry; count/gcd data lose event overlap, and full Bohr packets lose the chosen anchor |
+| Hermite inverse -> complete terminal clusters | Maximize over every terminal child before discarding unit residues; exact worst precision survives | Individual inverse entries and intermediate ideals remain residue-sensitive; the metric-only full partition is false |
 | Real parabolic collinearity -> integral observer | The determinant of three points `(u,u^2)` is the ordinary Vandermonde product | Modulo a prime, zero area only records congruence; integral depth must accompany that reduction |
 
 The shared research move is to restore the coordinate discarded before an
@@ -222,7 +279,10 @@ versioned by Git, with its original snapshot identified in the first manifest.
 The [third checkpoint manifest](overnight3_20260906_manifest.json) freezes
 the universal audit, mixed-parity laws and consumer probes, ternary residue
 law, and independent path/sign certificates. It also excludes this maintained
-surface. Earlier frozen artifacts remain unchanged.
+surface. The [fourth checkpoint manifest](overnight4_20260906_manifest.json)
+freezes the parity-free closure, physical coarea/norm-four refinement,
+affine event interface, formal cycle defects, and terminal-cluster audit.
+Earlier frozen artifacts remain unchanged.
 
 ## Procedural direction generator
 
@@ -230,19 +290,21 @@ Use `objects x representations x invariants x operations x quotient losses
 x scales`, but require each generated direction to name a falsification
 test. Do not simply increase the last census bound. Current unfilled cells:
 
-- **LRC / literal components / noncontainment / common lifts.** The odd
-  local network is closed, and the universal ten-body floor is false.
-  Retain `G_C` and `m_3(F_T)` as actual component sets. A new entry family
-  must survive the inherited denominator/divisor sieves before counting it
-  as progress. Mixed-parity tails need a fresh norm-three/norm-four boundary;
-  the all-additive bulk law is an obstruction, not an entry theorem.
-- **No-three-in-line / paired forbidden events / cycle profile / conditioning.**
-  The third-moment contrasts are now closed at n8. Recover a structural
-  expression for their geometry-weighted coefficients or identify a
-  dependence expansion with a controlled remainder. Large positive and
-  negative incidence contributions almost cancel, so one favorable witness
-  is insufficient. For tails, test convergence rather than extrapolating
-  finitely many moments.
+- **LRC / affine event cover / component exit / anchor selection.** The
+  parity-free local ceiling is closed; scalar body floors are false. Retain
+  each event code modulo `14w`, its exact covering owners, and an actual
+  component endpoint. A failed code must feed the inactive/collision/first-
+  exit branch. Before a larger census, test a structural cover obstruction
+  with the all-events-blocked safe row and the two identical Bohr packets.
+  Separately, a sharper nonadditive ceiling needs the switched norm-five
+  projection profile; its physical integral alone cannot pay that target.
+- **No-three-in-line / formal cluster / geometry map / marked events.**
+  The cycle-defect coefficient formula is now explicit. The relevant
+  weight-four-square positivity and component-additive cumulant shortcuts
+  fail. Retain marked forbidden events and global label exclusion in the
+  next algebra, or derive a direct signed coefficient bound with a controlled
+  remainder. Formal locality does not prove analytic convergence or an
+  asymptotic zero-event probability.
 - **Moments / path and Laguerre factors / root response / doubling.**
   Individual rows now have simple negative roots by two distinct mechanisms.
   Seek a cross-row signed remainder, Gram sum, or Christoffel-type identity
@@ -267,7 +329,8 @@ test. Do not simply increase the last census bound. Current unfilled cells:
 
 ## Incoming work and scope
 
-Incoming work has been inspected through `d2f64b809`. The following are
+Incoming work has been inspected through `72a7db79b`, plus the explicit
+THM-4440 reservation at `533bf3d6e` (unproved and unused). The following are
 inherited results, independently connected where indicated, rather than
 additional discoveries counted for this task:
 
@@ -278,20 +341,30 @@ additional discoveries counted for this task:
   and THM-4431 now give finer cardinality, width and one/two/three-ray
   structure. Our cap, affine-midpoint and owner-line results remain stronger
   subclass information; they are no longer needed to close `6/77` locally.
-  The real consumer now retains body addresses, parity, and chart entry.
+  Its separate [additive extension](lrc14_additive_parity_empty_core_sep06.md)
+  is a proved input to our general parity-free closure. The incoming
+  [variable-radius coarea theorem](variable_radius_empty_core_sep06.md)
+  supplies a distinct two-sided carrier-width count with sharp bulk density.
+  The real consumer still retains body addresses and chart entry.
 - [THM-4432 / two-channel two-rung noncancellation with carries](../../01-canon/theorems/THM-4432-trinomial-two-channel-two-rung-noncancellation-with-carries.md)
   closes every first row with exactly two channels at all endpoints.
   [THM-4436 / complete factorial-row simple negative roots](../../01-canon/theorems/THM-4436-complete-factorial-row-simple-negative-roots-and-trinomial-phase-wall.md)
   supplies the all-row root theorem concurrently reproduced here by a
   different path construction. The former is cross-row separation; the
   latter is individual root location. Neither implies arbitrary
-  three-or-more-channel two-row separation.
+  three-or-more-channel two-row separation. Incoming
+  [Euler response identities](nc2_channel_contiguous_overnight_hexagon_sep05.md)
+  prove local strict interlacing but refute arbitrary mass-to-mass interlacing;
+  that response must retain its direction and carry wall.
 - [THM-4435 / four-node metric blindness and universal Hermite precision](../../01-canon/theorems/THM-4435-four-node-metric-blindness-and-universal-hermite-precision.md)
   proves a dyadic all-depth hostile and the largest Smith factor at any
   integer node set from `F'` and ordinary `F''`. Our ternary residue law
   complements it and explicitly changes intermediate factors while its
-  Hermite largest factor remains fixed. THM-4429 still proves the full
-  three-node metric law; applying it after adjoining a fourth node fails.
+  Hermite largest factor remains fixed. Incoming
+  [THM-4439 / terminal-cluster precision](../../01-canon/theorems/THM-4439-all-node-twojet-metric-precision-by-terminal-clusters.md)
+  now proves that largest factor metric-only at every node count, independently
+  audited above. THM-4429's full three-node metric law still cannot be applied
+  to the full partition after adjoining a fourth node.
 - [THM-4433 / signed Hamilton second minimum and cross-scale stability](../../01-canon/theorems/THM-4433-signed-hamilton-second-minimum-and-cross-scale-stability.md)
   is newly **PROVED** in incoming canon. This task previously independently
   audited THM-4427's minimum, transposition mechanism, and finite K8 base;

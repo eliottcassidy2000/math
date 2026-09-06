@@ -1,0 +1,9 @@
+COUNT_UNIVERSE 4920 method=rational danger endpoints and binary search
+FULL_EVENT_WORD_SEMANTIC_SHA256 bbeeb45e66237a65b66f0837833787a2bb2275abd5ae5f1eb1c7bc8a306d3671
+POSITIVE_CONTROL survivors [1, 2, 7, 8, 10, 11, 20, 22, 25, 26, 28, 29, 37, 40, 41, 42] marginals 37 union 27 y 17/602 safe_labels [1, 2] x 619/1806 clearance 1/7
+COUNT_THRESHOLDS all_positive37 ternary_unit31; no event-sharpness inference
+ALL_EVENT_COSETS_BLOCKED_BUT_SAFE x=1/13 clearance=1/13
+FULL_PACKET 277/1540 283/1540 body_component (Fraction(5, 28), Fraction(13, 70)) physical_danger_teeth [[(1, 0)], [(5, 2)], [(11, 8)]]
+NORM5_INTERVAL_CONTROL (Fraction(17, 176), Fraction(9, 140), Fraction(3, 55)) 331/6160 selected_minus_physical 1/1232 terms [(Fraction(3, 112), Fraction(5, 224), Fraction(1, 44)), (Fraction(53, 2464), Fraction(11, 1120), Fraction(1, 220))]
+NATIVE_AUDITED_HEAD_SHA256 c3d33fdd136245aafe512b04963a6eb6f1b5db6f1a572a3e8535ef59d01a09fa
+PASS_OPTIMIZATION_LIVE_GATES 14805

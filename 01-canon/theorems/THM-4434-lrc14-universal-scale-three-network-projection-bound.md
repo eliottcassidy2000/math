@@ -390,8 +390,12 @@ recovers the new norm-three obstruction and a separate mixed-parity
 norm-four exception. The separate
 [additive-family theorem](../../05-knowledge/results/lrc14_additive_parity_empty_core_sep06.md)
 now proves the sharp replacement `6/55` for every primitive ternary-unit
-`a+b=c`, with equality only at `(1,10,11)`. It does not close all mixed
-parity. No arbitrary decomposition or synchronization theorem follows.
+`a+b=c`, with equality only at `(1,10,11)`. The independently audited
+[all-parity extension](../../05-knowledge/results/overnight4_20260906_lrc_parityfree_probe.md)
+now gives `6/55` for every primitive distinct positive ternary-unit triple,
+with that same equality. It uses a new coefficient universe and low-relation
+profiles, not the odd ceiling outside its domain. No arbitrary decomposition
+or synchronization theorem follows.
 
 ## 7. Reproduction and scope
 

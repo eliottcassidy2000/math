@@ -1,0 +1,170 @@
+{
+  "schema": 1,
+  "created_utc": "2026-09-06T08:13:17.001190+00:00",
+  "baseline_commit": "9c2ffd7c9",
+  "incoming_review_commit": "72a7db79b",
+  "reservation_only_update": "533bf3d6e",
+  "hash_basis": "raw LF bytes; self and maintained synthesis excluded",
+  "scope": "Fourth overnight checkpoint: proved sharp parity-free local6/55 and norm-four11/140; exact physical coarea; independently audited affine body-event corollaries/phase hostiles; proved formal no-three-line cycle defects and homogeneous-square/cumulant obstructions; independent incoming terminal-cluster precision audit. No global entry, LRC14, general trinomial, or grid asymptotic closure.",
+  "maintained_surface": {
+    "path": "05-knowledge/results/overnight_20260906_synthesis.md",
+    "hash_policy": "Intentionally mutable; versioned by Git."
+  },
+  "artifacts": [
+    {
+      "path": "04-computation/overnight4_20260906_lrc_body_event.py",
+      "bytes": 5920,
+      "sha256": "996938c3fae3c38356c79d2b10db70bd1d7c38b13362cbbb7a3638e093e02da4"
+    },
+    {
+      "path": "04-computation/overnight4_20260906_lrc_body_event_audit.py",
+      "bytes": 8214,
+      "sha256": "195e7c0df5226a58785ebe1a545bb11e9d4b7fc6910c637e1c20f36aee751632"
+    },
+    {
+      "path": "04-computation/overnight4_20260906_lrc_norm4_audit.py",
+      "bytes": 7020,
+      "sha256": "5a2213bdafeb4a7c9829dab683bc325b0e407bed57a05b925a05408c887a3485"
+    },
+    {
+      "path": "04-computation/overnight4_20260906_lrc_parityfree_audit.py",
+      "bytes": 10489,
+      "sha256": "b5f52380e28bd3883f95090ff0c06a89e667d7aafd0e4c241b8fca68c76c7c00"
+    },
+    {
+      "path": "04-computation/overnight4_20260906_lrc_parityfree_native.cpp",
+      "bytes": 11650,
+      "sha256": "459f7080672d61e72df1e836c15a27304ad4d847858c89fe05c49982bc996eda"
+    },
+    {
+      "path": "04-computation/overnight4_20260906_lrc_parityfree_probe.py",
+      "bytes": 10645,
+      "sha256": "1405ce106b74d533c3f8e330fc95855996594913e031e5f80ea323092445d866"
+    },
+    {
+      "path": "04-computation/overnight4_20260906_no3line_cycle_defect.py",
+      "bytes": 8408,
+      "sha256": "c57585de9a836abbc40387d8c7fc23c300921ba3707daa3b16d07f16c5427c4d"
+    },
+    {
+      "path": "04-computation/overnight4_20260906_no3line_cycle_defect_audit.py",
+      "bytes": 9935,
+      "sha256": "3a0af6e0adb422a2db494d8fe60f9d23fcefc1aef663122de2191142ad2c74c0"
+    },
+    {
+      "path": "04-computation/overnight4_20260906_smith_terminal_audit.py",
+      "bytes": 5980,
+      "sha256": "b0fc41164d1ccf0b21a7fcbf0f55f029d4516b453ed86e41a7a77fc63699d00d"
+    },
+    {
+      "path": "05-knowledge/results/overnight4_20260906_lrc_body_event.md",
+      "bytes": 11551,
+      "sha256": "91bd364e43e021c33ccf1e495c3c3a1125e137ddb5aaef047e5a860f5c8f9da0"
+    },
+    {
+      "path": "05-knowledge/results/overnight4_20260906_lrc_body_event.out",
+      "bytes": 871,
+      "sha256": "95ad73bd43c12c110d2521be61f1f117e75671284fda8847fc64336c0937904e"
+    },
+    {
+      "path": "05-knowledge/results/overnight4_20260906_lrc_body_event_audit.md",
+      "bytes": 6523,
+      "sha256": "37232e21f9e432c5fb4e73dec2a2aa66b5c265e84ed69487e628d14677231475"
+    },
+    {
+      "path": "05-knowledge/results/overnight4_20260906_lrc_body_event_audit.out",
+      "bytes": 966,
+      "sha256": "78c8f65e436fa88a352516c5f8c28173fd917debc43b1a2e496bc9d7ba71416f"
+    },
+    {
+      "path": "05-knowledge/results/overnight4_20260906_lrc_norm4_audit.md",
+      "bytes": 8508,
+      "sha256": "b14089ed4db36801e65c4d2d8951acbf82fc8b639a163ae74cedaf95b3d47a03"
+    },
+    {
+      "path": "05-knowledge/results/overnight4_20260906_lrc_norm4_audit.out",
+      "bytes": 3560,
+      "sha256": "180c431b309b17a5656910d4cb43289d072dabfe51c0d8e6844799a9b62af3b9"
+    },
+    {
+      "path": "05-knowledge/results/overnight4_20260906_lrc_norm4_audit_optimized.out",
+      "bytes": 3560,
+      "sha256": "180c431b309b17a5656910d4cb43289d072dabfe51c0d8e6844799a9b62af3b9"
+    },
+    {
+      "path": "05-knowledge/results/overnight4_20260906_lrc_parityfree_audit.md",
+      "bytes": 11418,
+      "sha256": "3ebab3970ba6ccb4898e75a3fec63de44c76921237db53e897669d75119245aa"
+    },
+    {
+      "path": "05-knowledge/results/overnight4_20260906_lrc_parityfree_audit.out",
+      "bytes": 1124,
+      "sha256": "17b0980955e7b2118eae558152f6f36730f17a08d7678fcaf6d031dd677284d2"
+    },
+    {
+      "path": "05-knowledge/results/overnight4_20260906_lrc_parityfree_native.md",
+      "bytes": 10740,
+      "sha256": "a9ecee4e12b349cf1a7f63921b9776211683273bf76a9edefba2dcecafa0b0b8"
+    },
+    {
+      "path": "05-knowledge/results/overnight4_20260906_lrc_parityfree_native.out",
+      "bytes": 1153,
+      "sha256": "67a44d7881d90a14d52aed3a8d510841dc191c9784c8e13a1195cb1e111bb0f2"
+    },
+    {
+      "path": "05-knowledge/results/overnight4_20260906_lrc_parityfree_probe.md",
+      "bytes": 20534,
+      "sha256": "baae86fc887c085af4abc6ed34c6ee85f15d903ef1d2182f1c7113e553379785"
+    },
+    {
+      "path": "05-knowledge/results/overnight4_20260906_lrc_parityfree_probe.out",
+      "bytes": 1177,
+      "sha256": "9f0f60138b6b9716b545501ce297076cab916ea94e8ec8b52b9c2d867a97da69"
+    },
+    {
+      "path": "05-knowledge/results/overnight4_20260906_lrc_parityfree_probe_head63.tsv",
+      "bytes": 391589,
+      "sha256": "c3d33fdd136245aafe512b04963a6eb6f1b5db6f1a572a3e8535ef59d01a09fa"
+    },
+    {
+      "path": "05-knowledge/results/overnight4_20260906_no3line_cycle_defect.md",
+      "bytes": 11936,
+      "sha256": "92cc3090d9d96aeb20d956d2a86d524f73deeb546e3e679b37df8a6a7be67dd2"
+    },
+    {
+      "path": "05-knowledge/results/overnight4_20260906_no3line_cycle_defect.out",
+      "bytes": 2042,
+      "sha256": "c0682d15f8ec8bb488f86f6827e7ef9ba5e8a69d8112441d5cce98171822c14c"
+    },
+    {
+      "path": "05-knowledge/results/overnight4_20260906_no3line_cycle_defect_audit.md",
+      "bytes": 9199,
+      "sha256": "43f2620d748a9d954561a5be1113a2f95e209f7bda598f318f6c4ead915f5829"
+    },
+    {
+      "path": "05-knowledge/results/overnight4_20260906_no3line_cycle_defect_audit.out",
+      "bytes": 715,
+      "sha256": "8fe7462a695b3506f370823e8b4f2c64c5ac253706a618c28edcdce59c84074a"
+    },
+    {
+      "path": "05-knowledge/results/overnight4_20260906_no3line_cycle_defect_audit_optimized.out",
+      "bytes": 715,
+      "sha256": "8fe7462a695b3506f370823e8b4f2c64c5ac253706a618c28edcdce59c84074a"
+    },
+    {
+      "path": "05-knowledge/results/overnight4_20260906_smith_terminal_audit.md",
+      "bytes": 7594,
+      "sha256": "0ba419b1fcd78f44a2cf60f4d870512840f9cc3766379244add14547e6a4286d"
+    },
+    {
+      "path": "05-knowledge/results/overnight4_20260906_smith_terminal_audit.out",
+      "bytes": 3189,
+      "sha256": "2f47860b7d6664ae1a86d242b858ab706ec360d7649963757b48c1ea724e4e12"
+    },
+    {
+      "path": "05-knowledge/results/overnight4_20260906_smith_terminal_audit_optimized.out",
+      "bytes": 3189,
+      "sha256": "2f47860b7d6664ae1a86d242b858ab706ec360d7649963757b48c1ea724e4e12"
+    }
+  ]
+}
