@@ -221,6 +221,21 @@ THM-4423, THM-4425, THM-4426, and THM-4427--4430 were still **RESERVED**
 at this inspected commit. Result-note status and theorem-slot status are
 separate: the empty identifiers themselves provide no proof or dependency.
 
+A final incoming pull to `48aaa1924` added the
+[empty-core circuit board](empty_core_overnight_sep06_board.md) and its
+height-499 census. Its **FINITE-EXACT reported** multi-ray count gate has
+only the already cap-closed exception `(19,23,29)`; this session did not
+replay that large census. Its concrete nonadditive three-ray hostile
+`(41,47,49)` was independently rebuilt here from the raw carrier equations:
+the full support is `+-{(11,5,-14),(14,-7,-5),(17,-19,4)}`, with no
+independent `u+v=z` circuit. It is an affine AP with circuit coefficients
+`(1,1,2)`, exactly the information a forced A2 model would discard.
+The existing midpoint companion gives `D1=R1=190/47`, `B1=0`; again the
+first deficit is affine. The count surplus is `-32/11`, so this hostile is
+already safe. This independent small-witness check strengthens the next
+test: an all-height count argument must retain colored affine circuits,
+not simply increase the finite height cutoff or assume every circuit is A2.
+
 LRC(14), planar JC2, general trinomial two-rung coprimality, and the
 no-three-in-line asymptotic conjecture remain open. The overnight follow-up
 is scheduled through 08:00 America/Denver on 2026-09-06; at that point finish

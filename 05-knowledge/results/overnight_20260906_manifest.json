@@ -2,7 +2,7 @@
   "schema": 1,
   "created_utc": "2026-09-06T05:33:49.195765+00:00",
   "baseline_commit": "62e1b34d82a4",
-  "incoming_review_commit": "a80f2e90a",
+  "incoming_review_commit": "48aaa1924",
   "hash_basis": "raw LF bytes; self excluded",
   "scope": "First overnight checkpoint: six scoped mathematical results, exact companions, independent audits, and maintained continuation surface. This manifest proves file identity only; mathematical status and quantifiers live in the reports.",
   "artifacts": [
@@ -153,8 +153,8 @@
     },
     {
       "path": "05-knowledge/results/overnight_20260906_synthesis.md",
-      "bytes": 16484,
-      "sha256": "0b0b1692bcadeeb59b3a351b58ed4392fd9df6804da8790953634ccc5eccc04d"
+      "bytes": 17473,
+      "sha256": "3ce57057e454c8d44f8d98cfadbbeb9ccf9040f9bda8f4608689db66cb1b77fa"
     }
   ]
 }
