@@ -1,0 +1,11 @@
+AUDIT PASS: all-height five-profile inert odd-3-unit envelope
+GEOMETRY: literal half-lift Boolean evaluation on rational wall cells; excluded walls kept
+FINITE UNIVERSES: product head 21 ; q<=67 head 46 ; unrestricted primitive odd controls 582 ; inert atlas subclass 548
+PROFILE: 1 67 mass 20/469 component 2/469
+PROFILE: 5 41 mass 12/287 component 2/287
+PROFILE: 5 53 mass 78/1855 component 2/371
+PROFILE: 7 13 mass 2/49 component 1/49
+PROFILE: 19 25 mass 138/3325 component 37/3325
+CONSUMERS: inclusive mass/component disjunction and inherited absorption arithmetic PASS
+SCOPE: no universal body lower bound or LRC14 closure
+ACTIVE GATES: 9505

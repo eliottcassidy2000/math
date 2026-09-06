@@ -1,0 +1,7 @@
+Independent carrier universe: degrees 2..7, prefix multisets from (-2,-1,1,3), tuned final factor.
+Carriers: 938 strict coupled windows: 7083
+Independent kernel interpolation universe: 1<=M<=7, M<=N<=14, all legal r,s.
+Cone rows: 2618
+Exact gates: 38498
+semantic_sha256: 846413ff92fb5278b86233291923975e8b2da4aa88fdb904d17054bb4a9edfa4
+PASS

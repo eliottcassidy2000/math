@@ -1,0 +1,6 @@
+STATUS: PASS; exact cancellation spectra and bounded walk certificates
+FINITE UNIVERSE: 100544 labelled graph/endpoint cases; all 4-vertex graphs, labels 1..4, plus four 5-vertex graph families with distinct labels 1..8
+HOSTILE: {"spectrum": {"3": 3}, "values": [6, 2, 3]}
+REPEATED-WALK CONTROL: {"spectrum": {"1": 5}, "values": [1, 2, 3, 5, 7], "walk_values": [7, 1, 2, 1, 3, 1, 5]}
+LRC SCOPE: exact compiler for inherited conditional endpoint-walk test; universal qualifying component existence remains OPEN
+ACTIVE GATES: 559903

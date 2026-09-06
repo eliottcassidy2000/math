@@ -1,0 +1,7 @@
+MIXED_PAIR carrier= 1,-22/5,0,54/5,27/5 window_values= -2106/25,-7128/25,-7128/25,-21384/25
+PATH_CONTROL support=(-3,1,9) rho=-1 carrier= -1,0,10,20,15,4 window_values= -20,-300,-2400,-7200
+HOSTILES arbitrary_zero_preserving_Euler_square=2 nonreal_core_square=2
+CONE universe=1<=M<=8,M<=N<=20,0<=r<M,0<=s<N cases= 7014
+OUTSIDE_CONE W(1)=0 W(2)=1 coefficients= 1,-1/3 mixed_pair_response=54/5
+UNIVERSE degree=3..8 roots_prefix_multisets=(-3,-1,1,2) tuned_nonzero_last_root cases=1752
+PASS explicit_gates=492428 semantic_sha256=6158b4bc952a64a39ec5ccb3490744357cc57dae9d1b1c0a81f7edc7b8ae964e

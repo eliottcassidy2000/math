@@ -1,0 +1,36 @@
+INERT_PAIR_ALL_HEIGHT_PARETO
+mass_head=21 product<=273
+mass_head_pair=1,19 mass=4/133
+mass_head_pair=1,43 mass=12/301
+mass_head_pair=1,49 mass=2/49
+mass_head_pair=1,67 mass=20/469
+mass_head_pair=1,91 mass=2/49
+mass_head_pair=1,109 mass=32/763
+mass_head_pair=1,115 mass=32/805
+mass_head_pair=1,163 mass=48/1141
+mass_head_pair=1,169 mass=48/1183
+mass_head_pair=1,187 mass=52/1309
+mass_head_pair=1,211 mass=60/1477
+mass_head_pair=1,229 mass=64/1603
+mass_head_pair=1,235 mass=68/1645
+mass_head_pair=1,241 mass=68/1687
+mass_head_pair=5,17 mass=22/595
+mass_head_pair=5,29 mass=8/203
+mass_head_pair=5,41 mass=12/287
+mass_head_pair=5,53 mass=78/1855
+mass_head_pair=7,13 mass=2/49
+mass_head_pair=7,37 mass=2/49
+mass_head_pair=11,23 mass=10/253
+pareto_head=46 q<=67
+frontier=7,13 mass=2/49 component=1/49
+frontier=19,25 mass=138/3325 component=37/3325
+frontier=5,41 mass=12/287 component=2/287
+frontier=5,53 mass=78/1855 component=2/371
+frontier=1,67 mass=20/469 component=2/469
+literal_formula_controls=582 q<=75
+actual_atlas_subclass=548 p+q<=356
+sharp_mass=20/469 unique_pair=1,67
+sharp_component=1/49 unique_pair=7,13
+inclusive_q4_body_gate=40/469 inclusive_q2_one_even_gate=716/4221
+hypothesis_hostiles=1,9;5,11;1,11 empty_control=1,3
+PASS

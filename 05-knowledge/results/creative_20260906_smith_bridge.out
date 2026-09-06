@@ -1,0 +1,13 @@
+PROVED SCOPE: primitive integer directions, complete two Hasse jets, homogeneous degree 2n-1.
+Finite universe: 70 direction configurations; primes (2, 3, 5, 7)
+Seeded pool: primitive (a,b), -4<=a<=4, 0<=b<=4, canonical sign; 12 samples at each n=2,3,4,5; seed=20260906.
+Structured controls: n=1, infinity, all p+1 residue classes, depth 1/2/4 infinity cluster at p=2,3,5,7.
+Independent inverse/determinant/tree/Smith comparisons: 280
+Full projective/tangent Smith symmetry rows: 360
+Exhaustive nonempty minors: 992
+Dyadic full-partition hostile A: (0, 0, 4, 7, 12, 16, 19, 26)
+Dyadic full-partition hostile B: (0, 0, 4, 7, 12, 17, 18, 26)
+Nonprimitive same-direction hostile: (0,0,0,0) versus (0,0,2,3).
+semantic_sha256: 1238cff122b60e35b0dfb12a91029ca55215a04c5874dd80820f96e2ad4db9ee
+Exact gates: 69828
+PASS

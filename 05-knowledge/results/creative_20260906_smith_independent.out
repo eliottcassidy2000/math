@@ -1,0 +1,6 @@
+PROJECTIVE_HERMITE_INDEPENDENT_SYMPY_AUDIT
+configurations=60 node_counts=1..6
+literal_symbolic_jets_vs_full_integer_Smith=PASS
+bracket_determinant_and_exact_inverse_denominator=PASS
+controls=infinity;all_projective_residues_p2_p3;deep_infinity;negative_slopes
+PASS
