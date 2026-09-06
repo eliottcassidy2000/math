@@ -34,9 +34,9 @@ The least-used sidecar is the owner residue in the index-three sublattice.
 |---|---|---|
 | Anchor: actual ten-speed safe core | Intersect all exact safe components with the triple-comb complement | THM-4434 closes the universal local bound; body mass alone can be too small |
 | Anchor: parity and short resonances | Recover which integer relation norms oddness excludes | Mixed-parity `(2,5,7)` exceeds `6/77`; retain the additive norm-three relation |
-| Niche: trinomial first-return slice | Tune the first moment and inspect the next admissible slice | A first two-channel slice need not generate a free semigroup; retain carries |
-| Wildcard: colored convex carrier hull | Replace unweighted additive hexagon by primitive circuit coefficients | A2 shape is not automatic; seek smallest missing circuit type |
-| Bridge: owner-coset lattice area | Generalize the zonotope slice bound to variable error radius | Preserve residue density and low-norm resonance; the area alone is insufficient |
+| Niche: complete trinomial return pair | Test the carry-corrected remainder in the first-row quotient algebra | Retain both carries and trace-form inertia; individual negative roots lose cross-row signs |
+| Wildcard: colored convex carrier hull | Retain the complete primitive fan and weighted boundary data | The three-direction circuit classification is closed; affine progressions can still have zero curvature |
+| Bridge: owner-coset lattice area | Use variable-radius coarea to force bounded relation patterns from persistent deviation | The count theorem is proved; preserve actual component phases when seeking an LRC consumer |
 | Research process: minimal trusted certificate | Independently compile exact witnesses and retain proof directions | Small size alone is not completeness; compare source and consequence objects |
 
 Three independent agents handle fixed-direction bounds, owner-coset audit,
@@ -122,9 +122,14 @@ passed root and sibling audits. The
 [variable-radius coarea lemma](variable_radius_empty_core_sep06.md) is also
 PROVED and independently audited: it gives two-sided count error and a
 sharp leading constant, retaining all speed-residue cases. Incoming
-THM-4437 reserves an all-parity reduction to three low circuits; its status
-must be checked before using it, and this additive result supplies only the
-norm-three input.
+`eb50ee68df` now promotes
+[THM-4437](../../01-canon/theorems/THM-4437-lrc14-all-parity-network-reduction-to-three-low-circuits.md):
+every parity has `min E<6/77` outside the signed magnitude patterns
+`(1,1,1)`, `(1,1,2)`, `(1,2,2)`. Individual projections may equal the
+ceiling at three named rows; the strict minimum is the actual consumer.
+Root read the complete theorem, its 750-pattern and height-611 universes,
+and the independent-audit scope. Our additive result supplies the sharp
+`6/55` input on the first retained family only.
 
 Incoming `50e2a436cd` promotes the shared colored-lattice and two-channel
 namespaces and adds
@@ -145,19 +150,70 @@ mathematical equivalence between LRC and Laurent moments.
 
 ## Next continuation
 
-1. Finish the exact body/parity boundary probes. Preserve isolated safe
-   endpoints and the actual body-to-tail phase map; recover existing named
-   hostiles before claiming novelty. Another local triple census is no
-   longer the anchor.
-2. Seek an actual entry-produced core measure theorem or joint safe-component
-   intersection. The THM-4370/4372 weighted seven-fibre current has no proved
-   transport map from the unweighted three-sheet bound.
+The completed [trinomial family proof](trinomial_width15_empty_core_returns_sep06.md)
+now gives exact first detection `g` or `2g` for
+`(-15,2g-15,3g-15)`, integral `g>=8`, `gcd(g,15)=1`. Every support lies
+beyond the previously closed endpoint-eight strip. Root and the
+[independent rational recurrence referee](trinomial_width15_audit_empty_core_certificate_sep06.md)
+accept the complete rows, carry factor, symbolic identities and strictly
+positive shifted coefficients. The quadratic quotient has negative trace
+and positive norm, hence two strictly negative root values. No theorem for
+the entire endpoint-fifteen strip or arbitrary trinomial follows.
+
+The [Hermite trace test](trinomial_trace_sign_empty_core_certificate_sep06.md)
+retains exactly the missing root signs, including their invariance under
+changing the first anchor. A lower carry makes canonical second-row values
+positive in the actual support `(-15,1,9)`; multiplying by `tau^-1` restores
+the correct negative values. The
+[endpoint-four note](trinomial_root_sign_empty_core_returns_sep06.md)
+is a sign upgrade on an already closed family. Incoming `e5a45df05f`
+independently supplies the same correction and a 221-support sign bank.
+The [literature review](trinomial_doubled_row_literature_empty_core_three_ray_sep06.md)
+found no checked transport from neighboring orthogonal rows to this doubled
+pair; its explicit parameter signs and degree changes are retained.
+
+The [coarea corollary](variable_radius_empty_core_sep06.md#6-quantitative-bounded-resonance)
+also proves a quantitative converse: fixed positive normalized count
+deviation at large height forces a bounded shortest relation norm. This
+means finitely many relation patterns, not finitely many speed triples.
+Together these results change the live lanes: the anchor needs component
+locations; the parity lane needs its actual low circuits; the colored fan
+needs weights; coarea controls resonance types; and the Laurent lane can
+compress to a small matrix only after retaining the full carries. These
+are shared proof operations, with no asserted equivalence of the problems.
+
+1. The exact body/parity boundary probes are complete. Preserve isolated safe
+   endpoints and the actual body-to-tail phase map inside `c<11 max(C)`;
+   recover existing named hostiles before claiming novelty. Another local
+   triple census is no longer the anchor.
+2. Seek an actual entry-produced core theorem or joint safe-component
+   intersection. Neither measure nor largest component alone suffices.
+   The THM-4370/4372 weighted seven-fibre current has no proved transport map
+   from the unweighted three-sheet bound. THM-4437 now leaves only the three
+   low circuits in the parity lane; recover incoming work before treating
+   any of their remaining profiles as new.
 3. Use the complete colored fan and incoming affine-baseline deficit result
    together; repeated progressions alone can have zero curvature.
-4. Pursue three or more first-channel Laurent polynomials, comparing the
-   new carry-sign proof with incoming width-eight symbolic certificates.
+4. Pursue three or more first-channel Laurent polynomials using the
+   carry-corrected Hermite form. Compare every proposed extension with the
+   incoming width-eight theorem, the independently certified 221-support
+   sign bank, and the new `(-15,2g-15,3g-15)` family. THM-4440 currently
+   reserves a signed-duplication direction only; inspect promotion and its
+   actual hypotheses before treating it as a proved connection.
 5. Fetch incoming commits at coherent checkpoints, revisit every board item,
    and push only reviewed session paths. Use the META-PATTERNS cards
    "Search the statement before the method", "Correct the object before
    sharpening the technique", and "Retain the local profile until its global
    counting weights are known". No new meta-pattern is promoted yet.
+
+## Recovered width route after the Haar obstruction
+
+A cheap component-width derivation was recovered exactly in
+[THM-4052](../../01-canon/theorems/THM-4052-lrc14-affine-component-width-escape-cones.md):
+three ternary-unit tails of any parity escape a ten-core when `c>=11M`.
+This is existing progress, not a new theorem. The
+[consumer addendum](lrc14_universal_haar_consumer_empty_core_certificate_sep06.md)
+combines it with THM-4434 and shows the same clock-filtered inherited body
+fails both the Haar and largest-component gates, although its phase `9/19`
+works. The next anchor should retain both complete component lists in the
+strict relative cone `c<11M`, instead of searching for another scalar floor.

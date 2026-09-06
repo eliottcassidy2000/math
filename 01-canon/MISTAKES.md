@@ -119,6 +119,22 @@ These are rejected proof shortcuts, not retractions of scoped canon.
   No NC2/GMC(2) result is retracted, and no density interpretation of “thin”
   is established by the old census.
 
+### 2026-09-06 continuation: a lower carry reverses the canonical sign
+
+The research candidate “the complete canonical doubled row is negative at
+every first-row root” is **REFUTED**, never a proved dependency. For the
+actual support `(-15,1,9)`, `P=56(1+10t+t²)` and
+`Q mod P=-47087024-466126752t`, which is positive at both roots of `P`.
+The first failed implication was identifying the second row's canonical
+monomial with the square of the first row's monomial. The lower carry
+`epsilon_z=1` contributes `t^-1`; retaining it restores strict negativity.
+This witness is not claimed minimal. The
+[exact trace-form repair](../05-knowledge/results/trinomial_trace_sign_empty_core_certificate_sep06.md)
+records the complete tuple, both carries, the anchor-invariant predicate,
+and its equivalent negative-definite Hermite matrix. General negativity
+of that corrected matrix remains **OPEN**; separate simple negative roots
+or coprimality alone do not imply it.
+
 ## MISTAKE-543 (2026-09-03, concurrent THM-4404 reservations) -- a semantic collision survived clean integration, then a non-fail-fast shell pushed it
 
 - **What failed:** the exceptional-quartic and LRC14 sessions independently

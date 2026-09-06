@@ -1,0 +1,12 @@
+IDENTITY_AUDIT nine distinct parameters g=8,...,16
+degree_bounds normalized_constant<=4, linear<=3, trace<=4, norm<=8
+shifted_positive J [106089635, 982041681, 3029425902, 3114337032]
+shifted_positive H [8051838961249, 155839732966913, 1288856301033727, 5903575385111259, 16172002313744184, 26489396415060828, 24017452577936640, 9296533901880000]
+native_control (-15, 1, 9) first_mass 8 first_channels 3 second_channels 6 anchored_remainder (Fraction(4743488, 1), Fraction(47087024, 1))
+native_control (-15, 7, 18) first_mass 11 first_channels 3 second_channels 6 anchored_remainder (Fraction(7403414524, 1), Fraction(146691474556, 5))
+native_control (-15, 11, 24) first_mass 13 first_channels 3 second_channels 6 anchored_remainder (Fraction(37812273225740, 189), Fraction(106978823853460, 189))
+native_control (-15, 13, 27) first_mass 14 first_channels 3 second_channels 6 anchored_remainder (Fraction(801967017600, 1), Fraction(1984998498420, 1))
+semantic_sha256 a267f91a0e714f37758141ff7432f178e0fae2ae86693f1083856126a48e1bb5
+explicit_checks 69
+PASS: independent all-parameter polynomial identities and positive shifts
+SCOPE: (-15,2g-15,3g-15), integral g>=8,gcd(g,15)=1; not all width15 supports

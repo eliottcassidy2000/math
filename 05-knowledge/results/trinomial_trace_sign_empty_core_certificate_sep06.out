@@ -1,0 +1,21 @@
+support (-15, 1, 9) mass 8 factorial_tuple (2, 3, 2, 0, 1, 1) carries (0, 1)
+P_Q [56, 560, 56] [16, 10920, 400400, 1681680, 720720, 8008]
+corrected_remainder 47087024*tau + 4743488
+signed_leading_principal_minors [461383264, 587632760217600]
+support (-21, 1, 12) mass 11 factorial_tuple (2, 3, 3, 0, 1, 1) carries (0, 1)
+P_Q [110, 4620, 9240, 330] [22, 43890, 5969040, 135795660, 640179540, 597500904, 77597520, 319770]
+corrected_remainder -1014235898126*tau**2 - 516028484048*tau - 12297039260
+signed_leading_principal_minors [752350432547692, 21236578848830718128306804/3, 942083106929885721679784497035400/27]
+support (-25, 1, 14) mass 13 factorial_tuple (2, 3, 3, 2, 1, 1) carries (1, 1)
+P_Q [156, 12870, 72072, 25740] [26, 89700, 23023000, 1115464350, 13385572200, 42536373880, 33145226400, 4780561500, 53117350]
+corrected_remainder -47660913744418*tau**2/375 - 47912380379357*tau/1980 - 7293639817399/24750
+signed_leading_principal_minors [248262381336934549/309375, 103041355107681072187206907429/2994750000, 464540893300260027432902715300343770182359/1452901465125000000]
+width_four_shift H [5141, 71058, 364257, 820900, 686100]
+width_four_shift J [2269, 22567, 74728, 82380]
+width_four_recursive_remainder g*(g - 3)*(g - 2)*(g - 1)*(2*g - 3)*(2*g - 1)*(503*g**2 - 1723*g + 1470)/30240 g*(g - 2)*(g - 1)*(2*g - 3)*(2*g - 1)*(3*g - 5)*(11*g - 18)/180
+width_four_trace -g*(g - 2)*(g - 1)*(2*g - 3)*(2*g - 1)*(2269*g**3 - 11468*g**2 + 19233*g - 10710)/15120
+width_four_norm g**2*(g - 3)*(g - 2)**2*(g - 1)**2*(2*g - 3)**2*(2*g - 1)**2*(5*g - 7)*(5141*g**4 - 31762*g**3 + 69537*g**2 - 62820*g + 18900)/914457600
+semantic_sha256 2efc40c00ef00ae73583ebd3dbe813e5fbfc4536a1a5e937809c32d4f312e169
+explicit_checks 37
+PASS: three named carry controls and independent width-four symbolic audit
+SCOPE: Hermite equivalence is general; negative definiteness is not proved generally

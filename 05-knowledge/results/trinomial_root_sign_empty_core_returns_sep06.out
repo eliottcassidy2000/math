@@ -1,0 +1,24 @@
+support=(-4, 1, 6) first_mass=5 channels=3/5 Q_root_signs=[-1, -1] lower_carry=0 interval_epsilon=10^-4
+specified Q mod P = 7770*tau + 2715/2 ; rho = -181/1036 ; P(rho) = 34305/536648
+support=(-4, 3, 10) first_mass=7 channels=3/5 Q_root_signs=[-1, -1] lower_carry=0 interval_epsilon=10^-4
+support=(-4, 5, 14) first_mass=9 channels=3/5 Q_root_signs=[-1, -1] lower_carry=0 interval_epsilon=10^-4
+support=(-5, 1, 7) first_mass=6 channels=3/6 Q_root_signs=[-1, -1] lower_carry=0 interval_epsilon=10^-4
+support=(-6, 1, 8) first_mass=7 channels=4/7 Q_root_signs=[-1, -1, -1] lower_carry=0 interval_epsilon=10^-8
+support=(-6, 5, 16) first_mass=11 channels=4/7 Q_root_signs=[-1, -1, -1] lower_carry=0 interval_epsilon=10^-4
+support=(-7, 1, 9) first_mass=8 channels=4/8 Q_root_signs=[-1, -1, -1] lower_carry=0 interval_epsilon=10^-4
+support=(-7, 2, 11) first_mass=9 channels=4/8 Q_root_signs=[-1, -1, -1] lower_carry=0 interval_epsilon=10^-4
+support=(-8, 1, 10) first_mass=9 channels=5/9 Q_root_signs=[-1, -1, -1, -1] lower_carry=0 interval_epsilon=10^-8
+support=(-8, 3, 14) first_mass=11 channels=5/9 Q_root_signs=[-1, -1, -1, -1] lower_carry=0 interval_epsilon=10^-8
+support=(-9, 1, 11) first_mass=10 channels=5/10 Q_root_signs=[-1, -1, -1, -1] lower_carry=0 interval_epsilon=10^-8
+support=(-10, 1, 12) first_mass=11 channels=6/11 Q_root_signs=[-1, -1, -1, -1, -1] lower_carry=0 interval_epsilon=10^-16
+support=(-15, 1, 9) first_mass=8 channels=3/6 Q_root_signs=[1, 1] lower_carry=1 interval_epsilon=10^-8
+support=(-13, 1, 8) first_mass=7 channels=2/5 Q_root_signs=[1] lower_carry=1 interval_epsilon=10^-4
+symbolic family: (-4,g-4,2g-4), odd integers g>=5: Q negative at both P roots
+factorial extension: real g>=5; first-return interpretation requires odd integer g
+shifted positive factors: {"H": ["5141", "71058", "364257", "820900", "686100"], "J": ["2269", "22567", "74728", "82380"], "constant_factor": ["503", "3307", "5430"]}
+logical hostile only: P=(tau+1)(tau+3), Q=(2tau+1)(tau+2)(tau+4)(tau+5)
+Q mod P=-23-11tau; Q(-3)=10; Q(-1)=-12; P(-23/11)=-120/121
+scope: 13 named >=3-channel supports PASS; one two-carry normalization control PASS
+general actual higher-channel root-sign and two-rung problems remain OPEN
+semantic_sha256 13a831940fc814386bb016642ea73640b544cef983871042d6dadea4fbc04b9e
+explicit_gates 330

@@ -295,6 +295,54 @@ The additional tiny certificates `(1,10,11)` and `(2,11,20)` from the parity
 note were independently reconstructed by full integer boxes, including their
 physical masses `6/55` and `11/140`. No new parity census was run here.
 
+## 6. Quantitative bounded resonance
+
+**Root derivation; independently audited by `three_ray_geometry`.** Let
+`w=(a,b,c)` be primitive, positive, distinct, sorted, and ternary-unit, with
+no parity assumption. Define the shortest relation norm
+
+```text
+lambda_1(w)=min{||v||_1: 0!=v in Z^3, v.w=0}.
+```
+
+A minimizing relation is primitive. Put `S=lambda_1(w)` and choose its
+maximum coordinate magnitude `M`, so `M>=S/3`. Dividing (1) by `c`, and using
+`sum(w)-w_i<2c`, gives a first error term strictly smaller than `8r/S`.
+The elementary planar lattice argument in Section 4 of the
+[universal-slope note](lrc14_global_slope_empty_core_certificate_sep06.md)
+gives `S<4sqrt(c/3)`: its area computation uses positivity, distinctness,
+sorting, and primitivity, but not oddness. Hence, for every `r>0`,
+
+```text
+|N_r(w)/c -(8r^2/9)sum(w)/c|
+ <8r/lambda_1(w)+16r/(3sqrt(3c))+4/(3c).              (10)
+```
+
+For **fixed** `r>0`, every sequence with `lambda_1(w)->infinity` therefore
+satisfies the bulk convergence (8). Indeed the lattice bound itself forces
+`c->infinity`, and all three terms in (10) vanish. No limiting ratios of
+the speeds are required for this centered convergence.
+
+Conversely set `e_r(c)=16r/(3sqrt(3c))+4/(3c)`. If the absolute normalized
+deviation on the left of (10) is at least `eta>0` and `e_r(c)<eta`, then
+
+```text
+lambda_1(w)<8r/(eta-e_r(c)).                         (11)
+```
+
+In particular `e_r(c)<=eta/2` forces `lambda_1(w)<16r/eta`. Thus a fixed
+positive deviation persisting at large height is confined to finitely many
+primitive relation-coefficient patterns. This bounds relation types, not
+the heights or the number of speed triples on each relation plane. It
+recasts the earlier finite coefficient gate as a quantitative short-relation
+principle. The balanced family (3), with exact shortest norm `2n+2`, is the
+positive control; bounded-relation families retain the correction term.
+
+This corollary is analytic: the source and frozen exact output below are
+unchanged. The referee checked the maximum-coordinate choice, strict roof
+bound, parity-free lattice hypotheses, fixed-radius limit, and inversion
+with a positive denominator.
+
 ## Reproduction
 
 [Source](../../04-computation/variable_radius_empty_core_sep06.py) and

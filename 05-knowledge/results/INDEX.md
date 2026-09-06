@@ -11,6 +11,21 @@
   referee caught this boundary and repaired the proposed all-strict wording.
   The three low circuits and actual body-phase entry remain separate.
 
+- [Unbounded three-channel Laurent return family](trinomial_width15_empty_core_returns_sep06.md):
+  **PROVED ANALYTICALLY + FINITE-EXACT + INDEPENDENTLY AUDITED.** For
+  `(-15,2g-15,3g-15)`, integral `g>=8`, `gcd(g,15)=1`, the first nonzero
+  moment is exactly `g` or `2g`, both attainable. A carry-corrected quadratic
+  quotient has negative trace and positive norm for every parameter, proved
+  by positive shifted coefficients and an independent rational identity
+  certificate. This extends beyond the old endpoint-eight strip.
+  The [Hermite trace formulation](trinomial_trace_sign_empty_core_certificate_sep06.md)
+  gives an exact rational test for general first-root signs; its general
+  negative-definiteness claim remains OPEN. The
+  [endpoint-four sign upgrade](trinomial_root_sign_empty_core_returns_sep06.md)
+  strengthens an already closed family, and the
+  [bounded literature recovery](trinomial_doubled_row_literature_empty_core_three_ray_sep06.md)
+  records why individual real roots and neighboring orthogonality do not
+  automatically compare doubled rows.
 - [Sharp additive mixed-parity bound](lrc14_additive_parity_empty_core_sep06.md):
   **PROVED + FINITE-EXACT + INDEPENDENTLY AUDITED.** The complete family
   `a+b=c` has selected network and physical mass at most `6/55`, with sole
@@ -67,7 +82,9 @@
   `1552d098...8ef7` / `09ecc372...82be`; native hashes: `64f2d209...e5d0` /
   `49e33442...3b9` (raw LF repository bytes). The exact triple-comb consumer
   applies when the inherited body has Haar measure at least `6/77`; proving
-  that body floor and arbitrary entry/synchronization are the next barriers.
+  an actual entry-specific body floor or exact joint safe phases, together
+  with arbitrary entry/synchronization, remain barriers. The unrestricted
+  ten-body floor is refuted by recovered exact bodies.
 - [THM-4434: universal scale-three network projection bound](../../01-canon/theorems/THM-4434-lrc14-universal-scale-three-network-projection-bound.md):
   **PROVED ANALYTICALLY + FINITE-EXACT + INDEPENDENTLY AUDITED.** All
   primitive distinct positive odd ternary-unit triples satisfy `min_i E_i<=6/77`,
@@ -114,7 +131,8 @@
   summation close all three projections above height 99, while an independent
   5,409-row head closes the rest. Referee hashes: `227576fe...d8bb` /
   `7dc3cfe7...0eb`; 65,789 optimization-live gates (raw LF bytes). Four or
-  more directions, chart entry, and synchronization remain open.
+  more directions are now closed by THM-4434 on its odd ternary-unit
+  domain; chart entry and synchronization remain open.
 - The one- and two-memory source-normal row-fourteen companions
   ([THM-4426](../../01-canon/theorems/THM-4426-source-normal-row-fourteen-weight-eighteen-memory-repair.md)):
   **PROVED FINITE-ROW REPAIR RELATIVE TO THM-4410/4415 + VERIFIED-EXACT +

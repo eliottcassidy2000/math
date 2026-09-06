@@ -188,3 +188,75 @@ has `H={1,...,11}`, tails `(1,9)`, and
 This is an actual failure of that Haar gate on a safe row, not a counterexample
 to the scale-three body-floor candidate. It motivates retaining exact
 body-component addresses if the new measure gate stops.
+
+## 5. Recovered component-width escape and the joint residual
+
+Recover [THM-4052 — affine-component width escape cones](../../01-canon/theorems/THM-4052-lrc14-affine-component-width-escape-cones.md),
+Section 3, before trying to derive another large-tail theorem. For a ten-core
+`C` with `M=max C`, cited eleven-runner loneliness supplies clearance `1/11`.
+The Lipschitz margin contains a closed body-safe interval of length
+`3/(77M)`. On the body-phase circle let `Sigma_T=m_3(F_T)`. For three
+ternary-unit tails of any parity, its distinct owner-assignment strata are
+open and disjoint. Each connected component stays in one danger tooth of
+the fastest tail `c=max T`, of length at most `3/(7c)`. The closed/open
+comparison therefore proves escape when `c>=11M`, including equality.
+This is exactly the inherited theorem, not a new height cone.
+
+More precisely, if `L_C` is the largest closed safe-component length and
+`W_T` the largest connected component of `Sigma_T`, then `L_C>=W_T`
+precludes full failure. The exact phase condition remains
+`G_C` not contained in `Sigma_T`; the two scalar gates are sufficient only.
+For odd ternary-unit tails, combining THM-4052 and THM-4434 leaves any
+hypothetical failure in the necessary region
+
+```text
+c<11M,
+mu(G_C)<mu(F_T)<=6/77,
+L_C<W_T<=3/(7c),
+G_C subset Sigma_T.
+```
+
+The recovered clock-filtered body
+`C={1,3,4,10,11,13,14,16,17,18}` with `T=(1,5,11)` defeats both scalar
+gates: its measure is below `6/77`, and its exact largest component has
+length `13/1568<3/77=W_T`. The first maximum interval is
+`[29/224,27/196]`, whose length is `13/1568`; the complete component list
+is in the [frozen body transcript](lrc14_haar_body_empty_core_sep06.out).
+Yet `x=9/19` is safe with clearance `2/19`. Thus even combining full Haar
+mass and largest-component width does not remove the need for component
+location. This is an application of a recovered safe row, not a new LRC
+family or an actual counterexample entry claim.
+
+Reproduce the extra width comparison from the already audited closed sets:
+
+```python
+import runpy
+m = runpy.run_path("04-computation/lrc14_haar_body_empty_core_sep06.py")
+C = (1,3,4,10,11,13,14,16,17,18)
+assert m["safe"](C) == m["wall_safe"](C)
+print(max(b-a for a,b in m["safe"](C)))  # 13/1568
+```
+
+The useful next object is the pair of complete rational component lists
+inside the strict relative-height cone, with the actual common lift label.
+
+## 6. Incoming parity-free generic consumer
+
+Incoming `eb50ee68df` promotes
+[THM-4437 — all-parity reduction to three low circuits](../../01-canon/theorems/THM-4437-lrc14-all-parity-network-reduction-to-three-low-circuits.md).
+After primitive reduction, every positive distinct ternary-unit tail triple
+with no signed relation of magnitude pattern `(1,1,1)`, `(1,1,2)` or
+`(1,2,2)` has `mu(F_T)<=min E_i<6/77`, with no parity hypothesis.
+The same actual-body consumer therefore extends to that complete generic
+domain. Its three individual projection equalities do not change the strict
+minimum. The earlier mixed-parity hostiles lie in the explicitly retained
+low circuits and are preserved.
+
+For the additive family, the separately
+[proved sharp physical bound](lrc14_additive_parity_empty_core_sep06.md)
+instead gives the sufficient gate `mu(G_C)>=6/55`, including equality by
+the same compact/open argument in Section 2. These are tail-specific
+sufficient thresholds. Neither proves that a particular entry supplies the
+required body measure, and both leave the exact phase intersection as the
+consumer when the scalar gate fails. THM-4052's width escape applies to
+all these ternary-unit tails independently of parity.

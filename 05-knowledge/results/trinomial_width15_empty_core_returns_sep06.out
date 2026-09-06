@@ -1,0 +1,19 @@
+P_normalized g**2 - 11*g + 6*tau**2 + tau*(20*g - 100) + 30
+first_content g*(g - 4)*(g - 3)*(g - 2)*(g - 1)/720
+anchored_R_constant g*(g - 5)*(g - 4)*(g - 3)*(g - 2)*(g - 1)*(2*g - 9)*(2*g - 7)*(2*g - 5)*(2*g - 3)*(2*g - 1)*(1106459*g**3 - 17466623*g**2 + 91449662*g - 158894736)/12259447200
+anchored_R_slope g*(g - 4)*(g - 3)*(g - 2)*(g - 1)*(2*g - 9)*(2*g - 7)*(2*g - 5)*(2*g - 3)*(2*g - 1)*(27352253*g**3 - 404127357*g**2 + 1990079478*g - 3266244982)/15324309000
+trace -g*(g - 5)*(g - 4)*(g - 3)*(g - 2)*(g - 1)*(2*g - 9)*(2*g - 7)*(2*g - 5)*(2*g - 3)*(2*g - 1)*(106089635*g**3 - 1564109559*g**2 + 7685968926*g - 12588295720)/18389170800
+norm g**2*(g - 5)*(g - 4)**2*(g - 3)**2*(g - 2)**2*(g - 1)**2*(2*g - 9)**2*(2*g - 7)**2*(2*g - 5)**2*(2*g - 3)**2*(2*g - 1)**2*(8051838961249*g**7 - 295063248863031*g**6 + 4630220682540559*g**5 - 40333487193583421*g**4 + 210638390555236696*g**3 - 659512619763975524*g**2 + 1146316900083491136*g - 853264618035013184)/3757351141239696000000
+strict_positive_shifts {"H": ["8051838961249", "155839732966913", "1288856301033727", "5903575385111259", "16172002313744184", "26489396415060828", "24017452577936640", "9296533901880000"], "J": ["106089635", "982041681", "3029425902", "3114337032"]}
+named_control (-15, 1, 9) first_mass 8 channels [3, 6] negative_trace True positive_norm True
+named_control (-15, 7, 18) first_mass 11 channels [3, 6] negative_trace True positive_norm True
+named_control (-15, 11, 24) first_mass 13 channels [3, 6] negative_trace True positive_norm True
+named_control (-15, 17, 33) first_mass 16 channels [3, 6] negative_trace True positive_norm True
+named_control (-15, 23, 42) first_mass 19 channels [3, 6] negative_trace True positive_norm True
+named_control (-15, 31, 54) first_mass 23 channels [3, 6] negative_trace True positive_norm True
+named_control (-15, 47, 78) first_mass 31 channels [3, 6] negative_trace True positive_norm True
+nonprimitive_hostile (-15,3,12), formal g=9, actual first support return=3
+PROVED: g>=8 integral, gcd(g,15)=1; first nonzero return g or 2g, both attainable
+SCOPE: this fixed (a,A,B)=(15,2,3) family; no endpoint-fifteen strip or general closure
+semantic_sha256 155c07c958f6a6087266d09059d53ee7603d59b469fc8484795bac7e3c56e8ab
+explicit_checks 113
