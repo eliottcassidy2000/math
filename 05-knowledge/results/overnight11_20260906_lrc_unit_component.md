@@ -238,8 +238,8 @@ clearances are checked.
 
 Run:
 
-    python -B D-computation/overnight11_20260906_lrc_unit_component.py
-    python -B D-computation/overnight11_20260906_lrc_unit_component.py
+    python3 -B 04-computation/overnight11_20260906_lrc_unit_component.py
+    python3 -B -O 04-computation/overnight11_20260906_lrc_unit_component.py
 
 Normal and optimized outputs are frozen separately and must agree exactly.
 The independent audit is coordinated with the orthogonal jet/Boolean lane;

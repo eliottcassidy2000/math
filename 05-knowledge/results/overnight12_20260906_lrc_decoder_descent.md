@@ -174,8 +174,8 @@ must be kept. No rejected control is treated as surviving current constraints.
 [frozen incoming profiles](../../04-computation/overnight12_20260906_lrc_decoder_descent_inherited_profiles.json):
 
 ```
-python -B D-computation/overnight12_20260906_lrc_decoder_descent.py
-python -B D-computation/overnight12_20260906_lrc_decoder_descent.py
+python3 -B 04-computation/overnight12_20260906_lrc_decoder_descent.py
+python3 -B -O 04-computation/overnight12_20260906_lrc_decoder_descent.py
 ```
 
 Both runs pass **221,166 always-active gates**, with identical LF outputs.

@@ -1,0 +1,13 @@
+STATUS: independent centered-division audit; coprime specialization already
+        subsumed by incoming overnight12 gcd_semigroup Corollary4; LRC14 OPEN
+DOMAIN: full W=V_dec, actual 11+2 decoder split and finite box;
+        inert pair atlas, primitive scales, and a label coprime to maxV
+centered_division_rows 14129 cleared_crossing_rows 2304
+incoming_exact_box_rows 94 incoming_minimal_multiplier_rows 1740 incoming_endpoint_cutoff 76388115
+inherited_pair_atlas 5855 generic_grid_witnesses 30
+actual_nonunit_entry {"anchor": 2, "branch": "forced large pair scale", "clearance": "5026338869841/70368744177664", "core": [2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 13], "g": 35184372088832, "p": 1, "phase": "5799621772885/70368744177664", "q": 3, "t": 1}
+nonunit_hostile_maximum 237907127334685115 coprime_maximum_anchors 0
+normalization_hostile_already_excluded_by_large_subset_caps True
+generic_grid_branches ['forced large pair scale', 'large core scale']
+gates 24545
+semantic_sha256 42e046c369798af9fb4a1fa1c6a0e371a90766c22033c6f861ceedf5cd1f6317

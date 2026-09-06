@@ -395,8 +395,8 @@ toy coefficient bank is not mislabeled as actual entry. The finite bank
 tests formulas and failure boundaries. The all-height claims follow from
 the displayed proofs.
 
-    python -B D-computation/overnight12_20260906_lrc_gcd_semigroup.py
-    python -B D-computation/overnight12_20260906_lrc_gcd_semigroup.py
+    python3 -B 04-computation/overnight12_20260906_lrc_gcd_semigroup.py
+    python3 -B -O 04-computation/overnight12_20260906_lrc_gcd_semigroup.py
 
 Both runs pass **673,482 always-active gates**. Normal and optimized outputs
 are frozen byte-identical LF. Source SHA256:

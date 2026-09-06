@@ -1,0 +1,14 @@
+PASS AP8 arbitrary-outlier optimal asymptotic margin
+S=3*{1,...,8,v,w} plus any three distinct positive 3-unit tails; H=min(v,w)>=82
+1/9-9/H <= M <=1/9; equality iff neither outlier is divisible by 9
+Nine-divisible branch: L_(1/9-9/H)>=53/(4536H), improved to 4507/(4536H) if both are divisible by 3
+Declared universe: 24 affine tooth cells, both margin endpoints, both inequalities; 18 tail residues
+Rational discrepancy controls: 64 ; named strict-branch budgets: 6
+BUDGET 82 90 1/738 816444127/28136309040 53/371952
+BUDGET 90 91 1/90 3175703/132678000 53/408240
+BUDGET 90 93 1/90 7947671/316386000 4507/408240
+BUDGET 99 102 2/99 2851825/131960664 4507/449064
+BUDGET 999 1000 34/333 155299279/775446777000 53/4531464
+BUDGET 999 1002 34/333 1142433025/1035996894072 4507/4531464
+Exact gates: 273
+Trace SHA256: b77950345b4a64464a77c89f257362366f94913e33384dcace506977d6b8e151
