@@ -9,6 +9,23 @@ Format per entry:
 - Why it was wrong
 - The correct framing
 
+## 2026-09-06 overnight -- a lawful correction can arrive after the obstruction
+
+- **Failed implication:** a polynomial source correction that repairs the
+  fifth collision coefficient need not repair a target-form obstruction.
+- **Exact witness:** [the fifth-order source theorem](../05-knowledge/results/overnight7_20260906_jc_fifth_module.md)
+  realizes `h=chi5*x` by a determinant-one polynomial source shear. It pays
+  `L(h)=-18kappa/5`, while the entire THM-4046 J0..J8 packet remains fixed.
+- **Mechanism and missing coordinates:** the collision pencil uses s=t^2;
+  s^5 is t10, and differentiating first exposes it at density J9. Source
+  admission, target descent, and the differentiated clock are different
+  predicates. The full descended Hamiltonian retained image is exactly ker L.
+- **Strongest survivor:** the source plane and finite collision repair are
+  actual. Every q=Q+t2+O(t10) still excludes nonzero constant source density
+  for every target two-form. Formal units and earlier source jets are not
+  excluded. A t9*x term changes J8 but also has a nonzero collision period;
+  an earlier escape must satisfy both consumers.
+
 ## MISTAKE-547 (2026-09-06, higher-jet hostile probe) -- changing the observer changes its cancellation budget
 
 - **Refuted extrapolation, never a proved dependency:** complete uniform

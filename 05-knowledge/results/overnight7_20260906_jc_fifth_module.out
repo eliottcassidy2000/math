@@ -1,0 +1,7 @@
+Actual polynomial source module: K[x]; h5=chi5*x pays L(h5)=-18*kappa/5
+Full prefix-cancelled descended Hamiltonian normal evaluation image: ker(5,-18,13), dimension2
+local_primitive_banks=[{"alpha": 126, "columns": 140, "constraint_rank": 105, "constraints": 135, "full_jet_rank": 108, "joint_rank": 107, "matrix_sha256": "d9c1f216229adee672719cacf6ca4c14ddb7e1525d42893724d9269aea46a204", "p": 421, "period_rank": 105}, {"alpha": 112, "columns": 140, "constraint_rank": 105, "constraints": 135, "full_jet_rank": 108, "joint_rank": 107, "matrix_sha256": "5304092360398b39f5f884989bdb012065d7e33a64ec6e491282d639047b964a", "p": 443, "period_rank": 105}]
+literal_contact_controls=[{"alpha": 126, "chi5": 340, "kappa": 180, "p": 421}, {"alpha": 112, "chi5": 347, "kappa": 361, "p": 443}]
+Sharp order firewall: source O(t10) leaves every J0..J8 unchanged; O(t9) can change J8
+No target two-form has nonzero constant source density on inherited4046 frozen-prefix graphs
+PASS: 226 optimization-live exact gates

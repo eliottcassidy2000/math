@@ -1,0 +1,33 @@
+SYMBOLIC_UNIVERSE ranks1..4 [36, 225, 400, 225] total886 monomials 2623
+CLOSE_FRONT generic rank 1 [(1, 0, 0)]
+CLOSE_FRONT generic rank 2 [(3, 1, 1), (4, 0, 0)]
+CLOSE_FRONT generic rank 3 [(7, 1, 1), (9, 0, 0)]
+CLOSE_FRONT generic rank 4 [(12, 4, 4), (13, 1, 1)]
+CLOSE_FRONT p3 rank 1 [(1, 0, 1), (3, 0, 0)]
+CLOSE_FRONT p3 rank 2 [(3, 1, 3), (4, 0, 1), (6, 0, 0)]
+CLOSE_FRONT p3 rank 3 [(7, 1, 2), (9, 0, 0)]
+CLOSE_FRONT p3 rank 4 [(12, 4, 6), (13, 1, 2)]
+CLOSE_FRONT p5 rank 1 [(1, 0, 0)]
+CLOSE_FRONT p5 rank 2 [(3, 1, 1), (4, 0, 0)]
+CLOSE_FRONT p5 rank 3 [(7, 1, 2), (8, 1, 1), (9, 0, 0)]
+CLOSE_FRONT p5 rank 4 [(12, 4, 5), (13, 1, 1)]
+EQUILATERAL_LOWER generic e>=1 slopes (1, 3, 7, 12) intercepts (0, 0, 0, 0) all_terms 2623
+EQUILATERAL_LOWER p3 e>=1 slopes (1, 3, 7, 12) intercepts (1, 2, 2, 2) all_terms 8051
+EQUILATERAL_LOWER p5 e>=1 slopes (1, 3, 7, 12) intercepts (0, 0, 1, 1) all_terms 2623
+ATTAIN unit-entry rows (0,) degrees (3,) weight 3 polynomial {0: 1}
+ATTAIN three-entry rows (2,) degrees (3,) weight 1 polynomial {0: 3}
+ATTAIN unit-rank2 rows (0, 1) degrees (3, 4) weight 6 polynomial {0: 1}
+ATTAIN six-rank2 rows (1, 2) degrees (3, 4) weight 4 polynomial {0: 6}
+ATTAIN matching-rank2 rows (2, 5) degrees (3, 4) weight 3 polynomial {1: -18, 2: 18}
+ATTAIN unit-rank3 rows (0, 1, 2) degrees (3, 4, 5) weight 9 polynomial {0: 1}
+ATTAIN first-rank3 rows (1, 2, 5) degrees (3, 4, 5) weight 7 polynomial {1: 30, 2: -90, 3: 60}
+ATTAIN second-rank3 rows (2, 4, 5) degrees (3, 4, 5) weight 7 polynomial {4: 60, 5: -90, 6: 30}
+ATTAIN p5-redundant-rank3 rows (0, 2, 5) degrees (3, 4, 5) weight 8 polynomial {1: 12, 2: -42, 3: 30}
+ATTAIN linear-rank4 rows (0, 1, 2, 5) degrees (3, 4, 5, 6) weight 13 polynomial {1: -3, 2: 18, 3: -30, 4: 15}
+ATTAIN quartic-rank4 rows (1, 2, 4, 5) degrees (3, 4, 5, 6) weight 12 polynomial {4: 90, 5: -360, 6: 540, 7: -360, 8: 90}
+LITERAL_CONTROLS close 180 equilateral 248 affine4 total 432 plus dyadic18/19 hostile
+ODD_PRIME_LARGEST close=8e+5d-[p3]; equilateral=max(6e,8e-[p3])
+EQUILATERAL_E1 p3 (0, 0, 0, 2, 3, 4, 5, 6, 7) p5 (0, 0, 0, 1, 2, 5, 5, 6, 8) p>=7 (0, 0, 0, 1, 2, 4, 5, 7, 8)
+SHALLOW_SLOPE_HOSTILE p7 e4 d1 D7 52 versus13e+d=53
+POLYNOMIAL_CERTIFICATE_SHA256 05fc22845ec10078a2c9d568dea59d00bfdbdc8588d9e314e4134fcbe13e7d11
+PASS_OPTIMIZATION_LIVE_GATES 18102

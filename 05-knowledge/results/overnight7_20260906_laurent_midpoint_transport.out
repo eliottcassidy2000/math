@@ -1,0 +1,6 @@
+PROVED_IDENTITY beta(2x,2y)=B^2+2*tau*C*D; alpha_double=O^2+tau^-1*E^2
+THREE_GROUPS (tau^-1*E^2)starB^2; 2O^2star(tau*C*D); 2(tau^-1*E^2)star(tau*C*D)
+UNIFORM_GROUPED_NEGATIVITY OPEN; named controls only [{"g": 5, "groups": 3, "h": 1, "root_count": 1}, {"g": 7, "groups": 3, "h": 1, "root_count": 1}, {"g": 11, "groups": 3, "h": 1, "root_count": 1}, {"g": 8, "groups": 3, "h": 2, "root_count": 2}, {"g": 11, "groups": 3, "h": 2, "root_count": 2}, {"g": 16, "groups": 3, "h": 2, "root_count": 2}, {"g": 11, "groups": 3, "h": 3, "root_count": 3}, {"g": 13, "groups": 3, "h": 3, "root_count": 3}, {"g": 17, "groups": 3, "h": 3, "root_count": 3}, {"g": 14, "groups": 3, "h": 4, "root_count": 4}, {"g": 16, "groups": 3, "h": 4, "root_count": 4}, {"g": 19, "groups": 3, "h": 4, "root_count": 4}]
+SAME_CONSTRAINT_HOSTILE h1g5rho-2: OstarB=0,OstarC=15,OstarD=10,EstarB=-16
+PASS 767 explicit gates; 164 independent beta path endpoints
+semantic_sha256 4f855b7007e6f793fb65d33f076990a7b5db226838eaf52700befc6f878b59dd

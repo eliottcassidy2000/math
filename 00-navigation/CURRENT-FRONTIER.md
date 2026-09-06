@@ -184,14 +184,13 @@ Off the negative `tau` ray, THM-4436 gives detection at support return,
 including proportional resonances; general cross-mass coprimality stays OPEN.
 
 [THM-4440](../01-canon/theorems/THM-4440-signed-duplication-sos-and-real-rooted-laurent-return.md)
-proves an exact signed-subset SOS: an interior zero coefficient of a
-real-rooted polynomial has a strictly negative doubled coefficient in its
-square. It gives width-linear return for real-rooted Laurent cores and
-all-mass doubled-row coprimality for AP trinomials, with unbounded-channel
-sharp examples; general non-real-rooted cores remain outside this theorem.
-[Endpoint21](../05-knowledge/results/overnight6_20260906_laurent_cubic_carry.md)
-has detection `g` or `2g` on `(-21,2g-21,3g-21)`, `g>=11`, `gcd(g,21)=1`:
-all carried quotient characteristic coefficients have audited positive certificates.
+gives negative doubled coefficients at interior zeros of real-rooted
+polynomials, width-linear real-core return and all-mass AP-trinomial
+coprimality, with sharp unbounded-channel examples; general cores stay OPEN.
+[Endpoint27](../05-knowledge/results/overnight7_20260906_laurent_quartic_carry.md)
+detects at `g` or `2g` on `(-27,2g-27,3g-27)`, `g>=14`, `gcd(g,27)=1`.
+[Midpoint identities](../05-knowledge/results/overnight7_20260906_laurent_midpoint_transport.md)
+retain three groups; uniform signs are OPEN.
 
 ## Tournaments
 
@@ -356,9 +355,9 @@ lift/phase clocks.
   clusters. [THM-4443](../01-canon/theorems/THM-4443-arbitrary-jet-precision-and-dyadic-unit-boundary.md)
   gives the arbitrary-multiplicity inverse denominator and complete dyadic
   three-node three-jet full Smith law (eight attained symbolic costs);
-  metric-only precision fails at uniform3 and heterogeneous(2,2,1).
-  [Reciprocal shell jets](../05-knowledge/results/overnight6_20260906_jets_sidecar.md)
-  give exact residue budgets and all-depth envelopes; higher-node full partitions stay OPEN.
+  metric precision fails at uniform3 and heterogeneous(2,2,1).
+  [Odd-prime uniform3](../05-knowledge/results/overnight7_20260906_oddjets.md)
+  has metric-only factors with primes3/5 corrections.
 - **Even-graph spectrum:** THM-4083 closes `D=3,4`;
   [THM-4416](../01-canon/theorems/THM-4416-even-graph-cumulative-d5-d6-spectral-gap.md)
   closes `D=5,6`; [THM-4427](../01-canon/theorems/THM-4427-all-cumulative-signed-cycle-gaps-by-transposition-rigidity.md)
@@ -410,9 +409,9 @@ lift/phase clocks.
   THM-4404/4411/4412 give the fixed-`x` descended-form gap, collision period,
   and non-descended suspension. THM-4421's integral `2Z minus 6Z` gap is
   nongeometric. THM-4424 proves the inherited `D2,D4,D6,kappa` debts are the
-  successive `s2--s5` coefficients of one transverse collision-discriminant
-  graph; the exceptional constant pencil has exact contact order five.
-  Full graph transgression, termination, and entry remain open.
+  successive `s2--s5` collision coefficients. The [fifth source theorem](../05-knowledge/results/overnight7_20260906_jc_fifth_module.md)
+  admits polynomial payment; full descended response is ker L. All O(t10)
+  graph repairs preserve J8; earlier jets, termination and entry remain open.
 - **Weyl boundary:** THM-2049 gives a formal beta-adic lift; finite termination remains.
 - **Planar source fibres:** THM-2063/THM-2084--2480 (including
   THM-2371/THM-2376) close the named

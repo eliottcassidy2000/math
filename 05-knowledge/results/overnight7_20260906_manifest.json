@@ -1,0 +1,120 @@
+{
+  "schema": 1,
+  "created_utc": "2026-09-06T09:40:15.435010+00:00",
+  "baseline_commit": "bf5a1cf35",
+  "incoming_review_commit": "d6869285f",
+  "hash_basis": "raw LF bytes; self and maintained synthesis excluded",
+  "scope": "Proved endpoint27 carried Laurent family and all-h midpoint decomposition/degree bounds (uniform signs OPEN); complete odd-prime three-node three-jet Smith law; exact fifth source/descended Hamiltonian retained images and preservation of the J8 obstruction under all O(t10) graph repairs. Independent proof and exact audits; no global conjecture closure.",
+  "artifacts": [
+    {
+      "path": "04-computation/overnight7_20260906_jc_fifth_module.py",
+      "bytes": 10550,
+      "sha256": "0a478c1e94ff0b9ad69de2727801f6d0413f7df4a1275aa0a75f0885a4f5cdc1"
+    },
+    {
+      "path": "04-computation/overnight7_20260906_jc_independent_audit.py",
+      "bytes": 6761,
+      "sha256": "b070b1515c762cc47444ed4844477657ca605509461cdbbb9c8aa4e483651f11"
+    },
+    {
+      "path": "04-computation/overnight7_20260906_laurent_independent_audit.py",
+      "bytes": 7280,
+      "sha256": "4eac6948a3c850982d322f79f94aa296716fbdc80cf299ea9b1d88b0be5991c1"
+    },
+    {
+      "path": "04-computation/overnight7_20260906_laurent_midpoint_transport.py",
+      "bytes": 5942,
+      "sha256": "890abb5a5bf598aebceacff6b228a0c70b76832d8d4d9812d7975133438f0649"
+    },
+    {
+      "path": "04-computation/overnight7_20260906_laurent_quartic_carry.py",
+      "bytes": 6083,
+      "sha256": "3ab5a563fbb0a8f1dfceb35f348ff9d8e2175265f41f3e3fd2afdc614257e2e3"
+    },
+    {
+      "path": "04-computation/overnight7_20260906_oddjets.py",
+      "bytes": 12046,
+      "sha256": "b894f4860c1bdd824d4b2ce5ef2b443bdff2b73a684a06d5ac699c3afafa45b1"
+    },
+    {
+      "path": "04-computation/overnight7_20260906_oddjets_independent_audit.py",
+      "bytes": 8374,
+      "sha256": "6ba392a11651dfd36e0b336ff3763be87531ceb8bf12772fc66e54f0eb35ba77"
+    },
+    {
+      "path": "05-knowledge/results/overnight7_20260906_jc_fifth_module.md",
+      "bytes": 16454,
+      "sha256": "44defca876464c7670f6a7459adf5960f0c0805366775a7d0db31a35d9b18500"
+    },
+    {
+      "path": "05-knowledge/results/overnight7_20260906_jc_fifth_module.out",
+      "bytes": 1006,
+      "sha256": "c73b297befb08788e6d5ad12472df9477d93f7cac8161bd25c56d6964ea63b5f"
+    },
+    {
+      "path": "05-knowledge/results/overnight7_20260906_jc_independent_audit.md",
+      "bytes": 7029,
+      "sha256": "773d50e1bea7e9774cb71cac156db2e2115731f7cd38fad07c7cde23ec111494"
+    },
+    {
+      "path": "05-knowledge/results/overnight7_20260906_jc_independent_audit.out",
+      "bytes": 571,
+      "sha256": "fd4f9f81bb1423d97611ca2b13c8c4c8dafaf8bf4cb616b5735cf4634b3fb925"
+    },
+    {
+      "path": "05-knowledge/results/overnight7_20260906_laurent_independent_audit.md",
+      "bytes": 6911,
+      "sha256": "766a022de75ae0a2005dc22734477c4287ccb596b0caffb44233da20472f0367"
+    },
+    {
+      "path": "05-knowledge/results/overnight7_20260906_laurent_independent_audit.out",
+      "bytes": 423,
+      "sha256": "db64cee82d2aee965840752ba9a07045bc22dabe833b318edf95ccc97787cf3f"
+    },
+    {
+      "path": "05-knowledge/results/overnight7_20260906_laurent_midpoint_transport.md",
+      "bytes": 10996,
+      "sha256": "ae84623b8e75c80024313c1042b5dfef41f29c380b9baa49c10e528337f95cf8"
+    },
+    {
+      "path": "05-knowledge/results/overnight7_20260906_laurent_midpoint_transport.out",
+      "bytes": 1007,
+      "sha256": "1a41c93f466a3e21d65c95482b55e489fdf9737a44c5aee3ff5e282fe60ce996"
+    },
+    {
+      "path": "05-knowledge/results/overnight7_20260906_laurent_quartic_carry.md",
+      "bytes": 14637,
+      "sha256": "203be19d525f6a6f6b0c78b4ebd4b86c208878ae5497fefe119a20becf9ec308"
+    },
+    {
+      "path": "05-knowledge/results/overnight7_20260906_laurent_quartic_carry.out",
+      "bytes": 6681,
+      "sha256": "316e1bff9b8b4a3a445eb6d6c80570049bea0b1f9686851b70b4f89e89f39674"
+    },
+    {
+      "path": "05-knowledge/results/overnight7_20260906_oddjets.json",
+      "bytes": 302310,
+      "sha256": "05fc22845ec10078a2c9d568dea59d00bfdbdc8588d9e314e4134fcbe13e7d11"
+    },
+    {
+      "path": "05-knowledge/results/overnight7_20260906_oddjets.md",
+      "bytes": 16282,
+      "sha256": "d86df24897b4e8ac6dee9930bfd76a53f1a0d54b00d0a2c9edea713db7193cc0"
+    },
+    {
+      "path": "05-knowledge/results/overnight7_20260906_oddjets.out",
+      "bytes": 2311,
+      "sha256": "1c2b6d20a5a58d8d5a2c7d7565c8a058c3bac54b90d9c0a407785bbc351f5e85"
+    },
+    {
+      "path": "05-knowledge/results/overnight7_20260906_oddjets_independent_audit.md",
+      "bytes": 10362,
+      "sha256": "a61160ab8d7b7cb24aa4b807eaca4387b8010a55a634a5b248009d074c980b71"
+    },
+    {
+      "path": "05-knowledge/results/overnight7_20260906_oddjets_independent_audit.out",
+      "bytes": 380,
+      "sha256": "19cfa766d56ebf7229d01306258d9e6e51aca1feb19f029cee77b737ce066a97"
+    }
+  ]
+}

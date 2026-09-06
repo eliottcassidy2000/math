@@ -1,0 +1,4 @@
+Fresh literal compiler / column-space packets: [{"alpha": 169, "p": 467, "packet_sha256": "a506d81cd85954fd401df2d08326614810fffb04196aa71eda44c2785b2caf33", "ranks": [105, 107, 108]}, {"alpha": 313, "p": 487, "packet_sha256": "7b41276169c701da7f160e41fceeaaadb5d0068eb6bebbd6a9133007b3b2fdff", "ranks": [105, 107, 108]}]
+Proof audit: full filtered global target-polynomial upper bound and actual polynomial attainment PASS
+Order audit: every O(t10) graph preserves all retained J0..J8; t9*x changes J8 but its collision period is nonzero
+PASS_OPTIMIZATION_LIVE_GATES 47

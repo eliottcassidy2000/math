@@ -1,0 +1,5 @@
+QUARTIC complete raw fibers/resultant interpolation at33 parameters: all84 coefficients PASS
+QUARTIC record_sha256 7f304a55990b177e13d063706bf8f2df7697ac9ed86f317ba3ab9b48a7af650c
+TRANSPORT complete Laurent identities at12 named sources; all90 grouped root signs via Hermite forms PASS
+TRANSPORT all-h identities and degree bounds use analytic proofs; uniform grouped negativity stays OPEN
+PASS_OPTIMIZATION_LIVE_GATES 553

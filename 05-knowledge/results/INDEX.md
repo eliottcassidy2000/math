@@ -1,5 +1,16 @@
 # Script Results Index
 
+- [Seventh overnight mathematical synthesis](overnight_20260906_synthesis.md):
+  **PROVED + INDEPENDENTLY AUDITED.** [Endpoint27](overnight7_20260906_laurent_quartic_carry.md)
+  closes the complete five-first-channel carried family; [midpoint identities](overnight7_20260906_laurent_midpoint_transport.md)
+  give a uniform three-response decomposition, with universal signs OPEN.
+  The [odd-prime three-jet law](overnight7_20260906_oddjets.md) classifies
+  every Smith factor at three nodes from the metric, with explicit primes3/5
+  exceptions. The [fifth source/target theorem](overnight7_20260906_jc_fifth_module.md)
+  separates polynomial collision payment, full descended Hamiltonian response,
+  and preservation of the J8 obstruction under every O(t10) source repair.
+  [Manifest](overnight7_20260906_manifest.json): 22 frozen artifacts.
+
 - [THM-4446: primitive ten-pack descent and dilation rays](../../01-canon/theorems/THM-4446-lrc14-primitive-ten-pack-descent-and-dilation-rays.md):
   **PROVED RELATIVE TO LRCUpTo13/THM-3818/4052/4442 + VERIFIED-EXACT +
   INDEPENDENTLY AUDITED; LRC(14) OPEN.** A primitive clock-three row whose
