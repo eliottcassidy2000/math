@@ -1,0 +1,16 @@
+H=611
+family=1 rows=3553 empty=0 fail=0
+ network 5/77 at=1,10,22 E=5/77,6/77,6/77 mass=5/77 contacts=12
+ physical 5/77 at=1,10,22 E=5/77,6/77,6/77 mass=5/77 contacts=12
+family=2 rows=7103 empty=1 fail=0
+ network 51/770 at=1,11,20 E=51/770,3/35,3/35 mass=51/770 contacts=12
+ physical 51/770 at=1,11,20 E=51/770,3/35,3/35 mass=51/770 contacts=12
+family=3 rows=9483 empty=3 fail=0
+ network 46/665 at=2,19,20 E=48/665,11/140,46/665 mass=173/2660 contacts=12
+ physical 173/2660 at=2,19,20 E=48/665,11/140,46/665 mass=173/2660 contacts=12
+family=4 rows=4737 empty=0 fail=0
+ network 3/49 at=10,14,17 E=3/49,113/1190,3/49 mass=461/8330 contacts=12
+ physical 731/12740 at=13,14,20 E=3/49,149/1820,3/49 mass=731/12740 contacts=12
+ALL_NETWORK 46/665 at=2,19,20 E=48/665,11/140,46/665 mass=173/2660 contacts=12
+ALL_PHYSICAL 51/770 at=1,11,20 E=51/770,3/35,3/35 mass=51/770 contacts=12
+PASS

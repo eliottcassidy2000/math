@@ -1,0 +1,33 @@
+H 170 rows 1951 counts {1: 280, 2: 559, 3: 744, 4: 368}
+('N', 1) leader (Fraction(5, 77), [((1, 10, 22), (Fraction(5, 77), Fraction(6, 77), Fraction(6, 77)), Fraction(5, 77), (1, 2))])
+('N', 1, 1) leader (Fraction(1405, 24206), [((7, 19, 52), (Fraction(201, 3458), Fraction(163, 2548), Fraction(1405, 24206)), Fraction(2719, 48412), (1, 2, 4, 5))])
+('N', 1, 2) leader (Fraction(5, 77), [((1, 10, 22), (Fraction(5, 77), Fraction(6, 77), Fraction(6, 77)), Fraction(5, 77), (1, 2))])
+('N', 2) leader (Fraction(51, 770), [((1, 11, 20), (Fraction(51, 770), Fraction(3, 35), Fraction(3, 35)), Fraction(51, 770), (1, 2))])
+('N', 2, 1) leader (Fraction(51, 770), [((1, 11, 20), (Fraction(51, 770), Fraction(3, 35), Fraction(3, 35)), Fraction(51, 770), (1, 2))])
+('N', 2, 2) leader (Fraction(9, 143), [((2, 13, 22), (Fraction(9, 143), Fraction(6, 77), Fraction(6, 77)), Fraction(9, 143), (1, 2))])
+('N', 3) leader (Fraction(46, 665), [((2, 19, 20), (Fraction(48, 665), Fraction(11, 140), Fraction(46, 665)), Fraction(173, 2660), (1, 2))])
+('N', 3, 1) leader (Fraction(246, 4025), [((4, 23, 25), (Fraction(246, 4025), Fraction(12, 175), Fraction(12, 175)), Fraction(246, 4025), (1, 2))])
+('N', 3, 2) leader (Fraction(46, 665), [((2, 19, 20), (Fraction(48, 665), Fraction(11, 140), Fraction(46, 665)), Fraction(173, 2660), (1, 2))])
+('N', 4) leader (Fraction(3, 49), [((10, 14, 17), (Fraction(3, 49), Fraction(113, 1190), Fraction(3, 49)), Fraction(461, 8330), (1, 2)), ((13, 14, 20), (Fraction(3, 49), Fraction(149, 1820), Fraction(3, 49)), Fraction(731, 12740), (1, 2))])
+('N', 4, 1) leader (Fraction(117, 1960), [((19, 32, 35), (Fraction(117, 1960), Fraction(426, 4655), Fraction(8933, 148960)), Fraction(1983, 37240), (1, 2, 4, 5))])
+('N', 4, 2) leader (Fraction(3, 49), [((10, 14, 17), (Fraction(3, 49), Fraction(113, 1190), Fraction(3, 49)), Fraction(461, 8330), (1, 2)), ((13, 14, 20), (Fraction(3, 49), Fraction(149, 1820), Fraction(3, 49)), Fraction(731, 12740), (1, 2))])
+('P', 1) leader (Fraction(5, 77), [((1, 10, 22), (Fraction(5, 77), Fraction(6, 77), Fraction(6, 77)), Fraction(5, 77), (1, 2))])
+('P', 1, 1) leader (Fraction(1123, 19684), [((1, 37, 76), (Fraction(1123, 19684), Fraction(9, 133), Fraction(631, 9842)), Fraction(1123, 19684), (1, 2, 4, 5, 7, 8))])
+('P', 1, 2) leader (Fraction(5, 77), [((1, 10, 22), (Fraction(5, 77), Fraction(6, 77), Fraction(6, 77)), Fraction(5, 77), (1, 2))])
+('P', 2) leader (Fraction(51, 770), [((1, 11, 20), (Fraction(51, 770), Fraction(3, 35), Fraction(3, 35)), Fraction(51, 770), (1, 2))])
+('P', 2, 1) leader (Fraction(51, 770), [((1, 11, 20), (Fraction(51, 770), Fraction(3, 35), Fraction(3, 35)), Fraction(51, 770), (1, 2))])
+('P', 2, 2) leader (Fraction(9, 143), [((2, 13, 22), (Fraction(9, 143), Fraction(6, 77), Fraction(6, 77)), Fraction(9, 143), (1, 2))])
+('P', 3) leader (Fraction(173, 2660), [((2, 19, 20), (Fraction(48, 665), Fraction(11, 140), Fraction(46, 665)), Fraction(173, 2660), (1, 2))])
+('P', 3, 1) leader (Fraction(246, 4025), [((4, 23, 25), (Fraction(246, 4025), Fraction(12, 175), Fraction(12, 175)), Fraction(246, 4025), (1, 2))])
+('P', 3, 2) leader (Fraction(173, 2660), [((2, 19, 20), (Fraction(48, 665), Fraction(11, 140), Fraction(46, 665)), Fraction(173, 2660), (1, 2))])
+('P', 4) leader (Fraction(731, 12740), [((13, 14, 20), (Fraction(3, 49), Fraction(149, 1820), Fraction(3, 49)), Fraction(731, 12740), (1, 2))])
+('P', 4, 1) leader (Fraction(661, 11704), [((11, 16, 19), (Fraction(9, 152), Fraction(128, 1463), Fraction(39, 616)), Fraction(661, 11704), (1, 2))])
+('P', 4, 2) leader (Fraction(731, 12740), [((13, 14, 20), (Fraction(3, 49), Fraction(149, 1820), Fraction(3, 49)), Fraction(731, 12740), (1, 2))])
+tail constants
+N 1 87/1568
+N 2 45/784
+N 3 363/6272
+N 4 363/6272
+all_family_physical_bulk 3/56
+explicit_checks 204876
+PASS

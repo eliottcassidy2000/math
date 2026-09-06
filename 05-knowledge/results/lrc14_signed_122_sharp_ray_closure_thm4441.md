@@ -1,40 +1,10 @@
----
-id: THM-4441
-title: "LRC14 signed (1,2,2) sharp ray closure"
-status: >
-  PROVED ELEMENTARY RELATIVE TO THM-4414 + FINITE-EXACT + INDEPENDENTLY
-  AUDITED. Every primitive sorted distinct positive ternary-unit triple with
-  a signed coefficient-magnitude (1,2,2) relation satisfies sharp
-  min_i E_i<=46/665 and physical failure mass<=51/770. Both are below 6/77.
-  The (1,1,1), (1,1,2), entry, synchronization, and LRC(14) problems remain
-  open.
-source: root low-circuit continuation + independent referee, 2026-09-06
-depends_on:
-  - THM-4414-lrc14-six-separated-contact-capacity-collapse
-related:
-  - THM-4437-lrc14-all-parity-network-reduction-to-three-low-circuits
-primary_script: 04-computation/lrc14_signed_122_sharp_ray_closure_thm4441.py
-primary_output: 05-knowledge/results/lrc14_signed_122_sharp_ray_closure_thm4441.out
-primary_script_sha256: ebc145f97c57a040027be964ded10972911759a1ab6027ea7a32eb6d9c31403b
-primary_output_sha256: b6d4ffbb8d2bab3bd07d64be11e748aa56dc90a6719936859b16629c007cf500
-literal_script: 04-computation/lrc14_signed_122_literal_thm4441.cpp
-literal_output: 05-knowledge/results/lrc14_signed_122_literal_h611_thm4441.out
-literal_script_sha256: fdd593cae3e96c88015ebff163554cd67df66baed94ff87d22c1b8e987f573ad
-literal_output_sha256: 877f4a68c2d391a2a6be5f28fbf556ba08388fac0540373a950ff64e273b495a
-independent_script: 04-computation/lrc14_signed_122_cleanroom_referee_thm4441.py
-independent_output: 05-knowledge/results/lrc14_signed_122_cleanroom_referee_thm4441.out
-independent_script_sha256: 37513e8b35cac8a0f907ba0b3f3c01cd0d47e516fe98a50141d276342f302fd5
-independent_output_sha256: 083b684f3261acd3c730a0dbefd00d5a67dd1def42fe7ad04b12e9ff07e342e2
-audit: 05-knowledge/results/lrc14_signed_122_sharp_ray_closure_thm4441_independent_audit.md
-hash_basis: raw LF repository bytes
----
+# Signed `(1,2,2)` mixed-parity rays: all-height sharp closure
 
-# THM-4441 -- LRC14 signed (1,2,2) sharp ray closure
-
-**PROVED ELEMENTARY RELATIVE TO THM-4414 + FINITE-EXACT + INDEPENDENTLY
-AUDITED.** The norm-five signed circuit is not an actual `6/77` hostile.
-The two lower circuit families, chart entry, synchronization, and `LRC(14)`
-remain **OPEN**.
+**Status: PROVED ELEMENTARY RELATIVE TO THM-4414 + FINITE-EXACT +
+INDEPENDENTLY AUDITED.** This is the proof note for THM-4441.
+It closes the signed coefficient-magnitude `(1,2,2)` residual proposed in
+`THM-4437`; it does not close the `(1,1,1)` or `(1,1,2)` residuals, chart
+entry, synchronization, or `LRC(14)`.
 
 ## 1. Sharp statement
 

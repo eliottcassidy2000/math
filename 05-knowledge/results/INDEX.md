@@ -1,5 +1,11 @@
 # Script Results Index
 
+- [THM-4441: signed `(1,2,2)` sharp ray closure](../../01-canon/theorems/THM-4441-lrc14-signed-122-sharp-ray-closure.md):
+  **PROVED ELEMENTARY RELATIVE TO THM-4414 + FINITE-EXACT + INDEPENDENTLY
+  AUDITED; LRC(14) OPEN.** The complete carrier set is one primitive ray;
+  sharp bounds are `min E<=46/665` and physical mass `<=51/770`, both below
+  `6/77`. Only `(1,1,1)` and `(1,1,2)` remain possible low-circuit hostiles.
+
 - [THM-4437: all-parity reduction to three low circuits](../../01-canon/theorems/THM-4437-lrc14-all-parity-network-reduction-to-three-low-circuits.md):
   **PROVED ELEMENTARY RELATIVE TO THM-4414/4422 + FINITE-EXACT +
   INDEPENDENTLY AUDITED; LRC(14) OPEN.** For primitive distinct positive
