@@ -1,17 +1,22 @@
 # Script Results Index
 
-- [Current continuing synthesis](continuing6_20260906_synthesis.md):
-  **PROVED + FINITE-EXACT + INDEPENDENTLY AUDITED.** The entire zero-beta
-  boundary has negative original response, even for C alone with repeated
-  roots. Prime divisors give complementary norm units at unbounded heights;
-  when4h+1 is prime, every r>=ceil(h/3) has exact boundary order r-1.
-  A simultaneous-absence lemma removes14904,14898,14892 from the connected
-  complement reduction:8198 clocks, maximum14886. Reciprocal zero-swap
-  repair has an exact native packet iff and three infinite obstruction
-  classes, with CITED infinitude. [Manifest](continuing6_20260906_manifest.json):
-  35 artifacts, ten engines,273690 gates per normal/optimized mode. A
-  genuine admissible shared-root fibre survives a zero chart denominator.
-  General LRC14, shared-root signs and general Laurent noncancellation remain OPEN.
+- [Current continuing synthesis](continuing7_20260906_synthesis.md):
+  **PROVED + FINITE-EXACT + INDEPENDENTLY AUDITED.** All singular shared-root
+  fibres have negative original response; the degree-six C determinant
+  repairs the exact positive degree-five hostile. Modular norm reduction
+  supplies a second unbounded unit family and exact boundary order at(11,4).
+  Complete domain tables remove14886,14880,14874, leaving8195 clocks with
+  maximum14868; the selected(6,1,355) edge is uniformly excluded above it.
+  Reciprocal boards with at least two native packets admit no second swap;
+  every prime37mod360 is also excluded by explicit native witnesses.
+  [Manifest](continuing7_20260906_manifest.json):28 frozen artifacts,
+  eight engines,361102 gates per normal/optimized mode.
+  General LRC14, off-wall signs and Laurent noncancellation remain OPEN.
+
+- [Previous continuing synthesis](continuing6_20260906_synthesis.md):
+  entire zero-beta sign boundary, first prime norm-unit family, exact native
+  reciprocal packet criterion, and original singular shared-root charts.
+  Its [35-artifact manifest](continuing6_20260906_manifest.json) is retained.
 
 - [48-hour planar Jacobian session](planar_jc48_sep06_board.md):
   **PROVED + INDEPENDENTLY AUDITED**, with inherited results distinguished.

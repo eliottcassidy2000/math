@@ -9,6 +9,33 @@ Format per entry:
 - Why it was wrong
 - The correct framing
 
+## 2026-09-06 continuing synthesis -- retained residuals and repair geometry
+
+- [Shared singular fibres](../05-knowledge/results/continuing7_20260906_singular_fibres.md):
+  exact C2,x=92 passes both ordinary and shifted C/D moment matrices through
+  degree5 but has positive original Q. The ordinary C four-by-four determinant
+  through degree6 is negative. It forces x<88 on that fibre, where the whole
+  original response is negative. The failed implication was low moments to
+  full geometry; the strongest survivor is the repaired whole-fibre theorem,
+  not a positive-response full-model example or a universal degree-minimality claim.
+- [Nearby norm endpoints](../05-knowledge/results/continuing7_20260906_norm_rank_drop.md):
+  a small doubled residual need not be a unit. At H2,z4798,p9601 both reductions
+  share t+4, because A2=9601/640; the same rational rows have nonzero norm modulo
+  28807. Keep the residual determinant and distinguish modular failure from
+  rational cancellation. The rank-m quotient is smaller only when m<H.
+- [Fixed-domain residue costs](../05-knowledge/results/continuing7_20260906_lrc_residue_domains.md):
+  tau5 alone does not transport the small-domain cap15. The valid D480 word
+  (1,3,4,6,32,48,60) costs95. At14880 the selected ratio forces margins(6,30).
+  At exact n2485 resonance, overlap can vanish; the correct exclusion is the
+  forbidden margin2130. Preserve domains, owners and endpoint divisibility.
+- [Second reciprocal swaps](../05-knowledge/results/continuing7_20260906_reciprocal_second_move.md):
+  involving p-1 cannot repair a failed zero-one board because one old twin
+  triple persists. Hitting all old triples also need not repair the board:
+  a reciprocal-pair swap creates a diagonal triple. The complete support and
+  creation argument excludes every second swap when N>=2. For N1, p37 still
+  fails while p43 has two successes; p113 refutes extending the43mod70 example
+  to a uniform successful family. Longer repairs and other first moves remain open.
+
 ## 2026-09-06 planar Jacobian session -- chart factors and projection losses
 
 - In the [Hamiltonian probe](../05-knowledge/results/planar_jc48_sep06_hamiltonian.md),

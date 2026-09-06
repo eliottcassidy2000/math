@@ -1,0 +1,5 @@
+Rank-drop cases: 172
+Half-endpoint evaluation controls: 80
+Hostile rank-one endpoint: {'H': 2, 'z': 4798, 'p': 9601, 'other_prime': 28807, 'other_norm': 20135}
+New carried boundary: {'h': 11, 'r': 4, 'H': 7, 'm': 1, 'z': 9, 'p': 43, 'norm': 16, 'residual_norm': 37}
+Always-active gates: 13367

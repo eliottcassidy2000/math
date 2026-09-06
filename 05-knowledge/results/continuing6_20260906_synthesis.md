@@ -1,6 +1,9 @@
 # Zero-boundary closure, prime norm units, and simultaneous missing intervals
 
-**CURRENT CHECKPOINT, 2026-09-06; PROVED + FINITE-EXACT + INDEPENDENTLY AUDITED.**
+**PREVIOUS CHECKPOINT, 2026-09-06; PROVED + FINITE-EXACT + INDEPENDENTLY AUDITED.**
+The [current synthesis](continuing7_20260906_synthesis.md) closes all singular
+shared-root fibres, reduces further norms, removes three more clocks and
+classifies a broad obstruction to a second reciprocal transposition.
 This cycle closes the entire zero-beta sign boundary, proves complementary
 norm units at unbounded heights by prime reduction, and removes three more
 connected-complement LRC clocks. An exact reciprocal-grid packet theorem

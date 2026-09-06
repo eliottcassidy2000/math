@@ -1,0 +1,8 @@
+p 37 old triples 2 native packets 1 covers 9 safe []
+p 43 old triples 2 native packets 1 covers 9 safe [[0, 13], [1, 10]]
+p 113 old triples 4 native packets 2 covers 1 safe []
+p 197 old triples 6 native packets 3 covers 1 safe []
+all-r progression p=37+360r: six nondiagonal covers blocked by three exact witnesses and transposes; three diagonal covers blocked
+certificate SHA256 f5117590d335c3df7579b8bb483d2a0a9d0906ab67c06bbb1cfd01ff7a579c3f
+PASS 30428 always-active exact gates
+Scope: prescribed first swap and one ordinary second output transposition; actual p-point integer board only.

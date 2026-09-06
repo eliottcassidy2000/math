@@ -1,0 +1,165 @@
+{
+  "schema": 1,
+  "created_utc": "2026-09-06T22:48:28.688102+00:00",
+  "baseline_commit": "b6fddf843d76",
+  "incoming_review_commits": [
+    "d0208173b"
+  ],
+  "hash_basis": "raw LF bytes; maintained boards, manifest and navigation excluded",
+  "scope": "All singular shared-positive-root original-phase fibres negative; nearby endpoint resultant identity and rank-one unbounded complementary units; connected-complement clocks14886,14880,14874 excluded leaving8195/max14868; uniform selected-edge exclusion above14868; universal second reciprocal transposition obstruction for at least two native packets and all primes37mod360. General conjectures remain OPEN.",
+  "validation": {
+    "continuing7_20260906_norm_rank_drop": 13367,
+    "continuing7_20260906_norm_rank_drop_audit": 6743,
+    "continuing7_20260906_singular_fibres": 167,
+    "continuing7_20260906_singular_fibres_audit": 247,
+    "continuing7_20260906_lrc_residue_domains": 253341,
+    "continuing7_20260906_lrc_residue_domains_audit": 27535,
+    "continuing7_20260906_reciprocal_second_move": 30428,
+    "continuing7_20260906_reciprocal_second_move_audit": 29274
+  },
+  "normal_optimized_raw_stdout_equal": true,
+  "regenerated_certificates_raw_unchanged": true,
+  "prior_artifacts_verified": 248,
+  "artifacts": [
+    {
+      "path": "04-computation/continuing7_20260906_lrc_residue_domains.py",
+      "bytes": 19743,
+      "sha256": "1afc8c3438c9db2ad6bad53b771d84a9b6e46d4f6464722aa4ce240d73084e1b"
+    },
+    {
+      "path": "04-computation/continuing7_20260906_lrc_residue_domains_audit.py",
+      "bytes": 12483,
+      "sha256": "453c49cb2086af157e5c92ea0b739d1564ecec0ab955f1409851b1183151e456"
+    },
+    {
+      "path": "04-computation/continuing7_20260906_norm_rank_drop.py",
+      "bytes": 5924,
+      "sha256": "cf78d34048d1920d258a5537e7ddda6639999800b43c9e4d1b623f52dbbd5792"
+    },
+    {
+      "path": "04-computation/continuing7_20260906_norm_rank_drop_audit.py",
+      "bytes": 10019,
+      "sha256": "3b9ec6b4d56f72fb82d728ee98f8be02871b2e17877ef3a4be9bf7cf862ae4f3"
+    },
+    {
+      "path": "04-computation/continuing7_20260906_norm_rank_drop_certificate.json",
+      "bytes": 42003,
+      "sha256": "609fd8a81d29d139922980b0197614877056bdcde63c80c1d863cad6ff87f35a"
+    },
+    {
+      "path": "04-computation/continuing7_20260906_reciprocal_second_move.py",
+      "bytes": 9367,
+      "sha256": "1e1571440d0ea569b7e3f65ffdc1ebe9ae61b2ae3d1f11cc39a7a6667d4b708c"
+    },
+    {
+      "path": "04-computation/continuing7_20260906_reciprocal_second_move_audit.py",
+      "bytes": 9821,
+      "sha256": "1629c1121e90e3674b9574071ef493e522c67cdc81dae997f1750dc4417aab3f"
+    },
+    {
+      "path": "04-computation/continuing7_20260906_singular_fibres.py",
+      "bytes": 14361,
+      "sha256": "13897869eb93ca25e2af4e9125cd7610c1734ae6228edeb6a3e22e8b6f75cef5"
+    },
+    {
+      "path": "04-computation/continuing7_20260906_singular_fibres_audit.py",
+      "bytes": 8834,
+      "sha256": "ba4d8edc07bedc92b6138d074d0fde07416bae9e5a253ebccb79290135b0d2b2"
+    },
+    {
+      "path": "05-knowledge/results/continuing7_20260906_lrc_residue_domains.md",
+      "bytes": 14113,
+      "sha256": "1629d3fbb6b7c633855b45cbf3ed3fc964c784917b1112940e7af9daa7eb69c0"
+    },
+    {
+      "path": "05-knowledge/results/continuing7_20260906_lrc_residue_domains.out",
+      "bytes": 1307,
+      "sha256": "f7554bdb450c2f6a042c0caef9270eba4832934682d72b1c8cfaaff5db223858"
+    },
+    {
+      "path": "05-knowledge/results/continuing7_20260906_lrc_residue_domains_audit.md",
+      "bytes": 9573,
+      "sha256": "ca6f6cb080f4383fb13165ad12a5e39edefc2e6dd49d43070ec08beda064e97d"
+    },
+    {
+      "path": "05-knowledge/results/continuing7_20260906_lrc_residue_domains_audit.out",
+      "bytes": 1161,
+      "sha256": "f997a2fec5d35e60008627be30403c5ed87f45f2dc81604ffb7a773db087a148"
+    },
+    {
+      "path": "05-knowledge/results/continuing7_20260906_lrc_residue_domains_certificate.json",
+      "bytes": 3346659,
+      "sha256": "4764d3def5d24702465f702180bad715b14402e9c45ddcd72ae1968e676a8086"
+    },
+    {
+      "path": "05-knowledge/results/continuing7_20260906_norm_rank_drop.md",
+      "bytes": 6765,
+      "sha256": "dd39f6295cf3e26da009baddadefd818a0aa549963da6d6d892f7e67321a2a0e"
+    },
+    {
+      "path": "05-knowledge/results/continuing7_20260906_norm_rank_drop.out",
+      "bytes": 293,
+      "sha256": "94baac5cd4c4664a60d12897b4a1b18b8c96dd15b0d0cc34bd4668204aad5caa"
+    },
+    {
+      "path": "05-knowledge/results/continuing7_20260906_norm_rank_drop_audit.md",
+      "bytes": 8578,
+      "sha256": "516e5b5cecfb19378e03d28c0aaa7522a2cc9d0de3f75ed2feaff1c32db3c724"
+    },
+    {
+      "path": "05-knowledge/results/continuing7_20260906_norm_rank_drop_audit.out",
+      "bytes": 524,
+      "sha256": "240928154896412f97d61fa775c1d5f58000b385ee494579abccc9370b0577fa"
+    },
+    {
+      "path": "05-knowledge/results/continuing7_20260906_reciprocal_second_move.md",
+      "bytes": 13845,
+      "sha256": "c1fe6adb76eca76af88f62f4be458ec943034cf65f74c5e1434b36f30605dddd"
+    },
+    {
+      "path": "05-knowledge/results/continuing7_20260906_reciprocal_second_move.out",
+      "bytes": 592,
+      "sha256": "060493fb23ff746151420891fd9cce0df5eb3e0a7ebd7b4e0a56d3a84f2d328c"
+    },
+    {
+      "path": "05-knowledge/results/continuing7_20260906_reciprocal_second_move_audit.md",
+      "bytes": 8535,
+      "sha256": "3d43c7ecd8850277e91891a7b1ce643a573d462b88132463c0889f4d74ebdd5a"
+    },
+    {
+      "path": "05-knowledge/results/continuing7_20260906_reciprocal_second_move_audit.out",
+      "bytes": 438,
+      "sha256": "66fea8b69a1ff6f99a5f5a0d24d7d3a1886a9fd477ccff976fc0ae5064c7fd8c"
+    },
+    {
+      "path": "05-knowledge/results/continuing7_20260906_reciprocal_second_move_certificate.json",
+      "bytes": 110514,
+      "sha256": "f5117590d335c3df7579b8bb483d2a0a9d0906ab67c06bbb1cfd01ff7a579c3f"
+    },
+    {
+      "path": "05-knowledge/results/continuing7_20260906_singular_fibres.md",
+      "bytes": 13680,
+      "sha256": "23aa7082ace8ca0c9f75feb80eb99d7fc1b74ab56c082b50eb9f5a9844f53ff3"
+    },
+    {
+      "path": "05-knowledge/results/continuing7_20260906_singular_fibres.out",
+      "bytes": 680,
+      "sha256": "12e7d6b17369eb452edc99a27124a7573a6e261b7dcd0eb991fdf88a2c43938a"
+    },
+    {
+      "path": "05-knowledge/results/continuing7_20260906_singular_fibres_audit.md",
+      "bytes": 2998,
+      "sha256": "82d96b92f5d87cfcf364622215fe7dfe11d25f9e426f9f249bb3f113ee350890"
+    },
+    {
+      "path": "05-knowledge/results/continuing7_20260906_singular_fibres_audit.out",
+      "bytes": 303,
+      "sha256": "a7c7247abf5bab02be38eb99e969a6e5aa2b357d539633823e61650b803162e1"
+    },
+    {
+      "path": "05-knowledge/results/continuing7_20260906_singular_fibres_certificate.json",
+      "bytes": 44230,
+      "sha256": "34f178da766757e31968103e47543d71ab8e975100a8ac0d1f4dd1d69c027ee9"
+    }
+  ]
+}

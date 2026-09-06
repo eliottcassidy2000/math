@@ -1,0 +1,8 @@
+FINITE 37 packets 1 covers 9 safe []
+FINITE 43 packets 1 covers 9 safe [[0, 13], [1, 10]]
+FINITE 113 packets 2 covers 1 safe []
+FINITE 197 packets 3 covers 1 safe []
+INCIDENCE 144 two-packet patterns; 96 non-anchor inverse-pair covers
+FAMILY all integer r>=0; all9 covers blocked, allowing extra native packets
+GEOMETRY 1571 moved boards reconstructed by complete slope pencils
+PASS 29274 always-active independent exact gates; actual LF

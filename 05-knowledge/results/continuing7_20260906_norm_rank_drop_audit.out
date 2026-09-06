@@ -1,0 +1,7 @@
+METHOD coefficient recurrences, full Euclidean resultants/gcds, and20 rational Sylvester controls
+PRODUCER172 FULL_RANK_RANGE110 EXCEPTIONAL_VALUES80
+HOSTILE H2 z4798: gcd_mod9601=t+4, norm_mod28807=20135; rational gcd1
+NEW_BOUNDARY h11 r4 H7 z9 norm16mod43; exact order3 by inherited jet iff
+SCOPE dimension decreases only for m<H; modular unit iff, rational nonvanishing sufficient
+PRODUCER_CERTIFICATE_SHA256 609fd8a81d29d139922980b0197614877056bdcde63c80c1d863cad6ff87f35a
+PASS 6743 always-active exact gates; actual LF

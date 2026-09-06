@@ -103,3 +103,7 @@ scripts/*.ps1 text eol=crlf
 05-knowledge/results/INDEX.md           merge=union
 05-knowledge/variables/INDEX.md         merge=union
 05-knowledge/results/long_frontier2_sep06_*.json text eol=lf
+
+# Continuing synthesis7: preserve exact frozen LF bytes across hosts.
+04-computation/continuing7_20260906_* text eol=lf
+05-knowledge/results/continuing7_20260906_* text eol=lf

@@ -1,0 +1,11 @@
+WHOLE_FIBRE C1 x< 94 Q_upper< -4139408
+WHOLE_FIBRE C2 x< 88 Q_upper< -84680595317
+WHOLE_FIBRE C3 x< 89 Q_upper< -5979289215
+WHOLE_FIBRE D1 x< 102 Q_upper< -3289168
+WHOLE_FIBRE D2 x< 98 Q_upper< -6096143057
+EXCLUDED C4,D4 beta maximum; D3 curved C cap and z>=0
+HOSTILE C2,x92: original positive response, both degree-five Stieltjes packets PD; C degree-six H4 negative
+NONVACUOUS C2 full-model interval x in [86999/1000,87001/1000]; original singular phase fixed
+SCOPE every singular shared-positive-root fibre is negative; general off-wall sign OPEN
+CERTIFICATE_SHA256 34f178da766757e31968103e47543d71ab8e975100a8ac0d1f4dd1d69c027ee9
+PASS 167 always-active exact gates; actual LF

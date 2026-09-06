@@ -1,0 +1,17 @@
+DOMAIN 14886 universe 792 valid 221 residue maxima [0, 33, 30, 12, 44, 27, 24]
+DOMAIN 14880 universe 346104 valid 17826 residue maxima [0, 94, 88, 68, 116, 95, 92]
+DOMAIN 14874 universe 120 valid 61 residue maxima [0, 6, 12, 12, 14, 15, 20]
+NATIVE 2478 minimum 50 maximum 51 walls 102
+NATIVE 2479 minimum 50 maximum 51 walls 102
+NATIVE 2480 minimum 50 maximum 51 walls 102
+NATIVE 2481 minimum 50 maximum 51 walls 102
+NATIVE 2482 minimum 50 maximum 51 walls 102
+NATIVE 2483 minimum 50 maximum 51 walls 102
+NATIVE 2484 minimum 50 maximum 51 walls 102
+NATIVE 2485 minimum 0 maximum 51 walls 1
+CLOCK 14886 all candidates 23420 decisions {'separate': 23419, 'located': 1} credit 300
+CLOCK 14880 all candidates 35130 decisions {'separate': 29572, 'infeasible': 5557, 'located': 1} credit 300
+CLOCK 14874 all candidates 23420 decisions {'separate': 21571, 'infeasible': 1848, 'located': 1} credit 300
+NEW SET 8195 maximum 14868 SHA256 c67f5e98eff3fe406a4416057c6063095290330a50f039e731ced0fc2ca4657a
+PASS 27535 always-active independent exact gates; raw LF
+Scope: three complete clocks; uniform selected edge only; inherited proper-six input; weak safety, LRC14 open.
