@@ -1,0 +1,20 @@
+LRC14_DYADIC_SEVENTH_ROUNDING_THM4449_PRIMARY
+STATUS=EXACT_SUPPORT_FOR_PROVED_RESULTS;LRC14_OPEN
+formula_literal_checks=2350
+ternary_pair_cap=4/77 equality_primitive=(1,11) equality_dilations=odd_3_units
+high_edge_alphabet=1:11:4/77,1:23:8/161,1:25:8/175,1:37:12/259,5:11:18/385
+four_over_91_equalities=1:13,1:65,5:13
+pair_energy_max=124/847 equality_shape=(1,11,121) equality_dilations=odd_3_units
+one_1_11_edge_maxima=36/253,592/4235,36/259,268/1925
+compatibility_max=520/3703
+energy_shape_quotient_union=mass:108/847,longest:2/77,components:34
+proved_physical_owner_cut_cap=36/253 not_claimed_sharp
+height199_leader_control=(1,7,11) mass:72/539 physical_x_longest:1/77 physical_x_components:12 quotient_y_longest:2/77 quotient_y_components:6
+beta_table=1:11:2/77,1:23:2/161,5:11:9/385,1:37:2/259,1:25:2/175
+transfer_samples=3:5:29/42:121/210:121/210,4:11:509/980:9073/21560:1103/2695,5:17:1601/3640:22773/61880:5791/15470,10:13:1217/8820:46663/458640:6407/76440
+entry_gates=q2_zero:36/253,q2_one_even:15/77,q4_one_v2_tail:8/77
+localization_gates=q2_one_even:17/91,q4_one_v2_tail:8/91
+q2_one_even_control=tail26_absorbed_r13_odd_3_unit
+hostile_masks=((0,), (), (1,)):15/196,((0,), (1,)):5/56,((0,), (2,), (1, 3)):3/40
+checks=12403
+PASS

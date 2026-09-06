@@ -1,0 +1,22 @@
+LRC14_Q2_THREE_ODD_TAIL_TWO_DOMAIN_SHARP_CAP_INDEPENDENT
+status=INDEPENDENT_INTEGER_GRID_ALL_HEIGHT_FINITE_REDUCTION_AUDIT
+PAIR_CAP full_odd=4/63 equality=(1,9) odd_3_unit=4/77 equality=(1,11) ternary_pq33_boundary=excluded ternary_neutral_equal_edges=none
+DOMAIN name=full_odd target=214/1449 neutral=128/621 exceptional_rays=[(1, 9), (1, 11), (1, 23), (3, 11)]
+FULL_ODD_FAMILY ray=(1, 9) base_denominator=126 components=9 mu_r=13/63 sigma=4/63 eta=128/10143 cutoff=30429/128 checked=371 maximum=214/1449 maximizers=[(1, 9, 23)]
+FULL_ODD_FAMILY ray=(1, 11) base_denominator=154 components=11 mu_r=17/77 sigma=4/77 eta=1822/111573 cutoff=409101/1822 checked=345 maximum=94/693 maximizers=[(1, 9, 11)]
+FULL_ODD_FAMILY ray=(1, 23) base_denominator=322 components=21 mu_r=5/23 sigma=8/161 eta=26/1449 cutoff=10143/26 checked=643 maximum=214/1449 maximizers=[(1, 9, 23)]
+FULL_ODD_FAMILY ray=(3, 11) base_denominator=462 components=11 mu_r=17/77 sigma=4/77 eta=1822/111573 cutoff=409101/1822 checked=345 maximum=40/297 maximizers=[(3, 11, 27)]
+FULL_ODD_primitive_equality_shapes=[(1, 9, 23)]
+FULL_ODD_finite_presentations=1704
+DOMAIN name=odd_3_unit target=72/539 neutral=1/11 exceptional_rays=[(1, 11), (1, 23), (1, 25), (1, 37), (5, 11)]
+ODD_3_UNIT_FAMILY ray=(1, 11) base_denominator=154 components=11 mu_r=17/77 sigma=4/77 eta=5/539 cutoff=5929/15 checked=361 maximum=72/539 maximizers=[(1, 7, 11)]
+ODD_3_UNIT_FAMILY ray=(1, 23) base_denominator=322 components=21 mu_r=5/23 sigma=8/161 eta=135/12397 cutoff=86779/135 checked=615 maximum=1284/10465 maximizers=[(1, 23, 65)]
+ODD_3_UNIT_FAMILY ray=(1, 25) base_denominator=350 components=23 mu_r=39/175 sigma=8/175 eta=163/13475 cutoff=309925/489 checked=605 maximum=236/1925 maximizers=[(1, 25, 55)]
+ODD_3_UNIT_FAMILY ray=(1, 37) base_denominator=518 components=33 mu_r=57/259 sigma=12/259 eta=243/19943 cutoff=219373/243 checked=897 maximum=354/2849 maximizers=[(1, 11, 37)]
+ODD_3_UNIT_FAMILY ray=(5, 11) base_denominator=770 components=13 mu_r=17/77 sigma=18/385 eta=32/2695 cutoff=35035/96 checked=323 maximum=346/2695 maximizers=[(5, 7, 11)]
+ODD_3_UNIT_primitive_equality_shapes=[(1, 7, 11)]
+ODD_3_UNIT_finite_presentations=2801
+FULL_ODD_ENDPOINT physical_components=16 physical_max_width=10/483 quotient_components=8 quotient_max_width=20/483
+ODD_3_UNIT_ENDPOINT physical_components=12 physical_max_width=1/77 quotient_components=6 quotient_max_width=2/77
+HAAR_GATES full_odd=214/1449 odd_3_unit=72/539
+PASS

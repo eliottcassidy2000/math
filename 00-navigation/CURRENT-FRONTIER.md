@@ -45,13 +45,13 @@ gives square sum `<=195`; THM-4019 refutes its sharp arbitrary-lattice target.
   4347 closes height 40. Arbitrary entry and synchronization remain open.
 - **Pack/tail frontier (PROVED + CITED):** THM-4441/4444/4445 leave
   `(1,4,5)`, `(2,11,20)` and boundary `(1,5,11)`.
-  [THM-4447](../01-canon/theorems/THM-4447-lrc14-composite-clock-capacity-and-small-clock-reduction.md)
+  THM-4447
   closes clocks `c>=5` and leaves typed `c=2,3,4`.
   [THM-4448](../01-canon/theorems/THM-4448-lrc14-general-shore-attachment-and-decoder-pair-cones.md)
   gives cone `14h>=87 max A,29 max T`.
-  THM-4442/[4446](../01-canon/theorems/THM-4446-lrc14-primitive-ten-pack-descent-and-dilation-rays.md)
-  force gcd-one packs with cross height `>91^6`. THM-4448 hostiles refute
-  prescribed-component selection; opposite-scale entry remains open.
+  [THM-4449](../01-canon/theorems/THM-4449-lrc14-dyadic-seventh-rounding-energy-and-residual-haar-entry.md) gives clock-two caps `214/1449,72/539`.
+  THM-4442/4446 force gcd-one packs above `91^6`; hostiles refute prescribed-component
+  selection. No universal body floor reaches them; entry remains open.
 - **Transport/incidence:** [overnight synthesis](../05-knowledge/results/overnight_20260906_synthesis.md)
   retains cap/event refinements; [virtual walls](../05-knowledge/results/overnight9_20260906_lrc_virtual_pair_wall_margin.md)
   give sharp fibre margin `abs(||dy||-1/3)/2` and selected safe components.

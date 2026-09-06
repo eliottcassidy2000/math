@@ -1,0 +1,10 @@
+THM4449_INDEPENDENT_HEIGHT199_CENSUS
+height=199 labels=67 triples=47905 distinct_masses=45021
+maximum=72/539
+winner=(1, 7, 11) primitive_gcd=1 quotient_longest=2/77 quotient_components=6 physical_longest=1/77 physical_components=12
+winner=(5, 35, 55) primitive_gcd=5 quotient_longest=2/385 quotient_components=30 physical_longest=1/385 physical_components=60
+winner=(7, 49, 77) primitive_gcd=7 quotient_longest=2/539 quotient_components=42 physical_longest=1/539 physical_components=84
+winner=(11, 77, 121) primitive_gcd=11 quotient_longest=2/847 quotient_components=66 physical_longest=1/847 physical_components=132
+winner=(13, 91, 143) primitive_gcd=13 quotient_longest=2/1001 quotient_components=78 physical_longest=1/1001 physical_components=156
+winner=(17, 119, 187) primitive_gcd=17 quotient_longest=2/1309 quotient_components=102 physical_longest=1/1309 physical_components=204
+PASS

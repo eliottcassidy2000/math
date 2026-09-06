@@ -1,0 +1,19 @@
+THM4449_INDEPENDENT_DYADIC_AUDIT
+formula_literal_checks=2350
+ternary_pair_cap=4/77 equality_primitive=(1,11) equality_dilations=odd_3_units
+high_edge_alphabet=1:11=4/77,1:23=8/161,1:25=8/175,1:37=12/259,5:11=18/385
+four_over_91_equalities=1:13,1:65,5:13
+energy_max=124/847 equality_shape=(1,11,121) equality_dilations=odd_3_units
+one_1_11_edge_maxima=36/253,592/4235,36/259,268/1925
+compatibility_table
+520/3703 174/1265 816/5957 548/4025
+174/1265 406/3025 382/2849 258/1925
+816/5957 382/2849 1280/9583 172/1295
+548/4025 258/1925 172/1295 116/875
+gp_quotient_mass=108/847 gp_overlap=16/847 gp_quotient_width=2/77 gp_quotient_components=34
+physical_owner_cut_bound=36/253
+beta_table=1:11:2/77,1:23:2/161,5:11:9/385,1:37:2/259,1:25:2/175
+transfer_samples=3:5:29/42:121/210:121/210,4:11:509/980:9073/21560:1103/2695,5:17:1601/3640:22773/61880:5791/15470,10:13:1217/8820:46663/458640:6407/76440
+hostiles=((0,), (), (1,)):15/196,((0,), (1,)):5/56,((0,), (2,), (1, 3)):3/40
+threshold_topology=closed_body_vs_proper_open_failure_set_inclusive
+PASS

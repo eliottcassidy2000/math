@@ -34,6 +34,12 @@
   response. The actual composition recurrence and same-zero margin remain
   live; general actual doubled-row noncancellation is OPEN.
 
+- [THM-4449: dyadic seventh rounding and sharp owner cuts](../../01-canon/theorems/THM-4449-lrc14-dyadic-seventh-rounding-energy-and-residual-haar-entry.md):
+  **PROVED + FINITE-EXACT + INDEPENDENTLY AUDITED; LRC(14) OPEN.**
+  Three odd tails have sharp clock-two failure mass `214/1449`, uniquely on
+  `(1,9,23)`; odd 3-units sharpen this to `72/539` at `(1,7,11)`.
+  A BV exposure compiler reduces every height to 1,704 and 2,801 exact
+  primitive presentations. These are tail-side gates, not body floors.
 - [Eighth overnight synthesis](overnight_20260906_synthesis.md):
   **PROVED + INDEPENDENTLY AUDITED.** [Alpha completion](overnight8_20260906_alpha_completion.md)
   is uniform in A2 channel count; the coupled beta-skip sign stays OPEN.
