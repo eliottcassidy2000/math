@@ -65,3 +65,11 @@ The negative C5 plus positive apex on K6 has c6=20<24; individual Hamilton
 statements cannot be extended to every smaller length. Antibalance kills
 all even layers, but paired odd layers pay its cumulative deficit strictly.
 Booleanized adjacency, tournament H>=disc and LRC(14) remain outside scope.
+
+**Additional independent audit, 2026-09-06:** the
+[Gray-code bitset audit](../../05-knowledge/results/overnight2_20260906_signed_cycle_audit.md)
+checks the complete analytic proof and rebuilds every K8 switching class
+without a Walsh transform or a repository mathematics import. It recovers
+both zero classes, minimum 720, and all 56 equality classes, with full
+spectrum digest `e2dfba14125e7983`. This is additional evidence for the
+same theorem, not a new mathematical claim or a K9 replay.

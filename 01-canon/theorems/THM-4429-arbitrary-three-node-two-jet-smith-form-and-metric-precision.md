@@ -59,3 +59,10 @@ p^N, and this uniform precision loss is sharp. Translations, nonunit scales,
 permutations and small-prime mutations are independently audited. The degree
 box and full observer are essential; no corresponding claim for moving
 modules, four nodes, higher jets, LRC(14), or JC(2) follows.
+
+**Separate audited four-node continuation:** the
+[ternary double-pair theorem](../../05-knowledge/results/overnight2_20260906_smith_double_pair.md)
+proves the full partition for occupancy `(2,2)` at prime three, including
+arbitrary depth and unit lifts. Its weighted-minor certificate is independent
+of this three-node proof; it preserves all competing intermediate ideals.
+The other four-node shapes and higher jets remain separate questions.

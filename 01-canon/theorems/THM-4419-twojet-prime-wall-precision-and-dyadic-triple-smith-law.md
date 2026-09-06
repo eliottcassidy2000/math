@@ -63,7 +63,7 @@ earlier Smith factors; (0,8)->(0,8,16) is an exact hostile.
 
 The later [THM-4429, arbitrary three-node Smith form](THM-4429-arbitrary-three-node-two-jet-smith-form-and-metric-precision.md)
 closes every distinct integer triple and its metric-only p-adic precision
-law; four-node and higher-jet continuations remain open.
+law; general four-node and higher-jet continuations remain open.
 
 Primary and independent SymPy/minor paths retain arbitrary residue lifts,
 nonunit scales, small-prime hostiles, tensor and finite-kernel controls.
@@ -82,3 +82,10 @@ The sharp precision loss is `(2p+1)e+3d`. Local CRT extends consecutive
 nodes to `n<=p(p+1)` for odd primes. This is independently proof-audited
 and supported by 1,821,396 exact checks; general cluster trees and higher
 jets remain open. The original dyadic law is unchanged.
+
+The independently audited [ternary double-pair law](../../05-knowledge/results/overnight2_20260906_smith_double_pair.md)
+also closes four nodes with residue occupancy `(2,2)` at all positive outer
+and inner depths. All 923 symbolic residual minors, independent coefficient
+bounds, and thirteen attaining witnesses prove the metric-only partition
+and sharp precision `7e+3max(d,r)`. The distinct occupancy `(3,1)` remains
+open; no general cluster-tree formula is inferred.

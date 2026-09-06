@@ -68,6 +68,14 @@ progressions but `B_i=0`; its positive deficit is affine. Retaining `R_i`
 is therefore necessary to reconstruct the deficit. This does not refute
 curvature sufficiency after the already count-safe and cap classes are removed.
 
+The [owner-line closure](../../05-knowledge/results/overnight2_20260906_lrc_owner_lines.md)
+now proves `N<2c/11` at every height when the full support spans the plane
+and each owner color is collinear. Convex saturation forces a transverse
+basis; seven exact chord bounds and an independently rebuilt finite head
+close the count. This allows arbitrarily many origin-directions. Thus any
+remaining failure requires genuinely two-dimensional owner polygons, whose
+exact count retains both normalized lattice area and boundary points.
+
 Let `w=(a,b,c)` be sorted, primitive, distinct, positive, odd, and nonzero
 modulo three. Write
 

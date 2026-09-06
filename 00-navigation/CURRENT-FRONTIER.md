@@ -67,7 +67,7 @@ for `d>=7`. THM-3742 is a wrong-torsor Pell `C14`; THM-3744's safe control is
   the one-ray case. The target remains open in `c/b<44/13` with at least
   three directions; `(19,23,29)` is the first H79 dense multi-ray.
   Arbitrary nonresonance and entry remain open.
-- **Transport/incidence:** [overnight synthesis](../05-knowledge/results/overnight_20260906_synthesis.md) combines audited one/two-ray closure, sharp full-cap bound `204/5957`, and midpoint payments. A residual failure needs at least three directions, an affine collinear triple, and unpaid count surplus.
+- **Transport/incidence:** [overnight synthesis](../05-knowledge/results/overnight_20260906_synthesis.md) combines sharp cap bound `204/5957`, midpoint payments, and strict all-height owner-line closure. A residual failure needs two-dimensional owner polygons, an affine collinear triple, and unpaid count surplus.
 - **Residual ranks:** THM-4333/4338 close fixed-pool ranks three/four, not arbitrary entry.
 - **PROVED:** [THM-2928](../01-canon/theorems/THM-2928-critical-seven-comb-grid-tensorization-and-drift-tariff.md)/2941: literal zero/one/two/three-drift sectors are empty; `k=2,3` are finite.
 - **Orthogonal routes.** THM-1017 is HYP-6820; THM-2047/2050 keep phase/exit; THM-731/2048 prune; THM-1290 ends at `55`; HYP-8900 nonuniform.
@@ -346,8 +346,10 @@ lift/phase clocks.
   records the [independently concurrent](../05-knowledge/results/synthesis_20260905_wildcard_smith_boundary.md)
   `s=p`, sharp precision/tensors, and dyadic triples. The audited
   [odd-prime mixed cluster](../05-knowledge/results/overnight_20260906_smith_mixed_cluster.md)
-  covers one doubled residue at arbitrary depths/lifts and extends
-  consecutive nodes to `n<=p(p+1)`.
+  covers one doubled residue at arbitrary depths/lifts, extending `n<=p(p+1)`.
+  The [ternary double-pair law](../05-knowledge/results/overnight2_20260906_smith_double_pair.md)
+  closes four-node occupancy `(2,2)` at every depth, with metric-only Smith
+  factors and sharp precision `7e+3max(d,r)`.
   [THM-4429](../01-canon/theorems/THM-4429-arbitrary-three-node-two-jet-smith-form-and-metric-precision.md)
   gives the full integer Smith form at arbitrary three nodes; its complete
   p-part and sharp precision depend only on the pairwise distance tree.
