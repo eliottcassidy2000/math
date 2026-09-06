@@ -3,7 +3,8 @@
 **CURRENT CHECKPOINT, 2026-09-06.** Four audited tracks extend the
 [previous nine-result checkpoint](continuing1_20260906_synthesis.md).
 This cycle inherited f0521b872 and integrated incoming work through
-da2c452c3 before filing. LRC(14), general actual Laurent two-rung
+da2c452c3 before filing, then01c8b6887 during the clean push rebase.
+LRC(14), general actual Laurent two-rung
 noncancellation, and full negativity in the anchored model remain **OPEN**.
 No external priority or proof-assistant claim is made.
 
@@ -65,7 +66,11 @@ No external priority or proof-assistant claim is made.
    `Q(-s)/(s^7 e4^2)<-120000` at every original phase s>=75000. This improves
    the former sufficient threshold118163898523. Any unresolved original
    phase now lies in **(1/80,75000)**, at most three per shape counted with
-   multiplicity. This remains a continuous open problem.
+   multiplicity. This remains a continuous open problem. The later incoming
+   [C-only residue proof](long_frontier_sep06_anchor.md) independently
+   settles the same smallest branch under one interlacer. Our containing-box
+   proof removes that hypothesis and strengthens the response margin. Its
+   distinct residue envelope, described below, is useful for the other phases.
 
 4. **PROVED elementary construction plus FINITE-EXACT controls,
    independently audited:** [Actual packet incompatibility](continuing3_20260906_lrc_packet_obstruction.md),
@@ -114,13 +119,31 @@ first polynomial has four simple positive phases. Yet Q(-15/2)>0. Its beta
 polynomial has only one real root, so it is outside the model. First-row
 real-rootedness does not reconstruct the beta-root geometry.
 
+Incoming01c8b6887 supplies two concrete connections. The positive C/B residue
+measure has moments(1,1,3,e3/3-16,16e3/3-373-4e4/7). Its moment matrix gives
+`75<=e3<=135` and `e4<=(7/72)(e3-75)(135-e3)<=175/2`. This necessary
+semialgebraic envelope is stronger than a box in that direction, but it is
+not asserted equivalent to the root/interlacer predicate. Higher residue
+moments are a precise next representation to test on the remaining phases.
+
+The incoming [fifth-clock family](long_frontier_sep06_phase.md), with its
+[independent audit](long_frontier_sep06_phase_audit.md), gives384061 bounded
+scales of an actual unitless5+8 entry, retaining all current profiles and
+failing the listed native, endpoint, dual and whole-arc scalar gates. A
+four-case signed affine phase word proves clearance greater than1/6 for
+every member. At its actual hostile scale4912753 the nearest lift fails,
+while a farther lift succeeds. This provides a positive counterpart to
+our prescribed-clock incompatibility: the lost offset must be retained
+and may need a different base point. The two results do not themselves
+force an adaptive word for every actual decoder entry.
+
 ## Six live concepts and the next decisive work
 
 | Lane | Present object | Next test or stopping reason |
 |---|---|---|
-| Anchor: actual LRC equality | Two profile-identical actual rows with different first packet joins | Seek an adaptive component/clock argument that retains the located multiplier. Test both rows and the earlier unitless balanced residual before generalizing. A larger generic CRT compiler would repeat an existing theorem. |
+| Anchor: actual LRC equality | Two profile-identical rows with different joins; incoming fifth-clock word succeeds beyond scalar gates | Seek an adaptive component/clock argument retaining signed offsets and farther lifts. Test both packet rows and the unitless residual before generalizing. A generic CRT compiler would repeat an existing theorem. |
 | Niche: all-h carried response | Weight-bounded characteristic polynomials positive after x->x+1 for h<=10 | Find an operation in h preserving their sign, or a direct same-root argument. More endpoint tables alone would not establish that operation. |
-| Niche: anchored finite phase | Smallest branch and large-phase tail closed; interval(1/80,75000) remains | Retain beta roots and both interlacers in any semialgebraic certificate. Hostile-test coefficient-only replacements against the rational positive-response example. |
+| Niche: anchored finite phase | Smallest branch and tail closed; interval(1/80,75000) remains, with incoming C-residue envelope | Retain beta roots and both interlacers; test higher C/D residue moments. Challenge every necessary-inequality relaxation with the rational positive-response hostile. |
 | Wildcard: sharp three-atom rigidity | Moment residual plus complete entire-product limit | Seek an effective quotient-to-M estimate near the three-atom boundary, retaining separate dust and imbalance scales. Do not reopen the proved scalar optimum or the core iff. |
 | Projective higher jets | Complete multiplicity largest-Smith theorem and bracket residue packet | Preserve full local ideals in another nontrivial residue cluster before transporting ordered factors. This cycle adds no new Smith claim. |
 | No-three-in-line and native operators | The recovered Guy-Kelly grid thread and exact Boolean sectors remain available | Require an explicit map preserving collinearity or the native operator. Analogy with packet counts, moments, or root signs currently supplies no such map, so no asymptotic transfer is claimed. |
