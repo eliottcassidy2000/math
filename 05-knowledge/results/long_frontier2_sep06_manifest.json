@@ -3,7 +3,7 @@
   "session": "long-frontier2-sep06",
   "status": "PROVED / FINITE-EXACT / REFUTED in the exact scopes of the proof and audit notes",
   "initial_head": "e7a36aee1f87d072e98d170650698f5e1bb80428",
-  "incoming_integrated_through": "fe55aab0dca2126c4e2802dba27543ac61b90133",
+  "incoming_integrated_through": "a677879a63abce337e1dfcd0ec5646f12cad249d",
   "artifact_count": 23,
   "program_count": 6,
   "combined_reported_explicit_checks": 50990,

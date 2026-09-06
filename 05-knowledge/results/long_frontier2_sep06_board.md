@@ -4,7 +4,8 @@
 [first long checkpoint](long_frontier_sep06_board.md) through the same
 September7,11:45 America/Denver cutoff. Root works in
 `/tmp/math-wt-long-frontier-sep06`, branch `codex/session-long-frontier-sep06`.
-This round started at e7a36aee1f and cleanly integrated fe55aab0dc.
+This round started at e7a36aee1f and cleanly integrated fe55aab0dc,
+then a677879a63 before pushing this checkpoint.
 LRC(14), general actual Laurent separation, and the free two-anchor
 model sign problem remain OPEN.
 
@@ -39,6 +40,36 @@ used here are Search the statement before the method, Expose the obstruction
 first, Correct the object before sharpening the technique, and Preserve the
 selected side. The initial empty-hexagon paper remains a methodological
 motivation for faithful finite encodings; no new literature theorem is used.
+
+## Incoming work integrated at this checkpoint
+
+The [full-word clock reduction](third_20260906_grid_refined.md) now puts
+all hypothetical failures with a qualifying connected seven-complement
+in an explicit set of 8,202 clocks, with t<=16,704 and g<=90. This
+applies to every such six/seven partition without decoder equality,
+height-box or six-component connectivity assumptions. In the actual
+balanced residual, [rooted pairs](third_20260906_decoder.md) also retain
+max U>=29. These replace the earlier numerical residual bounds.
+
+Both root and the LRC referee read the current transfer statements. A
+read-only exact lookup in the frozen refined array, with its semantic
+SHA-256 checked, confirms that all 84 generic scales and all 81 actual
+controls from this round remain in that set. Our joint-position theorem
+therefore closes examples that the incoming marginal-word compiler
+retains. The compatible word at t=16,704 has excess188 and individual
+component credit172; it is an abstract stopping witness, not an unsafe
+actual row. The next common target retains coherent graph ratios and
+simultaneous projected positions. The incoming optimizer was not rerun
+in this integration pass; its independent audit remains its provenance.
+
+The incoming [all-height trace and norm jets](third_20260906_trace.md)
+provide sharp orders and signs at the boundary x=-h, and exclude a
+specified semiring of nonnegative trace expressions in two residue
+classes of h. This is a negative-parameter boundary obstruction, not
+an actual positive-parameter Laurent counterexample. Together with our
+conserved-amplitude obstruction, it makes coupled genuine coefficients
+and exterior powers a more precise target than separate traces or more
+parameter steps. The general actual sign problem remains OPEN.
 
 ## Audited results
 
