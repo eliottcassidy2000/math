@@ -11,8 +11,8 @@ at the latest checkpoint; proved truth lives in canon.
 
 **2026-09-06, ongoing overnight session.** The main conjectures remain open.
 Incoming THM-4441 now proves the norm-five ray ceiling; THM-4442 closes an
-explicit bounded ten-body branch (not arbitrary entry); incoming4444/4445
-are RESERVED classifications, not proof dependencies. Our independently
+explicit bounded ten-body branch (not arbitrary entry); incoming4444 is now
+PROVED and4445 remains RESERVED. Our independently
 audited norm-four sidecar is supplied as a parallel proof, not a competing
 theorem namespace. The earlier sections below preserve historical status.
 
