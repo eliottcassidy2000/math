@@ -1,0 +1,23 @@
+LEAF_COFACTOR_AND_UNITFREE_ENTRY
+tree_weight_cases=134477; all labelled trees n3,4,5 in declared weight banks
+BOUND split=1+12 minV<=1 raw=1 gcd_cutoff=6240321451
+BOUND split=2+11 minV<=177 raw=177 gcd_cutoff=76388115
+BOUND split=3+10 minV<=31684 raw=31684 gcd_cutoff=698294
+BOUND split=4+9 minV<=6684150 raw=180472064/27 gcd_cutoff=4854
+BOUND split=5+8 minV<=1694040507 raw=1694040507 gcd_cutoff=26
+BOUND split=6+7 minV<=468424857663 raw=1463827680198656/3125 gcd_cutoff=0
+ACTUAL split=1+12 D=2 minV=1 maxU=60 mixed=66 t=68144310244921
+  V=(1,) U=(2, 3, 6, 10, 15, 18, 20, 24, 30, 40, 45, 60) phase=19457322284219/136288620489842 clearance=19282593283601/136288620489842
+ACTUAL split=2+11 D=2 minV=2 maxU=60 mixed=121 t=68144310244921
+  V=(2, 3) U=(2, 3, 6, 10, 15, 18, 20, 24, 30, 40, 60) phase=48606903835416/340721551224605 clearance=9532091016406/68144310244921
+ACTUAL split=3+10 D=2 minV=2 maxU=60 mixed=165 t=68144310244921
+  V=(2, 3, 6) U=(2, 3, 6, 10, 15, 18, 20, 24, 30, 60) phase=38851106750029/272577240979684 clearance=37612119291067/272577240979684
+ACTUAL split=4+9 D=2 minV=2 maxU=60 mixed=198 t=68144310244921
+  V=(2, 3, 4, 6) U=(2, 6, 10, 15, 18, 20, 24, 30, 60) phase=48512258960076/340721551224605 clearance=9248156390386/68144310244921
+ACTUAL split=5+8 D=6 minV=2 maxU=60 mixed=220 t=68144310244921
+  V=(2, 3, 4, 6, 9) U=(6, 10, 15, 18, 20, 24, 30, 60) phase=1670660771604/11749019007745 clearance=312374711714/2349803801549
+ACTUAL split=6+7 D=6 minV=2 maxU=60 mixed=231 t=68144310244921
+  V=(2, 3, 4, 6, 9, 12) U=(6, 10, 15, 20, 24, 30, 60) phase=48370291647066/340721551224605 clearance=8822254451356/68144310244921
+actual_nonunit_controls=6; all maxima lack a coprime partner
+balanced automatic closure=OPEN; real-cofactor sharpness is not primitive sharpness
+PASS gates=884724

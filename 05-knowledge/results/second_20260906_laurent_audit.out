@@ -1,0 +1,8 @@
+INDEPENDENT h5 endpoint33 audit: literal multinomial fibres, quotient multiplication, principal-minor characteristic, Newton interpolation.
+Universe: x=1,...,51; first masses g=x+16; doubled masses2g; all count triples retained.
+First channels:6; doubled channels:12 including exponent-1.
+Characteristic degree bounds independently justified:10,20,30,40,50.
+All155 monomial coefficients after x=y+1 are strictly positive.
+certificate_sha256: 52a5fc3095a34639849f540e7c7d4a4819452f5fedd3fa9cad9238c29c233a08
+Exact gates: 1438
+PASS

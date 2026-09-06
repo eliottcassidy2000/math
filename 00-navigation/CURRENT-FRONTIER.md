@@ -57,7 +57,7 @@ gives square sum `<=195`; THM-4019 refutes its sharp arbitrary-lattice target.
   selection. No universal body mass/component floor reaches these gates; entry remains open.
 - **Transport/incidence:** [overnight synthesis](../05-knowledge/results/overnight_20260906_synthesis.md)
   retains cap/event refinements; [virtual walls](../05-knowledge/results/overnight9_20260906_lrc_virtual_pair_wall_margin.md)
-  give sharp fibre margin `abs(||dy||-1/3)/2`. [Larger-unit entry](../05-knowledge/results/overnight15_20260906_lrc_larger_unit.md) closes five unbalanced equality types; [endpoint gcd](../05-knowledge/results/overnight12_20260906_lrc_gcd_semigroup.md) covers a nonunit11+2 subclass.
+  give sharp fibre margin `abs(||dy||-1/3)/2`. [Nonunit entry](../05-knowledge/results/second_20260906_entry.md) extends five unbalanced types by endpoint gcd; [actual balanced hostiles](../05-knowledge/results/second_20260906_decoder.md) pass all profiles but fail native gates.
   [Sparse transport](../05-knowledge/results/synthesis_20260905_lrc_sparse_transport.md) retains weights and the selector gap.
 - **Residual ranks:** THM-4333/4338 close fixed-pool ranks three/four, not arbitrary entry.
 - **PROVED:** [THM-2928](../01-canon/theorems/THM-2928-critical-seven-comb-grid-tensorization-and-drift-tariff.md)/2941: literal zero/one/two/three-drift sectors are empty; `k=2,3` are finite.
@@ -156,7 +156,7 @@ and Lucas--Frobenius leaves `Q^p`: **whole-layer preservation**, not atoms.
 
 ### Live work
 
-Live: publish THM-2022; formalize THM-2639. [Coupled windows](../05-knowledge/results/creative_20260906_laurent_bridge.md): `min(k,n-k)` sign generators; midpoint entry OPEN.
+Publish THM-2022; formalize THM-2639. [Endpoint33](../05-knowledge/results/second_20260906_laurent.md): g>=17,gcd(g,33)=1, first detection g or 2g; cone obstruction.
 [THM-4417](../01-canon/theorems/THM-4417-width-two-laurent-first-return-parabolic-critical-bound.md)
 proves first return `<=M+N` for `min(M,N)=2` using a two-root involution
 and parabolic critical-point budget; width one was THM-2111. The general
@@ -355,7 +355,7 @@ lift/phase clocks.
   [Nested ternary clusters](../05-knowledge/results/overnight3_20260906_smith_triple_single.md): unit residue needed; minimal diameter81.
   THM-4435 gives dyadic blindness/Hermite precision;
   [THM-4439](../01-canon/theorems/THM-4439-all-node-twojet-metric-precision-by-terminal-clusters.md) and its [projective extension](../05-knowledge/results/creative_20260906_smith_bridge.md): exact largest two-jet factors.
-  [THM-4443](../01-canon/theorems/THM-4443-arbitrary-jet-precision-and-dyadic-unit-boundary.md): jet inverse denominators and full dyadic3-node3-jet factors (eight costs); metric precision fails at uniform3 and(2,2,1).
+  [THM-4443](../01-canon/theorems/THM-4443-arbitrary-jet-precision-and-dyadic-unit-boundary.md): jet denominators/full dyadic3-node3-jet factors; metric fails at uniform3. [Complete(2,2,1)](../05-knowledge/results/second_20260906_smith.md): one intrinsic dyadic bit.
   [Four jets](../05-knowledge/results/overnight8_20260906_jets_residue.md): allodd precision and full p7 factors with an AP bit.
   [Deuring](../05-knowledge/results/overnight9_20260906_jets_deuring.md):3-node loss `(3m-1)e-[H_p(a)=0]`, oddp,m=(p+1)/2,e>=1.
   [Full p11/p13 laws](../05-knowledge/results/overnight11_20260906_smith_prime_banks.md) and [p31 ideal](../05-knowledge/results/overnight13_20260906_jets_p31_intermediate.md) need extra residue data; general partitions OPEN.

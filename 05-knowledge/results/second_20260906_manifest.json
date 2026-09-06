@@ -1,0 +1,148 @@
+{
+  "date": "2026-09-06",
+  "status": "PROVED in stated scopes; independently audited; balanced and ancillary hostiles FINITE-EXACT",
+  "base_commit": "677bde8eb3aecb0b706c0cd4dafae8780e63e326",
+  "hash_basis": "raw repository bytes; LF files",
+  "artifacts": [
+    {
+      "path": "04-computation/second_20260906_decoder.py",
+      "sha256": "31f0c395c1c41eaa944f0efb60ac0c605cec2376e49daa11a82718cb688574cd",
+      "bytes": 8614
+    },
+    {
+      "path": "04-computation/second_20260906_entry.py",
+      "sha256": "cd9ef8492d61414ccbd861e97e6553fb774115efa800f576322886ce8b107572",
+      "bytes": 7331
+    },
+    {
+      "path": "04-computation/second_20260906_entry_audit.py",
+      "sha256": "68bb61eb1f4f7ae8065075ea9ab26c6e61f97a57c57be2b77daa6052a32de1cb",
+      "bytes": 8896
+    },
+    {
+      "path": "04-computation/second_20260906_laurent.py",
+      "sha256": "02be5390867e0e7fb9e1f8610d7ef6ce1e822e0cf92e84bcaf1815fd46588407",
+      "bytes": 7707
+    },
+    {
+      "path": "04-computation/second_20260906_laurent_audit.py",
+      "sha256": "069897cf1b9ced10fe36f176d07a8b48330d0bed29184f5c9c852b5ce62c4560",
+      "bytes": 5625
+    },
+    {
+      "path": "04-computation/second_20260906_root_audit.py",
+      "sha256": "98cb51885ced03129e1f749f0b13ecc598eaa5c7809d590237714a4f8c834f21",
+      "bytes": 5609
+    },
+    {
+      "path": "04-computation/second_20260906_smith.py",
+      "sha256": "e8a5f1e057e4d3c1261d0a4750a9e3291ba8bf8de6b472d41454a72074880b20",
+      "bytes": 10042
+    },
+    {
+      "path": "05-knowledge/results/second_20260906_decoder.md",
+      "sha256": "3bd6e7c5bd2f4c16c2c1e11b8f89b8228a42a5ecac0a722eb0d10ef16537df9b",
+      "bytes": 12838
+    },
+    {
+      "path": "05-knowledge/results/second_20260906_decoder.out",
+      "sha256": "74d1bc5bbae7dcadc833121a3efd70abb87d97f08bbe1ad2c3345823c67447da",
+      "bytes": 2741
+    },
+    {
+      "path": "05-knowledge/results/second_20260906_entry.md",
+      "sha256": "00f41d0d1cee94bb698dd080e31110d16873746a6caeaa33e810cc6694a57e8c",
+      "bytes": 11608
+    },
+    {
+      "path": "05-knowledge/results/second_20260906_entry.out",
+      "sha256": "849f929887a0b21b4ee59da4f7dd6a73e1b5e68c0ce1dc65ee31a26db9d38f49",
+      "bytes": 1801
+    },
+    {
+      "path": "05-knowledge/results/second_20260906_entry_audit.md",
+      "sha256": "df9360e740a735931e7768be51ca24162a5b0f73d5551e47cebd92b5c9821dca",
+      "bytes": 7232
+    },
+    {
+      "path": "05-knowledge/results/second_20260906_entry_audit.out",
+      "sha256": "8f36195a7d3c6fb8a39be07c522e1c2dd0e72cfd8140d13f6b84d837a7dc1ed0",
+      "bytes": 1054
+    },
+    {
+      "path": "05-knowledge/results/second_20260906_laurent.md",
+      "sha256": "40813c34dc8167489fe34e832e15652c6f097c1ebbc5cb61b484dafd0f4fe683",
+      "bytes": 13407
+    },
+    {
+      "path": "05-knowledge/results/second_20260906_laurent.out",
+      "sha256": "9d5ece94d9174f75cecf06a62954181547b8a1d57c9c16628143cf6db201bc93",
+      "bytes": 14424
+    },
+    {
+      "path": "05-knowledge/results/second_20260906_laurent_audit.json",
+      "sha256": "52a5fc3095a34639849f540e7c7d4a4819452f5fedd3fa9cad9238c29c233a08",
+      "bytes": 15253
+    },
+    {
+      "path": "05-knowledge/results/second_20260906_laurent_audit.md",
+      "sha256": "cd00220b7f240adf396a9eab0081c4305a7cb2e9925037bfea41728e528173b5",
+      "bytes": 7599
+    },
+    {
+      "path": "05-knowledge/results/second_20260906_laurent_audit.out",
+      "sha256": "2a01aee2363137e82c3b902b390ca3e869f05fe7d30098959f04b0a90a28363c",
+      "bytes": 530
+    },
+    {
+      "path": "05-knowledge/results/second_20260906_overview.md",
+      "sha256": "2e2061939a8b7b32717857de814dd19e1662c676ffa6899ebcbf972cd4dd30ea",
+      "bytes": 11563
+    },
+    {
+      "path": "05-knowledge/results/second_20260906_root_audit.md",
+      "sha256": "8b6ecc5f07923825b3d9949c4853f0895b5da9e2a3b51c575764658803125de3",
+      "bytes": 5466
+    },
+    {
+      "path": "05-knowledge/results/second_20260906_root_audit.out",
+      "sha256": "af52657c12430f3f992ef5548ff6ce1b9ae4124235377b8bd328b7d7cbde1329",
+      "bytes": 360
+    },
+    {
+      "path": "05-knowledge/results/second_20260906_smith.md",
+      "sha256": "21c5d01a59a9346611a5c95433ede0edf9f3821671296438afb0621d4be50d66",
+      "bytes": 16566
+    },
+    {
+      "path": "05-knowledge/results/second_20260906_smith.out",
+      "sha256": "7e703fe507560ee14d6a928fc6158e0bffe1a9735ba83339cb38c9fc5d3ba321",
+      "bytes": 820
+    }
+  ],
+  "inherited_exact_inputs": [
+    {
+      "path": "04-computation/overnight12_20260906_lrc_decoder_descent_inherited_profiles.json",
+      "sha256": "935f3f687b6d7c89cc099e536f536238fd753bcc4c1747906d213cef387ca93f",
+      "bytes": 26388
+    }
+  ],
+  "dependencies": {
+    "python": "3 standard library",
+    "sympy": "1.9, Laurent producer and root audit only"
+  },
+  "validation": {
+    "normal_optimized_replays": "all seven source/output pairs byte-identical; Laurent audit JSON also identical",
+    "entry_gates": 884724,
+    "entry_independent_gates": 207160,
+    "decoder_gates": 17617,
+    "laurent_producer_gates": 397,
+    "laurent_independent_gates": 1438,
+    "smith_producer_gates": 215537,
+    "root_smith_matrices": 1059,
+    "root_smith_prime_partitions": 4236,
+    "root_seven_subsets": 3432,
+    "laurent_exact_characteristic_coefficients": 155,
+    "documentation": "agents/check_docs.py PASS before final checkpoint"
+  }
+}

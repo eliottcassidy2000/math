@@ -31,6 +31,34 @@ Format per entry:
   closed. Four small unitless controls pass all profiles. Neither label
   asserts an unsafe row or establishes universal entry.
 
+## 2026-09-06 second creative pass -- actual data, scale, and active residues
+
+- [Balanced actual decoder entries](../05-knowledge/results/second_20260906_decoder.md)
+  can satisfy the physical box, full relation-span equality, and every retained
+  joint-shadow word while failing the balanced minimum and all six native
+  maximum-endpoint phase tests. The saved 331-chain repairs an exploratory
+  355-chain that passed scalar caps but failed a full word. The first invalid
+  implication is from retained gcd profiles to the required small minimum;
+  the missing coordinate is the physical phase interval. The strongest
+  survivor is the scoped [endpoint-gcd criterion](../05-knowledge/results/second_20260906_entry.md).
+  The repaired mixed-parity hostile is safe at 11/23 with clearance 3/23.
+  Next obligation: a different phase certificate for balanced entries.
+- [The actual Laurent carried row](../05-knowledge/results/second_20260906_laurent.md)
+  for support(-15,1,9) lies outside the entire constant nonnegative derivative
+  cone, although its first-root noncancellation is already proved. Adding
+  more windows cannot fix an extreme-ray separator. A separate six-channel
+  square-phase multiplier shortcut has coefficient signs(+,-,-,-,-) at
+  x=10000; short positive samples do not prove unbounded positivity. These
+  were unpromoted attempts. The repaired endpoint33 proof retains the exact
+  lower carry and certifies all155 characteristic coefficients symbolically.
+  The new question is a uniform all-channel certificate, not more small-x scans.
+- [The mixed (2,2,1) projective bit](../05-knowledge/results/second_20260906_smith.md)
+  need not be chart invariant at shallow depth: (0,4,2) under x/(1+x)
+  changes its naive residue. The Smith spectrum is unchanged there because
+  that bit is inactive. The repaired invariant is used only at e>=2, where
+  reference changes vanish modulo4. Preserve the active precision threshold
+  before treating a chosen cross-ratio as intrinsic.
+
 ## 2026-09-06 overnight -- unit placement and coherent grid normalization
 
 [The larger-unit closure](../05-knowledge/results/overnight15_20260906_lrc_larger_unit.md)

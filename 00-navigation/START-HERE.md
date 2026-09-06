@@ -80,13 +80,12 @@ Then read frontier, guardrails, theorem; logs are history.
 18. **All cumulative even-graph gaps are closed.** THM-4427 adds every
     D>=7; THM-4433 gives every cycle layer's exact second minimum at n>=16,
     with an adjacent/disjoint equality transition. Keep mixed-parity sidecars.
-19. **Two recovered boundaries have new continuations.** THM-4417 gives the
-    sharp linear Laurent-return bound at width two; THM-4430 explains the
-    higher-genus three-root obstruction; THM-4432/4436 add all-carry two-channel
-    detection and the all-mass negative phase wall. THM-4429/4435 give three-node
-    Smith forms/all-node precision but refute four-node metric-only partitions.
-    The LRC frontier routes the newly audited universal local-network proof;
-    entry, synchronization and LRC(14) remain OPEN.
+19. **New continuations.** THM-4417/4430: width-two return/genus obstruction.
+    THM-4432/4436: two-channel detection/negative phase wall. THM-4429/4435:
+    three-node Smith/all-node precision; four-node metric hostile.
+    [New proofs](../05-knowledge/results/second_20260906_overview.md) extend nonunit
+    LRC entry and close endpoint33 returns/mixed(2,2,1). The LRC route keeps
+    the universal local-network proof; general entry, synchronization and LRC(14) OPEN.
 
 ## Where to go by topic
 

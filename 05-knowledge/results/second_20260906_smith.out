@@ -1,0 +1,12 @@
+SCOPE: full (2,2,1) Smith classification at all primes on three primitive projective directions.
+Head universe: doubled x<y in -6..6, simple z in -6..6 distinct, primes 2,3,5,7; rows= 3432
+Deep universe: e=0..5,d=1..4, unit lifts from (-3,-1,1,2,3,5), doubled or mixed closest pair; rows= 4896
+Other controls: 100 seeded primitive-direction triples; every dyadic projective residue class.
+Complete Smith/metric rows: 8732 projective/reference symmetry rows: 648
+Independent all-minor determinants: 1506
+Hostile e=2 epsilon=1: (0,0,4,7,9); epsilon=0: (0,0,4,8,8).
+Shallow e=1 chart flips raw bit but both lists are (0,0,2,5,5).
+Full-kernel ratio is exactly 2 for epsilon0/epsilon1 at 3e+2<=N<=4e, and 1 otherwise.
+semantic_sha256: bdc00c74a3232590f3be4031adac63126a662f1ff427bce8446eda77429a16a7
+Exact gates: 215537
+PASS

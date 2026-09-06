@@ -1,0 +1,7 @@
+SECOND_SESSION_INDEPENDENT_ROOT_AUDIT
+mixed_matrices=1059 full_prime_partitions=4236 primes=2,3,5,7
+whole_kernel_precision_windows=e2..15 PASS
+balanced_actual_rows=2 independently_checked_seven_subsets=3432
+actual_graph_rank_both_crossing_orientations_box_phase_and_failed_gates=PASS
+all_six_maximum_endpoint_native_gates_fail_for_both_balanced_rows=PASS
+PASS
