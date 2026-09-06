@@ -107,8 +107,41 @@ unqualified extensions: mixed parity admits `(2,5,7)` with physical mass
 `22/245>6/77`; a ten-body universal Haar floor fails on
 `C={1,2,3,4,5,7,8,9,11,13}`, with inherited exact mass `21514/315315`.
 The latter is a recovered old object applied to the new gate, not a new
-measure calculation. The agents are freezing independently audited
-parity/body notes and a variable-radius generalization.
+measure calculation. The completed
+[body audit](lrc14_haar_body_empty_core_sep06.md) also recovers the stronger
+THM-544 body with mass `14249/252252` and a THM-2923 body that defeats every
+unit clock through denominator eighteen, yet its completion is safe at
+`9/19`. The [parity audit](lrc14_parity_empty_core_sep06.md) independently
+compares native intervals and raw formulas on all 20,648 ternary-unit
+triples through 79: one-even and two-even finite maxima are `6/55` and
+`11/140`. Both general mixed all-height candidates remain OPEN. The
+[additive-ray theorem](lrc14_additive_parity_empty_core_sep06.md) now proves
+`6/55` sharply for every primitive ternary-unit `a+b=c`, with equality only
+at `(1,10,11)`. Its two independent finite heads and full analytic proof
+passed root and sibling audits. The
+[variable-radius coarea lemma](variable_radius_empty_core_sep06.md) is also
+PROVED and independently audited: it gives two-sided count error and a
+sharp leading constant, retaining all speed-residue cases. Incoming
+THM-4437 reserves an all-parity reduction to three low circuits; its status
+must be checked before using it, and this additive result supplies only the
+norm-three input.
+
+Incoming `50e2a436cd` promotes the shared colored-lattice and two-channel
+namespaces and adds
+[THM-4436](../../01-canon/theorems/THM-4436-complete-factorial-row-simple-negative-roots-and-trinomial-phase-wall.md):
+every complete factorial return row has simple negative roots. This puts
+all remaining trinomial cancellation on one negative phase ray; it does
+not prove that rows at different masses have disjoint roots. Incoming
+`d2f64b8098` independently promotes THM-4434 from this session's proof
+artifacts, with a further import-free coefficient referee. The root merged
+both integrations under the same theorem and preserved the audit lineage.
+
+This changes every lane again: the anchor now retains body phase, parity
+retains newly allowed short relations, the area lane asks for a reusable
+radius-dependent coarea estimate, the colored fan retains weights beyond
+direction counts, and the Laurent lane can study common negative roots
+directly. These are shared operations on lost coordinates, not an asserted
+mathematical equivalence between LRC and Laurent moments.
 
 ## Next continuation
 

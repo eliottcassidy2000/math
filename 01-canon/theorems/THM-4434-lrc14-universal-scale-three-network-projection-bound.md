@@ -109,7 +109,8 @@ primitive reduction `{1,5,11}`. The norm-four exception is necessary:
 The complete address construction is retained from the
 [affine-slice proof](../../05-knowledge/results/lrc14_empty_core_certificate_sep06.md)
 and its [actual-zero-coordinate addendum](../../05-knowledge/results/lrc14_pair_relation_empty_core_certificate_sep06.md).
-If `b.w=1`, any integer carrier has the lift `n=-b cross C`, so
+Put `r=3/14` and let `v.w=0` be a primitive relation. If `u.w=1`,
+any integer carrier has the lift `n=-u cross C`, so
 `C=w cross n`. The strict roofs mean the three intervals
 `((n_i-r)/w_i,(n_i+r)/w_i)` overlap pairwise and hence jointly. Thus
 `e=n-yw` lies in the open error cube for some `y`. The integer defect
@@ -373,10 +374,24 @@ would force `mu(G_C)<mu(F_T)<=min_i E_i(T_0)<=6/77`. The
 retains the actual core, weak safety/strict danger endpoints, and the
 THM-4032 hostile to lifting an arbitrary core witness.
 
-This corollary does **not** prove that an arbitrary ten-speed body has measure
-at least `6/77`, nor that a general fourteen-runner instance admits the
-required `3C union T` decomposition. Those are now the sharp body/entry
-obligations.
+The unqualified ten-body Haar floor is **REFUTED**: the recovered body
+`{1,2,3,5,7,8,9,11,12,13}` has exact measure `14249/252252<6/77`.
+A second inherited body defeats the necessary small-clock sieve while
+remaining below that floor; its completed row has a safe phase. The
+[body audit](../../05-knowledge/results/lrc14_haar_body_empty_core_sep06.md)
+keeps the full closed geometry, including isolated safe points, and credits
+the earlier numerical evidence. Completion therefore needs a stronger
+actual-entry restriction or joint phase information when this gate fails.
+
+Oddness also cannot be dropped: `(2,5,7)` has physical mass and minimum
+projection `22/245>6/77`. The
+[parity audit](../../05-knowledge/results/lrc14_parity_empty_core_sep06.md)
+recovers the new norm-three obstruction and a separate mixed-parity
+norm-four exception. The separate
+[additive-family theorem](../../05-knowledge/results/lrc14_additive_parity_empty_core_sep06.md)
+now proves the sharp replacement `6/55` for every primitive ternary-unit
+`a+b=c`, with equality only at `(1,10,11)`. It does not close all mixed
+parity. No arbitrary decomposition or synchronization theorem follows.
 
 ## 7. Reproduction and scope
 
@@ -399,8 +414,8 @@ audit routes are recorded in
 `lrc14_universal_literal_empty_core_sep06.md`.
 
 The universal degree-zero projection and typed triple-comb targets are proved.
-The quantitative body floor, arbitrary entry, synchronization, and
-`LRC(14)` remain **OPEN**.
+Actual entry-produced body/phase control, arbitrary entry, synchronization,
+and `LRC(14)` remain **OPEN**. The unqualified body floor is **REFUTED**.
 
 ## 8. Concurrent proof and reservation lineage
 

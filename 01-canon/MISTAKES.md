@@ -9,6 +9,39 @@ Format per entry:
 - Why it was wrong
 - The correct framing
 
+## MISTAKE-546 (2026-09-06, universal triple-bound consumer probes) -- parity and body measure are separate inputs
+
+- **Refuted extensions, never canon dependencies:** the THM-4434 odd
+  ternary-unit bound `6/77` was probed without parity; its Haar consumer was
+  also probed under an unqualified ten-body measure floor `mu(G_C)>=6/77`.
+- **Parity witness / first failed implication:** `(2,5,7)` is the first
+  height-ordered mixed-parity hostile, with complete support
+  `+/-{(1,1,-1)}` and physical mass and minimum projection `22/245>6/77`.
+  Oddness excluded this norm-three relation. Excluding additive triples
+  alone is still insufficient: `(2,11,20)` has the norm-four ray
+  `(1,-2,1)` and mass `11/140>6/77`; the earlier odd finite base omitted it.
+  The [parity certificate](../05-knowledge/results/lrc14_parity_empty_core_sep06.md)
+  retains exact supports, all projections and the bounded parity maxima.
+- **Body witness / missing coordinate:**
+  `{1,2,3,5,7,8,9,11,12,13}` has inherited exact safe measure
+  `14249/252252<6/77`. Height thirteen is minimal for a ten-body hostile.
+  The necessary small-clock divisor sieve also fails to force this floor,
+  yet its named hostile completion is safe at `9/19`. Haar projection
+  forgets component location and isolated safe points. The
+  [body certificate](../05-knowledge/results/lrc14_haar_body_empty_core_sep06.md)
+  credits THM-544/2923's old measures and reconstructs the full closed sets.
+- **Strongest survivor / repair:** THM-4434 remains proved on its exact odd
+  domain. Its sufficient actual-body gate, including equality, remains
+  valid. A failed measure gate requires joint body-to-tail phase information
+  or stronger actual-entry restrictions, not a claim that loneliness gives
+  a uniform measure floor. Mixed-parity ceilings require retyped coefficient
+  and finite-base universes. None of these witnesses refutes LRC(14).
+- **Repair continuation / next tests:** the
+  [additive norm-three theorem](../05-knowledge/results/lrc14_additive_parity_empty_core_sep06.md)
+  now proves its sharp `6/55` ceiling. Retain the separate norm-four/five
+  parity questions and compare complete body components with tail-safe
+  lifts before taking Haar measure.
+
 ## MISTAKE-545 (2026-09-06, empty-core research probe) -- three live directions do not force an additive circuit
 
 - **Refuted probe:** three primitive directions in the complete LRC raw

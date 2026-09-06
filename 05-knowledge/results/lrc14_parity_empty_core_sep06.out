@@ -1,0 +1,18 @@
+universe primitive sorted distinct positive 3-units, max<=79; no parity prefilter
+row_counts_by_even_count {0: 2910, 1: 9044, 2: 8694}
+network_failures_by_even_count {1: 243, 2: 1}
+failure_live_direction_norm_sets {(3,): 243, (4,): 1}
+first_failure ((2, 5, 7), (Fraction(22, 245), Fraction(6, 49), Fraction(1, 10)), Fraction(22, 245), ((-1, -1, 1), (1, 1, -1)))
+sole_non_norm3_failure ((2, 11, 20), (Fraction(131, 1540), Fraction(11, 140), Fraction(3, 35)), Fraction(11, 140), ((-2, 4, -2), (-1, 2, -1), (1, -2, 1), (2, -4, 2)))
+finite_norm5_network_leader (Fraction(46, 665), ((2, 19, 20), (Fraction(48, 665), Fraction(11, 140), Fraction(46, 665)), Fraction(173, 2660), ((-2, -4, 4), (-1, -2, 2), (1, 2, -2), (2, 4, -4))))
+parity_even_count 0 finite_leaders {'physical': (Fraction(6, 77), [(1, 5, 11)]), 'network': (Fraction(6, 77), [(1, 5, 11)])}
+parity_even_count 1 finite_leaders {'physical': (Fraction(6, 55), [(1, 10, 11)]), 'network': (Fraction(6, 55), [(1, 10, 11)])}
+parity_even_count 2 finite_leaders {'physical': (Fraction(11, 140), [(2, 11, 20)]), 'network': (Fraction(11, 140), [(2, 11, 20)])}
+control (1, 5, 11) ((Fraction(6, 77), Fraction(6, 77), Fraction(6, 77)), Fraction(6, 77), ((-1, -2, 1), (1, 2, -1)))
+control (1, 10, 11) ((Fraction(6, 55), Fraction(12, 77), Fraction(23, 154)), Fraction(6, 55), ((-2, -2, 2), (-1, -1, 1), (1, 1, -1), (2, 2, -2)))
+control (2, 5, 7) ((Fraction(22, 245), Fraction(6, 49), Fraction(1, 10)), Fraction(22, 245), ((-1, -1, 1), (1, 1, -1)))
+control (2, 11, 20) ((Fraction(131, 1540), Fraction(11, 140), Fraction(3, 35)), Fraction(11, 140), ((-2, 4, -2), (-1, 2, -1), (1, -2, 1), (2, -4, 2)))
+control (2, 19, 20) ((Fraction(48, 665), Fraction(11, 140), Fraction(46, 665)), Fraction(173, 2660), ((-2, -4, 4), (-1, -2, 2), (1, 2, -2), (2, 4, -4)))
+complete_semantic_digest 2379c15b6e7371a35e6e86e57cd33c4c7fad427e96c1ceaefb93d2f7203c6663
+explicit_checks 388026
+PASS: mixed-parity 6/77 is refuted; H79 parity maxima are FINITE-EXACT only

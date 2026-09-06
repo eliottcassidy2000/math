@@ -50,7 +50,8 @@ gives square sum `<=195`; THM-4019 refutes its sharp arbitrary-lattice target.
   strict outside norm four. The THM-4409/4414/4422 local target is closed;
   THM-4423/4425/4428 retain sharper subclass results.
   The consumer still needs the actual ten-core's `mu(G_C)>=6/77` or joint
-  safe phase; arbitrary body measure, mixed parity and entry remain separate.
+  safe phase. Universal body floors and mixed-parity `6/77` are false;
+  actual entry remains open.
 - **Transport/incidence:** [overnight synthesis](../05-knowledge/results/overnight_20260906_synthesis.md)
   combines cap bound `204/5957`, midpoint payments and owner-line closure. A
   two-dimensional owner polygon can still matter for sharper counts and

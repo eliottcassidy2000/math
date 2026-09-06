@@ -1,0 +1,12 @@
+INDEPENDENT ADDITIVE REFEREE: exact native/ray/continuum audit
+frozen_native_revision a80f2e90aa37de41ba93d206ae58125dfa1ee9c5
+frozen_native_sha256 6b41a879700632aa934650f27dafe9d076c051ddcee3262fabc07556a7aaf875
+COMPLETE_MIN_HEAD c<=59 rows 136 max (Fraction(6, 55), (1, 10, 11)) equalities [(1, 10, 11)]
+COMPLETE_PHYSICAL_HEAD c<=33 rows 42 max (Fraction(6, 55), (1, 10, 11)) equalities [(1, 10, 11)]
+CONTINUUM min_E_max=39/392 at a/c=1/4; physical=9/98 independently of a/c
+TAIL_MARGINS min_E at c60=1/12936; physical at c34=41/91630
+TYPE_HOSTILE (4,7,11) E ('6/49', '41/308', '223/2156') physical 215/2156 physical_strictly_below_minE True
+SEMANTIC_SHA256 da287274c8770e61d03e21c517f971b534e17bfde8ddffa5fcc87d72c97772fc
+CHECKS 1503 frozen_native_checks 4793
+PASS: supports, exact heads, piecewise integrals, strict tail margins, unique equality
+SCOPE: additive primitive positive ternary-unit triples only; general mixed parity remains open

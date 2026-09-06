@@ -1,0 +1,18 @@
+CONTROL (1, 5, 11) v (1, 2, -1) r 3/14 owner multiplicities (2, 0, 0) N 2 N/c 2/11 F 12/7 B 4/3 I 153/49
+CONTROL (2, 5, 7) v (1, 1, -1) r 3/14 owner multiplicities (2, 0, 0) N 2 N/c 2/7 F 2 B 4/3 I 18/7
+CONTROL (1, 2, 5) v (2, -1, 0) r 1/3 owner multiplicities (0, 1, 1) N 0 N/c 0 F 0 B 0 I 32/9
+CONTROL (1, 2, 5) v (2, -1, 0) r 3/8 owner multiplicities (0, 1, 1) N 2 N/c 2/5 F 17/24 B 2 I 9/2
+CONTROL (2, 3, 5) v (1, 1, -1) r 3/14 owner multiplicities (2, 1, 1) N 2 N/c 2/5 F 10/7 B 4/3 I 90/49
+CONTROL (2, 3, 5) v (3, -2, 0) r 3/14 owner multiplicities (0, 2, 2) N 2 N/c 2/5 F 41/63 B 8/3 I 90/49
+CONTROL (3, 6, 7) v (2, -1, 0) r 1/2 owner multiplicities (0, 0, 0) N 0 N/c 0 F 0 B 0 I 16
+CONTROL (25, 35, 49) v (7, -5, 0) r 3/14 owner multiplicities (0, 1, 1) N 4 N/c 4/49 F 34/7 B 4 I 981/49
+CONTROL (121, 143, 169) v (13, -11, 0) r 3/14 owner multiplicities (0, 1, 1) N 20 N/c 20/169 F 1488/77 B 8 I 3897/49
+CONTROL (289, 323, 361) v (19, -17, 0) r 3/14 owner multiplicities (0, 1, 1) N 38 N/c 2/19 F 13876/357 B 10 I 1251/7
+CONTROL (529, 575, 625) v (25, -23, 0) r 3/14 owner multiplicities (0, 1, 1) N 74 N/c 74/625 F 4924/69 B 14 I 2223/7
+CONTROL (2, 3, 5) v (2, -3, 1) r 3/14 owner multiplicities (0, 2, 2) N 2 N/c 2/5 F 4/7 B 8/3 I 90/49
+CONTROL (17, 21, 26) v (5, -9, 4) r 3/14 owner multiplicities (0, 2, 2) N 6 N/c 3/13 F 4952/945 B 16/3 I 576/49
+CONTROL (50, 57, 65) v (8, -15, 7) r 3/14 owner multiplicities (0, 2, 2) N 12 N/c 12/65 F 4115/294 B 32/3 I 1548/49
+CONTROL (101, 111, 122) v (11, -21, 10) r 3/14 owner multiplicities (0, 2, 2) N 26 N/c 13/61 F 74442/2695 B 16 I 3006/49
+FINITE-FIELD TABLE [(0, False, (0, 1, 1)), (0, True, (2, 0, 0)), (1, False, (0, 2, 2)), (1, True, (2, 1, 1)), (2, False, (0, 0, 0))]
+CHECKS 997
+PASS: variable-radius coarea/count controls; no speed-height census

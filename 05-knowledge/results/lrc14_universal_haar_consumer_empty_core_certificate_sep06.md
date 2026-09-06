@@ -153,8 +153,12 @@ identified by analogy.
 The decisive body-side question is now a quantitative safe-set problem:
 can one prove `mu(G_C)>=6/77` for the **actual ten-speed bodies produced by
 an entry route**, or exhibit their first exact body below that floor?
-The stronger universal ten-body floor is a separate open candidate, not
-a consequence of the cited loneliness maximum. A small useful first test
+The stronger universal ten-body floor is now **REFUTED** by
+[recovered exact bodies](lrc14_haar_body_empty_core_sep06.md):
+`C={1,2,3,5,7,8,9,11,12,13}` has `mu(G_C)=14249/252252<6/77`.
+Even the necessary small-clock divisor sieve does not imply that floor.
+The actual entry-produced core or its joint safe-phase geometry remains
+necessary. A small useful first test
 should retain all rational safe components and test the named body, rather
 than launch another triple-network census.
 

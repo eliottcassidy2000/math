@@ -1,5 +1,16 @@
 # Script Results Index
 
+- [Sharp additive mixed-parity bound](lrc14_additive_parity_empty_core_sep06.md):
+  **PROVED + FINITE-EXACT + INDEPENDENTLY AUDITED.** The complete family
+  `a+b=c` has selected network and physical mass at most `6/55`, with sole
+  primitive equality `(1,10,11)`. Strict quadrature tails and 136 exact base
+  rows close this family; general nonadditive mixed parity remains open.
+  [Parity witnesses](lrc14_parity_empty_core_sep06.md) refute the old odd
+  ceiling outside its scope, and [recovered ten-bodies](lrc14_haar_body_empty_core_sep06.md)
+  refute the unqualified new Haar floor while retaining safe completions.
+  The [variable-radius coarea lemma](variable_radius_empty_core_sep06.md)
+  proves two-sided count error, exact residue densities, and sharp leading
+  constant `8r²/3` with a separate doubled-density algebraic boundary.
 - [Second/third empty-hexagon research waves](../../07-reflections/overnight-hexagon-sep05-research-board.md#third-wave-current-board-and-audit-checkpoint):
   **PROVED + INDEPENDENTLY AUDITED** [THM-4431](../../01-canon/theorems/THM-4431-colored-lattice-basis-and-three-direction-lrc-network-closure.md) colored live bases/three-ray closure;
   [THM-4432](../../01-canon/theorems/THM-4432-trinomial-two-channel-two-rung-noncancellation-with-carries.md) all-carry two-channel detection;

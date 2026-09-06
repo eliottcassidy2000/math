@@ -1,0 +1,33 @@
+FINITE-EXACT / recovered obstruction: ten-body universal 6/77 Haar floor is false
+threshold weak ||cy||>=1/14; phase y in R/Z; normalized Haar measure
+BODY consecutive_1_to_10 (1, 2, 3, 4, 5, 6, 7, 8, 9, 10) mu 1217/8820 mu-minus-6/77 5827/97020 positive_components 20 isolated ('3/14', '11/14')
+BODY dilation_2 (2, 4, 6, 8, 10, 12, 14, 16, 18, 20) mu 1217/8820 mu-minus-6/77 5827/97020 positive_components 40 isolated ('3/28', '11/28', '17/28', '25/28')
+BODY dilation_7 (7, 14, 21, 28, 35, 42, 49, 56, 63, 70) mu 1217/8820 mu-minus-6/77 5827/97020 positive_components 140 isolated ('3/98', '11/98', '17/98', '25/98', '31/98', '39/98', '45/98', '53/98', '59/98', '67/98', '73/98', '81/98', '87/98', '95/98')
+BODY shifted_AP_2_to_11 (2, 3, 4, 5, 6, 7, 8, 9, 10, 11) mu 24791/194040 mu-minus-6/77 9671/194040 positive_components 14 isolated ('3/14', '5/14', '9/14', '11/14')
+BODY odd_AP_1_to_19 (1, 3, 5, 7, 9, 11, 13, 15, 17, 19) mu 252326/1616615 mu-minus-6/77 126356/1616615 positive_components 17 isolated ('1/14', '3/14', '5/14', '9/14', '11/14', '13/14')
+BODY one_far_11 (1, 2, 3, 4, 5, 6, 7, 8, 9, 11) mu 17527/194040 mu-minus-6/77 2407/194040 positive_components 16 isolated ('3/14', '5/14', '9/14', '11/14')
+BODY one_far_13 (1, 2, 3, 4, 5, 6, 7, 8, 9, 13) mu 26833/229320 mu-minus-6/77 98603/2522520 positive_components 14 isolated ('1/14', '3/14', '11/14', '13/14')
+BODY one_far_21 (1, 2, 3, 4, 5, 6, 7, 8, 9, 21) mu 2939/17640 mu-minus-6/77 17209/194040 positive_components 22 isolated ('3/14', '11/14')
+BODY one_far_101 (1, 2, 3, 4, 5, 6, 7, 8, 9, 101) mu 282841/1781640 mu-minus-6/77 1584131/19598040 positive_components 34 isolated ('3/14', '11/14')
+BODY first_height13_hostile (1, 2, 3, 4, 5, 7, 8, 9, 11, 13) mu 21514/315315 mu-minus-6/77 -3056/315315 positive_components 10 isolated ('1/14', '3/14', '5/14', '9/14', '11/14', '13/14')
+CLOSED_COMPONENTS first_height13_hostile (('1/14', '1/14'), ('15/182', '13/154'), ('15/154', '13/126'), ('29/182', '27/154'), ('3/14', '3/14'), ('29/98', '55/182'), ('5/14', '5/14'), ('29/70', '41/98'), ('57/98', '41/70'), ('9/14', '9/14'), ('127/182', '69/98'), ('11/14', '11/14'), ('127/154', '153/182'), ('113/126', '139/154'), ('141/154', '167/182'), ('13/14', '13/14'))
+BODY minimum_height13 (1, 2, 3, 5, 7, 8, 9, 11, 12, 13) mu 14249/252252 mu-minus-6/77 -5407/252252 positive_components 12 isolated ('1/14', '3/14', '5/14', '9/14', '11/14', '13/14')
+CLOSED_COMPONENTS minimum_height13 (('1/14', '1/14'), ('15/154', '13/126'), ('29/182', '9/56'), ('29/168', '27/154'), ('3/14', '3/14'), ('43/182', '27/112'), ('29/112', '41/154'), ('29/98', '55/182'), ('5/14', '5/14'), ('9/14', '9/14'), ('127/182', '69/98'), ('113/154', '83/112'), ('85/112', '139/182'), ('11/14', '11/14'), ('127/154', '139/168'), ('47/56', '153/182'), ('113/126', '139/154'), ('13/14', '13/14'))
+BODY clock_filtered_hostile (1, 3, 4, 10, 11, 13, 14, 16, 17, 18) mu 534689/7796880 mu-minus-6/77 -801461/85765680 positive_components 22 isolated ('3/28', '11/28', '17/28', '25/28')
+CLOSED_COMPONENTS clock_filtered_hostile (('15/182', '13/154'), ('3/28', '3/28'), ('29/224', '27/196'), ('29/196', '27/182'), ('29/182', '41/252'), ('43/252', '41/238'), ('43/224', '27/140'), ('29/140', '41/196'), ('57/154', '83/224'), ('11/28', '11/28'), ('57/140', '97/238'), ('99/238', '83/196'), ('113/238', '27/56'), ('29/56', '125/238'), ('113/196', '139/238'), ('141/238', '83/140'), ('17/28', '17/28'), ('141/224', '97/154'), ('155/196', '111/140'), ('113/140', '181/224'), ('197/238', '209/252'), ('211/252', '153/182'), ('155/182', '167/196'), ('169/196', '195/224'), ('25/28', '25/28'), ('141/154', '167/182'))
+REMOVAL_CHAIN base (1, 2, 3, 5, 7, 8, 9) mu 583/2205
+REMOVAL_CHAIN add 11 mu 31807/194040 removed 6499/64680
+REMOVAL_CHAIN add 12 mu 22873/194040 removed 1489/32340
+REMOVAL_CHAIN add 13 mu 14249/252252 removed 154859/2522520
+COMPLETE_HEIGHT13 286 bodies; max<=12 66 all pass; belowfloor 12 minimum (Fraction(14249, 252252), (1, 2, 3, 5, 7, 8, 9, 11, 12, 13))
+CLOCK_FILTERED_HEIGHT 14 examined 209 minimum_examined (Fraction(4163, 51480), (1, 2, 3, 8, 9, 10, 11, 12, 13, 14)) stopped_at_first_hostile False
+CLOCK_FILTERED_HEIGHT 15 examined 252 minimum_examined (Fraction(261941, 2522520), (1, 3, 8, 9, 10, 11, 12, 13, 14, 15)) stopped_at_first_hostile False
+CLOCK_FILTERED_HEIGHT 16 examined 917 minimum_examined (Fraction(24273, 280280), (1, 3, 4, 9, 10, 11, 12, 13, 14, 16)) stopped_at_first_hostile False
+CLOCK_FILTERED_HEIGHT 17 examined 1227 minimum_examined (Fraction(295901, 3573570), (1, 4, 6, 9, 10, 11, 13, 14, 16, 17)) stopped_at_first_hostile False
+CLOCK_FILTERED_HEIGHT 18 examined 346 minimum_examined (Fraction(534689, 7796880), (1, 3, 4, 10, 11, 13, 14, 16, 17, 18)) stopped_at_first_hostile True
+COMPLETION small (1, 3, 5, 6, 9, 11, 12, 15, 21, 24, 27, 33, 39) mu_safe 23818/945945 small_unit_clock_escapes (10, 14) first_rational_clock 1/10 clearance 1/10 body_phase 3/10
+COMPLETION clock_filtered (1, 3, 5, 9, 11, 12, 30, 33, 39, 42, 48, 51, 54) mu_safe 8131/194480 small_unit_clock_escapes () first_rational_clock 9/19 clearance 2/19 body_phase 8/19
+SELECTOR_HOSTILE canonical body y=2/11; tail bad labels ((0,), (1,), (2,)) alternative full-row x=1/14 clearance1/14
+CHECKS 336
+PASS: universal Haar floor refuted; necessary clock-sieved floor also refuted; completions remain safe
+SCOPE: recovered exact bodies, new threshold application; no new LRC family or entry theorem

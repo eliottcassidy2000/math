@@ -1,0 +1,17 @@
+universe primitive sorted positive ternary-units, c=a+b, c<=59
+complete_network_head_rows 136
+complete_physical_head_rows_c_le_33 42
+sharp_bound 6/55
+unique_equality {'network': [(1, 10, 11)], 'physical': [(1, 10, 11)]}
+finite_network_runner_up (Fraction(383, 3640), [(5, 8, 13)])
+network_tail c>=60; margin at60 1/12936
+physical_tail c>=34; margin at34 41/91630
+control (1, 4, 5) ((Fraction(13, 140), Fraction(4, 35), Fraction(1, 28)), Fraction(1, 28), (1,))
+control (1, 10, 11) ((Fraction(6, 55), Fraction(12, 77), Fraction(23, 154)), Fraction(6, 55), (1, 2))
+control (2, 5, 7) ((Fraction(22, 245), Fraction(6, 49), Fraction(1, 10)), Fraction(22, 245), (1,))
+control (28, 31, 59) ((Fraction(1320, 12803), Fraction(303, 2891), Fraction(8217, 89621)), Fraction(8217, 89621), (1, 2, 4, 5, 7, 8, 10, 11))
+complete_semantic_digest 4e0380e61e715e44f8329f5a80cc2eb42bfaa231207b2576dcaacffb6819d86c
+new_explicit_checks 1230
+inherited_explicit_checks 4792
+inherited_source_sha256 b99af309ff6f8643dedf923f5ee8d86d67b32ff2b0d6510209c565820894f399
+PASS: additive finite bases; all-height tails require companion analytic proof
