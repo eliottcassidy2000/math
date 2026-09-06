@@ -1,5 +1,14 @@
 # Script Results Index
 
+- [Extended research session](long_frontier_sep06_board.md): **PROVED + INDEPENDENTLY AUDITED.**
+  [THM-4455: every minimizing sequence](../../01-canon/theorems/THM-4455-three-atom-minimizing-sequence-rigidity.md)
+  approaches three equal positive atoms in square norm; separate dust first
+  moments may diverge. Both singular quotient boundaries are excluded.
+  [Actual endpoint39](long_frontier_sep06_endpoint39.md) has first nonzero
+  moment g or2g for all g>=20,coprime39 and nonzero complex coefficients;
+  all258 characteristic coefficients have an independent full polynomial
+  certificate. LRC14 and general Laurent two-rung separation remain OPEN.
+
 - **[THM-4454: sharp global signed-root stability](../../01-canon/theorems/THM-4454-sharp-global-signed-root-duplication-stability.md)**
   solves the exact best constant at `4sqrt(3)/[3(1+sqrt(2))(1+sqrt(3))]`.
   Every eligible finite list has strict inequality; an actual finite family

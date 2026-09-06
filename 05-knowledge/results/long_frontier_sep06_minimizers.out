@@ -1,0 +1,8 @@
+BOUNDARIES one=sqrt(2)-2/3; two_liminf=(64-44sqrt(2))/3; both>1/2>K3
+LOCAL_TWO_ATOM R=[Ldust*delta+Lsplit*w2/2]/[delta+w2/2]+o(1)
+ACTUAL_HOSTILE n=4,5,6,8,12,20,50; 3 macros, n^4 positive and n^4 negative dust entries
+SEPARATE_DUST positive_sum=n; negative_magnitude=n+3a-1; signed_tail=1-3a
+UNIVERSE seven exact algebraic lists; no exclusions; repeated zero/distance boundary controls are formal only
+CLAIM analytical iff: R->K3 iff permutation_l2_distance_to_three_equal_positive_atoms->0
+COUNT N_minus*Delta3>=max(sqrt(3)-1-sqrt(3)*Delta3/2,0)^2
+PASS explicit_gates=91 semantic_sha256=306ae986875172f1ab4c69e9779d02cb0dc82e3c3cfdf4fdd144361797e9869a

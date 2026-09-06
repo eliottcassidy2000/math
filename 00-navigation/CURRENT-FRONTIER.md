@@ -155,8 +155,8 @@ and Lucas--Frobenius leaves `Q^p`: **whole-layer preservation**, not atoms.
 
 ### Live work
 
-Publish THM-2022; formalize THM-2639. [Endpoint33](../05-knowledge/results/second_20260906_laurent.md): g>=17,coprime33; g/2g detection. [Phase limits/repair](../05-knowledge/results/continuing1_20260906_synthesis.md).
-[THM-4454](../01-canon/theorems/THM-4454-sharp-global-signed-root-duplication-stability.md): sharp stability constant `4sqrt(3)/[3(1+sqrt(2))(1+sqrt(3))]`, PROVED.
+Publish THM-2022; formalize THM-2639. [Endpoint39](../05-knowledge/results/long_frontier_sep06_endpoint39.md): g>=20,coprime39; g/2g detection. [Phase repair](../05-knowledge/results/continuing1_20260906_synthesis.md).
+[THM-4454](../01-canon/theorems/THM-4454-sharp-global-signed-root-duplication-stability.md): sharp K3. [THM-4455](../01-canon/theorems/THM-4455-three-atom-minimizing-sequence-rigidity.md): all minimizers approach three equal positive atoms. Both PROVED.
 [THM-4417](../01-canon/theorems/THM-4417-width-two-laurent-first-return-parabolic-critical-bound.md)
 proves first return `<=M+N` for `min(M,N)=2`; width one is THM-2111.
 The sharp bound for `min(M,N)>=3` remains OPEN. THM-2101 is corroborative, not a `GMC2Main.gmc2` dependency.

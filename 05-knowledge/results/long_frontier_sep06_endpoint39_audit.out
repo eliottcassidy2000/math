@@ -1,0 +1,6 @@
+UNIVERSE x=1..73, complete literal first/doubled multinomial fibres; primitive=45
+INDEPENDENT_PATH exact Poly inversion/remainder and Berkowitz characteristic polynomial
+IDENTITY_CERTIFICATE each degree<=12k<=72; 73 exact equalities prove all six parameter polynomial identities
+COEFFICIENTS all 258 shifted coefficients positive; original carry retained; gcd hostile g21 has first return7
+PRODUCER_OUTPUT_SHA256 4c686cea98965eb7b4ea785f87a73592dc959ec6d19f47ebc6ad7e7dd0c5a5bb
+PASS explicit_gates=744 semantic_sha256=8a38a1dbb92b8c72a984084325f0afeda8b0fcfb550a3fa9940e2d2eb669c9d0

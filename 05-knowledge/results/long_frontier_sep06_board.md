@@ -63,9 +63,22 @@ separate proof audit and exactly scoped computational controls before
 promotion. The new worktree was clean at startup; the previous worktree
 and its frozen evidence remain preserved.
 
-The separate namespace [THM-4455](../../01-canon/theorems/THM-4455-three-atom-minimizing-sequence-rigidity.md)
-is **RESERVED / UNPROVED EMPTY STUB**, pending the minimizing-sequence
-candidate's completed independent audit. It is not part of proved canon.
+## Audited first milestones and changed questions
+
+- **PROVED** [THM-4455 / three-atom minimizing-sequence rigidity](../../01-canon/theorems/THM-4455-three-atom-minimizing-sequence-rigidity.md):
+  R tends to K3 iff the actual lists tend in square norm to three equal
+  positive atoms. Both denominator-degenerate boundaries are excluded;
+  negative-coordinate count diverges, while separate dust first moments
+  may both diverge. The91-gate source and full independent audit pass.
+  The namespace reservation is now promoted. The new question is the
+  sharp finite-length asymptotic penalty, including ordered-root splitting.
+- **PROVED** [actual endpoint39](long_frontier_sep06_endpoint39.md):
+  for g>=20,coprime39, the support(-39,2g-39,3g-39) has first nonzero
+  mass g or2g for every nonzero complex coefficient choice. All258
+  shifted characteristic coefficients are positive. The421-gate producer
+  and744-gate independent full polynomial reconstruction pass. The
+  extension uses the inherited quotient method; all-channel closure
+  remains open.
 
 The heartbeat continues this board quietly unless there is substantive
 progress, a correction, completion, failure or required user action. At
