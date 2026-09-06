@@ -98,3 +98,4 @@ scripts/*.ps1 text eol=crlf
 00-navigation/CONCURRENT-SESSIONS.md    merge=union
 05-knowledge/results/INDEX.md           merge=union
 05-knowledge/variables/INDEX.md         merge=union
+05-knowledge/results/long_frontier2_sep06_*.json text eol=lf

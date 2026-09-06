@@ -1,0 +1,13 @@
+UNIVERSE exact full rows; rectangular a,b,f prism; all original phases; B-only product bound; two scoped hostiles
+PRISM a=[167/2,169/2] b=[69/2,71/2] f=[0,5]; Q(-s)<0 at every original phase
+ROOTS f>0: four simple phases in (99/10000,1/100),(1/9,13/100),(1,8/5),(10,infinity); f=0: first three
+CERTIFICATE four charts, 81 strictly positive coefficients each; lower carry retained
+CHART 0 MINIMUM_COEFFICIENT 13592097147660088381611435635279441/80000000000000000000000000000000
+CHART 1 MINIMUM_COEFFICIENT 176722546078297280862289/392000000000000000
+CHART 2 MINIMUM_COEFFICIENT 16827346271419/392
+CHART 3 MINIMUM_COEFFICIENT 682807599045/196
+B_ONLY nonnegative-root B implies f<5 throughout the a,b rectangle; no C/D interlacing used
+NONVACUITY the whole same a,b rectangle with f in [1/2,3/2] has five distinct positive B roots
+HOSTILES f6 outside the bound has positive response at an original phase; centre f1,s4 has positive response off the original zero
+CERTIFICATE_SHA256 cd1af1f580b51fc1b556a7cdf44f28203e464a3ba41e3d03e55363278816d412
+PASS explicit_gates=457 semantic_sha256=0f8ced0d9a6a05fc71eb712403621cee9e0a1046b3a5d6211163b508c04bc3a6

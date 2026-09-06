@@ -9,6 +9,34 @@ Format per entry:
 - Why it was wrong
 - The correct framing
 
+## 2026-09-06 extended second round -- joint positions and conserved defects
+
+- [Joint overlap positions](../05-knowledge/results/long_frontier2_sep06_lrc.md)
+  retain one common translated-grid phase after every individual interval
+  floor has vanished. Independent worst positions cannot be imposed on
+  all projected intervals simultaneously. Two adaptively selected pairs
+  repair five actual half-grid failures of the primary pair and give the
+  stated all-translates finite-scale theorem. A failed individual, pooled
+  or forest credit remains an insufficient certificate, not an unsafe row.
+- [Conserved amplitudes](../05-knowledge/results/long_frontier2_sep06_duality.md)
+  show that an entire beta-step orbit can stay negatively rooted and keep
+  its endpoint coefficients and paired factors while its same-root sign
+  reverses. Every interior ratio to the genuine factorial row is conserved,
+  so iterating the parameter step cannot erase the defect. The sharp H1
+  sign region is stricter than the global negative-root region. The
+  attenuated rows are models, not actual Laurent counterexamples.
+- [Global stability barriers](../05-knowledge/results/long_frontier2_sep06_stability.md)
+  refute extending a local modulus globally: an exact length1005 list
+  defeats coefficient1/10. The four-atom barrier is an upper bound;
+  its matching lower bound is open. A fractional equal-root multiplicity
+  produces a lower formal value but cannot be an actual list. The missing
+  coordinate is integer root count, separate from moment normalization.
+- [Fixed-phase boundary reduction](../05-knowledge/results/long_frontier2_sep06_boundary.md)
+  uses the previously obstructive indefinite Hessian to move extrema to
+  actual geometry boundaries. This does not prove the boundary signs.
+  The move uses a connected interval in one coefficient line, not global
+  convexity of the B-only or weak two-interlacer coefficient domain.
+
 ## 2026-09-06 continuation -- eighth norms, interval rounding and column ratios
 
 - [Degree-seven hostile and degree-eight repair](../05-knowledge/results/continuing4_20260906_moments_packet.md):

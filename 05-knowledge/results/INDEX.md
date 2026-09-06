@@ -1,5 +1,18 @@
 # Script Results Index
 
+- [Extended session: coefficient regions and adaptive overlaps](long_frontier2_sep06_board.md):
+  **PROVED + FINITE-EXACT + INDEPENDENTLY AUDITED.** A full coefficient
+  prism has negative response at every original Laurent zero, without
+  interlacer assumptions. General fixed-phase extrema reduce to zero,
+  repeated or shared-root boundaries. Joint interval positions close84
+  translated-grid scales with arbitrary remaining tails and81 actual
+  balanced entries despite vanishing individual interval credits.
+  A conserved-amplitude theorem explains global beta-orbit sign failures;
+  actual regular-root lifts bound both global stability moduli.
+  The [23-artifact manifest](long_frontier2_sep06_manifest.json) pins six
+  exact programs and the complete coefficient certificate. General
+  LRC14, boundary sign closure and sharp global modulus lower bounds remain OPEN.
+
 - [Current continuing synthesis](continuing4_20260906_synthesis.md):
   **PROVED + FINITE-EXACT + INDEPENDENTLY AUDITED.** Degree-eight Hankels
   exactly decode the weak two-interlacer model and give compact coefficient

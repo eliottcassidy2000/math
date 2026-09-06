@@ -7,6 +7,10 @@ is f0521b87281f, branch codex/session-long-frontier-sep06, in
 `/tmp/math-wt-long-frontier-sep06`. LRC(14) and actual Laurent two-rung
 separation remain OPEN. THM-4454's sharp stability constant is PROVED.
 
+**Current continuation:** the [second-round board](long_frontier2_sep06_board.md)
+tracks the subsequent coefficient-region, adaptive-overlap and global
+stability work. This first-round board preserves its audited checkpoint.
+
 ## Inheritance and live concepts
 
 The [previous board](open_frontier_sep06_board.md) routes the audited

@@ -1,0 +1,192 @@
+{
+  "schema_version": 1,
+  "session": "long-frontier2-sep06",
+  "status": "PROVED / FINITE-EXACT / REFUTED in the exact scopes of the proof and audit notes",
+  "initial_head": "e7a36aee1f87d072e98d170650698f5e1bb80428",
+  "incoming_integrated_through": "fe55aab0dca2126c4e2802dba27543ac61b90133",
+  "artifact_count": 23,
+  "program_count": 6,
+  "combined_reported_explicit_checks": 50990,
+  "count_basis": "Sum of the six top-level reported counts per combined normal run. The rectangle audit also replays its producer internally; that nested count is not added again.",
+  "hash_basis": "SHA-256 of raw LF repository bytes; mutable boards/navigation and this manifest itself are excluded.",
+  "scope": "No universal LRC14, general Laurent model sign, actual all-height noncancellation, or sharp global modulus lower bound is claimed.",
+  "current_board": "05-knowledge/results/long_frontier2_sep06_board.md",
+  "inherited_profile_bank": {
+    "path": "05-knowledge/results/lrc14_joint_shadow_empty_core_next_sep06.json",
+    "sha256": "935f3f687b6d7c89cc099e536f536238fd753bcc4c1747906d213cef387ca93f"
+  },
+  "rectangle_certificate_command": "python3 04-computation/long_frontier2_sep06_rectangle.py --certificate /tmp/rectangle.json",
+  "programs": [
+    {
+      "source": "04-computation/long_frontier2_sep06_boundary.py",
+      "output": "05-knowledge/results/long_frontier2_sep06_boundary.out",
+      "audit": "05-knowledge/results/long_frontier2_sep06_boundary_audit.md",
+      "reported_explicit_checks": 20,
+      "reproduce": "python3 04-computation/long_frontier2_sep06_boundary.py",
+      "optimized_reproduce": "python3 -O 04-computation/long_frontier2_sep06_boundary.py",
+      "validation": "Independent analytic/source audit plus normal/optimized/frozen raw-byte replay passed."
+    },
+    {
+      "source": "04-computation/long_frontier2_sep06_duality.py",
+      "output": "05-knowledge/results/long_frontier2_sep06_duality.out",
+      "audit": "05-knowledge/results/long_frontier2_sep06_duality_audit.md",
+      "reported_explicit_checks": 93,
+      "reproduce": "python3 04-computation/long_frontier2_sep06_duality.py",
+      "optimized_reproduce": "python3 -O 04-computation/long_frontier2_sep06_duality.py",
+      "validation": "Independent analytic/source audit plus normal/optimized/frozen raw-byte replay passed."
+    },
+    {
+      "source": "04-computation/long_frontier2_sep06_lrc.py",
+      "output": "05-knowledge/results/long_frontier2_sep06_lrc.out",
+      "audit": "05-knowledge/results/long_frontier2_sep06_lrc_audit.md",
+      "reported_explicit_checks": 49880,
+      "reproduce": "python3 04-computation/long_frontier2_sep06_lrc.py",
+      "optimized_reproduce": "python3 -O 04-computation/long_frontier2_sep06_lrc.py",
+      "validation": "Independent analytic/source audit plus normal/optimized/frozen raw-byte replay passed."
+    },
+    {
+      "source": "04-computation/long_frontier2_sep06_rectangle.py",
+      "output": "05-knowledge/results/long_frontier2_sep06_rectangle.out",
+      "audit": "05-knowledge/results/long_frontier2_sep06_rectangle_audit.md",
+      "reported_explicit_checks": 457,
+      "reproduce": "python3 04-computation/long_frontier2_sep06_rectangle.py",
+      "optimized_reproduce": "python3 -O 04-computation/long_frontier2_sep06_rectangle.py",
+      "validation": "Independent analytic/source audit plus normal/optimized/frozen raw-byte replay passed."
+    },
+    {
+      "source": "04-computation/long_frontier2_sep06_rectangle_audit.py",
+      "output": "05-knowledge/results/long_frontier2_sep06_rectangle_audit.out",
+      "audit": "05-knowledge/results/long_frontier2_sep06_rectangle_audit.md",
+      "reported_explicit_checks": 500,
+      "reproduce": "python3 04-computation/long_frontier2_sep06_rectangle_audit.py",
+      "optimized_reproduce": "python3 -O 04-computation/long_frontier2_sep06_rectangle_audit.py",
+      "validation": "Independent analytic/source audit plus normal/optimized/frozen raw-byte replay passed."
+    },
+    {
+      "source": "04-computation/long_frontier2_sep06_stability.py",
+      "output": "05-knowledge/results/long_frontier2_sep06_stability.out",
+      "audit": "05-knowledge/results/long_frontier2_sep06_stability_audit.md",
+      "reported_explicit_checks": 40,
+      "reproduce": "python3 04-computation/long_frontier2_sep06_stability.py",
+      "optimized_reproduce": "python3 -O 04-computation/long_frontier2_sep06_stability.py",
+      "validation": "Independent analytic/source audit plus normal/optimized/frozen raw-byte replay passed."
+    }
+  ],
+  "artifacts": [
+    {
+      "path": "04-computation/long_frontier2_sep06_boundary.py",
+      "bytes": 4065,
+      "sha256": "badbd9ba520c93b39c4386fdcc9360510181ce903938d950198a5bb74ab4af1e"
+    },
+    {
+      "path": "04-computation/long_frontier2_sep06_duality.py",
+      "bytes": 10491,
+      "sha256": "e3d9f21f61d1a5999f02ff83f9e3f6cd565e23da094278dc0f2cfbfd6297f274"
+    },
+    {
+      "path": "04-computation/long_frontier2_sep06_lrc.py",
+      "bytes": 9603,
+      "sha256": "83ddf56931ae05e8d467ee130f11f862279433df3a649960ae1ae12019f8b614"
+    },
+    {
+      "path": "04-computation/long_frontier2_sep06_rectangle.py",
+      "bytes": 8898,
+      "sha256": "4fb5fe880fbc030b3461889d021f7fa24b6376b23cdc1251afd99b0327591ea5"
+    },
+    {
+      "path": "04-computation/long_frontier2_sep06_rectangle_audit.py",
+      "bytes": 6816,
+      "sha256": "85f79d0371b952415803d6a1691aec9984db5e5c923113972e5f06f0c2ff150c"
+    },
+    {
+      "path": "04-computation/long_frontier2_sep06_stability.py",
+      "bytes": 5733,
+      "sha256": "bf0734ba632810b307b0a3dde8b788fcf6dafb4f226ed0c27308d86b7d086f8e"
+    },
+    {
+      "path": "05-knowledge/results/long_frontier2_sep06_boundary.md",
+      "bytes": 8254,
+      "sha256": "b8dd781e19fa250ee0863caf1d87b7060369f9c56ce946682d6a4f3002b93bf1"
+    },
+    {
+      "path": "05-knowledge/results/long_frontier2_sep06_boundary.out",
+      "bytes": 855,
+      "sha256": "a15d43905603b0131d5f810ef56769c5ca017cee2828d82422fcf70d469a33a4"
+    },
+    {
+      "path": "05-knowledge/results/long_frontier2_sep06_boundary_audit.md",
+      "bytes": 7219,
+      "sha256": "2fa7dea81e8222b5ad25c016c6f78bbbb058b3fb122e4762104c74834b318155"
+    },
+    {
+      "path": "05-knowledge/results/long_frontier2_sep06_duality.md",
+      "bytes": 11234,
+      "sha256": "022e31d82f0a2971df2d0b5f7ac04aa7302d521646f29c2dd0a9070db743af5e"
+    },
+    {
+      "path": "05-knowledge/results/long_frontier2_sep06_duality.out",
+      "bytes": 1135,
+      "sha256": "d3427c911cffd4e919577ae715caef7e1ebb12091c4176892924880bd58f6020"
+    },
+    {
+      "path": "05-knowledge/results/long_frontier2_sep06_duality_audit.md",
+      "bytes": 4014,
+      "sha256": "b64e1fb764dfef871f019ec137fdb943581c27d86319d308974134c43430fade"
+    },
+    {
+      "path": "05-knowledge/results/long_frontier2_sep06_lrc.md",
+      "bytes": 15720,
+      "sha256": "1f60f9bc3b855e2e16395674ffbe40d93c0eadecf2e8853dee8f47277ddec6bb"
+    },
+    {
+      "path": "05-knowledge/results/long_frontier2_sep06_lrc.out",
+      "bytes": 4160,
+      "sha256": "90382eb5d6aad90b3f0988e9055764ca1238a7cb62107e79a0fe7b841d379dc5"
+    },
+    {
+      "path": "05-knowledge/results/long_frontier2_sep06_lrc_audit.md",
+      "bytes": 6575,
+      "sha256": "19327386bcb06a2d63b2d9912ace11b0bcd26d4747f2b43053c2e6c386a408b0"
+    },
+    {
+      "path": "05-knowledge/results/long_frontier2_sep06_rectangle.md",
+      "bytes": 10257,
+      "sha256": "9f78c1951932d36139ba4362226da117909547bf7de9012a5d5ba07bf8e6b8ff"
+    },
+    {
+      "path": "05-knowledge/results/long_frontier2_sep06_rectangle.out",
+      "bytes": 1148,
+      "sha256": "572d5f8192b0a567efd95b6db25d23f8dcd7277477dacfd27d75a98134668bad"
+    },
+    {
+      "path": "05-knowledge/results/long_frontier2_sep06_rectangle_audit.md",
+      "bytes": 6704,
+      "sha256": "60796e91af282bd13e629129f6bbd2d11548988b667ff5240a5784e0d5e3a57d"
+    },
+    {
+      "path": "05-knowledge/results/long_frontier2_sep06_rectangle_audit.out",
+      "bytes": 537,
+      "sha256": "214608be5b58dcf48837c3c505e87084289390ad04008296b77d41c75fa560da"
+    },
+    {
+      "path": "05-knowledge/results/long_frontier2_sep06_rectangle_certificate.json",
+      "bytes": 63602,
+      "sha256": "cd1af1f580b51fc1b556a7cdf44f28203e464a3ba41e3d03e55363278816d412"
+    },
+    {
+      "path": "05-knowledge/results/long_frontier2_sep06_stability.md",
+      "bytes": 9919,
+      "sha256": "e264d267f2146e0e73e53526732061d027b19e2224a789a9db20623231a9b460"
+    },
+    {
+      "path": "05-knowledge/results/long_frontier2_sep06_stability.out",
+      "bytes": 1345,
+      "sha256": "cd9662c07adeca90b24086fd029186f1db13987cf240e20480d651d5a10c588c"
+    },
+    {
+      "path": "05-knowledge/results/long_frontier2_sep06_stability_audit.md",
+      "bytes": 4673,
+      "sha256": "ca8ba80d61277c7886ba67a0bc1bc688ac9991cc8846d1f62ccb3cb532b4b620"
+    }
+  ]
+}
