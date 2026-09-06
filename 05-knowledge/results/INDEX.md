@@ -1,5 +1,12 @@
 # Script Results Index
 
+- [Fifteenth overnight synthesis](overnight_20260906_synthesis.md):
+  **PROVED + INDEPENDENTLY AUDITED.** [Larger-unit actual entry](overnight15_20260906_lrc_larger_unit.md)
+  closes1+12,2+11,3+10,4+9,5+8 equality branches and6+7 with smaller primitive
+  minimum<=60,843,134,147. [Independent audit](overnight15_20260906_lrc_component_closure_audit.md)
+  retains actual graph/box/equality and cited proper-component phase suppliers.
+  [Manifest](overnight15_20260906_manifest.json):six frozen artifacts. LRC14 OPEN.
+
 - [Explicit uniform quadratic stability](quantitative_stability_empty_core_morning_sep06.md):
   **PROVED + FINITE-EXACT + INDEPENDENTLY AUDITED.** The signed-duplication
   deficit bounds squared distance to the two-atom limit with explicit

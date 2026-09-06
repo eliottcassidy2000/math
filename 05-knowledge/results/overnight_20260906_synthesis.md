@@ -5,7 +5,7 @@ This is the maintained continuation surface for the user's overnight request.
 Read current canon and incoming corrections before continuing any lane.
 The starting commit was `62e1b34d8`; the isolated worktree is `C:/w/s0905`.
 The extensively dirty original checkout is outside this session's edits.
-The fourteenth checkpoint incorporates incoming canon through `8517ff4b1`,
+The fifteenth checkpoint incorporates incoming canon through `8517ff4b1`,
 including proved THM-4437/4440/4441/4442/4443/4444/4445/4446/4447/4448/4449/4450/4451/4452/4453.
 All these incoming statuses are scoped to their stated theorems. The universal
 **ternary-unit local network bound is now closed without a parity assumption**:
@@ -25,7 +25,7 @@ independence heuristic and the corrected asymptotic constant; see the
 
 | Live object / representation | Predicate | Operation and retained coordinate | Cheapest next decisive test |
 |---|---|---|---|
-| Anchor: actual decoder entry and body safe sets | One literal safe completion | Bounded crossing relations force scale separation; retain primitive core coordinates and coprime grids | All decoder component types now have an equality test; walk cancellation J converts collective gcd caps into endpoint tests, while universal small-J existence remains open |
+| Anchor: actual decoder entry and body safe sets | One literal safe completion | Bounded crossing relations force scale separation; retain primitive core coordinates and coprime grids | A unit in the larger component closes all unbalanced two-component equality types; balanced6+7 with high smaller minimum and nonunit larger cores remain |
 | Grid sets as degree-two bipartite graphs | No collinear triple | Freeze all rows, retain induced matching polynomials, then expose one column permutation | Saturated-board entropy and adaptive uniform-column restart bounds now follow; purposeful column optimization lies outside their scope |
 | Niche: trinomial return channels | First two return polynomials have no common torus zero | One quadratic pullback preserves the original zero and completes alpha parity | All A2 completed-alpha responses are negative; one coupled beta-skip coefficient remains |
 | Wildcard: residue-decorated jet cluster | Full partition versus largest precision loss | Minimum and next-weight bands retain integral content; divided companions prevent deeper common cancellation | Odd packets plus neighboring even determinants determine two all-depth p31 factors and the exact precision window; general full partitions remain open |
@@ -636,6 +636,24 @@ an implication: the maps and losses must be specified in the linked reports.
     the other factors. Primary/referee gates126,363/132,821 pass, including
     120 fresh residual-layer matrices and complete low-weight index bands.
 
+49. **PROVED actual LRC closure across five component-size types:**
+    [A unit in the larger primitive component](overnight15_20260906_lrc_larger_unit.md)
+    closes the actual two-component equality branches1+12,2+11,3+10,4+9,
+    and5+8. For6+7 it closes whenever the smaller primitive minimum is at
+    most60,843,134,147. In row tV union gU with a=|V|<=b=|U| and1 in U,
+    no bounded crossing forces `t>delta Q(maxU+1)/minV`, provided g/delta<=Q,
+    where delta=gcd(g,minV). This makes the coprime phase grid fine enough
+    to meet a full larger-core safe arc. The incoming seven-subset gcd cap
+    supplies g<=90 under hypothetical failure; the smaller component's
+    spanning-tree height bound makes the uniform condition automatic for
+    a<=5. The exact native inequality retains delta and maxU+1 and can
+    apply beyond the uniform cutoff. The overall theorem is weak safety;
+    its explicit small-g grid branch is strictly safe. Primary and independent
+    exact controls retain singleton and unitless smaller shapes, every mixed
+    orientation, and an actual5+8 entry with primitive smaller minimum
+    1,013,861,907 and a literal strictly safe phase. The larger-core unit,
+    actual graph, full equality, and physical box remain load-bearing.
+
 These are repository-scoped advances and recovered mechanisms, not claims
 of external literature priority. In particular, conditioning grid occupancy
 by row and column saturation already appears in the cited construction work.
@@ -778,9 +796,9 @@ gcd descent, the other decoder component sizes, and adjacent even Smith ideals.
 The [fourteenth manifest](overnight14_20260906_manifest.json) freezes18 more
 artifacts. Root and separate referees read the complete proofs, and all three
 independent programs replay identically in normal/optimized Python. The next
-actual LRC closure candidate combines the new two-component classification,
-an arbitrary unit-containing larger core, and the smaller core's spanning-tree
-height bound. It remains a candidate until its separate audit completes.
+actual LRC closure combines the new two-component classification, an arbitrary
+unit-containing larger core, and the smaller core's spanning-tree height bound;
+its independently audited completion is result49.
 
 Incoming `8517ff4b1` records an explicit quantitative root-stability bound,
 the AP8 optimal limiting margin, and a combined Laurent-model double
@@ -794,6 +812,30 @@ Root repaired those paths and restored the optimized-run flags. Affected
 manifests retain old/new prose hashes and reasons; no mathematical source,
 certificate, output or conclusion changed. Portable script replays were
 already correct. The additional check now validates displayed script paths.
+
+The [fifteenth manifest](overnight15_20260906_manifest.json) freezes the final
+six proof/source/output artifacts. Root independently derived the gluing
+inequality, read the complete proof and audit, and replayed both programs in
+normal and optimized Python. The primary has54,930 exact gates; the independent
+referee has29,288 gates using positive-box, translated-grid, actual-graph and rational
+safe-phase controls. Their programs and transcripts retain separate hashes.
+
+**Morning continuation frontier.** The most concrete unsolved LRC targets
+are the balanced6+7 equality branch with a high smaller primitive minimum,
+the larger components without a unit, and whether the inherited full gcd
+profiles force a qualifying low-J walk in11+2. The complete decoder routine
+now distinguishes these actual inputs from guessed partitions. Incoming
+body-component and mass gates remain conditional on an actual supplier.
+For no-three-line, the exponentially sparse saturated-board count still
+grows, so the extremal existence problem needs a different consequence.
+For Hermite observers, the remaining p31 factors and general-prime packet
+laws are open. For Laurent transport, the combined-model hostile makes the
+literal relative coefficient essential; for the Jacobian and native Boolean
+lanes, the previously recorded source-jet and ambient-rank gaps remain.
+
+The hourly overnight follow-up reached its scheduled deadline and is PAUSED.
+The user-requested resumed turn finished this last concrete closure before
+handoff; no further unattended computation is represented as running.
 
 ## Procedural direction generator
 

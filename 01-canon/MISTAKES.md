@@ -9,6 +9,18 @@ Format per entry:
 - Why it was wrong
 - The correct framing
 
+## 2026-09-06 overnight -- unit placement and coherent grid normalization
+
+[The larger-unit closure](../05-knowledge/results/overnight15_20260906_lrc_larger_unit.md)
+uses a unit in the larger primitive component, not an arbitrary unit elsewhere
+or gcd one alone. The arc has full length a/[7(b+1)maxU], and physical lifts
+give that component's complete translated grid only because the two scales
+are coprime. With t4,g2 the images are only0,1/2 and can miss an arc longer
+than1/4. The g>90 inherited branch supplies weak safety; strict safety is
+proved in the explicit grid branch and is not exported across that distinction.
+The six-vertex tree bound exceeds the balanced cutoff, so automatic closure
+stops at the five unbalanced types. That failed comparison is not an unsafe row.
+
 ## 2026-09-06 overnight -- reproduction prose has its own validity gate
 
 Incoming4a8b6efbc repaired three displayed commands. The same local filing

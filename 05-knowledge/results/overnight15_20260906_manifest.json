@@ -1,0 +1,40 @@
+{
+  "schema": 1,
+  "created_utc": "2026-09-06T14:21:34.433333+00:00",
+  "baseline_commit": "74f40fc11",
+  "incoming_review_commit": "8517ff4b1",
+  "hash_basis": "raw LF bytes; self and maintained synthesis/reference/navigation files excluded",
+  "scope": "Actual two-component equality rows with a unit in the primitive larger component close for all unbalanced sizes and a bounded-minimum balanced6+7 subclass. Exact row-wise strengthening and genuine nonunit-small-core controls. Independently audited; arbitrary LRC14 remains open.",
+  "artifacts": [
+    {
+      "path": "04-computation/overnight15_20260906_lrc_component_closure_audit.py",
+      "bytes": 7515,
+      "sha256": "72dc83b007422f079d5663686fa7312013669acf89dfabb348b7f7c326ee2bf2"
+    },
+    {
+      "path": "04-computation/overnight15_20260906_lrc_larger_unit.py",
+      "bytes": 7631,
+      "sha256": "23f42086c09e367bf9ddc87958587901b338a8a27d712e34e6eaea64ba8ce935"
+    },
+    {
+      "path": "05-knowledge/results/overnight15_20260906_lrc_component_closure_audit.md",
+      "bytes": 10668,
+      "sha256": "7748efa553af3d9b8a279cc71142c46fbf18362c994f2e9adf33d499755a3644"
+    },
+    {
+      "path": "05-knowledge/results/overnight15_20260906_lrc_component_closure_audit.out",
+      "bytes": 743,
+      "sha256": "409ec49be081fa208382d37d2e065e36bc93620180c5966501e21fb5509f7979"
+    },
+    {
+      "path": "05-knowledge/results/overnight15_20260906_lrc_larger_unit.md",
+      "bytes": 12849,
+      "sha256": "b67860eee263ea47170ac12d71f16f32ff3666f20a85639acd5bf3caf809368c"
+    },
+    {
+      "path": "05-knowledge/results/overnight15_20260906_lrc_larger_unit.out",
+      "bytes": 2096,
+      "sha256": "3b8c091e3e387ce0cacc24e22690bd78ecc9c3d313fffd4fcc0f4f1127106b36"
+    }
+  ]
+}

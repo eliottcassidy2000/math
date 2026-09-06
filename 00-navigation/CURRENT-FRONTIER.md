@@ -57,7 +57,7 @@ gives square sum `<=195`; THM-4019 refutes its sharp arbitrary-lattice target.
   selection. No universal body mass/component floor reaches these gates; entry remains open.
 - **Transport/incidence:** [overnight synthesis](../05-knowledge/results/overnight_20260906_synthesis.md)
   retains cap/event refinements; [virtual walls](../05-knowledge/results/overnight9_20260906_lrc_virtual_pair_wall_margin.md)
-  give sharp fibre margin `abs(||dy||-1/3)/2`. [Actual entry](../05-knowledge/results/overnight12_20260906_lrc_gcd_semigroup.md) closes when some endpoint gcd<=76,388,115; support reduction remains open.
+  give sharp fibre margin `abs(||dy||-1/3)/2`. [Larger-unit entry](../05-knowledge/results/overnight15_20260906_lrc_larger_unit.md) closes five unbalanced equality types; [endpoint gcd](../05-knowledge/results/overnight12_20260906_lrc_gcd_semigroup.md) covers a nonunit11+2 subclass.
   [Sparse transport](../05-knowledge/results/synthesis_20260905_lrc_sparse_transport.md) retains weights and the selector gap.
 - **Residual ranks:** THM-4333/4338 close fixed-pool ranks three/four, not arbitrary entry.
 - **PROVED:** [THM-2928](../01-canon/theorems/THM-2928-critical-seven-comb-grid-tensorization-and-drift-tariff.md)/2941: literal zero/one/two/three-drift sectors are empty; `k=2,3` are finite.
