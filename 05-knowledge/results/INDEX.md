@@ -1,5 +1,20 @@
 # Script Results Index
 
+- `lrc14_projection_deficit_beatty_row_reduction_thm4422.out` -> exact deficit
+  dual, one-dimensional carrier rows, signed norm-four closure, and a fixed-
+  averaging no-go
+  ([THM-4422](../../01-canon/theorems/THM-4422-lrc14-projection-deficit-and-beatty-row-reduction.md)):
+  **PROVED ELEMENTARY RELATIVE TO THM-4414 + VERIFIED-EXACT; LRC(14) OPEN.**
+  The target is exactly `max_i D_i>=N-2c/11`, so `N<=2c/11` is automatic.
+  Each projection has an exact mod-three Beatty-row compiler with an explicit
+  gcd multiplicity bound and binary rows for coprime complementary speeds.
+  All three signed norm-four
+  relation families close at every height by a common layer-cake estimate,
+  uniquely sharply at `(1,5,11)`. Two exact rows rule out every speed-
+  independent convex average. Through height 79, 113 of 114 dense rows are
+  norm-four rays; the exception is the `A_2` carrier circuit at `(19,23,29)`.
+  Script/output SHA-256: `3628feb6...3c86` / `9e6fab64...bb64` (raw LF bytes).
+
 - `lrc14_near_doubling_ray_network_closure_thm4420.out` and its clean-room
   lattice audit -> complete carrier classification and network closure on two
   near-doubling rays

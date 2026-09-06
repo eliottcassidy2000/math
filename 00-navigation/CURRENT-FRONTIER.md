@@ -55,18 +55,15 @@ for `d>=7`. THM-3742 is a wrong-torsor Pell `C14`; THM-3744's safe control is
   ray, parity-sheet and component-count data; none supplies safety or arrival.
 - **Seam/entry:** THM-4326/4329 close the fixed chart; 4330 leaves `2+12`;
   4347 closes height `40`; 4349/4371 are clocks. THM-4386--4405 close the
-  unit shells and all 40 one-zero presentations through norm `20`. THM-4409's
-  third-sheet network closes 2,910 triples through height `79` and is exact
-  on `(1,5,11)`. THM-4414 collapses every degree-zero flow to a raw projection
-  sum `E_i`; `min_i E_i<=6/77` is open (finite-exact through height `149`).
-  THM-4413 proves non-tangency, the sharp floor `1/(7w_2w_3)`, and the complete
-  minimal-norm-18 empty atlas `{(7,11,43),(7,11,47),(7,25,29)}`.
+  unit shells and norm-20 one-zero presentations. THM-4413 proves non-tangency
+  and the complete norm-18 empty atlas. THM-4409/4414 turn every degree-zero
+  network into raw projection sums `E_i`.
   [THM-4418](../01-canon/theorems/THM-4418-lrc14-sharp-pair-arithmetic-and-forty-four-thirteenths-tail.md)
-  gives sharp pair mass `12/77`, component count `24b/13`, and strict
-  degree-zero closure for every odd ternary-unit triple with `c/b>=44/13`.
-  THM-4420 proves every `E_i<=6/77` on both ternary-unit near-doubling rays,
-  uniquely sharply at `(1,5,11)`; these lie inside the comparable-speed region.
-  Universal height in `c/b<44/13`, arbitrary nonresonance, and entry are open.
+  gives sharp pair mass/component bounds and closes `c/b>=44/13`. THM-4420
+  closes both unit near-doubling rays; THM-4422 closes every signed norm-four
+  family and gives exact deficit/Beatty rows. Fixed convex averages fail;
+  `min_i E_i<=6/77` stays open in `c/b<44/13`, with first H79 multi-ray
+  `(19,23,29)`. Arbitrary nonresonance and entry remain open.
 - **Transport extension:** [sparse-contact proof](../05-knowledge/results/synthesis_20260905_lrc_sparse_transport.md) adds star structure, arbitrary-phase intersection closure, weighted limits, and the exact carrier-selector gap.
 - **Residual ranks:** THM-4333/4338 close fixed-pool ranks three/four, not arbitrary entry.
 - **PROVED:** [THM-2928](../01-canon/theorems/THM-2928-critical-seven-comb-grid-tensorization-and-drift-tariff.md)/2941: literal zero/one/two/three-drift sectors are empty; `k=2,3` are finite.

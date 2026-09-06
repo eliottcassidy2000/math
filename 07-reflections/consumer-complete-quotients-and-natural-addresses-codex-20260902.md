@@ -430,6 +430,18 @@ to `(a,m,2m+sigma a)` pinpoints the next obstruction: divisibility only forces
 that coordinate into `aZ`, so an additional residue/phase sidecar may be
 needed before ordinal counting is again lossless.
 
+THM-4422 removes that apparent obstruction for every signed norm-four speed
+relation.  The correct global scalar is not a fixed average of the three
+projections—two tiny carrier sets prove that no such weights exist—but the
+adaptive maximum of three boundary deficits.  Within one projection,
+`C_1=gcd(w_2,w_3)n` is a natural address, one residue of a Bezout parameter
+modulo three is admissible, and an affine open interval supplies its exact
+multiplicity.  This is a consumer-complete sequence code even when a single
+ray code is unavailable.  The first finite dense escape, `(19,23,29)`, has
+carriers `+/-{u,v,u+v}`.  The additive circuit is the useful structure; forcing
+it into a cosmetic tournament would lose the roof margins that select the
+winning projection.
+
 THM-4421 tests whether THM-4413's residue-forced transversality transfers to
 the exceptional-quartic collision period.  In one integral compiler it does:
 `F(h)=8O(h)+18E(h)`, so the nonzero odd-coefficient residue forces the sharp

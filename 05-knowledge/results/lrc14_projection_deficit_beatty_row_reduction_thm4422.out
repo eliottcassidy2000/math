@@ -1,0 +1,17 @@
+LRC14 PROJECTION DEFICIT + BEATTY-ROW REDUCTION THM-4422
+status=PASS PROVED_REDUCTIONS+FINITE_EXACT_CONTROLS; universal_inequality=OPEN; LRC14=OPEN
+row_formula_height=79 triples=2910 first_coordinate_rows=81792 max_row_multiplicity=3
+carrier_count_split sparse_automatic=2796 dense_needing_deficit=114
+dense_H79 gcd_profiles={(1, 1, 1): 114} directions={(2, 1, -1): 55, (1, 2, -1): 6, (1, -2, 1): 52} winners={((2, 1, -1), 0): 55, ((1, 2, -1), 1): 6, ((1, -2, 1), 1): 52} exception=[((19, 23, 29), ((1, 8, -7), (10, -7, -1), (11, 1, -8)), 0)]
+dense_exception_carriers=((-11, -1, 8), (-10, 7, 1), (-1, -8, 7), (1, 8, -7), (10, -7, -1), (11, 1, -8)) projections=('156/4669', '192/3857', '3840/88711')
+slope_two_family_rows_through_c499=166 equality=[(1, 5, 11)] runner_up=(Fraction(12, 161), (1, 11, 23))
+arithmetic_progression_family c=2b-a finite_base=49 formula_rows_c499=3167 best=(Fraction(24, 343), (1, 25, 49))
+norm_four_relation_families finite_base_c67=105 formula_rows_c499=6353 types={(2, 1, -1): 2122, (1, 2, -1): 1064, (1, -2, 1): 3167} leaders=[(Fraction(6, 77), (1, 5, 11), 1), (Fraction(12, 161), (1, 11, 23), 1), (Fraction(24, 343), (1, 25, 49), 1)]
+family_control (1, 5, 11) positive_t_count 1 S ('6/77', '6/77', '6/77') cap 6/77
+family_control (1, 11, 23) positive_t_count 2 S ('12/161', '12/161', '12/161') cap 12/161
+family_control (1, 25, 49) positive_t_count 4 S ('24/343', '24/343', '24/343') cap 24/343
+fixed_weight_stopper_rows=
+  (1, 5, 7) ('8/245', '6/49', '4/35')
+  (5, 11, 17) ('122/1309', '8/119', '12/119')
+forced_alpha1=49/110 forced_alpha2=10/17 sum=1933/1870
+checks=280598 verdict=PASS
