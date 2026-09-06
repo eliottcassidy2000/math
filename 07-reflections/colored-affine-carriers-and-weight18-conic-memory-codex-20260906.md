@@ -249,9 +249,10 @@ proves the combined chord bound `ell_1+ell_2<=3c/14`, and isolates the strict
 
 ## 8. Procedurally generated next tasks
 
-1. Promote the independently checked exactly-two-direction theorem. Its
-   determinant multiple of three and reciprocal coefficient bound should
-   move the residual to at least three primitive directions.
+1. Audit the reserved exactly-three-direction theorem candidate. Its missing
+   all-height hinge is a colored-lattice basis descent and the classification
+   of complete three-ray circuits as `(1,1,1)` or `(1,1,2)`; finite H99
+   evidence is not a substitute for that lemma.
 2. Classify the first surviving shortest-width shell `mu_1=16`. Determine
    whether its extra layers admit a new all-height count bound or require a
    baseline-aware affine-circuit invariant.

@@ -18,7 +18,9 @@
   [THM-4427](../../01-canon/theorems/THM-4427-all-cumulative-signed-cycle-gaps-by-transposition-rigidity.md)
   closes every remaining cumulative signed-cycle gap;
   [THM-4428](../../01-canon/theorems/THM-4428-lrc14-two-direction-network-closure-and-sharp-one-direction-gap.md)
-  closes one/two-direction LRC networks (rank-one overlap credited to 4425);
+  closes one/two-direction LRC networks (rank-one overlap credited to 4425),
+  with a new import-free three-representation referee at hashes
+  `c1e0964d...ec52` / `d41c3f24...950e`;
   [THM-4429](../../01-canon/theorems/THM-4429-arbitrary-three-node-two-jet-smith-form-and-metric-precision.md)
   gives arbitrary three-node integer Smith/precision laws;
   [THM-4430](../../01-canon/theorems/THM-4430-laurent-root-rotation-rigidity-and-marked-packet-genus.md)

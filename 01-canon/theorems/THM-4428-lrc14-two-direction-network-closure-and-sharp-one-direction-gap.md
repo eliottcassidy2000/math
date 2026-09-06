@@ -15,6 +15,25 @@ proof: 05-knowledge/results/lrc14_two_ray_overnight_hexagon_sep05.md
 companion_proof: 05-knowledge/results/lrc14_one_ray_overnight_hexagon_sep05.md
 script: 04-computation/lrc14_two_ray_overnight_hexagon_sep05.py
 output: 05-knowledge/results/lrc14_two_ray_overnight_hexagon_sep05.out
+script_sha256: 07cb6c797679335152eb850071456bf64d8fc7f1fc7da176b8f5f00790684d26
+output_sha256: 4b387916df346e1b166aee081d78897bae5c089153a5f068d1b44e0ac817ea1c
+one_ray_script: 04-computation/lrc14_one_ray_overnight_hexagon_sep05.py
+one_ray_output: 05-knowledge/results/lrc14_one_ray_overnight_hexagon_sep05.out
+one_ray_script_sha256: 6b41a879700632aa934650f27dafe9d076c051ddcee3262fabc07556a7aaf875
+one_ray_output_sha256: c098ee8a43644f349d21f16257596c84991b732596059bb603db1769cbb73a2f
+independent_script: 04-computation/lrc14_two_direction_network_closure_independent_referee_thm4428.py
+independent_output: 05-knowledge/results/lrc14_two_direction_network_closure_independent_referee_thm4428.out
+independent_script_sha256: c1e0964d82776c3dcf2c49b00955a95ca3a1b104e1e3b1bc43fc469a5d88ec52
+independent_output_sha256: d41c3f2473a2dfff26e694b58a2fbb64c041f4e99ad7df2817a6c5eb6cb4950e
+hash_basis: raw LF bytes
+audit: >
+  PASS. The import-free referee reconstructs all 814 finite-head rows with
+  independent owner-interval, xy-box, and yz-box engines. On the 192 exact
+  two-direction rows it also rebuilds literal sheet networks, verifies every
+  determinant and reciprocal inequality, and matches all three projections.
+  It audits the THM-4386 quantifier and the distinction between direction
+  count and rank. There are 26,636 main and 195 literal-sheet gates; normal
+  and optimized outputs byte-match the frozen LF artifact.
 ---
 
 # THM-4428 -- LRC14 two-direction network closure and sharp one-direction gap
@@ -67,3 +86,22 @@ Independent literal relation boxes and physical sheet networks audit the head.
 The first two-ray hostile (17,23,25) forbids discarding an independent ray.
 At least three live directions remain in a hypothetical network failure;
 chart entry, synchronization, and LRC(14) do not follow.
+
+The independent referee additionally checks every one of the 814 head rows
+through two unrelated lattice boxes, all 192 selected rows through literal
+physical sheets, and the tail controls `(1,11,55)`, `(1,5,101)`, and
+`(5,49,251)`. Its 26,636 arithmetic gates and 195 sheet gates remain active
+under optimization. The semantic head and selected-row digests, exact hashes,
+and notation identity `E_i(THM-4414)=S_i(THM-4422)` are frozen in the linked
+output; this audit adds no entry or synchronization conclusion.
+
+## Reproduction
+
+Run from the repository root:
+
+```powershell
+python -B 04-computation/lrc14_one_ray_overnight_hexagon_sep05.py
+python -B 04-computation/lrc14_two_ray_overnight_hexagon_sep05.py
+python -B 04-computation/lrc14_two_direction_network_closure_independent_referee_thm4428.py
+python -B -O 04-computation/lrc14_two_direction_network_closure_independent_referee_thm4428.py
+```

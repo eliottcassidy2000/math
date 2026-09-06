@@ -1,0 +1,19 @@
+THM-4428 TWO-DIRECTION NETWORK CLOSURE -- CLEAN-ROOM INDEPENDENT REFEREE
+status=PASS; theorem_scope=complete support with exactly two primitive unoriented directions
+notation=E_i(THM-4414)=S_i(THM-4422)=raw coordinate-i network projection
+analytic_dependency=THM-4386 Lemma 2.1 short full-support ternary-unit relation rigidity
+analytic_chain=l1>=16; M_u,M_v>=7; 3c<=2M_uM_v; E_i<12/343+16/(7c)
+tail_start=55; tail_envelope_at_55=1444/18865; target=6/77
+residue_kernel_cases=8; signed_small_vector_cases=256
+finite_head=max_speed<55; universe_rows=814; three_representation_rows=814
+finite_head_exactly_two_direction_rows=192; literal_network_rows=192
+finite_head_first_two_direction=(17, 23, 25)
+finite_head_leader=value:114/2233,triple:(11, 23, 29),E:(Fraction(2, 203), Fraction(114, 2233), Fraction(1634, 51359)),directions:((8, 5, -7), (11, -4, -1))
+direction_not_rank_control=triple:(19, 23, 29),rank:2,direction_count:3,directions:((1, 8, -7), (10, -7, -1), (11, 1, -8)),E:(Fraction(156, 4669), Fraction(192, 3857), Fraction(3840, 88711))
+tail_control=triple:(1, 11, 55),N:4,directions:((11, -11, 2), (11, 4, -1)),k:3,E:(Fraction(8, 385), Fraction(12, 385), Fraction(12, 385)),physical:8/385
+tail_control=triple:(1, 5, 101),N:4,directions:((1, 20, -1), (16, 17, -1)),k:-3,E:(Fraction(12, 707), Fraction(12, 707), Fraction(12, 707)),physical:12/707
+tail_control=triple:(5, 49, 251),N:10,directions:((11, 4, -1), (59, -47, 8)),k:-3,E:(Fraction(1076, 86093), Fraction(30, 1757), Fraction(30, 1757)),physical:1076/86093
+all_head_rows_sha256=be488f4a7b505925d3326ffe5198362f2baf3d7a9b4af93c1449da78df11b25d
+selected_rows_sha256=9de8df6f564935c4c1a4b92043ea7117d2a6184b8b3e4e949941706aee4afcb4
+checks=26636; literal_checks=195; literal_network_rows_total=195
+verdict=PASS; three_or_more_directions=OPEN; entry=OPEN; synchronization=OPEN; LRC14=OPEN
