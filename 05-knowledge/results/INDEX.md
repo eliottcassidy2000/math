@@ -10,6 +10,12 @@
   separates polynomial collision payment, full descended Hamiltonian response,
   and preservation of the J8 obstruction under every O(t10) source repair.
   [Manifest](overnight7_20260906_manifest.json): 22 frozen artifacts.
+- [THM-4447: exact composite-clock capacity](../../01-canon/theorems/THM-4447-lrc14-composite-clock-capacity-and-small-clock-reduction.md):
+  **PROVED RELATIVE TO LRCUpTo13 + VERIFIED-EXACT + INDEPENDENTLY AUDITED;
+  LRC(14) OPEN.** The pointwise tail count is an exact floor/ceiling law with
+  capacity `g ceil(q/(7g))`. Divisor absorption closes every primitive
+  ten-pack clock at least five for arbitrary tails and independently recovers
+  the prior residual clocks `2,3,4`; that classification is not claimed new.
 
 - [THM-4446: primitive ten-pack descent and dilation rays](../../01-canon/theorems/THM-4446-lrc14-primitive-ten-pack-descent-and-dilation-rays.md):
   **PROVED RELATIVE TO LRCUpTo13/THM-3818/4052/4442 + VERIFIED-EXACT +

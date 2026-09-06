@@ -1,0 +1,11 @@
+INDEPENDENT_COMPOSITE_CLOCK_REFEREE
+orbit_translate_samples 36940 resonances 18280
+literal_label_cases 50547
+typed_divisor_rewrites 1608
+gcd_signatures_q_le_512 175081
+unresolved {2: ((1, 1, 1), (1, 1, 2), (1, 2, 1), (2, 1, 1)), 3: ((1, 1, 1),), 4: ((1, 1, 2), (1, 2, 1), (2, 1, 1))}
+equality [(3, (1, 4, 5), Fraction(23, 112), (frozenset({0}), frozenset({2}), frozenset({1}))), (4, (1, 11, 14), Fraction(86, 539), (frozenset({0}), frozenset({2}), frozenset({1, 3})))]
+absorbed_equality [(2, (1, 7, 8), Fraction(13, 98), (8,), (1, 7), (frozenset({0}), frozenset({1}))), (4, (1, 11, 14), Fraction(1, 11), (14,), (1, 11), (frozenset({0}), frozenset({1})))]
+endpoint_deficits [(7, 1, Fraction(1, 2), 1, 1, frozenset(), True), (14, 2, Fraction(1, 2), 2, 2, frozenset(), True), (4, 1, Fraction(2, 7), 1, 1, frozenset(), True), (8, 2, Fraction(2, 7), 2, 2, frozenset(), True), (9, 1, Fraction(0, 1), 1, 2, frozenset({0}), False)]
+checks 254791
+PASS

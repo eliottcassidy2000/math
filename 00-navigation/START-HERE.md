@@ -21,9 +21,9 @@ Then read frontier, guardrails, theorem; logs are history.
 
 ## Nineteen high-signal facts
 
-1. **LRC(14) is first open.** THM-4347 closes height `40`.
-   THM-4441/4444/4445 classify ternary-unit tails; THM-4442/4446 close
-   bounded bodies and dilation rays. Entry and `2+12` remain open.
+1. **LRC(14) is first open.** THM-4347 closes height `40`;
+   THM-4441/4444/4445 classify tails, THM-4442/4446 close bounded rays,
+   and THM-4447 leaves pack clocks `2,3,4`. Entry and `2+12` remain open.
 2. **The `q <= 25` period claim is refuted.** THM-762/764 exhibit `26*{1,...,12} union {339}`, whose first good period is `27`.
 3. **Good-period existence is a maximum statement.** The tight resonant AP
    defeats average/count arguments; see MISTAKE-127/129/130.

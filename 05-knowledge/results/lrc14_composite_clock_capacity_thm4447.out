@@ -1,0 +1,11 @@
+COMPOSITE_CLOCK_CAPACITY_AUDIT
+CAP B_q(t)=g*ceil(q/(7g)), g=gcd(q,t)
+orbit_cases 36940 low_count_cases 26860
+literal_q_t_y_cases 21948
+signature_cases_q_le_210 43991
+primitive_ten_pack_unresolved {2: ((1, 1, 1), (1, 1, 2), (1, 2, 1), (2, 1, 1)), 3: ((1, 1, 1),), 4: ((1, 1, 2), (1, 2, 1), (2, 1, 1))}
+pointwise_cover_controls {2: ((1, 5, 7), Fraction(13, 98), (frozenset({0}), frozenset(), frozenset({1}))), 3: ((1, 4, 5), Fraction(23, 112), (frozenset({0}), frozenset({2}), frozenset({1}))), 4: ((1, 11, 14), Fraction(86, 539), (frozenset({0}), frozenset({2}), frozenset({1, 3})))}
+absorbed_divisor_two_controls {2: ((1, 7, 8), Fraction(13, 98), (frozenset({0}), frozenset({1}), frozenset())), 4: ((1, 11, 14), Fraction(1, 11), (frozenset({0}), frozenset({1}), frozenset()))}
+low_count_transition_controls [(7, 1, 1, 7, 1, (Fraction(1, 2), frozenset())), (14, 2, 2, 7, 2, (Fraction(1, 2), frozenset())), (4, 1, 1, 4, 1, (Fraction(2, 7), frozenset())), (8, 2, 2, 4, 2, (Fraction(2, 7), frozenset())), (9, 1, 1, 9, 2, (Fraction(0, 1), frozenset({0})))]
+checks 1140196
+PASS
