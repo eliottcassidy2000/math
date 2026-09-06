@@ -404,6 +404,3 @@ substitution and follows the nested symbolic specializations
 recovering `(11)`, `(14)`, `(17)`, and `(21)` independently. Both scripts
 derive or check the determinant in `(5)`, keep all arithmetic exact, and
 contain explicit hostile/scope gates.
-
-This file reserves the theorem identifier and filename only. It contains no
-claim, proof, proved dependency, or proved consequence.
