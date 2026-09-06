@@ -1,0 +1,28 @@
+PROOF CANDIDATE: exact primitive native-line packet and root-interval criterion; independent audit pending.
+Controls: all odd primes<=43 plus61,97,113,197; three representations and literal full triangle sets agree.
+CONTROL {"p":3,"chi5":-1,"triples":0,"packets":[]}
+CONTROL {"p":5,"chi5":0,"triples":0,"packets":[]}
+CONTROL {"p":7,"chi5":-1,"triples":0,"packets":[]}
+CONTROL {"p":11,"chi5":1,"triples":2,"packets":[[1,1,10,3,7,1]]}
+CONTROL {"p":13,"chi5":-1,"triples":0,"packets":[]}
+CONTROL {"p":17,"chi5":-1,"triples":0,"packets":[]}
+CONTROL {"p":19,"chi5":1,"triples":2,"packets":[[1,1,18,4,14,2]]}
+CONTROL {"p":23,"chi5":-1,"triples":0,"packets":[]}
+CONTROL {"p":29,"chi5":1,"triples":4,"packets":[[4,3,7,3,4,1],[1,1,28,5,23,3]]}
+CONTROL {"p":31,"chi5":1,"triples":2,"packets":[[1,1,30,12,18,6]]}
+CONTROL {"p":37,"chi5":-1,"triples":2,"packets":[[2,3,18,8,10,6]]}
+CONTROL {"p":41,"chi5":1,"triples":4,"packets":[[5,6,8,3,5,2],[1,1,40,6,34,4]]}
+CONTROL {"p":43,"chi5":-1,"triples":2,"packets":[[6,5,7,2,5,1]]}
+CONTROL {"p":61,"chi5":1,"triples":4,"packets":[[12,11,5,2,3,1],[1,1,60,17,43,11]]}
+CONTROL {"p":97,"chi5":-1,"triples":2,"packets":[[12,7,8,3,5,1]]}
+CONTROL {"p":113,"chi5":-1,"triples":4,"packets":[[8,5,14,6,8,2],[4,3,28,8,20,4]]}
+CONTROL {"p":197,"chi5":-1,"triples":6,"packets":[[28,17,7,3,4,1],[7,3,28,3,25,1],[4,7,49,23,26,21]]}
+TEMPLATE {"residue":37,"modulus":360,"h":18,"k":8,"l":10,"c":6,"a":[2,20],"b":[3,27],"points":[[[24,216],[17,160]],[[30,270],[21,200]]],"product_quotients":[[11,96],[17,150]]}
+TEMPLATE {"residue":43,"modulus":70,"h":7,"k":2,"l":5,"c":1,"a":[6,10],"b":[5,7],"points":[[[10,14],[13,20]],[[25,35],[31,50]]],"product_quotients":[[3,4],[18,25]]}
+TEMPLATE {"residue":97,"modulus":120,"h":8,"k":3,"l":5,"c":1,"a":[12,15],"b":[7,8],"points":[[[21,24],[37,45]],[[35,40],[61,75]]],"product_quotients":[[8,9],[22,25]]}
+Native lift hostile p13:(a,b)=(2,1),Delta9,roots7/12,H5,determinant65; actual repair succeeds.
+All three primitive progressions have chi5=-1 and two forced native triples; infinity uses CITED Dirichlet.
+The original one-defect graph is repaired to zero defects or changed to an even positive number.
+No all-prime repair, general zero-swap classification, or2p-point construction is inferred.
+CERTIFICATE_SHA256 1da5e84836de4aee72e0636e792a43715c9cb85eac9e621203e215ac7e228380
+PASS 1741 always-active exact gates.

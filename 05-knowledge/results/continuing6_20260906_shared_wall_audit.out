@@ -1,0 +1,18 @@
+Both exact shared charts reconstructed; each has four simple positive singular r values, with no extraneous reconstruction branch.
+Selected r uniquely isolated in(3528453826758,3528453826759)/10^12; lower u branch, x,y,z,s positive.
+The referee refines r by40 exact sign bisections before evaluating the quotient-field response.
+SIGN ["Bred",18,20,1,-1]
+SIGN ["Bred",669,671,-1,1]
+SIGN ["Bred",2450,2453,1,-1]
+SIGN ["Bred",6330,6334,-1,1]
+SIGN ["Cred",387,390,-1,1]
+SIGN ["Cred",1950,1954,1,-1]
+SIGN ["Cred",6129,6133,-1,1]
+SIGN ["D",181,184,1,-1]
+SIGN ["D",1492,1495,-1,1]
+SIGN ["D",3382,3386,1,-1]
+SIGN ["D",5938,5942,-1,1]
+B has five simple positive roots; C shares exactly one and otherwise strictly interlaces; D strictly interlaces.
+Original native phase coefficient and phase vanish; Q(-s) lies strictly between-5634725 and-5634723.
+Division by the shared-chart phase coefficient would discard an admissible full-model wall. General shared sign remains open.
+PASS 136 always-active exact gates.

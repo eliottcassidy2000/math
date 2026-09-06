@@ -34,6 +34,41 @@ Format per entry:
   recorded without counting a new literature exclusion. The current
   withdrawn Jelonek abstract is not the correct version3 theorem.
 
+## 2026-09-06 continuing6 -- phase, denominator and native-lift firewalls
+
+- [Simultaneous missing intervals](../05-knowledge/results/continuing6_20260906_lrc_near_resonance.md):
+  a strict separation condition cannot become weak. At q43,n294 two
+  closed absence intervals touch at phase0, giving minimum5 instead of6.
+  This is an allowed atlas pair, not an unsafe thirteen-speed row. Retain
+  actual endpoint values; open-cell extrema omit the hostile phase.
+- [Prime norm units](../05-knowledge/results/continuing6_20260906_norm_units_audit.md):
+  a numerator prime is insufficient without denominator valuations.
+  H=z=1,p5 already defeats monomial reduction; H26,z3,p109 genuinely
+  gives reduced gcd t-5. The same rational rows have norm65 modulo157,
+  proving coprimality and the finite boundary point(27,1). Failed modular
+  separation is not rational cancellation, and a modular unit has no
+  automatic real sign.
+- [Zero-boundary signs](../05-knowledge/results/continuing6_20260906_zero_boundary.md):
+  x84,y1050/11,z0,s1/6 has an original zero and positive response, but
+  violates the necessary C/B Gram packet. The valid(84,35,0) point also
+  has positive response at s1/4, which is not an original phase. Keep
+  both predicates. The extremum reduction supplies a possibly different
+  boundary witness at the same phase; it does not place every counterexample
+  on the boundary.
+- [Reciprocal native packets](../05-knowledge/results/continuing6_20260906_reciprocal_native.md):
+  the discriminant-five obstruction is sufficient, not an iff; p37 fails
+  with character negative. A general split quadratic also needs its native
+  root interval: p13 gives modular determinant65 instead of0. At p113,
+  dividing a displayed slope by4 changes the primitive packet. Neither
+  modular collinearity nor an unreduced owner counts the actual triples.
+
+- [Shared-root chart wall](../05-knowledge/results/continuing6_20260906_shared_wall.md):
+  dividing the original affine phase equation by its x coefficient loses
+  an admissible singular fibre. Both coefficient and constant vanish;
+  full beta/interlacer geometry survives on a nontrivial x-interval.
+  The certified response is negative. This is a chart obstruction, not
+  a sign counterexample or an integer-support Laurent realization.
+
 ## 2026-09-06 extended second round -- joint positions and conserved defects
 
 - [Joint overlap positions](../05-knowledge/results/long_frontier2_sep06_lrc.md)

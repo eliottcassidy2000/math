@@ -1,0 +1,7 @@
+SOURCE_METHOD lowering recurrence and falling products; no producer imports
+COMPLETE_BANK 492 PERIODIC16 FRESH 6 RATIONAL_SYLVESTER48
+MINIMAL_HOSTILE H1 z1 p5: response -8; characteristic norm +8
+LARGE_HOSTILE H26 z3 p109 gcd [104, 1] root 5 mod157 resultant 65 norm 65 rational gcd1
+BOUNDARY_PRIME_CASES 67 r>=ceil(h/3), h1..200
+PRODUCER_CERTIFICATE_SHA256 058354c40113b27150af49e164d8537b6f75eb6352dcc9fe9020229b47184479
+PASS 37331 always-active exact gates; actual LF

@@ -1,0 +1,19 @@
+Original P/Q rebuilt with binomial14 and inverse carry28; sQ=-F/968 on the original zero phase.
+Packet: x>=75, 0<=y<=(7/72)(x-75)(135-x); hence x<=135,y<=175/2.
+Uniform phases: (1/110,1/90), (63/1000,1/8), and (9/16,infinity) for y>0; first two for y=0.
+raw first corner x=75,y=0: 9 positive coefficients, minimum 340209247973/566899520.
+raw first corner x=75,y=175/2: 9 positive coefficients, minimum 8128988108758357/13718968384000.
+raw first corner x=135,y=0: 9 positive coefficients, minimum 6831521934461/14172488000.
+raw first corner x=135,y=175/2: 9 positive coefficients, minimum 260452122980509/548758735360.
+negative discriminant: 7 positive coefficients, minimum 17987365736233620424877833708131/2500000000000000.
+J at x=105: 4 positive coefficients, minimum 40761/110000.
+F at x=105: 7 positive coefficients, minimum 32275785602081/262144.
+negative Fx at x=105: 7 positive coefficients, minimum 260266674481272503/20000000000.
+J at x=84: 4 positive coefficients, minimum 2008239/45056.
+F quadrant x>=84,s>=9/16: all21 shifted coefficients positive.
+F quadrant x>=75,s>=3/5: all21 shifted coefficients positive.
+(84,35,0), C/B full Gram leading minors: [1, 2, 11, 188, 7125].
+(84,35,0), D/B full Gram leading minors: [1, 3, 26, 705, 30600].
+Coefficient certificate SHA256: f6c169d4190f96465f93d195fe4517537a9c40e85370ae6a736e0e2886e9b12e
+Entire zero-beta boundary is closed, even with C alone. Shared-root boundaries and general sign remain OPEN.
+PASS: 168 always-active exact gates.

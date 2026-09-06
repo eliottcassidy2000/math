@@ -1,0 +1,15 @@
+Independent dense binomial14 carriers: original phase and inverse carry28 retained.
+Two C/B Gram inequalities give the complete packet rectangle; original phase elimination matches F,J.
+STURM ["raw first corner x=75,y=0",6,4,4]
+STURM ["raw first corner x=75,y=175/2",8,5,5]
+STURM ["raw first corner x=135,y=0",6,4,4]
+STURM ["raw first corner x=135,y=175/2",8,6,6]
+STURM ["negative discriminant",6,1,1]
+STURM ["J at x=105",3,1,1]
+STURM ["F at x=105",6,2,2]
+STURM ["negative Fx at x=105",6,1,1]
+STURM ["J at x=84",3,1,1]
+All107 coefficient signs and both quadrant arrays verified independently; nine charts have no roots by Sturm.
+All-phase coverage and derivative orientations checked; full-model, C-only repeated, off-phase and no-packet controls retained.
+Audit scope: original positive phases on zero beta boundary; shared-root and general sign remain open.
+PASS 251 always-active exact gates.

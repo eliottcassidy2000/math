@@ -553,6 +553,8 @@ new homotopy group, `p=2` statement, or LRC/GMC consequence.
   which proves both all-`m` statements that verification left open and
   generalizes them to an infinite family.
 
+[No-three arithmetic sources](CORE-PAPERS-NO3-ARITHMETIC.md).
+
 ## 2026 preprint intake
 
 ### Finite hyperbolicity preservers — checked 2026-09-06

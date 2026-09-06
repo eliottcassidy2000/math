@@ -1,0 +1,6 @@
+CHART_IDENTITIES C,D exact; each has four positive simultaneous coefficient/constant zeros
+ADMISSIBLE C singular wall r in ['1764226913379/500000000000', '3528453826759/1000000000000'] z=r^2/18; B simple positive; C weak and D strict interlacing
+ORIGINAL_PHASE s range 0.11620532557559443 0.11620532561525343 original Q integer enclosure [-5634725, -5634723]
+SCOPE denominator division loses a genuine model wall; this witness is negative, general shared-root sign OPEN
+CERTIFICATE_SHA256 6adab7b43f30296cdac428596ce7c046d163751b6d48fea4db02fe17a100dce4
+PASS 65 always-active exact gates; actual LF

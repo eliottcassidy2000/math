@@ -1,0 +1,24 @@
+p=3: 0 native triples, 0 primitive packets, chi5=-1.
+p=5: 0 native triples, 0 primitive packets, chi5=0.
+p=7: 0 native triples, 0 primitive packets, chi5=-1.
+p=11: 2 native triples, 1 primitive packets, chi5=1.
+p=13: 0 native triples, 0 primitive packets, chi5=-1.
+p=17: 0 native triples, 0 primitive packets, chi5=-1.
+p=19: 2 native triples, 1 primitive packets, chi5=1.
+p=23: 0 native triples, 0 primitive packets, chi5=-1.
+p=29: 4 native triples, 2 primitive packets, chi5=1.
+p=31: 2 native triples, 1 primitive packets, chi5=1.
+p=37: 2 native triples, 1 primitive packets, chi5=-1.
+p=41: 4 native triples, 2 primitive packets, chi5=1.
+p=43: 2 native triples, 1 primitive packets, chi5=-1.
+p=61: 4 native triples, 2 primitive packets, chi5=1.
+p=97: 2 native triples, 1 primitive packets, chi5=-1.
+p=113: 4 native triples, 2 primitive packets, chi5=-1.
+p=197: 6 native triples, 3 primitive packets, chi5=-1.
+p=37 mod 360: all-parameter native identities and box inequalities pass; infinitude uses CITED Dirichlet.
+p=43 mod 70: all-parameter native identities and box inequalities pass; infinitude uses CITED Dirichlet.
+p=97 mod 120: all-parameter native identities and box inequalities pass; infinitude uses CITED Dirichlet.
+Independent universe: 1715293 literal integer triples, 303 eligible primitive slopes, 17 accepted packets.
+Prime-family identities, native intervals, transpose multiplicity, and primitive gauge all pass.
+No successful infinite family, arbitrary-swap classification, or 2p-point construction inferred.
+PASS: 998 always-active exact gates.

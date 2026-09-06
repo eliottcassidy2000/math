@@ -1,0 +1,8 @@
+finite_prime_divisor_cases 492
+new_height_cases 292
+square_prime_extension_cases 4
+periodic_controls 16
+largest_complementary_height 31
+minimal_hostile_Psi_mod5 t^2+1; rational_response -8
+always_active_gates 45102
+PASS

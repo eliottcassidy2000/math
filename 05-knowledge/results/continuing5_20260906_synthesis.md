@@ -1,7 +1,9 @@
 # Coefficient signs, complementary norms, and located repair certificates
 
-**CURRENT CHECKPOINT, 2026-09-06; PROVED + FINITE-EXACT + INDEPENDENTLY AUDITED.**
-This cycle removes clock16704 from the connected-complement LRC reduction,
+**PREVIOUS CHECKPOINT, 2026-09-06; PROVED + FINITE-EXACT + INDEPENDENTLY AUDITED.**
+The [current continuing6 checkpoint](continuing6_20260906_synthesis.md) adds
+zero-boundary closure, unbounded prime norm units and three more clock exclusions.
+This earlier cycle removes clock16704 from the connected-complement LRC reduction,
 leaving8201 clocks with maximum14904. It also proves simple beta roots in
 the full anchored model, a continuous phase-sign region, an all-height norm
 identity with seven exact diagonals, and a complete finite geometric repair

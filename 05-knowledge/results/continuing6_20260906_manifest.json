@@ -1,0 +1,204 @@
+{
+  "schema": 1,
+  "created_utc": "2026-09-06T21:53:42.857173+00:00",
+  "baseline_commit": "efdf4fe524f288268f9aad008617af9d3d356331",
+  "incoming_review_commits": [
+    "03d16f65c70d59c59ef7af79050b271b002cad6b"
+  ],
+  "hash_basis": "raw LF bytes; maintained boards, manifest and navigation excluded",
+  "scope": "Entire zero-beta original-phase sign boundary; prime-divisor complementary norm units at unbounded heights; connected-complement clocks14904,14898,14892 excluded leaving8198/max14886; exact native reciprocal packet iff and prime obstruction families. General conjectures remain OPEN. Exact shared-root charts and a genuine admissible singular fibre with negative response; general shared-root signs remain OPEN.",
+  "validation": {
+    "continuing6_20260906_norm_units": 45102,
+    "continuing6_20260906_norm_units_audit": 37331,
+    "continuing6_20260906_lrc_near_resonance": 99305,
+    "continuing6_20260906_lrc_near_resonance_audit": 88593,
+    "continuing6_20260906_zero_boundary": 168,
+    "continuing6_20260906_zero_boundary_audit": 251,
+    "continuing6_20260906_reciprocal_native": 1741,
+    "continuing6_20260906_reciprocal_native_audit": 998,
+    "continuing6_20260906_shared_wall": 65,
+    "continuing6_20260906_shared_wall_audit": 136
+  },
+  "normal_optimized_raw_stdout_equal": true,
+  "regenerated_certificates_raw_unchanged": true,
+  "prior_artifacts_verified": 58,
+  "artifacts": [
+    {
+      "path": "04-computation/continuing6_20260906_lrc_near_resonance.py",
+      "bytes": 14773,
+      "sha256": "6027344aba5f9bda6c2637d7a992cb66367ec05f03c9cbde26761c65f438f93f"
+    },
+    {
+      "path": "04-computation/continuing6_20260906_lrc_near_resonance_audit.py",
+      "bytes": 8453,
+      "sha256": "3e692a5bafed19b1a5ba9417e6cca0b070cf04199af00e9f48e7f65e45b2f9b7"
+    },
+    {
+      "path": "04-computation/continuing6_20260906_norm_units.py",
+      "bytes": 5761,
+      "sha256": "b63551e61022fb2058d0a65c2b07115346128490ae5fb43e0e69b1f46200ceb7"
+    },
+    {
+      "path": "04-computation/continuing6_20260906_norm_units_audit.py",
+      "bytes": 9433,
+      "sha256": "f483a3cca43854059ab5b403c22372bab392bffe8643171b7ed328a2b37a39ea"
+    },
+    {
+      "path": "04-computation/continuing6_20260906_norm_units_certificate.json",
+      "bytes": 48641,
+      "sha256": "058354c40113b27150af49e164d8537b6f75eb6352dcc9fe9020229b47184479"
+    },
+    {
+      "path": "04-computation/continuing6_20260906_reciprocal_native.py",
+      "bytes": 9109,
+      "sha256": "d0981913961389520200a8215b1c2f8611ea7090bd379ba2024ceb9a6b345c11"
+    },
+    {
+      "path": "04-computation/continuing6_20260906_reciprocal_native_audit.py",
+      "bytes": 8881,
+      "sha256": "d1ab92b90becba019037f16634be910dbbaf1b6a47b67e7a9d821093f9b941de"
+    },
+    {
+      "path": "04-computation/continuing6_20260906_shared_wall.py",
+      "bytes": 8529,
+      "sha256": "ef604a3c9276171b844f6e260bc788a17160ad6e85a70f3fbd131ee4f3c362c4"
+    },
+    {
+      "path": "04-computation/continuing6_20260906_shared_wall_audit.py",
+      "bytes": 10696,
+      "sha256": "1c19836e3381a709604b2d0d27b273b5de1efbc1c1cc1901d7119e2fa6cecba4"
+    },
+    {
+      "path": "04-computation/continuing6_20260906_zero_boundary.py",
+      "bytes": 9933,
+      "sha256": "dd28188852e5fb955d19d886687f2cb791e25cbf1a6f1c3b2bf66158cc467e6b"
+    },
+    {
+      "path": "04-computation/continuing6_20260906_zero_boundary_audit.py",
+      "bytes": 9454,
+      "sha256": "9c147bdad50fe34b650bd43faf3ab9217a48af41cbf11f672de052bf2aeea427"
+    },
+    {
+      "path": "05-knowledge/results/continuing6_20260906_lrc_near_resonance.md",
+      "bytes": 15496,
+      "sha256": "995a0f3877eceefd642c314537e714f1b8978d51ba9fe4654e479ee3ebe47c1a"
+    },
+    {
+      "path": "05-knowledge/results/continuing6_20260906_lrc_near_resonance.out",
+      "bytes": 1011,
+      "sha256": "9a650dd5227063c06f62c88bdd6036632761167e3e29475340e9a35bf6719f61"
+    },
+    {
+      "path": "05-knowledge/results/continuing6_20260906_lrc_near_resonance_audit.md",
+      "bytes": 4682,
+      "sha256": "df0ac0254aef9a8d5f82df6e0fc9b41dac26878bec261aeac7885611ff5422cb"
+    },
+    {
+      "path": "05-knowledge/results/continuing6_20260906_lrc_near_resonance_audit.out",
+      "bytes": 464,
+      "sha256": "262f4db7dafac8663a0b968ef60fac4892a7b00853f5760500d2854d25470bee"
+    },
+    {
+      "path": "05-knowledge/results/continuing6_20260906_lrc_near_resonance_certificate.json",
+      "bytes": 3145041,
+      "sha256": "7692b34aa305701be0df279435d281ab498c680a7c1195c455f381b0a9f35661"
+    },
+    {
+      "path": "05-knowledge/results/continuing6_20260906_norm_units.md",
+      "bytes": 8375,
+      "sha256": "f325211cc21377934597c1b6c848eb748269e92eac2beaf291bcf9ca2bbb2147"
+    },
+    {
+      "path": "05-knowledge/results/continuing6_20260906_norm_units.out",
+      "bytes": 220,
+      "sha256": "d3d69a29127143ff518ebb0544179ba9efc338a0290d92ad568a1fb0bd945c82"
+    },
+    {
+      "path": "05-knowledge/results/continuing6_20260906_norm_units_audit.md",
+      "bytes": 8871,
+      "sha256": "a53f5540ff58fd6b2052d017d062e01d00f84b24e9fe4a4161628dd07abf52fc"
+    },
+    {
+      "path": "05-knowledge/results/continuing6_20260906_norm_units_audit.out",
+      "bytes": 471,
+      "sha256": "58d2f070f2e6436be1ad0dc3c5c3fbfa7ba5fe3137a1ddfd2f04c04bede17053"
+    },
+    {
+      "path": "05-knowledge/results/continuing6_20260906_reciprocal_native.md",
+      "bytes": 14450,
+      "sha256": "2ab7d84d60459cfaf2d4b53fd5db4eb97b4169abece078f8fa98a437a1df237c"
+    },
+    {
+      "path": "05-knowledge/results/continuing6_20260906_reciprocal_native.out",
+      "bytes": 2370,
+      "sha256": "13f7a46e9f034917337233db012466b499eab3d579b8bc18955e7ae18f0279e2"
+    },
+    {
+      "path": "05-knowledge/results/continuing6_20260906_reciprocal_native_audit.md",
+      "bytes": 8758,
+      "sha256": "1fd165fededaf6c865ff57f1f8227f774effb95336b4db02273f7dc0ed3d8a4c"
+    },
+    {
+      "path": "05-knowledge/results/continuing6_20260906_reciprocal_native_audit.out",
+      "bytes": 1565,
+      "sha256": "e24e96ef9757fba9687acf5e4aec16f478f2eefaa49bdba4c65f77fb75711456"
+    },
+    {
+      "path": "05-knowledge/results/continuing6_20260906_reciprocal_native_certificate.json",
+      "bytes": 5220,
+      "sha256": "1da5e84836de4aee72e0636e792a43715c9cb85eac9e621203e215ac7e228380"
+    },
+    {
+      "path": "05-knowledge/results/continuing6_20260906_shared_wall.md",
+      "bytes": 9317,
+      "sha256": "40819347fbd259b78680ac79cbe5484adc786ee817af091926b1f56535be9446"
+    },
+    {
+      "path": "05-knowledge/results/continuing6_20260906_shared_wall.out",
+      "bytes": 599,
+      "sha256": "4803b7577514138cbe0fca4ef339b0e2cb690ba421e2276eb823846ef0d33572"
+    },
+    {
+      "path": "05-knowledge/results/continuing6_20260906_shared_wall_audit.md",
+      "bytes": 8291,
+      "sha256": "fd9f12dee6f9b42584502a8cbb5b3612c3201d46a84002d334c20ae9d783b566"
+    },
+    {
+      "path": "05-knowledge/results/continuing6_20260906_shared_wall_audit.out",
+      "bytes": 1002,
+      "sha256": "a9dcb1e6357ca7a3d2072f1d24edc7a44f4c788d360a8d48b8c17b0c383de2cd"
+    },
+    {
+      "path": "05-knowledge/results/continuing6_20260906_shared_wall_certificate.json",
+      "bytes": 6243,
+      "sha256": "6adab7b43f30296cdac428596ce7c046d163751b6d48fea4db02fe17a100dce4"
+    },
+    {
+      "path": "05-knowledge/results/continuing6_20260906_zero_boundary.md",
+      "bytes": 13076,
+      "sha256": "0c2a482aa8426e1523665946b10d4883df71c657cff97fc3f04eb2738fcdd9df"
+    },
+    {
+      "path": "05-knowledge/results/continuing6_20260906_zero_boundary.out",
+      "bytes": 1495,
+      "sha256": "6fe1ddf5e2182828405968b34c8236bc8ccea8f5b046e843781dcf26362fef0c"
+    },
+    {
+      "path": "05-knowledge/results/continuing6_20260906_zero_boundary_audit.md",
+      "bytes": 8669,
+      "sha256": "977689f7b11727ef200073c3d4cbf3244fadc5fac4871931f6dcb92e13c08974"
+    },
+    {
+      "path": "05-knowledge/results/continuing6_20260906_zero_boundary_audit.out",
+      "bytes": 896,
+      "sha256": "ecd931bf78deb70bdd85b9698304c9fd4372f5aff9f4cc3e03cca8ed5c78d5b1"
+    },
+    {
+      "path": "05-knowledge/results/continuing6_20260906_zero_boundary_certificate.json",
+      "bytes": 11856,
+      "sha256": "f6c169d4190f96465f93d195fe4517537a9c40e85370ae6a736e0e2886e9b12e"
+    }
+  ],
+  "incoming_planar_artifacts_verified": 26,
+  "all_distinct_artifact_hashes_verified_after_rebase": 240
+}

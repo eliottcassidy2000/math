@@ -55,8 +55,8 @@ gives square sum `<=195`; THM-4019 refutes its sharp arbitrary-lattice target.
   THM-4452: one-v2 clock-four cap `1/110`; [inert gates](../05-knowledge/results/creative_20260906_inert_pareto.md) `40/469,716/4221`; [ranked capacities](../05-knowledge/results/continuing1_20260906_profiles.md) retain all sums; physical gain OPEN.
   THM-4442/4446 force gcd-one packs above `91^6`; hostiles refute prescribed-component
   selection. No universal body mass/component floor reaches these gates; entry remains open.
-- **Entry:** [Connected-complement grids](../05-knowledge/results/continuing5_20260906_lrc_clock16704_complete.md):8,201 scales, `t<=14904,g<=90`;
-  [rooted pairs](../05-knowledge/results/third_20260906_decoder.md) close `maxU<=28`; [combined overlap/cost](../05-knowledge/results/continuing5_20260906_synthesis.md) removes16704. Entry OPEN.
+- **Entry:** [Connected-complement grids](../05-knowledge/results/continuing6_20260906_lrc_near_resonance.md):8,198 scales, `t<=14886,g<=90`;
+  [Rooted pairs](../05-knowledge/results/third_20260906_decoder.md) close `maxU<=28`. Entry OPEN.
   [Sparse transport](../05-knowledge/results/synthesis_20260905_lrc_sparse_transport.md) retains weights and the selector gap.
 - **Residual ranks:** THM-4333/4338 close fixed-pool ranks three/four, not arbitrary entry.
 - **PROVED:** [THM-2928](../01-canon/theorems/THM-2928-critical-seven-comb-grid-tensorization-and-drift-tariff.md)/2941: literal zero/one/two/three-drift sectors are empty; `k=2,3` are finite.
@@ -155,7 +155,7 @@ and Lucas--Frobenius leaves `Q^p`: **whole-layer preservation**, not atoms.
 
 ### Live work
 
-Publish THM-2022; formalize THM-2639. [Simple beta roots, phase prism and norm jets](../05-knowledge/results/continuing5_20260906_synthesis.md): PROVED; general sign OPEN.
+Publish THM-2022; formalize THM-2639. [Zero-beta signs and prime norm units](../05-knowledge/results/continuing6_20260906_synthesis.md): PROVED; shared-root sign OPEN.
 [THM-4456](../01-canon/theorems/THM-4456-sharp-finite-length-signed-root-stability-asymptotics.md): optimum K3+C/N+o(1/N), C=2.172201096...; rigidity THM-4455, PROVED.
 [THM-4417](../01-canon/theorems/THM-4417-width-two-laurent-first-return-parabolic-critical-bound.md)
 proves first return `<=M+N` for `min(M,N)=2`; width one is THM-2111.

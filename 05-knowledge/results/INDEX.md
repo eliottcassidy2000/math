@@ -1,22 +1,17 @@
 # Script Results Index
 
-- [Current continuing synthesis](continuing5_20260906_synthesis.md):
-  **PROVED + FINITE-EXACT + INDEPENDENTLY AUDITED.** All988 clock16704
-  candidates close by compatible words plus located overlaps; the connected
-  seven-complement necessary set is now8201 clocks, maximum14904. The anchored rectangle
-  83<=x<=85,34<=y<=36 has negative response at every original phase for all
-  nonnegative-root beta geometry. Ordered resultant roots exactly select
-  fibres with a strict reference; fibres need not reach zero or have nested
-  interlacer channels. Beta roots are all simple in the full model, leaving
-  zero/shared-root sign boundaries. A complementary-norm iff gives seven exact boundary
-  diagonals at arbitrary height. Joint interval positions restore an LRC
-  credit15 from separate zeros; the incoming16704 selected control improves
-  from172 to336. A complete p7 no-three-line repair class has nonincreasing
-  swap-and-affine paths, with a linear all-prime modular-line swap barrier
-  and an exact reciprocal decoder. [Manifest](continuing5_20260906_manifest.json):
-  58 artifacts, eighteen engines,222270 gates in each normal/optimized mode.
-  General LRC14, arbitrary-height actual response positivity and the full
-  free-coefficient model remain OPEN.
+- [Current continuing synthesis](continuing6_20260906_synthesis.md):
+  **PROVED + FINITE-EXACT + INDEPENDENTLY AUDITED.** The entire zero-beta
+  boundary has negative original response, even for C alone with repeated
+  roots. Prime divisors give complementary norm units at unbounded heights;
+  when4h+1 is prime, every r>=ceil(h/3) has exact boundary order r-1.
+  A simultaneous-absence lemma removes14904,14898,14892 from the connected
+  complement reduction:8198 clocks, maximum14886. Reciprocal zero-swap
+  repair has an exact native packet iff and three infinite obstruction
+  classes, with CITED infinitude. [Manifest](continuing6_20260906_manifest.json):
+  35 artifacts, ten engines,273690 gates per normal/optimized mode. A
+  genuine admissible shared-root fibre survives a zero chart denominator.
+  General LRC14, shared-root signs and general Laurent noncancellation remain OPEN.
 
 - [48-hour planar Jacobian session](planar_jc48_sep06_board.md):
   **PROVED + INDEPENDENTLY AUDITED**, with inherited results distinguished.
@@ -28,6 +23,12 @@
   its nodal antecedent is credited as recovered work.
   [Manifest](planar_jc48_sep06_manifest.json):26 frozen artifacts,
   seven programs,5475 exact gates. Full JC(2) and termination remain OPEN.
+
+- [Previous continuing synthesis](continuing5_20260906_synthesis.md):
+  full-model beta simplicity, the original-phase rectangle, the ordered
+  strict-reference fibre selector, the complementary norm-jet iff with
+  seven signed diagonals, and the complete finite p7 repair compiler.
+  Its [58-artifact manifest](continuing5_20260906_manifest.json) is retained.
 
 - [Extended session: coefficient regions and adaptive overlaps](long_frontier2_sep06_board.md):
   **PROVED + FINITE-EXACT + INDEPENDENTLY AUDITED.** A full coefficient
