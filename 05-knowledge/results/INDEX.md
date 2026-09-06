@@ -70,6 +70,12 @@
   response. The actual composition recurrence and same-zero margin remain
   live; general actual doubled-row noncancellation is OPEN.
 
+- [THM-4451: strict clock-two component-width caps](../../01-canon/theorems/THM-4451-lrc14-dyadic-three-tail-strict-component-width-caps.md):
+  **PROVED + FINITE-EXACT + INDEPENDENTLY AUDITED; LRC(14) OPEN.**
+  Physical failure components have sharp widths `17/693` for odd triples and
+  `19/1001` for odd 3-units, uniquely at `(1,9,11)` and `(1,11,13)`;
+  quotient widths double. An endpoint hole refutes the prior a.e. `1/49`
+  component candidate at `(1,7,13)`.
 - [THM-4450: absorbed-label overlap hierarchy and component decoder](../../01-canon/theorems/THM-4450-lrc14-absorbed-label-overlap-hierarchy-and-component-address-decoder.md):
   **PROVED + VERIFIED-EXACT + INDEPENDENTLY AUDITED; LRC(14) OPEN.**
   The sharp tenth overlap is `1/63,1/70,1/70,1/77` by `gcd(r,6)`,

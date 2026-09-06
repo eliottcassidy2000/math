@@ -197,13 +197,18 @@ the exact disjoint owner expansion is
  \mu(F_{tp,tq,c})=\mu(\Sigma_{p,q})
              +2\mu(m_t^{-1}R\cap D_c).                     \tag{20}
 \]
-If $R$ has $N$ circle components, bounded variation and the coprime
+If an a.e.-minimal interval representative of $R$ has $N$ essential circle
+components, bounded variation and the coprime
 Fourier diagonals $(ck,-tk)$ give
 \[
  \left|\mu(m_t^{-1}R\cap D_c)-\mu(R)/7\right|\le {N\over3tc}. \tag{21}
 \]
 Specifically, $\operatorname{Var}(1_R)=2N$, $\operatorname{Var}(1_{D_1})=2$, and
 $\sum_{k\ne0}k^{-2}=\pi^2/3$.
+
+Here `N` is a BV/a.e. quantity: isolated deleted endpoints are filled before
+counting. It is not the number of actual connected components of the strict
+open representative. THM-4451 records why the distinction matters.
 
 For target $M$, let
 \[

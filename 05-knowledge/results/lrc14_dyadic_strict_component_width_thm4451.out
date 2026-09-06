@@ -1,0 +1,65 @@
+Q2_COMPONENT_WIDTH_ALL_HEIGHT_AUDIT
+STATUS=COMPUTER_ASSISTED_ALL_HEIGHT_PROOF
+CASE=ALL_ODD target=17/693 deficit=136/4851 a_bound=1485/136
+possible_a=[1, 3, 5, 7, 9] base_pairs=[(1, 3), (1, 5), (1, 7), (1, 9), (1, 11), (1, 13), (1, 15), (1, 17), (1, 19), (3, 5), (3, 7), (3, 9), (3, 11), (3, 13), (3, 15), (3, 17), (3, 19), (5, 7), (5, 9), (5, 11), (5, 13), (5, 15), (5, 17), (5, 19), (7, 9), (7, 11), (7, 13)]
+capacity_unbounded_base_pairs=[(1, 3), (1, 5), (1, 7), (3, 5), (3, 7), (5, 7)]
+BOUNDED_CAPACITY_FAMILIES
+pair=1:9 c_le=495/8 candidates=26
+pair=1:11 c_le=45/2 candidates=5
+pair=1:13 c_le=6435/412 candidates=1
+pair=3:9 c_le=495/8 candidates=26
+pair=3:11 c_le=45/2 candidates=5
+pair=3:13 c_le=6435/412 candidates=1
+pair=5:9 c_le=495/8 candidates=26
+pair=5:11 c_le=45/2 candidates=5
+pair=5:13 c_le=6435/412 candidates=1
+pair=7:9 c_le=495/28 candidates=4
+GEOMETRIC_UNBOUNDED_FAMILIES
+pair=1:3 pair_width=0 min_gap=1 pair_components=0 safe_for_allowed_c_ge=7 finite_c=[5]
+pair=1:5 pair_width=0 min_gap=1 pair_components=0 safe_for_allowed_c_ge=7 finite_c=[]
+pair=1:7 pair_width=1/98 min_gap=6/49 pair_components=4 safe_for_allowed_c_ge=21 finite_c=[9, 11, 13, 15, 17, 19]
+pair=3:5 pair_width=1/210 min_gap=5/42 pair_components=4 safe_for_allowed_c_ge=15 finite_c=[7, 9, 11, 13]
+pair=3:7 pair_width=1/98 min_gap=19/98 pair_components=4 safe_for_allowed_c_ge=21 finite_c=[9, 11, 13, 15, 17, 19]
+pair=5:7 pair_width=1/98 min_gap=1/14 pair_components=4 safe_for_allowed_c_ge=21 finite_c=[9, 11, 13, 15, 17, 19]
+finite_distinct_triples=123 literal_checks=123 maximum=17/693 leaders=[(1, 9, 11)] runner_up=(Fraction(1, 42), (1, 7, 9), 8)
+TOP10
+(Fraction(17, 693), (1, 9, 11), 8)
+(Fraction(1, 42), (1, 7, 9), 8)
+(Fraction(10, 483), (1, 9, 23), 16)
+(Fraction(19, 1001), (1, 11, 13), 12)
+(Fraction(5, 273), (1, 9, 39), 20)
+(Fraction(59, 3339), (1, 9, 53), 28)
+(Fraction(34, 1953), (1, 9, 31), 16)
+(Fraction(4, 231), (1, 9, 55), 28)
+(Fraction(3, 182), (5, 9, 39), 20)
+(Fraction(3, 182), (3, 7, 13), 8)
+CASE=ODD_3UNIT_STRICT target=19/1001 deficit=152/7007 a_bound=2145/152
+possible_a=[1, 5, 7, 11, 13] base_pairs=[(1, 5), (1, 7), (1, 11), (1, 13), (1, 17), (1, 19), (1, 23), (1, 25), (5, 7), (5, 11), (5, 13), (5, 17), (5, 19), (5, 23), (5, 25), (7, 11), (7, 13), (7, 17), (7, 19), (7, 23), (7, 25), (11, 13)]
+capacity_unbounded_base_pairs=[(1, 5), (1, 7), (5, 7)]
+BOUNDED_CAPACITY_FAMILIES
+pair=1:11 c_le=715/4 candidates=55
+pair=1:13 c_le=715/18 candidates=8
+pair=1:17 c_le=12155/614 candidates=1
+pair=5:11 c_le=715/4 candidates=55
+pair=5:13 c_le=715/18 candidates=8
+pair=5:17 c_le=12155/614 candidates=1
+pair=7:11 c_le=715/4 candidates=55
+pair=7:13 c_le=715/18 candidates=8
+pair=7:17 c_le=12155/614 candidates=1
+GEOMETRIC_UNBOUNDED_FAMILIES
+pair=1:5 pair_width=0 min_gap=1 pair_components=0 safe_for_allowed_c_ge=11 finite_c=[7]
+pair=1:7 pair_width=1/98 min_gap=6/49 pair_components=4 safe_for_allowed_c_ge=35 finite_c=[11, 13, 17, 19, 23, 25, 29, 31]
+pair=5:7 pair_width=1/98 min_gap=1/14 pair_components=4 safe_for_allowed_c_ge=35 finite_c=[11, 13, 17, 19, 23, 25, 29, 31]
+finite_distinct_triples=209 literal_checks=209 maximum=19/1001 leaders=[(1, 11, 13)] runner_up=(Fraction(29, 1547), (1, 13, 17), 12)
+TOP10
+(Fraction(19, 1001), (1, 11, 13), 12)
+(Fraction(29, 1547), (1, 13, 17), 12)
+(Fraction(57, 3619), (1, 11, 47), 24)
+(Fraction(34, 2233), (1, 11, 29), 20)
+(Fraction(47, 3157), (5, 11, 41), 24)
+(Fraction(73, 5005), (1, 11, 65), 36)
+(Fraction(74, 5159), (1, 11, 67), 36)
+(Fraction(1, 70), (1, 7, 25), 16)
+(Fraction(100, 7007), (1, 11, 91), 44)
+(Fraction(59, 4270), (5, 11, 61), 32)
+PASS

@@ -1,0 +1,21 @@
+all odd
+  target 17/693 a_bound 1485/136
+  unbounded_pairs [(1, 3), (1, 5), (1, 7), (3, 5), (3, 7), (5, 7)]
+  finite_rows 123 star_prefix_rows 23
+  maximum 17/693 leaders [(1, 9, 11)]
+  runner_up 1/42
+  winning_physical_widths [Fraction(17, 693), Fraction(17, 693), Fraction(17, 693), Fraction(17, 693), Fraction(13, 1386), Fraction(13, 1386), Fraction(13, 1386), Fraction(13, 1386)]
+  winning_quotient_widths [Fraction(34, 693), Fraction(34, 693), Fraction(13, 693), Fraction(13, 693)]
+odd 3-unit
+  target 19/1001 a_bound 2145/152
+  unbounded_pairs [(1, 5), (1, 7), (5, 7)]
+  finite_rows 209 star_prefix_rows 17
+  maximum 19/1001 leaders [(1, 11, 13)]
+  runner_up 29/1547
+  winning_physical_widths [Fraction(19, 1001), Fraction(19, 1001), Fraction(19, 1001), Fraction(19, 1001), Fraction(17, 2002), Fraction(17, 2002), Fraction(17, 2002), Fraction(17, 2002), Fraction(3, 2002), Fraction(3, 2002), Fraction(3, 2002), Fraction(3, 2002)]
+  winning_quotient_widths [Fraction(38, 1001), Fraction(38, 1001), Fraction(17, 1001), Fraction(17, 1001), Fraction(3, 1001), Fraction(3, 1001)]
+carrier_geometry {(1, 3): (Fraction(0, 1), Fraction(1, 1)), (1, 5): (Fraction(0, 1), Fraction(1, 1)), (1, 7): (Fraction(1, 98), Fraction(6, 49)), (3, 5): (Fraction(1, 210), Fraction(5, 42)), (3, 7): (Fraction(1, 98), Fraction(19, 98)), (5, 7): (Fraction(1, 98), Fraction(1, 14))}
+endpoint_control_(1,7,13) [Fraction(1, 91), Fraction(1, 91), Fraction(1, 91), Fraction(1, 91), Fraction(1, 98), Fraction(1, 98), Fraction(1, 98), Fraction(1, 98), Fraction(1, 98), Fraction(1, 98), Fraction(1, 98), Fraction(1, 98)]
+wording_correction_(7,11)_cutoff 165/14
+row_value_sha256 7dae468e6238b26816b303c6e171d58da05bca122e5ffdb78a0e65508562a234
+PASS
