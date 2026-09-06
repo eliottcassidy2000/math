@@ -1,0 +1,18 @@
+FINITE-EXACT independent native six-sheet interval engine H=97
+CONTROL w=1,5,7 E=8/245,6/49,4/35 mass=8/245 native_contacts=6
+CONTROL w=1,5,11 E=6/77,6/77,6/77 mass=6/77 native_contacts=6
+CONTROL w=1,19,23 E=12/437,12/161,12/161 mass=12/437 native_contacts=12
+CONTROL w=17,23,25 E=106/4025,12/425,2546/68425 mass=744/68425 native_contacts=12
+CONTROL w=19,23,29 E=156/4669,192/3857,3840/88711 mass=154/12673 native_contacts=18
+CONTROL w=1,1201,1205 E=310116/10130435,516/8435,516/8435 mass=310116/10130435 native_contacts=516
+CONTROL w=1,599,607 E=38940/2545151,132/4249,132/4249 mass=38940/2545151 native_contacts=132
+CONTROL w=5,1001,1003 E=156680/7028021,122/5015,848864/35140105 mass=767384/35140105 native_contacts=174
+UNIVERSE rows=5409 norm4_speed_identity=241 without_norm4_identity=5168 empty=36 native_contacts_total=102900
+TARGET all_min_gt_6/77=0 non_norm4_any_E_ge_6/77=0
+MAX_ALL_MIN_E 6/77 w=1,5,11 E=6/77,6/77,6/77 native_contacts=6
+MAX_NON_NORM4_E 12/161 w=1,19,23 E=12/437,12/161,12/161 native_contacts=12
+MAX_NON_NORM4_MIN_E 12/301 w=1,11,43 E=12/301,12/301,12/301 native_contacts=12
+MIN_EQUALITIES count=1 w=1,5,11
+SEMANTIC_FNV1A64 11025572006729886734 (noncryptographic exact-row checksum)
+PASS: every eligible row checked from literal intervals; strict every-projection bound without norm4 identity; universal minimum bound and stated equality locus.
+SCOPE: finite network head only; no all-height inference or LRC14 conclusion.

@@ -42,6 +42,8 @@ Format per entry:
   parity questions and compare complete body components with tail-safe
   lifts before taking Haar measure.
 
+Independent concurrent [consumer reconstruction](../05-knowledge/results/overnight3_20260906_lrc_consumers.md) also recovers THM-530 Section A and retains the complete weak-safe geometry; its adjacent-family formula gives the exact 42-residue oscillations around the additive bulk.
+
 ## MISTAKE-545 (2026-09-06, empty-core research probe) -- three live directions do not force an additive circuit
 
 - **Refuted probe:** three primitive directions in the complete LRC raw
@@ -67,6 +69,26 @@ Format per entry:
 - **New question:** which weighted boundary information survives the
   general colored fan? A compulsory progression alone can have zero
   curvature payment, so retain the incoming affine deficit remainder.
+
+## 2026-09-06 overnight -- additional quotient probes
+
+These are rejected proof shortcuts, not retractions of scoped canon.
+
+- **Four-node metric quotient:** at prime three, `(0,9,27,81)` and
+  `(0,9,54,81)` have the same entire labeled distance tree, determinant
+  valuation 64, and largest Smith exponent 22, but intermediate exponents
+  `(12,15)` versus `(13,14)`. A leading unit residue cancels in one branch.
+  The distance tree plus the intrinsic residue `chi` repairs the full
+  family `(0,9,27a,81b)`. An actual competing minor caps the cancellation;
+  a single critical minor alone would predict a false unbounded change.
+  [Complete proof and independent all-minor audit](../05-knowledge/results/overnight3_20260906_smith_triple_single.md).
+- **Truncated real-rooted factor:** for support `(-5,2,9)`, truncating the
+  complete shifted binomial factor to `21+20z+5z^2` gives discriminant -20.
+  Keep its full polynomial `1+8z+21z^2+20z^3+5z^4` and align the other
+  factor by `z^2` before coefficientwise multiplication. The complete
+  channel polynomial then has the lawful simple negative roots. This
+  repairs the proof mechanism, not the already concurrently proved
+  THM-4436 conclusion. [Independent path proof and exact sign probes](../05-knowledge/results/overnight3_20260906_moments_root_geometry.md).
 
 ## MISTAKE-544 (2026-09-05, THM-1755 trinomial tunability) -- a small census hid semigroup carries and unbounded relation height
 

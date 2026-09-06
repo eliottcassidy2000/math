@@ -1,0 +1,7 @@
+PASS independent literal balanced rows, rational Sturm intervals, division, and raw signs
+SUPPORTS 221 BALANCED_ROWS 442 FIRST_ROOTS 1015 SECOND_ROOTS 2242
+DEGREES [(2, 44), (3, 45), (4, 44), (6, 44), (8, 44)]
+CARRIES [((0, 0), 60), ((0, 1), 60), ((1, 0), 50), ((1, 1), 51)]
+LOW_COMPRESSED_RAW_SIGNS [((-1, 1, -1), 463), ((0, -1, -1), 552)]
+PRODUCER_CERTIFICATE_SHA256 3768e534d170bae5dba0ac3d9c817ddbef789b2ac1a43519362495a934b5d9eb
+GATES 13570

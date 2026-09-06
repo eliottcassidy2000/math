@@ -1,0 +1,20 @@
+source_sha256 61d7f81c02d56d0809dbc4081d7961325a43558a6073ebacc702a3ca553f676d
+status FINITE-EXACT; analytical theorem in companion report
+truncated_beta 21+20*z+5*z^2; discriminant -20
+full_beta 1+8*z+21*z^2+20*z^3+5*z^4; P 21+140*z+105*z^2
+nonsemigroup_hostile (-1,1,2), g=1, actual_first_support_mass=2; CT rows [0, 2, 3, 6, 20, 35]
+universe_supports 221
+completed 40
+completed 80
+completed 120
+completed 160
+completed 200
+literal_ordered_word_controls 3 supports, 6 raw rows
+first_degrees [(2, 44), (3, 45), (4, 44), (6, 44), (8, 44)]
+carry_signature_counts [((0, 0), 60), ((0, 1), 60), ((1, 0), 50), ((1, 1), 51)]
+raw_second_sign_counts_at_first_roots [(-1, 1015)]
+all_roots_simple_in_finite_bank True
+OPEN all-exponent second-row signs and pairwise root separation
+certificate_sha256 3768e534d170bae5dba0ac3d9c817ddbef789b2ac1a43519362495a934b5d9eb
+active_gates 23980
+PASS

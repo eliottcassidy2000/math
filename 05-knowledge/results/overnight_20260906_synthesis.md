@@ -5,6 +5,10 @@ This is the maintained continuation surface for the user's overnight request.
 Read current canon and incoming corrections before continuing any lane.
 The starting commit was `62e1b34d8`; the isolated worktree is `C:/w/s0905`.
 The extensively dirty original checkout is outside this session's edits.
+Third-checkpoint mathematics incorporates incoming canon through `d2f64b809`.
+The universal **odd-triple local network bound is closed**; its global LRC
+application still needs entry and body-to-tail noncontainment. The tempting
+universal ten-body `6/77` floor is now **REFUTED** by recovered THM-530 canon.
 
 ## Portfolio and live concept board
 
@@ -16,14 +20,14 @@ independence heuristic and the corrected asymptotic constant; see the
 
 | Live object / representation | Predicate | Operation and retained coordinate | Cheapest next decisive test |
 |---|---|---|---|
-| Anchor: full LRC owner-colored lattice dictionary | Bound the minimum of three projection sums | Midpoint closure, owner, parity, convex completeness, and boundary offset | Owner lines are now closed; retain area and boundary in genuinely two-dimensional owner polygons |
+| Anchor: body safe set and three-sheet tail comb | One literal safe completion | Keep parity, all component addresses, common lift label, and weak endpoints | Scalar universal body floor is false; test exact noncontainment or a justified entry subclass |
 | Grid sets as degree-two bipartite graphs | No collinear triple | Random shore labels, complete event unions, short-cycle expansion | Nonzero third-moment terms are known at n8; test a scalable dependence or sign mechanism |
-| Niche: trinomial return channels | First two return polynomials have no common torus zero | Numerical semigroup normal form with both carry coordinates | Explain thirty positive symbolic resultants by a recurrence or positive basis |
-| Wildcard: odd-prime mixed two-jet cluster | All determinantal divisors | Weighted minor supports plus an attaining unit witness for every minimum | Occupancy `(2,2)` is closed at p3; test the nested `(3,1)` tree and its third-derivative loss |
+| Niche: trinomial return channels | First two return polynomials have no common torus zero | Complete path/PF and Laguerre factorizations, simple negative roots, both carries | Couple the two rows: test a signed response or Gram identity at first roots |
+| Wildcard: odd-prime mixed two-jet cluster | All determinantal divisors | Weighted minors, leading unit residues, and competing attaining witnesses | The ternary `(3,1)` metric-only claim fails; generalize the intrinsic residue at tied minima |
 | Formal exceptional triple | Preserve common target at every order | Restrict the transverse compensator to admissible source coefficients | Test whether the lawful fifth-order module can have `L(h5)=-18*kappa/5` |
 | Signed Hamilton-cycle parity vectors | Exact minimum and equality classes | Difference with a transposed signing; typed zero deletions | All cumulative gaps are closed; independently audit quantitative stability before using it |
 
-Each new result is compared to all five objects. Similar language is not
+Each new result is compared to all six objects. Similar language is not
 an implication: the maps and losses must be specified in the linked reports.
 
 ## Results and audit status
@@ -102,8 +106,8 @@ an implication: the maps and losses must be specified in the linked reports.
    678-triple head close the remaining bounds. Every carrier is primitive,
    and there are exactly `N/2` origin-directions, so this includes arbitrarily
    many rays. The independent audit rebuilt both the finite head and the
-   chord bounds in different coordinates. Remaining owners must be
-   genuinely two-dimensional.
+   chord bounds in different coordinates. It remains a stronger count
+   result on its subclass after incoming THM-4434's universal local closure.
 8. **PROVED with a universal symbolic certificate and independent audit:**
    [ternary four-node double-pair Smith law](overnight2_20260906_smith_double_pair.md).
    For `x=3^e*(0,1,3^d*a,1+3^r*b)`, positive `e,d,r` and arbitrary unit
@@ -111,7 +115,8 @@ an implication: the maps and losses must be specified in the linked reports.
    residual minors and 14,501 coefficients were reconstructed independently;
    thirteen actual minors attain every lower-envelope branch. Three exact
    switches replace the false shallow-depth continuation, and the sharp
-   precision loss is `7e+3max(d,r)`. The `(3,1)` occupancy stays open.
+   precision loss is `7e+3max(d,r)`. The new `(3,1)` result below shows why
+   an all-depth extension must retain residues beyond the metric tree.
 9. **FINITE-EXACT n8 coefficients, with proved reduction and independent audit:**
    [third line-event moment](overnight2_20260906_no3line_third.md).
    The third factorial moment has nonzero coefficients
@@ -131,6 +136,47 @@ an implication: the maps and losses must be specified in the linked reports.
     all-`D>=7` cumulative closure during this audit; it is an inherited
     theorem, not a second discovery. Booleanized spectra and tournament
     transfer remain outside its scope.
+11. **Independent confirmation of the incoming universal odd-triple bound:**
+    [THM-4434 audit](overnight3_20260906_lrc_universal_audit.md) checks the
+    zonotope/short-relation proof, all 308 coefficient patterns by a third
+    width algorithm, and a fresh 5,409-row native head against raw carriers.
+    The accepted theorem is `min E_i<=6/77`, equality only `(1,5,11)`.
+    The final 1,317,935-row head's source and frozen output were audited,
+    not replayed in full. This is inherited closure, not a second discovery.
+12. **PROVED additive laws, exact consumer hostiles, and recovered canon:**
+    [parity and body-address report](overnight3_20260906_lrc_consumers.md)
+    refutes the parity-free ceiling first at `(2,5,7)`, mass `22/245`.
+    Every eligible additive triple with `c>=62` exceeds `6/77`, since its
+    mass differs from `9/98` by at most `6/(7c)`. The exact family
+    `(1,b,b+1)`, `b=1 mod3`, exceeds the ceiling for every `b>=7` and
+    reaches its sharp maximum `6/55` only at `b=10`. The nonadditive
+    `(2,11,20)` still violates `6/77`, so deleting additive triples is
+    insufficient. THM-530's old ten-body extremizer has mass
+    `14249/252252<6/77`; reconnecting it immediately refutes the newly
+    proposed universal body floor. Both literal engines retain its six
+    isolated safe points and reconstruct the full 8,664-triple finite head.
+13. **PROVED ternary unit-residue law and minimum integer diameter:**
+    [four-node nested cluster](overnight3_20260906_smith_triple_single.md)
+    has spectrum `(0,0,2,6,7,12+kappa,15-kappa,22)` at
+    `(0,9,27a,81b)`, where `a,b` are arbitrary ternary units and
+    `kappa=[a=2 mod3]`. The entire labeled distance tree, determinant,
+    and largest exponent remain fixed; a leading residue changes an
+    intermediate ideal. An intrinsic residue `chi` repairs this family.
+    Independent symbolic reconstruction covers all 923 minors; a complete
+    CRT/2,600-configuration reduction proves diameter 81 is minimal.
+    Incoming THM-4435 supplies a complementary dyadic hostile and an
+    arbitrary-node Hermite formula explaining the preserved largest factor.
+14. **Independent general path proof; new FINITE-EXACT two-row signs:**
+    [complete trinomial root geometry](overnight3_20260906_moments_root_geometry.md)
+    independently proves concurrently promoted THM-4436 by planar paths,
+    complete shifted binomial factors, and finite Hadamard composition.
+    Every complete factorial row has simple negative roots; its scope
+    includes every nonempty Laurent return mass. Truncating one auxiliary
+    factor gives discriminant `-20`, showing why the shared shift is
+    essential. At all 1,015 first roots of 221 declared supports, the
+    true doubled Laurent row is strictly negative by rational certificates,
+    with both endpoint carries retained. The all-parameter sign/separation
+    assertion remains **OPEN**; individual real-rootedness does not prove it.
 
 These are repository-scoped advances and recovered mechanisms, not claims
 of external literature priority. In particular, conditioning grid occupancy
@@ -146,6 +192,9 @@ independence heuristic and the later corrected conjectural constant.
 | Grid geometry -> cycle invariants | Whole union of forbidden triples, shore-preserving injection count, and ordered-tuple multiplicity give exact event moments | Overlap size alone loses incidence; finitely many moments lose the zero-event tail |
 | Moment carry channels -> symbolic certificates | Preserve the full integer channel line at the first and doubled return; eliminate the remaining nonzero coefficient | First-level channel count loses second-level carries; one example has two channels followed by five |
 | Smith cluster tree -> weighted minors | Keep valuations of every row-bank alternative and compare their minima | A depth tree plus an appended factor list loses saturation changes in old factors |
+| Complete binomial paths -> trinomial roots | Ordered source/sink boundaries make Toeplitz minors nonnegative; a shifted ordinary coefficient product retains the full row | Prefix truncation destroys root location; separate rows still need a coupling |
+| Local odd-triple bound -> LRC completion | Compare the actual body lift with the literal tail failure set, keeping their common phase | Parity-free tails change the bound; scalar body mass loses safe component addresses and isolated points |
+| Hermite inverse -> full Smith partition | Largest inverse denominator gives exact worst precision | Intermediate ideals can change while the largest factor and determinant stay fixed; retain unit residues |
 | Real parabolic collinearity -> integral observer | The determinant of three points `(u,u^2)` is the ordinary Vandermonde product | Modulo a prime, zero area only records congruence; integral depth must accompany that reduction |
 
 The shared research move is to restore the coordinate discarded before an
@@ -170,6 +219,10 @@ the owner-line closure, double-pair law, third-moment census, and signed-cycle
 audit. The first manifest retains the first checkpoint's frozen artifacts;
 this maintained synthesis is excluded from frozen current-file hashes and
 versioned by Git, with its original snapshot identified in the first manifest.
+The [third checkpoint manifest](overnight3_20260906_manifest.json) freezes
+the universal audit, mixed-parity laws and consumer probes, ternary residue
+law, and independent path/sign certificates. It also excludes this maintained
+surface. Earlier frozen artifacts remain unchanged.
 
 ## Procedural direction generator
 
@@ -177,11 +230,12 @@ Use `objects x representations x invariants x operations x quotient losses
 x scales`, but require each generated direction to name a falsification
 test. Do not simply increase the last census bound. Current unfilled cells:
 
-- **LRC / progression hypergraph / boundary deficit / deletion.** The
-  entire owner-line class is now closed by its saturated transverse basis.
-  Pass to the full two-dimensional owner polygon and retain its lattice
-  area, boundary count, and affine offset. Test the actual surplus against
-  the canonical A2 owner triangle before any area-only inequality.
+- **LRC / literal components / noncontainment / common lifts.** The odd
+  local network is closed, and the universal ten-body floor is false.
+  Retain `G_C` and `m_3(F_T)` as actual component sets. A new entry family
+  must survive the inherited denominator/divisor sieves before counting it
+  as progress. Mixed-parity tails need a fresh norm-three/norm-four boundary;
+  the all-additive bulk law is an obstruction, not an entry theorem.
 - **No-three-in-line / paired forbidden events / cycle profile / conditioning.**
   The third-moment contrasts are now closed at n8. Recover a structural
   expression for their geometry-weighted coefficients or identify a
@@ -189,17 +243,19 @@ test. Do not simply increase the last census bound. Current unfilled cells:
   negative incidence contributions almost cancel, so one favorable witness
   is insufficient. For tails, test convergence rather than extrapolating
   finitely many moments.
-- **Moments / resultant / carry count / endpoint width.** Search for a
-  coefficient-positive basis explaining the thirty symbolic certificates.
-  Increasing the width bound is secondary to discovering a recurrence or
-  sign mechanism that could survive unbounded width.
-- **Smith / cluster tree / saturation / adjoining.** Occupancy `(2,2)` is
-  now proved metric-only at every depth. Next test occupancy `(3,1)`, where
-  the inner triple has its own two-scale tree and a second divided
-  derivative can expose the characteristic-three third-derivative loss.
-  Continue to compare the whole weighted-minor envelope with actual
-  attaining witnesses; a support minimum alone would not rule out unit
-  cancellation.
+- **Moments / path and Laguerre factors / root response / doubling.**
+  Individual rows now have simple negative roots by two distinct mechanisms.
+  Seek a cross-row signed remainder, Gram sum, or Christoffel-type identity
+  at the first roots, retaining both carry ends. Give any proposed identity
+  a cheap test at the 221-support bank and the two-extra-channel hostile;
+  a larger root-location census would repeat a proved conclusion.
+- **Smith / residue-decorated cluster / competing ideals / depth ties.**
+  The ternary `(3,1)` family has a one-residue repair; incoming dyadic
+  blindness is the parallel boundary at another prime. Search the all-depth
+  tie loci of the minor envelope for intrinsic residues, then prove an
+  actual competing witness caps each cancellation. The universal Hermite
+  largest-factor law separates this intermediate-ideal problem from worst
+  precision, which is already solved at arbitrary nodes.
 - **Formal triple / admissible source module / restriction.** A compensator
   existing in the ambient polynomial space need not lie in the actual
   source-normal chart. With the lower constant-pencil jet fixed, test the
@@ -211,79 +267,56 @@ test. Do not simply increase the last census bound. Current unfilled cells:
 
 ## Incoming work and scope
 
-The startup pull promoted the previously reviewed D5/D6, width-two moment,
-and prime-wall results to THM-4416/4417/4419. It also added THM-4418's
-arithmetic tail, THM-4420's near-doubling rays, THM-4422's projection deficits,
-and THM-4415's row-fourteen obstruction. These are inherited advances and
-are not counted again. Inspected subsequent pulls through `4d1ad2a39`
-materially changed the continuation board:
+Incoming work has been inspected through `d2f64b809`. The following are
+inherited results, independently connected where indicated, rather than
+additional discoveries counted for this task:
 
-- The audited [one-ray](lrc14_one_ray_overnight_hexagon_sep05.md) and
-  [two-ray](lrc14_two_ray_overnight_hexagon_sep05.md) notes close complete
-  dictionaries with at most two primitive unoriented directions. Their
-  declared independent referee replayed the finite heads; our LRC lane
-  independently checked the analytic scope and determinant argument but
-  did not repeat that full replay. Combining them with our cap and payment
-  theorems leaves only dictionaries with **at least three directions,
-  an affine collinear triple, `N>2c/11`, and `max B_i<N-2c/11`** as possible
-  network failures. Every primitive direction there has norm at least
-  sixteen and maximum coefficient at least seven. The shared mod-three
-  owner lattice supplies both their determinant factor three and our
-  midpoint gate. Our flat family has many origin-rays on just two affine
-  lines, illustrating why these two notions of direction must stay distinct.
+- [THM-4434 / universal scale-three network projection bound](../../01-canon/theorems/THM-4434-lrc14-universal-scale-three-network-projection-bound.md)
+  is **PROVED** in the primitive odd ternary-unit domain. Its native head,
+  zonotope integral, shortest relation, and coefficient-box chain close the
+  former multi-ray/two-dimensional-owner local residual. THM-4423/4425/4428
+  and THM-4431 now give finer cardinality, width and one/two/three-ray
+  structure. Our cap, affine-midpoint and owner-line results remain stronger
+  subclass information; they are no longer needed to close `6/77` locally.
+  The real consumer now retains body addresses, parity, and chart entry.
+- [THM-4432 / two-channel two-rung noncancellation with carries](../../01-canon/theorems/THM-4432-trinomial-two-channel-two-rung-noncancellation-with-carries.md)
+  closes every first row with exactly two channels at all endpoints.
+  [THM-4436 / complete factorial-row simple negative roots](../../01-canon/theorems/THM-4436-complete-factorial-row-simple-negative-roots-and-trinomial-phase-wall.md)
+  supplies the all-row root theorem concurrently reproduced here by a
+  different path construction. The former is cross-row separation; the
+  latter is individual root location. Neither implies arbitrary
+  three-or-more-channel two-row separation.
+- [THM-4435 / four-node metric blindness and universal Hermite precision](../../01-canon/theorems/THM-4435-four-node-metric-blindness-and-universal-hermite-precision.md)
+  proves a dyadic all-depth hostile and the largest Smith factor at any
+  integer node set from `F'` and ordinary `F''`. Our ternary residue law
+  complements it and explicitly changes intermediate factors while its
+  Hermite largest factor remains fixed. THM-4429 still proves the full
+  three-node metric law; applying it after adjoining a fourth node fails.
+- [THM-4433 / signed Hamilton second minimum and cross-scale stability](../../01-canon/theorems/THM-4433-signed-hamilton-second-minimum-and-cross-scale-stability.md)
+  is newly **PROVED** in incoming canon. This task previously independently
+  audited THM-4427's minimum, transposition mechanism, and finite K8 base;
+  it has not yet independently reconstructed every new stability formula.
+  Read the current stability proof before using its constants or equality
+  classifications in a new lane.
 - [THM-4424 / constant-normal debt and discriminant contact](../../01-canon/theorems/THM-4424-russell-constant-normal-debt-discriminant-contact-correspondence.md)
-  is now **PROVED + VERIFIED-EXACT + INDEPENDENT TWO-ENGINE AUDIT** in its
-  formal-local scope. It uses the same determinant `-288` lifting system as
-  our [prior formal compensator](synthesis_20260905_transgression.md), and
-  identifies the four retained debts with `chi2,...,chi5`. On the exceptional
-  constant pencil, `chi2=chi3=chi4=0`, `chi5=-9*kappa/20!=0`: exact contact
-  order five. This specializes and strengthens the prior constant-pencil
-  checks, while leaving the quadratic-direction hostile intact. The
-  debt-to-period-to-normal-coefficient map preserves first exit on each
-  preceding-zero stratum; it does not identify the full admissible module,
-  all-order graph complex, or termination. The resulting next module test
-  is written explicitly above.
-- The incoming [three-node Smith note](three-node-smith-overnight-hexagon-sep05.md)
-  is now promoted as **PROVED THM-4429**. Its below-wall formula exhibits
-  `min(e,d)` and the threshold `d>=e`; at `p=3` it adds a shifted
-  `min(e,d+1)` cost. The common balanced boundary agrees with THM-4419.
-  It does not contain our four-or-more-node complete-residue theorem, and
-  neither result depends on the other. Its suggested four-node occupancy
-  `(2,2)` is now closed above; the next shape is `(3,1)`. Do not glue pair
-  Smith lists across a nonunit outer scale.
-- The [signed-cycle transposition argument](overnight_hexagon_sep05_d7_d8_gap.md)
-  is now **PROVED THM-4427**, with its finite base and equality cases
-  additionally checked by our independent audit above. Its
-  new operation compares a signing with a vertex transposition and makes
-  the two-star difference exactly countable. The incoming second-minimum
-  stability note is a separate candidate and is not an audited dependency.
-- The [root-rotation note](nc2_root_rotation_obstruction_overnight_hexagon_sep05.md)
-  is now **PROVED THM-4430** and supplies method boundaries: a globally rational local root
-  rotation is a monomial dilation, while primitive binomials retain a
-  nontrivial marked-packet field. This supports our choice to preserve
-  carry channels instead of treating a product of roots as a single root
-  swap. No general higher-endpoint first-return bound is supplied.
+  identifies four retained debts with `chi2,...,chi5`. On the exceptional
+  constant pencil, only `chi5=-9*kappa/20` is nonzero: contact order five.
+  It uses the determinant `-288` lift of our prior formal compensator.
+  The fifth-order functional `L=5*ev_(-1)-18*ev_0+13*ev_1` remains the
+  concrete test of the actual admissible source module. Formal solvability
+  in a larger ambient module does not supply that sidecar.
+- [THM-4430 / root-rotation rigidity and marked packet genus](../../01-canon/theorems/THM-4430-laurent-root-rotation-rigidity-and-marked-packet-genus.md)
+  keeps the dynamics boundary explicit: rational root rotations reduce to
+  dilations, while primitive binomials retain a nontrivial marked-packet
+  field. Our channel and root-geometry results do not construct a new
+  rational global root swap.
 
-THM-4427--4430 were promoted at `4d1ad2a39`. THM-4423, THM-4425,
-THM-4426, and the new THM-4431--4433 were still **RESERVED** at that
-inspected commit. The new slots concern colored-basis/three-ray closure,
-two-channel trinomial carries, and signed-Hamilton stability. They are
-follow-up signals, not proved dependencies of this checkpoint.
-
-The earlier incoming pull to `48aaa1924` added the
-[empty-core circuit board](empty_core_overnight_sep06_board.md) and its
-height-499 census. Its **FINITE-EXACT reported** multi-ray count gate has
-only the already cap-closed exception `(19,23,29)`; this session did not
-replay that large census. Its concrete nonadditive three-ray hostile
-`(41,47,49)` was independently rebuilt here from the raw carrier equations:
-the full support is `+-{(11,5,-14),(14,-7,-5),(17,-19,4)}`, with no
-independent `u+v=z` circuit. It is an affine AP with circuit coefficients
-`(1,1,2)`, exactly the information a forced A2 model would discard.
-The existing midpoint companion gives `D1=R1=190/47`, `B1=0`; again the
-first deficit is affine. The count surplus is `-32/11`, so this hostile is
-already safe. This independent small-witness check strengthens the next
-test: an all-height count argument must retain colored affine circuits,
-not simply increase the finite height cutoff or assume every circuit is A2.
+The named nonadditive three-ray control `(41,47,49)` was independently
+rebuilt in the second checkpoint: full support
+`+-{(11,5,-14),(14,-7,-5),(17,-19,4)}` forms an affine progression with
+coefficients `(1,1,2)`, despite having no independent `u+v=z` circuit.
+Its count-safe status is unchanged. Keep it when testing sharper owner
+polygon statements; it defeats an unproved universal A2 circuit model.
 
 LRC(14), planar JC2, general trinomial two-rung coprimality, and the
 no-three-in-line asymptotic conjecture remain open. The overnight follow-up

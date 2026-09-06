@@ -1,0 +1,13 @@
+status=INDEPENDENT_EXACT_AUDIT; analytic proof and H601 evidence scope in companion report
+coefficient_box=(patterns,equality,semantic_sha256,max_abs_defect):(308, [(1, 7, 8)], '3be81c2522a1df6a146e50634754620103f9d2d8840d17f34c9e9a4954e849f7', 11)
+width_method=continuous_knapsack; no_error_vertex_or_polygon_clipping_imports
+coefficient_supports=293_full+15_support_two; actual_max_norm=52
+finite_field_owner_fibers=192
+analytic_controls=zonotope_scale,intercepts,hexagon_area,strict_56_58_cutoff,support_two_endpoint
+fresh_H97_native_vs_raw=(rows,norm4,equalities):(5409, 241, [(1, 5, 11)])
+H601_universe_only=(rows,norm4):(1317935, 9201)
+mixed_parity_additive_controls=[((2, 5, 7), '22/245', 2), ((1, 7, 8), '31/392', 2), ((1, 10, 11), '6/55', 4), ((1, 61, 62), '2467/26474', 18), ((1, 121, 122), '9599/103334', 36)]
+mixed_parity_additive_family=mu>=9/98-6/(7c)>6/77_for_c>=62
+additive_only_extension=FALSE; nonadditive_(2,11,20)_physical_mass=11/140
+H601_full_census=SOURCE_AND_TRANSCRIPT_AUDITED_NOT_RERUN
+checks=132655; RESULT=PASS; LRC14=OPEN

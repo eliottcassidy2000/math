@@ -1,0 +1,144 @@
+{
+  "schema": 1,
+  "created_utc": "2026-09-06T07:18:52.562328+00:00",
+  "baseline_commit": "2e1ef24c4aa3",
+  "incoming_review_commit": "d2f64b809",
+  "hash_basis": "raw LF bytes; self and maintained synthesis excluded",
+  "scope": "Third overnight checkpoint: universal odd local-bound audit; proved additive parity obstructions and sharp adjacent family; recovered finite body-floor hostile; ternary unit-sensitive four-node Smith law and minimal integer diameter; independent path proof of concurrent THM4436 and finite exact two-row signs. Quantifiers and dependencies are in each report.",
+  "maintained_surface": {
+    "path": "05-knowledge/results/overnight_20260906_synthesis.md",
+    "hash_policy": "Intentionally mutable; versioned by Git rather than frozen here."
+  },
+  "artifacts": [
+    {
+      "path": "04-computation/overnight3_20260906_lrc_consumers.py",
+      "bytes": 8044,
+      "sha256": "928cd5c8f3a5b1c2677e7c166dafc7c028cef154aea69d20addb2d6d4604c61a"
+    },
+    {
+      "path": "04-computation/overnight3_20260906_lrc_consumers_audit.py",
+      "bytes": 8272,
+      "sha256": "87f1716b869cfdbe6d1ade4cf609b3d5dd8288112effe03402d86ea9a942f39c"
+    },
+    {
+      "path": "04-computation/overnight3_20260906_lrc_universal_audit.py",
+      "bytes": 12130,
+      "sha256": "7caa2c00caec9d96623f37aa061423e63d54bd8bb99ec5338a732c2d76447f49"
+    },
+    {
+      "path": "04-computation/overnight3_20260906_moments_root_geometry.out",
+      "bytes": 879,
+      "sha256": "7b37f94b0ccda0a60d238677c20531514c70440e712db7eb902bc9729472e0d6"
+    },
+    {
+      "path": "04-computation/overnight3_20260906_moments_root_geometry.py",
+      "bytes": 9816,
+      "sha256": "61d7f81c02d56d0809dbc4081d7961325a43558a6073ebacc702a3ca553f676d"
+    },
+    {
+      "path": "04-computation/overnight3_20260906_moments_root_geometry_audit.py",
+      "bytes": 7172,
+      "sha256": "b2e515b6010c150bf5f8dccac8a81eccd7650c963599f9701f62e3ead23b8480"
+    },
+    {
+      "path": "04-computation/overnight3_20260906_moments_root_geometry_certificates.json",
+      "bytes": 952450,
+      "sha256": "3768e534d170bae5dba0ac3d9c817ddbef789b2ac1a43519362495a934b5d9eb"
+    },
+    {
+      "path": "04-computation/overnight3_20260906_moments_root_geometry_optimized.out",
+      "bytes": 879,
+      "sha256": "7b37f94b0ccda0a60d238677c20531514c70440e712db7eb902bc9729472e0d6"
+    },
+    {
+      "path": "04-computation/overnight3_20260906_smith_triple_single.py",
+      "bytes": 11835,
+      "sha256": "f639fc43d51e36fcbedcbe0350a2fb238e19a9c9a2ec172532350e07d06aba11"
+    },
+    {
+      "path": "04-computation/overnight3_20260906_smith_triple_single_audit.py",
+      "bytes": 4868,
+      "sha256": "ca46461c06da3148959929dee9f3a3065a5e99973b908ac02ccbf340fd2811f1"
+    },
+    {
+      "path": "05-knowledge/results/overnight3_20260906_lrc_additive_audit.md",
+      "bytes": 9076,
+      "sha256": "f784b4bf7c42e8dc4ade335ecf9ca0806d9800ff9994b2d435f0d86a08e58b53"
+    },
+    {
+      "path": "05-knowledge/results/overnight3_20260906_lrc_consumers.md",
+      "bytes": 9805,
+      "sha256": "65ad510073bc5c1738285e0904c3b05c9cba98a2cc6736273f8141911ed16d5a"
+    },
+    {
+      "path": "05-knowledge/results/overnight3_20260906_lrc_consumers.out",
+      "bytes": 1909,
+      "sha256": "314a0813b6ebeb2620125e7510cb6af8b85641247fbe761f25aa214ec31feb52"
+    },
+    {
+      "path": "05-knowledge/results/overnight3_20260906_lrc_consumers_audit.md",
+      "bytes": 8522,
+      "sha256": "f29eeab2f510e08dae930dec7dc194408864d38a43c9212f065a5d57fe608b83"
+    },
+    {
+      "path": "05-knowledge/results/overnight3_20260906_lrc_consumers_audit.out",
+      "bytes": 1852,
+      "sha256": "7023bbf288208ba46baaef85d894201e08dd2e0c69ffe4ec7f64266c5fe12ab7"
+    },
+    {
+      "path": "05-knowledge/results/overnight3_20260906_lrc_consumers_certificates.json",
+      "bytes": 14930,
+      "sha256": "3f10267c56b144bb796e502a63725c32051b7d4fbbbf4c75c89dd14d346eaff4"
+    },
+    {
+      "path": "05-knowledge/results/overnight3_20260906_lrc_universal_audit.md",
+      "bytes": 18792,
+      "sha256": "89cf37e3fefdd0db9b66847c449ddd3a0c6fe7d876f0fccb82fea99fb8ccd472"
+    },
+    {
+      "path": "05-knowledge/results/overnight3_20260906_lrc_universal_audit.out",
+      "bytes": 1051,
+      "sha256": "603aef0e457a842e6c2010a5aa1a16bf8fe53768aea1a5ee5bbd273764de3442"
+    },
+    {
+      "path": "05-knowledge/results/overnight3_20260906_lrc_universal_audit_native_h97.out",
+      "bytes": 1449,
+      "sha256": "60968807376af17200bb8cd7c66a933b2af9e7a3230993a343844482e651ce70"
+    },
+    {
+      "path": "05-knowledge/results/overnight3_20260906_moments_root_geometry.md",
+      "bytes": 15287,
+      "sha256": "35d65db8d40bf3e3959980d638cc0fd49c9c74128288510a74ce521cd26b8755"
+    },
+    {
+      "path": "05-knowledge/results/overnight3_20260906_moments_root_geometry_audit.md",
+      "bytes": 7593,
+      "sha256": "d5daa9cde012fa4fc5bc77f39557cd515471dcd4a38fdedfda47c121886480e3"
+    },
+    {
+      "path": "05-knowledge/results/overnight3_20260906_moments_root_geometry_audit.out",
+      "bytes": 446,
+      "sha256": "308f1d48ab3d37ac7a3c0e98967afe4c60dcde1348c5b2c2b960382d49998ce8"
+    },
+    {
+      "path": "05-knowledge/results/overnight3_20260906_smith_triple_single.md",
+      "bytes": 15101,
+      "sha256": "460a3307179dc0e02d4d546ed72c8742f1b6e67a841dfe6e644314b55b3c54f5"
+    },
+    {
+      "path": "05-knowledge/results/overnight3_20260906_smith_triple_single.out",
+      "bytes": 1317,
+      "sha256": "26878c358ef657ab6feb4faef207ba5e85ded531d422cc7f0c09f03520c7c4b7"
+    },
+    {
+      "path": "05-knowledge/results/overnight3_20260906_smith_triple_single_audit.md",
+      "bytes": 3728,
+      "sha256": "f1094ae6d1fabcb71da2ce0693dbb893ecda4c2f5fee5f7b6fdfebc2544f0a1f"
+    },
+    {
+      "path": "05-knowledge/results/overnight3_20260906_smith_triple_single_audit.out",
+      "bytes": 742,
+      "sha256": "910bbfc677725e8201301bd28e7cfa996d0f4f8d62a68714425fac3b3c520845"
+    }
+  ]
+}
