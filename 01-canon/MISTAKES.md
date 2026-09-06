@@ -9,6 +9,20 @@ Format per entry:
 - Why it was wrong
 - The correct framing
 
+## 2026-09-06 continuation -- whole-component boundary and actual atlas
+
+[The no-unit pair-gcd proof](../05-knowledge/results/continuing1_20260906_lrc_dual_pair.md)
+caught two provisional mistakes before freezing. The31950 six-subset cap
+requires an outgoing actual edge toward a seventh vertex in the same component;
+a whole six-component has no such edge. A native6+7 equality row with scale
+1768827685 and every genuine subset scalar cap disproves that extension.
+The repaired proof uses no upper bound on this scale. Separately, actual
+atlas sums require every prime to be2mod3 and have exponent<=2, including
+the final trial-division residue. Restricting only exponents of inert primes
+admits false edges. A multiplicative5855-ratio reconstruction repaired the
+probe; positive controls survived, while one residual candidate split and
+was replaced. Failed sufficient pair-product gates still do not mean unsafety.
+
 ## 2026-09-06 continuation -- fixed anchors, root shape and integer packing
 
 - [Linear anchoring](../05-knowledge/results/open_frontier_sep06_laurent.md)

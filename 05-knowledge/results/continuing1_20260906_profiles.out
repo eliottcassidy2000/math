@@ -1,0 +1,14 @@
+STATUS: ranked all-height inert envelope; five complete maximal profiles
+FINITE_HEAD: 46 eligible pairs q<=67; complete partial-sum comparisons
+FRONTIER (7, 13) widths 1/49,1/49
+FRONTIER (19, 25) widths 37/3325,37/3325,23/3325,23/3325,9/3325,9/3325
+FRONTIER (5, 41) widths 2/287,2/287,2/287,2/287,2/287,2/287
+FRONTIER (5, 53) widths 2/371,2/371,2/371,2/371,2/371,2/371,9/1855,9/1855
+FRONTIER (1, 67) widths 2/469,2/469,2/469,2/469,2/469,2/469,2/469,2/469,2/469,2/469
+TAIL_PROOF: q>67 width<2/469 and inherited mass<20/469
+DILATIONS: g=1,3,5; exact interpolation and dominance controls
+ABSTRACT_GAIN: mass41/1000 max1/100 top4=1/25; physical realization NOT claimed
+PAIRED_LIST_CONTROLS: 462 declared seven-value alphabet, ten entries with zeros
+HOSTILES: endpoint-only loss; many-to-one containment; equality; isolated-only geometry
+SCOPE: sufficient physical-body certificate; no new eleven-body family established
+ACTIVE_GATES: 9724

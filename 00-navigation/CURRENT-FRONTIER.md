@@ -52,12 +52,11 @@ gives square sum `<=195`; THM-4019 refutes its sharp arbitrary-lattice target.
   THM-4450 sharpens odd-3-unit one-even entry to `124/693` and retains complete component addresses.
   THM-4451 gives sharp strict physical component caps `17/693,19/1001`
   (quotient `34/693,38/1001`) and repairs an a.e.-topology near miss.
-  THM-4452: one-v2 clock-four cap `1/110`; the [inert envelope](../05-knowledge/results/creative_20260906_inert_pareto.md) sharpens THM-4453's gates to `40/469` (q4), `716/4221` (q2 one-even), with joint mass/width entry.
+  THM-4452: one-v2 clock-four cap `1/110`; the [inert envelope](../05-knowledge/results/creative_20260906_inert_pareto.md) gives gates `40/469,716/4221`; [ranked capacities](../05-knowledge/results/continuing1_20260906_profiles.md) retain all component sums, with physical improvement still OPEN.
   THM-4442/4446 force gcd-one packs above `91^6`; hostiles refute prescribed-component
   selection. No universal body mass/component floor reaches these gates; entry remains open.
-- **Transport/incidence:** [overnight synthesis](../05-knowledge/results/overnight_20260906_synthesis.md)
-  retains cap/event refinements; [virtual walls](../05-knowledge/results/overnight9_20260906_lrc_virtual_pair_wall_margin.md)
-  give sharp fibre margin `abs(||dy||-1/3)/2`. [Nonunit entry](../05-knowledge/results/second_20260906_entry.md) extends five unbalanced types by endpoint gcd; [actual balanced hostiles](../05-knowledge/results/second_20260906_decoder.md) pass all profiles but fail native gates.
+- **Transport/incidence:** [continuing portfolio](../05-knowledge/results/continuing1_20260906_synthesis.md) adds no-unit pair-gcd classes.
+  [Endpoint entry](../05-knowledge/results/second_20260906_entry.md) and [balanced hostiles](../05-knowledge/results/second_20260906_decoder.md) retain actual profiles; entry OPEN.
   [Sparse transport](../05-knowledge/results/synthesis_20260905_lrc_sparse_transport.md) retains weights and the selector gap.
 - **Residual ranks:** THM-4333/4338 close fixed-pool ranks three/four, not arbitrary entry.
 - **PROVED:** [THM-2928](../01-canon/theorems/THM-2928-critical-seven-comb-grid-tensorization-and-drift-tariff.md)/2941: literal zero/one/two/three-drift sectors are empty; `k=2,3` are finite.
@@ -354,7 +353,7 @@ lift/phase clocks.
   [double pairs](../05-knowledge/results/overnight2_20260906_smith_double_pair.md) close `(2,2)`.
   [Nested ternary clusters](../05-knowledge/results/overnight3_20260906_smith_triple_single.md): unit residue needed; minimal diameter81.
   THM-4435 gives dyadic blindness/Hermite precision;
-  [THM-4439](../01-canon/theorems/THM-4439-all-node-twojet-metric-precision-by-terminal-clusters.md) and its [projective extension](../05-knowledge/results/creative_20260906_smith_bridge.md): exact largest two-jet factors.
+  [THM-4439](../01-canon/theorems/THM-4439-all-node-twojet-metric-precision-by-terminal-clusters.md) gives metric two-jet loss; [projective higher jets](../05-knowledge/results/continuing1_20260906_jets_projective.md) retain reciprocal precision, full residue splitting and p31 transport.
   [THM-4443](../01-canon/theorems/THM-4443-arbitrary-jet-precision-and-dyadic-unit-boundary.md): jet denominators/full dyadic3-node3-jet factors; metric fails at uniform3. [Complete(2,2,1)](../05-knowledge/results/second_20260906_smith.md): one intrinsic dyadic bit.
   [Four jets](../05-knowledge/results/overnight8_20260906_jets_residue.md): allodd precision and full p7 factors with an AP bit.
   [Deuring](../05-knowledge/results/overnight9_20260906_jets_deuring.md):3-node loss `(3m-1)e-[H_p(a)=0]`, oddp,m=(p+1)/2,e>=1.

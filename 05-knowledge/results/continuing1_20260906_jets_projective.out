@@ -1,0 +1,7 @@
+STATUS: PASS; projective arbitrary complete-jet precision and intrinsic p31 ideal sidecar
+SMALL GLOBAL SMITH CONTROLS: 14 ; prime comparisons 42 ; full Smith symmetry checks 42 ; value-only sharp hostiles 9
+COMPLETE-RESIDUE HIGHER-JET CONTROLS: [{"e": 1, "exponents": [0, 0, 0, 0, 0, 0, 3, 4, 5], "p": 2}, {"e": 2, "exponents": [0, 0, 0, 0, 0, 0, 5, 8, 11], "p": 2}, {"e": 1, "exponents": [0, 0, 0, 0, 0, 0, 0, 3, 3, 6], "p": 3}, {"e": 2, "exponents": [0, 0, 0, 0, 0, 0, 0, 5, 7, 12], "p": 3}, {"e": 1, "exponents": [0, 0, 0, 0, 0, 0, 0, 0, 0, 2, 5, 5], "p": 5}, {"e": 2, "exponents": [0, 0, 0, 0, 0, 0, 0, 0, 0, 4, 9, 11], "p": 5}]
+P31 FULL 79-DIMENSION CONTROLS: [{"D75": 590, "D76": 633, "D77": 676, "a": 3, "e": 1, "kappa": 1, "kernel43": 762, "pair": [43, 43]}, {"D75": 590, "D76": 632, "D77": 676, "a": 4, "e": 1, "kappa": 0, "kernel43": 761, "pair": [42, 44]}, {"D75": 1178, "D76": 1264, "D77": 1351, "a": 879, "e": 2, "kappa": 1, "kernel43": 1068, "pair": [86, 87]}, {"D75": 1178, "D76": 1264, "D77": 1351, "a": -20, "e": 2, "kappa": 1, "kernel43": 1068, "pair": [86, 87]}]
+SCOPE: reciprocal jets retained; arbitrary higher-jet precision is not metric-only; p31 block transported, not a full partition law
+SEMANTIC SHA256: 2f3b754060eb85701c70b6e7a1b498591ab395be7686dbf7bbfcd2cbe3d318a5
+ACTIVE GATES: 1645

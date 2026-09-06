@@ -1,0 +1,11 @@
+FINITE-EXACT BOUNDED NEGATIVE; no universal redundancy assertion
+UNIVERSE: all 2496144 eleven-subsets of1..24; body dilations1,2; strict rank-four gain over five mass/width gates
+INTEGER_GRID_DENOMINATOR: 74959204320
+HITS_DILATION1: 0 HITS_DILATION2: 0
+NEAR_DILATION1: 4
+BODY (1, 3, 4, 5, 7, 8, 10, 11, 13, 18, 23) mass 217691/5274360 max 17/2093 top4 1788/73255
+BODY (1, 3, 4, 5, 7, 9, 10, 11, 13, 23, 24) mass 1075/26312 max 17/2093 top4 179/7176
+BODY (1, 3, 4, 10, 11, 13, 14, 16, 17, 18, 19) mass 3372947/81477396 max 13/1568 top4 387/14896
+BODY (1, 4, 6, 7, 9, 10, 11, 13, 17, 23, 24) mass 192931/4696692 max 3/364 top4 128/5005
+STOPPING_REASON: no physical gain found; retain the proved sufficient criterion and seek body geometry rather than claiming family closure
+PASS

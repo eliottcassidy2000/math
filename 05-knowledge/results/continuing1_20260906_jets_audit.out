@@ -1,0 +1,6 @@
+ROOT_AUDIT: arbitrary projective complete-jet precision, covariance, and intrinsic p31 sidecar PASS
+INDEPENDENT_SYMBOLIC_MATRICES: 78 base configurations 13 integer Smith and literal inverse for each orientation
+SIDECAR_CHECKS: 348 p31 every admissible residue,depths1..3,four transverse frames,all six node orders
+CONTROLS: singleton jets;heterogeneous orders;infinity;orientation reversal;nontrivial tangent shears;all residue classes
+SCOPE: existing p31 cluster ideals transport by audited covariance/splitting; no new general partition formula
+ACTIVE_CHECKS: 1171

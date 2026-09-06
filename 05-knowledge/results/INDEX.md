@@ -14,6 +14,12 @@
   forced cross-divisor score; they are explicitly safe.
   [Manifest](second_20260906_manifest.json) freezes all proof and audit artifacts.
   LRC14, general Laurent returns and general higher-jet partitions remain OPEN.
+- [Continuing synthesis](continuing1_20260906_synthesis.md): **PROVED + INDEPENDENTLY AUDITED.**
+  [No-unit pair-gcd entry](continuing1_20260906_lrc_dual_pair.md) closes four bounded-maximum classes and a high-minimum6+7 family;
+  [projective higher jets](continuing1_20260906_jets_projective.md) give attained precision and an intrinsic p31 packet;
+  [ranked capacities](continuing1_20260906_profiles.md) independently reprove the concurrent envelope and refine its paired-body test.
+  No new physical body is claimed from the separate bounded negative scout.
+  [Manifest](continuing1_20260906_manifest.json):20 frozen artifacts. LRC14 and general Laurent/Smith targets OPEN.
 
 - [Four audited creative connections](creative_20260906_overview.md):
   **PROVED + FINITE-EXACT + INDEPENDENTLY AUDITED.** The [inert envelope](creative_20260906_inert_pareto.md)

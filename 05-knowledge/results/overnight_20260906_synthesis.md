@@ -3,6 +3,8 @@
 **Current research state, 2026-09-05 evening / 2026-09-06 overnight.**
 This is the maintained continuation surface for the user's overnight request.
 Read current canon and incoming corrections before continuing any lane.
+The resumed [continuing synthesis](continuing1_20260906_synthesis.md) incorporates
+incoming677bde8eb and the next audited results; use its live board first.
 The starting commit was `62e1b34d8`; the isolated worktree is `C:/w/s0905`.
 The extensively dirty original checkout is outside this session's edits.
 The fifteenth checkpoint incorporates incoming canon through `8517ff4b1`,
@@ -833,9 +835,9 @@ laws are open. For Laurent transport, the combined-model hostile makes the
 literal relative coefficient essential; for the Jacobian and native Boolean
 lanes, the previously recorded source-jet and ambient-rank gaps remain.
 
-The hourly overnight follow-up reached its scheduled deadline and is PAUSED.
-The user-requested resumed turn finished this last concrete closure before
-handoff; no further unattended computation is represented as running.
+The overnight cutoff was reached and that follow-up was paused. The user
+then requested continued similar sessions; the same hourly follow-up is now
+ACTIVE without the expired cutoff. See the current continuing synthesis above.
 
 ## Procedural direction generator
 
@@ -1040,8 +1042,8 @@ Its count-safe status is unchanged. Keep it when testing sharper owner
 polygon statements; it defeats an unproved universal A2 circuit model.
 
 LRC(14), planar JC2, general trinomial two-rung coprimality, and the
-no-three-in-line asymptotic conjecture remain open. The overnight follow-up
-is scheduled through 08:00 America/Denver on 2026-09-06; at that point finish
-the current audited checkpoint, push, and provide the morning synthesis.
-During continuation, read this current board and incoming canon rather than
-treating older session prose or a reservation as mathematical truth.
+no-three-in-line asymptotic conjecture remain open. The resumed hourly
+follow-up uses [the continuing board](continuing1_20260906_synthesis.md),
+finishes and pushes coherent audited checkpoints, and stays quiet when
+there is no substantive change. Read incoming canon before new derivations;
+older session prose and reservations are not mathematical truth.

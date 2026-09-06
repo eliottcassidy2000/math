@@ -1,0 +1,149 @@
+{
+  "schema": 1,
+  "created_utc": "2026-09-06T16:51:49.791030+00:00",
+  "baseline_commit": "677bde8eb",
+  "incoming_review_commit": "677bde8eb",
+  "hash_basis": "raw LF bytes; manifest and maintained synthesis/navigation excluded",
+  "scope": "Independently audited no-unit actual LRC pair-gcd subclasses, complete projective higher-jet precision and intrinsic p31 transport, and ranked inert-tail capacities. The large negative body scout is separately producer FINITE-EXACT. General open problems remain open.",
+  "artifacts": [
+    {
+      "path": "04-computation/continuing1_20260906_jets_audit.py",
+      "bytes": 4608,
+      "sha256": "9166df855025c375e6d6759e751d8d5bc1271800616ec139671925ef9ae1fbde"
+    },
+    {
+      "path": "04-computation/continuing1_20260906_jets_projective.py",
+      "bytes": 15041,
+      "sha256": "aba09c132b7d7f5b96bdf239869362ed173986444ad1e68389dad823bf2ec6e3"
+    },
+    {
+      "path": "04-computation/continuing1_20260906_lrc_audit.py",
+      "bytes": 5180,
+      "sha256": "c86277c27cd66c17544a4e2f00c7222b8623b65410645c42be3f648e04d607c5"
+    },
+    {
+      "path": "04-computation/continuing1_20260906_lrc_dual_pair.py",
+      "bytes": 11156,
+      "sha256": "85d3e22af58d66614f2a4b0bda0d91a13ab189de5a152985db2d200b0cccc49a"
+    },
+    {
+      "path": "04-computation/continuing1_20260906_lrc_profiles_audit.py",
+      "bytes": 4018,
+      "sha256": "258e24929046ad1ae0331c5aeb37b8e08ff2d0c3cc7ad41a495d1d6cfc132e5b"
+    },
+    {
+      "path": "04-computation/continuing1_20260906_profiles.py",
+      "bytes": 5276,
+      "sha256": "ddbe58018ee4e4fc0c91006a62ece6985b16c4b2f9027ba0674ab7bfe43bc2e4"
+    },
+    {
+      "path": "04-computation/continuing1_20260906_profiles_body_scout.py",
+      "bytes": 2389,
+      "sha256": "3a42579d9e7d236f38925359e242cdfd7ccdcb34c42e0bd10e6ae026a7e430ba"
+    },
+    {
+      "path": "05-knowledge/results/continuing1_20260906_jets_audit.md",
+      "bytes": 3895,
+      "sha256": "66b77f05457c523d437b304fe73469f4b4a1afa87d7265bb06c7f48562c5a0f0"
+    },
+    {
+      "path": "05-knowledge/results/continuing1_20260906_jets_audit.out",
+      "bytes": 568,
+      "sha256": "54a822a543f3fce4923ce5ed6c2e3c0351b34a2a6a394a93720d7c5e729c7d19"
+    },
+    {
+      "path": "05-knowledge/results/continuing1_20260906_jets_projective.md",
+      "bytes": 17311,
+      "sha256": "315f00f6dfce7fb46cdaef9ddab316edec75f3e99c62e2d23efde7a41c7b580f"
+    },
+    {
+      "path": "05-knowledge/results/continuing1_20260906_jets_projective.out",
+      "bytes": 1315,
+      "sha256": "53532c90b6204058f8ff5adea492af94c88933e822ff90ad7b70a835ae82acd2"
+    },
+    {
+      "path": "05-knowledge/results/continuing1_20260906_lrc_audit.md",
+      "bytes": 3843,
+      "sha256": "ed83f29f59e976cc1d7e3c29af452cef0b4ece89db27e523429d2de981cd1f80"
+    },
+    {
+      "path": "05-knowledge/results/continuing1_20260906_lrc_audit.out",
+      "bytes": 1052,
+      "sha256": "1eb0f10061d74e64ed7fc0f86551ca3c94db8bccd154353d6a92819854a8729a"
+    },
+    {
+      "path": "05-knowledge/results/continuing1_20260906_lrc_dual_pair.md",
+      "bytes": 16994,
+      "sha256": "9275a7a9b2ca7388985ce76f918764501a7a435e9d5a0eb817395a788a376d4a"
+    },
+    {
+      "path": "05-knowledge/results/continuing1_20260906_lrc_dual_pair.out",
+      "bytes": 1826,
+      "sha256": "2be3d6a397dbceda34624380d0026eecb83c7310e60526790803bc0fb76a186a"
+    },
+    {
+      "path": "05-knowledge/results/continuing1_20260906_lrc_profiles_audit.md",
+      "bytes": 7090,
+      "sha256": "768e5049b2b9ccb380c97ebca777bbaaee5e4c1c422f83081cc0160af7ff6b10"
+    },
+    {
+      "path": "05-knowledge/results/continuing1_20260906_lrc_profiles_audit.out",
+      "bytes": 616,
+      "sha256": "ffa7be1893a0227900886d4553818b02358051ecbde7df78c28c914e212cdf24"
+    },
+    {
+      "path": "05-knowledge/results/continuing1_20260906_profiles.md",
+      "bytes": 9629,
+      "sha256": "5af754a71d45555a08dd2e27e501dac17e64ac67945f9e794105f1f0f794a586"
+    },
+    {
+      "path": "05-knowledge/results/continuing1_20260906_profiles.out",
+      "bytes": 935,
+      "sha256": "4ed0f8360197402d10ff0fd7773de3d824f9036e1709340089f831bb67f029cf"
+    },
+    {
+      "path": "05-knowledge/results/continuing1_20260906_profiles_body_scout.out",
+      "bytes": 778,
+      "sha256": "da775091b692637b00b04da3fdfb2db366fc19e88e399a7a46e3e2dcc703e9db"
+    }
+  ],
+  "filing_revisions": [
+    {
+      "path": "05-knowledge/results/continuing1_20260906_lrc_dual_pair.md",
+      "outside_draft_sha256": "332ae6cef1c3aef739b9d5d6d635d51d9c3446273957719ca16f96a333ae54a4",
+      "filed_sha256": "9275a7a9b2ca7388985ce76f918764501a7a435e9d5a0eb817395a788a376d4a",
+      "reason": "Parent audit promotion and portable repository links/commands; no source or output changes."
+    },
+    {
+      "path": "05-knowledge/results/continuing1_20260906_lrc_audit.md",
+      "outside_draft_sha256": "ed83f29f59e976cc1d7e3c29af452cef0b4ece89db27e523429d2de981cd1f80",
+      "filed_sha256": "ed83f29f59e976cc1d7e3c29af452cef0b4ece89db27e523429d2de981cd1f80",
+      "reason": "Parent audit promotion and portable repository links/commands; no source or output changes."
+    },
+    {
+      "path": "05-knowledge/results/continuing1_20260906_lrc_profiles_audit.md",
+      "outside_draft_sha256": "b4f2d3280351c07abf1411836077ffcc1d417eedddf5fde54913bbf89f1b15cd",
+      "filed_sha256": "768e5049b2b9ccb380c97ebca777bbaaee5e4c1c422f83081cc0160af7ff6b10",
+      "reason": "Parent audit promotion and portable repository links/commands; no source or output changes."
+    },
+    {
+      "path": "05-knowledge/results/continuing1_20260906_jets_projective.md",
+      "outside_draft_sha256": "aa2a6a753342593bb12c1373f7208fe4a191b26d30f19dcc87c3fd3b31847648",
+      "filed_sha256": "315f00f6dfce7fb46cdaef9ddab316edec75f3e99c62e2d23efde7a41c7b580f",
+      "reason": "Parent audit promotion and portable repository links/commands; no source or output changes."
+    },
+    {
+      "path": "05-knowledge/results/continuing1_20260906_jets_audit.md",
+      "outside_draft_sha256": "e975b27fbb65a28da5b910173d80bdda939dd038e9806da52fda03cd4356e986",
+      "filed_sha256": "66b77f05457c523d437b304fe73469f4b4a1afa87d7265bb06c7f48562c5a0f0",
+      "reason": "Parent audit promotion and portable repository links/commands; no source or output changes."
+    },
+    {
+      "path": "05-knowledge/results/continuing1_20260906_profiles.md",
+      "outside_draft_sha256": "c638cb419ec18124ca552331be70c7a1bb23b218aadcb4ca8f817b498cd19fc6",
+      "filed_sha256": "5af754a71d45555a08dd2e27e501dac17e64ac67945f9e794105f1f0f794a586",
+      "reason": "Parent audit promotion and portable repository links/commands; no source or output changes. Added credit for the same concurrently published ranked envelope; paired simplification and bounded scout remain separate."
+    }
+  ],
+  "incoming_comparison_commit": "2763ed0df"
+}

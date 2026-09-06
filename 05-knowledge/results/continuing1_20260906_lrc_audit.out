@@ -1,0 +1,13 @@
+INDEPENDENT_AUDIT: native no-unit pair-gcd criterion and concrete balanced entry PASS
+ATLAS: generated from inert-prime products with exponents0,1,2;5855 ratios
+SPLIT 2 11 failure_scale_cap 2 pair_upper_min 1 automatic_maxU 13520696477
+SPLIT 3 10 failure_scale_cap 4 pair_upper_min 1 automatic_maxU 62323312
+SPLIT 4 9 failure_scale_cap 9 pair_upper_min 1 automatic_maxU 257485
+SPLIT 5 8 failure_scale_cap 30 pair_upper_min 3 automatic_maxU 1007
+SPLIT 6 7 failure_scale_cap 90 pair_upper_min 10 automatic_maxU 3
+SIGNED_BOX_CONTROLS: 677 PHYSICAL_NORMALIZATIONS: 4600
+V: (185370716505, 189592176609, 193905909065, 198314972625, 202822562745, 205114343115) U: (2, 3, 4, 6, 18, 486, 9234) SCALES: 1768827685 1 PAIR_GCD: 5929017 MAXU_CUTOFF: 10261
+PHYSICAL_SUM: 2078585993174527392593 COMPONENTS:6+7 MIXED_SUPPORTS: 231 SUBSET_GCD_MAXIMA: {7: 3, 8: 3, 9: 3, 10: 3, 11: 1, 12: 1}
+PHASE: 141506215/707531074 CLEARANCE: 70752184/353765537
+HOSTILES: whole six-component scale exceeds31950; prime7 and inert cube8 excluded from actual atlas
+ACTIVE_CHECKS: 10841

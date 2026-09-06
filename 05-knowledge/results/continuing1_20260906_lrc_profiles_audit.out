@@ -1,0 +1,9 @@
+HEAD 46 complete literal half-lift profiles; g=1,3,5
+FRONT (7, 13) ('1/49', '1/49')
+FRONT (19, 25) ('37/3325', '37/3325', '23/3325', '23/3325', '9/3325', '9/3325')
+FRONT (5, 41) ('2/287', '2/287', '2/287', '2/287', '2/287', '2/287')
+FRONT (5, 53) ('2/371', '2/371', '2/371', '2/371', '2/371', '2/371', '9/1855', '9/1855')
+FRONT (1, 67) ('2/469', '2/469', '2/469', '2/469', '2/469', '2/469', '2/469', '2/469', '2/469', '2/469')
+PAIRED 210 fresh exact lists, eight entries with zero padding
+SCOPE: proof Sections1-4 accepted; abstract gain only; large body scout not replayed
+PASS 5643 independent always-active gates
