@@ -1,0 +1,10 @@
+CLEANROOM_72_539_BRIDGE_AUDIT
+coefficient_profile=-3:[9/196,3/28]->2/49;0:[-3/77,3/77]->4/77;+3:[-3/28,-9/196]->2/49
+coefficient_ceiling=(4,7,11):72/539;defects=-3,0,3;box_hits=1/750
+dyadic_profile=(1,7):2/49;(1,11):4/77;(7,11):2/49;pair_components=6
+physical_(1,7,11)=72/539;physical_components=12;owner_overlap_correction=0
+typed_profile_map=central_atom_unique;outer_atoms_unordered;addresses_and_owners_lost
+affine_maps=0;common_scale_maps=0
+owner_hostile=same_owner_mass_odd:0;speed4:1/7;physical_(4,7,11)=9/49
+nearby_hostile=coefficient_(6,7,13):233/1911;physical_(1,7,13):240/1911
+PASS checks=1376867

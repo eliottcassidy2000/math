@@ -84,6 +84,11 @@
   response. The actual composition recurrence and same-zero margin remain
   live; general actual doubled-row noncancellation is OPEN.
 
+- [The two `72/539` profiles](lrc14_72_539_weighted_profile_shadow_20260906.md):
+  **PROVED EXACT + INDEPENDENTLY AUDITED; HEURISTIC CONNECTION ONLY.**
+  A THM-4437 auxiliary defect-slice profile and THM-4449's `(1,7,11)` pair
+  energy share the multiset `{2/49,2/49,4/77}`. Affine, common-scale, owner,
+  and nearby-family hostiles rule out a transport/conjugacy claim.
 - [THM-4452: colored one-v2 clock-four component caps](../../01-canon/theorems/THM-4452-lrc14-clock-four-one-v2-strict-component-width-caps.md):
   **PROVED + FINITE-EXACT + INDEPENDENTLY AUDITED; LRC(14) OPEN.**
   Colored sheet saturation gives the universal bound

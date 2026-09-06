@@ -1,0 +1,10 @@
+coefficient_pattern=(4,7,11);defects=-3,0,3;boundary_w=(1,1,1);slope=72/539
+coefficient_weighted_parts=-3:2/49,0:4/77,3:2/49
+dyadic_speed_shape=(1,7,11);pair_masses=1:7->2/49,1:11->4/77,7:11->2/49
+dyadic_owner_correction=0;physical_mass=pair_energy=72/539;quotient_pair_components=6
+structural_bridge=exact_termwise_scalar_decomposition;no_canonical_outer-sign_owner_label
+projective_common_scale=False;affine_label_maps=0
+coefficient_as_speed_hostile=(4,7,11):9/49;even_4_half_shift_invariant=True
+nearby_hostile=(6,7,13)_coefficient:233/1911;(1,7,13)_physical:240/1911
+coefficient_box_size=750;72/539_patterns=(4,7,11)
+status=PASS;checks=261633;typed=SCALAR_BRIDGE_NOT_AFFINE_PROJECTIVE_OWNER_CONJUGACY
