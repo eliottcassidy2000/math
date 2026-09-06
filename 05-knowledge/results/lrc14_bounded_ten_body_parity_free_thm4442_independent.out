@@ -1,0 +1,9 @@
+INDEPENDENT_TEN_BODY_ALL_PARITY_AUDIT=PASS
+engine=integer_grid_14_lcm_plus_modular_midpoint_classification
+bodies=286 least_longest=9/1232 least_body=(1, 2, 3, 5, 6, 7, 8, 9, 11, 13) global_cutoff=176/3
+residual_rows=174045 positive_rows=174045 residual_components=5171992 max_tail=58
+parity_mask_counts=[(0, 18649), (1, 22737), (2, 25156), (3, 22027), (4, 21307), (5, 25270), (6, 20984), (7, 17915)]
+maximum_body_residual=(9139, (1, 2, 3, 7, 8, 9, 10, 11, 12, 13), Fraction(9, 1232), 58)
+residual_minimum=(Fraction(10517879, 643242600), (1, 2, 3, 5, 6, 7, 8, 9, 11, 13), (8, 34, 50), 20)
+endpoint_policy=strict_open_danger;all_reported_components_have_exact_weak_safe_endpoints
+lift_policy=literal_physical_midpoint_then_exact_reverse_lift_y=3x_mod_1

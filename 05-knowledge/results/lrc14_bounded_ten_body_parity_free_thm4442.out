@@ -1,0 +1,19 @@
+LRC14_TEN_BODY_ALL_PARITY_TERNARY_UNIT_RESIDUAL
+STATUS=FINITE_EXACT_CANONICAL_AUDIT
+body_universe=C in binom([13],10)
+tail_universe=distinct positive T={a<b<c}, 3_not_dividing_abc
+width_rule=7*max(T)*longest_component(G_C)>=3_implies_completion
+least_longest_component=9/1232 least_body=(1, 2, 3, 5, 6, 7, 8, 9, 11, 13) global_tail_cutoff=176/3
+bodies=286
+finite_residual_rows=174045
+positive_measure_rows=174045
+isolated_only_rows=0
+total_direct_positive_components=5171992
+total_quotient_mask_pieces=3643548
+total_safe_mask_pieces=3559274
+parity_mask_counts=[(0, 18649), (1, 22737), (2, 25156), (3, 22027), (4, 21307), (5, 25270), (6, 20984), (7, 17915)]
+low_circuit_occurrences=[('111', 7092), ('112', 14249), ('122', 11765)]
+maximum_body_residual=(9139, (1, 2, 3, 7, 8, 9, 10, 11, 12, 13), Fraction(9, 1232), 58)
+finite_residual_minimum=(Fraction(10517879, 643242600), (1, 2, 3, 5, 6, 7, 8, 9, 11, 13), (8, 34, 50), 20)
+first_counterexample=None
+CONCLUSION=EVERY_C_IN_BINOM_[13]_10_ACCEPTS_EVERY_DISTINCT_POSITIVE_TERNARY_UNIT_TRIPLE_AFTER_SCALE_THREE

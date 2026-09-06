@@ -1,5 +1,11 @@
 # Script Results Index
 
+- [THM-4442: bounded ten-body parity-free scale-three completion](../../01-canon/theorems/THM-4442-lrc14-bounded-ten-body-parity-free-scale-three-completion.md):
+  **PROVED ELEMENTARY + FINITE-EXACT + INDEPENDENTLY AUDITED; LRC(14)
+  OPEN.** Every ten-subset of `[13]` accepts every distinct ternary-unit tail
+  triple after scale three. A longest-component lemma reduces to `c<=58`;
+  two exact engines close all 174,045 residual rows. Arbitrary entry remains.
+
 - [THM-4441: signed `(1,2,2)` sharp ray closure](../../01-canon/theorems/THM-4441-lrc14-signed-122-sharp-ray-closure.md):
   **PROVED ELEMENTARY RELATIVE TO THM-4414 + FINITE-EXACT + INDEPENDENTLY
   AUDITED; LRC(14) OPEN.** The complete carrier set is one primitive ray;

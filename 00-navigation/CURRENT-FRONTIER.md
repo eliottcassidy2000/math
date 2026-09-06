@@ -43,13 +43,11 @@ gives square sum `<=195`; THM-4019 refutes its sharp arbitrary-lattice target.
   ray, parity-sheet and component-count data; none supplies safety or arrival.
 - **Seam/entry:** THM-4326/4329 close the fixed chart; 4330 leaves `2+12`;
   4347 closes height 40. Arbitrary entry and synchronization remain open.
-- **Scale-three local bound CLOSED; entry OPEN:**
-  [THM-4434](../01-canon/theorems/THM-4434-lrc14-universal-scale-three-network-projection-bound.md)
-  proves the sharp odd `min E<=6/77` bound; [THM-4437](../01-canon/theorems/THM-4437-lrc14-all-parity-network-reduction-to-three-low-circuits.md)
-  reduces mixed parity to `(111),(112),(122)`; [THM-4441](../01-canon/theorems/THM-4441-lrc14-signed-122-sharp-ray-closure.md)
-  closes `(122)`. The other circuits and body-phase entry remain open. The [consumer audit](../05-knowledge/results/overnight3_20260906_lrc_consumers.md)
-  and [component compiler](../05-knowledge/results/lrc14_ten_body_haar_hostile_overnight_hexagon_sep05.md)
-  retain the body-floor hostile and actual safe addresses.
+- **Scale-three local bound CLOSED; entry OPEN:** [THM-4434](../01-canon/theorems/THM-4434-lrc14-universal-scale-three-network-projection-bound.md)
+  is sharp for odd tails; [THM-4437](../01-canon/theorems/THM-4437-lrc14-all-parity-network-reduction-to-three-low-circuits.md)
+  reduces mixed parity to `(111),(112),(122)` and [THM-4441](../01-canon/theorems/THM-4441-lrc14-signed-122-sharp-ray-closure.md)
+  removes `(122)`. [THM-4442](../01-canon/theorems/THM-4442-lrc14-bounded-ten-body-parity-free-scale-three-completion.md)
+  closes every tail over ten-bodies in `[13]`; universal `(111),(112)` and entry remain open.
 - **Transport/incidence:** [overnight synthesis](../05-knowledge/results/overnight_20260906_synthesis.md)
   retains cap, midpoint and owner-line refinements. The
   [sparse proof](../05-knowledge/results/synthesis_20260905_lrc_sparse_transport.md)
