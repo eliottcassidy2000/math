@@ -1,0 +1,30 @@
+PASS explicit dimension-independent quadratic signed-duplication stability
+Global K=(6sqrt2-8)/3; distance squared=2-sqrt2*(largest two positive roots sum)
+Declared universe: 49 rational prefixes; eligible rows= 43 exceptions= 6
+EXCEPTION -2 1 zero prefix sum
+EXCEPTION -1 0 zero prefix sum
+EXCEPTION -1/2 -1/2 zero prefix sum
+EXCEPTION 0 -1 zero prefix sum
+EXCEPTION 0 0 zero energy
+EXCEPTION 1 -2 zero prefix sum
+Families: 5 actual finite-degree minimizers; 5 three-positive controls; 6 unequal-two controls
+FAMILY two_equal 2 7/9
+FAMILY three_equal 2 (27/29)+(8/29)sqrt(2/3)
+FAMILY two_equal 3 (27/29)+(-8/29)sqrt(2/3)
+FAMILY three_equal 3 1
+FAMILY two_equal 8 61/99
+FAMILY three_equal 8 (243/173)+(-160/173)sqrt(5/12)
+FAMILY two_equal 30 (63/22)+(-35/11)sqrt(31/60)
+FAMILY three_equal 30 (961/439)+(-1080/439)sqrt(16/45)
+FAMILY two_equal 100 (65653/17547)+(-78400/17547)sqrt(101/200)
+FAMILY three_equal 100 (10201/3799)+(-38800/11397)sqrt(17/50)
+FAMILY two_unequal_1/2 10 (767/363)+(-1360/1089)sqrt(27/20)
+FAMILY two_unequal_1/2 100 (89381/15519)+(-30400/6651)sqrt(63/50)
+FAMILY two_unequal_2/3 10 (46007/24123)+(-8200/8041)sqrt(71/45)
+FAMILY two_unequal_2/3 100 (36477827/8287473)+(-8722000/2762491)sqrt(328/225)
+FAMILY two_unequal_9/10 10 (353135/196779)+(-165680/196779)sqrt(199/100)
+FAMILY two_unequal_9/10 100 (274877003/72622497)+(-172793600/72622497)sqrt(457/250)
+Boundary: 4 exact ratio-one rows; zeros retained; both root signs retained
+Power2 optimal; best global constant OPEN, between (6sqrt2-8)/3 and K_three in (0.350,0.351)
+Exact gates: 434
+Trace SHA256: 9a09c7b68404dccf609758ce028580b40a9913708becd671b9227b4692a0f98d
