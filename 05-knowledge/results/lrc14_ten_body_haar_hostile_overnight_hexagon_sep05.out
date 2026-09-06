@@ -1,0 +1,9 @@
+COMPLETE BODY HEAD286; below6/77 12 FIRST (13, (1, 2, 3, 4, 5, 7, 8, 9, 11, 13), Fraction(21514, 315315)) LEADER (Fraction(14249, 252252), (1, 2, 3, 5, 7, 8, 9, 11, 12, 13))
+SEMANTIC SHA256 fa75e5455d91ab5b3ac0724b5889096d33349ae68e221f5ed1f5372677c2cc2f
+HOSTILE COMPONENTS [(Fraction(1, 14), Fraction(1, 14)), (Fraction(15, 154), Fraction(13, 126)), (Fraction(29, 182), Fraction(9, 56)), (Fraction(29, 168), Fraction(27, 154)), (Fraction(3, 14), Fraction(3, 14)), (Fraction(43, 182), Fraction(27, 112)), (Fraction(29, 112), Fraction(41, 154)), (Fraction(29, 98), Fraction(55, 182)), (Fraction(5, 14), Fraction(5, 14)), (Fraction(9, 14), Fraction(9, 14)), (Fraction(127, 182), Fraction(69, 98)), (Fraction(113, 154), Fraction(83, 112)), (Fraction(85, 112), Fraction(139, 182)), (Fraction(11, 14), Fraction(11, 14)), (Fraction(127, 154), Fraction(139, 168)), (Fraction(47, 56), Fraction(153, 182)), (Fraction(113, 126), Fraction(139, 154)), (Fraction(13, 14), Fraction(13, 14))]
+FILTERED CONTROL209 maxbody14,no reduced clock<=14,T1,5,11; minimum (Fraction(4163, 51480), (1, 2, 3, 8, 9, 10, 11, 12, 13, 14))
+FIRST-EXIT CONTROL (6,) (Fraction(5, 28), Fraction(9, 28)) (Fraction(31, 154), 2, 'first effective-tooth exit') physical 113/154
+FIRST-EXIT CONTROL (99,) (Fraction(89, 462), Fraction(31, 154)) (Fraction(31, 154), 2, 'first effective-tooth exit') physical 113/154
+COMPONENT DECISIONS 644 CHECKS 1579
+REFUTED universal ten-body6/77 Haar floor; PROVED inherited-owner first-exit decision compiler
+OPEN actual arbitrary-row entry and synchronization; no new family closure claimed from fixed clocks

@@ -12,7 +12,7 @@ n=21 every_layer_matching_sign_marked_increment_and_reversal=PASS
 n=30 every_layer_matching_sign_marked_increment_and_reversal=PASS
 n=40 every_layer_matching_sign_marked_increment_and_reversal=PASS
 short_signed_Hamilton_tables={3: [1, -1], 4: [3, -1, 3], 5: [12, 0, 4], 6: [60, 12, 12, -4], 7: [360, 120, 72, 24], 8: [2520, 1080, 600, 312, 216]}
-literal_cycles=72238 explicit_failure_gates=17475
-claimed_all_order_scope=n>=18_and_every_3<=k<=n
+literal_cycles=72238 explicit_failure_gates=17478
+claimed_all_order_scope=n>=16_and_every_3<=k<=n
 equality_transition=n_versus_2k-3;global_negation_exactly_when_k_even
 RESULT=PASS

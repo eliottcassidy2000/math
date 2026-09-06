@@ -1,13 +1,15 @@
 # Exact second weights in every cycle layer, with a sharp perturbation-type transition
 
-Status: **PROOF CANDIDATE**, independent full audit pending. All finite
-controls below are **FINITE-EXACT**. This extends the audited Hamilton
-second-weight result to every cycle length; it does not infer equality
-classes from an asymptotic bound.
+Status: **PROVED ANALYTICALLY + INDEPENDENTLY AUDITED**. All finite controls
+below are **FINITE-EXACT**. Root and the independent `nc2_seed` referee
+audited the full proof; the latter also independently checked the refined
+n>=16 benchmark transport. This extends the audited Hamilton second-weight
+result to every cycle length; it does not infer equality classes from an
+asymptotic bound.
 
 ## 1. Statement, inheritance and the retained root
 
-Let n>=18 and `3<=k<=n`. Put
+Let n>=16 and `3<=k<=n`. Put
 
 ```text
 e=e_(n,k)=(n-2)!/(n-k)!,
@@ -49,7 +51,7 @@ The hostiles are retained explicitly: the signed Hamilton values
 failure on K6. The live board is: normalized transposition rigidity;
 induced matching distribution; unmatched marked vertex; short sign tables;
 parity Bonferroni; adjacent/disjoint scale. No new large switching-class
-census is used. The n>=18 cutoff is sufficient, not claimed minimal.
+census is used. The n>=16 cutoff is sufficient, not claimed minimal.
 
 ## 2. The same finite structural carrier suffices uniformly
 
@@ -60,26 +62,43 @@ gives, for every pair's interior disagreement count r,
 c_k(H)/e >= T_(n,n)(r)/(2(n-2)!).
 ```
 
-To exclude `3<=r<=n-5`, compare the Hamilton quantity with
-`a_(n,k)/e=2-2/(n-2)`. Write `q=r(n-2-r)` and
-`F(q)=q[(n-2)(n-3)-2q]`. After clearing the positive factorial factor,
-the target is `2(n-3)^2(n-4)`. The two endpoint excesses on
-`3(n-5)<=q<=(n-2)^2/4` are
+To exclude `3<=r<=n-5` at the same cutoff n>=16, retain the benchmark's
+dependence on k as well as the transposition count. Put
 
 ```text
-n^3-28n^2+207n-468,
-(n-4)(n^3-22n^2+108n-152)/8.
+R_k=T_(n,k)(r)/(2e_(n,k)),
+U_d(k)=b_(n,k)/e_(n,k),
+q=r(n-2-r),  D4=(n-2)(n-3)(n-4)(n-5).
 ```
 
-At n=18+t they equal
+For k>=6 the exact cross-scale formula gives
 
 ```text
-t^3+26t^2+171t+18,
-t^4/8+23t^3/4+92t^2+566t+868,
+(R_k-U_d(k))-(R_n-U_d(n))
+ =2(n-k)[q(q-n+3)-2(n-4)(n-5)]/D4.                 (T)
 ```
 
-both strictly positive for t>=0. Concavity therefore excludes all those
-disagreements. Every row pair has
+In the present range `q>=3(n-5)`, both factors in `q(q-n+3)` increase
+with q, and
+
+```text
+q(q-n+3)-2(n-4)(n-5) >=4(n-5)(n-7)>0.
+```
+
+The independently audited Hamilton n>=16 proof gives
+`R_n>U_d(n)` for every such disagreement. Therefore (T) gives
+`R_k>U_d(k)>=min(a_(n,k),b_(n,k))/e` at every k>=6.
+
+For k=3,4,5, the normalized transposition value is q/(n-2), and
+
+```text
+q/(n-2)-a_(n,k)/e >=(n-9)/(n-2)>0.
+```
+
+These two arguments exclude all R3 disagreements at n>=16. The earlier
+proof using a single k-independent adjacent-edge benchmark required n>=18;
+keeping the benchmark coordinate removes that unnecessary loss. Thus every
+row pair has
 
 ```text
 r in {0,1,2,n-4,n-3,n-2}.                            (A2)
@@ -268,7 +287,7 @@ giving `n binom(n-1,2)=3 binom(n,3)` possibilities. The disjoint count is
 be switching-equivalent: their symmetric difference has at most four edges,
 whereas a nonempty cut has at least n-1>4. Their global negatives are
 separate, because the original negative-triangle counts are `2(n-3)` or
-`2(n-2)`, and the complementary counts are larger than both for n>=18.
+`2(n-2)`, and the complementary counts are larger than both for n>=16.
 These counts also distinguish the shape and global-sign relabelling orbits.
 
 ## 7. Exact controls and remaining boundary
@@ -288,16 +307,19 @@ size for n=16,17,18,19,20,21,30,40, including the n=19 and n=21 transition
 layers and all short negative/zero sign controls. No full switching-class
 enumeration at any of these larger orders is performed.
 
-The Hamilton theorem remains stronger at ambient orders 16 and 17. The
-exact all-layer result here starts at 18, and no conclusion for all shorter
-ambient orders is inferred. Higher weights, cumulative second weights,
-and general edit-distance estimates remain open in this note. No LRC(14),
-tournament, or Boolean quotient result is asserted.
+The refined exact all-layer theorem now starts at the same order 16 as
+the Hamilton theorem. No conclusion for all shorter ambient orders is
+inferred. The formerly open cumulative second weights are now proved for
+n>=16 in [the cumulative second-weight theorem](overnight_hexagon_sep05_cumulative_second.md):
+mixing parity retains an antibalanced third competitor, and the sharp
+worst-truncation isolation constant is six. Higher weights and general
+edit-distance estimates remain open. No LRC(14), tournament, or Boolean
+quotient result is asserted.
 
-Normal and optimized runs are byte-identical: 17,475 explicit failure
+Normal and optimized runs are byte-identical: 17,478 explicit failure
 gates and 72,238 literal cycles. Raw-LF SHA-256:
 
 ```text
-8d938c501cc441ea20d2e71d37bc0b5f64617044aed5d636e4caa9f93da7f84b  04-computation/overnight_hexagon_sep05_crossscale_second.py
-0ade379b4dd28e723eec1b0cd116e79faad540d3616eefbd5a9aae895695d679  05-knowledge/results/overnight_hexagon_sep05_crossscale_second.out
+5cf7d1f6178385117c31b2d3d2940cc851970468af8acb7312e9c1b0127545c0  04-computation/overnight_hexagon_sep05_crossscale_second.py
+2cdf775ff42ac830add86b97215566a4db6be61dcc5e68f537937767c7c47840  05-knowledge/results/overnight_hexagon_sep05_crossscale_second.out
 ```

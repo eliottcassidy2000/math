@@ -1,0 +1,14 @@
+HEAD 2 4 rows 2024 metric_types 30
+HEAD 2 5 rows 10626 metric_types 55
+HEAD 2 6 rows 42504 metric_types 121
+HEAD 3 4 rows 2024 metric_types 11
+HEAD 3 5 rows 10626 metric_types 18
+HEAD 3 6 rows 42504 metric_types 31
+HEAD 5 4 rows 2024 metric_types 5
+HEAD 5 5 rows 10626 metric_types 7
+HEAD 5 6 rows 42504 metric_types 9
+HEAD 7 4 rows 2024 metric_types 5
+HEAD 7 5 rows 10626 metric_types 6
+HEAD 7 6 rows 42504 metric_types 9
+GATES 220616 SEMANTIC b128993c07a350890d760801cde0782ed330d15d7c29316d6fc5a25fafe262c0
+NO COLLISION in the stated universe; no unbounded metric theorem follows.

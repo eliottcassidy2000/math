@@ -4,8 +4,8 @@
 is explicit below; this file is provenance, not proved canon. Session began
 at 2026-09-06 04:37 UTC from `62e1b34d82a4` in an isolated worktree.
 The startup and first/second-wave sections preserve idea provenance. The
-[third-wave board](#third-wave-current-board-and-audit-checkpoint) is the
-current portfolio at the latest checkpoint; proved truth lives in canon.
+[fourth-wave board](#fourth-wave-current-board) is the current portfolio
+at the latest checkpoint; proved truth lives in canon.
 
 ## Paper intake and boundaries
 
@@ -190,3 +190,63 @@ until the owner promotes its reservation. LRC entry/synchronization,
 general trinomial common-root exclusion and full higher-jet partitions
 remain OPEN. No mathematical session result is inferred merely from the
 number of computed rows or agreement between two compressed formulas.
+
+## Fourth-wave current board
+
+**2026-09-06, approximately07:25 UTC.** The overnight session continues.
+Incoming THM-4434 is now PROVED after its owners' promotion and additional
+independent coefficient audit. The earlier reservation caveats above are
+historical. Incoming4437 (all-parity low circuits) and4438 (row-fifteen
+relative response) are RESERVED and are not proved inputs. Our terminal
+metric theorem uses the freshly checked namespace4439 to avoid collisions.
+
+The six live concepts are now: actual body components; parity-sensitive
+networks; mixed-scale signed spectra; scalar negative-phase cancellation;
+terminal-cluster inverse denominators; faithful quotient conductance.
+Every incoming result changes the next operation, not just the reading list:
+
+- **Anchor / exact body consumer:** the universal odd triple projection
+  bound is closed by incoming4434. A ten-body safe-set Haar floor6/77 is
+  REFUTED by an exact height13 body, with12 hostiles in the complete286-row
+  head. All are safe at a small clock, so this is not an LRC counterexample.
+  Recovering THM-4335 gives an exact component decision: inspect the left
+  endpoint, then the first addressed owner exit, retaining singleton and
+  equality-safe components. The unresolved object is an actual entry-produced
+  component, not another unconditioned numerical floor.
+- **Parity niche:** mixed-parity(2,5,7) has actual spoiled mass22/245>6/77;
+  the odd-tail assumption cannot simply be dropped. The incoming all-parity
+  reservation routes three low circuits. The sum circuit is a new target;
+  periodic endpoint discrepancy must be kept, since two projection roofs
+  jump at their carrier cutoff. No blanket all-parity theorem is asserted.
+- **Cycle niche / completed second layer:**4433 now closes individual and
+  cumulative second weights for n>=16. The cumulative formula has three
+  candidates, not two: adjacent edges, disjoint edges, antibalanced. The last
+  wins at a central even truncation for every n>=16 and gives sharp
+  worst-scale loss6/n, versus Hamilton's4/n. The next native problem is
+  Booleanized orbit adjacency, where edge multiplicity, stationary orbit
+  mass and overlapping cycle-length supports are lost.
+- **Laurent phase:**4436 plus exact Euler parameter shifts give strict local
+  interlacing, while actual masses8/12 on(-3,1,5) have root wordPQQPQPQ.
+  Higher-multiplicity second signs survive638 complete small rows and40
+  large-offset controls, but remain FINITE-EXACT. Actual opposite-frequency
+  products can have both signs, so no termwise signed-norm proof is licensed.
+  A broader real-rooted coefficient-duplication inequality is a live
+  conjectural carrier, not a theorem or source-pinned import.
+- **Wildcard / repaired metric invariant:**4439 proves sharp two-jet loss is
+  metric-only at arbitrary node counts. Maximize over each complete terminal
+  residue cluster first; a degree p-2 polynomial cannot cancel at every p
+  residue, leaving an exact one-digit wall. This does not recover the full
+  Smith list. The next cheap hostile must vary jet multiplicity, not repeat
+  the already-refuted full-partition assertion.
+- **Certificate discipline:** primary complete minor/tree/interval compilers,
+  independent full Smith and native sheet engines, and analytic proofs have
+  separate manifests. The extra Boolean support quotient and the body Haar
+  projection must each be audited at their actual consumer. No global
+  conjecture follows from a local primitive or from an empty finite bank.
+
+The terminal-cluster proof and complete-frequency sign failure sharpen the
+same procedural lesson in opposite directions: test simultaneous cancellation
+on the complete native object before deciding whether a missing coordinate
+is essential. A maximum can forget unit data while a sum still needs signed
+frequency groups. This is evidence for a transfer question, not an identification
+of p-adic clusters with Laurent frequencies or graph switching classes.

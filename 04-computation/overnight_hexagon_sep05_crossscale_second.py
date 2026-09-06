@@ -91,7 +91,17 @@ for n in (16,17,18,19,20,21,30,40):
               "exact reversal and tie boundary")
     print(f"n={n} every_layer_matching_sign_marked_increment_and_reversal=PASS")
 
-n,t,q=s.symbols("n t q")
+n,t,q,k=s.symbols("n t q k")
+D4=(n-2)*(n-3)*(n-4)*(n-5)
+R=q*((n-k+2)*(n-4)*(n-5)+(k-5)*(n*n-7*n+14-2*q))/D4
+U=2-4*(k-3)/((n-2)*(n-3))
+transport=2*(n-k)*(q*(q-n+3)-2*(n-4)*(n-5))/D4
+check(s.cancel((R-U)-(R-U).subs(k,n)-transport)==0,"benchmark-aware n16 transport")
+check(s.expand((q*(q-n+3)-2*(n-4)*(n-5)).subs(q,3*(n-5))-4*(n-5)*(n-7))==0,
+      "benchmark-aware positive lower endpoint")
+check(s.cancel(3*(n-5)/(n-2)-(2-2/(n-2))-(n-9)/(n-2))==0,
+      "short-layer n16 threshold")
+# The older n18 constant-benchmark proof is retained as a separate exact control.
 F=q*((n-2)*(n-3)-2*q)
 target=2*(n-3)**2*(n-4)
 lo=n**3-28*n*n+207*n-468
@@ -111,6 +121,6 @@ check(tables[5]==[12,0,4] and tables[6]==[60,12,12,-4],"zero and negative signed
 check(all(x>0 for k in (7,8) for x in tables[k]),"remaining short signed tables positive")
 print(f"short_signed_Hamilton_tables={tables}")
 print(f"literal_cycles={literal} explicit_failure_gates={gates}")
-print("claimed_all_order_scope=n>=18_and_every_3<=k<=n")
+print("claimed_all_order_scope=n>=16_and_every_3<=k<=n")
 print("equality_transition=n_versus_2k-3;global_negation_exactly_when_k_even")
 print("RESULT=PASS")

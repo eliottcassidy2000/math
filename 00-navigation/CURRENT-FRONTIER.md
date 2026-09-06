@@ -1,6 +1,6 @@
 # Current Frontier
 
-**State — 2026-09-05.** Proof links; statuses: **PROVED**, **CITED**,
+**State — 2026-09-06.** Proof links; statuses: **PROVED**, **CITED**,
 **FINITE-EXACT**, **VERIFIED**, **CONDITIONAL**, **OPEN**, **RESERVED**,
 **REFUTED**, **SUPERSEDED**.
 
@@ -48,10 +48,13 @@ gives square sum `<=195`; THM-4019 refutes its sharp arbitrary-lattice target.
   proves `min_i E_i<=6/77` for every primitive distinct positive odd
   ternary-unit triple, with sole equality `(1,5,11)` and every projection
   strict outside norm four. The THM-4409/4414/4422 local target is closed;
-  THM-4423/4425/4428 retain sharper subclass results.
+  THM-4423/4425/4428 retain sharper subclass results;
+  [THM-4431](../01-canon/theorems/THM-4431-colored-lattice-basis-and-three-direction-lrc-network-closure.md)
+  adds colored bases, both three-ray circuit types and sharp full-cap size6.
   The consumer still needs the actual ten-core's `mu(G_C)>=6/77` or joint
   safe phase. Universal body floors and mixed-parity `6/77` are false;
-  actual entry remains open.
+  [The exact body hostile and first-exit compiler](../05-knowledge/results/lrc14_ten_body_haar_hostile_overnight_hexagon_sep05.md)
+  retain actual safe components; entry remains open.
 - **Transport/incidence:** [overnight synthesis](../05-knowledge/results/overnight_20260906_synthesis.md)
   combines cap bound `204/5957`, midpoint payments and owner-line closure. A
   two-dimensional owner polygon can still matter for sharper counts and
@@ -176,6 +179,13 @@ THM-1755's bounded-relation claim is refuted (MISTAKE-544).
 prove two-rung detection and return `<=M+N` for trinomials with smaller
 endpoint `min(M,N)<=8`; the opposite endpoint is unbounded. General
 trinomial two-rung coprimality and arbitrary-support `min(M,N)>=3` remain OPEN.
+
+[THM-4432](../01-canon/theorems/THM-4432-trinomial-two-channel-two-rung-noncancellation-with-carries.md)
+closes two-first-channel trinomials at arbitrary endpoints with all carries.
+[THM-4436](../01-canon/theorems/THM-4436-complete-factorial-row-simple-negative-roots-and-trinomial-phase-wall.md)
+puts every complete moment fibre's simple cancellation roots on the negative
+real `tau` ray, including all proportional resonances. Off that ray detection
+equals support return. Cross-mass coprimality on the ray is still OPEN.
 
 ## Tournaments
 
@@ -341,13 +351,23 @@ lift/phase clocks.
   [THM-4429](../01-canon/theorems/THM-4429-arbitrary-three-node-two-jet-smith-form-and-metric-precision.md)
   gives the full integer Smith form at arbitrary three nodes; its complete
   p-part and sharp precision depend only on the pairwise distance tree.
-  General multiscale clusters and higher jets remain **OPEN**.
+  [THM-4435](../01-canon/theorems/THM-4435-four-node-metric-blindness-and-universal-hermite-precision.md)
+  gives all-node precision from `F',F''` and refutes metric-only full four-node
+  partitions. [THM-4439](../01-canon/theorems/THM-4439-all-node-twojet-metric-precision-by-terminal-clusters.md)
+  nevertheless proves sharp two-jet precision is metric-only for every node
+  count, via terminal clusters and an exact one-digit full-residue loss.
+  Full general multiscale partitions and higher jets remain **OPEN**.
 - **Even-graph spectrum:** THM-4083 closes `D=3,4`;
   [THM-4416](../01-canon/theorems/THM-4416-even-graph-cumulative-d5-d6-spectral-gap.md)
   closes `D=5,6`; [THM-4427](../01-canon/theorems/THM-4427-all-cumulative-signed-cycle-gaps-by-transposition-rigidity.md)
   closes every `D>=7`, again with exactly single-edge equality. Transposition
   rigidity plus a complete K8 base proves each layer `k>=8`; two zero-types
-  repair deletion. Booleanized adjacency and tournament transfer stay open.
+  repair deletion. [THM-4433](../01-canon/theorems/THM-4433-signed-hamilton-second-minimum-and-cross-scale-stability.md)
+  gives every layer's first minimum at n>=9 and exact second minimum at
+  n>=16: adjacent/disjoint two-edge equality switches at `n=2k-3`.
+  Cumulative seconds are exactly the minimum of adjacent, disjoint and
+  antibalanced values; their worst-scale asymptotic isolation loss is `6/n`.
+  Booleanized adjacency and tournament transfer stay open.
 - **AMM:** [THM-4086](../01-canon/theorems/THM-4086-rule-a-transition-clock-and-phase-cocycle.md) proves a fixed-policy `R=32768` clock/cocycle; no global monotonicity, all-`R`, or `C*` result.
 - **Knots:** THM-2176/2191/2281 and THM-2242/2330--2383: localization, owner/ANOVA/rectangle/reference inversion; realization/stable diagonal open. THM-2646: modular/exponent `B3` conjugacy, not Markov invariance.
 - **Flows:** [THM-2177](../01-canon/theorems/THM-2177-planar-counterexample-to-goemans-unsplittable-cost-flow-conjecture.md): planar `58<60` refutes exact `d_max`; planar `2d_max` survives.
@@ -417,30 +437,8 @@ floor `2`; THM-3903: `[2,2]` `7/4`, saturated empty-wildcard `[2,3]` `11/6`.
 Arbitrary/larger cells and certificate import remain open; none proves AK.
 
 ## Cross-domain connection discipline
-Reusable bridges (not literal object identifications):
 
-| Mechanism | Proven source | Legitimate transfer question |
-|---|---|---|
-| Quantifier-order firewall | THM-4090/4094/4095 | Retain incidence/profile until after optimization, witness deletion and global projection. |
-| Whole-layer Frobenius / orbit norm | NC2/TNC | Packets transfer; LRC lacks seed/exit and a `-1` stabilizer needs orientation. |
-| Quotient + sidecar | THM-3731; THM-3729 | Test the fixed fibre, retain coefficient/root, then re-audit the consumer. |
-| Bulk / boundary / null | THM-2058 | Large-prime grids are strict; tight support uses finite level-14 clocks; subthreshold packets vanish. |
-| Operation-response | tournaments/sequences/FC/Rule 30 | Walk/Gram responses still need seam and next-operation congruence tests. |
-| Actual atlas / resonance | THM-3791/3797/3802 | `H^2_dR=E/k` keeps resonance, not lower contacts or the affine cover. |
-| Reversible address | THM-3743/3793/3818/3825 | Cube packets retain scale except one congruence fibre; owner/arrival/loneliness are lost. |
-| Amplitude lattice | THM-3804/3824 | Lift and fixed-division tariffs, not adaptive/projective chronology. |
-| `Z/3` deletion lattice | THM-3785/3790/3808 | Deletion yields `ker(sum mod 3)` units, not a surface map. |
-| Positive filtration | THM-3816 | `gr` and `F_0=k` force `S*=k*`; complement units and affineness are separate. |
-| HFC--JC boundary | THM-3303/3328 | Null moments force collision; otherwise retain anti-tangent/vertex-cone data. |
-| One-sided accumulation | LRC spectrum | Can qualitative isolation be made effective by finite state/pinning data? |
-| Finite observer / recurrence | THM-3171/3172/3180/3181 | Is it invertible, a refuter, or only an address; which sidecar makes termination lawful? |
-| Continuation / min-plus kernel | Gordian profile; THM-840/853 | Which sidecar survives every future operation? |
-| Relation-cone carry atlas | THM-2196/2199 | Carry still needs phase, SCC order, continuation or JC residue/flux. |
-| Euclidean inball / short relation | THM-4009 | Intersect norm `<=195` with rank-eleven stars; owner/phase/arrival are lost. |
-| Euclidean grid coboundary | THM-3710/778 | Word plus basepoint recovers one fibre; stripping loses chart/lift/owner. |
-| Transverse-information tax | THM-2612/2615/2573 | Retain a pole, endpoint, or normal when a locus erases charge. |
-| Phase reconstruction | THM-3267/3269/3273/3277/3285 | Local reconstruction lacks endpoint origin/current and global action; not an LRC reduction. |
-| Integrality/support holes | THM-2200 | Holes can fill under powers while prime dilates die; retain coefficients and sidecars. |
-| Weighted-sector obstruction | THM-2045 factorized `R` family | Does the unique constant-producing sector fail on a broader Lee–Li inner edge? |
-
-HYP-8810's JC/LRC AP-rigidity is a **wildcard, not a reduction**; THM-1017 is one-way. Every bridge needs a map, predicate, loss, sidecar and hostile.
+[Mechanism and sidecar directory](FRONTIER-CONNECTION-SIDECARS.md) preserves
+all prior transfer questions outside the bounded startup packet. Every
+connection needs a source, target, map, preserved predicate, lost coordinate,
+needed sidecar and cheap hostile. HYP-8810 is a wildcard, not a JC/LRC reduction.

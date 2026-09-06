@@ -11,6 +11,12 @@
   The [variable-radius coarea lemma](variable_radius_empty_core_sep06.md)
   proves two-sided count error, exact residue densities, and sharp leading
   constant `8r²/3` with a separate doubled-density algebraic boundary.
+- **PROVED + INDEPENDENTLY AUDITED fourth-wave continuations:**
+  [THM-4439 terminal-cluster precision](../../01-canon/theorems/THM-4439-all-node-twojet-metric-precision-by-terminal-clusters.md) makes the largest two-jet Smith exponent metric-only at every node count, despite the full-partition counterexample;
+  [THM-4433 cumulative seconds](../../01-canon/theorems/THM-4433-signed-hamilton-second-minimum-and-cross-scale-stability.md) retains the antibalanced competitor and proves sharp worst-scale asymptotic constant6;
+  [local Euler interlacing](nc2_channel_contiguous_overnight_hexagon_sep05.md) supplies exact neighbouring-row coprimality but refutes whole-mass interlacing, retaining higher-multiplicity signs as FINITE-EXACT only;
+  [ten-body Haar hostile/first-exit compiler](lrc14_ten_body_haar_hostile_overnight_hexagon_sep05.md) refutes a universal `6/77` body floor and recovers an exact constructive corollary of THM-4335. Global entry and synchronization remain OPEN.
+
 - [Second/third empty-hexagon research waves](../../07-reflections/overnight-hexagon-sep05-research-board.md#third-wave-current-board-and-audit-checkpoint):
   **PROVED + INDEPENDENTLY AUDITED** [THM-4431](../../01-canon/theorems/THM-4431-colored-lattice-basis-and-three-direction-lrc-network-closure.md) colored live bases/three-ray closure;
   [THM-4432](../../01-canon/theorems/THM-4432-trinomial-two-channel-two-rung-noncancellation-with-carries.md) all-carry two-channel detection;

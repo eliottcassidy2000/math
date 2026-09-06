@@ -83,6 +83,12 @@ representative.
 
 ## 2. Colored-basis descent
 
+The general form in the [original proof](../../05-knowledge/results/lrc14_colored_basis_three_ray_overnight_hexagon_sep05.md)
+holds for any rank-two lattice, any forbidden subgroup H, and any centrally
+symmetric convex body: if its live points span, they contain a lattice basis.
+No boundedness or closedness assumption is needed. The following proof
+specializes that mechanism to the complete LRC dictionary.
+
 **Lemma.** If the complete live body has two nonparallel directions, two live
 primitive representatives form a basis of `Gamma`.
 
@@ -267,3 +273,12 @@ python -B -O 04-computation/lrc14_colored_basis_three_ray_h99_independent_refere
 Four or more directions are not covered by this theorem's structural
 classification. THM-4434 subsequently closes their local projections, but
 does not supply chart entry, synchronization, or `LRC(14)`.
+
+The colored-basis/circuit mechanism was independently obtained in the
+concurrent empty-core session; its contribution is credited in the full
+proof and is not counted twice. The later independently audited
+[universal network proof](../../05-knowledge/results/lrc14_global_slope_empty_core_certificate_sep06.md)
+subsumes the three-ray target, not this structural classification. It is now
+canonized as [THM-4434](THM-4434-lrc14-universal-scale-three-network-projection-bound.md);
+that later theorem is not needed as a dependency of this proof.
+Neither local network theorem proves chart entry, synchronization or LRC(14).

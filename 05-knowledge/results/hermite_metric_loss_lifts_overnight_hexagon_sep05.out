@@ -1,0 +1,8 @@
+RANDOM 2 10000 isometric high-unit lifts PASS
+RANDOM 3 10000 isometric high-unit lifts PASS
+RANDOM 5 10000 isometric high-unit lifts PASS
+RANDOM 7 10000 isometric high-unit lifts PASS
+RANDOM 11 10000 isometric high-unit lifts PASS
+RANDOM 13 10000 isometric high-unit lifts PASS
+GATES 60000 SEMANTIC 586177fdb1fbc3216091276216433dedba67ea2952483a655e9e6ec60b8fab6c
+FINITE-EXACT sampled lifts only; no unbounded theorem.

@@ -89,8 +89,9 @@ This theorem originally left at least three directions for a hypothetical
 failure. [THM-4431, colored-basis/three-direction closure](THM-4431-colored-lattice-basis-and-three-direction-lrc-network-closure.md)
 and the independently audited [universal local-network proof](../../05-knowledge/results/lrc14_global_slope_empty_core_certificate_sep06.md)
 advance beyond that historical boundary. Chart entry, synchronization, and
-LRC(14) do not follow. The universal proof's THM-4434 reservation is not
-used as a proved dependency before its own audited promotion.
+LRC(14) do not follow. The later universal proof is now canonized as
+[THM-4434](THM-4434-lrc14-universal-scale-three-network-projection-bound.md),
+but is not required as a dependency of this independent earlier argument.
 
 The independent referee additionally checks every one of the 814 head rows
 through two unrelated lattice boxes, all 192 selected rows through literal

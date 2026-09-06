@@ -78,11 +78,15 @@ Then read frontier, guardrails, theorem; logs are history.
     THM-4065/4085/4204/4206/4210 do not solve a prize.
 17. **Sun 2-4-6-8 is refuted:** THM-4026; later results are scoped.
 18. **All cumulative even-graph gaps are closed.** THM-4427 adds every
-    D>=7 by transposition rigidity and deletion, with single-edge equality.
+    D>=7; THM-4433 gives every cycle layer's exact second minimum at n>=16,
+    with an adjacent/disjoint equality transition. Keep mixed-parity sidecars.
 19. **Two recovered boundaries have new continuations.** THM-4417 gives the
     sharp linear Laurent-return bound at width two; THM-4430 explains the
-    higher-genus three-root obstruction. THM-4429 solves arbitrary three-node
-    two-jet Smith forms. THM-4428 closes one/two-direction LRC networks.
+    higher-genus three-root obstruction; THM-4432/4436 add all-carry two-channel
+    detection and the all-mass negative phase wall. THM-4429/4435 give three-node
+    Smith forms/all-node precision but refute four-node metric-only partitions.
+    The LRC frontier routes the newly audited universal local-network proof;
+    entry, synchronization and LRC(14) remain OPEN.
 
 ## Where to go by topic
 

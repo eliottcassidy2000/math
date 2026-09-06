@@ -1,0 +1,6 @@
+hostile_n16_top10 E=140807044 anti=234801776 adjacent=261498796 disjoint=260444884
+structural_universe=n16..60_all_top_lengths4..n cases=1575
+strict_antibalanced_winners=186 multiple_type_ties=0
+central_even_top_winners=56 sharp_worst_scale_constant=6
+explicit_failure_gates=7199
+RESULT=PASS

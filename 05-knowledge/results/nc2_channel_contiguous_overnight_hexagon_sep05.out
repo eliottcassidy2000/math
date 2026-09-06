@@ -1,0 +1,15 @@
+PROVED local identities; cross-mass sign/gcd universes are FINITE-EXACT only.
+Exact polynomial backend: SymPy 1.9
+Exact local Euler/interlacing pairs: [('r', 150), ('r_carry', 60), ('x', 210), ('z', 90)]
+Higher-multiplicity first/second sign rows: 638 [(2, 213), (3, 210), (4, 215)]
+First/second carry types: [((0, 0), 224), ((0, 1), 118), ((1, 0), 194), ((1, 1), 102)]
+Root-value certificate SHA-256: e199cf253e61dfd9085cc81c690c97ed5f66ff1704da2ae7301bcfebf612f4b7
+Adjacent-return support universe: 247 coprime pairs: 2759
+Adjacent-return degree jumps: [(-1, 211), (0, 1909), (1, 589), (2, 34), (3, 11), (4, 5)]
+First degree-drop control: ((-1, 1, 2), 12, 13, 2, 1)
+Large-offset first/second sign rows: 40 [(3, 6), (4, 6), (5, 5), (6, 6), (8, 6), (10, 5), (12, 6)]
+Opposite-frequency paired-product hostile: [(5, [-1, -1]), (10, [0, 0]), (15, [-1, 1]), (20, [1, -1])]
+Interlacing hostile P: 56*t**3 + 420*t**2 + 280*t + 28
+Interlacing hostile Q: 3960*t**4 + 18480*t**3 + 16632*t**2 + 3960*t + 220
+Interlacing hostile exact root order: PQQPQPQ
+Explicit gates: 23045

@@ -43,7 +43,10 @@ no external priority claim is made.
 If x_i has a unique closest p-adic neighbour of depth f_i and
 S_i=sum_(j!=i)v_p(x_i-x_j), its local contribution is
 2S_i+max(0,f_i-v_p(2)). Tied closest neighbours retain the F'' coordinate;
-a general metric-only largest-factor law is not asserted.
+this inverse formula alone does not discard it. The later
+[THM-4439, terminal-cluster precision](THM-4439-all-node-twojet-metric-precision-by-terminal-clusters.md)
+proves that the maximum nevertheless depends only on the distance tree
+at every node count. It does not restore the full metric-only partition.
 
 ## The full four-node partition is not metric-only
 
