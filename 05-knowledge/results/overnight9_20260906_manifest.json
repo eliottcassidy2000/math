@@ -1,0 +1,115 @@
+{
+  "schema": 1,
+  "created_utc": "2026-09-06T11:02:44.926700+00:00",
+  "baseline_commit": "7f90340cc",
+  "incoming_review_commit": "6dd59c9c4",
+  "hash_basis": "raw LF bytes; self and maintained synthesis excluded",
+  "scope": "Sharp signed-pair tail-fibre profile and explicit virtual-wall LRC witnesses (family existence overlaps incoming THM4448); exact all-prime Deuring one-digit loss; two-diagonal uniform covariance and random-grid density bound. All independently audited; global conjectures remain OPEN.",
+  "artifacts": [
+    {
+      "path": "04-computation/overnight9_20260906_jets_deuring.py",
+      "bytes": 6817,
+      "sha256": "e7e4846f4bdd9cb5b2174571365192436c1578bd110dd71f6dde41a53faa3ab6"
+    },
+    {
+      "path": "04-computation/overnight9_20260906_jets_independent_audit.py",
+      "bytes": 7555,
+      "sha256": "ce5b80b93a3fa39650e4cb01b6eaf92223476ea4eff012b147df501ef774c29a"
+    },
+    {
+      "path": "04-computation/overnight9_20260906_lrc_virtual_pair_wall.py",
+      "bytes": 11088,
+      "sha256": "69cbf5285d3c65272e1c4200e5c095e9ea9bb687c1cd926ce95eefb6cc375d48"
+    },
+    {
+      "path": "04-computation/overnight9_20260906_lrc_virtual_pair_wall_audit.py",
+      "bytes": 16763,
+      "sha256": "37a9d2229a971ef83c23e55f38d8a690bcb164cf736ed34bf8bd48de33e3f747"
+    },
+    {
+      "path": "04-computation/overnight9_20260906_lrc_virtual_pair_wall_margin.py",
+      "bytes": 5322,
+      "sha256": "62ee68aff4af17b0d3951e7a13bd93c3ccd5245c22e66d600b7973036bd65bd0"
+    },
+    {
+      "path": "04-computation/overnight9_20260906_no3line_two_diagonals.py",
+      "bytes": 7785,
+      "sha256": "b9d6dba0402216ac055c37658a5d0c4ed85ad2975c948e862355fcb7fe7398a8"
+    },
+    {
+      "path": "04-computation/overnight9_20260906_no3line_two_diagonals_audit.py",
+      "bytes": 10694,
+      "sha256": "2428e10f6df7b7dca45f043b97188796ead06246c55e2cff48b2a3140b698ceb"
+    },
+    {
+      "path": "05-knowledge/results/overnight9_20260906_jets_deuring.md",
+      "bytes": 12402,
+      "sha256": "9541b36a0ff7a7a2569d5658808ddc554a034cad58089d923fbb148f668de6d0"
+    },
+    {
+      "path": "05-knowledge/results/overnight9_20260906_jets_deuring.out",
+      "bytes": 1285,
+      "sha256": "13b6475b7110129aee0e7c92bafb6aa995465fc3e153e965e1cfe176eb576f08"
+    },
+    {
+      "path": "05-knowledge/results/overnight9_20260906_jets_independent_audit.md",
+      "bytes": 8871,
+      "sha256": "dcbaeba1be721b54819177a94eb928d38b3acffa0ec5631504ce4279e5828644"
+    },
+    {
+      "path": "05-knowledge/results/overnight9_20260906_jets_independent_audit.out",
+      "bytes": 554,
+      "sha256": "0c8b33e3a0e421fee84c8c809fa72f594b2654a317015f82cc8cdfbc8322a1c3"
+    },
+    {
+      "path": "05-knowledge/results/overnight9_20260906_lrc_virtual_pair_wall.md",
+      "bytes": 18073,
+      "sha256": "28b09b38fc4f738086f75ca911ab5cdf3be6612c7b126f01d7763aa3c188e2a5"
+    },
+    {
+      "path": "05-knowledge/results/overnight9_20260906_lrc_virtual_pair_wall.out",
+      "bytes": 1316,
+      "sha256": "50fd7538753f1495d91e4bf517fda84b9d13b2a54b7752a5c86428b6f82f8e51"
+    },
+    {
+      "path": "05-knowledge/results/overnight9_20260906_lrc_virtual_pair_wall_audit.md",
+      "bytes": 20853,
+      "sha256": "814321e5a220f31bfa2e853a01fd3fdb9b619a6948ea77035f7761d99da18d65"
+    },
+    {
+      "path": "05-knowledge/results/overnight9_20260906_lrc_virtual_pair_wall_audit.out",
+      "bytes": 1419,
+      "sha256": "7a0f06a8fc9e48d183aa28d55103f3865a19fedc11bc992e02ee51ba588fb002"
+    },
+    {
+      "path": "05-knowledge/results/overnight9_20260906_lrc_virtual_pair_wall_margin.md",
+      "bytes": 7323,
+      "sha256": "46647d2c13d2ed22fba7f6dd298c5f406944cee770de1ab615d42d7f4db0a1cb"
+    },
+    {
+      "path": "05-knowledge/results/overnight9_20260906_lrc_virtual_pair_wall_margin.out",
+      "bytes": 694,
+      "sha256": "9c05b9b64e0e93ccd025722aa26f46614b5bf447a589ca945c2815b3d91f6603"
+    },
+    {
+      "path": "05-knowledge/results/overnight9_20260906_no3line_two_diagonals.md",
+      "bytes": 11128,
+      "sha256": "c18c72e9bfaa751fcee0845dfa8b4ebc3212f582da758b8fd52dfac9ebbcdc2a"
+    },
+    {
+      "path": "05-knowledge/results/overnight9_20260906_no3line_two_diagonals.out",
+      "bytes": 1984,
+      "sha256": "a74650e096fcc5881d8750c4c7c55326339e7b90b2011e64d175688cd9817d32"
+    },
+    {
+      "path": "05-knowledge/results/overnight9_20260906_no3line_two_diagonals_audit.md",
+      "bytes": 8487,
+      "sha256": "6b3c2b48626b6eb418ddafcdcf54fc94c042d077dbb315a56f8b63190350cf01"
+    },
+    {
+      "path": "05-knowledge/results/overnight9_20260906_no3line_two_diagonals_audit.out",
+      "bytes": 2871,
+      "sha256": "c4d9ff3b16234dbd66e097cfbc5cbadcf5cfff01cd5c0c6e0ed063184e85f3ec"
+    }
+  ]
+}

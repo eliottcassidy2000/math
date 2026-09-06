@@ -1,0 +1,18 @@
+STATUS: PASS; independent proof, unique-board census, and exact crossing geometry
+BOARD UNIVERSE: n3..6, 70086 unique simple degree-two boards, all cycle types
+{"P_both_zero": "1/3", "P_full_zero": "1/3", "boards": 6, "cross_covariance": "-1/9", "mean_each": "1/3", "n": 3, "selected_triple_pair_moments": ["0", "0"], "shape": [3], "variance_each": "2/9", "variance_total": "2/9"}
+{"P_both_zero": "1/2", "P_full_zero": "1/2", "boards": 18, "cross_covariance": "1", "mean_each": "1", "n": 4, "selected_triple_pair_moments": ["8/9", "2/9"], "shape": [2, 2], "variance_each": "19/9", "variance_total": "56/9"}
+{"P_both_zero": "1/36", "P_full_zero": "1/36", "boards": 72, "cross_covariance": "-2/3", "mean_each": "1", "n": 4, "selected_triple_pair_moments": ["1/9", "1/18"], "shape": [4], "variance_each": "49/36", "variance_total": "25/18"}
+{"P_both_zero": "1/75", "P_full_zero": "0", "boards": 600, "cross_covariance": "-34/225", "mean_each": "5/3", "n": 5, "selected_triple_pair_moments": ["56/75", "14/75"], "shape": [2, 3], "variance_each": "1969/450", "variance_total": "1901/225"}
+{"P_both_zero": "7/120", "P_full_zero": "1/45", "boards": 1440, "cross_covariance": "-203/180", "mean_each": "5/3", "n": 5, "selected_triple_pair_moments": ["19/36", "1/10"], "shape": [5], "variance_each": "461/120", "variance_total": "977/180"}
+{"P_both_zero": "7/270", "P_full_zero": null, "boards": 1350, "cross_covariance": "109/135", "mean_each": "7/3", "n": 6, "selected_triple_pair_moments": ["56/75", "128/225"], "shape": [2, 2, 2], "variance_each": "1837/225", "variance_total": "12112/675"}
+{"P_both_zero": "34/2025", "P_full_zero": null, "boards": 16200, "cross_covariance": "-313/405", "mean_each": "7/3", "n": 6, "selected_triple_pair_moments": ["23/45", "619/1350"], "shape": [2, 4], "variance_each": "61237/8100", "variance_total": "54977/4050"}
+{"P_both_zero": "43/3600", "P_full_zero": null, "boards": 7200, "cross_covariance": "-293/180", "mean_each": "7/3", "n": 6, "selected_triple_pair_moments": ["53/150", "737/1800"], "shape": [3, 3], "variance_each": "13189/1800", "variance_total": "10259/900"}
+{"P_both_zero": "11/675", "P_full_zero": null, "boards": 43200, "cross_covariance": "-211/135", "mean_each": "7/3", "n": 6, "selected_triple_pair_moments": ["59/150", "121/300"], "shape": [6], "variance_each": "39193/5400", "variance_total": "1139/100"}
+OTHER-DIRECTION HOSTILE: (5, ([(0, 0), (0, 1), (1, 2), (1, 3), (2, 0), (2, 4), (3, 1), (3, 2), (4, 3), (4, 4)], 2))
+CROSSING NUMERATOR: (19n^6+25n^4-44n^2)/90 + (n mod2)n^2
+ROW/COLUMN NUMERATOR: (46n^7+85n^5+49n^3)/90
+LIMITS: common=19/90; row+col=23/45; cross=-2/5; total variance=364/45; probability coefficient=91/20
+SCOPE: covariance theorem and uniform random-density bound, not nonexistence or optimality
+SEMANTIC SHA256: 05c03390a43ff6b872a5ce6862c75492ce409bea088124898d0cb7cf5a458dd9
+ACTIVE GATES: 72622

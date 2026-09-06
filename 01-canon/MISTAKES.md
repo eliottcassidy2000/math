@@ -9,6 +9,51 @@ Format per entry:
 - Why it was wrong
 - The correct framing
 
+## 2026-09-06 overnight -- a one-sided sharp family does not prove a global profile
+
+- **Failed implication, repaired before filing:** equality examples dense
+  only for `delta<=1/3` do not prove global optimality of
+  `max(0,(1/3-delta)/2)` on the entire distance interval[0,1/2].
+- **Repair:** the [independent signed-pair audit](../05-knowledge/results/overnight9_20260906_lrc_virtual_pair_wall_audit.md)
+  retains both sides of circle-distance Lipschitz continuity and proves the
+  stronger sharp profile `abs(delta-1/3)/2`. The upper equality family and
+  endpoint `(1,4,5),y=1/4` complete the previously missing interval.
+  Full spoil requires `4/21<delta<10/21`; the virtual-wall11/84 margin stays.
+- **Separate deletion hostile:** C=(1,14) has no surviving1-owned endpoints,
+  yet its1 constraint deletes two entire components of G14. Absence of an
+  owned surviving endpoint does not imply redundancy. Retain removed
+  components or give an actual selected point, as the virtual-wall proof does.
+- **Entry repair:** pair-atlas eligibility and large cross height do not
+  imply the decoder's two-component equality. In the addressed ratio-four
+  family, h=14c+1 gives the height-one crossing relation3h-42c-3=0. By
+  THM-3818 Section6.4 it excludes W=V_dec for the prescribed pair/rest split.
+  The explicit safe interval survives; this family is not a live-entry closure.
+
+## 2026-09-06 overnight -- a crossing factorial position can repeat a grid cell
+
+- **Failed implication:** cells selected distinctly within each matching
+  need not be distinct across two intersecting matchings.
+- **Exact hostile:** odd-size central diagonals share one cell; the exact
+  two-edge formula has a2Z/n term absent from the edge-disjoint formula.
+- **Repair:** the [two-direction theorem](../05-knowledge/results/overnight9_20260906_no3line_two_diagonals.md)
+  keeps the duplicate as a single underlying edge. It contributes at order1/n,
+  while extra intersections and4-cycles remain in the uniform remainder.
+  Summing actual crossing cells preserves grid parity and changes the leading
+  covariance. The old edge-disjoint lemma remains valid in its stated scope.
+
+## 2026-09-06 overnight -- one Hensel numerator is not the simultaneous ideal
+
+- **Failed inference:** lifting a simple Deuring zero can cancel one top
+  reciprocal numerator to arbitrary depth, but does not force every endpoint
+  numerator to cancel with it.
+- **Mechanism:** [the divided reflected companion](../05-knowledge/results/overnight9_20260906_jets_deuring.md)
+  satisfies `P-R=pG`; a degree-bounded Wronskian makes G a unit at every
+  residue zero. The joint ideal therefore has valuation exactly one at every
+  lift. Zero derivative forces a constant only because the degree is below p.
+- **Survivor and boundary:** individual Hensel cancellation is real. The
+  repaired exact loss applies to three equilateral banks withm=(p+1)/2;
+  intermediate ideals and larger node packets require new companion proofs.
+
 ## 2026-09-06 overnight -- a lawful correction can arrive after the obstruction
 
 - **Failed implication:** a polynomial source correction that repairs the

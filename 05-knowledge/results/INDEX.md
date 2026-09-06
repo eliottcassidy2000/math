@@ -1,5 +1,16 @@
 # Script Results Index
 
+- [Ninth overnight synthesis](overnight_20260906_synthesis.md):
+  **PROVED + INDEPENDENTLY AUDITED.** [Virtual pair walls](overnight9_20260906_lrc_virtual_pair_wall.md)
+  select explicit safe LRC components; the [sharp margin](overnight9_20260906_lrc_virtual_pair_wall_margin.md)
+  is `abs(||dy||-1/3)/2`. Family existence overlaps incoming THM-4448.
+  [Deuring precision](overnight9_20260906_jets_deuring.md) loses exactly one
+  digit at every supersingular residue lift for three prime-order jet banks.
+  [Two diagonal directions](overnight9_20260906_no3line_two_diagonals.md)
+  have covariance `-2n/5+O(1)` and zero-event limsup constant91/20.
+  [Manifest](overnight9_20260906_manifest.json):21 frozen artifacts; global
+  conjectures and actual decoder entry remain OPEN.
+
 - [Eighth overnight synthesis](overnight_20260906_synthesis.md):
   **PROVED + INDEPENDENTLY AUDITED.** [Alpha completion](overnight8_20260906_alpha_completion.md)
   is uniform in A2 channel count; the coupled beta-skip sign stays OPEN.

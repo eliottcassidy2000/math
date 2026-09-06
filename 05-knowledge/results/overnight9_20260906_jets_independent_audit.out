@@ -1,0 +1,7 @@
+POLYNOMIALS [[3,1,1],[5,2,0],[7,3,3],[11,5,3],[13,6,0],[17,8,0],[19,9,3],[23,11,9],[31,15,9],[43,21,3],[59,29,9],[83,41,9],[103,51,15]]
+ALL_P2_LIFTS 2255 ordinary and supersingular admissible residue fibers
+ACTUAL_RECIPROCAL_OBSERVERS 104 all jet orders and four depths
+FULL_LOCAL_SMITH 20 fresh actual Hasse matrices
+SCOPE exact equilateral largest loss only; e0 separate; no close or full-partition extrapolation
+semantic_sha256 a7cbcf5152cb41411251b9d85850d90b84da29f1786fbdfd02cc7fbc3e07b169
+PASS 7269 explicit gates; no primary mathematical imports

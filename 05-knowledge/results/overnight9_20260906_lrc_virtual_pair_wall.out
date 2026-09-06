@@ -1,0 +1,12 @@
+STATUS: PASS; unconditional constructive family, LRC(14) remains open
+FINITE TAIL UNIVERSE: 120 ternary-unit triples, max<=14, every critical point and cell
+PAIR BAND: full spoil implies ||dy||>4/21; primitive sharpness sequence verified
+CODE UNIVERSE: d1..80,c1..100 plus full-cover boundaries; exact numerator-one counts
+DELETION HOSTILE: C=(1,14) loses two whole components; no d-owned surviving endpoint
+FAMILY CONTROLS: 84 plus 3 all-small-clock hostile controls
+{"C": [1, 14, 31, 62, 93, 124, 1316, 1330, 567879096121, 1135758192242], "T": [1, 94, 95], "d": 31, "eta": "19/246459527716514", "h": 567879096121, "kappa": 567879096121, "m": 48842, "owners": [[2], [2], [2]], "virtual_k": 26, "x": "365/1302", "y": "365/434"}
+{"C": [1, 14, 7865, 15730, 23595, 31460, 330344, 330358, 183926030247961, 367852060495922], "T": [1, 23596, 23597], "d": 7865, "eta": "2622/10126047595301492855", "h": 183926030247961, "kappa": 183926030247961, "m": 1, "owners": [[2], [2], [2]], "virtual_k": 6554, "x": "91757/330330", "y": "91757/110110"}
+ALL THREE ACTUAL TAIL EVENT COSETS BLOCKED; virtual endpoint owners=(2,2,2); two sheets free
+ENTRY SCOPE: necessary numeric filters only; no THM3818 decoder-entry or W=Vdec claim
+SEMANTIC SHA256: 0fb1cb24e4cbe69af6c48cb2cac53fe94b95a111c2949ea1dabae211520d2d53
+ACTIVE GATES: 65423

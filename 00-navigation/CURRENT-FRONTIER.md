@@ -50,12 +50,12 @@ gives square sum `<=195`; THM-4019 refutes its sharp arbitrary-lattice target.
   [THM-4448](../01-canon/theorems/THM-4448-lrc14-general-shore-attachment-and-decoder-pair-cones.md)
   gives cone `14h>=87 max A,29 max T`.
   THM-4442/[4446](../01-canon/theorems/THM-4446-lrc14-primitive-ten-pack-descent-and-dilation-rays.md)
-  force gcd-one packs with cross height `>91^6`; its hostiles
-  refute prescribed-component selection. Opposite-scale entry remains open.
+  force gcd-one packs with cross height `>91^6`. THM-4448 hostiles refute
+  prescribed-component selection; opposite-scale entry remains open.
 - **Transport/incidence:** [overnight synthesis](../05-knowledge/results/overnight_20260906_synthesis.md)
-  retains cap, midpoint and owner-line refinements. The
-  [sparse proof](../05-knowledge/results/synthesis_20260905_lrc_sparse_transport.md)
-  keeps phase intersections, weights and the selector gap.
+  retains cap/event refinements; [virtual walls](../05-knowledge/results/overnight9_20260906_lrc_virtual_pair_wall_margin.md)
+  give sharp fibre margin `abs(||dy||-1/3)/2` and selected safe components.
+  [Sparse transport](../05-knowledge/results/synthesis_20260905_lrc_sparse_transport.md) retains weights and the selector gap.
 - **Residual ranks:** THM-4333/4338 close fixed-pool ranks three/four, not arbitrary entry.
 - **PROVED:** [THM-2928](../01-canon/theorems/THM-2928-critical-seven-comb-grid-tensorization-and-drift-tariff.md)/2941: literal zero/one/two/three-drift sectors are empty; `k=2,3` are finite.
 - **Orthogonal routes.** THM-1017 is HYP-6820; THM-2047/2050 keep phase/exit; THM-731/2048 prune; THM-1290 ends at `55`; HYP-8900 nonuniform.
@@ -338,29 +338,23 @@ lift/phase clocks.
 
 ## Other active portfolio
 
-- **No-three-line:** [random saturated grids](../05-knowledge/results/overnight8_20260906_no3line_diagonal_density.md)
-  have `Var S=(40/9)n+O(1)` and `limsup n sup P(success)<=10`; extremal asymptotics stay OPEN.
+- **No-three-line:** [two diagonal directions](../05-knowledge/results/overnight9_20260906_no3line_two_diagonals.md)
+  give `Var S=364n/45+O(1)` and `limsup n sup P(success)<=91/20`; extremal asymptotics stay OPEN.
 - **P-adic zeta:** external density claims remain **PREPRINT / UNDER AUDIT**.
   [THM-4255](../01-canon/theorems/THM-4255-specialization-kernel-and-transverse-hasse-jet-repair.md)/[4263](../01-canon/theorems/THM-4263-moving-multigraph-filtered-jet-and-finite-factor-density-transport.md) prove graph/jet kernels, finite-factor UI transport and conditional hazards. MISTAKE-527 forbids chosen-section refutations; the external Cartier steps still need a typed audit.
 - **Matching logic:** THM-4090 gives a two-sort Figure-2 calculus
   counterexample relative to cited soundness; one-sort completeness remains a
   preprint claim, and no arithmetic/tournament transfer follows.
-- **Integral observers:** THM-4000/4010 give the consecutive kernel/index;
-  THM-4080/4419/4429 close one-scale, prime-wall and arbitrary three-node
-  metric laws. The [odd-prime mixed law](../05-knowledge/results/overnight_20260906_smith_mixed_cluster.md)
-  covers one doubled residue at all depths; the [double-pair law](../05-knowledge/results/overnight2_20260906_smith_double_pair.md)
-  closes `(2,2)`. The [nested ternary family](../05-knowledge/results/overnight3_20260906_smith_triple_single.md)
-  needs a unit residue beyond its metric; integer diameter81 is minimal.
-  THM-4435 gives dyadic blindness and Hermite precision;
-  [THM-4439](../01-canon/theorems/THM-4439-all-node-twojet-metric-precision-by-terminal-clusters.md)
-  proves the largest factor metric-only at every node count via terminal
-  clusters. [THM-4443](../01-canon/theorems/THM-4443-arbitrary-jet-precision-and-dyadic-unit-boundary.md)
-  gives the arbitrary-multiplicity inverse denominator and complete dyadic
-  three-node three-jet full Smith law (eight attained symbolic costs);
-  metric precision fails at uniform3 and heterogeneous(2,2,1).
-  [Higher jets](../05-knowledge/results/overnight8_20260906_jets_residue.md)
-  give allodd four-jet precision and full p7 factors with an AP residue bit;
-  the Deuring packet detects prime-order ceiling saturation.
+- **Integral observers:** THM-4000/4010 give consecutive kernels/indexes;
+  THM-4080/4419/4429 give one-scale, prime-wall and three-node metric laws.
+  [Odd mixed clusters](../05-knowledge/results/overnight_20260906_smith_mixed_cluster.md): one doubled residue, all depths;
+  [double pairs](../05-knowledge/results/overnight2_20260906_smith_double_pair.md) close `(2,2)`.
+  [Nested ternary clusters](../05-knowledge/results/overnight3_20260906_smith_triple_single.md): unit residue needed; minimal diameter81.
+  THM-4435 gives dyadic blindness/Hermite precision;
+  [THM-4439](../01-canon/theorems/THM-4439-all-node-twojet-metric-precision-by-terminal-clusters.md): all-node metric largest factors.
+  [THM-4443](../01-canon/theorems/THM-4443-arbitrary-jet-precision-and-dyadic-unit-boundary.md): jet inverse denominators and full dyadic3-node3-jet factors (eight costs); metric precision fails at uniform3 and(2,2,1).
+  [Four jets](../05-knowledge/results/overnight8_20260906_jets_residue.md): allodd precision and full p7 factors with an AP bit.
+  [Deuring](../05-knowledge/results/overnight9_20260906_jets_deuring.md):3-node loss `(3m-1)e-[H_p(a)=0]`, oddp,m=(p+1)/2,e>=1; intermediate ideals OPEN.
 - **Even-graph spectrum:** THM-4083 closes `D=3,4`;
   [THM-4416](../01-canon/theorems/THM-4416-even-graph-cumulative-d5-d6-spectral-gap.md)
   closes `D=5,6`; [THM-4427](../01-canon/theorems/THM-4427-all-cumulative-signed-cycle-gaps-by-transposition-rigidity.md)

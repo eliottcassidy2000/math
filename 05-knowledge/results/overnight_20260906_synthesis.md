@@ -5,8 +5,9 @@ This is the maintained continuation surface for the user's overnight request.
 Read current canon and incoming corrections before continuing any lane.
 The starting commit was `62e1b34d8`; the isolated worktree is `C:/w/s0905`.
 The extensively dirty original checkout is outside this session's edits.
-The eighth checkpoint incorporates incoming canon through `e0fb6554d`,
-including proved THM-4437/4440/4441/4442/4443/4444/4445/4446/4447. The universal
+The ninth checkpoint incorporates incoming canon through `6dd59c9c4`,
+including proved THM-4437/4440/4441/4442/4443/4444/4445/4446/4447/4448.
+THM-4449 remains RESERVED and is not a dependency. The universal
 **ternary-unit local network bound is now closed without a parity assumption**:
 sharp `6/55`, with the stronger odd bound `6/77` retained. Actual LRC entry
 and body-to-tail noncontainment remain open. The universal ten-body `6/77`
@@ -24,10 +25,10 @@ independence heuristic and the corrected asymptotic constant; see the
 
 | Live object / representation | Predicate | Operation and retained coordinate | Cheapest next decisive test |
 |---|---|---|---|
-| Anchor: body safe set and three-sheet tail comb | One literal safe completion | Full affine event codes, component addresses, chosen deep anchor and weak endpoints | Event-cover failure must hand its actual owners to the component/first-exit compiler |
-| Grid sets as degree-two bipartite graphs | No collinear triple | Actual colored overlap graphs, injection denominators and complete diagonal family | Uniform variance gives random success probability O(1/n); extend the retained pattern before combining intersecting directions |
+| Anchor: body safe set and three-sheet tail comb | One literal safe completion | Signed-pair virtual walls, exact owner words and protected inverse sheets | Use the sharp fibre margin to select a component outside the incoming attachment cone |
+| Grid sets as degree-two bipartite graphs | No collinear triple | Actual colored overlap graphs, injection denominators and repeated crossing cells | Two diagonal directions give covariance -2n/5 and zero-event bound 91/(20n); test a bounded-change statistic with the same zero set |
 | Niche: trinomial return channels | First two return polynomials have no common torus zero | One quadratic pullback preserves the original zero and completes alpha parity | All A2 completed-alpha responses are negative; one coupled beta-skip coefficient remains |
-| Wildcard: residue-decorated jet cluster | Full partition versus largest precision loss | Minimal-weight minors, reciprocal jets and the Deuring residue packet | Fourth jets need an AP bit at p7; at general Deuring zeros test the next unit digit before claiming exact loss |
+| Wildcard: residue-decorated jet cluster | Full partition versus largest precision loss | Minimal-weight minors, reciprocal jets and a divided reflected companion | Every three-node prime-order Deuring zero loses exactly one digit; intermediate ideals need their own simultaneous companions |
 | Formal exceptional triple | Collision repair and nonzero constant source Jacobian | Leading wedge period under common branch motion | Every collision-preserving O(t9) map retains the obstruction; earlier source jets need the complete contact and density response |
 | Signed Hamilton-cycle parity vectors | Exact minimum and equality classes | Difference with a transposed signing; typed zero deletions | All cumulative gaps are closed; independently audit quantitative stability before using it |
 
@@ -415,6 +416,51 @@ an implication: the maps and losses must be specified in the linked reports.
     Any escape in this comparison must alter a source jet at order<=8 or
     leave the specified collision congruence. Those possibilities remain open.
 
+33. **PROVED sharp signed-pair fibre margin and explicit actual LRC witnesses:**
+    [Virtual walls](overnight9_20260906_lrc_virtual_pair_wall.md) use
+    `d=|u+-v|/3` for a ternary-unit tail pair. The
+    [audited quantitative repair](overnight9_20260906_lrc_virtual_pair_wall_margin.md)
+    proves `H_T(y)>=abs(||dy||-1/3)/2`, globally sharp as a continuous
+    profile. Full spoil therefore requires `4/21<||dy||<10/21`; a virtual
+    wall at `||dy||=1/14` has sharp tail clearance11/84. Exact virtual blocker
+    codes yield an unbounded primitive ten-pack family with an explicit
+    positive safe component and owner word(2,2,2), even though every ordinary
+    tail endpoint coset is blocked. A subfamily blocks all denominator clocks
+    two through fourteen. The original distinguished pair(1,2) is outside
+    the THM-3818 arithmetic atlas. The
+    [independent audit and extension](overnight9_20260906_lrc_virtual_pair_wall_audit.md)
+    replace it by the eligible pair(1,4), and give the explicit cofinal
+    scale h=42d+29 just above the base maximum42d+28. At every admitted
+    d>=107 the same floor address works outside both displayed uniform
+    THM-4448 cones. The short crossing relation h-14c-1=0 excludes the
+    prescribed rank-eleven split for this addressed subclass, so it is not
+    a live-entry closure. Incoming THM-4448 already guarantees existence for the
+    original h=1+mL subfamily. The independent audit
+    repairs an overclaim of global sharpness for the original one-sided
+    margin before filing; all primary and audit controls pass.
+34. **PROVED exact all-prime Deuring precision, independently audited:**
+    [Divided reflected companions](overnight9_20260906_jets_deuring.md)
+    close the eighth three-node zero-residue branch. For odd p,
+    `m=(p+1)/2`, equilateral depth e>=1, and normalized nodes0,p^e,p^e*a,
+    the largest Smith exponent is exactly `(3m-1)e-[H_p(a)=0 mod p]`.
+    The integral companion `G=(P-(-1)^k P(1-a))/p` has degree<=k-1.
+    Its Wronskian identity makes G a unit at every Deuring zero, preventing
+    simultaneous cancellation beyond one digit at any lift. Every adjacent
+    normalized jet is also a unit there. Primary/audit gates1,292/7,269 pass,
+    including all2,255 admissible p-squared lifts through31 in the referee.
+    Intermediate ideals, non-equilateral triples, and general node packets
+    are outside this exact-loss theorem.
+35. **PROVED two-direction random-grid covariance, independently audited:**
+    [The repeated-cell repair](overnight9_20260906_no3line_two_diagonals.md)
+    gives `Cov(S_+,S_-)=-2n/5+O(1)` and
+    `Var(S_++S_-)=364n/45+O(1)` uniformly over all degree-two cycle types.
+    The shared crossing contributes19/90 to the geometry integral; omitting
+    it changes the leading term. Consequently `limsup n sup P(X=0)<=91/20`.
+    Primary/audit gates34,607/72,622 pass; the referee enumerates all70,086
+    distinct boards through n6 and independently derives the parity-sensitive
+    geometry polynomials. This is a random-density bound, not a finite
+    negative-covariance theorem or an extremal asymptotic closure.
+
 These are repository-scoped advances and recovered mechanisms, not claims
 of external literature priority. In particular, conditioning grid occupancy
 by row and column saturation already appears in the cited construction work.
@@ -430,7 +476,7 @@ independence heuristic and the later corrected conjectural constant.
 | Moment carry channels -> symbolic certificates | Preserve the full integer channel line at the first and doubled return; eliminate the remaining nonzero coefficient | First-level channel count loses second-level carries; one example has two channels followed by five |
 | Smith cluster tree -> weighted minors | Keep valuations of every row-bank alternative and compare their minima | A depth tree plus an appended factor list loses saturation changes in old factors |
 | Complete binomial paths -> trinomial roots | Ordered source/sink boundaries make Toeplitz minors nonnegative; a shifted ordinary coefficient product retains the full row | Prefix truncation destroys root location; separate rows still need a coupling |
-| Local triple bounds -> LRC completion | Compare actual body phases with the literal tail failure set or exact affine event codes | Local ceilings do not supply entry; count/gcd data lose event overlap, and full Bohr packets lose the chosen anchor |
+| Local triple bounds -> LRC completion | Compare body phases with literal tail masks; signed-pair virtual walls force owner collisions and a sharp physical margin | Scalar ceilings do not select a component; the virtual code needs an actual surviving body phase |
 | Two-jet Hermite inverse -> terminal clusters | Complete terminal maximization preserves worst precision in its proved uniform observer | Higher jets need reciprocal coefficients; intermediate ideals need their own competing minors |
 | Carried quotient -> characteristic coefficients | Real first roots turn quotient multiplication into a real-spectrum operator; positive full characteristic coefficients exclude nonnegative responses | Trace and determinant alone miss a middle positive eigenvalue; retain every coefficient and the carry |
 | Jet shell products -> current/future precision | Integral truncated multiplication retains cancellation; a metric baseline prunes the current target, while slope-labelled intercepts retain future dilations | Current-depth pruning is not permanent; local cancellation is not the global loss |
@@ -438,8 +484,8 @@ independence heuristic and the later corrected conjectural constant.
 | Full minor families -> metric-only odd-prime jets | Joint factored witnesses attain every weighted lower envelope in all unit classes | One minor may cancel; metric sufficiency is proved for this observer and need not survive a new derivative order |
 | Polynomial source shear -> collision repair -> target forms | The source map is actual; filtered pullback preserves every lower density jet | Target descent and the differentiated clock are separate constraints; t10 payment cannot change J8 |
 | Complete beta roots -> one alpha-completed carrier | Quadratic pullback keeps negative-phase roots real and the exact original zero coefficient | Higher pullback degrees and positive phases fail; beta-skip paths still need their coupled response |
-| Reciprocal top jets -> Legendre residue curve | Frobenius and coefficient translation identify ceiling failure with the Deuring zero predicate | Higher digits, depth and intermediate ideals are lost; supersingularity alone was not an exact-loss theorem |
-| Colored line overlaps -> random-grid zero event | Injection counts grade patterns by v-2c; one two-edge path gives the uniform covariance correction | Fixed-K independence alone cannot justify a growing diagonal sum; the uniform remainder supplies it |
+| Reciprocal top jets -> Legendre residue curve -> exact loss | Frobenius identifies the Deuring zero; an integral divided reflection and degree-bounded Wronskian cap simultaneous loss at one digit | One numerator can cancel arbitrarily deeply; intermediate ideals need additional witnesses |
+| Colored line overlaps -> random-grid zero event | Injection counts grade patterns by v-2c; a repeated cell supplies the crossing correction for two directions | Fixed-K independence cannot justify the growing sum; repeated cells and uniform remainders must survive |
 | Common branch motion -> retained wedge period | Alternation removes tangent reparametrization; the tangent relation cancels common target motion | Dropping collision contact or testing one form loses the equivalence; unrestricted earlier source jets remain |
 | Real parabolic collinearity -> integral observer | The determinant of three points `(u,u^2)` is the ordinary Vandermonde product | Modulo a prime, zero area only records congruence; integral depth must accompany that reduction |
 
@@ -492,6 +538,11 @@ asymptotics and the ninth-source collision period, with independent audits.
 Root read the Auer--Top primary Section3 and the complete no-three-line
 uniform-remainder proof; no external theorem supplies the new Smith laws.
 
+The [ninth checkpoint manifest](overnight9_20260906_manifest.json) freezes
+21 artifacts for the sharp virtual-wall profile, exact Deuring loss, and
+two-direction covariance. The LRC margin correction is incorporated before
+promotion; the pre-audit overclaim is retained only as correction provenance.
+
 ## Procedural direction generator
 
 Use `objects x representations x invariants x operations x quotient losses
@@ -512,11 +563,10 @@ test. Do not simply increase the last census bound. Current unfilled cells:
   Work on the outer distribution of named palettes, especially the exact
   random-pairing carrier for all-C4 skeletons. A conditional dependency graph
   does not pay the outer cumulants; the n4/n5/n6 controls must remain live.
-  The next target is a controlled remainder or a useful tail bound, not
-  another demonstration of the already proved local factorization. The
-  eighth uniform diagonal theorem now controls an actual zero-event upper
-  bound. Combining other directions needs a repeated-cell overlap term;
-  their lines are not edge-disjoint matchings.
+  The ninth theorem retains repeated cells and proves the two-direction
+  covariance. The next zero-event test should change the statistic while
+  preserving its zero set, to make transposition concentration available;
+  additional unbounded triple moments need not be the cheapest route.
 - **Moments / path and Laguerre factors / root response / doubling.**
   Individual rows have simple negative roots. Incoming signed duplication
   supplies a cross-row SOS for real-rooted ordinary cores and closes all AP
@@ -533,9 +583,10 @@ test. Do not simply increase the last census bound. Current unfilled cells:
   actual competing witness caps each cancellation. The universal two-jet
   largest-factor law solves worst precision metrically at arbitrary nodes;
   incoming THM-4443 shows that higher jets require a unit-sensitive sidecar.
-  Fourth jets now expose an AP residue at p7, and prime-order jets expose
-  the Deuring zero set. Test the joint next-digit ideal there, not one
-  selected reciprocal coefficient in isolation.
+  Fourth jets expose an AP residue at p7. The ninth divided-reflection
+  Wronskian closes the exact prime-order largest loss at every Deuring lift.
+  Look for simultaneous companions of intermediate minors; do not reopen
+  the now-closed next-digit question for this largest-factor observer.
 - **Formal triple / earlier source jets / differentiated clock.** The actual
   fifth-order source module is K[x]; the full descended retained image is
   ker L. Source payment is possible but cannot alter J8. A ninth-order term
@@ -599,6 +650,17 @@ additional discoveries counted for this task:
   absorbed divisors of one physical row. Root read the full proof; the
   independent incoming finite-orbit census was not rerun. No remaining
   clock-two/three/four signature is emptied by the capacity sum alone.
+  [THM-4448 / general shore attachment and decoder-pair cones](../../01-canon/theorems/THM-4448-lrc14-general-shore-attachment-and-decoder-pair-cones.md)
+  is now PROVED and independently audited. Its protected lower-runner arc
+  retains one inverse sheet; a scaled shore attaches once its largest open
+  danger component is no longer than that arc. The exact decoder-pair
+  maximum29/196 yields `14h>=87 max A,29 max T`; the filter-free bounded
+  pair maximum is15/98. Root read the full proof and incoming audit scope,
+  without rerunning its5,855/19,314 pair censuses. Its cofinal hostile
+  proves that large cross height cannot certify a prescribed component.
+  Our original h=1+mL family lies inside that cone while exposing a chosen
+  safe endpoint after every ordinary tail event fails. THM-4449 is a
+  RESERVED/UNPROVED EMPTY STUB and contributes no proved dependency.
 - [THM-4432 / two-channel two-rung noncancellation with carries](../../01-canon/theorems/THM-4432-trinomial-two-channel-two-rung-noncancellation-with-carries.md)
   closes every first row with exactly two channels at all endpoints.
   [THM-4436 / complete factorial-row simple negative roots](../../01-canon/theorems/THM-4436-complete-factorial-row-simple-negative-roots-and-trinomial-phase-wall.md)

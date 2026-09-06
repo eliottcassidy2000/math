@@ -1,0 +1,20 @@
+PRIME 3 m 2 Deuring_roots 1 all_companion_obstructions_unit True
+PRIME 5 m 3 Deuring_roots 0 all_companion_obstructions_unit True
+PRIME 7 m 4 Deuring_roots 3 all_companion_obstructions_unit True
+PRIME 11 m 6 Deuring_roots 3 all_companion_obstructions_unit True
+PRIME 13 m 7 Deuring_roots 0 all_companion_obstructions_unit True
+PRIME 19 m 10 Deuring_roots 3 all_companion_obstructions_unit True
+PRIME 23 m 12 Deuring_roots 9 all_companion_obstructions_unit True
+PRIME 31 m 16 Deuring_roots 9 all_companion_obstructions_unit True
+PRIME 43 m 22 Deuring_roots 3 all_companion_obstructions_unit True
+PRIME 47 m 24 Deuring_roots 15 all_companion_obstructions_unit True
+PRIME 59 m 30 Deuring_roots 9 all_companion_obstructions_unit True
+PRIME 67 m 34 Deuring_roots 3 all_companion_obstructions_unit True
+PRIME 71 m 36 Deuring_roots 21 all_companion_obstructions_unit True
+PRIME 79 m 40 Deuring_roots 15 all_companion_obstructions_unit True
+PRIME 83 m 42 Deuring_roots 9 all_companion_obstructions_unit True
+PRIME 103 m 52 Deuring_roots 15 all_companion_obstructions_unit True
+ROOT_CONTROLS 118 rootclasses; completep2fibers 600
+EXACT_OBSERVER_CONTROLS inverse 76 fullSmith 18
+EXACT_LOSS e>=1: (3m-1)e-[H_p(a)=0]; e0:0; all supersingular next-order jets unit
+PASS_OPTIMIZATION_LIVE_GATES 1292

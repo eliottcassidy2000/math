@@ -1,0 +1,13 @@
+STATUS: PASS after explicit global-sharpness repair; LRC14 remains open
+PROFILE: 35 complete piecewise tail rows; 1783 critical/crossing phases
+OWNER/STRICT BOUNDARY POINTS: 800 ; SIGNED WALL CODE ROWS: 3657
+TWO SHARP FAMILIES: 837 rows, complete primitive rescaling
+STRONGER BAND IS NOT IFF: ((1, 2, 4), '1/3', ('1/3', '1/3', '1/3'))
+EXPLICIT FAMILY: 23 controls including m=1, composite d, full subset gcds
+FIRST RECONSTRUCTED CELL (d,m,h,y,quotient_length): (31, 1, 11626861, '365/434', '19/2523028837')
+ARBITRARY COPRIME h ACTUAL COMPONENTS: [(31, 1331, 18), (31, 567869252141, 17), (41, 1751, 25), (41, 567869252141, 23), (55, 2339, 32), (55, 567869252141, 31), (85, 3599, 46), (85, 567869252141, 47), (121, 5111, 64), (121, 567869252141, 64)]
+ATLAS-ADMISSIBLE (1,4) CONTROLS (d,h,verified_walls,uniform_decoder_cone): [(31, 11626861, 1, True), (37, 19667425, 1, True), (125, 744198001, 1, True), (7865, 183926030247961, 1, True), (31, 1331, 17, False), (41, 1751, 23, False), (55, 2339, 32, False), (85, 3599, 44, False), (121, 5111, 62, False)]
+EXACT ADDRESSED h=M+1, ALL SMALL CLOCKS BLOCKED: [(7865, 330359, 1, False), (127985, 5375399, 1, False), (60060007865, 2522520330359, 1, False)]
+ENTRY FIREWALL: 3h-42c-3=0 crosses {3h,12h} versus the rest at height one; prescribed W=Vdec excluded
+PROVENANCE: THM4448 also supplies existence in its scale cone; this retains exact wall/owner/margin
+ACTIVE GATES: 42162

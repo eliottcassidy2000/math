@@ -1,0 +1,8 @@
+STATUS: PASS; globally sharp absolute-value fibre margin and arbitrary-coprime-h strict extension
+FINITE CONTROLS: 56 tail triples; 180 Farey phases; 238 primitive exact sharpness rows
+UPPER PROFILE: 1431 equality rows with primitive rescaling; endpoint delta=1/2 attained
+CORRECTION: original valid one-sided bound was not globally sharp; exact profile is |delta-1/3|/2
+FULL-SPOIL BAND: 4/21 < delta < 10/21; both endpoints sharp
+VIRTUAL WALL SHARPNESS: T=(11,17,28), y=1/28, sheet minima=(11/84,11/84,0)
+ARBITRARY COPRIME h CONTROLS (d,h,survivor_count,first_k): [(31, 567869252047, 18, 3), (37, 567869252045, 23, 3), (55, 567869252047, 32, 6), (65, 567869252047, 32, 5)]
+ACTIVE GATES: 36019
