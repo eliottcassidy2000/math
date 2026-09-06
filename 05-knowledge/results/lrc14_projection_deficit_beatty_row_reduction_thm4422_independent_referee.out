@@ -1,0 +1,19 @@
+THM-4422 INDEPENDENT CLEAN-ROOM REFEREE
+status=PASS; signed_norm_four=INDEPENDENTLY_AUDITED; LRC14=OPEN
+generic_H79=triples:2910 sparse:2796 dense:114 pairwise_dense:114 norm4_dense:113
+row_compilers=8730 candidate_rows_by_index=(81792, 63484, 47900) nonempty_rows=45152 max_m_by_index=(3, 3, 4) max_cap=12 first_binary_checks=2785
+dense_exception=(19,23,29); carriers=+/-{(1,8,-7),(10,-7,-1),(11,1,-8)}
+dense_exception_sums=('156/4669', '192/3857', '3840/88711')
+generic_semantic_sha256=222e931f36ffda50e6ad0565d95d6bdf62cbd84fd31c2b3f7a1a178240390cb5
+norm4_height=999 rows=25284 counts=(('2a+b', 8435), ('2b-a', 12630), ('a+2b', 4219)) base_c_lt35=25 base_c_lt67=105
+carrier_rays=2a+b:(2,1,-1); 2b-a:(1,-2,1); a+2b:(1,2,-1)
+layer_cake=T=(B-A)^-1*integral_A^B R(t)dt; R(t)<=2(t+1)/3
+selected_bound=3/49+4/(7c)<=6/77_for_c>=35
+base67_leaders=(((1, 5, 11), '6/77', 'a+2b'), ((1, 11, 23), '12/161', 'a+2b'), ((1, 25, 49), '24/343', '2b-a'))
+unique_equality=[((1, 5, 11), 'a+2b')]
+large_generic_controls=(((23, 55, 101), '2a+b'), ((89, 101, 113), '2b-a'), ((85, 103, 121), '2b-a'), ((13, 107, 133), '2a+b'), ((77, 107, 137), '2b-a'), ((73, 109, 145), '2b-a'), ((49, 53, 155), 'a+2b'), ((65, 113, 161), '2b-a'), ((29, 67, 163), 'a+2b'), ((61, 115, 169), '2b-a'), ((35, 109, 179), '2a+b'), ((53, 119, 185), '2b-a'))
+norm4_semantic_sha256=4eebbeb91e26e6d18ad7d56df7e85824e1ac377b803f131dd8e5576b882285c5
+fixed_average_hostile_sums=('8/245', '6/49', '4/35');('122/1309', '8/119', '12/119')
+fixed_average_forces=alpha1>=49/110 alpha2>=10/17 sum=1933/1870>1
+checks=874137
+verdict=PASS

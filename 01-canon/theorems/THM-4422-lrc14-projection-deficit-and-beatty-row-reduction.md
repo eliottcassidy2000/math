@@ -2,7 +2,8 @@
 id: THM-4422
 title: "LRC14 projection deficit and Beatty-row reduction"
 status: >
-  PROVED ELEMENTARY RELATIVE TO THM-4414 + VERIFIED-EXACT. The raw projection
+  PROVED ELEMENTARY RELATIVE TO THM-4414 + VERIFIED-EXACT + INDEPENDENTLY
+  AUDITED. The raw projection
   target is exactly a maximum boundary-deficit inequality; every coordinate
   projection has an exact one-dimensional mod-three Beatty-row compiler; all
   three signed norm-four relation families satisfy the 6/77 target at every
@@ -19,19 +20,27 @@ script: 04-computation/lrc14_projection_deficit_beatty_row_reduction_thm4422.py
 output: 05-knowledge/results/lrc14_projection_deficit_beatty_row_reduction_thm4422.out
 script_sha256: 3628feb6a5b5cdd0b8b543f7c26ec417fe6d52e06d789d8f784c7790f1fa3c86
 output_sha256: 9e6fab64ebd4548848e1f4387e128574bb0fe161e339a0cb5b854455d738bb64
+independent_script: 04-computation/lrc14_projection_deficit_beatty_row_reduction_thm4422_independent_referee.py
+independent_output: 05-knowledge/results/lrc14_projection_deficit_beatty_row_reduction_thm4422_independent_referee.out
+independent_script_sha256: eb267fb0fa9de30a2c1e53cee604b3614988a6d854f806b178d25cdb3e69e8ff
+independent_output_sha256: a07cce08a4a5c4ce1f52c09db8ca861ae1dcb529cb99c30d6b358127d744b970
 hash_basis: raw LF bytes
 audit: >
-  PASS. The exact standard-library verifier rebuilds
+  PASS. The primary exact standard-library verifier rebuilds
   every carrier and every row for all 2,910 eligible triples through height
   79, audits the three norm-four families through height 499, checks both
   finite bases and the two averaging hostiles, and contains no optimizable
   assertions. Its 280,598 explicit gates pass, and ordinary and optimized
-  outputs byte-match.
+  outputs byte-match. A no-import referee independently rebuilds all 8,730
+  low row compilers, the complete signed norm-four derivation and 105-row
+  base, the layer-cake integral, and the two averaging hostiles; normal and
+  optimized runs byte-match after 874,137 further exact gates.
 ---
 
 # THM-4422 -- LRC14 projection deficit and Beatty-row reduction
 
-**PROVED ELEMENTARY RELATIVE TO THM-4414 + VERIFIED-EXACT.** This theorem
+**PROVED ELEMENTARY RELATIVE TO THM-4414 + VERIFIED-EXACT + INDEPENDENTLY
+AUDITED.** This theorem
 replaces most of the remaining degree-zero capacity search by exact boundary
 and one-dimensional discrepancy problems. It does not prove the universal
 projection inequality, chart entry, synchronization, or `LRC(14)`, which
@@ -343,4 +352,6 @@ Run
 ```powershell
 python -B 04-computation/lrc14_projection_deficit_beatty_row_reduction_thm4422.py
 python -B -O 04-computation/lrc14_projection_deficit_beatty_row_reduction_thm4422.py
+python -B 04-computation/lrc14_projection_deficit_beatty_row_reduction_thm4422_independent_referee.py
+python -B -O 04-computation/lrc14_projection_deficit_beatty_row_reduction_thm4422_independent_referee.py
 ```
