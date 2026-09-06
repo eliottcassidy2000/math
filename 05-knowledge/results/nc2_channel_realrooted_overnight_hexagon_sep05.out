@@ -1,0 +1,15 @@
+FINITE-EXACT controls; infinite theorem uses the cited finite-preserver input.
+Laguerre symbol pairs: 112
+Canonical integer rows: 1530 by degree: [(0, 255), (1, 255), (2, 255), (3, 255), (4, 255), (5, 255)]
+Noncoprime canonical rows included: 144
+Original charge rows: 1045 empty: 575 by content: [(1, 938), (2, 90), (3, 17)]
+Original charge rows by degree: [(0, 693), (1, 238), (2, 71), (3, 24), (4, 12), (5, 3), (6, 3), (7, 1)]
+Wide independent Sturm rows: 30
+Direct proportional-resonance rows: 304
+Control: ((-4, 1, 6), 5, 2, [5, 30, 10])
+Control: ((-13, 1, 8), 7, 1, [42, 210])
+Control: ((-13, 1, 8), 14, 4, [14, 6006, 120120, 210210, 18018])
+Control: ((-15, 33, 49), 16, 1, [4368, 7280])
+Control: ((-15, 33, 49), 32, 2, [64512240, 2356099200, 294512400])
+Semantic SHA-256: 787bdfd6eb18ba073557f919bdb6df43e791c85826b4a69ac418d953bfd1b212
+Explicit gates: 27847

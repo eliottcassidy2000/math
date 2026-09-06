@@ -4,7 +4,8 @@ title: "Arbitrary three-node two-jet Smith form and metric precision"
 status: >
   PROVED by explicit determinantal-divisor witnesses, with independent exact
   Smith audits. Arbitrary three integer nodes and their complete p-adic
-  precision law are closed; four-node and higher-jet laws remain OPEN.
+  precision law are closed. THM-4435 supplies all-node two-jet precision
+  and refutes general metric-only four-node partitions; higher jets remain OPEN.
 source: overnight-hexagon-sep05 research session
 depends_on:
   - THM-4419-twojet-prime-wall-precision-and-dyadic-triple-smith-law
@@ -57,8 +58,11 @@ L=2e+3f-v_p(2)-[p=3 and e=f>0].
 Observations modulo p^(N+L) determine all six source coefficients modulo
 p^N, and this uniform precision loss is sharp. Translations, nonunit scales,
 permutations and small-prime mutations are independently audited. The degree
-box and full observer are essential; no corresponding claim for moving
-modules, four nodes, higher jets, LRC(14), or JC(2) follows.
+box and full observer are essential; no corresponding moving-module,
+higher-jet, LRC(14), or JC(2) claim follows. The later
+[THM-4435, four-node metric blindness and universal Hermite precision](THM-4435-four-node-metric-blindness-and-universal-hermite-precision.md)
+extends the largest-factor formula to every node count but shows why the
+full metric-only partition stops at three nodes in general.
 
 **Separate audited four-node continuation:** the
 [ternary double-pair theorem](../../05-knowledge/results/overnight2_20260906_smith_double_pair.md)

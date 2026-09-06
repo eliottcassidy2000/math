@@ -1,0 +1,12 @@
+n=3 cycles=1 matching_weights=[0, 1] motif_controls=0
+n=4 cycles=3 matching_weights=[0, 2, 0] motif_controls=0
+n=5 cycles=12 matching_weights=[0, 6, 4] motif_controls=0
+n=6 cycles=60 matching_weights=[0, 24, 24, 32] motif_controls=5
+n=7 cycles=360 matching_weights=[0, 120, 144, 168] motif_controls=5
+n=8 cycles=2520 matching_weights=[0, 720, 960, 1104, 1152] motif_controls=5
+n=9 cycles=20160 matching_weights=[0, 5040, 7200, 8400, 9024] motif_controls=5
+literal_Hamilton_cycles=23116 recurrence_and_sign_universe=3..100
+signed_sum_hostiles=W3(1):-1,W5(1):0,W6(3):-4
+n16_equality_family=5460 even_global_signed_family=10920
+explicit_failure_gates=15347
+RESULT=PASS

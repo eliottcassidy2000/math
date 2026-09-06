@@ -56,6 +56,7 @@ def third_coordinates(vectors, color, unit_det):
 def lattice_body_controls():
     kinds=Counter()
     three_types=Counter()
+    cap_count=0
     body_count=0
     characters=[(mod,a,b) for mod in (2,3,4,5) for a in range(mod) for b in range(mod)
                 if (a,b)!=(0,0)]
@@ -78,6 +79,15 @@ def lattice_body_controls():
             if mod==3 and len(vectors)==3:
                 shape=third_coordinates(vectors,lambda x:(a*x[0]+b*x[1])%3,1)
                 three_types[shape]+=1
+            if mod==3:
+                cap=all(det((v[0]-u[0],v[1]-u[1]),(z[0]-u[0],z[1]-u[1]))!=0
+                        for u,v,z in combinations(live,3))
+                if cap:
+                    cap_count+=1
+                    need(len(live)<=6 and not any(x[0]%2==x[1]%2==0 for x in live),
+                         'full cap excludes zero parity bucket')
+                    if len(vectors)==3:
+                        need(shape==1,'three-ray cap has additive circuit only')
             hostile_pair=next(((u,v) for index,u,v in pairs if index>1),None)
             if hostile_pair is None:
                 continue
@@ -115,6 +125,7 @@ def lattice_body_controls():
     nonsymmetric_live=((1,0),(1,2))
     need(abs(det(*nonsymmetric_live))==2,'noncentral rectangle / parity subgroup hostile')
     print('GENERIC LATTICE BODIES',body_count,'descent controls',dict(kinds),'three-ray forms',dict(three_types))
+    print('GENERIC NONCOLLINEAR INDEX-THREE CAPS',cap_count,'all N<=6; zero parity absent')
 
 
 def load(filename,name):
@@ -179,12 +190,14 @@ def lrc_controls():
     print('LRC PROOF HEAD c<99',total,'primitive eligible;',basis_rows,'multi-ray basis controls;',
           selected,'three-ray;',dict(types))
     print('THREE-RAY HEAD LEADER',leader)
-    for w in ((19,23,29),(5,191,199),(7,611,613)):
+    for w in ((19,23,29),(41,47,49),(5,191,199),(7,611,613)):
         live=rows.row_carriers(w)
         need(live==literal.carriers(w),('wide row/box check',w))
         result=analyze(w,live,True)
         print('WIDE CONTROL',w,'N',len(live),'directions',len({rows.primitive(C) for C in live}),
               'three-ray result',result)
+        if w==(41,47,49):
+            need(result[0]==-2,'incoming non-A2 circuit hostile retained')
     need(len(rows.row_carriers((5,191,199)))==16,'three-ray multiplicity hostile to N<=8')
     print('SEMANTIC SHA256',digest.hexdigest())
     print('HELPER CHECKS',rows.CHECKS,literal.CHECKS)

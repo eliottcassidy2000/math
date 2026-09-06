@@ -1,0 +1,16 @@
+CONTINUOUS POLYGON CONTROLS 220 all rational integrals match
+NAMED (1, 5, 11) N 2 E (Fraction(6, 77), Fraction(6, 77), Fraction(6, 77)) J (Fraction(782, 41503), Fraction(1046, 41503), Fraction(1082, 41503)) E/J (Fraction(1617, 391), Fraction(1617, 523), Fraction(1617, 541))
+NAMED (1, 19, 79) N 4 E (Fraction(184, 10507), Fraction(8, 553), Fraction(12, 553)) J (Fraction(37882, 2140663), Fraction(46414, 2140663), Fraction(6682, 305809)) E/J (Fraction(356132, 359879), Fraction(15484, 23207), Fraction(3318, 3341))
+NAMED (19, 23, 29) N 6 E (Fraction(156, 4669), Fraction(192, 3857), Fraction(3840, 88711)) J (Fraction(7478, 288463), Fraction(8174, 288463), Fraction(8858, 288463)) E/J (Fraction(110838, 85997), Fraction(136416, 77653), Fraction(2728320, 1935473))
+NAMED (5, 23, 47) N 6 E (Fraction(180, 7567), Fraction(48, 1645), Fraction(2038, 37835)) J (Fraction(2062, 108241), Fraction(19510, 757687), Fraction(2890, 108241)) E/J (Fraction(29610, 23713), Fraction(55272, 48775), Fraction(335251, 166175))
+NAMED (41, 47, 49) N 6 E (Fraction(276, 16121), Fraction(376, 14063), Fraction(10, 287)) J (Fraction(22606, 823543), Fraction(24370, 823543), Fraction(24862, 823543)) E/J (Fraction(331338, 531241), Fraction(451388, 499585), Fraction(588245, 509671))
+NAMED (1, 137, 277) N 10 E (Fraction(1450, 265643), Fraction(30, 1939), Fraction(30, 1939)) J (Fraction(65966, 3759721), Fraction(687794, 26318047), Fraction(688634, 26318047)) E/J (Fraction(1405775, 4518671), Fraction(203595, 343897), Fraction(203595, 344317))
+NAMED (5, 191, 199) N 16 E (Fraction(4404, 266063), Fraction(48, 1393), Fraction(6526, 190045)) J (Fraction(241666, 13583143), Fraction(66250, 1940449), Fraction(463990, 13583143)) E/J (Fraction(21471702, 23079103), Fraction(33432, 33125), Fraction(222722591, 221555225))
+NAMED (7, 611, 613) N 48 E (Fraction(44280, 2621801), Fraction(144, 4291), Fraction(144, 4291)) J (Fraction(2271806, 128888767), Fraction(4493318, 128888767), Fraction(4493402, 128888767)) E/J (Fraction(665019180, 694036733), Fraction(2162664, 2246659), Fraction(2162664, 2246701))
+ABSTRACT STRIP 3 E 10 J 25/3 E-J 5/3
+ABSTRACT STRIP 5 E 18 J 15 E-J 3
+ABSTRACT STRIP 11 E 42 J 35 E-J 7
+ABSTRACT STRIP 101 E 402 J 335 E-J 67
+CHECKS 1360 ROW HELPER CHECKS 294
+PROVED: continuous roof formula/order/bounds; named discrete hostiles
+OPEN: owner-coset boundary control for arbitrary support; no universal network conclusion

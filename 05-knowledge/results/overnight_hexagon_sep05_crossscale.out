@@ -1,0 +1,9 @@
+n=5 all_cycle_lengths=3..5 cycles=37 every_split_and_distinguished_stratum=PASS
+n=6 all_cycle_lengths=3..6 cycles=197 every_split_and_distinguished_stratum=PASS
+n=7 all_cycle_lengths=3..7 cycles=1172 every_split_and_distinguished_stratum=PASS
+n=8 all_cycle_lengths=3..8 cycles=8018 every_split_and_distinguished_stratum=PASS
+n=9 all_cycle_lengths=3..9 cycles=62814 every_split_and_distinguished_stratum=PASS
+directly_enumerated_cycles=72238 explicit_failure_gates=33510
+uniform_layer_scope=all_3<=k<=n_at_n>=9
+missing_term=2*r*(n-2-r)*falling(n-4,k-3)
+RESULT=PASS

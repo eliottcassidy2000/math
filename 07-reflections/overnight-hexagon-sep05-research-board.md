@@ -3,6 +3,9 @@
 **Working research board, 2026-09-05/06.** Status of each mathematical claim
 is explicit below; this file is provenance, not proved canon. Session began
 at 2026-09-06 04:37 UTC from `62e1b34d82a4` in an isolated worktree.
+The startup and first/second-wave sections preserve idea provenance. The
+[third-wave board](#third-wave-current-board-and-audit-checkpoint) is the
+current portfolio at the latest checkpoint; proved truth lives in canon.
 
 ## Paper intake and boundaries
 
@@ -103,7 +106,8 @@ Russell contact identity reinforces the need to retain the moving object
 before testing a scalar defect; it supplies no proved connection to root
 packet genus or to LRC phase.
 
-Current live cells, each **OPEN / UNDER AUDIT** until separately promoted:
+At the second-wave start these cells were **OPEN / UNDER AUDIT**. Their
+outcomes and changed boundaries are recorded in the next section:
 
 1. Anchor: centrally symmetric carrier hexagons, colored lattice bases,
    and exact three-direction geometry. Probe a minimal-index live basis,
@@ -124,3 +128,65 @@ Current live cells, each **OPEN / UNDER AUDIT** until separately promoted:
 Stopping rules: a same-tree/different-Smith pair kills metric-only extrapolation;
 a live-basis counterexample must preserve the forbidden subgroup and central
 symmetry; a two-rung certificate must include all doubling carry channels.
+
+## Third-wave current board and audit checkpoint
+
+**Integration check: 2026-09-06, incoming origin/main2e1ef24c4a.** The
+near-term prize LRC(14) remains OPEN. This is a long-running session, not a
+completion claim. THM-4423/4425/4426 have now been promoted by their owners;
+earlier RESERVED mentions above are historical. Our own4431--4433 and
+4435--4436 have passed full independent proof reviews and are now PROVED.
+
+| Current lane | Outcome and changed assumption | Next native test |
+|---|---|---|
+| Anchor: LRC local network to physical consumer | THM-4431 proves colored bases, both three-ray circuit types and sharp cap size6. Incoming empty-core universal proof closes the entire local projection target after a1,317,935-row native head; its4434 namespace is still RESERVED at this check | Audit the precise4409/4370 Haar consumer, then identify the remaining chart-entry/synchronization predicate; do not count the same local closure twice |
+| Signed cycle scale | THM-4433 proves all-length first minima at n>=9, uniform second stability, and exact Hamilton second minimum at n>=16 | A separately saved candidate gives exact all-length second values at n>=18 with adjacent/disjoint shape reversal; independent review is pending |
+| Laurent factorial rows | THM-4432 closes arbitrary-endpoint two-first-channel detection with all carries. THM-4436 proves simple negative roots for every mass and all proportional resonances | Keep the scalar negative phase and actual carry monomial; test second-moment signs at every first-moment root, not unsupported coprimality from individual roots |
+| Integral observers | THM-4435 refutes metric-only full four-node partitions at every dyadic depth>=3, while giving exact largest two-jet Smith factor for every node count | Generalize explicit inverse denominators to higher jets; retain intermediate unit-sensitive minor coefficients for full partitions |
+| Method: local moves and forgotten composition | Vertex transpositions, colored basis descent, cardinal inverse columns and finite Schur--Szego composition all produced actual target-bearing objects | Compare each new operation's preserved predicate with what its quotient discards; the analogy alone is not a theorem |
+| Certificate/hostile lane | Independent literal cycles, carrier intervals, complete minors and Sturm chains agree with compressed evaluators | Preserve encoding, finite head, analytic tail and actual consumer as separate proof obligations |
+
+### What changed every lane
+
+The paper's extremal replacement transferred literally to a colored lattice
+descent: a dead fundamental-domain point must be complemented with a live
+endpoint. The live residue is the missing coordinate. Incoming empty-core
+independently found the same basis/circuit theorem and the same two-channel
+carry certificate; these are one mathematical advance each, not duplicated
+novelty. Its universal zonotope slope uses central-section discrepancy plus
+a short integer relation; our continuous owner-area sidecar explains why
+bare density is insufficient and is retained as an independently audited
+negative result, not offered as a replacement proof.
+
+The observer failure required both the right quotient (all node permutations)
+and sufficient depth. The same dyadic metric gives different intermediate
+Smith factors while all three-node restrictions, determinant and largest
+factor agree. Recovering the actual Hermite inverse then yields the repaired
+positive invariant: the sharp recovery loss is controlled by F' and F''.
+The incoming ternary two-plus-two partition is compatible, not contradicted.
+
+The least-used operation in THM-2760's Faber-flux thread, finite coefficient
+composition, moved to factorial return rows with Laguerre symbols. This
+proves an all-mass negative phase wall, including unbounded endpoints and
+nonprimitive charge content. It forgets the relative positions of roots at
+different masses. A cheap new hostile, support(-3,1,5), masses8,12, has
+degree3/4 simple-negative polynomials whose root word is PQQPQPQ, not
+interlacing. The surviving coordinate-step differential responses may be
+more faithful than whole-mass interlacing; they remain a next research lane.
+
+The cross-scale cycle count makes Hamilton transposition defects worst after
+normalization, yet the second-minimizer shape reverses with cycle length.
+Thus a preserved inequality is not a preserved equality class. This mirrors
+the observer lesson: a coarse invariant can remain correct while the finer
+structure changes. No map identifying the underlying problems is claimed.
+
+### Audit map and stopping reasons
+
+All promoted results route complete proofs, quantifiers, equality boundaries,
+source pins and normal/optimized exact controls through their canon files.
+The all-k second candidate is filed separately, not smuggled into4433 before
+review. Incoming4434 is used only via its independently audited proof note
+until the owner promotes its reservation. LRC entry/synchronization,
+general trinomial common-root exclusion and full higher-jet partitions
+remain OPEN. No mathematical session result is inferred merely from the
+number of computed rows or agreement between two compressed formulas.

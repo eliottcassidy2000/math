@@ -1,0 +1,11 @@
+PARAMETER_UNIVERSE 1<=A<B<=9; gcd(A,B)=1; 0<=r<B; 0<=z<A; 1<=x<=10; b>0; gcd(a,g)=1
+ROWS 3665 NONFREE 3530 CARRY_CLASSES [((0, 0), 1187), ((0, 1), 794), ((1, 0), 999), ((1, 1), 685)]
+SCALAR_RATIO_ROWS 2501
+CONTROL (3, 1, 9) g 4 carries (0, 0) v,w ((1, 3, 0), (3, 0, 1)) weights (4, 4, [(0, 28), (1, 280), (2, 28)]) Delta -3584 tuned_second -224 K 57344
+CONTROL (4, 1, 11) g 5 carries (0, 0) v,w ((1, 4, 0), (3, 1, 1)) weights (5, 20, [(0, 45), (1, 1260), (2, 1260)]) Delta -76500 tuned_second -765/4 K 7650000
+CONTROL (3, 1, 5) g 4 carries (1, 0) v,w ((1, 3, 0), (2, 1, 1)) weights (4, 12, [(0, 28), (1, 280), (2, 420), (3, 56)]) Delta -2688 tuned_second -560/27 K 143360
+CONTROL (13, 1, 8) g 7 carries (1, 1) v,w ((1, 5, 1), (2, 2, 3)) weights (42, 210, [(-1, 14), (0, 6006), (1, 120120), (2, 210210), (3, 18018)]) Delta -423783360 tuned_second -1227968/125 K 3821063113728
+NONFREE_LATER_CARRY_FAMILY_ROWS 49 UNBOUNDED_ENDPOINT_FAMILY_ROWS 20 SHARP_WIDTH_THREE_FAMILY_ROWS 52
+HIGHER_MULTIPLICITY_HOSTILE [((1, 4, 0), 5), ((2, 2, 1), 30), ((3, 0, 2), 10)]
+SEMANTIC_SHA256 3122d1306ae1b076b795af108ef37b9990b862efa4fc6f5cee48c47a4ba0d001
+EXPLICIT_GATES 76923 RESULT PASS; all-first-row-multiplicity>=3 remains OPEN

@@ -1,0 +1,13 @@
+GENERIC LATTICE BODIES 5115 descent controls {'dead representative repair': 810, 'live representative': 2526} three-ray forms {1: 168, -2: 88}
+GENERIC NONCOLLINEAR INDEX-THREE CAPS 242 all N<=6; zero parity absent
+LRC PROOF HEAD c<99 5409 primitive eligible; 3500 multi-ray basis controls; 1791 three-ray; {-2: 684, 1: 1107}
+THREE-RAY HEAD LEADER (Fraction(18, 301), (5, 37, 43), (Fraction(240, 11137), Fraction(18, 301), Fraction(2822, 55685)))
+WIDE CONTROL (19, 23, 29) N 6 directions 3 three-ray result (1, (Fraction(156, 4669), Fraction(192, 3857), Fraction(3840, 88711)))
+WIDE CONTROL (41, 47, 49) N 6 directions 3 three-ray result (-2, (Fraction(276, 16121), Fraction(376, 14063), Fraction(10, 287)))
+WIDE CONTROL (5, 191, 199) N 16 directions 3 three-ray result (1, (Fraction(4404, 266063), Fraction(48, 1393), Fraction(6526, 190045)))
+WIDE CONTROL (7, 611, 613) N 48 directions 13 three-ray result None
+SEMANTIC SHA256 0292e9f68ebc4ee0ac439b142377387db7c08b1ee3ffdfc275f52b479aee5426
+HELPER CHECKS 37194 1794
+PROVED: native live lattice basis; exactly-three-ray projective classification; every E_i<6/77
+CHECKS 50286
+OPEN: four or more primitive directions; weighted arbitrary-support geometry; entry; LRC14

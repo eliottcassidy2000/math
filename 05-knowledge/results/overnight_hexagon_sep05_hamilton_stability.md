@@ -1,14 +1,16 @@
 # The next Hamilton spectral scale is asymptotically twice the edge minimum
 
-Status: **PROOF CANDIDATE**, independent all-order audit pending. This is a
-quantitative consequence of the transposition mechanism, not a larger
-switching-class census and not an exact finite-order second-minimum theorem.
+Status: **PROVED ANALYTICALLY + INDEPENDENTLY AUDITED** by root and a
+second agent. This quantitative transposition result uses no larger
+switching-class census. The later [exact Hamilton second theorem](overnight_hexagon_sep05_hamilton_second.md)
+closes n>=16; [cross-scale stability](overnight_hexagon_sep05_crossscale.md)
+extends the bracket across cycle lengths. This note proves the bracket.
 
 ## Inheritance and precise carrier
 
 The closest mechanism is Section 2A of
 [the all-cumulative transposition-rigidity proof](overnight_hexagon_sep05_d7_d8_gap.md),
-prepared for the separately reserved THM-4427. The relevant object is the
+now canonized as THM-4427. The relevant object is the
 binary code obtained by evaluating a switching class on every unoriented
 Hamilton cycle of K_n. Its Hamming weight is `w(H)=c_n(H)`. Retain the
 zero-class sidecar: for even n the balanced and antibalanced classes both

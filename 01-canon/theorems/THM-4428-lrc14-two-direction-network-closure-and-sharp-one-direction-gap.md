@@ -5,7 +5,8 @@ status: >
   PROVED by analytic tails and complete FINITE-EXACT heads, independently
   audited. Complete raw carrier supports with at most two primitive
   unoriented directions satisfy the degree-zero network target at every
-  height. Three or more directions and LRC(14) remain OPEN here.
+  height. Later three-direction and universal local-network proofs are
+  routed below; chart entry, synchronization and LRC(14) remain OPEN.
 source: overnight-hexagon-sep05; rank-one overlap explicitly credited to concurrent THM-4425
 depends_on:
   - THM-4414-lrc14-six-separated-contact-capacity-collapse
@@ -43,7 +44,7 @@ audit: >
 and [two-ray proof and manifest](../../05-knowledge/results/lrc14_two_ray_overnight_hexagon_sep05.md)
 are part of this theorem. The generic rank-one closure independently overlaps
 concurrent [THM-4425, rank-one carrier closure](THM-4425-lrc14-all-height-rank-one-carrier-closure.md);
-that namespace was reserved separately and is not used as a proved dependency.
+that independent theorem is now PROVED, but is not needed as a dependency here.
 The sharp non-norm-four gap and exactly-two-direction argument are additional.
 
 Let w=(a,b,c) be primitive, positive, distinct, odd, ternary-unit, with a<b<c.
@@ -84,8 +85,12 @@ This is below 6/77 for c>=55. The complete c<55 universe has 814 triples,
 192 with exactly two rays, and every projection is strictly below the target.
 Independent literal relation boxes and physical sheet networks audit the head.
 The first two-ray hostile (17,23,25) forbids discarding an independent ray.
-At least three live directions remain in a hypothetical network failure;
-chart entry, synchronization, and LRC(14) do not follow.
+This theorem originally left at least three directions for a hypothetical
+failure. [THM-4431, colored-basis/three-direction closure](THM-4431-colored-lattice-basis-and-three-direction-lrc-network-closure.md)
+and the independently audited [universal local-network proof](../../05-knowledge/results/lrc14_global_slope_empty_core_certificate_sep06.md)
+advance beyond that historical boundary. Chart entry, synchronization, and
+LRC(14) do not follow. The universal proof's THM-4434 reservation is not
+used as a proved dependency before its own audited promotion.
 
 The independent referee additionally checks every one of the 814 head rows
 through two unrelated lattice boxes, all 192 selected rows through literal

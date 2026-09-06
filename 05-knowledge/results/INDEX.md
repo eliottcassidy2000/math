@@ -1,5 +1,12 @@
 # Script Results Index
 
+- [Second/third empty-hexagon research waves](../../07-reflections/overnight-hexagon-sep05-research-board.md#third-wave-current-board-and-audit-checkpoint):
+  **PROVED + INDEPENDENTLY AUDITED** [THM-4431](../../01-canon/theorems/THM-4431-colored-lattice-basis-and-three-direction-lrc-network-closure.md) colored live bases/three-ray closure;
+  [THM-4432](../../01-canon/theorems/THM-4432-trinomial-two-channel-two-rung-noncancellation-with-carries.md) all-carry two-channel detection;
+  [THM-4433](../../01-canon/theorems/THM-4433-signed-hamilton-second-minimum-and-cross-scale-stability.md) exact Hamilton second minimum for n>=16 and all-length first minima/stability;
+  [THM-4435](../../01-canon/theorems/THM-4435-four-node-metric-blindness-and-universal-hermite-precision.md) all-node sharp two-jet precision and an all-scale four-node metric counterexample;
+  [THM-4436](../../01-canon/theorems/THM-4436-complete-factorial-row-simple-negative-roots-and-trinomial-phase-wall.md) simple negative roots for every factorial return row, including all trinomial masses and proportional resonances. Cross-mass coprimality, chart entry/synchronization and global conjectures remain OPEN.
+
 - [Overnight incidence/carry/Smith synthesis](overnight_20260906_synthesis.md)
   routes the audited no-three-in-line seed and new results: sharp LRC
   full-cap network bound `204/5957` and all-height owner-line count closure;
@@ -74,6 +81,9 @@
   least two, and `c/b<44/13`. Atlas hashes: `981911d2...e0` /
   `f47c6c89...a18`; ladder: `ed9ea158...d00` / `63932f2a...b4f`; dense
   classifier: `3e7882e9...cde` / `107f45ad...891` (raw LF bytes).
+  reproduction commands and source/output manifests. This first-wave route
+  is extended by the second/third-wave route above; global LRC(14), arbitrary
+  negative-phase Laurent return bounds and higher-jet Smith laws remain OPEN.
 
 - `lrc14_projection_deficit_beatty_row_reduction_thm4422.out` -> exact deficit
   dual, one-dimensional carrier rows, signed norm-four closure, and a fixed-
