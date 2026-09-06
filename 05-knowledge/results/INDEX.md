@@ -1,5 +1,19 @@
 # Script Results Index
 
+- `lrc14_six_separated_contact_capacity_collapse_thm4414.out` and its
+  independent raw-carrier audit -> all-height collapse of the THM-4409
+  degree-zero max-flow
+  ([THM-4414](../../01-canon/theorems/THM-4414-lrc14-six-separated-contact-capacity-collapse.md)):
+  **PROVED ANALYTICALLY RELATIVE TO THM-4409 + VERIFIED-EXACT + INDEPENDENTLY
+  AUDITED; LRC(14) OPEN.** A sharp factor-two sparse-interval lemma makes the
+  max-flow equal the sum of edgewise minimum component lengths. Six-separated
+  danger sheets satisfy it at every height. The resulting capacity is the
+  explicit raw projection sum `E_i`; all slack from physical mass is an exact
+  crossing hinge, not Hall competition. The residual inequality
+  `min_i E_i<=6/77` remains open and is finite-exact through height 149.
+  Primary/referee hashes: `591c2a2f...cedd` / `cc70d23d...b65e` and
+  `f29e52f2...dc64` / `0f5b3fb4...847a` (raw LF bytes).
+
 - `lrc14_owner_transversality_norm18_empty_atlas_thm4413.out` and its
   independent affine-fibre audit -> arithmetic roof transversality and the
   complete minimal norm-`18` empty-comb atlas

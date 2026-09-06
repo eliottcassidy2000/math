@@ -399,6 +399,26 @@ yet it is not consumer-complete: `(1,19,79)` has physical mass `108/10507`
 and best graph bound `8/553`.  This is a useful middle quotient—strictly more
 informative than sheet blindness and strictly cheaper than overlap geometry.
 
+THM-4414 reveals that the max-flow language at degree zero is itself a
+temporary representation.  Each danger-sheet family is six-separated, and
+intersecting two such families preserves six-separation.  A sharp general
+factor-two lemma therefore makes all edgewise minimum loads feasible at once:
+the contact graph has no Hall competition at any height.  What remains is the
+meet-envelope hinge
+
+```text
+min(|I|,|J|)-|I intersection J|
+ =min(|I minus J|,|J minus I|).
+```
+
+This is the same operation seen in older residual-capacity and interval-Gram
+work, now with a clean loss ledger: graph plus lengths forgets crossing
+placement, while the other two pair-overlap facets restore the exact
+box-spline roof.  The graph is a sparse forest, so tournament completion would
+destroy contact zeros and hinge magnitudes without helping the mass consumer.
+The open arithmetic target is consequently an explicit choice among three
+raw-carrier projection sums, not a generic network optimization.
+
 ## 6. Generated sharp tasks
 
 1. **LRC operation closure.** THM-4367 resolves the static exit-collision

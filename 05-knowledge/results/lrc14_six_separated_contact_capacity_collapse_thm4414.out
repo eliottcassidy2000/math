@@ -1,0 +1,20 @@
+LRC14 SIX-SEPARATED CONTACT CAPACITY COLLAPSE -- THM-4414
+status=PASS PROVED_ANALYTICALLY+VERIFIED_EXACT; LRC14=OPEN
+height 79 values 27 triples 2910 pair_rows 8730
+checks 8529915 total_contact_edges 137682
+pair_rows_exact/crossing 2169 6561
+maximum_left/right_degree 2 11
+pair_successes [((0, 1), 2818), ((0, 2), 2855), ((1, 2), 2859)]
+best_pair_counts [((0, 1), 400), ((0, 2), 533), ((1, 2), 1977)]
+selected_envelope_exact 1747
+physical_strict/equality/above 2909 1 0
+target_rows [((1, 5, 11), (0, 1))]
+separation_3/2_hostile edge_sum/capacity 2/1 17/10
+separation_2_control edge_sum/capacity 2/1 11/5
+named (1, 5, 11) (0, 1) envelope 6/77 exact 6/77 hinge 0/1 edges 6 degrees 1 1
+named (1, 5, 11) (0, 2) envelope 6/77 exact 6/77 hinge 0/1 edges 6 degrees 1 1
+named (1, 5, 11) (1, 2) envelope 6/77 exact 6/77 hinge 0/1 edges 6 degrees 1 1
+named (1, 19, 79) (0, 1) envelope 12/553 exact 108/10507 hinge 120/10507 edges 12 degrees 1 1
+named (1, 19, 79) (0, 2) envelope 8/553 exact 108/10507 hinge 44/10507 edges 12 degrees 1 1
+named (1, 19, 79) (1, 2) envelope 184/10507 exact 108/10507 hinge 4/553 edges 12 degrees 1 2
+verdict=PASS
