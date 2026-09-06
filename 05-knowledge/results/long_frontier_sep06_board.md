@@ -63,6 +63,10 @@ separate proof audit and exactly scoped computational controls before
 promotion. The new worktree was clean at startup; the previous worktree
 and its frozen evidence remain preserved.
 
+The separate namespace [THM-4455](../../01-canon/theorems/THM-4455-three-atom-minimizing-sequence-rigidity.md)
+is **RESERVED / UNPROVED EMPTY STUB**, pending the minimizing-sequence
+candidate's completed independent audit. It is not part of proved canon.
+
 The heartbeat continues this board quietly unless there is substantive
 progress, a correction, completion, failure or required user action. At
 the cutoff, finish and push a coherent checkpoint and pause the heartbeat.
