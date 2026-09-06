@@ -58,10 +58,12 @@ Then read frontier, guardrails, theorem; logs are history.
     THM-4385/4389 describe the intervening elliptic carrier/pencil. THM-4390
     absorbs weight-14 row nine;
     THM-4395 makes row ten globally `A^6` with `A^8` fibres, even at `Phi=0`.
-    THM-4399/4403 extend two selected weight-18 channels through rows 11/12
-    (`A^4` source, `A^9` terminal); complete weights 15--18 and entry are open.
-    THM-4397/4401 identify Long's gauge and punctured planar shadows; THM-4404
-    proves fixed-`x` two-forms miss THM-4381's seminormal line.
+    THM-4399/4403/4410 extend three selected late channels through rows 11--13
+    (`A^4` source, `A^9` terminal); complete weights 15--20 and entry are open.
+    THM-4397/4401 identify Long's gauge and punctured planar shadows. THM-4404/
+    4411 show the fixed-`x` seminormal miss is exactly first-order collision
+    failure; THM-4412 realizes the missing jet only after a non-descended
+    suspension.
 13. **Complete period-14 coordinates can be globally blind.** THM-2058 keeps
     every fixed-depth packet coordinate but exits at `47/113`; THM-2043/2047/
     2050 separate local completeness from global maxima.

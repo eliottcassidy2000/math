@@ -1,0 +1,14 @@
+exceptional_quartic_seminormal_suspension_formal_audit
+imported_proved_facts=THM4381:Ssn=S+K*r,r_notin_S,r_values_zero;THM4404:Lambda(rprime)!=0
+suspension=B=S[D]_inside_N[z];D=z+r;D_transcendental_over_N
+intersection_law=B_intersect_N=S;proof=top_z_coefficient_of_sum_a_j*(z+r)^j_is_a_m
+recovery_law=z_in_B_iff_r_in_S;conclusion=z_notin_B
+source_section_z0=image_S[r]=Ssn;target_section_D0=source_graph_z=-r,image_S
+constant_source_section_z=c:image_S[c+r]=Ssn;retained_D_values=c,c,c
+retained_rows=Cprime(3,3,3);Eprime(-9,4,9);ell=(5,-18,13)
+augmented_jet_determinant=3*(5*rprime_-1-18*rprime_0+13*rprime_1);nonzero_by_THM4404
+node_behavior=r_is_already_in_each_node_local_conductor;only_triple_local_ring_changes
+branch_layers=Long_H:value_idempotent_(0,1,1);quartic_r:value_zero_and_missing_first_jet
+Long_constant_slice=point_partition_1+2;quartic_constant_slice=points_3_but_jet_rank_3
+NO_CLAIM=stable_cancellation_or_planar_embedding_or_chart_entry_or_Keller_pair_or_JC2_or_DC2
+checks=25;result=PASS

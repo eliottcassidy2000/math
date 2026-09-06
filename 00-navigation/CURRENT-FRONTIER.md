@@ -352,16 +352,19 @@ lift/phase clocks.
   chart, THM-4380/4388 close the complete weight-12/13 families by row twelve;
   THM-4385/4389 identify their row-ten elliptic carrier/pencil. At weight 14,
   THM-4390 absorbs row nine and THM-4395 makes row ten globally `A^6` with
-  `A^8` fibres. THM-4399/4403 use two selected weight-18 channels to reach
-  rows eleven/twelve on a global `A^4` source with `A^9` terminal fibres.
-  Complete weights 15--18, row thirteen, and entry remain open. THM-4397
+  `A^8` fibres. THM-4399/4403/4410 use three selected late channels to reach
+  rows eleven--thirteen on a global `A^4` source with `A^9` terminal fibres.
+  Complete weights 15--20, row fourteen, and entry remain open. THM-4397
   identifies Long's map with THM-2044; THM-4401 proves its natural planar
   reductions are punctured cubic/Kummer models.
   Exceptional quartic:
   THM-3703/3737/4034 give grammar, image, and conductor; THM-4039--4067 reach
   `J_7`, obstruct `J_8`, and isolate the graph/seminormal gap. THM-4381 gives
   86 nodes, one plane triple, and `S^sn=S+K r`. THM-4404 proves fixed-`x`
-  descended two-forms miss `K[r']`; moving-graph transgression/entry are open.
+  descended two-forms miss `K[r']`; THM-4411 identifies that period with
+  first-order collision failure for variable compiler normals, and THM-4412
+  realizes `r` only through a non-descended suspension. Higher moving-graph
+  transgression/entry are open.
 - **Weyl boundary:** THM-2049 gives a formal beta-adic lift; finite termination remains.
 - **Planar source fibres:** THM-2063/THM-2084--2480 (including
   THM-2371/THM-2376) close the named

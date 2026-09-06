@@ -12,7 +12,11 @@ full moving-graph complex and makes no claim about `JC(2)`.
 independently reconstructed and promoted as THM-4404. The primitive-torsor,
 reduced-fibre idempotent, and compensator-intersection statements were
 subsequently clean-room audited and promoted as THM-4408. The arguments below
-remain the bridge between those two separately typed results.
+remain the bridge between those two separately typed results. THM-4411 now
+proves that the missing seminormal period is exactly the first-order
+collision-persistence obstruction for every variable compiler normal
+`Q -> Q+s h`; THM-4412 realizes the missing jet by the algebraic suspension
+`D=z+r` and proves that its auxiliary coordinate cannot descend to the core.
 
 ## 1. The paper's correction as a primitive torsor
 
@@ -243,6 +247,60 @@ This is stronger than the admissible-kernel hostile in the s615 note.  No
 descended target two-form, admissible or otherwise, pays the seminormal line
 in this fixed-`x` slice.
 
+### 3.1 The missing period is exactly collision failure
+
+THM-4411 removes an ambiguity left by the fixed-normal calculation. For a
+general polynomial normal
+
+```text
+Q(x) -> Q(x)+s h(x),                 s^2=0,
+```
+
+the retained base wedge is
+
+```text
+W_h=12(h(-1),h(0),h(1)).                              (14a)
+```
+
+Allowing the three normalization parameters to move, and asking their
+`(C,E)` images to have one common first derivative, is possible exactly when
+
+```text
+5h(-1)-18h(0)+13h(1)=0.                               (14b)
+```
+
+This is not a coincidental equation: for branches with nonzero tangents
+`t_i` into any smooth surface and normal velocities `n_i`, collision
+persistence means `n_i+v_i t_i=w`. Contracting with an area form gives
+`tau_i=omega(t_i,w)`, so every tangent relation annihilates `tau`; in
+dimension two the implication reverses as well. Thus the transgression
+period is the complete first-order collision obstruction.
+
+The hostile normal `h=x` makes the target two-form image have full rank `89`
+at two independently organized good reductions, but its collision period is
+`8`, so it splits the triple. Collision-preserving controls `h=1` and
+`h=x^3-x` both have exact rank `88`. Variable normals therefore do not repair
+the fixed-`x` miss: they cross the seminormal line only by leaving the
+collision-preserving locus.
+
+THM-4412 gives the complementary positive model. If `r` is the THM-4381
+seminormal generator and
+
+```text
+D=z+r,                    B_susp=S[D] subset K[x,z],   (14c)
+```
+
+then every constant-`z` section has image `S[r]=S^sn`. Since `r` vanishes at
+all conductor branches, the triple remains a point collision, while `r'`
+adds exactly the missing third branch jet. But
+
+```text
+B_susp intersect K[x]=S,                 z notin B_susp. (14d)
+```
+
+The extra coordinate repairs the jet only by retaining a non-descended
+sidecar. This is the jet-level analogue of Long's value-level compensator.
+
 ## 4. Why the paper does not immediately descend to `JC(2)`
 
 The paper's Casimir fibres give a second exact boundary.  In coordinates
@@ -294,14 +352,17 @@ four-dimensional Poisson problem, where neither is needed.
 | missing sidecar | a non-descended primitive together with an independent compensator coordinate, or a new compiler for which the base wedge is not constant |
 | cheapest decisive test | first compute the retained base wedge; then test a positive `88`-minor; for rank reduction, classify the Casimir fibre before attempting elimination |
 
-The next useful experiments are correspondingly narrow:
+The first two experiments proposed in the original bridge are now resolved
+by THM-4411/4412. The next useful experiments are correspondingly narrower:
 
-1. vary the normal compiler and ask whether
-   `C' gamma_1(E)-E' gamma_1(C)` leaves the constant retained line;
-2. construct a first-order lift of the seminormal generator `r` with an
-   explicit compensator and test whether eliminating that compensator
-   preserves a planar polynomial ring; and
-3. in any paper-inspired volume-preserving core, demand a coordinate Casimir
+1. intersect the collision-period kernel with the **actual admissible**
+   source-normal coefficient directions, rather than all lawful compiler
+   normals;
+2. lift `(14b)` to second order and determine whether a new curvature period
+   appears even when the first-order obstruction vanishes;
+3. test whether a different planar compiler can represent the missing jet by
+   two descended wedge slots without an auxiliary coordinate; and
+4. in any paper-inspired volume-preserving core, demand a coordinate Casimir
    and test the restriction to its `A^2` fibres before solving a Hamiltonian
    primitive equation.
 
@@ -322,8 +383,9 @@ script: 69e35d86e8781f020b214ff0a149a868caafa9afb0f30812c2a7b905eeebf37d
 output: 6227a6b7a0676b8b5b53a8142ff47b018532ea701b4c2735ff6fd0bcee324414
 ```
 
-The rank-`88` conclusion is now `PROVED + VERIFIED-EXACT + INDEPENDENTLY
-AUDITED` in THM-4404, still only in the representative-level fixed-`x`
-quadratic slice. It is not identified with THM-4067's moving-endpoint graph
-family. The note constructs no global planar pair and proves no consequence
-for `JC(2)`, which remains open.
+The rank-`88` conclusion is `PROVED + VERIFIED-EXACT + INDEPENDENTLY AUDITED`
+in THM-4404. THM-4411 identifies its retained period with first-order
+collision persistence for variable compiler normals, and THM-4412 supplies
+the exact stabilized seminormal sidecar. None is identified with the full
+THM-4067 moving-graph family. This note constructs no global planar pair and
+proves no consequence for `JC(2)`, which remains open.
