@@ -1,0 +1,12 @@
+scope=primitive sorted distinct positive ternary-unit triples with a signed norm-five(1,2,2) relation
+exact_continuum_profiles=[('I', ('t/4 + 7/8', '1 - t/4', '2*t**2 - t + 1'), '29/32'), ('II', ('9*t/16 + 7/8', '1 - t/16', 't**2/2 - t/2 + 1'), '121/128'), ('III', ('t/8 + 7/8', '2 - 9*t/8', '2*t**2 - 3*t + 2'), '121/128'), ('IV', ('(16*t + 7)/(16*t + 8)', '1', '1+t-t*max(4*t-1,0)^2/(4*(2*t+1))'), '15/16')]
+uniform_selected_continuum=363/6272; physical_continuum=3/56
+complete_inherited_bases=(174, 48, 131, {'I': 25, 'IV': 50, 'II': 67, 'III': 32}, [(2, 19, 20)], [(1, 11, 20)])
+selected_network_canonical_reconstruction=46/665, equality iff(2,19,20); strict tail c>=51; matches incomingTHM4441
+physical_canonical_reconstruction=51/770, equality iff(1,11,20); strict tail c>=46; matches incomingTHM4441
+requested_11/140_bound=strict at all heights; continuum tail c>=28 plus48-row H27
+fixed_roof_hostile=(10,11,16); minE-physical=1/1232
+general_nonadditive_cutoff_certificate=(747, (Fraction(35280, 199), (7, 13, 18), Fraction(17, 147), Fraction(12, 1)), Fraction(142, 931), Fraction(1721, 55860), Fraction(15960, 1721), Fraction(74480, 1721), Fraction(18547, 6884), 'cf808062354debbefc1d8ead8ad0d10e9da5427cb42b8f083b6af24d0059c87c')
+general_nonadditive_scope=analytic c>=535 reduction; fullH535 native result remains a separate premise
+old_ceiling_combined_corollary_controls=(146, 88, Fraction(19, 245), Fraction(237, 3038))
+optimization_live_gates=161225

@@ -5,6 +5,15 @@
   AUDITED; LRC(14) OPEN.** Here `min E=physical mass`; only `(2,11,20)` is
   above `6/77`, and only `(1,5,11)` equals it. All 28,438 rows through height
   611 and the analytic tail are independently replayed.
+- [Fifth overnight independent audits](overnight_20260906_synthesis.md):
+  [Norm-five reconstruction](overnight5_20260906_lrc_norm5_profiles.md) and
+  [profile referee](overnight5_20260906_lrc_norm5_audit.md) independently confirm
+  incoming THM-4441 with compact global bases. A [native nonadditive head](overnight5_20260906_lrc_nonadditive_native.md)
+  and [cutoff audit](overnight5_20260906_lrc_nonadditive_reduction_audit.md)
+  corroborate the proved `11/140` theorem. The [higher-jet audit](overnight5_20260906_smith_higherjet_audit.md)
+  confirms THM-4443 and identifies the two-jet cancellation step that fails.
+  [Frozen manifest](overnight5_20260906_manifest.json). These are independent
+  confirmations, not additional claims of first closure.
 
 - [THM-4442: bounded ten-body parity-free scale-three completion](../../01-canon/theorems/THM-4442-lrc14-bounded-ten-body-parity-free-scale-three-completion.md):
   **PROVED ELEMENTARY + FINITE-EXACT + INDEPENDENTLY AUDITED; LRC(14)

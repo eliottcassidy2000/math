@@ -1,0 +1,12 @@
+CERTIFIED_SELECTOR I [(0, 1/8, (2*t + 7)/8), (1/8, 1/4, 2*t**2 - t + 1)] maximum_or_supremum 29/32
+CERTIFIED_SELECTOR II [(0, 1/8, (9*t + 14)/16), (1/8, 2/3, (t**2 - t + 2)/2)] maximum_or_supremum 121/128
+CERTIFIED_SELECTOR III [(1/2, 9/16, (t + 7)/8), (9/16, 2/3, 2*t**2 - 3*t + 2)] maximum_or_supremum 121/128
+CERTIFIED_SELECTOR IV [(0, 1/4, (16*t + 7)/(8*(2*t + 1))), (1/4, 1/2, (16*t + 7)/(8*(2*t + 1)))] maximum_or_supremum 15/16
+CERTIFIED_PHYSICAL_J all_four_sectors=7/8; raw_integral=9/112; bulk=3/56
+STRICT_CUTOFFS selected11/140:28 selected46/665:51 physical51/770:46
+COMPACT_BASES H27 48 H45 131 H50 174
+SHARP_SELECTED 46/665 equality [(2, 19, 20)] SHARP_PHYSICAL 51/770 equality [(1, 11, 20)]
+SWITCHING_ROOF_HOSTILE (10, 11, 16) (Fraction(17, 176), Fraction(9, 140), Fraction(3, 55)) 331/6160 gap 1/1232
+NATIVE_AUDITED_HEAD_SHA256 c3d33fdd136245aafe512b04963a6eb6f1b5db6f1a572a3e8535ef59d01a09fa
+SCOPE independent concurrent confirmation of incoming THM4441; no new sharp-closure priority
+PASS_OPTIMIZATION_LIVE_GATES 1960

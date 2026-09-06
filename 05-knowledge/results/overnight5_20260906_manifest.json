@@ -1,0 +1,85 @@
+{
+  "schema": 1,
+  "created_utc": "2026-09-06T08:49:08.243228+00:00",
+  "baseline_commit": "07b2d91b2",
+  "incoming_review_commit": "b637305db",
+  "hash_basis": "raw LF bytes; self and maintained synthesis excluded",
+  "scope": "Independent norm-five sharp profile/base audits, independent generic cutoff/universe audit, full native H535 confirmation with scoped independence, independent arbitrary higher-jet audit. No new closure priority or global conjecture claim.",
+  "artifacts": [
+    {
+      "path": "04-computation/overnight5_20260906_lrc_nonadditive_native.cpp",
+      "bytes": 10528,
+      "sha256": "61bbdf9faf08d9ad92fdfe5ce12c4ec5af3ae722b0b415d79d44ff066bf79749"
+    },
+    {
+      "path": "04-computation/overnight5_20260906_lrc_nonadditive_reduction_audit.py",
+      "bytes": 8434,
+      "sha256": "695f2081bbb92fdf386af29efb54cc862853ceb411b4bc26d9cda55821afa6ed"
+    },
+    {
+      "path": "04-computation/overnight5_20260906_lrc_norm5_audit_exact.py",
+      "bytes": 11092,
+      "sha256": "81253b43f6f87e7ac9e96878dd31e54a7322cdcffa668ad0a337bd3084c154b0"
+    },
+    {
+      "path": "04-computation/overnight5_20260906_lrc_norm5_profiles.py",
+      "bytes": 15551,
+      "sha256": "38165ecdd4925b4015cf716ae0f741297428b3e06211a7a8403cbb95d4361f52"
+    },
+    {
+      "path": "04-computation/overnight5_20260906_smith_higherjet_audit.py",
+      "bytes": 8237,
+      "sha256": "0a63553b63fa8a9152dc2d6a5c59323787723aa1ce5ae4f961b1f900e1cf1dbb"
+    },
+    {
+      "path": "05-knowledge/results/overnight5_20260906_lrc_nonadditive_native.md",
+      "bytes": 3404,
+      "sha256": "9044634fc92f6f74abe5121d5cf598a73f8a848e5230ffca432c54eedab79716"
+    },
+    {
+      "path": "05-knowledge/results/overnight5_20260906_lrc_nonadditive_native_h535.out",
+      "bytes": 1227,
+      "sha256": "e8142deeaea3278b6a07b07676570205fd7852c366e34088ec0973e597dc00a1"
+    },
+    {
+      "path": "05-knowledge/results/overnight5_20260906_lrc_nonadditive_reduction_audit.md",
+      "bytes": 7141,
+      "sha256": "0e6099d26823216861a0b98ba42a5343ee95c6f017a72abe94028d015c89b56f"
+    },
+    {
+      "path": "05-knowledge/results/overnight5_20260906_lrc_nonadditive_reduction_audit.out",
+      "bytes": 1198,
+      "sha256": "fb1c1887e68c242f94958103cac754cec0fe69de061e9226810dd43db857eccd"
+    },
+    {
+      "path": "05-knowledge/results/overnight5_20260906_lrc_norm5_audit.md",
+      "bytes": 8696,
+      "sha256": "14cd48fec9dd522d9be74e5010c7096a0a6bf616ac8e10cd774aa3c07bd4ac1d"
+    },
+    {
+      "path": "05-knowledge/results/overnight5_20260906_lrc_norm5_audit_exact.out",
+      "bytes": 1034,
+      "sha256": "778680adceee3b3697bdb9ce1a0f997d3cd3354da409e450f688f32817b7617b"
+    },
+    {
+      "path": "05-knowledge/results/overnight5_20260906_lrc_norm5_profiles.md",
+      "bytes": 15072,
+      "sha256": "e499cc39461ee1ae3b3feaed733c5648bb0c989c36e01f969451bf9ae3018fea"
+    },
+    {
+      "path": "05-knowledge/results/overnight5_20260906_lrc_norm5_profiles.out",
+      "bytes": 1463,
+      "sha256": "cb5e46db7a5a6ea0bf84fbc9414be4c6e87eff3a92845169653fcea5fa6a959f"
+    },
+    {
+      "path": "05-knowledge/results/overnight5_20260906_smith_higherjet_audit.md",
+      "bytes": 9737,
+      "sha256": "f9271da45c1520e5dd2e57dce2e4b7444663faa624dd16e812c16586792ba511"
+    },
+    {
+      "path": "05-knowledge/results/overnight5_20260906_smith_higherjet_audit.out",
+      "bytes": 1393,
+      "sha256": "2f7f5c42ef443f44fc504e1d0713140c7e528901b29a6865632cc4d7095453e4"
+    }
+  ]
+}

@@ -1,0 +1,15 @@
+SCOPE inherited coefficient consumer, analytic tails, independent universe count; no new physical census
+INHERITED_POLYGON_SHA256 b5f52380e28bd3883f95090ff0c06a89e667d7aafd0e4c241b8fca68c76c7c00
+BOX_SEMANTIC_SHA256 cf808062354debbefc1d8ead8ad0d10e9da5427cb42b8f083b6af24d0059c87c
+SMALL_M patterns=747 nonempty=746 max_ratio 35280/199 maximizer [(Fraction(35280, 199), (7, 13, 18), Fraction(17, 147), Fraction(12, 1))]
+EMPTY_DEFECT (0,1,2): N=0; strict width-count inequality is not used
+LARGE_M alpha 142/931 gap 1721/55860 A 15960/1721 B 74480/1721
+S_LE_53 A*S+B 920360/1721 <535; g(54) 18547/6884 g_prime(54) 75561/6884
+STRICT_GENERAL_TAIL c>=535; head c<=534 suffices; H535 census has one redundant layer
+NORM5_INHERITED bulk 363/6272 cutoff 17920/649 head<=27
+NEW_INCOMING_ROUTE generic<=6/77, norm5<=46/665, norm4<=11/140
+MOBIUS_H535 primitive_unit 6514176 additive 10908 nonadditive 6503268
+MOBIUS_H534 (6453474, 10838, 6442636) redundant_H535_layer (60702, 70, 60632)
+COUNT_CONTROLS literal all heights1..80; raw additive identities1..535; full-height additive gcd count
+NATIVE_OUTPUT_SHA256 e8142deeaea3278b6a07b07676570205fd7852c366e34088ec0973e597dc00a1
+PASS_OPTIMIZATION_LIVE_GATES 2661

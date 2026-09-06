@@ -244,6 +244,26 @@ an implication: the maps and losses must be specified in the linked reports.
     confirm that our ternary metric twins still have largest exponent22,
     while the unit residue changes intermediate exponents and kernel size.
     This is an independent audit and connection of incoming canon.
+20. **Independent reconstruction of incoming norm-five sharp closure:**
+    [four-sector profiles](overnight5_20260906_lrc_norm5_profiles.md) retain
+    all projection cutoffs and the physical roof switches. The complete
+    selected continuum is bounded by `363/6272`; saturated physical coarea
+    gives `3/56`. Strict quadrature reduces the two global sharp constants
+    to 174/131 triples through heights 50/45. The
+    [Bernstein/interval referee](overnight5_20260906_lrc_norm5_audit.md)
+    verifies every parameter sector and all finite rows independently.
+    This confirms THM-4441 rather than claiming another new closure. A
+    [native 6,503,268-row head](overnight5_20260906_lrc_nonadditive_native.md)
+    and [cutoff/universe audit](overnight5_20260906_lrc_nonadditive_reduction_audit.md)
+    independently corroborate the fourth-checkpoint nonadditive theorem;
+    the stronger incoming generic proof makes this larger head unnecessary.
+21. **Independent arbitrary-jet and unit-boundary audit:**
+    [literal Hasse/Smith audit](overnight5_20260906_smith_higherjet_audit.md)
+    reconstructs THM-4443's cardinal columns, exact denominator attainment,
+    all four dyadic three-jet unit classes, and depth masking. Its 77 exact
+    matrix cases pass 6,806 gates. The two-jet theorem survives; its one-digit
+    simultaneous cancellation argument does not extend to the quadratic
+    reciprocal coefficient introduced by a third jet.
 
 These are repository-scoped advances and recovered mechanisms, not claims
 of external literature priority. In particular, conditioning grid occupancy
@@ -294,6 +314,10 @@ freezes the parity-free closure, physical coarea/norm-four refinement,
 affine event interface, formal cycle defects, terminal-cluster audit, and
 the incoming-dependent exact threshold classification.
 Earlier frozen artifacts remain unchanged.
+The [fifth checkpoint manifest](overnight5_20260906_manifest.json) freezes
+independent norm-five, generic-count, native-head and higher-jet audits.
+Their portable filed versions were rerun normally and with optimization;
+the native large-head transcript retains its original run and scoped limits.
 
 ## Procedural direction generator
 
@@ -400,7 +424,7 @@ additional discoveries counted for this task:
   supplies an arbitrary-jet inverse formula and shows that the largest
   exponent itself can depend on units for three jets. An independent audit
   has passed 77 literal matrix cases and 6,806 gates; its fifth-checkpoint
-  artifacts are frozen outside the repository pending filing.
+    artifacts are filed in the fifth checkpoint below.
 - [THM-4433 / signed Hamilton second minimum and cross-scale stability](../../01-canon/theorems/THM-4433-signed-hamilton-second-minimum-and-cross-scale-stability.md)
   is newly **PROVED** in incoming canon. This task previously independently
   audited THM-4427's minimum, transposition mechanism, and finite K8 base;

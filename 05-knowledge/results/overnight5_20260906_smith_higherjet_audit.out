@@ -1,0 +1,17 @@
+SCOPE independent THM-4443 written-proof audit plus bounded full integer Hasse inverse/Smith controls
+INCOMING_COMMIT 058a8ded98cfa25fd90f061efe5d54903c9b7379
+INPUT_SHA256 0e29e23680794e5aef6a6c557ff919e0291ef909a899af1c68acc6b617576346 01-canon/theorems/THM-4443-arbitrary-jet-precision-and-dyadic-unit-boundary.md
+INPUT_SHA256 c56c9546a62d907ed4ffbf1dda91ac80548321d40119daee8259020428b64369 05-knowledge/results/hermite-higher-jet-unit-boundary-overnight-hexagon-sep05.md
+DYADIC_UNIT_LAW all8 residues at e=0,2,5;18 deep-pair cases;4 signed unit-affine controls
+SIMULTANEOUS_NUMERATOR_VALUATION minima1,2,3,4; Gamma3,2,1,0; endpoint exchange retained
+UNIFORM_HOSTILE e 0 A (0, 0, 0, 0, 0, 0, 1, 4, 4) B (0, 0, 0, 0, 0, 0, 1, 4, 4)
+UNIFORM_HOSTILE e 1 A (0, 0, 0, 1, 4, 4, 5, 11, 11) B (0, 0, 0, 1, 4, 4, 5, 11, 11)
+UNIFORM_HOSTILE e 2 A (0, 0, 0, 2, 6, 8, 11, 18, 18) B (0, 0, 0, 2, 6, 8, 11, 17, 19)
+UNIFORM_HOSTILE e 4 A (0, 0, 0, 4, 10, 16, 23, 31, 33) B (0, 0, 0, 4, 10, 16, 23, 29, 35)
+NONUNIFORM_HOSTILE e 0 A (0, 0, 0, 2, 2) B (0, 0, 0, 2, 2)
+NONUNIFORM_HOSTILE e 1 A (0, 0, 2, 5, 5) B (0, 0, 2, 5, 5)
+NONUNIFORM_HOSTILE e 2 A (0, 0, 4, 7, 9) B (0, 0, 4, 8, 8)
+NONUNIFORM_HOSTILE e 5 A (0, 0, 7, 16, 21) B (0, 0, 7, 17, 20)
+BOUNDARY_CONTROLS singleton; two-node k1..4 p2/3; signed heterogeneous; complete two-jet twin controls
+EXACT_MATRIX_CASES 77
+PASS_OPTIMIZATION_LIVE_GATES 6806
