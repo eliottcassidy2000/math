@@ -52,7 +52,7 @@ gives square sum `<=195`; THM-4019 refutes its sharp arbitrary-lattice target.
   THM-4450 sharpens odd-3-unit one-even entry to `124/693` and retains complete component addresses.
   THM-4451 gives sharp strict physical component caps `17/693,19/1001`
   (quotient `34/693,38/1001`) and repairs an a.e.-topology near miss.
-  THM-4452 gives the colored one-v2 clock-four cap `1/110`; THM-4453 closes inert pairs at original-body mass `8/91` (q4) or `20/117` (q2 one-even).
+  THM-4452: one-v2 clock-four cap `1/110`; the [inert envelope](../05-knowledge/results/creative_20260906_inert_pareto.md) sharpens THM-4453's gates to `40/469` (q4), `716/4221` (q2 one-even), with joint mass/width entry.
   THM-4442/4446 force gcd-one packs above `91^6`; hostiles refute prescribed-component
   selection. No universal body mass/component floor reaches these gates; entry remains open.
 - **Transport/incidence:** [overnight synthesis](../05-knowledge/results/overnight_20260906_synthesis.md)
@@ -156,7 +156,7 @@ and Lucas--Frobenius leaves `Q^p`: **whole-layer preservation**, not atoms.
 
 ### Live work
 
-Live: publish THM-2022 and formalize THM-2639.
+Live: publish THM-2022; formalize THM-2639. [Coupled windows](../05-knowledge/results/creative_20260906_laurent_bridge.md): `min(k,n-k)` sign generators; midpoint entry OPEN.
 [THM-4417](../01-canon/theorems/THM-4417-width-two-laurent-first-return-parabolic-critical-bound.md)
 proves first return `<=M+N` for `min(M,N)=2` using a two-root involution
 and parabolic critical-point budget; width one was THM-2111. The general
@@ -354,7 +354,7 @@ lift/phase clocks.
   [double pairs](../05-knowledge/results/overnight2_20260906_smith_double_pair.md) close `(2,2)`.
   [Nested ternary clusters](../05-knowledge/results/overnight3_20260906_smith_triple_single.md): unit residue needed; minimal diameter81.
   THM-4435 gives dyadic blindness/Hermite precision;
-  [THM-4439](../01-canon/theorems/THM-4439-all-node-twojet-metric-precision-by-terminal-clusters.md): all-node metric largest factors.
+  [THM-4439](../01-canon/theorems/THM-4439-all-node-twojet-metric-precision-by-terminal-clusters.md) and its [projective extension](../05-knowledge/results/creative_20260906_smith_bridge.md): exact largest two-jet factors.
   [THM-4443](../01-canon/theorems/THM-4443-arbitrary-jet-precision-and-dyadic-unit-boundary.md): jet inverse denominators and full dyadic3-node3-jet factors (eight costs); metric precision fails at uniform3 and(2,2,1).
   [Four jets](../05-knowledge/results/overnight8_20260906_jets_residue.md): allodd precision and full p7 factors with an AP bit.
   [Deuring](../05-knowledge/results/overnight9_20260906_jets_deuring.md):3-node loss `(3m-1)e-[H_p(a)=0]`, oddp,m=(p+1)/2,e>=1.

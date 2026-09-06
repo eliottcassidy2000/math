@@ -1,0 +1,7 @@
+PHYSICAL_BODY_INDEPENDENT_WALL_SWEEP
+wall_points=150 intervening_cells=149
+components=12 isolated=6
+mass=5939/140140 width=11/728
+full_row_phase=9/34 clearance=2/17
+joint_certificate=PASS both_scalar_certificates=FAIL
+PASS

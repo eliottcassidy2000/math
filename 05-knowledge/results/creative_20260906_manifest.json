@@ -1,0 +1,156 @@
+{
+  "date": "2026-09-06",
+  "status": "PROVED in stated scopes; independently audited; finite controls are separately scoped",
+  "base_commit": "74f40fc11f0e",
+  "incoming_integrated": "0bc6ae1dae",
+  "hash_basis": "raw repository bytes",
+  "artifacts": [
+    {
+      "path": "04-computation/creative_20260906_inert_pareto.py",
+      "sha256": "66ac393e225ae8f51639f2b9db7c64ba3218ae15eba1c54f6fbfb38d87a3545e",
+      "bytes": 5536
+    },
+    {
+      "path": "04-computation/creative_20260906_inert_pareto_audit.py",
+      "sha256": "c45772a01f2b36f86252231854747b87f4848cc466a225c61449bed0ea4d650c",
+      "bytes": 6017
+    },
+    {
+      "path": "04-computation/creative_20260906_laurent_audit.py",
+      "sha256": "107e4c6146f46b26c970d5bb3cd619b8b861ea0f0718cb841a06fa71270633a5",
+      "bytes": 3596
+    },
+    {
+      "path": "04-computation/creative_20260906_laurent_bridge.py",
+      "sha256": "d258c2b9b450e2c6bc00bd4e303b6ecc6cea01d1983ab8c6d815928948398547",
+      "bytes": 5634
+    },
+    {
+      "path": "04-computation/creative_20260906_lrc_bridge.py",
+      "sha256": "1dc2a4441fd3b343cb174c13dee9312f7aada94cb14ad2de3b19e762f6d31a3a",
+      "bytes": 6624
+    },
+    {
+      "path": "04-computation/creative_20260906_physical_control.py",
+      "sha256": "05f0d3136d271123c204b70d0dd5ddad433dfe83e501334ef4916e79f3285533",
+      "bytes": 3957
+    },
+    {
+      "path": "04-computation/creative_20260906_physical_independent.py",
+      "sha256": "ab98ea69eb210dc6dde9d2ec568c430e7a6170c8beb8f5aec13866d7b71d3adc",
+      "bytes": 2395
+    },
+    {
+      "path": "04-computation/creative_20260906_smith_bridge.py",
+      "sha256": "1f13a63bf47c25d57427b89e4072ce2e31b093f0c3ab6a6be2590db26dbb1509",
+      "bytes": 10871
+    },
+    {
+      "path": "04-computation/creative_20260906_smith_independent.py",
+      "sha256": "e16e98748637152efe71866a6534e3d6b4892a7d05f43e1f0ae2ec994dded83d",
+      "bytes": 2983
+    },
+    {
+      "path": "05-knowledge/results/creative_20260906_inert_pareto.md",
+      "sha256": "8e103f2f141dcf88df09a0fc8048c20d785e90bac94a423a3fb9490a871752dc",
+      "bytes": 10149
+    },
+    {
+      "path": "05-knowledge/results/creative_20260906_inert_pareto.out",
+      "sha256": "233b6bc384d2f52866cf4263edd3ce80d95674c7679fe8bbbdd1afa4e9315358",
+      "bytes": 1235
+    },
+    {
+      "path": "05-knowledge/results/creative_20260906_inert_pareto_audit.md",
+      "sha256": "60f0181ea994936ed931f5e705f0c06d488401e5d9e050266c3d9d8398edb1e6",
+      "bytes": 5382
+    },
+    {
+      "path": "05-knowledge/results/creative_20260906_inert_pareto_audit.out",
+      "sha256": "214bf0c73c508a557299764860004c392302b295e6df8f08e4433e32d212156d",
+      "bytes": 647
+    },
+    {
+      "path": "05-knowledge/results/creative_20260906_laurent_audit.md",
+      "sha256": "311995b422477e33cf222e6a09920bbaccea520fcaed140eab6224d2ff137577",
+      "bytes": 5541
+    },
+    {
+      "path": "05-knowledge/results/creative_20260906_laurent_audit.out",
+      "sha256": "af509391f28261d238e1f4f9ef33ecfefc5ba9949ff990385a3e1bdf93e5ba84",
+      "bytes": 341
+    },
+    {
+      "path": "05-knowledge/results/creative_20260906_laurent_bridge.md",
+      "sha256": "b7c8605e3a70d535cfd3a76f48e3ee0d97154bcd4965c6981d76ebe448b6a164",
+      "bytes": 12283
+    },
+    {
+      "path": "05-knowledge/results/creative_20260906_laurent_bridge.out",
+      "sha256": "3ce7d347909de389021f7bc9d49b00b501ccb447d4a1cf4b29abd95fa7871946",
+      "bytes": 591
+    },
+    {
+      "path": "05-knowledge/results/creative_20260906_lrc_bridge.md",
+      "sha256": "615a4efba7b0972af627e13a65e343bcca0cb10e86fa08a9a35a086c3ca27047",
+      "bytes": 12022
+    },
+    {
+      "path": "05-knowledge/results/creative_20260906_lrc_bridge.out",
+      "sha256": "c935c2e12178d578a749a8b2100e2d53739c93a80af485e02f6a73219288fe23",
+      "bytes": 531
+    },
+    {
+      "path": "05-knowledge/results/creative_20260906_overview.md",
+      "sha256": "acb1cdb624e6d9d4986d2914b58f1f4f1a4ac502ea29d4725a9517c65458008d",
+      "bytes": 9015
+    },
+    {
+      "path": "05-knowledge/results/creative_20260906_physical_control.md",
+      "sha256": "b619c0c1859821542dd5767e1c5fe479d5a55c7099771dfdd67a46aedc63e630",
+      "bytes": 6276
+    },
+    {
+      "path": "05-knowledge/results/creative_20260906_physical_control.out",
+      "sha256": "3d2cbe79ea2154e4628d731e47584377c48ab37899030f6b85cab7f0fa0569b6",
+      "bytes": 1144
+    },
+    {
+      "path": "05-knowledge/results/creative_20260906_physical_independent.out",
+      "sha256": "35e71fbb4920ef2341b8a9ab2e931beda48af08b6a573669ffe3c3611c8f384d",
+      "bytes": 223
+    },
+    {
+      "path": "05-knowledge/results/creative_20260906_root_audit.md",
+      "sha256": "1013831339c0768abbcf06fc7a1b6c470dc2065c5bc8746e658ce4875a8d350a",
+      "bytes": 5603
+    },
+    {
+      "path": "05-knowledge/results/creative_20260906_smith_bridge.md",
+      "sha256": "ab54b943f836efc82b2c9ada1cb7976a14fc6d16ccc92f5c9a13a4fdd04f313c",
+      "bytes": 16645
+    },
+    {
+      "path": "05-knowledge/results/creative_20260906_smith_bridge.out",
+      "sha256": "d99bddb5475833d62b2bf14900222554d231cb519c0a66341d3a76930b8c37fc",
+      "bytes": 810
+    },
+    {
+      "path": "05-knowledge/results/creative_20260906_smith_independent.out",
+      "sha256": "9a64b03420d49a31b9c8237ca3c2a0b34b026444b84b28bf6ef426a94ab62106",
+      "bytes": 265
+    }
+  ],
+  "reproduce": [
+    "python3 -B 04-computation/creative_20260906_inert_pareto.py",
+    "python3 -B 04-computation/creative_20260906_inert_pareto_audit.py",
+    "python3 -B 04-computation/creative_20260906_laurent_audit.py",
+    "python3 -B 04-computation/creative_20260906_laurent_bridge.py",
+    "python3 -B 04-computation/creative_20260906_lrc_bridge.py",
+    "python3 -B 04-computation/creative_20260906_physical_control.py",
+    "python3 -B 04-computation/creative_20260906_physical_independent.py",
+    "python3 -B 04-computation/creative_20260906_smith_bridge.py",
+    "python3 -B 04-computation/creative_20260906_smith_independent.py"
+  ],
+  "dependency_note": "All producers and all audits except smith_independent use the Python standard library. smith_independent uses installed SymPy 1.9. No new Lean claim."
+}

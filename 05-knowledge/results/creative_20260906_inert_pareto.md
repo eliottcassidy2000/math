@@ -140,11 +140,16 @@ zero-length `G_H` cannot satisfy (1), whose thresholds are all positive.
 Choose a table row dominating the actual profile. The corresponding
 disjunction (1) contradicts one of these strict inequalities. QED.
 
-For example, the abstract sidecar values `M=12/287`, `gL=2/371` satisfy
-(1), while `M<20/469` and `gL<1/49`. This illustrates the certificate's
-extra information; it does not assert a new physical body realizes these
-two exact sidecar values. As with THM-4453, decoder applications must use
-the actual labelled pair component and physical doubled body.
+The [recovered physical eleven-body](creative_20260906_physical_control.md)
+`H={1,3,4,5,6,7,8,9,10,11,13}` has `M=5939/140140`, `L=11/728`.
+At `g=1` it satisfies (1) while `M<20/469` and `L<1/49`: the first four
+profiles are paid by mass, the fifth by width. Thus the joint gain is
+physically realized. All odd common tail scales preserve this certificate.
+Its full closed geometry is independently rebuilt, including six isolated
+safe points. This is a new certificate application to a recovered core,
+not a first safety claim. As with THM-4453, actual decoder applications must
+use the labelled pair component; the displayed body/tail split is a physical
+doubled-body example and has a crossing decoder edge.
 
 ## 4. Improved original-body gates
 

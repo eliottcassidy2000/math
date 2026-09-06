@@ -1,0 +1,22 @@
+STATUS: PASS; recovered physical body realizes mixed-certificate gain
+H: (1, 3, 4, 5, 6, 7, 8, 9, 10, 11, 13)
+M: 5939/140140 L: 11/728
+CLOSED_COMPONENT: 1/14 1/14 length 0
+CLOSED_COMPONENT: 15/182 13/154 length 2/1001
+CLOSED_COMPONENT: 3/14 3/14 length 0
+CLOSED_COMPONENT: 5/14 5/14 length 0
+CLOSED_COMPONENT: 29/70 41/98 length 1/245
+CLOSED_COMPONENT: 85/182 27/56 length 11/728
+CLOSED_COMPONENT: 29/56 97/182 length 11/728
+CLOSED_COMPONENT: 57/98 41/70 length 1/245
+CLOSED_COMPONENT: 9/14 9/14 length 0
+CLOSED_COMPONENT: 11/14 11/14 length 0
+CLOSED_COMPONENT: 141/154 167/182 length 2/1001
+CLOSED_COMPONENT: 13/14 13/14 length 0
+ISOLATED_SAFE_POINTS: 1/14,3/14,5/14,9/14,11/14,13/14
+MIXED_GATE: first four profiles paid by mass; final(1,67) paid by width
+SCALAR_GATES: new mass20/469 fails; new width1/49 fails; old mass4/91 fails
+FULL_ROW: (1, 2, 6, 8, 10, 12, 14, 16, 18, 20, 22, 26, 67) SAFE_PHASE: 9/34 CLEARANCE: 2/17
+PROVED RELATIVE FAMILY:2H union{gp,gq} safe for every eligible primitive(p,q) and every positive oddg
+SCOPE: physical certificate comparison, not an actual11+2 decoder partition or a first safety proof
+ACTIVE GATES: 47

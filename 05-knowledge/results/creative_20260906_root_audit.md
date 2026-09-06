@@ -71,3 +71,24 @@ the repeated-walk star is a general labelled-graph example only.
 These two results are accepted in their stated scopes. They do not turn
 the coefficient lattice or a decoder walk into a physical LRC solution
 without the explicit consumer hypotheses.
+
+## Recovered physical body's joint-certificate gain
+
+The [physical example](creative_20260906_physical_control.md) was independently
+recomputed by a [wall-cell sweep](../../04-computation/creative_20260906_physical_independent.py),
+which imports no producer code. It evaluates the literal safety predicate at
+all 150 threshold wall points and all 149 intervening cell midpoints, then
+unions the closed safe cells and isolated safe points. This is a different
+algorithm from the producer's open-danger union and complement.
+
+The entire twelve-component list agrees, including the six isolated points.
+The exact mass `5939/140140`, largest width `11/728`, all five joint
+disjunctions, failure of both scalar gates, and clearance `2/17` at full-row
+phase `9/34` agree. The [frozen output](creative_20260906_physical_independent.out)
+records this independent replay. Every truth change can occur only at a
+listed threshold wall, so the finite geometry is exhaustive for this body.
+The all-tail family follows from the audited envelope and monotonicity of
+`gL`, not from a sampled set of tail pairs. The old core provenance and the
+crossing decoder edge are correctly retained.
+
+    python3 -B 04-computation/creative_20260906_physical_independent.py

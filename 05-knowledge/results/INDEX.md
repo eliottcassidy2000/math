@@ -1,5 +1,16 @@
 # Script Results Index
 
+- [Four audited creative connections](creative_20260906_overview.md):
+  **PROVED + FINITE-EXACT + INDEPENDENTLY AUDITED.** The [inert envelope](creative_20260906_inert_pareto.md)
+  has exactly five maximal mass/width profiles at all heights, sharp mass
+  `20/469` and component width `1/49`; original-body gates improve to
+  `40/469` and `716/4221`. [Walk compilation](creative_20260906_lrc_bridge.md)
+  needs at most 512 gcd states per endpoint; the [coupled derivative cone](creative_20260906_laurent_bridge.md)
+  has exactly `min(k,n-k)` generators; [projective Hermite precision](creative_20260906_smith_bridge.md)
+  includes primitive lattice directions and infinity. Universal entry,
+  general Laurent first returns and intermediate metric-only Smith factors
+  are not closed by these results.
+
 - [Fifteenth overnight synthesis](overnight_20260906_synthesis.md):
   **PROVED + INDEPENDENTLY AUDITED.** [Larger-unit actual entry](overnight15_20260906_lrc_larger_unit.md)
   closes1+12,2+11,3+10,4+9,5+8 equality branches and6+7 with smaller primitive
