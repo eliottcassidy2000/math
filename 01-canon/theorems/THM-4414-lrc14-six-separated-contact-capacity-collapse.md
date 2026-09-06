@@ -6,8 +6,8 @@ status: >
   AUDITED. A sharp sparse-interval lemma makes every degree-zero THM-4409
   max-flow equal its edgewise-minimum envelope at arbitrary height. The
   envelope has an exact raw-carrier projection formula and a crossing-hinge
-  loss. Its universal 6/77 ceiling, entry, synchronization, and LRC(14)
-  remain open.
+  loss. THM-4434 now proves its universal 6/77 ceiling. Entry,
+  synchronization, and LRC(14) remain open.
 source: root + cross_frontier_bridge + network_universal / LRC14 continuation session, 2026-09-05
 depends_on:
   - THM-4409-lrc14-third-sheet-component-network-certificate
@@ -16,6 +16,7 @@ related:
   - THM-2658-balanced-lift-helly-circular-arc-gain-nerve-and-wrap-boundary
   - THM-2789-interval-gram-tomography-and-graceful-gap-tail-quadratic-detector
   - THM-4392-lrc14-raw-carrier-box-spline-fourier-poisson-duality
+  - THM-4434-lrc14-universal-scale-three-network-projection-bound
 primary_script: 04-computation/lrc14_six_separated_contact_capacity_collapse_thm4414.py
 primary_output: 05-knowledge/results/lrc14_six_separated_contact_capacity_collapse_thm4414.out
 primary_script_sha256: 591c2a2ff540d5eb95e4baf7fb3c02cd5828be6ba8e617c7f92182bb9f82cedd
@@ -38,8 +39,9 @@ audit: >
 
 **PROVED ANALYTICALLY RELATIVE TO THM-4409 + VERIFIED-EXACT + INDEPENDENTLY
 AUDITED.** This removes a max-flow optimization from the degree-zero local
-three-speed quotient. It does not prove the remaining arithmetic ceiling,
-arbitrary chart entry, synchronization, or `LRC(14)`, which remains **OPEN**.
+three-speed quotient. THM-4434 subsequently proves the arithmetic ceiling.
+This theorem does not prove arbitrary chart entry, synchronization, or
+`LRC(14)`, which remains **OPEN**.
 
 ## 1. Sharp sparse-interval lemma
 
@@ -271,6 +273,6 @@ python -B -O 04-computation/lrc14_six_separated_contact_capacity_collapse_thm441
 The sparse lemma is all-height analytic; `(20)` is only **FINITE-EXACT**.
 For nonconstant weights, length separation need not control mass competition,
 so THM-4409's finite-degree weighted max-flows do not collapse without an
-additional oscillation bound. The next sharp problem is `(14)`, preferably in
-the layer-cake form that integrates scale-indexed contact counts. Arbitrary
-entry and `LRC(14)` remain **OPEN**.
+additional oscillation bound. THM-4434 now closes `(14)` by a zonotope slice
+integral and exact head. The sharp remaining problems are the quantitative
+body-safe-set floor, arbitrary entry, synchronization, and `LRC(14)`.

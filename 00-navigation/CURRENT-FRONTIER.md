@@ -47,21 +47,17 @@ gives square sum `<=195`; THM-4019 refutes its sharp arbitrary-lattice target.
   [THM-4418](../01-canon/theorems/THM-4418-lrc14-sharp-pair-arithmetic-and-forty-four-thirteenths-tail.md)
   gives sharp pair mass/component bounds and closes `c/b>=44/13`. THM-4420
   closes both unit near-doubling rays; THM-4422 closes every signed norm-four
-  family and gives exact deficit/Beatty rows; fixed convex averages fail.
-  THM-4425 closes rank-one support and every shortest dual width `<=16`; only
-  the directly closed `(19,23,29)` `A_2` is not count-automatic. THM-4423
-  verifies 753,853 triples through height 499 and proves all-height `N<=112`;
-  its 4,599 dense rows have 4,598 norm-four rays and that unique `A_2`.
+  family and gives exact deficit/Beatty rows. THM-4425 closes rank-one support
+  and dual width `<=16`; THM-4423 proves all-height `N<=112`.
   [THM-4428](../01-canon/theorems/THM-4428-lrc14-two-direction-network-closure-and-sharp-one-direction-gap.md)
-  closes all one- and exactly-two-direction networks, sharply `12/161` off
-  norm four in the one-ray case. THM-4431 closes exactly three directions via
-  a live owner-lattice basis and two circuit types. Any remaining hostile has
-  `c>=503`, `N>=114`, `c/b<44/13`, dual width `>=18`, and at least four
-  primitive carrier directions. Owner/hinge depth and entry remain.
+  and THM-4431 close one/two/three directions structurally. The assembled
+  [THM-4434](../01-canon/theorems/THM-4434-lrc14-universal-scale-three-network-projection-bound.md)
+  proves universal `min_i E_i<=6/77`, uniquely sharply at `(1,5,11)`, and
+  all three strict off norm four. The local network is closed; its consumer
+  still needs `mu(G_C)>=6/77`, arbitrary entry and synchronization.
 - **Transport/incidence:** [overnight synthesis](../05-knowledge/results/overnight_20260906_synthesis.md)
-  combines cap bound `204/5957`, midpoint payments and owner-line closure. A
-  residual needs a two-dimensional owner polygon, an affine collinear triple
-  and unpaid surplus. The [sparse proof](../05-knowledge/results/synthesis_20260905_lrc_sparse_transport.md)
+  combines cap `204/5957`, midpoint payments and owner-line closure, now aimed
+  at body floors rather than local projection. The [sparse proof](../05-knowledge/results/synthesis_20260905_lrc_sparse_transport.md)
   retains phase intersections, weighted limits and the selector gap.
 - **Residual ranks:** THM-4333/4338 close fixed-pool ranks three/four, not arbitrary entry.
 - **PROVED:** [THM-2928](../01-canon/theorems/THM-2928-critical-seven-comb-grid-tensorization-and-drift-tariff.md)/2941: literal zero/one/two/three-drift sectors are empty; `k=2,3` are finite.

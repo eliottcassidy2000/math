@@ -8,7 +8,8 @@ status: >
   projection has an exact one-dimensional mod-three Beatty-row compiler; all
   three signed norm-four relation families satisfy the 6/77 target at every
   height; and two exact triples rule out every speed-independent convex
-  average. The universal projection inequality and LRC(14) remain open.
+  average. THM-4434 now proves the universal projection inequality; entry,
+  synchronization, and LRC(14) remain open.
 source: root + projection_inequality / LRC14 continuation session, 2026-09-05
 depends_on:
   - THM-4414-lrc14-six-separated-contact-capacity-collapse
@@ -16,6 +17,7 @@ related:
   - THM-4392-lrc14-raw-carrier-box-spline-fourier-poisson-duality
   - THM-4413-lrc14-owner-transversality-gap-and-complete-norm-eighteen-empty-atlas
   - THM-4420-lrc14-near-doubling-ray-network-closure
+  - THM-4434-lrc14-universal-scale-three-network-projection-bound
 script: 04-computation/lrc14_projection_deficit_beatty_row_reduction_thm4422.py
 output: 05-knowledge/results/lrc14_projection_deficit_beatty_row_reduction_thm4422.out
 script_sha256: 3628feb6a5b5cdd0b8b543f7c26ec417fe6d52e06d789d8f784c7790f1fa3c86
@@ -42,9 +44,9 @@ audit: >
 **PROVED ELEMENTARY RELATIVE TO THM-4414 + VERIFIED-EXACT + INDEPENDENTLY
 AUDITED.** This theorem
 replaces most of the remaining degree-zero capacity search by exact boundary
-and one-dimensional discrepancy problems. It does not prove the universal
-projection inequality, chart entry, synchronization, or `LRC(14)`, which
-remains **OPEN**.
+and one-dimensional discrepancy problems. THM-4434 subsequently proves the
+universal projection inequality. This theorem does not prove chart entry,
+synchronization, or `LRC(14)`, which remains **OPEN**.
 
 ## 1. Raw projections and the exact deficit dual
 
@@ -370,10 +372,9 @@ Lambda(w)=+/-{(1,8,-7),(10,-7,-1),(11,1,-8)},
 ```
 
 Thus the finite remainder first leaves a one-ray ordinal model at an additive
-`A_2` carrier circuit. The next sharp task is to prove a projection bound for
-general live hexagons `+/-{u,v,u+v}`, or find the first larger carrier
-configuration needing a different sidecar. The universal inequality remains
-**OPEN**.
+`A_2` carrier circuit. THM-4434 now closes this and every larger complete
+carrier configuration by a relation-independent slice integral. The circuit
+remains a sharp hostile to count-only proofs, not an open projection case.
 
 Run
 

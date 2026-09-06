@@ -126,15 +126,29 @@ dual width at least eighteen.
 
 The independent H499 classification supporting
 [THM-4423](../01-canon/theorems/THM-4423-lrc14-height-499-atlas-and-ninety-carrier-global-closure.md)
-finds 4,599 nonautomatic rows: 4,598 signed norm-four rays and only that one
-rank-two hexagon. The separate 38-shell ladder proves the all-height band
-`N<=112`; any remaining local projection hostile has `c>=503`, `N>=114`,
-`c/b<44/13`, and genuinely multi-direction support.
+was the finite signal, not the proof: it finds 4,599 nonautomatic rows, of
+which 4,598 are signed norm-four rays and one is the rank-two hexagon. The
+missing all-height coordinate turned out to be a one-dimensional lattice
+discrepancy, not another direction classification. A primitive relation cuts
+the error cube into an even unimodal section function `f`; its integral is
+independent of the relation, while its central height `f(0)` remembers the
+relation's largest coefficient. The exact owner rules sample `f` on the
+integer and triple-integer lattices. Two rectangle comparisons therefore
+reduce every relation to its continuum area plus the single sidecar `f(0)`.
 
-This finite rigidity should not be promoted into an all-height guess without
-the missing discrepancy estimate. The next density leader `(71,95,97)` has
-ratio `16/97`, still below `2/11` by `18/1067`; it is a sharp width control,
-not evidence that rank two is impossible.
+This is the natural-number lesson in a sharper form. The sample index alone
+is an ordinal, but the operation is not well defined until one retains the
+central-section discrepancy. For maximum relation coefficient at least 19,
+area plus peak already gives the sharp slope. For coefficients at most 18,
+an exact 308-pattern box closes the finite residue geometry. A planar
+Minkowski argument then produces a relation of `l1` norm below
+`4 sqrt(c/3)`; the analytic tail begins at 603, and a native six-sheet head
+through 601 closes the rest. Thus
+[THM-4434](../01-canon/theorems/THM-4434-lrc14-universal-scale-three-network-projection-bound.md)
+proves the universal local projection ceiling, uniquely sharply at
+`(1,5,11)`. The former `c>=503, N>=114` residual is gone. What remains is a
+different type of problem: lower-bounding the actual ten-speed safe body and
+entering the scale-three chart.
 
 ## 4. No-three-in-line became a colored midpoint theorem
 
@@ -270,16 +284,17 @@ proves the combined chord bound `ell_1+ell_2<=3c/14`, and isolates the strict
    colored fan around a native basis and ask which consecutive determinant
    words can coexist in one complete convex roof body. Preserve affine
    offsets; the two three-ray normal forms are boundary controls.
-2. Audit the universal slice-slope candidate: prove the monotone-section
-   discrepancy bound with actual-zero endpoint jumps, independently replay
-   the complete coefficient box, and verify the full height-601 head by a
-   genuinely separate six-sheet or coordinate-pair implementation.
-3. On the true residual `c>=503, N>=114`, combine the compulsory colored AP
-   count with anchored affine deficit values. Any proposed inequality must
-   pass both the dense `A_2` row and the flat count-safe family.
-4. Start the `N=114` shell at `(114,503)`, but classify primitive affine
-   circuits and owner-colored baselines rather than merely extending the
-   height census.
+2. Prove the missing body-side statement: identify entry-generated ten-speed
+   classes for which `mu(G_C)>=6/77`, or exhibit the first exact counterexample
+   to an overbroad floor. Preserve interval components and addresses, not
+   only total measure.
+3. Compute the exact intersection `G_C \ m_3(F_T)` at the scale-three gate.
+   Classify which body components can be swallowed by which tail-sheet words;
+   the universal projection theorem controls total capacity but not arrival.
+4. Extend the section-function method from one-dimensional lattice sampling
+   to a body-weighted discrepancy. Test whether component endpoints supply a
+   signed Euler--Maclaurin correction that forces a surviving address even
+   when the scalar Haar floor is slightly below `6/77`.
 5. For the complete weight-eighteen Jacobian face, freeze the row-fifteen
    relative response on the rational conic and determine the first allowable
    source weight: current scratch evidence points to a weight-24 payer and a

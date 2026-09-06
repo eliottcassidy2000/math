@@ -7,6 +7,19 @@
   [THM-4435](../../01-canon/theorems/THM-4435-four-node-metric-blindness-and-universal-hermite-precision.md) all-node sharp two-jet precision and an all-scale four-node metric counterexample;
   [THM-4436](../../01-canon/theorems/THM-4436-complete-factorial-row-simple-negative-roots-and-trinomial-phase-wall.md) simple negative roots for every factorial return row, including all trinomial masses and proportional resonances. Cross-mass coprimality, chart entry/synchronization and global conjectures remain OPEN.
 
+- The universal scale-three local network theorem
+  ([THM-4434](../../01-canon/theorems/THM-4434-lrc14-universal-scale-three-network-projection-bound.md)):
+  **PROVED ELEMENTARY RELATIVE TO THM-4414/4422 + FINITE-EXACT +
+  INDEPENDENTLY AUDITED; LRC(14) OPEN.** Every eligible odd ternary-unit
+  triple satisfies `min_i E_i<=6/77`, uniquely sharply at `(1,5,11)`; off the
+  signed norm-four identities all three projections are strict. The proof
+  combines a relation-independent zonotope section integral, an exact
+  308-pattern coefficient box, planar Minkowski reduction to `c<=601`, and a
+  native six-sheet replay of all 1,317,935 head rows. Coefficient hashes:
+  `1552d098...8ef7` / `09ecc372...82be`; native hashes: `64f2d209...e5d0` /
+  `49e33442...3b9` (raw LF repository bytes). The exact triple-comb consumer
+  applies when the inherited body has Haar measure at least `6/77`; proving
+  that body floor and arbitrary entry/synchronization are the next barriers.
 - [Overnight incidence/carry/Smith synthesis](overnight_20260906_synthesis.md)
   routes the audited no-three-in-line seed and new results: sharp LRC
   full-cap network bound `204/5957` and all-height owner-line count closure;

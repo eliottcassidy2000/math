@@ -43,11 +43,12 @@ e -> (v.e, (w cross e)_i/v_i)
 ```
 
 to the cube `[-r,r]^3`, and call its planar image `Z`. This is a centrally
-symmetric convex zonotope. Its section at first coordinate `delta` is the
-exact scalar carrier interval of the earlier notes. Write its length as
+symmetric convex zonotope. Let `bar f(delta)` be the length of its closed
+section at first coordinate `delta`. Define the physical sampling function by
 
 ```text
-f(delta)=T_delta(v,w).
+f(delta)=bar f(delta) in the interior of the support,
+f(delta)=0 at the support endpoints and outside.       (0)
 ```
 
 Central symmetry makes `f` even. Convexity makes section lengths concave on
@@ -57,9 +58,9 @@ Consequently `f` is nonincreasing on `[0,infinity)`, after extension by zero
 outside its support. It is continuous in the interior of
 `[-rS,rS]`, with all physically live defects satisfying the strict bounds.
 
-At the support endpoints we set `f=0`, matching strict physical eligibility;
-this changes no area integral. For a full-support relation the actual endpoint
-width is already zero. For a relation with an actual zero coordinate the
+The convention `(0)` matches strict physical eligibility and changes no area
+integral. For a full-support relation the closed endpoint width is already
+zero. For a relation with an actual zero coordinate the
 closed zonotope can have vertical endpoint edges, so the chosen convention
 can make a downward jump. Monotonicity and the lattice-rule estimate below
 remain valid; endpoint continuity is neither asserted nor needed.
@@ -257,7 +258,8 @@ nonzero lattice difference lying in the original open body, by symmetry and
 convexity. This is the elementary fundamental-domain proof of the planar
 Minkowski bound, with all hypotheses stated.
 
-Apply it at `L0=4sqrt(c/3)`. By (9) there is a nonzero integer relation with
+Apply it to the interior of `K_(L0)` at `L0=4sqrt(c/3)`. The interior has the
+same area, so by (9) there is a nonzero integer relation with
 
 ```text
 S=||v||_1 <4sqrt(c/3).                                (10)
