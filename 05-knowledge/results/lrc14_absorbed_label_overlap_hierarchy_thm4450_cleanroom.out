@@ -1,0 +1,29 @@
+THM4450_CLEANROOM_REFEREE
+STATUS=INDEPENDENT_EXACT_AUDIT
+EQUAL_RADIUS_ATLASES
+g1: lambda=1/63 cutoff=55 below=[Fraction(1, 13), Fraction(1, 11), Fraction(2, 11), Fraction(3, 11), Fraction(10, 1), Fraction(11, 1), Fraction(12, 1), Fraction(13, 1)] equal=[Fraction(9, 5), Fraction(9, 1), Fraction(27, 1)]
+g2: lambda=1/70 cutoff=40 below=[Fraction(1, 13), Fraction(1, 11), Fraction(2, 11), Fraction(3, 11), Fraction(11, 2), Fraction(11, 1), Fraction(12, 1), Fraction(13, 1)] equal=[Fraction(1, 10), Fraction(3, 10), Fraction(10, 1)]
+g3: lambda=1/70 cutoff=40 below=[Fraction(1, 13), Fraction(1, 11), Fraction(2, 11), Fraction(3, 11), Fraction(11, 3), Fraction(11, 1), Fraction(12, 1), Fraction(13, 1)] equal=[Fraction(10, 3), Fraction(10, 1)]
+g6: lambda=1/77 cutoff=33 below=[Fraction(1, 13), Fraction(1, 12), Fraction(12, 1), Fraction(13, 1)] equal=[Fraction(1, 11), Fraction(2, 11), Fraction(3, 11), Fraction(11, 3), Fraction(11, 2), Fraction(11, 1)]
+TENTH_ORDER_CONTROLS
+g1: r=715 max=1/63 equality_count=2
+g2: r=1430 max=1/70 equality_count=2
+g3: r=429 max=1/70 equality_count=2
+g6: r=1716 max=1/77 equality_count=6
+equal_radius_literal_checks=379
+Q2_LOSSES={1: Fraction(8, 63), 2: Fraction(9, 70), 3: Fraction(9, 70), 6: Fraction(10, 77)}
+Q2_RATIO_SPECIFIC=[Fraction(124, 693), Fraction(256, 1449), Fraction(86, 495), Fraction(404, 2331), Fraction(272, 1575)]
+MIXED_ATLAS below=[Fraction(1, 25), Fraction(1, 13), Fraction(1, 11), Fraction(2, 11), Fraction(5, 1), Fraction(6, 1), Fraction(13, 1)] equal=[Fraction(4, 5), Fraction(4, 1), Fraction(12, 1), Fraction(20, 1)] literal_checks=85
+MIXED_CONTROL max=1/28 equality_count=3
+PAIR_CELL_DECODER
+ray=(1, 11) cells=[(Fraction(6, 77), Fraction(8, 77)), (Fraction(69, 77), Fraction(71, 77))] beta=2/77
+ray=(1, 23) cells=[(Fraction(6, 161), Fraction(8, 161)), (Fraction(20, 161), Fraction(22, 161)), (Fraction(139, 161), Fraction(141, 161)), (Fraction(153, 161), Fraction(155, 161))] beta=2/161
+ray=(5, 11) cells=[(Fraction(6, 35), Fraction(15, 77)), (Fraction(62, 77), Fraction(29, 35))] beta=9/385
+ray=(1, 37) cells=[(Fraction(6, 259), Fraction(8, 259)), (Fraction(20, 259), Fraction(22, 259)), (Fraction(34, 259), Fraction(36, 259)), (Fraction(223, 259), Fraction(225, 259)), (Fraction(237, 259), Fraction(239, 259)), (Fraction(251, 259), Fraction(253, 259))] beta=2/259
+ray=(1, 25) cells=[(Fraction(6, 175), Fraction(8, 175)), (Fraction(4, 35), Fraction(22, 175)), (Fraction(153, 175), Fraction(31, 35)), (Fraction(167, 175), Fraction(169, 175))] beta=2/175
+STRUCTURED_BODY_DECODER
+q4_A: mass=1151237/25865840 components=44 longest=17/3192 trapped=[2, 2, 4, 0, 2] endpoints=[0, 0, 0, 0, 0]
+q4_B: mass=174683549/3945221280 components=46 longest=1/180 trapped=[4, 0, 4, 2, 2] endpoints=[2, 0, 0, 0, 0]
+q2_A: mass=12707741/246576330 components=36 longest=23/3808 trapped=[2, 2, 0, 2, 2] endpoints=[0, 0, 0, 0, 0]
+q2_B: mass=10204829/203693490 components=20 longest=1/154 trapped=[0, 4, 2, 0, 2] endpoints=[0, 2, 0, 2, 0]
+checks=3059;status=PASS;LRC14=OPEN

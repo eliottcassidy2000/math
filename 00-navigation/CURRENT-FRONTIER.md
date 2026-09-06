@@ -47,9 +47,9 @@ gives square sum `<=195`; THM-4019 refutes its sharp arbitrary-lattice target.
   `(1,4,5)`, `(2,11,20)` and boundary `(1,5,11)`.
   THM-4447
   closes clocks `c>=5` and leaves typed `c=2,3,4`.
-  [THM-4448](../01-canon/theorems/THM-4448-lrc14-general-shore-attachment-and-decoder-pair-cones.md)
-  gives cone `14h>=87 max A,29 max T`.
+  THM-4448 gives cone `14h>=87 max A,29 max T`.
   [THM-4449](../01-canon/theorems/THM-4449-lrc14-dyadic-seventh-rounding-energy-and-residual-haar-entry.md) gives clock-two caps `214/1449,72/539`.
+  THM-4450 sharpens odd-3-unit one-even entry to `124/693` and retains complete component addresses.
   THM-4442/4446 force gcd-one packs above `91^6`; hostiles refute prescribed-component
   selection. No universal body floor reaches them; entry remains open.
 - **Transport/incidence:** [overnight synthesis](../05-knowledge/results/overnight_20260906_synthesis.md)

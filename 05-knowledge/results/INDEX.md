@@ -61,6 +61,12 @@
   response. The actual composition recurrence and same-zero margin remain
   live; general actual doubled-row noncancellation is OPEN.
 
+- [THM-4450: absorbed-label overlap hierarchy and component decoder](../../01-canon/theorems/THM-4450-lrc14-absorbed-label-overlap-hierarchy-and-component-address-decoder.md):
+  **PROVED + VERIFIED-EXACT + INDEPENDENTLY AUDITED; LRC(14) OPEN.**
+  The sharp tenth overlap is `1/63,1/70,1/70,1/77` by `gcd(r,6)`,
+  improving all one-even clock-two losses and the live 3-unit entry to
+  `124/693`. A clock-four hybrid floor is globally stronger but inactive in
+  the residual band; exact failure retains every closed component address.
 - [THM-4449: dyadic seventh rounding and sharp owner cuts](../../01-canon/theorems/THM-4449-lrc14-dyadic-seventh-rounding-energy-and-residual-haar-entry.md):
   **PROVED + FINITE-EXACT + INDEPENDENTLY AUDITED; LRC(14) OPEN.**
   Three odd tails have sharp clock-two failure mass `214/1449`, uniquely on

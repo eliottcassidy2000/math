@@ -1,0 +1,24 @@
+equal-radius g=1: level=1/63; cutoff=55; below=1/13,1/11,2/11,3/11,10,11,12,13; equal=9/5,9,27; enumerated=97
+equal-radius g=2: level=1/70; cutoff=40; below=1/13,1/11,2/11,3/11,11/2,11,12,13; equal=1/10,3/10,10; enumerated=97
+equal-radius g=3: level=1/70; cutoff=40; below=1/13,1/11,2/11,3/11,11/3,11,12,13; equal=10/3,10; enumerated=85
+equal-radius g=6: level=1/77; cutoff=33; below=1/13,1/12,12,13; equal=1/11,2/11,3/11,11/3,11/2,11; enumerated=96
+control g=1: r=715; gcdC=1; below=8; equal=2; max=1/63
+control g=2: r=1430; gcdC=1; below=8; equal=2; max=1/70
+control g=3: r=429; gcdC=1; below=8; equal=2; max=1/70
+control g=6: r=1716; gcdC=1; below=4; equal=6; max=1/77
+q2 g=1: loss=8/63; thresholds=4/21,124/693,20/117
+q2 g=2/3: loss=9/70; thresholds=121/630,139/770,157/910
+q2 g=6: loss=10/77; thresholds=134/693,2/11,174/1001
+cross-comb 1:11: mass=4/77; components=2; widths=2/77,2/77
+cross-comb 1:23: mass=8/161; components=4; widths=2/161,2/161,2/161,2/161
+cross-comb 5:11: mass=18/385; components=2; widths=9/385,9/385
+cross-comb 1:37: mass=12/259; components=6; widths=2/259,2/259,2/259,2/259,2/259,2/259
+cross-comb 1:25: mass=8/175; components=4; widths=2/175,2/175,2/175,2/175
+q2 five-ray entries=124/693,256/1449,86/495,404/2331,272/1575
+identities C=(1, 4, 7),r=3: q2=313/588; q4=319/588
+identities C=(2, 5, 9, 11),r=7: q2=3148/8085; q4=1984/4851
+identities C=(1, 2, 3, 5),r=11: q2=149/330; q4=307/660
+mixed: level=1/28; cutoff=49; below=1/25,1/13,1/11,2/11,5,6,13; equal=4/5,4,12,20; enumerated=84
+mixed control: r=3575; gcdC=1; below=7; equal=3; max=1/28
+q4 transfer: muE=2/7; GCcap=1/4; additive_loss=1/8; floor=max(muGC/2,muGC-1/8)
+status=PASS;equal_literal_checks=184;mixed_literal_checks=158;q2_identity_checks=3;q4_identity_checks=3
