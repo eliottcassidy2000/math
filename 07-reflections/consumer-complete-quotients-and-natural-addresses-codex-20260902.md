@@ -419,6 +419,17 @@ destroy contact zeros and hinge magnitudes without helping the mass consumer.
 The open arithmetic target is consequently an explicit choice among three
 raw-carrier projection sums, not a generic network optimization.
 
+THM-4420 finds a lane where that choice disappears.  On
+`w=(1,m,2m+sigma)`, the kernel relation and a roof width strictly below one
+force every live carrier onto `k(-sigma,-2,1)`.  The exact natural address is
+then just the ordered list of positive `k` with every multiple of three
+deleted, plus reflection sign; counting this list bounds all three projection
+sums simultaneously.  This is an example of a quotient becoming complete
+because a transverse integer coordinate has width below one.  The extension
+to `(a,m,2m+sigma a)` pinpoints the next obstruction: divisibility only forces
+that coordinate into `aZ`, so an additional residue/phase sidecar may be
+needed before ordinal counting is again lossless.
+
 THM-4421 tests whether THM-4413's residue-forced transversality transfers to
 the exceptional-quartic collision period.  In one integral compiler it does:
 `F(h)=8O(h)+18E(h)`, so the nonzero odd-coefficient residue forces the sharp

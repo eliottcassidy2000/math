@@ -1,5 +1,20 @@
 # Script Results Index
 
+- `lrc14_near_doubling_ray_network_closure_thm4420.out` and its clean-room
+  lattice audit -> complete carrier classification and network closure on two
+  near-doubling rays
+  ([THM-4420](../../01-canon/theorems/THM-4420-lrc14-near-doubling-ray-network-closure.md)):
+  **PROVED ELEMENTARY RELATIVE TO THM-4414 + VERIFIED-EXACT + INDEPENDENTLY
+  AUDITED; LRC(14) OPEN.** For every ternary-unit `(1,m,2m+sigma)`, all live
+  carriers are `k(-sigma,-2,1)` with an exact strict cutoff and every third
+  natural address deleted. Counting proves each of the three raw projection
+  capacities is at most `6/77`, with equality only at `(1,5,11)`. The primary
+  performs 1,080,839 gates through height 4999 including literal max-flow
+  controls; the clean-room audit performs 1,690,591 gates on 333,333 rows
+  through height 2,000,003. Primary hashes: `b2535a9b...718c` /
+  `5e8fc392...b013`; referee hashes: `337ee038...887f` / `50bfd22c...26b7`
+  (raw LF bytes).
+
 - `exceptional_quartic_integral_residue_gap_nongeometric_thm4421.out` ->
   exact audit of the apparent mod-three exceptional-quartic obstruction
   ([THM-4421](../../01-canon/theorems/THM-4421-exceptional-quartic-integral-residue-gap-is-nongeometric.md)):

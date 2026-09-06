@@ -1,0 +1,28 @@
+LRC14 NEAR-DOUBLING RAY NETWORK CLOSURE THM-4420 VERIFIER
+status=PASS; theorem=PROVED_RELATIVE_TO_THM_4409_THM_4414; LRC14=OPEN
+family=w=(1,m,2m+sigma), sigma=+/-1, sorted distinct odd ternary units
+height=4999; rows=832; plus=416; minus=416
+carrier_formula=C=k*(-sigma,-2,1), 0<abs(k)<=K, 3_not_divide_k
+K_plus=strict_floor(3(m+1)/14); K_minus=strict_floor(3m/14)
+N=2(K-floor(K/3)); capacity_each_pair<=3N/(7(2m+sigma))<=6/77
+large_threshold_rows=826; finite_base_rows=6
+unique_equality=((1, 5, 11), ('6/77', '6/77', '6/77'), '6/77', 2, 1, '6/77')
+literal_network_control_count=15
+literal_control=((1, 5, 11), ('6/77', '6/77', '6/77'), '6/77', 18, 2, 1)
+literal_control=((1, 11, 23), ('12/161', '12/161', '12/161'), '12/161', 36, 4, 2)
+literal_control=((1, 17, 35), ('12/245', '12/245', '12/245'), '12/245', 36, 4, 3)
+literal_control=((1, 23, 47), ('508/7567', '22/329', '24/329'), '22/329', 72, 8, 5)
+literal_control=((1, 41, 83), ('36/581', '36/581', '36/581'), '36/581', 108, 12, 8)
+literal_control=((1, 83, 167), ('72/1169', '72/1169', '72/1169'), '72/1169', 216, 24, 17)
+literal_control=((1, 2495, 4991), ('2136/34937', '2136/34937', '2136/34937'), '2136/34937', 6408, 712, 534)
+literal_control=((1, 7, 13), ('6/91', '6/91', '6/91'), '6/91', 18, 2, 1)
+literal_control=((1, 13, 25), ('12/175', '12/175', '12/175'), '12/175', 36, 4, 2)
+literal_control=((1, 19, 37), ('18/259', '2/37', '340/4921'), '2/37', 54, 6, 4)
+literal_control=((1, 25, 49), ('24/343', '24/343', '24/343'), '24/343', 72, 8, 5)
+literal_control=((1, 61, 121), ('54/847', '50/847', '3292/51667'), '50/847', 162, 18, 13)
+literal_control=((1, 103, 205), ('18/287', '86/1435', '1324/21115'), '86/1435', 270, 30, 22)
+literal_control=((1, 145, 289), ('18/289', '122/2023', '18268/293335'), '122/2023', 378, 42, 31)
+literal_control=((1, 2497, 4993), ('306/4993', '2138/34951', '5348572/87272647'), '2138/34951', 6426, 714, 535)
+semantic_sha256=d8ff287083ba8fcab1fa5c1dd4b787bea70b4779940cfa41c49a758eed4eeccb
+checks=1080839
+verdict=PASS

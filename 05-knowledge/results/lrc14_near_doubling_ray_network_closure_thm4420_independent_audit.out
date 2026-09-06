@@ -1,0 +1,9 @@
+THM-4420 CLEAN-ROOM NEAR-DOUBLING REFEREE
+verdict=PASS
+max_third_speed=2000003; family_rows=333333
+complete_relation_lattice_controls=16
+all_three_projection_equalities_only_at=(1,5,11)
+physical_equality_only_at=(1,5,11)
+first_strict_endpoint_rows=[(1, 41, 83), (1, 83, 167), (1, 125, 251), (1, 167, 335)]
+semantic_sha256=cefbe0c18d557cc6ec5786e3be317d8f8c2af9fe20fa7143bcf706b89217d798
+checks=1690591
