@@ -1,0 +1,11 @@
+ALL NONAXIS TRIPLES p=3,5,7 7956
+ADDITIONAL COMPLETE ROW-SPAN BANK 2100
+S5 success 4 /120; affine success 0 /20
+S5 triple mean 64/15 ; affine triple mean 26/5
+AFFINE INTEGER-TRIPLE HISTOGRAM {2: 8, 3: 4, 5: 4, 14: 4}
+SIX AFFINE QUOTIENT ORBITS [((0, 1, 2, 3, 4), 0), ((0, 1, 2, 4, 3), 2), ((0, 1, 3, 2, 4), 0), ((0, 1, 3, 4, 2), 2), ((0, 1, 4, 2, 3), 0), ((0, 1, 4, 3, 2), 0)]
+ONE-SWAP REPAIR (1, 3, 0, 4, 2)
+LATTICE/INTERCEPT CASES 8253 ; PARITY HOSTILES 8244
+EXACT MODULAR-LINE AP MINIMUM: p=4q+r gives r*C(q+1,2)+(4-r)*C(q,2).
+SHARP SHORT-DIRECTION CONTROLS p=5,13,41,181; no prime-infinitude assertion.
+PASS 117652 always-active exact gates; no independence or extremal-asymptotic inference.

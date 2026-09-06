@@ -9,6 +9,46 @@ Format per entry:
 - Why it was wrong
 - The correct framing
 
+## 2026-09-06 continuation -- eighth norms, interval rounding and column ratios
+
+- [Degree-seven hostile and degree-eight repair](../05-knowledge/results/continuing4_20260906_moments_packet.md):
+  restoring a common support interval to the low residue tests is still
+  insufficient. At(x,y,s)=(78071/1000,601/50,57/2), original-root elimination
+  fixes positive z and the full Q response is positive, although each
+  separate moment packet through degree7 has an actual four-atom measure
+  inside(0,707/100). The first omitted H5 determinants are negative:
+  native m8-quadrature m8=det(H5)/det(H4)<0. The missing coordinate is the
+  final square norm needed by the degree-five quotient, including its
+  native recurrence. Two H5 PSD conditions restore the full weak geometry
+  exactly; a shared canceled real node remains valid. The repaired model
+  sign problem is still OPEN. This sharpness concerns this moment hierarchy,
+  not every possible cross-channel inequality.
+- [Actual reduced-scale packets](../05-knowledge/results/continuing4_20260906_lrc_packets.md):
+  t=1583 misses both useful component clocks29 and31 despite actual boxed
+  equality and all4095 profiles. It is already safe at37. At1369/1373
+  all pooled pair/forest credits fail, while summing the individual clipped
+  interval lower counts gives15>3/6. The whole stated class is grid-safe.
+  A failed pooled bound must not be reported as failure of its richer
+  unpooled supplier or as a new residual LRC class.
+- [Affine-column hostile](../05-knowledge/results/continuing4_20260906_wildcard_affine_columns.md):
+  the saturated p5 ten-cycle has four successful S5 column permutations
+  but zero successful affine maps, despite identical one-/two-column laws.
+  Thus pairwise uniformity does not preserve the geometric zero event.
+  The missing triple ratio and signed integer lift give an exact cyclic
+  interval union decoder. One non-affine swap repairs this example;
+  unrestricted all-prime repair and extremal asymptotics remain OPEN.
+- [Reflection firewall](../05-knowledge/results/continuing4_20260906_regular_duality_audit.md):
+  old h1,x=-1 has generic carried quotient response -1/90720, whereas
+  naive raw specialization at its zero root gives0. The complementary
+  reflected row is legitimate only at nonzero complementary roots, with
+  the canceled carry, phase and normalization retained.
+- Raw-output provenance: the outside moment producer freeze normalized
+  captured CRLF to LF while its report implied raw LF output. Root added
+  explicit stdout LF configuration, updated source pins, and reran normal
+  and optimized captures as bytes against the unchanged transcript/JSON.
+  All mathematical gates remain valid. Text-mode normalization is not a
+  substitute for a claim of identical emitted bytes.
+
 ## 2026-09-06 extended session -- local limits and lost amplitudes
 
 - [The finite-length hostile](../05-knowledge/results/long_frontier_sep06_finite_dimension.md)

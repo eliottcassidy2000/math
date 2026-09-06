@@ -1,6 +1,7 @@
 # Continuing synthesis: actual phase transport and three-atom rigidity
 
-**CURRENT CHECKPOINT, 2026-09-06.** Four audited tracks extend the
+**PREVIOUS CHECKPOINT, 2026-09-06.** Current routing is the
+[degree-eight geometry and retained-data synthesis](continuing4_20260906_synthesis.md). Four audited tracks extend the
 [previous nine-result checkpoint](continuing1_20260906_synthesis.md).
 This cycle inherited f0521b872 and integrated incoming work through
 da2c452c3 before filing, then01c8b6887 and93a38412b during clean push rebases.

@@ -1,0 +1,4 @@
+independent complete triple bank 7956
+line-set successes 4 affine histogram {2: 8, 3: 4, 5: 4, 14: 4}
+modular lines independently checked 1023
+PASS 88570 always-active exact gates

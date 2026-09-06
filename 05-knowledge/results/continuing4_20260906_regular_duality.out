@@ -1,0 +1,9 @@
+H 1 residual_degrees [2] positive_coefficients 3
+H 2 residual_degrees [6, 10] positive_coefficients 18
+H 3 residual_degrees [10, 18, 24] positive_coefficients 55
+H 4 residual_degrees [14, 26, 36, 44] positive_coefficients 124
+H 5 residual_degrees [18, 34, 48, 60, 70] positive_coefficients 235
+H 6 residual_degrees [22, 42, 60, 76, 90, 102] positive_coefficients 398
+positive_coefficients 833
+always_active_gates 1571
+PASS

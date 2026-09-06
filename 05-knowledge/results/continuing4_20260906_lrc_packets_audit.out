@@ -1,0 +1,9 @@
+PASS proof audit: actual entries, full profiles, packet failure, and inherited whole-class grid closure.
+Atlas ratios 5855 entry threshold 1334 uniform separate interval credit 13
+Primitive V (183050675309, 187324231931, 191802102017, 252054071237, 268951550873, 580028043449) U (4404519504000, 4657410576000, 6045955344000, 7604678206125, 7787190483072, 9637611984000, 12017269264000)
+Compatibility profile modulo29 (0, 0, 2, 4, 6, 2, 0, 4, 8, 8, 6, 8, 0, 6, 2, 2, 6, 0, 8, 6, 8, 8, 4, 0, 2, 6, 4, 2, 0)
+{"E": 3, "clearance": "4/31", "crossings": [105, 126], "edges": [[0, 5], [1, 5], [2, 5], [3, 5], [4, 5], [6, 10], [7, 10], [7, 12], [8, 9], [8, 11], [8, 12], [9, 10], [10, 11]], "first": 31, "packet": [4, 9, 11, 20, 22, 27], "phase": "4/31", "positive_pooled": {"(81, 101)": "55316/19089"}, "profiles": 4095, "safe_lifts": 462, "sum": 2329090049184301, "t": 1369, "unpooled": 15}
+{"E": 6, "clearance": "3/29", "crossings": [105, 126], "edges": [[0, 5], [1, 5], [2, 5], [3, 5], [4, 5], [6, 10], [7, 10], [7, 12], [8, 9], [8, 11], [8, 12], [9, 10], [10, 11]], "first": 29, "packet": [2, 4, 5, 24, 25, 27], "phase": "2/29", "positive_pooled": {"(81, 101)": "56872/19089"}, "profiles": 4095, "safe_lifts": 458, "sum": 2335742891883565, "t": 1373, "unpooled": 15}
+{"E": 6, "clearance": "5/37", "crossings": [105, 126], "edges": [[0, 5], [1, 5], [2, 5], [3, 5], [4, 5], [6, 10], [7, 10], [7, 12], [8, 9], [8, 11], [8, 12], [9, 10], [10, 11]], "first": 37, "packet": [1, 13, 17, 18, 19, 20, 24, 36], "phase": "1/37", "positive_pooled": {"(81, 101)": "138562/19089", "(81, 125)": "235226/70875", "(81, 128)": "29767/9072"}, "profiles": 4095, "safe_lifts": 530, "sum": 2685017133594925, "t": 1583, "unpooled": 20}
+SCOPE: fixed-clock packet obstruction; no new unresolved row or LRC closure claim.
+PASS 14720 always-active exact gates; no producer imports

@@ -1,0 +1,11 @@
+HEIGHT 1 identity_nodes 3 residual_degrees [2]
+HEIGHT 2 identity_nodes 11 residual_degrees [6, 10]
+HEIGHT 3 identity_nodes 25 residual_degrees [10, 18, 24]
+HEIGHT 4 identity_nodes 45 residual_degrees [14, 26, 36, 44]
+HEIGHT 5 identity_nodes 71 residual_degrees [18, 34, 48, 60, 70]
+HEIGHT 6 identity_nodes 103 residual_degrees [22, 42, 60, 76, 90, 102]
+TOTAL literal_matrices 258 literal_fibres 4275 primitive_parameters 111 characteristic_matches 1253 positive_coefficients 833
+ANALYTIC_AUDIT paired-divisor orders and weighted degree hold for every H; reflection is exact off the discarded zero-root block
+SINGULAR_CONTROL old h1,x=-1 generic response=-1/90720 while naive raw specialized row vanishes at t0
+SCOPE H1..6,z>=1,gcd(z,3H)=1: actual first momentg or2g; all-H residual positivity remains OPEN
+PASS 14026 always-active independent exact gates

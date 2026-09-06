@@ -1,5 +1,20 @@
 # Script Results Index
 
+- [Current continuing synthesis](continuing4_20260906_synthesis.md):
+  **PROVED + FINITE-EXACT + INDEPENDENTLY AUDITED.** Degree-eight Hankels
+  exactly decode the weak two-interlacer model and give compact coefficient
+  fibres; a genuine degree-seven moment surrogate has positive response.
+  Boundary reflection yields an all-height paired-divisor law and actual
+  regular families at negative endpoints9,12,15,18. Reduced-scale actual
+  LRC packets expose lost interval roundings while remaining grid-safe.
+  The affine-column no-three-line decoder has a pairwise-law hostile and
+  one-swap repair. [Manifest](continuing4_20260906_manifest.json):26 artifacts,
+  eight exact engines,250606 gates in each of normal/optimized modes.
+  General LRC14, all-height response positivity and free-model finite-phase
+  negativity remain OPEN; incoming four-anchor and finite-length results
+  are integrated with their exact scopes.
+
+
 - [Continuing synthesis: phase transport and rigidity](continuing3_20260906_synthesis.md):
   **PROVED + INDEPENDENTLY AUDITED.** Four further actual endpoint families
   45,51,57,63 extend the concurrent endpoint39 result. Three-atom rigidity

@@ -1,0 +1,10 @@
+C det(H5) = -4589218342226103628274440890013740853428732686393332483/95479173982126390784148568451886227718750000000000000
+C four-atom measure has moment8 strictly above native moment8.
+D det(H5) = -78037916605582141428435773185728629446352083104557342123/1251464629218527029285992116412563163955200000000000000
+D four-atom measure has moment8 strictly above native moment8.
+Literal original Q(-57/2) = 1473043757735348617617612017/28089600000
+Universal recurrence/selfadjoint identities and no-common-nonreal-zero obstruction: PASS.
+Fixed x,y: both degree-eight Hankels affine in z; decoded admissible z fibre is a compact interval (or empty).
+All principal minors, exact Sturm counts, two spectral quadratures, boundaries and carries: PASS.
+Full degree-eight geometry decoder accepted; finite-phase response sign remains OPEN.
+PASS: 601 always-active exact gates.

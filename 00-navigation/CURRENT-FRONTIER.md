@@ -55,7 +55,7 @@ gives square sum `<=195`; THM-4019 refutes its sharp arbitrary-lattice target.
   THM-4452: one-v2 clock-four cap `1/110`; [inert gates](../05-knowledge/results/creative_20260906_inert_pareto.md) `40/469,716/4221`; [ranked capacities](../05-knowledge/results/continuing1_20260906_profiles.md) retain all sums; physical gain OPEN.
   THM-4442/4446 force gcd-one packs above `91^6`; hostiles refute prescribed-component
   selection. No universal body mass/component floor reaches these gates; entry remains open.
-- **Transport/incidence:** [Actual packets and prior closures](../05-knowledge/results/continuing3_20260906_synthesis.md).
+- **Transport/incidence:** [Actual packets](../05-knowledge/results/continuing4_20260906_synthesis.md).
   [Endpoint entry](../05-knowledge/results/second_20260906_entry.md) and [balanced hostiles](../05-knowledge/results/second_20260906_decoder.md) retain actual profiles; entry OPEN.
   [Sparse transport](../05-knowledge/results/synthesis_20260905_lrc_sparse_transport.md) retains weights and the selector gap.
 - **Residual ranks:** THM-4333/4338 close fixed-pool ranks three/four, not arbitrary entry.
@@ -155,7 +155,7 @@ and Lucas--Frobenius leaves `Q^p`: **whole-layer preservation**, not atoms.
 
 ### Live work
 
-Publish THM-2022; formalize THM-2639. [Endpoints39-63 and phase bounds](../05-knowledge/results/continuing3_20260906_synthesis.md): four further families; smallest model phase closed, tail2500.
+Publish THM-2022; formalize THM-2639. [Degree8 decoder and reflected rows](../05-knowledge/results/continuing4_20260906_synthesis.md): prior endpoints39-63 and tail2500 retained.
 [THM-4456](../01-canon/theorems/THM-4456-sharp-finite-length-signed-root-stability-asymptotics.md): optimum K3+C/N+o(1/N), C=2.172201096...; rigidity THM-4455, PROVED.
 [THM-4417](../01-canon/theorems/THM-4417-width-two-laurent-first-return-parabolic-critical-bound.md)
 proves first return `<=M+N` for `min(M,N)=2`; width one is THM-2111.
@@ -341,7 +341,7 @@ lift/phase clocks.
 ## Other active portfolio
 
 - **No-three-line:** [fixed rows](../05-knowledge/results/overnight11_20260906_no3line_rowfreeze.md)
-  give rate>=0.0130673, now with [counting/restart consumers](../05-knowledge/results/overnight12_20260906_no3line_count_restart.md). Extremal asymptotics OPEN.
+  give rate>=0.0130673. [Affine-column decoder](../05-knowledge/results/continuing4_20260906_wildcard_affine_columns.md): interval union and one-swap repair. Extremal asymptotics OPEN.
 - **P-adic zeta:** external density claims remain **PREPRINT / UNDER AUDIT**.
   [THM-4255](../01-canon/theorems/THM-4255-specialization-kernel-and-transverse-hasse-jet-repair.md)/[4263](../01-canon/theorems/THM-4263-moving-multigraph-filtered-jet-and-finite-factor-density-transport.md) prove graph/jet kernels, finite-factor UI transport and conditional hazards. MISTAKE-527 forbids chosen-section refutations; the external Cartier steps still need a typed audit.
 - **Matching logic:** THM-4090 gives a two-sort Figure-2 calculus

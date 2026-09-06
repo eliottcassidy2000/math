@@ -1,0 +1,155 @@
+{
+  "schema": 1,
+  "created_utc": "2026-09-06T19:34:58.021016+00:00",
+  "baseline_commit": "a5b2011be",
+  "incoming_review_commits": [
+    "52b7e6652",
+    "bfc7b048e",
+    "afdf0214b",
+    "e7a36aee1"
+  ],
+  "hash_basis": "raw LF bytes; maintained boards, manifest and navigation excluded",
+  "scope": "Degree-eight exact weak geometry and compact fibres; degree-seven positive-response surrogate; all-height reflected paired divisors with H1..6 actual response certificates; actual reduced-scale LRC packet/rounding obstructions already grid-safe; affine-column integer-collinearity iff and pairwise-law obstruction. General conjectures remain OPEN.",
+  "validation": {
+    "continuing4_20260906_regular_duality": 1571,
+    "continuing4_20260906_regular_duality_audit": 14026,
+    "continuing4_20260906_moments_packet": 128,
+    "continuing4_20260906_moments_packet_audit": 601,
+    "continuing4_20260906_lrc_packets": 13338,
+    "continuing4_20260906_lrc_packets_audit": 14720,
+    "continuing4_20260906_wildcard_affine_columns": 117652,
+    "continuing4_20260906_wildcard_affine_columns_audit": 88570
+  },
+  "artifacts": [
+    {
+      "path": "04-computation/continuing4_20260906_lrc_packets.py",
+      "bytes": 11643,
+      "sha256": "22db0faeddf433aed8d1daeb664976813e4ed8a0b5a0fec57fdeaac027a23b08"
+    },
+    {
+      "path": "04-computation/continuing4_20260906_lrc_packets_audit.py",
+      "bytes": 11286,
+      "sha256": "c5008b8e176425da3ad5f63769efe1a958db15c42c7c968260ab6c65a872a88d"
+    },
+    {
+      "path": "04-computation/continuing4_20260906_moments_packet.py",
+      "bytes": 12754,
+      "sha256": "1b7d02c20c631f95b8a539af8948bf92a9b6dc1504ddc05d5a00b6b13892a9bc"
+    },
+    {
+      "path": "04-computation/continuing4_20260906_moments_packet_audit.py",
+      "bytes": 13711,
+      "sha256": "5befcd5655e488e882c346478d3c16fa1664922cfcde9bcf1f566d4f28172b8d"
+    },
+    {
+      "path": "04-computation/continuing4_20260906_regular_duality.py",
+      "bytes": 5738,
+      "sha256": "d649033b472372558d671a3f3d1b9a2b6c80ca4edcde28fbc9384a02cf87ccce"
+    },
+    {
+      "path": "04-computation/continuing4_20260906_regular_duality_audit.py",
+      "bytes": 8953,
+      "sha256": "12635f429915f42a9ad839a570d4a092c33140b1f3b8db829d9c743c9cf4ea83"
+    },
+    {
+      "path": "04-computation/continuing4_20260906_regular_duality_certificate.json",
+      "bytes": 168191,
+      "sha256": "0d5a65f03fc4f4295f3db38bca8609375cfea8805f21499a28e9a5e0d9a1ccd4"
+    },
+    {
+      "path": "04-computation/continuing4_20260906_wildcard_affine_columns.py",
+      "bytes": 12129,
+      "sha256": "4c3317fb0aa7989927887bc7eced1cbd2a045975c9fb589f765ab063799927d0"
+    },
+    {
+      "path": "04-computation/continuing4_20260906_wildcard_affine_columns_audit.py",
+      "bytes": 5394,
+      "sha256": "eeb14d49119890f1a675120455bfde35f3ecada50d194e0a5cd6b2c935144848"
+    },
+    {
+      "path": "05-knowledge/results/continuing4_20260906_lrc_packets.md",
+      "bytes": 11787,
+      "sha256": "409883dbfe410c3cc9c4fd33191f70375107644b8b227c9ac791a1b70117113d"
+    },
+    {
+      "path": "05-knowledge/results/continuing4_20260906_lrc_packets.out",
+      "bytes": 2591,
+      "sha256": "46c71d72aefab9d3e120c58317cc616c8ad37c1db3b7de9e2335c887a8fae151"
+    },
+    {
+      "path": "05-knowledge/results/continuing4_20260906_lrc_packets_audit.md",
+      "bytes": 7655,
+      "sha256": "6d83ed7b3aac777d6d9add71392ecf0ec98a195085520663876f9af466dd33e7"
+    },
+    {
+      "path": "05-knowledge/results/continuing4_20260906_lrc_packets_audit.out",
+      "bytes": 1851,
+      "sha256": "54f832cb9edf4f0b8997359235a507bf19eb0b3c1d5b4181b28a5516871cb2a1"
+    },
+    {
+      "path": "05-knowledge/results/continuing4_20260906_moments_packet.md",
+      "bytes": 12940,
+      "sha256": "5d159f725caddf8f7ac6820c74698001fdc7010924ce89c871dc37e2413be3b4"
+    },
+    {
+      "path": "05-knowledge/results/continuing4_20260906_moments_packet.out",
+      "bytes": 2144,
+      "sha256": "54e693133895b249e31aeeed325d786ee4ed6c46d8343fa082e802adcbf6932e"
+    },
+    {
+      "path": "05-knowledge/results/continuing4_20260906_moments_packet_audit.md",
+      "bytes": 9893,
+      "sha256": "f3df11fe12b2c61248d0996b8e9098bb68210e6b914dabc7eb3154d4b2b4c507"
+    },
+    {
+      "path": "05-knowledge/results/continuing4_20260906_moments_packet_audit.out",
+      "bytes": 866,
+      "sha256": "8d172c7a17b41f1b23d3aeda000cbc4486622943a1d226d281559e40fde88d52"
+    },
+    {
+      "path": "05-knowledge/results/continuing4_20260906_moments_packet_certificate.json",
+      "bytes": 6186,
+      "sha256": "e396e221c4cd8e4b668f0f07a572ed5314b25cb7c66a8ac68eb439d84979170f"
+    },
+    {
+      "path": "05-knowledge/results/continuing4_20260906_regular_duality.md",
+      "bytes": 10478,
+      "sha256": "f90c8463daa4b3dee7be5848d66b05657027c67a00fbb4269be2234568fab372"
+    },
+    {
+      "path": "05-knowledge/results/continuing4_20260906_regular_duality.out",
+      "bytes": 423,
+      "sha256": "5efa2b65f9eba7697d6e5342e551e6ce48415f97bf03e42bfce41ef4623c323d"
+    },
+    {
+      "path": "05-knowledge/results/continuing4_20260906_regular_duality_audit.md",
+      "bytes": 11311,
+      "sha256": "8837925487dc44c8e2494da5350d86c0d0a1e7b1409004f9e7e967bf9c3d8e63"
+    },
+    {
+      "path": "05-knowledge/results/continuing4_20260906_regular_duality_audit.out",
+      "bytes": 855,
+      "sha256": "77b774e85301a0012c24bbd45623abe9a9515993ddc37934a71c62b4d7a3cfb3"
+    },
+    {
+      "path": "05-knowledge/results/continuing4_20260906_wildcard_affine_columns.md",
+      "bytes": 15816,
+      "sha256": "7a7e754a0eedd695f8c727bdfae5f430e4d614440b40be233882764db107fe59"
+    },
+    {
+      "path": "05-knowledge/results/continuing4_20260906_wildcard_affine_columns.out",
+      "bytes": 696,
+      "sha256": "68290e80e06968f81ca4c4619e0c0ee751563fc752d06dc3c087b06f3c8a0844"
+    },
+    {
+      "path": "05-knowledge/results/continuing4_20260906_wildcard_affine_columns_audit.md",
+      "bytes": 4900,
+      "sha256": "71ec6124118ff17f7a6193573a032b85582a4ab9908e20e83f9109bbd0bbd78e"
+    },
+    {
+      "path": "05-knowledge/results/continuing4_20260906_wildcard_affine_columns_audit.out",
+      "bytes": 180,
+      "sha256": "766f596fbd43af78de1af67502f99bf7db56ac13af9106bc2f899ac2769b37e7"
+    }
+  ]
+}
