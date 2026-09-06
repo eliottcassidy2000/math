@@ -1,0 +1,4 @@
+n=9 classes=268435456 cycles=20160 minimum=5040 expected=5040 ties=36 equality_exact=1 memory_bytes=536870912
+semantic_fnv64=402a35163eea3383
+keyed_spectrum_sum64=b68ca4e0ac0ebf9b
+RESULT=PASS

@@ -1,0 +1,16 @@
+PROVED one-ray non-norm4 envelope: every E_i<3/49+4/(7c)
+PROVED sharp every-projection cap:12/161; equality only(1,19,23),coordinates2,3
+PROOF HEAD primitive odd ternary-unit triples c<43: 363 {'norm4': 41, 'empty': 30, 'non_norm4_ray': 236, 'multiple': 56}
+HEAD LEADER (Fraction(12, 161), (1, 19, 23), (Fraction(12, 437), Fraction(12, 161), Fraction(12, 161)))
+SMALLEST MULTI-RAY HOSTILE height then lex: ((17, 23, 25), ((-8, 7, -1), (-5, -5, 8), (5, 5, -8), (8, -7, 1)), (8, -7, 1), Fraction(9, 7), Fraction(64, 21), (Fraction(106, 4025), Fraction(12, 425), Fraction(2546, 68425)))
+CONTROL (1, 5, 7) N 2 ray ((2, 1, -1), Fraction(9, 7), 2) E ('8/245', '6/49', '4/35') mass 8/245
+CONTROL (1, 5, 11) N 2 ray ((1, 2, -1), Fraction(9, 7), 2) E ('6/77', '6/77', '6/77') mass 6/77
+CONTROL (1, 19, 23) N 4 ray ((4, 1, -1), Fraction(9, 4), 4) E ('12/437', '12/161', '12/161') mass 12/437
+CONTROL (17, 23, 25) N 4 ray None E ('106/4025', '12/425', '2546/68425') mass 744/68425
+CONTROL (19, 23, 29) N 6 ray None E ('156/4669', '192/3857', '3840/88711') mass 154/12673
+CONTROL (1, 1201, 1205) N 172 ray ((4, 1, -1), Fraction(3609, 28), 172) E ('310116/10130435', '516/8435', '516/8435') mass 310116/10130435
+CONTROL (1, 599, 607) N 44 ray ((8, 1, -1), Fraction(1809, 56), 44) E ('38940/2545151', '132/4249', '132/4249') mass 38940/2545151
+CONTROL (5, 1001, 1003) N 58 ray ((2, 5, -5), Fraction(1509, 35), 58) E ('156680/7028021', '122/5015', '848864/35140105') mass 767384/35140105
+SEMANTIC SHA256 b6e00b9d5a6696a45cb317e07947354a9bd10791cb17e2d08f4bb9bc52a2a5c3
+CHECKS 7478
+OPEN multi-ray target; entry; synchronization; LRC14

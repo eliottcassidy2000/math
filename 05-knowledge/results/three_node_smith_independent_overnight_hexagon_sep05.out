@@ -1,0 +1,4 @@
+PASS independent literal integer Smith audit
+UNIVERSE triples 2999 depth_controls 399 permutations 30 mutation_controls 2
+CONTROLS [((0, 1, 2), (1, 1, 1, 1, 4, 4)), ((0, 2, 4), (1, 1, 4, 4, 32, 128)), ((0, 3, 6), (1, 1, 3, 27, 324, 324)), ((0, 8, 16), (1, 1, 16, 128, 4096, 131072))]
+SEMANTIC_SHA256 fefd67c54dea9188f05e53c2ea806064b321d057717d0a10ebed40237c38bb7f

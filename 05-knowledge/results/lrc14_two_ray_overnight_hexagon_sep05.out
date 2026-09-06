@@ -1,0 +1,10 @@
+PROVED: complete TWO-RAY support implies EVERY network projection<6/77
+ALL-HEIGHT ENVELOPE E_i<12/343+16/(7c); c>=55 closes analytically
+PROOF HEAD: primitive sorted odd ternary-unit triples c<55; 814 total; 192 two-ray
+FINITE HEAD LEADER (Fraction(114, 2233), (11, 23, 29), (Fraction(2, 203), Fraction(114, 2233), Fraction(1634, 51359)))
+TAIL CONTROL (1, 11, 55) N 4 directions [(11, -11, 2), (11, 4, -1)] determinant multiplier 3 E ('8/385', '12/385', '12/385')
+TAIL CONTROL (1, 5, 101) N 4 directions [(1, 20, -1), (16, 17, -1)] determinant multiplier -3 E ('12/707', '12/707', '12/707')
+TAIL CONTROL (5, 49, 251) N 10 directions [(11, 4, -1), (59, -47, 8)] determinant multiplier -3 E ('1076/86093', '30/1757', '30/1757')
+SEMANTIC SHA256 749d62bb228059786e4dfbd1e7e701c4a9a3cdd651191cd15f29949922b5eb6e
+CHECKS 6370 LITERAL CHECKS 195
+OPEN: three or more primitive live directions; entry; synchronization; LRC14
