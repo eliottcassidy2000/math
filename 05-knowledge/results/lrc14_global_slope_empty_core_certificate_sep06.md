@@ -1,9 +1,19 @@
 # A universal slice slope and an explicit height-601 network reduction
 
-**Status: PROVED ANALYTICALLY; global slope conditional only on the named
-finite coefficient-box audit.** The arithmetic statements below do not use
-a speed-height extrapolation. The final finite head is a separate explicit
-proof obligation, pending completion by the root session.
+**Status: PROVED ANALYTICALLY + FINITE-EXACT + INDEPENDENTLY AUDITED.**
+The global slope uses the completed independent coefficient-box
+audit. The arithmetic statements below do not use a speed-height extrapolation.
+The final finite head has now passed both the complete raw-carrier census
+and an independently written native six-sheet interval verifier, on all
+1,317,935 eligible triples through height 601. The assembled theorem is
+[THM-4434](../../01-canon/theorems/THM-4434-lrc14-universal-scale-three-network-projection-bound.md).
+
+The root referee independently checked the generator determinants and area,
+section monotonicity and endpoint convention, both grid-error signs, the
+peak-width bound, defect intercepts, hexagon area and its positive remainder,
+the fundamental-domain argument, and the even-norm cutoff arithmetic. No
+correction was needed. The coefficient box has its own independent exact
+audit described below.
 
 This note extends the general affine-slice mechanism of the independently
 audited [full-support note](lrc14_empty_core_certificate_sep06.md) and
@@ -145,11 +155,23 @@ reach fifty-four. The earlier convex-speed vertex compiler applies unchanged
 after choosing a nonzero pivot coordinate. The support-two rectangle formula
 provides a separate path for that boundary.
 
-**Finite box obligation.** Check (6) for that complete box after excluding
-the impossible `(0,1,1)` pattern and the inherited `(1,1,2)` exception.
-The independent `three_ray_geometry` referee is compiling this exact box in
-a separate artifact; this note does not treat a running computation as a
-proved dependency.
+**Completed finite box.** The independently compiled
+[coefficient-box certificate](lrc14_coefficient_box_empty_core_three_ray_sep06.md)
+checks (6) for that complete box after excluding the impossible `(0,1,1)`
+pattern and the inherited `(1,1,2)` exception. There are `308` patterns:
+`293` full-support and `15` actual-zero-coordinate patterns. Rational polygon
+clipping computes every signed permutation and complete defect list; a
+separate cube-edge compiler and the support-two closed formula agree. The
+unique pattern reaching the maximum `15/98` is `(1,7,8)`. Normal and optimized
+runs have byte-identical output. Thus (5) and this finite box prove (6) for
+every primitive relation outside norm four, with no coefficient-height bound.
+
+The independent source and output hashes are recorded in that certificate:
+
+```text
+source 1552d098878b069c4f6e7e00737a982ef6b019105303bdb658a778cbe5a68ef7
+output 09ecc3728b37540bbbde566e8ede59926afcdc8e394085aa15b5bd6082da82be
+```
 
 ## 3. Uniform intercept in terms of relation norm
 
@@ -243,11 +265,11 @@ S=||v||_1 <4sqrt(c/3).                                (10)
 
 Dividing by its content makes it primitive without increasing its norm.
 It still has even norm. If its pattern is norm four, invoke THM-4422;
-otherwise (7)-(8) apply once the finite coefficient box is certified.
+otherwise (7)-(8) apply using the completed finite coefficient box.
 
 ## 5. Exact high-height cutoff
 
-Assume the finite coefficient box has passed. For `c>=603`, choose the
+For `c>=603`, choose the
 relation in (10). If `S<=56`, then
 
 ```text
@@ -278,9 +300,14 @@ a,b,c odd and nonzero modulo3,
 gcd(a,b,c)=1.                                        (11)
 ```
 
-The endpoint is `601` because `602` is even. An exact complete verification
-of (11), with raw or independent literal projections and honest norm-four
-handling, will close the universal degree-zero local projection target.
-That finite verification is a separate obligation, not a consequence of
-the coefficient-box audit. It still will not supply chart entry,
-synchronization, or a proof of LRC(14).
+The endpoint is `601` because `602` is even. Its exact verification is a
+separate obligation from the coefficient-box audit. It is now complete: the
+[native interval transcript](lrc14_universal_literal_empty_core_sep06.out)
+checks every projection on all 1,317,935 rows. The minimum never exceeds
+`6/77`, equality occurs only at `(1,5,11)`, and all three projections are
+strictly below the target on every row without a signed norm-four relation.
+The [raw census](lrc14_universal_head_empty_core_sep06.out) independently
+checks the multi-direction part, and all 2,910 height-79 native rows agree
+with both the older interval engine and the raw formulas. Thus the universal
+degree-zero local projection target is closed. Chart entry, synchronization,
+and LRC(14) remain open.

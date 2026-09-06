@@ -1,7 +1,8 @@
 # Complete carrier circuits: an arithmetic-progression hostile and two finite circuit types
 
 **Status: FINITE-EXACT + independently verified controls; REFUTED additive
-compression; OPEN universal circuit classification.** No theorem ID is
+compression; universal three-direction classification now PROVED in the
+linked colored-diamond note.** No theorem ID is
 reserved. None of the height observations below proves an all-height bound.
 
 ## Source, inheritance, and consequence object
@@ -113,15 +114,33 @@ so the finite rejection test is complete. This removes special speed-strip
 geometry from the experiment, while retaining convexity, primitivity, and
 the owner color.
 
-**OPEN:** do these two types exhaust all centrally symmetric convex bodies
-with exactly three primitive live directions in this abstract model? The
-body and coloring must both survive any lattice basis change. A possible
-decisive lemma is that a diamond on two primitive live vectors with lattice
-determinant at least three already contains four live primitive directions.
-That lemma is a research question here, not an asserted result.
+The initial question is now **PROVED** by the independently audited
+[colored-diamond theorem](empty_core_colored_diamond_sep06.md): a diamond on
+two primitive live vectors of lattice determinant at least three contains
+four live primitive directions. It implies exactly these two circuit types,
+for any proper invisible subgroup. Concurrent THM-4431 owns the shared
+classification namespace; this session adds an independent complete-fan proof.
 
-The connection map from the carrier plane to a colored rank-two lattice
-preserves direction incidence and eligible residues. Forgetting the roof
+Here is the exact carrier identification needed to apply that theorem.
+Let `L={C in Z^3:C.w=0}` and
+
+```text
+Gamma={C in L:w_1 C_1=w_2 C_2=w_3 C_3 mod3}, H=3L.
+```
+
+Reduction of `L` modulo three is onto the two-dimensional kernel of `w`
+over `F_3`: for a lift `z`, subtract `(w.z)b` where `w.b=1`; the correction
+is divisible by three. The equal-owner condition is a one-dimensional line.
+Thus `[L:Gamma]=[Gamma:H]=3`. The complete raw support is exactly
+`(Gamma minus H) intersect K`, where `K` is the open symmetric convex roof
+region. Content division of a live vector preserves this set: its content
+is a unit modulo three and hence its primitive reduction stays on the same
+nonzero owner line. Consequently primitive live vectors in `Gamma` are
+exactly the ambient primitive carrier directions. The colored-diamond
+theorem applies with no change in direction count. Its lattice determinant
+is `det_xy/(3c)`, retaining the inherited owner factor three.
+
+This connection preserves direction incidence and eligible residues. Forgetting the roof
 lengths loses network weights; these must return as a sidecar before any
 projection conclusion. The abstract body probe therefore cannot by itself
 prove the `6/77` inequality.

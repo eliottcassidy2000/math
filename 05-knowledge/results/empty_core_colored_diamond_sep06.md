@@ -208,7 +208,7 @@ destroys the replacement direction and the determinant proof.
 **LRC application boundary.** To transfer this theorem, identify the actual
 rank-two lattice `Gamma`, its proper invisible subgroup, and the symmetric
 convex roof whose complete primitive live vectors match the physical carrier.
-The user's abstract model `Gamma=Z^2`, `H=ker(x mod3)` satisfies these
+The session's abstract model `Gamma=Z^2`, `H=ker(x mod3)` satisfies these
 hypotheses exactly. This note by itself supplies no roof identification,
 multiplier weights, projection inequality, chart entry, or LRC(14) closure.
 
