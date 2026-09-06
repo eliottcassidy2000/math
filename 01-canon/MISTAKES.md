@@ -9,6 +9,23 @@ Format per entry:
 - Why it was wrong
 - The correct framing
 
+## 2026-09-06 continuing8 -- factorial rationality and circuit types
+
+- [THM-3010 correction](../05-knowledge/results/continuing8_20260906_ballot_repair.md):
+  the claim that binomial adjacent ratios cease to be rational at order three
+  was false; factorial cancellation gives the rational function at every
+  integer order. The quadratic numerator is the narrower ballot feature.
+  Keeping its canonical normalization yields a global bronze uniqueness proof
+  via the four divisors of 13, extending the old finite rectangle.
+- The same theorem confused recurrence characteristic roots with coefficient
+  polynomial root parameters. The scaled-reciprocal polynomial
+  `(n+1)^2(n+3)^2(n+9)^2` has both an antipalindromic circuit and the maximal
+  `+,-,+,-` alternation. Only the particular two-element product-sign
+  distinction survives. A short sign window also cannot imply global absence
+  of a transition: `k^2-7k-6` crosses between 7 and 8. The old producer/output
+  are preserved as historical evidence; their True flags did not test these
+  prose implications. The repaired identities and scope are in the linked note.
+
 ## 2026-09-06 continuing synthesis -- retained residuals and repair geometry
 
 - [Shared singular fibres](../05-knowledge/results/continuing7_20260906_singular_fibres.md):

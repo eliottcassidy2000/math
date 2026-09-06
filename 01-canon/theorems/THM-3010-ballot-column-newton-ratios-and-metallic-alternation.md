@@ -1,7 +1,7 @@
 ---
 id: THM-3010
 title: "Ballot-column Newton ratios, the bronze log-concavity threshold, and metallic maximal alternation"
-status: PROVED + VERIFIED-EXACT / AWAITING INDEPENDENT HOSTILE AUDIT
+status: CORRECTED / PROVED identities and recurrence; historical finite controls retained
 source: klein-S428
 depends_on:
   - THM-3000-fixed-edge-cumulant-curvature-universality-and-bounded-jet-transfer
@@ -20,7 +20,13 @@ hash_basis: LF-normalized bytes
 
 # THM-3010 -- ballot-column Newton ratios and metallic alternation
 
-**PROVED + VERIFIED-EXACT.**
+**CORRECTED, 2026-09-06 continuing8.** The displayed identities and metallic
+recurrence survive. The former nonrational-Fuss assertion and the general
+norm/alternation dichotomy are **REFUTED**. The ballot quadratic and bronze
+classification now have all-integer proofs in the
+[correction and proof](../../05-knowledge/results/continuing8_20260906_ballot_repair.md).
+The source/output pins above retain the original historical computation; they
+do not verify the corrected universal statements.
 
 Notation is THM-3000 section 1, but the sequence `h_0=1, h_1, h_2, ...` is taken
 directly from a classical integer family rather than from a polynomial's
@@ -33,8 +39,15 @@ function of `k`,
 
     R_k = 1 - Q_(a,b)(k)/D_(a,b)(k),                       (1)
 
-with `Q` monic in `k` of degree at most `2` and `D>0` on the range.  Hence the
-column is log-concave (`R_k>1`) exactly where `Q(k)<0`.  Computed rows:
+with a canonical monic quadratic before cancellation and a positive denominator.
+Precisely, put `delta=a-2b` and assume `k>=max(1,1-b,1-a+b)`. Then
+
+    Q = k^2+(a+1-delta^2)k+[a(a+2)-(2a+1)delta^2]/4,
+    D = (k+b)(k+a-b)(2k+a+2)(2k+a+1)/2.
+
+Literal factorial cancellation proves (1) for every integer `(a,b)`. A reduced
+numerator can have smaller degree. The column is log-concave (`R_k>1`) exactly
+where `Q(k)<0`. Computed rows:
 
 | `h_k` | `1-R_k` |
 |---|---|
@@ -43,14 +56,21 @@ column is log-concave (`R_k>1`) exactly where `Q(k)<0`.  Computed rows:
 | `binom(2k,k-1)` `= 1,4,15,56,210` | `(k^2-3k-1)/((k-1)(k+1)^2(2k+1))` |
 | `binom(2k+1,k-1)` `= 1,5,21,84,330` | `(k^2-7k-6)/((k-1)(k+1)(k+2)(2k+3))` |
 
-Circuits, computed exactly: Catalan `+++++`, `binom(2k,k)` `+++++`,
-`binom(2k+1,k-1)` `-----`, and `binom(2k,k-1)` `---++` -- the only one of the
-four with a sign change.
+The five-letter circuit words at the originally sampled indices `k=3..7` are
+Catalan `+++++`, `binom(2k,k)` `+++++`, `binom(2k+1,k-1)` `-----`, and
+`binom(2k,k-1)` `---++`. These are finite windows. The third column also changes
+concavity later: `k^2-7k-6` is negative at 7 and positive at 8.
 
-**`p=2` is forced.**  `binom(2k,k)/binom(2k-2,k-1)=2(2k-1)/k` is rational in `k`,
-but `binom(pk,k)/binom(p(k-1),k-1)` is not a rational function of `k` for `p>=3`.
-So there is no Fuss--Catalan analogue of this table; the hypergeometric-term
-condition singles out the `p=2` ballot triangle.
+**Correction: every integer order has rational adjacent ratios.** For `p>=2`,
+
+    binom(pk,k)/binom(p(k-1),k-1)
+      = product_(i=1)^p[p(k-1)+i]
+        / {k product_(i=1)^(p-1)[(p-1)(k-1)+i]}.
+
+Dividing the column by `(p-1)k+1` retains rationality and gives its Fuss--Catalan
+analogue. For `p=3` that adjacent ratio is `3(3k-1)(3k-2)/(2k(2k+1))`.
+The quadratic numerator phenomenon does not extend automatically: the reduced
+numerator of `1-R` for the `p=4` Fuss--Catalan column has degree four.
 
 ## 2. The unique metallic discriminant in the family is BRONZE
 
@@ -58,8 +78,8 @@ Call `Q` **metallic** when it is monic of the shape `k^2-nk-1`, the defining
 equation of the `n`-th metallic ratio (`n=1` golden, `n=2` silver, `n=3` bronze),
 whose two roots have product `-1`.
 
-**Theorem.**  Over `a in [-2,4]`, `b in [-3,2]`, the only columns with metallic
-discriminant are `(a,b)=(0,-1)` and its mirror `(0,+1)` -- that is, exactly
+**Theorem, now global.** Over all integer `a,b`, the only columns with metallic
+canonical monic quadratic are `(a,b)=(0,-1)` and its mirror `(0,+1)` -- exactly
 
     h_k = binom(2k,k-1) = 1, 4, 15, 56, 210, 792, ...
 
@@ -70,7 +90,16 @@ the crossing at
     (3+sqrt13)/2 = 3.302775638...,
 
 bracketed exactly between `k=3` and `k=4` in the computed pattern `>><<<<<`.
-No golden discriminant occurs anywhere in the family.
+No golden discriminant occurs anywhere in the family. For the proof, the
+constant coefficient condition gives `a(a+2)+4=(2a+1)delta^2`. With `D=2a+1`,
+
+    4D delta^2 = D^2+2D+13, so D divides 13.
+
+The negative divisors give `delta^2=-3`. The positive divisors `1,13` give
+`delta^2=4`: `a=0` yields the bronze quadratic, whereas `a=6,b=2,4` yields
+`k^2+3k-1`, outside `n>=1`. Discriminant 13 prevents cancellation against
+the rational linear denominator factors, so the reduced degree-two version
+has the same classification.
 
 
 ## 2a. Connection to the repo's three-strand sequence (kind-pasteur-2026-03-14-S87)
@@ -112,66 +141,54 @@ is precisely the **norm form** of that quadratic order.  Therefore
 
     R_k = a_k^2/(a_k^2+(-1)^k)                             (3)
 
-alternates strictly about `1`, the circuit alternates at **every** index, and the
+alternates strictly about `1` for `k>=2`; the circuit alternates for `k>=3`, and the
 sign-change count is the **maximum** a circuit of that length admits.  Verified
 exactly for `n=1,2,3,4,5`: `9` of `9` changes in each case, with (2) returning
 `+1,-1,+1,-1,...` throughout.
 
-**Relation to THM-3004.**  THM-3004 proved the maximal count `d-3` is attained by
-the real-rooted family `prod_(j)(n+T^j)^2`.  Section 3 is the **h-sequence face of
-the same phenomenon**: both extremes are "two geometric terms whose ratio is
-negative" -- geometrically as interleaved bands whose dominance alternates, and
-algebraically as a quadratic order of norm `-1`.  The golden ratio is the `n=1`
-member, so `phi` is not incidental here: it is the smallest metallic parameter,
-hence the extreme case of maximal Newton-circuit alternation.
+**Relation to THM-3004.** The separated double-cluster polynomial family and
+this recurrence both attain maximal circuit alternation in their respective
+types. This is a shared conclusion, not an identification of recurrence
+characteristic roots with coefficient-polynomial root parameters. The golden
+ratio is the `n=1` member of the recurrence family.
 
 
-## 3a. The norm dichotomy: metallic and reciprocal are DISJOINT strata
+## 3a. Repaired two-element distinction; the general dichotomy is false
 
 Metallic quadratics `x^2-nx-1` have root **product `-1`**, so the pair is
 `{lam, -1/lam}`: closed under `r -> -1/r`, an *anti*-reciprocal map, and
 containing a negative element.  THM-3003 section 1's rigidity requires
 `{r} = {mu/r}` with `mu = e_d^(2/d) > 0` -- norm `+1` and positive roots.
 
-**Theorem.**  The two extremal strata are mutually exclusive:
+The particular positive two-element reciprocal pair cannot equal the metallic
+characteristic pair: their products have opposite signs. This repairs the
+containment claim attributed to HYP-9070. It does **not** separate the possible
+circuit words of the two different constructions.
 
-    norm +1 (reciprocal-closed)  <=>  antipalindromic circuit  (THM-3003 sec 1)
-    norm -1 (metallic)           <=>  MAXIMAL alternation      (section 3 above)
+An exact hostile to the former general claim is
 
-and a two-element direction multiset cannot lie in both.  Verified: the metallic
-`h`-sequences are antipalindromic in **0 of 9** cases (`n=1,2,3` by `d=6,7,8`);
-e.g. `n=1, d=6` gives `R = (1, 1/2, 4/3, 9/10, 25/24)`, with `R_1 = 1` against
-`R_5 = 25/24`.
+    N(n)=(n+1)^2(n+3)^2(n+9)^2.
 
-It is the same sign that makes section 3 work at all: the alternation comes from
-the norm form `a_(k-1)a_(k+1)-a_k^2 = (-1)^k`, **norm minus one**.  Norm `+1`
-would give an antipalindromic, non-alternating circuit.  So the sign of the norm
-of the quadratic order **separates** the two extremes.
+Its root parameters are fixed by `r -> 9/r`. With `h_k=e_k/binom(6,k)`, its
+five Newton ratios are
 
-**Provenance and use.**  This corrects claim (iii) of death-star's HYP-9070,
-which asserted the metallic stratum sits *inside* the reciprocal one on the
-grounds that `lam * (1/lam) = 1`; the product is `-1`.  For that lane the
-correction is favourable: the two conditions cut the space of directions at
-infinity in different directions and give a **branching dichotomy** rather than
-a containment.  HYP-9070's other observations stand -- in particular that the
-JC(2) leading-form tower runs the subtractive Euclidean algorithm on the exponent
-pair `(a,b)`, so by Lame the depth-maximal coprime pairs are consecutive
-**Fibonacci** pairs.  Combined with section 3, the golden ray is extremal in two
-*independent* senses -- Euclidean depth and Newton-circuit alternation -- neither
-containing the other; both are visible in the continued fraction, Lame through
-all-ones partial quotients and section 3 through the norm `-1`.
+    (65/57, 4693/4005, 71289/61009, 4693/4005, 65/57).
+
+Its four circuit signs are `+,-,+,-`: antipalindromic **and** maximally
+alternating. Thus the general implication from positive reciprocal symmetry
+to nonalternation, and the claimed converse from maximal alternation to a
+metallic norm, are refuted. Other JC or Euclidean-algorithm assertions are not
+dependencies of this repair.
 
 ## 4. Boundaries
 
-- Section 1 is an identity for each displayed row; the "degree `<=2`" statement is
-  verified over the scanned rectangle, not proved for all `(a,b)`.
-- Section 2's uniqueness is over `a in [-2,4]`, `b in [-3,2]` only.  It is a
-  FINITE-EXACT statement about that window, not a theorem for all `(a,b)`.
+- Sections 1 and 2 now have all-integer proofs; the original scanned rectangle
+  remains historical finite evidence, not the source of their quantifiers.
 - Section 3 is proved from (2), which is classical; the maximality statement is
   about the `h`-sequence, and these `h` need not come from a real-rooted
   polynomial.  Nothing here claims a real-rooted realization.
-- Section 3a's dichotomy is proved for the two-element case that HYP-9070 needs;
-  the `0/9` census is a control, not the proof.
+- Section 3a preserves only the stated two-element product distinction. Its
+  former general norm/circuit dichotomy is refuted by the exact six-root hostile.
 - Nothing here bears on no-return for the first-gap family, GMC(2), or ULC, and
   nothing here is a bridge to JC(2) -- MISTAKE-237 retracted one such bridge and
   HYP-9070 is explicitly a stratification, not a reduction.
@@ -180,4 +197,6 @@ all-ones partial quotients and section 3 through the norm `-1`.
 
     python3 04-computation/gmc_ballot_column_newton_ratios_and_metallic_alternation_thm3010.py
 
-Four parts, all reporting `True`.
+The historical producer reported four parts `True`, but did not test its false
+prose implications. Use the linked continuing8 correction's standalone source,
+raw outputs and exact certificate for the repaired statements.

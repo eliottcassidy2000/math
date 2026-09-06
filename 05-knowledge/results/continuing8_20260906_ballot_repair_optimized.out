@@ -1,0 +1,6 @@
+BALLOT all integer shifts; index-valid triple; monic degree-two numerator before cancellation
+GLOBAL_BRONZE [(0, 1, 'k**2 - 3*k - 1'), (0, -1, 'k**2 - 3*k - 1'), (6, 4, 'k**2 + 3*k - 1'), (6, 2, 'k**2 + 3*k - 1')] positive metallic n>=1 only(a,b)=(0,-1),(0,1)
+FUSS integer orders all rational; p4 has quartic Newton numerator
+RECIPROCAL_HOSTILE ratios ['65/57', '4693/4005', '71289/61009', '4693/4005', '65/57'] circuit [1, -1, 1, -1]
+CERTIFICATE_SHA256 151ddbd2240c210ccaf87f5f40f101439af2d58bf4fcebd765a6d6c06cc379d2
+PASS 2196 always-active exact gates; actual LF
