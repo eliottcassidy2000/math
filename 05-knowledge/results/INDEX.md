@@ -50,13 +50,12 @@
   two tempting extrapolations. The [46-artifact manifest](long_frontier_sep06_manifest.json)
   pins the proofs, independent audits and12 exact programs.
   LRC14 and general Laurent two-rung separation remain OPEN.
-- [Extended third-session portfolio](third_20260906_board.md): **PROVED + INDEPENDENTLY AUDITED** first milestones.
-  [Balanced grids](third_20260906_grid.md) force the six-component scale below97,097 in a hypothetical failure;
-  [rooted gcd products](third_20260906_decoder.md) give automatic balanced entry for primitive larger maximum<=28.
-  [Every mixed(m,2,1) Smith form](third_20260906_smith.md) has three explicit residual factors and a capped projective residue ladder.
-  [All-channel carried factors](third_20260906_laurent.md) compress the concurrently reached endpoint39 certificate to208 coefficients.
-  Each result has a separate proof audit and exact reconstruction; the second refinement round is active.
-  LRC14, all-channel Laurent positivity and general higher-jet partitions remain OPEN.
+- [Extended third-session results](third_20260906_overview.md): **PROVED + FINITE-EXACT + INDEPENDENTLY AUDITED.**
+  [Connected-complement grids](third_20260906_grid_refined.md) leave8,202 six-gcd scales, all<=16,704;
+  equality and a physical box are unnecessary. [Rooted pairs](third_20260906_decoder.md) close balanced actual entry at primitive larger maximum<=28.
+  [Every(m,2,1) Smith form](third_20260906_smith.md) has an intrinsic residue ladder and [exact uniform-unit means](third_20260906_smith_density.md).
+  [All-height carried factors](third_20260906_laurent.md) compress certificates; [sharp boundary jets](third_20260906_trace.md) obstruct the specified positive trace convolution.
+  [Manifest](third_20260906_manifest.json) pins18 replayed programs and their independent proof audits. LRC14 and the general Laurent/Smith targets remain OPEN.
 
 - **[THM-4454: sharp global signed-root stability](../../01-canon/theorems/THM-4454-sharp-global-signed-root-duplication-stability.md)**
   solves the exact best constant at `4sqrt(3)/[3(1+sqrt(2))(1+sqrt(3))]`.

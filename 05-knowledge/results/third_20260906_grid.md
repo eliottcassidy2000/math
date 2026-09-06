@@ -232,6 +232,6 @@ finite atlas supplies its exact maximum.
 
 The finite scale bound makes a new refinement possible: retain the divisibility
 `d_i|t` in the finite cost bag rather than allowing all d up to90. The same
-applies to e. This can only strengthen the safety test. A second round
-will record the exact remaining scale set, not infer universal closure
-from a failed upper bound.
+applies to e. This can only strengthen the safety test. The [completed full-word refinement](third_20260906_grid_refined.md)
+now records8,202 remaining scales, all at most16,704. A surviving scale
+is still an uncertified quotient object, not an unsafe row.

@@ -7,6 +7,9 @@ homogeneous coefficient module. It includes a complete global integer formula
 in affine coordinates and an intrinsic projective classification. No theorem
 ID, external novelty, or priority claim is made.
 
+The [uniform-unit consumer](third_20260906_smith_density.md) gives exact
+mean recovery gains and full-kernel sizes from the complete residue ladder.
+
 ## Inheritance, first hostile, and live board
 
 The immediate mechanism is the

@@ -382,5 +382,6 @@ output 4020a649ea09986521314e5a7d36c1b8df6f9e8883e881ebb23f89487c635221
 semantic 412cb08f795638eaf61bbcc8751afbfd8f8beb73f8e63d68641a2b33884fdc71
 ```
 
-Independent written and coefficient reconstruction audits remain pending.
+The [independent proof and resultant audit](third_20260906_laurent_audit.md)
+accepts the all-height factors and reconstructs every endpoint39 coefficient.
 No external priority or Lean verification is claimed.

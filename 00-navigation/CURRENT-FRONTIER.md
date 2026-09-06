@@ -55,8 +55,8 @@ gives square sum `<=195`; THM-4019 refutes its sharp arbitrary-lattice target.
   THM-4452: one-v2 clock-four cap `1/110`; [inert gates](../05-knowledge/results/creative_20260906_inert_pareto.md) `40/469,716/4221`; [ranked capacities](../05-knowledge/results/continuing1_20260906_profiles.md) retain all sums; physical gain OPEN.
   THM-4442/4446 force gcd-one packs above `91^6`; hostiles refute prescribed-component
   selection. No universal body mass/component floor reaches these gates; entry remains open.
-- **Transport/incidence:** [Actual packets](../05-knowledge/results/continuing4_20260906_synthesis.md).
-  [Endpoint entry](../05-knowledge/results/second_20260906_entry.md) and [balanced hostiles](../05-knowledge/results/second_20260906_decoder.md) retain actual profiles; entry OPEN.
+- **Entry:** [Connected-complement grids](../05-knowledge/results/third_20260906_grid_refined.md):8,202 scales, `t<=16704,g<=90`;
+  [rooted pairs](../05-knowledge/results/third_20260906_decoder.md) close `maxU<=28`; [actual packets](../05-knowledge/results/continuing4_20260906_synthesis.md) retain phase residues. Entry OPEN.
   [Sparse transport](../05-knowledge/results/synthesis_20260905_lrc_sparse_transport.md) retains weights and the selector gap.
 - **Residual ranks:** THM-4333/4338 close fixed-pool ranks three/four, not arbitrary entry.
 - **PROVED:** [THM-2928](../01-canon/theorems/THM-2928-critical-seven-comb-grid-tensorization-and-drift-tariff.md)/2941: literal zero/one/two/three-drift sectors are empty; `k=2,3` are finite.
@@ -177,8 +177,7 @@ endpoint `min(M,N)<=8`; the opposite endpoint is unbounded. General
 trinomial two-rung coprimality and arbitrary-support `min(M,N)>=3` remain OPEN.
 [THM-4436](../01-canon/theorems/THM-4436-complete-factorial-row-simple-negative-roots-and-trinomial-phase-wall.md)
 and an [independent path proof](../05-knowledge/results/overnight3_20260906_moments_root_geometry.md)
-give simple negative roots. Negative doubled-row values at 1,015 first roots
-of 221 supports are FINITE-EXACT; unbounded two-row separation remains OPEN.
+give simple negative roots; general two-row separation remains OPEN.
 
 [THM-4432](../01-canon/theorems/THM-4432-trinomial-two-channel-two-rung-noncancellation-with-carries.md)
 closes two-first-channel trinomials at arbitrary endpoints with all carries.
@@ -189,8 +188,8 @@ including proportional resonances; general cross-mass coprimality stays OPEN.
 gives negative doubled coefficients at interior zeros of real-rooted
 polynomials, width-linear real-core return and all-mass AP-trinomial
 coprimality, with sharp unbounded-channel examples; general cores stay OPEN.
-[Endpoint27](../05-knowledge/results/overnight7_20260906_laurent_quartic_carry.md)
-detects at `g` or `2g` on `(-27,2g-27,3g-27)`, `g>=14`, `gcd(g,27)=1`.
+[Carried factors](../05-knowledge/results/third_20260906_laurent.md) and
+[exact jets](../05-knowledge/results/third_20260906_trace.md): all heights; trace-convolution obstruction. Actual positivity OPEN.
 [Alpha completion](../05-knowledge/results/overnight8_20260906_alpha_completion.md)
 proves the full A2 parity response negative at the original zero; beta-skip is OPEN.
 
@@ -353,8 +352,8 @@ lift/phase clocks.
   [double pairs](../05-knowledge/results/overnight2_20260906_smith_double_pair.md) close `(2,2)`.
   [Nested ternary clusters](../05-knowledge/results/overnight3_20260906_smith_triple_single.md): unit residue needed; minimal diameter81.
   THM-4435 gives dyadic blindness/Hermite precision;
-  [THM-4439](../01-canon/theorems/THM-4439-all-node-twojet-metric-precision-by-terminal-clusters.md) gives metric two-jet loss; [projective higher jets](../05-knowledge/results/continuing1_20260906_jets_projective.md) retain reciprocal precision, full residue splitting and p31 transport.
-  [THM-4443](../01-canon/theorems/THM-4443-arbitrary-jet-precision-and-dyadic-unit-boundary.md): jet denominators/full dyadic3-node3-jet factors; metric fails at uniform3. [Complete(2,2,1)](../05-knowledge/results/second_20260906_smith.md): one intrinsic dyadic bit.
+  [THM-4439](../01-canon/theorems/THM-4439-all-node-twojet-metric-precision-by-terminal-clusters.md) gives metric two-jet loss; [projective higher jets](../05-knowledge/results/continuing1_20260906_jets_projective.md) retain exact reciprocal precision.
+  [THM-4443](../01-canon/theorems/THM-4443-arbitrary-jet-precision-and-dyadic-unit-boundary.md): jet denominators/full dyadic3-node3-jet factors; metric fails at uniform3. [Every(m,2,1)](../05-knowledge/results/third_20260906_smith.md): full partition and capped residue ladder.
   [Four jets](../05-knowledge/results/overnight8_20260906_jets_residue.md): allodd precision and full p7 factors with an AP bit.
   [Deuring](../05-knowledge/results/overnight9_20260906_jets_deuring.md):3-node loss `(3m-1)e-[H_p(a)=0]`, oddp,m=(p+1)/2,e>=1.
   [Full p11/p13 laws](../05-knowledge/results/overnight11_20260906_smith_prime_banks.md) and [p31 ideal](../05-knowledge/results/overnight13_20260906_jets_p31_intermediate.md) need extra residue data; general partitions OPEN.

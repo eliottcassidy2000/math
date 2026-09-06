@@ -1,0 +1,428 @@
+{
+  "schema_version": 1,
+  "session": "creative-third-20260906",
+  "status": "PROVED scoped results with FINITE-EXACT certificates and independent audits",
+  "initial_base": "f0521b87281f",
+  "first_pushed_checkpoint": "93a38412b2",
+  "open_targets": [
+    "LRC(14)",
+    "general actual Laurent two-rung separation",
+    "general higher-jet partitions"
+  ],
+  "final_lrc_scale_set": {
+    "count": 8202,
+    "maximum": 16704,
+    "compact_json_sha256": "4f29481d984ead40d0144556ce1c45dce210e30b964bb65835a7904ca6353e59",
+    "scope": "Every qualifying six/seven partition of a primitive strict counterexample with connected strict inert seven-label complement"
+  },
+  "inherited_profile_sha256": "935f3f687b6d7c89cc099e536f536238fd753bcc4c1747906d213cef387ca93f",
+  "validation": {
+    "program_count": 18,
+    "all_normal_and_optimized_outputs_identical": true,
+    "lean_claim": false,
+    "documentation_command": "python3 agents/check_docs.py"
+  },
+  "programs": [
+    {
+      "source": "04-computation/third_20260906_decoder.py",
+      "output": "05-knowledge/results/third_20260906_decoder.out",
+      "normal_command": "python3 -B 04-computation/third_20260906_decoder.py",
+      "optimized_command": "python3 -B -O 04-computation/third_20260906_decoder.py"
+    },
+    {
+      "source": "04-computation/third_20260906_decoder_profile_graph.py",
+      "output": "05-knowledge/results/third_20260906_decoder_profile_graph.out",
+      "normal_command": "python3 -B 04-computation/third_20260906_decoder_profile_graph.py",
+      "optimized_command": "python3 -B -O 04-computation/third_20260906_decoder_profile_graph.py"
+    },
+    {
+      "source": "04-computation/third_20260906_decoder_root_audit.py",
+      "output": "05-knowledge/results/third_20260906_decoder_root_audit.out",
+      "normal_command": "python3 -B 04-computation/third_20260906_decoder_root_audit.py",
+      "optimized_command": "python3 -B -O 04-computation/third_20260906_decoder_root_audit.py"
+    },
+    {
+      "source": "04-computation/third_20260906_grid_audit.py",
+      "output": "05-knowledge/results/third_20260906_grid_audit.out",
+      "normal_command": "python3 -B 04-computation/third_20260906_grid_audit.py",
+      "optimized_command": "python3 -B -O 04-computation/third_20260906_grid_audit.py"
+    },
+    {
+      "source": "04-computation/third_20260906_grid_bootstrap.py",
+      "output": "05-knowledge/results/third_20260906_grid_bootstrap.out",
+      "normal_command": "python3 -B 04-computation/third_20260906_grid_bootstrap.py",
+      "optimized_command": "python3 -B -O 04-computation/third_20260906_grid_bootstrap.py"
+    },
+    {
+      "source": "04-computation/third_20260906_grid_bootstrap_audit.py",
+      "output": "05-knowledge/results/third_20260906_grid_bootstrap_audit.out",
+      "normal_command": "python3 -B 04-computation/third_20260906_grid_bootstrap_audit.py",
+      "optimized_command": "python3 -B -O 04-computation/third_20260906_grid_bootstrap_audit.py"
+    },
+    {
+      "source": "04-computation/third_20260906_grid_full_words.py",
+      "output": "05-knowledge/results/third_20260906_grid_full_words.out",
+      "normal_command": "python3 -B 04-computation/third_20260906_grid_full_words.py",
+      "optimized_command": "python3 -B -O 04-computation/third_20260906_grid_full_words.py"
+    },
+    {
+      "source": "04-computation/third_20260906_grid_full_words_audit.py",
+      "output": "05-knowledge/results/third_20260906_grid_full_words_audit.out",
+      "normal_command": "python3 -B 04-computation/third_20260906_grid_full_words_audit.py",
+      "optimized_command": "python3 -B -O 04-computation/third_20260906_grid_full_words_audit.py"
+    },
+    {
+      "source": "04-computation/third_20260906_grid_refined.py",
+      "output": "05-knowledge/results/third_20260906_grid_refined.out",
+      "normal_command": "python3 -B 04-computation/third_20260906_grid_refined.py",
+      "optimized_command": "python3 -B -O 04-computation/third_20260906_grid_refined.py"
+    },
+    {
+      "source": "04-computation/third_20260906_grid_refined_audit.py",
+      "output": "05-knowledge/results/third_20260906_grid_refined_audit.out",
+      "normal_command": "python3 -B 04-computation/third_20260906_grid_refined_audit.py",
+      "optimized_command": "python3 -B -O 04-computation/third_20260906_grid_refined_audit.py"
+    },
+    {
+      "source": "04-computation/third_20260906_laurent.py",
+      "output": "05-knowledge/results/third_20260906_laurent.out",
+      "normal_command": "python3 -B 04-computation/third_20260906_laurent.py",
+      "optimized_command": "python3 -B -O 04-computation/third_20260906_laurent.py"
+    },
+    {
+      "source": "04-computation/third_20260906_laurent_audit.py",
+      "output": "05-knowledge/results/third_20260906_laurent_audit.out",
+      "normal_command": "python3 -B 04-computation/third_20260906_laurent_audit.py",
+      "optimized_command": "python3 -B -O 04-computation/third_20260906_laurent_audit.py"
+    },
+    {
+      "source": "04-computation/third_20260906_profile_edge_audit.py",
+      "output": "05-knowledge/results/third_20260906_profile_edge_audit.out",
+      "normal_command": "python3 -B 04-computation/third_20260906_profile_edge_audit.py",
+      "optimized_command": "python3 -B -O 04-computation/third_20260906_profile_edge_audit.py"
+    },
+    {
+      "source": "04-computation/third_20260906_smith.py",
+      "output": "05-knowledge/results/third_20260906_smith.out",
+      "normal_command": "python3 -B 04-computation/third_20260906_smith.py",
+      "optimized_command": "python3 -B -O 04-computation/third_20260906_smith.py"
+    },
+    {
+      "source": "04-computation/third_20260906_smith_density_audit.py",
+      "output": "05-knowledge/results/third_20260906_smith_density_audit.out",
+      "normal_command": "python3 -B 04-computation/third_20260906_smith_density_audit.py",
+      "optimized_command": "python3 -B -O 04-computation/third_20260906_smith_density_audit.py"
+    },
+    {
+      "source": "04-computation/third_20260906_smith_root_audit.py",
+      "output": "05-knowledge/results/third_20260906_smith_root_audit.out",
+      "normal_command": "python3 -B 04-computation/third_20260906_smith_root_audit.py",
+      "optimized_command": "python3 -B -O 04-computation/third_20260906_smith_root_audit.py"
+    },
+    {
+      "source": "04-computation/third_20260906_trace.py",
+      "output": "05-knowledge/results/third_20260906_trace.out",
+      "normal_command": "python3 -B 04-computation/third_20260906_trace.py",
+      "optimized_command": "python3 -B -O 04-computation/third_20260906_trace.py"
+    },
+    {
+      "source": "04-computation/third_20260906_trace_root_audit.py",
+      "output": "05-knowledge/results/third_20260906_trace_root_audit.out",
+      "normal_command": "python3 -B 04-computation/third_20260906_trace_root_audit.py",
+      "optimized_command": "python3 -B -O 04-computation/third_20260906_trace_root_audit.py"
+    }
+  ],
+  "files": [
+    {
+      "path": "04-computation/third_20260906_decoder.py",
+      "bytes": 10013,
+      "sha256": "af70250f34588f838f50d1b3dcbf2f92a1f0a497451a7d7318066f26c5a5923a"
+    },
+    {
+      "path": "04-computation/third_20260906_decoder_profile_graph.py",
+      "bytes": 9084,
+      "sha256": "05bb4e0da7c5a527efa4791819ae19a118a9a8e6f800dd9fa93c1ee645440058"
+    },
+    {
+      "path": "04-computation/third_20260906_decoder_root_audit.py",
+      "bytes": 3824,
+      "sha256": "21f796b2eb1f220d616dda28d3fac71a292c657b6ab782d104df4a6a7441d5cc"
+    },
+    {
+      "path": "04-computation/third_20260906_grid_audit.py",
+      "bytes": 10008,
+      "sha256": "41e6e0f0f89ffe0554e2d977fee4eb5f76ba24709306acbbf0d39f087a105b25"
+    },
+    {
+      "path": "04-computation/third_20260906_grid_bootstrap.py",
+      "bytes": 11999,
+      "sha256": "1c4070e17aaf1825d07899f8b2e056d0e2f0b05f224e90997f732e079814eb3e"
+    },
+    {
+      "path": "04-computation/third_20260906_grid_bootstrap_audit.py",
+      "bytes": 11740,
+      "sha256": "ec841b2a3e9898dcf675d4c0212b78e3d16e21b8d13a05aa54b535a231226cc0"
+    },
+    {
+      "path": "04-computation/third_20260906_grid_full_words.py",
+      "bytes": 6892,
+      "sha256": "428890519bb54074f35de2b5c2088b5020d48a196b4a3512b69821724e0a652b"
+    },
+    {
+      "path": "04-computation/third_20260906_grid_full_words_audit.py",
+      "bytes": 10776,
+      "sha256": "9de11127743456560770e0f98ee854a783f9186b93dfafdcbb3682f5364550ca"
+    },
+    {
+      "path": "04-computation/third_20260906_grid_refined.py",
+      "bytes": 7319,
+      "sha256": "10af6948ed59efe5e7cc06953410d73839dc3bdfe280519208a9e0099df912db"
+    },
+    {
+      "path": "04-computation/third_20260906_grid_refined_audit.py",
+      "bytes": 9915,
+      "sha256": "023e1ec58595b268e28f0049ad748e9b9f392965fe9534ca7dc9b547d8c9fb7f"
+    },
+    {
+      "path": "04-computation/third_20260906_laurent.py",
+      "bytes": 7110,
+      "sha256": "29e6fe582f0301e91b9fe27023aaf210269975acc00c7b1c0251db3bfe587103"
+    },
+    {
+      "path": "04-computation/third_20260906_laurent_audit.py",
+      "bytes": 8257,
+      "sha256": "5577addc93b30dda32e1380d086839256482f06a0183186eb1183c7cba3b2e80"
+    },
+    {
+      "path": "04-computation/third_20260906_profile_edge_audit.py",
+      "bytes": 9063,
+      "sha256": "010a08b6396db09eca2350accf7e6480c5a59106d6e23b5c876c5f8b7e98ab00"
+    },
+    {
+      "path": "04-computation/third_20260906_smith.py",
+      "bytes": 11746,
+      "sha256": "f5a3deb05f8a5068687d6b050c5824b45a54c10765a5b7cfa709ceb474db2fcc"
+    },
+    {
+      "path": "04-computation/third_20260906_smith_density_audit.py",
+      "bytes": 7094,
+      "sha256": "1f73f166d7e64a9d0d84031e5a4f91637a3affa1418d78b0db2dadfd3790fc90"
+    },
+    {
+      "path": "04-computation/third_20260906_smith_root_audit.py",
+      "bytes": 6065,
+      "sha256": "f5a8b8336002428a57d2a751bb1ffc8447d5332c93ed359a21c2e69c27c10254"
+    },
+    {
+      "path": "04-computation/third_20260906_trace.py",
+      "bytes": 7784,
+      "sha256": "57da4695237e57ecbcc460d5173f1a47f59801ef4a87e08ddeb753ecaaa889e0"
+    },
+    {
+      "path": "04-computation/third_20260906_trace_root_audit.py",
+      "bytes": 3502,
+      "sha256": "d6ec79de0872243fff3646dac133868bfed099c59464e688689bc37d93df6d1a"
+    },
+    {
+      "path": "05-knowledge/results/third_20260906_board.md",
+      "bytes": 7324,
+      "sha256": "56d0b668e755e11d375a5adc07fa4bb71b6c672d042943fa2aac68aa89ffc8d0"
+    },
+    {
+      "path": "05-knowledge/results/third_20260906_decoder.md",
+      "bytes": 14552,
+      "sha256": "e1443cdb999017446e7d1e8a4ae8d0e9385101d2ac6442975e729bd39f639b13"
+    },
+    {
+      "path": "05-knowledge/results/third_20260906_decoder.out",
+      "bytes": 1492,
+      "sha256": "b3deb3b98c5ecc813c995b4ac9898c64c16252933b80bb3db46e3b60a0a29216"
+    },
+    {
+      "path": "05-knowledge/results/third_20260906_decoder_profile_graph.md",
+      "bytes": 12423,
+      "sha256": "f22199e9165b9c1ab45b65435a1dc1a4382764523f7b51e0c291b7a1c330cb06"
+    },
+    {
+      "path": "05-knowledge/results/third_20260906_decoder_profile_graph.out",
+      "bytes": 1721,
+      "sha256": "4dc33b2ed7d3f1b4e4cd5c4549d3a6dbf07fddf5be1f61f1d2d8ca99563dc24d"
+    },
+    {
+      "path": "05-knowledge/results/third_20260906_decoder_root_audit.md",
+      "bytes": 2668,
+      "sha256": "d5dd2b0e16c038954a0bd315e90b09198aefc890cfe2b606138889dc04131633"
+    },
+    {
+      "path": "05-knowledge/results/third_20260906_decoder_root_audit.out",
+      "bytes": 204,
+      "sha256": "0bcb0e1d3cbc662fbc9a539f6f329cf5a1053992d62eab9f1e8898c96a5aa804"
+    },
+    {
+      "path": "05-knowledge/results/third_20260906_grid.md",
+      "bytes": 10468,
+      "sha256": "87b2e4f2a9c36710a41867769ba9fd079bda2b9c5648b0c08396dabb46438e15"
+    },
+    {
+      "path": "05-knowledge/results/third_20260906_grid_audit.md",
+      "bytes": 12268,
+      "sha256": "0f719d47043d5c2db10bcdd6b3062b609ba17ff5a6017fbc4dc0669fc1b1e37e"
+    },
+    {
+      "path": "05-knowledge/results/third_20260906_grid_audit.out",
+      "bytes": 1243,
+      "sha256": "2c6e58e08398aec7f61f383f3900b17806406d750714549f01a0dda6534a4471"
+    },
+    {
+      "path": "05-knowledge/results/third_20260906_grid_bootstrap.md",
+      "bytes": 14511,
+      "sha256": "6270ad52abb006e91b3bf994c4ee56106b7be02cb78575a96e94204818848f38"
+    },
+    {
+      "path": "05-knowledge/results/third_20260906_grid_bootstrap.out",
+      "bytes": 701436,
+      "sha256": "1a9bc517544bfae2e6061bdf49e9b93dbd6f0722ccd99c9ac8a1b4655ca4838d"
+    },
+    {
+      "path": "05-knowledge/results/third_20260906_grid_bootstrap_audit.md",
+      "bytes": 10377,
+      "sha256": "a3e2bc5c40491ef8b02799ec24a05afd87f098e4830541e4d6274be7da186dfa"
+    },
+    {
+      "path": "05-knowledge/results/third_20260906_grid_bootstrap_audit.out",
+      "bytes": 699259,
+      "sha256": "36a83b08fecc1187e02c916dc255c77ff4448bc9167b247513b6cdc7770fbc16"
+    },
+    {
+      "path": "05-knowledge/results/third_20260906_grid_full_words.md",
+      "bytes": 9196,
+      "sha256": "d989d1bba8835b0d860968dc0badd4d97ca0b7ebf994cedaeafa72c2b2c602d6"
+    },
+    {
+      "path": "05-knowledge/results/third_20260906_grid_full_words.out",
+      "bytes": 307630,
+      "sha256": "176d1398ae404ef71a46f7233b6459f2ad3f8c5faae88251eddc8dad171eedfc"
+    },
+    {
+      "path": "05-knowledge/results/third_20260906_grid_full_words_audit.md",
+      "bytes": 7553,
+      "sha256": "afc615205b67c09ffefd1e5a762772f0cc3e3601c0618c9a8e64ea1bdaa276d6"
+    },
+    {
+      "path": "05-knowledge/results/third_20260906_grid_full_words_audit.out",
+      "bytes": 46291,
+      "sha256": "5bf9f1042176d246719a35854f93134f5a412d059964f65ecd6c6bff7c54e625"
+    },
+    {
+      "path": "05-knowledge/results/third_20260906_grid_refined.md",
+      "bytes": 11013,
+      "sha256": "7c425115ec9e65fd8daa768739af2f88d99ef000fbb9524d3aba48f0eb764ea2"
+    },
+    {
+      "path": "05-knowledge/results/third_20260906_grid_refined.out",
+      "bytes": 125949,
+      "sha256": "4113f3180f27702e23d1dbe3529ac1fb47f8a6b4795f7003034048d589c03447"
+    },
+    {
+      "path": "05-knowledge/results/third_20260906_grid_refined_audit.md",
+      "bytes": 9514,
+      "sha256": "da047b23d8d6466c87f0e27f2eb5f8e507b1cafab25c0f7624ab1a2a99542b90"
+    },
+    {
+      "path": "05-knowledge/results/third_20260906_grid_refined_audit.out",
+      "bytes": 125263,
+      "sha256": "1a3a537a8e31ccc2a6e0741646d50d6a2b49c0240b73c4d71e9df8af169d97d1"
+    },
+    {
+      "path": "05-knowledge/results/third_20260906_laurent.md",
+      "bytes": 15943,
+      "sha256": "9339611ca9be32167df956f3cd9e5b5e214db00dd4b3d36e5ae4444a4ca12a27"
+    },
+    {
+      "path": "05-knowledge/results/third_20260906_laurent.out",
+      "bytes": 26560,
+      "sha256": "4020a649ea09986521314e5a7d36c1b8df6f9e8883e881ebb23f89487c635221"
+    },
+    {
+      "path": "05-knowledge/results/third_20260906_laurent_audit.md",
+      "bytes": 6163,
+      "sha256": "bdbdcacbec8dcf0a05ebac3d6b7857c3e4c4015c30e5ab5734841e7309171ea1"
+    },
+    {
+      "path": "05-knowledge/results/third_20260906_laurent_audit.out",
+      "bytes": 1484,
+      "sha256": "0a9bb58bc5502cfc0741e45608d4061d60e1ed8d8e82052b90cf80917b811b10"
+    },
+    {
+      "path": "05-knowledge/results/third_20260906_overview.md",
+      "bytes": 7719,
+      "sha256": "c57305a27b645f74ba595869a7e69e3f48e984e8f682a15112a5ed61ca629108"
+    },
+    {
+      "path": "05-knowledge/results/third_20260906_profile_edge_audit.md",
+      "bytes": 9252,
+      "sha256": "258c61be330e3c20c10c65b10078e8118cda143b290ca2025ee1c29f27036236"
+    },
+    {
+      "path": "05-knowledge/results/third_20260906_profile_edge_audit.out",
+      "bytes": 1484,
+      "sha256": "6ed810cd3aaea51cdcfab2d754e4b4e7bdd905c8870decc6d8e23fb0f8728ba9"
+    },
+    {
+      "path": "05-knowledge/results/third_20260906_smith.md",
+      "bytes": 19397,
+      "sha256": "cf3a1020b6fa0d035244d58ff963af41558bc3238dd27b47c6f11f4621584538"
+    },
+    {
+      "path": "05-knowledge/results/third_20260906_smith.out",
+      "bytes": 1033,
+      "sha256": "b4e08a8d0220742ae8f6692f1644c8b3ecd06cd26555304456b428044c7eaaad"
+    },
+    {
+      "path": "05-knowledge/results/third_20260906_smith_density.md",
+      "bytes": 6605,
+      "sha256": "c69542d891b96ab23f4801b6ce70953786b3f0b84bf78eb3bf5bda87eb8fd591"
+    },
+    {
+      "path": "05-knowledge/results/third_20260906_smith_density_audit.md",
+      "bytes": 6582,
+      "sha256": "0da48e1e47757aa084dd28d06e2b64043464d9fe45b9f7fbc2e1298354568c21"
+    },
+    {
+      "path": "05-knowledge/results/third_20260906_smith_density_audit.out",
+      "bytes": 10465,
+      "sha256": "81deb2c2a3d0df7889a9da7bd1558f641177d201ab61c81b053ecc4ed43376ed"
+    },
+    {
+      "path": "05-knowledge/results/third_20260906_smith_root_audit.md",
+      "bytes": 2638,
+      "sha256": "ad11b34846bc7a992c5250dc3587259b874e421991eb3576e9ef9315e2d2f9bb"
+    },
+    {
+      "path": "05-knowledge/results/third_20260906_smith_root_audit.out",
+      "bytes": 215,
+      "sha256": "edcd37f22165277cafe768653f7a01666e922de16cb6ff2430997f405133da11"
+    },
+    {
+      "path": "05-knowledge/results/third_20260906_trace.md",
+      "bytes": 13341,
+      "sha256": "84f0506b93908dbb5b8804a03c3ef1c521423c6299a5fe4d52b119d7f16a5c44"
+    },
+    {
+      "path": "05-knowledge/results/third_20260906_trace.out",
+      "bytes": 5163,
+      "sha256": "26995e55f5a2cbe53ca290d2d8705af4389b8274b8779638ec8ecfe326ad8660"
+    },
+    {
+      "path": "05-knowledge/results/third_20260906_trace_root_audit.md",
+      "bytes": 2566,
+      "sha256": "d83d4c58e60113bf7780281a48174ca0462f42aba58fb70e2e9dbf2fff72b527"
+    },
+    {
+      "path": "05-knowledge/results/third_20260906_trace_root_audit.out",
+      "bytes": 270,
+      "sha256": "ae4203dca9d9dda3354ef88895867c93a7f88e71f0a77be2e6aea3ee215591b3"
+    }
+  ],
+  "incoming_mathematics_read_through": "fe55aab0dc"
+}

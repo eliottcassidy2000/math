@@ -1,0 +1,6 @@
+height=1 trace_degree=2 boundary_jet_controls=PASS
+height=2 trace_degree=4 boundary_jet_controls=PASS
+height=3 trace_degree=6 boundary_jet_controls=PASS
+height=4 trace_degree=8 boundary_jet_controls=PASS
+height=5 trace_degree=10 boundary_jet_controls=PASS
+PASS gates=45
