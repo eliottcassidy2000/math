@@ -1,0 +1,6 @@
+STUDENT: only +/-x scalar charts for m nonzero; m=0 exception and parameter-covariant scaling verified
+FROBENIUS [prime,a,P,T,char0_cutoff,exact_modp_cutoff,excess]
+[[2,1,2,3,5,5,0],[2,2,4,6,9,10,1],[2,3,8,12,17,20,3],[3,1,3,4,6,7,1],[3,2,9,13,18,22,4],[3,3,27,40,54,67,13],[5,1,5,7,10,12,2],[5,2,25,37,50,62,12],[5,3,125,187,250,312,62],[7,1,7,10,14,17,3],[7,2,49,73,98,122,24],[11,1,11,16,22,27,5],[11,2,121,181,242,302,60],[13,1,13,19,26,32,6]]
+ARITHMETIC: actual 2x target passes mod2 but fails mod4; rational lift -1/2
+PASS 210 always-active exact gates; normal/-O raw LF
+Scope: natural scalar intertwiner and declared characteristic-p source-module recognition; no characteristic-zero Keller obstruction.

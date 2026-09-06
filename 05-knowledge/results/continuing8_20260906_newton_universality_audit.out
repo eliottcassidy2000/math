@@ -1,0 +1,10 @@
+TERNARY 2 1 full digest PASS
+TERNARY 3 3 full digest PASS
+TERNARY 4 9 full digest PASS
+TERNARY 5 27 full digest PASS
+TERNARY 6 81 full digest PASS
+TERNARY 7 243 full digest PASS
+TERNARY 8 729 full digest PASS
+STURM 45 independent exact root counts; no floating roots
+TOTAL 1093 complete ternary rows; all rational amplitudes and ties retained
+PASS 25328 always-active independent exact gates; raw LF

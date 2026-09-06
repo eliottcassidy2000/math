@@ -1,6 +1,6 @@
 # Global ballot quadratics, bronze uniqueness, and two correction controls
 
-Status: **PROOF CANDIDATE, awaiting independent audit**. The proofs below are elementary exact identities; the finite controls corroborate rather than establish their universal quantifiers. No assertion about LRC, an untouched Laurent coefficient row, or general Newton no-return follows.
+Status: **PROVED + FINITE-EXACT; [independent audit accepted](continuing8_20260906_newton_ballot_audit.md)**. The proofs below are elementary exact identities; the finite controls corroborate rather than establish their universal quantifiers. No assertion about LRC, an untouched Laurent coefficient row, or general Newton no-return follows.
 
 ## Inheritance and scope
 

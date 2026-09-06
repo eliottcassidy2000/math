@@ -20,9 +20,20 @@ hash_basis: LF-normalized bytes
 
 **REFUTED (the classifier) + VERIFIED-EXACT (the cluster law).**
 
+**Scope clarification, 2026-09-06 continuing8.** The general cluster wording
+below records finite evidence. A new
+[independently audited theorem](../../05-knowledge/results/continuing8_20260906_newton_clusters.md)
+proves exactly `2K-3` changes for every fixed profile with multiplicities at
+least two, under explicit narrow-block and separation bounds. It does not
+promote the arbitrary-separation candidate. The complementary
+[circuit surjectivity theorem](../../05-knowledge/results/continuing8_20260906_newton_universality.md)
+realizes every positive circuit-ratio vector with distinct negative roots
+and fixed root-parameter sum. Thus real-rootedness alone does not restrict
+the circuit word; the cluster geometry or further moments must be retained.
+
 This file **retracts** the hypothesis of
 [THM-3001](THM-3001-newton-circuit-reversal-involution-and-two-end-curvature-law.md)
-section 6 and replaces it with the correct law.  It also records the census
+section 6 and replaces it with the scoped candidate below. It also records the census
 defect that let the false hypothesis stand, as MISTAKE-337.
 
 ## 1. The refutation, with a degree-five witness
@@ -49,7 +60,7 @@ circuit sign pattern is `-+-`, so `c` has **two** sign changes.  Meanwhile
 
 both positive, so the classifier predicts one sign change.  It is wrong.
 
-All roots are real and positive, so `N` is PF-infinity, Hurwitz stable and
+All root parameters are real and positive (the polynomial roots are negative), so `N` is PF-infinity, Hurwitz stable and
 strictly ULC (`R_k>1` for every `k`, checked exactly).  The witness therefore
 lives in the interior of every hypothesis class the lane cares about; it is not
 a boundary artefact.
@@ -73,7 +84,7 @@ into the interior where they are visible.
 
 ## 3. The cluster law (VERIFIED-EXACT, attained)
 
-**Law.**  For `m` well-separated root clusters the maximum number of sign
+**Finite-supported candidate.** For `m` well-separated root clusters the maximum number of sign
 changes of the circuit is exactly
 
     0            for m=1,

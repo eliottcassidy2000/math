@@ -1,0 +1,21 @@
+STUDENT exact chart identities, rational scales, m0 exception and unrestricted mod4 obstruction PASS
+FROBENIUS 2 1 P 2 T 3 char0 5 modp 5
+FROBENIUS 2 2 P 4 T 6 char0 9 modp 10
+FROBENIUS 2 3 P 8 T 12 char0 17 modp 20
+FROBENIUS 3 1 P 3 T 4 char0 6 modp 7
+FROBENIUS 3 2 P 9 T 13 char0 18 modp 22
+FROBENIUS 3 3 P 27 T 40 char0 54 modp 67
+FROBENIUS 5 1 P 5 T 7 char0 10 modp 12
+FROBENIUS 5 2 P 25 T 37 char0 50 modp 62
+FROBENIUS 5 3 P 125 T 187 char0 250 modp 312
+FROBENIUS 7 1 P 7 T 10 char0 14 modp 17
+FROBENIUS 7 2 P 49 T 73 char0 98 modp 122
+FROBENIUS 11 1 P 11 T 16 char0 22 modp 27
+FROBENIUS 11 2 P 121 T 181 char0 242 modp 302
+FROBENIUS 13 1 P 13 T 19 char0 26 modp 32
+FROBENIUS 2 4 P 16 T 24 char0 33 modp 40
+FROBENIUS 2 5 P 32 T 48 char0 65 modp 80
+FROBENIUS 3 4 P 81 T 121 char0 162 modp 202
+FROBENIUS 17 1 P 17 T 25 char0 34 modp 42
+SCOPE characteristic p with P=p^a; independent x,t; full native source; inclusive row projection
+PASS 5077 always-active independent exact gates; raw LF

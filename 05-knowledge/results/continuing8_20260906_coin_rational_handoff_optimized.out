@@ -1,0 +1,12 @@
+Rational handoff obstruction: PROOF CANDIDATE; exact companion PASS
+Complete Bernstein boxes: 782
+Prime-reflected denominator controls: 362
+Affine sharpness: F_3(4x+1)+F_6(-x)=-1/2; bad prime 2 divides slope 4
+Aggregate-state hostile: tail/parity valid, first-row signed load -3 < -2
+Stationary admissible slope-two rule: H(1/3)=16/35 != 1/2
+von Neumann: rational exact fairness, half-integral germs, T(2) unbounded
+Inherited THM-3337 opposite shell vectors: [0, 0, -2, -4, 0, 4, 2, 0, 0] [0, 0, 2, 4, 0, -4, -2, 0, 0]
+Inherited THM-3343 prefix checks through horizon 64; Hankel ranks mod 101:
+[[2,2,1],[4,4,4],[8,8,8],[12,12,12],[16,16,16],[24,24,24],[30,30,30]]
+No uniform slope below two is proved; fixed polynomial-state architecture is excluded.
+PASS 5070 active exact gates

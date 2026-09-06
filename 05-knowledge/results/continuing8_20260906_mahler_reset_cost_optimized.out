@@ -1,0 +1,18 @@
+PREFIX 100 D/N 1/3 period 2 max native-to-odd lag 1 native ones 1
+PREFIX 00100 D/N 4/27 period 18 max native-to-odd lag 4 native ones 9
+PREFIX 00100100 D/N 140/729 period 486 max native-to-odd lag 9 native ones 243
+PREFIX 0100 D/N 2/9 period 6 max native-to-odd lag 3 native ones 3
+PREFIX 000100 D/N 8/81 period 54 max native-to-odd lag 6 native ones 27
+PREFIX 0000100 D/N 16/243 period 162 max native-to-odd lag 7 native ones 81
+PREFIX 00000100 D/N 32/729 period 486 max native-to-odd lag 9 native ones 243
+SHARP FAMILY j 1 N 3 postterminal reset count 1 first rejection depth h+R+1
+SHARP FAMILY j 2 N 9 postterminal reset count 3 first rejection depth h+R+1
+SHARP FAMILY j 3 N 27 postterminal reset count 4 first rejection depth h+R+1
+SHARP FAMILY j 4 N 81 postterminal reset count 6 first rejection depth h+R+1
+SHARP FAMILY j 5 N 243 postterminal reset count 7 first rejection depth h+R+1
+SHARP FAMILY j 6 N 729 postterminal reset count 9 first rejection depth h+R+1
+SHARP FAMILY j 7 N 2187 postterminal reset count 11 first rejection depth h+R+1
+JOINT QUOTIENT HOSTILE [['00100000', 180, 4617, 27, 1], ['00100100', 148, 3798, 729, 0]]
+SCOPE finite zero-tail cylinders and exact ordinary launch families; no Mahler infinite survivor or physical Rule30 conclusion
+CERTIFICATE SHA256 ac3f7f74a5ed80351218669c628a4bf068384f7e8132fa41af0b0828b6646d6c
+PASS 18649 always-active exact gates; raw LF

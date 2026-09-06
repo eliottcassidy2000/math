@@ -1,0 +1,6 @@
+EXACT_CIRCUIT_SURJECTIVITY arbitrary positive target vector; root-parameter sum equals degree
+TERNARY_UNIVERSE [[2, 1], [3, 3], [4, 9], [5, 27], [6, 81], [7, 243], [8, 729]] TOTAL 1093
+ROOT_PROOF literal alternating rational samples under coefficient separation9; no numeric roots
+HOSTILE fixed second moment forces R1; targetC2=1/2 fails Newton in two exact anchored examples
+CERTIFICATE_SHA256 8d11f09b961beb042f4146f55459141a2372275995b7b476cc85377633f6c4b0
+PASS 7680 always-active exact gates; actual LF

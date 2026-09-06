@@ -1,0 +1,7 @@
+Independent Newton/ballot audit: exact controls PASS
+Cluster certificate SHA256 1d35470321fbc24289b62fb49955cafe9e10e7518f26b9ae17f59ee12145e17e
+Ballot certificate SHA256 151ddbd2240c210ccaf87f5f40f101439af2d58bf4fcebd765a6d6c06cc379d2
+Profiles 15 power-sum rows 30 exact ties 1
+Independent ballot rows 1516 Fuss ratios 99
+Universal separation/count and bronze proofs reviewed separately; finite controls are not quantifiers.
+PASS 2703 always-active exact gates; raw LF

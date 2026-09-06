@@ -26,6 +26,19 @@ Format per entry:
   are preserved as historical evidence; their True flags did not test these
   prose implications. The repaired identities and scope are in the linked note.
 
+- [Exact circuit realization](../05-knowledge/results/continuing8_20260906_newton_universality.md)
+  preserves real-rootedness, simplicity and the first moment, but it uses the
+  free first Newton ratio. The root row `(1/2,1,3/2)` fixes `R_1=12/11`, so
+  target `C_2=1/2` would violate Newton at `R_2=6/11`. The anchored degree-five
+  model gives the same obstruction at `R_1=338/275`. Preserve the second
+  moment before transporting unrestricted circuit universality.
+- [Narrow clusters](../05-knowledge/results/continuing8_20260906_newton_clusters.md)
+  require the stated multiplicities and width: singleton profile `(1,2,1)`
+  and a narrow one-block four-root example refute the corresponding omitted
+  hypotheses. Translation/dilation of a factorial factor preserves negative
+  roots but changes its coefficients. The exact new law is for the
+  constructed class, not an untouched wall core or every notion of cluster.
+
 ## 2026-09-06 continuing synthesis -- retained residuals and repair geometry
 
 - [Shared singular fibres](../05-knowledge/results/continuing7_20260906_singular_fibres.md):
