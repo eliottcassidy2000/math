@@ -62,7 +62,11 @@ for `d>=7`. THM-3742 is a wrong-torsor Pell `C14`; THM-3744's safe control is
   equality. THM-4409 restores third-sheet component incidence: its rational
   degree-zero max-flow certificate closes all `2,910` ternary-unit triples
   through height `79` and is exact on `(1,5,11)` for every finite pair degree.
-  Universal height, arbitrary nonresonance, and entry are open.
+  THM-4413 proves the owner lattice cannot be tangent to the exact roof:
+  every live component has the sharp height-sensitive floor
+  `1/(7w_2w_3)`. It also gives the complete all-height minimal norm-18 empty
+  atlas `{(7,11,43),(7,11,47),(7,25,29)}`. Universal height for the `6/77`
+  upper bound, arbitrary nonresonance, and entry are open.
 - **Residual ranks:** THM-4333/4338 close fixed-pool ranks three/four, not arbitrary entry.
 - **PROVED:** [THM-2928](../01-canon/theorems/THM-2928-critical-seven-comb-grid-tensorization-and-drift-tariff.md)/2941: literal zero/one/two/three-drift sectors are empty; `k=2,3` are finite.
 - **Orthogonal routes.** THM-1017 is HYP-6820; THM-2047/2050 keep phase/exit; THM-731/2048 prune; THM-1290 ends at `55`; HYP-8900 nonuniform.

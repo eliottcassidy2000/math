@@ -1,5 +1,19 @@
 # Script Results Index
 
+- `lrc14_owner_transversality_norm18_empty_atlas_thm4413.out` and its
+  independent affine-fibre audit -> arithmetic roof transversality and the
+  complete minimal norm-`18` empty-comb atlas
+  ([THM-4413](../../01-canon/theorems/THM-4413-lrc14-owner-transversality-gap-and-complete-norm-eighteen-empty-atlas.md)):
+  **PROVED ELEMENTARY RELATIVE TO THM-4386/4393 + VERIFIED-EXACT +
+  INDEPENDENTLY AUDITED; LRC(14) OPEN.** Every owner-admissible pair margin is
+  an even nonmultiple of three, so roof tangency is impossible and
+  `L>=min(p_*,6w_2)/(14w_2w_3)>=1/(7w_2w_3)`, sharply. An analytic height-73
+  reduction plus two exact physical constructions proves that the only empty
+  combs in the complete minimal norm-18 shell are `(7,11,43)`, `(7,11,47)`,
+  and `(7,25,29)`. Ten central-dead presentations exist; defect `+/-3`
+  rescues six. Primary/referee hashes: `41323519...55cd` / `39c09051...af0`
+  and `25430c23...c285` / `326549ec...5956` (raw LF bytes).
+
 - `poisson_rank2_casimir_leaf_natural_cubic_hostile.out` -> exact hostile to
   the natural `W=1+xy` Casimir-leaf incidence. The universal depressed cubic
   is exact, but the valid etale

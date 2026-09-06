@@ -1,0 +1,20 @@
+LRC14 NORM-18 VANISHING/LIVE RAW-CARRIER GAP -- INDEPENDENT AUDIT
+status=PASS exact_local_shell_theorem; LRC14=OPEN
+patterns=1-1-16,1-4-13,1-7-10,2-5-11,4-7-7,5-5-8
+carrier_self_duality=C_in_w_perp; c_cross_C=delta*w; delta=-3,0,3
+roof_gate=all_i(3*(w_j+w_k)-14*abs(C_i)>0)
+owner_gap=no_zero_margin; live_D<=-2; dead_D>=2; sharp=yes
+live_component_floor=1/(7*w_2*w_3)_for_sorted_w; sharp_at=(29,73,77)
+central_failure_cutoffs=116:73,1413:59,1710:43,2511:49,477:31,558:37
+finite_core=2289_speed_triples,232_raw_incidences,190_minimal_incidences,180_minimal_triples
+central_dead_presentations=10; rescued_by_defect_three=6; dead_presentations=4
+physical_empty={(7,11,43),(7,11,47),(7,25,29)}; minimal_empty_height=29
+empty_next_independent_unit_norms=(7,25,29):18;(7,11,43):20;(7,11,47):22
+family=w=(1,m,16m-1),m=6t+5,t>=0; all_components=3/[7*(16m-1)]
+family_ranges=K0=floor((24m-3)/112),A=floor((12m+9)/56),U=floor(3*(m-1)/14)
+family_N_offsets_mod7=4,12,12,20,24,30,36; N(t+7)=N(t)+36; limit=9/392
+norm20_empty_comparison=(1,19,41); same_index3_plus_123_complement; gaps=2,28
+composition=THM4396_control_only; THM4398_complementary_123_bridge_only; no_LRC14_step
+checks=1320358
+semantic_sha256=942d1eab90b1b2c128dc6475535aba508a2f6c7aae9feca7c4b4911b2ee21996
+verdict=PASS

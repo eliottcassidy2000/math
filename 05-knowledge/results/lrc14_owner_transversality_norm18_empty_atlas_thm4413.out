@@ -1,0 +1,27 @@
+LRC14 NORM-18 GAP/EMPTY-COMB CLEAN-ROOM REFEREE
+status=PASS exact_all_height_local_shell; LRC14=OPEN
+method=coefficient_box + direct_rank2_carriers + rational_circle_event_sweep
+patterns=1-1-16,1-4-13,1-7-10,2-5-11,4-7-7,5-5-8
+owner_boundary=margins_even_and_not_divisible_by_3; live_D<=-2; dead_D>=2; D=0_tangent_requires_owner_failure
+component_floor=min(p_star,6*w2)/(14*w2*w3)>=1/(7*w2*w3); sharp=(29,73,77),C=(32,1,-13)
+parity_hostile=(1,5,14),C=(-4,-2,1),L=1/980
+analytic_central_cutoffs=1-1-16:73,1-4-13:59,1-7-10:43,2-5-11:49,4-7-7:31,5-5-8:37
+finite_core=2289_triples,232_raw_incidences,190_minimal_incidences,180_minimal_triples
+literal_lattice_components=914
+pattern_census=1-1-16:(14, 14, 2);1-4-13:(16, 17, 4);1-7-10:(8, 9, 1);2-5-11:(12, 13, 2);4-7-7:(1, 1, 1);5-5-8:(5, 5, 0)
+central_dead_actual_height_ceiling=1-1-16:41,1-4-13:55,1-7-10:31,2-5-11:43,4-7-7:29,5-5-8:None
+central_dead_presentations=10; defect3_rescued=6
+central_dead=(1, 17, 37);c=(2, -11, 5);pattern=2-5-11;D0=40;D3=-8;counts=(1, 0, 1);mass=8/4403
+central_dead=(1, 17, 55);c=(1, -13, 4);pattern=1-4-13;D0=14;D3=-34;counts=(1, 0, 1);mass=2/385
+central_dead=(1, 19, 35);c=(16, 1, -1);pattern=1-1-16;D0=62;D3=-4;counts=(1, 0, 1);mass=64/4655
+central_dead=(1, 25, 41);c=(16, 1, -1);pattern=1-1-16;D0=26;D3=-22;counts=(2, 0, 2);mass=172/7175
+central_dead=(5, 13, 41);c=(1, -13, 4);pattern=1-4-13;D0=44;D3=-22;counts=(1, 0, 1);mass=22/3731
+central_dead=(7, 11, 43);c=(5, -11, 2);pattern=2-5-11;D0=4;D3=34;counts=(0, 0, 0);mass=0
+central_dead=(7, 11, 47);c=(13, -4, -1);pattern=1-4-13;D0=8;D3=20;counts=(0, 0, 0);mass=0
+central_dead=(7, 25, 29);c=(4, 7, -7);pattern=4-7-7;D0=2;D3=20;counts=(0, 0, 0);mass=0
+central_dead=(7, 25, 29);c=(13, 1, -4);pattern=1-4-13;D0=20;D3=2;counts=(0, 0, 0);mass=0
+central_dead=(13, 23, 31);c=(1, -10, 7);pattern=1-7-10;D0=8;D3=-22;counts=(1, 0, 1);mass=22/4991
+physical_empty=(7, 11, 43),(7, 11, 47),(7, 25, 29)
+sharp_complete_ceiling=central_dead_height_55; empty_height_47; first_empty_height_29
+empty_geometric_roofs=11_carriers_each; deleted_defect3=3*(3,2,-1),3*(2,3,-1),3*(-3,2,-1)
+checks=6993

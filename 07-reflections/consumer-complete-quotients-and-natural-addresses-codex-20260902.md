@@ -355,6 +355,22 @@ relation.  In tournament language, the directed owner cycle survives while
 its numerical chart label does not.  This is a finite structural compression,
 not a claim that future coefficient norms inherit the same winners.
 
+THM-4413 shows that the same orientation sidecar has a second, genuinely
+metric consequence.  For a raw carrier `C`, the three roof margins satisfy
+
+```text
+p_i=3(w_j+w_k)-14|C_i| = |C_i| (mod 3).
+```
+
+The distinct-owner tournament is equivalent to `3` not dividing any `C_i`;
+odd speeds make every `p_i` even.  Hence the physical owner lattice misses the
+continuous roof boundary by at least two integer units.  The orientation has
+not determined the metric length—it still loses height and the exact carrier—
+but, together with parity, it excludes tangency and yields the sharp adaptive
+floor `min(p_*,6w_2)/(14w_2w_3)`.  This is a useful pattern for other problems:
+a finite label need not encode a magnitude to force transversality when the
+boundary functional has a rigid residue alphabet.
+
 THM-4396 gives a pointwise version of the same discipline.  After smoothing
 two sheet indicators, write `X=f_i f_j-g_i g_j`.  Forgetting the exact third
 indicator but retaining only `0<=f_k<=1` has the optimal envelope
