@@ -4,7 +4,7 @@
   "status": "PROVED / REFUTED / FINITE-EXACT, with scope specified in each proof and independent audit",
   "created_utc": "2026-09-06",
   "initial_head": "f0521b87281f06da396889e8c510b5729f72bb56",
-  "incoming_integrated_through": "1b58b515ef5fe7cb9d41ff0ce1c06be5861afd92",
+  "incoming_integrated_through": "a5b2011be467b4756a863939818d09dd471c3efc",
   "hash_basis": "SHA-256 of raw LF repository file bytes, not JSON-normalized or semantic output hashes. The manifest does not hash itself.",
   "artifact_count": 46,
   "program_count": 12,

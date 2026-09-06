@@ -20,9 +20,9 @@ these arithmetic problems.
 
 | Lane / object | Closest mechanism, hostile and corrected near miss | Retained sidecar and next decisive test |
 |---|---|---|
-| Anchor: actual LRC phase packets | The fifth-clock word closes384061 unitless5+8 scales; an incoming actual6+7 pair has different located joins with identical profiles | Retain both packets and signed offsets; seek adaptive component/clock choice beyond the proved families |
-| Niche: two-anchor Laurent model | Smallest branch and tail>=75000 are closed; all nonnegative-root four-anchor shapes are closed | Certify an explicit rectangle around(e3,e4)=(84,35), keeping the original zero and full response; general remaining phases lie in(1/80,75000) |
-| Niche: actual all-channel return | Incoming exact families reach endpoint63; qualitative beta-step propagation has two exact model hostiles | Preserve interior factorial amplitudes or prove a coupled inequality; another endpoint table alone is not the next target |
+| Anchor: actual LRC phase packets | The fifth-clock word closes384061 unitless5+8 scales; an incoming actual6+7 pair has different located joins with identical profiles | Retain both packets and signed offsets; in the balanced residual impose incoming t<97097 and maxU>=29 before testing adaptive clocks |
+| Niche: two-anchor Laurent model | Smallest branch and two-interlacer tail>=2500 are closed; all nonnegative-root four-anchor shapes are closed | Certify a rectangle around(e3,e4)=(84,35), keeping the original zero/full response; a B-only extension needs its own tail, while both interlacers permit the remaining interval(1/80,2500) |
+| Niche: actual all-channel return | Incoming exact families reach endpoint63; qualitative beta-step propagation has two exact model hostiles | Combine actual interior amplitudes with incoming all-height forced factors; test positivity of the deflated coefficients before seeking a coupled recurrence |
 | Wildcard: finite-length and global rigidity | THM-4455/4456 close all minimizers and sharp1/N order; one-atom hostiles defeat the all-N bound at N4,5 | Global optimal modulus and the all-N>=6 question remain; keep competing singular boundaries and distinguish sharp-ratio convergence from a liminf |
 | Bridge: exact boundary data | Cross-divisor and component lengths lose phase placement; linear anchoring loses higher coefficients | State the source, map, target predicate, lost coordinate and decisive control before claiming any transfer |
 | Process: incoming consequences | Other sessions sharpened the preceding results within minutes | Fetch at coherent checkpoints; search statement/constants and replace subsumed targets before another computation |
@@ -144,7 +144,7 @@ statements and new correction entries before integrating:
   containing box, and reduce the two-interlacer tail threshold to75000.
   This supersedes the first-branch sign scope and118163898523 threshold;
   this session's C/D residue envelopes remain distinct useful constraints.
-  General unresolved phases are confined to(1/80,75000). A Newton-plus-
+  This intermediate cutoff is improved to2500 below. A Newton-plus-
   first-rooted hostile loses the B real-rootedness predicate.
 - [Moment and entire-product characterization](continuing3_20260906_stability_near_minimizers.md)
   independently recovers THM-4455 and adds M=p4-2p3/sqrt3+1/3 and the
@@ -162,13 +162,49 @@ statements and new correction entries before integrating:
   theorem already makes the family safe. It is a structural counterpart
   to this session's positive fifth-clock word, not a new safety closure.
 
+## Additional incoming constraints before push
+
+Commits93a38412b2,01d2362de5 and a5b2011be4 supply further audited
+results. Root read the grid, rooted-product and carried-factor proofs;
+an independent agent read the residue-floor proof and audit. This pass
+integrates their statements without claiming to replay their certificate banks.
+
+- [Grid overlap](third_20260906_grid.md) and
+  [rooted divisor products](third_20260906_decoder.md) leave t<97097 and
+  maxU>=29 in the actual balanced6+7 residual branch. The incoming
+  prescribed-clock hostiles at t>=412164 lie outside that residual, so
+  they do not refute a forcing rule restricted to it. The repaired
+  THM-739 overlap requires containment clipping and actual window position;
+  pair credits can be added only with a valid pointwise multiplicity bound.
+- [The two-residue floor](continuing3_20260906_residue_floor.md) combines
+  the C and D measures with their shared support endpoint to prove
+  e4>161875/888583>9/50, independently of the old floor. The retained
+  slope e4>(8750/8241)(e3-75) gives Q(-s)/(s^7 e4^2)<-49000 at original
+  roots s>=2500, with both interlacers. Thus the general two-interlacer
+  remaining interval is(1/80,2500). Low ordinary/shifted moment positivity
+  alone admits a hostile; the support bound rejects it. This directly
+  develops the C/D residue sidecar supplied by this session.
+- [All-height carried factors](third_20260906_laurent.md) prove explicit
+  divisors of every characteristic coefficient via negative-integer
+  parameter degenerations. They compress the concurrent endpoint39
+  certificate from258 to208 coefficients. Divisibility is now inherited;
+  all-height residual positivity remains open. This provides structure
+  complementary to our beta-step obstruction, retaining the actual
+  amplitude family that the hostile models lose.
+- [The complete mixed(m,2,1) Smith law](third_20260906_smith.md) closes
+  that family using a fixed three-row residual. It is an available
+  orthogonal connection through retained determinantal ideals, not a
+  result of this session or a transfer to Laurent signs.
+
 ## Next research state
 
 The sharp constant, all minimizing sequences and first finite-length
 order are closed in the specified signed-root problem. The next cheap
 test is an explicit rational rectangle in(e3,e4) around(84,35): retain
 the same original-root elimination, complete response and phase intervals,
-and certify all coefficients over that rectangle. For actual Laurent
+and certify all coefficients over that rectangle. Keep the B-only scope
+by proving its tail directly; the new2500 cutoff can be used only after
+requiring both interlacers. For actual Laurent
 rows beyond the incoming endpoint63 families, an integration recurrence
 must retain the interior factorial
 amplitudes; matching only the carry and leading coefficient is insufficient.
@@ -185,5 +221,5 @@ THM-4456. Its12 programs contain41008 explicit exact checks per complete
 normal run; each has matching normal, optimized and frozen output, as
 recorded in the independent audits. The manifest excludes this evolving
 board and incoming artifacts, which have their own manifest. Incoming
-commits through1b58b515ef are integrated. The rational-rectangle expansion
+commits through a5b2011be4 are integrated. The rational-rectangle expansion
 above is the next unstarted experiment, not a claimed result.
