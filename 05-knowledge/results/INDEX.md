@@ -7,7 +7,11 @@
   [Actual endpoint39](long_frontier_sep06_endpoint39.md) has first nonzero
   moment g or2g for all g>=20,coprime39 and nonzero complex coefficients;
   all258 characteristic coefficients have an independent full polynomial
-  certificate. LRC14 and general Laurent two-rung separation remain OPEN.
+  certificate. The [fifth-clock family](long_frontier_sep06_phase.md) makes
+  384061 actual unitless5+8 scales safe beyond the listed scalar gates;
+  the [C-only residue theorem](long_frontier_sep06_anchor.md) proves a
+  uniform negative full response at the smallest original Laurent phase.
+  LRC14 and general Laurent two-rung separation remain OPEN.
 
 - **[THM-4454: sharp global signed-root stability](../../01-canon/theorems/THM-4454-sharp-global-signed-root-duplication-stability.md)**
   solves the exact best constant at `4sqrt(3)/[3(1+sqrt(2))(1+sqrt(3))]`.

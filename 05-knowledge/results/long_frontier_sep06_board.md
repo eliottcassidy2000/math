@@ -79,6 +79,20 @@ and its frozen evidence remain preserved.
   and744-gate independent full polynomial reconstruction pass. The
   extension uses the inherited quotient method; all-channel closure
   remains open.
+- **PROVED** [fifth-clock phase family](long_frontier_sep06_phase.md):
+  384061 distinct scales of an actual unitless5+8 entry pass all inherited
+  profiles and fail all specified forward, endpoint, dual and whole-arc
+  scalar criteria, yet an explicit four-case affine phase word gives
+  clearance greater than1/6. The38683-gate source and independent audit
+  pass. Keeping a farther lift repairs the hostile residue where a nearest
+  lift fails; the generic packet instrument is inherited.
+- **PROVED** [smallest original phase](long_frontier_sep06_anchor.md):
+  under e1=13,e2=55 and only C weakly interlacing B, its residue measure
+  forces75<=e3<=135 and e4<=175/2. The smallest original zero is unique
+  and simple in(1/110,1/90), and sQ(-s)<-160. Producer106 and independent
+  ordinary-carrier audit28 exact gates pass. Higher C/D residue moments
+  now target the other phases; the earlier effective negative tail stays
+  inherited, and general finite-phase negativity remains open.
 
 The heartbeat continues this board quietly unless there is substantive
 progress, a correction, completion, failure or required user action. At

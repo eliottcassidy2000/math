@@ -1,0 +1,5 @@
+UNIVERSE formal a,b,f,s coefficient identities; exact interval bounds; weak repeated boundary
+INDEPENDENT_PATH ordinary (1+u)^14 carriers and coefficient extractions 9,18,16; rational series at infinity
+CLAIM C-only interlacing and e1=13,e2=55: unique smallest phase in (1/110,1/90); sQ(-s)<-160
+SCOPE other phases OPEN; no D interlacing needed; no finite parameter extrapolation
+PASS explicit_gates=28 semantic_sha256=d89bae0937356cae66d8b13b483ae9fe83229b279d20066a8ecfe8b986dc4ddb
