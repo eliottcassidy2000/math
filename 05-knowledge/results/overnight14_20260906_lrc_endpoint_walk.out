@@ -1,0 +1,8 @@
+STATUS: PASS; exact endpoint-gcd packet, conditional LRC consumer
+UNIVERSE: 7776 positive five-entry integer walks over1..6
+THRESHOLDS J, by physical core scale t and distinct path size: {1: {5: 6, 6: 2390, 7: 848756}, 2: {5: 13, 6: 4781, 7: 1697513}}
+HOSTILE: actual atlas path6,2,3 has collective gcd1, endpoint gcd3, J3
+POSITIVE:729,243,81,27,9,3,1 is an actual seven-vertex atlas path with J1
+STRICT GAIN: actual path6,4,1 has J1<C2; path18,12,3,9,6 has J2<=6<C12 in a genuine eleven-core
+OPEN: no universal small-J path existence proved for all connected eleven-cores
+ACTIVE GATES: 31122

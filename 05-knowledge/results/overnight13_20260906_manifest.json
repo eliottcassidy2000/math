@@ -53,8 +53,8 @@
     },
     {
       "path": "05-knowledge/results/overnight13_20260906_lrc_entry_decoder.md",
-      "bytes": 15300,
-      "sha256": "968ad0f5cf1394c33103cce69e9b27a13b9f8e12c0b6cff574a018df5923bdba"
+      "bytes": 15305,
+      "sha256": "cedaa37c1219302ad3547bd70d0a288a873f2884ee6833f4bddf99cc2c0e513b"
     },
     {
       "path": "05-knowledge/results/overnight13_20260906_lrc_entry_decoder.out",
@@ -63,13 +63,33 @@
     },
     {
       "path": "05-knowledge/results/overnight13_20260906_lrc_entry_decoder_audit.md",
-      "bytes": 9286,
-      "sha256": "e258211a5c4840d18cc626921c7dd15f840f8ec8713f01ddbc1bb4da19f0c647"
+      "bytes": 9291,
+      "sha256": "d14a5aa4f50d918117c8762149e5d299426035fdc6e76746afc0df62baf7abd7"
     },
     {
       "path": "05-knowledge/results/overnight13_20260906_lrc_entry_decoder_audit.out",
       "bytes": 1219,
       "sha256": "7861e9ddc8bd460025b01b77728430ac51472cd52e4c955733541a24ab4f7123"
+    }
+  ],
+  "prose_revisions": [
+    {
+      "date_utc": "2026-09-06T14:11:22.879444+00:00",
+      "source_checkpoint": "fourteenth",
+      "changes": [
+        {
+          "path": "05-knowledge/results/overnight13_20260906_lrc_entry_decoder.md",
+          "previous_sha256": "968ad0f5cf1394c33103cce69e9b27a13b9f8e12c0b6cff574a018df5923bdba",
+          "sha256": "cedaa37c1219302ad3547bd70d0a288a873f2884ee6833f4bddf99cc2c0e513b",
+          "reason": "Repair reproduction command paths and restore the optimized-run flag; includes three incoming prose repairs from4a8b6efbc. Mathematical source/output bytes and conclusions unchanged."
+        },
+        {
+          "path": "05-knowledge/results/overnight13_20260906_lrc_entry_decoder_audit.md",
+          "previous_sha256": "e258211a5c4840d18cc626921c7dd15f840f8ec8713f01ddbc1bb4da19f0c647",
+          "sha256": "d14a5aa4f50d918117c8762149e5d299426035fdc6e76746afc0df62baf7abd7",
+          "reason": "Repair reproduction command paths and restore the optimized-run flag; includes three incoming prose repairs from4a8b6efbc. Mathematical source/output bytes and conclusions unchanged."
+        }
+      ]
     }
   ]
 }

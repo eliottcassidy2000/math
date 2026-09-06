@@ -133,8 +133,8 @@ does not substitute for the all-parameter argument in Section 2.
 
 Run from this directory:
 
-    python -B D-computation/overnight11_20260906_lrc_unit_component_audit.py
-    python -B D-computation/overnight11_20260906_lrc_unit_component_audit.py
+    python -B 04-computation/overnight11_20260906_lrc_unit_component_audit.py
+    python -B -O 04-computation/overnight11_20260906_lrc_unit_component_audit.py
 
 Normal and optimized transcripts are byte-identical LF. Source SHA256:
 `37d2d41531770f047cb3979c214ea0a57b5a8ef8574d1c2b3f4570734b2ba51d`.

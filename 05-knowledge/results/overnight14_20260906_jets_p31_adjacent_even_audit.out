@@ -1,0 +1,7 @@
+rational signed even minors 45
+contents 57292925200157771047992775131648000 53494979785374631680 valuations 2 1
+complete rank28 bands 1 minimum 5 next; rank30 unique minimum
+independent residual-layer matrices 120 all residues depths0..3 and four high/negative controls
+all-depth formulas E28=588e+2 E30=675e+1; factors=(43e-1+kappa,44e-kappa)
+pair-kernel window 43e<=b<=44e-1; no whole-kernel extrapolation
+PASS 132821 always-active gates

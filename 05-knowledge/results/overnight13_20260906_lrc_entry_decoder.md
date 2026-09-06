@@ -281,8 +281,8 @@ kernels and every bounded relation remains internal. The real thirteen-
 label controls then independently verify actual atlas typing, all 121
 certificates, both orientation counts, and both hostiles above.
 
-    python -B D-computation/overnight13_20260906_lrc_entry_decoder.py --write-certificates 04-computation/overnight13_20260906_lrc_entry_decoder_certificates.json
-    python -B D-computation/overnight13_20260906_lrc_entry_decoder.py
+    python -B 04-computation/overnight13_20260906_lrc_entry_decoder.py --write-certificates 04-computation/overnight13_20260906_lrc_entry_decoder_certificates.json
+    python -B -O 04-computation/overnight13_20260906_lrc_entry_decoder.py
 
 The [full JSON](../../04-computation/overnight13_20260906_lrc_entry_decoder_certificates.json)
 is a consequence certificate, not just a gate count. Both runs pass

@@ -1,0 +1,7 @@
+STATUS: INDEPENDENT PASS; exact walk cancellation and conditional endpoint criterion
+UNIVERSES: 5832 arbitrary three-entry words; actual atlas walk counts by edge length 0..4 [14, 70, 382, 2040, 11036] total 13542
+CONTROLS: {"closed_walk_distinct_endpoint_gate": {"A": 3, "B": 3, "C": 3, "J": 3, "L": 3, "collective_gcd": 2, "distinct_vertices": 2, "endpoint_gcd": 6, "entries": 3}, "distinct_endpoint_hostile": {"A": 6, "B": 3, "C": 3, "J": 3, "L": 6, "collective_gcd": 1, "distinct_vertices": 3, "endpoint_gcd": 3, "entries": 3}, "five_vertex_strict_gain": {"A": 36, "B": 12, "C": 12, "J": 2, "L": 6, "collective_gcd": 3, "distinct_vertices": 5, "endpoint_gcd": 6, "entries": 5}, "same_vertices_extra_loop": {"A": 18, "B": 9, "C": 9, "J": 3, "L": 6, "collective_gcd": 1, "distinct_vertices": 3, "endpoint_gcd": 3, "entries": 5}, "seven_vertex_positive": {"A": 729, "B": 1, "C": 1, "J": 1, "L": 729, "collective_gcd": 1, "distinct_vertices": 7, "endpoint_gcd": 1, "entries": 7}, "three_vertex_strict_gain": {"A": 12, "B": 2, "C": 2, "J": 1, "L": 6, "collective_gcd": 1, "distinct_vertices": 3, "endpoint_gcd": 1, "entries": 3}}
+THRESHOLDS: {"1": [6, 2390, 848756], "2": [13, 4781, 1697513]}
+SCOPE: count distinct visited vertices; endpoint must differ from global maximum; no universal qualifying-walk claim
+SEMANTIC SHA256: 5fddd8150aa2760aa5478d07fca74b9663ace1d404c1701dc3d873a62282563e
+ACTIVE GATES: 117721

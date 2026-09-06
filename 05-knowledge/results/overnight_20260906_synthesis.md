@@ -5,7 +5,7 @@ This is the maintained continuation surface for the user's overnight request.
 Read current canon and incoming corrections before continuing any lane.
 The starting commit was `62e1b34d8`; the isolated worktree is `C:/w/s0905`.
 The extensively dirty original checkout is outside this session's edits.
-The thirteenth checkpoint incorporates incoming canon through `fe9984169`,
+The fourteenth checkpoint incorporates incoming canon through `8517ff4b1`,
 including proved THM-4437/4440/4441/4442/4443/4444/4445/4446/4447/4448/4449/4450/4451/4452/4453.
 All these incoming statuses are scoped to their stated theorems. The universal
 **ternary-unit local network bound is now closed without a parity assumption**:
@@ -25,10 +25,10 @@ independence heuristic and the corrected asymptotic constant; see the
 
 | Live object / representation | Predicate | Operation and retained coordinate | Cheapest next decisive test |
 |---|---|---|---|
-| Anchor: actual decoder entry and body safe sets | One literal safe completion | Bounded crossing relations force scale separation; retain primitive core coordinates and coprime grids | Endpoint gcd at most76,388,115 closes actual entry; connected edges bound six-coordinate gcd by31,950, but reducing support remains owed |
+| Anchor: actual decoder entry and body safe sets | One literal safe completion | Bounded crossing relations force scale separation; retain primitive core coordinates and coprime grids | All decoder component types now have an equality test; walk cancellation J converts collective gcd caps into endpoint tests, while universal small-J existence remains open |
 | Grid sets as degree-two bipartite graphs | No collinear triple | Freeze all rows, retain induced matching polynomials, then expose one column permutation | Saturated-board entropy and adaptive uniform-column restart bounds now follow; purposeful column optimization lies outside their scope |
 | Niche: trinomial return channels | First two return polynomials have no common torus zero | One quadratic pullback preserves the original zero and completes alpha parity | All A2 completed-alpha responses are negative; one coupled beta-skip coefficient remains |
-| Wildcard: residue-decorated jet cluster | Full partition versus largest precision loss | Minimum and next-weight bands retain integral content; divided companions prevent deeper common cancellation | The universal odd Hermite packet gives a p31 intermediate ideal missed by both Deuring and AP; adjacent even ideals could determine the changing factors |
+| Wildcard: residue-decorated jet cluster | Full partition versus largest precision loss | Minimum and next-weight bands retain integral content; divided companions prevent deeper common cancellation | Odd packets plus neighboring even determinants determine two all-depth p31 factors and the exact precision window; general full partitions remain open |
 | Formal exceptional triple | Collision repair and nonzero constant source Jacobian | Leading wedge period under common branch motion | Every collision-preserving O(t9) map retains the obstruction; earlier source jets need the complete contact and density response |
 | Native Boolean disjoint-cycle sectors | Exact adjacency spectrum and integral kernel | Sorted cycle lengths become path tokens; a two-state cap removes a pendant pair | Full rectangles have sine-determinant spectra; the cap preserves cokernel, while general boundaries and ambient spectra remain open |
 
@@ -600,6 +600,42 @@ an implication: the maps and losses must be specified in the linked reports.
     pass using distinct full-matrix algorithms. Metric, Deuring and AP data
     together do not classify the complete observer. A full p31 law remains open.
 
+46. **PROVED decoder equality classification for every component type:**
+    [The general thirteen-speed decoder](overnight14_20260906_lrc_general_decoder.md)
+    covers every actual graph in the physical Q² box. One component forces
+    W=V_dec at rank12. Three or more force non-equality, with W rank11 or12.
+    For two components of sizes a,b, internal pair heights and exactly11ab/2
+    mixed supports decide equality; the maximum231 occurs at6+7. Actual
+    positive equality rows realize all six size types, including singleton
+    1+12. Separate three-component controls have W ranks11 and12, so decoder
+    non-equality alone does not identify a rank12 terminal. Primary/referee
+    gates4,744/11,832 pass. This is an exact pointwise relation-space theorem,
+    with no safe-phase implication attached to its output.
+47. **PROVED exact walk cancellation bridge to endpoint-gcd closure:**
+    [The retained factor](overnight14_20260906_lrc_endpoint_walk.md) is
+    `J=gcd(endpoints)/gcd(all visited vertices)`. For reduced edge ratios,
+    accumulated numerator A, denominator B, C=gcd(A,B), and prefix denominator
+    lcm L, `J=L/(A/C)` and J divides C. An actual maximum-started walk with
+    r distinct core vertices therefore turns an inherited physical gcd cap
+    M_r into primitive endpoint bound M_r J/t. For r5/6/7 and t1 the allowed
+    J values are at most6/2390/848756; t2 gives13/4781/1697513. An actual
+    five-vertex path18,12,3,9,6 has J2<=6 while C12 fails the weaker test.
+    Dropping J is false already on6,2,3. Primary/referee gates31,122/117,721
+    pass, including a genuine11+2 equality control. This restores an exact
+    lost coordinate; it does not prove a qualifying walk always exists.
+48. **PROVED two all-depth p31 Smith factors and their precision window:**
+    [Neighboring even ideals](overnight14_20260906_jets_p31_adjacent_even.md)
+    have E28=588e+2 and E30=675e+1. Their unique least-weight determinants
+    are shifted full Hermite determinants. Rank28 needs its complete five-
+    minor next band; rank30's ordinary weight gap suffices. With the earlier
+    E29, the actual residual factors29,30 are43e-1+kappa and44e-kappa for
+    every e>=1 and every admissible lift. They coincide exactly at e1,kappa1.
+    Their fixed sum87e-1 loses a precision coordinate: the pair's kernel
+    exponent gains one for kappa1 precisely when43e<=b<=44e-1. This is a
+    two-factor contribution; arbitrary full-kernel comparisons still need
+    the other factors. Primary/referee gates126,363/132,821 pass, including
+    120 fresh residual-layer matrices and complete low-weight index bands.
+
 These are repository-scoped advances and recovered mechanisms, not claims
 of external literature priority. In particular, conditioning grid occupancy
 by row and column saturation already appears in the cited construction work.
@@ -738,6 +774,26 @@ artifacts, including all363 mixed-support certificates. Both complete proofs
 and audits were read by root; both portable independent verifiers pass in
 normal and optimized Python. The next bridge tests concern support loss in
 gcd descent, the other decoder component sizes, and adjacent even Smith ideals.
+
+The [fourteenth manifest](overnight14_20260906_manifest.json) freezes18 more
+artifacts. Root and separate referees read the complete proofs, and all three
+independent programs replay identically in normal/optimized Python. The next
+actual LRC closure candidate combines the new two-component classification,
+an arbitrary unit-containing larger core, and the smaller core's spanning-tree
+height bound. It remains a candidate until its separate audit completes.
+
+Incoming `8517ff4b1` records an explicit quantitative root-stability bound,
+the AP8 optimal limiting margin, and a combined Laurent-model double
+cancellation. The [morning board](empty_core_overnight_sep06_board.md) routes
+their independently audited proofs; the abstract cancellation is not an
+actual Laurent counterexample. Its [centered-division audit](lrc14_coprime_max_entry_empty_core_morning_sep06.md)
+independently accepts our stronger signed-box theorem and correctly labels
+its own closure specialization as subsumed. Its three reproduction-command
+repairs exposed the same replacement-string error in other filed commands.
+Root repaired those paths and restored the optimized-run flags. Affected
+manifests retain old/new prose hashes and reasons; no mathematical source,
+certificate, output or conclusion changed. Portable script replays were
+already correct. The additional check now validates displayed script paths.
 
 ## Procedural direction generator
 

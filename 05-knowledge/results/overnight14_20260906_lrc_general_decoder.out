@@ -1,0 +1,16 @@
+STATUS: PASS; general thirteen-row decoder equality classification
+TWO-COMPONENT COUNTS: [66, 121, 165, 198, 220, 231] ; maximum 231; six controls total 1001
+{"W_rank": 12, "W_rank_interval": null, "component_sizes": [13], "decoder_rank": 12, "equality": true, "mixed_count": null, "name": "connected", "reason": "connected_rank_twelve"}
+{"W_rank": 11, "W_rank_interval": null, "component_sizes": [1, 12], "decoder_rank": 11, "equality": true, "mixed_count": 66, "name": "two_components_1_12", "reason": "complete_mixed_supports"}
+{"W_rank": 11, "W_rank_interval": null, "component_sizes": [2, 11], "decoder_rank": 11, "equality": true, "mixed_count": 121, "name": "two_components_2_11", "reason": "complete_mixed_supports"}
+{"W_rank": 11, "W_rank_interval": null, "component_sizes": [3, 10], "decoder_rank": 11, "equality": true, "mixed_count": 165, "name": "two_components_3_10", "reason": "complete_mixed_supports"}
+{"W_rank": 11, "W_rank_interval": null, "component_sizes": [4, 9], "decoder_rank": 11, "equality": true, "mixed_count": 198, "name": "two_components_4_9", "reason": "complete_mixed_supports"}
+{"W_rank": 11, "W_rank_interval": null, "component_sizes": [5, 8], "decoder_rank": 11, "equality": true, "mixed_count": 220, "name": "two_components_5_8", "reason": "complete_mixed_supports"}
+{"W_rank": 11, "W_rank_interval": null, "component_sizes": [6, 7], "decoder_rank": 11, "equality": true, "mixed_count": 231, "name": "two_components_6_7", "reason": "complete_mixed_supports"}
+{"W_rank": 12, "W_rank_interval": null, "component_sizes": [2, 11], "decoder_rank": 11, "equality": false, "mixed_count": 121, "name": "opposite_orientation_hostile", "reason": "complete_mixed_supports"}
+{"W_rank": 12, "W_rank_interval": null, "component_sizes": [2, 11], "decoder_rank": 11, "equality": false, "mixed_count": null, "name": "height_gate_hostile", "reason": "internal_height_failure"}
+{"W_rank": null, "W_rank_interval": [11, 12], "component_sizes": [1, 2, 10], "decoder_rank": 10, "equality": false, "independently_proved_W_rank": 11, "mixed_count": null, "name": "three_components_W_rank_eleven", "reason": "at_least_three_components"}
+{"W_rank": null, "W_rank_interval": [11, 12], "component_sizes": [1, 1, 11], "decoder_rank": 10, "equality": false, "independently_proved_W_rank": 12, "mixed_count": null, "name": "three_components_W_rank_twelve", "reason": "at_least_three_components"}
+SCOPE: W=V_dec only; no safety conclusion; >=3 components permit W ranks 11 and 12
+SEMANTIC SHA256: 7575c96fda7af612651b7136b96c4d4409fc3ce06eabd1a6f46afdc0d5562232
+ACTIVE GATES: 4744

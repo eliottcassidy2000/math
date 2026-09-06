@@ -1,0 +1,18 @@
+p31 adjacent even ideals E28=588e+2, E30=675e+1 and residual factors29/30
+signed literal even determinants 44
+C28 57292925200157771047992775131648000 v31 2
+C30 53494979785374631680 v31 1
+rank 28 index-pair universe 1293121600 minimum weight 588 minimal minors1 next minors5
+rank 30 index-pair universe 246016 minimum weight 675 minimal minors1 next minors5
+a 3 e 0 E28,E29,E30 (0, 0, 0) pair (0, 0)
+a 3 e 1 E28,E29,E30 (590, 633, 676) pair (43, 43)
+a 3 e 2 E28,E29,E30 (1178, 1264, 1351) pair (86, 87)
+a 3 e 5 E28,E29,E30 (2942, 3157, 3376) pair (215, 219)
+a 4 e 0 E28,E29,E30 (0, 0, 0) pair (0, 0)
+a 4 e 1 E28,E29,E30 (590, 632, 676) pair (42, 44)
+a 4 e 2 E28,E29,E30 (1178, 1263, 1351) pair (85, 88)
+a 4 e 5 E28,E29,E30 (2942, 3156, 3376) pair (214, 220)
+a 879 e 3 E28,E29,E30 (1766, 1895, 2026) pair (129, 131)
+a -20 e 4 E28,E29,E30 (2354, 2526, 2701) pair (172, 175)
+full original matrices 10 pair kernel windows through e20
+PASS 126363 always-active gates

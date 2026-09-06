@@ -9,6 +9,32 @@ Format per entry:
 - Why it was wrong
 - The correct framing
 
+## 2026-09-06 overnight -- reproduction prose has its own validity gate
+
+Incoming4a8b6efbc repaired three displayed commands. The same local filing
+bug concatenated a regex backreference with04, which Python interpreted as
+octal\104 (D); it also swallowed the optional-O capture. Root repaired the
+remaining affected commands, retained old/new prose hashes in their manifests,
+and added displayed-path validation. Use callable replacement functions when
+joining capture groups with digits. Mathematical programs and frozen outputs
+were unaffected; successful explicit-path replays did not validate the prose.
+
+## 2026-09-06 overnight -- component count, cancellation, and capped factors
+
+- [General decoder equality](../05-knowledge/results/overnight14_20260906_lrc_general_decoder.md):
+  three actual graph components force non-equality but not rank12. Explicit
+  in-box13-speed rows have full bounded ranks11 and12 with decoder rank10.
+  Keep the actual relation span rather than replacing it by graph connectivity.
+- [Endpoint gcd](../05-knowledge/results/overnight14_20260906_lrc_endpoint_walk.md):
+  the actual path6,2,3 has collective gcd1 and endpoint gcd3. The exact factor
+  J restores this loss; repeated excursions may increase C without changing J.
+  Subset caps count distinct vertices, and the physical endpoint gcd still
+  needs division by the core scale. A qualifying walk is not guaranteed.
+- [Two p31 factors](../05-knowledge/results/overnight14_20260906_jets_p31_adjacent_even.md)
+  have unchanged sum but different capped sums on e integer precisions.
+  This identifies the pair contribution; unclassified factors prohibit
+  promoting it to a general full-kernel ratio.
+
 ## 2026-09-06 overnight -- complete orientations and simultaneous packets
 
 - [The complete entry decoder](../05-knowledge/results/overnight13_20260906_lrc_entry_decoder.md)

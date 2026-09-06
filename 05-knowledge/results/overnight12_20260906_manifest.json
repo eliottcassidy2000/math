@@ -43,8 +43,8 @@
     },
     {
       "path": "05-knowledge/results/overnight12_20260906_lrc_decoder_descent.md",
-      "bytes": 11044,
-      "sha256": "169cd3fa6bf7be7762aa248379c6387eb67123b1533d1063dc0ab27250bd2b7b"
+      "bytes": 11051,
+      "sha256": "2d41fd5425064e87f63d56b30e9863363a4d81363939cada22ac16aba2d633fd"
     },
     {
       "path": "05-knowledge/results/overnight12_20260906_lrc_decoder_descent.out",
@@ -63,8 +63,8 @@
     },
     {
       "path": "05-knowledge/results/overnight12_20260906_lrc_gcd_semigroup.md",
-      "bytes": 19708,
-      "sha256": "ff70aa5c628e4b2ba040a6047da9c73d6a836c99088f60b8376bb34c9fadc320"
+      "bytes": 19715,
+      "sha256": "03ee4a6952ca6d38bba31f1e68ef9da8afce0258529f4f8effc501bf12e785db"
     },
     {
       "path": "05-knowledge/results/overnight12_20260906_lrc_gcd_semigroup.out",
@@ -73,8 +73,8 @@
     },
     {
       "path": "05-knowledge/results/overnight12_20260906_lrc_gcd_semigroup_audit.md",
-      "bytes": 8076,
-      "sha256": "a4a01a415cbaeb2c9ec528fc79512d5b6a1368796731247826a818c734ab1880"
+      "bytes": 8081,
+      "sha256": "791e1352d40a9900ae3f4d5d098063211c9cfeb5368b7192d7692942aad6a72a"
     },
     {
       "path": "05-knowledge/results/overnight12_20260906_lrc_gcd_semigroup_audit.out",
@@ -100,6 +100,32 @@
       "path": "05-knowledge/results/overnight12_20260906_no3line_count_restart_audit.out",
       "bytes": 1052,
       "sha256": "900f1691974ab628dd2c48e76e46719d069e39ab9e056660efc64605ef9ce6fa"
+    }
+  ],
+  "prose_revisions": [
+    {
+      "date_utc": "2026-09-06T14:11:22.867087+00:00",
+      "source_checkpoint": "fourteenth",
+      "changes": [
+        {
+          "path": "05-knowledge/results/overnight12_20260906_lrc_decoder_descent.md",
+          "previous_sha256": "169cd3fa6bf7be7762aa248379c6387eb67123b1533d1063dc0ab27250bd2b7b",
+          "sha256": "2d41fd5425064e87f63d56b30e9863363a4d81363939cada22ac16aba2d633fd",
+          "reason": "Repair reproduction command paths and restore the optimized-run flag; includes three incoming prose repairs from4a8b6efbc. Mathematical source/output bytes and conclusions unchanged."
+        },
+        {
+          "path": "05-knowledge/results/overnight12_20260906_lrc_gcd_semigroup.md",
+          "previous_sha256": "ff70aa5c628e4b2ba040a6047da9c73d6a836c99088f60b8376bb34c9fadc320",
+          "sha256": "03ee4a6952ca6d38bba31f1e68ef9da8afce0258529f4f8effc501bf12e785db",
+          "reason": "Repair reproduction command paths and restore the optimized-run flag; includes three incoming prose repairs from4a8b6efbc. Mathematical source/output bytes and conclusions unchanged."
+        },
+        {
+          "path": "05-knowledge/results/overnight12_20260906_lrc_gcd_semigroup_audit.md",
+          "previous_sha256": "a4a01a415cbaeb2c9ec528fc79512d5b6a1368796731247826a818c734ab1880",
+          "sha256": "791e1352d40a9900ae3f4d5d098063211c9cfeb5368b7192d7692942aad6a72a",
+          "reason": "Repair reproduction command paths and restore the optimized-run flag; includes three incoming prose repairs from4a8b6efbc. Mathematical source/output bytes and conclusions unchanged."
+        }
+      ]
     }
   ]
 }

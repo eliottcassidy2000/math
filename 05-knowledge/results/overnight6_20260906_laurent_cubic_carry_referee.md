@@ -125,8 +125,8 @@ characteristic vector, and real-spectrum condition are all indispensable
 parts of the preserved negative-root-response predicate.
 
 ```text
-python -B overnight6_20260906_laurent_cubic_carry_referee.py
-python -B -O overnight6_20260906_laurent_cubic_carry_referee.py
+python -B 04-computation/overnight6_20260906_laurent_cubic_carry_referee.py
+python -B -O 04-computation/overnight6_20260906_laurent_cubic_carry_referee.py
 published coefficient record SHA-256
 88d4c05a95fa48066151b72063c5f9fffb0cbecb18f79ca91c975da63f935315
 referee source SHA-256

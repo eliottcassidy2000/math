@@ -43,8 +43,8 @@
     },
     {
       "path": "05-knowledge/results/overnight11_20260906_lrc_unit_component.md",
-      "bytes": 13247,
-      "sha256": "79c65df3c10391e360c7194bda17135aafc3600075d2c789c2f9e59238374ed9"
+      "bytes": 13254,
+      "sha256": "7f82d1dd2c40380466175855aea75a7b229315e6a383b563096dc38d9d7f2e1d"
     },
     {
       "path": "05-knowledge/results/overnight11_20260906_lrc_unit_component.out",
@@ -53,8 +53,8 @@
     },
     {
       "path": "05-knowledge/results/overnight11_20260906_lrc_unit_component_audit.md",
-      "bytes": 8501,
-      "sha256": "093841768cbaa359155d64f3eacb89b58b8229246700e056b107ef5b34d3a832"
+      "bytes": 8506,
+      "sha256": "ebc29b1d144f4d34a3fc4ea847d5b05575f17ed374a91b7dfb13d393be5ab30a"
     },
     {
       "path": "05-knowledge/results/overnight11_20260906_lrc_unit_component_audit.out",
@@ -93,13 +93,39 @@
     },
     {
       "path": "05-knowledge/results/overnight11_20260906_smith_prime_banks_audit.md",
-      "bytes": 11686,
-      "sha256": "c9faf066130bf5fa85d381ef7cfc9077b95ff8231a2f28daf1644275ccbef0d4"
+      "bytes": 11691,
+      "sha256": "b8c8e9247b981940fb1d9df78ee98885b926d59a528c57c1b51a5113bb03a8ab"
     },
     {
       "path": "05-knowledge/results/overnight11_20260906_smith_prime_banks_audit.out",
       "bytes": 800,
       "sha256": "5773f57284b42b8c5eabd982fec10210f24ccdc9bb80af14b6772fd02eee3f3b"
+    }
+  ],
+  "prose_revisions": [
+    {
+      "date_utc": "2026-09-06T14:11:22.859798+00:00",
+      "source_checkpoint": "fourteenth",
+      "changes": [
+        {
+          "path": "05-knowledge/results/overnight11_20260906_lrc_unit_component.md",
+          "previous_sha256": "79c65df3c10391e360c7194bda17135aafc3600075d2c789c2f9e59238374ed9",
+          "sha256": "7f82d1dd2c40380466175855aea75a7b229315e6a383b563096dc38d9d7f2e1d",
+          "reason": "Repair reproduction command paths and restore the optimized-run flag; includes three incoming prose repairs from4a8b6efbc. Mathematical source/output bytes and conclusions unchanged."
+        },
+        {
+          "path": "05-knowledge/results/overnight11_20260906_lrc_unit_component_audit.md",
+          "previous_sha256": "093841768cbaa359155d64f3eacb89b58b8229246700e056b107ef5b34d3a832",
+          "sha256": "ebc29b1d144f4d34a3fc4ea847d5b05575f17ed374a91b7dfb13d393be5ab30a",
+          "reason": "Repair reproduction command paths and restore the optimized-run flag; includes three incoming prose repairs from4a8b6efbc. Mathematical source/output bytes and conclusions unchanged."
+        },
+        {
+          "path": "05-knowledge/results/overnight11_20260906_smith_prime_banks_audit.md",
+          "previous_sha256": "c9faf066130bf5fa85d381ef7cfc9077b95ff8231a2f28daf1644275ccbef0d4",
+          "sha256": "b8c8e9247b981940fb1d9df78ee98885b926d59a528c57c1b51a5113bb03a8ab",
+          "reason": "Repair reproduction command paths and restore the optimized-run flag; includes three incoming prose repairs from4a8b6efbc. Mathematical source/output bytes and conclusions unchanged."
+        }
+      ]
     }
   ]
 }

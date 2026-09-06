@@ -23,6 +23,12 @@
   A separate bounded-division argument and actual nonunit control audit
   the coprime-maximum specialization; the incoming endpoint-gcd cutoff
   `76,388,115` is strictly stronger and is retained as current truth.
+- [Fourteenth overnight synthesis](overnight_20260906_synthesis.md):
+  **PROVED + INDEPENDENTLY AUDITED.** [All component types](overnight14_20260906_lrc_general_decoder.md)
+  have an exact decoder-equality classification; [walk cancellation](overnight14_20260906_lrc_endpoint_walk.md)
+  restores the endpoint-gcd coordinate. [Adjacent p31 factors](overnight14_20260906_jets_p31_adjacent_even.md)
+  are determined at every depth with an exact pair-kernel precision window.
+  [Manifest](overnight14_20260906_manifest.json):18 frozen artifacts.
 
 - [Thirteenth overnight synthesis](overnight_20260906_synthesis.md):
   **PROVED + INDEPENDENTLY AUDITED.** [Complete121-test decoder](overnight13_20260906_lrc_entry_decoder.md)

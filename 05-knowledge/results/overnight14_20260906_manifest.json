@@ -1,0 +1,126 @@
+{
+  "schema": 1,
+  "created_utc": "2026-09-06T14:06:53.188124+00:00",
+  "baseline_commit": "d49e6cd40",
+  "incoming_review_commit": "8517ff4b1",
+  "hash_basis": "raw LF bytes; self and maintained synthesis/reference/navigation files excluded",
+  "scope": "Full graph-component decoder equality classification in the thirteen-speed box; exact walk cancellation recovers endpoint gcds; two all-depth p31 Smith factors and their pair-kernel precision window. All independently audited. Global LRC14 and general full Smith partitions remain open.",
+  "artifacts": [
+    {
+      "path": "04-computation/overnight14_20260906_jets_p31_adjacent_even.py",
+      "bytes": 8425,
+      "sha256": "e0eb5d1b403187706ccb9902747a58060e157885d5e8cfbefea12d757eb67bfb"
+    },
+    {
+      "path": "04-computation/overnight14_20260906_jets_p31_adjacent_even_audit.py",
+      "bytes": 5283,
+      "sha256": "be52512e2c006e3994e390a8b60611a13518493d5be099b3275c6a7954b8ba68"
+    },
+    {
+      "path": "04-computation/overnight14_20260906_lrc_endpoint_walk.py",
+      "bytes": 3129,
+      "sha256": "e38ce143de236a35d089f0e7d4110fae5200ea819868e7b925a705f50428664a"
+    },
+    {
+      "path": "04-computation/overnight14_20260906_lrc_endpoint_walk_audit.py",
+      "bytes": 6732,
+      "sha256": "7210275c77bd15af84fe6a6a5369ae0c4be3377563cff3bfaf2f69a71e622067"
+    },
+    {
+      "path": "04-computation/overnight14_20260906_lrc_general_decoder.py",
+      "bytes": 11196,
+      "sha256": "2bf80cad3bef06ef5c2b4ccb5e524190bfd09079591ac3aa2a1c278fd627126e"
+    },
+    {
+      "path": "04-computation/overnight14_20260906_lrc_general_decoder_audit.py",
+      "bytes": 7555,
+      "sha256": "3c5094b2a87a2ac663d2c890f25aca63a9a863ba8066103e59a37269a1d0fb07"
+    },
+    {
+      "path": "05-knowledge/results/overnight14_20260906_jets_p31_adjacent_even.md",
+      "bytes": 11303,
+      "sha256": "55aee8a26b74384695c6525f37d141e604f076acaeab7d955a07c60ccf75cc9c"
+    },
+    {
+      "path": "05-knowledge/results/overnight14_20260906_jets_p31_adjacent_even.out",
+      "bytes": 961,
+      "sha256": "9c7cd02d21bfea5ffdb80dac65cf572fd9904909b18e35a2d7a1d6ce575e1288"
+    },
+    {
+      "path": "05-knowledge/results/overnight14_20260906_jets_p31_adjacent_even_audit.md",
+      "bytes": 5975,
+      "sha256": "a3054ca9f7955e25c08a8acc382a0f762067b78a1ae8697ffcc40233bc9b4459"
+    },
+    {
+      "path": "05-knowledge/results/overnight14_20260906_jets_p31_adjacent_even_audit.out",
+      "bytes": 440,
+      "sha256": "f429b7baef492863072fc078690ed692593bd69346a66fe89db1fe7feb77fc5d"
+    },
+    {
+      "path": "05-knowledge/results/overnight14_20260906_lrc_endpoint_walk.md",
+      "bytes": 7165,
+      "sha256": "6f271e4b2181f1842d766501b9fce9059e5828886de5891a9b9f314897f1a50b"
+    },
+    {
+      "path": "05-knowledge/results/overnight14_20260906_lrc_endpoint_walk.out",
+      "bytes": 593,
+      "sha256": "4178d510f86a4cdb4cca86afcb6405439e5179cddd924e48fffd1654a1729561"
+    },
+    {
+      "path": "05-knowledge/results/overnight14_20260906_lrc_endpoint_walk_audit.md",
+      "bytes": 6356,
+      "sha256": "be1b491ae33a6926943b089b8624d4b6e91abd9fdcb26093649950a0e20af4b5"
+    },
+    {
+      "path": "05-knowledge/results/overnight14_20260906_lrc_endpoint_walk_audit.out",
+      "bytes": 1412,
+      "sha256": "89bcba554f4bdd58bd94f8bd4284aa17407f806e958274f423aa5d6650afeb4b"
+    },
+    {
+      "path": "05-knowledge/results/overnight14_20260906_lrc_general_decoder.md",
+      "bytes": 11638,
+      "sha256": "1720c481204c502158ac735b9e38c08f1347eaba2404bf1dec2ebfea2d303a41"
+    },
+    {
+      "path": "05-knowledge/results/overnight14_20260906_lrc_general_decoder.out",
+      "bytes": 2585,
+      "sha256": "10ed81b1cc784a6a2ff941bcc730bc463540641d4ca0a3a296420c7b5c8498b6"
+    },
+    {
+      "path": "05-knowledge/results/overnight14_20260906_lrc_general_decoder_audit.md",
+      "bytes": 9687,
+      "sha256": "6ae01ee18ccab4835e38cb23441665992b2ef5e0281fd55e843e97d800ef5287"
+    },
+    {
+      "path": "05-knowledge/results/overnight14_20260906_lrc_general_decoder_audit.out",
+      "bytes": 404,
+      "sha256": "d91ea5ad5e7b835dd1e7bea1e640c66cc986cf05d853a307804b171fa0e0f2c1"
+    }
+  ],
+  "prose_revisions": [
+    {
+      "date_utc": "2026-09-06T14:11:22.918533+00:00",
+      "source_checkpoint": "fourteenth",
+      "changes": [
+        {
+          "path": "05-knowledge/results/overnight14_20260906_lrc_endpoint_walk.md",
+          "previous_sha256": "282d883fb84dc0321753547b8a8fda60ec767f923747c36c247d60bdcca78683",
+          "sha256": "6f271e4b2181f1842d766501b9fce9059e5828886de5891a9b9f314897f1a50b",
+          "reason": "Repair reproduction command paths and restore the optimized-run flag; includes three incoming prose repairs from4a8b6efbc. Mathematical source/output bytes and conclusions unchanged."
+        },
+        {
+          "path": "05-knowledge/results/overnight14_20260906_lrc_endpoint_walk_audit.md",
+          "previous_sha256": "442600e4a87c2b81f38284d7d886ece06b0ad43b15296c1146986e69a0939719",
+          "sha256": "be1b491ae33a6926943b089b8624d4b6e91abd9fdcb26093649950a0e20af4b5",
+          "reason": "Repair reproduction command paths and restore the optimized-run flag; includes three incoming prose repairs from4a8b6efbc. Mathematical source/output bytes and conclusions unchanged."
+        },
+        {
+          "path": "05-knowledge/results/overnight14_20260906_lrc_general_decoder.md",
+          "previous_sha256": "3ca10ddf7a00449bf27a97caeee4dc95d6135d8d98e0d71015e7705ce4ec612e",
+          "sha256": "1720c481204c502158ac735b9e38c08f1347eaba2404bf1dec2ebfea2d303a41",
+          "reason": "Repair reproduction command paths and restore the optimized-run flag; includes three incoming prose repairs from4a8b6efbc. Mathematical source/output bytes and conclusions unchanged."
+        }
+      ]
+    }
+  ]
+}

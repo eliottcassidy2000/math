@@ -115,8 +115,8 @@ strict failure, not to every safe decoder entry.
 and [frozen output](overnight12_20260906_lrc_gcd_semigroup_audit.out):
 
 ```
-python -B D-computation/overnight12_20260906_lrc_gcd_semigroup_audit.py
-python -B D-computation/overnight12_20260906_lrc_gcd_semigroup_audit.py
+python -B 04-computation/overnight12_20260906_lrc_gcd_semigroup_audit.py
+python -B -O 04-computation/overnight12_20260906_lrc_gcd_semigroup_audit.py
 ```
 
 Both runs pass **149,274 always-active gates**, with byte-identical LF outputs.

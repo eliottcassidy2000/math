@@ -83,8 +83,8 @@
     },
     {
       "path": "05-knowledge/results/overnight6_20260906_laurent_cubic_carry_referee.md",
-      "bytes": 7173,
-      "sha256": "f0d88ff38fd6fec21eb2df9e88cb21a2f9ea56ba6a92b687f988a9777279489b"
+      "bytes": 7203,
+      "sha256": "baec7f2c56dda7b84436d47815971ebd8cc3e6762dfa5a8b2cb4660d3c4c3a6f"
     },
     {
       "path": "05-knowledge/results/overnight6_20260906_laurent_cubic_carry_referee.out",
@@ -110,6 +110,20 @@
       "path": "05-knowledge/results/overnight6_20260906_no3line_palettes_audit.out",
       "bytes": 1129,
       "sha256": "885415823263c2fbfdd041931e332ef3e0ac5973a496f25801bac3124d2179fd"
+    }
+  ],
+  "prose_revisions": [
+    {
+      "date_utc": "2026-09-06T14:11:22.938510+00:00",
+      "source_checkpoint": "fourteenth",
+      "changes": [
+        {
+          "path": "05-knowledge/results/overnight6_20260906_laurent_cubic_carry_referee.md",
+          "previous_sha256": "f0d88ff38fd6fec21eb2df9e88cb21a2f9ea56ba6a92b687f988a9777279489b",
+          "sha256": "baec7f2c56dda7b84436d47815971ebd8cc3e6762dfa5a8b2cb4660d3c4c3a6f",
+          "reason": "Repair reproduction command paths and restore the optimized-run flag; includes three incoming prose repairs from4a8b6efbc. Mathematical source/output bytes and conclusions unchanged."
+        }
+      ]
     }
   ]
 }

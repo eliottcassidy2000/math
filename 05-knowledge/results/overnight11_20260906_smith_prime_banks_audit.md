@@ -199,8 +199,8 @@ which additional weight bands are then required.
 
 ## 6. Frozen reproduction
 
-    python -B D-computation/overnight11_20260906_smith_prime_banks_audit.py
-    python -B D-computation/overnight11_20260906_smith_prime_banks_audit.py
+    python -B 04-computation/overnight11_20260906_smith_prime_banks_audit.py
+    python -B -O 04-computation/overnight11_20260906_smith_prime_banks_audit.py
 
 Both runs pass **260,363 always-active gates**, with byte-identical LF output.
 No repository or producer writes occur. The independent source SHA256 is

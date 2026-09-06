@@ -1,0 +1,7 @@
+Independent general LRC decoder audit: actual atlas/ranks and bounded coefficients
+complete toy coefficient cases 5520 q1..7,D1..4,Y1..30
+actual equality types [66, 121, 165, 198, 220, 231] total1001, maximum231
+three components10,1,2: Vdec rank10; W rank11
+three components11,1,1: Vdec rank10; W rank12
+both two-component rejection paths and physical-box hostile retained
+PASS 11832 always-active gates

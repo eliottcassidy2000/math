@@ -137,8 +137,8 @@ JSON   af177ea9703390a8169d9466d04a5e4d8bb53f66833cfbfd223c94a0006cb847
 and [output](overnight13_20260906_lrc_entry_decoder_audit.out):
 
 ```
-python -B D-computation/overnight13_20260906_lrc_entry_decoder_audit.py
-python -B D-computation/overnight13_20260906_lrc_entry_decoder_audit.py
+python -B 04-computation/overnight13_20260906_lrc_entry_decoder_audit.py
+python -B -O 04-computation/overnight13_20260906_lrc_entry_decoder_audit.py
 ```
 
 Both runs pass **31,754 always-active gates** with byte-identical LF output.
