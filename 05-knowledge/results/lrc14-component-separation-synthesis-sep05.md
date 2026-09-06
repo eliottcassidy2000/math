@@ -3,7 +3,8 @@
 **Status: PROVED ANALYTICALLY + FINITE-EXACT arithmetic obligations +
 INDEPENDENTLY AUDITED.** The independent `nc2_seed` referee and root reviewed
 the all-height proof, its quantifiers, clipping, residue universes, and strict
-tail boundary. No scarce theorem identifier is used in this research note.
+tail boundary. Canonical entry:
+[THM-4418](../../01-canon/theorems/THM-4418-lrc14-sharp-pair-arithmetic-and-forty-four-thirteenths-tail.md).
 
 For positive distinct odd integers `a<b<c`, each nonzero modulo three, the
 degree-zero certificate of
@@ -52,8 +53,11 @@ The final freshness pass found concurrent commit `566677ae1d` and its
 already proves the separated-star identity, its sharp general gap boundary,
 and an exact raw-roof expression for each network capacity. These overlap
 with the first part of this work and are credited as concurrent independent
-work. Its reserved namespace `THM-4414` is an empty stub and is not used as a
-proved dependency. The report explicitly leaves its universal inequality
+work. A later integration promoted
+[THM-4414](../../01-canon/theorems/THM-4414-lrc14-six-separated-contact-capacity-collapse.md)
+with the same identity and a raw-projection audit through height 149. The
+self-contained proof below does not rely on its earlier reservation.
+The report explicitly leaves its universal inequality
 `min_ij sum_C K_ij(C)<=6/77` open; the pair bounds and `44/13` region below
 are not present there. Searches for the exact sharp pair statements and
 `44/13` found no earlier match. This is a repository comparison, not a

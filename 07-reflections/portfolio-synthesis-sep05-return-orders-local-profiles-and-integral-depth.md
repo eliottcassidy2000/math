@@ -130,7 +130,8 @@ subjects, not a theorem identifying their objects or conjectures.
 4. **Integral wildcard.** The dyadic triple solves the first repeated-residue
    corner. By residue-cluster CRT it also gives consecutive-node dyadic
    partitions at n=5 and n=6: respectively (0,0,0,0,2,2,2,2,5,7) and
-   (0,0,0,0,2,2,2,2,5,5,7,7), independently checked with integer Smith forms.
+   (0,0,0,0,2,2,2,2,5,5,7,7). These follow directly by taking the sorted
+   union of the two residue-cluster partitions.
    General overfull p-clusters require their actual deeper collision tree.
 5. **Formal continuation.** Compare the incoming triple-locus compensator
    with the permitted source-normal coefficient space. Finite-precision
@@ -153,6 +154,9 @@ Source and output pairs are preserved in each theorem's evidence manifest.
 The original shared checkout's five untracked outputs were left untouched.
 The isolated worktree began at 3eb2b8a66e56, read incoming work through
 05d61bbedf, and pushed evidence/reservations at 09c725138c before promotion.
+Final integration includes THM-4414's independent canonical capacity proof
+and its height-149 raw-projection audit; the 44/13 tail remains an additional
+all-height result.
 
 Used existing method cards: search the statement before the method; correct
 the object before sharpening the technique; expose the obstruction before

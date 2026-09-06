@@ -25,7 +25,9 @@ hash_basis: raw LF bytes
 The [full proof and verification](../../05-knowledge/results/lrc14-component-separation-synthesis-sep05.md)
 also credits concurrent independent recovery of the separated-contact
 identity in [the incoming synthesis](../../05-knowledge/results/synthesis_20260905_lrc_sparse_transport.md).
-The reserved THM-4414 namespace is not used as a proved dependency.
+That independent identity is now also canonical in
+[THM-4414](THM-4414-lrc14-six-separated-contact-capacity-collapse.md).
+The proof linked here retains its own elementary derivation.
 
 Use D_(v,s)={x in R/Z: ||v(x+s/3)||<1/14}. For distinct positive odd
 a<b, neither divisible by three, let T_ab and N_ab be the total mass and

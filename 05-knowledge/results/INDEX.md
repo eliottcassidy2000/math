@@ -38,7 +38,8 @@
   danger sheets satisfy it at every height. The resulting capacity is the
   explicit raw projection sum `E_i`; all slack from physical mass is an exact
   crossing hinge, not Hall competition. The residual inequality
-  `min_i E_i<=6/77` remains open and is finite-exact through height 149.
+  `min_i E_i<=6/77` is finite-exact through height 149; THM-4418 closes
+  `c/b>=44/13`, leaving the comparable-speed region open at arbitrary height.
   Primary/referee hashes: `591c2a2f...cedd` / `cc70d23d...b65e` and
   `f29e52f2...dc64` / `0f5b3fb4...847a` (raw LF bytes).
 - [2026-09-05 cross-frontier synthesis](synthesis_20260905_overview.md):
@@ -50,6 +51,7 @@
   Matching scripts, transcripts and cross-lane audits use
   `synthesis_20260905_*`. LRC(14), uniform trinomial two-rung coprimality,
   higher/multiscale Smith layers, graph entry, JC(2), and DC(2) remain OPEN.
+
 - [September 5 cross-thread synthesis](../../07-reflections/portfolio-synthesis-sep05-return-orders-local-profiles-and-integral-depth.md):
   [THM-4416](../../01-canon/theorems/THM-4416-even-graph-cumulative-d5-d6-spectral-gap.md)
   proves all-order D5/D6 gaps;
