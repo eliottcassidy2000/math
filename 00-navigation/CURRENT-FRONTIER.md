@@ -155,7 +155,7 @@ and Lucas--Frobenius leaves `Q^p`: **whole-layer preservation**, not atoms.
 
 ### Live work
 
-Publish THM-2022; formalize THM-2639. [Endpoints39-63 and phase bounds](../05-knowledge/results/continuing3_20260906_synthesis.md): four further families; smallest model phase closed, tail75000.
+Publish THM-2022; formalize THM-2639. [Endpoints39-63 and phase bounds](../05-knowledge/results/continuing3_20260906_synthesis.md): four further families; smallest model phase closed, tail2500.
 [THM-4455](../01-canon/theorems/THM-4455-three-atom-minimizing-sequence-rigidity.md): all sharp-K3 minimizers approach three equal positive atoms, PROVED; K3 from THM-4454.
 [THM-4417](../01-canon/theorems/THM-4417-width-two-laurent-first-return-parabolic-critical-bound.md)
 proves first return `<=M+N` for `min(M,N)=2`; width one is THM-2111.

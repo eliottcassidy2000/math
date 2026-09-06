@@ -1,0 +1,11 @@
+MOMENTS full C/B and D/B division through order5, ordinary and shifted determinant identities exact
+FLOOR e4> 161875/888583 >9/50; uses both interlacers, actual nonnegative beta roots, and both anchors
+DELTA y>(8750/8241)(e3-75); repeated C-only boundary rejected by D Gram=-37/16
+HOSTILE lower Hankel determinants PASS; order4 upper-support violations C=2159/105 D=1091/42
+CONTROL independent-cap original-root envelope: s>=4100 implies Q(-s)/(s^7 e4^2)<-59000
+TAIL_ENVELOPE_AT_4100 -5961609014706655321683472522194343/99603957308055354000000000000
+COUPLED_RATIOS x/y<10962223/26250; x/y^2<10962223/4725
+TAIL same original-root full response: s>=2500 implies Q(-s)/(s^7 e4^2)<-49000
+COUPLED_TAIL_ENVELOPE_AT_2500 -653528391359305169367452997041401/13323669433593750000000000000
+SCOPE candidate until independent audit; remaining finite phases and general Laurent noncancellation OPEN
+PASS 94 always-active exact gates; no numerical search or producer imports

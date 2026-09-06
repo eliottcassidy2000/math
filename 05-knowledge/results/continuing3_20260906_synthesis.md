@@ -61,12 +61,19 @@ No external priority or proof-assistant claim is made.
    sum59, the smallest positive original phase is unique and simple in
    (1/110,1/90). The complete carried response obeys sQ(-s)<-400 throughout
    [1/120,1/80], even on the containing coefficient box and without the
-   two interlacers. With both prescribed weak interlacers, the inherited
-   [e4>1/100 floor](continuing2_20260906_effective_anchor.md) gives
-   `Q(-s)/(s^7 e4^2)<-120000` at every original phase s>=75000. This improves
-   the former sufficient threshold118163898523. Any unresolved original
-   phase now lies in **(1/80,75000)**, at most three per shape counted with
-   multiplicity. This remains a continuous open problem. The later incoming
+   two interlacers. The subsequent
+   [two-residue floor](continuing3_20260906_residue_floor.md), with its
+   [independent audit](continuing3_20260906_residue_floor_audit.md), proves
+   **e4>161875/888583>9/50** when both prescribed weak interlacers hold.
+   It combines a shifted C moment determinant, an ordinary D determinant,
+   and the actual bounded-support inequality5e5<=M e4 with M<71/10.
+   Retaining this floor and its slope linking e3 to e4 in the complete
+   original-root envelope
+   gives `Q(-s)/(s^7 e4^2)<-49000` at every original phase s>=**2500**.
+   This improves the successive sufficient thresholds118163898523,75000 and4100;
+   both earlier theorems remain valid. Any unresolved original phase now
+   lies in **(1/80,2500)**, at most three per shape counted with multiplicity.
+   This remains a continuous open problem. The later incoming
    [C-only residue proof](long_frontier_sep06_anchor.md) independently
    settles the same smallest branch under one interlacer. Our containing-box
    proof removes that hypothesis and strengthens the response margin. Its
@@ -123,8 +130,19 @@ Incoming01c8b6887 supplies two concrete connections. The positive C/B residue
 measure has moments(1,1,3,e3/3-16,16e3/3-373-4e4/7). Its moment matrix gives
 `75<=e3<=135` and `e4<=(7/72)(e3-75)(135-e3)<=175/2`. This necessary
 semialgebraic envelope is stronger than a box in that direction, but it is
-not asserted equivalent to the root/interlacer predicate. Higher residue
-moments are a precise next representation to test on the remaining phases.
+not asserted equivalent to the root/interlacer predicate. Pursuing that
+sidecar produced the stronger floor above: with delta=e3-75, C's shifted
+third determinant and5e5<=M e4 force e4>(8750/8241)delta; D's ordinary
+third determinant then gives the displayed rational floor. No previous
+e4 floor is a dependency of this new argument.
+
+The rational positive-response hostile passes both ordinary third and
+shifted second moment-matrix tests for C and D. It nevertheless violates
+mu4<=(71/10)mu3 by2159/105 for C and1091/42 for D. Thus restoring the
+anchor-derived support endpoint already rejects it at moment order four;
+C's shifted third determinant rejects it as well. Low moment positivity
+alone had lost precisely that support coordinate. Higher bounded-support
+residue constraints remain a concrete route into the surviving interval.
 
 The incoming [fifth-clock family](long_frontier_sep06_phase.md), with its
 [independent audit](long_frontier_sep06_phase_audit.md), gives384061 bounded
@@ -143,7 +161,7 @@ force an adaptive word for every actual decoder entry.
 |---|---|---|
 | Anchor: actual LRC equality | Two profile-identical rows with different joins; incoming fifth-clock word succeeds beyond scalar gates | Seek an adaptive component/clock argument retaining signed offsets and farther lifts. Test both packet rows and the unitless residual before generalizing. A generic CRT compiler would repeat an existing theorem. |
 | Niche: all-h carried response | Weight-bounded characteristic polynomials positive after x->x+1 for h<=10 | Find an operation in h preserving their sign, or a direct same-root argument. More endpoint tables alone would not establish that operation. |
-| Niche: anchored finite phase | Smallest branch and tail closed; interval(1/80,75000) remains, with incoming C-residue envelope | Retain beta roots and both interlacers; test higher C/D residue moments. Challenge every necessary-inequality relaxation with the rational positive-response hostile. |
+| Niche: anchored finite phase | Smallest branch and tail closed; interval(1/80,2500) remains after the two-residue floor | Retain beta roots and both interlacers; test higher C/D residue moments. Challenge every necessary-inequality relaxation with the rational positive-response hostile. |
 | Wildcard: sharp three-atom rigidity | Moment residual plus complete entire-product limit | Seek an effective quotient-to-M estimate near the three-atom boundary, retaining separate dust and imbalance scales. Do not reopen the proved scalar optimum or the core iff. |
 | Projective higher jets | Complete multiplicity largest-Smith theorem and bracket residue packet | Preserve full local ideals in another nontrivial residue cluster before transporting ordered factors. This cycle adds no new Smith claim. |
 | No-three-in-line and native operators | The recovered Guy-Kelly grid thread and exact Boolean sectors remain available | Require an explicit map preserving collinearity or the native operator. Analogy with packet counts, moments, or root signs currently supplies no such map, so no asymptotic transfer is claimed. |
@@ -158,11 +176,11 @@ from these analogies.
 
 ## Reproduction and checkpoint discipline
 
-The [manifest](continuing3_20260906_manifest.json) pins all26 proof, program,
+The [manifest](continuing3_20260906_manifest.json) pins all33 proof, program,
 output and JSON artifacts, recording pre-filing report identities where
 status, credit or portable links changed. All source/output/certificate
-bytes remain exactly those audited. The eight producer/referee programs
-perform42319 always-active exact gates per combined normal run, and every
+bytes remain exactly those audited. The ten producer/referee programs
+perform42535 always-active exact gates per combined normal run, and every
 optimized output matches the corresponding normal and frozen output.
 Universal claims rest on the audited analytic arguments or full polynomial
 identities, not extrapolation from their finite controls.

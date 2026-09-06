@@ -9,6 +9,23 @@ Format per entry:
 - Why it was wrong
 - The correct framing
 
+## 2026-09-06 continuation -- residue positivity needs its support endpoint
+
+[The two-residue floor](../05-knowledge/results/continuing3_20260906_residue_floor.md)
+uses the incoming C/B moment representation and recovers the D/B sidecar.
+Our earlier positive-response hostile passes both low ordinary/shifted
+Hankel PSD tests, so those tests alone do not restore the model predicate.
+It violates the actual bounded-support inequality mu4<=M mu3, already at
+order four, by2159/105 for C and1091/42 for D when M is relaxed to71/10.
+The corrected representation retains the anchor-derived support endpoint.
+A shifted third C determinant, ordinary third D determinant and5e5<=M e4
+then prove e4>161875/888583>9/50 and the original-root tail from2500.
+The repeated C-only boundary (0,0,3,5,5) still has e4=0; D's Gram determinant
+is-37/16 there, showing why both interlacers remain attached to the floor.
+At a genuine strict model point Q(-4100)>0 away from P(-4100)=0, so the
+original-zero condition remains essential. The surviving interval is
+(1/80,2500), not a finite census and not a solved whole-phase problem.
+
 ## 2026-09-06 continuation -- lost moments, roots, and located clocks
 
 - [The three-atom proof](../05-knowledge/results/continuing3_20260906_stability_near_minimizers.md)

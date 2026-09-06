@@ -4,10 +4,10 @@
   **PROVED + INDEPENDENTLY AUDITED.** Four further actual endpoint families
   45,51,57,63 extend the concurrent endpoint39 result. Three-atom rigidity
   gains moment-residual and entire-product equivalences. The anchored model's
-  smallest phase is settled and its negative tail starts at75000. A bounded
+  smallest phase is settled; a two-residue floor moves its tail to2500. A bounded
   actual LRC6+7 class retains every profile but changes its first packet join
-  between two scales. The [26-artifact manifest](continuing3_20260906_manifest.json)
-  pins complete certificates and eight exact producers/referees. General
+  between two scales. The [33-artifact manifest](continuing3_20260906_manifest.json)
+  pins complete certificates and ten exact producers/referees. General
   LRC14, all-h transport and the remaining model phase interval stay OPEN.
 
 - [Extended research session](long_frontier_sep06_board.md): **PROVED + INDEPENDENTLY AUDITED.**

@@ -10,7 +10,7 @@
     "01c8b6887"
   ],
   "hash_basis": "raw LF bytes; maintained boards, manifest and navigation excluded",
-  "scope": "Actual endpoint45/51/57/63 extension and concurrent endpoint39 reconstruction; concurrent three-atom rigidity reproof with moment-residual/product equivalences; two-anchor smallest-phase theorem and improved75000 tail; bounded actual LRC packet incompatibility. General LRC14, all-h Laurent transport and the remaining continuous model phase interval remain OPEN.",
+  "scope": "Actual endpoint45/51/57/63 extension and concurrent endpoint39 reconstruction; concurrent three-atom rigidity reproof with moment-residual/product equivalences; two-anchor smallest-phase theorem and improved75000 tail; bounded actual LRC packet incompatibility. General LRC14, all-h Laurent transport and the remaining continuous model phase interval remain OPEN. Subsequent incoming C-residue synthesis gives e4>161875/888583>9/50 and retains the coupled e3/e4 ratio to improve the uniform original-root tail to2500; higher moment positivity and bounded support retain the missing coordinate.",
   "artifacts": [
     {
       "path": "04-computation/continuing3_20260906_laurent_endpoints.py",
@@ -51,6 +51,21 @@
       "path": "04-computation/continuing3_20260906_lrc_packet_obstruction_audit.py",
       "bytes": 9470,
       "sha256": "2e5b3ca4327e97180e9295e0825ee934ec2ba39d8315228ea439057e0b63b534"
+    },
+    {
+      "path": "04-computation/continuing3_20260906_residue_floor.py",
+      "bytes": 12815,
+      "sha256": "8974668b0c36e129910142b03a66f95626b18861a009d037325f73f22f00f205"
+    },
+    {
+      "path": "04-computation/continuing3_20260906_residue_floor_audit.py",
+      "bytes": 10219,
+      "sha256": "f1c005bf70e2b67c24cdeaa3b012ecf5d9c94ad7d682c124a3ee49d01be06a61"
+    },
+    {
+      "path": "04-computation/continuing3_20260906_residue_floor_certificate.json",
+      "bytes": 5588,
+      "sha256": "c2a20f53670198790529fa980b7d33913b9e5a1f64c3b206f9fc34aa42e9104e"
     },
     {
       "path": "04-computation/continuing3_20260906_stability_near_minimizers.py",
@@ -133,6 +148,30 @@
       "path": "05-knowledge/results/continuing3_20260906_lrc_packet_obstruction_audit.out",
       "bytes": 607,
       "sha256": "2f0003f0e3259fb7db17db35942a8a655029ebea7c56a2f49fdee762a5dbaa91"
+    },
+    {
+      "path": "05-knowledge/results/continuing3_20260906_residue_floor.md",
+      "bytes": 13211,
+      "sha256": "686b96e00f36d24566cad9ba766f90707c5b14f459431e964f19823a01007871",
+      "pre_filing_sha256": "5454a60bd0071cd98c55e75b97256e3d0cd0bf29ed6817ba184073e2fc0c1189",
+      "filing_changes": "Audited promotion banner and portable links/commands; frozen mathematical argument unchanged."
+    },
+    {
+      "path": "05-knowledge/results/continuing3_20260906_residue_floor.out",
+      "bytes": 960,
+      "sha256": "fa8b9936221b9f6cbea053fdc91c84f0eafe4faa25f19ffa8af5afe2d63033f0"
+    },
+    {
+      "path": "05-knowledge/results/continuing3_20260906_residue_floor_audit.md",
+      "bytes": 11243,
+      "sha256": "26631a759b4f8a7a5de9783ae08ba7d07be9d4358514b9c2008e745a9f29a9c8",
+      "pre_filing_sha256": "54c5c6856a4c7d91f2552217d6600315d302e0e2eee1f09096526b544af00f2a",
+      "filing_changes": "Audited promotion banner and portable links/commands; frozen mathematical argument unchanged."
+    },
+    {
+      "path": "05-knowledge/results/continuing3_20260906_residue_floor_audit.out",
+      "bytes": 632,
+      "sha256": "95253fedc6f0df0e2e482e7ea739a77a57d59bd0a359cceb8ddf3bf6466c1a29"
     },
     {
       "path": "05-knowledge/results/continuing3_20260906_stability_near_minimizers.md",
