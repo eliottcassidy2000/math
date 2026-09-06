@@ -431,3 +431,5 @@ empty-core root. These are audits of one shared result, not separate novelty.
 Both integrations retain the stronger physical equality and exact consumer.
 No Lean formalization is claimed. The norm-54 wording in the earlier slice
 note was corrected to an upper bound; the complete primitive box is unchanged.
+
+An independent concurrent [universal audit](../../05-knowledge/results/overnight3_20260906_lrc_universal_audit.md) reproduces the coefficient box and literal head. Its [consumer reconstruction](../../05-knowledge/results/overnight3_20260906_lrc_consumers.md) recovers the THM-530 Section A body, retains all components and six isolated safe points, and proves exact adjacent-family oscillations. These are audits and refinements of the shared mechanisms.

@@ -16,6 +16,15 @@
   [THM-4433 cumulative seconds](../../01-canon/theorems/THM-4433-signed-hamilton-second-minimum-and-cross-scale-stability.md) retains the antibalanced competitor and proves sharp worst-scale asymptotic constant6;
   [local Euler interlacing](nc2_channel_contiguous_overnight_hexagon_sep05.md) supplies exact neighbouring-row coprimality but refutes whole-mass interlacing, retaining higher-multiplicity signs as FINITE-EXACT only;
   [ten-body Haar hostile/first-exit compiler](lrc14_ten_body_haar_hostile_overnight_hexagon_sep05.md) refutes a universal `6/77` body floor and recovers an exact constructive corollary of THM-4335. Global entry and synchronization remain OPEN.
+- [Third incidence/carry/Smith checkpoint](overnight_20260906_synthesis.md):
+  **PROVED + INDEPENDENTLY AUDITED** additive mixed-parity bulk `9/98`
+  and sharp adjacent-family maximum `6/55`; recovered THM-530 extremizer
+  refutes the new universal ten-body floor. The ternary four-node nested
+  family needs an intrinsic unit residue, with minimal integer diameter 81.
+  An independent path proof confirms concurrent THM-4436; **FINITE-EXACT**
+  signs of all 1,015 first roots in 221 supports leave unbounded two-row
+  separation open. [Manifest](overnight3_20260906_manifest.json) freezes
+  26 proof/audit/source/output artifacts; global conjectures remain open.
 
 - [Second/third empty-hexagon research waves](../../07-reflections/overnight-hexagon-sep05-research-board.md#third-wave-current-board-and-audit-checkpoint):
   **PROVED + INDEPENDENTLY AUDITED** [THM-4431](../../01-canon/theorems/THM-4431-colored-lattice-basis-and-three-direction-lrc-network-closure.md) colored live bases/three-ray closure;

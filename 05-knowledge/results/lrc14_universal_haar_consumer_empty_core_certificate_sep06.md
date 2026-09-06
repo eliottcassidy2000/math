@@ -153,14 +153,15 @@ identified by analogy.
 The decisive body-side question is now a quantitative safe-set problem:
 can one prove `mu(G_C)>=6/77` for the **actual ten-speed bodies produced by
 an entry route**, or exhibit their first exact body below that floor?
-The stronger universal ten-body floor is now **REFUTED** by
+The stronger universal ten-body floor is **REFUTED** by the
 [recovered exact bodies](lrc14_haar_body_empty_core_sep06.md):
-`C={1,2,3,5,7,8,9,11,12,13}` has `mu(G_C)=14249/252252<6/77`.
-Even the necessary small-clock divisor sieve does not imply that floor.
-The actual entry-produced core or its joint safe-phase geometry remains
-necessary. A small useful first test
-should retain all rational safe components and test the named body, rather
-than launch another triple-network census.
+`C={1,2,3,5,7,8,9,11,12,13}` has `mu(G_C)=14249/252252<6/77`,
+already in [THM-530 / G_P-intersection global witness floor, Section A](../../01-canon/theorems/THM-530-lrc-gp-intersection-global-witness-floor.md).
+Even the necessary small-clock divisor sieve does not imply this floor.
+The [independent consumer reconstruction](overnight3_20260906_lrc_consumers.md)
+retains all its components and six isolated safe points. Actual entry-produced
+body components or joint safe-phase geometry are needed. The corollary with
+its explicit measure hypothesis remains valid.
 
 The canonical synchronization hostile is already in
 [THM-4032 — d=3 affine defect boundary, Section 6](../../01-canon/theorems/THM-4032-lrc14-d3-affine-defect-lattice-boundary.md):

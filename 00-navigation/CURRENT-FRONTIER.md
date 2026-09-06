@@ -41,26 +41,19 @@ gives square sum `<=195`; THM-4019 refutes its sharp arbitrary-lattice target.
   primitive non-AP-plus-six families; arbitrary cores and entry remain open.
 - **Quantifier/type controls (PROVED):** THM-4095--4116 preserve field, gap,
   ray, parity-sheet and component-count data; none supplies safety or arrival.
-- **Seam/entry:** THM-4326/4329 close the fixed chart; 4330 leaves `2+12`;
-  4347 closes height 40. Arbitrary entry and synchronization remain open.
-- **Universal local scale-three closure (PROVED + FINITE-EXACT + AUDITED):**
+- **Scale-three local bound CLOSED; entry OPEN:**
   [THM-4434](../01-canon/theorems/THM-4434-lrc14-universal-scale-three-network-projection-bound.md)
-  proves `min_i E_i<=6/77` for every primitive distinct positive odd
-  ternary-unit triple, with sole equality `(1,5,11)` and every projection
-  strict outside norm four. The THM-4409/4414/4422 local target is closed;
-  THM-4423/4425/4428 retain sharper subclass results;
-  [THM-4431](../01-canon/theorems/THM-4431-colored-lattice-basis-and-three-direction-lrc-network-closure.md)
-  adds colored bases, both three-ray circuit types and sharp full-cap size6.
-  The consumer still needs the actual ten-core's `mu(G_C)>=6/77` or joint
-  safe phase. Universal body floors and mixed-parity `6/77` are false;
-  [The exact body hostile and first-exit compiler](../05-knowledge/results/lrc14_ten_body_haar_hostile_overnight_hexagon_sep05.md)
-  retain actual safe components; entry remains open.
+  proves `min_i E_i<=6/77` for primitive odd ternary-unit triples, with
+  equality only `(1,5,11)`; every projection is strict off norm four.
+  THM-4418/4420/4422/4423/4425/4428/4431 retain sharper pair, ray, count,
+  colored-basis and width structure. The [consumer audit](../05-knowledge/results/overnight3_20260906_lrc_consumers.md)
+  recovers THM-530's body-floor hostile and the additive parity obstruction.
+  The [first-exit compiler](../05-knowledge/results/lrc14_ten_body_haar_hostile_overnight_hexagon_sep05.md)
+  retains actual safe components; arbitrary entry/synchronization remain open.
 - **Transport/incidence:** [overnight synthesis](../05-knowledge/results/overnight_20260906_synthesis.md)
-  combines cap bound `204/5957`, midpoint payments and owner-line closure. A
-  two-dimensional owner polygon can still matter for sharper counts and
-  weighted capacities; THM-4434 closes its local `6/77` target. The
+  retains cap, midpoint and owner-line refinements. The
   [sparse proof](../05-knowledge/results/synthesis_20260905_lrc_sparse_transport.md)
-  retains phase intersections, weighted limits and the selector gap.
+  keeps phase intersections, weights and the selector gap.
 - **Residual ranks:** THM-4333/4338 close fixed-pool ranks three/four, not arbitrary entry.
 - **PROVED:** [THM-2928](../01-canon/theorems/THM-2928-critical-seven-comb-grid-tensorization-and-drift-tariff.md)/2941: literal zero/one/two/three-drift sectors are empty; `k=2,3` are finite.
 - **Orthogonal routes.** THM-1017 is HYP-6820; THM-2047/2050 keep phase/exit; THM-731/2048 prune; THM-1290 ends at `55`; HYP-8900 nonuniform.
@@ -168,9 +161,8 @@ THM-2070 refutes the general HYP-8890/8895 bypasses.  Transfer
 `seed/selector/preserver/exit` without mistaking a preserver for a seed.
 
 [THM-4430](../01-canon/theorems/THM-4430-laurent-root-rotation-rigidity-and-marked-packet-genus.md)
-proves exact rational root rotations are only dilations. Primitive width-three
-marked-pair curves have explicit genus>=3 (genus65 for `z^-3+z^4`), so
-normalization does not supply the rational dynamics used at width two.
+proves rational root rotations are dilations; primitive marked-pair curves
+retain positive genus, so normalization supplies no width-two dynamics.
 
 [Trinomial classification](../05-knowledge/results/synthesis_20260905_moments_trinomial.md)
 proves tunability iff `a-AB in <A,B>` and the exact two-carry channel profile.
@@ -179,6 +171,10 @@ THM-1755's bounded-relation claim is refuted (MISTAKE-544).
 prove two-rung detection and return `<=M+N` for trinomials with smaller
 endpoint `min(M,N)<=8`; the opposite endpoint is unbounded. General
 trinomial two-rung coprimality and arbitrary-support `min(M,N)>=3` remain OPEN.
+[THM-4436](../01-canon/theorems/THM-4436-complete-factorial-row-simple-negative-roots-and-trinomial-phase-wall.md)
+and an [independent path proof](../05-knowledge/results/overnight3_20260906_moments_root_geometry.md)
+give simple negative roots. Negative doubled-row values at 1,015 first roots
+of 221 supports are FINITE-EXACT; unbounded two-row separation remains OPEN.
 
 [THM-4432](../01-canon/theorems/THM-4432-trinomial-two-channel-two-rung-noncancellation-with-carries.md)
 closes two-first-channel trinomials at arbitrary endpoints with all carries.
@@ -338,25 +334,16 @@ lift/phase clocks.
 - **Matching logic:** THM-4090 gives a two-sort Figure-2 calculus
   counterexample relative to cited soundness; one-sort completeness remains a
   preprint claim, and no arithmetic/tournament transfer follows.
-- **Integral observers:** THM-4000 compiles consecutive values; THM-4010 gives kernel `(F^k)`, index `product(j!)^(k^2)`, rank `k min(m+1,p)`, and its first positive exponent.
-  THM-4080 closes one-scale `s<p`.
-  [THM-4419](../01-canon/theorems/THM-4419-twojet-prime-wall-precision-and-dyadic-triple-smith-law.md)
-  records the [independently concurrent](../05-knowledge/results/synthesis_20260905_wildcard_smith_boundary.md)
-  `s=p`, sharp precision/tensors, and dyadic triples. The audited
-  [odd-prime mixed cluster](../05-knowledge/results/overnight_20260906_smith_mixed_cluster.md)
-  covers one doubled residue at arbitrary depths/lifts, extending `n<=p(p+1)`.
-  The [ternary double-pair law](../05-knowledge/results/overnight2_20260906_smith_double_pair.md)
-  closes four-node occupancy `(2,2)` at every depth, with metric-only Smith
-  factors and sharp precision `7e+3max(d,r)`.
-  [THM-4429](../01-canon/theorems/THM-4429-arbitrary-three-node-two-jet-smith-form-and-metric-precision.md)
-  gives the full integer Smith form at arbitrary three nodes; its complete
-  p-part and sharp precision depend only on the pairwise distance tree.
-  [THM-4435](../01-canon/theorems/THM-4435-four-node-metric-blindness-and-universal-hermite-precision.md)
-  gives all-node precision from `F',F''` and refutes metric-only full four-node
-  partitions. [THM-4439](../01-canon/theorems/THM-4439-all-node-twojet-metric-precision-by-terminal-clusters.md)
-  nevertheless proves sharp two-jet precision is metric-only for every node
-  count, via terminal clusters and an exact one-digit full-residue loss.
-  Full general multiscale partitions and higher jets remain **OPEN**.
+- **Integral observers:** THM-4000/4010 give the consecutive kernel/index;
+  THM-4080/4419/4429 close one-scale, prime-wall and arbitrary three-node
+  metric laws. The [odd-prime mixed law](../05-knowledge/results/overnight_20260906_smith_mixed_cluster.md)
+  covers one doubled residue at all depths; the [double-pair law](../05-knowledge/results/overnight2_20260906_smith_double_pair.md)
+  closes `(2,2)`. The [nested ternary family](../05-knowledge/results/overnight3_20260906_smith_triple_single.md)
+  needs a unit residue beyond its metric; integer diameter81 is minimal.
+  THM-4435 gives dyadic blindness and Hermite precision;
+  [THM-4439](../01-canon/theorems/THM-4439-all-node-twojet-metric-precision-by-terminal-clusters.md)
+  proves the largest factor metric-only at every node count via terminal
+  clusters. Full multiscale partitions/higher jets remain OPEN.
 - **Even-graph spectrum:** THM-4083 closes `D=3,4`;
   [THM-4416](../01-canon/theorems/THM-4416-even-graph-cumulative-d5-d6-spectral-gap.md)
   closes `D=5,6`; [THM-4427](../01-canon/theorems/THM-4427-all-cumulative-signed-cycle-gaps-by-transposition-rigidity.md)

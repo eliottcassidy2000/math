@@ -582,6 +582,8 @@ new homotopy group, `p=2` statement, or LRC/GMC consequence.
 - **CITED:** Borcea--Branden, [arXiv:math/0607416v6, Theorem2(b)](https://arxiv.org/pdf/math/0607416#page=5): a real-stable full-degree symbol suffices for real-rootedness preservation on the full real coefficient space.
 - **Consumer:** [THM-4436](../../01-canon/theorems/THM-4436-complete-factorial-row-simple-negative-roots-and-trinomial-phase-wall.md) checks its positive-linear-factor symbols explicitly. Factorial splitting and simplicity are proved locally. This does not supply cross-mass coprimality.
 
+- **CITED:** Brändén [math/0403364v2, Sections 2, 3.8, 7](https://arxiv.org/pdf/math/0403364): finite PF, Hadamard and simplicity inputs. The [path proof](../results/overnight3_20260906_moments_root_geometry.md) checks complete shifts/unequal degrees; no cross-row implication.
+
 - [August 14 intake](CORE-PAPERS-INTAKE-2026-08-14.md): preprints/Rule 30.
 - August 25--27: [p-adic/matching](CORE-PAPERS-INTAKE-2026-08-25-PADIC-ZETA-MATCHING-LOGIC.md), [specialization](CORE-PAPERS-INTAKE-2026-08-26-PADIC-ZETA-DENSITY.md), [density/percolation](CORE-PAPERS-INTAKE-2026-08-26-PADIC-DENSITY-PERCOLATION.md).
 - September 3: [Poisson gauge and percolation gluing](CORE-PAPERS-INTAKE-2026-09-03-POISSON-PERCOLATION.md).
