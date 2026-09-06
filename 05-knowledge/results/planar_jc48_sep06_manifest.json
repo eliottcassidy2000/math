@@ -2,10 +2,10 @@
   "session": "planar-jacobian-sep06",
   "status": "PROVED scoped results; relative-exactness and nodal precedents credited; JC(2) OPEN",
   "created_utc": "2026-09-06",
-  "artifact_count": 26,
-  "program_count": 7,
-  "exact_gates_per_complete_normal_or_optimized_run": 5475,
-  "verification": "Each of the seven programs replayed normally and with optimization; both raw stdout streams match its frozen output byte for byte. Independent analytic audits are separately pinned. Finite gate counts do not replace the universal proofs.",
+  "artifact_count": 34,
+  "program_count": 9,
+  "exact_gates_per_complete_normal_or_optimized_run": 26362,
+  "verification": "Each of the nine programs replayed normally and with optimization; both raw stdout streams match its frozen output byte for byte. Independent analytic audits are separately pinned. Finite gate counts do not replace the universal proofs.",
   "program_gates": {
     "weight14": 169,
     "weight14_audit": 93,
@@ -13,7 +13,9 @@
     "torsion": 278,
     "infinity": 4223,
     "hamiltonian": 241,
-    "curve_probe": 214
+    "curve_probe": 214,
+    "cusp_passport": 16815,
+    "odd_cusp": 4072
   },
   "artifacts": [
     {
@@ -27,6 +29,11 @@
       "sha256": "97c28adbf35451a8e521486680a2b79267073430fdc8fe69a96e9435ffa923a1"
     },
     {
+      "path": "04-computation/planar_jc48_sep06_cusp_passport.py",
+      "bytes": 5621,
+      "sha256": "8a7d40c0f001a2063f976b949d49033087adc3ae1616072c1c644172918e3d6f"
+    },
+    {
       "path": "04-computation/planar_jc48_sep06_hamiltonian.py",
       "bytes": 8449,
       "sha256": "ba65f911e64907cd41d7a950263e281a8da370045c9da40668796f1245a8df6b"
@@ -35,6 +42,11 @@
       "path": "04-computation/planar_jc48_sep06_infinity.py",
       "bytes": 5419,
       "sha256": "a1a90e2827316bf1da3fe4c99570c093101dda892b387c27e1ef193bc9e82e21"
+    },
+    {
+      "path": "04-computation/planar_jc48_sep06_odd_cusp.py",
+      "bytes": 9173,
+      "sha256": "91f487bac1217da20f235ec0746fd7d587b8d5fa3e4ce8f304d19472df790879"
     },
     {
       "path": "04-computation/planar_jc48_sep06_torsion.py",
@@ -68,8 +80,8 @@
     },
     {
       "path": "05-knowledge/results/planar_jc48_sep06_curve_probe.md",
-      "bytes": 16293,
-      "sha256": "e517ba35483403d4d6e608e4e41b8532271d00ff064c22dc7c21e5be3c3a077e"
+      "bytes": 16714,
+      "sha256": "20e9b404ceff54f69baaec1ce3c81583a98a5d55435af2b98ba088e0fcdae36c"
     },
     {
       "path": "05-knowledge/results/planar_jc48_sep06_curve_probe.out",
@@ -80,6 +92,21 @@
       "path": "05-knowledge/results/planar_jc48_sep06_curve_probe_audit.md",
       "bytes": 5341,
       "sha256": "a0c979f4a6a311c4d0bab80ddb1b9fcb0778d20ac5aed824b6b5bddab3d9a471"
+    },
+    {
+      "path": "05-knowledge/results/planar_jc48_sep06_cusp_passport.md",
+      "bytes": 17335,
+      "sha256": "7bb6f087804dfb763c631189ec175c9371d4c2c09347fc13e5002e11b75d805d"
+    },
+    {
+      "path": "05-knowledge/results/planar_jc48_sep06_cusp_passport.out",
+      "bytes": 3358,
+      "sha256": "6c330f724ac39a6960e22d13bee1d54efcd3cd13ff891acb470de41eccd04d95"
+    },
+    {
+      "path": "05-knowledge/results/planar_jc48_sep06_cusp_passport_audit.md",
+      "bytes": 9408,
+      "sha256": "308094dd7e3df9dff412b024e7aec2df042d0d08983bd33782f4aec482e5ff2f"
     },
     {
       "path": "05-knowledge/results/planar_jc48_sep06_hamiltonian.md",
@@ -110,6 +137,21 @@
       "path": "05-knowledge/results/planar_jc48_sep06_infinity_audit.md",
       "bytes": 9738,
       "sha256": "de6b040e924437d628cd82b17da44aafe1692c9d868111026a51bedb8018c8c2"
+    },
+    {
+      "path": "05-knowledge/results/planar_jc48_sep06_odd_cusp.md",
+      "bytes": 14697,
+      "sha256": "d074141f587f192ea71c5610c06cce96f91f728eb6531e294a9634a7ee10cf15"
+    },
+    {
+      "path": "05-knowledge/results/planar_jc48_sep06_odd_cusp.out",
+      "bytes": 2657,
+      "sha256": "18368ecf7ee29d02c11d5daca31d1879582ac5d5bd30c1aecc19e6191aac3cbc"
+    },
+    {
+      "path": "05-knowledge/results/planar_jc48_sep06_odd_cusp_audit.md",
+      "bytes": 9094,
+      "sha256": "8a16a7d433f56fb007478223341ece4299a649a645a7b17341c7c48bdd3ae7b0"
     },
     {
       "path": "05-knowledge/results/planar_jc48_sep06_torsion.md",
@@ -146,5 +188,6 @@
       "bytes": 201,
       "sha256": "1a1d5ca435e313273f5f406d395dc5ce7e7e10b17fa9466a3a974ee2e37c1929"
     }
-  ]
+  ],
+  "checkpoint_update": "Added independently audited ordinary- and odd-cusp bundles. Of the original 26 pinned artifacts, only the curve proof note gained an explicit forward status pointer to its subsequently closed cusp boundary. Every original source, output and audit remains byte-identical. The ten board scouting identities are separate from this program count."
 }

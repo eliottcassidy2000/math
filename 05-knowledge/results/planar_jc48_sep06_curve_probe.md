@@ -6,6 +6,13 @@ independent analytic review. This classifies the explicit one-parameter
 family below, not of all intrinsic `(4,6)` curves and not a construction of
 a Keller map. JC(2) remains OPEN.
 
+**Current boundary update:** the later independently audited
+[cusp passport](planar_jc48_sep06_cusp_passport.md) excludes the three cusp
+parameters left open by the argument below. Together the two notes exclude
+every parameter in this explicit family as a sole nonproperness support.
+The three-parameter OPEN statements below describe this note's original
+intermediate boundary, which the linked result now supersedes.
+
 ## 1. Target, inheritance and the complete collision algebra
 
 Let `lambda` range over `C`, and let `C_lambda` be the image of

@@ -18,11 +18,13 @@
   Weight22 moving-prefix transport replaces the row15 weight24 payer;
   collision periods in three dimensions retain a quadratic quotient;
   component-labelled response torsion carries an intrinsic connection.
-  Exact source-form Hamiltonians fail local nilpotence. An explicit (4,6)
-  curve family is excluded as sole support except at three cusp parameters;
-  its nodal antecedent is credited as recovered work.
-  [Manifest](planar_jc48_sep06_manifest.json):26 frozen artifacts,
-  seven programs,5475 exact gates. Full JC(2) and termination remain OPEN.
+  Exact source-form Hamiltonians fail local nilpotence. A sole irreducible
+  support with one ordinary cusp and nodes is excluded, closing the entire
+  explicit (4,6) family; classical low-degree and nodal inputs are credited.
+  One (2,m) cusp with at least two nodes forces d-1 to divide m; any Keller
+  realization of the next concrete target would have mapping degree6.
+  [Manifest](planar_jc48_sep06_manifest.json):34 frozen artifacts,
+  nine programs,26362 exact gates. Full JC(2) and termination remain OPEN.
 
 - [Previous continuing synthesis](continuing5_20260906_synthesis.md):
   full-model beta simplicity, the original-phase rectangle, the ordered

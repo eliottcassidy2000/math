@@ -50,3 +50,27 @@ specialization rule, a general exclusion for disconnected supports, or
 arbitrary JC(2). The later explicit curve-family note retains the actual
 fibre at one exceptional point and derives its exclusion from Euler
 integration without inserting such a specialization rule.
+
+## Geometric degrees two, three and four
+
+S. Yu. Orevkov, *On three-sheeted polynomial mappings of C^2*, Math.
+USSR-Izv.29(1987),587–596:
+[author PDF](https://www.math.univ-toulouse.fr/~orevkov/jc86.pdf),
+[published DOI](https://doi.org/10.1070/IM1987v029n03ABEH000984).
+Page1 defines multiplicity as the number of generic preimages; Theorem1.1
+excludes multiplicities two and three for a nonzero constant Jacobian.
+
+A. V. Domrina, *On four-sheeted polynomial mappings of C^2. II. The general
+case*, Izv. Math.64(2000),1–33:
+[publisher PDF](https://www.mathnet.ru/php/getFT.phtml?jrnid=im&option_lang=eng&paperid=273&what=fullteng),
+[published DOI](https://doi.org/10.1070/im2000v064n01ABEH000273).
+Page1 defines topological degree by generic preimages and states the
+exclusion of degree four. The preceding 1998 paper has the extra
+one-dicritical-component hypothesis; the 2000 theorem is the general case.
+
+Root and the independent cusp referee opened both full primary PDFs and
+checked these theorem statements and degree definitions. They are **CITED
+established inputs**, not newly reproved here. Their d is the function-field
+degree used by the finite-envelope passport, not the degree of a coordinate
+polynomial. The cusp application does not require a degree-five theorem,
+any gcd-of-coordinate-degrees claim, or any higher-dimensional statement.
