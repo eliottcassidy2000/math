@@ -84,6 +84,11 @@
   response. The actual composition recurrence and same-zero margin remain
   live; general actual doubled-row noncancellation is OPEN.
 
+- [THM-4453: inert-sum/five-ray dyadic entry closure](../../01-canon/theorems/THM-4453-lrc14-inert-sum-five-ray-disjointness-and-dyadic-entry-closure.md):
+  **PROVED + VERIFIED-EXACT + INDEPENDENTLY LOGIC-AUDITED; LRC(14) OPEN.**
+  The five odd-3-unit rays above `4/91` are disjoint from THM-3818's 5,855
+  inert-sum rays. This yields inclusive inert-class original-body gates
+  `8/91` for q4 and `20/117` for q2 one-even.
 - [The two `72/539` profiles](lrc14_72_539_weighted_profile_shadow_20260906.md):
   **PROVED EXACT + INDEPENDENTLY AUDITED; HEURISTIC CONNECTION ONLY.**
   A THM-4437 auxiliary defect-slice profile and THM-4449's `(1,7,11)` pair

@@ -24,7 +24,7 @@ Then read frontier, guardrails, theorem; logs are history.
 1. **LRC(14) is first open.** THM-4347 closes height `40`;
    THM-4441/4444/4445 classify tails, THM-4442/4446 close bounded rays,
    THM-4447 leaves clocks `2,3,4`; THM-4448 closes cofinal two-shore cones;
-   THM-4449--4452 give sharp clock-two/four mass, overlap, and component gates;
+   THM-4449--4453 give sharp dyadic gates and close the high-mass inert-pair overlap;
    body entry and `2+12` remain open.
 2. **The `q <= 25` period claim is refuted.** THM-762/764 exhibit `26*{1,...,12} union {339}`, whose first good period is `27`.
 3. **Good-period existence is a maximum statement.** The tight resonant AP

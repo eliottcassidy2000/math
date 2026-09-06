@@ -1,0 +1,16 @@
+THM3818_THM4450_ENTRY_COMPOSITION_AUDIT
+atlas_count=5855 max_p=177 max_q=355
+ray=(1, 11) sum=12 factors=((2, 2), (3, 1)) inert=False in_atlas=False
+ray=(1, 23) sum=24 factors=((2, 3), (3, 1)) inert=False in_atlas=False
+ray=(5, 11) sum=16 factors=((2, 4),) inert=False in_atlas=False
+ray=(1, 37) sum=38 factors=((2, 1), (19, 1)) inert=False in_atlas=False
+ray=(1, 25) sum=26 factors=((2, 1), (13, 1)) inert=False in_atlas=False
+five_ray_atlas_intersection=empty
+scope_hostile=(1, 9) sum=10 factors=((2, 1), (5, 1)) inert=True in_atlas=True not_3_unit=True
+localization=4/91 q4_body_gate=8/91 q2_one_even_body_gate=20/117
+old_full_cap_gates: q4=8/77 q2_one_even=124/693
+q4_literal_unit_controls=45045
+q4_unit_iff_r_divides_every_body_speed=PASS
+even_tail_identity=D_2r union two_tail_cross_comb
+r=1_tooth=1/14 > all_odd_cap=17/693 > odd_3_unit_cap=19/1001
+PASS
