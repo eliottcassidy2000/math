@@ -5,10 +5,10 @@
 composite credit, and the named thirteen-speed closure are accepted in the
 producer's stated scopes. No mathematical repair is requested.
 
-The reviewed report is
+The reviewed pre-promotion report is
 [continuing9 ratio-tree proof](continuing9_20260907_lrc_ratio_tree.md),
 SHA256 93ae6a60d4103fcd16e3ca91d6c1cb6526ceccfd23d2ad0b941fea6cad171c79.
-The [independent source](continuing9_20260907_lrc_ratio_tree_audit.py) imports
+The [independent source](../../04-computation/continuing9_20260907_lrc_ratio_tree_audit.py) imports
 neither the producer nor another mathematical program. Its
 [normal output](continuing9_20260907_lrc_ratio_tree_audit.out) and
 [optimized output](continuing9_20260907_lrc_ratio_tree_audit_optimized.out)

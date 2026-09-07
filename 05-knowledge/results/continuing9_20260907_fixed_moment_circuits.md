@@ -12,6 +12,8 @@ This concerns positive root parameters and their first two moments. It does
 not impose the Laurent model's C/D interlacers, factorial coefficient carrier,
 original phase, or response sign. Those remain additional predicates.
 
+[Independent audit](continuing9_20260907_fixed_moment_circuits_audit.md).
+
 ## 1. Inheritance, interpretation, and literature credit
 
 The closest proved mechanism is the exact coefficient inversion in
@@ -316,8 +318,8 @@ It has exactly two negative real roots and a nonreal conjugate pair.
 The same moment slice nevertheless contains the full circuit box about
 one furnished by \(d=4,q=7/8,\delta=1/1024\).
 
-The [standalone source](continuing9_20260907_fixed_moment_circuits.py),
-[exact certificate](continuing9_20260907_fixed_moment_circuits_certificate.json),
+The [standalone source](../../04-computation/continuing9_20260907_fixed_moment_circuits.py),
+[exact certificate](../../04-computation/continuing9_20260907_fixed_moment_circuits_certificate.json),
 [normal output](continuing9_20260907_fixed_moment_circuits.out), and
 [optimized output](continuing9_20260907_fixed_moment_circuits_optimized.out)
 are frozen. Run:

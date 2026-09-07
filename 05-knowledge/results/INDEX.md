@@ -1,6 +1,16 @@
 # Script Results Index
 
-- [Current continuing synthesis](continuing8_20260906_synthesis.md):
+- [Current continuing synthesis](continuing9_20260907_synthesis.md):
+  **PROVED + FINITE-EXACT + INDEPENDENTLY AUDITED.** Every circuit sign word
+  survives fixed first two moments; exact cubic image and anchored C/D
+  transfer boundary. Joint ratio trees realize the7200 hostile; a composite
+  pair closes an actual thirteen-speed pattern without graph connectivity.
+  Exact univariate, primitive-monomial and arbitrary-degree constant-slope
+  y-linear carrier genera exclude rational nonzero-time flows in those classes.
+  [Manifest](continuing9_20260907_manifest.json):43 artifacts,10 engines,
+  36458 exact gates per normal/optimized pass. General prizes remain OPEN.
+
+- [Previous continuing synthesis](continuing8_20260906_synthesis.md):
   **PROVED + FINITE-EXACT + INDEPENDENTLY AUDITED.** Exact positive Newton
   circuit-ratio surjectivity at fixed root sum; effective all-profile narrow
   cluster law; global bronze classification and repaired Fuss rationality.

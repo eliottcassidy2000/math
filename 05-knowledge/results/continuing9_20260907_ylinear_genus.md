@@ -14,6 +14,8 @@ time: its two coordinate images cannot both be rational. General source
 carriers, variable coefficients gamma(p), and compositions of different
 flows remain OPEN. Planar JC remains OPEN.
 
+[Independent audit](continuing9_20260907_ylinear_genus_audit.md).
+
 ## 1. Inheritance and the new operation
 
 The closest proved mechanism is the completed universal carrier and its

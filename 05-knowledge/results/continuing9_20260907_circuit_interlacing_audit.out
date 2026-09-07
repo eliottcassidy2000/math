@@ -1,0 +1,6 @@
+PASS independent C-only/full-interlacer circuit audit
+Native rational Sturm root ordering: center, all 27 ternary targets, and four full-model points.
+All 576 moments and 320 leading determinants match independent convolution/LDL.
+Every C-only control has an explicit negative D/B residue at its smallest B root.
+A C-only neighborhood exists; no entire radius cube or omitted full-word exclusion is inferred.
+Always-active exact gates: 1459

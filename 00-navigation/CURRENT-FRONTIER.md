@@ -55,7 +55,8 @@ gives square sum `<=195`; THM-4019 refutes its sharp arbitrary-lattice target.
   THM-4452: one-v2 clock-four cap `1/110`; [inert gates](../05-knowledge/results/creative_20260906_inert_pareto.md) `40/469,716/4221`; [ranked capacities](../05-knowledge/results/continuing1_20260906_profiles.md) retain all sums; physical gain OPEN.
   THM-4442/4446 force gcd-one packs above `91^6`; hostiles refute prescribed-component
   selection. No universal body mass/component floor reaches these gates; entry remains open.
-- **Entry:** [Minimum connecting trees](../05-knowledge/results/continuing8_20260906_lrc_minimum_tree.md):7,646 scales, `t<=11995,g<=90`;
+- **Entry:** [Synthesis](../05-knowledge/results/continuing9_20260907_synthesis.md):
+  7,646 scales, `t<=11995,g<=90`; a named7200 family closes.
   [Rooted pairs](../05-knowledge/results/third_20260906_decoder.md) close `maxU<=28`. Entry OPEN.
   [Sparse transport](../05-knowledge/results/synthesis_20260905_lrc_sparse_transport.md) retains weights and the selector gap.
 - **Residual ranks:** THM-4333/4338 close fixed-pool ranks three/four, not arbitrary entry.
@@ -155,7 +156,7 @@ and Lucas--Frobenius leaves `Q^p`: **whole-layer preservation**, not atoms.
 
 ### Live work
 
-Publish THM-2022; formalize THM-2639. [Current synthesis](../05-knowledge/results/continuing8_20260906_synthesis.md): scoped results PROVED; off-wall sign OPEN.
+Publish THM-2022; formalize THM-2639. [Synthesis](../05-knowledge/results/continuing9_20260907_synthesis.md): PROVED scoped results; off-wall OPEN.
 [THM-4456](../01-canon/theorems/THM-4456-sharp-finite-length-signed-root-stability-asymptotics.md): optimum K3+C/N+o(1/N), C=2.172201096...; rigidity THM-4455, PROVED.
 [THM-4417](../01-canon/theorems/THM-4417-width-two-laurent-first-return-parabolic-critical-bound.md)
 proves first return `<=M+N` for `min(M,N)=2`; width one is THM-2111.
@@ -401,8 +402,9 @@ lift/phase clocks.
   [Audited row15 response](../05-knowledge/results/planar_jc_long_20260906_board.md): valuation>=11,
   low weight<=23 plus the designated weight24 channel; sharp replacement
   weight22, source `G_m x A^9`, coordinate `A^10` fibres.
-  Fixed support has an optimal finite depth test; universal carrier flows
-  preserve depth formally; an explicit family has no rational nonzero time.
+  [Source flows](../05-knowledge/results/continuing9_20260907_synthesis.md):
+  sharp depth test; formal depth preservation;
+  nonrational times: univariate/monomial/constant-slope y-linear.
   Later rows, polynomial termination, and entry remain **OPEN**.
   THM-4397/4401 give Long's gauge and punctured planar shadows.
   Exceptional quartic: THM-3703/3737/4034 give grammar/image/conductor;

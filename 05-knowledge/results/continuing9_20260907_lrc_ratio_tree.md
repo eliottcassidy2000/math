@@ -5,6 +5,8 @@ The primitive ratio-tree representation is inherited. The prescribed-clock
 criterion, exact hostile realization, and composite-path consumer below are
 the scoped contributions. LRC(14) and the remaining7200 entry domain are OPEN.
 
+[Independent audit](continuing9_20260907_lrc_ratio_tree_audit.md).
+
 ## 1. Inheritance and the decisive change of direction
 
 **THM-4106**, `01-canon/theorems/THM-4106-lrc-pair-owner-reciprocity-and-valuation-tree-decoder.md`,

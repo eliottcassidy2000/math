@@ -2,6 +2,8 @@
 
 **Status: PROVED with cited curve inputs; INDEPENDENTLY AUDITED.** Every nonzero univariate multiplier in the actual universal source carrier has an exact generic-genus formula at least two. Every affine multiplier has genus 2, 3 or 6. Every nonconstant polynomial in these invariants has nonrational flow at every nonzero scalar time. A separate exact classification closes all monomial-invariant outer-composition escapes, including the primitive invariant `pD` whose square enters the carrier. Compositions of distinct flows and general higher-degree multipliers involving y remain open. Planar JC remains open.
 
+[Independent audit](continuing9_20260907_flow_carrier_genus_audit.md).
+
 ## 1. Inheritance and the precise object
 
 This scout starts from `7c557fb04` and the incoming `1100abe5b` results. It read the current board and the full proofs in:

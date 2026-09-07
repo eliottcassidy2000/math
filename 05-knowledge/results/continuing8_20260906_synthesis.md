@@ -7,6 +7,11 @@ LRC(14), planar JC, the anchored off-wall sign problem, the original wall-core
 no-return problem, Mahler's Z-number problem, Rule30 prizes and the optimal
 uniform fair-coin deadline slope remain **OPEN**.
 
+The [current continuing9 synthesis](continuing9_20260907_synthesis.md)
+resolves the fixed-moment signword question, restores a composite LRC pair,
+and broadens the nonrational source-flow families. This prior checkpoint's
+proofs and its 7,646-clock array remain valid within their stated scopes.
+
 The starting checkpoint was `fe3ac5816`. Incoming `45995e6d7` was read as
 mathematical input and integrated cleanly. Its complete diagonal source image
 and actual Student operator produced the new transfer results below. The

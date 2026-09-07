@@ -1,0 +1,8 @@
+CENTER [831875/8788, 3460080078125/52206766144, 791547381622314453125/52414354446428935168]
+CENTER C leading minors:+++++; D leading minors:+++--; circuits000
+C_ONLY: all27 exact radius1/2048 target words have positive simple beta roots and strict C interlacing
+D_BOUNDARY: all27 displayed C-only targets fail the ordinary degree6 D Hankel
+FULL_MODEL: four exact strict words +++,++-,+-+,-++ with both Hankels positive definite
+OPEN: no excluded full-model word follows from this finite positive bank
+CERTIFICATE_SHA256 dfbae81c3078b21042cd4a33cc0717860caec3d9b858fdca461b136225a84657
+PASS 214 always-active exact gates; raw LF

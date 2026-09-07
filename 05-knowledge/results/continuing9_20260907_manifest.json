@@ -1,0 +1,244 @@
+{
+  "schema": 1,
+  "created_utc": "2026-09-07T00:48:59.722616+00:00",
+  "baseline_commit": "7c557fb04c4667499e9157aec0be845a4bc25ef5",
+  "incoming_review_commits": [
+    "86a8780eb",
+    "48f396185"
+  ],
+  "proof_checkpoint": "a1f02fa5e",
+  "hash_basis": "raw LF bytes; maintained synthesis, navigation and manifest excluded",
+  "scope": "Every Newton circuit sign word at fixed first two moments; complete cubic amplitude image; anchored strict C-only words and exact D boundary; prescribed-clock ratio-tree iff and actual7200 composite-pattern closure; exact univariate, monomial and constant-slope y-linear carrier genera and nonrational scalar-time flows. General conjectures remain OPEN.",
+  "validation": {
+    "continuing9_20260907_fixed_moment_circuits": 1190,
+    "continuing9_20260907_fixed_moment_circuits_audit": 909,
+    "continuing9_20260907_lrc_ratio_tree": 13924,
+    "continuing9_20260907_lrc_ratio_tree_audit": 17915,
+    "continuing9_20260907_flow_carrier_genus": 296,
+    "continuing9_20260907_flow_carrier_genus_audit": 313,
+    "continuing9_20260907_ylinear_genus": 97,
+    "continuing9_20260907_ylinear_genus_audit": 141,
+    "continuing9_20260907_interlacer_circuits": 214,
+    "continuing9_20260907_circuit_interlacing_audit": 1459
+  },
+  "normal_optimized_raw_stdout_equal": true,
+  "regenerated_certificates_raw_unchanged": true,
+  "prior_artifacts_verified": 428,
+  "artifacts": [
+    {
+      "path": "04-computation/continuing9_20260907_circuit_interlacing_audit.py",
+      "bytes": 8951,
+      "sha256": "2e06bcb4009ef5cac851d005135528538d252c2d015ab95b112bc136e206f4bf"
+    },
+    {
+      "path": "04-computation/continuing9_20260907_fixed_moment_circuits.py",
+      "bytes": 9962,
+      "sha256": "a71ee4509bb46644f8e1fcf3a5f6931941363876540ea8565d1addf46e6e8102"
+    },
+    {
+      "path": "04-computation/continuing9_20260907_fixed_moment_circuits_audit.py",
+      "bytes": 9983,
+      "sha256": "39fa4c64f4b6f915bc0e2c17d64321b6850fe6d97c3438e73f4b1bac63b122ab"
+    },
+    {
+      "path": "04-computation/continuing9_20260907_fixed_moment_circuits_certificate.json",
+      "bytes": 81650,
+      "sha256": "291b62a5638f8a057ccf514851cb0b5d100a2a61a3da8eff9151b49040be11b9"
+    },
+    {
+      "path": "04-computation/continuing9_20260907_flow_carrier_genus.py",
+      "bytes": 7325,
+      "sha256": "087b80f7051da3ea4b0744920e179422a0e185fab94e526acbc35a7f403f5ecb"
+    },
+    {
+      "path": "04-computation/continuing9_20260907_flow_carrier_genus_audit.py",
+      "bytes": 4878,
+      "sha256": "5d6c1020076d68ac23cc01708867c5e4e07e53468e1aa54131a9603caf05a760"
+    },
+    {
+      "path": "04-computation/continuing9_20260907_interlacer_circuits.py",
+      "bytes": 5479,
+      "sha256": "a2d27b5925c3992d23089405bf41911936eac97c31b346a80664129b8fd3c369"
+    },
+    {
+      "path": "04-computation/continuing9_20260907_lrc_ratio_tree.py",
+      "bytes": 16016,
+      "sha256": "eacacacdf4bd4e063036d82785c72bb358ebbf315894c76e0fce91646bde4187"
+    },
+    {
+      "path": "04-computation/continuing9_20260907_lrc_ratio_tree_audit.py",
+      "bytes": 14863,
+      "sha256": "2e719654a877c4264ddc536cb5ef3a94a91e20063d2cef21c5d0245d457ff850"
+    },
+    {
+      "path": "04-computation/continuing9_20260907_ylinear_genus.py",
+      "bytes": 3392,
+      "sha256": "fa0122e5c39e5e78bf96c5cc87e4a45e16445c654d3e2f0477db6a01fe77eac5"
+    },
+    {
+      "path": "04-computation/continuing9_20260907_ylinear_genus_audit.py",
+      "bytes": 8024,
+      "sha256": "544543996ffa126f3d43c137e374e8fd0c4ec04077a4688a15fedf9af915ae6b"
+    },
+    {
+      "path": "05-knowledge/results/continuing9_20260907_circuit_interlacing_audit.md",
+      "bytes": 9239,
+      "sha256": "d51da3d894ebe17ea44bd6d68c5a8c4923361620d00118b2b98377d220bc9fe3"
+    },
+    {
+      "path": "05-knowledge/results/continuing9_20260907_circuit_interlacing_audit.out",
+      "bytes": 441,
+      "sha256": "e3291feb54b1de7e157deaf2a3cc4764b946c317f40a5b3e74ffcdbfd7150839"
+    },
+    {
+      "path": "05-knowledge/results/continuing9_20260907_circuit_interlacing_audit_optimized.out",
+      "bytes": 441,
+      "sha256": "e3291feb54b1de7e157deaf2a3cc4764b946c317f40a5b3e74ffcdbfd7150839"
+    },
+    {
+      "path": "05-knowledge/results/continuing9_20260907_fixed_moment_circuits.md",
+      "bytes": 14304,
+      "sha256": "dd687b71762841f3782c69c5033b8765162e4252d2ab7221025694d613ff04ff"
+    },
+    {
+      "path": "05-knowledge/results/continuing9_20260907_fixed_moment_circuits.out",
+      "bytes": 754,
+      "sha256": "5d51e2a2aa33a1dd55d4d3caaa1c64702567ca4787e78a8b5d1e8c4f0486abfe"
+    },
+    {
+      "path": "05-knowledge/results/continuing9_20260907_fixed_moment_circuits_audit.md",
+      "bytes": 10123,
+      "sha256": "5cdb036f8ed84151ac936ac6a7a94b01320a5fbb293e3cc39fd0b01ce20e2f5b"
+    },
+    {
+      "path": "05-knowledge/results/continuing9_20260907_fixed_moment_circuits_audit.out",
+      "bytes": 780,
+      "sha256": "9903e97b1f739802abada3d0096c5b869efe7609e1b242f6c07f506257443171"
+    },
+    {
+      "path": "05-knowledge/results/continuing9_20260907_fixed_moment_circuits_audit_optimized.out",
+      "bytes": 780,
+      "sha256": "9903e97b1f739802abada3d0096c5b869efe7609e1b242f6c07f506257443171"
+    },
+    {
+      "path": "05-knowledge/results/continuing9_20260907_fixed_moment_circuits_optimized.out",
+      "bytes": 754,
+      "sha256": "5d51e2a2aa33a1dd55d4d3caaa1c64702567ca4787e78a8b5d1e8c4f0486abfe"
+    },
+    {
+      "path": "05-knowledge/results/continuing9_20260907_flow_carrier_genus.md",
+      "bytes": 18037,
+      "sha256": "36b9fc0719268853f969f03f0b91cee003bedb58f22621131524701830de33c4"
+    },
+    {
+      "path": "05-knowledge/results/continuing9_20260907_flow_carrier_genus.out",
+      "bytes": 1133,
+      "sha256": "cf81bcf3206a1b56f05f0d0df6cb36fe097dfb9d89f259f736ffec569245d2ad"
+    },
+    {
+      "path": "05-knowledge/results/continuing9_20260907_flow_carrier_genus_audit.md",
+      "bytes": 6587,
+      "sha256": "5642cb5904abe27685830818ba2a09696841e68e504d429b0727991fa6d7259a"
+    },
+    {
+      "path": "05-knowledge/results/continuing9_20260907_flow_carrier_genus_audit.out",
+      "bytes": 559,
+      "sha256": "7bcb81a90b9e3318f09ead99c95c94e2108f62c0d6784534f675a45ff9a3fe90"
+    },
+    {
+      "path": "05-knowledge/results/continuing9_20260907_flow_carrier_genus_audit_optimized.out",
+      "bytes": 559,
+      "sha256": "7bcb81a90b9e3318f09ead99c95c94e2108f62c0d6784534f675a45ff9a3fe90"
+    },
+    {
+      "path": "05-knowledge/results/continuing9_20260907_flow_carrier_genus_optimized.out",
+      "bytes": 1133,
+      "sha256": "cf81bcf3206a1b56f05f0d0df6cb36fe097dfb9d89f259f736ffec569245d2ad"
+    },
+    {
+      "path": "05-knowledge/results/continuing9_20260907_interlacer_circuits.md",
+      "bytes": 7407,
+      "sha256": "b92a32beb1c2dcd396fb76e1916938522ab161952dbb72ae604d71f031c65e39"
+    },
+    {
+      "path": "05-knowledge/results/continuing9_20260907_interlacer_circuits.out",
+      "bytes": 628,
+      "sha256": "0b3cc97abe03805dd757b21b2e88b364ae83c820bcd16e51a065ecffcd0b3841"
+    },
+    {
+      "path": "05-knowledge/results/continuing9_20260907_interlacer_circuits_certificate.json",
+      "bytes": 80081,
+      "sha256": "dfbae81c3078b21042cd4a33cc0717860caec3d9b858fdca461b136225a84657"
+    },
+    {
+      "path": "05-knowledge/results/continuing9_20260907_interlacer_circuits_optimized.out",
+      "bytes": 628,
+      "sha256": "0b3cc97abe03805dd757b21b2e88b364ae83c820bcd16e51a065ecffcd0b3841"
+    },
+    {
+      "path": "05-knowledge/results/continuing9_20260907_lrc_ratio_tree.md",
+      "bytes": 13736,
+      "sha256": "123954e6c1ad9cf151432b15ff851926b18ce53124ad5e5eb5f237561c82d7e3"
+    },
+    {
+      "path": "05-knowledge/results/continuing9_20260907_lrc_ratio_tree.out",
+      "bytes": 1316,
+      "sha256": "45d19166b682d4098280d7d3f0f0feec06825294d6af7d8da4e1620e9435ac9a"
+    },
+    {
+      "path": "05-knowledge/results/continuing9_20260907_lrc_ratio_tree_audit.md",
+      "bytes": 9508,
+      "sha256": "5a4f5eff497f15f256c1b5bb6c6896b9f0f4a5a5d917f9684e8119e0667a6d94"
+    },
+    {
+      "path": "05-knowledge/results/continuing9_20260907_lrc_ratio_tree_audit.out",
+      "bytes": 750,
+      "sha256": "d095a1528685cd1eec1f09a73e7da48b42e43f630846df67f0fc36df59379ab3"
+    },
+    {
+      "path": "05-knowledge/results/continuing9_20260907_lrc_ratio_tree_audit_optimized.out",
+      "bytes": 750,
+      "sha256": "d095a1528685cd1eec1f09a73e7da48b42e43f630846df67f0fc36df59379ab3"
+    },
+    {
+      "path": "05-knowledge/results/continuing9_20260907_lrc_ratio_tree_certificate.json",
+      "bytes": 62216,
+      "sha256": "f93d2c8b4f112027bbba23fa529742cd12ac8107e7c9bfdf57f15d6666799533"
+    },
+    {
+      "path": "05-knowledge/results/continuing9_20260907_lrc_ratio_tree_optimized.out",
+      "bytes": 1316,
+      "sha256": "45d19166b682d4098280d7d3f0f0feec06825294d6af7d8da4e1620e9435ac9a"
+    },
+    {
+      "path": "05-knowledge/results/continuing9_20260907_ylinear_genus.md",
+      "bytes": 9843,
+      "sha256": "90ee4acc984df5c7f6e17c18837e609c6113f4c545d4e94b39481756939b243a"
+    },
+    {
+      "path": "05-knowledge/results/continuing9_20260907_ylinear_genus.out",
+      "bytes": 510,
+      "sha256": "eddc201f4f53665f5bf4939888b6f94105c0e32549478a3dcbfff3ff9fed127c"
+    },
+    {
+      "path": "05-knowledge/results/continuing9_20260907_ylinear_genus_audit.md",
+      "bytes": 9167,
+      "sha256": "5a4fcbbeffb932a8907ded4fc10824ecdc2462d91de656810b9fe582d9a551f9"
+    },
+    {
+      "path": "05-knowledge/results/continuing9_20260907_ylinear_genus_audit.out",
+      "bytes": 690,
+      "sha256": "387aaf57ea0eba214d43d5d5cb299c978b6876eb5c874163502409466c728d7c"
+    },
+    {
+      "path": "05-knowledge/results/continuing9_20260907_ylinear_genus_audit_optimized.out",
+      "bytes": 690,
+      "sha256": "387aaf57ea0eba214d43d5d5cb299c978b6876eb5c874163502409466c728d7c"
+    },
+    {
+      "path": "05-knowledge/results/continuing9_20260907_ylinear_genus_optimized.out",
+      "bytes": 510,
+      "sha256": "eddc201f4f53665f5bf4939888b6f94105c0e32549478a3dcbfff3ff9fed127c"
+    }
+  ]
+}

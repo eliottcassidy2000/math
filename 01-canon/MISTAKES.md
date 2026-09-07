@@ -9,6 +9,30 @@ Format per entry:
 - Why it was wrong
 - The correct framing
 
+## 2026-09-07 continuing9 -- joint realization and retained geometry
+
+- [Ratio-tree criterion](../05-knowledge/results/continuing9_20260907_lrc_ratio_tree.md):
+  local clock margins lose valuation depth at saturated vertices. The
+  t=2 path ratios1:4 and2:3 pass local margins(1,2,1), but their primitive
+  row(1,4,6) has margins(1,2,2). Conversely the worst7200 tree really does
+  realize jointly, and all six atlas minima share a common phase. Its
+  missing credit comes from a non-atlas composite path pair. Do not infer
+  an entire word is impossible from one failed choice of ratios or tree.
+- [Fixed moments and actual interlacers](../05-knowledge/results/continuing9_20260907_interlacer_circuits.md):
+  amplitude restrictions do not imply a restricted sign language. Every
+  ternary circuit word survives fixed first two moments, even with strict C
+  at the anchored moments. D rejects an entire open neighborhood around
+  their center. Checking27 points proves27 witnesses, not that the entire
+  closed circuit cube preserves C. Four full C/D words do not classify all
+  words. The exact all-negative-circuit relaxation in the current synthesis
+  has positive D-H4 determinant but negative D-H3; retain joint PSD.
+- [General y-linear carrier genus](../05-knowledge/results/continuing9_20260907_ylinear_genus.md):
+  finitely many critical values does not mean finitely many critical points.
+  Preserve the primitive invariant I when the generator is f(I); otherwise
+  the generic fibre can split. The constant nonzero y coefficient matters:
+  gamma(p)=p²,A=0 changes genus6 to8. Non-LND and compositions with inverse
+  time remain exact hostiles to broader rationality prohibitions.
+
 ## 2026-09-06 continuing8 -- factorial rationality and circuit types
 
 - [THM-3010 correction](../05-knowledge/results/continuing8_20260906_ballot_repair.md):
