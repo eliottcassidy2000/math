@@ -1,0 +1,21 @@
+ACTUAL_GRAPH: forbid simultaneous24--18 and24--(4 or16); complete binary choices per24 vertex
+UNIVERSE15 inherited words;29 branches; MINIMUM tree on each permitted graph; every selected edge passes its cut condition
+0 [1, 9, 16, 18, 24, 32, 60] E 116 branch_costs [216, 114] closed False
+1 [4, 4, 4, 9, 9, 18, 24] E 42 branch_costs [114, 266] closed True
+2 [4, 4, 8, 9, 9, 18, 24] E 42 branch_costs [114, 168] closed True
+3 [4, 4, 9, 9, 16, 18, 24] E 50 branch_costs [114, 302] closed True
+4 [4, 4, 9, 9, 18, 24, 32] E 66 branch_costs [114, 190] closed True
+5 [4, 5, 9, 18, 24, 30, 32] E 79 branch_costs [162, 180] closed True
+6 [4, 8, 8, 9, 9, 18, 24] E 42 branch_costs [114, 92] closed True
+7 [4, 8, 9, 9, 16, 18, 24] E 50 branch_costs [114, 148] closed True
+8 [4, 8, 9, 9, 18, 24, 32] E 66 branch_costs [114, 92] closed True
+9 [4, 9, 9, 16, 16, 18, 24] E 58 branch_costs [114, 226] closed True
+10 [4, 9, 9, 16, 18, 24, 32] E 74 branch_costs [114, 112] closed True
+11 [5, 8, 9, 18, 24, 30, 32] E 79 branch_costs [162, 66] closed False
+12 [5, 8, 9, 30, 32, 36, 48] E 103 branch_costs [102] closed False
+13 [5, 9, 16, 16, 18, 24, 30] E 71 branch_costs [162, 208] closed True
+14 [5, 9, 16, 18, 24, 30, 32] E 87 branch_costs [162, 66] closed False
+DELETED [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 13] REMAINING [0, 11, 12, 14]
+SCOPE actual connected seven-complement with selected six gcd7200; no claim on disconnected complements or all7200 closure
+CERTIFICATE_SHA256 4008a6ae441672637becabb0f0ba17f8e0fe9e5975657fe9dddefe2bb5766e79
+PASS 549 always-active exact gates; raw LF

@@ -1,0 +1,25 @@
+THIRD_WEDGE margins24,18,30; complete231*141=32571 native arm products
+PARTITION arm-sum32541; low-credit30; prime3 inconsistencies26; jointly realizable4, minimum forest162>107
+REJECTED_FIRST {'arms': [[188, 159, 0], [145, 153, 66]], 'primitive': [9588, 8109, 7685], 'scale_gcd': 6, 'actual_margins': [72, 18, 30]}
+ACCEPTED [{'arms': [[188, 159, 0], [5, 237, 66]], 'primitive': [14852, 12561, 265], 'scale_gcd': 6, 'actual_margins': [24, 18, 30], 'pair': [6, 265, 14852, 96], 'forest': 162}, {'arms': [[212, 141, 0], [5, 237, 66]], 'primitive': [16748, 11139, 235], 'scale_gcd': 6, 'actual_margins': [24, 18, 30], 'pair': [6, 235, 16748, 96], 'forest': 162}, {'arms': [[68, 249, 0], [5, 237, 66]], 'primitive': [5372, 19671, 415], 'scale_gcd': 6, 'actual_margins': [24, 18, 30], 'pair': [6, 415, 5372, 96], 'forest': 162}, {'arms': [[44, 267, 0], [5, 237, 66]], 'primitive': [3476, 21093, 445], 'scale_gcd': 6, 'actual_margins': [24, 18, 30], 'pair': [6, 445, 3476, 96], 'forest': 162}]
+PROFILES 376 reconstructed with all strict walls and literal minimum/maximum checks
+TOPOLOGY15 original words;37 complete role branches; actual connected-complement deletion13
+0 E 116 branch_costs [216, 114] closed False
+1 E 42 branch_costs [114, 266] closed True
+2 E 42 branch_costs [114, 168] closed True
+3 E 50 branch_costs [114, 302] closed True
+4 E 66 branch_costs [114, 190] closed True
+5 E 79 branch_costs [162, 198, 276, 210] closed True
+6 E 42 branch_costs [114, 92] closed True
+7 E 50 branch_costs [114, 148] closed True
+8 E 66 branch_costs [114, 92] closed True
+9 E 58 branch_costs [114, 226] closed True
+10 E 74 branch_costs [114, 112] closed True
+11 E 79 branch_costs [162, 198, 162, 96] closed True
+12 E 103 branch_costs [102] closed False
+13 E 71 branch_costs [162, 198, 304, 238] closed True
+14 E 87 branch_costs [162, 198, 162, 96] closed True
+REMAINING_WORDS [[1, 9, 16, 18, 24, 32, 60], [5, 8, 9, 30, 32, 36, 48]]
+SCOPE third native wedge full13 closure needs no connectivity; two-word reduction requires actual connected complement;7200 not closed
+CERTIFICATE_SHA256 60a6de57a623dbe64a23a77113f140b312f5496247c2253fbe695872740039e9
+PASS 78854 always-active exact gates; raw LF

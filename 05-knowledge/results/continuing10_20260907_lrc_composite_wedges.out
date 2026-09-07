@@ -1,0 +1,12 @@
+ATLAS 5855 complete strict ratios; oriented arm domains316,316,231
+PROFILE_UNIVERSES each23751; forced(4,24,18):1033/max108; (16,24,18):949/max116; (24,18,30):162/max107
+ALL_WEDGES [4, 24, 18] universe72996; arm_sum 72939 composite 57 zero 5 minimum 114
+ALL_WEDGES [16, 24, 18] universe72996; arm_sum 72782 composite 214 zero 30 minimum 142
+THIRD_PATTERN (3476,21093,445), scale gcd6; exact pair credits0,96,66; forest162>107
+SELECTED_BANK29 orientations;20 valid on10 words; all20 short-pair closures and structural family tags; no all15-word closure
+SELECTED_FOREST_CREDITS [(0, 0, 116, 389), (5, 0, 79, 276), (6, 0, 42, 114), (6, 1, 42, 114), (6, 2, 42, 114), (6, 3, 42, 114), (7, 0, 50, 360), (7, 1, 50, 360), (8, 0, 66, 114), (8, 1, 66, 114), (9, 0, 58, 256), (9, 1, 58, 384), (9, 2, 58, 256), (9, 3, 58, 384), (10, 0, 74, 256), (10, 1, 74, 256), (11, 0, 79, 162), (13, 0, 71, 304), (13, 1, 71, 432), (14, 0, 87, 304)]
+NATIVE_PROFILES 1154 including composite ratios outside the strict atlas; full intervals/events reconstructed and semantically pinned
+CONTROLS strict endpoint0 versus false closed credit2; worst-tree allsix zeros and2020 safe; nonunit disconnected full13 safe counts [2541, 2504, 2476]
+SCOPE conditional actual13 safety families, arbitrary other four tails, no connectivity or decoder/box premise; remaining7200 open
+CERTIFICATE_SHA256 890d00d44f0195765d62fe1d40b59ad102311f34a84a42a5fddc229d037209e9
+PASS 4311951 always-active exact gates; raw LF

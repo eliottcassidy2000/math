@@ -1,0 +1,5 @@
+TABLE all21 weights independently minimized over complete5855 atlas; unique residual connected six-edge tree PASS
+ARMS full317/231; low14/5 allzero; every70 actual primitive endpoint minimum142>116 PASS
+PROFILE_UNIVERSE 4464 complete-atlas pair profiles; 618 native arm/endpoint profiles with literal extrema
+PRIMARY all618 native records,548 directed arms,70 products and21 entries match; literal full13 safe2579 PASS
+PASS 6617 always-active independent exact gates; raw LF

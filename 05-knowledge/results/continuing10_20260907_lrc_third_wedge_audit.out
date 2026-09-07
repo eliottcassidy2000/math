@@ -1,0 +1,22 @@
+THIRD_WEDGE arms 231 141 all products 32571 high 32541 low 30 inconsistent 26 valid 4
+VALID_PATHS [(44, 267, 0, 5, 237, 66, (3476, 21093, 445), 96, 162), (68, 249, 0, 5, 237, 66, (5372, 19671, 415), 96, 162), (188, 159, 0, 5, 237, 66, (14852, 12561, 265), 96, 162), (212, 141, 0, 5, 237, 66, (16748, 11139, 235), 96, 162)]
+CONDITIONED_WORDS attempted 23751 valid 162 maximum 107
+NATIVE_PROFILES 376 strict walls and literal extrema verified
+TOPOLOGY labeled_trees 16807 branches 37 deleted [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 13, 14]
+WORD (0, 116, [216, 114], False)
+WORD (1, 42, [114, 266], True)
+WORD (2, 42, [114, 168], True)
+WORD (3, 50, [114, 302], True)
+WORD (4, 66, [114, 190], True)
+WORD (5, 79, [162, 198, 276, 210], True)
+WORD (6, 42, [114, 92], True)
+WORD (7, 50, [114, 148], True)
+WORD (8, 66, [114, 92], True)
+WORD (9, 58, [114, 226], True)
+WORD (10, 74, [114, 112], True)
+WORD (11, 79, [162, 198, 162, 96], True)
+WORD (12, 103, [102], False)
+WORD (13, 71, [162, 198, 304, 238], True)
+WORD (14, 87, [162, 198, 162, 96], True)
+REMAINING [[1, 9, 16, 18, 24, 32, 60], [5, 8, 9, 30, 32, 36, 48]]
+PASS 2605 always-active exact gates

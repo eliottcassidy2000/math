@@ -1,0 +1,5 @@
+Remaining A word [1, 9, 16, 18, 24, 32, 60] E116: CLOSED relative to actual connected strict complement
+All21 inherited minima;128 subgraphs; one residual tree [(0, 1), (1, 3), (2, 5), (3, 4), (4, 5), (4, 6)]
+Complete directed alphabets317/231; budget<=2 arms14/5; all70 native products give endpoint142
+Profiles 618 actual full13 safe count 2579 strict endpoint hostile0 versus false2
+Always-active exact gates: 1222799

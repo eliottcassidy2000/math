@@ -1,0 +1,6 @@
+PASS independent closed-nonpositive-octant audit
+Native D moments, literal determinants, positive denominators, full curved chart and all-z tail independently reconstructed.
+Complete inverse Bernstein arrays: [133, 40] all coefficients strictly positive including the boundary.
+Exact controls retain both one-determinant failures, all ties, two-negative through-six survivors and four full-model points.
+Only the closed three-nonpositive octant is excluded; general two-negative model exclusion remains OPEN.
+Always-active exact gates 129

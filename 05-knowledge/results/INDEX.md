@@ -1,5 +1,13 @@
 # Script Results Index
 
+- [Native LRC wedges](continuing10_20260907_lrc_composite_wedges.md),
+  [joint D-moment octant exclusion](continuing10_20260907_nonpositive_circuits.md),
+  and [global source-linear carrier exclusion](continuing10_20260907_dg_linear_carrier.md)
+  are **PROVED + INDEPENDENTLY AUDITED**. The
+  [third-wedge topology](continuing10_20260907_lrc_third_wedge.md) deletes13/15
+  connected7200 words; [last A](continuing10_20260907_lrc_last_a.md) closes another.
+  The final connected7200 word is under independent review.
+
 - [Two-direction repair barrier](continuing10_20260907_no3_repair.md):
   **PROVED + FINITE-EXACT + INDEPENDENTLY AUDITED.** A native capacity-two
   matching potential raises the uniform fixed-row deletion mean to

@@ -1,0 +1,9 @@
+FULL GLOBAL LAYER: O(W) intersect {deg_t<=1}=span(1,t,j,u,v,b).
+UNBOUNDED DESCENT (A!=0): J(F,K[x,t]) intersect K[x]=A(x)K[x]; ker J(F,-)=K[F].
+CONSEQUENCE: no nonconstant F in that global layer has a global regular nonzero-constant-Jacobian mate.
+HOSTILE: F=(x-1)^4*t+x^2-4x is globally critical-free and separates D.
+RATIONAL MATE: 1/(3*(x-1)^3); cancelling its vertical pole forces a pole on the other F=-3 component.
+DISTINCT-ROOT SUBMERSIONS: residue 2/(a*(h-k)^3) excludes even rational mates.
+LAURENT LAYER DIMENSIONS [(1, 3), (2, 4), (3, 5), (4, 6), (5, 6), (6, 6), (7, 6), (8, 6)]
+LITERAL FINITE COEFFICIENT SYSTEMS [('nonconstant_simple', 1, False), ('nonconstant_simple', 2, False), ('nonconstant_simple', 3, False), ('critical_free_quartic', 1, False), ('critical_free_quartic', 2, False), ('critical_free_quartic', 3, False), ('critical_free_cubic', 1, False), ('critical_free_cubic', 2, False), ('critical_free_cubic', 3, False), ('linear_A', 1, False), ('linear_A', 2, False), ('linear_A', 3, False), ('constant_A', 1, True), ('constant_A', 2, True), ('constant_A', 3, True)]
+PASS 88 always-active exact gates; no arbitrary global coordinate or Keller conclusion.

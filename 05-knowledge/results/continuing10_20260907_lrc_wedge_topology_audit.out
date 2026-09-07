@@ -1,0 +1,19 @@
+WORD 0 E 116 all_branch_minima [216, 114] closed False
+WORD 1 E 42 all_branch_minima [114, 266] closed True
+WORD 2 E 42 all_branch_minima [114, 168] closed True
+WORD 3 E 50 all_branch_minima [114, 302] closed True
+WORD 4 E 66 all_branch_minima [114, 190] closed True
+WORD 5 E 79 all_branch_minima [162, 180] closed True
+WORD 6 E 42 all_branch_minima [114, 92] closed True
+WORD 7 E 50 all_branch_minima [114, 148] closed True
+WORD 8 E 66 all_branch_minima [114, 92] closed True
+WORD 9 E 58 all_branch_minima [114, 226] closed True
+WORD 10 E 74 all_branch_minima [114, 112] closed True
+WORD 11 E 79 all_branch_minima [162, 66] closed False
+WORD 12 E 103 all_branch_minima [102] closed False
+WORD 13 E 71 all_branch_minima [162, 208] closed True
+WORD 14 E 87 all_branch_minima [162, 66] closed False
+UNIVERSE 16807 labelled trees per query;44 complete minima;29 role branches on15 words
+DELETED [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 13] REMAINING [(0, 114, 116), (11, 66, 79), (12, 102, 103), (14, 66, 87)]
+SCOPE actual connected complements only; no physical realization or unsafe claim for remaining words
+PASS 51576 always-active independent exact gates; raw LF
