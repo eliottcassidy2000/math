@@ -1,0 +1,12 @@
+box d=3 q=3/4: delta=1/32; all 3 ternary words PASS
+box d=4 q=7/8: delta=1/1024; all 9 ternary words PASS
+box d=5 q=275/338: delta=1/2048; all 27 ternary words PASS
+box d=6 q=1/2: delta=1/32768; all 81 ternary words PASS
+box d=3 q=1/4: delta=1/256; all 3 ternary words PASS
+box d=4 q=9/10: delta=1/1024; all 9 ternary words PASS
+strict-Newton cubic hostile: R=[4/3, 16/15], C=[4/5], discriminant=-25515/65536
+strict-Newton quartic hostile: R=[8/7, 784/711, 18723/17920], C=[686/711, 13312053/14049280]; negative real roots=2
+anchor S=13,Q=59: q=275/338, every R=338/275, every C=1
+finite universe: 6 boxes; 132 complete ternary words
+certificate SHA256 291b62a5638f8a057ccf514851cb0b5d100a2a61a3da8eff9151b49040be11b9
+PASS 1190 always-active exact gates

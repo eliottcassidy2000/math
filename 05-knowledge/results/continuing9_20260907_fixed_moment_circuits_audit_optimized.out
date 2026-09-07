@@ -1,0 +1,8 @@
+FRESH CENTERS 18 independent rational Sturm and complete inductive ordering
+FROZEN BOXES [d,q,delta,ternary count] [[3,"3/4","1/32",3],[4,"7/8","1/1024",9],[5,"275/338","1/2048",27],[6,"1/2","1/32768",81],[3,"1/4","1/256",3],[4,"9/10","1/1024",9]]
+WHOLE BOX: direct coefficient-interval envelopes retain every sign with at least half the center margin
+TARGETS 132 all literal ratios, moments, simple-positive Sturm counts; root brackets 25
+ANCHOR S13 Q59: exact radius1/2048, all27 words, no interlacer predicate inferred
+CUBIC: complete discriminant boundaries and threshold Q=S^2/2; strict Newton hostiles verified
+PASS 909 always-active exact gates; raw LF
+Scope: positive real roots and rational coefficients where inputs rational; no rational-root or integer-root assertion.

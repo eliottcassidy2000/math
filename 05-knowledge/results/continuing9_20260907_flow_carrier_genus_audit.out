@@ -1,0 +1,5 @@
+INDEPENDENT AUDIT: arbitrary affine y coefficient; finite and infinity branches; native inverse
+UNIVARIATE [R,degree,odd-multiplicity degree,genus] [["3",0,0,2],["p",1,1,3],["p**2",2,0,3],["(p - 1)**2",2,0,3],["(p - 1)**3",3,1,4],["(p - 1)**2*(p + 2)",3,1,4],["p**4*(p**2 + 1)**3",10,2,8],["(p**3 - p + 1)**2",6,0,5],["(p - 2)**3*(p + 1)**4",7,1,6]]
+PRIMITIVE MONOMIAL CONTROLS 63 max exponent pair (12, 8)
+PASS 313 always-active exact gates; raw LF
+Analytic scope: generic curves and individual same-invariant flows; different-flow compositions remain open.

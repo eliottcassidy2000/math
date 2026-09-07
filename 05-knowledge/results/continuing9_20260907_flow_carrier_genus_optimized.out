@@ -1,0 +1,8 @@
+AFFINE MULTIPLIER GENUS: constant 2; nonconstant p-affine 3; nonzero y coefficient 6
+UNIVARIATE [R,degree,squarefree_degree,genus] [["3",0,0,2],["p",1,1,3],["p**2",2,0,3],["(p - 1)**2",2,0,3],["p*(p - 1)**2",3,1,4],["(p - 3)*(p**2 + 1)**2",5,1,5],["p**4*(p + 2)**3",7,1,6],["2*(p - 1)**2*(p**2 + 1)**3",8,2,7]]
+TRIGONAL [alpha,beta,finite branch count,genus] [[0,0,13,6],[1,0,13,6],[0,1,13,6],[1,1,13,6],[-1,2,13,6],[2,-3,13,6],[-2,-2,13,6]]
+PRIMITIVE MONOMIAL [a,b,genus] [[1,1,2],[1,2,3],[1,3,5],[1,4,6],[1,5,8],[2,1,2],[2,3,5],[2,5,8],[3,1,3],[3,2,4],[3,4,7],[3,5,9],[4,1,3],[4,3,6],[4,5,9],[5,1,4],[5,2,5],[5,3,7],[5,4,8],[6,1,4],[6,5,10],[7,1,5],[7,2,6],[7,3,8],[7,4,9],[7,5,11],[8,1,5],[8,3,8],[8,5,11]]
+CRITICAL RESULTANT p**3*(-40*alpha**2 - 148*alpha*beta*p - 120*beta**2*p**2 + 169*p**3)*(-alpha**2 - 2*alpha*beta*p - beta**2*p**2 + p**3)
+FLOW: native carrier and nonzero leading displacement; constant/zero-time and rational non-LND boundaries retained
+PASS 296 always-active exact gates; raw LF
+Scope: same-invariant polynomial compositions only; no exclusion of compositions of distinct flows or all universal carriers.

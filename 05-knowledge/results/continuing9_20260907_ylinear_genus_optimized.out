@@ -1,0 +1,5 @@
+Y-LINEAR CARRIER: R=A(p)+gamma*y, constant gamma!=0, arbitrary polynomial A
+GENUS: 6 for degree A<=1; 2*degree A+3 for degree A>=2
+[A,degree A,finite branch count,genus] [["0",-1,13,6],["2",0,13,6],["1 - p",1,13,6],["p**2",2,15,7],["p**2 + 1",2,15,7],["p**3 - p + 1",3,19,9],["2*p**4 + p - 3",4,23,11],["(p - 1)**5",5,27,13],["p**6 + 2*p**2 + 1",6,31,15]]
+PASS 97 always-active exact gates; raw LF
+Scope: generic curves and same-invariant scalar-time flows; variable gamma(p) and general carriers remain open.

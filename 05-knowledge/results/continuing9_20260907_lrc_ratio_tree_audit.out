@@ -1,0 +1,9 @@
+GENERAL prime-potential normalization: complete false-margin controls 16506
+FIXED_TREE bank:29 orientations,20 distinct realizations on10 words,8 duplicate failures,1 valuation failure
+ACTUAL seven-tail: all21 intersections and7200 cells agree; six atlas credits0 at alpha1/2
+COMPOSITE: independent197 interval intersections;344 walls+344 chambers; every3600-cell grid enumerated
+COMPOSITE min57 max116; sheet credit114; declared-phase credit232; minimizer 3/623
+CONDITIONAL:23751 candidates,1033 complete126-profile survivors,maximum108,uniform margin6
+FULL13 positive control: all safe lifts 2476 ; no W=Vdec inference
+CERTIFICATE_SHA256 f93d2c8b4f112027bbba23fa529742cd12ac8107e7c9bfdf57f15d6666799533
+PASS 17915 always-active exact gates; raw LF
