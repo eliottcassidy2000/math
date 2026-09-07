@@ -1,11 +1,11 @@
 {
   "session": "planar-jacobian-sep06",
-  "status": "PROVED scoped results; relative-exactness and nodal precedents credited; JC(2) OPEN",
+  "status": "PROVED scoped results with independent audits; two explicit higher-cusp whole-support curves excluded; new marked infinity survivor; antecedents credited; JC(2) OPEN",
   "created_utc": "2026-09-06",
-  "artifact_count": 34,
-  "program_count": 9,
-  "exact_gates_per_complete_normal_or_optimized_run": 26362,
-  "verification": "Each of the nine programs replayed normally and with optimization; both raw stdout streams match its frozen output byte for byte. Independent analytic audits are separately pinned. Finite gate counts do not replace the universal proofs.",
+  "artifact_count": 71,
+  "program_count": 18,
+  "exact_gates_per_complete_normal_or_optimized_run": 221396,
+  "verification": "All eighteen programs have been replayed normally and with optimization; each raw stdout matches its frozen output byte for byte. Every analytic proof has an independent audit. The exact braid verifier also accepts all 21503 rational path segments and checks both compressed and raw witness hashes. Finite gates do not replace universal proofs or their actual-consumer hypotheses.",
   "program_gates": {
     "weight14": 169,
     "weight14_audit": 93,
@@ -15,9 +15,33 @@
     "hamiltonian": 241,
     "curve_probe": 214,
     "cusp_passport": 16815,
-    "odd_cusp": 4072
+    "odd_cusp": 4072,
+    "discrete_carrier": 67,
+    "global_curve": 56,
+    "alternating": 2085,
+    "resolution_budget": 73,
+    "dg_surface": 62,
+    "boundary_plumbing": 20419,
+    "boundary_braid": 172168,
+    "dg_finite_map": 41,
+    "next_infinity": 63
   },
   "artifacts": [
+    {
+      "path": "04-computation/planar_jc48_sep06_alternating.py",
+      "bytes": 7521,
+      "sha256": "103b2d26ed5ab40911bc78ccb1573d0e6edcdd3bfacd726819142d968b66ffe3"
+    },
+    {
+      "path": "04-computation/planar_jc48_sep06_boundary_braid.py",
+      "bytes": 9080,
+      "sha256": "459fc3a3920f2335331ee69704accb170a3b3c5ca31f6903c009672faf6d6046"
+    },
+    {
+      "path": "04-computation/planar_jc48_sep06_boundary_plumbing.py",
+      "bytes": 8158,
+      "sha256": "5d0cf9812c611bbc1d467800e8902fee22bb1019c6ced34f1d1fbb03ce838f8a"
+    },
     {
       "path": "04-computation/planar_jc48_sep06_collision.py",
       "bytes": 8662,
@@ -34,6 +58,26 @@
       "sha256": "8a7d40c0f001a2063f976b949d49033087adc3ae1616072c1c644172918e3d6f"
     },
     {
+      "path": "04-computation/planar_jc48_sep06_dg_finite_map.py",
+      "bytes": 4618,
+      "sha256": "e1f4474f580b9cd076f1c00ebdb34aa9451226ed8716a74e044bf5775e31315f"
+    },
+    {
+      "path": "04-computation/planar_jc48_sep06_dg_surface.py",
+      "bytes": 7080,
+      "sha256": "f41184dbb2e0f6cc4159747e3149e2ccdb8d7af0c011aaff6ddb1024ff6fcb57"
+    },
+    {
+      "path": "04-computation/planar_jc48_sep06_discrete_carrier.py",
+      "bytes": 7881,
+      "sha256": "f748d1b7f1ce09b2a1ab7f72bf9fb397b2bb4bc3ae1a24951041ad1b90ca8dcd"
+    },
+    {
+      "path": "04-computation/planar_jc48_sep06_global_curve.py",
+      "bytes": 6991,
+      "sha256": "6a5ef57de9491090c013ced57355d888e5fb7959cd45c8f78fb7af7fabf0478d"
+    },
+    {
       "path": "04-computation/planar_jc48_sep06_hamiltonian.py",
       "bytes": 8449,
       "sha256": "ba65f911e64907cd41d7a950263e281a8da370045c9da40668796f1245a8df6b"
@@ -44,9 +88,19 @@
       "sha256": "a1a90e2827316bf1da3fe4c99570c093101dda892b387c27e1ef193bc9e82e21"
     },
     {
+      "path": "04-computation/planar_jc48_sep06_next_infinity.py",
+      "bytes": 5835,
+      "sha256": "4e39a2fecef78b7b312d4cbec3606bdef3d9d5fbd25f3630d3ce6c4c461cf4e2"
+    },
+    {
       "path": "04-computation/planar_jc48_sep06_odd_cusp.py",
       "bytes": 9173,
       "sha256": "91f487bac1217da20f235ec0746fd7d587b8d5fa3e4ce8f304d19472df790879"
+    },
+    {
+      "path": "04-computation/planar_jc48_sep06_resolution_budget.py",
+      "bytes": 7282,
+      "sha256": "47f1e5775e8447ddd199fe6c4f7f358ed3091031cb54cd1f54dd9a0480e2a387"
     },
     {
       "path": "04-computation/planar_jc48_sep06_torsion.py",
@@ -62,6 +116,56 @@
       "path": "04-computation/planar_jc48_sep06_weight14_audit.py",
       "bytes": 5164,
       "sha256": "03784e94c50a07772b0a1dce3a7961a3c0c2f51fd666073801c02f87e23808d0"
+    },
+    {
+      "path": "05-knowledge/results/planar_jc48_sep06_alternating.md",
+      "bytes": 13961,
+      "sha256": "8a5e5bfdfbab1468cde7568bc372d4dcd542bfb60e766949e5135b97aeaa2089"
+    },
+    {
+      "path": "05-knowledge/results/planar_jc48_sep06_alternating.out",
+      "bytes": 867,
+      "sha256": "805a8e3f95b718b0dbd7477028867d54542b9fcf3cd35552e8c8e94408dbde2e"
+    },
+    {
+      "path": "05-knowledge/results/planar_jc48_sep06_alternating_audit.md",
+      "bytes": 6427,
+      "sha256": "20640789f6f48247c5e8e3d9c667557352484b7a938396e65dbdcaa1c42d5c81"
+    },
+    {
+      "path": "05-knowledge/results/planar_jc48_sep06_boundary_braid.md",
+      "bytes": 14180,
+      "sha256": "05995cf2ffbf090a0c3237eda79b77ad4c3ca077d6d10b6862f96a891eddbda5"
+    },
+    {
+      "path": "05-knowledge/results/planar_jc48_sep06_boundary_braid.out",
+      "bytes": 635,
+      "sha256": "295b812bdfb38a6b0b2a80dddf3fab26de80d3ed00a6d30414f1cc05951a3b3d"
+    },
+    {
+      "path": "05-knowledge/results/planar_jc48_sep06_boundary_braid_audit.md",
+      "bytes": 8189,
+      "sha256": "598fdccb4c893959e45d39f9e801465e3d5da92389eeed750a8453ac01bc38a5"
+    },
+    {
+      "path": "05-knowledge/results/planar_jc48_sep06_boundary_braid_certificate.json.gz",
+      "bytes": 1393532,
+      "sha256": "a06d7434da196de9a0f721fd913362dac7fd678358673c8d929d7f2c2a2c6951"
+    },
+    {
+      "path": "05-knowledge/results/planar_jc48_sep06_boundary_plumbing.md",
+      "bytes": 15913,
+      "sha256": "cc767d7a02d7763b887184c2544c873a54d0670c86d0ee7a2c7f1810f3cb18bb"
+    },
+    {
+      "path": "05-knowledge/results/planar_jc48_sep06_boundary_plumbing.out",
+      "bytes": 1936,
+      "sha256": "054c3d5613625f4e306883e989104a87951b7bea11f18fd6f160c81da496db6b"
+    },
+    {
+      "path": "05-knowledge/results/planar_jc48_sep06_boundary_plumbing_audit.md",
+      "bytes": 8014,
+      "sha256": "b950529fc1ca2032ae8ddf586590284ea1ee5cd93a90bce7a21cda8f0bb0c5cf"
     },
     {
       "path": "05-knowledge/results/planar_jc48_sep06_collision.md",
@@ -109,6 +213,66 @@
       "sha256": "308094dd7e3df9dff412b024e7aec2df042d0d08983bd33782f4aec482e5ff2f"
     },
     {
+      "path": "05-knowledge/results/planar_jc48_sep06_dg_finite_map.md",
+      "bytes": 9708,
+      "sha256": "930493dcaf6042adcebbd5b792208d96f3de61810cbbf7809db838ec7869c051"
+    },
+    {
+      "path": "05-knowledge/results/planar_jc48_sep06_dg_finite_map.out",
+      "bytes": 757,
+      "sha256": "f12e3a3f7d0b558fef894aab4d3addf3284b25ac2b0559e0014e08c4409c6b62"
+    },
+    {
+      "path": "05-knowledge/results/planar_jc48_sep06_dg_finite_map_audit.md",
+      "bytes": 3208,
+      "sha256": "c9a7b20b2e28d0624e820aed596b9e198f8dadbc74549b45c4b14a7db7ca537b"
+    },
+    {
+      "path": "05-knowledge/results/planar_jc48_sep06_dg_surface.md",
+      "bytes": 14143,
+      "sha256": "e6f18b2a2e1d6c0830c850b0617a2675e90d8542e1cfc0b8fcf1d5b522330fdb"
+    },
+    {
+      "path": "05-knowledge/results/planar_jc48_sep06_dg_surface.out",
+      "bytes": 973,
+      "sha256": "d28d37bf908fbd196b679117eb4a43f2ec7b37b76f375ca540d822bb09150641"
+    },
+    {
+      "path": "05-knowledge/results/planar_jc48_sep06_dg_surface_audit.md",
+      "bytes": 3572,
+      "sha256": "8938517f42e9f44cf13a092f3f662e81812fad2e9fd8cdba6190f5543f6ed155"
+    },
+    {
+      "path": "05-knowledge/results/planar_jc48_sep06_discrete_carrier.md",
+      "bytes": 12357,
+      "sha256": "7679cf1bbda48129d3bd93bc6662e312e96c178d65af38bfd40c11fad0724eb0"
+    },
+    {
+      "path": "05-knowledge/results/planar_jc48_sep06_discrete_carrier.out",
+      "bytes": 940,
+      "sha256": "528bb8a3a7ca013d17e80b32cea8cfd0b7c31a4ebc3ddd692a151f881808884e"
+    },
+    {
+      "path": "05-knowledge/results/planar_jc48_sep06_discrete_carrier_audit.md",
+      "bytes": 6139,
+      "sha256": "4ca743ca25723c93aad4e809865ea7c241e595c231508549247b6a574d536ce6"
+    },
+    {
+      "path": "05-knowledge/results/planar_jc48_sep06_global_curve.md",
+      "bytes": 15125,
+      "sha256": "dd2ede5645908239d6d88a84ad36c8d9cf8bc756b467e0e564d94953f8ede1eb"
+    },
+    {
+      "path": "05-knowledge/results/planar_jc48_sep06_global_curve.out",
+      "bytes": 1070,
+      "sha256": "c7016a7d0d45b28f777da16c784373712507128f5e7a1894361a262c0fe768cc"
+    },
+    {
+      "path": "05-knowledge/results/planar_jc48_sep06_global_curve_audit.md",
+      "bytes": 8426,
+      "sha256": "510ddb6a3f78b097e39164affe44a1da646fe0180a01939ea808ba7785dddd44"
+    },
+    {
       "path": "05-knowledge/results/planar_jc48_sep06_hamiltonian.md",
       "bytes": 15307,
       "sha256": "637d8737bb1f315a9a53ac58ed3bab22dcfe1a89c05d13d126f260c03dd53a9d"
@@ -139,9 +303,24 @@
       "sha256": "de6b040e924437d628cd82b17da44aafe1692c9d868111026a51bedb8018c8c2"
     },
     {
+      "path": "05-knowledge/results/planar_jc48_sep06_next_infinity.md",
+      "bytes": 7733,
+      "sha256": "a30037d9371abda55ce70e030c011feee22a119913c1667e95ea121acb472f33"
+    },
+    {
+      "path": "05-knowledge/results/planar_jc48_sep06_next_infinity.out",
+      "bytes": 1565,
+      "sha256": "4b6d18e523c5163f538a84c645395cf37cfe9539aec1c069a743f4803bf3fa35"
+    },
+    {
+      "path": "05-knowledge/results/planar_jc48_sep06_next_infinity_audit.md",
+      "bytes": 8150,
+      "sha256": "6cdfde5cabb32b6e51b1f62dfbc003a78e4d58094babd3ce621ce12b17375ce1"
+    },
+    {
       "path": "05-knowledge/results/planar_jc48_sep06_odd_cusp.md",
-      "bytes": 14697,
-      "sha256": "d074141f587f192ea71c5610c06cce96f91f728eb6531e294a9634a7ee10cf15"
+      "bytes": 15160,
+      "sha256": "2a3fe565a957e3adf2802a12b9de409bb3fda71186f472feec6ef46194cd3a57"
     },
     {
       "path": "05-knowledge/results/planar_jc48_sep06_odd_cusp.out",
@@ -152,6 +331,21 @@
       "path": "05-knowledge/results/planar_jc48_sep06_odd_cusp_audit.md",
       "bytes": 9094,
       "sha256": "8a16a7d433f56fb007478223341ece4299a649a645a7b17341c7c48bdd3ae7b0"
+    },
+    {
+      "path": "05-knowledge/results/planar_jc48_sep06_resolution_budget.md",
+      "bytes": 14084,
+      "sha256": "72d41b017ce0aaa7ceac8c7718cfbeb5128d40846acb9592d2f43d638f358606"
+    },
+    {
+      "path": "05-knowledge/results/planar_jc48_sep06_resolution_budget.out",
+      "bytes": 428,
+      "sha256": "d371ee9ccd8e4de711e5f243817bf428da0521e97921c216d8d14fd118e7087b"
+    },
+    {
+      "path": "05-knowledge/results/planar_jc48_sep06_resolution_budget_audit.md",
+      "bytes": 9880,
+      "sha256": "25ab4e737a49e67c955000854256262868ad0d3772dd979c533f954357a8ff97"
     },
     {
       "path": "05-knowledge/results/planar_jc48_sep06_torsion.md",
@@ -189,5 +383,10 @@
       "sha256": "1a1d5ca435e313273f5f406d395dc5ce7e7e10b17fa9466a3a974ee2e37c1929"
     }
   ],
-  "checkpoint_update": "Added independently audited ordinary- and odd-cusp bundles. Of the original 26 pinned artifacts, only the curve proof note gained an explicit forward status pointer to its subsequently closed cusp boundary. Every original source, output and audit remains byte-identical. The ten board scouting identities are separate from this program count."
+  "checkpoint_update": "Extended the prior 34-artifact checkpoint by nine independently audited bundles and one compressed rational witness (37 new artifacts). Of the prior 34 pins, only odd_cusp.md gained a current-target forward status pointer; its theorem, source, output and independent audit are unchanged. Every other inherited artifact remains byte-identical. New resolution_budget.md and alternating.md have explicit forward pointers to subsequent closures. Historical frozen outputs describe their own test boundaries, not the current full target status.",
+  "compressed_certificate": {
+    "path": "05-knowledge/results/planar_jc48_sep06_boundary_braid_certificate.json.gz",
+    "decompressed_bytes": 5621433,
+    "decompressed_sha256": "5e4c61c9a64e1a30ab841de524be966583ee2a29929c1544aea6f4e2f4675868"
+  }
 }

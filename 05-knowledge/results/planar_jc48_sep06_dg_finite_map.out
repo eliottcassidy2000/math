@@ -1,0 +1,12 @@
+STATUS: exact finite flat degree-four control; not Keller
+projective quartic: T X^4+X^2 R^2+B R^4=0; charts recover W exactly
+free module basis: 1,u=x^2t,j=xt,v=x(1+x^2t)
+trace/binary discriminant: 16*T*B*(1-4*T*B)^2
+ramification divisor: D+Z+C, each generic index2; branch: axes and hyperbola
+generic profiles: T=0 and B=0 have (e,f)=(2,1)+(1,2); hyperbola has(2,2)
+source Jacobian: 2*x*(1+2*x^2*t); ramification remains inside source A2
+relative primitive obstruction: no global g with dt wedge dg=c*omega, c!=0
+finite (F(t),g) maps cannot be etale throughout source A2
+scope: one explicit surface and fixed-first-coordinate class; no general Keller exclusion
+semantic_sha256=a2d4e154df72764f0e53027b12eb6587800c416ccc5357ce2acc47475f1c89cc
+PASS gates=41

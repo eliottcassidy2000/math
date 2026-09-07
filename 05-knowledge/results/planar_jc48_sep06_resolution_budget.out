@@ -1,0 +1,6 @@
+Nori consequence: margin = 3*degree - 2 + 2*genus - sum(multiplicities).
+Inherited sextic: margin 2, abelian affine complement and Keller support excluded.
+New sextic: one (2,5) cusp, four nodes, infinity (2,9); margin 0, OPEN beyond this test.
+Hostile: ordinary cusp has margin 0 and a nonabelian S3 quotient.
+PASS 73 always-active exact gates
+semantic SHA-256: 5fe50412c3ad932cd59766107cdc0c80e38e176c65c93af11f72c50443b2e8db

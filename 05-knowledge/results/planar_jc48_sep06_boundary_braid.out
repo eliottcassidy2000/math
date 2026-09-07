@@ -1,0 +1,9 @@
+RATIONAL ROUCHE CERTIFICATE PASS; analytic transport proof required separately
+segment counts=[15987, 1330, 1824, 2362]
+braid words=[[2, 3, 2, -1, -2, 1, 1, 1, 1, 2, 1, -3, -2], [2, 3, 2, -1, 2, 1, -2, -3, -2], [2, 3, -2, -1, -3, -2, -3, 2, 3, -1, -3, 1, 3, 2, 3, 1, 2, -3, -2], [2, 3, 2, 1, 2, 2, -1, -2, -3, -2]]
+40^3 fixed-first-cycle tuple counts=[30400, 760, 19, 1]
+surviving tuples=[(0, 0, 0, 0)]
+transitive tuples=[]
+certificate SHA256=5e4c61c9a64e1a30ab841de524be966583ee2a29929c1544aea6f4e2f4675868
+compressed certificate SHA256=a06d7434da196de9a0f721fd913362dac7fd678358673c8d929d7f2c2a2c6951
+PASS always-active gates=172168

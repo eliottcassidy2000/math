@@ -1,0 +1,10 @@
+STATUS: FINITE-EXACT controls; all-size and geometric proofs in note
+hypergraph_universe: all 1024 three-uniform hypergraphs on five labels
+hypergraph_order_histogram=[[1, 1], [3, 10], [12, 55], [60, 958]]
+named_groups: connected seven-label=2520; disconnected six-label=9; containing-only hostile=24
+semilocal_fixture={"eta": [0, 2, 5, 3, 4, 1], "global_order": 360, "local_order": 60, "sigma": [3, 1, 2, 4, 0, 5], "tau": [1, 2, 0, 3, 4, 5]}
+prime_universe: all unordered (e,f,actual) rows of total degree six, inertia 3111, actual count three
+prime_rows=[[[1, 3, true], [3, 1, false]], [[1, 1, true], [1, 2, true], [3, 1, false]], [[1, 1, true], [1, 1, true], [1, 1, true], [3, 1, false]]]
+scope: no full curve-complement representation or Keller realization asserted
+semantic_sha256=544ef0c30ebc6f0b221dfee251dda42a08087a1daa953ef68dffc5d4d0cd5335
+PASS gates=2085

@@ -43,17 +43,17 @@
   Its [35-artifact manifest](continuing6_20260906_manifest.json) is retained.
 
 - [48-hour planar Jacobian session](planar_jc48_sep06_board.md):
-  **PROVED + INDEPENDENTLY AUDITED**, with inherited results distinguished.
-  Weight22 moving-prefix transport replaces the row15 weight24 payer;
-  collision periods in three dimensions retain a quadratic quotient;
-  component-labelled response torsion carries an intrinsic connection.
-  Exact source-form Hamiltonians fail local nilpotence. A sole irreducible
-  support with one ordinary cusp and nodes is excluded, closing the entire
-  explicit (4,6) family; classical low-degree and nodal inputs are credited.
-  One (2,m) cusp with at least two nodes forces d-1 to divide m; any Keller
-  realization of the next concrete target would have mapping degree6.
-  [Manifest](planar_jc48_sep06_manifest.json):34 frozen artifacts,
-  nine programs,26362 exact gates. Full JC(2) and termination remain OPEN.
+  **PROVED + INDEPENDENTLY AUDITED**, with inherited results credited.
+  One-way carrier descent forces polynomial automorphism scalings.
+  Nori excludes the five-node sextic; marked infinity plumbing and an
+  independent rational braid certificate exclude its four-node equality
+  successor. A three-node successor has a genuine marked infinity A6
+  witness; its full affine complement is the next target. A classical V4
+  realizes the bare surface constraints and a finite quartic control;
+  the full shear-orbit carrier and prescribed-first-coordinate classes
+  have precise global obstructions.
+  [Manifest](planar_jc48_sep06_manifest.json):71 artifacts, eighteen
+  programs,221396 exact gates per mode. Full JC(2) remains **OPEN**.
 
 - [Previous continuing synthesis](continuing5_20260906_synthesis.md):
   full-model beta simplicity, the original-phase rectangle, the ordered

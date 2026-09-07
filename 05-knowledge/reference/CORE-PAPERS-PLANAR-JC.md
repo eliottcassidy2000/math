@@ -74,3 +74,40 @@ established inputs**, not newly reproved here. Their d is the function-field
 degree used by the finite-envelope passport, not the degree of a coordinate
 polynomial. The cusp application does not require a degree-five theorem,
 any gcd-of-coordinate-degrees claim, or any higher-dimensional statement.
+
+
+## Global complement tests and the actual line at infinity
+
+Madhav V. Nori, *Zariski's conjecture and related problems*, Ann. Sci.
+École Norm. Sup.(4)16(1983),305–344:
+[primary PDF](https://www.numdam.org/article/ASENS_1983_4_16_2_305_0.pdf),
+[DOI](https://doi.org/10.24033/asens.1450). Proposition3.27, journal p331,
+assumes a smooth projective surface, nodal D, transverse D/E intersections,
+and D_i^2>2r(D_i). It makes the complement-map kernel abelian. The root
+and two independent agents read the actual statement and hypotheses.
+The [five-node sextic application](../results/planar_jc48_sep06_global_curve.md)
+resolves the curve together with the original line at infinity and removes
+all exceptional curves, so the target complement is A2 minus one point.
+The [adjunction form](../results/planar_jc48_sep06_resolution_budget.md)
+is a derived classical criterion; equality alone does not imply abelianity.
+
+Constance Leidy and Laurentiu Maxim, *Higher-order Alexander invariants
+of plane algebraic curves*:
+[author PDF](https://people.math.wisc.edu/~maxim/hoA.pdf), Theorem4.7 proof,
+p11. The proof explicitly gives an epimorphism from the actual link-at-infinity
+complement group to the affine curve complement group for any affine curve.
+The general-position-at-infinity assumption used elsewhere in the paper is
+not needed for this epimorphism. A projective-complement group, a local
+infinity cusp group, and this actual link group are different objects.
+
+## Classical affine surface control
+
+Hubert Flenner, Shulim Kaliman and Mikhail Zaidenberg,
+*On the Danilov–Gizatullin isomorphism theorem*:
+[primary author PDF](https://archive.mpim-bonn.mpg.de/2481/1/preprint_2008_83.pdf),
+§1 definition and Theorem1.1. Complements of ample sections of Hirzebruch
+surfaces are the classical Danilov–Gizatullin surfaces; their isomorphism
+type depends on the section's self-intersection. The explicit graph
+complement (P1×P1) minus {z=s^2} has section square4. The source is used
+only to identify that familiar surface. No classification of actual Keller
+finite envelopes is inferred from it.

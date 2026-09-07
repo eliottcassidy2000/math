@@ -1,0 +1,168 @@
+{
+  "arm_determinants": [
+    [
+      [
+        "L"
+      ],
+      2
+    ],
+    [
+      [
+        "E1",
+        "E2"
+      ],
+      3
+    ],
+    [
+      [
+        "E4",
+        "E5",
+        "E6"
+      ],
+      1
+    ],
+    [
+      [
+        "L",
+        "E1",
+        "E2",
+        "E3",
+        "E4"
+      ],
+      9
+    ],
+    [
+      [
+        "E5"
+      ],
+      2
+    ]
+  ],
+  "arrows": 40,
+  "assignments_per_arrow": [
+    100
+  ],
+  "checks": 20419,
+  "fixed_label_distribution": {
+    "1": 2160,
+    "2": 1800,
+    "3": 40
+  },
+  "graph_edges": [
+    [
+      "E1",
+      "E2"
+    ],
+    [
+      "E2",
+      "E3"
+    ],
+    [
+      "E3",
+      "E4"
+    ],
+    [
+      "E3",
+      "L"
+    ],
+    [
+      "E4",
+      "E6"
+    ],
+    [
+      "E5",
+      "E6"
+    ]
+  ],
+  "graph_weights": {
+    "E1": -2,
+    "E2": -2,
+    "E3": -2,
+    "E4": -3,
+    "E5": -2,
+    "E6": -1,
+    "L": -2
+  },
+  "labelled_assignments": 4000,
+  "positive_control": [
+    [
+      0,
+      1,
+      3,
+      2,
+      5,
+      4
+    ],
+    [
+      0,
+      1,
+      2,
+      4,
+      5,
+      3
+    ],
+    [
+      0,
+      1,
+      2,
+      5,
+      3,
+      4
+    ],
+    [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    [
+      0,
+      1,
+      4,
+      2,
+      3,
+      5
+    ],
+    [
+      0,
+      2,
+      1,
+      4,
+      3,
+      5
+    ],
+    [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    [
+      0,
+      2,
+      4,
+      3,
+      1,
+      5
+    ]
+  ],
+  "positive_control_group_order": 60,
+  "semantic_sha256": "6a7b588be824405ada82187b35012650dc96d58da6c793cfaa2ec32e9d84fe9d",
+  "status": "FINITE-EXACT; analytic and actual-complement scope in matching note",
+  "triangle_controls": 400,
+  "trivial_arrow_assignments": 1,
+  "universe": "all A6 assignments to seven fibres, arrow a single 3-cycle",
+  "vertex_multiples_of_arrow_in_H1": [
+    -6,
+    -4,
+    -8,
+    -12,
+    -10,
+    -9,
+    -18
+  ]
+}

@@ -26,11 +26,11 @@ quadratic tangent evaluation, and transverse derivatives of component jets.
 
 | Lane | Preserved object and result | Next decisive question |
 |---|---|---|
-| Anchor: moving source | Weight22 transport has a Hamiltonian realization; exact source-preserving generators all fail local nilpotence | Find a finite or formal carrier that pays later rows while retaining actual depth; additive polynomial flows are excluded in the proved class |
+| Anchor: moving source | Weight22 transport is Hamiltonian; every polynomial source automorphism preserving the full carrier is a scaling | Symplectic full-carrier polynomial repairs are excluded; change the carrier or retain one genuine fixed source |
 | Niche: collision | All scalar two-form periods miss exactly the quadrics through tangent directions in a three-dimensional target | Carry the quadratic data through an actual earlier source deformation and preserve descent |
-| Niche: infinity | Ordinary-cusp-plus-nodes supports are excluded; a single (2,m) cusp with at least two nodes forces d-1 to divide m | Investigate the actual degree-six source for the explicit (2,5)-cusp/five-node target |
+| Anchor: infinity | Nori excludes the five-node target; marked infinity and exact braids exclude the four-node equality target | Test the full affine complement of the new three-node sextic, whose actual infinity group admits A6 |
 | Wildcard: response connection | Full torsion is component-labelled principal parts; the canonical derivative raises every nonzero primary height | Map the actual source-normal response to this operator without changing its polynomial ring |
-| Bridge: finite versus global | Each quotient now has an explicit omitted coordinate | Test the first later row or global extension where that coordinate matters |
+| Wildcard: actual boundary surface | The classical V4 surface realizes the bare constraints and has a finite quartic map; every shear-orbit carrier still collapses its boundary | Both coordinates must escape the collapsed algebra; a first coordinate in C[t] forces interior ramification and even boundary index |
 
 ## Audited checkpoint
 
@@ -127,11 +127,62 @@ quadratic tangent evaluation, and transverse derivatives of component jets.
    retained. Producer4072 gates and the independent audit pass. This is a
    necessary spectrum, not a realization or general JC(2) exclusion.
 
-The [34-artifact manifest](planar_jc48_sep06_manifest.json) pins eight proof
-notes, eight independent audits, nine sources and nine outputs. The nine
-programs report **26,362** exact gates in each combined normal/optimized
-run. Their outputs and the immutable input certificate agree byte for byte.
-Computations support the stated proofs; they are not a census of Keller maps.
+9. [Discrete carrier rigidity](planar_jc48_sep06_discrete_carrier.md) is
+   **PROVED + INDEPENDENTLY AUDITED**. Even one-way polynomial automorphism
+   descent into k[p,y] forces (x,t)->(lambda^-1 x,lambda² t). Jacobian one
+   leaves only the identity. The proof retains the collapsed A1 and G_m
+   components; rational and nontrivial formal controls mark its boundary.
+10. [Five-node global curve](planar_jc48_sep06_global_curve.md) is
+    **PROVED + INDEPENDENTLY AUDITED**: Nori's actual affine-complement
+    criterion gives square12>2N=10 and excludes the earlier target.
+11. [Alternating monodromy and one boundary](planar_jc48_sep06_alternating.md)
+    proves the all-size three-cycle support lemma and audits the actual
+    degree-six A6 / one-(e,f)=(3,1)-boundary profile. Public antecedents
+    for that profile are credited. The class group and canonical Weil
+    class are Z[D] and 2[D]; no smoothness of an actual envelope is assumed.
+12. [Linear resolution criterion](planar_jc48_sep06_resolution_budget.md)
+    proves D²-2N=3e-2+2g-sum m_j on the declared actual resolution.
+    Positive margin excludes whole Keller support by classical Nori.
+    The explicit four-node sextic has margin zero; the ordinary cusp is
+    a nonabelian equality hostile. This test alone gives no equality result.
+13. [Marked infinity plumbing](planar_jc48_sep06_boundary_plumbing.md)
+    is **PROVED + INDEPENDENTLY AUDITED**. For that four-node sextic,
+    two tetrahedral pieces share a three-cycle and can move at most five
+    labels. The actual infinity epimorphism excludes its required A6
+    covering. The whole same-marked-tree/same-passport class is also
+    excluded. A marked A5 image fixing one label prevents any abelianity
+    overclaim. All4,000 raw assignments are checked by20,419 exact gates.
+14. [Independent rational braid route](planar_jc48_sep06_boundary_braid.md)
+    corroborates the same exclusion using21,503 exactly certified path
+    segments and172,168 gates. Four actual loop constraints leave only
+    the constant tuple among all40³ normalized three-cycle assignments.
+    Rational Rouché tubes, marked transport and the monic section were
+    independently audited. Numerical proposals supply no proof authority.
+15. [Classical boundary surface and shears](planar_jc48_sep06_dg_surface.md)
+    gives an explicit V4 with A2 complement, boundary A1, class group Z[D],
+    canonical class2[D], Euler2 and a globally exact source form. The
+    shear (x+f(t),t) extends exactly when f(0)=0. Every nonzero shear
+    changes the old carrier, but its entire orbit algebra still collapses D.
+    These surface invariants alone do not exclude a finite envelope.
+16. [Actual finite quartic and relative primitive](planar_jc48_sep06_dg_finite_map.md)
+    gives a finite flat degree-four map (t,b) on that surface, free global
+    basis and complete discriminant16TB(1-4TB)². Interior ramification
+    remains. Universally, no global g solves dt wedge dg=c omega, c!=0;
+    every finite (F(t),g) map ramifies inside A2 and has even boundary index.
+17. [Next actual infinity survivor](planar_jc48_sep06_next_infinity.md)
+    has one(2,5) cusp, three nodes and infinity(2,11), Nori margin-2.
+    Its actual marked infinity group surjects to A6 with a single-three-cycle
+    meridian. Two order60 pieces can together move all six labels: this
+    is a precise hostile to extending item13. Full affine-complement
+    realization and a polynomial Keller source remain **OPEN**.
+
+The [71-artifact manifest](planar_jc48_sep06_manifest.json) pins seventeen
+proof notes, seventeen independent audits, eighteen sources and eighteen
+outputs, plus the compressed rational-path certificate. The eighteen
+programs report **221,396** exact gates per complete normal or optimized
+replay. Each output is byte-identical in both modes; the braid verifier
+also checks the pinned witness. These are scoped proof controls, not a
+census of Keller maps. No external priority claim is made.
 
 ## Literature and correction recovery
 
@@ -155,13 +206,16 @@ The moving-prefix calculation has first unretained background terms at
 bracket row15 and defect row16. The exact Hamiltonian mechanism is now
 known, and its two distinct failures are proved. Do not search for a
 locally nilpotent Hamiltonian inside the fixed-H carrier: that class is
-excluded. Test source-preserving formal generators against the next row
-and projected depth, or change the carrier while retaining its actual
-source equation. A successful finite table is not polynomial termination.
+excluded. The new discrete theorem also excludes every nonidentity
+polynomial symplectic automorphism with even one-way preservation of the
+whole carrier. A productive repair must change the carrier, preserve only
+one genuine fixed source, or remain explicitly formal. A successful finite
+table is not polynomial termination.
 
 At infinity the exact family and ordinary-cusp-plus-nodes class are closed.
-The higher-cusp spectrum is now proved; the concrete next target below
-forces d=6, a=delta=3, one actual cusp point and five omitted node points.
+The higher-cusp spectrum is proved. Both the five-node target and its four-node equality successor are now
+closed. The new three-node target below forces d=6, a=delta=3, one actual
+cusp point and three omitted node points.
 Keep the actual subset, conjugating loop and fibre counts visible. Its
 abstract passport needs a full complement representation, an actual affine
 source and polynomial completion before it becomes a Keller candidate.
@@ -185,48 +239,43 @@ actual-fibre data remain necessary. That incoming norm interpretation
 agrees with our certified resultant identity and does not change the
 scope of the later cusp exclusion.
 
-### A concrete higher-cusp target
+### Closed targets and the current concrete survivor
 
-**VERIFIED target-curve control / Keller realization OPEN.** The curve
-`(U,V)=(t^4+t^2,t^6+t^5+t^2)` has one (2,5) cusp and **five** ordinary
-nodes. The initial guess of four nodes missed the pair-sum root p=1,
-whose parameters satisfy t^2-t+1=0 and have image (-1,1). The geometry
-agent derived the complete pair quotient; root independently checked the
-ten identities below. This is a concrete target for the higher-cusp
-passport, not a constructed Keller map. These scouting checks are separate
-from the frozen-program gate total above.
+The curve `(t^4+t^2,t^6+t^5+t^2)` is **EXCLUDED** as whole Keller
+nonproperness support by Nori: its resolved square12 exceeds twice its
+five-node count10. The curve `(t^4+t^3+t^2,2t^6+3t^5+2t^3+2t^2)` is
+also **EXCLUDED**, despite Nori equality: its marked infinity group
+cannot supply the actual six-sheet representation. Exact global braid
+constraints independently corroborate this second closure.
 
-The critical gcd is t and the triangular target shear is
-`V-U+U^2=t^5+3t^6+t^8`, giving the sole (2,5) cusp. The nonzero pair sums
-have five simple roots and two distinct parameters each. The displayed
-Groebner ideal excludes off-diagonal tangencies. A possible triple fibre
-would force both `A^2+A-1=0` and `(A-2)(A^2+1)=0`, where A=a+2 and a is
-the common target's first coordinate. Their Bezout identity below excludes
-it. Thus the five pairs have distinct node images.
-Monicity of U gives a finite normalization, and the zero-dimensional
-collision scheme gives birationality and intrinsic pole pair (4,6).
+The [current actual target](planar_jc48_sep06_next_infinity.md) is
 
-Reproduce from any checkout with SymPy:
-
-```sh
-python3 - <<'PY'
-import sympy as S
-s,t,p,A=S.symbols('s t p A')
-U=t**4+t**2; V=t**6+t**5+t**2
-N=S.cancel((U.subs(t,s)-U)/(s-t)); M=S.cancel((V.subs(t,s)-V)/(s-t))
-D=S.diff(U,t).subs(t,s)*S.diff(V,t)-S.diff(U,t)*S.diff(V,t).subs(t,s)
-H=-(p-1)*(p**4+2*p**3+4*p**2+8*p+1)
-checks=[S.gcd(S.diff(U,t),S.diff(V,t))==t,
- S.expand(V-U+U**2)==t**5+3*t**6+t**8, S.gcd(U,V)==t**2,
- S.expand(N-(s+t)*(s*s+t*t+1))==0, S.expand(M.subs(t,-s))==s**4,
- S.rem(S.expand(4*M.subs(t,p-s)-H),s*s-p*s+(p*p+1)/2,s)==0,
- S.discriminant(H,p)==-11776000, S.resultant(H,p*p+2,p)==123,
- S.groebner([N,M,D],s,t,domain=S.QQ)==S.groebner([s+t,t**4],s,t,domain=S.QQ),
- S.expand((A*A-A-1)*(A*A+A-1)-(A+2)*(A-2)*(A*A+1))==5]
-if not all(checks): raise RuntimeError('higher-cusp target control failed')
-print('PASS',len(checks),'exact target-curve identities; no Keller realization')
-PY
+```text
+U=t^4+t^3+t^2,
+V=16t^6+24t^5-19t^3-19t^2.
 ```
+
+Its **audited geometry** is one affine(2,5) cusp, three ordinary nodes,
+and infinity(2,11). The resolution cost is18 and D²=4, giving Nori
+margin-2. Its actual marked infinity tree has an explicit surjective A6
+representation with a single-three-cycle meridian. This boundary witness
+is **not** a representation of the full affine complement until it
+satisfies the additional actual relations. The next cheap decisive test
+is a rationally certified global braid constraint, adapting the validated
+method rather than treating numerical tracking as proof.
+
+In parallel, the explicit DG surface's boundary separator supplies a
+real finite map but forces retained-source ramification in the proven
+first-coordinate class. A new pair must escape both the orbit carrier
+and C[t] as its first-coordinate restriction. Neither condition alone
+pays the bracket-one equation, source entry or the actual finite envelope.
+
+Incoming fe3ac58164's continuing7 synthesis was read before this work.
+Its full singular-fibre and norm controls reinforce the need to preserve
+actual fibres before taking a scalar quotient. Our shared pair equation,
+with a changing residual polynomial, is a concrete internal transport;
+no LRC-to-JC implication is claimed. The board remains the current truth
+source; earlier scouting targets are superseded by these closures.
 
 The heartbeat now runs this board every30 minutes through the stated
 48-hour cutoff. It stays quiet unless there is substantive progress, a

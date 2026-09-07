@@ -1,0 +1,13 @@
+FINITE-EXACT single target curve and complete embedded-resolution controls
+U=t^4+t^2; V=t^6+t^5+t^2
+finite singularities: one (2,5) cusp, five ordinary nodes; no triple fibre
+infinity: unique (2,7) cusp, L_infinity retained in the resolution
+H(p)=(1 - p)*(p**4 + 2*p**3 + 4*p**2 + 8*p + 1)
+implicit F(u,v)=u**6 + 2*u**5 - 10*u**4*v + 10*u**4 - 2*u**3*v**2 - 22*u**3*v + 11*u**3 + 10*u**2*v**2 - 28*u**2*v + 5*u**2 + 6*u*v**3 + 13*u*v**2 - 10*u*v + v**4 + 4*v**3 + 5*v**2
+vertical discriminant=-16*u**5*(u + 1)**2*(4*u + 1)**2*(4*u**4 + 40*u**3 + 120*u**2 + 125*u + 25)**2
+finite chart (orders,leading coefficients)=[[(2, 1), (5, 1)], [(2, 1), (3, 1)], [(2, 1), (1, 1)], [(1, 1), (1, 1)], [(1, -6), (1, 1)]]
+infinity chart (orders,leading coefficients)=[[(2, 1), (6, 1)], [(2, 1), (4, 1)], [(2, 1), (2, 1)], [(2, 1), (1, 2)], [(1, 1/2), (1, 2)], [(1, 1/4), (1, 2)]]
+centre multiplicities=((2, 2, 1, 1), (2, 2, 2, 1, 1))
+D^2=36-10-14=12; 2r(D)=10; strict margin=2
+Nori theorem, complement identifications and monodromy consequence are analytic
+PASS always-active gates=56

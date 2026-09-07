@@ -1,0 +1,14 @@
+STATUS: exact two-chart surface and carrier controls PASS
+surface: (P1_s x P1_z) minus graph z=s^2; ample class(2,1), square4; DG V4
+boundary: D={r=0}=A1, complement U0=A2; Pic=Z[D], K=2[D], Euler=2
+volume: dx wedge dt=r^2 dr wedge db; primitive=(-2-4r^2*b)dr-r^3 db
+carrier on D: (u,p,y)=(-1,0,0); every G_H=1/2+H(0,0)
+separator: x^2(1+u)=-b; this global function is outside k[u,p,y]
+finite-map obstruction: both coordinates in k[u,p,y] collapse D
+hostile: constant nodal-defect value 1/2 permits nonconstant boundary coordinates
+all-order shear classification: (x+f(t),t) extends to W iff f(0)=0; D fixed pointwise
+shear operation: Jacobian1, inverse -f, primitive changes by d integral(f dt)
+changed carrier: nonzero f fails old A descent; every shear-orbit carrier still collapses D
+scope: explicit surface only; no identification with actual Keller envelope or Keller pair
+semantic_sha256=79ed292dbd9f4fabb7a73b968e54ed1fc8cec97a24c0be7994e667a9ccbd0b95
+PASS gates=62

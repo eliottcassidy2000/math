@@ -5,6 +5,13 @@ are FINITE-EXACT. Primary local topology and low mapping degree are CITED.
 The necessary passports do not assert realization. JC(2) remains OPEN.**
 September 6, 2026.
 
+**Current target status:** the concrete five-node curve proposed in §5
+is now [excluded by its abelian affine complement](planar_jc48_sep06_global_curve.md).
+The [four-node equality successor](planar_jc48_sep06_boundary_plumbing.md)
+is also excluded by its marked infinity relations. The general theorem
+below is unchanged. The [three-node successor](planar_jc48_sep06_next_infinity.md)
+passes that necessary boundary test; its global realization remains open.
+
 ## 1. Exact target and inheritance
 
 Let a nonautomorphic polynomial Keller map of the complex affine plane
