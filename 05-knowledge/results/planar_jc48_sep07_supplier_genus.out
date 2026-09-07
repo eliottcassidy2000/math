@@ -1,0 +1,7 @@
+Completed-response supplier genus PASS
+Actual supplier: genus27; finite branch59, zero ram6, infinity ram1
+Class: deg A=m>=4, b!=0; genus=(9m+21+(m mod2)-gcd(3,m+5))/2
+Named controls: 10 genera: [27, 27, 27, 27, 33, 37, 41, 46, 51, 54]
+Boundary hostile: A=-b*p3 has genus12, not extrapolated24
+Always-active gates: 130
+Semantic SHA256: 36b018dd04b607e83171a2086f952b4932fecf5f0c37b0996ea1a89558e2e51c

@@ -1,0 +1,7 @@
+Polynomial-coefficient y-linear carrier: exact controls PASS
+Always-active gates: 1018
+Local Newton cases: 364
+Named coefficient pairs: 24
+Genera: [6, 6, 11, 6, 8, 6, 8, 12, 9, 9, 8, 12, 9, 11, 14, 9, 12, 12, 11, 12, 17, 16, 15, 15]
+Semantic SHA256: f65798e59de1a2cce5a34b8fe387ee5b2087216146e231b094b27d7fbda5fb56
+Scope: analytic all-A,B theorem; finite controls are not its proof.

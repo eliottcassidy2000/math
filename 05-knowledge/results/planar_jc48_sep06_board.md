@@ -26,9 +26,9 @@ quadratic tangent evaluation, and transverse derivatives of component jets.
 
 | Lane | Preserved object and result | Next decisive question |
 |---|---|---|
-| Anchor: moving source | Incoming work classifies the valuation-eleven weight22 response and integrates the universal carrier in the actual completion; polynomial carrier automorphisms are scalings | Test whether the required finite response lies in the completed carrier image, retaining all coordinate corrections; seek genuinely different carriers for polynomial operations |
+| Anchor: moving source | The completed carrier supplies a full five-dimensional source image with six-dimensional coordinate fibres; nonzero high response must change row10 | The named supplier has genus27 and no nonzero rational time; test different carrier lifts, compositions and changed carriers while retaining later compatibility |
 | Niche: collision | All scalar two-form periods miss exactly the quadrics through tangent directions in a three-dimensional target | Carry the quadratic data through an actual earlier source deformation and preserve descent |
-| Anchor: infinity | Nori excludes the five-node target; marked infinity and exact braids exclude the four-node equality target | Test the full affine complement of the new three-node sextic, whose actual infinity group admits A6 |
+| Anchor: infinity | Two actual positive meridians now exclude the three-node target despite its valid boundary A6 witness | The complete one-(2,5)-cusp (4,6) class is closed; test higher finite cusps using the same retained-sheet graph bound |
 | Wildcard: response connection | Full torsion is component-labelled principal parts; the canonical derivative raises every nonzero primary height | Map the actual source-normal response to this operator without changing its polynomial ring |
 | Wildcard: actual boundary surface | The classical V4 surface realizes the bare constraints and has a finite quartic map; every shear-orbit carrier still collapses its boundary | Both coordinates must escape the collapsed algebra; a first coordinate in C[t] forces interior ramification and even boundary index |
 
@@ -173,16 +173,66 @@ quadratic tangent evaluation, and transverse derivatives of component jets.
     has one(2,5) cusp, three nodes and infinity(2,11), Nori margin-2.
     Its actual marked infinity group surjects to A6 with a single-three-cycle
     meridian. Two order60 pieces can together move all six labels: this
-    is a precise hostile to extending item13. Full affine-complement
-    realization and a polynomial Keller source remain **OPEN**.
+    is a precise hostile to extending item13. Its required extension to the
+    full affine complement is now **EXCLUDED** by item18; the actual boundary
+    representation and geometric computation remain correct.
 
-The [71-artifact manifest](planar_jc48_sep06_manifest.json) pins seventeen
-proof notes, seventeen independent audits, eighteen sources and eighteen
-outputs, plus the compressed rational-path certificate. The eighteen
-programs report **221,396** exact gates per complete normal or optimized
-replay. Each output is byte-identical in both modes; the braid verifier
-also checks the pinned witness. These are scoped proof controls, not a
-census of Keller maps. No external priority claim is made.
+18. [Two actual meridians](planar_jc48_sep07_next_braid.md) are
+    **PROVED + INDEPENDENTLY AUDITED** for the three-node curve. Two smooth
+    critical loops, with14887 rationally certified segments, give
+    `m2=m4` and `m1=m4 m3 m4 m3^-1 m4^-1`. Thus the affine group is generated
+    by two positive meridians. More generally, r such meridians for a
+    transitive degree-d action moving at most delta labels each require
+    `r(delta-1)>=d-1`, d>1. Two generators therefore exclude every
+    irreducible whole-support passport with retained count at least d/2.
+    Disjoint three-cycles defeat the stronger common-fixed-label assertion
+    and are retained. The exact producer passes119191 gates.
+19. [Completed source image](planar_jc48_sep07_completed_response.md) is
+    **PROVED FINITE-ROW + INDEPENDENTLY AUDITED**. Preserving the coordinate
+    prefix through row9 reduces every polynomial carrier to exactly30
+    relevant monomials of valuations6–11. Its complete image inside the
+    incoming response family has five source parameters and six coordinate
+    kernel directions. A six-term Rstar supplies a completed replacement
+    for the high payer, while the old exact packet is outside the image.
+    Every nonzero high replacement necessarily changes row10. No later
+    Keller equations or polynomial termination follow. Producer4025 and
+    independent Fraction reconstruction20 gates pass.
+20. [Arbitrary polynomial y-linear coefficients](planar_jc48_sep07_carrier_frontier.md)
+    give **PROVED + INDEPENDENTLY AUDITED** genus at least6 for every
+    `I=p²Delta(A(p)+B(p)y)`, B!=0, including common repeated factors and
+    zeros of B at zero. The exact formula retains their lost local
+    ramification; the infinity index2 also proves geometric integrality.
+    Every nonzero scalar time for a nonconstant outer Hamiltonian f(I)
+    cannot have both source images rational. Producer1018 gates pass.
+    Rstar in item19 is not y-linear; its separate genus analysis is item22.
+
+21. [Whole one-(2,5)-cusp (4,6) class](planar_jc48_sep07_twofive_sextics.md)
+    is **PROVED + TWO INDEPENDENT AUDITS PASS**: an irreducible curve with
+    birational polynomial normalization of degrees4,6, one finite(2,5)
+    cusp and at least two ordinary nodes cannot be the whole Keller
+    nonproperness support. Four exhaustive infinity types7,9,11,13 use
+    Nori, old plumbing, connected equisingular meridian transport, and a
+    new marked infinity obstruction. The actual infinity13 census has1120
+    assignments, all fixing a label. The beta=1/4 good-family hostile pays
+    a lost elimination denominator. Producer3385 gates pass. This does
+    not classify all rational sextics or higher finite cusps.
+22. [Actual supplier genus](planar_jc48_sep07_supplier_genus.md) is
+    **PROVED + INDEPENDENTLY AUDITED**: item19's six-term Rstar has generic
+    invariant curve of genus27. More generally
+    `I=p²y³Delta(A(p)+b y²)`, deg A=m>=4, b!=0, has genus
+    `(9m+21+(m mod2)-gcd(3,m+5))/2`. Every nonzero scalar time of a
+    nonconstant outer Hamiltonian f(I) is nonrational in at least one
+    source image. The exact finite response remains valid. The degree3
+    coalescence hostile has genus12, invalidating extrapolated24.
+    Producer130 gates pass. All five finite-image parameters and
+    different-invariant compositions remain outside this classification.
+
+The [95-artifact manifest](planar_jc48_sep06_manifest.json) pins22 proof notes,
+23 independent audits,24 sources,24 outputs and two compressed certificates.
+The24 programs report349165 exact gates per complete normal or optimized run. Each frozen output agrees in normal and
+optimized modes; the braid verifiers also check their pinned witnesses.
+These are scoped proof controls, not a census of Keller maps. No external
+priority claim is made.
 
 ## Literature and correction recovery
 
@@ -214,8 +264,8 @@ table is not polynomial termination.
 
 At infinity the exact family and ordinary-cusp-plus-nodes class are closed.
 The higher-cusp spectrum is proved. Both the five-node target and its four-node equality successor are now
-closed. The new three-node target below forces d=6, a=delta=3, one actual
-cusp point and three omitted node points.
+closed. The subsequent three-node target is now closed as well: its necessary
+d=6, a=delta=3 passport fails the two-meridian graph bound.
 Keep the actual subset, conjugating loop and fibre counts visible. Its
 abstract passport needs a full complement representation, an actual affine
 source and polynomial completion before it becomes a Keller candidate.
@@ -269,12 +319,11 @@ carrier control. Our polynomial DG shears are compatible: their
 Hamiltonians F(t) are outside k[p,y] and their invariant has genus zero.
 Arbitrary R, compositions and changed carriers remain outside that theorem.
 
-A concrete new source consumer is the image test
-`R -> pi15{-u/2+H_xi,p²Delta R}` against the required seven-equation
-response, retaining all induced coordinate corrections and original
-bracket/depth/prefix equations. A positive answer would connect the
-finite response to a completed operation; polynomial specialization and
-later equations would remain unpaid. Our torsion connection requires an
+That concrete source image test is now paid by item19:
+`R -> pi15{-u/2+H_xi,p²Delta R}` retains every induced coordinate correction
+and original bracket/depth/prefix equation. Its five-dimensional image
+contains a replacement of the high payer; polynomial specialization and
+later equations remain unpaid. Our torsion connection requires an
 actual fixed smooth polynomial and labelled principal parts. Neither
 Delta, the background xi, nor the square-zero lift matrix is automatically
 that connection.
@@ -286,7 +335,7 @@ characteristic-zero Keller obstruction. This agrees with the distinct
 regularity and carrier hypotheses above. No frozen artifact was changed
 by these incoming scope comparisons.
 
-### Closed targets and the current concrete survivor
+### Closed targets and the next geometric scale
 
 The curve `(t^4+t^2,t^6+t^5+t^2)` is **EXCLUDED** as whole Keller
 nonproperness support by Nori: its resolved square12 exceeds twice its
@@ -295,7 +344,7 @@ also **EXCLUDED**, despite Nori equality: its marked infinity group
 cannot supply the actual six-sheet representation. Exact global braid
 constraints independently corroborate this second closure.
 
-The [current actual target](planar_jc48_sep06_next_infinity.md) is
+The [third actual target](planar_jc48_sep06_next_infinity.md), now closed, is
 
 ```text
 U=t^4+t^3+t^2,
@@ -306,10 +355,19 @@ Its **audited geometry** is one affine(2,5) cusp, three ordinary nodes,
 and infinity(2,11). The resolution cost is18 and D²=4, giving Nori
 margin-2. Its actual marked infinity tree has an explicit surjective A6
 representation with a single-three-cycle meridian. This boundary witness
-is **not** a representation of the full affine complement until it
-satisfies the additional actual relations. The next cheap decisive test
-is a rationally certified global braid constraint, adapting the validated
-method rather than treating numerical tracking as proof.
+**does not extend** to the required representation of the full affine
+complement: the two exactly certified smooth-critical loops force two
+positive meridian generators. The boundary/affine distinction supplied
+the successful operation rather than an untracked numerical heuristic.
+
+The [whole one-(2,5)-cusp (4,6) class](planar_jc48_sep07_twofive_sextics.md)
+is now **EXCLUDED** as whole Keller support.
+Its normal forms have exactly four infinity types7,9,11,13. The first two
+inherit established exclusions; the fourth has a new marked A6 obstruction;
+the third transports the actual two-meridian certificate through a connected
+equisingular family. Independent geometric and full-proof audits both pass.
+Higher finite cusps, multiple nonnodal points and higher degree
+normalizations remain separate targets.
 
 In parallel, the explicit DG surface's boundary separator supplies a
 real finite map but forces retained-source ramification in the proven
@@ -328,3 +386,46 @@ The heartbeat now runs this board every30 minutes through the stated
 48-hour cutoff. It stays quiet unless there is substantive progress, a
 correction, completion, failure or required user action. At the cutoff,
 push the final coherent checkpoint and pause the heartbeat.
+
+
+### Incoming genus work and cross-lane reassessment
+
+Incoming `a1f02fa5ef50` was read before this checkpoint. Its
+[carrier genus theorem](continuing9_20260907_flow_carrier_genus.md) treats
+univariate multipliers, all affine multipliers, and coprime monomial outer
+invariants; its [constant-slope extension](continuing9_20260907_ylinear_genus.md)
+allows arbitrary A(p). Item20 extends the latter to variable B(p), retaining
+every common-factor valuation. The index-two infinity branch replaces a
+failed zero-valuation primitivity test. Item19's six-term supplier has
+`Rstar=y³(Q4(p)+b y²)` and belongs to neither y-linear class; a distinct
+degree-seven generic-curve calculation in item22 now excludes its nonzero
+rational times while preserving the proved finite-row action.
+
+Reassessment of every live lane: the source image now pays finite
+compatibility but exposes earlier motion and rationality as separate debts;
+the infinity lane uses the full affine group after its boundary quotient
+lost decisive relations; collision quadrics still need an actual transported
+deformation; the torsion connection still needs a fixed smooth polynomial;
+and the V4 boundary surface still needs a coordinate pair outside the proven
+collapsed/prescribed-coordinate classes. Shared procedure is not a theorem
+identifying those five objects.
+
+
+The next concrete geometric probe is finite(2,7), starting with
+`U=t4+t3+t2,V=2t6+3t5-(3/2)t3-(3/2)t2`. Initial exact derivative,
+resultant and pair equations support one such cusp, three nodes and
+infinity9. Numerical braid scouts suggest another two-positive-meridian
+reduction; this is **HEURISTIC / NOT YET CERTIFIED**. Its required whole
+support passport would have d8,a=delta4. A rational path certificate and
+full singularity audit are the cheapest next tests. The finite7/infinity7
+companion `V=2t6` is a separate scout. These objects are not Keller maps.
+
+Incoming `89aca08819` and `4441760e1a` were read before synchronization.
+Their [continuing9 synthesis](continuing9_20260907_synthesis.md) confirms the
+primitive-invariant and variable-coefficient boundaries used above; the new
+[no-three-in-line repair theorem](continuing10_20260907_no3_repair.md) retains
+original points in a capacity-two graph before bounding an adaptive repair.
+Our meridian graph retains actual moved sheets before testing transitivity.
+These are related proof operations, with different vertices and predicates;
+neither graph supplies a mathematical map to the other problem. The new
+fixed-moment corrections do not change any dependency in this checkpoint.

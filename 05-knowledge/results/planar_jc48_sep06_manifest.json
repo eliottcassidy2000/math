@@ -1,11 +1,11 @@
 {
   "session": "planar-jacobian-sep06",
-  "status": "PROVED scoped results with independent audits; two explicit higher-cusp whole-support curves excluded; new marked infinity survivor; antecedents credited; JC(2) OPEN",
+  "status": "PROVED scoped results with independent audits; whole (4,6) one-(2,5)-cusp plus at-least-two-node class excluded; completed response and actual supplier nonrationality; JC(2) OPEN",
   "created_utc": "2026-09-06",
-  "artifact_count": 71,
-  "program_count": 18,
-  "exact_gates_per_complete_normal_or_optimized_run": 221396,
-  "verification": "All eighteen programs have been replayed normally and with optimization; each raw stdout matches its frozen output byte for byte. Every analytic proof has an independent audit. The exact braid verifier also accepts all 21503 rational path segments and checks both compressed and raw witness hashes. Finite gates do not replace universal proofs or their actual-consumer hypotheses.",
+  "artifact_count": 95,
+  "program_count": 24,
+  "exact_gates_per_complete_normal_or_optimized_run": 349165,
+  "verification": "All24 programs have normal and optimized replays with each stdout byte-identical to its frozen output. Every universal proof has an independent analytic/source audit; the sextic-class theorem has two. Both braid verifiers check their compressed and raw witness pins. Current additions were independently replayed; unchanged inherited pins retain their previous complete replay record. Finite controls do not replace universal proofs or actual-consumer hypotheses.",
   "program_gates": {
     "weight14": 169,
     "weight14_audit": 93,
@@ -24,7 +24,13 @@
     "boundary_plumbing": 20419,
     "boundary_braid": 172168,
     "dg_finite_map": 41,
-    "next_infinity": 63
+    "next_infinity": 63,
+    "completed_response": 4025,
+    "completed_response_audit": 20,
+    "carrier_frontier": 1018,
+    "next_braid": 119191,
+    "twofive_sextics": 3385,
+    "supplier_genus": 130
   },
   "artifacts": [
     {
@@ -116,6 +122,36 @@
       "path": "04-computation/planar_jc48_sep06_weight14_audit.py",
       "bytes": 5164,
       "sha256": "03784e94c50a07772b0a1dce3a7961a3c0c2f51fd666073801c02f87e23808d0"
+    },
+    {
+      "path": "04-computation/planar_jc48_sep07_carrier_frontier.py",
+      "bytes": 7262,
+      "sha256": "04f6008ed12dc33dbd2ef2ce7429fab8a97bc28f77a5cb5c5d232f1a6277db68"
+    },
+    {
+      "path": "04-computation/planar_jc48_sep07_completed_response.py",
+      "bytes": 11650,
+      "sha256": "669567f67d3febc2c05089b4215a656d7bbfb1315527df319019b3b1c71d0b47"
+    },
+    {
+      "path": "04-computation/planar_jc48_sep07_completed_response_audit.py",
+      "bytes": 5237,
+      "sha256": "5a0a3495f8a14aeecaa46b97362b67bdedb32e1ea20753cc20859d4dbfd7b682"
+    },
+    {
+      "path": "04-computation/planar_jc48_sep07_next_braid.py",
+      "bytes": 14547,
+      "sha256": "d5e74a1eb6f8e7d9bad37bb723ccf144f335d6a51d5c77170b097f8be10e8efc"
+    },
+    {
+      "path": "04-computation/planar_jc48_sep07_supplier_genus.py",
+      "bytes": 5864,
+      "sha256": "a23ac00b69e027efca1e720b9af4ffaf285203551ebd287f05cc28a6c534c83b"
+    },
+    {
+      "path": "04-computation/planar_jc48_sep07_twofive_sextics.py",
+      "bytes": 5593,
+      "sha256": "02ef96f5a39fee7382fa81d0970fd06285c7bb3e180362bff234d4e2abad1e75"
     },
     {
       "path": "05-knowledge/results/planar_jc48_sep06_alternating.md",
@@ -304,8 +340,8 @@
     },
     {
       "path": "05-knowledge/results/planar_jc48_sep06_next_infinity.md",
-      "bytes": 7733,
-      "sha256": "a30037d9371abda55ce70e030c011feee22a119913c1667e95ea121acb472f33"
+      "bytes": 7932,
+      "sha256": "7a8b052a4e5aaf9b8f8e805015ad513e8b35b6a39aeea565af63b44ab561e696"
     },
     {
       "path": "05-knowledge/results/planar_jc48_sep06_next_infinity.out",
@@ -381,12 +417,109 @@
       "path": "05-knowledge/results/planar_jc48_sep06_weight14_audit.out",
       "bytes": 201,
       "sha256": "1a1d5ca435e313273f5f406d395dc5ce7e7e10b17fa9466a3a974ee2e37c1929"
+    },
+    {
+      "path": "05-knowledge/results/planar_jc48_sep07_carrier_frontier.md",
+      "bytes": 12351,
+      "sha256": "4092a5f074b77d4fc2a5637a4f52ad2bc0b88164ff64a2dc221dcd1ca038b345"
+    },
+    {
+      "path": "05-knowledge/results/planar_jc48_sep07_carrier_frontier.out",
+      "bytes": 383,
+      "sha256": "5b27c5e31ea9bfdd6a4fe3976a00b37effd780f33fa8a4faa0c72e88eac6cef2"
+    },
+    {
+      "path": "05-knowledge/results/planar_jc48_sep07_carrier_frontier_audit.md",
+      "bytes": 5408,
+      "sha256": "2fc91b7db3bc334060790d8e8051ff4a3e55f78228a83a0b297b0d65b4cf9453"
+    },
+    {
+      "path": "05-knowledge/results/planar_jc48_sep07_completed_response.md",
+      "bytes": 14001,
+      "sha256": "8c69da1f76c1ac48bdb163f16a5eed3a8238bb5eec23401b0c018fd8ceee0491"
+    },
+    {
+      "path": "05-knowledge/results/planar_jc48_sep07_completed_response.out",
+      "bytes": 3152,
+      "sha256": "2427ecb11e54c8a9e386e13c061f7914a0616af5867f8907f5049751885d73da"
+    },
+    {
+      "path": "05-knowledge/results/planar_jc48_sep07_completed_response_audit.md",
+      "bytes": 7219,
+      "sha256": "0e2fcb7dcfb45c5d4b304be524d71e55d6a9e339166d5c38ad0d7f6e3e826c95"
+    },
+    {
+      "path": "05-knowledge/results/planar_jc48_sep07_completed_response_audit.out",
+      "bytes": 240,
+      "sha256": "378fd8139f6603cef904bc1e93006caf8af307caaba51408776b44de59ca7355"
+    },
+    {
+      "path": "05-knowledge/results/planar_jc48_sep07_next_braid.md",
+      "bytes": 15616,
+      "sha256": "23c6b249d8d7dfff63d77a53ddad0a99849d2236499717a7b772251334b2865f"
+    },
+    {
+      "path": "05-knowledge/results/planar_jc48_sep07_next_braid.out",
+      "bytes": 1147,
+      "sha256": "0d33e3e7ec3d4bc181455fd2267b23a9740ca55be188e1c9679a4a9b1bfe87a4"
+    },
+    {
+      "path": "05-knowledge/results/planar_jc48_sep07_next_braid_audit.md",
+      "bytes": 8478,
+      "sha256": "f819d5039308889753f057d26f47263ba16ffdc41142f6bf82f6919187ad713b"
+    },
+    {
+      "path": "05-knowledge/results/planar_jc48_sep07_next_braid_certificate.json.gz",
+      "bytes": 1102982,
+      "sha256": "e623253a5980eebe2a882680a6f79ba21703adb324319d4d909594beb2cfc330"
+    },
+    {
+      "path": "05-knowledge/results/planar_jc48_sep07_supplier_genus.md",
+      "bytes": 11838,
+      "sha256": "6134520bbefed951b70185b8e1e4217e6a6c6af969ca2e05ac69f0297765c83f"
+    },
+    {
+      "path": "05-knowledge/results/planar_jc48_sep07_supplier_genus.out",
+      "bytes": 401,
+      "sha256": "1d70b64d691d5aedd69246ed3d492fd0fe66060fa4dbaeeba355f439e0680b62"
+    },
+    {
+      "path": "05-knowledge/results/planar_jc48_sep07_supplier_genus_audit.md",
+      "bytes": 5789,
+      "sha256": "b62d953358f2e24b92ca89c7fe4502e7389aae654610b7c3807dfbf32eceb9b3"
+    },
+    {
+      "path": "05-knowledge/results/planar_jc48_sep07_twofive_sextics.md",
+      "bytes": 14953,
+      "sha256": "b755c0e7ee0226a86618fe9acb0aef6f2b66a02f4c88e398d831a9098f480589"
+    },
+    {
+      "path": "05-knowledge/results/planar_jc48_sep07_twofive_sextics.out",
+      "bytes": 1890,
+      "sha256": "2713e10ba1715d4ae3b9d5d0095be91fa901ea3f63a16c9d53778e15b072e472"
+    },
+    {
+      "path": "05-knowledge/results/planar_jc48_sep07_twofive_sextics_audit.md",
+      "bytes": 12990,
+      "sha256": "4976563e9ac531a3aca3ccf45a8b1bf87580596888ef81207c2314e6afe99112"
+    },
+    {
+      "path": "05-knowledge/results/planar_jc48_sep07_twofive_sextics_geometry_audit.md",
+      "bytes": 11621,
+      "sha256": "e1091995c22e02cf5b6fa0efed06acb19c7f0dae8c71feac0b39c8edb3c86ee0"
     }
   ],
-  "checkpoint_update": "Extended the prior 34-artifact checkpoint by nine independently audited bundles and one compressed rational witness (37 new artifacts). Of the prior 34 pins, only odd_cusp.md gained a current-target forward status pointer; its theorem, source, output and independent audit are unchanged. Every other inherited artifact remains byte-identical. New resolution_budget.md and alternating.md have explicit forward pointers to subsequent closures. Historical frozen outputs describe their own test boundaries, not the current full target status.",
-  "compressed_certificate": {
-    "path": "05-knowledge/results/planar_jc48_sep06_boundary_braid_certificate.json.gz",
-    "decompressed_bytes": 5621433,
-    "decompressed_sha256": "5e4c61c9a64e1a30ab841de524be966583ee2a29929c1544aea6f4e2f4675868"
-  }
+  "checkpoint_update": "Extended the71-artifact checkpoint by five audited bundles and a second compressed rational witness:24 new artifacts, including one independent Fraction program and a second sextic geometry audit. Among inherited71 pins, only next_infinity.md gained a forward closure status; its geometry, source, output and audit are unchanged. Every other inherited artifact remains byte-identical. The older boundary A6 witness remains valid and fails the newly certified affine relations.",
+  "compressed_certificates": [
+    {
+      "path": "05-knowledge/results/planar_jc48_sep06_boundary_braid_certificate.json.gz",
+      "decompressed_bytes": 5621433,
+      "decompressed_sha256": "5e4c61c9a64e1a30ab841de524be966583ee2a29929c1544aea6f4e2f4675868"
+    },
+    {
+      "path": "05-knowledge/results/planar_jc48_sep07_next_braid_certificate.json.gz",
+      "decompressed_bytes": 4205356,
+      "raw_sha256": "c2bc0600d55c05b566e231a1af284aa4b825b7d666b5ede0775db92fe49f11c8"
+    }
+  ]
 }

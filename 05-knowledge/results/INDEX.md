@@ -62,16 +62,15 @@
 
 - [48-hour planar Jacobian session](planar_jc48_sep06_board.md):
   **PROVED + INDEPENDENTLY AUDITED**, with inherited results credited.
-  One-way carrier descent forces polynomial automorphism scalings.
-  Nori excludes the five-node sextic; marked infinity plumbing and an
-  independent rational braid certificate exclude its four-node equality
-  successor. A three-node successor has a genuine marked infinity A6
-  witness; its full affine complement is the next target. A classical V4
-  realizes the bare surface constraints and a finite quartic control;
-  the full shear-orbit carrier and prescribed-first-coordinate classes
-  have precise global obstructions.
-  [Manifest](planar_jc48_sep06_manifest.json):71 artifacts, eighteen
-  programs,221396 exact gates per mode. Full JC(2) remains **OPEN**.
+  The whole (4,6)-normalization class with one finite(2,5) cusp and at
+  least two nodes is excluded as sole Keller support. Two actual
+  meridians defeat the three-node curve's valid boundary A6 witness.
+  The completed source image has five parameters and six coordinate
+  kernel directions; its named supplier has genus27 and no nonzero
+  rational time. Variable y-linear carriers all have genus at least6.
+  V4 finite-map controls and carrier rigidity retain their precise scope.
+  [Manifest](planar_jc48_sep06_manifest.json):95 artifacts,24 programs,
+  349165 exact gates per mode. Full JC(2) remains **OPEN**.
 
 - [Previous continuing synthesis](continuing5_20260906_synthesis.md):
   full-model beta simplicity, the original-phase rectangle, the ordered

@@ -1,8 +1,11 @@
 # The next infinity branch: a genuine marked A6 survivor
 
-**Status: PROVED + FINITE-EXACT + INDEPENDENTLY AUDITED.
-Actual affine-complement realization OPEN.**
-This is a new precise target, not a Keller map or counterexample to JC(2).
+**Status: PROVED + FINITE-EXACT + INDEPENDENTLY AUDITED.**
+The boundary A6 representation remains valid. Its required extension to the
+actual affine complement is now **EXCLUDED** by the independently audited
+[two-meridian theorem](planar_jc48_sep07_next_braid.md). The geometry and frozen
+computation below are unchanged; this is not a Keller map or counterexample
+to JC(2).
 
 ## 1. Procedural move and inherited stopping boundaries
 
