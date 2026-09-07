@@ -26,7 +26,7 @@ quadratic tangent evaluation, and transverse derivatives of component jets.
 
 | Lane | Preserved object and result | Next decisive question |
 |---|---|---|
-| Anchor: moving source | Weight22 transport is Hamiltonian; every polynomial source automorphism preserving the full carrier is a scaling | Symplectic full-carrier polynomial repairs are excluded; change the carrier or retain one genuine fixed source |
+| Anchor: moving source | Incoming work classifies the valuation-eleven weight22 response and integrates the universal carrier in the actual completion; polynomial carrier automorphisms are scalings | Test whether the required finite response lies in the completed carrier image, retaining all coordinate corrections; seek genuinely different carriers for polynomial operations |
 | Niche: collision | All scalar two-form periods miss exactly the quadrics through tangent directions in a three-dimensional target | Carry the quadratic data through an actual earlier source deformation and preserve descent |
 | Anchor: infinity | Nori excludes the five-node target; marked infinity and exact braids exclude the four-node equality target | Test the full affine complement of the new three-node sextic, whose actual infinity group admits A6 |
 | Wildcard: response connection | Full torsion is component-labelled principal parts; the canonical derivative raises every nonzero primary height | Map the actual source-normal response to this operator without changing its polynomial ring |
@@ -238,6 +238,53 @@ hostiles retain a triple point and a tacnode. The complete incidence and
 actual-fibre data remain necessary. That incoming norm interpretation
 agrees with our certified resultant identity and does not change the
 scope of the later cusp exclusion.
+
+### Incoming response and completion results
+
+Incoming `1100abe5ba` was read and independently compared by two agents
+before the integration checkpoint. Its [earlier-memory theorem](planar_jc_long_20260906_memory_earlier.md)
+classifies the complete valuation-at-least-eleven response through row15:
+weight22 gives G_m x A^9 with separate A^10 coordinate fibres; weight21
+still fails in that declared horizon. Seven equations retain the delayed
+odd channel. A polynomial inverse with square-zero correction proves a
+constant response quotient at every background specialization while
+keeping that background in the actual lifts. This strengthens the finite
+classification around our transport without asserting later-row completion.
+
+The [maximal depth carrier](planar_jc_long_20260906_depth_carrier.md) is
+exactly k+p²k[p,y]. Its intersection with preservation of even one affine
+source is precisely our universal carrier k+p²Delta k[p,y], where
+Delta=p³-y² is a function, not the boundary divisor D. The
+[completed Hamiltonian theorem](planar_jc_long_20260906_hamiltonian.md)
+integrates this smaller carrier at scalar times on the actual Delta-adic
+completion. It does not identify that whole completion with a Laurent
+chart or make completed coefficients polynomial.
+
+The [nonrational-time theorem](planar_jc_long_20260906_nonrational.md)
+excludes every nonzero rational scalar time for S=f(p^a Delta), a>=2,
+f nonconstant, using a generic invariant curve of genus ceil(a/2)+1.
+This includes our named formal S=p²Delta control and is stronger than
+non-local-nilpotence. Its rational u-flow hostile is exactly our discrete
+carrier control. Our polynomial DG shears are compatible: their
+Hamiltonians F(t) are outside k[p,y] and their invariant has genus zero.
+Arbitrary R, compositions and changed carriers remain outside that theorem.
+
+A concrete new source consumer is the image test
+`R -> pi15{-u/2+H_xi,p²Delta R}` against the required seven-equation
+response, retaining all induced coordinate corrections and original
+bracket/depth/prefix equations. A positive answer would connect the
+finite response to a completed operation; polynomial specialization and
+later equations would remain unpaid. Our torsion connection requires an
+actual fixed smooth polynomial and labelled principal parts. Neither
+Delta, the background xi, nor the square-zero lift matrix is automatically
+that connection.
+
+Incoming `7c557fb04c` and its [continuing8 synthesis](continuing8_20260906_synthesis.md)
+were also read. Its exact source-chart transfer boundaries preserve the
+operator, characteristic, lattice and zero tail separately; they give no
+characteristic-zero Keller obstruction. This agrees with the distinct
+regularity and carrier hypotheses above. No frozen artifact was changed
+by these incoming scope comparisons.
 
 ### Closed targets and the current concrete survivor
 
