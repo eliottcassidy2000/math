@@ -39,6 +39,37 @@ Format per entry:
   roots but changes its coefficients. The exact new law is for the
   constructed class, not an untouched wall core or every notion of cluster.
 
+- [Minimum connecting trees](../05-knowledge/results/continuing8_20260906_lrc_minimum_tree.md)
+  require a minimum over possible edges. A zero-weight actual path with
+  positive nonactual star edges refutes the maximum-tree substitution.
+  Adding an unassigned vertex can also lower an MST, so partial-MST pruning
+  is invalid. The repaired consumer retains all seven positions and126
+  profiles; its15 projected7200 survivors are not unsafe physical rows.
+  An added literal control initially parsed a ceiling as a floor because
+  unary negation preceded integer division; the one-interval count became
+  minus one instead of zero. Parentheses repaired it before freezing, and
+  the independent native boundary sweep confirms the unchanged primary count.
+- [Coin transport](../05-knowledge/results/continuing8_20260906_coin_rational_handoff.md):
+  a three-exponential signed state can obey endpoint, parity and tail bounds
+  while its first conditional row share is minus3, below the allowed minus2.
+  Preserve the actual orientation Bernstein boxes. Ordinary von Neumann
+  extraction has no bounded deadline at fixed critical run and is not
+  excluded by the rational-orientation theorem.
+- [Mahler reset clocks](../05-knowledge/results/continuing8_20260906_mahler_reset_cost.md):
+  appending zero carries changes the least launch and often adds a high
+  native one. Measure the postterminal runway from the actual last bit.
+  The rational zero-tail companion first reaches1/2 while the native
+  follower's next one can still be accepted; only a separate native carry
+  proof yields rejection. The finite phase law is not a random-orbit law.
+- [Chart and modular depth transfer](../05-knowledge/results/continuing8_20260906_connection_boundaries.md):
+  a nonconstant polynomial substitution preserves nonvanishing modulo a
+  prime but can hide a growing coefficient prefix under Frobenius. It need
+  not intertwine the Student operator either: x-squared fails, while the
+  zero-index exception allows it. Full depth images are saturated; the
+  Student target2x has a rational lift but fails modulo4. Retain the actual
+  operator, index, support, zero tail and integral image before transferring
+  a modular test or a finite recognition bound.
+
 ## 2026-09-06 continuing synthesis -- retained residuals and repair geometry
 
 - [Shared singular fibres](../05-knowledge/results/continuing7_20260906_singular_fibres.md):

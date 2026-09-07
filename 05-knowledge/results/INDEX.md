@@ -1,5 +1,17 @@
 # Script Results Index
 
+- [Current continuing synthesis](continuing8_20260906_synthesis.md):
+  **PROVED + FINITE-EXACT + INDEPENDENTLY AUDITED.** Exact positive Newton
+  circuit-ratio surjectivity at fixed root sum; effective all-profile narrow
+  cluster law; global bronze classification and repaired Fuss rationality.
+  Rational orientation obstruction for every finite linear coin deadline;
+  exact Mahler reset cost, native termination and finite-cycle law.
+  Minimum connecting trees exclude549 clocks:7646 remain, maximum11995.
+  Incoming Student charts and modular source depths have exact transfer
+  boundaries. [Manifest](continuing8_20260906_manifest.json):58 artifacts,
+  13 engines,11825022 gates per normal/optimized pass.
+  General LRC14, JC2, anchored signs and the other named prizes remain OPEN.
+
 - [Extended planar Jacobian session with the S-matrix method](planar_jc_long_20260906_board.md):
   **PROVED + FINITE-EXACT + INDEPENDENTLY AUDITED**, with cited curve inputs
   and inherited transport explicitly separated. Sharp finite depth
@@ -12,12 +24,12 @@
   audits, outputs, and exact reproduction. General JC(2), termination,
   lower valuation responses, and chart entry remain **OPEN**.
 
-- [Current continuing synthesis](continuing7_20260906_synthesis.md):
+- [Previous continuing synthesis](continuing7_20260906_synthesis.md):
   **PROVED + FINITE-EXACT + INDEPENDENTLY AUDITED.** All singular shared-root
   fibres have negative original response; the degree-six C determinant
   repairs the exact positive degree-five hostile. Modular norm reduction
   supplies a second unbounded unit family and exact boundary order at(11,4).
-  Complete domain tables remove14886,14880,14874, leaving8195 clocks with
+  At that checkpoint, domain tables removed14886,14880,14874, leaving8195 clocks with
   maximum14868; the selected(6,1,355) edge is uniformly excluded above it.
   Reciprocal boards with at least two native packets admit no second swap;
   every prime37mod360 is also excluded by explicit native witnesses.
@@ -25,7 +37,7 @@
   eight engines,361102 gates per normal/optimized mode.
   General LRC14, off-wall signs and Laurent noncancellation remain OPEN.
 
-- [Previous continuing synthesis](continuing6_20260906_synthesis.md):
+- [Earlier continuing synthesis](continuing6_20260906_synthesis.md):
   entire zero-beta sign boundary, first prime norm-unit family, exact native
   reciprocal packet criterion, and original singular shared-root charts.
   Its [35-artifact manifest](continuing6_20260906_manifest.json) is retained.

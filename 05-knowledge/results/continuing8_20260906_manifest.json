@@ -1,0 +1,330 @@
+{
+  "schema": 1,
+  "created_utc": "2026-09-07T00:03:12.956776+00:00",
+  "baseline_commit": "fe3ac581644ef167e9d156e9237ed22c8f75054a",
+  "incoming_review_commits": [
+    "45995e6d7",
+    "1100abe5b"
+  ],
+  "repair_checkpoint": "ebc62e7d7",
+  "proof_checkpoint": "ea15e7436",
+  "hash_basis": "raw LF bytes; maintained boards, manifest and navigation excluded",
+  "scope": "Exact Newton circuit surjectivity at fixed root sum; effective narrow-cluster sign law; global bronze and Fuss repair; rational orientation obstruction; fixed-prefix Mahler reset cost and exact terminal lag; all549 upper connected-complement clocks excluded; Student scalar-chart rigidity and exact prime-power modular recognition delay. General conjectures remain OPEN.",
+  "validation": {
+    "continuing8_20260906_coin_rational_handoff": 5070,
+    "continuing8_20260906_coin_rational_handoff_audit": 18256,
+    "continuing8_20260906_newton_clusters": 703,
+    "continuing8_20260906_ballot_repair": 2196,
+    "continuing8_20260906_newton_ballot_audit": 2703,
+    "continuing8_20260906_mahler_reset_cost": 18649,
+    "continuing8_20260906_mahler_reset_cost_audit": 19102,
+    "continuing8_20260906_newton_universality": 7680,
+    "continuing8_20260906_newton_universality_audit": 25328,
+    "continuing8_20260906_connection_boundaries": 210,
+    "continuing8_20260906_connection_boundaries_audit": 5077,
+    "continuing8_20260906_lrc_minimum_tree": 4961503,
+    "continuing8_20260906_lrc_minimum_tree_audit": 6758545
+  },
+  "normal_optimized_raw_stdout_equal": true,
+  "regenerated_certificates_raw_unchanged": true,
+  "native_lrc_audit": {
+    "unpruned_multisets": 40189061,
+    "valid_domain_words": 1159828,
+    "word_clock_evaluations": 1609124,
+    "native_gates": 6749775,
+    "python_gates": 8770
+  },
+  "prior_artifacts_verified": 333,
+  "artifacts": [
+    {
+      "path": "04-computation/continuing8_20260906_ballot_repair.py",
+      "bytes": 5246,
+      "sha256": "3d537f9a32a4b6f18c152d1986231a2fe4f5def78de0e072f558ad78b434902c"
+    },
+    {
+      "path": "04-computation/continuing8_20260906_coin_rational_handoff.py",
+      "bytes": 10793,
+      "sha256": "359eba70c2e89226e44486441919d6a95a911188054de6fd19f9e09de7ead804"
+    },
+    {
+      "path": "04-computation/continuing8_20260906_coin_rational_handoff_audit.py",
+      "bytes": 9708,
+      "sha256": "2fd45385c767a4c23d170ff9c36be1d531455ec7d435a7718cd2bfab44bb7c73"
+    },
+    {
+      "path": "04-computation/continuing8_20260906_connection_boundaries.py",
+      "bytes": 4638,
+      "sha256": "bba0c468e6a42142ec623b1a5bd2deb1a3e08d8398629ea13e5ec4f3dd9cae43"
+    },
+    {
+      "path": "04-computation/continuing8_20260906_connection_boundaries_audit.py",
+      "bytes": 7106,
+      "sha256": "24c8e8c9fb478af1a12fbf16ee755c06eae79a1caacf45a677b066056956b49a"
+    },
+    {
+      "path": "04-computation/continuing8_20260906_lrc_minimum_tree.py",
+      "bytes": 9804,
+      "sha256": "28217cfdb76a45c27db0b3ce7e8976141447fd9d2beff4fe9faba82709b198bd"
+    },
+    {
+      "path": "04-computation/continuing8_20260906_lrc_minimum_tree_audit.cpp",
+      "bytes": 11316,
+      "sha256": "31a4f7160b1bf171c43a279b44072767440583901468b7c821b98ea44aab0daf"
+    },
+    {
+      "path": "04-computation/continuing8_20260906_lrc_minimum_tree_audit.py",
+      "bytes": 9027,
+      "sha256": "8b7ae371492f42a62fb3f8fb8fba8bcd904b46dc9c0191ff6c4d90d3663cf719"
+    },
+    {
+      "path": "04-computation/continuing8_20260906_mahler_reset_cost.py",
+      "bytes": 9201,
+      "sha256": "77757ed311aac5246cf3a420dea282e84cb7aaaf428abcc928c633e8865f5646"
+    },
+    {
+      "path": "04-computation/continuing8_20260906_mahler_reset_cost_audit.py",
+      "bytes": 9309,
+      "sha256": "ecf248959988904fbe0851887bbffec4f7b64fe0df5be16070de5d4fbabfe9ae"
+    },
+    {
+      "path": "04-computation/continuing8_20260906_newton_ballot_audit.py",
+      "bytes": 15550,
+      "sha256": "6ef9b86c577a9fba03484880092a5b1f92065a903a72fbf25db7171c8e683088"
+    },
+    {
+      "path": "04-computation/continuing8_20260906_newton_clusters.py",
+      "bytes": 9707,
+      "sha256": "29c4fdc5614380b11e1e69770fc141e831e27f35618b681aae0ced3bb439775e"
+    },
+    {
+      "path": "04-computation/continuing8_20260906_newton_universality.py",
+      "bytes": 4556,
+      "sha256": "1fc809f98a154e75dff50bf20c43e8a68418a438a0af9ec08d19377f10e13700"
+    },
+    {
+      "path": "04-computation/continuing8_20260906_newton_universality_audit.py",
+      "bytes": 5710,
+      "sha256": "5ec2f72128e336b3af97010d52a19efbaac7272d7a15b98ce918e0bf52e9a379"
+    },
+    {
+      "path": "05-knowledge/results/continuing8_20260906_ballot_repair.md",
+      "bytes": 5798,
+      "sha256": "f91ef4d1e96742e59c5c7539e18722342a2e47b131e84b1b88a52162824c7639"
+    },
+    {
+      "path": "05-knowledge/results/continuing8_20260906_ballot_repair.out",
+      "bytes": 566,
+      "sha256": "42f65a43f6e9a1ff3c074a2cd28cffbb759603eed16cc34a978a97dd7a043adc"
+    },
+    {
+      "path": "05-knowledge/results/continuing8_20260906_ballot_repair_certificate.json",
+      "bytes": 4130,
+      "sha256": "151ddbd2240c210ccaf87f5f40f101439af2d58bf4fcebd765a6d6c06cc379d2"
+    },
+    {
+      "path": "05-knowledge/results/continuing8_20260906_ballot_repair_optimized.out",
+      "bytes": 566,
+      "sha256": "42f65a43f6e9a1ff3c074a2cd28cffbb759603eed16cc34a978a97dd7a043adc"
+    },
+    {
+      "path": "05-knowledge/results/continuing8_20260906_coin_rational_handoff.md",
+      "bytes": 15509,
+      "sha256": "86b919600cb55b8a44d97e0f85b1c374d6b3f8fb09355f9e4a61373c06064207"
+    },
+    {
+      "path": "05-knowledge/results/continuing8_20260906_coin_rational_handoff.out",
+      "bytes": 780,
+      "sha256": "94e04c1f7b92b12f70952e5542370fec4ccb427f3e7890ddd550ea3d2e84c86e"
+    },
+    {
+      "path": "05-knowledge/results/continuing8_20260906_coin_rational_handoff_audit.md",
+      "bytes": 10723,
+      "sha256": "5a67faea22aae38d799687f9b29a8be1d5d8aa939fc30eb70b25716702b60edf"
+    },
+    {
+      "path": "05-knowledge/results/continuing8_20260906_coin_rational_handoff_audit.out",
+      "bytes": 870,
+      "sha256": "474c15855caf0aea2e00ae0da9d0b136e89d91341a208e5f2d30f44bebf012fb"
+    },
+    {
+      "path": "05-knowledge/results/continuing8_20260906_coin_rational_handoff_audit_optimized.out",
+      "bytes": 870,
+      "sha256": "474c15855caf0aea2e00ae0da9d0b136e89d91341a208e5f2d30f44bebf012fb"
+    },
+    {
+      "path": "05-knowledge/results/continuing8_20260906_coin_rational_handoff_optimized.out",
+      "bytes": 780,
+      "sha256": "94e04c1f7b92b12f70952e5542370fec4ccb427f3e7890ddd550ea3d2e84c86e"
+    },
+    {
+      "path": "05-knowledge/results/continuing8_20260906_connection_boundaries.md",
+      "bytes": 13085,
+      "sha256": "be3f68904836affd32f76543a395f18e5d51a07fdaed8f7346e0fff3f68a8641"
+    },
+    {
+      "path": "05-knowledge/results/continuing8_20260906_connection_boundaries.out",
+      "bytes": 711,
+      "sha256": "69cf4d6b7d8a7686e0544426dfef603bf944070097cc89e750f3bd5caff0320c"
+    },
+    {
+      "path": "05-knowledge/results/continuing8_20260906_connection_boundaries_audit.md",
+      "bytes": 8349,
+      "sha256": "61d80ee34f5f31e01097b7bad103178ca7b43b943e03d136a0fc1363e7d7b89d"
+    },
+    {
+      "path": "05-knowledge/results/continuing8_20260906_connection_boundaries_audit.out",
+      "bytes": 992,
+      "sha256": "f1479de9a534d51e6ca92241e02833fb0a42a7e1ba1c8a998ae873fb1fdde294"
+    },
+    {
+      "path": "05-knowledge/results/continuing8_20260906_connection_boundaries_audit_optimized.out",
+      "bytes": 992,
+      "sha256": "f1479de9a534d51e6ca92241e02833fb0a42a7e1ba1c8a998ae873fb1fdde294"
+    },
+    {
+      "path": "05-knowledge/results/continuing8_20260906_connection_boundaries_optimized.out",
+      "bytes": 711,
+      "sha256": "69cf4d6b7d8a7686e0544426dfef603bf944070097cc89e750f3bd5caff0320c"
+    },
+    {
+      "path": "05-knowledge/results/continuing8_20260906_lrc_minimum_tree.md",
+      "bytes": 10446,
+      "sha256": "3b5b6c884eea72f225c514a1c520eb72e2904a2c95c74979c98e0a0a82139ff7"
+    },
+    {
+      "path": "05-knowledge/results/continuing8_20260906_lrc_minimum_tree.out",
+      "bytes": 27430,
+      "sha256": "f4cac8a0cc84db69dcae6ad40b159283c172e762132100466334a33d5669dd99"
+    },
+    {
+      "path": "05-knowledge/results/continuing8_20260906_lrc_minimum_tree_audit.md",
+      "bytes": 11084,
+      "sha256": "a683b135cd76e899d300c479b19fb14c5577075fd437abb4c1e1463570085dc0"
+    },
+    {
+      "path": "05-knowledge/results/continuing8_20260906_lrc_minimum_tree_audit.out",
+      "bytes": 752,
+      "sha256": "54a76256b0b664bbe9f58a483dd4205ffe115fd560bb98b3cd6d26cd3db07a17"
+    },
+    {
+      "path": "05-knowledge/results/continuing8_20260906_lrc_minimum_tree_audit_optimized.out",
+      "bytes": 752,
+      "sha256": "54a76256b0b664bbe9f58a483dd4205ffe115fd560bb98b3cd6d26cd3db07a17"
+    },
+    {
+      "path": "05-knowledge/results/continuing8_20260906_lrc_minimum_tree_certificate.json",
+      "bytes": 990154,
+      "sha256": "580a7c930103aab3bea867ad463a90b0e0208323a90ee95a685ff811a761582d"
+    },
+    {
+      "path": "05-knowledge/results/continuing8_20260906_lrc_minimum_tree_optimized.out",
+      "bytes": 27430,
+      "sha256": "f4cac8a0cc84db69dcae6ad40b159283c172e762132100466334a33d5669dd99"
+    },
+    {
+      "path": "05-knowledge/results/continuing8_20260906_mahler_reset_cost.md",
+      "bytes": 18450,
+      "sha256": "bc979764e8d29adc6ee00db6ff1524b5ef2bfce49ca49c78aae15ccc40bec77f"
+    },
+    {
+      "path": "05-knowledge/results/continuing8_20260906_mahler_reset_cost.out",
+      "bytes": 1395,
+      "sha256": "dfa7f2b47c883336c27aef04d55e9ac057e0a083c5a6a3841a68bc657d5c3e0c"
+    },
+    {
+      "path": "05-knowledge/results/continuing8_20260906_mahler_reset_cost_audit.md",
+      "bytes": 8189,
+      "sha256": "7ce635876c33229284b7ce243d78e7dd219f04842aafafcffd713a001c0d158d"
+    },
+    {
+      "path": "05-knowledge/results/continuing8_20260906_mahler_reset_cost_audit.out",
+      "bytes": 839,
+      "sha256": "f8ae3455f58452d90d95ca6661e8b64ff0dd748c75e23d722fe00c0b82737d5c"
+    },
+    {
+      "path": "05-knowledge/results/continuing8_20260906_mahler_reset_cost_audit_optimized.out",
+      "bytes": 839,
+      "sha256": "f8ae3455f58452d90d95ca6661e8b64ff0dd748c75e23d722fe00c0b82737d5c"
+    },
+    {
+      "path": "05-knowledge/results/continuing8_20260906_mahler_reset_cost_certificate.json",
+      "bytes": 13600,
+      "sha256": "ac3f7f74a5ed80351218669c628a4bf068384f7e8132fa41af0b0828b6646d6c"
+    },
+    {
+      "path": "05-knowledge/results/continuing8_20260906_mahler_reset_cost_optimized.out",
+      "bytes": 1395,
+      "sha256": "dfa7f2b47c883336c27aef04d55e9ac057e0a083c5a6a3841a68bc657d5c3e0c"
+    },
+    {
+      "path": "05-knowledge/results/continuing8_20260906_newton_ballot_audit.md",
+      "bytes": 10916,
+      "sha256": "41ca5782376c1a2f4702ced680ce31d39fbe4b0950ae1c0cdd80091725b8070f"
+    },
+    {
+      "path": "05-knowledge/results/continuing8_20260906_newton_ballot_audit.out",
+      "bytes": 470,
+      "sha256": "c1340a86b563eb0021219e3e166866a19811fc3889819b9c2836e54eb1029811"
+    },
+    {
+      "path": "05-knowledge/results/continuing8_20260906_newton_ballot_audit_optimized.out",
+      "bytes": 470,
+      "sha256": "c1340a86b563eb0021219e3e166866a19811fc3889819b9c2836e54eb1029811"
+    },
+    {
+      "path": "05-knowledge/results/continuing8_20260906_newton_clusters.md",
+      "bytes": 12017,
+      "sha256": "feecebc9c7232407fa382eb2edffb49bd06c1f313b2eeab330a2e284f3248a21"
+    },
+    {
+      "path": "05-knowledge/results/continuing8_20260906_newton_clusters.out",
+      "bytes": 1298,
+      "sha256": "3d980a902fd23299521e6a3d51b3878d787760853ebcefbe1cf09d7668282281"
+    },
+    {
+      "path": "05-knowledge/results/continuing8_20260906_newton_clusters_certificate.json",
+      "bytes": 27628,
+      "sha256": "1d35470321fbc24289b62fb49955cafe9e10e7518f26b9ae17f59ee12145e17e"
+    },
+    {
+      "path": "05-knowledge/results/continuing8_20260906_newton_clusters_optimized.out",
+      "bytes": 1298,
+      "sha256": "3d980a902fd23299521e6a3d51b3878d787760853ebcefbe1cf09d7668282281"
+    },
+    {
+      "path": "05-knowledge/results/continuing8_20260906_newton_universality.md",
+      "bytes": 9895,
+      "sha256": "db3270f145b03e8c7c5fa197136d48de3301ac38b793e290e59b7fb387695d9e"
+    },
+    {
+      "path": "05-knowledge/results/continuing8_20260906_newton_universality.out",
+      "bytes": 508,
+      "sha256": "67f705987a95b6dc31110df009ef7ae4a6c225986b70a61226a08775a397d7c6"
+    },
+    {
+      "path": "05-knowledge/results/continuing8_20260906_newton_universality_audit.md",
+      "bytes": 7149,
+      "sha256": "a32c5109e908258ed7615fdd072ec0a5c9ee16b95396a3186a28e76656d7a1a6"
+    },
+    {
+      "path": "05-knowledge/results/continuing8_20260906_newton_universality_audit.out",
+      "bytes": 400,
+      "sha256": "ce48e09f8adc41ea333a9717b92105e52534e2e07871bfd1bcbe48aed3281fe7"
+    },
+    {
+      "path": "05-knowledge/results/continuing8_20260906_newton_universality_audit_optimized.out",
+      "bytes": 400,
+      "sha256": "ce48e09f8adc41ea333a9717b92105e52534e2e07871bfd1bcbe48aed3281fe7"
+    },
+    {
+      "path": "05-knowledge/results/continuing8_20260906_newton_universality_certificate.json",
+      "bytes": 6160,
+      "sha256": "8d11f09b961beb042f4146f55459141a2372275995b7b476cc85377633f6c4b0"
+    },
+    {
+      "path": "05-knowledge/results/continuing8_20260906_newton_universality_optimized.out",
+      "bytes": 508,
+      "sha256": "67f705987a95b6dc31110df009ef7ae4a6c225986b70a61226a08775a397d7c6"
+    }
+  ]
+}

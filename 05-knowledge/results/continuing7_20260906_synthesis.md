@@ -1,6 +1,6 @@
 # Singular-fibre closure, modular norm reductions, and reciprocal repair obstructions
 
-**CURRENT CHECKPOINT, 2026-09-06; PROVED + FINITE-EXACT + INDEPENDENTLY AUDITED.**
+**PREVIOUS CHECKPOINT, 2026-09-06; PROVED + FINITE-EXACT + INDEPENDENTLY AUDITED.**
 Every singular shared-positive-root fibre now has negative original response.
 Nearby factorial endpoints provide exact norm reductions and a second
 unbounded family of complementary units. Three more connected-complement
@@ -9,6 +9,11 @@ uniformly above the new frontier. Reciprocal repair has a universal
 two-packet obstruction and an infinite one-packet-based obstruction family.
 General LRC14, the full anchored sign problem and Laurent noncancellation
 remain **OPEN**. No external priority or Lean claim is made.
+
+The [current continuing8 synthesis](continuing8_20260906_synthesis.md)
+extends the portfolio and replaces this checkpoint's connected-complement
+array by7646 clocks with maximum11995. The proofs and frozen evidence here
+remain valid within their stated scopes.
 
 The [previous checkpoint](continuing6_20260906_synthesis.md) retains the
 entire zero-beta boundary closure, the first prime-unit family, the original
