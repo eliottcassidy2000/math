@@ -1,0 +1,7 @@
+PASS independent two-direction repair audit
+No flow producer import: complete retained-edge subsets on 30 fresh boards; 210 transposition controls.
+Native line triples 754 eligible 126 eight-choice assignments 1008 conditional permutations 4800
+Uniform avoidance lemma, exact four-line event, and adaptive retained-point proof independently accepted.
+Asymptotic gain epsilon=exp(-2)/12-exp(-4)/2+5*exp(-6)/4+exp(-8)/6.
+Gamma=1-5*exp(-2)+epsilon; no finite threshold or absence theorem inferred.
+Always-active exact gates 22186

@@ -1,5 +1,13 @@
 # Script Results Index
 
+- [Two-direction repair barrier](continuing10_20260907_no3_repair.md):
+  **PROVED + FINITE-EXACT + INDEPENDENTLY AUDITED.** A native capacity-two
+  matching potential raises the uniform fixed-row deletion mean to
+  `gamma=1-5e^-2+e^-2/12-e^-4/2+5e^-6/4+e^-8/6>0.328`.
+  It strengthens the no-three-in-line probability rate to `gamma^2/8`
+  and controls arbitrary adaptive repairs with bounded original-point loss.
+  The general extremal problem remains OPEN.
+
 - [Current continuing synthesis](continuing9_20260907_synthesis.md):
   **PROVED + FINITE-EXACT + INDEPENDENTLY AUDITED.** Every circuit sign word
   survives fixed first two moments; exact cubic image and anchored C/D

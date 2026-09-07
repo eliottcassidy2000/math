@@ -116,3 +116,7 @@ scripts/*.ps1 text eol=crlf
 # Continuing synthesis9: preserve exact frozen LF bytes across hosts.
 04-computation/continuing9_20260907_* text eol=lf
 05-knowledge/results/continuing9_20260907_* text eol=lf
+
+# Continuing synthesis10: preserve exact frozen LF bytes across hosts.
+04-computation/continuing10_20260907_* text eol=lf
+05-knowledge/results/continuing10_20260907_* text eol=lf
