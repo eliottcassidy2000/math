@@ -1,0 +1,80 @@
+{
+  "always_active_gates": 170,
+  "ambient_torsion_arms": "n+1",
+  "controls": [
+    {
+      "ambient_arms": 4,
+      "component_constant": "1/18",
+      "components": 5,
+      "n": 3,
+      "source_t_degree": 7,
+      "unit_generated_arms": 2,
+      "unit_order": 6
+    },
+    {
+      "ambient_arms": 5,
+      "component_constant": "8192/100947",
+      "components": 6,
+      "n": 4,
+      "source_t_degree": 9,
+      "unit_generated_arms": 2,
+      "unit_order": 6
+    },
+    {
+      "ambient_arms": 6,
+      "component_constant": "15625/150696",
+      "components": 7,
+      "n": 5,
+      "source_t_degree": 11,
+      "unit_generated_arms": 2,
+      "unit_order": 6
+    },
+    {
+      "ambient_arms": 7,
+      "component_constant": "256/2079",
+      "components": 8,
+      "n": 6,
+      "source_t_degree": 13,
+      "unit_generated_arms": 2,
+      "unit_order": 6
+    },
+    {
+      "ambient_arms": 8,
+      "component_constant": "16807/120156",
+      "components": 9,
+      "n": 7,
+      "source_t_degree": 15,
+      "unit_generated_arms": 2,
+      "unit_order": 6
+    },
+    {
+      "ambient_arms": 9,
+      "component_constant": "262144/1698543",
+      "components": 10,
+      "n": 8,
+      "source_t_degree": 17,
+      "unit_generated_arms": 2,
+      "unit_order": 6
+    },
+    {
+      "ambient_arms": 10,
+      "component_constant": "243/1456",
+      "components": 11,
+      "n": 9,
+      "source_t_degree": 19,
+      "unit_generated_arms": 2,
+      "unit_order": 6
+    }
+  ],
+  "exact_annihilator": "D*g^6 and R_j=g^j-B_j(partial)g^2-(A_j(partial)+B_j(partial)partial^3/6)g^5 for j=0,1,3,4",
+  "normalized_unit": "A/g^6+B*(g^-3+lambda*g^-2), lambda=3/(4*b*h^2)",
+  "parameters": "integer n>=3; b,d,h nonzero complex constants; fixed W2",
+  "pointed_module_independent_of": [
+    "n",
+    "d"
+  ],
+  "source": "u=x-h; z=u-2h+u^3*t; W=u*z^2; F=u*z*(b+d*W^n)",
+  "status": "FINITE-EXACT controls; all-n proof and full annihilator in report",
+  "unit_generated_arms": 2,
+  "unit_order": 6
+}

@@ -1,0 +1,156 @@
+# Dependent discriminant pencils force a nonempty critical curve
+
+**Status: PROVED ANALYTICALLY + FINITE-EXACT; INDEPENDENTLY AUDITED.**
+This is an independent audit and proof of the root agent's factorization
+observation. It closes the remaining dimension-one obligation for globally
+submersive genuine quadratic first functions on W2. Earlier frozen packets
+are unchanged. The obstruction itself applies to every complex polynomial
+source quadratic, without a degree bound, globality, or rational-mate
+hypothesis.
+
+## 1. Complete statement and proof
+
+Let
+
+    F=N(x)t^2+P(x)t+Q(x) in C[x,t],  N!=0,
+    Delta=P^2-4NQ.
+
+Suppose dim_C span{N,Delta}=1. Since N is nonzero, this is equivalent to
+Delta=cN for a unique constant c in C, including c=0. Consequently
+
+    P^2=N(4Q+c).                                     (1)
+
+Factor N=K R^2, where K is a nonzero squarefree polynomial, possibly
+constant, and R is a nonzero polynomial. Any nonzero scalar factor can be
+absorbed into K; no normalization or monicity is required. For a root with
+multiplicity e in N, write e=2q+epsilon with epsilon in {0,1}. Equation
+(1) forces the multiplicity of that root in P to be at least
+ceil(e/2)=q+epsilon, which is exactly its multiplicity in K R. This also
+holds trivially when P=0. Thus K R divides P, and in characteristic zero
+we may write
+
+    P=2KRS,  S in C[x].                               (2)
+
+Substitution into (1) and cancellation of the nonzero polynomial K R^2
+gives Q=K S^2-c/4. Therefore
+
+    F+c/4=K(Rt+S)^2.                                 (3)
+
+Set H=Rt+S. Since R!=0, H is nonconstant, of degree one in t. Its zero
+locus is nonempty: choose any x0 with R(x0)!=0 and put
+t0=-S(x0)/R(x0). Such x0 exists because a nonzero polynomial has only
+finitely many roots. No zero of R needs to be used or divided through.
+The two derivatives of F are
+
+    F_t=2KRH,
+    F_x=H[K'H+2K(R't+S')].                            (4)
+
+They vanish everywhere on the nonempty algebraic curve H=0. Hence F
+cannot be a source submersion. This proves the full assertion, including
+constant N, all even and odd root multiplicities, P=0, and c=0.
+
+Equations (2)-(3) also give the converse algebraic description: every
+N=KR^2, P=2KRS, Q=KS^2-c/4 has Delta=cN. The obstruction is necessary
+for source submersion; independence is not asserted to be sufficient.
+
+## 2. Inheritance, hostiles, and the completed quadratic consumer
+
+The closest proved mechanism is the constant-target square obstruction;
+here the retained squarefree factor K converts a dependent discriminant
+into an actual squared source factor. The previously underused sidecar is
+the divisibility N|P^2. The first failed implication in a tempting
+overstatement is “dependent pencil implies no rational mate.” That is
+false, and this report does not use it.
+
+The inherited proportional example from
+[the exact pencil theorem](planar_jc48_sep08_exact_pencils.md),
+
+    F=x^5(x-1)^3t^2,
+    G=(8x^2-4x-1)/(3x^4(x-1)^2t),
+
+has J(F,G)=1 and dependent discriminant zero, yet is critical on t=0.
+It factors with K=x(x-1), R=x^2(x-1), S=0. Thus the rational-mate
+claim survives exactly as it should.
+
+Actual W2 globality does not remove the obstruction either. For delta!=0,
+
+    F=(x^4+delta*x)(1+x^2t)^2,
+    G=1/[3delta*x^2(1+x^2t)],
+
+again satisfy J(F,G)=1. The full boundary expression of F is
+(1+delta R^3)B^2. Nevertheless the source curve 1+x^2t=0 is critical,
+as (3) predicts with K=x^4+delta*x, R=x^2, S=1. These are hostile
+controls against confusing rational exactness or global regularity with
+submersion, not exceptions to the theorem.
+
+Every globally submersive function is source-submersive. Therefore every
+globally submersive *genuine* source quadratic on fixed W2 has an
+independent two-dimensional discriminant pencil. The complete inherited
+rational-mate criterion and six-entry pencil theorem now combine with
+
+* [the fifth-order family](continuing11_20260908_quadratic_family.md),
+* [the next three whole pencils](continuing12_20260908_quadratic_pencils.md),
+* [the final two whole pencils](continuing12_20260908_last_quadratic_pencils.md)
+
+to give the following precise complete corollary.
+
+**Corollary.** The global first functions on the fixed W2 that have
+*original source t-degree exactly two*, are everywhere submersive, and
+admit a rational mate are exactly these three families, with arbitrary
+target shift s:
+
+* Fifth-order pencil: u=x-h, w=1+u^2t,
+  F=s+(a u^2+d u)w^2+k u w, where k=-4ah and
+  a*d*h*(d-4ah)!=0.
+* Seventh-order pencil: u=x-h, z=u-2h+u^3t,
+  F=s+u z[(a u+d)z+k], where d*k*h*(k-2dh)!=0 and a is arbitrary.
+* Elliptic pencil: F=s+x(1+x^2t)[d(1+x^2t)+p x], where dp!=0.
+
+Every member has exactly two full torsion arms in the original source
+response module C[x,t]/D_F C[x,t]. The distinguished unit's exact scalar
+order is respectively two, three, and two. Consequently the complete
+positive scalar unit-order spectrum in this precise class is {2,3}; both
+values occur. The number of arms generated by the unit can drop on the
+already audited coefficient-alignment walls, so two full ambient arms
+does not assert universal unit cyclicity.
+
+There is no remaining dimension-one case in this submersive class. The
+corollary uses the audited scope of its suppliers; it is not a
+classification of arbitrary quadratic polynomials, arbitrary global
+functions of higher source degree, or global regular Jacobian pairs.
+In particular the inherited nonexact elliptic hostile F=t^2+x^3 does not
+exclude exact elliptic fibres in general: the last family supplies an
+actual exact primitive. No literature-priority claim is made for the
+elementary factorization.
+
+## 3. Exact control protocol and independent scope
+
+The source imports no mathematical producer. It checks general
+factorization and derivative identities, both valuation parities for
+exponents 0,...,16, and seven declared parameter choices covering constant
+N, zero P, zero discriminant, purely even and mixed multiplicities,
+constant R, and a nonmonic scalar factor. Each choice includes an explicit
+actual source critical point. Both inherited rational-mate hostiles are
+checked, including the full W2 boundary chart of the global example.
+
+The arbitrary-exponent valuation proof and the nonempty-curve argument are
+analytic; they are not inferred from these finite controls. All checks
+remain active under Python optimization. The deterministic output and
+certificate are compared in normal and optimized modes before freeze.
+
+Reproduce after relocation:
+
+    python 04-computation/continuing12_20260908_dependent_pencil_closure.py
+    python -O 04-computation/continuing12_20260908_dependent_pencil_closure.py
+
+The certificate is written in 05-knowledge/results after repository
+relocation or beside the source in the external packet. No frozen supplier
+file or maintained repository file was changed for this independent audit.
+
+## Independent acceptance
+
+The [independent audit](continuing12_20260908_last_quadratic_pencils_audit.md) accepts
+this scoped result and its analytic proof, with 174 exact gates per
+normal and optimized pass. Its producer-independent controls retain the
+declared positive and hostile boundaries. The parent replays both modes
+against frozen raw LF outputs and certificates.

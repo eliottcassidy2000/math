@@ -1,0 +1,6 @@
+WHOLE PENCILS: u3 span(1,u) and u4 span(1,u2) have no globally submersive member.
+SEVENTH PENCIL: complete global-submersion family; exact source unit order3 and exactly two full torsion arms.
+COEFFICIENT RANK: two arms except two admissible complex rank-one branches; no real rank-one wall.
+PBW: exact order-three relation compiler retains all coefficient vectors; no Dg3-only claim.
+CERTIFICATE_SHA256 e083d60b782384a91d03538fa25065664f1bbd491aa1cc9ef12767fb8dbce0af
+Always-active exact gates: 82

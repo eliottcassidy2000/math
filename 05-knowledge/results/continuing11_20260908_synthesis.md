@@ -1,10 +1,13 @@
 # Continuing synthesis: the missing unit order, forced cuts, and independent repair
 
-**CURRENT CHECKPOINT, 2026-09-08. Status: PROVED scoped theorems,
+**PREVIOUS CHECKPOINT, 2026-09-08. Status: PROVED scoped theorems,
 FINITE-EXACT certificates, and independent audits.** A concrete global
 quadratic resolves the previous session's unit-order-two existence question.
 General LRC(14), planar JC, and extremal no-three-in-line remain **OPEN**.
 No external priority claim is made.
+
+The [current synthesis](continuing12_20260908_synthesis.md) supersedes this
+checkpoint for the necessary clock array and later research.
 
 The [previous synthesis](continuing10_20260908_synthesis.md) contains the
 source-linear classification, clock7200 closure and two-direction repair

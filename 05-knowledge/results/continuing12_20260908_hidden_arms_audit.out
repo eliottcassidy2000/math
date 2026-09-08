@@ -1,0 +1,5 @@
+INDEPENDENT: original-chart determinants and actual boundary/source submersion formulas retained.
+FINITE UNIVERSE: r=3..8; full K-root algebra, primitive coefficients, nonzero-fibre inverses and polynomial Eu remainder.
+WEYL: exact unimodular basis and all four PBW relations; unit-generated pointed module independent of r,d.
+CERTIFICATE_SHA256 f7811e5b4b863c9912347103b2f33933de64f2c0d6f25546bb93ef68a5666ea7
+Always-active exact gates: 149

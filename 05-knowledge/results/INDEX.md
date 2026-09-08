@@ -1,6 +1,18 @@
 # Script Results Index
 
-- [Current continuing synthesis](continuing11_20260908_synthesis.md):
+- [Current continuing synthesis](continuing12_20260908_synthesis.md):
+  **PROVED + FINITE-EXACT + INDEPENDENTLY AUDITED.** On fixed W2 the same
+  pointed unit Weyl module coexists with unbounded ambient arms and pair degree.
+  Global submersive quadratics admitting rational mates form exactly three
+  families, with unit orders{2,3}; identical unit modules also hide fibre genus.
+  Native middle-depth
+  incompatibility closes7560;6930 also closes, leaving7,620 clocks, maximum11,935.
+  Finite-direction repair becomes exact graph matching at incidence at most2,
+  with exact branching over higher-incidence cells and an actual five-cycle gap.
+  [Manifest](continuing12_20260908_manifest.json) pins proofs and independent replays.
+  General LRC14, planar JC and extremal no-three-in-line remain OPEN.
+
+- [Previous continuing synthesis](continuing11_20260908_synthesis.md):
   **PROVED + FINITE-EXACT + INDEPENDENTLY AUDITED.** A global quadratic on W2
   realizes the missing source unit order2 and generates both full torsion arms,
   with exact Weyl presentation D/Dg². The full fixed-pencil family has an

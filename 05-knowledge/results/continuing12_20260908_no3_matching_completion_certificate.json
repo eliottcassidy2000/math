@@ -1,0 +1,630 @@
+{
+  "abstract_subcubic_graphs": {
+    "0": 1,
+    "1": 1,
+    "2": 2,
+    "3": 8,
+    "4": 64,
+    "5": 768
+  },
+  "block_bank": {
+    "boards": 102,
+    "checks": 3060,
+    "ordered_partitions": 30,
+    "residual_dual_checks": 32
+  },
+  "complete_grids": {
+    "2": {
+      "all": 1,
+      "fractional_gap": 0,
+      "regime": 1,
+      "with_exceptional_cells": 0
+    },
+    "3": {
+      "all": 6,
+      "fractional_gap": 0,
+      "regime": 6,
+      "with_exceptional_cells": 0
+    },
+    "4": {
+      "all": 90,
+      "fractional_gap": 0,
+      "regime": 73,
+      "with_exceptional_cells": 0
+    },
+    "5": {
+      "all": 2040,
+      "five_cycle": 0,
+      "fractional_gap": 6,
+      "regime": 1240,
+      "triangle_component": 6,
+      "with_exceptional_cells": 16
+    }
+  },
+  "gate_total": 58304,
+  "gates": {
+    "abstract_incidence_graph_reconstruction": 844,
+    "block_charge_disjoint_stratum": 11016,
+    "boolean_vs_independence": 2167,
+    "complete_grid_cardinality": 4,
+    "complete_grid_regime_count": 4,
+    "concurrent_hyperedge_hostile": 1,
+    "distinct_shared_cell": 4593,
+    "double_cover_min_cut": 2167,
+    "double_cover_vertex_cover": 2167,
+    "every_retained_subset_branch_equivalence": 8192,
+    "exceptional_branch_exact": 2147,
+    "exceptional_retention_witness": 2147,
+    "finite_direction_block_inequality": 3060,
+    "five_cycle_beats_prior_bounds": 1,
+    "five_cycle_exact_values": 1,
+    "fractional_deletion_dual": 2167,
+    "fractional_deletion_primal": 2167,
+    "fractional_matching_capacity": 6741,
+    "fractional_strong_certificate": 2167,
+    "larger_line_outside_edge_cover": 1,
+    "matching_cover_witness": 2167,
+    "matching_vs_exact_deletion": 2167,
+    "no_five_cycle_before_six": 4,
+    "occupied_rows_columns_two": 4,
+    "separated_exact_deletions": 4,
+    "separated_five_cycle_components": 4,
+    "triangle_tail_hostile": 1,
+    "triple_regime_supplier": 2167,
+    "two_new_direction_residual_dual": 32
+  },
+  "named_witnesses": {
+    "concurrent": {
+      "branch": {
+        "exceptional_cells": [
+          4
+        ],
+        "retained_mask": 462,
+        "tau": 1,
+        "total_branches": 2,
+        "valid_branches": 2
+      },
+      "four_direction_branch": {
+        "exceptional_cells": [
+          4
+        ],
+        "retained_mask": 462,
+        "tau": 1,
+        "total_branches": 2,
+        "valid_branches": 2
+      },
+      "overfull": [
+        [
+          1,
+          0,
+          88
+        ],
+        [
+          -1,
+          4,
+          274
+        ],
+        [
+          2,
+          -2,
+          148
+        ]
+      ],
+      "rows": [
+        [
+          2,
+          4
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          0,
+          1
+        ]
+      ]
+    },
+    "five_cycle": {
+      "branch": {
+        "exceptional_cells": [],
+        "retained_mask": 3812,
+        "tau": 3,
+        "total_branches": 1,
+        "valid_branches": 1
+      },
+      "four_direction_branch": {
+        "exceptional_cells": [],
+        "retained_mask": 3812,
+        "tau": 3,
+        "total_branches": 1,
+        "valid_branches": 1
+      },
+      "matching": {
+        "alpha": 2,
+        "beta": 2,
+        "double_cover_matching": [
+          [
+            0,
+            3
+          ],
+          [
+            1,
+            4
+          ],
+          [
+            2,
+            1
+          ],
+          [
+            3,
+            2
+          ],
+          [
+            4,
+            0
+          ]
+        ],
+        "edges": [
+          [
+            0,
+            3
+          ],
+          [
+            0,
+            4
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            1,
+            4
+          ],
+          [
+            2,
+            3
+          ]
+        ],
+        "fractional_delete": [
+          "1/2",
+          "0",
+          "0",
+          "1/2",
+          "0",
+          "0",
+          "0",
+          "1/2",
+          "1/2",
+          "0",
+          "0",
+          "1/2"
+        ],
+        "fractional_line_dual": [
+          "1/2",
+          "1/2",
+          "1/2",
+          "1/2",
+          "1/2"
+        ],
+        "integer_delete_mask": 268,
+        "matching": [
+          [
+            1,
+            4
+          ],
+          [
+            2,
+            3
+          ]
+        ],
+        "nu": 2,
+        "tau": 3,
+        "tau_lp": "5/2",
+        "vertices": 5
+      },
+      "overfull": [
+        [
+          1,
+          0,
+          2053
+        ],
+        [
+          1,
+          1,
+          648
+        ],
+        [
+          -1,
+          7,
+          1408
+        ],
+        [
+          2,
+          -5,
+          2368
+        ],
+        [
+          2,
+          0,
+          41
+        ]
+      ],
+      "rows": [
+        [
+          0,
+          3
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          0,
+          4
+        ],
+        [
+          1,
+          4
+        ],
+        [
+          3,
+          5
+        ],
+        [
+          2,
+          5
+        ]
+      ]
+    },
+    "larger_line": {
+      "branch": {
+        "exceptional_cells": [],
+        "retained_mask": 1008,
+        "tau": 4,
+        "total_branches": 1,
+        "valid_branches": 1
+      },
+      "four_direction_branch": {
+        "exceptional_cells": [],
+        "retained_mask": 1008,
+        "tau": 4,
+        "total_branches": 1,
+        "valid_branches": 1
+      },
+      "overfull": [
+        [
+          1,
+          -1,
+          324
+        ],
+        [
+          1,
+          0,
+          537
+        ],
+        [
+          1,
+          1,
+          162
+        ],
+        [
+          2,
+          -2,
+          148
+        ]
+      ],
+      "rows": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          2,
+          4
+        ],
+        [
+          3,
+          4
+        ]
+      ]
+    },
+    "triangle": {
+      "branch": {
+        "exceptional_cells": [],
+        "retained_mask": 588,
+        "tau": 2,
+        "total_branches": 1,
+        "valid_branches": 1
+      },
+      "four_direction_branch": {
+        "exceptional_cells": [],
+        "retained_mask": 588,
+        "tau": 2,
+        "total_branches": 1,
+        "valid_branches": 1
+      },
+      "matching": {
+        "alpha": 1,
+        "beta": 1,
+        "double_cover_matching": [
+          [
+            0,
+            1
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            2,
+            0
+          ]
+        ],
+        "edges": [
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            1,
+            2
+          ]
+        ],
+        "fractional_delete": [
+          "1/2",
+          "0",
+          "0",
+          "0",
+          "0",
+          "1/2",
+          "1/2",
+          "0",
+          "0",
+          "0"
+        ],
+        "fractional_line_dual": [
+          "1/2",
+          "1/2",
+          "1/2"
+        ],
+        "integer_delete_mask": 36,
+        "matching": [
+          [
+            1,
+            2
+          ]
+        ],
+        "nu": 1,
+        "tau": 2,
+        "tau_lp": "3/2",
+        "vertices": 3
+      },
+      "overfull": [
+        [
+          1,
+          0,
+          69
+        ],
+        [
+          -1,
+          6,
+          608
+        ],
+        [
+          2,
+          0,
+          41
+        ]
+      ],
+      "rows": [
+        [
+          0,
+          3
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          0,
+          4
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          1,
+          2
+        ]
+      ]
+    },
+    "triangle_tail": {
+      "branch": {
+        "exceptional_cells": [],
+        "retained_mask": 819,
+        "tau": 2,
+        "total_branches": 1,
+        "valid_branches": 1
+      },
+      "four_direction_branch": {
+        "exceptional_cells": [],
+        "retained_mask": 819,
+        "tau": 2,
+        "total_branches": 1,
+        "valid_branches": 1
+      },
+      "matching": {
+        "alpha": 2,
+        "beta": 2,
+        "double_cover_matching": [
+          [
+            0,
+            2
+          ],
+          [
+            1,
+            3
+          ],
+          [
+            2,
+            0
+          ],
+          [
+            3,
+            1
+          ]
+        ],
+        "edges": [
+          [
+            0,
+            2
+          ],
+          [
+            0,
+            3
+          ],
+          [
+            1,
+            3
+          ],
+          [
+            2,
+            3
+          ]
+        ],
+        "fractional_delete": [
+          "0",
+          "0",
+          "0",
+          "1",
+          "0",
+          "0",
+          "0",
+          "1",
+          "0",
+          "0"
+        ],
+        "fractional_line_dual": [
+          "1/2",
+          "1/2",
+          "1/2",
+          "1/2"
+        ],
+        "integer_delete_mask": 136,
+        "matching": [
+          [
+            0,
+            2
+          ],
+          [
+            1,
+            3
+          ]
+        ],
+        "nu": 2,
+        "tau": 2,
+        "tau_lp": "2",
+        "vertices": 4
+      },
+      "overfull": [
+        [
+          1,
+          0,
+          641
+        ],
+        [
+          1,
+          1,
+          26
+        ],
+        [
+          -1,
+          6,
+          416
+        ],
+        [
+          2,
+          0,
+          41
+        ]
+      ],
+      "rows": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          2,
+          4
+        ]
+      ]
+    }
+  },
+  "source_sha256": "b0941fac6030ab03302eb2aef35e88c3634ad3f9f9e51460e9d098e443507e4e",
+  "status": "FINITE-EXACT controls; uniform analytical statements in paired report",
+  "translated_families": [
+    {
+      "beta": 2,
+      "cells": 12,
+      "copies": 1,
+      "tau": 3,
+      "tau_lp": "5/2"
+    },
+    {
+      "beta": 4,
+      "cells": 24,
+      "copies": 2,
+      "tau": 6,
+      "tau_lp": "5"
+    },
+    {
+      "beta": 6,
+      "cells": 36,
+      "copies": 3,
+      "tau": 9,
+      "tau_lp": "15/2"
+    },
+    {
+      "beta": 8,
+      "cells": 48,
+      "copies": 4,
+      "tau": 12,
+      "tau_lp": "10"
+    }
+  ]
+}

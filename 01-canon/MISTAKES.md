@@ -9,6 +9,37 @@ Format per entry:
 - Why it was wrong
 - The correct framing
 
+## 2026-09-08 continuing12 -- a complete observable is not the ambient state
+
+- **REFUTED inference:** retaining every future Weyl operation on the unit
+  does not recover the ambient response torsion. The [fixed-W2 family](../05-knowledge/results/continuing12_20260908_fixed_unit_hidden_arms.md)
+  has the SAME pointed two-arm unit module for all n>=3 at fixed b,h,
+  but n+1 full torsion arms. The first failed implication is generated
+  module equals ambient module; the strongest survivor is exact equality
+  of every unit relation. The missing coordinate is another response
+  class or a labelled fibre component, not a higher unit derivative.
+- **REFUTED degree extrapolation:** the earlier all-m power map happened
+  to have pair degree equal to unit order. The [new family](../05-knowledge/results/continuing12_20260908_pair_degree.md)
+  keeps exact unit order6 and all pointed Weyl relations fixed while
+  rational pair degree is5n+3. Every rational constant-Jacobian mate gives
+  the same embedded pair field. Separately, the [elliptic quadratic](../05-knowledge/results/continuing12_20260908_last_quadratic_pencils.md)
+  has the same pointed unit module D/Dg² as a rational-fibre example.
+  Rational mate does not mean rational generic-fibre parametrization:
+  the paid extension is cubic, and geometric integrality supplies constants.
+- **REFUTED incidence shortcut:** a cell on three originally overfull
+  triples is one action, not three pairwise graph edges. The [actual n=5
+  board](../05-knowledge/results/continuing12_20260908_no3_matching_completion.md)
+  has row pairs (24,01,23,34,01), repair1, while its naive triangle predicts2.
+  Graph matching is exact at cell incidence at most2; branch on retained
+  higher-incidence cells for the unrestricted finite problem. Conversely,
+  a triangle with a pendant vertex has a perfect matching and no gap:
+  arbitrary odd-cycle counting loses attachments. The repaired proof also
+  restricts the graph bijection to sets containing all zero-incidence cells
+  and explicitly pays redundancy of triple-LP upper bounds before dualizing.
+- **Navigation repair:** the maintained problem-ledger LRC row still used
+  continuing10 and7,625 after continuing11 had7,622. It now routes to the
+  current7,620-clock array; previous checkpoint arrays remain provenance.
+
 ## 2026-09-08 continuing11 -- directional overlap and regular component loss
 
 - **REFUTED extension probe:** adding full slope2 excess to the optimal

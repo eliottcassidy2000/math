@@ -1,0 +1,8 @@
+PASS continuing12 finite-direction matching completion
+Complete grid census: {"2": {"all": 1, "fractional_gap": 0, "regime": 1, "with_exceptional_cells": 0}, "3": {"all": 6, "fractional_gap": 0, "regime": 6, "with_exceptional_cells": 0}, "4": {"all": 90, "fractional_gap": 0, "regime": 73, "with_exceptional_cells": 0}, "5": {"all": 2040, "five_cycle": 0, "fractional_gap": 6, "regime": 1240, "triangle_component": 6, "with_exceptional_cells": 16}}
+Abstract labelled subcubic graphs: {"0": 1, "1": 1, "2": 2, "3": 8, "4": 64, "5": 768}
+Block bank: {"boards": 102, "checks": 3060, "ordered_partitions": 30, "residual_dual_checks": 32}
+Five-cycle: tau2=2, J3=0, beta3=2, tauLP=5/2, tau3=3
+Concurrent triple: one exceptional cell, exact repair1; triangle-tail: no gap
+Always-active gates: 58304
+Certificate: continuing12_20260908_no3_matching_completion_certificate.json

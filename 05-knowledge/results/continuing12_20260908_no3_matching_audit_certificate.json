@@ -1,0 +1,124 @@
+{
+  "abstract_graphs": {
+    "0": 1,
+    "1": 1,
+    "2": 2,
+    "3": 8,
+    "4": 64,
+    "5": 768
+  },
+  "always_active_gates": 12767,
+  "complete_census": {
+    "2": {
+      "boards": 1,
+      "exceptional": 0,
+      "fractional_gap": 0,
+      "regime": 1
+    },
+    "3": {
+      "boards": 6,
+      "exceptional": 0,
+      "fractional_gap": 0,
+      "regime": 6
+    },
+    "4": {
+      "boards": 90,
+      "exceptional": 0,
+      "fractional_gap": 0,
+      "regime": 73
+    },
+    "5": {
+      "boards": 2040,
+      "exceptional": 16,
+      "fractional_gap": 6,
+      "regime": 1240
+    }
+  },
+  "named": {
+    "attached_triangle": {
+      "beta": 2,
+      "edges": [
+        [
+          0,
+          3
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          0,
+          2
+        ]
+      ],
+      "exceptional": 0,
+      "lp": "2",
+      "tau": 2,
+      "vertices": 4
+    },
+    "concurrent": {
+      "exceptional": 1,
+      "tau": 1
+    },
+    "five_cycle": {
+      "beta": 2,
+      "edges": [
+        [
+          0,
+          3
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          2,
+          4
+        ],
+        [
+          0,
+          4
+        ]
+      ],
+      "exceptional": 0,
+      "lp": "5/2",
+      "tau": 3,
+      "vertices": 5
+    },
+    "safe_bonus": {
+      "exceptional": 0,
+      "tau": 4
+    },
+    "triangle": {
+      "beta": 1,
+      "edges": [
+        [
+          0,
+          2
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          0,
+          1
+        ]
+      ],
+      "exceptional": 0,
+      "lp": "3/2",
+      "tau": 2,
+      "vertices": 3
+    }
+  },
+  "status": "FINITE-EXACT independent audit controls; analytic proofs in companion referee",
+  "universe": "all2137 two-regular boards n2..5; five named controls and their fourth-direction/block tests; all844 labelled subcubic graphs <=5vertices"
+}

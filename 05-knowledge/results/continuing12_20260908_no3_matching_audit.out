@@ -1,0 +1,5 @@
+INDEPENDENT NO3: all2137 boards,1320 eligible; exact source deletion vs exceptional-cell branching
+GRAPH REGIME: tau=v-nu, LP=v-nu_f, Boolean=alpha;844 complete subcubic graph controls
+GEOMETRY: C5 gives2<5/2<3; concurrent triple needs1; attached odd cycle has no gap
+BLOCKS: all24 singleton direction orders on five actual boards preserve original-safe charges
+Always-active exact gates: 12767

@@ -1,0 +1,6 @@
+FIXED W2: all n>=3 have globally submersive first function of t-degree2n+1 and rational mate
+COMPONENTS: n+2 reduced disjoint zero components; every nonzero fibre is a rational punctured torus chart
+UNIT: order6; full torsion n+1 arms; unit generates exactly2 with identical pointed Weyl module at fixed b,h
+EXACT ANNIHILATOR: g^6 and four explicit PBW relations; seven n controls and eleven derivative levels
+CERTIFICATE_SHA256 2cdebdd4383c743a60c013bec6436999a4f31240376f5440ab39e454b22bd9c5
+Always-active exact gates: 170

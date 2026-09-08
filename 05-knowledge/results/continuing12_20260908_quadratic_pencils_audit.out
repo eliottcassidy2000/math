@@ -1,0 +1,5 @@
+INDEPENDENT PASS: complete 15-dimensional global coefficient kernel and all three declared pencils.
+INDEPENDENT PASS: all source and boundary points, field primitive, all affine fibre components and full cubic jets.
+INDEPENDENT PASS: two complex rank-one branches, exact coefficient relation compiler, and canonical derivative controls.
+CERTIFICATE_SHA256 53f02db7f7956118c565b482882906ae062d80ee17fd32361e8e8efccbd3a1e5
+Always-active exact gates: 316
