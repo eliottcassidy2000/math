@@ -8,8 +8,8 @@ no-return problem remain **OPEN**. No external priority claim is made.
 The [previous synthesis](continuing9_20260907_synthesis.md) records the
 fixed-moment, ratio-tree and genus inputs. The first two proof checkpoints
 of this session are `4441760e1` and `e291fcc94`; `0c099746a` publishes the
-complete clock and all-m chart theorem after incoming research through
-`1d64840fe`. The [manifest](continuing10_20260908_manifest.json)
+complete clock and all-m chart theorem; `c054f6a47` publishes the full
+linear classification. The final incoming review reaches `2659c2a40`. The [manifest](continuing10_20260908_manifest.json)
 pins the exact artifacts and normal/optimized verification. Older frozen
 arrays, sources and certificates are retained as provenance.
 
@@ -220,8 +220,8 @@ The [complete classification for every m](continuing10_20260908_dg_linear_all_m.
 now closes the surrounding rationally integrable, globally smooth linear
 layer. Its [independent audit](continuing10_20260908_linear_classification_audit.md)
 proves necessity at every source degree and checks all parameter boundaries.
-A reciprocal polynomial has a rational primitive only when it is constant
-or a single pure power: the orders of the primitive's finite poles cannot
+The function 1/A(x) has a rational primitive only when the polynomial A
+is constant or a single power a(x-h)^n, n>=2: its finite pole orders cannot
 pay its zero at infinity if there is more than one distinct root.
 
 For m>=2, every admitted nonconstant first function has A=a(x-h)^n,
@@ -247,6 +247,17 @@ nonzero global class because it removes the pole component D. This is
 a precise reason to retain the coefficient ring when importing a
 component-response obstruction.
 
+The incoming [polynomial first-jet gate](planar_jc48_sep08_polynomial_weight_gate.md)
+supplies a second proof of the nonconstant-A polynomial-mate exclusion.
+At a root h of A of multiplicity k, set u=x-h, w=u^k*t, and
+A(h+u)=u^k*C(u), C(0)!=0. The exact source function becomes
+C(u)*w+B(h+u), whose constant u-row is nonconstant in w. The new gate
+forbids that row for a polynomial mate, using the exact divisibility
+of its negative Laurent rows. This recovers the exclusion without
+highest-degree descent. It does not supply the rational-integrability,
+submersion or unit-order classifications, and the constant-A exception
+still requires the actual boundary pole.
+
 ## 5. Connections that survive the incoming work
 
 | Source and target | Map and preserved predicate | Lost information, required sidecar, next test |
@@ -269,10 +280,13 @@ places dx/A^(1/n) in the actual radical coefficient field for a rational
 mate of A(x)t^n+... . It generalizes the source-linear residue test but
 discards lower coefficients. The [complete quadratic pencil classification](planar_jc48_sep08_exact_pencils.md)
 and current [planar board](planar_jc48_sep06_board.md) retain those lower
-rows. The subsequently audited 6+2 closure leaves only boundary partitions
-7+1 and 5+2+1 in the proved DG quartic table. Pending further audits are
-not dependencies. A leading exact differential alone does not close these
-lower-section problems.
+rows. Incoming `2659c2a40` also closes all 5+2+1 placements and both
+finite-sevenfold 7+1 placements. At this reviewed checkpoint the fixed-W2
+quartic table leaves only the finite-simple/original-infinity-seven
+placement, with N linear in the original affine coordinate. Its proposed
+local proof is under independent audit and is not a dependency here.
+The [current planar board](planar_jc48_sep06_board.md) owns later updates;
+these statements do not concern arbitrary planar Keller maps.
 
 The [new incoming review](continuing10_20260908_incoming_tail.md) also
 records the stronger all-finite 7+1 hostile: every formal inverse row is
@@ -312,10 +326,11 @@ every such point before using a global pole-space dimension count.
 3. For the anchored two-negative circuit cells, retain the degree-eight
    D moment condition. Try a finite chart plus concave-tail certificate
    only after proving the chart covers the entire proposed region.
-4. For quartic global carriers, use the two surviving weighted boundary
-   partitions and the actual nonconstant lower section. Any rational
-   primitive must pass every affine and boundary pole, not only the
-   leading radical differential.
+4. For the fixed-W2 quartic route, follow the last-location audit on the
+   current planar board before reopening a coefficient case. Beyond the
+   closed source-linear layer, test whether a higher-degree globally smooth
+   first function with a rational mate can realize unit order two. Retain
+   every affine and boundary critical point and the original response ring.
 
 These are distinct research obligations. None supplies the missing entry
 for a general conjecture merely by analogy with a successful local result.

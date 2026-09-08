@@ -1,12 +1,13 @@
 {
   "schema": 1,
-  "created_utc": "2026-09-08T19:52:19.316647+00:00",
+  "created_utc": "2026-09-08T19:59:04.917982+00:00",
   "baseline_commit": "89aca0881928b89a8fcf4b4a0aaa1e160e43f624",
-  "incoming_review_head": "0c099746af52cf80ab2195a385500c9db1ee69e4",
+  "incoming_review_head": "c054f6a47bf56ed9d65b3af01b2d54c90ab908e0",
   "proof_checkpoints": [
     "4441760e1",
     "e291fcc94",
-    "0c099746a"
+    "0c099746a",
+    "c054f6a47"
   ],
   "hash_basis": "raw LF bytes; maintained synthesis, navigation and this manifest excluded; only status/routing prose changed on filing reviewed reports",
   "scope": "Complete connected-complement clock7200 closure and20 upper clocks; two-direction no-three-in-line repair-distance lower bound; full closed nonpositive native C/D circuit octant exclusion; all-m globally smooth DG family with exact unit annihilator exponent2m-1, actual alternative affine chart and finite-flat power map; complete classification of rationally integrable global source-linear submersions on every W_m, unit-only order2 gap, and explicit loss of a global response class under source restriction. General conjectures remain OPEN.",
@@ -167,7 +168,7 @@
   },
   "normal_optimized_raw_stdout_equal": true,
   "regenerated_certificates_raw_unchanged": true,
-  "prior_artifacts_verified": 769,
+  "prior_artifacts_verified": 781,
   "incoming_transition_review": {
     "commit": "8f345194053d5128db5dc9ac2f73dcbc391d64d6",
     "prior_count": 471,
@@ -498,7 +499,8 @@
   "additional_incoming_review": [
     "4329ebb75",
     "162efff5f",
-    "1d64840fe"
+    "1d64840fe",
+    "2659c2a40"
   ],
   "artifacts": [
     {

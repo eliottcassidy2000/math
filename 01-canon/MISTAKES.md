@@ -74,7 +74,7 @@ Format per entry:
   affine line has constant fibre value and is absent generically.
   The repaired search must check every point over each denominator zero,
   including ordinary source points, before spending Riemann--Roch.
-  The [repaired complete theorem](../05-knowledge/results/planar_jc48_sep08_five_three_finite.md)
+  The [repaired complete theorem](../05-knowledge/results/planar_jc48_sep08_five_three.md)
   and its independent audit now prove the genus-three closure using
   only powers of `u` in the denominator and full pole-space membership.
   No closure follows from the rejected coefficient system.
