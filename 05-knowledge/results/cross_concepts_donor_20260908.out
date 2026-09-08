@@ -1,0 +1,14 @@
+SHELL m=1: words=2, orientation head words=1/0, all layers balanced
+SHELL m=2: words=6, orientation head words=1/2, all layers balanced
+SHELL m=4: words=30, orientation head words=7/8, all layers balanced
+SHELL m=8: words=510, orientation head words=127/128, all layers balanced
+LITERAL UNIVERSE: 548 shell words; m=1,2,4,8; no omitted nonconstant tails
+CARRY r=1: m=2, polynomial degree=4; nonlinear/direct identities and exact finite fairness PASS
+CARRY r=2: m=4, polynomial degree=8; nonlinear/direct identities and exact finite fairness PASS
+CARRY r=3: m=8, polynomial degree=16; nonlinear/direct identities and exact finite fairness PASS
+CARRY r=8: m=256, polynomial degree=512; nonlinear/direct identities and exact finite fairness PASS
+FIRST carry coefficients: C(p)=-p^3+p^4-2p^5+3p^6-2p^7+p^8+... (checked below)
+HOSTILE m=6, tail weight=2: heads/tails=7/8; dyadic decoder hypothesis is necessary
+ANALYTIC CONTROLS: exact rational t=1-2^(-k), k=1..6; growth proof is all-real, not inferred from controls
+SCOPE: exact inherited checksum architecture; no donor deadline improvement; no Rule30 dynamics map
+PASS 1241 always-active exact gates

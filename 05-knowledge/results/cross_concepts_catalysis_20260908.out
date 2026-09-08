@@ -1,0 +1,17 @@
+BUDGET p=2 profile pairs=54: transport/hinge, cone/nullspace, norm, scanner PASS
+BUDGET p=3 profile pairs=648: transport/hinge, cone/nullspace, norm, scanner PASS
+BUDGET p=4 profile pairs=6318: transport/hinge, cone/nullspace, norm, scanner PASS
+BUDGET total_pairs=7020; spanning_tree_scalar_queries=18198
+CONTINUATION collision B_r(0)=B_r(r)=0; K=-r gives 2/3 versus 0 PASS
+OBSERVER change r=(-1,0,1) -> (-1,1,0): old null slot becomes visible PASS
+DENSITY universe=4096 labelled auxiliary activation masks; E=2508/1399489
+DENSITY old_norm_gate=34; exact_adverse_gate=4095; constant_targets=1
+DENSITY present/future refinement class counts=[19, 2434, 3148, 3688, 3973, 4073, 4094, 4096]; final_class_sizes={1: 4096}
+DENSITY independent direct-context counts=[19, 2434, 3148, 3688, 3973, 4073, 4094, 4096] PASS
+DENSITY sharp-depth pair A=(), B=(1,), shortest context=(2, 3, 4, 5, 6, 7, 12)
+DENSITY common-activation splitter A=(1, 2, 3, 4, 5, 6), B=(1, 2, 3, 4, 5, 6, 12), activate=7, current=125/107653, future=(150/107653, 1908/1399489)
+DENSITY semantic_sha256=d0596b639bef1364673920ab98db817f1a9d067ff9fb7d2d77178b0b5c0ebde6
+SHEAR universe=3^8=6561 trace-free integer matrices; <=8 pure shear decomposition PASS
+SHEAR hostile S=(0, 1, 0, 0, 0, 0, 0, 0, 0); T=(1, 0, -1, 1, 0, -1, 1, 0, -1); w(S+T)=(1, -2, 0); alpha(S+T)=-3/5
+SHEAR consequence: d_F(S)=d_F(T)=0 but d_F(S+T)>=3*sqrt(6/7)/5>0
+PASS: exact finite controls; no canonical LRC owner or Euler trajectory realization claimed

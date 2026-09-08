@@ -1,0 +1,7 @@
+FINITE-EXACT rational controls; no PDE realization claim
+positive weighted-cycle polar certificates: 324
+neutral-block polar certificates including rank-deficient cases: 75
+cycle mean: alpha=1, shear distance squared=2, nuclear norm=3
+cycle optimal second moment=9, optimal variance=6
+two-shear sum: alpha=-3/5 (each atom has alpha=0)
+active exact gates: 10434

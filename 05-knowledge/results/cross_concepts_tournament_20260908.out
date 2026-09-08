@@ -1,0 +1,71 @@
+CYCLIC REPAIR: PROVED SYMBOLIC + FINITE-EXACT AUDIT; LRC realization OPEN
+{
+  "analytic_capacity_certificates": 140,
+  "brute_flux_vectors": 3369,
+  "capacity_instances": 2430,
+  "gates": 12965,
+  "p13": {
+    "D": 1183,
+    "a": [
+      144,
+      53,
+      -25,
+      -25,
+      -25,
+      -25,
+      -25,
+      -25,
+      -25,
+      -25,
+      -25,
+      -25,
+      53
+    ],
+    "cancel_flux": [
+      "-72",
+      "-125",
+      "-100",
+      "-75",
+      "-50",
+      "-25",
+      "0",
+      "25",
+      "50",
+      "75",
+      "100",
+      "125",
+      "72"
+    ],
+    "k0": "91/2",
+    "k_cancel": "125",
+    "potential": [
+      "0",
+      "72",
+      "197",
+      "297",
+      "372",
+      "422",
+      "447",
+      "447",
+      "422",
+      "372",
+      "297",
+      "197",
+      "72"
+    ],
+    "potential_range": "447",
+    "torsion_class": 0,
+    "variance_at_k100": "250/4198467",
+    "variance_at_zero_capacity": "2508/1399489"
+  },
+  "symmetric_vectors_by_order": {
+    "3": 1,
+    "4": 5,
+    "5": 3,
+    "6": 13,
+    "7": 7
+  },
+  "torsion_vectors": 1089
+}
+semantic_sha256=683412cf9fb449d5ab35090b13ce3c82c10d1a65e137de7b316e543aaf947d48
+PASS: explicit gates remain active with -O
