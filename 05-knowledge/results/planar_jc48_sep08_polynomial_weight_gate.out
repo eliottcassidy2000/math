@@ -1,0 +1,9 @@
+polynomial_weight_gate: PASS
+scope: every integer m>=1, original polynomial mates, complete parabolic source image
+conclusion: Fhat=f0+beta*u+O(u²), beta!=0; min weight Ghat=-m; leading row=w/beta
+controls: m1..6; image monomials 756 ; negative degree rows 432
+square-prefix: active ord(N)=4 excluded; ord(N)>=6 gives P2=M2=0,M3=-2P3Q0
+active62: c=nu=0,mu=-2bd,beta=-2p(lambda+2dA)!=0
+rational and polynomial-positive hostiles retained; no sufficiency claim
+gates: 1947
+semantic SHA256: 7c6566cea7919b18480be705f73791af41e44f876d1d78d66837ab208b277b79

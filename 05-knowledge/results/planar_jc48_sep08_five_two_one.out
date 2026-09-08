@@ -1,0 +1,7 @@
+Binary (5,2,1): complete inverse-coefficient obstruction
+Exact gates: 59
+Full shifted global rows and moving residues: PASS
+n2: T6,T10,T14,T18 exact symbolic contradiction: PASS
+n3: T6,T10 and algebraic T1,T5 residues: PASS
+All-location polynomial scope; constant-L rational sharpness: PASS
+Semantic SHA256: 9b6d82638dc683f69afbf67aa90336489cff490850e6cc69edd401731513ac10

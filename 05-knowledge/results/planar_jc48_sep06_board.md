@@ -778,10 +778,29 @@ quadratic tangent evaluation, and transverse derivatives of component jets.
    resolvent/truncation controls pass. Formal exactness cannot be
    substituted for rational or polynomial algebraization.
 
-The [363-artifact manifest](planar_jc48_sep06_manifest.json) pins83 proof notes,
-84 audit notes,85 sources,85 frozen outputs and26 compressed witnesses.
-The85 programs report4273562 exact gates per complete normal or optimized
-run. Each frozen output agrees in both modes. All351 inherited pins remain
+84. [All-m polynomial first-jet gate](planar_jc48_sep08_polynomial_weight_gate.md)
+   is **PROVED + INDEPENDENTLY AUDITED**. In every chart w=u^m t,
+   a polynomial mate forces the first two u-rows to be constant in w,
+   with nonzero linear u coefficient. Exact polynomial row divisibility
+   is essential: sharp rational mates violate the conclusion. All1947
+   gates pass, uniformly supported by the analytic all-m proof.
+85. [Complete5+2+1 exclusion](planar_jc48_sep08_five_two_one.md)
+   is **PROVED + INDEPENDENTLY AUDITED** at every boundary location.
+   The full higher inverse hierarchy excludes nonconstant L when the
+   double point is original infinity; a finite double point already
+   has a leading logarithm. Constant-L rational mates remain sharp.
+   All59 gates and independent residue reconstructions pass.
+86. [Both finite-sevenfold7+1 placements](planar_jc48_sep08_seven_one_two_locations.md)
+   are **PROVED + INDEPENDENTLY AUDITED** for polynomial exclusion.
+   Actual rational and quadratic field changes give generic moving-pole
+   residue identities with impossible degrees. Every source position,
+   the trace, its rational degeneration and sharp rational hostiles
+   are included. All46 gates and15 alternative audit controls pass.
+
+The [375-artifact manifest](planar_jc48_sep06_manifest.json) pins86 proof notes,
+87 audit notes,88 sources,88 frozen outputs and26 compressed witnesses.
+The88 programs report4275614 exact gates per complete normal or optimized
+run. Each frozen output agrees in both modes. All363 inherited pins remain
 unchanged. These are scoped proof controls, not a census of Keller maps;
 no external priority claim or full JC(2) result is asserted.
 
@@ -1029,11 +1048,11 @@ extremal-pencil iff and sharp rational families. Item71 pays all-exponent
 binomial exactness. Item69 closes all-finite4,3,1 with both complete
 primitive systems, geometric integrality and full boundary checks.
 Item72 closes fourfold infinity as well, completing all locations.
-The all-finite5,3 and6,1,1 strata are under new coefficient and primitive
-analysis. Item74 closes the complete M-shared constant-D finite6/infinity2
+Items76–80 below pay the all-finite5,3 and6,1,1 strata and their
+remaining boundary placements. Item74 closes the complete M-shared constant-D finite6/infinity2
 complement, with genuine rational submersions preserved as hostiles.
 Together with items42–43, the entire constant-D polynomial class is closed.
-The nonconstant-D sixfold class remains a separate entry. The other surviving leading strata retain their
+Item82 also closes the nonconstant-D sixfold entry. The other surviving leading strata retain their
 lower-coefficient and global descent obligations. The degree
 of F|D is distinct from a primitive's local degree3, which comes from
 the order-two original differential; no degree-four primitive is assumed.
@@ -1103,12 +1122,12 @@ remaining6+2 coefficient class, and an orthogonal H4 mixed5,2 group lane.
 
 ## September8 current final-audit queue
 
-The5+2+1 full inverse-hierarchy proof and the two finite-sevenfold7+1
-polynomial proofs are frozen under independent audit. If accepted, the
-complete DG quartic leading table will leave exactly one location:
-finite simple/infinity seven, with N linear in the original affine
-coordinate. The broader all-m polynomial first-jet gate is also under
-full audit. None of these pending claims is used as a proved supplier
-above. A new general degree-six leading-section argument may force
-constant D already for rational mates; its analytic/source validation
-is separate from the accepted polynomial trace theorem in item82.
+Items84–86 have passed full independent audit. The complete DG quartic
+leading table now leaves exactly one location: finite simple/original
+infinity seven, with N linear in the original affine coordinate. Its
+complete local proof is written and under independent audit. A separate
+general degree-six exactness theorem is being validated. Neither pending
+claim is a proved supplier yet. If the last location closes, the already
+proved global-root gluing theorem will convert the square-prefix exclusion
+into a full quartic global-pair exclusion on this fixed DG surface;
+this implication does not extend to arbitrary planar Keller maps.

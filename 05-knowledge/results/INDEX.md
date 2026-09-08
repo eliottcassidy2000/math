@@ -111,12 +111,14 @@
   mates. Every6+1+1,3+3+2 and4+2+1+1 boundary placement is now excluded
   for polynomial mates with exact rational exceptions retained.
   Every5+3 placement is also closed for polynomial mates; the complete
-  leading DG quartic table leaves only7+1,6+2,5+2+1.
+  leading DG quartic table was thereby reduced to7+1,6+2,5+2+1.
   Complete6+2 is also closed; all-finite7+1 has an exact all-order
   formal criterion with necessarily transcendental formal hostiles,
   and mixed5,2 H4 generators coincide uniformly.
-  [Manifest](planar_jc48_sep06_manifest.json):363
-  artifacts,85 programs,4273562 exact gates per mode. Full JC(2) remains **OPEN**.
+  The complete5+2+1 and both finite-sevenfold7+1 placements are also
+  excluded; only finite-simple/original-infinity-seven remains.
+  [Manifest](planar_jc48_sep06_manifest.json):375
+  artifacts,88 programs,4275614 exact gates per mode. Full JC(2) remains **OPEN**.
 
 - [Previous continuing synthesis](continuing5_20260906_synthesis.md):
   full-model beta simplicity, the original-phase rectangle, the ordered
