@@ -1,0 +1,7 @@
+Cusp-ideal extension exact controls PASS (proof status RESERVED pending independent audit)
+Multiplicity universe: 975 rows; A,B=0..4, 1..3 distinct binomial factors, exponents=1..3
+Independent literal cyclic covers: 54
+Actual pole controls: 8 ; source/log jets: two generators through order 8
+Always-active gates: 6956
+Semantic SHA256: a191e56d20f8f29a1d7ad4597fd5b8032b496039ccbaf30b27e5dca405426a20
+Scope: exact identities and finite controls; global curve and rational-time claims require the companion proof.

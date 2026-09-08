@@ -1,0 +1,28 @@
+FINITE-EXACT TWO-CUSP GEOMETRY PASS; global complement classification OPEN
+{
+  "curve": [
+    "t^4-2t^2",
+    "t^6-3t^4/2+t^3/3-t"
+  ],
+  "discriminant": "-256*u*(u - 3)**2*(u + 1)**6*(324*u**3 + 972*u**2 + 1080*u + 289)**2/531441",
+  "finite_cusps": [
+    [
+      "-1",
+      "-7/6",
+      "2,3"
+    ],
+    [
+      "-1",
+      "1/6",
+      "2,3"
+    ]
+  ],
+  "gates": 42,
+  "infinity": "2,9",
+  "nodes": 4,
+  "pair_factors": [
+    "p=0,q=-3",
+    "3p^3-2=0,q=(p^2-2)/2"
+  ]
+}
+PASS always-active gates=42

@@ -1,0 +1,31 @@
+STATUS: exact local classification; independent audit and representative certificates pending
+{
+  "family_equation": "2*a*g + b**2*e",
+  "finite_infinity_nodes": [
+    [
+      7,
+      7,
+      4
+    ],
+    [
+      7,
+      9,
+      3
+    ],
+    [
+      9,
+      7,
+      3
+    ]
+  ],
+  "finite_ninth": "-44/(b^2*(4b+3))",
+  "finite_seventh": "-a*(6*b**2 + d*(3*a**2 + 4*b))/b**3",
+  "g_chart_finite_seventh": "-e*(3*b**3*e**2 + 24*b**2*g + 16*g**2)/(8*g**3)",
+  "g_chart_infinity_seventh": "e*(3*b**2 + 2*g)/(4*g)",
+  "infinity_ninth": "7/16",
+  "scope": "local exhaustion and connected-family mechanism; actual certified representatives are separate dependencies"
+}
+NO_FINITE_ELEVEN: finite ninth numerator is the nonzero constant -44
+EXCEPTIONAL_RETAINED: b=0,g*e!=0 is interior to one smooth irreducible finite7/infinity7 family
+SEMANTIC_SHA256 f6acc585ae29ec30e27fd861744c3b41776497ebbb4ead4d9d7a7a565f9f5c60
+PASS gates=65

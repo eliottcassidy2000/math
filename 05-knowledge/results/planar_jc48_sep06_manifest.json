@@ -1,11 +1,11 @@
 {
   "session": "planar-jacobian-sep06",
-  "status": "PROVED scoped results with independent audits; whole (4,6) one-(2,5)-cusp plus at-least-two-node class excluded; completed response and actual supplier nonrationality; JC(2) OPEN",
+  "status": "PROVED scoped results with independent audits; full polynomial cusp-ideal nonrational scalar-time theorem; whole (4,6) one-odd-cusp plus at-least-two-node class excluded; recovered DG cubic exclusion; two-cusp global group and JC(2) OPEN",
   "created_utc": "2026-09-06",
-  "artifact_count": 95,
-  "program_count": 24,
-  "exact_gates_per_complete_normal_or_optimized_run": 349165,
-  "verification": "All24 programs have normal and optimized replays with each stdout byte-identical to its frozen output. Every universal proof has an independent analytic/source audit; the sextic-class theorem has two. Both braid verifiers check their compressed and raw witness pins. Current additions were independently replayed; unchanged inherited pins retain their previous complete replay record. Finite controls do not replace universal proofs or actual-consumer hypotheses.",
+  "artifact_count": 122,
+  "program_count": 30,
+  "exact_gates_per_complete_normal_or_optimized_run": 748302,
+  "verification": "All30 programs have normal and optimized replays with each stdout byte-identical to its frozen output. Every new proof has an independent analytic/source audit; higher_braid has six rational paths over31807 segments. The six new engines add399137 exact gates per mode. All95 inherited artifacts remain byte-identical and retain their prior replay record. Finite controls do not replace analytic proofs, actual-consumer hypotheses, or the separately recovered canonical quadratic/cubic theorems. Cusp-ideal source/output retain their pre-audit RESERVED production text; its promoted proof and independent audit govern status.",
   "program_gates": {
     "weight14": 169,
     "weight14_audit": 93,
@@ -30,7 +30,13 @@
     "carrier_frontier": 1018,
     "next_braid": 119191,
     "twofive_sextics": 3385,
-    "supplier_genus": 130
+    "supplier_genus": 130,
+    "universal_genus": 105404,
+    "higher_odd": 65,
+    "higher_braid": 286548,
+    "cusp_ideal": 6956,
+    "dg_quadratic": 122,
+    "two_cusps": 42
   },
   "artifacts": [
     {
@@ -139,6 +145,16 @@
       "sha256": "5a0a3495f8a14aeecaa46b97362b67bdedb32e1ea20753cc20859d4dbfd7b682"
     },
     {
+      "path": "04-computation/planar_jc48_sep07_higher_braid.py",
+      "bytes": 17108,
+      "sha256": "e6b39ca3efa88fe25884331ad8c062f2ec8014d923a47abf70bcbffa315eb5d0"
+    },
+    {
+      "path": "04-computation/planar_jc48_sep07_higher_odd.py",
+      "bytes": 5623,
+      "sha256": "edd6c8c77716bb695c4ed902586c19e68486119fddfbab1845c1bb8614515f73"
+    },
+    {
       "path": "04-computation/planar_jc48_sep07_next_braid.py",
       "bytes": 14547,
       "sha256": "d5e74a1eb6f8e7d9bad37bb723ccf144f335d6a51d5c77170b097f8be10e8efc"
@@ -152,6 +168,26 @@
       "path": "04-computation/planar_jc48_sep07_twofive_sextics.py",
       "bytes": 5593,
       "sha256": "02ef96f5a39fee7382fa81d0970fd06285c7bb3e180362bff234d4e2abad1e75"
+    },
+    {
+      "path": "04-computation/planar_jc48_sep07_universal_genus.py",
+      "bytes": 3864,
+      "sha256": "ffed4b59e5a5832e43aa74fd325e8589c6973cc008066276be702f8f0b00f872"
+    },
+    {
+      "path": "04-computation/planar_jc48_sep08_cusp_ideal.py",
+      "bytes": 11165,
+      "sha256": "a7f9ef420b8782026c5df71fa361a981126283e14e5f67440e1ed6ba2ff5c1e1"
+    },
+    {
+      "path": "04-computation/planar_jc48_sep08_dg_quadratic.py",
+      "bytes": 3435,
+      "sha256": "b170cb02793e5eea5423aa1a838ee296406e993c18b26c97a033d15a01f9d568"
+    },
+    {
+      "path": "04-computation/planar_jc48_sep08_two_cusps.py",
+      "bytes": 4663,
+      "sha256": "d3c1bffe31c3147557337066dcce1ee4dc97d19cd2f77832244fb1b0317f4af0"
     },
     {
       "path": "05-knowledge/results/planar_jc48_sep06_alternating.md",
@@ -454,6 +490,51 @@
       "sha256": "378fd8139f6603cef904bc1e93006caf8af307caaba51408776b44de59ca7355"
     },
     {
+      "path": "05-knowledge/results/planar_jc48_sep07_higher_braid.md",
+      "bytes": 21919,
+      "sha256": "7b49668837ba5ecec50a9dfb2508499a7a10e896bdea4c45b899405803ed9c3d"
+    },
+    {
+      "path": "05-knowledge/results/planar_jc48_sep07_higher_braid.out",
+      "bytes": 2920,
+      "sha256": "08a41085782dab951ede0882005906d16602083a304a8bfc28de8bf5d27ac088"
+    },
+    {
+      "path": "05-knowledge/results/planar_jc48_sep07_higher_braid_audit.md",
+      "bytes": 12151,
+      "sha256": "8efb413066e290d2bdf951814b2d710f63fa5099c4bbb09c9f8aae020116fa40"
+    },
+    {
+      "path": "05-knowledge/results/planar_jc48_sep07_higher_braid_finite7_infinity7_certificate.json.gz",
+      "bytes": 432222,
+      "sha256": "c4ab6a7b28ed6fa34bd8d5071525a805c963e12f365ab9c6018cbca2cf7a4fd9"
+    },
+    {
+      "path": "05-knowledge/results/planar_jc48_sep07_higher_braid_finite7_infinity9_certificate.json.gz",
+      "bytes": 690675,
+      "sha256": "1393ab1970614903a8f7b8b96c550d2a6c67337b9d7afa3221a588167f4035ae"
+    },
+    {
+      "path": "05-knowledge/results/planar_jc48_sep07_higher_braid_finite9_infinity7_certificate.json.gz",
+      "bytes": 1065620,
+      "sha256": "1ee79c177a0d6d4783a88ce0613c3bba4067db9caa44a82783c4b683fd3c7932"
+    },
+    {
+      "path": "05-knowledge/results/planar_jc48_sep07_higher_odd.md",
+      "bytes": 15827,
+      "sha256": "c8d6916293e9eb76427c41c57270e8e303844a8a7960daa0cecb5edf42788f0b"
+    },
+    {
+      "path": "05-knowledge/results/planar_jc48_sep07_higher_odd.out",
+      "bytes": 928,
+      "sha256": "c880a825cd246197e7d2a1d49f23d2cf0ad3b8065c0f9fa42c58f2a875f3d958"
+    },
+    {
+      "path": "05-knowledge/results/planar_jc48_sep07_higher_odd_audit.md",
+      "bytes": 6227,
+      "sha256": "decb10230617557e791aa8e8681a7950827e5a9d1a51f63a49e22b98afa432ec"
+    },
+    {
       "path": "05-knowledge/results/planar_jc48_sep07_next_braid.md",
       "bytes": 15616,
       "sha256": "23c6b249d8d7dfff63d77a53ddad0a99849d2236499717a7b772251334b2865f"
@@ -507,9 +588,69 @@
       "path": "05-knowledge/results/planar_jc48_sep07_twofive_sextics_geometry_audit.md",
       "bytes": 11621,
       "sha256": "e1091995c22e02cf5b6fa0efed06acb19c7f0dae8c71feac0b39c8edb3c86ee0"
+    },
+    {
+      "path": "05-knowledge/results/planar_jc48_sep07_universal_genus.md",
+      "bytes": 14801,
+      "sha256": "a38ba0a481963fcd376bc51a3c2f7504cac1f92ae76b543fdbd17bba737798ac"
+    },
+    {
+      "path": "05-knowledge/results/planar_jc48_sep07_universal_genus.out",
+      "bytes": 395,
+      "sha256": "910002d880a2849c8509c00cddb577a87155e719c48a88c66a5b79747abe31d6"
+    },
+    {
+      "path": "05-knowledge/results/planar_jc48_sep07_universal_genus_audit.md",
+      "bytes": 11365,
+      "sha256": "dbd9e102dc1b8083520cbe7fdb044dbcf3a6df5c9315b4dc986acd8fc203d141"
+    },
+    {
+      "path": "05-knowledge/results/planar_jc48_sep08_cusp_ideal.md",
+      "bytes": 20164,
+      "sha256": "18642fe0fcde6dbb7d3d743173359bf5ac9b13df0f86e2aa5b9ed3be18e12bbe"
+    },
+    {
+      "path": "05-knowledge/results/planar_jc48_sep08_cusp_ideal.out",
+      "bytes": 513,
+      "sha256": "08a1fb64c65b3a4c1330f2d0b3df082ada0220e99ab33f6d97f73d1c8b7d69fc"
+    },
+    {
+      "path": "05-knowledge/results/planar_jc48_sep08_cusp_ideal_audit.md",
+      "bytes": 10345,
+      "sha256": "e9803f0e63aa6a053a83176f36ef3bb5ab2276840f51ab4f7f79e425f6907351"
+    },
+    {
+      "path": "05-knowledge/results/planar_jc48_sep08_dg_quadratic.md",
+      "bytes": 10181,
+      "sha256": "d5f7d030bf36bd8a2f150833416984c21d8c4b60e835da1bcdb5187ef43f3425"
+    },
+    {
+      "path": "05-knowledge/results/planar_jc48_sep08_dg_quadratic.out",
+      "bytes": 409,
+      "sha256": "98dbafefbba323c2401b5af303de6ca4c5b2fa8ac37cb28b04acb7baca0761a8"
+    },
+    {
+      "path": "05-knowledge/results/planar_jc48_sep08_dg_quadratic_audit.md",
+      "bytes": 12591,
+      "sha256": "3ba094e737beda0e17d23263d2f1b33d3cd0ff39295251b2761f4e281340c19a"
+    },
+    {
+      "path": "05-knowledge/results/planar_jc48_sep08_two_cusps.md",
+      "bytes": 9436,
+      "sha256": "37bef52e23040568427ae79d55deb494e308355dd45a3468bafb11760d5d8abb"
+    },
+    {
+      "path": "05-knowledge/results/planar_jc48_sep08_two_cusps.out",
+      "bytes": 505,
+      "sha256": "c1981a35fe9293387f60c356c3d4bad70ef58e25ef65ad1c35c7779c122831a5"
+    },
+    {
+      "path": "05-knowledge/results/planar_jc48_sep08_two_cusps_audit.md",
+      "bytes": 9059,
+      "sha256": "9c870168e866ffbda0cccb9b777b48b420a25e32552b41cc81a5bdf0bd926235"
     }
   ],
-  "checkpoint_update": "Extended the71-artifact checkpoint by five audited bundles and a second compressed rational witness:24 new artifacts, including one independent Fraction program and a second sextic geometry audit. Among inherited71 pins, only next_infinity.md gained a forward closure status; its geometry, source, output and audit are unchanged. Every other inherited artifact remains byte-identical. The older boundary A6 witness remains valid and fails the newly certified affine relations.",
+  "checkpoint_update": "Added27 artifacts in six independently audited bundles to the95-artifact checkpoint. New source/output and all certificate bytes are frozen; no inherited artifact pin changes. Whole one-odd-cusp closure consumes the classification and independently certified representative braids. The DG filtration corollary credits recovered canon; the two-cusp bundle proves geometry and three-meridian bound only.",
   "compressed_certificates": [
     {
       "path": "05-knowledge/results/planar_jc48_sep06_boundary_braid_certificate.json.gz",
@@ -520,6 +661,21 @@
       "path": "05-knowledge/results/planar_jc48_sep07_next_braid_certificate.json.gz",
       "decompressed_bytes": 4205356,
       "raw_sha256": "c2bc0600d55c05b566e231a1af284aa4b825b7d666b5ede0775db92fe49f11c8"
+    },
+    {
+      "path": "05-knowledge/results/planar_jc48_sep07_higher_braid_finite7_infinity7_certificate.json.gz",
+      "decompressed_bytes": 1672698,
+      "decompressed_sha256": "405232fd9727a696455a6133f27b8650aed9fa4e4bd75858880ffde893e74ba7"
+    },
+    {
+      "path": "05-knowledge/results/planar_jc48_sep07_higher_braid_finite7_infinity9_certificate.json.gz",
+      "decompressed_bytes": 2705215,
+      "decompressed_sha256": "6a60f48122f2fcdeee3a5eb5b14991b4548cdddda71d176993e0143d93df5379"
+    },
+    {
+      "path": "05-knowledge/results/planar_jc48_sep07_higher_braid_finite9_infinity7_certificate.json.gz",
+      "decompressed_bytes": 4227333,
+      "decompressed_sha256": "0b2ad7bcbc65fd9d2ffbfb87a13a573de135c258eadb7b2032a2eba7b8113448"
     }
   ]
 }

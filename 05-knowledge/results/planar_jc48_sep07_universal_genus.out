@@ -1,0 +1,6 @@
+Central cyclic-cover universal genus controls PASS
+Multiplicity universe: 13104 rows; A1..12,B0..12,1..3 distinct binomial factors,exponents1..4
+Independent literal permutation cases: 180
+Always-active gates: 105404
+Semantic SHA256: 629e17482bfce870f7145297a03c205fe02d8b8f7661c8b8bdf2a9187a627d3a
+Scope: exact genus arithmetic; analytic embedding and flow consumer require the proof and audit.

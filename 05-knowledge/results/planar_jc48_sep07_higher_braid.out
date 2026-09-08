@@ -1,0 +1,142 @@
+EXACT HIGHER-CUSP ROUCHE CERTIFICATE PASS; analytic transport proved separately
+[
+  {
+    "case": "finite7_infinity9",
+    "compressed_bytes": 690675,
+    "compressed_sha256": "1393ab1970614903a8f7b8b96c550d2a6c67337b9d7afa3221a588167f4035ae",
+    "conclusion": "two positive meridians; no finite-group enumeration",
+    "gates": 89262,
+    "geometry": {
+      "discriminant": "-u**7*(256*u**2 + 11*u + 12)*(3136*u**3 + 6032*u**2 + 4452*u + 1323)**2/4096",
+      "finite": 7,
+      "infinity": 9,
+      "nodes": 3,
+      "pair": "2*p**3 + 6*p**2 + 10*p + 9"
+    },
+    "raw_bytes": 2705215,
+    "raw_sha256": "6a60f48122f2fcdeee3a5eb5b14991b4548cdddda71d176993e0143d93df5379",
+    "segments": [
+      2930,
+      6979
+    ],
+    "words": [
+      [
+        3,
+        2,
+        3,
+        2,
+        1,
+        -2,
+        -3,
+        -2,
+        -3
+      ],
+      [
+        -3,
+        -3,
+        2,
+        3,
+        3
+      ]
+    ]
+  },
+  {
+    "case": "finite7_infinity7",
+    "compressed_bytes": 432222,
+    "compressed_sha256": "c4ab6a7b28ed6fa34bd8d5071525a805c963e12f365ab9c6018cbca2cf7a4fd9",
+    "conclusion": "two positive meridians; no finite-group enumeration",
+    "gates": 56578,
+    "geometry": {
+      "discriminant": "-4096*u**9*(u + 2)**2*(9*u**2 - 4*u + 6)**2*(256*u**2 + 11*u + 12)",
+      "finite": 7,
+      "infinity": 7,
+      "nodes": 4,
+      "pair": "p**4 + 2*p**3 + 2*p**2 - 2*p - 3"
+    },
+    "raw_bytes": 1672698,
+    "raw_sha256": "405232fd9727a696455a6133f27b8650aed9fa4e4bd75858880ffde893e74ba7",
+    "segments": [
+      2531,
+      3745
+    ],
+    "words": [
+      [
+        2,
+        -1,
+        -2,
+        1,
+        2,
+        -1,
+        2,
+        1,
+        -2
+      ],
+      [
+        -1,
+        -2,
+        -3,
+        -1,
+        -1,
+        2,
+        1,
+        1,
+        3,
+        2,
+        1
+      ]
+    ]
+  },
+  {
+    "case": "finite9_infinity7",
+    "compressed_bytes": 1065620,
+    "compressed_sha256": "1ee79c177a0d6d4783a88ce0613c3bba4067db9caa44a82783c4b683fd3c7932",
+    "conclusion": "two positive meridians; no finite-group enumeration",
+    "gates": 140708,
+    "geometry": {
+      "discriminant": "-4096*u**9*(256*u**2 + 11*u + 12)*(194481*u**3 + 87242*u**2 + 62998*u + 11154)**2/13841287201",
+      "finite": 9,
+      "infinity": 7,
+      "nodes": 3,
+      "pair": "7*p**3 + 20*p**2 + 32*p + 22"
+    },
+    "raw_bytes": 4227333,
+    "raw_sha256": "0b2ad7bcbc65fd9d2ffbfb87a13a573de135c258eadb7b2032a2eba7b8113448",
+    "segments": [
+      4760,
+      10862
+    ],
+    "words": [
+      [
+        2,
+        3,
+        2,
+        2,
+        -1,
+        2,
+        1,
+        -2,
+        -2,
+        -3,
+        -2
+      ],
+      [
+        2,
+        3,
+        -1,
+        -2,
+        -1,
+        -3,
+        -1,
+        2,
+        1,
+        3,
+        1,
+        2,
+        1,
+        -3,
+        -2
+      ]
+    ]
+  }
+]
+PASS always-active gates=286548

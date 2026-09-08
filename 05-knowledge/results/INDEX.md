@@ -70,15 +70,16 @@
 
 - [48-hour planar Jacobian session](planar_jc48_sep06_board.md):
   **PROVED + INDEPENDENTLY AUDITED**, with inherited results credited.
-  The whole (4,6)-normalization class with one finite(2,5) cusp and at
-  least two nodes is excluded as sole Keller support. Two actual
-  meridians defeat the three-node curve's valid boundary A6 witness.
-  The completed source image has five parameters and six coordinate
-  kernel directions; its named supplier has genus27 and no nonzero
-  rational time. Variable y-linear carriers all have genus at least6.
-  V4 finite-map controls and carrier rigidity retain their precise scope.
-  [Manifest](planar_jc48_sep06_manifest.json):95 artifacts,24 programs,
-  349165 exact gates per mode. Full JC(2) remains **OPEN**.
+  The whole (4,6)-normalization class with one finite odd(2,m) cusp and
+  at least two nodes is excluded as sole Keller support. Six new exact
+  braid paths close all higher-cusp representatives and good families.
+  Every nonconstant polynomial Hamiltonian in K+Delta K[p,y] has no
+  nonzero rational scalar time, using genus and elliptic vector-field poles.
+  The complete DG filtration and recovered plane theorems exclude pencil
+  members through cubic source degree. A new two-cusp sextic has proved
+  geometry and at most three positive meridians; its full group is OPEN.
+  [Manifest](planar_jc48_sep06_manifest.json):122 artifacts,30 programs,
+  748302 exact gates per mode. Full JC(2) remains **OPEN**.
 
 - [Previous continuing synthesis](continuing5_20260906_synthesis.md):
   full-model beta simplicity, the original-phase rectangle, the ordered

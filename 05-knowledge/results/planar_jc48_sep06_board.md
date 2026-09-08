@@ -26,11 +26,11 @@ quadratic tangent evaluation, and transverse derivatives of component jets.
 
 | Lane | Preserved object and result | Next decisive question |
 |---|---|---|
-| Anchor: moving source | The completed carrier supplies a full five-dimensional source image with six-dimensional coordinate fibres; nonzero high response must change row10 | The named supplier has genus27 and no nonzero rational time; test different carrier lifts, compositions and changed carriers while retaining later compatibility |
+| Anchor: moving source | The finite five-dimensional response remains valid, but every nonconstant polynomial Hamiltonian in K+Delta K[p,y] has no nonzero rational scalar time | Change the invariant or carrier; different polynomial lifts inside the cusp ideal are now closed, and compositions still need their actual invariant/regularity sidecars |
 | Niche: collision | All scalar two-form periods miss exactly the quadrics through tangent directions in a three-dimensional target | Carry the quadratic data through an actual earlier source deformation and preserve descent |
-| Anchor: infinity | Two actual positive meridians now exclude the three-node target despite its valid boundary A6 witness | The complete one-(2,5)-cusp (4,6) class is closed; test higher finite cusps using the same retained-sheet graph bound |
+| Anchor: infinity | The whole birational (4,6) class with one finite odd (2,m) cusp and at least two nodes is excluded | A new two-ordinary-cusp sextic has four nodes, infinity9 and at most three positive meridians; determine its simultaneous access paths and use the revised two-cusp Euler ledger |
 | Wildcard: response connection | Full torsion is component-labelled principal parts; the canonical derivative raises every nonzero primary height | Map the actual source-normal response to this operator without changing its polynomial ring |
-| Wildcard: actual boundary surface | The classical V4 surface realizes the bare constraints and has a finite quartic map; every shear-orbit carrier still collapses its boundary | Both coordinates must escape the collapsed algebra; a first coordinate in C[t] forces interior ramification and even boundary index |
+| Wildcard: actual boundary surface | The complete source-t filtration has dim L_n=(2n+1)(n+1); recovered canonical theorems exclude every pencil member in L_3 | The next layer in this route is L_4, dimension45, with an unrestricted mate; recover its already closed quartic subcases before searching |
 
 ## Audited checkpoint
 
@@ -227,9 +227,55 @@ quadratic tangent evaluation, and transverse derivatives of component jets.
     Producer130 gates pass. All five finite-image parameters and
     different-invariant compositions remain outside this classification.
 
-The [95-artifact manifest](planar_jc48_sep06_manifest.json) pins22 proof notes,
-23 independent audits,24 sources,24 outputs and two compressed certificates.
-The24 programs report349165 exact gates per complete normal or optimized run. Each frozen output agrees in normal and
+23. [Universal carrier genus](planar_jc48_sep07_universal_genus.md) is
+    **PROVED + INDEPENDENTLY AUDITED**: every nonzero polynomial divisible
+    by p Delta has every geometric generic component of genus at least two.
+    One actual exceptional covering surface supplies the lower bound for
+    arbitrary coefficients, degrees and repeated factors. Finite relative
+    constants handle outer powers. Thus every polynomial lift in the full
+    universal carrier has no nonzero rational time. This closes the precise
+    local-cusp question left open by the incoming genus work;105404 gates pass.
+24. [Higher odd cusp exhaustion](planar_jc48_sep07_higher_odd.md) is
+    **PROVED + INDEPENDENTLY AUDITED**. For finite odd cusp order m>=7,
+    the only (finite cusp, infinity cusp, node count) triples are
+    (7,7,4),(7,9,3),(9,7,3). The nonzero ninth coefficient excludes m>=11.
+    Connected good coefficient families retain the exceptional U=t4 chart
+    and transport the actual positive meridians. Producer65 gates pass.
+25. [Three actual higher-cusp braid certificates](planar_jc48_sep07_higher_braid.md)
+    are **PROVED + INDEPENDENTLY AUDITED**: six rational paths with31807
+    segments pass286548 gates and force two positive meridians in all
+    three representatives. The finite-nine basis change is explicitly a
+    basis change, not an invented projection loop. Together with item24
+    and the earlier ordinary/(2,5) cases, this excludes the whole (4,6)
+    one-finite-odd-cusp, at-least-two-node class as whole Keller support.
+26. [Full cusp-ideal scalar-time obstruction](planar_jc48_sep08_cusp_ideal.md)
+    is **PROVED + INDEPENDENTLY AUDITED** for every nonconstant
+    S in K+Delta K[p,y], over every characteristic-zero field. Generic
+    components have genus at least one; possible elliptic components have
+    genuine vector-field poles at p=0. A commuting selfmap preserves the
+    nonempty polar divisor, forcing finite order and contradicting the
+    actual infinite-order scalar flow. This covers every infinitesimal
+    fixed-H preserver without claiming its higher source/depth preservation.
+    Literal/log comparison and finite constants are paid;6956 gates pass.
+27. [DG filtration and recovered cubic exclusion](planar_jc48_sep08_dg_quadratic.md)
+    is **PROVED + RECOVERED COROLLARY + INDEPENDENTLY AUDITED**. The basis
+    x^a t^(n-j)(1+x²t)^j, a<=2n,j<=n, is exhaustive in every degree.
+    THM-2063/2071/2118's full one-coordinate theorems imply that a global
+    Keller pair could have no nonconstant pencil member of source degree
+    at most three: its polynomial inverse would extend x=1/r across D.
+    This credits recovered canon and the incoming source-linear theorem;
+    it is not a new low-degree planar theorem. Producer122 gates pass.
+28. [Two-cusp sextic](planar_jc48_sep08_two_cusps.md) has **PROVED +
+    INDEPENDENTLY AUDITED** geometry: U=t4-2t²,
+    V=t6-3t4/2+t3/3-t, two ordinary cusps, four nodes and infinity(2,9).
+    The unique smooth vertical fold supplies at most three positive
+    meridians. Its full group and whole-Keller exclusion remain **OPEN**.
+    The correct conditional ledger is1=-a+n1+n2+sum omega, so the
+    one-cusp half-retained bound cannot simply transfer. Producer42 gates pass.
+
+The [122-artifact manifest](planar_jc48_sep06_manifest.json) pins28 proof notes,
+29 independent audits,30 sources,30 outputs and five compressed certificates.
+The30 programs report748302 exact gates per complete normal or optimized run. Each frozen output agrees in normal and
 optimized modes; the braid verifiers also check their pinned witnesses.
 These are scoped proof controls, not a census of Keller maps. No external
 priority claim is made.
@@ -258,9 +304,10 @@ known, and its two distinct failures are proved. Do not search for a
 locally nilpotent Hamiltonian inside the fixed-H carrier: that class is
 excluded. The new discrete theorem also excludes every nonidentity
 polynomial symplectic automorphism with even one-way preservation of the
-whole carrier. A productive repair must change the carrier, preserve only
-one genuine fixed source, or remain explicitly formal. A successful finite
-table is not polynomial termination.
+whole carrier. A productive rational-time repair must escape the entire
+polynomial cusp ideal or use a composition requiring a new invariant
+argument. Preserving only one fixed source does not escape item26's
+obstruction. A successful finite table is not polynomial termination.
 
 At infinity the exact family and ordinary-cusp-plus-nodes class are closed.
 The higher-cusp spectrum is proved. Both the five-node target and its four-node equality successor are now
@@ -366,7 +413,8 @@ Its normal forms have exactly four infinity types7,9,11,13. The first two
 inherit established exclusions; the fourth has a new marked A6 obstruction;
 the third transports the actual two-meridian certificate through a connected
 equisingular family. Independent geometric and full-proof audits both pass.
-Higher finite cusps, multiple nonnodal points and higher degree
+Items24-25 now close every higher finite odd cusp in the same degree pair
+and node range. Multiple nonnodal points, fewer nodes and higher degree
 normalizations remain separate targets.
 
 In parallel, the explicit DG surface's boundary separator supplies a
@@ -411,14 +459,14 @@ collapsed/prescribed-coordinate classes. Shared procedure is not a theorem
 identifying those five objects.
 
 
-The next concrete geometric probe is finite(2,7), starting with
-`U=t4+t3+t2,V=2t6+3t5-(3/2)t3-(3/2)t2`. Initial exact derivative,
-resultant and pair equations support one such cusp, three nodes and
-infinity9. Numerical braid scouts suggest another two-positive-meridian
-reduction; this is **HEURISTIC / NOT YET CERTIFIED**. Its required whole
-support passport would have d8,a=delta4. A rational path certificate and
-full singularity audit are the cheapest next tests. The finite7/infinity7
-companion `V=2t6` is a separate scout. These objects are not Keller maps.
+The former finite(2,7) scouts are now closed by items24-25, together with
+the finite(2,9) stratum. Their numerical words have been replaced by full
+rational path certificates and independently audited actual group maps.
+The next concrete geometric object is item28's two-ordinary-cusp sextic.
+It has only one smooth projection fold, so the same immediate operation
+gives three meridians. Recover the remaining simultaneous cusp/node access
+paths before applying a permutation consumer; retain its changed Euler
+ledger. These curves are not Keller maps.
 
 Incoming `89aca08819` and `4441760e1a` were read before synchronization.
 Their [continuing9 synthesis](continuing9_20260907_synthesis.md) confirms the
@@ -429,3 +477,43 @@ Our meridian graph retains actual moved sheets before testing transitivity.
 These are related proof operations, with different vertices and predicates;
 neither graph supplies a mathematical map to the other problem. The new
 fixed-moment corrections do not change any dependency in this checkpoint.
+
+### September 8 recovery and next decisive operations
+
+The account usage limit interrupted the agents after the September 7
+02:37 UTC work. Missed heartbeat invocations are not counted as research
+or verification. Work resumed September 8 at01:35 UTC by reading the
+saved proof drafts, completing fresh independent replays, and auditing
+the unfinished dependencies. The original September 8 20:40 UTC cutoff
+remains in force.
+
+Incoming `e291fcc945` was read before this checkpoint. Its
+[source-linear global-carrier theorem](continuing10_20260907_dg_linear_carrier.md)
+has an actual map into our W lane: the same two-chart intersection ring
+and the same bracket. The recovered quadratic/cubic plane theorems then
+strengthen its first-coordinate exclusion via the missing global inverse
+coordinate. Its critical-free, boundary-separating function with a rational
+conjugate remains the hostile: regularity on the source chart and generic
+A1 geometry do not pay the two special-fibre pole conditions.
+Its [joint D-moment octant exclusion](continuing10_20260907_nonpositive_circuits.md)
+and [native wedge topology](continuing10_20260907_lrc_wedge_topology.md)
+also restore simultaneous information before a quotient. That procedural
+comparison supplies no map from D moments or runner labels to the present
+curve or source-ring objects, and no JC consequence is inferred.
+
+Next operations compare all five live lanes. For the DG quartic layer,
+intersect the complete L4 basis with the existing polynomial canonical
+quadratic approximate root: globality of the quartic does not automatically
+make that root global on W. Retain its full linear remainder and distinguish
+the unrestricted mate from older theorems bounding both coordinates.
+For the two-cusp curve, find a common certified system of access paths for
+its two co-projected cusps and four nodes. Its single smooth fold supplies
+only the already proved three-meridian bound. For moving sources, all
+polynomial lifts inside the cusp ideal are closed for rational time;
+different-invariant compositions and changed global carriers need new
+arguments. Collision quadrics still need an actual transported deformation;
+the torsion connection still needs a fixed smooth polynomial and all
+component principal parts. Neither new genus nor braid result pays those
+missing maps. The META-PATTERNS cards used remain Search the statement
+before the method, Inventory retained power classes, and Separate descent
+from regularity. No new card is promoted from these related curve arguments.

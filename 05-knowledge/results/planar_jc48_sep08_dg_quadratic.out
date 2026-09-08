@@ -1,0 +1,6 @@
+DG complete source filtration: (n, universe, rank, dimension) = [[0, 1, 0, 1], [1, 10, 4, 6], [2, 27, 12, 15], [3, 52, 24, 28]]
+Quadratic layer: 15 free parameters; boundary and pole controls PASS
+Quadratic Keller exclusion is RECOVERED from THM-2071, not inferred from finite tests
+Always-active exact gates: 122
+Semantic SHA256: 5f756f8279fc34f19893d021f63f5a1a4feb64b1c071140fb5736cb9947abc6d
+RESULT: PASS
