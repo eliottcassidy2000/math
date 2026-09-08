@@ -1,11 +1,11 @@
 {
   "session": "planar-jacobian-sep06",
-  "status": "PROVED scoped analytic/group results with independent audits; whole one-odd-cusp, two-ordinary-cusp and three-ordinary-cusp (4,6) exclusions in every mapping degree; quartic common-root/first-jet gates, all-finite constant-D sixfold exclusion, and every single-point octic polynomial-mate exclusion including infinity; JC(2) OPEN",
+  "status": "PROVED scoped analytic/group results with independent audits; whole one-odd-cusp, two-ordinary-cusp and three-ordinary-cusp (4,6) exclusions in every mapping degree; quartic common-root/first-jet gates, all-finite constant-D sixfold exclusion, and every single-point octic polynomial-mate exclusion including infinity; JC(2) OPEN; distinguished finite-zero/infinity4+4 polynomial-mate exclusion",
   "created_utc": "2026-09-06",
-  "artifact_count": 237,
-  "program_count": 55,
-  "exact_gates_per_complete_normal_or_optimized_run": 1535402,
-  "verification": "All55 programs have normal and optimized replays byte-identical to their frozen outputs. Two new bundles add43279 gates per mode with complete independent analytic/source audits. The marked-D4 all-cycle closure has an unbounded parity proof and a separate reconstruction of its9441 set configurations, permutation banks and seven scalar controls. The infinity-octuple audit retains the actual changed volume, all local degrees and Morse contacts, full genus-two holomorphic differential and original polynomial-ring boundary. Its independent old-basis and quadratic reconstruction supplies ten additional checks. All229 inherited pins are unchanged, including the explicit prior finite_eight status-only migration. Scope is restricted candidate classes, not JC(2) or a census of polynomial maps.",
+  "artifact_count": 241,
+  "program_count": 56,
+  "exact_gates_per_complete_normal_or_optimized_run": 1535498,
+  "verification": "All56 programs have normal and optimized replays byte-identical to frozen outputs. The new distinguished finite/infinity4+4 bundle adds96 gates per mode with a full independent analytic/source audit, paying all weighted infinity branches, the complete finite residue identity and every actual-source criticality case. All237 inherited artifact pins are unchanged. The final exclusion is polynomial-only; the nonconstant-L rational mate is retained as a hostile. JC(2) remains open.",
   "program_gates": {
     "weight14": 169,
     "weight14_audit": 93,
@@ -61,7 +61,8 @@
     "octuple_transport": 85,
     "cycle_support": 373,
     "three_cusp_closure": 43138,
-    "infinity_octuple": 141
+    "infinity_octuple": 141,
+    "four_four": 96
   },
   "artifacts": [
     {
@@ -243,6 +244,11 @@
       "path": "04-computation/planar_jc48_sep08_finite_eight.py",
       "bytes": 9242,
       "sha256": "f9e86132d04caacd894651e66cbc563dbc56ec283adf4f9412334624cae9b02d"
+    },
+    {
+      "path": "04-computation/planar_jc48_sep08_four_four.py",
+      "bytes": 10853,
+      "sha256": "f03a0843dd2521a35b0df92481a05db8af0c8130e210a5a5fb315afb9d5e8089"
     },
     {
       "path": "04-computation/planar_jc48_sep08_infinity11_braid.py",
@@ -890,6 +896,21 @@
       "sha256": "6e337c7fcbfba3a883df3c9eae0936c98cb6a3401ee31abe9bbb0b9b03f20da8"
     },
     {
+      "path": "05-knowledge/results/planar_jc48_sep08_four_four.md",
+      "bytes": 12935,
+      "sha256": "849283a4a6f568ab8ed5cf47a0d0e0ee7b4b44c3d8d1b0a42a3ea6f9aa9ad072"
+    },
+    {
+      "path": "05-knowledge/results/planar_jc48_sep08_four_four.out",
+      "bytes": 405,
+      "sha256": "a3c7c6823ea672b09a459803e75111f1392e810d13d8897d10882724e92ccb90"
+    },
+    {
+      "path": "05-knowledge/results/planar_jc48_sep08_four_four_audit.md",
+      "bytes": 13507,
+      "sha256": "8a57305a82521fd1e154c59073c89253da0ba1071d7f165c7ec10055d108119a"
+    },
+    {
       "path": "05-knowledge/results/planar_jc48_sep08_infinity11_braid.md",
       "bytes": 15000,
       "sha256": "c346f1fbc7197d936d7f788219ce6815b0f73134fbf3f3a84bcf44cfa5c34ce4"
@@ -1268,7 +1289,7 @@
       "sha256": "61db92167187f9a30ed79022a8b1feacc010e79033106e7d7592e3817bd7212d"
     }
   ],
-  "checkpoint_update": "September 8: all finite locations of the constant-D sixfold-octic/twofold-infinity stratum are excluded for rational mates, via an exact elliptic primitive-space contradiction and full translated section-space intersection. The six scout words have exact Artin D4 presentation; actual access data would force mapping degree>=8. The literal full-fixed-set W(D4) Euler classifier leaves only degrees1/4. Actual three-cusp path/marking certification and finite-octuple quartic closure are pending outside this checkpoint.",
+  "checkpoint_update": "September8: the whole three-ordinary-cusp (4,6) marked-D4 class is excluded in every mapping degree, all single-point octic divisors are excluded for polynomial mates, and the distinguished0/infinity4+4 class is now fully audited. Arbitrary-finite-point/infinity4+4 transport is a separate frozen proof candidate. Mixed finite cusp types5,3,3 have a frozen geometry candidate and a numerical H4 braid signal awaiting fresh actual-path certification. No full JC(2) closure or external priority is claimed.",
   "compressed_certificates": [
     {
       "path": "05-knowledge/results/planar_jc48_sep06_boundary_braid_certificate.json.gz",

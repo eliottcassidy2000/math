@@ -1,0 +1,6 @@
+PASS distinguished 4+4 quartic: 96 always-active exact gates
+Full L1 corrections; complete weighted infinity local degrees 2/3/4
+Original finite residue retains moving-root displacement
+All residue-compatible coefficients have an actual affine critical point
+Scope: no polynomial mate; no arbitrary boundary-pair transport
+Semantic SHA256: e6de99bdcde1e30ca8f3d177c22ec9b24f73de73ade3eaff6a5e47f1f7e49eae

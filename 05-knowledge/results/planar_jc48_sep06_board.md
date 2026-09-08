@@ -30,7 +30,7 @@ quadratic tangent evaluation, and transverse derivatives of component jets.
 | Niche: collision | All scalar two-form periods miss exactly the quadrics through tangent directions in a three-dimensional target | Carry the quadratic data through an actual earlier source deformation and preserve descent |
 | Anchor: infinity | The whole one-odd-cusp, two-ordinary-cusp and three-ordinary-cusp (4,6) classes are excluded as irreducible whole Keller support; the last uses actual marked D4 and arbitrary retained subsets | Test the adjacent three-cusp type(5,3,3); its braid-five hostile forbids inheriting the ordinary half-support bound |
 | Wildcard: response connection | The fixed smooth polynomial family F=arb+c+h(b), h in b³C[b], has unit class of exact primary order2; the canonical derivative generates its full component-labelled arm | Map an actual source-normal response to this paid operator without changing its polynomial ring |
-| Wildcard: actual boundary surface | Shared-root jets are necessary; all single-point octic boundary divisors are excluded, including infinity, with unrestricted polynomial-mate degree; the constant-D finite6/infinity2 class is closed at every finite location | Audit the distinguished0/infinity(4,4) partition: weighted infinity regularity, a full residue identity, then source criticality; other partitions and unproved transports remain open |
+| Wildcard: actual boundary surface | Shared-root jets are necessary; all single-point octic boundary divisors are excluded, including infinity, with unrestricted polynomial-mate degree; the constant-D finite6/infinity2 class is closed at every finite location | The distinguished0/infinity(4,4) partition is now excluded; audit the full arbitrary-finite-location extension with its critical quintic; other partitions remain open |
 
 ## Audited checkpoint
 
@@ -518,10 +518,22 @@ quadratic tangent evaluation, and transverse derivatives of component jets.
 
 The [237-artifact manifest](planar_jc48_sep06_manifest.json) pins53 proof notes,
 54 independent audits,55 sources,55 outputs and twenty compressed certificates.
-The55 programs report1535402 exact gates per complete normal or optimized run. Each frozen output agrees in normal and
+The56 programs report1535498 exact gates per complete normal or optimized run. Each frozen output agrees in normal and
 optimized modes; the braid verifiers also check their pinned witnesses.
 These are scoped proof controls, not a census of Keller maps. No external
 priority claim is made.
+
+54. [Distinguished two-fourfold roots](planar_jc48_sep08_four_four.md) is
+   **PROVED + FINITE-EXACT + INDEPENDENTLY AUDITED**. For the complete
+   global class `F=H²+L`, `N|S=alpha*x⁴`, no polynomial mate of any degree
+   exists. Every branch at infinity has a regular differential after the
+   actual volume weight. The finite branches force the complete residue
+   identity `g=C f′`; all survivors have actual source critical points.
+   The nonconstant-L example `F=w⁴+w`, `G=1/[x(4w³+1)]`, `w=x²t`,
+   preserves the rational-mate boundary. All96 normal/optimized gates and
+   the independent analytic/source audit pass. Arbitrary finite locations
+   are a separate frozen candidate, not normalized by an assumed symmetry.
+
 
 ## Literature and correction recovery
 
@@ -753,10 +765,11 @@ pays every finite point using changed global carriers, the complete
 three-dimensional genus-two primitive space, and original-source pole
 repair. Item53 pays the infinity-point octuple with the actual surface
 inversion's changed volume form, completing all single-point divisors.
-The next distinguished0/infinity(4,4) partition has a complete candidate:
-weighted regularity at infinity, an exact finite residue identity and
-explicit source critical points. It remains under independent audit;
-no arbitrary pair of boundary locations is transported into this class.
+Item54 closes the distinguished0/infinity(4,4) partition by weighted
+regularity, exact finite residues and source criticality. A separate
+full-section proof candidate treats every finite location against infinity;
+its final quintic cannot have all roots at the three forbidden chart points.
+That transport awaits independent audit; arbitrary pairs remain open.
 Item39 closes the entire two-ordinary-cusp (4,6) class. Items46--48 pay
 the actual three-cusp moving paths, local pairs and full family transport;
 item52 now closes the entire ordinary three-cusp class in every degree.

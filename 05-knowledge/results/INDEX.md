@@ -98,8 +98,10 @@
   degree-uniform argument using actual retained deficits, central support
   incidences and node commutation excludes that whole-support class in
   every mapping degree. The earlier small-cycle suppliers remain audited.
-  [Manifest](planar_jc48_sep06_manifest.json):237 artifacts,55 programs,
-  1535402 exact gates per mode. Full JC(2) remains **OPEN**.
+  The distinguished finite-zero/infinity4+4 boundary class is also
+  excluded for polynomial mates after a complete residue/source audit.
+  [Manifest](planar_jc48_sep06_manifest.json):241 artifacts,56 programs,
+  1535498 exact gates per mode. Full JC(2) remains **OPEN**.
 
 - [Previous continuing synthesis](continuing5_20260906_synthesis.md):
   full-model beta simplicity, the original-phase rectangle, the ordered
