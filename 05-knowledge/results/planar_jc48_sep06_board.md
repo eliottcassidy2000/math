@@ -28,9 +28,9 @@ quadratic tangent evaluation, and transverse derivatives of component jets.
 |---|---|---|
 | Anchor: moving source | The finite five-dimensional response remains valid, but every nonconstant polynomial Hamiltonian in K+Delta K[p,y] has no nonzero rational scalar time | Change the invariant or carrier; different polynomial lifts inside the cusp ideal are now closed, and compositions still need their actual invariant/regularity sidecars |
 | Niche: collision | All scalar two-form periods miss exactly the quadrics through tangent directions in a three-dimensional target | Carry the quadratic data through an actual earlier source deformation and preserve descent |
-| Anchor: infinity | The whole birational (4,6) class with one finite odd (2,m) cusp and at least two nodes is excluded; the two-ordinary-cusp strata at infinity7 and9 have actual affine group Z | Certify the remaining infinity11 representative; its complete connected good stratum is now identified, and the local A6 passport alone loses global relations |
+| Anchor: infinity | The whole birational (4,6) class with one finite odd (2,m) cusp and at least two nodes is excluded; the entire two-ordinary-cusp (4,6) class has actual affine group Z | Test the three-ordinary-cusp boundary; its six scout words already admit a nonabelian B3 quotient, so the two-cusp collapse does not transfer |
 | Wildcard: response connection | The fixed smooth polynomial family F=arb+c+h(b), h in b³C[b], has unit class of exact primary order2; the canonical derivative generates its full component-labelled arm | Map an actual source-normal response to this paid operator without changing its polynomial ring |
-| Wildcard: actual boundary surface | Every hypothetical quartic pair has F=H²+L with global H in L2 and nonconstant L in L1; all coordinates linear in r in the boundary chart are excluded, with unrestricted mate | Use the complete primitive pole degree on compact generic fibres; higher-pole residue-free branches are real, and a transverse D point requires degree at least3 |
+| Wildcard: actual boundary surface | Every hypothetical quartic pair has F=H²+L with global H in L2 and nonconstant L in L1; all coordinates linear in r in the boundary chart are excluded, with unrestricted mate | Any rational mate requires a shared octic/quartic boundary root; retain its tangential multiplicities and first normal jet, and the constant-D cases where the degree3 supplier is absent |
 
 ## Audited checkpoint
 
@@ -350,9 +350,56 @@ quadratic tangent evaluation, and transverse derivatives of component jets.
     representative is exact, but its actual group remains outside this
     checkpoint. Producer77 gates and independent audit pass.
 
-The [158-artifact manifest](planar_jc48_sep06_manifest.json) pins36 proof notes,
-37 independent audits,38 sources,38 outputs and nine compressed certificates.
-The38 programs report1444606 exact gates per complete normal or optimized run. Each frozen output agrees in normal and
+37. [Exact moving-centre tubes](planar_jc48_sep08_moving_tubes.md)
+    is **PROVED + FINITE-EXACT + INDEPENDENTLY AUDITED**. Expanding along
+    affine root centres retains cancellation of common motion before taking
+    coefficient bounds. Exact pair separation, concentric endpoint gluing
+    and a common-base configuration homotopy pay the actual braid. One full
+    inherited9553-segment path is recertified in92 moving segments with the
+    identical word. Long translation, swapped labels and a curved root with
+    vanishing first residual are controls. Producer10324 gates and an
+    independent source/method audit pass; no old witness is changed.
+38. [Quartic common-boundary-root necessity](planar_jc48_sep08_quartic_common_root.md)
+    is **PROVED + INDEPENDENTLY AUDITED** for arbitrary rational mates.
+    If the actual binary octic N|S and quartic M|S have no common zero,
+    every boundary branch is regular except a controlled double-root
+    Newton face. Its generic Morse split bounds the total primitive pole
+    degree by2, across all octic multiplicities. Disjointness also forces
+    F|D nonconstant, supplying local degree3 on the same compact component.
+    Thus any rational mate requires a shared root. The actual h4+h rational
+    mate with nonzero sections and nonconstant F|D attains degree3 and marks
+    this condition's boundary. The degree principle's canonical antecedents
+    are credited. Producer568 gates, a complete root audit and a second
+    independent analytic read pass. This does not identify W with an
+    actual Keller envelope.
+39. [Infinity-eleven actual braid and whole two-cusp class](planar_jc48_sep08_infinity11_braid.md)
+    is **PROVED + FINITE-EXACT + INDEPENDENTLY AUDITED**. Five exact
+    common-base moving witnesses,736 segments in total, force all four
+    positive meridians equal; winding gives actual affine group Z. The
+    good infinity11 supplier and every node/cusp/infinity branch are
+    independently checked. Item36's connected marked-stratum transport
+    now closes infinity11 as well. Therefore the entire birational
+    polynomial (4,6) class with exactly two ordinary cusps and otherwise
+    ordinary nodes has group Z and is excluded as whole irreducible Keller
+    nonproperness support. Producer and independent referee pass6793 gates
+    per mode; an independent crossing extraction recovers all five words.
+
+40. [Shared-root first jets](planar_jc48_sep08_shared_roots.md)
+    is **PROVED + FINITE-EXACT + INDEPENDENTLY AUDITED**. A simple octic
+    root or a unit first normal derivative makes every shared-root branch
+    regular. At a finite singular shared point, any nonzero quadratic
+    tangential coefficient of N, first tangential coefficient of its normal
+    derivative, or first tangential coefficient of M produces a genuine
+    logarithmic residue. Thus a rational mate requires m>=3,j>=2,n>=2 at
+    every remaining such point. If all octic multiplicities are at most2,
+    no rational mate exists for arbitrary M, even when F|D is constant.
+    The full infinity factor and the nonzero-M degree3 rational hostile
+    are retained. Producer454 gates and independent analytic/source audit
+    pass; this is a necessary jet condition, not a shared-root closure.
+
+The [179-artifact manifest](planar_jc48_sep06_manifest.json) pins40 proof notes,
+41 independent audits,42 sources,42 outputs and fourteen compressed certificates.
+The42 programs report1462745 exact gates per complete normal or optimized run. Each frozen output agrees in normal and
 optimized modes; the braid verifiers also check their pinned witnesses.
 These are scoped proof controls, not a census of Keller maps. No external
 priority claim is made.
@@ -578,20 +625,24 @@ also restore simultaneous information before a quotient. That procedural
 comparison supplies no map from D moments or runner labels to the present
 curve or source-ring objects, and no JC consequence is inferred.
 
-Next operations compare all five live lanes. Item29 pays the global
-quartic root, item33 retains all higher-pole hostiles, and item35 supplies
-the same-component primitive degree consumer. An all-multiplicity
-no-common-boundary-root theorem is under independent audit, not part of
-this manifest. Item36 pays the complete two-cusp parameter strata and
-closes infinity7/9. A moving-disc braid method and five new infinity11
-witnesses are under separate audit; numerical words alone pay no group.
-For moving sources, every polynomial Hamiltonian inside the cusp ideal
-is closed for nonzero rational time. Different-invariant compositions
-and changed carriers need their actual invariant and regularity sidecars.
-Collision quadrics still need a transported deformation. Item34 now pays
-an actual fixed smooth polynomial and all component principal parts for
-the torsion connection; its map from the moving-response problem remains
-open. No genus or braid theorem supplies those missing maps. The
-META-PATTERNS cards used remain Search the statement before the method,
-Inventory retained power classes, and Separate descent from regularity.
-No new card is promoted from these related curve arguments.
+Next operations compare all five live lanes. Item38 closes every
+quartic square prefix whose two actual boundary sections have no common
+root, with unrestricted rational mate. Item40 pays the shared-root first-jet
+obstruction, retaining the normal derivative, which the pair of tangential
+multiplicities alone loses. A nonzero-M rational example
+has shared multiplicities8/4 and exactly the primitive degree3 consumed
+at D. A separate constant-D family loses that supplier and needs its own
+full principal parts. Item39 closes the entire two-ordinary-cusp (4,6)
+class. The three-ordinary-cusp scout has six stable numerical words, but
+these admit a nonabelian B3 quotient; no cyclicity or actual-complement
+claim follows. Its sheet passport must be analyzed before choosing a new
+consumer. For moving sources, every polynomial Hamiltonian inside the
+cusp ideal is closed for nonzero rational time. Different-invariant
+compositions and changed carriers retain their invariant and regularity
+debts. Collision quadrics still need a transported deformation. Item34
+pays a fixed smooth polynomial and all component principal parts for the
+torsion connection, while its map from moving source responses remains
+open. None of these curve results supplies that map. The META-PATTERNS
+cards used remain Search the statement before the method, Inventory
+retained power classes, and Separate descent from regularity. No new
+card is promoted from these related curve arguments.

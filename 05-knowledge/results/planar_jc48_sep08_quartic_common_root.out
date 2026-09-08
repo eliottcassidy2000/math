@@ -1,0 +1,5 @@
+Quartic common-root controls PASS; unbounded Newton/Morse proof requires independent audit
+Universe: m=1..8; j=0..9 and infinity; all22 octic partitions; all balanced split orders
+Controls: exact Newton weights, no triple face, generic Morse coefficient, actual m6 residue-free double pole
+Always-active gates: 568
+Semantic SHA256: f2bb05e16105c976140835fe0576f92c6ec3ec33a8b0f3e4e2a2bc937b1d3ec7

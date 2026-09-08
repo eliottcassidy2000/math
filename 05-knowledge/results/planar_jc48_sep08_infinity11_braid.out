@@ -1,0 +1,92 @@
+FINITE-EXACT INFINITY11 TWO-CUSP RATIONAL BRAID PASS; analytic consumer proved separately
+{
+  "conclusion": "analytic necessity: a=c, braid(a,b), [a,b]=1, [a,d]=1, braid(b,d); hence a=b=c=d",
+  "discriminant": "-104857600000000*(3*u - 13)**3*(3*u - 8)*(3*u + 19)**3*(59049*u**3 + 1526283*u**2 + 13980187*u + 44759481)**2/328256967394537077627",
+  "paths": [
+    {
+      "compressed_bytes": 6923,
+      "compressed_sha256": "821f52e0199693af3222e6fe8cc506c6f9341194bcc38b2c079c9a8ae999e4a0",
+      "gates": 936,
+      "name": "smooth",
+      "raw_bytes": 26744,
+      "raw_sha256": "3e773ba9e2a041f8a51a5a45acc2f92e7d7d92f3d12fae57a443b0fe305b79e9",
+      "segments": 102,
+      "word": [
+        1,
+        2,
+        -1
+      ]
+    },
+    {
+      "compressed_bytes": 9885,
+      "compressed_sha256": "31c8b46dfd0775e80790ab0188602d020579fe990b857c817418a58feee94cea",
+      "gates": 1351,
+      "name": "cusp_plus",
+      "raw_bytes": 38692,
+      "raw_sha256": "8e9ca689d19d2ba241e71147cf51b1d3d6028425a61afd8bc63c66980a8c8c92",
+      "segments": 148,
+      "word": [
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "compressed_bytes": 11857,
+      "compressed_sha256": "05332d61d143522b7ea2184b7dc964201dc66c91e5c3da155ab76d4cfb56678e",
+      "gates": 1575,
+      "name": "cusp_minus",
+      "raw_bytes": 45075,
+      "raw_sha256": "7c1dd3a237dc7db81683e0d7aca2a9f723de45f242e730ef14d1bc650317529f",
+      "segments": 172,
+      "word": [
+        2,
+        1,
+        3,
+        3,
+        3,
+        -1,
+        -2
+      ]
+    },
+    {
+      "compressed_bytes": 12621,
+      "compressed_sha256": "f1097a644150953f07a40cf57b06e437a820358bbbfbc5707ce503d83f986e22",
+      "gates": 1554,
+      "name": "node_real",
+      "raw_bytes": 46034,
+      "raw_sha256": "a1cb6797e007708a5cae21c9d03df76c6125cbfe46d0257e471d02ba6ce7a1b8",
+      "segments": 169,
+      "word": [
+        2,
+        1,
+        3,
+        3,
+        1,
+        1,
+        -3,
+        -3,
+        -1,
+        -2
+      ]
+    },
+    {
+      "compressed_bytes": 8592,
+      "compressed_sha256": "e8051f7e47493fbe5ccf47a0693f8d849f4213df4a14ab848823343159380860",
+      "gates": 1338,
+      "name": "node_lower",
+      "raw_bytes": 41259,
+      "raw_sha256": "b3828eb89e8d9bccc2749fe41c29bf0b0012a2c43bcbb963444dbe6e48f2178f",
+      "segments": 145,
+      "word": [
+        2,
+        -3,
+        2,
+        2,
+        3,
+        -2
+      ]
+    }
+  ]
+}
+PASS always-active gates=6793
