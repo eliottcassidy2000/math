@@ -1,6 +1,6 @@
 # Current Frontier
 
-**State — 2026-09-06.** Proof links; statuses: **PROVED**, **CITED**,
+**2026-09-08.** Statuses: **PROVED**, **CITED**,
 **FINITE-EXACT**, **VERIFIED**, **CONDITIONAL**, **OPEN**, **RESERVED**,
 **REFUTED**, **SUPERSEDED**.
 
@@ -442,7 +442,6 @@ Arbitrary/larger cells and certificate import remain open; none proves AK.
 
 ## Cross-domain connection discipline
 
-[Mechanism and sidecar directory](FRONTIER-CONNECTION-SIDECARS.md) preserves
-all prior transfer questions outside the bounded startup packet. Every
-connection needs a source, target, map, preserved predicate, lost coordinate,
-needed sidecar and cheap hostile. HYP-8810 is a wildcard, not a JC/LRC reduction.
+[Transfer directory](FRONTIER-CONNECTION-SIDECARS.md): prior transfers.
+Require source/target/map, preserved predicate, lost coordinate,
+sidecar and cheap hostile. HYP-8810 is a wildcard, not a JC/LRC reduction.
