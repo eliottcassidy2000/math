@@ -1,5 +1,11 @@
 # Script Results Index
 
+- **New audited extensions:** [source-linear logarithmic witnesses](continuing14_20260908_logarithmic_linear_witness.md)
+  are excluded for global W2 submersions with no bound on first-function degree.
+  [Generic-fibre reconstruction](continuing14_20260908_same_torsion_different_fibres.md)
+  gives two degree15 functions with identical full pointed torsion and different
+  generic C(T)-fibres. [Manifest](continuing14_20260908_manifest.json) pins both independent audits.
+
 - [Current continuing synthesis](continuing13_20260908_synthesis.md):
   **PROVED + FINITE-EXACT + INDEPENDENTLY AUDITED.** A complete univariate
   W2 family has the same order-three pointed unit module at every degree,

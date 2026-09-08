@@ -1,0 +1,5 @@
+PASS: independent generic-fibre reconstruction and equal-torsion pair audit
+Two degree15 primitives; full torsion arms4,3,1; unit-generated arms3; pair degree30; punctures23
+Exact invariant difference: 453125*r/12 - 2265625/48
+Always-active gates: 92
+Certificate SHA256: d862c0be3673bb380f044f3f998a4154189dd9d5b5dd8f069a3d400f9e05edde

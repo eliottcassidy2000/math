@@ -1,0 +1,7 @@
+Same ambient torsion, different generic source fibres: PASS
+Exact field: Q[r]/(6*r^2-15*r+10); two conjugate degree15 primitives
+Fixed h=-1/2, lambda=1; supports0,1,-31; ambient arms4,3,1; unit arms3
+Intrinsic pair degree30; ordinary punctures23; unequal affine invariants
+Generic-fibre nonisomorphism is analytic over C(T); finite controls are not its proof
+Always-active exact gates: 95
+Certificate: continuing14_20260908_same_torsion_different_fibres_certificate.json

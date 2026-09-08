@@ -1,0 +1,266 @@
+{
+  "universe": "forty declared source-submersive normal-form pairs; complete critical ideals and actual-chart checks",
+  "rows": [
+    {
+      "family": "+",
+      "F": "x + 2",
+      "H": "t*(x + 2) + 7",
+      "global": false
+    },
+    {
+      "family": "+",
+      "F": "t**2*x**3 + 6*t**2*x**2 + 12*t**2*x + 8*t**2 - 3*t*x**2 - 12*t*x - 12*t + 2*x + 4",
+      "H": "t*(x + 2) + 7",
+      "global": false
+    },
+    {
+      "family": "+",
+      "F": "x + 2",
+      "H": "t*(x + 2) + x",
+      "global": false
+    },
+    {
+      "family": "+",
+      "F": "t**2*x**3 + 6*t**2*x**2 + 12*t**2*x + 8*t**2 + 2*t*x**3 + 9*t*x**2 + 12*t*x + 4*t + x**3 + 3*x**2 + 2*x",
+      "H": "t*(x + 2) + x",
+      "global": false
+    },
+    {
+      "family": "+",
+      "F": "x + 2",
+      "H": "t*(x + 2) + x**2 + 1",
+      "global": false
+    },
+    {
+      "family": "+",
+      "F": "t**2*x**3 + 6*t**2*x**2 + 12*t**2*x + 8*t**2 + 2*t*x**4 + 8*t*x**3 - 3*t*x**2 - 44*t*x - 44*t + x**5 + 2*x**4 - 11*x**3 - 22*x**2 + 30*x + 60",
+      "H": "t*(x + 2) + x**2 + 1",
+      "global": false
+    },
+    {
+      "family": "+",
+      "F": "x",
+      "H": "t*x + 7",
+      "global": false
+    },
+    {
+      "family": "+",
+      "F": "t**2*x**3 - 3*t*x**2 + 2*x",
+      "H": "t*x + 7",
+      "global": false
+    },
+    {
+      "family": "+",
+      "F": "x",
+      "H": "t*x + x",
+      "global": false
+    },
+    {
+      "family": "+",
+      "F": "t**2*x**3 + 2*t*x**3 - 3*t*x**2 + x**3 - 3*x**2 + 2*x",
+      "H": "t*x + x",
+      "global": false
+    },
+    {
+      "family": "+",
+      "F": "x",
+      "H": "t*x + x**2 + 1",
+      "global": false
+    },
+    {
+      "family": "+",
+      "F": "t**2*x**3 + 2*t*x**4 - 3*t*x**2 + x**5 - 3*x**3 + 2*x",
+      "H": "t*x + x**2 + 1",
+      "global": false
+    },
+    {
+      "family": "-",
+      "F": "-t",
+      "H": "-t*x + 5",
+      "global": true
+    },
+    {
+      "family": "-",
+      "F": "t**2*x + 2*t",
+      "H": "-t*x + 5",
+      "global": true
+    },
+    {
+      "family": "-",
+      "F": "2 - t",
+      "H": "-t*x + 2*x + 5",
+      "global": true
+    },
+    {
+      "family": "-",
+      "F": "t**2*x - 4*t*x + 2*t + 4*x - 4",
+      "H": "-t*x + 2*x + 5",
+      "global": false
+    },
+    {
+      "family": "-",
+      "F": "-t + x + 1",
+      "H": "-t*x + x**2 + x + 5",
+      "global": false
+    },
+    {
+      "family": "-",
+      "F": "t**2*x - 2*t*x**2 - 2*t*x + 2*t + x**3 + 2*x**2 - x - 2",
+      "H": "-t*x + x**2 + x + 5",
+      "global": false
+    },
+    {
+      "family": "-",
+      "F": "-t",
+      "H": "-t*x + 2*t + 5",
+      "global": true
+    },
+    {
+      "family": "-",
+      "F": "t**2*x - 2*t**2 + 2*t",
+      "H": "-t*x + 2*t + 5",
+      "global": true
+    },
+    {
+      "family": "-",
+      "F": "2 - t",
+      "H": "-t*x + 2*t + 2*x + 1",
+      "global": true
+    },
+    {
+      "family": "-",
+      "F": "t**2*x - 2*t**2 - 4*t*x + 10*t + 4*x - 12",
+      "H": "-t*x + 2*t + 2*x + 1",
+      "global": false
+    },
+    {
+      "family": "-",
+      "F": "-t + x + 1",
+      "H": "-t*x + 2*t + x**2 - x + 3",
+      "global": false
+    },
+    {
+      "family": "-",
+      "F": "t**2*x - 2*t**2 - 2*t*x**2 + 2*t*x + 6*t + x**3 - 5*x - 4",
+      "H": "-t*x + 2*t + x**2 - x + 3",
+      "global": false
+    },
+    {
+      "family": "+-",
+      "F": "-t*x**2/2 - t*x - t/2 + x + 1",
+      "H": "-t*x**2/2 + t/2 + x",
+      "global": false
+    },
+    {
+      "family": "+-",
+      "F": "t**2*x**4/4 + t**2*x**3/2 - t**2*x/2 - t**2/4 - t*x**3 + 3*t*x + 2*t + x**2 - 2*x - 3",
+      "H": "-t*x**2/2 + t/2 + x",
+      "global": false
+    },
+    {
+      "family": "+-",
+      "F": "-t*x**2/2 - t*x - t/2 + x**2 + 3*x + 2",
+      "H": "-t*x**2/2 + t/2 + x**2 + x - 1",
+      "global": false
+    },
+    {
+      "family": "+-",
+      "F": "t**2*x**4/4 + t**2*x**3/2 - t**2*x/2 - t**2/4 - t*x**4 - 3*t*x**3 + 5*t*x + 3*t + x**4 + 4*x**3 + x**2 - 10*x - 8",
+      "H": "-t*x**2/2 + t/2 + x**2 + x - 1",
+      "global": false
+    },
+    {
+      "family": "+-",
+      "F": "-t*x**2/3 - 2*t*x/3 - t/3 + x + 1",
+      "H": "-t*x**2/3 + t*x/3 + 2*t/3 + x",
+      "global": false
+    },
+    {
+      "family": "+-",
+      "F": "t**2*x**4/9 + t**2*x**3/9 - t**2*x**2/3 - 5*t**2*x/9 - 2*t**2/9 - 2*t*x**3/3 + 2*t*x**2/3 + 10*t*x/3 + 2*t + x**2 - 3*x - 4",
+      "H": "-t*x**2/3 + t*x/3 + 2*t/3 + x",
+      "global": false
+    },
+    {
+      "family": "+-",
+      "F": "-t*x**2/3 - 2*t*x/3 - t/3 + x**2 + 3*x + 2",
+      "H": "-t*x**2/3 + t*x/3 + 2*t/3 + x**2 - 2",
+      "global": false
+    },
+    {
+      "family": "+-",
+      "F": "t**2*x**4/9 + t**2*x**3/9 - t**2*x**2/3 - 5*t**2*x/9 - 2*t**2/9 - 2*t*x**4/3 - 4*t*x**3/3 + 8*t*x**2/3 + 20*t*x/3 + 10*t/3 + x**4 + 3*x**3 - 4*x**2 - 18*x - 12",
+      "H": "-t*x**2/3 + t*x/3 + 2*t/3 + x**2 - 2",
+      "global": false
+    },
+    {
+      "family": "+-",
+      "F": "-t*x**2 + x",
+      "H": "-t*x**2 + t*x + x",
+      "global": false
+    },
+    {
+      "family": "+-",
+      "F": "t**2*x**4 - t**2*x**3 - 2*t*x**3 + 4*t*x**2 + x**2 - 3*x",
+      "H": "-t*x**2 + t*x + x",
+      "global": false
+    },
+    {
+      "family": "+-",
+      "F": "-t*x**2 + x**2 + x",
+      "H": "-t*x**2 + t*x + x**2",
+      "global": false
+    },
+    {
+      "family": "+-",
+      "F": "t**2*x**4 - t**2*x**3 - 2*t*x**4 + 4*t*x**2 + x**4 + x**3 - 3*x**2 - 3*x",
+      "H": "-t*x**2 + t*x + x**2",
+      "global": false
+    },
+    {
+      "family": "+-",
+      "F": "-t*x**2/2 + x",
+      "H": "-t*x**2/2 + t*x + x",
+      "global": false
+    },
+    {
+      "family": "+-",
+      "F": "t**2*x**4/4 - t**2*x**3/2 - t*x**3 + 3*t*x**2 + x**2 - 4*x",
+      "H": "-t*x**2/2 + t*x + x",
+      "global": false
+    },
+    {
+      "family": "+-",
+      "F": "-t*x**2/2 + x**2 + x",
+      "H": "-t*x**2/2 + t*x + x**2 - x",
+      "global": false
+    },
+    {
+      "family": "+-",
+      "F": "t**2*x**4/4 - t**2*x**3/2 - t*x**4 + t*x**3 + 3*t*x**2 + x**4 - 5*x**2 - 4*x",
+      "H": "-t*x**2/2 + t*x + x**2 - x",
+      "global": false
+    }
+  ],
+  "global_survivors": 6,
+  "all_degree_claim": "independent analytic proof, not extrapolation from the finite bank",
+  "gates": 234,
+  "categories": {
+    "Newton power sums recover root polynomial": 5,
+    "complete actual-chart Laurent globality": 40,
+    "complete affine critical ideal is unit": 40,
+    "complete declared forty-pair grid": 1,
+    "entire added divisor is critical": 6,
+    "higher-degree hostile bracket": 1,
+    "higher-degree hostile fails submersion": 1,
+    "higher-degree rational logarithmic exactness hostile": 1,
+    "independent coefficient recurrence": 94,
+    "literal original-source logarithmic equation": 40,
+    "positive simple principal-part coefficient": 1,
+    "regular-component primitive numerator": 1,
+    "unit-one hostile identity": 1,
+    "zero-unit boundary has polynomial mate x": 1,
+    "zero-unit logarithmic boundary": 1
+  },
+  "source_sha256": "f03ebd9a2f37b5c4bc3b9d1bb6300cb8ec045e03a3810108bf10f6f96794b857"
+}

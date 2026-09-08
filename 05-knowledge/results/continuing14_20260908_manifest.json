@@ -1,0 +1,137 @@
+{
+  "schema": 1,
+  "created_utc": "2026-09-08T23:40:07.069331+00:00",
+  "baseline_commit": "56ab2658c2f5e08a5f17851d3608f71a2f071720",
+  "hash_basis": "Raw LF bytes. Maintained synthesis/navigation and manifest excluded; report acceptance transitions stated explicitly.",
+  "scope": "All-degree classification excludes every globally submersive fixed-W2 first function with a polynomial logarithmic repair witness of original t-degree at most one. For the complete polynomial-mutation family, the generic original affine curve over C(T) reconstructs Q up to constant affine substitution. Two actual degree15 global submersions have isomorphic FULL POINTED AMBIENT TORSION, matching support/component counts, rational-pair degree and puncture count, but nonisomorphic generic C(T)-curves. General conjectures remain OPEN; no external priority claim.",
+  "artifact_count": 16,
+  "program_count": 4,
+  "exact_gates_per_mode": 888,
+  "validation": {
+    "continuing14_20260908_logarithmic_linear_audit": {
+      "gates": 234,
+      "normal_optimized_raw_LF": true,
+      "output_sha256": "ca4a599278ab822b1d608319c5d23ba803e1e4753e9d39ce03665506bb5ebe13",
+      "source_sha256": "f03ebd9a2f37b5c4bc3b9d1bb6300cb8ec045e03a3810108bf10f6f96794b857"
+    },
+    "continuing14_20260908_logarithmic_linear_witness": {
+      "gates": 467,
+      "normal_optimized_raw_LF": true,
+      "output_sha256": "de52d7a4edf315162d1867ccf49d58f8e4d7ed48a03ed206acd227e107fa375f",
+      "source_sha256": "f2712ea491ea0a12b3ec148f8d4623ee460770b09cd2fd40da7e2a3e187141bd"
+    },
+    "continuing14_20260908_passport_independent_audit": {
+      "gates": 92,
+      "normal_optimized_raw_LF": true,
+      "output_sha256": "e36df527e1e84ab55006a764cdbb2d2f4884474c80b96c2f2664e4cb740a3ae4",
+      "source_sha256": "20e1c07351b00011d6538489763a236ef879257acba2710c282a7a7cd23456c5"
+    },
+    "continuing14_20260908_same_torsion_different_fibres": {
+      "gates": 95,
+      "normal_optimized_raw_LF": true,
+      "output_sha256": "f329fe8b1f1efe2b9c1f0fb4a30bfa6cfcda887901f46c7722953e50f29000aa",
+      "source_sha256": "780fad38dd9865860f1415a11558e1f11120715af479d5329f27ead6a82e4033"
+    }
+  },
+  "normal_optimized_raw_stdout_equal": true,
+  "regenerated_certificates_raw_unchanged": true,
+  "certificate_count": 4,
+  "prior_artifacts_verified": 995,
+  "prior_artifacts_unchanged_since_baseline": 995,
+  "primary_acceptance_transitions": {
+    "continuing14_20260908_logarithmic_linear_witness": {
+      "accepted_producer_report_sha256": "c1f140294186bf6384b538b0bf929a3005d02fd3ab1b3524d8450c4f44caa27c",
+      "change": "Audited status promotion and referee link only; all proof text and computation unchanged.",
+      "filed_report_sha256": "076739a82677914a9350117b94e892d0100af3d7676ae82732daf07fab8340d6"
+    },
+    "continuing14_20260908_same_torsion_different_fibres": {
+      "accepted_producer_report_sha256": "601a55857454668fd85d902e3ee49345dd698d20212ef7ca88a454ada6e90fa7",
+      "change": "Audited status promotion and referee link only; all proof text and computation unchanged.",
+      "filed_report_sha256": "f3f1bbc24f20b18755822d94b6022396b063a58116320faa936516352b83a843"
+    }
+  },
+  "incoming_commits": [],
+  "incoming_review": "No incoming commits at startup or natural research checkpoint. Final fetch is verified during closeout.",
+  "artifacts": [
+    {
+      "path": "04-computation/continuing14_20260908_logarithmic_linear_audit.py",
+      "bytes": 5615,
+      "sha256": "f03ebd9a2f37b5c4bc3b9d1bb6300cb8ec045e03a3810108bf10f6f96794b857"
+    },
+    {
+      "path": "04-computation/continuing14_20260908_logarithmic_linear_witness.py",
+      "bytes": 7632,
+      "sha256": "f2712ea491ea0a12b3ec148f8d4623ee460770b09cd2fd40da7e2a3e187141bd"
+    },
+    {
+      "path": "04-computation/continuing14_20260908_passport_independent_audit.py",
+      "bytes": 6532,
+      "sha256": "20e1c07351b00011d6538489763a236ef879257acba2710c282a7a7cd23456c5"
+    },
+    {
+      "path": "04-computation/continuing14_20260908_same_torsion_different_fibres.py",
+      "bytes": 7502,
+      "sha256": "780fad38dd9865860f1415a11558e1f11120715af479d5329f27ead6a82e4033"
+    },
+    {
+      "path": "05-knowledge/results/continuing14_20260908_logarithmic_linear_audit.md",
+      "bytes": 7382,
+      "sha256": "e825217da4416beab9c9a45ec44b5efe5bddbc2661a7983dd5efb0a207be0983"
+    },
+    {
+      "path": "05-knowledge/results/continuing14_20260908_logarithmic_linear_audit.out",
+      "bytes": 399,
+      "sha256": "ca4a599278ab822b1d608319c5d23ba803e1e4753e9d39ce03665506bb5ebe13"
+    },
+    {
+      "path": "05-knowledge/results/continuing14_20260908_logarithmic_linear_audit_certificate.json",
+      "bytes": 6963,
+      "sha256": "00dd1d1fedfb2296cd0861ab7b58c2752e5f5821cdceed87bff07fe6c5dd4da2"
+    },
+    {
+      "path": "05-knowledge/results/continuing14_20260908_logarithmic_linear_witness.md",
+      "bytes": 11750,
+      "sha256": "076739a82677914a9350117b94e892d0100af3d7676ae82732daf07fab8340d6"
+    },
+    {
+      "path": "05-knowledge/results/continuing14_20260908_logarithmic_linear_witness.out",
+      "bytes": 232,
+      "sha256": "de52d7a4edf315162d1867ccf49d58f8e4d7ed48a03ed206acd227e107fa375f"
+    },
+    {
+      "path": "05-knowledge/results/continuing14_20260908_logarithmic_linear_witness_certificate.json",
+      "bytes": 7105,
+      "sha256": "6fca12419f46fcaa2311e3373288afef01a0a6b4f4b6fd37e0000c778eafec49"
+    },
+    {
+      "path": "05-knowledge/results/continuing14_20260908_passport_independent_audit.md",
+      "bytes": 8027,
+      "sha256": "5bbe533d8bf8cc164f604a3e6e8cd3310bfe42c6bbcc3cb75917ff8858bc14dc"
+    },
+    {
+      "path": "05-knowledge/results/continuing14_20260908_passport_independent_audit.out",
+      "bytes": 336,
+      "sha256": "e36df527e1e84ab55006a764cdbb2d2f4884474c80b96c2f2664e4cb740a3ae4"
+    },
+    {
+      "path": "05-knowledge/results/continuing14_20260908_passport_independent_audit_certificate.json",
+      "bytes": 1658,
+      "sha256": "d862c0be3673bb380f044f3f998a4154189dd9d5b5dd8f069a3d400f9e05edde"
+    },
+    {
+      "path": "05-knowledge/results/continuing14_20260908_same_torsion_different_fibres.md",
+      "bytes": 13347,
+      "sha256": "f3f1bbc24f20b18755822d94b6022396b063a58116320faa936516352b83a843"
+    },
+    {
+      "path": "05-knowledge/results/continuing14_20260908_same_torsion_different_fibres.out",
+      "bytes": 471,
+      "sha256": "f329fe8b1f1efe2b9c1f0fb4a30bfa6cfcda887901f46c7722953e50f29000aa"
+    },
+    {
+      "path": "05-knowledge/results/continuing14_20260908_same_torsion_different_fibres_certificate.json",
+      "bytes": 4211,
+      "sha256": "6cb5cf3cff020f7cf34915ae7327d6adfb52ff6bdae8d5c920e6806c94efc105"
+    }
+  ]
+}

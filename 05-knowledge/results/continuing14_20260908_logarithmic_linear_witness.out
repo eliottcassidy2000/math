@@ -1,0 +1,5 @@
+PASS: logarithmic witness obstruction exact controls
+normal forms: 36 positive, 36 negative, 18 mixed
+separate source ideal controls: 6
+gates: 467
+certificate SHA256: 6fca12419f46fcaa2311e3373288afef01a0a6b4f4b6fd37e0000c778eafec49
