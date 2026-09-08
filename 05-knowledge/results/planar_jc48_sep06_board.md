@@ -28,9 +28,9 @@ quadratic tangent evaluation, and transverse derivatives of component jets.
 |---|---|---|
 | Anchor: moving source | The finite five-dimensional response remains valid, but every nonconstant polynomial Hamiltonian in K+Delta K[p,y] has no nonzero rational scalar time | Change the invariant or carrier; different polynomial lifts inside the cusp ideal are now closed, and compositions still need their actual invariant/regularity sidecars |
 | Niche: collision | All scalar two-form periods miss exactly the quadrics through tangent directions in a three-dimensional target | Carry the quadratic data through an actual earlier source deformation and preserve descent |
-| Anchor: infinity | The whole one-odd-cusp, two-ordinary-cusp and three-ordinary-cusp (4,6) classes are excluded as irreducible whole Keller support; the last uses actual marked D4 and arbitrary retained subsets | The adjacent(5,3,3) family has an actual marked H4 quotient; involutions and single cycles are excluded. Test arbitrary retained odd-braid bounds and genuinely mixed cycle types |
+| Anchor: infinity | The whole one-odd-cusp, two-ordinary-cusp and three-ordinary-cusp (4,6) classes are excluded as irreducible whole Keller support; the last uses actual marked D4 and arbitrary retained subsets | The adjacent(5,3,3) family has an actual marked H4 quotient; involutions and single cycles are excluded, and mapping degree is at least12. Test cycle-compatible mixed types beyond the scalar relaxation |
 | Wildcard: response connection | The fixed smooth polynomial family F=arb+c+h(b), h in b³C[b], has unit class of exact primary order2; the canonical derivative generates its full component-labelled arm | Map an actual source-normal response to this paid operator without changing its polynomial ring |
-| Wildcard: actual boundary surface | Shared-root jets are necessary; all single-point octic boundary divisors are excluded, including infinity, with unrestricted polynomial-mate degree; the constant-D finite6/infinity2 class is closed at every finite location | Every(4,4) pair is now excluded at all boundary locations. Test the active-fourfold residue equilibrium and the neighboring(6,2)/(4,2,2) partitions |
+| Wildcard: actual boundary surface | Shared-root jets are necessary; all single-point octic boundary divisors are excluded, including infinity, with unrestricted polynomial-mate degree; the constant-D finite6/infinity2 class is closed at every finite location | General leading exactness closes all(4,2,2) positions and classifies every degree<=8 leading differential. Spend later Laurent coefficients on the surviving lower sections; a five-plus-three-simple-root closure is under audit |
 
 ## Audited checkpoint
 
@@ -576,10 +576,39 @@ quadratic tangent evaluation, and transverse derivatives of component jets.
    pays the remaining locations and retains its rational-mate hostile.
    Other multiplicity partitions and unrestricted JC(2) remain open.
 
-The [271-artifact manifest](planar_jc48_sep06_manifest.json) pins60 proof notes,
-61 audit notes,62 sources,62 frozen outputs and26 compressed witnesses.
-The62 programs report1635892 exact gates per complete normal or optimized
-run. Each frozen output agrees in both modes. All267 inherited pins remain
+61. [Odd-cusp arbitrary retention](planar_jc48_sep08_odd_retention.md)
+   is **PROVED + INDEPENDENTLY AUDITED**. An odd braid of length2r+1
+   gives `(r+1)n>=(2r+1)k-rD` and the stronger one-deficit bound
+   `n>=k-floor(rt/(r+1))`, for actual re-accessed subsets. Full support
+   incidence and the Euler budget exclude every D<=11 in the marked
+   mixed-cusp H4 family. Its mapping degree is therefore at least12.
+   All34,983 gates pass; independent conjugacy-weighted enumeration
+   recovers the complete finite universe. An unbounded cardinality-only
+   survivor records why cycle order is the next missing information.
+62. [Leading-coefficient exactness](planar_jc48_sep08_leading_exactness.md)
+   is **PROVED + INDEPENDENTLY AUDITED** in every degree: if a rational
+   mate exists for F of t-degree n and leading A, then dx/a has a
+   primitive in C(x)(a), a^n=A. One formal Laurent coefficient proves
+   this, without convergence or a mate-degree bound. It is an iff for
+   the pure-monomial model only. All241 gates and the necessary-only
+   hostile pass. In the actual global quartic class, every finite double
+   root of the boundary octic is forbidden. Hence all(4,2,2) placements
+   exclude even rational mates; a lone double point at infinity is not
+   covered by that finite-root statement.
+63. [Complete radical differential classification](planar_jc48_sep08_boundary_exactness.md)
+   is **PROVED + INDEPENDENTLY AUDITED** for every nonzero polynomial
+   N of degree at most eight. All67 multiplicity partitions reduce to
+   the displayed17 possible exact types, with precise position equations
+   for four exceptional types. The5+1+1+1 elliptic case is exact iff
+   its transformed cubic has no linear or quadratic coefficient; the
+   complete primitive space is paid. All195 gates and independent
+   partition/Fraction checks pass. This supplies the complete leading
+   necessary test, not a full two-variable mate classification.
+
+The [283-artifact manifest](planar_jc48_sep06_manifest.json) pins63 proof notes,
+64 audit notes,65 sources,65 frozen outputs and26 compressed witnesses.
+The65 programs report1671311 exact gates per complete normal or optimized
+run. Each frozen output agrees in both modes. All271 inherited pins remain
 unchanged. These are scoped proof controls, not a census of Keller maps;
 no external priority claim or full JC(2) result is asserted.
 
@@ -816,9 +845,12 @@ repair. Item53 pays the infinity-point octuple with the actual surface
 inversion's changed volume form, completing all single-point divisors.
 Items54,56 and60 close every two-fourfold-root octic at all boundary
 locations. The degree-four moving-residue obstruction closes the two-finite
-case even for rational mates. The next objects are two finite roots of
-multiplicities6,2 and the fourfold-root equilibrium in a4,2,2 partition.
-Their full local strata and chart losses remain new obligations. The degree
+case even for rational mates. Items62--63 now close every4,2,2 position, every6,2 case with its double
+point finite, and every leading differential outside the complete table.
+A new later-coefficient argument for5,1,1,1 requires M to have five zeros
+although its degree is at most four; that consumer is under independent
+production and audit. The other surviving leading strata retain their
+lower-coefficient and global descent obligations. The degree
 of F|D is distinct from a primitive's local degree3, which comes from
 the order-two original differential; no degree-four primitive is assumed.
 Item39 closes the entire two-ordinary-cusp (4,6) class. Items46--48 pay
@@ -828,9 +860,9 @@ The finite involution and single-cycle results remain audited antecedents.
 Items55 and58 pay the complete adjacent(5,3,3)/infinity7 good family
 and its actual marked H4 quotient. Items57 and59 exclude single-cycle
 and involutive meridians. The remaining target is genuinely mixed cycle
-structure with arbitrary actual retained subsets. An odd-braid cycle-run
-argument suggests the exact five-cusp bound3n>=5k-2D; this new retention
-consumer remains under audit. The exact pair(123),(345) still refutes
+structure with arbitrary actual retained subsets. Item61 proves the sharp odd-braid retention bounds and mapping-degree
+floor12. Its unbounded cardinality relaxation leaves actual cycle order
+as the next decisive sidecar. The exact pair(123),(345) still refutes
 transfer of the ordinary half-support bound. The S4 hostile
 prevents cyclicity or local cusp generation
 shortcuts. For moving sources, every polynomial

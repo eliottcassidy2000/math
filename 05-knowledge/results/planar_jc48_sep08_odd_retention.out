@@ -1,0 +1,102 @@
+{
+  "always_active_gates": 34983,
+  "formal_unbounded_controls": 5,
+  "head_D9_D12": {
+    "9": [
+      [
+        5,
+        4,
+        2,
+        1,
+        4
+      ]
+    ],
+    "10": [
+      [
+        5,
+        5,
+        3,
+        2,
+        3
+      ],
+      [
+        6,
+        4,
+        1,
+        0,
+        7
+      ]
+    ],
+    "11": [
+      [
+        5,
+        5,
+        3,
+        2,
+        3
+      ],
+      [
+        5,
+        6,
+        4,
+        3,
+        2
+      ],
+      [
+        6,
+        5,
+        2,
+        1,
+        6
+      ]
+    ],
+    "12": [
+      [
+        5,
+        6,
+        4,
+        3,
+        2
+      ],
+      [
+        5,
+        7,
+        5,
+        4,
+        1
+      ],
+      [
+        6,
+        5,
+        2,
+        1,
+        6
+      ],
+      [
+        6,
+        6,
+        3,
+        2,
+        5
+      ],
+      [
+        7,
+        5,
+        2,
+        1,
+        6
+      ]
+    ]
+  },
+  "scope": "analytic all-r inequality; marked H4 actual degree at least 12; no all-cycle closure",
+  "semantic_sha256": "ada3df141e8d5fa747aa178a14ff36ddbd8f88d42aa43bbd93cfd8e9002cbaf0",
+  "sharp_controls": 36,
+  "totals": {
+    "braided": 2328,
+    "equal": 230,
+    "pairs": 60068,
+    "partial": 2192,
+    "subsets": 6096
+  },
+  "universe": "all ordered S_D pairs, D=1..5, r=1..4; every subset of Fix(sigma)"
+}

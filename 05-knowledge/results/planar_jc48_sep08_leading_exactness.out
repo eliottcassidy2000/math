@@ -1,0 +1,8 @@
+leading_exactness: PASS
+scope: formal unbounded necessary gate; pure-monomial iff; finite exact controls
+monomial universe: 36 n=1..6, e in {0,2,3,4,5,6}
+two-pole universe: 36 ordered a,b=1..6, p=2, q=-1
+positive controls: nontrivial radical field; nonconstant lower row; octic 5+3
+hostiles: logarithmic root; necessary-only circle fibre; double point at infinity
+gates: 241
+gate-label sha256: 151ca181cf03cd30da473d1d548e9e5778e897c79795cea8576a30d00aefcf9c

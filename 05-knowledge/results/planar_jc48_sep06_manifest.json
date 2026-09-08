@@ -1,11 +1,11 @@
 {
   "session": "planar-jacobian-sep06",
-  "status": "PROVED scoped analytic/group results with independent audits: whole one-odd-cusp, two-ordinary-cusp and three-ordinary-cusp (4,6) exclusions in every mapping degree; actual mixed(5,3,3) H4 supplier with complete good-family transport, and all involutive/single-cycle meridian cases excluded; every single-point octic and every two-distinct-fourfold-root octic polynomial-mate class excluded at all boundary locations; two finite fourfold roots exclude even rational mates; JC(2) OPEN",
+  "status": "PROVED scoped analytic/group results with independent audits: whole one-odd-cusp, two-ordinary-cusp and three-ordinary-cusp (4,6) exclusions; actual mixed(5,3,3) H4 supplier, involutive/single-cycle exclusions and mapping-degree floor12; general rational-mate leading-coefficient exactness; complete degree<=8 radical differential classification; all single-point,4+4 and4+2+2 DG boundary partitions excluded for polynomial mates, the last even rationally; JC(2) OPEN",
   "created_utc": "2026-09-06",
-  "artifact_count": 271,
-  "program_count": 62,
-  "exact_gates_per_complete_normal_or_optimized_run": 1635892,
-  "verification": "All62 programs have normal and optimized replays byte-identical to frozen outputs. The new complete two-finite-fourfold-root proof adds60 independently audited gates. Its uncancellable moving-residue coefficient32alpha^4(p-q)^15 excludes rational mates, even for constant L and split composition fibres. Together with the separately proved finite/infinity supplier it closes the full two-distinct-fourfold-root boundary partition for polynomial mates at all P1 locations. All267 inherited artifact pins are unchanged. Other octic partitions, arbitrary global quartics, mixed-cycle H4 monodromy and JC(2) remain open.",
+  "artifact_count": 283,
+  "program_count": 65,
+  "exact_gates_per_complete_normal_or_optimized_run": 1671311,
+  "verification": "All65 programs have normal and optimized replays byte-identical to frozen outputs. The three new independently audited bundles add35419 gates: arbitrary-retention odd-cusp inequalities and actual H4 degree floor12; a formal coefficient-field primitive theorem with pure-monomial equivalence; and complete classification of dx/sqrt(N) for every degree<=8 polynomial, including all67 partitions and the elliptic exceptional locus. All271 inherited artifact pins are unchanged. The complete4+2+2 partition is excluded even for rational mates at all boundary locations. Passing the leading differential gate is not sufficient for a general mate; its lower-coefficient hostile is explicit.",
   "program_gates": {
     "weight14": 169,
     "weight14_audit": 93,
@@ -68,7 +68,10 @@
     "h4_single_cycle": 15111,
     "mixed_cusp_braid": 17100,
     "h4_involution": 67850,
-    "two_finite_four_four": 60
+    "two_finite_four_four": 60,
+    "odd_retention": 34983,
+    "leading_exactness": 241,
+    "boundary_exactness": 195
   },
   "artifacts": [
     {
@@ -207,6 +210,11 @@
       "sha256": "ffed4b59e5a5832e43aa74fd325e8589c6973cc008066276be702f8f0b00f872"
     },
     {
+      "path": "04-computation/planar_jc48_sep08_boundary_exactness.py",
+      "bytes": 10124,
+      "sha256": "bdc72806752cdfe31e2250b48cc6e26b19ead0bcadfc7fdaea887377ee579af0"
+    },
+    {
       "path": "04-computation/planar_jc48_sep08_boundary_linear.py",
       "bytes": 5103,
       "sha256": "aa57669f5b20202adb7e9e39e10b2c7d600a32d188e1303963dbf68e0d068d53"
@@ -282,6 +290,11 @@
       "sha256": "8fc3fcf4c719deb653970090d8ca63589a2a3649074639d59cf96ef764bde333"
     },
     {
+      "path": "04-computation/planar_jc48_sep08_leading_exactness.py",
+      "bytes": 5993,
+      "sha256": "8613ca7d44fc85c9619b02b8a67401c66aed745c5e7977a949bc51b7cb332446"
+    },
+    {
       "path": "04-computation/planar_jc48_sep08_mixed_cusp_braid.py",
       "bytes": 21702,
       "sha256": "b6f884b7bf5871bbf3ba1d12bc94a1f1344c0add07f9832770a7d53ad536a0ff"
@@ -295,6 +308,11 @@
       "path": "04-computation/planar_jc48_sep08_octuple_transport.py",
       "bytes": 9958,
       "sha256": "b56bc24e5e79233ba74b84d3565a582dbe8d6d695c774a255fb1a175ba73fd87"
+    },
+    {
+      "path": "04-computation/planar_jc48_sep08_odd_retention.py",
+      "bytes": 8207,
+      "sha256": "c5d2865731c5b4866a78298ef2760fe9ff0acf85a58442386a78fc87ea41cfff"
     },
     {
       "path": "04-computation/planar_jc48_sep08_pole_degree.py",
@@ -797,6 +815,21 @@
       "sha256": "dbd9e102dc1b8083520cbe7fdb044dbcf3a6df5c9315b4dc986acd8fc203d141"
     },
     {
+      "path": "05-knowledge/results/planar_jc48_sep08_boundary_exactness.md",
+      "bytes": 16787,
+      "sha256": "b5156f0e7fbde4d90df20fb611ae66a3eb208c585dd2afb165154e80661da0af"
+    },
+    {
+      "path": "05-knowledge/results/planar_jc48_sep08_boundary_exactness.out",
+      "bytes": 632,
+      "sha256": "c8ea8699d0d7f13eafa3961c017fea1bfe39d1c26a26cf231b609dc9d5105d66"
+    },
+    {
+      "path": "05-knowledge/results/planar_jc48_sep08_boundary_exactness_audit.md",
+      "bytes": 16291,
+      "sha256": "73ef4e8e40896ba92375e0ef86c72c83a7703a431d4ad4a31112358dcd5f4b77"
+    },
+    {
       "path": "05-knowledge/results/planar_jc48_sep08_boundary_linear.md",
       "bytes": 8588,
       "sha256": "92807b710e6e2d20fe9b345db9bb6c8531f277297f6191c56b10213afea214e3"
@@ -1057,6 +1090,21 @@
       "sha256": "d262b894f4f35dd288dc2e2aa032c9cb3ca9371c175ee83e6a4f208030311cab"
     },
     {
+      "path": "05-knowledge/results/planar_jc48_sep08_leading_exactness.md",
+      "bytes": 10758,
+      "sha256": "748f4206c5bdf0fc57d594695524c39762ebf61b93791ef3088dfeb09710e02a"
+    },
+    {
+      "path": "05-knowledge/results/planar_jc48_sep08_leading_exactness.out",
+      "bytes": 459,
+      "sha256": "2dfa3a229dc8436be302c06173181aa89f8549f9b4e547fcd80ddd431d35f418"
+    },
+    {
+      "path": "05-knowledge/results/planar_jc48_sep08_leading_exactness_audit.md",
+      "bytes": 13082,
+      "sha256": "f321e88ed4f00f9647c6a67bb997aea50e16659e7bb85305dfeed737bed98032"
+    },
+    {
       "path": "05-knowledge/results/planar_jc48_sep08_mixed_cusp_braid.md",
       "bytes": 19350,
       "sha256": "c29ac358b992d9512daa2c775f1c9cdc3a3b6fcfcc5ed55207863f839e25aea2"
@@ -1130,6 +1178,21 @@
       "path": "05-knowledge/results/planar_jc48_sep08_octuple_transport_audit.md",
       "bytes": 14156,
       "sha256": "a6e302816d0a91780e49c08604c88376ea8866782ed854c65d637f596b9d60e8"
+    },
+    {
+      "path": "05-knowledge/results/planar_jc48_sep08_odd_retention.md",
+      "bytes": 17947,
+      "sha256": "a53a2868c003b1fcf585087f55ee9cf481d8bf1490f18532b6a104e99b5dce26"
+    },
+    {
+      "path": "05-knowledge/results/planar_jc48_sep08_odd_retention.out",
+      "bytes": 1358,
+      "sha256": "6a8d3d36ca5d2bf86874b78a0df93fe33a3a97c9b082ea98b3e3cfb2cb9dea0a"
+    },
+    {
+      "path": "05-knowledge/results/planar_jc48_sep08_odd_retention_audit.md",
+      "bytes": 15901,
+      "sha256": "a16db3f03013153aaf69d2e71ab6c4f0c77d9c71c5a54745c7fb8d17330770d0"
     },
     {
       "path": "05-knowledge/results/planar_jc48_sep08_pole_degree.md",
@@ -1445,7 +1508,7 @@
       "sha256": "61db92167187f9a30ed79022a8b1feacc010e79033106e7d7592e3817bd7212d"
     }
   ],
-  "checkpoint_update": "September8: all boundary octics supported at one point or at two distinct points each of multiplicity4 now have polynomial-mate exclusions in the stated full global quartic class. The two-finite4+4 case has the stronger rational exclusion. The actual mixed-cusp H4 family excludes involutive and single-cycle meridians. Current new probes are arbitrary-retention odd-cusp inequalities, two-finite6+2 local strata, and the active-fourfold residue equilibrium leading to the symmetric4+2+2 class; these are not yet proved dependencies.",
+  "checkpoint_update": "September8: the broad leading-coefficient gate replaces separate repeated leading-root probes. All finite double roots are impossible; all67 radical differential partitions are classified with exact exceptional position conditions. A new later-coefficient candidate may close the entire5+1+1+1 DG partition for polynomial mates by the full degree-four M section and five required zeros; it is outside this checkpoint pending audit. The mixed-cusp H4 degree is at least12, and cycle-compatible mixed types remain open. No full quartic or JC(2) closure is claimed.",
   "compressed_certificates": [
     {
       "path": "05-knowledge/results/planar_jc48_sep06_boundary_braid_certificate.json.gz",

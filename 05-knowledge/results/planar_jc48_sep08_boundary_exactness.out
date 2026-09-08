@@ -1,0 +1,8 @@
+Boundary differential dx/sqrt(N), C[x], 0 <= degree <= 8
+Universe: 67 multiplicity partitions; distinct labelled roots; nonzero scalar
+Decisions: {"411:midpoint":1,"431:weighted-midpoint":1,"5111:elliptic-two-coefficients":1,"611:quadratic-residue":1,"constant":1,"odd-pair":5,"pure":7,"reject:finite-simple-pole":30,"reject:infinity-simple-pole":1,"reject:primitive-degree":18,"reject:split-rational-residue":1}
+Exceptional conditions and explicit primitives: symbolic PASS
+Elliptic primitive space: 1, X, Y; exact iff b=c=0
+Gates: 195
+Semantic SHA256: 91100476475b4851378fa4b6a21cf69ecd002bdabc77cc6938a750397213564e
+RESULT: PASS

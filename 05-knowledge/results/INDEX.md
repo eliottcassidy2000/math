@@ -102,8 +102,11 @@
   boundary locations; two finite roots exclude even rational mates. The
   adjacent mixed(5,3,3) family now has an actual marked H4 quotient;
   all involutive and single-cycle meridian types are excluded.
-  [Manifest](planar_jc48_sep06_manifest.json):271 artifacts,62 programs,
-  1635892 exact gates per mode. Full JC(2) remains **OPEN**.
+  The mixed family has mapping-degree floor12. General leading-coefficient
+  exactness closes every4+2+2 boundary placement, and all degree<=8
+  radical differentials have a complete necessary-test classification.
+  [Manifest](planar_jc48_sep06_manifest.json):283 artifacts,65 programs,
+  1671311 exact gates per mode. Full JC(2) remains **OPEN**.
 
 - [Previous continuing synthesis](continuing5_20260906_synthesis.md):
   full-model beta simplicity, the original-phase rectangle, the ordered
