@@ -1,6 +1,6 @@
 # The fixed finite-octuple quartic class has no polynomial Jacobian mate
 
-**Status: RESERVED / analytic proof candidate with FINITE-EXACT controls; independent audit pending.**
+**Status: PROVED / FINITE-EXACT / INDEPENDENTLY AUDITED.**
 The point is the specified finite point `(x,z)=(0,0)` of the actual
 DG compactification. The main conclusion concerns polynomial
 mates of unrestricted degree. Some intermediate classes exclude

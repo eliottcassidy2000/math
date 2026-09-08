@@ -837,8 +837,8 @@
     },
     {
       "path": "05-knowledge/results/planar_jc48_sep08_finite_eight.md",
-      "bytes": 13586,
-      "sha256": "1666454e303f1371ba293d9d0d22b73e438b10279c19ef9e01a115fe2a51cfa9"
+      "bytes": 13542,
+      "sha256": "e9de3f412a9b8ee4c2291637a9fd8ff6bb1b4dd021403b920312cd1b7bce84f1"
     },
     {
       "path": "05-knowledge/results/planar_jc48_sep08_finite_eight.out",
@@ -1210,6 +1210,14 @@
       "path": "05-knowledge/results/planar_jc48_sep07_higher_braid_finite9_infinity7_certificate.json.gz",
       "decompressed_bytes": 4227333,
       "decompressed_sha256": "0b2ad7bcbc65fd9d2ffbfb87a13a573de135c258eadb7b2032a2eba7b8113448"
+    }
+  ],
+  "explicit_status_pin_migrations": [
+    {
+      "path": "05-knowledge/results/planar_jc48_sep08_finite_eight.md",
+      "prior_sha256": "1666454e303f1371ba293d9d0d22b73e438b10279c19ef9e01a115fe2a51cfa9",
+      "sha256": "e9de3f412a9b8ee4c2291637a9fd8ff6bb1b4dd021403b920312cd1b7bce84f1",
+      "reason": "The complete independent audit had passed, but an exact-string promotion missed the updated RESERVED header. This status-only correction promotes the already accepted theorem; proof/source/output are unchanged."
     }
   ]
 }
