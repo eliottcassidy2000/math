@@ -103,6 +103,16 @@ object needed by the next operation. Their algebraic and PDE predicates are
 different. No Frobenius-to-fluid, Jacobian-to-flow, or tournament equivalence
 is asserted. There is no intrinsic tournament needed for these inequalities.
 
+**Incoming Jacobian result, commit `4329ebb75`.** The newly integrated
+[(7,1) formal-inverse theorem](planar_jc48_sep08_seven_one_formal.md) gives
+an entire inverse hierarchy with a formal Jacobian mate and a literal
+example having no rational mate. This is a stronger hostile than failure
+at some bounded jet order. It reinforces the fifth board item: preservation
+at every formal stage does not supply the required target object. Here the
+missing condition is rational algebraization; in a PDE expansion it is
+analytic realization. This is a comparison of proved boundaries, not a map
+between those predicates or a claimed defect in the external construction.
+
 ## Exact verification and explicit stopping points
 
 - Shear audit: 275,562 matrix/shear presentations from 6,561 trace-free
