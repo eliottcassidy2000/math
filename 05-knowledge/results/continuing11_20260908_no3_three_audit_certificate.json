@@ -1,0 +1,74 @@
+{
+  "always_active_gates": 4307,
+  "bonus": "exp(-416/45)/4",
+  "census": {
+    "2": {
+      "boards": 1,
+      "strict_gain": 0
+    },
+    "3": {
+      "boards": 6,
+      "strict_gain": 0
+    },
+    "4": {
+      "boards": 90,
+      "strict_gain": 0
+    },
+    "5": {
+      "boards": 2040,
+      "strict_gain": 142
+    }
+  },
+  "integrals": [
+    "3/16",
+    "7/80",
+    "187/720",
+    "416/45"
+  ],
+  "named_values": {
+    "dual_gain": [
+      1,
+      2,
+      0,
+      0,
+      2
+    ],
+    "isolated": [
+      3,
+      4,
+      1,
+      1,
+      4
+    ],
+    "naive": [
+      4,
+      4,
+      0,
+      0,
+      4
+    ],
+    "safe_two": [
+      0,
+      2,
+      2,
+      0,
+      2
+    ],
+    "triangle": [
+      1,
+      2,
+      0,
+      0,
+      1
+    ]
+  },
+  "status": "FINITE-EXACT independent controls; all-size proof in audit report",
+  "universe": "all 2137 simple two-regular boards n=2..5 via full row product, plus five named controls",
+  "value_order": [
+    "tau2",
+    "tau3",
+    "J3",
+    "I3",
+    "beta3"
+  ]
+}

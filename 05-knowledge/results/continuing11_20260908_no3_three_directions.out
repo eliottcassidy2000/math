@@ -1,0 +1,8 @@
+PASS continuing11 third-direction repair controls
+Complete census n=2..5: {"2": {"boards": 1, "isolated_positive": 0, "strict_gain": 0}, "3": {"boards": 6, "isolated_positive": 0, "strict_gain": 0}, "4": {"boards": 90, "isolated_positive": 0, "strict_gain": 0}, "5": {"boards": 2040, "isolated_positive": 0, "strict_gain": 142}}
+Event bank: {"conditional_permutations": 1920, "eligible_triples": 572, "forced_choices": 4576, "full_forbidden_matrices": 144, "skeleton_row_orders": 16}
+Triangle: Boolean bound 1; fractional optimum 3/2; exact repair 2
+Uniform extra mean coefficient: exp(-416/45)/4 = 2.4161772909739823e-05
+Exact integrals: {"L2J": "187/720", "L3": "3/16", "L4": "7/80", "cost": "416/45"}
+Gates: 20864
+Certificate: continuing11_20260908_no3_three_directions_certificate.json

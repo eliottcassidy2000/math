@@ -1,0 +1,25 @@
+{
+  "always_active_gates": 76,
+  "boundary_F": "-(r - 1)*(b*r**3 - 2*b*r**2 + b*r + r - 2)*(b*r**3 - 2*b*r**2 + b*r + r + 2)",
+  "canonical_derivative_order": "j+2",
+  "primitive_in_F_y": "c/(3*y**3) - 1/y + 2/y**2",
+  "scalar_principal_parts": [
+    [
+      "9",
+      "4"
+    ],
+    [
+      "32/3",
+      "4"
+    ],
+    [
+      "0",
+      "0"
+    ]
+  ],
+  "source_F": "t**2*u**6 + t**2*u**5 + 2*t*u**4 - 2*t*u**3 + u**2 - 3*u",
+  "source_unit_annihilator": "(F^2)",
+  "status": "FINITE-EXACT independent controls; unbounded conclusions use companion analytic proof",
+  "torsion_arms": 2,
+  "weyl_left_annihilator": "A1 * F^2"
+}

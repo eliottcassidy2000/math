@@ -1,0 +1,240 @@
+{
+  "schema": 1,
+  "created_utc": "2026-09-08T20:49:11.546914+00:00",
+  "baseline_commit": "47bf7e6225ce8f1aa5a4eb23b9f74974a6f598f5",
+  "incoming_review_head": "840f1e47c",
+  "hash_basis": "raw LF bytes; maintained synthesis, navigation and manifest excluded; reviewed reports change only filing/status/routing prose",
+  "scope": "A globally submersive fixed-W2 quadratic with rational mate, exact original-source unit annihilator(F^2), full two-arm torsion and cyclic Weyl presentation D/Dg^2; three complete connected-complement LRC clocks10080,10800,11520 excluded; no-three-in-line third-direction original-cell repair increment and exact Boolean-dual integrality boundary, with uniform fixed-row mean bonus exp(-416/45)/4. General conjectures remain OPEN.",
+  "artifact_count": 28,
+  "program_count": 7,
+  "exact_gates_per_mode": 435285,
+  "validation": {
+    "continuing11_20260908_lrc_composite_clocks": {
+      "gates": 92032,
+      "normal_optimized_raw_LF": true,
+      "output_sha256": "97b210b035104b112ab6948fa264ac492a7b0e2e65f09094441813a782fc8511",
+      "source_sha256": "3568bc3f84de3c9fd99fc3c0290215343b40a89ecbdbc414eacafce4bf7163cf"
+    },
+    "continuing11_20260908_lrc_composite_clocks_audit": {
+      "gates": 317819,
+      "normal_optimized_raw_LF": true,
+      "output_sha256": "caccd8ae9072765dc479b8eaeb1ba96b15d6965bb3b71d202af465ccac2de1fc",
+      "source_sha256": "c6c7176af8b3d3ea620771ef2d1d5d4c69912f62f2142704959449db6242d08e"
+    },
+    "continuing11_20260908_no3_three_audit": {
+      "gates": 4307,
+      "normal_optimized_raw_LF": true,
+      "output_sha256": "63950c2c8d3b47d2a12371519235cba34f28199df12b2b6947a37a3a832b1644",
+      "source_sha256": "b1b0c5e8587097171b5396bcb9687e10ecb57f4da1354eb949d8a15578dce0c2"
+    },
+    "continuing11_20260908_no3_three_directions": {
+      "gates": 20864,
+      "normal_optimized_raw_LF": true,
+      "output_sha256": "29660256c197e50ba3206085d6f6d0f5ba1a144b5127deb196b8e22b532a4744",
+      "source_sha256": "b4efb0862a5565469a89bc00c2b8616e3fa47872fc5869d551a45081bbc66da8"
+    },
+    "continuing11_20260908_quadratic_unit_two": {
+      "gates": 56,
+      "normal_optimized_raw_LF": true,
+      "output_sha256": "70167bb62e53ec201dc9050404423a41033269e80e4bfe2b95c6f44ec9cf0642",
+      "source_sha256": "09e286549c66c0944c7e7dc98d16aefd66fd37a4092224dbdf7c2075177b4742"
+    },
+    "continuing11_20260908_quadratic_unit_two_audit": {
+      "gates": 76,
+      "normal_optimized_raw_LF": true,
+      "output_sha256": "b6c0c4d0256d7454ffc3251c51990971b678d062d0e82308c782efe7948e8a45",
+      "source_sha256": "133f97c1f1ee4e182deaf14a6500df239157acb22b86a941955d4111f5157a28"
+    },
+    "continuing11_20260908_quadratic_weyl_audit": {
+      "gates": 131,
+      "normal_optimized_raw_LF": true,
+      "output_sha256": "88f9e91ba7fe925a2d97f126790c7119a92fe49945657be26e2d0cfcbe62cbe8",
+      "source_sha256": "9a97541a6a9baa1e417474130fa44e6bbad4db89f9eb88cc9bcaf9fce34849ec"
+    }
+  },
+  "normal_optimized_raw_stdout_equal": true,
+  "regenerated_certificates_raw_unchanged": true,
+  "prior_artifacts_verified": 872,
+  "prior_artifacts_unchanged_since_baseline": 868,
+  "reviewed_incoming_pin_transitions": [
+    {
+      "path": "05-knowledge/results/planar_jc48_sep07_supplier_genus.md",
+      "old_sha256": "6134520bbefed951b70185b8e1e4217e6a6c6af969ca2e05ac69f0297765c83f",
+      "new_sha256": "bed25c72f2e5afc5c77533ea60dc5872e6062dc38d17b54b41ad04e96a902d91",
+      "reviewed_range": "47bf7e622..840f1e47c",
+      "reason": "Incoming footer-only reconciliation from pending/reserved wording to the already accepted independent audit; formulas, proof body, source and output unchanged."
+    },
+    {
+      "path": "05-knowledge/results/planar_jc48_sep08_const_d_translation.md",
+      "old_sha256": "46f944b02c8ec0e3f75d7596aac00ced736ed0f2a3a7ed4f0926b7fcd9a7daa0",
+      "new_sha256": "5b1e177cc5659f79bdabe8b75ec04ff0212cc6048091d7275f5a2bad2394df32",
+      "reviewed_range": "47bf7e622..840f1e47c",
+      "reason": "Incoming footer-only reconciliation from pending/reserved wording to the already accepted independent audit; formulas, proof body, source and output unchanged."
+    },
+    {
+      "path": "05-knowledge/results/planar_jc48_sep08_polynomial_weight_gate.md",
+      "old_sha256": "1808d3468574156c7e33ec27ebbf2d7c4c52a8537330d5d2f37c0f61984ae473",
+      "new_sha256": "073bf38a49ebcf899fcaa6a659f070d9384c5192cbc874184d522bc4733cec51",
+      "reviewed_range": "47bf7e622..840f1e47c",
+      "reason": "Incoming footer-only reconciliation from pending/reserved wording to the already accepted independent audit; formulas, proof body, source and output unchanged."
+    },
+    {
+      "path": "05-knowledge/results/planar_jc48_sep08_seven_one_two_locations.md",
+      "old_sha256": "7d6b5ba978f5e25df55490f1f1e2b2f293ffcdad13fa988517802712759d2c43",
+      "new_sha256": "02dd0aa07601c9696124c84f665774b4129d4a41674c89623ec6c5ea7bca257a",
+      "reviewed_range": "47bf7e622..840f1e47c",
+      "reason": "Incoming footer-only reconciliation from pending/reserved wording to the already accepted independent audit; formulas, proof body, source and output unchanged."
+    }
+  ],
+  "incoming_commits": [
+    "8b25fa628",
+    "1fa733c37",
+    "ed6517c0d",
+    "b28d0bc5e",
+    "a517c897a",
+    "59a421539",
+    "840f1e47c"
+  ],
+  "artifacts": [
+    {
+      "path": "04-computation/continuing11_20260908_lrc_composite_clocks.py",
+      "bytes": 10262,
+      "sha256": "3568bc3f84de3c9fd99fc3c0290215343b40a89ecbdbc414eacafce4bf7163cf"
+    },
+    {
+      "path": "04-computation/continuing11_20260908_lrc_composite_clocks_audit.cpp",
+      "bytes": 11167,
+      "sha256": "99306135f322493a611a9496df6f7867452d0208e91c038139840ea38707140c"
+    },
+    {
+      "path": "04-computation/continuing11_20260908_lrc_composite_clocks_audit.py",
+      "bytes": 8868,
+      "sha256": "c6c7176af8b3d3ea620771ef2d1d5d4c69912f62f2142704959449db6242d08e"
+    },
+    {
+      "path": "04-computation/continuing11_20260908_no3_three_audit.py",
+      "bytes": 6506,
+      "sha256": "b1b0c5e8587097171b5396bcb9687e10ecb57f4da1354eb949d8a15578dce0c2"
+    },
+    {
+      "path": "04-computation/continuing11_20260908_no3_three_directions.py",
+      "bytes": 15901,
+      "sha256": "b4efb0862a5565469a89bc00c2b8616e3fa47872fc5869d551a45081bbc66da8"
+    },
+    {
+      "path": "04-computation/continuing11_20260908_quadratic_unit_two.py",
+      "bytes": 7048,
+      "sha256": "09e286549c66c0944c7e7dc98d16aefd66fd37a4092224dbdf7c2075177b4742"
+    },
+    {
+      "path": "04-computation/continuing11_20260908_quadratic_unit_two_audit.py",
+      "bytes": 5624,
+      "sha256": "133f97c1f1ee4e182deaf14a6500df239157acb22b86a941955d4111f5157a28"
+    },
+    {
+      "path": "04-computation/continuing11_20260908_quadratic_weyl_audit.py",
+      "bytes": 5834,
+      "sha256": "9a97541a6a9baa1e417474130fa44e6bbad4db89f9eb88cc9bcaf9fce34849ec"
+    },
+    {
+      "path": "05-knowledge/results/continuing11_20260908_lrc_composite_clocks.md",
+      "bytes": 9291,
+      "sha256": "273b17109218bf5b9221fcf7b858e7de36f937d72db6b34b1e5d5aee0540cd5e"
+    },
+    {
+      "path": "05-knowledge/results/continuing11_20260908_lrc_composite_clocks.out",
+      "bytes": 656,
+      "sha256": "97b210b035104b112ab6948fa264ac492a7b0e2e65f09094441813a782fc8511"
+    },
+    {
+      "path": "05-knowledge/results/continuing11_20260908_lrc_composite_clocks_audit.md",
+      "bytes": 6621,
+      "sha256": "56c41132382255997a2840755ea7ad1fe243addc647a6de5d4ed7149376026bd"
+    },
+    {
+      "path": "05-knowledge/results/continuing11_20260908_lrc_composite_clocks_audit.out",
+      "bytes": 715,
+      "sha256": "caccd8ae9072765dc479b8eaeb1ba96b15d6965bb3b71d202af465ccac2de1fc"
+    },
+    {
+      "path": "05-knowledge/results/continuing11_20260908_lrc_composite_clocks_certificate.json",
+      "bytes": 68435,
+      "sha256": "2c9b4fa1a1103d3309094d06a422ec2f5e56e9b804961037cab9d5a05a352b73"
+    },
+    {
+      "path": "05-knowledge/results/continuing11_20260908_no3_three_audit.md",
+      "bytes": 8247,
+      "sha256": "27b543825e554fa1b1a4752ab4a0e23b9cb01c2061d2f912a5550d9f6ba219be"
+    },
+    {
+      "path": "05-knowledge/results/continuing11_20260908_no3_three_audit.out",
+      "bytes": 330,
+      "sha256": "63950c2c8d3b47d2a12371519235cba34f28199df12b2b6947a37a3a832b1644"
+    },
+    {
+      "path": "05-knowledge/results/continuing11_20260908_no3_three_audit_certificate.json",
+      "bytes": 1035,
+      "sha256": "f68110a8310552a755b5bc6bc20bc98ed65e9132043adefd5349850be58c6f9d"
+    },
+    {
+      "path": "05-knowledge/results/continuing11_20260908_no3_three_directions.md",
+      "bytes": 20053,
+      "sha256": "05550ca0ac656df1ae04029beea0d539353ccb15425706413ecb902981399d03"
+    },
+    {
+      "path": "05-knowledge/results/continuing11_20260908_no3_three_directions.out",
+      "bytes": 790,
+      "sha256": "29660256c197e50ba3206085d6f6d0f5ba1a144b5127deb196b8e22b532a4744"
+    },
+    {
+      "path": "05-knowledge/results/continuing11_20260908_no3_three_directions_analytic_audit.md",
+      "bytes": 9883,
+      "sha256": "270bbcd6e72cf2048dbfa4deeb7c3a46a8c74b60608e50bd151f604fa043c19e"
+    },
+    {
+      "path": "05-knowledge/results/continuing11_20260908_no3_three_directions_certificate.json",
+      "bytes": 5650,
+      "sha256": "67fa1d8477ee247e9905b4267b02a53b0bbfa0592cd50451239053644d64c637"
+    },
+    {
+      "path": "05-knowledge/results/continuing11_20260908_quadratic_unit_two.md",
+      "bytes": 10613,
+      "sha256": "6afad69169b3d383bbb12643f715e4cbc9067bbb2df266e8602303036f4ce1f1"
+    },
+    {
+      "path": "05-knowledge/results/continuing11_20260908_quadratic_unit_two.out",
+      "bytes": 470,
+      "sha256": "70167bb62e53ec201dc9050404423a41033269e80e4bfe2b95c6f44ec9cf0642"
+    },
+    {
+      "path": "05-knowledge/results/continuing11_20260908_quadratic_unit_two_audit.md",
+      "bytes": 6032,
+      "sha256": "92e3b37be42a90105b808b869e39577ce38e75e7f0a3369bbeba11dd3ac4e085"
+    },
+    {
+      "path": "05-knowledge/results/continuing11_20260908_quadratic_unit_two_audit.out",
+      "bytes": 389,
+      "sha256": "b6c0c4d0256d7454ffc3251c51990971b678d062d0e82308c782efe7948e8a45"
+    },
+    {
+      "path": "05-knowledge/results/continuing11_20260908_quadratic_unit_two_audit_certificate.json",
+      "bytes": 630,
+      "sha256": "9cbf8926317ee3ee7d1e1f3d5dcb4a7532bc475309cbb9e7638197a59c85057e"
+    },
+    {
+      "path": "05-knowledge/results/continuing11_20260908_quadratic_unit_two_certificate.json",
+      "bytes": 731,
+      "sha256": "ea3124d9334fb1fe4e4c80892f34ee353e948d3a8c2ae72c16ae4d1afee2f5ef"
+    },
+    {
+      "path": "05-knowledge/results/continuing11_20260908_quadratic_weyl_audit.md",
+      "bytes": 9913,
+      "sha256": "2cfc5683f0aedff54695f4f4a9c0c67cbdbef34583867f147a03ddf11be79930"
+    },
+    {
+      "path": "05-knowledge/results/continuing11_20260908_quadratic_weyl_audit.out",
+      "bytes": 420,
+      "sha256": "88f9e91ba7fe925a2d97f126790c7119a92fe49945657be26e2d0cfcbe62cbe8"
+    }
+  ]
+}

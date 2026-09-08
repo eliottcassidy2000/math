@@ -1,0 +1,5 @@
+ACCEPT: actual affine torsion has two labelled arms, and the quadratic unit has exact order two.
+WEYL: theta is cyclic for the full torsion; exact left annihilator A1*g^2; quotient A1/(A1*g^2).
+FINITE OPERATOR BANK: all PBW remainders through derivative degree8 inject; right-g powers2..8 vanish.
+HOSTILE: equal order with only one coefficient direction has a strictly larger annihilator.
+Always-active exact gates: 131

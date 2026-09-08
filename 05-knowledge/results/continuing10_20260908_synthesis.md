@@ -1,9 +1,14 @@
 # Continuing synthesis: actual paths, repair distance, joint moments, and component poles
 
-**CURRENT CHECKPOINT, 2026-09-08. Status: PROVED scoped results with
+**PREVIOUS CHECKPOINT, 2026-09-08. Status: PROVED scoped results with
 FINITE-EXACT certificates and independent audits.** General LRC(14),
 planar JC, the original-response sign problem, and the untouched wall-core
 no-return problem remain **OPEN**. No external priority claim is made.
+
+The [current synthesis](continuing11_20260908_synthesis.md) realizes the
+previously missing unit order two on a globally smooth quadratic, closes
+three more connected-complement clocks, and adds a third-direction repair
+charge. The source-linear gap below remains valid in its stated layer.
 
 The [previous synthesis](continuing9_20260907_synthesis.md) records the
 fixed-moment, ratio-tree and genus inputs. The first two proof checkpoints

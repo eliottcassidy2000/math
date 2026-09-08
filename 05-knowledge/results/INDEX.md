@@ -1,6 +1,15 @@
 # Script Results Index
 
-- [Current continuing synthesis](continuing10_20260908_synthesis.md):
+- [Current continuing synthesis](continuing11_20260908_synthesis.md):
+  **PROVED + FINITE-EXACT + INDEPENDENTLY AUDITED.** A global quadratic on W2
+  realizes the missing source unit order2 and generates both full torsion arms,
+  with exact Weyl presentation D/Dg². Three composite clocks leave7,622,
+  maximum11,935. Third-direction repair has a uniform extra mean charge
+  exp(-416/45)/4 and an exact integrality-gap triangle.
+  [Manifest](continuing11_20260908_manifest.json) pins verification and scope.
+  General LRC14, planar JC and extremal no-three-in-line remain OPEN.
+
+- [Previous continuing synthesis](continuing10_20260908_synthesis.md):
   **PROVED + FINITE-EXACT + INDEPENDENTLY AUDITED.** Complete connected-complement
   clock7200 closure and twenty further clocks leave7,625, maximum11,935.
   Two-direction repair distance strengthens the no-three-in-line rate;

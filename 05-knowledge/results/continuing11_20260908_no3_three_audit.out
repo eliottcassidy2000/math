@@ -1,0 +1,5 @@
+INDEPENDENT THREE-DIRECTION AUDIT: complete 2137 boards and five named controls
+CHAIN tau3 >= beta3 >= tau2+J3 >= tau2+I3; triangle 1 < 3/2 < 2
+GEOMETRY integral L^3=3/16, L^4=7/80, L^2J=187/720; cost=416/45
+UNIFORM BONUS exp(-416/45)/4; original-cell repair and column-transposition concentration
+Always-active exact gates: 4307

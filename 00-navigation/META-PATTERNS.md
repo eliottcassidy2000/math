@@ -281,7 +281,7 @@ functional; projections can erase a mixed coefficient, chain or fixed minimizer.
 [trinomial opposite frequencies](../05-knowledge/results/nc2_channel_contiguous_overnight_hexagon_sep05.md) separate a formal square from a positive norm.
 
 ## Rank local extrema, then pass closure and effectivity
-**Action:** when caps share labels, force a bank, keep common fibres and test target-category membership. Marginals may glue only in a field or signed space; omit checks only after independence or factorization. **Evidence:** THM-2258/2263/2270, THM-3388/3389; [native paths and component poles](../05-knowledge/results/continuing10_20260908_synthesis.md) recover endpoints and every pole component.
+**Action:** when caps share labels, keep common fibres and test target-category membership. Marginals may glue only in a field or signed space; omit checks only after independence or factorization. **Evidence:** THM-2258/2263/2270, THM-3388/3389; [cuts and principal parts](../05-knowledge/results/continuing11_20260908_synthesis.md) retain endpoints and even regular fibre components.
 
 ## “One item left” requires a typed residual
 

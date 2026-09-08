@@ -9,6 +9,24 @@ Format per entry:
 - Why it was wrong
 - The correct framing
 
+## 2026-09-08 continuing11 -- directional overlap and regular component loss
+
+- **REFUTED extension probe:** adding full slope2 excess to the optimal
+  two-diagonal deletion count double-counts repair. On row pairs
+  (01,01,23,24,34), tau3=4 is smaller than that sum. The missing coordinate
+  is which ORIGINAL cells touch an originally overfull line. Restricting
+  the extra charge to cells safe in both old directions gives the proved
+  survivor tau3>=tau2+J3. The [three-direction theorem](../05-knowledge/results/continuing11_20260908_no3_three_directions.md)
+  also gives an actual n=5 triangle with Boolean dual1 < LP3/2 < deletion2;
+  integral bipartite flow does not extend unchanged to three directions.
+- **REFUTED scalar shortcut:** exact unit pole order2 does not imply
+  two-arm Weyl generation. In the [actual quadratic response](../05-knowledge/results/continuing11_20260908_quadratic_weyl_audit.md),
+  theta=A/g²+B/g and -nabla(g theta)=A/g² have the same scalar order,
+  but g nabla+2 kills only the latter. Retain all labelled coefficients
+  modulo the common diagonal. In particular discarding the regular third
+  component with zero principal part incorrectly kills the B direction.
+  The new question is coefficient-rank variation at fixed pole order.
+
 ## 2026-09-08 planar-jc48 -- retain the full transformed numerator and volume
 
 - **Final navigation repair:** the results index dropped the M-unit

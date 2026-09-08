@@ -55,8 +55,8 @@ gives square sum `<=195`; THM-4019 refutes its sharp arbitrary-lattice target.
   THM-4452: one-v2 clock-four cap `1/110`; [inert gates](../05-knowledge/results/creative_20260906_inert_pareto.md) `40/469,716/4221`; [ranked capacities](../05-knowledge/results/continuing1_20260906_profiles.md) retain all sums; physical gain OPEN.
   THM-4442/4446 force gcd-one packs above `91^6`; hostiles refute prescribed-component
   selection. No universal body mass/component floor reaches these gates; entry remains open.
-- **Entry:** [Synthesis](../05-knowledge/results/continuing10_20260908_synthesis.md):
-  connected-complement7200 closes; 7,625 clocks, `t<=11935,g<=90`.
+- **Entry:** [Synthesis](../05-knowledge/results/continuing11_20260908_synthesis.md):
+  7,622 connected-complement clocks remain, `t<=11935,g<=90`.
   [Rooted pairs](../05-knowledge/results/third_20260906_decoder.md) close `maxU<=28`. Entry OPEN.
   [Sparse transport](../05-knowledge/results/synthesis_20260905_lrc_sparse_transport.md) retains weights and the selector gap.
 - **Residual ranks:** THM-4333/4338 close fixed-pool ranks three/four, not arbitrary entry.
@@ -404,8 +404,8 @@ lift/phase clocks.
   weight22, source `G_m x A^9`, coordinate `A^10` fibres.
   [DG quartic closure](../05-knowledge/results/planar_jc48_sep08_quartic_closure.md):
   global pencil degrees<=4 excluded on fixed W; all-m degree4m−2 forces constant D.
-  Cusp-ideal times are nonrational; labelled responses and general entry stay open.
-  Later rows, polynomial termination, and entry remain **OPEN**.
+  [Global quadratic](../05-knowledge/results/continuing11_20260908_synthesis.md):
+  source unit order2; both torsion arms cyclic. Polynomial entry stays **OPEN**.
   THM-4397/4401 give Long's gauge and punctured planar shadows.
   Exceptional quartic: THM-3703/3737/4034 give grammar/image/conductor;
   THM-4381 gives86 nodes, one plane triple, `S^sn=S+K r`. THM-4404/4411/4412

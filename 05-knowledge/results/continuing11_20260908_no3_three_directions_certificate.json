@@ -1,0 +1,338 @@
+{
+  "census": {
+    "2": {
+      "boards": 1,
+      "isolated_positive": 0,
+      "strict_gain": 0
+    },
+    "3": {
+      "boards": 6,
+      "isolated_positive": 0,
+      "strict_gain": 0
+    },
+    "4": {
+      "boards": 90,
+      "isolated_positive": 0,
+      "strict_gain": 0
+    },
+    "5": {
+      "boards": 2040,
+      "isolated_positive": 0,
+      "strict_gain": 142
+    }
+  },
+  "delta3_decimal": 2.4161772909739823e-05,
+  "delta3_formula": "exp(-416/45)/4",
+  "event_bank": {
+    "conditional_permutations": 1920,
+    "eligible_triples": 572,
+    "forced_choices": 4576,
+    "full_forbidden_matrices": 144,
+    "skeleton_row_orders": 16
+  },
+  "gate_total": 20864,
+  "gates": {
+    "companions_avoid": 4576,
+    "complete_census_cardinality": 4,
+    "complete_n5_strict_gain": 1,
+    "conditional_event_equivalence": 1920,
+    "eligibility_uniform_count": 400,
+    "forbidden_column_degree": 144,
+    "forbidden_row_degree": 144,
+    "forbidden_size": 144,
+    "forced_distinct": 4576,
+    "independent_absolute_integral": 181,
+    "independent_bonus": 2142,
+    "independent_triple_count": 80,
+    "isolated_witness": 1,
+    "jensen_cost": 1,
+    "line_length_integrals": 1,
+    "naive_addition_hostile": 1,
+    "no_isolated_before_six": 4,
+    "nonunimodular_minor": 1,
+    "realized_event_need_not_be_eligible": 1,
+    "safe_two_witness": 1,
+    "stronger_dual_witness": 1,
+    "three_direction_compiler": 2142,
+    "transposition_lipschitz": 110,
+    "triangle_fractional_dual": 1,
+    "triangle_fractional_primal": 1,
+    "triangle_integer_values": 1,
+    "triangle_three_triples": 1,
+    "two_direction_duality": 2142,
+    "unit_flow_vs_exact": 2142
+  },
+  "integral_values": {
+    "L2J": "187/720",
+    "L3": "3/16",
+    "L4": "7/80",
+    "cost": "416/45"
+  },
+  "source_sha256": "b4efb0862a5565469a89bc00c2b8616e3fa47872fc5869d551a45081bbc66da8",
+  "status": "FINITE-EXACT bounded controls; analytic theorem proved in paired report",
+  "triangle_integer": "2",
+  "triangle_lp": "3/2",
+  "universe": "All 2137 simple two-regular boards for n=2..5; five named controls (one at n=6); 16 skeleton/row-order event banks",
+  "witnesses": {
+    "dual_beats_safe_bonus": {
+      "I3": 0,
+      "J3": 0,
+      "beta3": 2,
+      "delete2": 64,
+      "delete3": 48,
+      "overfull": [
+        [
+          [
+            0,
+            81
+          ]
+        ],
+        [
+          [
+            6,
+            608
+          ]
+        ],
+        [
+          [
+            -2,
+            148
+          ]
+        ]
+      ],
+      "rows": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          3
+        ],
+        [
+          2,
+          4
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          1,
+          2
+        ]
+      ],
+      "slope2_excess": 1,
+      "tau2": 1,
+      "tau3": 2
+    },
+    "minimal_isolated": {
+      "I3": 1,
+      "J3": 1,
+      "beta3": 4,
+      "delete2": 133,
+      "delete3": 519,
+      "overfull": [
+        [
+          [
+            0,
+            2693
+          ]
+        ],
+        [],
+        [
+          [
+            1,
+            42
+          ],
+          [
+            -4,
+            592
+          ]
+        ]
+      ],
+      "rows": [
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          0,
+          5
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          2,
+          4
+        ],
+        [
+          4,
+          5
+        ]
+      ],
+      "slope2_excess": 2,
+      "tau2": 3,
+      "tau3": 4
+    },
+    "naive_addition_refuted": {
+      "I3": 0,
+      "J3": 0,
+      "beta3": 4,
+      "delete2": 15,
+      "delete3": 15,
+      "overfull": [
+        [
+          [
+            0,
+            537
+          ],
+          [
+            1,
+            162
+          ],
+          [
+            -1,
+            324
+          ]
+        ],
+        [],
+        [
+          [
+            -2,
+            148
+          ]
+        ]
+      ],
+      "rows": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          2,
+          4
+        ],
+        [
+          3,
+          4
+        ]
+      ],
+      "slope2_excess": 1,
+      "tau2": 4,
+      "tau3": 4
+    },
+    "safe_bonus_two": {
+      "I3": 0,
+      "J3": 2,
+      "beta3": 2,
+      "delete2": 0,
+      "delete3": 17,
+      "overfull": [
+        [],
+        [],
+        [
+          [
+            0,
+            37
+          ],
+          [
+            -4,
+            656
+          ]
+        ]
+      ],
+      "rows": [
+        [
+          0,
+          1
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          0,
+          4
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          3,
+          4
+        ]
+      ],
+      "slope2_excess": 2,
+      "tau2": 0,
+      "tau3": 2
+    },
+    "triangle_integrality_gap": {
+      "I3": 0,
+      "J3": 0,
+      "beta3": 1,
+      "delete2": 64,
+      "delete3": 33,
+      "overfull": [
+        [
+          [
+            0,
+            69
+          ]
+        ],
+        [
+          [
+            6,
+            608
+          ]
+        ],
+        [
+          [
+            0,
+            41
+          ]
+        ]
+      ],
+      "rows": [
+        [
+          0,
+          3
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          0,
+          4
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          1,
+          2
+        ]
+      ],
+      "slope2_excess": 1,
+      "tau2": 1,
+      "tau3": 2
+    }
+  }
+}
