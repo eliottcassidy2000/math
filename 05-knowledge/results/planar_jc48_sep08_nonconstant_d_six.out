@@ -1,0 +1,6 @@
+Nonconstant-D finite-six / infinity-double: complete polynomial exclusion
+Full shifted active rows; polynomial weight gate; actual degree-two and rational fields: PASS
+Full trace, generic residue derivative, and incompatible degree/decay: PASS
+Constant-D nonconstant-L rational hostile retained: PASS
+Exact gates: 64
+Semantic SHA256: 5821fc3ad3231a3db28a6c9cc3652432ba765959a9c219b76354a2cc578082a8

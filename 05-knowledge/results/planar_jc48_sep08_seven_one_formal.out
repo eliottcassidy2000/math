@@ -1,0 +1,7 @@
+All-finite (7,1): exactness of the entire inverse hierarchy
+Exact gates: 93
+Full global coefficients and universal infinity bounds: PASS
+Ramified parity, rational pair-sum ring, simple-root condition: PASS
+Formal trace descent and explicit q^7 Jacobian control: PASS
+All-index exact but no rational mate: global hostile PASS
+Semantic SHA256: af2ddce9f9de8d962728c9bdeb5ab5d4a0a4cad6e5ba21c06f6ea5c23f92ff2e

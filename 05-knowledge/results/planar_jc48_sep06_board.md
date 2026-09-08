@@ -754,10 +754,34 @@ quadratic tangent evaluation, and transverse derivatives of component jets.
    incompatible principal parts on two divisors of the same fibre.
    All107 gates and an independent full analytic/source audit pass.
 
-The [351-artifact manifest](planar_jc48_sep06_manifest.json) pins80 proof notes,
-81 audit notes,82 sources,82 frozen outputs and26 compressed witnesses.
-The82 programs report2524271 exact gates per complete normal or optimized
-run. Each frozen output agrees in both modes. All347 inherited pins remain
+81. [Uniform H4 mixed5,2 equality](planar_jc48_sep08_h4_mixed52.md)
+   is **PROVED + INDEPENDENTLY AUDITED**. Complete unfiltered
+   pair tables force ordinary strict-majority five-block overlaps;
+   commuting supports then give an actual common invariant five-set.
+   Restricting only there proves all four generators equal. A separate
+   enumeration reproduces all1,729,728 pairs and every joint-orbit
+   table; all1,749,134 gates pass. Minimal extraction hostiles remain.
+82. [Complete nonconstant-D finite-six](planar_jc48_sep08_nonconstant_d_six.md)
+   is **PROVED + INDEPENDENTLY AUDITED** for polynomial exclusion.
+   The original polynomial weight gate precedes actual rational
+   field changes. A complete quadratic trace has an impossible
+   generic-residue degree identity, and its rational degeneration
+   has an impossible decay identity. All64 gates pass. Combined
+   with item74 and its M-unit supplier, every6+2 boundary placement
+   is now excluded for polynomial mates.
+83. [All-index formal exactness for all-finite7+1](planar_jc48_sep08_seven_one_formal.md)
+   is **PROVED + INDEPENDENTLY AUDITED**. The single condition
+   M(simple)=0 is equivalent to exact inverse coefficient rows at
+   every order and to an actual formal Laurent mate after descent.
+   An explicit global polynomial has no rational mate, so every
+   such formal mate is transcendental. All93 gates and independent
+   resolvent/truncation controls pass. Formal exactness cannot be
+   substituted for rational or polynomial algebraization.
+
+The [363-artifact manifest](planar_jc48_sep06_manifest.json) pins83 proof notes,
+84 audit notes,85 sources,85 frozen outputs and26 compressed witnesses.
+The85 programs report4273562 exact gates per complete normal or optimized
+run. Each frozen output agrees in both modes. All351 inherited pins remain
 unchanged. These are scoped proof controls, not a census of Keller maps;
 no external priority claim or full JC(2) result is asserted.
 
@@ -1070,7 +1094,21 @@ Items77–80 close four full binary boundary types while retaining their
 actual rational exceptions. The two5+3 infinity placements have
 nonconstant-L rational mates, so only the polynomial conclusion is
 combined across all locations. The complete leading differential table
-now leaves only binary7+1,6+2 and5+2+1. The constant-D6+2 class is already
-closed by item74 and its M-unit companion; nonconstant D is separate.
+now leaves only binary7+1 and5+2+1 after item82 also closes
+nonconstant-D6+2. The constant-D6+2 rational exceptions remain exactly
+as recorded in item74 and its M-unit companion.
 The current portfolio has5+2+1 residue/primitive geometry, the full
 remaining6+2 coefficient class, and an orthogonal H4 mixed5,2 group lane.
+
+
+## September8 current final-audit queue
+
+The5+2+1 full inverse-hierarchy proof and the two finite-sevenfold7+1
+polynomial proofs are frozen under independent audit. If accepted, the
+complete DG quartic leading table will leave exactly one location:
+finite simple/infinity seven, with N linear in the original affine
+coordinate. The broader all-m polynomial first-jet gate is also under
+full audit. None of these pending claims is used as a proved supplier
+above. A new general degree-six leading-section argument may force
+constant D already for rational mates; its analytic/source validation
+is separate from the accepted polynomial trace theorem in item82.
