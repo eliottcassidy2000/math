@@ -85,10 +85,15 @@
   passport retains an abstract A6 survivor and the missing global relations.
   The complete octic Newton/Morse pole budget forces a shared boundary
   root for any quartic rational mate; shared-root first jets further
-  exclude all octic multiplicities<=2, retaining higher-pole hostiles. A fixed smooth polynomial family pays the actual unit
+  exclude all octic multiplicities<=2. The full constant-D finite6/infinity2
+  class at any finite location has no rational mate, by an elliptic
+  primitive-space comparison and exact section-space transport. A fixed
+  smooth polynomial family pays the actual unit
   torsion connection and every primary height.
-  [Manifest](planar_jc48_sep06_manifest.json):179 artifacts,42 programs,
-  1462745 exact gates per mode. Full JC(2) remains **OPEN**.
+  Three-cusp Artin-D4 and degree-eight statements retain their actual
+  access hypotheses; finite reflection data are not Keller realizations.
+  [Manifest](planar_jc48_sep06_manifest.json):199 artifacts,47 programs,
+  1469428 exact gates per mode. Full JC(2) remains **OPEN**.
 
 - [Previous continuing synthesis](continuing5_20260906_synthesis.md):
   full-model beta simplicity, the original-phase rectangle, the ordered

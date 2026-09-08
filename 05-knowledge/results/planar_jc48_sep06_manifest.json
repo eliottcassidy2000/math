@@ -1,11 +1,11 @@
 {
   "session": "planar-jacobian-sep06",
-  "status": "PROVED scoped results with independent audits; whole one-odd-cusp and whole two-ordinary-cusp (4,6) sextic exclusions; global quartic approximate root and necessary common boundary root for rational mates; JC(2) OPEN",
+  "status": "PROVED scoped analytic/group results with independent audits; whole one-odd-cusp and two-ordinary-cusp (4,6) exclusions; quartic common-root and first-jet obstructions and complete constant-D finite6/infinity2 exclusion at every finite point; three-cusp geometric consumers CONDITIONAL; JC(2) OPEN",
   "created_utc": "2026-09-06",
-  "artifact_count": 179,
-  "program_count": 42,
-  "exact_gates_per_complete_normal_or_optimized_run": 1462745,
-  "verification": "All42 programs have normal and optimized replays byte-identical to their frozen outputs. The four new bundles add18139 gates per mode with independent analytic/source audits. Five new moving-disc witnesses certify all736 segments and the literal infinity11 group consumer. The moving method independently recertifies one entire prior9553-segment path in92segments. All158 inherited artifacts retain their original pins and prior replay record. Finite controls do not replace analytic proofs, actual whole-support hypotheses, or inherited canonical results. Frozen cusp-ideal, pole-degree and common-root production text retains pre-audit labels; promoted primary proofs and independent audits govern mathematical status. The shared-root bundle has an independent454-gate replay and complete analytic/source audit, retaining normal jets and the finite/infinite distinction.",
+  "artifact_count": 199,
+  "program_count": 47,
+  "exact_gates_per_complete_normal_or_optimized_run": 1469428,
+  "verification": "All47 programs have normal and optimized replays byte-identical to their frozen outputs. Five new bundles add6683 gates per mode with full independent analytic/source audits. The finite D4 classifier has a separate signed-kernel/lift audit reproducing all26 subgroup character profiles. All179 inherited artifacts retain their original pins and prior replay record. The three-cusp words remain HEURISTIC geometrically in these algebraic and conditional passport bundles; they are not new path certificates. Frozen pre-audit output labels remain provenance, while promoted primary proofs and audits govern mathematical status.",
   "program_gates": {
     "weight14": 169,
     "weight14_audit": 93,
@@ -48,7 +48,12 @@
     "moving_tubes": 10324,
     "quartic_common_root": 568,
     "infinity11_braid": 6793,
-    "shared_roots": 454
+    "shared_roots": 454,
+    "three_cusp_group": 115,
+    "const_d_quartic": 97,
+    "const_d_translation": 51,
+    "three_cusp_passport": 789,
+    "d4_involution": 5631
   },
   "artifacts": [
     {
@@ -192,9 +197,24 @@
       "sha256": "aa57669f5b20202adb7e9e39e10b2c7d600a32d188e1303963dbf68e0d068d53"
     },
     {
+      "path": "04-computation/planar_jc48_sep08_const_d_quartic.py",
+      "bytes": 13598,
+      "sha256": "cfc977adb5dbfb0b1eb3f0118669551bd40dde758d2bab112734b9bf4f5a2194"
+    },
+    {
+      "path": "04-computation/planar_jc48_sep08_const_d_translation.py",
+      "bytes": 7273,
+      "sha256": "69e58278cb6b84ae791c004b22d59f2b9aebd0e191bb6c08f39d422bcdb53dce"
+    },
+    {
       "path": "04-computation/planar_jc48_sep08_cusp_ideal.py",
       "bytes": 11165,
       "sha256": "a7f9ef420b8782026c5df71fa361a981126283e14e5f67440e1ed6ba2ff5c1e1"
+    },
+    {
+      "path": "04-computation/planar_jc48_sep08_d4_involution.py",
+      "bytes": 5158,
+      "sha256": "752ef3690dd6e608a98c9bdcb9632f71911588f3e1e4a9523f4fb71278975c2b"
     },
     {
       "path": "04-computation/planar_jc48_sep08_dg_quadratic.py",
@@ -235,6 +255,16 @@
       "path": "04-computation/planar_jc48_sep08_shared_roots.py",
       "bytes": 6255,
       "sha256": "695b0da5d8fb5dec95b85d0d32086432ac6aaa8cb1fd8bc00fa2eef27f4da2ad"
+    },
+    {
+      "path": "04-computation/planar_jc48_sep08_three_cusp_group.py",
+      "bytes": 4442,
+      "sha256": "0b38b41600521ac417d23ad6399ff2c6fedc40e75b35030a8fed67a14fa84f4b"
+    },
+    {
+      "path": "04-computation/planar_jc48_sep08_three_cusp_passport.py",
+      "bytes": 7333,
+      "sha256": "a77300a0dc7b9f376c97dff000b4b3ae0441429da6dd379430fe4c5778837049"
     },
     {
       "path": "04-computation/planar_jc48_sep08_two_cusp_braid.py",
@@ -692,6 +722,36 @@
       "sha256": "2d3615afd431026874d2328347243478bb6e07dc0ac6864e17c687175804ebba"
     },
     {
+      "path": "05-knowledge/results/planar_jc48_sep08_const_d_quartic.md",
+      "bytes": 17430,
+      "sha256": "5f90d5679b941e46e3da48370ffedbca6797b050a0ca2dc048de661837541eca"
+    },
+    {
+      "path": "05-knowledge/results/planar_jc48_sep08_const_d_quartic.out",
+      "bytes": 462,
+      "sha256": "7b38b00e6ac5c6282122cfafb3d3fcfbc99c05cb3bb1fd52d299e0d85919e92f"
+    },
+    {
+      "path": "05-knowledge/results/planar_jc48_sep08_const_d_quartic_audit.md",
+      "bytes": 11231,
+      "sha256": "1d4cb6a367c047ddda99ffedad80b6397766d6983d4d76f3945e9e73ccd42ac8"
+    },
+    {
+      "path": "05-knowledge/results/planar_jc48_sep08_const_d_translation.md",
+      "bytes": 9473,
+      "sha256": "46f944b02c8ec0e3f75d7596aac00ced736ed0f2a3a7ed4f0926b7fcd9a7daa0"
+    },
+    {
+      "path": "05-knowledge/results/planar_jc48_sep08_const_d_translation.out",
+      "bytes": 373,
+      "sha256": "62a3a4180658aa0fcdc9f0d0b7723fff387c5a87625be0f6f4bea33f50b0a0f5"
+    },
+    {
+      "path": "05-knowledge/results/planar_jc48_sep08_const_d_translation_audit.md",
+      "bytes": 7340,
+      "sha256": "7eb12d1c99a59f38cd6a81b98aafc0fe8816c9d8159a4463821df19cfcd0a2e3"
+    },
+    {
       "path": "05-knowledge/results/planar_jc48_sep08_cusp_ideal.md",
       "bytes": 20164,
       "sha256": "18642fe0fcde6dbb7d3d743173359bf5ac9b13df0f86e2aa5b9ed3be18e12bbe"
@@ -705,6 +765,21 @@
       "path": "05-knowledge/results/planar_jc48_sep08_cusp_ideal_audit.md",
       "bytes": 10345,
       "sha256": "e9803f0e63aa6a053a83176f36ef3bb5ab2276840f51ab4f7f79e425f6907351"
+    },
+    {
+      "path": "05-knowledge/results/planar_jc48_sep08_d4_involution.md",
+      "bytes": 8391,
+      "sha256": "3ae328310733214fd883d67db36700bf28472ed35d8f57d0f7b9f9c84d841366"
+    },
+    {
+      "path": "05-knowledge/results/planar_jc48_sep08_d4_involution.out",
+      "bytes": 439,
+      "sha256": "7e7b10f6d3cd4e0ed116fa74c44d001e09815077a1f92a74184a510562ad2384"
+    },
+    {
+      "path": "05-knowledge/results/planar_jc48_sep08_d4_involution_audit.md",
+      "bytes": 12530,
+      "sha256": "ce45b6d2eda2d01e96047b0025ddcf9e0795c7c3590ad15348e5546b2d77fa87"
     },
     {
       "path": "05-knowledge/results/planar_jc48_sep08_dg_quadratic.md",
@@ -862,6 +937,36 @@
       "sha256": "92932658bf46f1fa0d441aa9af66664d12cd290d6449e2192b8ef771bfe0a195"
     },
     {
+      "path": "05-knowledge/results/planar_jc48_sep08_three_cusp_group.md",
+      "bytes": 6978,
+      "sha256": "4a41ebdeed6eb097183eae0dcbbdff3259ff439222d6306110d9f2c79e2e3e17"
+    },
+    {
+      "path": "05-knowledge/results/planar_jc48_sep08_three_cusp_group.out",
+      "bytes": 360,
+      "sha256": "cbb8780d4447aa68a30c374392d4ac22a49a9e1c2deb12fa003f14481f0583d2"
+    },
+    {
+      "path": "05-knowledge/results/planar_jc48_sep08_three_cusp_group_audit.md",
+      "bytes": 4566,
+      "sha256": "1fedb169ecb512cac7cf359378c48eafb715959b6f15d5de2f2e37020f061c8e"
+    },
+    {
+      "path": "05-knowledge/results/planar_jc48_sep08_three_cusp_passport.md",
+      "bytes": 16302,
+      "sha256": "d6a23ae99ca6f453c2cc89435ea82027b69de8faf1c5b439bf605de20d9c6e8e"
+    },
+    {
+      "path": "05-knowledge/results/planar_jc48_sep08_three_cusp_passport.out",
+      "bytes": 1712,
+      "sha256": "b8050ea0c25e8ffbfcc3ab86e36a7ae99a9ef125ce4ec36b4cacda730e887ef3"
+    },
+    {
+      "path": "05-knowledge/results/planar_jc48_sep08_three_cusp_passport_audit.md",
+      "bytes": 8418,
+      "sha256": "269dccb98656facff8e17fb37c301dc2142c993e689fbfa16304bbbf97058845"
+    },
+    {
       "path": "05-knowledge/results/planar_jc48_sep08_two_cusp_braid.md",
       "bytes": 15909,
       "sha256": "461e0127e60e2547e2d330b1ddbe2d4f2d0147aad2eed29d8289e7293f7f2575"
@@ -965,7 +1070,7 @@
       "sha256": "61db92167187f9a30ed79022a8b1feacc010e79033106e7d7592e3817bd7212d"
     }
   ],
-  "checkpoint_update": "September 8: whole two-ordinary-cusp (4,6) class has affine group Z. Complete octic Newton/Morse analysis forces a common boundary zero for any quartic rational mate; arbitrary remainder is excluded when all octic roots have multiplicity<=2, and finite singular common roots require m>=3,j>=2,n>=2. Three-cusp group controls and the constant-D finite6/infinity2 closure remain outside this checkpoint.",
+  "checkpoint_update": "September 8: all finite locations of the constant-D sixfold-octic/twofold-infinity stratum are excluded for rational mates, via an exact elliptic primitive-space contradiction and full translated section-space intersection. The six scout words have exact Artin D4 presentation; actual access data would force mapping degree>=8. The literal full-fixed-set W(D4) Euler classifier leaves only degrees1/4. Actual three-cusp path/marking certification and finite-octuple quartic closure are pending outside this checkpoint.",
   "compressed_certificates": [
     {
       "path": "05-knowledge/results/planar_jc48_sep06_boundary_braid_certificate.json.gz",

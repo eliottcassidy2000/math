@@ -1,0 +1,6 @@
+PASS constant-D quartic family: 97 always-active exact gates
+Generic infinity: four simple branches, eta order +1 at every branch
+Finite split orders 1,2,3: total primitive pole budget <2
+Order 4: residues force the even stratum; its generic elliptic primitive space fails exactness
+Named lower strata, asymmetric residue hostile, and genuine outside-family rational mate checked
+Semantic SHA256: 7602857f67214f96f1000d116cdf16c3d80036bb0fb83ea44daf64655de095d6

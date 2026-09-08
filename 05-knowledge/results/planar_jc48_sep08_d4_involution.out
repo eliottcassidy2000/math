@@ -1,0 +1,6 @@
+Literal W(D4) full-fixed-set Euler classifier PASS; geometric consumer conditional
+Universe:192 even signed permutations;26 overgroups of central minusI and one reflection
+Euler-one survivors: trivial degree1 and six labelled degree4 stabilizers
+Hostile: natural transitive degree8 has Euler2; central-free actions have even Euler
+Always-active gates: 5631
+Semantic SHA256: b5f77e03b642b8db4423135d6d45f2ddc9b062faa49739d70bdc3acd157e6969

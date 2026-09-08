@@ -1,0 +1,5 @@
+Six-word group obstruction PASS; underlying actual paths remain HEURISTIC
+Exact consequence: surjection onto B3; no forced cyclicity or equality of all four generators
+Controls: full chronological words; infinite SL2Z image; transitive S3 and S4 images
+Always-active gates: 115
+Semantic SHA256: 1beec165faf7fcfc193ac52e673375e0816f54f2592913a5091eb1c3c4c92f64

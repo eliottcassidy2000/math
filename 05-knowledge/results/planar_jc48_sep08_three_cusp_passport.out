@@ -1,0 +1,159 @@
+Exact abstract Artin-D4 and conditional mapping-degree5/6/7 passport gates PASS
+GEOMETRIC WORDS REMAIN HEURISTIC: no actual three-cusp complement theorem asserted
+{
+  "S4_actual_ledger_control": {
+    "chi": 1,
+    "cusps": [
+      1,
+      1,
+      1
+    ],
+    "degree": 4,
+    "group_order": 24,
+    "kept": 2,
+    "nodes": [
+      0,
+      2,
+      0
+    ]
+  },
+  "W_D4_stopping_control": {
+    "chi": 2,
+    "cusps": [
+      2,
+      2,
+      2
+    ],
+    "degree": 8,
+    "group_order": 192,
+    "kept": 4,
+    "nodes": [
+      0,
+      0,
+      4
+    ]
+  },
+  "scalar_universe": [
+    [
+      5,
+      3,
+      [
+        3
+      ],
+      3
+    ],
+    [
+      5,
+      4,
+      [
+        3
+      ],
+      3
+    ],
+    [
+      5,
+      5,
+      [
+        3
+      ],
+      3
+    ],
+    [
+      6,
+      3,
+      [
+        3,
+        4
+      ],
+      5
+    ],
+    [
+      6,
+      4,
+      [
+        3,
+        4
+      ],
+      5
+    ],
+    [
+      6,
+      5,
+      [
+        3,
+        4
+      ],
+      5
+    ],
+    [
+      7,
+      3,
+      [
+        4
+      ],
+      1
+    ],
+    [
+      7,
+      4,
+      [
+        4
+      ],
+      1
+    ],
+    [
+      7,
+      5,
+      [
+        4
+      ],
+      1
+    ]
+  ],
+  "three_cycle_controls": [
+    [
+      6,
+      3,
+      40
+    ],
+    [
+      7,
+      4,
+      70
+    ]
+  ],
+  "transposition_universe": [
+    [
+      2,
+      1,
+      2
+    ],
+    [
+      3,
+      3,
+      3
+    ],
+    [
+      4,
+      17,
+      4
+    ],
+    [
+      5,
+      43,
+      4
+    ],
+    [
+      6,
+      81,
+      4
+    ],
+    [
+      7,
+      131,
+      4
+    ]
+  ]
+}
+Always-active gates: 789
+Semantic SHA256: 3039794460f4890c26dc562603c94ff56a480342e338424149302acb4572907a
