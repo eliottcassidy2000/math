@@ -1,0 +1,11 @@
+dg_genus: PASS
+scope: W_m quadratic filtration, sharp generic genus <=m-1, extremal rational-mate iff
+polynomial exclusion: recovered THM-2071 consequence; genuine degree two required
+whole section boxes: m=1..6,n=0..3; 480 basis identities
+independent full Laurent kernels (m,ambient,rows,dimension): [(1, 15, 6, 9), (2, 27, 12, 15), (3, 39, 18, 21), (4, 51, 24, 27)]
+actual sharp families (m,field-degree,genus): [(1, 1, 0), (2, 3, 1), (3, 5, 2), (4, 7, 3), (5, 9, 4), (6, 11, 5), (7, 13, 6), (8, 15, 7)]
+sparse-pencil four-coefficient Jacobians: m=2..6; all symbolic coefficients retained
+complete centered degree patterns: m=1..12; 806 nonconstant-A cases
+hostiles: lower-degree polynomial mate, genuine quadratic rational mate, special pencil fibre, genus2
+gates: 1550
+semantic sha256: c0e665ed29f7969341556b17978f101f4db88223d0ddc9bb5c4ba3691a0d5f9b

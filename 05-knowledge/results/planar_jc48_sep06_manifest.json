@@ -1,11 +1,11 @@
 {
   "session": "planar-jacobian-sep06",
-  "status": "PROVED scoped analytic/group results with independent audits: whole one-odd-cusp/two-ordinary-cusp/three-ordinary-cusp (4,6) exclusions; actual mixed(5,3,3) H4 with involutive,single-cycle and(3)(2)/(3)(3) exclusions and degree floor12; general leading exactness; complete degree<=8 differential and six-line pencil classifications; sharp all-degree genus bound and complete degree4m extremal locus; complete rational-mate criterion for all global DG quadratics; single-point,4+4,4+2+2 and5+1+1+1 DG boundary polynomial exclusions at all locations; JC(2) OPEN",
+  "status": "PROVED scoped analytic/group results with independent audits: whole one-odd-cusp/two-ordinary-cusp/three-ordinary-cusp (4,6) exclusions; actual mixed(5,3,3) H4 with involutive,single-cycle and(3)(2)/(3)(3) exclusions and degree floor12; general leading exactness; complete degree<=8 differential and six-line pencil classifications; sharp all-degree genus bound and complete degree4m extremal locus and all-exponent binomial criterion; all-m graph-complement filtration, sharp quadratic genus and extremal rational-mate iff; complete rational-mate criterion for all global DG quadratics; single-point,4+4,4+2+2 and5+1+1+1 DG boundary polynomial exclusions at all locations; all-finite4+3+1 polynomial exclusion and nonconstant-L rational exclusion; JC(2) OPEN",
   "created_utc": "2026-09-06",
-  "artifact_count": 303,
-  "program_count": 70,
-  "exact_gates_per_complete_normal_or_optimized_run": 2176828,
-  "verification": "All70 programs have normal and optimized replays byte-identical to frozen outputs. Two new independently audited bundles add454046 gates: the sharp all-degree genus bound and full degree4m extremal coefficient locus; and uniform H4(3)(3) equality from complete pair/joint-orbit data and semiregular centralizers. Independent partition DP and union-support/direct-letter censuses reproduce the full declared universes. All295 inherited artifact pins are unchanged. Genus2 exact degree12 examples explicitly forbid extending the low-degree elliptic bound without its degree coordinate.",
+  "artifact_count": 315,
+  "program_count": 73,
+  "exact_gates_per_complete_normal_or_optimized_run": 2180139,
+  "verification": "All73 programs have normal and optimized replays byte-identical to frozen outputs. Three new independently audited bundles add3311 gates: all-finite(4,3,1) polynomial exclusion with rational iff necessity L constant; full all-m graph-complement quadratic genus and extremal-pencil iff; all-exponent binomial algebraic exactness. Independent original-source bracket remainders, shifted sparse-pencil source identity, and1170 original-coordinate Laurent systems agree. All303 inherited artifact pins are unchanged.",
   "program_gates": {
     "weight14": 169,
     "weight14_audit": 93,
@@ -76,7 +76,10 @@
     "h4_mixed32": 51345,
     "exact_pencils": 64,
     "genus_capacity": 5081,
-    "h4_mixed33": 448965
+    "h4_mixed33": 448965,
+    "four_three_one": 107,
+    "dg_genus": 1550,
+    "binomial_exactness": 1654
   },
   "artifacts": [
     {
@@ -215,6 +218,11 @@
       "sha256": "ffed4b59e5a5832e43aa74fd325e8589c6973cc008066276be702f8f0b00f872"
     },
     {
+      "path": "04-computation/planar_jc48_sep08_binomial_exactness.py",
+      "bytes": 6562,
+      "sha256": "ebc2df4e64b7abf29f9a1caf939cbe29329c94dfc7361590d0e61c50873d15bb"
+    },
+    {
       "path": "04-computation/planar_jc48_sep08_boundary_exactness.py",
       "bytes": 10124,
       "sha256": "bdc72806752cdfe31e2250b48cc6e26b19ead0bcadfc7fdaea887377ee579af0"
@@ -255,6 +263,11 @@
       "sha256": "94928ce8d0a1099f604fd57234932a8394053879c5e135c704dfde58b32575a3"
     },
     {
+      "path": "04-computation/planar_jc48_sep08_dg_genus.py",
+      "bytes": 9148,
+      "sha256": "45f25cbe2dea8486f8988136a23d11d386672ac9a6445d9110c929711fd8cff8"
+    },
+    {
       "path": "04-computation/planar_jc48_sep08_dg_quadratic.py",
       "bytes": 3435,
       "sha256": "b170cb02793e5eea5423aa1a838ee296406e993c18b26c97a033d15a01f9d568"
@@ -283,6 +296,11 @@
       "path": "04-computation/planar_jc48_sep08_four_four_transport.py",
       "bytes": 10516,
       "sha256": "4c284b826ed72bcb0e06775488f08c89a1fed1f492bbb7f118d113918d080851"
+    },
+    {
+      "path": "04-computation/planar_jc48_sep08_four_three_one.py",
+      "bytes": 14646,
+      "sha256": "2d4051d677c1c1ad72d603d87a8da881cd8bf30a10c38aa3438952e3a0c3ef8d"
     },
     {
       "path": "04-computation/planar_jc48_sep08_genus_capacity.py",
@@ -845,6 +863,21 @@
       "sha256": "dbd9e102dc1b8083520cbe7fdb044dbcf3a6df5c9315b4dc986acd8fc203d141"
     },
     {
+      "path": "05-knowledge/results/planar_jc48_sep08_binomial_exactness.md",
+      "bytes": 16134,
+      "sha256": "44eee928ffc85684a80ea905eacc8505f705788a0e463bc7ede583c95ec84250"
+    },
+    {
+      "path": "05-knowledge/results/planar_jc48_sep08_binomial_exactness.out",
+      "bytes": 628,
+      "sha256": "e70e6daab742bfa00fc7cc26daaacc9fb62f20df90395c01a99fc30550618683"
+    },
+    {
+      "path": "05-knowledge/results/planar_jc48_sep08_binomial_exactness_audit.md",
+      "bytes": 10554,
+      "sha256": "ad2f71aea396c297e88d8be8ffe95010a17eefa4f71721c71063d86f8a31b7ed"
+    },
+    {
       "path": "05-knowledge/results/planar_jc48_sep08_boundary_exactness.md",
       "bytes": 16787,
       "sha256": "b5156f0e7fbde4d90df20fb611ae66a3eb208c585dd2afb165154e80661da0af"
@@ -965,6 +998,21 @@
       "sha256": "0aa3a72c26173b64766551a31ca66eca419eb8ea65bc12cf95386f607e90c2cb"
     },
     {
+      "path": "05-knowledge/results/planar_jc48_sep08_dg_genus.md",
+      "bytes": 19981,
+      "sha256": "3b3e0aa8b64137f69a30fd5c7a9e9026b9dbbd4fca328e1c04bde4c9b1d77b9b"
+    },
+    {
+      "path": "05-knowledge/results/planar_jc48_sep08_dg_genus.out",
+      "bytes": 856,
+      "sha256": "386c8905a444b7184dffdff3dfc1694f841a8e7b27f3504026dc02875fd2d9f9"
+    },
+    {
+      "path": "05-knowledge/results/planar_jc48_sep08_dg_genus_audit.md",
+      "bytes": 16236,
+      "sha256": "56eb21aeac1abd2fca027d7a1aa9d5d239a6a8037ad8524a961adf15019d8cfc"
+    },
+    {
       "path": "05-knowledge/results/planar_jc48_sep08_dg_quadratic.md",
       "bytes": 10181,
       "sha256": "d5f7d030bf36bd8a2f150833416984c21d8c4b60e835da1bcdb5187ef43f3425"
@@ -1053,6 +1101,21 @@
       "path": "05-knowledge/results/planar_jc48_sep08_four_four_transport_audit.md",
       "bytes": 15618,
       "sha256": "039f30419dcc463b8c727131e9cefc572f771438b3138a4e28ee5151f5af5b64"
+    },
+    {
+      "path": "05-knowledge/results/planar_jc48_sep08_four_three_one.md",
+      "bytes": 17357,
+      "sha256": "f0ac47226679192a36191fdafb707deaabc7db81dc2d96a8c174b35f89c6c03b"
+    },
+    {
+      "path": "05-knowledge/results/planar_jc48_sep08_four_three_one.out",
+      "bytes": 426,
+      "sha256": "ca712f951b47665fb2314accfa8a231bfc9d03b99cb895823529d7c9f0bffc34"
+    },
+    {
+      "path": "05-knowledge/results/planar_jc48_sep08_four_three_one_audit.md",
+      "bytes": 15127,
+      "sha256": "0d9ae427c7d1c56fdfaba696e1d7c2e7ef7c76cce0a30998e3ed0e9406f6b3fa"
     },
     {
       "path": "05-knowledge/results/planar_jc48_sep08_genus_capacity.md",
@@ -1613,7 +1676,7 @@
       "sha256": "61db92167187f9a30ed79022a8b1feacc010e79033106e7d7592e3817bd7212d"
     }
   ],
-  "checkpoint_update": "September8: H4 meridian types(3)(2) and(3)(3) now join the uniform exclusions. The genus bound g<=floor((n\u22124)/4) is sharp in every even degree, and degree4m maximum-genus exact curves have precisely the sparse high-root form. The next paid-map candidate generalizes the actual DG surface to graph z=x^m and realizes the sharp genus by explicit rational mates. The all-finite4+3+1 quartic candidate now has a three-coefficient RR contradiction; geometric integrality and all boundary points are being fully audited. Fourfold infinity in that partition remains separate. A binomial exactness congruence is under independent investigation.",
+  "checkpoint_update": "September8: the all-finite(4,3,1) quartic class is closed for polynomial mates, and every rational mate forces L constant. Both anchored and translated genus-one primitive spaces are fully paid, with same-partition rational controls for every finite p. The all-m graph-complement and binomial criteria are proved. The remaining fourfold-infinity(4,3,1) candidate now has a simple counted residue contradiction after complete weighted-infinity and constant-D reduction; independent audit remains pending. H4(4)(2) has a structured pair/centralizer exclusion under production. Other surviving quartic leading strata remain open.",
   "compressed_certificates": [
     {
       "path": "05-knowledge/results/planar_jc48_sep06_boundary_braid_certificate.json.gz",

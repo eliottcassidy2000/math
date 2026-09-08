@@ -651,10 +651,36 @@ quadratic tangent evaluation, and transverse derivatives of component jets.
    falsely assumed common two-block decomposition. Thus this type is
    excluded for the actual mixed-cusp covering in every degree.
 
-The [303-artifact manifest](planar_jc48_sep06_manifest.json) pins68 proof notes,
-69 audit notes,70 sources,70 frozen outputs and26 compressed witnesses.
-The70 programs report2176828 exact gates per complete normal or optimized
-run. Each frozen output agrees in both modes. All295 inherited pins remain
+69. [All-finite quartic(4,3,1)](planar_jc48_sep08_four_three_one.md)
+   is **PROVED + INDEPENDENTLY AUDITED**. A rational mate forces L
+   constant; all polynomial mates are excluded in the complete global
+   square-prefix class, for every finite root placement and any mate
+   degree. Moving residues, an order-four zero, geometric integrality
+   and the entire genus-one primitive space leave an exact coefficient
+   contradiction. The anchored degeneration retains its extra parameter.
+   All107 gates and independent original-source reductions pass. Actual
+   rational constant-L mates in the same partition exist for every p.
+70. [Every graph-complement surface W_m](planar_jc48_sep08_dg_genus.md)
+   has its complete filtration, sharp quadratic rational-mate genus bound
+   m-1, and an exact extremal-pencil iff **PROVED + INDEPENDENTLY AUDITED**.
+   Explicit rational mates attain equality for every m. The fixed high
+   root and all coefficient descent are paid, as is the field degree
+   2m-1 of the sharp-family map. The stronger polynomial-mate exclusion
+   is explicitly a recovered THM-2071 corollary. All1550 gates pass.
+71. [All-exponent binomial exactness](planar_jc48_sep08_binomial_exactness.md)
+   is **PROVED + INDEPENDENTLY AUDITED**. For nonzero a,b and integers
+   A>=0,r>=1, du/sqrt(u^A(a u^r+b)) is algebraically exact precisely
+   at(0,1) or A=r+2+2r ell, ell>=0. The complete affine primitive ring
+   and exponent classes prove the iff; an explicit recurrence pays
+   coefficient descent. It gives whole sparse pencils and a sharp
+   same-curve/different-differential hostile. All1654 gates and1170
+   independent original-coordinate Laurent systems pass. Classical
+   binomial integration is credited; no external priority is asserted.
+
+The [315-artifact manifest](planar_jc48_sep06_manifest.json) pins71 proof notes,
+72 audit notes,73 sources,73 frozen outputs and26 compressed witnesses.
+The73 programs report2180139 exact gates per complete normal or optimized
+run. Each frozen output agrees in both modes. All303 inherited pins remain
 unchanged. These are scoped proof controls, not a census of Keller maps;
 no external priority claim or full JC(2) result is asserted.
 
@@ -882,8 +908,8 @@ curve or source-ring objects, and no JC consequence is inferred.
 
 Next operations compare all five live lanes. The quartic common-root
 and shared-root first-jet gates remain the entry constraints. Items42--43
-close the entire constant-D finite6/infinity2 stratum at every finite
-location, including the genuine residue-free elliptic layer. Item47
+close the constant-D finite6/infinity2 stratum with M a unit
+at its finite point, at every finite location, including the genuine residue-free elliptic layer. Item47
 closes the complete fixed-zero octuple polynomial-mate class; item50
 pays every finite point using changed global carriers, the complete
 three-dimensional genus-two primitive space, and original-source pole
@@ -897,11 +923,12 @@ Item64 closes5,1,1,1 by its full later-coefficient five-zero argument,
 with rational sharpness realized inside the same partition. Item66 pays
 all exact degree-eight pencils and every global quadratic rational mate.
 Item67 pays the all-degree genus bound and complete extremal sparse-curve
-locus. Its actual-surface extension to z=x^m and sharp rational families
-is under independent production. The all-finite4,3,1 quartic candidate
-now has a three-coefficient primitive-space contradiction; its full
-geometric integrality and boundary basis are being audited. Fourfold
-infinity in that partition remains a separate class. The other surviving leading strata retain their
+locus. Item70 pays its actual-surface extension to z=x^m, the full
+extremal-pencil iff and sharp rational families. Item71 pays all-exponent
+binomial exactness. Item69 closes all-finite4,3,1 with both complete
+primitive systems, geometric integrality and full boundary checks.
+Fourfold infinity in that partition has a counted-residue contradiction
+after the weighted-infinity reduction, currently under independent audit. The other surviving leading strata retain their
 lower-coefficient and global descent obligations. The degree
 of F|D is distinct from a primitive's local degree3, which comes from
 the order-two original differential; no degree-four primitive is assumed.

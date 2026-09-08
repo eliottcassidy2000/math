@@ -111,8 +111,10 @@
   criterion, including the sharp elliptic boundary.
   The all-degree genus bound and complete degree4m extremal locus are
   proved; H4(3)(3) meridians are now excluded uniformly as well.
-  [Manifest](planar_jc48_sep06_manifest.json):303 artifacts,70 programs,
-  2176828 exact gates per mode. Full JC(2) remains **OPEN**.
+  All-finite(4,3,1) quartics, the full all-m graph-complement quadratic
+  genus/extremal iff and all-exponent binomial exactness are now proved.
+  [Manifest](planar_jc48_sep06_manifest.json):315 artifacts,73 programs,
+  2180139 exact gates per mode. Full JC(2) remains **OPEN**.
 
 - [Previous continuing synthesis](continuing5_20260906_synthesis.md):
   full-model beta simplicity, the original-phase rectangle, the ordered

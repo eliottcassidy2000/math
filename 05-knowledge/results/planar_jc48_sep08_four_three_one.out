@@ -1,0 +1,8 @@
+DG quartic boundary (4,3,1), all three points finite
+Universe: full global L2/L1 coefficients; every normalized finite p
+Rational mate forces L constant; all polynomial mates excluded
+Complete local divisors and genus-one primitive spaces: exact controls PASS
+Sharp same-partition all-p rational constant-L family: PASS
+Gates: 107
+Semantic SHA256: 7919a3c37f7cfaf65c9124c94a1aa86765bcceb13276aa3a34e31d16f6095c14
+RESULT: PASS
