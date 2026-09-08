@@ -1,8 +1,8 @@
 # Planar Jacobian conjecture: 48-hour research session
 
-**Status: ACTIVE RESEARCH / JC(2) OPEN.** Started September 6, 2026,
-20:40 UTC, from 2d3c53942d51. Continue through September 8, 2026,
-20:40 UTC (14:40 America/Denver). The user redirected this task from the
+**Status: SESSION COMPLETE / JC(2) OPEN.** Started September 6, 2026,
+20:40 UTC, from 2d3c53942d51. Closed at the September 8, 2026,
+20:40 UTC cutoff (14:40 America/Denver). The user redirected this task from the
 previous broad portfolio to the complex planar Jacobian conjecture.
 Worktree: `/tmp/math-wt-planar-jacobian-sep06`; root owns Git.
 
@@ -851,8 +851,9 @@ quadratic tangent evaluation, and transverse derivatives of component jets.
 The [395-artifact manifest](planar_jc48_sep06_manifest.json) pins91 proof notes,
 92 audit notes,93 sources,93 frozen outputs and26 compressed witnesses.
 The93 programs report4276680 exact gates per complete normal or optimized
-run. Each frozen output agrees in both modes. All391 inherited pins remain
-unchanged. These are scoped proof controls, not a census of Keller maps;
+run. Each frozen output agrees in both modes. Source/output pins remain
+unchanged; five primary status-footer migrations are recorded explicitly
+in the manifest. These are scoped proof controls, not a census of Keller maps;
 no external priority claim or full JC(2) result is asserted.
 
 
@@ -1006,10 +1007,10 @@ with a changing residual polynomial, is a concrete internal transport;
 no LRC-to-JC implication is claimed. The board remains the current truth
 source; earlier scouting targets are superseded by these closures.
 
-The heartbeat now runs this board every30 minutes through the stated
-48-hour cutoff. It stays quiet unless there is substantive progress, a
-correction, completion, failure or required user action. At the cutoff,
-push the final coherent checkpoint and pause the heartbeat.
+The scheduled continuation ended at the stated48-hour cutoff. All
+accepted results and the explicit remaining frontier are committed and
+pushed; the heartbeat is paused as part of final closeout. The account
+interruption recorded below is not counted as continuous research.
 
 
 ### Incoming genus work and cross-lane reassessment
@@ -1061,7 +1062,7 @@ The account usage limit interrupted the agents after the September 7
 or verification. Work resumed September 8 at01:35 UTC by reading the
 saved proof drafts, completing fresh independent replays, and auditing
 the unfinished dependencies. The original September 8 20:40 UTC cutoff
-remains in force.
+was retained for the completed session.
 
 Incoming `e291fcc945` was read before this checkpoint. Its
 [source-linear global-carrier theorem](continuing10_20260907_dg_linear_carrier.md)

@@ -1,6 +1,6 @@
 {
   "session": "planar-jacobian-sep06",
-  "status": "PROVED scoped analytic/group results with independent audits: whole one-odd-cusp/two-ordinary-cusp/three-ordinary-cusp (4,6) exclusions; actual mixed(5,3,3) H4 with involutive,single-cycle and(3)(2)/(3)(3)/(4)(2) exclusions and degree floor16 and uniform mixed(5)(2) equality; general leading exactness; complete degree<=8 differential and six-line pencil classifications; sharp all-degree genus bound and complete degree4m extremal locus and all-exponent binomial criterion; all-m graph-complement filtration, sharp quadratic genus and extremal rational-mate iff; complete rational-mate criterion for all global DG quadratics; single-point,4+4,4+2+2 and5+1+1+1 DG boundary polynomial exclusions at all locations; all-location4+3+1 polynomial exclusion and nonconstant-L rational exclusion; complete constant-D finite6/infinity2 polynomial exclusion with exact shared rational table; all-finite5+3 nonconstant-L rational and all polynomial mate exclusions; complete6+1+1,3+3+2 and4+2+1+1 all-location polynomial exclusions with exact rational boundaries; complete all-location5+3 polynomial exclusion with nonconstant-L rational hostiles; complete6+2 polynomial exclusion; all-finite7+1 all-index formal exactness iff with transcendental formal hostiles; complete5+2+1 and both finite-sevenfold7+1 placements excluded; all-m polynomial first-jet gate; last original-infinity-seven exact rational iff and polynomial exclusion complete; every leading DG square-prefix quartic row closed; universal degree-six rational gate forces constant boundary; complete fixed-DG quartic global-pair exclusion and every nonzero output direction outside L4 PROVED; all-m degree4m\u22122 rational gate forces constant boundary using indices2m\u22123 and6m\u22127; all-prime/all-graph-degree polynomial-mate leading filter PROVED; JC(2) OPEN",
+  "status": "PROVED + INDEPENDENTLY AUDITED: complete fixed-DG quartic global-pair exclusion and all nonzero output directions outside L4; all-m degree4m\u22122 rational constant-boundary gate; derived all-prime/all-graph-degree leading filter; formal Laurent-mate criterion with necessarily transcendental hostiles; complete named cusp-support exclusions and actual mixed-H4 degree floor16; exact leading differential/pencil/genus classifications and fixed-source response results. JC(2) remains OPEN.",
   "created_utc": "2026-09-06",
   "artifact_count": 395,
   "program_count": 93,
@@ -2193,5 +2193,8 @@
       "new_sha256": "02dd0aa07601c9696124c84f665774b4129d4a41674c89623ec6c5ea7bca257a",
       "scope": "Remove stale pre-audit footer; accepted mathematical statement, source and output unchanged."
     }
-  ]
+  ],
+  "session_state": "COMPLETE",
+  "closed_utc": "2026-09-08 20:40:53 UTC",
+  "closeout": "All intentional session changes committed and pushed to origin/main; final fetch verifies HEAD not ahead. Scheduled continuation paused at cutoff. Account-interruption wall time is not claimed as active research."
 }
