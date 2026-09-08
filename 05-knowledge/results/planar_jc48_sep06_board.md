@@ -28,9 +28,9 @@ quadratic tangent evaluation, and transverse derivatives of component jets.
 |---|---|---|
 | Anchor: moving source | The finite five-dimensional response remains valid, but every nonconstant polynomial Hamiltonian in K+Delta K[p,y] has no nonzero rational scalar time | Change the invariant or carrier; different polynomial lifts inside the cusp ideal are now closed, and compositions still need their actual invariant/regularity sidecars |
 | Niche: collision | All scalar two-form periods miss exactly the quadrics through tangent directions in a three-dimensional target | Carry the quadratic data through an actual earlier source deformation and preserve descent |
-| Anchor: infinity | The whole birational (4,6) class with one finite odd (2,m) cusp and at least two nodes is excluded; the new two-cusp sextic has actual affine group Z | Extend the finite certified relations under coefficient perturbation and identify the complete good two-cusp parameter strata; the local A6 passport alone loses these global relations |
-| Wildcard: response connection | Full torsion is component-labelled principal parts; the canonical derivative raises every nonzero primary height | Map the actual source-normal response to this operator without changing its polynomial ring |
-| Wildcard: actual boundary surface | Every hypothetical quartic pair has F=H²+L with global H in L2 and nonconstant L in L1; all coordinates linear in r in the boundary chart are excluded, with unrestricted mate | Test the actual relative differential on compact generic fibres; distinguish regular boundary branches from nonzero logarithmic residues and retain both components of a special fibre |
+| Anchor: infinity | The whole birational (4,6) class with one finite odd (2,m) cusp and at least two nodes is excluded; the two-ordinary-cusp strata at infinity7 and9 have actual affine group Z | Certify the remaining infinity11 representative; its complete connected good stratum is now identified, and the local A6 passport alone loses global relations |
+| Wildcard: response connection | The fixed smooth polynomial family F=arb+c+h(b), h in b³C[b], has unit class of exact primary order2; the canonical derivative generates its full component-labelled arm | Map an actual source-normal response to this paid operator without changing its polynomial ring |
+| Wildcard: actual boundary surface | Every hypothetical quartic pair has F=H²+L with global H in L2 and nonconstant L in L1; all coordinates linear in r in the boundary chart are excluded, with unrestricted mate | Use the complete primitive pole degree on compact generic fibres; higher-pole residue-free branches are real, and a transverse D point requires degree at least3 |
 
 ## Audited checkpoint
 
@@ -311,9 +311,48 @@ quadratic tangent evaluation, and transverse derivatives of component jets.
     mate. It is critical at one point of the added boundary. Producer149
     gates and independent analytic/source audit pass.
 
-The [142-artifact manifest](planar_jc48_sep06_manifest.json) pins32 proof notes,
-33 independent audits,34 sources,34 outputs and nine compressed certificates.
-The34 programs report1444297 exact gates per complete normal or optimized run. Each frozen output agrees in normal and
+33. [Quartic relative differential](planar_jc48_sep08_quartic_differential.md)
+    is **PROVED + INDEPENDENTLY AUDITED**. For the global square prefix,
+    octic boundary roots of multiplicity at most two, disjoint from the
+    linear remainder's boundary roots, make the normalized generic relative
+    form holomorphic and exclude a global mate. Fully global multiplicity3
+    and6 controls exhibit respectively a logarithmic residue and residue-free
+    double poles. Thus disjoint boundary roots alone do not imply local
+    regularity. Producer78 exact gates and independent audit pass.
+34. [Actual unit torsion and connection](planar_jc48_sep08_unit_torsion.md)
+    is **PROVED + INDEPENDENTLY AUDITED**. For a!=0 and every h in b³C[b],
+    F=arb+c+h(b) is smooth on the affine source. The actual unit class is
+    -a/2 times the component-labelled (F-c)^-2 principal part: its exact
+    primary order is2, and its j-th connection derivative has order j+2.
+    The polynomial primitive of (F-c)² and all special-fibre components
+    are retained. The h=0 antecedent is credited. This pays a fixed
+    polynomial for the torsion lane, not its map from moving source
+    responses. Producer86 gates and independent audit pass.
+35. [Componentwise primitive pole degree](planar_jc48_sep08_pole_degree.md)
+    is **PROVED + INDEPENDENTLY AUDITED** for rational mates. If F|D is
+    nonconstant, a generic transverse D point forces a primitive to have
+    local degree3. Its degree equals its total boundary pole order on
+    that same compact component. The full multiplicity6 hostile has
+    normalized differential orders (-2,-2,0,3,3), so pole degree at most2
+    excludes even a rational mate despite vanishing residues. Its affine
+    critical points already exclude polynomial mates; that weaker fact is
+    not new. The same restriction argument strengthens item33 to rational
+    mates. Producer68 gates and independent audit pass.
+36. [Complete two-cusp parameter strata](planar_jc48_sep08_two_cusp_family.md)
+    is **PROVED + INDEPENDENTLY AUDITED**. Every birational polynomial
+    (4,6) curve with two ordinary cusps and otherwise ordinary nodes is
+    represented in an explicit three-parameter family; infinity types
+    (2,7),(2,9),(2,11) are exhaustive, with5,4,3 nodes respectively.
+    The complete good strata are connected, retaining projection-degenerate
+    parameters s=+/-1. Strict finite braid certificates and relative marked
+    resolutions give actual affine group Z for every curve in the first
+    two strata, excluding each as whole Keller support. A good infinity11
+    representative is exact, but its actual group remains outside this
+    checkpoint. Producer77 gates and independent audit pass.
+
+The [158-artifact manifest](planar_jc48_sep06_manifest.json) pins36 proof notes,
+37 independent audits,38 sources,38 outputs and nine compressed certificates.
+The38 programs report1444606 exact gates per complete normal or optimized run. Each frozen output agrees in normal and
 optimized modes; the braid verifiers also check their pinned witnesses.
 These are scoped proof controls, not a census of Keller maps. No external
 priority claim is made.
@@ -539,25 +578,20 @@ also restore simultaneous information before a quotient. That procedural
 comparison supplies no map from D moments or runner labels to the present
 curve or source-ring objects, and no JC consequence is inferred.
 
-Next operations compare all five live lanes. Item29 pays globality of the
-quartic approximate root using the base-only Jacobian extension; F global
-alone remains insufficient, as its explicit hostile shows. Retain global
-H in L2, L in L1, and the unrestricted mate. On the compact surface,
-the generic fibre has equation N²+M S³-c S4=0. Simple zeros of N on S
-with M nonzero are a positive signal for regularity of the relative
-differential; multiple zeros can create nonzero logarithmic residues,
-so a claim of automatic regularity must not be extrapolated. This local
-direction is under investigation, not part of the proved manifest.
-For the two-cusp curve, the four certified finite relations are stable
-under sufficiently small coefficient perturbations. Determine the complete
-good parameter strata before promoting that openness to a whole-family
-statement; exceptional repeated roots of U' and infinity strata remain
-explicit obligations. For moving sources, all
-polynomial lifts inside the cusp ideal are closed for rational time;
-different-invariant compositions and changed global carriers need new
-arguments. Collision quadrics still need an actual transported deformation;
-the torsion connection still needs a fixed smooth polynomial and all
-component principal parts. Neither new genus nor braid result pays those
-missing maps. The META-PATTERNS cards used remain Search the statement
-before the method, Inventory retained power classes, and Separate descent
-from regularity. No new card is promoted from these related curve arguments.
+Next operations compare all five live lanes. Item29 pays the global
+quartic root, item33 retains all higher-pole hostiles, and item35 supplies
+the same-component primitive degree consumer. An all-multiplicity
+no-common-boundary-root theorem is under independent audit, not part of
+this manifest. Item36 pays the complete two-cusp parameter strata and
+closes infinity7/9. A moving-disc braid method and five new infinity11
+witnesses are under separate audit; numerical words alone pay no group.
+For moving sources, every polynomial Hamiltonian inside the cusp ideal
+is closed for nonzero rational time. Different-invariant compositions
+and changed carriers need their actual invariant and regularity sidecars.
+Collision quadrics still need a transported deformation. Item34 now pays
+an actual fixed smooth polynomial and all component principal parts for
+the torsion connection; its map from the moving-response problem remains
+open. No genus or braid theorem supplies those missing maps. The
+META-PATTERNS cards used remain Search the statement before the method,
+Inventory retained power classes, and Separate descent from regularity.
+No new card is promoted from these related curve arguments.

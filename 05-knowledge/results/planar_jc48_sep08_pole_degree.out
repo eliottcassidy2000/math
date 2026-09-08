@@ -1,0 +1,8 @@
+RESERVED pole-degree gate: exact controls PASS; analytic proof requires independent audit
+Universe: one literal DG quartic; all three finite and two infinite normalized branches; two classical degree controls
+Boundary eta orders: [-2, -2, 0, 3, 3]
+Primitive pole-degree budget: 2; transverse D local degree required: 3
+Known affine critical control: x^2=54/97, t=7081/1296, F=-77/36; polynomial exclusion alone is elementary
+New candidate conclusion: no rational mate for the literal quartic despite residue-free relative poles
+Always-active gates: 68
+Semantic SHA256: d70d4a1bbd3accf0ae003d9596b661ce6818ed657dee729d3ca49cdf694058ff

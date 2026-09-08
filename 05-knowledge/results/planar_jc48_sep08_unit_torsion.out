@@ -1,0 +1,5 @@
+Boundary-linear unit response PASS; exact primary order2 and unbounded intrinsic derivative arm
+Finite universe: h=0,b^3,b^4,2b^3-b^5,b^3+b^6; arbitrary nonzero a; derivative levels0..12
+Controls: actual polynomial g^2 primitive, full E principal part, regular Gamma and residual simple pole
+Always-active gates: 86
+Semantic SHA256: 63e99c734749aaaf78f4e6ccf6f48112b62a49c960456d3d1194b2575864fa94

@@ -1,0 +1,6 @@
+Quartic compact differential controls PASS; analytic proof and independent audit required
+Universe: three complete safe sections; two global hostile sections; exact generic split and polar coefficients
+Safe orders: simple 2; double node 1; double cusp 2; infinity numerator r^2 retained
+Hostiles: m3 nonzero logarithmic residue; m6 order-two pole with identically zero residue; M avoids every boundary zero
+Always-active gates: 78
+Semantic SHA256: 822ffe67992fdc7aec4f0a00d128aebd03824b003972cfbcc73a291e1775c80b

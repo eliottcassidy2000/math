@@ -1,0 +1,26 @@
+FINITE-EXACT TWO-CUSP FAMILY ALGEBRA PASS; topology proved separately; infinity11 group OPEN
+{
+  "coefficients": {
+    "infinity11": "-16*s*(s - 3)**2*(s + 3)**2/81",
+    "infinity7": "12*a/5 + 4*s",
+    "infinity9": "4*c - 56*s**3/27 - 16*s/3"
+  },
+  "controls": [
+    {
+      "U": "t**4 - 2*t**2",
+      "V": "t**6 + 6*t**5/5 - 3*t**4/2 - 5*t**3/3 - t",
+      "discriminant": "-256*u*(u + 1)**6*(324*u**2 - 265*u - 105)**2*(202500*u**3 + 64476*u**2 + 382752*u + 160801)**2/129746337890625",
+      "name": "infinity7",
+      "nodes": 5
+    },
+    {
+      "U": "t**4 - 8*t**3/3 - 2*t**2 + 8*t",
+      "V": "t**6 - 4*t**5 - 3*t**4/2 + 548*t**3/27 - 368*t/9",
+      "discriminant": "-104857600000000*(3*u - 13)**3*(3*u - 8)*(3*u + 19)**3*(59049*u**3 + 1526283*u**2 + 13980187*u + 44759481)**2/328256967394537077627",
+      "name": "infinity11",
+      "nodes": 3
+    }
+  ],
+  "gates": 77
+}
+PASS always-active gates=77

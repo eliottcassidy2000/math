@@ -1,11 +1,11 @@
 {
   "session": "planar-jacobian-sep06",
-  "status": "PROVED scoped results with independent audits; full cusp-ideal scalar-time and whole one-odd-cusp sextic exclusions; literal two-cusp affine group Z; global quartic approximate root and complete boundary-linear exclusion; JC(2) OPEN",
+  "status": "PROVED scoped results with independent audits; whole one-odd-cusp and infinity7/9 two-ordinary-cusp sextic exclusions; global quartic approximate root, safe differential and componentwise pole-degree obstruction; actual unit torsion connection; JC(2) OPEN",
   "created_utc": "2026-09-06",
-  "artifact_count": 142,
-  "program_count": 34,
-  "exact_gates_per_complete_normal_or_optimized_run": 1444297,
-  "verification": "All34 programs have normal and optimized replays byte-identical to their frozen outputs. The four new bundles add695995 gates per mode, with full independent analytic/source audits. Four new common-base rational braid witnesses certify77174 segments; producer and independent referee each replay every gate. All122 inherited artifacts retain their original pins and prior replay record. Finite controls do not replace analytic proofs, actual whole-support hypotheses, or inherited canonical results. Cusp-ideal source/output retain pre-audit RESERVED production text; its promoted proof and independent audit govern status.",
+  "artifact_count": 158,
+  "program_count": 38,
+  "exact_gates_per_complete_normal_or_optimized_run": 1444606,
+  "verification": "All38 programs have normal and optimized replays byte-identical to their frozen outputs. The four new bundles add309 gates per mode with independent analytic/source audits. All142 inherited artifacts retain their original pins and prior replay record. Finite controls do not replace analytic proofs, actual whole-support hypotheses, or inherited canonical results. Frozen cusp-ideal and pole-degree production text retains pre-audit labels; promoted primary proofs and independent audits govern mathematical status.",
   "program_gates": {
     "weight14": 169,
     "weight14_audit": 93,
@@ -40,7 +40,11 @@
     "boundary_linear": 149,
     "quartic_boundary": 126,
     "two_cusp_braid": 694669,
-    "two_cusp_passport": 1051
+    "two_cusp_passport": 1051,
+    "quartic_differential": 78,
+    "unit_torsion": 86,
+    "pole_degree": 68,
+    "two_cusp_family": 77
   },
   "artifacts": [
     {
@@ -194,14 +198,29 @@
       "sha256": "b170cb02793e5eea5423aa1a838ee296406e993c18b26c97a033d15a01f9d568"
     },
     {
+      "path": "04-computation/planar_jc48_sep08_pole_degree.py",
+      "bytes": 8484,
+      "sha256": "58743ec60c599028800c560482dae7a7928bd7b97a9818e531e94d47c5bab151"
+    },
+    {
       "path": "04-computation/planar_jc48_sep08_quartic_boundary.py",
       "bytes": 5506,
       "sha256": "de2e1125bd6dc2446ac38b46b19e2f3e59ac71410b7965ff4b1716b49a86a439"
     },
     {
+      "path": "04-computation/planar_jc48_sep08_quartic_differential.py",
+      "bytes": 6350,
+      "sha256": "865628f671b1eb80984d95fc3d9ba5df5b1ede389a98f11f82841e143c63436a"
+    },
+    {
       "path": "04-computation/planar_jc48_sep08_two_cusp_braid.py",
       "bytes": 10866,
       "sha256": "d5f0d1ce16b439c13d936f35ce38f558b1c5210f892a11218ab7f4f4695198e1"
+    },
+    {
+      "path": "04-computation/planar_jc48_sep08_two_cusp_family.py",
+      "bytes": 9227,
+      "sha256": "50daef4d2689fe62ca23e66ba4fb9f8306c46afd50983ad83477321ab58eaba7"
     },
     {
       "path": "04-computation/planar_jc48_sep08_two_cusp_passport.py",
@@ -212,6 +231,11 @@
       "path": "04-computation/planar_jc48_sep08_two_cusps.py",
       "bytes": 4663,
       "sha256": "d3c1bffe31c3147557337066dcce1ee4dc97d19cd2f77832244fb1b0317f4af0"
+    },
+    {
+      "path": "04-computation/planar_jc48_sep08_unit_torsion.py",
+      "bytes": 2469,
+      "sha256": "f6f9f99d62216f78e366a30a1452a392ee046966ed914aa1cee88c55268d1ba2"
     },
     {
       "path": "05-knowledge/results/planar_jc48_sep06_alternating.md",
@@ -674,6 +698,21 @@
       "sha256": "3ba094e737beda0e17d23263d2f1b33d3cd0ff39295251b2761f4e281340c19a"
     },
     {
+      "path": "05-knowledge/results/planar_jc48_sep08_pole_degree.md",
+      "bytes": 14804,
+      "sha256": "c91dd27d23f89546fd3195169d811838dd6424eab755e7bfd073bbe7cfbd47d4"
+    },
+    {
+      "path": "05-knowledge/results/planar_jc48_sep08_pole_degree.out",
+      "bytes": 634,
+      "sha256": "3ffdc88c37dac410055cff384b84c7c516dbd044201656ecc3a4fb9932ef13bf"
+    },
+    {
+      "path": "05-knowledge/results/planar_jc48_sep08_pole_degree_audit.md",
+      "bytes": 5654,
+      "sha256": "2421a1799303c5c3e645afee46d82acebfa1ccca637e15f9417ad14d7cbbee42"
+    },
+    {
       "path": "05-knowledge/results/planar_jc48_sep08_quartic_boundary.md",
       "bytes": 14686,
       "sha256": "b868ffea59adf1def18d88ee184bcd8d108c8482f81af7932aad032cba89ccfa"
@@ -687,6 +726,21 @@
       "path": "05-knowledge/results/planar_jc48_sep08_quartic_boundary_audit.md",
       "bytes": 6373,
       "sha256": "223682bc4e4bafbb47c1d471ccb3162fd8e5c33cc6f4b8e41228e86573a27314"
+    },
+    {
+      "path": "05-knowledge/results/planar_jc48_sep08_quartic_differential.md",
+      "bytes": 12333,
+      "sha256": "da906bdd4cfb8e42adfebff54af5351d3c93b615ec06f0e65a89474d7d014030"
+    },
+    {
+      "path": "05-knowledge/results/planar_jc48_sep08_quartic_differential.out",
+      "bytes": 513,
+      "sha256": "931be65a167336b2aca148e02f4e218813d9d30b8566dd940bfb33e7bad14603"
+    },
+    {
+      "path": "05-knowledge/results/planar_jc48_sep08_quartic_differential_audit.md",
+      "bytes": 10702,
+      "sha256": "6f5fc40052b81728ea96037a14f46a7e00a36422fddf6335710147389c5413fb"
     },
     {
       "path": "05-knowledge/results/planar_jc48_sep08_two_cusp_braid.md",
@@ -732,6 +786,21 @@
       "raw_sha256": "06d050671046d9145ce23c82fa7fbbbeaa2d8a73ba62fd664b74cdc8046820be"
     },
     {
+      "path": "05-knowledge/results/planar_jc48_sep08_two_cusp_family.md",
+      "bytes": 17147,
+      "sha256": "1ea0f49bf6923161de8c02100a37b74a3a7ab605478cdb09e32935ab30ca2dc9"
+    },
+    {
+      "path": "05-knowledge/results/planar_jc48_sep08_two_cusp_family.out",
+      "bytes": 915,
+      "sha256": "1ec6e9e83b3aac30adaf90e91ced31448c54c7a3dffa80d4c142acf313ba0332"
+    },
+    {
+      "path": "05-knowledge/results/planar_jc48_sep08_two_cusp_family_audit.md",
+      "bytes": 6928,
+      "sha256": "f0d5ce91bafa5351ea02a442c637b404d75d6b8ad1df352259e5a86873600d39"
+    },
+    {
       "path": "05-knowledge/results/planar_jc48_sep08_two_cusp_passport.md",
       "bytes": 12748,
       "sha256": "b799742e2553ec75bc5f65118370707284598f84cc9e1e1951f0df353bf9383d"
@@ -760,9 +829,24 @@
       "path": "05-knowledge/results/planar_jc48_sep08_two_cusps_audit.md",
       "bytes": 9059,
       "sha256": "9c870168e866ffbda0cccb9b777b48b420a25e32552b41cc81a5bdf0bd926235"
+    },
+    {
+      "path": "05-knowledge/results/planar_jc48_sep08_unit_torsion.md",
+      "bytes": 6725,
+      "sha256": "95d6d410d236bf28dffc90d51e923eb2e200b330eac2c05c5a5b157d08968bc4"
+    },
+    {
+      "path": "05-knowledge/results/planar_jc48_sep08_unit_torsion.out",
+      "bytes": 398,
+      "sha256": "6aec5ecea6bebbf93d59dbc70b5bcc117db3b41cf7e91320343368eafcec4d2b"
+    },
+    {
+      "path": "05-knowledge/results/planar_jc48_sep08_unit_torsion_audit.md",
+      "bytes": 5831,
+      "sha256": "61db92167187f9a30ed79022a8b1feacc010e79033106e7d7592e3817bd7212d"
     }
   ],
-  "checkpoint_update": "Added27 artifacts in six independently audited bundles to the95-artifact checkpoint. New source/output and all certificate bytes are frozen; no inherited artifact pin changes. Whole one-odd-cusp closure consumes the classification and independently certified representative braids. The DG filtration corollary credits recovered canon; the two-cusp bundle proves geometry and three-meridian bound only.",
+  "checkpoint_update": "September 8: audited safe quartic differential and higher-pole hostiles, full rational pole-degree gate, actual unit torsion family and connection, and complete two-cusp parameter strata with infinity7/9 group Z. Infinity11 certification and the quartic all-multiplicity common-root theorem remain outside this checkpoint.",
   "compressed_certificates": [
     {
       "path": "05-knowledge/results/planar_jc48_sep06_boundary_braid_certificate.json.gz",
