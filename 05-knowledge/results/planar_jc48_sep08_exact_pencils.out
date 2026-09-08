@@ -1,0 +1,8 @@
+exact_pencils: PASS
+scope: all nonproportional degree<=8 exact pencils; full rational-mate criterion for bounded quadratic discriminants
+inherited universe:17 exact types;12 moving-simple-root allocations;6 line spaces
+universal primitives: rational in pencil coefficients and the chosen radical
+controls: all6 genuine quadratic mates; full15-dimensional DG cancellation; proportional5+3; global elliptic rank boundary
+hostiles: exact endpoints with nonexact sum; generic quadratic/cubic discriminants
+gates: 64
+gate-label sha256: 6b13062e53e0c5bbfc476990dd6d136a7c7f328b5e048f59a7890d34f62d016c

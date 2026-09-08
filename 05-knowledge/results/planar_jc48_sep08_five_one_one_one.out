@@ -1,0 +1,7 @@
+DG quartic boundary partition 5+1+1+1: polynomial-mate exclusion
+Universe: all complex global H in L2, L in L1; all four distinct boundary points
+T2, full sections, three residues plus two jets, and infinity cases: PASS
+Mate degree is unrestricted; rational conclusion stops at constant L
+Gates: 62
+Semantic SHA256: de0cbef63edcb5a98cf214274d92dd91417c5d4bef999d43548d5dd5cd36fecc
+RESULT: PASS

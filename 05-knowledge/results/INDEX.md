@@ -105,8 +105,12 @@
   The mixed family has mapping-degree floor12. General leading-coefficient
   exactness closes every4+2+2 boundary placement, and all degree<=8
   radical differentials have a complete necessary-test classification.
-  [Manifest](planar_jc48_sep06_manifest.json):283 artifacts,65 programs,
-  1671311 exact gates per mode. Full JC(2) remains **OPEN**.
+  The5+1+1+1 quartic class is polynomially excluded at all locations, with
+  sharp rational mates inside it. H4(3)(2) meridians are excluded uniformly.
+  Six exact pencil spaces give a complete global quadratic rational-mate
+  criterion, including the sharp elliptic boundary.
+  [Manifest](planar_jc48_sep06_manifest.json):295 artifacts,68 programs,
+  1722782 exact gates per mode. Full JC(2) remains **OPEN**.
 
 - [Previous continuing synthesis](continuing5_20260906_synthesis.md):
   full-model beta simplicity, the original-phase rectangle, the ordered

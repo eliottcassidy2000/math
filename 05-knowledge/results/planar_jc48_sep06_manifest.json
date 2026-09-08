@@ -1,11 +1,11 @@
 {
   "session": "planar-jacobian-sep06",
-  "status": "PROVED scoped analytic/group results with independent audits: whole one-odd-cusp, two-ordinary-cusp and three-ordinary-cusp (4,6) exclusions; actual mixed(5,3,3) H4 supplier, involutive/single-cycle exclusions and mapping-degree floor12; general rational-mate leading-coefficient exactness; complete degree<=8 radical differential classification; all single-point,4+4 and4+2+2 DG boundary partitions excluded for polynomial mates, the last even rationally; JC(2) OPEN",
+  "status": "PROVED scoped analytic/group results with independent audits: whole one-odd-cusp/two-ordinary-cusp/three-ordinary-cusp (4,6) exclusions; actual mixed(5,3,3) H4 with involutive,single-cycle and(3)(2) exclusions and degree floor12; general leading exactness; complete degree<=8 differential and six-line pencil classifications; complete rational-mate criterion for all global DG quadratics; single-point,4+4,4+2+2 and5+1+1+1 DG boundary polynomial exclusions at all locations; JC(2) OPEN",
   "created_utc": "2026-09-06",
-  "artifact_count": 283,
-  "program_count": 65,
-  "exact_gates_per_complete_normal_or_optimized_run": 1671311,
-  "verification": "All65 programs have normal and optimized replays byte-identical to frozen outputs. The three new independently audited bundles add35419 gates: arbitrary-retention odd-cusp inequalities and actual H4 degree floor12; a formal coefficient-field primitive theorem with pure-monomial equivalence; and complete classification of dx/sqrt(N) for every degree<=8 polynomial, including all67 partitions and the elliptic exceptional locus. All271 inherited artifact pins are unchanged. The complete4+2+2 partition is excluded even for rational mates at all boundary locations. Passing the leading differential gate is not sufficient for a general mate; its lower-coefficient hostile is explicit.",
+  "artifact_count": 295,
+  "program_count": 68,
+  "exact_gates_per_complete_normal_or_optimized_run": 1722782,
+  "verification": "All68 programs have normal and optimized replays byte-identical to frozen outputs. Three new independently audited bundles add51471 gates: the full5+1+1+1 polynomial exclusion with a sharp rational mate inside the same partition; uniform H4(3)(2) equality from a complete5040-pair census; and six exact radical pencil spaces with full rational-mate iff for every global DG quadratic, rational parameter descent and sharp elliptic controls. All283 inherited artifact pins are unchanged. The separate four_two_two.py is an explicitly superseded unaudited research draft, outside this audited manifest.",
   "program_gates": {
     "weight14": 169,
     "weight14_audit": 93,
@@ -71,7 +71,10 @@
     "two_finite_four_four": 60,
     "odd_retention": 34983,
     "leading_exactness": 241,
-    "boundary_exactness": 195
+    "boundary_exactness": 195,
+    "five_one_one_one": 62,
+    "h4_mixed32": 51345,
+    "exact_pencils": 64
   },
   "artifacts": [
     {
@@ -255,9 +258,19 @@
       "sha256": "b170cb02793e5eea5423aa1a838ee296406e993c18b26c97a033d15a01f9d568"
     },
     {
+      "path": "04-computation/planar_jc48_sep08_exact_pencils.py",
+      "bytes": 7430,
+      "sha256": "040e6af0681f8b2d04704418d6e3fc179df94ae3ffc6454cbc14f3647da59b80"
+    },
+    {
       "path": "04-computation/planar_jc48_sep08_finite_eight.py",
       "bytes": 9242,
       "sha256": "f9e86132d04caacd894651e66cbc563dbc56ec283adf4f9412334624cae9b02d"
+    },
+    {
+      "path": "04-computation/planar_jc48_sep08_five_one_one_one.py",
+      "bytes": 8859,
+      "sha256": "029193e4fc766ebbfc7bf49a8af1bbc928da6cd88ea04f77dd1067d784e9a6fd"
     },
     {
       "path": "04-computation/planar_jc48_sep08_four_four.py",
@@ -273,6 +286,11 @@
       "path": "04-computation/planar_jc48_sep08_h4_involution.py",
       "bytes": 8688,
       "sha256": "1859b54b32d83b85c00c63cd53b352bf53d042a2773e93ac8907bbdebe1dc3b0"
+    },
+    {
+      "path": "04-computation/planar_jc48_sep08_h4_mixed32.py",
+      "bytes": 8661,
+      "sha256": "9f83b3345e0d39da9f7abf1bede93b45deecd3234501d5331ebf28a4b640f0f6"
     },
     {
       "path": "04-computation/planar_jc48_sep08_h4_single_cycle.py",
@@ -950,6 +968,21 @@
       "sha256": "3ba094e737beda0e17d23263d2f1b33d3cd0ff39295251b2761f4e281340c19a"
     },
     {
+      "path": "05-knowledge/results/planar_jc48_sep08_exact_pencils.md",
+      "bytes": 15541,
+      "sha256": "1b4884abc111b953cadb8c044fc1cb69b5e1e86b8ba1b79d344a4d84632968e4"
+    },
+    {
+      "path": "05-knowledge/results/planar_jc48_sep08_exact_pencils.out",
+      "bytes": 596,
+      "sha256": "be1ad4ecb256073ab2e92d2e1d8b48eadaa6ef669c06678d689dcc2a8b1469e1"
+    },
+    {
+      "path": "05-knowledge/results/planar_jc48_sep08_exact_pencils_audit.md",
+      "bytes": 13708,
+      "sha256": "73967baf7ad98b0136d085f44bb3c12a9c79cc3b47ff9b62b6e3f065fd6f9af3"
+    },
+    {
       "path": "05-knowledge/results/planar_jc48_sep08_finite_eight.md",
       "bytes": 13542,
       "sha256": "e9de3f412a9b8ee4c2291637a9fd8ff6bb1b4dd021403b920312cd1b7bce84f1"
@@ -963,6 +996,21 @@
       "path": "05-knowledge/results/planar_jc48_sep08_finite_eight_audit.md",
       "bytes": 12552,
       "sha256": "6e337c7fcbfba3a883df3c9eae0936c98cb6a3401ee31abe9bbb0b9b03f20da8"
+    },
+    {
+      "path": "05-knowledge/results/planar_jc48_sep08_five_one_one_one.md",
+      "bytes": 18737,
+      "sha256": "92ffc8b1a52e810565b365f0a2feaee5170d307fa51f9040a0b160898e5ba697"
+    },
+    {
+      "path": "05-knowledge/results/planar_jc48_sep08_five_one_one_one.out",
+      "bytes": 394,
+      "sha256": "c6ef3ec938cffd949ad4a755ef8732c52c0a5bafce736415eafb3992ae90f776"
+    },
+    {
+      "path": "05-knowledge/results/planar_jc48_sep08_five_one_one_one_audit.md",
+      "bytes": 17878,
+      "sha256": "80d448976d9674b4cfbe8e898bb10218cd59ff30ca15e725227a714a213d0c78"
     },
     {
       "path": "05-knowledge/results/planar_jc48_sep08_four_four.md",
@@ -1008,6 +1056,21 @@
       "path": "05-knowledge/results/planar_jc48_sep08_h4_involution_audit.md",
       "bytes": 11509,
       "sha256": "8d288d96ae8f07c0da4eccd54b8b6aee37355ec37394499c02da9efc09a1ef5f"
+    },
+    {
+      "path": "05-knowledge/results/planar_jc48_sep08_h4_mixed32.md",
+      "bytes": 14487,
+      "sha256": "b5ef613ddf01e4a19a1673418a5bf36f4886d463d0d69632d24f25b14ecccae7"
+    },
+    {
+      "path": "05-knowledge/results/planar_jc48_sep08_h4_mixed32.out",
+      "bytes": 3607,
+      "sha256": "399694228f01eb1409c1476d2a42e25eda8eae32811b3367d9a65fb7f5da44ef"
+    },
+    {
+      "path": "05-knowledge/results/planar_jc48_sep08_h4_mixed32_audit.md",
+      "bytes": 12487,
+      "sha256": "7f12894b85c8b86e0eddb28b0f98cc0adfa7eadd341ff57f1b4e8bccf733a3c1"
     },
     {
       "path": "05-knowledge/results/planar_jc48_sep08_h4_single_cycle.md",
@@ -1508,7 +1571,7 @@
       "sha256": "61db92167187f9a30ed79022a8b1feacc010e79033106e7d7592e3817bd7212d"
     }
   ],
-  "checkpoint_update": "September8: the broad leading-coefficient gate replaces separate repeated leading-root probes. All finite double roots are impossible; all67 radical differential partitions are classified with exact exceptional position conditions. A new later-coefficient candidate may close the entire5+1+1+1 DG partition for polynomial mates by the full degree-four M section and five required zeros; it is outside this checkpoint pending audit. The mixed-cusp H4 degree is at least12, and cycle-compatible mixed types remain open. No full quartic or JC(2) closure is claimed.",
+  "checkpoint_update": "September8: full global quadratic rational mates now have a complete discriminant-pencil criterion, with generic geometric genus at most1 and actual elliptic examples. The5+1+1+1 quartic boundary class is polynomially excluded at every location, but rational mates are explicitly realized there. H4(3)(2) mixed meridians are all equal and therefore excluded in the actual transitive retained-sheet setting. New independent candidates are an all-degree sharp genus-capacity theorem with complete degree4m extremal locus, H4(3)(3) support/centralizer closure, and the remaining all-finite4+3+1 quartic residue/critical family; none is yet a proved dependency.",
   "compressed_certificates": [
     {
       "path": "05-knowledge/results/planar_jc48_sep06_boundary_braid_certificate.json.gz",
