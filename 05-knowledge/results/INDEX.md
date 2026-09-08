@@ -109,8 +109,10 @@
   sharp rational mates inside it. H4(3)(2) meridians are excluded uniformly.
   Six exact pencil spaces give a complete global quadratic rational-mate
   criterion, including the sharp elliptic boundary.
-  [Manifest](planar_jc48_sep06_manifest.json):295 artifacts,68 programs,
-  1722782 exact gates per mode. Full JC(2) remains **OPEN**.
+  The all-degree genus bound and complete degree4m extremal locus are
+  proved; H4(3)(3) meridians are now excluded uniformly as well.
+  [Manifest](planar_jc48_sep06_manifest.json):303 artifacts,70 programs,
+  2176828 exact gates per mode. Full JC(2) remains **OPEN**.
 
 - [Previous continuing synthesis](continuing5_20260906_synthesis.md):
   full-model beta simplicity, the original-phase rectangle, the ordered

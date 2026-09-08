@@ -1,0 +1,8 @@
+genus_capacity: PASS
+scope: sharp all-degree genus bound and complete extremal classification in degrees4m
+finite partition universe: every partition in degrees3..24; 7334 total; 1103 capacity survivors
+capacity survivors are necessary-only; six extremal partitions checked
+actual sharp families: r=1..14, even degrees4..30; full primitive spaces m=1..8
+hostiles: genus2 exact degree12; extremal multiplicities with wrong positions
+gates: 5081
+gate-label sha256: 073cf1ef4384cb17dff9b6a72e290f1ecdff5078ab350223e13c7003c445c1b1
