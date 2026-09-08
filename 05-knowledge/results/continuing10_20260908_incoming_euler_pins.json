@@ -1,0 +1,51 @@
+{
+  "commit": "162efff5f",
+  "theorem_status_pin_transitions": [
+    {
+      "path": "01-canon/theorems/THM-4457-euler-sharp-transverse-shear-distance-budget.md",
+      "from": "RESERVED / UNPROVED EMPTY STUB",
+      "to": "PROVED ANALYTIC + FINITE-EXACT + INDEPENDENTLY AUDITED with stated scope",
+      "old_sha256": "31e4e36f3a7fcebf807bcabd3b671b6fb9cc81adaba21e27e2632cf751ccaaad",
+      "new_sha256": "b78a7ed3218970fa6e68b6797eca0b12961fb130b7a2b79a88e8828cedc7aa77"
+    },
+    {
+      "path": "01-canon/theorems/THM-4458-lrc-one-sided-adverse-leak-budget.md",
+      "from": "RESERVED / UNPROVED EMPTY STUB",
+      "to": "PROVED ANALYTIC + FINITE-EXACT + INDEPENDENTLY AUDITED with stated scope",
+      "old_sha256": "4197c2a5be2bd20c6351d408487442117186d367a2da9cd39a72ac23d0078b1e",
+      "new_sha256": "02412eaea099e598ffbf4056083481f18914619dac1151d74fe8884f98e0936f"
+    }
+  ],
+  "verified_explicit_producer_pins": [
+    {
+      "path": "04-computation/euler_shear_distance_budget_20260908.py",
+      "bytes": 6049,
+      "sha256": "ed88cec1f7511450d0b6b5691dead7d4db46c32c7aa33bf27a533dc8eb926887",
+      "header_pin_verified": true,
+      "raw_LF": true
+    },
+    {
+      "path": "05-knowledge/results/euler_shear_distance_budget_20260908.out",
+      "bytes": 836,
+      "sha256": "92f1000ce9235fb2e7c985387f4c957223e35a2fc2381df3e81d93409777dc60",
+      "header_pin_verified": true,
+      "raw_LF": true
+    },
+    {
+      "path": "04-computation/lrc14_euler_adverse_leak_20260908.py",
+      "bytes": 6317,
+      "sha256": "9082548c166e4f3235f4a3781b4c49737b830060258d5a90670b1b7d1bb42111",
+      "header_pin_verified": true,
+      "raw_LF": true
+    },
+    {
+      "path": "05-knowledge/results/lrc14_euler_adverse_leak_20260908.out",
+      "bytes": 918,
+      "sha256": "e0c4b570b64f8b89a6ec5041d1b8c98eddb1ac8ea149f8ee783f3fce8853aa52",
+      "header_pin_verified": true,
+      "raw_LF": true
+    }
+  ],
+  "external_PDE_claim": "not imported; full Euler build not completed",
+  "standalone_Lean_scope": "rational-expression scalar profile bounds only; not THM4457 or4458 and not external Euler"
+}

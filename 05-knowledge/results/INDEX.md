@@ -7,7 +7,9 @@
   joint D moments exclude the closed nonpositive circuit octant; the
   global source-linear layer connects to an all-m family of smooth
   submersions with exact repair order2m-1 and an actual affine-chart
-  power map of the same degree.
+  power map of the same degree. The complete all-m linear classification
+  gives a positive unit-order spectrum with order2 absent and an explicit
+  response class killed by restriction to the original source.
   [Manifest](continuing10_20260908_manifest.json) pins reproduction and scope.
   General LRC14, planar JC and the original-response/wall-core problems remain OPEN.
 

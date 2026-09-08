@@ -1,17 +1,18 @@
 {
   "schema": 1,
-  "created_utc": "2026-09-08T19:39:20.868740+00:00",
+  "created_utc": "2026-09-08T19:52:19.316647+00:00",
   "baseline_commit": "89aca0881928b89a8fcf4b4a0aaa1e160e43f624",
-  "incoming_review_head": "687644309fd3de7cf62cfdc4844600147c1eacb1",
+  "incoming_review_head": "0c099746af52cf80ab2195a385500c9db1ee69e4",
   "proof_checkpoints": [
     "4441760e1",
-    "e291fcc94"
+    "e291fcc94",
+    "0c099746a"
   ],
   "hash_basis": "raw LF bytes; maintained synthesis, navigation and this manifest excluded; only status/routing prose changed on filing reviewed reports",
-  "scope": "Complete connected-complement clock7200 closure and20 upper clocks; two-direction no-three-in-line repair-distance lower bound; full closed nonpositive native C/D circuit octant exclusion; complete global source-linear W2 carrier theorem; all-m globally smooth DG family with exact unit annihilator exponent2m-1, actual alternative affine chart and finite-flat power map, including the multiplicity failure boundary. General conjectures remain OPEN.",
-  "artifact_count": 81,
-  "program_count": 23,
-  "exact_gates_per_mode": 21465655,
+  "scope": "Complete connected-complement clock7200 closure and20 upper clocks; two-direction no-three-in-line repair-distance lower bound; full closed nonpositive native C/D circuit octant exclusion; all-m globally smooth DG family with exact unit annihilator exponent2m-1, actual alternative affine chart and finite-flat power map; complete classification of rationally integrable global source-linear submersions on every W_m, unit-only order2 gap, and explicit loss of a global response class under source restriction. General conjectures remain OPEN.",
+  "artifact_count": 91,
+  "program_count": 25,
+  "exact_gates_per_mode": 21468082,
   "validation": {
     "continuing10_20260907_dg_linear_carrier": {
       "gates": 88,
@@ -121,6 +122,12 @@
       "output_sha256": "540dd0a4d8a1cb45f43c7b8b6aebeeda9d1df0f3928ba28ace2255c6cf7c12b3",
       "source_sha256": "5d9dcf4ec3d3db6ceac66de14a436e292b5dd66be5a7441f19c6407a7d3076fc"
     },
+    "continuing10_20260908_dg_linear_all_m": {
+      "gates": 1844,
+      "normal_optimized_raw_LF": true,
+      "output_sha256": "9a4eda039ccb20db4d68322818fb21ea331a38c3c1111816ca94ca34862afb1b",
+      "source_sha256": "48ac8b527ba5e88dbb38ab1ca287824e8748574e4927c37bfeb8b2051784de3d"
+    },
     "continuing10_20260908_dg_unbounded_torsion": {
       "gates": 546,
       "normal_optimized_raw_LF": true,
@@ -139,6 +146,12 @@
       "output_sha256": "41ab734c8f89adab78cd84fa8f5983ba31ee2697e7e8dfc6c5e6b664a907d9ba",
       "source_sha256": "d845c141cd1c5b7203f4251e1940a1214ebbfd762346cbc831fc11d56f91fee9"
     },
+    "continuing10_20260908_linear_classification_audit": {
+      "gates": 583,
+      "normal_optimized_raw_LF": true,
+      "output_sha256": "608d8bbecb1619a822dcfce11065775bccadafbf4f30ff2771573101982e8b8d",
+      "source_sha256": "d394b6c047e09f3805c71898d82dda31ef655cfb038942f08d8da34fd025f275"
+    },
     "continuing10_20260908_lrc_upper_twenty": {
       "gates": 128409,
       "normal_optimized_raw_LF": true,
@@ -154,7 +167,7 @@
   },
   "normal_optimized_raw_stdout_equal": true,
   "regenerated_certificates_raw_unchanged": true,
-  "prior_artifacts_verified": 751,
+  "prior_artifacts_verified": 769,
   "incoming_transition_review": {
     "commit": "8f345194053d5128db5dc9ac2f73dcbc391d64d6",
     "prior_count": 471,
@@ -482,6 +495,11 @@
       "e291fcc945a2f4fa3a48729ca4cab43b463a2185"
     ]
   },
+  "additional_incoming_review": [
+    "4329ebb75",
+    "162efff5f",
+    "1d64840fe"
+  ],
   "artifacts": [
     {
       "path": "04-computation/continuing10_20260907_dg_linear_carrier.py",
@@ -579,6 +597,11 @@
       "sha256": "5d9dcf4ec3d3db6ceac66de14a436e292b5dd66be5a7441f19c6407a7d3076fc"
     },
     {
+      "path": "04-computation/continuing10_20260908_dg_linear_all_m.py",
+      "bytes": 7197,
+      "sha256": "48ac8b527ba5e88dbb38ab1ca287824e8748574e4927c37bfeb8b2051784de3d"
+    },
+    {
       "path": "04-computation/continuing10_20260908_dg_unbounded_torsion.py",
       "bytes": 6927,
       "sha256": "2c6e575521e44b971877455d1984e4286611c0df2e15bec73ef17941d6a6bd49"
@@ -592,6 +615,11 @@
       "path": "04-computation/continuing10_20260908_fourfold_unit_bridge_audit.py",
       "bytes": 4328,
       "sha256": "d845c141cd1c5b7203f4251e1940a1214ebbfd762346cbc831fc11d56f91fee9"
+    },
+    {
+      "path": "04-computation/continuing10_20260908_linear_classification_audit.py",
+      "bytes": 7583,
+      "sha256": "d394b6c047e09f3805c71898d82dda31ef655cfb038942f08d8da34fd025f275"
     },
     {
       "path": "04-computation/continuing10_20260908_lrc_upper_twenty.py",
@@ -829,6 +857,16 @@
       "sha256": "87c8f51d8a39ba3dacba9e7f7ace515f370ca969ee9589ee9f50065dc8ab925c"
     },
     {
+      "path": "05-knowledge/results/continuing10_20260908_dg_linear_all_m.md",
+      "bytes": 15593,
+      "sha256": "9635c14f8fc14f4dd4829e1061dd7c0c51c870ced7e7720e5ad8c89e4a01259c"
+    },
+    {
+      "path": "05-knowledge/results/continuing10_20260908_dg_linear_all_m.out",
+      "bytes": 419,
+      "sha256": "9a4eda039ccb20db4d68322818fb21ea331a38c3c1111816ca94ca34862afb1b"
+    },
+    {
       "path": "05-knowledge/results/continuing10_20260908_dg_unbounded_torsion.md",
       "bytes": 12850,
       "sha256": "5732f4271e9b9fba97f9223037383f6f0164474b0621e2548b73a24fd5a4964d"
@@ -862,6 +900,36 @@
       "path": "05-knowledge/results/continuing10_20260908_incoming_connections.md",
       "bytes": 10182,
       "sha256": "eaf05dea77f6210a196204ae6a16ffb16774d94b9adde153580a41c44743ca0d"
+    },
+    {
+      "path": "05-knowledge/results/continuing10_20260908_incoming_euler_pins.json",
+      "bytes": 2116,
+      "sha256": "96be8439e5a442a2a12e0fd9a1255644c5edc96f1e1a3f0bf7c6216a1f66a99c"
+    },
+    {
+      "path": "05-knowledge/results/continuing10_20260908_incoming_planar_pins.json",
+      "bytes": 2561,
+      "sha256": "10e18331091aabd4f0923cbfd97f9322a8f9e4eace1e1bdead65596550f13724"
+    },
+    {
+      "path": "05-knowledge/results/continuing10_20260908_incoming_tail.md",
+      "bytes": 10045,
+      "sha256": "512785e47eafac021030bc930f3359238b193bf840ae7d7989a6575ccb541554"
+    },
+    {
+      "path": "05-knowledge/results/continuing10_20260908_linear_classification_audit.md",
+      "bytes": 11265,
+      "sha256": "25bb83d8a97a47e611f7020376f4ca39b59114415ea622cc7f2b2192465567c3"
+    },
+    {
+      "path": "05-knowledge/results/continuing10_20260908_linear_classification_audit.out",
+      "bytes": 567,
+      "sha256": "608d8bbecb1619a822dcfce11065775bccadafbf4f30ff2771573101982e8b8d"
+    },
+    {
+      "path": "05-knowledge/results/continuing10_20260908_linear_classification_audit_certificate.json",
+      "bytes": 9798,
+      "sha256": "76ef3545c535f60e0c7a50aee90368c86b10307360e7c3c8b9add820b16e0ed7"
     },
     {
       "path": "05-knowledge/results/continuing10_20260908_lrc_upper_twenty.md",

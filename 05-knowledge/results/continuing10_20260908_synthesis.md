@@ -7,8 +7,9 @@ no-return problem remain **OPEN**. No external priority claim is made.
 
 The [previous synthesis](continuing9_20260907_synthesis.md) records the
 fixed-moment, ratio-tree and genus inputs. The first two proof checkpoints
-of this session are `4441760e1` and `e291fcc94`; incoming research through
-`687644309` was read before this closure. The [manifest](continuing10_20260908_manifest.json)
+of this session are `4441760e1` and `e291fcc94`; `0c099746a` publishes the
+complete clock and all-m chart theorem after incoming research through
+`1d64840fe`. The [manifest](continuing10_20260908_manifest.json)
 pins the exact artifacts and normal/optimized verification. Older frozen
 arrays, sources and certificates are retained as provenance.
 
@@ -213,6 +214,39 @@ chart map. These controls explain the mechanism, rather than merely
 checking a finite list of examples. The [incoming connection review](continuing10_20260908_incoming_connections.md)
 records the source, target, maps and stopping boundaries of the other bridges.
 
+### The full source-linear classification and an order-two gap
+
+The [complete classification for every m](continuing10_20260908_dg_linear_all_m.md)
+now closes the surrounding rationally integrable, globally smooth linear
+layer. Its [independent audit](continuing10_20260908_linear_classification_audit.md)
+proves necessity at every source degree and checks all parameter boundaries.
+A reciprocal polynomial has a rational primitive only when it is constant
+or a single pure power: the orders of the primitive's finite poles cannot
+pay its zero at infinity if there is more than one distinct root.
+
+For m>=2, every admitted nonconstant first function has A=a(x-h)^n,
+a*h!=0, and B equal to the polynomial part of A/x^m up to a free
+constant. The exact allowed exponents are m+1<=n<=2m-2 or n=2m.
+The missing n=2m-1 has one unavoidable critical point on the boundary.
+The positive unit orders on each such surface are
+
+    {m,...,2m-3} union {2m-1},
+
+with an empty interval omitted. Across all m the positive **unit** orders
+are exactly {1,3,4,5,...}; order two is absent in this classified layer.
+This does not exclude order two for other response classes, connection
+derivatives, or higher source-degree functions. For n<2m the generic
+global fibres are punctured lines and a separate special fibre contains D;
+the affine-line fibre theorem above concerns n=2m.
+
+There is also an actual map exhibiting loss under restriction. On W1,
+F=a*t+B0 has zero unit class in the original C[x,t] response module,
+but its unit has exact order one in O(W1)/D_F O(W1). The global witness
+is -x*t=1+r*b. Restriction preserves the derivation while killing this
+nonzero global class because it removes the pole component D. This is
+a precise reason to retain the coefficient ring when importing a
+component-response obstruction.
+
 ## 5. Connections that survive the incoming work
 
 | Source and target | Map and preserved predicate | Lost information, required sidecar, next test |
@@ -235,9 +269,30 @@ places dx/A^(1/n) in the actual radical coefficient field for a rational
 mate of A(x)t^n+... . It generalizes the source-linear residue test but
 discards lower coefficients. The [complete quadratic pencil classification](planar_jc48_sep08_exact_pencils.md)
 and current [planar board](planar_jc48_sep06_board.md) retain those lower
-rows. At the reviewed checkpoint only binary boundary partitions 7+1,
-6+2 and 5+2+1 remain in the leading DG quartic table. A leading exact
-differential alone does not close any of these lower-section problems.
+rows. The subsequently audited 6+2 closure leaves only boundary partitions
+7+1 and 5+2+1 in the proved DG quartic table. Pending further audits are
+not dependencies. A leading exact differential alone does not close these
+lower-section problems.
+
+The [new incoming review](continuing10_20260908_incoming_tail.md) also
+records the stronger all-finite 7+1 hostile: every formal inverse row is
+exact and a formal Laurent mate exists, but no rational mate exists.
+Normalized trace rules out an algebraic mate as well. Extending the same
+formal coefficient hierarchy is saturated on that locus; rational
+realization or the actual compact-fibre differential must be restored.
+
+The incoming [THM-4458, one-sided adverse-leak budget](../../01-canon/theorems/THM-4458-lrc-one-sided-adverse-leak-budget.md)
+offers a concrete cross-thread test. For the same real observer R and
+physical target C=R+L, charge only adverse signed products of L against
+r=R-mean(R), minimizing the irrelevant constant gauge by a weighted
+median. An upper bound B_R(L)<=b gives Var(C)>=(E-b)_+^2/E, E=mean(r^2).
+Our actual forest profiles may supply information about L only after an
+explicit map to the present-Q owner/word row is written. A nonpositive
+forest lower profile still allows C=0 and exact cancellation B_R=E, so
+the variance theorem cannot create entry from that lower bound alone.
+Favorable error is free; changing the observer or squaring a loose upper
+bound above E is not allowed. This is a new decisive test, not an
+excluded LRC profile or an imported PDE theorem.
 
 The September 8 affine-pole correction reinforces the same mechanism:
 repairing a pole at a boundary point can create poles at ordinary affine
@@ -257,7 +312,7 @@ every such point before using a global pole-space dimension count.
 3. For the anchored two-negative circuit cells, retain the degree-eight
    D moment condition. Try a finite chart plus concave-tail certificate
    only after proving the chart covers the entire proposed region.
-4. For quartic global carriers, use the three surviving weighted boundary
+4. For quartic global carriers, use the two surviving weighted boundary
    partitions and the actual nonconstant lower section. Any rational
    primitive must pass every affine and boundary pole, not only the
    leading radical differential.

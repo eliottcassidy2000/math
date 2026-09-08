@@ -1,0 +1,5 @@
+CLASSIFICATION: all m>=1 source-linear rationally integrable global submersions proved in report.
+FINITE_UNIVERSE m=1..10, n=2..2m, h in {0,1,-2}: 300 rows; 93 admitted; plus ten constant-A controls.
+RECIPROCAL_RESIDUE_BANK 39 complete multiplicity patterns; simple-root hostile retained.
+UNIT_ORDER n-1 for admitted pure powers; m=1 constant branch has source order0 and global order1.
+Always-active exact gates: 1844

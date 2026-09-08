@@ -49,6 +49,13 @@ Format per entry:
   generic affine-line fibres and a rational primitive do not ensure a
   global conjugate: a scalar pole repair must work on every component.
   The [synthesis](../05-knowledge/results/continuing10_20260908_synthesis.md) records the maps and missing sidecars.
+- **Rebase repair before commit:** a conflict resolver combined DOTALL
+  with a greedy closing-marker line and swallowed historical document tails.
+  The documentation sentinels rejected both files before rebase completion.
+  Reconstructing from the complete parent blobs, inserting both correction
+  entries and selecting the two current ledger rows, preserved every tail.
+  A marker-free file alone is not evidence that a conflict repair preserved
+  its historical content; check known boundaries and untouched suffixes.
 
 ## 2026-09-08 planar-jc48 -- a boundary repair can create affine poles
 

@@ -1,0 +1,74 @@
+{
+  "from": "687644309",
+  "to": "4329ebb75",
+  "unchanged_inherited": 351,
+  "changed": [],
+  "removed": [],
+  "added": [
+    {
+      "path": "04-computation/planar_jc48_sep08_h4_mixed52.py",
+      "bytes": 8729,
+      "sha256": "bb0bb94252ab3e818e26172d2bc224ec1039964fd0e9f290a9cb6057ada301b9"
+    },
+    {
+      "path": "04-computation/planar_jc48_sep08_nonconstant_d_six.py",
+      "bytes": 7363,
+      "sha256": "946cae045bfd1fd3b4ce8c054cf444196c2a2e99d00d0265ef7e070684bdaa3f"
+    },
+    {
+      "path": "04-computation/planar_jc48_sep08_seven_one_formal.py",
+      "bytes": 7342,
+      "sha256": "723dcb0a947295ceec0483755fcc8487476139ac69513063dd81319700fa8453"
+    },
+    {
+      "path": "05-knowledge/results/planar_jc48_sep08_h4_mixed52.md",
+      "bytes": 13434,
+      "sha256": "37de07e716d6f538d072895aa0b694f1ee7b92b8ca60bcf7e0c38f910b637056"
+    },
+    {
+      "path": "05-knowledge/results/planar_jc48_sep08_h4_mixed52.out",
+      "bytes": 1155,
+      "sha256": "6ccb824360d4c5416b88d1fead54503b58e00adea3e412ee0efbccb8c1b5e175"
+    },
+    {
+      "path": "05-knowledge/results/planar_jc48_sep08_h4_mixed52_audit.md",
+      "bytes": 11312,
+      "sha256": "3d2de9842b44178549941523deebfcfd8e8a6cc4b10c05c2686aa41478865ac1"
+    },
+    {
+      "path": "05-knowledge/results/planar_jc48_sep08_nonconstant_d_six.md",
+      "bytes": 14569,
+      "sha256": "0b8862f10fbe2201844aff5f6d1a396ad4775e1ec3bff1fb311547cbb6a07d72"
+    },
+    {
+      "path": "05-knowledge/results/planar_jc48_sep08_nonconstant_d_six.out",
+      "bytes": 399,
+      "sha256": "16d2315be218c959d98169b153b6f5c2395f3fb12cbf4f8804c45496278693c6"
+    },
+    {
+      "path": "05-knowledge/results/planar_jc48_sep08_nonconstant_d_six_audit.md",
+      "bytes": 11522,
+      "sha256": "b166dbb3dadca8e8338244788372e073850963a5f861cfc1e281be08972c10f8"
+    },
+    {
+      "path": "05-knowledge/results/planar_jc48_sep08_seven_one_formal.md",
+      "bytes": 14503,
+      "sha256": "1cab6500e5b0e7bd4f915490f5a40e49de935453c81bf4913c472c137ea4e0d3"
+    },
+    {
+      "path": "05-knowledge/results/planar_jc48_sep08_seven_one_formal.out",
+      "bytes": 407,
+      "sha256": "dec45c98a41a9b4ab1443a16137ec231a9f44722149517e2c22fb76e98d6e522"
+    },
+    {
+      "path": "05-knowledge/results/planar_jc48_sep08_seven_one_formal_audit.md",
+      "bytes": 13406,
+      "sha256": "a6fa24d5859acb942d1dda8e257c3ff9ec8bb81d22aba153c879fa325df6c30c"
+    }
+  ],
+  "old_programs": 82,
+  "new_programs": 85,
+  "old_gates": 2524271,
+  "new_gates": 4273562,
+  "status_migrations_changed": false
+}
