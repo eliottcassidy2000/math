@@ -1,0 +1,168 @@
+{
+  "always_active_gates": 546,
+  "binomial_m_range": [
+    1,
+    40
+  ],
+  "h0_controls": [
+    {
+      "annihilator_exponent": 1,
+      "line_multiplicity": 1,
+      "m": 1
+    },
+    {
+      "annihilator_exponent": 2,
+      "line_multiplicity": 2,
+      "m": 2
+    },
+    {
+      "annihilator_exponent": 2,
+      "line_multiplicity": 3,
+      "m": 3
+    },
+    {
+      "annihilator_exponent": 2,
+      "line_multiplicity": 4,
+      "m": 4
+    },
+    {
+      "annihilator_exponent": 2,
+      "line_multiplicity": 5,
+      "m": 5
+    },
+    {
+      "annihilator_exponent": 2,
+      "line_multiplicity": 6,
+      "m": 6
+    },
+    {
+      "annihilator_exponent": 2,
+      "line_multiplicity": 7,
+      "m": 7
+    },
+    {
+      "annihilator_exponent": 2,
+      "line_multiplicity": 8,
+      "m": 8
+    },
+    {
+      "annihilator_exponent": 2,
+      "line_multiplicity": 9,
+      "m": 9
+    },
+    {
+      "annihilator_exponent": 2,
+      "line_multiplicity": 10,
+      "m": 10
+    }
+  ],
+  "inverse_m_range": [
+    1,
+    6
+  ],
+  "inverse_parameter_bank": [
+    [
+      1,
+      1,
+      0
+    ],
+    [
+      2,
+      -1,
+      3
+    ],
+    [
+      -3,
+      2,
+      -2
+    ]
+  ],
+  "ring": "C[x,t]; F global on W_m but D_F is not asserted global",
+  "scope": "finite exact controls for the stated analytic all-m theorem",
+  "symbolic_controls": [
+    {
+      "Q_h1": "x - 2",
+      "alternative_map_degree": 1,
+      "annihilator_exponent": 1,
+      "e": 1,
+      "kappa_h1": 1,
+      "m": 1,
+      "special_value_a1_h1_B00": -1,
+      "top_principal_coefficient_a1_h1": "1"
+    },
+    {
+      "Q_h1": "x**2 - 4*x + 6",
+      "alternative_map_degree": 3,
+      "annihilator_exponent": 3,
+      "e": 3,
+      "kappa_h1": -2,
+      "m": 2,
+      "special_value_a1_h1_B00": 3,
+      "top_principal_coefficient_a1_h1": "-8/3"
+    },
+    {
+      "Q_h1": "x**3 - 6*x**2 + 15*x - 20",
+      "alternative_map_degree": 5,
+      "annihilator_exponent": 5,
+      "e": 5,
+      "kappa_h1": 6,
+      "m": 3,
+      "special_value_a1_h1_B00": -10,
+      "top_principal_coefficient_a1_h1": "7776/5"
+    },
+    {
+      "Q_h1": "x**4 - 8*x**3 + 28*x**2 - 56*x + 70",
+      "alternative_map_degree": 7,
+      "annihilator_exponent": 7,
+      "e": 7,
+      "kappa_h1": -20,
+      "m": 4,
+      "special_value_a1_h1_B00": 35,
+      "top_principal_coefficient_a1_h1": "-1280000000/7"
+    },
+    {
+      "Q_h1": "x**5 - 10*x**4 + 45*x**3 - 120*x**2 + 210*x - 252",
+      "alternative_map_degree": 9,
+      "annihilator_exponent": 9,
+      "e": 9,
+      "kappa_h1": 70,
+      "m": 5,
+      "special_value_a1_h1_B00": -126,
+      "top_principal_coefficient_a1_h1": "40353607000000000/9"
+    },
+    {
+      "Q_h1": "x**6 - 12*x**5 + 66*x**4 - 220*x**3 + 495*x**2 - 792*x + 924",
+      "alternative_map_degree": 11,
+      "annihilator_exponent": 11,
+      "e": 11,
+      "kappa_h1": -252,
+      "m": 6,
+      "special_value_a1_h1_B00": 462,
+      "top_principal_coefficient_a1_h1": "-260259114966540661762818048/11"
+    },
+    {
+      "Q_h1": "x**7 - 14*x**6 + 91*x**5 - 364*x**4 + 1001*x**3 - 2002*x**2 + 3003*x - 3432",
+      "alternative_map_degree": 13,
+      "annihilator_exponent": 13,
+      "e": 13,
+      "kappa_h1": 924,
+      "m": 7,
+      "special_value_a1_h1_B00": -1716,
+      "top_principal_coefficient_a1_h1": "357878514399132043977231799719007617024/13"
+    },
+    {
+      "Q_h1": "x**8 - 16*x**7 + 120*x**6 - 560*x**5 + 1820*x**4 - 4368*x**3 + 8008*x**2 - 11440*x + 12870",
+      "alternative_map_degree": 15,
+      "annihilator_exponent": 15,
+      "e": 15,
+      "kappa_h1": -3432,
+      "m": 8,
+      "special_value_a1_h1_B00": 6435,
+      "top_principal_coefficient_a1_h1": "-35982218207704885189750152183116466853806302985977856/5"
+    }
+  ],
+  "symbolic_m_range": [
+    1,
+    8
+  ]
+}

@@ -1,0 +1,4 @@
+PASS: fixed-F hypotheses, all affine poles, two component labels, exact primary order three.
+Canonical derivative j has exact primary order j+3; full scalar parts retained.
+Hostile h=0: repeated critical component admits an order-at-most-two witness; excluded parameter is necessary.
+Always-active exact gates: 47

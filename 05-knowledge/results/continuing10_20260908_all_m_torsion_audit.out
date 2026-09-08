@@ -1,0 +1,6 @@
+INDEPENDENT ALL-M AUDIT: full symbolic source/charts for m1..7; integer binomial controls m1..100
+PASS alternative A2 inverse cover; two special components; rational unit primitive; exact annihilator witness
+BOUNDARY m1: degree1 and no ramification; h0 higher-m: critical line and valuation order2
+SCOPE original polynomial response module; unbounded theorem is analytic, finite controls are not the proof
+CERTIFICATE_SHA256 87c8f51d8a39ba3dacba9e7f7ace515f370ca969ee9589ee9f50065dc8ab925c
+Always-active exact gates: 445

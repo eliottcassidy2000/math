@@ -1,30 +1,21 @@
 # Script Results Index
 
-- [Native LRC wedges](continuing10_20260907_lrc_composite_wedges.md),
-  [joint D-moment octant exclusion](continuing10_20260907_nonpositive_circuits.md),
-  and [global source-linear carrier exclusion](continuing10_20260907_dg_linear_carrier.md)
-  are **PROVED + INDEPENDENTLY AUDITED**. The
-  [third-wedge topology](continuing10_20260907_lrc_third_wedge.md) deletes13/15
-  connected7200 words; [last A](continuing10_20260907_lrc_last_a.md) closes another.
-  The final connected7200 word is under independent review.
+- [Current continuing synthesis](continuing10_20260908_synthesis.md):
+  **PROVED + FINITE-EXACT + INDEPENDENTLY AUDITED.** Complete connected-complement
+  clock7200 closure and twenty further clocks leave7,625, maximum11,935.
+  Two-direction repair distance strengthens the no-three-in-line rate;
+  joint D moments exclude the closed nonpositive circuit octant; the
+  global source-linear layer connects to an all-m family of smooth
+  submersions with exact repair order2m-1 and an actual affine-chart
+  power map of the same degree.
+  [Manifest](continuing10_20260908_manifest.json) pins reproduction and scope.
+  General LRC14, planar JC and the original-response/wall-core problems remain OPEN.
 
-- [Two-direction repair barrier](continuing10_20260907_no3_repair.md):
-  **PROVED + FINITE-EXACT + INDEPENDENTLY AUDITED.** A native capacity-two
-  matching potential raises the uniform fixed-row deletion mean to
-  `gamma=1-5e^-2+e^-2/12-e^-4/2+5e^-6/4+e^-8/6>0.328`.
-  It strengthens the no-three-in-line probability rate to `gamma^2/8`
-  and controls arbitrary adaptive repairs with bounded original-point loss.
-  The general extremal problem remains OPEN.
-
-- [Current continuing synthesis](continuing9_20260907_synthesis.md):
-  **PROVED + FINITE-EXACT + INDEPENDENTLY AUDITED.** Every circuit sign word
-  survives fixed first two moments; exact cubic image and anchored C/D
-  transfer boundary. Joint ratio trees realize the7200 hostile; a composite
-  pair closes an actual thirteen-speed pattern without graph connectivity.
-  Exact univariate, primitive-monomial and arbitrary-degree constant-slope
-  y-linear carrier genera exclude rational nonzero-time flows in those classes.
-  [Manifest](continuing9_20260907_manifest.json):43 artifacts,10 engines,
-  36458 exact gates per normal/optimized pass. General prizes remain OPEN.
+- [Previous continuing synthesis](continuing9_20260907_synthesis.md):
+  fixed-moment circuit surjectivity, exact cubic image, anchored C/D boundary,
+  joint ratio trees and native endpoint closure; exact restricted carrier
+  genera and nonrational scalar times. [Manifest](continuing9_20260907_manifest.json):
+  43 artifacts,10 engines,36458 exact gates per normal/optimized pass.
 
 - [Previous continuing synthesis](continuing8_20260906_synthesis.md):
   **PROVED + FINITE-EXACT + INDEPENDENTLY AUDITED.** Exact positive Newton

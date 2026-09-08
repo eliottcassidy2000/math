@@ -1,0 +1,10 @@
+REMAINING_B [5, 8, 9, 30, 32, 36, 48] E103; complete low graph7 edges,3 spanning trees; forced5--30--9--36--48 and one triangle attachment
+FORCED_BRIDGE9--30 credit102; every positive relevant arm credit is greater than1; zero arms required under failure
+FRESH_DOMAINS 8/48:316,zero10;32/48:633,zero51;36/48:231,zero18
+EXACT_ZERO_WEDGES180+918, all joint margins realized; endpoint minima112 and140 on quotient clock1800, sheet4
+SCALE_HOSTILE578/801: old7200-sheet2 credit114; new7200-sheet4 credit112, so no unchanged-credit scaling
+PROFILES 2277 all strict walls; literal minimum and maximum controls
+POSITIVE_FULL13 nonunit primitive row with the exact B word and connected actual graph; safe lifts 2449
+SCOPE this complete connected-complement word closes; no claim on arbitrary doubled wedges with a larger excess
+CERTIFICATE_SHA256 01381d94aaeaf92ca7dfb37b902c29db16da0aa36c5587b602dd836b5616cabd
+PASS 15331866 always-active exact gates; raw LF

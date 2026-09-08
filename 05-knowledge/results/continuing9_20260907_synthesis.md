@@ -1,10 +1,13 @@
 # Continuing synthesis: fixed moments, composite paths, and invariant curves
 
-**CURRENT CHECKPOINT, 2026-09-07. Status: PROVED scoped results, with
+**PREVIOUS CHECKPOINT, 2026-09-07. Status: PROVED scoped results, with
 FINITE-EXACT evidence and independent audits.** General LRC(14), planar
 JC, the anchored original-response sign, and the untouched wall-core
 no-return problem remain **OPEN**. No general conjecture closure or
 external priority claim is made.
+
+The [current synthesis](continuing10_20260908_synthesis.md) supersedes this
+checkpoint as navigation; the frozen evidence below remains unchanged.
 
 This session continued from `7c557fb04` in the clean isolated worktree.
 The first audited proof checkpoint is `a1f02fa5e`. Incoming

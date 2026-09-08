@@ -1,0 +1,5 @@
+DG source submersions on W_m: m>=1, a*h!=0, full polynomial-part constant convention.
+Exact unit annihilator: (F-f0)^(2m-1) in the original source response module.
+Alternative affine chart: W_m minus E1 = A2_(F,u); mate map is finite flat degree 2m-1.
+Boundary ramification index: 2m-1; m=1 is unramified; h=0,m>=2 drops unit order to 2.
+Always-active exact gates: 546

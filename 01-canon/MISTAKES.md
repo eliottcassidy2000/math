@@ -29,6 +29,27 @@ Format per entry:
   provenance also required the PDF byte hash: the live 57-page download and
   the web tool's cached 45-page extraction shared one URL.
 
+## 2026-09-08 continuing10 -- retained coordinates at proof transfers
+
+- **REFUTED transfer:** ratio578:801 has credit114 at effective clock3600
+  with sheet2, but112 at effective clock1800 with sheet4. The first failed
+  implication was transporting the old credit through a changed quotient.
+  Fresh saturated alphabets and native endpoint profiles still close the
+  [last7200 word](../05-knowledge/results/continuing10_20260907_lrc_last_b.md).
+  Possible-edge graphs require a MINIMUM spanning tree; a maximum tree
+  needs actual edges. Adding a vertex can lower a partial minimum tree.
+- **Repaired before promotion:** the joint-moment draft printed -887y/7
+  in the sixth D moment; the correct coefficient is -915y/7. Executable
+  identities and certificates already used the correct value. Exact
+  degree-six two-negative survivors fail degree eight; the survivor
+  statement must retain its degree bound. The closed all-nonpositive
+  octant exclusion has a separate complete [proof](../05-knowledge/results/continuing10_20260907_nonpositive_circuits.md).
+- **Typed survivors:** two-direction repair distance bounds original-point
+  deletion, not runtime or all-slope feasibility. Global smoothness,
+  generic affine-line fibres and a rational primitive do not ensure a
+  global conjugate: a scalar pole repair must work on every component.
+  The [synthesis](../05-knowledge/results/continuing10_20260908_synthesis.md) records the maps and missing sidecars.
+
 ## 2026-09-08 planar-jc48 -- a boundary repair can create affine poles
 
 - **REFUTED before promotion:** in the all-finite quartic `(5,3)` scout,

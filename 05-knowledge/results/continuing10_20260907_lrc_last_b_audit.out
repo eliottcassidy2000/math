@@ -1,0 +1,8 @@
+DOUBLED_WEDGES arm_counts [316, 633, 231] zero_counts [10, 51, 18] products [180, 918] minimum_credits [112, 140]
+TOPOLOGY cheap_edges 7 connected_subgraphs 4 spanning_trees 3
+NATIVE_PROFILES 2277 all strict extrema and literal owners verified
+SCALE_HOSTILE ratio578:801 old_sheet2_clock3600_credit114 new_sheet4_clock1800_credit112
+FULL_ROW_SAFE_LIFTS 2449 at alpha1/7
+COMPOSITION inherited_words76814 residual15 third_deletes13 A_and_B_close_remaining2
+NEW_NECESSARY_CLOCKS 7645 maximum 11995 semantic_sha256 f8c42793c4a5081d40a3937c9a79d9cd307e6c08c8b9ea3e94bac5388e47d16c
+PASS 16850 always-active exact gates

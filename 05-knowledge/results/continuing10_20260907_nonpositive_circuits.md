@@ -327,7 +327,7 @@ polynomials and their positive normalization factors, every power and
 Bernstein coefficient, all domain bounds, and all positive/hostile controls.
 No producer is imported. Both
 [normal output](continuing10_20260907_nonpositive_circuits.out) and
-[optimized output](continuing10_20260907_nonpositive_circuits_optimized.out)
+[identical optimized output](continuing10_20260907_nonpositive_circuits.out)
 pass **384 always-active exact gates** with identical raw LF stdout.
 The source configures newlines explicitly; output bytes were captured
 without text normalization.

@@ -210,7 +210,7 @@ THM-2680 lacks a THM-2682 two-simplex and THM-2658 needs a gain section.
 
 **Trigger / action:** for existence, covering, or near-extremality, identify the actual max/tail event before averaging and test whether a saturated exceptional rung is mean-invisible.
 **Mechanism / counterindication:** means erase rare structure without a tail inequality. For a zero event, seek a lower-change statistic with the same zero set and retain its randomness for concentration; a mixture need not inherit concentration around its own mean.
-**Evidence:** S399 1,2,5; MISTAKE-129/171; THM-4111/4115 use cut mean+variance/support for a maximum, not an interval. The [diagonal defect](../05-knowledge/results/overnight10_20260906_no3line_defect.md) replaces cubic counts by excess and gives an exponential zero-event bound.
+**Evidence:** S399 1,2,5; MISTAKE-129/171; THM-4111/4115 use cut mean+variance/support. The [repair metric](../05-knowledge/results/continuing10_20260907_no3_repair.md) controls adaptive point loss.
 
 ## Respect symmetries by searching orbit representatives
 
@@ -281,7 +281,7 @@ functional; projections can erase a mixed coefficient, chain or fixed minimizer.
 [trinomial opposite frequencies](../05-knowledge/results/nc2_channel_contiguous_overnight_hexagon_sep05.md) separate a formal square from a positive norm.
 
 ## Rank local extrema, then pass closure and effectivity
-**Action:** when sharp local caps share labels, rank the spectrum, force a finite bank, retain common fibres, then test cycle/Čech closure and membership in the target positive, integral, polynomial, or completed category. Compatible marginals may have bad triangles or glue only in a field/signed space; omit gates only after independence or target factorization. **Evidence:** THM-2258/2263/2270, THM-3388/3389, THM-3080/3081/3383, THM-3396.
+**Action:** when caps share labels, force a bank, keep common fibres and test target-category membership. Marginals may glue only in a field or signed space; omit checks only after independence or factorization. **Evidence:** THM-2258/2263/2270, THM-3388/3389; [native paths and component poles](../05-knowledge/results/continuing10_20260908_synthesis.md) recover endpoints and every pole component.
 
 ## “One item left” requires a typed residual
 

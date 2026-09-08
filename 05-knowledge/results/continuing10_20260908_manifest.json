@@ -1,0 +1,892 @@
+{
+  "schema": 1,
+  "created_utc": "2026-09-08T19:39:20.868740+00:00",
+  "baseline_commit": "89aca0881928b89a8fcf4b4a0aaa1e160e43f624",
+  "incoming_review_head": "687644309fd3de7cf62cfdc4844600147c1eacb1",
+  "proof_checkpoints": [
+    "4441760e1",
+    "e291fcc94"
+  ],
+  "hash_basis": "raw LF bytes; maintained synthesis, navigation and this manifest excluded; only status/routing prose changed on filing reviewed reports",
+  "scope": "Complete connected-complement clock7200 closure and20 upper clocks; two-direction no-three-in-line repair-distance lower bound; full closed nonpositive native C/D circuit octant exclusion; complete global source-linear W2 carrier theorem; all-m globally smooth DG family with exact unit annihilator exponent2m-1, actual alternative affine chart and finite-flat power map, including the multiplicity failure boundary. General conjectures remain OPEN.",
+  "artifact_count": 81,
+  "program_count": 23,
+  "exact_gates_per_mode": 21465655,
+  "validation": {
+    "continuing10_20260907_dg_linear_carrier": {
+      "gates": 88,
+      "normal_optimized_raw_LF": true,
+      "output_sha256": "3bb9dc940479599197a0fea02269c6485d80e80b1be26282c298e72452e45a42",
+      "source_sha256": "0f803f5ea98256bb8d4dd2685732885b60b90ed4514b3a5deb8d02a46f85241e"
+    },
+    "continuing10_20260907_dg_linear_carrier_audit": {
+      "gates": 138,
+      "normal_optimized_raw_LF": true,
+      "output_sha256": "1d145d652dee4c15f56f990afd98e9d025d9a50d53937b9a9e5fc0f06d0d6d06",
+      "source_sha256": "55a5f0b24ff364b9e96767bac9bd57e63c319315375b5d0565526234089ca850"
+    },
+    "continuing10_20260907_lrc_clock7200": {
+      "gates": 31,
+      "normal_optimized_raw_LF": true,
+      "output_sha256": "2e200766cc341a7fb86742d5098a7b8489c550f1254771f48c6988b5d6143d4a",
+      "source_sha256": "323367487ec10cad4b47d52d10b57395ca2c7f18616817325d8cc0467457332c"
+    },
+    "continuing10_20260907_lrc_composite_wedges": {
+      "gates": 4311951,
+      "normal_optimized_raw_LF": true,
+      "output_sha256": "7e17c1ee2acad0fcebf3a4885e56923cfa13b7742648c8bf7df07aece68aa9d8",
+      "source_sha256": "1d2f52c100802ab1d3b330c920a3f494eca662b7a51a7c5fedc6f1fe9a287cb5"
+    },
+    "continuing10_20260907_lrc_composite_wedges_audit": {
+      "gates": 12660,
+      "normal_optimized_raw_LF": true,
+      "output_sha256": "81e6545bd21d3c0305fccb1573ca99a32cca96a1077ae3fb112f5f0e5d763712",
+      "source_sha256": "af7e34a7a0251033788a67e7e47dd9d9ee380f3509e8a8ca0e4b9de5b96ddfcc"
+    },
+    "continuing10_20260907_lrc_last_a": {
+      "gates": 1222799,
+      "normal_optimized_raw_LF": true,
+      "output_sha256": "c3c309f261b0bb5ec7ccf1424ec04a897da0960c43cfaa6e457162f3b7f757d6",
+      "source_sha256": "cc2668c8249bd1d1c804c65af93a3e55a2663a6c4891bdf797983771c98eb325"
+    },
+    "continuing10_20260907_lrc_last_a_audit": {
+      "gates": 6617,
+      "normal_optimized_raw_LF": true,
+      "output_sha256": "a7d74df89499fc0805180de14443e3d0009625e7085aeeef2c757a4a316b8b6d",
+      "source_sha256": "7a0227ed805ec10c82d6174fc52da6d79573d12445c61f2a1ed83197d99146ed"
+    },
+    "continuing10_20260907_lrc_last_b": {
+      "gates": 15331866,
+      "normal_optimized_raw_LF": true,
+      "output_sha256": "571884a84d72e7a55c89c7a89835bf86577066b375774935101b0e9f5e1e63fd",
+      "source_sha256": "3cb1c77dadcdccf2778e24df58dfad9a0bc8a24395698ee973c85afc0a0ecef0"
+    },
+    "continuing10_20260907_lrc_last_b_audit": {
+      "gates": 16850,
+      "normal_optimized_raw_LF": true,
+      "output_sha256": "a43993d20cdb2575ad08590436948fd5d7f84792198781538f06b8f3f01ca9cf",
+      "source_sha256": "14e92d0304554ddf33970e167b1ad147b1883380734cf1b0e406994a4848751a"
+    },
+    "continuing10_20260907_lrc_third_wedge": {
+      "gates": 78854,
+      "normal_optimized_raw_LF": true,
+      "output_sha256": "f8ebfb3f7d302bdf24274934c80d06d8c663df3bcc52c0feae6e400cfca9e044",
+      "source_sha256": "a768f216da83a8882cd2ef2d52abe08f344a971035e0618aa74242d0b623e6fe"
+    },
+    "continuing10_20260907_lrc_third_wedge_audit": {
+      "gates": 2605,
+      "normal_optimized_raw_LF": true,
+      "output_sha256": "e396dcfc4126acce9e68c0970d837841bec0e9b1b9263b959344bbc969ec63ca",
+      "source_sha256": "2f4edd8baf15e6e7c610e6a229f217d034bf30e8785c73d2738c7a5b770af366"
+    },
+    "continuing10_20260907_lrc_wedge_topology": {
+      "gates": 549,
+      "normal_optimized_raw_LF": true,
+      "output_sha256": "8ca50996eac493eaa9c9c98e543f73fff29758be008bafe7e6847b0af140082c",
+      "source_sha256": "6fc998e7596bfa2c4182bfe41423f3d4cbdd9d9a4f7ce77724afebdfdb653e6b"
+    },
+    "continuing10_20260907_lrc_wedge_topology_audit": {
+      "gates": 51576,
+      "normal_optimized_raw_LF": true,
+      "output_sha256": "9e67c262a701453f7e66bbe08250bcc2567f07b540fa3546432140ef0b2696c3",
+      "source_sha256": "ce2e0976fcb4a08138377b19e3216cf7acc9708e4211c06090c6822756a9ada2"
+    },
+    "continuing10_20260907_no3_repair": {
+      "gates": 122799,
+      "normal_optimized_raw_LF": true,
+      "output_sha256": "5a294ce60497c760e0f654bf1e89a09e67459ccad8ffad68c565ac129d20173f",
+      "source_sha256": "3c22e4053b3a8fac2c44739f083c97b6539c023755a4a45cbd3eee62a389ca9b"
+    },
+    "continuing10_20260907_no3_repair_audit": {
+      "gates": 22186,
+      "normal_optimized_raw_LF": true,
+      "output_sha256": "617c410c8721a2517af9f3ca517a965dcfd15156358cc77348c3da6e37680971",
+      "source_sha256": "4f9a9bf9e5a8ef99a047764e477871519f327c34e7453f3d399dc249e3061f8b"
+    },
+    "continuing10_20260907_nonpositive_circuits": {
+      "gates": 384,
+      "normal_optimized_raw_LF": true,
+      "output_sha256": "36e5c21f2113d4a3dfbc825af03ddb0d3570a3e359c58ac5a3a78f164db9908b",
+      "source_sha256": "d392980046171db2ea1df6cb759c04882fd57305ae811fe3d7f5746df6b6a973"
+    },
+    "continuing10_20260907_nonpositive_circuits_audit": {
+      "gates": 129,
+      "normal_optimized_raw_LF": true,
+      "output_sha256": "3ee32a5c264c8f8afc9fe467ed0764a2885f395aa971df14a5db903b7067fd92",
+      "source_sha256": "ea3908f02331f64838659a50221d85d64f41f90acfe423d7a75666eb079941a6"
+    },
+    "continuing10_20260908_all_m_torsion_audit": {
+      "gates": 445,
+      "normal_optimized_raw_LF": true,
+      "output_sha256": "540dd0a4d8a1cb45f43c7b8b6aebeeda9d1df0f3928ba28ace2255c6cf7c12b3",
+      "source_sha256": "5d9dcf4ec3d3db6ceac66de14a436e292b5dd66be5a7441f19c6407a7d3076fc"
+    },
+    "continuing10_20260908_dg_unbounded_torsion": {
+      "gates": 546,
+      "normal_optimized_raw_LF": true,
+      "output_sha256": "35272f408c20715cd0b84df71ecc6a48bf92c841a5a2c103f0077ed0755cfd53",
+      "source_sha256": "2c6e575521e44b971877455d1984e4286611c0df2e15bec73ef17941d6a6bd49"
+    },
+    "continuing10_20260908_fourfold_unit_bridge": {
+      "gates": 10,
+      "normal_optimized_raw_LF": true,
+      "output_sha256": "8064cc2d7393f0a209ec98eee9927a1abccae87507f5baa20bce113e4a749e5e",
+      "source_sha256": "4ac226bff49507777c05a4bf31150ce4e65f8a1e363974d128a16aad9f897658"
+    },
+    "continuing10_20260908_fourfold_unit_bridge_audit": {
+      "gates": 47,
+      "normal_optimized_raw_LF": true,
+      "output_sha256": "41ab734c8f89adab78cd84fa8f5983ba31ee2697e7e8dfc6c5e6b664a907d9ba",
+      "source_sha256": "d845c141cd1c5b7203f4251e1940a1214ebbfd762346cbc831fc11d56f91fee9"
+    },
+    "continuing10_20260908_lrc_upper_twenty": {
+      "gates": 128409,
+      "normal_optimized_raw_LF": true,
+      "output_sha256": "43c80bcbf736d537999a02dde6e718600dc6ac668857f585a07f22a7adf5e6b4",
+      "source_sha256": "5b4c3f3932c42fd4a0b1fbb3a4ac3905caba64a5f0a63aeae1fe225cd13bd47e"
+    },
+    "continuing10_20260908_lrc_upper_twenty_audit": {
+      "gates": 154116,
+      "normal_optimized_raw_LF": true,
+      "output_sha256": "e10f1f3d3175f08507f2a2c69b95f4233be248b2da1ee6623f8ff387239e9fa4",
+      "source_sha256": "2133161e8f7cc5883a565b2967deb713629885b17c827e93f85b021b93329c54"
+    }
+  },
+  "normal_optimized_raw_stdout_equal": true,
+  "regenerated_certificates_raw_unchanged": true,
+  "prior_artifacts_verified": 751,
+  "incoming_transition_review": {
+    "commit": "8f345194053d5128db5dc9ac2f73dcbc391d64d6",
+    "prior_count": 471,
+    "current_count": 495,
+    "new_artifacts": [
+      "04-computation/planar_jc48_sep07_carrier_frontier.py",
+      "04-computation/planar_jc48_sep07_completed_response.py",
+      "04-computation/planar_jc48_sep07_completed_response_audit.py",
+      "04-computation/planar_jc48_sep07_next_braid.py",
+      "04-computation/planar_jc48_sep07_supplier_genus.py",
+      "04-computation/planar_jc48_sep07_twofive_sextics.py",
+      "05-knowledge/results/planar_jc48_sep07_carrier_frontier.md",
+      "05-knowledge/results/planar_jc48_sep07_carrier_frontier.out",
+      "05-knowledge/results/planar_jc48_sep07_carrier_frontier_audit.md",
+      "05-knowledge/results/planar_jc48_sep07_completed_response.md",
+      "05-knowledge/results/planar_jc48_sep07_completed_response.out",
+      "05-knowledge/results/planar_jc48_sep07_completed_response_audit.md",
+      "05-knowledge/results/planar_jc48_sep07_completed_response_audit.out",
+      "05-knowledge/results/planar_jc48_sep07_next_braid.md",
+      "05-knowledge/results/planar_jc48_sep07_next_braid.out",
+      "05-knowledge/results/planar_jc48_sep07_next_braid_audit.md",
+      "05-knowledge/results/planar_jc48_sep07_next_braid_certificate.json.gz",
+      "05-knowledge/results/planar_jc48_sep07_supplier_genus.md",
+      "05-knowledge/results/planar_jc48_sep07_supplier_genus.out",
+      "05-knowledge/results/planar_jc48_sep07_supplier_genus_audit.md",
+      "05-knowledge/results/planar_jc48_sep07_twofive_sextics.md",
+      "05-knowledge/results/planar_jc48_sep07_twofive_sextics.out",
+      "05-knowledge/results/planar_jc48_sep07_twofive_sextics_audit.md",
+      "05-knowledge/results/planar_jc48_sep07_twofive_sextics_geometry_audit.md"
+    ],
+    "reviewed_status_transitions": [
+      {
+        "path": "05-knowledge/results/planar_jc48_sep06_next_infinity.md",
+        "old_sha256": "a30037d9371abda55ce70e030c011feee22a119913c1667e95ea121acb472f33",
+        "new_sha256": "7a8b052a4e5aaf9b8f8e805015ad513e8b35b6a39aeea565af63b44ab561e696",
+        "reason": "Incoming8f3451940 updates the status route: boundary A6 witness remains valid, its affine-complement extension is now excluded. Geometry and producer bytes unchanged."
+      }
+    ]
+  },
+  "september8_incoming_review": {
+    "base": "8f345194053d5128db5dc9ac2f73dcbc391d64d6",
+    "head": "687644309fd3de7cf62cfdc4844600147c1eacb1",
+    "inherited_unchanged": 495,
+    "new_artifacts": [
+      "04-computation/planar_jc48_sep07_higher_braid.py",
+      "04-computation/planar_jc48_sep07_higher_odd.py",
+      "04-computation/planar_jc48_sep07_universal_genus.py",
+      "04-computation/planar_jc48_sep08_binomial_exactness.py",
+      "04-computation/planar_jc48_sep08_boundary_exactness.py",
+      "04-computation/planar_jc48_sep08_boundary_linear.py",
+      "04-computation/planar_jc48_sep08_const_d_quartic.py",
+      "04-computation/planar_jc48_sep08_const_d_translation.py",
+      "04-computation/planar_jc48_sep08_constant_d_shared_six.py",
+      "04-computation/planar_jc48_sep08_cusp_ideal.py",
+      "04-computation/planar_jc48_sep08_cycle_support.py",
+      "04-computation/planar_jc48_sep08_d4_involution.py",
+      "04-computation/planar_jc48_sep08_d4_retention.py",
+      "04-computation/planar_jc48_sep08_dg_genus.py",
+      "04-computation/planar_jc48_sep08_dg_quadratic.py",
+      "04-computation/planar_jc48_sep08_exact_pencils.py",
+      "04-computation/planar_jc48_sep08_finite_eight.py",
+      "04-computation/planar_jc48_sep08_five_one_one_one.py",
+      "04-computation/planar_jc48_sep08_five_three.py",
+      "04-computation/planar_jc48_sep08_five_three_infinity.py",
+      "04-computation/planar_jc48_sep08_four_four.py",
+      "04-computation/planar_jc48_sep08_four_four_transport.py",
+      "04-computation/planar_jc48_sep08_four_three_one.py",
+      "04-computation/planar_jc48_sep08_four_three_one_infinity.py",
+      "04-computation/planar_jc48_sep08_four_two_one_one.py",
+      "04-computation/planar_jc48_sep08_genus_capacity.py",
+      "04-computation/planar_jc48_sep08_h4_degree16.py",
+      "04-computation/planar_jc48_sep08_h4_involution.py",
+      "04-computation/planar_jc48_sep08_h4_mixed32.py",
+      "04-computation/planar_jc48_sep08_h4_mixed33.py",
+      "04-computation/planar_jc48_sep08_h4_mixed42.py",
+      "04-computation/planar_jc48_sep08_h4_single_cycle.py",
+      "04-computation/planar_jc48_sep08_infinity11_braid.py",
+      "04-computation/planar_jc48_sep08_infinity_octuple.py",
+      "04-computation/planar_jc48_sep08_leading_exactness.py",
+      "04-computation/planar_jc48_sep08_mixed_cusp_braid.py",
+      "04-computation/planar_jc48_sep08_moving_tubes.py",
+      "04-computation/planar_jc48_sep08_octuple_transport.py",
+      "04-computation/planar_jc48_sep08_odd_retention.py",
+      "04-computation/planar_jc48_sep08_pole_degree.py",
+      "04-computation/planar_jc48_sep08_quartic_boundary.py",
+      "04-computation/planar_jc48_sep08_quartic_common_root.py",
+      "04-computation/planar_jc48_sep08_quartic_differential.py",
+      "04-computation/planar_jc48_sep08_shared_roots.py",
+      "04-computation/planar_jc48_sep08_six_one_one.py",
+      "04-computation/planar_jc48_sep08_three_cusp_boundary.py",
+      "04-computation/planar_jc48_sep08_three_cusp_braid.py",
+      "04-computation/planar_jc48_sep08_three_cusp_closure.py",
+      "04-computation/planar_jc48_sep08_three_cusp_family.py",
+      "04-computation/planar_jc48_sep08_three_cusp_group.py",
+      "04-computation/planar_jc48_sep08_three_cusp_passport.py",
+      "04-computation/planar_jc48_sep08_three_three_two.py",
+      "04-computation/planar_jc48_sep08_two_cusp_braid.py",
+      "04-computation/planar_jc48_sep08_two_cusp_family.py",
+      "04-computation/planar_jc48_sep08_two_cusp_passport.py",
+      "04-computation/planar_jc48_sep08_two_cusps.py",
+      "04-computation/planar_jc48_sep08_two_finite_four_four.py",
+      "04-computation/planar_jc48_sep08_unit_torsion.py",
+      "05-knowledge/results/planar_jc48_sep07_higher_braid.md",
+      "05-knowledge/results/planar_jc48_sep07_higher_braid.out",
+      "05-knowledge/results/planar_jc48_sep07_higher_braid_audit.md",
+      "05-knowledge/results/planar_jc48_sep07_higher_braid_finite7_infinity7_certificate.json.gz",
+      "05-knowledge/results/planar_jc48_sep07_higher_braid_finite7_infinity9_certificate.json.gz",
+      "05-knowledge/results/planar_jc48_sep07_higher_braid_finite9_infinity7_certificate.json.gz",
+      "05-knowledge/results/planar_jc48_sep07_higher_odd.md",
+      "05-knowledge/results/planar_jc48_sep07_higher_odd.out",
+      "05-knowledge/results/planar_jc48_sep07_higher_odd_audit.md",
+      "05-knowledge/results/planar_jc48_sep07_universal_genus.md",
+      "05-knowledge/results/planar_jc48_sep07_universal_genus.out",
+      "05-knowledge/results/planar_jc48_sep07_universal_genus_audit.md",
+      "05-knowledge/results/planar_jc48_sep08_binomial_exactness.md",
+      "05-knowledge/results/planar_jc48_sep08_binomial_exactness.out",
+      "05-knowledge/results/planar_jc48_sep08_binomial_exactness_audit.md",
+      "05-knowledge/results/planar_jc48_sep08_boundary_exactness.md",
+      "05-knowledge/results/planar_jc48_sep08_boundary_exactness.out",
+      "05-knowledge/results/planar_jc48_sep08_boundary_exactness_audit.md",
+      "05-knowledge/results/planar_jc48_sep08_boundary_linear.md",
+      "05-knowledge/results/planar_jc48_sep08_boundary_linear.out",
+      "05-knowledge/results/planar_jc48_sep08_boundary_linear_audit.md",
+      "05-knowledge/results/planar_jc48_sep08_const_d_quartic.md",
+      "05-knowledge/results/planar_jc48_sep08_const_d_quartic.out",
+      "05-knowledge/results/planar_jc48_sep08_const_d_quartic_audit.md",
+      "05-knowledge/results/planar_jc48_sep08_const_d_translation.md",
+      "05-knowledge/results/planar_jc48_sep08_const_d_translation.out",
+      "05-knowledge/results/planar_jc48_sep08_const_d_translation_audit.md",
+      "05-knowledge/results/planar_jc48_sep08_constant_d_shared_six.md",
+      "05-knowledge/results/planar_jc48_sep08_constant_d_shared_six.out",
+      "05-knowledge/results/planar_jc48_sep08_constant_d_shared_six_audit.md",
+      "05-knowledge/results/planar_jc48_sep08_cusp_ideal.md",
+      "05-knowledge/results/planar_jc48_sep08_cusp_ideal.out",
+      "05-knowledge/results/planar_jc48_sep08_cusp_ideal_audit.md",
+      "05-knowledge/results/planar_jc48_sep08_cycle_support.md",
+      "05-knowledge/results/planar_jc48_sep08_cycle_support.out",
+      "05-knowledge/results/planar_jc48_sep08_cycle_support_audit.md",
+      "05-knowledge/results/planar_jc48_sep08_d4_involution.md",
+      "05-knowledge/results/planar_jc48_sep08_d4_involution.out",
+      "05-knowledge/results/planar_jc48_sep08_d4_involution_audit.md",
+      "05-knowledge/results/planar_jc48_sep08_d4_retention.md",
+      "05-knowledge/results/planar_jc48_sep08_d4_retention.out",
+      "05-knowledge/results/planar_jc48_sep08_d4_retention_audit.md",
+      "05-knowledge/results/planar_jc48_sep08_dg_genus.md",
+      "05-knowledge/results/planar_jc48_sep08_dg_genus.out",
+      "05-knowledge/results/planar_jc48_sep08_dg_genus_audit.md",
+      "05-knowledge/results/planar_jc48_sep08_dg_quadratic.md",
+      "05-knowledge/results/planar_jc48_sep08_dg_quadratic.out",
+      "05-knowledge/results/planar_jc48_sep08_dg_quadratic_audit.md",
+      "05-knowledge/results/planar_jc48_sep08_exact_pencils.md",
+      "05-knowledge/results/planar_jc48_sep08_exact_pencils.out",
+      "05-knowledge/results/planar_jc48_sep08_exact_pencils_audit.md",
+      "05-knowledge/results/planar_jc48_sep08_finite_eight.md",
+      "05-knowledge/results/planar_jc48_sep08_finite_eight.out",
+      "05-knowledge/results/planar_jc48_sep08_finite_eight_audit.md",
+      "05-knowledge/results/planar_jc48_sep08_five_one_one_one.md",
+      "05-knowledge/results/planar_jc48_sep08_five_one_one_one.out",
+      "05-knowledge/results/planar_jc48_sep08_five_one_one_one_audit.md",
+      "05-knowledge/results/planar_jc48_sep08_five_three.md",
+      "05-knowledge/results/planar_jc48_sep08_five_three.out",
+      "05-knowledge/results/planar_jc48_sep08_five_three_audit.md",
+      "05-knowledge/results/planar_jc48_sep08_five_three_infinity.md",
+      "05-knowledge/results/planar_jc48_sep08_five_three_infinity.out",
+      "05-knowledge/results/planar_jc48_sep08_five_three_infinity_audit.md",
+      "05-knowledge/results/planar_jc48_sep08_four_four.md",
+      "05-knowledge/results/planar_jc48_sep08_four_four.out",
+      "05-knowledge/results/planar_jc48_sep08_four_four_audit.md",
+      "05-knowledge/results/planar_jc48_sep08_four_four_transport.md",
+      "05-knowledge/results/planar_jc48_sep08_four_four_transport.out",
+      "05-knowledge/results/planar_jc48_sep08_four_four_transport_audit.md",
+      "05-knowledge/results/planar_jc48_sep08_four_three_one.md",
+      "05-knowledge/results/planar_jc48_sep08_four_three_one.out",
+      "05-knowledge/results/planar_jc48_sep08_four_three_one_audit.md",
+      "05-knowledge/results/planar_jc48_sep08_four_three_one_infinity.md",
+      "05-knowledge/results/planar_jc48_sep08_four_three_one_infinity.out",
+      "05-knowledge/results/planar_jc48_sep08_four_three_one_infinity_audit.md",
+      "05-knowledge/results/planar_jc48_sep08_four_two_one_one.md",
+      "05-knowledge/results/planar_jc48_sep08_four_two_one_one.out",
+      "05-knowledge/results/planar_jc48_sep08_four_two_one_one_audit.md",
+      "05-knowledge/results/planar_jc48_sep08_genus_capacity.md",
+      "05-knowledge/results/planar_jc48_sep08_genus_capacity.out",
+      "05-knowledge/results/planar_jc48_sep08_genus_capacity_audit.md",
+      "05-knowledge/results/planar_jc48_sep08_h4_degree16.md",
+      "05-knowledge/results/planar_jc48_sep08_h4_degree16.out",
+      "05-knowledge/results/planar_jc48_sep08_h4_degree16_audit.md",
+      "05-knowledge/results/planar_jc48_sep08_h4_involution.md",
+      "05-knowledge/results/planar_jc48_sep08_h4_involution.out",
+      "05-knowledge/results/planar_jc48_sep08_h4_involution_audit.md",
+      "05-knowledge/results/planar_jc48_sep08_h4_mixed32.md",
+      "05-knowledge/results/planar_jc48_sep08_h4_mixed32.out",
+      "05-knowledge/results/planar_jc48_sep08_h4_mixed32_audit.md",
+      "05-knowledge/results/planar_jc48_sep08_h4_mixed33.md",
+      "05-knowledge/results/planar_jc48_sep08_h4_mixed33.out",
+      "05-knowledge/results/planar_jc48_sep08_h4_mixed33_audit.md",
+      "05-knowledge/results/planar_jc48_sep08_h4_mixed42.md",
+      "05-knowledge/results/planar_jc48_sep08_h4_mixed42.out",
+      "05-knowledge/results/planar_jc48_sep08_h4_mixed42_audit.md",
+      "05-knowledge/results/planar_jc48_sep08_h4_single_cycle.md",
+      "05-knowledge/results/planar_jc48_sep08_h4_single_cycle.out",
+      "05-knowledge/results/planar_jc48_sep08_h4_single_cycle_audit.md",
+      "05-knowledge/results/planar_jc48_sep08_infinity11_braid.md",
+      "05-knowledge/results/planar_jc48_sep08_infinity11_braid.out",
+      "05-knowledge/results/planar_jc48_sep08_infinity11_braid_audit.md",
+      "05-knowledge/results/planar_jc48_sep08_infinity11_braid_cusp_minus_certificate.json.gz",
+      "05-knowledge/results/planar_jc48_sep08_infinity11_braid_cusp_plus_certificate.json.gz",
+      "05-knowledge/results/planar_jc48_sep08_infinity11_braid_node_lower_certificate.json.gz",
+      "05-knowledge/results/planar_jc48_sep08_infinity11_braid_node_real_certificate.json.gz",
+      "05-knowledge/results/planar_jc48_sep08_infinity11_braid_smooth_certificate.json.gz",
+      "05-knowledge/results/planar_jc48_sep08_infinity_octuple.md",
+      "05-knowledge/results/planar_jc48_sep08_infinity_octuple.out",
+      "05-knowledge/results/planar_jc48_sep08_infinity_octuple_audit.md",
+      "05-knowledge/results/planar_jc48_sep08_leading_exactness.md",
+      "05-knowledge/results/planar_jc48_sep08_leading_exactness.out",
+      "05-knowledge/results/planar_jc48_sep08_leading_exactness_audit.md",
+      "05-knowledge/results/planar_jc48_sep08_mixed_cusp_braid.md",
+      "05-knowledge/results/planar_jc48_sep08_mixed_cusp_braid.out",
+      "05-knowledge/results/planar_jc48_sep08_mixed_cusp_braid_audit.md",
+      "05-knowledge/results/planar_jc48_sep08_mixed_cusp_braid_cusp_five_certificate.json.gz",
+      "05-knowledge/results/planar_jc48_sep08_mixed_cusp_braid_cusp_plus_certificate.json.gz",
+      "05-knowledge/results/planar_jc48_sep08_mixed_cusp_braid_cusp_two_certificate.json.gz",
+      "05-knowledge/results/planar_jc48_sep08_mixed_cusp_braid_node0_certificate.json.gz",
+      "05-knowledge/results/planar_jc48_sep08_mixed_cusp_braid_node1_certificate.json.gz",
+      "05-knowledge/results/planar_jc48_sep08_mixed_cusp_braid_node2_certificate.json.gz",
+      "05-knowledge/results/planar_jc48_sep08_moving_tubes.md",
+      "05-knowledge/results/planar_jc48_sep08_moving_tubes.out",
+      "05-knowledge/results/planar_jc48_sep08_moving_tubes_audit.md",
+      "05-knowledge/results/planar_jc48_sep08_octuple_transport.md",
+      "05-knowledge/results/planar_jc48_sep08_octuple_transport.out",
+      "05-knowledge/results/planar_jc48_sep08_octuple_transport_audit.md",
+      "05-knowledge/results/planar_jc48_sep08_odd_retention.md",
+      "05-knowledge/results/planar_jc48_sep08_odd_retention.out",
+      "05-knowledge/results/planar_jc48_sep08_odd_retention_audit.md",
+      "05-knowledge/results/planar_jc48_sep08_pole_degree.md",
+      "05-knowledge/results/planar_jc48_sep08_pole_degree.out",
+      "05-knowledge/results/planar_jc48_sep08_pole_degree_audit.md",
+      "05-knowledge/results/planar_jc48_sep08_quartic_boundary.md",
+      "05-knowledge/results/planar_jc48_sep08_quartic_boundary.out",
+      "05-knowledge/results/planar_jc48_sep08_quartic_boundary_audit.md",
+      "05-knowledge/results/planar_jc48_sep08_quartic_common_root.md",
+      "05-knowledge/results/planar_jc48_sep08_quartic_common_root.out",
+      "05-knowledge/results/planar_jc48_sep08_quartic_common_root_audit.md",
+      "05-knowledge/results/planar_jc48_sep08_quartic_differential.md",
+      "05-knowledge/results/planar_jc48_sep08_quartic_differential.out",
+      "05-knowledge/results/planar_jc48_sep08_quartic_differential_audit.md",
+      "05-knowledge/results/planar_jc48_sep08_shared_roots.md",
+      "05-knowledge/results/planar_jc48_sep08_shared_roots.out",
+      "05-knowledge/results/planar_jc48_sep08_shared_roots_audit.md",
+      "05-knowledge/results/planar_jc48_sep08_six_one_one.md",
+      "05-knowledge/results/planar_jc48_sep08_six_one_one.out",
+      "05-knowledge/results/planar_jc48_sep08_six_one_one_audit.md",
+      "05-knowledge/results/planar_jc48_sep08_three_cusp_boundary.md",
+      "05-knowledge/results/planar_jc48_sep08_three_cusp_boundary.out",
+      "05-knowledge/results/planar_jc48_sep08_three_cusp_boundary_audit.md",
+      "05-knowledge/results/planar_jc48_sep08_three_cusp_braid.md",
+      "05-knowledge/results/planar_jc48_sep08_three_cusp_braid.out",
+      "05-knowledge/results/planar_jc48_sep08_three_cusp_braid_audit.md",
+      "05-knowledge/results/planar_jc48_sep08_three_cusp_braid_cusp_minus_certificate.json.gz",
+      "05-knowledge/results/planar_jc48_sep08_three_cusp_braid_cusp_plus_certificate.json.gz",
+      "05-knowledge/results/planar_jc48_sep08_three_cusp_braid_cusp_two_certificate.json.gz",
+      "05-knowledge/results/planar_jc48_sep08_three_cusp_braid_node0_certificate.json.gz",
+      "05-knowledge/results/planar_jc48_sep08_three_cusp_braid_node1_certificate.json.gz",
+      "05-knowledge/results/planar_jc48_sep08_three_cusp_braid_node2_certificate.json.gz",
+      "05-knowledge/results/planar_jc48_sep08_three_cusp_closure.md",
+      "05-knowledge/results/planar_jc48_sep08_three_cusp_closure.out",
+      "05-knowledge/results/planar_jc48_sep08_three_cusp_closure_audit.md",
+      "05-knowledge/results/planar_jc48_sep08_three_cusp_family.md",
+      "05-knowledge/results/planar_jc48_sep08_three_cusp_family.out",
+      "05-knowledge/results/planar_jc48_sep08_three_cusp_family_audit.md",
+      "05-knowledge/results/planar_jc48_sep08_three_cusp_group.md",
+      "05-knowledge/results/planar_jc48_sep08_three_cusp_group.out",
+      "05-knowledge/results/planar_jc48_sep08_three_cusp_group_audit.md",
+      "05-knowledge/results/planar_jc48_sep08_three_cusp_passport.md",
+      "05-knowledge/results/planar_jc48_sep08_three_cusp_passport.out",
+      "05-knowledge/results/planar_jc48_sep08_three_cusp_passport_audit.md",
+      "05-knowledge/results/planar_jc48_sep08_three_three_two.md",
+      "05-knowledge/results/planar_jc48_sep08_three_three_two.out",
+      "05-knowledge/results/planar_jc48_sep08_three_three_two_audit.md",
+      "05-knowledge/results/planar_jc48_sep08_two_cusp_braid.md",
+      "05-knowledge/results/planar_jc48_sep08_two_cusp_braid.out",
+      "05-knowledge/results/planar_jc48_sep08_two_cusp_braid_audit.md",
+      "05-knowledge/results/planar_jc48_sep08_two_cusp_braid_cusps_certificate.json.gz",
+      "05-knowledge/results/planar_jc48_sep08_two_cusp_braid_node3_certificate.json.gz",
+      "05-knowledge/results/planar_jc48_sep08_two_cusp_braid_node_left_certificate.json.gz",
+      "05-knowledge/results/planar_jc48_sep08_two_cusp_braid_smooth_certificate.json.gz",
+      "05-knowledge/results/planar_jc48_sep08_two_cusp_family.md",
+      "05-knowledge/results/planar_jc48_sep08_two_cusp_family.out",
+      "05-knowledge/results/planar_jc48_sep08_two_cusp_family_audit.md",
+      "05-knowledge/results/planar_jc48_sep08_two_cusp_passport.md",
+      "05-knowledge/results/planar_jc48_sep08_two_cusp_passport.out",
+      "05-knowledge/results/planar_jc48_sep08_two_cusp_passport_audit.md",
+      "05-knowledge/results/planar_jc48_sep08_two_cusps.md",
+      "05-knowledge/results/planar_jc48_sep08_two_cusps.out",
+      "05-knowledge/results/planar_jc48_sep08_two_cusps_audit.md",
+      "05-knowledge/results/planar_jc48_sep08_two_finite_four_four.md",
+      "05-knowledge/results/planar_jc48_sep08_two_finite_four_four.out",
+      "05-knowledge/results/planar_jc48_sep08_two_finite_four_four_audit.md",
+      "05-knowledge/results/planar_jc48_sep08_unit_torsion.md",
+      "05-knowledge/results/planar_jc48_sep08_unit_torsion.out",
+      "05-knowledge/results/planar_jc48_sep08_unit_torsion_audit.md"
+    ],
+    "current_count": 751,
+    "commits": [
+      "687644309fd3de7cf62cfdc4844600147c1eacb1",
+      "5f6274485064a4a6744b72e95ba1e27e94f5a119",
+      "632726ef181bf57a778d9a8e1449f2ae0a17515a",
+      "1af9631e6ac13071ca02dc5a2099ae4bdb945217",
+      "de542817e3caf8c708b919a6d0fdf727e765329f",
+      "be2e74d62fdee49bda787d4a2aaa5a233f7d17d1",
+      "4293c3bc1fd7460ac35f1a04ebf5000b812ed0d6",
+      "87440e8344393e2956a9df53952d5d789c1f016c",
+      "1507824b2a9ff50864a8cb83d6b007049d5b69b2",
+      "6802107ae54984a683dfc6d50dcb288ec7393fe5",
+      "6e9b9ad582947cfb2c2de9a021565c6055f981e1",
+      "b7b74e13944f39a3279add92a8afa1fe8461631f",
+      "af2b3c2cf74ee616561c0f5db45f9fe3d8f03f66",
+      "7ea9b1a9ed7979a7de15aafd282dc7a312ac4e44",
+      "c2ef99797a6d74aa093fc01c6fb1cf8c752e9fc9",
+      "7f4a56c501c3f6e1250892473a76e80cb8ef2798",
+      "5a2a5797d8821c52515b5e5018b9698c16b9902c",
+      "63570c0f58ecbe955baea5ae5bebecbcd7c32dc0",
+      "f73985ef5195a5d255bd6569eb19ff1a059230e7",
+      "a3feb1e18c05bdd8f3dd6a6d254981e411ac4705",
+      "2d3707a39d00c85f229975378cad2a537a397d4d",
+      "e291fcc945a2f4fa3a48729ca4cab43b463a2185"
+    ]
+  },
+  "artifacts": [
+    {
+      "path": "04-computation/continuing10_20260907_dg_linear_carrier.py",
+      "bytes": 7090,
+      "sha256": "0f803f5ea98256bb8d4dd2685732885b60b90ed4514b3a5deb8d02a46f85241e"
+    },
+    {
+      "path": "04-computation/continuing10_20260907_dg_linear_carrier_audit.py",
+      "bytes": 8797,
+      "sha256": "55a5f0b24ff364b9e96767bac9bd57e63c319315375b5d0565526234089ca850"
+    },
+    {
+      "path": "04-computation/continuing10_20260907_lrc_clock7200.py",
+      "bytes": 4279,
+      "sha256": "323367487ec10cad4b47d52d10b57395ca2c7f18616817325d8cc0467457332c"
+    },
+    {
+      "path": "04-computation/continuing10_20260907_lrc_composite_wedges.py",
+      "bytes": 16335,
+      "sha256": "1d2f52c100802ab1d3b330c920a3f494eca662b7a51a7c5fedc6f1fe9a287cb5"
+    },
+    {
+      "path": "04-computation/continuing10_20260907_lrc_composite_wedges_audit.py",
+      "bytes": 14871,
+      "sha256": "af7e34a7a0251033788a67e7e47dd9d9ee380f3509e8a8ca0e4b9de5b96ddfcc"
+    },
+    {
+      "path": "04-computation/continuing10_20260907_lrc_last_a.py",
+      "bytes": 9124,
+      "sha256": "cc2668c8249bd1d1c804c65af93a3e55a2663a6c4891bdf797983771c98eb325"
+    },
+    {
+      "path": "04-computation/continuing10_20260907_lrc_last_a_audit.py",
+      "bytes": 10359,
+      "sha256": "7a0227ed805ec10c82d6174fc52da6d79573d12445c61f2a1ed83197d99146ed"
+    },
+    {
+      "path": "04-computation/continuing10_20260907_lrc_last_b.py",
+      "bytes": 11147,
+      "sha256": "3cb1c77dadcdccf2778e24df58dfad9a0bc8a24395698ee973c85afc0a0ecef0"
+    },
+    {
+      "path": "04-computation/continuing10_20260907_lrc_last_b_audit.py",
+      "bytes": 11806,
+      "sha256": "14e92d0304554ddf33970e167b1ad147b1883380734cf1b0e406994a4848751a"
+    },
+    {
+      "path": "04-computation/continuing10_20260907_lrc_third_wedge.py",
+      "bytes": 11234,
+      "sha256": "a768f216da83a8882cd2ef2d52abe08f344a971035e0618aa74242d0b623e6fe"
+    },
+    {
+      "path": "04-computation/continuing10_20260907_lrc_third_wedge_audit.py",
+      "bytes": 13413,
+      "sha256": "2f4edd8baf15e6e7c610e6a229f217d034bf30e8785c73d2738c7a5b770af366"
+    },
+    {
+      "path": "04-computation/continuing10_20260907_lrc_wedge_topology.py",
+      "bytes": 4576,
+      "sha256": "6fc998e7596bfa2c4182bfe41423f3d4cbdd9d9a4f7ce77724afebdfdb653e6b"
+    },
+    {
+      "path": "04-computation/continuing10_20260907_lrc_wedge_topology_audit.py",
+      "bytes": 6457,
+      "sha256": "ce2e0976fcb4a08138377b19e3216cf7acc9708e4211c06090c6822756a9ada2"
+    },
+    {
+      "path": "04-computation/continuing10_20260907_no3_repair.py",
+      "bytes": 11202,
+      "sha256": "3c22e4053b3a8fac2c44739f083c97b6539c023755a4a45cbd3eee62a389ca9b"
+    },
+    {
+      "path": "04-computation/continuing10_20260907_no3_repair_audit.py",
+      "bytes": 9282,
+      "sha256": "4f9a9bf9e5a8ef99a047764e477871519f327c34e7453f3d399dc249e3061f8b"
+    },
+    {
+      "path": "04-computation/continuing10_20260907_no3_repair_certificate.json",
+      "bytes": 6055,
+      "sha256": "8a03dea89c60348283f12e369140416925f7aeec0abeec25039ab3c63421ba13"
+    },
+    {
+      "path": "04-computation/continuing10_20260907_nonpositive_circuits.py",
+      "bytes": 10721,
+      "sha256": "d392980046171db2ea1df6cb759c04882fd57305ae811fe3d7f5746df6b6a973"
+    },
+    {
+      "path": "04-computation/continuing10_20260907_nonpositive_circuits_audit.py",
+      "bytes": 11778,
+      "sha256": "ea3908f02331f64838659a50221d85d64f41f90acfe423d7a75666eb079941a6"
+    },
+    {
+      "path": "04-computation/continuing10_20260908_all_m_torsion_audit.py",
+      "bytes": 6534,
+      "sha256": "5d9dcf4ec3d3db6ceac66de14a436e292b5dd66be5a7441f19c6407a7d3076fc"
+    },
+    {
+      "path": "04-computation/continuing10_20260908_dg_unbounded_torsion.py",
+      "bytes": 6927,
+      "sha256": "2c6e575521e44b971877455d1984e4286611c0df2e15bec73ef17941d6a6bd49"
+    },
+    {
+      "path": "04-computation/continuing10_20260908_fourfold_unit_bridge.py",
+      "bytes": 1574,
+      "sha256": "4ac226bff49507777c05a4bf31150ce4e65f8a1e363974d128a16aad9f897658"
+    },
+    {
+      "path": "04-computation/continuing10_20260908_fourfold_unit_bridge_audit.py",
+      "bytes": 4328,
+      "sha256": "d845c141cd1c5b7203f4251e1940a1214ebbfd762346cbc831fc11d56f91fee9"
+    },
+    {
+      "path": "04-computation/continuing10_20260908_lrc_upper_twenty.py",
+      "bytes": 10411,
+      "sha256": "5b4c3f3932c42fd4a0b1fbb3a4ac3905caba64a5f0a63aeae1fe225cd13bd47e"
+    },
+    {
+      "path": "04-computation/continuing10_20260908_lrc_upper_twenty_audit.cpp",
+      "bytes": 11168,
+      "sha256": "25b475625f2eda00d1bfdf4ca5e1a8532f5c28ffa7a91c1d006f14d4d30acb3d"
+    },
+    {
+      "path": "04-computation/continuing10_20260908_lrc_upper_twenty_audit.py",
+      "bytes": 7981,
+      "sha256": "2133161e8f7cc5883a565b2967deb713629885b17c827e93f85b021b93329c54"
+    },
+    {
+      "path": "05-knowledge/results/continuing10_20260907_dg_linear_carrier.md",
+      "bytes": 14996,
+      "sha256": "a1df2a2d9859e55805d3ede5af4d71e26586c3db0fdddf0e332e551764716505"
+    },
+    {
+      "path": "05-knowledge/results/continuing10_20260907_dg_linear_carrier.out",
+      "bytes": 1179,
+      "sha256": "3bb9dc940479599197a0fea02269c6485d80e80b1be26282c298e72452e45a42"
+    },
+    {
+      "path": "05-knowledge/results/continuing10_20260907_dg_linear_carrier_audit.md",
+      "bytes": 8679,
+      "sha256": "f86a69cea771cd48f4ada99e05484f8f3af8f94177ff860966da8318aebd3bf6"
+    },
+    {
+      "path": "05-knowledge/results/continuing10_20260907_dg_linear_carrier_audit.out",
+      "bytes": 1083,
+      "sha256": "1d145d652dee4c15f56f990afd98e9d025d9a50d53937b9a9e5fc0f06d0d6d06"
+    },
+    {
+      "path": "05-knowledge/results/continuing10_20260907_lrc_clock7200.md",
+      "bytes": 6236,
+      "sha256": "f15fd151e1ce7a9b5580d8c0aaf455b9fc496c3d3f7f01d353796f51633f42f4"
+    },
+    {
+      "path": "05-knowledge/results/continuing10_20260907_lrc_clock7200.out",
+      "bytes": 403,
+      "sha256": "2e200766cc341a7fb86742d5098a7b8489c550f1254771f48c6988b5d6143d4a"
+    },
+    {
+      "path": "05-knowledge/results/continuing10_20260907_lrc_clock7200_certificate.json",
+      "bytes": 39311,
+      "sha256": "bc8b33e82b97d213fcfa9cfcf2693c9cfe7d90d0c55d5a3be31e84f786258b59"
+    },
+    {
+      "path": "05-knowledge/results/continuing10_20260907_lrc_composite_wedges.md",
+      "bytes": 13834,
+      "sha256": "a3d7d0d45ff1b9c9315b7a01b8a111140e01d31c02630bac9505fa31d1eca68b"
+    },
+    {
+      "path": "05-knowledge/results/continuing10_20260907_lrc_composite_wedges.out",
+      "bytes": 1472,
+      "sha256": "7e17c1ee2acad0fcebf3a4885e56923cfa13b7742648c8bf7df07aece68aa9d8"
+    },
+    {
+      "path": "05-knowledge/results/continuing10_20260907_lrc_composite_wedges_audit.md",
+      "bytes": 8486,
+      "sha256": "1c708e48a5ff7f3313a0354107b1fff4d278d779be7916dc628d3876f37e66e2"
+    },
+    {
+      "path": "05-knowledge/results/continuing10_20260907_lrc_composite_wedges_audit.out",
+      "bytes": 671,
+      "sha256": "81e6545bd21d3c0305fccb1573ca99a32cca96a1077ae3fb112f5f0e5d763712"
+    },
+    {
+      "path": "05-knowledge/results/continuing10_20260907_lrc_composite_wedges_certificate.json",
+      "bytes": 535187,
+      "sha256": "890d00d44f0195765d62fe1d40b59ad102311f34a84a42a5fddc229d037209e9"
+    },
+    {
+      "path": "05-knowledge/results/continuing10_20260907_lrc_last_a.md",
+      "bytes": 7830,
+      "sha256": "aac9ac138bef558b7cba3b3471179011a5a1923169a9f603ad5ee61691805398"
+    },
+    {
+      "path": "05-knowledge/results/continuing10_20260907_lrc_last_a.out",
+      "bytes": 421,
+      "sha256": "c3c309f261b0bb5ec7ccf1424ec04a897da0960c43cfaa6e457162f3b7f757d6"
+    },
+    {
+      "path": "05-knowledge/results/continuing10_20260907_lrc_last_a_audit.md",
+      "bytes": 6709,
+      "sha256": "db558dd36f05123feba782d55e5d3aa732c5758c78c5e4b07434af2ef5c99d75"
+    },
+    {
+      "path": "05-knowledge/results/continuing10_20260907_lrc_last_a_audit.out",
+      "bytes": 475,
+      "sha256": "a7d74df89499fc0805180de14443e3d0009625e7085aeeef2c757a4a316b8b6d"
+    },
+    {
+      "path": "05-knowledge/results/continuing10_20260907_lrc_last_a_certificate.json",
+      "bytes": 343737,
+      "sha256": "bce97b849036ba89ca8e8d1593b2ab03ff7aa9ecc647bdc72d55bd4962383274"
+    },
+    {
+      "path": "05-knowledge/results/continuing10_20260907_lrc_last_b.md",
+      "bytes": 7773,
+      "sha256": "388ec8ec0ca74bee47a79979594809a12606080cf283db6aaef189757c39751e"
+    },
+    {
+      "path": "05-knowledge/results/continuing10_20260907_lrc_last_b.out",
+      "bytes": 951,
+      "sha256": "571884a84d72e7a55c89c7a89835bf86577066b375774935101b0e9f5e1e63fd"
+    },
+    {
+      "path": "05-knowledge/results/continuing10_20260907_lrc_last_b_audit.md",
+      "bytes": 10122,
+      "sha256": "bfdb3c90cb706d1854c55412aa0da5e8f4c4310bba6d03b0c6b4f28ef780ee19"
+    },
+    {
+      "path": "05-knowledge/results/continuing10_20260907_lrc_last_b_audit.out",
+      "bytes": 613,
+      "sha256": "a43993d20cdb2575ad08590436948fd5d7f84792198781538f06b8f3f01ca9cf"
+    },
+    {
+      "path": "05-knowledge/results/continuing10_20260907_lrc_last_b_certificate.json",
+      "bytes": 821848,
+      "sha256": "01381d94aaeaf92ca7dfb37b902c29db16da0aa36c5587b602dd836b5616cabd"
+    },
+    {
+      "path": "05-knowledge/results/continuing10_20260907_lrc_third_wedge.md",
+      "bytes": 7091,
+      "sha256": "a17832dd07a612180d2dd9cf61ce12247e8e9cb0a377bebe7df58c32192df11f"
+    },
+    {
+      "path": "05-knowledge/results/continuing10_20260907_lrc_third_wedge.out",
+      "bytes": 2185,
+      "sha256": "f8ebfb3f7d302bdf24274934c80d06d8c663df3bcc52c0feae6e400cfca9e044"
+    },
+    {
+      "path": "05-knowledge/results/continuing10_20260907_lrc_third_wedge_audit.md",
+      "bytes": 8652,
+      "sha256": "ec9c35964be6c9ad08cce95a4a0a9af975000b1815a7521b12c3599c259bd5ee"
+    },
+    {
+      "path": "05-knowledge/results/continuing10_20260907_lrc_third_wedge_audit.out",
+      "bytes": 1141,
+      "sha256": "e396dcfc4126acce9e68c0970d837841bec0e9b1b9263b959344bbc969ec63ca"
+    },
+    {
+      "path": "05-knowledge/results/continuing10_20260907_lrc_third_wedge_certificate.json",
+      "bytes": 134562,
+      "sha256": "60a6de57a623dbe64a23a77113f140b312f5496247c2253fbe695872740039e9"
+    },
+    {
+      "path": "05-knowledge/results/continuing10_20260907_lrc_wedge_topology.md",
+      "bytes": 4767,
+      "sha256": "47d3698ab8d844367874ec00a02afb6422b7cc08cbe382f6872bc389dceac5b1"
+    },
+    {
+      "path": "05-knowledge/results/continuing10_20260907_lrc_wedge_topology.out",
+      "bytes": 1567,
+      "sha256": "8ca50996eac493eaa9c9c98e543f73fff29758be008bafe7e6847b0af140082c"
+    },
+    {
+      "path": "05-knowledge/results/continuing10_20260907_lrc_wedge_topology_audit.md",
+      "bytes": 4685,
+      "sha256": "9005d215265dfbe61815d66a7eb38a0f19606daea0df26b08e947aca1226cdc8"
+    },
+    {
+      "path": "05-knowledge/results/continuing10_20260907_lrc_wedge_topology_audit.out",
+      "bytes": 1156,
+      "sha256": "9e67c262a701453f7e66bbe08250bcc2567f07b540fa3546432140ef0b2696c3"
+    },
+    {
+      "path": "05-knowledge/results/continuing10_20260907_lrc_wedge_topology_certificate.json",
+      "bytes": 11214,
+      "sha256": "4008a6ae441672637becabb0f0ba17f8e0fe9e5975657fe9dddefe2bb5766e79"
+    },
+    {
+      "path": "05-knowledge/results/continuing10_20260907_no3_repair.md",
+      "bytes": 13484,
+      "sha256": "0f200850a5da6ab798548017b4388dc67adac16846c1b2e2acbdd0b2bd6bd477"
+    },
+    {
+      "path": "05-knowledge/results/continuing10_20260907_no3_repair.out",
+      "bytes": 1551,
+      "sha256": "5a294ce60497c760e0f654bf1e89a09e67459ccad8ffad68c565ac129d20173f"
+    },
+    {
+      "path": "05-knowledge/results/continuing10_20260907_no3_repair_audit.md",
+      "bytes": 11886,
+      "sha256": "af1dd91b966a20c48a5eb8a608eb29c23b71579ef141ac51df440e03a75b7534"
+    },
+    {
+      "path": "05-knowledge/results/continuing10_20260907_no3_repair_audit.out",
+      "bytes": 527,
+      "sha256": "617c410c8721a2517af9f3ca517a965dcfd15156358cc77348c3da6e37680971"
+    },
+    {
+      "path": "05-knowledge/results/continuing10_20260907_nonpositive_circuits.md",
+      "bytes": 12893,
+      "sha256": "b59858e2ed73cfc58e3539f49bbe44a7d430fabcc41ca7ef757517d4731993f2"
+    },
+    {
+      "path": "05-knowledge/results/continuing10_20260907_nonpositive_circuits.out",
+      "bytes": 801,
+      "sha256": "36e5c21f2113d4a3dfbc825af03ddb0d3570a3e359c58ac5a3a78f164db9908b"
+    },
+    {
+      "path": "05-knowledge/results/continuing10_20260907_nonpositive_circuits_audit.md",
+      "bytes": 9158,
+      "sha256": "c6db1e11a7656c1c6186535d34e652a741edf5a49f6ddb563d289d3bb48b93fd"
+    },
+    {
+      "path": "05-knowledge/results/continuing10_20260907_nonpositive_circuits_audit.out",
+      "bytes": 539,
+      "sha256": "3ee32a5c264c8f8afc9fe467ed0764a2885f395aa971df14a5db903b7067fd92"
+    },
+    {
+      "path": "05-knowledge/results/continuing10_20260907_nonpositive_circuits_certificate.json",
+      "bytes": 76445,
+      "sha256": "be4762cf527f1add2887ee2b29a98440a83f0c68454571b54d182b7395b58092"
+    },
+    {
+      "path": "05-knowledge/results/continuing10_20260908_all_m_torsion_audit.md",
+      "bytes": 9840,
+      "sha256": "2e6f422b4a2e4fd02dbb508767e9fd92487c1bd50dd3e575855c44089750b5ae"
+    },
+    {
+      "path": "05-knowledge/results/continuing10_20260908_all_m_torsion_audit.out",
+      "bytes": 521,
+      "sha256": "540dd0a4d8a1cb45f43c7b8b6aebeeda9d1df0f3928ba28ace2255c6cf7c12b3"
+    },
+    {
+      "path": "05-knowledge/results/continuing10_20260908_all_m_torsion_audit_certificate.json",
+      "bytes": 1297,
+      "sha256": "87c8f51d8a39ba3dacba9e7f7ace515f370ca969ee9589ee9f50065dc8ab925c"
+    },
+    {
+      "path": "05-knowledge/results/continuing10_20260908_dg_unbounded_torsion.md",
+      "bytes": 12850,
+      "sha256": "5732f4271e9b9fba97f9223037383f6f0164474b0621e2548b73a24fd5a4964d"
+    },
+    {
+      "path": "05-knowledge/results/continuing10_20260908_dg_unbounded_torsion.out",
+      "bytes": 369,
+      "sha256": "35272f408c20715cd0b84df71ecc6a48bf92c841a5a2c103f0077ed0755cfd53"
+    },
+    {
+      "path": "05-knowledge/results/continuing10_20260908_dg_unbounded_torsion_certificate.json",
+      "bytes": 3786,
+      "sha256": "3517b35f819399b7aaca886bc58cbac6653506f9b387c2409d708c3772fa6ef9"
+    },
+    {
+      "path": "05-knowledge/results/continuing10_20260908_fourfold_unit_bridge.out",
+      "bytes": 185,
+      "sha256": "8064cc2d7393f0a209ec98eee9927a1abccae87507f5baa20bce113e4a749e5e"
+    },
+    {
+      "path": "05-knowledge/results/continuing10_20260908_fourfold_unit_bridge_audit.md",
+      "bytes": 8068,
+      "sha256": "b7c2754b41af8a5a7af0bdda11f96e2bee2f02fe5040611206a027b1ce11df6b"
+    },
+    {
+      "path": "05-knowledge/results/continuing10_20260908_fourfold_unit_bridge_audit.out",
+      "bytes": 314,
+      "sha256": "41ab734c8f89adab78cd84fa8f5983ba31ee2697e7e8dfc6c5e6b664a907d9ba"
+    },
+    {
+      "path": "05-knowledge/results/continuing10_20260908_incoming_connections.md",
+      "bytes": 10182,
+      "sha256": "eaf05dea77f6210a196204ae6a16ffb16774d94b9adde153580a41c44743ca0d"
+    },
+    {
+      "path": "05-knowledge/results/continuing10_20260908_lrc_upper_twenty.md",
+      "bytes": 6897,
+      "sha256": "aafbe8339cf39d8676aea707c53ca084e3330c900b88c03b06feaf41420deda3"
+    },
+    {
+      "path": "05-knowledge/results/continuing10_20260908_lrc_upper_twenty.out",
+      "bytes": 2324,
+      "sha256": "43c80bcbf736d537999a02dde6e718600dc6ac668857f585a07f22a7adf5e6b4"
+    },
+    {
+      "path": "05-knowledge/results/continuing10_20260908_lrc_upper_twenty_audit.md",
+      "bytes": 7548,
+      "sha256": "426d3b1eb0886f8fa7e23906a46973ee54f384fb76805204b97e6c0417c8a558"
+    },
+    {
+      "path": "05-knowledge/results/continuing10_20260908_lrc_upper_twenty_audit.out",
+      "bytes": 715,
+      "sha256": "e10f1f3d3175f08507f2a2c69b95f4233be248b2da1ee6623f8ff387239e9fa4"
+    },
+    {
+      "path": "05-knowledge/results/continuing10_20260908_lrc_upper_twenty_certificate.json",
+      "bytes": 65936,
+      "sha256": "8a4ea5f6ec5669d0b687e3b52519ad8df9a43b0e9d64fa09a1565cfd3cec29ab"
+    }
+  ]
+}
