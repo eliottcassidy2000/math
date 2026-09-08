@@ -30,7 +30,7 @@ quadratic tangent evaluation, and transverse derivatives of component jets.
 | Niche: collision | All scalar two-form periods miss exactly the quadrics through tangent directions in a three-dimensional target | Carry the quadratic data through an actual earlier source deformation and preserve descent |
 | Anchor: infinity | The whole one-odd-cusp, two-ordinary-cusp and three-ordinary-cusp (4,6) classes are excluded as irreducible whole Keller support; the last uses actual marked D4 and arbitrary retained subsets | The adjacent(5,3,3) family has an actual marked H4 quotient; involutions and single cycles are excluded. Test arbitrary retained odd-braid bounds and genuinely mixed cycle types |
 | Wildcard: response connection | The fixed smooth polynomial family F=arb+c+h(b), h in b³C[b], has unit class of exact primary order2; the canonical derivative generates its full component-labelled arm | Map an actual source-normal response to this paid operator without changing its polynomial ring |
-| Wildcard: actual boundary surface | Shared-root jets are necessary; all single-point octic boundary divisors are excluded, including infinity, with unrestricted polynomial-mate degree; the constant-D finite6/infinity2 class is closed at every finite location | Every finite/infinity(4,4) pair is now excluded. Audit the two-distinct-finite-root residue obstruction; this would complete all pair locations |
+| Wildcard: actual boundary surface | Shared-root jets are necessary; all single-point octic boundary divisors are excluded, including infinity, with unrestricted polynomial-mate degree; the constant-D finite6/infinity2 class is closed at every finite location | Every(4,4) pair is now excluded at all boundary locations. Test the active-fourfold residue equilibrium and the neighboring(6,2)/(4,2,2) partitions |
 
 ## Audited checkpoint
 
@@ -565,10 +565,21 @@ quadratic tangent evaluation, and transverse derivatives of component jets.
    every involutive or single-cycle meridian type for the actual mixed
    family, in every degree. Other mixed cycle types remain open.
 
-The [267-artifact manifest](planar_jc48_sep06_manifest.json) pins59 proof notes,
-60 audit notes,61 sources,61 frozen outputs and26 compressed witnesses.
-The61 programs report1635832 exact gates per complete normal or optimized
-run. Each frozen output agrees in both modes. All241 inherited pins remain
+60. [Every two-fourfold-root octic](planar_jc48_sep08_two_finite_four_four.md)
+   is now excluded for **polynomial mates in every degree and at every
+   boundary location** in the stated full global quartic class. The new
+   two-distinct-finite-root theorem excludes even rational mates, including
+   constant L: an active root gives a degree-four first coefficient that
+   cannot be a constant multiple of the cubic fibre derivative. Its
+   individual residue numerator has leading32alpha⁴(p-q)¹⁵. All60 exact
+   gates and a full independent audit pass. The finite/infinity supplier
+   pays the remaining locations and retains its rational-mate hostile.
+   Other multiplicity partitions and unrestricted JC(2) remain open.
+
+The [271-artifact manifest](planar_jc48_sep06_manifest.json) pins60 proof notes,
+61 audit notes,62 sources,62 frozen outputs and26 compressed witnesses.
+The62 programs report1635892 exact gates per complete normal or optimized
+run. Each frozen output agrees in both modes. All267 inherited pins remain
 unchanged. These are scoped proof controls, not a census of Keller maps;
 no external priority claim or full JC(2) result is asserted.
 
@@ -803,11 +814,13 @@ pays every finite point using changed global carriers, the complete
 three-dimensional genus-two primitive space, and original-source pole
 repair. Item53 pays the infinity-point octuple with the actual surface
 inversion's changed volume form, completing all single-point divisors.
-Items54 and56 close every finite/infinity(4,4) pair by weighted
-regularity, exact finite residues and source criticality. The remaining
-two-distinct-finite-root case now has a proof candidate with a degree-four
-residue coefficient that cannot be a multiple of the cubic fibre derivative.
-It awaits final independent audit; other multiplicity partitions remain open.
+Items54,56 and60 close every two-fourfold-root octic at all boundary
+locations. The degree-four moving-residue obstruction closes the two-finite
+case even for rational mates. The next objects are two finite roots of
+multiplicities6,2 and the fourfold-root equilibrium in a4,2,2 partition.
+Their full local strata and chart losses remain new obligations. The degree
+of F|D is distinct from a primitive's local degree3, which comes from
+the order-two original differential; no degree-four primitive is assumed.
 Item39 closes the entire two-ordinary-cusp (4,6) class. Items46--48 pay
 the actual three-cusp moving paths, local pairs and full family transport;
 item52 now closes the entire ordinary three-cusp class in every degree.

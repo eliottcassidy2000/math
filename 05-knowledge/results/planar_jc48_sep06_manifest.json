@@ -1,11 +1,11 @@
 {
   "session": "planar-jacobian-sep06",
-  "status": "PROVED scoped analytic/group results with independent audits: whole one-odd-cusp, two-ordinary-cusp and three-ordinary-cusp (4,6) exclusions in every mapping degree; actual mixed(5,3,3) H4 supplier with complete good-family transport, and all involutive/single-cycle meridian cases excluded; every single-point octic and every finite/infinity4+4 polynomial-mate class excluded; JC(2) OPEN",
+  "status": "PROVED scoped analytic/group results with independent audits: whole one-odd-cusp, two-ordinary-cusp and three-ordinary-cusp (4,6) exclusions in every mapping degree; actual mixed(5,3,3) H4 supplier with complete good-family transport, and all involutive/single-cycle meridian cases excluded; every single-point octic and every two-distinct-fourfold-root octic polynomial-mate class excluded at all boundary locations; two finite fourfold roots exclude even rational mates; JC(2) OPEN",
   "created_utc": "2026-09-06",
-  "artifact_count": 267,
-  "program_count": 61,
-  "exact_gates_per_complete_normal_or_optimized_run": 1635832,
-  "verification": "All61 programs have normal and optimized replays byte-identical to frozen outputs. Five new independently audited bundles add100334 gates per mode: complete mixed-cusp boundary geometry, all-finite/infinity4+4 transport, uniform H4 single-cycle equality, six actual mixed-cusp H4 path witnesses and sharp H4 reflection fixed-ratio/Euler exclusion. The1517 moving segments retain all complex-disk clusters and actual positive pair transports. The120-root14400-element image and221 closed reflection sets have an independent full published-table fingerprint. All241 inherited artifact pins are unchanged. No numerical braid word, arbitrary-subgroup filter, finite degree cutoff or full-fixed-set retention is substituted for the stated proofs. JC(2) remains open.",
+  "artifact_count": 271,
+  "program_count": 62,
+  "exact_gates_per_complete_normal_or_optimized_run": 1635892,
+  "verification": "All62 programs have normal and optimized replays byte-identical to frozen outputs. The new complete two-finite-fourfold-root proof adds60 independently audited gates. Its uncancellable moving-residue coefficient32alpha^4(p-q)^15 excludes rational mates, even for constant L and split composition fibres. Together with the separately proved finite/infinity supplier it closes the full two-distinct-fourfold-root boundary partition for polynomial mates at all P1 locations. All267 inherited artifact pins are unchanged. Other octic partitions, arbitrary global quartics, mixed-cycle H4 monodromy and JC(2) remain open.",
   "program_gates": {
     "weight14": 169,
     "weight14_audit": 93,
@@ -67,7 +67,8 @@
     "four_four_transport": 151,
     "h4_single_cycle": 15111,
     "mixed_cusp_braid": 17100,
-    "h4_involution": 67850
+    "h4_involution": 67850,
+    "two_finite_four_four": 60
   },
   "artifacts": [
     {
@@ -369,6 +370,11 @@
       "path": "04-computation/planar_jc48_sep08_two_cusps.py",
       "bytes": 4663,
       "sha256": "d3c1bffe31c3147557337066dcce1ee4dc97d19cd2f77832244fb1b0317f4af0"
+    },
+    {
+      "path": "04-computation/planar_jc48_sep08_two_finite_four_four.py",
+      "bytes": 9639,
+      "sha256": "2a901ed396b72a7b7eb14f6dc34f30d53e82079c454f22027b86528dca69b630"
     },
     {
       "path": "04-computation/planar_jc48_sep08_unit_torsion.py",
@@ -1409,6 +1415,21 @@
       "sha256": "9c870168e866ffbda0cccb9b777b48b420a25e32552b41cc81a5bdf0bd926235"
     },
     {
+      "path": "05-knowledge/results/planar_jc48_sep08_two_finite_four_four.md",
+      "bytes": 12204,
+      "sha256": "93acd3fe8e63f58d76ca77d547375cfca7fb721dd330f0d2eaee33977498bf9c"
+    },
+    {
+      "path": "05-knowledge/results/planar_jc48_sep08_two_finite_four_four.out",
+      "bytes": 423,
+      "sha256": "67510ca460a435fefef40ab9da962924ab7c9956f078ed88ee60be88c6e23f05"
+    },
+    {
+      "path": "05-knowledge/results/planar_jc48_sep08_two_finite_four_four_audit.md",
+      "bytes": 16096,
+      "sha256": "219ef008a707e2da44fd2fa7b4b68dccf7387d34c2f16ccef33465f3141f4b81"
+    },
+    {
       "path": "05-knowledge/results/planar_jc48_sep08_unit_torsion.md",
       "bytes": 6725,
       "sha256": "95d6d410d236bf28dffc90d51e923eb2e200b330eac2c05c5a5b157d08968bc4"
@@ -1424,7 +1445,7 @@
       "sha256": "61db92167187f9a30ed79022a8b1feacc010e79033106e7d7592e3817bd7212d"
     }
   ],
-  "checkpoint_update": "September8: actual H4 now replaces the former mixed-cusp scout; the connected intrinsic good(5,3,3)/infinity7 family transports the marked quotient. Involutive meridians are excluded by the sharp4/15 fixed ratio and Euler; all single nontrivial-cycle meridians are equal abstractly, hence incompatible with actual positive retained sheets. Mixed cycle types remain open. The complete finite/infinity4+4 class is closed at every finite location. Two distinct finite fourfold roots have a new full rational-exclusion proof candidate via a degree-four moving-residue obstruction; independent final audit is pending outside this checkpoint.",
+  "checkpoint_update": "September8: all boundary octics supported at one point or at two distinct points each of multiplicity4 now have polynomial-mate exclusions in the stated full global quartic class. The two-finite4+4 case has the stronger rational exclusion. The actual mixed-cusp H4 family excludes involutive and single-cycle meridians. Current new probes are arbitrary-retention odd-cusp inequalities, two-finite6+2 local strata, and the active-fourfold residue equilibrium leading to the symmetric4+2+2 class; these are not yet proved dependencies.",
   "compressed_certificates": [
     {
       "path": "05-knowledge/results/planar_jc48_sep06_boundary_braid_certificate.json.gz",
