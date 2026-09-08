@@ -78,8 +78,8 @@
   passport retains an abstract A6 survivor and the missing global relations.
   The complete octic Newton/Morse pole budget forces a shared boundary
   root for any quartic rational mate; shared-root first jets further
-  exclude all octic multiplicities<=2. The full constant-D finite6/infinity2
-  class at any finite location has no rational mate, by an elliptic
+  exclude all octic multiplicities<=2. The constant-D finite6/infinity2
+  M-unit class at any finite location has no rational mate, by an elliptic
   primitive-space comparison and exact section-space transport. A fixed
   smooth polynomial family pays the actual unit
   torsion connection and every primary height.
@@ -122,8 +122,9 @@
   closes. The full global-pair quartic exclusion is now proved, and
   every nonzero global output direction avoids L4. For all m>=2,
   degree4m−2 leading N forces constant D at two moving inverse indices.
-  [Manifest](planar_jc48_sep06_manifest.json):391
-  artifacts,92 programs,4276514 exact gates per mode. Full JC(2) remains **OPEN**.
+  The derived prime-degree filter leaves four leading W2 quintic patterns.
+  [Manifest](planar_jc48_sep06_manifest.json):395
+  artifacts,93 programs,4276680 exact gates per mode. Full JC(2) remains **OPEN**.
 
 - [Previous continuing synthesis](continuing5_20260906_synthesis.md):
   full-model beta simplicity, the original-phase rectangle, the ordered

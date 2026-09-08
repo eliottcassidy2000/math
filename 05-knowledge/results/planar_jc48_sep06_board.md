@@ -36,7 +36,7 @@ quadratic tangent evaluation, and transverse derivatives of component jets.
 |---|---|---|
 | Anchor: moving source | The finite five-dimensional response remains valid, but every nonconstant polynomial Hamiltonian in K+Delta K[p,y] has no nonzero rational scalar time | Change the invariant or carrier; different polynomial lifts inside the cusp ideal are now closed, and compositions still need their actual invariant/regularity sidecars |
 | Niche: collision | All scalar two-form periods miss exactly the quadrics through tangent directions in a three-dimensional target | Carry the quadratic data through an actual earlier source deformation and preserve descent |
-| Anchor: infinity | The whole one-odd-cusp, two-ordinary-cusp and three-ordinary-cusp (4,6) classes are excluded as irreducible whole Keller support; the last uses actual marked D4 and arbitrary retained subsets | The adjacent(5,3,3) family has an actual marked H4 quotient; involutions, single cycles and mixed(3)(2),(3)(3),(4)(2) meridians are excluded; moved support is at least7. The audited mapping-degree floor is16; the necessary scalar rows at16 still need actual cycle/incidence structure |
+| Anchor: infinity | The whole one-odd-cusp, two-ordinary-cusp and three-ordinary-cusp (4,6) classes are excluded as irreducible whole Keller support; the last uses actual marked D4 and arbitrary retained subsets | The adjacent(5,3,3) family has an actual marked H4 quotient; involutions, single cycles and mixed(3)(2),(3)(3),(4)(2),(5)(2) meridians are excluded; moved support is at least7. The audited mapping-degree floor is16; the necessary scalar rows at16 still need actual cycle/incidence structure |
 | Wildcard: response connection | The fixed smooth polynomial family F=arb+c+h(b), h in b³C[b], has unit class of exact primary order2; the canonical derivative generates its full component-labelled arm | Map an actual source-normal response to this paid operator without changing its polynomial ring |
 | Anchor: actual boundary surface | Complete fixed-DG quartic global-pair exclusion; every nonzero output-pencil member avoids L4, with unrestricted mate degree. All-m degree4m−2 rational exactness forces constant D at two moving indices | Test the next fibre degrees and the actual entry of a general Keller map into this surface. Once the two boundary slopes vanish, all inverse infinity residues are blind; retain finite places and labelled pole repair |
 
@@ -838,10 +838,20 @@ quadratic tangent evaluation, and transverse derivatives of component jets.
    residue vanishes automatically, so a different place or invariant
    is required. Actual positive and negative constant-D families remain.
 
-The [391-artifact manifest](planar_jc48_sep06_manifest.json) pins90 proof notes,
-91 audit notes,92 sources,92 frozen outputs and26 compressed witnesses.
-The92 programs report4276514 exact gates per complete normal or optimized
-run. Each frozen output agrees in both modes. All383 inherited pins remain
+91. [Prime fibre degree on every W_m](planar_jc48_sep08_prime_leading.md)
+   is a **PROVED DERIVED FILTER + INDEPENDENTLY AUDITED**. Polynomial
+   target shears and coprime valuations give a polynomial pth root of
+   the leading coefficient; the incoming all-degree reciprocal lemma
+   forces that root to be constant or a single power. The full global
+   filtration bounds its exponent by2m. All166 gates pass. For W2
+   quintics onlyk=0,2,3,4 remain, with infinity orders20,10,5,0.
+   The exact global rational hostile x*t^p proves polynomiality of the
+   mate is essential. No quintic closure or new surface entry follows.
+
+The [395-artifact manifest](planar_jc48_sep06_manifest.json) pins91 proof notes,
+92 audit notes,93 sources,93 frozen outputs and26 compressed witnesses.
+The93 programs report4276680 exact gates per complete normal or optimized
+run. Each frozen output agrees in both modes. All391 inherited pins remain
 unchanged. These are scoped proof controls, not a census of Keller maps;
 no external priority claim or full JC(2) result is asserted.
 
@@ -1148,7 +1158,7 @@ with a polynomial/global section combination; item76 and its independent
 audit now prove full pole-space membership and the complete exclusion.
 
 
-## September8 complete remaining DG quartic entry
+## Historical September8 quartic entry — superseded by items89–91
 
 Items77–80 close four full binary boundary types while retaining their
 actual rational exceptions. The two5+3 infinity placements have
@@ -1164,9 +1174,10 @@ remaining6+2 coefficient class, and an orthogonal H4 mixed5,2 group lane.
 ## September8 current frontier after complete quartic closure
 
 Items89–90 have passed full independent audit. The next source-fibre degree
-on the fixed surface is five. A short prime-degree leading filter is being
-checked using the incoming all-m source-linear rational-primitive lemma;
-that filter would not be a quintic closure. The full planar-to-surface
+on the fixed surface is five. The proved prime-degree leading filter now leaves exactly four
+possible leading patterns for W2 quintics: k=0,2,3,4 in item91.
+It uses the incoming all-m rational-primitive lemma; lower coefficients
+and prime-degree root gluing still need a new argument. The full planar-to-surface
 entry remains unpaid. The useful new operation is to move an inverse
 coefficient index with the geometric degree, then record the exact point
 where every test at that place becomes blind.

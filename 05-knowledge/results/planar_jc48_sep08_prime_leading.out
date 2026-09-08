@@ -1,0 +1,6 @@
+Prime fibre degree on every W_m: necessary leading collapse
+Exact gates: 166
+All-prime proof is analytic; named controls use p=2,3,5,7
+Complete W2 quintic leading orders: [{'k': 0, 'finite_order': 0, 'infinity_order': 20}, {'k': 2, 'finite_order': 10, 'infinity_order': 10}, {'k': 3, 'finite_order': 15, 'infinity_order': 5}, {'k': 4, 'finite_order': 20, 'infinity_order': 0}]
+Polynomial/rational distinction and unmarked-composite hostile: PASS
+Semantic SHA256: 81ccf950f55485c4bb6484ddb7c30b493fe5500591d12d903cf2fbba34bbfe5a

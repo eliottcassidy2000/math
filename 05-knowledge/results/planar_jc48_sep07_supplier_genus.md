@@ -269,6 +269,6 @@ output 1d70b64d691d5aedd69246ed3d492fd0fe66060fa4dbaeeba355f439e0680b62
 semantic 36b018dd04b607e83171a2086f952b4932fecf5f0c37b0996ea1a89558e2e51c
 ```
 
-The source and output are frozen. Independent analytic audit is pending.
+The source and output are frozen; the independent analytic audit below is accepted.
 
 The [independent analytic/source audit](planar_jc48_sep07_supplier_genus_audit.md) passes, including separate normal and optimized replays. The actual source, output and all-parameter proof are frozen.

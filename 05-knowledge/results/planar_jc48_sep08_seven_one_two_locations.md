@@ -385,8 +385,8 @@ Output SHA256:
 Semantic gate SHA256:
 `d6888a5c8c4ad87d99944d0224fe9b9098458fb83c8dbd23af7bc1d54a9b6d66`.
 
-The complete independent analytic/source audit remains pending.
-This candidate is outside the proved dependency graph until accepted.
+The complete independent analytic/source audit below is accepted.
+This theorem is in the proved dependency graph.
 
 
 ## Accepted independent audit

@@ -268,8 +268,8 @@ frozen output: **1,947 gates, 553 output bytes**.
 * Semantic gate trace:
   7c6566cea7919b18480be705f73791af41e44f876d1d78d66837ab208b277b79.
 
-The source/output are frozen. The proof and applications remain
-RESERVED until independent audit and parent-owned status promotion.
+The source/output are frozen. The proof and applications are PROVED
+following the independent audit and parent-owned promotion below.
 
 
 ## Accepted independent audit

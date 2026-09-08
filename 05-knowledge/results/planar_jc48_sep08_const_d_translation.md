@@ -221,10 +221,9 @@ output: **51 always-active exact gates, 373 output bytes**.
 - Semantic digest:
   `396216fbb707e9ba5633c9bbacc67cf1f4e58b2c14a5d4876ddf5780909d1950`.
 
-The source and output are frozen. Independent analytic/source
-review is pending; the primary remains RESERVED until that review
-is complete. The fixed-zero theorem is PROVED and independently
-audited.
+The source and output are frozen. The independent analytic/source
+review below is accepted; this all-point theorem and its fixed-zero
+supplier are PROVED and independently audited.
 
 The [independent audit](planar_jc48_sep08_const_d_translation_audit.md)
 passes the complete all-point section calculation, rational transport

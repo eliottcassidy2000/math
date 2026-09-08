@@ -11,6 +11,14 @@ Format per entry:
 
 ## 2026-09-08 planar-jc48 -- retain the full transformed numerator and volume
 
+- **Final navigation repair:** the results index dropped the M-unit
+  hypothesis from the constant-D finite6/infinity2 rational exclusion.
+  The proved shared-root class has genuine rational exceptions. The
+  index now retains M-unit; the complete polynomial exclusion remains
+  valid. Four stale pre-audit proof footers were also aligned with
+  their accepted status, with old/new primary hashes recorded in the
+  session manifest. No theorem algebra, source or frozen output changed.
+
 - **Repaired before promotion:** the first all-finite7+1 residue expansion
   omitted `-A(h-k)/b` from B0. Independent audit caught the omitted
   lower product before freeze; the [accepted proof](../05-knowledge/results/planar_jc48_sep08_seven_one_two_locations.md)
