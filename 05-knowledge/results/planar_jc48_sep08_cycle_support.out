@@ -1,0 +1,108 @@
+FINITE-EXACT SINGLE-CYCLE SUPPORT AND ACTUAL EULER CONTROLS PASS
+Uniform all-cycle proof is analytic; mapping degree>=10 additionally needs the independent involution supplier
+{
+  "mixed32_node_bank": {
+    "commuting_overlap_counts": {
+      "2": 8,
+      "3": 12,
+      "5": 2
+    },
+    "degree": 9,
+    "total": 2520
+  },
+  "pair_banks": [
+    {
+      "ambient": 4,
+      "braid_overlap_counts": {
+        "1": 4,
+        "2": 1
+      },
+      "commuting_cycles": 2,
+      "m": 2,
+      "total_cycles": 6
+    },
+    {
+      "ambient": 6,
+      "braid_overlap_counts": {
+        "2": 9,
+        "3": 1
+      },
+      "commuting_cycles": 4,
+      "m": 3,
+      "total_cycles": 40
+    },
+    {
+      "ambient": 8,
+      "braid_overlap_counts": {
+        "2": 24,
+        "4": 5
+      },
+      "commuting_cycles": 8,
+      "m": 4,
+      "total_cycles": 420
+    },
+    {
+      "ambient": 10,
+      "braid_overlap_counts": {
+        "4": 25,
+        "5": 6
+      },
+      "commuting_cycles": 28,
+      "m": 5,
+      "total_cycles": 6048
+    }
+  ],
+  "sharp_four_cycle_support": {
+    "chi": 2,
+    "cusp_counts": [
+      2,
+      2,
+      2
+    ],
+    "cycle_length": 4,
+    "degree": 8,
+    "group_order": 192,
+    "kept": 4,
+    "node_overlaps": [
+      4,
+      0,
+      0
+    ]
+  },
+  "sharp_three_cycle_support": {
+    "chi": 7,
+    "cusp_counts": [
+      0,
+      0,
+      0
+    ],
+    "cycle_length": 3,
+    "degree": 4,
+    "group_order": 12,
+    "kept": 1,
+    "node_overlaps": [
+      3,
+      3,
+      3
+    ]
+  },
+  "sharp_transposition_ledger": {
+    "chi": 1,
+    "cusp_counts": [
+      1,
+      1,
+      1
+    ],
+    "cycle_length": 2,
+    "degree": 4,
+    "group_order": 24,
+    "kept": 2,
+    "node_overlaps": [
+      0,
+      2,
+      0
+    ]
+  }
+}
+Always-active gates: 373
+Semantic SHA256: 94ab67fefe0ef226222fd71278fa7aa07869b8f317928ad1079fde29e7d40005

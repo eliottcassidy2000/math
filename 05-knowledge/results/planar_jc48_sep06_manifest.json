@@ -1,11 +1,11 @@
 {
   "session": "planar-jacobian-sep06",
-  "status": "PROVED scoped analytic/group results with independent audits; whole one-odd-cusp and two-ordinary-cusp (4,6) exclusions; whole ordinary three-cusp family marked D4 quotient, degree floor8 and non-involutive monodromy; quartic common-root/first-jet gates, all-finite constant-D finite6/infinity2 exclusion, and fixed-zero octuple polynomial-mate exclusion; JC(2) OPEN",
+  "status": "PROVED scoped analytic/group results with independent audits; whole one-odd-cusp and two-ordinary-cusp (4,6) exclusions; whole ordinary three-cusp family marked D4 quotient, degree floor10 and neither involutive nor single-cycle meridians; quartic common-root/first-jet gates and all-finite constant-D sixfold and octuple exclusions; JC(2) OPEN",
   "created_utc": "2026-09-06",
-  "artifact_count": 221,
-  "program_count": 51,
-  "exact_gates_per_complete_normal_or_optimized_run": 1491665,
-  "verification": "All51 programs have normal and optimized replays byte-identical to their frozen outputs. Four new bundles add22237 gates per mode with full independent analytic/source audits. The three-cusp braid includes six actual moving paths with807segments and18 independently reconstructed local complex root clusters. Complete family transport retains harmless projection and even-coefficient degeneracies. The partial-retention D4 audit independently reconstructs all53 literal subgroups and211 count trials. All199 inherited artifact pins remain unchanged; their prior replay record is retained. Older numerical scout labels remain frozen provenance; the new actual-geometry bundles supply their previously conditional consumers.",
+  "artifact_count": 229,
+  "program_count": 53,
+  "exact_gates_per_complete_normal_or_optimized_run": 1492123,
+  "verification": "All53 programs have normal and optimized replays byte-identical to their frozen outputs. Two new bundles add458 gates per mode with complete independent analytic/source audits. The all-finite octuple proof retains the exact changed global carriers, weighted trace, full genus-two primitive space and original-source same-fibre repair. The single-cycle theorem is analytic in every length; an independent integer-ledger/cycle-type enumeration pays the low-degree corollary. All221 inherited pins are preserved, including the recorded explicit finite_eight status-only pin migration. No finite controls are used as a census of polynomial Keller maps.",
   "program_gates": {
     "weight14": 169,
     "weight14_audit": 93,
@@ -57,7 +57,9 @@
     "three_cusp_braid": 9534,
     "finite_eight": 92,
     "three_cusp_family": 102,
-    "d4_retention": 12509
+    "d4_retention": 12509,
+    "octuple_transport": 85,
+    "cycle_support": 373
   },
   "artifacts": [
     {
@@ -216,6 +218,11 @@
       "sha256": "a7f9ef420b8782026c5df71fa361a981126283e14e5f67440e1ed6ba2ff5c1e1"
     },
     {
+      "path": "04-computation/planar_jc48_sep08_cycle_support.py",
+      "bytes": 4836,
+      "sha256": "762ae98683bcda5116d66c9354e5c8c4ed37af9fd8227c45cebabd8af300d7aa"
+    },
+    {
       "path": "04-computation/planar_jc48_sep08_d4_involution.py",
       "bytes": 5158,
       "sha256": "752ef3690dd6e608a98c9bdcb9632f71911588f3e1e4a9523f4fb71278975c2b"
@@ -244,6 +251,11 @@
       "path": "04-computation/planar_jc48_sep08_moving_tubes.py",
       "bytes": 11199,
       "sha256": "735e928d0d39bc43d6f1ec3e3d8a4965b8181813cf6094d6e8b50bb8fcf59990"
+    },
+    {
+      "path": "04-computation/planar_jc48_sep08_octuple_transport.py",
+      "bytes": 9958,
+      "sha256": "b56bc24e5e79233ba74b84d3565a582dbe8d6d695c774a255fb1a175ba73fd87"
     },
     {
       "path": "04-computation/planar_jc48_sep08_pole_degree.py",
@@ -791,6 +803,21 @@
       "sha256": "e9803f0e63aa6a053a83176f36ef3bb5ab2276840f51ab4f7f79e425f6907351"
     },
     {
+      "path": "05-knowledge/results/planar_jc48_sep08_cycle_support.md",
+      "bytes": 14648,
+      "sha256": "8c49f6929d7e8864eda12e68ce2413c72c1b65a0901141cc1d8f9ab17109518d"
+    },
+    {
+      "path": "05-knowledge/results/planar_jc48_sep08_cycle_support.out",
+      "bytes": 1872,
+      "sha256": "316adec4bbd9767c739dc6f59cfdc3201c042f439a17d8c425e729d1108e662a"
+    },
+    {
+      "path": "05-knowledge/results/planar_jc48_sep08_cycle_support_audit.md",
+      "bytes": 9509,
+      "sha256": "b636eb23ec902b8872fad8c001833edcbdf54649b6d3ca96514952546de00d8e"
+    },
+    {
       "path": "05-knowledge/results/planar_jc48_sep08_d4_involution.md",
       "bytes": 8391,
       "sha256": "3ae328310733214fd883d67db36700bf28472ed35d8f57d0f7b9f9c84d841366"
@@ -914,6 +941,21 @@
       "path": "05-knowledge/results/planar_jc48_sep08_moving_tubes_audit.md",
       "bytes": 10131,
       "sha256": "8bebfabf1b42227d37214e58b1321bcdc1afb168748aa0a4a6cd9dceccc64629"
+    },
+    {
+      "path": "05-knowledge/results/planar_jc48_sep08_octuple_transport.md",
+      "bytes": 14134,
+      "sha256": "b0dbc1165c9612e6f81528ee2b5a870af2bab38ebffd9b173489f5c3ad5bcff7"
+    },
+    {
+      "path": "05-knowledge/results/planar_jc48_sep08_octuple_transport.out",
+      "bytes": 398,
+      "sha256": "cf67f2ec2c4e68f1b9cdd2c610634ae2ddbb6a091d349484c1a1dfa97ad7aae8"
+    },
+    {
+      "path": "05-knowledge/results/planar_jc48_sep08_octuple_transport_audit.md",
+      "bytes": 14156,
+      "sha256": "a6e302816d0a91780e49c08604c88376ea8866782ed854c65d637f596b9d60e8"
     },
     {
       "path": "05-knowledge/results/planar_jc48_sep08_pole_degree.md",

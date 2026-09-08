@@ -1,0 +1,297 @@
+# Single-cycle D4 monodromy fails the actual three-cusp Euler ledger
+
+**Status: PROVED / FINITE-EXACT / INDEPENDENTLY AUDITED.**
+The uniform single-cycle statement is proved below without a finite-group
+classification. Its later degree-ten corollary additionally consumes the
+separately audited and promoted arbitrary-retention involution theorem.
+
+## 1. Statement and marked scope
+
+Let a,b,c,d be single m-cycles, m>=2, with all other letters fixed,
+satisfying the Artin D4 relations
+
+    braid(b,a), braid(b,c), braid(b,d),
+    [a,c]=[a,d]=[c,d]=1.                                (1)
+
+Here braid(x,y) means xyx=yxy. Then the union of their moved supports
+has size at most floor(3m/2) when m is odd and at most 2m when m is
+even. This is an arbitrary-ambient permutation statement, with no
+transitivity hypothesis.
+
+For the actual geometric consumer, assume a nonautomorphic polynomial
+Keller map has whole nonproperness set an irreducible curve normalized
+by A1, with exactly three ordinary cusps, N>=3 ordinary nodes, and no
+other affine singularities. Assume four positive meridians generate
+the complement and satisfy (1), with the three cusp pairs and three
+distinct node pairs marked as in the
+[three-cusp passport](planar_jc48_sep08_three_cusp_passport.md): writing
+e=bcb^-1 and f=e^-1ae, these are
+
+    cusps: (b,c), (b,d), (a,e);
+    nodes: (f,b), (a,d), (c,d).                         (2)
+
+Actual inside-pair Hurwitz changes are allowed only with the count
+transport proved in the [certified braid supplier](planar_jc48_sep08_three_cusp_braid.md),
+§4. No retained set is silently replaced by an inertia fixed set.
+
+Then a generic positive meridian cannot be one single nontrivial cycle
+with all other letters fixed. Before the classical degree-four input,
+the sole numerical exception left by the proof is a transposition on
+D=4 sheets with all k=2 fixed letters retained. The exact S4 control
+attains this exception; the correctly typed geometric degree-four
+exclusion is essential to remove it.
+
+The closest mechanisms are the abstract cusp injection, the marked D4
+identification and the original-pair Euler ledger. The first hostile
+is the transitive S4 actual-sheet control. A second is a transitive
+eight-letter D4 representation by single four-cycles, saturating the
+new support bound but having Euler value two. The corrected near miss
+is treating a support bound or absence of a fixed label as a global
+Euler certificate. The least-used sidecar is the number of full joint
+fixed letters that actual retention is forced to keep.
+
+The live concepts are braid overlap, commuting support blocks, actual
+retention deficits, simultaneous local conjugations, and the Euler
+budget. Root proposed the final even-length Euler estimate and its
+low-degree extension; both are independently derived here. No external
+priority claim is made.
+
+## 2. Braided single cycles overlap in at least half their support
+
+The following abstract fixed-set argument does not require a Keller
+map. For any braided permutations sigma,tau on an ambient D-element
+set, put g=sigma*tau. The braid relation gives g sigma g^-1=tau.
+Thus for A=Fix(sigma) and B=Fix(tau), one has B=gA.
+
+More generally, if A is any sigma-fixed set and B=gA is tau-fixed,
+with |A|=|B|=k and n=|A intersect B|, then
+
+    2n>=3k-D.                                          (3)
+
+For completeness put U=A\B and O=Omega\(A union B). If x and tau*x
+both lie in U, sigma fixes both, and the braid relation at x gives
+tau*x=tau^2*x. Hence tau*x=x and then g*x=x, contradicting x not in B.
+Therefore tau*U is contained in O. Comparing sizes gives
+k-n<=D-2k+n, which is (3). The proof also permits an empty fixed set.
+
+If sigma and tau are single m-cycles with support intersection j,
+then k=D-m and n=D-2m+j for their full fixed sets. Substitution into
+(3) gives
+
+    2j>=m.                                             (4)
+
+It is a necessary bound, not a classification of all allowable overlap
+sizes. For example the exact m=5 pair bank below finds only overlaps
+four and five, although (4) permits three.
+
+Two commuting single m-cycles have disjoint or identical supports.
+Indeed the second permutation preserves the first support. If its own
+support meets that invariant set, its one nontrivial orbit is entirely
+inside it; both supports have size m, so they coincide.
+
+The three leaf supports in (1) are consequently pairwise identical or
+disjoint. Each distinct leaf block meets supp(b) in at least ceil(m/2)
+letters by (4). For odd m there can be only one leaf block; the union
+with supp(b) then has size at most 2m-ceil(m/2)=floor(3m/2).
+For even m there can be at most two. If there are two, their required
+intersections already exhaust supp(b), so b has no moved letter outside
+the two blocks. Their total union has size 2m. If there is only one,
+the union is at most 3m/2. This proves the stated support bounds.
+
+In particular, a transitive action generated by these four cycles has
+D<=2m. Equality D=2m forces m even, exactly two disjoint leaf blocks,
+and intersection m/2 of the central support with each. Among the three
+leaves one block occurs twice and the other once.
+
+## 3. Actual retained sets give the needed lower bounds
+
+Return to the declared actual geometric setting. Let D>1 be mapping
+degree, k its smooth-stratum retained count, n_i its three cusp counts,
+and W the sum of actual deleted overlaps at all N nodes. Then
+
+    1<=k<D,
+    1=-2k+n_1+n_2+n_3+W,
+    omega_p>=max(0,D-2k).                               (5)
+
+These are the actual page-constancy, cusp re-access and Euler suppliers
+already proved in the passport. A positive meridian fixes every retained
+letter. If it is a single m-cycle, its full fixed count is D-m, so
+
+    k<=D-m.                                            (6)
+
+An additional cusp bound retains the deletion deficit. For an actual
+cusp pair sigma,tau, let F=Fix(sigma) intersect Fix(tau), of size f0,
+and let a0=|Fix(sigma)|. Its actual retained sets satisfy A subset
+Fix(sigma), B=(sigma*tau)A and n=|A intersect B|. Every point of F is
+fixed by sigma*tau, so A intersect F is contained in A intersect B.
+Therefore
+
+    n>=max(0,k-a0+f0).                                 (7)
+
+This does not assert that every fixed letter is retained. If the local
+pair has been changed by an inside-pair Hurwitz move, apply (7) to the
+directly certified pair. Its joint fixed count is unchanged since its
+joint subgroup is unchanged, and the actual intersection count is
+transported by the separate local-pair theorem.
+
+At a node, the support of each local meridian is contained in its
+actual deleted set. Hence the actual deleted overlap is at least the
+intersection of the two permutation supports. A simultaneous conjugation
+of the local pair preserves that support intersection and transports
+both actual subsets. The conjugations used next are simultaneous.
+
+## 4. All single-cycle lengths are eliminated, apart from the degree-four control
+
+Transitivity of the actual covering and §2 give D<=2m. Suppose first
+D<2m. The two single m-cycle supports at every node overlap because
+the ambient set is too small for disjoint supports. They commute, so
+those supports are identical. Every node overlap is therefore at least
+m. Equations (5)--(6) give
+
+    1 >= -2k+W >= -2(D-m)+3m = 5m-2D > 1,              (8)
+
+a contradiction. Only D=2m remains. It forces even m and the two leaf
+blocks described in §2.
+
+Write q=m-k>=0. The full fixed count of each generator is m.
+For any leaf x, supp(b) meets supp(x) in exactly m/2 letters, so the
+joint fixed count of (b,x) is also m/2. The first two original cusp
+pairs have this form. For the third, use the exact D4 identities
+
+    c a c^-1=a,       c e c^-1=b.
+
+Thus the joint fixed count of (a,e) equals that of (a,b), also m/2.
+This calculation concerns the joint subgroup and its fixed letters;
+(7) is still applied to the actual marked local pair. All three cusps
+therefore satisfy
+
+    n_i>=k-m+m/2=m/2-q.                               (9)
+
+The original three node support intersections are those of the three
+leaf pairs. Indeed node0=(f,b) is simultaneously conjugated by e to
+(a,c), because e f e^-1=a and e b e^-1=c. Node1 is (a,d), and node2
+is (c,d) after its already paid simultaneous conjugation. Exactly one
+of these leaf pairs has identical support, giving actual overlap at
+least m. The other two nodes have overlap at least D-2k=2q by (5).
+Other nodes contribute nonnegative overlap. Hence
+
+    W>=m+4q.
+
+Combining this with (5) and (9) gives the dimension-free bound
+
+    1=-2k+sum n_i+W >= m/2+3q.                         (10)
+
+For every even m>=4 this is impossible. Odd m cannot have D=2m.
+For m=2, (10) forces q=0, hence D=4,k=2. This is the sole remaining
+case. The cited geometric mapping-degree-four exclusion, with its
+primary source and degree definition recorded in the ordinary-cusp
+passport, removes it for polynomial Keller maps.
+
+Thus all single-cycle meridians are excluded. No finite census, full
+retained/fixed equality hypothesis, classical theorem in higher mapping
+degree, or arbitrary involution classification is needed for this
+uniform statement. The m=2 exception shows exactly where the classical
+degree-four input enters.
+
+## 5. Sharp group controls and lost Euler information
+
+For m=2 the exact tuple a=d=(34), b=(23), c=(12) generates transitive
+S4. With full fixed retained sets, its original cusp counts are (1,1,1)
+and node overlaps (0,2,0), giving Euler one. This saturates (10), so
+the geometric degree-four input cannot be omitted.
+
+For m=3 take a=c=d=(134), b=(123) on four letters. The group is
+transitive A4, of order12, attaining the odd support bound four.
+Its full-fixed retained count is one, cusp counts are (0,0,0), and
+node overlaps are (3,3,3). The Euler value is seven, attaining the
+lower expression 5m-2D in (8), not the required one.
+
+For a sharp m=4 support example, use zero-based labels0,...,7 and
+
+    b=(0 1 2 3),  a=c=(0 4 2 5),  d=(1 6 3 7).
+
+This is a transitive eight-letter image of the complete six-word
+presentation, of order192. The order alone does not identify it with
+the earlier reflection representation: its marked generators have
+order four. With full fixed retained sets k=4, its original cusp counts
+are (2,2,2), node overlaps are (4,0,0), and Euler is two. It attains
+(10) at m=4,q=0. This exact positive group control is not a Keller
+cover, and demonstrates why transitivity and the sharp support bound
+alone would be insufficient.
+
+## 6. The degree-ten corollary with the accepted involution supplier
+
+The independently audited and promoted
+[arbitrary-retention involution theorem](planar_jc48_sep08_d4_retention.md)
+retains its cited Coxeter-presentation supplier. That separate theorem
+excludes every involutive meridian image under the same actual marking
+and N>=3 hypotheses, without requiring all fixed letters to be retained.
+The present proof supplies the independent single-cycle exclusion.
+
+The already proved three-cusp passport excludes mapping degrees5,6,7,
+and its cited classical inputs exclude2,3,4. For D=8, k<=3 is impossible:
+for k<=2, W>=3(8-2k)>2k+1; at k=3, the cusp injection gives n_i>=1,
+so W=7-sum n_i<=4 while W>=6. Thus k>=4 and every nonidentity
+meridian moves at most four labels. Its cycle type is an involution
+or a single three- or four-cycle. The two suppliers exclude all cases.
+
+For D=9, k<=3 gives W>=3(9-2k)>2k+1, so k>=4. If k>=5 the moved
+support has size at most four and the preceding list applies. If k=4,
+the moved support has size at most five. In addition to involutions
+and single cycles, the only remaining type is one three-cycle times
+one disjoint transposition. It moves five labels and fixes exactly
+four, so every actual retained set is its entire fixed set.
+
+At a cusp, 2n_i>=3k-D=3 gives n_i>=2. Hence W=9-sum n_i<=3.
+Every node has omega_p>=D-2k=1. But the commuting meridians preserve
+their support intersection, which is a union of nontrivial cycles of
+the first meridian, of lengths three and two. Any positive intersection
+therefore has size at least two. Full fixed retention identifies this
+intersection with the actual deleted overlap, giving W>=2N>=6,
+a contradiction. Thus degree nine is also excluded.
+
+With the explicit involution dependency now proved, every actual curve
+with the declared marked D4 and three-cusp/node inventory has mapping
+degree at least ten if it is whole Keller nonproperness support. The
+literal braid supplier and the separate family transport supply that
+marking with both audits accepted. Mapping degree10 and
+higher mixed cycle types remain OPEN. No claim is made that a finite
+representation realizes a polynomial Keller source.
+
+## 7. Exact universe and reproduction
+
+The source enumerates only bounded local pair banks: for m=2,3,4,5,
+fix sigma=(1 ... m) on 2m labels and enumerate every single m-cycle tau
+on those labels. Every possible union of two m-cycle supports embeds
+in this universe after relabeling sigma, so the overlap controls are
+complete for these named lengths. The uniform theorem is the analytic
+argument above, not extrapolation from these banks.
+
+It also replays all six full words and all original cusp/node counts
+on the three named transitive controls. Their group closures have exact
+orders24,12,192. Finally it enumerates all2520 permutations of type(3)(2)
+on nine labels against one fixed such sigma, checking the commuting
+support intersections. Those intersections have sizes2,3,5; in particular
+one is impossible. This is a local degree-nine control, not a census of
+all global representations or actual retained subsets.
+
+```sh
+python3 -B 04-computation/planar_jc48_sep08_cycle_support.py
+python3 -B -O 04-computation/planar_jc48_sep08_cycle_support.py
+```
+
+Normal and optimized replays pass **373 always-active gates** and
+reproduce the frozen output byte for byte. The exact pins are:
+
+
+- `planar_jc48_sep08_cycle_support.py`: 4,836 bytes; SHA256 `762ae98683bcda5116d66c9354e5c8c4ed37af9fd8227c45cebabd8af300d7aa`.
+- `planar_jc48_sep08_cycle_support.out`: 1,872 bytes; SHA256 `316adec4bbd9767c739dc6f59cfdc3201c042f439a17d8c425e729d1108e662a`.
+
+Semantic digest:
+`94ab67fefe0ef226222fd71278fa7aa07869b8f317928ad1079fde29e7d40005`.
+
+The primary proof/source/output and audit are frozen. The uniform
+single-cycle theorem and the degree-ten consumer retain their separate,
+now proved dependency scopes as stated above.
+
+The [independent audit](planar_jc48_sep08_cycle_support_audit.md) accepts the uniform proof, complete source and both373-gate replays, and separately reconstructs the exhaustive low-degree cycle-type list. The degree-ten corollary has its proved involution dependency.

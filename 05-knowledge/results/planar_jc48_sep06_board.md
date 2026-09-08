@@ -28,9 +28,9 @@ quadratic tangent evaluation, and transverse derivatives of component jets.
 |---|---|---|
 | Anchor: moving source | The finite five-dimensional response remains valid, but every nonconstant polynomial Hamiltonian in K+Delta K[p,y] has no nonzero rational scalar time | Change the invariant or carrier; different polynomial lifts inside the cusp ideal are now closed, and compositions still need their actual invariant/regularity sidecars |
 | Niche: collision | All scalar two-form periods miss exactly the quadrics through tangent directions in a three-dimensional target | Carry the quadratic data through an actual earlier source deformation and preserve descent |
-| Anchor: infinity | The one-odd-cusp and two-ordinary-cusp (4,6) classes are closed; the entire ordinary three-cusp class has an actual marked D4 quotient, degree floor8, and no involutive meridian monodromy | Test support geometry beyond involutions; the single-cycle exclusion and degree floor10 are new candidates under audit |
+| Anchor: infinity | The one-odd-cusp and two-ordinary-cusp (4,6) classes are closed; the entire ordinary three-cusp class has an actual marked D4 quotient, degree floor10, and neither involutive nor single-cycle meridians | Audit the new degree-uniform closure: central support incidences and retained deficits reduce all moved counts to2,4,6, and the last formal row fails node commutation |
 | Wildcard: response connection | The fixed smooth polynomial family F=arb+c+h(b), h in b³C[b], has unit class of exact primary order2; the canonical derivative generates its full component-labelled arm | Map an actual source-normal response to this paid operator without changing its polynomial ring |
-| Wildcard: actual boundary surface | Shared-root jets are necessary; the constant-D finite6/infinity2 class is closed at every finite location, and the complete fixed-zero octuple class has no polynomial mate | Audit the octuple extension to every finite point using corrected global carriers, weighted trace and a genus-two primitive-space obstruction; other multiplicity partitions remain open |
+| Wildcard: actual boundary surface | Shared-root jets are necessary; the constant-D finite6/infinity2 and octuple classes are closed at every finite location, with unrestricted mate degree | Test the remaining infinity octuple using an actual surface inversion and its changed volume form; other multiplicity partitions remain open |
 
 ## Audited checkpoint
 
@@ -477,9 +477,28 @@ quadratic tangent evaluation, and transverse derivatives of component jets.
     meridians for every actual marked three-cusp curve in item48, without
     identifying retained and fixed sheets. Producer12509 gates pass.
 
-The [221-artifact manifest](planar_jc48_sep06_manifest.json) pins49 proof notes,
-50 independent audits,51 sources,51 outputs and twenty compressed certificates.
-The51 programs report1491665 exact gates per complete normal or optimized run. Each frozen output agrees in normal and
+50. [Every finite octuple location](planar_jc48_sep08_octuple_transport.md)
+    is **PROVED + FINITE-EXACT + INDEPENDENTLY AUDITED**. Corrected actual
+    global functions h=(x-p)^4t+(x-p)^2-2p(x-p) and v=h/(x-p) preserve
+    the exact rational field and volume coefficient. Weighted quadratic
+    trace and the complete three-dimensional genus-two primitive space
+    close the new rational cases. A same-fibre pole comparison on the
+    original source closes the remaining polynomial case. Every finite
+    p is covered, while rational mates remain genuine hostiles to a
+    stronger conclusion. Producer85 gates and independent full audit pass.
+51. [No single-cycle meridian and degree floor10](planar_jc48_sep08_cycle_support.md)
+    is **PROVED + FINITE-EXACT + INDEPENDENTLY AUDITED**. Braided single
+    cycles overlap in at least half their support; commuting leaf cycles
+    have identical or disjoint supports. Actual retention deficits then
+    force an Euler contradiction at every length, except the classical
+    degree-four control. The independent involution exclusion also closes
+    degrees8,9. A transitive eight-letter order-four control has Euler2,
+    so sharp support and transitivity alone still fail. Producer373 gates
+    and a separate integer-ledger/cycle-type audit pass.
+
+The [229-artifact manifest](planar_jc48_sep06_manifest.json) pins51 proof notes,
+52 independent audits,53 sources,53 outputs and twenty compressed certificates.
+The53 programs report1492123 exact gates per complete normal or optimized run. Each frozen output agrees in normal and
 optimized modes; the braid verifiers also check their pinned witnesses.
 These are scoped proof controls, not a census of Keller maps. No external
 priority claim is made.
@@ -709,16 +728,20 @@ Next operations compare all five live lanes. The quartic common-root
 and shared-root first-jet gates remain the entry constraints. Items42--43
 close the entire constant-D finite6/infinity2 stratum at every finite
 location, including the genuine residue-free elliptic layer. Item47
-closes the complete fixed-zero octuple polynomial-mate class. A changed
-global carrier now gives a candidate extension to every finite point:
-the last residual genus-two curve has a complete three-dimensional
-primitive space, and source pole repair remains a separate final gate.
+closes the complete fixed-zero octuple polynomial-mate class; item50
+pays every finite point using changed global carriers, the complete
+three-dimensional genus-two primitive space, and original-source pole
+repair. A new infinity-point route retains the actual surface inversion's
+changed volume form; it remains under development.
 Item39 closes the entire two-ordinary-cusp (4,6) class. Items46--48 pay
 the actual three-cusp moving paths, local pairs and full family transport;
-the actual degree floor is8. Item49 excludes involutive monodromy with
-arbitrary retained subsets and any extra nodes. A new single-cycle
-support argument and proposed degree floor10 still need their independent
-audit. The S4 hostile prevents cyclicity or local cusp generation
+the actual degree floor is10 by item51. Item49 excludes involutive
+monodromy with arbitrary retained subsets and any extra nodes. A new
+degree-uniform candidate combines central-support incidences, leaf-union
+bounds and the actual node ledger to leave only moved counts2,4,6;
+the final six-moved-letter formal row fails commutation. This proposed
+whole three-cusp closure is still under independent audit. The S4 hostile
+prevents cyclicity or local cusp generation
 shortcuts. For moving sources, every polynomial
 Hamiltonian inside the cusp ideal is closed for nonzero rational time.
 Different-invariant compositions and changed carriers retain their
