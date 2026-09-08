@@ -1,0 +1,71 @@
+FINITE-EXACT TWO-CUSP RATIONAL BRAID PASS; analytic consumer proved separately
+{
+  "conclusion": "analytic necessity: a=b=d=c; no finite-group census",
+  "discriminant": "-256*u*(u - 3)**2*(u + 1)**6*(324*u**3 + 972*u**2 + 1080*u + 289)**2/531441",
+  "paths": [
+    {
+      "compressed_bytes": 651158,
+      "compressed_sha256": "3ae1dfc0ada5d2fe148cb4da1b4643fcfd10280e66ac8a73ad783b6a007b22b9",
+      "gates": 85994,
+      "name": "smooth",
+      "raw_bytes": 2522124,
+      "raw_sha256": "06d050671046d9145ce23c82fa7fbbbeaa2d8a73ba62fd664b74cdc8046820be",
+      "segments": 9553,
+      "word": [
+        3,
+        1,
+        -3
+      ]
+    },
+    {
+      "compressed_bytes": 1253330,
+      "compressed_sha256": "fa2c749fd1cd3cf065973ad8fe5bfc8c0aa725055564f3d25f404c3d8405e018",
+      "gates": 174740,
+      "name": "cusps",
+      "raw_bytes": 5051033,
+      "raw_sha256": "e77a3b3d313d8a5f9d0eb87ba241318fef531004e13255d0c3245a28180caa76",
+      "segments": 19412,
+      "word": [
+        3,
+        2,
+        3,
+        1,
+        3,
+        1,
+        1,
+        3,
+        -2,
+        -3
+      ]
+    },
+    {
+      "compressed_bytes": 2395456,
+      "compressed_sha256": "f86f82e2bbcd6f701a50c0a70961ef9b2e1828b3f840e3b5a9d266289f2068bc",
+      "gates": 339433,
+      "name": "node3",
+      "raw_bytes": 10053504,
+      "raw_sha256": "7638249409e0db9cd66c58f802e54e5285b607883a102057474e76ea1e11d49a",
+      "segments": 37713,
+      "word": [
+        3,
+        3
+      ]
+    },
+    {
+      "compressed_bytes": 736165,
+      "compressed_sha256": "2994c91af1c1de6d4f3aa8555f2899dfa8c24465070314352ec00d38421cf662",
+      "gates": 94484,
+      "name": "node_left",
+      "raw_bytes": 2861579,
+      "raw_sha256": "794de455b150396b31c6e96154d4403a0d7dbfb5e2c28d69f2f107e532d6e45a",
+      "segments": 10496,
+      "word": [
+        3,
+        2,
+        2,
+        -3
+      ]
+    }
+  ]
+}
+PASS always-active gates=694669

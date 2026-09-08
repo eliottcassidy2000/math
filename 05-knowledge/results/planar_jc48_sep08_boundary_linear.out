@@ -1,0 +1,6 @@
+DG boundary-linear carrier controls PASS; unbounded analytic proof required
+Universe: global monomials rb^m (m=1..9), B=b^m (m=0..9), arbitrary residue coefficients through degree5
+Positive controls: explicit rational primitives, both literal chart Jacobians, k=3..9 monomial family
+Hostiles: two-root residue, source-critical multiplicities, and source-critical-free global-root quartic with incompatible fibre poles
+Always-active gates: 149
+Semantic SHA256: 4e937ecc6e3519b5d405386b568a139bd1db7787f16ba8177a5a7ab369183648

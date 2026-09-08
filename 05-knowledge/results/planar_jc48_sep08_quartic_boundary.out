@@ -1,0 +1,6 @@
+Quartic base-Jacobian and DG boundary interfaces PASS; unbounded proof audit required
+Faber universe: degrees 1..12 with independent coefficient derivatives
+Positive base-only Jacobian families: 6, with vanishing base RHS and unbounded-shear pattern
+Controls: finite-pole hostile, global quartic/root-pole hostile, exact chart and affine-root transport
+Always-active gates: 126
+Semantic SHA256: 6e989a1819d645fd97d7105a0ba44ee4c14935276ea15e102abda80b959fa80e

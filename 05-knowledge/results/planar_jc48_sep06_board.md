@@ -28,9 +28,9 @@ quadratic tangent evaluation, and transverse derivatives of component jets.
 |---|---|---|
 | Anchor: moving source | The finite five-dimensional response remains valid, but every nonconstant polynomial Hamiltonian in K+Delta K[p,y] has no nonzero rational scalar time | Change the invariant or carrier; different polynomial lifts inside the cusp ideal are now closed, and compositions still need their actual invariant/regularity sidecars |
 | Niche: collision | All scalar two-form periods miss exactly the quadrics through tangent directions in a three-dimensional target | Carry the quadratic data through an actual earlier source deformation and preserve descent |
-| Anchor: infinity | The whole birational (4,6) class with one finite odd (2,m) cusp and at least two nodes is excluded | A new two-ordinary-cusp sextic has four nodes, infinity9 and at most three positive meridians; determine its simultaneous access paths and use the revised two-cusp Euler ledger |
+| Anchor: infinity | The whole birational (4,6) class with one finite odd (2,m) cusp and at least two nodes is excluded; the new two-cusp sextic has actual affine group Z | Extend the finite certified relations under coefficient perturbation and identify the complete good two-cusp parameter strata; the local A6 passport alone loses these global relations |
 | Wildcard: response connection | Full torsion is component-labelled principal parts; the canonical derivative raises every nonzero primary height | Map the actual source-normal response to this operator without changing its polynomial ring |
-| Wildcard: actual boundary surface | The complete source-t filtration has dim L_n=(2n+1)(n+1); recovered canonical theorems exclude every pencil member in L_3 | The next layer in this route is L_4, dimension45, with an unrestricted mate; recover its already closed quartic subcases before searching |
+| Wildcard: actual boundary surface | Every hypothetical quartic pair has F=H²+L with global H in L2 and nonconstant L in L1; all coordinates linear in r in the boundary chart are excluded, with unrestricted mate | Test the actual relative differential on compact generic fibres; distinguish regular boundary branches from nonzero logarithmic residues and retain both components of a special fibre |
 
 ## Audited checkpoint
 
@@ -269,13 +269,51 @@ quadratic tangent evaluation, and transverse derivatives of component jets.
     INDEPENDENTLY AUDITED** geometry: U=t4-2t²,
     V=t6-3t4/2+t3/3-t, two ordinary cusps, four nodes and infinity(2,9).
     The unique smooth vertical fold supplies at most three positive
-    meridians. Its full group and whole-Keller exclusion remain **OPEN**.
+    meridians. Item31 now proves its full group is Z and excludes it as
+    whole Keller support; the original geometry bundle is retained unchanged.
     The correct conditional ledger is1=-a+n1+n2+sum omega, so the
     one-cusp half-retained bound cannot simply transfer. Producer42 gates pass.
 
-The [122-artifact manifest](planar_jc48_sep06_manifest.json) pins28 proof notes,
-29 independent audits,30 sources,30 outputs and five compressed certificates.
-The30 programs report748302 exact gates per complete normal or optimized run. Each frozen output agrees in normal and
+29. [Base-only quartic Jacobians and global approximate root](planar_jc48_sep08_quartic_boundary.md)
+    is **PROVED + INDEPENDENTLY AUDITED**. The inherited finite-pole proofs
+    need only a nonzero base-dependent Jacobian, not its invertibility at
+    the tested place. Applied to both full DG charts, including lambda r²,
+    they force F=H²+L with global H in L2 and nonconstant L in L1 for any
+    hypothetical quartic pair. Neither auxiliary is asserted to inherit a
+    Keller mate or to lie in the original pencil. Producer126 gates pass.
+30. [Uniform two-cusp actual-sheet passport](planar_jc48_sep08_two_cusp_passport.md)
+    is **PROVED + INDEPENDENTLY AUDITED**. Two ordinary cusps and N>=2
+    nodes force d in {2a-1,2a} and every deleted node overlap zero. Equality
+    in the cusp injection identifies all fixed labels as actual and forces
+    even nontrivial cycles; commuting-node parity pays the otherwise open
+    N=2 case. With three positive meridians, cited degrees2–4 and the new
+    degree5 edge obstruction leave d>=6. The d6 A6 passport is an exact
+    abstract survivor, not a representation of the actual curve group.
+    Producer1051 gates and an independent unfiltered node-parity check pass.
+31. [Actual two-cusp affine braid group](planar_jc48_sep08_two_cusp_braid.md)
+    is **PROVED + INDEPENDENTLY AUDITED**. Four common-base loops with
+    77174 rational segments force all four positive meridians equal in an
+    arbitrary group; defining-polynomial winding proves the group is Z.
+    A transitive cyclic cover of degree>1 cannot retain a smooth sheet, so
+    this literal sextic is excluded as whole Keller nonproperness support.
+    Both co-projected cusps and all critical projection values are retained;
+    the unused two complex-node scout words remain HEURISTIC. Producer
+    and independent referee pass694669 gates in each normal/optimized run.
+32. [Entire boundary-linear carrier](planar_jc48_sep08_boundary_linear.md)
+    is **PROVED + INDEPENDENTLY AUDITED**. Every global F of degree<=1
+    in r has form rb C(b)+B(b), and no polynomial source mate exists in
+    any degree. A twice-F derivative and rational-map degree force one
+    denominator root; source criticality reduces its multiplicity to one.
+    In the rationally integrable case, two reduced components of one fibre
+    make the required double-pole repair incompatible. The quartic
+    F=b4-v has a global root b², nonconstant boundary restriction, no
+    affine-source critical point, and a rational mate, yet no polynomial
+    mate. It is critical at one point of the added boundary. Producer149
+    gates and independent analytic/source audit pass.
+
+The [142-artifact manifest](planar_jc48_sep06_manifest.json) pins32 proof notes,
+33 independent audits,34 sources,34 outputs and nine compressed certificates.
+The34 programs report1444297 exact gates per complete normal or optimized run. Each frozen output agrees in normal and
 optimized modes; the braid verifiers also check their pinned witnesses.
 These are scoped proof controls, not a census of Keller maps. No external
 priority claim is made.
@@ -462,11 +500,11 @@ identifying those five objects.
 The former finite(2,7) scouts are now closed by items24-25, together with
 the finite(2,9) stratum. Their numerical words have been replaced by full
 rational path certificates and independently audited actual group maps.
-The next concrete geometric object is item28's two-ordinary-cusp sextic.
-It has only one smooth projection fold, so the same immediate operation
-gives three meridians. Recover the remaining simultaneous cusp/node access
-paths before applying a permutation consumer; retain its changed Euler
-ledger. These curves are not Keller maps.
+The next geometric object was item28's two-ordinary-cusp sextic; item31
+now pays its simultaneous access paths and proves its group is Z. Its
+single smooth projection fold alone only gave three meridians. Item30's
+abstract A6 survivor explains the additional global information required.
+These curves and finite passports are not Keller maps.
 
 Incoming `89aca08819` and `4441760e1a` were read before synchronization.
 Their [continuing9 synthesis](continuing9_20260907_synthesis.md) confirms the
@@ -501,14 +539,20 @@ also restore simultaneous information before a quotient. That procedural
 comparison supplies no map from D moments or runner labels to the present
 curve or source-ring objects, and no JC consequence is inferred.
 
-Next operations compare all five live lanes. For the DG quartic layer,
-intersect the complete L4 basis with the existing polynomial canonical
-quadratic approximate root: globality of the quartic does not automatically
-make that root global on W. Retain its full linear remainder and distinguish
-the unrestricted mate from older theorems bounding both coordinates.
-For the two-cusp curve, find a common certified system of access paths for
-its two co-projected cusps and four nodes. Its single smooth fold supplies
-only the already proved three-meridian bound. For moving sources, all
+Next operations compare all five live lanes. Item29 pays globality of the
+quartic approximate root using the base-only Jacobian extension; F global
+alone remains insufficient, as its explicit hostile shows. Retain global
+H in L2, L in L1, and the unrestricted mate. On the compact surface,
+the generic fibre has equation N²+M S³-c S4=0. Simple zeros of N on S
+with M nonzero are a positive signal for regularity of the relative
+differential; multiple zeros can create nonzero logarithmic residues,
+so a claim of automatic regularity must not be extrapolated. This local
+direction is under investigation, not part of the proved manifest.
+For the two-cusp curve, the four certified finite relations are stable
+under sufficiently small coefficient perturbations. Determine the complete
+good parameter strata before promoting that openness to a whole-family
+statement; exceptional repeated roots of U' and infinity strata remain
+explicit obligations. For moving sources, all
 polynomial lifts inside the cusp ideal are closed for rational time;
 different-invariant compositions and changed global carriers need new
 arguments. Collision quadrics still need an actual transported deformation;

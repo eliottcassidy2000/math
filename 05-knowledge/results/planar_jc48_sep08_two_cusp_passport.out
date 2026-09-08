@@ -1,0 +1,9 @@
+Ordinary cusp injection/equality: exhaustive local rows [[2, 2], [3, 15], [4, 136]]
+Exact scalar+node-parity tables (N,count): [[2, 15], [3, 15], [4, 15], [5, 15]]
+Scalar N=2 q=1 boundary retained, then excluded by actual node parity
+Abstract transposition passport: {"a": 2, "cusps": [1, 2], "cycle_type": [1, 1, 2], "d": 4, "group_order": 24, "omega": 0}
+Abstract A6 passport: {"a": 3, "cusps": [2, 2], "cycle_type": [1, 1, 1, 3], "d": 6, "group_order": 360, "omega": 0}
+No actual affine-complement representation or Keller realization asserted
+Always-active exact gates: 1051
+Semantic SHA256: 9387d4f46952d14684868665c293f4bada853ef4fc16df07f22f897f9d91aec7
+RESULT: PASS

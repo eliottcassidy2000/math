@@ -76,10 +76,14 @@
   Every nonconstant polynomial Hamiltonian in K+Delta K[p,y] has no
   nonzero rational scalar time, using genus and elliptic vector-field poles.
   The complete DG filtration and recovered plane theorems exclude pencil
-  members through cubic source degree. A new two-cusp sextic has proved
-  geometry and at most three positive meridians; its full group is OPEN.
-  [Manifest](planar_jc48_sep06_manifest.json):122 artifacts,30 programs,
-  748302 exact gates per mode. Full JC(2) remains **OPEN**.
+  members through cubic source degree. Four actual common-base braid paths
+  prove the two-cusp sextic's affine group is Z and exclude its whole support.
+  Any hypothetical global quartic pair has F=H²+L with H in L2 and
+  nonconstant L in L1; the complete class linear in the boundary-chart r
+  coordinate is excluded with no mate-degree bound. The uniform two-cusp
+  passport retains an abstract A6 survivor and the missing global relations.
+  [Manifest](planar_jc48_sep06_manifest.json):142 artifacts,34 programs,
+  1444297 exact gates per mode. Full JC(2) remains **OPEN**.
 
 - [Previous continuing synthesis](continuing5_20260906_synthesis.md):
   full-model beta simplicity, the original-phase rectangle, the ordered
