@@ -9,6 +9,21 @@ Format per entry:
 - Why it was wrong
 - The correct framing
 
+## 2026-09-08 planar-jc48 -- retain the full transformed numerator and volume
+
+- **Repaired before promotion:** the first all-finite7+1 residue expansion
+  omitted `-A(h-k)/b` from B0. Independent audit caught the omitted
+  lower product before freeze; the [accepted proof](../05-knowledge/results/planar_jc48_sep08_seven_one_two_locations.md)
+  and source use the complete B0. The failed implication was treating
+  a leading-degree simplification as an exact identity of rational forms.
+- **Repaired before use:** root's first all-m transfer message guessed
+  volume exponent m−2. Direct differentiation of `x=1/r` and
+  `t=-r^m-r^(2m)b` gives r^(2m−2), recovering r² at m2.
+  The [accepted all-m theorem](../05-knowledge/results/planar_jc48_sep08_all_m_constant_d.md)
+  uses the original-source derivation and actual full chart. Its valid
+  replacement for fixed-index extrapolation is to move the inverse
+  indices to2m−3 and6m−7, with a literal W3 fixed-index hostile.
+
 ## 2026-09-08 Euler bridge -- passive amplification and adverse upper bounds
 
 - **REFUTED transfer probe:** an arbitrarily growing rank-one incompressible

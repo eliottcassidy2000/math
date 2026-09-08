@@ -1,0 +1,24 @@
+Fixed-DG quartic exclusion: complete labelled compiler
+Exact gates: 258
+Universe: 67 finite partitions; 50 uniform rejections; 17 exact rows
+Exact rows: 13 unrestricted-position, 4 conditional-position
+finite=empty; infinity=8; always -> infinity_octuple
+finite=1; infinity=7; always -> seven_one_infinity
+finite=3; infinity=5; always -> five_three_infinity
+finite=4; infinity=4; always -> four_four,four_four_transport
+finite=3+1; infinity=4; always -> four_three_one_infinity
+finite=5; infinity=3; always -> five_three_infinity
+finite=6; infinity=2; always -> degree_six_constant_d,const_d_translation,constant_d_shared_six
+finite=5+1; infinity=2; always -> five_two_one
+finite=4+1+1; infinity=2; midpoint -> four_two_one_one
+finite=3+3; infinity=2; always -> three_three_two
+finite=7; infinity=1; always -> seven_one_two_locations
+finite=8; infinity=0; always -> octuple_transport
+finite=7+1; infinity=0; always -> seven_one_two_locations
+finite=6+1+1; infinity=0; six_residue -> six_one_one
+finite=5+3; infinity=0; always -> five_three
+finite=5+1+1+1; infinity=0; sparse_elliptic -> five_one_one_one
+finite=4+3+1; infinity=0; weighted_midpoint -> four_three_one
+Analytic supplier truth and audit status are separate from finite coverage.
+Global root-gluing interfaces and rational/pole hostiles: PASS
+Semantic SHA256: 8f9e1a93dfedd4d162ed9261c043f4c992239f721cf279317fe772fcced9eafa

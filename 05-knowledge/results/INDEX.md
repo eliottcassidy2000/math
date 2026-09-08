@@ -119,10 +119,11 @@
   and mixed5,2 H4 generators coincide uniformly.
   The complete5+2+1 and both finite-sevenfold7+1 placements are also
   excluded; the last original-infinity-seven classification now also
-  closes. The complete global-pair coverage compiler is under audit.
-  Degree-six leading N forces constant D already for rational mates.
-  [Manifest](planar_jc48_sep06_manifest.json):383
-  artifacts,90 programs,4275817 exact gates per mode. Full JC(2) remains **OPEN**.
+  closes. The full global-pair quartic exclusion is now proved, and
+  every nonzero global output direction avoids L4. For all m>=2,
+  degree4m−2 leading N forces constant D at two moving inverse indices.
+  [Manifest](planar_jc48_sep06_manifest.json):391
+  artifacts,92 programs,4276514 exact gates per mode. Full JC(2) remains **OPEN**.
 
 - [Previous continuing synthesis](continuing5_20260906_synthesis.md):
   full-model beta simplicity, the original-phase rectangle, the ordered

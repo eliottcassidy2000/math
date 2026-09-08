@@ -10,6 +10,14 @@ The target is: every polynomial map (P,Q): C^2 -> C^2 with nonzero
 constant Jacobian has a polynomial inverse. Restricted chart closures,
 finite jets, rational primitives and formal solutions do not settle it.
 
+The main accepted result is now the [complete fixed-DG quartic theorem](planar_jc48_sep08_quartic_closure.md):
+all polynomial mates are excluded in the global square-prefix class,
+and the paid gluing bridge excludes every global quartic pair on W.
+The [all-m extension](planar_jc48_sep08_all_m_constant_d.md) gives a
+separate rational obstruction through inverse indices that depend on the
+graph degree. Full JC(2), higher fibre degrees and general surface entry
+remain open. Formal exactness at every order still does not algebraize.
+
 ## Inheritance and current concept board
 
 The closest mechanisms are THM-4438's selected row-15 lift, THM-4426's
@@ -30,7 +38,7 @@ quadratic tangent evaluation, and transverse derivatives of component jets.
 | Niche: collision | All scalar two-form periods miss exactly the quadrics through tangent directions in a three-dimensional target | Carry the quadratic data through an actual earlier source deformation and preserve descent |
 | Anchor: infinity | The whole one-odd-cusp, two-ordinary-cusp and three-ordinary-cusp (4,6) classes are excluded as irreducible whole Keller support; the last uses actual marked D4 and arbitrary retained subsets | The adjacent(5,3,3) family has an actual marked H4 quotient; involutions, single cycles and mixed(3)(2),(3)(3),(4)(2) meridians are excluded; moved support is at least7. The audited mapping-degree floor is16; the necessary scalar rows at16 still need actual cycle/incidence structure |
 | Wildcard: response connection | The fixed smooth polynomial family F=arb+c+h(b), h in b³C[b], has unit class of exact primary order2; the canonical derivative generates its full component-labelled arm | Map an actual source-normal response to this paid operator without changing its polynomial ring |
-| Wildcard: actual boundary surface | Shared-root jets are necessary; all single-point octic boundary divisors are excluded, including infinity, with unrestricted polynomial-mate degree; the constant-D finite6/infinity2 class is closed at every finite location | General leading exactness closes all(4,2,2) positions and classifies every degree<=8 leading differential. The5+1+1+1 class is polynomially closed with sharp rational hostiles. Exact pencils classify every global quadratic rational mate; spend those structures on the surviving quartic lower sections |
+| Anchor: actual boundary surface | Complete fixed-DG quartic global-pair exclusion; every nonzero output-pencil member avoids L4, with unrestricted mate degree. All-m degree4m−2 rational exactness forces constant D at two moving indices | Test the next fibre degrees and the actual entry of a general Keller map into this surface. Once the two boundary slopes vanish, all inverse infinity residues are blind; retain finite places and labelled pole repair |
 
 ## Audited checkpoint
 
@@ -813,10 +821,27 @@ quadratic tangent evaluation, and transverse derivatives of component jets.
    independently shortens the5+2+1 proof. All90 gates and separate
    Lagrange/division controls pass; sharp rational exceptions remain.
 
-The [383-artifact manifest](planar_jc48_sep06_manifest.json) pins88 proof notes,
-89 audit notes,90 sources,90 frozen outputs and26 compressed witnesses.
-The90 programs report4275817 exact gates per complete normal or optimized
-run. Each frozen output agrees in both modes. All375 inherited pins remain
+89. [Complete fixed-DG quartic exclusion](planar_jc48_sep08_quartic_closure.md)
+   is **PROVED + INDEPENDENTLY AUDITED**. All67 finite partitions
+   reduce to17 exact rows with original infinity labels and four
+   position conditions; all18 case suppliers are paid. No global
+   square-prefix quartic has a polynomial mate of any degree.
+   The global-root gluing theorem gives the full quartic global-pair
+   exclusion, and every nonzero global output direction avoids L4.
+   All258 gates, a third partition enumeration and supplier pin checks pass.
+90. [Every graph degree: two moving inverse indices](planar_jc48_sep08_all_m_constant_d.md)
+   is **PROVED + INDEPENDENTLY AUDITED**. For every m>=2 and
+   deg N=4m−2, rational exactness at indices2m−3 and6m−7 forces
+   H and L constant on D. All439 gates and1189 alternative controls
+   pass. An explicit W3 example passes old T1/T5 infinity residues
+   but fails T3. After the two slopes vanish, every inverse infinity
+   residue vanishes automatically, so a different place or invariant
+   is required. Actual positive and negative constant-D families remain.
+
+The [391-artifact manifest](planar_jc48_sep06_manifest.json) pins90 proof notes,
+91 audit notes,92 sources,92 frozen outputs and26 compressed witnesses.
+The92 programs report4276514 exact gates per complete normal or optimized
+run. Each frozen output agrees in both modes. All383 inherited pins remain
 unchanged. These are scoped proof controls, not a census of Keller maps;
 no external priority claim or full JC(2) result is asserted.
 
@@ -1136,15 +1161,22 @@ The current portfolio has5+2+1 residue/primitive geometry, the full
 remaining6+2 coefficient class, and an orthogonal H4 mixed5,2 group lane.
 
 
-## September8 current final-audit queue
+## September8 current frontier after complete quartic closure
 
-Every row in the complete leading DG square-prefix quartic table is now
-excluded for polynomial mates. A separate compiler is checking all67
-finite partitions, the17 exact rows, their original infinity labels and
-each theorem supplier. The already proved global-root gluing theorem then
-converts the coverage into a full quartic global-pair exclusion on this
-fixed DG surface, with no degree bound on the mate; the compiler's own
-independent audit is pending. The all-m graph-complement analogue of the
-degree-six constant-boundary theorem is a separate new proof candidate.
-Neither this restricted surface nor a formal Laurent mate supplies the
-missing realization step for arbitrary planar Keller maps.
+Items89–90 have passed full independent audit. The next source-fibre degree
+on the fixed surface is five. A short prime-degree leading filter is being
+checked using the incoming all-m source-linear rational-primitive lemma;
+that filter would not be a quintic closure. The full planar-to-surface
+entry remains unpaid. The useful new operation is to move an inverse
+coefficient index with the geometric degree, then record the exact point
+where every test at that place becomes blind.
+
+Incoming continuing10 work supplies actual globally smooth W_m functions
+with unit-response orders2m−1, an alternative affine chart and matching
+boundary ramification. Its complete source-linear classification also
+retains the missing order2m−2 and the exact polynomial ring. These are
+useful sidecars for future pole repair; neither a changed affine chart nor
+a formal mate automatically preserves the original polynomial-mate target.
+The Euler incoming synthesis independently retains the distinction between
+formal construction and realization, without identifying PDE realization
+with rational algebraization. No new cross-problem implication is claimed.
