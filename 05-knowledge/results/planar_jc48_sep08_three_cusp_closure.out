@@ -1,0 +1,19 @@
+DEGREE-UNIFORM PROOF CONTROLS: PASS
+No ambient finite census is used to infer the all-degree theorem.
+Formal comparison identities and parity reduction: PASS
+Complete post-reduction integer rows [t,delta,k,D,Wmin,Wmax]:
+  [2, 0, 1, 3, 3, 3]
+  [2, 0, 2, 4, 2, 2]
+  [2, 0, 3, 5, 1, 1]
+  [2, 1, 3, 6, 1, 1]
+  [4, 1, 4, 9, 3, 3]
+  [4, 1, 5, 10, 2, 2]
+  [6, 2, 7, 15, 3, 3]
+Formal D15 set/Euler survivor: node intersections [1,1,1]; commuting fails.
+Bounded set configurations: 9441
+Canonical same-type permutation pairs: 872
+Braided pairs / retained subsets: 152 / 673
+Commuting pairs: 74
+Marked transitive S4 hostile: cusps [1, 1, 1] nodes [0, 2, 0] Euler=1
+Semantic SHA256: 701ae302f997498f7168d77fda33452e5d73fc35b3f555b9ca5f946e4d392710
+Always-active gates: 43138

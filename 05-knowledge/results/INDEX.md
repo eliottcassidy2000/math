@@ -90,15 +90,16 @@
   primitive-space comparison and exact section-space transport. A fixed
   smooth polynomial family pays the actual unit
   torsion connection and every primary height.
-  The complete octuple class at every finite point has no polynomial
-  mate of any degree, with rational-mate hostiles retained. Actual moving braids,
+  Every single-point octic boundary divisor, finite or infinite, is
+  excluded for polynomial mates of any degree; rational hostiles remain.
+  Actual moving braids,
   local root-cluster marking and proper family transport give a marked
-  D4 quotient and degree floor10 for the entire ordinary three-cusp
-  (4,6) class. All53 reflection stabilizers and arbitrary retained sizes
-  exclude involutive meridian monodromy, even with extra nodes; a uniform
-  support/Euler argument excludes every single-cycle meridian.
-  [Manifest](planar_jc48_sep06_manifest.json):229 artifacts,53 programs,
-  1492123 exact gates per mode. Full JC(2) remains **OPEN**.
+  D4 quotient for the entire ordinary three-cusp (4,6) class. A complete
+  degree-uniform argument using actual retained deficits, central support
+  incidences and node commutation excludes that whole-support class in
+  every mapping degree. The earlier small-cycle suppliers remain audited.
+  [Manifest](planar_jc48_sep06_manifest.json):237 artifacts,55 programs,
+  1535402 exact gates per mode. Full JC(2) remains **OPEN**.
 
 - [Previous continuing synthesis](continuing5_20260906_synthesis.md):
   full-model beta simplicity, the original-phase rectangle, the ordered

@@ -1,11 +1,11 @@
 {
   "session": "planar-jacobian-sep06",
-  "status": "PROVED scoped analytic/group results with independent audits; whole one-odd-cusp and two-ordinary-cusp (4,6) exclusions; whole ordinary three-cusp family marked D4 quotient, degree floor10 and neither involutive nor single-cycle meridians; quartic common-root/first-jet gates and all-finite constant-D sixfold and octuple exclusions; JC(2) OPEN",
+  "status": "PROVED scoped analytic/group results with independent audits; whole one-odd-cusp, two-ordinary-cusp and three-ordinary-cusp (4,6) exclusions in every mapping degree; quartic common-root/first-jet gates, all-finite constant-D sixfold exclusion, and every single-point octic polynomial-mate exclusion including infinity; JC(2) OPEN",
   "created_utc": "2026-09-06",
-  "artifact_count": 229,
-  "program_count": 53,
-  "exact_gates_per_complete_normal_or_optimized_run": 1492123,
-  "verification": "All53 programs have normal and optimized replays byte-identical to their frozen outputs. Two new bundles add458 gates per mode with complete independent analytic/source audits. The all-finite octuple proof retains the exact changed global carriers, weighted trace, full genus-two primitive space and original-source same-fibre repair. The single-cycle theorem is analytic in every length; an independent integer-ledger/cycle-type enumeration pays the low-degree corollary. All221 inherited pins are preserved, including the recorded explicit finite_eight status-only pin migration. No finite controls are used as a census of polynomial Keller maps.",
+  "artifact_count": 237,
+  "program_count": 55,
+  "exact_gates_per_complete_normal_or_optimized_run": 1535402,
+  "verification": "All55 programs have normal and optimized replays byte-identical to their frozen outputs. Two new bundles add43279 gates per mode with complete independent analytic/source audits. The marked-D4 all-cycle closure has an unbounded parity proof and a separate reconstruction of its9441 set configurations, permutation banks and seven scalar controls. The infinity-octuple audit retains the actual changed volume, all local degrees and Morse contacts, full genus-two holomorphic differential and original polynomial-ring boundary. Its independent old-basis and quadratic reconstruction supplies ten additional checks. All229 inherited pins are unchanged, including the explicit prior finite_eight status-only migration. Scope is restricted candidate classes, not JC(2) or a census of polynomial maps.",
   "program_gates": {
     "weight14": 169,
     "weight14_audit": 93,
@@ -59,7 +59,9 @@
     "three_cusp_family": 102,
     "d4_retention": 12509,
     "octuple_transport": 85,
-    "cycle_support": 373
+    "cycle_support": 373,
+    "three_cusp_closure": 43138,
+    "infinity_octuple": 141
   },
   "artifacts": [
     {
@@ -248,6 +250,11 @@
       "sha256": "2df6b5892ea04d0a771936c9ca21838bc727d131804cdefeae03bcfc09e2b26f"
     },
     {
+      "path": "04-computation/planar_jc48_sep08_infinity_octuple.py",
+      "bytes": 12949,
+      "sha256": "8fc3fcf4c719deb653970090d8ca63589a2a3649074639d59cf96ef764bde333"
+    },
+    {
       "path": "04-computation/planar_jc48_sep08_moving_tubes.py",
       "bytes": 11199,
       "sha256": "735e928d0d39bc43d6f1ec3e3d8a4965b8181813cf6094d6e8b50bb8fcf59990"
@@ -286,6 +293,11 @@
       "path": "04-computation/planar_jc48_sep08_three_cusp_braid.py",
       "bytes": 20428,
       "sha256": "369c55582cb7f53cbd7a6bfa1c28d267190e9f58dbc9c9d22291be2ddbf05e27"
+    },
+    {
+      "path": "04-computation/planar_jc48_sep08_three_cusp_closure.py",
+      "bytes": 11027,
+      "sha256": "3b7a0978e0ecfa11cdf5c6d44cb66fb66109ffff965361bf0b5177061a036423"
     },
     {
       "path": "04-computation/planar_jc48_sep08_three_cusp_family.py",
@@ -928,6 +940,21 @@
       "raw_sha256": "3e773ba9e2a041f8a51a5a45acc2f92e7d7d92f3d12fae57a443b0fe305b79e9"
     },
     {
+      "path": "05-knowledge/results/planar_jc48_sep08_infinity_octuple.md",
+      "bytes": 13540,
+      "sha256": "8b485931328e2a66cbb47d831d8b1a9ccf7f8c1d12916e1867880fccb3ab8cfc"
+    },
+    {
+      "path": "05-knowledge/results/planar_jc48_sep08_infinity_octuple.out",
+      "bytes": 399,
+      "sha256": "96805cf8e6722abd373477ed3ab6f1af62b83c50b7c18d1a0c7aba476978a33e"
+    },
+    {
+      "path": "05-knowledge/results/planar_jc48_sep08_infinity_octuple_audit.md",
+      "bytes": 10767,
+      "sha256": "d262b894f4f35dd288dc2e2aa032c9cb3ca9371c175ee83e6a4f208030311cab"
+    },
+    {
       "path": "05-knowledge/results/planar_jc48_sep08_moving_tubes.md",
       "bytes": 6980,
       "sha256": "8229c672da63ced86bb3b47018cbad302713effbc497e6a7345ffe5e0d7a66ae"
@@ -1076,6 +1103,21 @@
       "path": "05-knowledge/results/planar_jc48_sep08_three_cusp_braid_node2_certificate.json.gz",
       "bytes": 7986,
       "sha256": "902768fdd1968fc697f25e9a975318f50094401974e952a1d67bdc39533999ab"
+    },
+    {
+      "path": "05-knowledge/results/planar_jc48_sep08_three_cusp_closure.md",
+      "bytes": 19221,
+      "sha256": "3e15decb2cd1b7d7388e09a3bf91f888979d152f5d5b110453340cfb0558ee96"
+    },
+    {
+      "path": "05-knowledge/results/planar_jc48_sep08_three_cusp_closure.out",
+      "bytes": 764,
+      "sha256": "bca03a5fd8697bb66984957caea989f299bdfd1b6eb4e4b36c227dd25c849377"
+    },
+    {
+      "path": "05-knowledge/results/planar_jc48_sep08_three_cusp_closure_audit.md",
+      "bytes": 14790,
+      "sha256": "fb6e7dfc30546355304e6ae5f6042ad941036d611654936e82173c8e2d2bdf38"
     },
     {
       "path": "05-knowledge/results/planar_jc48_sep08_three_cusp_family.md",
