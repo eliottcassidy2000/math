@@ -9,6 +9,25 @@ Format per entry:
 - Why it was wrong
 - The correct framing
 
+## 2026-09-08 continuing13 -- actual source jets and separator states
+
+- **REFUTED submersion shortcut:** the rational identity for
+  T=lambda*A+Q, H=1/(2A²) survives lambda=-f(-2h), but the whole original
+  Eu line is critical. The [mutation theorem](../05-knowledge/results/continuing13_20260908_quintic_mutation.md)
+  uses the actual relation z=-2h+u+u³t, giving derivative
+  f(-2h)[lambda+f(-2h)]. Independent u,z coordinates cannot be used on Eu.
+  The missing A² target term also proves that the apparent simple pole
+  vanishes. Projective genus remains zero while the PUNCTURED fibres vary.
+- **REFUTED separator shortcut:** deleting all articulation cells and
+  reconnecting the remaining components need not give a tree. An actual
+  twelve-point [grid example](../05-knowledge/results/continuing13_20260908_no3_cell_separators.md)
+  recreates a six-cycle. Preserve biconnected blocks and merge through
+  articulation line vertices instead. Conditional cell rewards can be
+  negative; replacing weighted matching by cardinality loses continuation.
+  The eleven-point theta's forced deletion costs3,4,4,2 also refute screening
+  inseparable cells by unilateral improvement. The strongest survivor is
+  exact two-state separator transport with joint branching inside each bag.
+
 ## 2026-09-08 continuing12 -- a complete observable is not the ambient state
 
 - **REFUTED inference:** retaining every future Weyl operation on the unit

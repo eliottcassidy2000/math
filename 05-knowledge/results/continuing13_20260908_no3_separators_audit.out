@@ -1,0 +1,5 @@
+INDEPENDENT: deletion-split blocks, complete owned lines, conditional subset minima, weighted residual edge subsets.
+COMPLETE_BANKS 2137 two-regular boards and109 linear triple systems; 8 chains; all geometric hostiles including the first saturated core.
+PASS: shared-cell costs paid once, negative rewards retained, high parent fixed before branching, exact graph-call bound.
+CERTIFICATE_SHA256 a3ba4e1c13402f7d6615ac0f264ef9b3ebae34e375e5935ab346e695166bb2b3
+Always-active exact gates: 85491

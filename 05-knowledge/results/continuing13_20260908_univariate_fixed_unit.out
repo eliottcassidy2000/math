@@ -1,0 +1,5 @@
+WHOLE FAMILY: global iff f(0)=0; submersive iff f is squarefree and f(-2h)!=0.
+ALL q>=2: exact unit order3; fixed pointed two-arm Weyl module; ambient torsion has q arms.
+PAIR DEGREE: exactly2q+1. Degree3 already has three ambient arms; unit-order1 remains open outside this ansatz.
+CERTIFICATE_SHA256 3e96a8c597d6328455d31556e385240678b85de65bfc5f923a57649b12f1ba01
+Always-active exact gates: 222

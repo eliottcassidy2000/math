@@ -1,0 +1,261 @@
+{
+  "schema": 1,
+  "created_utc": "2026-09-08T22:51:02.305795+00:00",
+  "baseline_commit": "bcfbfa23d9b75ad94ebb96bda952dedb1f3a97ce",
+  "hash_basis": "Raw LF bytes. Maintained synthesis, navigation and manifest excluded. Each report acceptance transition is stated separately.",
+  "scope": "The entire fixed-W2 univariate ansatz A=u*f(z) has the same pointed order-three two-arm unit module for all admissible degreesq>=2, with q full original-source torsion arms and intrinsic rational pair degree2q+1. A polynomial mutation T=lambda*A+Q, Qprime=f^2, produces globally submersive genuine quintics and higher odd degrees, with non-isotrivial PUNCTURED rational source fibres, exact target-collision arm law, pure local pole order2, and pair degree2(2q+1). Completed genus remains0. Complete native zero cuts close connected-complement LRC clocks9240 and11088, leaving7618 clocks. Exact original-cell separator messages reduce grid repair to local exceptional branching and weighted integral b-matching, with a proved cycle-excess/cactus corollary and actual geometric hostiles. General conjectures remain OPEN; no external priority claim.",
+  "artifact_count": 32,
+  "program_count": 8,
+  "exact_gates_per_mode": 613295,
+  "validation": {
+    "continuing13_20260908_lrc_independent_audit": {
+      "gates": 249174,
+      "normal_optimized_raw_LF": true,
+      "output_sha256": "197f11b1438b1ea012fb51ddcc60b819c22e7c4a6af0d842d84331470cfe08a0",
+      "source_sha256": "ed628e5131fc51ab3134c1337eca95e284f4974066af19d8ee48ba8ebb4edd29"
+    },
+    "continuing13_20260908_lrc_zero_clock_probe": {
+      "gates": 39029,
+      "normal_optimized_raw_LF": true,
+      "output_sha256": "84b25e47a2ec8c7cd1f4ceb77149da6a3da10b8bba1b7375a8cb43c82f709312",
+      "source_sha256": "4850d8984350f22988c4bc1d25a7df958c88d8297f99efeb247fb90baf4b55e9"
+    },
+    "continuing13_20260908_lrc_zero_cuts": {
+      "gates": 193399,
+      "normal_optimized_raw_LF": true,
+      "output_sha256": "d5bf4214fe2b628e7df8e6424be5b647017dc9fe386235037f7a189c602e0eec",
+      "source_sha256": "999e1f9ab9a78b93a4958b99d3f98a8b6c3a6dea069e723814a32576edf1148b"
+    },
+    "continuing13_20260908_no3_cell_separators": {
+      "gates": 45383,
+      "normal_optimized_raw_LF": true,
+      "output_sha256": "0d73fad556cab147b35cb4934b1c584e7d0c54216dcd88f8088aaa986d11973f",
+      "source_sha256": "76027e9d78bde4d140b921025115d3f8e6c2708a62f66a3a7ceae73fa4721c5e"
+    },
+    "continuing13_20260908_no3_separators_audit": {
+      "gates": 85491,
+      "normal_optimized_raw_LF": true,
+      "output_sha256": "9702353a0f8380493b2288082657452f810add8c5e956031ecb5a65d1999efdb",
+      "source_sha256": "3e29c6ec93ef7d223627e9f4253f1feebd37b7409f351efec9c8829249df40fb"
+    },
+    "continuing13_20260908_quintic_mutation": {
+      "gates": 256,
+      "normal_optimized_raw_LF": true,
+      "output_sha256": "185d702971314b232a076d1ae92ff64d3461927ad1c29e793a0fdc3da610aa34",
+      "source_sha256": "3fa9e69e59453836cc12c79ad3b0695db95ffe7abc28b9ae6d404bfb7eddc7bc"
+    },
+    "continuing13_20260908_quintic_mutation_audit": {
+      "gates": 341,
+      "normal_optimized_raw_LF": true,
+      "output_sha256": "dd8ba9799db9fb3618523e1cc413d867c8544e2c9ffe43885a6f831bbfa0119f",
+      "source_sha256": "1a3046ead7e21b5edf1b6722eb55dfc3fa290aa928bdecb6fb0dc12777bd230e"
+    },
+    "continuing13_20260908_univariate_fixed_unit": {
+      "gates": 222,
+      "normal_optimized_raw_LF": true,
+      "output_sha256": "02084442a557d2cf7db9f9a61d45f266a506dfed597903f4664e18f0fa25c5a1",
+      "source_sha256": "8f0752834accd88b91fde2348f627cd6e95f97f59c3dead20e55181c042d60ef"
+    }
+  },
+  "normal_optimized_raw_stdout_equal": true,
+  "regenerated_certificates_raw_unchanged": true,
+  "certificate_count": 7,
+  "prior_artifacts_verified": 958,
+  "prior_artifacts_unchanged_since_baseline": 958,
+  "primary_acceptance_transitions": {
+    "continuing13_20260908_lrc_zero_clock_probe": {
+      "accepted_primary_report_sha256": "92b433272498d288e22a292fecccf264346fe9eec78d2a3b5b7ced219d0f1efa",
+      "change": "Independent acceptance and status prose only; mathematics and frozen computation unchanged.",
+      "filed_report_sha256": "70d0ab59eddea9647e7b3a156ae00af20ca15c9a4f15f0147ba666d03060a864"
+    },
+    "continuing13_20260908_lrc_zero_cuts": {
+      "accepted_primary_report_sha256": "94db9cf90e4be5c37086dbc95d4beaf38f15128f5869db89c5b3d6c83f62e446",
+      "change": "Independent acceptance and status prose only; mathematics and frozen computation unchanged.",
+      "filed_report_sha256": "93a61a09ba744da2720e5537c57efe16920274b74fccf77cf277e87a6e25fdc5"
+    },
+    "continuing13_20260908_no3_cell_separators": {
+      "accepted_primary_report_sha256": "b5a41ebe10896a275ed9ab9a2e66ebae45a275b31d09bf72a2b39cdff201000f",
+      "change": "Producer appended independent acceptance and the independently proved cycle-excess/cactus corollary, retaining the non-iff boundary. Source, transcript and certificate unchanged.",
+      "filed_report_sha256": "d7c1f6bc943b730df34268de896f07bdac8a3f751bc277172a25712ee2ca129b"
+    },
+    "continuing13_20260908_quintic_mutation": {
+      "accepted_primary_report_sha256": "a91d2aca021335eeb182d637fc61050486ce557b021a64fcdfeb7b55cf348c4a",
+      "change": "Independent acceptance and status prose only; mathematics and frozen computation unchanged.",
+      "filed_report_sha256": "0610892e641f8cb6119fffc936c3e07724d33277a300265ed8b49e66da40d358"
+    },
+    "continuing13_20260908_univariate_fixed_unit": {
+      "accepted_primary_report_sha256": "57f9dc1edc0325afcce632611a0fa11b90ac7c52c49bea208f682a557290dee0",
+      "change": "Independent acceptance and status prose only; mathematics and frozen computation unchanged.",
+      "filed_report_sha256": "a7cbbd98688c81294e096b3d03482d06995c84d2d3f0ba197fed19ff387e71f7"
+    }
+  },
+  "preacceptance_mutation_routing_repair": {
+    "old_report_sha256": "e1fd6866e465f522b85d069e57a37b766d51dd2b812fcab709de453ba50c4d2a",
+    "accepted_report_sha256": "a91d2aca021335eeb182d637fc61050486ce557b021a64fcdfeb7b55cf348c4a",
+    "change": "Corrected the quintic-frontier link to the actual planar_jc48_sep06_board.md. No mathematical or computational change."
+  },
+  "incoming_commits": [],
+  "incoming_review": "No incoming commits at startup and natural research checkpoint; final fetch verified during closeout.",
+  "artifacts": [
+    {
+      "path": "04-computation/continuing13_20260908_lrc_independent_audit.cpp",
+      "bytes": 13212,
+      "sha256": "b236f21a4007f33f733c075ed46c7d484fb916f694e8a8eb98d33ee55e146a8c"
+    },
+    {
+      "path": "04-computation/continuing13_20260908_lrc_independent_audit.py",
+      "bytes": 9649,
+      "sha256": "ed628e5131fc51ab3134c1337eca95e284f4974066af19d8ee48ba8ebb4edd29"
+    },
+    {
+      "path": "04-computation/continuing13_20260908_lrc_zero_clock_probe.py",
+      "bytes": 10283,
+      "sha256": "4850d8984350f22988c4bc1d25a7df958c88d8297f99efeb247fb90baf4b55e9"
+    },
+    {
+      "path": "04-computation/continuing13_20260908_lrc_zero_cuts.py",
+      "bytes": 8361,
+      "sha256": "999e1f9ab9a78b93a4958b99d3f98a8b6c3a6dea069e723814a32576edf1148b"
+    },
+    {
+      "path": "04-computation/continuing13_20260908_no3_cell_separators.py",
+      "bytes": 21121,
+      "sha256": "76027e9d78bde4d140b921025115d3f8e6c2708a62f66a3a7ceae73fa4721c5e"
+    },
+    {
+      "path": "04-computation/continuing13_20260908_no3_separators_audit.py",
+      "bytes": 16504,
+      "sha256": "3e29c6ec93ef7d223627e9f4253f1feebd37b7409f351efec9c8829249df40fb"
+    },
+    {
+      "path": "04-computation/continuing13_20260908_quintic_mutation.py",
+      "bytes": 5866,
+      "sha256": "3fa9e69e59453836cc12c79ad3b0695db95ffe7abc28b9ae6d404bfb7eddc7bc"
+    },
+    {
+      "path": "04-computation/continuing13_20260908_quintic_mutation_audit.py",
+      "bytes": 11451,
+      "sha256": "1a3046ead7e21b5edf1b6722eb55dfc3fa290aa928bdecb6fb0dc12777bd230e"
+    },
+    {
+      "path": "04-computation/continuing13_20260908_univariate_fixed_unit.py",
+      "bytes": 7107,
+      "sha256": "8f0752834accd88b91fde2348f627cd6e95f97f59c3dead20e55181c042d60ef"
+    },
+    {
+      "path": "05-knowledge/results/continuing13_20260908_lrc_independent_audit.md",
+      "bytes": 6646,
+      "sha256": "0f4374891ab2f7084bc9aaa3c7e2ea9d06d3b8c311c49a8755f7241c0a64e193"
+    },
+    {
+      "path": "05-knowledge/results/continuing13_20260908_lrc_independent_audit.out",
+      "bytes": 803,
+      "sha256": "197f11b1438b1ea012fb51ddcc60b819c22e7c4a6af0d842d84331470cfe08a0"
+    },
+    {
+      "path": "05-knowledge/results/continuing13_20260908_lrc_zero_clock_probe.md",
+      "bytes": 7707,
+      "sha256": "70d0ab59eddea9647e7b3a156ae00af20ca15c9a4f15f0147ba666d03060a864"
+    },
+    {
+      "path": "05-knowledge/results/continuing13_20260908_lrc_zero_clock_probe.out",
+      "bytes": 548,
+      "sha256": "84b25e47a2ec8c7cd1f4ceb77149da6a3da10b8bba1b7375a8cb43c82f709312"
+    },
+    {
+      "path": "05-knowledge/results/continuing13_20260908_lrc_zero_clock_probe_certificate.json",
+      "bytes": 807149,
+      "sha256": "a56f8d8bdee84f642d7f837a6c9e6398008eadbc0318b0778d6d0e435c0b0201"
+    },
+    {
+      "path": "05-knowledge/results/continuing13_20260908_lrc_zero_cuts.md",
+      "bytes": 9024,
+      "sha256": "93a61a09ba744da2720e5537c57efe16920274b74fccf77cf277e87a6e25fdc5"
+    },
+    {
+      "path": "05-knowledge/results/continuing13_20260908_lrc_zero_cuts.out",
+      "bytes": 514,
+      "sha256": "d5bf4214fe2b628e7df8e6424be5b647017dc9fe386235037f7a189c602e0eec"
+    },
+    {
+      "path": "05-knowledge/results/continuing13_20260908_lrc_zero_cuts_certificate.json",
+      "bytes": 129108,
+      "sha256": "23ae81ba6cb39bc14aecf2d93fc3fcf6d4e3c587b5240db35ea1d8f3992551f1"
+    },
+    {
+      "path": "05-knowledge/results/continuing13_20260908_no3_cell_separators.md",
+      "bytes": 21219,
+      "sha256": "d7c1f6bc943b730df34268de896f07bdac8a3f751bc277172a25712ee2ca129b"
+    },
+    {
+      "path": "05-knowledge/results/continuing13_20260908_no3_cell_separators.out",
+      "bytes": 637,
+      "sha256": "0d73fad556cab147b35cb4934b1c584e7d0c54216dcd88f8088aaa986d11973f"
+    },
+    {
+      "path": "05-knowledge/results/continuing13_20260908_no3_cell_separators_certificate.json",
+      "bytes": 51297,
+      "sha256": "418f449018069ae13fbc7c5c121a3a80a518a952667104b012511b89cb23c271"
+    },
+    {
+      "path": "05-knowledge/results/continuing13_20260908_no3_separators_audit.md",
+      "bytes": 11209,
+      "sha256": "35dd59cc81cfd4fc8b6943ea2699a3cebf6ffbbcf9b2f5ef733cd049a81d4057"
+    },
+    {
+      "path": "05-knowledge/results/continuing13_20260908_no3_separators_audit.out",
+      "bytes": 494,
+      "sha256": "9702353a0f8380493b2288082657452f810add8c5e956031ecb5a65d1999efdb"
+    },
+    {
+      "path": "05-knowledge/results/continuing13_20260908_no3_separators_audit_certificate.json",
+      "bytes": 1644,
+      "sha256": "a3ba4e1c13402f7d6615ac0f264ef9b3ebae34e375e5935ab346e695166bb2b3"
+    },
+    {
+      "path": "05-knowledge/results/continuing13_20260908_quintic_mutation.md",
+      "bytes": 12263,
+      "sha256": "0610892e641f8cb6119fffc936c3e07724d33277a300265ed8b49e66da40d358"
+    },
+    {
+      "path": "05-knowledge/results/continuing13_20260908_quintic_mutation.out",
+      "bytes": 333,
+      "sha256": "185d702971314b232a076d1ae92ff64d3461927ad1c29e793a0fdc3da610aa34"
+    },
+    {
+      "path": "05-knowledge/results/continuing13_20260908_quintic_mutation_audit.md",
+      "bytes": 17471,
+      "sha256": "cf89c65dd95a9a3ac8d0b10591b724af27aa68777953cf0ff6e18612f9c0ba28"
+    },
+    {
+      "path": "05-knowledge/results/continuing13_20260908_quintic_mutation_audit.out",
+      "bytes": 532,
+      "sha256": "dd8ba9799db9fb3618523e1cc413d867c8544e2c9ffe43885a6f831bbfa0119f"
+    },
+    {
+      "path": "05-knowledge/results/continuing13_20260908_quintic_mutation_audit_certificate.json",
+      "bytes": 2390,
+      "sha256": "c3a57cdd3e499074ca3e410b9ee3ae38a720a10fe08a4f3f0f47ab29f9e6e820"
+    },
+    {
+      "path": "05-knowledge/results/continuing13_20260908_quintic_mutation_certificate.json",
+      "bytes": 1858,
+      "sha256": "a3ccce3c5aae0bf601b65bea5f7e9152d26348a45889df86c640ccb174f22b55"
+    },
+    {
+      "path": "05-knowledge/results/continuing13_20260908_univariate_fixed_unit.md",
+      "bytes": 12343,
+      "sha256": "a7cbbd98688c81294e096b3d03482d06995c84d2d3f0ba197fed19ff387e71f7"
+    },
+    {
+      "path": "05-knowledge/results/continuing13_20260908_univariate_fixed_unit.out",
+      "bytes": 398,
+      "sha256": "02084442a557d2cf7db9f9a61d45f266a506dfed597903f4664e18f0fa25c5a1"
+    },
+    {
+      "path": "05-knowledge/results/continuing13_20260908_univariate_fixed_unit_certificate.json",
+      "bytes": 2398,
+      "sha256": "3e96a8c597d6328455d31556e385240678b85de65bfc5f923a57649b12f1ba01"
+    }
+  ]
+}

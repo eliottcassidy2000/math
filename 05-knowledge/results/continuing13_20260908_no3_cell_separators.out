@@ -1,0 +1,10 @@
+Continuing13 cell-separator repair: PASS
+Complete simple two-regular boards n=2..5: 2137
+Abstract complete linear triple-incidence systems v=0..4: 109
+Smallest saturated-board local-core dimension: 6; bounded discovery examined 14 boards
+Connected geometric family k=1..8: global H=k, local h=0, tau=k
+Geometric joint-choice forced-deletion costs: 00=3, 01=4, 10=4, 11=2
+Naive articulation-removal quotient cycle rank: 1; correct quotient: forest
+Negative continuation reward and four-direction high-incidence parent controls: PASS
+Always-active exact gates: 45383
+Certificate: continuing13_20260908_no3_cell_separators_certificate.json

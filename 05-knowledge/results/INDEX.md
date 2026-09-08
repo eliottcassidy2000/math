@@ -1,6 +1,17 @@
 # Script Results Index
 
-- [Current continuing synthesis](continuing12_20260908_synthesis.md):
+- [Current continuing synthesis](continuing13_20260908_synthesis.md):
+  **PROVED + FINITE-EXACT + INDEPENDENTLY AUDITED.** A complete univariate
+  W2 family has the same order-three pointed unit module at every degree,
+  while ambient arms and rational pair degree grow. A polynomial mutation
+  gives an actual global quintic with non-isotrivial eight-punctured fibres
+  and a complete target-collision unit law. Native zero cuts leave7,618
+  connected-complement clocks, maximum11,935. Cell separators localize
+  exact grid-repair branching; incidence cacti need no exceptional branch.
+  [Manifest](continuing13_20260908_manifest.json) pins proofs and independent replays.
+  General LRC14, planar JC and extremal no-three-in-line remain OPEN.
+
+- [Previous continuing synthesis](continuing12_20260908_synthesis.md):
   **PROVED + FINITE-EXACT + INDEPENDENTLY AUDITED.** On fixed W2 the same
   pointed unit Weyl module coexists with unbounded ambient arms and pair degree.
   Global submersive quadratics admitting rational mates form exactly three

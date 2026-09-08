@@ -1,0 +1,5 @@
+Polynomial mutation of the complete univariate family
+Finite controls: q=2,...,6; actual source and boundary; all listed fibres and local jets
+Explicit quintic: source degree5, pair degree10,8 punctures,3 ambient and generated arms
+Admissible complex collision:3 ambient arms,2 unit-generated arms
+PASS 256 always-active exact gates

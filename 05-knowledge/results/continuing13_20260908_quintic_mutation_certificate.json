@@ -1,0 +1,96 @@
+{
+  "always_active": true,
+  "collision": {
+    "ambient_arms": 3,
+    "equation": "6z0^2-15z0+10",
+    "visible_arms": 2
+  },
+  "explicit_quintic": {
+    "pair_degree": 10,
+    "punctures": 8,
+    "support": [
+      "0",
+      "1/30",
+      "-256/15"
+    ]
+  },
+  "gates": 256,
+  "parameter_universe": [
+    {
+      "ambient_arms": 3,
+      "pair_degree": 10,
+      "punctures": 8,
+      "q": 2,
+      "source_t_degree": 5,
+      "support": [
+        "0",
+        "1/30",
+        "-256/15"
+      ],
+      "visible_arms": 3
+    },
+    {
+      "ambient_arms": 4,
+      "pair_degree": 14,
+      "punctures": 11,
+      "q": 3,
+      "source_t_degree": 7,
+      "support": [
+        "0",
+        "8/105",
+        "16/105",
+        "-23536/105"
+      ],
+      "visible_arms": 4
+    },
+    {
+      "ambient_arms": 5,
+      "pair_degree": 18,
+      "punctures": 14,
+      "q": 4,
+      "source_t_degree": 9,
+      "support": [
+        "0",
+        "313/630",
+        "208/315",
+        "81/70",
+        "-1542448/315"
+      ],
+      "visible_arms": 5
+    },
+    {
+      "ambient_arms": 6,
+      "pair_degree": 22,
+      "punctures": 17,
+      "q": 5,
+      "source_t_degree": 11,
+      "support": [
+        "0",
+        "4408/693",
+        "5120/693",
+        "648/77",
+        "10240/693",
+        "-110471168/693"
+      ],
+      "visible_arms": 6
+    },
+    {
+      "ambient_arms": 7,
+      "pair_degree": 26,
+      "punctures": 20,
+      "q": 6,
+      "source_t_degree": 13,
+      "support": [
+        "0",
+        "8067077/60060",
+        "2209216/15015",
+        "3072087/20020",
+        "2496512/15015",
+        "3610625/12012",
+        "-108350449216/15015"
+      ],
+      "visible_arms": 7
+    }
+  ],
+  "scope": "Finite exact controls supporting the analytic all-q mutation theorem; completed genus0 versus non-isotrivial affine punctures kept separate."
+}
