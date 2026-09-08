@@ -1,11 +1,11 @@
 {
   "session": "planar-jacobian-sep06",
-  "status": "PROVED scoped analytic/group results with independent audits: whole one-odd-cusp/two-ordinary-cusp/three-ordinary-cusp (4,6) exclusions; actual mixed(5,3,3) H4 with involutive,single-cycle and(3)(2)/(3)(3)/(4)(2) exclusions and degree floor16; general leading exactness; complete degree<=8 differential and six-line pencil classifications; sharp all-degree genus bound and complete degree4m extremal locus and all-exponent binomial criterion; all-m graph-complement filtration, sharp quadratic genus and extremal rational-mate iff; complete rational-mate criterion for all global DG quadratics; single-point,4+4,4+2+2 and5+1+1+1 DG boundary polynomial exclusions at all locations; all-location4+3+1 polynomial exclusion and nonconstant-L rational exclusion; complete constant-D finite6/infinity2 polynomial exclusion with exact shared rational table; all-finite5+3 nonconstant-L rational and all polynomial mate exclusions; complete6+1+1,3+3+2 and4+2+1+1 all-location polynomial exclusions with exact rational boundaries; JC(2) OPEN",
+  "status": "PROVED scoped analytic/group results with independent audits: whole one-odd-cusp/two-ordinary-cusp/three-ordinary-cusp (4,6) exclusions; actual mixed(5,3,3) H4 with involutive,single-cycle and(3)(2)/(3)(3)/(4)(2) exclusions and degree floor16; general leading exactness; complete degree<=8 differential and six-line pencil classifications; sharp all-degree genus bound and complete degree4m extremal locus and all-exponent binomial criterion; all-m graph-complement filtration, sharp quadratic genus and extremal rational-mate iff; complete rational-mate criterion for all global DG quadratics; single-point,4+4,4+2+2 and5+1+1+1 DG boundary polynomial exclusions at all locations; all-location4+3+1 polynomial exclusion and nonconstant-L rational exclusion; complete constant-D finite6/infinity2 polynomial exclusion with exact shared rational table; all-finite5+3 nonconstant-L rational and all polynomial mate exclusions; complete6+1+1,3+3+2 and4+2+1+1 all-location polynomial exclusions with exact rational boundaries; complete all-location5+3 polynomial exclusion with nonconstant-L rational hostiles; only binary7+1,6+2,5+2+1 remain in the leading DG quartic table; JC(2) OPEN",
   "created_utc": "2026-09-06",
-  "artifact_count": 347,
-  "program_count": 81,
-  "exact_gates_per_complete_normal_or_optimized_run": 2524164,
-  "verification": "All81 programs have normal and optimized replays identical to frozen outputs. Three independently audited bundles add160 gates: complete all-location6+1+1,3+3+2 and4+2+1+1 polynomial exclusions. Independent higher-residue/Bezout reconstruction, actual normalized infinity charts and complete genus-one/two primitive spaces agree. All335 inherited artifact pins are unchanged.",
+  "artifact_count": 351,
+  "program_count": 82,
+  "exact_gates_per_complete_normal_or_optimized_run": 2524271,
+  "verification": "All82 programs have normal and optimized replays identical to frozen outputs. The new independently audited5+3 infinity bundle adds107 gates, including both complete weighted local regimes, the genus/degree obstruction, actual source criticality and two incompatible same-fibre pole repairs. All347 inherited artifact pins remain unchanged.",
   "program_gates": {
     "weight14": 169,
     "weight14_audit": 93,
@@ -87,7 +87,8 @@
     "five_three": 117,
     "six_one_one": 63,
     "three_three_two": 56,
-    "four_two_one_one": 41
+    "four_two_one_one": 41,
+    "five_three_infinity": 107
   },
   "artifacts": [
     {
@@ -304,6 +305,11 @@
       "path": "04-computation/planar_jc48_sep08_five_three.py",
       "bytes": 13167,
       "sha256": "0ceac3b9198d66241883179a4fc0b7fc598f2e838af87561f42d1d966951dba4"
+    },
+    {
+      "path": "04-computation/planar_jc48_sep08_five_three_infinity.py",
+      "bytes": 8514,
+      "sha256": "a693f7ad98a082d6897fa247316904f89056a146a771fe04862eccd3067c15a1"
     },
     {
       "path": "04-computation/planar_jc48_sep08_four_four.py",
@@ -1151,6 +1157,21 @@
       "sha256": "7da5a050b8c7b2ee61e7171c39d22bd0bf1420cdb6c0654bc2a794a96e04851f"
     },
     {
+      "path": "05-knowledge/results/planar_jc48_sep08_five_three_infinity.md",
+      "bytes": 19530,
+      "sha256": "035dc278eadb2ef0e6c8c2715641050598f4353db49c33ca97c57c5b51ea6f49"
+    },
+    {
+      "path": "05-knowledge/results/planar_jc48_sep08_five_three_infinity.out",
+      "bytes": 349,
+      "sha256": "05ee85e0d98edf3f36d14b8cfe7116aff7824b814c5e7b0abfe0262d3088cceb"
+    },
+    {
+      "path": "05-knowledge/results/planar_jc48_sep08_five_three_infinity_audit.md",
+      "bytes": 17818,
+      "sha256": "c4c53e59fea87450bfb3c3800a8717b69a75171320399da12439764acdaee566"
+    },
+    {
       "path": "05-knowledge/results/planar_jc48_sep08_four_four.md",
       "bytes": 12935,
       "sha256": "849283a4a6f568ab8ed5cf47a0d0e0ee7b4b44c3d8d1b0a42a3ea6f9aa9ad072"
@@ -1844,7 +1865,7 @@
       "sha256": "61db92167187f9a30ed79022a8b1feacc010e79033106e7d7592e3817bd7212d"
     }
   ],
-  "checkpoint_update": "September8: three more complete binary boundary types are closed for polynomial mates. All-finite6+1+1 has a rational nonconstant-L exclusion by exact trace/higher-residue coprimality; its other placements fail leading exactness. Double-infinity3+3+2 and4+2+1+1 have complete elliptic/genus-two primitive-space obstructions; other placements fail the finite-double gate. Rational constant-L examples in the exact classes are retained. Final audit of5+3 infinity placements is underway and retains two nonconstant-L rational hostiles. After that promotion the complete leading table will leave only binary7+1,6+2 and5+2+1. JC(2) remains open.",
+  "checkpoint_update": "September8: every binary5+3 boundary placement is now excluded for polynomial mates. Two infinity-placement nonconstant-L rational families are retained with their exact polynomial-repair obstructions. The complete leading differential table now leaves only binary7+1,6+2 and5+2+1. Constant-D6+2 is already closed; nonconstant D is under active investigation. New5+2+1 full inverse-hierarchy exclusions are being written, not yet promoted. Root has found all-finite7+1 may make every inverse coefficient exact after its single simple-root residue, so further finite-order tests alone may be saturated. JC(2) remains open.",
   "compressed_certificates": [
     {
       "path": "05-knowledge/results/planar_jc48_sep06_boundary_braid_certificate.json.gz",

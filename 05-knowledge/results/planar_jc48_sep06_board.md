@@ -745,10 +745,19 @@ quadratic tangent evaluation, and transverse derivatives of component jets.
    identities pass. Every polynomial mate is excluded; rational
    constant-L examples realize the remaining position conditions.
 
-The [347-artifact manifest](planar_jc48_sep06_manifest.json) pins79 proof notes,
-80 audit notes,81 sources,81 frozen outputs and26 compressed witnesses.
-The81 programs report2524164 exact gates per complete normal or optimized
-run. Each frozen output agrees in both modes. All335 inherited pins remain
+80. [Both5+3 infinity placements](planar_jc48_sep08_five_three_infinity.md)
+   are **PROVED + INDEPENDENTLY AUDITED** for all polynomial mates.
+   Together with item76, every5+3 boundary placement is closed.
+   Weighted local forms, a genus3-versus-degree2/3 map obstruction,
+   and actual critical-point alternatives pay the full coefficient
+   family. Two nonconstant-L rational families remain, with
+   incompatible principal parts on two divisors of the same fibre.
+   All107 gates and an independent full analytic/source audit pass.
+
+The [351-artifact manifest](planar_jc48_sep06_manifest.json) pins80 proof notes,
+81 audit notes,82 sources,82 frozen outputs and26 compressed witnesses.
+The82 programs report2524271 exact gates per complete normal or optimized
+run. Each frozen output agrees in both modes. All347 inherited pins remain
 unchanged. These are scoped proof controls, not a census of Keller maps;
 no external priority claim or full JC(2) result is asserted.
 
@@ -1057,12 +1066,11 @@ audit now prove full pole-space membership and the complete exclusion.
 
 ## September8 complete remaining DG quartic entry
 
-Items77–79 close three full binary boundary types while retaining their
-actual rational exceptions. The final audit of the two5+3 infinity
-placements is underway; those placements have nonconstant-L rational
-mates, so only the polynomial conclusion can be combined across all
-locations. Once accepted, the complete leading differential table will
-leave only binary7+1,6+2 and5+2+1. The constant-D6+2 class is already
+Items77–80 close four full binary boundary types while retaining their
+actual rational exceptions. The two5+3 infinity placements have
+nonconstant-L rational mates, so only the polynomial conclusion is
+combined across all locations. The complete leading differential table
+now leaves only binary7+1,6+2 and5+2+1. The constant-D6+2 class is already
 closed by item74 and its M-unit companion; nonconstant D is separate.
 The current portfolio has5+2+1 residue/primitive geometry, the full
 remaining6+2 coefficient class, and an orthogonal H4 mixed5,2 group lane.

@@ -1,0 +1,6 @@
+Both infinity placements of the binary (5,3) entry
+Exact gates: 107
+Complete source rows; weighted m3/m5 branches; higher residues: PASS
+Actual critical-point alternatives and two rational sharpness families: PASS
+Same-fibre polynomial pole-repair obstructions: PASS
+Semantic SHA256: d2c7bd4f6fead41fa623987705af5b830f098bf14243d9a1f53d9b44d70fcf73

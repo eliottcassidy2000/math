@@ -119,8 +119,10 @@
   exceptions retained. All-finite5+3 now excludes nonconstant-L rational mates and all polynomial
   mates. Every6+1+1,3+3+2 and4+2+1+1 boundary placement is now excluded
   for polynomial mates with exact rational exceptions retained.
-  [Manifest](planar_jc48_sep06_manifest.json):347
-  artifacts,81 programs,2524164 exact gates per mode. Full JC(2) remains **OPEN**.
+  Every5+3 placement is also closed for polynomial mates; the complete
+  leading DG quartic table leaves only7+1,6+2,5+2+1.
+  [Manifest](planar_jc48_sep06_manifest.json):351
+  artifacts,82 programs,2524271 exact gates per mode. Full JC(2) remains **OPEN**.
 
 - [Previous continuing synthesis](continuing5_20260906_synthesis.md):
   full-model beta simplicity, the original-phase rectangle, the ordered
