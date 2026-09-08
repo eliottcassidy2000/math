@@ -403,9 +403,9 @@ lift/phase clocks.
   low weight<=23 plus the designated weight24 channel; sharp replacement
   weight22, source `G_m x A^9`, coordinate `A^10` fibres.
   [DG quartic closure](../05-knowledge/results/planar_jc48_sep08_quartic_closure.md):
-  global pencil degrees<=4 excluded on fixed W; all-m degree4m−2 forces constant D.
+  global constant-Jacobian pairs on W2 avoid t-degree<=4 in every output direction.
   [Global quadratic](../05-knowledge/results/continuing11_20260908_synthesis.md):
-  source unit order2; both torsion arms cyclic. Polynomial entry stays **OPEN**.
+  one source unit has order2 and generates both torsion arms; entry **OPEN**.
   THM-4397/4401 give Long's gauge and punctured planar shadows.
   Exceptional quartic: THM-3703/3737/4034 give grammar/image/conductor;
   THM-4381 gives86 nodes, one plane triple, `S^sn=S+K r`. THM-4404/4411/4412

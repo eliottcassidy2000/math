@@ -10,7 +10,9 @@ The [previous synthesis](continuing10_20260908_synthesis.md) contains the
 source-linear classification, clock7200 closure and two-direction repair
 bound. The [manifest](continuing11_20260908_manifest.json) pins this session's
 sources, outputs, certificates, independent verification and incoming review.
-Research began at47bf7e622 and integrated origin/main through840f1e47c.
+Research began at47bf7e622. The first proof checkpoint is88652c5f3;
+incoming mathematical review reaches840f1e47c, followed by the status-only
+planar closeoutd8bd800bf.
 
 ## 1. The portfolio and the successful change of assumptions
 
@@ -98,7 +100,54 @@ B as a diagonal vector. Scalar order two alone also does not prove cyclicity:
 A/g^2 has that order but generates just one arm. The ring remains C[x,t];
 D_F does not preserve O(W2), since D_F(b)=F_r/r^2 has a genuine boundary pole.
 
-## 3. Three composite LRC clocks close by forced graph connections
+## 3. A complete pencil family has a wall invisible to unit order
+
+The [family theorem](continuing11_20260908_quadratic_family.md) and its
+[independent analytic audit](continuing11_20260908_quadratic_family_audit.md)
+extend the example to an exact classification within the fixed whole
+discriminant pencil (x-h)^5 span{1,x-h}. Its globally submersive members
+are precisely
+
+    u=x-h, w=1+u^2t,
+    F=s+(a u^2+d u)w^2+k u w,
+    k=-4ah,      a*d*h*(d-4ah)!=0.
+
+Every member has a rational mate, three reduced disjoint source components
+over s, no other reducible source fibre, and exact distinguished-unit
+annihilator (g^2), g=F-s. The complete torsion always has two arms.
+Nevertheless the unit generates both arms **if and only if d differs from
+6ah**. On d=6ah it generates exactly one arm, with exact Weyl left annihilator
+
+    D g^2 + D(g nabla+2-(6a/k^2)g).
+
+Off that wall the left annihilator is Dg^2. The proof retains both scalar
+principal coefficients, whose two component directions have determinant
+-ak(2d+3k)/(6d^2). The wall lies inside the global-submersion locus. For
+a=h=1,d=6, the source and boundary normal derivatives are2 and24; the unit
+still has order two and the extra annihilator is g nabla+2-(3/8)g.
+This is a real geometric counterexample to inferring cyclicity from scalar
+order and the number of available arms.
+
+The separate allowed values d=-2ah and d=2ah drop one leading component
+pole and raise gcd(N,P) from u^3 to u^4, respectively. Neither is the
+cyclicity wall. Recording these boundaries distinguishes three operations
+that would look alike after retaining only a coarse valuation.
+
+The reusable mechanism is exact in the inherited labelled torsion model:
+if eta=sum_(k=1)^N A_k/g^k, then
+
+    D eta=span_C{A_1,...,A_N} tensor g^-1 C[g^-1].
+
+Euler interpolation separates the eigenvalues -k of g nabla, then
+multiplication and differentiation generate every level in each coefficient
+direction. If all N coefficient vectors are independent, the exact left
+annihilator is Dg^N by triangular PBW reduction. Thus coefficient rank,
+rather than highest pole order, determines the generated arms. Also
+D(nabla^j eta)=D eta for every j>=0: differentiation shifts the pole
+indices and rescales each vector by a nonzero scalar. Pole order can grow
+while the generated module stays unchanged.
+
+## 4. Three composite LRC clocks close by forced graph connections
 
 **PROVED + FINITE-EXACT.** Exactly the declared clocks10080,10800,11520
 are removed from the inherited connected-complement necessary array. The
@@ -120,7 +169,7 @@ retaining interval placement improves the separate-component bound by16.
 The global smallest edge cost is zero, so a scalar edge floor loses the
 entire gain. The full positional graph restores it.
 
-The physical theorem concerns primitive thirteen-speed rows with a selected
+The physical theorem concerns primitive rows of thirteen distinct positive speeds with a selected
 six-label A, gcd(A) equal to one of the three clocks, and the complementary
 seven labels' ACTUAL strict-atlas graph connected. It imposes no height box,
 physical unit speed, connectivity of A, decoder equality or unit gcd of B.
@@ -133,7 +182,7 @@ The necessary array now has **7,622 clocks, maximum11,935**, canonical SHA256
 The declared three-clock experiment is complete. Disconnected-complement
 entry and the remaining clocks need further arguments.
 
-## 4. A third direction forces separately chargeable repair
+## 5. A third direction forces separately chargeable repair
 
 Let tau2 be the minimum number of original cells deleted to clear both
 slopes+1 and-1, and tau3 also impose slope2. Let U consist of cells whose
@@ -158,7 +207,8 @@ The complete n<=5 census finds a genuine n=5 triangle with
 beta3=1 < deletion LP=3/2 < tau3=2. The third direction destroys the
 integrality of the two-direction flow. This is a precise obstruction to
 an attractive extension, with the compiled lower bound as its survivor.
-The first isolated extra triple occurs at n=6. Its six old diagonals are
+Among two-regular square boards, the first isolated extra triple occurs
+at n=6. Its six old diagonals are
 all singletons, so the additional deletion cannot repair an old violation.
 
 Uniformly for EVERY fixed simple two-regular skeleton and EVERY fixed row
@@ -185,11 +235,42 @@ This improves the exponential obstruction to sublinear original-cell
 repair. It does not pay a union bound over n! row orders or settle the
 extremal no-three-in-line number.
 
-## 5. Next decisive tests
+## 6. Incoming work changes the next frontier
 
-1. In the quadratic lane, retain every labelled coefficient of the principal
-   parts when varying the exact pencil. A vanishing determinant can change
-   unit-generated torsion without changing scalar order or component count.
+The [incoming review](continuing11_20260908_incoming_review.md) verifies the
+new fixed-DG quartic closure, moving-index all-m obstruction, prime-degree
+leading filter and four cross-concept theorems. The incoming prime filter
+actually reuses the previous session's reciprocal-polynomial integration
+lemma. On W2 a quadratic with a polynomial mate must have constant leading
+coefficient or a single-root fourth, sixth or eighth power. Our leading
+coefficient x(x-1)^5 fails that necessary filter, giving an independent
+polynomial-mate exclusion while leaving its rational mate intact.
+
+The new continuation-state theorem, THM-4460 in
+[its exact file](../../01-canon/theorems/THM-4460-adverse-budget-continuation-state-and-shear-composition-collapse.md),
+has a concrete analogue INSIDE our response module. The actual classes
+theta and -nabla(g theta)=A/g^2 have the same scalar annihilator, but the
+same future operator g nabla+2 separates them. This is a paid failure of
+the scalar observable, without claiming a map between the two problems.
+The incoming cyclic capacity and spatial shear results similarly require
+their native incidence and realization constraints; neither supplies
+additional forest credit or an integral three-direction flow.
+
+Full fixed-W2 quartic closure ends the previous last-location search. For an
+arbitrary quartic first coordinate, both coordinates must be global on W2;
+the square-prefix subfamily already excludes arbitrary polynomial mates.
+These hypotheses do not exclude our rational examples. Once the all-m constant-boundary gate holds,
+further inverse infinity residues in that test vanish automatically. The
+next observation must involve finite places or a different invariant.
+The remaining quintic leading strata are necessary filters, not entry.
+
+## 7. Next decisive tests
+
+1. In the quadratic lane, extend coefficient-rank classification to another
+   exact pencil only after matching its full global section space. The
+   fifth-order pencil and its d=6ah wall are now closed; revisiting that
+   determinant cannot provide a new case. Test whether other pencils admit
+   more than two torsion arms with a distinguished cyclic unit.
 2. For another LRC clock, compute the complete minimum-tree residual first,
    then recover zero-edge cuts and native endpoint labels only where needed.
    A cheap scalar floor of zero is a prompt to inspect the graph, not a
@@ -204,3 +285,11 @@ extremal no-three-in-line number.
 All new transfers keep an explicit source, target, preserved predicate and
 lost coordinate. None turns a successful scoped certificate into general
 conjecture closure.
+
+The final manifest contains37 frozen artifacts and nine reproducible engines.
+Normal and optimized raw LF outputs agree across438,633 always-active gates:
+435,458 algebraic/combinatorial controls and3,175 historical snapshot checks.
+Seven certificates regenerate unchanged. Of872 inherited pins,868 retain
+their baseline bytes and four have explicitly audited incoming status-only
+footer migrations. Independent final integration review corrected the
+minimal isolated-event statement to its two-regular-board universe.

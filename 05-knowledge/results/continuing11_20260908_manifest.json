@@ -1,14 +1,23 @@
 {
   "schema": 1,
-  "created_utc": "2026-09-08T20:49:11.546914+00:00",
+  "created_utc": "2026-09-08T20:57:27.585331+00:00",
   "baseline_commit": "47bf7e6225ce8f1aa5a4eb23b9f74974a6f598f5",
   "incoming_review_head": "840f1e47c",
+  "proof_checkpoints": [
+    "88652c5f3"
+  ],
   "hash_basis": "raw LF bytes; maintained synthesis, navigation and manifest excluded; reviewed reports change only filing/status/routing prose",
-  "scope": "A globally submersive fixed-W2 quadratic with rational mate, exact original-source unit annihilator(F^2), full two-arm torsion and cyclic Weyl presentation D/Dg^2; three complete connected-complement LRC clocks10080,10800,11520 excluded; no-three-in-line third-direction original-cell repair increment and exact Boolean-dual integrality boundary, with uniform fixed-row mean bonus exp(-416/45)/4. General conjectures remain OPEN.",
-  "artifact_count": 28,
-  "program_count": 7,
-  "exact_gates_per_mode": 435285,
+  "scope": "A globally submersive fixed-W2 quadratic with rational mate, exact original-source unit annihilator(F^2), full two-arm torsion and cyclic Weyl presentation D/Dg^2; complete fixed fifth-order pencil submersion classification, genuine unit-cyclicity wall at unchanged scalar order and general coefficient-span mechanism; three complete connected-complement LRC clocks10080,10800,11520 excluded; no-three-in-line third-direction original-cell repair increment and exact Boolean-dual integrality boundary, with uniform fixed-row mean bonus exp(-416/45)/4. Historical incoming snapshot verified separately from proof controls. General conjectures remain OPEN.",
+  "artifact_count": 37,
+  "program_count": 9,
+  "exact_gates_per_mode": 438633,
   "validation": {
+    "continuing11_20260908_incoming_pins": {
+      "gates": 3175,
+      "normal_optimized_raw_LF": true,
+      "output_sha256": "bffd72cc2c2f7aa203a0f4ab66a8034b5e19cb0409f6522d6e74ad0493382dfe",
+      "source_sha256": "b922d46c725bf00d0a76a7b3e3f19335c4bbf7273fd5ff9a94bb6e607c20f4b9"
+    },
     "continuing11_20260908_lrc_composite_clocks": {
       "gates": 92032,
       "normal_optimized_raw_LF": true,
@@ -32,6 +41,12 @@
       "normal_optimized_raw_LF": true,
       "output_sha256": "29660256c197e50ba3206085d6f6d0f5ba1a144b5127deb196b8e22b532a4744",
       "source_sha256": "b4efb0862a5565469a89bc00c2b8616e3fa47872fc5869d551a45081bbc66da8"
+    },
+    "continuing11_20260908_quadratic_family": {
+      "gates": 173,
+      "normal_optimized_raw_LF": true,
+      "output_sha256": "f263660d34ee02387c86c935fba82f276becd7e079a1ae03ee0b43a154e5e18e",
+      "source_sha256": "360c01c346d92a28b5f4a53a05ece1eeb833ec7bcc603a71c2a133ac4cd949ef"
     },
     "continuing11_20260908_quadratic_unit_two": {
       "gates": 56,
@@ -93,9 +108,16 @@
     "b28d0bc5e",
     "a517c897a",
     "59a421539",
-    "840f1e47c"
+    "840f1e47c",
+    "d8bd800bf"
   ],
+  "incoming_closeout_review": "d8bd800bf updates the planar board/session status and manifest closeout text only; all395 artifact records and mathematical proofs remain unchanged.",
   "artifacts": [
+    {
+      "path": "04-computation/continuing11_20260908_incoming_pins.py",
+      "bytes": 8700,
+      "sha256": "b922d46c725bf00d0a76a7b3e3f19335c4bbf7273fd5ff9a94bb6e607c20f4b9"
+    },
     {
       "path": "04-computation/continuing11_20260908_lrc_composite_clocks.py",
       "bytes": 10262,
@@ -122,6 +144,11 @@
       "sha256": "b4efb0862a5565469a89bc00c2b8616e3fa47872fc5869d551a45081bbc66da8"
     },
     {
+      "path": "04-computation/continuing11_20260908_quadratic_family.py",
+      "bytes": 8804,
+      "sha256": "360c01c346d92a28b5f4a53a05ece1eeb833ec7bcc603a71c2a133ac4cd949ef"
+    },
+    {
       "path": "04-computation/continuing11_20260908_quadratic_unit_two.py",
       "bytes": 7048,
       "sha256": "09e286549c66c0944c7e7dc98d16aefd66fd37a4092224dbdf7c2075177b4742"
@@ -135,6 +162,21 @@
       "path": "04-computation/continuing11_20260908_quadratic_weyl_audit.py",
       "bytes": 5834,
       "sha256": "9a97541a6a9baa1e417474130fa44e6bbad4db89f9eb88cc9bcaf9fce34849ec"
+    },
+    {
+      "path": "05-knowledge/results/continuing11_20260908_incoming_pins.out",
+      "bytes": 512,
+      "sha256": "bffd72cc2c2f7aa203a0f4ab66a8034b5e19cb0409f6522d6e74ad0493382dfe"
+    },
+    {
+      "path": "05-knowledge/results/continuing11_20260908_incoming_pins_certificate.json",
+      "bytes": 165122,
+      "sha256": "ede2fa0fd5ddbfe492338c2191003b984403ffec60767918a9cbca7d6388fc97"
+    },
+    {
+      "path": "05-knowledge/results/continuing11_20260908_incoming_review.md",
+      "bytes": 15462,
+      "sha256": "0dc0d3dd6010431ee97da2edeba66b5b89b196009a906c90772d17ed0e050403"
     },
     {
       "path": "05-knowledge/results/continuing11_20260908_lrc_composite_clocks.md",
@@ -195,6 +237,26 @@
       "path": "05-knowledge/results/continuing11_20260908_no3_three_directions_certificate.json",
       "bytes": 5650,
       "sha256": "67fa1d8477ee247e9905b4267b02a53b0bbfa0592cd50451239053644d64c637"
+    },
+    {
+      "path": "05-knowledge/results/continuing11_20260908_quadratic_family.md",
+      "bytes": 16466,
+      "sha256": "8c67a6297b72d42c0d233e563615f8356a9103b4bb7cf76deba724074b058018"
+    },
+    {
+      "path": "05-knowledge/results/continuing11_20260908_quadratic_family.out",
+      "bytes": 515,
+      "sha256": "f263660d34ee02387c86c935fba82f276becd7e079a1ae03ee0b43a154e5e18e"
+    },
+    {
+      "path": "05-knowledge/results/continuing11_20260908_quadratic_family_audit.md",
+      "bytes": 8772,
+      "sha256": "e68386597966dd6c859cb3d4e98fa85a6f074197f965f1e6cbf7d6372ad5d517"
+    },
+    {
+      "path": "05-knowledge/results/continuing11_20260908_quadratic_family_certificate.json",
+      "bytes": 1126,
+      "sha256": "a2942cfc4205f444c5336c45bfce638752e50b51dc8286ca307aeff1a564e04a"
     },
     {
       "path": "05-knowledge/results/continuing11_20260908_quadratic_unit_two.md",

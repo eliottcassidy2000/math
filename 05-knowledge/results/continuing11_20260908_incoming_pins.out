@@ -1,0 +1,8 @@
+PASS continuing11 historical incoming pins
+Baseline: 47bf7e6225ce8f1aa5a4eb23b9f74974a6f598f5
+Reviewed snapshot: 840f1e47cc5c59a18bfd358737c8937c0e282920
+Planar artifacts: baseline 375; reviewed 395; unchanged old 371; status-only migrations 4; added 20; removed 0
+Canonical namespaces: 4 unique filenames and YAML IDs; producer/output pins: 10
+Current worktree contents: not verified; mathematical proofs: not replayed
+Always-active gates: 3175
+Certificate: continuing11_20260908_incoming_pins_certificate.json

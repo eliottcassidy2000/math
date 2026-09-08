@@ -19,13 +19,18 @@ Format per entry:
   survivor tau3>=tau2+J3. The [three-direction theorem](../05-knowledge/results/continuing11_20260908_no3_three_directions.md)
   also gives an actual n=5 triangle with Boolean dual1 < LP3/2 < deletion2;
   integral bipartite flow does not extend unchanged to three directions.
+  The final integration audit also scoped isolated-triple minimality n=6
+  to two-regular square boards; the arbitrary n=5 set{(0,0),(1,2),(2,4)}
+  already has that event. The finite universe must travel with minimality.
 - **REFUTED scalar shortcut:** exact unit pole order2 does not imply
   two-arm Weyl generation. In the [actual quadratic response](../05-knowledge/results/continuing11_20260908_quadratic_weyl_audit.md),
   theta=A/g²+B/g and -nabla(g theta)=A/g² have the same scalar order,
   but g nabla+2 kills only the latter. Retain all labelled coefficients
   modulo the common diagonal. In particular discarding the regular third
   component with zero principal part incorrectly kills the B direction.
-  The new question is coefficient-rank variation at fixed pole order.
+  The [fixed-pencil family](../05-knowledge/results/continuing11_20260908_quadratic_family.md)
+  realizes the loss at d=6ah while unit order remains2; the separate
+  pole-drop and gcd-jump loci preserve both generated arms.
 
 ## 2026-09-08 planar-jc48 -- retain the full transformed numerator and volume
 

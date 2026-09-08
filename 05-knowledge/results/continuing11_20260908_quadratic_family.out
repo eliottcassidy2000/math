@@ -1,0 +1,6 @@
+FIXED PENCIL: complete global coefficient matching and exact all-point submersion criterion.
+UNIT: order two throughout a*d*h*(d-4*a*h)!=0, k=-4*a*h; all three source components retained.
+WEYL: cyclic for both complete arms iff d!=6*a*h; wall retains one full arm with the stated two-generator annihilator.
+HOSTILE: d=-2*a*h drops only the Eu leading pole; unit order and off-wall cyclicity survive.
+CERTIFICATE_SHA256 a2942cfc4205f444c5336c45bfce638752e50b51dc8286ca307aeff1a564e04a
+Always-active exact gates: 173
