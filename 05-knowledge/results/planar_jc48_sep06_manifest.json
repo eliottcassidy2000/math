@@ -1,11 +1,11 @@
 {
   "session": "planar-jacobian-sep06",
-  "status": "PROVED scoped analytic/group results with independent audits; whole one-odd-cusp, two-ordinary-cusp and three-ordinary-cusp (4,6) exclusions in every mapping degree; quartic common-root/first-jet gates, all-finite constant-D sixfold exclusion, and every single-point octic polynomial-mate exclusion including infinity; JC(2) OPEN; distinguished finite-zero/infinity4+4 polynomial-mate exclusion",
+  "status": "PROVED scoped analytic/group results with independent audits: whole one-odd-cusp, two-ordinary-cusp and three-ordinary-cusp (4,6) exclusions in every mapping degree; actual mixed(5,3,3) H4 supplier with complete good-family transport, and all involutive/single-cycle meridian cases excluded; every single-point octic and every finite/infinity4+4 polynomial-mate class excluded; JC(2) OPEN",
   "created_utc": "2026-09-06",
-  "artifact_count": 241,
-  "program_count": 56,
-  "exact_gates_per_complete_normal_or_optimized_run": 1535498,
-  "verification": "All56 programs have normal and optimized replays byte-identical to frozen outputs. The new distinguished finite/infinity4+4 bundle adds96 gates per mode with a full independent analytic/source audit, paying all weighted infinity branches, the complete finite residue identity and every actual-source criticality case. All237 inherited artifact pins are unchanged. The final exclusion is polynomial-only; the nonconstant-L rational mate is retained as a hostile. JC(2) remains open.",
+  "artifact_count": 267,
+  "program_count": 61,
+  "exact_gates_per_complete_normal_or_optimized_run": 1635832,
+  "verification": "All61 programs have normal and optimized replays byte-identical to frozen outputs. Five new independently audited bundles add100334 gates per mode: complete mixed-cusp boundary geometry, all-finite/infinity4+4 transport, uniform H4 single-cycle equality, six actual mixed-cusp H4 path witnesses and sharp H4 reflection fixed-ratio/Euler exclusion. The1517 moving segments retain all complex-disk clusters and actual positive pair transports. The120-root14400-element image and221 closed reflection sets have an independent full published-table fingerprint. All241 inherited artifact pins are unchanged. No numerical braid word, arbitrary-subgroup filter, finite degree cutoff or full-fixed-set retention is substituted for the stated proofs. JC(2) remains open.",
   "program_gates": {
     "weight14": 169,
     "weight14_audit": 93,
@@ -62,7 +62,12 @@
     "cycle_support": 373,
     "three_cusp_closure": 43138,
     "infinity_octuple": 141,
-    "four_four": 96
+    "four_four": 96,
+    "three_cusp_boundary": 122,
+    "four_four_transport": 151,
+    "h4_single_cycle": 15111,
+    "mixed_cusp_braid": 17100,
+    "h4_involution": 67850
   },
   "artifacts": [
     {
@@ -251,6 +256,21 @@
       "sha256": "f03a0843dd2521a35b0df92481a05db8af0c8130e210a5a5fb315afb9d5e8089"
     },
     {
+      "path": "04-computation/planar_jc48_sep08_four_four_transport.py",
+      "bytes": 10516,
+      "sha256": "4c284b826ed72bcb0e06775488f08c89a1fed1f492bbb7f118d113918d080851"
+    },
+    {
+      "path": "04-computation/planar_jc48_sep08_h4_involution.py",
+      "bytes": 8688,
+      "sha256": "1859b54b32d83b85c00c63cd53b352bf53d042a2773e93ac8907bbdebe1dc3b0"
+    },
+    {
+      "path": "04-computation/planar_jc48_sep08_h4_single_cycle.py",
+      "bytes": 7003,
+      "sha256": "c42119cd358e291f3adf1d1d6b3c049fb44f65470ad30ae60ff54616b92d54b2"
+    },
+    {
       "path": "04-computation/planar_jc48_sep08_infinity11_braid.py",
       "bytes": 14600,
       "sha256": "2df6b5892ea04d0a771936c9ca21838bc727d131804cdefeae03bcfc09e2b26f"
@@ -259,6 +279,11 @@
       "path": "04-computation/planar_jc48_sep08_infinity_octuple.py",
       "bytes": 12949,
       "sha256": "8fc3fcf4c719deb653970090d8ca63589a2a3649074639d59cf96ef764bde333"
+    },
+    {
+      "path": "04-computation/planar_jc48_sep08_mixed_cusp_braid.py",
+      "bytes": 21702,
+      "sha256": "b6f884b7bf5871bbf3ba1d12bc94a1f1344c0add07f9832770a7d53ad536a0ff"
     },
     {
       "path": "04-computation/planar_jc48_sep08_moving_tubes.py",
@@ -294,6 +319,11 @@
       "path": "04-computation/planar_jc48_sep08_shared_roots.py",
       "bytes": 6255,
       "sha256": "695b0da5d8fb5dec95b85d0d32086432ac6aaa8cb1fd8bc00fa2eef27f4da2ad"
+    },
+    {
+      "path": "04-computation/planar_jc48_sep08_three_cusp_boundary.py",
+      "bytes": 8722,
+      "sha256": "a244aa123e124afd9ff33dc4b7f177cf629bc5d588fae635c9fa66b2ab31b3ee"
     },
     {
       "path": "04-computation/planar_jc48_sep08_three_cusp_braid.py",
@@ -911,6 +941,51 @@
       "sha256": "8a57305a82521fd1e154c59073c89253da0ba1071d7f165c7ec10055d108119a"
     },
     {
+      "path": "05-knowledge/results/planar_jc48_sep08_four_four_transport.md",
+      "bytes": 11327,
+      "sha256": "04bc83a621d6fb30628b15f6f2cda78dee70e48457a7d74ed962ea54925c9a07"
+    },
+    {
+      "path": "05-knowledge/results/planar_jc48_sep08_four_four_transport.out",
+      "bytes": 420,
+      "sha256": "a420c162add140c10de64ff4290bf3929102b4aae72ad47d519ab5a1832a0897"
+    },
+    {
+      "path": "05-knowledge/results/planar_jc48_sep08_four_four_transport_audit.md",
+      "bytes": 15618,
+      "sha256": "039f30419dcc463b8c727131e9cefc572f771438b3138a4e28ee5151f5af5b64"
+    },
+    {
+      "path": "05-knowledge/results/planar_jc48_sep08_h4_involution.md",
+      "bytes": 12445,
+      "sha256": "a1410dffd2a15d661596d0c4192cb4b801898e75ac74ae71d01b40692dd967ad"
+    },
+    {
+      "path": "05-knowledge/results/planar_jc48_sep08_h4_involution.out",
+      "bytes": 954,
+      "sha256": "ee1aea010edad81b12a9f2ee64f1690378978ac3f31a755b8770838e14fdd065"
+    },
+    {
+      "path": "05-knowledge/results/planar_jc48_sep08_h4_involution_audit.md",
+      "bytes": 11509,
+      "sha256": "8d288d96ae8f07c0da4eccd54b8b6aee37355ec37394499c02da9efc09a1ef5f"
+    },
+    {
+      "path": "05-knowledge/results/planar_jc48_sep08_h4_single_cycle.md",
+      "bytes": 12612,
+      "sha256": "884955b09cef10dab296bcb580c9bf1c4cc684da51fb7988764256cef56cba47"
+    },
+    {
+      "path": "05-knowledge/results/planar_jc48_sep08_h4_single_cycle.out",
+      "bytes": 3650,
+      "sha256": "968390414754d58917891eb2f864aa8d62ebbf9e7ff2d6d8182c6f1dfaaa34ae"
+    },
+    {
+      "path": "05-knowledge/results/planar_jc48_sep08_h4_single_cycle_audit.md",
+      "bytes": 10557,
+      "sha256": "ab1e4adef971daca5408c731791ab61a9697c76fe04f032ef3b725268de8b753"
+    },
+    {
       "path": "05-knowledge/results/planar_jc48_sep08_infinity11_braid.md",
       "bytes": 15000,
       "sha256": "c346f1fbc7197d936d7f788219ce6815b0f73134fbf3f3a84bcf44cfa5c34ce4"
@@ -974,6 +1049,51 @@
       "path": "05-knowledge/results/planar_jc48_sep08_infinity_octuple_audit.md",
       "bytes": 10767,
       "sha256": "d262b894f4f35dd288dc2e2aa032c9cb3ca9371c175ee83e6a4f208030311cab"
+    },
+    {
+      "path": "05-knowledge/results/planar_jc48_sep08_mixed_cusp_braid.md",
+      "bytes": 19350,
+      "sha256": "c29ac358b992d9512daa2c775f1c9cdc3a3b6fcfcc5ed55207863f839e25aea2"
+    },
+    {
+      "path": "05-knowledge/results/planar_jc48_sep08_mixed_cusp_braid.out",
+      "bytes": 5138,
+      "sha256": "94fc466fea4d6bcad8d16c11f0e38a5191addb407533668cb8c9d5684fa883a8"
+    },
+    {
+      "path": "05-knowledge/results/planar_jc48_sep08_mixed_cusp_braid_audit.md",
+      "bytes": 19851,
+      "sha256": "e22d6b69c67a4c9ebe64eb68ac6078da4415a6c51b4e05ad7ae9c991a82ac7ec"
+    },
+    {
+      "path": "05-knowledge/results/planar_jc48_sep08_mixed_cusp_braid_cusp_five_certificate.json.gz",
+      "bytes": 62110,
+      "sha256": "8b9a6e10554dd20fe382df44eeaf16df4af939312db9fbdcefceb341eb8baef4"
+    },
+    {
+      "path": "05-knowledge/results/planar_jc48_sep08_mixed_cusp_braid_cusp_plus_certificate.json.gz",
+      "bytes": 9828,
+      "sha256": "437f88f34f79d41cac1058db65cd33e8fd7299c00e3f2aba862fab7c50be503d"
+    },
+    {
+      "path": "05-knowledge/results/planar_jc48_sep08_mixed_cusp_braid_cusp_two_certificate.json.gz",
+      "bytes": 9625,
+      "sha256": "bcff0e7ec660bab00365806ebcff35c7d364451c5b9589787fce42d5c1e40c84"
+    },
+    {
+      "path": "05-knowledge/results/planar_jc48_sep08_mixed_cusp_braid_node0_certificate.json.gz",
+      "bytes": 8091,
+      "sha256": "ed262265199c118e9fdee078fd8c026377bc82260df43bfef8e62fe99e77c278"
+    },
+    {
+      "path": "05-knowledge/results/planar_jc48_sep08_mixed_cusp_braid_node1_certificate.json.gz",
+      "bytes": 7905,
+      "sha256": "a1d90904c556445aaeeedf9719552c51875574ed2559c9f6818c72a4dc01381b"
+    },
+    {
+      "path": "05-knowledge/results/planar_jc48_sep08_mixed_cusp_braid_node2_certificate.json.gz",
+      "bytes": 6852,
+      "sha256": "71764a003a8e159f6ca395baa1616e91fade4ea85fde54a9a8fa10aca23e1a3a"
     },
     {
       "path": "05-knowledge/results/planar_jc48_sep08_moving_tubes.md",
@@ -1079,6 +1199,21 @@
       "path": "05-knowledge/results/planar_jc48_sep08_shared_roots_audit.md",
       "bytes": 10736,
       "sha256": "92932658bf46f1fa0d441aa9af66664d12cd290d6449e2192b8ef771bfe0a195"
+    },
+    {
+      "path": "05-knowledge/results/planar_jc48_sep08_three_cusp_boundary.md",
+      "bytes": 15910,
+      "sha256": "001ec168142787f21058aac4544054fdd817b9bfc02ac90ce50d9d488e0cdb70"
+    },
+    {
+      "path": "05-knowledge/results/planar_jc48_sep08_three_cusp_boundary.out",
+      "bytes": 939,
+      "sha256": "9f2cbbbbab0df8e4e152915cb3ba49d4a3def9811502f6f4b75d0d0edce1f24c"
+    },
+    {
+      "path": "05-knowledge/results/planar_jc48_sep08_three_cusp_boundary_audit.md",
+      "bytes": 14689,
+      "sha256": "b800191ba0373e66de14b7da88e1dc799685aa434b479f8f910573d064328c32"
     },
     {
       "path": "05-knowledge/results/planar_jc48_sep08_three_cusp_braid.md",
@@ -1289,7 +1424,7 @@
       "sha256": "61db92167187f9a30ed79022a8b1feacc010e79033106e7d7592e3817bd7212d"
     }
   ],
-  "checkpoint_update": "September8: the whole three-ordinary-cusp (4,6) marked-D4 class is excluded in every mapping degree, all single-point octic divisors are excluded for polynomial mates, and the distinguished0/infinity4+4 class is now fully audited. Arbitrary-finite-point/infinity4+4 transport is a separate frozen proof candidate. Mixed finite cusp types5,3,3 have a frozen geometry candidate and a numerical H4 braid signal awaiting fresh actual-path certification. No full JC(2) closure or external priority is claimed.",
+  "checkpoint_update": "September8: actual H4 now replaces the former mixed-cusp scout; the connected intrinsic good(5,3,3)/infinity7 family transports the marked quotient. Involutive meridians are excluded by the sharp4/15 fixed ratio and Euler; all single nontrivial-cycle meridians are equal abstractly, hence incompatible with actual positive retained sheets. Mixed cycle types remain open. The complete finite/infinity4+4 class is closed at every finite location. Two distinct finite fourfold roots have a new full rational-exclusion proof candidate via a degree-four moving-residue obstruction; independent final audit is pending outside this checkpoint.",
   "compressed_certificates": [
     {
       "path": "05-knowledge/results/planar_jc48_sep06_boundary_braid_certificate.json.gz",
@@ -1315,6 +1450,36 @@
       "path": "05-knowledge/results/planar_jc48_sep07_higher_braid_finite9_infinity7_certificate.json.gz",
       "decompressed_bytes": 4227333,
       "decompressed_sha256": "0b2ad7bcbc65fd9d2ffbfb87a13a573de135c258eadb7b2032a2eba7b8113448"
+    },
+    {
+      "path": "05-knowledge/results/planar_jc48_sep08_mixed_cusp_braid_cusp_five_certificate.json.gz",
+      "decompressed_bytes": 241772,
+      "decompressed_sha256": "9fc963f7b0b290ef6315e74d94d03b3f3a0591b7e54d83a0c4b8ca54e528e107"
+    },
+    {
+      "path": "05-knowledge/results/planar_jc48_sep08_mixed_cusp_braid_cusp_plus_certificate.json.gz",
+      "decompressed_bytes": 37461,
+      "decompressed_sha256": "130735471f691aec805ff5fe98b39ed751cc2a911d2a480f16979cf48eae0fc3"
+    },
+    {
+      "path": "05-knowledge/results/planar_jc48_sep08_mixed_cusp_braid_cusp_two_certificate.json.gz",
+      "decompressed_bytes": 38932,
+      "decompressed_sha256": "606536beaeb6301ad214ad0b63b1958c90b948fbd9f604582af67ec94233ad95"
+    },
+    {
+      "path": "05-knowledge/results/planar_jc48_sep08_mixed_cusp_braid_node0_certificate.json.gz",
+      "decompressed_bytes": 30614,
+      "decompressed_sha256": "8cb17de07488147a1a60b6a88f8a2107d3eabcb2e8cd9a427b31da2dec83b018"
+    },
+    {
+      "path": "05-knowledge/results/planar_jc48_sep08_mixed_cusp_braid_node1_certificate.json.gz",
+      "decompressed_bytes": 30019,
+      "decompressed_sha256": "3e1f0ae0f5a261c964453b522bf44c516afa9e7028b7480f937b7ccf9976d674"
+    },
+    {
+      "path": "05-knowledge/results/planar_jc48_sep08_mixed_cusp_braid_node2_certificate.json.gz",
+      "decompressed_bytes": 26463,
+      "decompressed_sha256": "2dab02efcc3b318e85e393999410528eddbf0a061e3aef29585a9400fe52836c"
     }
   ],
   "explicit_status_pin_migrations": [

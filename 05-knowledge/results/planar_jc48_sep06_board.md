@@ -28,9 +28,9 @@ quadratic tangent evaluation, and transverse derivatives of component jets.
 |---|---|---|
 | Anchor: moving source | The finite five-dimensional response remains valid, but every nonconstant polynomial Hamiltonian in K+Delta K[p,y] has no nonzero rational scalar time | Change the invariant or carrier; different polynomial lifts inside the cusp ideal are now closed, and compositions still need their actual invariant/regularity sidecars |
 | Niche: collision | All scalar two-form periods miss exactly the quadrics through tangent directions in a three-dimensional target | Carry the quadratic data through an actual earlier source deformation and preserve descent |
-| Anchor: infinity | The whole one-odd-cusp, two-ordinary-cusp and three-ordinary-cusp (4,6) classes are excluded as irreducible whole Keller support; the last uses actual marked D4 and arbitrary retained subsets | Test the adjacent three-cusp type(5,3,3); its braid-five hostile forbids inheriting the ordinary half-support bound |
+| Anchor: infinity | The whole one-odd-cusp, two-ordinary-cusp and three-ordinary-cusp (4,6) classes are excluded as irreducible whole Keller support; the last uses actual marked D4 and arbitrary retained subsets | The adjacent(5,3,3) family has an actual marked H4 quotient; involutions and single cycles are excluded. Test arbitrary retained odd-braid bounds and genuinely mixed cycle types |
 | Wildcard: response connection | The fixed smooth polynomial family F=arb+c+h(b), h in b³C[b], has unit class of exact primary order2; the canonical derivative generates its full component-labelled arm | Map an actual source-normal response to this paid operator without changing its polynomial ring |
-| Wildcard: actual boundary surface | Shared-root jets are necessary; all single-point octic boundary divisors are excluded, including infinity, with unrestricted polynomial-mate degree; the constant-D finite6/infinity2 class is closed at every finite location | The distinguished0/infinity(4,4) partition is now excluded; audit the full arbitrary-finite-location extension with its critical quintic; other partitions remain open |
+| Wildcard: actual boundary surface | Shared-root jets are necessary; all single-point octic boundary divisors are excluded, including infinity, with unrestricted polynomial-mate degree; the constant-D finite6/infinity2 class is closed at every finite location | Every finite/infinity(4,4) pair is now excluded. Audit the two-distinct-finite-root residue obstruction; this would complete all pair locations |
 
 ## Audited checkpoint
 
@@ -516,13 +516,6 @@ quadratic tangent evaluation, and transverse derivatives of component jets.
     single-point boundary octic, but rational hostiles remain. Producer141
     gates and ten independent old-basis/field checks pass.
 
-The [237-artifact manifest](planar_jc48_sep06_manifest.json) pins53 proof notes,
-54 independent audits,55 sources,55 outputs and twenty compressed certificates.
-The56 programs report1535498 exact gates per complete normal or optimized run. Each frozen output agrees in normal and
-optimized modes; the braid verifiers also check their pinned witnesses.
-These are scoped proof controls, not a census of Keller maps. No external
-priority claim is made.
-
 54. [Distinguished two-fourfold roots](planar_jc48_sep08_four_four.md) is
    **PROVED + FINITE-EXACT + INDEPENDENTLY AUDITED**. For the complete
    global class `F=H²+L`, `N|S=alpha*x⁴`, no polynomial mate of any degree
@@ -531,8 +524,53 @@ priority claim is made.
    identity `g=C f′`; all survivors have actual source critical points.
    The nonconstant-L example `F=w⁴+w`, `G=1/[x(4w³+1)]`, `w=x²t`,
    preserves the rational-mate boundary. All96 normal/optimized gates and
-   the independent analytic/source audit pass. Arbitrary finite locations
-   are a separate frozen candidate, not normalized by an assumed symmetry.
+   the independent analytic/source audit pass. Item56 separately pays every finite location without an assumed surface
+   symmetry.
+
+55. [The mixed-cusp boundary](planar_jc48_sep08_three_cusp_boundary.md)
+   is **PROVED + INDEPENDENTLY AUDITED**. The three bad-jet lines have
+   exactly three quadratic-cover exceptions; every birational good member
+   has finite cusp types(5,3,3), infinity7 and three nodes. Invertible
+   affine relabelings reduce them to one connected intrinsic good family,
+   retaining the harmless s=0 projection collision. All122 exact gates,
+   both literal controls and the minimal braid-five hostile pass.
+56. [Every finite/infinity four-four pair](planar_jc48_sep08_four_four_transport.md)
+   is **PROVED + INDEPENDENTLY AUDITED** to have no polynomial mate of
+   any degree. Full shifted global sections preserve the actual residue;
+   its survivors give a critical quintic. Two leading coefficients exclude
+   all21 forbidden-root factorizations, and parity excludes all four cubic
+   cases. All151 gates and an extra original-source critical control pass.
+57. [H4 single cycles](planar_jc48_sep08_h4_single_cycle.md) is **PROVED**:
+   four equal-length single nontrivial cycles obeying the Artin H4
+   relations are all equal. Odd-braid cycle runs and saturated ordinary
+   alternation force three disjoint half-size images into one support,
+   a contradiction unless every support coincides. A centralizer argument
+   then gives equality. All15,111 controls and independent audits pass;
+   transitivity therefore precludes any retained fixed sheet.
+58. [Actual mixed-cusp H4](planar_jc48_sep08_mixed_cusp_braid.md) is
+   **PROVED + INDEPENDENTLY AUDITED**. Six new rational moving witnesses
+   with1,517 segments and17,100 exact gates pay all complex-disk clusters,
+   positive meridian pairs and the marked Artin H4 quotient. The three
+   cusp edges have labels3,3,5; nodes give the complementary commuting
+   pairs. Item55 transports this quotient through the whole intrinsic
+   good family. This is a quotient conclusion, not a free-lasso or
+   fundamental-group equality claim.
+59. [H4 reflection retention](planar_jc48_sep08_h4_involution.md) is
+   **PROVED + CITED classical group order + INDEPENDENTLY AUDITED**.
+   Every nontrivial transitive Coxeter H4 action has reflection fixed ratio
+   at most4/15. An exact120-root image of order14400 and all221 closed
+   reflection sets recover the bound16/60; an independent published-table
+   fingerprint agrees. The actual three-node Euler identity then gives
+   `1>=13D/15>1`. All67,850 gates pass. Together with item57, this excludes
+   every involutive or single-cycle meridian type for the actual mixed
+   family, in every degree. Other mixed cycle types remain open.
+
+The [267-artifact manifest](planar_jc48_sep06_manifest.json) pins59 proof notes,
+60 audit notes,61 sources,61 frozen outputs and26 compressed witnesses.
+The61 programs report1635832 exact gates per complete normal or optimized
+run. Each frozen output agrees in both modes. All241 inherited pins remain
+unchanged. These are scoped proof controls, not a census of Keller maps;
+no external priority claim or full JC(2) result is asserted.
 
 
 ## Literature and correction recovery
@@ -765,20 +803,22 @@ pays every finite point using changed global carriers, the complete
 three-dimensional genus-two primitive space, and original-source pole
 repair. Item53 pays the infinity-point octuple with the actual surface
 inversion's changed volume form, completing all single-point divisors.
-Item54 closes the distinguished0/infinity(4,4) partition by weighted
-regularity, exact finite residues and source criticality. A separate
-full-section proof candidate treats every finite location against infinity;
-its final quintic cannot have all roots at the three forbidden chart points.
-That transport awaits independent audit; arbitrary pairs remain open.
+Items54 and56 close every finite/infinity(4,4) pair by weighted
+regularity, exact finite residues and source criticality. The remaining
+two-distinct-finite-root case now has a proof candidate with a degree-four
+residue coefficient that cannot be a multiple of the cubic fibre derivative.
+It awaits final independent audit; other multiplicity partitions remain open.
 Item39 closes the entire two-ordinary-cusp (4,6) class. Items46--48 pay
 the actual three-cusp moving paths, local pairs and full family transport;
 item52 now closes the entire ordinary three-cusp class in every degree.
 The finite involution and single-cycle results remain audited antecedents.
-The adjacent nonordinary boundary has prospective finite cusp types5,3,3
-and infinity7 with three nodes; its intrinsic geometry and new braid
-supplier are separate obligations. The exact braid-five pair(123),(345)
-has support intersection one, refuting transfer of the ordinary-cusp
-half-support bound. The S4 hostile
+Items55 and58 pay the complete adjacent(5,3,3)/infinity7 good family
+and its actual marked H4 quotient. Items57 and59 exclude single-cycle
+and involutive meridians. The remaining target is genuinely mixed cycle
+structure with arbitrary actual retained subsets. An odd-braid cycle-run
+argument suggests the exact five-cusp bound3n>=5k-2D; this new retention
+consumer remains under audit. The exact pair(123),(345) still refutes
+transfer of the ordinary half-support bound. The S4 hostile
 prevents cyclicity or local cusp generation
 shortcuts. For moving sources, every polynomial
 Hamiltonian inside the cusp ideal is closed for nonzero rational time.

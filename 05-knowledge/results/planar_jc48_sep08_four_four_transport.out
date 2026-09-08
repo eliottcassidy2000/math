@@ -1,0 +1,6 @@
+PASS shifted finite/infinity 4+4: 151 always-active exact gates
+All-p full global basis and actual critical-map transport checked
+Quintic forbidden-root patterns:21; cubic patterns:4; all excluded
+Integer obstruction:13(r-s)^2=25(r+s)-100 has no allowed solution
+Scope: nonzero finite p polynomial-mate exclusion; L-zero hostile retained
+Semantic SHA256: ad47627c90d50ba6afc0079324c4d069634efab507670e15816c229022bdc0f8

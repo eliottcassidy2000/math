@@ -1,0 +1,70 @@
+{
+  "Euler_lower_bound": "13D/15",
+  "closed_set_sha256": "e9ebdcfb2f3f26ba90c020c664472a9b6652df5a360bfd51e0c0b39be1f2e636",
+  "closed_sets_containing_one_reflection": 221,
+  "extension_operations": 11727,
+  "largest_proper_reflection_set": 16,
+  "line_image_order": 7200,
+  "root_image_order": 14400,
+  "root_lines": 60,
+  "roots": 120,
+  "scalar_sanity_degree_range": [
+    2,
+    240
+  ],
+  "sharp_fixed_ratio": "4/15",
+  "simple": [
+    0,
+    1,
+    45,
+    55
+  ],
+  "size_histogram": [
+    [
+      1,
+      1
+    ],
+    [
+      2,
+      15
+    ],
+    [
+      3,
+      25
+    ],
+    [
+      4,
+      45
+    ],
+    [
+      5,
+      6
+    ],
+    [
+      6,
+      76
+    ],
+    [
+      10,
+      16
+    ],
+    [
+      12,
+      5
+    ],
+    [
+      15,
+      15
+    ],
+    [
+      16,
+      16
+    ],
+    [
+      60,
+      1
+    ]
+  ]
+}
+semantic_sha256=05f197f16d0a82467af7fc60ae1d6503f55bcb96f599ee38471b6bfd32d71ce3
+always_active_exact_gates=67850

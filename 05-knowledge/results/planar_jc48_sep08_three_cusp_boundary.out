@@ -1,0 +1,14 @@
+THREE-CRITICAL NONORDINARY BOUNDARY GEOMETRY: exact controls PASS
+Rows [a,e,fifth coefficient,double-cover s,infinity seventh]:
+['2', '-1', '4*(s + 3)/5', -3, '8*(s + 3)/5']
+['-2', '1', '4*(s - 3)/5', 3, '8*(s - 3)/5']
+['-2*s', 's', '-8*s/5', 0, '-16*s/5']
+Birational boundary type: finite (2,5),(2,3),(2,3); infinity(2,7).
+Literal: {"images": [["-1", "11/10"], ["-1", "-21/10"], ["0", "0"]], "nodes": "5625*u**3 + 7031*u**2 + 2611*u + 245", "s": 0}
+Literal: {"images": [["-19/3", "-65/2"], ["13/3", "63/2"], ["8/3", "8"]], "nodes": "2187*u**3 - 20523*u**2 + 64025*u - 66417", "s": 2}
+Braid-five hostile: sigma=(123),tau=(345),support overlap1,k2,n0.
+Ordinary half-overlap and guessed4n>=5k-D are REFUTED by this abstract pair.
+No actual global braid or Keller realization is certified here.
+Minimality support controls on D<=4: 32
+Semantic SHA256: 5de3651c77f8f8be47c485a133457e80816441a96641cd0108dbc7c65049ece1
+Always-active gates: 122
