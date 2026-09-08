@@ -9,6 +9,27 @@ Format per entry:
 - Why it was wrong
 - The correct framing
 
+## 2026-09-08 planar-jc48 -- a boundary repair can create affine poles
+
+- **REFUTED before promotion:** in the all-finite quartic `(5,3)` scout,
+  `V=(J2+P1/(u-1))/u` was proposed as a member of a genus-three primitive
+  space because its principal part cancels at the boundary triple point.
+  Here `P1=P(1)!=0` and `J2=u^2(u-1)^2*t+u^2-(2+2p)u`.
+  The same vertical line `u=1` also contains two ordinary affine points
+  of the generic fibre. The added term has poles there while `J2` is
+  finite. A correct boundary cancellation does not prove membership in
+  the complete allowed pole space. Root initially accepted the boundary
+  calculation and the producer then caught the omitted affine points;
+  the candidate was never promoted or used in proved canon.
+- The strongest survivors are the separate genus-two and genus-one
+  branches whose proposed denominators are only powers of `u`; that
+  affine line has constant fibre value and is absent generically.
+  The repaired search must check every point over each denominator zero,
+  including ordinary source points, before spending Riemann--Roch.
+  A new candidate using only `u` denominators remains under investigation;
+  no genus-three closure follows from the rejected coefficient system.
+  Current scope is routed by the [session board](../05-knowledge/results/planar_jc48_sep06_board.md).
+
 ## 2026-09-07 continuing9 -- joint realization and retained geometry
 
 - [Ratio-tree criterion](../05-knowledge/results/continuing9_20260907_lrc_ratio_tree.md):

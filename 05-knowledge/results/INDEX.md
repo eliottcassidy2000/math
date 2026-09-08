@@ -114,8 +114,10 @@
   All-finite(4,3,1) quartics, the full all-m graph-complement quadratic
   genus/extremal iff and all-exponent binomial exactness are now proved.
   All locations of(4,3,1) and uniform H4(4)(2) equality are now proved.
-  [Manifest](planar_jc48_sep06_manifest.json):323 artifacts,75 programs,
-  2523258 exact gates per mode. Full JC(2) remains **OPEN**.
+  The actual mixed-cusp degree floor is16; the entire constant-D
+  finite6/infinity2 polynomial class is now excluded with sharp rational
+  exceptions retained. [Manifest](planar_jc48_sep06_manifest.json):331
+  artifacts,77 programs,2523887 exact gates per mode. Full JC(2) remains **OPEN**.
 
 - [Previous continuing synthesis](continuing5_20260906_synthesis.md):
   full-model beta simplicity, the original-phase rectangle, the ordered

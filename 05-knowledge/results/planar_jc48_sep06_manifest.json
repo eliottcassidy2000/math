@@ -1,11 +1,11 @@
 {
   "session": "planar-jacobian-sep06",
-  "status": "PROVED scoped analytic/group results with independent audits: whole one-odd-cusp/two-ordinary-cusp/three-ordinary-cusp (4,6) exclusions; actual mixed(5,3,3) H4 with involutive,single-cycle and(3)(2)/(3)(3)/(4)(2) exclusions and degree floor12; general leading exactness; complete degree<=8 differential and six-line pencil classifications; sharp all-degree genus bound and complete degree4m extremal locus and all-exponent binomial criterion; all-m graph-complement filtration, sharp quadratic genus and extremal rational-mate iff; complete rational-mate criterion for all global DG quadratics; single-point,4+4,4+2+2 and5+1+1+1 DG boundary polynomial exclusions at all locations; all-location4+3+1 polynomial exclusion and nonconstant-L rational exclusion; JC(2) OPEN",
+  "status": "PROVED scoped analytic/group results with independent audits: whole one-odd-cusp/two-ordinary-cusp/three-ordinary-cusp (4,6) exclusions; actual mixed(5,3,3) H4 with involutive,single-cycle and(3)(2)/(3)(3)/(4)(2) exclusions and degree floor16; general leading exactness; complete degree<=8 differential and six-line pencil classifications; sharp all-degree genus bound and complete degree4m extremal locus and all-exponent binomial criterion; all-m graph-complement filtration, sharp quadratic genus and extremal rational-mate iff; complete rational-mate criterion for all global DG quadratics; single-point,4+4,4+2+2 and5+1+1+1 DG boundary polynomial exclusions at all locations; all-location4+3+1 polynomial exclusion and nonconstant-L rational exclusion; complete constant-D finite6/infinity2 polynomial exclusion with exact shared rational table; JC(2) OPEN",
   "created_utc": "2026-09-06",
-  "artifact_count": 323,
-  "program_count": 75,
-  "exact_gates_per_complete_normal_or_optimized_run": 2523258,
-  "verification": "All75 programs have normal and optimized replays byte-identical to frozen outputs. Two new independently audited bundles add343119 gates: the remaining fourfold-infinity(4,3,1) polynomial exclusion and sharp nonconstant-L rational boundary; and uniform H4(4)(2) equality. Independent full weighted-infinity and field-trace reconstruction, plus an83160-partner support-first/direct-letter/union-find census, agree. All315 inherited artifact pins are unchanged.",
+  "artifact_count": 331,
+  "program_count": 77,
+  "exact_gates_per_complete_normal_or_optimized_run": 2523887,
+  "verification": "All77 programs have normal and optimized replays byte-identical to frozen outputs. Two new independently audited bundles add629 gates: the complete shared constant-D finite6/infinity2 polynomial exclusion and rational-existence table, and the actual marked mixed-cusp mapping-degree floor16. Independent original-source rational positives/pole checks and a complete scalar-count existence enumeration agree. All323 inherited artifact pins are unchanged.",
   "program_gates": {
     "weight14": 169,
     "weight14_audit": 93,
@@ -81,7 +81,9 @@
     "dg_genus": 1550,
     "binomial_exactness": 1654,
     "four_three_one_infinity": 87,
-    "h4_mixed42": 343032
+    "h4_mixed42": 343032,
+    "constant_d_shared_six": 68,
+    "h4_degree16": 561
   },
   "artifacts": [
     {
@@ -245,6 +247,11 @@
       "sha256": "69e58278cb6b84ae791c004b22d59f2b9aebd0e191bb6c08f39d422bcdb53dce"
     },
     {
+      "path": "04-computation/planar_jc48_sep08_constant_d_shared_six.py",
+      "bytes": 9140,
+      "sha256": "798b7824988fa6cbdcaaccd2689997d29ad57473e64206ca8b7f42a1e31d4aa6"
+    },
+    {
       "path": "04-computation/planar_jc48_sep08_cusp_ideal.py",
       "bytes": 11165,
       "sha256": "a7f9ef420b8782026c5df71fa361a981126283e14e5f67440e1ed6ba2ff5c1e1"
@@ -313,6 +320,11 @@
       "path": "04-computation/planar_jc48_sep08_genus_capacity.py",
       "bytes": 4102,
       "sha256": "9def2dae7f430cb5b7611124eec7422dda7d2861c566f922401a8cb542f21a1f"
+    },
+    {
+      "path": "04-computation/planar_jc48_sep08_h4_degree16.py",
+      "bytes": 5256,
+      "sha256": "40e6c9ac619658ba714aab9987e19357fd3de7450cca3d4b4e688cfe5e81edb8"
     },
     {
       "path": "04-computation/planar_jc48_sep08_h4_involution.py",
@@ -950,6 +962,21 @@
       "sha256": "7eb12d1c99a59f38cd6a81b98aafc0fe8816c9d8159a4463821df19cfcd0a2e3"
     },
     {
+      "path": "05-knowledge/results/planar_jc48_sep08_constant_d_shared_six.md",
+      "bytes": 15358,
+      "sha256": "d2d3b4663f785cc926efca57d43a49797b5681f9335ed2677b9a4d7081d27bd4"
+    },
+    {
+      "path": "05-knowledge/results/planar_jc48_sep08_constant_d_shared_six.out",
+      "bytes": 392,
+      "sha256": "ecd0a552a4bde15e90bebc8dd5764f6105dc24d05463107e7d30404b048c410c"
+    },
+    {
+      "path": "05-knowledge/results/planar_jc48_sep08_constant_d_shared_six_audit.md",
+      "bytes": 12362,
+      "sha256": "d82483ed72af44d37bd836e1ab7c422501d99e0a551ce5e642398fa7e40e74ba"
+    },
+    {
       "path": "05-knowledge/results/planar_jc48_sep08_cusp_ideal.md",
       "bytes": 20164,
       "sha256": "18642fe0fcde6dbb7d3d743173359bf5ac9b13df0f86e2aa5b9ed3be18e12bbe"
@@ -1158,6 +1185,21 @@
       "path": "05-knowledge/results/planar_jc48_sep08_genus_capacity_audit.md",
       "bytes": 11850,
       "sha256": "6552373a6dd470b5d9e8dd148fc674c298a17ee540487d4f220db42a70f7d261"
+    },
+    {
+      "path": "05-knowledge/results/planar_jc48_sep08_h4_degree16.md",
+      "bytes": 10964,
+      "sha256": "e79e17117b1958cc7d92ada3ba494eb04e0a2e19b9884d97f11c14459f4c2d62"
+    },
+    {
+      "path": "05-knowledge/results/planar_jc48_sep08_h4_degree16.out",
+      "bytes": 696,
+      "sha256": "b83dfcb3a3c94816840540c5e35627754d5be3f61629a944d686198fb8383623"
+    },
+    {
+      "path": "05-knowledge/results/planar_jc48_sep08_h4_degree16_audit.md",
+      "bytes": 13024,
+      "sha256": "a37a88048498790fc5d7ca6be81c16d3ff2a5d82d511c269b778d0d0c7f4d590"
     },
     {
       "path": "05-knowledge/results/planar_jc48_sep08_h4_involution.md",
@@ -1718,7 +1760,7 @@
       "sha256": "61db92167187f9a30ed79022a8b1feacc010e79033106e7d7592e3817bd7212d"
     }
   ],
-  "checkpoint_update": "September8: all boundary placements of(4,3,1) are closed for polynomial mates; the nonconstant-L rational exclusion is sharp in both finite and infinity cases. H4 meridians moving at most six sheets are now all excluded, since involutions,single cycles,(3)(2),(3)(3),(4)(2) exhaust those types. A new actual-retention consumer is checking a mapping-degree floor16. Quartic all-finite(5,3) and(6,1,1), and the previously omitted M-shared constant-D finite6/infinity2 class, have new concrete reductions under production. The latter contains explicit nonconstant-L rational submersions and must retain polynomial pole-repair distinctions. JC(2) remains open.",
+  "checkpoint_update": "September8: the marked mixed-cusp covering has actual mapping degree at least16. The proof uses complete moved-type closure through six, actual complementary supports and two retained-sheet deficits, not scalar feasibility alone. The M-shared constant-D finite6/infinity2 theorem and the older M-unit theorem together close the entire constant-D polynomial class for every finite position. Nonconstant-L rational submersions are explicitly retained. All-finite(5,3) and(6,1,1) candidates now use higher inverse residues and complete primitive spaces; final audits are pending. A rejected genus3 principal-part correction created poles at ordinary affine points and is logged in MISTAKES; a replacement using only the constant-fibre denominator is being audited. JC(2) remains open.",
   "compressed_certificates": [
     {
       "path": "05-knowledge/results/planar_jc48_sep06_boundary_braid_certificate.json.gz",

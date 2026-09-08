@@ -1,0 +1,9 @@
+h4_degree16: PASS
+scope: actual marked mixed-cusp H4 covering has mapping degree at least16
+small moved types: 10 through six; all have proved exclusions
+scalar universe: every D2..16,t7..D-1,k1..D-t
+D12..15 raw rows: {12: [(7, 5, 2, 1, 6)], 13: [(7, 6, 3, 2, 5), (8, 5, 1, 0, 9)], 14: [(7, 7, 4, 3, 4), (8, 6, 2, 1, 8)], 15: [(7, 7, 4, 3, 4), (7, 8, 5, 4, 3), (8, 7, 3, 2, 7), (9, 6, 2, 0, 9)]}
+post-full-retention D14,D15: [(7, 7, 4, 3, 4)] [(7, 7, 4, 3, 4), (7, 8, 5, 4, 3)]
+D16 necessary scalar survivors, not realized passports: [(7, 8, 5, 4, 3), (7, 9, 6, 5, 2), (8, 7, 3, 2, 7), (8, 8, 4, 3, 6)]
+gates: 561
+semantic sha256: 590353fa49ea3ff283a45804ff0d6960c767cc259e95a0883bebc6dc689d7039

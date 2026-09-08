@@ -1,0 +1,7 @@
+Constant-D shared finite6/infinity2: complete shifted global class
+All coefficient splits: exact rational boundary and no polynomial mate
+Conic residues, source-critical residue, and original same-fibre repair: PASS
+Nonconstant-lower-row rational submersion and composite controls: PASS
+Gates: 68
+Semantic SHA256: 27e6a0636da93ea56848bc4aeda7c8dd4871c78f04c6bde3d0ae2137b88f8f3d
+RESULT: PASS
