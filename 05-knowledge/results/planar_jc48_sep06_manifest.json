@@ -1703,8 +1703,8 @@
     },
     {
       "path": "05-knowledge/results/planar_jc48_sep08_quartic_closure.md",
-      "bytes": 20179,
-      "sha256": "bf0733ace19df70c5d23769e9b51a7a3ee446b5bdab3f53ca202e239ed037d41"
+      "bytes": 20145,
+      "sha256": "52e4a3b77f4bbd2afa1ff9f40673ddae9590120c0ccfd9e649f2b22a55959270"
     },
     {
       "path": "05-knowledge/results/planar_jc48_sep08_quartic_closure.out",
@@ -2140,5 +2140,11 @@
       "sha256": "e9de3f412a9b8ee4c2291637a9fd8ff6bb1b4dd021403b920312cd1b7bce84f1",
       "reason": "The complete independent audit had passed, but an exact-string promotion missed the updated RESERVED header. This status-only correction promotes the already accepted theorem; proof/source/output are unchanged."
     }
-  ]
+  ],
+  "promotion_footer_repair": {
+    "path": "05-knowledge/results/planar_jc48_sep08_quartic_closure.md",
+    "old_sha256": "bf0733ace19df70c5d23769e9b51a7a3ee446b5bdab3f53ca202e239ed037d41",
+    "new_sha256": "52e4a3b77f4bbd2afa1ff9f40673ddae9590120c0ccfd9e649f2b22a55959270",
+    "scope": "Status-only repair of a stale RESERVED footer after accepted audit; all mathematical text, source and output unchanged."
+  }
 }

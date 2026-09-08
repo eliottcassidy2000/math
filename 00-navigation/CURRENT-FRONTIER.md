@@ -402,12 +402,9 @@ lift/phase clocks.
   [Audited row15 response](../05-knowledge/results/planar_jc_long_20260906_board.md): valuation>=11,
   low weight<=23 plus the designated weight24 channel; sharp replacement
   weight22, source `G_m x A^9`, coordinate `A^10` fibres.
-  [Source synthesis](../05-knowledge/results/continuing10_20260908_synthesis.md):
-  full cusp-ideal times nonrational; labelled component responses remain live.
-  [Complete fixed-DG quartic exclusion](../05-knowledge/results/planar_jc48_sep08_quartic_closure.md):
-  every nonzero global output direction avoids L4, with unrestricted mate degree.
-  [All-m inverse indices](../05-knowledge/results/planar_jc48_sep08_all_m_constant_d.md)
-  force constant D at leading degree4m−2; higher degrees and general entry remain open.
+  [DG quartic closure](../05-knowledge/results/planar_jc48_sep08_quartic_closure.md):
+  global pencil degrees<=4 excluded on fixed W; all-m degree4m−2 forces constant D.
+  Cusp-ideal times are nonrational; labelled responses and general entry stay open.
   Later rows, polynomial termination, and entry remain **OPEN**.
   THM-4397/4401 give Long's gauge and punctured planar shadows.
   Exceptional quartic: THM-3703/3737/4034 give grammar/image/conductor;

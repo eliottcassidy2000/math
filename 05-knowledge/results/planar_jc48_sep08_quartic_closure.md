@@ -386,7 +386,7 @@ Both full producer runs pass **258 always-active gates**, with identical
     output 11d0025901ef154426a703e6d501da97fc2e0fc282ff646a476bb9b1349ab253
     semantic 8f9e1a93dfedd4d162ed9261c043f4c992239f721cf279317fe772fcced9eafa
 
-The source and output are frozen. The proof's status remains RESERVED
-until the full independent route, quantifier, gluing and source audit
-is accepted. The compiler's finite coverage and the unbounded analytic
-dependencies have deliberately separate proof roles.
+The source and output are frozen. The full independent route,
+quantifier, gluing and source audit is accepted. The proof is PROVED.
+The compiler's finite coverage and the unbounded analytic dependencies
+have separate proof roles.
