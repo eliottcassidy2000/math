@@ -113,8 +113,9 @@
   proved; H4(3)(3) meridians are now excluded uniformly as well.
   All-finite(4,3,1) quartics, the full all-m graph-complement quadratic
   genus/extremal iff and all-exponent binomial exactness are now proved.
-  [Manifest](planar_jc48_sep06_manifest.json):315 artifacts,73 programs,
-  2180139 exact gates per mode. Full JC(2) remains **OPEN**.
+  All locations of(4,3,1) and uniform H4(4)(2) equality are now proved.
+  [Manifest](planar_jc48_sep06_manifest.json):323 artifacts,75 programs,
+  2523258 exact gates per mode. Full JC(2) remains **OPEN**.
 
 - [Previous continuing synthesis](continuing5_20260906_synthesis.md):
   full-model beta simplicity, the original-phase rectangle, the ordered

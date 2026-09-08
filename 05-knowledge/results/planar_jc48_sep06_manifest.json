@@ -1,11 +1,11 @@
 {
   "session": "planar-jacobian-sep06",
-  "status": "PROVED scoped analytic/group results with independent audits: whole one-odd-cusp/two-ordinary-cusp/three-ordinary-cusp (4,6) exclusions; actual mixed(5,3,3) H4 with involutive,single-cycle and(3)(2)/(3)(3) exclusions and degree floor12; general leading exactness; complete degree<=8 differential and six-line pencil classifications; sharp all-degree genus bound and complete degree4m extremal locus and all-exponent binomial criterion; all-m graph-complement filtration, sharp quadratic genus and extremal rational-mate iff; complete rational-mate criterion for all global DG quadratics; single-point,4+4,4+2+2 and5+1+1+1 DG boundary polynomial exclusions at all locations; all-finite4+3+1 polynomial exclusion and nonconstant-L rational exclusion; JC(2) OPEN",
+  "status": "PROVED scoped analytic/group results with independent audits: whole one-odd-cusp/two-ordinary-cusp/three-ordinary-cusp (4,6) exclusions; actual mixed(5,3,3) H4 with involutive,single-cycle and(3)(2)/(3)(3)/(4)(2) exclusions and degree floor12; general leading exactness; complete degree<=8 differential and six-line pencil classifications; sharp all-degree genus bound and complete degree4m extremal locus and all-exponent binomial criterion; all-m graph-complement filtration, sharp quadratic genus and extremal rational-mate iff; complete rational-mate criterion for all global DG quadratics; single-point,4+4,4+2+2 and5+1+1+1 DG boundary polynomial exclusions at all locations; all-location4+3+1 polynomial exclusion and nonconstant-L rational exclusion; JC(2) OPEN",
   "created_utc": "2026-09-06",
-  "artifact_count": 315,
-  "program_count": 73,
-  "exact_gates_per_complete_normal_or_optimized_run": 2180139,
-  "verification": "All73 programs have normal and optimized replays byte-identical to frozen outputs. Three new independently audited bundles add3311 gates: all-finite(4,3,1) polynomial exclusion with rational iff necessity L constant; full all-m graph-complement quadratic genus and extremal-pencil iff; all-exponent binomial algebraic exactness. Independent original-source bracket remainders, shifted sparse-pencil source identity, and1170 original-coordinate Laurent systems agree. All303 inherited artifact pins are unchanged.",
+  "artifact_count": 323,
+  "program_count": 75,
+  "exact_gates_per_complete_normal_or_optimized_run": 2523258,
+  "verification": "All75 programs have normal and optimized replays byte-identical to frozen outputs. Two new independently audited bundles add343119 gates: the remaining fourfold-infinity(4,3,1) polynomial exclusion and sharp nonconstant-L rational boundary; and uniform H4(4)(2) equality. Independent full weighted-infinity and field-trace reconstruction, plus an83160-partner support-first/direct-letter/union-find census, agree. All315 inherited artifact pins are unchanged.",
   "program_gates": {
     "weight14": 169,
     "weight14_audit": 93,
@@ -79,7 +79,9 @@
     "h4_mixed33": 448965,
     "four_three_one": 107,
     "dg_genus": 1550,
-    "binomial_exactness": 1654
+    "binomial_exactness": 1654,
+    "four_three_one_infinity": 87,
+    "h4_mixed42": 343032
   },
   "artifacts": [
     {
@@ -303,6 +305,11 @@
       "sha256": "2d4051d677c1c1ad72d603d87a8da881cd8bf30a10c38aa3438952e3a0c3ef8d"
     },
     {
+      "path": "04-computation/planar_jc48_sep08_four_three_one_infinity.py",
+      "bytes": 10605,
+      "sha256": "b4bf39bad5a819d2435379795d4bee97fbbd6c79e271b507192bd4d3217df77c"
+    },
+    {
       "path": "04-computation/planar_jc48_sep08_genus_capacity.py",
       "bytes": 4102,
       "sha256": "9def2dae7f430cb5b7611124eec7422dda7d2861c566f922401a8cb542f21a1f"
@@ -321,6 +328,11 @@
       "path": "04-computation/planar_jc48_sep08_h4_mixed33.py",
       "bytes": 10487,
       "sha256": "cc7da93f7326a3b3488dd48c63f52a22cb9c8b9a3d14810f9042beb04988f25c"
+    },
+    {
+      "path": "04-computation/planar_jc48_sep08_h4_mixed42.py",
+      "bytes": 9443,
+      "sha256": "987f121ef43da7a4ea549c2d4cbd98d7d1c5206a10c0f2504744a2f52b28c9e3"
     },
     {
       "path": "04-computation/planar_jc48_sep08_h4_single_cycle.py",
@@ -1118,6 +1130,21 @@
       "sha256": "0d9ae427c7d1c56fdfaba696e1d7c2e7ef7c76cce0a30998e3ed0e9406f6b3fa"
     },
     {
+      "path": "05-knowledge/results/planar_jc48_sep08_four_three_one_infinity.md",
+      "bytes": 12751,
+      "sha256": "29a9e4c32c1fea1eb506d5e3dd16b68549f61f85c0e5177c0067597e60fc5835"
+    },
+    {
+      "path": "05-knowledge/results/planar_jc48_sep08_four_three_one_infinity.out",
+      "bytes": 399,
+      "sha256": "92a0617b4594bc84c293a743ac79d6921310400924f06e8341c7894363e05268"
+    },
+    {
+      "path": "05-knowledge/results/planar_jc48_sep08_four_three_one_infinity_audit.md",
+      "bytes": 12633,
+      "sha256": "59cdecaba6f95dec1c479178cd767adcb8b93a4611aac6f632a69b4734032268"
+    },
+    {
       "path": "05-knowledge/results/planar_jc48_sep08_genus_capacity.md",
       "bytes": 9678,
       "sha256": "24c6480f166ac475abc09a7c4423cd3733d88a65e2832810e823a5d5874bb769"
@@ -1176,6 +1203,21 @@
       "path": "05-knowledge/results/planar_jc48_sep08_h4_mixed33_audit.md",
       "bytes": 14774,
       "sha256": "50af06dc808eacca0f2d18d957623bf918db2e1e1fe953aeed73595ba2205649"
+    },
+    {
+      "path": "05-knowledge/results/planar_jc48_sep08_h4_mixed42.md",
+      "bytes": 15489,
+      "sha256": "f188d66452b6360872d49dd64a2728e4b07e9411f712461f32f4a51118fd098d"
+    },
+    {
+      "path": "05-knowledge/results/planar_jc48_sep08_h4_mixed42.out",
+      "bytes": 1263,
+      "sha256": "499481bc6e285848612dff6e35cb00252c45ebb9dbbd435e45b160f180c3e963"
+    },
+    {
+      "path": "05-knowledge/results/planar_jc48_sep08_h4_mixed42_audit.md",
+      "bytes": 11975,
+      "sha256": "7db173c0688d19c821a61a13d8fc6a2aebee7b4096be961a2aaf7f5c4b238fff"
     },
     {
       "path": "05-knowledge/results/planar_jc48_sep08_h4_single_cycle.md",
@@ -1676,7 +1718,7 @@
       "sha256": "61db92167187f9a30ed79022a8b1feacc010e79033106e7d7592e3817bd7212d"
     }
   ],
-  "checkpoint_update": "September8: the all-finite(4,3,1) quartic class is closed for polynomial mates, and every rational mate forces L constant. Both anchored and translated genus-one primitive spaces are fully paid, with same-partition rational controls for every finite p. The all-m graph-complement and binomial criteria are proved. The remaining fourfold-infinity(4,3,1) candidate now has a simple counted residue contradiction after complete weighted-infinity and constant-D reduction; independent audit remains pending. H4(4)(2) has a structured pair/centralizer exclusion under production. Other surviving quartic leading strata remain open.",
+  "checkpoint_update": "September8: all boundary placements of(4,3,1) are closed for polynomial mates; the nonconstant-L rational exclusion is sharp in both finite and infinity cases. H4 meridians moving at most six sheets are now all excluded, since involutions,single cycles,(3)(2),(3)(3),(4)(2) exhaust those types. A new actual-retention consumer is checking a mapping-degree floor16. Quartic all-finite(5,3) and(6,1,1), and the previously omitted M-shared constant-D finite6/infinity2 class, have new concrete reductions under production. The latter contains explicit nonconstant-L rational submersions and must retain polynomial pole-repair distinctions. JC(2) remains open.",
   "compressed_certificates": [
     {
       "path": "05-knowledge/results/planar_jc48_sep06_boundary_braid_certificate.json.gz",

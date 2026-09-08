@@ -28,7 +28,7 @@ quadratic tangent evaluation, and transverse derivatives of component jets.
 |---|---|---|
 | Anchor: moving source | The finite five-dimensional response remains valid, but every nonconstant polynomial Hamiltonian in K+Delta K[p,y] has no nonzero rational scalar time | Change the invariant or carrier; different polynomial lifts inside the cusp ideal are now closed, and compositions still need their actual invariant/regularity sidecars |
 | Niche: collision | All scalar two-form periods miss exactly the quadrics through tangent directions in a three-dimensional target | Carry the quadratic data through an actual earlier source deformation and preserve descent |
-| Anchor: infinity | The whole one-odd-cusp, two-ordinary-cusp and three-ordinary-cusp (4,6) classes are excluded as irreducible whole Keller support; the last uses actual marked D4 and arbitrary retained subsets | The adjacent(5,3,3) family has an actual marked H4 quotient; involutions, single cycles and mixed(3)(2) and(3)(3) meridians are excluded; mapping degree is at least12. Test the remaining mixed cycle types with actual centralizers and retained subsets |
+| Anchor: infinity | The whole one-odd-cusp, two-ordinary-cusp and three-ordinary-cusp (4,6) classes are excluded as irreducible whole Keller support; the last uses actual marked D4 and arbitrary retained subsets | The adjacent(5,3,3) family has an actual marked H4 quotient; involutions, single cycles and mixed(3)(2),(3)(3),(4)(2) meridians are excluded; moved support is at least7. The audited mapping-degree floor is12; the stronger floor16 consumer is under audit |
 | Wildcard: response connection | The fixed smooth polynomial family F=arb+c+h(b), h in b³C[b], has unit class of exact primary order2; the canonical derivative generates its full component-labelled arm | Map an actual source-normal response to this paid operator without changing its polynomial ring |
 | Wildcard: actual boundary surface | Shared-root jets are necessary; all single-point octic boundary divisors are excluded, including infinity, with unrestricted polynomial-mate degree; the constant-D finite6/infinity2 class is closed at every finite location | General leading exactness closes all(4,2,2) positions and classifies every degree<=8 leading differential. The5+1+1+1 class is polynomially closed with sharp rational hostiles. Exact pencils classify every global quadratic rational mate; spend those structures on the surviving quartic lower sections |
 
@@ -677,10 +677,28 @@ quadratic tangent evaluation, and transverse derivatives of component jets.
    independent original-coordinate Laurent systems pass. Classical
    binomial integration is credited; no external priority is asserted.
 
-The [315-artifact manifest](planar_jc48_sep06_manifest.json) pins71 proof notes,
-72 audit notes,73 sources,73 frozen outputs and26 compressed witnesses.
-The73 programs report2180139 exact gates per complete normal or optimized
-run. Each frozen output agrees in both modes. All303 inherited pins remain
+72. [Fourfold infinity in(4,3,1)](planar_jc48_sep08_four_three_one_infinity.md)
+   is **PROVED + INDEPENDENTLY AUDITED**. Complete weighted infinity
+   regularity and primitive capacity force constant D; the reduced
+   M/N has a compulsory residue unless L is constant. Together with
+   item69 and the odd-degree leading table, this closes all boundary
+   locations for polynomial mates. Literal quadratic trace and all-p
+   rational constant-L controls provide separate sharp checks. All87
+   gates and the independent full local/global audit pass.
+73. [H4 mixed(4)(2) equality](planar_jc48_sep08_h4_mixed42.md)
+   is **PROVED + INDEPENDENTLY AUDITED** in every ambient degree. The
+   unique cycle blocks, exact pair inventories and the absence of an
+   allowed semiregular restriction to six labels force a common
+   transposition; the paid single-cycle theorem then gives equality.
+   All343032 gates and an independent83160-pair census pass. The two
+   minimal six-label odd-pair hostiles preserve the need to prove the
+   common factor before removing it. All meridian types moving at most
+   six sheets are now excluded for the actual mixed-cusp covering.
+
+The [323-artifact manifest](planar_jc48_sep06_manifest.json) pins73 proof notes,
+74 audit notes,75 sources,75 frozen outputs and26 compressed witnesses.
+The75 programs report2523258 exact gates per complete normal or optimized
+run. Each frozen output agrees in both modes. All315 inherited pins remain
 unchanged. These are scoped proof controls, not a census of Keller maps;
 no external priority claim or full JC(2) result is asserted.
 
@@ -927,8 +945,11 @@ locus. Item70 pays its actual-surface extension to z=x^m, the full
 extremal-pencil iff and sharp rational families. Item71 pays all-exponent
 binomial exactness. Item69 closes all-finite4,3,1 with both complete
 primitive systems, geometric integrality and full boundary checks.
-Fourfold infinity in that partition has a counted-residue contradiction
-after the weighted-infinity reduction, currently under independent audit. The other surviving leading strata retain their
+Item72 closes fourfold infinity as well, completing all locations.
+The all-finite5,3 and6,1,1 strata are under new coefficient and primitive
+analysis. The M-shared constant-D finite6/infinity2 complement now has
+a complete-case polynomial exclusion candidate, with genuine rational
+submersions preserved as hostiles. The other surviving leading strata retain their
 lower-coefficient and global descent obligations. The degree
 of F|D is distinct from a primitive's local degree3, which comes from
 the order-two original differential; no degree-four primitive is assumed.
@@ -942,8 +963,10 @@ and involutive meridians. The remaining target is genuinely mixed cycle
 structure with arbitrary actual retained subsets. Item61 proves the sharp odd-braid retention bounds and mapping-degree
 floor12. Item65 closes the first mixed(3)(2) cycle type by actual
 cycle-intersection data. Item68 closes the unordered(3)(3) type by preserving local block mixing
-and spending surrounding centralizers. Other mixed cycle structures
-remain open. The unbounded cardinality relaxation still leaves actual
+and spending surrounding centralizers. Item73 closes(4)(2) as well.
+All moved-support sizes at most six are eliminated, and a new complete
+retention consumer is testing the stronger mapping-degree floor16.
+Other mixed cycle structures remain open. The unbounded cardinality relaxation still leaves actual
 cycle order as the decisive sidecar. The exact pair(123),(345) still refutes
 transfer of the ordinary half-support bound. The S4 hostile
 prevents cyclicity or local cusp generation

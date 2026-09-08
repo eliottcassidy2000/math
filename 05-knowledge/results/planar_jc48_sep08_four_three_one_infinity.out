@@ -1,0 +1,7 @@
+DG boundary (4 infinity, 3 finite, 1 finite): complete coefficient theorem
+Weighted infinity, componentwise capacity, and both T2 residues: PASS
+Rational mate forces constant L; unrestricted polynomial mate excluded
+Independent degree-two field trace and same-partition rational controls: PASS
+Gates: 87
+Semantic SHA256: a747eb90da21add105fe24156322e989d0f302a74337e88862db4aee6ab5f057
+RESULT: PASS
