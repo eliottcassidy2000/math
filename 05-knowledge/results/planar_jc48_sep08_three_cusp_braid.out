@@ -1,0 +1,235 @@
+FINITE-EXACT THREE-CUSP RATIONAL BRAID PASS; marked Artin D4 quotient; local pairs certified; actual degree5/6/7 passport consumer
+{
+  "conclusion": "six necessary relations are exactly marked Artin D4; actual complement is a quotient, not asserted equal",
+  "discriminant": "-167772160000*(3*u - 13)**3*(3*u - 8)**3*(3*u + 19)**3*(729*u**3 + 3483*u**2 + 5547*u - 78359)**2/5559060566555523",
+  "paths": [
+    {
+      "compressed_bytes": 10474,
+      "compressed_sha256": "96328859a5811a761d67d6d471a61d97d418aabc5771ba6219a321bea80c570d",
+      "gates": 1863,
+      "local": {
+        "cluster_degrees": [
+          2,
+          1,
+          1
+        ],
+        "cluster_radii": [
+          "1/64",
+          "1/64",
+          "1/64"
+        ],
+        "pair_positions": [
+          0,
+          1
+        ],
+        "stem_word": [
+          -1,
+          -2
+        ]
+      },
+      "name": "cusp_plus",
+      "raw_bytes": 41941,
+      "raw_sha256": "970f0e8a9c11a9199398c5a70213f45253ca4817adda8979840bf36fbe05ab2a",
+      "segments": 161,
+      "word": [
+        -1,
+        -2,
+        1,
+        1,
+        1,
+        2,
+        1
+      ]
+    },
+    {
+      "compressed_bytes": 12021,
+      "compressed_sha256": "c630b15221dc82d808ce8dacfed9f5bb468bb335974af7a82c939171160b2f6b",
+      "gates": 2051,
+      "local": {
+        "cluster_degrees": [
+          2,
+          1,
+          1
+        ],
+        "cluster_radii": [
+          "1/64",
+          "1/64",
+          "1/64"
+        ],
+        "pair_positions": [
+          2,
+          3
+        ],
+        "stem_word": [
+          2,
+          1
+        ]
+      },
+      "name": "cusp_minus",
+      "raw_bytes": 45806,
+      "raw_sha256": "41c7915654f748b41b83a55ab369dcdc07e62f327c8e0abbcae32030c183b190",
+      "segments": 174,
+      "word": [
+        2,
+        1,
+        3,
+        3,
+        3,
+        -1,
+        -2
+      ]
+    },
+    {
+      "compressed_bytes": 8832,
+      "compressed_sha256": "8c27247e644f433f6881ec7976411fcec5f9b24fc300bbab8699dd52a376750f",
+      "gates": 1567,
+      "local": {
+        "cluster_degrees": [
+          2,
+          1,
+          1
+        ],
+        "cluster_radii": [
+          "1/64",
+          "1/64",
+          "1/64"
+        ],
+        "pair_positions": [
+          0,
+          1
+        ],
+        "stem_word": [
+          2,
+          -1
+        ]
+      },
+      "name": "cusp_two",
+      "raw_bytes": 35230,
+      "raw_sha256": "230c49f542429e1be158ebeb0dc3bccc713999acef2251b751562850d17790ef",
+      "segments": 135,
+      "word": [
+        2,
+        1,
+        1,
+        1,
+        -2
+      ]
+    },
+    {
+      "compressed_bytes": 6490,
+      "compressed_sha256": "5f2d88d58c7509996c79f1fc4608bb6167a4fb07858bfc9860f635affe5481a1",
+      "gates": 1171,
+      "local": {
+        "cluster_degrees": [
+          2,
+          1,
+          1
+        ],
+        "cluster_radii": [
+          "5/64",
+          "1/64",
+          "1/64"
+        ],
+        "pair_positions": [
+          1,
+          2
+        ],
+        "stem_word": [
+          2,
+          -1,
+          -2
+        ]
+      },
+      "name": "node0",
+      "raw_bytes": 26406,
+      "raw_sha256": "8710b8f189dc7806ea6cd8930f6a2a866d37dd57f6992224d997b70b5c2f2356",
+      "segments": 99,
+      "word": [
+        2,
+        -1,
+        2,
+        2,
+        1,
+        -2
+      ]
+    },
+    {
+      "compressed_bytes": 11651,
+      "compressed_sha256": "e9321d7e7f0b2fa454afd09a1bd6d2ff5c55961b3979c61ad550c9f712964cca",
+      "gates": 1689,
+      "local": {
+        "cluster_degrees": [
+          2,
+          1,
+          1
+        ],
+        "cluster_radii": [
+          "3/16",
+          "1/64",
+          "1/64"
+        ],
+        "pair_positions": [
+          2,
+          3
+        ],
+        "stem_word": [
+          2,
+          1,
+          2
+        ]
+      },
+      "name": "node1",
+      "raw_bytes": 40570,
+      "raw_sha256": "8c82826f8039a318dbd9383d76697b43eaa097161c9f8af5bccbe9c2b440c023",
+      "segments": 141,
+      "word": [
+        2,
+        1,
+        2,
+        3,
+        3,
+        -2,
+        -1,
+        -2
+      ]
+    },
+    {
+      "compressed_bytes": 7986,
+      "compressed_sha256": "902768fdd1968fc697f25e9a975318f50094401974e952a1d67bdc39533999ab",
+      "gates": 1140,
+      "local": {
+        "cluster_degrees": [
+          2,
+          1,
+          1
+        ],
+        "cluster_radii": [
+          "3/16",
+          "1/64",
+          "1/64"
+        ],
+        "pair_positions": [
+          1,
+          2
+        ],
+        "stem_word": [
+          2,
+          3
+        ]
+      },
+      "name": "node2",
+      "raw_bytes": 27852,
+      "raw_sha256": "fa10c1e76d49683f65e1660b4db4755e7bc1bfdd12db3a7befbad5b6999ac1bd",
+      "segments": 97,
+      "word": [
+        2,
+        3,
+        2,
+        2,
+        -3,
+        -2
+      ]
+    }
+  ]
+}
+PASS always-active gates=9534

@@ -1,11 +1,11 @@
 {
   "session": "planar-jacobian-sep06",
-  "status": "PROVED scoped analytic/group results with independent audits; whole one-odd-cusp and two-ordinary-cusp (4,6) exclusions; quartic common-root and first-jet obstructions and complete constant-D finite6/infinity2 exclusion at every finite point; three-cusp geometric consumers CONDITIONAL; JC(2) OPEN",
+  "status": "PROVED scoped analytic/group results with independent audits; whole one-odd-cusp and two-ordinary-cusp (4,6) exclusions; whole ordinary three-cusp family marked D4 quotient, degree floor8 and non-involutive monodromy; quartic common-root/first-jet gates, all-finite constant-D finite6/infinity2 exclusion, and fixed-zero octuple polynomial-mate exclusion; JC(2) OPEN",
   "created_utc": "2026-09-06",
-  "artifact_count": 199,
-  "program_count": 47,
-  "exact_gates_per_complete_normal_or_optimized_run": 1469428,
-  "verification": "All47 programs have normal and optimized replays byte-identical to their frozen outputs. Five new bundles add6683 gates per mode with full independent analytic/source audits. The finite D4 classifier has a separate signed-kernel/lift audit reproducing all26 subgroup character profiles. All179 inherited artifacts retain their original pins and prior replay record. The three-cusp words remain HEURISTIC geometrically in these algebraic and conditional passport bundles; they are not new path certificates. Frozen pre-audit output labels remain provenance, while promoted primary proofs and audits govern mathematical status.",
+  "artifact_count": 221,
+  "program_count": 51,
+  "exact_gates_per_complete_normal_or_optimized_run": 1491665,
+  "verification": "All51 programs have normal and optimized replays byte-identical to their frozen outputs. Four new bundles add22237 gates per mode with full independent analytic/source audits. The three-cusp braid includes six actual moving paths with807segments and18 independently reconstructed local complex root clusters. Complete family transport retains harmless projection and even-coefficient degeneracies. The partial-retention D4 audit independently reconstructs all53 literal subgroups and211 count trials. All199 inherited artifact pins remain unchanged; their prior replay record is retained. Older numerical scout labels remain frozen provenance; the new actual-geometry bundles supply their previously conditional consumers.",
   "program_gates": {
     "weight14": 169,
     "weight14_audit": 93,
@@ -53,7 +53,11 @@
     "const_d_quartic": 97,
     "const_d_translation": 51,
     "three_cusp_passport": 789,
-    "d4_involution": 5631
+    "d4_involution": 5631,
+    "three_cusp_braid": 9534,
+    "finite_eight": 92,
+    "three_cusp_family": 102,
+    "d4_retention": 12509
   },
   "artifacts": [
     {
@@ -217,9 +221,19 @@
       "sha256": "752ef3690dd6e608a98c9bdcb9632f71911588f3e1e4a9523f4fb71278975c2b"
     },
     {
+      "path": "04-computation/planar_jc48_sep08_d4_retention.py",
+      "bytes": 8306,
+      "sha256": "94928ce8d0a1099f604fd57234932a8394053879c5e135c704dfde58b32575a3"
+    },
+    {
       "path": "04-computation/planar_jc48_sep08_dg_quadratic.py",
       "bytes": 3435,
       "sha256": "b170cb02793e5eea5423aa1a838ee296406e993c18b26c97a033d15a01f9d568"
+    },
+    {
+      "path": "04-computation/planar_jc48_sep08_finite_eight.py",
+      "bytes": 9242,
+      "sha256": "f9e86132d04caacd894651e66cbc563dbc56ec283adf4f9412334624cae9b02d"
     },
     {
       "path": "04-computation/planar_jc48_sep08_infinity11_braid.py",
@@ -255,6 +269,16 @@
       "path": "04-computation/planar_jc48_sep08_shared_roots.py",
       "bytes": 6255,
       "sha256": "695b0da5d8fb5dec95b85d0d32086432ac6aaa8cb1fd8bc00fa2eef27f4da2ad"
+    },
+    {
+      "path": "04-computation/planar_jc48_sep08_three_cusp_braid.py",
+      "bytes": 20428,
+      "sha256": "369c55582cb7f53cbd7a6bfa1c28d267190e9f58dbc9c9d22291be2ddbf05e27"
+    },
+    {
+      "path": "04-computation/planar_jc48_sep08_three_cusp_family.py",
+      "bytes": 5571,
+      "sha256": "4f09e896a714213266ec3483bd595f6aae24c5a51f65b201a2b574adb8162fbb"
     },
     {
       "path": "04-computation/planar_jc48_sep08_three_cusp_group.py",
@@ -782,6 +806,21 @@
       "sha256": "ce45b6d2eda2d01e96047b0025ddcf9e0795c7c3590ad15348e5546b2d77fa87"
     },
     {
+      "path": "05-knowledge/results/planar_jc48_sep08_d4_retention.md",
+      "bytes": 10073,
+      "sha256": "1531b461e34cb0b157e085dd60b0ffc2ca144d935860e0caf0429931df48d269"
+    },
+    {
+      "path": "05-knowledge/results/planar_jc48_sep08_d4_retention.out",
+      "bytes": 575,
+      "sha256": "bb250893c2f7afbc9f07a8294eae18d23b0db0f79ae6ae6bb01edfb973626d67"
+    },
+    {
+      "path": "05-knowledge/results/planar_jc48_sep08_d4_retention_audit.md",
+      "bytes": 12329,
+      "sha256": "0aa3a72c26173b64766551a31ca66eca419eb8ea65bc12cf95386f607e90c2cb"
+    },
+    {
       "path": "05-knowledge/results/planar_jc48_sep08_dg_quadratic.md",
       "bytes": 10181,
       "sha256": "d5f7d030bf36bd8a2f150833416984c21d8c4b60e835da1bcdb5187ef43f3425"
@@ -795,6 +834,21 @@
       "path": "05-knowledge/results/planar_jc48_sep08_dg_quadratic_audit.md",
       "bytes": 12591,
       "sha256": "3ba094e737beda0e17d23263d2f1b33d3cd0ff39295251b2761f4e281340c19a"
+    },
+    {
+      "path": "05-knowledge/results/planar_jc48_sep08_finite_eight.md",
+      "bytes": 13586,
+      "sha256": "1666454e303f1371ba293d9d0d22b73e438b10279c19ef9e01a115fe2a51cfa9"
+    },
+    {
+      "path": "05-knowledge/results/planar_jc48_sep08_finite_eight.out",
+      "bytes": 444,
+      "sha256": "2fdb2418487c87b217877559e22167aa42f4be52e217e5d0bec2ebf2cc455bb4"
+    },
+    {
+      "path": "05-knowledge/results/planar_jc48_sep08_finite_eight_audit.md",
+      "bytes": 12552,
+      "sha256": "6e337c7fcbfba3a883df3c9eae0936c98cb6a3401ee31abe9bbb0b9b03f20da8"
     },
     {
       "path": "05-knowledge/results/planar_jc48_sep08_infinity11_braid.md",
@@ -935,6 +989,66 @@
       "path": "05-knowledge/results/planar_jc48_sep08_shared_roots_audit.md",
       "bytes": 10736,
       "sha256": "92932658bf46f1fa0d441aa9af66664d12cd290d6449e2192b8ef771bfe0a195"
+    },
+    {
+      "path": "05-knowledge/results/planar_jc48_sep08_three_cusp_braid.md",
+      "bytes": 18101,
+      "sha256": "83d5551008e1a8e3901266e25d276ca8a25cd479d02181e1b85e841d64b3dc22"
+    },
+    {
+      "path": "05-knowledge/results/planar_jc48_sep08_three_cusp_braid.out",
+      "bytes": 4892,
+      "sha256": "2a2fc8fe5d91ca032e249c703a96b19738b4363431f836933536ac006d11d252"
+    },
+    {
+      "path": "05-knowledge/results/planar_jc48_sep08_three_cusp_braid_audit.md",
+      "bytes": 16841,
+      "sha256": "75b1ead5c1c1291a18876b15d2c0bfe4052af82c102ee19fd5cf287c2f2476fa"
+    },
+    {
+      "path": "05-knowledge/results/planar_jc48_sep08_three_cusp_braid_cusp_minus_certificate.json.gz",
+      "bytes": 12021,
+      "sha256": "c630b15221dc82d808ce8dacfed9f5bb468bb335974af7a82c939171160b2f6b"
+    },
+    {
+      "path": "05-knowledge/results/planar_jc48_sep08_three_cusp_braid_cusp_plus_certificate.json.gz",
+      "bytes": 10474,
+      "sha256": "96328859a5811a761d67d6d471a61d97d418aabc5771ba6219a321bea80c570d"
+    },
+    {
+      "path": "05-knowledge/results/planar_jc48_sep08_three_cusp_braid_cusp_two_certificate.json.gz",
+      "bytes": 8832,
+      "sha256": "8c27247e644f433f6881ec7976411fcec5f9b24fc300bbab8699dd52a376750f"
+    },
+    {
+      "path": "05-knowledge/results/planar_jc48_sep08_three_cusp_braid_node0_certificate.json.gz",
+      "bytes": 6490,
+      "sha256": "5f2d88d58c7509996c79f1fc4608bb6167a4fb07858bfc9860f635affe5481a1"
+    },
+    {
+      "path": "05-knowledge/results/planar_jc48_sep08_three_cusp_braid_node1_certificate.json.gz",
+      "bytes": 11651,
+      "sha256": "e9321d7e7f0b2fa454afd09a1bd6d2ff5c55961b3979c61ad550c9f712964cca"
+    },
+    {
+      "path": "05-knowledge/results/planar_jc48_sep08_three_cusp_braid_node2_certificate.json.gz",
+      "bytes": 7986,
+      "sha256": "902768fdd1968fc697f25e9a975318f50094401974e952a1d67bdc39533999ab"
+    },
+    {
+      "path": "05-knowledge/results/planar_jc48_sep08_three_cusp_family.md",
+      "bytes": 19071,
+      "sha256": "aaefe2eee8240e30fd00b4e541d923c02987fe431e3b80917c1211f6dd21bf2d"
+    },
+    {
+      "path": "05-knowledge/results/planar_jc48_sep08_three_cusp_family.out",
+      "bytes": 1459,
+      "sha256": "2631e28ff306b26f45a306c037956bdf0015cc66ef531202288e7dcb3fbb72c2"
+    },
+    {
+      "path": "05-knowledge/results/planar_jc48_sep08_three_cusp_family_audit.md",
+      "bytes": 10865,
+      "sha256": "d7bde4b8664ac801bf865b748e5b89116703d7262c3b111dc4c3acce524ad23f"
     },
     {
       "path": "05-knowledge/results/planar_jc48_sep08_three_cusp_group.md",

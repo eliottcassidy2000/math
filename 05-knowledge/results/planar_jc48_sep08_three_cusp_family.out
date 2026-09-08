@@ -1,0 +1,47 @@
+FINITE-EXACT THREE-CUSP FAMILY ALGEBRA PASS; topology and marked braid transfer proved separately
+{
+  "controls": [
+    {
+      "a": "1",
+      "discriminant": "-65536*u**3*(u + 1)**6*(9*u + 5)**2*(625*u**3 + 699*u**2 + 663*u + 289)**2/244140625",
+      "distinct_cusp_U_values": 2,
+      "infinity": 7,
+      "name": "s0 harmless double cusp projection",
+      "nodes": 4,
+      "s": "0"
+    },
+    {
+      "a": "1",
+      "discriminant": "-5308416*(u - 7)**3*(u + 9)**6*(9*u + 17)**2*(625*u**3 - 10881*u**2 + 49707*u + 171549)**2/244140625",
+      "distinct_cusp_U_values": 2,
+      "infinity": 7,
+      "name": "s3 harmless double cusp projection",
+      "nodes": 4,
+      "s": "3"
+    },
+    {
+      "a": "-1",
+      "discriminant": "-81*(u - 3)**3*(u + 5)**3*(16*u - 45)**3*(16*u**3 + 36*u**2 + 27*u - 765)**2/256",
+      "distinct_cusp_U_values": 3,
+      "infinity": 9,
+      "name": "zero intermediate even coefficient",
+      "nodes": 3,
+      "s": "3/2"
+    },
+    {
+      "a": "-4/3",
+      "discriminant": "-167772160000*(3*u - 13)**3*(3*u - 8)**3*(3*u + 19)**3*(729*u**3 + 3483*u**2 + 5547*u - 78359)**2/5559060566555523",
+      "distinct_cusp_U_values": 3,
+      "infinity": 9,
+      "name": "literal certified braid representative",
+      "nodes": 3,
+      "s": "2"
+    }
+  ],
+  "formulas": {
+    "h7": "12*a/5 + 8*s/5",
+    "h9": "16*s*(s**2 - 9)/27",
+    "ordinary": "(a - 2)*(a + 2)*(a + 2*s)*(s - 1)*(s + 1)"
+  }
+}
+Always-active gates: 102

@@ -28,9 +28,9 @@ quadratic tangent evaluation, and transverse derivatives of component jets.
 |---|---|---|
 | Anchor: moving source | The finite five-dimensional response remains valid, but every nonconstant polynomial Hamiltonian in K+Delta K[p,y] has no nonzero rational scalar time | Change the invariant or carrier; different polynomial lifts inside the cusp ideal are now closed, and compositions still need their actual invariant/regularity sidecars |
 | Niche: collision | All scalar two-form periods miss exactly the quadrics through tangent directions in a three-dimensional target | Carry the quadratic data through an actual earlier source deformation and preserve descent |
-| Anchor: infinity | The whole birational (4,6) class with one finite odd (2,m) cusp and at least two nodes is excluded; the entire two-ordinary-cusp (4,6) class has actual affine group Z | The three-cusp scout presentation is exactly Artin D4; certify the actual local access pairs before using its degree-eight floor or finite reflection consumer |
+| Anchor: infinity | The one-odd-cusp and two-ordinary-cusp (4,6) classes are closed; the entire ordinary three-cusp class has an actual marked D4 quotient, degree floor8, and no involutive meridian monodromy | Test support geometry beyond involutions; the single-cycle exclusion and degree floor10 are new candidates under audit |
 | Wildcard: response connection | The fixed smooth polynomial family F=arb+c+h(b), h in b³C[b], has unit class of exact primary order2; the canonical derivative generates its full component-labelled arm | Map an actual source-normal response to this paid operator without changing its polynomial ring |
-| Wildcard: actual boundary surface | Every hypothetical quartic pair has F=H²+L with global H in L2 and nonconstant L in L1; all coordinates linear in r in the boundary chart are excluded, with unrestricted mate | Shared-root jets are required, and every constant-D finite6/infinity2 stratum is closed by elliptic primitive-space comparison; test the remaining octuple-root polynomial-mate cases with their full pole budgets |
+| Wildcard: actual boundary surface | Shared-root jets are necessary; the constant-D finite6/infinity2 class is closed at every finite location, and the complete fixed-zero octuple class has no polynomial mate | Audit the octuple extension to every finite point using corrected global carriers, weighted trace and a genus-two primitive-space obstruction; other multiplicity partitions remain open |
 
 ## Audited checkpoint
 
@@ -441,9 +441,45 @@ quadratic tangent evaluation, and transverse derivatives of component jets.
     and equality of retained sets with full fixed sets. Saturation does
     not force involutivity. Producer5631 gates and independent audit pass.
 
-The [199-artifact manifest](planar_jc48_sep06_manifest.json) pins45 proof notes,
-46 independent audits,47 sources,47 outputs and fourteen compressed certificates.
-The47 programs report1469428 exact gates per complete normal or optimized run. Each frozen output agrees in normal and
+46. [Actual three-cusp braid and local pairs](planar_jc48_sep08_three_cusp_braid.md)
+    is **PROVED + FINITE-EXACT + INDEPENDENTLY AUDITED**. Six common-base
+    moving witnesses have807 segments. Eighteen whole complex-disk root
+    clusters pay the actual cusp and node pairs; two inside-pair Hurwitz
+    changes preserve the required actual counts. The literal curve has
+    an actual marked D4 quotient and mapping-degree floor8 as whole
+    Keller support. Equality with D4 is not asserted. Producer9534 gates
+    and independent original-monomial/word/marking reconstruction pass.
+47. [Complete fixed-zero octuple class](planar_jc48_sep08_finite_eight.md)
+    is **PROVED + FINITE-EXACT + INDEPENDENTLY AUDITED**. For global
+    F=H²+L with N|S=alpha*x8, alpha!=0, no polynomial mate of any degree
+    exists. Full section-space entry, all normalized j2 branches, actual
+    D pole capacity, source criticality, weighted quadratic field trace
+    and the boundary-linear theorem exhaust the coefficients. Genuine
+    rational mates remain inside this polynomial-only theorem. Producer92
+    gates and an independent22-check section/trace reconstruction pass.
+48. [Whole ordinary three-cusp family](planar_jc48_sep08_three_cusp_family.md)
+    is **PROVED + FINITE-EXACT + INDEPENDENTLY AUDITED**. The complete
+    birational (4,6) class with three ordinary cusps and otherwise nodes
+    has only infinity7/9 and four/three nodes. Proper intrinsic good loci,
+    strict local-certificate persistence and marked resolution transport
+    pay the D4 quotient and degree floor8 throughout both good strata.
+    Harmless cusp co-projections and a vanishing intermediate infinity
+    coefficient are retained. Producer102 gates and an independent full
+    audit with23 additional original-integral/series checks pass.
+49. [D4 with arbitrary retained subsets](planar_jc48_sep08_d4_retention.md)
+    is **PROVED + FINITE-EXACT + INDEPENDENTLY AUDITED**. Cusp and node
+    deficit bounds replace the full-fixed-set hypothesis. All53 literal
+    reflection-containing stabilizers and211 retained-size trials force
+    degree4 whenever the Euler lower bound is at most one; extra nodes
+    contribute nonnegative overlap. A separate full signed-kernel/lift
+    audit reproduces every subgroup and count. The cited Coxeter supplier
+    and classical degree-four exclusion therefore rule out involutive
+    meridians for every actual marked three-cusp curve in item48, without
+    identifying retained and fixed sheets. Producer12509 gates pass.
+
+The [221-artifact manifest](planar_jc48_sep06_manifest.json) pins49 proof notes,
+50 independent audits,51 sources,51 outputs and twenty compressed certificates.
+The51 programs report1491665 exact gates per complete normal or optimized run. Each frozen output agrees in normal and
 optimized modes; the braid verifiers also check their pinned witnesses.
 These are scoped proof controls, not a census of Keller maps. No external
 priority claim is made.
@@ -672,17 +708,18 @@ curve or source-ring objects, and no JC consequence is inferred.
 Next operations compare all five live lanes. The quartic common-root
 and shared-root first-jet gates remain the entry constraints. Items42--43
 close the entire constant-D finite6/infinity2 stratum at every finite
-location, including the genuine residue-free elliptic layer. A complete
-finite-octuple polynomial-mate proof is now being developed; its normal
-jets, remaining pole budgets, trace residues and already excluded
-boundary-linear class are separate obligations before promotion.
-Item39 closes the entire two-ordinary-cusp (4,6) class. The three-cusp
-six-word group is Artin D4, with a precise conditional degree-eight
-floor and finite full-fixed-sheet classifier. New actual moving-tube
-witnesses and their marked local two-root clusters are under audit;
-a complete global loop word alone does not identify the actual cusp
-or node retained-set pair. The S4 hostile prevents cyclicity or local
-cusp generation shortcuts. For moving sources, every polynomial
+location, including the genuine residue-free elliptic layer. Item47
+closes the complete fixed-zero octuple polynomial-mate class. A changed
+global carrier now gives a candidate extension to every finite point:
+the last residual genus-two curve has a complete three-dimensional
+primitive space, and source pole repair remains a separate final gate.
+Item39 closes the entire two-ordinary-cusp (4,6) class. Items46--48 pay
+the actual three-cusp moving paths, local pairs and full family transport;
+the actual degree floor is8. Item49 excludes involutive monodromy with
+arbitrary retained subsets and any extra nodes. A new single-cycle
+support argument and proposed degree floor10 still need their independent
+audit. The S4 hostile prevents cyclicity or local cusp generation
+shortcuts. For moving sources, every polynomial
 Hamiltonian inside the cusp ideal is closed for nonzero rational time.
 Different-invariant compositions and changed carriers retain their
 invariant and regularity debts. Collision quadrics still need a

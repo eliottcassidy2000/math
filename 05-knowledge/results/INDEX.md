@@ -90,10 +90,14 @@
   primitive-space comparison and exact section-space transport. A fixed
   smooth polynomial family pays the actual unit
   torsion connection and every primary height.
-  Three-cusp Artin-D4 and degree-eight statements retain their actual
-  access hypotheses; finite reflection data are not Keller realizations.
-  [Manifest](planar_jc48_sep06_manifest.json):199 artifacts,47 programs,
-  1469428 exact gates per mode. Full JC(2) remains **OPEN**.
+  The complete fixed-zero octuple class has no polynomial mate of any
+  degree, with rational-mate hostiles retained. Actual moving braids,
+  local root-cluster marking and proper family transport give a marked
+  D4 quotient and degree floor8 for the entire ordinary three-cusp
+  (4,6) class. All53 reflection stabilizers and arbitrary retained sizes
+  exclude involutive meridian monodromy, even with extra nodes.
+  [Manifest](planar_jc48_sep06_manifest.json):221 artifacts,51 programs,
+  1491665 exact gates per mode. Full JC(2) remains **OPEN**.
 
 - [Previous continuing synthesis](continuing5_20260906_synthesis.md):
   full-model beta simplicity, the original-phase rectangle, the ordered

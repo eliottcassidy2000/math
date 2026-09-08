@@ -1,0 +1,6 @@
+PASS fixed finite-octuple quartic: 92 always-active exact gates
+Complete global entry, all four j2 branches, and componentwise degree gate checked
+Linear-phase residue/source-criticality split and exact quadratic field trace checked
+Nonzero trace residue: 2*alpha/k3^3; constant-R case retained
+Inside-class rational mates verify the polynomial-only final scope
+Semantic SHA256: a2ba0a0d286092c9b8a153c201275c19e9ffeced53abc210a602a31681b3547f
