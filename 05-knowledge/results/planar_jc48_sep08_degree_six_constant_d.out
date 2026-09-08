@@ -1,0 +1,8 @@
+Degree-six leading polynomial: rational mate forces constant D
+Exact gates: 90
+Complete shifted global rows; no finite-root filters: PASS
+Universal inverse T1/T2/T5 and both infinity signs: PASS
+Square/nonsquare field scope; all-parameter asymptotics: PASS
+Short independent (5,2,1) moving-residue corollary: PASS
+Actual rational sharpness and three failure controls: PASS
+Semantic SHA256: 690bdf6d1f2e286b925336ab9d772fcc43f55158702394a7a1f732a3d0db8c8d

@@ -1,0 +1,6 @@
+seven_one_infinity exact controls: PASS
+gates: 113
+complete section dimensions: H=6, L=6 before T2
+actual weighted faces, contact bounds and residual logs: PASS
+original-coordinate field derivation and sharp all-p rational mates: PASS
+semantic sha256: 730eb5fee6ebc4b630fa9546698e0229566d2f6b9c42ae5844e905e1b930b5a6

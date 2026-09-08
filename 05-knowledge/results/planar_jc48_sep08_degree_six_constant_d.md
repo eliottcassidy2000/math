@@ -1,0 +1,367 @@
+# Every degree-six leading polynomial forces a constant boundary value
+
+**Status: PROVED + FINITE-EXACT + INDEPENDENTLY AUDITED.**
+This is a necessary condition for a rational Jacobian mate on the specified
+global quartic class. No finite-root partition or active-jet hypothesis
+is imposed in the main theorem. It does not assert a reduction of arbitrary
+Keller maps to this class, and it does not assert that constant boundary
+value suffices for a rational mate.
+
+## 1. Statement and inherited mechanisms
+
+Work over `C` on the fixed surface and its actual charts
+
+    W=(P1_x x P1_z)\{z=x^2}, t=1/(z-x^2),
+    x=1/r, t=-r^2-r^4 b_D, D={r=0},
+    omega=dx wedge dt=r^2 dr wedge db_D.
+
+Let `H in L2` and `L in L1` be global functions in the
+[proved DG filtration](planar_jc48_sep08_dg_quadratic.md), with
+
+    H=N(x)t^2+P(x)t+Q(x), L=M(x)t+R(x), F=H^2+L.
+
+Assume **exactly** `deg N=6`. Equivalently, the leading binary octic
+has multiplicity two at the original distinguished infinity. Its finite
+zeros may have arbitrary multiplicities and positions, and `N` may be
+a square.
+
+**Theorem.** If a rational `G in C(x,t)` satisfies
+`J(F,G)=1`, then both `H|D` and `L|D` are constant. In particular,
+`F|D` is constant. Thus the whole nonconstant-`D` class with `deg N=6`
+has no rational mate, without any bound on the mate's poles or degree.
+
+The same conclusion holds for any nonzero constant Jacobian, by scaling
+the mate. A nonmonic `N` causes no restriction: if its leading coefficient
+is `h!=0`, replace `(H,L,F,G)` by
+`(H/h,L/h^2,F/h^2,h^2G)`. This preserves globality, the bracket equation,
+and whether the boundary restrictions are constant.
+
+The closest mechanisms are the
+[leading-field exactness theorem](planar_jc48_sep08_leading_exactness.md)
+and the complete inverse coefficients in
+[the binary (5,2,1) argument](planar_jc48_sep08_five_two_one.md).
+The present proof is self-contained after the proved global section rules:
+it extracts two universal coefficients before imposing any finite jets.
+The preceding `(5,2,1)` proof obtained these residues only after its finite
+reductions; this note separates the stronger degree-six implication.
+Root and the producer independently derived the shifted calculation;
+`orthogonal_returns` independently reconstructed its original-`x`
+coefficients. No external priority claim is made for formal inverse
+expansions or residue obstructions.
+
+The live concepts are complete global rows, the formal inverse, the
+normalized leading field, labelled infinity residues, and constant-`D`
+rational exceptions. The source-to-target map retains the full original
+quartic and its derivation, but coefficient extraction loses algebraization
+and the finite residues. The canonical hostile in Section 6 is an actual
+nonconstant-lower-row rational mate with constant `D`. The corrected near
+miss is to assume active jets, a squarefree leading field, or the weighted
+compact-fibre topology before extracting a leading-field coefficient.
+The least-used sidecar is the cancellation of the **linear** term of
+`D0` once its quadratic term vanishes.
+
+## 2. The entire shifted global coefficient space
+
+Normalize `N` to be monic. Write `u=x-p`, with arbitrary `p in C`; this
+is only a polynomial source coordinate, not an asserted automorphism of
+the compactified surface. No root is required at `u=0`. Write
+
+    N=u^6+n5 u^5+n4 u^4+n3 u^3+n2 u^2+n1 u+n0.
+
+The full global rules give precisely
+
+    P=(A+2)u^4+b u^3+c u^2+P1 u+P0,
+    Q=(A+1)u^2+(b-2pA-n5)u+d,
+    M=lambda u^4+mu u^3+nu u^2+M1 u+M0,
+    R=lambda u^2+(mu-2p lambda)u+e.                 (1)
+
+All eighteen displayed coefficient parameters are free; `p` is an
+additional arbitrary choice of coordinate. In particular, none of
+`n0,n1,P0,P1,M0,M1` is set to zero.
+
+To check completeness directly, in the original `x` coordinates
+the numerator rows of `H` are
+
+    Q, P-2x^2Q, N-x^2P+x^4Q,
+
+each of degree at most four, while the numerator rows of `L` are
+`R,M-x^2R`, each of degree at most two. The degree-six specialization
+of the full filtration gives
+
+    deg P<=4, Q2=P4-N6, Q1=P3-N5,
+    deg M<=4, R2=M4, R1=M3.
+
+Expanding `u=x-p`, with `N6=1`, gives exactly (1), including the
+`-2pA-n5` term. Conversely the same numerator bounds hold for every
+choice in (1), so the whole original section spaces are retained.
+
+On the actual chart at `D`, write the boundary restrictions as
+
+    H|D=-A b_D+h_D, L|D=-lambda b_D+ell_D,           (2)
+
+where `h_D,ell_D` are constants depending on the coefficients and `p`.
+This follows either by substituting the complete chart or from the
+filtration's boundary formula. Thus
+
+    F|D is constant iff A=lambda=0.                (3)
+
+Indeed the quadratic coefficient of `F|D` is `A^2`; once it vanishes,
+the remaining linear coefficient is `-lambda`. These are actual boundary
+values, not values in an auxiliary source chart.
+
+## 3. Universal inverse coefficients and their exactness
+
+Choose `kappa` with `kappa^2=N` and let `K=C(u)(kappa)` be the **field**
+generated by that root. It can have degree one or two. Its derivation
+`d/du` extends uniquely in characteristic zero.
+
+The formal implicit-function theorem gives a unique inverse branch
+
+    F(u,T)=v^-4,
+    T=kappa^-1 v^-1+sum_(j>=0) T_j(u)v^j in K((v)). (4)
+
+Indeed, after setting `U=vT`, the constant equation is
+`N^2 U^4=1` at `U=kappa^-1`, and its derivative is the nonzero
+element `4kappa`. Rational substitution `t->T` is injective: for any
+nonzero polynomial in `t`, its highest-degree term has uniquely lowest
+`v` valuation. Every rational denominator therefore has a nonzero,
+invertible image in `K((v))`.
+
+If `J(F,G)=1`, put `Gtilde(u,v)=G(u,T)`. The chain rule gives
+
+    partial_u Gtilde |_v=-1/F_t=(1/4)v^5 T_v,
+    partial_u [v^(j+4)]Gtilde=(j/4)T_j.             (5)
+
+Consequently `T_j du` is an exact differential in `K` for every
+`j!=0`, including `j=-1`. In particular it has zero residue at every
+point of the smooth projective curve with field `K`. There is no
+convergence premise and no upper or lower pole bound on the rational
+mate. The index-zero coefficient carries no exactness condition.
+
+Center the quadratic by `t=y-P/(2N)` and put
+
+    D0=Q-P^2/(4N), E0=R-MP/(2N).
+
+Then `F=(Ny^2+D0)^2+My+E0`. If `W=kappa v y`, its exact inverse
+equation is
+
+    W^4+2D0 v^2 W^2+(M/kappa)v^3 W
+           +(D0^2+E0)v^4=1, W(0)=1.               (6)
+
+The new coefficient at each order has scalar coefficient four.
+Recursion through order six gives
+
+    T1=-D0/(2kappa),
+    T2=-M/(4N),
+    T5=-(2D0^3+4D0E0+M^2/N)/(32kappa).             (7)
+
+These identities hold before any division by a coefficient parameter.
+Centering affects only `T0`. The accompanying source derives (7)
+directly from (6), rather than fitting sample inverse coefficients.
+
+## 4. Two infinity residues, with all parameters retained
+
+The full rows (1) give, as `u->infinity`,
+
+    D0=-A^2 u^2/4
+       +[-Ab/2-2pA+(A+A^2/4)n5]u+O(1).           (8)
+
+There are no hidden assumptions on the finite roots of `N` in this
+polynomial division. If `A=0`, **both** nonconstant terms vanish, and
+
+    D0=d-c-b^2/4+b n5+n4-n5^2+O(u^-1),
+    E0=lambda(n5-b/2-2p)u+O(1),
+    M^2/N=lambda^2u^2+O(u).                        (9)
+
+For clarity, before `A=0` the quadratic coefficient of `E0` is
+`-A lambda/2`. Thus its disappearance in (9) is paid by the first
+residue; it is not an initial extra restriction.
+
+If `N` is nonsquare, the normalized leading field has two unramified
+points above `u=infinity`. With their actual parameter `z=1/u`,
+
+    kappa=epsilon z^-3 sqrt(1+n5 z+...+n0 z^6),
+    epsilon=+1,-1.                                 (10)
+
+The unit under the square root has constant one, so these are simple
+and distinct local branches even if `N` has repeated finite roots.
+If `N` is square, choose its polynomial square root of degree three.
+Then `K=C(u)` has **one** infinity point; the chosen square root has
+one of the two signs in (10). The same calculation applies at that
+point. It does not use a disconnected equation as a function field.
+
+By (7)--(8), `T1=A^2/(8epsilon u)+O(u^-2)`, so
+
+    Res_infinity(T1 du)=-epsilon A^2/8.             (11)
+
+Exactness forces `A=0`. Now (9) gives
+
+    D0^3/kappa=O(u^-3),
+    D0E0/kappa=O(u^-2),
+    (M^2/N)/kappa=lambda^2/(epsilon u)+O(u^-2).
+
+Only the last term can contribute to the next residue. Therefore
+
+    Res_infinity(T5 du)=epsilon lambda^2/32.        (12)
+
+Exactness forces `lambda=0`. Equation (2) proves the theorem.
+
+These are residues of **coefficient differentials on the leading
+field**, not relative differentials on a compactification of an actual
+level curve `F=f`. The original `r^2` volume factor is not omitted:
+the source derivation in (5) is exactly `J_(u,t)=J_(x,t)`, and globality
+entered through the full original section rows (1). No finite or
+infinity branch classification of the actual quartic fibres, no generic
+irreducibility of those fibres, and no genus-zero assumption on `K`
+are required for the main theorem.
+
+## 5. A short independent consequence for binary (5,2,1)
+
+Suppose the boundary octic has distinct zeros of multiplicities five,
+two and one. A finite double root already excludes every rational mate
+by the nonzero finite residue of `du/sqrt(N)` in
+[leading exactness](planar_jc48_sep08_leading_exactness.md).
+If the double root is original infinity, actual scaling of the source
+and surface normalizes the nonzero finite separation; write
+`N=u^5(u-1)` with arbitrary original position `p`. The main theorem
+gives `A=lambda=0` before imposing any finite jets.
+
+For this corollary only, use the proved local suppliers. At the finite
+simple point all normalized generic relative forms are regular; at the
+original double infinity point they are regular with the actual volume
+weight. At the finite fivefold point an M-unit is unbalanced and regular,
+and a normal unit is regular. These complete cases are paid in
+[quartic common-root analysis](planar_jc48_sep08_quartic_common_root.md)
+and [the shared-root theorem](planar_jc48_sep08_shared_roots.md).
+If the finite fivefold point were not active, an exact primitive would
+have no poles on each compact generic component, although its derivative
+is nonzero. Thus any rational mate enters the active case. The finite
+first-jet gate then forces `P0=P1=M0=M1=0`.
+
+Since `lambda=0`, `M` has degree at most three. Exactness of
+`T2=-M/(4N)`, or its normalized trace to `C(u)`, gives `M(1)=0`.
+The complete remaining rows are consequently
+
+    P=u^2(2u^2+b u+c), Q=u^2+(b+1)u+d,
+    M=mu u^2(u-1), R=mu u+e.                       (13)
+
+All finite positions have been retained. The disappearance of `p`
+is a consequence of the global rows after `A=lambda=0`.
+
+Put `w=u^2t`. Its actual volume is `u^-2 du wedge dw`. The first
+two rows of the **original** `F` are
+
+    F=f(w)+u g(w)+O(u^2),
+    f=(cw+d)^2-mu w+e,
+    g=2(cw+d)(-w^2+bw+b+1)+mu w+mu.                 (14)
+
+When `f` is nonconstant, at every simple moving root of `f(w)=zeta`
+the generic-fibre relative differential has residue proportional to
+`(g/f')'`. One direct derivation uses `w=w0+u w1+...`, with
+`w1=-g/f'`: the residue of `du/(u^2F_w)` is
+`-(g/f')'/f'`. Rational exactness therefore forces
+`(g/f')'=0` identically in `w`, so `g` is a constant multiple of `f'`.
+The generic value `zeta` is retained; a single chosen fibre would not
+give this identity.
+
+If `c!=0`, the cubic coefficient of `g` is `-2c`, whereas `f'`
+is linear. Hence `c=0`. If `L` is nonconstant, (13) now requires
+`mu!=0`, so `f` is linear and `g` must be constant. Its quadratic
+coefficient `-2d` forces `d=0`; its remaining linear coefficient is
+`mu`, a contradiction. Thus a rational mate forces `L` constant.
+
+For constant `L`, a polynomial mate is impossible because
+`J(H^2+L,G)=2H J(H,G)` cannot be one in the polynomial ring.
+This recovers the full all-location polynomial conclusion of the
+[independently audited higher-coefficient proof](planar_jc48_sep08_five_two_one.md)
+without its T6/T10/T14/T18 elimination. That frozen proof and its
+coefficients remain valid independent corroboration.
+
+The rational boundary is attained. For every `p`, let
+
+    q=1+u^2t, H=u(u-1)q^2+k,
+    G_H=-(1+2u)/(3u^2q).
+
+These are literal rational identities with `H` global,
+`J(H,G_H)=1`, and leading polynomial `u^5(u-1)`.
+For `F=H^2+e`, the rational mate is `G_H/(2H)`.
+
+## 6. Sharpness, failed implications, and the finite-six comparison
+
+**A genuine nonconstant-L rational exception with constant D.** For
+every `p`, put
+
+    q=1+u^2t, v=u q,
+    H=u^2q^2+q, L=v,
+    G=1/(2v)-H.
+
+The full original charts show `H in L2`, `L in L1`, leading `N=u^6`,
+and constant boundary restrictions. Direct differentiation gives
+`J(H^2+L,G)=1`. Its pole is real; a rational mate is not thereby a
+polynomial mate. This is the named submersion from the proved
+[constant-D shared-six table](planar_jc48_sep08_constant_d_shared_six.md).
+It prevents strengthening the present theorem to a blanket rational
+exclusion for constant `D`.
+
+**T1 alone is insufficient.** At `p=0`, take
+`H=u^2(1+u^2t)^2`, `L=u^4t+u^2`. Both are global and have
+`D0=E0=0`; thus `T1=0`. But `M^2/N=u^2`, so `T5 du` has
+residue `1/32` for the positive square-root choice. The first failed
+implication is to stop once `H|D` becomes constant; `L|D` still varies.
+
+**Constant D is insufficient.** Take
+`N=u^2(u-1)^4`, `H=Nt^2+2u^4t+u^2+4u`, `L=0`.
+The complete chart is global for every `p`, and `F|D` is constant.
+Nevertheless `kappa=u(u-1)^2` gives
+`Res_0(du/kappa)=1`. Leading exactness excludes a rational mate.
+This keeps the finite-residue information discarded by the two
+infinity coefficients.
+
+**The global lower rows are essential.** If one drops the induced
+`Q` row, `H=u^6t^2`, `F=H^2` has the literal rational mate
+`G=1/(8u^11t^3)`. Its actual infinity expansion has a nonzero
+`r^-2` pole in `H`, so it is outside `L2`. The assertion would be
+false for arbitrary quartics with the same leading coefficient.
+
+For the pure-six polynomial `N=u^6`, the main theorem strengthens the
+proved [nonconstant-D polynomial obstruction](planar_jc48_sep08_nonconstant_d_six.md)
+to a **rational** obstruction throughout its complete nonconstant-D
+coefficient space, before any active jets. Its polynomial-weight and
+actual-field trace proof remains valid. The complementary proved
+[shared-six](planar_jc48_sep08_constant_d_shared_six.md) and
+[translated M-unit](planar_jc48_sep08_const_d_translation.md) results
+retain their exact constant-D hypotheses and rational exceptions.
+No frozen proof or source is changed by this stronger route.
+
+## 7. Exact source contract and audit boundary
+
+The source uses no numerical parameter search and no mate-degree cutoff.
+Its main universe is the complete symbolic family (1). It checks the
+original numerator boxes and full infinity chart, derives T1/T2/T5
+from the original centered inverse equation, and verifies (8)--(12)
+for both allowed local signs. Its normalized local numerator calculation
+keeps every coefficient of `N,P,Q,M,R`. A smooth degree-six radical
+control also records that the field need not have genus zero.
+
+The short `(5,2,1)` calculation retains the complete actual rows (13)
+and moving coefficients (14). The named positive and hostile controls
+are stated separately in Section 6. None of their finite evaluations
+is used to infer a universal theorem or rational sufficiency.
+
+Reproduce with:
+
+    python3 -B 04-computation/planar_jc48_sep08_degree_six_constant_d.py
+    python3 -B -O 04-computation/planar_jc48_sep08_degree_six_constant_d.py
+
+Both complete producer replays pass **90 always-active gates**, with
+byte-identical 455-byte output. Frozen SHA256:
+
+    source 87d48d9df51f2a4601132e2094d46cccc13d783e16e977a2bbf5ceb350365727
+    output 061bccb24949d5efe2381ba56b9dc8c7c85500d02eb35f5e63975dad3be28863
+    semantic 690bdf6d1f2e286b925336ab9d772fcc43f55158702394a7a1f732a3d0db8c8d
+
+The [complete independent audit](planar_jc48_sep08_degree_six_constant_d_audit.md)
+accepts the full universal proof and all90 gates. Separate Lagrange
+inversion and original-coordinate polynomial divisions reproduce the
+load-bearing coefficients and cancellations. The source/output stay
+frozen; the symbolic controls do not replace Sections2–4.

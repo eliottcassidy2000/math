@@ -797,10 +797,26 @@ quadratic tangent evaluation, and transverse derivatives of component jets.
    the trace, its rational degeneration and sharp rational hostiles
    are included. All46 gates and15 alternative audit controls pass.
 
-The [375-artifact manifest](planar_jc48_sep06_manifest.json) pins86 proof notes,
-87 audit notes,88 sources,88 frozen outputs and26 compressed witnesses.
-The88 programs report4275614 exact gates per complete normal or optimized
-run. Each frozen output agrees in both modes. All363 inherited pins remain
+87. [Exact rational iff at original infinity seven](planar_jc48_sep08_seven_one_infinity.md)
+   is **PROVED + INDEPENDENTLY AUDITED**. Exhaustive normalized
+   local branches retain the original volume and generic contacts;
+   the last tangent branches have nonzero logarithms. Only
+   H=(x-p)t²+e t+k and constant L admit rational mates. Their
+   explicit rational mate has unavoidable polynomial obstruction.
+   All113 gates and26 independent controls pass. This closes the
+   last remaining placement in the complete leading quartic table.
+88. [Universal degree-six constant-boundary gate](planar_jc48_sep08_degree_six_constant_d.md)
+   is **PROVED + INDEPENDENTLY AUDITED**. For every degree-six N,
+   with no finite-root or active-jet assumptions, rational exactness
+   of T1 and T5 forces both H and L constant on D. It strengthens
+   item82 to a full rational obstruction for nonconstant D, and
+   independently shortens the5+2+1 proof. All90 gates and separate
+   Lagrange/division controls pass; sharp rational exceptions remain.
+
+The [383-artifact manifest](planar_jc48_sep06_manifest.json) pins88 proof notes,
+89 audit notes,90 sources,90 frozen outputs and26 compressed witnesses.
+The90 programs report4275817 exact gates per complete normal or optimized
+run. Each frozen output agrees in both modes. All375 inherited pins remain
 unchanged. These are scoped proof controls, not a census of Keller maps;
 no external priority claim or full JC(2) result is asserted.
 
@@ -1122,12 +1138,13 @@ remaining6+2 coefficient class, and an orthogonal H4 mixed5,2 group lane.
 
 ## September8 current final-audit queue
 
-Items84–86 have passed full independent audit. The complete DG quartic
-leading table now leaves exactly one location: finite simple/original
-infinity seven, with N linear in the original affine coordinate. Its
-complete local proof is written and under independent audit. A separate
-general degree-six exactness theorem is being validated. Neither pending
-claim is a proved supplier yet. If the last location closes, the already
-proved global-root gluing theorem will convert the square-prefix exclusion
-into a full quartic global-pair exclusion on this fixed DG surface;
-this implication does not extend to arbitrary planar Keller maps.
+Every row in the complete leading DG square-prefix quartic table is now
+excluded for polynomial mates. A separate compiler is checking all67
+finite partitions, the17 exact rows, their original infinity labels and
+each theorem supplier. The already proved global-root gluing theorem then
+converts the coverage into a full quartic global-pair exclusion on this
+fixed DG surface, with no degree bound on the mate; the compiler's own
+independent audit is pending. The all-m graph-complement analogue of the
+degree-six constant-boundary theorem is a separate new proof candidate.
+Neither this restricted surface nor a formal Laurent mate supplies the
+missing realization step for arbitrary planar Keller maps.

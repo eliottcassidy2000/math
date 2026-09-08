@@ -1,11 +1,11 @@
 {
   "session": "planar-jacobian-sep06",
-  "status": "PROVED scoped analytic/group results with independent audits: whole one-odd-cusp/two-ordinary-cusp/three-ordinary-cusp (4,6) exclusions; actual mixed(5,3,3) H4 with involutive,single-cycle and(3)(2)/(3)(3)/(4)(2) exclusions and degree floor16 and uniform mixed(5)(2) equality; general leading exactness; complete degree<=8 differential and six-line pencil classifications; sharp all-degree genus bound and complete degree4m extremal locus and all-exponent binomial criterion; all-m graph-complement filtration, sharp quadratic genus and extremal rational-mate iff; complete rational-mate criterion for all global DG quadratics; single-point,4+4,4+2+2 and5+1+1+1 DG boundary polynomial exclusions at all locations; all-location4+3+1 polynomial exclusion and nonconstant-L rational exclusion; complete constant-D finite6/infinity2 polynomial exclusion with exact shared rational table; all-finite5+3 nonconstant-L rational and all polynomial mate exclusions; complete6+1+1,3+3+2 and4+2+1+1 all-location polynomial exclusions with exact rational boundaries; complete all-location5+3 polynomial exclusion with nonconstant-L rational hostiles; complete6+2 polynomial exclusion; all-finite7+1 all-index formal exactness iff with transcendental formal hostiles; complete5+2+1 and both finite-sevenfold7+1 placements excluded; all-m polynomial first-jet gate; only finite-simple/original-infinity-seven remains in the leading DG quartic table; JC(2) OPEN",
+  "status": "PROVED scoped analytic/group results with independent audits: whole one-odd-cusp/two-ordinary-cusp/three-ordinary-cusp (4,6) exclusions; actual mixed(5,3,3) H4 with involutive,single-cycle and(3)(2)/(3)(3)/(4)(2) exclusions and degree floor16 and uniform mixed(5)(2) equality; general leading exactness; complete degree<=8 differential and six-line pencil classifications; sharp all-degree genus bound and complete degree4m extremal locus and all-exponent binomial criterion; all-m graph-complement filtration, sharp quadratic genus and extremal rational-mate iff; complete rational-mate criterion for all global DG quadratics; single-point,4+4,4+2+2 and5+1+1+1 DG boundary polynomial exclusions at all locations; all-location4+3+1 polynomial exclusion and nonconstant-L rational exclusion; complete constant-D finite6/infinity2 polynomial exclusion with exact shared rational table; all-finite5+3 nonconstant-L rational and all polynomial mate exclusions; complete6+1+1,3+3+2 and4+2+1+1 all-location polynomial exclusions with exact rational boundaries; complete all-location5+3 polynomial exclusion with nonconstant-L rational hostiles; complete6+2 polynomial exclusion; all-finite7+1 all-index formal exactness iff with transcendental formal hostiles; complete5+2+1 and both finite-sevenfold7+1 placements excluded; all-m polynomial first-jet gate; last original-infinity-seven exact rational iff and polynomial exclusion complete; every leading DG square-prefix quartic row closed; universal degree-six rational gate forces constant boundary; final global-pair compiler under audit; JC(2) OPEN",
   "created_utc": "2026-09-06",
-  "artifact_count": 375,
-  "program_count": 88,
-  "exact_gates_per_complete_normal_or_optimized_run": 4275614,
-  "verification": "All88 programs have independent normal and optimized replays identical to frozen outputs. Three new full audits add2052 gates: the all-m polynomial first-jet gate, complete5+2+1 and both finite-sevenfold7+1 placements. Independent complete-field traces, residue computations, generic-field degree contradictions and sharp rational controls agree. All363 inherited artifact pins remain unchanged.",
+  "artifact_count": 383,
+  "program_count": 90,
+  "exact_gates_per_complete_normal_or_optimized_run": 4275817,
+  "verification": "All90 programs have independent normal and optimized replays identical to frozen outputs. The final infinity-seven classification adds113 gates plus26 independent controls; the universal degree-six constant-boundary rational obstruction adds90 gates plus independent Lagrange inversion and original-coordinate divisions. All375 inherited artifact pins remain unchanged.",
   "program_gates": {
     "weight14": 169,
     "weight14_audit": 93,
@@ -94,7 +94,9 @@
     "seven_one_formal": 93,
     "polynomial_weight_gate": 1947,
     "five_two_one": 59,
-    "seven_one_two_locations": 46
+    "seven_one_two_locations": 46,
+    "seven_one_infinity": 113,
+    "degree_six_constant_d": 90
   },
   "artifacts": [
     {
@@ -283,6 +285,11 @@
       "sha256": "94928ce8d0a1099f604fd57234932a8394053879c5e135c704dfde58b32575a3"
     },
     {
+      "path": "04-computation/planar_jc48_sep08_degree_six_constant_d.py",
+      "bytes": 9164,
+      "sha256": "87d48d9df51f2a4601132e2094d46cccc13d783e16e977a2bbf5ceb350365727"
+    },
+    {
       "path": "04-computation/planar_jc48_sep08_dg_genus.py",
       "bytes": 9148,
       "sha256": "45f25cbe2dea8486f8988136a23d11d386672ac9a6445d9110c929711fd8cff8"
@@ -456,6 +463,11 @@
       "path": "04-computation/planar_jc48_sep08_seven_one_formal.py",
       "bytes": 7342,
       "sha256": "723dcb0a947295ceec0483755fcc8487476139ac69513063dd81319700fa8453"
+    },
+    {
+      "path": "04-computation/planar_jc48_sep08_seven_one_infinity.py",
+      "bytes": 10179,
+      "sha256": "f1db3c2338a9f49703ec250bd8ee52d9de432cde46a149446ddcb0d56c1593cc"
     },
     {
       "path": "04-computation/planar_jc48_sep08_seven_one_two_locations.py",
@@ -1103,6 +1115,21 @@
       "sha256": "0aa3a72c26173b64766551a31ca66eca419eb8ea65bc12cf95386f607e90c2cb"
     },
     {
+      "path": "05-knowledge/results/planar_jc48_sep08_degree_six_constant_d.md",
+      "bytes": 16182,
+      "sha256": "553bbdcce6348c549455a6565526477d43851a45574ca10808cdb344c1040df1"
+    },
+    {
+      "path": "05-knowledge/results/planar_jc48_sep08_degree_six_constant_d.out",
+      "bytes": 455,
+      "sha256": "061bccb24949d5efe2381ba56b9dc8c7c85500d02eb35f5e63975dad3be28863"
+    },
+    {
+      "path": "05-knowledge/results/planar_jc48_sep08_degree_six_constant_d_audit.md",
+      "bytes": 6827,
+      "sha256": "262be8c7375a6b58864ee8f8a6cdc7f2bce84db5773f8745570e85444d95e6aa"
+    },
+    {
       "path": "05-knowledge/results/planar_jc48_sep08_dg_genus.md",
       "bytes": 19981,
       "sha256": "3b3e0aa8b64137f69a30fd5c7a9e9026b9dbbd4fca328e1c04bde4c9b1d77b9b"
@@ -1693,6 +1720,21 @@
       "sha256": "a6fa24d5859acb942d1dda8e257c3ff9ec8bb81d22aba153c879fa325df6c30c"
     },
     {
+      "path": "05-knowledge/results/planar_jc48_sep08_seven_one_infinity.md",
+      "bytes": 15598,
+      "sha256": "f8c0f88c4179967cba886bacce063dc14aaf534e7f97be214322c78adb7d886b"
+    },
+    {
+      "path": "05-knowledge/results/planar_jc48_sep08_seven_one_infinity.out",
+      "bytes": 317,
+      "sha256": "faae700d8a80809f2b6155285b15b17a01fda57a580d814f6db29f1c082e6043"
+    },
+    {
+      "path": "05-knowledge/results/planar_jc48_sep08_seven_one_infinity_audit.md",
+      "bytes": 18012,
+      "sha256": "b256b20e38821adf86bc62af999414f1712d0487865f83bf227a8fd158de8042"
+    },
+    {
       "path": "05-knowledge/results/planar_jc48_sep08_seven_one_two_locations.md",
       "bytes": 15441,
       "sha256": "7d6b5ba978f5e25df55490f1f1e2b2f293ffcdad13fa988517802712759d2c43"
@@ -1991,7 +2033,7 @@
       "sha256": "61db92167187f9a30ed79022a8b1feacc010e79033106e7d7592e3817bd7212d"
     }
   ],
-  "checkpoint_update": "September8: the complete17-row leading differential table has only one remaining boundary placement, N linear with finite simple/original infinity seven. Its full local proof candidate is under independent audit. A separate general degree-six leading-section gate is also under validation. All-m polynomial row divisibility supplies the first-jet gate; full formal exactness still does not algebraize. JC(2) remains open.",
+  "checkpoint_update": "September8: all17 rows in the complete leading differential table are now excluded for polynomial mates in the fixed DG global square-prefix quartic class. The separate global-root-gluing supplier is proved; a complete coverage compiler and full global-pair L4 consequence are being audited. The universal degree-six leading polynomial already forces constant D for rational mates, before any finite jets. An all-m graph-complement version at leading degree4m\u22122 is being developed. JC(2) remains open.",
   "compressed_certificates": [
     {
       "path": "05-knowledge/results/planar_jc48_sep06_boundary_braid_certificate.json.gz",
