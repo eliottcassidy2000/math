@@ -1,0 +1,3 @@
+'SharpProfileAudit.slope_lower' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SharpProfileAudit.slope_upper' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SharpProfileAudit.sharp_scalar_pressure_cost' depends on axioms: [propext, Classical.choice, Quot.sound]

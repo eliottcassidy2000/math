@@ -1,0 +1,38 @@
+{
+  "hostiles": [
+    "pure shear has zero self-stretching",
+    "negative pressure coupling destroys one-sided bound",
+    "unimodular norm growth can fix every LRC phase"
+  ],
+  "integer_matrices": 6561,
+  "matrix_shear_pairs": 275562,
+  "profile_identity_cases": 20,
+  "rational_rotation_cases": 20,
+  "scope": "No PDE solver, no exact optimization of the shear distance, no LRC row exclusion.",
+  "sharp_constant_squared": "7/6",
+  "sharpness_squared_ratios": [
+    [
+      1,
+      "49/60"
+    ],
+    [
+      2,
+      "98/93"
+    ],
+    [
+      10,
+      "2450/2109"
+    ],
+    [
+      100,
+      "245000/210009"
+    ],
+    [
+      1000,
+      "24500000/21000009"
+    ]
+  ],
+  "status": "FINITE-EXACT controls; universal proof is in THM-4457"
+}
+semantic_sha256=ed2daac9250d7ef4067e4f7c276b41767d4dc8c32ad71d428ac100e6f1e33936
+PASS

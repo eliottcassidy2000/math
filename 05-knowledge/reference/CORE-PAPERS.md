@@ -1,6 +1,6 @@
-# Core papers: imported results, consumers, and guardrails
+# Core papers
 
-> **Freshness:** checked **2026-07-21** unless dated later; recheck **PREPRINT/RADAR/SEMINAR ONLY** before priority claims.
+> Checked **2026-07-21** unless dated later. Recheck **PREPRINT/RADAR/SEMINAR ONLY** for priority.
 
 ## Fast frontier snapshot
 
@@ -16,6 +16,8 @@
 - **Higher-order truth:** [Ye--Xu preprint audit](CORE-PAPERS-HEYTING-HIGHER-ORDER-TRUTH-2026-08-29.md).
 - **Planar repair:** [Li's method](CORE-PAPERS-SMATRIX-2026-09-06.md) inspires complete measurements, without importing its theorem.
   [Curve inputs](CORE-PAPERS-JC-FLOW-CURVES-2026-09-06.md) support non-rationality of specified flows.
+- [Euler/NS: scoped results and audit](OPENAI-EULER-AUDIT-2026-09-08.md).
+
 ## Rule 30
 
 - **Sources/status:** [announcement](https://writings.stephenwolfram.com/2019/10/announcing-the-rule-30-prizes/); [active prizes](https://rule30prize.org/) checked 2026-08-15; openness is repo inference.

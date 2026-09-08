@@ -9,6 +9,26 @@ Format per entry:
 - Why it was wrong
 - The correct framing
 
+## 2026-09-08 Euler bridge -- passive amplification and adverse upper bounds
+
+- **REFUTED transfer probe:** an arbitrarily growing rank-one incompressible
+  shear was treated as a candidate self-amplifying Euler trajectory. For
+  `u=a(t)x_2 e1`, the acceleration has curl `-a'(t)e3`; a scalar pressure
+  cannot repair it when `a'!=0`. A constant shear can amplify a passive
+  vector while its own vorticity stays constant. The lost coordinate is the
+  actual curl axis and full background along one solution. The sharp repair
+  is [THM-4457](theorems/THM-4457-euler-sharp-transverse-shear-distance-budget.md).
+- **REFUTED bound substitution:** the all-budget square in
+  [THM-4458](theorems/THM-4458-lrc-one-sided-adverse-leak-budget.md) uses exact
+  adverse cost `B`. Exact cancellation has `B=E` and variance zero, even
+  though the loose upper bound `B<=2E` holds. Squaring `2E-E` is invalid;
+  an upper estimate permits only `(E-b)_+^2/E`, or use a two-sided interval.
+- **Reproduction repair:** optimized Python erased ordinary `assert` checks
+  in the first audit harness. They were replaced with explicit exceptions
+  before promotion, and both runs were repeated with checks active. Source
+  provenance also required the PDF byte hash: the live 57-page download and
+  the web tool's cached 45-page extraction shared one URL.
+
 ## 2026-09-08 planar-jc48 -- a boundary repair can create affine poles
 
 - **REFUTED before promotion:** in the all-finite quartic `(5,3)` scout,

@@ -1,0 +1,15 @@
+EXHAUSTIVE p=2 real signed profiles=54: median=hinge=dual, bounds PASS
+EXHAUSTIVE p=3 real signed profiles=648: median=hinge=dual, bounds PASS
+EXHAUSTIVE p=4 real signed profiles=6318: median=hinge=dual, bounds PASS
+EXHAUSTIVE total=7020
+SHARPNESS theta=0,1/4,1,2,100: B=theta E, exact lower bound PASS
+HOSTILE B=E with nonconstant C=(0,1,0): E(C)=2/9 PASS
+PHYSICAL p=13 all densities indicator-valued and mass=1/7: PASS
+PHYSICAL E(R)=2508/1399489 E(L)=40/8281 E(C)=6018/1399489
+PHYSICAL B*=125/107653 median=0 B*/E(R)=1625/2508 lower=779689/3509918412
+PHYSICAL old norm gate FAILS; adverse budget gate PASSES
+PHYSICAL all w_s=A_s: constant C=1/7, B*=E(R), exact cancellation PASS
+UPPER-BOUND HOSTILE exact cancellation, B*<=2E: square of upper-E INVALID; positive-part gate=0 PASS
+FAVORABLE L=2R: B*=0, E(L)=4E(R), E(C)=9E(R) PASS
+SCOPE auxiliary real profiles only; no owner/word intertwiner or LRC(14) closure
+PASS
