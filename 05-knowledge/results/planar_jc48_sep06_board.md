@@ -712,10 +712,20 @@ quadratic tangent evaluation, and transverse derivatives of component jets.
    The necessary scalar rows at16 are retained without claiming a
    realized permutation passport or Keller map.
 
-The [331-artifact manifest](planar_jc48_sep06_manifest.json) pins75 proof notes,
-76 audit notes,77 sources,77 frozen outputs and26 compressed witnesses.
-The77 programs report2523887 exact gates per complete normal or optimized
-run. Each frozen output agrees in both modes. All323 inherited pins remain
+76. [All-finite5+3 quartic boundary](planar_jc48_sep08_five_three.md)
+   is **PROVED + INDEPENDENTLY AUDITED**: a rational mate forces L
+   constant, and every polynomial mate is excluded. Moving-root and
+   higher inverse residues reduce three coefficient strata to complete
+   genus1,2,3 primitive spaces. The genus3 repair is regular at the
+   ordinary affine points as well as the boundary. All117 gates and
+   independently reconstructed matrices pass. Actual all-p rational
+   constant-L examples preserve the precise boundary; either infinity
+   placement remains separate open work.
+
+The [335-artifact manifest](planar_jc48_sep06_manifest.json) pins76 proof notes,
+77 audit notes,78 sources,78 frozen outputs and26 compressed witnesses.
+The78 programs report2524004 exact gates per complete normal or optimized
+run. Each frozen output agrees in both modes. All331 inherited pins remain
 unchanged. These are scoped proof controls, not a census of Keller maps;
 no external priority claim or full JC(2) result is asserted.
 
@@ -1018,4 +1028,5 @@ two ordinary affine points of that same vertical fibre. No such result
 was promoted. The [mistakes entry](../../01-canon/MISTAKES.md) records
 root's initial acceptance and the producer's correction. The replacement
 uses only powers of u in its denominator and cancels the boundary jet
-with a polynomial/global section combination; its full audit is pending.
+with a polynomial/global section combination; item76 and its independent
+audit now prove full pole-space membership and the complete exclusion.

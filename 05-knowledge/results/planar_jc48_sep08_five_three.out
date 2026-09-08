@@ -1,0 +1,8 @@
+DG all-finite boundary (5,3): complete coefficient and primitive-space controls
+Moving residues, T2/T6/T10, and all three genus cases: PASS
+Genus-three correction preserves ordinary affine points: PASS
+Rational mate forces constant L; polynomial mates of every degree excluded
+Same-partition all-p rational constant-L family: PASS
+Gates: 117
+Semantic SHA256: a1fc2ea5ca623ebc16b2c697ee095b8c019938f119491a01e669a98e99a95bcf
+RESULT: PASS

@@ -116,8 +116,9 @@
   All locations of(4,3,1) and uniform H4(4)(2) equality are now proved.
   The actual mixed-cusp degree floor is16; the entire constant-D
   finite6/infinity2 polynomial class is now excluded with sharp rational
-  exceptions retained. [Manifest](planar_jc48_sep06_manifest.json):331
-  artifacts,77 programs,2523887 exact gates per mode. Full JC(2) remains **OPEN**.
+  exceptions retained. All-finite5+3 now excludes nonconstant-L rational mates and all polynomial
+  mates. [Manifest](planar_jc48_sep06_manifest.json):335
+  artifacts,78 programs,2524004 exact gates per mode. Full JC(2) remains **OPEN**.
 
 - [Previous continuing synthesis](continuing5_20260906_synthesis.md):
   full-model beta simplicity, the original-phase rectangle, the ordered

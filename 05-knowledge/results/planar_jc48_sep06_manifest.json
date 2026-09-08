@@ -1,11 +1,11 @@
 {
   "session": "planar-jacobian-sep06",
-  "status": "PROVED scoped analytic/group results with independent audits: whole one-odd-cusp/two-ordinary-cusp/three-ordinary-cusp (4,6) exclusions; actual mixed(5,3,3) H4 with involutive,single-cycle and(3)(2)/(3)(3)/(4)(2) exclusions and degree floor16; general leading exactness; complete degree<=8 differential and six-line pencil classifications; sharp all-degree genus bound and complete degree4m extremal locus and all-exponent binomial criterion; all-m graph-complement filtration, sharp quadratic genus and extremal rational-mate iff; complete rational-mate criterion for all global DG quadratics; single-point,4+4,4+2+2 and5+1+1+1 DG boundary polynomial exclusions at all locations; all-location4+3+1 polynomial exclusion and nonconstant-L rational exclusion; complete constant-D finite6/infinity2 polynomial exclusion with exact shared rational table; JC(2) OPEN",
+  "status": "PROVED scoped analytic/group results with independent audits: whole one-odd-cusp/two-ordinary-cusp/three-ordinary-cusp (4,6) exclusions; actual mixed(5,3,3) H4 with involutive,single-cycle and(3)(2)/(3)(3)/(4)(2) exclusions and degree floor16; general leading exactness; complete degree<=8 differential and six-line pencil classifications; sharp all-degree genus bound and complete degree4m extremal locus and all-exponent binomial criterion; all-m graph-complement filtration, sharp quadratic genus and extremal rational-mate iff; complete rational-mate criterion for all global DG quadratics; single-point,4+4,4+2+2 and5+1+1+1 DG boundary polynomial exclusions at all locations; all-location4+3+1 polynomial exclusion and nonconstant-L rational exclusion; complete constant-D finite6/infinity2 polynomial exclusion with exact shared rational table; all-finite5+3 nonconstant-L rational and all polynomial mate exclusions; JC(2) OPEN",
   "created_utc": "2026-09-06",
-  "artifact_count": 331,
-  "program_count": 77,
-  "exact_gates_per_complete_normal_or_optimized_run": 2523887,
-  "verification": "All77 programs have normal and optimized replays byte-identical to frozen outputs. Two new independently audited bundles add629 gates: the complete shared constant-D finite6/infinity2 polynomial exclusion and rational-existence table, and the actual marked mixed-cusp mapping-degree floor16. Independent original-source rational positives/pole checks and a complete scalar-count existence enumeration agree. All323 inherited artifact pins are unchanged.",
+  "artifact_count": 335,
+  "program_count": 78,
+  "exact_gates_per_complete_normal_or_optimized_run": 2524004,
+  "verification": "All78 programs have normal and optimized replays identical to frozen outputs. The new independently audited all-finite5+3 bundle adds117 gates, including complete original global coefficient rows, moving-root and higher-inverse residues, all three complete primitive spaces and affine-safe genus3 repair. The independent auditor reconstructed all determinants using separate polynomial long division. All331 inherited artifact pins are unchanged.",
   "program_gates": {
     "weight14": 169,
     "weight14_audit": 93,
@@ -83,7 +83,8 @@
     "four_three_one_infinity": 87,
     "h4_mixed42": 343032,
     "constant_d_shared_six": 68,
-    "h4_degree16": 561
+    "h4_degree16": 561,
+    "five_three": 117
   },
   "artifacts": [
     {
@@ -295,6 +296,11 @@
       "path": "04-computation/planar_jc48_sep08_five_one_one_one.py",
       "bytes": 8859,
       "sha256": "029193e4fc766ebbfc7bf49a8af1bbc928da6cd88ea04f77dd1067d784e9a6fd"
+    },
+    {
+      "path": "04-computation/planar_jc48_sep08_five_three.py",
+      "bytes": 13167,
+      "sha256": "0ceac3b9198d66241883179a4fc0b7fc598f2e838af87561f42d1d966951dba4"
     },
     {
       "path": "04-computation/planar_jc48_sep08_four_four.py",
@@ -1112,6 +1118,21 @@
       "sha256": "80d448976d9674b4cfbe8e898bb10218cd59ff30ca15e725227a714a213d0c78"
     },
     {
+      "path": "05-knowledge/results/planar_jc48_sep08_five_three.md",
+      "bytes": 16614,
+      "sha256": "d5ca6625303a74d7b0d28d180235bc911a7f7b35c69a13700de15cc58d40bb75"
+    },
+    {
+      "path": "05-knowledge/results/planar_jc48_sep08_five_three.out",
+      "bytes": 437,
+      "sha256": "3013be961d8e1c884adb298f858ef01e4d721d8b9521e08ffa4faf2d92e40c9b"
+    },
+    {
+      "path": "05-knowledge/results/planar_jc48_sep08_five_three_audit.md",
+      "bytes": 17999,
+      "sha256": "7da5a050b8c7b2ee61e7171c39d22bd0bf1420cdb6c0654bc2a794a96e04851f"
+    },
+    {
       "path": "05-knowledge/results/planar_jc48_sep08_four_four.md",
       "bytes": 12935,
       "sha256": "849283a4a6f568ab8ed5cf47a0d0e0ee7b4b44c3d8d1b0a42a3ea6f9aa9ad072"
@@ -1760,7 +1781,7 @@
       "sha256": "61db92167187f9a30ed79022a8b1feacc010e79033106e7d7592e3817bd7212d"
     }
   ],
-  "checkpoint_update": "September8: the marked mixed-cusp covering has actual mapping degree at least16. The proof uses complete moved-type closure through six, actual complementary supports and two retained-sheet deficits, not scalar feasibility alone. The M-shared constant-D finite6/infinity2 theorem and the older M-unit theorem together close the entire constant-D polynomial class for every finite position. Nonconstant-L rational submersions are explicitly retained. All-finite(5,3) and(6,1,1) candidates now use higher inverse residues and complete primitive spaces; final audits are pending. A rejected genus3 principal-part correction created poles at ordinary affine points and is logged in MISTAKES; a replacement using only the constant-fibre denominator is being audited. JC(2) remains open.",
+  "checkpoint_update": "September8: all-finite(5,3) rational mates force L constant; polynomial mates of every degree are excluded. Constant-L rational examples exist for every finite location. Remaining infinity placements are separate open work. The rejected genus3 repair was never promoted and its affine-safe replacement is now independently audited. Root investigates double-infinity(3,3,2); certificate investigates all-finite(6,1,1). JC(2) remains open.",
   "compressed_certificates": [
     {
       "path": "05-knowledge/results/planar_jc48_sep06_boundary_braid_certificate.json.gz",
