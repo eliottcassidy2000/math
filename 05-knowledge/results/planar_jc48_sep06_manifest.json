@@ -1,11 +1,11 @@
 {
   "session": "planar-jacobian-sep06",
-  "status": "PROVED scoped analytic/group results with independent audits: whole one-odd-cusp/two-ordinary-cusp/three-ordinary-cusp (4,6) exclusions; actual mixed(5,3,3) H4 with involutive,single-cycle and(3)(2)/(3)(3)/(4)(2) exclusions and degree floor16; general leading exactness; complete degree<=8 differential and six-line pencil classifications; sharp all-degree genus bound and complete degree4m extremal locus and all-exponent binomial criterion; all-m graph-complement filtration, sharp quadratic genus and extremal rational-mate iff; complete rational-mate criterion for all global DG quadratics; single-point,4+4,4+2+2 and5+1+1+1 DG boundary polynomial exclusions at all locations; all-location4+3+1 polynomial exclusion and nonconstant-L rational exclusion; complete constant-D finite6/infinity2 polynomial exclusion with exact shared rational table; all-finite5+3 nonconstant-L rational and all polynomial mate exclusions; JC(2) OPEN",
+  "status": "PROVED scoped analytic/group results with independent audits: whole one-odd-cusp/two-ordinary-cusp/three-ordinary-cusp (4,6) exclusions; actual mixed(5,3,3) H4 with involutive,single-cycle and(3)(2)/(3)(3)/(4)(2) exclusions and degree floor16; general leading exactness; complete degree<=8 differential and six-line pencil classifications; sharp all-degree genus bound and complete degree4m extremal locus and all-exponent binomial criterion; all-m graph-complement filtration, sharp quadratic genus and extremal rational-mate iff; complete rational-mate criterion for all global DG quadratics; single-point,4+4,4+2+2 and5+1+1+1 DG boundary polynomial exclusions at all locations; all-location4+3+1 polynomial exclusion and nonconstant-L rational exclusion; complete constant-D finite6/infinity2 polynomial exclusion with exact shared rational table; all-finite5+3 nonconstant-L rational and all polynomial mate exclusions; complete6+1+1,3+3+2 and4+2+1+1 all-location polynomial exclusions with exact rational boundaries; JC(2) OPEN",
   "created_utc": "2026-09-06",
-  "artifact_count": 335,
-  "program_count": 78,
-  "exact_gates_per_complete_normal_or_optimized_run": 2524004,
-  "verification": "All78 programs have normal and optimized replays identical to frozen outputs. The new independently audited all-finite5+3 bundle adds117 gates, including complete original global coefficient rows, moving-root and higher-inverse residues, all three complete primitive spaces and affine-safe genus3 repair. The independent auditor reconstructed all determinants using separate polynomial long division. All331 inherited artifact pins are unchanged.",
+  "artifact_count": 347,
+  "program_count": 81,
+  "exact_gates_per_complete_normal_or_optimized_run": 2524164,
+  "verification": "All81 programs have normal and optimized replays identical to frozen outputs. Three independently audited bundles add160 gates: complete all-location6+1+1,3+3+2 and4+2+1+1 polynomial exclusions. Independent higher-residue/Bezout reconstruction, actual normalized infinity charts and complete genus-one/two primitive spaces agree. All335 inherited artifact pins are unchanged.",
   "program_gates": {
     "weight14": 169,
     "weight14_audit": 93,
@@ -84,7 +84,10 @@
     "h4_mixed42": 343032,
     "constant_d_shared_six": 68,
     "h4_degree16": 561,
-    "five_three": 117
+    "five_three": 117,
+    "six_one_one": 63,
+    "three_three_two": 56,
+    "four_two_one_one": 41
   },
   "artifacts": [
     {
@@ -323,6 +326,11 @@
       "sha256": "b4bf39bad5a819d2435379795d4bee97fbbd6c79e271b507192bd4d3217df77c"
     },
     {
+      "path": "04-computation/planar_jc48_sep08_four_two_one_one.py",
+      "bytes": 4581,
+      "sha256": "be559b1eb0b15a8a55179d72e9defb01fb62cec8d4341f2b1a9c0f6ba1318805"
+    },
+    {
       "path": "04-computation/planar_jc48_sep08_genus_capacity.py",
       "bytes": 4102,
       "sha256": "9def2dae7f430cb5b7611124eec7422dda7d2861c566f922401a8cb542f21a1f"
@@ -418,6 +426,11 @@
       "sha256": "695b0da5d8fb5dec95b85d0d32086432ac6aaa8cb1fd8bc00fa2eef27f4da2ad"
     },
     {
+      "path": "04-computation/planar_jc48_sep08_six_one_one.py",
+      "bytes": 12727,
+      "sha256": "8448a49b7a52a2b3a35c13c8666425144781c76ed2343eccd21add012b96c196"
+    },
+    {
       "path": "04-computation/planar_jc48_sep08_three_cusp_boundary.py",
       "bytes": 8722,
       "sha256": "a244aa123e124afd9ff33dc4b7f177cf629bc5d588fae635c9fa66b2ab31b3ee"
@@ -446,6 +459,11 @@
       "path": "04-computation/planar_jc48_sep08_three_cusp_passport.py",
       "bytes": 7333,
       "sha256": "a77300a0dc7b9f376c97dff000b4b3ae0441429da6dd379430fe4c5778837049"
+    },
+    {
+      "path": "04-computation/planar_jc48_sep08_three_three_two.py",
+      "bytes": 5623,
+      "sha256": "eabf9adaeeeefe68c543fab37963af1c14d75d9e39f3ee34b964963617de3ea0"
     },
     {
       "path": "04-computation/planar_jc48_sep08_two_cusp_braid.py",
@@ -1193,6 +1211,21 @@
       "sha256": "59cdecaba6f95dec1c479178cd767adcb8b93a4611aac6f632a69b4734032268"
     },
     {
+      "path": "05-knowledge/results/planar_jc48_sep08_four_two_one_one.md",
+      "bytes": 12438,
+      "sha256": "af5e784eb8bee2c473f6a4bece75555b2bab3dab7519b4f0b5a793d00b28fb3f"
+    },
+    {
+      "path": "05-knowledge/results/planar_jc48_sep08_four_two_one_one.out",
+      "bytes": 283,
+      "sha256": "a6a4dcf34b277956677a86916a1d224becff92b514fc7837ca1ca0f896b95fc1"
+    },
+    {
+      "path": "05-knowledge/results/planar_jc48_sep08_four_two_one_one_audit.md",
+      "bytes": 16433,
+      "sha256": "8939f27ee3a3728fb5d499688d29bdf94e800e6fbda93e137c21c0cdecc4dbe3"
+    },
+    {
       "path": "05-knowledge/results/planar_jc48_sep08_genus_capacity.md",
       "bytes": 9678,
       "sha256": "24c6480f166ac475abc09a7c4423cd3733d88a65e2832810e823a5d5874bb769"
@@ -1543,6 +1576,21 @@
       "sha256": "92932658bf46f1fa0d441aa9af66664d12cd290d6449e2192b8ef771bfe0a195"
     },
     {
+      "path": "05-knowledge/results/planar_jc48_sep08_six_one_one.md",
+      "bytes": 17945,
+      "sha256": "3140b1113dec6921926521201a1724851c7bf4e60a4d3f15ea3788dd9e3d927f"
+    },
+    {
+      "path": "05-knowledge/results/planar_jc48_sep08_six_one_one.out",
+      "bytes": 772,
+      "sha256": "ecd81171fe3f0dbcb353eecb240b877a0e00e6488d279971dd63efaafe1a907d"
+    },
+    {
+      "path": "05-knowledge/results/planar_jc48_sep08_six_one_one_audit.md",
+      "bytes": 13796,
+      "sha256": "3891b68a9ce636485c4205af4cfbe2dd3e3a95b11d1072b031073e10dcd454c7"
+    },
+    {
       "path": "05-knowledge/results/planar_jc48_sep08_three_cusp_boundary.md",
       "bytes": 15910,
       "sha256": "001ec168142787f21058aac4544054fdd817b9bfc02ac90ce50d9d488e0cdb70"
@@ -1663,6 +1711,21 @@
       "sha256": "269dccb98656facff8e17fb37c301dc2142c993e689fbfa16304bbbf97058845"
     },
     {
+      "path": "05-knowledge/results/planar_jc48_sep08_three_three_two.md",
+      "bytes": 13077,
+      "sha256": "c67b55e167a965e9859d0b02b7ddb067a8f3e2a75dff0c474aad7f961af9d3ed"
+    },
+    {
+      "path": "05-knowledge/results/planar_jc48_sep08_three_three_two.out",
+      "bytes": 268,
+      "sha256": "37f4bd8ad522d01ccaf93a20531025e0a7b3e3645b1e91286eb6503bc458c03e"
+    },
+    {
+      "path": "05-knowledge/results/planar_jc48_sep08_three_three_two_audit.md",
+      "bytes": 14354,
+      "sha256": "1b6d034f0ab7f08299574a003bc9d7f131974434071518aa98cf9edde1a99b17"
+    },
+    {
       "path": "05-knowledge/results/planar_jc48_sep08_two_cusp_braid.md",
       "bytes": 15909,
       "sha256": "461e0127e60e2547e2d330b1ddbe2d4f2d0147aad2eed29d8289e7293f7f2575"
@@ -1781,7 +1844,7 @@
       "sha256": "61db92167187f9a30ed79022a8b1feacc010e79033106e7d7592e3817bd7212d"
     }
   ],
-  "checkpoint_update": "September8: all-finite(5,3) rational mates force L constant; polynomial mates of every degree are excluded. Constant-L rational examples exist for every finite location. Remaining infinity placements are separate open work. The rejected genus3 repair was never promoted and its affine-safe replacement is now independently audited. Root investigates double-infinity(3,3,2); certificate investigates all-finite(6,1,1). JC(2) remains open.",
+  "checkpoint_update": "September8: three more complete binary boundary types are closed for polynomial mates. All-finite6+1+1 has a rational nonconstant-L exclusion by exact trace/higher-residue coprimality; its other placements fail leading exactness. Double-infinity3+3+2 and4+2+1+1 have complete elliptic/genus-two primitive-space obstructions; other placements fail the finite-double gate. Rational constant-L examples in the exact classes are retained. Final audit of5+3 infinity placements is underway and retains two nonconstant-L rational hostiles. After that promotion the complete leading table will leave only binary7+1,6+2 and5+2+1. JC(2) remains open.",
   "compressed_certificates": [
     {
       "path": "05-knowledge/results/planar_jc48_sep06_boundary_braid_certificate.json.gz",

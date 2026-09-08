@@ -117,8 +117,10 @@
   The actual mixed-cusp degree floor is16; the entire constant-D
   finite6/infinity2 polynomial class is now excluded with sharp rational
   exceptions retained. All-finite5+3 now excludes nonconstant-L rational mates and all polynomial
-  mates. [Manifest](planar_jc48_sep06_manifest.json):335
-  artifacts,78 programs,2524004 exact gates per mode. Full JC(2) remains **OPEN**.
+  mates. Every6+1+1,3+3+2 and4+2+1+1 boundary placement is now excluded
+  for polynomial mates with exact rational exceptions retained.
+  [Manifest](planar_jc48_sep06_manifest.json):347
+  artifacts,81 programs,2524164 exact gates per mode. Full JC(2) remains **OPEN**.
 
 - [Previous continuing synthesis](continuing5_20260906_synthesis.md):
   full-model beta simplicity, the original-phase rectangle, the ordered

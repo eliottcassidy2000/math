@@ -1,0 +1,10 @@
+six_one_one: PASS
+scope: all finite sixfold positions; rational mate forces L constant; polynomial mate impossible
+universal inverse rows: T1,T2,T3,T5,T7; all coefficients retained before specialization
+formal path: independent recursive inverse and full multinomial residue formula
+normalization: homogeneous coefficient ratios only; c, kappa, c-12p branches explicit
+final reduced factors: [('T5', '-d**2'), ('T7', 'd**2')]
+primitive Fraction Euclidean sequence: [[225, -2880, -2208, 3072, 256], [-255, 3252, 2656, -4320, 192], [1695, -21648, -17248, 26496], [305385, -4290180, 1875232], [-27815, 379612], [1]]
+hostile: actual global all-p constant-L family has a rational mate
+gates: 63
+semantic sha256: 8faee9ffd19ef9d77353e8d6f3156d7ebd2d1831ea948eea08bef2c7e397b7a9

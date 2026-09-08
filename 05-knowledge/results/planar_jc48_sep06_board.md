@@ -722,10 +722,33 @@ quadratic tangent evaluation, and transverse derivatives of component jets.
    constant-L examples preserve the precise boundary; either infinity
    placement remains separate open work.
 
-The [335-artifact manifest](planar_jc48_sep06_manifest.json) pins76 proof notes,
-77 audit notes,78 sources,78 frozen outputs and26 compressed witnesses.
-The78 programs report2524004 exact gates per complete normal or optimized
-run. Each frozen output agrees in both modes. All331 inherited pins remain
+77. [Every6+1+1 boundary placement](planar_jc48_sep08_six_one_one.md)
+   is **PROVED + INDEPENDENTLY AUDITED** for polynomial exclusion.
+   In the all-finite class, rational mates force L constant through
+   a moving-centre logarithm, an actual quadratic trace, higher
+   inverse residues and an explicit Euclidean contradiction. Both
+   infinity placements fail leading exactness. All63 gates and an
+   independent81-check formal-residue/Bezout reconstruction pass;
+   all-p rational constant-L examples retain the precise boundary.
+78. [Every3+3+2 boundary placement](planar_jc48_sep08_three_three_two.md)
+   is **PROVED + INDEPENDENTLY AUDITED**. Only the double-infinity
+   location can have rational mates; one active triple forces
+   constant D, genus one and a complete two-dimensional primitive
+   space. The formal generic bracket excludes nonconstant L.
+   All56 gates pass, including a special level where the bracket
+   becomes constant and cannot replace the generic fibre.
+79. [Every4+2+1+1 boundary placement](planar_jc48_sep08_four_two_one_one.md)
+   is **PROVED + INDEPENDENTLY AUDITED**. The leading midpoint
+   condition leaves a full family with genus two in both distinct
+   infinity regimes. Its complete basis1,1/u,H/u has two successive
+   bracket obstructions. All41 gates and independent original-chart
+   identities pass. Every polynomial mate is excluded; rational
+   constant-L examples realize the remaining position conditions.
+
+The [347-artifact manifest](planar_jc48_sep06_manifest.json) pins79 proof notes,
+80 audit notes,81 sources,81 frozen outputs and26 compressed witnesses.
+The81 programs report2524164 exact gates per complete normal or optimized
+run. Each frozen output agrees in both modes. All335 inherited pins remain
 unchanged. These are scoped proof controls, not a census of Keller maps;
 no external priority claim or full JC(2) result is asserted.
 
@@ -1030,3 +1053,16 @@ root's initial acceptance and the producer's correction. The replacement
 uses only powers of u in its denominator and cancels the boundary jet
 with a polynomial/global section combination; item76 and its independent
 audit now prove full pole-space membership and the complete exclusion.
+
+
+## September8 complete remaining DG quartic entry
+
+Items77–79 close three full binary boundary types while retaining their
+actual rational exceptions. The final audit of the two5+3 infinity
+placements is underway; those placements have nonconstant-L rational
+mates, so only the polynomial conclusion can be combined across all
+locations. Once accepted, the complete leading differential table will
+leave only binary7+1,6+2 and5+2+1. The constant-D6+2 class is already
+closed by item74 and its M-unit companion; nonconstant D is separate.
+The current portfolio has5+2+1 residue/primitive geometry, the full
+remaining6+2 coefficient class, and an orthogonal H4 mixed5,2 group lane.
