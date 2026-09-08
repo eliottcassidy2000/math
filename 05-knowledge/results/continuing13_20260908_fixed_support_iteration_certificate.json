@@ -1,0 +1,132 @@
+{
+  "coefficient_field": "Q[c]/(c^4+3c^2+3), irreducible by Eisenstein at 3",
+  "critical_orbit": [
+    "0",
+    "c",
+    "zeta*c",
+    "zeta*c"
+  ],
+  "examples": [
+    {
+      "Q_exact_coefficient_sha256": "d1ced51a80b647b6466242de46ae0749812a0a0446b5f2139ad4c5eb4dabea76",
+      "ambient_arms": 5,
+      "ambient_arms_by_fixed_support": [
+        1,
+        3,
+        1
+      ],
+      "annihilator_degree": 6,
+      "generic_affine_punctures": 14,
+      "intrinsic_pair_degree": 18,
+      "iterate_degree": 9,
+      "k": 2,
+      "lambda_one_admissible_all_Ek": true,
+      "q": 4,
+      "source_t_degree": 9,
+      "unit_arms": 3,
+      "zero_fibre_remaining_degree": 6
+    },
+    {
+      "Q_exact_coefficient_sha256": "59f8e18358d2505081dac1af96654a3c9304b92fc053ee85f133519bee9ce797",
+      "ambient_arms": 14,
+      "ambient_arms_by_fixed_support": [
+        4,
+        9,
+        1
+      ],
+      "annihilator_degree": 6,
+      "generic_affine_punctures": 41,
+      "intrinsic_pair_degree": 54,
+      "iterate_degree": 27,
+      "k": 3,
+      "lambda_one_admissible_all_Ek": true,
+      "q": 13,
+      "source_t_degree": 27,
+      "unit_arms": 3,
+      "zero_fibre_remaining_degree": 15
+    },
+    {
+      "Q_exact_coefficient_sha256": "f87b243c96123fc111c3e3cf6bde612ac3d8cad546d3cdabca9bde209995f0b4",
+      "ambient_arms": 41,
+      "ambient_arms_by_fixed_support": [
+        13,
+        27,
+        1
+      ],
+      "annihilator_degree": 6,
+      "generic_affine_punctures": 122,
+      "intrinsic_pair_degree": 162,
+      "iterate_degree": 81,
+      "k": 4,
+      "lambda_one_admissible_all_Ek": true,
+      "q": 40,
+      "source_t_degree": 81,
+      "unit_arms": 3,
+      "zero_fibre_remaining_degree": 42
+    }
+  ],
+  "fixed_source_parameters": {
+    "eta": "either root of eta^2+zeta*c*eta-zeta^2=0",
+    "h": "-eta/2",
+    "lambda": 1
+  },
+  "fixed_support": [
+    "0",
+    "(1-zeta)*c",
+    "eta-zeta*c"
+  ],
+  "gate_counts": {
+    "Eu target not a critical value": 3,
+    "all chosen Eu points admissible": 3,
+    "all fixed points simple": 3,
+    "annihilator support squarefree cubic": 3,
+    "chosen Eu level has exact target": 3,
+    "coefficient field irreducible": 1,
+    "complete critical orbit": 1,
+    "critical nonzero-value group exact": 3,
+    "critical return destroys squarefreeness": 1,
+    "critical zero-value group exact": 3,
+    "every preimage level simple": 5,
+    "exact critical group sizes": 3,
+    "exact squared derivative identity": 3,
+    "fixed scalar-annihilator degree": 3,
+    "fixed-h admissibility at all small-k levels": 3,
+    "fixed-h derivative square root value": 3,
+    "fixed-h exact quadratic": 3,
+    "fixed-h iterate value": 3,
+    "fixed-h lambda one admissible": 3,
+    "fixed-h three main supports distinct": 3,
+    "fixed-point multiplicity exclusion": 1,
+    "half derivative degree": 3,
+    "k-one fails prescribed zero normalization": 1,
+    "lambda one admissible at every small-k Eu choice": 3,
+    "monic iterate degree": 5,
+    "nonzero critical orbit parameters": 1,
+    "normalized primitive degree": 3,
+    "other fixed points avoid zero and c": 3,
+    "pairwise disjoint preimage levels": 10,
+    "prescribed square relation": 1,
+    "primitive cube root relation": 1,
+    "remaining zero-fibre degree": 3,
+    "remaining zero-fibre roots simple": 3,
+    "required source zero normalization": 3,
+    "simple zero derivative coefficient": 3,
+    "squarefree derivative square root": 3,
+    "target support separation identity": 1,
+    "three target supports distinct": 1,
+    "top critical fibre exact cubic power": 3,
+    "two other fixed points exist": 3,
+    "zero critical group exact cubic multiplicity": 3,
+    "zero-parameter first repeated-root witness": 1
+  },
+  "moving_source_variant_support": [
+    "0",
+    "(1-zeta)*c",
+    "-zeta*c"
+  ],
+  "normalization": "f_k=(sqrt(3))^k product_{j=0}^{k-1}P^j; square tested without adjoining sqrt(3)",
+  "scope": "All-k assertions are proved in the report; small-k controls are k=2,3,4. No polynomial mate or JC assertion.",
+  "status": "FINITE-EXACT controls for analytic fixed-support iteration corollary",
+  "total_gates": 115,
+  "zeta": "c^2+1"
+}

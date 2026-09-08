@@ -1,4 +1,4 @@
-# Continuing synthesis: fixed unit order three, quintic mutations and local repair cores
+# Continuing synthesis: fixed units, iterated fibres and local repair cores
 
 **CURRENT CHECKPOINT, 2026-09-08. Status: PROVED scoped results,
 FINITE-EXACT controls and independent audits.** A complete univariate
@@ -7,6 +7,8 @@ order three. A polynomial mutation produces a genuine global quintic
 with moving affine-fibre moduli and a complete target-collision law.
 Two more LRC clocks close. Original-cell separators localize exact grid
 repair, including connected instances with unbounded global concurrency.
+A fixed critical orbit then keeps three unit supports and every source
+parameter unchanged while the hidden component multiplicities grow.
 General LRC(14), planar JC and extremal no-three-in-line remain **OPEN**.
 No external priority claim is made.
 
@@ -224,7 +226,68 @@ The first fourteen lexicographic dimension-six boards suffice to discover
 it; no full dimension-six census is claimed. No random-board frequency,
 mean improvement or extremal bound follows from these finite controls.
 
-## 6. What the new connections require next
+## 6. A finite critical orbit fixes the unit while multiplicities grow
+
+The [iteration theorem](continuing13_20260908_fixed_support_iteration.md)
+and its [independent referee](continuing13_20260908_fixed_support_iteration_audit.md)
+turn target collisions into an unbounded family with FIXED source parameters
+and the SAME complete pointed unit module. Choose
+
+    zeta^2+zeta+1=0, alpha^2=zeta-1, P(z)=z^3+alpha.
+
+The critical orbit is 0 -> alpha -> zeta*alpha -> zeta*alpha. Zero never
+returns to zero. Let eta be either root of
+
+    z^2+zeta*alpha*z-zeta^2=0,
+
+so eta is a fixed point distinct from 0, alpha and zeta*alpha. Fix
+h=-eta/2, lambda=1 and sigma^2=3 once. For every integer k>=2 put
+
+    Q_k=P^k-zeta*alpha,
+    f_k=sigma^k product_(j=0)^(k-1) P^j,
+    q_k=(3^k-1)/2.
+
+Here powers of P mean composition. Disjoint simple preimage levels of
+zero prove that f_k is squarefree, while the chain rule gives Q'_k=f_k^2.
+At the fixed source point, f_k(eta)=(sigma*eta)^k is nonzero and never -1:
+eta is an algebraic integer, whereas a hypothetical equality would force
+eta^(2k)=1/3^k, a rational noninteger algebraic integer. Thus the global
+mutation hypotheses hold for ALL k with the same h and lambda.
+
+Apply Section 3 with T_k=A_k+Q_k, A_k=u f_k(z). Its complete support is
+the same set {0,a,b}, where a=(1-zeta)*alpha and b=eta-zeta*alpha. The
+ambient arm counts at these three supports are exactly
+
+    ((3^(k-1)-1)/2, 3^(k-1), 1).
+
+Each special fibre also has one regular component. The unit sees just
+one pure double-pole arm at each support, with exact scalar annihilator
+[tau(tau-a)(tau-b)]^2. Rescaling its three nonzero coefficient vectors
+identifies the FULL pointed unit-generated Weyl modules, with no target
+coordinate change. Their ambient embeddings and multiplicities differ.
+
+| k | Original t-degree | Ambient arms | Intrinsic rational-pair degree | Ordinary-fibre punctures |
+|---|---:|---:|---:|---:|
+| 2 | 9 | 5 | 18 | 14 |
+| 3 | 27 | 14 | 54 | 41 |
+| 4 | 81 | 41 | 162 | 122 |
+| all k>=2 | 3^k | (3^k+1)/2 | 2*3^k | (3^(k+1)+1)/2 |
+
+For each fixed k, the punctured ordinary fibres are non-isotrivial as
+the target varies; their projective completions remain rational. Every
+rational mate has the same embedded pair field. The finite controls at
+k=2,3,4 check 115 always-active exact gates; the all-k claim has a separate
+analytic proof and independent audit.
+
+This supplies a precise dynamics-to-response connection: compositional
+iteration preserves the critical-value set and multiplies its preimage
+levels; square roots of derivatives feed the global mutation theorem.
+The missing sidecar is component multiplicity over each retained value.
+The cheap hostile P=z^3 has the same small-support appearance, but its
+second derivative square-root product is z^4, which is not squarefree.
+No-return of the critical point, not finite support alone, pays the map.
+
+## 7. What the new connections require next
 
 The univariate family gives a stronger hostile to recovering ambient
 geometry from the unit. The polynomial mutation restores target values,
@@ -239,3 +302,11 @@ when comparing rational pairs; search outside the closed univariate and
 quadratic classes for unit order one; use entire native zero cuts before
 lifting a clock's missing absolute depths; and measure exceptional cells
 inside inseparable incidence bags before making probabilistic claims.
+
+The completed packet contains 37 frozen artifacts, nine exact engines
+and eight certificates. Normal and optimized runs reproduce identical
+raw output across 613,410 always-active gates per mode. All 958 inherited
+artifact pins and all 32 artifacts of the first continuing13 checkpoint
+remain unchanged. The five additional iteration artifacts match their
+independently accepted pins. These finite validations supplement the
+scoped analytic proofs; they do not close the general conjectures.

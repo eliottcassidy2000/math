@@ -11,6 +11,14 @@ Format per entry:
 
 ## 2026-09-08 continuing13 -- actual source jets and separator states
 
+- **REFUTED support repair:** adding the entire target support set to the
+  pointed unit still does not bound hidden component multiplicities or
+  intrinsic rational-pair degree. The [fixed-parameter iteration family](../05-knowledge/results/continuing13_20260908_fixed_support_iteration.md)
+  has three fixed unit supports and an unchanged pointed Weyl module, with
+  ambient arms (3^k+1)/2 and pair degree 2*3^k. The missing coordinate is
+  multiplicity over each value. The tempting returning orbit P=z^3 already
+  makes the k=2 derivative square-root product z^4 nonsquarefree; finite
+  critical-value support alone does not meet the submersion hypotheses.
 - **REFUTED submersion shortcut:** the rational identity for
   T=lambda*A+Q, H=1/(2A²) survives lambda=-f(-2h), but the whole original
   Eu line is critical. The [mutation theorem](../05-knowledge/results/continuing13_20260908_quintic_mutation.md)

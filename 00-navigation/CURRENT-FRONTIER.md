@@ -405,7 +405,7 @@ lift/phase clocks.
   [DG quartic closure](../05-knowledge/results/planar_jc48_sep08_quartic_closure.md):
   global constant-Jacobian pairs on W2 avoid t-degree<=4 in every output direction.
   [Units and quintics](../05-knowledge/results/continuing13_20260908_synthesis.md):
-  order3 hides unbounded arms; quintic affine fibres vary. JC **OPEN**.
+  fixed units/supports hide unbounded arms; quintic affine fibres vary. JC **OPEN**.
   THM-4397/4401 give Long's gauge and punctured planar shadows.
   Exceptional quartic: THM-3703/3737/4034 give grammar/image/conductor;
   THM-4381 gives86 nodes, one plane triple, `S^sn=S+K r`. THM-4404/4411/4412

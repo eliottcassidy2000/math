@@ -1,0 +1,7 @@
+Fixed-critical-orbit iteration: PASS
+Exact coefficient field: Q[c]/(c^4+3c^2+3)
+Small-k controls: k=2,3,4; pair degrees18,54,162; ambient arms5,14,41
+Fixed h=-eta/2, lambda=1; fixed unit supports: 0, (1-zeta)c, eta-zeta*c
+Three pure order-two arms; simple/disjoint levels, critical groups, and hostile controls: PASS
+Always-active exact gates: 115
+Certificate: continuing13_20260908_fixed_support_iteration_certificate.json

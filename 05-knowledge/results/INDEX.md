@@ -8,6 +8,8 @@
   and a complete target-collision unit law. Native zero cuts leave7,618
   connected-complement clocks, maximum11,935. Cell separators localize
   exact grid-repair branching; incidence cacti need no exceptional branch.
+  Cubic iteration fixes three unit supports and all source parameters while
+  hidden component multiplicities and intrinsic pair degrees grow without bound.
   [Manifest](continuing13_20260908_manifest.json) pins proofs and independent replays.
   General LRC14, planar JC and extremal no-three-in-line remain OPEN.
 

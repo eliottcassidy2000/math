@@ -1,13 +1,22 @@
 {
   "schema": 1,
-  "created_utc": "2026-09-08T22:51:02.305795+00:00",
+  "created_utc": "2026-09-08T23:05:10.606629+00:00",
   "baseline_commit": "bcfbfa23d9b75ad94ebb96bda952dedb1f3a97ce",
+  "proof_checkpoints": [
+    "6a3ae53fd52a8d19c7be83c49c146dca91ed0ec4"
+  ],
   "hash_basis": "Raw LF bytes. Maintained synthesis, navigation and manifest excluded. Each report acceptance transition is stated separately.",
-  "scope": "The entire fixed-W2 univariate ansatz A=u*f(z) has the same pointed order-three two-arm unit module for all admissible degreesq>=2, with q full original-source torsion arms and intrinsic rational pair degree2q+1. A polynomial mutation T=lambda*A+Q, Qprime=f^2, produces globally submersive genuine quintics and higher odd degrees, with non-isotrivial PUNCTURED rational source fibres, exact target-collision arm law, pure local pole order2, and pair degree2(2q+1). Completed genus remains0. Complete native zero cuts close connected-complement LRC clocks9240 and11088, leaving7618 clocks. Exact original-cell separator messages reduce grid repair to local exceptional branching and weighted integral b-matching, with a proved cycle-excess/cactus corollary and actual geometric hostiles. General conjectures remain OPEN; no external priority claim.",
-  "artifact_count": 32,
-  "program_count": 8,
-  "exact_gates_per_mode": 613295,
+  "scope": "The entire fixed-W2 univariate ansatz A=u*f(z) has the same pointed order-three two-arm unit module for all admissible degreesq>=2, with q full original-source torsion arms and intrinsic rational pair degree2q+1. A polynomial mutation T=lambda*A+Q, Qprime=f^2, produces globally submersive genuine quintics and higher odd degrees, with non-isotrivial PUNCTURED rational source fibres, exact target-collision arm law, pure local pole order2, and pair degree2(2q+1). Completed genus remains0. Complete native zero cuts close connected-complement LRC clocks9240 and11088, leaving7618 clocks. Exact original-cell separator messages reduce grid repair to local exceptional branching and weighted integral b-matching, with a proved cycle-excess/cactus corollary and actual geometric hostiles. General conjectures remain OPEN; no external priority claim. Cubic compositional iteration gives an independently audited all-k sequence with fixed source h, lambda=1, the same three target supports and complete pointed unit module, while ambient arm multiplicities, intrinsic rational-pair degree and ordinary-fibre puncture counts grow without bound. Exact k=2,3,4 controls are not used as a substitute for the all-k proof.",
+  "artifact_count": 37,
+  "program_count": 9,
+  "exact_gates_per_mode": 613410,
   "validation": {
+    "continuing13_20260908_fixed_support_iteration": {
+      "gates": 115,
+      "normal_optimized_raw_LF": true,
+      "output_sha256": "345637678c2eec05006cd3bbda64bee6d9b0848e4c999dfc1f84731f5f682891",
+      "source_sha256": "e65e4ae328c4720510662d43e8dad2764521489fccbd858489a0bbbb2c0e0f7d"
+    },
     "continuing13_20260908_lrc_independent_audit": {
       "gates": 249174,
       "normal_optimized_raw_LF": true,
@@ -59,7 +68,7 @@
   },
   "normal_optimized_raw_stdout_equal": true,
   "regenerated_certificates_raw_unchanged": true,
-  "certificate_count": 7,
+  "certificate_count": 8,
   "prior_artifacts_verified": 958,
   "prior_artifacts_unchanged_since_baseline": 958,
   "primary_acceptance_transitions": {
@@ -97,6 +106,11 @@
   "incoming_commits": [],
   "incoming_review": "No incoming commits at startup and natural research checkpoint; final fetch verified during closeout.",
   "artifacts": [
+    {
+      "path": "04-computation/continuing13_20260908_fixed_support_iteration.py",
+      "bytes": 7686,
+      "sha256": "e65e4ae328c4720510662d43e8dad2764521489fccbd858489a0bbbb2c0e0f7d"
+    },
     {
       "path": "04-computation/continuing13_20260908_lrc_independent_audit.cpp",
       "bytes": 13212,
@@ -141,6 +155,26 @@
       "path": "04-computation/continuing13_20260908_univariate_fixed_unit.py",
       "bytes": 7107,
       "sha256": "8f0752834accd88b91fde2348f627cd6e95f97f59c3dead20e55181c042d60ef"
+    },
+    {
+      "path": "05-knowledge/results/continuing13_20260908_fixed_support_iteration.md",
+      "bytes": 13275,
+      "sha256": "1732a019e326d16b03dcde64f424195eed4afebe6fc282bcd3edc17b73243413"
+    },
+    {
+      "path": "05-knowledge/results/continuing13_20260908_fixed_support_iteration.out",
+      "bytes": 424,
+      "sha256": "345637678c2eec05006cd3bbda64bee6d9b0848e4c999dfc1f84731f5f682891"
+    },
+    {
+      "path": "05-knowledge/results/continuing13_20260908_fixed_support_iteration_audit.md",
+      "bytes": 14718,
+      "sha256": "fc2ad800076bae34f616dc33b544ae512129e5b34d111abf47cf1172304b7b2e"
+    },
+    {
+      "path": "05-knowledge/results/continuing13_20260908_fixed_support_iteration_certificate.json",
+      "bytes": 4183,
+      "sha256": "dd3b7b9141f7b9dc971ea09fe1496b43be74485e721072d286773dcee90f9d63"
     },
     {
       "path": "05-knowledge/results/continuing13_20260908_lrc_independent_audit.md",
