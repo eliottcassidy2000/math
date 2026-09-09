@@ -1,0 +1,494 @@
+{
+  "all_global_survivors_boundary_critical": true,
+  "declared_pairs": 56,
+  "gates": 217,
+  "global_survivors": 14,
+  "independent_critical_ideals": 4,
+  "producer_imports": false,
+  "records": [
+    {
+      "B": "x**2 + 2",
+      "P_degree": 0,
+      "a": 1,
+      "global": false,
+      "kind": "constant A",
+      "order": -2
+    },
+    {
+      "B": "x**2 + 2",
+      "P_degree": 1,
+      "a": 1,
+      "global": false,
+      "kind": "constant A",
+      "order": -6
+    },
+    {
+      "B": "-x",
+      "P_degree": 0,
+      "a": 1,
+      "global": true,
+      "kind": "constant A",
+      "order": 2
+    },
+    {
+      "B": "-x",
+      "P_degree": 1,
+      "a": 1,
+      "global": true,
+      "kind": "constant A",
+      "order": 2
+    },
+    {
+      "B": "x",
+      "P_degree": 0,
+      "a": 1,
+      "global": false,
+      "kind": "constant A",
+      "order": -1
+    },
+    {
+      "B": "x",
+      "P_degree": 1,
+      "a": 1,
+      "global": false,
+      "kind": "constant A",
+      "order": -1
+    },
+    {
+      "B": "0",
+      "P_degree": 0,
+      "a": 1,
+      "global": false,
+      "kind": "constant A",
+      "order": -1
+    },
+    {
+      "B": "0",
+      "P_degree": 1,
+      "a": 1,
+      "global": false,
+      "kind": "constant A",
+      "order": -3
+    },
+    {
+      "B": "x + 1",
+      "P_degree": 0,
+      "a": 1,
+      "global": false,
+      "kind": "constant A",
+      "order": -1
+    },
+    {
+      "B": "x + 1",
+      "P_degree": 1,
+      "a": 1,
+      "global": false,
+      "kind": "constant A",
+      "order": -2
+    },
+    {
+      "B": "1 - x",
+      "P_degree": 0,
+      "a": 1,
+      "global": true,
+      "kind": "constant A",
+      "order": 0
+    },
+    {
+      "B": "1 - x",
+      "P_degree": 1,
+      "a": 1,
+      "global": false,
+      "kind": "constant A",
+      "order": -1
+    },
+    {
+      "B": "x**2 + 2",
+      "P_degree": 0,
+      "a": -2,
+      "global": false,
+      "kind": "constant A",
+      "order": -2
+    },
+    {
+      "B": "x**2 + 2",
+      "P_degree": 1,
+      "a": -2,
+      "global": false,
+      "kind": "constant A",
+      "order": -6
+    },
+    {
+      "B": "-x",
+      "P_degree": 0,
+      "a": -2,
+      "global": true,
+      "kind": "constant A",
+      "order": 2
+    },
+    {
+      "B": "-x",
+      "P_degree": 1,
+      "a": -2,
+      "global": true,
+      "kind": "constant A",
+      "order": 2
+    },
+    {
+      "B": "x",
+      "P_degree": 0,
+      "a": -2,
+      "global": false,
+      "kind": "constant A",
+      "order": -1
+    },
+    {
+      "B": "x",
+      "P_degree": 1,
+      "a": -2,
+      "global": false,
+      "kind": "constant A",
+      "order": -1
+    },
+    {
+      "B": "0",
+      "P_degree": 0,
+      "a": -2,
+      "global": false,
+      "kind": "constant A",
+      "order": -1
+    },
+    {
+      "B": "0",
+      "P_degree": 1,
+      "a": -2,
+      "global": false,
+      "kind": "constant A",
+      "order": -3
+    },
+    {
+      "B": "x + 1",
+      "P_degree": 0,
+      "a": -2,
+      "global": false,
+      "kind": "constant A",
+      "order": -1
+    },
+    {
+      "B": "x + 1",
+      "P_degree": 1,
+      "a": -2,
+      "global": false,
+      "kind": "constant A",
+      "order": -2
+    },
+    {
+      "B": "1 - x",
+      "P_degree": 0,
+      "a": -2,
+      "global": true,
+      "kind": "constant A",
+      "order": 0
+    },
+    {
+      "B": "1 - x",
+      "P_degree": 1,
+      "a": -2,
+      "global": false,
+      "kind": "constant A",
+      "order": -1
+    },
+    {
+      "L": "-1",
+      "P_degree": 1,
+      "alpha": 0,
+      "global": true,
+      "kind": "linear A",
+      "order": 2,
+      "rho": -1
+    },
+    {
+      "L": "-1",
+      "P_degree": 2,
+      "alpha": 0,
+      "global": true,
+      "kind": "linear A",
+      "order": 2,
+      "rho": -1
+    },
+    {
+      "L": "1",
+      "P_degree": 1,
+      "alpha": 0,
+      "global": false,
+      "kind": "linear A",
+      "order": -1,
+      "rho": -1
+    },
+    {
+      "L": "1",
+      "P_degree": 2,
+      "alpha": 0,
+      "global": false,
+      "kind": "linear A",
+      "order": -1,
+      "rho": -1
+    },
+    {
+      "L": "0",
+      "P_degree": 1,
+      "alpha": 0,
+      "global": false,
+      "kind": "linear A",
+      "order": -1,
+      "rho": -1
+    },
+    {
+      "L": "0",
+      "P_degree": 2,
+      "alpha": 0,
+      "global": false,
+      "kind": "linear A",
+      "order": -2,
+      "rho": -1
+    },
+    {
+      "L": "x + 1",
+      "P_degree": 1,
+      "alpha": 0,
+      "global": false,
+      "kind": "linear A",
+      "order": -3,
+      "rho": -1
+    },
+    {
+      "L": "x + 1",
+      "P_degree": 2,
+      "alpha": 0,
+      "global": false,
+      "kind": "linear A",
+      "order": -6,
+      "rho": -1
+    },
+    {
+      "L": "-1",
+      "P_degree": 1,
+      "alpha": 1,
+      "global": true,
+      "kind": "linear A",
+      "order": 2,
+      "rho": -1
+    },
+    {
+      "L": "-1",
+      "P_degree": 2,
+      "alpha": 1,
+      "global": true,
+      "kind": "linear A",
+      "order": 2,
+      "rho": -1
+    },
+    {
+      "L": "1",
+      "P_degree": 1,
+      "alpha": 1,
+      "global": false,
+      "kind": "linear A",
+      "order": -1,
+      "rho": -1
+    },
+    {
+      "L": "1",
+      "P_degree": 2,
+      "alpha": 1,
+      "global": false,
+      "kind": "linear A",
+      "order": -1,
+      "rho": -1
+    },
+    {
+      "L": "0",
+      "P_degree": 1,
+      "alpha": 1,
+      "global": false,
+      "kind": "linear A",
+      "order": -1,
+      "rho": -1
+    },
+    {
+      "L": "0",
+      "P_degree": 2,
+      "alpha": 1,
+      "global": false,
+      "kind": "linear A",
+      "order": -2,
+      "rho": -1
+    },
+    {
+      "L": "x + 1",
+      "P_degree": 1,
+      "alpha": 1,
+      "global": false,
+      "kind": "linear A",
+      "order": -3,
+      "rho": -1
+    },
+    {
+      "L": "x + 1",
+      "P_degree": 2,
+      "alpha": 1,
+      "global": false,
+      "kind": "linear A",
+      "order": -6,
+      "rho": -1
+    },
+    {
+      "L": "1",
+      "P_degree": 1,
+      "alpha": 0,
+      "global": true,
+      "kind": "linear A",
+      "order": 2,
+      "rho": 1
+    },
+    {
+      "L": "1",
+      "P_degree": 2,
+      "alpha": 0,
+      "global": true,
+      "kind": "linear A",
+      "order": 2,
+      "rho": 1
+    },
+    {
+      "L": "-1",
+      "P_degree": 1,
+      "alpha": 0,
+      "global": false,
+      "kind": "linear A",
+      "order": -1,
+      "rho": 1
+    },
+    {
+      "L": "-1",
+      "P_degree": 2,
+      "alpha": 0,
+      "global": false,
+      "kind": "linear A",
+      "order": -1,
+      "rho": 1
+    },
+    {
+      "L": "0",
+      "P_degree": 1,
+      "alpha": 0,
+      "global": false,
+      "kind": "linear A",
+      "order": -1,
+      "rho": 1
+    },
+    {
+      "L": "0",
+      "P_degree": 2,
+      "alpha": 0,
+      "global": false,
+      "kind": "linear A",
+      "order": -2,
+      "rho": 1
+    },
+    {
+      "L": "x + 1",
+      "P_degree": 1,
+      "alpha": 0,
+      "global": false,
+      "kind": "linear A",
+      "order": -3,
+      "rho": 1
+    },
+    {
+      "L": "x + 1",
+      "P_degree": 2,
+      "alpha": 0,
+      "global": false,
+      "kind": "linear A",
+      "order": -6,
+      "rho": 1
+    },
+    {
+      "L": "1",
+      "P_degree": 1,
+      "alpha": 1,
+      "global": true,
+      "kind": "linear A",
+      "order": 2,
+      "rho": 1
+    },
+    {
+      "L": "1",
+      "P_degree": 2,
+      "alpha": 1,
+      "global": true,
+      "kind": "linear A",
+      "order": 2,
+      "rho": 1
+    },
+    {
+      "L": "-1",
+      "P_degree": 1,
+      "alpha": 1,
+      "global": false,
+      "kind": "linear A",
+      "order": -1,
+      "rho": 1
+    },
+    {
+      "L": "-1",
+      "P_degree": 2,
+      "alpha": 1,
+      "global": false,
+      "kind": "linear A",
+      "order": -1,
+      "rho": 1
+    },
+    {
+      "L": "0",
+      "P_degree": 1,
+      "alpha": 1,
+      "global": false,
+      "kind": "linear A",
+      "order": -1,
+      "rho": 1
+    },
+    {
+      "L": "0",
+      "P_degree": 2,
+      "alpha": 1,
+      "global": false,
+      "kind": "linear A",
+      "order": -2,
+      "rho": 1
+    },
+    {
+      "L": "x + 1",
+      "P_degree": 1,
+      "alpha": 1,
+      "global": false,
+      "kind": "linear A",
+      "order": -3,
+      "rho": 1
+    },
+    {
+      "L": "x + 1",
+      "P_degree": 2,
+      "alpha": 1,
+      "global": false,
+      "kind": "linear A",
+      "order": -6,
+      "rho": 1
+    }
+  ],
+  "scope": "All-degree original quadratic witness with squarefree generic discriminant; repeated corridor excluded",
+  "status": "INDEPENDENT ANALYTIC ACCEPTANCE + FINITE-EXACT controls",
+  "target_report_sha256": "2b78aedb18e49e396c4477f71f6cd861e203f882dc58094e2fe85841962208f3",
+  "target_source_sha256": "162360786a05ed8d592f635c61ee00094522055cd2e8ac2f90401ad63b02b875"
+}

@@ -1,0 +1,151 @@
+{
+  "schema": 1,
+  "created_utc": "2026-09-09T00:41:50.486833+00:00",
+  "baseline_commit": "1d099f2c66dff8165559c48962b6f97fadd4c061",
+  "incoming_commits": [
+    "d5145cc60",
+    "c9e0641e7",
+    "ed17e03c5"
+  ],
+  "integrated_base": "ed17e03c5",
+  "proof_checkpoints": [],
+  "scope": "Complete squarefree quadratic-witness global W2 exclusion with no first-function degree bound; exact polynomial/rational spectrum of a nonsquarefree cyclic family. Only independently accepted packets are pinned; general LRC14, planar JC and global nonsquarefree witness questions remain open.",
+  "hash_basis": "Raw LF bytes; maintained synthesis/navigation and manifest excluded; audited status transitions retained explicitly.",
+  "artifact_count": 16,
+  "program_count": 4,
+  "certificate_count": 4,
+  "exact_gates_per_mode": 2271,
+  "prior_pins_verified": 1051,
+  "normal_optimized_stdout_equal": true,
+  "regenerated_certificates_unchanged": true,
+  "validation": {
+    "continuing15_20260909_quadratic_logarithmic_scout": {
+      "certificate_sha256": "324c2417015c6974ebf0698d8df339c2753884a87f563e82c59c23c1c9b46f3e",
+      "gates": 520,
+      "normal_optimized_equal": true,
+      "output_sha256": "abc2b6f2dea3740548d6a2cbd134a87a5210c95536a28cf31f1e035fc91de8cd",
+      "relocated_cert_unchanged": true,
+      "source_sha256": "e06bf10481bb89bec81f95cea7fa2383190ad399d9cc0763cf8b53bf1c80f7a3"
+    },
+    "continuing15_20260909_quadratic_scout_audit": {
+      "certificate_sha256": "850e595b34c14817f438fc37224119120e3f552c23ebbf8e89107729e6d6619d",
+      "gates": 146,
+      "normal_optimized_equal": true,
+      "output_sha256": "e2c94de5fe829766738050a4e4e0adc3250372393eb0362065d23dfeb042a12a",
+      "relocated_cert_unchanged": true,
+      "source_sha256": "aece5a188e8c39781a554322ef9235c518928af51bcaba16e7f22257d43b4e94"
+    },
+    "continuing15_20260909_squarefree_quadratic_audit": {
+      "certificate_sha256": "57c410412dac941f1e662dd24f14d712a03b27cb9ac559e48379256d486d211b",
+      "gates": 217,
+      "normal_optimized_equal": true,
+      "output_sha256": "f2d4186a27b9cf9dd380ea6484d5a1cf16558111620c31fac3b2a0e153a69d5e",
+      "relocated_cert_unchanged": true,
+      "source_sha256": "f3029e43eb728c1d5bfc53982d3871ada36e6671f38ad11b48a35c497129907c"
+    },
+    "continuing15_20260909_squarefree_quadratic_witness": {
+      "certificate_sha256": "5504e3243f43e60a1fa61ef37e60b7e411e94e44e7a9c7d789c4e65f337841a8",
+      "gates": 1388,
+      "normal_optimized_equal": true,
+      "output_sha256": "7dc539f8515e6232669e6d4376ded2e6858e809d6bfdbff990693bfb5d8d9ada",
+      "relocated_cert_unchanged": true,
+      "source_sha256": "162360786a05ed8d592f635c61ee00094522055cd2e8ac2f90401ad63b02b875"
+    }
+  },
+  "primary_acceptance_transitions": {
+    "continuing15_20260909_quadratic_logarithmic_scout": {
+      "accepted_report_sha256": "e969113c9048dcc9ea30195aadaa1993e445235a4f00ed57014f988c510e04cc",
+      "authorized_change": "Audit status and independent referee link only",
+      "filed_report_sha256": "b264bfa0c091352cdb9854f0f669e939ae5c153c370335cd6eaf783250e34691",
+      "referee": "continuing15_20260909_quadratic_scout_audit.md"
+    },
+    "continuing15_20260909_squarefree_quadratic_witness": {
+      "accepted_report_sha256": "2b78aedb18e49e396c4477f71f6cd861e203f882dc58094e2fe85841962208f3",
+      "authorized_change": "Audit status and independent referee link only",
+      "filed_report_sha256": "7f84f1ac64ff217083f6d4494e9cc7ea026dc74f90611cf092332b5266b3333f",
+      "referee": "continuing15_20260909_squarefree_quadratic_audit.md"
+    }
+  },
+  "artifacts": [
+    {
+      "path": "04-computation/continuing15_20260909_quadratic_logarithmic_scout.py",
+      "bytes": 8023,
+      "sha256": "e06bf10481bb89bec81f95cea7fa2383190ad399d9cc0763cf8b53bf1c80f7a3"
+    },
+    {
+      "path": "04-computation/continuing15_20260909_quadratic_scout_audit.py",
+      "bytes": 4388,
+      "sha256": "aece5a188e8c39781a554322ef9235c518928af51bcaba16e7f22257d43b4e94"
+    },
+    {
+      "path": "04-computation/continuing15_20260909_squarefree_quadratic_audit.py",
+      "bytes": 5001,
+      "sha256": "f3029e43eb728c1d5bfc53982d3871ada36e6671f38ad11b48a35c497129907c"
+    },
+    {
+      "path": "04-computation/continuing15_20260909_squarefree_quadratic_witness.py",
+      "bytes": 6694,
+      "sha256": "162360786a05ed8d592f635c61ee00094522055cd2e8ac2f90401ad63b02b875"
+    },
+    {
+      "path": "05-knowledge/results/continuing15_20260909_quadratic_logarithmic_scout.md",
+      "bytes": 14883,
+      "sha256": "b264bfa0c091352cdb9854f0f669e939ae5c153c370335cd6eaf783250e34691"
+    },
+    {
+      "path": "05-knowledge/results/continuing15_20260909_quadratic_logarithmic_scout.out",
+      "bytes": 483,
+      "sha256": "abc2b6f2dea3740548d6a2cbd134a87a5210c95536a28cf31f1e035fc91de8cd"
+    },
+    {
+      "path": "05-knowledge/results/continuing15_20260909_quadratic_logarithmic_scout_certificate.json",
+      "bytes": 3337,
+      "sha256": "324c2417015c6974ebf0698d8df339c2753884a87f563e82c59c23c1c9b46f3e"
+    },
+    {
+      "path": "05-knowledge/results/continuing15_20260909_quadratic_scout_audit.md",
+      "bytes": 5325,
+      "sha256": "b831cfc221107a4bde2a0e12a3ad576bb4e9b890ba851cf2ace26cec4ed52d92"
+    },
+    {
+      "path": "05-knowledge/results/continuing15_20260909_quadratic_scout_audit.out",
+      "bytes": 153,
+      "sha256": "e2c94de5fe829766738050a4e4e0adc3250372393eb0362065d23dfeb042a12a"
+    },
+    {
+      "path": "05-knowledge/results/continuing15_20260909_quadratic_scout_audit_certificate.json",
+      "bytes": 637,
+      "sha256": "850e595b34c14817f438fc37224119120e3f552c23ebbf8e89107729e6d6619d"
+    },
+    {
+      "path": "05-knowledge/results/continuing15_20260909_squarefree_quadratic_audit.md",
+      "bytes": 5309,
+      "sha256": "ec89480d0d013e7156edbce7a730eaecf0dc38f4d4054eaa25a67fcd28ccc89a"
+    },
+    {
+      "path": "05-knowledge/results/continuing15_20260909_squarefree_quadratic_audit.out",
+      "bytes": 317,
+      "sha256": "f2d4186a27b9cf9dd380ea6484d5a1cf16558111620c31fac3b2a0e153a69d5e"
+    },
+    {
+      "path": "05-knowledge/results/continuing15_20260909_squarefree_quadratic_audit_certificate.json",
+      "bytes": 8707,
+      "sha256": "57c410412dac941f1e662dd24f14d712a03b27cb9ac559e48379256d486d211b"
+    },
+    {
+      "path": "05-knowledge/results/continuing15_20260909_squarefree_quadratic_witness.md",
+      "bytes": 8166,
+      "sha256": "7f84f1ac64ff217083f6d4494e9cc7ea026dc74f90611cf092332b5266b3333f"
+    },
+    {
+      "path": "05-knowledge/results/continuing15_20260909_squarefree_quadratic_witness.out",
+      "bytes": 1389,
+      "sha256": "7dc539f8515e6232669e6d4376ded2e6858e809d6bfdbff990693bfb5d8d9ada"
+    },
+    {
+      "path": "05-knowledge/results/continuing15_20260909_squarefree_quadratic_witness_certificate.json",
+      "bytes": 17919,
+      "sha256": "5504e3243f43e60a1fa61ef37e60b7e411e94e44e7a9c7d789c4e65f337841a8"
+    }
+  ]
+}

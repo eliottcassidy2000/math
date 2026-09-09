@@ -1,0 +1,5 @@
+PASS: independent squarefree quadratic-witness global obstruction audit
+56 declared original-source pairs; four independent full critical ideals
+All 14 global survivors have the whole added divisor critical
+Always-active gates: 217
+Certificate SHA256: 57c410412dac941f1e662dd24f14d712a03b27cb9ac559e48379256d486d211b

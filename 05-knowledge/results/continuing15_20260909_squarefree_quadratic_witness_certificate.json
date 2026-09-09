@@ -1,0 +1,513 @@
+{
+  "all_global_pairs_boundary_critical": true,
+  "cases": [
+    {
+      "F": "2*t + x",
+      "H": "t**2 - x**2/4",
+      "boundary_order": -1,
+      "family": "constant",
+      "global_regular": false
+    },
+    {
+      "F": "2*t**3 + t**2*x - t*x**2/2 - 2*t - x**3/4 - x",
+      "H": "t**2 - x**2/4",
+      "boundary_order": -3,
+      "family": "constant",
+      "global_regular": false
+    },
+    {
+      "F": "2*t**5 + t**4*x - t**3*x**2 - 6*t**3 - t**2*x**3/2 - 3*t**2*x + t*x**4/8 + 3*t*x**2/2 + 4*t + x**5/16 + 3*x**3/4 + 2*x",
+      "H": "t**2 - x**2/4",
+      "boundary_order": -5,
+      "family": "constant",
+      "global_regular": false
+    },
+    {
+      "F": "2*t + 2*x",
+      "H": "t**2 + t*x",
+      "boundary_order": -1,
+      "family": "constant",
+      "global_regular": false
+    },
+    {
+      "F": "2*t**3 + 4*t**2*x + 2*t*x**2 - 2*t - 2*x",
+      "H": "t**2 + t*x",
+      "boundary_order": -1,
+      "family": "constant",
+      "global_regular": false
+    },
+    {
+      "F": "2*t**5 + 6*t**4*x + 6*t**3*x**2 - 6*t**3 + 2*t**2*x**3 - 12*t**2*x - 6*t*x**2 + 4*t + 4*x",
+      "H": "t**2 + t*x",
+      "boundary_order": -1,
+      "family": "constant",
+      "global_regular": false
+    },
+    {
+      "F": "2*t",
+      "H": "t**2 - t*x",
+      "boundary_order": 2,
+      "family": "constant",
+      "global_regular": true
+    },
+    {
+      "F": "2*t**3 - 2*t**2*x - 2*t",
+      "H": "t**2 - t*x",
+      "boundary_order": 2,
+      "family": "constant",
+      "global_regular": true
+    },
+    {
+      "F": "2*t**5 - 4*t**4*x + 2*t**3*x**2 - 6*t**3 + 6*t**2*x + 4*t",
+      "H": "t**2 - t*x",
+      "boundary_order": 2,
+      "family": "constant",
+      "global_regular": true
+    },
+    {
+      "F": "2*t + 2*x + 2",
+      "H": "t**2 + t*x + 2*t + x + 1",
+      "boundary_order": -1,
+      "family": "constant",
+      "global_regular": false
+    },
+    {
+      "F": "2*t**3 + 4*t**2*x + 6*t**2 + 2*t*x**2 + 8*t*x + 4*t + 2*x**2 + 2*x",
+      "H": "t**2 + t*x + 2*t + x + 1",
+      "boundary_order": -2,
+      "family": "constant",
+      "global_regular": false
+    },
+    {
+      "F": "2*t**5 + 6*t**4*x + 10*t**4 + 6*t**3*x**2 + 24*t**3*x + 14*t**3 + 2*t**2*x**3 + 18*t**2*x**2 + 24*t**2*x + 2*t**2 + 4*t*x**3 + 12*t*x**2 - 4*t + 2*x**3 - 2*x",
+      "H": "t**2 + t*x + 2*t + x + 1",
+      "boundary_order": -3,
+      "family": "constant",
+      "global_regular": false
+    },
+    {
+      "F": "2*t + 2",
+      "H": "t**2 - t*x + 2*t - x + 1",
+      "boundary_order": 0,
+      "family": "constant",
+      "global_regular": true
+    },
+    {
+      "F": "2*t**3 - 2*t**2*x + 6*t**2 - 4*t*x + 4*t - 2*x",
+      "H": "t**2 - t*x + 2*t - x + 1",
+      "boundary_order": -1,
+      "family": "constant",
+      "global_regular": false
+    },
+    {
+      "F": "2*t**5 - 4*t**4*x + 10*t**4 + 2*t**3*x**2 - 16*t**3*x + 14*t**3 + 6*t**2*x**2 - 18*t**2*x + 2*t**2 + 6*t*x**2 - 4*t*x - 4*t + 2*x**2 + 2*x",
+      "H": "t**2 - t*x + 2*t - x + 1",
+      "boundary_order": -2,
+      "family": "constant",
+      "global_regular": false
+    },
+    {
+      "F": "2*t + x**2 + x + 1",
+      "H": "t**2 + t*x**2 + t + x**4/4 + x**2/4 + 1/4",
+      "boundary_order": -2,
+      "family": "constant",
+      "global_regular": false
+    },
+    {
+      "F": "2*t**3 + 3*t**2*x**2 + t**2*x + 3*t**2 + 3*t*x**4/2 + t*x**3 + 5*t*x**2/2 + t*x - t/2 + x**6/4 + x**5/4 + x**4/2 + x**3/4 - x**2/2 - 3*x/4 - 3/4",
+      "H": "t**2 + t*x**2 + t + x**4/4 + x**2/4 + 1/4",
+      "boundary_order": -6,
+      "family": "constant",
+      "global_regular": false
+    },
+    {
+      "F": "2*t**5 + 5*t**4*x**2 + t**4*x + 5*t**4 + 5*t**3*x**4 + 2*t**3*x**3 + 9*t**3*x**2 + 2*t**3*x - t**3 + 5*t**2*x**6/2 + 3*t**2*x**5/2 + 6*t**2*x**4 + 5*t**2*x**3/2 - 3*t**2*x**2 - 3*t**2*x/2 - 13*t**2/2 + 5*t*x**8/8 + t*x**7/2 + 7*t*x**6/4 + t*x**5 - 17*t*x**4/8 - 2*t*x**3 - 23*t*x**2/4 - 5*t*x/2 + t/8 + x**10/16 + x**9/16 + 3*x**8/16 + x**7/8 - 7*x**6/16 - 9*x**5/16 - 19*x**4/16 - 5*x**3/8 + 11*x**2/16 + 21*x/16 + 21/16",
+      "H": "t**2 + t*x**2 + t + x**4/4 + x**2/4 + 1/4",
+      "boundary_order": -10,
+      "family": "constant",
+      "global_regular": false
+    },
+    {
+      "F": "-4*t + x",
+      "H": "-2*t**2 + x**2/8",
+      "boundary_order": -1,
+      "family": "constant",
+      "global_regular": false
+    },
+    {
+      "F": "8*t**3 - 2*t**2*x - t*x**2/2 + 4*t + x**3/8 - x",
+      "H": "-2*t**2 + x**2/8",
+      "boundary_order": -3,
+      "family": "constant",
+      "global_regular": false
+    },
+    {
+      "F": "-16*t**5 + 4*t**4*x + 2*t**3*x**2 - 24*t**3 - t**2*x**3/2 + 6*t**2*x - t*x**4/16 + 3*t*x**2/2 - 8*t + x**5/64 - 3*x**3/8 + 2*x",
+      "H": "-2*t**2 + x**2/8",
+      "boundary_order": -5,
+      "family": "constant",
+      "global_regular": false
+    },
+    {
+      "F": "-4*t + 2*x",
+      "H": "-2*t**2 + t*x",
+      "boundary_order": -1,
+      "family": "constant",
+      "global_regular": false
+    },
+    {
+      "F": "8*t**3 - 8*t**2*x + 2*t*x**2 + 4*t - 2*x",
+      "H": "-2*t**2 + t*x",
+      "boundary_order": -1,
+      "family": "constant",
+      "global_regular": false
+    },
+    {
+      "F": "-16*t**5 + 24*t**4*x - 12*t**3*x**2 - 24*t**3 + 2*t**2*x**3 + 24*t**2*x - 6*t*x**2 - 8*t + 4*x",
+      "H": "-2*t**2 + t*x",
+      "boundary_order": -1,
+      "family": "constant",
+      "global_regular": false
+    },
+    {
+      "F": "-4*t",
+      "H": "-2*t**2 - t*x",
+      "boundary_order": 2,
+      "family": "constant",
+      "global_regular": true
+    },
+    {
+      "F": "8*t**3 + 4*t**2*x + 4*t",
+      "H": "-2*t**2 - t*x",
+      "boundary_order": 2,
+      "family": "constant",
+      "global_regular": true
+    },
+    {
+      "F": "-16*t**5 - 16*t**4*x - 4*t**3*x**2 - 24*t**3 - 12*t**2*x - 8*t",
+      "H": "-2*t**2 - t*x",
+      "boundary_order": 2,
+      "family": "constant",
+      "global_regular": true
+    },
+    {
+      "F": "-4*t + 2*x + 2",
+      "H": "-2*t**2 + t*x + 2*t - x/2 - 1/2",
+      "boundary_order": -1,
+      "family": "constant",
+      "global_regular": false
+    },
+    {
+      "F": "8*t**3 - 8*t**2*x - 12*t**2 + 2*t*x**2 + 8*t*x + 10*t - x**2 - 4*x - 3",
+      "H": "-2*t**2 + t*x + 2*t - x/2 - 1/2",
+      "boundary_order": -2,
+      "family": "constant",
+      "global_regular": false
+    },
+    {
+      "F": "-16*t**5 + 24*t**4*x + 40*t**4 - 12*t**3*x**2 - 48*t**3*x - 64*t**3 + 2*t**2*x**3 + 18*t**2*x**2 + 60*t**2*x + 56*t**2 - 2*t*x**3 - 15*t*x**2 - 36*t*x - 31*t + x**3/2 + 9*x**2/2 + 23*x/2 + 15/2",
+      "H": "-2*t**2 + t*x + 2*t - x/2 - 1/2",
+      "boundary_order": -3,
+      "family": "constant",
+      "global_regular": false
+    },
+    {
+      "F": "2 - 4*t",
+      "H": "-2*t**2 - t*x + 2*t + x/2 - 1/2",
+      "boundary_order": 0,
+      "family": "constant",
+      "global_regular": true
+    },
+    {
+      "F": "8*t**3 + 4*t**2*x - 12*t**2 - 4*t*x + 10*t + x - 3",
+      "H": "-2*t**2 - t*x + 2*t + x/2 - 1/2",
+      "boundary_order": -1,
+      "family": "constant",
+      "global_regular": false
+    },
+    {
+      "F": "-16*t**5 - 16*t**4*x + 40*t**4 - 4*t**3*x**2 + 32*t**3*x - 64*t**3 + 6*t**2*x**2 - 36*t**2*x + 56*t**2 - 3*t*x**2 + 20*t*x - 31*t + x**2/2 - 4*x + 15/2",
+      "H": "-2*t**2 - t*x + 2*t + x/2 - 1/2",
+      "boundary_order": -2,
+      "family": "constant",
+      "global_regular": false
+    },
+    {
+      "F": "-4*t + x**2 + x + 1",
+      "H": "-2*t**2 + t*x**2 + t - x**4/8 - x**2/8 - 1/8",
+      "boundary_order": -2,
+      "family": "constant",
+      "global_regular": false
+    },
+    {
+      "F": "8*t**3 - 6*t**2*x**2 - 2*t**2*x - 6*t**2 + 3*t*x**4/2 + t*x**3 + 5*t*x**2/2 + t*x + 11*t/2 - x**6/8 - x**5/8 - x**4/4 - x**3/8 - 5*x**2/4 - 9*x/8 - 9/8",
+      "H": "-2*t**2 + t*x**2 + t - x**4/8 - x**2/8 - 1/8",
+      "boundary_order": -6,
+      "family": "constant",
+      "global_regular": false
+    },
+    {
+      "F": "-16*t**5 + 20*t**4*x**2 + 4*t**4*x + 20*t**4 - 10*t**3*x**4 - 4*t**3*x**3 - 18*t**3*x**2 - 4*t**3*x - 34*t**3 + 5*t**2*x**6/2 + 3*t**2*x**5/2 + 6*t**2*x**4 + 5*t**2*x**3/2 + 24*t**2*x**2 + 15*t**2*x/2 + 41*t**2/2 - 5*t*x**8/16 - t*x**7/4 - 7*t*x**6/8 - t*x**5/2 - 91*t*x**4/16 - 7*t*x**3/2 - 67*t*x**2/8 - 13*t*x/4 - 205*t/16 + x**10/64 + x**9/64 + 3*x**8/64 + x**7/32 + 29*x**6/64 + 27*x**5/64 + 53*x**4/64 + 13*x**3/32 + 179*x**2/64 + 153*x/64 + 153/64",
+      "H": "-2*t**2 + t*x**2 + t - x**4/8 - x**2/8 - 1/8",
+      "boundary_order": -10,
+      "family": "constant",
+      "global_regular": false
+    },
+    {
+      "F": "-t**2*x/2 + t",
+      "H": "-t**2*x/2 - t*x + t + 3",
+      "boundary_order": 2,
+      "family": "linear",
+      "global_regular": true
+    },
+    {
+      "F": "t**4*x**2/4 + t**3*x**2/2 - t**3*x - t**2*x/2 + t**2 - t",
+      "H": "-t**2*x/2 - t*x + t + 3",
+      "boundary_order": 2,
+      "family": "linear",
+      "global_regular": true
+    },
+    {
+      "F": "-t**2*x/2 + 2*t*x + t - 2*x - 2",
+      "H": "-t**2*x/2 + t*x + t + 1",
+      "boundary_order": -1,
+      "family": "linear",
+      "global_regular": false
+    },
+    {
+      "F": "t**4*x**2/4 - 3*t**3*x**2/2 - t**3*x + 3*t**2*x**2 + 11*t**2*x/2 + t**2 - 2*t*x**2 - 10*t*x - 5*t + 6*x + 6",
+      "H": "-t**2*x/2 + t*x + t + 1",
+      "boundary_order": -1,
+      "family": "linear",
+      "global_regular": false
+    },
+    {
+      "F": "-t**2*x/2 + t*x + t - x/2 - 1",
+      "H": "-t**2*x/2 + t + x/2 + 2",
+      "boundary_order": -1,
+      "family": "linear",
+      "global_regular": false
+    },
+    {
+      "F": "t**4*x**2/4 - t**3*x**2/2 - t**3*x + 5*t**2*x/2 + t**2 + t*x**2/2 - 2*t*x - 3*t - x**2/4 + x/2 + 2",
+      "H": "-t**2*x/2 + t + x/2 + 2",
+      "boundary_order": -2,
+      "family": "linear",
+      "global_regular": false
+    },
+    {
+      "F": "-t**2*x/2 - t*x**2 + t - x**3/2 + x",
+      "H": "-t**2*x/2 - t*x**2 - t*x + t - x**3/2 - x**2 + x + 3",
+      "boundary_order": -3,
+      "family": "linear",
+      "global_regular": false
+    },
+    {
+      "F": "t**4*x**2/4 + t**3*x**3 + t**3*x**2/2 - t**3*x + 3*t**2*x**4/2 + 3*t**2*x**3/2 - 3*t**2*x**2 - t**2*x/2 + t**2 + t*x**5 + 3*t*x**4/2 - 3*t*x**3 - t*x**2 + 2*t*x - t + x**6/4 + x**5/2 - x**4 - x**3/2 + x**2 - x",
+      "H": "-t**2*x/2 - t*x**2 - t*x + t - x**3/2 - x**2 + x + 3",
+      "boundary_order": -6,
+      "family": "linear",
+      "global_regular": false
+    },
+    {
+      "F": "-t**2*x/2 + t**2 + t",
+      "H": "-t**2*x/2 + t**2 - t*x + 3*t + 3",
+      "boundary_order": 2,
+      "family": "linear",
+      "global_regular": true
+    },
+    {
+      "F": "t**4*x**2/4 - t**4*x + t**4 + t**3*x**2/2 - 3*t**3*x + 4*t**3 - t**2*x/2 + 2*t**2 - t",
+      "H": "-t**2*x/2 + t**2 - t*x + 3*t + 3",
+      "boundary_order": 2,
+      "family": "linear",
+      "global_regular": true
+    },
+    {
+      "F": "-t**2*x/2 + t**2 + 2*t*x - 3*t - 2*x + 2",
+      "H": "-t**2*x/2 + t**2 + t*x - t + 1",
+      "boundary_order": -1,
+      "family": "linear",
+      "global_regular": false
+    },
+    {
+      "F": "t**4*x**2/4 - t**4*x + t**4 - 3*t**3*x**2/2 + 5*t**3*x - 4*t**3 + 3*t**2*x**2 - 13*t**2*x/2 + 2*t**2 - 2*t*x**2 - 2*t*x + 7*t + 6*x - 6",
+      "H": "-t**2*x/2 + t**2 + t*x - t + 1",
+      "boundary_order": -1,
+      "family": "linear",
+      "global_regular": false
+    },
+    {
+      "F": "-t**2*x/2 + t**2 + t*x - t - x/2",
+      "H": "-t**2*x/2 + t**2 + t + x/2 + 1",
+      "boundary_order": -1,
+      "family": "linear",
+      "global_regular": false
+    },
+    {
+      "F": "t**4*x**2/4 - t**4*x + t**4 - t**3*x**2/2 + t**3*x + 5*t**2*x/2 - 4*t**2 + t*x**2/2 - 4*t*x + 3*t - x**2/4 + 3*x/2",
+      "H": "-t**2*x/2 + t**2 + t + x/2 + 1",
+      "boundary_order": -2,
+      "family": "linear",
+      "global_regular": false
+    },
+    {
+      "F": "-t**2*x/2 + t**2 - t*x**2 + 2*t*x + t - x**3/2 + x**2 + x",
+      "H": "-t**2*x/2 + t**2 - t*x**2 + t*x + 3*t - x**3/2 + 3*x + 3",
+      "boundary_order": -3,
+      "family": "linear",
+      "global_regular": false
+    },
+    {
+      "F": "t**4*x**2/4 - t**4*x + t**4 + t**3*x**3 - 7*t**3*x**2/2 + t**3*x + 4*t**3 + 3*t**2*x**4/2 - 9*t**2*x**3/2 - 3*t**2*x**2 + 23*t**2*x/2 + 2*t**2 + t*x**5 - 5*t*x**4/2 - 5*t*x**3 + 11*t*x**2 + 4*t*x - t + x**6/4 - x**5/2 - 2*x**4 + 7*x**3/2 + 2*x**2 - x",
+      "H": "-t**2*x/2 + t**2 - t*x**2 + t*x + 3*t - x**3/2 + 3*x + 3",
+      "boundary_order": -6,
+      "family": "linear",
+      "global_regular": false
+    },
+    {
+      "F": "-t**2*x/4 + t",
+      "H": "-t**2*x/4 - t*x + t + 4",
+      "boundary_order": 2,
+      "family": "linear",
+      "global_regular": true
+    },
+    {
+      "F": "t**4*x**2/16 + t**3*x**2/4 - t**3*x/2 - 3*t**2*x/4 + t**2 - t",
+      "H": "-t**2*x/4 - t*x + t + 4",
+      "boundary_order": 2,
+      "family": "linear",
+      "global_regular": true
+    },
+    {
+      "F": "-t**2*x/4 + 2*t*x + t - 4*x - 4",
+      "H": "-t**2*x/4 + t*x + t",
+      "boundary_order": -1,
+      "family": "linear",
+      "global_regular": false
+    },
+    {
+      "F": "t**4*x**2/16 - 3*t**3*x**2/4 - t**3*x/2 + 3*t**2*x**2 + 21*t**2*x/4 + t**2 - 4*t*x**2 - 18*t*x - 9*t + 20*x + 20",
+      "H": "-t**2*x/4 + t*x + t",
+      "boundary_order": -1,
+      "family": "linear",
+      "global_regular": false
+    },
+    {
+      "F": "-t**2*x/4 + t*x + t - x - 2",
+      "H": "-t**2*x/4 + t + x + 2",
+      "boundary_order": -1,
+      "family": "linear",
+      "global_regular": false
+    },
+    {
+      "F": "t**4*x**2/16 - t**3*x**2/4 - t**3*x/2 + 9*t**2*x/4 + t**2 + t*x**2 - 3*t*x - 5*t - x**2 + x + 6",
+      "H": "-t**2*x/4 + t + x + 2",
+      "boundary_order": -2,
+      "family": "linear",
+      "global_regular": false
+    },
+    {
+      "F": "-t**2*x/4 - t*x**2/2 + t*x/2 + t - x**3/4 + x**2/2 + 3*x/4 - 1",
+      "H": "-t**2*x/4 - t*x**2/2 - t*x/2 + t - x**3/4 - x**2/2 + 7*x/4 + 3",
+      "boundary_order": -3,
+      "family": "linear",
+      "global_regular": false
+    },
+    {
+      "F": "t**4*x**2/16 + t**3*x**3/4 - t**3*x/2 + 3*t**2*x**4/8 - 15*t**2*x**2/8 + 3*t**2*x/4 + t**2 + t*x**5/4 - 9*t*x**3/4 + 2*t*x**2 + 2*t*x - 3*t + x**6/16 - 7*x**4/8 + 5*x**3/4 + 13*x**2/16 - 13*x/4 + 2",
+      "H": "-t**2*x/4 - t*x**2/2 - t*x/2 + t - x**3/4 - x**2/2 + 7*x/4 + 3",
+      "boundary_order": -6,
+      "family": "linear",
+      "global_regular": false
+    },
+    {
+      "F": "-t**2*x/4 + t**2/2 + t",
+      "H": "-t**2*x/4 + t**2/2 - t*x + 3*t + 4",
+      "boundary_order": 2,
+      "family": "linear",
+      "global_regular": true
+    },
+    {
+      "F": "t**4*x**2/16 - t**4*x/4 + t**4/4 + t**3*x**2/4 - 3*t**3*x/2 + 2*t**3 - 3*t**2*x/4 + 5*t**2/2 - t",
+      "H": "-t**2*x/4 + t**2/2 - t*x + 3*t + 4",
+      "boundary_order": 2,
+      "family": "linear",
+      "global_regular": true
+    },
+    {
+      "F": "-t**2*x/4 + t**2/2 + 2*t*x - 3*t - 4*x + 4",
+      "H": "-t**2*x/4 + t**2/2 + t*x - t",
+      "boundary_order": -1,
+      "family": "linear",
+      "global_regular": false
+    },
+    {
+      "F": "t**4*x**2/16 - t**4*x/4 + t**4/4 - 3*t**3*x**2/4 + 5*t**3*x/2 - 2*t**3 + 3*t**2*x**2 - 27*t**2*x/4 + 5*t**2/2 - 4*t*x**2 - 2*t*x + 11*t + 20*x - 20",
+      "H": "-t**2*x/4 + t**2/2 + t*x - t",
+      "boundary_order": -1,
+      "family": "linear",
+      "global_regular": false
+    },
+    {
+      "F": "-t**2*x/4 + t**2/2 + t*x - t - x",
+      "H": "-t**2*x/4 + t**2/2 + t + x",
+      "boundary_order": -1,
+      "family": "linear",
+      "global_regular": false
+    },
+    {
+      "F": "t**4*x**2/16 - t**4*x/4 + t**4/4 - t**3*x**2/4 + t**3*x/2 + 9*t**2*x/4 - 7*t**2/2 + t*x**2 - 7*t*x + 5*t - x**2 + 5*x",
+      "H": "-t**2*x/4 + t**2/2 + t + x",
+      "boundary_order": -2,
+      "family": "linear",
+      "global_regular": false
+    },
+    {
+      "F": "-t**2*x/4 + t**2/2 - t*x**2/2 + 3*t*x/2 - x**3/4 + x**2 - x/4 - 1/2",
+      "H": "-t**2*x/4 + t**2/2 - t*x**2/2 + t*x/2 + 2*t - x**3/4 + 11*x/4 + 3/2",
+      "boundary_order": -3,
+      "family": "linear",
+      "global_regular": false
+    },
+    {
+      "F": "t**4*x**2/16 - t**4*x/4 + t**4/4 + t**3*x**3/4 - t**3*x**2 + t**3*x/2 + t**3 + 3*t**2*x**4/8 - 3*t**2*x**3/2 - 3*t**2*x**2/8 + 21*t**2*x/4 - 2*t**2 + t*x**5/4 - t*x**4 - 5*t*x**3/4 + 8*t*x**2 - 6*t*x - t + x**6/16 - x**5/4 - 5*x**4/8 + 15*x**3/4 - 67*x**2/16 - x/2 + 7/4",
+      "H": "-t**2*x/4 + t**2/2 - t*x**2/2 + t*x/2 + 2*t - x**3/4 + 11*x/4 + 3/2",
+      "boundary_order": -6,
+      "family": "linear",
+      "global_regular": false
+    }
+  ],
+  "declared_pairs": 68,
+  "gates": {
+    "actual W2 Laurent globality": 68,
+    "all declared high-degree infinity holomorphic orders": 11,
+    "all sixteen regular controls accounted for": 1,
+    "complete declared 68-pair universe": 1,
+    "complete original affine critical ideal": 68,
+    "constant chart polynomial symplectic determinant": 12,
+    "diagonal Hamiltonian eigenvalues": 12,
+    "diagonal monomial eigenweight equivalence": 605,
+    "every globally regular control boundary critical": 16,
+    "generic discriminant squarefree": 68,
+    "higher residue creates critical repeated factor": 4,
+    "independent original t coefficient recurrence": 340,
+    "integer residue higher-power positive control": 5,
+    "linear chart polynomial cancellation": 32,
+    "literal original logarithmic bracket": 68,
+    "minimum quadratic witness fails globality": 1,
+    "minimum quadratic witness hostile bracket": 1,
+    "minimum quadratic witness hostile source submersion": 1,
+    "necessary discriminant degree and leading coefficient": 68,
+    "positive-genus squarefree control": 1,
+    "quadratic witness cannot cancel with nonconstant polynomial in F": 1,
+    "repeated-pencil exact discriminant": 1,
+    "repeated-pencil gauge hostile bracket": 1,
+    "repeated-pencil hostile has source submersion": 1,
+    "repeated-pencil hostile not global": 1
+  },
+  "globally_regular_pairs": 16,
+  "primary_source_sha256": "162360786a05ed8d592f635c61ee00094522055cd2e8ac2f90401ad63b02b875",
+  "scope": "Analytic squarefree quadratic witness exclusion on fixed W2; finite controls do not impose coefficient bounds.",
+  "total_gates": 1388
+}

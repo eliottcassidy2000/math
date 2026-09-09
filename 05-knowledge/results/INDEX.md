@@ -1,5 +1,12 @@
 # Script Results Index
 
+- **New audited quadratic-witness results:** [squarefree generic pencils](continuing15_20260909_squarefree_quadratic_witness.md)
+  cannot supply an order-one repair witness for a global W2 submersion,
+  with no bound on first-function degree. [Exact logarithmic spectra](continuing15_20260909_quadratic_logarithmic_scout.md)
+  exhibit an unbounded global divisor obstruction after identical local
+  residues, and source-submersive witnesses of minimum t-degree two.
+  [Manifest](continuing15_20260909_manifest.json) pins both independent audits.
+
 - [Tournament continuation](tournament_continuation_20260908.md):
   **PROVED scoped + FINITE-EXACT + INDEPENDENTLY AUDITED.** THM-4463--4466
   classify homogeneous-pair contact floors, signed checksum section periods,

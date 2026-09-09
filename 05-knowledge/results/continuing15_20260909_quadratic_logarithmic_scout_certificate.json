@@ -1,0 +1,182 @@
+{
+  "conic_controls": [
+    {
+      "A": "2",
+      "B": "x**2 + 1",
+      "C": "-x**2/8 - 3*x/8 + (x**2 + 1)**2/8 - 5/8",
+      "n": 1
+    },
+    {
+      "A": "x",
+      "B": "1",
+      "C": "-x/4 - 3/4",
+      "n": 1
+    },
+    {
+      "A": "2",
+      "B": "x**2 + 1",
+      "C": "-x**2/32 - 3*x/8 + (x**2 + 1)**2/8 - 5/8",
+      "n": 2
+    },
+    {
+      "A": "x",
+      "B": "1",
+      "C": "-x/16 - 3/4",
+      "n": 2
+    },
+    {
+      "A": "2",
+      "B": "x**2 + 1",
+      "C": "-x**2/72 - 3*x/8 + (x**2 + 1)**2/8 - 5/8",
+      "n": 3
+    },
+    {
+      "A": "x",
+      "B": "1",
+      "C": "-x/36 - 3/4",
+      "n": 3
+    },
+    {
+      "A": "2",
+      "B": "x**2 + 1",
+      "C": "-x**2/128 - 3*x/8 + (x**2 + 1)**2/8 - 5/8",
+      "n": 4
+    },
+    {
+      "A": "x",
+      "B": "1",
+      "C": "-x/64 - 3/4",
+      "n": 4
+    }
+  ],
+  "cyclic_spectrum_controls": [
+    {
+      "least_positive": 1,
+      "m": 1,
+      "negative": "t*(t*x**2 + 1)**3",
+      "positive": "t**2*x**3"
+    },
+    {
+      "least_positive": 1,
+      "m": 2,
+      "negative": "t*(t*x**3 + 1)**2",
+      "positive": "t*x**2"
+    },
+    {
+      "least_positive": 3,
+      "m": 3,
+      "negative": "t**3*(t*x**4 + 1)**5",
+      "positive": "t**2*x**5"
+    },
+    {
+      "least_positive": 2,
+      "m": 4,
+      "negative": "t**2*(t*x**5 + 1)**3",
+      "positive": "t*x**3"
+    },
+    {
+      "least_positive": 5,
+      "m": 5,
+      "negative": "t**5*(t*x**6 + 1)**7",
+      "positive": "t**2*x**7"
+    },
+    {
+      "least_positive": 3,
+      "m": 6,
+      "negative": "t**3*(t*x**7 + 1)**4",
+      "positive": "t*x**4"
+    },
+    {
+      "least_positive": 7,
+      "m": 7,
+      "negative": "t**7*(t*x**8 + 1)**9",
+      "positive": "t**2*x**9"
+    },
+    {
+      "least_positive": 4,
+      "m": 8,
+      "negative": "t**4*(t*x**9 + 1)**5",
+      "positive": "t*x**5"
+    }
+  ],
+  "elliptic_hostile": "H=x5*t\u00b2+xt; integral residues but degree-one divisor nonprincipal",
+  "exact_all_m_spectrum": "[m/gcd(m,2)] Z for rational and polynomial eigenfunctions",
+  "finite_orders": [
+    [
+      1,
+      0
+    ],
+    [
+      2,
+      -1
+    ],
+    [
+      3,
+      -2
+    ],
+    [
+      4,
+      -2
+    ],
+    [
+      5,
+      -4
+    ],
+    [
+      6,
+      -3
+    ],
+    [
+      7,
+      -6
+    ],
+    [
+      8,
+      -4
+    ],
+    [
+      9,
+      -8
+    ],
+    [
+      10,
+      -5
+    ]
+  ],
+  "gates": 520,
+  "nonlinear_witness_controls": [
+    {
+      "P_degree": 1,
+      "boundary_pole": 3,
+      "minimum_witness_t_degree": 2,
+      "source_t_degree": 3
+    },
+    {
+      "P_degree": 2,
+      "boundary_pole": 5,
+      "minimum_witness_t_degree": 2,
+      "source_t_degree": 5
+    },
+    {
+      "P_degree": 3,
+      "boundary_pole": 7,
+      "minimum_witness_t_degree": 2,
+      "source_t_degree": 7
+    },
+    {
+      "P_degree": 4,
+      "boundary_pole": 9,
+      "minimum_witness_t_degree": 2,
+      "source_t_degree": 9
+    },
+    {
+      "P_degree": 5,
+      "boundary_pole": 11,
+      "minimum_witness_t_degree": 2,
+      "source_t_degree": 11
+    }
+  ],
+  "producer_imports": false,
+  "scope": "Complete raw existence iff for squarefree generic D; necessary conditions and hostiles outside it; global nonsquarefree W2 remains open",
+  "status": "Analytic unbounded proof plus FINITE-EXACT controls; independent audit pending"
+}
