@@ -1,6 +1,6 @@
 {
   "schema": 1,
-  "created_utc": "2026-09-09T00:41:50.486833+00:00",
+  "created_utc": "2026-09-09T00:44:27.012286+00:00",
   "baseline_commit": "1d099f2c66dff8165559c48962b6f97fadd4c061",
   "incoming_commits": [
     "d5145cc60",
@@ -8,13 +8,15 @@
     "ed17e03c5"
   ],
   "integrated_base": "ed17e03c5",
-  "proof_checkpoints": [],
-  "scope": "Complete squarefree quadratic-witness global W2 exclusion with no first-function degree bound; exact polynomial/rational spectrum of a nonsquarefree cyclic family. Only independently accepted packets are pinned; general LRC14, planar JC and global nonsquarefree witness questions remain open.",
+  "proof_checkpoints": [
+    "a505a94dfb03e265d591862fd97ee069455be746"
+  ],
+  "scope": "Complete squarefree quadratic-witness global W2 exclusion with no first-function degree bound; exact polynomial/rational spectrum of a nonsquarefree cyclic family. Universal weighted cyclic cubic bound from the all-real trace-square-zero inequality, with complete matrix equality criterion. Only independently accepted packets are pinned; general LRC14, planar JC and global nonsquarefree witness questions remain open.",
   "hash_basis": "Raw LF bytes; maintained synthesis/navigation and manifest excluded; audited status transitions retained explicitly.",
-  "artifact_count": 16,
-  "program_count": 4,
-  "certificate_count": 4,
-  "exact_gates_per_mode": 2271,
+  "artifact_count": 24,
+  "program_count": 6,
+  "certificate_count": 6,
+  "exact_gates_per_mode": 195479,
   "prior_pins_verified": 1051,
   "normal_optimized_stdout_equal": true,
   "regenerated_certificates_unchanged": true,
@@ -50,6 +52,22 @@
       "output_sha256": "7dc539f8515e6232669e6d4376ded2e6858e809d6bfdbff990693bfb5d8d9ada",
       "relocated_cert_unchanged": true,
       "source_sha256": "162360786a05ed8d592f635c61ee00094522055cd2e8ac2f90401ad63b02b875"
+    },
+    "continuing15_20260909_universal_cubic_audit": {
+      "certificate_sha256": "9ddb893ea03822185cdd142203a10b08850729ee46cbe02b5c6bd6ad9e56cd8a",
+      "gates": 77236,
+      "normal_optimized_equal": true,
+      "output_sha256": "735e41b88ae74764a875259cca656d636a0f6260ac5ac09eabe8cd49ff4843d2",
+      "relocated_cert_unchanged": true,
+      "source_sha256": "26dd0ed15a354c2d9dfed53339dc5b01b5af3e3a9c35516ac2933c665805e3cf"
+    },
+    "continuing15_20260909_universal_cubic_bound": {
+      "certificate_sha256": "3dc2f6540cc76290256321b558fdc73076a2577df832a77eaa719d31998e1263",
+      "gates": 115972,
+      "normal_optimized_equal": true,
+      "output_sha256": "e29c6fb53c742fe08c8062848d72d0b7279b20173b3d2256f8e50480474b6121",
+      "relocated_cert_unchanged": true,
+      "source_sha256": "27af22e5785f3a82f71930381d5dc3b85a6d963c6e7744e1ad95e9fc0d8af6ad"
     }
   },
   "primary_acceptance_transitions": {
@@ -64,6 +82,12 @@
       "authorized_change": "Audit status and independent referee link only",
       "filed_report_sha256": "7f84f1ac64ff217083f6d4494e9cc7ea026dc74f90611cf092332b5266b3333f",
       "referee": "continuing15_20260909_squarefree_quadratic_audit.md"
+    },
+    "continuing15_20260909_universal_cubic_bound": {
+      "accepted_report_sha256": "2ecfe0ee8fd7fe2aa65113a7e6c29df0f2214cefa45e739444cfcb92fb2c1bd6",
+      "authorized_change": "Audit status and independent referee link only",
+      "filed_report_sha256": "d2f2df6df5fdf155c209f1224e0285ed381eb2dafeaebba085c15c530c608c0a",
+      "referee": "continuing15_20260909_universal_cubic_audit.md"
     }
   },
   "artifacts": [
@@ -86,6 +110,16 @@
       "path": "04-computation/continuing15_20260909_squarefree_quadratic_witness.py",
       "bytes": 6694,
       "sha256": "162360786a05ed8d592f635c61ee00094522055cd2e8ac2f90401ad63b02b875"
+    },
+    {
+      "path": "04-computation/continuing15_20260909_universal_cubic_audit.py",
+      "bytes": 11262,
+      "sha256": "26dd0ed15a354c2d9dfed53339dc5b01b5af3e3a9c35516ac2933c665805e3cf"
+    },
+    {
+      "path": "04-computation/continuing15_20260909_universal_cubic_bound.py",
+      "bytes": 6310,
+      "sha256": "27af22e5785f3a82f71930381d5dc3b85a6d963c6e7744e1ad95e9fc0d8af6ad"
     },
     {
       "path": "05-knowledge/results/continuing15_20260909_quadratic_logarithmic_scout.md",
@@ -146,6 +180,36 @@
       "path": "05-knowledge/results/continuing15_20260909_squarefree_quadratic_witness_certificate.json",
       "bytes": 17919,
       "sha256": "5504e3243f43e60a1fa61ef37e60b7e411e94e44e7a9c7d789c4e65f337841a8"
+    },
+    {
+      "path": "05-knowledge/results/continuing15_20260909_universal_cubic_audit.md",
+      "bytes": 12625,
+      "sha256": "8893bef9559ab7aa513b4fb1f568e01afb78b90b9d0ff662482a879f9d8fbddd"
+    },
+    {
+      "path": "05-knowledge/results/continuing15_20260909_universal_cubic_audit.out",
+      "bytes": 345,
+      "sha256": "735e41b88ae74764a875259cca656d636a0f6260ac5ac09eabe8cd49ff4843d2"
+    },
+    {
+      "path": "05-knowledge/results/continuing15_20260909_universal_cubic_audit_certificate.json",
+      "bytes": 28000,
+      "sha256": "9ddb893ea03822185cdd142203a10b08850729ee46cbe02b5c6bd6ad9e56cd8a"
+    },
+    {
+      "path": "05-knowledge/results/continuing15_20260909_universal_cubic_bound.md",
+      "bytes": 7009,
+      "sha256": "d2f2df6df5fdf155c209f1224e0285ed381eb2dafeaebba085c15c530c608c0a"
+    },
+    {
+      "path": "05-knowledge/results/continuing15_20260909_universal_cubic_bound.out",
+      "bytes": 504,
+      "sha256": "e29c6fb53c742fe08c8062848d72d0b7279b20173b3d2256f8e50480474b6121"
+    },
+    {
+      "path": "05-knowledge/results/continuing15_20260909_universal_cubic_bound_certificate.json",
+      "bytes": 3249,
+      "sha256": "3dc2f6540cc76290256321b558fdc73076a2577df832a77eaa719d31998e1263"
     }
   ]
 }

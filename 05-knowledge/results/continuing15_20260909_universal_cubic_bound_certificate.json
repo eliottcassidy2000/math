@@ -1,0 +1,89 @@
+{
+  "equality_cases": [
+    {
+      "C": 1,
+      "E": 3,
+      "F": 3,
+      "returns": 1
+    },
+    {
+      "C": 8,
+      "E": 12,
+      "F": 24,
+      "returns": 4
+    },
+    {
+      "C": 27,
+      "E": 27,
+      "F": 81,
+      "returns": 9
+    },
+    {
+      "C": 64,
+      "E": 48,
+      "F": 192,
+      "returns": 16
+    },
+    {
+      "C": 125,
+      "E": 75,
+      "F": 375,
+      "returns": 25
+    }
+  ],
+  "exhaustive_counts": {
+    "1": 1,
+    "2": 5,
+    "3": 125,
+    "4": 15625
+  },
+  "gates": {
+    "all four real controls genuinely outside oriented cone": 1,
+    "complete declared finite universe": 1,
+    "equality matrix normality": 5,
+    "equality rank three": 5,
+    "exhaustive small actual positive production norm bound": 15756,
+    "exhaustive small independent shear matrix contraction": 15756,
+    "exhaustive small literal trace cube versus cycles": 15756,
+    "exhaustive small literal trace square zero": 15756,
+    "exhaustive small nonnegative transitive penalty": 15756,
+    "exhaustive small production versus cyclic trace": 15756,
+    "exhaustive small unrestricted cyclic cubic bound": 15756,
+    "larger fixed-seed scout actual positive production norm bound": 800,
+    "larger fixed-seed scout independent shear matrix contraction": 800,
+    "larger fixed-seed scout literal trace cube versus cycles": 800,
+    "larger fixed-seed scout literal trace square zero": 800,
+    "larger fixed-seed scout nonnegative transitive penalty": 800,
+    "larger fixed-seed scout production versus cyclic trace": 800,
+    "larger fixed-seed scout unrestricted cyclic cubic bound": 800,
+    "multi-return equality actual positive production norm bound": 5,
+    "multi-return equality independent shear matrix contraction": 5,
+    "multi-return equality literal trace cube versus cycles": 5,
+    "multi-return equality literal trace square zero": 5,
+    "multi-return equality nonnegative transitive penalty": 5,
+    "multi-return equality production versus cyclic trace": 5,
+    "multi-return equality unrestricted cyclic cubic bound": 5,
+    "nonnormal defect is actual": 1,
+    "nonnormal similarity actual positive production norm bound": 1,
+    "nonnormal similarity independent shear matrix contraction": 1,
+    "nonnormal similarity is strict": 1,
+    "nonnormal similarity literal trace cube versus cycles": 1,
+    "nonnormal similarity literal trace square zero": 1,
+    "nonnormal similarity nonnegative transitive penalty": 1,
+    "nonnormal similarity production versus cyclic trace": 1,
+    "nonnormal similarity unrestricted cyclic cubic bound": 1,
+    "nontriangle equality is preserved": 5,
+    "rational orthogonal transport": 4,
+    "real outside-cone equality normality": 4,
+    "real outside-cone sharp equality": 4,
+    "real outside-cone trace moments": 4,
+    "scalar derivative identity": 1,
+    "sharp scalar maximum value": 1,
+    "strict scalar endpoint values": 1
+  },
+  "larger_scout": 800,
+  "scope": "Unrestricted real trace-square-zero cubic theorem; finite controls support analytic proof.",
+  "semantic_sha256": "53e0dd7fcddc591c5d6476c4ea830d0ab6d7c123010d89e4c4d727894bb86ad3",
+  "source_sha256": "27af22e5785f3a82f71930381d5dc3b85a6d963c6e7744e1ad95e9fc0d8af6ad",
+  "total_gates": 115972
+}

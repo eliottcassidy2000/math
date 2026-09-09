@@ -1,0 +1,5 @@
+EXHAUSTIVE_COUNTS {"1": 1, "2": 5, "3": 125, "4": 15625} LARGER_SCOUT 800
+SEMANTIC_SHA256 53e0dd7fcddc591c5d6476c4ea830d0ab6d7c123010d89e4c4d727894bb86ad3
+EQUALITY_CASES [{"C": 1, "E": 3, "F": 3, "returns": 1}, {"C": 8, "E": 12, "F": 24, "returns": 4}, {"C": 27, "E": 27, "F": 81, "returns": 9}, {"C": 64, "E": 48, "F": 192, "returns": 16}, {"C": 125, "E": 75, "F": 375, "returns": 25}]
+TOTAL_ALWAYS_ACTIVE_GATES 115972
+CERTIFICATE_SHA256 3dc2f6540cc76290256321b558fdc73076a2577df832a77eaa719d31998e1263

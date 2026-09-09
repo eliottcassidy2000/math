@@ -1,5 +1,10 @@
 # Script Results Index
 
+- **Universal weighted cyclic bound, independently audited:** [the real spectral theorem](continuing15_20260909_universal_cubic_bound.md)
+  proves `|tr(M^3)| <= ||M||_F^3/sqrt(3)` whenever real M has `tr(M^2)=0`.
+  This closes the arbitrary-support extension left in THM-4466 and gives
+  the complete normal rank-three equality criterion. [Referee](continuing15_20260909_universal_cubic_audit.md).
+
 - **New audited quadratic-witness results:** [squarefree generic pencils](continuing15_20260909_squarefree_quadratic_witness.md)
   cannot supply an order-one repair witness for a global W2 submersion,
   with no bound on first-function degree. [Exact logarithmic spectra](continuing15_20260909_quadratic_logarithmic_scout.md)

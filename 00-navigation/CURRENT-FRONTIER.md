@@ -198,6 +198,8 @@ proves the full A2 parity response negative at the original zero; beta-skip is O
 
 ### Reliable structural toolkit
 
+- [Universal cyclic bound](../05-knowledge/results/continuing15_20260909_universal_cubic_bound.md):
+  every weighted oriented support has `F<=3C<=E^(3/2)/sqrt(3)`; exact spectral equality. PDE entry OPEN.
 - THM-1805 makes directed triangles the Vandermonde-cancellation atom; THM-1862/1936 make `H` and signed Rédei data multiplicative under order-join while `c3` is additive.
 - [THM-2183](../01-canon/theorems/THM-2183-order-join-is-an-exact-tournament-metric-product.md) makes `d_iso` exactly `l1` on fixed order-join patches by image-swap uncrossing; the ambient quotient still has triangles and is not a partial cube.
 - [THM-2195](../01-canon/theorems/THM-2195-transitive-quotients-exactly-control-universal-substitution-products.md) gives the scalar iff-transitive boundary; THM-2242/2249/2256 give its response, envelope, and scale limit.
