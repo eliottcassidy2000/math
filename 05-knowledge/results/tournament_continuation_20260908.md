@@ -2,7 +2,7 @@
 
 **PROVED scoped results + FINITE-EXACT controls + independent audits,
 2026-09-08.** Four theorem files turn the prior cross-concept bridges into
-tournament statements. General LRC(14), the full transport inequality
+tournament statements. General LRC(14), the Hamiltonian/Pfaffian inequality
 `H >= disc`, and smooth-fluid singularity/regularity questions remain
 **OPEN**. A universal weighted cubic bound is unproved here; no external
 priority claim is made.
@@ -57,11 +57,12 @@ defines the external row disagreement
 h(u,v) = number of other vertices seeing u and v differently.
 ```
 
-For the forced-pair contact functional, its contact with a permutation is
-exactly `sum_v h(v,tau(v))`. The zero-disagreement graph is a disjoint union
+For the forced-pair contact functional,
+`w(id,tau)=sum_v h(v,tau(v))`. The zero-disagreement graph is a disjoint union
 of consistently directed paths: their vertex sets are the maximal
-transitive modules. Every zero contact is a matching of adjacent swaps
-along these paths, and its diagonal cost is the number of swaps.
+transitive modules. Relative to an automorphism layer sigma, every zero
+contact has `sigma^(-1) tau` equal to a matching of adjacent swaps along
+these paths, and its diagonal cost is the number of swaps.
 
 Consequently, outside automorphism axes, the integral forced Hall envelope
 at block scale N obeys an exact structural dichotomy:

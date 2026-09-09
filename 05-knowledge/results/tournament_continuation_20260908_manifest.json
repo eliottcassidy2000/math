@@ -3,7 +3,7 @@
   "date": "2026-09-08",
   "source_base": "c53b407b72bc",
   "reservation_pre_rebase": "ffa8059da",
-  "scope": "Four scoped tournament results. General transport H>=disc, LRC14, and PDE closure are not proved. Universal weighted cyclic bound is unproved here, with no external open-problem or priority claim.",
+  "scope": "Four scoped tournament results. General Hamiltonian/Pfaffian H>=disc, LRC14, and PDE closure are not proved. Universal weighted cyclic bound is unproved here, with no external open-problem or priority claim.",
   "reproduction": "Run each script with python3 and python3 -O from repo root; compare LF-normalized stdout to the listed output.",
   "items": [
     {

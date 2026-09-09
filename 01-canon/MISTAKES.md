@@ -9,6 +9,48 @@ Format per entry:
 - Why it was wrong
 - The correct framing
 
+## 2026-09-08 tournament continuation -- the next operation needs its sidecar
+
+- **REFUTED contact-metric shortcut:** external row disagreement h is not
+  itself a metric. In the transitive triple, successive pairs have h=0
+  while the endpoints have h=1. Adding the off-diagonal endpoint charge
+  gives full row Hamming distance. Zero contacts are matching swaps along
+  homogeneous-pair paths, relative to the chosen automorphism; composing
+  two adjacent swaps need not remain a zero contact. The missing coordinate
+  is external incidence, and the next consumer is residual reversal cost.
+- **REFUTED pinning inference:** distinguishing every homogeneous pair
+  does not imply an N-scale forced envelope. A single alternating pin on
+  the transitive triple distinguishes both pairs but leaves the floor
+  three. Retain integral metric mass: the eventual floor is
+  `min_pair(1+2Duv)`; linear separation in N is a sufficient repair.
+  [THM-4463](theorems/THM-4463-homogeneous-tournament-contacts-and-pinned-scale-floor.md)
+  proves the exact forced-envelope statements, not the full internal G.
+- **REFUTED output/amplitude reconstruction:** at checksum m=8,j=1,
+  four rotations return the valued section tournament and address but
+  reverse heads/tails. A root sign repairs the tracked-section output;
+  an arbitrary section also needs the input's relative sheet. At four
+  vertices positive vertex weights cannot restore determinant amplitudes
+  from signs: Plucker `1-2+1=0` becomes `1-1+1!=0`. Preserve the actual
+  edge amplitudes for weighted consumers; see
+  [THM-4464](theorems/THM-4464-checksum-projective-tournament-and-output-sheet-cocycle.md).
+- **REFUTED scalar block continuation:** `(size,edge mass,F)` supports
+  constant contacts but loses general exterior response. Two cyclic
+  three-vertex blocks with state `(3,4,6)` and the same weight multiset,
+  attached to the same source, give `F=+2/9` and `F=-2/9`. The failed step
+  is predicting the quadratic boundary charge from its scalar summary;
+  retain `Q_B(b)=sum w_uv b_u b_v`. Also, a reducible weighted tournament
+  with all weights in `[1/2,1]` has F=9/2: the unit reducibility ceiling
+  does not extend to arbitrary amplitudes. Both repairs and witnesses are in
+  [THM-4465](theorems/THM-4465-weighted-tournament-shear-production-and-contact-kernel.md).
+- **Equality and notation audit:** cubic-norm equality need not concentrate
+  on one triangle. One edge of weight two with four unit two-edge returns
+  gives E=12,F=24, with unused edges zero;
+  [THM-4466](theorems/THM-4466-sharp-tournament-cubic-bound-for-common-edge-and-substitution-classes.md)
+  retains this family in the proved scope and the next universal-bound
+  question. The synthesis audit also repaired a naming error: `H>=disc`
+  is the Hamiltonian/Pfaffian inequality, not another name for full reversal
+  cost G. No implication between those separate obligations was proved.
+
 ## 2026-09-08 continuing14 -- complete quotients still need original states
 
 - **REFUTED LRC graph inference:** at7,812 a connected possible zero graph

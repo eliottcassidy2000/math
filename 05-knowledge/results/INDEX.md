@@ -1,5 +1,13 @@
 # Script Results Index
 
+- [Tournament continuation](tournament_continuation_20260908.md):
+  **PROVED scoped + FINITE-EXACT + INDEPENDENTLY AUDITED.** THM-4463--4466
+  classify homogeneous-pair contact floors, signed checksum section periods,
+  weighted shear/contact laws and a sharp cyclic bound on the stated
+  substitution grammar. [Manifest](tournament_continuation_20260908_manifest.json)
+  pins four proofs and normal/optimized exact replays. Full reversal costs,
+  Hamiltonian/Pfaffian `H>=disc`, LRC14 and PDE closure remain separate.
+
 - [Current continuing synthesis](continuing14_20260908_synthesis.md):
   **PROVED + FINITE-EXACT + INDEPENDENTLY AUDITED.** A complete zero-budget
   LRC survey removes729 clocks, leaving6,889/max11,934; the zero-budget
