@@ -7,6 +7,10 @@
   [logarithmic spectra](continuing15_20260909_quadratic_logarithmic_scout.md)
   expose an unbounded divisor obstruction. [Manifest](continuing15_20260909_manifest.json).
 
+- **Audited LRC zero-budget step:** [mandatory actual wedges](continuing15_20260909_lrc_mandatory_wedges.md)
+  close clocks 5,880, 6,804, and 7,056, leaving 6,886 necessary
+  connected-complement clocks and a 353-clock zero-budget slice.
+
 - [Tournament continuation](tournament_continuation_20260908.md):
   **PROVED scoped + FINITE-EXACT + INDEPENDENTLY AUDITED.** THM-4463--4466
   classify homogeneous-pair contact floors, signed checksum section periods,

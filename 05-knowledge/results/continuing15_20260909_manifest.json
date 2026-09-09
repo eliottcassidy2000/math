@@ -1,6 +1,6 @@
 {
   "schema": 1,
-  "created_utc": "2026-09-09T00:44:27.012286+00:00",
+  "created_utc": "2026-09-09T01:16:46.437764+00:00",
   "baseline_commit": "1d099f2c66dff8165559c48962b6f97fadd4c061",
   "incoming_commits": [
     "d5145cc60",
@@ -9,18 +9,35 @@
   ],
   "integrated_base": "ed17e03c5",
   "proof_checkpoints": [
-    "a505a94dfb03e265d591862fd97ee069455be746"
+    "a505a94dfb03e265d591862fd97ee069455be746",
+    "3b7d443834420639600fd84d6fdcae2098dcbea3"
   ],
-  "scope": "Complete squarefree quadratic-witness global W2 exclusion with no first-function degree bound; exact polynomial/rational spectrum of a nonsquarefree cyclic family. Universal weighted cyclic cubic bound from the all-real trace-square-zero inequality, with complete matrix equality criterion. Only independently accepted packets are pinned; general LRC14, planar JC and global nonsquarefree witness questions remain open.",
+  "scope": "Complete squarefree quadratic-witness global W2 exclusion with no first-function degree bound; exact polynomial/rational spectrum of a nonsquarefree cyclic family. Universal weighted cyclic cubic bound from the all-real trace-square-zero inequality, with complete matrix equality criterion. Mandatory original-speed wedges close three connected-complement clocks, leaving6886/max11934 and353 zero-budget clocks/max6552. Only independently accepted packets are pinned; general LRC14, planar JC and global nonsquarefree witness questions remain open.",
   "hash_basis": "Raw LF bytes; maintained synthesis/navigation and manifest excluded; audited status transitions retained explicitly.",
-  "artifact_count": 24,
-  "program_count": 6,
-  "certificate_count": 6,
-  "exact_gates_per_mode": 195479,
+  "artifact_count": 34,
+  "program_count": 8,
+  "certificate_count": 8,
+  "exact_gates_per_mode": 452007,
   "prior_pins_verified": 1051,
   "normal_optimized_stdout_equal": true,
   "regenerated_certificates_unchanged": true,
   "validation": {
+    "continuing15_20260909_lrc_independent_audit": {
+      "certificate_sha256": "b835023e22687270995b4f5956c7ec453c1c89835ea5557935d8f443727c26e3",
+      "gates": 179124,
+      "normal_optimized_equal": true,
+      "output_sha256": "21b0633091dd810b73aea2f9b5ef3dc4c53bd9d17b02fc5400523d792188d246",
+      "relocated_cert_unchanged": true,
+      "source_sha256": "7569f77719a8677b9b5f4753d98cd3b0f67597dbdc9dbc26ffd05efdff7b783d"
+    },
+    "continuing15_20260909_lrc_mandatory_wedges": {
+      "certificate_sha256": "6927c5d3c64d5983acd149b675ad4df334e38e90c8952e793be5772b45bda277",
+      "gates": 77404,
+      "normal_optimized_equal": true,
+      "output_sha256": "629b81839af568a50433c783c878fdeb4bb25a35a9eea9bd55ea50a94dc2961b",
+      "relocated_cert_unchanged": true,
+      "source_sha256": "695d8ae6f73236db83a0c75500d15ddae28d2819043ed10d8338d38be7c59a00"
+    },
     "continuing15_20260909_quadratic_logarithmic_scout": {
       "certificate_sha256": "324c2417015c6974ebf0698d8df339c2753884a87f563e82c59c23c1c9b46f3e",
       "gates": 520,
@@ -71,6 +88,12 @@
     }
   },
   "primary_acceptance_transitions": {
+    "continuing15_20260909_lrc_mandatory_wedges": {
+      "accepted_report_sha256": "0fb26e30697f69c4ce7346a0e21da8bf1ff15cd6aea4b7a706ad532e9c1bd7a8",
+      "authorized_change": "Audit status and independent referee link only",
+      "filed_report_sha256": "35dbac76845680637859068e135a546987bc1523b7e3e883e780a64b49949efc",
+      "referee": "continuing15_20260909_lrc_independent_audit.md"
+    },
     "continuing15_20260909_quadratic_logarithmic_scout": {
       "accepted_report_sha256": "e969113c9048dcc9ea30195aadaa1993e445235a4f00ed57014f988c510e04cc",
       "authorized_change": "Audit status and independent referee link only",
@@ -91,6 +114,26 @@
     }
   },
   "artifacts": [
+    {
+      "path": "04-computation/continuing15_20260909_lrc_independent_audit.cpp",
+      "bytes": 13606,
+      "sha256": "8723c21fcc3337434ffc627211724e3f1791859b901e8f5de2af8a8f50c0ac65"
+    },
+    {
+      "path": "04-computation/continuing15_20260909_lrc_independent_audit.py",
+      "bytes": 22852,
+      "sha256": "7569f77719a8677b9b5f4753d98cd3b0f67597dbdc9dbc26ffd05efdff7b783d"
+    },
+    {
+      "path": "04-computation/continuing15_20260909_lrc_mandatory_wedges.cpp",
+      "bytes": 2594,
+      "sha256": "15e9bba0e4331beff34fa1ffb7a4edbbb087e3838503294e0e6fcd1d443cd96e"
+    },
+    {
+      "path": "04-computation/continuing15_20260909_lrc_mandatory_wedges.py",
+      "bytes": 20628,
+      "sha256": "695d8ae6f73236db83a0c75500d15ddae28d2819043ed10d8338d38be7c59a00"
+    },
     {
       "path": "04-computation/continuing15_20260909_quadratic_logarithmic_scout.py",
       "bytes": 8023,
@@ -120,6 +163,36 @@
       "path": "04-computation/continuing15_20260909_universal_cubic_bound.py",
       "bytes": 6310,
       "sha256": "27af22e5785f3a82f71930381d5dc3b85a6d963c6e7744e1ad95e9fc0d8af6ad"
+    },
+    {
+      "path": "05-knowledge/results/continuing15_20260909_lrc_independent_audit.md",
+      "bytes": 12692,
+      "sha256": "e965235a5ea2fa2f5a99551e2e6d0b5f9711fbd980d60969bf843a231700d4db"
+    },
+    {
+      "path": "05-knowledge/results/continuing15_20260909_lrc_independent_audit.out",
+      "bytes": 771,
+      "sha256": "21b0633091dd810b73aea2f9b5ef3dc4c53bd9d17b02fc5400523d792188d246"
+    },
+    {
+      "path": "05-knowledge/results/continuing15_20260909_lrc_independent_audit_certificate.json",
+      "bytes": 632161,
+      "sha256": "b835023e22687270995b4f5956c7ec453c1c89835ea5557935d8f443727c26e3"
+    },
+    {
+      "path": "05-knowledge/results/continuing15_20260909_lrc_mandatory_wedges.md",
+      "bytes": 19109,
+      "sha256": "35dbac76845680637859068e135a546987bc1523b7e3e883e780a64b49949efc"
+    },
+    {
+      "path": "05-knowledge/results/continuing15_20260909_lrc_mandatory_wedges.out",
+      "bytes": 664,
+      "sha256": "629b81839af568a50433c783c878fdeb4bb25a35a9eea9bd55ea50a94dc2961b"
+    },
+    {
+      "path": "05-knowledge/results/continuing15_20260909_lrc_mandatory_wedges_certificate.json",
+      "bytes": 7204469,
+      "sha256": "6927c5d3c64d5983acd149b675ad4df334e38e90c8952e793be5772b45bda277"
     },
     {
       "path": "05-knowledge/results/continuing15_20260909_quadratic_logarithmic_scout.md",
