@@ -9,6 +9,32 @@ Format per entry:
 - Why it was wrong
 - The correct framing
 
+## 2026-09-08 continuing14 -- complete quotients still need original states
+
+- **REFUTED LRC graph inference:** at7,812 a connected possible zero graph
+  forces three distinct margin-4 speeds to the same ratio320/33 of one
+  margin-12 speed. Preserve actual speed injectivity through complete
+  oriented ratio slots. Strict-wall zeros can also lose required marginal
+  attainment. The [complete zero-budget census](../05-knowledge/results/continuing14_20260908_lrc_zero_classification.md)
+  keeps cuts, attained marginals and distinct-speed slots separate.
+- **REFUTED multiplicity repair:** even the full ambient torsion with its
+  pointed unit, supports and component multiplicities misses geometric
+  generic-fibre configuration. The [degree15 pair](../05-knowledge/results/continuing14_20260908_same_torsion_different_fibres.md)
+  has equal torsion and degree30 pairs but unequal primitive affine classes.
+  Closed-point degrees are lost after algebraic closure; cross-ratio
+  degeneration counts and a separate quintic exhaustion repair that step.
+- **REFUTED globality shortcut:** F=t(1+xt) has exact nonzero unit order1
+  and is globally regular on W2, but its entire added divisor is critical.
+  Its primitive parts are (0,+1/F), with the sign checked on both original
+  components. [Source-linear witness classification](../05-knowledge/results/continuing14_20260908_logarithmic_linear_witness.md)
+  leaves witness degree at least2; a logarithmic identity can also have zero unit.
+- **REFUTED scalar separator repair:** isolated theta costs cannot simply
+  be added after sharing a line. The [line-state family](../05-knowledge/results/continuing14_20260908_no3_line_states.md)
+  costs4k-2 for its three chosen directions, instead of2k. Retain exact
+  line counts and arbitrary, possibly nonconvex continuation costs. Port
+  coverage must also prevent a false half-retained original cell. Overhead
+  is polynomial per enumerated branch, not polynomial despite branching.
+
 ## 2026-09-08 continuing13 -- actual source jets and separator states
 
 - **REFUTED support repair:** adding the entire target support set to the

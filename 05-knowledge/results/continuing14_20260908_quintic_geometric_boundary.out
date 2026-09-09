@@ -1,0 +1,5 @@
+PASS: complete quintic geometric-reconstruction boundary
+Scaling forces identity; inversion contradicts C1*C2!=0
+Combined with q>=3: geometric reconstruction iff for entire supplier q>=2
+Always-active gates: 50
+Certificate SHA256: 02bb0f220d9653fb73f4d18d8ffb7017c26a3cd6cdc05b02887699f7e17b3c51

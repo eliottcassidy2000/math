@@ -1,0 +1,100 @@
+{
+  "abstract_counts": {
+    "0": 1,
+    "1": 1,
+    "2": 2,
+    "3": 9,
+    "4": 96
+  },
+  "board_counts": {
+    "2": 1,
+    "3": 6,
+    "4": 90
+  },
+  "family": [
+    {
+      "blocks": 7,
+      "k": 1,
+      "new_bound": 30,
+      "old_valid_branches": 4,
+      "tau": 2
+    },
+    {
+      "blocks": 14,
+      "k": 2,
+      "new_bound": 60,
+      "old_valid_branches": 16,
+      "tau": 6
+    },
+    {
+      "blocks": 21,
+      "k": 3,
+      "new_bound": 90,
+      "old_valid_branches": 56,
+      "tau": 10
+    },
+    {
+      "blocks": 28,
+      "k": 4,
+      "new_bound": 120,
+      "old_valid_branches": 176,
+      "tau": 14
+    },
+    {
+      "blocks": 35,
+      "k": 5,
+      "new_bound": 150,
+      "old_valid_branches": 512,
+      "tau": 18
+    },
+    {
+      "blocks": 42,
+      "k": 6,
+      "new_bound": 180,
+      "old_valid_branches": 1408,
+      "tau": 22
+    }
+  ],
+  "gates": {
+    "actual ten-point nonconvex original repair": 1,
+    "all abstract original-cell systems agree": 109,
+    "all actual geometric family lines and cells": 6,
+    "arbitrary profile gadget signs": 217,
+    "complete independent abstract incidence universe": 5,
+    "complete independent theta contribution table": 1,
+    "coverage dominance excludes half-retained original cell": 1,
+    "every abstract root preserves exact original cost": 985,
+    "exact geometric optimum and unmerged parameter": 6,
+    "exact old retained exceptional branch count": 6,
+    "impossible exact parent degree rejected": 1,
+    "independent biconnected components retain both separator types": 1183,
+    "independent exact separator DP equals original retained subsets": 97,
+    "independent full Cartesian two-regular board universe": 3,
+    "literal maximum matching covers all original cell ports": 218,
+    "literal nonconvex branch and continuation profiles": 1,
+    "literal weighted matching equals exhaustive retained-subset optimum": 216,
+    "ordinary matching objective decodes to exact original-cell objective": 218,
+    "shared-leaf identity is load-bearing for nonconvex profiles": 1,
+    "unmerged block-cut incidence is a forest": 1183
+  },
+  "matching_comparisons": 216,
+  "matching_oracle": "literal exhaustive ordinary matching by vertex-mask recursion; no blossom call",
+  "nonconvex_costs": {
+    "0": 2,
+    "1": 2,
+    "2": 1
+  },
+  "nonconvex_message": [
+    1,
+    2,
+    2
+  ],
+  "scope": "Finite controls support the separately proved all-board theorem; no producer imports and no general polynomial-time hyperedge claim.",
+  "status": "PASS independent analytic referee controls",
+  "theta_costs": {
+    "0": 4,
+    "1": 3,
+    "2": 2
+  },
+  "total_gates": 4458
+}

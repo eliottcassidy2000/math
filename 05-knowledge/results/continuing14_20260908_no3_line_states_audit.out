@@ -1,0 +1,5 @@
+Independent unmerged no3 line/cell states: PASS
+216 literal ordinary-matching comparisons;97 complete geometric boards;109 complete abstract systems, every root
+Actual theta family k1..6; exact nonconvex continuation; mandatory coverage and shared-leaf hostiles: PASS
+Always-active exact gates: 4458
+Certificate: continuing14_20260908_no3_line_states_audit_certificate.json

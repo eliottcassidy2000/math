@@ -1,0 +1,8 @@
+Continuing14 unmerged line/cell states: PASS
+Complete simple two-regular boards n=2..5: 2137
+Complete abstract linear triple-incidence systems v=0..4: 109
+Arbitrary degree-cost matching compiler: 1000 exact comparisons plus coverage hostile
+Connected geometric theta family k=1..5: tau=4k-2; old branches exponential, new bound30k
+Actual nonconvex line continuation [1,2,2], both separator types, and exact parent degrees: PASS
+Always-active exact gates: 463582
+Certificate: continuing14_20260908_no3_line_states_certificate.json

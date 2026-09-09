@@ -1,13 +1,23 @@
 {
   "schema": 1,
-  "created_utc": "2026-09-08T23:40:07.069331+00:00",
+  "created_utc": "2026-09-09T00:07:59.772393+00:00",
   "baseline_commit": "56ab2658c2f5e08a5f17851d3608f71a2f071720",
+  "proof_checkpoints": [
+    "c53b407b72bcbd61c9a854fd9bf2056a3587780f"
+  ],
+  "prior_published_current_artifacts_verified": 16,
   "hash_basis": "Raw LF bytes. Maintained synthesis/navigation and manifest excluded; report acceptance transitions stated explicitly.",
-  "scope": "All-degree classification excludes every globally submersive fixed-W2 first function with a polynomial logarithmic repair witness of original t-degree at most one. For the complete polynomial-mutation family, the generic original affine curve over C(T) reconstructs Q up to constant affine substitution. Two actual degree15 global submersions have isomorphic FULL POINTED AMBIENT TORSION, matching support/component counts, rational-pair degree and puncture count, but nonisomorphic generic C(T)-curves. General conjectures remain OPEN; no external priority claim.",
-  "artifact_count": 16,
-  "program_count": 4,
-  "exact_gates_per_mode": 888,
+  "scope": "All-degree classification excludes every globally submersive fixed-W2 first function with a polynomial logarithmic repair witness of original t-degree at most one. For the ENTIRE polynomial-mutation family q>=2, even the GEOMETRIC generic original affine curve reconstructs Q up to constant affine substitution: a valuation/quadruple-count argument handles q>=3 and a separate exhaustive quintic-pencil argument handles q=2. Two actual degree15 global submersions have isomorphic FULL POINTED AMBIENT TORSION, matching support/component counts, rational-pair degree and puncture count, but geometrically nonisomorphic generic curves. The complete1085-clock zero-budget LRC census removes729 clocks in three separate stages, leaving6889/max11934 and a356-element zero-budget slice/max7056, only in the inherited connected-complement scope. Exact cell and line separator states and arbitrary capacity-two degree-cost matching gadgets localize original-grid repair to ordinary incidence blocks; a geometric family has exponential improvement over the old merged-bag branching. General conjectures remain OPEN; no external priority claim.",
+  "artifact_count": 44,
+  "program_count": 10,
+  "exact_gates_per_mode": 6127498,
   "validation": {
+    "continuing14_20260908_geometric_fibre_reconstruction": {
+      "gates": 18579,
+      "normal_optimized_raw_LF": true,
+      "output_sha256": "b78deb01eb9dd43a95ea4483fc20e86d60f6df7ba7aa1f974107d35353a95f5a",
+      "source_sha256": "731299dc13540c4861af3b77d134fa9d4a401dbb47f5e1e1bf56d326d633d661"
+    },
     "continuing14_20260908_logarithmic_linear_audit": {
       "gates": 234,
       "normal_optimized_raw_LF": true,
@@ -20,11 +30,41 @@
       "output_sha256": "de52d7a4edf315162d1867ccf49d58f8e4d7ed48a03ed206acd227e107fa375f",
       "source_sha256": "f2712ea491ea0a12b3ec148f8d4623ee460770b09cd2fd40da7e2a3e187141bd"
     },
+    "continuing14_20260908_lrc_independent_audit": {
+      "gates": 4871029,
+      "normal_optimized_raw_LF": true,
+      "output_sha256": "bd03fc060398a2984230f604fc2ee508c0fe10dd66da28639ff5fc0ae97cdb5f",
+      "source_sha256": "b8732aea2d17ac417941587db3d2d1c560d6388c73135d40b577c0392a5e955f"
+    },
+    "continuing14_20260908_lrc_zero_classification": {
+      "gates": 768912,
+      "normal_optimized_raw_LF": true,
+      "output_sha256": "70b45b15b37f545f1d5af826abd6a1a2d77f4e65d9f8b8582a723a610b010b4c",
+      "source_sha256": "77b7edaa50e1a067a554ac330ee41d27b2aa1201797abd37b0091c8c636596e5"
+    },
+    "continuing14_20260908_no3_line_states": {
+      "gates": 463582,
+      "normal_optimized_raw_LF": true,
+      "output_sha256": "84e5c9e9bea94e2e3b91aed7cc0d36cbebd556953b3bf56a1e9444d1472f2f1c",
+      "source_sha256": "6fb957fc9be403b6242dac995e976184f9d52e3f103a732524b160521898d1ed"
+    },
+    "continuing14_20260908_no3_line_states_audit": {
+      "gates": 4458,
+      "normal_optimized_raw_LF": true,
+      "output_sha256": "4cdc75257b1770a74cba655b4457b4df2a1eac36fddddca308d38128c895324b",
+      "source_sha256": "648cf2ec1671a85ff896adf3c84601bcceb8814d2d3299dd38baeb94a6083061"
+    },
     "continuing14_20260908_passport_independent_audit": {
       "gates": 92,
       "normal_optimized_raw_LF": true,
       "output_sha256": "e36df527e1e84ab55006a764cdbb2d2f4884474c80b96c2f2664e4cb740a3ae4",
       "source_sha256": "20e1c07351b00011d6538489763a236ef879257acba2710c282a7a7cd23456c5"
+    },
+    "continuing14_20260908_quintic_geometric_boundary": {
+      "gates": 50,
+      "normal_optimized_raw_LF": true,
+      "output_sha256": "435956ec31d691bacfdfa45a09fe824102370bf3d8f36c161389086ffe59e1f2",
+      "source_sha256": "4db2113992cac65e9315859f903d4ce0a91b1901d968c390efafd0928b20d563"
     },
     "continuing14_20260908_same_torsion_different_fibres": {
       "gates": 95,
@@ -35,7 +75,7 @@
   },
   "normal_optimized_raw_stdout_equal": true,
   "regenerated_certificates_raw_unchanged": true,
-  "certificate_count": 4,
+  "certificate_count": 10,
   "prior_artifacts_verified": 995,
   "prior_artifacts_unchanged_since_baseline": 995,
   "primary_acceptance_transitions": {
@@ -43,6 +83,16 @@
       "accepted_producer_report_sha256": "c1f140294186bf6384b538b0bf929a3005d02fd3ab1b3524d8450c4f44caa27c",
       "change": "Audited status promotion and referee link only; all proof text and computation unchanged.",
       "filed_report_sha256": "076739a82677914a9350117b94e892d0100af3d7676ae82732daf07fab8340d6"
+    },
+    "continuing14_20260908_lrc_zero_classification": {
+      "accepted_producer_report_sha256": "0ae9aa1b4d52989b69da202b8981ac41f39075cda8da90d557668512cbd0b1d3",
+      "change": "Audited status promotion and referee link only; all proof text and computation unchanged.",
+      "filed_report_sha256": "354c47fa07078eb14caf1209cff39f0ed058894d45b2ed552334156447a0b5d5"
+    },
+    "continuing14_20260908_no3_line_states": {
+      "accepted_producer_report_sha256": "13ecfaf619853a4c049a1d8011ae00e3f424027a2c78257e91b5d4eac810e1af",
+      "change": "Audited status, referee link and the referee-authorized polynomial-overhead-per-branch clarification only; theorem, call bound and computation unchanged.",
+      "filed_report_sha256": "81a18f46023979b4012446ecb11bb807870e723ef45affb454b7e8246e56e6a9"
     },
     "continuing14_20260908_same_torsion_different_fibres": {
       "accepted_producer_report_sha256": "601a55857454668fd85d902e3ee49345dd698d20212ef7ca88a454ada6e90fa7",
@@ -54,6 +104,11 @@
   "incoming_review": "No incoming commits at startup or natural research checkpoint. Final fetch is verified during closeout.",
   "artifacts": [
     {
+      "path": "04-computation/continuing14_20260908_geometric_fibre_reconstruction.py",
+      "bytes": 5719,
+      "sha256": "731299dc13540c4861af3b77d134fa9d4a401dbb47f5e1e1bf56d326d633d661"
+    },
+    {
       "path": "04-computation/continuing14_20260908_logarithmic_linear_audit.py",
       "bytes": 5615,
       "sha256": "f03ebd9a2f37b5c4bc3b9d1bb6300cb8ec045e03a3810108bf10f6f96794b857"
@@ -64,14 +119,69 @@
       "sha256": "f2712ea491ea0a12b3ec148f8d4623ee460770b09cd2fd40da7e2a3e187141bd"
     },
     {
+      "path": "04-computation/continuing14_20260908_lrc_independent_audit.cpp",
+      "bytes": 12404,
+      "sha256": "adeeb025fee21a5fc46ab725d222e899af6c8ad94c9af986a99b17a8d8e68386"
+    },
+    {
+      "path": "04-computation/continuing14_20260908_lrc_independent_audit.py",
+      "bytes": 13642,
+      "sha256": "b8732aea2d17ac417941587db3d2d1c560d6388c73135d40b577c0392a5e955f"
+    },
+    {
+      "path": "04-computation/continuing14_20260908_lrc_zero_classification.cpp",
+      "bytes": 8284,
+      "sha256": "dc7b5aec55e727963523cba0f976b9f9caaaa8c8d162ee4e4ad09b83b6a49aaf"
+    },
+    {
+      "path": "04-computation/continuing14_20260908_lrc_zero_classification.py",
+      "bytes": 12713,
+      "sha256": "77b7edaa50e1a067a554ac330ee41d27b2aa1201797abd37b0091c8c636596e5"
+    },
+    {
+      "path": "04-computation/continuing14_20260908_no3_line_states.py",
+      "bytes": 22386,
+      "sha256": "6fb957fc9be403b6242dac995e976184f9d52e3f103a732524b160521898d1ed"
+    },
+    {
+      "path": "04-computation/continuing14_20260908_no3_line_states_audit.py",
+      "bytes": 13130,
+      "sha256": "648cf2ec1671a85ff896adf3c84601bcceb8814d2d3299dd38baeb94a6083061"
+    },
+    {
       "path": "04-computation/continuing14_20260908_passport_independent_audit.py",
       "bytes": 6532,
       "sha256": "20e1c07351b00011d6538489763a236ef879257acba2710c282a7a7cd23456c5"
     },
     {
+      "path": "04-computation/continuing14_20260908_quintic_geometric_boundary.py",
+      "bytes": 4228,
+      "sha256": "4db2113992cac65e9315859f903d4ce0a91b1901d968c390efafd0928b20d563"
+    },
+    {
       "path": "04-computation/continuing14_20260908_same_torsion_different_fibres.py",
       "bytes": 7502,
       "sha256": "780fad38dd9865860f1415a11558e1f11120715af479d5329f27ead6a82e4033"
+    },
+    {
+      "path": "05-knowledge/results/continuing14_20260908_geometric_fibre_reconstruction.md",
+      "bytes": 8383,
+      "sha256": "8d41e167994cd06840df49dfcfea0fa4fdee5eb3ded4ab743e43fcb61275a0d2"
+    },
+    {
+      "path": "05-knowledge/results/continuing14_20260908_geometric_fibre_reconstruction.out",
+      "bytes": 358,
+      "sha256": "b78deb01eb9dd43a95ea4483fc20e86d60f6df7ba7aa1f974107d35353a95f5a"
+    },
+    {
+      "path": "05-knowledge/results/continuing14_20260908_geometric_fibre_reconstruction_certificate.json",
+      "bytes": 1876,
+      "sha256": "07bde5bc5bf523d16040aa13cb97db8fb39fad43a1db640d7c91bda4ee3133a2"
+    },
+    {
+      "path": "05-knowledge/results/continuing14_20260908_geometric_reconstruction_referee.md",
+      "bytes": 3811,
+      "sha256": "a57f9e6e166802fc29889e3bd7bafa4089fc9477b86ebc3f4ccea69521493eb9"
     },
     {
       "path": "05-knowledge/results/continuing14_20260908_logarithmic_linear_audit.md",
@@ -104,6 +214,66 @@
       "sha256": "6fca12419f46fcaa2311e3373288afef01a0a6b4f4b6fd37e0000c778eafec49"
     },
     {
+      "path": "05-knowledge/results/continuing14_20260908_lrc_independent_audit.md",
+      "bytes": 16700,
+      "sha256": "431c7208326d16130f8175f82f1a2d3949469c29ab5265924bc8bc10dc1c9355"
+    },
+    {
+      "path": "05-knowledge/results/continuing14_20260908_lrc_independent_audit.out",
+      "bytes": 747,
+      "sha256": "bd03fc060398a2984230f604fc2ee508c0fe10dd66da28639ff5fc0ae97cdb5f"
+    },
+    {
+      "path": "05-knowledge/results/continuing14_20260908_lrc_independent_audit_certificate.json",
+      "bytes": 56229,
+      "sha256": "0d2572099bc7d314ee8fc50ffac32ba1789f4361586a9ed174726430a7631f4f"
+    },
+    {
+      "path": "05-knowledge/results/continuing14_20260908_lrc_zero_classification.md",
+      "bytes": 16185,
+      "sha256": "354c47fa07078eb14caf1209cff39f0ed058894d45b2ed552334156447a0b5d5"
+    },
+    {
+      "path": "05-knowledge/results/continuing14_20260908_lrc_zero_classification.out",
+      "bytes": 688,
+      "sha256": "70b45b15b37f545f1d5af826abd6a1a2d77f4e65d9f8b8582a723a610b010b4c"
+    },
+    {
+      "path": "05-knowledge/results/continuing14_20260908_lrc_zero_classification_certificate.json",
+      "bytes": 292072,
+      "sha256": "863d33accf19a5515b3ecd2048aac35d77f30f4e004371c73f5760d345bbb240"
+    },
+    {
+      "path": "05-knowledge/results/continuing14_20260908_no3_line_states.md",
+      "bytes": 21781,
+      "sha256": "81a18f46023979b4012446ecb11bb807870e723ef45affb454b7e8246e56e6a9"
+    },
+    {
+      "path": "05-knowledge/results/continuing14_20260908_no3_line_states.out",
+      "bytes": 530,
+      "sha256": "84e5c9e9bea94e2e3b91aed7cc0d36cbebd556953b3bf56a1e9444d1472f2f1c"
+    },
+    {
+      "path": "05-knowledge/results/continuing14_20260908_no3_line_states_audit.md",
+      "bytes": 16535,
+      "sha256": "ba128bc0ccbea24682e97f51b2cc771a55ce56393d60396b815d6fa56645dbee"
+    },
+    {
+      "path": "05-knowledge/results/continuing14_20260908_no3_line_states_audit.out",
+      "bytes": 374,
+      "sha256": "4cdc75257b1770a74cba655b4457b4df2a1eac36fddddca308d38128c895324b"
+    },
+    {
+      "path": "05-knowledge/results/continuing14_20260908_no3_line_states_audit_certificate.json",
+      "bytes": 2668,
+      "sha256": "90f01990c256b185531c04ca87c4549a0c836991ba60c2ea44871a7968622041"
+    },
+    {
+      "path": "05-knowledge/results/continuing14_20260908_no3_line_states_certificate.json",
+      "bytes": 63678,
+      "sha256": "3f4aac7e677fc3fea5b1eca06f69b14d8bcf6ecb4d5c3886e587c69565c538c6"
+    },
+    {
       "path": "05-knowledge/results/continuing14_20260908_passport_independent_audit.md",
       "bytes": 8027,
       "sha256": "5bbe533d8bf8cc164f604a3e6e8cd3310bfe42c6bbcc3cb75917ff8858bc14dc"
@@ -117,6 +287,26 @@
       "path": "05-knowledge/results/continuing14_20260908_passport_independent_audit_certificate.json",
       "bytes": 1658,
       "sha256": "d862c0be3673bb380f044f3f998a4154189dd9d5b5dd8f069a3d400f9e05edde"
+    },
+    {
+      "path": "05-knowledge/results/continuing14_20260908_quintic_geometric_boundary.md",
+      "bytes": 5169,
+      "sha256": "1aa77feeba6a2516a312db903e27103f2682caf74e38a08a29094aed737786a8"
+    },
+    {
+      "path": "05-knowledge/results/continuing14_20260908_quintic_geometric_boundary.out",
+      "bytes": 296,
+      "sha256": "435956ec31d691bacfdfa45a09fe824102370bf3d8f36c161389086ffe59e1f2"
+    },
+    {
+      "path": "05-knowledge/results/continuing14_20260908_quintic_geometric_boundary_certificate.json",
+      "bytes": 703,
+      "sha256": "02bb0f220d9653fb73f4d18d8ffb7017c26a3cd6cdc05b02887699f7e17b3c51"
+    },
+    {
+      "path": "05-knowledge/results/continuing14_20260908_quintic_geometric_referee.md",
+      "bytes": 3014,
+      "sha256": "98d02d18e37037625ccb47c56ce50a567ba61fbd5aad0145c9b6e10a9732c967"
     },
     {
       "path": "05-knowledge/results/continuing14_20260908_same_torsion_different_fibres.md",

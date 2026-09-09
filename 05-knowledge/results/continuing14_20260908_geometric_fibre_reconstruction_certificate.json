@@ -1,0 +1,93 @@
+{
+  "all_degree_scope": "Same target; algebraic closure of C(T); mutation q>=3",
+  "exact_pair_q7_counts": [
+    720,
+    315
+  ],
+  "gates": 18579,
+  "hostiles": [
+    "equal cluster sizes can be swapped by 1/(t*z)",
+    "two constant points fixed by z/(t*z+1-t) do not force constant coefficients"
+  ],
+  "old_packet_status": "Strengthened, not retracted; old frozen bytes unchanged",
+  "producer_imports": false,
+  "q2_boundary": "Counts recover only two constants; geometric iff not claimed here",
+  "records": [
+    {
+      "degenerating": 15,
+      "inner_count": 15,
+      "moving_degree": 5,
+      "outer_count": 5,
+      "pointwise_counts": [
+        15,
+        15,
+        5,
+        5,
+        5,
+        5,
+        5,
+        5
+      ],
+      "q": 2,
+      "quadruples": 70,
+      "scaled_reduction_discriminant": "3125"
+    },
+    {
+      "degenerating": 84,
+      "inner_count": 56,
+      "moving_degree": 7,
+      "outer_count": 21,
+      "pointwise_counts": [
+        56,
+        56,
+        56,
+        21,
+        21,
+        21,
+        21,
+        21,
+        21,
+        21,
+        21
+      ],
+      "q": 3,
+      "quadruples": 330,
+      "scaled_reduction_discriminant": "-823543"
+    },
+    {
+      "degenerating": 2520,
+      "inner_count": 720,
+      "moving_degree": 15,
+      "outer_count": 315,
+      "pointwise_counts": [
+        720,
+        720,
+        720,
+        720,
+        720,
+        720,
+        720,
+        315,
+        315,
+        315,
+        315,
+        315,
+        315,
+        315,
+        315,
+        315,
+        315,
+        315,
+        315,
+        315,
+        315,
+        315,
+        315
+      ],
+      "q": 7,
+      "quadruples": 8855,
+      "scaled_reduction_discriminant": "-437893890380859375"
+    }
+  ],
+  "status": "ANALYTIC geometric reconstruction q>=3 plus independent FINITE-EXACT valuation controls"
+}

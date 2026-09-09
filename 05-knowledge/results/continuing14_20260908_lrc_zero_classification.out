@@ -1,0 +1,11 @@
+Complete E=0 clock classification: PASS
+CLOCKS 1085 QUOTIENTS 1085 DOMAINS 203
+RAW_WORDS 9978787 WORD_CLOCKS 630818
+CLOSED_WALL_CLOSURES 713 CHAMBER_CLOSURES 721 SLOT_CLOSURES 729
+CAPACITY_EVALUATIONS 731823 GATES 740607
+SEPARATE NEW CLOSURES: ordinary zero cuts713; marginal attainment8; distinct-speed slots8
+NECESSARY CLOCKS6889; maximum11934; remaining E0 clocks356; E0 maximum7056
+STOP: full three-word7056 graph/slot residual retained; no joint ratio or phase realization inferred
+NEW_SCALES_SHA256 b603ca0186c1ebaa2318782348a7446a16f529543147eb53062f1ba360e8e57b
+CERTIFICATE_SHA256 863d33accf19a5515b3ecd2048aac35d77f30f4e004371c73f5760d345bbb240
+Python always-active gates: 28305

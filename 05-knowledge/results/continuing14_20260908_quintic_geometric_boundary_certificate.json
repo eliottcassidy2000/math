@@ -1,0 +1,23 @@
+{
+  "combined_geometric_theorem": "Entire mutation supplier q>=2, same target, algebraic closure of C(T)",
+  "gates": 50,
+  "inversion_obstruction": "C1*C2 - C1*T - C2*T",
+  "parameter_controls": {
+    "beta_coordinate_pairs": 9,
+    "nonzero_C_pairs": 9
+  },
+  "producer_imports": false,
+  "puncture_discriminant": "145800000*C**6*T**2*(C - T)**2",
+  "puncture_polynomial_coefficients": [
+    "C - T",
+    "-6*C + 6*T",
+    "15*C - 15*T",
+    "-10*C + 20*T",
+    "-15*T",
+    "6*T",
+    "-T"
+  ],
+  "scaling_conclusion": "k=A=1, C1=C2",
+  "scope_boundary": "Not arbitrary quintic first functions or total fibrations",
+  "status": "Complete q2 analytic exhaustion + independent FINITE-EXACT controls"
+}

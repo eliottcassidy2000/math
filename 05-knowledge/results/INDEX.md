@@ -1,12 +1,17 @@
 # Script Results Index
 
-- **New audited extensions:** [source-linear logarithmic witnesses](continuing14_20260908_logarithmic_linear_witness.md)
-  are excluded for global W2 submersions with no bound on first-function degree.
-  [Generic-fibre reconstruction](continuing14_20260908_same_torsion_different_fibres.md)
-  gives two degree15 functions with identical full pointed torsion and different
-  generic C(T)-fibres. [Manifest](continuing14_20260908_manifest.json) pins both independent audits.
+- [Current continuing synthesis](continuing14_20260908_synthesis.md):
+  **PROVED + FINITE-EXACT + INDEPENDENTLY AUDITED.** A complete zero-budget
+  LRC survey removes729 clocks, leaving6,889/max11,934; the zero-budget
+  slice has356/max7,056. Generic mutation fibres geometrically reconstruct
+  Q up to affine substitution, while equal full pointed torsion can hide
+  different generic fibres. Source-linear logarithmic witnesses are excluded
+  for every first-function degree. Exact line-capacity states localize grid
+  repair to ordinary incidence blocks, with a geometric exponential gain.
+  [Manifest](continuing14_20260908_manifest.json) pins all proofs and audits.
+  General LRC14, planar JC and extremal no-three-in-line remain OPEN.
 
-- [Current continuing synthesis](continuing13_20260908_synthesis.md):
+- [Previous continuing synthesis](continuing13_20260908_synthesis.md):
   **PROVED + FINITE-EXACT + INDEPENDENTLY AUDITED.** A complete univariate
   W2 family has the same order-three pointed unit module at every degree,
   while ambient arms and rational pair degree grow. A polynomial mutation

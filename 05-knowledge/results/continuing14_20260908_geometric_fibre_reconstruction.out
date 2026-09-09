@@ -1,0 +1,6 @@
+PASS: geometric generic-fibre reconstruction valuation audit
+q=2,3,7: all 9255 quadruples, three cross-ratio pairings each
+q=7 recovered intrinsic counts: inner720, outer315
+The geometric iff is proved for all q>=3; q2 remains outside this proof
+Always-active gates: 18579
+Certificate SHA256: 07bde5bc5bf523d16040aa13cb97db8fb39fad43a1db640d7c91bda4ee3133a2

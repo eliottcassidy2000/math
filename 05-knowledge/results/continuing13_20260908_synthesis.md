@@ -1,6 +1,6 @@
 # Continuing synthesis: fixed units, iterated fibres and local repair cores
 
-**CURRENT CHECKPOINT, 2026-09-08. Status: PROVED scoped results,
+**PREVIOUS CHECKPOINT, 2026-09-08. Status: PROVED scoped results,
 FINITE-EXACT controls and independent audits.** A complete univariate
 family lowers the fixed-unit hidden-arm construction from order six to
 order three. A polynomial mutation produces a genuine global quintic
@@ -11,6 +11,8 @@ A fixed critical orbit then keeps three unit supports and every source
 parameter unchanged while the hidden component multiplicities grow.
 General LRC(14), planar JC and extremal no-three-in-line remain **OPEN**.
 No external priority claim is made.
+
+The [current synthesis](continuing14_20260908_synthesis.md) classifies the complete zero-budget clock slice, reconstructs geometric generic fibres, excludes source-linear logarithmic witnesses and separates repair blocks by line-capacity states.
 
 The [previous synthesis](continuing12_20260908_synthesis.md) supplies the
 complete quadratic rational-mate classification, the order-six hidden-arm
