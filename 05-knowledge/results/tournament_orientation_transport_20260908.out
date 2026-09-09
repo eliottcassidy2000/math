@@ -1,0 +1,26 @@
+TAILS m=2: antipode-compatible words=2
+TAILS m=4: antipode-compatible words=14
+TAILS m=6: antipode-compatible words=32
+TAILS m=8: antipode-compatible words=254
+TAILS m=10: antipode-compatible words=512
+TAILS m=12: antipode-compatible words=3104
+LITERAL UNIVERSE: 5448 nonconstant words at every even m=2..12; 3918 admit the response antipode
+SECTIONS q=1: count=1, period:orbit_count={1: 1}
+SECTIONS q=2: count=2, period:orbit_count={2: 1}
+SECTIONS q=3: count=4, period:orbit_count={1: 1, 3: 1}
+SECTIONS q=4: count=8, period:orbit_count={4: 2}
+SECTIONS q=5: count=16, period:orbit_count={1: 1, 5: 3}
+SECTIONS q=6: count=32, period:orbit_count={2: 1, 6: 5}
+SECTIONS q=7: count=64, period:orbit_count={1: 1, 7: 9}
+SECTIONS q=8: count=128, period:orbit_count={8: 16}
+SECTIONS q=9: count=256, period:orbit_count={1: 1, 3: 1, 9: 28}
+SECTIONS q=10: count=512, period:orbit_count={2: 1, 10: 51}
+SECTIONS q=11: count=1024, period:orbit_count={1: 1, 11: 93}
+SECTIONS q=12: count=2048, period:orbit_count={4: 2, 12: 170}
+SECTIONS q=16: count=32768, period:orbit_count={16: 2048}
+SECTION UNIVERSE: 36863 labelled sections modulo global sign
+STRONG HOSTILE m=8,j=1,q=4: 00000001 -> 00010000; checksum 0 heads -> 4 tails; same quotient address and section tournament
+GAUGE q=2: sheared quarter rotation [[1,-2],[1,-1]] has square -I and preserves the full determinant
+AMPLITUDE HOSTILE: six determinants=[1, 1, 1, 1, 2, 1], exact Pfaffian=0; tournament sign Pfaffians={-3: 8, -1: 24, 1: 24, 3: 8}
+SCOPE: exact checksum response/section transport; one output sheet and edge amplitudes remain necessary; no improved extractor deadline or LRC closure
+PASS 223007 always-active exact gates

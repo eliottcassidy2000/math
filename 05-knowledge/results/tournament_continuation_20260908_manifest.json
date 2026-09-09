@@ -1,0 +1,50 @@
+{
+  "status": "PROVED scoped results + FINITE-EXACT controls + INDEPENDENTLY AUDITED",
+  "date": "2026-09-08",
+  "source_base": "c53b407b72bc",
+  "reservation_pre_rebase": "ffa8059da",
+  "scope": "Four scoped tournament results. General transport H>=disc, LRC14, and PDE closure are not proved. Universal weighted cyclic bound is unproved here, with no external open-problem or priority claim.",
+  "reproduction": "Run each script with python3 and python3 -O from repo root; compare LF-normalized stdout to the listed output.",
+  "items": [
+    {
+      "id": "THM-4463",
+      "theorem": "01-canon/theorems/THM-4463-homogeneous-tournament-contacts-and-pinned-scale-floor.md",
+      "theorem_sha256": "5753f31aaf9bc6e26c5dd9aa95bc8e0ffe87f5a55382ddf6e096bb288367e1b5",
+      "script": "04-computation/tournament_continuation_metric_20260908.py",
+      "script_sha256": "c48db128df96ba6390ba382d734a18e6e9ca3c3e693020ab425d55d811b44e7b",
+      "output": "05-knowledge/results/tournament_continuation_metric_20260908.out",
+      "output_sha256": "20a0b3e17dea47a292e74c610122e352b6b371f065609ad2c3e80799ac20a7fe",
+      "validation": "normal and -O stdout normalized to LF match stored LF output; independent proof audit accepted"
+    },
+    {
+      "id": "THM-4464",
+      "theorem": "01-canon/theorems/THM-4464-checksum-projective-tournament-and-output-sheet-cocycle.md",
+      "theorem_sha256": "d611d05969bee4b9020726c798c2d438fa0f20a1c015b827441555a155cbe846",
+      "script": "04-computation/tournament_orientation_transport_20260908.py",
+      "script_sha256": "451bb4c89d87aaa01094a4dcc87c25497374b05f9bc9025b6390440f8f940318",
+      "output": "05-knowledge/results/tournament_orientation_transport_20260908.out",
+      "output_sha256": "66f5a9e2f6ffcf6e81b6385ab97fef35237ecef7fb71856a924598f112f29495",
+      "validation": "normal and -O stdout normalized to LF match stored LF output; independent proof audit accepted"
+    },
+    {
+      "id": "THM-4465",
+      "theorem": "01-canon/theorems/THM-4465-weighted-tournament-shear-production-and-contact-kernel.md",
+      "theorem_sha256": "96d52842e014ab9349e7c05374362cb54a676e364cbb0dd6c0f62ffd52c8b202",
+      "script": "04-computation/tournament_shear_cycles_20260908.py",
+      "script_sha256": "9e30bac8f84a4a3403dd4a65ba5c9e06a3fc854160eb3a5e6a88eb353b5bfd7e",
+      "output": "05-knowledge/results/tournament_shear_cycles_20260908.out",
+      "output_sha256": "c2566b9c0d2ec1e72ffe856e909abf8db58e7d0f8b4d60f951e995cd8f6b717b",
+      "validation": "normal and -O stdout normalized to LF match stored LF output; independent proof audit accepted"
+    },
+    {
+      "id": "THM-4466",
+      "theorem": "01-canon/theorems/THM-4466-sharp-tournament-cubic-bound-for-common-edge-and-substitution-classes.md",
+      "theorem_sha256": "e6eaf3df13fb7faf05ff23d96e381749f8ba702c76ef1eea9e6d24985252a766",
+      "script": "04-computation/tournament_cubic_norm_20260908.py",
+      "script_sha256": "fc90e74e0d17d7c32c97e342160fa380a8e7b4141353a169f9446421a64e2025",
+      "output": "05-knowledge/results/tournament_cubic_norm_20260908.out",
+      "output_sha256": "887f835b728cdc2342262cf9d9f19fc99070ddd539de1c7da9ab0687c847f9eb",
+      "validation": "normal and -O stdout normalized to LF match stored LF output; independent proof audit accepted"
+    }
+  ]
+}

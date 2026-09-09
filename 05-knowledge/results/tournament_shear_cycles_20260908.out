@@ -1,0 +1,50 @@
+TOURNAMENT SHEAR CYCLES: EXACT TRACE, SUBSTITUTION, AND BOUNDARY AUDIT
+{
+  "directed_cut_pairs": 1529,
+  "gates": 115991,
+  "hostiles": {
+    "reducible_positive_weights_half_to_one_F": "9/2",
+    "same_state_boundary_taxes": [
+      "52/9",
+      "56/9"
+    ],
+    "same_state_full_F": [
+      "2/9",
+      "-2/9"
+    ],
+    "strong_negative_unit_F": "-4"
+  },
+  "unit_strong_sign_census": {
+    "1": {
+      "strong/zero": 1
+    },
+    "2": {
+      "reducible/zero": 2
+    },
+    "3": {
+      "reducible/negative": 6,
+      "strong/positive": 2
+    },
+    "4": {
+      "reducible/negative": 24,
+      "reducible/zero": 16,
+      "strong/positive": 24
+    },
+    "5": {
+      "reducible/negative": 480,
+      "strong/positive": 544
+    },
+    "6": {
+      "reducible/negative": 10160,
+      "reducible/zero": 288,
+      "strong/negative": 2880,
+      "strong/positive": 16080,
+      "strong/zero": 3360
+    }
+  },
+  "unit_tournaments": 33867,
+  "weighted_matrix_instances": 4312,
+  "weighted_substitutions": 4160
+}
+semantic_sha256=44cb170f8d233865187066a7744e27af0131c6ecb88e4b500b6527c4425e858a
+PASS: explicit checks survive -O; instantaneous algebra, not an Euler blowup claim

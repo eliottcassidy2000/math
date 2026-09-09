@@ -1,0 +1,8 @@
+PROVED-SCOPE exact controls; general weighted bound is unproved here
+all labelled n=2..4 carriers with weights 0,1,2: 46878
+common-edge controls: 18; equality F=24,E=12 on six vertices
+recursive constant-contact substitution controls: 234
+always-active proved-scope gates: 188936
+FINITE-EXACT OPEN-BOUND SCOUT: seed20260908, n5..10, weights0..4, 6000 draws
+production counterexamples: 0; stronger cycle-count counterexamples: 0
+No general weighted-tournament theorem or PDE evolution claim follows from the scout.

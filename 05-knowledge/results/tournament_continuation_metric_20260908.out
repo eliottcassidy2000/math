@@ -1,0 +1,17 @@
+CONTACT n=2: bounded=2, linear=0, ordered_zero_contacts=2 PASS
+CONTACT n=2 strong-component census={('nonstrong', 'bounded'): 2}
+CONTACT n=3: bounded=6, linear=2, ordered_zero_contacts=12 PASS
+CONTACT n=3 strong-component census={('nonstrong', 'bounded'): 6, ('strong', 'linear'): 2}
+CONTACT n=4: bounded=48, linear=16, ordered_zero_contacts=120 PASS
+CONTACT n=4 strong-component census={('nonstrong', 'bounded'): 24, ('nonstrong', 'linear'): 16, ('strong', 'bounded'): 24}
+CONTACT n=5: bounded=680, linear=344, ordered_zero_contacts=1920 PASS
+CONTACT n=5 strong-component census={('nonstrong', 'bounded'): 440, ('nonstrong', 'linear'): 40, ('strong', 'bounded'): 240, ('strong', 'linear'): 304}
+CONTACT permutation_probes=124468; total_ordered_zero_contacts=2054
+CONTACT semantic_sha256=26edd9b35c143599518321c547772025a99b7b9f2324f5111c8d7eefd041ff0e
+SCC hostile: C3[T2,1,1] is strong and bounded; C3 join1 is nonstrong and linear PASS
+CONTACT hostile: T3 adjacent zero-contact swaps compose to contact cost1; pairwise zero relation is not transitive PASS
+PIN hostile: transitive3 + alternating singleton pin separates both pairs, yet floor=3 for N=1..7 PASS
+PIN complete n=3 bank: masks=8, words=8, multiplicities=0,1,2, N=1..7; cases={'bounded': 1008, 'linear': 336}
+PIN total_nonfree_Hall_multisets=329308 PASS
+PIN growing-mass control: transitive3, pin multiplicity=N, minima N=1..7=[3, 5, 7, 9, 11, 13, 15]
+PASS: quotient forced envelope only; internal response and unpinned exchanges retained as separate obligations
