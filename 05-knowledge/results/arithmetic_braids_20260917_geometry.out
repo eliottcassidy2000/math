@@ -1,0 +1,9 @@
+polynomial quotient identities: PASS (q7 multiplier 1; q9 multiplier 19)
+rational chart: 181 markings, 91 cycles; reversal PASS
+chart reciprocity/rotation S3: PASS; fixed orbit [-2, -1/2, 1]
+primitive Euclid universe m<=80: 1314 triples; 6570 depth checks PASS
+signed triple square orbit: [(3, 4, 5), (-7, 24, 25), (-527, -336, 625), (164833, 354144, 390625)]
+integer family 2<=k<=1000: maximum 12/25 at k=2,3; sole duplicate (2,3); PASS
+critical orbit at -7/4: ['-7/4', '21/16', '-7/256']
+FINITE-EXACT -2<a/b<-1, 2<=b<=2000: 1216587 parameters; units [(-7, 4, 1)]
+All checks passed.

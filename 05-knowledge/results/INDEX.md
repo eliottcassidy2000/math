@@ -1,5 +1,12 @@
 # Script Results Index
 
+- [Arithmetic braids](arithmetic_braids_20260917_synthesis.md): **PROVED scoped +
+  FINITE-EXACT + INDEPENDENTLY AUDITED.** Collatz inverse-fibre odometer and
+  periodic-weight obstruction; divisor-balance classification; exact CRT
+  neighbor sieve; quadratic three-cycle reversal and primitive-triangle
+  squaring. [Manifest](arithmetic_braids_20260917_manifest.json) pins four lanes.
+  Collatz, twin primes, and the all-height third-numerator unit equation remain open here.
+
 - **Audited extensions:** [universal weighted cyclic bound](continuing15_20260909_universal_cubic_bound.md)
   closes arbitrary supports with exact spectral equality.
   [Squarefree quadratic witnesses](continuing15_20260909_squarefree_quadratic_witness.md)

@@ -1,6 +1,11 @@
 #!/usr/bin/env python3
 """collatz_excursion_tower.py — The Collatz iterated-logarithm tower.
 
+CORRECTION 2026-09-17: the narrative below is historical. Only the finite
+telescoping identity is proved. D<0.2257 is conjectural; the iid walk is a
+model; Tao's orbit-minimum theorem does not establish a maximum envelope.
+See 05-knowledge/results/arithmetic_braids_20260917_collatz.md and MISTAKES.
+
 Sequel to collatz_defect_rapidity.py (HYP-2147/2148). That session proved the
 EXACT rapidity law  ln n = K ln2 - L ln3 - D(n)  and that the harmonic defect
 D(n) is bounded (D* ~ 0.2257). This session asks the Tao-style question: once

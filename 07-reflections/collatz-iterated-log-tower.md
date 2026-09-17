@@ -1,3 +1,15 @@
+> **CURRENT-TRUTH WARNING — corrected 2026-09-17.** The historical narrative
+> below overstates its scope. The finite-segment telescoping identity is proved;
+> the uniform bound `D(n)<0.2257` is a conjecture supported by a bounded census,
+> not a theorem. The iid geometric-walk exponent is a model calculation, not
+> an all-integer Collatz result. Tao's theorem concerns orbit minima in
+> logarithmic density, not the claimed maximum-orbit envelope. Also
+> `R <= (1/2+o(1)) log log n` implies `peak/n <= (log n)^(1+o(1))`, not
+> `(log n)^o(1)`, and the nonzero MGF root displayed below is `t=2`, not `t=1`.
+> See the [repaired identities and precise gap](../05-knowledge/results/arithmetic_braids_20260917_collatz.md#6-the-global-quantity-that-is-still-owed)
+> and the 2026-09-17 entry in [MISTAKES](../01-canon/MISTAKES.md).
+> The remaining text is retained as historical provenance, not current truth.
+
 # The Collatz iterated-logarithm tower: where each scale lives
 
 *Session: collatz-excursion-tower. Sequel to `collatz-rapidity-defect.md`

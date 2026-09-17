@@ -227,11 +227,13 @@ all heights (THM-1289, published), δ ineffective.
 
 ## D. Under-the-radar problems (PROMOTE these — genuine results, hidden by LRC file-naming)
 
-- **Collatz conjecture** [DEEP — top promote] — the rapidity conservation law
-  ln n = K ln2 − L ln3 − D(n) with a bounded sign-definite harmonic defect; the exact
-  identity n·3^L·Π(3a_i+1)/(3a_i)=2^K (Fraction-verified); the θ=2 Cramér–Lundberg
-  excursion exponent. Self-contained novel result set (collatz-rapidity-defect,
-  collatz-iterated-log-tower; HYP-2147-2149). **The clearest hidden gem.**
+- **Collatz conjecture — OPEN.** The finite-segment rapidity identity and
+  its exact rational form are proved; a uniform harmonic-defect bound is
+  conjectural, and the theta=2 excursion exponent belongs to an iid model.
+  [The 2026-09-17 audit](../05-knowledge/results/arithmetic_braids_20260917_collatz.md)
+  gives the full triadic inverse-fibre braid, exact exponent-word cylinders,
+  and an obstruction to descent via fixed periodic weights. None proves
+  global convergence; retain integer height and ordered affine carry.
 - **Erdős Problem 592** [DEEP — $1000 problem] — the p=2 Schur-seam theorem (THM-469),
   R(n,2)=2n+1 linear conjecture, Chang-tower m=3 open; 21 scripts, a survey draft.
 - **{7,21} forbidden H-spectrum** [DEEP, repo-signature] — the only unachievable OCF

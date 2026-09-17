@@ -1,3 +1,15 @@
+> **CURRENT-TRUTH WARNING — corrected 2026-09-17.** The distinct-positive-parent
+> definition and the missing set `{1,4,6}` survive, with a proof in
+> [THM-2422, operation fibres and twin-center ancestry](../01-canon/theorems/THM-2422-operation-fibres-summand-closure-and-twin-center-ancestry.md).
+> Several later claims do not: adding4 or6 cannot generate1; the apparent
+> Fibonacci depth reset is a cutoff artifact (35 is also at depth6 from
+> seeds `{1,2}`); and a fixed seed set `{1,3,6}` cannot represent every
+> integer in at most three summands. The exact synchronous depth from
+> `{1,2}` is `ceil(log2(n-1))` for `n>=2`. The tournament/Zeckendorf
+> interpretations and finite verifications below are not proofs of those
+> rejected claims. See the [repaired graph and hostile examples](../05-knowledge/results/arithmetic_braids_20260917_summand.md).
+> The remaining text is retained as historical provenance, not current truth.
+
 # The Summand Graph, Fermat's Polygonal Theorem, Zeckendorf's Theorem,
 # and the Forbidden Values {7, 21}
 

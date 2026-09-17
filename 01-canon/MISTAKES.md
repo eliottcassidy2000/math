@@ -9,6 +9,39 @@ Format per entry:
 - Why it was wrong
 - The correct framing
 
+## 2026-09-17 arithmetic braids -- a finite head and a quotient lost their scope
+
+- **UNPROVED bound promoted to PROVED:** the historical Collatz iterated-log
+  reflection and script call the census-supported `D(n)<0.2257` a theorem.
+  The predecessor-star formula `(4^j-1)/3` describes immediate predecessors
+  of1, not every node in its reverse tree: `3->5->1` is the smallest positive
+  hostile to that identification. A path through the whole tree is not a
+  subsequence of the immediate star. The exact finite-segment log identity
+  survives; a uniform all-terminating-path defect bound remains OPEN here.
+  No counterexample to that numerical bound is asserted. Also the displayed
+  MGF equation has nonzero root2, not1, and exponentiating the stated rapidity
+  bound gives `(log n)^(1+o(1))`, not `(log n)^o(1)`. Tao's theorem controls
+  orbit minima in logarithmic density, not whole-orbit maxima.
+  [Repair and source audit](../05-knowledge/results/arithmetic_braids_20260917_collatz.md).
+- **REFUTED regeneration and finite-head inference:** the old summand
+  reflection claims adding any one of `{1,4,6}` to the closure of `{2,3}`
+  recovers all three. Adding4 generates6 but cannot generate1; adding6
+  generates neither1 nor4. Positivity and the ordered AND-of-ORs parent
+  constraints are the missing coordinates. Its depth-six singleton34 is
+  merely a cutoff:35 also has depth6. From seeds `{1,2}`, the full synchronous
+  closure at depth t is `[1,2^t+1]`, giving `d(n)=ceil(log2(n-1))` for n>=2.
+  From `{1,2}`, `55=27+28` is obtainable in depth6, faster than the depth7
+  Fibonacci-parent route. A fixed triangular seed set `{1,3,6}` with at
+  most three summands also fails already at11; Gauss uses the full triangular
+  sequence. [Repair and witnesses](../05-knowledge/results/arithmetic_braids_20260917_summand.md);
+  the earlier [THM-2422 operation-fibre theorem](theorems/THM-2422-operation-fibres-summand-closure-and-twin-center-ancestry.md)
+  remains the proved authority for the closure laws.
+- **Input corrections, not repo theorem retractions:** the quadratic cycles
+  in the prompt are those of `x^2-1` and `x^2-2`; the divisor equation needs
+  proper squarefree divisors and proper distinct prime divisors; and a
+  3-4-5 triangle has hypotenuse altitude12/5, not sqrt2. Exact scopes and
+  surviving structural connections are in the [session synthesis](../05-knowledge/results/arithmetic_braids_20260917_synthesis.md).
+
 ## 2026-09-08 tournament continuation -- the next operation needs its sidecar
 
 - **REFUTED contact-metric shortcut:** external row disagreement h is not

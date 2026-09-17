@@ -1,0 +1,28 @@
+{
+  "output": "05-knowledge/results/arithmetic_braids_20260917_collatz.json",
+  "sha256": "265f8d652cbe7e1b316e70e8ff1657893053777ede1333218ff4408802d4e467",
+  "inverse_checks": 8004,
+  "crt_checks": 4092,
+  "cycle_words_checked": 106761,
+  "cycles": [
+    [
+      -91,
+      -17,
+      -25,
+      -37,
+      -55,
+      -41,
+      -61
+    ],
+    [
+      -7,
+      -5
+    ],
+    [
+      -1
+    ],
+    [
+      1
+    ]
+  ]
+}

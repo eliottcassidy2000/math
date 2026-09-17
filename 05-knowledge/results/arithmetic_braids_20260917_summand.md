@@ -103,6 +103,15 @@ parent pairs are discarded; the sidecar is the full fibre. This is an
 actual bridge between doubling and squares. It does not identify a
 Collatz orbit with a primitive Pythagorean triple.
 
+The companion [geometry result](arithmetic_braids_20260917_geometry.md),
+section 5, makes one further exact connection. Gaussian squaring sends
+`(A,B,C)` to `(A^2-B^2,2AB,C^2)`, so projection to the hypotenuse lands
+precisely on the deleted multiplicative-diagonal arrows `C->C^2`.
+The projected hypotenuse has fixed prime support, while every new odd
+leg contributes a prime absent from all previous legs. This is a
+proved loss of information: diagonal-forest projection retains scale
+ancestry and discards the coordinates in which new primes appear.
+
 ## 3. Exact reconstruction of shortcut Collatz
 
 Define

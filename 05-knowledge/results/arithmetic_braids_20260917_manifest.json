@@ -1,0 +1,121 @@
+{
+  "status": "FINITE-EXACT replay of stated universes; proofs in notes",
+  "hash_basis": "UTF-8 file bytes with CRLF normalized to LF",
+  "runs": [
+    {
+      "lane": "collatz",
+      "command": "python3 04-computation/experiments/arithmetic_braids_20260917_collatz.py",
+      "ordinary_pass": true,
+      "optimized_pass": true,
+      "optimized_note": "explicit checks retained",
+      "transcript": "05-knowledge/results/arithmetic_braids_20260917_collatz.out"
+    },
+    {
+      "lane": "summand",
+      "command": "python3 04-computation/experiments/arithmetic_braids_20260917_summand.py",
+      "ordinary_pass": true,
+      "optimized_pass": false,
+      "optimized_note": "not run; assert-based controls require ordinary Python",
+      "transcript": "05-knowledge/results/arithmetic_braids_20260917_summand.out"
+    },
+    {
+      "lane": "divisors",
+      "command": "python3 04-computation/experiments/arithmetic_braids_20260917_divisors.py",
+      "ordinary_pass": true,
+      "optimized_pass": true,
+      "optimized_note": "explicit checks retained",
+      "transcript": "05-knowledge/results/arithmetic_braids_20260917_divisors.out"
+    },
+    {
+      "lane": "geometry",
+      "command": "python3 04-computation/experiments/arithmetic_braids_20260917_geometry.py",
+      "ordinary_pass": true,
+      "optimized_pass": true,
+      "optimized_note": "explicit checks retained",
+      "transcript": "05-knowledge/results/arithmetic_braids_20260917_geometry.out"
+    }
+  ],
+  "artifacts": [
+    {
+      "path": "04-computation/experiments/arithmetic_braids_20260917_collatz.py",
+      "sha256_lf": "1b666a9cc7b8cfb4c745cac1d7f3c82e6c42a191bec095065bd9de4335b288c3",
+      "bytes_lf": 7942
+    },
+    {
+      "path": "04-computation/experiments/arithmetic_braids_20260917_divisors.json",
+      "sha256_lf": "0491d8b49aafd3aab86d2ccd39a032343455940a3dd584c37ee02eb26ca7e60e",
+      "bytes_lf": 11026
+    },
+    {
+      "path": "04-computation/experiments/arithmetic_braids_20260917_divisors.py",
+      "sha256_lf": "b7a5161f87c6d1784e917678c455a587838a77651bd9356ad1c8a3c418dc5aab",
+      "bytes_lf": 11419
+    },
+    {
+      "path": "04-computation/experiments/arithmetic_braids_20260917_geometry.py",
+      "sha256_lf": "e7fc46feab6f343744dfb9c1a6c9565840cd769c315a4b6b68368e3c70f43f4c",
+      "bytes_lf": 8699
+    },
+    {
+      "path": "04-computation/experiments/arithmetic_braids_20260917_summand.py",
+      "sha256_lf": "5271db4ede1c52543328e31cb4f13021f3f4bf4b214fee345b1c4c541e280284",
+      "bytes_lf": 5799
+    },
+    {
+      "path": "04-computation/experiments/arithmetic_braids_20260917_verify.py",
+      "sha256_lf": "c5aacc245b8cdf0e41053bd364e0d1ae980076ee79dcd7769609a26ceda2ae26",
+      "bytes_lf": 3365
+    },
+    {
+      "path": "05-knowledge/results/arithmetic_braids_20260917_collatz.json",
+      "sha256_lf": "265f8d652cbe7e1b316e70e8ff1657893053777ede1333218ff4408802d4e467",
+      "bytes_lf": 7742
+    },
+    {
+      "path": "05-knowledge/results/arithmetic_braids_20260917_collatz.md",
+      "sha256_lf": "2a4d7a23e3b8e191ce2c68fe052b738bf10a05f483223bc52973ba753cec85b0",
+      "bytes_lf": 12101
+    },
+    {
+      "path": "05-knowledge/results/arithmetic_braids_20260917_collatz.out",
+      "sha256_lf": "b529debe0dd124ab540192c090c39fde2c5a7c9a579c65030136430b878226bd",
+      "bytes_lf": 422
+    },
+    {
+      "path": "05-knowledge/results/arithmetic_braids_20260917_divisors.md",
+      "sha256_lf": "2c9224962e8395082bdafaf490f664be1943511a82e28ef4a86569b637aca958",
+      "bytes_lf": 15330
+    },
+    {
+      "path": "05-knowledge/results/arithmetic_braids_20260917_divisors.out",
+      "sha256_lf": "726bf21d44bdfca6aaad0b07ebfd047aa25822445895d897a111b4957fdbd1b6",
+      "bytes_lf": 2825
+    },
+    {
+      "path": "05-knowledge/results/arithmetic_braids_20260917_geometry.md",
+      "sha256_lf": "a9e3a8fda096cd97f1d14f4924fc76eedd81b094ef122ff7b567b7131b52c708",
+      "bytes_lf": 23965
+    },
+    {
+      "path": "05-knowledge/results/arithmetic_braids_20260917_geometry.out",
+      "sha256_lf": "9f19470f6bf6847155dd193b60965e556cd1b97c85107bbde7a04768683e5e46",
+      "bytes_lf": 584
+    },
+    {
+      "path": "05-knowledge/results/arithmetic_braids_20260917_summand.md",
+      "sha256_lf": "ea77e19774af976f5aad8052e26d0440bc3c022afbe93176fc84c843dab07d86",
+      "bytes_lf": 16061
+    },
+    {
+      "path": "05-knowledge/results/arithmetic_braids_20260917_summand.out",
+      "sha256_lf": "65542ad6bb0ae1a452386b254e6af9aa666d4d4f69de634c17b85d04cb80e006",
+      "bytes_lf": 2047
+    },
+    {
+      "path": "05-knowledge/results/arithmetic_braids_20260917_synthesis.md",
+      "sha256_lf": "60edf57796b8e3d500b619aea230ba77f7f40f9a3c7d0a4c8af6327e03aed1f9",
+      "bytes_lf": 13887
+    }
+  ],
+  "scope": "No global Collatz, prime-pair, or Thue classification claim"
+}

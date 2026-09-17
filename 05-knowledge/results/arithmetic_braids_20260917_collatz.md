@@ -191,6 +191,14 @@ This directly challenges a transfer from the sandwich CRT product: finite
 prime-local data are exact on their finite universe, but adding any fixed
 set of such data cannot fix this deterministic descent obstruction.
 
+Even removing periodicity does not rescue a uniformly bounded correction:
+if0<c<=w(n)<=C for every odd n, strict one-step decrease of V(n)=w(n)n
+would imply T^L(n)/n<C/c along every L-step segment. The displayed family
+with M=q=1 has unbounded excursion ratios, a contradiction. Equivalently,
+`log n` plus a uniformly bounded real correction cannot decrease at every
+odd step. This is a scope obstruction for that form of certificate, not an
+obstruction to convergence itself.
+
 ## 6. The global quantity that is still owed
 
 For any finite positive odd orbit segment a0,...,aL,
