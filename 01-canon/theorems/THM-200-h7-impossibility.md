@@ -1,3 +1,9 @@
+> **CORRECTION 2026-09-17:** The former gap-tower corollary below is refuted.
+> `H=63` is realized by THM-344; adjoining a source preserves H and makes
+> the tournament non-strong. The repaired all-order exclusions `{7,21}` are
+> [THM-1370-h-spectrum-omits-7-21-all-n](THM-1370-h-spectrum-omits-7-21-all-n.md).
+> The H=7 statement below is retained; the withdrawn corollary is historical.
+
 # THM-200: H=7 Impossibility Theorem
 
 **Status:** PROVED
@@ -55,11 +61,22 @@ In both cases, I(Ω(T), 2) ≠ 7, so H(T) ≠ 7.
 - n = 8: H ≠ 7 verified by sampling (500,000 random tournaments, 0 hits).
 - All these match the theorem prediction.
 
-## Corollary
+## Withdrawn corollary and repaired consequence
 
-H(T) ∉ {7 · 3^k : k ≥ 0} = {7, 21, 63, 189, ...} for non-strongly-connected tournaments, since the SCC product formula H = ∏ H(SCCᵢ) would require an SCC component with H = 7.
+**REFUTED historical claim:** all `7*3^k` were asserted absent for non-strong
+tournaments. The SCC product formula does not require a factor7: one strong
+component can already have H=63 or189. In particular, take an eight-vertex
+H=63 witness from
+[THM-344-n8-h63-complete-omega](THM-344-n8-h63-complete-omega.md) and adjoin
+a source vertex. Every Hamiltonian path starts at that source and then is
+a path of the witness, so H remains63 in a non-strong tournament.
 
-**Note:** H = 21 is also absent for SC tournaments (verified through n ≤ 7 exhaustive + n = 8 sampling), but the proof of H ≠ 21 for SC tournaments at general n requires separate analysis.
+**Survivor:** H=7 and H=21 are excluded at every order by
+[THM-1370-h-spectrum-omits-7-21-all-n](THM-1370-h-spectrum-omits-7-21-all-n.md).
+Its later proof supersedes the old claim that H=21 had only bounded support.
+The missing coordinate was the attainable value of an entire SCC, rather
+than the prime factorization of its Hamiltonian count. The elementary first
+failed implication is `7 divides a product => some factor equals7`.
 
 ## Key scripts
 

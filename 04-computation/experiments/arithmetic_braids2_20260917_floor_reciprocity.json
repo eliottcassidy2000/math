@@ -1,0 +1,330 @@
+{
+  "examples": [
+    {
+      "cube_and_root_defect": "0",
+      "cube_floor_sum": 0,
+      "cube_root_floor_sum": 0,
+      "cube_zero_roots_including_zero": 1,
+      "factorization": {
+        "2": 1
+      },
+      "n": 2,
+      "nonzero_zero_product_pairs": 0,
+      "product_defect": "0",
+      "product_floor_sum": 0
+    },
+    {
+      "cube_and_root_defect": "0",
+      "cube_floor_sum": 2,
+      "cube_root_floor_sum": 2,
+      "cube_zero_roots_including_zero": 1,
+      "factorization": {
+        "3": 1
+      },
+      "n": 3,
+      "nonzero_zero_product_pairs": 0,
+      "product_defect": "0",
+      "product_floor_sum": 1
+    },
+    {
+      "cube_and_root_defect": "1/2",
+      "cube_floor_sum": 8,
+      "cube_root_floor_sum": 11,
+      "cube_zero_roots_including_zero": 2,
+      "factorization": {
+        "2": 2
+      },
+      "n": 4,
+      "nonzero_zero_product_pairs": 1,
+      "product_defect": "1/2",
+      "product_floor_sum": 5
+    },
+    {
+      "cube_and_root_defect": "0",
+      "cube_floor_sum": 35,
+      "cube_root_floor_sum": 65,
+      "cube_zero_roots_including_zero": 1,
+      "factorization": {
+        "2": 1,
+        "3": 1
+      },
+      "n": 6,
+      "nonzero_zero_product_pairs": 4,
+      "product_defect": "2",
+      "product_floor_sum": 27
+    },
+    {
+      "cube_and_root_defect": "0",
+      "cube_floor_sum": 60,
+      "cube_root_floor_sum": 120,
+      "cube_zero_roots_including_zero": 1,
+      "factorization": {
+        "7": 1
+      },
+      "n": 7,
+      "nonzero_zero_product_pairs": 0,
+      "product_defect": "0",
+      "product_floor_sum": 45
+    },
+    {
+      "cube_and_root_defect": "3/2",
+      "cube_floor_sum": 96,
+      "cube_root_floor_sum": 201,
+      "cube_zero_roots_including_zero": 4,
+      "factorization": {
+        "2": 3
+      },
+      "n": 8,
+      "nonzero_zero_product_pairs": 5,
+      "product_defect": "5/2",
+      "product_floor_sum": 76
+    },
+    {
+      "cube_and_root_defect": "1",
+      "cube_floor_sum": 141,
+      "cube_root_floor_sum": 309,
+      "cube_zero_roots_including_zero": 3,
+      "factorization": {
+        "3": 2
+      },
+      "n": 9,
+      "nonzero_zero_product_pairs": 4,
+      "product_defect": "2",
+      "product_floor_sum": 114
+    },
+    {
+      "cube_and_root_defect": "1/2",
+      "cube_floor_sum": 358,
+      "cube_root_floor_sum": 853,
+      "cube_zero_roots_including_zero": 2,
+      "factorization": {
+        "2": 2,
+        "3": 1
+      },
+      "n": 12,
+      "nonzero_zero_product_pairs": 17,
+      "product_defect": "17/2",
+      "product_floor_sum": 311
+    },
+    {
+      "cube_and_root_defect": "3/2",
+      "cube_floor_sum": 894,
+      "cube_root_floor_sum": 2259,
+      "cube_zero_roots_including_zero": 4,
+      "factorization": {
+        "2": 4
+      },
+      "n": 16,
+      "nonzero_zero_product_pairs": 17,
+      "product_defect": "17/2",
+      "product_floor_sum": 796
+    },
+    {
+      "cube_and_root_defect": "1",
+      "cube_floor_sum": 1293,
+      "cube_root_floor_sum": 3333,
+      "cube_zero_roots_including_zero": 3,
+      "factorization": {
+        "2": 1,
+        "3": 2
+      },
+      "n": 18,
+      "nonzero_zero_product_pairs": 28,
+      "product_defect": "14",
+      "product_floor_sum": 1170
+    },
+    {
+      "cube_and_root_defect": "4",
+      "cube_floor_sum": 4554,
+      "cube_root_floor_sum": 12354,
+      "cube_zero_roots_including_zero": 9,
+      "factorization": {
+        "3": 3
+      },
+      "n": 27,
+      "nonzero_zero_product_pairs": 28,
+      "product_defect": "14",
+      "product_floor_sum": 4239
+    },
+    {
+      "cube_and_root_defect": "0",
+      "cube_floor_sum": 6293,
+      "cube_root_floor_sum": 17255,
+      "cube_zero_roots_including_zero": 1,
+      "factorization": {
+        "2": 1,
+        "3": 1,
+        "5": 1
+      },
+      "n": 30,
+      "nonzero_zero_product_pairs": 76,
+      "product_defect": "38",
+      "product_floor_sum": 5925
+    },
+    {
+      "cube_and_root_defect": "5/2",
+      "cube_floor_sum": 11010,
+      "cube_root_floor_sum": 30645,
+      "cube_zero_roots_including_zero": 6,
+      "factorization": {
+        "2": 2,
+        "3": 2
+      },
+      "n": 36,
+      "nonzero_zero_product_pairs": 97,
+      "product_defect": "97/2",
+      "product_floor_sum": 10461
+    },
+    {
+      "cube_and_root_defect": "1/2",
+      "cube_floor_sum": 52186,
+      "cube_root_floor_sum": 149713,
+      "cube_zero_roots_including_zero": 2,
+      "factorization": {
+        "2": 2,
+        "3": 1,
+        "5": 1
+      },
+      "n": 60,
+      "nonzero_zero_product_pairs": 241,
+      "product_defect": "241/2",
+      "product_floor_sum": 50595
+    },
+    {
+      "cube_and_root_defect": "15/2",
+      "cube_floor_sum": 63480,
+      "cube_root_floor_sum": 182613,
+      "cube_zero_roots_including_zero": 16,
+      "factorization": {
+        "2": 6
+      },
+      "n": 64,
+      "nonzero_zero_product_pairs": 129,
+      "product_defect": "129/2",
+      "product_floor_sum": 61584
+    },
+    {
+      "cube_and_root_defect": "11/2",
+      "cube_floor_sum": 90708,
+      "cube_root_floor_sum": 262173,
+      "cube_zero_roots_including_zero": 12,
+      "factorization": {
+        "2": 3,
+        "3": 2
+      },
+      "n": 72,
+      "nonzero_zero_product_pairs": 277,
+      "product_defect": "277/2",
+      "product_floor_sum": 88356
+    }
+  ],
+  "hostiles": {
+    "degree_one_squarefree_detection_failure": "degree one has zero defect at every modulus",
+    "even_power_antipodal_failure": {
+      "d": 2,
+      "n": 3
+    },
+    "first_composite_defect": 4,
+    "first_odd_collatz_gain_of_squarefree": [
+      9,
+      7
+    ],
+    "first_odd_collatz_loss_of_squarefree": [
+      33,
+      25
+    ],
+    "literal_cube_p3": {
+      "claimed_rhs": "2",
+      "without_floor": "3"
+    },
+    "literal_product_p3": {
+      "claimed_rhs": "1",
+      "without_floor": "3"
+    },
+    "literal_root_p3": "cuberoot(3)+cuberoot(6)>2=claimed_rhs",
+    "nonpermutation_prime_cube_residues": {
+      "n": 7,
+      "residues": [
+        1,
+        1,
+        6,
+        1,
+        6,
+        6
+      ]
+    },
+    "squarefree_composite_separator": 6
+  },
+  "result": "PASS",
+  "source_sha256": "0712d7e0ef2911a7805ba09a9cf353f90915bfba3fd848199bc0dbf208802819",
+  "status": "FINITE-EXACT controls for independently proved all-modulus identities",
+  "universes": {
+    "higher_products": {
+      "arity_and_max_modulus": [
+        [
+          3,
+          25
+        ],
+        [
+          4,
+          12
+        ]
+      ],
+      "tuple_entries": 129974
+    },
+    "inverse_roots": {
+      "degree_and_max_modulus": [
+        [
+          1,
+          30
+        ],
+        [
+          2,
+          30
+        ],
+        [
+          3,
+          80
+        ],
+        [
+          5,
+          12
+        ],
+        [
+          7,
+          8
+        ],
+        [
+          9,
+          6
+        ]
+      ],
+      "direct_root_terms": 743638,
+      "method": "integer binary search for every individual root term",
+      "parameter_pairs": 160
+    },
+    "odd_power": {
+      "degrees": [
+        1,
+        3,
+        5,
+        7,
+        9,
+        11
+      ],
+      "moduli": "2<=n<=500",
+      "parameter_pairs": 2994,
+      "residue_evaluations": 751494
+    },
+    "product_pairs": {
+      "methods": [
+        "direct row floor sums",
+        "direct modular zero pairs",
+        "gcd sum",
+        "CRT factor product"
+      ],
+      "moduli": "2<=n<=150",
+      "ordered_pair_entries": 1113775
+    }
+  }
+}

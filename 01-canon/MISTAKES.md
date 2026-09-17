@@ -11,6 +11,18 @@ Format per entry:
 
 ## 2026-09-17 arithmetic braids -- a finite head and a quotient lost their scope
 
+- **REFUTED gap tower still live in an older source:**
+  [THM-200-h7-impossibility](theorems/THM-200-h7-impossibility.md) retained
+  a corollary excluding every `7*3^k` for non-strong tournaments. The first
+  failed implication was replacing divisibility by7 with an SCC whose whole
+  Hamiltonian count equals7. An H=63 witness from
+  [THM-344-n8-h63-complete-omega](theorems/THM-344-n8-h63-complete-omega.md),
+  padded by one source, has nine vertices, remains H=63, and is non-strong.
+  The strongest repaired exclusions are `{7,21}` at every order, as already
+  recorded in [THM-1370-h-spectrum-omits-7-21-all-n](theorems/THM-1370-h-spectrum-omits-7-21-all-n.md).
+  The old source now warns explicitly and withdraws the corollary. This
+  preserves the existing MISTAKE-502 carry-atom lineage rather than claiming
+  a newly discovered counterexample.
 - **UNPROVED bound promoted to PROVED:** the historical Collatz iterated-log
   reflection and script call the census-supported `D(n)<0.2257` a theorem.
   The predecessor-star formula `(4^j-1)/3` describes immediate predecessors

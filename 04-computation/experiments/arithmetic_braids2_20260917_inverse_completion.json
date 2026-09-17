@@ -1,0 +1,105 @@
+{
+  "status": "FINITE-EXACT; general statements proved in companion note",
+  "word_universe": "L=0..4, exponents1..3, seven (b,target) pairs, all9 residues mod9",
+  "word_completions": 7623,
+  "maximum_source_bit_length": 1464,
+  "mixed_cylinder_universe": "H=1..5,s=2, all odd residues, four (b,target) pairs",
+  "mixed_cylinder_checks": 1116,
+  "direct_same_class_mod72": {
+    "1": {
+      "source": 1,
+      "hit": 1,
+      "steps": 0
+    },
+    "17": {
+      "source": 73,
+      "hit": 61,
+      "steps": 3
+    },
+    "5": {
+      "source": 361,
+      "hit": 7,
+      "steps": 4
+    }
+  },
+  "common_prefix_examples": [
+    {
+      "b": -1,
+      "target": 1,
+      "word": [
+        1,
+        1
+      ],
+      "k0": 1,
+      "t": 0,
+      "K": 2,
+      "B": 5,
+      "source": 1,
+      "states": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "exponents": [
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "b": -1,
+      "target": 5,
+      "word": [
+        1,
+        1
+      ],
+      "k0": 2,
+      "t": 15,
+      "K": 2,
+      "B": 5,
+      "source": 3181457257,
+      "states": [
+        3181457257,
+        4772185885,
+        7158278827,
+        5
+      ],
+      "exponents": [
+        1,
+        1,
+        32
+      ]
+    },
+    {
+      "b": -1,
+      "target": 17,
+      "word": [
+        1,
+        1
+      ],
+      "k0": 2,
+      "t": 10,
+      "K": 2,
+      "B": 5,
+      "source": 10563433,
+      "states": [
+        10563433,
+        15845149,
+        23767723,
+        17
+      ],
+      "exponents": [
+        1,
+        1,
+        22
+      ]
+    }
+  ],
+  "hostile_control": "b=-5 ancestors of5 stay divisible by5",
+  "limitations": [
+    "No completeness theorem for any cycle census",
+    "No natural density or height-efficient cover proved",
+    "A different completion integer is used for each finite prefix"
+  ]
+}
