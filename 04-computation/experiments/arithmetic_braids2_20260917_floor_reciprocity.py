@@ -185,7 +185,7 @@ def main():
     certificate["hostiles"]["first_odd_collatz_gain_of_squarefree"] = gain
     certificate["result"] = "PASS"
     path = Path(__file__).with_suffix(".json")
-    path.write_text(json.dumps(certificate, indent=2, sort_keys=True)+"\n", encoding="utf-8")
+    path.write_text(json.dumps(certificate, indent=2, sort_keys=True)+"\n", encoding="utf-8", newline="\n")
     print(f"odd-power identities: {odd_power_pairs} pairs, {odd_power_residues} residues; PASS")
     print(f"inverse lattice identities: {inverse_pairs} pairs, {direct_root_terms} direct root terms; PASS")
     print(f"product floor identities: {pair_entries} ordered pair entries; PASS")

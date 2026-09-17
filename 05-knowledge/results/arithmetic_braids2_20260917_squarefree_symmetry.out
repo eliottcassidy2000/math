@@ -1,0 +1,229 @@
+{
+  "output": "C:\\tmp\\math-wt-arithmetic-braids-20260917\\04-computation\\experiments\\arithmetic_braids2_20260917_squarefree_symmetry.json",
+  "all_checks_passed": true,
+  "growth": {
+    "1": {
+      "q_bound": 10000,
+      "counts_by_source_row": {
+        "3": 1833,
+        "1": 2767,
+        "5": 2778
+      },
+      "first_by_source_row": {
+        "3": {
+          "q": 1,
+          "nodes": [
+            3,
+            5
+          ]
+        },
+        "1": {
+          "q": 2,
+          "nodes": [
+            7,
+            11
+          ]
+        },
+        "5": {
+          "q": 3,
+          "nodes": [
+            11,
+            17
+          ]
+        }
+      },
+      "total": 7378,
+      "all_intermediate_nodes_squarefree": true
+    },
+    "2": {
+      "q_bound": 10000,
+      "counts_by_source_row": {
+        "1": 2521,
+        "3": 1676,
+        "5": 2523
+      },
+      "first_by_source_row": {
+        "1": {
+          "q": 1,
+          "nodes": [
+            7,
+            11,
+            17
+          ]
+        },
+        "3": {
+          "q": 2,
+          "nodes": [
+            15,
+            23,
+            35
+          ]
+        },
+        "5": {
+          "q": 3,
+          "nodes": [
+            23,
+            35,
+            53
+          ]
+        }
+      },
+      "total": 6720,
+      "all_intermediate_nodes_squarefree": true
+    },
+    "3": {
+      "q_bound": 10000,
+      "counts_by_source_row": {
+        "3": 1531,
+        "1": 2275,
+        "5": 2290
+      },
+      "first_by_source_row": {
+        "3": {
+          "q": 1,
+          "nodes": [
+            15,
+            23,
+            35,
+            53
+          ]
+        },
+        "1": {
+          "q": 2,
+          "nodes": [
+            31,
+            47,
+            71,
+            107
+          ]
+        },
+        "5": {
+          "q": 3,
+          "nodes": [
+            47,
+            71,
+            107,
+            161
+          ]
+        }
+      },
+      "total": 6096,
+      "all_intermediate_nodes_squarefree": true
+    },
+    "6": {
+      "q_bound": 10000,
+      "counts_by_source_row": {
+        "1": 1669,
+        "3": 1088,
+        "5": 1643
+      },
+      "first_by_source_row": {
+        "1": {
+          "q": 1,
+          "nodes": [
+            127,
+            191,
+            287,
+            431,
+            647,
+            971,
+            1457
+          ]
+        },
+        "3": {
+          "q": 11,
+          "nodes": [
+            1407,
+            2111,
+            3167,
+            4751,
+            7127,
+            10691,
+            16037
+          ]
+        },
+        "5": {
+          "q": 15,
+          "nodes": [
+            1919,
+            2879,
+            4319,
+            6479,
+            9719,
+            14579,
+            21869
+          ]
+        }
+      },
+      "total": 4400,
+      "all_intermediate_nodes_squarefree": true
+    },
+    "10": {
+      "q_bound": 10000,
+      "counts_by_source_row": {
+        "1": 1101,
+        "3": 724,
+        "5": 1091
+      },
+      "first_by_source_row": {
+        "1": {
+          "q": 1,
+          "nodes": [
+            2047,
+            3071,
+            4607,
+            6911,
+            10367,
+            15551,
+            23327,
+            34991,
+            52487,
+            78731,
+            118097
+          ]
+        },
+        "3": {
+          "q": 5,
+          "nodes": [
+            10239,
+            15359,
+            23039,
+            34559,
+            51839,
+            77759,
+            116639,
+            174959,
+            262439,
+            393659,
+            590489
+          ]
+        },
+        "5": {
+          "q": 6,
+          "nodes": [
+            12287,
+            18431,
+            27647,
+            41471,
+            62207,
+            93311,
+            139967,
+            209951,
+            314927,
+            472391,
+            708587
+          ]
+        }
+      },
+      "total": 2916,
+      "all_intermediate_nodes_squarefree": true
+    }
+  },
+  "octonion_gauges": {
+    "189": 128
+  },
+  "all_orientations": {
+    "171": 112,
+    "189": 16
+  }
+}

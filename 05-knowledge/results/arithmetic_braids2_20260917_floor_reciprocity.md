@@ -295,6 +295,24 @@ An exact scan of all odd starts `3<=n<=500` confirms these are respectively
 the first loss and first gain of squarefreeness. Thus the scalar defect is
 not even monotone under one step of the relevant operation.
 
+There is an all-length obstruction to extracting descent from the first
+two identities. The companion
+[squarefree symmetry note, Section 3](arithmetic_braids2_20260917_squarefree_symmetry.md)
+proves that for every fixed `L>=1` there are infinitely many positive
+integers `q` for which all
+
+```text
+n_j=3^j*2^(L+1-j)*q-1,       0<=j<=L,                  (14)
+```
+
+are squarefree. They form `L` consecutive strictly growing Collatz steps
+with halving exponent one. Thus the cube/root identities can hold at
+every vertex of an arbitrarily long growing trajectory segment. This is
+a joint realization theorem, stronger than unrelated squarefree densities
+at the individual positions. It still makes no assertion that one
+infinite trajectory is squarefree, or that a squarefree realization can
+also be chosen among separately constructed terminating completions.
+
 ## 7. Verification, transfer contracts, and stopping boundary
 
 | Source -> target | Map | Preserved predicate | Lost data / required sidecar |

@@ -232,13 +232,14 @@ all heights (THM-1289, published), δ ineffective.
   conjectural, and the theta=2 excursion exponent belongs to an iid model.
   [The 2026-09-17 audit](../05-knowledge/results/arithmetic_braids_20260917_collatz.md)
   gives the full triadic inverse-fibre braid, exact exponent-word cylinders,
-  and an obstruction to descent via fixed periodic weights. None proves
-  global convergence; retain integer height and ordered affine carry.
+  and a periodic-weight obstruction. [The continuation](../05-knowledge/results/arithmetic_braids2_20260917_synthesis.md)
+  proves dense disjoint minus basins and squarefree growth prefixes of every
+  finite length. Global convergence remains open; retain height and carry.
 - **Erdős Problem 592** [DEEP — $1000 problem] — the p=2 Schur-seam theorem (THM-469),
   R(n,2)=2n+1 linear conjecture, Chang-tower m=3 open; 21 scripts, a survey draft.
-- **{7,21} forbidden H-spectrum** [DEEP, repo-signature] — the only unachievable OCF
-  values; H=7 (THM-029) + H=21 (THM-079) proved; parallels the open LRC {12,24};
-  E8/Golay/octonion home. (OPEN-Q-028.)
+- **{7,21} forbidden H-spectrum** [DEEP, repo-signature] — permanent exclusions by
+  [THM-1370-h-spectrum-omits-7-21-all-n](../01-canon/theorems/THM-1370-h-spectrum-omits-7-21-all-n.md).
+  Completeness of the remaining odd spectrum is OPEN; H=63 and189 occur.
 - **GLMY path homology of tournaments** [DEEP / HIGHER DEGREES DISPUTED] —
   `β₁∈{0,1}` and `β₂=0` are the convention-safe core. Claims in degree at
   least three, including `β₄(T₇)=6` and the n=8 seesaw, are not current canon;

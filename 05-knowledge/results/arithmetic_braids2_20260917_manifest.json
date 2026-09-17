@@ -1,0 +1,207 @@
+{
+  "status": "FINITE-EXACT reproductions; universal proofs in separately audited notes",
+  "hash_basis": "UTF-8 artifact bytes normalized to LF",
+  "runs": [
+    {
+      "lane": "inverse_completion",
+      "command": "python 04-computation/experiments/arithmetic_braids2_20260917_inverse_completion.py",
+      "ordinary_pass": true,
+      "optimized_pass": true,
+      "certificates_identical_after_lf_normalization": true,
+      "certificate": "04-computation/experiments/arithmetic_braids2_20260917_inverse_completion.json",
+      "transcript": "05-knowledge/results/arithmetic_braids2_20260917_inverse_completion.out"
+    },
+    {
+      "lane": "inverse_audit",
+      "command": "python 04-computation/experiments/arithmetic_braids2_20260917_inverse_audit.py",
+      "ordinary_pass": true,
+      "optimized_pass": true,
+      "certificates_identical_after_lf_normalization": true,
+      "certificate": "04-computation/experiments/arithmetic_braids2_20260917_inverse_audit.json",
+      "transcript": "05-knowledge/results/arithmetic_braids2_20260917_inverse_audit.out"
+    },
+    {
+      "lane": "floor_reciprocity",
+      "command": "python 04-computation/experiments/arithmetic_braids2_20260917_floor_reciprocity.py",
+      "ordinary_pass": true,
+      "optimized_pass": true,
+      "certificates_identical_after_lf_normalization": true,
+      "certificate": "04-computation/experiments/arithmetic_braids2_20260917_floor_reciprocity.json",
+      "transcript": "05-knowledge/results/arithmetic_braids2_20260917_floor_reciprocity.out"
+    },
+    {
+      "lane": "signed_cycles",
+      "command": "python 04-computation/experiments/arithmetic_braids2_20260917_signed_cycles.py",
+      "ordinary_pass": true,
+      "optimized_pass": true,
+      "certificates_identical_after_lf_normalization": true,
+      "certificate": "04-computation/experiments/arithmetic_braids2_20260917_signed_cycles.json",
+      "transcript": "05-knowledge/results/arithmetic_braids2_20260917_signed_cycles.out"
+    },
+    {
+      "lane": "squarefree_symmetry",
+      "command": "python 04-computation/experiments/arithmetic_braids2_20260917_squarefree_symmetry.py",
+      "ordinary_pass": true,
+      "optimized_pass": true,
+      "certificates_identical_after_lf_normalization": true,
+      "certificate": "04-computation/experiments/arithmetic_braids2_20260917_squarefree_symmetry.json",
+      "transcript": "05-knowledge/results/arithmetic_braids2_20260917_squarefree_symmetry.out"
+    },
+    {
+      "lane": "fano_code",
+      "command": "python 04-computation/experiments/arithmetic_braids2_20260917_fano_code.py",
+      "ordinary_pass": true,
+      "optimized_pass": true,
+      "certificates_identical_after_lf_normalization": true,
+      "certificate": "04-computation/experiments/arithmetic_braids2_20260917_fano_code.json",
+      "transcript": "05-knowledge/results/arithmetic_braids2_20260917_fano_code.out"
+    }
+  ],
+  "artifacts": [
+    {
+      "path": "04-computation/experiments/arithmetic_braids2_20260917_fano_code.json",
+      "sha256_lf": "20933eca52bc2e997a3132ca1d6c6d29d013209f070bbcb7e4a5ccd27aed7fea",
+      "bytes_lf": 7497
+    },
+    {
+      "path": "04-computation/experiments/arithmetic_braids2_20260917_fano_code.py",
+      "sha256_lf": "b99f17f6820ef8a3a8a3f10c700cc36e3f4d796d1137a88aeb9a19dd75487050",
+      "bytes_lf": 12259
+    },
+    {
+      "path": "04-computation/experiments/arithmetic_braids2_20260917_floor_reciprocity.json",
+      "sha256_lf": "0760fd25513fc7234919316e75f8cf97a460efd6e6208541fc8c6474f2f63bb9",
+      "bytes_lf": 7461
+    },
+    {
+      "path": "04-computation/experiments/arithmetic_braids2_20260917_floor_reciprocity.py",
+      "sha256_lf": "3355c299caf70fff771e0b409c3c9386f37218639721a187561ab4fd763d6df8",
+      "bytes_lf": 8730
+    },
+    {
+      "path": "04-computation/experiments/arithmetic_braids2_20260917_inverse_audit.json",
+      "sha256_lf": "e8233d6ceff794a3e0d67c984c86e02ad5440fd40b6af8117971987693b2ecc4",
+      "bytes_lf": 1433
+    },
+    {
+      "path": "04-computation/experiments/arithmetic_braids2_20260917_inverse_audit.py",
+      "sha256_lf": "dbdd20e80f1e5b2266f49547ccfe2ced3cf36b0ac1641eebafc0c50a949ef871",
+      "bytes_lf": 7038
+    },
+    {
+      "path": "04-computation/experiments/arithmetic_braids2_20260917_inverse_completion.json",
+      "sha256_lf": "2401123f418b469d8044bedb47f0db05e584003c1d5ec94f466b34f44133c70f",
+      "bytes_lf": 1865
+    },
+    {
+      "path": "04-computation/experiments/arithmetic_braids2_20260917_inverse_completion.py",
+      "sha256_lf": "86d410c02828581dd478fa2299902072a46ee18f5c667b48d4a933dfe0cfcadb",
+      "bytes_lf": 7202
+    },
+    {
+      "path": "04-computation/experiments/arithmetic_braids2_20260917_signed_cycles.json",
+      "sha256_lf": "11dad8125666cd75e6b6933dfb4dcb935e7038dea86e8952e63cdcf922ba76af",
+      "bytes_lf": 42519
+    },
+    {
+      "path": "04-computation/experiments/arithmetic_braids2_20260917_signed_cycles.py",
+      "sha256_lf": "303e1aea031151915f4afd02dd72f17718d7bf8f6b41d1a00b3e59fb25cb9e3b",
+      "bytes_lf": 13641
+    },
+    {
+      "path": "04-computation/experiments/arithmetic_braids2_20260917_squarefree_symmetry.json",
+      "sha256_lf": "ebda1beed54f983d4f1d483100eb0082ff8048ff58706622b59bb96985c9856b",
+      "bytes_lf": 26088
+    },
+    {
+      "path": "04-computation/experiments/arithmetic_braids2_20260917_squarefree_symmetry.py",
+      "sha256_lf": "12f16b6daccc968925b6e8c842bec73e7aea42d1fff6d41da30bfd6d7f017a77",
+      "bytes_lf": 13090
+    },
+    {
+      "path": "04-computation/experiments/arithmetic_braids2_20260917_verify.py",
+      "sha256_lf": "dbd4b242493dc9e90e0f23fcdb3883af70b350b32524f07e587a9c4a4d7fbd8a",
+      "bytes_lf": 5212
+    },
+    {
+      "path": "05-knowledge/results/arithmetic_braids2_20260917_fano_code.md",
+      "sha256_lf": "8e8d8b508eb0df90451af85d7de9bebddcd8d1b36da151da38a2b41ed3c34a31",
+      "bytes_lf": 15216
+    },
+    {
+      "path": "05-knowledge/results/arithmetic_braids2_20260917_fano_code.out",
+      "sha256_lf": "c51e0dd68fa17156d551e1dc4200b2d65f1f4111ddb83ded4cebeb83c473fdc3",
+      "bytes_lf": 276
+    },
+    {
+      "path": "05-knowledge/results/arithmetic_braids2_20260917_floor_reciprocity.md",
+      "sha256_lf": "62a8dd308d945bab40b3ef90189a15c0e961180732f85a756d81db47fe9c4bd1",
+      "bytes_lf": 14810
+    },
+    {
+      "path": "05-knowledge/results/arithmetic_braids2_20260917_floor_reciprocity.out",
+      "sha256_lf": "038b250b24c5293632c9ee34c962bd2e6bfd91ac710fa0ae2941396535e1736d",
+      "bytes_lf": 386
+    },
+    {
+      "path": "05-knowledge/results/arithmetic_braids2_20260917_inverse_audit.out",
+      "sha256_lf": "f6a3430c1ba8354e36930f03f8695709a39ad86d635ab3f54b84036a3fa4341d",
+      "bytes_lf": 183
+    },
+    {
+      "path": "05-knowledge/results/arithmetic_braids2_20260917_inverse_completion.md",
+      "sha256_lf": "e4307e5828a4c2a1fb5c0dc7ebb8e1583939bb9aff0f2fa5d23cce1a98fcbd91",
+      "bytes_lf": 8986
+    },
+    {
+      "path": "05-knowledge/results/arithmetic_braids2_20260917_inverse_completion.out",
+      "sha256_lf": "2401123f418b469d8044bedb47f0db05e584003c1d5ec94f466b34f44133c70f",
+      "bytes_lf": 1865
+    },
+    {
+      "path": "05-knowledge/results/arithmetic_braids2_20260917_signed_cycles.md",
+      "sha256_lf": "a87c344d37e8a3aca22e817e059f9860dbfa3c442a90bdac70f53c1da4bd408a",
+      "bytes_lf": 16306
+    },
+    {
+      "path": "05-knowledge/results/arithmetic_braids2_20260917_signed_cycles.out",
+      "sha256_lf": "5f6c130849b3130124a79016b2bcdeaa080d09444d021086bf6c171146d176b0",
+      "bytes_lf": 1016
+    },
+    {
+      "path": "05-knowledge/results/arithmetic_braids2_20260917_squarefree_symmetry.md",
+      "sha256_lf": "ebf665a341dd4773a213dfae3cb390e75179b553767bcd7d6e87c152f2b743cf",
+      "bytes_lf": 19876
+    },
+    {
+      "path": "05-knowledge/results/arithmetic_braids2_20260917_squarefree_symmetry.out",
+      "sha256_lf": "cee65ff797f646334170bf9ea6b2359089688e3c08f6b96bfc71c55ac868287d",
+      "bytes_lf": 4112
+    },
+    {
+      "path": "05-knowledge/results/arithmetic_braids2_20260917_synthesis.md",
+      "sha256_lf": "363cc6780f228483ef25ee09dfd1b84ddef28df96bbec34f1e4c248b8d914801",
+      "bytes_lf": 14911
+    }
+  ],
+  "cross_lane_exact_control": {
+    "identity": "3^11-2^11=23^2*331",
+    "ratio_order_mod529": 11,
+    "affine_branch_period_checks": 529,
+    "scope": "The exponent-one affine branch modulo529, not integer orbit periodicity"
+  },
+  "independence": {
+    "inverse_completion": "separate brute t search and closed-form carries in inverse_audit",
+    "floor_reciprocity": "direct integer root and floor sums versus boundary formulas",
+    "signed_cycles": "word enumeration versus direct forward trajectories and rational affine composition",
+    "squarefree_symmetry": "direct square tests, sieve controls, HK/permutation/OCF Hamiltonian counts",
+    "fano_code": "explicit finite code and lattice checks; theoretical audit recorded in note"
+  },
+  "open_boundaries": [
+    "Global Collatz convergence",
+    "Completeness of signed-cycle catalogs",
+    "Jointly squarefree terminating completions from the two separate constructions",
+    "A dynamical bridge from Fano/E8 or Bott periodicity to Collatz"
+  ],
+  "proof_audit_status": "Independent mathematical audits passed; see scoped notes. Documentation hashes refreshed after wording repairs, with all executable and certificate hashes unchanged."
+}

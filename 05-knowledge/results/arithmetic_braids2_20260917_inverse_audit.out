@@ -1,0 +1,3 @@
+independent inverse audit: 4000 parameter cases; PASS
+direct trajectories: 108000; ternary isometry checks: 104000; PASS
+singular-limit checks: 16000; maximum source bits: 1464; PASS

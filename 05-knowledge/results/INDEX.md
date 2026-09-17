@@ -1,5 +1,11 @@
 # Script Results Index
 
+- [Arithmetic braids II](arithmetic_braids2_20260917_synthesis.md): **PROVED
+  scoped + FINITE-EXACT + independently audited.** Finite-word inverse
+  completion; squarefree/prime floor defects; jointly squarefree growing
+  prefixes; signed parameter strata; Fano signs, Hamming code and E8.
+  [Manifest](arithmetic_braids2_20260917_manifest.json). Collatz remains open.
+
 - [Arithmetic braids](arithmetic_braids_20260917_synthesis.md): **PROVED scoped +
   FINITE-EXACT + INDEPENDENTLY AUDITED.** Collatz inverse-fibre odometer and
   periodic-weight obstruction; divisor-balance classification; exact CRT

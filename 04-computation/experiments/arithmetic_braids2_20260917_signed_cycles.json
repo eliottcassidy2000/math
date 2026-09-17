@@ -1777,7 +1777,422 @@
     }
   },
   "independent_fraction_compositions": 198,
-  "source_sha256": "7d978f9138c30f9ece5e82128d497c43c33dfda46f23ec89989b971676c5d8d8",
+  "modular_stratum_controls": {
+    "exact_CRT_edge_lifts": 1872,
+    "mod23_character_controls": 19132,
+    "mod23_quadratic_residues": [
+      1,
+      2,
+      3,
+      4,
+      6,
+      8,
+      9,
+      12,
+      13,
+      16,
+      18
+    ],
+    "moduli": [
+      {
+        "coset_count": 1,
+        "modulus": 5,
+        "subgroup_order": 4,
+        "unit_count": 4
+      },
+      {
+        "coset_count": 1,
+        "modulus": 7,
+        "subgroup_order": 6,
+        "unit_count": 6
+      },
+      {
+        "coset_count": 1,
+        "modulus": 11,
+        "subgroup_order": 10,
+        "unit_count": 10
+      },
+      {
+        "coset_count": 1,
+        "modulus": 13,
+        "subgroup_order": 12,
+        "unit_count": 12
+      },
+      {
+        "coset_count": 1,
+        "modulus": 17,
+        "subgroup_order": 16,
+        "unit_count": 16
+      },
+      {
+        "coset_count": 1,
+        "modulus": 19,
+        "subgroup_order": 18,
+        "unit_count": 18
+      },
+      {
+        "coset_count": 2,
+        "modulus": 23,
+        "subgroup_order": 11,
+        "unit_count": 22
+      },
+      {
+        "coset_count": 1,
+        "modulus": 25,
+        "subgroup_order": 20,
+        "unit_count": 20
+      },
+      {
+        "coset_count": 1,
+        "modulus": 29,
+        "subgroup_order": 28,
+        "unit_count": 28
+      },
+      {
+        "coset_count": 1,
+        "modulus": 31,
+        "subgroup_order": 30,
+        "unit_count": 30
+      },
+      {
+        "coset_count": 1,
+        "modulus": 35,
+        "subgroup_order": 24,
+        "unit_count": 24
+      },
+      {
+        "coset_count": 1,
+        "modulus": 37,
+        "subgroup_order": 36,
+        "unit_count": 36
+      },
+      {
+        "coset_count": 1,
+        "modulus": 41,
+        "subgroup_order": 40,
+        "unit_count": 40
+      },
+      {
+        "coset_count": 1,
+        "modulus": 43,
+        "subgroup_order": 42,
+        "unit_count": 42
+      },
+      {
+        "coset_count": 2,
+        "modulus": 47,
+        "subgroup_order": 23,
+        "unit_count": 46
+      },
+      {
+        "coset_count": 1,
+        "modulus": 49,
+        "subgroup_order": 42,
+        "unit_count": 42
+      },
+      {
+        "coset_count": 1,
+        "modulus": 53,
+        "subgroup_order": 52,
+        "unit_count": 52
+      },
+      {
+        "coset_count": 1,
+        "modulus": 55,
+        "subgroup_order": 40,
+        "unit_count": 40
+      },
+      {
+        "coset_count": 1,
+        "modulus": 59,
+        "subgroup_order": 58,
+        "unit_count": 58
+      },
+      {
+        "coset_count": 1,
+        "modulus": 61,
+        "subgroup_order": 60,
+        "unit_count": 60
+      },
+      {
+        "coset_count": 1,
+        "modulus": 65,
+        "subgroup_order": 48,
+        "unit_count": 48
+      },
+      {
+        "coset_count": 1,
+        "modulus": 67,
+        "subgroup_order": 66,
+        "unit_count": 66
+      },
+      {
+        "coset_count": 2,
+        "modulus": 71,
+        "subgroup_order": 35,
+        "unit_count": 70
+      },
+      {
+        "coset_count": 2,
+        "modulus": 73,
+        "subgroup_order": 36,
+        "unit_count": 72
+      },
+      {
+        "coset_count": 1,
+        "modulus": 77,
+        "subgroup_order": 60,
+        "unit_count": 60
+      },
+      {
+        "coset_count": 1,
+        "modulus": 79,
+        "subgroup_order": 78,
+        "unit_count": 78
+      },
+      {
+        "coset_count": 1,
+        "modulus": 83,
+        "subgroup_order": 82,
+        "unit_count": 82
+      },
+      {
+        "coset_count": 1,
+        "modulus": 85,
+        "subgroup_order": 64,
+        "unit_count": 64
+      },
+      {
+        "coset_count": 1,
+        "modulus": 89,
+        "subgroup_order": 88,
+        "unit_count": 88
+      },
+      {
+        "coset_count": 1,
+        "modulus": 91,
+        "subgroup_order": 72,
+        "unit_count": 72
+      },
+      {
+        "coset_count": 2,
+        "modulus": 95,
+        "subgroup_order": 36,
+        "unit_count": 72
+      },
+      {
+        "coset_count": 2,
+        "modulus": 97,
+        "subgroup_order": 48,
+        "unit_count": 96
+      },
+      {
+        "coset_count": 1,
+        "modulus": 101,
+        "subgroup_order": 100,
+        "unit_count": 100
+      },
+      {
+        "coset_count": 1,
+        "modulus": 103,
+        "subgroup_order": 102,
+        "unit_count": 102
+      },
+      {
+        "coset_count": 1,
+        "modulus": 107,
+        "subgroup_order": 106,
+        "unit_count": 106
+      },
+      {
+        "coset_count": 1,
+        "modulus": 109,
+        "subgroup_order": 108,
+        "unit_count": 108
+      },
+      {
+        "coset_count": 1,
+        "modulus": 113,
+        "subgroup_order": 112,
+        "unit_count": 112
+      },
+      {
+        "coset_count": 2,
+        "modulus": 115,
+        "subgroup_order": 44,
+        "unit_count": 88
+      },
+      {
+        "coset_count": 2,
+        "modulus": 119,
+        "subgroup_order": 48,
+        "unit_count": 96
+      },
+      {
+        "coset_count": 1,
+        "modulus": 121,
+        "subgroup_order": 110,
+        "unit_count": 110
+      },
+      {
+        "coset_count": 1,
+        "modulus": 125,
+        "subgroup_order": 100,
+        "unit_count": 100
+      },
+      {
+        "coset_count": 1,
+        "modulus": 127,
+        "subgroup_order": 126,
+        "unit_count": 126
+      },
+      {
+        "coset_count": 1,
+        "modulus": 131,
+        "subgroup_order": 130,
+        "unit_count": 130
+      },
+      {
+        "coset_count": 1,
+        "modulus": 133,
+        "subgroup_order": 108,
+        "unit_count": 108
+      },
+      {
+        "coset_count": 1,
+        "modulus": 137,
+        "subgroup_order": 136,
+        "unit_count": 136
+      },
+      {
+        "coset_count": 1,
+        "modulus": 139,
+        "subgroup_order": 138,
+        "unit_count": 138
+      },
+      {
+        "coset_count": 2,
+        "modulus": 143,
+        "subgroup_order": 60,
+        "unit_count": 120
+      },
+      {
+        "coset_count": 2,
+        "modulus": 145,
+        "subgroup_order": 56,
+        "unit_count": 112
+      },
+      {
+        "coset_count": 1,
+        "modulus": 149,
+        "subgroup_order": 148,
+        "unit_count": 148
+      },
+      {
+        "coset_count": 1,
+        "modulus": 151,
+        "subgroup_order": 150,
+        "unit_count": 150
+      },
+      {
+        "coset_count": 1,
+        "modulus": 155,
+        "subgroup_order": 120,
+        "unit_count": 120
+      },
+      {
+        "coset_count": 1,
+        "modulus": 157,
+        "subgroup_order": 156,
+        "unit_count": 156
+      },
+      {
+        "coset_count": 2,
+        "modulus": 161,
+        "subgroup_order": 66,
+        "unit_count": 132
+      },
+      {
+        "coset_count": 1,
+        "modulus": 163,
+        "subgroup_order": 162,
+        "unit_count": 162
+      },
+      {
+        "coset_count": 2,
+        "modulus": 167,
+        "subgroup_order": 83,
+        "unit_count": 166
+      },
+      {
+        "coset_count": 1,
+        "modulus": 169,
+        "subgroup_order": 156,
+        "unit_count": 156
+      },
+      {
+        "coset_count": 1,
+        "modulus": 173,
+        "subgroup_order": 172,
+        "unit_count": 172
+      },
+      {
+        "coset_count": 1,
+        "modulus": 175,
+        "subgroup_order": 120,
+        "unit_count": 120
+      },
+      {
+        "coset_count": 1,
+        "modulus": 179,
+        "subgroup_order": 178,
+        "unit_count": 178
+      },
+      {
+        "coset_count": 1,
+        "modulus": 181,
+        "subgroup_order": 180,
+        "unit_count": 180
+      },
+      {
+        "coset_count": 1,
+        "modulus": 185,
+        "subgroup_order": 144,
+        "unit_count": 144
+      },
+      {
+        "coset_count": 1,
+        "modulus": 187,
+        "subgroup_order": 160,
+        "unit_count": 160
+      },
+      {
+        "coset_count": 2,
+        "modulus": 191,
+        "subgroup_order": 95,
+        "unit_count": 190
+      },
+      {
+        "coset_count": 2,
+        "modulus": 193,
+        "subgroup_order": 96,
+        "unit_count": 192
+      },
+      {
+        "coset_count": 1,
+        "modulus": 197,
+        "subgroup_order": 196,
+        "unit_count": 196
+      },
+      {
+        "coset_count": 1,
+        "modulus": 199,
+        "subgroup_order": 198,
+        "unit_count": 198
+      }
+    ]
+  },
+  "source_sha256": "303e1aea031151915f4afd02dd72f17718d7bf8f6b41d1a00b3e59fb25cb9e3b",
   "status": "PROVED identities supported by FINITE-EXACT controls; no complete cycle classification",
   "triadic_braid_controls": 12000,
   "word_universe": {

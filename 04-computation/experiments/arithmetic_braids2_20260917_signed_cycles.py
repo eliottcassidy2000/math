@@ -40,6 +40,62 @@ def canonical(values):
     return tuple(values[start:] + values[:start])
 
 
+def generated_unit_subgroup(modulus, generators):
+    seen, pending = {1}, [1]
+    while pending:
+        x = pending.pop()
+        for g in generators:
+            y = x * g % modulus
+            if y not in seen:
+                seen.add(y)
+                pending.append(y)
+    return seen
+
+
+def modular_stratum_controls():
+    records = []
+    for modulus in range(5, 200, 2):
+        if gcd(modulus, 6) != 1:
+            continue
+        units = {a for a in range(1, modulus) if gcd(a, modulus) == 1}
+        group = generated_unit_subgroup(modulus, (2, 3))
+        inv2 = pow(2, -1, modulus)
+        dynamic = generated_unit_subgroup(modulus, (3 * inv2, 3 * inv2 * inv2))
+        require(group == dynamic, "formal modular SCC generators")
+        cosets = {tuple(sorted(a * h % modulus for h in group)) for a in units}
+        require(len(cosets) * len(group) == len(units), "unit coset partition")
+        records.append({"modulus": modulus, "unit_count": len(units),
+                        "subgroup_order": len(group), "coset_count": len(cosets)})
+    qr23 = {a * a % 23 for a in range(1, 23)}
+    require(generated_unit_subgroup(23, (2, 3)) == qr23 and len(qr23) == 11, "quadratic-residue subgroup at23")
+    require(pow(2, 11, 23) == 1 and pow(5, 11, 23) == 22, "23 character controls")
+    character_count = 0
+    for b in (-23, 23):
+        for n in range(-9999, 10000, 2):
+            if n % 23 == 0:
+                continue
+            successor, _ = step(n, b)
+            require(pow(n, 11, 23) == pow(successor, 11, 23), "conserved Legendre character")
+            character_count += 1
+    lift_count = 0
+    for modulus in (5, 23, 35, 47, 77):
+        for b in (-modulus, modulus):
+            for a in range(1, modulus):
+                if gcd(a, modulus) != 1:
+                    continue
+                for k in range(1, 7):
+                    dyadic = 1 << (k + 1)
+                    t = ((1 << k) - 3 * a - b) * pow(3 * modulus, -1, dyadic) % dyadic
+                    n = a + modulus * t
+                    successor, actual = step(n, b)
+                    require(n % 2 and n % modulus == a and actual == k, "CRT exact-valuation lift")
+                    require(successor % modulus == 3 * a * pow(2, -k, modulus) % modulus,
+                            "formal edge lift")
+                    lift_count += 1
+    return {"moduli": records, "mod23_quadratic_residues": sorted(qr23),
+            "mod23_character_controls": character_count, "exact_CRT_edge_lifts": lift_count}
+
+
 def walk_word(n, b, word):
     values = []
     initial = n
@@ -245,6 +301,7 @@ def main(output):
         "independent_fraction_compositions": fraction_checks,
         "gcd_and_dilation_controls": gcd_controls,
         "triadic_braid_controls": braid_controls,
+        "modular_stratum_controls": modular_stratum_controls(),
         "bounded_word_cycles": {b: [cycle_record(c, b) for c in sorted(word_catalog[b], key=lambda c: (c[0] < 0, len(c), abs(c[0])))]
                                 for b in parameters},
         "cycles": {b: [cycle_record(c, b) for c in sorted(catalog[b], key=lambda c: (c[0] < 0, len(c), abs(c[0])))]

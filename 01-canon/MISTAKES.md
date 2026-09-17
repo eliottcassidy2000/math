@@ -22,7 +22,9 @@ Format per entry:
   recorded in [THM-1370-h-spectrum-omits-7-21-all-n](theorems/THM-1370-h-spectrum-omits-7-21-all-n.md).
   The old source now warns explicitly and withdraws the corollary. This
   preserves the existing MISTAKE-502 carry-atom lineage rather than claiming
-  a newly discovered counterexample.
+  a newly discovered counterexample. The problem ledger's stronger wording
+  "the only unachievable" values was also repaired: exclusion of7 and21
+  is established, while realization of every other odd value remains OPEN.
 - **UNPROVED bound promoted to PROVED:** the historical Collatz iterated-log
   reflection and script call the census-supported `D(n)<0.2257` a theorem.
   The predecessor-star formula `(4^j-1)/3` describes immediate predecessors

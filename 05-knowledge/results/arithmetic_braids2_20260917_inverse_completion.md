@@ -136,6 +136,11 @@ The forced terminal exponent tends to infinity. Thus these ordinary-size
 diverging completions accumulate 2-adically on a preimage of the singular
 point. This explains how arbitrary finite symbolic compatibility can coexist
 with poor height control. The limit is not a fixed positive integer orbit.
+More precisely, `v2(n_t-limit)=K+k0+2t`, whereas
+`v3(limit)=-(L+1)`: the limit is not even a 3-adic integer. The completion
+family is unbounded in ordinary size, convergent toward a 2-adic singularity,
+and a residue-covering isometry in its reindexed 3-adic coordinate. These
+three behaviors belong to different topologies and must be kept distinct.
 
 Krasikov and Lagarias supply a substantially stronger **CITED** counting
 result: for every fixed positive target a not divisible by3, at least
@@ -160,6 +165,13 @@ every forward step are checked independently of the congruence solver.
 All checks remain active under optimization. The maximum constructed source
 in the first universe has 1,464 bits. The infinite claims follow from the
 proof, not from extending this finite universe.
+
+An [independent referee](../../04-computation/experiments/arithmetic_braids2_20260917_inverse_audit.py)
+imports no completion code and replaces digit lifting by brute exponent
+search. Its 4,000 parameter cases check 108,000 full trajectories, 104,000
+valuation comparisons, and 16,000 singular-limit identities using exact
+rational arithmetic. Its complete universe and separate JSON are frozen;
+normal and optimized replays agree.
 
 ## 5. Next precise problem
 

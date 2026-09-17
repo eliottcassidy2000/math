@@ -34,6 +34,7 @@ outside the first search's universe.
 | Ordered halving word | Rational denominator `q` and carry `B` | Equal length and total exponent do not determine a cycle |
 | Inverse-fibre braid | `R_b(n)=4n+b` | Full triadic coverage does not distinguish basins |
 | Positive/negative regions | A finite one-way sign-crossing set | A signed cycle need not be reachable from positive starts |
+| Residues modulo the parameter | Principal ideal and a unit-subgroup coset | A quotient component does not determine an integer basin |
 
 For external context, [Lagarias, *The 3x+1 Problem: An Overview*, section 4](https://arxiv.org/html/2111.02635v1)
 explains the correspondence between rational `3x+1` cycles and integer
@@ -286,6 +287,64 @@ The all-height extension is not proved. The negative primitive cycles
 at `-19,-23,-187,-347` are real cycles, but inaccessible from any positive
 start by the sign argument, independently of computation.
 
+## 7. Annihilators and a stronger character invariant
+
+Assume `gcd(b,6)=1`, write `M=|b|`, and work in `R=Z/MZ`. Every step is
+multiplication by a unit in this ring:
+
+```text
+U_b(n)=3*2^(-k)*n mod M.                                (14)
+```
+
+Consequently the principal ideal `(n)` is invariant. Its integer encoding
+is exactly the conserved content `d=gcd(n,b)`. A closing word with total
+exponent `K` and length `L` satisfies
+
+```text
+n*(2^K-3^L)=0 mod M,
+Delta in Ann_R(n)=(M/d),    equivalently M/d divides Delta. (15)
+```
+
+Indeed, `M|n*Delta` is equivalent to `M/d|Delta`, since `n/d` is coprime
+to `M/d`. This is an exact bridge from a dynamical closing condition to a
+zero-product condition in a finite ring. It is only a necessary closing
+test: the carry still matters. At `b=5`, the word `(1,1)` has
+`Delta=-5` and `B=5`, so the clock congruence modulo five holds, but its
+only fixed point is `n=-5`, in content-five rather than the unit stratum.
+
+The ideal does not retain all invariant modular information. Put `m=M/d`
+and `a=n/d`, a unit modulo `m`. Let
+
+```text
+H_m=<2,3> inside (Z/mZ)^*.
+```
+
+The coset `a H_m` is invariant, because the next normalized state is
+`3*2^(-k)*a mod m`. This is the complete component invariant of the
+formal residue graph with an edge `a->3*2^(-k)*a` for every `k>=1`:
+its strongly connected components are exactly the cosets of `H_m`.
+To prove this, the multipliers for `k=1,2` have ratio two and generate
+three as well. In a finite group their positive products include their
+inverses, so they generate precisely `H_m`. Every such formal edge has
+an actual odd integer lift: solve `n=a mod m` and
+`3n+b/d=2^k mod 2^(k+1)` by the Chinese remainder theorem. This also
+ensures the valuation is exactly `k`. Quotient connectivity does not
+assert a cycle or a shared basin of the actual integer dynamics.
+For `m=1` the assertion is the trivial one-element invariant.
+
+At the parameter `b=23` (or `-23`), this becomes a familiar character.
+Both `2=5^2 mod23` and `3=7^2 mod23` are quadratic residues, and two has
+order eleven. Thus `H_23` is exactly the eleven nonzero squares, and
+the Legendre symbol `(n/23)` is conserved on the coprime stratum.
+For example, one and five have equal gcd content but opposite characters,
+so their orbits cannot merge. Twenty-three is the smallest prime above
+three where both two and three are squares: direct checks exclude
+`5,7,11,13,17,19`. At modulus five, `H_5` is the entire unit group, so
+this particular refinement adds nothing to the user's `b=-5` case.
+It likewise gives no extra invariant for `b=1`, whose parameter ring is
+trivial, and should not be transferred to the unrelated modulus-nine
+output braid.
+
 ## Verification and next obligation
 
 Run
@@ -299,7 +358,10 @@ Both runs pass and produce byte-identical JSON. Checks remain active under
 optimization. Beyond the exhaustive word universe and 40,000 direct starts,
 the script performs 198 independent exact-fraction affine compositions,
 25,992 gcd/dilation controls including parameters divisible by three, and
-12,000 triadic-braid controls. Every cycle includes explicit nodes,
+12,000 triadic-braid controls. The modular sidecar checks the generated
+components for all odd moduli below 200 coprime to six, 19,132 character
+steps for `b=+-23`, and 1,872 exact CRT edge lifts for moduli
+`5,23,35,47,77` and exponents one through six. Every cycle includes explicit nodes,
 exponents, carry, denominator, gcd content, and its primitive reduction.
 The direct control caps only unresolved exploration segments at 2,000
 steps and absolute height `10^80`; cached resolved paths retain actual

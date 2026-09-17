@@ -175,5 +175,5 @@ def run():
 if __name__ == "__main__":
     result = run()
     destination = Path(__file__).with_suffix(".json")
-    destination.write_text(json.dumps(result, indent=2) + "\n", encoding="utf-8")
+    destination.write_text(json.dumps(result, indent=2) + "\n", encoding="utf-8", newline="\n")
     print(json.dumps(result, indent=2))

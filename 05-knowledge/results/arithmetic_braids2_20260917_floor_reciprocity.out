@@ -1,0 +1,6 @@
+odd-power identities: 2994 pairs, 751494 residues; PASS
+inverse lattice identities: 160 pairs, 743638 direct root terms; PASS
+product floor identities: 1113775 ordered pair entries; PASS
+higher product identities: 129974 tuple entries; PASS
+hostiles: literal sums, n=4, n=6, even powers, nonpermuting cubes modulo 7; PASS
+certificate: arithmetic_braids2_20260917_floor_reciprocity.json

@@ -5,7 +5,7 @@ repaired failure; retain triggers and counterindications.
 
 ## Separate unbounded local support from a height-bounded modular cover
 
-**Trigger/action:** a locally onto map may still have a modular cover in a proved height box. Retain the bound and terminal test; extrapolation needs no-reentry. Prefer a single-modulus obstruction when available. **Evidence:** THM-4026/4027; THM-2059 and THM-2043/2050 need height/exit data for LRC joins.
+**Trigger/action:** retain height and terminal tests when local maps are onto. **Evidence:** THM-4026/4027; THM-2059 and THM-2043/2050; [three dense Collatz basins](../05-knowledge/results/arithmetic_braids2_20260917_inverse_completion.md). **Counterindication:** a new integer per finite prefix does not control one integer's tail. Check quantifiers and no-reentry.
 
 ## Separate observer type, recurrence class, and finite head
 

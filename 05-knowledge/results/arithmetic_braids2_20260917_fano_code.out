@@ -1,0 +1,12 @@
+{
+  "output": "C:\\tmp\\math-wt-arithmetic-braids-20260917\\04-computation\\experiments\\arithmetic_braids2_20260917_fano_code.json",
+  "all_checks_passed": true,
+  "base_mask": 96,
+  "code_weights": {
+    "0": 1,
+    "3": 7,
+    "4": 7,
+    "7": 1
+  },
+  "root_count": 240
+}
