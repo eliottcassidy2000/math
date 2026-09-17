@@ -1,5 +1,7 @@
 # Script Results Index
 
+- [E8 Fargues-Scholze fibers](fs_e8_finiteness_20260917.md): **PROVED reduction / CONDITIONAL theorem.** Finite fibers iff bounded depths; auxiliary-prime gap remains OPEN.
+
 - [Arithmetic braids II](arithmetic_braids2_20260917_synthesis.md): **PROVED
   scoped + FINITE-EXACT + independently audited.** Finite-word inverse
   completion; squarefree/prime floor defects; jointly squarefree growing
