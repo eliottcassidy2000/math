@@ -1,0 +1,33 @@
+======================================================================================
+S726 — Erdos 61: the chromatic-4 targets are a Mycielski tower from C_5 (= Paley P_5, S725)
+======================================================================================
+
+61 (OPEN): G1,G2 with chi=aleph_1 => common subgraph G with chi(G)=4 (or aleph_0)?
+Erdos remark: probably every aleph_1-chromatic graph contains EVERY chromatic-4 LARGE-GIRTH
+graph => any two share one => 61 reduces to UNAVOIDABILITY of chromatic-4-large-girth graphs.
+
+  level 0: C_5 (=Paley P_5, S725 seed)  |V|= 5  chi=3  girth=5  alpha=2  #ind-sets=11  I(G,2)-coeff_2=5
+  level 1: M(C_5)=Grotzsch              |V|=11  chi=4  girth=4  alpha=5  #ind-sets=103  I(G,2)-coeff_2=35
+  level 2: M^2(C_5)                     |V|=23  chi=5  girth=4  alpha=11  #ind-sets=7407  I(G,2)-coeff_2=182
+
+  => the Mycielski tower from C_5 climbs chi = 3,4,5,... (additive ladder), triangle-free
+     preserved (girth >=4). LEVEL 1 = Grotzsch = the canonical chromatic-4 (girth-4) graph =
+     the finite SEED of 61's unavoidable target. The tower is a graph TRANSFER (S720/721).
+
+THE REDUCTION + HEURISTIC (creative, leveraging S725):
+  - 61's common-subgraph question <= UNAVOIDABILITY: every aleph_1-chromatic graph contains
+    every chromatic-4-large-girth graph (then two such graphs share one).
+  - the targets form a RECURSIVE TOWER from C_5 (Mycielski for girth 4; high-girth needs
+    Ramanujan/probabilistic towers -- the hard 'large girth' case).
+  - S725 RENORMALIZATION reading: aleph_1 (uncountable = a 'limit/fixed point') forces the
+    whole finite obstruction tower, as limit ordinals restore partition relations (Chang).
+    The finite levels are 'hot' (avoidable individually); the uncountable limit is the 'cold
+    fixed point' that cannot avoid the tower -- the renormalization that should force the target.
+  - COMMON-subgraph as INTERSECTION: G1 cap G2 contains the tower iff BOTH contain it; the
+    unavoidability makes the intersection nonempty at chromatic-4. (THM-209 independence tracks
+    the shared level.)
+  - GIRTH is the obstruction (as in S722/S723: large girth = locally tree/ultrametric, the S725
+    laminar structure). chi-4 + large girth = a high-temperature target; aleph_1 = the limit
+    forcing it. The program: prove unavoidability of the Mycielski/high-girth tower in
+    aleph_1-chromatic graphs via the renormalization/elementary-submodel-tower method.
+======================================================================================
