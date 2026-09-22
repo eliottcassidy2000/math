@@ -44,7 +44,13 @@
   Cipolla pseudoprime tower on the trunk `(4^j-1)/3`; sandwich mixed-cell
   drift identity and the non-tournament; `F = alpha S + beta U` classified;
   odd-function floor law with class numbers in the even case; audit of the
-  pasted "peripheral scaffolding". Collatz remains OPEN.
+  pasted "peripheral scaffolding". Wave four (2026-09-21/22): Berggren
+  transport of Collatz-family edges (the legal `3x+-1` sub-forest is
+  depth-one stars plus one seven-pair root cluster; inverse fibres are
+  `B1`-rays), fruit-curve rank one by 2-descent with the positive multiples,
+  Pillai clocks through the cycle gate, `G` on the negatives with the
+  bounded-strip analogue proved, and a verdict table on the Giuga/AAC/
+  Littlewood/Sarnak "circuit". Collatz remains OPEN.
 - [Arithmetic seams](arithmetic_seams_20260921_synthesis.md): **PROVED scoped / VERIFIED Lean arithmetic.** Fermat tournament path counts; sharp fifteen-term coprimality; Fermat-prime decimal clocks; dihedral three-cycle lifts; pointed-product and remainder repairs. [Manifest](arithmetic_seams_20260921_manifest.json). Global Collatz convergence remains OPEN.
 
 - [Collatz guard extensions](collatz_guards_20260921_synthesis.md): **PROVED scoped / VERIFIED Lean reductions.** Irrational reset density; no bounded discrepancy; sharp squarefree word obstructions. Global convergence OPEN. [Manifest](collatz_guards_20260921_manifest.json).
