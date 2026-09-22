@@ -9,6 +9,15 @@ Format per entry:
 - Why it was wrong
 - The correct framing
 
+## 2026-09-22 Level-eleven dyadic normalization
+
+The incoming lead reflection's trigonometric formula had prefactor
+2^((k+1)/2), giving a1=sqrt2 at k0 instead of1. Repaired to2^(k/2);
+the recurrence and its zero pattern were correct. The
+[solo continuation](../05-knowledge/results/level11_short_20260922.md)
+proves the four-step scaling and forced zero density1/15, distinguishes
+cycle representatives from three-cycles, and retains tournament orientation.
+
 ## 2026-09-22 Prime sectors -- phase, metric, positivity and division guards
 
 - **WRONG binomial index:** binom(9,2)=36. The surviving unit-gap identity

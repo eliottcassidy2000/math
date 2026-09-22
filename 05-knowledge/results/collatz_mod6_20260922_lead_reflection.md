@@ -93,7 +93,7 @@ recursion `a_(p^(k+1)) = a_p a_(p^k) - p a_(p^(k-1))` for `p != 11`.
 So the first vanishing coefficient is at `8` because `a_2^2 = 2p` at
 `p = 2`, once more the coincidence `2*2 = 2^2`. Equivalently the Frobenius
 angle at `2` is `3 pi/4`: `a_2 = 2 sqrt2 cos(theta)` with
-`cos theta = -1/sqrt2`, so `a_(2^k) = 2^((k+1)/2) sin(3 pi (k+1)/4)/sin(3 pi/4)`
+`cos theta = -1/sqrt2`, so `a_(2^k) = 2^(k/2) sin(3 pi (k+1)/4)/sin(3 pi/4)`
 and `a_(2^k) = 0` exactly when `4 | k+1`: `k = 3, 7, 11, ...`. The
 "eight" is the order of the root of unity `e^(3 pi i/4)`. Reproduced:
 `a_(2^k) = 1, -2, 2, 0, -4, 8` for `k = 0..5`; zeros of `a_n` for `n <= 60`

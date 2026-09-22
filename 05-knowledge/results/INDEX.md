@@ -1,5 +1,11 @@
 # Script Results Index
 
+- [Level-eleven dyadic zero law and signed gluing](level11_short_20260922.md):
+  PROVED from cited eigenform inputs; exact product/point-count controls;
+  b_(r+4)=-4b_r, complete dyadic coefficient factorization, forced-zero
+  density1/15, and repaired trigonometric normalization. Solo audit only;
+  Collatz remains OPEN.
+
 - [Prime defects, triangle sectors, cube dissections and elliptic trees](prime_shells_20260921_synthesis.md):
   **PROVED scoped / CITED classifications / FINITE-EXACT.** Identifies both
   harmonic sequences and their factor-two congruence; u17 quadratic sectors,
