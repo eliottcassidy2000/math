@@ -250,6 +250,11 @@ all heights (THM-1289, published), δ ineffective.
   descent and fixed-root doubling fail to preserve those edges. Its
   parameter-minus-five completion fills compatible finite 2/3/5 cylinders
   in disjoint basins; height-controlled universal coverage remains OPEN.
+  [The prime-sector continuation](../05-knowledge/results/prime_shells_20260921_synthesis.md)
+  identifies u17 components by quadratic character and transports a
+  Wieferich valuation into triangle-cycle splitting and inverse-braid
+  digit loss. It separates a finite cube conjugacy and a labelled
+  elliptic/Berggren subtree from preservation of positive guarded edges.
 - **Erdős Problem 592** [DEEP — $1000 problem] — the p=2 Schur-seam theorem (THM-469),
   R(n,2)=2n+1 linear conjecture, Chang-tower m=3 open; 21 scripts, a survey draft.
 - **{7,21} forbidden H-spectrum** [DEEP, repo-signature] — permanent exclusions by

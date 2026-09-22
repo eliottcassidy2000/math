@@ -1,5 +1,14 @@
 # Script Results Index
 
+- [Prime defects, triangle sectors, cube dissections and elliptic trees](prime_shells_20260921_synthesis.md):
+  **PROVED scoped / CITED classifications / FINITE-EXACT.** Identifies both
+  harmonic sequences and their factor-two congruence; u17 quadratic sectors,
+  cyclotomic quartics and Wieferich split/lift law; exact five-tetrahedron
+  dissection and finite cube conjugacy; algebraic ternary elliptic subtree
+  with positivity and inverse-torsion obstructions.
+  [Manifest](prime_shells_20260921_manifest.json). Collatz remains OPEN;
+  no new exceptional prime or Lean formalization claim.
+
 - [Odd-square triangles, shell cycles and legal Collatz edges](odd_square_20260921_synthesis.md):
   **PROVED scoped / FINITE-EXACT / independently audited.** Recovers
   THM-3756's two-root chart; adds the four-inradii fibre permutation and

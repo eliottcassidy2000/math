@@ -1,0 +1,162 @@
+{
+  "checks": 25846,
+  "cube": {
+    "grid_points_with_repetition": 8280,
+    "intersection_volume": "1/6",
+    "normalized_cell_volumes": [
+      2,
+      1,
+      1,
+      1,
+      1
+    ],
+    "union_volume": "1/2"
+  },
+  "demicube_vertex_enumeration": {
+    "2": 2,
+    "3": 4,
+    "4": 8
+  },
+  "dimension_table": [
+    {
+      "central_volume": "0",
+      "dimension": 2,
+      "one_corner_volume": "1/2",
+      "parity_vertices": 2
+    },
+    {
+      "central_volume": "1/3",
+      "dimension": 3,
+      "one_corner_volume": "1/6",
+      "parity_vertices": 4
+    },
+    {
+      "central_volume": "2/3",
+      "dimension": 4,
+      "one_corner_volume": "1/24",
+      "parity_vertices": 8
+    },
+    {
+      "central_volume": "13/15",
+      "dimension": 5,
+      "one_corner_volume": "1/120",
+      "parity_vertices": 16
+    },
+    {
+      "central_volume": "43/45",
+      "dimension": 6,
+      "one_corner_volume": "1/720",
+      "parity_vertices": 32
+    },
+    {
+      "central_volume": "311/315",
+      "dimension": 7,
+      "one_corner_volume": "1/5040",
+      "parity_vertices": 64
+    },
+    {
+      "central_volume": "314/315",
+      "dimension": 8,
+      "one_corner_volume": "1/40320",
+      "parity_vertices": 128
+    },
+    {
+      "central_volume": "2833/2835",
+      "dimension": 9,
+      "one_corner_volume": "1/362880",
+      "parity_vertices": 256
+    },
+    {
+      "central_volume": "14173/14175",
+      "dimension": 10,
+      "one_corner_volume": "1/3628800",
+      "parity_vertices": 512
+    }
+  ],
+  "finite_conjugacy": {
+    "centralizer_order": 32,
+    "character_preserving_centralizer_order": 16,
+    "cube_isometries": {
+      "parity_and_orientation_preserving": 12,
+      "parity_preserving": 24,
+      "total": 48
+    },
+    "cube_isometry_orders": [
+      1,
+      2,
+      3,
+      4,
+      6
+    ],
+    "matching_quotient_fiber_sizes": [
+      4,
+      4,
+      4,
+      4,
+      4,
+      4
+    ],
+    "phi": {
+      "1": [
+        0,
+        0,
+        0
+      ],
+      "11": [
+        1,
+        0,
+        0
+      ],
+      "13": [
+        1,
+        1,
+        0
+      ],
+      "15": [
+        1,
+        0,
+        1
+      ],
+      "3": [
+        0,
+        0,
+        1
+      ],
+      "5": [
+        1,
+        1,
+        1
+      ],
+      "7": [
+        0,
+        1,
+        0
+      ],
+      "9": [
+        0,
+        1,
+        1
+      ]
+    },
+    "scalar_involutions": [
+      1,
+      13
+    ],
+    "transported_switch": {
+      "1": 3,
+      "11": 15,
+      "13": 5,
+      "15": 11,
+      "3": 1,
+      "5": 13,
+      "7": 9,
+      "9": 7
+    }
+  },
+  "rectangles": {
+    "quadratic_field_witnesses": 624,
+    "rectangles": 64
+  },
+  "source_sha256_lf": "0cccfb315a358992e5c0009d4a227943b34dd8ac81c41a7d06b312d758bb91ca",
+  "status": "FINITE-EXACT; all-quantifier proofs are in the note"
+}

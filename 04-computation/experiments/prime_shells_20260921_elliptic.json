@@ -1,0 +1,256 @@
+{
+  "checks_passed": 30856,
+  "coordinate_replacement_discriminants": [
+    -200,
+    472,
+    1912
+  ],
+  "inverse_nine_G_vertices": [
+    [
+      1,
+      0
+    ],
+    [
+      1,
+      2
+    ],
+    [
+      1,
+      4
+    ],
+    [
+      3,
+      0
+    ],
+    [
+      3,
+      2
+    ],
+    [
+      3,
+      4
+    ],
+    [
+      9,
+      0
+    ]
+  ],
+  "inverse_tripling_counts": [
+    {
+      "r": 0,
+      "root_coefficient": 1,
+      "vertices": 1
+    },
+    {
+      "r": 1,
+      "root_coefficient": 3,
+      "vertices": 4
+    },
+    {
+      "r": 2,
+      "root_coefficient": 9,
+      "vertices": 7
+    },
+    {
+      "r": 3,
+      "root_coefficient": 27,
+      "vertices": 10
+    },
+    {
+      "r": 4,
+      "root_coefficient": 81,
+      "vertices": 13
+    },
+    {
+      "r": 5,
+      "root_coefficient": 243,
+      "vertices": 16
+    },
+    {
+      "r": 6,
+      "root_coefficient": 729,
+      "vertices": 19
+    },
+    {
+      "r": 7,
+      "root_coefficient": 2187,
+      "vertices": 22
+    },
+    {
+      "r": 8,
+      "root_coefficient": 6561,
+      "vertices": 25
+    }
+  ],
+  "literal_Berggren_hostiles": [
+    {
+      "branch": "L",
+      "large_residual_sign": -1,
+      "small_image": [
+        1,
+        16,
+        11
+      ],
+      "small_residual": -10920
+    },
+    {
+      "branch": "M",
+      "large_residual_sign": -1,
+      "small_image": [
+        17,
+        24,
+        27
+      ],
+      "small_residual": -226576
+    },
+    {
+      "branch": "R",
+      "large_residual_sign": 1,
+      "small_image": [
+        -5,
+        -20,
+        -17
+      ],
+      "small_residual": 46312
+    }
+  ],
+  "literal_input": {
+    "A": "154476802108746166441951315019919837485664325669565431700026634898253202035277999",
+    "B": "368751317941299998271978115652254748254929799689719709962831374716372246340555790",
+    "C": "43736126779286972578612526023713901528165375581616136186214379933784234677720360",
+    "fruit_sum": "46527168855906987684683405907606041133510346977655627851917477387092948735133368174544902826128781122480937728104755100590542398014485264667771646832346461497365226623434405285764448748255585080495212587507377225133/20068054043304713764628835386138557858165863279929761286120297987985875837505853620327324997356473736510460849465623503684575463263139756788845672630587256371162977499702618441489362318808400379702244530656095797050"
+  },
+  "mordell_gap_curve": {
+    "counts_mod19": {
+      "fruit": 18,
+      "gap": 27
+    },
+    "double": [
+      "505/256",
+      "23053/4096"
+    ],
+    "finite_power_gap_solutions": [
+      [
+        5,
+        2
+      ],
+      [
+        10,
+        10
+      ]
+    ],
+    "point": [
+      "10",
+      "32"
+    ]
+  },
+  "positive_nG_through_40": [
+    9,
+    17
+  ],
+  "positive_outside_seed": {
+    "coordinate_digits": [
+      286,
+      286,
+      286
+    ],
+    "n": 17,
+    "positive": true,
+    "primitive_triple_sha256": "0b65289de580abe69685c21e1aab014b8b5b8c45e9f4ba13b393004d76b32e19",
+    "signs": [
+      1,
+      1,
+      1
+    ]
+  },
+  "repaired_digits": [
+    81,
+    80,
+    79
+  ],
+  "repaired_input": [
+    "154476802108746166441951315019919837485664325669565431700026634898253202035277999",
+    "36875131794129999827197811565225474825492979968971970996283137471637224634055579",
+    "4373612677928697257861252602371390152816537558161613618621437993378423467772036"
+  ],
+  "scope": "Written subgroup/tree/positivity proofs; finite exact controls. Full rational inverse-tree completeness uses cited Mordell--Weil generation; no rank or global-minimality computation.",
+  "seed_children": {
+    "18": {
+      "coordinate_digits": [
+        321,
+        320,
+        321
+      ],
+      "positive": false,
+      "primitive_triple_sha256": "12fe180162af94f1ef8d1a0c14abdac811a8cee9207f1b940d469ffec6db21c1",
+      "signs": [
+        1,
+        -1,
+        -1
+      ]
+    },
+    "27": {
+      "coordinate_digits": [
+        721,
+        721,
+        722
+      ],
+      "positive": false,
+      "primitive_triple_sha256": "c227b72d06eeb3836d91ef995df39701426864cc17b3bb6989fb1f4fe5d4ace3",
+      "signs": [
+        1,
+        -1,
+        1
+      ]
+    },
+    "36": {
+      "coordinate_digits": [
+        1282,
+        1283,
+        1283
+      ],
+      "positive": false,
+      "primitive_triple_sha256": "097bbda9eeaeb086351ac41ee41476b9012cec43fdc441b156e24929325fc721",
+      "signs": [
+        1,
+        1,
+        -1
+      ]
+    }
+  },
+  "source_sha256_lf": "a7be61219301c2e09b905d65f3b00a9fc30a92832f1f239b9e33f75a897f5641",
+  "status": "PASS",
+  "symmetry_orbit": {
+    "positive": 6,
+    "total": 12
+  },
+  "ternary_level_counts": {
+    "0": 1,
+    "1": 3,
+    "2": 9,
+    "3": 27,
+    "4": 81,
+    "5": 243,
+    "6": 729,
+    "7": 2187,
+    "8": 6561
+  },
+  "universe": {
+    "actual_elliptic_tree_depth": 3,
+    "elliptic_multiples": [
+      1,
+      40
+    ],
+    "integer_coefficient_and_Berggren_tree_depth": 8,
+    "inverse_coefficient_cases": 972,
+    "inverse_roots_3_power_range": [
+      0,
+      8
+    ],
+    "power_gap_exponents": [
+      1,
+      200
+    ],
+    "tree_vertices": 9841
+  }
+}

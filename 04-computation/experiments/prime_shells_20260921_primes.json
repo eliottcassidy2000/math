@@ -1,0 +1,770 @@
+{
+  "H4": "25/12",
+  "H6": "49/20",
+  "affine_binomial_controls": [
+    {
+      "levels": [
+        {
+          "period": 1,
+          "s": 1
+        },
+        {
+          "period": 1,
+          "s": 2
+        },
+        {
+          "period": 5,
+          "s": 3
+        },
+        {
+          "period": 25,
+          "s": 4
+        },
+        {
+          "period": 125,
+          "s": 5
+        }
+      ],
+      "p": 5,
+      "v2_Q": 1,
+      "v_p_Q_minus_1": 3
+    },
+    {
+      "levels": [
+        {
+          "period": 1,
+          "s": 1
+        },
+        {
+          "period": 1,
+          "s": 2
+        },
+        {
+          "period": 7,
+          "s": 3
+        },
+        {
+          "period": 49,
+          "s": 4
+        },
+        {
+          "period": 343,
+          "s": 5
+        }
+      ],
+      "p": 7,
+      "v2_Q": 2,
+      "v_p_Q_minus_1": 3
+    },
+    {
+      "levels": [
+        {
+          "period": 1,
+          "s": 1
+        },
+        {
+          "period": 1,
+          "s": 2
+        },
+        {
+          "period": 11,
+          "s": 3
+        },
+        {
+          "period": 121,
+          "s": 4
+        },
+        {
+          "period": 1331,
+          "s": 5
+        }
+      ],
+      "p": 11,
+      "v2_Q": 2,
+      "v_p_Q_minus_1": 3
+    },
+    {
+      "levels": [
+        {
+          "period": 1,
+          "s": 1
+        },
+        {
+          "period": 1,
+          "s": 2
+        },
+        {
+          "period": 13,
+          "s": 3
+        },
+        {
+          "period": 169,
+          "s": 4
+        },
+        {
+          "period": 2197,
+          "s": 5
+        }
+      ],
+      "p": 13,
+      "v2_Q": 2,
+      "v_p_Q_minus_1": 3
+    },
+    {
+      "levels": [
+        {
+          "period": 1,
+          "s": 1
+        },
+        {
+          "period": 1,
+          "s": 2
+        },
+        {
+          "period": 17,
+          "s": 3
+        },
+        {
+          "period": 289,
+          "s": 4
+        },
+        {
+          "period": 4913,
+          "s": 5
+        }
+      ],
+      "p": 17,
+      "v2_Q": 1,
+      "v_p_Q_minus_1": 3
+    },
+    {
+      "levels": [
+        {
+          "period": 1,
+          "s": 1
+        },
+        {
+          "period": 1,
+          "s": 2
+        },
+        {
+          "period": 1,
+          "s": 3
+        },
+        {
+          "period": 16843,
+          "s": 4
+        },
+        {
+          "period": 283686649,
+          "s": 5
+        }
+      ],
+      "p": 16843,
+      "v2_Q": 6,
+      "v_p_Q_minus_1": 4
+    }
+  ],
+  "bounded_fibonacci_wieferich": [],
+  "bounded_wieferich": [
+    1093,
+    3511
+  ],
+  "bounded_wilson": [
+    5,
+    13,
+    563
+  ],
+  "checks": 19605,
+  "first_prime_rows": [
+    {
+      "beta": 1,
+      "eta": 3,
+      "half_harmonic": 4,
+      "p": 5,
+      "q2": 3
+    },
+    {
+      "beta": 5,
+      "eta": 6,
+      "half_harmonic": 3,
+      "p": 7,
+      "q2": 2
+    },
+    {
+      "beta": 1,
+      "eta": 6,
+      "half_harmonic": 1,
+      "p": 11,
+      "q2": 5
+    },
+    {
+      "beta": 1,
+      "eta": 7,
+      "half_harmonic": 7,
+      "p": 13,
+      "q2": 3
+    },
+    {
+      "beta": 3,
+      "eta": 10,
+      "half_harmonic": 8,
+      "p": 17,
+      "q2": 13
+    },
+    {
+      "beta": 9,
+      "eta": 14,
+      "half_harmonic": 13,
+      "p": 19,
+      "q2": 3
+    },
+    {
+      "beta": 13,
+      "eta": 18,
+      "half_harmonic": 12,
+      "p": 23,
+      "q2": 17
+    },
+    {
+      "beta": 11,
+      "eta": 20,
+      "half_harmonic": 27,
+      "p": 29,
+      "q2": 1
+    },
+    {
+      "beta": 1,
+      "eta": 16,
+      "half_harmonic": 19,
+      "p": 31,
+      "q2": 6
+    },
+    {
+      "beta": 11,
+      "eta": 24,
+      "half_harmonic": 35,
+      "p": 37,
+      "q2": 1
+    },
+    {
+      "beta": 34,
+      "eta": 17,
+      "half_harmonic": 36,
+      "p": 41,
+      "q2": 23
+    },
+    {
+      "beta": 33,
+      "eta": 38,
+      "half_harmonic": 36,
+      "p": 43,
+      "q2": 25
+    },
+    {
+      "beta": 31,
+      "eta": 39,
+      "half_harmonic": 6,
+      "p": 47,
+      "q2": 44
+    },
+    {
+      "beta": 38,
+      "eta": 19,
+      "half_harmonic": 34,
+      "p": 53,
+      "q2": 36
+    },
+    {
+      "beta": 58,
+      "eta": 29,
+      "half_harmonic": 43,
+      "p": 59,
+      "q2": 8
+    },
+    {
+      "beta": 56,
+      "eta": 28,
+      "half_harmonic": 50,
+      "p": 61,
+      "q2": 36
+    },
+    {
+      "beta": 24,
+      "eta": 12,
+      "half_harmonic": 47,
+      "p": 67,
+      "q2": 10
+    },
+    {
+      "beta": 35,
+      "eta": 53,
+      "half_harmonic": 67,
+      "p": 71,
+      "q2": 2
+    },
+    {
+      "beta": 62,
+      "eta": 31,
+      "half_harmonic": 34,
+      "p": 73,
+      "q2": 56
+    },
+    {
+      "beta": 38,
+      "eta": 19,
+      "half_harmonic": 41,
+      "p": 79,
+      "q2": 19
+    },
+    {
+      "beta": 23,
+      "eta": 53,
+      "half_harmonic": 70,
+      "p": 83,
+      "q2": 48
+    },
+    {
+      "beta": 27,
+      "eta": 58,
+      "half_harmonic": 77,
+      "p": 89,
+      "q2": 6
+    },
+    {
+      "beta": 96,
+      "eta": 48,
+      "half_harmonic": 80,
+      "p": 97,
+      "q2": 57
+    },
+    {
+      "beta": 84,
+      "eta": 42,
+      "half_harmonic": 18,
+      "p": 101,
+      "q2": 92
+    },
+    {
+      "beta": 2,
+      "eta": 1,
+      "half_harmonic": 88,
+      "p": 103,
+      "q2": 59
+    },
+    {
+      "beta": 66,
+      "eta": 33,
+      "half_harmonic": 81,
+      "p": 107,
+      "q2": 13
+    },
+    {
+      "beta": 106,
+      "eta": 53,
+      "half_harmonic": 84,
+      "p": 109,
+      "q2": 67
+    },
+    {
+      "beta": 74,
+      "eta": 37,
+      "half_harmonic": 60,
+      "p": 113,
+      "q2": 83
+    },
+    {
+      "beta": 10,
+      "eta": 5,
+      "half_harmonic": 91,
+      "p": 127,
+      "q2": 18
+    },
+    {
+      "beta": 31,
+      "eta": 81,
+      "half_harmonic": 97,
+      "p": 131,
+      "q2": 17
+    },
+    {
+      "beta": 8,
+      "eta": 4,
+      "half_harmonic": 31,
+      "p": 137,
+      "q2": 53
+    },
+    {
+      "beta": 34,
+      "eta": 17,
+      "half_harmonic": 79,
+      "p": 139,
+      "q2": 30
+    },
+    {
+      "beta": 58,
+      "eta": 29,
+      "half_harmonic": 106,
+      "p": 149,
+      "q2": 96
+    },
+    {
+      "beta": 26,
+      "eta": 13,
+      "half_harmonic": 39,
+      "p": 151,
+      "q2": 56
+    },
+    {
+      "beta": 26,
+      "eta": 13,
+      "half_harmonic": 150,
+      "p": 157,
+      "q2": 82
+    },
+    {
+      "beta": 144,
+      "eta": 72,
+      "half_harmonic": 29,
+      "p": 163,
+      "q2": 67
+    },
+    {
+      "beta": 150,
+      "eta": 75,
+      "half_harmonic": 73,
+      "p": 167,
+      "q2": 47
+    },
+    {
+      "beta": 140,
+      "eta": 70,
+      "half_harmonic": 167,
+      "p": 173,
+      "q2": 3
+    },
+    {
+      "beta": 167,
+      "eta": 173,
+      "half_harmonic": 79,
+      "p": 179,
+      "q2": 50
+    },
+    {
+      "beta": 137,
+      "eta": 159,
+      "half_harmonic": 66,
+      "p": 181,
+      "q2": 148
+    },
+    {
+      "beta": 31,
+      "eta": 111,
+      "half_harmonic": 91,
+      "p": 191,
+      "q2": 50
+    },
+    {
+      "beta": 107,
+      "eta": 150,
+      "half_harmonic": 178,
+      "p": 193,
+      "q2": 104
+    },
+    {
+      "beta": 78,
+      "eta": 39,
+      "half_harmonic": 44,
+      "p": 197,
+      "q2": 175
+    },
+    {
+      "beta": 157,
+      "eta": 178,
+      "half_harmonic": 128,
+      "p": 199,
+      "q2": 135
+    },
+    {
+      "beta": 1,
+      "eta": 106,
+      "half_harmonic": 204,
+      "p": 211,
+      "q2": 109
+    },
+    {
+      "beta": 103,
+      "eta": 163,
+      "half_harmonic": 68,
+      "p": 223,
+      "q2": 189
+    },
+    {
+      "beta": 165,
+      "eta": 196,
+      "half_harmonic": 52,
+      "p": 227,
+      "q2": 201
+    },
+    {
+      "beta": 97,
+      "eta": 163,
+      "half_harmonic": 93,
+      "p": 229,
+      "q2": 68
+    },
+    {
+      "beta": 111,
+      "eta": 172,
+      "half_harmonic": 219,
+      "p": 233,
+      "q2": 7
+    },
+    {
+      "beta": 60,
+      "eta": 30,
+      "half_harmonic": 187,
+      "p": 239,
+      "q2": 26
+    },
+    {
+      "beta": 196,
+      "eta": 98,
+      "half_harmonic": 198,
+      "p": 241,
+      "q2": 142
+    },
+    {
+      "beta": 48,
+      "eta": 24,
+      "half_harmonic": 8,
+      "p": 251,
+      "q2": 247
+    },
+    {
+      "beta": 97,
+      "eta": 177,
+      "half_harmonic": 64,
+      "p": 257,
+      "q2": 225
+    },
+    {
+      "beta": 259,
+      "eta": 261,
+      "half_harmonic": 7,
+      "p": 263,
+      "q2": 128
+    },
+    {
+      "beta": 155,
+      "eta": 212,
+      "half_harmonic": 18,
+      "p": 269,
+      "q2": 260
+    },
+    {
+      "beta": 175,
+      "eta": 223,
+      "half_harmonic": 53,
+      "p": 271,
+      "q2": 109
+    },
+    {
+      "beta": 244,
+      "eta": 122,
+      "half_harmonic": 137,
+      "p": 277,
+      "q2": 70
+    },
+    {
+      "beta": 13,
+      "eta": 147,
+      "half_harmonic": 133,
+      "p": 281,
+      "q2": 74
+    },
+    {
+      "beta": 269,
+      "eta": 276,
+      "half_harmonic": 167,
+      "p": 283,
+      "q2": 58
+    },
+    {
+      "beta": 34,
+      "eta": 17,
+      "half_harmonic": 137,
+      "p": 293,
+      "q2": 78
+    }
+  ],
+  "irregular_census": {
+    "37": [
+      32
+    ],
+    "59": [
+      44
+    ],
+    "67": [
+      58
+    ],
+    "101": [
+      68
+    ],
+    "103": [
+      24
+    ],
+    "131": [
+      22
+    ],
+    "149": [
+      130
+    ],
+    "157": [
+      62,
+      110
+    ],
+    "233": [
+      84
+    ],
+    "257": [
+      164
+    ],
+    "263": [
+      100
+    ],
+    "271": [
+      84
+    ],
+    "283": [
+      20
+    ],
+    "293": [
+      156
+    ]
+  },
+  "near_eta_census": {
+    "0": [
+      16843
+    ],
+    "1": [
+      103
+    ],
+    "2": [
+      12101
+    ],
+    "3": [
+      5,
+      2851
+    ]
+  },
+  "prime_ranks": {
+    "1093": 183,
+    "2851": 414,
+    "3511": 490,
+    "12101": 1448,
+    "16843": 1944,
+    "2124679": 157504
+  },
+  "scope": "All positive irregular witnesses checked. Larger complete index lists are cited, not independently exhaustively recomputed. No new-prime record or Collatz implication.",
+  "selected_primes": [
+    {
+      "beta": 225,
+      "cited_complete_irregular_indices": [],
+      "eta": 659,
+      "fibonacci_quotient": 770,
+      "half_harmonic": 0,
+      "p": 1093,
+      "prime_rank": 183,
+      "q2": 0,
+      "wilson_quotient": 851
+    },
+    {
+      "beta": 6,
+      "cited_complete_irregular_indices": [],
+      "eta": 3,
+      "fibonacci_quotient": 214,
+      "half_harmonic": 1509,
+      "p": 2851,
+      "prime_rank": 414,
+      "q2": 671,
+      "wilson_quotient": 778
+    },
+    {
+      "beta": 3131,
+      "cited_complete_irregular_indices": [
+        1416,
+        1724
+      ],
+      "eta": 3321,
+      "fibonacci_quotient": 2537,
+      "half_harmonic": 0,
+      "p": 3511,
+      "prime_rank": 490,
+      "q2": 0,
+      "wilson_quotient": 3389
+    },
+    {
+      "beta": 4,
+      "cited_complete_irregular_indices": [
+        7718
+      ],
+      "eta": 2,
+      "fibonacci_quotient": 9057,
+      "half_harmonic": 4729,
+      "p": 12101,
+      "prime_rank": 1448,
+      "q2": 3686,
+      "wilson_quotient": 5326
+    },
+    {
+      "beta": 0,
+      "cited_complete_irregular_indices": [
+        16840
+      ],
+      "eta": 0,
+      "fibonacci_quotient": 9155,
+      "half_harmonic": 8139,
+      "p": 16843,
+      "prime_rank": 1944,
+      "q2": 4352,
+      "wilson_quotient": 16262
+    },
+    {
+      "beta": 0,
+      "cited_complete_irregular_indices": [
+        701898,
+        2124676
+      ],
+      "eta": 0,
+      "fibonacci_quotient": 56079,
+      "half_harmonic": 421692,
+      "p": 2124679,
+      "prime_rank": 157504,
+      "q2": 1913833,
+      "wilson_quotient": 2038370
+    }
+  ],
+  "source_sha256": "866625cb0ca096ec5b25a2bf7754119c09b6d72165413f68c24b0c8939b0924b",
+  "status": "FINITE-EXACT",
+  "strict_prime_count": 155559,
+  "sums_of_harmonic_numbers": {
+    "4": "77/12",
+    "6": "223/20"
+  },
+  "universes": {
+    "harmonic_independent_checks_prime_bound": 300,
+    "interval_endpoints": "excluded",
+    "irregular_census_prime_bound": 300,
+    "near_eta_prime_bound": 20000,
+    "other_prime_search_bound": 10000,
+    "prime_interval": [
+      16843,
+      2124679
+    ],
+    "regularity_complete_additional": [
+      1093,
+      2851
+    ]
+  }
+}

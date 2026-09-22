@@ -164,3 +164,7 @@ scripts/*.ps1 text eol=crlf
 # Odd-square families: invariant bytes for exact replay and source bindings.
 04-computation/experiments/odd_square_20260921_* text eol=lf
 05-knowledge/results/odd_square_20260921_* text eol=lf
+
+# Prime defects, geometric sectors and elliptic tree: portable proof records.
+04-computation/experiments/prime_shells_20260921_* text eol=lf
+05-knowledge/results/prime_shells_20260921_* text eol=lf

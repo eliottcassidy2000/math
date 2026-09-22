@@ -9,6 +9,40 @@ Format per entry:
 - Why it was wrong
 - The correct framing
 
+## 2026-09-22 Prime sectors -- phase, metric, positivity and division guards
+
+- **WRONG binomial index:** binom(9,2)=36. The surviving unit-gap identity
+  is binom(9,4)=binom(9,5)=126=5³+1. The two supplied prime-indexed
+  harmonic sequences are eta and2eta modulo p, not independent tests.
+- **MIXED prime predicates:** Wieferich1093 is regular;12101 is irregular
+  but not Wolstenholme. Extra divisibility must name its numerator and
+  modulus. The finite eta scan through20000 and primary-source boundaries
+  are in the [prime note](../05-knowledge/results/prime_shells_20260921_primes.md).
+- **LOST common sign:** signed return lengths at factors do not always
+  combine by lcm. At15 local lengths1,2 give global length4 because the
+  local return signs disagree. Retain the diagonal sign condition.
+- **LOST switching phase:** u17 has two quadratic-character sectors.
+  A commuting abstract involution can swap them, but scalar multiplication
+  by3 has order8 with M3²=D³. No Euclidean cube isometry realizes that
+  full action. The [shell](../05-knowledge/results/prime_shells_20260921_shells.md)
+  and [cube](../05-knowledge/results/prime_shells_20260921_dissections.md)
+  models agree on D and its two sectors, not on all operations or distances.
+- **CONFUSED vertex union with solid union:** complementary alternating
+  tetrahedra have union volume1/2, not1. The exact cube dissection is one
+  central volume1/3 tetrahedron plus four volume1/6 corners. “Half” is
+  volume, not congruence to planar halves. The equilateral construction
+  fills a rectangle; an affine square repair changes angles.
+- **LOST positivity/torsion:** P->3P-H,3P,3P+H gives a genuine subgroup
+  ternary tree; its first children atH9G are all nonpositive fruit triples.
+  Inverse tripling has three rational choices only when the torsion/free
+  guards hold; at9G its subgroup tree has7vertices, not an infinite tree.
+  The [elliptic proof](../05-knowledge/results/prime_shells_20260921_elliptic.md)
+  distinguishes this from the forward labelled Berggren isomorphism.
+- **CHANGED power gap:** 2^10=10³+24 produces a point on y²=x³+24.
+  Catalan's gap-one theorem does not apply. That curve has a different
+  j invariant and good-prime trace from the fruit curve; no identification
+  follows from their both being elliptic.
+
 ## 2026-09-21 Odd-square geometry -- lost roots, measures and legal edges
 
 - **LOST inner square:** `c+even_leg=u^2` identifies a fibre of size

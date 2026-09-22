@@ -1,0 +1,189 @@
+{
+  "artifacts_sha256_lf": {
+    "01-canon/theorems/THM-3357-berggren-three-branch-walsh-level-collapse-and-parent-circuit.md": "ba24accf81d123d76ceee2ea7332d394d9ff23d6c9a0d47c7c76ab5b3ad9d446",
+    "01-canon/theorems/THM-3756-odd-square-ordinal-berggren-affine-descent.md": "eb4982e2971ae46d54102724aacc208bce7682f48ae941b15588a22f69029ea9",
+    "01-canon/theorems/THM-3991-periodic-unimodular-toric-cusp-factorial-euler-obstruction.md": "83231416e7729de73194c4f58bb265cf43b7254f3e00813be212f402a5102518",
+    "04-computation/experiments/prime_shells_20260921_dissections.json": "e5954cdacb3b9636e7fce4ce3436de238c92b8e27f5fcc670e1a7124331aab0b",
+    "04-computation/experiments/prime_shells_20260921_dissections.py": "0cccfb315a358992e5c0009d4a227943b34dd8ac81c41a7d06b312d758bb91ca",
+    "04-computation/experiments/prime_shells_20260921_elliptic.json": "d65bc0ac43a6031ff2507b81f6d030472bebd051ac1ff65e340c40e85e5739a6",
+    "04-computation/experiments/prime_shells_20260921_elliptic.py": "a7be61219301c2e09b905d65f3b00a9fc30a92832f1f239b9e33f75a897f5641",
+    "04-computation/experiments/prime_shells_20260921_primes.json": "8bfd855b7657295e8eeb70094f745859129706c476467a4c58bcb4d6204ccdb0",
+    "04-computation/experiments/prime_shells_20260921_primes.py": "866625cb0ca096ec5b25a2bf7754119c09b6d72165413f68c24b0c8939b0924b",
+    "04-computation/experiments/prime_shells_20260921_shells.json": "0b81f7ffa1844a0cad994a4915ebbaf64e26707a0c75ff6e60056a93910f2025",
+    "04-computation/experiments/prime_shells_20260921_shells.py": "538c9d5f6a7383cb80f778f89c130c4f61256e1c28d085d380a11653224e6294",
+    "04-computation/experiments/prime_shells_20260921_verify.py": "115dbdf985711209104818aa37ca4889f9906450b043b3aa36654698ca152d58",
+    "05-knowledge/results/arithmetic_braids_20260917_summand.md": "ea77e19774af976f5aad8052e26d0440bc3c022afbe93176fc84c843dab07d86",
+    "05-knowledge/results/catalan_elliptic_20260921_catalan.md": "21fbd1467d45b64e4f643e05aec8ac6dc091c3f106b8720ca2d415c00991da80",
+    "05-knowledge/results/catalan_elliptic_20260921_elliptic.md": "f3a3b6f54e374bcb4d2ed1ee15f863a10da70430295d727e88127c8eed831bc7",
+    "05-knowledge/results/collatz_mod6_20260917_row_braid_typing.md": "08c0d5110eb4c438832dfeec1ae60be58d460be33b740f29a85fedd2f8bb1ddc",
+    "05-knowledge/results/odd_square_20260921_triangles.md": "10fc94cda77e0a61e9c5dbafce115d3b9b0bcde6695de020565938a7314c1126",
+    "05-knowledge/results/prime_shells_20260921_dissections.md": "2bf31eaf88464607c41f22b48addca73acd3934efbe0c29c7141afb2da16c6bd",
+    "05-knowledge/results/prime_shells_20260921_elliptic.md": "7617d37cf25a8e4c2e0ec4f22cdff895371b768dc1a2deb6820177f8104aced1",
+    "05-knowledge/results/prime_shells_20260921_primes.md": "8771500fec87d0e7740847a46ff91bd9f2044686efd1700c3bd68eca85f39e29",
+    "05-knowledge/results/prime_shells_20260921_shells.md": "e93893348466a8d92dd2f7bac84f5ce42a6a0dbe63cb83425a52bde05995334f",
+    "05-knowledge/results/prime_shells_20260921_synthesis.md": "c982bd25c8bfb6f04df2f9eed0efffaabd687c31790ff595b154d34d572ff2c9"
+  },
+  "collatz_proved": false,
+  "commands": [
+    {
+      "command": [
+        "python",
+        "04-computation/experiments/prime_shells_20260921_shells.py"
+      ],
+      "exit_code": 0,
+      "output": "{\"status\": \"FINITE-EXACT PASS\", \"checks_passed\": 3834}"
+    },
+    {
+      "command": [
+        "python",
+        "-O",
+        "04-computation/experiments/prime_shells_20260921_shells.py"
+      ],
+      "exit_code": 0,
+      "output": "{\"status\": \"FINITE-EXACT PASS\", \"checks_passed\": 3834}"
+    },
+    {
+      "command": [
+        "python",
+        "04-computation/experiments/prime_shells_20260921_primes.py"
+      ],
+      "exit_code": 0,
+      "output": "PASS: 19605 exact checks; wrote <repo>\\04-computation\\experiments\\prime_shells_20260921_primes.json"
+    },
+    {
+      "command": [
+        "python",
+        "-O",
+        "04-computation/experiments/prime_shells_20260921_primes.py"
+      ],
+      "exit_code": 0,
+      "output": "PASS: 19605 exact checks; wrote <repo>\\04-computation\\experiments\\prime_shells_20260921_primes.json"
+    },
+    {
+      "command": [
+        "python",
+        "04-computation/experiments/prime_shells_20260921_dissections.py"
+      ],
+      "exit_code": 0,
+      "output": "PASS: 25846 exact checks; wrote prime_shells_20260921_dissections.json"
+    },
+    {
+      "command": [
+        "python",
+        "-O",
+        "04-computation/experiments/prime_shells_20260921_dissections.py"
+      ],
+      "exit_code": 0,
+      "output": "PASS: 25846 exact checks; wrote prime_shells_20260921_dissections.json"
+    },
+    {
+      "command": [
+        "python",
+        "04-computation/experiments/prime_shells_20260921_elliptic.py"
+      ],
+      "exit_code": 0,
+      "output": "{\"status\": \"PASS\", \"checks_passed\": 30856, \"tree_vertices\": 9841, \"output\": \"prime_shells_20260921_elliptic.json\"}"
+    },
+    {
+      "command": [
+        "python",
+        "-O",
+        "04-computation/experiments/prime_shells_20260921_elliptic.py"
+      ],
+      "exit_code": 0,
+      "output": "{\"status\": \"PASS\", \"checks_passed\": 30856, \"tree_vertices\": 9841, \"output\": \"prime_shells_20260921_elliptic.json\"}"
+    }
+  ],
+  "finished_utc": "2026-09-22T06:08:45+00:00",
+  "hash_basis": "UTF8 bytes with CRLF/CR normalized to LF unless an embedded raw hash is declared",
+  "lanes": {
+    "dissections": {
+      "certificate": "04-computation/experiments/prime_shells_20260921_dissections.json",
+      "checks": 25846,
+      "decoded_json_sha256": "ebbcbda0888311f822ef767106b71186f054dd59f1a90d56a3dda076e370645f",
+      "normal_optimized_equal": true,
+      "proof_note": "05-knowledge/results/prime_shells_20260921_dissections.md",
+      "source": "04-computation/experiments/prime_shells_20260921_dissections.py",
+      "status": "PASS",
+      "universe": "See certificate and note"
+    },
+    "elliptic": {
+      "certificate": "04-computation/experiments/prime_shells_20260921_elliptic.json",
+      "checks": 30856,
+      "decoded_json_sha256": "e7446b47eaaff77b94b193d30762cf72df0ded546cbaf423991f0315bacc6555",
+      "normal_optimized_equal": true,
+      "proof_note": "05-knowledge/results/prime_shells_20260921_elliptic.md",
+      "source": "04-computation/experiments/prime_shells_20260921_elliptic.py",
+      "status": "PASS",
+      "universe": {
+        "actual_elliptic_tree_depth": 3,
+        "elliptic_multiples": [
+          1,
+          40
+        ],
+        "integer_coefficient_and_Berggren_tree_depth": 8,
+        "inverse_coefficient_cases": 972,
+        "inverse_roots_3_power_range": [
+          0,
+          8
+        ],
+        "power_gap_exponents": [
+          1,
+          200
+        ],
+        "tree_vertices": 9841
+      }
+    },
+    "primes": {
+      "certificate": "04-computation/experiments/prime_shells_20260921_primes.json",
+      "checks": 19605,
+      "decoded_json_sha256": "b535f056c9c9861d8a76db5d5babdb20b9aa271b6bcc7c05e60458fc3e021634",
+      "normal_optimized_equal": true,
+      "proof_note": "05-knowledge/results/prime_shells_20260921_primes.md",
+      "source": "04-computation/experiments/prime_shells_20260921_primes.py",
+      "status": "PASS",
+      "universe": {
+        "harmonic_independent_checks_prime_bound": 300,
+        "interval_endpoints": "excluded",
+        "irregular_census_prime_bound": 300,
+        "near_eta_prime_bound": 20000,
+        "other_prime_search_bound": 10000,
+        "prime_interval": [
+          16843,
+          2124679
+        ],
+        "regularity_complete_additional": [
+          1093,
+          2851
+        ]
+      }
+    },
+    "shells": {
+      "certificate": "04-computation/experiments/prime_shells_20260921_shells.json",
+      "checks": 3834,
+      "decoded_json_sha256": "447bc3c50a33a8b609df0173753b3c3c095f8eb9c69e1d72fcef346be89fe580",
+      "normal_optimized_equal": true,
+      "proof_note": "05-knowledge/results/prime_shells_20260921_shells.md",
+      "source": "04-computation/experiments/prime_shells_20260921_shells.py",
+      "status": "PASS",
+      "universe": {
+        "all_odd_shells": [
+          3,
+          501
+        ],
+        "direct_census_max_modulus": 40000,
+        "lift_exponents": [
+          1,
+          4
+        ],
+        "prime_lifts": 96
+      }
+    }
+  },
+  "manifest_self_hash": "Excluded; verifier source included.",
+  "new_Lean_formalization": false,
+  "new_exceptional_prime_discovered": false,
+  "scope": "Four finite exact replays; infinite statements have separate written proofs; cited classifications remain external.",
+  "started_utc": "2026-09-22T06:08:26+00:00",
+  "status": "PASS"
+}
