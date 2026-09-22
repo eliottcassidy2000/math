@@ -71,7 +71,7 @@ Rational legs: ab/C=sqrt k rational forces k=j^2, C=j^4+1, ab=j(j^4+1), (a+-b)^2
 
 The only length equal to "the square root of that same number" is the leg k of the half-angle triangle (k,1,sqrt(k^2+1)). Which reading the user intended is HEURISTIC and was unverifiable by the auditors.
 
-**(b6) THM-3335 family (CITED, not re-proved).** Hypotenuse = even square + 1 with the even leg equal to that square: (3,4,5),(17,144,145),(99,4900,4901),(577,166464,166465) (rows k=1..4 of THM-3335's table). It also starts at 3-4-5, but nothing in it equals sqrt(4)=2.
+**(b6) THM-3335 family (CITED, not re-proved).** Hypotenuse = even square + 1 with the even leg equal to that square: (3,4,5),(17,144,145),(99,4900,4901),(577,166464,166465) (the first four rows of THM-3335's table). It also starts at 3-4-5, but nothing in it equals sqrt(4)=2.
 
 ## 3. The Thales chart (e/d, l, theta) and its rational lattice
 
@@ -168,7 +168,7 @@ Exact integer graphs inside [-3,3]: x^2 has fixed points 0,1 with -1->1; x^2-1 h
     python3 04-computation/experiments/collatz_mod6_20260917_pythagorean_semicircle.py > 05-knowledge/results/collatz_mod6_20260917_pythagorean_semicircle.out
     python3 -O 04-computation/experiments/collatz_mod6_20260917_pythagorean_semicircle.py | cmp - 05-knowledge/results/collatz_mod6_20260917_pythagorean_semicircle.out
 
-Final script sha256 020b0c1f9356e5d4ec563541dad8fb2d7879f6eeb98e466047f2e402537f2891; output sha256 0c0ea35fd5569759fa7310851b4ca06ad8ed86459fca2a0a44a53e5d2704d40b (217 lines); normal and `-O` runs byte-identical (the `require` helper raises, so `-O` disables nothing); run metadata about 20 s, under 100 MB resident. Universes: PPTs c<=1000 (158), c<=10^4 (1593), c<=10^6 (near-isosceles census), s<=201, j<=2000 and odd j<=100000, Pell index<=400, (m,n) agreement 300>=m>n>=1 as corroboration of the all-(m,n) proof. Section S6 of the output carries the audit-driven checks (THM-2142 map, parity split 80/78, half-angle-triangle precision). Independent audit scripts of the same session: `04-computation/experiments/collatz_mod6_20260917_pythagorean_semicircle_audit_recompute.py` (Euclid-free brute-force PPT enumeration) and `..._audit_proof-audit.py` ((s,t)-chart enumeration, own polynomial code).
+Final script sha256 020b0c1f9356e5d4ec563541dad8fb2d7879f6eeb98e466047f2e402537f2891; output sha256 0c0ea35fd5569759fa7310851b4ca06ad8ed86459fca2a0a44a53e5d2704d40b; normal and `-O` runs byte-identical (the `require` helper raises, so `-O` disables nothing); run metadata about 20 s, under 100 MB resident. Universes: PPTs c<=1000 (158), c<=10^4 (1593), c<=10^6 (near-isosceles census), s<=201, j<=2000 and odd j<=100000, Pell index<=400, (m,n) agreement 300>=m>n>=1 as corroboration of the all-(m,n) proof. Section S6 of the output carries the audit-driven checks (THM-2142 map, parity split 80/78, half-angle-triangle precision). Independent audit scripts of the same session: `04-computation/experiments/collatz_mod6_20260917_pythagorean_semicircle_audit_recompute.py` (Euclid-free brute-force PPT enumeration) and `..._audit_proof-audit.py` ((s,t)-chart enumeration, own polynomial code).
 
 Provenance: the lane script was recovered from agent transcripts on 2026-09-21 after the worktree was pruned; the recovered draft passed unchanged, and the 2026-09-21 finalization added the corrections above (one false sentence in the draft output, the convergents claim, was replaced by the checked true statement).
 

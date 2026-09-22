@@ -20,6 +20,11 @@ Sections
   S5  cycle census of E on nodes <= 2000, length <= 40
   S6  signed side E_- (3n-1): leaf identity, drift, three cycles, Q1_-/Q2_-
   S7  hostile control E_5 (5n+1): same density mechanism, extra cycles
+  S8  audit-driven additions (2026-09-21 finalisation): correct carry formula,
+      peak semantics, tail count vs Markov bound, residue-law modulus 3^(J+2),
+      GLOBAL cycle-word census for all lengths <= 26, census cap sensitivity,
+      E_- rescue k-word, full pn+1 hierarchy with general bounds and the
+      p = 7, 17 dead-exit probabilities, the 2-adic hostile 31 -> 161
 
 Run:  python3 04-computation/experiments/collatz_mod6_20260917_extended_collatz_scc.py
 """
@@ -647,7 +652,8 @@ user_cycle = [2, 7, 22, 11, 34, 17, 52, 26, 13, 40, 20, 10, 5, 16, 8, 4]
 check(user_cycle in CYC, "user's 16-cycle not found")
 print("PROVED (S5.1): every E-cycle other than (1,4,2) uses >= 1 even->3n+1 arrow: a cycle avoiding")
 print("  them is a cycle of the deterministic Collatz map, whose only cycle on nodes <= 2000 is (1,4,2)")
-print("  (FINITE-EXACT input; unconditionally for all n < 2^68 by the CITED verification literature).")
+print("  (FINITE-EXACT input from S3, n <= 10^6; the published verification bound n < 2^68 is")
+print("   UNCITED-RECOLLECTION (Barina, J. Supercomputing 2021, from memory) and is NOT used anywhere).")
 print("  Every E-cycle has 2^h > 3^a (positivity of n = B/(2^h-3^a)); the lengths observed are")
 print("  exactly a+h with 2^h > 3^a > 2^(h-1)... see the note.  The user's 16-cycle through 2->7 is #1 of len 16.")
 
@@ -989,6 +995,422 @@ for n in (13, 33, 83):
     print("  5n+1 cycle member %d: reaches below itself in E_5? %s (nodes %d)" % (n, ok, exp))
 print("  Typed analogy (see note): the density theorem transfers to 5n+1, so it cannot by itself")
 print("  distinguish 3n+1 (one known positive cycle) from 5n+1 (extra cycle 13->33->83).")
+
+# ---------------------------------------------------------------------------
+banner("S8  Audit-driven additions (2026-09-21): carry formula, peak semantics, tail count, "
+       "residue-law modulus, GLOBAL cycle-word census, cap sensitivity, E_- rescue word, pn+1 hierarchy")
+# ---------------------------------------------------------------------------
+t0 = time.time()
+
+
+def greedy_prefix(m, i):
+    """First i greedy compound moves from m: (k-word, partial sums K_1..K_i, m_i)."""
+    x = m
+    ks = []
+    Ks = []
+    K = 0
+    for _ in range(i):
+        k = KMIN[x % 9]
+        K += k
+        ks.append(k)
+        Ks.append(K)
+        x = ((x << k) - 1) // 3
+    return ks, Ks, x
+
+
+# S8.1  carry formula.  3^i m_i = 2^{K_i} m - B_i with B_i = sum_{l=1}^{i} 3^{l-1} 2^{K_i-K_l}.
+# The draft note displayed B_i = sum_{l=0}^{i-1} 3^{i-1-l} 2^{K_i-K_{l+1}} (exponent of 3 reversed).
+tot = 0
+old_wrong = 0
+for m in range(1, 3001):
+    if m % 3 == 0:
+        continue
+    for i in range(1, 7):
+        ks, Ks, mi = greedy_prefix(m, i)
+        Ki = Ks[-1]
+        B_new = sum(3 ** (l - 1) * 2 ** (Ki - Ks[l - 1]) for l in range(1, i + 1))
+        B_old = sum(3 ** (i - 1 - l) * 2 ** (Ki - Ks[l]) for l in range(0, i))
+        check(3 ** i * mi == 2 ** Ki * m - B_new, "carry formula fails at m=%d i=%d" % (m, i))
+        check(B_new > 0, "carry not positive")
+        tot += 1
+        if B_old != B_new:
+            old_wrong += 1
+ks, Ks, m2 = greedy_prefix(4, 2)
+check(ks == [0, 2] and Ks == [0, 2] and m2 == 1, "word of 4 is (0,2)")
+B2 = 3 ** 0 * 2 ** (2 - 0) + 3 ** 1 * 2 ** (2 - 2)
+check(B2 == 7 and 9 * 1 == 4 * 4 - 7, "B_2 for word (0,2) is 7")
+print("S8.1 carry formula B_i = sum_{l=1}^{i} 3^(l-1) 2^(K_i-K_l): 3^i m_i = 2^K_i m - B_i checked for")
+print("  m <= 3000 (3 not|m), i <= 6: %d instances, all exact, all B_i > 0; the draft's reversed form" % tot)
+print("  sum_{l=0}^{i-1} 3^(i-1-l) 2^(K_i-K_(l+1)) disagrees in %d of them (e.g. word (0,2) from m=4:" % old_wrong)
+print("  correct B_2 = 4 + 3 = 7 and 9*1 = 16 - 7; the reversed form gives 13).")
+
+# S8.2  peak semantics: E-node peak (includes doubling intermediates 2^k x) vs compound-value peak.
+m = 797162
+path = [m]
+x = m
+enode_peak = m
+while x != 1:
+    k = KMIN[x % 9]
+    enode_peak = max(enode_peak, x << k)
+    x = ((x << k) - 1) // 3
+    path.append(x)
+cv_peak = max(path)
+check(enode_peak == 150994948 and cv_peak == 50331649, "peak semantics at m=797162: %d %d" % (enode_peak, cv_peak))
+check(150994948 == 4 * 37748737 and 37748737 in path and 150994948 == 9 * 2 ** 24 + 4, "peak decomposition")
+print("S8.2 peak semantics at m=797162: E-node peak (all nodes of the E-path 1->m, doubling intermediates")
+print("  included) = %d = 4*37748737 = 9*2^24+4; compound-value peak (values m_i only) = %d." % (enode_peak, cv_peak))
+x = 244
+p244 = [x]
+epk = x
+while True:
+    k = KMIN[x % 9]
+    epk = max(epk, x << k)
+    x = ((x << k) - 1) // 3
+    p244.append(x)
+    if x < 244:
+        break
+check(p244 == [244, 325, 433, 577, 769, 256, 85] and epk == 2308, "244 chain")
+print("  m=244: compound values %s, E-node peak %d = 4*577, compound-value peak %d." % (p244, epk, max(p244)))
+
+# S8.3  actual tail count versus the Markov bound of Theorem 4.4 at J=10, X=10^6.
+J = 10
+X = 10 ** 6
+tail = 0
+tail_ge2 = 0
+for m in range(1, X + 1):
+    if m % 3 == 0:
+        continue
+    x = m
+    hit = False
+    for _ in range(J):
+        x = ((x << KMIN[x % 9]) - 1) // 3
+        if x < m:
+            hit = True
+            break
+    if not hit:
+        tail += 1
+        if m >= 2:
+            tail_ge2 += 1
+bound = Fraction(7, 9) ** (J - 1) * (Fraction(2 * X, 3) + 2 * 3 ** J)
+check(tail <= bound, "tail count exceeds the bound?!")
+check(tail == 2044 and tail_ge2 == 2043, "tail count at J=10, X=10^6 is %d (m>=2: %d)" % (tail, tail_ge2))
+print("S8.3 #{1 <= m <= 10^6, 3 not|m, sigma(m) > 10} = %d (this includes the greedy fixed point m = 1 with"
+      % tail)
+print("  sigma(1) = infinity; %d starts m >= 2)  <=  Markov bound (7/9)^9 (2X/3 + 2*3^10) = %d (integer part;"
+      % (tail_ge2, int(bound)))
+print("  the bound is %.1f times the truth)." % (float(bound) / tail))
+
+# S8.4  residue-law modulus: m_J mod 9 is a function of m mod 3^(J+2), not of m mod 3^(J+1).
+for J in range(1, 4):
+    modJ2 = 3 ** (J + 2)
+    for m in range(1, modJ2):
+        if m % 3 == 0:
+            continue
+        r0 = greedy_prefix(m, J)[2] % 9
+        for tt in (1, 2, 4):
+            check(greedy_prefix(m + modJ2 * tt, J)[2] % 9 == r0, "m_J mod 9 not determined mod 3^(J+2)")
+    modJ1 = 3 ** (J + 1)
+    wit = None
+    for m in range(1, modJ1):
+        if m % 3 == 0:
+            continue
+        if greedy_prefix(m, J)[2] % 9 != greedy_prefix(m + modJ1, J)[2] % 9:
+            wit = (m, m + modJ1, greedy_prefix(m, J)[2] % 9, greedy_prefix(m + modJ1, J)[2] % 9)
+            break
+    check(wit is not None, "m_J mod 9 IS determined mod 3^(J+1)?!")
+    # law under uniform units mod 3^(J+2)
+    law = {}
+    for m in range(1, modJ2):
+        if m % 3 == 0:
+            continue
+        r = greedy_prefix(m, J)[2] % 9
+        law[r] = law.get(r, 0) + 1
+    n_units = 2 * 3 ** (J + 1)
+    check(all(Fraction(law[r], n_units) == Fraction(2 if r in (1, 4, 7) else 1, 9) for r in UNITS9), "law J=%d" % J)
+    print("S8.4 J=%d: m_J mod 9 is a function of m mod 3^%d (checked all units, lifts t=1,2,4); NOT of m mod 3^%d"
+          " (witness m=%d vs %d: residues %d vs %d); law under uniform units mod 3^%d = 2/9 on {1,4,7}, 1/9 on {2,5,8}."
+          % (J, J + 2, J + 1, wit[0], wit[1], wit[2], wit[3], J + 2))
+print("  time %.1fs" % (time.time() - t0))
+
+
+# S8.5  GLOBAL cycle-word census of E (no node bound) for every length L <= 26.
+# A simple E-cycle with a arrows n->3n+1 and h halvings, rotated to start with a 3n+1 arrow,
+# is a composition (h_1,...,h_a) of h into a parts >= 0 (block i = one 3n+1 arrow then h_i
+# halvings).  Going around once, 2^h n0 = 3^a n0 + B with B = sum_{i=1}^a 3^(a-i) 2^(h_1+..+h_(i-1)),
+# so n0 = B/(2^h-3^a) must be a positive integer, and the walk must halve only even nodes.
+def global_cycle_census(LMAX):
+    found = {}
+    n_words = 0
+    for L in range(2, LMAX + 1):
+        for a in range(1, L + 1):
+            h = L - a
+            if 2 ** h <= 3 ** a:
+                continue
+            D = 2 ** h - 3 ** a
+            pow3 = [3 ** (a - i) for i in range(1, a + 1)]   # pow3[i-1] = 3^(a-i)
+            comp = [0] * a
+            cyc_keys = found.setdefault(L, {})
+
+            def leaf(B):
+                if B % D:
+                    return
+                n0 = B // D
+                x = n0
+                nodes = [x]
+                for i in range(a):
+                    x = 3 * x + 1
+                    nodes.append(x)
+                    for _ in range(comp[i]):
+                        if x % 2:
+                            return
+                        x //= 2
+                        nodes.append(x)
+                if x != n0:
+                    raise AssertionError("cycle equation inconsistent")
+                cyc = nodes[:-1]
+                if len(set(cyc)) != L:
+                    return          # a shorter cycle traversed several times
+                mn = cyc.index(min(cyc))
+                key = tuple(cyc[mn:] + cyc[:mn])
+                cyc_keys[key] = (a, h)
+
+            def rec(i, Hsum, B):
+                # choose comp[i] (0-based block i), given h_1+..+h_i = Hsum already used
+                nonlocal n_words
+                if i == a - 1:
+                    comp[i] = h - Hsum
+                    n_words += 1
+                    leaf(B + pow3[i] * (1 << Hsum))
+                    return
+                Bi = B + pow3[i] * (1 << Hsum)
+                for hi in range(0, h - Hsum + 1):
+                    comp[i] = hi
+                    rec(i + 1, Hsum + hi, Bi)
+
+            rec(0, 0, 0)
+    return found, n_words
+
+
+t0 = time.time()
+GLOB, n_words = global_cycle_census(26)
+print("S8.5 GLOBAL census by cycle words, all lengths L <= 26, no node bound: %d compositions examined (time %.1fs)"
+      % (n_words, time.time() - t0))
+print("   L | #cycles | (a,h) | max node | #with max node > 2000 | h = ceil(a log2 3) for all")
+glob_hist = {}
+for L in range(2, 27):
+    lst = GLOB.get(L, {})
+    if not lst:
+        continue
+    glob_hist[L] = len(lst)
+    ahs = sorted(set(lst.values()))
+    mx = max(max(c) for c in lst)
+    big = sum(1 for c in lst if max(c) > 2000)
+    hforced = all(h == min(tt for tt in range(200) if 2 ** tt > 3 ** a) for (a, h) in lst.values())
+    check(hforced, "h != ceil(a log2 3) in a global cycle of length %d" % L)
+    check(all(all(x % 3 for x in c) for c in lst), "global cycle through 3Z")
+    print("  %2d | %3d | %s | %5d | %3d | %s" % (L, len(lst), ahs, mx, big, hforced))
+    # cross-check with the bounded census: cycles with all nodes <= 2000 must coincide
+    bounded = sorted(tuple(c) for c in CYC if len(c) == L)
+    inside = sorted(c for c in lst if max(c) <= 2000)
+    check(bounded == inside, "bounded census != global census restricted to nodes <= 2000 at L=%d" % L)
+check(glob_hist == {3: 1, 8: 1, 13: 6, 16: 1, 21: 2, 26: 22}, "global histogram %s" % glob_hist)
+check(list(GLOB[16]) == [(2, 7, 22, 11, 34, 17, 52, 26, 13, 40, 20, 10, 5, 16, 8, 4)], "unique global 16-cycle")
+check(sum(1 for c in GLOB[26] if max(c) > 2000) == 11 and max(max(c) for c in GLOB[26]) == 7168, "L=26 outsiders")
+for L in (3, 8, 13, 16, 21):
+    check(all(max(c) <= 2000 for c in GLOB[L]), "a cycle of length %d leaves nodes<=2000" % L)
+print("FINITE-EXACT (S8.5): every E-cycle of length <= 25 has all nodes <= 2000, so the bounded census is")
+print("  complete there: exactly 1,1,6,1,2 cycles of lengths 3,8,13,16,21 in ALL of E, and the user's 16-cycle")
+print("  is the unique E-cycle of length 16.  At L=26 there are 22 cycles in total, 11 with a node > 2000")
+print("  (largest node 7168); h = ceil(a log2 3) holds for every E-cycle of length <= 26.")
+print("  Example L=26 cycle outside nodes<=2000: %s" % list(sorted(c for c in GLOB[26] if max(c) > 2000)[0]))
+# cap sensitivity of the bounded census
+t0 = time.time()
+C45 = cycle_census(2000, 45, lambda n: 3 * n + 1)
+C2500 = cycle_census(2500, 40, lambda n: 3 * n + 1)
+C4000 = cycle_census(4000, 45, lambda n: 3 * n + 1)
+h45 = {}
+for c in C45:
+    h45[len(c)] = h45.get(len(c), 0) + 1
+check(len(C45) == 100 and h45.get(44, 0) == 26, "nodes<=2000,len<=45 census: %d, len-44: %d" % (len(C45), h45.get(44, 0)))
+check(len(C2500) == 104, "nodes<=2500,len<=40 census: %d" % len(C2500))
+check(len(C4000) == 410, "nodes<=4000,len<=45 census: %d" % len(C4000))
+for c in C4000:
+    a = sum(1 for i in range(len(c)) if c[(i + 1) % len(c)] == 3 * c[i] + 1)
+    h = len(c) - a
+    check(h == min(tt for tt in range(200) if 2 ** tt > 3 ** a), "h != ceil(a log2 3) at nodes<=4000")
+print("  cap sensitivity: nodes<=2000,len<=45: %d cycles (histogram %s; the 26 new ones have length 44, (a,h)=(17,27));"
+      % (len(C45), sorted(h45.items())))
+print("  nodes<=2500,len<=40: %d cycles (30 more than 74); nodes<=4000,len<=45: %d cycles; h = ceil(a log2 3) in all %d."
+      % (len(C2500), len(C4000), len(C4000)))
+print("  Both caps of the '74' bind.  time %.1fs" % (time.time() - t0))
+
+# S8.6  E_- rescue path and the shortest 1<->cycle paths (arrow counts)
+resc = [4, 11, 59, 20, 7, 5, 2]
+kw = []
+for x, y in zip(resc, resc[1:]):
+    ks = [k for k in range(12) if ((x << k) + 1) % 3 == 0 and ((x << k) + 1) // 3 == y]
+    check(len(ks) == 1, "rescue step %d->%d" % (x, y))
+    kw.append(ks[0])
+check(kw == [3, 4, 0, 0, 1, 0], "rescue k-word %s" % kw)
+print("S8.6 E_- rescue of m=4: 4->11->59->20->7->5->2 has k-word %s (20->7 is (20+1)/3, k=0)." % (kw,))
+for c in CYC_M[1:]:
+    mm = c[0]
+    p1 = bfs_path(1, mm, lambda x: 3 * x - 1)
+    p2 = bfs_path(mm, 1, lambda x: 3 * x - 1)
+    check(len(set(p1)) == len(p1) and len(set(p2)) == len(p2), "BFS path not simple")
+    print("  shortest E_- paths: 1->%d has %d arrows, %d->1 has %d arrows (both simple)." % (mm, len(p1) - 1, mm, len(p2) - 1))
+
+# S8.7  pn+1 hierarchy: greedy inverse move m -> (2^k m - 1)/p (result not 0 mod p), residues mod p^2.
+t0 = time.time()
+
+
+def ord_p(p):
+    o = 1
+    while pow(2, o, p) != 1:
+        o += 1
+    return o
+
+
+def p_info(p):
+    o = ord_p(p)
+    e = ((pow(2, o, p * p) - 1) // p) % p
+    check(e != 0, "2^ord = 1 mod p^2 at p=%d (Wieferich-type); formulas need e != 0" % p)
+    reach = [s for s in range(1, p) if any(pow(2, t, p) * s % p == 1 for t in range(o))]   # s in <2>
+    k0 = {s: min(t for t in range(o) if pow(2, t, p) * s % p == 1) for s in reach}
+    k = {}
+    c = {}
+    for r in range(1, p * p):
+        if r % p == 0 or (r % p) not in k0:
+            continue
+        for t in range(0, o * p + 2):
+            y = pow(2, t, p * p) * r % (p * p)
+            if y % p == 1 and ((y - 1) // p) % p != 0:
+                k[r] = t
+                c[r] = ((y - 1) // p) % p
+                break
+        s = r % p
+        a = ((pow(2, k0[s], p * p) * r - 1) // p) % p
+        check(k[r] == k0[s] + o * (a == 0) and c[r] == (a if a else e), "k/c formula p=%d r=%d" % (p, r))
+    for s in reach:
+        law = {}
+        for t in range(p):
+            law[c[s + p * t]] = law.get(c[s + p * t], 0) + 1
+        check(law == {cc: 1 + (cc == e) for cc in range(1, p)}, "class law (1+[c=e])/p fails p=%d s=%d" % (p, s))
+    return o, e, reach, k0, k, c
+
+
+print("S8.7 pn+1 hierarchy (greedy inverse chain on residues mod p^2; ord = ord_p(2), e = (2^ord-1)/p mod p):")
+print("   p | ord | 2 primitive? | e | E_pi[k] | < log2 p ? | rho_p | rho_p < p ? | dead-exit prob (2 not primitive)")
+ROWS = {}
+for p in (3, 5, 7, 11, 13, 17, 19, 23, 29, 37):
+    o, e, reach, k0, k, c = p_info(p)
+    prim = (o == p - 1)
+    if prim:
+        Ek = sum(Fraction(1 + (s == e), p) * k0[s] for s in reach) + Fraction(o, p)
+        rho = Fraction(sum(2 ** k0[s] for s in reach) + 2 ** (o + k0[e]), p)
+        check(Ek == Fraction(p - 1, 2) + Fraction(k0[e], p), "E_pi[k] closed form p=%d" % p)
+        check(sum(2 ** k0[s] for s in reach) == 2 ** (p - 1) - 1, "sum 2^k0 = 2^(p-1)-1")
+        check(rho >= Fraction(2 ** p - 1, p), "rho_p >= (2^p-1)/p fails at p=%d" % p)
+        if p >= 5:
+            check(rho > p and 2 ** p - 1 > p * p, "mean-supercritical for p>=5 fails at p=%d" % p)
+        if p >= 7:
+            check(2 ** Ek.numerator > p ** Ek.denominator and 2 ** (p - 1) >= p * p, "log-supercritical p>=7 fails at %d" % p)
+        logsub = 2 ** Ek.numerator < p ** Ek.denominator
+        ROWS[p] = (o, e, Ek, logsub, rho, rho < p)
+        print("  %2d | %3d | yes | %2d | %s | %s | %s | %s | -" % (p, o, e, Ek, logsub, rho, rho < p))
+    else:
+        dead = Fraction(sum(1 for t in range(p) if c[reach[0] + p * t] not in k0), p)
+        dead_cf = Fraction(p - 1 - len(reach) + (0 if e in k0 else 1), p)
+        check(dead == dead_cf, "dead-exit closed form p=%d" % p)
+        ROWS[p] = (o, e, None, None, None, None, dead)
+        print("  %2d | %3d | no (<2> = %s) | %2d | - | - | - | - | %s = (p-1-|<2>|+[e not in <2>])/p" % (p, o, reach, e, dead))
+check(ROWS[3][2] == 1 and ROWS[3][4] == Fraction(7, 3), "p=3 row")
+check(ROWS[5][2] == Fraction(11, 5) and ROWS[5][4] == Fraction(47, 5), "p=5 row")
+check(ROWS[11][2] == Fraction(61, 11) and ROWS[11][4] == Fraction(66559, 11), "p=11 row")
+check(ROWS[13][2] == Fraction(86, 13) and ROWS[13][4] == Fraction(1052671, 13), "p=13 row")
+check(ROWS[19][2] == Fraction(176, 19) and ROWS[19][4] == Fraction(8650751, 19), "p=19 row")
+check(ROWS[7][6] == Fraction(3, 7) and ROWS[17][6] == Fraction(8, 17), "dead exits p=7,17")
+check([p for p in ROWS if ROWS[p][2] is not None and ROWS[p][5]] == [3], "mean-subcritical only p=3")
+check([p for p in ROWS if ROWS[p][2] is not None and ROWS[p][3]] == [3, 5], "log-subcritical only p=3,5")
+print("PROVED (S8.7): for 2 a primitive root mod p with e != 0, sum_s 2^k0(s) = 2^(p-1)-1, hence")
+print("  rho_p = (2^(p-1)-1+2^(p-1+k0(e)))/p >= (2^p-1)/p, which exceeds p for every p >= 5 (2^p-1 > p^2);")
+print("  E_pi[k] = (p-1)/2 + k0(e)/p >= (p-1)/2 >= log2 p for every p >= 7 (2^(p-1) >= p^2).  So among ALL such")
+print("  primes: mean-subcritical <=> p = 3; log-subcritical <=> p in {3,5}.  For p = 7, 17 (2 not primitive) the")
+print("  class law (1+[c=e])/p still holds on every <2>-coset, and the per-step probability of leaving <2>")
+print("  (no inverse move at all) is exactly (p-1-|<2>|+[e not in <2>])/p = 3/7 and 8/17.")
+lam = Fraction(21, 20)
+o, e, reach, k0, k, c = p_info(5)
+rl = (sum(lam ** k0[s] for s in reach) + lam ** (o + k0[e])) / 5
+check(rl == Fraction(17876501, 16000000) and rl ** 10 < lam ** 23 and 2 ** 23 < 5 ** 10, "p=5 Chernoff certificate")
+print("  p=5 Chernoff certificate: rho(21/20) = %s, rho^10 = %.6f < (21/20)^23 = %.6f, 2^23 < 5^10: rate per step %.5f."
+      % (rl, float(rl ** 10), float(lam ** 23), float((rl ** 10 / lam ** 23) ** Fraction(1, 10))))
+# E[lambda^K_J] = (1/4) 1^T M^J 1 for p=5 (rank-one tilt), J<=3, lambda in {2, 21/20}
+for lamb in (Fraction(2), lam):
+    S = reach
+    Mx = [[lamb ** k0[s] / 5 * (1 + (lamb ** o if s2 == e else 0)) for s2 in S] for s in S]
+    for J in range(1, 4):
+        vec = [Fraction(1)] * 4
+        for _ in range(J):
+            vec = [sum(Mx[i][j] * vec[j] for j in range(4)) for i in range(4)]
+        pred = sum(vec) / 4
+        acc = Fraction(0)
+        totm = 0
+        for m in range(1, 5 ** (J + 1)):
+            if m % 5 == 0:
+                continue
+            totm += 1
+            x = m
+            K = 0
+            for _ in range(J):
+                kk = k[x % 25]
+                K += kk
+                x = ((x << kk) - 1) // 5
+            acc += lamb ** K
+        check(acc / totm == pred, "E[lambda^K_J] p=5 J=%d" % J)
+print("  E[lambda^K_J] = (1/4) 1^T M^J 1 for p=5, J<=3, lambda in {2, 21/20}: exact.")
+# E_5 greedy cycles are the reversed deterministic 5n+1 cycles; E_7 residues reachable from 1
+c13 = [13]
+while True:
+    c13.append(((c13[-1] << k[c13[-1] % 25]) - 1) // 5)
+    if c13[-1] == 13:
+        break
+c17 = [17]
+while True:
+    c17.append(((c17[-1] << k[c17[-1] % 25]) - 1) // 5)
+    if c17[-1] == 17:
+        break
+check(c13[:-1] == [13, 83, 33] and c17[:-1] == [17, 27, 43], "E_5 greedy cycles")
+for start in (13, 17):
+    x = start
+    for _ in range(50):
+        x = x // 2 if x % 2 == 0 else 5 * x + 1
+        if x == start:
+            break
+    check(x == start, "5n+1 deterministic cycle at %d" % start)
+seen = {1}
+st = [1]
+while st:
+    x = st.pop()
+    for y in ([x // 2] if x % 2 == 0 else []) + ([7 * x + 1] if 7 * x + 1 <= 10 ** 4 else []):
+        if y not in seen:
+            seen.add(y)
+            st.append(y)
+check({x % 7 for x in seen} == {1, 2, 4}, "E_7 residues")
+print("  E_5 greedy cycles {13,83,33}, {17,27,43} = reversed deterministic 5n+1 cycles; nodes reachable from 1 in")
+print("  E_7 within [1,10^4] have residues {1,2,4} mod 7 only (m = 3 refutes the Q2 analogue for p = 7).")
+print("  time %.1fs" % (time.time() - t0))
+
+# S8.8  the 2-adic hostile of the typed analogy: n0 = 2^(L+1)-1 with L consecutive k=1 steps
+x = 31
+orb = [x]
+for _ in range(4):
+    x = collatz_T(x)
+    orb.append(x)
+check(orb == [31, 47, 71, 107, 161] and 161 == 2 * 3 ** 4 - 1, "T-orbit of 31")
+check(1 + (2 * 1 + 1) == 4, "1 -> 4 is the summand arrow with parents (1, 3)")
+print("S8.8 accelerated T-orbit of 31 = 2^5-1 (L=4): %s, ending at 2*3^4-1 = 161 (inherited (B5) block);" % orb)
+print("  the E-arrow 1 -> 4 is the summand arrow n -> n+(2n+1) with distinct parents (1,3); the diagonal (1,1) -> 2")
+print("  of the inherited note is the shortcut arrow 1 -> 2, which is not an E-arrow.")
 
 # ---------------------------------------------------------------------------
 banner("Provenance")

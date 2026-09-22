@@ -60,7 +60,7 @@ Q2 (1 reaches m in E) verified for all m <= 1000000 with 3 not | m via the GREED
   max overall peak along the inverse path: 150994948 at m=797162 (peak/m = 189.416)
   max number of compound moves to 1: 74 at m=984104
   max number of E-arrows to 1     : 172 at m=984104
-  time 0.8s
+  time 0.7s
   inverse path of the peak-worst m=797162 (39 compound moves): [797162, 2125765, 2834353, 3779137, 5038849, 6718465, 8957953, 11943937, 15925249, 21233665, 28311553, 37748737, 50331649, 16777216, 22369621, 7456540, 2485513, 3314017, 4418689, 1472896, 1963861, 654620, 1745653, 581884, 193961, 129307, 43102, 57469, 19156, 6385, 2128, 709, 236, 157, 52, 17, 11, 7, 2, 1]
 Q1 (n reaches 1 in E) verified for all n <= 1000000 by the deterministic Collatz path
   (every n>=2 reaches a smaller value; induction).  time 0.6s
@@ -213,7 +213,8 @@ simple cycles of E using only nodes <= 2000, length <= 40: 74  (time 0.04s)
    39 | 15 | 24 |  3 | True |   11 | [11, 34, 17, 52, 26, 13, 40, 20, 61, 184, 92, 46, 139, 418, 209, 628, 314, 157, 472, 236, 118, 355, 1066, 533, 1600, 800, 400, 200, 100, 50, 25, 76, 38, 19, 58, 29, 88, 44, 22]
 PROVED (S5.1): every E-cycle other than (1,4,2) uses >= 1 even->3n+1 arrow: a cycle avoiding
   them is a cycle of the deterministic Collatz map, whose only cycle on nodes <= 2000 is (1,4,2)
-  (FINITE-EXACT input; unconditionally for all n < 2^68 by the CITED verification literature).
+  (FINITE-EXACT input from S3, n <= 10^6; the published verification bound n < 2^68 is
+   UNCITED-RECOLLECTION (Barina, J. Supercomputing 2021, from memory) and is NOT used anywhere).
   Every E-cycle has 2^h > 3^a (positivity of n = B/(2^h-3^a)); the lengths observed are
   exactly a+h with 2^h > 3^a > 2^(h-1)... see the note.  The user's 16-cycle through 2->7 is #1 of len 16.
 
@@ -275,9 +276,72 @@ S7  Hostile control E_5 (5n+1): same greedy density mechanism, yet extra cycles
   distinguish 3n+1 (one known positive cycle) from 5n+1 (extra cycle 13->33->83).
 
 ==============================================================================
+S8  Audit-driven additions (2026-09-21): carry formula, peak semantics, tail count, residue-law modulus, GLOBAL cycle-word census, cap sensitivity, E_- rescue word, pn+1 hierarchy
+==============================================================================
+S8.1 carry formula B_i = sum_{l=1}^{i} 3^(l-1) 2^(K_i-K_l): 3^i m_i = 2^K_i m - B_i checked for
+  m <= 3000 (3 not|m), i <= 6: 12000 instances, all exact, all B_i > 0; the draft's reversed form
+  sum_{l=0}^{i-1} 3^(i-1-l) 2^(K_i-K_(l+1)) disagrees in 8679 of them (e.g. word (0,2) from m=4:
+  correct B_2 = 4 + 3 = 7 and 9*1 = 16 - 7; the reversed form gives 13).
+S8.2 peak semantics at m=797162: E-node peak (all nodes of the E-path 1->m, doubling intermediates
+  included) = 150994948 = 4*37748737 = 9*2^24+4; compound-value peak (values m_i only) = 50331649.
+  m=244: compound values [244, 325, 433, 577, 769, 256, 85], E-node peak 2308 = 4*577, compound-value peak 769.
+S8.3 #{1 <= m <= 10^6, 3 not|m, sigma(m) > 10} = 2044 (this includes the greedy fixed point m = 1 with
+  sigma(1) = infinity; 2043 starts m >= 2)  <=  Markov bound (7/9)^9 (2X/3 + 2*3^10) = 81740 (integer part;
+  the bound is 40.0 times the truth).
+S8.4 J=1: m_J mod 9 is a function of m mod 3^3 (checked all units, lifts t=1,2,4); NOT of m mod 3^2 (witness m=1 vs 10: residues 1 vs 4); law under uniform units mod 3^3 = 2/9 on {1,4,7}, 1/9 on {2,5,8}.
+S8.4 J=2: m_J mod 9 is a function of m mod 3^4 (checked all units, lifts t=1,2,4); NOT of m mod 3^3 (witness m=1 vs 28: residues 1 vs 4); law under uniform units mod 3^4 = 2/9 on {1,4,7}, 1/9 on {2,5,8}.
+S8.4 J=3: m_J mod 9 is a function of m mod 3^5 (checked all units, lifts t=1,2,4); NOT of m mod 3^4 (witness m=1 vs 82: residues 1 vs 4); law under uniform units mod 3^5 = 2/9 on {1,4,7}, 1/9 on {2,5,8}.
+  time 0.3s
+S8.5 GLOBAL census by cycle words, all lengths L <= 26, no node bound: 6720473 compositions examined (time 2.4s)
+   L | #cycles | (a,h) | max node | #with max node > 2000 | h = ceil(a log2 3) for all
+   3 |   1 | [(1, 2)] |     4 |   0 | True
+   8 |   1 | [(3, 5)] |    40 |   0 | True
+  13 |   6 | [(5, 8)] |   832 |   0 | True
+  16 |   1 | [(6, 10)] |    52 |   0 | True
+  21 |   2 | [(8, 13)] |   148 |   0 | True
+  26 |  22 | [(10, 16)] |  7168 |  11 | True
+FINITE-EXACT (S8.5): every E-cycle of length <= 25 has all nodes <= 2000, so the bounded census is
+  complete there: exactly 1,1,6,1,2 cycles of lengths 3,8,13,16,21 in ALL of E, and the user's 16-cycle
+  is the unique E-cycle of length 16.  At L=26 there are 22 cycles in total, 11 with a node > 2000
+  (largest node 7168); h = ceil(a log2 3) holds for every E-cycle of length <= 26.
+  Example L=26 cycle outside nodes<=2000: [5, 16, 49, 148, 445, 1336, 668, 334, 167, 502, 1507, 4522, 2261, 6784, 3392, 1696, 848, 424, 212, 106, 53, 160, 80, 40, 20, 10]
+  cap sensitivity: nodes<=2000,len<=45: 100 cycles (histogram [(3, 1), (8, 1), (13, 6), (16, 1), (21, 2), (26, 11), (34, 9), (39, 43), (44, 26)]; the 26 new ones have length 44, (a,h)=(17,27));
+  nodes<=2500,len<=40: 104 cycles (30 more than 74); nodes<=4000,len<=45: 410 cycles; h = ceil(a log2 3) in all 410.
+  Both caps of the '74' bind.  time 0.4s
+S8.6 E_- rescue of m=4: 4->11->59->20->7->5->2 has k-word [3, 4, 0, 0, 1, 0] (20->7 is (20+1)/3, k=0).
+  shortest E_- paths: 1->5 has 2 arrows, 5->1 has 15 arrows (both simple).
+  shortest E_- paths: 1->17 has 13 arrows, 17->1 has 35 arrows (both simple).
+S8.7 pn+1 hierarchy (greedy inverse chain on residues mod p^2; ord = ord_p(2), e = (2^ord-1)/p mod p):
+   p | ord | 2 primitive? | e | E_pi[k] | < log2 p ? | rho_p | rho_p < p ? | dead-exit prob (2 not primitive)
+   3 |   2 | yes |  1 | 1 | True | 7/3 | True | -
+   5 |   4 | yes |  3 | 11/5 | True | 47/5 | False | -
+   7 |   3 | no (<2> = [1, 2, 4]) |  1 | - | - | - | - | 3/7 = (p-1-|<2>|+[e not in <2>])/p
+  11 |  10 | yes |  5 | 61/11 | False | 66559/11 | False | -
+  13 |  12 | yes |  3 | 86/13 | False | 1052671/13 | False | -
+  17 |   8 | no (<2> = [1, 2, 4, 8, 9, 13, 15, 16]) | 15 | - | - | - | - | 8/17 = (p-1-|<2>|+[e not in <2>])/p
+  19 |  18 | yes |  3 | 176/19 | False | 8650751/19 | False | -
+  23 |  11 | no (<2> = [1, 2, 3, 4, 6, 8, 9, 12, 13, 16, 18]) | 20 | - | - | - | - | 12/23 = (p-1-|<2>|+[e not in <2>])/p
+  29 |  28 | yes |  1 | 14 | False | 536870911/29 | False | -
+  37 |  36 | yes |  1 | 18 | False | 137438953471/37 | False | -
+PROVED (S8.7): for 2 a primitive root mod p with e != 0, sum_s 2^k0(s) = 2^(p-1)-1, hence
+  rho_p = (2^(p-1)-1+2^(p-1+k0(e)))/p >= (2^p-1)/p, which exceeds p for every p >= 5 (2^p-1 > p^2);
+  E_pi[k] = (p-1)/2 + k0(e)/p >= (p-1)/2 >= log2 p for every p >= 7 (2^(p-1) >= p^2).  So among ALL such
+  primes: mean-subcritical <=> p = 3; log-subcritical <=> p in {3,5}.  For p = 7, 17 (2 not primitive) the
+  class law (1+[c=e])/p still holds on every <2>-coset, and the per-step probability of leaving <2>
+  (no inverse move at all) is exactly (p-1-|<2>|+[e not in <2>])/p = 3/7 and 8/17.
+  p=5 Chernoff certificate: rho(21/20) = 17876501/16000000, rho^10 = 3.031275 < (21/20)^23 = 3.071524, 2^23 < 5^10: rate per step 0.99868.
+  E[lambda^K_J] = (1/4) 1^T M^J 1 for p=5, J<=3, lambda in {2, 21/20}: exact.
+  E_5 greedy cycles {13,83,33}, {17,27,43} = reversed deterministic 5n+1 cycles; nodes reachable from 1 in
+  E_7 within [1,10^4] have residues {1,2,4} mod 7 only (m = 3 refutes the Q2 analogue for p = 7).
+  time 0.0s
+S8.8 accelerated T-orbit of 31 = 2^5-1 (L=4): [31, 47, 71, 107, 161], ending at 2*3^4-1 = 161 (inherited (B5) block);
+  the E-arrow 1 -> 4 is the summand arrow n -> n+(2n+1) with distinct parents (1,3); the diagonal (1,1) -> 2
+  of the inherited note is the shortcut arrow 1 -> 2, which is not an E-arrow.
+
+==============================================================================
 Provenance
 ==============================================================================
-source sha256: ac27f3665011936435661306123db445837f754de9b7b1b655d851fe1dc0f42f
+source sha256: 85379a7e840da021fffd5a80edb0f65ac695a9232a489327dc6cc454da18ce66
 python: 3.10.0
-total time: 6.9s
+total time: 10.7s
 ALL CHECKS PASSED
