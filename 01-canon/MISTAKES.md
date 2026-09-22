@@ -9,6 +9,40 @@ Format per entry:
 - Why it was wrong
 - The correct framing
 
+## 2026-09-21 Catalan and elliptic synthesis -- carry, sign and positivity
+
+- **INSUFFICIENT unit-gap criterion:** Catalan controls consecutive powers,
+  but an exact Collatz cycle requires `Delta|bB`, with the ordered carry B.
+  The known negative seven-cycle has `Delta=-139`, `B=2363=17*139`.
+  Repeating the fixed word `(2)` already changes the raw gap from 1 to 7.
+  The survivor is the repetition-invariant reduced denominator
+  `q=abs(Delta)/gcd(B,abs(Delta))`; the gate is `q|b`.
+- **LOST sign sheet:** negation conjugates forward `U_b` to forward
+  `U_(-b)`; it does not reverse arrows. Forgetting the sign fails at
+  magnitude 3, with image magnitudes 5 and 1. Preserve `(sign,magnitude)`.
+- **LITERAL decimal error:** the pasted fruit triple has fraction sum
+  about 2.318469382009154. Dividing its second and third entries by 10
+  yields exactly 4 and the intended digit lengths 81,80,79. The repaired
+  and literal cleared equations are separately kernel-certified.
+- **LOST positive chamber:** pair-sum reciprocation preserves the fruit
+  cubic and yields a central two-torsion translation, but sends every
+  positive triple of fruit sum at least `sqrt(5)` to a mixed-sign triple.
+  Its six-point torsion hexagon also has zero fruit denominators. Preserve
+  the real chamber and nonzero denominators beside the abstract group.
+- **UNSUPPORTED probability transfer:** the spatial sign law for `F-S-U`
+  has negative density `6/pi^2` while the mean is eventually positive.
+  Neither a sign density nor a uniform integer mean supplies a law along
+  every Collatz orbit. Retain the sampling measure and defect magnitude.
+- **CURVE equivalence obstruction:** under the explicit square-value
+  interpretation, `2x^3+4x^2+1` gives a curve with 16 points over F_11;
+  the fruit curve has 12. They are not Q-isogenous. A shared S3 name can
+  describe a Galois action or coordinate permutations on different sets.
+- **Repair, scope and remaining question:** the
+  [synthesis](../05-knowledge/results/catalan_elliptic_20260921_synthesis.md)
+  supplies exact maps, counterexamples and replay. Universal actual-word
+  descent remains the missing Collatz implication; no general termination
+  statement follows from these repaired connections.
+
 ## 2026-09-21 Arithmetic seams -- roots, periods, and graph shadows
 
 - **MISSING root:** with N=(A+1)(B+1), the proposed polynomial

@@ -1,0 +1,33 @@
+{
+  "axioms": {
+    "CatalanEllipticAudit.collatz_carry_cancellation": [],
+    "CatalanEllipticAudit.collatz_fixed_point_equation": [],
+    "CatalanEllipticAudit.collatz_gap": [],
+    "CatalanEllipticAudit.collatz_ordered_carry": [],
+    "CatalanEllipticAudit.collatz_seven_cleared_steps": [],
+    "CatalanEllipticAudit.collatz_successors_odd": [],
+    "CatalanEllipticAudit.pasted_denominators_positive": [],
+    "CatalanEllipticAudit.pasted_not_four": [],
+    "CatalanEllipticAudit.polynomial_point_ten_fortynine": [],
+    "CatalanEllipticAudit.repair_divisions_exact": [],
+    "CatalanEllipticAudit.repaired_denominators_positive": [],
+    "CatalanEllipticAudit.repaired_equals_four": []
+  },
+  "external_packages": [],
+  "lean_version": "Lean (version 4.30.0, x86_64-w64-windows-gnu, commit d024af099ca4bf2c86f649261ebf59565dc8c622, Release)",
+  "public_root": "CatalanEllipticAudit",
+  "scope": "Twelve concrete cleared arithmetic witnesses, not global classifications",
+  "sha256": {
+    ".gitignore": "b34af236d1df9e39ed4f98fca51702530ce76bdee4e1a69512f6caed933c3374",
+    "AxiomAudit.lean": "818094d2821533eaaf54a682ad7fad3849fc6fdf8ed35877d487fda63628ef42",
+    "CatalanEllipticAudit.lean": "80171adee1e00976620f8fcb6f0833319130aecd3badbbbc8a3100015a7c7fab",
+    "CatalanEllipticAudit/Certificates.lean": "695e217a3bb50ab039ab5050c1a64227961374e0795bfb7ad098fbbf1a666f77",
+    "README.md": "02b1cf9809e872dd37c218020153bf9a1695626efe26d0293f515d18e1c3677e",
+    "lake-manifest.json": "3ceca76065237430230aea928549260b50f9fcda2bb46428a71df1b00896e12e",
+    "lakefile.toml": "ad54203f94fabd527547b6a27e3acea4e2247e21a9e0bdc0376725956aa335c4",
+    "lean-toolchain": "54727eec5cba149c18842e6deb5c41b369d66455c93ce135d7d5347c782b2325",
+    "verify.py": "8dcde2ada87b8b3e0f5e26bb0fc92ef87d4c12488d0de3f1f5c1bdd5862992ef"
+  },
+  "status": "PASS",
+  "theorems_audited": 12
+}

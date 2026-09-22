@@ -1,0 +1,14 @@
+import CatalanEllipticAudit
+
+#print axioms CatalanEllipticAudit.pasted_not_four
+#print axioms CatalanEllipticAudit.pasted_denominators_positive
+#print axioms CatalanEllipticAudit.repair_divisions_exact
+#print axioms CatalanEllipticAudit.repaired_equals_four
+#print axioms CatalanEllipticAudit.repaired_denominators_positive
+#print axioms CatalanEllipticAudit.polynomial_point_ten_fortynine
+#print axioms CatalanEllipticAudit.collatz_gap
+#print axioms CatalanEllipticAudit.collatz_ordered_carry
+#print axioms CatalanEllipticAudit.collatz_carry_cancellation
+#print axioms CatalanEllipticAudit.collatz_fixed_point_equation
+#print axioms CatalanEllipticAudit.collatz_seven_cleared_steps
+#print axioms CatalanEllipticAudit.collatz_successors_odd

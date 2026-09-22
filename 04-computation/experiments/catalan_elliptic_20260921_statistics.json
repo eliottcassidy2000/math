@@ -1,0 +1,919 @@
+{
+  "controls": {
+    "1": {
+      "D": 0,
+      "F": 0,
+      "Omega": 0,
+      "S": 0,
+      "U": 0,
+      "omega": 0,
+      "tau": 1
+    },
+    "12": {
+      "D": -1,
+      "F": 4,
+      "Omega": 3,
+      "S": 3,
+      "U": 2,
+      "omega": 2,
+      "tau": 6
+    },
+    "2": {
+      "D": 0,
+      "F": 0,
+      "Omega": 1,
+      "S": 0,
+      "U": 0,
+      "omega": 1,
+      "tau": 2
+    },
+    "210": {
+      "D": -4,
+      "F": 14,
+      "Omega": 4,
+      "S": 14,
+      "U": 4,
+      "omega": 4,
+      "tau": 16
+    },
+    "30": {
+      "D": -3,
+      "F": 6,
+      "Omega": 3,
+      "S": 6,
+      "U": 3,
+      "omega": 3,
+      "tau": 8
+    },
+    "4": {
+      "D": -1,
+      "F": 1,
+      "Omega": 2,
+      "S": 1,
+      "U": 1,
+      "omega": 1,
+      "tau": 3
+    },
+    "420": {
+      "D": 3,
+      "F": 22,
+      "Omega": 5,
+      "S": 15,
+      "U": 4,
+      "omega": 4,
+      "tau": 24
+    },
+    "6": {
+      "D": -2,
+      "F": 2,
+      "Omega": 2,
+      "S": 2,
+      "U": 2,
+      "omega": 2,
+      "tau": 4
+    },
+    "60": {
+      "D": 0,
+      "F": 10,
+      "Omega": 4,
+      "S": 7,
+      "U": 3,
+      "omega": 3,
+      "tau": 12
+    },
+    "8": {
+      "D": 0,
+      "F": 2,
+      "Omega": 3,
+      "S": 1,
+      "U": 1,
+      "omega": 1,
+      "tau": 4
+    }
+  },
+  "finite_prime_CRT": [
+    {
+      "at_most_three_hits_fraction": {
+        "denominator": 1,
+        "numerator": 1
+      },
+      "hit_count_coefficients": [
+        8,
+        14,
+        7,
+        1
+      ],
+      "modulus": 30,
+      "primes": [
+        2,
+        3,
+        5
+      ]
+    },
+    {
+      "at_most_three_hits_fraction": {
+        "denominator": 210,
+        "numerator": 209
+      },
+      "hit_count_coefficients": [
+        48,
+        92,
+        56,
+        13,
+        1
+      ],
+      "modulus": 210,
+      "primes": [
+        2,
+        3,
+        5,
+        7
+      ]
+    },
+    {
+      "at_most_three_hits_fraction": {
+        "denominator": 5005,
+        "numerator": 4922
+      },
+      "hit_count_coefficients": [
+        5760,
+        12096,
+        8792,
+        2884,
+        462,
+        35,
+        1
+      ],
+      "modulus": 30030,
+      "primes": [
+        2,
+        3,
+        5,
+        7,
+        11,
+        13
+      ]
+    }
+  ],
+  "odd_residue_rows": [
+    {
+      "count": 166667,
+      "limiting_negative_density": "9/pi^2",
+      "negative_defect_count": 118338,
+      "positive_defect_count": 3555,
+      "residue_mod_6": 1,
+      "squarefree_count": 151963,
+      "zero_defect_count": 44774
+    },
+    {
+      "count": 166667,
+      "limiting_negative_density": "6/pi^2",
+      "negative_defect_count": 111969,
+      "positive_defect_count": 34294,
+      "residue_mod_6": 3,
+      "squarefree_count": 101323,
+      "zero_defect_count": 20404
+    },
+    {
+      "count": 166666,
+      "limiting_negative_density": "9/pi^2",
+      "negative_defect_count": 118344,
+      "positive_defect_count": 3421,
+      "residue_mod_6": 5,
+      "squarefree_count": 152000,
+      "zero_defect_count": 44901
+    }
+  ],
+  "prefixes": [
+    {
+      "X": 1,
+      "defect_sign_counts": {
+        "negative": 0,
+        "positive": 0,
+        "zero": 1
+      },
+      "display_only": {
+        "D_mean": 0.0,
+        "F_mean": 0.0,
+        "S_mean": 0.0,
+        "U_mean": 0.0,
+        "log_X": 0.0,
+        "prime_density": 0.0,
+        "six_over_pi_squared": 0.6079271018540267,
+        "squarefree_density": 1.0
+      },
+      "means_exact": {
+        "D": {
+          "denominator": 1,
+          "numerator": 0
+        },
+        "F": {
+          "denominator": 1,
+          "numerator": 0
+        },
+        "Omega": {
+          "denominator": 1,
+          "numerator": 0
+        },
+        "S": {
+          "denominator": 1,
+          "numerator": 0
+        },
+        "U": {
+          "denominator": 1,
+          "numerator": 0
+        },
+        "omega": {
+          "denominator": 1,
+          "numerator": 0
+        },
+        "tau": {
+          "denominator": 1,
+          "numerator": 1
+        },
+        "two_to_omega": {
+          "denominator": 1,
+          "numerator": 1
+        }
+      },
+      "prime_count": 0,
+      "squarefree_count": 1,
+      "sums": {
+        "D": 0,
+        "F": 0,
+        "Omega": 0,
+        "S": 0,
+        "U": 0,
+        "omega": 0,
+        "tau": 1,
+        "two_to_omega": 1
+      }
+    },
+    {
+      "X": 2,
+      "defect_sign_counts": {
+        "negative": 0,
+        "positive": 0,
+        "zero": 2
+      },
+      "display_only": {
+        "D_mean": 0.0,
+        "F_mean": 0.0,
+        "S_mean": 0.0,
+        "U_mean": 0.0,
+        "log_X": 0.6931471805599453,
+        "prime_density": 0.5,
+        "six_over_pi_squared": 0.6079271018540267,
+        "squarefree_density": 1.0
+      },
+      "means_exact": {
+        "D": {
+          "denominator": 1,
+          "numerator": 0
+        },
+        "F": {
+          "denominator": 1,
+          "numerator": 0
+        },
+        "Omega": {
+          "denominator": 2,
+          "numerator": 1
+        },
+        "S": {
+          "denominator": 1,
+          "numerator": 0
+        },
+        "U": {
+          "denominator": 1,
+          "numerator": 0
+        },
+        "omega": {
+          "denominator": 2,
+          "numerator": 1
+        },
+        "tau": {
+          "denominator": 2,
+          "numerator": 3
+        },
+        "two_to_omega": {
+          "denominator": 2,
+          "numerator": 3
+        }
+      },
+      "prime_count": 1,
+      "squarefree_count": 2,
+      "sums": {
+        "D": 0,
+        "F": 0,
+        "Omega": 1,
+        "S": 0,
+        "U": 0,
+        "omega": 1,
+        "tau": 3,
+        "two_to_omega": 3
+      }
+    },
+    {
+      "X": 3,
+      "defect_sign_counts": {
+        "negative": 0,
+        "positive": 0,
+        "zero": 3
+      },
+      "display_only": {
+        "D_mean": 0.0,
+        "F_mean": 0.0,
+        "S_mean": 0.0,
+        "U_mean": 0.0,
+        "log_X": 1.0986122886681098,
+        "prime_density": 0.6666666666666666,
+        "six_over_pi_squared": 0.6079271018540267,
+        "squarefree_density": 1.0
+      },
+      "means_exact": {
+        "D": {
+          "denominator": 1,
+          "numerator": 0
+        },
+        "F": {
+          "denominator": 1,
+          "numerator": 0
+        },
+        "Omega": {
+          "denominator": 3,
+          "numerator": 2
+        },
+        "S": {
+          "denominator": 1,
+          "numerator": 0
+        },
+        "U": {
+          "denominator": 1,
+          "numerator": 0
+        },
+        "omega": {
+          "denominator": 3,
+          "numerator": 2
+        },
+        "tau": {
+          "denominator": 3,
+          "numerator": 5
+        },
+        "two_to_omega": {
+          "denominator": 3,
+          "numerator": 5
+        }
+      },
+      "prime_count": 2,
+      "squarefree_count": 3,
+      "sums": {
+        "D": 0,
+        "F": 0,
+        "Omega": 2,
+        "S": 0,
+        "U": 0,
+        "omega": 2,
+        "tau": 5,
+        "two_to_omega": 5
+      }
+    },
+    {
+      "X": 4,
+      "defect_sign_counts": {
+        "negative": 1,
+        "positive": 0,
+        "zero": 3
+      },
+      "display_only": {
+        "D_mean": -0.25,
+        "F_mean": 0.25,
+        "S_mean": 0.25,
+        "U_mean": 0.25,
+        "log_X": 1.3862943611198906,
+        "prime_density": 0.5,
+        "six_over_pi_squared": 0.6079271018540267,
+        "squarefree_density": 0.75
+      },
+      "means_exact": {
+        "D": {
+          "denominator": 4,
+          "numerator": -1
+        },
+        "F": {
+          "denominator": 4,
+          "numerator": 1
+        },
+        "Omega": {
+          "denominator": 1,
+          "numerator": 1
+        },
+        "S": {
+          "denominator": 4,
+          "numerator": 1
+        },
+        "U": {
+          "denominator": 4,
+          "numerator": 1
+        },
+        "omega": {
+          "denominator": 4,
+          "numerator": 3
+        },
+        "tau": {
+          "denominator": 1,
+          "numerator": 2
+        },
+        "two_to_omega": {
+          "denominator": 4,
+          "numerator": 7
+        }
+      },
+      "prime_count": 2,
+      "squarefree_count": 3,
+      "sums": {
+        "D": -1,
+        "F": 1,
+        "Omega": 4,
+        "S": 1,
+        "U": 1,
+        "omega": 3,
+        "tau": 8,
+        "two_to_omega": 7
+      }
+    },
+    {
+      "X": 8,
+      "defect_sign_counts": {
+        "negative": 2,
+        "positive": 0,
+        "zero": 6
+      },
+      "display_only": {
+        "D_mean": -0.375,
+        "F_mean": 0.625,
+        "S_mean": 0.5,
+        "U_mean": 0.5,
+        "log_X": 2.0794415416798357,
+        "prime_density": 0.5,
+        "six_over_pi_squared": 0.6079271018540267,
+        "squarefree_density": 0.75
+      },
+      "means_exact": {
+        "D": {
+          "denominator": 8,
+          "numerator": -3
+        },
+        "F": {
+          "denominator": 8,
+          "numerator": 5
+        },
+        "Omega": {
+          "denominator": 8,
+          "numerator": 11
+        },
+        "S": {
+          "denominator": 2,
+          "numerator": 1
+        },
+        "U": {
+          "denominator": 2,
+          "numerator": 1
+        },
+        "omega": {
+          "denominator": 1,
+          "numerator": 1
+        },
+        "tau": {
+          "denominator": 2,
+          "numerator": 5
+        },
+        "two_to_omega": {
+          "denominator": 8,
+          "numerator": 17
+        }
+      },
+      "prime_count": 4,
+      "squarefree_count": 6,
+      "sums": {
+        "D": -3,
+        "F": 5,
+        "Omega": 11,
+        "S": 4,
+        "U": 4,
+        "omega": 8,
+        "tau": 20,
+        "two_to_omega": 17
+      }
+    },
+    {
+      "X": 10,
+      "defect_sign_counts": {
+        "negative": 4,
+        "positive": 0,
+        "zero": 6
+      },
+      "display_only": {
+        "D_mean": -0.6,
+        "F_mean": 0.8,
+        "S_mean": 0.7,
+        "U_mean": 0.7,
+        "log_X": 2.302585092994046,
+        "prime_density": 0.4,
+        "six_over_pi_squared": 0.6079271018540267,
+        "squarefree_density": 0.7
+      },
+      "means_exact": {
+        "D": {
+          "denominator": 5,
+          "numerator": -3
+        },
+        "F": {
+          "denominator": 5,
+          "numerator": 4
+        },
+        "Omega": {
+          "denominator": 2,
+          "numerator": 3
+        },
+        "S": {
+          "denominator": 10,
+          "numerator": 7
+        },
+        "U": {
+          "denominator": 10,
+          "numerator": 7
+        },
+        "omega": {
+          "denominator": 10,
+          "numerator": 11
+        },
+        "tau": {
+          "denominator": 10,
+          "numerator": 27
+        },
+        "two_to_omega": {
+          "denominator": 10,
+          "numerator": 23
+        }
+      },
+      "prime_count": 4,
+      "squarefree_count": 7,
+      "sums": {
+        "D": -6,
+        "F": 8,
+        "Omega": 15,
+        "S": 7,
+        "U": 7,
+        "omega": 11,
+        "tau": 27,
+        "two_to_omega": 23
+      }
+    },
+    {
+      "X": 100,
+      "defect_sign_counts": {
+        "negative": 54,
+        "positive": 15,
+        "zero": 31
+      },
+      "display_only": {
+        "D_mean": -0.62,
+        "F_mean": 2.83,
+        "S_mean": 1.99,
+        "U_mean": 1.46,
+        "log_X": 4.605170185988092,
+        "prime_density": 0.25,
+        "six_over_pi_squared": 0.6079271018540267,
+        "squarefree_density": 0.61
+      },
+      "means_exact": {
+        "D": {
+          "denominator": 50,
+          "numerator": -31
+        },
+        "F": {
+          "denominator": 100,
+          "numerator": 283
+        },
+        "Omega": {
+          "denominator": 100,
+          "numerator": 239
+        },
+        "S": {
+          "denominator": 100,
+          "numerator": 199
+        },
+        "U": {
+          "denominator": 50,
+          "numerator": 73
+        },
+        "omega": {
+          "denominator": 100,
+          "numerator": 171
+        },
+        "tau": {
+          "denominator": 50,
+          "numerator": 241
+        },
+        "two_to_omega": {
+          "denominator": 100,
+          "numerator": 359
+        }
+      },
+      "prime_count": 25,
+      "squarefree_count": 61,
+      "sums": {
+        "D": -62,
+        "F": 283,
+        "Omega": 239,
+        "S": 199,
+        "U": 146,
+        "omega": 171,
+        "tau": 482,
+        "two_to_omega": 359
+      }
+    },
+    {
+      "X": 1000,
+      "defect_sign_counts": {
+        "negative": 558,
+        "positive": 190,
+        "zero": 252
+      },
+      "display_only": {
+        "D_mean": -0.268,
+        "F_mean": 5.07,
+        "S_mean": 3.38,
+        "U_mean": 1.958,
+        "log_X": 6.907755278982137,
+        "prime_density": 0.168,
+        "six_over_pi_squared": 0.6079271018540267,
+        "squarefree_density": 0.608
+      },
+      "means_exact": {
+        "D": {
+          "denominator": 250,
+          "numerator": -67
+        },
+        "F": {
+          "denominator": 100,
+          "numerator": 507
+        },
+        "Omega": {
+          "denominator": 1000,
+          "numerator": 2877
+        },
+        "S": {
+          "denominator": 50,
+          "numerator": 169
+        },
+        "U": {
+          "denominator": 500,
+          "numerator": 979
+        },
+        "omega": {
+          "denominator": 500,
+          "numerator": 1063
+        },
+        "tau": {
+          "denominator": 1000,
+          "numerator": 7069
+        },
+        "two_to_omega": {
+          "denominator": 1000,
+          "numerator": 4987
+        }
+      },
+      "prime_count": 168,
+      "squarefree_count": 608,
+      "sums": {
+        "D": -268,
+        "F": 5070,
+        "Omega": 2877,
+        "S": 3380,
+        "U": 1958,
+        "omega": 2126,
+        "tau": 7069,
+        "two_to_omega": 4987
+      }
+    },
+    {
+      "X": 10000,
+      "defect_sign_counts": {
+        "negative": 5639,
+        "positive": 2186,
+        "zero": 2175
+      },
+      "display_only": {
+        "D_mean": 0.2811,
+        "F_mean": 7.3669,
+        "S_mean": 4.7787,
+        "U_mean": 2.3071,
+        "log_X": 9.210340371976184,
+        "prime_density": 0.1229,
+        "six_over_pi_squared": 0.6079271018540267,
+        "squarefree_density": 0.6083
+      },
+      "means_exact": {
+        "D": {
+          "denominator": 10000,
+          "numerator": 2811
+        },
+        "F": {
+          "denominator": 10000,
+          "numerator": 73669
+        },
+        "Omega": {
+          "denominator": 2000,
+          "numerator": 6397
+        },
+        "S": {
+          "denominator": 10000,
+          "numerator": 47787
+        },
+        "U": {
+          "denominator": 10000,
+          "numerator": 23071
+        },
+        "omega": {
+          "denominator": 100,
+          "numerator": 243
+        },
+        "tau": {
+          "denominator": 2500,
+          "numerator": 23417
+        },
+        "two_to_omega": {
+          "denominator": 10000,
+          "numerator": 63869
+        }
+      },
+      "prime_count": 1229,
+      "squarefree_count": 6083,
+      "sums": {
+        "D": 2811,
+        "F": 73669,
+        "Omega": 31985,
+        "S": 47787,
+        "U": 23071,
+        "omega": 24300,
+        "tau": 93668,
+        "two_to_omega": 63869
+      }
+    },
+    {
+      "X": 100000,
+      "defect_sign_counts": {
+        "negative": 56889,
+        "positive": 24158,
+        "zero": 18953
+      },
+      "display_only": {
+        "D_mean": 0.92155,
+        "F_mean": 9.66751,
+        "S_mean": 6.17788,
+        "U_mean": 2.56808,
+        "log_X": 11.512925464970229,
+        "prime_density": 0.09592,
+        "six_over_pi_squared": 0.6079271018540267,
+        "squarefree_density": 0.60794
+      },
+      "means_exact": {
+        "D": {
+          "denominator": 20000,
+          "numerator": 18431
+        },
+        "F": {
+          "denominator": 100000,
+          "numerator": 966751
+        },
+        "Omega": {
+          "denominator": 50000,
+          "numerator": 171807
+        },
+        "S": {
+          "denominator": 25000,
+          "numerator": 154447
+        },
+        "U": {
+          "denominator": 12500,
+          "numerator": 32101
+        },
+        "omega": {
+          "denominator": 125,
+          "numerator": 333
+        },
+        "tau": {
+          "denominator": 400,
+          "numerator": 4667
+        },
+        "two_to_omega": {
+          "denominator": 100000,
+          "numerator": 778581
+        }
+      },
+      "prime_count": 9592,
+      "squarefree_count": 60794,
+      "sums": {
+        "D": 92155,
+        "F": 966751,
+        "Omega": 343614,
+        "S": 617788,
+        "U": 256808,
+        "omega": 266400,
+        "tau": 1166750,
+        "two_to_omega": 778581
+      }
+    },
+    {
+      "X": 1000000,
+      "defect_sign_counts": {
+        "negative": 573459,
+        "positive": 260679,
+        "zero": 165862
+      },
+      "display_only": {
+        "D_mean": 1.617065,
+        "F_mean": 11.970035,
+        "S_mean": 7.57776,
+        "U_mean": 2.77521,
+        "log_X": 13.815510557964274,
+        "prime_density": 0.078498,
+        "six_over_pi_squared": 0.6079271018540267,
+        "squarefree_density": 0.607926
+      },
+      "means_exact": {
+        "D": {
+          "denominator": 200000,
+          "numerator": 323413
+        },
+        "F": {
+          "denominator": 200000,
+          "numerator": 2394007
+        },
+        "Omega": {
+          "denominator": 1000000,
+          "numerator": 3626619
+        },
+        "S": {
+          "denominator": 6250,
+          "numerator": 47361
+        },
+        "U": {
+          "denominator": 100000,
+          "numerator": 277521
+        },
+        "omega": {
+          "denominator": 250000,
+          "numerator": 713427
+        },
+        "tau": {
+          "denominator": 500000,
+          "numerator": 6985017
+        },
+        "two_to_omega": {
+          "denominator": 200000,
+          "numerator": 1837137
+        }
+      },
+      "prime_count": 78498,
+      "squarefree_count": 607926,
+      "sums": {
+        "D": 1617065,
+        "F": 11970035,
+        "Omega": 3626619,
+        "S": 7577760,
+        "U": 2775210,
+        "omega": 2853708,
+        "tau": 13970034,
+        "two_to_omega": 9185685
+      }
+    }
+  ],
+  "source_sha256": "82b5f040f44d126b2f7179ed7987bea76247a9e2d809a2633d5dfa2d135ac5aa",
+  "status": "FINITE-EXACT controls; asymptotic claims require the note proofs",
+  "universe": {
+    "all_integers": [
+      1,
+      1000000
+    ],
+    "cutoffs": [
+      1,
+      2,
+      3,
+      4,
+      8,
+      10,
+      100,
+      1000,
+      10000,
+      100000,
+      1000000
+    ],
+    "direct_divisor_checks": [
+      1,
+      10000
+    ],
+    "signed_extension": "Functions evaluated at |n|; zero excluded"
+  }
+}

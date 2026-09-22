@@ -1,0 +1,27 @@
+$ lean --version
+Lean (version 4.30.0, x86_64-w64-windows-gnu, commit d024af099ca4bf2c86f649261ebf59565dc8c622, Release)
+exit_code=0
+
+$ lake clean
+exit_code=0
+
+$ lake build
+✔ [2/4] Built CatalanEllipticAudit.Certificates (1.0s)
+✔ [3/4] Built CatalanEllipticAudit (793ms)
+Build completed successfully (4 jobs).
+exit_code=0
+
+$ lake env lean AxiomAudit.lean
+'CatalanEllipticAudit.pasted_not_four' does not depend on any axioms
+'CatalanEllipticAudit.pasted_denominators_positive' does not depend on any axioms
+'CatalanEllipticAudit.repair_divisions_exact' does not depend on any axioms
+'CatalanEllipticAudit.repaired_equals_four' does not depend on any axioms
+'CatalanEllipticAudit.repaired_denominators_positive' does not depend on any axioms
+'CatalanEllipticAudit.polynomial_point_ten_fortynine' does not depend on any axioms
+'CatalanEllipticAudit.collatz_gap' does not depend on any axioms
+'CatalanEllipticAudit.collatz_ordered_carry' does not depend on any axioms
+'CatalanEllipticAudit.collatz_carry_cancellation' does not depend on any axioms
+'CatalanEllipticAudit.collatz_fixed_point_equation' does not depend on any axioms
+'CatalanEllipticAudit.collatz_seven_cleared_steps' does not depend on any axioms
+'CatalanEllipticAudit.collatz_successors_odd' does not depend on any axioms
+exit_code=0

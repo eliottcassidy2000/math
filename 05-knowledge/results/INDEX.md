@@ -1,5 +1,13 @@
 # Script Results Index
 
+- [Catalan, divisor sign laws and elliptic symmetry](catalan_elliptic_20260921_synthesis.md):
+  **PROVED scoped / FINITE-EXACT / VERIFIED twelve Lean witnesses.**
+  Unit-gap limits and repetition-invariant cycle denominators; the
+  `6/pi^2` sign law for `F-S-U`; reciprocal `C2 x S3` fruit symmetry with
+  sharp `sqrt(5)` positivity boundary; repaired large integers; separation
+  of the two cubic curves. [Manifest](catalan_elliptic_20260921_manifest.json).
+  Global Collatz convergence and all signed cycle classification remain OPEN.
+
 - [Collatz mod-6 rows and the 3-adic mirror](collatz_mod6_20260917_synthesis.md):
   **PROVED scoped + FINITE-EXACT + INDEPENDENTLY AUDITED (twelve lanes).**
   Greedy 3-adic inverse map `G` with exact Markov chain, invariant measure,

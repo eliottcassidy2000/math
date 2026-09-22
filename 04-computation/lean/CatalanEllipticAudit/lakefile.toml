@@ -1,0 +1,6 @@
+name = "CatalanEllipticAudit"
+version = "0.1.0"
+defaultTargets = ["CatalanEllipticAudit"]
+
+[[lean_lib]]
+name = "CatalanEllipticAudit"

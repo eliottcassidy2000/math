@@ -151,3 +151,8 @@ scripts/*.ps1 text eol=crlf
 04-computation/experiments/arithmetic_seams_20260921_* text eol=lf
 05-knowledge/results/arithmetic_seams_20260921_* text eol=lf
 04-computation/lean/ArithmeticSeams/** text eol=lf
+
+# Catalan / elliptic audit: stable exact replay and kernel-certificate bytes.
+04-computation/experiments/catalan_elliptic_20260921_* text eol=lf
+05-knowledge/results/catalan_elliptic_20260921_* text eol=lf
+04-computation/lean/CatalanEllipticAudit/** text eol=lf
