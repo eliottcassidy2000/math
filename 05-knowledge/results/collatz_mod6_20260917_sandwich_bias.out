@@ -1,9 +1,9 @@
 
 ==============================================================================
-0. SIEVE Omega / omega / b on [1, 60000007]  (uint8, exact)
+0. SIEVE Omega / omega / b on [1, 60000301]  (uint8, exact)
 ==============================================================================
-primes <= 60000007 : 3562115   [t=8.3s]
-trial-division audit: 33000 integers agree with the sieve  [t=8.7s]
+primes <= 60000301 : 3562133   [t=9.0s maxrss=0.24GB]
+trial-division audit: 33000 integers agree with the sieve  [t=9.3s maxrss=0.25GB]
 class-parity law b(6k-1) odd, b(6k+1) even: holds for all k <= 10000000 (inherited SW4)
 
 ==============================================================================
@@ -60,12 +60,15 @@ class-parity law b(6k-1) odd, b(6k+1) even: holds for all k <= 10000000 (inherit
      N_CQ - N_QC =    -220 | pred =     142.91 | residual =    -362.91
 
  Running sign of the three signed discrepancies, K' = 1..10000000
+   definition: 'sign changes' counts transitions between + and - in the nonzero-sign
+   subsequence of the running difference (values equal to 0 are skipped).
    N_PS-N_SP: K'<=10000000 with diff>0: 7716244, =0: 14947, <0: 2268809 ; sign changes: 992 (first at K'=1453, last at K'=8714332)
-        last K' with diff<=0: 8714401 ; last K' with diff>=0: 10000000 ; min diff -436 ; max diff 650 ; final 139
+        last K' with diff<=0: 8714401 ; last K' with diff>=0: 10000000 ; running min -436 ; running max 650 ; final 139 ; first K' with diff<0: 1453
    N_PC-N_CP: K'<=10000000 with diff>0: 8049513, =0: 12330, <0: 1938157 ; sign changes: 639 (first at K'=1307, last at K'=6022060)
-        last K' with diff<=0: 6022059 ; last K' with diff>=0: 10000000 ; min diff -517 ; max diff 570 ; final 79
+        last K' with diff<=0: 6022059 ; last K' with diff>=0: 10000000 ; running min -517 ; running max 570 ; final 79 ; first K' with diff<0: 21
    N_SC-N_CS: K'<=10000000 with diff>0: 880787, =0: 4654, <0: 9114559 ; sign changes: 470 (first at K'=57, last at K'=1880886)
-        last K' with diff<=0: 10000000 ; last K' with diff>=0: 1880933 ; min diff -1323 ; max diff 319 ; final -725
+        last K' with diff<=0: 10000000 ; last K' with diff>=0: 1880933 ; running min -1323 ; running max 319 ; final -725 ; first K' with diff<0: 41
+   minimal witness re-verified by trial division: K=1453, N_PS=245, N_SP=246  [PASS]
 
    tracked values of the three differences:
             K      PS-SP      PC-CP      SC-CS
@@ -79,11 +82,13 @@ class-parity law b(6k-1) odd, b(6k+1) even: holds for all k <= 10000000 (inherit
       2000000         19         78       -209
       5000000        216        197       -737
      10000000        139         79       -725
-[t=9.4s]
+   tracked K with N_PS-N_SP < 0: [200000]
+[t=9.9s maxrss=0.66GB]
 
 ==============================================================================
 2. CLASS DECOMPOSITION: primes, semiprimes, 3-almost-primes by class mod 6
 ==============================================================================
+ identity S_1-S_5 = (O + pi'(sqrt x))/2 brute-forced at x = 1,24,25,26,35,49,100,1000,10007 (x=10007: 7)  [PASS]
 
  x = 6K+1 = 600001  (K=100000)
    Omega class :      1 (P)      2 (S)      3 (C)    >=4 (Q)
@@ -97,9 +102,11 @@ class-parity law b(6k-1) odd, b(6k+1) even: holds for all k <= 10000000 (inherit
       (1,5) mixed             42414
       p^2, p=1 mod 6             66
       p^2, p=5 mod 6             69
-      same-class (incl. squares) = 42480 = S_1 ; mixed = 42414 = S_5   [PROVED law, PASS]
+      same-class (incl. squares) = 42480 = S_1 ; mixed = 42414 = S_5   [inherited SW4 law, PASS]
    PROVED identity S_1-S_5 = (1/2)[sum_p chi(p) pi_chi(x/p) + pi'(sqrt x)]:
-      S_1-S_5 = 66 ; ordered double sum = -3 ; pi'(sqrt x) = 135 ; rhs = 66  [PASS]
+      S_1-S_5 = 66 ; ordered double sum O = -3 ; pi'(sqrt x) = 135 ; rhs = 66  [PASS]
+      split by convention: Ford-Sneed form  O/2 = -1.5  + squares pi'/2 = 67.5 ;
+                           squares-in-full  pi' = 135  + distinct pairs (O-pi')/2 = -69 (= same-class distinct - mixed = -69)  [PASS]
       partial ordered sums through p = 5,7,11,13,17,19,23,29,31,37 and p<=100, p<=1000:
          p<=5     :       31
          p<=7     :       -9
@@ -131,9 +138,11 @@ class-parity law b(6k-1) odd, b(6k+1) even: holds for all k <= 10000000 (inherit
       (1,5) mixed            400295
       p^2, p=1 mod 6            176
       p^2, p=5 mod 6            185
-      same-class (incl. squares) = 400539 = S_1 ; mixed = 400295 = S_5   [PROVED law, PASS]
+      same-class (incl. squares) = 400539 = S_1 ; mixed = 400295 = S_5   [inherited SW4 law, PASS]
    PROVED identity S_1-S_5 = (1/2)[sum_p chi(p) pi_chi(x/p) + pi'(sqrt x)]:
-      S_1-S_5 = 244 ; ordered double sum = 127 ; pi'(sqrt x) = 361 ; rhs = 244  [PASS]
+      S_1-S_5 = 244 ; ordered double sum O = 127 ; pi'(sqrt x) = 361 ; rhs = 244  [PASS]
+      split by convention: Ford-Sneed form  O/2 = 63.5  + squares pi'/2 = 180.5 ;
+                           squares-in-full  pi' = 361  + distinct pairs (O-pi')/2 = -117 (= same-class distinct - mixed = -117)  [PASS]
       partial ordered sums through p = 5,7,11,13,17,19,23,29,31,37 and p<=100, p<=1000:
          p<=5     :       44
          p<=7     :      -47
@@ -165,9 +174,11 @@ class-parity law b(6k-1) odd, b(6k+1) even: holds for all k <= 10000000 (inherit
       (1,5) mixed           3763472
       p^2, p=1 mod 6            484
       p^2, p=5 mod 6            496
-      same-class (incl. squares) = 3763996 = S_1 ; mixed = 3763472 = S_5   [PROVED law, PASS]
+      same-class (incl. squares) = 3763996 = S_1 ; mixed = 3763472 = S_5   [inherited SW4 law, PASS]
    PROVED identity S_1-S_5 = (1/2)[sum_p chi(p) pi_chi(x/p) + pi'(sqrt x)]:
-      S_1-S_5 = 524 ; ordered double sum = 68 ; pi'(sqrt x) = 980 ; rhs = 524  [PASS]
+      S_1-S_5 = 524 ; ordered double sum O = 68 ; pi'(sqrt x) = 980 ; rhs = 524  [PASS]
+      split by convention: Ford-Sneed form  O/2 = 34.0  + squares pi'/2 = 490.0 ;
+                           squares-in-full  pi' = 980  + distinct pairs (O-pi')/2 = -456 (= same-class distinct - mixed = -456)  [PASS]
       partial ordered sums through p = 5,7,11,13,17,19,23,29,31,37 and p<=100, p<=1000:
          p<=5     :      242
          p<=7     :      -17
@@ -187,6 +198,17 @@ class-parity law b(6k-1) odd, b(6k+1) even: holds for all k <= 10000000 (inherit
       pi_chi(5454545) = -97
       pi_chi(4615384) = -104
 
+ Class-labelled exponent shape vs (Omega, omega, b), all n <= 300000 coprime to 6 with Omega <= 4:
+   Omega=1: 2 keys (Omega,omega,b); keys with more than one shape: 0
+   Omega=2: 5 keys (Omega,omega,b); keys with more than one shape: 0
+   Omega=3: 10 keys (Omega,omega,b); keys with more than one shape: 0
+   Omega=4: 17 keys (Omega,omega,b); keys with more than one shape: 3
+      key (4, 2, 0) : ((1, 1), (1, 3)) (n=4459) | ((1, 2), (1, 2)) (n=8281)
+      key (4, 2, 4) : ((5, 1), (5, 3)) (n=1375) | ((5, 2), (5, 2)) (n=3025)
+      key (4, 3, 2) : ((1, 1), (1, 1), (5, 2)) (n=2275) | ((1, 2), (5, 1), (5, 1)) (n=2695)
+   (the bare class multiset is {1^(Omega-b), 5^b} for every n coprime to 6: determined by (Omega,b) alone)
+   Omega<=3: every key has exactly one shape (17 keys)  [PASS] ; Omega=4 minimal collisions: (4,3,2) 2275=5^2*7*13 vs 2695=5*7^2*11 ; (4,2,0) 4459=7^3*13 vs 8281=7^2*13^2 ; (4,2,4) 1375=5^3*11 vs 3025=5^2*11^2  [PASS]
+
  Independence (product-of-marginals) prediction for N_PS - N_SP and the two-mechanism split
    pred = (R_1 C_2 - R_2 C_1)/K = 2(pibar*dS + Sbar*dpi)/K,  pibar=(R_1+C_1)/2, dpi=(R_1-C_1)/2,
    Sbar=(R_2+C_2)/2, dS=(C_2-R_2)/2.   R = class-5 (left) counts, C = class-1 (right) counts.
@@ -194,11 +216,21 @@ class-parity law b(6k-1) odd, b(6k+1) even: holds for all k <= 10000000 (inherit
      100000    24572    24524    42414    42480         41      36.58      16.20      20.37       4.42    1.121
     1000000   206502   206345   400295   400539        412     113.23      50.37      62.87     298.77    3.639
    10000000  1781238  1780875  3763472  3763996        139     229.95      93.33     136.62     -90.95    0.604
+   three-way split of pred (exact; the semiprime part is split by Theorem 2.2 in two conventions):
+          K      prime |  FS-square   FS-cross    FS-sq % |    full-sq   distinct
+            2Sbar dpi/K | pibar pi'/2K pibar O/2K    of pred | pibar pi'/K pibar(O-pi')/2K
+     100000      20.37 |      16.57      -0.37      45.3% |      33.14     -16.94   (full-sq =  90.6% of pred, prime = 55.7%)
+    1000000      62.87 |      37.26      13.11      32.9% |      74.52     -24.15   (full-sq =  65.8% of pred, prime = 55.5%)
+   10000000     136.62 |      87.27       6.06      38.0% |     174.54     -81.22   (full-sq =  75.9% of pred, prime = 59.4%)
    ratio form: N_PS/N_SP actual vs (pi_5 S_1)/(pi_1 S_5):
       K=100000 : actual 1.004080  predicted 1.003516  (pi_5/pi_1 = 1.001957, S_1/S_5 = 1.001556)
       K=1000000 : actual 1.005263  predicted 1.001371  (pi_5/pi_1 = 1.000761, S_1/S_5 = 1.000610)
       K=10000000 : actual 1.000220  predicted 1.000343  (pi_5/pi_1 = 1.000204, S_1/S_5 = 1.000139)
-[t=10.5s]
+   heuristic size of pred against two candidate scales (x = 6K+1):
+      K=100000 : pred/(sqrt x/log x) = 0.63 ; pred/(sqrt x loglog x/log^2 x) = 3.23
+      K=1000000 : pred/(sqrt x/log x) = 0.72 ; pred/(sqrt x loglog x/log^2 x) = 4.10
+      K=10000000 : pred/(sqrt x/log x) = 0.53 ; pred/(sqrt x loglog x/log^2 x) = 3.30
+[t=11.3s maxrss=0.71GB]
 
 ==============================================================================
 3. 3-ALMOST-PRIME CLASS PATTERNS (omega, b) AND THE (P,C)/(C,P), (S,C)/(C,S) DISCREPANCIES
@@ -264,71 +296,154 @@ class-parity law b(6k-1) odd, b(6k+1) even: holds for all k <= 10000000 (inherit
    K=1000000  PP=37915 PS=78689 SP=78277 SS=157420 | PS-SP: act    412 pred    113.23 res    298.77 ; PC-CP: act   -286 pred      2.86 res   -288.86 ; SC-CS: act    111 pred   -144.37 res    255.37
    K=10000000  PP=280557 PS=632905 SP=632766 SS=1380659 | PS-SP: act    139 pred    229.95 res    -90.95 ; PC-CP: act     79 pred     29.84 res     49.16 ; SC-CS: act   -725 pred   -312.93 res   -412.07
       running N_PS-N_SP: K'<=10000000 with diff>0: 7716244, =0: 14947, <0: 2268809 ; sign changes: 992 (first at K'=1453, last at K'=8714332)
-        last K' with diff<=0: 8714401 ; last K' with diff>=0: 10000000 ; min diff -436 ; max diff 650 ; final 139
+        last K' with diff<=0: 8714401 ; last K' with diff>=0: 10000000 ; running min -436 ; running max 650 ; final 139 ; first K' with diff<0: 1453
 
  pair (6k+1,6k+5) [1|5]
    K=100000  PP=5333 PS=10089 SP=10094 SS=17714 | PS-SP: act     -5 pred    -36.15 res     31.15 ; PC-CP: act      6 pred      1.72 res      4.28 ; SC-CS: act     68 pred     39.12 res     28.88
    K=1000000  PP=37786 PS=78568 SP=78611 SS=157461 | PS-SP: act    -43 pred   -112.83 res     69.83 ; PC-CP: act   -117 pred     -2.59 res   -114.41 ; SC-CS: act    236 pred    144.37 res     91.63
    K=10000000  PP=280205 PS=633474 SP=633013 SS=1379611 | PS-SP: act    461 pred   -229.57 res    690.57 ; PC-CP: act   -651 pred    -29.55 res   -621.45 ; SC-CS: act   1025 pred    312.93 res    712.07
       running N_PS-N_SP: K'<=10000000 with diff>0: 7549297, =0: 11139, <0: 2439564 ; sign changes: 839 (first at K'=35, last at K'=5444663)
-        last K' with diff<=0: 5444805 ; last K' with diff>=0: 10000000 ; min diff -441 ; max diff 679 ; final 461
+        last K' with diff<=0: 5444805 ; last K' with diff>=0: 10000000 ; running min -441 ; running max 679 ; final 461 ; first K' with diff<0: 4
 
  pair (6k-1,6k+5) [5|5]
    K=100000  PP=5345 PS=10067 SP=10028 SS=17818 | PS-SP: act     39 pred      0.42 res     38.58 ; PC-CP: act    -26 pred      0.25 res    -26.25 ; SC-CS: act     14 pred      0.00 res     14.00
    K=1000000  PP=37788 PS=78629 SP=78799 SS=157384 | PS-SP: act   -170 pred      0.40 res   -170.40 ; PC-CP: act    232 pred      0.27 res    231.73 ; SC-CS: act   -269 pred      0.00 res   -269.00
    K=10000000  PP=280140 PS=633720 SP=633591 SS=1378937 | PS-SP: act    129 pred      0.38 res    128.62 ; PC-CP: act    547 pred      0.29 res    546.71 ; SC-CS: act   -234 pred      0.00 res   -234.00
       running N_PS-N_SP: K'<=10000000 with diff>0: 3463367, =0: 9096, <0: 6527537 ; sign changes: 430 (first at K'=102, last at K'=9872189)
-        last K' with diff<=0: 9876827 ; last K' with diff>=0: 10000000 ; min diff -708 ; max diff 336 ; final 129
+        last K' with diff<=0: 9876827 ; last K' with diff>=0: 10000000 ; running min -708 ; running max 336 ; final 129 ; first K' with diff<0: 102
 
  pair (6k+1,6k+7) [1|1]
    K=100000  PP=5343 PS=10070 SP=9961 SS=17890 | PS-SP: act    109 pred      0.67 res    108.33 ; PC-CP: act   -130 pred      0.25 res   -130.25 ; SC-CS: act     81 pred     -0.25 res     81.25
    K=1000000  PP=37629 PS=78682 SP=78869 SS=157013 | PS-SP: act   -187 pred      0.40 res   -187.40 ; PC-CP: act    213 pred      0.27 res    212.73 ; SC-CS: act   -108 pred      0.00 res   -108.00
    K=10000000  PP=280030 PS=633437 SP=633329 SS=1380345 | PS-SP: act    108 pred      0.38 res    107.62 ; PC-CP: act   -594 pred      0.47 res   -594.47 ; SC-CS: act   -388 pred      0.38 res   -388.38
       running N_PS-N_SP: K'<=10000000 with diff>0: 3801137, =0: 13848, <0: 6185015 ; sign changes: 668 (first at K'=286, last at K'=9162842)
-        last K' with diff<=0: 9162841 ; last K' with diff>=0: 10000000 ; min diff -436 ; max diff 389 ; final 108
+        last K' with diff<=0: 9162841 ; last K' with diff>=0: 10000000 ; running min -436 ; running max 389 ; final 108 ; first K' with diff<0: 286
 
- (ii) local mod-35 strata of the original pair (6k-1,6k+1).
-     stratum = (h5-,h5+,h7-,h7+) divisibility pattern of (6k-1,6k+1) by 5 and 7.
-     Symmetric strata: 'none' (no 5,7 divisor either side) and 'cross' (one each side).
-     A local-sieve explanation would make the sign vanish in symmetric strata; H1 predicts it persists
-     with the same independence-predicted magnitude computed from the stratum's own marginals.
+ (ii) the nine mod-35 strata of the original pair (6k-1,6k+1).
+     stratum = (5-state, 7-state) with each state in {none, left, right}: which endpoint (if any)
+     is divisible by 5, resp. by 7 (never both endpoints, since gcd(6k-1,6k+1)=1).
+     Symmetric strata: 'none' and the two 'cross' strata (one prime each side).
+     H1 predicts the sign persists in symmetric strata with the independence magnitude computed
+     from the stratum's own marginals; a purely local-sieve explanation would make it vanish there.
+   partition check: the nine strata cover every center exactly once; on one block of 35 centers the
+   sizes are none=15, cross=1+1, one-sided 5,5,3,3, 35|left=1, 35|right=1 (sum 35)  [PASS]
 
    K = 100000
-     none  (h-=h+=0)                n=   42858  PP=  5329 PS=  7334 SP=  7313 SS=  9690  PS-SP act     21 pred     5.60 res    15.40
-     cross (5|left,7|right)         n=    2858  PP=     1 PS=     0 SP=     0 SS=   327  PS-SP act      0 pred     0.03 res    -0.03
-     cross (7|left,5|right)         n=    2857  PP=     0 PS=     0 SP=     0 SS=   336  PS-SP act      0 pred     0.00 res     0.00
-     left-only (5|left, 7 none)     n=   14285  PP=     0 PS=     0 SP=  1656 SS=  2208  PS-SP act  -1656 pred -1684.48 res    28.48
-     right-only (5|right, 7 none)   n=   14286  PP=     0 PS=  1657 SP=     0 SS=  2251  PS-SP act   1657 pred  1696.16 res   -39.16
-     left-only (7|left, 5 none)     n=    8571  PP=     0 PS=     0 SP=  1080 SS=  1524  PS-SP act  -1080 pred -1113.73 res    33.73
-     right-only (7|right, 5 none)   n=    8571  PP=     0 PS=  1100 SP=     0 SS=  1458  PS-SP act   1100 pred  1123.00 res   -23.00
-     symmetric strata combined: act 21  pred 5.63  res 15.37
+     none  (no 5, no 7)           n=   42858  PP=  5329 PS=  7334 SP=  7313 SS=  9690  PS-SP act     21 pred     5.60 res    15.40
+     cross (5|left,7|right)       n=    2858  PP=     1 PS=     0 SP=     0 SS=   327  PS-SP act      0 pred     0.03 res    -0.03
+     cross (7|left,5|right)       n=    2857  PP=     0 PS=     0 SP=     0 SS=   336  PS-SP act      0 pred     0.00 res     0.00
+     left-only (5|left, no 7)     n=   14285  PP=     0 PS=     0 SP=  1656 SS=  2208  PS-SP act  -1656 pred -1684.48 res    28.48
+     right-only (5|right, no 7)   n=   14286  PP=     0 PS=  1657 SP=     0 SS=  2251  PS-SP act   1657 pred  1696.16 res   -39.16
+     left-only (7|left, no 5)     n=    8571  PP=     0 PS=     0 SP=  1080 SS=  1524  PS-SP act  -1080 pred -1113.73 res    33.73
+     right-only (7|right, no 5)   n=    8571  PP=     0 PS=  1100 SP=     0 SS=  1458  PS-SP act   1100 pred  1123.00 res   -23.00
+     35|left  (5,7|left)          n=    2857  PP=     0 PS=     0 SP=     1 SS=     0  PS-SP act     -1 pred    -0.36 res    -0.64
+     35|right (5,7|right)         n=    2857  PP=     0 PS=     0 SP=     0 SS=     0  PS-SP act      0 pred     0.00 res     0.00
+     nine strata sum: PS-SP = 41 = total  [PASS] ; the seven strata without 35|left/35|right sum to 42 (the missing -1 is the SP pair (35,37) at k=6)
+     symmetric strata (none + cross) combined: act 21  pred 5.63  res 15.37
+     left-endpoint primes in the 'none' stratum: 15336 of 24572 (62.4%); PP pairs there: 5329 of 5330 (all but (5,7))
 
    K = 1000000
-     none  (h-=h+=0)                n=  428571  PP= 37914 PS= 59819 SP= 59637 SS= 93147  PS-SP act    182 pred   139.37 res    42.63
-     cross (5|left,7|right)         n=   28572  PP=     1 PS=     0 SP=     0 SS=  2264  PS-SP act      0 pred     0.03 res    -0.03
-     cross (7|left,5|right)         n=   28571  PP=     0 PS=     0 SP=     0 SS=  2245  PS-SP act      0 pred     0.00 res     0.00
-     left-only (5|left, 7 none)     n=  142856  PP=     0 PS=     0 SP= 11205 SS= 18045  PS-SP act -11205 pred -11657.91 res   452.91
-     right-only (5|right, 7 none)   n=  142858  PP=     0 PS= 11422 SP=     0 SS= 17934  PS-SP act  11422 pred 11683.72 res  -261.72
-     left-only (7|left, 5 none)     n=   85714  PP=     0 PS=     0 SP=  7434 SS= 11955  PS-SP act  -7434 pred -7685.91 res   251.91
-     right-only (7|right, 5 none)   n=   85715  PP=     0 PS=  7448 SP=     0 SS= 11830  PS-SP act   7448 pred  7680.06 res  -232.06
-     symmetric strata combined: act 182  pred 139.40  res 42.60
+     none  (no 5, no 7)           n=  428571  PP= 37914 PS= 59819 SP= 59637 SS= 93147  PS-SP act    182 pred   139.37 res    42.63
+     cross (5|left,7|right)       n=   28572  PP=     1 PS=     0 SP=     0 SS=  2264  PS-SP act      0 pred     0.03 res    -0.03
+     cross (7|left,5|right)       n=   28571  PP=     0 PS=     0 SP=     0 SS=  2245  PS-SP act      0 pred     0.00 res     0.00
+     left-only (5|left, no 7)     n=  142856  PP=     0 PS=     0 SP= 11205 SS= 18045  PS-SP act -11205 pred -11657.91 res   452.91
+     right-only (5|right, no 7)   n=  142858  PP=     0 PS= 11422 SP=     0 SS= 17934  PS-SP act  11422 pred 11683.72 res  -261.72
+     left-only (7|left, no 5)     n=   85714  PP=     0 PS=     0 SP=  7434 SS= 11955  PS-SP act  -7434 pred -7685.91 res   251.91
+     right-only (7|right, no 5)   n=   85715  PP=     0 PS=  7448 SP=     0 SS= 11830  PS-SP act   7448 pred  7680.06 res  -232.06
+     35|left  (5,7|left)          n=   28572  PP=     0 PS=     0 SP=     1 SS=     0  PS-SP act     -1 pred    -0.30 res    -0.70
+     35|right (5,7|right)         n=   28571  PP=     0 PS=     0 SP=     0 SS=     0  PS-SP act      0 pred     0.00 res     0.00
+     nine strata sum: PS-SP = 412 = total  [PASS] ; the seven strata without 35|left/35|right sum to 413 (the missing -1 is the SP pair (35,37) at k=6)
+     symmetric strata (none + cross) combined: act 182  pred 139.40  res 42.60
+     left-endpoint primes in the 'none' stratum: 129096 of 206502 (62.5%); PP pairs there: 37914 of 37915 (all but (5,7))
 
    K = 10000000
-     none  (h-=h+=0)                n= 4285715  PP=280556 PS=495509 SP=495843 SS=863179  PS-SP act   -334 pred   255.22 res  -589.22
-     cross (5|left,7|right)         n=  285715  PP=     1 PS=     0 SP=     0 SS= 16079  PS-SP act      0 pred     0.02 res    -0.02
-     cross (7|left,5|right)         n=  285714  PP=     0 PS=     0 SP=     0 SS= 16157  PS-SP act      0 pred     0.00 res     0.00
-     left-only (5|left, 7 none)     n= 1428570  PP=     0 PS=     0 SP= 82573 SS=146409  PS-SP act -82573 pred -85296.36 res  2723.36
-     right-only (5|right, 7 none)   n= 1428572  PP=     0 PS= 83023 SP=     0 SS=146252  PS-SP act  83023 pred 85340.87 res -2317.87
-     left-only (7|left, 5 none)     n=  857142  PP=     0 PS=     0 SP= 54349 SS= 96386  PS-SP act -54349 pred -56070.81 res  1721.81
-     right-only (7|right, 5 none)   n=  857143  PP=     0 PS= 54373 SP=     0 SS= 96197  PS-SP act  54373 pred 56033.04 res -1660.04
-     symmetric strata combined: act -334  pred 255.24  res -589.24
-   CRT check: on one block of 35 centers the strata have sizes none=15, cross=1+1, left/right-only=5,5,3,3  [PASS]
+     none  (no 5, no 7)           n= 4285715  PP=280556 PS=495509 SP=495843 SS=863179  PS-SP act   -334 pred   255.22 res  -589.22
+     cross (5|left,7|right)       n=  285715  PP=     1 PS=     0 SP=     0 SS= 16079  PS-SP act      0 pred     0.02 res    -0.02
+     cross (7|left,5|right)       n=  285714  PP=     0 PS=     0 SP=     0 SS= 16157  PS-SP act      0 pred     0.00 res     0.00
+     left-only (5|left, no 7)     n= 1428570  PP=     0 PS=     0 SP= 82573 SS=146409  PS-SP act -82573 pred -85296.36 res  2723.36
+     right-only (5|right, no 7)   n= 1428572  PP=     0 PS= 83023 SP=     0 SS=146252  PS-SP act  83023 pred 85340.87 res -2317.87
+     left-only (7|left, no 5)     n=  857142  PP=     0 PS=     0 SP= 54349 SS= 96386  PS-SP act -54349 pred -56070.81 res  1721.81
+     right-only (7|right, no 5)   n=  857143  PP=     0 PS= 54373 SP=     0 SS= 96197  PS-SP act  54373 pred 56033.04 res -1660.04
+     35|left  (5,7|left)          n=  285715  PP=     0 PS=     0 SP=     1 SS=     0  PS-SP act     -1 pred    -0.26 res    -0.74
+     35|right (5,7|right)         n=  285714  PP=     0 PS=     0 SP=     0 SS=     0  PS-SP act      0 pred     0.00 res     0.00
+     nine strata sum: PS-SP = 139 = total  [PASS] ; the seven strata without 35|left/35|right sum to 140 (the missing -1 is the SP pair (35,37) at k=6)
+     symmetric strata (none + cross) combined: act -334  pred 255.24  res -589.24
+     left-endpoint primes in the 'none' stratum: 1113235 of 1781238 (62.5%); PP pairs there: 280556 of 280557 (all but (5,7))
 
  (iii) prime-only Chebyshev census pi(x;6,5)-pi(x;6,1) and the running sign of the class-1 vs class-5
-      prime race up to 6*10^7+1, to place the sandwich sign next to the classical bias.
-      primes >= 5 up to 60000007: 3562113 ; pi_chi at end = -363 ; #prefixes with pi_chi<0: 3562104, =0: 9, >0: 0
+      prime race up to 60000301, to place the sandwich sign next to the classical bias.
+      primes >= 5 up to 60000301: 3562131 ; pi_chi at end = -363 ; #prefixes with pi_chi<0: 3562122, =0: 9, >0: 0
+      primes at which pi_chi = 0: [7, 13, 19, 37, 43, 79, 163, 223, 229]
       largest prime at which pi_chi > 0 (class 1 ahead): never
-[t=12.7s]
+      pi_chi(6*10^7+1) = -363
+[t=12.7s maxrss=0.81GB]
+
+ (iv) pooled-gap control.  For each orientation [class n | class n+g] the 50 gaps g in 2..300 with both
+      endpoints coprime to 6: [5|1] n=6k-1, g=2 mod 6 ; [1|5] n=6k+1, g=4 mod 6 ; [5|5] n=6k-1, g=0 mod 6 ;
+      [1|1] n=6k+1, g=0 mod 6.  D_g = N_ij - N_ji over k<=K ; pred_g = (R_i C_j - R_j C_i)/K from the pair's
+      own marginals.  Block analysis: K split into 100 blocks (size K/100); p_(g,b) = block product of
+      marginals, D_(g,b) = block discrepancy, r_(g,b) = D_(g,b) - p_(g,b).  Reported per orientation:
+      pooled mean/sd(ddof=1)/#D_g>0 of D_g, mean pred_g ; corr and slope of block means m_b=mean_g D_(g,b)
+      against p_b=mean_g p_(g,b) ; mean off-diagonal inter-gap correlation of D_(g,b) and of r_(g,b) over
+      blocks ; residual test: RES = sum_b mean_g r_(g,b), SE = sd_b(mean_g r_(g,b))*sqrt(#blocks), z=RES/SE ;
+      per-gap residual sd = sd_g(D_g - sum_b p_(g,b)).  The K=10^6 blocks are the first 100 blocks of
+      10^4 centers; the K=10^7 blocks are 100 blocks of 10^5 centers (merged from 1000 blocks of 10^4).
+      consistency: the block counts at the four control gaps reproduce the section 4(i) matrices  [PASS]
+
+   K = 1000000  (100 blocks of 10000 centers)
+    PS-SP:
+      orient  mean D_g       sd    #>0 mean pred |   corr  slope |   cor D   cor r |      RES      SE      z | gap-res sd
+      [5|1]      100.7    197.4  32/50     117.5 |   1.00   1.00 |    0.50   -0.01 |    -26.1    21.1  -1.24 |     197.0
+      [1|5]     -113.0    168.1  14/50    -109.1 |   1.00   0.99 |    0.48   -0.01 |      4.2    22.9   0.18 |     168.5
+      [5|5]        9.7    215.1  25/50       4.1 |   0.48   0.94 |   -0.01   -0.01 |      4.8    22.5   0.21 |     214.2
+      [1|1]       12.5    174.1  23/50       4.4 |   0.61   1.14 |   -0.01   -0.01 |      7.5    20.3   0.37 |     174.0
+    PC-CP:
+      orient  mean D_g       sd    #>0 mean pred |   corr  slope |   cor D   cor r |      RES      SE      z | gap-res sd
+      [5|1]       27.1    212.5  30/50       7.2 |   0.94   0.98 |    0.07   -0.01 |     26.6    25.4   1.05 |     212.9
+      [1|5]      -15.1    218.7  23/50       0.9 |   0.94   1.05 |    0.09   -0.01 |    -22.6    29.5  -0.76 |     218.4
+      [5|5]       -0.6    259.6  26/50       3.7 |   0.23   0.93 |   -0.00   -0.01 |     -4.2    29.7  -0.14 |     259.9
+      [1|1]       19.2    228.3  29/50       4.5 |   0.26   0.84 |   -0.01   -0.01 |     14.8    26.7   0.55 |     228.6
+    SC-CS:
+      orient  mean D_g       sd    #>0 mean pred |   corr  slope |   cor D   cor r |      RES      SE      z | gap-res sd
+      [5|1]     -168.7    241.6   9/50    -141.6 |   1.00   1.00 |    0.63   -0.01 |    -29.2    29.8  -0.98 |     241.2
+      [1|5]      171.5    246.7  38/50     146.2 |   0.99   0.99 |    0.62   -0.00 |     26.5    33.8   0.78 |     246.8
+      [5|5]       19.1    252.0  23/50       1.8 |   0.35   0.88 |    0.00   -0.00 |     17.0    35.1   0.48 |     251.8
+      [1|1]      -39.1    260.9  25/50       2.9 |   0.45   1.01 |   -0.00   -0.01 |    -42.5    31.4  -1.35 |     260.5
+    sandwich gap g=2 within [5|1] PS-SP: D_2 = 412 ; global pred 113.23 ; sum of block preds 122.02 ; residual vs block preds 290.0 (1.47 per-gap residual sd) ; 4 of the other 49 gaps have larger D_g
+    falsifier check PS-SP: |same-class means| = 9.7, 12.5 vs |opposite-class means| = 100.7, 113.0 -> does not fire
+    PS-SP [5|1]: pooled mean / mean pred = 0.86 (14% off)
+    PS-SP [1|5]: pooled mean / mean pred = 1.04 (4% off)
+    SC-CS [5|1]: pooled mean / mean pred = 1.19 (19% off)
+    SC-CS [1|5]: pooled mean / mean pred = 1.17 (17% off)
+    cells with |z| >= 2 in the residual test: none
+
+   K = 10000000  (100 blocks of 100000 centers)
+    PS-SP:
+      orient  mean D_g       sd    #>0 mean pred |   corr  slope |   cor D   cor r |      RES      SE      z | gap-res sd
+      [5|1]      195.1    541.2  30/50     234.2 |   0.99   1.03 |    0.39   -0.01 |    -59.2    64.9  -0.91 |     541.5
+      [1|5]      -66.4    493.3  25/50    -225.6 |   0.99   0.99 |    0.37   -0.01 |    177.8    60.9   2.92 |     493.3
+      [5|5]       96.7    585.9  28/50       4.3 |   0.17   1.21 |   -0.01   -0.01 |     91.6    85.1   1.08 |     585.8
+      [1|1]      -32.7    500.6  24/50       4.4 |   0.14   0.81 |   -0.01   -0.01 |    -37.7    79.3  -0.48 |     500.4
+    PC-CP:
+      orient  mean D_g       sd    #>0 mean pred |   corr  slope |   cor D   cor r |      RES      SE      z | gap-res sd
+      [5|1]       74.8    663.8  26/50      34.2 |   0.93   0.98 |    0.07   -0.01 |     56.1    86.1   0.65 |     663.8
+      [1|5]     -250.1    569.2  15/50     -25.0 |   0.94   0.99 |    0.07   -0.01 |   -240.5    76.0  -3.16 |     569.4
+      [5|5]      -75.7    666.4  23/50       4.9 |  -0.00  -0.01 |   -0.00   -0.00 |    -80.5    98.0  -0.82 |     666.8
+      [1|1]       -1.8    636.9  26/50       4.6 |   0.14   1.36 |   -0.00   -0.00 |     -6.3    96.6  -0.06 |     637.1
+    SC-CS:
+      orient  mean D_g       sd    #>0 mean pred |   corr  slope |   cor D   cor r |      RES      SE      z | gap-res sd
+      [5|1]     -369.0    734.7  16/50    -310.6 |   0.99   0.98 |    0.57   -0.01 |    -57.7    98.7  -0.59 |     734.5
+      [1|5]      498.2    700.7  38/50     316.2 |   1.00   1.00 |    0.59   -0.01 |    180.6    90.5   2.00 |     700.7
+      [5|5]      116.8    768.7  27/50       3.2 |   0.25   1.96 |   -0.00   -0.00 |    113.1   109.9   1.03 |     768.5
+      [1|1]      -66.4    687.2  21/50       2.5 |   0.13   0.99 |   -0.00   -0.00 |    -69.3   109.7  -0.63 |     686.9
+    sandwich gap g=2 within [5|1] PS-SP: D_2 = 139 ; global pred 229.95 ; sum of block preds 249.36 ; residual vs block preds -110.4 (-0.20 per-gap residual sd) ; 25 of the other 49 gaps have larger D_g
+    falsifier check PS-SP: |same-class means| = 96.7, 32.7 vs |opposite-class means| = 195.1, 66.4 -> FIRES (a same-class |mean| exceeds an opposite-class |mean|)
+    PS-SP [5|1]: pooled mean / mean pred = 0.83 (17% off)
+    PS-SP [1|5]: pooled mean / mean pred = 0.29 (71% off)
+    SC-CS [5|1]: pooled mean / mean pred = 1.19 (19% off)
+    SC-CS [1|5]: pooled mean / mean pred = 1.58 (58% off)
+    cells with |z| >= 2 in the residual test: PS-SP [1|5] z=2.92, PC-CP [1|5] z=-3.16
+[t=29.5s maxrss=0.87GB]
 
 ==============================================================================
 5. VERDICTS (finite-exact facts; the labels are for the note)
@@ -336,9 +451,11 @@ class-parity law b(6k-1) odd, b(6k+1) even: holds for all k <= 10000000 (inherit
  K=100000: N_PS-N_SP = 41 ; independence pred 36.58 (semiprime-class part 16.20, prime-class part 20.37) ; residual 4.42
  K=1000000: N_PS-N_SP = 412 ; independence pred 113.23 (semiprime-class part 50.37, prime-class part 62.87) ; residual 298.77
  K=10000000: N_PS-N_SP = 139 ; independence pred 229.95 (semiprime-class part 93.33, prime-class part 136.62) ; residual -90.95
- running sign K'<=10000000: N_PS>N_SP for 7716244 values, = for 14947, < for 2268809; last K' with N_PS<=N_SP: 8714401
+ running sign K'<=10000000: N_PS>N_SP for 7716244 values, = for 14947, < for 2268809; last K' with N_PS<=N_SP: 8714401 ; minimal witness K=1453
  class-reversed pair (6k+1,6k+5): final N_PS-N_SP = 461 ; K'<=10000000 with diff<0: 2439564, >0: 7549297
- same-class pair (6k-1,6k+5) [5|5]: final N_PS-N_SP = 129 ; K'<=10000000 with diff>0: 3463367, =0: 9096, <0: 6527537 ; min -446 max 129
- same-class pair (6k+1,6k+7) [1|1]: final N_PS-N_SP = 108 ; K'<=10000000 with diff>0: 3801137, =0: 13848, <0: 6185015 ; min -267 max 161
- total time [t=12.7s]
+ same-class pair (6k-1,6k+5) [5|5]: final N_PS-N_SP = 129 ; K'<=10000000 with diff>0: 3463367, =0: 9096, <0: 6527537 ; running min -708, running max 336 ; extremes over the ten tracked K only: min -446, max 129
+ same-class pair (6k+1,6k+7) [1|1]: final N_PS-N_SP = 108 ; K'<=10000000 with diff>0: 3801137, =0: 13848, <0: 6185015 ; running min -436, running max 389 ; extremes over the ten tracked K only: min -267, max 161
+ pooled PS-SP at K=1000000: [5|1] +100.7 (pred +117.5) ; [1|5] -113.0 (pred -109.1) ; [5|5] +9.7 (pred +4.1) ; [1|1] +12.5 (pred +4.4)
+ pooled PS-SP at K=10000000: [5|1] +195.1 (pred +234.2) ; [1|5] -66.4 (pred -225.6) ; [5|5] +96.7 (pred +4.3) ; [1|1] -32.7 (pred +4.4)
+ total time [t=29.5s maxrss=0.87GB]
 ALL CHECKS PASSED

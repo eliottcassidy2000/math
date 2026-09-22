@@ -1,0 +1,139 @@
+
+==============================================================================
+0. Definitions and direct audit of the profile formulas (FINITE-EXACT)
+==============================================================================
+profile formulas F, S=S_2, U, S_1..S_6 agree with direct divisor enumeration for all 2<=N<=200000
+  [time 13.2s]
+
+==============================================================================
+1. Density by shape: primes, prime cubes, p^2qr up to 10^7 (FINITE-EXACT)
+==============================================================================
+pi(10000000) = 664579
+omega/Omega sieve complete [time 14.3s]
+sieve omega/Omega agree with trial factorization for 2<=N<=200000
+F=S+U <=> shape in {p, p^3, p^2qr} verified directly for 2<=N<=200000
+prime zeta P(2) partial sum over p<=10^7 = 0.4522474142 (tail < 1.0e-07); literature value 0.4522474200...
+
+x         | #primes  | #p^3 | #p^2qr   | formula  | p2qr/primes | P(2) x loglog x/log x | asym/exact
+----------+----------+------+----------+----------+-------------+-----------------------+-----------
+100000    |     9592 |   14 |     9346 |     9346 |      0.9744 |                  9598 | 1.0270
+1000000   |    78498 |   25 |    87338 |    87338 |      1.1126 |                 85955 | 0.9842
+10000000  |   664579 |   47 |   804249 |   804249 |      1.2102 |                780006 | 0.9699
+
+CROSSOVER (FINITE-EXACT): first n with #{p^2qr<=n} > #{primes<=n} is n = 145119 = {3: 1, 13: 1, 61: 2}
+  counts there: primes=13432, p^2qr=13433
+  the PREDICATE '#p^2qr > #primes' flips 13 times on [1,10^7], at [145119, 145121, 145132, 145133, 145138, 145139, 145148, 147709, 147725, 147727, 147908, 147919, 147925]
+    (kinds QPQPQPQPQPQPQ: every second flip is a prime dropping the lead to a TIE, not a sign change)
+  TRUE sign changes of the difference #p^2qr - #primes on [1,10^7]: 3 at [145119, 147739, 147908], directions [(-1, 1), (1, -1), (-1, 1)]
+  primes strictly ahead after 145119: exactly the 155 integers of [147739,147893], minimum difference -5
+  ties after 145119: 73, the last at 147924; last n <= 10^7 with #primes >= #p^2qr: 147924
+  p^2qr leads strictly on [147925,10^7]; at 10^7 the lead is p^2qr - primes = 139670
+  HEURISTIC naive scale from P(2) loglog x = 1: x = 9196; actual crossover / naive = 15.78
+  [time 15.2s]
+
+==============================================================================
+2. Linear cells F = alpha*S + beta*U on exponent profiles
+==============================================================================
+window search: 646645 profiles with support<=10, exponents<=12
+window search agrees with the proved classification in all 16 cells
+direct integer control passed for all cells on 2<=N<=200000
+
+cell (a,b) | finite? | r-bound | #profiles | nonsquarefree profiles (exponents) | squarefree composites | #N<=2e5
+-----------+---------+---------+-----------+------------------------------------+-----------------------+--------
+(0,0)      | yes     | 0       | 1         | -                                  | none                  | 17984
+(0,1)      | yes     | 1       | 3         | p^2                                | squarefree with r=2   | 63214
+(0,2)      | yes     | 2       | 4         | p^3 p^2q                           | squarefree with r=3   | 68867
+(0,3)      | yes     | 2       | 3         | p^4 p^3q                           | none                  | 22140
+(1,0)      | NO      | 1       | inf       | p^2                                | ALL squarefree composites (every r>=2) | 121666
+(1,1)      | yes     | 3       | 3         | p^3 p^2qr                          | none                  | 36372
+(1,2)      | yes     | 4       | 3         | p^4 p^2q^2                         | none                  | 18122
+(1,3)      | yes     | 5       | 4         | p^5 p^2q^2r p^2qrst                | none                  | 21629
+(2,0)      | NO      | inf     | inf       | p^3 p^3q p^3qr p^3qrs p^3qrst p^3qrstu p^3qrstuv p^3qrstuvw p^3qrstuvwx p^3qrstuvwxy | none                  | 32827
+(2,1)      | yes     | 7       | 4         | p^4 p^4q p^2q^2rs                  | none                  | 21840
+(2,2)      | yes     | 7       | 5         | p^5 p^3q^2 p^5q p^4qrs             | none                  | 20334
+(2,3)      | yes     | 7       | 3         | p^6 p^6q                           | none                  | 18493
+(3,0)      | yes     | 7       | 2         | p^4                                | none                  | 17992
+(3,1)      | yes     | 7       | 2         | p^5                                | none                  | 17989
+(3,2)      | yes     | 7       | 3         | p^6 p^4q^2                         | none                  | 18042
+(3,3)      | yes     | 7       | 4         | p^7 p^3q^3r p^7qr                  | none                  | 18565
+
+Omega-injectivity (distinct Omega values across all solution profiles; infinite cells listed on the window r<=10):
+  (0, 0): INJECTIVE (finite  ) Omega values [1]
+  (0, 1): collides  (finite  ) Omega values [1, 2, 2]
+  (0, 2): collides  (finite  ) Omega values [1, 3, 3, 3]
+  (0, 3): collides  (finite  ) Omega values [1, 4, 4]
+  (1, 0): collides  (INFINITE) Omega values [1, 2, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+  (1, 1): INJECTIVE (finite  ) Omega values [1, 3, 4]
+  (1, 2): collides  (finite  ) Omega values [1, 4, 4]
+  (1, 3): collides  (finite  ) Omega values [1, 5, 5, 6]
+  (2, 0): INJECTIVE (INFINITE) Omega values [1, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]
+  (2, 1): INJECTIVE (finite  ) Omega values [1, 4, 5, 6]
+  (2, 2): collides  (finite  ) Omega values [1, 5, 5, 6, 7]
+  (2, 3): INJECTIVE (finite  ) Omega values [1, 6, 7]
+  (3, 0): INJECTIVE (finite  ) Omega values [1, 4]
+  (3, 1): INJECTIVE (finite  ) Omega values [1, 5]
+  (3, 2): collides  (finite  ) Omega values [1, 6, 6]
+  (3, 3): collides  (finite  ) Omega values [1, 7, 7, 9]
+  cells with Omega-injective finite solution sets: [(0, 0), (1, 1), (2, 1), (2, 3), (3, 0), (3, 1)]
+  all Omega-injective cells (the infinite cell (2,0) included; (2,0) has Omega = r+2, injective for every r): [(0, 0), (1, 1), (2, 0), (2, 1), (2, 3), (3, 0), (3, 1)]
+  among the prime-cube cells (alpha+beta=2): (0,2) collides [1,3,3,3]; (1,1) and (2,0) are injective; (1,1) is the unique FINITE injective one
+  Omega-injective finite cells with exactly three profiles: [(1, 1), (2, 3)]
+prime-power law: every cell with alpha+beta>=1 contains exactly the prime power p^(alpha+beta+1) (checked)
+(2,0): F = 2S has, for every support r<=10, exactly the profile (3,1^(r-1)) beyond the prime (PROVED for all r in note)
+alpha in {2,3}: no nonsquarefree solutions at supports 8..12 (consistent with the proved bound r<=7)
+hand-check values: T(2,1;r) r=1..7 = [5, 10, 19, 36, 69, 134, 263]; T(3,3;r) r=1..7 = [8, 17, 32, 59, 110, 209, 404]; T(1,3;5) = 48 = 3*2^4
+  T/2^r over alpha in {2,3}, (alpha,beta) != (2,0): true maximum 4.25 at (3,3), r=2; the note's bound alpha + 3r/2^r <= 4.5 holds
+  [time 31.7s]
+
+==============================================================================
+3. Box = cube + directions + apex; k-free refinement F = S_k + U
+==============================================================================
+profile (3,): |box|=4 = |cube|=2 + directions r=1 + apex 1;  non-squarefree divisors |Q|=2
+profile (2, 1, 1): |box|=12 = |cube|=8 + directions r=3 + apex 1;  non-squarefree divisors |Q|=4
+N=60=2^2*3*5: non-squarefree divisors Q=[4, 12, 20, 60]; Q minus N = image of the atoms under l -> p*lcm(p,l) (2->4, 3->12, 5->20); apex N=60
+  hostile: d -> d/p sends Q onto the upper cube face p*D(m) = [2, 6, 10, 30], not onto the atoms
+profile (2,1^(r-1)): |Q| = 2^(r-1) = (upper cube face through p) and 2^(r-1) = r+1 iff r=3 (checked r<=8)
+
+k | predicted solution profiles of F = S_k + U | window check (r<=8, exp<=12) | direct N<=2e5
+--+---------------------------------------------+------------------------------+-------------
+1 | p p^2 pq                                    | 3 profiles, all predicted | 63214
+2 | p p^3 p^2qr                                 | 3 profiles, all predicted | 36372
+3 | p p^4 p^3q^2 p^3qr                          | 4 profiles, all predicted | 25045
+4 | p p^5 p^4q^2 p^4qr                          | 4 profiles, all predicted | 21096
+5 | p p^6 p^5q^2 p^5qr                          | 4 profiles, all predicted | 19442
+6 | p p^7 p^6q^2 p^6qr                          | 4 profiles, all predicted | 18684
+  profile p^4      F=  3 S_3=  2 U=1  F-S_3-U=0
+  profile p^3q^2   F= 10 S_3=  8 U=2  F-S_3-U=0
+  profile p^3qr    F= 14 S_3= 11 U=3  F-S_3-U=0
+  profile p^3      F=  2 S_3=  2 U=1  F-S_3-U=-1
+  profile p^2qr    F= 10 S_3= 10 U=3  F-S_3-U=-3
+  [time 35.6s]
+
+==============================================================================
+4. Omega classes forget the repeated prime; partitions per Omega; endpoint census
+==============================================================================
+Omega k | #profiles p(k) | #with F=S+U | which | defects D over the class
+--------+----------------+-------------+-------+-------------------------
+1       | 1              | 1           | p     | [0]
+2       | 2              | 0           | -     | [-2, -1]
+3       | 3              | 1           | p^3   | [-3, -1, 0]
+4       | 5              | 1           | p^2qr | [-4, 0, 1, 2]
+5       | 7              | 0           | -     | [-5, 2, 3, 4, 5, 6]
+6       | 11             | 0           | -     | [-6, 3, 5, 8, 9, 10, 11, 12, 15]
+7       | 15             | 0           | -     | [-7, 4, 7, 11, 12, 13, 18, 19, 20, 24, 25, 26, 27, 33, 34]
+8       | 22             | 0           | -     | [-8, 5, 9, 14, 16, 17, 18, 24, 27, 28, 33, 36, 39, 42, 43, 51, 56, 57, 58, 60, 70, 73]
+witness: p^2q^2 and p^3q share (Omega,omega)=(4,2) but D = 2 vs 1; Omega=4 alone: D in [-4, 0, 1, 2]
+
+endpoint shape census over centers 6k, 1<=k<=10^6 (FINITE-EXACT):
+shape   | left 6k-1 | right 6k+1
+--------+-----------+-----------
+prime   |    206502 |     206345
+p^3     |        21 |         19
+p^2qr   |     35061 |      34876
+  p^3 endpoints (largest endpoint 6000001, largest cube prime p = 181): left <=> p = 5 mod 6 (21 of them, first [125, 1331, 4913, 12167]); right <=> p = 1 mod 6 (19, first [343, 2197, 6859, 29791])
+  side law p^3 = p (mod 6) holds for every prime with p^3 <= 6000001; p = 2, 3 give 8 = 2, 27 = 3 (mod 6), never endpoints, so the iff is over all primes
+  centers with both endpoints F=S+U solutions: 55613; of which twin primes: 37915; mixed/other: 17698
+  [time 36.2s]
+  [time total 36.2s, peak RSS 663 MB]
+
+ALL CHECKS PASSED

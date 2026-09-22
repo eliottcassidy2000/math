@@ -460,9 +460,11 @@ T21 = [target_T(2, 1, r) for r in range(1, 8)]
 T33 = [target_T(3, 3, r) for r in range(1, 8)]
 require(T21 == [5, 10, 19, 36, 69, 134, 263] and T33 == [8, 17, 32, 59, 110, 209, 404], "T(r) hand-check lists")
 require(target_T(1, 3, 5) == 48 == 3 * 2 ** 4, "(1,3) at r=5 is the tight bound T=48")
-require(max(Fraction(target_T(a, b, r), 1 << r) for a in (2, 3) for b in range(4) for r in range(1, 40) if (a, b) != (2, 0)) == Fraction(9, 2),
-        "T/2^r <= 4.5 for alpha in {2,3}, (alpha,beta) != (2,0), attained")
-print(f"hand-check values: T(2,1;r) r=1..7 = {T21}; T(3,3;r) r=1..7 = {T33}; T(1,3;5) = {target_T(1,3,5)} = 3*2^4; max T/2^r over alpha in {{2,3}} = 4.5")
+ratio_max = max(Fraction(target_T(a, b, r), 1 << r) for a in (2, 3) for b in range(4) for r in range(1, 40) if (a, b) != (2, 0))
+require(ratio_max == Fraction(17, 4) == Fraction(target_T(3, 3, 2), 4) and ratio_max <= Fraction(9, 2),
+        f"true max of T/2^r over alpha in {{2,3}}, (alpha,beta) != (2,0): {ratio_max} (note's bound 4.5)")
+print(f"hand-check values: T(2,1;r) r=1..7 = {T21}; T(3,3;r) r=1..7 = {T33}; T(1,3;5) = {target_T(1,3,5)} = 3*2^4")
+print(f"  T/2^r over alpha in {{2,3}}, (alpha,beta) != (2,0): true maximum {float(ratio_max)} at (3,3), r=2; the note's bound alpha + 3r/2^r <= 4.5 holds")
 print(f"  [time {time.time()-T0:.1f}s]")
 
 
