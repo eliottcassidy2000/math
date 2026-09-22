@@ -225,14 +225,42 @@ first = int(np.argmax(diff > 0))
 require(diff[first] > 0, "crossover not found below 10^7")
 require(bool(shape_p2qr[first]), "crossover point must itself be a p^2qr number")
 last_prime_lead = int(np.nonzero(diff <= 0)[0][-1])
-flips = int(np.count_nonzero((diff[1:] > 0) != (diff[:-1] > 0)))
+# (a) flips of the PREDICATE diff > 0 (a drop from lead 1 to a tie counts as a flip)
+pred = diff > 0
+flip_pts = (np.nonzero(pred[1:] != pred[:-1])[0] + 1).tolist()
+flip_kinds = "".join("Q" if shape_p2qr[n] else ("P" if shape_prime[n] else "?") for n in flip_pts)
+# (b) TRUE sign changes of the difference: consecutive nonzero values of opposite sign (ties skipped)
+nz = np.nonzero(diff)[0]
+sg = np.sign(diff[nz])
+sign_change_pts = [int(nz[i + 1]) for i in np.nonzero(sg[1:] != sg[:-1])[0]]
+sign_change_dirs = [(int(sg[i]), int(sg[i + 1])) for i in np.nonzero(sg[1:] != sg[:-1])[0]]
+neg_after = np.nonzero(diff[first:] < 0)[0] + first
+ties_after = np.nonzero(diff[first:] == 0)[0] + first
+require(flip_pts == [145119, 145121, 145132, 145133, 145138, 145139, 145148, 147709, 147725, 147727, 147908, 147919, 147925],
+        f"predicate flip points: {flip_pts}")
+require(flip_kinds == "QPQPQPQPQPQPQ", f"flip kinds alternate p^2qr / prime: {flip_kinds}")
+require(sign_change_pts == [145119, 147739, 147908], f"true sign changes of the difference: {sign_change_pts}")
+require(sign_change_dirs == [(-1, 1), (1, -1), (-1, 1)], f"sign change directions: {sign_change_dirs}")
+require(len(neg_after) == 155 and int(neg_after.min()) == 147739 and int(neg_after.max()) == 147893,
+        f"primes strictly ahead after the crossover: {len(neg_after)} points in [{neg_after.min()},{neg_after.max()}]")
+require(bool((np.diff(neg_after) == 1).all()), "primes-ahead set after the crossover is one interval")
+require(int(diff[first:].min()) == -5, f"minimum of the difference after the crossover: {int(diff[first:].min())}")
+require(len(ties_after) == 73 and int(ties_after.max()) == 147924 == last_prime_lead,
+        f"ties after the crossover: {len(ties_after)}, last {int(ties_after.max())}")
+require(bool((diff[last_prime_lead + 1:] >= 1).all()), "p^2qr leads strictly from 147925 to 10^7")
 fac_first = factor_spf(first, spf_sieve(first))
 print()
 print(f"CROSSOVER (FINITE-EXACT): first n with #{{p^2qr<=n}} > #{{primes<=n}} is n = {first} = {fac_first}")
 print(f"  counts there: primes={int(cum_prime[first])}, p^2qr={int(cum_p2qr[first])}")
-print(f"  last n <= 10^7 with #primes >= #p^2qr: {last_prime_lead}; sign changes of the difference on [1,10^7]: {flips}")
-print(f"  at 10^7 the lead is p^2qr - primes = {int(diff[X])}")
-# lead history at the tail: strictly increasing lead from some point?
+print(f"  the PREDICATE '#p^2qr > #primes' flips {len(flip_pts)} times on [1,10^7], at {flip_pts}")
+print(f"    (kinds {flip_kinds}: every second flip is a prime dropping the lead to a TIE, not a sign change)")
+print(f"  TRUE sign changes of the difference #p^2qr - #primes on [1,10^7]: {len(sign_change_pts)} at {sign_change_pts}, directions {sign_change_dirs}")
+print(f"  primes strictly ahead after {first}: exactly the {len(neg_after)} integers of [{int(neg_after.min())},{int(neg_after.max())}], minimum difference {int(diff[first:].min())}")
+print(f"  ties after {first}: {len(ties_after)}, the last at {int(ties_after.max())}; last n <= 10^7 with #primes >= #p^2qr: {last_prime_lead}")
+print(f"  p^2qr leads strictly on [{last_prime_lead+1},10^7]; at 10^7 the lead is p^2qr - primes = {int(diff[X])}")
+naive_scale = math.exp(math.exp(1.0 / 0.4522474200))   # solve P(2) loglog x = 1
+print(f"  HEURISTIC naive scale from P(2) loglog x = 1: x = {naive_scale:.0f}; actual crossover / naive = {first / naive_scale:.2f}")
+del pred, nz, sg, neg_after, ties_after
 print(f"  [time {time.time()-T0:.1f}s]")
 
 
@@ -367,23 +395,41 @@ print()
 print("cell (a,b) | finite? | r-bound | #profiles | nonsquarefree profiles (exponents) | squarefree composites | #N<=2e5")
 print("-----------+---------+---------+-----------+------------------------------------+-----------------------+--------")
 omega_injective = {}
+cell_finite = {}
 for (alpha, beta), cell in sorted(cells.items()):
     finite = cell["bound"] is not None and not (alpha == 1 and beta == 0)
+    cell_finite[(alpha, beta)] = finite
     nonsq_sorted = sorted(set(cell["nonsq"]), key=lambda p: (len(p), p))
     profs = " ".join(fmt_prof(p) for p in nonsq_sorted) if nonsq_sorted else "-"
     count = ("inf" if not finite else str(len(cell["sols"])))
-    sols_list = sorted(cell["sols"], key=lambda p: (len(p), p))
+    # all solution profiles of the cell on the support window r<=10 (for (1,0) this adds the squarefree composites)
+    sols_list = sorted(cell["sols"] | ({tuple([1] * r) for r in range(2, 11)} if (alpha, beta) == (1, 0) else set()),
+                       key=lambda p: (len(p), p))
     omegas = [sum(p) for p in sols_list]
-    omega_injective[(alpha, beta)] = finite and len(set(omegas)) == len(omegas)
+    omega_injective[(alpha, beta)] = len(set(omegas)) == len(omegas)
     print(f"({alpha},{beta})      | {'yes' if finite else 'NO ':<7} | {str(cell['bound']) if cell['bound'] is not None else 'inf':<7} | {count:<9} | {profs:<34} | {cell['sqf_desc']:<21} | {direct_sets[(alpha,beta)]}")
 
 print()
-print("Omega-injectivity (distinct Omega values across all solution profiles, finite cells only):")
+print("Omega-injectivity (distinct Omega values across all solution profiles; infinite cells listed on the window r<=10):")
 for cell, flag in sorted(omega_injective.items()):
-    sols_list = sorted(cells[cell]["sols"], key=lambda p: (len(p), p))
-    print(f"  {cell}: {'INJECTIVE' if flag else 'collides '} Omega values {[sum(p) for p in sols_list]}")
-inj_cells = [c for c, f in omega_injective.items() if f]
+    alpha, beta = cell
+    sols_list = sorted(cells[cell]["sols"] | ({tuple([1] * r) for r in range(2, 11)} if cell == (1, 0) else set()),
+                       key=lambda p: (len(p), p))
+    tag = "finite" if cell_finite[cell] else "INFINITE"
+    print(f"  {cell}: {'INJECTIVE' if flag else 'collides '} ({tag:<8}) Omega values {[sum(p) for p in sols_list]}")
+# (2,0) is Omega-injective for ALL r: Omega(p^3 q_1...q_(r-1)) = r+2 determines r, hence the profile (PROVED in note)
+require(omega_injective[(2, 0)], "(2,0) must be Omega-injective (Omega = r+2)")
+require(not omega_injective[(1, 0)], "(1,0) collides (p^2 and pq share Omega=2)")
+require(not omega_injective[(0, 2)] and omega_injective[(1, 1)], "prime-cube cells: (0,2) collides, (1,1) injective")
+inj_cells = [c for c, f in omega_injective.items() if f and cell_finite[c]]
+inj_all = [c for c, f in omega_injective.items() if f]
+require(inj_cells == [(0, 0), (1, 1), (2, 1), (2, 3), (3, 0), (3, 1)], f"Omega-injective finite cells: {inj_cells}")
+three_inj = [c for c in inj_cells if len(cells[c]["sols"]) == 3]
+require(three_inj == [(1, 1), (2, 3)], f"three-profile Omega-injective cells: {three_inj}")
 print(f"  cells with Omega-injective finite solution sets: {inj_cells}")
+print(f"  all Omega-injective cells (the infinite cell (2,0) included; (2,0) has Omega = r+2, injective for every r): {inj_all}")
+print(f"  among the prime-cube cells (alpha+beta=2): (0,2) collides [1,3,3,3]; (1,1) and (2,0) are injective; (1,1) is the unique FINITE injective one")
+print(f"  Omega-injective finite cells with exactly three profiles: {three_inj}")
 
 # prime-power solution p^(alpha+beta+1) in every cell with alpha+beta>=1
 for (alpha, beta), cell in cells.items():
@@ -409,6 +455,14 @@ for alpha in (2, 3):
             fams = [f for f in factorizations(target_T(alpha, beta, r), r) if max(f) >= 3]
             require(fams == [], f"unexpected solution at alpha={alpha}, beta={beta}, r={r}")
 print("alpha in {2,3}: no nonsquarefree solutions at supports 8..12 (consistent with the proved bound r<=7)")
+# hand-check values quoted in the note: T(r) for (2,1) and (3,3), r=1..7; (1,3) at r=5; the bound T/2^r <= 4.5
+T21 = [target_T(2, 1, r) for r in range(1, 8)]
+T33 = [target_T(3, 3, r) for r in range(1, 8)]
+require(T21 == [5, 10, 19, 36, 69, 134, 263] and T33 == [8, 17, 32, 59, 110, 209, 404], "T(r) hand-check lists")
+require(target_T(1, 3, 5) == 48 == 3 * 2 ** 4, "(1,3) at r=5 is the tight bound T=48")
+require(max(Fraction(target_T(a, b, r), 1 << r) for a in (2, 3) for b in range(4) for r in range(1, 40) if (a, b) != (2, 0)) == Fraction(9, 2),
+        "T/2^r <= 4.5 for alpha in {2,3}, (alpha,beta) != (2,0), attained")
+print(f"hand-check values: T(2,1;r) r=1..7 = {T21}; T(3,3;r) r=1..7 = {T33}; T(1,3;5) = {target_T(1,3,5)} = 3*2^4; max T/2^r over alpha in {{2,3}} = 4.5")
 print(f"  [time {time.time()-T0:.1f}s]")
 
 
@@ -440,6 +494,9 @@ Q = [d for d in divs if any(d % (p * p) == 0 for p in (2, 3, 5))]
 image = sorted((2 if d == 4 else d // 4) for d in Q if d != N)
 require(image == [2, 3, 5], f"atom map l -> p*lcm(p,l) is not a bijection Q\\{{N}} <-> atoms: {image}")
 print(f"N=60=2^2*3*5: non-squarefree divisors Q={Q}; Q minus N = image of the atoms under l -> p*lcm(p,l) (2->4, 3->12, 5->20); apex N=60")
+upper_face = sorted(d // 2 for d in Q)
+require(upper_face == [2, 6, 10, 30] and upper_face == sorted(2 * d for d in divisors_from_factors({3: 1, 5: 1})), "d -> d/p sends Q onto the upper cube face p*D(m)")
+print(f"  hostile: d -> d/p sends Q onto the upper cube face p*D(m) = {upper_face}, not onto the atoms")
 # general: |Q| for profile (2,1^(r-1)) is 2^(r-1); equals r+1 iff r=3
 for r in range(1, 9):
     prof = tuple([2] + [1] * (r - 1))
@@ -529,11 +586,19 @@ print("--------+-----------+-----------")
 for name, arr in (("prime", shape_prime), ("p^3", shape_cube), ("p^2qr", shape_p2qr)):
     print(f"{name:<7} | {int(arr[left].sum()):>9} | {int(arr[right].sum()):>10}")
 # p^3 endpoints: p^3 = 6k-1 iff p = 5 mod 6 ; p^3 = 6k+1 iff p = 1 mod 6 (p>=5), since p^2 = 1 mod 6
-cubes_left = [int(p) ** 3 for p in primes if int(p) ** 3 <= X and int(p) % 6 == 5]
-cubes_right = [int(p) ** 3 for p in primes if int(p) ** 3 <= X and int(p) % 6 == 1]
-require(len(cubes_left) == int(shape_cube[left].sum()), "p^3 left census")
-require(len(cubes_right) == int(shape_cube[right].sum()), "p^3 right census")
-print(f"  p^3 endpoints: left <=> p = 5 mod 6 ({len(cubes_left)} of them, first {cubes_left[:4]}); right <=> p = 1 mod 6 ({len(cubes_right)}, first {cubes_right[:4]})")
+ENDMAX = int(right[-1])   # largest endpoint 6K+1 = 6000001 (NOT the sieve bound X)
+cubes_left = [int(p) ** 3 for p in primes if int(p) ** 3 <= ENDMAX and int(p) % 6 == 5]
+cubes_right = [int(p) ** 3 for p in primes if int(p) ** 3 <= ENDMAX and int(p) % 6 == 1]
+require(len(cubes_left) == 21 == int(shape_cube[left].sum()), f"p^3 left census: {len(cubes_left)} vs {int(shape_cube[left].sum())}")
+require(len(cubes_right) == 19 == int(shape_cube[right].sum()), f"p^3 right census: {len(cubes_right)} vs {int(shape_cube[right].sum())}")
+require(set(cubes_left) == set(int(n) for n in left[shape_cube[left]]), "left cube endpoints are exactly the p = 5 mod 6 cubes")
+require(set(cubes_right) == set(int(n) for n in right[shape_cube[right]]), "right cube endpoints are exactly the p = 1 mod 6 cubes")
+# side law p^3 = p (mod 6) for every prime p >= 5; the boundary primes 2, 3 give 8 = 2, 27 = 3 (mod 6), never endpoints
+require(all(int(p) ** 3 % 6 == int(p) % 6 for p in primes if int(p) ** 3 <= ENDMAX), "p^3 = p mod 6 for all primes with p^3 <= 6K+1")
+require(8 % 6 == 2 and 27 % 6 == 3 and all((c + 1) % 6 != 0 and (c - 1) % 6 != 0 for c in (8, 27)), "8 and 27 are never endpoints 6k-1 or 6k+1")
+pmax_cube = max(int(p) for p in primes if int(p) ** 3 <= ENDMAX)
+print(f"  p^3 endpoints (largest endpoint {ENDMAX}, largest cube prime p = {pmax_cube}): left <=> p = 5 mod 6 ({len(cubes_left)} of them, first {cubes_left[:4]}); right <=> p = 1 mod 6 ({len(cubes_right)}, first {cubes_right[:4]})")
+print(f"  side law p^3 = p (mod 6) holds for every prime with p^3 <= {ENDMAX}; p = 2, 3 give 8 = 2, 27 = 3 (mod 6), never endpoints, so the iff is over all primes")
 # both endpoints solutions of F=S+U (any shape): joint count
 sol_ind = shape_prime | shape_cube | shape_p2qr
 both = int((sol_ind[left] & sol_ind[right]).sum())
@@ -541,5 +606,8 @@ twin = int((shape_prime[left] & shape_prime[right]).sum())
 print(f"  centers with both endpoints F=S+U solutions: {both}; of which twin primes: {twin}; mixed/other: {both-twin}")
 print(f"  [time {time.time()-T0:.1f}s]")
 
+import resource
+peak_mb = resource.getrusage(resource.RUSAGE_SELF).ru_maxrss / (1024 ** 2)   # bytes on macOS
+print(f"  [time total {time.time()-T0:.1f}s, peak RSS {peak_mb:.0f} MB]")
 print()
 print("ALL CHECKS PASSED")
