@@ -1,0 +1,301 @@
+
+==============================================================================
+S1. Conjugacy T_+(-n) = -T_-(n) on odd n (master sheet criterion)
+==============================================================================
+odd n in [-20001, 20001]: violations of T_+(-n) = -T_-(n): 0
+PROVED (one line): 3(-n)+1 = -(3n-1) and v2 is sign-blind.
+Consequence: a condition proved for ALL odd integers under 3n+1 is SHEET-BLIND;
+a condition whose proof uses n>0 at b=+1 (equivalently B>0 with b=+1) is SIGN-SPECIFIC.
+
+==============================================================================
+S2. The three positive 3n-1 cycles and the plus-sheet {1}: gate data
+==============================================================================
+b=+1 cycle [1]: word [2], K=2, L=1, B=1, Delta=2^K-3^L=1, q=|Delta|/gcd(B,|Delta|)=1, n0=bB/Delta=1, sign(b/Delta)->positive members
+b=-1 cycle [1]: word [1], K=1, L=1, B=1, Delta=2^K-3^L=-1, q=|Delta|/gcd(B,|Delta|)=1, n0=bB/Delta=1, sign(b/Delta)->positive members
+b=-1 cycle [5, 7]: word [1, 2], K=3, L=2, B=5, Delta=2^K-3^L=-1, q=|Delta|/gcd(B,|Delta|)=1, n0=bB/Delta=5, sign(b/Delta)->positive members
+b=-1 cycle [17, 25, 37, 55, 41, 61, 91]: word [1, 1, 1, 2, 1, 1, 4], K=11, L=7, B=2363, Delta=2^K-3^L=-139, q=|Delta|/gcd(B,|Delta|)=1, n0=bB/Delta=17, sign(b/Delta)->positive members
+Sign law (signed_cycles sec.3, PROVED): every member has the sign of b/Delta, so a
+POSITIVE 3n+1 cycle needs Delta>0 (K/L > log_2 3) while a POSITIVE 3n-1 cycle needs
+Delta<0 (K/L < log_2 3).  The three minus cycles have Delta = -1, -1, -139 (<0);
+the plus cycle {1} has Delta = +1.  The gate q=1 itself is SHEET-BLIND; which side
+of log_2 3 the clock must sit on is SIGN-SPECIFIC.
+
+==============================================================================
+S3. Convergents of log_2 3, the sign alternation, and where the four known clocks sit
+==============================================================================
+partial quotients a_0..a_29: [1, 1, 1, 2, 2, 3, 1, 5, 2, 23, 2, 2, 1, 1, 55, 1, 4, 3, 1, 1, 15, 1, 9, 2, 5, 7, 1, 1, 4, 8]
+convergents p_n/q_n, n<=24, with sign of Delta=2^p-3^q (exact when q<=80000, else by 400-digit log):
+  n= 0  1/1  Delta sign -1  (-1)
+  n= 1  2/1  Delta sign +1  (1)
+  n= 2  3/2  Delta sign -1  (-1)
+  n= 3  8/5  Delta sign +1  (13)
+  n= 4  19/12  Delta sign -1  (-7153)
+  n= 5  65/41  Delta sign +1  (+(18 digits))
+  n= 6  84/53  Delta sign -1  (-(23 digits))
+  n= 7  485/306  Delta sign +1  (+(144 digits))
+  n= 8  1054/665  Delta sign -1  (-(313 digits))
+  n= 9  24727/15601  Delta sign +1  (+(7439 digits))
+  n=10  50508/31867  Delta sign -1  (-(15200 digits))
+  n=11  125743/79335  Delta sign +1  (+(37847 digits))
+  n=12  176251/111202  Delta sign -1  (sign by log)
+  n=13  301994/190537  Delta sign +1  (sign by log)
+  n=14  16785921/10590737  Delta sign -1  (sign by log)
+  n=15  17087915/10781274  Delta sign +1  (sign by log)
+  n=16  85137581/53715833  Delta sign -1  (sign by log)
+  n=17  272500658/171928773  Delta sign +1  (sign by log)
+  n=18  357638239/225644606  Delta sign -1  (sign by log)
+  n=19  630138897/397573379  Delta sign +1  (sign by log)
+  n=20  9809721694/6189245291  Delta sign -1  (sign by log)
+  n=21  10439860591/6586818670  Delta sign +1  (sign by log)
+  n=22  103768467013/65470613321  Delta sign -1  (sign by log)
+  n=23  217976794617/137528045312  Delta sign +1  (sign by log)
+  n=24  1193652440098/753110839881  Delta sign -1  (sign by log)
+PROVED (classical, Hardy-Wright Thm 154 alternation): even-index convergents lie BELOW
+log_2 3 (Delta<0), odd-index convergents ABOVE (Delta>0).  Hence, wherever the clock
+of a cycle is forced to be a convergent, a positive 3n+1 cycle sits on an ODD-index
+convergent and a positive 3n-1 cycle on an EVEN-index one.  Sign-specific refinement.
+11/7 = (p_2 + 1*p_3)/(q_2 + 1*q_3) = (3+8)/(2+5) with a_4 = 2: the unique
+intermediate fraction between the convergents 3/2 and 19/12 (j=1 of a_4-1=1); NOT a convergent.
+1/1 = p_0/q_0, 3/2 = p_2/q_2 (even index, Delta<0) carry the minus cycles {1}, {5,7};
+2/1 = p_1/q_1 (odd index, Delta>0) carries the plus cycle {1}.
+  clock 1/1: |Delta|=1, tier-A cap 3^L/(4L)=0.750 (OUT), tier-B cap 3^L/(2L)=1.500 (in)
+  clock 3/2: |Delta|=1, tier-A cap 3^L/(4L)=1.125 (in), tier-B cap 3^L/(2L)=2.250 (in)
+  clock 11/7: |Delta|=139, tier-A cap 3^L/(4L)=78.107 (OUT), tier-B cap 3^L/(2L)=156.214 (in)
+  clock 2/1: |Delta|=1, tier-A cap 3^L/(4L)=0.750 (OUT), tier-B cap 3^L/(2L)=1.500 (in)
+The seven-cycle's |Delta|=139 exceeds the tier-A cap 78.107 but not the tier-B cap 156.214:
+consistent with the pillai lane (tier B = convergent or extreme intermediate; 11/7 is extreme).
+
+==============================================================================
+S4. Eliahou product identity 2^K/3^L = prod(1 + b/(3 n_i)) on the four known cycles
+==============================================================================
+b=+1 (1,): |Delta|/3^L = 0.3333 <= plus sheet: (1+1/(3N))^L - 1 = 0.3333  (N=min=1)
+b=-1 (1,): |Delta|/3^L = 0.3333 <= minus sheet: 1-(1-1/(3N))^L = 0.3333  (N=min=1)
+b=-1 (5, 7): |Delta|/3^L = 0.1111 <= minus sheet: 1-(1-1/(3N))^L = 0.1289  (N=min=5)
+b=-1 (17, 25, 37, 55, 41, 61, 91): |Delta|/3^L = 0.0636 <= minus sheet: 1-(1-1/(3N))^L = 0.1294  (N=min=17)
+PROVED identity, SHEET-BLIND (pillai S4 already states it for b=+-1).
+Legendre tier-A thresholds N_min(L) (smallest cycle minimum that forces K/L convergent):
+  L=  2: plus sheet N_min=6, minus sheet N_min=6, 4L^2/3=5.33
+  L=  5: plus sheet N_min=34, minus sheet N_min=33, 4L^2/3=33.33
+  L=  7: plus sheet N_min=67, minus sheet N_min=65, 4L^2/3=65.33
+  L= 12: plus sheet N_min=194, minus sheet N_min=191, 4L^2/3=192.00
+  L= 41: plus sheet N_min=2248, minus sheet N_min=2235, 4L^2/3=2241.33
+  L= 53: plus sheet N_min=3754, minus sheet N_min=3737, 4L^2/3=3745.33
+The seven-cycle has N=17 < N_min(7) on the minus sheet, so the convergent theorem does not
+apply to it, and indeed 11/7 is not a convergent: the theorem's HYPOTHESIS (a large minimum)
+is what the sheets do not share.  {5,7} has N=5 < N_min(2)=3? no:
+  N_min(2, minus) = 6, and {5,7} with N=5 does satisfy it; 3/2 is a convergent.
+
+==============================================================================
+S5. Census: odd n <= X on the 3n-1 sheet fall into the three known cycles (basin sizes)
+==============================================================================
+X = 10000000: odd starts 5000000; every one reaches a known cycle (no fourth cycle, no escape).
+  basin of [1]: 1636054 odd starts (0.327211)
+  basin of [5, 7]: 1623149 odd starts (0.324630)
+  basin of [17, 25, 37, 55, 41, 61, 91]: 1740797 odd starts (0.348159)
+  longest first-drop-or-cycle-hit segment: 172 accelerated steps at n=5960769
+  census time 5.6s (timing line, not a result)
+FINITE-EXACT consequence: any fourth positive 3n-1 cycle has minimum element N > 10^7,
+i.e. N >= 10000001 (odd).  Mirror of Barina's 2^68 (CITED, plus sheet); the minus sheet
+has NO published verification comparable to 2^68, only this repo's censuses.
+control: every odd n <= 1000000 reaches 1 under 3n+1 (Barina 2020 CITED: all n < 2^68).
+
+==============================================================================
+S6. Length bounds for a hypothetical cycle from Eliahou + tier A + convergent spacing
+==============================================================================
+Chain (PROVED given CITED inputs): a positive cycle with minimum N and L odd terms has
+  |Delta|/3^L <= e^{L/(3N)} - 1 (plus) or <= L/(3N) (minus, Bernoulli);
+  if that is <= 1/(4L) then |log_2 3 - K/L| < 1/(2L^2) and K/L is a convergent (Legendre);
+  with K/L = p_n/q_n, L = m q_n, |K - L log_2 3| = m |q_n a - p_n| > m/(q_n + q_{n+1})
+  (Hardy-Wright Thm 171 form).  Plus sheet: y <= e^y - 1 = Delta/3^L <= e^{L/(3N)} - 1 <=
+  (L/(3N)) e^{L/(3N)}, so q_n (q_n+q_(n+1)) >= 3 N ln2 * e^{-L_A/(3N)}.  Minus sheet: L >= 2 and
+  |Delta|/3^L = 1 - e^{-y} <= 1/(4L) <= 1/8 give y <= y0 = -ln(7/8) and 1-e^{-y} >= c0 y with
+  c0 = (1-e^{-y0})/y0, so q_n (q_n+q_(n+1)) >= c0 * 3 N ln2.  (L = 1 is the trivial clock: n_0 =
+  b/(2^k-3) is integral only for k = 1, 2, giving {1} at b = -1, +1; no tier needed.)
+plus sheet, N = 2^68 (Barina): tier A holds for every L <= L_A = 14878203146 (sqrt(3N/4) = 1.487820e+10)
+  spacing threshold factor*3*N*ln2 = 6.137428e+20 (factor = 1.000000)
+  convergents on the correct side with q_n(q_n+q_(n+1)) >= threshold: first is n=23, 217976794617/137528045312
+  none of them has q_n <= L_A, so NO positive cycle (other than the trivial/known ones)
+  has L <= 14878203146: every hypothetical cycle on this sheet has L > 14878203146.
+  first three surviving clocks (K/L reduced), the minimal unresolved conjunction lives there:
+    n=23: K/L = 217976794617/137528045312, cycle length L = m*137528045312, m>=1, q_n(q_n+q_(n+1)) = 122487824959452069865216
+    n=25: K/L = 8573543875303/5409303924479, cycle length L = m*5409303924479, m>=1, q_n(q_n+q_(n+1)) = 62594943316503790956189881
+    n=27: K/L = 18340740190704/11571718688839, cycle length L = m*11571718688839, m>=1, q_n(q_n+q_(n+1)) = 740833097165250920862817645
+minus sheet, N = 10^7+1 (S5 census): tier A holds for every L <= L_A = 2738 (sqrt(3N/4) = 2.738613e+03)
+  spacing threshold factor*3*N*ln2 = 1.946585e+07 (factor = 0.936109)
+  convergents on the correct side with q_n(q_n+q_(n+1)) >= threshold: first is n=10, 50508/31867
+  none of them has q_n <= L_A, so NO positive cycle (other than the trivial/known ones)
+  has L <= 2738: every hypothetical cycle on this sheet has L > 2738.
+  first three surviving clocks (K/L reduced), the minimal unresolved conjunction lives there:
+    n=10: K/L = 50508/31867, cycle length L = m*31867, m>=1, q_n(q_n+q_(n+1)) = 3543674134
+    n=12: K/L = 176251/111202, cycle length L = m*111202, m>=1, q_n(q_n+q_(n+1)) = 33553980278
+    n=14: K/L = 16785921/10590737, cycle length L = m*10590737, m>=1, q_n(q_n+q_(n+1)) = 226345347662107
+Literature for comparison (plus sheet): Simons-de Weger 2005 (CITED, Acta Arith. 117) no m-cycles
+m<=68; Hercher, J. Integer Seq. 26 (2023) art. 23.3.5 (CITED, abstract read 2026-09-22): m >= 92,
+using verification up to 3*2^69 and giving at least 1.375e11 odd members in any nontrivial cycle.
+The chain here, from cited inputs alone (Barina 2^68, Legendre, Hardy-Wright 171), proves that
+every nontrivial positive 3n+1 cycle has L > 14878203146 odd terms (n=21's spacing 4.746e20
+falls below the sharp threshold 6.137e20); Hercher's 1.375e11 is stronger and independent.
+On the minus sheet the same chain gives: any FOURTH positive 3n-1 cycle has L > L_A(minus)
+and, if its minimum stays > 10^7, its clock is an even-index convergent with q_n >= 15601.
+
+==============================================================================
+S7. Gate census: every composition word with L <= 10, both parameters b = +-1
+==============================================================================
+words enumerated (sum over L<=10 of C(2L,L)): 250952
+b=+1: distinct integer cycles (as sets) from q=1 words:
+   [-1]  (shortest word [1], 10 words incl. rotations/repetitions)
+   [1]  (shortest word [2], 10 words incl. rotations/repetitions)
+   [-7, -5]  (shortest word [1, 2], 10 words incl. rotations/repetitions)
+   [-91, -61, -55, -41, -37, -25, -17]  (shortest word [1, 1, 1, 2, 1, 1, 4], 7 words incl. rotations/repetitions)
+b=-1: distinct integer cycles (as sets) from q=1 words:
+   [-1]  (shortest word [2], 10 words incl. rotations/repetitions)
+   [1]  (shortest word [1], 10 words incl. rotations/repetitions)
+   [5, 7]  (shortest word [1, 2], 10 words incl. rotations/repetitions)
+   [17, 25, 37, 41, 55, 61, 91]  (shortest word [1, 1, 1, 2, 1, 1, 4], 7 words incl. rotations/repetitions)
+FINITE-EXACT: for L <= 10 the only POSITIVE integer cycles at b=-1 are the three known ones and
+at b=+1 only {1}; the negative cycles at each sign are exactly the negatives of the positive
+cycles at the other sign (the conjugacy of S1).  SHEET-BLIND mechanism.
+
+==============================================================================
+S8. 1-cycles (1^(L-1), k) and 2-cycles (1^a k1 1^b k2): where the gate opens, both sheets
+==============================================================================
+1-cycle words (1^(L-1), k), L <= 3000, K in floor(L log_2 3)+{-1,0,1,2}, positive integral, primitive:
+  b=+1: [(1, 2, [1])]
+  b=-1: [(1, 1, [1]), (2, 2, [5, 7])]
+Plus sheet: only the trivial word (2) -> {1}; Steiner 1977 (CITED) proves this for ALL L.
+Minus sheet: {5,7} IS a nontrivial 1-cycle (word (1,2)), so Steiner's theorem is SIGN-SPECIFIC
+and its transfer to 3n-1 is REFUTED by the witness {5,7}; its Baker/continued-fraction
+machinery is sheet-blind, but its conclusion is not.
+2-cycle words 1^a k1 1^b k2 (k1,k2>=2), L <= 24: 9699 words tested
+  b=+1: positive cycles reached: [[1]]
+  b=-1: positive cycles reached: [[5, 7], [17, 25, 37, 41, 55, 61, 91]]
+Minus sheet: the seven-cycle (1,1,1,2,1,1,4) is a genuine 2-cycle; Simons-de Weger's
+'no m-cycles, m<=68' is therefore SIGN-SPECIFIC (transfer REFUTED by the seven-cycle, m=2).
+The repeated (1,2)(1,2) also appears as a non-primitive 2-cycle word for {5,7}.
+
+==============================================================================
+S9. Unit-gap clocks |2^K-3^L| = 1 (Catalan/Mihailescu) carry EVERY word; necklace counts
+==============================================================================
+clocks with |Delta| = 1, L <= 400: [(1, 1, -1), (2, 1, 1), (3, 2, -1)]
+clocks with |Delta| <= 100, L <= 400: 9 of them: [(1, 1, -1), (2, 1, 1), (3, 2, -1), (4, 2, 7), (4, 3, -11), (5, 3, 5), (6, 4, -17), (7, 4, 47), (8, 5, 13)]
+Mihailescu 2004 (CITED; Catalan's conjecture): 8 and 9 are the only consecutive perfect powers,
+so 3/2 is the last unit-gap clock for all L.  On a unit-gap clock q=1 for every word, so every
+composition is a cycle word: (1)->{1} at b=-1 / {-1} at b=+1; (2)->{1} at b=+1; (1,2),(2,1)
+-> {5,7} at b=-1 / {-5,-7} at b=+1.  SHEET-BLIND (both sides of every unit gap are used).
+  clock 1/1: compositions C(K-1,L-1) = 1, necklaces (rotation classes) = 1
+  clock 2/1: compositions C(K-1,L-1) = 1, necklaces (rotation classes) = 1
+  clock 3/2: compositions C(K-1,L-1) = 2, necklaces (rotation classes) = 1
+  clock 11/7: compositions C(K-1,L-1) = 210, necklaces (rotation classes) = 30
+  clock 19/12: compositions C(K-1,L-1) = 31824, necklaces (rotation classes) = 2652
+  clock 65/41: compositions C(K-1,L-1) = 250649105469666120, necklaces (rotation classes) = 6113392816333320
+q is rotation-invariant (signed_cycles sec.3, PROVED), so the gate is a test per necklace;
+on 11/7 the seven-cycle is one necklace of the 30, its 7 rotations the 7 q=1 words of pillai S5.
+  q=1 words on 11/7: 7
+
+==============================================================================
+S10. D_L = K_L - L log_2 3 and the budget sum q_L on the known cycles (both sheets)
+==============================================================================
+Identity (glued_xor sec.3, PROVED): n_L q_L = n_0 + (b/3) sum_{i<L} q_i, q_i = 2^(K_i)/3^i.
+b=+1 (1,): D per period = +0.415037 (-> +inf linearly), ratio 2^K/3^L = 4/3 > 1, sum q_i DIVERGES; n_L q_L = n_0 + (1/3) sum q_i grows.
+b=-1 (1,): D per period = K - L log_2 3 = -0.584963 (-> -inf linearly), sum q_i over one period = 1, geometric ratio 2^K/3^L = 2/3, total sum q = 3 = 3 n_0 = 3
+b=-1 (5, 7): D per period = K - L log_2 3 = -0.169925 (-> -inf linearly), sum q_i over one period = 5/3, geometric ratio 2^K/3^L = 8/9, total sum q = 15 = 3 n_0 = 15
+b=-1 (17, 25, 37, 55, 41, 61, 91): D per period = K - L log_2 3 = -0.094738 (-> -inf linearly), sum q_i over one period = 2363/729, geometric ratio 2^K/3^L = 2048/2187, total sum q = 51 = 3 n_0 = 51
+Verdict: on the plus sheet D_L -> -infinity and sum q_L < infinity are NECESSARY for a divergent
+orbit and are VIOLATED by every cycle (D_L -> +infinity), so they separate cycle from escape.
+On the minus sheet EVERY orbit, periodic or not, has D_L -> -infinity and sum q_L <= 3 n_0
+(positivity alone); the discriminator there is budget exhaustion: sum q_L = 3 n_0 iff eventually
+periodic.  The condition 'D_L -> -infinity' is SHEET-BLIND as a necessary condition on a
+divergent orbit, SIGN-SPECIFIC as a cycle/escape discriminator.
+No bounded strip (guards 2a, PROVED on the plus sheet by source density): on the minus sheet
+a strip A <= q_j <= B gives n_j = (n_0 - sum/3)/q_j <= n_0/A, a bounded hence eventually periodic
+orbit, whose D_L -> -infinity (sign law: 2^K < 3^L) contradicts q_j >= A.  SHEET-BLIND
+conclusion, different proofs (density on +, positivity on -; cf. g_negatives S9/S10 for G).
+  q_(7m) along the seven-cycle, m=1..10: 0.9364 0.8769 0.8212 0.7690 0.7201 0.6744 0.6315 0.5914 0.5538 0.5186
+
+==============================================================================
+S11. Terras/Everett coefficient stopping-time densities d_J (exact, same table on both sheets)
+==============================================================================
+  J= 1: d_J = 1/2 = 0.500000, 1-d_J = 0.500000
+  J= 2: d_J = 5/8 = 0.625000, 1-d_J = 0.375000
+  J= 3: d_J = 3/4 = 0.750000, 1-d_J = 0.250000
+  J= 4: d_J = 51/64 = 0.796875, 1-d_J = 0.203125
+  J= 5: d_J = 109/128 = 0.851562, 1-d_J = 0.148438
+  J= 6: d_J = 7/8 = 0.875000, 1-d_J = 0.125000
+  J= 7: d_J = 911/1024 = 0.889648, 1-d_J = 0.110352
+  J= 8: d_J = 3729/4096 = 0.910400, 1-d_J = 0.089600
+  J= 9: d_J =  = 0.920959, 1-d_J = 0.079041
+  J=10: d_J =  = 0.935486, 1-d_J = 0.064514
+  J=11: d_J =  = 0.942818, 1-d_J = 0.057182
+  J=12: d_J =  = 0.947876, 1-d_J = 0.052124
+  J=20: d_J =  = 0.980746, 1-d_J = 0.019254
+  J=30: d_J =  = 0.992925, 1-d_J = 0.007075
+  J=40: d_J =  = 0.997014, 1-d_J = 0.002986
+  (index J = number of odd/accelerated steps, density among odd starts)
+Terras's own indexing (U(n) = (3n+1)/2 or n/2 on all n, J total steps, density mod 2^J):
+  J= 1: F_J = 1/2 = 0.500000
+  J= 2: F_J = 3/4 = 0.750000
+  J= 4: F_J = 13/16 = 0.812500
+  J= 8: F_J = 237/256 = 0.925781
+  J=12: F_J =  = 0.944824
+  J=20: F_J =  = 0.973938
+  J=30: F_J =  = 0.988106
+  J=40: F_J =  = 0.994177
+  check: F_12 = 0.9448, F_20 = 0.9739 (three_adic lane quotes 0.9448 and 0.9739)
+PROVED (Terras 1976, Everett 1977, CITED): d_J -> 1.  The word cylinder of (k_1..k_j) has odd-source
+density 2^(-K_j) on BOTH sheets (residue class mod 2^(K_j+1), 2-adic prefix law), and a word
+with 2^(K_j) > 3^j gives T^j(n) < n for ALL n at b=-1 (carry is subtracted) and for all
+n > B/(2^(K_j)-3^j) at b=+1.  SHEET-BLIND; the minus sheet is even slightly easier.
+  2-adic prefix law, 2000 random (n,b) tests at L=6: violations 0
+
+==============================================================================
+S12. Squarefree growth prefixes n_j = 3^j 2^(L+1-j) q -/+ 1 (braids2 SF3) on both sheets
+==============================================================================
+  sieve cross-check, q <= 300: 148 (plus), 148 (minus) starts, both by trial division and sieve
+L=5, q <= 100000: all 6 nodes squarefree for 49167 starts (plus sheet), 49173 (minus sheet)
+  observed densities 0.4917, 0.4917; sieve product delta_L (p<20000, nu_L(3)=1) = 0.4918
+PROVED (braids2 SF5) with the same local counts nu_L(p) on both sheets (3/2 mod p^2 is sign-blind):
+SHEET-BLIND.  Arbitrarily long all-squarefree growth prefixes exist on both sheets.
+
+==============================================================================
+S13. Finite-congruence Lyapunov obstruction n_0 = 2^(L+1) M q -/+ 1 (braids sec.5) on both sheets
+==============================================================================
+b=+1: n_0=49151, word [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1], T^L(n_0)=6377291 > n_0: True, residues mod 6 of all nodes: [5]
+b=-1: n_0=49153, word [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1], T^L(n_0)=6377293 > n_0: True, residues mod 6 of all nodes: [1]
+PROVED (braids sec.5, sheet-blind by the same three lines): no positive periodic weight modulo any
+fixed M and no bounded correction of log n decreases at every odd step, on either sheet.
+
+==============================================================================
+S14. The greedy 3-adic map G and its minus-sheet partner: G(-m) = -G_-(m)
+==============================================================================
+m <= 3000 coprime to 3: violations of G(-m) = -G_-(m): 0
+PROVED (g_negatives, inherited): the E-graph/G mirror, its word law mod 3^(J+1), drift log(2/3) and
+tail (7/9)^(J-1) transfer verbatim between the sheets.  SHEET-BLIND.
+
+==============================================================================
+S15. Pairwise contradiction search and the minimal unresolved conjunction
+==============================================================================
+Cycle conditions (plus sheet): C1 gate q=1 & sign law Delta>0; C2 N >= 2^68; C3 K/L odd-index
+convergent for L <= L_A; C4 q_n(q_n+q_(n+1)) >= 0.75*3N ln2; C5 no 1-cycle (Steiner), no m-cycle
+m <= 68 (Simons-de Weger); C6 necklace/rotation invariance of q; C7 |Delta| = 1 only at 2/1.
+Witness that they are jointly satisfiable at the level of clocks: the surviving clocks listed in S6
+(odd-index convergents with q_n > L_A and the spacing inequality) violate none of C1-C7 a priori;
+C1's integrality q=1 on such a clock is the ONLY untested predicate.  Pairwise contradiction:
+NONE FOUND.
+Divergence conditions (plus sheet): D1 D_L -> -infinity, sum q_L < infinity (glued_xor);
+D2 no bounded strip (guards 2a); D3 stopping-time density one (Terras/Everett); D4 Tao a.e. in
+logarithmic density; D5 Krasikov-Lagarias x^0.84 ancestors of 1; D6 Lyapunov obstruction;
+D7 squarefree growth prefixes of every length.  D1-D2 constrain the orbit, D3-D5 say only that
+the exceptional set has density zero (D4: log-density; D5: the tree of 1 is large), D6-D7 say
+finite lookahead cannot certify descent.  A density-zero divergent orbit with liminf D_L = -inf
+and sum q_L < inf is consistent with all of them: NONE FOUND.
+Minimal unresolved conjunction (cycle): exists odd-index convergent p_n/q_n with q_n > L_A, m >= 1,
+and a composition of m p_n into m q_n parts with q = 1 and all members >= 2^68.
+Minimal unresolved conjunction (divergence): exists a positive odd orbit with n_L unbounded,
+D_L -> -infinity, sum q_L < infinity, whose start lies in the density-zero exceptional sets of
+Terras and Tao.
+Sheet lesson: every SHEET-BLIND condition above is satisfied by the seven-cycle on the minus sheet
+(q=1, product identity, necklace, D_L -> -inf, no strip, Terras, prefixes, Lyapunov, G mirror),
+so no conjunction of sheet-blind conditions can exclude a plus-sheet cycle; a proof must use the
+sign-specific inputs (Delta>0 side, Barina 2^68, Steiner/Simons-de Weger/Hercher, Tao) or a new one.
+
+total runtime 63.3s (timing line, not a result)
