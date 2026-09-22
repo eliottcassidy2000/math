@@ -1,0 +1,210 @@
+{
+  "anthropic_exact_S2_times_S3_reference": "UNRESOLVED; no substitution",
+  "chebyshev_exact_six_cycles": 9,
+  "critical_orbit_minus_seven_quarters": [
+    "-7/4",
+    "21/16",
+    "-7/256",
+    "-114639/65536"
+  ],
+  "dynatomic_six_degree": 54,
+  "finite_mersenne_exceptions": [
+    1,
+    6
+  ],
+  "generic_lift_group": "C2 x S3; reflections reverse arrows",
+  "hexagon": [
+    [
+      "-7",
+      "1"
+    ],
+    [
+      "-5",
+      "-1"
+    ],
+    [
+      "2",
+      "-2"
+    ],
+    [
+      "7",
+      "-1"
+    ],
+    [
+      "5",
+      "1"
+    ],
+    [
+      "-2",
+      "2"
+    ]
+  ],
+  "linear_stabilizer_order": 12,
+  "new_convergence_or_sphere_theorem": false,
+  "projective_group_order": 6,
+  "rational_graph_y_equals_4x": {
+    "-7": 5,
+    "-5": -1,
+    "-3": -5,
+    "-1": -7,
+    "1": -7,
+    "3": -5,
+    "5": -1,
+    "7": 5
+  },
+  "script_sha256": "ffb4c3e73e926bd31dc73838328eef356572c205d2d9bfec804a8d45ebbe029d",
+  "status": "PASS",
+  "trace_conductors": [
+    {
+      "conductor": 7,
+      "multiplier": 8,
+      "squaring_period": 3,
+      "trace_cycles": 1,
+      "trace_period": 3,
+      "trace_points": 3
+    },
+    {
+      "conductor": 9,
+      "multiplier": -8,
+      "squaring_period": 6,
+      "trace_cycles": 1,
+      "trace_period": 3,
+      "trace_points": 3
+    },
+    {
+      "conductor": 13,
+      "multiplier": -64,
+      "squaring_period": 12,
+      "trace_cycles": 1,
+      "trace_period": 6,
+      "trace_points": 6
+    },
+    {
+      "conductor": 21,
+      "multiplier": 64,
+      "squaring_period": 6,
+      "trace_cycles": 1,
+      "trace_period": 6,
+      "trace_points": 6
+    },
+    {
+      "conductor": 63,
+      "multiplier": 64,
+      "squaring_period": 6,
+      "trace_cycles": 3,
+      "trace_period": 6,
+      "trace_points": 18
+    },
+    {
+      "conductor": 65,
+      "multiplier": -64,
+      "squaring_period": 12,
+      "trace_cycles": 4,
+      "trace_period": 6,
+      "trace_points": 24
+    }
+  ],
+  "trace_cyclotomic_polynomials_constant_first": {
+    "13": [
+      -1,
+      3,
+      6,
+      -4,
+      -5,
+      1,
+      1
+    ],
+    "21": [
+      1,
+      -8,
+      8,
+      6,
+      -6,
+      -1,
+      1
+    ],
+    "63": [
+      1,
+      24,
+      72,
+      -170,
+      -534,
+      405,
+      1385,
+      -459,
+      -1782,
+      276,
+      1287,
+      -90,
+      -546,
+      15,
+      135,
+      -1,
+      -18,
+      0,
+      1
+    ],
+    "65": [
+      1,
+      -12,
+      -180,
+      -101,
+      2085,
+      1802,
+      -9126,
+      -7168,
+      20886,
+      13653,
+      -28667,
+      -15001,
+      25284,
+      10282,
+      -14822,
+      -4540,
+      5832,
+      1292,
+      -1521,
+      -229,
+      252,
+      23,
+      -24,
+      -1,
+      1
+    ],
+    "7": [
+      -1,
+      -2,
+      1,
+      1
+    ],
+    "9": [
+      1,
+      -3,
+      0,
+      1
+    ]
+  },
+  "universe": {
+    "Q48_integer_bounds": {
+      "X": [
+        -9,
+        9
+      ],
+      "Y": [
+        -2,
+        2
+      ]
+    },
+    "cyclotomic_factorization": "exact polynomial identities",
+    "generic_chart_count": 125,
+    "generic_rational_chart": "distinct t=a/d, |a|<=12, 1<=d<=8; exclude0,-1",
+    "mersenne_indices": [
+      1,
+      40
+    ],
+    "odd_conductors": [
+      3,
+      129
+    ]
+  }
+}

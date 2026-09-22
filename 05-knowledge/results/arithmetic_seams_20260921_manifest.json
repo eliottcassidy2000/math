@@ -1,0 +1,366 @@
+{
+  "artifacts_sha256_lf": {
+    "04-computation/experiments/arithmetic_seams_20260921_dynamics.json": "2ab159dc4e74b74613887b5c62cbe98cef894343ff872e2464057ce23832bfda",
+    "04-computation/experiments/arithmetic_seams_20260921_dynamics.py": "ffb4c3e73e926bd31dc73838328eef356572c205d2d9bfec804a8d45ebbe029d",
+    "04-computation/experiments/arithmetic_seams_20260921_operations.json": "32888f788bc301cd4b845632c9ee23cf2036afb46f09c2a391586af5039a9497",
+    "04-computation/experiments/arithmetic_seams_20260921_operations.py": "2ac1fbc098da429ffb3fd0af0ef76fe59190b2162cdfffe924f2332e9fa937aa",
+    "04-computation/experiments/arithmetic_seams_20260921_primes.json": "c0d1891e224f3076de870ccd634b642d3b147eb53354ba94215154ef8ef00a40",
+    "04-computation/experiments/arithmetic_seams_20260921_primes.py": "92f30ba5989492096f556804bd56c1033a7d2cdecbd36ddc6c27eea3bd288277",
+    "04-computation/experiments/arithmetic_seams_20260921_tournaments.json": "4f8abe288cb2c82edc107666b39eeef67d0d93cc1692b54e55d47d988512ea36",
+    "04-computation/experiments/arithmetic_seams_20260921_tournaments.py": "100ea237be3fb8a1b823bf178be9b2f17c56812531c1570cc77c56515ee96dba",
+    "04-computation/experiments/arithmetic_seams_20260921_verify.py": "9c5a3e4790d0ff45016a64b4ffea82ecec416d5ce57bab0e171f3193d529b1a8",
+    "04-computation/lean/ArithmeticSeams/.gitignore": "fde850d24186b6e99c8c0debd641fb3ab85198b109eb66f71a1fea02bd6ea1b3",
+    "04-computation/lean/ArithmeticSeams/ArithmeticSeams.lean": "6b520a9b10b7aab589c94a7ae84cf9606570f941cd2e97462bab9e99fbfc8e08",
+    "04-computation/lean/ArithmeticSeams/ArithmeticSeams/Basic.lean": "adaed5fafc84ace23472b5e037854a92ae1c05f3827983a436e48ec73b8c5734",
+    "04-computation/lean/ArithmeticSeams/AxiomAudit.lean": "e6a4d60dc82d9dfc17b40920996040740809eb31c86bfd3a2f53099deec17710",
+    "04-computation/lean/ArithmeticSeams/README.md": "17877f72f76c4cb5af6dfb91c2d6f2655e8600ba289d6df07813a9852dc4ad1b",
+    "04-computation/lean/ArithmeticSeams/lake-manifest.json": "71f6b1b058dc31635d1dc9890d860ff56094fa3cd7de17a8bf04398b82783463",
+    "04-computation/lean/ArithmeticSeams/lakefile.toml": "1993abe96bff51823a7a945694f7bb282d0a49d7520a4ba61d56cb4dbe84b8bc",
+    "04-computation/lean/ArithmeticSeams/lean-toolchain": "54727eec5cba149c18842e6deb5c41b369d66455c93ce135d7d5347c782b2325",
+    "04-computation/lean/ArithmeticSeams/verification.json": "de706c34d4258148bfbcae3318ae4d2e0e9320f1763d45651f78fc68d2a1190e",
+    "04-computation/lean/ArithmeticSeams/verification.log": "dc71016df39be5774b61b144c42de0d29244a9d599fd8225cfd06d50aaee64c8",
+    "04-computation/lean/ArithmeticSeams/verify.py": "3c6c1cf29ee23c11183b54dff1e6f2f8ea849be71199c2098e8372be4ac36751",
+    "05-knowledge/results/arithmetic_seams_20260921_dynamics.md": "a0025e50c26c0031cac28368e228a4b66d98a78e44e176849ae50ae8af898baa",
+    "05-knowledge/results/arithmetic_seams_20260921_operations.md": "8f94f7d8ce0ed31aee6c4dd825ba0d2bd0dd8748903b4fefa3b8cfe346886d41",
+    "05-knowledge/results/arithmetic_seams_20260921_primes.md": "ee1b2f2e401120432dfec4dae6faecc0ac6e0b3b3db969020494f87d8819eabc",
+    "05-knowledge/results/arithmetic_seams_20260921_synthesis.md": "120212d70f8006cf8ff36d253b0a64fba0ff26fc01fc910fca3c3990445df17d",
+    "05-knowledge/results/arithmetic_seams_20260921_tournaments.md": "3536944d2ed84766518dad1acd40a91e150dc916a2d58157eb58c1b3f3f8066d"
+  },
+  "commands": [
+    {
+      "command": [
+        "python",
+        "04-computation/experiments/arithmetic_seams_20260921_operations.py"
+      ],
+      "cwd": ".",
+      "exit_code": 0,
+      "output": "PASS: transported operations, exact shadows, universal clique controls, modular kernels and address laws"
+    },
+    {
+      "command": [
+        "python",
+        "-O",
+        "04-computation/experiments/arithmetic_seams_20260921_operations.py"
+      ],
+      "cwd": ".",
+      "exit_code": 0,
+      "output": "PASS: transported operations, exact shadows, universal clique controls, modular kernels and address laws"
+    },
+    {
+      "command": [
+        "python",
+        "04-computation/experiments/arithmetic_seams_20260921_tournaments.py"
+      ],
+      "cwd": ".",
+      "exit_code": 0,
+      "output": "{\"checks\": \"PASS; explicit checks survive python -O\", \"output\": \"<repo>\\\\04-computation\\\\experiments\\\\arithmetic_seams_20260921_tournaments.json\", \"path_cube_count\": 33866}"
+    },
+    {
+      "command": [
+        "python",
+        "-O",
+        "04-computation/experiments/arithmetic_seams_20260921_tournaments.py"
+      ],
+      "cwd": ".",
+      "exit_code": 0,
+      "output": "{\"checks\": \"PASS; explicit checks survive python -O\", \"output\": \"<repo>\\\\04-computation\\\\experiments\\\\arithmetic_seams_20260921_tournaments.json\", \"path_cube_count\": 33866}"
+    },
+    {
+      "command": [
+        "python",
+        "04-computation/experiments/arithmetic_seams_20260921_primes.py"
+      ],
+      "cwd": ".",
+      "exit_code": 0,
+      "output": "{\"checks\": \"PASS; explicit RuntimeError checks remain active under -O\", \"decimal_primitive_indices_checked\": 200, \"general_gcd_checks\": 18720, \"output\": \"<repo>\\\\04-computation\\\\experiments\\\\arithmetic_seams_20260921_primes.json\", \"sharp_pairwise_coprime_window\": 15}"
+    },
+    {
+      "command": [
+        "python",
+        "-O",
+        "04-computation/experiments/arithmetic_seams_20260921_primes.py"
+      ],
+      "cwd": ".",
+      "exit_code": 0,
+      "output": "{\"checks\": \"PASS; explicit RuntimeError checks remain active under -O\", \"decimal_primitive_indices_checked\": 200, \"general_gcd_checks\": 18720, \"output\": \"<repo>\\\\04-computation\\\\experiments\\\\arithmetic_seams_20260921_primes.json\", \"sharp_pairwise_coprime_window\": 15}"
+    },
+    {
+      "command": [
+        "python",
+        "04-computation/experiments/arithmetic_seams_20260921_dynamics.py"
+      ],
+      "cwd": ".",
+      "exit_code": 0,
+      "output": "PASS: 125 rational marked cycles, full12-element lift, exact trace factors and controls"
+    },
+    {
+      "command": [
+        "python",
+        "-O",
+        "04-computation/experiments/arithmetic_seams_20260921_dynamics.py"
+      ],
+      "cwd": ".",
+      "exit_code": 0,
+      "output": "PASS: 125 rational marked cycles, full12-element lift, exact trace factors and controls"
+    },
+    {
+      "command": [
+        "python",
+        "04-computation/lean/ArithmeticSeams/verify.py"
+      ],
+      "cwd": "04-computation/lean/ArithmeticSeams",
+      "exit_code": 0,
+      "output": "PASS: clean root build and axiom audit for 20 theorems."
+    }
+  ],
+  "embedded_source_hash_basis": "Each lane's embedded hash is independently checked against its raw script bytes.",
+  "finished_utc": "2026-09-22T03:14:52+00:00",
+  "global_collatz_convergence_proved": false,
+  "hash_basis": "SHA-256 of UTF-8 file bytes after CRLF and lone CR are normalized to LF.",
+  "lanes": {
+    "dynamics": {
+      "certificate": "04-computation/experiments/arithmetic_seams_20260921_dynamics.json",
+      "decoded_json_sha256": "08bf77633830b5156598228a6339c2c4a0b89e0d75eecc8bc5bd37be68c3530b",
+      "embedded_raw_source_hash_fields_checked": [
+        "script_sha256"
+      ],
+      "exact_universes": {
+        "Q48_integer_bounds": {
+          "X": [
+            -9,
+            9
+          ],
+          "Y": [
+            -2,
+            2
+          ]
+        },
+        "cyclotomic_factorization": "exact polynomial identities",
+        "generic_chart_count": 125,
+        "generic_rational_chart": "distinct t=a/d, |a|<=12, 1<=d<=8; exclude0,-1",
+        "mersenne_indices": [
+          1,
+          40
+        ],
+        "odd_conductors": [
+          3,
+          129
+        ]
+      },
+      "lane_checks": null,
+      "lane_status": "PASS",
+      "normal_optimized_decoded_json_equal": true,
+      "note": "05-knowledge/results/arithmetic_seams_20260921_dynamics.md",
+      "script": "04-computation/experiments/arithmetic_seams_20260921_dynamics.py",
+      "status": "PASS"
+    },
+    "operations": {
+      "certificate": "04-computation/experiments/arithmetic_seams_20260921_operations.json",
+      "decoded_json_sha256": "d3bf12a371317c9e4aaa555a4e7a0ae8f165fc69ea26d5dc2c3a9f75b4462f24",
+      "embedded_raw_source_hash_fields_checked": [],
+      "exact_universes": {
+        "clique_sizes": [
+          2,
+          8
+        ],
+        "graph_cutoffs": [
+          1,
+          160
+        ],
+        "inverse_fibre_gaps": [
+          1,
+          12
+        ],
+        "inverse_fibre_gcd_source_indices": [
+          0,
+          12
+        ],
+        "inverse_fibre_indices": [
+          0,
+          24
+        ],
+        "inverse_fibre_odd_starts": [
+          1,
+          199
+        ],
+        "quotient_A_B": [
+          1,
+          20
+        ],
+        "quotient_x": [
+          0,
+          199
+        ],
+        "scaling_moduli": [
+          1,
+          60
+        ],
+        "scaling_multipliers": [
+          2,
+          30
+        ],
+        "semiring_variables": [
+          -1,
+          12
+        ]
+      },
+      "lane_checks": null,
+      "lane_status": "PASS",
+      "normal_optimized_decoded_json_equal": true,
+      "note": "05-knowledge/results/arithmetic_seams_20260921_operations.md",
+      "script": "04-computation/experiments/arithmetic_seams_20260921_operations.py",
+      "status": "PASS"
+    },
+    "primes": {
+      "certificate": "04-computation/experiments/arithmetic_seams_20260921_primes.json",
+      "decoded_json_sha256": "37f9ed6b620d312ba12d7669f25bdf33c4c658d0e83813156778616452a22f4f",
+      "embedded_raw_source_hash_fields_checked": [
+        "source_sha256"
+      ],
+      "exact_universes": {
+        "declared_in_certificate": "04-computation/experiments/arithmetic_seams_20260921_primes.json",
+        "scope": "Use the finite ranges and full control lists in these certificate sections; no extrapolation.",
+        "sections": [
+          "Fermat_prime_decimal_clocks",
+          "checks",
+          "finite_prime_pool",
+          "first_composites",
+          "general_gcd",
+          "limitations",
+          "prime_power_clocks",
+          "primitive_parts",
+          "sharp_fifteen_window",
+          "status"
+        ]
+      },
+      "lane_checks": "PASS; explicit RuntimeError checks remain active under -O",
+      "lane_status": "FINITE-EXACT certificates; scoped universal proofs in the companion note",
+      "normal_optimized_decoded_json_equal": true,
+      "note": "05-knowledge/results/arithmetic_seams_20260921_primes.md",
+      "script": "04-computation/experiments/arithmetic_seams_20260921_primes.py",
+      "status": "PASS"
+    },
+    "tournaments": {
+      "certificate": "04-computation/experiments/arithmetic_seams_20260921_tournaments.json",
+      "decoded_json_sha256": "3463a13c9c0dcbd765e69b148050085575d61c761399ceb98484234c9f2d9fb7",
+      "embedded_raw_source_hash_fields_checked": [
+        "source_sha256"
+      ],
+      "exact_universes": {
+        "declared_in_certificate": "04-computation/experiments/arithmetic_seams_20260921_tournaments.json",
+        "scope": "Use the finite ranges and full control lists in these certificate sections; no extrapolation.",
+        "sections": [
+          "Fermat_subsequence",
+          "balanced_ten",
+          "checks",
+          "identities",
+          "limitations",
+          "n10_fundamental_cycle_length_counts",
+          "path_cubes",
+          "status",
+          "strong_families",
+          "substitution"
+        ]
+      },
+      "lane_checks": "PASS; explicit checks survive python -O",
+      "lane_status": "FINITE-EXACT; universal proofs and cited dependencies in note",
+      "normal_optimized_decoded_json_equal": true,
+      "note": "05-knowledge/results/arithmetic_seams_20260921_tournaments.md",
+      "script": "04-computation/experiments/arithmetic_seams_20260921_tournaments.py",
+      "status": "PASS"
+    }
+  },
+  "lean": {
+    "axioms": {
+      "ArithmeticSeams.augAdd_assoc": [
+        "propext",
+        "Quot.sound"
+      ],
+      "ArithmeticSeams.augAdd_comm": [
+        "propext",
+        "Quot.sound"
+      ],
+      "ArithmeticSeams.augAdd_diagonal": [
+        "propext",
+        "Quot.sound"
+      ],
+      "ArithmeticSeams.augAdd_has_no_identity": [
+        "propext",
+        "Quot.sound"
+      ],
+      "ArithmeticSeams.augMul_assoc": [
+        "propext",
+        "Quot.sound"
+      ],
+      "ArithmeticSeams.augMul_comm": [
+        "propext",
+        "Quot.sound"
+      ],
+      "ArithmeticSeams.augMul_diagonal": [
+        "propext",
+        "Quot.sound"
+      ],
+      "ArithmeticSeams.augMul_left_distrib": [
+        "propext",
+        "Quot.sound"
+      ],
+      "ArithmeticSeams.augMul_right_distrib": [
+        "propext",
+        "Quot.sound"
+      ],
+      "ArithmeticSeams.augMul_zero_left": [
+        "propext"
+      ],
+      "ArithmeticSeams.augMul_zero_right": [
+        "propext"
+      ],
+      "ArithmeticSeams.augPow_add": [
+        "propext",
+        "Quot.sound"
+      ],
+      "ArithmeticSeams.augPow_zero_base": [
+        "propext"
+      ],
+      "ArithmeticSeams.pointed_product_control": [],
+      "ArithmeticSeams.shift_augAdd": [
+        "propext",
+        "Quot.sound"
+      ],
+      "ArithmeticSeams.shift_augMul": [
+        "propext",
+        "Quot.sound"
+      ],
+      "ArithmeticSeams.shift_augPow": [
+        "propext",
+        "Quot.sound"
+      ],
+      "ArithmeticSeams.shift_hits_exactly_positive": [
+        "propext",
+        "Quot.sound"
+      ],
+      "ArithmeticSeams.shift_injective": [
+        "propext",
+        "Quot.sound"
+      ],
+      "ArithmeticSeams.shift_positive": [
+        "propext",
+        "Quot.sound"
+      ]
+    },
+    "external_packages": [],
+    "lean_version": "Lean (version 4.30.0, x86_64-w64-windows-gnu, commit d024af099ca4bf2c86f649261ebf59565dc8c622, Release)",
+    "log": "04-computation/lean/ArithmeticSeams/verification.log",
+    "report": "04-computation/lean/ArithmeticSeams/verification.json",
+    "root_import": "ArithmeticSeams",
+    "scope": "Natural augmented arithmetic and shift conjugacy; no additive identity on Nat",
+    "source_hashes_rechecked": true,
+    "status": "PASS",
+    "theorems_audited": 20
+  },
+  "manifest_self_hash": "Excluded to avoid a circular hash; the master verifier source is pinned.",
+  "new_sphere_theorem_proved": false,
+  "scope": "Finite exact replay of four arithmetic-seams lanes and the shifted-arithmetic Lean root.",
+  "started_utc": "2026-09-22T03:14:47+00:00",
+  "status": "PASS",
+  "synthesis_present_at_invocation": true
+}

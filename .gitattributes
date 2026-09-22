@@ -146,3 +146,8 @@ scripts/*.ps1 text eol=crlf
 # Continuing synthesis15: preserve exact frozen LF bytes across hosts.
 04-computation/continuing15_20260909_* text eol=lf
 05-knowledge/results/continuing15_20260909_* text eol=lf
+
+# Arithmetic seams: preserve exact replay and Lean audit bytes across hosts.
+04-computation/experiments/arithmetic_seams_20260921_* text eol=lf
+05-knowledge/results/arithmetic_seams_20260921_* text eol=lf
+04-computation/lean/ArithmeticSeams/** text eol=lf

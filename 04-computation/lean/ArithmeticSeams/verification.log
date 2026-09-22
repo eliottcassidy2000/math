@@ -1,0 +1,35 @@
+$ lean --version
+Lean (version 4.30.0, x86_64-w64-windows-gnu, commit d024af099ca4bf2c86f649261ebf59565dc8c622, Release)
+exit_code=0
+
+$ lake clean
+exit_code=0
+
+$ lake build
+✔ [2/4] Built ArithmeticSeams.Basic (877ms)
+✔ [3/4] Built ArithmeticSeams (798ms)
+Build completed successfully (4 jobs).
+exit_code=0
+
+$ lake env lean AxiomAudit.lean
+'ArithmeticSeams.shift_injective' depends on axioms: [propext, Quot.sound]
+'ArithmeticSeams.shift_positive' depends on axioms: [propext, Quot.sound]
+'ArithmeticSeams.shift_hits_exactly_positive' depends on axioms: [propext, Quot.sound]
+'ArithmeticSeams.shift_augAdd' depends on axioms: [propext, Quot.sound]
+'ArithmeticSeams.shift_augMul' depends on axioms: [propext, Quot.sound]
+'ArithmeticSeams.augAdd_comm' depends on axioms: [propext, Quot.sound]
+'ArithmeticSeams.augAdd_assoc' depends on axioms: [propext, Quot.sound]
+'ArithmeticSeams.augMul_comm' depends on axioms: [propext, Quot.sound]
+'ArithmeticSeams.augMul_assoc' depends on axioms: [propext, Quot.sound]
+'ArithmeticSeams.augMul_left_distrib' depends on axioms: [propext, Quot.sound]
+'ArithmeticSeams.augMul_right_distrib' depends on axioms: [propext, Quot.sound]
+'ArithmeticSeams.augMul_zero_left' depends on axioms: [propext]
+'ArithmeticSeams.augMul_zero_right' depends on axioms: [propext]
+'ArithmeticSeams.augAdd_has_no_identity' depends on axioms: [propext, Quot.sound]
+'ArithmeticSeams.augAdd_diagonal' depends on axioms: [propext, Quot.sound]
+'ArithmeticSeams.augMul_diagonal' depends on axioms: [propext, Quot.sound]
+'ArithmeticSeams.shift_augPow' depends on axioms: [propext, Quot.sound]
+'ArithmeticSeams.augPow_add' depends on axioms: [propext, Quot.sound]
+'ArithmeticSeams.augPow_zero_base' depends on axioms: [propext]
+'ArithmeticSeams.pointed_product_control' does not depend on any axioms
+exit_code=0

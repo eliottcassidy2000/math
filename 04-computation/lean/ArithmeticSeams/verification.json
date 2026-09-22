@@ -1,0 +1,93 @@
+{
+  "axioms": {
+    "ArithmeticSeams.augAdd_assoc": [
+      "propext",
+      "Quot.sound"
+    ],
+    "ArithmeticSeams.augAdd_comm": [
+      "propext",
+      "Quot.sound"
+    ],
+    "ArithmeticSeams.augAdd_diagonal": [
+      "propext",
+      "Quot.sound"
+    ],
+    "ArithmeticSeams.augAdd_has_no_identity": [
+      "propext",
+      "Quot.sound"
+    ],
+    "ArithmeticSeams.augMul_assoc": [
+      "propext",
+      "Quot.sound"
+    ],
+    "ArithmeticSeams.augMul_comm": [
+      "propext",
+      "Quot.sound"
+    ],
+    "ArithmeticSeams.augMul_diagonal": [
+      "propext",
+      "Quot.sound"
+    ],
+    "ArithmeticSeams.augMul_left_distrib": [
+      "propext",
+      "Quot.sound"
+    ],
+    "ArithmeticSeams.augMul_right_distrib": [
+      "propext",
+      "Quot.sound"
+    ],
+    "ArithmeticSeams.augMul_zero_left": [
+      "propext"
+    ],
+    "ArithmeticSeams.augMul_zero_right": [
+      "propext"
+    ],
+    "ArithmeticSeams.augPow_add": [
+      "propext",
+      "Quot.sound"
+    ],
+    "ArithmeticSeams.augPow_zero_base": [
+      "propext"
+    ],
+    "ArithmeticSeams.pointed_product_control": [],
+    "ArithmeticSeams.shift_augAdd": [
+      "propext",
+      "Quot.sound"
+    ],
+    "ArithmeticSeams.shift_augMul": [
+      "propext",
+      "Quot.sound"
+    ],
+    "ArithmeticSeams.shift_augPow": [
+      "propext",
+      "Quot.sound"
+    ],
+    "ArithmeticSeams.shift_hits_exactly_positive": [
+      "propext",
+      "Quot.sound"
+    ],
+    "ArithmeticSeams.shift_injective": [
+      "propext",
+      "Quot.sound"
+    ],
+    "ArithmeticSeams.shift_positive": [
+      "propext",
+      "Quot.sound"
+    ]
+  },
+  "external_packages": [],
+  "lean_version": "Lean (version 4.30.0, x86_64-w64-windows-gnu, commit d024af099ca4bf2c86f649261ebf59565dc8c622, Release)",
+  "root_import": "ArithmeticSeams",
+  "scope": "Natural augmented arithmetic and shift conjugacy; no additive identity on Nat",
+  "sha256": {
+    "ArithmeticSeams.lean": "6b520a9b10b7aab589c94a7ae84cf9606570f941cd2e97462bab9e99fbfc8e08",
+    "ArithmeticSeams/Basic.lean": "adaed5fafc84ace23472b5e037854a92ae1c05f3827983a436e48ec73b8c5734",
+    "AxiomAudit.lean": "e6a4d60dc82d9dfc17b40920996040740809eb31c86bfd3a2f53099deec17710",
+    "lake-manifest.json": "71f6b1b058dc31635d1dc9890d860ff56094fa3cd7de17a8bf04398b82783463",
+    "lakefile.toml": "1993abe96bff51823a7a945694f7bb282d0a49d7520a4ba61d56cb4dbe84b8bc",
+    "lean-toolchain": "54727eec5cba149c18842e6deb5c41b369d66455c93ce135d7d5347c782b2325",
+    "verify.py": "3c6c1cf29ee23c11183b54dff1e6f2f8ea849be71199c2098e8372be4ac36751"
+  },
+  "status": "PASS",
+  "theorems_audited": 20
+}

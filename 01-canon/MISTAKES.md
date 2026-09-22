@@ -9,6 +9,36 @@ Format per entry:
 - Why it was wrong
 - The correct framing
 
+## 2026-09-21 Arithmetic seams -- roots, periods, and graph shadows
+
+- **MISSING root:** with N=(A+1)(B+1), the proposed polynomial
+  T(A)+T(B)+T(AB)+A(B^2-1)+B(A^2-1) equals T(N-2), not T(N-1).
+  Its strongest repair is exact deletion of the distinguished root star,
+  containing N-1 edges. A=B=1 already gives3 rather than6.
+- **LOST cycle interactions:** nine Hamiltonian-path edges leave36 free
+  chords on ten vertices, not36 directed triangles. The fundamental
+  cycles have lengths3 through10. The interval and endpoint-reversal
+  families have the same score multiset and eight triangles but193 and257
+  Hamiltonian paths. Preserve full odd-cycle overlaps or a valid substitute.
+- **MIXED prime predicates:** 333333331=17*19607843 and
+  4294967297=641*6700417 are composite but introduce only new prime
+  factors in their respective sequences. The Mersenne term63 introduces
+  no new prime; prime-power9 nevertheless has order6 for base2.
+- **WRONG ambient complement / embedding:** squaring arcs complement the
+  multiplicand shadow inside proper divisibility, not all ascending pairs;
+  (2,3) is the minimal missing cofactor witness. Both full operation graphs
+  contain arbitrarily large cliques, so an incidence array is not a planar
+  graph embedding. Restoring the Euclidean remainder repairs the address.
+- **LOST lift sheet:** B^3=-I gives six vectors but only three projective
+  points. The added reflection yields S_2 x S_3 and reverses arrows; it
+  does not create a rational six-cycle or identify an unspecified sphere
+  construction. The squaring-deletion forest also needs isolated vertex1
+  in addition to nonsquare roots at least2.
+- **Repair and remaining question:** see the
+  [arithmetic seams synthesis](../05-knowledge/results/arithmetic_seams_20260921_synthesis.md).
+  All corrected statements have explicit maps and retained coordinates;
+  none supplies the missing universal Collatz descent implication.
+
 ## 2026-09-21 Collatz arithmetic guards -- false reset and mixed clocks
 
 - **REFUTED universal mod-nine valve:** 23->35->53->5 has exact word

@@ -1,0 +1,158 @@
+{
+  "Mersenne_diagonal_from_zero": [
+    0,
+    1,
+    3,
+    7,
+    15,
+    31,
+    63,
+    127,
+    255,
+    511,
+    1023,
+    2047,
+    4095,
+    8191,
+    16383,
+    32767,
+    65535
+  ],
+  "explicit_nonplanarity_witnesses": [
+    {
+      "graph": "additive",
+      "left": [
+        1,
+        2,
+        4
+      ],
+      "right": [
+        3,
+        5,
+        6
+      ]
+    },
+    {
+      "graph": "multiplicative",
+      "left": [
+        1,
+        2,
+        3
+      ],
+      "right": [
+        6,
+        12,
+        18
+      ]
+    }
+  ],
+  "global_collatz_convergence_proved": false,
+  "graph_edge_counts": [
+    {
+      "N": 1,
+      "additive_edges": 0,
+      "multiplicative_edges": 0
+    },
+    {
+      "N": 2,
+      "additive_edges": 0,
+      "multiplicative_edges": 1
+    },
+    {
+      "N": 5,
+      "additive_edges": 8,
+      "multiplicative_edges": 4
+    },
+    {
+      "N": 6,
+      "additive_edges": 12,
+      "multiplicative_edges": 7
+    },
+    {
+      "N": 10,
+      "additive_edges": 40,
+      "multiplicative_edges": 15
+    },
+    {
+      "N": 18,
+      "additive_edges": 144,
+      "multiplicative_edges": 37
+    },
+    {
+      "N": 40,
+      "additive_edges": 760,
+      "multiplicative_edges": 113
+    },
+    {
+      "N": 80,
+      "additive_edges": 3120,
+      "multiplicative_edges": 281
+    },
+    {
+      "N": 160,
+      "additive_edges": 12640,
+      "multiplicative_edges": 671
+    }
+  ],
+  "inverse_fibre_gcd_checks": 15600,
+  "inverse_fibre_scope": "Siblings with a common odd Collatz image; not consecutive forward iterates.",
+  "modular_fixed_point_count": "gcd(multiplier-1,modulus)",
+  "scope": "Exact finite controls for proved operation identities",
+  "shifted_squaring_from_one": [
+    1,
+    3,
+    15,
+    255,
+    65535,
+    4294967295,
+    18446744073709551615
+  ],
+  "status": "PASS",
+  "tile_interpretation": "Parent-pair grid is complete; multiplicative arc coordinates have density zero.",
+  "universes": {
+    "clique_sizes": [
+      2,
+      8
+    ],
+    "graph_cutoffs": [
+      1,
+      160
+    ],
+    "inverse_fibre_gaps": [
+      1,
+      12
+    ],
+    "inverse_fibre_gcd_source_indices": [
+      0,
+      12
+    ],
+    "inverse_fibre_indices": [
+      0,
+      24
+    ],
+    "inverse_fibre_odd_starts": [
+      1,
+      199
+    ],
+    "quotient_A_B": [
+      1,
+      20
+    ],
+    "quotient_x": [
+      0,
+      199
+    ],
+    "scaling_moduli": [
+      1,
+      60
+    ],
+    "scaling_multipliers": [
+      2,
+      30
+    ],
+    "semiring_variables": [
+      -1,
+      12
+    ]
+  }
+}

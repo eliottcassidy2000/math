@@ -1,5 +1,7 @@
 # Script Results Index
 
+- [Arithmetic seams](arithmetic_seams_20260921_synthesis.md): **PROVED scoped / VERIFIED Lean arithmetic.** Fermat tournament path counts; sharp fifteen-term coprimality; Fermat-prime decimal clocks; dihedral three-cycle lifts; pointed-product and remainder repairs. [Manifest](arithmetic_seams_20260921_manifest.json). Global Collatz convergence remains OPEN.
+
 - [Collatz guard extensions](collatz_guards_20260921_synthesis.md): **PROVED scoped / VERIFIED Lean reductions.** Irrational reset density; no bounded discrepancy; sharp squarefree word obstructions. Global convergence OPEN. [Manifest](collatz_guards_20260921_manifest.json).
 
 - [Collatz blueprint audit](collatz_blueprint_20260921_synthesis.md): **PROVED scoped / VERIFIED Lean reductions.** Guarded affine words and energy obstructions; global convergence OPEN.

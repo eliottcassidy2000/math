@@ -1,0 +1,430 @@
+{
+  "Fermat_subsequence": [
+    {
+      "hamilton_paths_from_proved_formula": 3,
+      "r": 0,
+      "tournament_order": 3
+    },
+    {
+      "hamilton_paths_from_proved_formula": 5,
+      "r": 1,
+      "tournament_order": 4
+    },
+    {
+      "hamilton_paths_from_proved_formula": 17,
+      "r": 2,
+      "tournament_order": 6
+    },
+    {
+      "hamilton_paths_from_proved_formula": 257,
+      "r": 3,
+      "tournament_order": 10
+    },
+    {
+      "hamilton_paths_from_proved_formula": 65537,
+      "r": 4,
+      "tournament_order": 18
+    },
+    {
+      "hamilton_paths_from_proved_formula": 4294967297,
+      "r": 5,
+      "tournament_order": 34
+    }
+  ],
+  "balanced_ten": {
+    "construction": "cyclic regular tournament11 restricted to vertices0..9",
+    "directed_triangles": 40,
+    "scores": [
+      4,
+      4,
+      4,
+      4,
+      4,
+      5,
+      5,
+      5,
+      5,
+      5
+    ]
+  },
+  "checks": "PASS; explicit checks survive python -O",
+  "identities": {
+    "A_B_universe": [
+      0,
+      20
+    ],
+    "pairs_checked": 441,
+    "smallest_positive_hostile": {
+      "A": 1,
+      "B": 1,
+      "claimed_left": 6,
+      "proposed_right": 3
+    }
+  },
+  "limitations": [
+    "No arithmetic pairwise orientation inferred from scalar labels",
+    "No Collatz convergence claim",
+    "No primality sufficiency claim",
+    "No enumeration of all 2^36 order10 path completions"
+  ],
+  "n10_fundamental_cycle_length_counts": {
+    "3": 8,
+    "4": 7,
+    "5": 6,
+    "6": 5,
+    "7": 4,
+    "8": 3,
+    "9": 2,
+    "10": 1
+  },
+  "path_cubes": {
+    "fixed_path_cube_universe": "n=3..7, every free-chord bit pattern",
+    "permutation_HP_cross_check": "all fixed-path cubes n=3..5",
+    "rows": [
+      {
+        "completions": 2,
+        "free_chords": 1,
+        "n": 3,
+        "triangle_histogram": {
+          "0": 1,
+          "1": 1
+        }
+      },
+      {
+        "completions": 8,
+        "free_chords": 3,
+        "n": 4,
+        "triangle_histogram": {
+          "0": 1,
+          "1": 2,
+          "2": 5
+        }
+      },
+      {
+        "completions": 64,
+        "free_chords": 6,
+        "n": 5,
+        "triangle_histogram": {
+          "0": 1,
+          "1": 3,
+          "2": 10,
+          "3": 18,
+          "4": 29,
+          "5": 3
+        }
+      },
+      {
+        "completions": 1024,
+        "free_chords": 10,
+        "n": 6,
+        "triangle_histogram": {
+          "0": 1,
+          "1": 4,
+          "2": 16,
+          "3": 36,
+          "4": 122,
+          "5": 108,
+          "6": 344,
+          "7": 236,
+          "8": 157
+        }
+      },
+      {
+        "completions": 32768,
+        "free_chords": 15,
+        "n": 7,
+        "triangle_histogram": {
+          "0": 1,
+          "1": 5,
+          "2": 23,
+          "3": 64,
+          "4": 215,
+          "5": 441,
+          "6": 1141,
+          "7": 1672,
+          "8": 3399,
+          "9": 4423,
+          "10": 7321,
+          "11": 5528,
+          "12": 6241,
+          "13": 2203,
+          "14": 91
+        }
+      }
+    ],
+    "total_completions": 33866
+  },
+  "source_sha256": "100ea237be3fb8a1b823bf178be9b2f17c56812531c1570cc77c56515ee96dba",
+  "status": "FINITE-EXACT; universal proofs and cited dependencies in note",
+  "strong_families": [
+    {
+      "all_backward_chords": {
+        "cycle_counts": {
+          "3": 1
+        },
+        "hamilton_paths": 3,
+        "total_cycles": 1
+      },
+      "n": 3,
+      "shared_scores": [
+        1,
+        1,
+        1
+      ],
+      "single_backward_endpoint": {
+        "cycle_counts": {
+          "3": 1
+        },
+        "hamilton_paths": 3,
+        "total_cycles": 1
+      }
+    },
+    {
+      "all_backward_chords": {
+        "cycle_counts": {
+          "3": 2,
+          "4": 1
+        },
+        "hamilton_paths": 5,
+        "total_cycles": 3
+      },
+      "n": 4,
+      "shared_scores": [
+        1,
+        1,
+        2,
+        2
+      ],
+      "single_backward_endpoint": {
+        "cycle_counts": {
+          "3": 2,
+          "4": 1
+        },
+        "hamilton_paths": 5,
+        "total_cycles": 3
+      }
+    },
+    {
+      "all_backward_chords": {
+        "cycle_counts": {
+          "3": 3,
+          "4": 2,
+          "5": 1
+        },
+        "hamilton_paths": 9,
+        "total_cycles": 6
+      },
+      "n": 5,
+      "shared_scores": [
+        1,
+        1,
+        2,
+        3,
+        3
+      ],
+      "single_backward_endpoint": {
+        "cycle_counts": {
+          "3": 3,
+          "4": 3,
+          "5": 1
+        },
+        "hamilton_paths": 9,
+        "total_cycles": 7
+      }
+    },
+    {
+      "all_backward_chords": {
+        "cycle_counts": {
+          "3": 4,
+          "4": 3,
+          "5": 2,
+          "6": 1
+        },
+        "hamilton_paths": 17,
+        "total_cycles": 10
+      },
+      "n": 6,
+      "shared_scores": [
+        1,
+        1,
+        2,
+        3,
+        4,
+        4
+      ],
+      "single_backward_endpoint": {
+        "cycle_counts": {
+          "3": 4,
+          "4": 6,
+          "5": 4,
+          "6": 1
+        },
+        "hamilton_paths": 17,
+        "total_cycles": 15
+      }
+    },
+    {
+      "all_backward_chords": {
+        "cycle_counts": {
+          "3": 5,
+          "4": 4,
+          "5": 3,
+          "6": 2,
+          "7": 1
+        },
+        "hamilton_paths": 31,
+        "total_cycles": 15
+      },
+      "n": 7,
+      "shared_scores": [
+        1,
+        1,
+        2,
+        3,
+        4,
+        5,
+        5
+      ],
+      "single_backward_endpoint": {
+        "cycle_counts": {
+          "3": 5,
+          "4": 10,
+          "5": 10,
+          "6": 5,
+          "7": 1
+        },
+        "hamilton_paths": 33,
+        "total_cycles": 31
+      }
+    },
+    {
+      "all_backward_chords": {
+        "cycle_counts": {
+          "3": 6,
+          "4": 5,
+          "5": 4,
+          "6": 3,
+          "7": 2,
+          "8": 1
+        },
+        "hamilton_paths": 57,
+        "total_cycles": 21
+      },
+      "n": 8,
+      "shared_scores": [
+        1,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        6
+      ],
+      "single_backward_endpoint": {
+        "cycle_counts": {
+          "3": 6,
+          "4": 15,
+          "5": 20,
+          "6": 15,
+          "7": 6,
+          "8": 1
+        },
+        "hamilton_paths": 65,
+        "total_cycles": 63
+      }
+    },
+    {
+      "all_backward_chords": {
+        "cycle_counts": {
+          "3": 7,
+          "4": 6,
+          "5": 5,
+          "6": 4,
+          "7": 3,
+          "8": 2,
+          "9": 1
+        },
+        "hamilton_paths": 105,
+        "total_cycles": 28
+      },
+      "n": 9,
+      "shared_scores": [
+        1,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        7
+      ],
+      "single_backward_endpoint": {
+        "cycle_counts": {
+          "3": 7,
+          "4": 21,
+          "5": 35,
+          "6": 35,
+          "7": 21,
+          "8": 7,
+          "9": 1
+        },
+        "hamilton_paths": 129,
+        "total_cycles": 127
+      }
+    },
+    {
+      "all_backward_chords": {
+        "cycle_counts": {
+          "3": 8,
+          "4": 7,
+          "5": 6,
+          "6": 5,
+          "7": 4,
+          "8": 3,
+          "9": 2,
+          "10": 1
+        },
+        "hamilton_paths": 193,
+        "total_cycles": 36
+      },
+      "n": 10,
+      "shared_scores": [
+        1,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        8
+      ],
+      "single_backward_endpoint": {
+        "cycle_counts": {
+          "3": 8,
+          "4": 28,
+          "5": 56,
+          "6": 70,
+          "7": 56,
+          "8": 28,
+          "9": 8,
+          "10": 1
+        },
+        "hamilton_paths": 257,
+        "total_cycles": 255
+      }
+    }
+  ],
+  "substitution": {
+    "C3_C3": {
+      "directed_triangles": 30,
+      "false_naive_product": 81,
+      "hamilton_paths": 3159,
+      "vertices": 9
+    },
+    "triangle_cases_checked": 16
+  }
+}

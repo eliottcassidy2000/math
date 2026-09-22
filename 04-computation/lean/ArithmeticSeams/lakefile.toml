@@ -1,0 +1,6 @@
+name = "ArithmeticSeams"
+version = "0.1.0"
+defaultTargets = ["ArithmeticSeams"]
+
+[[lean_lib]]
+name = "ArithmeticSeams"
