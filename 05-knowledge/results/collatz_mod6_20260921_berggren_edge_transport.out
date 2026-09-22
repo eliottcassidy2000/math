@@ -1,0 +1,183 @@
+
+==============================================================================
+Lane berggren_edge_transport: Berggren children of Collatz-family edges
+==============================================================================
+
+### S1  PROVED: Berggren children in root coordinates (s,t)=(m+n,m-n)
+  B1: Euclid (m,n)->(2*m - n, m)  ==  roots (s,t)->(3*m - n, m - n)
+  B2: Euclid (m,n)->(2*m + n, m)  ==  roots (s,t)->(3*m + n, m + n)
+  B3: Euclid (m,n)->(m + 2*n, n)  ==  roots (s,t)->(m + 3*n, m + n)
+  matrices on (s,t): B1=[[1,2],[0,1]] det 1, B2=[[2,1],[1,0]] det -1, B3=[[2,-1],[1,0]] det 1
+  numeric check on all primitive Euclid pairs m<=60: 2211 children agree, all odd coprime s>t>=1
+  (THM-3756 (25): L=B1, M=B2, R=B3 on the odd roots (q,d)=(2r-1,2s-1); CITED, not re-proved)
+
+### S2  PROVED: transport table (a,b,k) -> child edge, symbolic identity in x
+  case A (y>x): s=y,t=x
+    B1: child ((2*K*x + a*x + b)/K, x) ; edge x -> u=(2*K*x + a*x + b)/K ; family (a',b',k')=(2*K + a, b, k)  [x-type]
+    B2: child ((K*x + 2*a*x + 2*b)/K, (a*x + b)/K) ; edge u=(K*x + 2*a*x + 2*b)/K -> y with  a*u + b = (K + 2*a)*y   [y-type; E-edge (a,b,log2 M) iff M is a power of two]
+    B3: child ((-K*x + 2*a*x + 2*b)/K, (a*x + b)/K) ; edge u=(-K*x + 2*a*x + 2*b)/K -> y with  a*u - b = (-K + 2*a)*y   [y-type; E-edge (a,-b,log2 M) iff M is a power of two]
+  case B (y<x): s=x,t=y
+    B1: child ((K*x + 2*a*x + 2*b)/K, (a*x + b)/K) ; edge u=(K*x + 2*a*x + 2*b)/K -> y with  a*u + b = (K + 2*a)*y   [y-type; E-edge (a,b,log2 M) iff M is a power of two]
+    B2: child ((2*K*x + a*x + b)/K, x) ; edge x -> u=(2*K*x + a*x + b)/K ; family (a',b',k')=(2*K + a, b, k)  [x-type]
+    B3: child ((2*K*x - a*x - b)/K, x) ; edge x -> u=(2*K*x - a*x - b)/K ; family (a',b',k')=(2*K - a, -b, k)  [x-type]
+  Both cases give the same three unordered child pairs {x,y+2x},{x+2y,y},{2y-x or 2x-y, y or x};
+  x-type children keep the SOURCE x and shift the multiplier by +-2^(k+1); y-type children keep
+  the TARGET y and the multiplier a, and are E-edges iff M = +-2^k + 2a is a positive power of two.
+  numeric transport identities verified on 20233 edges (a<=15 odd, |b|<=15 odd, x<400): all pass
+
+  lead's table for a=3, b=1, k=1 (x=3,7,...,31), children in root coordinates:
+       x      y |        B1 pair family                 |        B2 pair family                 |        B3 pair family                
+       3      5 |        (11, 3) x->11 in (7,1,1)       |        (13, 5) 13->5 in (3,1,3)       |         (7, 5) 7->5 in (3,-1,2)      
+       7     11 |        (25, 7) x->25 in (7,1,1)       |       (29, 11) 29->11 in (3,1,3)      |       (15, 11) 15->11 in (3,-1,2)    
+      11     17 |       (39, 11) x->39 in (7,1,1)       |       (45, 17) 45->17 in (3,1,3)      |       (23, 17) 23->17 in (3,-1,2)    
+      15     23 |       (53, 15) x->53 in (7,1,1)       |       (61, 23) 61->23 in (3,1,3)      |       (31, 23) 31->23 in (3,-1,2)    
+      19     29 |       (67, 19) x->67 in (7,1,1)       |       (77, 29) 77->29 in (3,1,3)      |       (39, 29) 39->29 in (3,-1,2)    
+      23     35 |       (81, 23) x->81 in (7,1,1)       |       (93, 35) 93->35 in (3,1,3)      |       (47, 35) 47->35 in (3,-1,2)    
+      27     41 |       (95, 27) x->95 in (7,1,1)       |      (109, 41) 109->41 in (3,1,3)     |       (55, 41) 55->41 in (3,-1,2)    
+      31     47 |      (109, 31) x->109 in (7,1,1)      |      (125, 47) 125->47 in (3,1,3)     |       (63, 47) 63->47 in (3,-1,2)    
+
+### S3  PROVED: which children keep the multiplier
+  x-type: a' = a + 2^(k+1) > a, or a' = 2^(k+1) - a = a iff a = 2^k (impossible, a odd, k>=1).
+  So an x-type child NEVER keeps the multiplier.  y-type: a' = a always; E-edge iff
+  M = 2^k + 2a (alpha=+1) or M = 2a - 2^k (alpha=-1) is a positive power of two.
+  k=1: M = 2(a+1) or 2(a-1): power of two iff a = 2^j - 1 (alpha=+1) or a = 2^j + 1 (alpha=-1).
+  k>=2: 2^k+2a = 2(2^(k-1)+a) has odd part 2^(k-1)+a >= 3, never a power of two;
+        2a-2^k = 2(a-2^(k-1)) is a positive power of two iff a = 2^(k-1)+1 (then M=2, k'=1).
+  Exhaustive table for a=3, k<=12:
+  (k, alpha, M) with M a positive power of two: [(1, 1, 8), (1, -1, 4), (2, -1, 2)]
+  => for a=3: k=1: B2 -> (3, b, 3) and B3 -> (3, -b, 2) [y>x case, s=y]; k=1 with y<x (needs b<=-3):
+     B1 -> (3, b, 3); k=2 with y>x (needs b > x >= 1, so b>=3): B3 -> (3, -b, 1).  Nothing else.
+  SCOPE: negative multipliers 2^(k+1)-a<0 (x-type, y<x) need b<0 with |b|>(a-2^k)x; M=-2 (a=2^(k-1)-1)
+         would be multiplier -a.  Both are outside the positive-multiplier families and are not counted.
+
+### S4  PROVED: for a=3, b=+-1 the orientation is the valuation: y>x iff k=1
+  edges with odd source x<=10^5, b=+-1: 99998 ; violations of (y>x <=> k=1): 0
+  proof: k=1: y-x = (x+b)/2 > 0 for x>=3 (x=1,b=-1 is the fixed edge, excluded; x=1,b=1 gives k=2,y=1=x excluded);
+         k>=2: 2^k y = 3x+b <= 3x+1 < 4x <= 2^k x for x>=3, and x=1 only gives y=x.
+
+### S5  PROVED+FINITE-EXACT: complete list of Berggren children of (3,+-1) edges that are (3,+-1) edges
+  Any reading of a child pair (p,q), p>q, as a (3,b',j) edge is either p->q with j>=2 or q->p with j=1
+  (3p+b' = 2^j q < 2^j p forces j>=2; 3q+b' = 2^j p > 2^j q forces j=1).  Each reading is a linear
+  equation c*x = d after y=(3x+b)/2^k.  Identities (c=d=0) are the generic transport; c!=0 gives sporadic
+  solutions.  The bound k<=4, j<=k+2 is proved in the note (cone ratios); here k,j<=40 are solved exactly.
+  generic identities found (b, k, case, child, reading, b', j): [(1, 1, 'A', 'B2', 'p->q', 1, 3), (1, 1, 'A', 'B3', 'p->q', -1, 2), (1, 1, 'B', 'B1', 'p->q', 1, 3), (1, 2, 'A', 'B3', 'p->q', -1, 1), (-1, 1, 'A', 'B2', 'p->q', -1, 3), (-1, 1, 'A', 'B3', 'p->q', 1, 2), (-1, 1, 'B', 'B1', 'p->q', -1, 3), (-1, 2, 'A', 'B3', 'p->q', 1, 1)]
+  (the case-B k=1 identities need y<x at k=1 (x<-b) and the case-A k=2 identities need y>x at k=2 (x<b):
+   both are vacuous for b=+-1 by S4 and are the S3 rows k=1,alpha=+1 and k=2,alpha=-1 of general b)
+  sporadic solutions (x, y, b, k, child, child pair, reading src->tgt, b', j):
+    edge 3->1 in (3,-1,3): B1 child (5, 1) read as 5->1 in (3,1,4)
+    edge 3->1 in (3,-1,3): B3 child (5, 3) read as 3->5 in (3,1,1)
+    edge 3->5 in (3,1,1): B3 child (7, 5) read as 5->7 in (3,-1,1)
+    edge 7->5 in (3,-1,2): B2 child (19, 7) read as 19->7 in (3,-1,3)
+    edge 7->5 in (3,-1,2): B3 child (9, 7) read as 9->7 in (3,1,2)
+  exactly 5 sporadic readings (E1..E5), all with x<=7.
+  brute force over 4165 edges with max(x,y)<=5000: generic legal children 3332, sporadic 5
+  k=1 edges in that range: 1666 ; generic legal children = 2 per k=1 edge: 3332
+
+### S6  PROVED (from S3+S5): the legal sub-forest of the Berggren tree for (3,+-1)
+  A (3,+-1) k=1 edge x->y has exactly the two generic legal children (4x+b,y) in (3,b,3) and
+  (2x+b,y) in (3,-b,2); both are k>=2 edges, hence leaves, unless sporadic.  A k>=2 edge has no
+  legal child except the sporadic parents 7->5 (b=-1,k=2) and 3->1 (b=-1,k=3).
+  The claim 'depth <= 1 above every k=1 edge' is REFUTED by exactly one witness:
+  3->5 (b=1,k=1) -B3-> (7,5) = 5->7 (b=-1,k=1) -B2-> (19,7) = 19->7 (b=-1,k=3) [and -B3-> (9,7) = 9->7 (b=1,k=2)].
+  Corrected statement: every k=1 edge has exactly two legal children; they are leaves except (7,5),
+  which is the k=1 edge 5->7 with its own two leaf children.  So 3->5 is the only k=1 edge of depth 2,
+  every other k=1 edge has depth exactly 1, and the root cluster {(3,1),(5,1),(5,3),(13,5),(7,5),(19,7),(9,7)}
+  (a tree of depth 3 rooted at the Berggren root (3,1)) is the unique legal component of size > 3.
+  legal pairs with max<=2000: 1664 ; (min k over readings, number of legal children, tested directly) census:
+    k=1, legal children=2 : 666 pairs
+    k=2, legal children=0 : 498 pairs
+    k=3, legal children=0 : 249 pairs
+    k=3, legal children=2 : 1 pairs
+    k=4, legal children=0 : 125 pairs
+    k=5, legal children=0 : 63 pairs
+    k=6, legal children=0 : 31 pairs
+    k=7, legal children=0 : 15 pairs
+    k=8, legal children=0 : 8 pairs
+    k=9, legal children=0 : 4 pairs
+    k=10, legal children=0 : 2 pairs
+    k=11, legal children=0 : 1 pairs
+    k=12, legal children=0 : 1 pairs
+    cluster pair (3, 1) readings [(3, 1, -1, 3)] legal children [('B1', (5, 1)), ('B3', (5, 3))]
+    cluster pair (5, 1) readings [(5, 1, 1, 4)] legal children []
+    cluster pair (5, 3) readings [(3, 5, 1, 1)] legal children [('B2', (13, 5)), ('B3', (7, 5))]
+    cluster pair (13, 5) readings [(13, 5, 1, 3)] legal children []
+    cluster pair (7, 5) readings [(5, 7, -1, 1), (7, 5, -1, 2)] legal children [('B2', (19, 7)), ('B3', (9, 7))]
+    cluster pair (19, 7) readings [(19, 7, -1, 3)] legal children []
+    cluster pair (9, 7) readings [(9, 7, 1, 2)] legal children []
+
+### S7  PROVED: parent transport on the three THM-3756 cones
+  Inverse maps: s/t>3: B1^-1 (s,t)->(s-2t,t); 2<s/t<3: B2^-1 (s,t)->(t,s-2t); 1<s/t<2: B3^-1 (s,t)->(t,2t-s).
+  For a (3,b) edge with b=+-1 the cone is a function of k alone:
+    k=1 (s=y,t=x, y/x in (1,2)): parent (x,(x-b)/2) = the halving edge x->(x-b)/2 of E_{1,-b,1};
+      forward: (1,-b,1) -B3 (y<x, x-type)-> (2^2-1, b, 1) = (3,b,1).
+      Opus orientation (x-b)/2 -> x is a (3, b'', 1) edge with the affine law b'' = (x+3b)/2.
+    k=2 (s=x,t=y, x/y in (1,2)): parent (y,(x+b)/2) = the k=1 edge (x+b)/2 -> y of E_{3,-b,1} (inverse of B3).
+    k=3 (x/y in (2,3)): parent (y,(x-b)/4) = the k=1 edge (x-b)/4 -> y of E_{3,b,1} (inverse of B2 = inverse braid).
+    k>=4 (x/y>3): parent (x-2y,y) satisfies 3(x-2y)+b = (2^k-6) y, odd cofactor 2^(k-1)-3 >= 5: never an E_{3,.,.} edge by identity.
+  verified on all (3,+-1) edges with max(x,y)<=2000: (k,cone) counts {(1, 'C3'): 666, (2, 'C3'): 499, (3, 'C2'): 249, (3, 'root'): 1, (4, 'C1'): 125, (5, 'C1'): 63, (6, 'C1'): 31, (7, 'C1'): 15, (8, 'C1'): 8, (9, 'C1'): 4, (10, 'C1'): 2, (11, 'C1'): 1, (12, 'C1'): 1}
+  example 7->11 (b=1,k=1): parent (7,3); 7->3 in (1,-1,1): 7-1=6=2*3 ; 3->7 in (3,5,1): 9+5=14=2*7, b''=(7+3)/2=5
+  general inverse table (any odd a): the parent PAIR is unique (THM-3756 cones).  It is an identity
+  pre-image of (a,b,k) under S2 exactly when it reads as: (a-2^(k+1), b, k) [B1 of a y>x parent],
+  (a-2^(k+1), b, k) [B2 of a y<x parent], (2^(k+1)-a, -b, k) [B3 of a y<x parent] (x-type; needs the
+  retained coordinate to be the parent's source), or (a, +-b, k') with +-2^k' + 2a = 2^k (y-type).
+  Otherwise the parent is only a generalized edge a*u + b = 2^j*m*y with odd cofactor m>1 (k>=4 above).
+  symbolic inverse x-type identities verified for k<=5.
+
+### S8  FINITE-EXACT: census of coprime odd pairs s<=2000, all guards a<=15, |b|<=15
+  coprime odd pairs (s,t), t<s<=2000: 405432
+  total directed realizations (pair, orientation, a, b, k): 57837 ; pairs with >=1 realization: 54755 (13.51%)
+  histogram of realization counts per pair: {1: 52860, 2: 1415, 3: 256, 4: 103, 5: 43, 6: 18, 7: 22, 8: 8, 9: 8, 10: 3, 11: 4, 12: 2, 14: 5, 15: 1, 17: 1, 18: 1, 21: 1, 22: 1, 24: 1, 29: 1, 40: 1}
+  realizations per (a,b), a=3 row: {-15: 444, -13: 769, -11: 756, -9: 555, -7: 714, -5: 666, -3: 555, -1: 833, 1: 832, 3: 555, 5: 666, 7: 714, 9: 555, 11: 757, 13: 767, 15: 444}
+  realizations per a (summed over b): {1: 12685, 3: 10582, 5: 8253, 7: 6804, 9: 5817, 11: 5049, 13: 4516, 15: 4131}
+  children examined: 173511 ; identities hold on all; predicted child guard found in census: 37529 ;
+  predicted guard outside the census window (a'>15 or |b'|>15 or s'>2000): 73450 ; y-type with M not a power of two: 62532
+  (3,+-1) readings for pairs with s<=31:
+    (3, 1) : ['3->1 (3,-1,3)']
+    (5, 1) : ['5->1 (3,1,4)']
+    (5, 3) : ['3->5 (3,1,1)']
+    (7, 5) : ['7->5 (3,-1,2)', '5->7 (3,-1,1)']
+    (9, 7) : ['9->7 (3,1,2)']
+    (11, 1) : ['11->1 (3,-1,5)']
+    (11, 7) : ['7->11 (3,1,1)']
+    (13, 5) : ['13->5 (3,1,3)']
+    (13, 9) : ['9->13 (3,-1,1)']
+    (15, 11) : ['15->11 (3,-1,2)']
+    (17, 11) : ['11->17 (3,1,1)']
+    (17, 13) : ['17->13 (3,1,2)']
+    (19, 7) : ['19->7 (3,-1,3)']
+    (19, 13) : ['13->19 (3,-1,1)']
+    (21, 1) : ['21->1 (3,1,6)']
+    (23, 15) : ['15->23 (3,1,1)']
+    (23, 17) : ['23->17 (3,-1,2)']
+    (25, 17) : ['17->25 (3,-1,1)']
+    (25, 19) : ['25->19 (3,1,2)']
+    (27, 5) : ['27->5 (3,-1,4)']
+    (29, 11) : ['29->11 (3,1,3)']
+    (29, 19) : ['19->29 (3,1,1)']
+    (31, 21) : ['21->31 (3,-1,1)']
+    (31, 23) : ['31->23 (3,-1,2)']
+
+### S9  FINITE-EXACT: primitive triangles with hypotenuse <= 10^6 that are Collatz-family edges
+  primitive triangles (s>t odd coprime, (s^2+t^2)/2 <= 10^6): 159139
+  3x+1 : directed edges 507, distinct triangles 507 ; opus law C_edge*sqrt(X) = 0.5078*1000 = 507.8
+  3x-1 : directed edges 506, distinct triangles 505
+  union b=+-1: distinct triangles 1012 (directed 1013; overlap = triangles legal in both orientations/parameters: 1)
+  union |b|<=5: directed by b {-5: 406, -3: 337, -1: 506, 1: 507, 3: 338, 5: 404} ; distinct triangles 2483 = 1.560% of all primitive triangles
+
+### S10 PROVED: the inverse-fibre braid is a Berggren word
+  Fibre of the target y: x_k = (2^k y - b)/3 over the k of one parity class (2^k y = b mod 3).
+  x_{k+2} = 4 x_k + b = x_k + 2^k y.  For k>=2 (x_k > y): (x_{k+2}, y) = B1^(2^(k-1)) (x_k, y)
+  since B1^m (s,t) = (s+2mt, t) and 2^k y = 2*2^(k-1)*y.  For k=1 (y > x_1): (x_3, y) = B2 (y, x_1).
+  Hence k=1 -> k=2j+1 is the word B1^((4^j-4)/3) B2 (B2 first), and k0>=2 -> k0+2j is B1^((2^(k0+2j)-2^k0)/6).
+  The fibre is a subset of the B1-ray {(x,y): t=y fixed} at the B1-heights m_j = 2^(k0-1)(4^j-1)/3.
+  verified on 8002 fibre steps (y<=2001, k<=12, b=+-1).
+  lead's example: Euclid (9,2)=(s,t)(11,7): 7->11 k=1; (20,9)=(29,11): 29->11 k=3; (64,53)=(117,11): 117->11 k=5.
+  (29,11) -> (117,11) is B1^4, not a child (children of (29,11): [(51, 11), (69, 29), (47, 29)]).
+
+### S11 FINITE-EXACT+PROVED: consecutive orbit triangles are never parent/child (b=+1)
+  consecutive orbit-triangle pairs over odd starts <= 100000: 1849203 ; parent/child incidences: 0
+  proof sketch (note S11): the shared coordinate y must be the retained coordinate, so z in {x+2y, 2y-x}
+  or x in {z+2y, 2y+z, 2y-z}; with y=(3x+1)/2^k, z=(3y+1)/2^j each case is a linear equation whose only
+  positive odd solution is the fixed edge x=y=1.
+
+ALL CHECKS PASSED
