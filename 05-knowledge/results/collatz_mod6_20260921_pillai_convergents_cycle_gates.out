@@ -1,0 +1,382 @@
+==============================================================================
+S1. Continued fraction of alpha = log_2 3 (PARI/GP at 320 digits, cross-checked
+    by an independent Python decimal computation at 320 digits)
+==============================================================================
+partial quotients a_0..a_44:
+  [1, 1, 1, 2, 2, 3, 1, 5, 2, 23, 2, 2, 1, 1, 55, 1, 4, 3, 1, 1, 15, 1, 9, 2, 5, 7, 1, 1, 4, 8, 1, 11, 1, 20, 2, 1, 10, 1, 4, 1, 1, 1, 1, 1, 37]
+index: value  (index 0 is the integer part)
+  a_9 = 23
+  a_14 = 55
+  a_20 = 15
+  a_44 = 37
+NOTE (numerology flag): a_9=23 and a_14=55 are the two largest early
+  partial quotients (0-indexed); in 1-indexed counting they are the 10th
+  and 15th terms.  23 = 3n+1 reset residue (guards lane) and 55 = F_10 are
+  coincidences of small integers; no map from partial quotients to Collatz
+  residues or Fibonacci numbers is claimed.
+convergents p_n/q_n, n=0..14:
+  n= 0  1/1
+  n= 1  2/1
+  n= 2  3/2
+  n= 3  8/5
+  n= 4  19/12
+  n= 5  65/41
+  n= 6  84/53
+  n= 7  485/306
+  n= 8  1054/665
+  n= 9  24727/15601
+  n=10  50508/31867
+  n=11  125743/79335
+  n=12  176251/111202
+  n=13  301994/190537
+  n=14  16785921/10590737
+exact integer check |2^K-3^L|*L < 3^L on convergents with L <= 200000:
+  convergents checked exactly: 14 (indices 0..13)
+
+==============================================================================
+S2. Intermediate fractions (semiconvergents) and Delta = 2^K - 3^L
+==============================================================================
+clock  K/L      kind                          Delta=2^K-3^L (digits if long)   |Delta|/3^L
+      1/1     convergent n=0                   -1                               3.333e-01
+      2/1     convergent n=1                   1                                3.333e-01
+      3/2     convergent n=2                   -1                               1.111e-01
+      5/3     intermediate n=2 j=1/1 (extreme) 5                                1.852e-01
+      8/5     convergent n=3                   13                               5.350e-02
+     11/7     intermediate n=3 j=1/1 (extreme) -139                             6.356e-02
+     19/12    convergent n=4                   -7153                            1.346e-02
+     27/17    intermediate n=4 j=1/2 (extreme) 5077565                          3.932e-02
+     46/29    intermediate n=4 j=2/2 (extreme) 1738366812781                    2.533e-02
+     65/41    convergent n=5                   420491770248316829               1.153e-02
+     84/53    convergent n=6                   -40432553845953101497907         2.086e-03
+    149/94    intermediate n=6 j=1/4 (extreme) +(43 digits)                     9.419e-03
+    233/147   intermediate n=6 j=2/4           +(69 digits)                     7.313e-03
+    317/200   intermediate n=6 j=3/4           +(94 digits)                     5.212e-03
+    401/253   intermediate n=6 j=4/4 (extreme) +(119 digits)                    3.115e-03
+    485/306   convergent n=7                   +(144 digits)                    1.023e-03
+    569/359   intermediate n=7 j=1/1 (extreme) -(169 digits)                    1.065e-03
+   1054/665   convergent n=8                   -(313 digits)                    4.365e-05
+   1539/971   intermediate n=8 j=1/22 (extreme) +(461 digits)                    9.791e-04
+   2593/1636  intermediate n=8 j=2/22          +(778 digits)                    9.354e-04
+   3647/2301  intermediate n=8 j=3/22          +(1095 digits)                   8.917e-04
+   4701/2966  intermediate n=8 j=4/22          +(1413 digits)                   8.480e-04
+   5755/3631  intermediate n=8 j=5/22          +(1730 digits)                   8.043e-04
+   6809/4296  intermediate n=8 j=6/22          +(2047 digits)                   7.606e-04
+   7863/4961  intermediate n=8 j=7/22          +(2364 digits)                   7.169e-04
+   8917/5626  intermediate n=8 j=8/22          +(2682 digits)                   6.732e-04
+   9971/6291  intermediate n=8 j=9/22          +(2999 digits)                   6.296e-04
+  11025/6956  intermediate n=8 j=10/22         +(3316 digits)                   5.859e-04
+  12079/7621  intermediate n=8 j=11/22         +(3633 digits)                   5.422e-04
+  13133/8286  intermediate n=8 j=12/22         +(3951 digits)                   4.985e-04
+  14187/8951  intermediate n=8 j=13/22         +(4268 digits)                   4.548e-04
+  15241/9616  intermediate n=8 j=14/22         +(4585 digits)                   4.112e-04
+  16295/10281 intermediate n=8 j=15/22         +(4902 digits)                   3.675e-04
+  17349/10946 intermediate n=8 j=16/22         +(5220 digits)                   3.238e-04
+  18403/11611 intermediate n=8 j=17/22         +(5537 digits)                   2.802e-04
+  19457/12276 intermediate n=8 j=18/22         +(5854 digits)                   2.365e-04
+  20511/12941 intermediate n=8 j=19/22         +(6171 digits)                   1.928e-04
+  21565/13606 intermediate n=8 j=20/22         +(6488 digits)                   1.492e-04
+  22619/14271 intermediate n=8 j=21/22         +(6806 digits)                   1.055e-04
+  23673/14936 intermediate n=8 j=22/22 (extreme) +(7123 digits)                   6.185e-05
+  24727/15601 convergent n=9                   +(7439 digits)                   1.819e-05
+  25781/16266 intermediate n=9 j=1/1 (extreme) -(7757 digits)                   2.546e-05
+  50508/31867 convergent n=10                  -(15200 digits)                  7.265e-06
+  75235/47468 intermediate n=10 j=1/1 (extreme) +(22644 digits)                  1.093e-05
+  125743/79335 convergent n=11                  +(37847 digits)                  3.665e-06
+CHECK: 11/7 is the j=1 (and only) intermediate of family n=3 between 8/5 and 19/12: Delta=-139
+CHECK: the task's sequence 1,-1,5,13,-7153 = Delta at 2/1, 3/2, 5/3, 8/5, 19/12;
+       5/3 (Delta=5) and 11/7 (Delta=-139) are intermediates, not convergents;
+       1/1 (Delta=-1), 2/1, 3/2, 8/5, 19/12 are convergents.
+factorizations of |Delta| along convergents and intermediates with L <= 100, plus 485/306 (gp factor):
+  1/1  convergent  |Delta| = matrix(0,2)
+  2/1  convergent  |Delta| = matrix(0,2)
+  3/2  convergent  |Delta| = matrix(0,2)
+  5/3  intermediate  |Delta| = Mat([5, 1])
+  8/5  convergent  |Delta| = Mat([13, 1])
+  11/7  intermediate  |Delta| = Mat([139, 1])
+  19/12  convergent  |Delta| = [23, 1; 311, 1]
+  27/17  intermediate  |Delta| = [5, 1; 71, 1; 14303, 1]
+  46/29  intermediate  |Delta| = [39409, 1; 44110909, 1]
+  65/41  convergent  |Delta| = [19, 1; 29, 1; 17021, 1; 44835377399, 1]
+  84/53  convergent  |Delta| = [11, 1; 467, 1; 11979433, 1; 657030219467, 1]
+  149/94  intermediate  |Delta| = [7, 3; 30809, 1; 1765553, 1; 1009273943, 1; 353617911534038093791, 1]
+  485/306  convergent  |Delta| = [929, 1; 84958721, 1; 1437465479, 1; 46777127526357837196396057, 1; 19231970699168568692206159641463898527274405039282219231295668859629511743697206424938341838460889, 1]
+  (each row printed as gp's factor matrix [p, e; ...])
+
+==============================================================================
+S3. Legendre / Fatou-Grace placement of small power gaps (exact integers)
+==============================================================================
+For each L <= 400 take every K with |2^K - 3^L| < 3^L / L (at most one K for
+L >= 4) and classify the reduced fraction of K/L: convergent, intermediate
+(with j and whether j is extreme), or neither.  Three tiers of the hypothesis:
+  tier A: |Delta| <= 3^L/(4L)  -> PROVED to force a convergent (Legendre)
+  tier B: |Delta| <= 3^L/(2L)  -> PROVED to force |alpha-K/L| < 1/L^2, hence
+          convergent or extreme intermediate (Fatou-Grace, CITED)
+  tier C: |Delta| <  3^L/L     -> the task's hypothesis; only |alpha-K/L| <
+          2.9/L^2 follows, which is NOT enough for Fatou-Grace.
+hits with L <= 60 (K/L, Delta, tierA, tierB, class):
+    1/1   Delta=-1                     A=0 B=1  convergent n=0
+    2/1   Delta=1                      A=0 B=1  convergent n=1
+    3/2   Delta=-1                     A=1 B=1  convergent n=2
+    5/3   Delta=5                      A=0 B=0  intermediate n=2 j=1/1 extreme
+    6/4   Delta=-17                    A=0 B=0  convergent n=2 (x2)
+    8/5   Delta=13                     A=0 B=1  convergent n=3
+   11/7   Delta=-139                   A=0 B=1  intermediate n=3 j=1/1 extreme
+   19/12  Delta=-7153                  A=1 B=1  convergent n=4
+   27/17  Delta=5077565                A=0 B=0  intermediate n=4 j=1/2 extreme
+   38/24  Delta=-7551629537            A=0 B=0  convergent n=4 (x2)
+   46/29  Delta=1738366812781          A=0 B=0  intermediate n=4 j=2/2 extreme
+   65/41  Delta=420491770248316829     A=0 B=1  convergent n=5
+   84/53  Delta=-40432553845953101497907 A=1 B=1  convergent n=6
+total tier-C hits for L <= 400: 19
+tier-A hits: 3, all convergents (checked)
+tier-B hits: 11, all convergents or extreme intermediates (checked)
+tier-C hits that are NOT convergents and NOT extreme intermediates:
+   none for L <= 400
+tier-C hits classified NEITHER (neither convergent nor any intermediate): 0
+elementary inequality |log_2(1+e)| <= |e|/((1-|e|) ln 2) checked on a grid |e| < 0.25; max ratio 0.9999
+
+==============================================================================
+S4. Eliahou bridge: cycle min-element N forces the clock onto a convergent
+==============================================================================
+For a signed odd cycle at b=+-1 with all |n_i| >= N:  Product(3n_i+b)=2^K Product n_i
+gives 2^K/3^L = Product(1 + b/(3 n_i)), so |Delta|/3^L <= (1+1/(3N))^L - 1 (sign +)
+or <= 1 - (1-1/(3N))^L (sign -).  Tier A follows once L^2 < roughly 3N/4.
+known cycles: nodes, b, word, (K,L), Delta, B, q, N=min|n|, |Delta|/3^L, Eliahou bound, tierA, tierB, class
+  (1,) b=1 w=[2] (K,L)=(2,1) Delta=1 B=1 q=1 N=1 rel=0.3333 bound=0.3333 A=0 B=1 convergent n=1
+  (-1,) b=1 w=[1] (K,L)=(1,1) Delta=-1 B=1 q=1 N=1 rel=0.3333 bound=0.3333 A=0 B=1 convergent n=0
+  (-5, -7) b=1 w=[1, 2] (K,L)=(3,2) Delta=-1 B=5 q=1 N=5 rel=0.1111 bound=0.1289 A=1 B=1 convergent n=2
+  (-17, -25, -37, -55, -41, -61, -91) b=1 w=[1, 1, 1, 2, 1, 1, 4] (K,L)=(11,7) Delta=-139 B=2363 q=1 N=17 rel=0.0636 bound=0.1294 A=0 B=1 intermediate n=3 j=1/1 extreme
+  (1,) b=-1 w=[1] (K,L)=(1,1) Delta=-1 B=1 q=1 N=1 rel=0.3333 bound=0.3333 A=0 B=1 convergent n=0
+  (5, 7) b=-1 w=[1, 2] (K,L)=(3,2) Delta=-1 B=5 q=1 N=5 rel=0.1111 bound=0.1289 A=1 B=1 convergent n=2
+  (17, 25, 37, 55, 41, 61, 91) b=-1 w=[1, 1, 1, 2, 1, 1, 4] (K,L)=(11,7) Delta=-139 B=2363 q=1 N=17 rel=0.0636 bound=0.1294 A=0 B=1 intermediate n=3 j=1/1 extreme
+  (-1,) b=-1 w=[2] (K,L)=(2,1) Delta=1 B=1 q=1 N=1 rel=0.3333 bound=0.3333 A=0 B=1 convergent n=1
+Legendre threshold: smallest N such that (1+1/(3N))^L - 1 <= 1/(4L), for L = convergent denominators:
+  L=1         N_min ~ 1.3333e+00  (about 4L^2/3 = 1.3333e+00)
+  L=2         N_min ~ 5.4951e+00  (about 4L^2/3 = 5.3333e+00)
+  L=5         N_min ~ 3.3993e+01  (about 4L^2/3 = 3.3333e+01)
+  L=12        N_min ~ 1.9383e+02  (about 4L^2/3 = 1.9200e+02)
+  L=41        N_min ~ 2.2480e+03  (about 4L^2/3 = 2.2413e+03)
+  L=53        N_min ~ 3.7540e+03  (about 4L^2/3 = 3.7453e+03)
+  L=306       N_min ~ 1.2490e+05  (about 4L^2/3 = 1.2485e+05)
+  L=665       N_min ~ 5.8974e+05  (about 4L^2/3 = 5.8963e+05)
+  L=15601     N_min ~ 3.2452e+08  (about 4L^2/3 = 3.2452e+08)
+  L=31867     N_min ~ 1.3540e+09  (about 4L^2/3 = 1.3540e+09)
+  L=79335     N_min ~ 8.3921e+09  (about 4L^2/3 = 8.3921e+09)
+With N >= 2^68 (Barina 2020 verification, CITED) tier A holds for every L <= 14878195707 (about sqrt(3*2^68/4) = 14878203147);
+  every positive 3n+1 cycle of odd length L <= 14878195707 has K/L (reduced) a convergent of log_2 3 (Eliahou 1993 mechanism).
+
+==============================================================================
+S5. Cycle-gate census on convergent / intermediate clocks with L <= 13
+==============================================================================
+For every (K,L), L<=13, whose reduced K/L is a convergent or intermediate
+fraction, all C(K-1,L-1) compositions w of K into L positive parts are
+enumerated; B(w) = sum 3^(L-1-i) 2^(K_i), q = |Delta|/gcd(B,|Delta|).
+q=1 means an exact integer odd cycle of 3n+1 (Delta>0) or 3n-1 (Delta<0).
+clock  class                     Delta      #words   #q=1  min_q  q-histogram (q<=20)
+   1/1  convergent n=0             -1         1        1     1      1:1
+   2/1  convergent n=1             1          1        1     1      1:1
+   2/2  convergent n=0 (x2)        -5         1        1     1      1:1
+   3/2  convergent n=2             -1         2        2     1      1:2
+   4/2  convergent n=1 (x2)        7          3        1     1      1:1 7:2
+   3/3  convergent n=0 (x3)        -19        1        1     1      1:1
+   5/3  intermediate n=2 j=1/1 extreme 5          6        0     5      5:6
+   6/3  convergent n=1 (x3)        37         10       1     1      1:1
+   4/4  convergent n=0 (x4)        -65        1        1     1      1:1
+   6/4  convergent n=2 (x2)        -17        10       2     1      1:2 17:8
+   8/4  convergent n=1 (x4)        175        35       1     1      1:1 7:2
+   5/5  convergent n=0 (x5)        -211       1        1     1      1:1
+   8/5  convergent n=3             13         35       0     13     13:35
+  10/5  convergent n=1 (x5)        781        126      1     1      1:1
+   6/6  convergent n=0 (x6)        -665       1        1     1      1:1
+   9/6  convergent n=2 (x3)        -217       56       2     1      1:2
+  10/6  intermediate n=2 j=1/1 extreme (x2) 295        126      0     5      5:6
+  12/6  convergent n=1 (x6)        3367       462      1     1      1:1 7:2
+   7/7  convergent n=0 (x7)        -2059      1        1     1      1:1
+  11/7  intermediate n=3 j=1/1 extreme -139       210      7     1      1:7
+  14/7  convergent n=1 (x7)        14197      1716     1     1      1:1
+   8/8  convergent n=0 (x8)        -6305      1        1     1      1:1
+  12/8  convergent n=2 (x4)        -2465      330      2     1      1:2 17:8
+  16/8  convergent n=1 (x8)        58975      6435     1     1      1:1 7:2
+   9/9  convergent n=0 (x9)        -19171     1        1     1      1:1
+  15/9  intermediate n=2 j=1/1 extreme (x3) 13085      3003     0     5      5:6
+  18/9  convergent n=1 (x9)        242461     24310    1     1      1:1
+  10/10 convergent n=0 (x10)       -58025     1        1     1      1:1
+  15/10 convergent n=2 (x5)        -26281     2002     2     1      1:2
+  16/10 convergent n=3 (x2)        6487       5005     0     13     13:35
+  20/10 convergent n=1 (x10)       989527     92378    1     1      1:1 7:2
+  11/11 convergent n=0 (x11)       -175099    1        1     1      1:1
+  22/11 convergent n=1 (x11)       4017157    352716   1     1      1:1
+  12/12 convergent n=0 (x12)       -527345    1        1     1      1:1
+  18/12 convergent n=2 (x6)        -269297    12376    2     1      1:2 17:8
+  19/12 convergent n=4             -7153      31824    0     23     
+  20/12 intermediate n=2 j=1/1 extreme (x4) 517135     75582    0     5      5:6
+  24/12 convergent n=1 (x12)       16245775   1352078  1     1      1:1 7:2
+  13/13 convergent n=0 (x13)       -1586131   1        1     1      1:1
+  26/13 convergent n=1 (x13)       65514541   5200300  1     1      1:1
+q=1 words (exact integer cycles), by sign of Delta:
+  3n+1 (Delta > 0):
+    (K,L)=(2,1) w=(2,) B=1 n_0=bB/Delta with b=1: 1
+    (K,L)=(4,2) w=(2, 2) B=7 n_0=bB/Delta with b=1: 1
+    (K,L)=(6,3) w=(2, 2, 2) B=37 n_0=bB/Delta with b=1: 1
+    (K,L)=(8,4) w=(2, 2, 2, 2) B=175 n_0=bB/Delta with b=1: 1
+    (K,L)=(10,5) w=(2, 2, 2, 2, 2) B=781 n_0=bB/Delta with b=1: 1
+    (K,L)=(12,6) w=(2, 2, 2, 2, 2, 2) B=3367 n_0=bB/Delta with b=1: 1
+    (K,L)=(14,7) w=(2, 2, 2, 2, 2, 2, 2) B=14197 n_0=bB/Delta with b=1: 1
+    (K,L)=(16,8) w=(2, 2, 2, 2, 2, 2, 2, 2) B=58975 n_0=bB/Delta with b=1: 1
+    (K,L)=(18,9) w=(2, 2, 2, 2, 2, 2, 2, 2, 2) B=242461 n_0=bB/Delta with b=1: 1
+    (K,L)=(20,10) w=(2, 2, 2, 2, 2, 2, 2, 2, 2, 2) B=989527 n_0=bB/Delta with b=1: 1
+    (K,L)=(22,11) w=(2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2) B=4017157 n_0=bB/Delta with b=1: 1
+    (K,L)=(24,12) w=(2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2) B=16245775 n_0=bB/Delta with b=1: 1
+    (K,L)=(26,13) w=(2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2) B=65514541 n_0=bB/Delta with b=1: 1
+  3n-1 (Delta < 0):
+    (K,L)=(1,1) w=(1,) B=1 n_0=bB/Delta with b=-1: 1
+    (K,L)=(2,2) w=(1, 1) B=5 n_0=bB/Delta with b=-1: 1
+    (K,L)=(3,2) w=(1, 2) B=5 n_0=bB/Delta with b=-1: 5
+    (K,L)=(3,2) w=(2, 1) B=7 n_0=bB/Delta with b=-1: 7
+    (K,L)=(3,3) w=(1, 1, 1) B=19 n_0=bB/Delta with b=-1: 1
+    (K,L)=(4,4) w=(1, 1, 1, 1) B=65 n_0=bB/Delta with b=-1: 1
+    (K,L)=(6,4) w=(1, 2, 1, 2) B=85 n_0=bB/Delta with b=-1: 5
+    (K,L)=(6,4) w=(2, 1, 2, 1) B=119 n_0=bB/Delta with b=-1: 7
+    (K,L)=(5,5) w=(1, 1, 1, 1, 1) B=211 n_0=bB/Delta with b=-1: 1
+    (K,L)=(6,6) w=(1, 1, 1, 1, 1, 1) B=665 n_0=bB/Delta with b=-1: 1
+    (K,L)=(9,6) w=(1, 2, 1, 2, 1, 2) B=1085 n_0=bB/Delta with b=-1: 5
+    (K,L)=(9,6) w=(2, 1, 2, 1, 2, 1) B=1519 n_0=bB/Delta with b=-1: 7
+    (K,L)=(7,7) w=(1, 1, 1, 1, 1, 1, 1) B=2059 n_0=bB/Delta with b=-1: 1
+    (K,L)=(11,7) w=(1, 1, 1, 2, 1, 1, 4) B=2363 n_0=bB/Delta with b=-1: 17
+    (K,L)=(11,7) w=(1, 1, 2, 1, 1, 4, 1) B=3475 n_0=bB/Delta with b=-1: 25
+    (K,L)=(11,7) w=(1, 1, 4, 1, 1, 1, 2) B=5699 n_0=bB/Delta with b=-1: 41
+    (K,L)=(11,7) w=(1, 2, 1, 1, 4, 1, 1) B=5143 n_0=bB/Delta with b=-1: 37
+    (K,L)=(11,7) w=(1, 4, 1, 1, 1, 2, 1) B=8479 n_0=bB/Delta with b=-1: 61
+    (K,L)=(11,7) w=(2, 1, 1, 4, 1, 1, 1) B=7645 n_0=bB/Delta with b=-1: 55
+    (K,L)=(11,7) w=(4, 1, 1, 1, 2, 1, 1) B=12649 n_0=bB/Delta with b=-1: 91
+    (K,L)=(8,8) w=(1, 1, 1, 1, 1, 1, 1, 1) B=6305 n_0=bB/Delta with b=-1: 1
+    (K,L)=(12,8) w=(1, 2, 1, 2, 1, 2, 1, 2) B=12325 n_0=bB/Delta with b=-1: 5
+    (K,L)=(12,8) w=(2, 1, 2, 1, 2, 1, 2, 1) B=17255 n_0=bB/Delta with b=-1: 7
+    (K,L)=(9,9) w=(1, 1, 1, 1, 1, 1, 1, 1, 1) B=19171 n_0=bB/Delta with b=-1: 1
+    (K,L)=(10,10) w=(1, 1, 1, 1, 1, 1, 1, 1, 1, 1) B=58025 n_0=bB/Delta with b=-1: 1
+    (K,L)=(15,10) w=(1, 2, 1, 2, 1, 2, 1, 2, 1, 2) B=131405 n_0=bB/Delta with b=-1: 5
+    (K,L)=(15,10) w=(2, 1, 2, 1, 2, 1, 2, 1, 2, 1) B=183967 n_0=bB/Delta with b=-1: 7
+    (K,L)=(11,11) w=(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1) B=175099 n_0=bB/Delta with b=-1: 1
+    (K,L)=(12,12) w=(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1) B=527345 n_0=bB/Delta with b=-1: 1
+    (K,L)=(18,12) w=(1, 2, 1, 2, 1, 2, 1, 2, 1, 2, 1, 2) B=1346485 n_0=bB/Delta with b=-1: 5
+    (K,L)=(18,12) w=(2, 1, 2, 1, 2, 1, 2, 1, 2, 1, 2, 1) B=1885079 n_0=bB/Delta with b=-1: 7
+    (K,L)=(13,13) w=(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1) B=1586131 n_0=bB/Delta with b=-1: 1
+count of q=1 words: 3n+1 side 13, 3n-1 side 32
+CHECK: every 3n+1 q=1 word with L<=13 on these clocks is (2,2,...,2) = repeated fixed point {1}: PASS
+3n-1 q=1 words grouped by clock (count): {(1, 1): 1, (2, 2): 1, (3, 2): 2, (3, 3): 1, (4, 4): 1, (5, 5): 1, (6, 4): 2, (6, 6): 1, (7, 7): 1, (8, 8): 1, (9, 6): 2, (9, 9): 1, (10, 10): 1, (11, 7): 7, (11, 11): 1, (12, 8): 2, (12, 12): 1, (13, 13): 1, (15, 10): 2, (18, 12): 2}
+CHECK: every 3n-1 q=1 word with L<=13 on these clocks reconstructs to {1}, {5,7} or the 17-cycle: PASS
+CHECK: clock 11/7 carries exactly 7 q=1 words = the 7 rotations of (1,1,1,2,1,1,4): PASS
+
+==============================================================================
+S6. Full-clock minimum-q census, all (K,L) with L<=11, L<=K<=2L
+==============================================================================
+For each L: min over K and over all words of q, the clock attaining it, and
+whether that clock is a convergent/intermediate; plus the number of q=1 words
+per L (all clocks) and the number of clocks with min_q = |Delta| (no cancellation).
+  L= 1  words=2        q=1 words=2    min_q=1 at K=1 (convergent n=0)  clocks with no cancellation: 2/2  three smallest min_q: K=1:q=1, K=2:q=1
+  L= 2  words=6        q=1 words=4    min_q=1 at K=2 (convergent n=0 (x2))  clocks with no cancellation: 1/3  three smallest min_q: K=2:q=1, K=3:q=1, K=4:q=1
+  L= 3  words=20       q=1 words=2    min_q=1 at K=3 (convergent n=0 (x3))  clocks with no cancellation: 2/4  three smallest min_q: K=3:q=1, K=6:q=1, K=5:q=5
+  L= 4  words=70       q=1 words=4    min_q=1 at K=4 (convergent n=0 (x4))  clocks with no cancellation: 2/5  three smallest min_q: K=4:q=1, K=6:q=1, K=8:q=1
+  L= 5  words=252      q=1 words=2    min_q=1 at K=5 (convergent n=0 (x5))  clocks with no cancellation: 4/6  three smallest min_q: K=5:q=1, K=10:q=1, K=8:q=13
+  L= 6  words=924      q=1 words=4    min_q=1 at K=6 (convergent n=0 (x6))  clocks with no cancellation: 2/7  three smallest min_q: K=6:q=1, K=9:q=1, K=12:q=1
+  L= 7  words=3432     q=1 words=9    min_q=1 at K=7 (convergent n=0 (x7))  clocks with no cancellation: 3/8  three smallest min_q: K=7:q=1, K=11:q=1, K=14:q=1
+  L= 8  words=12870    q=1 words=4    min_q=1 at K=8 (convergent n=0 (x8))  clocks with no cancellation: 2/9  three smallest min_q: K=8:q=1, K=12:q=1, K=16:q=1
+  L= 9  words=48620    q=1 words=2    min_q=1 at K=9 (convergent n=0 (x9))  clocks with no cancellation: 5/10  three smallest min_q: K=9:q=1, K=18:q=1, K=15:q=5
+  L=10  words=184756   q=1 words=4    min_q=1 at K=10 (convergent n=0 (x10))  clocks with no cancellation: 2/11  three smallest min_q: K=10:q=1, K=15:q=1, K=20:q=1
+  L=11  words=705432   q=1 words=2    min_q=1 at K=11 (convergent n=0 (x11))  clocks with no cancellation: 6/12  three smallest min_q: K=11:q=1, K=22:q=1, K=17:q=19
+total words enumerated in S6: 956384 = sum_{L<=11} C(2L,L)
+
+==============================================================================
+S7. Pillai-type census |2^a - 10^b| <= 100 (complete, with proof of completeness)
+==============================================================================
+all (a,b) with 0<=a<=200, 0<=b<=61 and |2^a-10^b|<=100:
+  2^0 - 10^0 = 0
+  2^0 - 10^1 = -9
+  2^0 - 10^2 = -99
+  2^1 - 10^0 = 1
+  2^1 - 10^1 = -8
+  2^1 - 10^2 = -98
+  2^2 - 10^0 = 3
+  2^2 - 10^1 = -6
+  2^2 - 10^2 = -96
+  2^3 - 10^0 = 7
+  2^3 - 10^1 = -2
+  2^3 - 10^2 = -92
+  2^4 - 10^0 = 15
+  2^4 - 10^1 = 6
+  2^4 - 10^2 = -84
+  2^5 - 10^0 = 31
+  2^5 - 10^1 = 22
+  2^5 - 10^2 = -68
+  2^6 - 10^0 = 63
+  2^6 - 10^1 = 54
+  2^6 - 10^2 = -36
+  2^7 - 10^2 = 28
+  2^10 - 10^3 = 24
+count: 23
+2^10 = 10^3 + 24 = 10^3 + 2^3*3; the residual 24 is 2^3*3 = 23+1 = 4! = 5^2-1.
+largest b among solutions: 3 (proof: 2^a-10^b = 2^b(2^(a-b)-5^b) forces |.| >= 2^b > 100 for b >= 7)
+for contrast, all (K,L) with 1<=K<=200, 1<=L<=130 and |2^K - 3^L| <= 100 (coprime bases; NOT finite by an elementary 2-adic trick):
+  2^1 - 3^1 = -1   [convergent n=0]
+  2^1 - 3^2 = -7   [NEITHER]
+  2^1 - 3^3 = -25   [NEITHER]
+  2^1 - 3^4 = -79   [NEITHER]
+  2^2 - 3^1 = 1   [convergent n=1]
+  2^2 - 3^2 = -5   [convergent n=0 (x2)]
+  2^2 - 3^3 = -23   [NEITHER]
+  2^2 - 3^4 = -77   [NEITHER]
+  2^3 - 3^1 = 5   [NEITHER]
+  2^3 - 3^2 = -1   [convergent n=2]
+  2^3 - 3^3 = -19   [convergent n=0 (x3)]
+  2^3 - 3^4 = -73   [NEITHER]
+  2^4 - 3^1 = 13   [NEITHER]
+  2^4 - 3^2 = 7   [convergent n=1 (x2)]
+  2^4 - 3^3 = -11   [NEITHER]
+  2^4 - 3^4 = -65   [convergent n=0 (x4)]
+  2^5 - 3^1 = 29   [NEITHER]
+  2^5 - 3^2 = 23   [NEITHER]
+  2^5 - 3^3 = 5   [intermediate n=2 j=1/1 extreme]
+  2^5 - 3^4 = -49   [NEITHER]
+  2^6 - 3^1 = 61   [NEITHER]
+  2^6 - 3^2 = 55   [NEITHER]
+  2^6 - 3^3 = 37   [convergent n=1 (x3)]
+  2^6 - 3^4 = -17   [convergent n=2 (x2)]
+  2^7 - 3^4 = 47   [NEITHER]
+  2^8 - 3^5 = 13   [convergent n=3]
+count: 26
+clocks in this list that are NEITHER convergent nor intermediate (reduced): 15
+  2^1 - 3^2 = -7 : |Delta|*L = 14 >= 3^L = 9, so outside tier C (the absolute bound 100 is not small relative to 3^L here)
+  2^1 - 3^3 = -25 : |Delta|*L = 75 >= 3^L = 27, so outside tier C (the absolute bound 100 is not small relative to 3^L here)
+  2^1 - 3^4 = -79 : |Delta|*L = 316 >= 3^L = 81, so outside tier C (the absolute bound 100 is not small relative to 3^L here)
+  2^2 - 3^3 = -23 : |Delta|*L = 69 >= 3^L = 27, so outside tier C (the absolute bound 100 is not small relative to 3^L here)
+  2^2 - 3^4 = -77 : |Delta|*L = 308 >= 3^L = 81, so outside tier C (the absolute bound 100 is not small relative to 3^L here)
+  2^3 - 3^1 = 5 : |Delta|*L = 5 >= 3^L = 3, so outside tier C (the absolute bound 100 is not small relative to 3^L here)
+  2^3 - 3^4 = -73 : |Delta|*L = 292 >= 3^L = 81, so outside tier C (the absolute bound 100 is not small relative to 3^L here)
+  2^4 - 3^1 = 13 : |Delta|*L = 13 >= 3^L = 3, so outside tier C (the absolute bound 100 is not small relative to 3^L here)
+  2^4 - 3^3 = -11 : |Delta|*L = 33 >= 3^L = 27, so outside tier C (the absolute bound 100 is not small relative to 3^L here)
+  2^5 - 3^1 = 29 : |Delta|*L = 29 >= 3^L = 3, so outside tier C (the absolute bound 100 is not small relative to 3^L here)
+  2^5 - 3^2 = 23 : |Delta|*L = 46 >= 3^L = 9, so outside tier C (the absolute bound 100 is not small relative to 3^L here)
+  2^5 - 3^4 = -49 : |Delta|*L = 196 >= 3^L = 81, so outside tier C (the absolute bound 100 is not small relative to 3^L here)
+  2^6 - 3^1 = 61 : |Delta|*L = 61 >= 3^L = 3, so outside tier C (the absolute bound 100 is not small relative to 3^L here)
+  2^6 - 3^2 = 55 : |Delta|*L = 110 >= 3^L = 9, so outside tier C (the absolute bound 100 is not small relative to 3^L here)
+  2^7 - 3^4 = 47 : |Delta|*L = 188 >= 3^L = 81, so outside tier C (the absolute bound 100 is not small relative to 3^L here)
+CHECK: every |2^K-3^L| <= 100 clock in the box with |Delta|*L < 3^L (6 of 26) is a convergent or intermediate fraction of log_2 3: PASS
+  (the absolute-size condition |Delta|<=100 and the relative-size condition |Delta|<3^L/L differ at small L;
+   only the relative one is a Legendre-type hypothesis.)
+  (Pillai 1931 / de Weger: |2^K-3^L| grows; the complete list of |2^K-3^L|<=100 is CITED context,
+   the box above is FINITE-EXACT only.)
+
+==============================================================================
+S8. Same-clock carry obstruction on 19/12 and 5/3 (how close q comes to 1)
+==============================================================================
+  (K,L)=(5,3) Delta=5 words=6 min_q=5 #q=1=0 #q<=20=6
+     w=(1, 1, 3) B=19 q=5  -> cycle at b=5 iff q|5: True
+     w=(1, 2, 2) B=23 q=5  -> cycle at b=5 iff q|5: True
+     w=(1, 3, 1) B=31 q=5  -> cycle at b=5 iff q|5: True
+     w=(2, 1, 2) B=29 q=5  -> cycle at b=5 iff q|5: True
+     w=(2, 2, 1) B=37 q=5  -> cycle at b=5 iff q|5: True
+     w=(3, 1, 1) B=49 q=5  -> cycle at b=5 iff q|5: True
+  (K,L)=(19,12) Delta=-7153 words=31824 min_q=23 #q=1=0 #q<=20=0
+  (K,L)=(11,7) Delta=-139 words=210 min_q=1 #q=1=7 #q<=20=7
+  (K,L)=(8,5) Delta=13 words=35 min_q=13 #q=1=0 #q<=20=35
+DONE
