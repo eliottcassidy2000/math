@@ -1,0 +1,147 @@
+# Row-braid typing: every "three" and "two" of the Collatz prompt, with the maps that exist
+
+**Status: PROVED elementary identities (exact row law row(u,h)=rho(2^h u mod 9), mod-18 AP layers, index recurrence, odd-multiplier tower, the 63-mechanism c(c+1)^2=-63/64, the Wieferich single-row refutation, the rational-PCF identification of x^2-{0,1,2}) + FINITE-EXACT rows to j<=60 and |j|<=40, cycle censuses, and the -7/4 searches + CITED Bang/Zsigmondy and canon THM-4139/THM-4146 + SCOPE for the "threes" that carry only the number 3.** What remains OPEN: completeness of the three 3n-1 cycles (inherited), Collatz descent (nothing here bears on it), and whether -7/4 is the only non-PCF rational c whose third critical term has no new numerator prime. No novelty claim for ord_9(2)=6, R^3(n)=64n+21, the row 3-cycle 1->5->3->1, the companion F_{p-2}, p=7 braid fullness, the negation law, or 63=3^2*7 having no primitive prime divisor: all are inherited (citations below). Lane `row_braid_typing` of session collatz-mod6-20260917 (machine mac-mini; script recovered from transcript 2026-09-21 and repaired, see section 7).
+
+## Inheritance and concept board
+
+This note builds on, and does not re-derive, [arithmetic_braids_20260917_collatz.md](arithmetic_braids_20260917_collatz.md) (section 1: the three rows 6j+r -> 9j+b_r; section 2: the inverse-fibre theorem (B1)-(B3) with R(n)=4n+1, the row cycle 1->5->3->1, n->64n+21 and h->h+6, the corrected (core,height) rows to j<=34 in `arithmetic_braids_20260917_collatz.json`; section 4: the refuted Goldbach reading), [arithmetic_braids_20260917_summand.md](arithmetic_braids_20260917_summand.md) (sections 1-3: doubling forest = complement of the strict summand shadow, the witness (a,b,z); section 5: the prime-adic braids R_p with (10)-(12), in particular the companion ((p-2)n+1)/2 in (12) and the 5n+1 cycle (13); section 7: negation conjugacy and the three minus cycles (15); section 9: p=7 fullness through modulus 2*7^4, period 2401), [arithmetic_braids_20260917_divisors.md](arithmetic_braids_20260917_divisors.md) (section DB1 with the balance equation (DB2) prod(a_i+1)=2^r+r+1, the almost-prime notation DB3, the sandwich laws (SW1)-(SW4), the k->-k symmetry of section SW2), [arithmetic_braids2_20260917_signed_cycles.md](arithmetic_braids2_20260917_signed_cycles.md) (signed 3n+b parameters; nine b=-5 cycles; explicitly no completeness claim for 3n-1), canon [THM-4139](../../01-canon/theorems/THM-4139-rational-three-cycle-order-six-lift-and-horizontal-carrier.md) (section 6: eq. (36) 2^6-1=63=3^2*7 with 3 | 2^2-1 and 7 | 2^3-1, so exponent six introduces no primitive prime divisor; eq. (38) ord_63(2)=lcm(6,3)=6) and [THM-4146](../../01-canon/theorems/THM-4146-rational-three-cycle-order-six-lift-horizontal-divisor-fibre-firewall.md) ((29)-(33) and 4.2: the AP-supported rational quadratic 3-cycle -7/4 -> 5/4 -> -1/4 and the 3:4:5 forcing), canon [THM-3341](../../01-canon/theorems/THM-3341-u-spine-square-hypotenuse-transplant-and-triangular-plane-torsors.md) and [THM-3333](../../01-canon/theorems/THM-3333-gaussian-square-farey-pythagorean-triangular-light-cone.md) (Gaussian squaring of triples and Pell hypotenuses: the source of the angle-doubling = Gaussian-squaring reading used by the sibling semicircle lane; this lane uses only its mod-9 shadow, section 5), the sibling lanes [collatz_mod6_20260917_pythagorean_semicircle.out](collatz_mod6_20260917_pythagorean_semicircle.out) (S3 the (e/d,l,theta) chart, S4 the x^2-2 fold, S5 the sign audit of x^2+{0,1,2}) and [collatz_mod6_20260917_extended_collatz_scc.out](collatz_mod6_20260917_extended_collatz_scc.out), and the blueprint audit [collatz_blueprint_20260921_synthesis.md](collatz_blueprint_20260921_synthesis.md) (its typing row for the R(n)=4n+1 odometer: full residue coverage over a fixed target says nothing about that target reaching 1).
+
+Concept board. Closest proved mechanism: the inverse-fibre odometer (B1)-(B3) of collatz.md, sharpened here to the exact row law of section 3. Canonical hostile: the Wieferich primes 1093, 3511, at which every power of two in the image of pn+1 lies in a single class mod p^2 and the inverse braid R_p is not full (r=2), so "p rows see p exponent classes" is a non-Wieferich fact, not a law. Corrected near miss: the equal-summand diagonal (p-4)n=-1 was reported as "exactly (p,n)=(3,1)"; over odd integers of either sign the solution set is {(3,1),(5,-1)} (audit of 2026-09-17), and the "only -7/4" strong search silently started at k=1, hiding the integer PCF solutions c=0,-1,-2. Least-used sidecar: the closed form f^3(0)=a(a(a+b)^2+b^3)/b^4 for c=a/b, which turns the -7/4 question into a concrete Diophantine condition (section 5) that nothing in the Collatz rows touches.
+
+Notation: F(n)=(3n+1)/2 on odd n (either sign), F(n)=2^h u with u odd and the sign kept on u, b_1=2, b_3=5, b_5=8, rho(2)=1, rho(5)=3, rho(8)=5, F_p(n)=(pn+1)/2, R(n)=4n+1. Quoted user phrases below ("grow a pair at a time and are interleaved", "the 1 chain contains -5 and so on") are the explorer's paraphrase of the prompt; the prompt is not stored in the worktree, so only the mathematics attached to them is verified, not the wording.
+
+## 1. One factorization, 63 = 2^6-1 = 3^2*7, and what 3, 7, 9 each see
+
+**PROVED (inherited anchor, THM-4139 (38); no novelty).** 2^k mod 9 for k=0..5 is 1,2,4,8,7,5, so ord_9(2)=6 and 2 is a primitive root mod 9; 2^k mod 63 for k=0..6 is 1,2,4,8,16,32,1 (ord_63(2)=6) and 2^k mod 7 is 1,2,4,1 (ord_7(2)=3). Hence <2> mod 63 = {1,2,4,8,16,32} projects isomorphically onto (Z/9)^* and 2:1 onto {1,2,4} mod 7, by CRT (Z/63)^* = (Z/9)^* x (Z/7)^* with 2 -> (2,2).
+
+1. **The three image rows (PROVED, inherited collatz.md section 1; typing new).** F(6j+1)=9j+2, F(6j+3)=9j+5, F(6j+5)=9j+8, and every image is 2 mod 3 (checked odd n<100001). Proof: 3(6j+r)+1 = 18j+3r+1 is a function of n mod 6 modulo 18, and halving by 2^{-1}=5 mod 9 sends {4,10,16} mod 18 to {2,5,8} mod 9. This uses only the multiplier 3 and 2^{-1}=2 mod 3; it does not use ord_9(2)=6. The count of rows is the multiplier: for pn+1 the sources fall into the p odd classes mod 2p, and the images into the p classes mod p^2 congruent to 2^{-1} mod p (the S1 general-p table lists these target classes, e.g. [2,5,8] for p=3, [3,8,13,18,23] for p=5; they are in bijection with the p odd source classes mod 2p).
+2. **Powers of two in the rows (PROVED; the 3/7/9 split is new).** 2^k is an image iff k is odd (the gate ord_3(2)=2), and then, with source (2^{k+1}-1)/3:
+
+   | k mod 6 | 2^k mod 9 = image row b | source row r | 2^k mod 7 |
+   |---|---|---|---|
+   | 1 | 2 | 1 | 2 |
+   | 3 | 8 | 5 | 1 |
+   | 5 | 5 | 3 | 4 |
+
+   (checked k<=60.) Which row is k mod 6 (ord_9(2)=6). The factor 7 sees k mod 3 (ord_7(2)=3), which on odd k is in bijection with k mod 6: **7 sees the row braid but not the parity gate, 3 sees only the gate, 9=3^2 sees both.** Of the 21 target classes mod 63 exactly three contain powers of two, namely 2, 8, 32 (2^1, 2^3, 2^5), one per row mod 9 (2,8,5) and one per class {2,1,4} mod 7.
+3. **R(n)=4n+1 (inherited collatz.md section 2: R^3(n)=64n+21, h->h+6 and the row cycle 1->5->3->1 are stated there verbatim, and R^t(n)-n=(4^t-1)(3n+1)/3 is (B3); new here: the factoring R^3(n)-n=21(3n+1)=3*7*(3n+1), the exact source modulus 42, the target modulus 63, and the mod-7 orbit census).** PROVED (sympy symbolic, plus all odd |n|<=2000 and t<=7): R^3(n)=64n+21=63n+(n+21), R^3(n)-n=63n+21=21(3n+1), 21=63/3. R adds 4 mod 6 so rows cycle 1->5->3->1 with exact period 3; since v_3(4^t-1)=1+v_3(t), 9 | 4^t-1 iff 3 | t, so **the period 3 on rows is ord_9(4)=3=ord_9(2)/ord_3(2)**. R^3 fixes the source modulo 42=6*7 and the target modulo 63=9*7 (F(R^3 n)=64F(n)); R multiplies the target by 4, of order 3 in both (Z/9)^* and (Z/7)^*. On sources mod 7, x->4x+1 has the orbits (0,1,5), (2), (3,4,6): the single fixed class n=2 mod 7 is exactly the set of sources with 7 | 3n+1, i.e. 7 | F(n). So R has period 3 mod 6, mod 7, hence mod 42, but period 9 mod 18 (the inherited odometer): "period 3" is a rows-only statement. 42 is the exact universal source modulus (audit finding, now checked for odd |n|<=2000): R^3(n)-n=21(3n+1) is never 0 mod 126 because 3 does not divide 3n+1, and is 0 mod 84 iff 4 | 3n+1 iff n = 1 mod 4.
+
+**Hostile boundary (PROVED; REFUTES the universal reading).** For odd p the powers of two in the image rows of pn+1 occupy ord_{p^2}(2)/ord_p(2) target classes, because the admissible exponents (2^k = 2^{-1} mod p) form a coset of ord_p(2) inside ord_{p^2}(2); this count equals p iff 2^{ord_p(2)} != 1 mod p^2 (non-Wieferich), since ord_{p^2}(2) is ord_p(2) or p*ord_p(2).
+
+| p | ord_p(2) | ord_{p^2}(2) | classes hit by powers of two |
+|---|---|---|---|
+| 3 | 2 | 6 | 3: [2,5,8] |
+| 5 | 4 | 20 | 5: [3,8,13,18,23] |
+| 7 | 3 | 21 | 7: [4,11,18,25,32,39,46] |
+| 11 | 10 | 110 | 11 |
+| 13 | 12 | 156 | 13 |
+| 1093 | 364 | 364 | 1: the single class 597325 mod 1194649 |
+| 3511 | 1755 | 1755 | 1: the single class 6163561 mod 12327121 |
+
+For p=3 the count 3 is 6/2: "3 rows see 3 exponent classes" is a non-Wieferich fact. **Wieferich inverse braid (PROVED, answers the explorer's fourth open question).** For p=1093 the least q=2^d with p | q-1 has d=364 and r=v_p(q-1)=2; for p=3511, d=1755 and r=2. By inherited summand.md (11) the braid R_p=qn+c then has period p^{max(0,s-1)} on the odd classes mod 2p^s: it fixes the first base-p digit and is not full. So the Wieferich degeneration is visible on the source side too.
+
+## 2. The odd-multiplier tower
+
+**PROVED (elementary; the companion is inherited summand.md (12), no novelty).** F_{p+2}(n)=F_p(n)+n for all odd p, n, hence F_p(n)=F_1(n)+((p-1)/2)n with F_1(n)=(n+1)/2. In the strict summand shadow (summand.md sections 1, 3) the arrow n->F_p(n) has the unique companion F_p(n)-n=F_{p-2}(n)=((p-2)n+1)/2, which is exactly the middle entry of the inherited lift (12). For p=3 it is the inherited witness (n+1)/2; for p=5 the companion of n in 5n+1 is its own 3n+1 image F_3(n); for p=1 the companion F_{-1}(n)=(1-n)/2 is nonpositive for n>=1, so the n+1 map is not a strict positive summand arrow.
+
+**Equal-summand diagonal (PROVED; corrected per the 2026-09-17 audit).** F_{p-2}(n)=n iff (p-4)n=-1 iff p-4 is a unit, i.e. (p,n) in {(3,1),(5,-1)} over odd integers of either sign. For n>=1 only (p,n)=(3,1), the trivial Collatz cycle 1->2 (search p<40, n<400 returns [(3,1)]); the signed search over odd p in [-9,39] and odd |n|<1000 returns [(3,1),(5,-1)], with F_3(-1)=(-3+1)/2=-1 an equal-summand arrow of 5n+1 at n=-1.
+
+**Inverse braids (inherited summand.md section 5, (10)-(11); p=7 fullness through 2*7^4 is inherited from summand.md section 9 (period 2401); computed fresh here: p=1 and p=11, 13).** With q the least power of two = 1 mod p and c=(q-1)/p:
+
+| p | q=2^d | c | r=v_p(q-1) | period of R_p on odd classes mod 2p, 2p^2, 2p^3 | height shift d |
+|---|---|---|---|---|---|
+| 1 | 2 | 1 | n/a | 1, 1, 1 | 1 |
+| 3 | 4 | 1 | 1 | 3, 9, 27 | 2 |
+| 5 | 16 | 3 | 1 | 5, 25, 125 | 4 |
+| 7 | 8 | 1 | 1 | 7, 49, 343 | 3 |
+| 11 | 1024 | 93 | 1 | 11, 121, 1331 | 10 |
+| 13 | 4096 | 315 | 1 | 13, 169, 2197 | 12 |
+
+F_p(R_p n)=qF_p(n) holds in every row (checked odd n<2001), and for r=1 the braid is one cycle of length p^s on the odd classes mod 2p^s, so the row period equals p. p=1: R_1(n)=2n+1 = tau D tau^{-1} with tau(x)=x-1, D(x)=2x; the F_1-fibre of a core u is n=2^{h+1}u-1 for every h>=0 (no congruence gate, no parity of h, height shift 1); on odd classes mod 6 it has orbits (1,3), (5): **no braid; the p=1 case is the inherited doubling forest shifted by one.**
+
+**FINITE-EXACT cycle census** of the odd-to-odd maps T_p, odd starts <=20000, <=3000 steps, values capped at 10^40: p=1 {1} (0 unresolved); p=3 {1} (0 unresolved); p=5 {(1,3), (13,33,83), (17,43,27)} with 9605 starts unresolved within the caps; p=7 {1} with 9982 unresolved. PROVED: T_1 converges for every n>=1 since (n+1)/2<n for n>1. The 5n+1 cycle 13->33->83 is inherited summand.md (13). Unresolved starts are cap-dependent, not divergence evidence.
+
+## 3. The exact row law and why 1, 5, 7 look prominent
+
+**PROVED (new exact law; the inherited note had only the parity of h and the R cycle).** For odd u with 3 !| u and admissible h (h odd iff u = 1 mod 3), the source n=(2^{h+1}u-1)/3 lies in row
+
+    row(u,h) = rho(2^h u mod 9),   at index j = (2^h u - b_r)/9,   and row(u,h+2) = row(u,h)+4 mod 6.
+
+Proof: F(n)=2^h u and F(6j+r)=9j+b_r give 2^h u = b_r mod 9, and b_r in {2,5,8} determines r; since 4 has order 3 mod 9 the three admissible heights h0, h0+2, h0+4 send u to three different rows and h->h+6 returns, which is the R-braid read on rows. Checked on 6500 (u,h) pairs with u<3001, h<=12, and (section 4) verbatim for negative u. Base row by u mod 18 (least admissible height h0): 1->row 1, 7->row 3, 13->row 5 (h0=1, sources 1, 9, 17); 5->row 3, 11->row 1, 17->row 5 (h0=0, sources 3, 7, 11); then row(u,h0+2t)=r0+4t mod 6.
+
+**AP layers (PROVED, checked j<2^13 for h<=5).** Row r at height h is exactly the odd class u = b_r 2^{-h} mod 9 (one class mod 18, step 18), at index positions j = j0 mod 2^{h+1}; e.g. row 1: h=0 gives u=11 mod 18 at j=1 mod 2, h=1 gives u=1 mod 18 at j=0 mod 4, h=2 gives u=5 mod 18 at j=2 mod 8, h=3 gives u=7 mod 18 at j=6 mod 16, h=4 gives u=17 mod 18 at j=30 mod 32. The row is the 2-adic interleaving of these six-periodic layers (the explorer's paraphrase of the prompt: "chain segments grow a pair at a time and are interleaved"). A fixed core recurs in its row at j_{t+1} = 64 j_t + 7 b_r = 64 j_t + 14, 35, 56 for r=1,3,5, heights h0+6t (the 63 again: 63 b_r/9; checked u<300 and realized as (u,h+6)).
+
+**FINITE-EXACT.** Rows to j<=60 are printed in the .out and agree with the inherited JSON on j<=34 (35 entries each). First appearances (j,h) in rows 1, 3, 5:
+
+| u | row 1 | row 3 | row 5 | u mod 18 |
+|---|---|---|---|---|
+| 1 | (0,1) | (3,5) | (0,3) | 1 |
+| 5 | (2,2) | (0,0) | (8,4) | 5 |
+| 7 | (6,3) | (1,1) | (24,5) | 7 |
+| 11 | (1,0) | (19,4) | (4,2) | 11 |
+| 13 | (46,5) | (11,3) | (2,1) | 13 |
+| 17 | (30,4) | (7,2) | (1,0) | 17 |
+| 19 | (4,1) | - | (16,3) | 1 |
+| 23 | (10,2) | (2,0) | (40,4) | 5 |
+| 25 | (22,3) | (5,1) | - | 7 |
+
+Appearance counts over the three rows for j<=60: core 1 five times (heights 1,3,5,7,9 at (row,j) = (1,0),(5,0),(3,3),(1,14),(5,56)), core 5 four times, then 7, 11, 13, 17, 23, 29 three times each. Within j<=J a core u appears exactly once per admissible h with 2^h u <= 9J+b_r, about (1/2)log_2((9J+8)/u) times per row: small u is prominent because 2^h u is small. **1, 5, 7, 11, 13, 17 are the least cores of the six classes mod 18; 7 is the least 1-mod-6 core above 1 and 5 the least 5-mod-6 core. Prominence is size, not dynamics.**
+
+## 4. Negative rows
+
+**PROVED (negation law inherited summand.md section 7; explicit rows and placements new).** -(6j+r) = 6(-j-1)+(6-r), so negation swaps rows 1 and 5 and fixes row 3; F(-m) = -(3m-1)/2, so the negative (core,height) rows are the positive 3n-1 rows with negated cores, rows 1<->5, j -> -j-1, heights unchanged. The inverse-fibre theorem (B1),(B2) and the row law hold verbatim for negative odd cores (1000 checks; e.g. u=-1 has h even and sources -1 in row 5, -3 in row 3, -11 in row 1, -43, ...). Rows for j=-1..-40 are printed in the .out; row 5 starts (-1,0),(-5,1),(-19,0),(-7,2), row 1 starts (-7,0),(-1,4),(-25,0),(-17,1), row 3 starts (-1,2),(-13,0),(-11,1),(-31,0). (For j<0, 6j+1 runs through -5,-11,-17,... and 6j+5 through -1,-7,-13,...: the explorer's paraphrase "the 1 chain contains -5 and so on, the 5 chain contains -1 and so on".)
+
+Cycle members of the three minus cycles (summand.md (15)) as cores, positions (row,j,h) with |j|<=40: -1 at (5,-1,0),(3,-1,2),(1,-2,4),(5,-8,6),(3,-29,8); -5 at (5,-2,1),(3,-5,3),(1,-18,5); -7 at (1,-1,0),(5,-4,2),(3,-13,4); -17 at (1,-4,1),(5,-16,3); -25 at (1,-3,0),(5,-12,2); -37 at (5,-5,0),(3,-17,2); -55 at (5,-7,0),(3,-25,2); -41 at (5,-10,1),(3,-37,3); -61 at (1,-7,0),(5,-28,2); -91 at (5,-11,0). No cycle member of any sign is 3 mod 6 (multiples of 3 are never images). The cycles have lengths 1, 2, 7 and their members lie in source rows {5}, {1,5}, {1,5}: the count 3 is not indexed by the three rows (SCOPE: no map found, only the number 3). Completeness of these three cycles is OPEN, as stated in summand.md section 7 and braids2 signed_cycles.md.
+
+## 5. Typing table: the real maps and the 63 <-> -7/4 identity
+
+**The 63 <-> -7/4 identity (PROVED; the identity is new, the primitive-divisor fact about 63 is canon THM-4139 (36)).** For f=x^2+c: f(0)=c, f^2(0)=c(c+1), f^3(0)=c(c(c+1)^2+1). At c=-7/4: c(c+1)^2=(-7/4)(9/16)=-63/64, so f^3(0)=c/2^6=-7/256; the orbit begins -7/4, 21/16, -7/256, -114639/65536, and term 3 is the only term among 2..6 that introduces no new numerator prime (term 2 brings 3; term 4 = -3*7*53*103/2^16). The third term repeats the prime 7 exactly because 7*3^2=63=2^6-1, the same factorization behind ord_9(2)=6 (the row braid) and the n=6 exception of 2x+1: iterating 2x+1 from 0 gives 2^n-1, and n=6 is the only n in 2..64 whose term has no new prime (gcd-stripping, exact), since 3 | 2^2-1 and 7 | 2^3-1 (THM-4139 section 6, eq. (36)). CITED: Bang (1886) / Zsigmondy (1892): 2^n-1 has a primitive prime divisor for every n except n=1 and n=6. Typed map: source = {2x+1 orbit of 0, term 6}; target = {x^2-7/4 orbit of 0, term 3}; map = 63/64 = -c(c+1)^2; preserved predicate = "numerator has no primitive prime divisor"; mechanism = the single equation 2^6-1=7*3^2 (7 from c, 3^2 from (c+1)^2); lost = the dynamics (2x+1 is affine). Hostile: -29/16 does not share it, its orbit -29/16, 377/256, 23345/65536 brings 23345=5*7*23*29 at term 3.
+
+Finite searches (corrected per the audit): the strong form c(c+1)^2+1 = +-2^{-m} is satisfied by the integers c=0,-1,-2 (values 1, 1, -1; the PCF parameters) and, among non-integer c=-a/2^k with 1<=k<=12 and -2^{k+1}<a<3*2^k, only by c=-7/4 (value 1/64). The weak form "third term has no new numerator prime" among nondegenerate c=a/b with |a|<=120, b<=64 gives exactly {-2, -7/4}; the extended window |a|<=300, b<=150 still gives exactly {-2, -7/4}. PROVED closed form: for c=a/b in lowest terms f^3(0)=a(a(a+b)^2+b^3)/b^4, so "no new prime at term 3" says every prime of a(a+b)^2+b^3 divides a(a+b); at (a,b)=(-7,4) the bracket is -63+64=1. (c=-2 is the Chebyshev case 0->-2->2->2; c=-1 is degenerate since f^2(0)=0.)
+
+**Rational PCF quadratics (PROVED; sign audit inherited from the sibling S5).** x^2+c with c in Q has a preperiodic critical point iff c in {0,-1,-2}: for non-integral c=a/b the orbit of 0 has denominators b, b^2, b^4, ... in lowest terms; c>=1 is increasing; c<=-3 escapes since f^2(0)=c^2+c>=|c|+3 and x>=|c|+1 gives x^2+c>x (checked |c|<=60). The user's three systems are x^2-{0,1,2} (sibling sign audit), i.e. exactly the rational PCF quadratics, with critical orbits 0 fixed; 0<->-1; 0->-2->2 fixed, and integer preperiodic sets {-1,0,1}, {-1,0,1}, {-2,-1,0,1,2}. Hostiles: x^2-6 and x^2-12 have integer fixed points but 0 escapes. THM-4146 (29)-(33) re-checked: (y^2-29)/4 has the cycle -7 -> 5 -> -1 forced by (3,4,5) as -(3+4), 5, -(4-3).
+
+**Rows <-> the 3-cycle of x^2-2 (PROVED, low content).** On {2,5,8} mod 9 modulo sign, one angle-doubling step b->2b is {1:3, 3:5, 5:1} on rows and its square is {1:5, 3:1, 5:3} = r->r+4 mod 6, the R-braid on rows; both realize (Z/9)^*/{+-1} = Z/3. Typed: source = angle doubling on 2cos(2 pi b/9) (sibling S4; its Gaussian-squaring reading is canon THM-3341/THM-3333 territory); target = R on rows; preserved = multiplication by 2 on exponents mod 9; lost = everything about n except F(n) mod 9. SCOPE: no map from Pell hypotenuses or Gaussian squaring of triples (THM-3341) to the rows was found; this lane uses only the mod-9 shadow.
+
+**Typing table.** Each "three"/"two" of the prompt with a map (and its preserved predicate) or "number only".
+
+| item | map or verdict | status |
+|---|---|---|
+| T1 3 rows mod 6 (1,3,5) | the p=3 odd source classes mod 2p; count = multiplier p | PROVED S1/S2 |
+| T2 3 image residues 2,5,8 mod 9 | j-preserving bijection with T1, F(6j+r)=9j+b_r; = the classes 2 mod 3 in Z/9 | PROVED S1 |
+| T3 3 exponent classes 1,5,3 mod 6 of 2^k | bijection with T2 via 2^k mod 9; needs ord_9(2)=6 | PROVED S1 |
+| T4 period 3 of R=4n+1 on rows | ord_9(4)=3=ord_9(2)/ord_3(2); R^3=64n+21, 63=3*21 | PROVED S1 (inherited cycle) |
+| T5 3 = 63 mod 7 sees k mod 3 | (Z/63)^*=(Z/9)^* x (Z/7)^*; on odd k, k mod 6 <-> k mod 3 | PROVED S1 |
+| T6 3 negative (3n-1) cycles | lengths 1,2,7; members in rows {5},{1,5},{1,5}; number only | FINITE-EXACT census inherited; completeness OPEN |
+| T7 3 solutions p, p^3, p^2qr of F=S+U | exponent-box balance prod(a_i+1)=2^r+r+1, divisors.md eq. (DB2) in section DB1; number only | PROVED inherited |
+| T8 3 almost-prime classes A,B,C | Omega=1,2,3 labels; p^2qr is a 4-almost-prime (divisors.md DB3); number only | REFUTED as C^2B, inherited |
+| T9 3 systems x^2-{0,1,2} | exactly the rational PCF quadratics; x^2 is the squaring forest (summand.md section 2) | PROVED S5 |
+| T10 3 special values 63, -7/4, -29/16 | 63<->-7/4: c(c+1)^2=-63/64 (new); 63<->rows: ord_9(2)=6; -29/16<->3:4:5: THM-4146 | PROVED S5 / CITED |
+| T11 3-cycle -7/4->5/4->-1/4 | unique AP-supported rational quadratic 3-cycle (THM-4139); 3:4:5 forced (THM-4146) | CITED canon |
+| T12 3:4:5 | signed template -(a+b), h, -(b-a) forces (3k,4k,5k), D=29k^2 (THM-4146 4.2) | CITED canon |
+| T13 3 parameters e/d, l, theta | one-parameter chart in theta (sibling S3): no braid | PROVED sibling |
+| T14 the 3 of 3n+1 | the multiplier; ord_3(2)=2 gives the parity of h; 9=3^2 gives the row braid | PROVED S1 |
+| T15 3-cycle of x^2-2 at 2cos(2 pi k/9) | R on rows = square of the angle-doubling 3-cycle | PROVED S5 (low content) |
+| D1 doubling u->2u | complement of the strict summand shadow = doubling forest = reversed halving (summand.md section 1) | PROVED inherited |
+| D2 2-way splitting +-x / negation | 3n+1 <-> 3n-1 conjugacy swaps rows 1,5 (S4); sandwich k->-k (divisors.md section SW2) and the parity split (SW4): different objects, no cross map | PROVED both; SCOPE no map |
+| D3 2 mixed sandwich cells N_12, N_21 | differ already at K=4 (divisors.md SW2); number only w.r.t. Collatz | PROVED inherited |
+| D4 2-cycles {1,2}, {-5,-7}, {0,-1} of x^2-1 | no map found; number only | SCOPE |
+| D5 period-2 height shift h->h+2 | = ord_3(2)=2; for pn+1 the shift is ord_p(2) (S2) | PROVED S2 |
+| D6 (3n+1)/2 single halving | 2 \| 3n+1 for odd n is the parity gate; companion (n+1)/2 = F_1(n) (S2) | PROVED S2 |
+| D7 2=ord_3(2) inside 6=ord_9(2) | 6=2*3: gate x braid; 7 sees the 3, 3 sees the 2, 9 sees both (S1) | PROVED S1 |
+
+Pairwise verdicts among the threes (only pairs with an actual map): T1<->T2<->T3<->T4<->T5<->T14 (one mechanism: multiplier 3 for the count, 63=2^6-1=3^2*7 for which row / period / what 7 sees); T10(63)<->T10(-7/4) (c(c+1)^2=-63/64, predicate "no primitive prime divisor"); T10(-29/16)<->T11<->T12 (THM-4139/4146); T1<->T15 ((Z/9)^*/{+-1}); T9(x^2)<->D1 (squaring forest <-> doubling forest via exponents, summand.md section 2). **SCOPE (no map found):** T6, T7, T8, T13 against everything carry only the number 3 (T7 is an exponent-box identity, T13 is one-dimensional); this is a search statement, not a nonexistence proof.
+
+## 6. Reproduction
+
+    python3 04-computation/experiments/collatz_mod6_20260917_row_braid_typing.py > 05-knowledge/results/collatz_mod6_20260917_row_braid_typing.out
+
+249320 explicit checks (raise-based, active under `python3 -O`; the `-O` stream is byte-identical to the .out). Script sha256 bb68d971da6d9e51b79ca129f6b3a7b0343f00a32fb91911c50eaa857973643c, output sha256 beab3969624edb8d72d56c7fa15961d6db3a77cca1651d547881eff98c83a8df, 276 lines, about 6 s, RAM well under 100 MB. Universes: odd n<100001 for the rows; odd |n|<=2000 and t<=7 for the braid identities; u<3001 and h<=12 for the row law; j<2^13 for the AP layers; j<=60 and |j|<=40 for the printed rows; odd starts <=20000 for the cycle census; k<=12 for the strong -7/4 search, |a|<=120, b<=64 and |a|<=300, b<=150 for the weak searches; p<40, n<400 (positive) and odd p in [-9,39], odd |n|<1000 (signed) for the diagonal.
+
+## 7. Recovery and audit record
+
+The script was recovered from the agent transcript on 2026-09-21 and was an earlier draft: three stale items were repaired against independently recomputed truths, never by weakening a check. (i) The sympy check `factor(63n+21) == 21*(3n+1)` failed only because sympy auto-distributes the right-hand side; the identity is true and is now asserted through `expand` and `factor_list` = (21, [(3n+1, 1)]). (ii) The draft asserted that core 1 appears 4 times for j<=60; the true count is 5 (positions listed in section 3) and the check now asserts 5 with the explicit position list. (iii) The draft's strong search ran k up to 30 (about 5*2^30 iterations, non-terminating in practice); the audited final range k<=12 was restored, with k=0 added so that the integer solutions are exhibited rather than hidden. The recompute audit of 2026-09-17 (verdicts RB1-RB17: 14 CONFIRMED, RB6 and RB13 WEAKENED, RB17 UNVERIFIED as a search statement) has been applied in full: the signed diagonal (5,-1), the integer strong-form solutions, the extended weak window and closed form, the Wieferich r=2 valuation, the target-class wording of the general-p table, the (DB2) label, the paraphrase caveat, and the inheritance acknowledgements for 64n+21 / the row 3-cycle (collatz.md section 2), the companion (12) and p=7 fullness (summand.md sections 5, 9), and 63=3^2*7 (THM-4139 (36)). The proof-audit lens did not survive the worktree pruning; every claim above was re-verified against the regenerated .out instead.
+
+## 8. Stopping boundary / next question
+
+The row/braid typing is closed by the exact row law and the AP-layer description (section 3); nothing about Collatz descent follows, because a complete inverse fibre carries no information about the next composition (collatz.md section 2, summand.md section 9, and the blueprint synthesis typing row for the R(n)=4n+1 odometer). The Wieferich hostile shows the three-ness of the exponent classes is contingent on 2^{ord_p(2)} != 1 mod p^2, so no argument that leans on "p rows see p classes" can be uniform in p. The one arithmetic thread worth a further step is independent of the rows: with c=a/b in lowest terms, is (a,b)=(-7,4) (and the PCF c=-2) the only nondegenerate solution of "every prime of a(a+b)^2+b^3 divides a(a+b)"? A proof would go through the Diophantine equation a(a+b)^2+b^3 = unit or a product of primes of a(a+b); the finite window |a|<=300, b<=150 finds nothing else. Second question (OPEN): the fourth term of x^2-7/4 already brings new primes (3, 53, 103), so the 63-link stops at term 3; is there a rational c with a term-6 exception mirroring the n=6 Bang exception of 2x+1? Neither question bears on Collatz.

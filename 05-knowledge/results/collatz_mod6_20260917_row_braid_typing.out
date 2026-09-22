@@ -1,0 +1,276 @@
+
+==============================================================================
+S1  ord_9(2)=6 <=> 9 | 2^6-1 = 63 : rows, exponent classes, R-period, factor 7
+==============================================================================
+2^k mod 9, k=0..11 : [1, 2, 4, 8, 7, 5, 1, 2, 4, 8, 7, 5]
+PROVED: ord_9(2)=6, i.e. 2^6-1=63 is the first Mersenne number divisible by 9;
+        2 is a primitive root mod 9: <2> = {1,2,4,8,7,5} = (Z/9)^*.
+2^k mod 63, k=0..6 : [1, 2, 4, 8, 16, 32, 1]  ord_63(2) = 6
+2^k mod  7, k=0..6 : [1, 2, 4, 1, 2, 4, 1]   ord_7(2)  = 3
+PROVED: ord_63(2)=lcm(ord_9(2),ord_7(2))=lcm(6,3)=6 (already in THM-4139 (38));
+        <2> mod 63 = {1,2,4,8,16,32} projects ISOMORPHICALLY onto (Z/9)^* and 2:1 onto <2> mod 7 = {1,2,4}.
+PROVED (+checked odd n<100001): F(6j+1)=9j+2, F(6j+3)=9j+5, F(6j+5)=9j+8; every image is 2 mod 3.
+   Mechanism: 3n+1 mod 18 is a function of n mod 6; halving by 2^{-1}=5 mod 9 sends {4,10,16} mod 18 to {2,5,8} mod 9.
+   This uses only the multiplier 3 and 2^{-1} = 2 mod 3; it does NOT use ord_9(2)=6.
+
+powers of two in the image rows (k = exponent, 2^k = F(n) needs 2^k = 2 mod 3, i.e. k odd):
+   k mod 6 | 2^k mod 9 = image row b | source row r=(2^{k+1}-1)/3 mod 6 | 2^k mod 7
+   1       | 2                     | 1                                | 2
+   3       | 8                     | 5                                | 1
+   5       | 5                     | 3                                | 4
+PROVED: 2^k lies in image row b iff k is odd and k mod 6 = 1 (b=2, row 1), 5 (b=5, row 3), 3 (b=8, row 5).
+   Mechanism: k odd is the gate 2^k = 2 mod 3 (ord_3(2)=2); which row is k mod 6 (ord_9(2)=6).
+   The factor 7 sees k mod 3 (ord_7(2)=3): on odd k, k mod 6 -> k mod 3 is a bijection, so 7 sees the
+   row braid too, but NOT the parity gate.  3 sees only the gate.  9 = 3^2 sees both.
+PROVED (sympy symbolic): R^3(n) = 64n+21 = 63n + (n+21);  R^3(n)-n = 63n+21 = 21(3n+1) = 3*7*(3n+1); 21 = 63/3.
+PROVED (+checked |n|<=2000 odd): R adds 4 mod 6, so rows cycle 1->5->3->1 with exact period 3;
+   9 | 4^t-1 iff 3 | t (v_3(4^t-1)=1+v_3(t)), so the row period 3 IS ord_9(4)=3, i.e. ord_9(2)=6.
+   R^3 fixes the SOURCE modulo 42 = 6*7 and the TARGET F(n) modulo 63 = 9*7 (F(R^3 n) = 64 F(n)).
+   R itself multiplies the target by 4, of order 3 in both (Z/9)^* and (Z/7)^*.
+   42 is the EXACT universal source modulus: R^3(n)-n = 21(3n+1) is never 0 mod 126 (3 !| 3n+1) and is
+   0 mod 84 iff n = 1 mod 4 (checked |n|<=2000 odd).
+R mod 7 (x -> 4x+1) orbits: [(0, 1, 5), (2,), (3, 4, 6)]
+PROVED: R mod 7 has the single fixed class n = 2 mod 7 (exactly the sources with 7 | 3n+1, i.e. 7 | F(n))
+        and two 3-cycles {0,1,5}, {3,4,6}; so R has period 3 mod 6, mod 7, hence mod 42, but period 9 mod 18.
+target classes mod 63 containing powers of two: [2, 8, 32]  (2^1, 2^3, 2^5) -> mod 9: [2, 8, 5]  mod 7: [2, 1, 4]
+PROVED: exactly 3 of the 21 target classes mod 63 contain powers of two, one per row mod 9 (2,8,5) and
+        one per class {2,1,4} mod 7; the rows mod 9 are the mod-63 target classes modulo the factor 7
+        in the exact sense (Z/63)^* = (Z/9)^* x (Z/7)^*, 2 -> (2,2), and <2> -> (Z/9)^* is an isomorphism.
+
+general odd p: rows of pn+1 are the p odd classes mod 2p; powers of two in the image rows occupy
+   ord_{p^2}(2)/ord_p(2) distinct rows (all of them iff p is non-Wieferich):
+   p    | ord_p(2) | ord_{p^2}(2) | #rows hit by powers of two | target classes mod p^2 (= 2^{-1} mod p), in bijection with the p odd source classes mod 2p
+   3    | 2        | 6            | 3                          | [2, 5, 8]
+   5    | 4        | 20           | 5                          | [3, 8, 13, 18, 23]
+   7    | 3        | 21           | 7                          | [4, 11, 18, 25, 32, 39, 46]
+   11   | 10       | 110          | 11                         | [6, 17, 28, 39, 50, 61, 72, 83, 94, 105, 116]
+   13   | 12       | 156          | 13                         | [7, 20, 33, 46, 59, 72, 85, 98, 111, 124, 137, 150, 163]
+   1093 | 364      | 364          | 1                          | single class 597325 mod 1194649
+   3511 | 1755     | 1755         | 1                          | single class 6163561 mod 12327121
+PROVED: the power-of-two exponent classes are the cosets of ord_p(2) inside ord_{p^2}(2); the count is p
+        iff 2^{ord_p(2)} != 1 mod p^2 (non-Wieferich).  REFUTED as a universal law: p=1093, 3511 put every
+        power of two in the image into ONE row.  For p=3 the count 3 is 6/2: '3 rows see 3 exponent classes'.
+   Wieferich inverse braid: least q=2^d with p | q-1 has r = v_p(q-1) = {1093: 'd=364, r=2', 3511: 'd=1755, r=2'}
+PROVED: for p=1093 (d=364) and p=3511 (d=1755) r=2, so by inherited summand.md (11) the inverse braid R_p=qn+c
+        has period p^{max(0,s-1)} on odd classes mod 2p^s: NOT full (fixes the first base-p digit).  A visible degeneration.
+
+==============================================================================
+S2  Odd-multiplier tower F_p = (pn+1)/2, summand typing, inverse braids R_p
+==============================================================================
+PROVED: F_{p+2}(n) = F_p(n) + n for all odd p, n; hence F_p(n) = F_1(n) + ((p-1)/2) n with F_1(n)=(n+1)/2.
+   Summand typing (inherited summand.md section 1,3): the arrow n -> F_p(n) in the strict summand shadow has
+   the unique companion F_p(n) - n = F_{p-2}(n).  p=3: companion F_1(n)=(n+1)/2 (the inherited witness (a,b,z));
+   p=5: the companion of n in 5n+1 is its own 3n+1 image F_3(n);  p=1: companion F_{-1}(n) = (1-n)/2 <= 0,
+   so the n+1 map (n+1)/2 is NOT a strict positive summand arrow (its companion is nonpositive) for n>=1.
+PROVED: F_{p-2}(n) = n  <=>  (p-4) n = -1  <=>  p-4 is a unit  <=>  (p,n) in {(3,1), (5,-1)} over odd integers of
+        either sign; for n>=1 only (p,n)=(3,1), the trivial Collatz cycle 1 -> 2 (checked p<40, n<400: [(3, 1)];
+        signed search odd p in [-9,39], odd |n|<1000: [(3, 1), (5, -1)]; F_3(-1)=(-3+1)/2=-1, an equal-summand arrow of 5n+1).
+
+inverse-fibre braids R_p(n) = q n + c, q = least power of two = 1 mod p, c=(q-1)/p (inherited summand.md sec.5):
+   p | q=2^d | c  | r=v_p(q-1) | F_p(R_p n)=q F_p(n) | period of R_p on odd classes mod 2p, 2p^2, 2p^3 | height shift d
+   1 | 2     | 1  | n/a        | True                | [1, 1, 1]                                      | 1
+   3 | 4     | 1  | 1          | True                | [3, 9, 27]                                     | 2
+   5 | 16    | 3  | 1          | True                | [5, 25, 125]                                   | 4
+   7 | 8     | 1  | 1          | True                | [7, 49, 343]                                   | 3
+   11| 1024  | 93 | 1          | True                | [11, 121, 1331]                                | 10
+   13| 4096  | 315 | 1          | True                | [13, 169, 2197]                                | 12
+PROVED (inherited (10)-(11)): for p=3,5,7,11,13 r=1 so R_p is ONE cycle on odd classes mod 2p^s of length p^s;
+   the row period equals p (3 for 3n+1, 5 for 5n+1, 7 for 7n+1).  The height shift per braid step is d=ord_p(2).
+   p=1: q=2, c=1, R_1(n)=2n+1, F_1(R_1 n) = 2 F_1(n).  The fibre of core u under F_1 is n=2^{h+1}u-1 for EVERY h>=0
+   (no congruence gate, no parity of h, height shift 1): R_1 = tau o D o tau^{-1} with tau(x)=x-1, D(x)=2x,
+   i.e. the p=1 'braid' is the inherited doubling forest itself, shifted by one.  Its modulus 2*1^s is 2, so
+   the odometer statement is empty; on odd classes mod 6 R_1 has orbits (1,3) and (5): NO single row cycle.
+
+FINITE-EXACT positive cycles of the odd-to-odd maps T_p (starts n<=20000 odd, <=3000 steps, values capped 10^40):
+   p=1: cycles found = [(1,)] ; starts not resolved within bounds = 0
+   p=3: cycles found = [(1,)] ; starts not resolved within bounds = 0
+   p=5: cycles found = [(1, 3), (13, 33, 83), (17, 43, 27)] ; starts not resolved within bounds = 9605
+   p=7: cycles found = [(1,)] ; starts not resolved within bounds = 9982
+   PROVED: T_1 converges for every n>=1 since (n+1)/2 < n for n>1.  Others: FINITE-EXACT only (unresolved starts
+   are divergence candidates within the cap, not proofs).
+
+==============================================================================
+S3  (core,height) rows for j<=60, exact row law row(u,h) = rho(2^h u mod 9), prominence of 1,5,7
+==============================================================================
+row 1 mod 6, j=0..60:
+   (1,1),(11,0),(5,2),(29,0),(19,1),(47,0),(7,3),(65,0),(37,1),(83,0),(23,2),(101,0),(55,1),(119,0),(1,7),(137,0),(73,1),(155,0),(41,2),(173,0),(91,1),(191,0),(25,3),(209,0),(109,1),(227,0),(59,2),(245,0),(127,1),(263,0),(17,4),(281,0),(145,1),(299,0),(77,2),(317,0),(163,1),(335,0),(43,3),(353,0),(181,1),(371,0),(95,2),(389,0),(199,1),(407,0),(13,5),(425,0),(217,1),(443,0),(113,2),(461,0),(235,1),(479,0),(61,3),(497,0),(253,1),(515,0),(131,2),(533,0),(271,1)
+row 3 mod 6, j=0..60:
+   (5,0),(7,1),(23,0),(1,5),(41,0),(25,1),(59,0),(17,2),(77,0),(43,1),(95,0),(13,3),(113,0),(61,1),(131,0),(35,2),(149,0),(79,1),(167,0),(11,4),(185,0),(97,1),(203,0),(53,2),(221,0),(115,1),(239,0),(31,3),(257,0),(133,1),(275,0),(71,2),(293,0),(151,1),(311,0),(5,6),(329,0),(169,1),(347,0),(89,2),(365,0),(187,1),(383,0),(49,3),(401,0),(205,1),(419,0),(107,2),(437,0),(223,1),(455,0),(29,4),(473,0),(241,1),(491,0),(125,2),(509,0),(259,1),(527,0),(67,3),(545,0)
+row 5 mod 6, j=0..60:
+   (1,3),(17,0),(13,1),(35,0),(11,2),(53,0),(31,1),(71,0),(5,4),(89,0),(49,1),(107,0),(29,2),(125,0),(67,1),(143,0),(19,3),(161,0),(85,1),(179,0),(47,2),(197,0),(103,1),(215,0),(7,5),(233,0),(121,1),(251,0),(65,2),(269,0),(139,1),(287,0),(37,3),(305,0),(157,1),(323,0),(83,2),(341,0),(175,1),(359,0),(23,4),(377,0),(193,1),(395,0),(101,2),(413,0),(211,1),(431,0),(55,3),(449,0),(229,1),(467,0),(119,2),(485,0),(247,1),(503,0),(1,9),(521,0),(265,1),(539,0),(137,2)
+FINITE-EXACT: all three rows agree with arithmetic_braids_20260917_collatz.json for j<=34 (35 entries each).
+
+row law.  For odd u with 3 !| u and admissible h (h odd iff u = 1 mod 3), the source n=(2^{h+1}u-1)/3 lies in row
+   r = rho(2^h u mod 9), rho(2)=1, rho(5)=3, rho(8)=5,   and its index is j = (2^h u - b_r)/9.
+PROVED (+checked 6500 (u,h) pairs, u<3001, h<=12): row(u,h) = rho(2^h u mod 9).  Proof: F(n)=2^h u and F(6j+r)=9j+b_r,
+   so 2^h u = b_r mod 9 with b_r in {2,5,8} determined by r; rho inverts r -> b_r.  Since 4 = 2^2 has order 3 mod 9,
+   the three admissible heights h0, h0+2, h0+4 send u to the three DIFFERENT rows, and h -> h+6 returns:
+   row(u,h+2) = row(u,h) + 4 mod 6 (1->5->3->1), which is the R-braid R(n)=4n+1 read on rows.
+
+   base row (least admissible height h0) as a function of u mod 18:
+   u mod 18 | h0 | source n   | row
+   1        | 1  | (4*1-1)/3=1 | 1
+   5        | 0  | (2*5-1)/3=3 | 3
+   7        | 1  | (4*7-1)/3=9 | 3
+   11       | 0  | (2*11-1)/3=7 | 1
+   13       | 1  | (4*13-1)/3=17 | 5
+   17       | 0  | (2*17-1)/3=11 | 5
+PROVED: the base row depends on u mod 18 only (u mod 9 given odd), and row(u,h0+2t) = r0 + 4t mod 6.
+
+cores at fixed height h in row r form ONE odd residue class mod 18, u = b_r * 2^{-h} mod 9, listed at index step 2^{h+1}:
+   row 1, h=0: u = 11 mod 18, j =  1 mod  2, cores [11, 29, 47, 65, 83]...
+   row 1, h=1: u =  1 mod 18, j =  0 mod  4, cores [1, 19, 37, 55, 73]...
+   row 1, h=2: u =  5 mod 18, j =  2 mod  8, cores [5, 23, 41, 59, 77]...
+   row 1, h=3: u =  7 mod 18, j =  6 mod 16, cores [7, 25, 43, 61, 79]...
+   row 1, h=4: u = 17 mod 18, j = 30 mod 32, cores [17, 35, 53, 71, 89]...
+   row 3, h=0: u =  5 mod 18, j =  0 mod  2, cores [5, 23, 41, 59, 77]...
+   row 3, h=1: u =  7 mod 18, j =  1 mod  4, cores [7, 25, 43, 61, 79]...
+   row 3, h=2: u = 17 mod 18, j =  7 mod  8, cores [17, 35, 53, 71, 89]...
+   row 3, h=3: u = 13 mod 18, j = 11 mod 16, cores [13, 31, 49, 67, 85]...
+   row 3, h=4: u = 11 mod 18, j = 19 mod 32, cores [11, 29, 47, 65, 83]...
+   row 5, h=0: u = 17 mod 18, j =  1 mod  2, cores [17, 35, 53, 71, 89]...
+   row 5, h=1: u = 13 mod 18, j =  2 mod  4, cores [13, 31, 49, 67, 85]...
+   row 5, h=2: u = 11 mod 18, j =  4 mod  8, cores [11, 29, 47, 65, 83]...
+   row 5, h=3: u =  1 mod 18, j =  0 mod 16, cores [1, 19, 37, 55, 73]...
+   row 5, h=4: u =  5 mod 18, j =  8 mod 32, cores [5, 23, 41, 59, 77]...
+PROVED (+checked j<2^13): row r at height h = {odd u : u = b_r 2^{-h} mod 9}, an arithmetic progression of step 18
+   at index positions j = j0 mod 2^{h+1}; the row is the 2-adic interleaving of these six-periodic AP layers.
+   This is exactly the user's 'chain segments grow a pair at a time and are interleaved'.
+
+   row 1: indices of a fixed core satisfy j_{t+1} = 64 j_t + 14  (7(1+3r)/2), heights h0+6t.
+   row 3: indices of a fixed core satisfy j_{t+1} = 64 j_t + 35  (7(1+3r)/2), heights h0+6t.
+   row 5: indices of a fixed core satisfy j_{t+1} = 64 j_t + 56  (7(1+3r)/2), heights h0+6t.
+PROVED: j_t = (2^{h0+6t} u - b_r)/9, so j_{t+1} - 64 j_t = 63 b_r/9 = 7 b_r = 14, 35, 56 for r=1,3,5. The 63 again.
+
+first appearance (j, h) of each core u<=25 with 3 !| u in each row (j<=60 shown; '-' = beyond 60):
+   u  | row1 (j,h) | row3 (j,h) | row5 (j,h) | u mod 18
+   1  | (0,1)      | (3,5)      | (0,3)      | 1
+   5  | (2,2)      | (0,0)      | (8,4)      | 5
+   7  | (6,3)      | (1,1)      | (24,5)     | 7
+   11 | (1,0)      | (19,4)     | (4,2)      | 11
+   13 | (46,5)     | (11,3)     | (2,1)      | 13
+   17 | (30,4)     | (7,2)      | (1,0)      | 17
+   19 | (4,1)      | -          | (16,3)     | 1
+   23 | (10,2)     | (2,0)      | (40,4)     | 5
+   25 | (22,3)     | (5,1)      | -          | 7
+   appearance counts over the three rows, j<=60: [(1, 5), (5, 4), (7, 3), (11, 3), (13, 3), (17, 3), (23, 3), (29, 3)]
+PROVED: the index of core u at height h in its row is (2^h u - b_r)/9, so within j<=J the core u appears at exactly
+   the heights with 2^h u <= 9J + 8 in its parity class: about (1/2) log_2((9J+8)/u) times per row.  Small u is
+   prominent because 2^h u is small.  1, 5, 7, 11, 13, 17 are the least cores of the six classes mod 18;
+   1 and 7 are the least 1-mod-6 cores (odd heights), 5 and 11 the least 5-mod-6 cores (even heights); 7 is the
+   least 1-mod-6 core >1 and 5 the least 5-mod-6 core.  'Prominence' is size, not a dynamical property.
+
+==============================================================================
+S4  Negative rows j=-40..-1 under (3n+1)/2 with signed odd cores; negation law; where the 3 minus cycles sit
+==============================================================================
+row 1 (n=6j+1, j=-1..-40):
+   (-7,0),(-1,4),(-25,0),(-17,1),(-43,0),(-13,2),(-61,0),(-35,1),(-79,0),(-11,3),(-97,0),(-53,1),(-115,0),(-31,2),(-133,0),(-71,1),(-151,0),(-5,5),(-169,0),(-89,1),(-187,0),(-49,2),(-205,0),(-107,1),(-223,0),(-29,3),(-241,0),(-125,1),(-259,0),(-67,2),(-277,0),(-143,1),(-295,0),(-19,4),(-313,0),(-161,1),(-331,0),(-85,2),(-349,0),(-179,1)
+row 3 (n=6j+3, j=-1..-40):
+   (-1,2),(-13,0),(-11,1),(-31,0),(-5,3),(-49,0),(-29,1),(-67,0),(-19,2),(-85,0),(-47,1),(-103,0),(-7,4),(-121,0),(-65,1),(-139,0),(-37,2),(-157,0),(-83,1),(-175,0),(-23,3),(-193,0),(-101,1),(-211,0),(-55,2),(-229,0),(-119,1),(-247,0),(-1,8),(-265,0),(-137,1),(-283,0),(-73,2),(-301,0),(-155,1),(-319,0),(-41,3),(-337,0),(-173,1),(-355,0)
+row 5 (n=6j+5, j=-1..-40):
+   (-1,0),(-5,1),(-19,0),(-7,2),(-37,0),(-23,1),(-55,0),(-1,6),(-73,0),(-41,1),(-91,0),(-25,2),(-109,0),(-59,1),(-127,0),(-17,3),(-145,0),(-77,1),(-163,0),(-43,2),(-181,0),(-95,1),(-199,0),(-13,4),(-217,0),(-113,1),(-235,0),(-61,2),(-253,0),(-131,1),(-271,0),(-35,3),(-289,0),(-149,1),(-307,0),(-79,2),(-325,0),(-167,1),(-343,0),(-11,5)
+   (n = 6j+1 for j<0 gives -5,-11,-17,...; 6j+5 gives -1,-7,-13,...; 6j+3 gives -3,-9,...; this is the user's
+    'the 1 chain contains -5 and so on, the 5 chain contains -1 and so on'.)
+PROVED: -(6j+r) = 6(-j-1) + (6-r) so negation swaps rows 1 and 5 and fixes row 3 (inherited summand.md sec.7);
+   F(-m) = -(3m-1)/2, so the negative (core,height) rows are the 3n-1 rows of the positives with cores negated,
+   rows 1<->5 exchanged, and index j -> -j-1.  Heights are unchanged.
+PROVED (+1000 checks): the inverse-fibre theorem (B1),(B2) and row(u,h)=rho(2^h u mod 9) hold verbatim for negative
+   odd cores (all identities are over Z); e.g. u=-1: h even, n=-1 (row 5), -3 (row 3), -11 (row 1), -43, ...
+negative cycle members as cores in the negative rows (row of the SOURCE n=(2^{h+1}u-1)/3, all j with |j|<=40):
+   u=-1   source row 5 (member of cycle (-1,)): appears at (row,j,h) = [(1, -2, 4), (3, -29, 8), (3, -1, 2), (5, -8, 6), (5, -1, 0)]
+   u=-5   source row 1 (member of cycle (-5, -7)): appears at (row,j,h) = [(1, -18, 5), (3, -5, 3), (5, -2, 1)]
+   u=-7   source row 5 (member of cycle (-5, -7)): appears at (row,j,h) = [(1, -1, 0), (3, -13, 4), (5, -4, 2)]
+   u=-17  source row 1 (member of cycle (-17, -25, -37, -55, -41, -61, -91)): appears at (row,j,h) = [(1, -4, 1), (5, -16, 3)]
+   u=-25  source row 5 (member of cycle (-17, -25, -37, -55, -41, -61, -91)): appears at (row,j,h) = [(1, -3, 0), (5, -12, 2)]
+   u=-37  source row 5 (member of cycle (-17, -25, -37, -55, -41, -61, -91)): appears at (row,j,h) = [(3, -17, 2), (5, -5, 0)]
+   u=-55  source row 5 (member of cycle (-17, -25, -37, -55, -41, -61, -91)): appears at (row,j,h) = [(3, -25, 2), (5, -7, 0)]
+   u=-41  source row 1 (member of cycle (-17, -25, -37, -55, -41, -61, -91)): appears at (row,j,h) = [(3, -37, 3), (5, -10, 1)]
+   u=-61  source row 5 (member of cycle (-17, -25, -37, -55, -41, -61, -91)): appears at (row,j,h) = [(1, -7, 0), (5, -28, 2)]
+   u=-91  source row 5 (member of cycle (-17, -25, -37, -55, -41, -61, -91)): appears at (row,j,h) = [(5, -11, 0)]
+PROVED: no cycle member of any sign is 3 mod 6 (multiples of 3 are never T-images).  The three minus cycles
+   have lengths 1,2,7 and their members lie in rows {5}, {1,5}, {1,5}: the count 3 of cycles is NOT indexed by
+   the 3 rows; no map, only the number 3 (cycle completeness is OPEN; bounded census inherited).
+
+==============================================================================
+S5  Typing table: every 'three' and 'two' in the prompt; the exact identity c(c+1)^2 = -63/64 at c=-7/4
+==============================================================================
+2x+1 iterated from 0 gives 2^n-1.  Terms with NO new prime (gcd-stripping, exact):
+   n in 2..64 with no new prime: [6]   (63 = 3^2 * 7, 3 | 2^2-1, 7 | 2^3-1)
+   CITED: Bang (1886)/Zsigmondy (1892): 2^n-1 has a primitive prime divisor for every n except n=1 and n=6.
+   FINITE-EXACT here for n<=64.
+
+x^2+c from 0, first terms; which terms introduce no new prime in the NUMERATOR:
+   c=-7/4   : -7/4, 21/16, -7/256, -114639/65536 ... ; no-new-prime at terms [3] (of 2..6)
+   c=-29/16 : -29/16, 377/256, 23345/65536, -7239639199/4294967296 ... ; no-new-prime at terms [] (of 2..6)
+   c=-1/4   : -1/4, -3/16, -55/256, -13359/65536 ... ; no-new-prime at terms [] (of 2..6)
+   c=-1     : -1, 0, -1, 0 ... ; no-new-prime at terms [2, 3, 4, 5, 6] (of 2..6)
+   c=-2     : -2, 2, 2, 2 ... ; no-new-prime at terms [2, 3, 4, 5, 6] (of 2..6)
+   c=0      : 0, 0, 0, 0 ... ; no-new-prime at terms [2, 3, 4, 5, 6] (of 2..6)
+PROVED: for f=x^2+c, f(0)=c, f^2(0)=c(c+1), f^3(0)=c(c(c+1)^2+1).  At c=-7/4: c(c+1)^2 = (-7/4)(9/16) = -63/64,
+   so f^3(0) = c/2^6 = -7/256: the third term repeats the prime 7 of c EXACTLY because 7 * 3^2 = 63 = 2^6 - 1.
+   Term 4 = -114639/65536 = -3*7*53*103/2^16 already brings new primes (the link stops at term 3);
+   for c=-29/16 term 3 = 23345/65536 with 23345 = 5*7*23*29 (new primes 5, 7, 23).
+   This is the same integer factorization 63 = 3^2*7 that gives ord_9(2)=6 (the row braid) and the n=6 Bang
+   exception of 2x+1.  Typed map: source = {2x+1 orbit of 0, term 6}; target = {x^2-7/4 orbit of 0, term 3};
+   map = 63/64 = -c(c+1)^2, preserved predicate = 'numerator has no primitive prime divisor', mechanism = the
+   single equation 2^6 - 1 = 7 * 3^2 (7 from c, 3^2 from (c+1)^2).  Lost: the dynamics (2x+1 is affine).
+   integer c in [-2,2] (k=0) with c(c+1)^2+1 = +-2^{-m}: [(Fraction(0, 1), Fraction(1, 1)), (Fraction(-1, 1), Fraction(1, 1)), (Fraction(-2, 1), Fraction(-1, 1))]
+   non-integer c=-a/2^k, 1<=k<=12, -2^{k+1}<a<3*2^k, with c(c+1)^2+1 = +-2^{-m}: [(Fraction(-7, 4), Fraction(1, 64))]
+   FINITE-EXACT: c=a/b, |a|<=120, b<=64, nondegenerate, third term without new numerator prime: [Fraction(-2, 1), Fraction(-7, 4)]
+   (c=-2 is the Chebyshev/PCF case 0->-2->2->2; c=-1 is degenerate since f^2(0)=0.)
+   FINITE-EXACT (extended): c=a/b, |a|<=300, b<=150, nondegenerate, third term without new numerator prime: [Fraction(-2, 1), Fraction(-7, 4)]
+   PROVED closed form: for c=a/b in lowest terms f^3(0) = a(a(a+b)^2+b^3)/b^4, so 'no new prime at term 3' means
+   every prime of a(a+b)^2+b^3 divides a(a+b); at (a,b)=(-7,4): a(a+b)^2+b^3 = -63+64 = 1.
+
+PROVED: x^2+c with c in Q has a preperiodic critical point 0 iff c in {0,-1,-2}.  (c non-integral: the orbit of 0
+   has denominators b, b^2, b^4,... in lowest terms, never periodic; c>=1: increasing; c<=-3: f^2(0)=c^2+c>=|c|+3
+   and x>=|c|+1 implies x^2+c > x, escape.)  Checked |c|<=60.  The user's three systems x^2-{0,1,2} are exactly
+   the rational postcritically finite quadratics: critical orbits 0 fixed; 0<->-1; 0->-2->2 fixed.
+   integer preperiodic points of x^2+0: [-1, 0, 1]
+   integer preperiodic points of x^2-1: [-1, 0, 1]
+   integer preperiodic points of x^2-2: [-2, -1, 0, 1, 2]
+   (sibling lane pythagorean_semicircle.out S5 has the edge lists and the sign audit x^2+{1,2} -> x^2-{1,2}.)
+   THM-4146 (29)-(33) re-checked: (y^2-29)/4 has the cycle -7 -> 5 -> -1 (y=4x), forced by (3,4,5): -(3+4), 5, -(4-3).
+
+rows <-> the 3-cycle of x^2-2 (sibling lane S4 has the fold): b -> 2b mod 9 on {2,5,8} modulo sign:
+   one squaring step on rows: {1: 3, 3: 5, 5: 1}  ; R (x4) on rows: {1: 5, 3: 1, 5: 3}
+PROVED: on the three rows, the R-braid (multiply target by 4) is the SQUARE of the angle-doubling step of x^2-2 on
+   {2cos(2 pi b/9)} (multiply by 2 mod +-9); both are the group (Z/9)^*/{+-1} = Z/3.  Preserved predicate:
+   multiplication by 2 on exponents mod 9.  Lost: everything about n except F(n) mod 9.  This is a genuine but
+   low-content map (one cyclic group of order three in two guises).
+
+TYPING TABLE.  Each 'three'/'two' of the prompt; for each pair a MAP (with preserved predicate) or 'number only'.
+   T1   3 rows mod 6 (1,3,5)                       | the p=3 odd classes mod 2p; count = multiplier p                                         | PROVED S1/S2
+   T2   3 image residues 2,5,8 mod 9               | j-preserving bijection with T1: F(6j+r)=9j+b_r; = classes 2 mod 3 in Z/9                 | PROVED S1
+   T3   3 exponent classes 1,5,3 mod 6 of 2^k      | bijection with T2 via 2^k mod 9; needs ord_9(2)=6                                        | PROVED S1
+   T4   period 3 of R=4n+1 on rows                 | ord_9(4)=3 = ord_9(2)/ord_3(2); R^3=64n+21, 63=3*21                                      | PROVED S1
+   T5   3 = 63 mod 7 sees k mod 3                  | (Z/63)^*=(Z/9)^*x(Z/7)^*; on odd k, k mod 6 <-> k mod 3                                  | PROVED S1
+   T6   3 negative (3n-1) cycles                   | lengths 1,2,7; members in rows {5},{1,5},{1,5}; number only                              | FINITE-EXACT census inherited; completeness OPEN
+   T7   3 solutions of F=S+U (p, p^3, p^2qr)       | exponent-box balance prod(a_i+1)=2^r+r+1 (divisors.md eq. (DB2), section DB1); number only | PROVED inherited
+   T8   3 almost-prime classes A,B,C               | Omega=1,2,3 labels; p^2qr is a 4-almost-prime (divisors.md DB3); number only             | REFUTED as C^2B, inherited
+   T9   3 systems x^2-{0,1,2}                      | exactly the rational PCF quadratics; x^2 = squaring forest (summand.md sec.2)            | PROVED S5
+   T10  3 special values 63, -7/4, -29/16          | 63<->-7/4: c(c+1)^2=-63/64 (S5, new); 63<->rows: ord_9(2)=6; -29/16<->3:4:5: THM-4146    | PROVED S5
+   T11  3-cycle -7/4->5/4->-1/4                    | unique AP-supported rational quadratic 3-cycle (THM-4139); 3:4:5 forced (THM-4146)       | CITED canon
+   T12  3:4:5                                      | signed template -(a+b),h,-(b-a) forces (3k,4k,5k), D=29k^2 (THM-4146 4.2)                | CITED canon
+   T13  3 parameters e/d, l, theta                 | one-parameter chart in theta (sibling pythagorean_semicircle.out S3): no braid           | PROVED sibling
+   T14  3 of 3n+1                                  | the multiplier; ord_3(2)=2 gives h parity; 9=3^2 gives the row braid                     | PROVED S1
+   T15  3-cycle of x^2-2 at 2cos(2 pi k/9)         | rows: R on rows = square of the angle-doubling 3-cycle (S5)                              | PROVED S5 (low content)
+   D1   doubling u->2u                             | complement of strict summand shadow = doubling forest = reversed halving (summand.md sec.1) | PROVED inherited
+   D2   2-way splitting +-x / negation             | 3n+1 <-> 3n-1 conjugacy swaps rows 1,5 (S4); sandwich k->-k (divisors SW2): different objects, no map between them | PROVED both; no cross map
+   D3   2 mixed sandwich cells N_12, N_21          | differ already at K=4 (divisors SW2); number only w.r.t. Collatz                         | PROVED inherited
+   D4   2-cycles: {1,2} shortcut, {-5,-7}, {0,-1} of x^2-1 | no map found; number only                                                                | no map
+   D5   period-2 height shift h->h+2               | = ord_3(2)=2: 4 is the least power of two = 1 mod 3; general p: shift ord_p(2) (S2)      | PROVED S2
+   D6   (3n+1)/2 single halving                    | 2 | 3n+1 for odd n: the parity gate; companion (n+1)/2 = F_1(n) (S2)                     | PROVED S2
+   D7   2 = ord_3(2) inside 6 = ord_9(2)           | 6 = 2*3: gate x braid; 7 sees the 3, 3 sees the 2, 9 sees both (S1)                      | PROVED S1
+
+PAIRWISE VERDICTS among the threes (only pairs with an actual map are listed; all other pairs: number only):
+   T1<->T2<->T3<->T4<->T5<->T14         : one mechanism: multiplier 3 (count) and 63=2^6-1=3^2*7 (which row / period / what 7 sees)
+   T10(63)<->T10(-7/4)                  : c(c+1)^2 = -63/64: same factorization 63 = 7*3^2, predicate 'no primitive prime divisor'
+   T10(-29/16)<->T11<->T12              : THM-4139/4146: AP three-cycle and 3:4:5 Pythagorean forcing
+   T1<->T15                             : (Z/9)^*/{+-1}: R on rows is the square of the x^2-2 angle-doubling 3-cycle
+   T9(x^2)<->D1                         : squaring forest <-> doubling forest via exponents (summand.md sec.2)
+   T6, T7, T8, T13 vs everything        : NO MAP FOUND: only the number 3 (T7 is an exponent-box identity, T13 is one-dimensional)
+
+checks passed: 249320
+script sha256: bb68d971da6d9e51b79ca129f6b3a7b0343f00a32fb91911c50eaa857973643c
+ALL CHECKS PASSED

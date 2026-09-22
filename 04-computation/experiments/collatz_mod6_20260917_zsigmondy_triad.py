@@ -16,10 +16,13 @@ Inheritance (read, not re-derived):
   05-knowledge/results/arithmetic_braids_20260917_collatz.md   (rows 6j+1->9j+2 etc., ord_9(2)=6)
   05-knowledge/results/arithmetic_braids_20260917_summand.md
   05-knowledge/results/arithmetic_braids_20260917_divisors.md
+  05-knowledge/results/arithmetic_braids_20260917_geometry.md  (eta-parabola c=-(eta^2+7)/4 (4); parabolic cycle at -7/4 (9);
+        n=3 numerator test Q(a,b)=+-1 (11) with census b<=2000 and the Krieger citation; Gaussian squaring x=2A/C -> x^2-2 (16))
+  01-canon/theorems/THM-3341-*.md, THM-3333-*.md  (Gaussian squaring of primitive triples; read for the x^2-2 conjugacy only)
   01-canon/theorems/THM-4139-*.md  (PrePer(x^2-29/16,Q), unique AP 3-cycle, Psi_6 of squaring, 63 census)
   01-canon/theorems/THM-4146-*.md  (sigma-parametrization c=-(sigma^2+sigma+2), multiplier, 3:4:5 forcing)
 """
-import sys, time, shutil, subprocess, itertools
+import sys, re, time, shutil, subprocess, itertools
 from fractions import Fraction as Fr
 from math import gcd, isqrt
 import sympy as sp
@@ -47,6 +50,30 @@ def factor_str(n):
         return "1"
     return " * ".join(f"{p}^{e}" if e > 1 else f"{p}" for p, e in sorted(sp.factorint(n).items()))
 
+GP = shutil.which("gp")
+
+def gp_run(script, timeout=300):
+    """Run PARI/GP on `script`; gp -q exits at EOF, so no \\q is needed.  Returns output lines or None."""
+    if not GP:
+        return None
+    try:
+        r = subprocess.run([GP, "-q"], input=script + "\n", capture_output=True, text=True, timeout=timeout)
+        return [l for l in r.stdout.strip().splitlines() if not l.startswith("  ***")]
+    except Exception as e:
+        print("  PARI/GP call failed:", e)
+        return None
+
+def parse_pairs(line):
+    return {(int(a_), int(b_)) for a_, b_ in re.findall(r"\[(-?\d+),\s*(-?\d+)\]", line)}
+
+def normalize_pairs(sols):
+    out = set()
+    for a_, b_ in sols:
+        if b_ < 0 or (b_ == 0 and a_ < 0):
+            a_, b_ = -a_, -b_
+        out.add((a_, b_))
+    return out
+
 def primitive_part(terms, n):
     """terms[1..n] integers. Return R = part of |terms[n]| coprime to all earlier terms,
     obtained by repeated gcd stripping.  R != 1  <=>  terms[n] has a primitive prime divisor
@@ -72,7 +99,11 @@ print("Critical-orbit census universe: c=a/b, b in {1,2,4,8,16,32,64}, |a|<=200,
 print("  the integer sub-universe c in [-60,60] is contained in b=1.")
 print("Inherited and NOT re-derived: three-row typing, ord_9(2)=6 row exponents, R(n)=4n+1 fibre,")
 print("  PrePer(x^2-29/16,Q) (THM-4139 sec.1 / THM-4146 sec.1), sigma-parametrization (THM-4146 (10)),")
-print("  Psi_6 of squaring = Phi_9 Phi_21 Phi_63 (THM-4139 (37)).")
+print("  Psi_6 of squaring = Phi_9 Phi_21 Phi_63 (THM-4139 (37)),")
+print("  arithmetic_braids_20260917_geometry.md: eta-parabola c=-(eta^2+7)/4 and disc (eta^2+eta+7)^2 (4), the parabolic")
+print("  cycle P(x)=x^3+x^2/2-9x/4-1/8 with Phi_3=P^2 and multiplier 1 at -7/4 (9), the n=3 test f^3(0)=aQ(a,b)/b^4 with")
+print("  Q=+-1 <=> no new prime (11) and its census b<=2000, Krieger's Theorem 6.1 boundary, x=2A/C -> x^2-2 (16).")
+print("  Everything below is re-verified only where a check is printed; inherited statements are cited, not claimed.")
 
 # ---------------------------------------------------------------------------------------
 hr("S1. (i) 2^n-1, n<=40: primitive prime divisors, Bang/Zsigmondy exceptions")
@@ -230,6 +261,7 @@ print("  n=2: N_2=a(a+b); primes of a+b are coprime to a, so no primitive prime 
 print("       (includes the period-doubling parameter c=-3/4=-1+1/4).  INFINITELY many n=2 failures.")
 print("  n=3: N_3=a*F(a,b), F(a,b)=a^3+2a^2b+ab^2+b^3, gcd(F,a)=gcd(b^3,a)=1, gcd(F,a+b)=gcd(b^3,a+b)=1,")
 print("       so every prime of F is primitive and failure <=> F(a,b)=+-1  (a cubic THUE equation; see S3).")
+print("       [n=3 is inherited: geometry note (11) proves exactly this with F=Q and censuses b<=2000; new here: S3/S3b.]")
 print("FINITE-EXACT (this box, n<=8): -7/4 is the ONLY non-preperiodic n=3 failure, and there are NO failures for 4<=n<=8.")
 
 # ---------------------------------------------------------------------------------------
@@ -256,7 +288,7 @@ cf = sp.Poly(Pparab, x).all_coeffs()          # Vieta: product of the three root
 prod_roots = -R(cf[3], 1) / cf[0]
 check(prod_roots == R(1, 8), "product of parabolic cycle points = 1/8")
 print("At c=-7/4: Phi_3 = (8x^3+4x^2-18x-1)^2/64 (a perfect square: two 3-cycles collide).  Multiplier of the cycle")
-print("  = prod f'(x_i) = 8 * prod x_i = 8 * (1/8) = 1  -> PARABOLIC (saddle-node) 3-cycle.  PROVED.")
+print("  = prod f'(x_i) = 8 * prod x_i = 8 * (1/8) = 1  -> PARABOLIC (saddle-node) 3-cycle.  PROVED (inherited: geometry (9)).")
 print("  Parabolic cycle numerically:", [sp.N(r, 8) for r in rts], " (note x_1 ~ -1.75 ~ c and x_3 ~ -0.055 ~ 0)")
 # sigma parabola (THM-4146 (10)) re-verified and re-parametrized by s = sigma + 1/2
 Psig = X**3 - sig*X**2 - (sig**2 + 2*sig + 3)*X + (sig**3 + 2*sig**2 + 3*sig + 1)
@@ -271,7 +303,8 @@ print("  Put s = sigma + 1/2.  Then  c = ", c_s, "   and   lambda(s) =", lam_s)
 check(c_s == -s**2 - R(7, 4), "c = -7/4 - s^2")
 check(lam_s.subs(s, 0) == 1 and lam_s.subs(s, R(-1, 4)) == R(35, 8) and lam_s.subs(s, R(1, 4)) == R(-23, 8),
       "lambda(0)=1, lambda(-1/4)=35/8, lambda(1/4)=-23/8")
-print("PROVED: the unmarked 3-cycle curve of x^2+c is the parabola c = -7/4 - s^2, a 2:1 cover of the c-line branched")
+print("PROVED (inherited: geometry note (4) states this as c=-(eta^2+7)/4 with eta=2s; re-verified here):")
+print("  the unmarked 3-cycle curve of x^2+c is the parabola c = -7/4 - s^2, a 2:1 cover of the c-line branched")
 print("  exactly at the real parabolic parameter c=-7/4 (s=0, lambda=1).  A rational unmarked 3-cycle (rational cycle-sum)")
 print("  exists iff -7/4 - c is a rational square.  The cycle points are rational iff Morton's t (S4) is rational.")
 print("  -29/16 = -7/4 - (1/4)^2: its two 3-cycles are s=-1/4 (sigma=-3/4, the rational AP cycle, lambda=35/8 = THM-4139 (32))")
@@ -341,7 +374,8 @@ for k in range(-300, 301):
 print("  Units +-rho^k = A + C rho^2 with vanishing rho-coefficient, |k|<=300:", unit_hits)
 check([(k, A, C) for k, A, C in unit_hits] == [(-14, -7, 4), (-5, 2, -1), (-1, -1, 1), (0, 1, 0), (2, 0, 1)],
       "vanishing-middle-coefficient units")
-print("  -> c = A/C in {-7/4 (k=-14), -2 (k=-5), -1 (k=-1), 0 (k=2)} and the cusp b=0 (k=0).  So -7/4 = ratio in rho^-14 = 4 rho^2 - 7.")
+print("  -> c = A/C in {-7/4 (k=-14), -2 (k=-5), -1 (k=-1), 0 (k=2)} and b=0 (k=0: c=infinity, not a parameter).")
+print("     So -7/4 = ratio in rho^-14 = 4 rho^2 - 7.  (Z[rho] is the full ring of integers since disc -23 is squarefree.)")
 # direct Thue search
 rho_num = sp.N(sp.CRootOf(rho_poly, 0), 30)
 r2 = float(rho_num**2)
@@ -353,38 +387,121 @@ for b in range(1, 10**6 + 1):
             thue_sols.append((a, b))
 print("  Direct search F(a,b)=+-1, 1<=b<=10^6, a within 2 of -rho^2 b (all others have |F|>1 since |a/b+rho^2| >= 1/(2b) there):", thue_sols)
 check(thue_sols == [(-2, 1), (-1, 1), (0, 1), (-7, 4)], "Thue solutions with b<=10^6")
-gp = shutil.which("gp")
-if gp:
-    try:
-        out = subprocess.run([gp, "-q"], input="tnf=thueinit(x^3+2*x^2+x+1,1);print(thue(tnf,1));print(thue(tnf,-1));\\q\n",
-                             capture_output=True, text=True, timeout=300).stdout.strip().splitlines()
-        print("  PARI/GP thueinit(flag=1, unconditional) thue(F,+1):", out[0], "  thue(F,-1):", out[1])
-        sols = set()
-        for line in out[:2]:
-            for pair in line.strip("[]").split("], ["):
-                a_, b_ = [int(v) for v in pair.strip("[]").split(",")]
-                if b_ < 0 or (b_ == 0 and a_ < 0):
-                    a_, b_ = -a_, -b_
-                sols.add((a_, b_))
-        check(sols == {(-7, 4), (-1, 1), (0, 1), (1, 0), (-2, 1)}, "PARI Thue solution set")
-        print("  => COMPLETE (CITED: PARI thue, Bilu-Hanrot algorithm, flag 1 = no GRH): all solutions of F(a,b)=+-1 are")
-        print("     +-(1,0), +-(0,1), +-(-1,1), +-(-2,1), +-(-7,4).  Hence over ALL of Q the n=3 non-Zsigmondy parameters are")
-        print("     exactly c in {0,-1,-2} (0 preperiodic) and c = -7/4.")
-    except Exception as e:
-        print("  PARI/GP call failed:", e)
+out = gp_run("tnf=thueinit(x^3+2*x^2+x+1,1);print(thue(tnf,1));print(thue(tnf,-1));")
+PARI_OK = False
+if out is not None and len(out) >= 2:
+    print("  PARI/GP thueinit(flag=1, unconditional) thue(F,+1):", out[0], "  thue(F,-1):", out[1])
+    plus, minus = parse_pairs(out[0]), parse_pairs(out[1])
+    check(minus == {(-a_, -b_) for a_, b_ in plus}, "thue(F,-1) = -thue(F,+1) (F has odd degree)")
+    check(normalize_pairs(plus | minus) == {(-7, 4), (-1, 1), (0, 1), (1, 0), (-2, 1)}, "PARI Thue solution set")
+    print("  => COMPLETE (CITED: PARI thue, Bilu-Hanrot algorithm, flag 1 = no GRH): all solutions of F(a,b)=+-1 are")
+    print("     +-(1,0), +-(0,1), +-(-1,1), +-(-2,1), +-(-7,4).  Hence over ALL of Q the n=3 non-Zsigmondy parameters are")
+    print("     exactly c in {0,-1,-2} (0 preperiodic) and c = -7/4.")
+    PARI_OK = True
 else:
-    print("  PARI/GP not available; completeness of the Thue list is then OPEN here (FINITE-EXACT to b<=10^6).")
+    print("  PARI/GP not available or failed; completeness of the Thue list is then OPEN here (FINITE-EXACT to b<=10^6).")
+
+# ---------------------------------------------------------------------------------------
+hr("S3b. Gleason product G_n = prod_{d|n} H_d, pairwise resultants, and the n<=6 primitive-divisor reduction")
+Gl = {n: G[n] for n in range(1, 6)}
+Gl[6] = sp.expand(G[5]**2 + c)
+Hd = {}
+for n in range(1, 7):
+    q = Gl[n]
+    for d in sp.divisors(n):
+        if d < n:
+            q = sp.quo(q, Hd[d], c)
+    Hd[n] = sp.expand(q)
+    prod_ = sp.Integer(1)
+    for d in sp.divisors(n):
+        prod_ *= Hd[d]
+    check(sp.expand(prod_ - Gl[n]) == 0, f"G_{n} = prod_(d|{n}) H_d exactly (division is exact)")
+    check(sp.Poly(Hd[n], c).LC() == 1, f"H_{n} monic")
+    check(sp.gcd(Hd[n], sp.diff(Hd[n], c)) == 1, f"H_{n} squarefree")
+    print(f"  H_{n}: degree {int(sp.degree(Hd[n], c)):>2}, irreducible over Q: {sp.Poly(Hd[n], c).is_irreducible}, "
+          f"H_{n}(0) = {Hd[n].subs(c, 0)}, H_{n}(-1) = {Hd[n].subs(c, -1)}, H_{n}(-2) = {Hd[n].subs(c, -2)}")
+check(sp.expand(Hd[3] - H3) == 0, "H_3 = c^3+2c^2+c+1")
+check(sp.expand(Hd[4] - (c**6 + 3*c**5 + 3*c**4 + 3*c**3 + 2*c**2 + 1)) == 0, "H_4 as displayed in S3")
+print("  Res_c(H_d, H_n) for 1 <= d < n <= 6 (exact):")
+for n in range(2, 7):
+    row = []
+    for d in range(1, n):
+        r_ = sp.resultant(Hd[d], Hd[n], c)
+        check(r_ in (1, -1), f"Res(H_{d},H_{n}) must be +-1, got {r_}")
+        row.append(f"Res(H_{d},H_{n})={int(r_):>2}")
+    print("    " + "; ".join(row))
+print("PROVED (n<=6, from the exact resultants above).  Write H_n(a,b) = b^deg H_n(a/b) (monic in a).  For c=a/b in lowest terms:")
+print("  N_n = prod_(d|n) H_d(a,b) exactly (total degree 2^(n-1); each H_d(a,b) = a^deg mod b is coprime to b).")
+print("  If a prime p divided H_d(a,b) and H_n(a,b) with d<n, then p does not divide b, and a/b mod p would be a common root")
+print("  of H_d and H_n mod p, so p | Res(H_d,H_n) = +-1: impossible.  Hence the factors H_d(a,b), d|n, are pairwise coprime,")
+print("  every prime of H_n(a,b) is primitive at n, and every other prime of N_n divides some N_d, d|n, d<n.  Therefore")
+print("  N_n has a primitive prime divisor  <=>  |H_n(a,b)| >= 2,   i.e.  non-Zsigmondy at n  <=>  H_n(a,b) = +-1  (n<=6),")
+print("  a Thue equation of degree 1,1,3,6,15,27 for n=1..6.  (This is the quadratic-critical-orbit analogue of")
+print("  'non-primitive primes of Phi_n(2) divide n'; for n<=6 it is even cleaner: there are none at all.)")
+# small-height searches for H_4, H_5, H_6 = +-1
+def hom_coeffs(Pc):
+    return [int(v) for v in sp.Poly(Pc, c).all_coeffs()]
+def hom_eval(coeffs, a_, bpow):
+    r_ = 0
+    for i, co in enumerate(coeffs):
+        r_ = r_ * a_ + co * bpow[i]
+    return r_
+BFULL, BROOT = 100, 5000
+for n in (4, 5, 6):
+    co = hom_coeffs(Hd[n]); deg = len(co) - 1
+    rr_ = [float(r_) for r_ in sp.Poly(Hd[n], c).all_roots() if r_.is_real]
+    hits = set()
+    for b in range(1, BROOT + 1):
+        bpow = [b**i for i in range(deg + 1)]
+        if b <= BFULL:
+            cand = range(-3 * b, 3 * b + 1)
+        else:
+            cand = {a_ for r_ in rr_ for a_ in range(round(r_ * b) - 2, round(r_ * b) + 3)}
+        for a_ in cand:
+            if gcd(a_, b) == 1 and abs(hom_eval(co, a_, bpow)) == 1:
+                hits.add((a_, b))
+    hits = sorted(hits)
+    print(f"  H_{n}(a,b) = +-1, all |a|<=3b for b<={BFULL} and a within 2 of b*(real roots {[round(v, 4) for v in rr_]}) for b<={BROOT}: {hits}")
+    check(all(b == 1 and a_ in (0, -1, -2) for a_, b in hits), f"H_{n}=+-1 has no non-preperiodic solution in the searched box")
+print("  FINITE-EXACT: in the searched boxes the only solutions are c in {0,-1,-2} (0 preperiodic): no non-preperiodic")
+print("  exception at n=4,5,6 of that height (consistent with the S2 census box).")
+THUE_CLOSED = []
+for n in (4, 5):
+    if not PARI_OK:
+        print(f"  PARI/GP unavailable: n={n} completeness OPEN here (FINITE-EXACT boxes only).")
+        continue
+    sn = str(Hd[n]).replace("**", "^").replace("c", "x")
+    t_ = time.time()
+    out = gp_run(f"tnf=thueinit({sn},1);print(thue(tnf,1));print(thue(tnf,-1));", timeout=300)
+    if out is not None and len(out) >= 2:
+        print(f"  PARI/GP thueinit(flag=1, unconditional) for H_{n} (degree {int(sp.degree(Hd[n], c))}): thue(+1): {out[0]}  thue(-1): {out[1]}")
+        plus, minus = parse_pairs(out[0]), parse_pairs(out[1])
+        if n % 2:
+            check(minus == {(-a_, -b_) for a_, b_ in plus}, f"thue(H_{n},-1) = -thue(H_{n},+1) (odd degree)")
+        else:
+            check(minus == set(), f"H_{n}=-1 has no solution")
+        check(normalize_pairs(plus | minus) == {(1, 0), (0, 1), (-1, 1), (-2, 1)}, f"PARI Thue H_{n} = +-1 solution set")
+        THUE_CLOSED.append(n)
+        print(f"  => H_{n}(a,b)=+-1 only at +-(1,0),(0,1),(-1,1),(-2,1)  [b=0 is c=infinity; the rest are c=0,-1,-2, all preperiodic].")
+    else:
+        print(f"  PARI/GP H_{n} Thue call failed: n={n} completeness OPEN here (FINITE-EXACT boxes only).")
+if THUE_CLOSED == [4, 5]:
+    print("  PROVED + CITED (resultants above + PARI thue, unconditional): for EVERY rational c with infinite critical orbit,")
+    print("  N_4 and N_5 have primitive prime divisors.  Together with n=3 (S3): the only non-preperiodic rational parameter")
+    print("  whose critical orbit misses a primitive prime at some 3<=n<=5 is c=-7/4, at n=3 only.  The draft's n=4 OPEN item")
+    print("  is closed.  n=6 (degree 27) is left at the finite box above: a side run of thueinit on H_6 did not finish within")
+    print("  the time budget of this lane, so H_6(a,b)=+-1 is OPEN beyond that box.")
 
 # ---------------------------------------------------------------------------------------
 hr("S4. Families: fixed points, 2-cycles, Morton 3-cycles; cycle fields; the Chebyshev conductors 7 and 9")
 r_, s_ = sp.symbols('r s_')
 print("Fixed points x^2-x+c=0 rational iff 1-4c=r^2, c=(1-r^2)/4: r=1->0, r=3->-2, r=5/2->-21/16, r=9/2->-77/16 (PROVED).")
 for rr, cc in [(1, 0), (3, -2), (R(5, 2), R(-21, 16)), (R(9, 2), R(-77, 16))]:
-    check((1 - rr**2) / 4 == cc, f"fixed-point family r={rr}")
+    check((1 - R(rr)**2) / 4 == cc, f"fixed-point family r={rr}")
 print("2-cycles x^2+x+c+1=0 rational iff -3-4c=s^2, c=-(3+s^2)/4: s=1->-1, s=2->-7/4, s=0->-3/4 (degenerate, multiplier -1),")
-print("  s=3->-3, s=5/2->-37/16 (PROVED).")
-for ss, cc in [(1, -1), (2, R(-7, 4)), (0, R(-3, 4)), (3, -3), (R(5, 2), R(-37, 16))]:
-    check(-(3 + ss**2) / 4 == cc, f"2-cycle family s={ss}")
+print("  s=3->-3, s=5/2->-37/16, s=9/2->-93/16 (PROVED).")
+for ss, cc in [(1, -1), (2, R(-7, 4)), (0, R(-3, 4)), (3, -3), (R(5, 2), R(-37, 16)), (R(9, 2), R(-93, 16))]:
+    check(-(3 + R(ss)**2) / 4 == cc, f"2-cycle family s={ss}")
 Dt = 2*t*(t + 1)
 p0 = (t**3 + 2*t**2 + t + 1) / Dt; p1 = (t**3 - t - 1) / Dt; p2 = -(t**3 + 2*t**2 + 3*t + 1) / Dt
 ct = -(t**6 + 2*t**5 + 4*t**4 + 8*t**3 + 9*t**2 + 4*t + 1) / (4*t**2*(t + 1)**2)
@@ -457,6 +574,17 @@ for sv, name, P, m, fname in fields:
         check(sp.Poly(P.as_expr(), X).is_irreducible, f"{name} cubic irreducible over Q")
         print(f"  s={sv}: {name}: P = {P.as_expr()} irreducible; 4s^2+2s+7 = {dq}.  Root = {coef[0]} + ({coef[1]}) y + ({coef[2]}) y^2")
         print(f"        with y a root of {m}  [verified exactly mod m].  Field: {fname}.")
+out = gp_run("print(nfdisc(x^3+x^2-2*x-1));print(nfdisc(x^3-x^2-10*x+8));print(nfdisc(x^3-3*x+1));"
+             "print(nfdisc(8*x^3+4*x^2-18*x-1));print(nfdisc(64*x^3+16*x^2-164*x+23));")
+if out is not None and len(out) >= 5:
+    nfd = [int(v) for v in out[:5]]
+    check(nfd == [49, 961, 81, 49, 961], f"PARI nfdisc cross-check, got {nfd}")
+    print("  PARI nfdisc (CITED cross-check): Q(2cos 2pi/7) 49; y^3-y^2-10y+8 961=31^2; Q(2cos 2pi/9) 81; the parabolic")
+    print("  cubic 8X^3+4X^2-18X-1 has field discriminant 49 and the s=1/4 cubic 64X^3+16X^2-164X+23 has 961:", nfd)
+else:
+    print("  (PARI nfdisc cross-check skipped: gp unavailable or failed.)")
+print("  Inherited: geometry note sec.2 already proves the -7/4 parabolic cycle is the affine image L(x)=-x-1/2 of the reversed")
+print("  conductor-7 cycle of x^2-2, so the field equality below is a re-verification by exact embedding, not a discovery.")
 print("  FINITE-EXACT/PROVED: the parabolic 3-cycle of x^2-7/4 and the '2^3-1=7' 3-cycle of x^2-2 generate the SAME field")
 print("  Q(2cos 2pi/7); the second 3-cycle at -29/16 generates the conductor-31 cyclic cubic; the AP cycle splits.")
 print("  Which cycle at c=-2 lies where: sigma=-1 <=> sum 2cos(2pi k/7) = -1 (conductor 7 = 2^3-1);")
@@ -632,11 +760,19 @@ for xq in [Fr(1, 4), Fr(-3, 4), Fr(-7, 4), Fr(-29, 16), Fr(0), Fr(-1), Fr(-2), F
     L = params_with_preperiodic_point(xq)
     print(f"  x={str(xq):<7}: " + ", ".join(f"c={cq} (tail {tl}, period {pr})" for cq, tl, pr in L))
     if xq == Fr(-7, 4):
-        check([(cq, tl, pr) for cq, tl, pr in L] == [(Fr(-77, 16), 0, 1), (Fr(-37, 16), 0, 2), (Fr(-29, 16), 0, 3), (Fr(-21, 16), 1, 1)],
-              "parameters with -7/4 preperiodic")
+        check([(cq, tl, pr) for cq, tl, pr in L] == [(Fr(-93, 16), 1, 2), (Fr(-77, 16), 0, 1), (Fr(-37, 16), 0, 2), (Fr(-29, 16), 0, 3), (Fr(-21, 16), 1, 1)],
+              "parameters with -7/4 preperiodic: -93/16 (tail 1 -> 2-cycle {-11/4, 7/4}), -77/16, -37/16, -29/16, -21/16")
+    if xq == Fr(1, 4):
+        check([(cq, tl, pr) for cq, tl, pr in L] == [(Fr(-29, 16), 1, 3), (Fr(-21, 16), 0, 2), (Fr(-13, 16), 1, 2), (Fr(-5, 16), 1, 1), (Fr(3, 16), 0, 1)],
+              "parameters with 1/4 preperiodic")
+    if xq == Fr(-3, 4):
+        check([(cq, tl, pr) for cq, tl, pr in L] == [(Fr(-45, 16), 2, 1), (Fr(-37, 16), 1, 2), (Fr(-29, 16), 2, 3), (Fr(-21, 16), 0, 1), (Fr(-13, 16), 0, 2), (Fr(-5, 16), 2, 1), (Fr(3, 16), 1, 1)],
+              "parameters with -3/4 preperiodic")
     if xq == Fr(-29, 16):
         print("     (-29/16 is a fixed point iff c = x - x^2 = -1305/256, in a 2-cycle iff c = -1-x-x^2 = -633/256.)")
 L29 = params_with_preperiodic_point(Fr(-29, 16))
+check([(cq, tl, pr) for cq, tl, pr in L29] == [(Fr(-1561, 256), 1, 2), (Fr(-1305, 256), 0, 1), (Fr(-633, 256), 0, 2), (Fr(-377, 256), 1, 1)],
+      "parameters with -29/16 preperiodic")
 check(all(pr <= 2 for _, _, pr in L29), "-29/16 never has exact period >= 3 over Q")
 # exact period n parameters via rational roots of Phi_n(x0, c), n=1..4
 print("Rational c with x0 of EXACT period n, from rational roots of Phi_n(x0,c) in c (n<=4):")
@@ -696,32 +832,43 @@ print("  Map: NONE on objects (multiplicative group orbit vs polynomial critical
 print("  has no primitive prime divisor' <=> 'no prime p sees the base point with exact period n mod p' (both PROVED:")
 print("  p primitive for 2^n-1 <=> ord_p(2)=n; p primitive for N_n <=> 0 has exact period n under x^2+c mod p).")
 print("  Preserved structure: a 'cyclotomic-type' factorization of the n-th term over d|n: 2^n-1 = prod Phi_d(2) versus")
-print("  G_n(c) = prod_{d|n} H_d(c) (Gleason: G_1=c, G_2=c(c+1), G_3=c H_3, G_4=c(c+1)H_4, S3), with the primitive part")
-print("  = the d=n factor.  Lost: in Bang, non-primitive primes of Phi_n(a) divide n (uniform theorem); for H_n(a,b) there")
-print("  is no such uniform statement, only the n<=3 gcd computations (S2) - so the quadratic side has infinitely many")
-print("  n=2 exceptions (c=-1+-1/b) where Zsigmondy has finitely many.  Sidecar restoring exactness at n=3: the Thue")
+print("  G_n(c) = prod_{d|n} H_d(c) (Gleason: G_1=c, G_2=c(c+1), G_3=c H_3, G_4=c(c+1)H_4, verified n<=6 in S3b), with the")
+print("  primitive part = the d=n factor.  Lost: in Bang, non-primitive primes of Phi_n(a) divide n (uniform theorem, all n);")
+print("  for H_n(a,b) the factors are pairwise coprime for n<=6 (S3b) but no uniform statement is proved here, and the")
+print("  quadratic side has infinitely many n=2 exceptions (c=-1+-1/b) where Zsigmondy has finitely many.  Sidecar at n=3: the Thue")
 print("  equation F(a,b)=+-1 = units of Z[rho] with vanishing rho-coefficient (S3).  Cheapest decisive test: Phi_6(2)=3")
 print("  (a prime dividing 6) versus F(-7,4)=1 (a unit) - computed above, exact.")
 print("  Verdict on '63 <-> -7/4': REFUTED as a structural identification.  Exact facts only: (a) f^3(0)/f(0)=2^-6=1/(63+1)")
 print("  with exponent 2^3-2=6 (equal to Bang's 6 only because 2^n-2=2n iff n=3); (b) 63=7*9 is attached to c=-2, the")
-print("  Chebyshev parameter, as the product of the conductors of its two 3-cycles; c=-2 = -7/4 - (1/2)^2 and")
+print("  Chebyshev parameter, as the product of the conductors of its two 3-cycles (geometry note (6), THM-4139 (36)-(38)); c=-2 = -7/4 - (1/2)^2 and")
 print("  -29/16 = -7/4 - (1/4)^2 are the s=1/2 and s=1/4 points of the 3-cycle parabola centred at -7/4; (c) the parabolic")
-print("  3-cycle at -7/4 and the conductor-7 3-cycle at -2 generate the same field Q(2cos 2pi/7).")
+print("  3-cycle at -7/4 and the conductor-7 3-cycle at -2 generate the same field Q(2cos 2pi/7) (geometry note sec.2, inherited).")
+print("  Gaussian-squaring face (inherited, geometry (13)-(16), THM-3341 sec.4, THM-3333): x=2A/C of a primitive triple obeys")
+print("  x -> x^2-2 exactly, with denominators C^(2^n) and pairwise coprime odd legs, i.e. every step of such an x^2-2 orbit has")
+print("  a primitive numerator prime; the Fermat orbit of 5/2 is the |y|=2 (non-unit-circle) instance of the same conjugacy.")
+print("  SCOPE: no map found from THM-3341's Pell-hypotenuse selector to the critical-orbit exception; not claimed.")
 
 # ---------------------------------------------------------------------------------------
 hr("S7. Status ledger")
-print("PROVED     : S1 Catalan reading of n=6; no prime of order 6; S2 n=1,2,3 characterizations (n=3 <=> Thue);")
+print("PROVED     : S1 Catalan reading of n=6; no prime of order 6; S2 n=1,2,3 characterizations (n=3 <=> Thue, inherited geometry (11));")
+print("             S3b G_n = prod H_d, Res(H_d,H_n)=+-1 (d<n<=6) => non-Zsigmondy at n<=6 iff H_n(a,b)=+-1;")
 print("             S3 disc_x Phi_3 = -(4c+7)^3(16c^2+4c+7)^2, parabolic multiplier 1 at -7/4, sigma-parabola c=-7/4-s^2,")
 print("             lambda(s), 64G_3-c identity, airplane centre = -rho^2, unit correspondence; S4 Morton identities,")
 print("             t=(p1-p2)/(p0-p1), c(t)=-7/4-s(t)^2, Phi_3(x,-2) factorization; S5 all PrePer sets and incidence lists.")
 print("FINITE-EXACT: Bang table n<=40; 2^n+1 table; census box (n<=8); Thue search b<=10^6; unit search |k|<=300;")
+print(f"             H_4,H_5,H_6 = +-1 boxes (b<={BFULL} full, b<={BROOT} near real roots);")
 print("             exact-embedding certificates for the cycle fields; n=4 pattern gcd.")
 print("CITED      : Bang 1886 / Zsigmondy 1892 (a^n-b^n exceptions: n=1 with a-b=1; n=2 with a+b a power of 2; (2,1,6));")
 print("             Mihailescu 2004 (Catalan); Morton 1998 (no rational period 4); Flynn-Poonen-Schaefer 1997 (period 5);")
-print("             Stoll 2008 (period 6, BSD); PARI thue (Bilu-Hanrot) for the complete Thue list; THM-4139/THM-4146.")
-print("UNCITED-RECOLLECTION: Poonen 1998 graph list labels; Krieger 2013 / Doerksen-Haensch 2012 primitive-divisor theorems.")
+print("             Stoll 2008 (period 6, BSD); PARI thue (Bilu-Hanrot) for the complete F, H_4 and H_5 Thue lists; PARI nfdisc;")
+print("             Krieger, Primitive prime divisors in the critical orbit of z^d+c (via the geometry note, read there 2026-09-17);")
+print("             THM-4139/THM-4146; geometry note (4),(9),(11),(16).")
+print("UNCITED-RECOLLECTION: Poonen 1998 graph list labels; Doerksen-Haensch 2012 primitive-divisor theorem; Gleason's")
+print("             2-adic simple-root theorem as the only known input toward a uniform Res(H_d,H_n)=+-1.")
 print("REFUTED    : 'N_n=N_1 at every real parabolic parameter' (fails n=4, exact gcd); '63 <-> -7/4 structural map';")
-print("             'the -7/4 n=3 failure is the only non-preperiodic failure in the box' (n=1,2 have 14 and 12 more).")
-print("OPEN       : uniform primitive-divisor theorem for rational c at n>=4 not re-proved here (census only).")
+print(f"             'the -7/4 n=3 failure is the only non-preperiodic failure in the box' (n=1,2 have {len(failures[1])} and {len(failures[2])} more).")
+print("OPEN       : the Thue equation H_6(a,b)=+-1 (degree 27) beyond the finite box (H_4, H_5 are closed by PARI when gp is")
+print("             present); any n>=7 statement (no resultant computation, no reduction); a uniform 'Res(H_d,H_n)=+-1'")
+print("             theorem for all d<n (only n<=6 computed).")
 print()
 print(f"ALL CHECKS PASSED ({time.time() - T0:.1f}s).  Failures: {FAILS}")

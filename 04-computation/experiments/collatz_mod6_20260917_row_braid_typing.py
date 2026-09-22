@@ -154,7 +154,10 @@ try:
     R3 = 4 * (4 * (4 * nn + 1) + 1) + 1
     check(sympy.expand(R3 - (64 * nn + 21)) == 0, "R^3 symbolic")
     check(sympy.expand(64 * nn + 21 - (63 * nn + nn + 21)) == 0, "63n + (n+21)")
-    check(sympy.factor(63 * nn + 21) == 21 * (3 * nn + 1), "R^3(n)-n = 21(3n+1)")
+    # sympy auto-distributes 21*(3*nn+1) to 63*nn+21, so structural == against factor() is false;
+    # assert the mathematical identity via expand and the exact factor_list (content 21, factor 3n+1).
+    check(sympy.expand(sympy.factor(63 * nn + 21) - 21 * (3 * nn + 1)) == 0, "R^3(n)-n = 21(3n+1)")
+    check(sympy.factor_list(63 * nn + 21) == (21, [(3 * nn + 1, 1)]), "factor_list(63n+21) = 21*(3n+1)^1")
     print("PROVED (sympy symbolic): R^3(n) = 64n+21 = 63n + (n+21);  R^3(n)-n = 63n+21 = 21(3n+1) = 3*7*(3n+1); 21 = 63/3.")
 except ImportError:
     print("sympy unavailable; symbolic check skipped (numeric check below).")
@@ -181,6 +184,9 @@ for n in range(-2000, 2001, 1):
     # R^3 fixes n mod 42 but shifts n mod 9 by 3
     check((R(R(R(n))) - n) % 42 == 0, "R^3 fixes n mod 42")
     check((R(R(R(n))) - n) % 9 == 3, "R^3 shifts n by 3 mod 9")
+    # 42 is the exact universal source modulus: 21(3n+1) is never 0 mod 126 (3 !| 3n+1) and is 0 mod 84 iff n = 1 mod 4
+    check((R(R(R(n))) - n) % 126 != 0, "R^3 never fixes n mod 126")
+    check(((R(R(R(n))) - n) % 84 == 0) == (n % 4 == 1), "R^3 fixes n mod 84 iff n = 1 mod 4")
     # target side mod 63: R multiplies F(n) by 4, order exactly 3
     fn = F(n) % 63
     check((16 * fn) % 63 != fn or fn % 9 == 0, "order")
@@ -190,6 +196,8 @@ print("PROVED (+checked |n|<=2000 odd): R adds 4 mod 6, so rows cycle 1->5->3->1
 print("   9 | 4^t-1 iff 3 | t (v_3(4^t-1)=1+v_3(t)), so the row period 3 IS ord_9(4)=3, i.e. ord_9(2)=6.")
 print("   R^3 fixes the SOURCE modulo 42 = 6*7 and the TARGET F(n) modulo 63 = 9*7 (F(R^3 n) = 64 F(n)).")
 print("   R itself multiplies the target by 4, of order 3 in both (Z/9)^* and (Z/7)^*.")
+print("   42 is the EXACT universal source modulus: R^3(n)-n = 21(3n+1) is never 0 mod 126 (3 !| 3n+1) and is")
+print("   0 mod 84 iff n = 1 mod 4 (checked |n|<=2000 odd).")
 
 # what 7 sees on the source side: R mod 7 = affine x -> 4x+1
 orb = {}
@@ -222,7 +230,7 @@ print("        in the exact sense (Z/63)^* = (Z/9)^* x (Z/7)^*, 2 -> (2,2), and 
 print()
 print("general odd p: rows of pn+1 are the p odd classes mod 2p; powers of two in the image rows occupy")
 print("   ord_{p^2}(2)/ord_p(2) distinct rows (all of them iff p is non-Wieferich):")
-print("   p    | ord_p(2) | ord_{p^2}(2) | #rows hit by powers of two | rows")
+print("   p    | ord_p(2) | ord_{p^2}(2) | #rows hit by powers of two | target classes mod p^2 (= 2^{-1} mod p), in bijection with the p odd source classes mod 2p")
 for p in (3, 5, 7, 11, 13, 1093, 3511):
     o1, o2 = mult_order(2, p), mult_order(2, p * p)
     inv2 = pow(2, -1, p)
@@ -238,6 +246,14 @@ for p in (3, 5, 7, 11, 13, 1093, 3511):
 print("PROVED: the power-of-two exponent classes are the cosets of ord_p(2) inside ord_{p^2}(2); the count is p")
 print("        iff 2^{ord_p(2)} != 1 mod p^2 (non-Wieferich).  REFUTED as a universal law: p=1093, 3511 put every")
 print("        power of two in the image into ONE row.  For p=3 the count 3 is 6/2: '3 rows see 3 exponent classes'.")
+wief = {}
+for p in (1093, 3511):
+    d = mult_order(2, p)
+    wief[p] = (d, vp(2 ** d - 1, p))
+    check(wief[p][1] == 2, "Wieferich: v_p(2^{ord_p(2)}-1) = 2 exactly")
+print("   Wieferich inverse braid: least q=2^d with p | q-1 has r = v_p(q-1) =", {p: "d=%d, r=%d" % v for p, v in wief.items()})
+print("PROVED: for p=1093 (d=364) and p=3511 (d=1755) r=2, so by inherited summand.md (11) the inverse braid R_p=qn+c")
+print("        has period p^{max(0,s-1)} on odd classes mod 2p^s: NOT full (fixes the first base-p digit).  A visible degeneration.")
 
 # --------------------------------------------------------------------------
 # S2  Odd-multiplier tower F_p(n) = (pn+1)/2
@@ -263,9 +279,12 @@ print("   so the n+1 map (n+1)/2 is NOT a strict positive summand arrow (its com
 
 # diagonal (equal summand) exception
 diag = [(p, n) for p in range(1, 40, 2) for n in range(1, 400, 2) if Fp(p - 2, n) == n]
-check(diag == [(3, 1)], "unique diagonal exception (p,n)=(3,1)")
-print("PROVED: F_{p-2}(n) = n  <=>  (p-4) n = -1  <=>  (p,n) = (3,1): the only equal-summand arrow in the whole tower")
-print("        is the trivial Collatz cycle 1 -> 2 (checked p<40, n<400: %s)." % diag)
+check(diag == [(3, 1)], "unique diagonal exception (p,n)=(3,1) for n>=1")
+diag_signed = [(p, n) for p in range(-9, 41, 2) for n in range(-999, 1000, 2) if Fp(p - 2, n) == n]
+check(diag_signed == [(3, 1), (5, -1)], "signed diagonal exceptions (3,1),(5,-1)")
+print("PROVED: F_{p-2}(n) = n  <=>  (p-4) n = -1  <=>  p-4 is a unit  <=>  (p,n) in {(3,1), (5,-1)} over odd integers of")
+print("        either sign; for n>=1 only (p,n)=(3,1), the trivial Collatz cycle 1 -> 2 (checked p<40, n<400: %s;" % diag)
+print("        signed search odd p in [-9,39], odd |n|<1000: %s; F_3(-1)=(-3+1)/2=-1, an equal-summand arrow of 5n+1)." % diag_signed)
 
 # inverse fibre braids R_p, inherited summand.md section 5
 
@@ -499,7 +518,10 @@ for r in (1, 3, 5):
         appear[u] = appear.get(u, 0) + 1
 top = sorted(appear.items(), key=lambda kv: (-kv[1], kv[0]))[:8]
 print("   appearance counts over the three rows, j<=60:", top)
-check(top[0][0] == 1 and top[0][1] == 4, "core 1 appears 4 times (j<=60)")
+# independent tally: core 1 sits at (row,j,h) = (1,0,1),(1,14,7),(3,3,5),(5,0,3),(5,56,9) within j<=60: five.
+check(top[0][0] == 1 and top[0][1] == 5, "core 1 appears 5 times (j<=60)")
+check(sorted((r, j, h) for r in (1, 3, 5) for j, (u, h) in enumerate(rows[r]) if u == 1)
+      == [(1, 0, 1), (1, 14, 7), (3, 3, 5), (5, 0, 3), (5, 56, 9)], "core 1 positions (j<=60)")
 print("PROVED: the index of core u at height h in its row is (2^h u - b_r)/9, so within j<=J the core u appears at exactly")
 print("   the heights with 2^h u <= 9J + 8 in its parity class: about (1/2) log_2((9J+8)/u) times per row.  Small u is")
 print("   prominent because 2^h u is small.  1, 5, 7, 11, 13, 17 are the least cores of the six classes mod 18;")
@@ -646,29 +668,39 @@ for c in (Fraction(-7, 4), Fraction(-29, 16), Fraction(-1, 4), Fraction(-1), Fra
         check(orb[2] == Fraction(-7, 256) and flags[2] is True and flags[1] is False, "x^2-7/4 third term")
     if c == Fraction(-29, 16):
         check(flags[2] is False, "x^2-29/16 third term has new primes 5,7,23")
+        check(orb[2].numerator == 23345 == 5 * 7 * 23 * 29, "23345 = 5*7*23*29")
+    if c == Fraction(-7, 4):
+        check(orb[3] == Fraction(-114639, 65536) and 114639 == 3 * 7 * 53 * 103, "term 4 of x^2-7/4 = -3*7*53*103/2^16")
 c = Fraction(-7, 4)
 check(c * (c + 1) ** 2 == Fraction(-63, 64), "c(c+1)^2 = -63/64")
 check(c * (c * (c + 1) ** 2 + 1) == Fraction(-7, 256), "f^3(0) = c/64")
 print("PROVED: for f=x^2+c, f(0)=c, f^2(0)=c(c+1), f^3(0)=c(c(c+1)^2+1).  At c=-7/4: c(c+1)^2 = (-7/4)(9/16) = -63/64,")
 print("   so f^3(0) = c/2^6 = -7/256: the third term repeats the prime 7 of c EXACTLY because 7 * 3^2 = 63 = 2^6 - 1.")
+print("   Term 4 = -114639/65536 = -3*7*53*103/2^16 already brings new primes (the link stops at term 3);")
+print("   for c=-29/16 term 3 = 23345/65536 with 23345 = 5*7*23*29 (new primes 5, 7, 23).")
 print("   This is the same integer factorization 63 = 3^2*7 that gives ord_9(2)=6 (the row braid) and the n=6 Bang")
 print("   exception of 2x+1.  Typed map: source = {2x+1 orbit of 0, term 6}; target = {x^2-7/4 orbit of 0, term 3};")
 print("   map = 63/64 = -c(c+1)^2, preserved predicate = 'numerator has no primitive prime divisor', mechanism = the")
 print("   single equation 2^6 - 1 = 7 * 3^2 (7 from c, 3^2 from (c+1)^2).  Lost: the dynamics (2x+1 is affine).")
 
 # is -7/4 the unique c=-a/2^k with f^3(0) = c * 2^{-m} (strong form)?
+# (k=0 is included deliberately: the integer parameters c=0,-1,-2 -- the PCF values -- also satisfy the
+#  strong form; the audit of 2026-09-17 flagged that a search starting at k=1 hides them.)
 sols = []
-for k in range(1, 31):
+int_sols = []
+for k in range(0, 13):
     b = 2 ** k
     for a in range(-b * 2, 3 * b):
-        if a == 0 or gcd(abs(a), b) != 1:
+        if gcd(abs(a), b) != 1:
             continue
         cc = Fraction(-a, b)
         val = cc * (cc + 1) ** 2 + 1
         if abs(val.numerator) == 1 and val.denominator & (val.denominator - 1) == 0:
-            sols.append((cc, val))
-print("   c=-a/2^k, k<=30, |a|<3*2^k, with c(c+1)^2+1 = +-2^{-m}:", sols)
-check(sols == [(Fraction(-7, 4), Fraction(1, 64))] or set(sols) >= {(Fraction(-7, 4), Fraction(1, 64))}, "-7/4 found")
+            (int_sols if k == 0 else sols).append((cc, val))
+print("   integer c in [-2,2] (k=0) with c(c+1)^2+1 = +-2^{-m}:", int_sols)
+print("   non-integer c=-a/2^k, 1<=k<=12, -2^{k+1}<a<3*2^k, with c(c+1)^2+1 = +-2^{-m}:", sols)
+check(int_sols == [(Fraction(0), Fraction(1)), (Fraction(-1), Fraction(1)), (Fraction(-2), Fraction(-1))], "integer strong-form solutions are exactly c=0,-1,-2")
+check(sols == [(Fraction(-7, 4), Fraction(1, 64))], "-7/4 is the only non-integer c=-a/2^k (k<=12) solution")
 # weaker: any c=a/b (|a|<=120, b<=64) whose THIRD term has no new numerator prime
 weak = []
 for b in range(1, 65):
@@ -683,7 +715,25 @@ for b in range(1, 65):
             weak.append(cc)
 print("   FINITE-EXACT: c=a/b, |a|<=120, b<=64, nondegenerate, third term without new numerator prime:", weak)
 check(Fraction(-7, 4) in weak and Fraction(-2) in weak, "-7/4 and -2 present")
+check(weak == [Fraction(-2), Fraction(-7, 4)], "exactly -2 and -7/4 in the |a|<=120, b<=64 window")
 print("   (c=-2 is the Chebyshev/PCF case 0->-2->2->2; c=-1 is degenerate since f^2(0)=0.)")
+# extended window (audit 2026-09-17) and the closed form f^3(0) = a(a(a+b)^2+b^3)/b^4 for c=a/b in lowest terms
+weak2 = []
+for b in range(1, 151):
+    for a in range(-300, 301):
+        if a == 0 or gcd(abs(a), b) != 1:
+            continue
+        cc = Fraction(a, b)
+        orb = orbit0(cc, 3)
+        check(orb[2] == Fraction(a * (a * (a + b) ** 2 + b ** 3), b ** 4), "closed form f^3(0)")
+        if orb[1].numerator == 0:
+            continue
+        if new_prime_free(orb[2].numerator, [orb[0].numerator, orb[1].numerator]):
+            weak2.append(cc)
+check(weak2 == [Fraction(-2), Fraction(-7, 4)], "extended window still only -2 and -7/4")
+print("   FINITE-EXACT (extended): c=a/b, |a|<=300, b<=150, nondegenerate, third term without new numerator prime:", weak2)
+print("   PROVED closed form: for c=a/b in lowest terms f^3(0) = a(a(a+b)^2+b^3)/b^4, so 'no new prime at term 3' means")
+print("   every prime of a(a+b)^2+b^3 divides a(a+b); at (a,b)=(-7,4): a(a+b)^2+b^3 = -63+64 = 1.")
 
 # rational PCF quadratics x^2+c: exactly c in {0,-1,-2}
 print()
@@ -766,7 +816,7 @@ T3 = [
     ("T4", "period 3 of R=4n+1 on rows", "ord_9(4)=3 = ord_9(2)/ord_3(2); R^3=64n+21, 63=3*21", "PROVED S1"),
     ("T5", "3 = 63 mod 7 sees k mod 3", "(Z/63)^*=(Z/9)^*x(Z/7)^*; on odd k, k mod 6 <-> k mod 3", "PROVED S1"),
     ("T6", "3 negative (3n-1) cycles", "lengths 1,2,7; members in rows {5},{1,5},{1,5}; number only", "FINITE-EXACT census inherited; completeness OPEN"),
-    ("T7", "3 solutions of F=S+U (p, p^3, p^2qr)", "exponent-box balance prod(a_i+1)=2^r+r+1 (divisors.md DB1); number only", "PROVED inherited"),
+    ("T7", "3 solutions of F=S+U (p, p^3, p^2qr)", "exponent-box balance prod(a_i+1)=2^r+r+1 (divisors.md eq. (DB2), section DB1); number only", "PROVED inherited"),
     ("T8", "3 almost-prime classes A,B,C", "Omega=1,2,3 labels; p^2qr is a 4-almost-prime (divisors.md DB3); number only", "REFUTED as C^2B, inherited"),
     ("T9", "3 systems x^2-{0,1,2}", "exactly the rational PCF quadratics; x^2 = squaring forest (summand.md sec.2)", "PROVED S5"),
     ("T10", "3 special values 63, -7/4, -29/16", "63<->-7/4: c(c+1)^2=-63/64 (S5, new); 63<->rows: ord_9(2)=6; -29/16<->3:4:5: THM-4146", "PROVED S5"),

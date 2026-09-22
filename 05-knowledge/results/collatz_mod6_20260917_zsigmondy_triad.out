@@ -1,0 +1,360 @@
+
+==============================================================================
+S0. Definitions, universe, inheritance
+==============================================================================
+f_c(x) = x^2 + c over Q.  G_n(c) = f_c^n(0) (Gleason polynomials).  N_n = numerator of f_c^n(0).
+'primitive prime divisor at n' = prime p | N_n with p not dividing N_m for any m<n.
+Bang/Zsigmondy universe: 2^n-1, 1<=n<=40 (exact factorization via sympy).
+Critical-orbit census universe: c=a/b, b in {1,2,4,8,16,32,64}, |a|<=200, gcd(a,b)=1, 1<=n<=8;
+  the integer sub-universe c in [-60,60] is contained in b=1.
+Inherited and NOT re-derived: three-row typing, ord_9(2)=6 row exponents, R(n)=4n+1 fibre,
+  PrePer(x^2-29/16,Q) (THM-4139 sec.1 / THM-4146 sec.1), sigma-parametrization (THM-4146 (10)),
+  Psi_6 of squaring = Phi_9 Phi_21 Phi_63 (THM-4139 (37)),
+  arithmetic_braids_20260917_geometry.md: eta-parabola c=-(eta^2+7)/4 and disc (eta^2+eta+7)^2 (4), the parabolic
+  cycle P(x)=x^3+x^2/2-9x/4-1/8 with Phi_3=P^2 and multiplier 1 at -7/4 (9), the n=3 test f^3(0)=aQ(a,b)/b^4 with
+  Q=+-1 <=> no new prime (11) and its census b<=2000, Krieger's Theorem 6.1 boundary, x=2A/C -> x^2-2 (16).
+  Everything below is re-verified only where a check is printed; inherited statements are cited, not claimed.
+
+==============================================================================
+S1. (i) 2^n-1, n<=40: primitive prime divisors, Bang/Zsigmondy exceptions
+==============================================================================
+  n           2^n-1  factorization                        Phi_n(2)  primitive primes
+  1               1  1                                           1  --- NONE ---
+  2               3  3                                           3  [3]
+  3               7  7                                           7  [7]
+  4              15  3 * 5                                       5  [5]
+  5              31  31                                         31  [31]
+  6              63  3^2 * 7                                     3  --- NONE ---   [non-primitive prime(s) in Phi_n(2): [3]]
+  7             127  127                                       127  [127]
+  8             255  3 * 5 * 17                                 17  [17]
+  9             511  7 * 73                                     73  [73]
+ 10            1023  3 * 11 * 31                                11  [11]
+ 11            2047  23 * 89                                  2047  [23, 89]
+ 12            4095  3^2 * 5 * 7 * 13                           13  [13]
+ 13            8191  8191                                     8191  [8191]
+ 14           16383  3 * 43 * 127                               43  [43]
+ 15           32767  7 * 31 * 151                              151  [151]
+ 16           65535  3 * 5 * 17 * 257                          257  [257]
+ 17          131071  131071                                 131071  [131071]
+ 18          262143  3^3 * 7 * 19 * 73                          57  [19]   [non-primitive prime(s) in Phi_n(2): [3]]
+ 19          524287  524287                                 524287  [524287]
+ 20         1048575  3 * 5^2 * 11 * 31 * 41                    205  [41]   [non-primitive prime(s) in Phi_n(2): [5]]
+ 21         2097151  7^2 * 127 * 337                          2359  [337]   [non-primitive prime(s) in Phi_n(2): [7]]
+ 22         4194303  3 * 23 * 89 * 683                         683  [683]
+ 23         8388607  47 * 178481                           8388607  [47, 178481]
+ 24        16777215  3^2 * 5 * 7 * 13 * 17 * 241               241  [241]
+ 25        33554431  31 * 601 * 1801                       1082401  [601, 1801]
+ 26        67108863  3 * 2731 * 8191                          2731  [2731]
+ 27       134217727  7 * 73 * 262657                        262657  [262657]
+ 28       268435455  3 * 5 * 29 * 43 * 113 * 127              3277  [29, 113]
+ 29       536870911  233 * 1103 * 2089                   536870911  [233, 1103, 2089]
+ 30      1073741823  3^2 * 7 * 11 * 31 * 151 * 331             331  [331]
+ 31      2147483647  2147483647                         2147483647  [2147483647]
+ 32      4294967295  3 * 5 * 17 * 257 * 65537                65537  [65537]
+ 33      8589934591  7 * 23 * 89 * 599479                   599479  [599479]
+ 34     17179869183  3 * 43691 * 131071                      43691  [43691]
+ 35     34359738367  31 * 71 * 127 * 122921                8727391  [71, 122921]
+ 36     68719476735  3^3 * 5 * 7 * 13 * 19 * 37 * 73 * 109       4033  [37, 109]
+ 37    137438953471  223 * 616318177                    137438953471  [223, 616318177]
+ 38    274877906943  3 * 174763 * 524287                    174763  [174763]
+ 39    549755813887  7 * 79 * 8191 * 121369                9588151  [79, 121369]
+ 40   1099511627775  3 * 5^2 * 11 * 17 * 31 * 41 * 61681      61681  [61681]
+Exceptions (no primitive prime divisor): [1, 6]
+FINITE-EXACT (n<=40): every non-primitive prime of Phi_n(2), n>2, is the largest prime of n and divides
+  Phi_n(2) exactly once.  (This is the classical lemma behind Bang/Zsigmondy.)
+63 = 2^6-1 = Phi_1(2)Phi_2(2)Phi_3(2)Phi_6(2) = [1, 3, 7, 3]  -> Phi_6(2) = 3 = largest prime of 6, already in 2^2-1: NO primitive prime.
+Catalan reading (PROVED, elementary): 2^6-1 = (2^3-1)(2^3+1) = 7 * 9 and 2^3+1 = 3^2; a primitive prime of
+  2^6-1 would have to divide (2^3+1)/gcd(2^3+1,2^2-1) = 9/3 = 3 -> impossible.  The exception IS 3^2-2^3=1.
+ord_9(2) = 6 <=> 9 | 63.  Powers 2^e with e<60: 2^e=2 mod 9 iff e=1 mod 6; =5 iff e=5 mod 6; =8 iff e=3 mod 6
+  (FINITE-EXACT e<60; PROVED for all e since ord_9(2)=6 and 2^1=2, 2^5=32=5, 2^3=8 mod 9).
+PROVED: no prime p has ord_p(2)=6 (a prime with ord_p(2)=n is exactly a primitive prime divisor of 2^n-1);
+  checked hostile-style for all p<10^5.  Hence 9 is the least modulus of multiplicative order 6 for 2,
+  which is why the inherited three-row exponent law lives modulo 9 with period 6, not modulo a prime.
+2^n+1, n<=40, terms with no primitive prime divisor: [3]
+
+==============================================================================
+S2. (ii) zero orbit of x^2-7/4 to n=8, and the bounded census
+==============================================================================
+n : f^n(0)  [numerator factorization ; primitive part]
+1 : -7/4   num = -7 ; primitive part 7
+2 : 21/16   num = 3 * 7 ; primitive part 3
+3 : -7/256   num = -7 ; primitive part 1
+4 : -114639/65536   num = -3 * 7 * 53 * 103 ; primitive part 5459
+5 : 5625907553.../4^16   num = 7 * 419 * 563 * 3407 ; primitive part 803701079
+6 : -63096633408.../4^32   num = -3 * 7 * 47237 * 636069519847 ; primitive part 30046015909012739
+7 : -59509602359.../4^64   num = -7 * [cofactor 38 digits, prime] ; primitive part 85013717656698323129497169089092279241
+8 : 151503121135.../4^128   num = 3 * 7 * 37 * 53 * 103 * 233 * 27077 * [cofactor 64 digits, composite/unfactored] ; primitive part 13215670158979478976...(73 digits)
+f^3(0)/f(0) =  1/64  = 2^-6 = 1/(63+1)   [the '63' the user sees in the -7/4 orbit]
+Census universe: 1601 parameters c=a/b (b in [1, 2, 4, 8, 16, 32, 64], |a|<=200, gcd=1), orbit to n=8.
+Parameters with 0 preperiodic (reported separately): [('-2', 'tail 2, period 1'), ('-1', 'tail 0, period 2'), ('0', 'tail 0, period 1')]
+n=1:  13 non-preperiodic parameters with NO primitive prime divisor: 1, -1/2, 1/2, -1/4, 1/4, -1/8, 1/8, -1/16, 1/16, -1/32, 1/32, -1/64, 1/64
+n=2:  12 non-preperiodic parameters with NO primitive prime divisor: -3/2, -1/2, -5/4, -3/4, -9/8, -7/8, -17/16, -15/16, -33/32, -31/32, -65/64, -63/64
+n=3:   1 non-preperiodic parameters with NO primitive prime divisor: -7/4
+n=4:   0 non-preperiodic parameters with NO primitive prime divisor: 
+n=5:   0 non-preperiodic parameters with NO primitive prime divisor: 
+n=6:   0 non-preperiodic parameters with NO primitive prime divisor: 
+n=7:   0 non-preperiodic parameters with NO primitive prime divisor: 
+n=8:   0 non-preperiodic parameters with NO primitive prime divisor: 
+PROVED (all c=a/b, b>=1, gcd(a,b)=1):
+  n=1: N_1=a, so no primitive prime iff |a|=1, i.e. c=+-1/b (includes the cusp c=1/4).
+  n=2: N_2=a(a+b); primes of a+b are coprime to a, so no primitive prime iff |a+b|=1, i.e. c=-1+-1/b
+       (includes the period-doubling parameter c=-3/4=-1+1/4).  INFINITELY many n=2 failures.
+  n=3: N_3=a*F(a,b), F(a,b)=a^3+2a^2b+ab^2+b^3, gcd(F,a)=gcd(b^3,a)=1, gcd(F,a+b)=gcd(b^3,a+b)=1,
+       so every prime of F is primitive and failure <=> F(a,b)=+-1  (a cubic THUE equation; see S3).
+       [n=3 is inherited: geometry note (11) proves exactly this with F=Q and censuses b<=2000; new here: S3/S3b.]
+FINITE-EXACT (this box, n<=8): -7/4 is the ONLY non-preperiodic n=3 failure, and there are NO failures for 4<=n<=8.
+
+==============================================================================
+S3. Mechanism at c=-7/4: dynatomic discriminant, parabolic 3-cycle, sigma-parabola, Thue/plastic units
+==============================================================================
+Phi_3(x,c) = c**3 + 3*c**2*x**2 + c**2*x + 2*c**2 + 3*c*x**4 + 2*c*x**3 + 3*c*x**2 + 2*c*x + c + x**6 + x**5 + x**4 + x**3 + x**2 + x + 1
+disc_x Phi_3 = -(4*c + 7)**3*(16*c**2 + 4*c + 7)**2
+Res_x(Phi_3, (f^3)'(x)-1) = (4*c + 7)**3*(16*c**2 + 4*c + 7)**3
+PROVED: Phi_3(x,c) has a repeated root in x  <=>  (4c+7)(16c^2+4c+7)=0; the real branch is exactly 4c+7=0.
+  Delta_3(c) := (4c+7)(16c^2+4c+7) = 64c^3+128c^2+56c+49 is the period-3 multiplier-1 (parabolic) locus.
+At c=-7/4: Phi_3 = (8x^3+4x^2-18x-1)^2/64 (a perfect square: two 3-cycles collide).  Multiplier of the cycle
+  = prod f'(x_i) = 8 * prod x_i = 8 * (1/8) = 1  -> PARABOLIC (saddle-node) 3-cycle.  PROVED (inherited: geometry (9)).
+  Parabolic cycle numerically: [-1.7469796, -0.054958132, 1.3019377]  (note x_1 ~ -1.75 ~ c and x_3 ~ -0.055 ~ 0)
+sigma-parametrization (THM-4146 (10), re-verified): c = -(sigma^2+sigma+2), multiplier lambda = 8 alpha beta gamma = -8*sigma**3 - 16*sigma**2 - 24*sigma - 8
+  Put s = sigma + 1/2.  Then  c =  -s**2 - 7/4    and   lambda(s) = -8*s**3 - 4*s**2 - 14*s + 1
+PROVED (inherited: geometry note (4) states this as c=-(eta^2+7)/4 with eta=2s; re-verified here):
+  the unmarked 3-cycle curve of x^2+c is the parabola c = -7/4 - s^2, a 2:1 cover of the c-line branched
+  exactly at the real parabolic parameter c=-7/4 (s=0, lambda=1).  A rational unmarked 3-cycle (rational cycle-sum)
+  exists iff -7/4 - c is a rational square.  The cycle points are rational iff Morton's t (S4) is rational.
+  -29/16 = -7/4 - (1/4)^2: its two 3-cycles are s=-1/4 (sigma=-3/4, the rational AP cycle, lambda=35/8 = THM-4139 (32))
+  and s=+1/4 (sigma=-1/4, lambda=-23/8, irrational).   -2 = -7/4 - (1/2)^2: s=+-1/2, sigma in {0,-1} (see S4, S6).
+disc_X P_s = (4*s**2 + 2*s + 7)**2   => splitting field of any rational-s 3-cycle is Q or a cyclic cubic field (PROVED).
+Gleason polynomials G_n(c)=f_c^n(0), factored:
+  G_1 = c
+  G_2 = c*(c + 1)
+  G_3 = c*(c**3 + 2*c**2 + c + 1)
+  G_4 = c*(c + 1)*(c**6 + 3*c**5 + 3*c**4 + 3*c**3 + 2*c**2 + 1)
+  G_5 = c*(c**15 + 8*c**14 + 28*c**13 + 60*c**12 + 94*c**11 + 116*c**10 + 114*c**9 + 94*c**8 + 69*c**7 + 44*c**6 + 26*c**5 + 14*c**4 + 5*c**3 + 2*c**2 + c + 1)
+64 G_3(c) - c = c*(4*c + 7)*(16*c**2 + 4*c + 9)
+=> at c=-7/4: H_3(-7/4) = 1/64 exactly, f^3(0) = c/64, N_3 = N_1 = -7.  The parabolic factor (4c+7) divides
+   64G_3-c, but the complex parabolic factor (16c^2+4c+7) does NOT (cofactor is 16c^2+4c+9).
+Pattern 'N_n = N_1 at the real period-n parabolic parameter', i.e. Delta_n^{real} | 2^(2^n-2) G_n(c) - c :
+  n=1: 2^(0) G_1 - c = 0
+  n=2: 2^(2) G_2 - c = c*(4*c + 3)
+  n=3: 2^(6) G_3 - c = c*(4*c + 7)*(16*c**2 + 4*c + 9)
+  n=4: 2^(14) G_4 - c = c*(16384*c**7 + 65536*c**6 + 98304*c**5 + 98304*c**4 + 81920*c**3 + 32768*c**2 + 16384*c + 16383)
+Res_x(Phi_4,(f^4)'-1) = (4*c + 5)**4*(16*c**2 - 8*c + 5)**4*(64*c**3 + 144*c**2 + 108*c + 135)**4
+  n=4: real period-4 saddle-node c_4 = root of 64*c**3 + 144*c**2 + 108*c + 135 ~ -1.94055078898;  gcd(2^14 G_4 - c, Delta_4) = 1
+  REFUTED beyond n=3: the pattern holds for n=1,2,3 (c=1/4: N_1=1; c=-3/4: f^2(0)=c/4; c=-7/4: f^3(0)=c/64) and
+  FAILS at n=4 (exact gcd = 1).  It is a low-degree coincidence, not a theorem about parabolic parameters.
+  Also 2^n-2 = 2n has the unique solution n=3, which is the only reason the exponent 6 in f^3(0)/f(0)=2^-6
+  equals Bang's index 6.  (2^n-2 = 0,2,6,14,... vs 2n = 2,4,6,8,...)
+
+n=3 non-Zsigmondy parameters <=> F(a,b) = a^3+2a^2b+ab^2+b^3 = +-1 (Thue).  F(a,b)=N(a - b theta)=N(a + b rho^2)
+  where theta^3+2theta^2+theta+1=0, theta=-rho^2, rho = plastic number (rho^3=rho+1), field disc -23.
+  PROVED: the airplane centre (real root of H_3) is c = -rho^2 = -1.75487766625
+  and -7/4 = -1.75 is within 0.0049 of it.
+  Units +-rho^k = A + C rho^2 with vanishing rho-coefficient, |k|<=300: [(-14, -7, 4), (-5, 2, -1), (-1, -1, 1), (0, 1, 0), (2, 0, 1)]
+  -> c = A/C in {-7/4 (k=-14), -2 (k=-5), -1 (k=-1), 0 (k=2)} and b=0 (k=0: c=infinity, not a parameter).
+     So -7/4 = ratio in rho^-14 = 4 rho^2 - 7.  (Z[rho] is the full ring of integers since disc -23 is squarefree.)
+  Direct search F(a,b)=+-1, 1<=b<=10^6, a within 2 of -rho^2 b (all others have |F|>1 since |a/b+rho^2| >= 1/(2b) there): [(-2, 1), (-1, 1), (0, 1), (-7, 4)]
+  PARI/GP thueinit(flag=1, unconditional) thue(F,+1): [[-7, 4], [-1, 1], [0, 1], [1, 0], [2, -1]]   thue(F,-1): [[-2, 1], [-1, 0], [0, -1], [1, -1], [7, -4]]
+  => COMPLETE (CITED: PARI thue, Bilu-Hanrot algorithm, flag 1 = no GRH): all solutions of F(a,b)=+-1 are
+     +-(1,0), +-(0,1), +-(-1,1), +-(-2,1), +-(-7,4).  Hence over ALL of Q the n=3 non-Zsigmondy parameters are
+     exactly c in {0,-1,-2} (0 preperiodic) and c = -7/4.
+
+==============================================================================
+S3b. Gleason product G_n = prod_{d|n} H_d, pairwise resultants, and the n<=6 primitive-divisor reduction
+==============================================================================
+  H_1: degree  1, irreducible over Q: True, H_1(0) = 0, H_1(-1) = -1, H_1(-2) = -2
+  H_2: degree  1, irreducible over Q: True, H_2(0) = 1, H_2(-1) = 0, H_2(-2) = -1
+  H_3: degree  3, irreducible over Q: True, H_3(0) = 1, H_3(-1) = 1, H_3(-2) = -1
+  H_4: degree  6, irreducible over Q: True, H_4(0) = 1, H_4(-1) = 1, H_4(-2) = 1
+  H_5: degree 15, irreducible over Q: True, H_5(0) = 1, H_5(-1) = 1, H_5(-2) = -1
+  H_6: degree 27, irreducible over Q: True, H_6(0) = 1, H_6(-1) = 1, H_6(-2) = -1
+  Res_c(H_d, H_n) for 1 <= d < n <= 6 (exact):
+    Res(H_1,H_2)= 1
+    Res(H_1,H_3)=-1; Res(H_2,H_3)=-1
+    Res(H_1,H_4)= 1; Res(H_2,H_4)= 1; Res(H_3,H_4)=-1
+    Res(H_1,H_5)=-1; Res(H_2,H_5)=-1; Res(H_3,H_5)= 1; Res(H_4,H_5)= 1
+    Res(H_1,H_6)=-1; Res(H_2,H_6)=-1; Res(H_3,H_6)= 1; Res(H_4,H_6)=-1; Res(H_5,H_6)= 1
+PROVED (n<=6, from the exact resultants above).  Write H_n(a,b) = b^deg H_n(a/b) (monic in a).  For c=a/b in lowest terms:
+  N_n = prod_(d|n) H_d(a,b) exactly (total degree 2^(n-1); each H_d(a,b) = a^deg mod b is coprime to b).
+  If a prime p divided H_d(a,b) and H_n(a,b) with d<n, then p does not divide b, and a/b mod p would be a common root
+  of H_d and H_n mod p, so p | Res(H_d,H_n) = +-1: impossible.  Hence the factors H_d(a,b), d|n, are pairwise coprime,
+  every prime of H_n(a,b) is primitive at n, and every other prime of N_n divides some N_d, d|n, d<n.  Therefore
+  N_n has a primitive prime divisor  <=>  |H_n(a,b)| >= 2,   i.e.  non-Zsigmondy at n  <=>  H_n(a,b) = +-1  (n<=6),
+  a Thue equation of degree 1,1,3,6,15,27 for n=1..6.  (This is the quadratic-critical-orbit analogue of
+  'non-primitive primes of Phi_n(2) divide n'; for n<=6 it is even cleaner: there are none at all.)
+  H_4(a,b) = +-1, all |a|<=3b for b<=100 and a within 2 of b*(real roots [-1.9408, -1.3107]) for b<=5000: [(-2, 1), (-1, 1), (0, 1)]
+  H_5(a,b) = +-1, all |a|<=3b for b<=100 and a within 2 of b*(real roots [-1.9854, -1.8608, -1.6254]) for b<=5000: [(-2, 1), (-1, 1), (0, 1)]
+  H_6(a,b) = +-1, all |a|<=3b for b<=100 and a within 2 of b*(real roots [-1.9964, -1.9668, -1.9073, -1.7729, -1.476]) for b<=5000: [(-2, 1), (-1, 1), (0, 1)]
+  FINITE-EXACT: in the searched boxes the only solutions are c in {0,-1,-2} (0 preperiodic): no non-preperiodic
+  exception at n=4,5,6 of that height (consistent with the S2 census box).
+  PARI/GP thueinit(flag=1, unconditional) for H_4 (degree 6): thue(+1): [[-2, 1], [-1, 0], [-1, 1], [0, -1], [0, 1], [1, -1], [1, 0], [2, -1]]  thue(-1): []
+  => H_4(a,b)=+-1 only at +-(1,0),(0,1),(-1,1),(-2,1)  [b=0 is c=infinity; the rest are c=0,-1,-2, all preperiodic].
+  PARI/GP thueinit(flag=1, unconditional) for H_5 (degree 15): thue(+1): [[-1, 1], [0, 1], [1, 0], [2, -1]]  thue(-1): [[-2, 1], [-1, 0], [0, -1], [1, -1]]
+  => H_5(a,b)=+-1 only at +-(1,0),(0,1),(-1,1),(-2,1)  [b=0 is c=infinity; the rest are c=0,-1,-2, all preperiodic].
+  PROVED + CITED (resultants above + PARI thue, unconditional): for EVERY rational c with infinite critical orbit,
+  N_4 and N_5 have primitive prime divisors.  Together with n=3 (S3): the only non-preperiodic rational parameter
+  whose critical orbit misses a primitive prime at some 3<=n<=5 is c=-7/4, at n=3 only.  The draft's n=4 OPEN item
+  is closed.  n=6 (degree 27) is left at the finite box above: a side run of thueinit on H_6 did not finish within
+  the time budget of this lane, so H_6(a,b)=+-1 is OPEN beyond that box.
+
+==============================================================================
+S4. Families: fixed points, 2-cycles, Morton 3-cycles; cycle fields; the Chebyshev conductors 7 and 9
+==============================================================================
+Fixed points x^2-x+c=0 rational iff 1-4c=r^2, c=(1-r^2)/4: r=1->0, r=3->-2, r=5/2->-21/16, r=9/2->-77/16 (PROVED).
+2-cycles x^2+x+c+1=0 rational iff -3-4c=s^2, c=-(3+s^2)/4: s=1->-1, s=2->-7/4, s=0->-3/4 (degenerate, multiplier -1),
+  s=3->-3, s=5/2->-37/16, s=9/2->-93/16 (PROVED).
+Morton-type family (THM-4139 (13), re-verified symbolically): c(t) = -(t^6+2t^5+4t^4+8t^3+9t^2+4t+1)/(4t^2(t+1)^2),
+  t=1 -> c=-29/16 with points (5/4,-1/4,-7/4).   sigma(t) = (t**3 - 3*t - 1)/(2*t*(t + 1)) ;   s(t) = sigma+1/2 = (t**3 + t**2 - 2*t - 1)/(2*t*(t + 1))
+  PROVED: c(t) = -7/4 - s(t)^2 (Morton's t lies over the sigma-parabola), sigma is invariant under the relabeling
+  rho(t) = -1/(t+1), and t = (p1-p2)/(p0-p1) is the ratio of consecutive cycle differences (t=1 <=> AP <=> -29/16).
+  c(t) = -2  <=>  s = +-1/2:   s=-1/2 <=>  t**3 + 2*t**2 - t - 1 = 0 (roots 1/(2cos(2 pi k/7)));   s=+1/2 <=>  t**3 - 3*t - 1 = 0 (roots -2cos(2 pi k/9)).
+  Phi_3(x,-2) = (x**3 - 3*x + 1)*(x**3 + x**2 - 2*x - 1)   = (min poly of 2cos(2pi/9)) * (min poly of 2cos(2pi/7)).
+Cycle fields on the parabola c=-7/4-s^2 (disc P_s = (4s^2+2s+7)^2):
+  s=0: parabolic cycle at c=-7/4: P = 8*X**3 + 4*X**2 - 18*X - 1 irreducible; 4s^2+2s+7 = 7.  Root = 3/2 + (0) y + (-1) y^2
+        with y a root of X**3 + X**2 - 2*X - 1  [verified exactly mod m].  Field: Q(2cos 2pi/7), conductor 7.
+  s=-1/4: rational AP cycle at c=-29/16: P = 64*X**3 + 48*X**2 - 132*X - 35 splits over Q; 4s^2+2s+7 = 27/4.  Field: Q (splits).
+  s=1/4: second cycle at c=-29/16: P = 64*X**3 + 16*X**2 - 164*X + 23 irreducible; 4s^2+2s+7 = 31/4.  Root = -1/4 + (1/2) y + (0) y^2
+        with y a root of X**3 - X**2 - 10*X + 8  [verified exactly mod m].  Field: cyclic cubic of conductor 31.
+  s=-1/2: cycle at c=-2, sigma=-1: P = X**3 + X**2 - 2*X - 1 irreducible; 4s^2+2s+7 = 7.  Root = 0 + (1) y + (0) y^2
+        with y a root of X**3 + X**2 - 2*X - 1  [verified exactly mod m].  Field: Q(2cos 2pi/7), conductor 7.
+  s=1/2: cycle at c=-2, sigma=0: P = X**3 - 3*X + 1 irreducible; 4s^2+2s+7 = 9.  Root = 0 + (1) y + (0) y^2
+        with y a root of X**3 - 3*X + 1  [verified exactly mod m].  Field: Q(2cos 2pi/9), conductor 9.
+  PARI nfdisc (CITED cross-check): Q(2cos 2pi/7) 49; y^3-y^2-10y+8 961=31^2; Q(2cos 2pi/9) 81; the parabolic
+  cubic 8X^3+4X^2-18X-1 has field discriminant 49 and the s=1/4 cubic 64X^3+16X^2-164X+23 has 961: [49, 961, 81, 49, 961]
+  Inherited: geometry note sec.2 already proves the -7/4 parabolic cycle is the affine image L(x)=-x-1/2 of the reversed
+  conductor-7 cycle of x^2-2, so the field equality below is a re-verification by exact embedding, not a discovery.
+  FINITE-EXACT/PROVED: the parabolic 3-cycle of x^2-7/4 and the '2^3-1=7' 3-cycle of x^2-2 generate the SAME field
+  Q(2cos 2pi/7); the second 3-cycle at -29/16 generates the conductor-31 cyclic cubic; the AP cycle splits.
+  Which cycle at c=-2 lies where: sigma=-1 <=> sum 2cos(2pi k/7) = -1 (conductor 7 = 2^3-1);
+  sigma=0 <=> sum 2cos(2pi k/9) = 0 (conductor 9 = 2^3+1 = 3^2, the Catalan side).
+
+==============================================================================
+S5. Complete rational preperiodic graphs (exact algorithm), isomorphism types, and the 'microcosm' incidence
+==============================================================================
+c            |PrePer|  type [(cycle length, preimage-tree shapes per cycle point)]   edges
+1/4                2  [(1, (((),),))]                                              -1/2->1/2, 1/2->1/2
+3/16               4  [(1, (((),),)), (1, (((),),))]                               -3/4->3/4, -1/4->1/4, 1/4->1/4, 3/4->3/4
+0                  3  [(1, ((),)), (1, (((),),))]                                  -1->1, 0->0, 1->1
+-3/4               4  [(1, (((),),)), (1, (((),),))]                               -3/2->3/2, -1/2->-1/2, 1/2->-1/2, 3/2->3/2
+-1                 3  [(2, ((), ((),)))]                                           -1->0, 0->-1, 1->0
+-13/16             6  [(2, (((),), (((), ()),)))]                                  -5/4->3/4, -3/4->-1/4, -1/4->-3/4, 1/4->-3/4, 3/4->-1/4, 5/4->3/4
+-21/16             8  [(1, (((),),)), (1, (((),),)), (2, (((),), ((),)))]          -7/4->7/4, -5/4->1/4, -3/4->-3/4, -1/4->-5/4, 1/4->-5/4, 3/4->-3/4, 5/4->1/4, 7/4->7/4
+-7/4               4  [(2, (((),), ((),)))]                                        -3/2->1/2, -1/2->-3/2, 1/2->-3/2, 3/2->1/2
+-2                 5  [(1, (((),),)), (1, ((((),),),))]                            -2->2, -1->-1, 0->-2, 1->-1, 2->2
+-29/16             8  [(3, (((),), ((),), (((), ()),)))]                           -7/4->5/4, -5/4->-1/4, -3/4->-5/4, -1/4->-7/4, 1/4->-7/4, 3/4->-5/4, 5/4->-1/4, 7/4->5/4
+-37/16             6  [(2, (((),), (((), ()),)))]                                  -7/4->3/4, -5/4->-3/4, -3/4->-7/4, 3/4->-7/4, 5/4->-3/4, 7/4->3/4
+-77/16             4  [(1, (((),),)), (1, (((),),))]                               -11/4->11/4, -7/4->-7/4, 7/4->-7/4, 11/4->11/4
+User's naming corrected: 'x^2+0' = c=0 (0,1 fixed; -1->1); 'x^2+1' as described is x^2-1 (0<->-1, 1->0);
+  'x^2+2' as described is x^2-2 (2,-1 fixed; 1->-1; 0->-2->2).  All three graphs above match the user's description.
+PROVED: PrePer(x^2-7/4,Q) = {+-1/2,+-3/2} (2-cycle 1/2<->-3/2, -1/2->-3/2, 3/2->1/2); hence 0,-1,-2 are NOT
+  preperiodic for -7/4, and -7/4 is not preperiodic for itself (v_2 = -2 != -1).
+PROVED: -3/4 and -7/4 have the SAME rational preperiodic set but non-isomorphic graphs (two fixed points vs one 2-cycle).
+Isomorphism classes among the listed c (same type string => isomorphic functional graphs):
+   ['1/4'] : [(1, (((),),))]
+   ['3/16', '-3/4', '-77/16'] : [(1, (((),),)), (1, (((),),))]
+   ['0'] : [(1, ((),)), (1, (((),),))]
+   ['-1'] : [(2, ((), ((),)))]
+   ['-13/16', '-37/16'] : [(2, (((),), (((), ()),)))]
+   ['-21/16'] : [(1, (((),),)), (1, (((),),)), (2, (((),), ((),)))]
+   ['-7/4'] : [(2, (((),), ((),)))]
+   ['-2'] : [(1, (((),),)), (1, ((((),),),))]
+   ['-29/16'] : [(3, (((),), ((),), (((), ()),)))]
+  (Poonen 1998 lists 12 rational preperiodic graphs for x^2+c conjecturally exhaustive; labels not imported: UNCITED-RECOLLECTION.)
+
+Incidence: row = point x (a special parameter), column = parameter c; '*' iff x in PrePer(f_c,Q).
+x \ c           1/4    3/16       0    -3/4      -1  -13/16  -21/16    -7/4      -2  -29/16  -37/16  -77/16
+1/4                .       *       .       .       .       *       *       .       .       *       .       .
+3/16               .       .       .       .       .       .       .       .       .       .       .       .
+0                  .       .       *       .       *       .       .       .       *       .       .       .
+-3/4               .       *       .       .       .       *       *       .       .       *       *       .
+-1                 .       .       *       .       *       .       .       .       *       .       .       .
+-13/16             .       .       .       .       .       .       .       .       .       .       .       .
+-21/16             .       .       .       .       .       .       .       .       .       .       .       .
+-7/4               .       .       .       .       .       .       *       .       .       *       *       *
+-2                 .       .       .       .       .       .       .       .       *       .       .       .
+-29/16             .       .       .       .       .       .       .       .       .       .       .       .
+-37/16             .       .       .       .       .       .       .       .       .       .       .       .
+-77/16             .       .       .       .       .       .       .       .       .       .       .       .
+
+All c in Q for which a given x is preperiodic (complete lists, PROVED by the valuation+real-escape bounds):
+  x=1/4    : c=-29/16 (tail 1, period 3), c=-21/16 (tail 0, period 2), c=-13/16 (tail 1, period 2), c=-5/16 (tail 1, period 1), c=3/16 (tail 0, period 1)
+  x=-3/4   : c=-45/16 (tail 2, period 1), c=-37/16 (tail 1, period 2), c=-29/16 (tail 2, period 3), c=-21/16 (tail 0, period 1), c=-13/16 (tail 0, period 2), c=-5/16 (tail 2, period 1), c=3/16 (tail 1, period 1)
+  x=-7/4   : c=-93/16 (tail 1, period 2), c=-77/16 (tail 0, period 1), c=-37/16 (tail 0, period 2), c=-29/16 (tail 0, period 3), c=-21/16 (tail 1, period 1)
+  x=-29/16 : c=-1561/256 (tail 1, period 2), c=-1305/256 (tail 0, period 1), c=-633/256 (tail 0, period 2), c=-377/256 (tail 1, period 1)
+     (-29/16 is a fixed point iff c = x - x^2 = -1305/256, in a 2-cycle iff c = -1-x-x^2 = -633/256.)
+  x=0      : c=-2 (tail 2, period 1), c=-1 (tail 0, period 2), c=0 (tail 0, period 1)
+  x=-1     : c=-3 (tail 1, period 2), c=-2 (tail 0, period 1), c=-1 (tail 0, period 2), c=0 (tail 1, period 1)
+  x=-2     : c=-7 (tail 1, period 2), c=-6 (tail 0, period 1), c=-3 (tail 0, period 2), c=-2 (tail 1, period 1)
+  x=-1/4   : c=-29/16 (tail 0, period 3), c=-21/16 (tail 1, period 2), c=-13/16 (tail 0, period 2), c=-5/16 (tail 0, period 1), c=3/16 (tail 1, period 1)
+  x=5/4    : c=-61/16 (tail 0, period 2), c=-45/16 (tail 1, period 1), c=-37/16 (tail 2, period 2), c=-29/16 (tail 0, period 3), c=-21/16 (tail 1, period 2), c=-13/16 (tail 2, period 2), c=-5/16 (tail 0, period 1)
+Rational c with x0 of EXACT period n, from rational roots of Phi_n(x0,c) in c (n<=4):
+  x0=1/4: period 1: [Fraction(3, 16)]; period 2: [Fraction(-21, 16)]; period 3: none; period 4: none
+  x0=-3/4: period 1: [Fraction(-21, 16)]; period 2: [Fraction(-13, 16)]; period 3: none; period 4: none
+  x0=-7/4: period 1: [Fraction(-77, 16)]; period 2: [Fraction(-37, 16)]; period 3: [Fraction(-29, 16)]; period 4: none
+  x0=-29/16: period 1: [Fraction(-1305, 256)]; period 2: [Fraction(-633, 256)]; period 3: none; period 4: none
+  x0=-2: period 1: [Fraction(-6, 1)]; period 2: [Fraction(-3, 1)]; period 3: none; period 4: none
+  -7/4 has exact period 1,2,3 for c = -77/16, -37/16, -29/16 respectively (each unique), and no rational period 4
+  (Morton 1998: x^2+c has no rational points of exact period 4 - CITED; period 5: Flynn-Poonen-Schaefer 1997 - CITED;
+  period 6: Stoll 2008 under BSD - CITED).  So the chain 'parameter -> point of the next system' is exactly:
+  1/4 (period-1 parabolic) is a fixed point of c=3/16 and a 2-cycle point of c=-21/16;  -3/4 (period-2 parabolic)
+  is a fixed point of c=-21/16 and a 2-cycle point of c=-13/16;  -7/4 (period-3 parabolic) has periods 1,2,3 for
+  c=-77/16,-37/16,-29/16.  -29/16 has periods 1,2 for c=-1305/256,-633/256 and no period 3 over Q.
+
+==============================================================================
+S6. (iv) Chebyshev conjugacy, 63 = 7*9, and the typed analogy Bang(n=6) vs critical-orbit(n=3)
+==============================================================================
+x=y+1/y conjugates y->y^2 to x->x^2-2.  y=2 <-> x=5/2; orbit numerators under x^2-2: [5, 17, 257, 65537, 4294967297]  = Fermat numbers F_1..F_5 (pairwise coprime: every term has a primitive prime; no Bang-type exception).
+Where 2^n-1 really enters x^2-2: period-n points of x^2-2 are 2cos(2 pi k/N) with N | 2^n-1 or N | 2^n+1
+  (y^(2^n) = y^(+-1)).  For n=3: N | 7 or N | 9, i.e. Phi_3(x,-2) = (x^3+x^2-2x-1)(x^3-3x+1) [S4], and
+  63 = 2^6-1 = (2^3-1)(2^3+1) = 7*9 is the product of the two conductors of the two 3-cycles of x^2-2.
+  Bang's n=6 exception <=> 2^3+1 = 9 = 3^2 has no new prime <=> no prime-conductor 3-cycle of x^2-2 on the 2^n+1 side
+  <=> no prime p with ord_p(2)=6 (S1).  THM-4139 (37): the exact 6-cycles of squaring have conductors 9,21,63 only.
+  Exact-period counts of x^2-2 (all points): n=1..6 -> [2, 2, 6, 12, 30, 54]  (n=3: 6 = 3 [conductor 7] + 3 [conductor 9]).
+
+TYPED ANALOGY.
+  Source: Bang/Zsigmondy for 2^n-1, index n=6, primitive part Phi_6(2)=3 (non-primitive since 3|6, 3|2^2-1).
+  Target: critical orbit of x^2+c, index n=3, primitive part F(a,b)=a^3+2a^2b+ab^2+b^3 at (a,b)=(-7,4): value 1.
+  Map: NONE on objects (multiplicative group orbit vs polynomial critical orbit).  Shared predicate: 'the n-th term
+  has no primitive prime divisor' <=> 'no prime p sees the base point with exact period n mod p' (both PROVED:
+  p primitive for 2^n-1 <=> ord_p(2)=n; p primitive for N_n <=> 0 has exact period n under x^2+c mod p).
+  Preserved structure: a 'cyclotomic-type' factorization of the n-th term over d|n: 2^n-1 = prod Phi_d(2) versus
+  G_n(c) = prod_{d|n} H_d(c) (Gleason: G_1=c, G_2=c(c+1), G_3=c H_3, G_4=c(c+1)H_4, verified n<=6 in S3b), with the
+  primitive part = the d=n factor.  Lost: in Bang, non-primitive primes of Phi_n(a) divide n (uniform theorem, all n);
+  for H_n(a,b) the factors are pairwise coprime for n<=6 (S3b) but no uniform statement is proved here, and the
+  quadratic side has infinitely many n=2 exceptions (c=-1+-1/b) where Zsigmondy has finitely many.  Sidecar at n=3: the Thue
+  equation F(a,b)=+-1 = units of Z[rho] with vanishing rho-coefficient (S3).  Cheapest decisive test: Phi_6(2)=3
+  (a prime dividing 6) versus F(-7,4)=1 (a unit) - computed above, exact.
+  Verdict on '63 <-> -7/4': REFUTED as a structural identification.  Exact facts only: (a) f^3(0)/f(0)=2^-6=1/(63+1)
+  with exponent 2^3-2=6 (equal to Bang's 6 only because 2^n-2=2n iff n=3); (b) 63=7*9 is attached to c=-2, the
+  Chebyshev parameter, as the product of the conductors of its two 3-cycles (geometry note (6), THM-4139 (36)-(38)); c=-2 = -7/4 - (1/2)^2 and
+  -29/16 = -7/4 - (1/4)^2 are the s=1/2 and s=1/4 points of the 3-cycle parabola centred at -7/4; (c) the parabolic
+  3-cycle at -7/4 and the conductor-7 3-cycle at -2 generate the same field Q(2cos 2pi/7) (geometry note sec.2, inherited).
+  Gaussian-squaring face (inherited, geometry (13)-(16), THM-3341 sec.4, THM-3333): x=2A/C of a primitive triple obeys
+  x -> x^2-2 exactly, with denominators C^(2^n) and pairwise coprime odd legs, i.e. every step of such an x^2-2 orbit has
+  a primitive numerator prime; the Fermat orbit of 5/2 is the |y|=2 (non-unit-circle) instance of the same conjugacy.
+  SCOPE: no map found from THM-3341's Pell-hypotenuse selector to the critical-orbit exception; not claimed.
+
+==============================================================================
+S7. Status ledger
+==============================================================================
+PROVED     : S1 Catalan reading of n=6; no prime of order 6; S2 n=1,2,3 characterizations (n=3 <=> Thue, inherited geometry (11));
+             S3b G_n = prod H_d, Res(H_d,H_n)=+-1 (d<n<=6) => non-Zsigmondy at n<=6 iff H_n(a,b)=+-1;
+             S3 disc_x Phi_3 = -(4c+7)^3(16c^2+4c+7)^2, parabolic multiplier 1 at -7/4, sigma-parabola c=-7/4-s^2,
+             lambda(s), 64G_3-c identity, airplane centre = -rho^2, unit correspondence; S4 Morton identities,
+             t=(p1-p2)/(p0-p1), c(t)=-7/4-s(t)^2, Phi_3(x,-2) factorization; S5 all PrePer sets and incidence lists.
+FINITE-EXACT: Bang table n<=40; 2^n+1 table; census box (n<=8); Thue search b<=10^6; unit search |k|<=300;
+             H_4,H_5,H_6 = +-1 boxes (b<=100 full, b<=5000 near real roots);
+             exact-embedding certificates for the cycle fields; n=4 pattern gcd.
+CITED      : Bang 1886 / Zsigmondy 1892 (a^n-b^n exceptions: n=1 with a-b=1; n=2 with a+b a power of 2; (2,1,6));
+             Mihailescu 2004 (Catalan); Morton 1998 (no rational period 4); Flynn-Poonen-Schaefer 1997 (period 5);
+             Stoll 2008 (period 6, BSD); PARI thue (Bilu-Hanrot) for the complete F, H_4 and H_5 Thue lists; PARI nfdisc;
+             Krieger, Primitive prime divisors in the critical orbit of z^d+c (via the geometry note, read there 2026-09-17);
+             THM-4139/THM-4146; geometry note (4),(9),(11),(16).
+UNCITED-RECOLLECTION: Poonen 1998 graph list labels; Doerksen-Haensch 2012 primitive-divisor theorem; Gleason's
+             2-adic simple-root theorem as the only known input toward a uniform Res(H_d,H_n)=+-1.
+REFUTED    : 'N_n=N_1 at every real parabolic parameter' (fails n=4, exact gcd); '63 <-> -7/4 structural map';
+             'the -7/4 n=3 failure is the only non-preperiodic failure in the box' (n=1,2 have 13 and 12 more).
+OPEN       : the Thue equation H_6(a,b)=+-1 (degree 27) beyond the finite box (H_4, H_5 are closed by PARI when gp is
+             present); any n>=7 statement (no resultant computation, no reduction); a uniform 'Res(H_d,H_n)=+-1'
+             theorem for all d<n (only n<=6 computed).
+
+ALL CHECKS PASSED (6.1s).  Failures: []

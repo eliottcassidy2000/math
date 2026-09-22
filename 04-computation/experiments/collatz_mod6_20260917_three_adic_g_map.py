@@ -12,12 +12,14 @@ The G-orbit of m reversed is a path from 1 to m in the user's extended graph E
 3m'+1 = 2^k m.
 
 Sections
-  S1  exact transfer law at every 3-adic level, Markov structure (PROVED + enumeration J<=7)
+  S1  exact transfer law at every 3-adic level, Markov structure (PROVED + enumeration J<=7);
+      S1.3 conjugacy of (Z_3^x, G) to a 6-state SFT, k-word as a 2-block recoding, entropy log 3
   S2  invariant measure, stationary law, ergodicity, exact drift (PROVED + enumeration)
-  S3  Terras-type density theorem, d_J exact for J<=12, Collatz comparison
-  S4  G_k for odd k, 3 not | k: E[j]=1 for every k, cycle gate, census |k|<=49, duality
+  S3  Terras-type density theorem, d_J exact for J<=12, Collatz comparison;
+      S3.5 exact exponential moment for every tilt, sharp Chernoff exponent, proved sigma=sigma_res threshold
+  S4  G_k for odd k, 3 not | k: E[j]=1 for every k, cycle gate, census |k|<=49, duality, scaling lemma
   S5  hostiles: 3^j+1, the exact peak bound, worst m<=10^7, (8,5,1^n) family
-  S6  typed analogies and the three-piece decomposition
+  S6  reframe theorem (Q1, Q2, one SCC), typed analogies incl. the blueprint affine word model
 All checks are explicit `check(...)` calls (active under python -O).
 """
 import sys, time, hashlib
@@ -112,7 +114,7 @@ print("PROVED (S0.2): G(1)=1 (k=2) is a fixed point; 3 never divides G(m) by the
 banner("S1  Exact transfer law at every 3-adic level; Markov structure of the residue chain")
 # ============================================================================
 print("""THEOREM S1.1 (PROVED).  (a) k(m) depends only on m mod 9 (the defining congruence is mod 9).
-(b) Let J>=1 and let a be a unit class mod 3^J.  Its three lifts a+t*3^J (t=0,1,2) mod 3^(J+1)
+(b) Let J>=2 and let a be a unit class mod 3^J.  Its three lifts a+t*3^J (t=0,1,2) mod 3^(J+1)
     all have the same k (J+1>=2 so the lift determines m mod 9), and
         G(a + t 3^J) = (2^k a - 1)/3 + t 2^k 3^(J-1)  ==  G(a) + t 2^k 3^(J-1)   (mod 3^J).
     Since 2^k is a unit mod 3, t -> t 2^k is a bijection of Z/3, so the three lifts of a map
@@ -132,36 +134,52 @@ print("""THEOREM S1.1 (PROVED).  (a) k(m) depends only on m mod 9 (the defining 
 (d) Level J=2 is exactly F1: from {1,2,4,5} the next residue is uniform on {1,4,7}
     (G(a) = 1 mod 3), from {7,8} uniform on {2,5,8} (G(a) = 2 mod 3).""")
 
-# exact enumeration of (b) for J<=7
+# exact enumeration of (b) for J<=7.  NOTE (truth, not a weakening): the bijective-lift statement
+# needs J>=2 (the three lifts of a class mod 3 to mod 9 have DIFFERENT k, and their images mod 3
+# are (1,1,2), not distinct); at J=1 the correct statement is the kernel P_1(a,1)=2/3, P_1(a,2)=1/3.
 for J in range(1, 8):
     M1 = 3 ** (J + 1)
     MJ = 3 ** J
     units_J = [a for a in range(MJ) if a % 3]
     for a in units_J:
         imgs = []
+        ks = []
         for t in range(3):
             g, k = G(a + t * MJ)
             imgs.append(g % MJ)
-        # distinct, and all congruent to G(a) mod 3^(J-1)
-        check(len(set(imgs)) == 3, "bijective lifts J=%d a=%d" % (J, a))
-        base = G(a)[0] % (3 ** (J - 1))
-        check(all(x % (3 ** (J - 1)) == base for x in imgs), "lifts land over G(a) mod 3^(J-1), J=%d a=%d" % (J, a))
+            ks.append(k)
+        if J == 1:
+            check(sorted(imgs) == [1, 1, 2], "J=1: images mod 3 of the three lifts are (1,1,2), a=%d" % a)
+            check(ks == ([2, 0, 0] if a == 1 else [1, 3, 1]), "J=1: k along the lifts of a=%d is (2,0,0)/(1,3,1), not constant" % a)
+        else:
+            check(len(set(ks)) == 1, "lifts share k, J=%d a=%d" % (J, a))
+            # distinct, and all congruent to G(a) mod 3^(J-1)
+            check(len(set(imgs)) == 3, "bijective lifts J=%d a=%d" % (J, a))
+            base = G(a)[0] % (3 ** (J - 1))
+            check(all(x % (3 ** (J - 1)) == base for x in imgs), "lifts land over G(a) mod 3^(J-1), J=%d a=%d" % (J, a))
         # also: G(m) mod 3^J depends only on m mod 3^(J+1): test with a second representative
         for t in range(3):
             m1 = a + t * MJ
             m2 = m1 + 5 * M1
             check(G(m1)[0] % MJ == G(m2)[0] % MJ, "G mod 3^J determined by m mod 3^(J+1)")
-    print("  J=%d: all %d unit classes mod 3^%d: three lifts map bijectively onto the three lifts of G(a) mod 3^%d  [checked]"
-          % (J, len(units_J), J, J - 1))
+    if J == 1:
+        print("  J=1: both unit classes mod 3: the three lifts mod 9 have NON-constant k ((2,0,0) resp. (1,3,1)) and images (1,1,2) mod 3 -> P_1 = [[2/3,1/3],[2/3,1/3]]  [checked]")
+    else:
+        print("  J=%d: all %d unit classes mod 3^%d: three lifts (same k) map bijectively onto the three lifts of G(a) mod 3^%d  [checked]"
+              % (J, len(units_J), J, J - 1))
 # sharpness: mod 3^J does NOT determine G mod 3^J
-wit = None
 for J in range(1, 5):
+    wit = None
     MJ = 3 ** J
     for a in range(1, MJ):
         if a % 3 == 0:
             continue
-        if G(a)[0] % MJ != G(a + MJ)[0] % MJ:
-            wit = (J, a, a + MJ, G(a)[0] % MJ, G(a + MJ)[0] % MJ)
+        # try both non-trivial lifts a+3^J and a+2*3^J (at J=1, a=1: G(1)=G(4)=1 mod 3 but G(7)=2 mod 3)
+        for t in (1, 2):
+            if G(a)[0] % MJ != G(a + t * MJ)[0] % MJ:
+                wit = (J, a, a + t * MJ, G(a)[0] % MJ, G(a + t * MJ)[0] % MJ)
+                break
+        if wit is not None:
             break
     print("  sharpness J=%d: witness (a, a+3^J, G mod 3^J) = %s" % (J, wit))
     check(wit is not None, "sharpness witness")
@@ -180,6 +198,75 @@ for a in (1, 2, 4, 5, 7, 8):
     print("    %d -> %s" % (a, dict(sorted(P2[a].items()))))
 check(all(set(P2[a]) == {1, 4, 7} for a in (1, 2, 4, 5)), "F1 rows from {1,2,4,5}")
 check(all(set(P2[a]) == {2, 5, 8} for a in (7, 8)), "F1 rows from {7,8}")
+
+print("""THEOREM S1.3 (PROVED).  Symbolic conjugacy and entropy.
+Let A be the 6x6 0/1 matrix on the unit residues mod 9 with A(a,b)=1 iff b = G(a) (mod 3), i.e.
+rows {1,2,4,5} -> columns {1,4,7}, rows {7,8} -> columns {2,5,8}; let Sigma_A be the one-sided SFT.
+(i)  The residue coding Phi(m) = (G^n(m) mod 9)_(n>=0) is a homeomorphism Z_3^x -> Sigma_A with
+     Phi o G = shift o Phi.  Proof: continuity and shift-equivariance are immediate; injectivity:
+     by induction the block (X_0..X_(J-1)) determines m mod 3^(J+1): true for J=1; if m mod 3^(J+1)
+     and G(m) mod 3^(J+1) are known, the level-(J+1) transfer law S1.1(b) (three lifts of m mod 3^(J+1)
+     have three DISTINCT images mod 3^(J+1)) pins m mod 3^(J+2).  Surjectivity: the admissible blocks
+     of length J number 6*3^(J-1) = 2*3^J = the number of unit classes mod 3^(J+1), so the injective
+     block map is a bijection at every length, and compactness gives every infinite path.
+(ii) The k-word (k_1 k_2 ...) is a 2-block recoding of Phi: k_n determines X_(n-1) except for the
+     pairs {4,7} (k=0) and {2,8} (k=1), and k_(n+1) in {0,2} <=> X_n in {1,2,4,5} resolves the pair.
+     Hence the k-word map Z_3^x -> {0,1,2,3}^N is injective (a homeomorphism onto a proper SFT), and
+     the number of admissible k-words of length J is 4*3^(J-1) (< 2*3^J: a J-letter word determines
+     m only mod 3^(J+1) up to the last pair, a (J+1)-letter word determines m mod 3^(J+1) exactly).
+(iii) Entropy.  A has constant row sum 3, so its Perron eigenvalue is 3 and h_top(Sigma_A) = log 3;
+     the Parry (maximal-entropy) measure has kernel A/3 = P_2 and stationary law = the left Perron
+     vector (2,1,2,1,2,1)/9 = pi_2 = mu at level 2 (S2).  At every level J the same holds (P_J = A_J/3,
+     left vector pi_J), so mu is the measure of maximal entropy of G and h_mu(G) = h_top(G) = log 3.
+     (The k-word shift is conjugate to Sigma_A, hence also of entropy log 3: 4*3^(J-1) words.)
+[CITED for the Parry-measure facts: Lind-Marcus, Symbolic Dynamics and Coding, Thm 4.4.4 / Sec. 13.3.]""")
+for J in range(1, 8):
+    M1 = 3 ** (J + 1)
+    paths = {}
+    for a in range(M1):
+        if a % 3 == 0:
+            continue
+        x = a
+        path = []
+        for i in range(J):
+            path.append(x % 9)
+            x = G(x)[0]
+        path = tuple(path)
+        check(path not in paths, "residue block of length %d is injective on classes mod 3^%d" % (J, J + 1))
+        paths[path] = a
+        for i in range(J - 1):
+            check(path[i + 1] % 3 == G(path[i])[0] % 3, "admissibility of the coded block")
+    check(len(paths) == 2 * 3 ** J == 6 * 3 ** (J - 1), "block count = admissible path count at J=%d" % J)
+    # k-word: (J+1)-letter word determines m mod 3^(J+1); J-letter words number 4*3^(J-1)
+    words = {}
+    M2 = 3 ** (J + 2)
+    for a in range(M2):
+        if a % 3 == 0:
+            continue
+        x = a
+        w = []
+        for i in range(J + 1):
+            x, k = G(x)
+            w.append(k)
+        words.setdefault(tuple(w), set()).add(a % M1)
+    check(all(len(v) == 1 for v in words.values()), "(J+1)-letter k-word determines m mod 3^(J+1), J=%d" % J)
+    nJ = len(set(w[:J] for w in words))
+    check(nJ == 4 * 3 ** (J - 1), "number of J-letter k-words = 4*3^(J-1) at J=%d" % J)
+    print("  J=%d: residue blocks <-> unit classes mod 3^%d bijective (%d); k-words of length %d: %d = 4*3^%d; (J+1)-word pins m mod 3^%d  [checked]"
+          % (J, J + 1, len(paths), J, nJ, J - 1, J + 1))
+# adjacency matrix, Perron data, entropy (exact rationals)
+STATES = (1, 2, 4, 5, 7, 8)
+A6 = [[1 if b % 3 == G(a)[0] % 3 else 0 for b in STATES] for a in STATES]
+check(all(sum(row) == 3 for row in A6), "constant row sum 3")
+left = {1: Fr(2, 9), 2: Fr(1, 9), 4: Fr(2, 9), 5: Fr(1, 9), 7: Fr(2, 9), 8: Fr(1, 9)}
+for j, b in enumerate(STATES):
+    check(sum(left[a] * A6[i][j] for i, a in enumerate(STATES)) == 3 * left[b], "left Perron vector (2,1,2,1,2,1)/9")
+h_pi = sum(pi * 3 * Fr(1, 3) for pi in left.values())  # coefficient of log 3 in -sum pi P log P = sum_a pi(a) * log 3
+check(h_pi == 1, "h_pi(P_2) = 1 * log 3")
+print("  A =", A6)
+print("  Perron eigenvalue 3 (row sums), left vector (2,1,2,1,2,1)/9 = pi_2; h_top = h_mu = log 3 = %.6f  [checked]" % log(3))
+print("PROVED (S1.4): (Z_3^x, G) is conjugate to the 6-state SFT Sigma_A; the k-word is an injective 2-block recoding;")
+print("  entropy log 3 with mu the Parry measure.  FINITE-EXACT: coding bijections verified for J<=7.")
 
 # ============================================================================
 banner("S2  Invariant measure, stationary law, ergodicity, exact drift")
@@ -225,7 +312,7 @@ print("""THEOREM S2.3 (PROVED).  Stationary law and ergodicity at every level.
      and aperiodic, with unique stationary law pi_J, for every J>=1.
 (iii) Drift: E_pi[k] = 2*(2/9) + 1*(1/9) + 0 + 3*(1/9) + 0 + 1*(1/9) = 1, so
      E_mu[log(2^k/3)] = log 2 - log 3 = log(2/3) = -0.405465.
-     The uniform-residue average would give E[k] = 7/6 and the WRONG drift (7/6)log2 - log3 = -0.2906.
+     The uniform-residue average would give E[k] = 7/6 and the WRONG drift (7/6)log2 - log3 = -0.2899.
 (iv) Equivalent phrasing on E-arrows: one G-step reverses one 3n+1 arrow and k halvings; at
      stationarity halvings and triplings are used in ratio 1:1 (forward Collatz uses 2:1).""")
 
@@ -324,8 +411,8 @@ for i in range(1, JMAX + 1):
     cnt = int(done.sum())
     dJ = Fr(cnt, 2 * 3 ** i)
     gJ = Fr(int(desc_now.sum()), 2 * 3 ** i)
-    # every class mod 3^(J+1) is 3^(JMAX-i) times over-represented: counts scale exactly
-    check((cnt * (2 * 3 ** i)) % n_units == 0 or True, "scaling")
+    # every class mod 3^(i+1) is 3^(JMAX-i) times over-represented among the n_units classes mod 3^(JMAX+1)
+    check((cnt * (2 * 3 ** i)) % n_units == 0, "class over-representation is exact at J=%d" % i)
     dJ = Fr(cnt, n_units)
     gJ = Fr(int(desc_now.sum()), n_units)
     d_list.append(dJ)
@@ -376,10 +463,7 @@ print("  #{m : sigma(m) != sigma_res(m)} = %d;  witnesses (m, sigma, sigma_res):
 for i in mism:
     check(sig[i] < sigres[i], "mismatch direction")
     # m < B_{sigma} must hold: verify by recomputing B_i exactly
-    m = int(m0[i]); i_s = int(sig[i]); x = m; Kw = 0; B = 0
-    for s in range(i_s):
-        x, kk = G(x)
-        B = 3 * B + (1 << 0) * 0  # placeholder; exact B computed below
+    m = int(m0[i]); i_s = int(sig[i])
     # exact B_i via G^i(m) = (2^K m - B)/3^i
     x = m; Kw = 0
     for s in range(i_s):
@@ -414,9 +498,160 @@ for i in range(1, JC + 1):
 check(terras[0] == Fr(1, 2) and terras[1] == Fr(3, 4), "Terras F(1)=1/2, F(2)=3/4")
 check(all(terras[i] >= terras[i - 1] for i in range(1, len(terras))), "Terras monotone")
 print("FINITE-EXACT (S3.4): Terras densities to J=20 (Terras 1976 theorem F(J)->1 is CITED; values computed here).")
-print("  Comparison: the 3-adic greedy stopping set reaches 0.99 by J=7 and 0.9997 by J=12, the 2-adic Collatz")
+print("  Comparison: the 3-adic greedy stopping set reaches 0.99 by J=7 and 0.9990 by J=12, the 2-adic Collatz")
 print("  one is only %.4f at J=12 and %.4f at J=20: drift log(2/3)=-0.405 per G-step vs (1/2)log(3/4)=-0.144 per T-step;" % (float(terras[11]), float(terras[19])))
 print("  and the 3-adic carry B_i>0 HELPS descent (sigma<=sigma_res), whereas the 2-adic carry hinders it.  time %.1fs" % (time.time() - t1))
+
+print("""THEOREM S3.5 (PROVED).  Exact exponential moments for EVERY tilt; the sharp Chernoff exponent.
+Let u = e^theta > 0 and lump the level-2 chain to the class c_n = G^n(m) mod 3 in {1,2}.  Given c_n, the
+residue X_n is uniform on the three residues of its class (S1.1c), and the pairs (k(X_n), c_(n+1)) are
+   class 1: (2,1),(0,1),(0,2)        class 2: (1,1),(3,1),(1,2)   [= class 1 shifted by one halving].
+So the tilted matrix M_u(c,c') = E[u^k ; c_(n+1)=c' | c_n=c] is
+   M_u = (1/3) [[u^2+1, 1], [u+u^3, u]] = v w^T,  v=(1,u), w=((u^2+1)/3, 1/3),
+of rank ONE for every u, with eigenvalue rho(u) = w.v = (u^2+u+1)/3.  With X_0 Haar (c_0 = 1,2 each 1/2):
+   E_Haar[u^(K_J)] = (1/2,1/2) M_u^J (1,1)^T = (u+1)(u^2+2)/6 * ((u^2+u+1)/3)^(J-1)      (exact, all J>=1).
+u=2 gives 3*(7/3)^(J-1), the wave-one identity (its 'initial vector' (5/2,1/2) = (1/2,1/2)M_2).
+Consequences.  (a) Lambda(theta) := lim (1/J) log E[e^(theta K_J)] = log((u^2+u+1)/3) exactly, so by the
+Gartner-Ellis theorem / the LDP for additive functionals of a finite irreducible chain
+[CITED: Dembo-Zeitouni, Large Deviations Techniques and Applications, Sec. 3.1 and Thm 2.3.6]
+P(K_J >= cJ) = exp(-J I(c) + o(J)) with I(c) = sup_theta (theta c - Lambda(theta)), c > Lambda'(0) = 1.
+(b) The residue-stopping tail is exactly this event at c = log_2 3: 1 - g_J = P(2^(K_J) >= 3^J).
+The wave-one bound (7/9)^(J-1) is Chernoff at u = 2 (per-step factor rho(2)/3 = 7/9); it is valid but not
+sharp: the optimizer solves Lambda'(theta) = c, i.e. u(2u+1)/(u^2+u+1) = log_2 3, while at u=2 the slope is
+10/7 = 1.4286 < 1.5850.  The sharp per-step factor is exp(-I(log_2 3)) = rho(u*)/u*^(log_2 3) (below).
+(c) Since {sigma_res <= J} contains {2^(K_i) < 3^i for i=J} , 1 - d_J <= 1 - g_J and the prefix tail decays
+at least at the sharp rate; the observed ratios (1-d_(J+1))/(1-d_J) for J<=12 are printed for comparison.""")
+# exact moment identity, enumerated over units mod 3^(J+1), for u in {2,3,5,7} and J<=8
+for u in (2, 3, 5, 7):
+    for J in (1, 2, 3, 5, 8):
+        M1 = 3 ** (J + 1)
+        tot = 0
+        cnt = 0
+        for a in range(M1):
+            if a % 3 == 0:
+                continue
+            x = a
+            K = 0
+            for i in range(J):
+                x, k = G(x)
+                K += k
+            tot += u ** K
+            cnt += 1
+        lhs = Fr(tot, cnt)
+        rhs = Fr((u + 1) * (u * u + 2), 6) * Fr(u * u + u + 1, 3) ** (J - 1)
+        check(lhs == rhs, "E[u^K_J] exact at u=%d J=%d" % (u, J))
+    Mu = [[Fr(u * u + 1, 3), Fr(1, 3)], [Fr(u + u ** 3, 3), Fr(u, 3)]]
+    check(Mu[0][0] * Mu[1][1] - Mu[0][1] * Mu[1][0] == 0, "det M_u = 0 at u=%d" % u)
+    check(Mu[0][0] + Mu[1][1] == Fr(u * u + u + 1, 3), "trace = rho(u)")
+    print("  u=%d: E_Haar[u^K_J] = %s * (%s)^(J-1) verified by enumeration at J in {1,2,3,5,8}; det M_u = 0, rho = %s"
+          % (u, Fr((u + 1) * (u * u + 2), 6), Fr(u * u + u + 1, 3), Fr(u * u + u + 1, 3)))
+c_thr = log(3) / log(2)
+slope2 = Fr(2 * 5, 7)
+check(slope2 == Fr(10, 7) and float(slope2) < c_thr, "Lambda'(log 2) = 10/7 < log_2 3: u=2 is not the optimizer")
+# optimal u*: (2-c) u^2 + (1-c) u - c = 0
+import math
+disc = (1 - c_thr) ** 2 + 4 * c_thr * (2 - c_thr)
+u_star = ((c_thr - 1) + math.sqrt(disc)) / (2 * (2 - c_thr))
+rho_star = (u_star * u_star + u_star + 1) / 3
+fac_star = rho_star / u_star ** c_thr
+fac_2 = (7 / 3) / 3
+check(abs(u_star * (2 * u_star + 1) / (u_star ** 2 + u_star + 1) - c_thr) < 1e-12, "u* solves Lambda' = c")
+check(fac_star < fac_2, "sharp factor below 7/9")
+# convexity check: the factor rho(u)/u^c is minimized at u*
+for uu in (1.5, 2.0, 2.5, 3.0, 3.5):
+    check((uu * uu + uu + 1) / 3 / uu ** c_thr >= fac_star - 1e-12, "u* is the minimizer (sampled)")
+print("  c = log_2 3 = %.6f;  Lambda'(log 2) = 10/7 = %.4f;  u* = %.6f;  rho(u*) = %.6f;" % (c_thr, 10 / 7, u_star, rho_star))
+print("  sharp per-step factor exp(-I(c)) = rho(u*)/u*^c = %.6f  vs wave-one Chernoff 7/9 = %.6f  [checked u* minimizes]" % (fac_star, fac_2))
+ratios_d = [float((1 - d_list[i + 1]) / (1 - d_list[i])) for i in range(len(d_list) - 1)]
+ratios_g = [float((1 - g_list[i + 1]) / (1 - g_list[i])) for i in range(len(g_list) - 1)]
+print("  observed (1-d_(J+1))/(1-d_J), J=1..11: %s" % ["%.3f" % r for r in ratios_d])
+print("  observed (1-g_(J+1))/(1-g_J), J=1..11: %s" % ["%.3f" % r for r in ratios_g])
+gm_d = (float(1 - d_list[11]) / float(1 - d_list[7])) ** 0.25
+print("  geometric-mean ratio of 1-d_J over J=8..12: %.4f (finite-J, lattice effects; asymptotic rate is %.4f)" % (gm_d, fac_star))
+print("PROVED (S3.6): exact moment identity for every tilt (rank-one M_u), exact LD rate function I(c) = sup(theta c - log((u^2+u+1)/3));")
+print("  the wave-one (7/9)^(J-1) is the u=2 Chernoff bound, valid but not the sharp exponent (%.4f)." % fac_star)
+
+print("""THEOREM S3.7 (PROVED per level).  Exact threshold for sigma = sigma_res.  Fix i>=1 and a word w of length i
+realized by a unit class a mod 3^(i+1), with 2^(K_i) > 3^i.  On that class G^i is the affine map
+m -> (2^(K_i) m - B_i)/3^i, so G^i(m) < m  iff  m < m*(w) := B_i/(2^(K_i) - 3^i).  Hence a mismatch
+sigma(m) = i < sigma_res(m) forces (1) m < m*(w), m in the class a, and (2) no earlier descent: G^l(m) >= m for
+all l < i (then G^i(m) < m automatically, so sigma(m) = i, and 2^(K_i) > 3^i gives sigma_res(m) > i).  Both
+conditions are decidable by finite enumeration: the candidates m < m*(w) in each class are finitely many
+(m* <= 145 for i <= 12).  If no candidate other than m = 1 (word 2^i, m* = 1 exactly) survives (2), then
+sigma(m) = sigma_res(m) for every m >= 2 with sigma(m) <= 12, and d_J is the EXACT natural density of
+{sigma <= J} with no exceptional set for J <= 12.  Condition (1) alone is NOT sufficient (candidates that
+already descended earlier are listed below); the table gives both counts.""")
+CANDS = []
+t1 = time.time()
+JT = 12
+mod = 3 ** (JT + 1)
+r = np.arange(mod, dtype=np.int64)
+r = r[r % 3 != 0]
+a0 = r.copy()
+K = np.zeros(len(r), dtype=np.int64)
+Bv = np.zeros(len(r), dtype=object)  # exact ints
+Bv[:] = 0
+worst = []
+n_bad_total = 0
+for i in range(1, JT + 1):
+    k = KT_ARR[r % 9]
+    r = ((r << k) - 1) // 3
+    K += k
+    # B_(i) = 2^k B_(i-1) + 3^(i-1)   (from G^(i) = (2^k G^(i-1) - 1)/3)
+    Bv = Bv * (1 << 0)
+    Bv = np.array([int(b) * (1 << int(kk)) + 3 ** (i - 1) for b, kk in zip(Bv, k)], dtype=object)
+    # classes mod 3^(i+1) are represented 3^(JT-i) times; pick the representatives a0 < 3^(i+1)
+    sel = a0 < 3 ** (i + 1)
+    grow = sel & (K > KMAX_TAB[i])  # 2^K > 3^i
+    idx = np.nonzero(grow)[0]
+    max_ratio = Fr(0)
+    arg = None
+    n_cand = 0
+    n_bad = 0
+    for t in idx:
+        a = int(a0[t]); Kt = int(K[t]); Bt = int(Bv[t])
+        ratio = Fr(Bt, (1 << Kt) - 3 ** i)
+        if ratio > max_ratio:
+            max_ratio, arg = ratio, (a, Kt, Bt)
+        if a == 1:
+            check(ratio == 1 and Kt == 2 * i, "m=1 class: word 2^i, m* = 1")
+        # candidates: integers m >= 2 in the class a mod 3^(i+1) with m < m*(w)  (condition (1))
+        mm = a
+        while mm < ratio:
+            if mm >= 2:
+                n_cand += 1
+                CANDS.append((i, mm, float(ratio)))
+                # condition (2): no earlier descent
+                x = mm
+                early = False
+                for l in range(1, i):
+                    x = G(x)[0]
+                    if x < mm:
+                        early = True
+                        break
+                if not early:
+                    x = G(x)[0]
+                    check(x < mm, "affine criterion: G^i(m) < m iff m < m*")
+                    n_bad += 1
+            mm += 3 ** (i + 1)
+    n_bad_total += n_bad
+    worst.append((i, max_ratio, arg, n_cand, n_bad))
+    print("  i=%2d: classes with 2^K>3^i: %6d; max m*(w) = %s = %.4f at (a=%d,K=%d,B=%d); candidates m>=2 below m*: %3d; true mismatches: %d"
+          % (i, len(idx), max_ratio, float(max_ratio), arg[0], arg[1], arg[2], n_cand, n_bad))
+check(n_bad_total == 0, "no mismatch at any level i<=12")
+print("  candidates (level i, m, m*(w)) -- each descended at an earlier step: %s" % CANDS)
+for (i_c, m_c, _) in CANDS:
+    x = m_c
+    first = None
+    for l in range(1, i_c):
+        x = G(x)[0]
+        if x < m_c:
+            first = l
+            break
+    check(first is not None and first < i_c, "candidate m=%d at level %d descended earlier" % (m_c, i_c))
+print("PROVED (S3.8): sigma(m) = sigma_res(m) for all m >= 2 with sigma(m) <= 12 (exact threshold enumeration, %.1fs);" % (time.time() - t1))
+print("  FINITE-EXACT (S3.3) extends this to all m <= 10^6 (where sigma_res <= 31).  OPEN: all m, all levels.")
+del r, a0, K, Bv
 
 # ============================================================================
 banner("S4  G_k for odd k, 3 not | k: E[j]=1 for every k; cycle gate; census |k|<=49; duality with T_k")
@@ -659,6 +894,37 @@ for k in KS:
         sgn = (1 if k > 0 else -1) * (1 if 2 ** J > 3 ** L else -1)
         check(sgn == (1 if c[0] > 0 else -1), "sign law (i) k=%d" % k)
 print("  sign law (i) verified on every G_k cycle found.")
+print("""THEOREM S4.5 (PROVED, scaling lemma).  For 3 not| k and 3 not| m:  G_k(k m) = k G_1(m), with the same j.
+Proof: 2^j k m in {k+3, k+6} mod 9  <=>  2^j m in {1 + 3k^-1, 1 + 6k^-1} mod 9 = {4, 7} mod 9 (k^-1 = 1 or 2
+mod 3 permutes the two targets), which is the G_1 condition; then (2^j k m - k)/3 = k (2^j m - 1)/3.  QED
+Hence every G_k has the three UNIVERSAL cycles k*{1}, k*{-1}, k*{-4,-11} (scaled from G_1: 3 cycles, S4.4),
+exactly as T_k(k n) = k T_1(n) gives T_k the four universal cycles k*{1}, k*{-1}, k*{-5,-7,-10..}, k*{-17,...}
+(braids2 signed_cycles: content d = |b|/q; universal <=> q = 1).  PRIMITIVE cycles (not inside kZ) are the
+ones with q = |k|; their counts are tabulated below (G: #cycles - 3; T: #cycles - 4).""")
+for k in KS:
+    Gk = Gk_factory(k)
+    for m in range(-200, 201):
+        if m % 3 == 0:
+            continue
+        gk, jk = Gk(k * m)
+        g1, j1 = Gk_factory(1)(m)
+        check(gk == k * g1 and jk == j1, "scaling lemma at k=%d m=%d" % (k, m))
+    setsG = set(frozenset(c) for c in resG[k][0])
+    for base in ({1}, {-1}, {-4, -11}):
+        check(frozenset(k * x for x in base) in setsG, "universal cycle k*%s present for k=%d" % (sorted(base), k))
+print("  scaling lemma verified for all |k|<=49, |m|<=200; universal G_k cycles k*{1}, k*{-1}, k*{-4,-11} present for every k.")
+print("\n  k | #G_k | primitive G_k (= #-3) | #T_k | primitive T_k (= #-4) | primitive G_k cycle minima")
+for k in KS:
+    if k < 0:
+        continue
+    cG = resG[k][0]
+    cT = resT[k][0]
+    prim = [c for c in cG if any(x % k != 0 for x in c)] if k != 1 else []
+    check(len(prim) == len(cG) - 3, "primitive count = total - 3 at k=%d" % k)
+    check(len(cT) >= 4, "T_k has >= 4 cycles")
+    print("  %3d | %2d | %2d | %2d | %2d | %s" % (k, len(cG), len(prim), len(cT), len(cT) - 4,
+                                                sorted([min(c, key=abs) for c in prim], key=abs)))
+print("FINITE-EXACT (S4.6): primitive-cycle table for 0<k<=49 (k<0 by negation); k=1: no primitive cycle on either side.")
 # detail table for the G_k cycles with their words and gates, small k
 print("\n  G_k cycles with words (k in {1,-1,5,-5,7,-7,11,13}):")
 for k in (1, -1, 5, -5, 7, -7, 11, 13):
@@ -709,43 +975,54 @@ is 3.  QED.   The family 3^j+1 attains K_(j-1) = 2(j-1), so the rate 4/3 per ste
 family can grow faster than 2*(4/3)^n in n steps (Collatz's optimum is (3/2)^n from 2^L-1).""")
 
 # vectorised full-orbit statistics for all m <= 10^7 (F1 verification) + the K_n <= 2n+[k1=3] bound
+# processed in chunks to keep RAM small (each chunk ~1.7*10^6 starts)
 t1 = time.time()
 N_ALL = 10 ** 7
-m0 = np.arange(1, N_ALL + 1, dtype=np.int64)
-m0 = m0[m0 % 3 != 0]
-NU = len(m0)
-v = m0.copy()
-peak = m0.copy()
-steps = np.zeros(NU, dtype=np.int32)
-Kc = np.zeros(NU, dtype=np.int32)
-first3 = (m0 % 9 == 5).astype(np.int32)
-active_idx = np.nonzero(m0 != 1)[0]
-step = 0
+NCHUNK = 4
+NU = 0
+best_steps = (-1, 0)
+best_ratio = (0.0, 0, 0)
 bound_ok = True
-while len(active_idx) and step < 1000:
-    step += 1
-    vv = v[active_idx]
-    k = KT_ARR[vv % 9]
-    vv = ((vv << k) - 1) // 3
-    v[active_idx] = vv
-    Kc[active_idx] += k.astype(np.int32)
-    if np.any(Kc[active_idx] > 2 * step + first3[active_idx]):
-        bound_ok = False
-    np.maximum(peak[active_idx], vv, out=peak[active_idx]) if False else None
-    pk = peak[active_idx]
-    peak[active_idx] = np.maximum(pk, vv)
-    steps[active_idx] = step
-    active_idx = active_idx[vv != 1]
-check(step < 1000 and len(active_idx) == 0, "every m<=10^7 reaches 1")
+for ci in range(NCHUNK):
+    lo = ci * (N_ALL // NCHUNK) + 1
+    hi = (ci + 1) * (N_ALL // NCHUNK)
+    m0 = np.arange(lo, hi + 1, dtype=np.int64)
+    m0 = m0[m0 % 3 != 0]
+    NU += len(m0)
+    v = m0.copy()
+    peak = m0.copy()
+    steps = np.zeros(len(m0), dtype=np.int32)
+    Kc = np.zeros(len(m0), dtype=np.int32)
+    first3 = (m0 % 9 == 5).astype(np.int32)
+    active_idx = np.nonzero(m0 != 1)[0]
+    step = 0
+    while len(active_idx) and step < 1000:
+        step += 1
+        vv = v[active_idx]
+        k = KT_ARR[vv % 9]
+        vv = ((vv << k) - 1) // 3
+        v[active_idx] = vv
+        Kc[active_idx] += k.astype(np.int32)
+        if np.any(Kc[active_idx] > 2 * step + first3[active_idx]):
+            bound_ok = False
+        peak[active_idx] = np.maximum(peak[active_idx], vv)
+        steps[active_idx] = step
+        active_idx = active_idx[vv != 1]
+    check(step < 1000 and len(active_idx) == 0, "every m in chunk %d reaches 1" % ci)
+    imax = int(steps.argmax())
+    if int(steps[imax]) > best_steps[0]:
+        best_steps = (int(steps[imax]), int(m0[imax]))
+    ratio = peak / m0
+    irat = int(ratio.argmax())
+    if float(ratio[irat]) > best_ratio[0]:
+        best_ratio = (float(ratio[irat]), int(m0[irat]), int(peak[irat]))
+    del m0, v, peak, steps, Kc, first3, ratio, active_idx
 check(bound_ok, "K_n <= 2n + [m=5 mod 9] along all orbits m<=10^7")
-imax = steps.argmax()
-ratio = peak / m0
-irat = ratio.argmax()
 print("  all %d non-multiples of 3 in [1,10^7] reach 1 under G  [checked]  time %.1fs" % (NU, time.time() - t1))
-print("  max steps-to-1 = %d at m=%d   (F1: 93 at 8751065)" % (steps[imax], m0[imax]))
-print("  max peak/m = %.3f at m=%d, peak=%d   (F1: 133.03 at 4847486)" % (ratio[irat], m0[irat], peak[irat]))
-check(int(steps[imax]) == 93 and int(m0[imax]) == 8751065, "F1 max steps")
-check(int(m0[irat]) == 4847486, "F1 worst peak/m location")
+print("  max steps-to-1 = %d at m=%d   (F1: 93 at 8751065)" % best_steps)
+print("  max peak/m = %.3f at m=%d, peak=%d   (F1: 133.03 at 4847486)" % best_ratio)
+check(best_steps == (93, 8751065), "F1 max steps")
+check(best_ratio[1] == 4847486, "F1 worst peak/m location")
 print("  K_n <= 2n + [k_1=3] verified along every orbit (S5.2)  [checked]")
 # full orbit of the worst m
 m = 4847486
@@ -759,9 +1036,34 @@ print("    residues mod 9 along the orbit: %s" % [y % 9 for y in orb[:-1]])
 print("    orbit: %s" % orb)
 print("    peak %d at step %d, peak/m = %.4f, K at peak = %d, 2*(4/3)^%d = %.1f (bound S5.2 holds)" %
       (pk, orb.index(pk), pk / m, sum(word[:orb.index(pk)]), orb.index(pk), 2 * (4 / 3) ** orb.index(pk)))
-print("    3-adic reason: m mod 3^j: ", [m % 3 ** j for j in range(1, 8)], " -> m = 1 mod 3^%d" % max(j for j in range(1, 20) if m % 3 ** j == 1))
-print("    the leading run of k=2 letters has length %d = v_3(m-1) - 1 as S5.1 predicts (v_3(m-1)=%d)" %
-      (next((i for i, kk in enumerate(word) if kk != 2), len(word)), max(j for j in range(1, 30) if (m - 1) % 3 ** j == 0)))
+def v3(x):
+    e = 0
+    while x % 3 == 0:
+        x //= 3
+        e += 1
+    return e
+
+
+def run_of_twos(w, start):
+    n = 0
+    while start + n < len(w) and w[start + n] == 2:
+        n += 1
+    return n
+
+
+# 3-adic reason (truth): m = 5 mod 9, so the word starts with a 3 (factor 8/3); then G(m) = 1 mod 3^6
+# exactly, forcing 2^5 0 (S5.1); G^7(m) = 5 mod 9 again, then G^8(m) = 1 mod 3^10 exactly, forcing 2^9 0.
+# The peak (step 17) is the end of that second run: pattern (7,5,1^9) of S5.3 stacked on (5,1^5).
+check(m % 9 == 5 and word[0] == 3, "worst m is 5 mod 9")
+check(v3(orb[1] - 1) == 6 and word[1:7] == [2] * 5 + [0], "G(m) = 1 mod 3^6 exactly -> 2^5 0")
+check(orb[7] % 9 == 5 and word[7] == 3, "G^7(m) = 5 mod 9")
+check(v3(orb[8] - 1) == 10 and word[8:18] == [2] * 9 + [0], "G^8(m) = 1 mod 3^10 exactly -> 2^9 0")
+print("    3-adic reason: m = 5 mod 9 (letter 3), v_3(G(m)-1) = %d (run of %d twos then 0), G^7(m) = 5 mod 9 (letter 3),"
+      % (v3(orb[1] - 1), run_of_twos(word, 1)))
+print("      v_3(G^8(m)-1) = %d (run of %d twos then 0 at step 17 = the peak): word prefix 3 2^5 0 3 2^9 0, K_17 = %d,"
+      % (v3(orb[8] - 1), run_of_twos(word, 8), sum(word[:17])))
+print("      exact growth to the peak: 2^%d/3^17 = %.2f  vs observed peak/m %.4f (the carry B_17 costs the difference)"
+      % (sum(word[:17]), 2 ** sum(word[:17]) / 3 ** 17, pk / m))
 
 print("""S5.3  Residue-5 chains (PROVED structure).  Residue 5 mod 9 (factor 8/3) can never repeat consecutively
 and is always preceded by 7 or 8 (factors 1/3, 2/3): the best 5-containing pattern is 8,5,1^n
@@ -798,8 +1100,9 @@ print("""A1  Source: Collatz T on Z_2 (Lagarias 1985, CITED: T is Haar-preservin
     Target: G on Z_3^x.  Map: 2-adic digits <-> 3-adic digits, parity word <-> k-word, n mod 2^J <-> m mod 3^(J+1),
     gate n0(2^K-3^L)=kB(w) <-> m0(2^J-3^L)=kB(rev w).  Preserved: 'word of length J is a function of the
     residue at depth J(+1)', cycle gate shape, Terras-type density theorem.  Lost: Haar-invariance and
-    bijectivity of the word map (G is 4:1 / 2:1 with a.c. invariant density 4/3, 2/3 != Haar; the k-word map
-    is not injective on Z_3^x); the direction of the carry (helps here, hinders there).  Sidecar: the rank-1
+    bijectivity of the word map onto the FULL shift (G is 4:1 / 2:1 with a.c. invariant density 4/3, 2/3 != Haar;
+    the k-word map IS injective (S1.3ii) but its image is a proper SFT of entropy log 3 < log 4, whereas Lagarias'
+    parity map is onto the full 2-shift); the direction of the carry (helps here, hinders there).  Sidecar: the rank-1
     tilted matrix [[5/3,1/3],[10/3,2/3]] with eigenvalue 7/3.  Decisive test: E[k]=1 (3-adic) vs E[parity]=1/2 (2-adic).
 A2  Source: squarefree density 6/pi^2 = prod_p (1-p^-2) (user's prompt).  Target: the stationary law (4/3, 2/3).
     Map: 'a global density is a product/limit of local Haar masses' (CRT).  Preserved: density of a residue
@@ -818,7 +1121,34 @@ A3  The user's three pieces {0,1,2} mod 3 in E.  PROVED: 3Z is a source forest (
 A4  3n-5 / 3n+k versions (user): S4 shows the 3-adic greedy inverse of 3n+k has the SAME chain and drift for
     every k with 3 not| k, and its typical cycles are small with sign -sign(k).  No map found from the G_k
     census to Bott periodicity or octonions (no 8-fold or 2-fold structure appears in the data; the period 6 of
-    2 mod 9 is the only periodicity present).""")
+    2 mod 9 is the only periodicity present).
+A5  Source: the blueprint audit's exact affine word model (collatz_blueprint_20260921_affine.md, Sec. 1 and 3):
+    chronological D/E words with W(n) = (2^r n - B)/3^m, legality iff 2^r n = B mod 3^m (one legal source class
+    mod 3^m), fixed point n = B/(2^r-3^m), and the ternary/dyadic progression bijection s+3^m j <-> W(s)+2^r j.
+    Target: the greedy word of G.  Map: letter k>=1 -> the guarded word E o D^(k-1) (3G+1 = 2^k m); letter k=0
+    -> the E-graph's extra arrow (even -> 3n+1 reversed), which is OUTSIDE the D/E semigroup (wave-one leaf
+    identity, fibre index j=-1).  Preserved: the carry formula (r = K_J, m = J, B = B_J of S3), the legality
+    congruence (the word of length J is legal on exactly one class mod 3^J), the fixed-point/cycle gate, and the
+    free-semigroup property (distinct k-words are distinct affine maps).  Lost: the dyadic endpoint address
+    mod 2^r and the uniform word mass 2^(-r) -- G selects the word from the 3-adic side (m mod 3^(J+1)), so word
+    masses are the Markov products 2*3^J P_chain(w) (wave-one S4), not 2^(-r); and the blueprint's 'source class
+    mod 3^m' becomes 'source class mod 3^(J+1)': the greedy rule spends one extra ternary digit to choose k.
+    Sidecar: the blueprint's spectral hostile (DEDE vs DDEE, same trace/determinant, different carry) is the
+    statement that the cycle gate is NOT a function of (K,L) alone -- exactly S4.3's B'(w) dependence.
+    Decisive test: 'same words, opposite adic completion' -- the blueprint counts words by dyadic endpoints
+    (mass 2^-r, E-count binomial), G counts them by ternary sources (mass 2*3^J P_chain, E[k]=1).
+
+THEOREM S6.1 (PROVED, the reframe).  Let U = {n>=1 : 3 not| n}.  Q1: every n>=1 reaches 1 in E.  Q2: 1 reaches
+every m in U in E.  Then  (Q1 and Q2)  <=>  (U is one strongly connected component of E containing 1, and every
+multiple of 3 is a transient singleton feeding it).
+Proof.  (=>) For m, m' in U, Q1 gives m -> 1 and Q2 gives 1 -> m', so U lies in one SCC; multiples of 3 are
+never entered (3n+1 = 1 mod 3; n/2 = 0 mod 3 forces n = 0 mod 3) and leave 3Z after v_2(n) halvings via
+3t -> 9t+1 (wave-one S1.3), so they are singleton SCCs.  (<=) Q2 is the reachability 1 -> m inside the SCC;
+Q1 for n in U is m -> 1 inside the SCC, and for n = 3t: 3t -> 9t+1 in U -> 1.  QED
+Relation to Collatz (SCOPE, stated exactly): Collatz => Q1 (the deterministic path is an E-path); Q1 => Collatz
+is NOT established here (E has extra even -> 3n+1 arrows, so reaching 1 in E is a priori weaker); Q2 is the new
+question, with the G-certificate: a G-orbit m -> ... -> 1 reversed is an explicit E-path 1 -> m, so
+Q2 <= 'every m in U reaches 1 under G' (FINITE-EXACT to 10^7, S5; stopping-time density 1, S3).""")
 
 # ----------------------------------------------------------------------------
 banner("Provenance")

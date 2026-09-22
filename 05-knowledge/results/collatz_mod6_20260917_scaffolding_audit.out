@@ -1,0 +1,273 @@
+scaffolding_audit: exact audit of the pasted 'peripheral discoveries' block
+session collatz-mod6-20260917 (mac-mini), lane written 2026-09-21
+
+==============================================================================
+P1. Claim 1: 'core local identity' T((A+1)(B+1)-1)-T(AB-1) = T(A)+T(B)+Shear(A,B), Shear = A(B^2-1)+B(A^2-1); horizontal/vertical flows of S(A,B)
+==============================================================================
+(i) stated identity, (A,B) in [1,7]^2: 49 of 49 pairs FAIL
+    witness A=B=1: LHS = T(3)-T(0) = 6, RHS = 2
+(ii) exact polynomials:
+    LHS  = T(AB+A+B)-T(AB-1) = A^2B + AB^2 + 1/2*A^2 + 2*AB + 1/2*B^2 + 1/2*A + 1/2*B
+    RHS  = T(A)+T(B)+A(B^2-1)+B(A^2-1) = A^2B + AB^2 + 1/2*A^2 + 1/2*B^2 - 1/2*A - 1/2*B
+    LHS-RHS = 2*AB + A + B  = A(B+1)+B(A+1)
+    PROVED: T((A+1)(B+1)-1)-T(AB-1) = sum_{k=AB}^{AB+A+B} k = (A+B+1)(2AB+A+B)/2
+                                  = T(A)+T(B)+AB(A+B+2) = T(A)+T(B)+2A*T(B)+2B*T(A).
+(iii) shifted readings T(N+s1)-T(AB+s2) = T(A+t1)+T(B+t2)+Shear valid on [0,7]^2, shifts in [-3,3]:
+    solutions (s1,s2,t1,t2): [(-3, -2, -2, -2), (-1, 0, 0, 0)]
+    PROVED (polynomial identity): T((A+1)(B+1)-2) - T(AB) = T(A)+T(B)+A(B^2-1)+B(A^2-1)
+      i.e. the paste is off by one in BOTH triangular arguments; the second solution is its
+      reflection under T(n-1)=T(-n).  Witness of the repair: A=B=1: T(2)-T(1)=2 = T(1)+T(1)+0.
+    PROVED (coefficient comparison): for ANY quadratic T(n)=a n^2+b n+c the stated form forces a=1/2
+      from the A^2B term and then leaves an uncancelled 2AB on the left; so no quadratic reading works.
+(iv) flows Delta_A S = A+B^2+2AB+B, Delta_B S = B+A^2+2AB+A are compatible (mixed differences both 2A+2B+2)
+    and their UNIQUE solution up to the constant S(0,0) is
+      S(A,B) = AB(A+B) + C(A,2) + C(B,2) = T(A)+T(B)+A(B^2-1)+B(A^2-1)  (the paste's RIGHT side),
+      = T((A+1)(B+1)-2) - T(AB).  The paste's LEFT side T((A+1)(B+1)-1)-T(AB-1) has horizontal flow
+      Delta_A = (A+B^2+2AB+B) + (2B+1), so it is NOT the S of the flows.  Verdict: TRUE-with-repair.
+    uniqueness: two solutions of both difference equations differ by a function constant in A and in B.
+
+==============================================================================
+P2. Claim 2: tetrahedral and pentatope laws; general d-simplex convolution law
+==============================================================================
+(i) FINITE-EXACT [0,11]^2: tetrahedral law holds (0 failures), pentatope law holds (0 failures).
+    the 2D member of the same family, T(A+B+1) = T(A)+T(B)+(A+1)(B+1), also holds (this is the
+    correct 'locking' identity that Claim 1 garbled).
+(ii) PROVED (Chu-Vandermonde): for every d>=1 and every split a+b=d,
+      S_d(A+B+1) = C(A+B+d,d) = sum_{i=0}^{d} C(A+a,i) C(B+b,d-i),  S_d(n):=C(n+d-1,d).
+    Proof: choose a d-subset of a set of A+B+d = (A+a)+(B+b) elements by how many lie in the first block.
+    Tetrahedral law = split (a,b)=(2,1) rewritten with Pascal: C(B+1,3)+(A+2)C(B+1,2) = Te(B)+(A+1)T(B),
+      C(A+2,2)(B+1) = (B+1)T(A)+(A+1)(B+1), C(A+2,3) = Te(A).
+    Pentatope law = split (2,2): C(B+2,4)+(A+2)C(B+2,3) = Pt(B)+(A+1)Te(B) (and symmetrically),
+      middle term C(A+2,2)C(B+2,2) = T(A+1)T(B+1).
+(iii) PROVED (the identity sum_k C(x+k,k)C(y+d-k,d-k) = C(x+y+d+1,d), x=A, y=B-1): the simplex convolution
+      S_d(A+B+1) = sum_{i+j=d} S_i(A+1) S_j(B), checked exactly for d<=8 on [0,11]^2.
+    Physical content that survives: a convolution (set-partition count) identity; there is no shear,
+    rotation, or 'locking plate' -- every term is C(x,i)C(y,d-i) for a two-block split.
+
+==============================================================================
+P3. Claim 3: the g-operator
+==============================================================================
+(i) 'AgB = AB*(AgB)': as an equation in the unknown AgB it forces (AB-1)*(AgB)=0, so AgB=0 unless AB=1:
+    circular / vacuous.  REFUTED as a definition.
+(ii) '(AB)^(AB)' at A=1 gives B^B; '1gB=B!' gives B!; B^B != B! for B>=2: witnesses [(2, 4, 2), (3, 27, 6), (4, 256, 24)]
+    REFUTED (mutually inconsistent readings; minimal witness B=2: 4 vs 2).
+(iii) PROVED: the reading AgB := A!*B! satisfies the (presumably intended) recursion AgB = AB*((A-1)g(B-1)),
+      1gB = B!, and AgA = (A!)^2 simultaneously.  Any solution f of f(A,B)=AB f(A-1,B-1) with f(1,B)=B!
+      has f(0,k)=k! and f(A,A)=(A!)^2 f(0,0)=(A!)^2, so A!B! is the unique symmetric solution.
+      The alternative AgB := A^B B! (recursion AgB = AB*(Ag(B-1))) gives 1gB=B! but AgA = A^A A! != (A!)^2
+      (A=2: 8 vs 4).  '(AB)^(AB)' satisfies neither recursion.
+(iv) 'squares the information capacity, mapping the Pell and square-triangular families': SCOPE, no map found
+      ((A!)^2 is a square by construction; square-triangular numbers T(m)=k^2 are the Pell equation
+      (2m+1)^2-8k^2=1 and involve no factorials).
+
+==============================================================================
+P4. Claim 4: tournament 'compression' T_{n-2}; Redei; counting
+==============================================================================
+(i) TRUE (arithmetic): C(n,2)-(n-1) = C(n-1,2) = T(n-2) for all n>=2 (checked n<=12; identity C(n,2)=C(n-1,2)+(n-1)).
+(ii) labelled tournaments, exact census:
+      n  #T=2^C(n,2)  sum_T h(T)  n!*2^T(n-2)  min h  max h  all h odd  h-values seen
+      2           2           2            2      1      1  True  [1]
+      3           8          12           12      1      3  True  [1, 3]
+      4          64         192          192      1      5  True  [1, 3, 5]
+      5        1024        7680         7680      1     15  True  [1, 3, 5, 9, 11, 13, 15]
+      6       32768      737280       737280      1     45  True  [1, 3, 5, 9, 11, 13, 15, 17, 19, 23, 25, 27, 29, 31, 33, 37, 41, 43, 45]
+    PROVED (double counting): every ordering pi of [n] is the Hamiltonian path of exactly 2^{T(n-2)} labelled
+      tournaments (the n-1 path edges are forced, the other T(n-2) are free), so sum_T h(T) = n! 2^{T(n-2)}
+      and the average number of Hamiltonian paths is n!/2^{n-1} (n=6: 45/2).
+(iii) REFUTED ('path edges carry 0 bits'): the code (pi, T(n-2) free bits) has n!*2^{T(n-2)} codewords for
+      2^{C(n,2)} tournaments; it is surjective and (n!/2^{n-1})-to-one on average, so it costs
+      log2(n!) + T(n-2) = C(n,2) + log2(n!/2^{n-1}) >= C(n,2) bits, with strict excess for n>=3.
+        n= 3: C(n,2)=  3, T(n-2)=  1, log2(n!)=2.585, excess over C(n,2) = 0.585 bits
+        n= 4: C(n,2)=  6, T(n-2)=  3, log2(n!)=4.585, excess over C(n,2) = 1.585 bits
+        n= 5: C(n,2)= 10, T(n-2)=  6, log2(n!)=6.907, excess over C(n,2) = 2.907 bits
+        n= 6: C(n,2)= 15, T(n-2)= 10, log2(n!)=9.492, excess over C(n,2) = 4.492 bits
+        n= 8: C(n,2)= 28, T(n-2)= 21, log2(n!)=15.299, excess over C(n,2) = 8.299 bits
+        n=10: C(n,2)= 45, T(n-2)= 36, log2(n!)=21.791, excess over C(n,2) = 12.791 bits
+      The uniform distribution on labelled tournaments has entropy exactly C(n,2) bits; no lossless code
+      beats it (Shannon source coding, CITED: Shannon 1948).  What IS true: h is odd (Redei 1934, CITED),
+      h-spectrum = odds minus {7,21} and |Aut(T)| divides h (01-canon/theorems/THM-1745-leaf-graded-...).
+(iv) 'defects at diffraction peaks of the quasicrystalline Wythoff wave', 'topological genus of randomness':
+      SCOPE -- no defined object, no map found.
+
+==============================================================================
+P5. Claim 5a: horizons and the '63 bottleneck' (Bang / Catalan)
+==============================================================================
+(i) 'horizon lines' (Z,2Z),(Z,Z^2),(W,W^3),(W,W^4) are the diagonals X=Y of X+Y, X*Y, X*Y*W... : definitions only (SCOPE).
+(ii) 63 = 3*7*3 = 3^2*7 = 2^6-1 = (2^3-1)(2^3+1) = 7*9; 9 = 3^2 = 2^3+1 (Catalan 3^2-2^3=1, Mihailescu 2004 CITED).
+    2^n-1, 1<=n<=40: indices with NO primitive prime divisor = [1, 6]
+    PROVED (Bang 1886 / Zsigmondy 1892, CITED): the ONLY n>1 for which 2^n-1 lacks a primitive prime is n=6, i.e. 63.
+    So the paste's '63 short-circuits Bang's theorem' is TRUE-with-repair: the mechanism is 2^3+1 = 3^2 (a prime
+    power already dividing 2^2-1), not a 'loop switching a multiplication edge and an addition edge'; no such
+    loop is defined.  Inherited: wave-one zsigmondy lane, 05-knowledge/results/collatz_mod6_20260917_zsigmondy_triad.out
+    (Catalan reading of n=6; no prime p has ord_p(2)=6).
+    ord_9(2) = 6 and 9 | 63; no prime has multiplicative order 6 to base 2 (primes of order 6 would be primitive).
+
+==============================================================================
+P6. Claim 5b: the '341 bottleneck' (Zsigmondy for 4^n-1; Cipolla pseudoprimes; the R-trunk)
+==============================================================================
+(i) 341 = 11*31 = (4^5-1)/3 = 4^4+4^3+4^2+4+1 (base-4 repunit): TRUE arithmetic.
+    4^5-1 = 1023 = {3: 1, 11: 1, 31: 1}; primitive primes (ord_p(4)=5): [11, 31]
+    4^n-1, 1<=n<=40: primitive prime divisors
+      n= 1  4^n-1 = {3: 1}  primitive: [3]
+      n= 2  4^n-1 = {3: 1, 5: 1}  primitive: [5]
+      n= 3  4^n-1 = {3: 2, 7: 1}  primitive: [7]
+      n= 4  4^n-1 = {3: 1, 5: 1, 17: 1}  primitive: [17]
+      n= 5  4^n-1 = {3: 1, 11: 1, 31: 1}  primitive: [11, 31]
+      n= 6  4^n-1 = {3: 2, 5: 1, 7: 1, 13: 1}  primitive: [13]
+      n= 7  4^n-1 = {3: 1, 43: 1, 127: 1}  primitive: [43, 127]
+      n= 8  4^n-1 = {3: 1, 5: 1, 17: 1, 257: 1}  primitive: [257]
+      n= 9  4^n-1 = {3: 3, 7: 1, 19: 1, 73: 1}  primitive: [19, 73]
+      n=10  4^n-1 = {3: 1, 5: 2, 11: 1, 31: 1, 41: 1}  primitive: [41]
+      n=11  4^n-1 = {3: 1, 23: 1, 89: 1, 683: 1}  primitive: [23, 89, 683]
+      n=12  4^n-1 = {3: 2, 5: 1, 7: 1, 13: 1, 17: 1, 241: 1}  primitive: [241]
+      n=20  4^n-1 = {3: 1, 5: 2, 11: 1, 17: 1, 31: 1, 41: 1, 61681: 1}  primitive: [61681]
+      n=30  4^n-1 = {3: 2, 5: 2, 7: 1, 11: 1, 13: 1, 31: 1, 41: 1, 61: 1, 151: 1, 331: 1, 1321: 1}  primitive: [61, 1321]
+      n=40  4^n-1 = {3: 1, 5: 2, 11: 1, 17: 1, 31: 1, 41: 1, 257: 1, 61681: 1, 4278255361: 1}  primitive: [4278255361]
+    indices without a primitive prime: []
+    PROVED (Zsigmondy, CITED; exceptions are only n=1 with a-b=1, n=2 with a+b a power of 2, and (2,1,6)):
+      4-1=3 != 1 and 4+1=5 is not a power of 2, so 4^n-1 has a primitive prime divisor for EVERY n>=1.
+    REFUTED: '341 stalls primitive prime generation of the 4x+1 sequence' -- minimal witness: 4^5-1 has
+      two primitive primes 11 and 31, both dividing 341.
+(ii) Cipolla (1904, CITED): for prime p>=5, N_p=(4^p-1)/3 is a composite base-2 Fermat pseudoprime.
+      p   N_p            composite  2^(N-1) mod N  factorisation
+       5  341             True  1  {11: 1, 31: 1}
+       7  5461            True  1  {43: 1, 127: 1}
+      11  1398101         True  1  {23: 1, 89: 1, 683: 1}
+      13  22369621        True  1  {2731: 1, 8191: 1}
+      17  5726623061      True  1  {131071: 1, 43691: 1}
+      19  91625968981     True  1  {174763: 1, 524287: 1}
+      23  23456248059221  True  1  {47: 1, 178481: 1, 2796203: 1}
+    Proof sketch: N=(2^p-1)(2^p+1)/3 is composite for p>=5 (both factors >3, and 3 divides exactly one of them);
+      N-1 = 4(4^{p-1}-1)/3 is divisible by 2p (p | 4^{p-1}-1 by Fermat, and 2 | it), and ord_N(2) divides 2p
+      since 2^{2p} = 4^p = 3N+1 = 1 mod N; hence 2^{N-1} = 1 mod N.
+(iii) R(n)=4n+1 orbit of 0: [0, 1, 5, 21, 85, 341, 1365] = (4^j-1)/3, j=0..6
+      3*((4^j-1)/3)+1 = 4^j: these are exactly the odd predecessors of the powers of two (the trunk of 1),
+      the inverse-fibre braid n -> R(n) of 05-knowledge/results/arithmetic_braids_20260917_collatz.md (B1)-(B2).
+      341 = R^5(0) = R^4(1) is on the trunk; 'zero-friction state in G_4' has no defined content (SCOPE).
+
+==============================================================================
+P7. Claim 5c: rational 3-cycle x^2-29/16 at x0=-7/4
+==============================================================================
+(i) orbit: ['-7/4', '5/4', '-1/4', '-7/4']
+    FINITE-EXACT: {-7/4, -1/4, 5/4} is an exact 3-cycle and an arithmetic progression with difference 3/2.
+    What is PROVED in the repo (cite, do not re-prove): 01-canon/theorems/THM-4139-*: the complete rational
+      preperiodic graph of x^2-29/16 is eight quarter-integers plus this one 3-cycle (no rational 6-cycle);
+      it is the unique centred monic quadratic over Q with a nondegenerate AP-supported 3-cycle; determinant-one
+      lift B with B^3=-I.  THM-4146-*: trace-one SL_2 lift, integral hexagon on X^2+2XY+13Y^2=48, the signed
+      Pythagorean template forces the 3:4:5 class and 29=5^2+2^2.  Rational 3-cycles of x^2+c: Poonen 1998 (CITED).
+(ii) 'the inverse square horizon (Z,Z^2) cancels the spatial translation after three steps': SCOPE, no map found;
+      the dynamics is x -> x^2 - 29/16, a single quadratic map, and its period-3 orbit is the content of THM-4139.
+
+==============================================================================
+P8. SECOND PART: Collatz peaks versus squares of 4k+1 (shortcut map C(n)=n/2, (3n+1)/2)
+==============================================================================
+    seed  5: shortcut orbit [5, 8, 4, 2, 1]  peak 8
+             full orbit peak 16
+    seed  7: shortcut orbit [7, 11, 17, 26, 13, 20, 10, 5, 8, 4, 2, 1]  peak 26
+             full orbit peak 52
+    seed 23: shortcut orbit [23, 35, 53, 80, 40, 20, 10, 5, 8, 4, 2, 1]  peak 80
+             full orbit peak 160
+(i) REFUTED ('endpoints 1, 26, 80'): the peaks of 5,7,23 are 8,26,80 (shortcut) or 16,52,160 (full map);
+      1 is the sink of every orbit, not a peak.  Incidentally 8=3^2-1, 26=5^2+1, 80=9^2-1 with bases 3,5,9.
+(ii) PROVED: for an odd seed n>1 the shortcut peak p is even (an odd p>1 is followed by (3p+1)/2>p), p=(3m+1)/2
+      with m odd and 3m+1 = 0 mod 4, so m = 1 mod 4 and p = 2 mod 6.  Under the full map the peak is 3m+1 = 4 mod 6.
+      FINITE-EXACT: all 49,999 shortcut peaks (odd seeds 3..10^5) are 2 mod 6; all full-map peaks are 4 mod 6.
+      max peak/seed among them: 10112.041 at seed 77671 (peak 785412368)
+      PROVED (hostile to 'growth bound by area'): C^j(2^k-1) = 3^j 2^{k-j} - 1 for j<=k, so the seed 2^k-1
+      climbs to 3^k-1 ~ n^{log2 3}; peak/seed is unbounded (checked k=5,10,20).
+(iii) shortcut peaks in {(4k+1)^2-1,(4k+1)^2,(4k+1)^2+1}: 248 of 49999 odd seeds
+      peaks within +-1 of ANY square: 535 (the window (4k+1)^2 itself is odd, never a peak)
+      peaks within +-1 of a square of base = 0 mod 4: 0
+      peaks within +-1 of a square of base = 1 mod 4: 248
+      peaks within +-1 of a square of base = 2 mod 4: 0
+      peaks within +-1 of a square of base = 3 mod 4: 287
+      full-map peaks in the (4k+1)-square window: 0
+      distinct shortcut peak values: 20341 (top multiplicities [(125252, 448), (4616, 408), (638468, 347), (172772, 161)])
+      PROVED: a peak p = 2 mod 6 with p = s^2-1 has s^2 = 3 mod 6 so 3|s; with p = s^2+1, s^2 = 1 mod 6 so 3∤s.
+      cell table over DISTINCT peaks (null: a distinct peak is uniform on the class 2 mod 6 of its dyadic range):
+        window   base mod 4   3|s?   distinct peaks   seeds   null expected (distinct)
+        s^2-1    1            3|s      46              152   20.4
+        s^2-1    3            3|s      47              195   20.1
+        s^2+1    1            3∤s      49               96   40.8
+        s^2+1    3            3∤s      50               92   40.9
+      +1 window: 99 distinct vs null 81.8 (Poisson z = 1.91): chance level.
+      -1 window: 93 distinct vs null 40.6: a real excess, split 46/47 between bases 1 and 3 mod 4.
+      PROVED (ladder): C^j(a*2^k-1) = a*3^j*2^(k-j)-1 for j<=k; if a=m^2 and k is even the value after k odd
+        steps is (m*3^(k/2))^2-1, a square minus one.  All 93 distinct '-1' peaks are of this form with the ladder
+        seed a*2^k-1 (some k<=2v_3(s)) having that value as its peak: explained 93, unexplained [].
+      examples: 8=3^2-1 (seed 3=2^2-1; also 5=3*2-1), 80=9^2-1=3^4-1 (seed 15; also 53=27*2-1 on 23's orbit),
+        6560=3^8-1 (21 seeds), 59048=3^10-1 (48 seeds), 164024=25*3^8-1=405^2-1 (17 seeds), 4782968=3^14-1 (17 seeds).
+      So the seed-weighted count 248 is inflated by shared ladder peaks; the 4k+1 selection is REFUTED (bases
+        1 and 3 mod 4 equally represented), and the only structure present is the ladder, which is exactly the
+        hostile of (ii) against 'growth bound by area'.
+      shifted-window control, hits for peak in {(4k+1)^2+s-1,(4k+1)^2+s,(4k+1)^2+s+1}:
+        [(-12, 23), (-10, 0), (-8, 24), (-6, 115), (-4, 91), (-2, 152), (0, 248), (2, 96), (4, 0), (6, 150), (8, 150), (10, 21), (12, 21)]
+      REFUTED ('accelerated Syracuse paths track the boundaries of perfect squares'): the hit count is at
+      chance level and shifted windows do as well; nothing selects the 4k+1 bases.
+(iv) 196 = 14^2: sum of the first 12 primes [2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37] = 197
+      REFUTED ('196 = sum of the first 12 primes'): the sum is 197.  196 is not a peak (196 = 4 mod 6);
+      shortcut orbit of 196: [196, 98, 49, 74, 37, 56, 28, 14, 7] (196 lies 8 steps above 7; it is a predecessor, not a mirror).
+      169 = 13^2: odd seeds <=10^5 with shortcut peak 170: [75, 113]; with peak 168: []; with peak 160: []
+      full-map peak 160: seeds [15, 23, 35, 53].  160 = 2^5*5 = 5*32 is on the trunk of 5 (160/2^5 = 5): TRUE arithmetic,
+      but 160 is the FULL-map peak of 23 (53 -> 160), its shortcut image being 80; 160 = 4 mod 6 can never be a
+      shortcut peak, and nothing relates 160 to 169 ('compression deficit' undefined): SCOPE / REFUTED.
+
+==============================================================================
+P9. Descent certificate 2^K T^L(n) = 3^L n + B_L (inherited identity) and the open obligation
+==============================================================================
+      n   L   k-word           K    3^L n + B      2^K T^L(n)   margin 2^K n-(3^L n+B)  descends
+        27   5  [1, 2, 1, 1, 1]     6  6848           6848           -5120                    False
+        27  41  [1, 2, 1, 1, 1, 1, ...]   70  11805916207174 11805916207174 30695382138652693889024  True
+         7   2  [1, 1]              2  68             68             -40                      False
+        23   3  [1, 1, 5]           7  640            640            2304                     True
+         1   1  [2]                 2  4              4              0                        False
+        31   5  [1, 1, 1, 1, 2]     6  7744           7744           -5760                    False
+   1048575  20  [1, 1, 1, 1, 1, 1, ...]   24  36561584390144 36561584390144 -3638566269747200        False
+    PROVED (inherited, 05-knowledge/results/collatz_blueprint_20260921_synthesis.md section 6): with K_j the partial
+      sums of the halving word and B = sum_j 3^{L-1-j} 2^{K_j}, 2^K T^L(n) = 3^L n + B, hence
+      T^L(n) < n  iff  3^L n + B < 2^K n.  The paste's inequality is exactly this certificate.
+    The paste supplies no argument that every fixed n>1 eventually acquires a word with positive margin; 'peaks
+      run out of volume' is not a statement about any n.  The obligation remains OPEN, verbatim as in the audit.
+    27 reaches 1 after L=41 odd steps (K=70, total 111 full-map steps).
+      FINITE-EXACT: for n=27 the first L with positive margin is L=37 (K=59, T^37(27)=23; 37+59=96 is the
+        classical total stopping time of 27 under the full map).
+
+==============================================================================
+P10. Claim 6 and the remaining phrases
+==============================================================================
+    mod-30 wheel: reduced classes [1, 7, 11, 13, 17, 19, 23, 29] (phi(30)=8) -- the only defined object in 'mod 30 primes framework'.
+    'Unified Arithmetic Cycle {f,+,*,g}', 'modular stabilizer q = x (mod AB)', 'macro-growth fractures back into
+      local modular grids', 'Bott periodicity transforming tetration into pentation', 'quasicrystalline Fourier
+      transform matrix': SCOPE -- no definitions, no map found.  (Bott periodicity is the 8-fold periodicity of
+      the stable homotopy of O and U (CITED: Bott 1959); nothing connects it to hyperoperations.)
+
+==============================================================================
+SUMMARY TABLE
+==============================================================================
+  | 1 core identity T((A+1)(B+1)-1)-T(AB-1)=T(A)+T(B)+Shear    | FALSE / TRUE-with-repair       | A=B=1: 6 vs 2; repair: shift both arguments by -1 (P1 iii)
+  | 1 horizontal/vertical flows                                | TRUE-with-repair               | S=AB(A+B)+C(A,2)+C(B,2)=paste's RHS, not its LHS (P1 iv)
+  | 1 'shear = swept volume', 'conservation law'               | SCOPE                          | true shear AB(A+B+2)=2A T(B)+2B T(A); no volume defined
+  | 2 tetrahedral law                                          | TRUE                           | Vandermonde split (2,1) (P2)
+  | 2 pentatope law                                            | TRUE                           | Vandermonde split (2,2) (P2)
+  | 2 'prisms locking against a plate'                         | SCOPE                          | a set-partition count; no shear
+  | 3 AgB=AB*(AgB)                                             | FALSE                          | forces AgB=0 unless AB=1
+  | 3 AgB=(AB)^(AB) and 1gB=B!                                 | FALSE                          | B=2: 4 vs 2; consistent reading A!B! (P3)
+  | 3 AgA=(A!)^2                                               | TRUE-with-repair               | holds for AgB=A!B! only
+  | 3 Pell / square-triangular mapping                         | SCOPE                          | no map found
+  | 4 free edges = T(n-2)                                      | TRUE                           | C(n,2)-(n-1)=C(n-1,2)
+  | 4 path edges carry 0 bits                                  | FALSE                          | code costs C(n,2)+log2(n!/2^(n-1)) bits; sum h = n! 2^T(n-2) (P4)
+  | 4 Wythoff diffraction / genus                              | SCOPE                          | no object
+  | 5 horizon lines                                            | SCOPE                          | definitions of diagonals
+  | 5 63 bottleneck                                            | TRUE-with-repair               | 63=2^6-1 is Bang's unique exception via 9=3^2 (P5)
+  | 5 341 bottleneck                                           | FALSE                          | 4^5-1 has primitive primes 11,31; Cipolla pseudoprime on the R-trunk (P6)
+  | 5 rational 3-cycle                                         | TRUE (content = THM-4139/4146) | 'horizon cancels translation': SCOPE (P7)
+  | 6 unified cycle, Bott, quasicrystal FT                     | SCOPE                          | mod-30 wheel only (P10)
+  | II peaks 1,26,80                                           | FALSE                          | peaks 8,26,80 (shortcut) / 16,52,160 (full) (P8)
+  | II peaks track (4k+1)^2                                    | FALSE                          | bases 1/3 mod 4 equally hit (46/47, 49/50 distinct); -1 excess = ladder a*3^k-1 (P8)
+  | II 196 = sum of first 12 primes                            | FALSE                          | sum = 197
+  | II 160 = 2^5*5 on trunk of 5                               | TRUE                           | 160 is 23's full-map peak; unrelated to 169
+  | II 3^L n + B_L < 2^K n                                     | TRUE (inherited)               | descent certificate; obligation OPEN (P9)
+  | II 'peaks bound by area of squares' proves descent         | FALSE                          | 2^k-1 climbs to 3^k-1; no proof (P8,P9)
+
+FAILS: 0
+ALL CHECKS PASSED

@@ -1,0 +1,540 @@
+
+==============================================================================
+S0  Definitions, universe, inheritance
+==============================================================================
+G(m) = (2^k m - 1)/3, k minimal with 2^k m in {4,7} mod 9; domain: 3 not | m.
+k-table (depends only on m mod 9): {1: 2, 2: 1, 4: 0, 5: 3, 7: 0, 8: 1}
+Inheritance: 05-knowledge/results/collatz_mod6_20260917_extended_collatz_scc.out (S2, S4, S6, S7),
+             05-knowledge/results/arithmetic_braids_20260917_{collatz,summand,divisors}.md
+Firsthand facts F1-F4 of the session lead are verified where touched, never re-derived silently.
+PROVED (S0.1): 3G(m)+1 = 2^k m, so G-orbit reversed is an E-path 1 -> ... -> m (checked samples).
+PROVED (S0.2): G(1)=1 (k=2) is a fixed point; 3 never divides G(m) by the exclusion 2^k m != 1 mod 9.
+
+==============================================================================
+S1  Exact transfer law at every 3-adic level; Markov structure of the residue chain
+==============================================================================
+THEOREM S1.1 (PROVED).  (a) k(m) depends only on m mod 9 (the defining congruence is mod 9).
+(b) Let J>=2 and let a be a unit class mod 3^J.  Its three lifts a+t*3^J (t=0,1,2) mod 3^(J+1)
+    all have the same k (J+1>=2 so the lift determines m mod 9), and
+        G(a + t 3^J) = (2^k a - 1)/3 + t 2^k 3^(J-1)  ==  G(a) + t 2^k 3^(J-1)   (mod 3^J).
+    Since 2^k is a unit mod 3, t -> t 2^k is a bijection of Z/3, so the three lifts of a map
+    BIJECTIVELY onto the three lifts (mod 3^J) of the class G(a) mod 3^(J-1).  In particular
+    G(m) mod 3^J is a function of m mod 3^(J+1), and G maps every cylinder a+3^(J+1)Z_3 (J>=1)
+    affinely and bijectively onto the cylinder G(a)+3^J Z_3, scaling the 3-adic metric by 3.
+(c) Consequently, for m Haar-distributed on Z_3^x (or on any class mod 3^J, J>=1), the residue
+    sequence X_n = G^n(m) mod 3^J is a MARKOV CHAIN with kernel
+        P_J(a,b) = 1/3  if  b = G(a) mod 3^(J-1)  (three such unit classes b mod 3^J),  else 0.
+    Proof of the Markov property: the history event {X_0=a_0,...,X_n=a_n} is a disjoint union of
+    classes D mod 3^(J+n); by (b) iterated n times (all intermediate moduli are >= 3^(J+1) >= 9),
+    G^n maps each D affinely onto the full class a_n + 3^J Z_3, pushing Haar|_D to a multiple of
+    Haar on that class.  Hence conditionally on the history G^n(m) is Haar on a_n+3^J Z_3, its
+    extra digit mod 3^(J+1) is uniform, and by (b) X_(n+1) is uniform on the three lifts of
+    G(a_n) mod 3^(J-1).  (For J=1 the target 'mod 3^0' is trivial: P_1(a,1)=2/3, P_1(a,2)=1/3
+    because the three lifts of any class mod 3 to mod 9 have G-residues mod 3 equal to 1,1,2.)
+(d) Level J=2 is exactly F1: from {1,2,4,5} the next residue is uniform on {1,4,7}
+    (G(a) = 1 mod 3), from {7,8} uniform on {2,5,8} (G(a) = 2 mod 3).
+  J=1: both unit classes mod 3: the three lifts mod 9 have NON-constant k ((2,0,0) resp. (1,3,1)) and images (1,1,2) mod 3 -> P_1 = [[2/3,1/3],[2/3,1/3]]  [checked]
+  J=2: all 6 unit classes mod 3^2: three lifts (same k) map bijectively onto the three lifts of G(a) mod 3^1  [checked]
+  J=3: all 18 unit classes mod 3^3: three lifts (same k) map bijectively onto the three lifts of G(a) mod 3^2  [checked]
+  J=4: all 54 unit classes mod 3^4: three lifts (same k) map bijectively onto the three lifts of G(a) mod 3^3  [checked]
+  J=5: all 162 unit classes mod 3^5: three lifts (same k) map bijectively onto the three lifts of G(a) mod 3^4  [checked]
+  J=6: all 486 unit classes mod 3^6: three lifts (same k) map bijectively onto the three lifts of G(a) mod 3^5  [checked]
+  J=7: all 1458 unit classes mod 3^7: three lifts (same k) map bijectively onto the three lifts of G(a) mod 3^6  [checked]
+  sharpness J=1: witness (a, a+3^J, G mod 3^J) = (1, 1, 7, 1, 2)
+  sharpness J=2: witness (a, a+3^J, G mod 3^J) = (2, 1, 10, 1, 4)
+  sharpness J=3: witness (a, a+3^J, G mod 3^J) = (3, 1, 28, 1, 10)
+  sharpness J=4: witness (a, a+3^J, G mod 3^J) = (4, 1, 82, 1, 28)
+FINITE-EXACT (S1.2): transfer law (b) verified for all unit classes at levels J=1..7; modulus 3^(J+1) is sharp.
+  P_2 (mod 9) rows:
+    1 -> {1: Fraction(1, 3), 4: Fraction(1, 3), 7: Fraction(1, 3)}
+    2 -> {1: Fraction(1, 3), 4: Fraction(1, 3), 7: Fraction(1, 3)}
+    4 -> {1: Fraction(1, 3), 4: Fraction(1, 3), 7: Fraction(1, 3)}
+    5 -> {1: Fraction(1, 3), 4: Fraction(1, 3), 7: Fraction(1, 3)}
+    7 -> {2: Fraction(1, 3), 5: Fraction(1, 3), 8: Fraction(1, 3)}
+    8 -> {2: Fraction(1, 3), 5: Fraction(1, 3), 8: Fraction(1, 3)}
+THEOREM S1.3 (PROVED).  Symbolic conjugacy and entropy.
+Let A be the 6x6 0/1 matrix on the unit residues mod 9 with A(a,b)=1 iff b = G(a) (mod 3), i.e.
+rows {1,2,4,5} -> columns {1,4,7}, rows {7,8} -> columns {2,5,8}; let Sigma_A be the one-sided SFT.
+(i)  The residue coding Phi(m) = (G^n(m) mod 9)_(n>=0) is a homeomorphism Z_3^x -> Sigma_A with
+     Phi o G = shift o Phi.  Proof: continuity and shift-equivariance are immediate; injectivity:
+     by induction the block (X_0..X_(J-1)) determines m mod 3^(J+1): true for J=1; if m mod 3^(J+1)
+     and G(m) mod 3^(J+1) are known, the level-(J+1) transfer law S1.1(b) (three lifts of m mod 3^(J+1)
+     have three DISTINCT images mod 3^(J+1)) pins m mod 3^(J+2).  Surjectivity: the admissible blocks
+     of length J number 6*3^(J-1) = 2*3^J = the number of unit classes mod 3^(J+1), so the injective
+     block map is a bijection at every length, and compactness gives every infinite path.
+(ii) The k-word (k_1 k_2 ...) is a 2-block recoding of Phi: k_n determines X_(n-1) except for the
+     pairs {4,7} (k=0) and {2,8} (k=1), and k_(n+1) in {0,2} <=> X_n in {1,2,4,5} resolves the pair.
+     Hence the k-word map Z_3^x -> {0,1,2,3}^N is injective (a homeomorphism onto a proper SFT), and
+     the number of admissible k-words of length J is 4*3^(J-1) (< 2*3^J: a J-letter word determines
+     m only mod 3^(J+1) up to the last pair, a (J+1)-letter word determines m mod 3^(J+1) exactly).
+(iii) Entropy.  A has constant row sum 3, so its Perron eigenvalue is 3 and h_top(Sigma_A) = log 3;
+     the Parry (maximal-entropy) measure has kernel A/3 = P_2 and stationary law = the left Perron
+     vector (2,1,2,1,2,1)/9 = pi_2 = mu at level 2 (S2).  At every level J the same holds (P_J = A_J/3,
+     left vector pi_J), so mu is the measure of maximal entropy of G and h_mu(G) = h_top(G) = log 3.
+     (The k-word shift is conjugate to Sigma_A, hence also of entropy log 3: 4*3^(J-1) words.)
+[CITED for the Parry-measure facts: Lind-Marcus, Symbolic Dynamics and Coding, Thm 4.4.4 / Sec. 13.3.]
+  J=1: residue blocks <-> unit classes mod 3^2 bijective (6); k-words of length 1: 4 = 4*3^0; (J+1)-word pins m mod 3^2  [checked]
+  J=2: residue blocks <-> unit classes mod 3^3 bijective (18); k-words of length 2: 12 = 4*3^1; (J+1)-word pins m mod 3^3  [checked]
+  J=3: residue blocks <-> unit classes mod 3^4 bijective (54); k-words of length 3: 36 = 4*3^2; (J+1)-word pins m mod 3^4  [checked]
+  J=4: residue blocks <-> unit classes mod 3^5 bijective (162); k-words of length 4: 108 = 4*3^3; (J+1)-word pins m mod 3^5  [checked]
+  J=5: residue blocks <-> unit classes mod 3^6 bijective (486); k-words of length 5: 324 = 4*3^4; (J+1)-word pins m mod 3^6  [checked]
+  J=6: residue blocks <-> unit classes mod 3^7 bijective (1458); k-words of length 6: 972 = 4*3^5; (J+1)-word pins m mod 3^7  [checked]
+  J=7: residue blocks <-> unit classes mod 3^8 bijective (4374); k-words of length 7: 2916 = 4*3^6; (J+1)-word pins m mod 3^8  [checked]
+  A = [[1, 0, 1, 0, 1, 0], [1, 0, 1, 0, 1, 0], [1, 0, 1, 0, 1, 0], [1, 0, 1, 0, 1, 0], [0, 1, 0, 1, 0, 1], [0, 1, 0, 1, 0, 1]]
+  Perron eigenvalue 3 (row sums), left vector (2,1,2,1,2,1)/9 = pi_2; h_top = h_mu = log 3 = 1.098612  [checked]
+PROVED (S1.4): (Z_3^x, G) is conjugate to the 6-state SFT Sigma_A; the k-word is an injective 2-block recoding;
+  entropy log 3 with mu the Parry measure.  FINITE-EXACT: coding bijections verified for J<=7.
+
+==============================================================================
+S2  Invariant measure, stationary law, ergodicity, exact drift
+==============================================================================
+THEOREM S2.1 (PROVED).  Let w(1)=4/3, w(2)=2/3 and mu = w(m mod 3) * Haar on Z_3^x (Haar normalized
+to mass 1 on the units, so each unit class mod 3^(J+1) has Haar mass 1/(2*3^J)).  Then mu is G-invariant.
+Proof.  It suffices to check cylinders B = b + 3^J Z_3, J>=1, b a unit.  Preimage classes a mod 3^(J+1)
+with G(a) = b mod 3^J satisfy 2^k a = 3b+1 mod 3^(J+1) for k = k(a), i.e. a = 2^(-k)(3b+1) mod 3^(J+1):
+at most one class per k, valid iff k(a)=k.  With 3b+1 = 4 mod 9 (b = 1 mod 3): the candidates
+a = 4*2^(-k) mod 9 are 4,2,1,5 for k=0,1,2,3 and each has k(a)=k (k>=4 never occurs: k(a)<=3), so
+mu(G^-1 B) = [w(1)+w(2)+w(1)+w(2)]/(2*3^J) = 4/(2*3^J) = (4/3)*3/(2*3^J) = mu(B).
+With 3b+1 = 7 mod 9 (b = 2 mod 3): candidates 7,8,4,2 for k=0,1,2,3, valid only for k=0 (a=7) and
+k=1 (a=8), so mu(G^-1 B) = [w(1)+w(2)]/(2*3^J) = 2/(2*3^J) = (2/3)*3/(2*3^J) = mu(B).   QED
+Equivalently w is the Perron left eigenvector of the branch matrix [[2,1],[2,1]] (class 1 mod 3 has
+three lifts mod 9 going to classes 1,1,2 mod 3; so does class 2): (w1,w2)[[2,1],[2,1]] = 3 (w1,w2)
+gives w1 = 2 w2.  G is a 6-branch piecewise-affine 3-adic expanding map, 4-to-1 over 1+3Z_3 and
+2-to-1 over 2+3Z_3.
+  J=1: sum_{a mod 3^2 : G(a)=b mod 3^1} w(a) = 3 w(b) for all 2 unit classes b  [checked]
+  J=2: sum_{a mod 3^3 : G(a)=b mod 3^2} w(a) = 3 w(b) for all 6 unit classes b  [checked]
+  J=3: sum_{a mod 3^4 : G(a)=b mod 3^3} w(a) = 3 w(b) for all 18 unit classes b  [checked]
+  J=4: sum_{a mod 3^5 : G(a)=b mod 3^4} w(a) = 3 w(b) for all 54 unit classes b  [checked]
+  J=5: sum_{a mod 3^6 : G(a)=b mod 3^5} w(a) = 3 w(b) for all 162 unit classes b  [checked]
+  J=6: sum_{a mod 3^7 : G(a)=b mod 3^6} w(a) = 3 w(b) for all 486 unit classes b  [checked]
+  J=7: sum_{a mod 3^8 : G(a)=b mod 3^7} w(a) = 3 w(b) for all 1458 unit classes b  [checked]
+FINITE-EXACT (S2.2): mu-invariance verified on all cylinders of level J<=7.
+THEOREM S2.3 (PROVED).  Stationary law and ergodicity at every level.
+(i)  pi_J(b) := mu(b+3^J Z_3) = w(b mod 3)/(2*3^(J-1)) is P_J-invariant (this is S2.1 read at level J).
+     At J=2: pi_2 = 2/9 on each of 1,4,7 and 1/9 on each of 2,5,8  (= F1).
+(ii) Support of P_J^n(a,.) for n < J is EXACTLY the set of 3^n unit classes c = G^n(a) mod 3^(J-n)
+     (induction on n with (b): one step from the class of x mod 3^(J-n) fills the class of G(x) mod 3^(J-n-1)).
+     For n >= J every entry of P_J^n is positive: after J-1 steps a full class mod 3 is reached, and
+     the three sub-classes mod 9 of a class mod 3 have G-images covering both classes mod 3 at every
+     depth (G maps each class mod 9 onto a full class mod 3).  So P_J is primitive, hence irreducible
+     and aperiodic, with unique stationary law pi_J, for every J>=1.
+(iii) Drift: E_pi[k] = 2*(2/9) + 1*(1/9) + 0 + 3*(1/9) + 0 + 1*(1/9) = 1, so
+     E_mu[log(2^k/3)] = log 2 - log 3 = log(2/3) = -0.405465.
+     The uniform-residue average would give E[k] = 7/6 and the WRONG drift (7/6)log2 - log3 = -0.2899.
+(iv) Equivalent phrasing on E-arrows: one G-step reverses one 3n+1 arrow and k halvings; at
+     stationarity halvings and triplings are used in ratio 1:1 (forward Collatz uses 2:1).
+  E_pi[k] = 1 (exact);  uniform-residue E[k] = 7/6;  drift log(2/3) = -0.405465;  naive -0.289941
+  J=1: supp P_J^n(a,.) = {c = G^n(a) mod 3^(J-n)} for n<J and = all 2 classes for n=J  [checked all a]
+  J=2: supp P_J^n(a,.) = {c = G^n(a) mod 3^(J-n)} for n<J and = all 6 classes for n=J  [checked all a]
+  J=3: supp P_J^n(a,.) = {c = G^n(a) mod 3^(J-n)} for n<J and = all 18 classes for n=J  [checked all a]
+  J=4: supp P_J^n(a,.) = {c = G^n(a) mod 3^(J-n)} for n<J and = all 54 classes for n=J  [checked all a]
+  J=5: supp P_J^n(a,.) = {c = G^n(a) mod 3^(J-n)} for n<J and = all 162 classes for n=J  [checked all a]
+  J=6: supp P_J^n(a,.) = {c = G^n(a) mod 3^(J-n)} for n<J and = all 486 classes for n=J  [checked all a]
+  J=7: supp P_J^n(a,.) = {c = G^n(a) mod 3^(J-n)} for n<J and = all 1458 classes for n=J  [checked all a]
+FINITE-EXACT (S2.4): primitivity with exact support law verified at levels J<=7.
+
+==============================================================================
+S3  Terras-type theorem for the greedy 3-adic stopping time; exact d_J for J<=12
+==============================================================================
+Notation.  Word k_1 k_2 ... of m; K_i = k_1+...+k_i;  G^i(m) = (2^(K_i) m - B_i)/3^i with
+    B_i = sum_{s=1}^{i} 3^(s-1) 2^(K_i - K_s)  > 0   (PROVED by induction: G^(i+1) = (2^(k_(i+1)) G^i - 1)/3).
+sigma(m)     := min{i>=1 : G^i(m) < m}           (real stopping time; sigma(1) = infinity),
+sigma_res(m) := min{i>=1 : 2^(K_i) < 3^i}        (residue stopping time).
+
+THEOREM S3.1 (PROVED).
+(a) sigma(m) <= sigma_res(m) for every m>=2: if 2^(K_i) < 3^i then G^i(m) < 2^(K_i) m / 3^i < m.
+(b) If sigma(m) = i < sigma_res(m) then m (2^(K_i) - 3^i) < B_i with 2^(K_i) - 3^i >= 1, hence m < B_i.
+    Since the word of length J is a function of m mod 3^(J+1) (S1.1b) and there are finitely many words
+    of length J, sup{B_i : i<=J} =: C_J < infinity, and {m : sigma(m)<=J} and {m : sigma_res(m)<=J}
+    differ only inside [1, C_J].  Thus sigma(m)<=J is decided by m mod 3^(J+1) for all m > C_J,
+    and the two sets have the same natural density.
+(c) {m : 3 not| m, sigma_res(m) <= J} is a union of unit classes mod 3^(J+1); the natural density of a
+    unit class mod 3^(J+1) relative to the non-multiples of 3 is 1/(2*3^J) = its normalized Haar mass.
+    Hence d_J := dens{sigma<=J} = dens{sigma_res<=J} = Haar{sigma_res<=J} = (#good classes)/(2*3^J).
+(d) d_J -> 1.  Route 1 (elementary, with rate; inherited from the wave-one lane S4.5): under Haar the
+    class-mod-3 chain with weights E[2^k | class] gives the tilted matrix M = [[5/3,1/3],[10/3,2/3]]
+    (rank 1, eigenvalue 7/3), so E_Haar[2^(K_J)] = 3 (7/3)^(J-1) and by Markov's inequality
+    1 - d_J <= P(2^(K_J) >= 3^J) <= (7/9)^(J-1).
+    Route 2 (ergodic): P_2 is primitive (S2.3), so the strong law for ergodic finite Markov chains
+    [CITED: Norris, Markov Chains, Thm 1.10.2] gives K_n/n -> E_pi[k] = 1 for mu-a.e. m; since
+    2/3 <= dmu/dHaar <= 4/3, the same holds Haar-a.e., so 2^(K_n) < 3^n eventually, i.e. sigma_res < infinity
+    Haar-a.e.; d_J = Haar{sigma_res<=J} increases to Haar{sigma_res<infinity} = 1.  Route 2 uses
+    the cited LLN; Route 1 is complete and elementary.  No step is OPEN.
+(e) OPEN (as for Collatz): stopping time -> convergence to 1 needs 'no positive G-cycle except {1}
+    and no divergent positive G-orbit'; FINITE-EXACT to 10^6 (wave one) and to 10^7 here (S5).
+
+  J | #unit classes mod 3^(J+1) | d_J exact | float | 1-d_J | (7/9)^(J-1) | bound holds | g_J=P(2^K_J<3^J) | wave-one f_J
+   1 |        6 | 2/3 | 0.666667 | 1/3 | 1.000000 | True | 2/3 | 2/3
+   2 |       18 | 8/9 | 0.888889 | 1/9 | 0.777778 | True | 5/6 | 8/9
+   3 |       54 | 25/27 | 0.925926 | 2/27 | 0.604938 | True | 43/54 | 25/27
+   4 |      162 | 26/27 | 0.962963 | 1/27 | 0.470508 | True | 73/81 | 26/27
+   5 |      486 | 236/243 | 0.971193 | 7/243 | 0.365950 | True | 214/243 | 236/243
+   6 |     1458 | 239/243 | 0.983539 | 4/243 | 0.284628 | True | 686/729 | 239/243
+   7 |     4374 | 241/243 | 0.991770 | 2/243 | 0.221377 | True | 2126/2187 | 241/243
+   8 |    13122 | 2173/2187 | 0.993599 | 14/2187 | 0.172182 | True | 12647/13122 | 2173/2187
+   9 |    39366 | 19609/19683 | 0.996240 | 74/19683 | 0.133920 | True | 19339/19683 | 19609/19683
+  10 |   118098 | 58868/59049 | 0.996935 | 181/59049 | 0.104160 | True | 6413/6561 | 58868/59049
+  11 |   354294 | 176809/177147 | 0.998092 | 338/177147 | 0.081013 | True | 58396/59049 | (new)
+  12 |  1062882 | 530885/531441 | 0.998954 | 556/531441 | 0.063010 | True | 1057277/1062882 | (new)
+FINITE-EXACT (S3.2): d_J for J<=12 (J=11,12 new; J<=10 equal to the wave-one f_J), monotone, 1-d_J <= (7/9)^(J-1).  time 0.1s
+
+  m<=10^6, 3 not|m, m>1: max sigma = 31 (at m=128669), max sigma_res = 31 (at m=128669)
+  #{m : sigma(m) != sigma_res(m)} = 0;  witnesses (m, sigma, sigma_res): []
+  every mismatch has sigma < sigma_res and m < B_sigma (S3.1b)  [checked];  time 0.1s
+FINITE-EXACT (S3.3): the exceptional set {sigma != sigma_res} inside [1,10^6] is as listed; empty means d_J is exact on this range.
+
+  Collatz T(n) = n/2 (even), (3n+1)/2 (odd); Terras residue stopping time: first i with 3^(a_i) < 2^i
+  J | Terras density F(J) (exact, residues mod 2^J) | float | greedy 3-adic d_J
+   1 | 1/2 | 0.500000 | 2/3 = 0.666667
+   2 | 3/4 | 0.750000 | 8/9 = 0.888889
+   3 | 3/4 | 0.750000 | 25/27 = 0.925926
+   4 | 13/16 | 0.812500 | 26/27 = 0.962963
+   5 | 7/8 | 0.875000 | 236/243 = 0.971193
+   6 | 7/8 | 0.875000 | 239/243 = 0.983539
+   7 | 115/128 | 0.898438 | 241/243 = 0.991770
+   8 | 237/256 | 0.925781 | 2173/2187 = 0.993599
+   9 | 237/256 | 0.925781 | 19609/19683 = 0.996240
+  10 | 15/16 | 0.937500 | 58868/59049 = 0.996935
+  11 | 15/16 | 0.937500 | 176809/177147 = 0.998092
+  12 | 1935/2048 | 0.944824 | 530885/531441 = 0.998954
+  13 | 7825/8192 | 0.955200 | -
+  14 | 7825/8192 | 0.955200 | -
+  15 | 31473/32768 | 0.960480 | -
+  16 | 31711/32768 | 0.967743 | -
+  17 | 31711/32768 | 0.967743 | -
+  18 | 254649/262144 | 0.971409 | -
+  19 | 254649/262144 | 0.971409 | -
+  20 | 15957/16384 | 0.973938 | -
+FINITE-EXACT (S3.4): Terras densities to J=20 (Terras 1976 theorem F(J)->1 is CITED; values computed here).
+  Comparison: the 3-adic greedy stopping set reaches 0.99 by J=7 and 0.9990 by J=12, the 2-adic Collatz
+  one is only 0.9448 at J=12 and 0.9739 at J=20: drift log(2/3)=-0.405 per G-step vs (1/2)log(3/4)=-0.144 per T-step;
+  and the 3-adic carry B_i>0 HELPS descent (sigma<=sigma_res), whereas the 2-adic carry hinders it.  time 0.1s
+THEOREM S3.5 (PROVED).  Exact exponential moments for EVERY tilt; the sharp Chernoff exponent.
+Let u = e^theta > 0 and lump the level-2 chain to the class c_n = G^n(m) mod 3 in {1,2}.  Given c_n, the
+residue X_n is uniform on the three residues of its class (S1.1c), and the pairs (k(X_n), c_(n+1)) are
+   class 1: (2,1),(0,1),(0,2)        class 2: (1,1),(3,1),(1,2)   [= class 1 shifted by one halving].
+So the tilted matrix M_u(c,c') = E[u^k ; c_(n+1)=c' | c_n=c] is
+   M_u = (1/3) [[u^2+1, 1], [u+u^3, u]] = v w^T,  v=(1,u), w=((u^2+1)/3, 1/3),
+of rank ONE for every u, with eigenvalue rho(u) = w.v = (u^2+u+1)/3.  With X_0 Haar (c_0 = 1,2 each 1/2):
+   E_Haar[u^(K_J)] = (1/2,1/2) M_u^J (1,1)^T = (u+1)(u^2+2)/6 * ((u^2+u+1)/3)^(J-1)      (exact, all J>=1).
+u=2 gives 3*(7/3)^(J-1), the wave-one identity (its 'initial vector' (5/2,1/2) = (1/2,1/2)M_2).
+Consequences.  (a) Lambda(theta) := lim (1/J) log E[e^(theta K_J)] = log((u^2+u+1)/3) exactly, so by the
+Gartner-Ellis theorem / the LDP for additive functionals of a finite irreducible chain
+[CITED: Dembo-Zeitouni, Large Deviations Techniques and Applications, Sec. 3.1 and Thm 2.3.6]
+P(K_J >= cJ) = exp(-J I(c) + o(J)) with I(c) = sup_theta (theta c - Lambda(theta)), c > Lambda'(0) = 1.
+(b) The residue-stopping tail is exactly this event at c = log_2 3: 1 - g_J = P(2^(K_J) >= 3^J).
+The wave-one bound (7/9)^(J-1) is Chernoff at u = 2 (per-step factor rho(2)/3 = 7/9); it is valid but not
+sharp: the optimizer solves Lambda'(theta) = c, i.e. u(2u+1)/(u^2+u+1) = log_2 3, while at u=2 the slope is
+10/7 = 1.4286 < 1.5850.  The sharp per-step factor is exp(-I(log_2 3)) = rho(u*)/u*^(log_2 3) (below).
+(c) Since {sigma_res <= J} contains {2^(K_i) < 3^i for i=J} , 1 - d_J <= 1 - g_J and the prefix tail decays
+at least at the sharp rate; the observed ratios (1-d_(J+1))/(1-d_J) for J<=12 are printed for comparison.
+  u=2: E_Haar[u^K_J] = 3 * (7/3)^(J-1) verified by enumeration at J in {1,2,3,5,8}; det M_u = 0, rho = 7/3
+  u=3: E_Haar[u^K_J] = 22/3 * (13/3)^(J-1) verified by enumeration at J in {1,2,3,5,8}; det M_u = 0, rho = 13/3
+  u=5: E_Haar[u^K_J] = 27 * (31/3)^(J-1) verified by enumeration at J in {1,2,3,5,8}; det M_u = 0, rho = 31/3
+  u=7: E_Haar[u^K_J] = 68 * (19)^(J-1) verified by enumeration at J in {1,2,3,5,8}; det M_u = 0, rho = 19
+  c = log_2 3 = 1.584963;  Lambda'(log 2) = 10/7 = 1.4286;  u* = 2.782079;  rho(u*) = 3.840680;
+  sharp per-step factor exp(-I(c)) = rho(u*)/u*^c = 0.758751  vs wave-one Chernoff 7/9 = 0.777778  [checked u* minimizes]
+  observed (1-d_(J+1))/(1-d_J), J=1..11: ['0.333', '0.667', '0.500', '0.778', '0.571', '0.500', '0.778', '0.587', '0.815', '0.622', '0.548']
+  observed (1-g_(J+1))/(1-g_J), J=1..11: ['0.500', '1.222', '0.485', '1.208', '0.494', '0.473', '1.298', '0.483', '1.291', '0.490', '0.477']
+  geometric-mean ratio of 1-d_J over J=8..12: 0.6358 (finite-J, lattice effects; asymptotic rate is 0.7588)
+PROVED (S3.6): exact moment identity for every tilt (rank-one M_u), exact LD rate function I(c) = sup(theta c - log((u^2+u+1)/3));
+  the wave-one (7/9)^(J-1) is the u=2 Chernoff bound, valid but not the sharp exponent (0.7588).
+THEOREM S3.7 (PROVED per level).  Exact threshold for sigma = sigma_res.  Fix i>=1 and a word w of length i
+realized by a unit class a mod 3^(i+1), with 2^(K_i) > 3^i.  On that class G^i is the affine map
+m -> (2^(K_i) m - B_i)/3^i, so G^i(m) < m  iff  m < m*(w) := B_i/(2^(K_i) - 3^i).  Hence a mismatch
+sigma(m) = i < sigma_res(m) forces (1) m < m*(w), m in the class a, and (2) no earlier descent: G^l(m) >= m for
+all l < i (then G^i(m) < m automatically, so sigma(m) = i, and 2^(K_i) > 3^i gives sigma_res(m) > i).  Both
+conditions are decidable by finite enumeration: the candidates m < m*(w) in each class are finitely many
+(m* <= 145 for i <= 12).  If no candidate other than m = 1 (word 2^i, m* = 1 exactly) survives (2), then
+sigma(m) = sigma_res(m) for every m >= 2 with sigma(m) <= 12, and d_J is the EXACT natural density of
+{sigma <= J} with no exceptional set for J <= 12.  Condition (1) alone is NOT sufficient (candidates that
+already descended earlier are listed below); the table gives both counts.
+  i= 1: classes with 2^K>3^i:      2; max m*(w) = 1 = 1.0000 at (a=1,K=2,B=1); candidates m>=2 below m*:   0; true mismatches: 0
+  i= 2: classes with 2^K>3^i:      3; max m*(w) = 11/7 = 1.5714 at (a=8,K=4,B=11); candidates m>=2 below m*:   0; true mismatches: 0
+  i= 3: classes with 2^K>3^i:     11; max m*(w) = 53/5 = 10.6000 at (a=43,K=5,B=53); candidates m>=2 below m*:   1; true mismatches: 0
+  i= 4: classes with 2^K>3^i:     16; max m*(w) = 239/47 = 5.0851 at (a=124,K=7,B=239); candidates m>=2 below m*:   1; true mismatches: 0
+  i= 5: classes with 2^K>3^i:     58; max m*(w) = 973/13 = 74.8462 at (a=187,K=8,B=973); candidates m>=2 below m*:   3; true mismatches: 0
+  i= 6: classes with 2^K>3^i:     86; max m*(w) = 827/59 = 14.0169 at (a=1645,K=10,B=4135); candidates m>=2 below m*:   2; true mismatches: 0
+  i= 7: classes with 2^K>3^i:    122; max m*(w) = 17269/1909 = 9.0461 at (a=1645,K=12,B=17269); candidates m>=2 below m*:   2; true mismatches: 0
+  i= 8: classes with 2^K>3^i:    475; max m*(w) = 63071/1631 = 38.6701 at (a=9850,K=13,B=63071); candidates m>=2 below m*:   4; true mismatches: 0
+  i= 9: classes with 2^K>3^i:    688; max m*(w) = 51769/2617 = 19.7818 at (a=29533,K=15,B=258845); candidates m>=2 below m*:   4; true mismatches: 0
+  i=10: classes with 2^K>3^i:   2664; max m*(w) = 940375/6487 = 144.9630 at (a=44302,K=16,B=940375); candidates m>=2 below m*:   8; true mismatches: 0
+  i=11: classes with 2^K>3^i:   3918; max m*(w) = 3820549/84997 = 44.9492 at (a=398596,K=18,B=3820549); candidates m>=2 below m*:   8; true mismatches: 0
+  i=12: classes with 2^K>3^i:   5605; max m*(w) = 15459343/517135 = 29.8942 at (a=398596,K=20,B=15459343); candidates m>=2 below m*:   8; true mismatches: 0
+  candidates (level i, m, m*(w)) -- each descended at an earlier step: [(3, 2, 7.4), (4, 2, 3.723404255319149), (5, 2, 2.903345724907063), (5, 4, 60.07692307692308), (5, 14, 32.69230769230769), (6, 2, 2.552691432903715), (6, 4, 11.413559322033898), (7, 2, 2.364196502914238), (7, 4, 7.436877946568885), (8, 2, 2.250352959133056), (8, 4, 6.003766670060063), (8, 5, 21.0907418761496), (8, 7, 31.1361128142244), (9, 2, 2.176705060643331), (9, 4, 5.287789239526313), (9, 5, 11.016965991593427), (9, 7, 16.025448987390142), (10, 2, 2.126921861666799), (10, 4, 4.872237130406952), (10, 5, 8.27945239715091), (10, 7, 11.919178595726365), (10, 8, 71.71866810544165), (10, 10, 91.92400184985355), (10, 11, 102.0266687220595), (10, 13, 122.2320024664714), (11, 2, 2.0922638222296297), (11, 4, 4.609850027942609), (11, 5, 7.04121092005842), (11, 7, 10.06181638008763), (11, 8, 22.589091379695756), (11, 10, 28.75740320246597), (11, 11, 31.841559113851076), (11, 13, 38.00987093662129), (12, 2, 2.0676377376222246), (12, 4, 4.435266893683984), (12, 5, 6.35769883458697), (12, 7, 9.036548251880456), (12, 8, 15.193647693542305), (12, 10, 19.248975605982963), (12, 11, 21.276639562203293), (12, 13, 25.331967474643953)]
+PROVED (S3.8): sigma(m) = sigma_res(m) for all m >= 2 with sigma(m) <= 12 (exact threshold enumeration, 4.3s);
+  FINITE-EXACT (S3.3) extends this to all m <= 10^6 (where sigma_res <= 31).  OPEN: all m, all levels.
+
+==============================================================================
+S4  G_k for odd k, 3 not | k: E[j]=1 for every k; cycle gate; census |k|<=49; duality with T_k
+==============================================================================
+G_k(m) = (2^j m - k)/3, j>=0 minimal with 2^j m in {k+3, k+6} mod 9; domain: all m with 3 not| m.
+THEOREM S4.1 (PROVED).  For every k with 3 not| k: the transfer law S1.1 holds verbatim (the map on
+a class mod 9 is affine with unit slope 2^j/3 of 3-adic size 3), the invariant density is
+w = 4/3 on the class m = k mod 3 and 2/3 on the class m = -k mod 3, and E_pi[j] = 1.
+Proof.  Write T_1 = k+3 (result 1 mod 3), T_2 = k+6 (result 2 mod 3) and u = the discrete log with
+a = T_1 2^(-u) mod 9 (u in Z/6; 2 generates (Z/9)^x).  T_2/T_1 = (k+6)/(k+3) is 4 = 2^2 if k = 1 mod 3
+and 7 = 2^4 if k = 2 mod 3.  Case k = 1 mod 3: j(a) = min(u, u+2 mod 6): u=0..3 -> j=u, target T_1;
+u=4,5 -> j=0,1, target T_2; and a mod 3 = (k+3)(-1)^u = (-1)^u.  This is EXACTLY the k=1 table
+(u=0,1,2,3,4,5 <-> residues 4,2,1,5,7,8), so the chain, w and E[j]=1 are those of S2.  Case k = 2
+mod 3: G_(-k)(-m) = -G_k(m) conjugates to the case -k = 1 mod 3 and swaps the classes mod 3.  QED
+  k = 1 mod 9: j-table {1: 2, 2: 1, 4: 0, 5: 3, 7: 0, 8: 1}  w(1 mod 3)=4/3 w(2 mod 3)=2/3  E_pi[j]=1
+  k = 2 mod 9: j-table {1: 3, 2: 2, 4: 1, 5: 0, 7: 1, 8: 0}  w(1 mod 3)=2/3 w(2 mod 3)=4/3  E_pi[j]=1
+  k = 4 mod 9: j-table {1: 0, 2: 3, 4: 2, 5: 1, 7: 0, 8: 1}  w(1 mod 3)=4/3 w(2 mod 3)=2/3  E_pi[j]=1
+  k = 5 mod 9: j-table {1: 1, 2: 0, 4: 1, 5: 2, 7: 3, 8: 0}  w(1 mod 3)=2/3 w(2 mod 3)=4/3  E_pi[j]=1
+  k = 7 mod 9: j-table {1: 0, 2: 1, 4: 0, 5: 1, 7: 2, 8: 3}  w(1 mod 3)=4/3 w(2 mod 3)=2/3  E_pi[j]=1
+  k = 8 mod 9: j-table {1: 1, 2: 0, 4: 3, 5: 0, 7: 1, 8: 2}  w(1 mod 3)=2/3 w(2 mod 3)=4/3  E_pi[j]=1
+FINITE-EXACT+PROVED (S4.2): all six k mod 9 have stationary E[j]=1, drift log(2/3), j-multiset {0,0,1,1,2,3}.
+THEOREM S4.3 (PROVED, cycle gate).  If m_0 -> m_1 -> ... -> m_L = m_0 is a G_k-cycle with word
+(j_1..j_L), J = sum j_i, J_i = j_1+..+j_i, then
+    m_0 (2^J - 3^L) = k B',   B' = sum_{i=1}^{L} 3^(i-1) 2^(J - J_i)  =  B(j_L, ..., j_1),
+where B(w) = sum_{i=0}^{L-1} 3^(L-1-i) 2^(K_i) is the inherited T_k gate polynomial
+(T_k cycle: n_0 (2^K - 3^L) = k B(k_1..k_L), arithmetic_braids_20260917_collatz.md / F3).
+So the two gates coincide up to REVERSING the word.  Consequences (PROVED):
+ (i) sign(m_0) = sign(k) * sign(2^J - 3^L): G_k-cycles with 2^J < 3^L (the typical, drift-side words)
+     have sign -sign(k); cycles with sign(k) need the atypical 2^J > 3^L.
+ (ii) A G_k-cycle is (reversed) a T_k-cycle iff all its elements are odd (then j_i = v_2(3 m_i + k)).
+     A T_k-cycle is (reversed) a G_k-cycle iff every exponent is the greedy minimum for its node.
+ (iii) G_(-k)(-m) = -G_k(m) and T_(-k)(-n) = -T_k(n): cycle sets of k and -k are negatives.
+There is NO word-level bijection between G_k-cycles and T_k- or T_(-k)-cycles: the census below has
+different counts, and the two maps read different digit expansions (3-adic vs 2-adic).
+  census time 7.1s
+
+  k | #G_k cycles (|m|<=1e5, both signs) | #T_k cycles (odd |n|<=2e5, both signs) | #common (as sets) | G_k cycle minima (by |.|) | T_k cycle minima
+  -49 |  8 |  7 | 2 | [28, 43, -49, 49, 52, 59, 61, 196] | [-25, -35, -49, 49, 65, 245, 833]
+  -47 |  6 | 11 | 2 | [25, 29, -47, 47, -64, 188] | [-5, -25, -47, 47, -65, -73, -85, -89, -101, 235, 799]
+  -43 |  5 |  5 | 2 | [22, -43, 43, 64, 172] | [-1, -43, 43, 215, 731]
+  -41 |  6 |  5 | 2 | [23, 26, -41, 41, 101, 164] | [-1, -41, 41, 205, 697]
+  -37 |  4 |  7 | 2 | [28, -37, 37, 148] | [-19, -23, -29, -37, 37, 185, 629]
+  -35 |  7 | 12 | 2 | [19, 20, 28, -35, 35, -112, 140] | [-7, -13, -17, -25, -35, 35, -133, -161, 175, 595, -1309, -2429]
+  -31 |  4 |  6 | 2 | [16, -31, 31, 124] | [-13, -31, 31, 95, 155, 527]
+  -29 |  4 |  9 | 2 | [20, -29, 29, 116] | [-1, -11, -29, 29, 109, 145, 493, -3811, -7055]
+  -25 |  7 | 12 | 2 | [13, 19, 20, -25, 25, -80, 100] | [-5, -7, -17, -25, 25, -95, 113, -115, 125, 425, -935, -1735]
+  -23 |  8 | 15 | 2 | [13, 14, -23, 23, 29, 92, 2621, 3620] | [-5, -7, -23, 23, -41, 115, 391, 2263, 2359, 2743, 2963, 3091, 3415, 3743, 4819]
+  -19 |  6 |  6 | 2 | [13, 16, -19, 19, 76, 85] | [-5, -19, 19, 95, 115, 323]
+  -17 |  6 |  8 | 2 | [10, -17, 17, 59, 64, 68] | [-1, -17, 17, -23, 65, 73, 85, 289]
+  -13 |  7 | 13 | 2 | [7, -13, 13, 52, -209, -236, -256] | [-1, -13, 13, 65, -131, -211, 221, -227, -251, -259, -283, -287, -319]
+  -11 |  5 |  7 | 2 | [-11, 11, 16, 17, 44] | [-1, -11, 11, -13, 19, 55, 187]
+   -7 |  4 |  5 | 2 | [4, -7, 7, 28] | [-5, -7, 7, 35, 119]
+   -5 |  5 |  9 | 2 | [4, -5, 5, -16, 20] | [-1, -5, 5, -19, -23, 25, 85, -187, -347]
+   -1 |  3 |  4 | 2 | [-1, 1, 4] | [-1, 1, 5, 17]
+    1 |  3 |  4 | 2 | [-1, 1, -4] | [-1, 1, -5, -17]
+    5 |  5 |  9 | 2 | [-4, -5, 5, 16, -20] | [1, -5, 5, 19, 23, -25, -85, 187, 347]
+    7 |  4 |  5 | 2 | [-4, -7, 7, -28] | [5, -7, 7, -35, -119]
+   11 |  5 |  7 | 2 | [-11, 11, -16, -17, -44] | [1, -11, 11, 13, -19, -55, -187]
+   13 |  7 | 13 | 2 | [-7, -13, 13, -52, 209, 236, 256] | [1, -13, 13, -65, 131, 211, -221, 227, 251, 259, 283, 287, 319]
+   17 |  6 |  8 | 2 | [-10, -17, 17, -59, -64, -68] | [1, -17, 17, 23, -65, -73, -85, -289]
+   19 |  6 |  6 | 2 | [-13, -16, -19, 19, -76, -85] | [5, -19, 19, -95, -115, -323]
+   23 |  8 | 15 | 2 | [-13, -14, -23, 23, -29, -92, -2621, -3620] | [5, 7, -23, 23, 41, -115, -391, -2263, -2359, -2743, -2963, -3091, -3415, -3743, -4819]
+   25 |  7 | 12 | 2 | [-13, -19, -20, -25, 25, 80, -100] | [5, 7, 17, -25, 25, 95, -113, 115, -125, -425, 935, 1735]
+   29 |  4 |  9 | 2 | [-20, -29, 29, -116] | [1, 11, -29, 29, -109, -145, -493, 3811, 7055]
+   31 |  4 |  6 | 2 | [-16, -31, 31, -124] | [13, -31, 31, -95, -155, -527]
+   35 |  7 | 12 | 2 | [-19, -20, -28, -35, 35, 112, -140] | [7, 13, 17, 25, -35, 35, 133, 161, -175, -595, 1309, 2429]
+   37 |  4 |  7 | 2 | [-28, -37, 37, -148] | [19, 23, 29, -37, 37, -185, -629]
+   41 |  6 |  5 | 2 | [-23, -26, -41, 41, -101, -164] | [1, -41, 41, -205, -697]
+   43 |  5 |  5 | 2 | [-22, -43, 43, -64, -172] | [1, -43, 43, -215, -731]
+   47 |  6 | 11 | 2 | [-25, -29, -47, 47, 64, -188] | [5, 25, -47, 47, 65, 73, 85, 89, 101, -235, -799]
+   49 |  8 |  7 | 2 | [-28, -43, -49, 49, -52, -59, -61, -196] | [25, 35, -49, 49, -65, -245, -833]
+  negation symmetry (iii) verified for all |k|<=49: cycles(G_-k) = -cycles(G_k), cycles(T_-k) = -cycles(T_k).
+  F3 counts for |k| in {1,5,7,11,13} reproduced: {1: 4, 5: 9, 7: 5, 11: 7, 13: 13}
+  G_1 cycles: [[-1], [1], [-11, -4]]  (the task's {-11,-4} check: PASS; word of (-4,-11) is (3,0), gate -4*(2^3-3^2) = 4 = B'(3,0))
+  sign law (i) verified on every G_k cycle found.
+THEOREM S4.5 (PROVED, scaling lemma).  For 3 not| k and 3 not| m:  G_k(k m) = k G_1(m), with the same j.
+Proof: 2^j k m in {k+3, k+6} mod 9  <=>  2^j m in {1 + 3k^-1, 1 + 6k^-1} mod 9 = {4, 7} mod 9 (k^-1 = 1 or 2
+mod 3 permutes the two targets), which is the G_1 condition; then (2^j k m - k)/3 = k (2^j m - 1)/3.  QED
+Hence every G_k has the three UNIVERSAL cycles k*{1}, k*{-1}, k*{-4,-11} (scaled from G_1: 3 cycles, S4.4),
+exactly as T_k(k n) = k T_1(n) gives T_k the four universal cycles k*{1}, k*{-1}, k*{-5,-7,-10..}, k*{-17,...}
+(braids2 signed_cycles: content d = |b|/q; universal <=> q = 1).  PRIMITIVE cycles (not inside kZ) are the
+ones with q = |k|; their counts are tabulated below (G: #cycles - 3; T: #cycles - 4).
+  scaling lemma verified for all |k|<=49, |m|<=200; universal G_k cycles k*{1}, k*{-1}, k*{-4,-11} present for every k.
+
+  k | #G_k | primitive G_k (= #-3) | #T_k | primitive T_k (= #-4) | primitive G_k cycle minima
+    1 |  3 |  0 |  4 |  0 | []
+    5 |  5 |  2 |  9 |  5 | [-4, 16]
+    7 |  4 |  1 |  5 |  1 | [-4]
+   11 |  5 |  2 |  7 |  3 | [-16, -17]
+   13 |  7 |  4 | 13 |  9 | [-7, 209, 236, 256]
+   17 |  6 |  3 |  8 |  4 | [-10, -59, -64]
+   19 |  6 |  3 |  6 |  2 | [-13, -16, -85]
+   23 |  8 |  5 | 15 | 11 | [-13, -14, -29, -2621, -3620]
+   25 |  7 |  4 | 12 |  8 | [-13, -19, -20, 80]
+   29 |  4 |  1 |  9 |  5 | [-20]
+   31 |  4 |  1 |  6 |  2 | [-16]
+   35 |  7 |  4 | 12 |  8 | [-19, -20, -28, 112]
+   37 |  4 |  1 |  7 |  3 | [-28]
+   41 |  6 |  3 |  5 |  1 | [-23, -26, -101]
+   43 |  5 |  2 |  5 |  1 | [-22, -64]
+   47 |  6 |  3 | 11 |  7 | [-25, -29, 64]
+   49 |  8 |  5 |  7 |  3 | [-28, -43, -52, -59, -61]
+FINITE-EXACT (S4.6): primitive-cycle table for 0<k<=49 (k<0 by negation); k=1: no primitive cycle on either side.
+
+  G_k cycles with words (k in {1,-1,5,-5,7,-7,11,13}):
+    k=  1  cycle [-1]  word [1]  J=1 L=1  2^J-3^L=-1  B'=1  m0=k*B'/(2^J-3^L)=-1
+    k=  1  cycle [1]  word [2]  J=2 L=1  2^J-3^L=1  B'=1  m0=k*B'/(2^J-3^L)=1
+    k=  1  cycle [-4, -11]  word [3, 0]  J=3 L=2  2^J-3^L=-1  B'=4  m0=k*B'/(2^J-3^L)=-4
+    k= -1  cycle [-1]  word [2]  J=2 L=1  2^J-3^L=1  B'=1  m0=k*B'/(2^J-3^L)=-1
+    k= -1  cycle [1]  word [1]  J=1 L=1  2^J-3^L=-1  B'=1  m0=k*B'/(2^J-3^L)=1
+    k= -1  cycle [4, 11]  word [3, 0]  J=3 L=2  2^J-3^L=-1  B'=4  m0=k*B'/(2^J-3^L)=4
+    k=  5  cycle [-7, -4]  word [0, 2]  J=2 L=2  2^J-3^L=-5  B'=7  m0=k*B'/(2^J-3^L)=-7
+    k=  5  cycle [-5]  word [1]  J=1 L=1  2^J-3^L=-1  B'=1  m0=k*B'/(2^J-3^L)=-5
+    k=  5  cycle [5]  word [2]  J=2 L=1  2^J-3^L=1  B'=1  m0=k*B'/(2^J-3^L)=5
+    k=  5  cycle [16, 41, 53]  word [3, 2, 0]  J=5 L=3  2^J-3^L=5  B'=16  m0=k*B'/(2^J-3^L)=16
+    k=  5  cycle [-20, -55]  word [3, 0]  J=3 L=2  2^J-3^L=-1  B'=4  m0=k*B'/(2^J-3^L)=-20
+    k= -5  cycle [7, 4]  word [0, 2]  J=2 L=2  2^J-3^L=-5  B'=7  m0=k*B'/(2^J-3^L)=7
+    k= -5  cycle [-5]  word [2]  J=2 L=1  2^J-3^L=1  B'=1  m0=k*B'/(2^J-3^L)=-5
+    k= -5  cycle [5]  word [1]  J=1 L=1  2^J-3^L=-1  B'=1  m0=k*B'/(2^J-3^L)=5
+    k= -5  cycle [-16, -41, -53]  word [3, 2, 0]  J=5 L=3  2^J-3^L=5  B'=16  m0=k*B'/(2^J-3^L)=-16
+    k= -5  cycle [20, 55]  word [3, 0]  J=3 L=2  2^J-3^L=-1  B'=4  m0=k*B'/(2^J-3^L)=20
+    k=  7  cycle [-5, -4]  word [0, 1]  J=1 L=2  2^J-3^L=-7  B'=5  m0=k*B'/(2^J-3^L)=-5
+    k=  7  cycle [-7]  word [1]  J=1 L=1  2^J-3^L=-1  B'=1  m0=k*B'/(2^J-3^L)=-7
+    k=  7  cycle [7]  word [2]  J=2 L=1  2^J-3^L=1  B'=1  m0=k*B'/(2^J-3^L)=7
+    k=  7  cycle [-28, -77]  word [3, 0]  J=3 L=2  2^J-3^L=-1  B'=4  m0=k*B'/(2^J-3^L)=-28
+    k= -7  cycle [5, 4]  word [0, 1]  J=1 L=2  2^J-3^L=-7  B'=5  m0=k*B'/(2^J-3^L)=5
+    k= -7  cycle [-7]  word [2]  J=2 L=1  2^J-3^L=1  B'=1  m0=k*B'/(2^J-3^L)=-7
+    k= -7  cycle [7]  word [1]  J=1 L=1  2^J-3^L=-1  B'=1  m0=k*B'/(2^J-3^L)=7
+    k= -7  cycle [28, 77]  word [3, 0]  J=3 L=2  2^J-3^L=-1  B'=4  m0=k*B'/(2^J-3^L)=28
+    k= 11  cycle [-25, -37, -16]  word [2, 0, 2]  J=4 L=3  2^J-3^L=-11  B'=25  m0=k*B'/(2^J-3^L)=-25
+    k= 11  cycle [-11]  word [1]  J=1 L=1  2^J-3^L=-1  B'=1  m0=k*B'/(2^J-3^L)=-11
+    k= 11  cycle [11]  word [2]  J=2 L=1  2^J-3^L=1  B'=1  m0=k*B'/(2^J-3^L)=11
+    k= 11  cycle [-17, -49, -20]  word [3, 0, 1]  J=4 L=3  2^J-3^L=-11  B'=17  m0=k*B'/(2^J-3^L)=-17
+    k= 11  cycle [-44, -121]  word [3, 0]  J=3 L=2  2^J-3^L=-1  B'=4  m0=k*B'/(2^J-3^L)=-44
+    k= 13  cycle [-11, -8, -7, -23, -35, -16, -47, -20]  word [0, 0, 3, 2, 0, 3, 0, 0]  J=8 L=8  2^J-3^L=-6305  B'=5335  m0=k*B'/(2^J-3^L)=-11
+    k= 13  cycle [-13]  word [1]  J=1 L=1  2^J-3^L=-1  B'=1  m0=k*B'/(2^J-3^L)=-13
+    k= 13  cycle [13]  word [2]  J=2 L=1  2^J-3^L=1  B'=1  m0=k*B'/(2^J-3^L)=13
+    k= 13  cycle [-52, -143]  word [3, 0]  J=3 L=2  2^J-3^L=-1  B'=4  m0=k*B'/(2^J-3^L)=-52
+    k= 13  cycle [337, 445, 589, 781, 256]  word [2, 2, 2, 0, 2]  J=8 L=5  2^J-3^L=13  B'=337  m0=k*B'/(2^J-3^L)=337
+    k= 13  cycle [209, 553, 733, 973, 320]  word [3, 2, 2, 0, 1]  J=8 L=5  2^J-3^L=13  B'=209  m0=k*B'/(2^J-3^L)=209
+    k= 13  cycle [236, 625, 829, 272, 721]  word [3, 2, 0, 3, 0]  J=8 L=5  2^J-3^L=13  B'=236  m0=k*B'/(2^J-3^L)=236
+FINITE-EXACT (S4.4): census |k|<=49 above.  Duality verdict: (a) PROVED exact gate identity with word
+  reversal; (b) PROVED negation conjugation k<->-k inside each family; (c) REFUTED: any bijection
+  G_k-cycles <-> T_k-cycles or <-> T_(-k)-cycles (counts differ already at k=1: #G_1=3 vs #T_1=4);
+  (d) the exact intersection is given by criterion (ii) (common cycles counted above).
+
+==============================================================================
+S5  Hostiles: 3^j+1, the exact peak bound, the worst m<=10^7, (8,5,1^n) family
+==============================================================================
+THEOREM S5.1 (PROVED; wave-one S2.2 gives the word, here the exact orbit values).
+For j>=1 and m = 3^j + 1:  G^i(m) = 4^i 3^(j-i) + 1 for 0<=i<=j-1 (each such value is 1 mod 9 when
+j-i>=2, so k=2 and G = (4m-1)/3 = 4^(i+1) 3^(j-i-1) + 1), and G^(j-1)(m) = 3*4^(j-1)+1 = 4 mod 9,
+so k=0 and G^j(m) = 4^(j-1).  Peak/m >= (3*4^(j-1)+1)/(3^j+1) -> infinity like (4/3)^(j-1):
+a family with peak/m -> infinity, the exact 3-adic mirror of Collatz's 2^L-1 (T^L(2^L-1) = 3^L-1).
+  j= 1 m=        4  G^(j-1)(m)=           4  ratio=   1.000  (4/3)^(j-1)=   1.000  full-orbit peak/m=   1.000 steps-to-1=1
+  j= 2 m=       10  G^(j-1)(m)=          13  ratio=   1.300  (4/3)^(j-1)=   1.333  full-orbit peak/m=   1.300 steps-to-1=3
+  j= 3 m=       28  G^(j-1)(m)=          49  ratio=   1.750  (4/3)^(j-1)=   1.778  full-orbit peak/m=   1.750 steps-to-1=7
+  j= 4 m=       82  G^(j-1)(m)=         193  ratio=   2.354  (4/3)^(j-1)=   2.370  full-orbit peak/m=   2.354 steps-to-1=13
+  j= 5 m=      244  G^(j-1)(m)=         769  ratio=   3.152  (4/3)^(j-1)=   3.160  full-orbit peak/m=   3.152 steps-to-1=14
+  j= 6 m=      730  G^(j-1)(m)=        3073  ratio=   4.210  (4/3)^(j-1)=   4.214  full-orbit peak/m=   4.210 steps-to-1=20
+  j= 7 m=     2188  G^(j-1)(m)=       12289  ratio=   5.617  (4/3)^(j-1)=   5.619  full-orbit peak/m=   5.617 steps-to-1=21
+  j= 8 m=     6562  G^(j-1)(m)=       49153  ratio=   7.491  (4/3)^(j-1)=   7.492  full-orbit peak/m=   7.491 steps-to-1=22
+  j= 9 m=    19684  G^(j-1)(m)=      196609  ratio=   9.988  (4/3)^(j-1)=   9.989  full-orbit peak/m=   9.988 steps-to-1=47
+  j=10 m=    59050  G^(j-1)(m)=      786433  ratio=  13.318  (4/3)^(j-1)=  13.318  full-orbit peak/m=  13.318 steps-to-1=38
+  j=11 m=   177148  G^(j-1)(m)=     3145729  ratio=  17.758  (4/3)^(j-1)=  17.758  full-orbit peak/m=  17.758 steps-to-1=39
+  j=12 m=   531442  G^(j-1)(m)=    12582913  ratio=  23.677  (4/3)^(j-1)=  23.677  full-orbit peak/m=  23.677 steps-to-1=38
+  j=13 m=  1594324  G^(j-1)(m)=    50331649  ratio=  31.569  (4/3)^(j-1)=  31.569  full-orbit peak/m=  31.569 steps-to-1=39
+  j=14 m=  4782970  G^(j-1)(m)=   201326593  ratio=  42.092  (4/3)^(j-1)=  42.092  full-orbit peak/m=  42.092 steps-to-1=40
+  j=15 m= 14348908  G^(j-1)(m)=   805306369  ratio=  56.123  (4/3)^(j-1)=  56.123  full-orbit peak/m=  56.123 steps-to-1=60
+THEOREM S5.2 (PROVED, exact peak bound).  For every m (3 not| m) and every n>=0, along the word of m
+    K_n <= 2n + [k_1 = 3],   hence   G^n(m) < 2^(K_n) m/3^n <= 2*(4/3)^n m,  and  <= (4/3)^n m unless m = 5 mod 9.
+Proof.  Letters with k=3 are exactly the residues 5 mod 9.  From residue 5 the next residue is in {1,4,7}
+(k in {2,0,0}); residue 5 is entered only from {7,8} (k in {0,1}): indeed G(5+9t) = 13+24t = 4+6t mod 9
+is never 5, and G(a) = 5 mod 9 forces G(a) = 2 mod 3, i.e. a in {7,8} mod 9.  Pair every non-initial 3
+with its predecessor letter (<= 1): the pairs are disjoint (a predecessor of a 3 is never itself a 3) and
+each pair sums to <= 4 = 2*2; every unpaired letter is <= 2.  So K_n <= 2n, plus 1 if the first letter
+is 3.  QED.   The family 3^j+1 attains K_(j-1) = 2(j-1), so the rate 4/3 per step is optimal, and no
+family can grow faster than 2*(4/3)^n in n steps (Collatz's optimum is (3/2)^n from 2^L-1).
+  all 6666667 non-multiples of 3 in [1,10^7] reach 1 under G  [checked]  time 4.4s
+  max steps-to-1 = 93 at m=8751065   (F1: 93 at 8751065)
+  max peak/m = 133.033 at m=4847486, peak=644874241   (F1: 133.03 at 4847486)
+  K_n <= 2n + [k_1=3] verified along every orbit (S5.2)  [checked]
+  worst m=4847486: word (k_i) = [3, 2, 2, 2, 2, 2, 0, 3, 2, 2, 2, 2, 2, 2, 2, 2, 2, 0, 2, 0, 0, 3, 0, 0, 2, 2, 0, 3, 2, 2, 2, 0, 0, 1, 2, 2, 2, 2, 0, 0, 0, 2, 0, 0, 3, 2, 2, 0, 3, 0, 0, 1, 3, 0, 3, 2, 2, 0, 3, 0, 0, 1, 0, 3, 2, 0, 0, 0, 2, 0, 0, 0, 1, 3, 0, 0]
+    residues mod 9 along the orbit: [5, 1, 1, 1, 1, 1, 7, 5, 1, 1, 1, 1, 1, 1, 1, 1, 1, 4, 1, 4, 7, 5, 4, 4, 1, 1, 7, 5, 1, 1, 1, 4, 7, 2, 1, 1, 1, 1, 4, 4, 4, 1, 4, 7, 5, 1, 1, 7, 5, 4, 7, 8, 5, 7, 5, 1, 1, 7, 5, 4, 7, 2, 7, 5, 1, 4, 4, 4, 1, 4, 4, 7, 8, 5, 4, 4]
+    orbit: [4847486, 12926629, 17235505, 22980673, 30640897, 40854529, 54472705, 18157568, 48420181, 64560241, 86080321, 114773761, 153031681, 204042241, 272056321, 362741761, 483655681, 644874241, 214958080, 286610773, 95536924, 31845641, 84921709, 28307236, 9435745, 12580993, 16774657, 5591552, 14910805, 19881073, 26508097, 35344129, 11781376, 3927125, 2618083, 3490777, 4654369, 6205825, 8274433, 2758144, 919381, 306460, 408613, 136204, 45401, 121069, 161425, 215233, 71744, 191317, 63772, 21257, 14171, 37789, 12596, 33589, 44785, 59713, 19904, 53077, 17692, 5897, 3931, 1310, 3493, 4657, 1552, 517, 172, 229, 76, 25, 8, 5, 13, 4, 1]
+    peak 644874241 at step 17, peak/m = 133.0327, K at peak = 34, 2*(4/3)^17 = 266.1 (bound S5.2 holds)
+    3-adic reason: m = 5 mod 9 (letter 3), v_3(G(m)-1) = 6 (run of 5 twos then 0), G^7(m) = 5 mod 9 (letter 3),
+      v_3(G^8(m)-1) = 10 (run of 9 twos then 0 at step 17 = the peak): word prefix 3 2^5 0 3 2^9 0, K_17 = 34,
+      exact growth to the peak: 2^34/3^17 = 133.03  vs observed peak/m 133.0327 (the carry B_17 costs the difference)
+S5.3  Residue-5 chains (PROVED structure).  Residue 5 mod 9 (factor 8/3) can never repeat consecutively
+and is always preceded by 7 or 8 (factors 1/3, 2/3): the best 5-containing pattern is 8,5,1^n
+with product (2/3)(8/3)(4/3)^n = (16/9)(4/3)^n over n+2 steps, i.e. again rate 4/3.  The word
+8,5,1,...,1 (n ones) then 0 is realized by EXACTLY ONE class mod 3^(n+3): m = 8 mod 27 (forces
+G(m) = 5 mod 9), G(m) = 5+18s, G^2(m) = 13+48s, and 13+48s = 1 mod 3^n (not mod 3^(n+1)) iff
+4s = -1 mod 3^(n-1) with the lift condition.  Smallest members and their exact growth:
+  n= 1  m=         8  word [1, 3, 0]  value after n+1 steps = 13  ratio 1.6250  (16/9)(4/3)^(n-1)=1.7778
+  n= 2  m=       143  word [1, 3, 2, 0]  value after n+1 steps = 337  ratio 2.3566  (16/9)(4/3)^(n-1)=2.3704
+  n= 3  m=        62  word [1, 3, 2, 2, 0]  value after n+1 steps = 193  ratio 3.1129  (16/9)(4/3)^(n-1)=3.1605
+  n= 4  m=      1277  word [1, 3, 2, 2, 2, 0]  value after n+1 steps = 5377  ratio 4.2106  (16/9)(4/3)^(n-1)=4.2140
+  n= 5  m=       548  word [1, 3, 2, 2, 2, 2, 0]  value after n+1 steps = 3073  ratio 5.6077  (16/9)(4/3)^(n-1)=5.6187
+  n= 6  m=     11483  word [1, 3, 2, 2, 2, 2, 2, 0]  value after n+1 steps = 86017  ratio 7.4908  (16/9)(4/3)^(n-1)=7.4915
+  n= 7  m=      4922  word [1, 3, 2, 2, 2, 2, 2, 2, 0]  value after n+1 steps = 49153  ratio 9.9864  (16/9)(4/3)^(n-1)=9.9887
+  n= 8  m=    103337  word [1, 3, 2, 2, 2, 2, 2, 2, 2, 0]  value after n+1 steps = 1376257  ratio 13.3181  (16/9)(4/3)^(n-1)=13.3183
+  n= 9  m=     44288  word [1, 3, 2, 2, 2, 2, 2, 2, 2, 2, 0]  value after n+1 steps = 786433  ratio 17.7572  (16/9)(4/3)^(n-1)=17.7577
+  n=10  m=    930023  word [1, 3, 2, 2, 2, 2, 2, 2, 2, 2, 2, 0]  value after n+1 steps = 22020097  ratio 23.6769  (16/9)(4/3)^(n-1)=23.6770
+  n=11  m=    398582  word [1, 3, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 0]  value after n+1 steps = 12582913  ratio 31.5692  (16/9)(4/3)^(n-1)=31.5693
+FINITE-EXACT+PROVED (S5.4): the (8,5,1^n) family has word 1,3,2^(n-1),0 exactly and grows at rate 4/3;
+  no family beats 2*(4/3)^n (S5.2).  Hence sup_m peak(m)/m = infinity (S5.1), but peak(m) <= 2 (4/3)^{steps} m always.
+
+==============================================================================
+S6  Typed analogies and the three-piece decomposition
+==============================================================================
+A1  Source: Collatz T on Z_2 (Lagarias 1985, CITED: T is Haar-preserving on Z_2 and the parity-vector map
+    Q: Z_2 -> Z_2 is a measure-preserving bijection; Terras 1976, CITED: stopping-time densities -> 1).
+    Target: G on Z_3^x.  Map: 2-adic digits <-> 3-adic digits, parity word <-> k-word, n mod 2^J <-> m mod 3^(J+1),
+    gate n0(2^K-3^L)=kB(w) <-> m0(2^J-3^L)=kB(rev w).  Preserved: 'word of length J is a function of the
+    residue at depth J(+1)', cycle gate shape, Terras-type density theorem.  Lost: Haar-invariance and
+    bijectivity of the word map onto the FULL shift (G is 4:1 / 2:1 with a.c. invariant density 4/3, 2/3 != Haar;
+    the k-word map IS injective (S1.3ii) but its image is a proper SFT of entropy log 3 < log 4, whereas Lagarias'
+    parity map is onto the full 2-shift); the direction of the carry (helps here, hinders there).  Sidecar: the rank-1
+    tilted matrix [[5/3,1/3],[10/3,2/3]] with eigenvalue 7/3.  Decisive test: E[k]=1 (3-adic) vs E[parity]=1/2 (2-adic).
+A2  Source: squarefree density 6/pi^2 = prod_p (1-p^-2) (user's prompt).  Target: the stationary law (4/3, 2/3).
+    Map: 'a global density is a product/limit of local Haar masses' (CRT).  Preserved: density of a residue
+    set = Haar measure (S3.1c).  Lost: multiplicativity over primes -- G lives at the single prime 3 (2 acts as
+    a unit), so there is no Euler product and NO MAP FOUND from 6/pi^2 to any G-quantity; the analogy stops at
+    'local densities govern global counts'.
+A3  The user's three pieces {0,1,2} mod 3 in E.  PROVED: 3Z is a source forest (nothing enters it: 3n+1 != 0 mod 3
+    and n/2 = 0 mod 3 forces n = 0 mod 3), so '1 generates every number' can only mean every non-multiple of 3
+    (wave-one Q2, OPEN, FINITE-EXACT to 10^6), the multiples of 3 being attached by a single last move
+    3t -> 9t+1 (E-forward) read backwards.  Inside the units, G's level-1 chain is the 2x2 matrix
+    [[2/3,1/3],[2/3,1/3]]: from EITHER class the next class is 1 mod 3 with probability 2/3.  The three
+    pieces fit as: 0 mod 3 = leaves; 1 mod 3 = the heavy class (density 4/3); 2 mod 3 = the light class (2/3),
+    with the transfer law S1.1 gluing the levels.  This is the exact 3-adic content of F1; it is a statement about
+    the GREEDY inverse walk, not about Collatz forward dynamics (whose image residues mod 3 are 1,2 with
+    probability 1/2 each: (3n+1)/2^k = (-1)^k mod 3).
+A4  3n-5 / 3n+k versions (user): S4 shows the 3-adic greedy inverse of 3n+k has the SAME chain and drift for
+    every k with 3 not| k, and its typical cycles are small with sign -sign(k).  No map found from the G_k
+    census to Bott periodicity or octonions (no 8-fold or 2-fold structure appears in the data; the period 6 of
+    2 mod 9 is the only periodicity present).
+A5  Source: the blueprint audit's exact affine word model (collatz_blueprint_20260921_affine.md, Sec. 1 and 3):
+    chronological D/E words with W(n) = (2^r n - B)/3^m, legality iff 2^r n = B mod 3^m (one legal source class
+    mod 3^m), fixed point n = B/(2^r-3^m), and the ternary/dyadic progression bijection s+3^m j <-> W(s)+2^r j.
+    Target: the greedy word of G.  Map: letter k>=1 -> the guarded word E o D^(k-1) (3G+1 = 2^k m); letter k=0
+    -> the E-graph's extra arrow (even -> 3n+1 reversed), which is OUTSIDE the D/E semigroup (wave-one leaf
+    identity, fibre index j=-1).  Preserved: the carry formula (r = K_J, m = J, B = B_J of S3), the legality
+    congruence (the word of length J is legal on exactly one class mod 3^J), the fixed-point/cycle gate, and the
+    free-semigroup property (distinct k-words are distinct affine maps).  Lost: the dyadic endpoint address
+    mod 2^r and the uniform word mass 2^(-r) -- G selects the word from the 3-adic side (m mod 3^(J+1)), so word
+    masses are the Markov products 2*3^J P_chain(w) (wave-one S4), not 2^(-r); and the blueprint's 'source class
+    mod 3^m' becomes 'source class mod 3^(J+1)': the greedy rule spends one extra ternary digit to choose k.
+    Sidecar: the blueprint's spectral hostile (DEDE vs DDEE, same trace/determinant, different carry) is the
+    statement that the cycle gate is NOT a function of (K,L) alone -- exactly S4.3's B'(w) dependence.
+    Decisive test: 'same words, opposite adic completion' -- the blueprint counts words by dyadic endpoints
+    (mass 2^-r, E-count binomial), G counts them by ternary sources (mass 2*3^J P_chain, E[k]=1).
+
+THEOREM S6.1 (PROVED, the reframe).  Let U = {n>=1 : 3 not| n}.  Q1: every n>=1 reaches 1 in E.  Q2: 1 reaches
+every m in U in E.  Then  (Q1 and Q2)  <=>  (U is one strongly connected component of E containing 1, and every
+multiple of 3 is a transient singleton feeding it).
+Proof.  (=>) For m, m' in U, Q1 gives m -> 1 and Q2 gives 1 -> m', so U lies in one SCC; multiples of 3 are
+never entered (3n+1 = 1 mod 3; n/2 = 0 mod 3 forces n = 0 mod 3) and leave 3Z after v_2(n) halvings via
+3t -> 9t+1 (wave-one S1.3), so they are singleton SCCs.  (<=) Q2 is the reachability 1 -> m inside the SCC;
+Q1 for n in U is m -> 1 inside the SCC, and for n = 3t: 3t -> 9t+1 in U -> 1.  QED
+Relation to Collatz (SCOPE, stated exactly): Collatz => Q1 (the deterministic path is an E-path); Q1 => Collatz
+is NOT established here (E has extra even -> 3n+1 arrows, so reaching 1 in E is a priori weaker); Q2 is the new
+question, with the G-certificate: a G-orbit m -> ... -> 1 reversed is an explicit E-path 1 -> m, so
+Q2 <= 'every m in U reaches 1 under G' (FINITE-EXACT to 10^7, S5; stopping-time density 1, S3).
+
+==============================================================================
+Provenance
+==============================================================================
+source sha256: 15c1570609a589f7b856fa83c45d470bb9c04906aa53ad18edc5aa8d3b2bd625
+python: 3.10.0  numpy: 2.2.6
+total time: 17.0s
+ALL CHECKS PASSED

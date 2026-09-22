@@ -1,0 +1,233 @@
+==============================================================================
+S1  Three-row automaton: row of the j-th child, base row from u mod 18, rotation 1->5->3, tree to depth 6
+==============================================================================
+PROVED: for odd n, row(n) := n mod 6 = rho(3n+1 mod 9) with rho(4)=1, rho(1)=3, rho(7)=5.
+   Proof: n = 6i+r gives 3n+1 = 18i + (3r+1), and 3r+1 = 4, 10=1, 16=7 mod 9 for r = 1, 3, 5.
+   Same law in the F-convention of the row_braid lane: F(n)=(3n+1)/2 = 2^h u, row = rho_F(2^h u mod 9),
+   rho_F(2)=1, rho_F(5)=3, rho_F(8)=5 (multiply by 2^{-1} = 5 mod 9: 4->2, 1->5, 7->8).
+PROVED: row(n_j) = rho(2^(h0+1+2j) u mod 9); since 4 -> 16=7 -> 28=1 -> 4 (mod 9), j -> j+1 rotates the row
+   1 -> 5 -> 3 -> 1 (i.e. +4 mod 6), exact period 3 = ord_9(4); every third child is a row-3 leaf.
+   base row (j=0) from u mod 18:
+   u mod 18 | u mod 9 | h0 | 2^(h0+1) u mod 9 | base row | rows of j=0..5
+   1        | 1       | 1  | 4                | 1        | [1, 5, 3, 1, 5, 3]
+   5        | 5       | 0  | 1                | 3        | [3, 1, 5, 3, 1, 5]
+   7        | 7       | 1  | 1                | 3        | [3, 1, 5, 3, 1, 5]
+   11       | 2       | 0  | 4                | 1        | [1, 5, 3, 1, 5, 3]
+   13       | 4       | 1  | 7                | 5        | [5, 3, 1, 5, 3, 1]
+   17       | 8       | 0  | 7                | 5        | [5, 3, 1, 5, 3, 1]
+PROVED: base row = 1 for u = 1, 11 mod 18; 5 for u = 13, 17 mod 18; 3 (leaf) for u = 5, 7 mod 18;
+   equivalently u mod 9 in {1,2} -> row 1, {4,8} -> row 5, {5,7} -> row 3.  Agrees with the row_braid table
+   (its 'row' column for u mod 18 = 1,5,7,11,13,17 reads 1,3,3,1,5,5).
+FINITE-EXACT: tree generated to depth 6 with j<=8: nodes per level [1, 8, 45, 270, 1620, 9720, 58320] (total 69984), 0.2s
+   row counts per level (1: internal, 5: internal, 3: leaf): [{1: 2, 3: 3, 5: 3}, {1: 15, 3: 15, 5: 15}, {1: 90, 3: 90, 5: 90}, {1: 540, 3: 540, 5: 540}, {1: 3240, 3: 3240, 5: 3240}, {1: 19440, 3: 19440, 5: 19440}]
+   every node satisfies T(n)=parent, row(n) = rho(2^(h0+1+2j) u mod 9) = base(u mod 18) + 4j mod 6;
+   the only repeated node is the loop child(1,0) = 1 (1 repeat(s)); all other nodes distinct (T is a function).
+   depth-D row pattern of the descendant along an index path (j_1,...,j_D):
+   D=1 path=(0,): function of u mod 9 (checked all odd u < 54), NOT of u mod 3 (witness class 1 mod 3)
+   D=2 path=(0, 0): function of u mod 27 (checked all odd u < 162), NOT of u mod 9 (witness class 1 mod 9)
+   D=3 path=(0, 0, 0): function of u mod 81 (checked all odd u < 486), NOT of u mod 27 (witness class 1 mod 27)
+   D=4 path=(0, 0, 0, 0): function of u mod 243 (checked all odd u < 1458), NOT of u mod 81 (witness class 1 mod 81)
+PROVED: along a fixed index path the rows of the first D descendants depend only on u mod 3^(D+1)
+   (n_j = (2^a u - 1)/3 sends u mod 3^(s+1) to n_j mod 3^s; the row needs the node mod 9; induct on D),
+   and FINITE-EXACT sharp for D<=4.  This is the tree-side twin of the E-graph lane's S4.1 (greedy letters
+   k_1..k_J are a function of m mod 3^(J+1), sharp).
+
+==============================================================================
+S2  FINITE-EXACT depth census of odd u <= 1000000: residues mod 3 and mod 9 by depth
+==============================================================================
+all 500000 odd u <= 1000000 reach 1 (forward T-iteration, descent to a smaller odd already resolved); 0.4s
+max depth (number of T-steps) = 195 at u = 837799
+depth | count | frac 0 mod 3 | frac 1 mod 3 | frac 2 mod 3 | counts mod 9 (r=0..8)
+    0 |      1 | 0.0000 | 1.0000 | 0.0000 | [0, 1, 0, 0, 0, 0, 0, 0, 0]
+    1 |      9 | 0.3333 | 0.3333 | 0.3333 | [1, 1, 1, 1, 1, 1, 1, 1, 1]
+    2 |     34 | 0.3529 | 0.3235 | 0.3235 | [4, 4, 3, 6, 5, 5, 2, 2, 3]
+    3 |     78 | 0.3333 | 0.3333 | 0.3333 | [11, 9, 11, 6, 5, 8, 9, 12, 7]
+    4 |    176 | 0.3239 | 0.3523 | 0.3239 | [20, 23, 15, 20, 22, 20, 17, 17, 22]
+    5 |    282 | 0.3262 | 0.3156 | 0.3582 | [30, 29, 39, 24, 27, 34, 38, 33, 28]
+    6 |    508 | 0.3445 | 0.3425 | 0.3130 | [58, 49, 55, 58, 63, 54, 59, 62, 50]
+    7 |    871 | 0.3387 | 0.3261 | 0.3352 | [93, 94, 101, 96, 92, 94, 106, 98, 97]
+    8 |   1056 | 0.3362 | 0.3400 | 0.3239 | [114, 112, 123, 121, 125, 110, 120, 122, 109]
+    9 |   1657 | 0.3355 | 0.3313 | 0.3331 | [197, 185, 187, 170, 183, 192, 189, 181, 173]
+   10 |   1860 | 0.3355 | 0.3360 | 0.3285 | [214, 201, 204, 197, 205, 191, 213, 219, 216]
+   11 |   2593 | 0.3320 | 0.3301 | 0.3378 | [295, 275, 278, 283, 293, 283, 283, 288, 315]
+   12 |   3415 | 0.3327 | 0.3271 | 0.3403 | [381, 364, 376, 374, 377, 403, 381, 376, 383]
+   13 |   3514 | 0.3318 | 0.3349 | 0.3332 | [375, 387, 388, 383, 387, 394, 408, 403, 389]
+   14 |   4882 | 0.3351 | 0.3359 | 0.3290 | [539, 557, 535, 555, 531, 557, 542, 552, 514]
+   15 |   4295 | 0.3376 | 0.3374 | 0.3250 | [502, 483, 471, 480, 488, 457, 468, 478, 468]
+bucketed depths:
+depth range | count | frac 0 mod 3 | frac 1 mod 3 | frac 2 mod 3 | frac in {1,4,7} each | frac in {2,5,8} each
+  0- 19 |  52108 | 0.3347 | 0.3336 | 0.3316 | ['0.1102', '0.1114', '0.1120'] | ['0.1116', '0.1103', '0.1098']
+ 20- 39 | 168230 | 0.3333 | 0.3334 | 0.3333 | ['0.1110', '0.1112', '0.1112'] | ['0.1113', '0.1107', '0.1114']
+ 40- 59 | 144141 | 0.3319 | 0.3338 | 0.3343 | ['0.1122', '0.1113', '0.1104'] | ['0.1107', '0.1121', '0.1115']
+ 60- 79 |  98798 | 0.3346 | 0.3321 | 0.3333 | ['0.1106', '0.1104', '0.1110'] | ['0.1110', '0.1113', '0.1110']
+ 80- 99 |  28539 | 0.3327 | 0.3332 | 0.3341 | ['0.1102', '0.1102', '0.1128'] | ['0.1131', '0.1095', '0.1114']
+100-119 |   6751 | 0.3354 | 0.3360 | 0.3287 | ['0.1077', '0.1154', '0.1129'] | ['0.1092', '0.1096', '0.1099']
+120-139 |   1234 | 0.3363 | 0.3485 | 0.3152 | ['0.1321', '0.1126', '0.1037'] | ['0.0956', '0.1175', '0.1021']
+140-159 |    168 | 0.3810 | 0.3512 | 0.2679 | ['0.1012', '0.1190', '0.1310'] | ['0.0833', '0.1071', '0.0774']
+160-179 |     27 | 0.4815 | 0.2593 | 0.2593 | ['0.0741', '0.0741', '0.1111'] | ['0.1481', '0.0741', '0.0370']
+180-199 |      4 | 0.2500 | 0.5000 | 0.2500 | ['0.0000', '0.2500', '0.2500'] | ['0.0000', '0.2500', '0.0000']
+all depths pooled: counts mod 9 = [55556, 55556, 55555, 55556, 55555, 55556, 55555, 55556, 55555]; fractions mod 3 = 0.3333, 0.3333, 0.3333 (trivially 1/3 each: every odd u <= X is a node)
+internal nodes (3 !| u) pooled over depths >= 1, fraction 1 mod 3 = 0.5000 (G stationary: 2/3; fibre-uniform: 1/2)
+largest deviation of a mod-9 fraction from 1/9 over depths with >= 1000 nodes: 0.0194 at depth 91
+Fibre-uniformity lemma (PROVED): for any internal u, n_j mod 9 depends on 4^j mod 27; ord_27(4) = 9 and
+   <4> mod 27 = [1, 4, 7, 10, 13, 16, 19, 22, 25] = all residues 1 mod 3; so (2^(h0+1) 4^j u - 1)/3 runs over EVERY residue mod 9 exactly once
+   per 9 consecutive j.  Hence the infinite fibre of every internal node is uniform mod 9: 1/3 of the children
+   are row-3 leaves, 1/6 lie in each of the six classes 1,2,4,5,7,8 mod 9 -- NOT the greedy law 2/9, 1/9.
+   checked for u in {1,5,7,11,13,17,19,23,25,29}: children j=0..8 hit each residue mod 9 once.
+FINITE-EXACT: #{odd n <= X : T(n) <= X} = sum over internal u <= X of (J_u(X)+1) = 416666, J_u(X) = floor(log_4((3X+1)/(2^(h0+1)u)));
+   333333 internal u <= X, mean truncated fibre size 1.2500 (the infinite fibre is infinite; truncation keeps the first
+   J_u(X)+1 children, so small u contribute the phase-dependent prefix of the 9-periodic residue cycle).
+Discrepancy with G explained exactly: (i) G never visits multiples of 3 (its k skips row-3 children) while the tree
+   counts every leaf once (1/3 of nodes); (ii) among internal children the tree is uniform on the six classes (lemma),
+   whereas G's greedy minimal k lands in 1 mod 3 from residues {1,2,4,5} and in 2 mod 3 only from {7,8}, giving 2/3
+   on 1 mod 3 (E-graph lane S4.3); (iii) the finite table deviates from uniform only through truncation phases.
+
+==============================================================================
+S3  Growth: branching factor 4/3, (4/3)^k exact average, depth-k counts, modulus-9 difference inequality, literature
+==============================================================================
+pruned T-tree (nodes: integers with 3 !| n; children 2y always, (2y-1)/3 iff y = 2 or 8 mod 9):
+   children count by y mod 9: {1: 1, 2: 2, 4: 1, 5: 1, 7: 1, 8: 2}; mean over the six classes = 4/3
+   unpruned (multiples of 3 kept as nodes): y = 2 mod 3 always has the odd child, mean 3/2
+PROVED: a node uniform on the six classes mod 9 has 4/3 children on average in the pruned tree (3/2 unpruned).
+   k | 3^(k+1) | sum over root classes of #depth-k nodes | average | (4/3)^k
+   1 |      9 |        8 | 4/3 | 4/3
+   2 |     27 |       32 | 16/9 | 16/9
+   3 |     81 |      128 | 64/27 | 64/27
+   4 |    243 |      512 | 256/81 | 256/81
+   5 |    729 |     2048 | 1024/243 | 1024/243
+   6 |   2187 |     8192 | 4096/729 | 4096/729
+   7 |   6561 |    32768 | 16384/2187 | 16384/2187
+PROVED: the child of a node uniform on the six classes mod 3^(s+1) is uniform on the six classes mod 3^s
+   (doubling permutes classes; (2y-1)/3 sends 9m+2 -> 6m+1 and 9m+8 -> 6m+5, each uniform in its mod-3 class),
+   so the expected number of depth-k descendants of a uniformly random root is exactly (4/3)^k (FINITE-EXACT k<=7).
+   No novelty claim: this is the Applegate-Lagarias/Lagarias-Weiss branching model (CITED below).
+FINITE-EXACT: pruned T-tree from root 8, nodes at depth k = 0..32:
+   [1, 2, 2, 2, 3, 4, 6, 10, 13, 14, 18, 25, 33, 46, 61, 77, 107, 144, 189, 253, 331, 441, 591, 802, 1066, 1412, 1876, 2492, 3345, 4453, 5936, 7925, 10563]
+   ratios count[k]/count[k-1] for k = 24..32: ['1.329', '1.325', '1.329', '1.328', '1.342', '1.331', '1.333', '1.335', '1.333'];  (count[32])^(1/32) = 1.3358 vs 4/3 = 1.3333
+Modulus-9 difference inequality (PROVED).  Let N = {n >= 1 : 3 !| n, n reaches 1 under T}, f_r(x) = #{n in N, n <= x, n = r mod 9},
+   A = f_1+f_4+f_7 (1 mod 3), B = f_2+f_5+f_8 (2 mod 3).  Children are distinct (T is a function), so for x >= 1:
+   (i)  A(x) >= B(x/2) + f_2(3x/2),   B(x) >= A(x/2) + f_8(3x/2)   [doubling swaps the mod-3 class; odd children of
+        n = 2 mod 9 are 1 mod 3 and <= x iff n <= (3x+1)/2; of n = 8 mod 9 are 2 mod 3];
+   (ii) doubling chains 1->2 (1 step), 7->5->1->2 (3), 4->8->7->5->1->2 (5) give f_2(y) >= max(f_1(y/2), f_7(y/8), f_4(y/32)) >= A(y/32)/3;
+        4->8 (1), 1->2->4->8 (3), 7->5->1->2->4->8 (5) give f_8(y) >= A(y/32)/3.
+   doubling chain lengths (r -> target): {(1, 2): 1, (1, 8): 3, (4, 2): 5, (4, 8): 1, (7, 2): 3, (7, 8): 5}
+   (iii) hence A(x) >= A(x/4) + A(3x/128)/3 + A(3x/64)/3 for all x >= 1, and A(x) >= 1 for x >= 1 (1 in N).
+   Induction on x with A nondecreasing gives A(x) >= c x^gamma where gamma solves 1 = 4^-g + (1/3)(3/128)^g + (1/3)(3/64)^g:
+   gamma_9,crude = 0.246227  (so #{n <= x : n reaches 1} >= c x^0.2462; a weak but rigorous power bound)
+Adversarial constant-split modulus-9 system (HEURISTIC): f_s(x) = sum_{2r=s} f_r(x/2) + sum_{r in {2,8}} alpha_{r->s} f_r(3x/2),
+   alpha_{2->.} a distribution on {1,4,7}, alpha_{8->.} on {2,5,8} (the unknown splits of the odd children by n mod 27).
+   With f_r ~ c_r x^g the Perron root of M(g) must be 1.  Uniform split (the truth, by the uniformity lemma) gives g = 1;
+   the minimum over the 9 vertex splits is an upper bound on what any constant-split modulus-9 argument can prove.
+   uniform split: g = 1.000000
+   vertex split 2->1, 8->2: g = 1.244017
+   vertex split 2->1, 8->5: g = 0.774576
+   vertex split 2->1, 8->8: g = 1.500000
+   vertex split 2->4, 8->2: g = 0.867659
+   vertex split 2->4, 8->5: g = 0.576032
+   vertex split 2->4, 8->8: g = 1.500000
+   vertex split 2->7, 8->2: g = 0.602605
+   vertex split 2->7, 8->5: g = 0.436588
+   vertex split 2->7, 8->8: g = 1.500000
+   minimum over vertices: g = 0.436588 at 2->7, 8->5
+   comparison: 3/7 = 0.428571; the vertex minimum is close to but NOT equal to the recollected Krasikov (1989) exponent
+   HEURISTIC reading: 0.4366 is the ceiling of the constant-split modulus-9 Krasikov scheme; the published bounds use
+   moduli 3^k with k large and a nonlinear program, and are NOT reproduced here.
+Literature (CITED): Krasikov-Lagarias, 'Bounds for the 3x+1 problem using difference inequalities', Acta Arith. 109 (2003):
+   #{n <= x : n reaches 1} >= x^0.84 for large x.  Applegate-Lagarias, 'Density bounds for the 3x+1 problem', Math. Comp. 64
+   (1995), part I (tree-search method, exponent 0.643) and part II (Krasikov inequalities, exponent 0.81).
+   Lagarias-Weiss, 'The 3x+1 problem: two stochastic models', Ann. Appl. Probab. 2 (1992): the branching random walk model.
+   UNCITED-RECOLLECTION: Krasikov (1989) exponent 3/7 (venue and page numbers not verified here); page numbers of the
+   1995/2003 papers are not verified here.  Nothing beyond these statements is claimed.
+
+==============================================================================
+S4  How the three pieces fit: guarded D/E generation, leaves, and the Q1/Q2 exchange of directions
+==============================================================================
+Guarded inverse branches (collatz_blueprint_20260921_affine.md): D(x) = 2x, E(x) = (2x-1)/3 with guard x = 2 mod 3.
+   For odd u the odd T-preimages are E o D^h (u) with h = h0 + 2j (parity forced by the guard); j -> j+1 is R(n) = 4n+1.
+PROVED (checked u in {1,5,7,11}, j<=2): child(u,j) = E(D^(h0+2j)(u)), and D^h(u) = 2 mod 3 exactly for h = h0 mod 2.
+Pieces: row 1 (u = 1 mod 6, h0 = 1) and row 5 (u = 5 mod 6, h0 = 0) are internal with infinite fibres whose rows
+   rotate 1->5->3 from the base row of S1; row 3 (odd multiples of 3) are leaves: 3 !| 3n+1, so no odd T-preimage;
+   a leaf n = 3 mod 6 is in the tree iff its parent T(n) is (T(n) is internal).  Therefore:
+PROVED: Collatz (all odd n reach 1)  <=>  every u = 1 or 5 mod 6 is a node of the tree  <=>  every odd u with 3 !| u is
+   child(u', j) for some node u' and some j (surjectivity of the guarded D/E closure of {1} onto the odd non-multiples of 3).
+Exchange of directions (PROVED, elementary):
+   C  = deterministic Collatz graph (n -> n/2 for even n, n -> 3n+1 for odd n);  E = C plus the arrows n -> 3n+1 for EVEN n.
+   Q1 (Collatz): every n reaches 1 in C  <=>  the closure of {1} under the GUARDED inverse moves x -> 2x, x -> (x-1)/3 (x = 4 mod 6)
+        is everything (reverse each arrow of C: this closure is the Krasikov-Lagarias tree).
+   Q2 (E-graph lane): 1 reaches every m with 3 !| m in E  <=>  every such m reaches 1 by UNGUARDED inverse moves x -> 2x,
+        x -> (x-1)/3 (x = 1 mod 3) avoiding multiples of 3 (reverse each arrow of E).  The greedy map G(m) = (2^k m-1)/3 with
+        minimal k, 2^k m in {4,7} mod 9, chooses one such move; G^s(m) = 1 is a certificate of 1 ->* m in E.
+   So Collatz is a 'TO 1' statement in C = a 'FROM 1' statement for the guarded inverse tree, while Q2 is a 'FROM 1' statement
+   in E = a 'TO 1' statement for the unguarded inverse graph; reversing arrows exchanges the two, and the relaxation C -> E
+   adds exactly the even -> 3n+1 arrows (E-graph lane C1: reverse index j = -1 of the fibre).  Q1 and Q2 together say that
+   the non-multiples of 3 form one strongly connected component of E (E-graph lane conjecture C_E).
+   example m = 7: Collatz path (Q1, TO 1): [7, 22, 11, 34, 17, 52, 26, 13, 40, 20, 10, 5, 16, 8, 4, 2, 1]
+             greedy inverse certificate (Q2): G-orbit [7, 2, 1], i.e. the E-path 1 -> 4 -> 2 -> 7 uses the even arrow 2 -> 7.
+   G vs the minimal odd child m(u) of S5: on odd u they coincide iff u = 1, 2 or 8 mod 9 (KMIN = h0+1 there);
+   checked for all odd u < 400.  For u = 4, 7 mod 9 G takes k = 0 (an even image (u-1)/3, not a tree node); for
+   u = 5 mod 9 the minimal odd child is the leaf (2u-1)/3 and G skips to k = 3, i.e. G(u) = child(u,1).
+FINITE-EXACT (X=100000, 0.0s): guarded inverse closure of 1 inside [1,X] has 39706 nodes (26478 not divisible by 3);
+   unguarded (reversed-E) closure of 1 inside [1,X], multiples of 3 excluded, has 27472 of the 66667 non-multiples of 3.
+   guarded closure (minus multiples of 3) is a subset of the unguarded closure (checked); neither is complete inside [1,X]
+   because Collatz peaks and inverse peaks leave [1,X] (E-graph lane S3); both statements are FINITE-EXACT to 10^6 there.
+   smallest non-multiples of 3 missing from the guarded closure in [1,X]: [703, 871, 937, 1055, 1249, 1307, 1406, 1471] (Collatz peak of 703 is 250504 > X)
+   smallest missing from the unguarded closure in [1,X]: [1535, 2047, 2207, 2287, 2303, 2527, 2687, 2815] (matches the E-graph lane's outsiders at N=10^5)
+SCOPE: no map found from this exchange to THM-4139/THM-4146 (x^2-29/16 three-cycle) or THM-3341 (Gaussian squaring);
+   the only shared structure is the mod-6/mod-9 row typing.
+
+==============================================================================
+S5  Wildcard: the minimal-child map m(u) = (2^(h0+1) u - 1)/3 (j = 0), orbits, image, survival law
+==============================================================================
+PROVED: m is injective (2^(h0+1) u = 2^(h0'+1) u' with u, u' odd forces h0 = h0', u = u').
+PROVED: image(m) = {odd n : n = 1 mod 8} U {odd n : n = 3 mod 4} = odd n with n != 5 mod 8; the complement 5 mod 8
+   is exactly R(odd) = {4n+1}, the children with j >= 1.  (u = 1 mod 3: 4u-1 = 3 mod 8 so n = 1 mod 8, and n = 1 mod 8
+   gives u = (3n+1)/4 odd, = 1 mod 3; u = 2 mod 3: 2u-1 = 1 mod 4 so n = 3 mod 4, and n = 3 mod 4 gives u = (3n+1)/2 odd, = 2 mod 3.)
+   checked: for odd n < 2000, n in m({odd u < 4000, 3 !| u}) iff n != 5 mod 8.
+PROVED: T(m(u)) = u, so m moves one level away from the root; m(u) = (4u-1)/3 > u for u = 1 mod 3 (u > 1), m(u) = (2u-1)/3 < u for u = 2 mod 3.
+   Fixed points: m(u) = u iff 3u = 2^(h0+1) u - 1 iff u = 1 (h0 = 1, 4u-1 = 3u).  m(1) = 1.
+   m(u) mod 3 from u mod 9: {1,2} -> 1 (internal row 1), {4,8} -> 2 (internal row 5), {5,7} -> 0 (leaf: orbit stops).
+FINITE-EXACT (0.4s): m-orbits of all 333333 odd u <= 1000000 with 3 !| u, followed until the first multiple of 3 (a leaf):
+   orbits hitting the step cap 10000: 0; nontrivial cycles found: 0 (an m-cycle would be a T-cycle, impossible below X
+   since every u <= X reaches 1 (S2) and the only T-cycle through 1 is {1}); u = 1 is the unique fixed point.
+   longest orbit before a leaf: L = 29 at u = 774883; largest peak/u = 33.26 at u = 86023
+   L | #u with orbit length L | fraction | (1/3)(2/3)^(L-1)  [L = number of m-steps until the leaf, the leaf step included;
+                                                      L = 0 only for the fixed point u = 1]
+    0 |       1 | 0.00000 | 0.00000
+    1 |  111112 | 0.33334 | 0.33333
+    2 |   74074 | 0.22222 | 0.22222
+    3 |   49383 | 0.14815 | 0.14815
+    4 |   32924 | 0.09877 | 0.09877
+    5 |   21949 | 0.06585 | 0.06584
+    6 |   14624 | 0.04387 | 0.04390
+    7 |    9754 | 0.02926 | 0.02926
+    8 |    6498 | 0.01949 | 0.01951
+    9 |    4336 | 0.01301 | 0.01301
+   10 |    2889 | 0.00867 | 0.00867
+   11 |    1931 | 0.00579 | 0.00578
+   12 |    1286 | 0.00386 | 0.00385
+   tail: #{L >= 13} = 2572, fraction 0.00772 vs (2/3)^12 = 0.00771
+   The empirical law is geometric with ratio 2/3 to within 2e-4 at every L <= 12 and in the tail (checked).
+   survival law by residue classes (PROVED + FINITE-EXACT L<=8): the first L m-steps stay internal for exactly (2/3)^L
+   of the classes u mod 3^(L+1) coprime to 3 (the residue of m(u) mod 3^s is uniform on its mod-3 class as u runs over
+   the lifts mod 3^(s+1), so each step kills exactly one third of the surviving classes):
+   L | 3^(L+1) | surviving classes | total classes | fraction | (2/3)^L
+   1 |      9 |      4 |      6 | 2/3 | 2/3
+   2 |     27 |      8 |     18 | 4/9 | 4/9
+   3 |     81 |     16 |     54 | 8/27 | 8/27
+   4 |    243 |     32 |    162 | 16/81 | 16/81
+   5 |    729 |     64 |    486 | 32/243 | 32/243
+   6 |   2187 |    128 |   1458 | 64/729 | 64/729
+   7 |   6561 |    256 |   4374 | 128/2187 | 128/2187
+   8 |  19683 |    512 |  13122 | 256/6561 | 256/6561
+   (the representative a is used directly: m only needs x mod 3 for h0 and divides by 3 once, so x mod 3^(s) after one
+   step is a function of a mod 3^(s+1); parity plays no role in the residue law).
+OPEN: whether EVERY m-orbit (u != 1) ends at a leaf.  The 3-adic set of u with an infinite internal orbit has Haar measure 0
+   (survival (2/3)^L); an integer in it would be an odd u whose whole minimal-child line avoids 3Z -- a Collatz-type 3-adic
+   question, not decided here.  FINITE-EXACT: none below 10^6.
+   Typed analogy (m-orbit -> greedy G-orbit): source = the m-orbit u, m(u), m^2(u), ... in the odd tree; target = the
+   G-orbit in E; map = both pick the minimal exponent k (m: minimal odd-admissible k; G: minimal k with an internal image, any
+   parity); preserved = one-step residue Markov structure driven by u mod 27 -> image mod 9; lost = G never dies (it skips
+   leaves) and reaches 1 empirically, m dies at a leaf with density 1 and never returns to 1; sidecar = the step-count/peak
+   laws; test = compare survival (2/3)^L with G's stopping-time bound (7/9)^(J-1) of the E-graph lane.
+
+ALL CHECKS PASSED  total time 7.6s
