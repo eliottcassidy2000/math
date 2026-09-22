@@ -228,8 +228,11 @@ print("  FINITE-EXACT  e=1: holds for every n in [2,%d] (degenerate member)" % N
 # the session lead's Z_7(n) = n/rad(n) - 1 for n<200: explained and its first failure
 bad7 = [n for n in range(2, 300) if Z_f(lambda k: k ** 7, n) != n // rad(n) - 1]
 check(bad7 == [256], "Z_7 vs n/rad(n)-1 first failure should be 256, got %s" % bad7[:5])
+Z7_256 = Z_f(lambda k: k ** 7, 256)
+rad7_256 = 256 // rad(256) - 1
+check(Z7_256 == 63 and rad7_256 == 127, "Z_7(256)=%d, 256/rad(256)-1=%d (audit 2026-09-21: an earlier draft printed the literal 255)" % (Z7_256, rad7_256))
 print("  PROVED+FINITE-EXACT  Z_7(n) = n/rad(n)-1 iff every exponent a <= 7 (then n_7 = rad n);"
-      " first failure n=256=2^8: Z_7(256) = %d, 256/rad-1 = %d" % (Z_f(lambda k: k ** 7, 256), 255))
+      " first failure n=256=2^8: Z_7(256) = %d, 256/rad(256)-1 = %d" % (Z7_256, rad7_256))
 
 # density control
 import math
@@ -448,16 +451,19 @@ for p in primes:
 print("  FINITE-EXACT  primes p < %d, p = 3 mod 4, p > 3: sum floor(k^2/p) = (p-1)(2p-1)/6 - (p-1)/2 + h(-p)," % PMAX)
 print("                with h(-p) from reduced forms; Dirichlet's -(1/p) sum (a/p) a = h(-p) confirmed on the same range.")
 print("  FINITE-EXACT  primes p < %d, p = 1 mod 4: quadratic sum obeys the odd law exactly (deviation 0)." % PMAX)
-print("  REFUTED for p = 3: deviation -2/3 (w = 6 exception), h(-3) = 1.")
+print("  REFUTED for p = 3: the displayed formula is off by -2/3 (w = 6 exception); the odd-law deviation there is 1/3 = 2h/w, h(-3) = 1.")
 print("     p | sum floor(k^2/p) | odd-law value | deviation | h(-p)")
 for p, S2, law, dev, h in rows[:16]:
     print("   %3d | %16d | %13s | %9s | %d" % (p, S2, law, dev, h))
-print("   ... (all %d primes p = 3 mod 4 below %d checked)" % (len(rows), PMAX))
+print("   ... (all %d primes p = 3 mod 4 below %d checked, %d of them with p > 3)" % (len(rows), PMAX, len(rows) - 1))
+check(len(rows) == 50, "50 primes p = 3 mod 4 below 500 including p = 3, got %d" % len(rows))
 
 # even exponent e with gcd(e,p-1)=2 gives the same class number; e with gcd 4 and (p-1)/4 odd tabulated
 print()
-print("  General even e (PROVED above, verified): deviation D_e(p) = h(-p) whenever gcd(e,p-1) = 2 and p = 3 mod 4;")
-print("  D_e(p) = 0 whenever (p-1)/gcd(e,p-1) is even.")
+print("  General even e (PROVED above, verified): deviation D_e(p) = h(-p) whenever gcd(e,p-1) = 2, p = 3 mod 4 and p > 3;")
+print("  D_e(p) = 0 whenever (p-1)/gcd(e,p-1) is even.  These are IF statements only: the converse 'D_e = h(-p) only if g = 2'")
+print("  is REFUTED by (p, e) = (499, 6): g = 6, (p-1)/g = 83 odd, D_6(499) = 3 = h(-499) (audit 2026-09-21).")
+coinc = []
 for p in primes:
     for e in (2, 4, 6, 8, 10, 12):
         g = gcd(e, p - 1)
@@ -470,7 +476,10 @@ for p in primes:
             check(dev == 0, "D_e=0 case p=%d e=%d" % (p, e))
         elif g == 2 and p > 3:
             check(dev == class_number(-p), "D_e = h(-p) case p=%d e=%d" % (p, e))
-print("  FINITE-EXACT  all primes 3 <= p < %d, e in {2,4,6,8,10,12}: both cases verified." % PMAX)
+        elif p % 4 == 3 and p > 3 and dev == class_number(-p):
+            coinc.append((p, e, g, dev))
+check(coinc == [(499, 6, 6, 3), (499, 12, 6, 3)], "only-if witnesses: %s" % coinc)
+print("  FINITE-EXACT  all primes 3 <= p < %d, e in {2,4,6,8,10,12}: both IF cases verified; coincidences D_e = h(-p) with g >= 4: %s" % (PMAX, coinc))
 
 print()
 print("  Exploratory (FINITE-EXACT table, no formula claimed): g = 4, p = 5 (mod 8) [(p-1)/4 odd], e = 4:")
@@ -550,7 +559,8 @@ PROVED   S4 S(n) = n(n^2-P(n))/2, N3 = (n-1)^2(n-2)/4 + (P(n)-2n+1)/2, P(n) >= 2
          (3) iff prime; 4 N3 - (N1+N2) = 2(P-2n+1) - Z_3.
 CITED    S5 Dirichlet: sum (a/p) a = -p h(-p) for p = 3 mod 4, p > 3 (verified against reduced forms, p < 500).
 PROVED   S5 given Dirichlet: sum floor(k^2/p) = (p-1)(2p-1)/6 - (p-1)/2 + h(-p) (p = 3 mod 4, p > 3); deviation 0
-         for p = 1 mod 4; general even e: deviation h(-p) iff gcd(e,p-1)=2 and p=3 mod 4, else 0 when (p-1)/g even.
+         for p = 1 mod 4; general even e: deviation h(-p) IF gcd(e,p-1)=2, p=3 mod 4, p>3; 0 IF (p-1)/g even
+         (the 'only if' is REFUTED: D_6(499) = 3 = h(-499) with g = 6).
 REFUTED  even f obeys the odd law: minimal witness (f, n) = (x^2, 3); p = 3 quadratic formula (w=6).
 OPEN     closed form of the quartic deviation D_4(p) for p = 5 mod 8 (table only).
 PROVED   S6(a) negation conjugacy T_{-k}(-n) = -T_k(n).  S6(c): no object-level map from floor sums to

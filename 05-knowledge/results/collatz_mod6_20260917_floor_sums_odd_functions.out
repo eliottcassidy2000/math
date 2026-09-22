@@ -65,7 +65,7 @@ CITED (Gegenbauer 1885; Hardy-Wright Thm 333): the squarefree numbers have natur
   FINITE-EXACT  e=7: identity sum floor(k^e/n) = (sum k^e)/n - (n-1)/2 holds on [2,1200] iff squarefree
   FINITE-EXACT  e=9: identity sum floor(k^e/n) = (sum k^e)/n - (n-1)/2 holds on [2,1200] iff squarefree
   FINITE-EXACT  e=1: holds for every n in [2,1200] (degenerate member)
-  PROVED+FINITE-EXACT  Z_7(n) = n/rad(n)-1 iff every exponent a <= 7 (then n_7 = rad n); first failure n=256=2^8: Z_7(256) = 63, 256/rad-1 = 255
+  PROVED+FINITE-EXACT  Z_7(n) = n/rad(n)-1 iff every exponent a <= 7 (then n_7 = rad n); first failure n=256=2^8: Z_7(256) = 63, 256/rad(256)-1 = 127
   FINITE-EXACT  #squarefree <= 10^6 = 607926 ; 6/pi^2 * 10^6 = 607927.1 ; ratio 0.607926
 
 TYPED ANALOGY (the user's "6/pi^2" remark).  source: truth set of identity (1) (and of every odd-e identity);
@@ -75,7 +75,7 @@ TYPED ANALOGY (the user's "6/pi^2" remark).  source: truth set of identity (1) (
   profile (a_p) of n through n_e; cheapest decisive test: n = 4, 9, 12 (deviations 1/2, 1, 1/2 for e=3).
   The 6/pi^2 is CITED squarefree density; nothing about Collatz enters this map.
 
-[t=6.7s]
+[t=6.3s]
 
 ==============================================================================
 S3  Cube-root lattice reciprocity (PROVED); identity (2) <=> squarefree; exact integer cube roots
@@ -104,7 +104,7 @@ Cube roots are computed EXACTLY: since (ny)^{1/3} is nondecreasing in y, walk x 
      n=12: N1=   358 N2=   853 N1+N2=   1211 (n-1)^2(n-2)=   1210 Z_3= 1 ; N2-RHS(2)=1/2
      n=31: N1=  6960 N2= 19140 N1+N2=  26100 (n-1)^2(n-2)=  26100 Z_3= 0 ; N2-RHS(2)=0
      n=32: N1=  7676 N2= 21161 N1+N2=  28837 (n-1)^2(n-2)=  28830 Z_3= 7 ; N2-RHS(2)=7/2
-[t=7.9s]
+[t=7.4s]
 
 ==============================================================================
 S4  The bilinear sum via Pillai's gcd-sum (PROVED); identity (3) <=> prime; 4 N3 vs N1 + N2
@@ -147,7 +147,7 @@ COROLLARY S4b (PROVED).  4 N3(n) - (N1(n) + N2(n)) = 2 (P(n) - 2n + 1) - Z_3(n).
   are independent: n = 6 has Z_3 = 0, P-2n+1 = 4; n = 8 has Z_3 = 3, P-2n+1 = 5.
 
   FINITE-EXACT  S4b verified for 2 <= n < 150 (4 N3 = N1 + N2 at every prime)
-[t=8.7s]
+[t=8.1s]
 
 ==============================================================================
 S5  Even powers see class numbers: sum floor(k^2/p) = law + h(-p) for p = 3 (mod 4), p > 3
@@ -172,7 +172,7 @@ so the Dirichlet recollection is itself checked exactly on the finite universe.
   FINITE-EXACT  primes p < 500, p = 3 mod 4, p > 3: sum floor(k^2/p) = (p-1)(2p-1)/6 - (p-1)/2 + h(-p),
                 with h(-p) from reduced forms; Dirichlet's -(1/p) sum (a/p) a = h(-p) confirmed on the same range.
   FINITE-EXACT  primes p < 500, p = 1 mod 4: quadratic sum obeys the odd law exactly (deviation 0).
-  REFUTED for p = 3: deviation -2/3 (w = 6 exception), h(-3) = 1.
+  REFUTED for p = 3: the displayed formula is off by -2/3 (w = 6 exception); the odd-law deviation there is 1/3 = 2h/w, h(-3) = 1.
      p | sum floor(k^2/p) | odd-law value | deviation | h(-p)
      3 |                1 |           2/3 |       1/3 | 1
      7 |               11 |            10 |         1 | 1
@@ -190,11 +190,12 @@ so the Dirichlet recollection is itself checked exactly on the finite universe.
    103 |             3439 |          3434 |         5 | 5
    107 |             3713 |          3710 |         3 | 3
    127 |             5255 |          5250 |         5 | 5
-   ... (all 50 primes p = 3 mod 4 below 500 checked)
+   ... (all 50 primes p = 3 mod 4 below 500 checked, 49 of them with p > 3)
 
-  General even e (PROVED above, verified): deviation D_e(p) = h(-p) whenever gcd(e,p-1) = 2 and p = 3 mod 4;
-  D_e(p) = 0 whenever (p-1)/gcd(e,p-1) is even.
-  FINITE-EXACT  all primes 3 <= p < 500, e in {2,4,6,8,10,12}: both cases verified.
+  General even e (PROVED above, verified): deviation D_e(p) = h(-p) whenever gcd(e,p-1) = 2, p = 3 mod 4 and p > 3;
+  D_e(p) = 0 whenever (p-1)/gcd(e,p-1) is even.  These are IF statements only: the converse 'D_e = h(-p) only if g = 2'
+  is REFUTED by (p, e) = (499, 6): g = 6, (p-1)/g = 83 odd, D_6(499) = 3 = h(-499) (audit 2026-09-21).
+  FINITE-EXACT  all primes 3 <= p < 500, e in {2,4,6,8,10,12}: both IF cases verified; coincidences D_e = h(-p) with g >= 4: [(499, 6, 6, Fraction(3, 1)), (499, 12, 6, Fraction(3, 1))]
 
   Exploratory (FINITE-EXACT table, no formula claimed): g = 4, p = 5 (mod 8) [(p-1)/4 odd], e = 4:
      p | D_4(p) | h(-p) [disc -4p since p=1 mod 4] | h(-4p) | D_4 - 2h(-4p)
@@ -213,7 +214,7 @@ so the Dirichlet recollection is itself checked exactly on the finite universe.
    197 |     -2 | n/a | 10 | -22
   verdict: D_4(p) == h(-4p) for all p=5 mod 8 below 500: False ; D_4(p) == 2 h(-4p): False
   (Whatever the verdict, the quartic deviation is left OPEN as a formula; the quadratic one is CITED+verified.)
-[t=8.9s]
+[t=8.3s]
 
 ==============================================================================
 S6  Typing 'odd cycles ~ odd functions ~ odd powers'
@@ -265,11 +266,12 @@ PROVED   S4 S(n) = n(n^2-P(n))/2, N3 = (n-1)^2(n-2)/4 + (P(n)-2n+1)/2, P(n) >= 2
          (3) iff prime; 4 N3 - (N1+N2) = 2(P-2n+1) - Z_3.
 CITED    S5 Dirichlet: sum (a/p) a = -p h(-p) for p = 3 mod 4, p > 3 (verified against reduced forms, p < 500).
 PROVED   S5 given Dirichlet: sum floor(k^2/p) = (p-1)(2p-1)/6 - (p-1)/2 + h(-p) (p = 3 mod 4, p > 3); deviation 0
-         for p = 1 mod 4; general even e: deviation h(-p) iff gcd(e,p-1)=2 and p=3 mod 4, else 0 when (p-1)/g even.
+         for p = 1 mod 4; general even e: deviation h(-p) IF gcd(e,p-1)=2, p=3 mod 4, p>3; 0 IF (p-1)/g even
+         (the 'only if' is REFUTED: D_6(499) = 3 = h(-499) with g = 6).
 REFUTED  even f obeys the odd law: minimal witness (f, n) = (x^2, 3); p = 3 quadratic formula (w=6).
 OPEN     closed form of the quartic deviation D_4(p) for p = 5 mod 8 (table only).
 PROVED   S6(a) negation conjugacy T_{-k}(-n) = -T_k(n).  S6(c): no object-level map from floor sums to
          tournament odd cycles / Redei; shared involution proof template only.
 
-total time [t=8.9s]
+total time [t=8.3s]
 ALL CHECKS PASSED

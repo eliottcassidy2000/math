@@ -1,0 +1,77 @@
+AUDIT of lane floor_sums_odd_functions (independent recompute, 2026-09-21)
+
+== S1 odd-function floor law ==
+  S1 law holds for ['x', 'x^3', 'x^5', 'x^3+x', '3x', 'x^7-5x^3+x', 'x^3-100x (negative values)', '-7x^9+x (negative values)'], all 2 <= n <= 400 (Python floor is the true floor for negative values)
+  S1 n=1: both sides 0 (degenerate, consistent; the lane states n >= 2)
+  S1 generic odd functions Z -> Z with f(n-k) = -f(k) (mod n) only (random lifts): law holds 2 <= n < 80
+  S1 n=6, f=x^3: pairs (1,1,5),(2,2,4), fixed residue 3; n=12 fixed residue 0; n=4 fixed residue 0
+  S1 even f: n=2 holds for all four; minimal failures {'x^2': (3, 1, '2/3'), 'x^4': (3, 5, '14/3'), 'x^2+x': (3, 2, '13/6'), '2 (const)': (3, 0, '1/3')}
+  S1 hostile: even f obeying the odd law at some 3 <= n < 60 (accidental agreements): [('x^2', 5), ('x^2', 10), ('x^2', 13), ('x^2', 17), ('x^2', 25), ('x^2', 26), ('x^2', 29), ('x^2', 34), ('x^2', 37), ('x^2', 41), ('x^2', 50), ('x^2', 53), ('x^2', 58), ('x^4', 17), ('x^4', 34), ('x^4', 41), ('x^2+x', 4), ('x^2+x', 8), ('x^2+x', 16), ('x^2+x', 32), ('2 (const)', 4)]
+  S1 FINITE-EXACT: on [3,60) x^2 obeys the odd law exactly at n = [5, 10, 13, 17, 25, 26, 29, 34, 37, 41, 50, 53, 58] = {n : 4 !| n, every odd prime factor of n is 1 mod 4} (observation only; not proved)
+[t=0.4s]
+
+== S2 fixed layer Z_{x^e}(n) = n/n_e - 1, squarefree truth sets ==
+  S2 Z_{x^e}(n) = n/n_e - 1 for 1 <= e <= 9, 2 <= n <= 2000 (direct count via pow(k,e,n))
+  S2 truth set of (1) on [2,2000] = squarefree, 1214 values
+  S2 table (n, floor sum, RHS(1), Z_3) confirmed at n = 4, 8, 9, 12, 36; deviation = Z_3/2
+  S2 odd e = 3,5,7,9: zero-defect identity on [2,1200] iff squarefree; e = 1 holds for all n
+  S2 Z_7(n) = n/rad(n) - 1 on [2,300) fails only at n = 256: Z_7(256) = 63, 256/rad(256) - 1 = 127
+     CORRECTION: the lane script printed the hard-coded literal '256/rad-1 = 255' and the note repeated 255; rad(256) = 2 so the true value is 127 (256 = 2^8, n_7 = 2^2 = 4, Z_7 = 64 - 1 = 63)
+  S2 #squarefree <= 10^6 = 607926 by Moebius sum (matches the lane's sieve count)
+[t=9.2s]
+
+== S3 cube-root lattice reciprocity ==
+  S3 (i),(ii),(iii) and truth set of (2) = squarefree on [2,220] + 13 samples (binary-search cube roots)
+  S3 table rows (N1, N2, Z_3) at n = 7, 8, 9, 12, 31, 32 confirmed
+  S3 boundary: n=2 gives N1=N2=0=RHS(2); n=3 gives N1=N2=2=RHS(2)  (the recovered draft audit asserted RHS(2)(3)=1: that draft check was wrong, true value 2)
+[t=27.6s]
+
+== S4 bilinear sum, Pillai gcd-sum ==
+  S4 S(n) and N3(n) closed forms for 2 <= n <= 260; truth set of (3) = primes; P(n) = prod p^(a-1)((a+1)p-a) [= braids2 (5) + 2n - 1]
+  S4 P(n) >= 2n - 1 with equality iff n prime, all 2 <= n <= 5000
+  S4 table (P, N3) at n = 4,5,6,7,8,9,12,15 confirmed
+  S4b 4N3 - (N1+N2) = 2(P-2n+1) - Z_3 for 2 <= n < 150; witnesses n=6: (Z_3, P-2n+1) = (0,4); n=8: (3,5)
+[t=28.1s]
+
+== S5 even powers, class numbers ==
+  S5 reduced-form h(-p) agrees with the recollected table for all 24 primes p = 3 mod 4 below 200
+  S5 COUNT: 50 primes p = 3 mod 4 below 500 INCLUDING p = 3, hence 49 with p > 3 (the note's 'all 50 primes with p > 3' is off by one: the lane's row count includes p = 3)
+  S5 all 50 primes p = 3 mod 4 below 500 (p = 3 included): R - N = -(2p/w) h(-p) and deviation = 2h(-p)/w, w = 2 (p > 3), w = 6 (p = 3)
+  S5 all primes p = 1 mod 4 below 500: deviation 0
+  S5 the 16 table rows (S2, odd-law value, deviation, h) confirmed; p=3 formula value 5/3 vs actual 1 (error -2/3)
+  S5 hostile p = 2: sum_{k=1}^{1} floor(1/2) = 0 = odd-law value (2 is 'p = 3 mod 4'-free; excluded by p >= 3 anyway)
+  S5 e in {2,4,6,8,10,12}, all 3 <= p < 500: D_e(p) = (p-1)/2 - g*sum(H_g)/p; D_e = 0 when (p-1)/g even; D_e = 2h(-p)/w when g = 2
+  S5 ONLY-IF test of 'D_e(p) = h(-p) iff g = 2 and p = 3 mod 4': coincidences with g >= 4, (p-1)/g odd, p = 3 mod 4: [(499, 6, 6, Fraction(3, 1)), (499, 12, 6, Fraction(3, 1))]
+  S5 non-integer D_e with g >= 4, (p-1)/g odd (p, e, g, D_e): [(5, 4, 4, '6/5'), (5, 8, 4, '6/5'), (5, 12, 4, '6/5'), (7, 6, 6, '15/7'), (7, 12, 6, '15/7'), (11, 10, 10, '45/11'), (13, 12, 12, '66/13')]
+  S5 samples (p, e, g, D_e, h(-p)) with g >= 6, (p-1)/g odd: [(7, 6, 6, '15/7', 1), (19, 6, 6, '3', 1), (31, 6, 6, '9', 3), (43, 6, 6, '3', 1), (11, 10, 10, '45/11', 1), (31, 10, 10, '5', 3)]
+  S5 quartic p = 5 mod 8: exact form D_4(p) = -(2/p)(A_0 - A_2), A_m = sum_{ind a = m mod 4} a  (PROVED below in the note)
+     p | D_4 | A_0-A_2 | A_1-A_3 | |S(chi_4)|^2/(2p^2) | h(-4p)
+     5 |   6/5 |     -3 |     -1 | 1/5 | 2
+    13 |     2 |    -13 |    -13 | 1 | 2
+    29 |    -2 |     29 |    -29 | 1 | 6
+    37 |     2 |    -37 |     37 | 1 | 2
+    53 |    -2 |     53 |     53 | 1 | 6
+    61 |     2 |    -61 |     61 | 1 | 6
+   101 |    -6 |    303 |   -101 | 5 | 14
+   109 |    10 |   -545 |   -327 | 17 | 6
+   149 |     6 |   -447 |   -447 | 9 | 14
+   157 |     2 |   -157 |   -471 | 5 | 6
+   173 |    -6 |    519 |    173 | 5 | 14
+   181 |    14 |  -1267 |   -181 | 25 | 10
+   197 |    -2 |    197 |    591 | 5 | 10
+  S5 quartic table D_4 and h(-4p) confirmed for the 13 primes p = 5 mod 8 below 200; neither D_4 = h(-4p) nor 2h(-4p) holds for all p < 500
+  S5 |S(chi_4)|^2/(2p^2) integer for every p = 5 mod 8 with 5 < p < 500: True (p = 5: 1/5)
+[t=28.3s]
+
+== S6 negation conjugacy and the F3 cycle counts ==
+  S6a T_{-k}(-n) = -T_k(n) for k in {+-1,+-5,+-7,+-11,+-13,+-3,9}, odd |n| <= 4001, except the points 3n+k = 0: [(3, -1), (-3, 1), (9, -3)]
+     (so the conjugacy statement needs 3 !| k, or n != -k/3; the lane's k in {+-1,+-5,+-7,+-13} are all prime to 3)
+  S6a (5,7) cycle of 3n-1 <-> (-5,-7) cycle of 3n+1 confirmed
+  F3 census 3n+1, odd seeds |n0| <= 20001: 4 cycles found (lead's count 4); representatives [-1, 1, -5, -17]; lengths [1, 1, 2, 7]
+  F3 census 3n+5, odd seeds |n0| <= 20001: 9 cycles found (lead's count 9); representatives [1, -5, 5, 19, 23, -25, -85, 187, 347]; lengths [1, 1, 1, 3, 3, 2, 7, 17, 17]
+  F3 census 3n+7, odd seeds |n0| <= 20001: 5 cycles found (lead's count 5); representatives [5, -7, 7, -35, -119]; lengths [2, 1, 1, 2, 7]
+  F3 census 3n+11, odd seeds |n0| <= 20001: 7 cycles found (lead's count 7); representatives [1, -11, 11, 13, -19, -55, -187]; lengths [2, 1, 1, 8, 3, 2, 7]
+  F3 census 3n+13, odd seeds |n0| <= 20001: 13 cycles found (lead's count 13); representatives [1, -13, 13, -65, 131, 211, -221, 227, 251, 259, 283, 287, 319]; lengths [1, 1, 1, 2, 15, 5, 7, 5, 5, 5, 5, 5, 5]
+  F3 counts 4, 9, 5, 7, 13 reproduced as a FINITE bounded-seed census (lower bounds in principle; no cycle escapes the seed box up to 10^12)
+[t=28.4s]
+AUDIT ALL CHECKS PASSED
