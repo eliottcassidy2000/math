@@ -1,0 +1,214 @@
+==============================================================================
+Lane grand_circuit_typing: exact typing of the 'grand unified circuit' paste
+==============================================================================
+
+### P1  GIUGA'S CONJECTURE
+Statement (Giuga 1950; CITED): n>=2 is prime iff  sum_{i=1}^{n-1} i^(n-1) = -1 (mod n).
+Equivalence (Borwein-Borwein-Borwein-Girgensohn, Amer. Math. Monthly 103 (1996); CITED):
+  composite n satisfies the congruence iff n is squarefree and for every prime p | n:
+  (p-1) | (n/p - 1)  [Carmichael/Korselt]  and  p | (n/p - 1)  [Giuga].
+S1 FINITE-EXACT: direct sum computed for every n <= 30000.
+    every prime gives -1 (Fermat); composites with sum = -1 mod n: none
+    disagreements between the direct congruence and the BBBG criterion on composites: 0
+S2 PROVED (re-derivation of BBBG, elementary): with q=p^a || n and k=n-1>=a,
+    sum_{i=1}^{n-1} i^k = (n/q) * sum_{i=0}^{q-1} i^k (mod q); the non-units contribute 0 (k>=a).
+    a=1: sum of units i^k = -1 if (p-1)|k else 0 (mod p)  [primitive root].
+    a>=2, p odd: units = C_{p-1} x (1+pZ), k coprime to p permutes 1+pZ, whose sum is p^(a-1) mod p^a,
+      so the unit sum is 0 mod p^(a-1), never -1.  p=2, a>=2: k odd permutes the units, sum = 2^(2a-2) = 0 mod 2^a.
+    Hence the congruence forces n squarefree and, for each p|n, (p-1)|(n-1) and n/p = 1 (mod p),
+    i.e. (p-1)|(n/p-1) [since n-1 = n/p-1 mod p-1] and p|(n/p-1).  QED (this is BBBG's theorem).
+    lemma tables brute-forced: primes p<200 all k<p, prime powers q=p^a<=3000 (a>=2): failures = 0
+S3 FINITE-EXACT (n <= 100000): Carmichael numbers: 16, namely [561, 1105, 1729, 2465, 2821, 6601, 8911, 10585, 15841, 29341, 41041, 46657, 52633, 62745, 63973, 75361]
+    Giuga numbers (squarefree, p | n/p-1 for all p|n): [30, 858, 1722, 66198]
+      30 = 2*3*5,  sum 1/p - 1/n = 1
+      858 = 2*3*11*13,  sum 1/p - 1/n = 1
+      1722 = 2*3*7*41,  sum 1/p - 1/n = 1
+      66198 = 2*3*11*17*59,  sum 1/p - 1/n = 1
+    composites satisfying BBBG (= Carmichael AND Giuga): none
+    composites satisfying the user's 'p^2(p-1) | n-p for all p|n': none
+    composite n <= 100000 where the user's criterion and BBBG disagree: 0; all primes < 2000 satisfy the user's criterion (n-p=0): True
+S4 PROVED: the user's criterion is EQUIVALENT to BBBG.  n-p = p(n/p-1), so p^2(p-1) | n-p  iff
+    p(p-1) | n/p-1  iff  p | n/p-1 and (p-1) | n/p-1  (gcd(p,p-1)=1).  Squarefreeness is implied:
+    if p^2 | n then p | n/p, so p does not divide n/p-1.  For prime n the criterion is vacuous (n-p=0).
+    So the paste's restatement is correct (it is the BBBG criterion in one line), and no map to Collatz is involved.
+S5 FINITE-EXACT: trunk numbers t_j=(4^j-1)/3 (the R-orbit of 1, inherited), j=3..40 (t_2=5 is prime, vacuous):
+    j  t_j  squarefree  Korselt(all p-1 | t_j-1)  Giuga(all p | t_j/p-1)  first failing prime
+     3  21  True  False  False  7
+     4  85  True  False  False  5
+     5  341  True  False  False  11
+     6  1365  True  False  False  3
+     7  5461  True  False  False  43
+     8  21845  True  False  False  5
+     9  87381  False  False  False  3
+    10  349525  False  False  False  5
+    11  1398101  True  False  False  23
+    12  5592405  True  False  False  7
+    20  366503875925  False  False  False  5
+    30  18 digits  False  False  False  5
+    40  24 digits  False  False  False  5
+    trunk numbers j<=40 that are Korselt or Giuga: 0
+S6 SCOPE / NO MAP: gcd(n, R(n)) = gcd(n, 4n+1) = 1 and gcd(x_i, x_{i+1}) = 1 along odd orbits are one-line facts
+    about PAIRS; Giuga's criterion is a divisibility p | n/p-1 inside ONE n.  No object of the session carries it.
+
+### P2  ANKENY-ARTIN-CHOWLA
+Statement (Ankeny-Artin-Chowla, Ann. of Math. 56 (1952); CITED): for a prime p = 1 (mod 4) with fundamental
+  unit (t + u sqrt p)/2 of Q(sqrt p), p does not divide u.
+S7 FINITE-EXACT (PARI quadunit, ring of discriminant p): 211 primes p = 1 mod 4 in [5, 3000).
+    norm t^2 - p u^2 in {+4,-4} for all: True (norm -4 count: 211, +4 count: 0)
+    AAC violations (u = 0 mod p): none
+    largest 3-adic valuations of u:  p=5 v3=0 (u has 1 digits), p=13 v3=0 (u has 1 digits), p=17 v3=0 (u has 1 digits), p=29 v3=0 (u has 1 digits), p=37 v3=0 (u has 1 digits), p=41 v3=0 (u has 2 digits), p=53 v3=0 (u has 1 digits), p=61 v3=0 (u has 1 digits)
+    largest 2-adic valuations of u:  p=17 v2=1 (u has 1 digits), p=37 v2=1 (u has 1 digits), p=41 v2=1 (u has 2 digits), p=73 v2=1 (u has 3 digits), p=89 v2=1 (u has 3 digits), p=97 v2=1 (u has 4 digits), p=101 v2=1 (u has 1 digits), p=113 v2=1 (u has 3 digits)
+    histogram v3(u): {0: 211}
+    histogram v2(u): {0: 79, 1: 132}
+    expected for a 'random' integer: P(v3>=k)=3^-k, P(v2>=k)=2^-k; counts >= : v3>=1: 0 (70.3 expected), v3>=2: 0 (23.4), v2>=1: 132 (105.5), v2>=2: 0 (52.8)
+    longest u: p=2689 with 38 digits; u mod p = 2646
+S7b PROVED (why the histograms are degenerate): the fundamental unit of Q(sqrt p), p = 1 mod 4 prime, has norm -1
+    (CITED classical: Legendre/Dirichlet; re-seen: 211 of 211 above), so t^2 - p u^2 = -4.
+    mod 3: 3 | u would give t^2 = -4 = 2 mod 3, impossible; hence v3(u) = 0 ALWAYS.
+    mod 16: 4 | u would give t^2 = -4 = 12 mod 16, impossible; hence v2(u) <= 1 ALWAYS.
+    mod 8: t,u both odd forces 1 - p = -4 mod 8, i.e. p = 5 mod 8; so p = 1 mod 8 forces v2(u) = 1 (unit lies in Z[sqrt p]).
+    Census: p = 1 mod 8: 101 primes, all with v2(u)=1: True;  p = 5 mod 8: 110 primes, v2(u)=0 for 79 of them, v2(u)=1 for 31.
+    So 'large 2-adic or 3-adic valuation of u' cannot occur for ANY p: the only honest bridge to the session's 2/3-adic
+    objects is closed by the norm equation itself.  Nothing Collatz-like appears.
+S8 CITED: AAC verified for all p < 2*10^11 (van der Poorten, te Riele, Williams, Math. Comp. 70 (2001) and its 2003 corrigendum).
+    UNCITED-RECOLLECTION (not asserted): a 2024 preprint claiming a counterexample; not checked here.
+S9 SCOPE / NO MAP: no object of the session is a unit of a real quadratic field of prime discriminant p = 1 mod 4.
+    The Pell hypotenuses of THM-3341 are units of Z[sqrt 2] (discriminant 8): p=2 is excluded from AAC.
+    'Silver ratio', 'Fermat numbers 2^(2^r)+1', 'repunit prime breaks', 'reversed Hamiltonian edge': no map found.
+
+### P3  LITTLEWOOD
+Statement (Littlewood c.1930; CITED): for all real alpha, beta,  liminf_n n ||n alpha|| ||n beta|| = 0.
+  Einsiedler-Katok-Lindenstrauss, Ann. of Math. 164 (2006) (CITED): the exceptional set has Hausdorff dimension 0.
+S10 FINITE-EXACT: first 60 partial quotients of log_2 3 = [1, 1, 1, 2, 2, 3, 1, 5, 2, 23, 2, 2, 1, 1, 55, 1, 4, 3, 1, 1, 15, 1, 9, 2, 5, 7, 1, 1, 4, 8, 1, 11, 1, 20, 2, 1, 10, 1, 4, 1, 1, 1, 1, 1, 37, 4, 55, 1, 1, 49, 1, 1, 1, 4, 1, 3, 2, 3, 3, 1]
+    record partial quotients (index, value): [(0, 1), (3, 2), (5, 3), (7, 5), (9, 23), (14, 55)]
+    max of the first 60: 55; sum: 388; mean: 6.467 (Gauss-Kuzmin mean is infinite; median of a random a_i is 1)
+    convergents p/q (q<=10^12) and q*||q alpha||:
+      1/1  q||q a|| = 0.584963
+      2/1  q||q a|| = 0.415037
+      3/2  q||q a|| = 0.339850
+      8/5  q||q a|| = 0.375937
+      19/12  q||q a|| = 0.234600
+      65/41  q||q a|| = 0.678036
+      84/53  q||q a|| = 0.159665
+      485/306  q||q a|| = 0.451282
+      1054/665  q||q a|| = 0.041881
+      24727/15601  q||q a|| = 0.409514
+      50508/31867  q||q a|| = 0.334001
+      125743/79335  q||q a|| = 0.419450
+      176251/111202  q||q a|| = 0.577584
+      301994/190537  q||q a|| = 0.017732
+      16785921/10590737  q||q a|| = 0.799110
+      17087915/10781274  q||q a|| = 0.189869
+      85137581/53715833  q||q a|| = 0.269110
+      272500658/171928773  q||q a|| = 0.443799
+      357638239/225644606  q||q a|| = 0.547999
+      630138897/397573379  q||q a|| = 0.060709
+      9809721694/6189245291  q||q a|| = 0.854706
+      10439860591/6586818670  q||q a|| = 0.096198
+      103768467013/65470613321  q||q a|| = 0.435645
+      217976794617/137528045312  q||q a|| = 0.178303
+      1193652440098/753110839881  q||q a|| = 0.129252
+S11 PROVED (one line): if alpha has unbounded partial quotients then for every beta,
+    liminf n ||n alpha|| ||n beta|| <= liminf q_i ||q_i alpha|| * 1/2 <= liminf 1/(2 a_{i+1}) = 0.
+    Whether log_2 3 has unbounded partial quotients is OPEN (as for every non-quadratic algebraic-or-transcendental
+    constant not of Euler/e type); the pair (log_2 3, phi) is therefore OPEN, and phi = [1;1,1,...] has BOUNDED quotients,
+    so nothing about phi helps.
+S12 HEURISTIC (float64): min_{n<=10^6} n ||n log_2 3|| ||n phi|| = 0.000209 at n = 10946 (a Fibonacci number: True, index 21);
+    min_{n<=10^6} n ||n log_2 3|| = 0.017734, min n ||n phi|| = 0.381966 (phi's constant is 1/sqrt5 = 0.447214)
+S13 SCOPE / NO MAP: the Collatz discrepancy K_j - j log_2 3 involves ONE irrational (inhomogeneous, one-number).
+    Wythoff/Zeckendorf/golden ratio occur in none of the audited notes (grep: 'phi' there is an angle).
+    'Bragg peaks q_{m,n}=(2 pi/phi^2)(m+n phi)' is the Fibonacci-chain diffraction module (Levine-Steinhardt 1984,
+    CITED as a formula family; the paste's normalisation is not load-bearing); '5 pi/6 phase from 5 mod 6': no object.
+
+### P4  SARNAK
+Statement (Sarnak 2009/2010, CITED): for every zero-entropy topological dynamical system (X,T), every f in C(X)
+  and every x in X, (1/N) sum_{n<=N} mu(n) f(T^n x) -> 0.
+S14 CITED: the map T(x)=x/2 (even), (3x+1)/2 (odd) on Z_2 is topologically conjugate, via the parity-vector map Q,
+    to the one-sided full 2-shift (Lagarias 1985, Bernstein-Lagarias 1996); h_top = log 2 = 0.693147.
+    The greedy 3-adic map G of this session is conjugate to a 6-state SFT of entropy log 3 = 1.098612
+    (three_adic_g_map lane, Theorem 1.3).  Both have positive entropy: Sarnak's hypothesis fails; no statement follows.
+S15 PROVED + FINITE-EXACT: Q is a bijection, so there is a 2-adic x with parity(T^k x) = [mu(k+1) = 1] for ALL k.
+    Truncation: x = 890931253 mod 2^32 realises the first 32 values of [mu=1] = 10000100010001100000110001000000
+    For that x the Mobius correlation of f = parity is (1/N) sum_{mu(n)=1} 1 -> 3/pi^2 = 0.303964, not 0:
+    Mobius disjointness is FALSE for the Collatz system on Z_2 (as for any full shift).  Such x is irrational.
+S16 FINITE-EXACT (N=1000000): c_j = (1/N) sum_{n<=N} mu(n) (-1)^{parity(T^j n)}, and the periodicity check mod 2^(j+1).
+    j=0  c_j = -0.000068   parity mean = 0.500000   parity(T^j n) periodic mod 2: True
+    j=1  c_j = +0.000344   parity mean = 0.500000   parity(T^j n) periodic mod 4: True
+    j=2  c_j = +0.000306   parity mean = 0.500000   parity(T^j n) periodic mod 8: True
+    j=3  c_j = +0.000086   parity mean = 0.500000   parity(T^j n) periodic mod 16: True
+    j=4  c_j = -0.000054   parity mean = 0.500000   parity(T^j n) periodic mod 32: True
+    j=5  c_j = +0.000600   parity mean = 0.500000   parity(T^j n) periodic mod 64: True
+    j=6  c_j = -0.000760   parity mean = 0.499992   parity(T^j n) periodic mod 128: True
+    PROVED (via CITED PNT in arithmetic progressions, Landau): each c_j -> 0 because parity(T^j n) is periodic mod 2^(j+1),
+    hence a finite combination of residue-class indicators, each Mobius-orthogonal.  This is the zero-entropy rotation on
+    Z/2^(j+1), not the Collatz dynamics, and says nothing about Collatz.
+S17 SCOPE / NO MAP: 'F=S+U' is the divisor identity F=S+U iff N in {p,p^3,p^2qr} (divisor_balance lane); the 4-vertex
+    tournament matrix is the cell_ordering lane's score-profile object; B^3=-I is THM-4139's lift of the 3-cycle of
+    x^2-29/16 (zsigmondy_triad lane).  None is a dynamical system on which mu acts; no 'trapping loop' is defined.
+
+### P5  THE BOX RING AND THE COPRIME FIBRES
+S18 PROVED: a boxtimes b := ab+a+b satisfies (a boxtimes b)+1 = (a+1)(b+1) (checked on [-10,10]^2, 0 failures).
+    With a boxplus b := a+b+1 the map x -> x+1 is a ring ISOMORPHISM (Z, boxplus, boxtimes) -> (Z, +, *);
+    zero is -1, one is 0, the diagonal a boxtimes a = a^2+2a = (a+1)^2-1.  Transport preserves everything and adds nothing.
+S19 REFUTED (as a map): R(x)=4x+1 is not c boxtimes x = (c+1)x+c for any c (needs c+1=4 and c=1): solutions c in [-50,50]: []
+S20 PROVED (inherited braid): x_j = 4^j x_0 + (4^j-1)/3 = R^j(x_0); gcd(x_j, x_{j+1}) = gcd(x_j, 4x_j+1) = 1 (max over j<30, x_0=7: 1).
+S21 PROVED: consecutive odd iterates x, x' = (3x+1)/2^k satisfy gcd(x,x') | gcd(x,3x+1) = 1 (checked on 326623 pairs, max gcd 1).
+    Both are odd, so the pair is a point of the odd-coprime chart (s,t)=(m+n,m-n) of the pythagorean_semicircle lane,
+    i.e. it determines one PPT ((s^2-t^2)/2, st, (s^2+t^2)/2) after ordering; that is the orbit-PPT lane's input.
+    For Giuga it is content-free (S6).
+
+### P6  TYPING GREPS: '17-vertex tournament capacity' and 'S^6 / S_2 x S_3 projective lift'
+S22 FINITE-EXACT (repo grep): 182 canon theorems have 'tournament' in their title; with '17'/'seventeen' in the title: 10
+      THM-1450-odd-is-sin-is-skew-the-heptad-spectrum.md :: "ODD = SIN = SKEW: x(x^2+7)(x^4+14x^2+17) IS THE MODAL 7-TOURNAMENT SPECTRUM. All its roots are purely imaginary, the signature of a real sk
+      THM-1455-skew-pfaffian-parity-and-a-mod-16-law.md :: "THE ODD/EVEN ↔ sin/cos LINK IS THE PFAFFIAN, and it yields a proved mod-16 law for odd n. (0) THE NEXT STEP, done: three vertex-disjoint od
+      THM-1575-the-circulant-skew-spectrum-is-a-tangent.md :: "THE CIRCULANT TOURNAMENT'S SKEW SPECTRUM IS A TANGENT, IN CLOSED FORM — and the eigenvalue equation IS the multiple-angle formula. For the 
+      THM-1780-H-leaves-the-spectral-ladder-at-n6.md :: "H LEAVES THE MOMENT-NULLCONE LADDER AT EXACTLY n = 6 — the Hamiltonian-path count is spectral (a function of the trace moments) for n ≤ 5 a
+      THM-1862-order-join-reduction-principle.md :: "The ORDER-JOIN REDUCTION PRINCIPLE for tournament-invariant inequalities: order-join T₁▷T₂ (T₁ beats all of T₂) makes c₃, tr, scc ADDITIVE 
+      THM-1865-h-not-score-determined-and-inflation-neutrality.md :: "H IS NOT SCORE-DETERMINED (correcting THM-1820), AND THE INFLATION-NEUTRALITY LEMMA (converging with boxeph THM-1855). PRIMARY RESULT (B, t
+      THM-1870-the-cycle-count-spectral-boundary-is-the-hamiltonian-length.md :: "THE CYCLE-COUNT SPECTRAL BOUNDARY IS THE HAMILTONIAN LENGTH — the simple directed k-cycle count c_k is spectral (a function of the trace mo
+      THM-1980-the-two-adic-edge-of-the-redei-count.md :: "THE 2-ADIC EDGE OF THE REDEI COUNT — the spectrum resolves H to a 2-adic depth that DECAYS to a single bit, so Redei's parity is the LAST f
+      THM-871-fermat-rung-rigidity.md :: FERMAT-RUNG RIGIDITY AND THE SEDENION CENSUS — for prime n with n−1 a 2-power (Fermat primes: the CD rungs 3, 5, 17, 257, …), the multiplier
+      THM-893-eroded-diamond-coincidence.md :: THE ERODED-DIAMOND COINCIDENCE THEOREM — the THM-789 fingerprint twins (x,y) = (13,9) and (17,13) over U₀ have LITERALLY EQUAL eroded diamon
+    tournament-titled theorems whose BODY mentions a 17-vertex / order-17 / n=17 tournament: 2 ['THM-868-e8-bridge-score-lattice.md', 'THM-871-fermat-rung-rigidity.md']
+    (the ten title hits above are: 17 as a coefficient of the 7-tournament spectrum x^4+14x^2+17, the Fermat prime 17,
+    the fingerprint twin (17,13), and mod-16/2-adic statements; none defines a capacity of a 17-vertex tournament.)
+    results notes mentioning 'S^6', 'S6 monodromy' or 'S_2 x S_3': 5 (all are audits of the same paste family).
+S23 SCOPE: the only '17's in tournament context in this session are the h-value 17 attained at n=6 (scaffolding_audit,
+    section 5 census; h-spectrum = odds minus {7,21}, THM-1370/THM-1745) and the class 17 of the mod-30 wheel.
+    No 'capacity' of a 17-vertex tournament is defined anywhere: no object.
+S24 SCOPE: 'S^6 with an S_2 x S_3 projective lift': S^6 (the 6-sphere) appears in no note; S_2 x S_3 = C2 x S3 (order 12)
+    appears once, as the actual automorphism action on the fruit curve triple (catalan_elliptic lane, section 4); a
+    'projective lift of S^6' is undefined.  The blueprint audit already found no S6 monodromy.  No object.
+
+### P7  THE HONEST BRIDGE: 2^K - 3^L ALONG THE CONVERGENTS OF log_2 3
+S25 FINITE-EXACT: a convergent p/q of log_2 3 gives 2^p ~ 3^q, i.e. (K,L)=(p,q); the cycle gate n_0 = bB/(2^K-3^L)
+    (inherited) needs 2^K - 3^L small and positive relative to B.  Table: (K,L) = (p,q), sign and |2^K-3^L|/3^L:
+      K=  1 L=  1  sign -1  |2^K-3^L|/3^L = 3.333e-01  (1 digits)
+      K=  2 L=  1  sign +1  |2^K-3^L|/3^L = 3.333e-01  (1 digits)
+      K=  3 L=  2  sign -1  |2^K-3^L|/3^L = 1.111e-01  (1 digits)
+      K=  8 L=  5  sign +1  |2^K-3^L|/3^L = 5.350e-02  (2 digits)
+      K= 19 L= 12  sign -1  |2^K-3^L|/3^L = 1.346e-02  (4 digits)
+      K= 65 L= 41  sign +1  |2^K-3^L|/3^L = 1.153e-02  (18 digits)
+      K= 84 L= 53  sign -1  |2^K-3^L|/3^L = 2.086e-03  (23 digits)
+      K=485 L=306  sign +1  |2^K-3^L|/3^L = 1.023e-03  (144 digits)
+      K=1054 L=665  sign -1  |2^K-3^L|/3^L = 4.365e-05  (313 digits)
+      K=24727 L=15601  sign +1  |2^K-3^L|/3^L = 1.819e-05  (7439 digits)
+      K=50508 L=31867  sign -1  |2^K-3^L|/3^L = 7.265e-06  (15200 digits)
+      K=125743 L=79335  sign +1  |2^K-3^L|/3^L = 3.665e-06  (37847 digits)
+      K=176251 L=111202  sign -1  |2^K-3^L|/3^L = 3.600e-06  (53052 digits)
+      K=301994 L=190537  sign +1  |2^K-3^L|/3^L = 6.451e-08  (90903 digits)
+    CITED: Baker-type lower bounds |2^K-3^L| > 2^K / K^C (Pillai's problem; Stroeker-Tijdeman 1982 for this pair) are the
+    only formal input that bounds cycle lengths through the gate; that is the pillai lane's object, not this lane's.
+
+### VERDICT
+V1 Giuga: statement CITED; BBBG equivalence re-PROVED and FINITE-EXACT n<=30000 direct, n<=10^5 by criterion; user's
+   'p^2(p-1) | n-p' PROVED equivalent to BBBG; link to Collatz fibres/T_{n-2} bits: NO MAP.
+V2 AAC: statement CITED; FINITE-EXACT no violation p<3000 (211 primes); link to Pell/Fermat/repunits: NO MAP (p=2 excluded).
+V3 Littlewood: statement CITED; only one irrational in Collatz (log_2 3); phi absent; trivial direction PROVED; NO MAP.
+V4 Sarnak: statement CITED; Collatz on Z_2 and G on Z_3^x have entropy log 2, log 3 > 0 (CITED/PROVED); disjointness
+   explicitly FALSE on Z_2 (S15); finite-j correlations are trivial PNT-in-APs (S16); NO MAP.
+V5 The three proposed formalisations (Mobius-Collatz matrix; simultaneous approximation of (log_2 3, phi); T_{n-2} bits
+   vs Giuga factors) each lack a map.  Formalisable honest bridges: Baker/Pillai on 2^K-3^L (pillai lane) and the
+   E-graph / G mirror (this session).
+
+ALL CHECKS PASSED
