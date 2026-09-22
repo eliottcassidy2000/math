@@ -1,0 +1,2333 @@
+{
+  "status": "PASS",
+  "source_sha256_lf": "60747059bdf7a21baa409875c270ea3d499ec72ec8b0069cb52d7559fbf97bae",
+  "scope": "Complete labelled order-four universe; two explicitly named order-five hostiles only.",
+  "universe": {
+    "vertices": [
+      0,
+      1,
+      2,
+      3
+    ],
+    "edge_order": [
+      [
+        0,
+        1
+      ],
+      [
+        0,
+        2
+      ],
+      [
+        0,
+        3
+      ],
+      [
+        1,
+        2
+      ],
+      [
+        1,
+        3
+      ],
+      [
+        2,
+        3
+      ]
+    ],
+    "masks": [
+      0,
+      63
+    ],
+    "label_permutations": 24,
+    "vertex_switches_distinct": 8,
+    "gauge_pair_checks": 4096,
+    "order_five_controls": [
+      "transitive except 4->0",
+      "cyclic regular increments 1,2"
+    ]
+  },
+  "isomorphism_type_counts": {
+    "sink_cycle": 8,
+    "source_cycle": 8,
+    "strong": 24,
+    "transitive": 24
+  },
+  "fixed_path_table": [
+    {
+      "a": 0,
+      "b": 0,
+      "c": 0,
+      "mask": 41,
+      "type": "strong",
+      "hamilton_paths": 5
+    },
+    {
+      "a": 1,
+      "b": 0,
+      "c": 0,
+      "mask": 43,
+      "type": "strong",
+      "hamilton_paths": 5
+    },
+    {
+      "a": 0,
+      "b": 0,
+      "c": 1,
+      "mask": 45,
+      "type": "strong",
+      "hamilton_paths": 5
+    },
+    {
+      "a": 1,
+      "b": 0,
+      "c": 1,
+      "mask": 47,
+      "type": "source_cycle",
+      "hamilton_paths": 3
+    },
+    {
+      "a": 0,
+      "b": 1,
+      "c": 0,
+      "mask": 57,
+      "type": "strong",
+      "hamilton_paths": 5
+    },
+    {
+      "a": 1,
+      "b": 1,
+      "c": 0,
+      "mask": 59,
+      "type": "strong",
+      "hamilton_paths": 5
+    },
+    {
+      "a": 0,
+      "b": 1,
+      "c": 1,
+      "mask": 61,
+      "type": "sink_cycle",
+      "hamilton_paths": 3
+    },
+    {
+      "a": 1,
+      "b": 1,
+      "c": 1,
+      "mask": 63,
+      "type": "transitive",
+      "hamilton_paths": 1
+    }
+  ],
+  "fixed_cycle_masks": [
+    41,
+    43,
+    57,
+    59
+  ],
+  "switching_orbits": [
+    {
+      "representative": 0,
+      "members": [
+        0,
+        7,
+        25,
+        30,
+        42,
+        45,
+        51,
+        52
+      ],
+      "types": {
+        "strong": 4,
+        "transitive": 4
+      },
+      "signature": [
+        0,
+        0,
+        0
+      ],
+      "determinant": 1,
+      "path_representative": 45
+    },
+    {
+      "representative": 1,
+      "members": [
+        1,
+        6,
+        24,
+        31,
+        43,
+        44,
+        50,
+        53
+      ],
+      "types": {
+        "strong": 4,
+        "transitive": 4
+      },
+      "signature": [
+        1,
+        1,
+        0
+      ],
+      "determinant": 1,
+      "path_representative": 43
+    },
+    {
+      "representative": 2,
+      "members": [
+        2,
+        5,
+        27,
+        28,
+        40,
+        47,
+        49,
+        54
+      ],
+      "types": {
+        "sink_cycle": 4,
+        "source_cycle": 4
+      },
+      "signature": [
+        1,
+        0,
+        1
+      ],
+      "determinant": 9,
+      "path_representative": 47
+    },
+    {
+      "representative": 3,
+      "members": [
+        3,
+        4,
+        26,
+        29,
+        41,
+        46,
+        48,
+        55
+      ],
+      "types": {
+        "strong": 4,
+        "transitive": 4
+      },
+      "signature": [
+        0,
+        1,
+        1
+      ],
+      "determinant": 1,
+      "path_representative": 41
+    },
+    {
+      "representative": 8,
+      "members": [
+        8,
+        15,
+        17,
+        22,
+        34,
+        37,
+        59,
+        60
+      ],
+      "types": {
+        "strong": 4,
+        "transitive": 4
+      },
+      "signature": [
+        1,
+        0,
+        0
+      ],
+      "determinant": 1,
+      "path_representative": 59
+    },
+    {
+      "representative": 9,
+      "members": [
+        9,
+        14,
+        16,
+        23,
+        35,
+        36,
+        58,
+        61
+      ],
+      "types": {
+        "sink_cycle": 4,
+        "source_cycle": 4
+      },
+      "signature": [
+        0,
+        1,
+        0
+      ],
+      "determinant": 9,
+      "path_representative": 61
+    },
+    {
+      "representative": 10,
+      "members": [
+        10,
+        13,
+        19,
+        20,
+        32,
+        39,
+        57,
+        62
+      ],
+      "types": {
+        "strong": 4,
+        "transitive": 4
+      },
+      "signature": [
+        0,
+        0,
+        1
+      ],
+      "determinant": 1,
+      "path_representative": 57
+    },
+    {
+      "representative": 11,
+      "members": [
+        11,
+        12,
+        18,
+        21,
+        33,
+        38,
+        56,
+        63
+      ],
+      "types": {
+        "strong": 4,
+        "transitive": 4
+      },
+      "signature": [
+        1,
+        1,
+        1
+      ],
+      "determinant": 1,
+      "path_representative": 63
+    }
+  ],
+  "all64": [
+    {
+      "mask": 0,
+      "edge_bits": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "type": "transitive",
+      "outdegrees_sorted": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "directed_triangles": 0,
+      "hamilton_paths": 1,
+      "hamilton_cycles_mod_rotation": 0,
+      "automorphisms": 1,
+      "pfaffian": 1,
+      "determinant": 1,
+      "isomorphism_representative": 0,
+      "switch_signature": [
+        0,
+        0,
+        0
+      ],
+      "path_gauge": 45
+    },
+    {
+      "mask": 1,
+      "edge_bits": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "type": "transitive",
+      "outdegrees_sorted": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "directed_triangles": 0,
+      "hamilton_paths": 1,
+      "hamilton_cycles_mod_rotation": 0,
+      "automorphisms": 1,
+      "pfaffian": -1,
+      "determinant": 1,
+      "isomorphism_representative": 0,
+      "switch_signature": [
+        1,
+        1,
+        0
+      ],
+      "path_gauge": 43
+    },
+    {
+      "mask": 2,
+      "edge_bits": [
+        0,
+        1,
+        0,
+        0,
+        0,
+        0
+      ],
+      "type": "source_cycle",
+      "outdegrees_sorted": [
+        1,
+        1,
+        1,
+        3
+      ],
+      "directed_triangles": 1,
+      "hamilton_paths": 3,
+      "hamilton_cycles_mod_rotation": 0,
+      "automorphisms": 3,
+      "pfaffian": 3,
+      "determinant": 9,
+      "isomorphism_representative": 2,
+      "switch_signature": [
+        1,
+        0,
+        1
+      ],
+      "path_gauge": 47
+    },
+    {
+      "mask": 3,
+      "edge_bits": [
+        1,
+        1,
+        0,
+        0,
+        0,
+        0
+      ],
+      "type": "transitive",
+      "outdegrees_sorted": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "directed_triangles": 0,
+      "hamilton_paths": 1,
+      "hamilton_cycles_mod_rotation": 0,
+      "automorphisms": 1,
+      "pfaffian": 1,
+      "determinant": 1,
+      "isomorphism_representative": 0,
+      "switch_signature": [
+        0,
+        1,
+        1
+      ],
+      "path_gauge": 41
+    },
+    {
+      "mask": 4,
+      "edge_bits": [
+        0,
+        0,
+        1,
+        0,
+        0,
+        0
+      ],
+      "type": "strong",
+      "outdegrees_sorted": [
+        1,
+        1,
+        2,
+        2
+      ],
+      "directed_triangles": 2,
+      "hamilton_paths": 5,
+      "hamilton_cycles_mod_rotation": 1,
+      "automorphisms": 1,
+      "pfaffian": -1,
+      "determinant": 1,
+      "isomorphism_representative": 4,
+      "switch_signature": [
+        0,
+        1,
+        1
+      ],
+      "path_gauge": 41
+    },
+    {
+      "mask": 5,
+      "edge_bits": [
+        1,
+        0,
+        1,
+        0,
+        0,
+        0
+      ],
+      "type": "sink_cycle",
+      "outdegrees_sorted": [
+        0,
+        2,
+        2,
+        2
+      ],
+      "directed_triangles": 1,
+      "hamilton_paths": 3,
+      "hamilton_cycles_mod_rotation": 0,
+      "automorphisms": 3,
+      "pfaffian": -3,
+      "determinant": 9,
+      "isomorphism_representative": 5,
+      "switch_signature": [
+        1,
+        0,
+        1
+      ],
+      "path_gauge": 47
+    },
+    {
+      "mask": 6,
+      "edge_bits": [
+        0,
+        1,
+        1,
+        0,
+        0,
+        0
+      ],
+      "type": "strong",
+      "outdegrees_sorted": [
+        1,
+        1,
+        2,
+        2
+      ],
+      "directed_triangles": 2,
+      "hamilton_paths": 5,
+      "hamilton_cycles_mod_rotation": 1,
+      "automorphisms": 1,
+      "pfaffian": 1,
+      "determinant": 1,
+      "isomorphism_representative": 4,
+      "switch_signature": [
+        1,
+        1,
+        0
+      ],
+      "path_gauge": 43
+    },
+    {
+      "mask": 7,
+      "edge_bits": [
+        1,
+        1,
+        1,
+        0,
+        0,
+        0
+      ],
+      "type": "transitive",
+      "outdegrees_sorted": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "directed_triangles": 0,
+      "hamilton_paths": 1,
+      "hamilton_cycles_mod_rotation": 0,
+      "automorphisms": 1,
+      "pfaffian": -1,
+      "determinant": 1,
+      "isomorphism_representative": 0,
+      "switch_signature": [
+        0,
+        0,
+        0
+      ],
+      "path_gauge": 45
+    },
+    {
+      "mask": 8,
+      "edge_bits": [
+        0,
+        0,
+        0,
+        1,
+        0,
+        0
+      ],
+      "type": "transitive",
+      "outdegrees_sorted": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "directed_triangles": 0,
+      "hamilton_paths": 1,
+      "hamilton_cycles_mod_rotation": 0,
+      "automorphisms": 1,
+      "pfaffian": -1,
+      "determinant": 1,
+      "isomorphism_representative": 0,
+      "switch_signature": [
+        1,
+        0,
+        0
+      ],
+      "path_gauge": 59
+    },
+    {
+      "mask": 9,
+      "edge_bits": [
+        1,
+        0,
+        0,
+        1,
+        0,
+        0
+      ],
+      "type": "source_cycle",
+      "outdegrees_sorted": [
+        1,
+        1,
+        1,
+        3
+      ],
+      "directed_triangles": 1,
+      "hamilton_paths": 3,
+      "hamilton_cycles_mod_rotation": 0,
+      "automorphisms": 3,
+      "pfaffian": -3,
+      "determinant": 9,
+      "isomorphism_representative": 2,
+      "switch_signature": [
+        0,
+        1,
+        0
+      ],
+      "path_gauge": 61
+    },
+    {
+      "mask": 10,
+      "edge_bits": [
+        0,
+        1,
+        0,
+        1,
+        0,
+        0
+      ],
+      "type": "transitive",
+      "outdegrees_sorted": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "directed_triangles": 0,
+      "hamilton_paths": 1,
+      "hamilton_cycles_mod_rotation": 0,
+      "automorphisms": 1,
+      "pfaffian": 1,
+      "determinant": 1,
+      "isomorphism_representative": 0,
+      "switch_signature": [
+        0,
+        0,
+        1
+      ],
+      "path_gauge": 57
+    },
+    {
+      "mask": 11,
+      "edge_bits": [
+        1,
+        1,
+        0,
+        1,
+        0,
+        0
+      ],
+      "type": "transitive",
+      "outdegrees_sorted": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "directed_triangles": 0,
+      "hamilton_paths": 1,
+      "hamilton_cycles_mod_rotation": 0,
+      "automorphisms": 1,
+      "pfaffian": -1,
+      "determinant": 1,
+      "isomorphism_representative": 0,
+      "switch_signature": [
+        1,
+        1,
+        1
+      ],
+      "path_gauge": 63
+    },
+    {
+      "mask": 12,
+      "edge_bits": [
+        0,
+        0,
+        1,
+        1,
+        0,
+        0
+      ],
+      "type": "strong",
+      "outdegrees_sorted": [
+        1,
+        1,
+        2,
+        2
+      ],
+      "directed_triangles": 2,
+      "hamilton_paths": 5,
+      "hamilton_cycles_mod_rotation": 1,
+      "automorphisms": 1,
+      "pfaffian": 1,
+      "determinant": 1,
+      "isomorphism_representative": 4,
+      "switch_signature": [
+        1,
+        1,
+        1
+      ],
+      "path_gauge": 63
+    },
+    {
+      "mask": 13,
+      "edge_bits": [
+        1,
+        0,
+        1,
+        1,
+        0,
+        0
+      ],
+      "type": "strong",
+      "outdegrees_sorted": [
+        1,
+        1,
+        2,
+        2
+      ],
+      "directed_triangles": 2,
+      "hamilton_paths": 5,
+      "hamilton_cycles_mod_rotation": 1,
+      "automorphisms": 1,
+      "pfaffian": -1,
+      "determinant": 1,
+      "isomorphism_representative": 4,
+      "switch_signature": [
+        0,
+        0,
+        1
+      ],
+      "path_gauge": 57
+    },
+    {
+      "mask": 14,
+      "edge_bits": [
+        0,
+        1,
+        1,
+        1,
+        0,
+        0
+      ],
+      "type": "sink_cycle",
+      "outdegrees_sorted": [
+        0,
+        2,
+        2,
+        2
+      ],
+      "directed_triangles": 1,
+      "hamilton_paths": 3,
+      "hamilton_cycles_mod_rotation": 0,
+      "automorphisms": 3,
+      "pfaffian": 3,
+      "determinant": 9,
+      "isomorphism_representative": 5,
+      "switch_signature": [
+        0,
+        1,
+        0
+      ],
+      "path_gauge": 61
+    },
+    {
+      "mask": 15,
+      "edge_bits": [
+        1,
+        1,
+        1,
+        1,
+        0,
+        0
+      ],
+      "type": "transitive",
+      "outdegrees_sorted": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "directed_triangles": 0,
+      "hamilton_paths": 1,
+      "hamilton_cycles_mod_rotation": 0,
+      "automorphisms": 1,
+      "pfaffian": 1,
+      "determinant": 1,
+      "isomorphism_representative": 0,
+      "switch_signature": [
+        1,
+        0,
+        0
+      ],
+      "path_gauge": 59
+    },
+    {
+      "mask": 16,
+      "edge_bits": [
+        0,
+        0,
+        0,
+        0,
+        1,
+        0
+      ],
+      "type": "sink_cycle",
+      "outdegrees_sorted": [
+        0,
+        2,
+        2,
+        2
+      ],
+      "directed_triangles": 1,
+      "hamilton_paths": 3,
+      "hamilton_cycles_mod_rotation": 0,
+      "automorphisms": 3,
+      "pfaffian": 3,
+      "determinant": 9,
+      "isomorphism_representative": 5,
+      "switch_signature": [
+        0,
+        1,
+        0
+      ],
+      "path_gauge": 61
+    },
+    {
+      "mask": 17,
+      "edge_bits": [
+        1,
+        0,
+        0,
+        0,
+        1,
+        0
+      ],
+      "type": "strong",
+      "outdegrees_sorted": [
+        1,
+        1,
+        2,
+        2
+      ],
+      "directed_triangles": 2,
+      "hamilton_paths": 5,
+      "hamilton_cycles_mod_rotation": 1,
+      "automorphisms": 1,
+      "pfaffian": 1,
+      "determinant": 1,
+      "isomorphism_representative": 4,
+      "switch_signature": [
+        1,
+        0,
+        0
+      ],
+      "path_gauge": 59
+    },
+    {
+      "mask": 18,
+      "edge_bits": [
+        0,
+        1,
+        0,
+        0,
+        1,
+        0
+      ],
+      "type": "strong",
+      "outdegrees_sorted": [
+        1,
+        1,
+        2,
+        2
+      ],
+      "directed_triangles": 2,
+      "hamilton_paths": 5,
+      "hamilton_cycles_mod_rotation": 1,
+      "automorphisms": 1,
+      "pfaffian": 1,
+      "determinant": 1,
+      "isomorphism_representative": 4,
+      "switch_signature": [
+        1,
+        1,
+        1
+      ],
+      "path_gauge": 63
+    },
+    {
+      "mask": 19,
+      "edge_bits": [
+        1,
+        1,
+        0,
+        0,
+        1,
+        0
+      ],
+      "type": "strong",
+      "outdegrees_sorted": [
+        1,
+        1,
+        2,
+        2
+      ],
+      "directed_triangles": 2,
+      "hamilton_paths": 5,
+      "hamilton_cycles_mod_rotation": 1,
+      "automorphisms": 1,
+      "pfaffian": -1,
+      "determinant": 1,
+      "isomorphism_representative": 4,
+      "switch_signature": [
+        0,
+        0,
+        1
+      ],
+      "path_gauge": 57
+    },
+    {
+      "mask": 20,
+      "edge_bits": [
+        0,
+        0,
+        1,
+        0,
+        1,
+        0
+      ],
+      "type": "strong",
+      "outdegrees_sorted": [
+        1,
+        1,
+        2,
+        2
+      ],
+      "directed_triangles": 2,
+      "hamilton_paths": 5,
+      "hamilton_cycles_mod_rotation": 1,
+      "automorphisms": 1,
+      "pfaffian": 1,
+      "determinant": 1,
+      "isomorphism_representative": 4,
+      "switch_signature": [
+        0,
+        0,
+        1
+      ],
+      "path_gauge": 57
+    },
+    {
+      "mask": 21,
+      "edge_bits": [
+        1,
+        0,
+        1,
+        0,
+        1,
+        0
+      ],
+      "type": "strong",
+      "outdegrees_sorted": [
+        1,
+        1,
+        2,
+        2
+      ],
+      "directed_triangles": 2,
+      "hamilton_paths": 5,
+      "hamilton_cycles_mod_rotation": 1,
+      "automorphisms": 1,
+      "pfaffian": -1,
+      "determinant": 1,
+      "isomorphism_representative": 4,
+      "switch_signature": [
+        1,
+        1,
+        1
+      ],
+      "path_gauge": 63
+    },
+    {
+      "mask": 22,
+      "edge_bits": [
+        0,
+        1,
+        1,
+        0,
+        1,
+        0
+      ],
+      "type": "strong",
+      "outdegrees_sorted": [
+        1,
+        1,
+        2,
+        2
+      ],
+      "directed_triangles": 2,
+      "hamilton_paths": 5,
+      "hamilton_cycles_mod_rotation": 1,
+      "automorphisms": 1,
+      "pfaffian": -1,
+      "determinant": 1,
+      "isomorphism_representative": 4,
+      "switch_signature": [
+        1,
+        0,
+        0
+      ],
+      "path_gauge": 59
+    },
+    {
+      "mask": 23,
+      "edge_bits": [
+        1,
+        1,
+        1,
+        0,
+        1,
+        0
+      ],
+      "type": "source_cycle",
+      "outdegrees_sorted": [
+        1,
+        1,
+        1,
+        3
+      ],
+      "directed_triangles": 1,
+      "hamilton_paths": 3,
+      "hamilton_cycles_mod_rotation": 0,
+      "automorphisms": 3,
+      "pfaffian": -3,
+      "determinant": 9,
+      "isomorphism_representative": 2,
+      "switch_signature": [
+        0,
+        1,
+        0
+      ],
+      "path_gauge": 61
+    },
+    {
+      "mask": 24,
+      "edge_bits": [
+        0,
+        0,
+        0,
+        1,
+        1,
+        0
+      ],
+      "type": "transitive",
+      "outdegrees_sorted": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "directed_triangles": 0,
+      "hamilton_paths": 1,
+      "hamilton_cycles_mod_rotation": 0,
+      "automorphisms": 1,
+      "pfaffian": 1,
+      "determinant": 1,
+      "isomorphism_representative": 0,
+      "switch_signature": [
+        1,
+        1,
+        0
+      ],
+      "path_gauge": 43
+    },
+    {
+      "mask": 25,
+      "edge_bits": [
+        1,
+        0,
+        0,
+        1,
+        1,
+        0
+      ],
+      "type": "strong",
+      "outdegrees_sorted": [
+        1,
+        1,
+        2,
+        2
+      ],
+      "directed_triangles": 2,
+      "hamilton_paths": 5,
+      "hamilton_cycles_mod_rotation": 1,
+      "automorphisms": 1,
+      "pfaffian": -1,
+      "determinant": 1,
+      "isomorphism_representative": 4,
+      "switch_signature": [
+        0,
+        0,
+        0
+      ],
+      "path_gauge": 45
+    },
+    {
+      "mask": 26,
+      "edge_bits": [
+        0,
+        1,
+        0,
+        1,
+        1,
+        0
+      ],
+      "type": "transitive",
+      "outdegrees_sorted": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "directed_triangles": 0,
+      "hamilton_paths": 1,
+      "hamilton_cycles_mod_rotation": 0,
+      "automorphisms": 1,
+      "pfaffian": -1,
+      "determinant": 1,
+      "isomorphism_representative": 0,
+      "switch_signature": [
+        0,
+        1,
+        1
+      ],
+      "path_gauge": 41
+    },
+    {
+      "mask": 27,
+      "edge_bits": [
+        1,
+        1,
+        0,
+        1,
+        1,
+        0
+      ],
+      "type": "sink_cycle",
+      "outdegrees_sorted": [
+        0,
+        2,
+        2,
+        2
+      ],
+      "directed_triangles": 1,
+      "hamilton_paths": 3,
+      "hamilton_cycles_mod_rotation": 0,
+      "automorphisms": 3,
+      "pfaffian": -3,
+      "determinant": 9,
+      "isomorphism_representative": 5,
+      "switch_signature": [
+        1,
+        0,
+        1
+      ],
+      "path_gauge": 47
+    },
+    {
+      "mask": 28,
+      "edge_bits": [
+        0,
+        0,
+        1,
+        1,
+        1,
+        0
+      ],
+      "type": "source_cycle",
+      "outdegrees_sorted": [
+        1,
+        1,
+        1,
+        3
+      ],
+      "directed_triangles": 1,
+      "hamilton_paths": 3,
+      "hamilton_cycles_mod_rotation": 0,
+      "automorphisms": 3,
+      "pfaffian": 3,
+      "determinant": 9,
+      "isomorphism_representative": 2,
+      "switch_signature": [
+        1,
+        0,
+        1
+      ],
+      "path_gauge": 47
+    },
+    {
+      "mask": 29,
+      "edge_bits": [
+        1,
+        0,
+        1,
+        1,
+        1,
+        0
+      ],
+      "type": "strong",
+      "outdegrees_sorted": [
+        1,
+        1,
+        2,
+        2
+      ],
+      "directed_triangles": 2,
+      "hamilton_paths": 5,
+      "hamilton_cycles_mod_rotation": 1,
+      "automorphisms": 1,
+      "pfaffian": 1,
+      "determinant": 1,
+      "isomorphism_representative": 4,
+      "switch_signature": [
+        0,
+        1,
+        1
+      ],
+      "path_gauge": 41
+    },
+    {
+      "mask": 30,
+      "edge_bits": [
+        0,
+        1,
+        1,
+        1,
+        1,
+        0
+      ],
+      "type": "transitive",
+      "outdegrees_sorted": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "directed_triangles": 0,
+      "hamilton_paths": 1,
+      "hamilton_cycles_mod_rotation": 0,
+      "automorphisms": 1,
+      "pfaffian": 1,
+      "determinant": 1,
+      "isomorphism_representative": 0,
+      "switch_signature": [
+        0,
+        0,
+        0
+      ],
+      "path_gauge": 45
+    },
+    {
+      "mask": 31,
+      "edge_bits": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        0
+      ],
+      "type": "transitive",
+      "outdegrees_sorted": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "directed_triangles": 0,
+      "hamilton_paths": 1,
+      "hamilton_cycles_mod_rotation": 0,
+      "automorphisms": 1,
+      "pfaffian": -1,
+      "determinant": 1,
+      "isomorphism_representative": 0,
+      "switch_signature": [
+        1,
+        1,
+        0
+      ],
+      "path_gauge": 43
+    },
+    {
+      "mask": 32,
+      "edge_bits": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        1
+      ],
+      "type": "transitive",
+      "outdegrees_sorted": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "directed_triangles": 0,
+      "hamilton_paths": 1,
+      "hamilton_cycles_mod_rotation": 0,
+      "automorphisms": 1,
+      "pfaffian": -1,
+      "determinant": 1,
+      "isomorphism_representative": 0,
+      "switch_signature": [
+        0,
+        0,
+        1
+      ],
+      "path_gauge": 57
+    },
+    {
+      "mask": 33,
+      "edge_bits": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1
+      ],
+      "type": "transitive",
+      "outdegrees_sorted": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "directed_triangles": 0,
+      "hamilton_paths": 1,
+      "hamilton_cycles_mod_rotation": 0,
+      "automorphisms": 1,
+      "pfaffian": 1,
+      "determinant": 1,
+      "isomorphism_representative": 0,
+      "switch_signature": [
+        1,
+        1,
+        1
+      ],
+      "path_gauge": 63
+    },
+    {
+      "mask": 34,
+      "edge_bits": [
+        0,
+        1,
+        0,
+        0,
+        0,
+        1
+      ],
+      "type": "strong",
+      "outdegrees_sorted": [
+        1,
+        1,
+        2,
+        2
+      ],
+      "directed_triangles": 2,
+      "hamilton_paths": 5,
+      "hamilton_cycles_mod_rotation": 1,
+      "automorphisms": 1,
+      "pfaffian": 1,
+      "determinant": 1,
+      "isomorphism_representative": 4,
+      "switch_signature": [
+        1,
+        0,
+        0
+      ],
+      "path_gauge": 59
+    },
+    {
+      "mask": 35,
+      "edge_bits": [
+        1,
+        1,
+        0,
+        0,
+        0,
+        1
+      ],
+      "type": "sink_cycle",
+      "outdegrees_sorted": [
+        0,
+        2,
+        2,
+        2
+      ],
+      "directed_triangles": 1,
+      "hamilton_paths": 3,
+      "hamilton_cycles_mod_rotation": 0,
+      "automorphisms": 3,
+      "pfaffian": 3,
+      "determinant": 9,
+      "isomorphism_representative": 5,
+      "switch_signature": [
+        0,
+        1,
+        0
+      ],
+      "path_gauge": 61
+    },
+    {
+      "mask": 36,
+      "edge_bits": [
+        0,
+        0,
+        1,
+        0,
+        0,
+        1
+      ],
+      "type": "source_cycle",
+      "outdegrees_sorted": [
+        1,
+        1,
+        1,
+        3
+      ],
+      "directed_triangles": 1,
+      "hamilton_paths": 3,
+      "hamilton_cycles_mod_rotation": 0,
+      "automorphisms": 3,
+      "pfaffian": -3,
+      "determinant": 9,
+      "isomorphism_representative": 2,
+      "switch_signature": [
+        0,
+        1,
+        0
+      ],
+      "path_gauge": 61
+    },
+    {
+      "mask": 37,
+      "edge_bits": [
+        1,
+        0,
+        1,
+        0,
+        0,
+        1
+      ],
+      "type": "transitive",
+      "outdegrees_sorted": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "directed_triangles": 0,
+      "hamilton_paths": 1,
+      "hamilton_cycles_mod_rotation": 0,
+      "automorphisms": 1,
+      "pfaffian": -1,
+      "determinant": 1,
+      "isomorphism_representative": 0,
+      "switch_signature": [
+        1,
+        0,
+        0
+      ],
+      "path_gauge": 59
+    },
+    {
+      "mask": 38,
+      "edge_bits": [
+        0,
+        1,
+        1,
+        0,
+        0,
+        1
+      ],
+      "type": "strong",
+      "outdegrees_sorted": [
+        1,
+        1,
+        2,
+        2
+      ],
+      "directed_triangles": 2,
+      "hamilton_paths": 5,
+      "hamilton_cycles_mod_rotation": 1,
+      "automorphisms": 1,
+      "pfaffian": -1,
+      "determinant": 1,
+      "isomorphism_representative": 4,
+      "switch_signature": [
+        1,
+        1,
+        1
+      ],
+      "path_gauge": 63
+    },
+    {
+      "mask": 39,
+      "edge_bits": [
+        1,
+        1,
+        1,
+        0,
+        0,
+        1
+      ],
+      "type": "transitive",
+      "outdegrees_sorted": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "directed_triangles": 0,
+      "hamilton_paths": 1,
+      "hamilton_cycles_mod_rotation": 0,
+      "automorphisms": 1,
+      "pfaffian": 1,
+      "determinant": 1,
+      "isomorphism_representative": 0,
+      "switch_signature": [
+        0,
+        0,
+        1
+      ],
+      "path_gauge": 57
+    },
+    {
+      "mask": 40,
+      "edge_bits": [
+        0,
+        0,
+        0,
+        1,
+        0,
+        1
+      ],
+      "type": "sink_cycle",
+      "outdegrees_sorted": [
+        0,
+        2,
+        2,
+        2
+      ],
+      "directed_triangles": 1,
+      "hamilton_paths": 3,
+      "hamilton_cycles_mod_rotation": 0,
+      "automorphisms": 3,
+      "pfaffian": -3,
+      "determinant": 9,
+      "isomorphism_representative": 5,
+      "switch_signature": [
+        1,
+        0,
+        1
+      ],
+      "path_gauge": 47
+    },
+    {
+      "mask": 41,
+      "edge_bits": [
+        1,
+        0,
+        0,
+        1,
+        0,
+        1
+      ],
+      "type": "strong",
+      "outdegrees_sorted": [
+        1,
+        1,
+        2,
+        2
+      ],
+      "directed_triangles": 2,
+      "hamilton_paths": 5,
+      "hamilton_cycles_mod_rotation": 1,
+      "automorphisms": 1,
+      "pfaffian": -1,
+      "determinant": 1,
+      "isomorphism_representative": 4,
+      "switch_signature": [
+        0,
+        1,
+        1
+      ],
+      "path_gauge": 41
+    },
+    {
+      "mask": 42,
+      "edge_bits": [
+        0,
+        1,
+        0,
+        1,
+        0,
+        1
+      ],
+      "type": "strong",
+      "outdegrees_sorted": [
+        1,
+        1,
+        2,
+        2
+      ],
+      "directed_triangles": 2,
+      "hamilton_paths": 5,
+      "hamilton_cycles_mod_rotation": 1,
+      "automorphisms": 1,
+      "pfaffian": -1,
+      "determinant": 1,
+      "isomorphism_representative": 4,
+      "switch_signature": [
+        0,
+        0,
+        0
+      ],
+      "path_gauge": 45
+    },
+    {
+      "mask": 43,
+      "edge_bits": [
+        1,
+        1,
+        0,
+        1,
+        0,
+        1
+      ],
+      "type": "strong",
+      "outdegrees_sorted": [
+        1,
+        1,
+        2,
+        2
+      ],
+      "directed_triangles": 2,
+      "hamilton_paths": 5,
+      "hamilton_cycles_mod_rotation": 1,
+      "automorphisms": 1,
+      "pfaffian": 1,
+      "determinant": 1,
+      "isomorphism_representative": 4,
+      "switch_signature": [
+        1,
+        1,
+        0
+      ],
+      "path_gauge": 43
+    },
+    {
+      "mask": 44,
+      "edge_bits": [
+        0,
+        0,
+        1,
+        1,
+        0,
+        1
+      ],
+      "type": "strong",
+      "outdegrees_sorted": [
+        1,
+        1,
+        2,
+        2
+      ],
+      "directed_triangles": 2,
+      "hamilton_paths": 5,
+      "hamilton_cycles_mod_rotation": 1,
+      "automorphisms": 1,
+      "pfaffian": -1,
+      "determinant": 1,
+      "isomorphism_representative": 4,
+      "switch_signature": [
+        1,
+        1,
+        0
+      ],
+      "path_gauge": 43
+    },
+    {
+      "mask": 45,
+      "edge_bits": [
+        1,
+        0,
+        1,
+        1,
+        0,
+        1
+      ],
+      "type": "strong",
+      "outdegrees_sorted": [
+        1,
+        1,
+        2,
+        2
+      ],
+      "directed_triangles": 2,
+      "hamilton_paths": 5,
+      "hamilton_cycles_mod_rotation": 1,
+      "automorphisms": 1,
+      "pfaffian": 1,
+      "determinant": 1,
+      "isomorphism_representative": 4,
+      "switch_signature": [
+        0,
+        0,
+        0
+      ],
+      "path_gauge": 45
+    },
+    {
+      "mask": 46,
+      "edge_bits": [
+        0,
+        1,
+        1,
+        1,
+        0,
+        1
+      ],
+      "type": "strong",
+      "outdegrees_sorted": [
+        1,
+        1,
+        2,
+        2
+      ],
+      "directed_triangles": 2,
+      "hamilton_paths": 5,
+      "hamilton_cycles_mod_rotation": 1,
+      "automorphisms": 1,
+      "pfaffian": 1,
+      "determinant": 1,
+      "isomorphism_representative": 4,
+      "switch_signature": [
+        0,
+        1,
+        1
+      ],
+      "path_gauge": 41
+    },
+    {
+      "mask": 47,
+      "edge_bits": [
+        1,
+        1,
+        1,
+        1,
+        0,
+        1
+      ],
+      "type": "source_cycle",
+      "outdegrees_sorted": [
+        1,
+        1,
+        1,
+        3
+      ],
+      "directed_triangles": 1,
+      "hamilton_paths": 3,
+      "hamilton_cycles_mod_rotation": 0,
+      "automorphisms": 3,
+      "pfaffian": 3,
+      "determinant": 9,
+      "isomorphism_representative": 2,
+      "switch_signature": [
+        1,
+        0,
+        1
+      ],
+      "path_gauge": 47
+    },
+    {
+      "mask": 48,
+      "edge_bits": [
+        0,
+        0,
+        0,
+        0,
+        1,
+        1
+      ],
+      "type": "transitive",
+      "outdegrees_sorted": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "directed_triangles": 0,
+      "hamilton_paths": 1,
+      "hamilton_cycles_mod_rotation": 0,
+      "automorphisms": 1,
+      "pfaffian": 1,
+      "determinant": 1,
+      "isomorphism_representative": 0,
+      "switch_signature": [
+        0,
+        1,
+        1
+      ],
+      "path_gauge": 41
+    },
+    {
+      "mask": 49,
+      "edge_bits": [
+        1,
+        0,
+        0,
+        0,
+        1,
+        1
+      ],
+      "type": "source_cycle",
+      "outdegrees_sorted": [
+        1,
+        1,
+        1,
+        3
+      ],
+      "directed_triangles": 1,
+      "hamilton_paths": 3,
+      "hamilton_cycles_mod_rotation": 0,
+      "automorphisms": 3,
+      "pfaffian": 3,
+      "determinant": 9,
+      "isomorphism_representative": 2,
+      "switch_signature": [
+        1,
+        0,
+        1
+      ],
+      "path_gauge": 47
+    },
+    {
+      "mask": 50,
+      "edge_bits": [
+        0,
+        1,
+        0,
+        0,
+        1,
+        1
+      ],
+      "type": "strong",
+      "outdegrees_sorted": [
+        1,
+        1,
+        2,
+        2
+      ],
+      "directed_triangles": 2,
+      "hamilton_paths": 5,
+      "hamilton_cycles_mod_rotation": 1,
+      "automorphisms": 1,
+      "pfaffian": -1,
+      "determinant": 1,
+      "isomorphism_representative": 4,
+      "switch_signature": [
+        1,
+        1,
+        0
+      ],
+      "path_gauge": 43
+    },
+    {
+      "mask": 51,
+      "edge_bits": [
+        1,
+        1,
+        0,
+        0,
+        1,
+        1
+      ],
+      "type": "strong",
+      "outdegrees_sorted": [
+        1,
+        1,
+        2,
+        2
+      ],
+      "directed_triangles": 2,
+      "hamilton_paths": 5,
+      "hamilton_cycles_mod_rotation": 1,
+      "automorphisms": 1,
+      "pfaffian": 1,
+      "determinant": 1,
+      "isomorphism_representative": 4,
+      "switch_signature": [
+        0,
+        0,
+        0
+      ],
+      "path_gauge": 45
+    },
+    {
+      "mask": 52,
+      "edge_bits": [
+        0,
+        0,
+        1,
+        0,
+        1,
+        1
+      ],
+      "type": "transitive",
+      "outdegrees_sorted": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "directed_triangles": 0,
+      "hamilton_paths": 1,
+      "hamilton_cycles_mod_rotation": 0,
+      "automorphisms": 1,
+      "pfaffian": -1,
+      "determinant": 1,
+      "isomorphism_representative": 0,
+      "switch_signature": [
+        0,
+        0,
+        0
+      ],
+      "path_gauge": 45
+    },
+    {
+      "mask": 53,
+      "edge_bits": [
+        1,
+        0,
+        1,
+        0,
+        1,
+        1
+      ],
+      "type": "transitive",
+      "outdegrees_sorted": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "directed_triangles": 0,
+      "hamilton_paths": 1,
+      "hamilton_cycles_mod_rotation": 0,
+      "automorphisms": 1,
+      "pfaffian": 1,
+      "determinant": 1,
+      "isomorphism_representative": 0,
+      "switch_signature": [
+        1,
+        1,
+        0
+      ],
+      "path_gauge": 43
+    },
+    {
+      "mask": 54,
+      "edge_bits": [
+        0,
+        1,
+        1,
+        0,
+        1,
+        1
+      ],
+      "type": "sink_cycle",
+      "outdegrees_sorted": [
+        0,
+        2,
+        2,
+        2
+      ],
+      "directed_triangles": 1,
+      "hamilton_paths": 3,
+      "hamilton_cycles_mod_rotation": 0,
+      "automorphisms": 3,
+      "pfaffian": -3,
+      "determinant": 9,
+      "isomorphism_representative": 5,
+      "switch_signature": [
+        1,
+        0,
+        1
+      ],
+      "path_gauge": 47
+    },
+    {
+      "mask": 55,
+      "edge_bits": [
+        1,
+        1,
+        1,
+        0,
+        1,
+        1
+      ],
+      "type": "transitive",
+      "outdegrees_sorted": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "directed_triangles": 0,
+      "hamilton_paths": 1,
+      "hamilton_cycles_mod_rotation": 0,
+      "automorphisms": 1,
+      "pfaffian": -1,
+      "determinant": 1,
+      "isomorphism_representative": 0,
+      "switch_signature": [
+        0,
+        1,
+        1
+      ],
+      "path_gauge": 41
+    },
+    {
+      "mask": 56,
+      "edge_bits": [
+        0,
+        0,
+        0,
+        1,
+        1,
+        1
+      ],
+      "type": "transitive",
+      "outdegrees_sorted": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "directed_triangles": 0,
+      "hamilton_paths": 1,
+      "hamilton_cycles_mod_rotation": 0,
+      "automorphisms": 1,
+      "pfaffian": -1,
+      "determinant": 1,
+      "isomorphism_representative": 0,
+      "switch_signature": [
+        1,
+        1,
+        1
+      ],
+      "path_gauge": 63
+    },
+    {
+      "mask": 57,
+      "edge_bits": [
+        1,
+        0,
+        0,
+        1,
+        1,
+        1
+      ],
+      "type": "strong",
+      "outdegrees_sorted": [
+        1,
+        1,
+        2,
+        2
+      ],
+      "directed_triangles": 2,
+      "hamilton_paths": 5,
+      "hamilton_cycles_mod_rotation": 1,
+      "automorphisms": 1,
+      "pfaffian": 1,
+      "determinant": 1,
+      "isomorphism_representative": 4,
+      "switch_signature": [
+        0,
+        0,
+        1
+      ],
+      "path_gauge": 57
+    },
+    {
+      "mask": 58,
+      "edge_bits": [
+        0,
+        1,
+        0,
+        1,
+        1,
+        1
+      ],
+      "type": "source_cycle",
+      "outdegrees_sorted": [
+        1,
+        1,
+        1,
+        3
+      ],
+      "directed_triangles": 1,
+      "hamilton_paths": 3,
+      "hamilton_cycles_mod_rotation": 0,
+      "automorphisms": 3,
+      "pfaffian": -3,
+      "determinant": 9,
+      "isomorphism_representative": 2,
+      "switch_signature": [
+        0,
+        1,
+        0
+      ],
+      "path_gauge": 61
+    },
+    {
+      "mask": 59,
+      "edge_bits": [
+        1,
+        1,
+        0,
+        1,
+        1,
+        1
+      ],
+      "type": "strong",
+      "outdegrees_sorted": [
+        1,
+        1,
+        2,
+        2
+      ],
+      "directed_triangles": 2,
+      "hamilton_paths": 5,
+      "hamilton_cycles_mod_rotation": 1,
+      "automorphisms": 1,
+      "pfaffian": -1,
+      "determinant": 1,
+      "isomorphism_representative": 4,
+      "switch_signature": [
+        1,
+        0,
+        0
+      ],
+      "path_gauge": 59
+    },
+    {
+      "mask": 60,
+      "edge_bits": [
+        0,
+        0,
+        1,
+        1,
+        1,
+        1
+      ],
+      "type": "transitive",
+      "outdegrees_sorted": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "directed_triangles": 0,
+      "hamilton_paths": 1,
+      "hamilton_cycles_mod_rotation": 0,
+      "automorphisms": 1,
+      "pfaffian": 1,
+      "determinant": 1,
+      "isomorphism_representative": 0,
+      "switch_signature": [
+        1,
+        0,
+        0
+      ],
+      "path_gauge": 59
+    },
+    {
+      "mask": 61,
+      "edge_bits": [
+        1,
+        0,
+        1,
+        1,
+        1,
+        1
+      ],
+      "type": "sink_cycle",
+      "outdegrees_sorted": [
+        0,
+        2,
+        2,
+        2
+      ],
+      "directed_triangles": 1,
+      "hamilton_paths": 3,
+      "hamilton_cycles_mod_rotation": 0,
+      "automorphisms": 3,
+      "pfaffian": 3,
+      "determinant": 9,
+      "isomorphism_representative": 5,
+      "switch_signature": [
+        0,
+        1,
+        0
+      ],
+      "path_gauge": 61
+    },
+    {
+      "mask": 62,
+      "edge_bits": [
+        0,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "type": "transitive",
+      "outdegrees_sorted": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "directed_triangles": 0,
+      "hamilton_paths": 1,
+      "hamilton_cycles_mod_rotation": 0,
+      "automorphisms": 1,
+      "pfaffian": -1,
+      "determinant": 1,
+      "isomorphism_representative": 0,
+      "switch_signature": [
+        0,
+        0,
+        1
+      ],
+      "path_gauge": 57
+    },
+    {
+      "mask": 63,
+      "edge_bits": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "type": "transitive",
+      "outdegrees_sorted": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "directed_triangles": 0,
+      "hamilton_paths": 1,
+      "hamilton_cycles_mod_rotation": 0,
+      "automorphisms": 1,
+      "pfaffian": 1,
+      "determinant": 1,
+      "isomorphism_representative": 0,
+      "switch_signature": [
+        1,
+        1,
+        1
+      ],
+      "path_gauge": 63
+    }
+  ],
+  "switching_hostile": {
+    "transitive_mask": 63,
+    "switch_vertex": 1,
+    "strong_mask": 38
+  },
+  "path_presentation": {
+    "H_sum": 192,
+    "H_squared_sum": 768,
+    "unconditioned_H_mean": 3,
+    "fixed_path_H_mean": 4,
+    "fixed_cycle_H_mean": 5
+  },
+  "order_five_path_counts": [
+    9,
+    15
+  ],
+  "checks_passed": 6116,
+  "check_families": [
+    "independent path DP and permutation counts",
+    "direct and degree triangle counts",
+    "Leibniz determinant vs Pfaffian",
+    "all64 and all24 relabellings",
+    "all8 cuts and all4096 gauge pairs",
+    "named positive and hostile controls"
+  ]
+}

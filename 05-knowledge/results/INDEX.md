@@ -1,5 +1,14 @@
 # Script Results Index
 
+- [Glued number lines, XOR and signed clock budgets](glued_xor_20260921_synthesis.md):
+  **PROVED scoped / CITED quantitative sparsity / FINITE-EXACT.**
+  Affine conjugacy and shell classification; elementary discrepancy
+  exclusion, strengthened by Garcia--Tal to a full limit; negative-parameter
+  budget exhaustion iff eventual periodicity; exact four-vertex XOR model;
+  CRT sieve transport and matching hexagon/square primitive fractions.
+  [Manifest](glued_xor_20260921_manifest.json). No new general Lean theorem;
+  global Collatz convergence and completeness of signed cycles remain OPEN.
+
 - [Catalan, divisor sign laws and elliptic symmetry](catalan_elliptic_20260921_synthesis.md):
   **PROVED scoped / FINITE-EXACT / VERIFIED twelve Lean witnesses.**
   Unit-gap limits and repetition-invariant cycle denominators; the

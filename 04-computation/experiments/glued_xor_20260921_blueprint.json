@@ -1,0 +1,372 @@
+{
+  "checks_passed": 120097,
+  "collatz_convergence_proved": false,
+  "endpoint_reversal_paths": {
+    "2": 1,
+    "3": 3,
+    "4": 5,
+    "5": 9,
+    "6": 17,
+    "7": 33,
+    "8": 65
+  },
+  "fibre": [
+    1,
+    5,
+    21,
+    85,
+    341,
+    1365,
+    5461,
+    21845,
+    87381,
+    349525,
+    1398101
+  ],
+  "formal_attribution": {
+    "entry_32": "CollatzBlueprintAudit.twentyThree_tally_control",
+    "general_discrepancy_formalized": false,
+    "public_theorems": 35
+  },
+  "infinite_results_require_written_proofs": true,
+  "known_minus_cycle_budgets": [
+    {
+      "block_ratio": "2/3",
+      "block_sum": "1",
+      "infinite_budget": "3",
+      "period": 1,
+      "start": 1,
+      "word": [
+        1
+      ]
+    },
+    {
+      "block_ratio": "8/9",
+      "block_sum": "5/3",
+      "infinite_budget": "15",
+      "period": 2,
+      "start": 5,
+      "word": [
+        1,
+        2
+      ]
+    },
+    {
+      "block_ratio": "2048/2187",
+      "block_sum": "2363/729",
+      "infinite_budget": "51",
+      "period": 7,
+      "start": 17,
+      "word": [
+        1,
+        1,
+        1,
+        2,
+        1,
+        1,
+        4
+      ]
+    }
+  ],
+  "longest_prefix": 66,
+  "orbit_prefixes_checked": 18264,
+  "positive_distinct_prefixes_checked": 11537,
+  "projective_group_order": 6,
+  "sample_prefixes": [
+    {
+      "L": 1,
+      "b": -1,
+      "endpoint": 1,
+      "partial_budget": "1",
+      "product": "2/3",
+      "q": "2/3",
+      "start": 1
+    },
+    {
+      "L": 1,
+      "b": -1,
+      "endpoint": 7,
+      "partial_budget": "1",
+      "product": "14/15",
+      "q": "2/3",
+      "start": 5
+    },
+    {
+      "L": 2,
+      "b": -1,
+      "endpoint": 5,
+      "partial_budget": "5/3",
+      "product": "8/9",
+      "q": "8/9",
+      "start": 5
+    },
+    {
+      "L": 1,
+      "b": -1,
+      "endpoint": 25,
+      "partial_budget": "1",
+      "product": "50/51",
+      "q": "2/3",
+      "start": 17
+    },
+    {
+      "L": 2,
+      "b": -1,
+      "endpoint": 37,
+      "partial_budget": "5/3",
+      "product": "148/153",
+      "q": "4/9",
+      "start": 17
+    },
+    {
+      "L": 7,
+      "b": -1,
+      "endpoint": 17,
+      "partial_budget": "2363/729",
+      "product": "2048/2187",
+      "q": "2048/2187",
+      "start": 17
+    },
+    {
+      "L": 1,
+      "b": -1,
+      "endpoint": 5,
+      "partial_budget": "1",
+      "product": "80/81",
+      "q": "16/3",
+      "start": 27
+    },
+    {
+      "L": 2,
+      "b": -1,
+      "endpoint": 7,
+      "partial_budget": "19/3",
+      "product": "224/243",
+      "q": "32/9",
+      "start": 27
+    },
+    {
+      "L": 1,
+      "b": -1,
+      "endpoint": 145,
+      "partial_budget": "1",
+      "product": "290/291",
+      "q": "2/3",
+      "start": 97
+    },
+    {
+      "L": 2,
+      "b": -1,
+      "endpoint": 217,
+      "partial_budget": "5/3",
+      "product": "868/873",
+      "q": "4/9",
+      "start": 97
+    },
+    {
+      "L": 7,
+      "b": -1,
+      "endpoint": 205,
+      "partial_budget": "2219/729",
+      "product": "209920/212139",
+      "q": "1024/2187",
+      "start": 97
+    },
+    {
+      "L": 1,
+      "b": -1,
+      "endpoint": 749,
+      "partial_budget": "1",
+      "product": "2996/2997",
+      "q": "4/3",
+      "start": 999
+    },
+    {
+      "L": 2,
+      "b": -1,
+      "endpoint": 1123,
+      "partial_budget": "7/3",
+      "product": "8984/8991",
+      "q": "8/9",
+      "start": 999
+    },
+    {
+      "L": 7,
+      "b": -1,
+      "endpoint": 1063,
+      "partial_budget": "7789/729",
+      "product": "2177024/2184813",
+      "q": "2048/2187",
+      "start": 999
+    },
+    {
+      "L": 1,
+      "b": 1,
+      "endpoint": 1,
+      "partial_budget": "1",
+      "product": "4/3",
+      "q": "4/3",
+      "start": 1
+    },
+    {
+      "L": 1,
+      "b": 1,
+      "endpoint": 1,
+      "partial_budget": "1",
+      "product": "16/15",
+      "q": "16/3",
+      "start": 5
+    },
+    {
+      "L": 2,
+      "b": 1,
+      "endpoint": 1,
+      "partial_budget": "19/3",
+      "product": "64/45",
+      "q": "64/9",
+      "start": 5
+    },
+    {
+      "L": 1,
+      "b": 1,
+      "endpoint": 13,
+      "partial_budget": "1",
+      "product": "52/51",
+      "q": "4/3",
+      "start": 17
+    },
+    {
+      "L": 2,
+      "b": 1,
+      "endpoint": 5,
+      "partial_budget": "7/3",
+      "product": "160/153",
+      "q": "32/9",
+      "start": 17
+    },
+    {
+      "L": 1,
+      "b": 1,
+      "endpoint": 41,
+      "partial_budget": "1",
+      "product": "82/81",
+      "q": "2/3",
+      "start": 27
+    },
+    {
+      "L": 2,
+      "b": 1,
+      "endpoint": 31,
+      "partial_budget": "5/3",
+      "product": "248/243",
+      "q": "8/9",
+      "start": 27
+    },
+    {
+      "L": 7,
+      "b": 1,
+      "endpoint": 121,
+      "partial_budget": "2903/729",
+      "product": "61952/59049",
+      "q": "512/2187",
+      "start": 27
+    },
+    {
+      "L": 20,
+      "b": 1,
+      "endpoint": 377,
+      "partial_budget": "7056988085/1162261467",
+      "product": "101200166912/94143178827",
+      "q": "268435456/3486784401",
+      "start": 27
+    },
+    {
+      "L": 1,
+      "b": 1,
+      "endpoint": 73,
+      "partial_budget": "1",
+      "product": "292/291",
+      "q": "4/3",
+      "start": 97
+    },
+    {
+      "L": 2,
+      "b": 1,
+      "endpoint": 55,
+      "partial_budget": "7/3",
+      "product": "880/873",
+      "q": "16/9",
+      "start": 97
+    },
+    {
+      "L": 7,
+      "b": 1,
+      "endpoint": 107,
+      "partial_budget": "6997/729",
+      "product": "219136/212139",
+      "q": "2048/2187",
+      "start": 97
+    },
+    {
+      "L": 20,
+      "b": 1,
+      "endpoint": 167,
+      "partial_budget": "20411682319/1162261467",
+      "product": "358629769216/338218086897",
+      "q": "2147483648/3486784401",
+      "start": 97
+    },
+    {
+      "L": 1,
+      "b": 1,
+      "endpoint": 1499,
+      "partial_budget": "1",
+      "product": "2998/2997",
+      "q": "2/3",
+      "start": 999
+    },
+    {
+      "L": 2,
+      "b": 1,
+      "endpoint": 2249,
+      "partial_budget": "5/3",
+      "product": "8996/8991",
+      "q": "4/9",
+      "start": 999
+    },
+    {
+      "L": 7,
+      "b": 1,
+      "endpoint": 67,
+      "partial_budget": "10643/729",
+      "product": "2195456/2184813",
+      "q": "32768/2187",
+      "start": 999
+    }
+  ],
+  "source_sha256": "76bba9e566fa3687a46e80ae9a77d2847fbab23f3408a33e4d0f9b0407b72400",
+  "status": "PASS",
+  "universe": {
+    "endpoint_reversal_sizes": [
+      2,
+      8
+    ],
+    "fibre_last_index": 10,
+    "inverse_fibre_seed": 1,
+    "parameters": [
+      -1,
+      1
+    ],
+    "positive_odd_starts": [
+      1,
+      999
+    ],
+    "prefix_cap": 300,
+    "stop_at_first_repeat": true,
+    "transport_grid": [
+      -8,
+      8
+    ]
+  },
+  "vector_group_order": 12
+}

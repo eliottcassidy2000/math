@@ -9,6 +9,50 @@ Format per entry:
 - Why it was wrong
 - The correct framing
 
+## 2026-09-21 Glued number lines -- guards, cycle types and sampling
+
+- **LOST division rule:** raw `3n+b` affine embeddings allow translations,
+  but odd-accelerated embeddings on an entire odd ray force `c=0`, odd
+  slope a and target parameter `d=ab`. The requested raw embedding sends
+  the source fixed point 1 to -1, whereas `oddpart(3*(-1)-2)=-5`.
+  The strongest even-scale repair retains the two-adic shell. Raw affine
+  maps, full odd-part maps, and parity-swapped shortcuts are distinct.
+- **MISCOUNTED cycle type:** the three known positive `3n-1` cycles have
+  odd periods 1,2,7, not three equal periods. Their mirrored tagged core
+  has 20 states and commuting group order `1568=2^5*7^2`, so it has no
+  order-three commuting symmetry. Completeness of the known cycles is OPEN.
+- **FALSE escape shorthand:** a nonfixed even input of an even-parameter
+  full odd-part map can enter its fixed point: `O_(-2)(2)=1`.
+  Classify the first odd image; the fixed point's full integer basin is
+  `n=-beta*(2^k+2)/3` when integral, for `b=2*beta`, beta odd.
+- **INSUFFICIENT density input:** Banach-density zero alone does not imply
+  reciprocal summability. Garcia--Tal's quantitative power-saving estimate
+  does. With that CITED input, a hypothetical infinite positive `3n+1`
+  orbit has clock discrepancy tending to negative infinity, not positive
+  infinity as the supplied blueprint suggested. An independent elementary
+  packing argument already forces negative-infinite liminf. Neither
+  excludes the infinite orbit. On the positive `3n-1` sheet, every clock
+  is summable; exhaustion of its `3*n0` budget detects eventual periodicity.
+- **FALSE formal attribution:** certificate number 32 in the inherited
+  `CollatzBlueprintAudit` inventory is `twentyThree_tally_control`, not a
+  real/logarithmic discrepancy theorem. The new infinite claims are written
+  proofs with a cited input, not kernel certificates.
+- **MIXED XOR operations:** fixing a directed four-cycle leaves two bits;
+  fixing only its Hamiltonian path leaves three. Vertex switching can
+  change Hamiltonian count 1 to 5. Preserve the chosen cycle/path and the
+  operation, not just the number of available bits.
+- **UNSUPPORTED density origin:** doubling by sign doubles both counts.
+  Hexagonal and square lattice shells have multiplicities 6 and 8 yet
+  identical primitive fractions at every size. Two sign-exchanged
+  three-cycles exist in the hexagonal model, but their orbit multiplicity
+  cancels. The valid bridge is CRT transport of prime-square exclusions;
+  it preserves neither ordinary height nor ring operations.
+- **Repair, proofs and remaining question:** the
+  [synthesis](../05-knowledge/results/glued_xor_20260921_synthesis.md)
+  gives explicit maps, hostile witnesses, source qualifications and exact
+  replay. Universal budget exhaustion and a trajectory-preserving transfer
+  beyond the affine classifications remain OPEN.
+
 ## 2026-09-21 Catalan and elliptic synthesis -- carry, sign and positivity
 
 - **INSUFFICIENT unit-gap criterion:** Catalan controls consecutive powers,

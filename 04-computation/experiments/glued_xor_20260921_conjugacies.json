@@ -1,0 +1,179 @@
+{
+  "accelerated_affine_search": {
+    "candidates": 5888,
+    "survivor_rule": "c=0, a odd, d=ab",
+    "survivors": 28,
+    "universe": "nonzero -7<=a<=7; -6<=c<=6; a+c odd; odd b,d in [-7,7]; odd inputs +/-1..129"
+  },
+  "even_parameters": {
+    "cycles": [
+      {
+        "b": -12,
+        "only_cycle": null
+      },
+      {
+        "b": -10,
+        "only_cycle": [
+          5
+        ]
+      },
+      {
+        "b": -8,
+        "only_cycle": null
+      },
+      {
+        "b": -6,
+        "only_cycle": [
+          3
+        ]
+      },
+      {
+        "b": -4,
+        "only_cycle": null
+      },
+      {
+        "b": -2,
+        "only_cycle": [
+          1
+        ]
+      },
+      {
+        "b": 0,
+        "only_cycle": null
+      },
+      {
+        "b": 2,
+        "only_cycle": [
+          -1
+        ]
+      },
+      {
+        "b": 4,
+        "only_cycle": null
+      },
+      {
+        "b": 6,
+        "only_cycle": [
+          -3
+        ]
+      },
+      {
+        "b": 8,
+        "only_cycle": null
+      },
+      {
+        "b": 10,
+        "only_cycle": [
+          -5
+        ]
+      },
+      {
+        "b": 12,
+        "only_cycle": null
+      }
+    ],
+    "fixed_basin_checks": 94,
+    "fixed_basin_universe": "odd beta in [-9,9]; 0<=k<=12; n=-beta(2^k+2)/3 when integral",
+    "nonfixed_even_preimage_hostiles": [
+      [
+        2,
+        -2,
+        1
+      ],
+      [
+        -2,
+        2,
+        -1
+      ]
+    ],
+    "universe": "even -12<=b<=12; odd -51<=m<=51; iterations 1..8"
+  },
+  "full_oddpart_affine_search": {
+    "candidates": 15210,
+    "survivor_rule": "c=0, a odd, d=ab",
+    "survivors": 42,
+    "universe": "nonzero -5<=a<=5; -4<=c<=4; b,d in [-6,6]; inputs -80..80; zero source numerator omitted"
+  },
+  "halfsteps": {
+    "classifier_universe": "nonzero a in [-5,5]; c in [-4,4]; odd b in [-5,5]; n in [-8,8]; standard odd d in [-5,5]; swapped even d in [-4,4], odd e in [-3,3]",
+    "direct_checks": 29088,
+    "direct_universe": "odd a,e in [-5,5]; odd b in [-7,7]; -50<=n<=50; d=ab-e",
+    "standard_candidates": 3240,
+    "standard_survivors": 20,
+    "swapped_candidates": 10800,
+    "swapped_survivors": 56
+  },
+  "hostiles": {
+    "oddpart_input_identification": {
+      "O1_outputs": [
+        1,
+        7
+      ],
+      "inputs": [
+        1,
+        2
+      ],
+      "same_oddpart": 1
+    },
+    "raw_to_accelerated_first": {
+      "H_U_source": -1,
+      "H_source": -1,
+      "O_target": -5,
+      "source": 1
+    },
+    "raw_to_accelerated_second": {
+      "H_U_source": 1,
+      "H_source": 1,
+      "O_target": 5,
+      "source": -1
+    }
+  },
+  "known_cycle_core": {
+    "centralizer_size": 1568,
+    "cycle_type": "1^2 2^2 7^2",
+    "permutations_with_cube_identity": 1,
+    "scope": "Only the three known cycles and their parameter-reflected partners",
+    "tagged_states": 20
+  },
+  "raw": {
+    "checks": 81840,
+    "requested_sign_pair_examples": [
+      {
+        "negative_source": -1,
+        "negative_target": -1,
+        "positive_source": 1,
+        "positive_target": 1
+      },
+      {
+        "negative_source": -2,
+        "negative_target": -5,
+        "positive_source": 2,
+        "positive_target": 5
+      },
+      {
+        "negative_source": -3,
+        "negative_target": -9,
+        "positive_source": 3,
+        "positive_target": 9
+      },
+      {
+        "negative_source": -4,
+        "negative_target": -13,
+        "positive_source": 4,
+        "positive_target": 13
+      }
+    ],
+    "smallest_absolute_negative_raw_slope": 4,
+    "universe": "nonzero -8<=a<=8; -5<=c<=5; -7<=b<=7; -15<=n<=15; d=ab-2c"
+  },
+  "shell_controls": {
+    "checks": 3696,
+    "universe": "0<=r<=5; odd -9<=b<=9; odd -61<=n<=61; numerator nonzero"
+  },
+  "source_sha256_lf": "a6e64954e285b6d7f7ebd72b6bc924df779c5e2f9fbcf23ca515a60578d09d45",
+  "status": "FINITE-EXACT controls for the proved affine and valuation classifications",
+  "valuation_decomposition": {
+    "checks": 2480,
+    "universe": "0<=r,s<=4; odd u,beta in [-9,9]; numerator nonzero"
+  }
+}

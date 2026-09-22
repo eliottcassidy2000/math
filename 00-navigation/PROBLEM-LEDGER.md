@@ -239,6 +239,12 @@ all heights (THM-1289, published), δ ineffective.
   adds the graph `E` (evens also map to `3n+1`), its one-SCC conjecture, and
   the greedy 3-adic certificate `G` with proved density-one stopping; the
   2-adic forward and 3-adic backward obstructions are mirror images.
+  [The signed clock audit](../05-knowledge/results/glued_xor_20260921_synthesis.md)
+  classifies affine/shell conjugacies and proves negative-infinite
+  discrepancy liminf for a hypothetical infinite positive orbit. Garcia--Tal's
+  CITED quantitative sparsity estimate strengthens this to a full limit;
+  on the `3n-1` sheet, budget exhaustion is equivalent to eventual
+  periodicity. Neither universal convergence nor cycle completeness follows.
 - **Erdős Problem 592** [DEEP — $1000 problem] — the p=2 Schur-seam theorem (THM-469),
   R(n,2)=2n+1 linear conjecture, Chang-tower m=3 open; 21 scripts, a survey draft.
 - **{7,21} forbidden H-spectrum** [DEEP, repo-signature] — permanent exclusions by

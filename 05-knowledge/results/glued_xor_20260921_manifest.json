@@ -1,0 +1,269 @@
+{
+  "all_signed_cycles_classified": false,
+  "artifacts_sha256_lf": {
+    "04-computation/experiments/glued_xor_20260921_blueprint.json": "7cae80ffa742f652a7851e3554671232f0e2c42935da8968e5d7e98f72eacd1b",
+    "04-computation/experiments/glued_xor_20260921_blueprint.py": "76bba9e566fa3687a46e80ae9a77d2847fbab23f3408a33e4d0f9b0407b72400",
+    "04-computation/experiments/glued_xor_20260921_conjugacies.json": "6f834dab581dcde53be7d30032c18a050df5014f0de8fd1675d6fb80607bd66c",
+    "04-computation/experiments/glued_xor_20260921_conjugacies.py": "a6e64954e285b6d7f7ebd72b6bc924df779c5e2f9fbcf23ca515a60578d09d45",
+    "04-computation/experiments/glued_xor_20260921_density.json": "823ca8876c96ba57285190e6f7996b90db2ee3dcfee24cc1340b876381df03f9",
+    "04-computation/experiments/glued_xor_20260921_density.py": "b4352150cbdf34f620e33429d96e82d5ba4db417e050c8139e9f7aabc5b7b1b4",
+    "04-computation/experiments/glued_xor_20260921_tournaments.json": "ecf4dda3f099cccdb0712f8cbf4b9e56bb01847a423c3fa722704134353859fd",
+    "04-computation/experiments/glued_xor_20260921_tournaments.py": "60747059bdf7a21baa409875c270ea3d499ec72ec8b0069cb52d7559fbf97bae",
+    "04-computation/experiments/glued_xor_20260921_verify.py": "0c5730db9d2e0163e03592dbeba236f8cff3887acc52d6b0b34cb2a09a596521",
+    "04-computation/lean/CollatzBlueprintAudit/AxiomAudit.lean": "c4fddb9162deb19c50d6cb12a9f3c3a3c28486113f6faa785981d14c55a943be",
+    "04-computation/lean/CollatzBlueprintAudit/CollatzBlueprintAudit.lean": "75d37e2316316201bb1c1643c9fca0e0a0df67815381e4527c3a9abca7c06d36",
+    "04-computation/lean/CollatzBlueprintAudit/CollatzBlueprintAudit/Basic.lean": "8ac960737cec7475e97452bb0b97ec8626f81cde54f32888345870b47906d23e",
+    "04-computation/lean/CollatzBlueprintAudit/CollatzBlueprintAudit/ClockAudit.lean": "66dd3bc1a92ef63ed59cb10206075dac886574fd796a6fa00e18f1be7237f56b",
+    "04-computation/lean/CollatzBlueprintAudit/README.md": "b6cbdbbd57e023f60763cd9a030e1e42cb21139e20587244c595199f953ed147",
+    "05-knowledge/reference/GLUED-AFFINE-BLUEPRINT-2026-09-21-SOURCE.md": "c40511f29bce0f2e2f743980df54e973fe9bf67618405e4e7d8adb9f36f7112f",
+    "05-knowledge/results/glued_xor_20260921_blueprint.md": "e27ebb43381ff190429efd854af1d49a63593a10d9f6904e36a3d55e53e3b7b5",
+    "05-knowledge/results/glued_xor_20260921_conjugacies.md": "842555195ecb0c9ac84944a774c22b0a5b6d6df2f6ac124a4fc178010a5795f2",
+    "05-knowledge/results/glued_xor_20260921_density.md": "9f6d74a710bbea9b36b97288e2f8e9c1d796dd60c5ecfd2960ed3c7e35ae1b50",
+    "05-knowledge/results/glued_xor_20260921_synthesis.md": "ccf5b7dd35f74f8079a6e3a90ca69ffd0d53d53cdd36e4839e84e935961e953f",
+    "05-knowledge/results/glued_xor_20260921_tournaments.md": "120b4c0835f4842b033468540c1cbaae127c811d043c3e6a459bb44e6cb0f1b3"
+  },
+  "cited_input": {
+    "formalized_or_reproved_here": false,
+    "pin": "Proposition 1, Lemma 3, equation (6); Proposition 1 cites Heppner",
+    "role": "Quantitative orbit sparsity; reciprocal summability and limits are derived in the written note.",
+    "source": "Garcia--Tal, Acta Arithmetica 90 (1999), 245--250",
+    "url": "https://matwbn.icm.edu.pl/ksiazki/aa/aa90/aa9033.pdf"
+  },
+  "commands": [
+    {
+      "command": [
+        "python",
+        "04-computation/experiments/glued_xor_20260921_conjugacies.py",
+        "--output",
+        "04-computation/experiments/glued_xor_20260921_conjugacies.json"
+      ],
+      "cwd": ".",
+      "exit_code": 0,
+      "output": ""
+    },
+    {
+      "command": [
+        "python",
+        "-O",
+        "04-computation/experiments/glued_xor_20260921_conjugacies.py",
+        "--output",
+        "04-computation/experiments/glued_xor_20260921_conjugacies.json"
+      ],
+      "cwd": ".",
+      "exit_code": 0,
+      "output": ""
+    },
+    {
+      "command": [
+        "python",
+        "04-computation/experiments/glued_xor_20260921_tournaments.py"
+      ],
+      "cwd": ".",
+      "exit_code": 0,
+      "output": "{\"status\": \"PASS\", \"checks_passed\": 6116, \"all64_types\": {\"sink_cycle\": 8, \"source_cycle\": 8, \"strong\": 24, \"transitive\": 24}, \"output\": \"glued_xor_20260921_tournaments.json\"}"
+    },
+    {
+      "command": [
+        "python",
+        "-O",
+        "04-computation/experiments/glued_xor_20260921_tournaments.py"
+      ],
+      "cwd": ".",
+      "exit_code": 0,
+      "output": "{\"status\": \"PASS\", \"checks_passed\": 6116, \"all64_types\": {\"sink_cycle\": 8, \"source_cycle\": 8, \"strong\": 24, \"transitive\": 24}, \"output\": \"glued_xor_20260921_tournaments.json\"}"
+    },
+    {
+      "command": [
+        "python",
+        "04-computation/experiments/glued_xor_20260921_density.py"
+      ],
+      "cwd": ".",
+      "exit_code": 0,
+      "output": "{\"status\": \"PASS\", \"output\": \"<repo>\\\\04-computation\\\\experiments\\\\glued_xor_20260921_density.json\", \"CRT_inputs_checked\": 93026}"
+    },
+    {
+      "command": [
+        "python",
+        "-O",
+        "04-computation/experiments/glued_xor_20260921_density.py"
+      ],
+      "cwd": ".",
+      "exit_code": 0,
+      "output": "{\"status\": \"PASS\", \"output\": \"<repo>\\\\04-computation\\\\experiments\\\\glued_xor_20260921_density.json\", \"CRT_inputs_checked\": 93026}"
+    },
+    {
+      "command": [
+        "python",
+        "04-computation/experiments/glued_xor_20260921_blueprint.py"
+      ],
+      "cwd": ".",
+      "exit_code": 0,
+      "output": "PASS: 120097 exact controls; 18264 actual prefixes; infinite assertions remain written/cited proofs"
+    },
+    {
+      "command": [
+        "python",
+        "-O",
+        "04-computation/experiments/glued_xor_20260921_blueprint.py"
+      ],
+      "cwd": ".",
+      "exit_code": 0,
+      "output": "PASS: 120097 exact controls; 18264 actual prefixes; infinite assertions remain written/cited proofs"
+    }
+  ],
+  "finished_utc": "2026-09-22T04:50:34+00:00",
+  "global_collatz_convergence_proved": false,
+  "hash_basis": "SHA-256 of UTF-8 bytes with CRLF and lone CR normalized to LF; embedded hashes checked in their own declared basis.",
+  "lanes": {
+    "blueprint": {
+      "certificate": "04-computation/experiments/glued_xor_20260921_blueprint.json",
+      "decoded_json_sha256": "7af3cd1242f0a862be95858ce0d6f649dab22c7c59e78cd0bb380aedd4365ffe",
+      "embedded_source_hash_fields_checked": [
+        "source_sha256"
+      ],
+      "finite_universe": {
+        "endpoint_reversal_sizes": [
+          2,
+          8
+        ],
+        "fibre_last_index": 10,
+        "inverse_fibre_seed": 1,
+        "parameters": [
+          -1,
+          1
+        ],
+        "positive_odd_starts": [
+          1,
+          999
+        ],
+        "prefix_cap": 300,
+        "stop_at_first_repeat": true,
+        "transport_grid": [
+          -8,
+          8
+        ]
+      },
+      "normal_optimized_decoded_json_equal": true,
+      "note": "05-knowledge/results/glued_xor_20260921_blueprint.md",
+      "script": "04-computation/experiments/glued_xor_20260921_blueprint.py",
+      "status": "PASS"
+    },
+    "conjugacies": {
+      "certificate": "04-computation/experiments/glued_xor_20260921_conjugacies.json",
+      "decoded_json_sha256": "f82379112939a35c46ca18bc18cb7ef112e271f79656c6e147115c34ff320707",
+      "embedded_source_hash_fields_checked": [
+        "source_sha256_lf"
+      ],
+      "finite_universe": {
+        "no_extrapolation": true,
+        "sections": [
+          "accelerated_affine_search",
+          "even_parameters",
+          "full_oddpart_affine_search",
+          "halfsteps",
+          "hostiles",
+          "known_cycle_core",
+          "raw",
+          "shell_controls",
+          "source_sha256_lf",
+          "status",
+          "valuation_decomposition"
+        ],
+        "specified_in_certificate": "04-computation/experiments/glued_xor_20260921_conjugacies.json"
+      },
+      "normal_optimized_decoded_json_equal": true,
+      "note": "05-knowledge/results/glued_xor_20260921_conjugacies.md",
+      "script": "04-computation/experiments/glued_xor_20260921_conjugacies.py",
+      "status": "PASS"
+    },
+    "density": {
+      "certificate": "04-computation/experiments/glued_xor_20260921_density.json",
+      "decoded_json_sha256": "b1239aca61a4656f7d4250f5550eb3d1020cec9534137c092a76eb251ea821fa",
+      "embedded_source_hash_fields_checked": [
+        "source_sha256"
+      ],
+      "finite_universe": {
+        "no_extrapolation": true,
+        "sections": [
+          "CRT_inputs_checked",
+          "CRT_universes",
+          "first_integral_six_orbit",
+          "fixed_points_by_parameter",
+          "geometry",
+          "hostiles",
+          "infinite_Collatz_orbit_claim",
+          "modular_rotation_orbits",
+          "source_sha256",
+          "squarefree_prefix",
+          "status"
+        ],
+        "specified_in_certificate": "04-computation/experiments/glued_xor_20260921_density.json"
+      },
+      "normal_optimized_decoded_json_equal": true,
+      "note": "05-knowledge/results/glued_xor_20260921_density.md",
+      "script": "04-computation/experiments/glued_xor_20260921_density.py",
+      "status": "PASS"
+    },
+    "tournaments": {
+      "certificate": "04-computation/experiments/glued_xor_20260921_tournaments.json",
+      "decoded_json_sha256": "68e014fd5181f4588d396f8520c54c43639f065c813d55ef02366f3cf9395e31",
+      "embedded_source_hash_fields_checked": [
+        "source_sha256_lf"
+      ],
+      "finite_universe": {
+        "edge_order": [
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            0,
+            3
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            1,
+            3
+          ],
+          [
+            2,
+            3
+          ]
+        ],
+        "gauge_pair_checks": 4096,
+        "label_permutations": 24,
+        "masks": [
+          0,
+          63
+        ],
+        "order_five_controls": [
+          "transitive except 4->0",
+          "cyclic regular increments 1,2"
+        ],
+        "vertex_switches_distinct": 8,
+        "vertices": [
+          0,
+          1,
+          2,
+          3
+        ]
+      },
+      "normal_optimized_decoded_json_equal": true,
+      "note": "05-knowledge/results/glued_xor_20260921_tournaments.md",
+      "script": "04-computation/experiments/glued_xor_20260921_tournaments.py",
+      "status": "PASS"
+    }
+  },
+  "manifest_self_hash": "Excluded to avoid a circular hash; verifier source is pinned.",
+  "new_general_lean_formalization": false,
+  "scope": "Four finite exact lanes, written proof notes, and inherited formal inventory.",
+  "started_utc": "2026-09-22T04:50:29+00:00",
+  "status": "PASS"
+}

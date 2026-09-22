@@ -156,3 +156,7 @@ scripts/*.ps1 text eol=crlf
 04-computation/experiments/catalan_elliptic_20260921_* text eol=lf
 05-knowledge/results/catalan_elliptic_20260921_* text eol=lf
 04-computation/lean/CatalanEllipticAudit/** text eol=lf
+
+# Glued number lines: portable exact replay certificates and proof notes.
+04-computation/experiments/glued_xor_20260921_* text eol=lf
+05-knowledge/results/glued_xor_20260921_* text eol=lf

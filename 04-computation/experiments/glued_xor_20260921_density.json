@@ -1,0 +1,367 @@
+{
+  "CRT_inputs_checked": 93026,
+  "CRT_universes": [
+    {
+      "depth": 1,
+      "exact_density": {
+        "denominator": 4,
+        "numerator": 3
+      },
+      "good_count": 3,
+      "primes": [
+        2
+      ],
+      "source_modulus": 4,
+      "target_modulus_each_coordinate": 2
+    },
+    {
+      "depth": 1,
+      "exact_density": {
+        "denominator": 9,
+        "numerator": 8
+      },
+      "good_count": 8,
+      "primes": [
+        3
+      ],
+      "source_modulus": 9,
+      "target_modulus_each_coordinate": 3
+    },
+    {
+      "depth": 1,
+      "exact_density": {
+        "denominator": 25,
+        "numerator": 24
+      },
+      "good_count": 24,
+      "primes": [
+        5
+      ],
+      "source_modulus": 25,
+      "target_modulus_each_coordinate": 5
+    },
+    {
+      "depth": 1,
+      "exact_density": {
+        "denominator": 3,
+        "numerator": 2
+      },
+      "good_count": 24,
+      "primes": [
+        2,
+        3
+      ],
+      "source_modulus": 36,
+      "target_modulus_each_coordinate": 6
+    },
+    {
+      "depth": 1,
+      "exact_density": {
+        "denominator": 25,
+        "numerator": 16
+      },
+      "good_count": 576,
+      "primes": [
+        2,
+        3,
+        5
+      ],
+      "source_modulus": 900,
+      "target_modulus_each_coordinate": 30
+    },
+    {
+      "depth": 1,
+      "exact_density": {
+        "denominator": 1225,
+        "numerator": 768
+      },
+      "good_count": 27648,
+      "primes": [
+        2,
+        3,
+        5,
+        7
+      ],
+      "source_modulus": 44100,
+      "target_modulus_each_coordinate": 210
+    },
+    {
+      "depth": 2,
+      "exact_density": {
+        "denominator": 3,
+        "numerator": 2
+      },
+      "good_count": 864,
+      "primes": [
+        2,
+        3
+      ],
+      "source_modulus": 1296,
+      "target_modulus_each_coordinate": 36
+    },
+    {
+      "depth": 3,
+      "exact_density": {
+        "denominator": 3,
+        "numerator": 2
+      },
+      "good_count": 31104,
+      "primes": [
+        2,
+        3
+      ],
+      "source_modulus": 46656,
+      "target_modulus_each_coordinate": 216
+    }
+  ],
+  "first_integral_six_orbit": [
+    [
+      1,
+      0
+    ],
+    [
+      0,
+      1
+    ],
+    [
+      -1,
+      1
+    ],
+    [
+      -1,
+      0
+    ],
+    [
+      0,
+      -1
+    ],
+    [
+      1,
+      -1
+    ]
+  ],
+  "fixed_points_by_parameter": {
+    "1": [
+      {
+        "k": 1,
+        "n": -1
+      },
+      {
+        "k": 2,
+        "n": 1
+      }
+    ],
+    "5": [
+      {
+        "k": 1,
+        "n": -5
+      },
+      {
+        "k": 2,
+        "n": 5
+      },
+      {
+        "k": 3,
+        "n": 1
+      }
+    ]
+  },
+  "geometry": [
+    {
+      "N": 1,
+      "common_exact_density": {
+        "denominator": 1,
+        "numerator": 1
+      },
+      "hexagon_count": 6,
+      "hexagon_rotation_orbits": 1,
+      "positive_square_primitive_count": 1,
+      "primitive_hexagon_count": 6,
+      "primitive_square_count": 8,
+      "square_count": 8,
+      "square_rotation_orbits": 2
+    },
+    {
+      "N": 2,
+      "common_exact_density": {
+        "denominator": 3,
+        "numerator": 2
+      },
+      "hexagon_count": 18,
+      "hexagon_rotation_orbits": 3,
+      "positive_square_primitive_count": 3,
+      "primitive_hexagon_count": 12,
+      "primitive_square_count": 16,
+      "square_count": 24,
+      "square_rotation_orbits": 6
+    },
+    {
+      "N": 3,
+      "common_exact_density": {
+        "denominator": 3,
+        "numerator": 2
+      },
+      "hexagon_count": 36,
+      "hexagon_rotation_orbits": 6,
+      "positive_square_primitive_count": 7,
+      "primitive_hexagon_count": 24,
+      "primitive_square_count": 32,
+      "square_count": 48,
+      "square_rotation_orbits": 12
+    },
+    {
+      "N": 5,
+      "common_exact_density": {
+        "denominator": 3,
+        "numerator": 2
+      },
+      "hexagon_count": 90,
+      "hexagon_rotation_orbits": 15,
+      "positive_square_primitive_count": 19,
+      "primitive_hexagon_count": 60,
+      "primitive_square_count": 80,
+      "square_count": 120,
+      "square_rotation_orbits": 30
+    },
+    {
+      "N": 10,
+      "common_exact_density": {
+        "denominator": 55,
+        "numerator": 32
+      },
+      "hexagon_count": 330,
+      "hexagon_rotation_orbits": 55,
+      "positive_square_primitive_count": 63,
+      "primitive_hexagon_count": 192,
+      "primitive_square_count": 256,
+      "square_count": 440,
+      "square_rotation_orbits": 110
+    },
+    {
+      "N": 25,
+      "common_exact_density": {
+        "denominator": 13,
+        "numerator": 8
+      },
+      "hexagon_count": 1950,
+      "hexagon_rotation_orbits": 325,
+      "positive_square_primitive_count": 399,
+      "primitive_hexagon_count": 1200,
+      "primitive_square_count": 1600,
+      "square_count": 2600,
+      "square_rotation_orbits": 650
+    },
+    {
+      "N": 50,
+      "common_exact_density": {
+        "denominator": 425,
+        "numerator": 258
+      },
+      "hexagon_count": 7650,
+      "hexagon_rotation_orbits": 1275,
+      "positive_square_primitive_count": 1547,
+      "primitive_hexagon_count": 4644,
+      "primitive_square_count": 6192,
+      "square_count": 10200,
+      "square_rotation_orbits": 2550
+    },
+    {
+      "N": 100,
+      "common_exact_density": {
+        "denominator": 2525,
+        "numerator": 1522
+      },
+      "hexagon_count": 30300,
+      "hexagon_rotation_orbits": 5050,
+      "positive_square_primitive_count": 6087,
+      "primitive_hexagon_count": 18264,
+      "primitive_square_count": 24352,
+      "square_count": 40400,
+      "square_rotation_orbits": 10100
+    }
+  ],
+  "hostiles": {
+    "addition": "f_2(1+1)=(0,1), f_2(1)+f_2(1)=(0,0)",
+    "finite_sieve_25_to_1_2": true,
+    "finite_sieve_29_to_5_0": true,
+    "global_integer_lift_obstruction": "n=2 forces b=0 at every odd prime, but b=1 modulo2",
+    "height_box": "Q(9)=6, visible positive pairs through3=7",
+    "multiplication": "f_2(2*2 mod4)=(0,0), f_2(2)^2=(0,1)"
+  },
+  "infinite_Collatz_orbit_claim": false,
+  "modular_rotation_orbits": [
+    {
+      "modulus": 2,
+      "orbit_length_counts": {
+        "3": 1
+      }
+    },
+    {
+      "modulus": 3,
+      "orbit_length_counts": {
+        "2": 1,
+        "6": 1
+      }
+    },
+    {
+      "modulus": 5,
+      "orbit_length_counts": {
+        "6": 4
+      }
+    },
+    {
+      "modulus": 6,
+      "orbit_length_counts": {
+        "6": 4
+      }
+    },
+    {
+      "modulus": 30,
+      "orbit_length_counts": {
+        "6": 96
+      }
+    }
+  ],
+  "source_sha256": "b4352150cbdf34f620e33429d96e82d5ba4db417e050c8139e9f7aabc5b7b1b4",
+  "squarefree_prefix": {
+    "X": 600000,
+    "count": 364754,
+    "exact_density": {
+      "denominator": 300000,
+      "numerator": 182377
+    },
+    "odd_rows": [
+      {
+        "exact_density": {
+          "denominator": 100000,
+          "numerator": 91169
+        },
+        "limiting_density": "9/pi^2",
+        "population": 100000,
+        "residue_mod6": 1,
+        "squarefree_count": 91169
+      },
+      {
+        "exact_density": {
+          "denominator": 100000,
+          "numerator": 60789
+        },
+        "limiting_density": "6/pi^2",
+        "population": 100000,
+        "residue_mod6": 3,
+        "squarefree_count": 60789
+      },
+      {
+        "exact_density": {
+          "denominator": 100000,
+          "numerator": 91211
+        },
+        "limiting_density": "9/pi^2",
+        "population": 100000,
+        "residue_mod6": 5,
+        "squarefree_count": 91211
+      }
+    ]
+  },
+  "status": "FINITE-EXACT controls; all infinite statements proved separately"
+}
