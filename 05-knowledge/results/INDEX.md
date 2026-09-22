@@ -66,7 +66,11 @@
   the `3n-1` sheet (mixing and Fourier decay transfer; the full theorem
   stays OPEN), the word-function theorem (sign-specific invariants must be
   order statements) and core-Lean `decide` proofs of the `Q_n` component
-  counts. Collatz remains OPEN.
+  counts. Closing [session-lead reflection](collatz_mod6_20260922_lead_reflection.md):
+  the two sheets' root cycles are the two sides of Catalan (`{5,7}` is the
+  clock `(3,2)`), `{1,4,6} = {1} cup 2*{2,3}` are the excluded diagonals,
+  and `a_8 = 0` in the level-11 form because `a_2^2 = 2p` at `p = 2`.
+  Collatz remains OPEN.
 - [Arithmetic seams](arithmetic_seams_20260921_synthesis.md): **PROVED scoped / VERIFIED Lean arithmetic.** Fermat tournament path counts; sharp fifteen-term coprimality; Fermat-prime decimal clocks; dihedral three-cycle lifts; pointed-product and remainder repairs. [Manifest](arithmetic_seams_20260921_manifest.json). Global Collatz convergence remains OPEN.
 
 - [Collatz guard extensions](collatz_guards_20260921_synthesis.md): **PROVED scoped / VERIFIED Lean reductions.** Irrational reset density; no bounded discrepancy; sharp squarefree word obstructions. Global convergence OPEN. [Manifest](collatz_guards_20260921_manifest.json).
