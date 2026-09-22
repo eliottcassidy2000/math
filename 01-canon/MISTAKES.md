@@ -9,6 +9,32 @@ Format per entry:
 - Why it was wrong
 - The correct framing
 
+## 2026-09-21 Collatz blueprint -- invalid geometry and missing trajectory quantifiers
+
+- **REFUTED proposed monodromy:** the supplied maps have M3=M2 composed
+  with M1. Their projective trace-squared/determinant invariants are
+  9/2, 49/12, 121/24, not the claimed parabolic/elliptic values. Their
+  generated real group contains translations tending to the identity and
+  is not discrete. Legal integer inverse branches survive with congruence
+  guards; reducing these division maps modulo 6 loses needed mod-9 data.
+- **REFUTED proposed energy descent:** the exact step 19->29 lies within
+  one dyadic interval on which the proposed energy is increasing. For any
+  fixed L, n=2^m+2^(L+1)-1 with m>=2L+4 has no energy descent in its first
+  L odd steps. Ambient squarefree density does not repair this: it has no
+  every-trajectory sampling implication, and arbitrarily long squarefree
+  growing prefixes are already proved in the preceding arithmetic session.
+- **INVALID cycle/perfect-number inference:** equal matrix spectra can
+  have fixed points 1 and 5/7; integer carry divisibility was discarded.
+  Rescaling a projective matrix changes its determinant without changing
+  its map, so determinant 3 cannot force 3|N. No divisor-sum/Collatz-return
+  equivalence was supplied. The known negative cycles are not exhaustive
+  merely because three examples were found.
+- **VACUOUS formal premise:** the blueprint requires every integer to be
+  1,3,5 modulo 6, contradicted by 0. The repaired Lean package proves this
+  contradiction and a nonvacuous eventual-descent equivalence, without
+  asserting either side of the Collatz conjecture.
+  [Current synthesis and exact witnesses](../05-knowledge/results/collatz_blueprint_20260921_synthesis.md).
+
 ## 2026-09-17 arithmetic braids -- a finite head and a quotient lost their scope
 
 - **REFUTED gap tower still live in an older source:**

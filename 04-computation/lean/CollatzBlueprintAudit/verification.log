@@ -1,0 +1,35 @@
+$ lean --version
+Lean (version 4.30.0, x86_64-w64-windows-gnu, commit d024af099ca4bf2c86f649261ebf59565dc8c622, Release)
+exit_code=0
+
+$ lake clean
+exit_code=0
+
+$ lake build
+✔ [2/4] Built CollatzBlueprintAudit.Basic (973ms)
+✔ [3/4] Built CollatzBlueprintAudit (818ms)
+Build completed successfully (4 jobs).
+exit_code=0
+
+$ lake env lean AxiomAudit.lean
+'CollatzBlueprintAudit.not_allIntegersHaveOddResidue' depends on axioms: [propext, Quot.sound]
+'CollatzBlueprintAudit.blueprintResiduePremise_uninhabited' depends on axioms: [propext, Quot.sound]
+'CollatzBlueprintAudit.odd_integer_residues' depends on axioms: [propext, Quot.sound]
+'CollatzBlueprintAudit.iterate_add' does not depend on any axioms
+'CollatzBlueprintAudit.iterate_positive' does not depend on any axioms
+'CollatzBlueprintAudit.reachesOne_iff_strictDescent' depends on axioms: [propext, Quot.sound]
+'CollatzBlueprintAudit.descent_iff_affine_inequality' depends on axioms: [propext, Quot.sound]
+'CollatzBlueprintAudit.strictDescent_of_affineCertificates' depends on axioms: [propext, Quot.sound]
+'CollatzBlueprintAudit.collatz_positive' depends on axioms: [propext, Quot.sound]
+'CollatzBlueprintAudit.collatz_reachesOne_iff_strictDescent' depends on axioms: [propext, Quot.sound]
+'CollatzBlueprintAudit.collatz_reachesOne_of_strictDescent' depends on axioms: [propext, Quot.sound]
+'CollatzBlueprintAudit.constantOne_control' depends on axioms: [propext, Quot.sound]
+'CollatzBlueprintAudit.positivity_hypothesis_is_necessary' depends on axioms: [propext, Quot.sound]
+'CollatzBlueprintAudit.collatz_seven_reachesOne' does not depend on any axioms
+'CollatzBlueprintAudit.collatz_nineteen_growth_control' does not depend on any axioms
+'CollatzBlueprintAudit.collatz_zero_fixed' depends on axioms: [propext]
+'CollatzBlueprintAudit.collatz_zero_never_reachesOne' depends on axioms: [propext]
+'CollatzBlueprintAudit.signed_negOne_returns' does not depend on any axioms
+'CollatzBlueprintAudit.signed_negFive_returns' does not depend on any axioms
+'CollatzBlueprintAudit.signed_negSeventeen_returns' does not depend on any axioms
+exit_code=0

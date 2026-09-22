@@ -1,0 +1,111 @@
+{
+  "artifacts": [
+    {
+      "path": "04-computation/experiments/collatz_blueprint_20260921_affine.json",
+      "sha256_lf": "894f6580aaabc8f676a5f5a32d617237f6988edffc2e4c7e0ce85325a1476658"
+    },
+    {
+      "path": "04-computation/experiments/collatz_blueprint_20260921_affine.py",
+      "sha256_lf": "18eecfbac7e47a70f5f9bc0253d4132ac82f98d66e3bfc07c30d201b80e29707"
+    },
+    {
+      "path": "04-computation/experiments/collatz_blueprint_20260921_energy.json",
+      "sha256_lf": "3ee90f7204c4d374323057a3b1ea9f123fbbb5e01ef5746915deb626678615b8"
+    },
+    {
+      "path": "04-computation/experiments/collatz_blueprint_20260921_energy.py",
+      "sha256_lf": "5649f50b485d215fedf64ac0861d321e818319035cd37e32f37cecc675896ad1"
+    },
+    {
+      "path": "04-computation/experiments/collatz_blueprint_20260921_verify.py",
+      "sha256_lf": "41bc20197e001d14f562508e39357aea8bf6b0be9e1e560c3f54501ce8fb29cb"
+    },
+    {
+      "path": "04-computation/lean/CollatzBlueprintAudit/.gitignore",
+      "sha256_lf": "fde850d24186b6e99c8c0debd641fb3ab85198b109eb66f71a1fea02bd6ea1b3"
+    },
+    {
+      "path": "04-computation/lean/CollatzBlueprintAudit/AxiomAudit.lean",
+      "sha256_lf": "997863c4a283f59c71e8aa8262bea9a6e947c650e4d6e342f5dba17dcd8100c8"
+    },
+    {
+      "path": "04-computation/lean/CollatzBlueprintAudit/CollatzBlueprintAudit/Basic.lean",
+      "sha256_lf": "8ac960737cec7475e97452bb0b97ec8626f81cde54f32888345870b47906d23e"
+    },
+    {
+      "path": "04-computation/lean/CollatzBlueprintAudit/CollatzBlueprintAudit.lean",
+      "sha256_lf": "7871d4377ec2dba903df1deb133aaa040496574988de1b00ab70b9f6ab054b9e"
+    },
+    {
+      "path": "04-computation/lean/CollatzBlueprintAudit/lake-manifest.json",
+      "sha256_lf": "f5225401c2e400fbb0a42e31dc395c7dd60bc4c78b365df3baf7da056e447081"
+    },
+    {
+      "path": "04-computation/lean/CollatzBlueprintAudit/lakefile.toml",
+      "sha256_lf": "7578f9321f901266c712fbbb28b2cc70a02ddd5deaf55cd52eda8c220a9707ee"
+    },
+    {
+      "path": "04-computation/lean/CollatzBlueprintAudit/lean-toolchain",
+      "sha256_lf": "54727eec5cba149c18842e6deb5c41b369d66455c93ce135d7d5347c782b2325"
+    },
+    {
+      "path": "04-computation/lean/CollatzBlueprintAudit/README.md",
+      "sha256_lf": "7dade4367b68576ef3365c3edec5ca980486bcbce815ded3a000183f2ebc3520"
+    },
+    {
+      "path": "04-computation/lean/CollatzBlueprintAudit/verification.json",
+      "sha256_lf": "257ac0c4c66b9c42688a4fcac85679e0744ba92aeb1f4626185a1088b2d3c912"
+    },
+    {
+      "path": "04-computation/lean/CollatzBlueprintAudit/verification.log",
+      "sha256_lf": "6f5796215ee683ba03316f0b5fb76560065461b184e214d0ecec501888715f2d"
+    },
+    {
+      "path": "04-computation/lean/CollatzBlueprintAudit/verify.py",
+      "sha256_lf": "4d506fcab42011d337fb459ecd27f48b9d15ebdd8ed33382bd5ff1e3de84ca4b"
+    },
+    {
+      "path": "05-knowledge/reference/COLLATZ-BLUEPRINT-2026-09-21-SOURCE.md",
+      "sha256_lf": "8361ba62e5b94ec1a960837fce1efae13103e8be48aa372547fd8cc6721ed44e"
+    },
+    {
+      "path": "05-knowledge/results/collatz_blueprint_20260921_affine.md",
+      "sha256_lf": "8dca8bf1ea343220b9fcc64ed5d65d76e681536deb939d723371612c70f32020"
+    },
+    {
+      "path": "05-knowledge/results/collatz_blueprint_20260921_energy.md",
+      "sha256_lf": "7bd9135b0ac11ef99ecc0b522bf4fae38884d0a3352f8a4f6eac7523d5745472"
+    },
+    {
+      "path": "05-knowledge/results/collatz_blueprint_20260921_synthesis.md",
+      "sha256_lf": "0e7c05d59fb4fe3c21f4e46815defeed6e09e0a87570941b6c638b9297293fe3"
+    },
+    {
+      "path": "05-knowledge/results/collatz_blueprint_20260921_verification.out",
+      "sha256_lf": "185e966ab06a2f621d239f1a2a23824fd5a667d2e1a5f1b4f49707222fc10e8a"
+    }
+  ],
+  "collatz_convergence_proved": false,
+  "hash_basis": "artifact bytes with CRLF normalized to LF",
+  "lean_verification": "04-computation/lean/CollatzBlueprintAudit/verification.json",
+  "runs": [
+    {
+      "byte_identical": true,
+      "certificate": "04-computation/experiments/collatz_blueprint_20260921_affine.json",
+      "command": "python 04-computation/experiments/collatz_blueprint_20260921_affine.py",
+      "lane": "affine",
+      "optimized_pass": true,
+      "ordinary_pass": true
+    },
+    {
+      "byte_identical": true,
+      "certificate": "04-computation/experiments/collatz_blueprint_20260921_energy.json",
+      "command": "python 04-computation/experiments/collatz_blueprint_20260921_energy.py",
+      "lane": "energy",
+      "optimized_pass": true,
+      "ordinary_pass": true
+    }
+  ],
+  "scope": "Scoped proofs, finite controls, and Lean reductions only.",
+  "status": "PASS"
+}

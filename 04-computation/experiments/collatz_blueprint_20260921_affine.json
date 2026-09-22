@@ -1,0 +1,90 @@
+{
+  "all_checks_passed": true,
+  "commutator": "x-1/3",
+  "conjugate_translation": "-1/(3*2^j)",
+  "endpoint_partition": "all 2^r endpoint residues for every r=0..10",
+  "exhaustive_residue_checks_through_length6": 5461,
+  "mod6_hostiles": {
+    "E": [
+      [
+        5,
+        3
+      ],
+      [
+        11,
+        7
+      ]
+    ],
+    "M3": [
+      [
+        1,
+        1
+      ],
+      [
+        7,
+        9
+      ]
+    ]
+  },
+  "normalized_trace_squared": [
+    "9/2",
+    "49/12",
+    "121/24"
+  ],
+  "positive_integer_fixed_words_in_declared_universe": [
+    {
+      "fixed": 1,
+      "word": "DE"
+    },
+    {
+      "fixed": 2,
+      "word": "ED"
+    },
+    {
+      "fixed": 1,
+      "word": "DEDE"
+    },
+    {
+      "fixed": 2,
+      "word": "EDED"
+    },
+    {
+      "fixed": 1,
+      "word": "DEDEDE"
+    },
+    {
+      "fixed": 2,
+      "word": "EDEDED"
+    },
+    {
+      "fixed": 1,
+      "word": "DEDEDEDE"
+    },
+    {
+      "fixed": 2,
+      "word": "EDEDEDED"
+    },
+    {
+      "fixed": 1,
+      "word": "DEDEDEDEDE"
+    },
+    {
+      "fixed": 2,
+      "word": "EDEDEDEDED"
+    }
+  ],
+  "same_spectrum_hostile": {
+    "DDEE_fixed": "5/7",
+    "DEDE_fixed": "1",
+    "invariant": "625/144"
+  },
+  "source_checks": 135211,
+  "status": "FINITE-EXACT controls of elementary proofs; no convergence claim",
+  "word_universe": {
+    "alphabet": "DE",
+    "distinct_matrices": 2047,
+    "length_max": 10,
+    "length_min": 0,
+    "word_count": 2047
+  }
+}

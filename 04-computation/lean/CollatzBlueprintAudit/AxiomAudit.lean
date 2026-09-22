@@ -1,0 +1,22 @@
+import CollatzBlueprintAudit
+
+#print axioms CollatzBlueprintAudit.not_allIntegersHaveOddResidue
+#print axioms CollatzBlueprintAudit.blueprintResiduePremise_uninhabited
+#print axioms CollatzBlueprintAudit.odd_integer_residues
+#print axioms CollatzBlueprintAudit.iterate_add
+#print axioms CollatzBlueprintAudit.iterate_positive
+#print axioms CollatzBlueprintAudit.reachesOne_iff_strictDescent
+#print axioms CollatzBlueprintAudit.descent_iff_affine_inequality
+#print axioms CollatzBlueprintAudit.strictDescent_of_affineCertificates
+#print axioms CollatzBlueprintAudit.collatz_positive
+#print axioms CollatzBlueprintAudit.collatz_reachesOne_iff_strictDescent
+#print axioms CollatzBlueprintAudit.collatz_reachesOne_of_strictDescent
+#print axioms CollatzBlueprintAudit.constantOne_control
+#print axioms CollatzBlueprintAudit.positivity_hypothesis_is_necessary
+#print axioms CollatzBlueprintAudit.collatz_seven_reachesOne
+#print axioms CollatzBlueprintAudit.collatz_nineteen_growth_control
+#print axioms CollatzBlueprintAudit.collatz_zero_fixed
+#print axioms CollatzBlueprintAudit.collatz_zero_never_reachesOne
+#print axioms CollatzBlueprintAudit.signed_negOne_returns
+#print axioms CollatzBlueprintAudit.signed_negFive_returns
+#print axioms CollatzBlueprintAudit.signed_negSeventeen_returns

@@ -1,0 +1,6 @@
+name = "CollatzBlueprintAudit"
+version = "0.1.0"
+defaultTargets = ["CollatzBlueprintAudit"]
+
+[[lean_lib]]
+name = "CollatzBlueprintAudit"

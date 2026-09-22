@@ -1,5 +1,7 @@
 # Script Results Index
 
+- [Collatz blueprint audit](collatz_blueprint_20260921_synthesis.md): **PROVED scoped / VERIFIED Lean reductions.** Guarded affine words and energy obstructions; global convergence OPEN.
+
 - [E8 Fargues-Scholze fibers](fs_e8_finiteness_20260917.md): **PROVED reduction / CONDITIONAL theorem.** Finite fibers iff bounded depths; auxiliary-prime gap remains OPEN.
 
 - [Arithmetic braids II](arithmetic_braids2_20260917_synthesis.md): **PROVED

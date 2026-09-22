@@ -1,0 +1,75 @@
+{
+  "axioms": {
+    "CollatzBlueprintAudit.blueprintResiduePremise_uninhabited": [
+      "propext",
+      "Quot.sound"
+    ],
+    "CollatzBlueprintAudit.collatz_nineteen_growth_control": [],
+    "CollatzBlueprintAudit.collatz_positive": [
+      "propext",
+      "Quot.sound"
+    ],
+    "CollatzBlueprintAudit.collatz_reachesOne_iff_strictDescent": [
+      "propext",
+      "Quot.sound"
+    ],
+    "CollatzBlueprintAudit.collatz_reachesOne_of_strictDescent": [
+      "propext",
+      "Quot.sound"
+    ],
+    "CollatzBlueprintAudit.collatz_seven_reachesOne": [],
+    "CollatzBlueprintAudit.collatz_zero_fixed": [
+      "propext"
+    ],
+    "CollatzBlueprintAudit.collatz_zero_never_reachesOne": [
+      "propext"
+    ],
+    "CollatzBlueprintAudit.constantOne_control": [
+      "propext",
+      "Quot.sound"
+    ],
+    "CollatzBlueprintAudit.descent_iff_affine_inequality": [
+      "propext",
+      "Quot.sound"
+    ],
+    "CollatzBlueprintAudit.iterate_add": [],
+    "CollatzBlueprintAudit.iterate_positive": [],
+    "CollatzBlueprintAudit.not_allIntegersHaveOddResidue": [
+      "propext",
+      "Quot.sound"
+    ],
+    "CollatzBlueprintAudit.odd_integer_residues": [
+      "propext",
+      "Quot.sound"
+    ],
+    "CollatzBlueprintAudit.positivity_hypothesis_is_necessary": [
+      "propext",
+      "Quot.sound"
+    ],
+    "CollatzBlueprintAudit.reachesOne_iff_strictDescent": [
+      "propext",
+      "Quot.sound"
+    ],
+    "CollatzBlueprintAudit.signed_negFive_returns": [],
+    "CollatzBlueprintAudit.signed_negOne_returns": [],
+    "CollatzBlueprintAudit.signed_negSeventeen_returns": [],
+    "CollatzBlueprintAudit.strictDescent_of_affineCertificates": [
+      "propext",
+      "Quot.sound"
+    ]
+  },
+  "external_packages": [],
+  "lean_version": "Lean (version 4.30.0, x86_64-w64-windows-gnu, commit d024af099ca4bf2c86f649261ebf59565dc8c622, Release)",
+  "root_import": "CollatzBlueprintAudit",
+  "scope": "Premise refutation, descent equivalence, finite controls; not Collatz convergence",
+  "sha256": {
+    "AxiomAudit.lean": "997863c4a283f59c71e8aa8262bea9a6e947c650e4d6e342f5dba17dcd8100c8",
+    "CollatzBlueprintAudit.lean": "7871d4377ec2dba903df1deb133aaa040496574988de1b00ab70b9f6ab054b9e",
+    "CollatzBlueprintAudit/Basic.lean": "8ac960737cec7475e97452bb0b97ec8626f81cde54f32888345870b47906d23e",
+    "lakefile.toml": "7578f9321f901266c712fbbb28b2cc70a02ddd5deaf55cd52eda8c220a9707ee",
+    "lean-toolchain": "54727eec5cba149c18842e6deb5c41b369d66455c93ce135d7d5347c782b2325",
+    "verify.py": "4d506fcab42011d337fb459ecd27f48b9d15ebdd8ed33382bd5ff1e3de84ca4b"
+  },
+  "status": "PASS",
+  "theorems_audited": 20
+}
