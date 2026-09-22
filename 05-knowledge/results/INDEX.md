@@ -1,5 +1,15 @@
 # Script Results Index
 
+- [Collatz mod-6 rows and the 3-adic mirror](collatz_mod6_20260917_synthesis.md):
+  **PROVED scoped + FINITE-EXACT + INDEPENDENTLY AUDITED (twelve lanes).**
+  Greedy 3-adic inverse map `G` with exact Markov chain, invariant measure,
+  drift `log(2/3)` and tail `(7/9)^(J-1)` (E-graph "evens also go to 3n+1",
+  one-SCC conjecture); Thue closure of the third critical-numerator unit
+  equation (`c in {0,-1,-2,-7/4}`); Bang = Catalan behind the mod-9 rows;
+  Cipolla pseudoprime tower on the trunk `(4^j-1)/3`; sandwich mixed-cell
+  drift identity and the non-tournament; `F = alpha S + beta U` classified;
+  odd-function floor law with class numbers in the even case; audit of the
+  pasted "peripheral scaffolding". Collatz remains OPEN.
 - [Arithmetic seams](arithmetic_seams_20260921_synthesis.md): **PROVED scoped / VERIFIED Lean arithmetic.** Fermat tournament path counts; sharp fifteen-term coprimality; Fermat-prime decimal clocks; dihedral three-cycle lifts; pointed-product and remainder repairs. [Manifest](arithmetic_seams_20260921_manifest.json). Global Collatz convergence remains OPEN.
 
 - [Collatz guard extensions](collatz_guards_20260921_synthesis.md): **PROVED scoped / VERIFIED Lean reductions.** Irrational reset density; no bounded discrepancy; sharp squarefree word obstructions. Global convergence OPEN. [Manifest](collatz_guards_20260921_manifest.json).

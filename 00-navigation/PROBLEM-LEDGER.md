@@ -235,6 +235,10 @@ all heights (THM-1289, published), δ ineffective.
   and a periodic-weight obstruction. [The continuation](../05-knowledge/results/arithmetic_braids2_20260917_synthesis.md)
   proves dense disjoint minus basins and squarefree growth prefixes of every
   finite length. Global convergence remains open; retain height and carry.
+  [The 2026-09-21 mod-6 synthesis](../05-knowledge/results/collatz_mod6_20260917_synthesis.md)
+  adds the graph `E` (evens also map to `3n+1`), its one-SCC conjecture, and
+  the greedy 3-adic certificate `G` with proved density-one stopping; the
+  2-adic forward and 3-adic backward obstructions are mirror images.
 - **Erdős Problem 592** [DEEP — $1000 problem] — the p=2 Schur-seam theorem (THM-469),
   R(n,2)=2n+1 linear conjecture, Chang-tower m=3 open; 21 scripts, a survey draft.
 - **{7,21} forbidden H-spectrum** [DEEP, repo-signature] — permanent exclusions by
