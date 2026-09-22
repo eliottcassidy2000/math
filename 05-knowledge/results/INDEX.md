@@ -70,6 +70,10 @@
   the two sheets' root cycles are the two sides of Catalan (`{5,7}` is the
   clock `(3,2)`), `{1,4,6} = {1} cup 2*{2,3}` are the excluded diagonals,
   and `a_8 = 0` in the level-11 form because `a_2^2 = 2p` at `p = 2`.
+  [Second reflection](collatz_mod6_20260922_lead_reflection2.md): strict
+  multiplicand sources are `{1} cup P cup P^2`; `M = (M cap S) u (D minus
+  {1->2, 2->4})`; the ray tableau is odd/even by nonsquare/square; every
+  hole, source and leaf met in the session is a deleted diagonal.
   Collatz remains OPEN.
 - [Arithmetic seams](arithmetic_seams_20260921_synthesis.md): **PROVED scoped / VERIFIED Lean arithmetic.** Fermat tournament path counts; sharp fifteen-term coprimality; Fermat-prime decimal clocks; dihedral three-cycle lifts; pointed-product and remainder repairs. [Manifest](arithmetic_seams_20260921_manifest.json). Global Collatz convergence remains OPEN.
 
