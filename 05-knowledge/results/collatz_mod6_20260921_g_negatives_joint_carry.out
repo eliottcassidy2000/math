@@ -1,0 +1,166 @@
+# collatz_mod6_20260921_g_negatives_joint_carry
+source sha256 8be6120e4fd0875c74c349a5d09af0c056ba42c190629bef661a1926ed7cdba2
+
+## S1. G on negative integers coprime to 3: cycles and basins
+S1.1 G(-p) = -G_-(p) with the same k for all p <= 20000, 3 !| p; k-tables k_+(r)={1: 2, 2: 1, 4: 0, 5: 3, 7: 0, 8: 1}, k_-(r)={1: 1, 2: 0, 4: 3, 5: 0, 7: 1, 8: 2}, k_-(r) = k_+(-r mod 9).
+S1.2 G(-1) = -1 (k=1); G(-4) = -11 (k=3); G(-11) = -4 (k=0).
+S1.2 gate: m0=-1 word=(1,) (J,L)=(1,1) 2^J-3^L=-1 B'=1
+S1.2 gate: m0=-4 word=(3, 0) (J,L)=(3,2) 2^J-3^L=-1 B'=4
+S1.2 gate: m0=-11 word=(0, 3) (J,L)=(3,2) 2^J-3^L=-1 B'=11
+S1.2 gate: m0=1 word=(2,) (J,L)=(2,1) 2^J-3^L=1 B'=1
+[time] S1.3 census 11.5s
+S1.3 FINITE-EXACT: every m in [-10^7, -1] with 3 !| m reaches {-1} or {-4,-11} under G; escapes to |m| > 10^18: 0; new cycles: 0.
+S1.3 basins: to {-1}: 2897798; to {-4,-11}: 3768869; total 6666667 (= 6666667 non-multiples of 3).
+S1.3 basin fraction to {-4,-11}: 0.565330
+S1.3 basin counts by decade (X, to {-1}, to {-4,-11}, fraction to {-4,-11}):
+      X=10  5  2  0.285714
+      X=100  29  38  0.567164
+      X=1000  292  375  0.562219
+      X=10000  2869  3798  0.569672
+      X=100000  29065  37602  0.564027
+      X=1000000  291160  375507  0.563260
+      X=10000000  2897798  3768869  0.565330
+S1.3 max steps to the cycle set: 99 at m = [-7139938]
+S1.3 max orbit peak: 805306367 at m = -7174453; max peak/|m| = 318145727/2391484 = 133.033 at m = -2391484
+S1.3 word of m=-7139938 (99 letters): 301322022220222201322203202003032200322220020320130322001222202032222020012030100030132022201101100
+S1.3 orbit of m=-2391484 (negated): [-2391484, -6377291, -8503055, -11337407, -15116543, -20155391, -26873855, -35831807, -47775743, -63700991, -84934655, -113246207, -150994943, -201326591, -67108864, -178956971, -238609295, -318145727, -106048576, -70699051, -47132701, -31421801, -10473934, -27930491, -37240655, -12413552, -4137851, -1379284, -919523, -306508, -817355, -272452, -726539, -242180, -322907, -107636, -35879, -11960, -15947, -21263, -7088, -2363, -788, -263, -88, -59, -20, -7, -5, -2, -1]
+S1.3 word of m=-2391484: 32222222222220322011103200010303020002200000100100
+S1.3 positive control: G-orbit of 4847486 peaks at 644874241, peak/m = 644874241/4847486 = 133.033, word 3222220322222222202003002203222001222200020032203001303220300103200020001300
+S1.3 the two worst ratios: negative 318145727/2391484, positive 644874241/4847486, equal: False; 2^34/3^17 = 133.033
+S1.4 direct evaluation of G on m in [-10^5, -1] reproduces the conjugated basin labels.
+S1.5 basin of {-4,-11} below 100: [-4, -8, -11, -13, -16, -17, -19, -23, -25, -26, -28, -31, -32, -34, -35, -37, -38, -46, -47, -50, -52, -53, -55, -56, -58, -62, -68, -70, -71, -74, -76, -77, -79, -82, -83, -85, -92, -95]
+S1.5 powers of two: -2^e for e=0..12 go to [(0, '{-1}'), (1, '{-1}'), (2, '{-4,-11}'), (3, '{-4,-11}'), (4, '{-4,-11}'), (5, '{-4,-11}'), (6, '{-1}'), (7, '{-1}'), (8, '{-4,-11}'), (9, '{-4,-11}'), (10, '{-4,-11}'), (11, '{-4,-11}'), (12, '{-4,-11}')]
+[time] S1 done 11.9s
+
+## S1b. Cycle-gate census: q = 1 words, greedy-legal (G) and all-odd (T), both signs
+S1b census: letters 0..3, 1 <= L <= 10, 1398100 words scanned.
+  (J,L) | sign(2^J-3^L) | 2^J-3^L | #q=1 closed E-walks (simple E-cycles) | #greedy-legal (G-cycles) | #all-odd (reversed T-cycles) | greedy cycles | all-odd cycles
+  (1,1) | - | -1 | 1 (simple 1) | 1 | 1 | [[-1]] | [[-1]]
+      q=1 closed walks at (1,1): [[-1]]
+  (2,1) | + | 1 | 1 (simple 1) | 1 | 1 | [[1]] | [[1]]
+      q=1 closed walks at (2,1): [[1]]
+  (3,2) | - | -1 | 2 (simple 2) | 1 | 1 | [[-11, -4]] | [[-7, -5]]
+      q=1 closed walks at (3,2): [[-11, -4], [-7, -5]]
+  (5,3) | + | 5 | 1 (simple 1) | 0 | 0 | [] | []
+      q=1 closed walks at (5,3): [[4, 5, 13]]
+  (8,5) | + | 13 | 2 (simple 2) | 0 | 0 | [] | []
+      q=1 closed walks at (8,5): [[14, 37, 43, 49, 65], [20, 23, 35, 53, 61]]
+  (10,6) | + | 295 | 1 (simple 1) | 0 | 0 | [] | []
+      q=1 closed walks at (10,6): [[2, 5, 7, 11, 13, 17]]
+  (11,7) | - | -139 | 1 (simple 1) | 0 | 0 | [] | []
+      q=1 closed walks at (11,7): [[-115, -77, -47, -43, -35, -26, -16]]
+  (13,8) | + | 1631 | 1 (simple 1) | 0 | 0 | [] | []
+      q=1 closed walks at (13,8): [[5, 8, 11, 13, 17, 19, 25, 29]]
+  (14,9) | - | -3299 | 1 (simple 1) | 0 | 0 | [] | []
+      q=1 closed walks at (14,9): [[-47, -43, -35, -29, -19, -16, -13, -10, -7]]
+  totals: G-cycles + 1, - 2; reversed T-cycles + 1, - 2
+  greedy-legal q=1 cycles are exactly {1}, {-1}, {-4,-11}; the sign law sign(m0) = sign(2^J-3^L) holds on every q=1 cycle.
+S1b census: letters 0..6, 1 <= L <= 7, 960799 words scanned.
+  (J,L) | sign(2^J-3^L) | 2^J-3^L | #q=1 closed E-walks (simple E-cycles) | #greedy-legal (G-cycles) | #all-odd (reversed T-cycles) | greedy cycles | all-odd cycles
+  (1,1) | - | -1 | 1 (simple 1) | 1 | 1 | [[-1]] | [[-1]]
+      q=1 closed walks at (1,1): [[-1]]
+  (2,1) | + | 1 | 1 (simple 1) | 1 | 1 | [[1]] | [[1]]
+      q=1 closed walks at (2,1): [[1]]
+  (3,2) | - | -1 | 2 (simple 2) | 1 | 1 | [[-11, -4]] | [[-7, -5]]
+      q=1 closed walks at (3,2): [[-11, -4], [-7, -5]]
+  (5,3) | + | 5 | 1 (simple 1) | 0 | 0 | [] | []
+      q=1 closed walks at (5,3): [[4, 5, 13]]
+  (7,4) | + | 47 | 1 (simple 0) | 0 | 0 | [] | []
+      q=1 closed walks at (7,4): [[1, 4, 5, 13]]
+  (8,5) | + | 13 | 6 (simple 6) | 0 | 0 | [] | []
+  (9,6) | - | -217 | 2 (simple 2) | 0 | 0 | [] | []
+      q=1 closed walks at (9,6): [[-59, -20, -11, -7, -5, -2], [-43, -29, -10, -7, -5, -2]]
+  (10,6) | + | 295 | 1 (simple 1) | 0 | 0 | [] | []
+      q=1 closed walks at (10,6): [[2, 5, 7, 11, 13, 17]]
+  (10,7) | - | -1163 | 1 (simple 0) | 0 | 0 | [] | []
+      q=1 closed walks at (10,7): [[-59, -20, -11, -7, -5, -2, -1]]
+  (11,7) | - | -139 | 12 (simple 12) | 0 | 1 | [] | [[-91, -61, -55, -41, -37, -25, -17]]
+  (12,7) | + | 1909 | 1 (simple 0) | 0 | 0 | [] | []
+      q=1 closed walks at (12,7): [[1, 2, 5, 7, 11, 13, 17]]
+  totals: G-cycles + 1, - 2; reversed T-cycles + 1, - 3
+  greedy-legal q=1 cycles are exactly {1}, {-1}, {-4,-11}; the sign law sign(m0) = sign(2^J-3^L) holds on every q=1 cycle.
+[time] S1b done 12.6s
+
+## S2. Joint carry: forward T-word to the peak, greedy G-word from the peak
+[time] S2 loop 14.4s
+S2.1 odd n <= 100000: 45281 records; 4719 skipped because M = n is a multiple of 3 (G undefined): first [21, 33, 45, 69, 81, 93, 117, 141]
+S2.1 largest peak M = 523608245 at n = 77671; every greedy path from a peak reached 1 (cap 5000).
+S2.1 carry formulas verified: B1 = sum_{i<=L1} 3^(L1-i) 2^(k_1+..+k_(i-1)), B2 = sum_{s<=J} 3^(s-1) 2^(K2-K_s), on every record.
+S2.2 conservation identity verified on every record; cases: {'K1>=K2': 6408, 'K1<K2': 38873}
+S2.3 residue criterion G(u) = p  <=>  (p = 1 mod 3 and k <= 3) or (p = 2 mod 3 and k = 1), u = (3p+1)/2^k, checked at 265536 pre-peak steps (all agree).
+S2.3 equivalently p mod 48 in [1, 7, 11, 13, 19, 23, 25, 31, 35, 43, 47] (11 of the 16 odd classes coprime to 3), i.e. p = 1 mod 3 with p != 5 mod 16, or p = 11 mod 12; verified for odd p < 20000.
+S2.4 records with L1 = 0 (n is its own peak): 9485; fully retraced (overlap = L1): 20500 of 45281 = 0.4527; fully retraced with L1 >= 1: 11015 of 35796 = 0.3077
+S2.4 overlap histogram (overlap: count): [(0, 11875), (1, 11684), (2, 7888), (3, 5670), (4, 3257), (5, 2340), (6, 1200), (7, 709), (8, 325), (9, 193), (10, 58), (11, 54), (12, 15), (13, 6), (14, 5), (15, 2)]
+S2.4 gap L1 - overlap histogram (gap: count): [(0, 20500), (1, 7932), (2, 2471), (3, 1950), (4, 1531), (5, 1291), (6, 1096), (7, 901), (8, 794), (9, 703), (10, 619), (11, 538), (12, 466), (13, 415), (14, 379), (15, 322), (16, 296), (17, 248), (18, 215), (19, 193), (20, 190), (21, 174), (22, 162), (23, 158), (24, 138)]
+S2.4 full-retrace fraction by L1 (L1: full/count):
+      L1=0: 9485/9485 = 1.0000  ((11/16)^L1 = 1.0000)
+      L1=1: 4748/7138 = 0.6652  ((11/16)^L1 = 0.6875)
+      L1=2: 2979/5354 = 0.5564  ((11/16)^L1 = 0.4727)
+      L1=3: 1470/3570 = 0.4118  ((11/16)^L1 = 0.3250)
+      L1=4: 879/2890 = 0.3042  ((11/16)^L1 = 0.2234)
+      L1=5: 449/2156 = 0.2083  ((11/16)^L1 = 0.1536)
+      L1=6: 242/1777 = 0.1362  ((11/16)^L1 = 0.1056)
+      L1=7: 127/1576 = 0.0806  ((11/16)^L1 = 0.0726)
+      L1=8: 62/1282 = 0.0484  ((11/16)^L1 = 0.0499)
+      L1=9: 31/1135 = 0.0273  ((11/16)^L1 = 0.0343)
+      L1=10: 15/926 = 0.0162  ((11/16)^L1 = 0.0236)
+      L1=11: 6/823 = 0.0073  ((11/16)^L1 = 0.0162)
+      L1=12: 2/769 = 0.0026  ((11/16)^L1 = 0.0111)
+      L1=13: 3/640 = 0.0047  ((11/16)^L1 = 0.0077)
+      L1=14: 2/577 = 0.0035  ((11/16)^L1 = 0.0053)
+S2.4 mean overlap 1.9264, mean L1 5.8642
+S2.7 peak structure verified on 35796 records with L1 >= 1: k_L1 = 1; M = 5 mod 12; k_(L1+1) >= 2; first greedy letter in {1,3}; K2 >= 2; number of trailing zero letters of the greedy word is even; B2 odd; overlap >= 1 iff not (L1 = 1 and 3 | n).
+S2.7 zero-letter chain (3^a-1)/2, a=1..12: [1, 4, 13, 40, 121, 364, 1093, 3280, 9841, 29524, 88573, 265720]; residues mod 8: [1, 4, 5, 0, 1, 4, 5, 0, 1, 4, 5, 0]
+S2.7 (3^a-1)/2 is never 3 mod 8 (a < 40), and (3^(a+1)-1)/2 is even iff a is odd (a < 40).
+S2.5 invariant search on (B1,B2,K1,K2,L1,J), records with L1 >= 1 unless stated
+S2.5a hold on all records: B1 odd; 3 !| B1 B2; v2(3^J + B2) = K2; v2(3^L1 n + B1) = K1; B1 B2 = (-1)^(K1+K2) mod 3; v3(2^K2 M - B2) = J.
+S2.5b constant residues (expr, modulus, value) among moduli 2..48: [('B1', 2, 1), ('B2', 2, 1), ('B1+B2', 2, 0), ('B1-B2', 2, 0), ('B1*B2', 2, 1), ('B1+3^L1', 2, 0), ('B2+3^J', 2, 0), ('B2+3^J', 4, 0), ('B2-2^K2', 2, 1), ('B1-2^K1', 2, 1)]
+S2.5c B1 mod 3 <- (K1-K2 mod 2, B2 mod 3) : DETERMINED
+S2.5c B1 mod 9 <- (K1-K2 mod 6, B2 mod 9) : not determined
+S2.5c B1 mod 9 <- (K1,K2,L1,J mod 6, B2 mod 9) : not determined
+S2.5c B2 mod 4 <- (K1,K2,L1,J mod 4, B1 mod 4) : DETERMINED
+S2.5c B2 mod 8 <- (K2 mod 2, J mod 2) : not determined
+S2.5c B2 mod 2 <- (K2,J) mod 2 : DETERMINED
+S2.5c B1 mod 4 <- (K1,L1) mod 2 : not determined
+S2.5c B1 mod 4 <- (K1,L1) mod 4 : not determined
+S2.5d linear forms a K1 + b K2 + c L1 + d J, |coeff| <= 2: constant ones: []
+S2.5d range of (1, -1, 0, 0) . (K1,K2,L1,J): [-74, 74]
+S2.5d range of (0, 1, 0, -1) . (K1,K2,L1,J): [-13, 18]
+S2.5d range of (0, 0, -1, 1) . (K1,K2,L1,J): [-38, 56]
+S2.5d range of (1, 0, -2, 0) . (K1,K2,L1,J): [-32, -1]
+S2.5d range of (1, 0, -1, 0) . (K1,K2,L1,J): [0, 36]
+S2.5d range of (0, 1, 0, -2) . (K1,K2,L1,J): [-51, -3]
+S2.5d range of (1, -1, -1, 1) . (K1,K2,L1,J): [-18, 37]
+S2.5e gcd(B1,B2) = 1 on 32725 of 35796 records; other values (gcd: count, first 10): [(5, 1622), (7, 553), (11, 124), (13, 136), (17, 130), (19, 159), (23, 54), (25, 25), (29, 58), (31, 28)]
+S2.5e last two greedy letters (k_(J-1), k_J) and penultimate node, counts: [(((0, 0), 4), 31399), (((0, 1), 2), 4397)]
+S2.6 sample rows (n, M, L1, K1, B1, J, K2, B2, overlap):
+      (1, 1, 0, 0, 0, 0, 0, 0, 0, (), None)
+      (3, 5, 1, 1, 1, 3, 3, 13, 0, (0, 0), 4)
+      (7, 17, 2, 2, 5, 4, 3, 55, 2, (0, 1), 2)
+      (27, 3077, 32, 44, 4099611359668325, 10, 5, 39415, 3, (0, 1), 2)
+      (97, 3077, 34, 49, 114510381809719831, 10, 5, 39415, 3, (0, 1), 2)
+      (871, 63665, 14, 16, 6383441, 14, 7, 3366151, 5, (0, 1), 2)
+      (6171, 325133, 32, 45, 4612864953503845, 30, 30, 143217768367943, 5, (0, 0), 4)
+      (77031, 7311005, 42, 60, 360732998652733542401, 31, 27, 363593084212693, 3, (0, 0), 4)
+[time] S2 done 20.1s
+
+## S3. G-analogue of the bounded-strip theorem: numerical anchors
+S3.1 sum_{s=1}^{300} 3^s/2^{K_s} < 3 m_0 verified for every positive m_0 <= 5000; largest ratio (sum)/m_0 = 3.000000 at m_0 = 1 (bound 3).
+S3.2a G_- words of length J are functions of m mod 3^(J+1) for J <= 6 (all unit classes, lifts t=1,2,5).
+S3.2b G_-: E_Haar[2^{K_J}] = 3(7/3)^(J-1) exactly, B_J <= 2^{K_J}(3^J-1)/2 on every class, and Haar{2^{K_J} >= 3^J/2} <= 2(7/9)^(J-1), J <= 8:
+      J | E[2^K_J] | #classes with 2^K_J >= 3^J/2 | #units mod 3^(J+1) | tail | 2(7/9)^(J-1)
+      1 | 3 | 4 | 6 | 0.666667 | 2.000000
+      2 | 7 | 7 | 18 | 0.388889 | 1.555556
+      3 | 49/3 | 22 | 54 | 0.407407 | 1.209877
+      4 | 343/9 | 37 | 162 | 0.228395 | 0.941015
+      5 | 2401/27 | 121 | 486 | 0.248971 | 0.731901
+      6 | 16807/81 | 201 | 1458 | 0.137860 | 0.569256
+      7 | 117649/243 | 316 | 4374 | 0.072245 | 0.442755
+      8 | 823543/729 | 1112 | 13122 | 0.084743 | 0.344365
+S3.3 negative cycle from -1: (K,L)=(1,1), 3^L/2^K = 3/2 > 1, so 3^j/2^{K_j} -> infinity along it.
+S3.3 negative cycle from -4: (K,L)=(3,2), 3^L/2^K = 9/8 > 1, so 3^j/2^{K_j} -> infinity along it.
+S3.3 positive cycle {1}: (K,L)=(2,1), 3^L/2^K = 3/4 < 1, ratio -> 0.
+S3.4 capacity bound for a hypothetical G_- strip A <= 3^j/2^{K_j} <= B: images are coprime to 3, count <= 2X/3 + 1, giving B/A >= 9/2 (Collatz odd-and-coprime count gives 9).
+[time] S3 done 24.7s
+
+[done] total 24.7s
