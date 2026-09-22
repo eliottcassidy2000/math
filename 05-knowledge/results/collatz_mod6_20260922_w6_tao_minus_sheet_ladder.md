@@ -1,0 +1,134 @@
+# Tao's almost-all theorem on the 3n-1 sheet, and the "Delta = 4 prime ladder"
+
+**Status: PROVED (elementary, from CITED inputs): the minus-sheet Syracuse offset is the negative of the plus-sheet offset with the identical valuation-word law, so Tao's Syracuse random variable satisfies `Syrac_-(Z/3^nZ) = -Syrac_+(Z/3^nZ)` and his fine-scale mixing (Prop. 1.14) and characteristic-function decay (Prop. 1.17) hold verbatim on the `3n-1` sheet (S3-S5); REFUTED: the pasted "dyadic martingale renewal process" and "entropy decrement" descriptions of Tao's method (S2), the "Delta = 4 prime ladder 3,7,11,17" (S8), "3 is a prime target" (S10), and the loopless claim for the pasted Lean `square_sum_graph` (S16); SCOPE: Tao's text contains no remark on `3n-1` or any other multiplier (S1), the PPT `(77,36,85)` is generic (S11), the "torsion horizon" and "difference 4 regulates the carry" prose have no object (S12), and `196 = 14^2` carries no trajectory consequence (S13); OPEN: whether Theorem 1.3 itself (almost all orbits attain almost bounded values) holds for `3n-1` (S6), with the exact obstruction to "reaches 1" being the three minus cycles (S7, CITED). Wave 6, lane `tao_minus_sheet_ladder`, 2026-09-22.**
+
+## Inheritance and concept board
+
+Closest proved mechanism: the sign-carried Terras bijection `Z/2^J -> {0,1}^J` of [minus_sheet_positive_control S2](collatz_mod6_20260922_minus_sheet_positive_control.md), which makes every residue-density statement sheet-blind; this lane lifts it one level, to Tao's Syracuse random variables, where it becomes an exact negation symmetry mod `3^n` (S3-S4). Canonical hostile: the positive `3n-1` seven-cycle `{17,25,37,55,41,61,91}` with valuation word `(1,1,1,2,1,1,4)`, `|a| = 11`, `L = 7`, carry `B = 2363 = 17*139`, `Delta = 2^11 - 3^7 = -139`, gate `n_0 = bB/Delta = 17`, `q = 1` ([counterexample_portrait](collatz_mod6_20260922_counterexample_portrait.md) table, [catalan_elliptic (C6)](catalan_elliptic_20260921_catalan.md)); it is what any "transferred Tao" must coexist with. Corrected near miss: the pasted argument "Tao transfers to the minus sheet because the prefix-descent counts mod `2^J` are identical" names the right input (the word law, Tao's Proposition 1.9) but the wrong theorem: by Tao's own Section 1.3 that input alone recovers only the Korec-type bound `Syr_min(N) <= N^(1-c)`; the transfer of the genuinely new part (the first-passage stabilisation (1.20)) goes through the negation symmetry of `Syrac` and the Bourgain-style iteration, and the last two sections of that route are not re-run here (S6, OPEN). Least-used sidecar: OEIS A110979 (squares equal to the sum of the first `m` primes minus one), in which `196` is the fifth term `1, 4, 9, 16, 196, 839056, 7796654478001`, so the "196 horizon" is one member of a sparse but infinite-looking sequence (S13).
+
+Inherited and not re-derived: THM-2422 (swap-fixed operation fibres, synchronous closure `M_t = 27*2^(t-4)+1`), THM-2433, THM-362 (canon); the reflection [summand-graph-fermat-zeckendorf](../../07-reflections/summand-graph-fermat-zeckendorf.md) with its corrections in [arithmetic_braids_20260917_summand sec.8](arithmetic_braids_20260917_summand.md); the session synthesis [collatz_mod6_20260917_synthesis](collatz_mod6_20260917_synthesis.md); the 196 identity (G12) of [collatz_guards_20260921_squarefree sec.7](collatz_guards_20260921_squarefree.md); the basin census to `10^7` of [minus_sheet_positive_control S1](collatz_mod6_20260922_minus_sheet_positive_control.md).
+
+Analogy typing for the one map used here. Source: Tao's plus-sheet Syracuse random variable `Syrac_+(Z/3^nZ) = F_n(Geom(2)^n) mod 3^n`. Target: the minus-sheet object `Syrac_-(Z/3^nZ)`. Map: `x -> -x` on `Z/3^nZ`. Preserved: the word law `Geom(2)^n`, cosets `3^m Z/3^n Z`, the set of `xi` not divisible by `3`, total-variation distances, avoidance of multiples of `3`. Lost: the sign of the offset inside the integer affine formula `Syr_b^n(N) = 3^n 2^(-|a|) N + b F_n(a)`, hence every ordering statement (which is where [positive_control S3](collatz_mod6_20260922_minus_sheet_positive_control.md) shows the sheets face opposite ways). Sidecar: the paper's footnote view of `Syrac(Z_3)` as an "ancient" iteration indexed by negative times is about time reversal, not about `3n-1`; no map between the two negations was found. Test: the finite histogram check of S4 (`n = 3`, `18` residues, negation exact).
+
+## 1. What Tao's paper says, and does not say, about other multipliers (S1)
+
+**S1 (SCOPE).** The abstract page (citation title "Almost all orbits of the Collatz map attain almost bounded values") and the PDF were fetched with `curl` and converted with `pdftotext` (`4258` lines; version stamp `arXiv:1909.03562v7 [math.PR] 16 Jul 2026`). The text contains `12` strings of the shape `3n-1`; all `12` are the power `3^(n-1)` (each is followed by `Z`, `2^-a`, `mod`, a coset bracket or a comma), and `0` are the map `3n-1`. The words "negative" (`6` lines, first at `425`, all about the drift `log 3 - 2 log 2` and about negative binomial / negative time indexing), "5n+1" (`1` line, `4203`) and "generalization" (`1` line, `4212`) occur only in the bibliography, which starts at line `4188` (the Lagarias survey title). There is therefore no verbatim remark about `3x-1` or any other multiplier to quote; the transfer question is not addressed by the paper, and the label for "Tao says the theorem holds for `3n-1`" is SCOPE (statement of non-discovery), not CITED.
+
+## 2. What Tao's method actually is (S2)
+
+**S2 (REFUTED for the pasted description; CITED for the corrected one, source: the paper only).** Term census of the `v7` text: "martingale" `0` lines, "dyadic" `0` lines, "entropy decrement" `0` lines. The phrase "renewal process" occurs on `19` lines and "two-dimensional renewal" on `5` (first at line `24`, the abstract): the renewal process is a random walk in `Z^2` with first-quadrant increments obtained by pairing consecutive valuations `a_(2j-1) + a_(2j)` into Pascal (negative binomial) variables (`17` lines mention Pascal), and its only role is to estimate the characteristic function of `Syrac(Z/3^nZ)` through the "black triangles" of Section 7 (`63` lines mention triangles). "Entropy" occurs on `3` lines: the Shannon-entropy heuristic `log 4` of Remark 1.15 (line `729`) and the Renyi/collision entropy of Remark 6.1 (`2` lines, first `1985`); neither is an entropy-decrement argument (UNCITED-RECOLLECTION: that phrase belongs to Tao's Chowla/Erdos-discrepancy work, not to this paper).
+
+The actual chain, by anchor line in the `pdftotext` output:
+
+| ingredient | where | content (paraphrase) |
+|---|---|---|
+| Syracuse formulation, Theorem 1.6 | line `208` | `Syr(N) = (3N+1)/2^v` on odd `N`; Theorem 1.3 (line `113`) is equivalent to its Syracuse form |
+| `n`-Syracuse valuation, Proposition 1.9 | line `359` | for `N` drawn with logarithmic weighting the valuation vector `a^(n)(N)` is close in total variation to `Geom(2)^n` for `n <= c log N` |
+| affine formula | eq. (1.7) | `Syr^n(N) = 3^n 2^(-|a|) N + F_n(a)`, `F_n(a) = sum_i 3^(n-i) 2^(-a[i,n])` |
+| Syracuse random variables | line `524` (`9` lines) | `Syrac(Z/3^nZ) := F_n(Geom(2)^n) mod 3^n` with reversed labels |
+| Proposition 1.14, fine-scale mixing | line `682` | `Syrac` is nearly uniform on cosets `3^m Z/3^n Z` after conditioning on the residue mod `3^m` |
+| Proposition 1.17, Fourier decay | line `745` | for `xi` not divisible by `3`, the characteristic function of `Syrac(Z/3^nZ)` at `xi/3^n` is `O_A(n^(-A))`, uniformly in `n` and `xi` |
+| Section 6 | line `1957` | Plancherel plus a partial convolution structure reduce 1.14 to 1.17 (`4` lines mention Plancherel, `9` Fourier) |
+| Proposition 1.11, stabilisation of first passage | line `492` | with `alpha = 1.001`: `P(T_x = infinity) << x^(-c)` (1.19) and `dTV(Pass_x(N_(x^alpha)), Pass_x(N_(x^(alpha^2)))) << log^(-c) x` (1.20) |
+| Section 3, Bourgain-style iteration | line `1038` | (1.19)-(1.20) alone give Theorem 1.6, hence 1.3, in logarithmic density (`20` lines say "logarithmic density", `6` "natural density") |
+
+The one quotation this note takes from the paper is `13` words long, from Section 1.3 (line `519`): the implication from Proposition 1.11 to the theorem "does not use any particular properties of the Syracuse map beyond (1.19), (1.20)". Everything else above is paraphrase, and the anchor lines let a reader with the PDF verify each row.
+
+The pasted paragraph also states that the prefix-descent counts mod `2^J` coincide on both sheets and infers that Tao's theorem transfers. The coincidence is [positive_control S2](collatz_mod6_20260922_minus_sheet_positive_control.md) (CITED; re-verified in S3 below at the level of valuation words). But that coincidence is exactly the content of Proposition 1.9, and Tao's Section 1.3 says explicitly that Proposition 1.9 with the drift heuristic recovers only the earlier `Syr_min(N) <= N^(1-c)` result (Korec: `4` lines, first `12`). The stabilisation (1.20) is the new part, and it is not a statement about residue densities. So "prefix-descent counts coincide, hence Tao transfers" is a non sequitur as written; the correct route is S3-S6.
+
+## 3. The valuation-word law and the affine formula are sign-symmetric (S3)
+
+**S3 (PROVED, elementary; the word-law equality is CITED from positive_control S2 and re-verified).** Write `T_b(N) = (3N+b)/2^(a)` with `a = v_2(3N+b)` for odd `N` and `b = +-1`. Induction on `n` gives, for both signs,
+
+```text
+T_b^n(N) = 3^n 2^(-|a|) N + b F_n(a),      F_n(a) = sum_(i=1)^n 3^(n-i) 2^(-a[i,n]),
+```
+
+with the same polynomial `F_n` as Tao's (1.7): the step `x -> (3x+b)/2^a` sends `3^k 2^(-s) N + b G` to `3^(k+1) 2^(-s-a) N + b(3G + 1)/2^a`, which is the recursion defining `F`. FINITE-EXACT: verified for both signs, all odd `N < 16384`, `n <= 6`, `98304` instances.
+
+Word law. For `J = 12` the `4095` valuation words `(a_1, ..., a_n)` with `|a| <= 12` have identical multiplicities on the two sheets among odd `N` in `[1, 2^14)`, and each word is realised by exactly `2^(13-|a|)` such `N`; so on both sheets the law of the word is exactly `Geom(2)^n` truncated at `|a| <= J`, which is the exact form of Proposition 1.9 for uniformly distributed odd residues. (This is the bijection `Z/2^J -> {0,1}^J` of positive_control S2 rewritten in valuation coordinates.)
+
+## 4. `Syrac_- = -Syrac_+` (S4)
+
+**S4 (PROVED).** Tao defines `Syrac(Z/3^nZ)` as the residue mod `3^n` of `F_n` evaluated at a `Geom(2)^n` word (with the labels reversed, which is a relabelling of the same law). By S3 the minus-sheet offset is `-F_n` at a word with the same law, so `Syrac_-(Z/3^nZ) = -Syrac_+(Z/3^nZ)` in distribution. FINITE-EXACT: for `n = 3` and words with `|a| <= 12` the residue histogram mod `27` of the minus-sheet offset is the pointwise negation of the plus-sheet histogram (`18` residues hit; `0` multiples of `3` hit, the coarse-scale irregularity Tao's Remark 1.15 mentions, which negation preserves).
+
+## 5. Propositions 1.14 and 1.17 hold on the minus sheet (S5)
+
+**S5 (PROVED from CITED inputs: Tao's Propositions 1.14 and 1.17).** (i) Proposition 1.17 is stated for every `xi` in `Z/3^nZ` not divisible by `3`, uniformly. The characteristic function of `-X` at `xi` is that of `X` at `-xi`, and `-xi` is not divisible by `3` iff `xi` is not; so the bound `O_A(n^(-A))` holds for `Syrac_-` with the same constants. (ii) Proposition 1.14 is a statement of the form `dTV(X, X + U) <= eps` with `U` uniform on `3^m Z/3^n Z`, conditioned on the residue of `X` mod `3^m`. Negation is a bijection of `Z/3^nZ` mapping each coset `Y + 3^m Z/3^n Z` to the coset `-Y + 3^m Z/3^n Z` and fixing the law of `U`; total variation is invariant under bijections; hence the statement for `-X` is the statement for `X` with `Y` replaced by `-Y`. No re-run of Section 6 is needed. Consequently the two "3-adic" ingredients of Tao's proof are sheet-blind in the precise sense of the portrait lane: they cannot see the sign of `b`.
+
+## 6. What remains open for the full theorem (S6)
+
+**S6 (OPEN; HEURISTIC support).** The remaining steps are Section 5 (Proposition 1.11 from Propositions 1.9 and 1.14) and Section 3 (the theorem from 1.11). Both manipulate the integer affine formula `3^n 2^(-|a|) N + b F_n(a)` and interval membership `Syr^n(N) <= x`, and in the plus-sheet text the offset is positive; whether any inequality there uses `F_n > 0` in an essential way has not been checked in this lane. The heuristic expectation is that nothing does (the offset is `O(3^n 2^(-|a|))` relative to the main term in both signs, and (1.19) rests on the drift `log 3 - 2 log 2`, which is sign-independent), so "almost all `3n-1` orbits attain almost bounded values (logarithmic density)" is expected to be a theorem by the same proof; it is not asserted here, and no source asserts it (S1). Empirically it is true in the strongest possible form: on odd `n <= 1000000`, every `3n-1` orbit attains one of the bounded values `1`, `5`, `17` (S7).
+
+## 7. What cannot transfer: reaching 1 (S7)
+
+**S7 (REFUTED as a target statement; the obstruction is CITED and re-verified).** Basin census of the odd Syracuse forms on odd `n <= 1000000`: plus sheet, `{1: 500000}` (fraction `1.0`); minus sheet, `{1: 163486, 5: 162122, 17: 174392}` (fractions `0.326972`, `0.324244`, `0.348784`), agreeing with the `10^7` census of positive_control S1. So on the minus sheet "attains bounded values" and "reaches `1`" differ on a set of density about `2/3` of the odd integers. This is exactly the shape of Tao's own theorem: `Col_min(N) <= f(N)` for almost all `N` is consistent with `Col_min(N)` taking finitely many values other than `1` on a positive-density set, and Tao explicitly does not assume Conjecture 1.5 (line `198`; the convention `Syr^infinity := 1` at first-passage time `+infinity` is called artificial in Section 1.3). Hence the pasted sentence "almost-all decay does not imply a single root; a sign-specific ingredient is needed" is correct as a SCOPE statement, with one sharpening from S5: the sign-specific ingredient cannot be found among Tao's 3-adic inputs, since those are negation-symmetric; it can only enter through the ordering step of Section 5 (S6) or through a genuinely different invariant.
+
+## 8. The "Delta = 4 prime ladder" (S8, S9)
+
+**S8 (REFUTED, minimal witness `17 - 11 = 6`).** The consecutive differences of `3, 7, 11, 17` are `4, 4, 6`; it is not an arithmetic progression. Moreover no progression of primes with common difference `4` has length `4`: among `a, a+4, a+8` the residues mod `3` are a permutation of `(0, 1, 2)` (table: `(0,1,2), (1,2,0), (2,0,1)` for `a = 0, 1, 2`), so one of the three is divisible by `3`, and the only run of length `3` is `3, 7, 11` (search below `10^5` confirms: longest run `[3, 7, 11]`, length `3`).
+
+**S9 (FINITE-EXACT).** The pasted Lean statement `delta_four_prime_step_invariance` says only that `{3,7,11,17} + 4 = {7,11,15,21}` as sets of naturals, which is true (`[7, 11, 15, 21]`), and is closed by `trivial`/`decide`. It carries no primality: `15 = 3*5` and `21 = 3*7` are composite. Any "prime progression" reading of it is false, and the "torsion horizon" prose attached to it has no mathematical object (SCOPE).
+
+## 9. Prime targets, the PPT, and 2363 (S10-S12)
+
+**S10 (REFUTED).** "3 and 7 are the first nontrivial prime targets of `3n+1` / `3n-1`": `3` is never a Syracuse target on either sheet, since `3*2^k = 3n +- 1` is impossible mod `3` (checked: no odd `n < 2^16` has target `3` on either sheet). The first odd `n` whose target is a prime other than `1` or `n` is `n = 3 -> 5` on the plus sheet and `n = 5 -> 7` on the minus sheet.
+
+**S11 (SCOPE).** `77^2 + 36^2 = 7225 = 85^2` is a primitive Pythagorean triple with Euclid parameters `(m, n) = (9, 2)`, i.e. `((7+11)/2, (11-7)/2)`. Any two coprime odd numbers `p < q` give the leg `pq` this way; the triple records `7*11 = 77` and nothing about the Collatz step `7 -> 11` (which is `T_+(7) = 11`, valuation `1`). The Berggren transport of Collatz edges is a different, already-typed construction ([berggren_edge_transport](collatz_mod6_20260921_berggren_edge_transport.md)); no map from this PPT to it was found.
+
+**S12 (CITED, re-verified; the prose around it is SCOPE).** `2^11 - 3^7 = -139`, `(-17)(-139) = 2363 = 17*139`. This is the carry of the seven-cycle: `(2^11 - 3^7)*17 = -2363 = bB` with `b = -1`, and the ordered cycle gate `n_0 = bB/Delta = 17`, `q = |Delta|/gcd(B, |Delta|) = 1` ([catalan_elliptic (C6)](catalan_elliptic_20260921_catalan.md), [counterexample_portrait](collatz_mod6_20260922_counterexample_portrait.md)). The cycle in odd Syracuse form is `17, 25, 37, 55, 41, 61, 91, 17` with valuations `(1, 1, 1, 2, 1, 1, 4)`, `|a| = 11`, `L = 7`. Nothing in `B = 2363` involves a difference `4`; "the difference 4 regulates the carry `B_L`" has no object.
+
+## 10. The 196 identity (S13)
+
+**S13 (CITED: collatz_guards_20260921_squarefree sec.7, (G12); re-verified; the trajectory reading is SCOPE).** `1 + 3 + 5 + 7 + 11 + 13 + 17 + 19 + 23 + 29 + 31 + 37 = 196 = 14^2` with `k = 11` odd primes, and (G12) reads `(k+1)^2 + 2 sum c_i = 144 + 52 = 196` with `c_i = (p_i - (2i+1))/2 = (0, 0, 0, 1, 1, 2, 2, 3, 5, 5, 7)`, `sum c_i = 26`. Sidecar: `1 + sum` of the first `k` odd primes is the sum of the first `m = k+1` primes minus `1`; the values of `m` below `20000000` (primes scanned) for which this is a square are `m = 1, 2, 3, 4, 12, 504, 1020675`, giving `1, 4, 9, 16, 196, 839056, 7796654478001` with roots `1, 2, 3, 4, 14, 916, 2792249` and last primes `2, 3, 5, 7, 37, 3607, 15827429`; this is OEIS A110979 (lookup 2026-09-22; the recomputation matches its data). `196` is the fifth term; the first four are the trivial `1 + 3 + 5 + 7 = 16` prefix where the odd primes are the odd numbers. "Positive carries build constructively and negative carries shear subtractively" attaches no orbit statement to any term of A110979; no map found.
+
+## 11. Session-lead square-sum probe, re-verified (S14-S16)
+
+**S14 (FINITE-EXACT).** Component counts of `Q_n` (`x ~ y` iff `x + y` is a square, `x != y`) for `n = 1..32`: `1, 2, 2` for `n = 1, 2, 3`; `3` for `4 <= n <= 12`; `2` at `n = 13`; `1` for `14 <= n <= 32`. At `n = 12` the components are `{1,3,6,8,10}`, `{2,7,9}`, `{4,5,11,12}`; at `n = 13` the first and third merge through `13` (`3+13 = 16`, `12+13 = 25`), leaving `{2,7,9}`, which joins at `n = 14` (`2+14 = 16`). Degree `<= 1` vertices: `n = 14: {8,9,10}`, `15: {8,9}`, `16: {8,16}`, `17: {16,17}`, `18: {16,17,18}`, `19: {16,18}`, `20..30: {18}`, `31, 32:` none; the only neighbour of `18` in `Q_30` is `7`, and `31` (`18+31 = 49`) is its second neighbour in `Q_31`. The three components for `4 <= n <= 12` are the "three modes" seeds in a different graph; whether they are the same partition as the summand-graph closure of THM-2422 (`{1,4,6}` versus `{1,3,6,8,10}, {2,7,9}, {4,5,11,12}`) is not tested here (SCOPE; the pasted "3 independent chains" is a square-sum statement, not a summand-graph one).
+
+**S15 (FINITE-EXACT; A090461 CITED).** Backtracking with the standard degree-pruning rule gives Hamiltonian paths for `n = 1, 15, 16, 17, 23, 25, 26, 27, 28, 29, 30, 31, 32` and none for `n = 2..14, 18..22, 24`, matching the session lead and A090461 (whose comments assert every `k >= 25`, with cycles for `k >= 32`). The two pasted paths are valid: for `n = 15` the consecutive sums are among `{9, 16, 25}` (the braiding of three squares), for `n = 23` among `{4, 9, 16, 25, 36}`.
+
+**S16 (REFUTED, minimal witness value `2`).** The pasted `def square_sum_graph (n) : SimpleGraph (Fin n)` with `Adj x y := exists k, (x.val+1)+(y.val+1) = k^2` and no `x != y` clause has `Adj v v` whenever `2v` is a square: values `2, 8, 18, 32` below `33` (`2 + 2 = 4`). The `loopless := sorry` field is therefore unprovable as written; the fix is to conjoin `x != y` (the session-lead definition).
+
+## 12. Verdict table (S17)
+
+| claim from the paste | label | evidence (section) |
+|---|---|---|
+| Tao's paper remarks on `3n-1` / other multipliers | SCOPE | `0` map-variant hits; all `12` `3n-1` strings are `3^(n-1)` (S1) |
+| Tao's method is a "dyadic martingale renewal process" | REFUTED | `0` hits for martingale, dyadic; the renewal process is two-dimensional in `Z^2`, used for Fourier decay (S2) |
+| Tao's method uses an "entropy decrement" | REFUTED | `0` hits; entropy appears only heuristically (Remark 1.15) and as Renyi entropy (S2) |
+| prefix-descent counts mod `2^J` coincide on both sheets | CITED | positive_control S2; re-verified as the word law, `4095` words (S3) |
+| that coincidence transfers Tao's theorem | REFUTED as an inference | it is Proposition 1.9, which gives only the Korec-type bound (S2) |
+| `Syrac_- = -Syrac_+`; Props 1.14, 1.17 on the minus sheet | PROVED (from CITED) | S4, S5 |
+| Theorem 1.3 for `3n-1` | OPEN | Sections 3, 5 not re-run; empirically true to `10^6` (S6, S7) |
+| almost-all bounded values implies a single root | REFUTED | three minus cycles, basins `0.326972 / 0.324244 / 0.348784` (S7) |
+| `3, 7, 11, 17` is an AP with difference 4 | REFUTED | differences `4, 4, 6`; length `<= 3` (S8) |
+| Lean `delta_four_prime_step_invariance` | FINITE-EXACT | true set statement; `15`, `21` composite (S9) |
+| `3` is a first nontrivial prime target | REFUTED | no preimage on either sheet; first prime targets `5` and `7` (S10) |
+| `7 -> 11` maps to the PPT `(77, 36, 85)` | SCOPE | generic leg `pq`, `(m,n) = (9,2)` (S11) |
+| `(2^11 - 3^7)(-17) = 2363 = 17*139`, root `17` | CITED | catalan_elliptic (C6), portrait; re-verified (S12) |
+| "difference 4 regulates the carry `B_L`" | SCOPE | no object (S12) |
+| `1 + 3 + ... + 37 = 196 = 14^2` | CITED | guards (G12); term `5` of A110979 (S13) |
+| "linear prime addition matches square area" has trajectory content | SCOPE | no map found (S13) |
+| `Q_n` components and low-degree vertices | FINITE-EXACT | S14 |
+| Hamiltonian paths of `Q_n`, `n <= 32` | FINITE-EXACT | S15; A090461 CITED |
+| pasted Lean `square_sum_graph` is loopless | REFUTED | value `2` (S16) |
+
+## 13. Reproduction block
+
+```text
+cd <worktree>
+python3 04-computation/experiments/collatz_mod6_20260922_w6_tao_minus_sheet_ladder.py \
+    > 05-knowledge/results/collatz_mod6_20260922_w6_tao_minus_sheet_ladder.out
+python3 -O 04-computation/experiments/collatz_mod6_20260922_w6_tao_minus_sheet_ladder.py 2>/dev/null | diff - \
+    05-knowledge/results/collatz_mod6_20260922_w6_tao_minus_sheet_ladder.out
+# expected: only the "total wall time" line differs.  Wall time about 11 s, RAM well under 1 GB.
+# The script caches abs.html / tao.pdf / tao.txt in the scratch directory named at its top
+# (curl -s -A "Mozilla/5.0 (research)" https://arxiv.org/abs/1909.03562 and /pdf/1909.03562, then
+# pdftotext); if the fetch fails, section (A) prints "PAPER TEXT UNAVAILABLE" and the rest runs.
+# OEIS lookups used (2026-09-22): A110979 (sum of first m primes minus 1 is a square), A090461.
+```
+
+## Stopping boundary / next question
+
+Stopped at S6: the two remaining steps of Tao's proof (Sections 3 and 5) were not re-read with the sign of the offset flipped, so the minus-sheet Theorem 1.3 stays OPEN even though its 3-adic inputs are proved sheet-blind (S5). The next question is the empirical mirror of (1.20): compute the first-passage location distributions `Pass_x^b(N_y)` on both sheets for `x` around `10^3`, `y = x^alpha` and `x^(alpha^2)` with `alpha = 1.001` replaced by a computable `alpha` such as `1.1`, and measure `dTV(Pass_x^+, Pass_x^-)`. If the two sheets' first-passage laws differ by more than the within-sheet stability gap, the sign-specific ingredient the portrait lane demands lives exactly in the ordering step of Section 5, and a proof strategy would be to characterise the `b`-dependence of `Pass_x` (it must be exactly what separates one cycle from three); if they coincide, Tao's mechanism is sheet-blind through and through and the search for a sign-specific invariant must leave the Syracuse/3-adic frame altogether.
