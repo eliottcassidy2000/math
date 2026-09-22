@@ -1,0 +1,66 @@
+# collatz_mod6_20260922_w6_square_sum_hamiltonicity_audit
+== A1  components / leaves (union-find, independent)
+  n=12: components [[1, 3, 6, 8, 10], [2, 7, 9], [4, 5, 11, 12]]
+  n=13: components [[1, 3, 4, 5, 6, 8, 10, 11, 12, 13], [2, 7, 9]]
+  n=14: components [[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14]]
+  #components n=1..40: [1, 2, 2, 3, 3, 3, 3, 3, 3, 3, 3, 3, 2, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]
+  deg<=1: n=18 [16, 17, 18], n=19 [16, 18], n=20..30 all [18]: True, n=31 [], n=32 []
+  neighbours of 18 in Q_30: [7]; in Q_31: [7, 31]
+  2x square, x<=40: [2, 8, 18, 32] (2+2=4: pasted Lean Adj is reflexive at value 2)
+  pasted ladder 3,7,11,17 differences: [4, 4, 6]
+  Q_1 components: 1 (so 'N<=13 disconnected' fails at N=1; true for 2<=N<=13: True)
+
+== A2  Hamiltonian path / cycle existence 1..40 (weak-prune DFS, independent)
+  path: [1, 15, 16, 17, 23, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40]
+  no path (2..40): [2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 18, 19, 20, 21, 22, 24]
+  cycle: [32, 33, 34, 35, 36, 37, 38, 39, 40]
+  agrees with lane S2 and with {1} u A090461, A078107, support of A071984: OK
+  session lead paths valid: True, True
+  exact undirected path counts n=15..33 and cycle counts n=32..36:
+  paths : [1, 1, 1, 0, 0, 0, 0, 0, 3, 0, 10, 12, 35, 52, 19, 20, 349, 392, 669]
+  cycles: [1, 1, 11, 57, 31]
+  match A071983 (15..33), A071984 (32..36), A090460 = A071983 - (n-1)*A071984 (15..33): OK
+  n=32: 392 - 31*1 = 361; n=33: 669 - 32*1 = 637
+
+== A3  cut sets |S|<=3 with c(Q_n - S) > |S| + 1 (brute force)
+  n=18: ((7,), 3)
+  n=19: ((7,), 3)
+  n=20: ((5, 7), 4)
+  n=21: ((5, 7), 4)
+  n=22: ((5, 7, 14), 5)
+  n=23: none
+  n=24: none
+
+== A4  n=24 certificate details
+  lane's printed fragment order [1, 8, 17, 19, 6, 10, 15, 21, 4, 24, 12] is a path: False (4+24=28 not a square)
+  correct path order [4, 21, 15, 10, 6, 19, 17, 8, 1, 24, 12]: True; ends 4,12; 4+12=16 is an edge: True
+  degree-2 vertices of Q_24: [8, 9, 10, 11, 16, 17, 19, 20, 21, 22, 23, 24] (12 of them) + leaf 18 -> 21 forced edges in round 1
+  after the seven deletions: N(2)=[23], N(4)=[21], N(18)=[7] -> three leaves
+  n=19: N(2)=[7, 14] N(9)=[7, 16] N(18)=[7] -> 7 carries 2-7, 7-9, 7-18
+  n=21: N(2)=[7, 14] N(9)=[7, 16] N(18)=[7] -> 7 carries 2-7, 7-9, 7-18
+  n=22: N(2)=[7, 14] N(9)=[7, 16] N(18)=[7] -> 7 carries 2-7, 7-9, 7-18
+  n=20: N(4)=[5, 12] N(11)=[5, 14] N(20)=[5, 16] -> 5 carries 4-5, 5-11, 5-20
+
+== A5  n=15 and n=23
+  N_15(4) = [5, 12]; degree-2 vertices [2, 4, 5, 6, 7, 10, 11, 12, 13, 14, 15]; leaves [8, 9]
+  chain squares used by the unique n=15 chain: [9, 16, 25]
+  n=23 directed path counts by start: {2: 1, 9: 1, 18: 3, 22: 1}
+
+== A6  Gerbicz blow-up re-implemented from post #19 pseudo-code
+  v35 valid chain 1..3: True; 35 = (71*25^0-1)/2 = 35
+  m=1: N=887, chain 1..3 and cycle: True; block values partition [13,887]: True
+  m=2: N=22187, chain 1..3 and cycle: True; block values partition [13,22187]: True
+  glue word length 37 items, 36 junctions; singletons [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]; c-values [-12, -11, -10, -9, -8, -7, -6, -5, -4, -3, -2, -1, 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]
+
+== A7  NEW PROVED: Q_n connected for every n >= 14
+  n in [5, 200000] with no square in [n+1, 2n-1]: []
+  n=5..9 squares in [n+1,2n-1]: {5: [9], 6: [9], 7: [9], 8: [9], 9: [16]}
+  n>=10: (sqrt(n+1)+1)^2 = n+2+2sqrt(n+1) <= 2n-1 iff 4(n+1) <= (n-3)^2 iff n^2-10n+5 >= 0, true for n >= 10 (check: [-4, 5]); so vertex n has a neighbour k^2-n in [1, n-1]
+  induction: Q_14 connected (A1) and every n >= 15 attaches to an earlier vertex => Q_n connected for all n >= 14.
+  the pasted 'N>=25 conjectured connected' is therefore PROVED for all N>=14, not conjectural.
+
+== A8  labels
+  S2a (three leaves) and S2b (cut criterion c(G-S) <= |S|+1) are classical textbook facts; the attribution of the
+  cycle form of S2b to Chvatal 1973 (toughness) is UNCITED-RECOLLECTION; neither is new to the repository.
+
+== done

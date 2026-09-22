@@ -220,6 +220,7 @@ for path in (lead15, lead23):
     print("session-lead path n=%d verified; squares used: %s" % (n, sq_used))
 print("squares used by the n=15 path:", sorted(set(lead15[i] + lead15[i + 1] for i in range(14))),
       "(the 'braid 9,16,25' of the paste is exact for this path)")
+print("session lead citation (not re-fetched here): OEIS A090461 = 15,16,17,23,25,26,... (every k >= 25 per its comments)")
 print("pasted 'Delta=4 ladder' 3,7,11,17: gaps", [7 - 3, 11 - 7, 17 - 11], "-> not an arithmetic progression")
 print("pasted Lean Adj x y := exists k, (x+1)+(y+1)=k^2 at x=y=1 (value 2): 2+2=4=2^2 -> a loop; not loopless")
 # in this note's Q_n with x!=y the only square 2x is excluded; loops would be x with 2x square: 2,8,18,32
@@ -298,7 +299,7 @@ for b, cyc in [(1, cycle_plus[0])] + [(-1, c) for c in cycles_minus]:
             c = (n + b) // 2
             parts.append("%d->%d (k=1, companion %d, %s)" % (n, m, c, "strict" if 0 < c != n else ("diagonal" if c == n else "NOT AN ARROW")))
         else:
-            parts.append("%d->%d (k=%d, descent)" % (n, m, k))
+            parts.append("%d->%d (k=%d, %s)" % (n, m, k, "descent" if m < n else "fixed point, companion 0"))
     print("  sheet %+d cycle %s: %s" % (b, cyc, "; ".join(parts)))
 tlog("S1 done")
 
@@ -442,6 +443,7 @@ for path in (esc5, esc17):
         check(is_E_minus_arrow(path[i], path[i + 1]), "E_- arrow %d -> %d" % (path[i], path[i + 1]))
     evens_used = [(path[i], path[i + 1]) for i in range(len(path) - 1) if path[i] % 2 == 0 and path[i + 1] == 3 * path[i] - 1]
     print("E_- path %d -> 1 with %d arrows verified; even->3n-1 arrows used: %s" % (path[0], len(path) - 1, evens_used))
+    print("  path: " + " -> ".join(map(str, path)))
 print("Q1_- (every n reaches 1 in E_-): FINITE-EXACT for n <= %d: each n halves to an odd n' <= n, n' reaches a cycle" % X3)
 print("  under T_- (census above, T_- steps are E_- paths), and the three cycle minima reach 1 by the paths above.")
 # Q2_- greedy certification to 10^6 (reproduces control S4)
@@ -552,7 +554,23 @@ for b in (1, -1):
     c4[b] = sorted(d.items())
 print("  after multiplying by b (i.e. |B| mod 4): plus %s, minus %s" % (c4[1], c4[-1]))
 print("  these differ only because the orbits of n <= 200001 realise the words with slightly different multiplicities")
-print("  (a word of length 10 is a residue class mod 2^10, which [1,200001] cuts unevenly by at most 1 per class).")
+print("  (a word of length 10 with exponent sum K is a class of odd n mod 2^(K+1); [1,200001] cuts these classes unevenly).")
+print("  exact check on COMPLETE classes: odd n < 2^19 whose word of length 10 has K_10 <= 18 (audit A4 recomputes it):")
+cc = {}
+for b in (1, -1):
+    c4 = {}
+    c3 = {}
+    for n in range(1, 1 << 19, 2):
+        w = word_of(n, b, LL)
+        B, K = carry(w, b)
+        if K <= 18:
+            a_ = abs(B)
+            c4[a_ % 4] = c4.get(a_ % 4, 0) + 1
+            c3[a_ % 3] = c3.get(a_ % 3, 0) + 1
+    cc[b] = (sorted(c4.items()), sorted(c3.items()))
+    print("    sheet %+d: |B| mod 4 -> %s ; |B| mod 3 -> %s" % (b, cc[b][0], cc[b][1]))
+check(cc[1] == cc[-1], "exact mirror of |B| distributions on complete residue classes")
+print("    identical on both sheets, exactly, as the word bijection requires.")
 print("VERDICT (iv): B_L mod 4, mod 3^L and v_2(B_L) are word functions times b; sign-specific content = sign(B_L) = b only.")
 tlog("S4 done")
 
@@ -618,6 +636,8 @@ for b in (1, -1):
     else:
         check(sorted(set((min(x, y), max(x, y)) for x, y, _, _ in sols)) == [(1, 1), (4, 11), (5, 7)], "minus 2-cycles")
 print("  the sign gate: plus needs 2^(a+c) > 9, minus 2^(a+c) < 9 (a+c <= 3); the minus 2-cycles are {1},{4,11},{5,7}")
+print("  plus census complete for ALL a, c (PROVED): m >= 1 needs 2^c (2^a - 1) <= 12, so c <= 3 when a >= 1 (then 2^(a+c) <= 20,")
+print("  covered); a = 0 needs 2^c - 9 | 2^c + 3, i.e. 2^c - 9 | 12, and 2^c in {10,11,12,13,15,21} is impossible.")
 print("  and {4,11} (c = 0 i.e. an even->3n-1 arrow) is the G_- 2-cycle of S3; {5,7} is the T_- cycle, not greedy.")
 # word statistics of greedy words: mean k over the first J greedy steps, both sheets, starts <= 10^5
 print()
@@ -637,7 +657,20 @@ for b in (1, -1):
                 s1 += k
             s6 += k
     print("  b=%+d: starts %d, mean k_1 = %.6f, mean k over 6 steps = %.6f" % (b, cnt_, s1 / cnt_, s6 / (6 * cnt_)))
-print("  (identical to six decimals: the greedy residue chain is conjugate under r -> -r mod 9; cited SCC Thm 7.1)")
+rc9 = {}
+for m in range(1, 100001):
+    if m % 3:
+        rc9[m % 9] = rc9.get(m % 9, 0) + 1
+kp9 = {1: 2, 2: 1, 4: 0, 5: 3, 7: 0, 8: 1}
+km9 = {1: 1, 2: 0, 4: 3, 5: 0, 7: 1, 8: 2}
+mp9 = Fraction(sum(kp9[r] * rc9[r] for r in kp9), sum(rc9.values()))
+mm9 = Fraction(sum(km9[r] * rc9[r] for r in km9), sum(rc9.values()))
+print("  the first-step means are exact rationals from the residue counts mod 9 of [1,10^5] (%s):" % sorted(rc9.items()))
+print("    plus %s, minus %s, difference %s: the residue 1 occurs once more than the others and k_+(1) = 2, k_-(1) = 1"
+      % (mp9, mm9, mp9 - mm9))
+check(mp9 == Fraction(77779, 66667) and mm9 == Fraction(77778, 66667), "exact greedy means")
+print("  (the six-step means differ in the fifth decimal for the same finite-range reason; the greedy residue chain")
+print("   is conjugate under r -> -r mod 9, cited SCC Thm 6.2 / 7.1, so the full-period statistics coincide exactly)")
 print("VERDICT (v): the greedy mechanism is sheet-blind; the minus cycles {5,7},{17..91} are not greedy-reversible,")
 print("  the two trivial cycles are; the only sign-specific fact is the gate 2^(a+c) vs 9, i.e. the sign law.")
 tlog("S5 done")

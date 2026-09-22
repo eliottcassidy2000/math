@@ -1,0 +1,162 @@
+
+==============================================================================
+(A) Tao arXiv:1909.03562 -- term census of the paper text
+==============================================================================
+user agent for curl: Mozilla/5.0 (research)
+abstract page citation_title: Almost all orbits of the Collatz map attain almost bounded values
+pdftotext line count: 4258
+version stamp line: arXiv:1909.03562v7 [math.PR] 16 Jul 2026
+raw '3n-1'-shaped hits: 12
+    power 3^(n-1) (followed by Z, 2^-a or a coset) : 12
+hits not explained as 3^(n-1) (line numbers): []
+
+term                          lines  first-line  
+3x-1 / 3n-1 map as words           0  -
+negative                           6  425
+5n+1 / 5x+1                        1  4203
+generalization(s)                  1  4212
+martingale                         0  -
+entropy decrement                  0  -
+dyadic                             0  -
+renewal process                   19  24
+two-dimensional renewal            5  24
+Syracuse random variable           9  524
+first passage                     22  20
+stabilis/stabiliz                  3  19
+3-adic                            13  22
+characteristic function            5  22
+Fourier                            9  743
+Plancherel                         4  743
+Geom(2)                           38  330
+Pascal                            17  791
+triangle                          63  24
+logarithmic density               20  19
+natural density                    6  17
+Bourgain                           2  464
+Korec                              4  12
+Krasikov                           2  40
+Terras                             3  77
+entropy (any)                      3  729
+Renyi / collision entropy          2  1985
+Baker                              2  2963
+Lagarias                           6  40
+
+quotation (Section 1.3, 13 words): 'does not use any particular properties of the Syracuse map beyond (1.19), (1.20)'
+quotation located at pdftotext line(s): [519]
+stabilisation parameter alpha := 1.001 set at line: 487 ; affine iteration formula is the paper's eq. (1.7)
+
+bibliography ('References' heading) starts at line: 4188 (hits at or after it are citation titles, not statements of the paper)
+Theorem 1.3                                          line 113
+Theorem 1.6 (Syracuse form)                          line 208
+Conjecture 1.5                                       line 198
+Proposition 1.9 (valuation distribution)             line 359
+Proposition 1.11 (stabilisation of first passage)    line 492
+Proposition 1.14 (fine-scale mixing)                 line 682
+Proposition 1.17 (decay of characteristic function)  line 745
+Remark 1.15 (Shannon-entropy heuristic)              line 729
+Section 3 (reduction to stabilisation)               line 1038
+Section 6 (reduction to Fourier decay)               line 1957
+Remark 5.1 (Korec recovery from the (1.19) argument) line 1399
+
+==============================================================================
+(B) Minus-sheet Syracuse offset: Syr_b^n(N) = 3^n 2^{-|a|} N + b F_n(a)
+==============================================================================
+offset identity verified for both signs, odd N < 16384, n <= 6: 98304 instances
+valuation words with |a| <= 12: 4095 words, counts identical on both sheets,
+   every word (a_1..a_n) realised by exactly 2^(13-|a|) odd N in [1, 2^14)
+   => the word law is exactly Geom(2)^n truncated at |a| <= J on both sheets
+Corollary: Syrac_-(Z/3^nZ) = -Syrac_+(Z/3^nZ) as random variables mod 3^n,
+   and dTV(-X, -X + Unif(3^m Z/3^n Z)) = dTV(X, X + Unif(3^m Z/3^n Z)).
+n = 3, |a| <= 12: the minus-sheet offset residue histogram mod 27 is the negation of the plus-sheet one (checked, 18 residues hit, multiples of 3 hit: 0)
+
+==============================================================================
+(C) 'Delta = 4 prime ladder' 3,7,11,17 and companions
+==============================================================================
+ladder [3, 7, 11, 17] consecutive differences [4, 4, 6] -> arithmetic progression: False
+longest run of primes with difference 4 below 10^5: [3, 7, 11] length 3
+mod-3 residues of (a, a+4, a+8): [(0, 1, 2), (1, 2, 0), (2, 0, 1)]
+pasted Lean sets: {3,7,11,17} + 4 = [7, 11, 15, 21] == {7,11,15,21}: True
+primality of the target set: [(7, True), (11, True), (15, False), (21, False)]
+factorisations of the composites: {15: '3*5', 21: '3*7'}
+b=+1: first odd n>0 whose Syracuse target is a prime other than 1 or n: (3, 5)
+b=+1: odd n < 2^16 with Syracuse target 3: [] (3*2^k = 3n+1 is impossible mod 3)
+b=-1: first odd n>0 whose Syracuse target is a prime other than 1 or n: (5, 7)
+b=-1: odd n < 2^16 with Syracuse target 3: [] (3*2^k = 3n-1 is impossible mod 3)
+77^2 + 36^2 = 7225 = 85^2; Euclid parameters (m,n) = (9,2): m^2-n^2=77, 2mn=36, m^2+n^2=85
+   (m,n) = ((7+11)/2, (11-7)/2) = (9,2); generic: any coprime odd p<q give leg pq
+2^11 - 3^7 = -139 ; (-17)*(-139) = 2363 ; 17*139 = 2363
+3n-1 orbit of 17 (odd Syracuse form): [17, 25, 37, 55, 41, 61, 91, 17] valuations [1, 1, 1, 2, 1, 1, 4] |a| = 11 L = 7
+cycle gate n_0 = b*B/Delta with b=-1, B=2363, Delta=-139: n_0 = 17; q = |Delta|/gcd(B,|Delta|) = 1
+carry check: (2^11 - 3^7)*17 = -2363 = b*B with b=-1 = -2363
+
+==============================================================================
+(D) 196 = 14^2 and the prime-sum-minus-one squares
+==============================================================================
+1 + sum of first 11 odd primes [3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37] = 196 = 14^2
+c_i = (p_i - (2i+1))/2 (odd composites from 3 through p_i): [0, 0, 0, 1, 1, 2, 2, 3, 5, 5, 7] sum 26
+(G12): (k+1)^2 + 2*sum c_i = 144 + 52 = 196
+primes below 20000000 scanned; (m, p_m, sum-1, root):
+   m=1  p_m=2  sum-1=1  root=1
+   m=2  p_m=3  sum-1=4  root=2
+   m=3  p_m=5  sum-1=9  root=3
+   m=4  p_m=7  sum-1=16  root=4
+   m=12  p_m=37  sum-1=196  root=14
+   m=504  p_m=3607  sum-1=839056  root=916
+   m=1020675  p_m=15827429  sum-1=7796654478001  root=2792249
+OEIS A110979 (lookup 2026-09-22) data: [1, 4, 9, 16, 196, 839056, 7796654478001]
+recomputed values: [1, 4, 9, 16, 196, 839056, 7796654478001] match the cited prefix: True
+196 is term number 5 of A110979; the next term 839056 needs m = 504 primes (p_504 = 3607)
+
+==============================================================================
+(E) Basin census: what 'attains bounded values' means on each sheet
+==============================================================================
+b=+1: odd n <= 1000000: basins {1: 500000} (fractions {1: 1.0}) [0.5s]
+b=-1: odd n <= 1000000: basins {1: 163486, 5: 162122, 17: 174392} (fractions {1: 0.326972, 5: 0.324244, 17: 0.348784}) [0.6s]
+reading: on the minus sheet every tested orbit attains the bounded value 1, 5 or 17;
+   'almost all orbits attain almost bounded values' is EMPIRICALLY TRUE there while
+   'reaches 1' fails on a set of density about 2/3 of the odd integers tested.
+
+==============================================================================
+(F) Square-sum graph Q_n on {1..n}: session-lead probe re-verified
+==============================================================================
+component counts n=1..32: {1: 1, 2: 2, 3: 2, 4: 3, 5: 3, 6: 3, 7: 3, 8: 3, 9: 3, 10: 3, 11: 3, 12: 3, 13: 2, 14: 1, 15: 1, 16: 1, 17: 1, 18: 1, 19: 1, 20: 1, 21: 1, 22: 1, 23: 1, 24: 1, 25: 1, 26: 1, 27: 1, 28: 1, 29: 1, 30: 1, 31: 1, 32: 1}
+components at n=13: [[1, 3, 4, 5, 6, 8, 10, 11, 12, 13], [2, 7, 9]]
+components at n=12: [[1, 3, 6, 8, 10], [2, 7, 9], [4, 5, 11, 12]]
+degree <= 1 vertices, n=14..32: {14: [8, 9, 10], 15: [8, 9], 16: [8, 16], 17: [16, 17], 18: [16, 17, 18], 19: [16, 18], 20: [18], 21: [18], 22: [18], 23: [18], 24: [18], 25: [18], 26: [18], 27: [18], 28: [18], 29: [18], 30: [18], 31: [], 32: []}
+neighbours of 18 in Q_30: [7] ; in Q_31: [7, 31]
+pasted path n=15 valid: True; consecutive sums [9, 16, 25]
+pasted path n=23 valid: True; consecutive sums [4, 9, 16, 25, 36]
+Hamiltonian path existence n=1..32 [0.0s]:
+    {1: 'yes', 2: 'no', 3: 'no', 4: 'no', 5: 'no', 6: 'no', 7: 'no', 8: 'no', 9: 'no', 10: 'no', 11: 'no', 12: 'no', 13: 'no', 14: 'no', 15: 'yes', 16: 'yes', 17: 'yes', 18: 'no', 19: 'no', 20: 'no', 21: 'no', 22: 'no', 23: 'yes', 24: 'no', 25: 'yes', 26: 'yes', 27: 'yes', 28: 'yes', 29: 'yes', 30: 'yes', 31: 'yes', 32: 'yes'}
+   yes: [1, 15, 16, 17, 23, 25, 26, 27, 28, 29, 30, 31, 32]
+   no : [2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 18, 19, 20, 21, 22, 24]
+   unresolved: []
+OEIS A090461 (lookup 2026-09-22, comments): every k >= 25 is in the sequence; cycles for k >= 32
+values v <= 32 with 2v a perfect square (Adj v v holds in the pasted Lean def): [2, 8, 18, 32]
+   minimal witness: Fin index 1 (value 2): 2 + 2 = 4 = 2^2, so 'loopless' is unprovable as stated
+
+==============================================================================
+(G) Verdict table
+==============================================================================
+claim                                                                                    label         evidence
+Tao's paper remarks on 3n-1 / other multipliers                                          SCOPE         0 map-variant hits in v7 text; every '3n-1' string is the power 3^(n-1)
+Tao's method is a 'dyadic martingale renewal process'                                    REFUTED       0 hits for 'martingale' and 'dyadic'; the renewal process is 2-dimensional in Z^2 (Section 7), used for Fourier decay
+Tao's method uses an 'entropy decrement'                                                 REFUTED       0 hits; 'entropy' occurs only as a Shannon-entropy heuristic (Remark 1.15) and Renyi/collision entropy (Remark 6.1)
+Prefix-descent counts mod 2^J coincide on both sheets                                    CITED         minus_sheet_positive_control S2; re-verified here for valuation words |a| <= 12
+That coincidence = Tao's Proposition 1.9 input, not the stabilisation (1.20)             CITED         Remark 5.1 of the paper (line 1399): the (1.19) argument from Prop 1.9 + drift gives only Syr_min(N) <= N^theta, theta > 1/alpha, i.e. Korec-type
+Syrac_-(Z/3^nZ) = -Syrac_+(Z/3^nZ); Props 1.14 and 1.17 hold on the minus sheet          PROVED        offset identity + word-count equality (B); Prop 1.17 at -xi; dTV negation-invariant
+Full Theorem 1.3 transfers to 3n-1 (almost all orbits attain almost bounded values)      OPEN          Sections 3 and 5 not re-run with the sign flipped; no source states it; empirically true to 10^6
+Almost-all bounded values implies a single root                                          REFUTED       minus sheet: three cycles, basins about 0.33/0.32/0.35 on odd n <= 10^6
+Delta = 4 prime ladder 3,7,11,17 is an AP                                                REFUTED       differences 4,4,6; primes in AP with difference 4 have length <= 3 (mod 3)
+Lean delta_four_prime_step_invariance                                                    FINITE-EXACT  true set statement; 15 = 3*5 and 21 = 3*7 are composite, so no prime reading
+3 is a 'first nontrivial prime target' of 3n+1 or 3n-1                                   REFUTED       3 has no Syracuse preimage on either sheet; first prime targets are 5 (plus, from 3) and 7 (minus, from 5)
+7 -> 11 'maps to' the PPT (77,36,85)                                                     SCOPE         generic: leg pq for any coprime odd p<q via (m,n) = ((p+q)/2,(q-p)/2) = (9,2); no Collatz content
+(2^11-3^7)(-17) = 2363 = 17*139 and the gate n_0 = 17                                    CITED         catalan_elliptic (C6), counterexample_portrait table; re-verified
+'The difference 4 regulates the carry B_L'                                               SCOPE         no object: the carry of the seven-cycle is 2363 and involves no difference-4 structure
+1+3+5+...+37 = 196 = 14^2                                                                CITED         collatz_guards_20260921_squarefree sec.7 (G12); re-verified; term 5 of OEIS A110979
+'Linear prime addition matches square area' has a trajectory consequence                 SCOPE         no map found from A110979 to any orbit statement
+Q_n components 3 (4..12), 2 (13), 1 (14..32); deg<=1 vertex pattern                      FINITE-EXACT  session lead probe re-verified
+Hamiltonian paths of Q_n for n <= 32                                                     FINITE-EXACT  see (F); A090461 CITED for k >= 25
+Pasted Lean square_sum_graph is loopless                                                 REFUTED       value 2: 2+2 = 4; also 8, 18, 32
+
+total wall time 11.1s

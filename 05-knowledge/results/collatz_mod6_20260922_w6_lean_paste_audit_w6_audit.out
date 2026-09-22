@@ -1,0 +1,141 @@
+# collatz_mod6_20260922_w6_lean_paste_audit_w6_audit
+# independent recomputation for lane lean_paste_audit_w6
+
+## A self-loops of the pasted adjacency (2m = k^2 <=> m = 2 j^2)
+closed form 2j^2, j=1..4: [2, 8, 18, 32] ; brute force m<=32: [2, 8, 18, 32] ; equal: True
+pasted Fin-14 indices with Adj i i (value i+1): [1, 7] -> values [2, 8]
+boundary: value 1 (index 0): 1+1 = 2 square? False ; so the minimal loop is value 2 (index 1)
+
+## B components of Q_n by union-find, n = 0..32
+n= 0  #comp=0  edges=0
+n= 1  #comp=1  edges=0
+n= 2  #comp=2  edges=0
+n= 3  #comp=2  edges=1
+n= 4  #comp=3  edges=1
+n= 5  #comp=3  edges=2
+n= 6  #comp=3  edges=3
+n= 7  #comp=3  edges=4
+n= 8  #comp=3  edges=5
+n= 9  #comp=3  edges=6
+n=10  #comp=3  edges=7
+n=11  #comp=3  edges=8
+n=12  #comp=3  edges=9  comps=[[1, 3, 6, 8, 10], [2, 7, 9], [4, 5, 11, 12]]
+n=13  #comp=2  edges=11  comps=[[1, 3, 4, 5, 6, 8, 10, 11, 12, 13], [2, 7, 9]]
+n=14  #comp=1  edges=13  comps=[[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14]]
+n=15  #comp=1  edges=15
+n=16  #comp=1  edges=16
+n=17  #comp=1  edges=17
+n=18  #comp=1  edges=18
+n=19  #comp=1  edges=20
+n=20  #comp=1  edges=22
+n=21  #comp=1  edges=24
+n=22  #comp=1  edges=26
+n=23  #comp=1  edges=28
+n=24  #comp=1  edges=30
+n=25  #comp=1  edges=32
+n=26  #comp=1  edges=34
+n=27  #comp=1  edges=36
+n=28  #comp=1  edges=38
+n=29  #comp=1  edges=40
+n=30  #comp=1  edges=42
+n=31  #comp=1  edges=44
+n=32  #comp=1  edges=46
+matches lane S2 / session lead (1,2,2; 3 for 4..12; 2 at 13; 1 for 14..32): True ; n=0 has 0 components (empty graph)
+Q_12 components and the summand triple {1,4,6}: [([1, 3, 6, 8, 10], [1, 6]), ([2, 7, 9], []), ([4, 5, 11, 12], [4])]
+13's neighbours in Q_13: [3, 12] ; 14's in Q_14: [2, 11]
+
+## C degree <= 1 vertices via numpy adjacency matrix, n = 14..32
+n=14  deg<=1: [8, 9, 10]
+n=15  deg<=1: [8, 9]
+n=16  deg<=1: [8, 16]
+n=17  deg<=1: [16, 17]
+n=18  deg<=1: [16, 17, 18]
+n=19  deg<=1: [16, 18]
+n=20  deg<=1: [18]
+n=21  deg<=1: [18]
+n=22  deg<=1: [18]
+n=23  deg<=1: [18]
+n=24  deg<=1: [18]
+n=25  deg<=1: [18]
+n=26  deg<=1: [18]
+n=27  deg<=1: [18]
+n=28  deg<=1: [18]
+n=29  deg<=1: [18]
+n=30  deg<=1: [18]
+n=31  deg<=1: []
+n=32  deg<=1: []
+matches session lead / lane S3: True
+
+## D Hamiltonian paths: bitmask DP (n <= 20) and an independent backtracker (n <= 32)
+DP (n<=20) YES: [1, 15, 16, 17]
+backtracker (n<=32) YES: [1, 15, 16, 17, 23, 25, 26, 27, 28, 29, 30, 31, 32]
+witnesses 21..32:
+  n=21 none
+  n=22 none
+  n=23 2,23,13,12,4,21,15,10,6,19,17,8,1,3,22,14,11,5,20,16,9,7,18
+  n=24 none
+  n=25 2,23,13,12,24,25,11,14,22,3,1,8,17,19,6,10,15,21,4,5,20,16,9,7,18
+  n=26 2,14,22,3,13,23,26,10,6,19,17,8,1,15,21,4,12,24,25,11,5,20,16,9,7,18
+  n=27 1,8,17,19,6,3,13,12,24,25,11,14,22,27,9,16,20,5,4,21,15,10,26,23,2,7,18
+  n=28 1,15,10,26,23,13,3,6,19,17,8,28,21,4,12,24,25,11,5,20,16,9,27,22,14,2,7,18
+  n=29 1,24,25,11,5,4,12,13,3,6,19,17,8,28,21,15,10,26,23,2,14,22,27,9,16,20,29,7,18
+  n=30 1,24,25,11,5,4,12,13,3,6,30,19,17,8,28,21,15,10,26,23,2,14,22,27,9,16,20,29,7,18
+  n=31 1,15,10,6,30,19,17,8,28,21,4,5,31,18,7,29,20,16,9,27,22,3,13,12,24,25,11,14,2,23,26
+  n=32 1,8,28,21,4,32,17,19,30,6,3,13,12,24,25,11,5,31,18,7,29,20,16,9,27,22,14,2,23,26,10,15
+both agree with lane S4 / session lead (1,15,16,17,23,25..32): True
+n=1 is the one-vertex convention (A090461 starts at 15); n=2: 1+2=3 not a square -> no path
+lead paths valid: True True
+squares used: n=15 [9, 16, 25] ; n=23 [4, 9, 16, 25, 36]
+Q_15 degrees: {1: 3, 2: 2, 3: 3, 4: 2, 5: 2, 6: 2, 7: 2, 8: 1, 9: 1, 10: 2, 11: 2, 12: 2, 13: 2, 14: 2, 15: 2}
+deg(4) in Q_15: 2 neighbours [5, 12] ; position of 4 in lead path: 8 of 0..14 (interior)
+forced endpoints of any Q_15 Hamiltonian path = its degree-1 vertices: [8, 9]
+leaf counts (deg<=1) at n=14,18: 3 3 (>= 3 leaves forbids a Hamiltonian path; n=14 also fails by leaf count, lane note only said 18)
+
+## E the Delta = 4 ladder
+differences: [4, 4, 6] ; sympy primality of p+4: [(7, True), (11, True), (15, False), (21, False)]
+factorint 15, 21: {3: 1, 5: 1} {3: 1, 7: 1}
+PROVED (mod 3): among p, p+4, p+8 the residues mod 3 are p, p+1, p+2, so one is divisible by 3; a prime triple with difference 4 must contain 3, hence is (3,7,11) and nothing else, for ALL sizes (not only below 100)
+check: prime triples (p,p+4,p+8) with p < 10^5: [(3, 7, 11)]
+
+## F the pasted certificate inequality and the n=3 witnesses (sympy)
+3^0*n + 0 < 2^1*n  <=>  n < 2n  <=>  0 < n: True
+plus orbit t=6: [3, 10, 5, 16, 8, 4, 2] ; 2^4*2 = 32 = 3^2*3+5 = 32 < 2^4*3 = 48
+minus orbit t=3: [3, 8, 4, 2] ; 2^3*2 = 16 = 3^1*3+7 = 16 < 2^3*3 = 24
+plus witness is also the compression_and_lean_audit S15 witness (same t, K, L, B); minus witness is new to this lane (scratch only)
+
+## G Lean: recompile with #print axioms on every declaration
+declarations audited: 22
+exit code: 0 ; stderr lines: 0
+  'adjPaste_not_irreflexive' depends on axioms: [propext, Quot.sound]
+  'pasted_loopless_fails' depends on axioms: [propext, Quot.sound]
+  'adj_irrefl_upto_32' depends on axioms: [propext, Quot.sound]
+  'adj_symm_upto_32' depends on axioms: [propext, Quot.sound]
+  'square_sum_fourteen_connectivity' depends on axioms: [propext, Quot.sound]
+  'square_sum_thirteen_disconnected' depends on axioms: [propext, Quot.sound]
+  'square_sum_twelve_disconnected' depends on axioms: [propext, Quot.sound]
+  'components_twelve' depends on axioms: [propext, Quot.sound]
+  'components_thirteen' depends on axioms: [propext, Quot.sound]
+  'components_fourteen' depends on axioms: [propext, Quot.sound]
+  'components_fifteen' depends on axioms: [propext, Quot.sound]
+  'components_sixteen' depends on axioms: [propext, Quot.sound]
+  'components_seventeen' depends on axioms: [propext, Quot.sound]
+  'delta_four_prime_step_invariance_list' does not depend on any axioms
+  'delta_four_prime_step_invariance_prop' depends on axioms: [propext, Quot.sound]
+  'fifteen_not_prime' depends on axioms: [propext, Quot.sound]
+  'twentyone_not_prime' depends on axioms: [propext, Quot.sound]
+  'ladder_not_ap' does not depend on any axioms
+  'pastedCertificateAlwaysInhabited' depends on axioms: [propext, Quot.sound]
+  'is_positive_sheet_unique' does not depend on any axioms
+  'descent_three' does not depend on any axioms
+  'descent_three_minus' does not depend on any axioms
+all 22 declarations within {propext, Quot.sound}: True 
+axiom-free declarations: ['delta_four_prime_step_invariance_list', 'descent_three', 'descent_three_minus', 'is_positive_sheet_unique', 'ladder_not_ap']
+sorry/axiom/native_decide/import in code: 0 0 0 0
+descent_iff_affine_inequality in Basic.lean: True ; GlobalTallyMargin in ClockAudit.lean: True ; either name in README.md: False
+CatalanEllipticAudit verification.json: status PASS ; theorems_audited = 12 ; all axiom lists empty: True
+theorem count in CatalanEllipticAudit/Certificates.lean: 12
+standalone exists: collatz_mod6_20260922_descent_certificate.lean True
+standalone exists: collatz_mod6_20260922_certificate_iff_descent_audit.lean True
+
+runtime 7.1s
+DONE

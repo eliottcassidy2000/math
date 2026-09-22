@@ -171,6 +171,7 @@ def section_A():
         "Remark 1.15 (Shannon-entropy heuristic)": r"^Remark 1\.15",
         "Section 3 (reduction to stabilisation)": r"^3\. Reduction to stabilisation",
         "Section 6 (reduction to Fourier decay)": r"^6\. Reduction to Fourier decay",
+        "Remark 5.1 (Korec recovery from the (1.19) argument)": r"^Remark 5\.1",
     }
     alpha = [i + 1 for i, l in enumerate(lines) if l.strip().startswith("α := 1.001")]
     print("stabilisation parameter alpha := 1.001 set at line:", alpha[0] if alpha else "not found",
@@ -549,7 +550,7 @@ def section_G():
         ("Tao's method is a 'dyadic martingale renewal process'", "REFUTED", "0 hits for 'martingale' and 'dyadic'; the renewal process is 2-dimensional in Z^2 (Section 7), used for Fourier decay"),
         ("Tao's method uses an 'entropy decrement'", "REFUTED", "0 hits; 'entropy' occurs only as a Shannon-entropy heuristic (Remark 1.15) and Renyi/collision entropy (Remark 6.1)"),
         ("Prefix-descent counts mod 2^J coincide on both sheets", "CITED", "minus_sheet_positive_control S2; re-verified here for valuation words |a| <= 12"),
-        ("That coincidence = Tao's Proposition 1.9 input, not the stabilisation (1.20)", "PROVED", "Section 1.3 of the paper: Prop 1.9 alone recovers only Korec-type N^(1-c)"),
+        ("That coincidence = Tao's Proposition 1.9 input, not the stabilisation (1.20)", "CITED", "Remark 5.1 of the paper (line 1399): the (1.19) argument from Prop 1.9 + drift gives only Syr_min(N) <= N^theta, theta > 1/alpha, i.e. Korec-type"),
         ("Syrac_-(Z/3^nZ) = -Syrac_+(Z/3^nZ); Props 1.14 and 1.17 hold on the minus sheet", "PROVED", "offset identity + word-count equality (B); Prop 1.17 at -xi; dTV negation-invariant"),
         ("Full Theorem 1.3 transfers to 3n-1 (almost all orbits attain almost bounded values)", "OPEN", "Sections 3 and 5 not re-run with the sign flipped; no source states it; empirically true to 10^6"),
         ("Almost-all bounded values implies a single root", "REFUTED", "minus sheet: three cycles, basins about 0.33/0.32/0.35 on odd n <= 10^6"),

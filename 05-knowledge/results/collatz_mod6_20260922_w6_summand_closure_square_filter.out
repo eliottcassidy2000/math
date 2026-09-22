@@ -106,7 +106,7 @@ C9 leaf windows: m -> set of n >= m with m a leaf of Q_n (n <= 60)
    m=17 leaf for n in [17,18] (2 values), 2m square=False, squares>m: [25, 36, 49, 64]
    m=18 leaf for n in [18,30] (13 values), 2m square=True, squares>m: [25, 36, 49, 64]
 C10 session lead probe: degree<=1 vertices for n=18..32: [(18, [16, 17, 18]), (19, [16, 18]), (20, [18]), (21, [18]), (22, [18]), (23, [18]), (24, [18]), (25, [18]), (26, [18]), (27, [18]), (28, [18]), (29, [18]), (30, [18]), (31, []), (32, [])]
-C11 proof helper: for 24 <= n <= 60 and every m <= n with 2m square, deg_n(m) = [2, 3, 4, 5]
+C11 proof helper: for 31 <= n <= 60 and every m <= n with 2m square, deg_n(m) in [2, 3, 4, 5] (for 24 <= n <= 30 the value 1 also occurs, at m = 18)
    for 24 <= n <= 60 and every m <= n with 2m NOT square, min deg_n(m) = 2
    n0 with 4*sqrt(n)+4 <= n for all n >= n0: 24
    n0 with 6*sqrt(n)+9 <= n for all n >= n0: 53
@@ -190,5 +190,8 @@ G6 closure holes {1,4,6} vs Q founders {1,2,4}: intersection [1, 4], symmetric d
 G7 Q_15: vertices of degree 3: [1, 3]; leaves: [8, 9]; forced edges = all 15 edges except (1,3): the unique path
 G8 c(Q_n) is non-increasing for n >= 5 (new vertex has deg >= 1): check over n <= 2000: True
 G9 closure of Q_13 component sizes: [10, 3]; T_3 = 1+2+3 = 6 lies in the chain founded by 1
+G10 provenance: session collatz-mod6-20260917, wave 20260922, lane summand_closure_square_filter; cites 01-canon THM-2422, THM-2433, THM-362; 07-reflections summand-graph-fermat-zeckendorf; 05-knowledge arithmetic_braids_20260917_summand; OEIS A090461 = 15,16,17,23,25,26,... and A090460 (fetched with curl UA Mozilla/5.0 (research))
+G11 target filters T subset {2..13} whose founders among n <= 7 are exactly {1,4,6}: 0 (none); founders 4 and 6 force T cap [5,7] = T cap [7,11] = {} so T cap [6,9] = {} and 5 is a founder too
+    square filter founders n <= 7: [1, 2, 4]; witness T = {4,9} u [12,inf) founders n <= 7: [1, 2, 4]
 
 elapsed 1.3 s

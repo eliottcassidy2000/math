@@ -1,0 +1,108 @@
+
+------------------------------------------------------------------------------
+A1 Delta = 4 ladder
+------------------------------------------------------------------------------
+differences: [4, 4, 6] AP: False
+run of length 3 starting at 3 : [3, 7, 11]
+run-length histogram of maximal difference-4 prime runs (start < 10^6): {1: 70354, 2: 8143, 3: 1}
+shifted set: [7, 11, 15, 21] primality: {7: True, 11: True, 15: False, 21: False}
+
+------------------------------------------------------------------------------
+A2 offset identity by recursion; Terras form of the word law
+------------------------------------------------------------------------------
+recursion identity T_b^n(N) = 3^n 2^-|a| N + b F_n(a): instances checked 32768 (odd N < 4096 , n <= 8 )
+b=+1: all 1023 words with |a| <= 10: each is exactly one residue class of odd N mod 2^(|a|+1), realised by 2^(12-|a|) odd N < 2^13
+b=-1: all 1023 words with |a| <= 10: each is exactly one residue class of odd N mod 2^(|a|+1), realised by 2^(12-|a|) odd N < 2^13
+residue classes: identical on both sheets for 0 words; negatives of each other (r_- = -r_+ mod 2^(|a|+1)) for 1023 words of 1023
+
+------------------------------------------------------------------------------
+A3 Syrac negation mod 3^n with exact Geom(2) weights
+------------------------------------------------------------------------------
+n=3, words |a| <= 16 (mass 65399/65536 of 1): minus histogram mod 27 = negation of plus histogram: True; residues hit 18 of 27; multiples of 3 hit: 0
+n=4, words |a| <= 20 (mass 1047225/1048576 of 1): minus histogram mod 81 = negation of plus histogram: True; residues hit 54 of 81; multiples of 3 hit: 0
+proof that 3 never divides F_n(a): F_n = 3*(...) + 2^{-a_n}, and 2^{-a_n} is a unit mod 3
+
+------------------------------------------------------------------------------
+A4 prime targets, two readings
+------------------------------------------------------------------------------
+b=+1: Syracuse reading: first odd n with prime target other than 1, n: (3, 5); preimages of 3 (odd n < 2^16): []
+b=+1: raw reading 3n+1, n >= 1: first prime values [(2, 7), (4, 13), (6, 19)]; n with 3n+1 = 3: [] (3n+1 = +1 mod 3)
+b=-1: Syracuse reading: first odd n with prime target other than 1, n: (5, 7); preimages of 3 (odd n < 2^16): []
+b=-1: raw reading 3n-1, n >= 1: first prime values [(1, 2), (2, 5), (4, 11)]; n with 3n-1 = 3: [] (3n-1 = -1 mod 3)
+
+------------------------------------------------------------------------------
+A5 PPT, 2^11 - 3^7, seven-cycle
+------------------------------------------------------------------------------
+77^2+36^2 = 7225 85^2 = 7225 gcd(77,36) = 1
+(m,n) = (9,2): m^2-n^2 = 77, 2mn = 36, m^2+n^2 = 85
+T_+(7) = (11, 1) (target 11, valuation 1)
+2^11 = 2048 3^7 = 2187 Delta = -139 ; (-17)*Delta = 2363 ; 17*139 = 2363 ; factor 2363 = [17, 139]
+3n-1 odd cycle from 17: [17, 25, 37, 55, 41, 61, 91, 17] valuations [1, 1, 1, 2, 1, 1, 4] |a| = 11
+carry B = -(Delta)*17 = 2363 ; gate n_0 = b*B/Delta with b = -1: 17 ; q = |Delta|/gcd(B,|Delta|) = 1
+cycle identity (2^11 - 3^7)*17 = -2363 = b*B with b = -1: True
+
+------------------------------------------------------------------------------
+A6 196, (G12), A110979
+------------------------------------------------------------------------------
+1 + sum of first 11 odd primes [3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37] = 196 = 14 ^2
+c_i = [0, 0, 0, 1, 1, 2, 2, 3, 5, 5, 7] sum 26 ; direct count of odd composites in [3, p_i]: [0, 0, 0, 1, 1, 2, 2, 3, 5, 5, 7] equal: True
+(G12): 12^2 + 2*26 = 196
+sum of first m primes minus 1 is a square, primes < 2*10^7: [(1, 2, 1, 1), (2, 3, 4, 2), (3, 5, 9, 3), (4, 7, 16, 4), (12, 37, 196, 14), (504, 3607, 839056, 916), (1020675, 15827429, 7796654478001, 2792249)]
+A110979 name (lookup 2026-09-22): 'Squares equal to the sum of the first k primes minus 1.'; data [1, 4, 9, 16, 196, 839056, 7796654478001] ; comment: no more terms < 7472966967498 (sum of first 10^6 primes minus 1, Ray Chandler 2005)
+index of 196 in A110979: 5 (1-based)
+
+------------------------------------------------------------------------------
+A7 basin census, memoised C-form, odd n <= 10^6
+------------------------------------------------------------------------------
+b=+1: basins {1: 500000} fractions {1: 1.0}
+b=-1: basins {1: 163486, 5: 162122, 17: 174392} fractions {1: 0.326972, 5: 0.324244, 17: 0.348784}
+agrees with minus_sheet_positive_control S1 row 10^6 (T-form odd counts 163486 / 162122 / 174392)
+[A7 11.1s]
+
+------------------------------------------------------------------------------
+A8 square-sum graph Q_n
+------------------------------------------------------------------------------
+component counts n=1..40: {1: 1, 2: 2, 3: 2, 4: 3, 5: 3, 6: 3, 7: 3, 8: 3, 9: 3, 10: 3, 11: 3, 12: 3, 13: 2, 14: 1, 15: 1, 16: 1, 17: 1, 18: 1, 19: 1, 20: 1, 21: 1, 22: 1, 23: 1, 24: 1, 25: 1, 26: 1, 27: 1, 28: 1, 29: 1, 30: 1, 31: 1, 32: 1, 33: 1, 34: 1, 35: 1, 36: 1, 37: 1, 38: 1, 39: 1, 40: 1}
+Q_12 components: [[1, 3, 6, 8, 10], [2, 7, 9], [4, 5, 11, 12]] founders (minima): [1, 2, 4]
+n in [6,40] with 1 and 6 in the same component of Q_n: all of 6..40
+n in [4,40] with 1 and 4 in different components: [4, 5, 6, 7, 8, 9, 10, 11, 12] (1 and 4 join at n = 13)
+so {1,4,6} is NOT a transversal of the three Q_n chains: 1 ~ 3 ~ 6 (1+3 = 4, 3+6 = 9); the chain {2,7,9} contains none of 1,4,6
+degree <= 1 vertices n=14..32: {14: [8, 9, 10], 15: [8, 9], 16: [8, 16], 17: [16, 17], 18: [16, 17, 18], 19: [16, 18], 20: [18], 21: [18], 22: [18], 23: [18], 24: [18], 25: [18], 26: [18], 27: [18], 28: [18], 29: [18], 30: [18], 31: [], 32: []}
+N(18) in Q_30: [7] in Q_31: [7, 31] (18+18 = 36 is excluded as x != y; 18+31 = 49)
+degree-0 vertices for n <= 13: {1: [1], 2: [1, 2], 3: [2], 4: [2, 4], 5: [2], 6: [2]}
+Hamiltonian path counts (reversal identified) n=1..25 by subset DP: {1: 1, 2: 0, 3: 0, 4: 0, 5: 0, 6: 0, 7: 0, 8: 0, 9: 0, 10: 0, 11: 0, 12: 0, 13: 0, 14: 0, 15: 1, 16: 1, 17: 1, 18: 0, 19: 0, 20: 0, 21: 0, 22: 0, 23: 3, 24: 0, 25: 10} [0.0s]
+A071983 (offset 15, lookup 2026-09-22) a(15..25): {15: 1, 16: 1, 17: 1, 18: 0, 19: 0, 20: 0, 21: 0, 22: 0, 23: 3, 24: 0, 25: 10} match: True
+Hamiltonian path existence n=1..34 (independent backtracker): {1: 'yes', 2: 'no', 3: 'no', 4: 'no', 5: 'no', 6: 'no', 7: 'no', 8: 'no', 9: 'no', 10: 'no', 11: 'no', 12: 'no', 13: 'no', 14: 'no', 15: 'yes', 16: 'yes', 17: 'yes', 18: 'no', 19: 'no', 20: 'no', 21: 'no', 22: 'no', 23: 'yes', 24: 'no', 25: 'yes', 26: 'yes', 27: 'yes', 28: 'yes', 29: 'yes', 30: 'yes', 31: 'yes', 32: 'yes', 33: 'yes', 34: 'yes'} [0.0s]
+   yes: [1, 15, 16, 17, 23, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34]
+   no : [2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 18, 19, 20, 21, 22, 24] unresolved: []
+Hamiltonian cycle existence n=30..34: {30: 'no', 31: 'no', 32: 'yes', 33: 'yes', 34: 'yes'} [0.0s]
+A071984 (offset 32, lookup 2026-09-22): a(32..34) = 1, 1, 11; comment (Dobbelaere 2018): no cycle for n <= 30
+pasted path n=15 valid: True; ends (8, 9); sums [9, 16, 25]
+pasted path n=23 valid: True; ends (18, 22); sums [4, 9, 16, 25, 36]
+n=15: the unique path (count 1) has ends 8, 9 = the two leaves of Q_15; vertex 4 has neighbours [5, 12] in Q_15
+
+------------------------------------------------------------------------------
+A9 Tao text anchors (cached pdftotext of arXiv:1909.03562v7)
+------------------------------------------------------------------------------
+lines: 4258
+Remark 5.1 (Syr_min(N) <= N^theta, Korec recovery) at line: [1399]
+'eventually recover the results of Korec' at line: [1401]
+quotation 'beyond (1.19), (1.20)' at line: [519]
+'artificial' convention Syr^infinity(N) := 1 at line: [481]
+'negative' lines: [425, 710, 711, 714, 2507, 2626] ; of these 'non-negative': [2626]
+Proposition 1.17 header line: [745] ; 'not divisible by 3' within 3 lines: True
+Syrac definition (1.22) 'Fn (Geom(2)n ) mod 3n' at line: [547]
+footnote on negative time indexing / reversal at lines: [711, 714]
+Korec exponent line (theta > log 3 / log 4 ~ 0.7924): [16, 84]
+Section 1.3 spans roughly lines [453] to [524]
+martingale / dyadic / entropy decrement lines: [] [] []
+black-triangle renewal lines (first three): [796, 798, 800] ; Pascal pairing b_j = a_(2j-1) + a_(2j) at line: [791, 2498]
+
+------------------------------------------------------------------------------
+A10 Lean loopless witnesses
+------------------------------------------------------------------------------
+v <= 40 with 2v a square: [2, 8, 18, 32] (v = 2k^2)
+smallest: v = 2, Fin index 1; note also Fin n for n = 1: value 1, 1+1 = 2 not a square, so the n = 1 graph is loopless
+
+next-question parameter recorded for the note: computable alpha such as 1.1 in place of 1.001
+audit total 11.2s

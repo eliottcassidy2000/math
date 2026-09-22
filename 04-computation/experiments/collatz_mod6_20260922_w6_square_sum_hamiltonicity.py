@@ -237,6 +237,17 @@ def forced_reduction(n, adj0, log):
                         seen.add(w)
                         stack.append(w)
             ends = [u for u in comp if len(fadj[u]) == 1]
+            if ends and all(len(fadj[u]) <= 2 for u in comp):
+                # order comp as a path from its smallest end (audit fix: the DFS
+                # order printed a non-path 1-8-...-4-24-12 at n=24)
+                ordered = [min(ends)]
+                prev = None
+                while len(ordered) < len(comp):
+                    nxt = [w for w in fadj[ordered[-1]] if w != prev]
+                    prev = ordered[-1]
+                    ordered.append(nxt[0])
+                comp = ordered
+                ends = [comp[0], comp[-1]]
             frags.append((comp, ends))
         return fadj, frags
 
@@ -554,6 +565,8 @@ def main():
         P(f"-- n={n}: verdict {verdict} {data}")
         for line in log:
             P(line)
+    n24_forced = sum(1 for line in log if "round 1" in line and "forces edge" in line)
+    P(f"  n=24: forced edges in round 1: {n24_forced}")
     for n in [19, 20, 21, 22, 24]:
         if verdicts[n][0] == "OPEN":
             fail(f"reduction inconclusive at n={n}")
@@ -641,6 +654,7 @@ def main():
     P(f"  c-values used (each once): {cs}")
     P(f"  singleton glue integers: {singles}")
     P(f"  junction sums (last of block, first of next, sum): {[(a, b, s) for a, b, s in glue_sums]}")
+    P(f"  number of junctions: {len(glue_sums)}")
     P(f"  all junction sums square: {not bad}; first element {ends[0][0]}, last element {ends[-1][1]}, "
       f"closing sum {ends[0][0] + ends[-1][1]} square: {is_square(ends[0][0] + ends[-1][1])}")
     if bad or cs != list(range(-12, 13)) or singles != list(range(1, 13)):
@@ -671,6 +685,8 @@ def main():
             P("   | " + c)
     for key in ["A090461", "A071983"]:
         P(f"-- {key} link: {OEIS_LINKS[key]}")
+    P("-- authors: A090460, A090461: _T. D. Noe_, Dec 01 2003; A071983, A071984: _William Rex Marshall_, "
+      "Jun 16 2002; A078107: _R. K. Guy_, Dec 06 2002; A398909: _Bernard Schott_, Aug 14 2026")
     P(f"A090461 data (first 20): {A090461_DATA}")
     P(f"A078107 data (complete): {A078107_DATA}")
     P(f"A071984 offset 32, data: {A071984_DATA}")
@@ -710,7 +726,7 @@ def main():
     P()
     P("== S9  inheritance and scope lines")
     P("  inherited by path, not re-derived: THM-2422 (summand closure P minus {1,4,6}; M_t = 27*2^(t-4)+1), "
-      "THM-2433, THM-362; summand reflection three modes 1/4/6; synthesis sections 1-12; "
+      "THM-2433, THM-362; summand reflection three modes 1/4/6; collatz_mod6_20260917_synthesis.md sections 1-12; "
       "counterexample_portrait (SHEET-BLIND vs SIGN-SPECIFIC).")
     P("  the three components {1,3,6,8,10}, {2,7,9}, {4,5,11,12} of Q_12 are NOT the summand module {1,4,6}: "
       "1 and 6 share a component, 4 sits in a third; no map found beyond the cardinality 3.")
@@ -722,7 +738,7 @@ def main():
     P("== S8  the pasted 'horizons' table corrected against S1-S5")
     sq15 = sorted({p15[i] + p15[i + 1] for i in range(14)})
     rows = [
-        ("N<=13 disconnected", f"3 components for 4<=N<=12, 2 at N=13 (N=1,2,3: {comp_count[1]},{comp_count[2]},{comp_count[3]})", "CORRECT (imprecise)"),
+        ("N<=13 disconnected", f"3 components for 4<=N<=12, 2 at N=13 (N=1,2,3: {comp_count[1]},{comp_count[2]},{comp_count[3]}); Q_1 is connected, so true for 2<=N<=13 only", "CORRECT for 2<=N<=13 (audit: fails at N=1)"),
         ("N=14 first unification, 3 components join", "2 components at N=13 join at N=14 (edge 14-2, 14-11); the 3rd component vanished at N=13 (13+3=16, 13+12=25)", "REFUTED as stated"),
         ("N=15 first Hamiltonian path 'braiding 9,16,25'", f"first path at N=15, unique up to reversal ({counts[15][0]}); squares used by it: {sq15}; the edge 1-3 (sum 4) exists in Q_15 but is unused", "CORRECT"),
         ("N=16,17 connected", "connected from N=14 on; paths exist (1 each)", "CORRECT (weak)"),

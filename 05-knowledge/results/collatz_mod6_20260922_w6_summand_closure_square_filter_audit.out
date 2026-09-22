@@ -1,0 +1,86 @@
+=== AUDIT 1: components, chains, merges (BFS on double-loop adjacency) ===
+   n= 1 c=1 comps=[[1]] maxdeg=0
+   n= 2 c=2 comps=[[1], [2]] maxdeg=0
+   n= 3 c=2 comps=[[1, 3], [2]] maxdeg=1
+   n= 4 c=3 comps=[[1, 3], [2], [4]] maxdeg=1
+   n= 5 c=3 comps=[[1, 3], [2], [4, 5]] maxdeg=1
+   n= 6 c=3 comps=[[1, 3, 6], [2], [4, 5]] maxdeg=2
+   n= 7 c=3 comps=[[1, 3, 6], [2, 7], [4, 5]] maxdeg=2
+   n= 8 c=3 comps=[[1, 3, 6, 8], [2, 7], [4, 5]] maxdeg=2
+   n= 9 c=3 comps=[[1, 3, 6, 8], [2, 7, 9], [4, 5]] maxdeg=2
+   n=10 c=3 comps=[[1, 3, 6, 8, 10], [2, 7, 9], [4, 5]] maxdeg=2
+   n=11 c=3 comps=[[1, 3, 6, 8, 10], [2, 7, 9], [4, 5, 11]] maxdeg=2
+   n=12 c=3 comps=[[1, 3, 6, 8, 10], [2, 7, 9], [4, 5, 11, 12]] maxdeg=2
+   n=13 c=2 comps=[[1, 3, 4, 5, 6, 8, 10, 11, 12, 13], [2, 7, 9]] maxdeg=3
+   n=14 c=1 comps=[[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14]] maxdeg=3
+A1 c(Q_n), n=1..40: [1, 2, 2, 3, 3, 3, 3, 3, 3, 3, 3, 3, 2, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]
+A2 Q_13 neighbours of 13: [3, 12] ; Q_14 neighbours of 14: [2, 11]
+A3 n<=40 with max degree <= 2: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]
+
+=== AUDIT 2: connectivity to 2000 (newest vertex has a neighbour; BFS spot checks) ===
+B1 deg_n(n), n=1..40: [0, 0, 1, 0, 1, 1, 1, 1, 1, 1, 1, 1, 2, 2, 2, 1, 1, 1, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 3, 3, 3, 2, 2, 2, 2, 2]
+B2 newest vertex isolated (founders) n<=2000: [1, 2, 4]
+B3 newest vertex a leaf n<=2000: [3, 5, 6, 7, 8, 9, 10, 11, 12, 16, 17, 18] (count 12)
+   BFS: c(Q_14) = 1
+   BFS: c(Q_100) = 1
+   BFS: c(Q_500) = 1
+   BFS: c(Q_2000) = 1
+B4 c(Q_14)=1 and deg_n(n)>=1 for all 15<=n<=2000 => connected 14..2000 (min newest degree over 15..2000 = 1)
+B5 n<200 with (isqrt(n)+1)^2 >= 2n (newest vertex may lack the (s+1)^2 neighbour): [1, 2, 4]
+   n<200 failing the sufficient bound (n-1)^2 > 4n (i.e. n > (1+sqrt2)^2): [2, 3, 4, 5]
+
+=== AUDIT 3: degree formula, leaves, leaf windows (brute force to 400, formula beyond) ===
+C1 degree formula mismatches for m<=n<=400: []
+C2 leaf sets n=1..32: [(1, []), (2, []), (3, [1, 3]), (4, [1, 3]), (5, [1, 3, 4, 5]), (6, [1, 4, 5, 6]), (7, [1, 2, 4, 5, 6, 7]), (8, [2, 4, 5, 6, 7, 8]), (9, [2, 4, 5, 6, 8, 9]), (10, [2, 4, 5, 8, 9, 10]), (11, [2, 4, 8, 9, 10, 11]), (12, [2, 8, 9, 10, 11, 12]), (13, [2, 8, 9, 10, 11]), (14, [8, 9, 10]), (15, [8, 9]), (16, [8, 16]), (17, [16, 17]), (18, [16, 17, 18]), (19, [16, 18]), (20, [18]), (21, [18]), (22, [18]), (23, [18]), (24, [18]), (25, [18]), (26, [18]), (27, [18]), (28, [18]), (29, [18]), (30, [18]), (31, []), (32, [])]
+C3 n<=2000 with a leaf: min 3 max 30, count 28 (contiguous=True)
+C4 leaf windows m -> (first n, last n, length): {1: (3, 7, 5), 2: (7, 13, 7), 3: (3, 5, 3), 4: (5, 11, 7), 5: (5, 10, 6), 6: (6, 9, 4), 7: (7, 8, 2), 8: (8, 16, 9), 9: (9, 15, 7), 10: (10, 14, 5), 11: (11, 13, 3), 12: (12, 12, 1), 16: (16, 19, 4), 17: (17, 18, 2), 18: (18, 30, 13)}
+C5 windows sorted by length (top 6): [(18, (18, 30, 13)), (8, (8, 16, 9)), (2, (7, 13, 7)), (4, (5, 11, 7)), (9, (9, 15, 7)), (5, (5, 10, 6))]
+   windows of length exactly 7: m in [2, 4, 9]  => the explorer's 'three longest windows are 2, 8, 18' is WRONG (4 and 9 tie with 2); the two longest (9 and 13) are 8 and 18
+C6 exact thresholds: 4sqrt(n)+4<=n from n=24; 6sqrt(n)+9<=n from n=53; 4sqrt(n)+5<=n from n=25
+C7 deg_n(m) over 31<=n<=60, 2m square: [2, 3, 4, 5] ; over 24<=n<=60: [1, 2, 3, 4, 5] (explorer's C11 label said 24 but computed 31: label bug, fixed)
+C8 deg_n(18) for n=29,30,31,32: [1, 1, 2, 2]
+
+=== AUDIT 4: self-similarity claims ===
+D1 #squares in (2j^2,4j^2) j=1..12 brute: [0, 1, 1, 2, 2, 3, 4, 4, 5, 5, 6, 7] formula ok for j<=50: True
+D2 j<=50 with at most one square in (2j^2,4j^2): [1, 2, 3]
+   m=2 leaf window [7, 13]
+   m=8 leaf window [8, 16]
+   m=18 leaf window [18, 30]
+   m=32 leaf window None
+   m=50 leaf window None
+   m=72 leaf window None
+D3 residues mod 4 of l^2-k^2 (1<=k<l<40): [0, 1, 3]
+D4 COUNTEREXAMPLE to 'every even-length walk moves by an integer != 2 mod 4': walk [1, 3, 6, 10, 15], sums [4, 9, 16, 25], length 4, displacement 14 = 2 mod 4
+   correct statement: a walk of length exactly 2 moves by l^2-k^2, never 2 mod 4; length-2 walks in Q_15 with displacement 2 mod 4: 0
+
+=== AUDIT 5: Hamiltonian paths/cycles, independent counter (start < end, each path once) ===
+E1 Hamiltonian path exists for n<=32: [1, 15, 16, 17, 23, 25, 26, 27, 28, 29, 30, 31, 32]
+   n=15 unique path: [8, 1, 15, 10, 6, 3, 13, 12, 4, 5, 11, 14, 2, 7, 9]
+E2 counts n=15..30: [1, 1, 1, 0, 0, 0, 0, 0, 3, 0, 10, 12, 35, 52, 19, 20] ; A090460 (fetched 2026-09-22, offset 15): [1, 1, 1, 0, 0, 0, 0, 0, 3, 0, 10, 12, 35, 52, 19, 20] ; equal=True
+E3 Q_15 degrees: [3, 2, 3, 2, 2, 2, 2, 1, 1, 2, 2, 2, 2, 2, 2] edges=15 leaves=[8, 9] deg3=[1, 3]
+   forced edges 14, unforced [(1, 3)]
+E4 path n=15 valid=True
+E4 path n=23 valid=True
+E4 path n=23 valid=True
+E5 Hamiltonian cycle Q_30: False
+E5 Hamiltonian cycle Q_31: False
+E5 Hamiltonian cycle Q_32: True
+   explorer's Q_32 cycle valid: True
+
+=== AUDIT 6: analogy numbers, target-filter founders (S22, S25), pasted arithmetic ===
+F1 odd n<=100000 with (3n+1)/2 square: [] ; k^2 mod 3 values: [0, 1]
+   odd n<=2000 with 3n+1 square: first [1, 5, 21, 33, 65, 85, 133, 161] count 26
+G1 T subset {2..15} with founders among n<=8 exactly {1,4,6}: 0
+   proof check: windows [n+1,2n-1] for n=4,5,6: [(4, 5, 7), (5, 6, 9), (6, 7, 11)] (window of 5 lies inside the union of those of 4 and 6: True)
+   square filter founders n<=20: [1, 2, 4]
+F3 3,7,11,17 differences [4, 4, 6] ; 196 check 196 ; 2v square v<=32: [2, 8, 18, 32]
+
+=== AUDIT 7: THM-2422 re-check with an independent closure (asynchronous, bound 300) ===
+H1 seeds [2, 3] holes in [1,300]: [1, 4, 6]
+H1 seeds [1, 2, 3] holes in [1,300]: []
+H1 seeds [2, 3, 4] holes in [1,300]: [1]
+H1 seeds [2, 3, 6] holes in [1,300]: [1, 4]
+H2 synchronous M_t t=4..7: [28, 55, 109, 217] = 27*2^(t-4)+1: [28, 55, 109, 217]
+
+AUDIT VERDICT: all explorer numbers reproduced; two wording defects found (S12 'three longest windows', S16 'even-length walk') and one .out label defect (C11 range), all corrected in the note/script.
+elapsed 13.3 s

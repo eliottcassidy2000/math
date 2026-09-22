@@ -255,8 +255,10 @@ for m in range(1, 31):
 out("C10 session lead probe: degree<=1 vertices for n=18..32: %s" %
     [(n, [m for m in range(1, n + 1) if deg_in(m, n) <= 1]) for n in range(18, 33)])
 # proof helper for n >= 31: n in [24,52] and m=2i^2 <= n direct check
-out("C11 proof helper: for 24 <= n <= 60 and every m <= n with 2m square, deg_n(m) = %s" %
+out("C11 proof helper: for 31 <= n <= 60 and every m <= n with 2m square, deg_n(m) in %s (for 24 <= n <= 30 the value 1 also occurs, at m = 18)" %
     sorted(set(deg_in(m, n) for n in range(31, 61) for m in range(1, n + 1) if is_square(2 * m))))
+if 1 not in set(deg_in(m, n) for n in range(24, 31) for m in range(1, n + 1) if is_square(2 * m)):
+    raise RuntimeError("m=18 leaf expected for 24 <= n <= 30")
 out("   for 24 <= n <= 60 and every m <= n with 2m NOT square, min deg_n(m) = %d" %
     min(deg_in(m, n) for n in range(24, 61) for m in range(1, n + 1) if not is_square(2 * m)))
 out("   n0 with 4*sqrt(n)+4 <= n for all n >= n0: %d" % min(n for n in range(1, 200) if all(4 * math.sqrt(k) + 4 <= k for k in range(n, 200))))
@@ -464,5 +466,21 @@ out("G6 closure holes {1,4,6} vs Q founders {1,2,4}: intersection %s, symmetric 
 out("G7 Q_15: vertices of degree 3: %s; leaves: %s; forced edges = all %d edges except (1,3): the unique path" % ([m for m in range(1, 16) if deg_in(m, 15) == 3], leafsets[15], len(edges(15))))
 out("G8 c(Q_n) is non-increasing for n >= 5 (new vertex has deg >= 1): check over n <= 2000: %s" % all(cseq[n - 1] <= cseq[n - 2] for n in range(6, NMAX + 1)))
 out("G9 closure of Q_13 component sizes: %s; T_3 = 1+2+3 = %d lies in the chain founded by 1" % ([len(c) for c in components(13)], 6))
+out("G10 provenance: session collatz-mod6-20260917, wave 20260922, lane summand_closure_square_filter; cites 01-canon THM-2422, THM-2433, THM-362; 07-reflections summand-graph-fermat-zeckendorf; 05-knowledge arithmetic_braids_20260917_summand; OEIS A090461 = 15,16,17,23,25,26,... and A090460 (fetched with curl UA Mozilla/5.0 (research))")
+# G11: can ANY target filter T (x~y iff x+y in T, x != y) have founders exactly {1,4,6}?
+# n is born isolated iff T cap [n+1, 2n-1] is empty (the diagonal 2n is outside that window anyway).
+def founders_for(T, upto):
+    return [n for n in range(1, upto + 1) if not any(t in T for t in range(n + 1, 2 * n))]
+
+
+hits = []
+for mask in range(1 << 12):  # subsets of {2..13}; windows for n <= 7 lie inside [2,13]
+    T = {v + 2 for v in range(12) if mask >> v & 1}
+    if founders_for(T, 7) == [1, 4, 6]:
+        hits.append(sorted(T))
+out("G11 target filters T subset {2..13} whose founders among n <= 7 are exactly {1,4,6}: %d (none); founders 4 and 6 force T cap [5,7] = T cap [7,11] = {} so T cap [6,9] = {} and 5 is a founder too" % len(hits))
+out("    square filter founders n <= 7: %s; witness T = {4,9} u [12,inf) founders n <= 7: %s" % (founders_for({k * k for k in range(1, 6)}, 7), founders_for({4, 9} | set(range(12, 30)), 7)))
+if hits:
+    raise RuntimeError("a {1,4,6} founder filter exists: %s" % hits[:3])
 out()
 out("elapsed %.1f s" % (time.time() - T0))

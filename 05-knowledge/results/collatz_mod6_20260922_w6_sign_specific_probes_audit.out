@@ -1,0 +1,60 @@
+A0  square-sum graph Q_n (x ~ y iff x + y square, x != y), n <= 32
+components: [(1, 1), (2, 2), (3, 2), (4, 3), (5, 3), (6, 3), (7, 3), (8, 3), (9, 3), (10, 3), (11, 3), (12, 3), (13, 2), (14, 1), (15, 1), (16, 1), (17, 1), (18, 1), (19, 1), (20, 1), (21, 1), (22, 1), (23, 1), (24, 1), (25, 1), (26, 1), (27, 1), (28, 1), (29, 1), (30, 1), (31, 1), (32, 1)]
+leaves n>=14: [(14, [8, 9, 10]), (15, [8, 9]), (16, [8, 16]), (17, [16, 17]), (18, [16, 17, 18]), (19, [16, 18]), (20, [18]), (21, [18]), (22, [18]), (23, [18]), (24, [18]), (25, [18]), (26, [18]), (27, [18]), (28, [18]), (29, [18]), (30, [18]), (31, []), (32, [])]
+Hamiltonian path exists: [1, 15, 16, 17, 23, 25, 26, 27, 28, 29, 30, 31, 32]
+directed Hamiltonian paths of Q_15: 2 (= 2 means one undirected path)
+Q_15: 15 edges, squares available [4, 9, 16, 25], squares on the unique path [9, 16, 25] (edge 1-3 with sum 4 unused)
+Q_23 has at least 3 directed Hamiltonian paths (search stopped at 3)
+pasted Lean loops (2v square), v <= 32: [2, 8, 18, 32]
+3,7,11,17 gaps: [4, 4, 6]
+
+A1  root asymmetry
+  n=1: halved c+=1 c-=0 unhalved c+=3 c-=1
+  n=3: halved c+=2 c-=1 unhalved c+=7 c-=5
+  n=5: halved c+=3 c-=2 unhalved c+=11 c-=9
+  n=7: halved c+=4 c-=3 unhalved c+=15 c-=13
+  odd n < 30 whose unhalved plus companion 2n+1 is a multiple of 3 (n = 1 mod 3): [1, 7, 13, 19, 25]
+  1 fixed by (a n + b)/2^v2: {(3, 1): True, (3, -1): True, (1, 1): True, (1, -1): False, (5, 1): False, (5, -1): True, (7, 1): True, (7, -1): False}
+
+A2  (3,b,k) edges x -> y, 3x + b = 2^k y, x, y odd, x != y, (x^2 + y^2)/2 <= X; enumeration over targets y
+  C_edge = 0.507819
+  X=1000000: plus 507 (tri 507) minus 506 (tri 505); per k (k, plus, minus): [(1, 196, 195), (2, 141, 141), (3, 82, 83), (4, 44, 43), (5, 22, 22), (6, 11, 11), (7, 5, 6), (8, 3, 2), (9, 1, 2), (10, 1, 0), (11, 0, 1), (12, 1, 0)]
+  union of triangles: 1012
+  X=1000000 sheet +1: 196 k=1 edges, 141 children below X
+  X=1000000 sheet -1: 195 k=1 edges, 141 children below X
+  converse B3 (every k=2 edge is a child of a k=1 edge of the other sheet) verified on the window
+  X=10000000: plus 1605 (tri 1605) minus 1605 (tri 1604); per k (k, plus, minus): [(1, 620, 619), (2, 447, 447), (3, 261, 262), (4, 138, 137), (5, 69, 70), (6, 35, 35), (7, 17, 18), (8, 9, 8), (9, 4, 5), (10, 3, 2), (11, 1, 1), (12, 1, 0), (13, 0, 1)]
+  X=10000000 sheet +1: 620 k=1 edges, 447 children below X
+  X=10000000 sheet -1: 619 k=1 edges, 447 children below X
+  converse B3 (every k=2 edge is a child of a k=1 edge of the other sheet) verified on the window
+  7 -> 11 (plus, k=1): triangle (77, 36, 85)
+
+A3  T_- basins, greedy Q2_-, E_- paths
+  basins odd n <= 10^6: {1: 163486, 5: 162122, 17: 174392}, max accelerated steps to first drop 125
+  greedy Q2_-: certified 666665, cycled [4], histogram [(1, 444444), (2, 148147), (3, 24692), (4, 24691), (5, 5487), (6, 8230)] max 35
+  exact one-step law: #m in [2,10^6] with m mod 9 in {1,2,5,7} = 444444
+  path 5 -> 1: 15 arrows, even->3n-1 arrows [(10, 29)]
+  path 17 -> 1: 35 arrows, even->3n-1 arrows [(68, 203), (304, 911)]
+  path 1 -> 4: 15 arrows, even->3n-1 arrows [(2, 5), (10, 29)]
+  SCC note section 6 already states Q1_- and Q2_- to 10^6 (inherited; this lane reconfirms)
+
+A4  carry B_L
+  formula = direct on [(1, 1, 1, 1, 2), (-1, 1, 1, -1, 1), (-1, 5, 2, -5, 3), (-1, 17, 7, -2363, 11), (-1, 17, 14, -10007305, 22), (-1, 17, 21, -31797116387, 33), (1, 27, 8, 9221, 11), (1, 837799, 8, 9209, 10)]
+  B_L mod 3 = b 2^(K_(L-1)) mod 3 (parity of K_(L-1)) checked, n <= 2000, L = 6
+  odd n < 2^19 with K_10 <= 18 (complete classes mod 2^(K+1)): |B| mod 4 plus [(1, 65536), (3, 41226)] minus [(1, 65536), (3, 41226)]; |B| mod 3 plus [(1, 51300), (2, 55462)] minus [(1, 51300), (2, 55462)]
+
+A5  greedy means as exact rationals; 2-cycles for all exponents
+  residue counts mod 9 in [1,10^5]: {1: 11112, 2: 11111, 4: 11111, 5: 11111, 7: 11111, 8: 11111}
+  mean k_1: plus 77779/66667 = 1.166679, minus 77778/66667 = 1.166664, difference 1/66667
+  plus 2-cycles found with c <= 5, a <= 9: [(1, 2, 2)]
+  PROVED complete: c >= 4 needs 2^c (2^a - 1) <= 12 (a >= 1) or 2^c - 9 | 12 (a = 0), impossible; c <= 3 is the census
+  minus 2-cycles (a + c <= 3 is exhaustive since 2^(a+c) < 9): [(1, 1, 1, 1), (4, 11, 3, 0), (5, 7, 2, 1), (7, 5, 1, 2), (11, 4, 0, 3)]
+
+A6  residue-of-minimum law; last odd before 1
+  cycle (5, 7): min 5 = 1 mod 4 k=1, max 7 = 3 mod 4 k=2
+  cycle (17, 25, 37, 55, 41, 61, 91): min 17 = 1 mod 4 k=1, max 91 = 3 mod 4 k=4
+  fixed points n = b/(2^k - 3) = 1: [(1, 2), (-1, 1)]
+  last odd before 1, odd 3 <= n <= 10^5: [(1, 49999)]
+  (classical: a 3n+1 cycle minimum is 3 mod 4 and its maximum 1 mod 4; elementary, UNCITED-RECOLLECTION as folklore)
+
+ALL AUDIT CHECKS PASSED
