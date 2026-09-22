@@ -74,7 +74,12 @@
   multiplicand sources are `{1} cup P cup P^2`; `M = (M cap S) u (D minus
   {1->2, 2->4})`; the ray tableau is odd/even by nonsquare/square; every
   hole, source and leaf met in the session is a deleted diagonal.
-  Collatz remains OPEN.
+  [Third reflection](collatz_mod6_20260922_lead_reflection3.md): existence
+  by factorization puts the not-yet-existent numbers in the top half
+  `(N/2, N]` (Bertrand's territory), `25` is where the three square-sum
+  chains, the scar `18` and the `3-4-5` root meet, and every session
+  singleton is the finite solution set of a coincidence between two growth
+  laws. Collatz remains OPEN.
 - [Arithmetic seams](arithmetic_seams_20260921_synthesis.md): **PROVED scoped / VERIFIED Lean arithmetic.** Fermat tournament path counts; sharp fifteen-term coprimality; Fermat-prime decimal clocks; dihedral three-cycle lifts; pointed-product and remainder repairs. [Manifest](arithmetic_seams_20260921_manifest.json). Global Collatz convergence remains OPEN.
 
 - [Collatz guard extensions](collatz_guards_20260921_synthesis.md): **PROVED scoped / VERIFIED Lean reductions.** Irrational reset density; no bounded discrepancy; sharp squarefree word obstructions. Global convergence OPEN. [Manifest](collatz_guards_20260921_manifest.json).
