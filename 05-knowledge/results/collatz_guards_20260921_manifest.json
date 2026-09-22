@@ -1,0 +1,158 @@
+{
+  "artifacts": [
+    {
+      "path": "04-computation/experiments/collatz_blueprint_20260921_verify.py",
+      "sha256_lf": "41bc20197e001d14f562508e39357aea8bf6b0be9e1e560c3f54501ce8fb29cb"
+    },
+    {
+      "path": "04-computation/experiments/collatz_guards_20260921_discrepancy.json",
+      "sha256_lf": "056fed046a7c7ded6768843d800d773107ad719c7af426dff709733bbe46a500"
+    },
+    {
+      "path": "04-computation/experiments/collatz_guards_20260921_discrepancy.py",
+      "sha256_lf": "fe4a46cd6438643f1e31960438f1691a9ceaeb5a48182489e0fd2b081a86158a"
+    },
+    {
+      "path": "04-computation/experiments/collatz_guards_20260921_squarefree.json",
+      "sha256_lf": "4bacb9c23ce73311ecdff23a0e789c4b7f9e83aa54ced6e277eefba3e9e73ea7"
+    },
+    {
+      "path": "04-computation/experiments/collatz_guards_20260921_squarefree.py",
+      "sha256_lf": "fc1dbd840424ecd34630d98d5c8f5e3b7e45d7020a4f07a8ce59f304feb6af92"
+    },
+    {
+      "path": "04-computation/experiments/collatz_guards_20260921_valves.json",
+      "sha256_lf": "bfb682422f02353ada412b2710dfc30644c61d34fdc8f5aed913c4729f030ef5"
+    },
+    {
+      "path": "04-computation/experiments/collatz_guards_20260921_valves.py",
+      "sha256_lf": "57d161b124dd57da9c9d5b48393113984c66b59028bf06f98d886a004208ee7e"
+    },
+    {
+      "path": "04-computation/experiments/collatz_guards_20260921_verify.py",
+      "sha256_lf": "3bc8e2e8fe94f81b8156828f7358c77819538e22c64868444c5fe16c82acfcbb"
+    },
+    {
+      "path": "04-computation/lean/CollatzBlueprintAudit/.gitignore",
+      "sha256_lf": "fde850d24186b6e99c8c0debd641fb3ab85198b109eb66f71a1fea02bd6ea1b3"
+    },
+    {
+      "path": "04-computation/lean/CollatzBlueprintAudit/AxiomAudit.lean",
+      "sha256_lf": "c4fddb9162deb19c50d6cb12a9f3c3a3c28486113f6faa785981d14c55a943be"
+    },
+    {
+      "path": "04-computation/lean/CollatzBlueprintAudit/CollatzBlueprintAudit/Basic.lean",
+      "sha256_lf": "8ac960737cec7475e97452bb0b97ec8626f81cde54f32888345870b47906d23e"
+    },
+    {
+      "path": "04-computation/lean/CollatzBlueprintAudit/CollatzBlueprintAudit/ClockAudit.lean",
+      "sha256_lf": "66dd3bc1a92ef63ed59cb10206075dac886574fd796a6fa00e18f1be7237f56b"
+    },
+    {
+      "path": "04-computation/lean/CollatzBlueprintAudit/CollatzBlueprintAudit.lean",
+      "sha256_lf": "75d37e2316316201bb1c1643c9fca0e0a0df67815381e4527c3a9abca7c06d36"
+    },
+    {
+      "path": "04-computation/lean/CollatzBlueprintAudit/lake-manifest.json",
+      "sha256_lf": "f5225401c2e400fbb0a42e31dc395c7dd60bc4c78b365df3baf7da056e447081"
+    },
+    {
+      "path": "04-computation/lean/CollatzBlueprintAudit/lakefile.toml",
+      "sha256_lf": "7578f9321f901266c712fbbb28b2cc70a02ddd5deaf55cd52eda8c220a9707ee"
+    },
+    {
+      "path": "04-computation/lean/CollatzBlueprintAudit/lean-toolchain",
+      "sha256_lf": "54727eec5cba149c18842e6deb5c41b369d66455c93ce135d7d5347c782b2325"
+    },
+    {
+      "path": "04-computation/lean/CollatzBlueprintAudit/README.md",
+      "sha256_lf": "b6cbdbbd57e023f60763cd9a030e1e42cb21139e20587244c595199f953ed147"
+    },
+    {
+      "path": "04-computation/lean/CollatzBlueprintAudit/verification.json",
+      "sha256_lf": "d8c087e36a31ed17d344f3785a654bf4a1c0972ba7bb65795fcf8aa0d3a65991"
+    },
+    {
+      "path": "04-computation/lean/CollatzBlueprintAudit/verification.log",
+      "sha256_lf": "7b88ca1e881cd5c8fb6cf9957683403dff0f6ea1e86cd3ee82a2701d3b84a2b1"
+    },
+    {
+      "path": "04-computation/lean/CollatzBlueprintAudit/verify.py",
+      "sha256_lf": "ecec77dcea7003422a7179ebaeef42f40eb145841c49b9ab28542a2da5874711"
+    },
+    {
+      "path": "05-knowledge/reference/COLLATZ-GUARDS-2026-09-21-SOURCE.md",
+      "sha256_lf": "a6a95d90e11a83193a314fde946a0b09a873f02b3b2c8361e4da4f6f1c971b9a"
+    },
+    {
+      "path": "05-knowledge/results/collatz_blueprint_20260921_manifest.json",
+      "sha256_lf": "3f6a51185ef120f58a4e34c29a578251361e03fb8e06ff5668a37a5aaf19d27b"
+    },
+    {
+      "path": "05-knowledge/results/collatz_blueprint_20260921_verification.out",
+      "sha256_lf": "ba39b44ef0545e30674fe18e2d2aadc56c37806c0caa51145e325d93089d98cd"
+    },
+    {
+      "path": "05-knowledge/results/collatz_guards_20260921_discrepancy.md",
+      "sha256_lf": "af74ef5905e63f5146ea7bc162822a2e588e51b3f161654c3ffe2c61d08c0815"
+    },
+    {
+      "path": "05-knowledge/results/collatz_guards_20260921_squarefree.md",
+      "sha256_lf": "a7727f346a5ff53d34c94d1a788c0810b28c0a203c1645f7d80be0753000df0f"
+    },
+    {
+      "path": "05-knowledge/results/collatz_guards_20260921_synthesis.md",
+      "sha256_lf": "62a5ca36b41d8d56f1aaf245dadcf273cabad38b55c1ea8dcacb17b7fa2b66f5"
+    },
+    {
+      "path": "05-knowledge/results/collatz_guards_20260921_valves.md",
+      "sha256_lf": "c5fa9eef827c56e519301e817f719b7d1276abeab1046c1d813c1d4d2e288cae"
+    },
+    {
+      "path": "05-knowledge/results/collatz_guards_20260921_verification.out",
+      "sha256_lf": "448cf65650b931fa53870fcf5bf083f460fe7afc9f6e7acaf0d82044053d7d4a"
+    }
+  ],
+  "collatz_convergence_proved": false,
+  "hash_basis": "artifact bytes with CRLF normalized to LF",
+  "lean": {
+    "new_written_analytic_and_sieve_proofs_formalized": false,
+    "root_import": "CollatzBlueprintAudit",
+    "theorems_audited": 35,
+    "verification": "04-computation/lean/CollatzBlueprintAudit/verification.json"
+  },
+  "post_replay_documentation_updates": {
+    "paths": [
+      "05-knowledge/results/collatz_guards_20260921_squarefree.md"
+    ],
+    "reason": "Final independent proof/code audit annotation; all computational inputs and outputs unchanged."
+  },
+  "runs": [
+    {
+      "byte_identical": true,
+      "certificate": "04-computation/experiments/collatz_guards_20260921_valves.json",
+      "command": "python 04-computation/experiments/collatz_guards_20260921_valves.py",
+      "lane": "valves",
+      "optimized_pass": true,
+      "ordinary_pass": true
+    },
+    {
+      "byte_identical": true,
+      "certificate": "04-computation/experiments/collatz_guards_20260921_squarefree.json",
+      "command": "python 04-computation/experiments/collatz_guards_20260921_squarefree.py",
+      "lane": "squarefree",
+      "optimized_pass": true,
+      "ordinary_pass": true
+    },
+    {
+      "byte_identical": true,
+      "certificate": "04-computation/experiments/collatz_guards_20260921_discrepancy.json",
+      "command": "python 04-computation/experiments/collatz_guards_20260921_discrepancy.py",
+      "lane": "discrepancy",
+      "optimized_pass": true,
+      "ordinary_pass": true
+    }
+  ],
+  "scope": "Scoped written proofs, finite certificates, and Lean reductions only",
+  "status": "PASS"
+}

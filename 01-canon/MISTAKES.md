@@ -9,6 +9,40 @@ Format per entry:
 - Why it was wrong
 - The correct framing
 
+## 2026-09-21 Collatz arithmetic guards -- false reset and mixed clocks
+
+- **REFUTED universal mod-nine valve:** 23->35->53->5 has exact word
+  (1,1,5) and source guard 23 mod256. The same row contains the all-growth
+  path 95->143->215->323. Both three-step carries are 19, but the halving
+  totals are 7 and 3. Preserve the actual exponent word as well as carry.
+  The family n_a=3*2^(2a+1)-1 even grows through its first reset for every
+  a>=4. The strongest survivor is the exact cylinder and the elementary
+  first-reset **spatial** descent density, not a law on every orbit.
+- **INVALID formal clock and quantifier transfer:** standard Collatz has
+  2^K*C^t(n)=3^O*n+B with actual K+O=t. Replacing O by total time is wrong;
+  free existential K,B can conceal it (at n=2 choose fake K=3,B=2). A
+  local certificate for one n does not generically prove descent for all
+  m. This diagnoses the inference, without falsely claiming to refute the
+  still-open Collatz-specific positive equivalence. The supplied all-Nat
+  convergence statement is directly false at0 and its code contains sorry.
+- **UNSUPPORTED repeated cycle assertion:** rational5/7<->11/7 refutes
+  rational uniqueness. Three known signed cycles are not exhaustive merely
+  by citation to Baker. A cited one-rise/one-fall cycle exclusion is a
+  legitimate restricted dependency; it does not exclude arbitrary cycles.
+- **MISSING endpoint / missing sieve:** a repeated affine word's squarefree
+  test must include the final node. For (1,1,5), excluding that endpoint
+  gives the wrong cutoff4987; including it makes4986 blocks impossible,
+  while4985 have positive-density all-squarefree realizations. Existence
+  uses a controlled fixed-word sieve tail, not just finite CRT consistency.
+- **DENSITY repair with a real bridge:** the new bounded-discrepancy proof
+  forces a distinct orbit tail of positive lower spatial density inside a
+  fixed-factor non-descent set of density zero. Without the two-sided
+  linear height and uniform future/source bounds, that inference fails.
+  Finite bounded discrepancy alone does not imply distinctness; repeated1
+  is the hostile. Every finite mechanical prefix being realizable still
+  does not give a positive integer realizing the infinite word.
+  [Current proofs, exact controls, and Lean audit](../05-knowledge/results/collatz_guards_20260921_synthesis.md).
+
 ## 2026-09-21 Collatz blueprint -- invalid geometry and missing trajectory quantifiers
 
 - **REFUTED proposed monodromy:** the supplied maps have M3=M2 composed

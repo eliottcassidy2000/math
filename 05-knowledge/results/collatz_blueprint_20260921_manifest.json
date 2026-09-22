@@ -26,15 +26,19 @@
     },
     {
       "path": "04-computation/lean/CollatzBlueprintAudit/AxiomAudit.lean",
-      "sha256_lf": "997863c4a283f59c71e8aa8262bea9a6e947c650e4d6e342f5dba17dcd8100c8"
+      "sha256_lf": "c4fddb9162deb19c50d6cb12a9f3c3a3c28486113f6faa785981d14c55a943be"
     },
     {
       "path": "04-computation/lean/CollatzBlueprintAudit/CollatzBlueprintAudit/Basic.lean",
       "sha256_lf": "8ac960737cec7475e97452bb0b97ec8626f81cde54f32888345870b47906d23e"
     },
     {
+      "path": "04-computation/lean/CollatzBlueprintAudit/CollatzBlueprintAudit/ClockAudit.lean",
+      "sha256_lf": "66dd3bc1a92ef63ed59cb10206075dac886574fd796a6fa00e18f1be7237f56b"
+    },
+    {
       "path": "04-computation/lean/CollatzBlueprintAudit/CollatzBlueprintAudit.lean",
-      "sha256_lf": "7871d4377ec2dba903df1deb133aaa040496574988de1b00ab70b9f6ab054b9e"
+      "sha256_lf": "75d37e2316316201bb1c1643c9fca0e0a0df67815381e4527c3a9abca7c06d36"
     },
     {
       "path": "04-computation/lean/CollatzBlueprintAudit/lake-manifest.json",
@@ -50,19 +54,19 @@
     },
     {
       "path": "04-computation/lean/CollatzBlueprintAudit/README.md",
-      "sha256_lf": "7dade4367b68576ef3365c3edec5ca980486bcbce815ded3a000183f2ebc3520"
+      "sha256_lf": "b6cbdbbd57e023f60763cd9a030e1e42cb21139e20587244c595199f953ed147"
     },
     {
       "path": "04-computation/lean/CollatzBlueprintAudit/verification.json",
-      "sha256_lf": "257ac0c4c66b9c42688a4fcac85679e0744ba92aeb1f4626185a1088b2d3c912"
+      "sha256_lf": "d8c087e36a31ed17d344f3785a654bf4a1c0972ba7bb65795fcf8aa0d3a65991"
     },
     {
       "path": "04-computation/lean/CollatzBlueprintAudit/verification.log",
-      "sha256_lf": "6f5796215ee683ba03316f0b5fb76560065461b184e214d0ecec501888715f2d"
+      "sha256_lf": "7b88ca1e881cd5c8fb6cf9957683403dff0f6ea1e86cd3ee82a2701d3b84a2b1"
     },
     {
       "path": "04-computation/lean/CollatzBlueprintAudit/verify.py",
-      "sha256_lf": "4d506fcab42011d337fb459ecd27f48b9d15ebdd8ed33382bd5ff1e3de84ca4b"
+      "sha256_lf": "ecec77dcea7003422a7179ebaeef42f40eb145841c49b9ab28542a2da5874711"
     },
     {
       "path": "05-knowledge/reference/COLLATZ-BLUEPRINT-2026-09-21-SOURCE.md",
@@ -82,7 +86,7 @@
     },
     {
       "path": "05-knowledge/results/collatz_blueprint_20260921_verification.out",
-      "sha256_lf": "185e966ab06a2f621d239f1a2a23824fd5a667d2e1a5f1b4f49707222fc10e8a"
+      "sha256_lf": "ba39b44ef0545e30674fe18e2d2aadc56c37806c0caa51145e325d93089d98cd"
     }
   ],
   "collatz_convergence_proved": false,

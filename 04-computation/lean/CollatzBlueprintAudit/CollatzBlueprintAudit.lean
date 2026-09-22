@@ -1,4 +1,5 @@
 import CollatzBlueprintAudit.Basic
+import CollatzBlueprintAudit.ClockAudit
 
 /-!
 Explicit library root: every theorem of the blueprint audit is reachable here.

@@ -5,7 +5,8 @@
 This independent package uses Lean's bundled `Std` library, with no external
 packages or mathlib download. Its explicit public root,
 [`CollatzBlueprintAudit.lean`](CollatzBlueprintAudit.lean), imports
-[`CollatzBlueprintAudit/Basic.lean`](CollatzBlueprintAudit/Basic.lean).
+[`CollatzBlueprintAudit/Basic.lean`](CollatzBlueprintAudit/Basic.lean) and
+[`CollatzBlueprintAudit/ClockAudit.lean`](CollatzBlueprintAudit/ClockAudit.lean).
 
 The inherited useful mechanism is finite-word Collatz iteration; the missing
 coordinate is a stopping time for each individual starting number. The prior
@@ -50,6 +51,50 @@ not a deduction from squarefree density or a monodromy analogy.
 zero for the start `1`. It does not require `1` to be fixed: the standard map
 continues along `1 → 4 → 2 → 1`.
 
+## Actual step counts and the follow-up certificate
+
+The follow-up attachment defines the **standard unaccelerated** map while
+calling it Syracuse. Its iteration time therefore counts both odd and even
+steps. The new module computes `evenSteps n t`, `oddSteps n t`, and
+`standardCarry n t` from the actual standard-map orbit. It proves
+
+```text
+evenSteps n t + oddSteps n t = t,
+2^(evenSteps n t) * iterate collatz t n
+  = 3^(oddSteps n t) * n + standardCarry n t.
+```
+
+At an even step the carry is unchanged. At an odd step, with prior halving
+count K, it becomes `3*B+2^K`. This is a derived invariant, not an assumed
+certificate identity. A root-imported theorem makes convergence equivalent
+to the positive-time margin for these actual counters at every `n>1`.
+The global margin remains unproved.
+
+The attachment's separate local certificate leaves K and B freely chosen.
+It is satisfiable at `n=2` with total time `t=1`, `K=3`, and `B=2`, even
+though the actual counters are `K=1`, `oddSteps=0`, `B=0`. With the true K,
+using the incorrect exponent `3^t` would demand `2=6+B` and is impossible.
+The package checks both facts, so it does not mistake unguarded existential
+metadata for a true orbit tally.
+
+One certificate at a single start is only local. The positive-preserving map
+`localTrap n = if n=2 then 1 else n` has the same local certificate at two,
+but three is fixed and prevents global descent. This refutes the generic
+local-to-global inference; it does not refute the Collatz-specific equivalence
+from the attachment, whose forward direction would require proving the open
+conjecture. The attachment's separate all-natural-number convergence claim
+is directly false at zero, as formally checked here.
+
+Exact paired controls expose another lost coordinate:
+
+| start | standard time | endpoint | even steps | odd steps | carry |
+|---|---:|---:|---:|---:|---:|
+| 23 | 10 | 5 | 7 | 3 | 19 |
+| 95 | 6 | 323 | 3 | 3 | 19 |
+
+Both starts are `5 mod 9` and have the same carry and odd-step count. The
+halving totals differ, and one segment descends while the other grows.
+
 ## Reproduction and trust boundary
 
 From this package directory, run:
@@ -61,8 +106,8 @@ python verify.py
 The verifier runs `lake clean`, `lake build`, and
 `lake env lean AxiomAudit.lean`, and saves the actual output to
 [`verification.log`](verification.log). The axiom audit imports only the public
-root, so it also checks root-import reach. All public theorems in `Basic.lean`
-must appear in the audit.
+root, so it also checks root-import reach. All public theorems in the audited
+library modules must appear in the audit.
 
 [`verification.json`](verification.json) records the toolchain, source hashes,
 theorem count, and actual dependencies. The only permitted foundational axioms

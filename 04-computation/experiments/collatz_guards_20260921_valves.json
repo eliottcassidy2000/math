@@ -1,0 +1,231 @@
+{
+  "all_checks_passed": true,
+  "family_first_eight": [
+    {
+      "a": 1,
+      "descends": true,
+      "growth_length": 2,
+      "n": 23,
+      "reset_endpoint": 5,
+      "reset_exponent": 5
+    },
+    {
+      "a": 2,
+      "descends": true,
+      "growth_length": 4,
+      "n": 95,
+      "reset_endpoint": 91,
+      "reset_exponent": 4
+    },
+    {
+      "a": 3,
+      "descends": true,
+      "growth_length": 6,
+      "n": 383,
+      "reset_endpoint": 205,
+      "reset_exponent": 6
+    },
+    {
+      "a": 4,
+      "descends": false,
+      "growth_length": 8,
+      "n": 1535,
+      "reset_endpoint": 7381,
+      "reset_exponent": 4
+    },
+    {
+      "a": 5,
+      "descends": false,
+      "growth_length": 10,
+      "n": 6143,
+      "reset_endpoint": 33215,
+      "reset_exponent": 5
+    },
+    {
+      "a": 6,
+      "descends": false,
+      "growth_length": 12,
+      "n": 24575,
+      "reset_endpoint": 597871,
+      "reset_exponent": 4
+    },
+    {
+      "a": 7,
+      "descends": false,
+      "growth_length": 14,
+      "n": 98303,
+      "reset_endpoint": 672605,
+      "reset_exponent": 7
+    },
+    {
+      "a": 8,
+      "descends": false,
+      "growth_length": 16,
+      "n": 393215,
+      "reset_endpoint": 48427561,
+      "reset_exponent": 4
+    }
+  ],
+  "first_reset_descent_density": {
+    "N": 64,
+    "decimal_lower": "0.7137254976758912580323371987000575839181465978887675725517245745033179",
+    "decimal_upper": "0.7137254976758912580323371987003488163240222241674109094298428300388470",
+    "partial_sum": {
+      "denominator": 2535301200456458802993406410752,
+      "numerator": 1809509111054070603893904731501
+    },
+    "strict_upper_bound": {
+      "denominator": 8705422711575526459836573443363991822514099631929110206349312,
+      "numerator": 6213282157298249383813571644587941697210645937251903088551533
+    },
+    "tail_bound": "3^-64"
+  },
+  "mod9_transition_rows": [
+    {
+      "source_mod9": 0,
+      "targets_for_k1_to6": [
+        5,
+        7,
+        8,
+        4,
+        2,
+        1
+      ]
+    },
+    {
+      "source_mod9": 1,
+      "targets_for_k1_to6": [
+        2,
+        1,
+        5,
+        7,
+        8,
+        4
+      ]
+    },
+    {
+      "source_mod9": 2,
+      "targets_for_k1_to6": [
+        8,
+        4,
+        2,
+        1,
+        5,
+        7
+      ]
+    },
+    {
+      "source_mod9": 3,
+      "targets_for_k1_to6": [
+        5,
+        7,
+        8,
+        4,
+        2,
+        1
+      ]
+    },
+    {
+      "source_mod9": 4,
+      "targets_for_k1_to6": [
+        2,
+        1,
+        5,
+        7,
+        8,
+        4
+      ]
+    },
+    {
+      "source_mod9": 5,
+      "targets_for_k1_to6": [
+        8,
+        4,
+        2,
+        1,
+        5,
+        7
+      ]
+    },
+    {
+      "source_mod9": 6,
+      "targets_for_k1_to6": [
+        5,
+        7,
+        8,
+        4,
+        2,
+        1
+      ]
+    },
+    {
+      "source_mod9": 7,
+      "targets_for_k1_to6": [
+        2,
+        1,
+        5,
+        7,
+        8,
+        4
+      ]
+    },
+    {
+      "source_mod9": 8,
+      "targets_for_k1_to6": [
+        8,
+        4,
+        2,
+        1,
+        5,
+        7
+      ]
+    }
+  ],
+  "returns_in_finite_source_universe": [
+    1
+  ],
+  "spatial_weights_for_k1_to6": [
+    "32/63",
+    "16/63",
+    "8/63",
+    "4/63",
+    "2/63",
+    "1/63"
+  ],
+  "status": "FINITE-EXACT replay; density theorem is spatial, not orbital",
+  "universes": {
+    "all_odd_sources_below": 131072,
+    "complete_cylinder_enumeration_r_plus_k_at_most": 10,
+    "complete_cylinder_source_checks": 16388,
+    "cylinder_k_range": [
+      2,
+      12
+    ],
+    "cylinder_pairs": 121,
+    "cylinder_r_range": [
+      0,
+      10
+    ],
+    "family_a_range": [
+      1,
+      200
+    ],
+    "source_count": 65536
+  },
+  "valve": {
+    "endpoint": "5+486q",
+    "modulus": 256,
+    "odd_row5_source": "23+2304q",
+    "period_hits": [
+      23
+    ],
+    "period_source_count": 128,
+    "relative_odd_row_density": "1/128",
+    "source_residue": 23,
+    "word": [
+      1,
+      1,
+      5
+    ]
+  }
+}

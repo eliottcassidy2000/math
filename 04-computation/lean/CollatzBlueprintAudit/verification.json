@@ -9,6 +9,10 @@
       "propext",
       "Quot.sound"
     ],
+    "CollatzBlueprintAudit.collatz_reachesOne_iff_globalTallyMargin": [
+      "propext",
+      "Quot.sound"
+    ],
     "CollatzBlueprintAudit.collatz_reachesOne_iff_strictDescent": [
       "propext",
       "Quot.sound"
@@ -34,9 +38,19 @@
     ],
     "CollatzBlueprintAudit.iterate_add": [],
     "CollatzBlueprintAudit.iterate_positive": [],
+    "CollatzBlueprintAudit.localTrap_positive": [],
+    "CollatzBlueprintAudit.localTrap_three_fixed": [],
+    "CollatzBlueprintAudit.local_certificate_does_not_imply_global": [
+      "propext",
+      "Quot.sound"
+    ],
+    "CollatzBlueprintAudit.ninetyFive_tally_control": [],
     "CollatzBlueprintAudit.not_allIntegersHaveOddResidue": [
       "propext",
       "Quot.sound"
+    ],
+    "CollatzBlueprintAudit.not_all_naturals_reachOne": [
+      "propext"
     ],
     "CollatzBlueprintAudit.odd_integer_residues": [
       "propext",
@@ -46,14 +60,38 @@
       "propext",
       "Quot.sound"
     ],
+    "CollatzBlueprintAudit.rawLocalCertificate_implies_localDescent": [
+      "propext",
+      "Quot.sound"
+    ],
+    "CollatzBlueprintAudit.rawLocalCertificate_two": [],
     "CollatzBlueprintAudit.reachesOne_iff_strictDescent": [
       "propext",
       "Quot.sound"
     ],
+    "CollatzBlueprintAudit.residue_and_carry_do_not_force_descent": [],
     "CollatzBlueprintAudit.signed_negFive_returns": [],
     "CollatzBlueprintAudit.signed_negOne_returns": [],
     "CollatzBlueprintAudit.signed_negSeventeen_returns": [],
+    "CollatzBlueprintAudit.standard_affine_tally": [
+      "propext",
+      "Quot.sound"
+    ],
+    "CollatzBlueprintAudit.standard_clock_partition": [
+      "propext",
+      "Quot.sound"
+    ],
+    "CollatzBlueprintAudit.standard_descent_iff_tally_margin": [
+      "propext",
+      "Quot.sound"
+    ],
     "CollatzBlueprintAudit.strictDescent_of_affineCertificates": [
+      "propext",
+      "Quot.sound"
+    ],
+    "CollatzBlueprintAudit.true_tally_two": [],
+    "CollatzBlueprintAudit.twentyThree_tally_control": [],
+    "CollatzBlueprintAudit.wrong_tripling_clock_two": [
       "propext",
       "Quot.sound"
     ]
@@ -61,15 +99,16 @@
   "external_packages": [],
   "lean_version": "Lean (version 4.30.0, x86_64-w64-windows-gnu, commit d024af099ca4bf2c86f649261ebf59565dc8c622, Release)",
   "root_import": "CollatzBlueprintAudit",
-  "scope": "Premise refutation, descent equivalence, finite controls; not Collatz convergence",
+  "scope": "Premise and clock audits, exact affine tally, descent equivalences, finite controls; not Collatz convergence",
   "sha256": {
-    "AxiomAudit.lean": "997863c4a283f59c71e8aa8262bea9a6e947c650e4d6e342f5dba17dcd8100c8",
-    "CollatzBlueprintAudit.lean": "7871d4377ec2dba903df1deb133aaa040496574988de1b00ab70b9f6ab054b9e",
+    "AxiomAudit.lean": "c4fddb9162deb19c50d6cb12a9f3c3a3c28486113f6faa785981d14c55a943be",
+    "CollatzBlueprintAudit.lean": "75d37e2316316201bb1c1643c9fca0e0a0df67815381e4527c3a9abca7c06d36",
     "CollatzBlueprintAudit/Basic.lean": "8ac960737cec7475e97452bb0b97ec8626f81cde54f32888345870b47906d23e",
-    "lakefile.toml": "7578f9321f901266c712fbbb28b2cc70a02ddd5deaf55cd52eda8c220a9707ee",
-    "lean-toolchain": "54727eec5cba149c18842e6deb5c41b369d66455c93ce135d7d5347c782b2325",
-    "verify.py": "4d506fcab42011d337fb459ecd27f48b9d15ebdd8ed33382bd5ff1e3de84ca4b"
+    "CollatzBlueprintAudit/ClockAudit.lean": "66dd3bc1a92ef63ed59cb10206075dac886574fd796a6fa00e18f1be7237f56b",
+    "lakefile.toml": "50c73e9b49fa2bde1b3f562e5a0ca9cd1074053c175ea0d8749439bd567154ef",
+    "lean-toolchain": "8b5db2d1b1d33453d63409fd86f5899c7918380553a90b70f09ed56028768cb6",
+    "verify.py": "ecec77dcea7003422a7179ebaeef42f40eb145841c49b9ab28542a2da5874711"
   },
   "status": "PASS",
-  "theorems_audited": 20
+  "theorems_audited": 35
 }

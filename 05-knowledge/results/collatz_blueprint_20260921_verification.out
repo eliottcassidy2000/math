@@ -189,19 +189,19 @@ python -O 04-computation/experiments/collatz_blueprint_20260921_affine.py
 exit_code=0
 
 python 04-computation/experiments/collatz_blueprint_20260921_energy.py
-{"checks": "PASS (explicit RuntimeError checks remain active under python -O)", "families": 192, "output": "C:\\tmp\\math-wt-collatz-blueprint-20260921\\04-computation\\experiments\\collatz_blueprint_20260921_energy.json", "steps": 6240}
+{"checks": "PASS (explicit RuntimeError checks remain active under python -O)", "families": 192, "output": "C:\\tmp\\math-wt-collatz-guard-extensions-20260921\\04-computation\\experiments\\collatz_blueprint_20260921_energy.json", "steps": 6240}
 
 
 exit_code=0
 
 python -O 04-computation/experiments/collatz_blueprint_20260921_energy.py
-{"checks": "PASS (explicit RuntimeError checks remain active under python -O)", "families": 192, "output": "C:\\tmp\\math-wt-collatz-blueprint-20260921\\04-computation\\experiments\\collatz_blueprint_20260921_energy.json", "steps": 6240}
+{"checks": "PASS (explicit RuntimeError checks remain active under python -O)", "families": 192, "output": "C:\\tmp\\math-wt-collatz-guard-extensions-20260921\\04-computation\\experiments\\collatz_blueprint_20260921_energy.json", "steps": 6240}
 
 
 exit_code=0
 
 python 04-computation/lean/CollatzBlueprintAudit/verify.py
-PASS: clean root build and axiom audit for 20 theorems.
+PASS: clean root build and axiom audit for 35 theorems.
 
 
 exit_code=0

@@ -6,9 +6,10 @@ $ lake clean
 exit_code=0
 
 $ lake build
-✔ [2/4] Built CollatzBlueprintAudit.Basic (973ms)
-✔ [3/4] Built CollatzBlueprintAudit (818ms)
-Build completed successfully (4 jobs).
+✔ [2/5] Built CollatzBlueprintAudit.Basic (1.1s)
+✔ [3/5] Built CollatzBlueprintAudit.ClockAudit (998ms)
+✔ [4/5] Built CollatzBlueprintAudit (793ms)
+Build completed successfully (5 jobs).
 exit_code=0
 
 $ lake env lean AxiomAudit.lean
@@ -32,4 +33,19 @@ $ lake env lean AxiomAudit.lean
 'CollatzBlueprintAudit.signed_negOne_returns' does not depend on any axioms
 'CollatzBlueprintAudit.signed_negFive_returns' does not depend on any axioms
 'CollatzBlueprintAudit.signed_negSeventeen_returns' does not depend on any axioms
+'CollatzBlueprintAudit.standard_clock_partition' depends on axioms: [propext, Quot.sound]
+'CollatzBlueprintAudit.standard_affine_tally' depends on axioms: [propext, Quot.sound]
+'CollatzBlueprintAudit.standard_descent_iff_tally_margin' depends on axioms: [propext, Quot.sound]
+'CollatzBlueprintAudit.collatz_reachesOne_iff_globalTallyMargin' depends on axioms: [propext, Quot.sound]
+'CollatzBlueprintAudit.rawLocalCertificate_implies_localDescent' depends on axioms: [propext, Quot.sound]
+'CollatzBlueprintAudit.rawLocalCertificate_two' does not depend on any axioms
+'CollatzBlueprintAudit.true_tally_two' does not depend on any axioms
+'CollatzBlueprintAudit.wrong_tripling_clock_two' depends on axioms: [propext, Quot.sound]
+'CollatzBlueprintAudit.localTrap_positive' does not depend on any axioms
+'CollatzBlueprintAudit.localTrap_three_fixed' does not depend on any axioms
+'CollatzBlueprintAudit.local_certificate_does_not_imply_global' depends on axioms: [propext, Quot.sound]
+'CollatzBlueprintAudit.twentyThree_tally_control' does not depend on any axioms
+'CollatzBlueprintAudit.ninetyFive_tally_control' does not depend on any axioms
+'CollatzBlueprintAudit.residue_and_carry_do_not_force_descent' does not depend on any axioms
+'CollatzBlueprintAudit.not_all_naturals_reachOne' depends on axioms: [propext]
 exit_code=0

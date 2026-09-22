@@ -16,6 +16,7 @@ SOURCE_PATHS = (
     "lakefile.toml",
     "CollatzBlueprintAudit.lean",
     "CollatzBlueprintAudit/Basic.lean",
+    "CollatzBlueprintAudit/ClockAudit.lean",
     "AxiomAudit.lean",
     "verify.py",
 )
@@ -58,8 +59,12 @@ def main() -> None:
             require(not re.search(r"^\s*axiom\s", source, re.MULTILINE),
                     f"Custom axiom in {name}")
 
-    basic = (ROOT / "CollatzBlueprintAudit/Basic.lean").read_text(encoding="utf-8")
-    names = re.findall(r"^theorem\s+(\w+)", basic, re.MULTILINE)
+    names = []
+    for name in SOURCE_PATHS:
+        if name.startswith("CollatzBlueprintAudit/") and name.endswith(".lean"):
+            source = (ROOT / name).read_text(encoding="utf-8")
+            names.extend(re.findall(r"^theorem\s+(\w+)", source, re.MULTILINE))
+    require(len(set(names)) == len(names), "Duplicate theorem names in audited modules")
     audit_source = (ROOT / "AxiomAudit.lean").read_text(encoding="utf-8")
     for name in names:
         require(f"#print axioms CollatzBlueprintAudit.{name}" in audit_source,
@@ -86,7 +91,7 @@ def main() -> None:
 
     record = {
         "status": "PASS",
-        "scope": "Premise refutation, descent equivalence, finite controls; not Collatz convergence",
+        "scope": "Premise and clock audits, exact affine tally, descent equivalences, finite controls; not Collatz convergence",
         "lean_version": version,
         "root_import": "CollatzBlueprintAudit",
         "external_packages": [],
