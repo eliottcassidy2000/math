@@ -272,5 +272,5 @@ PAIRWISE VERDICTS among the threes (only pairs with an actual map are listed; al
    T6, T7, T8, T13 vs everything        : NO MAP FOUND: only the number 3 (T7 is an exponent-box identity, T13 is one-dimensional)
 
 checks passed: 249320
-script sha256: bb68d971da6d9e51b79ca129f6b3a7b0343f00a32fb91911c50eaa857973643c
+script sha256: 124849b89a57b4b619916fb23ddbce4fe1d5176ac3c0be6413d21db105c18701
 ALL CHECKS PASSED

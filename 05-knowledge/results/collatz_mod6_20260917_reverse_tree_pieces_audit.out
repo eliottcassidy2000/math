@@ -1,0 +1,106 @@
+==============================================================================
+A1  row law and base table
+==============================================================================
+row(n) = rho(3n+1 mod 9) and row(n) = n mod 3 lifted (1->1, 0->3, 2->5) for all odd n < 20001: OK
+base row by u mod 18: {1: [1], 5: [3], 7: [3], 11: [1], 13: [5], 17: [5]} ; rotation +4 mod 6 along j for all internal u < 2000: OK
+NOTE: the row of an odd node is a function of the node mod 3 (not mod 9); the lane note's Theorem 1.2 proof
+      sentence 'the row of a node needs the node mod 9' is wrong as written; with mod 3 the modulus 3^(D+1) is right.
+==============================================================================
+A2  tree to depth 6 with j<=8 (independent BFS)
+==============================================================================
+levels [1, 8, 45, 270, 1620, 9720, 58320] total 69984, row counts [{1: 2, 3: 3, 5: 3}, {1: 15, 3: 15, 5: 15}, {1: 90, 3: 90, 5: 90}, {1: 540, 3: 540, 5: 540}, {1: 3240, 3: 3240, 5: 3240}, {1: 19440, 3: 19440, 5: 19440}]: OK
+==============================================================================
+A3  Theorem 1.2: rows along a fixed index path are a function of u mod 3^(D+1), sharp
+==============================================================================
+D=1 path=(0,): function of u mod 9; classes mod 3 that split: 2 of 2 (a class whose path reaches a leaf cannot split)
+D=1 path=(2,): function of u mod 9; classes mod 3 that split: 2 of 2 (a class whose path reaches a leaf cannot split)
+D=1 path=(1,): function of u mod 9; classes mod 3 that split: 2 of 2 (a class whose path reaches a leaf cannot split)
+D=2 path=(0, 0): function of u mod 27; classes mod 9 that split: 4 of 6 (a class whose path reaches a leaf cannot split)
+D=2 path=(2, 1): function of u mod 27; classes mod 9 that split: 4 of 6 (a class whose path reaches a leaf cannot split)
+D=2 path=(1, 1): function of u mod 27; classes mod 9 that split: 4 of 6 (a class whose path reaches a leaf cannot split)
+D=3 path=(0, 0, 0): function of u mod 81; classes mod 27 that split: 8 of 18 (a class whose path reaches a leaf cannot split)
+D=3 path=(2, 1, 0): function of u mod 81; classes mod 27 that split: 8 of 18 (a class whose path reaches a leaf cannot split)
+D=3 path=(1, 1, 1): function of u mod 81; classes mod 27 that split: 8 of 18 (a class whose path reaches a leaf cannot split)
+D=4 path=(0, 0, 0, 0): function of u mod 243; classes mod 81 that split: 16 of 54 (a class whose path reaches a leaf cannot split)
+D=4 path=(2, 1, 0, 1): function of u mod 243; classes mod 81 that split: 16 of 54 (a class whose path reaches a leaf cannot split)
+D=4 path=(1, 1, 1, 1): function of u mod 243; classes mod 81 that split: 16 of 54 (a class whose path reaches a leaf cannot split)
+D=5 path=(0, 0, 0, 0, 0): function of u mod 729; classes mod 243 that split: 32 of 162 (a class whose path reaches a leaf cannot split)
+D=5 path=(2, 1, 0, 1, 2): function of u mod 729; classes mod 243 that split: 32 of 162 (a class whose path reaches a leaf cannot split)
+D=5 path=(1, 1, 1, 1, 1): function of u mod 729; classes mod 243 that split: 32 of 162 (a class whose path reaches a leaf cannot split)
+Theorem 1.2 modulus 3^(D+1) confirmed for D<=5 on three paths; sharp (some class mod 3^D splits; class 1 splits on the zero path).
+==============================================================================
+A4  depth census of odd u <= 10^6 via the standard Collatz map (odd-step count)
+==============================================================================
+odd u <= 10^6: max odd-step depth 195 at 837799 (its full Collatz step count is 524): OK, 0.5s
+depth counts 0..15 and the mod-9 rows for depths 2 and 15 match the lane .out: OK
+depth-2 anatomy: parents {5: 10, 85: 7, 341: 7, 5461: 4, 21845: 4, 349525: 1, 1398101: 1}; the node 932067 has parent 1398101 > X, so the truncated level is NOT the
+   union of truncated fibres of nodes <= X (children can be smaller than parents when u = 2 mod 3).
+bucket counts 0-19: 52108, 20-39: 168230, 180-199: 4: OK
+internal nodes: 333333, of which 1 mod 3: 166667 (fraction 0.500002); excluding depth 0: 166666 / 333332 = 0.500000
+   this is 166667/333333 = the count of odd u = 1 mod 6 vs 5 mod 6 up to X: a TRIVIAL fact about [1,X], not a tree statement.
+largest mod-9 deviation over depths with >= 1000 nodes: 0.0194 at depth 91: OK
+==============================================================================
+A5  fibre uniformity mod 9 for all internal u < 2000; ord_27(4)
+==============================================================================
+ord_27(4) = 9; every internal u < 2000 has children j=0..8 covering Z/9 and j=0..26 covering Z/27: OK
+   (period 27 in j mod 27 follows from ord_81(4) = 27, the same argument one digit deeper)
+==============================================================================
+A6  truncated fibre count
+==============================================================================
+#{odd n <= 10^6 : T(n) <= 10^6} = 416666 = 333333 * 1.25 (1.2500 mean truncated fibre): OK
+==============================================================================
+A7  pruned T-tree: children counts, (4/3)^k exact, root-8 depth counts
+==============================================================================
+sum over root classes of #depth-k nodes = 8*4^(k-1), average (4/3)^k for k<=7 (representatives a+3^(k+1)): OK
+root-8 pruned tree depth counts 0..32 match; 10563^(1/32) = 1.3358: OK
+==============================================================================
+A8  modulus-9 difference inequality: numeric check on N restricted to [1,10^6], exponent, base case
+==============================================================================
+inequalities (i), (ii), (iii) hold at every integer x < 3000 and a sparse grid to 6*10^5 (universe: all n <= 10^6, which reach 1): OK
+gamma = 0.246227 (unique root, phi strictly decreasing); base case c = 256^-gamma = 0.2553; A(x) >= c x^gamma on a grid to 10^6: OK
+==============================================================================
+A9  Perron roots of the constant-split system with numpy: all roots of rho(g) = 1 on [0, 3]
+==============================================================================
+uniform split: roots of rho(g)=1 on [0,3]: [1.0, 2.0]  (rho(g) = 2^-g + 3^(g-1) 2^-g exactly, since the all-ones vector is an eigenvector)
+vertex split 2->1, 8->2: roots [1.244017] ; min rho on [0,3] = 0.7048
+vertex split 2->1, 8->5: roots [0.774576] ; min rho on [0,3] = 0.6518
+vertex split 2->1, 8->8: roots [] ; min rho on [0,3] = 1.2900
+vertex split 2->4, 8->2: roots [] ; min rho on [0,3] = 1.1208
+vertex split 2->4, 8->5: roots [0.576032] ; min rho on [0,3] = 0.4715
+vertex split 2->4, 8->8: roots [] ; min rho on [0,3] = 1.3041
+vertex split 2->7, 8->2: roots [0.602605] ; min rho on [0,3] = 0.4099
+vertex split 2->7, 8->5: roots [0.436588] ; min rho on [0,3] = 0.3104
+vertex split 2->7, 8->8: roots [] ; min rho on [0,3] = 1.2510
+split 2->4, 8->2 at the lane's g = 0.867659: true spectral radius 1.168535; power-iteration one-step ratios cycle [1.3233, 1.2058, 1.0, 1.3233, 1.2058, 1.0]
+REFUTED (four table entries): the lane's 'g = 1.500000' for the three 8->8 splits is the bisection cap, not a root
+   (rho(g) >= 1.5^g > 1 for g > 0 and rho(g) >= 2^-g > 1 for g < 0), and 'g = 0.867659' for 2->4, 8->2 is a period-3
+   power-iteration artifact (min rho on [0,3] is 1.1208 > 1: no root).  The five remaining vertex values and the minimum
+   0.436588 at 2->7, 8->5 are the SMALLEST roots and are confirmed; rho(g) is not monotone (uniform split has roots 1 and 2),
+   so the lane's bisection on [0, 1.5] found the smaller root only by luck of the bracket.
+==============================================================================
+A10  section 4: G vs minimal child, guarded closure, TO-1-in-E and FROM-1-in-E closures, giant SCC
+==============================================================================
+G(u) = child(u,0) iff u = 1,2,8 mod 9 for all odd u < 10^5; u = 4,7 mod 9 -> k=0 even image; u = 5 mod 9 -> G = child(u,1): OK
+guarded closure of 1 in [1,10^5] (= forward Collatz orbit stays in the box): 39706 nodes, 26478 non-multiples of 3; first misses [703, 871, 937, 1055, 1249, 1307, 1406, 1471]: OK
+TO-1-in-E closure (predecessor closure of 1, the lane's 'unguarded closure'): 27472 of 66667; first misses [1535, 2047, 2207, 2287, 2303, 2527, 2687, 2815]
+FROM-1-in-E closure (successor closure of 1 = the Q2 set inside the box): 29762 of 66667; first misses [3281, 4010, 4739, 4922, 5306, 5468, 5711, 5954]
+intersection (giant SCC of E|[1,10^5] containing 1): 17077  (E-graph lane .out S3: giant size 17077)
+the five smallest TO-1 misses 1535, 2047, 2207, 2287, 2303 ARE in the FROM-1 set (E-lane: their binding constraint is the
+   forward Collatz peak).  So the lane's 'unguarded closure' illustrates Q1 in the E-graph lane's sense (every n reaches 1 in E),
+   NOT Q2 (1 reaches every m in E).  Direction error in the lane note's finite illustration: REFUTED as labelled, numbers correct.
+no E-arrow enters 3Z from outside (3n+1 != 0 mod 3; n/2 = 0 mod 3 only if n = 0 mod 3), while 3 -> 10 leaves 3Z;
+   so 'through non-multiples of 3' in Q2 is automatic (the E-lane's transient-singleton statement), not an extra hypothesis: OK
+m = 7 example paths: OK
+==============================================================================
+A11  section 5: image law, orbits to 10^6, survival classes, parity independence
+==============================================================================
+image(m) = odd n != 5 mod 8 for odd n < 2*10^5 (domain odd u < 4*10^5): OK; 5 mod 8 = 4*odd + 1: OK
+m-orbits of 333333 odd non-multiples of 3 <= 10^6: longest L=29 at 774883, peak/u max 33.26 at 86023, length table matches: OK (0.5s)
+survival classes mod 3^(L+1): exactly 2^(L+1) of 2*3^L survive L steps for L<=8, identical for odd and even representatives: OK
+lifting lemma m(a + t 3^s) = m(a) + 2^(h0+1) t 3^(s-1) (so the three lifts of a class mod 3^s map onto the three lifts of m(a) mod 3^(s-1)): OK
+==============================================================================
+A12  boundary cases
+==============================================================================
+u=1 loop, leaves 3, 9, 21, even u outside the domain (child formula not inverted by T), minimal leaf children of 5 and 7: OK
+
+ALL AUDIT CHECKS PASSED

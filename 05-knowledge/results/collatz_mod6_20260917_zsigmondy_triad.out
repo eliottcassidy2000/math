@@ -167,12 +167,12 @@ S3b. Gleason product G_n = prod_{d|n} H_d, pairwise resultants, and the n<=6 pri
   H_4: degree  6, irreducible over Q: True, H_4(0) = 1, H_4(-1) = 1, H_4(-2) = 1
   H_5: degree 15, irreducible over Q: True, H_5(0) = 1, H_5(-1) = 1, H_5(-2) = -1
   H_6: degree 27, irreducible over Q: True, H_6(0) = 1, H_6(-1) = 1, H_6(-2) = -1
-  Res_c(H_d, H_n) for 1 <= d < n <= 6 (exact):
+  Res_c(H_d, H_n) for 1 <= d < n <= 6 (exact Sylvester determinants, standard sign convention):
     Res(H_1,H_2)= 1
-    Res(H_1,H_3)=-1; Res(H_2,H_3)=-1
+    Res(H_1,H_3)= 1; Res(H_2,H_3)= 1
     Res(H_1,H_4)= 1; Res(H_2,H_4)= 1; Res(H_3,H_4)=-1
-    Res(H_1,H_5)=-1; Res(H_2,H_5)=-1; Res(H_3,H_5)= 1; Res(H_4,H_5)= 1
-    Res(H_1,H_6)=-1; Res(H_2,H_6)=-1; Res(H_3,H_6)= 1; Res(H_4,H_6)=-1; Res(H_5,H_6)= 1
+    Res(H_1,H_5)= 1; Res(H_2,H_5)= 1; Res(H_3,H_5)=-1; Res(H_4,H_5)= 1
+    Res(H_1,H_6)= 1; Res(H_2,H_6)= 1; Res(H_3,H_6)=-1; Res(H_4,H_6)=-1; Res(H_5,H_6)=-1
 PROVED (n<=6, from the exact resultants above).  Write H_n(a,b) = b^deg H_n(a/b) (monic in a).  For c=a/b in lowest terms:
   N_n = prod_(d|n) H_d(a,b) exactly (total degree 2^(n-1); each H_d(a,b) = a^deg mod b is coprime to b).
   If a prime p divided H_d(a,b) and H_n(a,b) with d<n, then p does not divide b, and a/b mod p would be a common root
@@ -357,4 +357,4 @@ OPEN       : the Thue equation H_6(a,b)=+-1 (degree 27) beyond the finite box (H
              present); any n>=7 statement (no resultant computation, no reduction); a uniform 'Res(H_d,H_n)=+-1'
              theorem for all d<n (only n<=6 computed).
 
-ALL CHECKS PASSED (6.1s).  Failures: []
+ALL CHECKS PASSED (6.5s).  Failures: []

@@ -1,0 +1,108 @@
+
+==============================================================================
+A. Trunk N_j = (4^j-1)/3: orders, criterion, W, base-4-only gap, tower, Cipolla, Zsigmondy
+==============================================================================
+N_j = R^(j-1)(1) and 3N_j+1 = 4^j: checked j<=60
+ord_{N_j}(2) = 2j and ord_{N_j}(4) = j (sympy n_order): checked 2<=j<=40
+direct base-2 test == criterion 6j | 4^j-4 for all 3<=j<=400; psp indices j<=40: [5, 7, 11, 13, 17, 19, 23, 29, 31, 37]
+PROVED+checked j<200: v_2(N_j-1) = 2 exactly (N_j-1 = 4(4^(j-1)-1)/3 with 4^(j-1)-1 odd).
+W = {3<=j<=20000 : 6j | 4^j-4}: |W| = 2321, primes>=5 in W: 2260, composites: 61
+  composite members (first 13): [85, 91, 341, 451, 703, 946, 1105, 1247, 1271, 1387, 1729, 1891, 2047]  even members: [946, 2926, 8614]
+  base-4-only indices (j | N_j-1 but 2j !| N_j-1, i.e. N_j base-4 psp but NOT base-2 psp), j<=20000: [4, 28, 532, 2044, 11476]
+  => these are exactly the j = 4 mod 8 with j | N_j-1; the note's 'base-2 iff base-4' corollary needs 4 !| j.
+     witness j=4: N_j is a base-4 pseudoprime (4^(N-1)=1 mod N) and 2^(N-1) != 1 mod N; 7 bits
+     witness j=28: N_j is a base-4 pseudoprime (4^(N-1)=1 mod N) and 2^(N-1) != 1 mod N; 55 bits
+     witness j=532: N_j is a base-4 pseudoprime (4^(N-1)=1 mod N) and 2^(N-1) != 1 mod N; 1063 bits
+tower: N_5, N_7, N_11, N_13 in W; N_341 (681 bits) and N_5461 (10921 bits) are base-2 pseudoprimes
+  tower closure also holds from base-4-only indices: j | N_j-1 already gives N_j | 4^{N_j}-4, so N_j in W for j=[4, 28]
+Cipolla: (4^p-1)/3 base-2 psp for all primes 5<=p<=200 (direct); N_3=21: 2^20 = 4 mod 21
+Zsigmondy 4^j-1: a primitive prime at every j<=60; j=5 brings {11,31}: '341 stalls' REFUTED
+hostile j=15: base-4 psp index, 3 | 15, N_15 not a pseudoprime
+
+==============================================================================
+B. LTE law v_p(N_j) and the C3 conjecture; Wieferich witnesses
+==============================================================================
+LTE law verified against direct valuations for 5<=p<200, j<=60; v_3(N_j) = v_3(j) for j<=60
+C3 conjecture 'N_j squarefree iff gcd(j,N_j)=gcd(j,3)' holds for j<=60; non-squarefree j<=40: [(9, [(3, 2)]), (10, [(5, 2)]), (18, [(3, 2)]), (20, [(5, 2)]), (21, [(7, 2)]), (27, [(3, 3)]), (30, [(5, 2)]), (36, [(3, 2)]), (40, [(5, 2)])]
+ord_1093(4) = 182, ord_3511(4) = 1755
+j=182: 1093^2 | N_182, gcd(182,N_182) = 1 = gcd(182,3): conjecture REFUTED at 182
+  under the LTE law the failing j (only Wieferich primes 1093, 3511 known) are multiples of 182 with 1093 !| j, 9 !| j and no p|j with ord_p(4)|j; first ones: [182, 364, 728, 1274, 1456]
+  3511 never produces a witness: 9 | ord_3511(4) = 1755 = 3^3*5*13, so any multiple has 9 | j and the conjecture's two sides are both false.
+cube floor identity sum floor(k^3/n) = (n-2)(n-1)(n+1)/4 + (R3(n)-1)/2 with brute R3: N_2..N_7
+
+==============================================================================
+C. Densities at 10^6 odd n
+==============================================================================
+T(n) squarefree: 911902/10^6 = 0.911902 (9/pi^2 = 0.911891); joint: 737515 = 0.737515; gcd(n+2,T(n))=1: 800000 = 0.800000
+  products: prod_{p>=5}(1-1/p^2) = 0.911891 ; (8/9) prod_{p>=5}(1-2/p^2) = 0.737449
+  row 1: 0.911887
+  row 3: 0.911917
+  row 5: 0.911902
+
+==============================================================================
+D. Tournament census n=3..6 (independent bit DP + numpy Aut)
+==============================================================================
+  n=3: h values [1, 3] ; |Aut| values [1, 3]
+  n=4: h values [1, 3, 5] ; |Aut| values [1, 3]
+  n=5: h values [1, 3, 5, 9, 11, 13, 15] ; |Aut| values [1, 3, 5]
+  n=6: h values [1, 3, 5, 9, 11, 13, 15, 17, 19, 23, 25, 27, 29, 31, 33, 37, 41, 43, 45] ; |Aut| values [1, 3, 5, 9]
+  odd values <= 45 not attained for n<=6: [7, 21, 35, 39]
+  (63 is attained at n=8 and every odd value in [1,609] except 7, 21 by n=8: THM-1370, FINITE-EXACT there; 7, 21 omitted for ALL n: THM-1370 / THM-200.)
+
+==============================================================================
+E. 3n+b cycle census, gcd(b,6)=1, 1<=b<=99, |n|<=2*10^5 both signs, escape 10^40 (own algorithm)
+==============================================================================
+census done [t=10.1s]; no escapes; all cycles verified; C_{-5} = -C_5
+  c(b): {1: 4, 5: 9, 7: 5, 11: 7, 13: 13, 17: 8, 19: 6, 23: 15, 25: 12, 29: 9, 31: 6, 35: 12, 37: 7, 41: 5, 43: 5, 47: 11, 49: 7, 53: 5, 55: 15, 59: 11, 61: 6, 65: 19, 67: 5, 71: 11, 73: 7, 77: 12, 79: 8, 83: 7, 85: 15, 89: 5, 91: 17, 95: 15, 97: 8}
+  attained c(b): [4, 5, 6, 7, 8, 9, 11, 12, 13, 15, 17, 19] ; holes in [1,19]: [1, 2, 3, 10, 14, 16, 18] ; b with c=7: [11, 37, 49, 73, 83]
+  cycle lengths: [1, 2, 3, 4, 5, 6, 7, 8, 9, 11, 12, 14, 15, 16, 17, 18, 20, 22, 24, 26, 32, 36, 41, 56]
+  L*(b) at N=2*10^5: {1: 23, 5: 21, 7: 21, 11: 16, 13: 16, 17: 16, 19: 16, 23: 11, 25: 11, 29: 11, 31: 11, 35: 11, 37: 11, 41: 11, 43: 11, 47: 11, 49: 11, 53: 11, 55: 11, 59: 11, 61: 11, 65: 11, 67: 11, 71: 11, 73: 11, 77: 11, 79: 11, 83: 11, 85: 11, 89: 11, 91: 11, 95: 11, 97: 11}
+  gate identity n = bB/(2^K-3^L) and the element bound hold on every element of every found cycle
+  F2: #fixed points = #{K>=1 : (2^K-3) | b} for all b<=99; b=65: [-65, 5, 13, 65]
+  b*C_1 subset C_b (all b); only b=1 has c(b)=4; superadditivity c(b1b2) >= c(b1)+c(b2)-c(1): no violation, b1b2<=99
+  F5: 175 cycles beyond b*C_1, 175 have (2^K-3^L) !| B
+  max c(b) = 19 at b=[65] ; representations of 65: None, of -65: [(4, 4)] ; doubly representable |b|: [1, 5, 13]
+  b=5 = 2^3-3^1: 1 compositions realized on 1 distinct cycles = necklace count
+  b=5 = 2^5-3^3: 6 compositions realized on 2 distinct cycles = necklace count
+  b=13 = 2^4-3^1: 1 compositions realized on 1 distinct cycles = necklace count
+  b=13 = 2^8-3^5: 35 compositions realized on 7 distinct cycles = necklace count
+  b=47 = 2^7-3^4: 20 compositions realized on 5 distinct cycles = necklace count
+  necklace theorem re-verified for the 12 positive representations b<=99
+
+==============================================================================
+F. Greedy 3-adic G-map stopping time: primes vs composites (m<=10^6)
+==============================================================================
+  primes 78497 composites 588169 ; pooled means 28.7373 29.0404 ; pooled TV 0.0174
+  block [2^17,2^18): TV 0.0187 ; means 27.4540 27.4152
+  block [2^18,2^19): TV 0.0143 ; means 29.0968 29.1176
+  block [2^19,2^20): TV 0.0122 ; means 30.6987 30.7757
+  classes 1 vs 8 mod 9: TV 0.0072 pooled, 0.0088 in top block ; 4 vs 5 mod 9 top block: TV 0.2953 ; size control TV 0.2085
+  F1 per-class TV in top block: [0.0272, 0.0317, 0.0268, 0.029, 0.0288, 0.0234]
+  primes vs composites mod 81: TV 0.0040
+
+==============================================================================
+G. Sandwich N_PS - N_SP, square-driven pairs, S_1 - S_5
+==============================================================================
+  K=100000: N_PS-N_SP = 41 ; pairs (p^2-2 prime, p^2) = 46 ; residual -5 ; S_1-S_5 = 66 ; pi'(sqrt x) = 135
+  K=1000000: N_PS-N_SP = 412 ; pairs (p^2-2 prime, p^2) = 99 ; residual 313 ; S_1-S_5 = 244 ; pi'(sqrt x) = 361
+  (41, 412 match collatz_mod6_20260917_sandwich_bias.md sec.1; 66, 244 and pi'/2 = 67.5, 180.5 match its Theorem 2.2 table)
+
+==============================================================================
+H. 3n-5 = T(n-2)
+==============================================================================
+T_{-5}(n)=T(n-2) for odd |n|<=10^5; row images (3n-5)/2 = 8,2,5 mod 9 vs Collatz 2,5,8
+  3n-5 cycles: 9 (3 positive: lengths 1,2,7), = negatives of the b=5 cycles
+
+==============================================================================
+I. Fano orientations giving a composition algebra (norm test, independent of the alternativity test)
+==============================================================================
+  square-product lines: [(2, 3, 6), (2, 5, 10), (2, 15, 30), (3, 5, 15), (3, 10, 30), (5, 6, 30), (6, 10, 15)]
+  orientations with multiplicative norm on 12 random integer pairs: 16 of 128
+
+==============================================================================
+J. Divisor-box facts and ord_m(2)=8
+==============================================================================
+  F=S+U profiles (0,0,0),(2,1,1),(10,7,3) at p, p^3, p^2qr; d(N)<=2^Omega with equality iff squarefree, N<=5000
+  ord_m(2)=8, odd m<2000: [17, 51, 85, 255] ; orders at 3,9,7,63,21,27: [2, 6, 3, 6, 6, 18]
+
+AUDIT COMPLETE: all checks passed [t=11.7s]

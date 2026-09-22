@@ -210,7 +210,9 @@ rows {1,2,4,5} -> columns {1,4,7}, rows {7,8} -> columns {2,5,8}; let Sigma_A be
      of length J number 6*3^(J-1) = 2*3^J = the number of unit classes mod 3^(J+1), so the injective
      block map is a bijection at every length, and compactness gives every infinite path.
 (ii) The k-word (k_1 k_2 ...) is a 2-block recoding of Phi: k_n determines X_(n-1) except for the
-     pairs {4,7} (k=0) and {2,8} (k=1), and k_(n+1) in {0,2} <=> X_n in {1,2,4,5} resolves the pair.
+     pairs {4,7} (k=0) and {2,8} (k=1), and k_(n+1) in {0,2} <=> X_n in {1,4,7} <=> X_(n-1) in {1,2,4,5}
+     resolves the pair (4 and 2 are the heavy members, 7 and 8 the light ones).  [The recovered draft wrote
+     'k_(n+1) in {0,2} <=> X_n in {1,2,4,5}', which is FALSE: X_n = 7 has k = 0; checked below.]
      Hence the k-word map Z_3^x -> {0,1,2,3}^N is injective (a homeomorphism onto a proper SFT), and
      the number of admissible k-words of length J is 4*3^(J-1) (< 2*3^J: a J-letter word determines
      m only mod 3^(J+1) up to the last pair, a (J+1)-letter word determines m mod 3^(J+1) exactly).
@@ -219,7 +221,19 @@ rows {1,2,4,5} -> columns {1,4,7}, rows {7,8} -> columns {2,5,8}; let Sigma_A be
      vector (2,1,2,1,2,1)/9 = pi_2 = mu at level 2 (S2).  At every level J the same holds (P_J = A_J/3,
      left vector pi_J), so mu is the measure of maximal entropy of G and h_mu(G) = h_top(G) = log 3.
      (The k-word shift is conjugate to Sigma_A, hence also of entropy log 3: 4*3^(J-1) words.)
-[CITED for the Parry-measure facts: Lind-Marcus, Symbolic Dynamics and Coding, Thm 4.4.4 / Sec. 13.3.]""")
+[CITED for the Parry-measure facts: W. Parry, Intrinsic Markov chains, Trans. Amer. Math. Soc. 112 (1964);
+ the Lind-Marcus theorem/section numbers quoted by the recovered draft (Thm 4.4.4 / Sec. 13.3) are
+ UNCITED-RECOLLECTION and are not relied on.]""")
+# the resolving clause of (ii), checked on all units mod 81 (the draft's variant is refuted at X_n = 7)
+for m in range(1, 81):
+    if m % 3 == 0:
+        continue
+    X0 = m % 9
+    X1 = G(m)[0] % 9
+    k2 = KT[X1]
+    check((k2 in (0, 2)) == (X1 in (1, 4, 7)) == (X0 in (1, 2, 4, 5)), "resolving clause of S1.3(ii) at m=%d" % m)
+check(KT[7] == 0 and 7 not in (1, 2, 4, 5), "the draft's clause 'k in {0,2} iff X_n in {1,2,4,5}' fails at X_n = 7")
+print("  S1.3(ii): k_(n+1) in {0,2} <=> X_n in {1,4,7} <=> X_(n-1) in {1,2,4,5} verified on all units mod 81; the draft's clause fails at X_n = 7  [checked]")
 for J in range(1, 8):
     M1 = 3 ** (J + 1)
     paths = {}
@@ -567,7 +581,8 @@ ratios_g = [float((1 - g_list[i + 1]) / (1 - g_list[i])) for i in range(len(g_li
 print("  observed (1-d_(J+1))/(1-d_J), J=1..11: %s" % ["%.3f" % r for r in ratios_d])
 print("  observed (1-g_(J+1))/(1-g_J), J=1..11: %s" % ["%.3f" % r for r in ratios_g])
 gm_d = (float(1 - d_list[11]) / float(1 - d_list[7])) ** 0.25
-print("  geometric-mean ratio of 1-d_J over J=8..12: %.4f (finite-J, lattice effects; asymptotic rate is %.4f)" % (gm_d, fac_star))
+print("  geometric-mean ratio of 1-d_J over J=8..12: %.4f versus exp(-I(c)) = %.4f.  PROVED: limsup (1/J) log(1-d_J) <= -I(c) (since" % (gm_d, fac_star))
+print("  1-d_J <= 1-g_J); OPEN: whether exp(-I(c)) is the exact rate of 1-d_J; HEURISTIC: the gap is finite-J and lattice effects.")
 print("PROVED (S3.6): exact moment identity for every tilt (rank-one M_u), exact LD rate function I(c) = sup(theta c - log((u^2+u+1)/3));")
 print("  the wave-one (7/9)^(J-1) is the u=2 Chernoff bound, valid but not the sharp exponent (%.4f)." % fac_star)
 
@@ -575,13 +590,15 @@ print("""THEOREM S3.7 (PROVED per level).  Exact threshold for sigma = sigma_res
 realized by a unit class a mod 3^(i+1), with 2^(K_i) > 3^i.  On that class G^i is the affine map
 m -> (2^(K_i) m - B_i)/3^i, so G^i(m) < m  iff  m < m*(w) := B_i/(2^(K_i) - 3^i).  Hence a mismatch
 sigma(m) = i < sigma_res(m) forces (1) m < m*(w), m in the class a, and (2) no earlier descent: G^l(m) >= m for
-all l < i (then G^i(m) < m automatically, so sigma(m) = i, and 2^(K_i) > 3^i gives sigma_res(m) > i).  Both
+all l < i (then sigma(m) = i, and sigma_res(m) > i because (2) with S3.1(a) excludes 2^(K_l) < 3^l for every
+l < i, while 2^(K_i) > 3^i by hypothesis).  Both
 conditions are decidable by finite enumeration: the candidates m < m*(w) in each class are finitely many
 (m* <= 145 for i <= 12).  If no candidate other than m = 1 (word 2^i, m* = 1 exactly) survives (2), then
 sigma(m) = sigma_res(m) for every m >= 2 with sigma(m) <= 12, and d_J is the EXACT natural density of
 {sigma <= J} with no exceptional set for J <= 12.  Condition (1) alone is NOT sufficient (candidates that
 already descended earlier are listed below); the table gives both counts.""")
 CANDS = []
+CYC_BOUNDARY = []
 t1 = time.time()
 JT = 12
 mod = 3 ** (JT + 1)
@@ -615,6 +632,13 @@ for i in range(1, JT + 1):
             max_ratio, arg = ratio, (a, Kt, Bt)
         if a == 1:
             check(ratio == 1 and Kt == 2 * i, "m=1 class: word 2^i, m* = 1")
+        # cycle boundary: an integer m = m*(w) lying in its own class a is a positive G-cycle of length i
+        if ratio.denominator == 1 and int(ratio) % (3 ** (i + 1)) == a:
+            CYC_BOUNDARY.append((i, int(ratio)))
+            xx = int(ratio)
+            for l in range(i):
+                xx = G(xx)[0]
+            check(xx == int(ratio), "boundary point is a cycle")
         # candidates: integers m >= 2 in the class a mod 3^(i+1) with m < m*(w)  (condition (1))
         mm = a
         while mm < ratio:
@@ -651,6 +675,19 @@ for (i_c, m_c, _) in CANDS:
     check(first is not None and first < i_c, "candidate m=%d at level %d descended earlier" % (m_c, i_c))
 print("PROVED (S3.8): sigma(m) = sigma_res(m) for all m >= 2 with sigma(m) <= 12 (exact threshold enumeration, %.1fs);" % (time.time() - t1))
 print("  FINITE-EXACT (S3.3) extends this to all m <= 10^6 (where sigma_res <= 31).  OPEN: all m, all levels.")
+print("  integer boundary points m = m*(w) inside their own class, i.e. positive G-cycles of length i (every element of a")
+print("  positive cycle of length L is the rational fixed point of its own growth word): %s" % CYC_BOUNDARY)
+check(CYC_BOUNDARY == [(i, 1) for i in range(1, JT + 1)], "the only positive G-cycle of length <= 12 is {1}")
+print("PROVED+FINITE-EXACT (S3.9): no positive G-cycle of length <= 12 other than {1} (m*(w) <= 145 for every growth word")
+print("  of length <= 12, and the only integer fixed point in its own class is m = 1, word 2^i).")
+print("  REFUTED (draft's stopping-boundary conjecture 'm*(w) < least positive member of the class of w'): the word (1,2,2)")
+print("  at level 3 is the class 2 mod 81 with m* = 37/5 = 7.4 > 2 (m = 2 descends at step 1).")
+w_2 = []
+x_2 = 2
+for l in range(3):
+    x_2, k_2 = G(x_2)
+    w_2.append(k_2)
+check(w_2 == [1, 2, 2] and (3, 2) in [(c[0], c[1]) for c in CANDS], "witness (1,2,2) at level 3")
 del r, a0, K, Bv
 
 # ============================================================================
@@ -698,8 +735,9 @@ So the two gates coincide up to REVERSING the word.  Consequences (PROVED):
  (ii) A G_k-cycle is (reversed) a T_k-cycle iff all its elements are odd (then j_i = v_2(3 m_i + k)).
      A T_k-cycle is (reversed) a G_k-cycle iff every exponent is the greedy minimum for its node.
  (iii) G_(-k)(-m) = -G_k(m) and T_(-k)(-n) = -T_k(n): cycle sets of k and -k are negatives.
-There is NO word-level bijection between G_k-cycles and T_k- or T_(-k)-cycles: the census below has
-different counts, and the two maps read different digit expansions (3-adic vs 2-adic).""")
+The reversal correspondence (ii) is NOT a bijection between G_k-cycles and T_k- or T_(-k)-cycles: only the
+two fixed points are common, the census counts differ, and the two maps read different digit expansions
+(3-adic vs 2-adic).""")
 
 
 def census_G(k, M=10 ** 5, ESC=10 ** 18):
@@ -899,8 +937,12 @@ Proof: 2^j k m in {k+3, k+6} mod 9  <=>  2^j m in {1 + 3k^-1, 1 + 6k^-1} mod 9 =
 mod 3 permutes the two targets), which is the G_1 condition; then (2^j k m - k)/3 = k (2^j m - 1)/3.  QED
 Hence every G_k has the three UNIVERSAL cycles k*{1}, k*{-1}, k*{-4,-11} (scaled from G_1: 3 cycles, S4.4),
 exactly as T_k(k n) = k T_1(n) gives T_k the four universal cycles k*{1}, k*{-1}, k*{-5,-7,-10..}, k*{-17,...}
-(braids2 signed_cycles: content d = |b|/q; universal <=> q = 1).  PRIMITIVE cycles (not inside kZ) are the
-ones with q = |k|; their counts are tabulated below (G: #cycles - 3; T: #cycles - 4).""")
+(braids2 signed_cycles: content d = gcd(cycle, b) = |b|/q; universal <=> q = 1).  Cycles NOT inside kZ have content
+d < |k|, i.e. q = |k|/d > 1 ('non-universal', counted below as #cycles - 3 for G and #cycles - 4 for T); the braids2
+PRIMITIVE cycles are those with content d = 1 (q = |k|).  For prime |k| the two notions coincide; for k = 25, 35, 49
+they differ, because a non-universal cycle can be a dilation of a primitive cycle of a proper divisor of k
+(e.g. G_25 has 5*{-4,...} and 5*{16,...} from the primitive G_5 cycles).  [The recovered draft called the
+non-universal cycles 'primitive, q = |k|'; corrected here.]""")
 for k in KS:
     Gk = Gk_factory(k)
     for m in range(-200, 201):
@@ -913,18 +955,40 @@ for k in KS:
     for base in ({1}, {-1}, {-4, -11}):
         check(frozenset(k * x for x in base) in setsG, "universal cycle k*%s present for k=%d" % (sorted(base), k))
 print("  scaling lemma verified for all |k|<=49, |m|<=200; universal G_k cycles k*{1}, k*{-1}, k*{-4,-11} present for every k.")
-print("\n  k | #G_k | primitive G_k (= #-3) | #T_k | primitive T_k (= #-4) | primitive G_k cycle minima")
+def content(c, k):
+    d = abs(k)
+    for x in c:
+        d = gcd(d, x)
+    return d
+
+
+print("\n  k | #G_k | non-universal G_k (d<k, = #-3) | primitive G_k (d=1) | #T_k | non-universal T_k (= #-4) | primitive T_k (d=1) | non-universal G_k cycles (minimum, content d)")
+PRIM_TAB = {}
 for k in KS:
     if k < 0:
         continue
     cG = resG[k][0]
     cT = resT[k][0]
-    prim = [c for c in cG if any(x % k != 0 for x in c)] if k != 1 else []
-    check(len(prim) == len(cG) - 3, "primitive count = total - 3 at k=%d" % k)
-    check(len(cT) >= 4, "T_k has >= 4 cycles")
-    print("  %3d | %2d | %2d | %2d | %2d | %s" % (k, len(cG), len(prim), len(cT), len(cT) - 4,
-                                                sorted([min(c, key=abs) for c in prim], key=abs)))
-print("FINITE-EXACT (S4.6): primitive-cycle table for 0<k<=49 (k<0 by negation); k=1: no primitive cycle on either side.")
+    dG = [content(c, k) for c in cG]
+    dT = [content(c, k) for c in cT]
+    for c, d in zip(cG, dG):
+        check(all(gcd(abs(k), x) == d for x in c), "content constant along the cycle")
+    nonu = [(c, d) for c, d in zip(cG, dG) if d < k] if k != 1 else []
+    check(len(nonu) == len(cG) - 3, "non-universal count = total - 3 at k=%d" % k)
+    check((sum(1 for d in dT if d < k) == len(cT) - 4) if k != 1 else (len(cT) == 4), "non-universal T count = total - 4")
+    primG = sum(1 for d in dG if d == 1) if k != 1 else 0
+    primT = sum(1 for d in dT if d == 1) if k != 1 else 0
+    PRIM_TAB[k] = (len(nonu), primG, len(cT) - 4, primT)
+    print("  %3d | %2d | %2d | %2d | %2d | %2d | %2d | %s" % (k, len(cG), len(nonu), primG, len(cT), len(cT) - 4, primT,
+                                                           sorted([(min(c, key=abs), d) for c, d in nonu], key=lambda t: abs(t[0]))))
+for k, (nu, pg, nt, pt) in PRIM_TAB.items():
+    if k in (25, 35, 49):
+        continue
+    check(nu == pg and nt == pt, "prime k: non-universal = primitive at k=%d" % k)
+check(PRIM_TAB[25] == (4, 2, 8, 3) and PRIM_TAB[35] == (4, 1, 8, 2) and PRIM_TAB[49] == (5, 4, 3, 2), "composite k: content splits the non-universal cycles")
+print("FINITE-EXACT (S4.6): non-universal/primitive table for 0<k<=49 (k<0 by negation); k=1: no non-universal cycle on either side;")
+print("  for k = 25, 35, 49 the non-universal G_k cycles split by content as 25: (d=1) 2 + (d=5) 2; 35: (d=1) 1 + (d=5) 1 + (d=7) 2;")
+print("  49: (d=1) 4 + (d=7) 1  [checked].")
 # detail table for the G_k cycles with their words and gates, small k
 print("\n  G_k cycles with words (k in {1,-1,5,-5,7,-7,11,13}):")
 for k in (1, -1, 5, -5, 7, -7, 11, 13):
@@ -933,8 +997,10 @@ for k in (1, -1, 5, -5, 7, -7, 11, 13):
         print("    k=%3d  cycle %s  word %s  J=%d L=%d  2^J-3^L=%d  B'=%d  m0=k*B'/(2^J-3^L)=%s" %
               (k, c, js, J, len(c), 2 ** J - 3 ** len(c), Bp, Fr(k * Bp, 2 ** J - 3 ** len(c))))
 print("FINITE-EXACT (S4.4): census |k|<=49 above.  Duality verdict: (a) PROVED exact gate identity with word")
-print("  reversal; (b) PROVED negation conjugation k<->-k inside each family; (c) REFUTED: any bijection")
-print("  G_k-cycles <-> T_k-cycles or <-> T_(-k)-cycles (counts differ already at k=1: #G_1=%d vs #T_1=%d);" % (len(resG[1][0]), len(resT[1][0])))
+print("  reversal; (b) PROVED negation conjugation k<->-k inside each family; (c) REFUTED: the reversal correspondence (ii)")
+print("  as a bijection G_k-cycles <-> T_k-cycles or <-> T_(-k)-cycles: the intersection is the two fixed points only and")
+print("  the census counts differ already at k=1 (#G_1=%d vs #T_1=%d); SCOPE: an abstract bijection between the full" % (len(resG[1][0]), len(resT[1][0])))
+print("  (unknown, census-bounded) cycle sets is not a mathematical claim and is not refuted;")
 print("  (d) the exact intersection is given by criterion (ii) (common cycles counted above).")
 
 # ============================================================================
@@ -983,6 +1049,7 @@ NU = 0
 best_steps = (-1, 0)
 best_ratio = (0.0, 0, 0)
 bound_ok = True
+ties_all = []
 for ci in range(NCHUNK):
     lo = ci * (N_ALL // NCHUNK) + 1
     hi = (ci + 1) * (N_ALL // NCHUNK)
@@ -1012,6 +1079,7 @@ for ci in range(NCHUNK):
     imax = int(steps.argmax())
     if int(steps[imax]) > best_steps[0]:
         best_steps = (int(steps[imax]), int(m0[imax]))
+    ties_all.extend((int(steps[imax]), int(mm)) for mm in m0[steps == steps[imax]])
     ratio = peak / m0
     irat = int(ratio.argmax())
     if float(ratio[irat]) > best_ratio[0]:
@@ -1022,6 +1090,9 @@ print("  all %d non-multiples of 3 in [1,10^7] reach 1 under G  [checked]  time 
 print("  max steps-to-1 = %d at m=%d   (F1: 93 at 8751065)" % best_steps)
 print("  max peak/m = %.3f at m=%d, peak=%d   (F1: 133.03 at 4847486)" % best_ratio)
 check(best_steps == (93, 8751065), "F1 max steps")
+TIES = sorted(mm for st, mm in ties_all if st == best_steps[0])
+check(TIES == [8751065, 9454814], "the maximum 93 is attained exactly twice in [1,10^7]")
+print("  all m in [1,10^7] with steps-to-1 = 93: %s (F1 names the first attainer; 9454814 ties)" % TIES)
 check(best_ratio[1] == 4847486, "F1 worst peak/m location")
 print("  K_n <= 2n + [k_1=3] verified along every orbit (S5.2)  [checked]")
 # full orbit of the worst m
@@ -1067,10 +1138,13 @@ print("      exact growth to the peak: 2^%d/3^17 = %.2f  vs observed peak/m %.4f
 
 print("""S5.3  Residue-5 chains (PROVED structure).  Residue 5 mod 9 (factor 8/3) can never repeat consecutively
 and is always preceded by 7 or 8 (factors 1/3, 2/3): the best 5-containing pattern is 8,5,1^n
-with product (2/3)(8/3)(4/3)^n = (16/9)(4/3)^n over n+2 steps, i.e. again rate 4/3.  The word
-8,5,1,...,1 (n ones) then 0 is realized by EXACTLY ONE class mod 3^(n+3): m = 8 mod 27 (forces
-G(m) = 5 mod 9), G(m) = 5+18s, G^2(m) = 13+48s, and 13+48s = 1 mod 3^n (not mod 3^(n+1)) iff
-4s = -1 mod 3^(n-1) with the lift condition.  Smallest members and their exact growth:""")
+with product (2/3)(8/3)(4/3)^(n-1) = (16/9)(4/3)^(n-1) over n+1 steps, i.e. again rate 4/3.  The residue
+pattern 8,5,1^(n-1),{4 or 7}, i.e. the word 1,3,2^(n-1),0 (n+2 letters), is realized by EXACTLY TWO classes
+mod 3^(n+3): the two lifts with G^(n+1)(m) in {4,7} mod 9 of the single class mod 3^(n+2) carrying the
+prefix 1,3,2^(n-1).  Explicitly m = 8 mod 27 (forces G(m) = 5 mod 9), G(m) = 5+18s, G^2(m) = 13+48s, and
+v_3(G^2(m)-1) = n exactly iff v_3(1+4s) = n-1 exactly (one class of s mod 3^(n-1), two of its three lifts
+mod 3^n).  [The recovered draft said 'exactly one class mod 3^(n+3)' and 'n ones'; both are off by one
+and are corrected here; the class count is checked below.]  Smallest members and their exact growth:""")
 for nn in range(1, 12):
     # find smallest m = 8 mod 27 with G^2(m) = 1 mod 3^nn but not mod 3^(nn+1)
     found = None
@@ -1086,10 +1160,26 @@ for nn in range(1, 12):
     for i in range(nn + 2):
         x, k = G(x); word.append(k); vals.append(x)
     exp_word = [1, 3] + [2] * (nn - 1) + [0]
-    check(word == exp_word, "8,5,1^n word for n=%d" % nn)
+    check(word == exp_word, "8,5,1^(n-1) word for n=%d" % nn)
+    if nn <= 6:
+        Mn = 3 ** (nn + 3)
+        cls = []
+        for a in range(Mn):
+            if a % 3 == 0:
+                continue
+            x = a
+            wa = []
+            for i in range(nn + 2):
+                x, k = G(x)
+                wa.append(k)
+            if wa == exp_word:
+                cls.append(a)
+        check(len(cls) == 2 and all(a % 27 == 8 for a in cls) and len(set(a % (3 ** (nn + 2)) for a in cls)) == 1 and min(cls) == m,
+              "word 1,3,2^(n-1),0 is realized by exactly two classes mod 3^(n+3), n=%d: %s" % (nn, cls))
+        print("       classes mod 3^%d realizing the word: %s (two lifts of one class mod 3^%d)" % (nn + 3, cls, nn + 2))
     print("  n=%2d  m=%10d  word %s  value after n+1 steps = %d  ratio %.4f  (16/9)(4/3)^(n-1)=%.4f" %
           (nn, m, word, vals[nn + 1], vals[nn + 1] / m, (16 / 9) * (4 / 3) ** (nn - 1)))
-print("FINITE-EXACT+PROVED (S5.4): the (8,5,1^n) family has word 1,3,2^(n-1),0 exactly and grows at rate 4/3;")
+print("FINITE-EXACT+PROVED (S5.4): the (8,5,1^(n-1)) family has word 1,3,2^(n-1),0 exactly (two classes mod 3^(n+3)) and grows at rate 4/3;")
 print("  no family beats 2*(4/3)^n (S5.2).  Hence sup_m peak(m)/m = infinity (S5.1), but peak(m) <= 2 (4/3)^{steps} m always.")
 
 # ============================================================================

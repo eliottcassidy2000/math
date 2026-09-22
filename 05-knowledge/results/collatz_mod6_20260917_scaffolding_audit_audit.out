@@ -1,0 +1,147 @@
+scaffolding_audit_audit: independent recomputation for lane scaffolding_audit
+session collatz-mod6-20260917 (mac-mini), audit written 2026-09-21
+
+==============================================================================
+A1. Claim 1 (core identity, repair, flows): symbolic re-derivation with sympy
+==============================================================================
+  LHS - RHS(paste) = 2*A*B + A + B
+  all rational solutions (s1,s2,t1,t2) of the shifted form, as polynomial identity: [(-3, -2, -2, -2), (-1, 0, 0, 0)]
+  quadratic reading: coeff of A^2B = 2*a - 1 ; coeff of AB = 4*a
+  CONFIRMED: stated identity false (A=B=1: 6 vs 2); repair; flows' unique solution = paste RHS;
+             LHS horizontal flow = g_h + (2B+1).
+
+==============================================================================
+A2. Claim 2 (tetrahedral / pentatope / d-simplex laws): symbolic
+==============================================================================
+  tetrahedral, pentatope and 2D laws: polynomial identities in Q[A,B] (residuals 0, 0, 0)
+  Chu-Vandermonde, all splits, d<=8: polynomial identities; simplex convolution d<=8: identities.
+  boundary: binomial(B-1,0)=1 at B=0 is the S_0(0)=1 convention (sympy: 1)
+  C(j-1,j), j=1..5 (sympy): [(1, 0), (2, 0), (3, 0), (4, 0), (5, 0)]  -- all 0, so the lane's binom() agrees on every used value
+
+==============================================================================
+A3. Claim 3 (g-operator)
+==============================================================================
+  CONFIRMED: A!B! is the unique SYMMETRIC solution; without symmetry f(A,B)=A!B!*5^(A-B-1) (A>B) also
+             satisfies f=AB f(A-1,B-1) and f(1,B)=B!, so 'symmetric' in Lemma 4.1 is load-bearing.
+             (AgA=(A!)^2 holds for every solution, since f(A,A)=(A!)^2 f(0,0) and f(0,0)=1 from f(1,1)=1.)
+
+==============================================================================
+A4. Claim 4 (tournament census by permutation matching, independent of the DP)
+==============================================================================
+  n=2: #T=2 sum_h=2 (n!2^T(n-2)=2) max=1 seen=[1]
+  n=3: #T=8 sum_h=12 (n!2^T(n-2)=12) max=3 seen=[1, 3]
+  n=4: #T=64 sum_h=192 (n!2^T(n-2)=192) max=5 seen=[1, 3, 5]
+  n=5: #T=1024 sum_h=7680 (n!2^T(n-2)=7680) max=15 seen=[1, 3, 5, 9, 11, 13, 15]
+  n=6: #T=32768 sum_h=737280 (n!2^T(n-2)=737280) max=45 seen=[1, 3, 5, 9, 11, 13, 15, 17, 19, 23, 25, 27, 29, 31, 33, 37, 41, 43, 45]
+  n=6: odd values <=45 NOT seen: [7, 21, 35, 39] (7 and 21 are THM-1745's holes; 35, 39 are merely absent at n=6)
+  n= 3 excess bits 0.585
+  n= 4 excess bits 1.585
+  n= 5 excess bits 2.907
+  n= 6 excess bits 4.492
+  n= 8 excess bits 8.299
+  n=10 excess bits 12.791
+
+==============================================================================
+A5. Bang/Zsigmondy via cyclotomic values (no factorisation of 2^n-1 or 4^n-1)
+==============================================================================
+  2^n-1 without primitive prime, n<=40: [1, 6]
+  4^n-1 without primitive prime, n<=40: []
+  Phi_6(2)=3 (divides 6: the Catalan exception); Phi_5(4)=341=11*31, both primes primitive for 4^5-1
+  Cipolla p=5..23 confirmed; 2p | N_p-1; p=3 fails (2^20 = 4 mod 21); all seven factorisations re-multiplied.
+  INHERITANCE: 05-knowledge/results/collatz_mod6_20260917_wild_typing.md section 3 already proves Cipolla,
+    the exact criterion 6j | 4^j-4, Zsigmondy-no-exception for 4^n-1, and REFUTES '341 stalls primitive primes'.
+
+==============================================================================
+A6. Rational 3-cycle
+==============================================================================
+  orbit: ['-7/4', '5/4', '-1/4', '-7/4']  -- confirmed; AP with difference 3/2
+
+==============================================================================
+A7. Peaks census (independent implementation) and the ladder 'explanation'
+==============================================================================
+  max peak/seed: 10112.041 at seed 77671 (peak 785412368)
+  ladder C^k(a 2^k-1) = a 3^k-1 confirmed for a in {1,2,3,5,7,12}, k in {1,2,3,6} (a odd is NOT needed)
+  seed-weighted: 4k+1 window 248; any square +-1 535; by base mod 4 {3: 287, 1: 248}; full-map 4k+1 window 0
+  distinct peaks 20341; top multiplicities [(125252, 448), (4616, 408), (638468, 347), (172772, 161)]
+  v_3(p+1) of the top-multiplicity peaks: [(125252, 3), (4616, 5), (638468, 3), (172772, 7)]
+  cells (window, base mod 4): distinct {('-1', 3): 47, ('+1', 1): 49, ('-1', 1): 46, ('+1', 3): 50} ; seeds {('-1', 3): 195, ('+1', 1): 96, ('-1', 1): 152, ('+1', 3): 92}
+  null expected (uniform on 2 mod 6 per dyadic range): {('-1', 1): 20.4, ('-1', 3): 20.1, ('+1', 1): 40.8, ('+1', 3): 40.9}
+  +1 window 99 vs 81.8 (z=1.91); -1 window 93 vs 40.6 (z=8.23)
+  TAUTOLOGY CHECK: distinct peaks p for which the k=1 ladder seed (2p-1)/3 has peak p: 20341 of 20341
+  PROVED+checked: for every peak p and every 1<=k<=v_3(p+1), the ladder seed ((p+1)/3^k)2^k-1 has peak p
+    (the ladder rises monotonically to p and the orbit of p never exceeds p).  So the lane's
+    'explained 93, unexplained none' is a tautology; it does not explain the -1 excess.
+
+  v_3(p+1) distribution of distinct peaks (null for the class 2 mod 6: P(v>=2)=1/3, P(v>=3)=1/9):
+    p < 10^5 (box-free: every such p is reached from its own predecessor)  n= 9423  P(v>=2)=0.335  P(v>=3)=0.111  hist [(1, 6263), (2, 2113), (3, 700), (4, 226), (5, 82), (6, 39)]
+    p >= 10^5 (must be reached from a seed < 10^5)                         n=10918  P(v>=2)=0.707  P(v>=3)=0.412  hist [(1, 3198), (2, 3223), (3, 2046), (4, 1150), (5, 613), (6, 688)]
+  -1 window distinct peaks: 93, of which 49 are >= 10^5 (above the seed box) and 44 below
+  +1 window distinct peaks: 99, of which 31 are >= 10^5
+  distinct peaks with 9 | p+1: 10880 (null share 1/3 of 20341 = 6780)
+  -1 window conditional on 9 | p+1 (uniform on 8 mod 18 per dyadic range): observed 93, expected 52.4, z=5.62
+    p < 10^5   -1 window: observed 44, conditional expected 29.3
+    p >= 10^5  -1 window: observed 49, conditional expected 23.1
+  v_3(p+1) among -1 window peaks (always even): [(2, 46), (4, 23), (6, 12), (8, 7), (10, 3), (14, 1), (16, 1)]
+  mean multiplicity (seeds per distinct peak) by v_3(p+1):
+    v=1 : n= 9461  mean seeds 1.00  max 1
+    v=2 : n= 5336  mean seeds 2.68  max 135
+    v=3 : n= 2746  mean seeds 3.83  max 448
+    v=4 : n= 1376  mean seeds 4.00  max 101
+    v=5 : n=  695  mean seeds 6.41  max 408
+    v=6 : n=  360  mean seeds 7.44  max 154
+    v=7+: n=  367  mean seeds 8.48  max 161
+
+  v_2(p) among -1 window peaks: [(3, 45), (4, 21), (5, 13), (6, 14)] ; among +1 window peaks: [(1, 99)]
+  PROVED: no shortcut peak is 6 mod 8, so peaks are 2, 8, 20 mod 24.  Census by p mod 24: [(2, 6190), (8, 7967), (20, 6184)]
+  distinct peaks below the box = 9423 = #{q = 2 mod 6, q < 10^5 : orbit(q) never exceeds q} (exact)
+  below-box peak rate by q mod 24: {2: '2868/4166=0.688', 8: '3703/4167=0.889', 14: '0/4167=0.000', 20: '2852/4166=0.685'}
+  PROVED+checked: unique seed iff 9 !| p+1 (9461 such peaks); the odd-preimage chain of p is exactly the ladder
+    seeds ((p+1)/3^k)2^k-1, of length v_3(p+1); 28483 of the 49999 census seeds are ladder seeds, 21516 are not.
+  stratified null (a) by (range, v_2, v_3) -- WRONG because v_2=1 lumps 2 mod 8 (rate ~0.69) with 6 mod 8 (rate 0):
+    -1 window: observed 93, expected 87.7, z=0.56
+    +1 window: observed 99, expected 51.0, z=6.71
+  STRATIFIED NULL (b) by (dyadic range, q mod 24, v_3(q+1) capped at 4), exact stratum sizes:
+    -1 window: observed 93 (below box 44, above 49); expected 88.7 (45.5, 43.1); z=0.46
+      base 1 mod 4: observed 46, expected 44.6
+      base 3 mod 4: observed 47, expected 44.1
+    +1 window: observed 99 (below box 68, above 31); expected 100.9 (71.2, 29.7); z=-0.19
+      base 1 mod 4: observed 49, expected 50.7
+      base 3 mod 4: observed 50, expected 50.2
+  below the box, null by q mod    24: -1: 44 vs 47.1; +1: 68 vs 71.6
+  below the box, null by q mod  1152: -1: 44 vs 47.3; +1: 68 vs 71.5
+  below the box, null by q mod 27648: -1: 44 vs 46.7; +1: 68 vs 70.7
+  shifted windows: [(-12, 23), (-10, 0), (-8, 24), (-6, 115), (-4, 91), (-2, 152), (0, 248), (2, 96), (4, 0), (6, 150), (8, 150), (10, 21), (12, 21)]
+  first 12 primes sum to 197 (first 11 to 160)
+  196 orbit, peak-170 seeds [75,113], full-map-peak-160 seeds [15,23,35,53]: confirmed
+
+==============================================================================
+A8. Descent certificate table, and the stopping-time terminology
+==============================================================================
+  27 under the full map: stopping time (first value < 27) = 96, total stopping time (reach 1) = 111
+  The lane note calls 96 the 'classical total stopping time': WRONG LABEL.  96 = sigma(27), the stopping time;
+  the total stopping time sigma_inf(27) = 111 = 41 + 70.
+  margins table (K, margin): confirmed for all seven rows.
+
+==============================================================================
+A9. mod-30 wheel
+==============================================================================
+  confirmed
+
+==============================================================================
+AUDIT SUMMARY
+==============================================================================
+  CONFIRMED: A1 (identity/repair/flows), A2 (simplex laws), A3 (g-operator; 'symmetric' load-bearing),
+    A4 (census; note 35,39 also absent at n=6), A5 (Bang/Zsigmondy/Cipolla; wild_typing lane already has it),
+    A6 (3-cycle), A7 counts (248/535/287/20341/cells/null/z/shifted windows/ladder values), A8 table, A9.
+  REFUTED AS STATED: section 8's 'the excess is entirely Lemma 8.2 ... explained 93, unexplained none' --
+    the criterion holds for all 20341 distinct peaks (k=1 is the immediate predecessor), so it is vacuous.
+  TRUE MECHANISM (FINITE-EXACT): distinct peaks below the seed box have 9 | p+1 at the null rate;
+    peaks above the box are biased to 9 | p+1 (ladder ancestors are small); conditional on 9 | p+1 alone the
+    -1 square window is still observed 93 vs expected 52.4 (z=5.62), because s odd forces 8 | s^2-1 and no
+    peak is 6 mod 8 (peak rates 0.688 / 0.889 / 0 / 0.685 on 2 / 8 / 14 / 20 mod 24).  Stratifying by
+    (dyadic range, q mod 24, v_3(q+1)) puts BOTH windows at chance: -1 window 93 vs 88.7 (z=0.46), +1 window 99 vs 100.9 (z=-0.19).
+  NEW EXACT CONTENT (elementary): peaks are 2,8,20 mod 24; unique seed iff 9 !| p+1; ladder = odd-preimage chain of length v_3(p+1).
+  WRONG LABEL: '37+59=96 is the classical total stopping time' -> 96 is the stopping time; 111 is total.
+
+FAILS: 0
+ALL AUDIT CHECKS PASSED

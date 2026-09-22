@@ -354,12 +354,14 @@ for n in range(3, 7):
 allvals = sorted(set().union(*spectrum.values()))
 print("  union of attained h for n<=6:", allvals)
 missing_odd = [v for v in range(1, max(allvals) + 1, 2) if v not in allvals]
-print("  odd values <= %d NOT attained for n<=6: %s  (7 and 21 absent, as THM-1745 / death-star S70 state for all n; the others fill in at larger n per the theorem)" % (max(allvals), missing_odd))
+print("  odd values <= %d NOT attained for n<=6: %s  (7 and 21 absent for ALL n: canon THM-1370 / THM-200; 35 and 39 are attained by n=8,"
+      " where THM-1370's census covers every odd value in [1,609] except 7, 21)" % (max(allvals), missing_odd))
 check(7 not in allvals and 21 not in allvals, "7,21 absent n<=6")
 mers = [2**j - 1 for j in range(1, 7)]
 print("  Mersenne probe: 2^j-1 =", mers, "; attained for n<=6:", [v for v in mers if v in allvals], "; max h per n vs 2^(n-1)-1:", [(n, max(spectrum[n]), 2**(n - 1) - 1) for n in spectrum])
-print("  VERDICT (a): 7 = 2^3-1 has no Mersenne mechanism: the spectrum is 'odds minus {7,21}' so 1,3,15,31,63,... ARE attained;")
-print("      the max h at n=4 is 5 (< 7) and at n=5 it is 15 = 2^4-1 while 7 is skipped; 63 = 2^6-1 = 9*7 is in the spectrum (THM-1745 head).")
+print("  VERDICT (a): 7 = 2^3-1 has no Mersenne mechanism: 7 and 21 are the only odd holes PROVED for all n (THM-1370), and 1,3,15,31 (n<=6 here)")
+print("      and 63 (n=8, THM-1370 corollary, FINITE-EXACT; the '7*3^k gap tower' was refuted there) ARE attained; 'spectrum = odds minus {7,21}'")
+print("      is THM-1370's completeness CONJECTURE, not a theorem.  The max h at n=4 is 5 (< 7) and at n=5 it is 15 = 2^4-1 while 7 is skipped.")
 print("      The row-braid fact ord_9(2)=6 (9 | 63) and the tournament hole 7 share the prime 7 only as a numeral: NO MAP FOUND.")
 
 print("\n--- S2.2  3n+b cycle census, gcd(b,6)=1, 1<=b<=99, both signs of n; U1: |n|<=10^5 escape 10^18; U2: |n|<=2*10^5 escape 10^40 ---")
@@ -518,7 +520,17 @@ print("    N-1 = 4(4^{p-1}-1)/3 is even, and p | 4^{p-1}-1 (Fermat) with p !| 3,
 print("    N is composite: N = (2^p-1)*((2^p+1)/3) with both factors >1 for p>=3.  p=3 fails exactly because 3 | 3 (N_3=21: 2^20 = 4 mod 21).")
 print("  PROVED (exact criterion, all j>=3): ord_{N_j}(2) = 2j (it divides 2j; a proper divisor d<=j would give N_j | 2^j-1 < N_j),")
 print("    so N_j is a base-2 pseudoprime iff N_j is composite (true for j>=3) and 2j | N_j-1 = (4^j-4)/3, i.e. iff 6j | 4^j-4.")
-print("    Corollary: N_j base-2 psp iff N_j base-4 psp (same divisibility j | N_j-1 with ord_{N_j}(4)=j).")
+print("    Base 4 (ord_{N_j}(4)=j): N_j is a base-4 psp iff j | N_j-1 iff 3j | 4^j-4.  Since N_j-1 = 4(4^{j-1}-1)/3 has v_2 = 2 exactly,")
+print("    'base-2 iff base-4' holds iff 4 !| j; for 4 | j, N_j is NEVER a base-2 psp but can be a base-4 psp (audit 2026-09-21 corrected the")
+print("    recovered draft's unconditional corollary).  Base-4-only indices j<=20000:", end=" ")
+W4only = [j for j in range(3, 20001) if pow(4, j, 3 * j) == 4 % (3 * j) and pow(4, j, 6 * j) != 4 % (6 * j)]
+print(W4only, "(all = 4 mod 8; minimal witness j=4: N_4 = 85 = 5*17, ord_85(4) = 4 | 84, ord_85(2) = 8 !| 84)")
+for j in range(2, 201):
+    check(v2(Nj(j) - 1) == 2, "v_2(N_j-1)=2 at j=%d" % j)
+check(W4only == [4, 28, 532, 2044, 11476] and all(j % 8 == 4 for j in W4only), "base-4-only indices")
+for j in W4only[:3]:
+    Nv = Nj(j)
+    check(pow(4, Nv - 1, Nv) == 1 and pow(2, Nv - 1, Nv) != 1 and not isprime(Nv), "base-4-only witness j=%d" % j)
 print("  REFUTED (user's pasted claim '341 stalls primitive prime generation of 4x+1'): 341 = N_5 = 11*31 brings TWO new primes (both primitive),")
 print("    and Zsigmondy for 4^j-1 has NO exception (4-1=3 != 1; 4+1=5 not a power of 2; (2,1,6) is base 2 not 4): every N_j, j>=2, has a")
 print("    prime dividing no earlier trunk term (checked j<=40 above; primitive primes are never 3 since 3 | 4-1).")
@@ -533,16 +545,23 @@ for j in (85, 91, 341, 946):
     Nv = Nj(j)
     check(not isprime(Nv) and pow(2, Nv - 1, Nv) == 1 and pow(4, Nv - 1, Nv) == 1, "composite-index psp j=%d" % j)
 print("    direct verification: N_85, N_91, N_341, N_946 are base-2 (and base-4) pseudoprimes (85=5*17, 91=7*13, 341=11*31, 946=2*11*43).")
-print("  PROVED (tower closure): j in W  =>  N_j in W.  Proof: ord_{N_j}(4)=j and 2j | N_j-1 give 4^{N_j-1}=1 mod N_j, i.e. N_j | 4^{N_j}-4;")
+print("  PROVED (tower closure, sharpened by the audit): j | N_j-1 and 3 !| j (j>=2)  =>  N_j in W; in particular j in W => N_j in W.")
+print("    Proof: ord_{N_j}(4)=j and j | N_j-1 give 4^{N_j-1}=1 mod N_j, i.e. N_j | 4^{N_j}-4;")
 print("    N_j is odd (1+4+...+4^{j-1}) and 3 !| N_j (N_j = j mod 3, 3 !| j), and 4^m = 4 mod 6 for all m>=1; CRT gives 6N_j | 4^{N_j}-4.")
-print("    Hence every prime p>=5 starts an infinite chain p -> N_p -> N_{N_p} -> ... of base-2 pseudoprimes (Cipolla's construction iterated).")
+print("    Hence every prime p>=5 starts an infinite chain p -> N_p -> N_{N_p} -> ... of base-2 pseudoprimes (Cipolla's construction iterated),")
+print("    and the base-4-only indices feed W too: 4 | N_4-1 = 84 gives 85 = N_4 in W (this is why the first composite member of W is 85).")
+for j in (4, 28):
+    Nv = Nj(j)
+    check(pow(4, Nv, 6 * Nv) == 4, "N_j in W from base-4-only j=%d" % j)
 for pp in (5, 7, 11, 13):
     Nv = Nj(pp)
     check(pow(4, Nv, 6 * Nv) == 4, "N_p in W for p=%d" % pp)
     NN = Nj(Nv) if Nv <= 5461 else None
     if NN is not None:
         check(pow(2, NN - 1, NN) == 1 and not isprime(NN), "second level N_{N_p} psp for p=%d" % pp)
-print("    checked: N_5=341, N_7=5461, N_11, N_13 are in W; second level N_341 (682 bits) and N_5461 (10922 bits) verified base-2 pseudoprimes.")
+print("    checked: N_5=341, N_7=5461, N_11, N_13 are in W; second level N_341 (%d bits) and N_5461 (%d bits) verified base-2 pseudoprimes."
+      % (Nj(341).bit_length(), Nj(5461).bit_length()))
+check(Nj(341).bit_length() == 681 and Nj(5461).bit_length() == 10921, "bit lengths (the draft's hard-coded 682/10922 were off by one)")
 
 print("\n--- S2.4  TYPING LINES (machine-readable summary of the maps that exist; see the note's table) ---")
 typing = [
@@ -766,7 +785,9 @@ for K in (10**5, 10**6):
 print("  CORRECTED NEAR MISS (recovered draft): its status line quoted square counts 64 and 137; the true counts of pairs (6k-1, 6k+1) = (p^2-2, p^2)")
 print("    with both entries as stated are %d and %d (two independent counts agree)." % (46, 99))
 check(resid[10**5] == -5 and resid[10**6] == 313, "C4 residuals")
-print("  STATUS: REFUTED as 'bounded residual': residual after removing squares is %d at 10^5 and %d at 10^6 (grows with the drift, not bounded)." % (resid[10**5], resid[10**6]))
+print("  STATUS: residual after removing squares is %d at 10^5 and %d at 10^6 (FINITE-EXACT).  'Bounded residual' cannot be refuted by two" % (resid[10**5], resid[10**6]))
+print("    scales; it is UNSUPPORTED and HEURISTIC-false: the inherited drift heuristic (sandwich_bias sec.4, order sqrt(x) loglog x / log^2 x)")
+print("    predicts an unbounded residual, and the observed 60-fold growth is consistent with it.  OPEN as a statement.")
 print("  The square term is PROVED to be one-sided (p^2 = 1 mod 6 always sits on the right), but it is small against the mixed-class semiprime bias.")
 print("  follow-up F4: does the p^2 count alone explain the S-column excess of the marginals?  S_1 - S_5 identity (inherited) already has pi'(sqrt x)/2:")
 for K in (10**5, 10**6):
@@ -784,15 +805,17 @@ print("  PROVED: (3(bn)+b)/2^v = b(3n+1)/2^v ; so b*C_1 subset C_b, c(b) >= 4 fo
 print("  (This is the dilation half of the content theorem, arithmetic_braids2_20260917_signed_cycles.md sec.2: cycles of T_b = disjoint union over g | b of g*(primitive cycles of T_{b/g}).)")
 eq4 = [k for k in KS if len(CYC[k]) == 4]
 print("  b<=99 with c(b) = 4 exactly (no cycle beyond the four scaled Collatz cycles):", eq4)
-print("  superadditivity for coprime b1,b2: c(b1 b2) >= c(b1) + c(b2) - 4 (scaled cycles b2*C_{b1}, b1*C_{b2} meet only in b1b2*C_1):")
+print("  superadditivity for coprime b1,b2 (true cycle counts): c(b1 b2) >= c(b1) + c(b2) - c(1), because b2*C_{b1} and b1*C_{b2} lie in")
+print("    C_{b1b2} and meet only in b1b2*C_1 (content theorem: a common cycle has content b2*g1 = b1*g2 with g1|b1, g2|b2, so content b1b2).")
+print("    With c(1) = 4 (the four known signed Collatz cycles; '-4' is exact iff there is no unknown Collatz cycle) in the census universe:")
 viol = []
 for k1 in KS:
     for k2 in KS:
         if k1 < k2 and gcd(k1, k2) == 1 and k1 * k2 in CYC:
-            lhs = len(CYC[k1 * k2]); rhs = len(CYC[k1]) + len(CYC[k2]) - 4
+            lhs = len(CYC[k1 * k2]); rhs = len(CYC[k1]) + len(CYC[k2]) - len(CYC[1])
             if lhs < rhs:
                 viol.append((k1, k2, lhs, rhs))
-print("    violations among b1*b2<=99:", viol, "-> PROVED inequality holds (FINITE-EXACT confirmation)")
+print("    violations among b1*b2<=99:", viol, "-> no violation (FINITE-EXACT confirmation of the PROVED true-count inequality)")
 check(viol == [], "superadditivity")
 def Gk(m, k):
     j = 0
@@ -830,7 +853,9 @@ print("    hostile: 15 is a base-4 pseudoprime but 3 | 15, so N_15 is NOT a pseu
 trunkvals = set(Nj(j) for j in range(1, 12))
 check(85 in trunkvals and 91 not in trunkvals and 341 in trunkvals and 5461 in trunkvals, "trunk membership of composite indices")
 print("  follow-up F6 (recursion, PROVED in S2.3): W is closed under j -> N_j, so the index set contains p, N_p, N_{N_p}, ... for every prime p>=5;")
-print("    the first composite index NOT of the form N_j is 91 = 7*13 (85 = N_4 is of that form; 341 = N_5 and 5461 = N_7 are the tower's second level).")
+print("    the first composite index NOT of the form N_j is 91 = 7*13 (85 = N_4 comes from the base-4-only index 4 via the sharpened closure;")
+print("    341 = N_5 and 5461 = N_7 are the tower's second level).")
+print("  S5-style ledger of the audit (2026-09-21): REFUTED 'N_j base-2 psp iff base-4 psp' (j=4: 85 is base-4 only; 28, 532, 2044, 11476 likewise).")
 
 # ---------------------------------------------------------------- S4 3N-5
 hdr("S4. 3N-5 = 3(N-2)+1: exact relation to Collatz under the shift n -> n-2")
@@ -873,10 +898,10 @@ print("        C5 scaling b*C_1 in C_b, superadditivity, G_b conjugacy; S4 T_{-5
 print("FINITE-EXACT: 16/128 octonion orientations; tournament census n<=6; c(b) spectrum |b|<=99 in U1 and U2 (complete for L<=L*(b));")
 print("        6/pi^2 candidates at 10^6; C1 block TV distances at 10^6; C4 sandwich numbers at 10^5,10^6; W to 20000; C3 j<=40.")
 print("CITED: Cipolla 1904; Albuquerque-Majid twisted group algebra; Dirichlet; THM-1745 / death-star S70 h-spectrum; Redei; Wieferich list.")
-print("HEURISTIC: full G-stopping-time law equality primes vs composites (size-controlled); C4 residual.")
+print("HEURISTIC: full G-stopping-time law equality primes vs composites (size-controlled); C4 'bounded residual' (unsupported: -5 -> 313; not refutable by finite data).")
 print("REFUTED: '341 stalls primitive primes' (11,31 at j=5); 'N_j psp iff j prime' (j=85); 'N_j squarefree iff gcd(j,N_j)=gcd(j,3)' (j=182, 1093^2);")
-print("        draft hostile 'classes 1 vs 8 mod 9 differ' (TV 0.007); pooled C1 (size mixing); 'N_PS-N_SP minus squares bounded' (-5 -> 313);")
-print("        'c(b) maximal exactly at doubly representable b' (b=65, c=19).")
+print("        draft hostile 'classes 1 vs 8 mod 9 differ' (TV 0.007); pooled C1 (size mixing); 'N_j base-2 psp iff base-4 psp' (j=4: 85 is base-4 only);")
+print("        'c(b) maximal exactly at doubly representable b' (b=65, c=19; sharper: |b|=1 is doubly representable with the minimum c=4).")
 print("NO MAP FOUND: Bott 8; {7,21} vs c(b) or cycle lengths or rows or {0,2,10}; Omega(a^2b)=4 / Omega(c^2b)=8 vs H, O (numerology);")
 print("        x^2+c period-3 bifurcation vs 3n+b 3-cycles (exponential Diophantine gate 2^K-27 | bB).")
 print("total runtime", tm())

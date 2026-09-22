@@ -2,18 +2,23 @@
 
 **Status: PROVED (scoped) + FINITE-EXACT + CITED; two conjectures REFUTED with minimal witnesses; OPEN residue named.**
 PROVED: Bang's `n=6` exception is exactly Catalan's `3^2-2^3=1`, equivalently no prime has `ord_p(2)=6`;
-for `n<=6` the critical-orbit numerator `N_n` of `x^2+a/b` factors as `prod_(d|n) H_d(a,b)` with pairwise coprime
-factors, so "no primitive prime at `n`" is the Thue equation `H_n(a,b)=+-1`; complete rational preperiodic graphs
+for `n<=6` (lane script) and `n<=8` (audit script, PARI resultants) the critical-orbit numerator `N_n` of
+`x^2+a/b` factors as `prod_(d|n) H_d(a,b)` with pairwise coprime factors, so "no primitive prime at `n`" is the
+Thue equation `H_n(a,b)=+-1`; complete rational preperiodic graphs
 and complete "which parameters make `x` preperiodic" lists by a valuation/escape argument; the parabola identities
 `c=-7/4-s^2`, `lambda(s)`, `c(t)=-7/4-s(t)^2`. CITED: Bang 1886 / Zsigmondy 1892; PARI `thue` (Bilu-Hanrot,
 unconditional flag) closing the Thue equations for `n=3,4,5` over all of `Q`; PARI `nfdisc`; Morton 1998,
 Flynn-Poonen-Schaefer 1997, Stoll 2008; Krieger via the geometry note. FINITE-EXACT: Bang table `n<=40`, the
 1601-parameter census to `n=8`, unit and Thue searches, the `H_4,H_5,H_6=+-1` boxes. REFUTED: "`f^n(0)=c/2^(2^n-2)`
 at every real parabolic parameter" (witness `n=4`) and "`63 <-> -7/4`" as a structural map. OPEN: `H_6(a,b)=+-1`
-beyond the finite box, everything at `n>=7`, and a uniform resultant theorem. **No novelty claim** for Bang/Catalan,
+beyond the finite box (`H_7`, `H_8` not even box-searched), everything at `n>=9`, and a uniform resultant theorem. **No novelty claim** for Bang/Catalan,
 the Gleason product, or the Chebyshev conjugacy; the `n=3` Thue reduction, the parabola, the parabolic cycle and the
 `Q(2cos 2pi/7)` identification are **inherited** from the geometry note and only re-verified here. No Collatz
-statement is claimed. Session `collatz-mod6-20260917`, lane `zsigmondy_triad`, recovered and finalized 2026-09-21.
+statement is claimed. Session `collatz-mod6-20260917`, lane `zsigmondy_triad`, recovered and finalized 2026-09-21;
+adversarially audited the same day by an independent script
+([audit output](collatz_mod6_20260917_zsigmondy_triad_audit.out), 139 checks, PARI 2.17.4 for all polynomial algebra):
+one table was corrected (resultant signs, section 3), the resultant reduction was extended to `n<=8`, and two
+wording slips were fixed; no claim was refuted.
 
 ## Inheritance and concept board
 
@@ -37,11 +42,14 @@ section 4 and [THM-3333](../../01-canon/theorems/THM-3333-gaussian-square-farey-
 critical-orbit exception).
 
 The closest proved mechanism is the geometry note's `n=3` numerator test (11); this note generalizes it by exact
-pairwise resultants to `n<=6`. The canonical hostile is the `n=2` family `c=-1+-1/b`: infinitely many exceptions,
+pairwise resultants to `n<=6` (the audit's PARI resultants extend it to `n<=8`). The canonical hostile is the `n=2` family `c=-1+-1/b`: infinitely many exceptions,
 so no Zsigmondy-type finiteness holds on the quadratic side without excluding low indices. The corrected near
 misses are (a) the recovered draft's claims that the `n=3` Thue reduction, the parabola and the `-7/4` parabolic
 cycle were new (they are geometry (11), (4), (9)), (b) its incidence list for `-7/4` that stopped at `-77/16` and
-missed `-93/16`, and (c) its ledger count "14" for the `n=1` census failures (true value 13). The least-used sidecar
+missed `-93/16`, (c) its ledger count "14" for the `n=1` census failures (true value 13), and (d) the resultant table of the
+finalized draft, which printed SymPy 1.14's `resultant()` signs (subresultant PRS) rather than the standard
+Sylvester-determinant convention; nine of fifteen entries had the wrong sign (e.g. `Res(H_1,H_3)=H_3(0)=+1`, not
+`-1`), caught by the audit's PARI `polresultant`; only `|Res|=1` was ever load-bearing. The least-used sidecar
 is the resultant table `Res(H_d,H_n)=+-1`, the quadratic analogue of "non-primitive primes of `Phi_n(2)` divide `n`".
 
 Notation: `f_c(x)=x^2+c`, `G_n(c)=f_c^n(0)` (Gleason polynomials), `N_n` the numerator of `f_c^n(0)` in lowest
@@ -50,7 +58,7 @@ terms; a *primitive prime divisor at `n`* is a prime of `N_n` dividing no `N_m`,
 | Lane | Object / representation | Predicate tested | Lost coordinate / hostile |
 |---|---|---|---|
 | Multiplicative | `2^n-1 = prod_(d\|n) Phi_d(2)` | primitive prime at `n` iff `ord_p(2)=n` | `n=6`: `Phi_6(2)=3` divides `6` |
-| Critical orbit | `N_n = prod_(d\|n) H_d(a,b)` (`n<=6`) | primitive prime at `n` iff `0` has exact period `n` mod `p` | `n=2`: infinitely many exceptions |
+| Critical orbit | `N_n = prod_(d\|n) H_d(a,b)` (`n<=8`) | primitive prime at `n` iff `0` has exact period `n` mod `p` | `n=2`: infinitely many exceptions |
 | Parabola | `c=-7/4-s^2`, `s=sigma+1/2` | rational unmarked 3-cycle iff `-7/4-c` is a square | rational points need Morton's `t` |
 | Preperiodic graphs | `PrePer(f_c,Q)` by valuation + escape | which special `c` are points of which others | tail vs period must be kept |
 | Chebyshev | `x=y+1/y`, `y -> y^2` | conductors `7,9` of the two 3-cycles of `x^2-2` | `y=2` (Fermat) is not a unit-circle point |
@@ -83,7 +91,7 @@ primitive part has 73 digits). **FINITE-EXACT (`n<=8`):** `N_3=-7` has no primit
 divisor; `n=1,2,4,...,8` all do. Also `f^3(0)/f(0)=1/64=2^-6`, the "63" the user sees.
 
 Census (FINITE-EXACT): `c=a/b`, `b in {1,2,4,8,16,32,64}`, `|a|<=200`, `gcd(a,b)=1` (1601 parameters), orbit to
-`n=8`. Zero is preperiodic only for `c in {0,-1,-2}` (tail/period `2/1`, `0/2`, `0/1`), reported separately.
+`n=8`. Zero is preperiodic only for `c in {-2,-1,0}` (tail/period `2/1`, `0/2`, `0/1` respectively), reported separately.
 Non-preperiodic parameters whose `N_n` has no primitive prime:
 
 | `n` | count | parameters |
@@ -102,32 +110,44 @@ cusp `1/4`). `N_2=a(a+b)`, and primes of `a+b` are coprime to `a`: no primitive 
 different reasons (`|a|=1`, `|a+b|=1`, a cubic Thue unit). The draft's expectation that `-7/4` is the only
 non-preperiodic failure in the box is true for `n=3` only.
 
-## 3. The n<=6 reduction: Gleason product, pairwise resultants, Thue closures
+## 3. The n<=8 reduction: Gleason product, pairwise resultants, Thue closures
 
 **PROVED (exact division, `n<=6`).** Define `H_n` recursively by `G_n=prod_(d|n) H_d`; the divisions are exact,
 every `H_n` is monic, squarefree and irreducible over `Q`, of degree `1,1,3,6,15,27` for `n=1..6`, with
 `H_n(0)=1` for `n>=2`, `H_n(-1)=1` for `n>=3`, and `H_n(-2) = -2, -1, -1, 1, -1, -1` for `n=1..6`. The exact
-resultants are
+resultants `Res(H_d,H_n)` (standard convention, `Res(f,g)=lc(f)^(deg g) prod_(f(a)=0) g(a)` = the Sylvester
+determinant; computed as such in the lane script and by PARI `polresultant` in the audit; SymPy's `resultant()`
+returns the opposite sign at nine of these entries and must not be used for the table) are
 
-| | `H_1` | `H_2` | `H_3` | `H_4` | `H_5` |
-|---|---|---|---|---|---|
-| `H_2` | `1` | | | | |
-| `H_3` | `-1` | `-1` | | | |
-| `H_4` | `1` | `1` | `-1` | | |
-| `H_5` | `-1` | `-1` | `1` | `1` | |
-| `H_6` | `-1` | `-1` | `1` | `-1` | `1` |
+| | `H_1` | `H_2` | `H_3` | `H_4` | `H_5` | `H_6` | `H_7` |
+|---|---|---|---|---|---|---|---|
+| `H_2` | `1` | | | | | | |
+| `H_3` | `1` | `1` | | | | | |
+| `H_4` | `1` | `1` | `-1` | | | | |
+| `H_5` | `1` | `1` | `-1` | `1` | | | |
+| `H_6` | `1` | `1` | `-1` | `-1` | `-1` | | |
+| `H_7` | `1` | `1` | `1` | `-1` | `-1` | `1` | |
+| `H_8` | `1` | `1` | `-1` | `1` | `-1` | `-1` | `1` |
 
-**Theorem (PROVED for `n<=6`).** Write `H_n(a,b)=b^(deg) H_n(a/b)`. For `c=a/b` in lowest terms,
+The rows `H_7` (degree `63`) and `H_8` (degree `120`) are the audit's extension (PARI; `H_7`, `H_8` are also monic,
+squarefree and irreducible over `Q`, with `H_n(0)=H_n(-1)=1`); the lane script computes `n<=6` only.
+
+**Theorem (PROVED for `n<=6` by the lane script, `n<=8` by the audit script; the argument is uniform, the input is
+the exact table).** Write `H_n(a,b)=b^(deg) H_n(a/b)`. For `c=a/b` in lowest terms,
 `N_n=prod_(d|n) H_d(a,b)` exactly (each `H_d(a,b) = a^deg mod b` is coprime to `b`, and the degrees add to
 `2^(n-1)`). If a prime `p` divided `H_d(a,b)` and `H_n(a,b)` with `d<n`, then `p` does not divide `b`, and `a/b mod p`
 would be a common root of `H_d` and `H_n` modulo `p`, so `p | Res(H_d,H_n)=+-1`: impossible. Hence the factors are
 pairwise coprime, every prime of `H_n(a,b)` is primitive at `n`, and every other prime of `N_n` divides some `N_d`
-with `d|n`, `d<n`. Therefore, for `n<=6`,
+with `d|n`, `d<n`. (The table must cover all pairs `d<n`, not only `d|n`, because "primitive" quantifies over all
+earlier indices; it does.) Therefore, for `n<=8`,
 
 ```text
 N_n has a primitive prime divisor   <=>   |H_n(a,b)| >= 2,
-non-Zsigmondy at n                  <=>   H_n(a,b) = +-1   (a Thue equation of degree 1,1,3,6,15,27).
+non-Zsigmondy at n                  <=>   H_n(a,b) = +-1   (a Thue equation of degree 1,1,3,6,15,27,63,120).
 ```
+
+The audit also checked the theorem numerically on 190 random reduced `c=a/b` with `|a|,b<=3000` for all `n<=8`
+(exact product, pairwise coprimality, and the iff).
 
 **`n=3`, the plastic unit (PROVED + CITED).** `F(a,b)=N(a+b*rho^2)` in `Q(rho)`, `rho^3=rho+1` the plastic number
 (discriminant `-23`, squarefree, so `Z[rho]` is the full ring of integers): the minimal polynomial of `-rho^2` is
@@ -138,7 +158,9 @@ search `1<=b<=10^6` gives `[(-2,1),(-1,1),(0,1),(-7,4)]`. **CITED (PARI/GP `thue
 flag 1 = no GRH):** `thue(F,+1)=[[-7,4],[-1,1],[0,1],[1,0],[2,-1]]` and `thue(F,-1)` is its negative. **Hence over
 all of `Q` the `n=3` non-Zsigmondy parameters are exactly `c in {0,-1,-2}` (preperiodic) and `c=-7/4`, and `-7/4`
 is the coefficient ratio in `rho^-14=4rho^2-7`.** (The geometry note had this FINITE-EXACT to `b<=2000` and
-explicitly left the all-height Thue classification open; it is now closed by the certified solver.)
+explicitly left the all-height Thue classification open; it is now closed by the certified solver. Cross-check,
+CITED PARI `bnfinit` (GRH-conditional unless `bnfcertify`): `Q(rho)` has class number `1`, unit rank `1` and
+fundamental unit `+-rho^(+-1)`, so the unit list above is the whole story; the Thue closure does not depend on it.)
 
 **`n=4,5` (PROVED + CITED).** PARI `thueinit(H_4,1)`: `thue(+1)` gives the eight sign-variants of
 `(1,0),(0,1),(-1,1),(-2,1)` and `thue(-1)=[]`; `thueinit(H_5,1)`: `thue(+1)=[[-1,1],[0,1],[1,0],[2,-1]]`,
@@ -150,9 +172,12 @@ the draft's `n=4` OPEN item and is consistent with Krieger's Theorem 6.1 as cite
 **`n=6` (FINITE-EXACT, OPEN beyond).** `H_6(a,b)=+-1` was searched over all `|a|<=3b`, `b<=100`, and over `a`
 within `2` of `b` times each real root (`-1.9964, -1.9668, -1.9073, -1.7729, -1.476`) for `b<=5000`: only
 `(-2,1),(-1,1),(0,1)`. The same boxes for `H_4` (real roots `-1.9408,-1.3107`) and `H_5` (`-1.9854,-1.8608,-1.6254`)
-agree with PARI. A side run of `thueinit` on the degree-27 `H_6` did not finish within this lane's time budget, so
-`H_6(a,b)=+-1` is OPEN beyond the box. Nothing is proved for `n>=7` (no resultants computed), and whether
-`Res(H_d,H_n)=+-1` for all `d<n` is OPEN (UNCITED-RECOLLECTION: Gleason's simple-root theorem gives it only
+agree with PARI. A side run of `thueinit` on the degree-27 `H_6` did not finish within this lane's time budget, and a separate
+attempt during the audit (PARI 2.17.4, killed by its timeout during `thueinit`; not part of either reproducible
+script) did not finish either, so `H_6(a,b)=+-1` is OPEN beyond the box; for comparison `thueinit`/`thue` for
+`H_3,H_4,H_5` together take under a second in the audit. `H_7` and `H_8` (degrees `63`, `120`) have resultants
+`+-1` (table above) but no Thue search of any kind. Nothing is proved for `n>=9` (no resultants computed), and
+whether `Res(H_d,H_n)=+-1` for all `d<n` is OPEN (UNCITED-RECOLLECTION: Gleason's simple-root theorem gives it only
 `2`-adically).
 
 ## 4. Parabolic mechanism at -7/4, the parabola, and the cycle fields
@@ -202,8 +227,9 @@ THM-4139 (13) satisfies `c(t)=-7/4-s(t)^2` with `s(t)=(t^3+t^2-2t-1)/(2t(t+1))` 
 
 ## 6. Complete rational preperiodic graphs and the microcosm test
 
-**PROVED algorithm** (odd `p`: `v_p(f(x))=2v_p(x)` when `2v_p(x) != v_p(c)`, so the denominator of `x` is `D` with
-`den(c)=D^2`; real escape `|x|>(1+sqrt(1-4c))/2`; finite exact enumeration with revisit detection), the
+**PROVED algorithm** (every prime `p`, including `2`: if `v_p(x)<0` and `2v_p(x) != v_p(c)` then
+`v_p(f(x))=min(2v_p(x),v_p(c))` and the valuations run to `-infinity`, so a preperiodic `x` has `2v_p(x)=v_p(c)`
+at every `p` with `v_p(c)<0` and `v_p(x)>=0` elsewhere: the denominator of `x` is `D` with `den(c)=D^2`; real escape `|x|>(1+sqrt(1-4c))/2`; finite exact enumeration with revisit detection), the
 THM-4146 section 1 argument for general rational `c`. Results (edges in the output):
 
 | `c` | `PrePer(f_c,Q)` | structure |
@@ -251,11 +277,16 @@ Shared predicate: "no prime sees the base point with exact period `n` mod `p`" (
 `2^n-1` iff `ord_p(2)=n`; `p` primitive for `N_n` iff `0` has exact period `n` under `x^2+c` mod `p`). Preserved:
 divisor-indexed factorization `2^n-1=prod Phi_d(2)` vs `N_n=prod H_d(a,b)`, primitive part = the `d=n` factor.
 Lost: Bang's uniform lemma "non-primitive primes of `Phi_n` divide `n`" (on the quadratic side the factors are
-pairwise coprime for `n<=6`, but there is no uniform theorem here, and `n=2` has infinitely many exceptions).
+pairwise coprime for `n<=8`, but there is no uniform theorem here, and `n=2` has infinitely many exceptions).
 Sidecar: the unit equation in `Z[rho]` at `n=3`. Decisive test: `3` versus `1`. **Verdict on "`63 <-> -7/4`":
 REFUTED as a structural identification.** The only exact residues are `f^3(0)/f(0)=1/(63+1)` with exponent
 `2^3-2` (`=2n` only for `n=3`), `63=7*9` attached to `c=-2` (the `s=1/2` point of the parabola centred at `-7/4`),
-and the shared field `Q(2cos 2pi/7)`.
+and the shared field `Q(2cos 2pi/7)`. The sibling lane
+[row_braid_typing](collatz_mod6_20260917_row_braid_typing.md) (section 5) types the same numeral coincidence as a
+map "`63/64=-c(c+1)^2`" with the shared predicate "numerator has no primitive prime divisor"; every exact fact there
+agrees with this note (its identity `c(c+1)^2+1=1/64` at `c=-7/4` is `64G_3-c=c(4c+7)(16c^2+4c+9)` at `4c+7=0`), and
+the two lanes differ only on whether a shared predicate with no map on objects should be called a typed map. This
+note keeps the stricter verdict; readers should not cite the two lanes as disagreeing about a number.
 
 **Typed analogy B (Gaussian squaring, inherited).** Source: `z=(A+iB)/C -> z^2` on primitive Pythagorean points
 (geometry (13)-(16), THM-3341 section 4, THM-3333). Target: `x=2A/C -> x^2-2`. Map: `x=z+z^-1` (the same Chebyshev
@@ -270,23 +301,33 @@ THM-3341's Pell-hypotenuse selector to the critical-orbit exception.
 ```text
 python3 04-computation/experiments/collatz_mod6_20260917_zsigmondy_triad.py > 05-knowledge/results/collatz_mod6_20260917_zsigmondy_triad.out
 python3 -O 04-computation/experiments/collatz_mod6_20260917_zsigmondy_triad.py   # identical stream except the timing line
+python3 04-computation/experiments/collatz_mod6_20260917_zsigmondy_triad_audit.py > 05-knowledge/results/collatz_mod6_20260917_zsigmondy_triad_audit.out   # independent audit, 139 checks, needs gp
 ```
 
-Runtime about 6 s (the output's last line reports it); every check uses explicit `raise`. sha256 script
-`e608d2de7d032b48fa8bc6372b4ec0d4ef006b853303989b94d6245d9219a3f5`, output
-`b063b975b58ea05aaf69689297a9dd8714383bc0769ab6a2328c76425adcee4b` (the timing line is the only run-to-run
-variation). PARI/GP (`gp` on this machine) supplies the
+Runtime about 6 s for the lane script and about 6 s for the audit (each output's last line reports it); every
+check in both uses explicit `raise`, and both streams are identical under `-O` except the timing line. sha256
+lane script `654747cd83d2363f80445af1280957f9d9d93a6fe451794e92fdd20824627cde`, lane output
+`ea3e64f95a1dcdf0422b89bfe78adfda9684abdfd6a5723fc3f56a5413251266`; audit script
+`f21edc84cb631b0ac0b7cb700bc70b7e0c44bea3611fa53e98faf9e9f1cbfbd5`, audit output
+`b979f924e435b1f4af289886c994aedbe3f06e05cc6f978081aa060df7193f03` (the timing line is the only run-to-run
+variation in each). The audit does not import the lane script; it uses PARI for discriminants, resultants, Thue,
+`nfdisc`/`nfisisom`, factoring and rational roots, an own pigeonhole enumerator for the preperiodic sets, and a
+hostile census over all denominators `b<=64`, `|a|<=120` (9403 parameters: `n=3` fails only at `-7/4`, none at
+`n=4,5,6`). PARI/GP (`gp` on this machine) supplies the
 CITED completeness of the `F`, `H_4`, `H_5` Thue lists and the `nfdisc` cross-check; if `gp` is absent the script
 prints that those items are OPEN and the remaining checks still run. Recovery note: the script recovered from the
 transcript predated the agent's final fixes (float-vs-`Rational` equality in the family checks under SymPy 1.14, a
 `\q` that broke the PARI call, a four-element `-7/4` incidence list missing `-93/16`, and a ledger count `14`); each
-was repaired to the independently recomputed truth, never weakened.
+was repaired to the independently recomputed truth, never weakened. Audit edits of 2026-09-21: the resultant
+computation in S3b was switched from SymPy `resultant()` to an explicit Sylvester determinant (standard sign
+convention) and the table above corrected; nothing else in the lane script changed.
 
 ## Stopping boundary / next question
 
 Closed over `Q`: the critical-orbit primitive-divisor question at `n=3,4,5` (Thue, certified), and every incidence
 list above. The next question with real content is the degree-27 Thue equation `H_6(a,b)=+-1` (a longer PARI run,
-or a Baker-type bound with the explicit real roots), and whether `Res(H_d,H_n)=+-1` holds for all `d<n`; a proof
+or a Baker-type bound with the explicit real roots), then `H_7`, `H_8` (degrees `63`, `120`, resultants `+-1`
+known, no search done), and whether `Res(H_d,H_n)=+-1` holds for all `d<n` (now FINITE-EXACT to `n=8`); a proof
 would give "non-Zsigmondy at `n` iff `H_n(a,b)=+-1`" uniformly and reduce Krieger's bound to a Thue-equation
 family. The conductor law along the parabola (is the cycle-field conductor the `3`-adjusted squarefree kernel of
 `4u^2+2uv+7v^2` for `s=u/v`? examples `7,9,31` fit, `s=-1/4` gives `27/4` and a split cubic) is untested beyond

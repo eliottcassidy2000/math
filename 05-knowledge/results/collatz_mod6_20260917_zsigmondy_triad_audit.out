@@ -1,0 +1,218 @@
+Audit of lane zsigmondy_triad.  gp = /opt/homebrew/bin/gp | PARI version: [2, 17, 4]
+
+==============================================================================
+A. Bang/Zsigmondy for 2^n-1 and 2^n+1 (n<=40): recomputed by full factorization
+==============================================================================
+  ok  2^n-1 without primitive prime, n<=40: [1, 6] == [1,6]
+  ok  2^n+1 without primitive prime, n<=40: [3] == [3]
+  ok  Phi_6(2)=3: non-primitive prime 3 is max prime of n, exponent 1==1
+  ok  Phi_18(2)=57: non-primitive prime 3 is max prime of n, exponent 1==1
+  ok  Phi_20(2)=205: non-primitive prime 5 is max prime of n, exponent 1==1
+  ok  Phi_21(2)=2359: non-primitive prime 7 is max prime of n, exponent 1==1
+  ok  non-primitive primes of Phi_n(2), 3<=n<=40: {6: [(3, 1)], 18: [(3, 1)], 20: [(5, 1)], 21: [(7, 1)]}
+  ok  Phi_d(2), d|6 = 1,3,7,3
+  ok  gcd-stripping primitive part agrees with factorization for 2^n-1, n<=40
+  ok  ord_9(2) = 6
+  ok  odd moduli m<=10^4 with ord_m(2)=6: [9, 21, 63] (all composite; least is 9)
+  ok  no prime has ord_p(2)=6 (the moduli of order 6 are exactly the divisors of 63 not dividing 7 or 3: 9,21,63)
+  ok  2^e = 2,5,8 (mod 9) iff e = 1,5,3 (mod 6), e<200
+  ok  63 = 7*9, 3^2-2^3 = 1, (2^3+1)/gcd(2^3+1,2^2-1) = 3
+  ok  2^n-2 = 2n iff n=3 (n<=60)
+
+==============================================================================
+B. Critical orbit of x^2-7/4 to n=8
+==============================================================================
+  ok  f^n(0), n<=4: -7/4, 21/16, -7/256, -114639/65536
+  ok  denominators 4^(2^(n-1)) (no cancellation), n<=8
+   N_1 = -Mat([7, 1])
+   N_2 = [3, 1; 7, 1]
+   N_3 = -Mat([7, 1])
+   N_4 = -[3, 1; 7, 1; 53, 1; 103, 1]
+   N_5 = [7, 1; 419, 1; 563, 1; 3407, 1]
+   N_6 = -[3, 1; 7, 1; 47237, 1; 636069519847, 1]
+  ok  N_4=-3*7*53*103, N_5=7*419*563*3407, N_6=-3*7*47237*636069519847 (PARI factor)
+  ok  listed factors are prime
+  ok  primitive parts n<=6: [7, 3, 1, 5459, 803701079, 30046015909012739]
+  ok  primitive prime exists at n=1,2,4,5,6 and not at n=3 (full factorization)
+  ok  N_7 = -7 * (38-digit prime 8501371765...), PARI isprime
+  ok  N_7 < 0
+  ok  primitive part at n=7 is that prime; at n=8 it has 73 digits (== 73)
+  ok  n=8 primitive part is coprime to all earlier numerators
+  ok  f^3(0)/f(0) = 1/64 = 1/(63+1)
+
+==============================================================================
+C. Census: lane box (b in {1,2,...,64} powers of two, |a|<=200) and a hostile box with ALL b<=64
+==============================================================================
+  ok  lane box size 1601 == 1601
+  ok  0 preperiodic exactly for c=-2 (tail 2, period 1), -1 (tail 0, period 2), 0 (tail 0, period 1): [(Fraction(-2, 1), (2, 1)), (Fraction(-1, 1), (0, 2)), (Fraction(0, 1), (0, 1))]
+  ok  failure counts n=1..8: [13, 12, 1, 0, 0, 0, 0, 0]
+  ok  n=1 failures = +-1/b minus the preperiodic c=-1 (13 of them)
+  ok  n=2 failures = -1+-1/b, b>=2 (12 of them)
+  ok  n=3 failure in the lane box = -7/4 only
+  ok  gcd-stripping and full-factorization primitive tests agree on the lane box for n<=4
+   hostile box: 9403 parameters (all b<=64, |a|<=120), n<=6 failure counts [127, 126, 1, 0, 0, 0]
+  ok  hostile box: same three preperiodic parameters
+  ok  hostile box (all b<=64): n=3 fails only at -7/4; no failures at n=4,5,6
+  ok  hostile box: n=1 failures have |a|=1, n=2 failures have |a+b|=1 (odd denominators included)
+  ok  N_2 = a(a+b), N_3 = a*F(a,b), F = b^3 mod a and mod (a+b): 2000 random (a,b) up to 10^6
+  ok  F(-7,4) = 1
+
+==============================================================================
+D. Gleason product G_n = prod_{d|n} H_d (PARI): degrees, irreducibility, values, resultants n<=6, and EXTENSION to n=7,8
+==============================================================================
+  ok  all quotients G_n / prod_{d|n,d<n} H_d are exact polynomials (n<=8)
+  ok  deg H_n, n=1..8: [1, 1, 3, 6, 15, 27, 63, 120]
+  ok  every H_n is monic
+  ok  every H_n, n<=8, is irreducible over Q (PARI polisirreducible)
+  ok  every H_n, n<=8, is squarefree
+  ok  H_n(0) = 1 for 2<=n<=8
+  ok  H_n(-1) = 1 for 3<=n<=8
+  ok  H_n(-2), n=1..6: [-2, -1, -1, 1, -1, -1]
+  ok  H_3, H_4 as displayed in the note
+  ok  resultant table Res(H_d,H_n), d<n<=6 (standard Sylvester convention, PARI): {2: [1], 3: [1, 1], 4: [1, 1, -1], 5: [1, 1, -1, 1], 6: [1, 1, -1, -1, -1]}
+  ok  SymPy Sylvester determinants agree with PARI (standard convention)
+   SymPy 1.14.0 resultant() (PRS) signs: {2: [1], 3: [-1, -1], 4: [1, 1, -1], 5: [-1, -1, 1, 1], 6: [-1, -1, 1, -1, 1]}
+  ok  the lane's original table = SymPy-PRS signs, which differ from the standard convention at 9 of 15 entries (e.g. Res(H_1,H_3) = H_3(0) = +1, not -1); only |Res|=1 is load-bearing
+   EXTENSION: Res(H_d,H_7), d<7: [1, 1, 1, -1, -1, 1];  Res(H_d,H_8), d<8: [1, 1, -1, 1, -1, -1, 1]
+  ok  Res(H_d,H_n) = +-1 also for n=7 (deg 63) and n=8 (deg 120), all d<n: the n<=6 reduction extends to n<=8 (FINITE-EXACT)
+  ok  N_n = prod_{d|n} H_d(a,b) with pairwise coprime factors and 'no primitive prime at n <=> H_n(a,b)=+-1': 190 random reduced c=a/b (|a|,b<=3000), all n<=8
+
+==============================================================================
+E. Thue equations H_3=F, H_4, H_5 (PARI thue, flag 1 = unconditional) and the plastic units
+==============================================================================
+   (thueinit/thue for H_3,H_4,H_5 took 0.5s)
+  ok  F(a,b)=+-1 complete solution set (mod sign) = {(-7,4),(-2,1),(-1,1),(0,1),(1,0)}: [(-7, 4), (-2, 1), (-1, 1), (0, 1), (1, 0)]
+  ok  H_4(a,b)=+1: 8 sign-variants of (1,0),(0,1),(-1,1),(-2,1); H_4=-1: none.  [(-2, 1), (-1, 0), (-1, 1), (0, -1), (0, 1), (1, -1), (1, 0), (2, -1)]
+  ok  H_5(a,b)=+-1 solutions (mod sign) = (1,0),(0,1),(-1,1),(-2,1): [(-1, 1), (0, 1), (1, 0), (2, -1)]
+  ok  disc(t^3-t-1) = -23
+  ok  minimal polynomial of -rho^2 is H_3 (PARI minpoly)
+  ok  units rho^k = A + C rho^2 (zero rho-coefficient), |k|<=300: [(-14, -7, 4), (-5, 2, -1), (-1, -1, 1), (0, 1, 0), (2, 0, 1)]
+  ok  rho^-14 = 4rho^2-7, rho^-5 = 2-rho^2, rho^-1 = rho^2-1, rho^2 = rho^2
+  ok  field discriminant of Q(rho) is -23 (Z[rho] is the maximal order)
+   fundamental unit(s) of Q(rho) per PARI bnfinit: Mod(-x^2 + 1, x^3 - x - 1)
+  ok  PARI bnfinit: unit rank 1, fundamental unit = +-rho^{+-1} (unit group = +-rho^Z), class number 1  (CITED: PARI bnfinit, unconditional only after bnfcertify; used here as a cross-check, the Thue closure does not depend on it)
+  ok  airplane centre -rho^2 = -1.75487766625, |-7/4 - centre| = 0.004878 < 0.0049
+  ok  direct search F=+-1, b<=10^5, a within 3 of -rho^2 b: [(-2, 1), (-1, 1), (0, 1), (-7, 4)]
+   real roots: {4: [-1.9408, -1.3107], 5: [-1.9854, -1.8608, -1.6254], 6: [-1.9964, -1.9668, -1.9073, -1.7729, -1.476]}
+  ok  real roots of H_4, H_5, H_6 as in the note
+  ok  H_4(a,b)=+-1 in the box (|a|<=3b, b<=100; near real roots b<=5000): [(-2, 1), (-1, 1), (0, 1)]
+  ok  H_5(a,b)=+-1 in the box (|a|<=3b, b<=100; near real roots b<=5000): [(-2, 1), (-1, 1), (0, 1)]
+  ok  H_6(a,b)=+-1 in the box (|a|<=3b, b<=100; near real roots b<=5000): [(-2, 1), (-1, 1), (0, 1)]
+
+==============================================================================
+F. Dynatomic algebra (PARI): disc_x Phi_3, multiplier-1 locus, the parabolic square, 64G_3-c, the n=4 refutation
+==============================================================================
+  ok  Phi_3, Phi_4 are exact polynomial quotients
+  ok  disc_x Phi_3 = -(4c+7)^3 (16c^2+4c+7)^2  (PARI poldisc, sign included)
+  ok  Res_x(Phi_3, (f^3)'-1) = ((4c+7)(16c^2+4c+7))^3
+  ok  64 Phi_3(x,-7/4) = (8x^3+4x^2-18x-1)^2
+  ok  parabolic cycle points [-1.746979603717467, -0.05495813208737119, 1.3019377358048383]
+  ok  multiplier 8*prod(x_i) = 1 (Vieta: product of roots = 1/8)
+  ok  64G_3 - c = c(4c+7)(16c^2+4c+9);  4G_2 - c = c(4c+3)
+  ok  Res_x(Phi_4,(f^4)'-1) = ((4c+5)(16c^2-8c+5)(64c^3+144c^2+108c+135))^4
+  ok  gcd(2^14 G_4 - c, Delta_4) = 1: 'N_n = N_1 at the real parabolic parameter' FAILS at n=4 (REFUTED, minimal witness n=4)
+  ok  real period-4 saddle node c_4 = -1.94055078898 (irrational: cubic irreducible)
+  ok  c=1/4: N_1=1; c=-3/4: f^2(0) = c/4
+
+==============================================================================
+G. The 3-cycle parabola c = -7/4 - s^2, lambda(s), cycle fields (PARI nfdisc / nfisisom)
+==============================================================================
+  ok  c(sigma) with sigma = s-1/2 is c = -7/4 - s^2
+  ok  lambda(s) = 1 - 14s - 4s^2 - 8s^3
+  ok  lambda(0)=1, lambda(-1/4)=35/8, lambda(1/4)=-23/8
+  ok  disc_X P_s = (4s^2+2s+7)^2  (= THM-4146 (12) (4sigma^2+6sigma+9)^2 = geometry (4) (eta^2+eta+7)^2, eta=2s)
+  ok  4sigma^2+6sigma+9 -> 4s^2+2s+7
+  ok  Phi_3(X, -7/4-s^2) = P_s(X) P_{-s}(X): the parabola double-covers the c-line, branched at s=0
+  ok  s=0 cubic 8X^3+4X^2-18X-1
+  ok  s=-1/4 cubic 64X^3+48X^2-132X-35
+  ok  s=1/4 cubic 64X^3+16X^2-164X+23
+  ok  s=-1/2: X^3+X^2-2X-1 (2cos 2pi/7); s=1/2: X^3-3X+1 (2cos 2pi/9)
+  ok  s=-1/4 cubic splits: roots -7/4, -1/4, 5/4 (the AP cycle)
+  ok  4s^2+2s+7 column: 7, 27/4, 31/4, 7, 9
+  ok  nfdisc [C7, C31, C9, parabolic cubic, s=1/4 cubic] = ['49', '961', '81', '49', '961'] == [49, 961, 81, 49, 961]
+  ok  parabolic cubic, s=1/4 cubic, y^3-y^2-10y+8 irreducible
+  ok  PARI nfisisom: parabolic cubic field = Q(2cos 2pi/7); s=1/4 cubic field = Q[y]/(y^3-y^2-10y+8); the 7-, 9-, 31-fields are pairwise distinct
+  ok  Galois groups all cyclic C3: [3, 1, 1, "A3"] [3, 1, 1, "A3"] [3, 1, 1, "A3"] [3, 1, 1, "A3"]
+   polredabs of the two non-reference cubics: x^3 - x^2 - 2*x + 1 x^3 - x^2 - 10*x + 8
+
+==============================================================================
+H. Families and Morton's chart (SymPy, own derivation)
+==============================================================================
+  ok  fixed points rational iff c=(1-r^2)/4: r=1,3,5/2,9/2 -> 0,-2,-21/16,-77/16
+  ok  2-cycle x^2+x+c+1=0 rational iff c=-(3+s^2)/4: s=0,1,2,3,5/2,9/2 -> -3/4,-1,-7/4,-3,-37/16,-93/16
+  ok  discriminants -3-4c and 1-4c
+  ok  c=-3/4: the 2-cycle degenerates to the double fixed point -1/2 (multiplier -1)
+  ok  THM-4139 (13): p0->p1->p2->p0 under x^2+c(t)
+  ok  s(t) = (t^3+t^2-2t-1)/(2t(t+1)), sigma(t) = (t^3-3t-1)/(2t(t+1))
+  ok  c(t) = -7/4 - s(t)^2
+  ok  sigma invariant under t -> -1/(t+1); t = (p1-p2)/(p0-p1)
+  ok  t=1: c=-29/16, points 5/4,-1/4,-7/4
+  ok  c(t)=-2 iff t^3+2t^2-t-1=0 (s=-1/2) or t^3-3t-1=0 (s=+1/2)
+  ok  t^3+2t^2-t-1 is the (negated) reciprocal of the 2cos(2pi/7) cubic; t^3-3t-1 is the (negated) negation of the 2cos(2pi/9) cubic
+  ok  Phi_3(x,-2) = (x^3-3x+1)(x^3+x^2-2x-1)
+  ok  minimal polynomials of 2cos(2pi/7), 2cos(2pi/9)
+  ok  disc 49 and 81
+
+==============================================================================
+I. Rational preperiodic sets: own enumerator (pigeonhole on the finite candidate set), graphs, incidence
+==============================================================================
+   c=1/4     |PrePer|= 2  C1:(())|   edges: -1/2->1/2, 1/2->1/2
+   c=3/16    |PrePer|= 4  C1:(())| C1:(())|   edges: -3/4->3/4, -1/4->1/4, 1/4->1/4, 3/4->3/4
+   c=0       |PrePer|= 3  C1:(())| C1:()|   edges: -1->1, 0->0, 1->1
+   c=-3/4    |PrePer|= 4  C1:(())| C1:(())|   edges: -3/2->3/2, -1/2->-1/2, 1/2->-1/2, 3/2->3/2
+   c=-1      |PrePer|= 3  C2:(())|()|   edges: -1->0, 0->-1, 1->0
+   c=-13/16  |PrePer|= 6  C2:((()()))|(())|   edges: -5/4->3/4, -3/4->-1/4, -1/4->-3/4, 1/4->-3/4, 3/4->-1/4, 5/4->3/4
+   c=-21/16  |PrePer|= 8  C1:(())| C1:(())| C2:(())|(())|   edges: -7/4->7/4, -5/4->1/4, -3/4->-3/4, -1/4->-5/4, 1/4->-5/4, 3/4->-3/4, 5/4->1/4, 7/4->7/4
+   c=-7/4    |PrePer|= 4  C2:(())|(())|   edges: -3/2->1/2, -1/2->-3/2, 1/2->-3/2, 3/2->1/2
+   c=-2      |PrePer|= 5  C1:((()))| C1:(())|   edges: -2->2, -1->-1, 0->-2, 1->-1, 2->2
+   c=-29/16  |PrePer|= 8  C3:((()()))|(())|(())|   edges: -7/4->5/4, -5/4->-1/4, -3/4->-5/4, -1/4->-7/4, 1/4->-7/4, 3/4->-5/4, 5/4->-1/4, 7/4->5/4
+   c=-37/16  |PrePer|= 6  C2:((()()))|(())|   edges: -7/4->3/4, -5/4->-3/4, -3/4->-7/4, 3/4->-7/4, 5/4->-3/4, 7/4->3/4
+   c=-77/16  |PrePer|= 4  C1:(())| C1:(())|   edges: -11/4->11/4, -7/4->-7/4, 7/4->-7/4, 11/4->11/4
+   c=-93/16  |PrePer|= 4  C2:(())|(())|   edges: -11/4->7/4, -7/4->-11/4, 7/4->-11/4, 11/4->7/4
+   c=-45/16  |PrePer|= 6  C1:((()()))| C1:(())|   edges: -9/4->9/4, -5/4->-5/4, -3/4->-9/4, 3/4->-9/4, 5/4->-5/4, 9/4->9/4
+   c=-5/16   |PrePer|= 6  C1:((()()))| C1:(())|   edges: -5/4->5/4, -3/4->1/4, -1/4->-1/4, 1/4->-1/4, 3/4->1/4, 5/4->5/4
+  ok  PrePer(x^2): {-1,0,1}, 0 fixed, 1 fixed, -1->1
+  ok  PrePer(x^2-1): 0<->-1, 1->0
+  ok  PrePer(x^2-2): {-2..2}, 0->-2->2 fixed, 1->-1 fixed
+  ok  PrePer(x^2-7/4) = {+-1/2,+-3/2}: 2-cycle 1/2<->-3/2, -1/2->-3/2, 3/2->1/2
+  ok  PrePer(x^2-3/4) is the same set, fixed points -1/2 and 3/2, non-isomorphic graph
+  ok  PrePer(-21/16) = odd m/4, |m|<=7: fixed 7/4, -3/4; 2-cycle {1/4,-5/4}; -7/4 -> 7/4
+  ok  PrePer(-29/16) = THM-4139 (2), 3-cycle (3)
+  ok  PrePer(-77/16) = {+-7/4,+-11/4}, fixed -7/4 and 11/4
+  ok  PrePer(1/4) = {+-1/2} (cusp: 1/2 fixed)
+  ok  |PrePer| for 3/16, -13/16, -37/16, -93/16, -45/16, -5/16 = 4, 6, 6, 4, 6, 6 (the last two: {+-9/4,+-5/4,+-3/4} and {+-5/4,+-3/4,+-1/4}, beta = 9/4 and 5/4)
+  ok  -45/16: -3/4 -> -9/4 -> 9/4 fixed (tail 2)
+  ok  -93/16: -7/4 -> -11/4 <-> 7/4 (tail 1 into the 2-cycle {-11/4, 7/4})
+  ok  isomorphism classes among the twelve: [['-13/16', '-37/16'], ['3/16', '-3/4', '-77/16']]; all other graphs distinct
+  ok  0,-1,-2,-7/4 are not preperiodic for x^2-7/4
+  ok  incidence among the twelve: -7/4 in ['-21/16', '-29/16', '-37/16', '-77/16'], 1/4 in ['3/16', '-13/16', '-21/16', '-29/16'], -3/4 in ['3/16', '-13/16', '-21/16', '-29/16', '-37/16']
+   x=1/4   : c=-29/16 (1,3), c=-21/16 (0,2), c=-13/16 (1,2), c=-5/16 (1,1), c=3/16 (0,1)
+   x=-3/4  : c=-45/16 (2,1), c=-37/16 (1,2), c=-29/16 (2,3), c=-21/16 (0,1), c=-13/16 (0,2), c=-5/16 (2,1), c=3/16 (1,1)
+   x=-7/4  : c=-93/16 (1,2), c=-77/16 (0,1), c=-37/16 (0,2), c=-29/16 (0,3), c=-21/16 (1,1)
+   x=-29/16: c=-1561/256 (1,2), c=-1305/256 (0,1), c=-633/256 (0,2), c=-377/256 (1,1)
+  ok  parameters with -7/4 preperiodic: -93/16 (1,2), -77/16 (0,1), -37/16 (0,2), -29/16 (0,3), -21/16 (1,1)
+  ok  parameters with 1/4 preperiodic: -29/16 (1,3), -21/16 (0,2), -13/16 (1,2), -5/16 (1,1), 3/16 (0,1)
+  ok  parameters with -3/4 preperiodic: seven, as in the note
+  ok  parameters with -29/16 preperiodic: -1561/256 (1,2), -1305/256 (0,1), -633/256 (0,2), -377/256 (1,1); never period 3
+  ok  -1305/256 = x-x^2 and -633/256 = -1-x-x^2 at x=-29/16
+   x0=-7/4: exact periods 1: [Fraction(-77, 16)]; 2: [Fraction(-37, 16)]; 3: [Fraction(-29, 16)]; 4: none
+   x0=1/4: exact periods 1: [Fraction(3, 16)]; 2: [Fraction(-21, 16)]; 3: none; 4: none
+   x0=-3/4: exact periods 1: [Fraction(-21, 16)]; 2: [Fraction(-13, 16)]; 3: none; 4: none
+   x0=-29/16: exact periods 1: [Fraction(-1305, 256)]; 2: [Fraction(-633, 256)]; 3: none; 4: none
+  ok  -7/4 has exact period 1,2,3 for c=-77/16,-37/16,-29/16 (unique) and no rational period 4
+  ok  1/4: periods 1,2 at 3/16,-21/16; -3/4: periods 1,2 at -21/16,-13/16; no rational period 3 or 4
+  ok  -29/16: periods 1,2 at -1305/256, -633/256; no rational period 3 or 4
+
+==============================================================================
+J. Chebyshev side: Fermat numerators, exact-period counts, the 3-cycles of x^2-2 and their conductors
+==============================================================================
+  ok  orbit numerators of 5/2 under x^2-2 are F_1..F_5: [5, 17, 257, 65537, 4294967297]
+  ok  Fermat numbers pairwise coprime
+  ok  x=y+1/y conjugates y->y^2 to x->x^2-2
+  ok  exact-period point counts of a degree-2 polynomial, n=1..6: [2, 2, 6, 12, 30, 54]
+  ok  doubling on k mod 7 (mod sign): periods [1, 3]; mod 9: [1, 3, 1] (k=3: 2cos(2pi/3)=-1 is a FIXED point)
+  ok  63 = 7*9 = (2^3-1)(2^3+1)
+  ok  2cos(2pi/7) and 2cos(2pi/9) have exact period 3 under x^2-2 (numerically, 30 digits)
+  ok  2cos(2pi/3) = -1 is fixed by x^2-2: the prime conductor 3 on the 2^3+1 side gives no 3-cycle
+
+ALL 139 AUDIT CHECKS PASSED (5.9s)

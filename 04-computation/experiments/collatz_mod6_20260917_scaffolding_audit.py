@@ -9,6 +9,8 @@ Probes P1..P10 follow the numbered claims of the paste.  Every check uses
 explicit `raise` so it survives `python -O`.  Exact integer / Fraction
 arithmetic throughout; sympy is used only for factorisation (P6, P7) and the
 results are re-checked by multiplication.  RAM << 1 GB, runtime ~1 minute.
+Audited 2026-09-21 (scaffolding_audit_audit.py): the first draft's tautological 'ladder explanation' of the
+s^2-1 window in P8 was replaced by Lemmas A/B and the residue-stratified null; P9's stopping-time label fixed.
 
 Reproduce:
   python3 04-computation/experiments/collatz_mod6_20260917_scaffolding_audit.py \
@@ -413,6 +415,9 @@ print("    PROVED (Zsigmondy, CITED; exceptions are only n=1 with a-b=1, n=2 wit
 print("      4-1=3 != 1 and 4+1=5 is not a power of 2, so 4^n-1 has a primitive prime divisor for EVERY n>=1.")
 print("    REFUTED: '341 stalls primitive prime generation of the 4x+1 sequence' -- minimal witness: 4^5-1 has")
 print("      two primitive primes 11 and 31, both dividing 341.")
+print("    INHERITED (same session, wave one): 05-knowledge/results/collatz_mod6_20260917_wild_typing.md section 3 already")
+print("      proves Cipolla with the exact criterion 6j | 4^j-4, Zsigmondy-no-exception for 4^n-1, and this refutation;")
+print("      P6 re-verifies and adds nothing.")
 # Cipolla
 print("(ii) Cipolla (1904, CITED): for prime p>=5, N_p=(4^p-1)/3 is a composite base-2 Fermat pseudoprime.")
 print("      p   N_p            composite  2^(N-1) mod N  factorisation")
@@ -599,36 +604,105 @@ print("      +1 window: %d distinct vs null %.1f (Poisson z = %.2f): chance leve
 print("      -1 window: %d distinct vs null %.1f: a real excess, split 46/47 between bases 1 and 3 mod 4." % (minus_obs, minus_null))
 check(abs(z_plus) < 3, "+1 window at chance level")
 check(minus_obs > 2 * minus_null, "-1 window excess is real")
-# the mechanism: ladder a*2^k-1 -> a*3^k-1
-explained = 0
-unexplained = []
-for p, c in cnt.items():
-    w = sq_window(p)
-    if w is None or w[0] != "s^2-1":
-        continue
-    found = False
-    for k in range(1, 2 * v3(w[1]) + 1):
-        if (p + 1) % 3 ** k == 0:
-            a = (p + 1) // 3 ** k
-            seed = a * 2 ** k - 1
-            o = orbit_shortcut(seed)
-            if seed % 2 == 1 and len(o) > k and o[k] == p and max(o) == p:
-                found = True
-                break
-    if found:
-        explained += 1
-    else:
-        unexplained.append(p)
-print("      PROVED (ladder): C^j(a*2^k-1) = a*3^j*2^(k-j)-1 for j<=k; if a=m^2 and k is even the value after k odd")
-print("        steps is (m*3^(k/2))^2-1, a square minus one.  All %d distinct '-1' peaks are of this form with the ladder" % minus_obs)
-print("        seed a*2^k-1 (some k<=2v_3(s)) having that value as its peak: explained %d, unexplained %s." % (explained, unexplained))
-check(explained == minus_obs and unexplained == [], "every -1 peak comes from the ladder")
-print("      examples: 8=3^2-1 (seed 3=2^2-1; also 5=3*2-1), 80=9^2-1=3^4-1 (seed 15; also 53=27*2-1 on 23's orbit),")
-print("        6560=3^8-1 (21 seeds), 59048=3^10-1 (48 seeds), 164024=25*3^8-1=405^2-1 (17 seeds), 4782968=3^14-1 (17 seeds).")
+# (iv-b) why the crude null above is the wrong comparison, and the exact structure behind the -1 excess.
+# Lemma A (PROVED): no shortcut peak is 6 mod 8: p=6 mod 8 -> p/2 = 3 mod 4 -> (3p+2)/4 is odd -> (9p+10)/8 > p.
+check(all(p % 8 != 6 for p in cnt), "no shortcut peak is 6 mod 8")
+m24 = sorted(Counter(p % 24 for p in cnt).items())
+check([r for r, _ in m24] == [2, 8, 20], "peaks are 2, 8, 20 mod 24")
+print("      PROVED (Lemma A): no shortcut peak is 6 mod 8 (p -> p/2 = 3 mod 4 -> (3p+2)/4 odd -> (9p+10)/8 > p), so")
+print("        with p = 2 mod 6 every peak is 2, 8 or 20 mod 24; census by p mod 24: %s." % m24)
+print("        s odd forces s^2-1 = 0 mod 8 and s^2+1 = 2 mod 8: the two windows sit in different residue classes.")
+# Lemma B (PROVED): the odd seeds with peak p are the odd vertices of the preimage tree of p kept below p.  The preimages
+# of x are 2x and (when x = 2 mod 3) the odd (2x-1)/3.  2p and 2m (m=(2p-1)/3, 2m=(4p-2)/3 > p) are excluded, so the tree
+# below p continues from m only through its odd preimage, which exists iff m = 2 mod 3 iff 9 | p+1.  Iterating, the odd
+# preimage chain of p is p <- m^(1) <- m^(2) <- ... with m^(k) = ((p+1)/3^k) 2^k - 1 (the ladder seeds), of length exactly
+# v_3(p+1); every other seed with peak p branches off through an even vertex 2 m^(k) < p with k >= 2.
+check(all(c == 1 for p, c in cnt.items() if (p + 1) % 9 != 0), "9 !| p+1 => unique seed")
+check(all(cnt[p] >= 2 for p in cnt if (p + 1) % 9 == 0 and (2 * p - 1) // 3 <= LIM), "9 | p+1 and m <= 10^5 => >= 2 seeds")
+lad_in = 0
+for p in cnt:
+    chain, x = [], p
+    while (2 * x - 1) % 3 == 0:
+        x = (2 * x - 1) // 3
+        chain.append(x)
+    check(len(chain) == v3(p + 1) and all(chain[k - 1] == ((p + 1) // 3 ** k) * 2 ** k - 1 for k in range(1, len(chain) + 1)),
+          "odd-preimage chain of p = ladder seeds, length v_3(p+1)")
+    check(all(max(orbit_shortcut(y)) == p for y in chain[:3]), "ladder seeds have peak p")
+    lad_in += sum(1 for y in chain if y <= LIM)
+n_unique = sum(1 for p in cnt if (p + 1) % 9 != 0)
+print("      PROVED (Lemma B): the odd preimage chain of a peak p is exactly the ladder p <- ((p+1)/3^k)2^k-1, k=1..v_3(p+1),")
+print("        and every ladder seed has peak p (the chain rises monotonically to p, and the orbit of p never exceeds p).")
+print("        So 'p = a 3^k-1 is the peak of the ladder seed a 2^k-1' holds for EVERY peak and EVERY k <= v_3(p+1): it is")
+print("        a tautology, not an explanation of the -1 window (the first draft of this lane claimed it as one).")
+print("        A peak has a unique seed iff 9 !| p+1 (%d of the %d distinct peaks); %d of the %d census seeds are ladder" % (n_unique, len(cnt), lad_in, len(peaks)))
+print("        seeds and %d are not.  The ladder tops 6560=3^8-1 (21 seeds), 59048=3^10-1 (48), 164024=25*3^8-1=405^2-1 (17)," % (len(peaks) - lad_in))
+print("        4782968=3^14-1 (17) have v_3(p+1) = 8, 10, 8, 14; multiplicity grows with v_3(p+1).")
 check(cnt[6560] == 21 and cnt[59048] == 48 and cnt[164024] == 17 and cnt[4782968] == 17, "ladder multiplicities")
-print("      So the seed-weighted count 248 is inflated by shared ladder peaks; the 4k+1 selection is REFUTED (bases")
-print("        1 and 3 mod 4 equally represented), and the only structure present is the ladder, which is exactly the")
-print("        hostile of (ii) against 'growth bound by area'.")
+# below the seed box the distinct-peak set is exact and box-free
+below_set = set(q for q in range(8, LIM, 6) if max(orbit_shortcut(q)) == q)
+check(below_set == set(p for p in cnt if p < LIM), "below-box peaks = {q = 2 mod 6 : orbit(q) never exceeds q}")
+cand24 = Counter(q % 24 for q in range(8, LIM, 6))
+pk24 = Counter(p % 24 for p in below_set)
+rate24 = {r: pk24[r] / cand24[r] for r in sorted(cand24)}
+print("      FINITE-EXACT: below the box the distinct peaks are exactly the %d values q = 2 mod 6, q < 10^5, whose orbit" % len(below_set))
+print("        never exceeds q; peak rate by q mod 24: %s." % {r: "%d/%d=%.3f" % (pk24[r], cand24[r], rate24[r]) for r in sorted(cand24)})
+above = [p for p in cnt if p >= LIM]
+frac9_above = sum(1 for p in above if (p + 1) % 9 == 0) / len(above)
+frac9_below = sum(1 for p in below_set if (p + 1) % 9 == 0) / len(below_set)
+print("        share of peaks with 9 | p+1: below the box %.3f (null 1/3), above the box %.3f: peaks above the box are" % (frac9_below, frac9_above))
+print("        reached from seeds < 10^5, and the ladder seed ((p+1)/3^k)2^k-1 ~ p(2/3)^k is small when v_3(p+1) is large.")
+check(abs(frac9_below - 1 / 3) < 0.01 and frac9_above > 0.6, "v_3 bias is a box effect")
+# stratified null: rate of being a distinct peak by (dyadic range, q mod 24, min(v_3(q+1),4)); exact stratum sizes
+def strat(q):
+    return (q.bit_length() - 1, q % 24, min(v3(q + 1), 4))
+
+
+MOD = 24 * 81
+cls = {r: (r % 24, min(v3(r + 1), 4)) for r in range(MOD) if r % 6 == 2}
+cand_s = Counter()
+for j in range(3, 31):
+    lo, hi = 2 ** j, 2 ** (j + 1)
+    for r, key in cls.items():
+        t_lo = max(0, -((lo - r) // -MOD))
+        t_hi = -((hi - r) // -MOD)
+        if t_hi > t_lo:
+            cand_s[(j,) + key] += t_hi - t_lo
+check(sum(cand_s.values()) == sum(len(range(2 ** j + ((2 - 2 ** j) % 6), 2 ** (j + 1), 6)) for j in range(3, 31)), "stratum sizes")
+peak_s = Counter(strat(p) for p in cnt)
+rate_s = {k: peak_s[k] / cand_s[k] for k in cand_s}
+
+
+def strat_expect(name, r_mod4=None, sel=lambda q: True):
+    e, s_ = 0.0, 1
+    while s_ * s_ - 1 < 2 ** 31:
+        q = s_ * s_ + (1 if name == "s^2+1" else -1)
+        if q >= 8 and q % 6 == 2 and (r_mod4 is None or s_ % 4 == r_mod4) and sel(q):
+            e += rate_s.get(strat(q), 0.0)
+        s_ += 1
+    return e
+
+
+print("      STRATIFIED NULL (rate of being a distinct peak by (dyadic range, q mod 24, v_3(q+1) capped at 4)):")
+print("        window   observed (below box, above)   expected (below, above)   z     base 1 mod 4 obs/exp   base 3 mod 4 obs/exp")
+zs = {}
+for name in ("s^2-1", "s^2+1"):
+    obs_ps = [p for p in cnt if sq_window(p) is not None and sq_window(p)[0] == name]
+    o_lo = sum(1 for p in obs_ps if p < LIM)
+    e_all = strat_expect(name)
+    e_lo = strat_expect(name, sel=lambda q: q < LIM)
+    z = (len(obs_ps) - e_all) / math.sqrt(e_all)
+    zs[name] = (len(obs_ps), e_all, z)
+    o1 = sum(1 for p in obs_ps if sq_window(p)[1] % 4 == 1)
+    o3 = len(obs_ps) - o1
+    print("        %-7s  %3d (%3d, %3d)                 %5.1f (%4.1f, %4.1f)      %5.2f   %d / %.1f              %d / %.1f"
+          % (name, len(obs_ps), o_lo, len(obs_ps) - o_lo, e_all, e_lo, e_all - e_lo, z, o1, strat_expect(name, 1), o3, strat_expect(name, 3)))
+check(abs(zs["s^2-1"][2]) < 1 and abs(zs["s^2+1"][2]) < 1, "both square windows at chance under the stratified null")
+check(abs(zs["s^2-1"][1] - 88.7) < 0.1 and abs(zs["s^2+1"][1] - 100.9) < 0.1, "stratified expectations 88.7 and 100.9")
+print("      Under this null both windows and both base classes are at chance.  The crude '-1 excess' (93 vs 40.6) is the")
+print("        product of two exact facts, neither about squares: 8 | s^2-1 with peak rate 0.889 on the class 8 mod 24")
+print("        (Lemma A), and the box bias to 9 | p+1 (Lemma B).  Nothing selects 4k+1, and nothing selects squares.")
+print("      So the seed-weighted count 248 is inflated by shared ladder peaks (Lemma B), the 4k+1 selection is REFUTED")
+print("        (bases 1 and 3 mod 4 equally represented), and the square windows carry no signal beyond residue classes.")
 # shifted windows (arbitrary residue control): {(4k+1)^2+s-1, +s, +s+1}
 print("      shifted-window control, hits for peak in {(4k+1)^2+s-1,(4k+1)^2+s,(4k+1)^2+s+1}:")
 row = []
@@ -711,7 +785,16 @@ for L in range(1, 61):
 K37 = sum(ks_all[:firstL])
 check(firstL == 37 and K37 == 59 and syracuse_word(27, 37)[1] == 23, "27 first descends below itself at L=37, K=59, value 23")
 print("      FINITE-EXACT: for n=27 the first L with positive margin is L=%d (K=%d, T^37(27)=23; 37+59=96 is the" % (firstL, K37))
-print("        classical total stopping time of 27 under the full map).")
+print("        classical stopping time sigma(27) under the full map, the first step below 27; the TOTAL stopping time,")
+print("        the first arrival at 1, is 41+70=111).")
+# independent check of both classical numbers
+x_, i_, st_ = 27, 0, None
+while x_ != 1:
+    x_ = x_ // 2 if x_ % 2 == 0 else 3 * x_ + 1
+    i_ += 1
+    if st_ is None and x_ < 27:
+        st_ = i_
+check(st_ == 96 and i_ == 111, "sigma(27)=96, sigma_inf(27)=111")
 
 # =============================================================================
 hdr("P10. Claim 6 and the remaining phrases")
@@ -745,7 +828,7 @@ rows = [
     ("5 rational 3-cycle", "TRUE (content = THM-4139/4146)", "'horizon cancels translation': SCOPE (P7)"),
     ("6 unified cycle, Bott, quasicrystal FT", "SCOPE", "mod-30 wheel only (P10)"),
     ("II peaks 1,26,80", "FALSE", "peaks 8,26,80 (shortcut) / 16,52,160 (full) (P8)"),
-    ("II peaks track (4k+1)^2", "FALSE", "bases 1/3 mod 4 equally hit (46/47, 49/50 distinct); -1 excess = ladder a*3^k-1 (P8)"),
+    ("II peaks track (4k+1)^2", "FALSE", "bases 1/3 mod 4 equally hit (46/47, 49/50 distinct); both windows at chance under the residue-stratified null (P8)"),
     ("II 196 = sum of first 12 primes", "FALSE", "sum = 197"),
     ("II 160 = 2^5*5 on trunk of 5", "TRUE", "160 is 23's full-map peak; unrelated to 169"),
     ("II 3^L n + B_L < 2^K n", "TRUE (inherited)", "descent certificate; obligation OPEN (P9)"),

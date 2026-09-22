@@ -1,0 +1,119 @@
+
+==============================================================================
+A1  k-table, transfer law, sharpness
+==============================================================================
+k-table: {1: 2, 2: 1, 4: 0, 5: 3, 7: 0, 8: 1}
+  J=1 a=1: k along lifts [2, 0, 0], images mod 3 [1, 1, 2]
+  J=1 a=2: k along lifts [1, 3, 1], images mod 3 [1, 1, 2]
+  transfer law verified J=2..7 (all unit classes)
+  sharpness witnesses (1,7->1,2), (1,10->1,4), (1,28->1,10), (1,82->1,28) confirmed
+
+==============================================================================
+A2  the 2-block recoding: which iff resolves the pairs {4,7}, {2,8}?
+==============================================================================
+  note's clause 'k_(n+1) in {0,2} iff X_n in {1,2,4,5}': violations among units mod 81 = 24, first witness (m, X0, X1, k2) = (7, 7, 2, 1)
+  corrected clause 'k_(n+1) in {0,2} iff X_n in {1,4,7} iff X_(n-1) in {1,2,4,5}': violations = 0
+  (J+1)-letter word pins m mod 3^(J+1) and #J-letter words = 4*3^(J-1) for J<=6  [checked]
+
+==============================================================================
+A3  Markov property at J=3, mu-invariance, Perron data
+==============================================================================
+  J=3: given (X_0,X_1) the residue X_2 is uniform on the three lifts of G(X_1) mod 9 (54 histories)  [checked]
+  mu = w(m mod 3) Haar is G-invariant on cylinders of level J<=6  [checked]
+  A row sums 3, pi=(2,1,2,1,2,1)/9 left eigenvector, E_pi[k]=1, uniform E[k]=7/6, drift log(2/3)=-0.405465
+  P_J^J > 0 and P_J^(J-1) not > 0 for J<=5: primitive with index exactly J  [checked]
+
+==============================================================================
+A4  d_J, g_J (J<=12) by unreduced iteration; Terras F(J), J<=12
+==============================================================================
+  d_J and g_J for J<=12 agree with the note's table; max int64 value used 50331649  (0.2s)
+  ratios (1-d_(J+1))/(1-d_J): ['0.333', '0.667', '0.500', '0.778', '0.571', '0.500', '0.778', '0.587', '0.815', '0.622', '0.548']; geometric mean J=8..12: 0.6358
+  Terras F(J), J<=12, agree with the note (F(12)=1935/2048=0.9448)
+
+==============================================================================
+A5  sigma vs sigma_res on m<=10^6 (pure Python)
+==============================================================================
+  m<=10^6: mismatches {sigma != sigma_res} = 0 []; max sigma = 31 at m=128669  (0.5s)
+
+==============================================================================
+A6  exact moments for every tilt (incl. u=1/2), u*, sharp factor
+==============================================================================
+  u=1/2: E[u^K_J] = (u+1)(u^2+2)/6 * ((u^2+u+1)/3)^(J-1) verified J<=4
+  u=2: E[u^K_J] = (u+1)(u^2+2)/6 * ((u^2+u+1)/3)^(J-1) verified J<=4
+  u=3: E[u^K_J] = (u+1)(u^2+2)/6 * ((u^2+u+1)/3)^(J-1) verified J<=4
+  u=5: E[u^K_J] = (u+1)(u^2+2)/6 * ((u^2+u+1)/3)^(J-1) verified J<=4
+  u=7: E[u^K_J] = (u+1)(u^2+2)/6 * ((u^2+u+1)/3)^(J-1) verified J<=4
+  c=log_2 3=1.584963; u*=2.782079; rho(u*)=3.840680; exp(-I(c))=0.758751; 7/9=0.777778; Lambda'(log 2)=1.4286
+
+==============================================================================
+A7  threshold enumeration i<=12; cycle boundary m = m*(w)
+==============================================================================
+  i= 1: growth classes     2, max m* = 1 = 1.0000, candidates 0, true mismatches 0
+  i= 2: growth classes     3, max m* = 11/7 = 1.5714, candidates 0, true mismatches 0
+  i= 3: growth classes    11, max m* = 53/5 = 10.6000, candidates 1, true mismatches 0
+  i= 4: growth classes    16, max m* = 239/47 = 5.0851, candidates 1, true mismatches 0
+  i= 5: growth classes    58, max m* = 973/13 = 74.8462, candidates 3, true mismatches 0
+  i= 6: growth classes    86, max m* = 827/59 = 14.0169, candidates 2, true mismatches 0
+  i= 7: growth classes   122, max m* = 17269/1909 = 9.0461, candidates 2, true mismatches 0
+  i= 8: growth classes   475, max m* = 63071/1631 = 38.6701, candidates 4, true mismatches 0
+  i= 9: growth classes   688, max m* = 51769/2617 = 19.7818, candidates 4, true mismatches 0
+  i=10: growth classes  2664, max m* = 940375/6487 = 144.9630, candidates 8, true mismatches 0
+  i=11: growth classes  3918, max m* = 3820549/84997 = 44.9492, candidates 8, true mismatches 0
+  i=12: growth classes  5605, max m* = 15459343/517135 = 29.8942, candidates 8, true mismatches 0
+  candidates (i, m): [(3, 2), (4, 2), (5, 2), (5, 4), (5, 14), (6, 2), (6, 4), (7, 2), (7, 4), (8, 2), (8, 4), (8, 5), (8, 7), (9, 2), (9, 4), (9, 5), (9, 7), (10, 2), (10, 4), (10, 5), (10, 7), (10, 8), (10, 10), (10, 11), (10, 13), (11, 2), (11, 4), (11, 5), (11, 7), (11, 8), (11, 10), (11, 11), (11, 13), (12, 2), (12, 4), (12, 5), (12, 7), (12, 8), (12, 10), (12, 11), (12, 13)]
+  integer boundary points m = m*(w) in their own class (= positive G-cycles of length i): [(1, 1), (2, 1), (3, 1), (4, 1), (5, 1), (6, 1), (7, 1), (8, 1), (9, 1), (10, 1), (11, 1), (12, 1)]
+  REFUTED (stopping-boundary conjecture): word (1,2,2), class 2 mod 81, m* = 37/5 = 7.4 > least member 2 (m=2 descends at step 1).  (26.2s)
+
+==============================================================================
+A8  census |b|<=49: counts, content d = gcd(cycle,b), primitive vs non-universal, fixed points
+==============================================================================
+  census done (13.4s)
+  b | #G_b | #T_b | G_b non-universal (d<|b|) | G_b primitive (d=1) | G_b contents d of non-universal cycles | T_b non-universal | T_b primitive
+   1 | 3 |  4 | 0 | 3 | [] | 0 | 4
+   5 | 5 |  9 | 2 | 2 | [(-4, 1), (16, 1)] | 5 | 5
+   7 | 4 |  5 | 1 | 1 | [(-4, 1)] | 1 | 1
+  11 | 5 |  7 | 2 | 2 | [(-16, 1), (-17, 1)] | 3 | 3
+  13 | 7 | 13 | 4 | 4 | [(-7, 1), (209, 1), (236, 1), (256, 1)] | 9 | 9
+  17 | 6 |  8 | 3 | 3 | [(-10, 1), (-59, 1), (-64, 1)] | 4 | 4
+  19 | 6 |  6 | 3 | 3 | [(-13, 1), (-16, 1), (-85, 1)] | 2 | 2
+  23 | 8 | 15 | 5 | 5 | [(-13, 1), (-14, 1), (-29, 1), (-2621, 1), (-3620, 1)] | 11 | 11
+  25 | 7 | 12 | 4 | 2 | [(-13, 1), (-19, 1), (-20, 5), (80, 5)] | 8 | 3
+  29 | 4 |  9 | 1 | 1 | [(-20, 1)] | 5 | 5
+  31 | 4 |  6 | 1 | 1 | [(-16, 1)] | 2 | 2
+  35 | 7 | 12 | 4 | 1 | [(-19, 1), (-20, 5), (-28, 7), (112, 7)] | 8 | 2
+  37 | 4 |  7 | 1 | 1 | [(-28, 1)] | 3 | 3
+  41 | 6 |  5 | 3 | 3 | [(-23, 1), (-26, 1), (-101, 1)] | 1 | 1
+  43 | 5 |  5 | 2 | 2 | [(-22, 1), (-64, 1)] | 1 | 1
+  47 | 6 | 11 | 3 | 3 | [(-25, 1), (-29, 1), (64, 1)] | 7 | 7
+  49 | 8 |  7 | 5 | 4 | [(-28, 7), (-43, 1), (-52, 1), (-59, 1), (-61, 1)] | 3 | 2
+  b=25: non-universal 4 but primitive (d=1) 2 (cycles -20, 80 are 5 x the G_5 cycles -4, 16); b=35: 4 vs 1; b=49: 5 vs 4  [checked]
+  fixed points of G_b: exactly {b, -b} for every odd |b|<=49, 3 not | b  [checked]
+  scaling lemma G_b(bm) = b G_1(m), same j, verified |b|<=49, |m|<=300
+  b=13 positive cycle words (2,2,2,0,2), (3,2,2,0,1), (3,2,0,3,0) confirmed; 2^8-3^5 = 13
+
+==============================================================================
+A9  hostiles: 3^j+1, peak bound, full sweep m<=10^7, the (1,3,2^(n-1),0) family
+==============================================================================
+  3^j+1: G^i = 4^i 3^(j-i)+1 (i<j), G^j = 4^(j-1) for j<=15; j=15 ratio 56.123
+  K_n <= 2n + [k_1=3] along every orbit m<=10^6 (pure Python)  (20.6s)
+  range [1,5000000]: max steps 90 at m=2801426 (ties: [2801426]), max peak/m 133.0327 at m=4847486
+  range [5000001,10000000]: max steps 93 at m=8751065 (ties: [8751065, 9454814]), max peak/m 112.2464 at m=7174454
+  all 6666667 non-multiples of 3 in [1,10^7] reach 1; max steps 93 at 8751065; max peak/m 133.033 at 4847486 (peak 644874241)  (4.0s)
+  n=1: word [1, 3, 0] realized by classes [8, 35] mod 3^4 (two lifts of one class mod 3^3); smallest member 8
+  n=2: word [1, 3, 2, 0] realized by classes [143, 224] mod 3^5 (two lifts of one class mod 3^4); smallest member 143
+  n=3: word [1, 3, 2, 2, 0] realized by classes [62, 305] mod 3^6 (two lifts of one class mod 3^5); smallest member 62
+  n=4: word [1, 3, 2, 2, 2, 0] realized by classes [1277, 2006] mod 3^7 (two lifts of one class mod 3^6); smallest member 1277
+  n=5: word [1, 3, 2, 2, 2, 2, 0] realized by classes [548, 2735] mod 3^8 (two lifts of one class mod 3^7); smallest member 548
+  n=6: word [1, 3, 2, 2, 2, 2, 2, 0] realized by classes [11483, 18044] mod 3^9 (two lifts of one class mod 3^8); smallest member 11483
+  n=7: word [1, 3, 2, 2, 2, 2, 2, 2, 0] realized by classes [4922, 24605] mod 3^10 (two lifts of one class mod 3^9); smallest member 4922
+  n=11: residues X_0..X_12 = [8, 5, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 4] (ten residues 1 = n-1, not n)
+  steps-to-1 = 93 is attained at BOTH m=8751065 (first) and m=9454814 (tie) in [1,10^7]
+  m=4847486: 76 letters, peak 644874241 at step 17, K_17=34, v_3(G(m)-1)=6, v_3(G^8(m)-1)=10, 2^34/3^17=133.03
+
+==============================================================================
+A10  reversed G-orbit is an E-path
+==============================================================================
+  for every m<=3000 (3 not | m) the reversed G-orbit is an E-path 1 -> m  [checked]
+
+total time 65.6s
+ALL AUDIT CHECKS PASSED

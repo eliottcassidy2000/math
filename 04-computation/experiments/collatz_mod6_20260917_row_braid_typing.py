@@ -395,7 +395,10 @@ for r in (1, 3, 5):
     print("   " + ",".join("(%d,%d)" % ch for ch in rows[r]))
 
 # cross-check against inherited JSON
-json_path = "/tmp/math-wt-collatz-mod6/05-knowledge/results/arithmetic_braids_20260917_collatz.json"
+# path relative to this file (audit 2026-09-21: the recovered draft hard-coded a foreign worktree path)
+import os
+json_path = os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "..", "05-knowledge", "results",
+                         "arithmetic_braids_20260917_collatz.json")
 with open(json_path, "r") as fh:
     inh = json.load(fh)
 for r in (1, 3, 5):
@@ -453,7 +456,6 @@ print("cores at fixed height h in row r form ONE odd residue class mod 18, u = b
 for r in (1, 3, 5):
     for h in range(0, 6):
         want = (B_OF_ROW[r] * pow(2, -h, 9)) % 9
-        js = [j for j in range(0, 2 ** 14) if rows_h(j, r, h) if False] if False else None
         js = []
         us = []
         for j in range(0, 2 ** 13):

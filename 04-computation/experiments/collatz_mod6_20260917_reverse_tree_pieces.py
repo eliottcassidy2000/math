@@ -181,10 +181,16 @@ def section1():
             check(witness is not None, "sharpness failed at D=%d path=%s" % (D, path))
             if path == (0,) * D:
                 print("   D=%d path=%s: function of u mod %d (checked all odd u < %d), NOT of u mod %d (witness class %d mod %d)" % (D, path, mod_ok, 2 * 3 ** (D + 2), mod_bad, witness, mod_bad))
+    # audit 2026-09-21: the row of an ODD node is its residue mod 3 (1 -> row 1, 0 -> row 3, 2 -> row 5), not mod 9;
+    # with "mod 9" the induction would only give 3^(D+2).  Verified here for all odd n < 20001.
+    for n in range(1, 20001, 2):
+        check(row_of(n) == {1: 1, 0: 3, 2: 5}[n % 3], "row is a function of n mod 3 at n=%d" % n)
     print("PROVED: along a fixed index path the rows of the first D descendants depend only on u mod 3^(D+1)")
-    print("   (n_j = (2^a u - 1)/3 sends u mod 3^(s+1) to n_j mod 3^s; the row needs the node mod 9; induct on D),")
-    print("   and FINITE-EXACT sharp for D<=4.  This is the tree-side twin of the E-graph lane's S4.1 (greedy letters")
-    print("   k_1..k_J are a function of m mod 3^(J+1), sharp).")
+    print("   (n_j = (2^a u - 1)/3 sends u mod 3^(s+1) to n_j mod 3^s, and the row of an odd node is its residue mod 3:")
+    print("   1 -> row 1, 0 -> row 3, 2 -> row 5, checked for odd n < 20001; induct on D),")
+    print("   and FINITE-EXACT sharp for D<=4 (some class mod 3^D splits; a class whose path reaches a leaf cannot split).")
+    print("   This is the tree-side twin of the E-graph lane's Theorem 4.1 (greedy letters k_1..k_J are a function of")
+    print("   m mod 3^(J+1), sharp).")
     print()
 
 # ============================================================ S2
@@ -240,9 +246,15 @@ def section2(X=10 ** 6):
     tot = len(depth)
     m9 = [sum(by_d[d][r] for d in by_d) for r in range(9)]
     print("all depths pooled: counts mod 9 = %s; fractions mod 3 = %.4f, %.4f, %.4f (trivially 1/3 each: every odd u <= X is a node)" % (m9, (m9[0] + m9[3] + m9[6]) / tot, (m9[1] + m9[4] + m9[7]) / tot, (m9[2] + m9[5] + m9[8]) / tot))
-    # internal nodes only (3 !| u): compare to G's stationary law 2/9 on {1,4,7}, 1/9 on {2,5,8}
-    print("internal nodes (3 !| u) pooled over depths >= 1, fraction 1 mod 3 = %.4f (G stationary: 2/3; fibre-uniform: 1/2)" %
-          ((m9[1] + m9[4] + m9[7]) / (tot - m9[0] - m9[3] - m9[6])))
+    # internal nodes only (3 !| u), depth >= 1 (audit 2026-09-21: the draft pooled depth 0 as well).  Since every odd u <= X
+    # is a node, this pooled fraction is the trivial count of odd u = 1 mod 6 versus 5 mod 6 in [1, X]; it is NOT a tree statement.
+    n_int_d1 = sum(1 for u in depth if u % 3 and u != 1)
+    n_int1_d1 = sum(1 for u in depth if u % 3 == 1 and u != 1)
+    check(n_int_d1 == 333332 and n_int1_d1 == 166666, "internal split %d %d" % (n_int_d1, n_int1_d1))
+    print("internal nodes (3 !| u) pooled over depths >= 1: %d of %d are 1 mod 3, fraction %.4f (G stationary: 2/3; fibre-uniform: 1/2)" %
+          (n_int1_d1, n_int_d1, n_int1_d1 / n_int_d1))
+    print("   TRIVIAL as a pooled count: every odd u <= X is a node, so this is #{odd u = 1 mod 6 <= X} / #{odd u, 3 !| u, u <= X};")
+    print("   only the depth-by-depth rows above carry tree information.")
     # depth-weighted comparison: largest |deviation| from uniform mod 9 per depth (d with count >= 1000)
     worst = max(((max(abs(by_d[d][r] / cnt_d[d] - 1 / 9) for r in range(9)), d) for d in cnt_d if cnt_d[d] >= 1000))
     print("largest deviation of a mod-9 fraction from 1/9 over depths with >= 1000 nodes: %.4f at depth %d" % worst)
@@ -277,10 +289,19 @@ def section2(X=10 ** 6):
     print("FINITE-EXACT: #{odd n <= X : T(n) <= X} = sum over internal u <= X of (J_u(X)+1) = %d, J_u(X) = floor(log_4((3X+1)/(2^(h0+1)u)));" % tot_children)
     print("   %d internal u <= X, mean truncated fibre size %.4f (the infinite fibre is infinite; truncation keeps the first" % (n_internal, tot_children / n_internal))
     print("   J_u(X)+1 children, so small u contribute the phase-dependent prefix of the 9-periodic residue cycle).")
-    print("Discrepancy with G explained exactly: (i) G never visits multiples of 3 (its k skips row-3 children) while the tree")
-    print("   counts every leaf once (1/3 of nodes); (ii) among internal children the tree is uniform on the six classes (lemma),")
-    print("   whereas G's greedy minimal k lands in 1 mod 3 from residues {1,2,4,5} and in 2 mod 3 only from {7,8}, giving 2/3")
-    print("   on 1 mod 3 (E-graph lane S4.3); (iii) the finite table deviates from uniform only through truncation phases.")
+    # audit 2026-09-21: the truncated level d inside [1, X] is NOT the union of the truncated fibres of the depth-(d-1) nodes <= X,
+    # because a child can be smaller than its parent (u = 2 mod 3): at depth 2 the node 932067 has parent 1398101 > X.
+    d2 = sorted(u for u, d in depth.items() if d == 2)
+    par2 = Counter(T(u) for u in d2)
+    check(len(d2) == 34 and par2[1398101] == 1 and 932067 in d2 and sum(v for p, v in par2.items() if p <= X) == 33,
+          "depth-2 anatomy %s" % par2)
+    print("depth-2 anatomy: 34 nodes = 33 children of the six internal depth-1 nodes <= X (parents %s)" % {p: v for p, v in sorted(par2.items()) if p <= X})
+    print("   plus 932067, whose parent 1398101 exceeds X.  So the finite level sets are not fibre truncations alone.")
+    print("Discrepancy with G explained: (i) G never visits multiples of 3 (its k skips row-3 children) while the tree")
+    print("   counts every leaf once (1/3 of nodes); (ii) among internal children the infinite tree is uniform on the six classes")
+    print("   (lemma), whereas G's greedy minimal k lands in 1 mod 3 from residues {1,2,4,5} and in 2 mod 3 only from {7,8},")
+    print("   giving 2/3 on 1 mod 3 (E-graph lane Theorem 4.2).  HEURISTIC, not proved: that the finite depth-by-depth deviations")
+    print("   from uniform come only from the phase-dependent prefixes of truncated fibres (and from parents above X).")
     print()
     return depth
 
@@ -382,51 +403,79 @@ def section3():
     # (e) adversarial constant-split six-class system (HEURISTIC ceiling)
     print("Adversarial constant-split modulus-9 system (HEURISTIC): f_s(x) = sum_{2r=s} f_r(x/2) + sum_{r in {2,8}} alpha_{r->s} f_r(3x/2),")
     print("   alpha_{2->.} a distribution on {1,4,7}, alpha_{8->.} on {2,5,8} (the unknown splits of the odd children by n mod 27).")
-    print("   With f_r ~ c_r x^g the Perron root of M(g) must be 1.  Uniform split (the truth, by the uniformity lemma) gives g = 1;")
-    print("   the minimum over the 9 vertex splits is an upper bound on what any constant-split modulus-9 argument can prove.")
+    print("   With f_r ~ c_r x^g the Perron root rho(g) of M(g) must be 1.  rho(g) is NOT monotone in g (2^-g falls, (3/2)^g rises),")
+    print("   so rho(g) = 1 can have two roots or none; the table lists ALL roots on [0, 3] and the smallest one is the exponent.")
+    print("   Uniform split (the truth, by the uniformity lemma): the all-ones vector is an eigenvector, rho(g) = 2^-g + (3/2)^g/3,")
+    print("   roots g = 1 and g = 2.  The minimum over the 9 vertex splits is an upper bound on what any constant-split")
+    print("   modulus-9 argument can prove.  (Audit 2026-09-21: the recovered draft used plain power iteration, whose one-step")
+    print("   ratio oscillates on the period-3 matrices, and a bisection capped at 1.5; four of its nine entries were artifacts.)")
     states = [1, 2, 4, 5, 7, 8]
     idx = {r: i for i, r in enumerate(states)}
 
-    def perron(M):
-        # power iteration on a nonnegative irreducible-ish matrix
+    def spectral_radius(M):
+        # M is nonnegative and irreducible (the doubling 6-cycle 1->2->4->8->7->5->1 visits every state), so M + I is
+        # primitive and power iteration on it converges to rho(M) + 1 regardless of the period of M.
         n = len(M)
         v = [1.0] * n
         lam = 1.0
-        for _ in range(3000):
-            w = [sum(M[i][j] * v[j] for j in range(n)) for i in range(n)]
-            lam = sum(w)
-            v = [x / lam for x in w]
-        return lam
+        for _ in range(1200):
+            w = [v[i] + sum(M[i][j] * v[j] for j in range(n)) for i in range(n)]
+            lam = sum(w) / sum(v)
+            v = [x / sum(w) for x in w]
+        return lam - 1.0
 
-    def gamma_for(split2, split8):
-        def rho(g):
-            M = [[0.0] * 6 for _ in range(6)]
-            for r in states:
-                M[idx[2 * r % 9]][idx[r]] += 2 ** (-g)
-            for s, a in split2.items():
-                M[idx[s]][idx[2]] += a * (1.5) ** g
-            for s, a in split8.items():
-                M[idx[s]][idx[8]] += a * (1.5) ** g
-            return perron(M)
-        lo, hi = 0.0, 1.5
-        for _ in range(60):
-            mid = (lo + hi) / 2
-            if rho(mid) > 1:
-                lo = mid
-            else:
-                hi = mid
-        return (lo + hi) / 2
-    g_uniform = gamma_for({1: 1 / 3, 4: 1 / 3, 7: 1 / 3}, {2: 1 / 3, 5: 1 / 3, 8: 1 / 3})
-    check(abs(g_uniform - 1) < 1e-6, "uniform split exponent 1, got %f" % g_uniform)
-    print("   uniform split: g = %.6f" % g_uniform)
+    def rho_of(g, split2, split8):
+        M = [[0.0] * 6 for _ in range(6)]
+        for r in states:
+            M[idx[2 * r % 9]][idx[r]] += 2 ** (-g)
+        for s, a in split2.items():
+            M[idx[s]][idx[2]] += a * (1.5) ** g
+        for s, a in split8.items():
+            M[idx[s]][idx[8]] += a * (1.5) ** g
+        return spectral_radius(M)
+
+    def all_roots(split2, split8, gmax=3.0, step=0.01):
+        grid = [i * step for i in range(int(gmax / step) + 1)]
+        vals = [rho_of(g, split2, split8) - 1 for g in grid]
+        out = []
+        for i in range(len(grid) - 1):
+            if abs(vals[i]) < 1e-12:
+                out.append(grid[i])          # exact grid root (g = 1 for the uniform split)
+                continue
+            if vals[i] * vals[i + 1] < 0 and abs(vals[i + 1]) >= 1e-12:
+                a, b, fa = grid[i], grid[i + 1], vals[i]
+                for _ in range(50):
+                    m = (a + b) / 2
+                    fm = rho_of(m, split2, split8) - 1
+                    if (fm > 0) == (fa > 0):
+                        a, fa = m, fm
+                    else:
+                        b = m
+                out.append((a + b) / 2)
+        return out, min(vals) + 1
+    uni2, uni8 = {1: 1 / 3, 4: 1 / 3, 7: 1 / 3}, {2: 1 / 3, 5: 1 / 3, 8: 1 / 3}
+    r_uni, _ = all_roots(uni2, uni8)
+    check(len(r_uni) == 2 and abs(r_uni[0] - 1) < 1e-6 and abs(r_uni[1] - 2) < 1e-6, "uniform split roots %s" % r_uni)
+    check(all(abs(rho_of(g, uni2, uni8) - (2 ** (-g) + 1.5 ** g / 3)) < 1e-7 for g in (0.3, 1.0, 1.7, 2.5)), "uniform closed form")
+    print("   uniform split: roots of rho(g) = 1 on [0,3]: %s" % ["%.6f" % g for g in r_uni])
+    expected = {(1, 2): [1.244017], (1, 5): [0.774576], (1, 8): [], (4, 2): [], (4, 5): [0.576032], (4, 8): [],
+                (7, 2): [0.602605], (7, 5): [0.436588], (7, 8): []}
     best = None
     for s2 in (1, 4, 7):
         for s8 in (2, 5, 8):
-            g = gamma_for({s2: 1.0}, {s8: 1.0})
-            print("   vertex split 2->%d, 8->%d: g = %.6f" % (s2, s8, g))
-            if best is None or g < best[0]:
-                best = (g, s2, s8)
-    print("   minimum over vertices: g = %.6f at 2->%d, 8->%d" % best)
+            roots, rmin = all_roots({s2: 1.0}, {s8: 1.0})
+            exp = expected[(s2, s8)]
+            check(len(roots) == len(exp) and all(abs(a - b) < 2e-6 for a, b in zip(roots, exp)),
+                  "roots at 2->%d, 8->%d: %s vs expected %s" % (s2, s8, roots, exp))
+            if roots:
+                print("   vertex split 2->%d, 8->%d: smallest root g = %.6f (all roots on [0,3]: %s)" % (s2, s8, roots[0], ["%.6f" % g for g in roots]))
+                if best is None or roots[0] < best[0]:
+                    best = (roots[0], s2, s8)
+            else:
+                check(rmin > 1, "no-root split must have rho > 1 on the grid")
+                print("   vertex split 2->%d, 8->%d: NO root (min rho(g) on [0,3] = %.4f > 1; the draft printed %s here)" %
+                      (s2, s8, rmin, "1.500000 = bisection cap" if s8 == 8 else "0.867659 = period-3 power-iteration artifact"))
+    print("   minimum over the five vertex splits that have a root: g = %.6f at 2->%d, 8->%d" % best)
     print("   comparison: 3/7 = %.6f; the vertex minimum is close to but NOT equal to the recollected Krasikov (1989) exponent" % (3 / 7))
     check(abs(best[0] - 3 / 7) > 1e-3, "vertex minimum is not 3/7")
     print("   HEURISTIC reading: %.4f is the ceiling of the constant-split modulus-9 Krasikov scheme; the published bounds use" % best[0])
@@ -475,17 +524,24 @@ def section4(X=10 ** 5):
     print("PROVED: Collatz (all odd n reach 1)  <=>  every u = 1 or 5 mod 6 is a node of the tree  <=>  every odd u with 3 !| u is")
     print("   child(u', j) for some node u' and some j (surjectivity of the guarded D/E closure of {1} onto the odd non-multiples of 3).")
     # the exchange of directions
-    print("Exchange of directions (PROVED, elementary):")
+    print("Exchange of directions (PROVED, elementary; no novelty claim: the Q2 half is the E-graph lane's Theorem 2.1):")
     print("   C  = deterministic Collatz graph (n -> n/2 for even n, n -> 3n+1 for odd n);  E = C plus the arrows n -> 3n+1 for EVEN n.")
-    print("   Q1 (Collatz): every n reaches 1 in C  <=>  the closure of {1} under the GUARDED inverse moves x -> 2x, x -> (x-1)/3 (x = 4 mod 6)")
-    print("        is everything (reverse each arrow of C: this closure is the Krasikov-Lagarias tree).")
-    print("   Q2 (E-graph lane): 1 reaches every m with 3 !| m in E  <=>  every such m reaches 1 by UNGUARDED inverse moves x -> 2x,")
-    print("        x -> (x-1)/3 (x = 1 mod 3) avoiding multiples of 3 (reverse each arrow of E).  The greedy map G(m) = (2^k m-1)/3 with")
-    print("        minimal k, 2^k m in {4,7} mod 9, chooses one such move; G^s(m) = 1 is a certificate of 1 ->* m in E.")
-    print("   So Collatz is a 'TO 1' statement in C = a 'FROM 1' statement for the guarded inverse tree, while Q2 is a 'FROM 1' statement")
-    print("   in E = a 'TO 1' statement for the unguarded inverse graph; reversing arrows exchanges the two, and the relaxation C -> E")
-    print("   adds exactly the even -> 3n+1 arrows (E-graph lane C1: reverse index j = -1 of the fibre).  Q1 and Q2 together say that")
-    print("   the non-multiples of 3 form one strongly connected component of E (E-graph lane conjecture C_E).")
+    print("   Collatz: every n reaches 1 in C  <=>  the closure of {1} under the GUARDED inverse moves x -> 2x, x -> (x-1)/3 (x = 4 mod 6)")
+    print("        is everything (reverse each arrow of C: this closure is the full inverse Collatz tree, multiples of 3 included).")
+    print("   Q1 (E-graph lane's definition): every n reaches 1 in E  <=>  the closure of {1} under the UNGUARDED inverse moves x -> 2x,")
+    print("        x -> (x-1)/3 (x = 1 mod 3) is everything.  Collatz implies Q1 (C is a subgraph of E); the converse is not claimed.")
+    print("   Q2 (E-graph lane): 1 reaches every m with 3 !| m in E  <=>  every such m reaches 1 by the UNGUARDED inverse moves")
+    print("        (reverse each arrow of E).  'Avoiding multiples of 3' is automatic: no E-arrow enters 3Z from outside (3n+1 is never")
+    print("        0 mod 3, and n/2 = 0 mod 3 forces n = 0 mod 3), so no path from 1 meets a multiple of 3.  The greedy map")
+    print("        G(m) = (2^k m-1)/3 with minimal k, 2^k m in {4,7} mod 9, chooses one such move; G^s(m) = 1 certifies 1 ->* m in E.")
+    print("   So Collatz and Q1 are 'TO 1' statements (in C, in E) = 'FROM 1' statements for the guarded / unguarded inverse graphs,")
+    print("   while Q2 is a 'FROM 1' statement in E = a 'TO 1' statement for the unguarded inverse graph; reversing arrows exchanges")
+    print("   the two directions, and the relaxation C -> E adds exactly the even -> 3n+1 arrows (E-graph lane Theorem 1.1: reverse")
+    print("   index j = -1 of the fibre).  Q1 and Q2 together say that the non-multiples of 3 form one strongly connected component")
+    print("   of E (E-graph lane conjecture C_E).  (Audit 2026-09-21: the recovered draft wrote 'Q1 (Collatz)' for the C-statement,")
+    print("   which is not the E-graph lane's Q1, and labelled its unguarded-closure count below as a Q2 illustration; corrected.)")
+    for n in range(1, 20000):
+        check((3 * n + 1) % 3 != 0 and (n % 2 == 1 or (n // 2) % 3 != 0 or n % 3 == 0), "no arrow into 3Z at n=%d" % n)
     # illustration for m = 7
     p = collatz_path(7)
     gp = [7]
@@ -524,17 +580,37 @@ def section4(X=10 ** 5):
                 unguarded.add(y)
                 stack.append(y)
     n_guarded_non3 = sum(1 for y in guarded if y % 3 != 0)
-    print("FINITE-EXACT (X=%d, %.1fs): guarded inverse closure of 1 inside [1,X] has %d nodes (%d not divisible by 3);" % (X, time.time() - t0, len(guarded), n_guarded_non3))
-    print("   unguarded (reversed-E) closure of 1 inside [1,X], multiples of 3 excluded, has %d of the %d non-multiples of 3." % (len(unguarded), X - X // 3))
+    # FROM-1 closure in E inside [1, X]: successors x -> 3x+1 (all x) and x -> x/2 (even x).  This is the Q2 set in the box.
+    from1 = set([1])
+    stack = [1]
+    while stack:
+        x = stack.pop()
+        for y in ((3 * x + 1,) + ((x // 2,) if x % 2 == 0 else ())):
+            if y <= X and y not in from1:
+                from1.add(y)
+                stack.append(y)
+    check(all(y % 3 for y in from1), "FROM-1 set meets 3Z")
+    giant = unguarded & from1
+    print("FINITE-EXACT (X=%d, %.1fs): three closures of 1 inside [1,X]:" % (X, time.time() - t0))
+    print("   (a) guarded inverse closure (Collatz in the box: forward C-orbit stays <= X): %d nodes (%d not divisible by 3);" % (len(guarded), n_guarded_non3))
+    print("   (b) unguarded inverse closure = TO-1-in-E in the box (Q1 in the E-graph lane's sense), multiples of 3 excluded:")
+    print("       %d of the %d non-multiples of 3;" % (len(unguarded), X - X // 3))
+    print("   (c) successor closure = FROM-1-in-E in the box (the Q2 set): %d of the %d non-multiples of 3;" % (len(from1), X - X // 3))
+    print("   (b) and (c) intersect in %d nodes = the giant SCC of E|[1,X] containing 1 (E-graph lane .out S3: giant size 17077)." % len(giant))
+    check(len(unguarded) == 27472 and len(from1) == 29762 and len(giant) == 17077, "closure sizes %d %d %d" % (len(unguarded), len(from1), len(giant)))
     check(all(y in unguarded for y in guarded if y % 3 != 0), "guarded subset of unguarded")
-    print("   guarded closure (minus multiples of 3) is a subset of the unguarded closure (checked); neither is complete inside [1,X]")
-    print("   because Collatz peaks and inverse peaks leave [1,X] (E-graph lane S3); both statements are FINITE-EXACT to 10^6 there.")
+    print("   (a) minus multiples of 3 is a subset of (b) (checked); none of the three is complete inside [1,X] because")
+    print("   forward Collatz peaks or E-node peaks leave [1,X] (E-graph lane S3); Collatz, Q1 and Q2 are FINITE-EXACT to 10^6 there.")
     miss_g = sorted(y for y in range(1, X + 1) if y % 3 and y not in guarded)[:8]
     miss_u = sorted(y for y in range(1, X + 1) if y % 3 and y not in unguarded)[:8]
-    print("   smallest non-multiples of 3 missing from the guarded closure in [1,X]: %s (Collatz peak of %d is %d > X)" % (miss_g, miss_g[0], max(collatz_path(miss_g[0]))))
-    print("   smallest missing from the unguarded closure in [1,X]: %s (matches the E-graph lane's outsiders at N=10^5)" % miss_u)
+    miss_f = sorted(y for y in range(1, X + 1) if y % 3 and y not in from1)[:8]
+    print("   smallest non-multiples of 3 missing from (a): %s (Collatz peak of %d is %d > X)" % (miss_g, miss_g[0], max(collatz_path(miss_g[0]))))
+    print("   smallest missing from (b): %s (the E-graph lane's SCC outsiders at N=10^5; their binding" % miss_u)
+    print("       constraint is the forward peak, and all five smallest lie in (c): %s)" % [y in from1 for y in miss_u[:5]])
+    print("   smallest missing from (c), i.e. the honest Q2-in-the-box outsiders: %s" % miss_f)
     check(max(collatz_path(miss_g[0])) > X, "first guarded outsider must leave [1,X]")
-    check(miss_u[:5] == [1535, 2047, 2207, 2287, 2303], "unguarded outsiders vs E-graph lane")
+    check(miss_u[:5] == [1535, 2047, 2207, 2287, 2303] and all(y in from1 for y in miss_u[:5]), "TO-1 outsiders vs E-graph lane")
+    check(miss_f[:4] == [3281, 4010, 4739, 4922], "FROM-1 outsiders %s" % miss_f)
     print("SCOPE: no map found from this exchange to THM-4139/THM-4146 (x^2-29/16 three-cycle) or THM-3341 (Gaussian squaring);")
     print("   the only shared structure is the mod-6/mod-9 row typing.")
     print()
@@ -622,9 +698,24 @@ def section5(X=10 ** 6):
     check(abs(tail / n_dom - (2 / 3) ** 12) < 2e-4, "geometric tail")
     print("   The empirical law is geometric with ratio 2/3 to within 2e-4 at every L <= 12 and in the tail (checked).")
     # exact survival law: the first L rows of the m-orbit depend on u mod 3^(L+1) and exactly (2/3)^L of the classes survive
+    # lifting lemma (audit 2026-09-21, replaces the draft's garbled wording): for 3 !| a and s >= 1,
+    #     m(a + t 3^s) = m(a) + 2^(h0(a)+1) t 3^(s-1),   t = 0, 1, 2,
+    # since h0 depends on a mod 3 only; 2^(h0+1) is a unit mod 3, so the three lifts of a mod 3^s to mod 3^(s+1) are sent
+    # bijectively onto the three lifts of m(a) mod 3^(s-1) to mod 3^s.  Iterating L times: the three lifts of a surviving class
+    # mod 3^L to mod 3^(L+1) give m^L values that are 0, 1, 2 mod 3 once each, so exactly one third dies at step L.
+    for s in range(1, 7):
+        for a in range(1, 3 ** s):
+            if a % 3 == 0:
+                continue
+            for t in range(3):
+                lhs = ((1 << (h0(a) + 1)) * (a + t * 3 ** s) - 1) // 3
+                rhs = mmap(a) + (1 << (h0(a) + 1)) * t * 3 ** (s - 1)
+                check(lhs == rhs, "lifting lemma at a=%d s=%d t=%d" % (a, s, t))
+    print("   lifting lemma (PROVED; checked s <= 6): m(a + t 3^s) = m(a) + 2^(h0(a)+1) t 3^(s-1), so the three lifts of a class")
+    print("   mod 3^s to mod 3^(s+1) map bijectively onto the three lifts of m(a) mod 3^(s-1) to mod 3^s.")
     print("   survival law by residue classes (PROVED + FINITE-EXACT L<=8): the first L m-steps stay internal for exactly (2/3)^L")
-    print("   of the classes u mod 3^(L+1) coprime to 3 (the residue of m(u) mod 3^s is uniform on its mod-3 class as u runs over")
-    print("   the lifts mod 3^(s+1), so each step kills exactly one third of the surviving classes):")
+    print("   of the classes u mod 3^(L+1) coprime to 3 (iterate the lifting lemma: the three lifts of a class surviving L-1 steps")
+    print("   have m^L values that are 0, 1, 2 mod 3 once each, so each step kills exactly one third of the surviving classes):")
     print("   L | 3^(L+1) | surviving classes | total classes | fraction | (2/3)^L")
     for L in range(1, 9):
         M = 3 ** (L + 1)

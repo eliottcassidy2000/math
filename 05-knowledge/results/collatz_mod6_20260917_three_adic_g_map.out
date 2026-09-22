@@ -63,7 +63,9 @@ rows {1,2,4,5} -> columns {1,4,7}, rows {7,8} -> columns {2,5,8}; let Sigma_A be
      of length J number 6*3^(J-1) = 2*3^J = the number of unit classes mod 3^(J+1), so the injective
      block map is a bijection at every length, and compactness gives every infinite path.
 (ii) The k-word (k_1 k_2 ...) is a 2-block recoding of Phi: k_n determines X_(n-1) except for the
-     pairs {4,7} (k=0) and {2,8} (k=1), and k_(n+1) in {0,2} <=> X_n in {1,2,4,5} resolves the pair.
+     pairs {4,7} (k=0) and {2,8} (k=1), and k_(n+1) in {0,2} <=> X_n in {1,4,7} <=> X_(n-1) in {1,2,4,5}
+     resolves the pair (4 and 2 are the heavy members, 7 and 8 the light ones).  [The recovered draft wrote
+     'k_(n+1) in {0,2} <=> X_n in {1,2,4,5}', which is FALSE: X_n = 7 has k = 0; checked below.]
      Hence the k-word map Z_3^x -> {0,1,2,3}^N is injective (a homeomorphism onto a proper SFT), and
      the number of admissible k-words of length J is 4*3^(J-1) (< 2*3^J: a J-letter word determines
      m only mod 3^(J+1) up to the last pair, a (J+1)-letter word determines m mod 3^(J+1) exactly).
@@ -72,7 +74,10 @@ rows {1,2,4,5} -> columns {1,4,7}, rows {7,8} -> columns {2,5,8}; let Sigma_A be
      vector (2,1,2,1,2,1)/9 = pi_2 = mu at level 2 (S2).  At every level J the same holds (P_J = A_J/3,
      left vector pi_J), so mu is the measure of maximal entropy of G and h_mu(G) = h_top(G) = log 3.
      (The k-word shift is conjugate to Sigma_A, hence also of entropy log 3: 4*3^(J-1) words.)
-[CITED for the Parry-measure facts: Lind-Marcus, Symbolic Dynamics and Coding, Thm 4.4.4 / Sec. 13.3.]
+[CITED for the Parry-measure facts: W. Parry, Intrinsic Markov chains, Trans. Amer. Math. Soc. 112 (1964);
+ the Lind-Marcus theorem/section numbers quoted by the recovered draft (Thm 4.4.4 / Sec. 13.3) are
+ UNCITED-RECOLLECTION and are not relied on.]
+  S1.3(ii): k_(n+1) in {0,2} <=> X_n in {1,4,7} <=> X_(n-1) in {1,2,4,5} verified on all units mod 81; the draft's clause fails at X_n = 7  [checked]
   J=1: residue blocks <-> unit classes mod 3^2 bijective (6); k-words of length 1: 4 = 4*3^0; (J+1)-word pins m mod 3^2  [checked]
   J=2: residue blocks <-> unit classes mod 3^3 bijective (18); k-words of length 2: 12 = 4*3^1; (J+1)-word pins m mod 3^3  [checked]
   J=3: residue blocks <-> unit classes mod 3^4 bijective (54); k-words of length 3: 36 = 4*3^2; (J+1)-word pins m mod 3^4  [checked]
@@ -236,14 +241,16 @@ at least at the sharp rate; the observed ratios (1-d_(J+1))/(1-d_J) for J<=12 ar
   sharp per-step factor exp(-I(c)) = rho(u*)/u*^c = 0.758751  vs wave-one Chernoff 7/9 = 0.777778  [checked u* minimizes]
   observed (1-d_(J+1))/(1-d_J), J=1..11: ['0.333', '0.667', '0.500', '0.778', '0.571', '0.500', '0.778', '0.587', '0.815', '0.622', '0.548']
   observed (1-g_(J+1))/(1-g_J), J=1..11: ['0.500', '1.222', '0.485', '1.208', '0.494', '0.473', '1.298', '0.483', '1.291', '0.490', '0.477']
-  geometric-mean ratio of 1-d_J over J=8..12: 0.6358 (finite-J, lattice effects; asymptotic rate is 0.7588)
+  geometric-mean ratio of 1-d_J over J=8..12: 0.6358 versus exp(-I(c)) = 0.7588.  PROVED: limsup (1/J) log(1-d_J) <= -I(c) (since
+  1-d_J <= 1-g_J); OPEN: whether exp(-I(c)) is the exact rate of 1-d_J; HEURISTIC: the gap is finite-J and lattice effects.
 PROVED (S3.6): exact moment identity for every tilt (rank-one M_u), exact LD rate function I(c) = sup(theta c - log((u^2+u+1)/3));
   the wave-one (7/9)^(J-1) is the u=2 Chernoff bound, valid but not the sharp exponent (0.7588).
 THEOREM S3.7 (PROVED per level).  Exact threshold for sigma = sigma_res.  Fix i>=1 and a word w of length i
 realized by a unit class a mod 3^(i+1), with 2^(K_i) > 3^i.  On that class G^i is the affine map
 m -> (2^(K_i) m - B_i)/3^i, so G^i(m) < m  iff  m < m*(w) := B_i/(2^(K_i) - 3^i).  Hence a mismatch
 sigma(m) = i < sigma_res(m) forces (1) m < m*(w), m in the class a, and (2) no earlier descent: G^l(m) >= m for
-all l < i (then G^i(m) < m automatically, so sigma(m) = i, and 2^(K_i) > 3^i gives sigma_res(m) > i).  Both
+all l < i (then sigma(m) = i, and sigma_res(m) > i because (2) with S3.1(a) excludes 2^(K_l) < 3^l for every
+l < i, while 2^(K_i) > 3^i by hypothesis).  Both
 conditions are decidable by finite enumeration: the candidates m < m*(w) in each class are finitely many
 (m* <= 145 for i <= 12).  If no candidate other than m = 1 (word 2^i, m* = 1 exactly) survives (2), then
 sigma(m) = sigma_res(m) for every m >= 2 with sigma(m) <= 12, and d_J is the EXACT natural density of
@@ -262,8 +269,14 @@ already descended earlier are listed below); the table gives both counts.
   i=11: classes with 2^K>3^i:   3918; max m*(w) = 3820549/84997 = 44.9492 at (a=398596,K=18,B=3820549); candidates m>=2 below m*:   8; true mismatches: 0
   i=12: classes with 2^K>3^i:   5605; max m*(w) = 15459343/517135 = 29.8942 at (a=398596,K=20,B=15459343); candidates m>=2 below m*:   8; true mismatches: 0
   candidates (level i, m, m*(w)) -- each descended at an earlier step: [(3, 2, 7.4), (4, 2, 3.723404255319149), (5, 2, 2.903345724907063), (5, 4, 60.07692307692308), (5, 14, 32.69230769230769), (6, 2, 2.552691432903715), (6, 4, 11.413559322033898), (7, 2, 2.364196502914238), (7, 4, 7.436877946568885), (8, 2, 2.250352959133056), (8, 4, 6.003766670060063), (8, 5, 21.0907418761496), (8, 7, 31.1361128142244), (9, 2, 2.176705060643331), (9, 4, 5.287789239526313), (9, 5, 11.016965991593427), (9, 7, 16.025448987390142), (10, 2, 2.126921861666799), (10, 4, 4.872237130406952), (10, 5, 8.27945239715091), (10, 7, 11.919178595726365), (10, 8, 71.71866810544165), (10, 10, 91.92400184985355), (10, 11, 102.0266687220595), (10, 13, 122.2320024664714), (11, 2, 2.0922638222296297), (11, 4, 4.609850027942609), (11, 5, 7.04121092005842), (11, 7, 10.06181638008763), (11, 8, 22.589091379695756), (11, 10, 28.75740320246597), (11, 11, 31.841559113851076), (11, 13, 38.00987093662129), (12, 2, 2.0676377376222246), (12, 4, 4.435266893683984), (12, 5, 6.35769883458697), (12, 7, 9.036548251880456), (12, 8, 15.193647693542305), (12, 10, 19.248975605982963), (12, 11, 21.276639562203293), (12, 13, 25.331967474643953)]
-PROVED (S3.8): sigma(m) = sigma_res(m) for all m >= 2 with sigma(m) <= 12 (exact threshold enumeration, 4.3s);
+PROVED (S3.8): sigma(m) = sigma_res(m) for all m >= 2 with sigma(m) <= 12 (exact threshold enumeration, 4.4s);
   FINITE-EXACT (S3.3) extends this to all m <= 10^6 (where sigma_res <= 31).  OPEN: all m, all levels.
+  integer boundary points m = m*(w) inside their own class, i.e. positive G-cycles of length i (every element of a
+  positive cycle of length L is the rational fixed point of its own growth word): [(1, 1), (2, 1), (3, 1), (4, 1), (5, 1), (6, 1), (7, 1), (8, 1), (9, 1), (10, 1), (11, 1), (12, 1)]
+PROVED+FINITE-EXACT (S3.9): no positive G-cycle of length <= 12 other than {1} (m*(w) <= 145 for every growth word
+  of length <= 12, and the only integer fixed point in its own class is m = 1, word 2^i).
+  REFUTED (draft's stopping-boundary conjecture 'm*(w) < least positive member of the class of w'): the word (1,2,2)
+  at level 3 is the class 2 mod 81 with m* = 37/5 = 7.4 > 2 (m = 2 descends at step 1).
 
 ==============================================================================
 S4  G_k for odd k, 3 not | k: E[j]=1 for every k; cycle gate; census |k|<=49; duality with T_k
@@ -296,9 +309,10 @@ So the two gates coincide up to REVERSING the word.  Consequences (PROVED):
  (ii) A G_k-cycle is (reversed) a T_k-cycle iff all its elements are odd (then j_i = v_2(3 m_i + k)).
      A T_k-cycle is (reversed) a G_k-cycle iff every exponent is the greedy minimum for its node.
  (iii) G_(-k)(-m) = -G_k(m) and T_(-k)(-n) = -T_k(n): cycle sets of k and -k are negatives.
-There is NO word-level bijection between G_k-cycles and T_k- or T_(-k)-cycles: the census below has
-different counts, and the two maps read different digit expansions (3-adic vs 2-adic).
-  census time 7.1s
+The reversal correspondence (ii) is NOT a bijection between G_k-cycles and T_k- or T_(-k)-cycles: only the
+two fixed points are common, the census counts differ, and the two maps read different digit expansions
+(3-adic vs 2-adic).
+  census time 7.0s
 
   k | #G_k cycles (|m|<=1e5, both signs) | #T_k cycles (odd |n|<=2e5, both signs) | #common (as sets) | G_k cycle minima (by |.|) | T_k cycle minima
   -49 |  8 |  7 | 2 | [28, 43, -49, 49, 52, 59, 61, 196] | [-25, -35, -49, 49, 65, 245, 833]
@@ -344,29 +358,35 @@ Proof: 2^j k m in {k+3, k+6} mod 9  <=>  2^j m in {1 + 3k^-1, 1 + 6k^-1} mod 9 =
 mod 3 permutes the two targets), which is the G_1 condition; then (2^j k m - k)/3 = k (2^j m - 1)/3.  QED
 Hence every G_k has the three UNIVERSAL cycles k*{1}, k*{-1}, k*{-4,-11} (scaled from G_1: 3 cycles, S4.4),
 exactly as T_k(k n) = k T_1(n) gives T_k the four universal cycles k*{1}, k*{-1}, k*{-5,-7,-10..}, k*{-17,...}
-(braids2 signed_cycles: content d = |b|/q; universal <=> q = 1).  PRIMITIVE cycles (not inside kZ) are the
-ones with q = |k|; their counts are tabulated below (G: #cycles - 3; T: #cycles - 4).
+(braids2 signed_cycles: content d = gcd(cycle, b) = |b|/q; universal <=> q = 1).  Cycles NOT inside kZ have content
+d < |k|, i.e. q = |k|/d > 1 ('non-universal', counted below as #cycles - 3 for G and #cycles - 4 for T); the braids2
+PRIMITIVE cycles are those with content d = 1 (q = |k|).  For prime |k| the two notions coincide; for k = 25, 35, 49
+they differ, because a non-universal cycle can be a dilation of a primitive cycle of a proper divisor of k
+(e.g. G_25 has 5*{-4,...} and 5*{16,...} from the primitive G_5 cycles).  [The recovered draft called the
+non-universal cycles 'primitive, q = |k|'; corrected here.]
   scaling lemma verified for all |k|<=49, |m|<=200; universal G_k cycles k*{1}, k*{-1}, k*{-4,-11} present for every k.
 
-  k | #G_k | primitive G_k (= #-3) | #T_k | primitive T_k (= #-4) | primitive G_k cycle minima
-    1 |  3 |  0 |  4 |  0 | []
-    5 |  5 |  2 |  9 |  5 | [-4, 16]
-    7 |  4 |  1 |  5 |  1 | [-4]
-   11 |  5 |  2 |  7 |  3 | [-16, -17]
-   13 |  7 |  4 | 13 |  9 | [-7, 209, 236, 256]
-   17 |  6 |  3 |  8 |  4 | [-10, -59, -64]
-   19 |  6 |  3 |  6 |  2 | [-13, -16, -85]
-   23 |  8 |  5 | 15 | 11 | [-13, -14, -29, -2621, -3620]
-   25 |  7 |  4 | 12 |  8 | [-13, -19, -20, 80]
-   29 |  4 |  1 |  9 |  5 | [-20]
-   31 |  4 |  1 |  6 |  2 | [-16]
-   35 |  7 |  4 | 12 |  8 | [-19, -20, -28, 112]
-   37 |  4 |  1 |  7 |  3 | [-28]
-   41 |  6 |  3 |  5 |  1 | [-23, -26, -101]
-   43 |  5 |  2 |  5 |  1 | [-22, -64]
-   47 |  6 |  3 | 11 |  7 | [-25, -29, 64]
-   49 |  8 |  5 |  7 |  3 | [-28, -43, -52, -59, -61]
-FINITE-EXACT (S4.6): primitive-cycle table for 0<k<=49 (k<0 by negation); k=1: no primitive cycle on either side.
+  k | #G_k | non-universal G_k (d<k, = #-3) | primitive G_k (d=1) | #T_k | non-universal T_k (= #-4) | primitive T_k (d=1) | non-universal G_k cycles (minimum, content d)
+    1 |  3 |  0 |  0 |  4 |  0 |  0 | []
+    5 |  5 |  2 |  2 |  9 |  5 |  5 | [(-4, 1), (16, 1)]
+    7 |  4 |  1 |  1 |  5 |  1 |  1 | [(-4, 1)]
+   11 |  5 |  2 |  2 |  7 |  3 |  3 | [(-16, 1), (-17, 1)]
+   13 |  7 |  4 |  4 | 13 |  9 |  9 | [(-7, 1), (209, 1), (236, 1), (256, 1)]
+   17 |  6 |  3 |  3 |  8 |  4 |  4 | [(-10, 1), (-59, 1), (-64, 1)]
+   19 |  6 |  3 |  3 |  6 |  2 |  2 | [(-13, 1), (-16, 1), (-85, 1)]
+   23 |  8 |  5 |  5 | 15 | 11 | 11 | [(-13, 1), (-14, 1), (-29, 1), (-2621, 1), (-3620, 1)]
+   25 |  7 |  4 |  2 | 12 |  8 |  3 | [(-13, 1), (-19, 1), (-20, 5), (80, 5)]
+   29 |  4 |  1 |  1 |  9 |  5 |  5 | [(-20, 1)]
+   31 |  4 |  1 |  1 |  6 |  2 |  2 | [(-16, 1)]
+   35 |  7 |  4 |  1 | 12 |  8 |  2 | [(-19, 1), (-20, 5), (-28, 7), (112, 7)]
+   37 |  4 |  1 |  1 |  7 |  3 |  3 | [(-28, 1)]
+   41 |  6 |  3 |  3 |  5 |  1 |  1 | [(-23, 1), (-26, 1), (-101, 1)]
+   43 |  5 |  2 |  2 |  5 |  1 |  1 | [(-22, 1), (-64, 1)]
+   47 |  6 |  3 |  3 | 11 |  7 |  7 | [(-25, 1), (-29, 1), (64, 1)]
+   49 |  8 |  5 |  4 |  7 |  3 |  2 | [(-28, 7), (-43, 1), (-52, 1), (-59, 1), (-61, 1)]
+FINITE-EXACT (S4.6): non-universal/primitive table for 0<k<=49 (k<0 by negation); k=1: no non-universal cycle on either side;
+  for k = 25, 35, 49 the non-universal G_k cycles split by content as 25: (d=1) 2 + (d=5) 2; 35: (d=1) 1 + (d=5) 1 + (d=7) 2;
+  49: (d=1) 4 + (d=7) 1  [checked].
 
   G_k cycles with words (k in {1,-1,5,-5,7,-7,11,13}):
     k=  1  cycle [-1]  word [1]  J=1 L=1  2^J-3^L=-1  B'=1  m0=k*B'/(2^J-3^L)=-1
@@ -406,8 +426,10 @@ FINITE-EXACT (S4.6): primitive-cycle table for 0<k<=49 (k<0 by negation); k=1: n
     k= 13  cycle [209, 553, 733, 973, 320]  word [3, 2, 2, 0, 1]  J=8 L=5  2^J-3^L=13  B'=209  m0=k*B'/(2^J-3^L)=209
     k= 13  cycle [236, 625, 829, 272, 721]  word [3, 2, 0, 3, 0]  J=8 L=5  2^J-3^L=13  B'=236  m0=k*B'/(2^J-3^L)=236
 FINITE-EXACT (S4.4): census |k|<=49 above.  Duality verdict: (a) PROVED exact gate identity with word
-  reversal; (b) PROVED negation conjugation k<->-k inside each family; (c) REFUTED: any bijection
-  G_k-cycles <-> T_k-cycles or <-> T_(-k)-cycles (counts differ already at k=1: #G_1=3 vs #T_1=4);
+  reversal; (b) PROVED negation conjugation k<->-k inside each family; (c) REFUTED: the reversal correspondence (ii)
+  as a bijection G_k-cycles <-> T_k-cycles or <-> T_(-k)-cycles: the intersection is the two fixed points only and
+  the census counts differ already at k=1 (#G_1=3 vs #T_1=4); SCOPE: an abstract bijection between the full
+  (unknown, census-bounded) cycle sets is not a mathematical claim and is not refuted;
   (d) the exact intersection is given by criterion (ii) (common cycles counted above).
 
 ==============================================================================
@@ -445,6 +467,7 @@ family can grow faster than 2*(4/3)^n in n steps (Collatz's optimum is (3/2)^n f
   all 6666667 non-multiples of 3 in [1,10^7] reach 1 under G  [checked]  time 4.4s
   max steps-to-1 = 93 at m=8751065   (F1: 93 at 8751065)
   max peak/m = 133.033 at m=4847486, peak=644874241   (F1: 133.03 at 4847486)
+  all m in [1,10^7] with steps-to-1 = 93: [8751065, 9454814] (F1 names the first attainer; 9454814 ties)
   K_n <= 2n + [k_1=3] verified along every orbit (S5.2)  [checked]
   worst m=4847486: word (k_i) = [3, 2, 2, 2, 2, 2, 0, 3, 2, 2, 2, 2, 2, 2, 2, 2, 2, 0, 2, 0, 0, 3, 0, 0, 2, 2, 0, 3, 2, 2, 2, 0, 0, 1, 2, 2, 2, 2, 0, 0, 0, 2, 0, 0, 3, 2, 2, 0, 3, 0, 0, 1, 3, 0, 3, 2, 2, 0, 3, 0, 0, 1, 0, 3, 2, 0, 0, 0, 2, 0, 0, 0, 1, 3, 0, 0]
     residues mod 9 along the orbit: [5, 1, 1, 1, 1, 1, 7, 5, 1, 1, 1, 1, 1, 1, 1, 1, 1, 4, 1, 4, 7, 5, 4, 4, 1, 1, 7, 5, 1, 1, 1, 4, 7, 2, 1, 1, 1, 1, 4, 4, 4, 1, 4, 7, 5, 1, 1, 7, 5, 4, 7, 8, 5, 7, 5, 1, 1, 7, 5, 4, 7, 2, 7, 5, 1, 4, 4, 4, 1, 4, 4, 7, 8, 5, 4, 4]
@@ -455,22 +478,31 @@ family can grow faster than 2*(4/3)^n in n steps (Collatz's optimum is (3/2)^n f
       exact growth to the peak: 2^34/3^17 = 133.03  vs observed peak/m 133.0327 (the carry B_17 costs the difference)
 S5.3  Residue-5 chains (PROVED structure).  Residue 5 mod 9 (factor 8/3) can never repeat consecutively
 and is always preceded by 7 or 8 (factors 1/3, 2/3): the best 5-containing pattern is 8,5,1^n
-with product (2/3)(8/3)(4/3)^n = (16/9)(4/3)^n over n+2 steps, i.e. again rate 4/3.  The word
-8,5,1,...,1 (n ones) then 0 is realized by EXACTLY ONE class mod 3^(n+3): m = 8 mod 27 (forces
-G(m) = 5 mod 9), G(m) = 5+18s, G^2(m) = 13+48s, and 13+48s = 1 mod 3^n (not mod 3^(n+1)) iff
-4s = -1 mod 3^(n-1) with the lift condition.  Smallest members and their exact growth:
+with product (2/3)(8/3)(4/3)^(n-1) = (16/9)(4/3)^(n-1) over n+1 steps, i.e. again rate 4/3.  The residue
+pattern 8,5,1^(n-1),{4 or 7}, i.e. the word 1,3,2^(n-1),0 (n+2 letters), is realized by EXACTLY TWO classes
+mod 3^(n+3): the two lifts with G^(n+1)(m) in {4,7} mod 9 of the single class mod 3^(n+2) carrying the
+prefix 1,3,2^(n-1).  Explicitly m = 8 mod 27 (forces G(m) = 5 mod 9), G(m) = 5+18s, G^2(m) = 13+48s, and
+v_3(G^2(m)-1) = n exactly iff v_3(1+4s) = n-1 exactly (one class of s mod 3^(n-1), two of its three lifts
+mod 3^n).  [The recovered draft said 'exactly one class mod 3^(n+3)' and 'n ones'; both are off by one
+and are corrected here; the class count is checked below.]  Smallest members and their exact growth:
+       classes mod 3^4 realizing the word: [8, 35] (two lifts of one class mod 3^3)
   n= 1  m=         8  word [1, 3, 0]  value after n+1 steps = 13  ratio 1.6250  (16/9)(4/3)^(n-1)=1.7778
+       classes mod 3^5 realizing the word: [143, 224] (two lifts of one class mod 3^4)
   n= 2  m=       143  word [1, 3, 2, 0]  value after n+1 steps = 337  ratio 2.3566  (16/9)(4/3)^(n-1)=2.3704
+       classes mod 3^6 realizing the word: [62, 305] (two lifts of one class mod 3^5)
   n= 3  m=        62  word [1, 3, 2, 2, 0]  value after n+1 steps = 193  ratio 3.1129  (16/9)(4/3)^(n-1)=3.1605
+       classes mod 3^7 realizing the word: [1277, 2006] (two lifts of one class mod 3^6)
   n= 4  m=      1277  word [1, 3, 2, 2, 2, 0]  value after n+1 steps = 5377  ratio 4.2106  (16/9)(4/3)^(n-1)=4.2140
+       classes mod 3^8 realizing the word: [548, 2735] (two lifts of one class mod 3^7)
   n= 5  m=       548  word [1, 3, 2, 2, 2, 2, 0]  value after n+1 steps = 3073  ratio 5.6077  (16/9)(4/3)^(n-1)=5.6187
+       classes mod 3^9 realizing the word: [11483, 18044] (two lifts of one class mod 3^8)
   n= 6  m=     11483  word [1, 3, 2, 2, 2, 2, 2, 0]  value after n+1 steps = 86017  ratio 7.4908  (16/9)(4/3)^(n-1)=7.4915
   n= 7  m=      4922  word [1, 3, 2, 2, 2, 2, 2, 2, 0]  value after n+1 steps = 49153  ratio 9.9864  (16/9)(4/3)^(n-1)=9.9887
   n= 8  m=    103337  word [1, 3, 2, 2, 2, 2, 2, 2, 2, 0]  value after n+1 steps = 1376257  ratio 13.3181  (16/9)(4/3)^(n-1)=13.3183
   n= 9  m=     44288  word [1, 3, 2, 2, 2, 2, 2, 2, 2, 2, 0]  value after n+1 steps = 786433  ratio 17.7572  (16/9)(4/3)^(n-1)=17.7577
   n=10  m=    930023  word [1, 3, 2, 2, 2, 2, 2, 2, 2, 2, 2, 0]  value after n+1 steps = 22020097  ratio 23.6769  (16/9)(4/3)^(n-1)=23.6770
   n=11  m=    398582  word [1, 3, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 0]  value after n+1 steps = 12582913  ratio 31.5692  (16/9)(4/3)^(n-1)=31.5693
-FINITE-EXACT+PROVED (S5.4): the (8,5,1^n) family has word 1,3,2^(n-1),0 exactly and grows at rate 4/3;
+FINITE-EXACT+PROVED (S5.4): the (8,5,1^(n-1)) family has word 1,3,2^(n-1),0 exactly (two classes mod 3^(n+3)) and grows at rate 4/3;
   no family beats 2*(4/3)^n (S5.2).  Hence sup_m peak(m)/m = infinity (S5.1), but peak(m) <= 2 (4/3)^{steps} m always.
 
 ==============================================================================
@@ -534,7 +566,7 @@ Q2 <= 'every m in U reaches 1 under G' (FINITE-EXACT to 10^7, S5; stopping-time 
 ==============================================================================
 Provenance
 ==============================================================================
-source sha256: 15c1570609a589f7b856fa83c45d470bb9c04906aa53ad18edc5aa8d3b2bd625
+source sha256: ffcd4f63571787101d0cd723c17e417f2a5880cf70206c7320a8e45bd27edf58
 python: 3.10.0  numpy: 2.2.6
-total time: 17.0s
+total time: 17.2s
 ALL CHECKS PASSED

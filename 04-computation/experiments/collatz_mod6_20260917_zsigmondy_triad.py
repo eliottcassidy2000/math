@@ -422,14 +422,30 @@ for n in range(1, 7):
           f"H_{n}(0) = {Hd[n].subs(c, 0)}, H_{n}(-1) = {Hd[n].subs(c, -1)}, H_{n}(-2) = {Hd[n].subs(c, -2)}")
 check(sp.expand(Hd[3] - H3) == 0, "H_3 = c^3+2c^2+c+1")
 check(sp.expand(Hd[4] - (c**6 + 3*c**5 + 3*c**4 + 3*c**3 + 2*c**2 + 1)) == 0, "H_4 as displayed in S3")
-print("  Res_c(H_d, H_n) for 1 <= d < n <= 6 (exact):")
+def sylvester_resultant(f_, g_, var):
+    """Res(f,g) as the Sylvester determinant, i.e. the standard convention Res(f,g) = lc(f)^deg g * prod_{f(a)=0} g(a)
+    (PARI polresultant agrees).  SymPy's resultant() (subresultant PRS) returns the opposite sign for some pairs below
+    (audit of 2026-09-21: e.g. Res(H_1,H_3) = H_3(0) = +1, where sympy.resultant gives -1); only |Res| = 1 is load-bearing."""
+    pf, pg = sp.Poly(f_, var), sp.Poly(g_, var)
+    m_, n_ = pf.degree(), pg.degree()
+    Mx = sp.zeros(m_ + n_, m_ + n_)
+    for i in range(n_):
+        for j, v in enumerate(pf.all_coeffs()):
+            Mx[i, i + j] = v
+    for i in range(m_):
+        for j, v in enumerate(pg.all_coeffs()):
+            Mx[n_ + i, i + j] = v
+    return Mx.det()
+print("  Res_c(H_d, H_n) for 1 <= d < n <= 6 (exact Sylvester determinants, standard sign convention):")
 for n in range(2, 7):
     row = []
     for d in range(1, n):
-        r_ = sp.resultant(Hd[d], Hd[n], c)
+        r_ = sylvester_resultant(Hd[d], Hd[n], c)
         check(r_ in (1, -1), f"Res(H_{d},H_{n}) must be +-1, got {r_}")
+        check(abs(sp.resultant(Hd[d], Hd[n], c)) == 1, f"|sympy PRS resultant| = 1 for (d,n)=({d},{n})")
         row.append(f"Res(H_{d},H_{n})={int(r_):>2}")
     print("    " + "; ".join(row))
+check(sylvester_resultant(Hd[1], Hd[3], c) == Hd[3].subs(c, 0) == 1, "Res(H_1,H_3) = H_3(0) = +1 (sign sanity of the convention)")
 print("PROVED (n<=6, from the exact resultants above).  Write H_n(a,b) = b^deg H_n(a/b) (monic in a).  For c=a/b in lowest terms:")
 print("  N_n = prod_(d|n) H_d(a,b) exactly (total degree 2^(n-1); each H_d(a,b) = a^deg mod b is coprime to b).")
 print("  If a prime p divided H_d(a,b) and H_n(a,b) with d<n, then p does not divide b, and a/b mod p would be a common root")

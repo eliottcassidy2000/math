@@ -128,6 +128,9 @@ P6. Claim 5b: the '341 bottleneck' (Zsigmondy for 4^n-1; Cipolla pseudoprimes; t
       4-1=3 != 1 and 4+1=5 is not a power of 2, so 4^n-1 has a primitive prime divisor for EVERY n>=1.
     REFUTED: '341 stalls primitive prime generation of the 4x+1 sequence' -- minimal witness: 4^5-1 has
       two primitive primes 11 and 31, both dividing 341.
+    INHERITED (same session, wave one): 05-knowledge/results/collatz_mod6_20260917_wild_typing.md section 3 already
+      proves Cipolla with the exact criterion 6j | 4^j-4, Zsigmondy-no-exception for 4^n-1, and this refutation;
+      P6 re-verifies and adds nothing.
 (ii) Cipolla (1904, CITED): for prime p>=5, N_p=(4^p-1)/3 is a composite base-2 Fermat pseudoprime.
       p   N_p            composite  2^(N-1) mod N  factorisation
        5  341             True  1  {11: 1, 31: 1}
@@ -192,14 +195,29 @@ P8. SECOND PART: Collatz peaks versus squares of 4k+1 (shortcut map C(n)=n/2, (3
         s^2+1    3            3∤s      50               92   40.9
       +1 window: 99 distinct vs null 81.8 (Poisson z = 1.91): chance level.
       -1 window: 93 distinct vs null 40.6: a real excess, split 46/47 between bases 1 and 3 mod 4.
-      PROVED (ladder): C^j(a*2^k-1) = a*3^j*2^(k-j)-1 for j<=k; if a=m^2 and k is even the value after k odd
-        steps is (m*3^(k/2))^2-1, a square minus one.  All 93 distinct '-1' peaks are of this form with the ladder
-        seed a*2^k-1 (some k<=2v_3(s)) having that value as its peak: explained 93, unexplained [].
-      examples: 8=3^2-1 (seed 3=2^2-1; also 5=3*2-1), 80=9^2-1=3^4-1 (seed 15; also 53=27*2-1 on 23's orbit),
-        6560=3^8-1 (21 seeds), 59048=3^10-1 (48 seeds), 164024=25*3^8-1=405^2-1 (17 seeds), 4782968=3^14-1 (17 seeds).
-      So the seed-weighted count 248 is inflated by shared ladder peaks; the 4k+1 selection is REFUTED (bases
-        1 and 3 mod 4 equally represented), and the only structure present is the ladder, which is exactly the
-        hostile of (ii) against 'growth bound by area'.
+      PROVED (Lemma A): no shortcut peak is 6 mod 8 (p -> p/2 = 3 mod 4 -> (3p+2)/4 odd -> (9p+10)/8 > p), so
+        with p = 2 mod 6 every peak is 2, 8 or 20 mod 24; census by p mod 24: [(2, 6190), (8, 7967), (20, 6184)].
+        s odd forces s^2-1 = 0 mod 8 and s^2+1 = 2 mod 8: the two windows sit in different residue classes.
+      PROVED (Lemma B): the odd preimage chain of a peak p is exactly the ladder p <- ((p+1)/3^k)2^k-1, k=1..v_3(p+1),
+        and every ladder seed has peak p (the chain rises monotonically to p, and the orbit of p never exceeds p).
+        So 'p = a 3^k-1 is the peak of the ladder seed a 2^k-1' holds for EVERY peak and EVERY k <= v_3(p+1): it is
+        a tautology, not an explanation of the -1 window (the first draft of this lane claimed it as one).
+        A peak has a unique seed iff 9 !| p+1 (9461 of the 20341 distinct peaks); 28483 of the 49999 census seeds are ladder
+        seeds and 21516 are not.  The ladder tops 6560=3^8-1 (21 seeds), 59048=3^10-1 (48), 164024=25*3^8-1=405^2-1 (17),
+        4782968=3^14-1 (17) have v_3(p+1) = 8, 10, 8, 14; multiplicity grows with v_3(p+1).
+      FINITE-EXACT: below the box the distinct peaks are exactly the 9423 values q = 2 mod 6, q < 10^5, whose orbit
+        never exceeds q; peak rate by q mod 24: {2: '2868/4166=0.688', 8: '3703/4167=0.889', 14: '0/4167=0.000', 20: '2852/4166=0.685'}.
+        share of peaks with 9 | p+1: below the box 0.335 (null 1/3), above the box 0.707: peaks above the box are
+        reached from seeds < 10^5, and the ladder seed ((p+1)/3^k)2^k-1 ~ p(2/3)^k is small when v_3(p+1) is large.
+      STRATIFIED NULL (rate of being a distinct peak by (dyadic range, q mod 24, v_3(q+1) capped at 4)):
+        window   observed (below box, above)   expected (below, above)   z     base 1 mod 4 obs/exp   base 3 mod 4 obs/exp
+        s^2-1     93 ( 44,  49)                  88.7 (45.5, 43.1)       0.46   46 / 44.6              47 / 44.1
+        s^2+1     99 ( 68,  31)                 100.9 (71.2, 29.7)      -0.19   49 / 50.7              50 / 50.2
+      Under this null both windows and both base classes are at chance.  The crude '-1 excess' (93 vs 40.6) is the
+        product of two exact facts, neither about squares: 8 | s^2-1 with peak rate 0.889 on the class 8 mod 24
+        (Lemma A), and the box bias to 9 | p+1 (Lemma B).  Nothing selects 4k+1, and nothing selects squares.
+      So the seed-weighted count 248 is inflated by shared ladder peaks (Lemma B), the 4k+1 selection is REFUTED
+        (bases 1 and 3 mod 4 equally represented), and the square windows carry no signal beyond residue classes.
       shifted-window control, hits for peak in {(4k+1)^2+s-1,(4k+1)^2+s,(4k+1)^2+s+1}:
         [(-12, 23), (-10, 0), (-8, 24), (-6, 115), (-4, 91), (-2, 152), (0, 248), (2, 96), (4, 0), (6, 150), (8, 150), (10, 21), (12, 21)]
       REFUTED ('accelerated Syracuse paths track the boundaries of perfect squares'): the hit count is at
@@ -230,7 +248,8 @@ P9. Descent certificate 2^K T^L(n) = 3^L n + B_L (inherited identity) and the op
       run out of volume' is not a statement about any n.  The obligation remains OPEN, verbatim as in the audit.
     27 reaches 1 after L=41 odd steps (K=70, total 111 full-map steps).
       FINITE-EXACT: for n=27 the first L with positive margin is L=37 (K=59, T^37(27)=23; 37+59=96 is the
-        classical total stopping time of 27 under the full map).
+        classical stopping time sigma(27) under the full map, the first step below 27; the TOTAL stopping time,
+        the first arrival at 1, is 41+70=111).
 
 ==============================================================================
 P10. Claim 6 and the remaining phrases
@@ -263,7 +282,7 @@ SUMMARY TABLE
   | 5 rational 3-cycle                                         | TRUE (content = THM-4139/4146) | 'horizon cancels translation': SCOPE (P7)
   | 6 unified cycle, Bott, quasicrystal FT                     | SCOPE                          | mod-30 wheel only (P10)
   | II peaks 1,26,80                                           | FALSE                          | peaks 8,26,80 (shortcut) / 16,52,160 (full) (P8)
-  | II peaks track (4k+1)^2                                    | FALSE                          | bases 1/3 mod 4 equally hit (46/47, 49/50 distinct); -1 excess = ladder a*3^k-1 (P8)
+  | II peaks track (4k+1)^2                                    | FALSE                          | bases 1/3 mod 4 equally hit (46/47, 49/50 distinct); both windows at chance under the residue-stratified null (P8)
   | II 196 = sum of first 12 primes                            | FALSE                          | sum = 197
   | II 160 = 2^5*5 on trunk of 5                               | TRUE                           | 160 is 23's full-map peak; unrelated to 169
   | II 3^L n + B_L < 2^K n                                     | TRUE (inherited)               | descent certificate; obligation OPEN (P9)

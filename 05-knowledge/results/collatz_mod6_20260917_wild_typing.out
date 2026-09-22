@@ -87,10 +87,11 @@ S2. {7,21}: tournaments n<=6 (control), 3n+b cycle-count spectrum, Mersenne prob
   n=5:   1024 labelled tournaments; h values = [1, 3, 5, 9, 11, 13, 15] ; |Aut| values = [1, 3, 5] ; max h = 15
   n=6:  32768 labelled tournaments; h values = [1, 3, 5, 9, 11, 13, 15, 17, 19, 23, 25, 27, 29, 31, 33, 37, 41, 43, 45] ; |Aut| values = [1, 3, 5, 9] ; max h = 45
   union of attained h for n<=6: [1, 3, 5, 9, 11, 13, 15, 17, 19, 23, 25, 27, 29, 31, 33, 37, 41, 43, 45]
-  odd values <= 45 NOT attained for n<=6: [7, 21, 35, 39]  (7 and 21 absent, as THM-1745 / death-star S70 state for all n; the others fill in at larger n per the theorem)
+  odd values <= 45 NOT attained for n<=6: [7, 21, 35, 39]  (7 and 21 absent for ALL n: canon THM-1370 / THM-200; 35 and 39 are attained by n=8, where THM-1370's census covers every odd value in [1,609] except 7, 21)
   Mersenne probe: 2^j-1 = [1, 3, 7, 15, 31, 63] ; attained for n<=6: [1, 3, 15, 31] ; max h per n vs 2^(n-1)-1: [(3, 3, 3), (4, 5, 7), (5, 15, 15), (6, 45, 31)]
-  VERDICT (a): 7 = 2^3-1 has no Mersenne mechanism: the spectrum is 'odds minus {7,21}' so 1,3,15,31,63,... ARE attained;
-      the max h at n=4 is 5 (< 7) and at n=5 it is 15 = 2^4-1 while 7 is skipped; 63 = 2^6-1 = 9*7 is in the spectrum (THM-1745 head).
+  VERDICT (a): 7 = 2^3-1 has no Mersenne mechanism: 7 and 21 are the only odd holes PROVED for all n (THM-1370), and 1,3,15,31 (n<=6 here)
+      and 63 (n=8, THM-1370 corollary, FINITE-EXACT; the '7*3^k gap tower' was refuted there) ARE attained; 'spectrum = odds minus {7,21}'
+      is THM-1370's completeness CONJECTURE, not a theorem.  The max h at n=4 is 5 (< 7) and at n=5 it is 15 = 2^4-1 while 7 is skipped.
       The row-braid fact ord_9(2)=6 (9 | 63) and the tournament hole 7 share the prime 7 only as a numeral: NO MAP FOUND.
 
 --- S2.2  3n+b cycle census, gcd(b,6)=1, 1<=b<=99, both signs of n; U1: |n|<=10^5 escape 10^18; U2: |n|<=2*10^5 escape 10^40 ---
@@ -200,7 +201,9 @@ S2. {7,21}: tournaments n<=6 (control), 3n+b cycle-count spectrum, Mersenne prob
     N is composite: N = (2^p-1)*((2^p+1)/3) with both factors >1 for p>=3.  p=3 fails exactly because 3 | 3 (N_3=21: 2^20 = 4 mod 21).
   PROVED (exact criterion, all j>=3): ord_{N_j}(2) = 2j (it divides 2j; a proper divisor d<=j would give N_j | 2^j-1 < N_j),
     so N_j is a base-2 pseudoprime iff N_j is composite (true for j>=3) and 2j | N_j-1 = (4^j-4)/3, i.e. iff 6j | 4^j-4.
-    Corollary: N_j base-2 psp iff N_j base-4 psp (same divisibility j | N_j-1 with ord_{N_j}(4)=j).
+    Base 4 (ord_{N_j}(4)=j): N_j is a base-4 psp iff j | N_j-1 iff 3j | 4^j-4.  Since N_j-1 = 4(4^{j-1}-1)/3 has v_2 = 2 exactly,
+    'base-2 iff base-4' holds iff 4 !| j; for 4 | j, N_j is NEVER a base-2 psp but can be a base-4 psp (audit 2026-09-21 corrected the
+    recovered draft's unconditional corollary).  Base-4-only indices j<=20000: [4, 28, 532, 2044, 11476] (all = 4 mod 8; minimal witness j=4: N_4 = 85 = 5*17, ord_85(4) = 4 | 84, ord_85(2) = 8 !| 84)
   REFUTED (user's pasted claim '341 stalls primitive prime generation of 4x+1'): 341 = N_5 = 11*31 brings TWO new primes (both primitive),
     and Zsigmondy for 4^j-1 has NO exception (4-1=3 != 1; 4+1=5 not a power of 2; (2,1,6) is base 2 not 4): every N_j, j>=2, has a
     prime dividing no earlier trunk term (checked j<=40 above; primitive primes are never 3 since 3 | 4-1).
@@ -208,10 +211,12 @@ S2. {7,21}: tournaments n<=6 (control), 3n+b cycle-count spectrum, Mersenne prob
     composite members j<=20000: [85, 91, 341, 451, 703, 946, 1105, 1247, 1271, 1387, 1729, 1891, 2047, 2071, 2465, 2701, 2821, 2926, 3133, 3277, 3367, 3683, 4033, 4369, 4681, 4795, 4859, 5461, 5551, 6601, 6643, 7957, 8321, 8614, 8695, 8911, 9061, 9131, 9211, 9605, 9919, 10261, 10585, 11305, 12403, 13019, 13741, 13747, 13981, 14351, 14491, 14701, 15211, 15709, 15841, 16021, 16471, 16705, 18721, 19669, 19951]
     even members: [946, 2926, 8614]
     direct verification: N_85, N_91, N_341, N_946 are base-2 (and base-4) pseudoprimes (85=5*17, 91=7*13, 341=11*31, 946=2*11*43).
-  PROVED (tower closure): j in W  =>  N_j in W.  Proof: ord_{N_j}(4)=j and 2j | N_j-1 give 4^{N_j-1}=1 mod N_j, i.e. N_j | 4^{N_j}-4;
+  PROVED (tower closure, sharpened by the audit): j | N_j-1 and 3 !| j (j>=2)  =>  N_j in W; in particular j in W => N_j in W.
+    Proof: ord_{N_j}(4)=j and j | N_j-1 give 4^{N_j-1}=1 mod N_j, i.e. N_j | 4^{N_j}-4;
     N_j is odd (1+4+...+4^{j-1}) and 3 !| N_j (N_j = j mod 3, 3 !| j), and 4^m = 4 mod 6 for all m>=1; CRT gives 6N_j | 4^{N_j}-4.
-    Hence every prime p>=5 starts an infinite chain p -> N_p -> N_{N_p} -> ... of base-2 pseudoprimes (Cipolla's construction iterated).
-    checked: N_5=341, N_7=5461, N_11, N_13 are in W; second level N_341 (682 bits) and N_5461 (10922 bits) verified base-2 pseudoprimes.
+    Hence every prime p>=5 starts an infinite chain p -> N_p -> N_{N_p} -> ... of base-2 pseudoprimes (Cipolla's construction iterated),
+    and the base-4-only indices feed W too: 4 | N_4-1 = 84 gives 85 = N_4 in W (this is why the first composite member of W is 85).
+    checked: N_5=341, N_7=5461, N_11, N_13 are in W; second level N_341 (681 bits) and N_5461 (10921 bits) verified base-2 pseudoprimes.
 
 --- S2.4  TYPING LINES (machine-readable summary of the maps that exist; see the note's table) ---
   [MAP] p^2qr squarefree divisors -> Fano/PG(2,2) :: source divisor lattice; target F_2^3; map exponent vector mod 2; preserved S=7 points, 7 square-product lines; lost exponent heights + 112 of 128 orientations; sidecar XOR label; test: lattice selects none of the 16 octonion orientations (S1.1)
@@ -290,7 +295,9 @@ S3. Six bold conjectures, probes, follow-ups
   K=1000000: N_PS-N_SP = 412 (matches collatz_mod6_20260917_sandwich_bias.md sec.1) ; square-driven pairs (p^2-2 prime, p^2) = 99 ; residual after squares = 313 ; independence pred = 113.2
   CORRECTED NEAR MISS (recovered draft): its status line quoted square counts 64 and 137; the true counts of pairs (6k-1, 6k+1) = (p^2-2, p^2)
     with both entries as stated are 46 and 99 (two independent counts agree).
-  STATUS: REFUTED as 'bounded residual': residual after removing squares is -5 at 10^5 and 313 at 10^6 (grows with the drift, not bounded).
+  STATUS: residual after removing squares is -5 at 10^5 and 313 at 10^6 (FINITE-EXACT).  'Bounded residual' cannot be refuted by two
+    scales; it is UNSUPPORTED and HEURISTIC-false: the inherited drift heuristic (sandwich_bias sec.4, order sqrt(x) loglog x / log^2 x)
+    predicts an unbounded residual, and the observed 60-fold growth is consistent with it.  OPEN as a statement.
   The square term is PROVED to be one-sided (p^2 = 1 mod 6 always sits on the right), but it is small against the mixed-class semiprime bias.
   follow-up F4: does the p^2 count alone explain the S-column excess of the marginals?  S_1 - S_5 identity (inherited) already has pi'(sqrt x)/2:
     K=100000: pi'(sqrt x) = 135, (S_1 - S_5) = 66 (col-row sum of class 2) ; half the squares = 67.5
@@ -300,8 +307,10 @@ S3. Six bold conjectures, probes, follow-ups
   PROVED: (3(bn)+b)/2^v = b(3n+1)/2^v ; so b*C_1 subset C_b, c(b) >= 4 for every b coprime to 6 (checked b<=99).
   (This is the dilation half of the content theorem, arithmetic_braids2_20260917_signed_cycles.md sec.2: cycles of T_b = disjoint union over g | b of g*(primitive cycles of T_{b/g}).)
   b<=99 with c(b) = 4 exactly (no cycle beyond the four scaled Collatz cycles): [1]
-  superadditivity for coprime b1,b2: c(b1 b2) >= c(b1) + c(b2) - 4 (scaled cycles b2*C_{b1}, b1*C_{b2} meet only in b1b2*C_1):
-    violations among b1*b2<=99: [] -> PROVED inequality holds (FINITE-EXACT confirmation)
+  superadditivity for coprime b1,b2 (true cycle counts): c(b1 b2) >= c(b1) + c(b2) - c(1), because b2*C_{b1} and b1*C_{b2} lie in
+    C_{b1b2} and meet only in b1b2*C_1 (content theorem: a common cycle has content b2*g1 = b1*g2 with g1|b1, g2|b2, so content b1b2).
+    With c(1) = 4 (the four known signed Collatz cycles; '-4' is exact iff there is no unknown Collatz cycle) in the census universe:
+    violations among b1*b2<=99: [] -> no violation (FINITE-EXACT confirmation of the PROVED true-count inequality)
   PROVED (+checked m<3000, b=5,7,11,13): G_b(b m) = b G_1(m) with the same letter; the residue chain mod 9 of G_b is the
     chain of G_1 conjugated by multiplication by b^{-1} mod 9, so the stationary law, E[letter]=1 and the drift log(2/3)
     (inherited extended_collatz_scc S4.2) are b-independent.  What changes with b is the CYCLE set (C2), not the local law.
@@ -312,7 +321,9 @@ S3. Six bold conjectures, probes, follow-ups
     mechanism: for odd j with 3 !| j, 6j | 4^j-4 iff 4^{j-1} = 1 mod j, i.e. j is a base-4 Fermat (pseudo)prime; 85, 91, 341, ... are base-4 pseudoprimes.
     hostile: 15 is a base-4 pseudoprime but 3 | 15, so N_15 is NOT a pseudoprime (9 !| 4^15-4 since 3 !| 14): the factor 3 of the trunk matters.
   follow-up F6 (recursion, PROVED in S2.3): W is closed under j -> N_j, so the index set contains p, N_p, N_{N_p}, ... for every prime p>=5;
-    the first composite index NOT of the form N_j is 91 = 7*13 (85 = N_4 is of that form; 341 = N_5 and 5461 = N_7 are the tower's second level).
+    the first composite index NOT of the form N_j is 91 = 7*13 (85 = N_4 comes from the base-4-only index 4 via the sharpened closure;
+    341 = N_5 and 5461 = N_7 are the tower's second level).
+  S5-style ledger of the audit (2026-09-21): REFUTED 'N_j base-2 psp iff base-4 psp' (j=4: 85 is base-4 only; 28, 532, 2044, 11476 likewise).
 
 ==============================================================================
 S4. 3N-5 = 3(N-2)+1: exact relation to Collatz under the shift n -> n-2
@@ -355,10 +366,10 @@ PROVED: S1.1 F_2^3/Fano structure of squarefree divisors and {0,2,10}; d(N)<=2^O
 FINITE-EXACT: 16/128 octonion orientations; tournament census n<=6; c(b) spectrum |b|<=99 in U1 and U2 (complete for L<=L*(b));
         6/pi^2 candidates at 10^6; C1 block TV distances at 10^6; C4 sandwich numbers at 10^5,10^6; W to 20000; C3 j<=40.
 CITED: Cipolla 1904; Albuquerque-Majid twisted group algebra; Dirichlet; THM-1745 / death-star S70 h-spectrum; Redei; Wieferich list.
-HEURISTIC: full G-stopping-time law equality primes vs composites (size-controlled); C4 residual.
+HEURISTIC: full G-stopping-time law equality primes vs composites (size-controlled); C4 'bounded residual' (unsupported: -5 -> 313; not refutable by finite data).
 REFUTED: '341 stalls primitive primes' (11,31 at j=5); 'N_j psp iff j prime' (j=85); 'N_j squarefree iff gcd(j,N_j)=gcd(j,3)' (j=182, 1093^2);
-        draft hostile 'classes 1 vs 8 mod 9 differ' (TV 0.007); pooled C1 (size mixing); 'N_PS-N_SP minus squares bounded' (-5 -> 313);
-        'c(b) maximal exactly at doubly representable b' (b=65, c=19).
+        draft hostile 'classes 1 vs 8 mod 9 differ' (TV 0.007); pooled C1 (size mixing); 'N_j base-2 psp iff base-4 psp' (j=4: 85 is base-4 only);
+        'c(b) maximal exactly at doubly representable b' (b=65, c=19; sharper: |b|=1 is doubly representable with the minimum c=4).
 NO MAP FOUND: Bott 8; {7,21} vs c(b) or cycle lengths or rows or {0,2,10}; Omega(a^2b)=4 / Omega(c^2b)=8 vs H, O (numerology);
         x^2+c period-3 bifurcation vs 3n+b 3-cycles (exponential Diophantine gate 2^K-27 | bB).
-total runtime [t=26.2s]
+total runtime [t=25.5s]

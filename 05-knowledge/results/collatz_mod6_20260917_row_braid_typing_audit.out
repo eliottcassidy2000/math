@@ -1,0 +1,93 @@
+
+------------------------------------------------------------------------------
+A1  orders of 2, power-of-two target classes, Wieferich single classes
+------------------------------------------------------------------------------
+ord_m(2): {3: 2, 7: 3, 9: 6, 21: 6, 63: 6}
+p | ord_p | ord_p^2 | #target classes hit by powers of two | p | first class
+    3 |     2 |        6 |   3 | [2, 5, 8]
+    5 |     4 |       20 |   5 | [3, 8, 13, 18, 23]
+    7 |     3 |       21 |   7 | [4, 11, 18, 25, 32, 39, 46]
+   11 |    10 |      110 |  11 | [6, 17, 28, 39, 50, 61, 72]
+   13 |    12 |      156 |  13 | [7, 20, 33, 46, 59, 72, 85]
+   17 |     8 |      136 |  17 | [9, 26, 43, 60, 77, 94, 111]
+   19 |    18 |      342 |  19 | [10, 29, 48, 67, 86, 105, 124]
+ 1093 |   364 |      364 |   1 | [597325]
+ 3511 |  1755 |     1755 |   1 | [6163561]
+CONFIRMED: k=1,3,5 mod 6 -> image row b=2,8,5 (source row 1,5,3), 2^k mod 7 = 2,1,4; on odd k, k mod 3 <-> k mod 6.
+
+------------------------------------------------------------------------------
+A2  the three image rows over Z, 21 target classes mod 63
+------------------------------------------------------------------------------
+CONFIRMED (odd |n|<=200001): rows 9j+2, 9j+5, 9j+8; target classes mod 63 with powers of two: [2, 8, 32].
+
+------------------------------------------------------------------------------
+A3  R(n)=4n+1: exact affine composition, universal modulus, mod-7 orbits, mod-18 period
+------------------------------------------------------------------------------
+CONFIRMED: R^3=(64,21); universal source modulus exactly 42; R mod 7 orbits {2},{0,1,5},{3,4,6}; period 9 mod 18.
+
+------------------------------------------------------------------------------
+A4  tower F_p=(pn+1)/2, signed diagonal, boundary p=1,2, inverse braids with full orbit decomposition
+------------------------------------------------------------------------------
+CONFIRMED: diagonal (p-4)n=-1 over odd p,n has exactly (3,1),(5,-1); p=2 excluded by parity.
+p | d | c | r | orbit lengths of R_p on odd classes mod 2p, 2p^2, 2p^3 (full decomposition)
+ 3 |  2 |   1 | 1 | [[3], [9], [27]]
+ 5 |  4 |   3 | 1 | [[5], [25], [125]]
+ 7 |  3 |   1 | 1 | [[7], [49], [343]]
+11 | 10 |  93 | 1 | [[11], [121], [1331]]
+13 | 12 | 315 | 1 | [[13], [169], [2197]]
+CONFIRMED: r=1 braids are single cycles on ALL odd classes mod 2p^s; p=1093 (r=2) fixes odd classes mod 2p, period 1093 mod 2p^2.
+
+------------------------------------------------------------------------------
+A5  cycle census of T_p (odd starts <= 20000, <= 3000 steps, cap 10^40), independently coded
+------------------------------------------------------------------------------
+  p=1: [(1,)] unresolved=0
+  p=3: [(1,)] unresolved=0
+  p=5: [(1, 3), (13, 33, 83), (17, 43, 27)] unresolved=9605
+  p=7: [(1,)] unresolved=9982
+
+------------------------------------------------------------------------------
+A6  rows j<=60 / j in [-40,-1], inherited JSON, first appearances, exact count law
+------------------------------------------------------------------------------
+  cores with exactly 3 appearances (j<=60): [7, 11, 13, 17, 23, 29]
+CONFIRMED: rows, JSON agreement, first appearances, count law, core-1 positions, negative row heads.
+
+------------------------------------------------------------------------------
+A7  row law over Z, AP layers, index recurrence, base table
+------------------------------------------------------------------------------
+  (u,h) pairs checked (both signs): 13013
+CONFIRMED: row law and R-braid over Z for |u|<=3001, h<=12; AP layers; recurrence j'=64j+7b_r.
+
+------------------------------------------------------------------------------
+A8  the three minus cycles and their placements
+------------------------------------------------------------------------------
+CONFIRMED: cycle orders, rows {5},{1,5},{1,5}, all (row,j,h) placements for |j|<=40, negation law j>=-3000.
+
+------------------------------------------------------------------------------
+A9  the -7/4 question: closed form, coprimality lemma, ONE Thue equation, units of the plastic field, PARI
+------------------------------------------------------------------------------
+  resultants (sympy sign convention): Res_a(N3,a) = -b**3  Res_a(N3,a+b) = -b**3
+  sympy: both resultants are +-b^3 (so gcd(a,b)=1 forces gcd(N3, a(a+b))=1); disc = -23; -rho^2 is the real root.
+PROVED: for c=a/b in lowest terms, f^3(0)=a*N3(a,b)/b^4 in lowest terms with gcd(N3(a,b), a(a+b))=1, so
+        'no new numerator prime at term 3' <=> N3(a,b) = a^3+2a^2b+ab^2+b^3 = +-1 (a cubic Thue equation).
+        For b=2^k, k>=1: c(c+1)^2+1 = N3/b^3 with N3 odd, so the 'strong form' +-2^{-m} also forces N3 = +-1.
+  norm identity N3(a,b) = N_{K/Q}(a + b rho^2) checked on |a|,|b| <= 30 (3x3 determinant in the basis 1, rho, rho^2).
+  unit exponents n with rho^n = x + 0*rho + z*rho^2, |n|<=3000:  [(-14, -7, 4), (-5, 2, -1), (-1, -1, 1), (0, 1, 0), (2, 0, 1)]
+  window search b<=200000, a within 3 of -7b/4, |N3(a,b)|=1, gcd(a,b)=1: [(-7, 4), (-2, 1), (-1, 1), (0, 1)]
+  continued fraction of rho^2: [1, 1, 3, 12, 1, 1, 3, 2]  convergents: ['1', '2', '7/4', '86/49', '93/53', '179/102', '630/359', '1439/820']
+  rho^2 = 1.754877666247 (exact bisection; -rho^2 is the real root of x^3+2x^2+x+1; 7/4 = 1.75)
+  PARI/GP thue(x^3+2x^2y+xy^2+y^3 = +1): [[-7, 4], [-1, 1], [0, 1], [1, 0], [2, -1]]
+  PARI/GP thue(... = -1):                [[-2, 1], [-1, 0], [0, -1], [1, -1], [7, -4]]
+  bnfcertify, class number, nfdisc:      ['1', '1', '-23']
+  PARI/GP version: [2, 17, 4]
+CITED (PARI/GP [2, 17, 4], thueinit(P,1) certified, bnfcertify=1): the complete solution set of N3(a,b)=+-1 is
+        +-{(1,0),(0,1),(-1,1),(-2,1),(-7,4)}; hence c in {0,-1,-2,-7/4} and the only NONDEGENERATE c are -2 and -7/4.
+  term 4: f^4(0) = a(a N3^2 + b^7)/b^8 and (a+b) | a N3^2 + b^7 always (b<60, |a|<=150): a different structure, left OPEN.
+
+------------------------------------------------------------------------------
+A10  PCF quadratics, hostiles, THM-4146 cycle, x^2-2 step, Bang exception
+------------------------------------------------------------------------------
+CONFIRMED: PCF {-2,-1,0}; x^2-6, x^2-12 hostiles; THM-4146 cycle; x^2-2 step {1:3,3:5,5:1}; Bang exception n=6 (n<=200).
+
+audit checks passed: 488345
+audit script sha256: db9b026202b8f85473fb0772049b4c5b8750be4450d0d189333128a637ad9aef
+ALL AUDIT CHECKS PASSED
