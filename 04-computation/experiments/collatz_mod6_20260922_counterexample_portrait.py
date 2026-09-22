@@ -33,6 +33,7 @@ except ImportError as exc:  # pragma: no cover
     raise SystemExit("mpmath (bundled with sympy) is required") from exc
 
 T0 = time.time()
+print("collatz_mod6_20260922_counterexample_portrait.py -- lane counterexample_portrait, session collatz-mod6, 2026-09-22")
 mpmath.mp.dps = 400
 ALPHA = mpmath.log(3) / mpmath.log(2)
 LN2 = mpmath.log(2)
@@ -182,6 +183,7 @@ for i in range(1, len(CONV)):
     p1, q1 = CONV[i - 1]
     p2, q2 = CONV[i]
     check(abs(p1 * q2 - p2 * q1) == 1, "determinant of convergents")
+print(f"computed {len(CONV)} convergents; determinant identity checked for all consecutive pairs")
 print("partial quotients a_0..a_29:", A_CF[:30])
 print("convergents p_n/q_n, n<=24, with sign of Delta=2^p-3^q (exact when q<=80000, else by 400-digit log):")
 CONV_SIGN = {}
@@ -312,7 +314,7 @@ for n in range(1, X_MINUS + 1, 2):
 tot = sum(counts[1:])
 print(f"X = {X_MINUS}: odd starts {tot}; every one reaches a known cycle (no fourth cycle, no escape).")
 for i, cyc in enumerate(KNOWN_MINUS, start=1):
-    print(f"  basin of {cyc}: {counts[i]} odd starts ({counts[i] / tot:.6f})")
+    print(f"  basin of {cyc}: {counts[i]} odd starts ({counts[i] / tot:.6f}, rounded {counts[i] / tot:.3f})")
 print(f"  longest first-drop-or-cycle-hit segment: {maxsteps} accelerated steps at n={argmax}")
 print(f"  census time {time.time() - t_census:.1f}s (timing line, not a result)")
 print("FINITE-EXACT consequence: any fourth positive 3n-1 cycle has minimum element N > 10^7,")
@@ -387,6 +389,11 @@ for label, N, sheet in [("plus sheet, N = 2^68 (Barina)", 1 << 68, +1),
     first = admissible[0]
     print(f"  convergents on the correct side with q_n(q_n+q_(n+1)) >= threshold: first is n={first[0]}, "
           f"{first[1]}/{first[2]}")
+    for n in range(first[0]):
+        if CONV_SIGN.get(n, (1 if n % 2 else -1)) == need_sign:
+            q = CONV[n][1]
+            qn = CONV[n + 1][1]
+            print(f"    (n={n}: q_n(q_n+q_(n+1)) = {q}*({q}+{qn}) = {q * (q + qn)} < threshold)")
     below = [(n, p, q) for (n, p, q) in admissible if q <= LA]
     if not below:
         print(f"  none of them has q_n <= L_A, so NO positive cycle (other than the trivial/known ones)")
@@ -400,13 +407,19 @@ for label, N, sheet in [("plus sheet, N = 2^68 (Barina)", 1 << 68, +1),
     for n, p, q in admissible[:3]:
         print(f"    n={n}: K/L = {p}/{q}, cycle length L = m*{q}, m>=1, q_n(q_n+q_(n+1)) = {q * (q + CONV[n + 1][1])}")
 print("Literature for comparison (plus sheet): Simons-de Weger 2005 (CITED, Acta Arith. 117) no m-cycles")
-print("m<=68; Hercher, J. Integer Seq. 26 (2023) art. 23.3.5 (CITED, abstract read 2026-09-22): m >= 92,")
-print("using verification up to 3*2^69 and giving at least 1.375e11 odd members in any nontrivial cycle.")
+print("m<=68 (exact published figure UNCITED-RECOLLECTION); Hercher, J. Integer Seq. 26 (2023) art. 23.3.5")
+print("(CITED; abstract re-read at the audit 2026-09-22, cs.uwaterloo.ca/journals/JIS/VOL26/Hercher/hercher5.html):")
+print("credits Simons-de Weger with m >= 76, gets m >= 83 from newer verification ranges, PROVES m >= 92,")
+print("and states that verification up to 3*2^69 WOULD SUFFICE to raise the odd-member bound to the NEXT")
+print("bound K >= 1.375e11 (conditional; this lane's first draft misread it as proved, caught at the audit).")
+print(f"That next bound is the clock n=23: q_23 = {CONV[23][1]} = 1.375e11.")
 print("The chain here, from cited inputs alone (Barina 2^68, Legendre, Hardy-Wright 171), proves that")
 print("every nontrivial positive 3n+1 cycle has L > 14878203146 odd terms (n=21's spacing 4.746e20")
-print("falls below the sharp threshold 6.137e20); Hercher's 1.375e11 is stronger and independent.")
-print("On the minus sheet the same chain gives: any FOURTH positive 3n-1 cycle has L > L_A(minus)")
-print("and, if its minimum stays > 10^7, its clock is an even-index convergent with q_n >= 15601.")
+print("falls below the sharp threshold 6.137e20); it does NOT reach q_23, because tier A (hence the")
+print("convergent placement) is available only for L <= L_A, and a cycle with L > L_A may sit on a")
+print("non-convergent clock.  On the minus sheet the same chain gives: any FOURTH positive 3n-1 cycle has")
+print("L > L_A(minus) = 2738; IF its clock is a convergent (not forced for L > L_A) it is an even-index")
+print("one with q_n >= 31867 (n=8, 665*(665+15601), fails the threshold).")
 
 # ----------------------------------------------------------------------------
 # S7. gate census, all clocks L <= 10, both signs
@@ -844,21 +857,26 @@ print("tail (7/9)^(J-1) transfer verbatim between the sheets.  SHEET-BLIND.")
 # ----------------------------------------------------------------------------
 hdr("S15. Pairwise contradiction search and the minimal unresolved conjunction")
 print("Cycle conditions (plus sheet): C1 gate q=1 & sign law Delta>0; C2 N >= 2^68; C3 K/L odd-index")
-print("convergent for L <= L_A; C4 q_n(q_n+q_(n+1)) >= 0.75*3N ln2; C5 no 1-cycle (Steiner), no m-cycle")
-print("m <= 68 (Simons-de Weger); C6 necklace/rotation invariance of q; C7 |Delta| = 1 only at 2/1.")
+print("convergent for L <= L_A; C4 q_n(q_n+q_(n+1)) >= 3N ln2 e^{-L_A/(3N)} (sharp factor 1.000000, S6) whenever")
+print("the clock is a convergent; C5 no 1-cycle (Steiner), no m-cycle m <= 91 (Simons-de Weger, Hercher);")
+print("C6 necklace/rotation invariance of q; C7 |Delta| = 1 only at 2/1.")
 print("Witness that they are jointly satisfiable at the level of clocks: the surviving clocks listed in S6")
 print("(odd-index convergents with q_n > L_A and the spacing inequality) violate none of C1-C7 a priori;")
 print("C1's integrality q=1 on such a clock is the ONLY untested predicate.  Pairwise contradiction:")
-print("NONE FOUND.")
+print("NONE FOUND.  (Audit 2026-09-22: C3 is conditional on L <= L_A; for L > L_A no condition on file")
+print("forces the clock to be a convergent, so the convergent survivors are one case, not the whole.)")
 print("Divergence conditions (plus sheet): D1 D_L -> -infinity, sum q_L < infinity (glued_xor);")
 print("D2 no bounded strip (guards 2a); D3 stopping-time density one (Terras/Everett); D4 Tao a.e. in")
-print("logarithmic density; D5 Krasikov-Lagarias x^0.84 ancestors of 1; D6 Lyapunov obstruction;")
+print("logarithmic density (arXiv:1909.03562, Thm 1.3); D5 Krasikov-Lagarias 2003 x^0.84 ancestors of 1;")
+print("D6 Lyapunov obstruction;")
 print("D7 squarefree growth prefixes of every length.  D1-D2 constrain the orbit, D3-D5 say only that")
 print("the exceptional set has density zero (D4: log-density; D5: the tree of 1 is large), D6-D7 say")
 print("finite lookahead cannot certify descent.  A density-zero divergent orbit with liminf D_L = -inf")
 print("and sum q_L < inf is consistent with all of them: NONE FOUND.")
-print("Minimal unresolved conjunction (cycle): exists odd-index convergent p_n/q_n with q_n > L_A, m >= 1,")
-print("and a composition of m p_n into m q_n parts with q = 1 and all members >= 2^68.")
+print("Minimal unresolved conjunction (cycle): exists a reduced clock K/L > log_2 3 with L > L_A = 14878203146,")
+print("(K - L log_2 3) ln 2 <= (L/(3N)) e^{L/(3N)} at N = 2^68, and a composition of K into L parts with q = 1")
+print("and all members >= 2^68; in the sub-case where K/L is a convergent it is p_n/q_n with n >= 23 odd,")
+print("L = m q_n (Hercher's next target K >= 1.375e11 is exactly the m = 1, n = 23 clock).")
 print("Minimal unresolved conjunction (divergence): exists a positive odd orbit with n_L unbounded,")
 print("D_L -> -infinity, sum q_L < infinity, whose start lies in the density-zero exceptional sets of")
 print("Terras and Tao.")
@@ -866,6 +884,38 @@ print("Sheet lesson: every SHEET-BLIND condition above is satisfied by the seven
 print("(q=1, product identity, necklace, D_L -> -inf, no strip, Terras, prefixes, Lyapunov, G mirror),")
 print("so no conjunction of sheet-blind conditions can exclude a plus-sheet cycle; a proof must use the")
 print("sign-specific inputs (Delta>0 side, Barina 2^68, Steiner/Simons-de Weger/Hercher, Tao) or a new one.")
+
+# ----------------------------------------------------------------------------
+# S16. session-lead probe numbers re-verified (entropy of 8/pi^2; Paley tournament on F_7)
+# ----------------------------------------------------------------------------
+hdr("S16. Session-lead probe: binary entropy of 8/pi^2 and the Paley tournament on F_7")
+x = 8 / math.pi ** 2
+H = -(x * math.log2(x) + (1 - x) * math.log2(1 - x))
+print(f"8/pi^2 = {x:.5f}; binary entropy H = {H:.5f} bits (the paste says 0.704 and calls it zero entropy)")
+check(abs(H - 0.70028) < 5e-6, "entropy")
+QR = {1, 2, 4}
+arcs = {(i, j) for i in range(7) for j in range(7) if i != j and (j - i) % 7 in QR}
+cyc3 = 0
+trans3 = 0
+lines = set()
+for a in range(7):
+    for b in range(a + 1, 7):
+        for c in range(b + 1, 7):
+            e = [(a, b) in arcs, (b, c) in arcs, (a, c) in arcs]
+            # cyclic iff a->b->c->a or a->c->b->a
+            if ((a, b) in arcs and (b, c) in arcs and (c, a) in arcs) or ((a, c) in arcs and (c, b) in arcs and (b, a) in arcs):
+                cyc3 += 1
+                lines.add((a, b, c))
+            else:
+                trans3 += 1
+fano1 = {tuple(sorted(((s + d) % 7) for d in (0, 1, 3))) for s in range(7)}
+fano2 = {tuple(sorted(((s + d) % 7) for d in (0, 1, 5))) for s in range(7)}
+print(f"Paley on F_7 (arc i->j iff j-i in {{1,2,4}}): {len(arcs)} arcs, {cyc3} cyclic triples ((7^3-7)/24 = {(343 - 7) // 24}), "
+      f"{trans3} transitive triples; cyclic triples = dev{{0,1,3}} u dev{{0,1,5}}: {lines == fano1 | fano2}")
+per_arc = {e: sum(1 for t in lines if set(e) <= set(t)) for e in arcs}
+print(f"each arc lies in exactly {min(per_arc.values())}..{max(per_arc.values())} cyclic triples (2-(7,3,2) design)")
+check(len(arcs) == 21 and cyc3 == 14 and trans3 == 21 and lines == fano1 | fano2 and set(per_arc.values()) == {2}, "Paley")
+print("FINITE-EXACT; these tournament facts are correct and have no map to either table (SCOPE).")
 
 print()
 print(f"total runtime {time.time() - T0:.1f}s (timing line, not a result)")

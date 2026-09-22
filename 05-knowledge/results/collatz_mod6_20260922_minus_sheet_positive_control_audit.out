@@ -1,0 +1,44 @@
+=== A0: entropy ===
+8/pi^2 = 0.810569  H2 = 0.70028 bits; |H-0.704| = 0.00372
+
+=== A1: basin census (independent code) ===
+minus T-form (odd n -> (3n-1)/2): max first-descent time 273, max value 15270716514700, never-descending [1, 5, 17]
+minus C-form (odd n -> 3n-1): max first-descent time 445, max value 30541433029400, never-descending [1, 5, 17]
+DEFINITION MISMATCH: the explorer's S1 census iterates the C-form; its 445 and 30541433029400 are C-form numbers, the T-form gives 273 and 15270716514700 = 30541433029400/2 (basins identical)
+X=10000: basins (all, odd) for 1,5,17: ((3244, 1605), (3213, 1623), (3543, 1772))
+X=100000: basins (all, odd) for 1,5,17: ((33030, 16553), (32104, 16026), (34866, 17421))
+X=1000000: basins (all, odd) for 1,5,17: ((327679, 163486), (323351, 162122), (348970, 174392))
+X=10000000: basins (all, odd) for 1,5,17: ((3273791, 1636054), (3244985, 1623149), (3481224, 1740797))
+pure-Python memoised census to 10^6: ((327679, 163486), (323351, 162122), (348970, 174392))
+plus T-form: max first-descent time 246, max value 30171305459816, never-descending [1]
+plus C-form: max first-descent time 401, max value 60342610919632, never-descending [1]
+
+=== A2: Terras prefix-descent counts, DP on words vs direct residues ===
+J=1..20: DP no-descent words [1, 1, 2, 3, 4, 8, 13, 19, 38, 64, 128, 226, 367, 734, 1295, 2114, 4228, 7495, 14990, 27328]
+J=1..20: descend counts (both sheets equal, = 2^J - DP) [1, 3, 6, 13, 28, 56, 115, 237, 474, 960, 1920, 3870, 7825, 15650, 31473, 63422, 126844, 254649, 509298, 1021248]; fraction at J=20 = 0.973938
+
+=== A3: sigma vs sigma_c (pure Python to 2*10^5), residue check K=20 ===
+plus: infinite sigma [1]; sigma<sigma_c: 0; sigma>sigma_c: 0
+minus: infinite sigma [1, 5, 17]; sigma<sigma_c: 0; sigma>sigma_c: 0
+K=20 minus residues in [1,2^20): descend within 20: 1021247; coefficient time <= 20: 1021247; strict early (ta<tc): 0; actual later than coefficient (ta>tc): 0; 2^20-1 = 1048575
+
+=== A4: greedy G_- to 10^6, exact one-step law, BFS rescues ===
+starts 666666: below 666665, one 0, cycle 1, cap 0; histogram head [(1, 444444), (2, 148148), (3, 24692), (4, 24691)]; max steps 35
+peak 50331647 at m=797161; 3*2^24-1 = 50331647; (3^13-1)/2 = 797161; 3*2^24+1 = 50331649
+one-step residues mod 9 observed [1, 2, 5, 7] = predicted [1, 2, 5, 7]; #m in [2,10^6] with m mod 9 in that set = 444444; 444444/666666 = 2/3
+BFS inverse rescue of 4: 14 arrows: [4, 8, 16, 32, 64, 128, 43, 86, 29, 10, 20, 7, 14, 5, 2]
+SCC-note compound rescue [4, 11, 59, 20, 7, 5, 2] k-word [3, 4, 0, 0, 1, 0]: total arrows = sum(k+1) = 14
+forward BFS distances from 1: {5: 2, 7: 4, 17: 13, 25: 15, 37: 17, 55: 19, 41: 4, 61: 6, 91: 8}
+
+=== A5: Berggren readings, corrected coupling breakdown, k=1<->k=2 bijection ===
+edges with an other-sheet child (9): [(1, 1, 1), (-1, 1, 1), (-1, 5, 7), (-1, 7, 5), (-1, 17, 25), (-1, 25, 37), (-1, 37, 55), (-1, 41, 61), (-1, 61, 91)]
+edges that are B-children of an other-sheet edge (5): [(1, 1, 1, (1, 1)), (-1, 1, 1, (1, 1)), (-1, 5, 7, (5, 3)), (-1, 7, 5, (5, 3)), (-1, 55, 41, (41, 27))]
+corrected breakdown of the 9: the seven k=1 minus edges (1->1 included) + the plus edge 1->1 + the k=2 edge 7->5 (pair {5,7})
+sheet b=+1: 25000 k=1 edges x<=10^5 (x = 3 mod 4) -> 25000 k=2 edges of sheet -1 (sources 2x+1 = 7 mod 8); 3-adic aside: the mod-4 law u = 3 mod 4 is only necessary
+sheet b=-1: 25000 k=1 edges x<=10^5 (x = 1 mod 4) -> 25000 k=2 edges of sheet +1 (sources 2x-1 = 1 mod 8); 3-adic aside: the mod-4 law u = 1 mod 4 is only necessary
+
+=== A6: budget sums and gates ===
+minus budgets 3 n0 for (1, 3, 5, 7, 9, 11, 17, 25, 37, 41, 55, 61, 91, 27, 1001): [3, 9, 15, 21, 27, 33, 51, 75, 111, 123, 165, 183, 273, 81, 3003]
+gates (L, K, B, 3^L-2^K) for 1, 5, 17: [(1, 1, 1, 1), (2, 3, 5, 1), (7, 11, 2363, 139)]
+
+AUDIT ALL CHECKS PASSED

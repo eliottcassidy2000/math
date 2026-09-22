@@ -1,0 +1,104 @@
+=== S0: binary entropy of 8/pi^2 (session lead probe) ===
+8/pi^2 = 0.810569   H2(8/pi^2) = 0.70028 bits   (paste says 0.704; 'zero entropy' is false: H>0)
+
+=== S1: basin census of T_- (n -> n/2 even, n -> 3n-1 odd) on [1, 10^7] ===
+minus sheet: max stopping time (all n <= 10^7, first value < n) = 445; max orbit value seen = 30541433029400; unresolved after 5000 steps = 0
+minus sheet: n <= 10^7 whose orbit never drops below n: [1, 5, 17]
+
+X          | basin{1}  all n   odd n | basin{5,7} all n  odd n | basin{17..91} all n  odd n
+10000      |      3244 0.32440     1605 0.32100 |      3213 0.32130     1623 0.32460 |      3543 0.35430     1772 0.35440
+100000     |     33030 0.33030    16553 0.33106 |     32104 0.32104    16026 0.32052 |     34866 0.34866    17421 0.34842
+1000000    |    327679 0.32768   163486 0.32697 |    323351 0.32335   162122 0.32424 |    348970 0.34897   174392 0.34878
+10000000   |   3273791 0.32738  1636054 0.32721 |   3244985 0.32450  1623149 0.32463 |   3481224 0.34812  1740797 0.34816
+plus sheet control: every n <= 10^7 in basin{1}: True; max stopping time = 401; max orbit value seen = 60342610919632; unresolved = 0
+plus sheet: n <= 10^7 whose orbit never drops below n: [1]
+
+=== S2: Terras-type prefix-descent density mod 2^J, both sheets (J <= 20) ===
+J  | #descend(+) #descend(-) | words(+) words(-) = 2^J | no-descent words (DP) | fraction
+1  |           1           1 |        2        2        2 |          1 | 0.500000
+2  |           3           3 |        4        4        4 |          1 | 0.750000
+3  |           6           6 |        8        8        8 |          2 | 0.750000
+4  |          13          13 |       16       16       16 |          3 | 0.812500
+5  |          28          28 |       32       32       32 |          4 | 0.875000
+6  |          56          56 |       64       64       64 |          8 | 0.875000
+7  |         115         115 |      128      128      128 |         13 | 0.898438
+8  |         237         237 |      256      256      256 |         19 | 0.925781
+9  |         474         474 |      512      512      512 |         38 | 0.925781
+10 |         960         960 |     1024     1024     1024 |         64 | 0.937500
+11 |        1920        1920 |     2048     2048     2048 |        128 | 0.937500
+12 |        3870        3870 |     4096     4096     4096 |        226 | 0.944824
+13 |        7825        7825 |     8192     8192     8192 |        367 | 0.955200
+14 |       15650       15650 |    16384    16384    16384 |        734 | 0.955200
+15 |       31473       31473 |    32768    32768    32768 |       1295 | 0.960480
+16 |       63422       63422 |    65536    65536    65536 |       2114 | 0.967743
+17 |      126844      126844 |   131072   131072   131072 |       4228 | 0.967743
+18 |      254649      254649 |   262144   262144   262144 |       7495 | 0.971409
+19 |      509298      509298 |   524288   524288   524288 |      14990 | 0.971409
+20 |     1021248     1021248 |  1048576  1048576  1048576 |      27328 | 0.973938
+
+actual sigma(n) = min k: T^k(n) < n; coefficient sigma_c(n) = min k: 3^{a_k} < 2^k  (n <= 10^6)
+plus sheet: n <= 10^6 with sigma actual infinite (within 400 steps): [1]; count with sigma_actual < sigma_coefficient: 0; smallest: []
+minus sheet: n <= 10^6 with sigma actual infinite (within 400 steps): [1, 5, 17]; count with sigma_actual < sigma_coefficient: 0; smallest: []
+
+residue-level check of the reduction lemma: r in [1, 2^K), K = 20, minus sheet
+residues with first descent within 20 steps: 1021247; of these with actual = coefficient time: 1021247; strict early descents: 0
+
+=== S3: E_- reachability from 1 (arrows n->n/2 even, n->3n-1 all n): greedy G_- and BFS fallback ===
+greedy G_-(m) = (2^k m + 1)/3 on 2 <= m <= 10^6, 3 !| m: 666666 starts; statuses {'below': 666665, 'one': 0, 'cycle': 1, 'cap': 0} (step cap 2000)
+greedily certified (below or one): 666665 / 666666 = 0.999998; hard cases: [(4, 'cycle')]
+greedy steps to certify, histogram (steps: count): 1: 444444, 2: 148148, 3: 24692, 4: 24691, 5: 5487, 6: 8230, 7: 5487, 8: 1218, 9: 1761, 10: 463, 11: 771, 12: 564, 13: 140, 14: 210, 15: 56, 16: 99, 17: 34, 18: 54, 19: 49, 20: 11, 21: 17, 22: 7, 23: 15, 24: 9, 25: 1, 26: 4, 30: 2, 33: 1, 35: 1
+largest greedy peak before certification: 50331647 at m = 797161
+BFS fallback for m = 4 (inverse moves): 4 -> 8 -> 16 -> 32 -> 64 -> 128 -> 43 -> 86 -> 29 -> 10 -> 20 -> 7 -> 14 -> 5 -> 2
+BFS-shortest forward E_- paths from 1 (values capped at 5*10^6):
+  1 -> 5: 2 arrows: 1 -> 2 -> 5
+  1 -> 7: 4 arrows: 1 -> 2 -> 5 -> 14 -> 7
+  1 -> 17: 13 arrows: 1 -> 2 -> 5 -> 14 -> 41 -> 122 -> 61 -> 182 -> 91 -> 272 -> 136 -> 68 -> 34 -> 17
+  1 -> 25: 15 arrows: 1 -> 2 -> 5 -> 14 -> 41 -> 122 -> 61 -> 182 -> 91 -> 272 -> 136 -> 68 -> 34 -> 17 -> 50 -> 25
+  1 -> 37: 17 arrows: 1 -> 2 -> 5 -> 14 -> 41 -> 122 -> 61 -> 182 -> 91 -> 272 -> 136 -> 68 -> 34 -> 17 -> 50 -> 25 -> 74 -> 37
+  1 -> 55: 19 arrows: 1 -> 2 -> 5 -> 14 -> 41 -> 122 -> 61 -> 182 -> 91 -> 272 -> 136 -> 68 -> 34 -> 17 -> 50 -> 25 -> 74 -> 37 -> 110 -> 55
+  1 -> 41: 4 arrows: 1 -> 2 -> 5 -> 14 -> 41
+  1 -> 61: 6 arrows: 1 -> 2 -> 5 -> 14 -> 41 -> 122 -> 61
+  1 -> 91: 8 arrows: 1 -> 2 -> 5 -> 14 -> 41 -> 122 -> 61 -> 182 -> 91
+
+=== S4: Berggren B3 sheet coupling of the cycle edges ===
+edge (sheet, cycle-min): x->y k | children B1,B2,B3 with (3,+-1) readings | Berggren parent pair and its readings
+(plus,1): 1->1 k=2 | B1=(3,1):3->1(minus,k=3) B2=(3,1):3->1(minus,k=3) B3=(1,1):1->1(plus,k=2),1->1(minus,k=1) | parent via B3-fixed: (1,1):1->1(plus,k=2),1->1(minus,k=1)
+(minus,1): 1->1 k=1 | B1=(3,1):3->1(minus,k=3) B2=(3,1):3->1(minus,k=3) B3=(1,1):1->1(plus,k=2),1->1(minus,k=1) | parent via B3-fixed: (1,1):1->1(plus,k=2),1->1(minus,k=1)
+(minus,5): 5->7 k=1 | B1=(17,5):none B2=(19,7):19->7(minus,k=3) B3=(9,7):9->7(plus,k=2) | parent via B3: (5,3):3->5(plus,k=1)
+(minus,5): 7->5 k=2 | B1=(17,5):none B2=(19,7):19->7(minus,k=3) B3=(9,7):9->7(plus,k=2) | parent via B3: (5,3):3->5(plus,k=1)
+(minus,17): 17->25 k=1 | B1=(59,17):none B2=(67,25):67->25(minus,k=3) B3=(33,25):33->25(plus,k=2) | parent via B3: (17,9):none
+(minus,17): 25->37 k=1 | B1=(87,25):none B2=(99,37):99->37(minus,k=3) B3=(49,37):49->37(plus,k=2) | parent via B3: (25,13):none
+(minus,17): 37->55 k=1 | B1=(129,37):none B2=(147,55):147->55(minus,k=3) B3=(73,55):73->55(plus,k=2) | parent via B3: (37,19):none
+(minus,17): 55->41 k=2 | B1=(137,41):none B2=(151,55):none B3=(69,55):none | parent via B3: (41,27):27->41(plus,k=1)
+(minus,17): 41->61 k=1 | B1=(143,41):none B2=(163,61):163->61(minus,k=3) B3=(81,61):81->61(plus,k=2) | parent via B3: (41,21):none
+(minus,17): 61->91 k=1 | B1=(213,61):none B2=(243,91):243->91(minus,k=3) B3=(121,91):121->91(plus,k=2) | parent via B3: (61,31):none
+(minus,17): 91->17 k=4 | B1=(125,17):none B2=(199,91):none B3=(165,91):none | parent via B1: (57,17):none
+minus-sheet cycle edges: 10 (k=1: 7, k=2: 2, k=4: 1); plus-sheet cycle edges: 1 (k=2)
+edges with a child on the other sheet: 9; edges that are a Berggren child of an other-sheet edge: 5 (of 11)
+distinct unordered pairs among the minus-sheet cycle edges: 9 ({5,7} carries both 5->7 k=1 and 7->5 k=2)
+plus sheet: 25000 k=1 edges with x <= 10^5 (x = 3 mod 4) map by B3 onto 25000 k=2 edges of the minus sheet (source 2x+1, i.e. u = 3 mod 4); bijection verified
+minus sheet: 25000 k=1 edges with x <= 10^5 (x = 1 mod 4) map by B3 onto 25000 k=2 edges of the plus sheet (source 2x-1, i.e. u = 1 mod 4); bijection verified
+
+=== S5: additive budget sum_{i>=0} q_i = 3 n_0 on the minus sheet (exact rational) ===
+minus sheet n0=1    : sum q_i = 3 = 3 n0; period ratio 2^K/3^L = 2/3 < 1
+minus sheet n0=3    : sum q_i = 9 = 3 n0; period ratio 2^K/3^L = 2/3 < 1
+minus sheet n0=5    : sum q_i = 15 = 3 n0; period ratio 2^K/3^L = 8/9 < 1
+minus sheet n0=7    : sum q_i = 21 = 3 n0; period ratio 2^K/3^L = 8/9 < 1
+minus sheet n0=9    : sum q_i = 27 = 3 n0; period ratio 2^K/3^L = 8/9 < 1
+minus sheet n0=11   : sum q_i = 33 = 3 n0; period ratio 2^K/3^L = 2/3 < 1
+minus sheet n0=17   : sum q_i = 51 = 3 n0; period ratio 2^K/3^L = 2048/2187 < 1
+minus sheet n0=25   : sum q_i = 75 = 3 n0; period ratio 2^K/3^L = 2048/2187 < 1
+minus sheet n0=37   : sum q_i = 111 = 3 n0; period ratio 2^K/3^L = 2048/2187 < 1
+minus sheet n0=41   : sum q_i = 123 = 3 n0; period ratio 2^K/3^L = 2048/2187 < 1
+minus sheet n0=55   : sum q_i = 165 = 3 n0; period ratio 2^K/3^L = 2048/2187 < 1
+minus sheet n0=61   : sum q_i = 183 = 3 n0; period ratio 2^K/3^L = 2048/2187 < 1
+minus sheet n0=91   : sum q_i = 273 = 3 n0; period ratio 2^K/3^L = 2048/2187 < 1
+minus sheet n0=27   : sum q_i = 81 = 3 n0; period ratio 2^K/3^L = 8/9 < 1
+minus sheet n0=1001 : sum q_i = 3003 = 3 n0; period ratio 2^K/3^L = 2/3 < 1
+plus sheet n0=1: period ratio 2^K/3^L = 4/3 > 1, sum q_i diverges (D_L -> +infinity on the cycle)
+minus cycle min 1: L=1 odd steps, K=1 halvings, 2^K=2 < 3^L=3, gate B=1, n0 = B/(3^L-2^K) = 1/1
+minus cycle min 5: L=2 odd steps, K=3 halvings, 2^K=8 < 3^L=9, gate B=5, n0 = B/(3^L-2^K) = 5/1
+minus cycle min 17: L=7 odd steps, K=11 halvings, 2^K=2048 < 3^L=2187, gate B=2363, n0 = B/(3^L-2^K) = 2363/139
+source sha256 6f6252c82f3abc0a9ff0e1eea34118d502bbf967e14ffd578405597d6c9112ff
+
+ALL CHECKS PASSED

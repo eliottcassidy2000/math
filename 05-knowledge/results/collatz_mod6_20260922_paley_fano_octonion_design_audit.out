@@ -1,0 +1,65 @@
+=== A1. Paley T_7 counts (independent) ===
+QR=[1, 2, 4] arcs=21 triples=35 cyclic=14 transitive=21 trA^3=42 h(brute force over 5040 orders)=189
+per-arc 3-cycle counts (multiset): [2] over 21 arcs
+
+=== A2. STS(7) by exact cover over the 21 pairs ===
+labelled STS(7): 30
+STS(7) inside the cyclic triples: 2 ; == {dev013, dev015}: True ; disjoint and union = cyclic triples: True
+orientation s->s+1->s+3->s on all lines: True ; s->s+1->s+5->s: True ; x->-x anti-automorphism: True
+
+=== A3. Octonions: index rule vs tournament, associator antisymmetry, Cayley-Dickson ===
+table from the index rule == table from the Paley orientation on dev{0,1,3}: True
+alternative (associator alternating on all 512 basis triples): True
+60 random rational triples: N(xy)=N(x)N(y): True ; (xx)y=x(xy),(yx)x=y(xx): True ; Moufang z(x(zy))=((zx)z)y: True
+(e_0 e_1) e_2 = [0, 0, 0, 0, 0, 0, -1, 0] ; e_0 (e_1 e_2) = [0, 0, 0, 0, 0, 0, 1, 0] ; differ: True
+nonzero coordinate index: [6] = imaginary unit e_5 (index i <-> e_{i-1}); the explorer note wrote e_6: corrected
+explorer's relabelling r -> label {0: 1, 1: 3, 2: 5, 3: 2, 4: 6, 5: 7, 6: 4} carries Paley arcs onto Cayley-Dickson signs: True
+the relabelling carries dev{0,1,3} onto the XOR lines: True
+Cayley-Dickson sign tournament: h = 189 ; cyclic triples = 14
+vertex bijections carrying Paley onto the textbook octonion sign tournament (UNCITED-RECOLLECTION for the textbook table): 21 (= |Aut| = 21 iff isomorphic)
+Cayley-Dickson mask in the fano_code convention: 96
+
+=== A4. The 128 orientations of dev{0,1,3} ===
+(alternative, h) census: {(True, 189): 16, (False, 171): 112}
+
+=== A5. All 2^21 labelled 7-tournaments; regular ones; doubly regular vs 2-design ===
+regular labelled 7-tournaments: 2640
+h -> labelled count: {171: 1680, 175: 720, 189: 240}
+h=189: |Aut|=21 (7!/|Aut|=240) common-out-neighbour counts=[1] per-arc 3-cycle counts=[2] doubly-regular=True 2-design=True STS(7) inside cyclic triples=2
+h=175: |Aut|=7 (7!/|Aut|=720) common-out-neighbour counts=[0, 1, 2] per-arc 3-cycle counts=[1, 2, 3] doubly-regular=False 2-design=False STS(7) inside cyclic triples=0
+h=171: |Aut|=3 (7!/|Aut|=1680) common-out-neighbour counts=[0, 1, 2] per-arc 3-cycle counts=[1, 2, 3] doubly-regular=False 2-design=False STS(7) inside cyclic triples=2
+on the three regular 7-tournaments: cyclic triples form a 2-design <=> doubly regular <=> Paley (h=189): True
+
+=== A6. Paley T_p, p = 3 mod 4 ===
+p=3: c3=1 (p^3-p)/24=1 per-arc 3-cycles=[1] (p+1)/4=1 common-out=[0] (p-3)/4=0 AP triples cyclic=2/2 2 non-residue=True p mod 8=3
+p=7: c3=14 (p^3-p)/24=14 per-arc 3-cycles=[2] (p+1)/4=2 common-out=[1] (p-3)/4=1 AP triples cyclic=0/6 2 non-residue=False p mod 8=7
+p=11: c3=55 (p^3-p)/24=55 per-arc 3-cycles=[3] (p+1)/4=3 common-out=[2] (p-3)/4=2 AP triples cyclic=10/10 2 non-residue=True p mod 8=3
+p=19: c3=285 (p^3-p)/24=285 per-arc 3-cycles=[5] (p+1)/4=5 common-out=[4] (p-3)/4=4 AP triples cyclic=18/18 2 non-residue=True p mod 8=3
+p=23: c3=506 (p^3-p)/24=506 per-arc 3-cycles=[6] (p+1)/4=6 common-out=[5] (p-3)/4=5 AP triples cyclic=0/22 2 non-residue=False p mod 8=7
+p=31: c3=1240 (p^3-p)/24=1240 per-arc 3-cycles=[8] (p+1)/4=8 common-out=[7] (p-3)/4=7 AP triples cyclic=0/30 2 non-residue=False p mod 8=7
+p=43: c3=3311 (p^3-p)/24=3311 per-arc 3-cycles=[11] (p+1)/4=11 common-out=[10] (p-3)/4=10 AP triples cyclic=42/42 2 non-residue=True p mod 8=3
+p=47: c3=4324 (p^3-p)/24=4324 per-arc 3-cycles=[12] (p+1)/4=12 common-out=[11] (p-3)/4=11 AP triples cyclic=0/46 2 non-residue=False p mod 8=7
+AP lemma confirmed also for p in {59,67,71,79,83}
+p=7: translation classes=2 non-AP classes=2 cyclic STS(7) inside the design=2
+p=19: translation classes=15 non-AP classes=6 cyclic STS(19) inside the design=8
+p=31: translation classes=40 non-AP classes=40 cyclic STS(31) inside the design=192
+p=31: partitions of the 40 classes into 8 block-disjoint cyclic STS(31): 0
+p=43: translation classes=77 non-AP classes=56 cyclic STS(43) inside the design=1024
+
+=== A7. The explorer's STS(19) witness ===
+blocks: 57 ; all cyclic triples of T_19: True ; pairs covered: 171 / 171 ; every pair exactly once: True
+arithmetic-progression blocks in the witness: 33 -> the witness is not translation-invariant (a cyclic STS(19) has none)
+
+=== A8. Entropy ===
+8/pi^2 = 0.810569; H = 0.700279 bits; paste 0.704 differs by 0.00372; 6/pi^2 = 0.60793, H = 0.96612
+
+=== A9. Lean file ===
+contains 'sorry': False ; imports: []
+lean exit: 0 ; stdout: 'paley7_cyclic_triples' does not depend on any axioms | 'paley7_dev013' does not depend on any axioms
+
+=== A10. OEIS A007079 ===
+A007079: Number of labeled regular tournaments with 2n+1 nodes. ; offset 0,2 ; data[:5] = ['1', '2', '24', '2640', '3230080']
+2640 is a(3) of A007079 (2n+1 = 7 nodes), not 'A007079(7)'.
+
+audit runtime 17 s
+ALL AUDIT CHECKS PASSED

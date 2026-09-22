@@ -1,3 +1,4 @@
+collatz_mod6_20260922_counterexample_portrait.py -- lane counterexample_portrait, session collatz-mod6, 2026-09-22
 
 ==============================================================================
 S1. Conjugacy T_+(-n) = -T_-(n) on odd n (master sheet criterion)
@@ -23,6 +24,7 @@ of log_2 3 the clock must sit on is SIGN-SPECIFIC.
 ==============================================================================
 S3. Convergents of log_2 3, the sign alternation, and where the four known clocks sit
 ==============================================================================
+computed 60 convergents; determinant identity checked for all consecutive pairs
 partial quotients a_0..a_29: [1, 1, 1, 2, 2, 3, 1, 5, 2, 23, 2, 2, 1, 1, 55, 1, 4, 3, 1, 1, 15, 1, 9, 2, 5, 7, 1, 1, 4, 8]
 convergents p_n/q_n, n<=24, with sign of Delta=2^p-3^q (exact when q<=80000, else by 400-digit log):
   n= 0  1/1  Delta sign -1  (-1)
@@ -89,11 +91,11 @@ is what the sheets do not share.  {5,7} has N=5 < N_min(2)=3? no:
 S5. Census: odd n <= X on the 3n-1 sheet fall into the three known cycles (basin sizes)
 ==============================================================================
 X = 10000000: odd starts 5000000; every one reaches a known cycle (no fourth cycle, no escape).
-  basin of [1]: 1636054 odd starts (0.327211)
-  basin of [5, 7]: 1623149 odd starts (0.324630)
-  basin of [17, 25, 37, 55, 41, 61, 91]: 1740797 odd starts (0.348159)
+  basin of [1]: 1636054 odd starts (0.327211, rounded 0.327)
+  basin of [5, 7]: 1623149 odd starts (0.324630, rounded 0.325)
+  basin of [17, 25, 37, 55, 41, 61, 91]: 1740797 odd starts (0.348159, rounded 0.348)
   longest first-drop-or-cycle-hit segment: 172 accelerated steps at n=5960769
-  census time 5.6s (timing line, not a result)
+  census time 5.4s (timing line, not a result)
 FINITE-EXACT consequence: any fourth positive 3n-1 cycle has minimum element N > 10^7,
 i.e. N >= 10000001 (odd).  Mirror of Barina's 2^68 (CITED, plus sheet); the minus sheet
 has NO published verification comparable to 2^68, only this repo's censuses.
@@ -114,6 +116,17 @@ Chain (PROVED given CITED inputs): a positive cycle with minimum N and L odd ter
 plus sheet, N = 2^68 (Barina): tier A holds for every L <= L_A = 14878203146 (sqrt(3N/4) = 1.487820e+10)
   spacing threshold factor*3*N*ln2 = 6.137428e+20 (factor = 1.000000)
   convergents on the correct side with q_n(q_n+q_(n+1)) >= threshold: first is n=23, 217976794617/137528045312
+    (n=1: q_n(q_n+q_(n+1)) = 1*(1+2) = 3 < threshold)
+    (n=3: q_n(q_n+q_(n+1)) = 5*(5+12) = 85 < threshold)
+    (n=5: q_n(q_n+q_(n+1)) = 41*(41+53) = 3854 < threshold)
+    (n=7: q_n(q_n+q_(n+1)) = 306*(306+665) = 297126 < threshold)
+    (n=9: q_n(q_n+q_(n+1)) = 15601*(15601+31867) = 740548268 < threshold)
+    (n=11: q_n(q_n+q_(n+1)) = 79335*(79335+111202) = 15116252895 < threshold)
+    (n=13: q_n(q_n+q_(n+1)) = 190537*(190537+10590737) = 2054231604138 < threshold)
+    (n=15: q_n(q_n+q_(n+1)) = 10781274*(10781274+53715833) = 695360982774318 < threshold)
+    (n=17: q_n(q_n+q_(n+1)) = 171928773*(171928773+225644606) = 68354303228933967 < threshold)
+    (n=19: q_n(q_n+q_(n+1)) = 397573379*(397573379+6189245291) = 2618743755492185930 < threshold)
+    (n=21: q_n(q_n+q_(n+1)) = 6586818670*(6586818670+65470613321) = 474629238350574071970 < threshold)
   none of them has q_n <= L_A, so NO positive cycle (other than the trivial/known ones)
   has L <= 14878203146: every hypothetical cycle on this sheet has L > 14878203146.
   first three surviving clocks (K/L reduced), the minimal unresolved conjunction lives there:
@@ -123,6 +136,11 @@ plus sheet, N = 2^68 (Barina): tier A holds for every L <= L_A = 14878203146 (sq
 minus sheet, N = 10^7+1 (S5 census): tier A holds for every L <= L_A = 2738 (sqrt(3N/4) = 2.738613e+03)
   spacing threshold factor*3*N*ln2 = 1.946585e+07 (factor = 0.936109)
   convergents on the correct side with q_n(q_n+q_(n+1)) >= threshold: first is n=10, 50508/31867
+    (n=0: q_n(q_n+q_(n+1)) = 1*(1+1) = 2 < threshold)
+    (n=2: q_n(q_n+q_(n+1)) = 2*(2+5) = 14 < threshold)
+    (n=4: q_n(q_n+q_(n+1)) = 12*(12+41) = 636 < threshold)
+    (n=6: q_n(q_n+q_(n+1)) = 53*(53+306) = 19027 < threshold)
+    (n=8: q_n(q_n+q_(n+1)) = 665*(665+15601) = 10816890 < threshold)
   none of them has q_n <= L_A, so NO positive cycle (other than the trivial/known ones)
   has L <= 2738: every hypothetical cycle on this sheet has L > 2738.
   first three surviving clocks (K/L reduced), the minimal unresolved conjunction lives there:
@@ -130,13 +148,19 @@ minus sheet, N = 10^7+1 (S5 census): tier A holds for every L <= L_A = 2738 (sqr
     n=12: K/L = 176251/111202, cycle length L = m*111202, m>=1, q_n(q_n+q_(n+1)) = 33553980278
     n=14: K/L = 16785921/10590737, cycle length L = m*10590737, m>=1, q_n(q_n+q_(n+1)) = 226345347662107
 Literature for comparison (plus sheet): Simons-de Weger 2005 (CITED, Acta Arith. 117) no m-cycles
-m<=68; Hercher, J. Integer Seq. 26 (2023) art. 23.3.5 (CITED, abstract read 2026-09-22): m >= 92,
-using verification up to 3*2^69 and giving at least 1.375e11 odd members in any nontrivial cycle.
+m<=68 (exact published figure UNCITED-RECOLLECTION); Hercher, J. Integer Seq. 26 (2023) art. 23.3.5
+(CITED; abstract re-read at the audit 2026-09-22, cs.uwaterloo.ca/journals/JIS/VOL26/Hercher/hercher5.html):
+credits Simons-de Weger with m >= 76, gets m >= 83 from newer verification ranges, PROVES m >= 92,
+and states that verification up to 3*2^69 WOULD SUFFICE to raise the odd-member bound to the NEXT
+bound K >= 1.375e11 (conditional; this lane's first draft misread it as proved, caught at the audit).
+That next bound is the clock n=23: q_23 = 137528045312 = 1.375e11.
 The chain here, from cited inputs alone (Barina 2^68, Legendre, Hardy-Wright 171), proves that
 every nontrivial positive 3n+1 cycle has L > 14878203146 odd terms (n=21's spacing 4.746e20
-falls below the sharp threshold 6.137e20); Hercher's 1.375e11 is stronger and independent.
-On the minus sheet the same chain gives: any FOURTH positive 3n-1 cycle has L > L_A(minus)
-and, if its minimum stays > 10^7, its clock is an even-index convergent with q_n >= 15601.
+falls below the sharp threshold 6.137e20); it does NOT reach q_23, because tier A (hence the
+convergent placement) is available only for L <= L_A, and a cycle with L > L_A may sit on a
+non-convergent clock.  On the minus sheet the same chain gives: any FOURTH positive 3n-1 cycle has
+L > L_A(minus) = 2738; IF its clock is a convergent (not forced for L > L_A) it is an even-index
+one with q_n >= 31867 (n=8, 665*(665+15601), fails the threshold).
 
 ==============================================================================
 S7. Gate census: every composition word with L <= 10, both parameters b = +-1
@@ -275,21 +299,26 @@ tail (7/9)^(J-1) transfer verbatim between the sheets.  SHEET-BLIND.
 S15. Pairwise contradiction search and the minimal unresolved conjunction
 ==============================================================================
 Cycle conditions (plus sheet): C1 gate q=1 & sign law Delta>0; C2 N >= 2^68; C3 K/L odd-index
-convergent for L <= L_A; C4 q_n(q_n+q_(n+1)) >= 0.75*3N ln2; C5 no 1-cycle (Steiner), no m-cycle
-m <= 68 (Simons-de Weger); C6 necklace/rotation invariance of q; C7 |Delta| = 1 only at 2/1.
+convergent for L <= L_A; C4 q_n(q_n+q_(n+1)) >= 3N ln2 e^{-L_A/(3N)} (sharp factor 1.000000, S6) whenever
+the clock is a convergent; C5 no 1-cycle (Steiner), no m-cycle m <= 91 (Simons-de Weger, Hercher);
+C6 necklace/rotation invariance of q; C7 |Delta| = 1 only at 2/1.
 Witness that they are jointly satisfiable at the level of clocks: the surviving clocks listed in S6
 (odd-index convergents with q_n > L_A and the spacing inequality) violate none of C1-C7 a priori;
 C1's integrality q=1 on such a clock is the ONLY untested predicate.  Pairwise contradiction:
-NONE FOUND.
+NONE FOUND.  (Audit 2026-09-22: C3 is conditional on L <= L_A; for L > L_A no condition on file
+forces the clock to be a convergent, so the convergent survivors are one case, not the whole.)
 Divergence conditions (plus sheet): D1 D_L -> -infinity, sum q_L < infinity (glued_xor);
 D2 no bounded strip (guards 2a); D3 stopping-time density one (Terras/Everett); D4 Tao a.e. in
-logarithmic density; D5 Krasikov-Lagarias x^0.84 ancestors of 1; D6 Lyapunov obstruction;
+logarithmic density (arXiv:1909.03562, Thm 1.3); D5 Krasikov-Lagarias 2003 x^0.84 ancestors of 1;
+D6 Lyapunov obstruction;
 D7 squarefree growth prefixes of every length.  D1-D2 constrain the orbit, D3-D5 say only that
 the exceptional set has density zero (D4: log-density; D5: the tree of 1 is large), D6-D7 say
 finite lookahead cannot certify descent.  A density-zero divergent orbit with liminf D_L = -inf
 and sum q_L < inf is consistent with all of them: NONE FOUND.
-Minimal unresolved conjunction (cycle): exists odd-index convergent p_n/q_n with q_n > L_A, m >= 1,
-and a composition of m p_n into m q_n parts with q = 1 and all members >= 2^68.
+Minimal unresolved conjunction (cycle): exists a reduced clock K/L > log_2 3 with L > L_A = 14878203146,
+(K - L log_2 3) ln 2 <= (L/(3N)) e^{L/(3N)} at N = 2^68, and a composition of K into L parts with q = 1
+and all members >= 2^68; in the sub-case where K/L is a convergent it is p_n/q_n with n >= 23 odd,
+L = m q_n (Hercher's next target K >= 1.375e11 is exactly the m = 1, n = 23 clock).
 Minimal unresolved conjunction (divergence): exists a positive odd orbit with n_L unbounded,
 D_L -> -infinity, sum q_L < infinity, whose start lies in the density-zero exceptional sets of
 Terras and Tao.
@@ -298,4 +327,12 @@ Sheet lesson: every SHEET-BLIND condition above is satisfied by the seven-cycle 
 so no conjunction of sheet-blind conditions can exclude a plus-sheet cycle; a proof must use the
 sign-specific inputs (Delta>0 side, Barina 2^68, Steiner/Simons-de Weger/Hercher, Tao) or a new one.
 
-total runtime 63.3s (timing line, not a result)
+==============================================================================
+S16. Session-lead probe: binary entropy of 8/pi^2 and the Paley tournament on F_7
+==============================================================================
+8/pi^2 = 0.81057; binary entropy H = 0.70028 bits (the paste says 0.704 and calls it zero entropy)
+Paley on F_7 (arc i->j iff j-i in {1,2,4}): 21 arcs, 14 cyclic triples ((7^3-7)/24 = 14), 21 transitive triples; cyclic triples = dev{0,1,3} u dev{0,1,5}: True
+each arc lies in exactly 2..2 cyclic triples (2-(7,3,2) design)
+FINITE-EXACT; these tournament facts are correct and have no map to either table (SCOPE).
+
+total runtime 62.4s (timing line, not a result)

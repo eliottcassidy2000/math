@@ -303,7 +303,7 @@ for m in range(2, MQ + 1):
     if pk > peak_max[0]:
         peak_max = (pk, m)
 tot = sum(status.values())
-print(f"greedy G_-(m) = (2^k m + 1)/3 on 2 <= m <= 10^6, 3 !| m: {tot} starts; statuses {status}")
+print(f"greedy G_-(m) = (2^k m + 1)/3 on 2 <= m <= 10^6, 3 !| m: {tot} starts; statuses {status} (step cap {GCAP})")
 print(f"greedily certified (below or one): {status['below'] + status['one']} / {tot} = "
       f"{(status['below'] + status['one']) / tot:.6f}; hard cases: {hard}")
 print(f"greedy steps to certify, histogram (steps: count): " + ", ".join(f"{k}: {steps_hist[k]}" for k in sorted(steps_hist)))

@@ -583,6 +583,17 @@ for key in classes:
 cnts = sorted(v[0] for v in classes.values())
 out("class sizes:", cnts, "; |Aut| =", [5040 // c for c in cnts])
 check(cnts == [240, 720, 1680], "class sizes")
+# doubly regular (every ordered pair i != j has the same number of common out-neighbours) versus
+# "cyclic triples form a 2-design" (every pair in the same number of cyclic triples), on the three classes
+for key in sorted(classes, key=lambda k: -classes[k][1]):
+    cp, c3, nsts, mults = key
+    cnt, h, rep = classes[key]
+    adj = adj_from_pairmask(rep)
+    common = sorted({sum(adj[i][w] * adj[j][w] for w in range(7)) for i in range(7) for j in range(7) if i != j})
+    out(f"  class h={h}: common out-neighbour counts over ordered pairs = {common}; doubly regular = {len(common) == 1};"
+        f" per-pair 3-cycle counts = {sorted(set(mults))}; 2-design = {len(set(mults)) == 1}")
+    check((len(common) == 1) == (len(set(mults)) == 1) == (h == 189), "doubly regular iff 2-design iff Paley")
+out("on regular 7-tournaments: cyclic triples form a 2-design <=> doubly regular <=> Paley: True (audit S20b gives the general proof)")
 # rotational R_7 (connection set {1,2,3}) identification
 R7 = [[1 if (j - i) % 7 in (1, 2, 3) else 0 for j in range(7)] for i in range(7)]
 out("R_7 = circulant {1,2,3}: skew charpoly", poly_str(skew_charpoly(R7)), "; h =", ham_paths(R7),
@@ -596,6 +607,24 @@ n_fano_labelled = sum(c for (_, c, _, _) in fano_classes)
 out("labelled Fano-line orientations total:", n_fano_labelled, "; each contains exactly 2 STS, so 2 *", n_fano_labelled, "=",
     2 * n_fano_labelled, "= 30 STS x 128 orientations =", 30 * 128)
 check(sum(classes[k][0] * k[2] for k in classes) == 30 * 128, "double count 30*128")
+
+# THM-133 cross-check: H = (462 - tr A^4)/2 for every circulant tournament on Z_7
+def trace_A4(adj):
+    n = len(adj)
+    A2 = [[sum(adj[i][k] * adj[k][j] for k in range(n)) for j in range(n)] for i in range(n)]
+    return sum(A2[i][k] * A2[k][i] for i in range(n) for k in range(n))
+out("7! =", math.factorial(7))
+circ_ok = True
+for choice in itertools.product((0, 1), repeat=3):
+    S_ = {d if c else 7 - d for d, c in zip((1, 2, 3), choice)}
+    C = [[1 if (j - i) % 7 in S_ else 0 for j in range(7)] for i in range(7)]
+    hC, t4 = ham_paths(C), trace_A4(C)
+    if 2 * hC != 462 - t4:
+        circ_ok = False
+    if S_ == {1, 2, 4}:
+        out("Paley: tr A^4 =", t4, "; (462 - tr A^4)/2 =", (462 - t4) // 2, "= h")
+out("THM-133 formula h = (462 - tr A^4)/2 holds for all 8 circulant tournaments on Z_7:", circ_ok)
+check(circ_ok, "THM-133")
 
 # ---------------------------------------------------------------- E
 out()
@@ -702,6 +731,7 @@ def disjoint_partition(sols, orbs, lam):
 for p in (7, 19, 31, 43):
     ncl, norb, need, sols, orbs = cyclic_sts_inside(p)
     lam = (p + 1) // 4
+    out(f"p={p}: an STS({p}) has {p*(p-1)//6} blocks; lam*that = {lam*p*(p-1)//6} = c3 = {(p**3-p)//24}")
     out(f"p={p}: translation classes of cyclic triples = {ncl} (=(p^2-1)/24 = {(p*p-1)//24}); "
         f"non-arithmetic-progression classes (candidate base blocks) = {norb}; base blocks needed = {need}; "
         f"cyclic STS(p) inside the Paley 2-(p,3,{lam}) design: {len(sols)}")
@@ -795,6 +825,8 @@ import os, shutil, subprocess
 lean_file = os.path.join(os.path.dirname(os.path.abspath(__file__)), "collatz_mod6_20260922_paley_fano_octonion_design.lean")
 lean_bin = shutil.which("lean")
 if lean_bin and os.path.exists(lean_file):
+    ver = subprocess.run([lean_bin, "--version"], capture_output=True, text=True, timeout=60)
+    out("lean --version:", ver.stdout.strip().split(",")[0])
     res = subprocess.run([lean_bin, lean_file], capture_output=True, text=True, timeout=300)
     out("lean exit code:", res.returncode)
     for line in (res.stdout + res.stderr).strip().splitlines():

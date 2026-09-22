@@ -1,0 +1,336 @@
+
+==============================================================================
+A1. 8/pi^2 as the coprime density among pairs of ODD integers
+==============================================================================
+8/pi^2 = 0.81056946913870217155
+6/pi^2 = 0.60792710185402662866 (all-integer coprime density, for contrast)
+ratio (8/pi^2)/(6/pi^2) = 4/3 = 1/(1-1/4): removing the prime 2 from the Euler product
+prod_{3<=p<=2e6 odd prime} (1-1/p^2) = 0.810569495361107
+  |prod - 8/pi^2| = 2.6222e-8  (tail of the product over p > 2e6 is O(1/(2e6 log 2e6)) ~ 3e-8)
+N = 10000 = 10^4 odd integers 1..19999; ordered pairs = 100000000 = 10^8
+CITED: Hardy-Wright, Theorem 332 (coprime density 6/pi^2); odd restriction removes the factor 1-1/4
+Moebius exact count of coprime ordered odd pairs = 81058757
+brute-force gcd count of coprime ordered odd pairs   = 81058757
+density = 81058757 / 100000000 = 0.81058757
+8/pi^2  = 0.8105694691387022
+difference density - 8/pi^2 = 1.8100861297831727e-05  (Mertens-type error O(log N / N) ~ 0.000921 )
+contrast: coprime pairs among ALL 1..N x 1..N = 60794971 density 0.60794971 vs 6/pi^2 = 0.6079271018540267
+
+==============================================================================
+A2. Binary entropy H(8/pi^2) exactly; the paste's 0.704 is wrong
+==============================================================================
+H(8/pi^2)  = 0.700278653411826 bits  (10 digits: 0.7002786534)
+H(6/pi^2)  = 0.966124241906 bits (contrast)
+the p > 1/2 with H(p) = 0.704 is p = 0.8087879981  (not 8/pi^2 = 0.8105694691 )
+H(8/pi^2) - 0.704 = -0.00372135
+zero entropy would need p in {0,1}; H(p) > 0 for every 0 < p < 1 (strict concavity).
+H(8/pi^2) rounded to 3 decimals = 0.700, to 4 = 0.7003
+
+==============================================================================
+A3. Counting refutation of the compression claim
+==============================================================================
+Pigeonhole: number of binary strings of length < L is 2^L - 1 < 2^L = number of L-bit streams.
+ L | 2^L streams | strings of length < L | deficit
+  1 |            2 |                    1 | 1
+  2 |            4 |                    3 | 1
+  3 |            8 |                    7 | 1
+  4 |           16 |                   15 | 1
+  8 |          256 |                  255 | 1
+ 16 |        65536 |                65535 | 1
+ 32 |   4294967296 |           4294967295 | 1
+ 64 | 18446744073709551616 | 18446744073709551615 | 1
+2^64 = 18446744073709551616
+=> every injective (lossless) code of all L-bit streams assigns length >= L to at least one stream.
+   Prefix-free codes on the uniform source: Kraft + Shannon give mean length >= L (CITED Shannon 1948).
+suffix lookahead (last m=4 bits first) on all 2^12 = 4096 streams: 4096 distinct images
+=> a bijection composed with any code is still injective; pigeonhole bound unchanged.
+
+Tournament layout: n vertices, C(n,2) arcs (bits); a fixed Hamiltonian spine forces n-1 arcs;
+free arcs T(n-2) = C(n,2) - (n-1) = C(n-1,2).  Storage per T(n-2) payload bits = C(n,2) bits.
+  n | C(n,2) | T(n-2) | overhead C(n,2)-T(n-2) | payload/storage
+  3 |      3 |      1 |                      2 | 0.3333
+  4 |      6 |      3 |                      3 | 0.5000
+  5 |     10 |      6 |                      4 | 0.6000
+  6 |     15 |     10 |                      5 | 0.6667
+  7 |     21 |     15 |                      6 | 0.7143
+  8 |     28 |     21 |                      7 | 0.7500
+  9 |     36 |     28 |                      8 | 0.7778
+ 10 |     45 |     36 |                      9 | 0.8000
+ 11 |     55 |     45 |                     10 | 0.8182
+ 12 |     66 |     55 |                     11 | 0.8333
+=> the layout EXPANDS the payload by n-1 bits per tournament; ratio -> 1 but never < 1.
+inherited: scaffolding audit Theorem 5.1, sum_T h(T) = n! 2^{T(n-2)}; re-checked below for n <= 6
+
+  n | 2^C(n,2) tournaments | sum_T h(T) | n! 2^{T(n-2)} | equal
+  2 |                    2 |          2 |             2 | True
+  3 |                    8 |         12 |            12 | True
+  4 |                   64 |        192 |           192 | True
+  5 |                 1024 |       7680 |          7680 | True
+  6 |                32768 |     737280 |        737280 | True
+
+Bernoulli(8/pi^2) model: if the T(n-2) free arcs were i.i.d. defects with P(flip)=8/pi^2,
+the entropy would be H(8/pi^2) = 0.70028 bits per ARC; total T(n-2) H bits; per node (n-1)(n-2)/(2n) H:
+  n | T(n-2) | total bits | per node
+  3 |      1 |      0.700 |    0.233
+  4 |      3 |      2.101 |    0.525
+  7 |     15 |     10.504 |    1.501
+ 10 |     36 |     25.210 |    2.521
+ 20 |    171 |    119.748 |    5.987
+100 |   4851 |   3397.052 |   33.971
+=> 'per node' is not a constant; the only correct per-symbol figure is per arc, and it is a model
+   assumption (i.i.d. Bernoulli defects) with no defined link to Collatz orbits or to coprimality.
+
+==============================================================================
+A4. Consecutive odd Syracuse iterates are always coprime (density 1, not 8/pi^2)
+==============================================================================
+odd n <= 100000: 50000 pairs (n, Syr(n)); gcd != 1 in 0 cases
+Proof: gcd(n, 3n+1) = gcd(n, 1) = 1 and Syr(n) | 3n+1, so gcd(n, Syr(n)) = 1. Same for the
+unaccelerated map: gcd(n, 3n+1)=1 and gcd(2k, k)=k>1 only on even steps, which are not odd pairs.
+=> any 'coprime mask' evaluated on consecutive odd orbit values has density 1, not 8/pi^2 = 0.81057.
+
+==============================================================================
+A5. Paley tournament on F_7 (session lead probe, verified)
+==============================================================================
+arcs: 21  (expected 21)
+cyclic triples: 14  transitive triples: 21  (p^3-p)/24 = (7^3-7)/24 = 14
+dev{0,1,3} lines: [(0, 1, 3), (0, 2, 6), (0, 4, 5), (1, 2, 4), (1, 5, 6), (2, 3, 5), (3, 4, 6)]
+dev{0,1,5} lines: [(0, 1, 5), (0, 2, 3), (0, 4, 6), (1, 2, 6), (1, 3, 4), (2, 4, 5), (3, 5, 6)]
+shorthand: dev{0,1,3} = 013 026 045 124 156 235 346 ; dev{0,1,5} = 015 023 046 126 134 245 356
+cyclic triples == dev{0,1,3} U dev{0,1,5}: True ; disjoint: True
+on every line {s,s+1,s+3}: s->s+1->s+3->s (octonion rule e_i e_{i+1} = e_{i+3}): True
+cyclic triples through each arc: set = [2]  (2-(7,3,2) design)
+Hamiltonian paths in the Paley tournament T_7: h = 189
+directed 3-cycles as CYCLES = 14; as (line, rotation) pairs 14 x 3 = 42; the paste's 7 x 3 = 21
+counts three rotations of each of only 7 of the 14 cycles. Also each Fano plane has 7 lines and 7 points;
+the cyclic-triple design has 14 blocks, so 'lines <-> 3-cycle triads' is 2-to-1 at best.
+THM-1370 (canon): the Hamiltonian-path spectrum omits 7 and 21; here h(T_7) = 189 is neither.
+
+==============================================================================
+B1. Lean toolchain and package state
+==============================================================================
+lean --version: Lean (version 4.30.0, arm64-apple-darwin24.6.0, commit d024af099ca4bf2c86f649261ebf59565dc8c622, Release) (exit 0 )
+lake --version: Lake version 5.0.0-src+d024af0 (Lean version 4.30.0) (exit 0 )
+package: /tmp/math-wt-collatz-mod6-b/04-computation/lean/CollatzBlueprintAudit
+  lean-toolchain: leanprover/lean4:v4.30.0
+  lakefile.toml: name = "CollatzBlueprintAudit" | version = "0.1.0" | defaultTargets = ["CollatzBlueprintAudit"] |  | [[lean_lib]] | name = "CollatzBlueprintAudit"
+  Mathlib.olean found anywhere under the lean dir or ~/.elan: NONE
+  .lake/build cached: True
+  lake build: exit 0 in 0.1s
+  Build completed successfully (5 jobs).
+  verification.json lists 35 audited theorems; axiom sets used: [(), ('propext',), ('propext', 'Quot.sound')]
+    CollatzBlueprintAudit.blueprintResiduePremise_uninhabited ['propext', 'Quot.sound']
+    CollatzBlueprintAudit.collatz_nineteen_growth_control []
+    CollatzBlueprintAudit.collatz_positive ['propext', 'Quot.sound']
+    CollatzBlueprintAudit.collatz_reachesOne_iff_globalTallyMargin ['propext', 'Quot.sound']
+    CollatzBlueprintAudit.collatz_reachesOne_iff_strictDescent ['propext', 'Quot.sound']
+    CollatzBlueprintAudit.collatz_reachesOne_of_strictDescent ['propext', 'Quot.sound']
+    CollatzBlueprintAudit.collatz_seven_reachesOne []
+    CollatzBlueprintAudit.collatz_zero_fixed ['propext']
+    CollatzBlueprintAudit.collatz_zero_never_reachesOne ['propext']
+    CollatzBlueprintAudit.constantOne_control ['propext', 'Quot.sound']
+    CollatzBlueprintAudit.descent_iff_affine_inequality ['propext', 'Quot.sound']
+    CollatzBlueprintAudit.iterate_add []
+    CollatzBlueprintAudit.iterate_positive []
+    CollatzBlueprintAudit.localTrap_positive []
+    CollatzBlueprintAudit.localTrap_three_fixed []
+    CollatzBlueprintAudit.local_certificate_does_not_imply_global ['propext', 'Quot.sound']
+    CollatzBlueprintAudit.ninetyFive_tally_control []
+    CollatzBlueprintAudit.not_allIntegersHaveOddResidue ['propext', 'Quot.sound']
+    CollatzBlueprintAudit.not_all_naturals_reachOne ['propext']
+    CollatzBlueprintAudit.odd_integer_residues ['propext', 'Quot.sound']
+    CollatzBlueprintAudit.positivity_hypothesis_is_necessary ['propext', 'Quot.sound']
+    CollatzBlueprintAudit.rawLocalCertificate_implies_localDescent ['propext', 'Quot.sound']
+    CollatzBlueprintAudit.rawLocalCertificate_two []
+    CollatzBlueprintAudit.reachesOne_iff_strictDescent ['propext', 'Quot.sound']
+    CollatzBlueprintAudit.residue_and_carry_do_not_force_descent []
+    CollatzBlueprintAudit.signed_negFive_returns []
+    CollatzBlueprintAudit.signed_negOne_returns []
+    CollatzBlueprintAudit.signed_negSeventeen_returns []
+    CollatzBlueprintAudit.standard_affine_tally ['propext', 'Quot.sound']
+    CollatzBlueprintAudit.standard_clock_partition ['propext', 'Quot.sound']
+    CollatzBlueprintAudit.standard_descent_iff_tally_margin ['propext', 'Quot.sound']
+    CollatzBlueprintAudit.strictDescent_of_affineCertificates ['propext', 'Quot.sound']
+    CollatzBlueprintAudit.true_tally_two []
+    CollatzBlueprintAudit.twentyThree_tally_control []
+    CollatzBlueprintAudit.wrong_tripling_clock_two ['propext', 'Quot.sound']
+  CatalanEllipticAudit/verification.json lists 12 theorems; axiom sets: [()]
+    CatalanEllipticAudit.collatz_carry_cancellation []
+    CatalanEllipticAudit.collatz_fixed_point_equation []
+    CatalanEllipticAudit.collatz_gap []
+    CatalanEllipticAudit.collatz_ordered_carry []
+    CatalanEllipticAudit.collatz_seven_cleared_steps []
+    CatalanEllipticAudit.collatz_successors_odd []
+    CatalanEllipticAudit.pasted_denominators_positive []
+    CatalanEllipticAudit.pasted_not_four []
+    CatalanEllipticAudit.polynomial_point_ten_fortynine []
+    CatalanEllipticAudit.repair_divisions_exact []
+    CatalanEllipticAudit.repaired_denominators_positive []
+    CatalanEllipticAudit.repaired_equals_four []
+  README control: 7 reaches 1 in 16 standard steps
+  README control: -1 returns to itself after 2 signed steps: True
+  README control: -5 returns to itself after 5 signed steps: True
+  README control: -17 returns to itself after 18 signed steps: True
+  Catalan package controls: 2^11 - 3^7 = -139 ; 17*139 = 2363 ; point (10,49) on y^2 = 2x^3 + 4x^2 + 1: True
+
+==============================================================================
+B2. lean on the pasted blueprint (three renderings) and on the descent-certificate scratch
+==============================================================================
+--- verbatim ASCII paste: collatz_mod6_20260922_paste_verbatim.lean 
+    exit 1, 1 error lines, 0 sorry warnings, 0.1s
+    collatz_mod6_20260922_paste_verbatim.lean:1:0: error: unknown module prefix 'Mathlib'
+    No directory 'Mathlib' or file 'Mathlib.olean' in the search path entries:
+    /Users/e/.elan/toolchains/leanprover--lean4---v4.30.0/lib/lean
+--- Unicode rendering: collatz_mod6_20260922_paste_unicode.lean 
+    exit 1, 1 error lines, 0 sorry warnings, 0.1s
+    collatz_mod6_20260922_paste_unicode.lean:1:0: error: unknown module prefix 'Mathlib'
+    No directory 'Mathlib' or file 'Mathlib.olean' in the search path entries:
+    /Users/e/.elan/toolchains/leanprover--lean4---v4.30.0/lib/lean
+--- Mathlib-stubbed rendering, autoImplicit default (true): collatz_mod6_20260922_paste_stubbed.lean 
+    exit 1, 5 error lines, 3 sorry warnings, 0.3s
+    collatz_mod6_20260922_paste_stubbed.lean:46:13: error: Function expected at
+      simple_graph_of_tournament_union
+    but this term has type
+      ?m.1
+    Note: Expected a function because this term is being applied to the argument
+      B
+    collatz_mod6_20260922_paste_stubbed.lean:47:6: error(lean.invalidField): Invalid field notation: Type of
+      G
+    is not known; cannot resolve field `Planar`
+    collatz_mod6_20260922_paste_stubbed.lean:52:28: error(lean.unknownIdentifier): Unknown constant `Set.Card`
+    collatz_mod6_20260922_paste_stubbed.lean:54:4: warning: declaration uses `sorry`
+    collatz_mod6_20260922_paste_stubbed.lean:56:8: warning: declaration uses `sorry`
+    collatz_mod6_20260922_paste_stubbed.lean:59:4: error(lean.dependsOnNoncomputable): failed to compile definition, consider marking it as 'noncomputable' because it depends on 'instSubReal', which is 'noncomputable'
+    collatz_mod6_20260922_paste_stubbed.lean:62:8: warning: declaration uses `sorry`
+    collatz_mod6_20260922_paste_stubbed.lean:66:16: error: Function expected at
+      collatz_functor_path
+    but this term has type
+      ?m.1
+    Note: Expected a function because this term is being applied to the argument
+      step
+--- Mathlib-stubbed rendering, -DautoImplicit=false (Mathlib project setting): collatz_mod6_20260922_paste_stubbed.lean -DautoImplicit=false
+    exit 1, 7 error lines, 2 sorry warnings, 0.3s
+    collatz_mod6_20260922_paste_stubbed.lean:46:13: error(lean.unknownIdentifier): Unknown identifier `simple_graph_of_tournament_union`
+    Note: It is not possible to treat `simple_graph_of_tournament_union` as an implicitly bound variable here because the `autoImplicit` option is set to `false`.
+    collatz_mod6_20260922_paste_stubbed.lean:47:6: error(lean.invalidField): Invalid field notation: Type of
+      G
+    is not known; cannot resolve field `Planar`
+    collatz_mod6_20260922_paste_stubbed.lean:52:28: error(lean.unknownIdentifier): Unknown constant `Set.Card`
+    collatz_mod6_20260922_paste_stubbed.lean:54:4: warning: declaration uses `sorry`
+    collatz_mod6_20260922_paste_stubbed.lean:56:8: warning: declaration uses `sorry`
+    collatz_mod6_20260922_paste_stubbed.lean:59:4: error(lean.dependsOnNoncomputable): failed to compile definition, consider marking it as 'noncomputable' because it depends on 'instSubReal', which is 'noncomputable'
+    collatz_mod6_20260922_paste_stubbed.lean:63:27: error(lean.unknownIdentifier): Unknown identifier `n`
+    Note: It is not possible to treat `n` as an implicitly bound variable here because the `autoImplicit` option is set to `false`.
+    collatz_mod6_20260922_paste_stubbed.lean:63:35: error(lean.unknownIdentifier): Unknown identifier `n`
+    Note: It is not possible to treat `n` as an implicitly bound variable here because the `autoImplicit` option is set to `false`.
+    collatz_mod6_20260922_paste_stubbed.lean:66:16: error(lean.unknownIdentifier): Unknown identifier `collatz_functor_path`
+    Note: It is not possible to treat `collatz_functor_path` as an implicitly bound variable here because the `autoImplicit` option is set to `false`.
+--- correct minimal descent certificate (core Lean, no sorry): collatz_mod6_20260922_descent_certificate.lean 
+    exit 0, 0 error lines, 0 sorry warnings, 0.2s
+
+summary: label | exit | errors | sorry warnings
+  verbatim ASCII paste | 1 | 1 | 0
+  Unicode rendering | 1 | 1 | 0
+  Mathlib-stubbed rendering, autoImplicit default (true) | 1 | 5 | 3
+  Mathlib-stubbed rendering, -DautoImplicit=false (Mathlib project setting) | 1 | 7 | 2
+  correct minimal descent certificate (core Lean, no sorry) | 0 | 0 | 0
+
+probe `def probe (V : Type*) : Type := V` in core Lean: exit 1
+    collatz_mod6_20260922_typestar_probe.lean:1:20: error: unexpected token ')'; expected term
+
+descent-certificate scratch file (verbatim):
+/- A correct minimal Lean statement of the descent certificate (scratch; NOT part of
+   the CollatzBlueprintAudit package, which already proves the equivalence
+   `collatz_reachesOne_iff_globalTallyMargin` for the true orbit counters).
+   Core Lean 4.30.0 only; no Mathlib. -/
+def iterate {α : Type} (f : α → α) : Nat → α → α
+  | 0, x => x
+  | k + 1, x => iterate f k (f x)
+
+def collatz (n : Nat) : Nat := if n % 2 = 0 then n / 2 else 3 * n + 1
+
+/-- One start has a descent certificate: a positive time `t` at which the orbit value `y`
+    satisfies the exact affine identity `2^K y = 3^L n + B` AND the margin `3^L n + B < 2^K n`.
+    Both `K, L, B` are existentially bound but tied to the actual orbit through the identity. -/
+def DescentCertificate (n : Nat) : Prop :=
+  ∃ t K L B : Nat, 0 < t ∧
+    2 ^ K * iterate collatz t n = 3 ^ L * n + B ∧
+    3 ^ L * n + B < 2 ^ K * n
+
+/-- The global (still OPEN) target: every `n > 1` has one. This is a definition, not a theorem. -/
+def GlobalDescent : Prop := ∀ n, 1 < n → DescentCertificate n
+
+/-- The certificate is nonvacuous: `n = 3` is certified at `t = 6` (orbit 3,10,5,16,8,4,2),
+    with `K = 4` halvings, `L = 2` tripling steps and carry `B = 5`: `16*2 = 9*3 + 5 = 32 < 48`. -/
+theorem three_certified : DescentCertificate 3 :=
+  ⟨6, 4, 2, 5, by decide, by decide, by decide⟩
+
+/-- `n = 7` is certified at `t = 11` (orbit 7,22,11,34,17,52,26,13,40,20,10,5 reaches 5 < 7):
+    `K = 7` halvings, `L = 4` tripling steps, carry `B = 73`: `2^7*5 = 640 = 81*7 + 73 < 896`. -/
+theorem seven_certified : DescentCertificate 7 :=
+  ⟨11, 7, 4, 73, by decide, by decide, by decide⟩
+
+
+==============================================================================
+B3. Line-by-line inspection of the paste (Unicode rendering line numbers)
+==============================================================================
+  1: import Mathlib.Data.Matrix.Basic
+  2: import Mathlib.Combinatorics.SimpleGraph.Kuratowski
+  3: import Mathlib.Analysis.SpecialFunctions.Trigonometric.Inverse
+  4: open Real
+  5: 
+  6: structure BipartiteAdjunction (V_A V_B : Type*) [Fintype V_A] [Fintype V_B] where
+  7:   (matrix_A : Matrix V_A V_A ℤ)
+  8:   (matrix_B : Matrix V_B V_B ℤ)
+  9:   (bipartite_core : Matrix V_A V_B ℤ)
+ 10:   (source_alpha : Fin 1 → ℤ)
+ 11:   (sink_beta : Fin 1 → ℤ)
+ 12: 
+ 13: theorem adjunction_bipartite_forces_non_planarity {V_A V_B : Type*} [Fintype V_A] [Fintype V_B]
+ 14:     (B : BipartiteAdjunction V_A V_B) :
+ 15:     let G := simple_graph_of_tournament_union B
+ 16:     ¬ G.Planar := by sorry
+ 17: 
+ 18: structure FanoPlane where
+ 19:   (points : Fin 7)
+ 20:   (lines : Set (Set (Fin 7)))
+ 21:   (line_spec : ∀ l ∈ lines, Set.Card l = 3)
+ 22: 
+ 23: def paley_3_cycles (M7 : Matrix (Fin 7) (Fin 7) ℤ) : Set (Fin 7 × Fin 7 × Fin 7) := sorry
+ 24: 
+ 25: theorem fano_paley_isomorphism_exists (F : FanoPlane) (M7 : Matrix (Fin 7) (Fin 7) ℤ) :
+ 26:     ∃ ψ : FanoPlane ≃ paley_3_cycles M7, True := by sorry
+ 27: 
+ 28: def shannon_entropy_limit : ℝ :=
+ 29:   -((8/π^2) * logb 2 (8/π^2)) - ((1-8/π^2) * logb 2 (1-8/π^2))
+ 30: 
+ 31: theorem suffix_seeded_compression_optimized (stream : ℕ → ℤ) (m : ℕ) :
+ 32:     ∃ layout : Matrix (Fin n) (Fin n) ℤ, true := by sorry
+ 33: 
+ 34: theorem global_collatz_descent_closure (n : ℕ) (h : n > 1) (B : BipartiteAdjunction (Fin 3) (Fin 3)) :
+ 35:     ∃ step : ℕ, collatz_functor_path step = none := by sorry
+
+line | fragment | error class
+   1 | import Mathlib.Data.Matrix.Basic | no Mathlib build available: 'unknown module prefix Mathlib' (E1: missing dependency; aborts the file)
+   2 | import Mathlib.Combinatorics.SimpleGraph.Kuratowski | E2: no such Mathlib module: CITED external check 2026-09-22, https://leanprover-community.github.io/mathlib4_docs/Mathlib/Combinatorics/SimpleGraph/Kuratowski.html returns HTTP 404 (Mathlib has no Kuratowski theorem and no SimpleGraph.Planar)
+   3 | import Mathlib.Analysis.SpecialFunctions.Trigonometric.Inverse | exists in Mathlib but is unrelated (arcsin/arccos); logb is Real.logb in Mathlib.Analysis.SpecialFunctions.Log.Base (CITED external check 2026-09-22: 'noncomputable def Real.logb (b x : R) : R'), which is not imported
+   6 | Type* / [Fintype ...] | Type* is Mathlib syntax (parse error in core Lean); Fintype is Mathlib; matrices over Z carry no tournament axioms (no antisymmetry, no 0/1 entries): E3 the structure does not say 'tournament'
+  15 | simple_graph_of_tournament_union B | E4: undefined identifier (with autoImplicit=false: 'Unknown identifier'; with autoImplicit=true: 'Function expected')
+  16 | G.Planar | E5: SimpleGraph has no field Planar in Mathlib; 'Invalid field notation'
+  16 | by sorry | E6: sorry (theorem 1 of 4)
+  19 | points : Fin 7 | E7 (semantic): a single point of Fin 7, not a point set; the type FanoPlane then has 7 x |lines-data| inhabitants
+  21 | forall l in lines, Set.Card l = 3 | E8: 'Unknown constant Set.Card' (Mathlib: Set.ncard / Set.encard)
+  23 | paley_3_cycles ... := sorry | E9: a definition by sorry (its value is unspecified, so nothing about it can be proved)
+  26 | exists psi : FanoPlane equiv paley_3_cycles M7, True | E10 (semantic): an Equiv between the structure TYPE FanoPlane and the subtype of a set of triples, followed by 'True'; the body is provable (with sorry-defined set) or vacuous, and never mentions incidence
+  28 | def shannon_entropy_limit : R := ... | E11: real arithmetic is noncomputable in Mathlib: 'failed to compile definition, consider marking it as noncomputable'
+  32 | Matrix (Fin n) (Fin n) Z | E12: n is unbound ('Unknown identifier n' under Mathlib's autoImplicit=false; silently auto-bound as an implicit otherwise); the statement 'exists layout, true' is trivially true and encodes no compression claim
+  32 | by sorry | E6: sorry (theorem 3 of 4)
+  35 | collatz_functor_path step = none | E13: undefined identifier; the hypotheses n, h, B are unused; the conclusion mentions neither n nor a Collatz map
+  35 | by sorry | E6: sorry (theorem 4 of 4)
+
+the paste section-4 tokens K_5, K_{3,3}, S_2 x S_3, B^3 = -I, omega do not occur anywhere in the Lean file.
+error classes: E1 missing dependency; E2 nonexistent module; E3 no tournament axioms; E4/E13 undefined identifiers;
+E5 nonexistent field; E6 four sorries; E7/E10 mis-typed Fano statement; E8 unknown constant; E9 sorry-defined data;
+E11 noncomputable real def; E12 unbound n.  Count: 4 theorems, 4 sorry, 0 proved statements, 3 undefined names,
+1 nonexistent Mathlib module, 1 unknown constant, 1 unbound variable.
+
+total runtime 10.3s

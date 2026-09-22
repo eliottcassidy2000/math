@@ -1,0 +1,58 @@
+A1  literal layout
+  (m,n) with 2m+2n == m+n+2 in 1..4: [(1, 1)]
+  k=0 k'=0 charpoly x**4
+  k=0 k'=1 charpoly x**2*(x - 1)*(x + 1)
+  k=1 k'=0 charpoly x**2*(x - 1)*(x + 1)
+  k=1 k'=1 charpoly (x - 1)**2*(x + 1)**2
+A2  sweep
+  iso class counts n=1..4: [1, 1, 2, 4]
+  ONE {'total': 64, 'all_zero': 16, 'pure_imag': 0, 'some_neg_re': 48, 'all_neg_re': 0, 'max_re_ge0': 64, 'rho_pos': 48, 'factor': 64}
+  TWO {'total': 64, 'all_zero': 0, 'pure_imag': 0, 'some_neg_re': 64, 'all_neg_re': 0, 'max_re_ge0': 64, 'rho_pos': 64, 'factor': 0}
+  ORI {'total': 64, 'all_zero': 2, 'pure_imag': 0, 'some_neg_re': 62, 'all_neg_re': 0, 'max_re_ge0': 64, 'rho_pos': 62, 'factor': 2}
+  ONE zero multiplicity == 2 + mult0(A) + mult0(B) (generalised nullspace): 64 of 64
+  rho>0: 174 of 192 ; min nonzero rho 1.0000 ; max rho 5.4592
+  ORI nilpotent (m,n) for the lane's class representatives: [(1, 1), (1, 2)]
+  ORI (1,3) both transitive, representative used by the lane: charpoly x**3*(x - 1)*(x**2 + x + 1)
+A3  ORI representative dependence (cross-link [i+j even] is not relabelling-invariant inside a part)
+  (1,2) B=[[0, 1], [0, 0]] : charpoly x**2*(x - 1)*(x**2 + x + 1) ; nilpotent False
+  (1,2) B=[[0, 0], [1, 0]] : charpoly x**5 ; nilpotent True
+  ORI over ALL labelled (A,B), m,n<=3: nilpotent 7 of 121 ; per (m,n) (total, nilpotent): {(1, 1): (1, 1), (1, 2): (2, 1), (1, 3): (8, 2), (2, 1): (2, 1), (2, 2): (4, 0), (2, 3): (16, 0), (3, 1): (8, 2), (3, 2): (16, 0), (3, 3): (64, 0)}
+  ONE/TWO charpoly depends only on (charpoly A, charpoly B) over all labelled m,n<=3: True
+A4  Brauer-Gentry, all labelled tournaments n<=6
+  n=1 labelled 1 transitive 1 minRe 0.0000 maxMod 0.0000 (bound 0.0000) maxIm 0.0000 (bound 0.0000)
+  n=2 labelled 2 transitive 2 minRe 0.0000 maxMod 0.0000 (bound 0.5000) maxIm 0.0000 (bound 0.5000)
+  n=3 labelled 8 transitive 6 minRe -0.5000 maxMod 1.0000 (bound 1.0000) maxIm 0.8660 (bound 0.8660)
+  n=4 labelled 64 transitive 24 minRe -0.5000 maxMod 1.3953 (bound 1.5000) maxIm 1.1393 (bound 1.2071)
+  n=5 labelled 1024 transitive 120 minRe -0.5000 maxMod 2.0000 (bound 2.0000) maxIm 1.5388 (bound 1.5388)
+  n=6 labelled 32768 transitive 720 minRe -0.5000 maxMod 2.4340 (bound 2.5000) maxIm 1.8660 (bound 1.8660)
+  non-transitive labelled tournaments n<=6: 32994 ; min rho among them 1.000000
+  strong n=4 class: charpoly x**4 - 2*x - 1 spectrum 1.3953, -0.4604+1.1393i, -0.4604-1.1393i, -0.4746
+A5  sink/source shift
+  charpoly(M) = x^k charpoly(A): 32 of 32
+A6  Paley T_7 and the session-lead Fano probe
+  arcs 21 cyclic triples 14 transitive triples 21 (7^3-7)/24 = 14
+  dev{0,1,3} size 7, dev{0,1,5} size 7, disjoint True, union == cyclic triples True
+  dev{0,1,3} is a 2-(7,3,1) design: True ; dev{0,1,5}: True
+  cyclic triples through each arc: [2]
+  on every line {s,s+1,s+3}: s->s+1->s+3->s : True
+  on every line {s,s+1,s+5}: s->s+1->s+5->s : True
+  charpoly (x - 3)*(x**2 + x + 2)**3
+  Hamiltonian paths 189
+A7  bipartite blocks m=n=3
+  K=J: ONE x**6 ; TWO x**4*(x - 3)*(x + 3) ; SKEW x**4*(x**2 + 9) ; singular values [3.0, 0.0, 0.0]
+  K=ORI: ONE x**6 ; TWO x**2*(x - 2)*(x - 1)*(x + 1)*(x + 2) ; SKEW x**2*(x**2 + 1)*(x**2 + 4) ; singular values [2.0, 1.0, 0.0]
+  m=2 n=2 TWO max eigenvalue 2.0000 sqrt(mn) 2.0000
+  m=2 n=3 TWO max eigenvalue 2.4495 sqrt(mn) 2.4495
+  m=3 n=4 TWO max eigenvalue 3.4641 sqrt(mn) 3.4641
+  m=4 n=4 TWO max eigenvalue 4.0000 sqrt(mn) 4.0000
+A8  Euler / minors
+  m=1 n=4 V=7 E=15 3V-6=15
+  m=2 n=3 V=7 E=15 3V-6=15
+  m=2 n=4 V=8 E=21 3V-6=18
+  m=3 n=3 V=8 E=21 3V-6=18
+A9  entropy and circulant counts
+  8/pi^2 = 0.81057 ; H = 0.70028 bits
+  n=3 circulant regular tournaments 2 (= 2^((n-1)/2) = 2)
+  n=5 circulant regular tournaments 4 (= 2^((n-1)/2) = 4)
+  n=7 circulant regular tournaments 8 (= 2^((n-1)/2) = 8)
+AUDIT DONE: all lane numbers reproduced; ORI counts are representative-dependent (A3)

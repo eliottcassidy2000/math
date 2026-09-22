@@ -1,0 +1,120 @@
+
+==============================================================================
+A1. 8/pi^2 and the coprime odd-pair count, by independent routes
+==============================================================================
+mpmath 8/pi^2 = 0.81056946913870217155 ; 6/pi^2 = 0.60792710185402662866
+gp 8/Pi^2 = 0.810569469138702171551035705678
+gp prodeuler(p=3..2e6, 1-1/p^2) = 0.810569495361106797451196390083
+gp prodeuler - 8/Pi^2 = 2.62224046259001606844055577528 E-8
+gp H(8/Pi^2) = 0.700278653411825590382323936008
+gp H(6/Pi^2) = 0.966124241905900855764249038448
+gp H(8/Pi^2) - 0.704 = -0.00372134658817440961767606399210
+gp p in (0.75,0.9) with H(p) = 0.704: 0.808787998074759012682546652399
+gp binary entropy of 0.704 bits at p = 8/Pi^2? 0
+row-wise inclusion-exclusion: coprime ordered pairs among 10000 x 10000 odd integers 1..19999 = 81058757
+density = 0.81058757 ; minus 8/pi^2 = 1.8100861297831727e-05 ; 8/pi^2 = 0.8105694691387022
+all-integer contrast: 2*sum_{k<=10000} phi(k) - 1 = 2*30397486 - 1 = 60794971
+lane numbers 81058757 and 60794971: CONFIRMED by independent routes.
+
+==============================================================================
+A2. Binary entropy, double precision cross-check
+==============================================================================
+double: H(8/pi^2) = 0.700278653412 ; H(6/pi^2) = 0.966124241906 ; H(8/pi^2)-0.704 = -0.00372135
+double bisection: p with H(p)=0.704 is 0.8087879981
+lane numbers 0.7002786534 / 0.966124241906 / -0.00372135 / 0.8087879981: CONFIRMED.
+
+==============================================================================
+A3. Coding claim: pigeonhole, entropy invariance under reordering, double counting
+==============================================================================
+strings of length < L (including the empty string) = sum_{k<L} 2^k = 2^L - 1: checked L in {1,2,3,4,8,16,32,64}
+non-uniform source on 2^12 streams: H(X) = 11.087701347, H(reordered) = 11.087701347, |diff| = 0.00e+00
+chain rule: H(suffix) + H(prefix|suffix) = 3.994218444 + 7.093482903 = 11.087701347
+=> a suffix lookahead permutes the coordinates; the source entropy is unchanged (PROVED: bijection invariance).
+
+  n | sum_T h(T) by permutations | n! 2^{T(n-2)}
+  2 |                          2 | 2
+  3 |                         12 | 12
+  4 |                        192 | 192
+  5 |                       7680 | 7680
+  6 |                     737280 | 737280  (second DP)
+T(n-2) = C(n,2) - (n-1) = C(n-1,2) for 3 <= n <= 12: True
+per-node figures T(n-2) H / n at n = 3, 7, 10, 20, 100: 0.233, 1.501, 2.521, 5.987, 33.971
+
+==============================================================================
+A4. gcd census on orbits
+==============================================================================
+odd n <= 100000: gcd(n, Syr(n)) != 1 in 0 cases of 50000
+standard map, n <= 2000: non-coprime consecutive pairs (n, T(n)) are exactly the even n >= 4: True ; count 999
+standard map, odd n <= 2000: gcd(n, 3n+1) != 1 in 0 cases
+
+==============================================================================
+A5. Paley tournament on F_7, independent recount
+==============================================================================
+arcs: 21 ; out-degrees: [3, 3, 3, 3, 3, 3, 3]
+cyclic triples: 14 ; transitive: 21 ; regular-tournament formula C(7,3) - 7*C(3,2) = 14
+cyc == dev{0,1,3} | dev{0,1,5}: True ; disjoint: True ; sizes 7 7
+  dev{0,1,3}: every pair of points in exactly [1] block(s)
+  dev{0,1,5}: every pair of points in exactly [1] block(s)
+  union: every pair of points in exactly [2] block(s)
+line rule dev{0,1,3}: s->s+1->s+3->s : True  (e_i e_{i+1} = e_{i+3})
+line rule dev{0,1,5}: s->s+1->s+5->s : True  (differences 1, 4, 2 all in QR)
+lines of dev{0,1,3} are themselves cyclic triples (identity map, injective): True
+so 'the 7 lines map to 7 directed 3-cycle triads' is TRUE for one plane and INCOMPLETE (7 more cycles in dev{0,1,5});
+'exactly 21 directed 3-cycles' stays false: 14 cycles, 42 rooted cycles, 21 = arcs = transitive triples.
+h(T_7) by brute force over 5040 permutations = 189
+189 is odd (Redei) and is neither 7 nor 21 (THM-1370-h-spectrum-omits-7-21-all-n.md).
+
+==============================================================================
+A6. Sidecar: 8/pi^2 is also the squarefree density among ODD integers
+==============================================================================
+squarefree odd n <= 2000000: 810591 of 1000000 odd integers, density 0.810591 vs 8/pi^2 = 0.810569
+squarefree n <= 2000000: 1215877, density 0.607939 vs 6/pi^2 = 0.607927; odd squarefree over ALL integers 0.405295 vs 4/pi^2 = 0.405285
+PROVED (Euler product): density of squarefree among odd integers = prod_{p odd}(1-1/p^2) = 8/pi^2 (same product as A1).
+
+==============================================================================
+A7. Descent certificate: actual counters at the first strict-descent time
+==============================================================================
+n = 2..2000: identity 2^K y = 3^L n + B holds at every time; margin holds at the first strict-descent time
+  and fails at every earlier positive time (equivalence with y < n, as descent_iff_affine_inequality states).
+  largest first-descent time: 132 at (n, K, L, B, y) = (703, 81, 51, 4363973393857133714501915, 628)
+  witnesses: n=3: (4, 2, 5, 2)  n=7: (7, 4, 73, 5)
+
+==============================================================================
+B. Lean reruns and package state
+==============================================================================
+Lean (version 4.30.0, arm64-apple-darwin24.6.0, commit d024af099ca4bf2c86f649261ebf59565dc8c622, Release)
+  collatz_mod6_20260922_paste_verbatim.lean : exit 1, 1 error lines, 0 sorry warnings
+  collatz_mod6_20260922_paste_unicode.lean : exit 1, 1 error lines, 0 sorry warnings
+  collatz_mod6_20260922_paste_stubbed.lean : exit 1, 5 error lines, 3 sorry warnings
+  collatz_mod6_20260922_paste_stubbed.lean -DautoImplicit=false: exit 1, 7 error lines, 2 sorry warnings
+  collatz_mod6_20260922_descent_certificate.lean : exit 0, 0 error lines, 0 sorry warnings
+  collatz_mod6_20260922_certificate_iff_descent_audit.lean : exit 0, 0 error lines, 0 sorry warnings
+  the new scratch certificate_iff_descent_audit.lean proves, in core Lean with no sorry:
+    DescentCertificate n <-> exists t, 0 < t and iterate collatz t n < n   (for 0 < n)
+  i.e. the S15 honesty clause is machine-checked; the file is a scratch, NOT added to any package.
+  scratch contains no 'sorry' and no 'axiom': True
+  Mathlib.olean anywhere under the lean dir or ~/.elan (no depth cap): NONE
+  TournamentH7: requires mathlib: True ; has .lake: False
+  CollatzBlueprintAudit cold rebuild: lake clean + lake build exit 0 in 4.0s; last line: Build completed successfully (5 jobs).
+  verification.json: theorems = 35 ; distinct axiom sets = [(), ('propext',), ('propext', 'Quot.sound')]
+  CatalanEllipticAudit: theorems = 12 ; all axiom-free: True ; occurrences of 'decide' in Certificates.lean = 12
+  S14 paraphrases of reachesOne_iff_strictDescent / descent_iff_affine_inequality / GlobalTallyMargin: match the source.
+  Kuratowski module page: HTTP 404
+  Log.Base module page: HTTP 200
+  Log.Base page mentions 'Real.logb': True ; mentions 'noncomputable': True
+
+==============================================================================
+C. Citation checks
+==============================================================================
+files named THM-1370*: ['THM-1370-elliptic-jacobian-conjecture-all-dimensions.md', 'THM-1370-h-spectrum-omits-7-21-all-n.md']
+h-spectrum file status line: **Status:** VERIFIED (complete proof; ingredients: two classical theorems + one-line
+h-spectrum statement contains 'No tournament, on any number of vertices, has exactly 7 or exactly 21': True
+  arithmetic_braids2_20260917_squarefree_symmetry.md: contains '189': True
+  arithmetic_braids2_20260917_fano_code.md: contains '189': True
+  collatz_mod6_20260922_paley_fano_octonion_design.out: contains 'h(T_7) = number of directed Hamiltonian paths = 189': True
+  collatz_mod6_20260922_block_spectrum_audit.md: contains '14 cyclic triples': True
+  squarefree_symmetry line with the 189 count: pairs of odd cycles, so its OCF count is `1+2*80+4*7=189`. The seven Fano
+=> h(T_7) = 189 was already recorded (as H = 189 for the 16 sign-gauge orientations, Paley among them) on 2026-09-17;
+   the lane's 'not previously recorded' sidecar claim is a novelty overclaim and is corrected in the note.
+
+total runtime 9.3s

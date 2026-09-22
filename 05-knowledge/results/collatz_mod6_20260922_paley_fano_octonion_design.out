@@ -55,10 +55,17 @@ isomorphism-type invariants of the 2640 (skew charpoly, c3, #STS(7) inside cycli
   class h=171: the 2 STS(7) inside its 14 cyclic triples share 3 blocks; they partition the 14 cyclic triples: False
   class h=189: the 2 STS(7) inside its 14 cyclic triples share 0 blocks; they partition the 14 cyclic triples: True
 class sizes: [240, 720, 1680] ; |Aut| = [21, 7, 3]
+  class h=189: common out-neighbour counts over ordered pairs = [1]; doubly regular = True; per-pair 3-cycle counts = [2]; 2-design = True
+  class h=175: common out-neighbour counts over ordered pairs = [0, 1, 2]; doubly regular = False; per-pair 3-cycle counts = [1, 2, 3]; 2-design = False
+  class h=171: common out-neighbour counts over ordered pairs = [0, 1, 2]; doubly regular = False; per-pair 3-cycle counts = [1, 2, 3]; 2-design = False
+on regular 7-tournaments: cyclic triples form a 2-design <=> doubly regular <=> Paley: True (audit S20b gives the general proof)
 R_7 = circulant {1,2,3}: skew charpoly +1x^7 +21x^5 +35x^3 +7x^1 ; h = 175 ; STS inside its cyclic triples: 0
 Paley: skew charpoly +1x^7 +21x^5 +147x^3 +343x^1
 classes that are orientations of some Fano plane (an STS inside the cyclic triples): [('+1x^7 +21x^5 +99x^3 +7x^1', 1680, 171, 2), ('+1x^7 +21x^5 +147x^3 +343x^1', 240, 189, 2)]
 labelled Fano-line orientations total: 1920 ; each contains exactly 2 STS, so 2 * 1920 = 3840 = 30 STS x 128 orientations = 3840
+7! = 5040
+Paley: tr A^4 = 84 ; (462 - tr A^4)/2 = 189 = h
+THM-133 formula h = (462 - tr A^4)/2 holds for all 8 circulant tournaments on Z_7: True
 
 === E. Paley T_p, p = 3 mod 4: the 2-(p,3,(p+1)/4) design ===
 p=3: c3=1 (p^3-p)/24=1 scoreformula=1 pairs-covered=3/3 lambda(pairs)=[1] lambda(arcs)=[1] (p+1)/4=1 arc-orbit-of-G=3 arcs=3
@@ -84,15 +91,19 @@ p=71 (p mod 8 = 7): 2 is a non-residue: False; AP base triples (0,a,2a) that are
 p=79 (p mod 8 = 7): 2 is a non-residue: False; AP base triples (0,a,2a) that are cyclic: 0 of 78 -> translation classes 0
 p=83 (p mod 8 = 3): 2 is a non-residue: True; AP base triples (0,a,2a) that are cyclic: 82 of 82 -> translation classes 41
 AP lemma verified: all p-1 AP triples (0,a,2a) are cyclic when p = 3 mod 8, none when p = 7 mod 8.
+p=7: an STS(7) has 7 blocks; lam*that = 14 = c3 = 14
 p=7: translation classes of cyclic triples = 2 (=(p^2-1)/24 = 2); non-arithmetic-progression classes (candidate base blocks) = 2; base blocks needed = 1; cyclic STS(p) inside the Paley 2-(p,3,2) design: 2
    first four base-block sets: [[(0, 1, 3)], [(0, 1, 5)]]
    partitions of all 2 classes into 2 block-disjoint cyclic STS(7): 1
+p=19: an STS(19) has 57 blocks; lam*that = 285 = c3 = 285
 p=19: translation classes of cyclic triples = 15 (=(p^2-1)/24 = 15); non-arithmetic-progression classes (candidate base blocks) = 6; base blocks needed = 3; cyclic STS(p) inside the Paley 2-(p,3,5) design: 8
    first four base-block sets: [[(0, 1, 8), (0, 2, 5), (0, 4, 10)], [(0, 1, 8), (0, 2, 5), (0, 4, 13)], [(0, 1, 8), (0, 2, 16), (0, 4, 10)], [(0, 1, 8), (0, 2, 16), (0, 4, 13)]]
    no partition into 5 cyclic STS is possible: 9 arithmetic-progression classes (never in an STS) and 6 != 5*3
+p=31: an STS(31) has 155 blocks; lam*that = 1240 = c3 = 1240
 p=31: translation classes of cyclic triples = 40 (=(p^2-1)/24 = 40); non-arithmetic-progression classes (candidate base blocks) = 40; base blocks needed = 5; cyclic STS(p) inside the Paley 2-(p,3,8) design: 192
    first four base-block sets: [[(0, 1, 3), (0, 4, 11), (0, 5, 15), (0, 6, 18), (0, 8, 17)], [(0, 1, 3), (0, 4, 11), (0, 5, 15), (0, 6, 18), (0, 8, 22)], [(0, 1, 3), (0, 4, 11), (0, 5, 15), (0, 6, 19), (0, 8, 17)], [(0, 1, 3), (0, 4, 11), (0, 5, 15), (0, 6, 19), (0, 8, 22)]]
    partitions of all 40 classes into 8 block-disjoint cyclic STS(31): 0
+p=43: an STS(43) has 301 blocks; lam*that = 3311 = c3 = 3311
 p=43: translation classes of cyclic triples = 77 (=(p^2-1)/24 = 77); non-arithmetic-progression classes (candidate base blocks) = 56; base blocks needed = 7; cyclic STS(p) inside the Paley 2-(p,3,11) design: 1024
    first four base-block sets: [[(0, 1, 5), (0, 2, 14), (0, 3, 21), (0, 6, 19), (0, 7, 15), (0, 9, 20), (0, 10, 26)], [(0, 1, 5), (0, 2, 14), (0, 3, 21), (0, 6, 19), (0, 7, 15), (0, 9, 20), (0, 10, 27)], [(0, 1, 5), (0, 2, 14), (0, 3, 21), (0, 6, 19), (0, 7, 15), (0, 9, 32), (0, 10, 26)], [(0, 1, 5), (0, 2, 14), (0, 3, 21), (0, 6, 19), (0, 7, 15), (0, 9, 32), (0, 10, 27)]]
    no partition into 11 cyclic STS is possible: 21 arithmetic-progression classes (never in an STS) and 56 != 11*7
@@ -106,6 +117,7 @@ VERDICT p=19: an STS(19) inside the Paley design EXISTS; blocks:
 6/pi^2 = 0.60793; binary entropy = 0.96612 bits (for the record)
 
 === G. Core-Lean (no Mathlib) decide checks ===
+lean --version: Lean (version 4.30.0
 lean exit code: 0
   'paley7_cyclic_triples' does not depend on any axioms
   'paley7_dev013' does not depend on any axioms
