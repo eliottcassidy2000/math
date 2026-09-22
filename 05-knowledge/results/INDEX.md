@@ -1,5 +1,17 @@
 # Script Results Index
 
+- [Choice collapses the Collatz exceptional set](collatz_procgen_20260922_choice_ladder.md):
+  **PROVED scoped lemmas / FINITE-EXACT ladder (two code paths).**
+  Exceptional-set counts for the Collatz descent game: `1,037,374` classes
+  mod `2^26` with no choice, versus `777` for the E-graph (Q1) and `52`
+  mod `3^17` backward (Q2). The no-choice set has dimension
+  `h(log_3 2)=0.9500`. The gain comes from the `6 mod 8` rising-run
+  excursion. Hostile rationals: `-1`, `-13/9` and the `-p/3^j` family
+  forward; `1`, `1/2` and dyadics backward. The 1-escape lemma is proved,
+  and the escape price from `-1` stays bounded to 70 bits. The undirected
+  Collatz game is equivalent to Collatz and does not collapse. E-SCC and
+  Collatz remain OPEN (HYP-9120--9122).
+
 - [Level-eleven dyadic zero law and signed gluing](level11_short_20260922.md):
   PROVED from cited eigenform inputs; exact product/point-count controls;
   b_(r+4)=-4b_r, complete dyadic coefficient factorization, forced-zero

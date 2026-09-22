@@ -1,0 +1,260 @@
+# Choice collapses the Collatz exceptional set: the E-graph descent game, its hostile rationals, and the `6 mod 8` excursion
+
+**Status: PROVED for the scoped lemmas stated as such (hand proofs below);
+FINITE-EXACT for every table (two independent code paths agree where
+marked); CITED for Applegate--Lagarias (primary source read, sections 2 and
+4). OPEN: the E-SCC conjecture (Q1 and Q2), HYP-9120--9122. Collatz OPEN.
+No independent-agent audit yet.**
+
+Session `collatz-procgen-20260922` (machine `mac-mini`), lane one of the
+procedural-approach session. Scripts: `04-computation/experiments/collatz_procgen_20260922_*`;
+reproduce everything with
+`bash 04-computation/experiments/collatz_procgen_20260922_choice_ladder_run.sh`
+(output `collatz_procgen_20260922_choice_ladder.out`, about four minutes).
+The runner stops the DFS at `m=32`. The counts quoted at `m=35,36,40` come
+from `e_forward_dfs 26 40 q1bad_dump.txt`, which takes about 70 billion
+DFS nodes (about 20 minutes), and the `3^17` count from
+`e_reverse_dump 16`.
+
+## 0. Inheritance
+
+* Closest proved mechanism: **Applegate--Lagarias, "The 3x+1 semigroup"
+  (J. Number Theory 117 (2006); arXiv math/0411140), CITED.** Their proof of
+  the weak 3x+1 conjecture is an induction in which every residue class
+  mod `2^j` descends by bounded lookahead *after multiplying by wild
+  integers*, except the single class `-1 mod 2^j`, which "resisted
+  elimination for `12<=j<=30`" and provably can never be eliminated because
+  "all iterates of `-1`, times multipliers, remain negative" (their section
+  2); a separate escape lemma (their Lemma 2.2, multiplier `(2^j+1)/3`,
+  `T^j(mx)=x+(x+1)/2^j`) handles it.
+* Inherited object: the graph `E` (arrows `n->n/2`, `n even`; `n->3n+1`,
+  all `n`) and the conjecture E-SCC = Q1 and Q2 of
+  [extended_collatz_scc](collatz_mod6_20260917_extended_collatz_scc.md)
+  (Q1: every `n` reaches `1`; Q2: `1` reaches every `m` with `3 does not divide m`).
+  The earlier session tested Q2 only with the *greedy* 3-adic map `G`
+  ([three_adic_g_map](collatz_mod6_20260917_three_adic_g_map.md)).
+* Canonical hostile: the rising family `n=2^k u-1` (forward) and
+  `m=3^j u+1` (backward, `244->...->256`).
+* Least-used sidecar: the choice itself. Every earlier certificate in the
+  repository was deterministic.
+
+## 1. The descent game and its exceptional set
+
+For a (possibly nondeterministic) system of affine moves on integers,
+a **certificate** for a residue class is a legal path whose legality is
+decided by the class and whose total multiplier is `<1`. The
+**exceptional set** at level `m` is the set of classes with no certificate
+of precision `m`; its intersection over `m` is a closed subset `Bad_inf`
+of `Z_2` (forward games) or `Z_3^x` (backward games).
+
+* **Forward E (Q1).** From odd `x`: forced `3x+1`. From even `x`: halve
+  (cost `-log 2`, one bit consumed) or excursion `x->3x+1->9x+4`
+  (cost `2 log 3`, no bit consumed). Value function over classes mod
+  `2^m`: `W_m(x)=min over moves of cost+min(0,W(next))`, `W_0=+inf`;
+  exceptional iff `W_m>=0`.
+* **Backward E (Q2).** From a 3-adic unit `x`, move `k>=0` with
+  `2^k x=1 mod 3`, to `y=(2^k x-1)/3`, legal iff `3 does not divide y`,
+  cost `k log 2-log 3`. Classes mod `3^(r+1)`.
+* **Partial choice `E_S`.** The excursion is allowed only at even `x` whose
+  residue mod `2^J` lies in `S`. `S` empty is Collatz, `S` = all evens is `E`.
+
+Multiplicative descent implies actual descent for every positive member of
+the class on the backward side, and for all members above an explicit
+threshold on the forward side; conversely actual descent of a positive
+integer implies multiplicative descent. Hence **Q1 holds iff no integer
+`n>1` lies in `Bad_inf(E)`, and Q2 iff no integer `m>1` lies in
+`Bad_inf` of the backward game** (strong induction; small cases by the
+earlier `10^6`/`10^7` verifications).
+
+## 2. The ladder (FINITE-EXACT)
+
+Number of exceptional classes:
+
+| system | level | exceptional classes | growth |
+|---|---|---|---|
+| Collatz `T` (forward, no choice) | mod `2^26` | `1,037,374` | `log2(count)/m=0.769`, rising |
+| `E_S`, `S={0 mod 16}` | mod `2^22` | `92,684` | as Collatz |
+| `E_S`, `S={0 mod 8}` | mod `2^22` | `90,844` | as Collatz |
+| `E_S`, `S={2 mod 8}` | mod `2^22` | `56,550` | slight gain |
+| `E_S`, `S={0 mod 4}` | mod `2^22` | `15,796` | moderate |
+| `E_S`, `S={6 mod 8}` | mod `2^22` | `3,238` | **most of the gain** |
+| `E_S`, `S={2 mod 4}` | mod `2^22` | `1,452` | nearly full |
+| `E` (all evens) | mod `2^22` / `2^26` / `2^36` | `782` / `777` / `908` | polynomial-looking |
+| greedy `G` (backward, no choice) | mod `3^16` | `12,404` | `log3(count)/J=0.572`, rising |
+| backward `E` (Q2) | mod `3^15` / `3^17` | `36` / `52` | tiny |
+
+At the levels where the forward-`E` count drops (the drops follow the
+Beatty pattern of `log_2 3`) the counts are
+`124, 391, 369, 255, 561, 454` at `m=16,21,24,27,32,35` (to `m=40`:
+`1030`). Collatz's count doubles almost every level. Controls: the forward
+DP and an independent DFS (bit-precision tracking, branch-and-bound) give
+**identical** exceptional sets at `m=27` (`255` classes); the backward DP
+and an independent Python DFS give identical lists at `r=6,8,10`
+(`14,18,32` classes).
+
+**Exact dimension of the no-choice exceptional set (PROVED).** For the
+shortcut Collatz map on `Z_2`, `Bad_inf(T)` is the set of `x` whose parity
+sequence has at least `s log_3 2` odd steps in every prefix of length `s`.
+The Bernstein--Lagarias parity-vector map is a bijection mod every `2^s`,
+hence a 2-adic isometry, so
+`dim_H Bad_inf(T) = h(log_3 2) = 0.94995...` bits, where `h` is binary
+entropy: the upper bound covers by cylinders with at least `ps` ones; the
+lower bound takes Bernoulli(`p'`) paths with `p'>p=log_3 2`, which stay
+above the line with positive probability after a prefix `1^N`, and lets
+`p'` decrease to `p` (Besicovitch--Eggleston). The finite counts above
+approach this exponent slowly. No priority is claimed for this standard
+consequence. On the backward side the inherited sharp rate
+`exp(-I(c))=0.758751` gives greedy-`G` exponent `log_3(3*0.758751)=0.748`.
+
+So the ladder is: no choice, dimension `0.95` (forward) and `0.75`
+(backward); `E`-choice, counts that grow at most slowly (dimension `0` is
+conjectured, HYP-9120); Applegate--Lagarias multipliers, the single point
+`-1`.
+
+## 3. Where the gain comes from: the rising-run excursion (FINITE-EXACT)
+
+Allowing the excursion only at evens `=6 mod 8` removes `96.5%` of the
+Collatz exceptional classes at `2^22`; `2 mod 4` removes `98.4%`, close to
+all of `E`. Every even `=6 mod 8` that follows an odd step is `3x+1` with
+`x=7 mod 8`, the start of a run of at least three rises; halving it
+continues the run (`(3x+1)/2=3 mod 4`). The collapse is therefore driven by
+**the freedom to interrupt a rising run**, i.e. to leave the 2-adic
+neighbourhood of `-1`. Excursions at `0 mod 8` do nothing measurable.
+HYP-9121 records the conjecture that `S={6 mod 8}` already has
+subexponential exceptional growth.
+
+## 4. The hostile points are rationals over the other prime
+
+**Forward `E` (2-adic), PROVED membership.**
+
+* `-1` is in `Bad_inf(E)`. Every `E`-path from `-1` stays in the negative
+  integers. A prefix with `a>=1` multiplications and `b` halvings ends at
+  `(-3^a+B)/2^b<=-1`, with carry `B=sum 3^(a-1-i)2^(b_i)>=3^(a-1)`, so
+  `3^a>=2^b+B` and the multiplier satisfies `r=3^a/2^b>=1+r/3`, i.e.
+  `r>=3/2`. This is Applegate--Lagarias's argument, and it transfers
+  verbatim to `E`.
+* `-13/9` is in `Bad_inf(E)`. The first move is forced (`-13/9` is 2-adically
+  odd) to `-10/3`, and all later values are negative. If the second move
+  halves, the third is forced and `B/2^b>=(5/9)r`, so `r(13/9)>=1+(5/9)r`,
+  giving `r>=9/8`. If the second move is an excursion, `B/2^b>=(4/9)r`,
+  giving `r>=1`, and `r=1` is impossible. Earlier prefixes have `r=3, 3/2, 9`.
+
+**FINITE-EXACT structure.** The `908` exceptional classes mod `2^36` were
+reconstructed as rationals of small height. Every reliable reconstruction
+is negative with a power-of-3 denominator in `(-3/2,-1]`:
+`-1, -13/9, -35/27, -97/81, -113/81, -275/243, -307/243, -355/243, -371/243,
+-793/729, ...`, accumulating at `-1` from below. The positive
+reconstructions have height products near `5*10^7`, where about ten chance
+matches are expected among `908` classes; they are not claimed. The only
+exceptional class mod `2^36` containing an integer of absolute value below
+`1.5*10^8` is `-1`. Hence **every positive integer below `1.5*10^8` has a
+certificate of precision 36**.
+
+**Backward `E` (3-adic), PROVED membership.**
+
+* `1` is exceptional. Reverse paths from `1` stay at positive integers,
+  since the move `k=0` from `1` gives `0` and is illegal. So
+  `2^K=3^s x_s+B>=3^s+B>3^s`.
+* `1/2` is exceptional. The move `k=1` gives `0` and is illegal, and every
+  legal first move lands on an integer `>=1`. So `2^K>=2(3^s+B)` and
+  `r>2`.
+
+**FINITE-EXACT structure.** The reconstructed exceptional threads are `1`,
+`1/2`, and positive dyadic rationals in about `(0.8, 1.5)`: `43/32, 59/64,
+145/128, 209/256, 371/256, 499/512, 661/512, 715/512, 1241/1024, 1753/2048,
+4235/4096`. These are provisional at modulus `3^17`. Several classes agree
+with `1/2` only to lower precision.
+
+**Duality.** On the forward, 2-adic side the hostile rationals have
+3-power denominators and are negative. On the backward, 3-adic side they
+have 2-power denominators and are positive. Negation maps the plus sheet
+to the minus sheet (`T_+(-n)=-T_-(n)`), so for the minus-sheet `E_-` the
+forward hostile rationals lie on the positive side: `+1` and non-integers.
+This matches the inherited observation that `Q1_-` holds to `10^6`. The
+plus sheet's negative Collatz cycles are exactly where the relaxed
+plus-sheet problem stalls.
+
+## 5. Escapes
+
+**Lemma (1-escape, PROVED).** Let `m>=2` with `v_3(m-1)=k>=2`. Suppose
+there is a forward `E`-cycle through `1` with `s=k-1` multiplications and
+`K` halvings, `2^K<3^k`. Then `m` has a legal reverse path to
+`2^K (m-1)/3^k<m`, which is not divisible by `3`.
+
+*Proof.* Write `m=1+3^k u` with `3` not dividing `u`, and run the loop's
+reverse moves from `m`. The residues agree with those from `1` modulo
+`3^(k-i)` at step `i`, so each of the `s=k-1` moves is legal. The endpoint
+is `1+3*2^K u`, which is `4` or `7 mod 9`. Hence the move `k=0` is legal
+and gives `2^K u`, which is not divisible by `3`. Finally
+`2^K u<1+3^k u` iff `2^K<=3^k`.
+
+**FINITE-EXACT.** A loop of every length `s<=40` exists with minimal ratio
+`2^K/3^s` in `[1.517,2.96]`, always `<3`, with values bounded by
+`2*10^7`. So every `m` with `2<=v_3(m-1)<=41` descends, which covers the
+hostile point `1` for all `m<3^42+1`. The margin is thin: `s=11` gives
+`2.9596`, and no loop with ratio `<3/2` appears for `s>=2`. The lemma may
+therefore fail at a rare `s`; a robust version must allow other exit
+words (HYP-9122). Every loop through `1` has ratio at least
+`13/9` for `s>=2`, from the last two carry terms.
+
+**The price of escaping `-1` on the forward side (FINITE-EXACT upper bounds).**
+This is the least multiplier over `E`-paths from `-1` that consume exactly
+`b` bits, counting the forced multiplication after the last halving. It
+stays in `[4.05,34.2]` for `b<=70`, oscillates with `frac(b/log_2 3)`, and
+shows no growth. Cheap long negative `E`-cycles, such as the `{-5,-7}` ride
+at `9/8` per three bits and the seven-cycle at `2187/2048` per eleven,
+keep it bounded. Plain Collatz pays `(3/2)^b`.
+
+## 6. A negative control: the undirected Collatz game
+
+Allowing backward moves along `T` itself gives a game that is
+**equivalent to Collatz (PROVED)**. Every `m>1` has an undirected
+`T`-path to a smaller integer iff every component contains `1`, by taking
+the minimum of a component. It does **not** collapse the exceptional set
+(argued, not computed). A backward `T`-move to an odd predecessor
+`(2^k y-1)/3` requires `k>=1` and yields nothing at multiples of `3`.
+From a class `=1 mod 3` the cheapest predecessor grows by `4/3`, so the
+3-adic hostile set of the backward `T`-game has positive measure, for
+example `3Z_3`. The one move `T` lacks is `E`'s `k=0` move, the even
+predecessor `(y-1)/3`. This locates the relaxation's power exactly.
+
+## 7. What this says about the anchor
+
+* **Mechanism.** Choice turns a positive-dimensional exceptional set into a
+  thin set of rationals over the other prime. The Collatz obstruction is
+  therefore not a density phenomenon but a *no-choice* phenomenon. A proof
+  must show that positive integers avoid a `0.95`-dimensional 2-adic
+  Cantor set. This is a transversality problem of the same type as
+  Erdős's ternary digits of `2^n` and Mahler's `Z`-numbers.
+* **Where the missing freedom sits.** The relaxation's gain is concentrated
+  in interrupting rising runs (`6 mod 8`). Collatz offers no such move, so a
+  proof must control long rises with order or archimedean information.
+  This is consistent with the inherited word-function theorem.
+* **E-SCC proof program (HYP-9120).**
+  1. Finite certificate tables at a fixed level.
+  2. Escape lemmas for the hostile families `-1` (bounded price, section 5),
+     the `-p/3^j` family, `1`, `1/2` and the dyadic family.
+  3. An Applegate--Lagarias see-saw induction closing when the
+     bounded-lookahead descent factor times the escape price is `<1`.
+
+  Open are the exact description of `Bad_inf`, uniform escape lemmas for
+  its infinitely many rational points, and the bookkeeping of repeated
+  escapes.
+
+## 8. Research cards used / candidate
+
+Used: "Separate unbounded local support from a height-bounded modular cover",
+"Test structured adversaries, not only random samples", "Search the
+statement before the method" (it found Applegate--Lagarias's `-1`
+obstruction), and "Use redundant code paths as detectors" (DP versus DFS).
+
+**Candidate card: "Measure the exceptional set of the relaxation ladder."**
+When an all-orbits statement resists proof, compute the exceptional-set
+growth for the no-choice system, a partial-choice family and a
+full-choice relaxation. A drop from positive to zero dimension pins the
+missing freedom (here the `6 mod 8` excursion). The hostile points of the
+relaxed system are its escape obligations.
+Counterindication: equivalent reformulations with choice, such as the
+undirected game, can keep the full dimension. Evidence: this lane, and
+Applegate--Lagarias's single-class obstruction (a distinct thread). Not
+promoted.

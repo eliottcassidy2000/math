@@ -1,0 +1,229 @@
+### 1. deterministic counts (Collatz T mod 2^m; greedy G mod 3^(J+1))
+Collatz T (shortcut n->n/2, (3n+1)/2): classes mod 2^m never descending within m steps
+m= 1 bad=1 frac=0.5  log2(bad)/m=0.0000
+m= 2 bad=1 frac=0.25  log2(bad)/m=0.0000
+m= 3 bad=2 frac=0.25  log2(bad)/m=0.3333
+m= 4 bad=3 frac=0.1875  log2(bad)/m=0.3962
+m= 5 bad=4 frac=0.125  log2(bad)/m=0.4000
+m= 6 bad=8 frac=0.125  log2(bad)/m=0.5000
+m= 7 bad=13 frac=0.1016  log2(bad)/m=0.5286
+m= 8 bad=19 frac=0.07422  log2(bad)/m=0.5310
+m= 9 bad=38 frac=0.07422  log2(bad)/m=0.5831
+m=10 bad=64 frac=0.0625  log2(bad)/m=0.6000
+m=11 bad=128 frac=0.0625  log2(bad)/m=0.6364
+m=12 bad=226 frac=0.05518  log2(bad)/m=0.6517
+m=13 bad=367 frac=0.0448  log2(bad)/m=0.6554
+m=14 bad=734 frac=0.0448  log2(bad)/m=0.6800
+m=15 bad=1295 frac=0.03952  log2(bad)/m=0.6892
+m=16 bad=2114 frac=0.03226  log2(bad)/m=0.6904
+m=17 bad=4228 frac=0.03226  log2(bad)/m=0.7086
+m=18 bad=7495 frac=0.02859  log2(bad)/m=0.7151
+m=19 bad=14990 frac=0.02859  log2(bad)/m=0.7301
+m=20 bad=27328 frac=0.02606  log2(bad)/m=0.7369
+m=21 bad=46611 frac=0.02223  log2(bad)/m=0.7385
+m=22 bad=93222 frac=0.02223  log2(bad)/m=0.7504
+m=23 bad=168807 frac=0.02012  log2(bad)/m=0.7550
+m=24 bad=286581 frac=0.01708  log2(bad)/m=0.7554
+m=25 bad=573162 frac=0.01708  log2(bad)/m=0.7651
+m=26 bad=1037374 frac=0.01546  log2(bad)/m=0.7686
+Greedy G: classes mod 3^{J+1} (units) with no descent within J steps
+J= 1 bad=2 frac=0.3333  log3(bad)/J=0.6309
+J= 2 bad=2 frac=0.1111  log3(bad)/J=0.3155
+J= 3 bad=4 frac=0.07407  log3(bad)/J=0.4206
+J= 4 bad=6 frac=0.03704  log3(bad)/J=0.4077
+J= 5 bad=14 frac=0.02881  log3(bad)/J=0.4804
+J= 6 bad=24 frac=0.01646  log3(bad)/J=0.4821
+J= 7 bad=36 frac=0.00823  log3(bad)/J=0.4660
+J= 8 bad=84 frac=0.006401  log3(bad)/J=0.5041
+J= 9 bad=148 frac=0.00376  log3(bad)/J=0.5054
+J=10 bad=362 frac=0.003065  log3(bad)/J=0.5363
+J=11 bad=676 frac=0.001908  log3(bad)/J=0.5392
+J=12 bad=1112 frac=0.001046  log3(bad)/J=0.5320
+J=13 bad=2680 frac=0.0008405  log3(bad)/J=0.5527
+J=14 bad=4978 frac=0.0005204  log3(bad)/J=0.5535
+J=15 bad=12404 frac=0.0004322  log3(bad)/J=0.5720
+### 2. E-graph forward (Q1) full choice, DP mod 2^m
+m= 1 mod 2^1: bad=1 frac=0.5  bad: 1
+m= 2 mod 2^2: bad=1 frac=0.25  bad: -1
+m= 3 mod 2^3: bad=2 frac=0.25  bad: 3 -1
+m= 4 mod 2^4: bad=3 frac=0.188  bad: 7 -5 -1
+m= 5 mod 2^5: bad=4 frac=0.125  bad: 7 15 -5 -1
+m= 6 mod 2^6: bad=8 frac=0.125  bad: 7 15 27 31 -25 -17 -5 -1
+m= 7 mod 2^7: bad=11 frac=0.0859  bad: 27 31 47 63 -57 -49 -33 -25 -17 -5 -1
+m= 8 mod 2^8: bad=11 frac=0.043  bad: 27 31 47 63 103 127 -97 -65 -33 -17 -1
+m= 9 mod 2^9: bad=22 frac=0.043  bad: 27 31 47 63 103 127 159 191 223 239 255 -229 -225 -209 -193 -153 -129 -97 -65 -33 -17 -1
+m=10 mod 2^10: bad=31 frac=0.0303
+m=11 mod 2^11: bad=62 frac=0.0303
+m=12 mod 2^12: bad=88 frac=0.0215
+m=13 mod 2^13: bad=81 frac=0.00989
+m=14 mod 2^14: bad=162 frac=0.00989
+m=15 mod 2^15: bad=201 frac=0.00613
+m=16 mod 2^16: bad=124 frac=0.00189
+m=17 mod 2^17: bad=248 frac=0.00189
+m=18 mod 2^18: bad=274 frac=0.00105
+m=19 mod 2^19: bad=548 frac=0.00105
+m=20 mod 2^20: bad=664 frac=0.000633
+m=21 mod 2^21: bad=391 frac=0.000186
+m=22 mod 2^22: bad=782 frac=0.000186
+m=23 mod 2^23: bad=862 frac=0.000103
+m=24 mod 2^24: bad=369 frac=2.2e-05
+m=25 mod 2^25: bad=738 frac=2.2e-05
+m=26 mod 2^26: bad=777 frac=1.16e-05
+### 3. partial choice E_S (excursion allowed iff residue in S)
+--- J,S = 1
+m=18 bad=7495 log2/m=0.715
+m=20 bad=27328 log2/m=0.737
+m=22 bad=93222 log2/m=0.750
+--- J,S = 1 0
+m=18 bad=274 log2/m=0.450
+m=20 bad=664 log2/m=0.469
+m=22 bad=782 log2/m=0.437
+--- J,S = 2 2
+m=18 bad=515 log2/m=0.500
+m=20 bad=1254 log2/m=0.515
+m=22 bad=1452 log2/m=0.477
+--- J,S = 2 0
+m=18 bad=2006 log2/m=0.609
+m=20 bad=6339 log2/m=0.632
+m=22 bad=15796 log2/m=0.634
+--- J,S = 3 4
+m=18 bad=2080 log2/m=0.612
+m=20 bad=6603 log2/m=0.634
+m=22 bad=16614 log2/m=0.637
+--- J,S = 3 0
+m=18 bad=7424 log2/m=0.714
+m=20 bad=26933 log2/m=0.736
+m=22 bad=90844 log2/m=0.749
+--- J,S = 3 2
+m=18 bad=5597 log2/m=0.692
+m=20 bad=19097 log2/m=0.711
+m=22 bad=56550 log2/m=0.718
+--- J,S = 3 6
+m=18 bad=822 log2/m=0.538
+m=20 bad=2165 log2/m=0.554
+m=22 bad=3238 log2/m=0.530
+--- J,S = 4 8
+m=18 bad=7426 log2/m=0.714
+m=20 bad=26962 log2/m=0.736
+m=22 bad=91162 log2/m=0.749
+--- J,S = 4 0
+m=18 bad=7486 log2/m=0.715
+m=20 bad=27259 log2/m=0.737
+m=22 bad=92684 log2/m=0.750
+### 4. DFS deepening of Q1 bad threads (independent code path), levels 27..32
+m=26 bad=777
+m=27 bad=255 nodes=84290825
+m=28 bad=510 nodes=90804628
+m=29 bad=526 nodes=220419116
+m=30 bad=1052 nodes=373880436
+m=31 bad=1197 nodes=965510673
+m=32 bad=561 nodes=1221536391
+CHECK: DP(m=27) == DFS(m=27) bad sets identical (     255 classes)
+### 5. E-graph reverse (Q2) DP mod 3^(r+1)
+r= 1 mod 3^2: units=6 bad=2 frac=0.333333
+   bad: 1 5
+r= 2 mod 3^3: units=18 bad=2 frac=0.111111
+   bad: 1 14
+r= 3 mod 3^4: units=54 bad=4 frac=0.0740741
+   bad: 1 14 41 68
+r= 4 mod 3^5: units=162 bad=6 frac=0.037037
+   bad: 1 41 122 149 176 203
+r= 5 mod 3^6: units=486 bad=12 frac=0.0246914
+   bad: 1 41 122 149 203 365 392 446 608 635 662 689
+r= 6 mod 3^7: units=1458 bad=14 frac=0.00960219
+   bad: 1 365 446 608 689 770 851 932 1094 1121 1364 1607 1823 2120
+r= 7 mod 3^8: units=4374 bad=14 frac=0.00320073
+   bad: 1 770 1094 2795 3038 3281 3551 3794 4307 4739 5063 5306 5468 6197
+r= 8 mod 3^9: units=13122 bad=18 frac=0.00137174
+   bad: 1 770 1094 3038 3281 4307 4739 5306 7655 9842 10112 12029 14216 15917 16403 16916 18185 19319
+r= 9 mod 3^10: units=39366 bad=20 frac=0.000508053
+   bad: 1 3281 5306 9842 14216 15917 16403 19319 22721 23990 24422 27338 29525 40136 40460 49208 49478 51395 56282 57551
+r=10 mod 3^11: units=118098 bad=32 frac=0.000270961
+   bad: 1 5306 15917 16403 24422 29525 40136 40460 49208 49478 64355 68891 73265 75452 78368 83039 83471 88574 99509 108257 116600 121379 123404 134501 140819 142520 145436 147623 158558 167306 169493 174380
+r=11 mod 3^12: units=354294 bad=34 frac=9.59655e-05
+   bad: 1 24422 49208 64355 78368 83039 88574 99509 121379 142520 174380 182453 193064 193550 250412 265721 293747 300551 311648 322583 344453 383819 394430 394754 403772 423185 429746 437765 442868 462551 495113 501917 512852 523787
+r=12 mod 3^13: units=1062882 bad=30 frac=2.82251e-05
+   bad: 1 88574 174380 193064 193550 265721 311648 322583 344453 462551 495113 797162 825188 915260 926195 969206 974309 1033358 1044293 1055228 1087304 1127237 1141250 1145921 1184261 1245335 1328603 1457312 1466654 1486067
+r=13 mod 3^14: units=3188646 bad=34 frac=1.06628e-05
+   bad: 1 88574 193550 265721 322583 495113 797162 969206 1033358 1245335 1328603 1457312 1466654 1486067 1860044 1905971 1938776 2391485 2419511 2520518 2568632 2649551 2681627 2778584 3363026 3381710 3454367 3651197 3985808 4103906 4232939 4315883 4329896 4334567
+r=14 mod 3^15: units=9565938 bad=36 frac=3.76335e-06
+   bad: 1 193550 265721 1457312 1860044 1938776 2391485 2520518 2568632 3363026 4315883 4329896 4871543 5580131 5752175 5816327 6249623 6688940 7174454 7202480 7561553 8237336 8434166 9015908 9888521 10061051 10811273 10894541 11052005 11957423 12215489 12247565 12947648 13551746 13669844 13900505
+### 6. independent Python DFS check of Q2 bad lists
+r= 6 bad count: 14
+[1, 365, 446, 608, 689, 770, 851, 932, 1094, 1121, 1364, 1607, 1823, 2120]
+r= 8 bad count: 18
+[1, 770, 1094, 3038, 3281, 4307, 4739, 5306, 7655, 9842, 10112, 12029, 14216, 15917, 16403, 16916, 18185, 19319]
+r= 10 bad count: 32
+[1, 5306, 15917, 16403, 24422, 29525, 40136, 40460, 49208, 49478, 64355, 68891, 73265, 75452, 78368, 83039, 83471, 88574, 99509, 108257, 116600, 121379, 123404, 134501, 140819, 142520, 145436, 147623, 158558, 167306, 169493, 174380]
+### 7. reverse E-loops through 1 (minimal K per length s)
+s= 1 minK=  2 ratio 2^K/3^s=1.3333  <3 OK
+s= 2 minK=  4 ratio 2^K/3^s=1.7778  <3 OK
+s= 3 minK=  6 ratio 2^K/3^s=2.3704  <3 OK
+s= 4 minK=  7 ratio 2^K/3^s=1.5802  <3 OK
+s= 5 minK=  9 ratio 2^K/3^s=2.1070  <3 OK
+s= 6 minK= 11 ratio 2^K/3^s=2.8093  <3 OK
+s= 7 minK= 12 ratio 2^K/3^s=1.8729  <3 OK
+s= 8 minK= 14 ratio 2^K/3^s=2.4972  <3 OK
+s= 9 minK= 15 ratio 2^K/3^s=1.6648  <3 OK
+s=10 minK= 17 ratio 2^K/3^s=2.2197  <3 OK
+s=11 minK= 19 ratio 2^K/3^s=2.9596  <3 OK
+s=12 minK= 20 ratio 2^K/3^s=1.9731  <3 OK
+s=13 minK= 22 ratio 2^K/3^s=2.6308  <3 OK
+s=14 minK= 23 ratio 2^K/3^s=1.7538  <3 OK
+s=15 minK= 25 ratio 2^K/3^s=2.3385  <3 OK
+s=16 minK= 26 ratio 2^K/3^s=1.5590  <3 OK
+s=17 minK= 28 ratio 2^K/3^s=2.0786  <3 OK
+s=18 minK= 30 ratio 2^K/3^s=2.7715  <3 OK
+s=19 minK= 31 ratio 2^K/3^s=1.8477  <3 OK
+s=20 minK= 33 ratio 2^K/3^s=2.4636  <3 OK
+s=21 minK= 34 ratio 2^K/3^s=1.6424  <3 OK
+s=22 minK= 36 ratio 2^K/3^s=2.1898  <3 OK
+s=23 minK= 38 ratio 2^K/3^s=2.9198  <3 OK
+s=24 minK= 39 ratio 2^K/3^s=1.9465  <3 OK
+s=25 minK= 41 ratio 2^K/3^s=2.5954  <3 OK
+s=26 minK= 42 ratio 2^K/3^s=1.7302  <3 OK
+s=27 minK= 44 ratio 2^K/3^s=2.3070  <3 OK
+s=28 minK= 45 ratio 2^K/3^s=1.5380  <3 OK
+s=29 minK= 47 ratio 2^K/3^s=2.0507  <3 OK
+s=30 minK= 49 ratio 2^K/3^s=2.7342  <3 OK
+s=31 minK= 50 ratio 2^K/3^s=1.8228  <3 OK
+s=32 minK= 52 ratio 2^K/3^s=2.4304  <3 OK
+s=33 minK= 53 ratio 2^K/3^s=1.6203  <3 OK
+s=34 minK= 55 ratio 2^K/3^s=2.1604  <3 OK
+s=35 minK= 57 ratio 2^K/3^s=2.8805  <3 OK
+s=36 minK= 58 ratio 2^K/3^s=1.9203  <3 OK
+s=37 minK= 60 ratio 2^K/3^s=2.5604  <3 OK
+s=38 minK= 61 ratio 2^K/3^s=1.7070  <3 OK
+s=39 minK= 63 ratio 2^K/3^s=2.2759  <3 OK
+s=40 minK= 64 ratio 2^K/3^s=1.5173  <3 OK
+### 8. minimal escape price from the 2-adic point -1
+b=  1 a_min=  2  r=3^a/2^b=    4.5000  a-b/log2(3)=  1.369  states=     4  endpoints [-2]
+b=  2 a_min=  3  r=3^a/2^b=    6.7500  a-b/log2(3)=  1.738  states=    10  endpoints [-2]
+b=  3 a_min=  4  r=3^a/2^b=   10.1250  a-b/log2(3)=  2.107  states=    22  endpoints [-2]
+b=  4 a_min=  5  r=3^a/2^b=   15.1875  a-b/log2(3)=  2.476  states=    42  endpoints [-2]
+b=  5 a_min=  6  r=3^a/2^b=   22.7812  a-b/log2(3)=  2.845  states=    79  endpoints [-2, -10]
+b=  6 a_min=  7  r=3^a/2^b=   34.1719  a-b/log2(3)=  3.214  states=   143  endpoints [-2, -10, -14]
+b=  7 a_min=  7  r=3^a/2^b=   17.0859  a-b/log2(3)=  2.583  states=   184  endpoints [-8]
+b=  8 a_min=  7  r=3^a/2^b=    8.5430  a-b/log2(3)=  1.953  states=   187  endpoints [-4]
+b=  9 a_min=  7  r=3^a/2^b=    4.2715  a-b/log2(3)=  1.322  states=   169  endpoints [-2]
+b= 10 a_min=  8  r=3^a/2^b=    6.4072  a-b/log2(3)=  1.691  states=   211  endpoints [-2]
+b= 11 a_min=  9  r=3^a/2^b=    9.6108  a-b/log2(3)=  2.060  states=   279  endpoints [-2, -4]
+b= 12 a_min=  9  r=3^a/2^b=    4.8054  a-b/log2(3)=  1.429  states=   268  endpoints [-2]
+b= 13 a_min= 10  r=3^a/2^b=    7.2081  a-b/log2(3)=  1.798  states=   319  endpoints [-2]
+b= 14 a_min= 11  r=3^a/2^b=   10.8122  a-b/log2(3)=  2.167  states=   408  endpoints [-2, -4]
+b= 15 a_min= 11  r=3^a/2^b=    5.4061  a-b/log2(3)=  1.536  states=   365  endpoints [-2]
+b= 16 a_min= 12  r=3^a/2^b=    8.1091  a-b/log2(3)=  1.905  states=   426  endpoints [-2, -4]
+b= 17 a_min= 12  r=3^a/2^b=    4.0546  a-b/log2(3)=  1.274  states=   340  endpoints [-2]
+b= 18 a_min= 13  r=3^a/2^b=    6.0819  a-b/log2(3)=  1.643  states=   365  endpoints [-2]
+b= 19 a_min= 14  r=3^a/2^b=    9.1228  a-b/log2(3)=  2.012  states=   440  endpoints [-2, -4]
+b= 20 a_min= 14  r=3^a/2^b=    4.5614  a-b/log2(3)=  1.381  states=   376  endpoints [-2]
+b= 25 a_min= 18  r=3^a/2^b=   11.5460  a-b/log2(3)=  2.227  states=   567  endpoints [-2, -4]
+b= 30 a_min= 21  r=3^a/2^b=    9.7420  a-b/log2(3)=  2.072  states=   500  endpoints [-2, -4]
+b= 35 a_min= 24  r=3^a/2^b=    8.2198  a-b/log2(3)=  1.917  states=   510  endpoints [-2, -4]
+b= 40 a_min= 27  r=3^a/2^b=    6.9354  a-b/log2(3)=  1.763  states=   434  endpoints [-2]
+b= 45 a_min= 30  r=3^a/2^b=    5.8518  a-b/log2(3)=  1.608  states=   487  endpoints [-2]
+b= 50 a_min= 33  r=3^a/2^b=    4.9374  a-b/log2(3)=  1.454  states=   420  endpoints [-2]
+b= 55 a_min= 36  r=3^a/2^b=    4.1660  a-b/log2(3)=  1.299  states=   388  endpoints [-2]
+b= 60 a_min= 40  r=3^a/2^b=   10.5451  a-b/log2(3)=  2.144  states=   522  endpoints [-2, -4]
+b= 65 a_min= 43  r=3^a/2^b=    8.8974  a-b/log2(3)=  1.990  states=   541  endpoints [-2, -4]
+b= 70 a_min= 46  r=3^a/2^b=    7.5072  a-b/log2(3)=  1.835  states=   463  endpoints [-2]
