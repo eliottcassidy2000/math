@@ -30,7 +30,13 @@ What this script does (sections printed):
      N_ij K / (N_i. N_.j), shuffle hostile control, crossover extrapolation under
      four models with the spread reported as the uncertainty.
   4  Tournament audit: all 64 labelled 4-tournaments, their score sequences
-     (Landau's theorem, FINITE-EXACT), the mirror involution on cells.
+     (H. G. Landau's 1953 theorem, FINITE-EXACT) plus the one-line parity
+     proof a+2m+b=6, the mirror involution on cells (inherited SW2).
+  Recovered 2026-09-21 from the agent transcript and finalized: printed text
+  corrected per the two audit reports (K~270 not 272; merged Landau order has
+  CC second for 2<L<4; per-decade ranks of SS and CC in both ranking systems)
+  and the audit-established quantities (failure sets, zero-run counts,
+  N33/N22 at K=270, parity proof) are now asserted with explicit raise.
   5  3x3 (P,S,C) block: conditional probabilities and symmetry ties.
 
 All load-bearing checks use explicit `raise` (active under python -O).
@@ -251,9 +257,14 @@ print("  N_i.(K) ~ (3K/log 6K) L^{i-1}/(i-1)!  =>  N_ij ~ c * (9K/log^2 6K) L^{i
 print("  Landau weights w_ij = L^{i+j-2}/((i-1)!(j-1)!) for the nine cells:")
 print("   (1,1):1  (1,2)=(2,1):L  (2,2):L^2  (1,3)=(3,1):L^2/2  (2,3)=(3,2):L^3/2  (3,3):L^4/4")
 print("  Pairs (i,j),(j,i) tie exactly (symmetric weight).  (2,2) vs (1,3): factor 1 vs 1/2.")
-print("  Threshold crossings under Landau weights: (3,3)=(2,3)=(2,2) all at L=2 (K=e^{e^2}/6~272);")
+print("  Threshold crossings under Landau weights: (3,3)=(2,3)=(2,2) all at L=2 (K=e^{e^2}/6=%.1f~270);"
+      % (math.exp(math.exp(2.0)) / 6))
+require(abs(math.exp(math.exp(2.0)) / 6 - 269.696) < 0.01, "e^{e^2}/6 = 269.7")
 print("  (2,2)>(1,2) for L>1; (3,3)>(1,1) for L>sqrt(2); CC>PS for L^3>4 i.e. L>1.587.")
-print("  Landau predicted order for L>2:  CC > CS=SC > SS > CP=PC > PS=SP > PP")
+print("  Landau predicted nine-cell order for L>2:  CC > CS=SC > SS > CP=PC > PS=SP > PP")
+print("  Landau predicted MERGED six-class order: SC+CS > CC > SS = PC+CP > PS+SP > PP for 2<L<4")
+print("    (CC = L^4/4 vs SC+CS = L^3: CC first in the merged order only for L>4, x=exp(exp(4))~10^%.1f)"
+      % (math.exp(4.0) / math.log(10)))
 print("  Landau predicted order for 1<L<2: SS > CS=SC > CC ...  (see actual data below)")
 print("  STATUS: HEURISTIC (Hardy-Littlewood-type product with a common singular series);")
 print("          the marginal Landau term itself is very inaccurate at these scales (table above).")
@@ -346,7 +357,13 @@ for K in DECADES:
 print("  SD-F6 matches the actual six-class ranking at %d of 5 decades; measured-marginal product at %d of 5."
       % (n_sd_match, n_marg_match))
 print("  STATUS: the observed ordering is explained by the marginals (HEURISTIC product model with c~1);")
-print("  the naive Landau ordering is REFUTED at every decade (it puts CC first for L>2).")
+print("  the naive Landau ordering is REFUTED at every decade (nine-cell order: CC first for L>2;")
+print("  merged six-class order for 2<L<4: SC+CS > CC > SS = PC+CP > PS+SP > PP, CC second).")
+_wl3 = {i: 3.0 ** (i - 1) / math.factorial(i - 1) for i in [1, 2, 3]}
+_m3 = ranking_string([("PP", _wl3[1] * _wl3[1]), ("PS+SP", 2 * _wl3[1] * _wl3[2]), ("SS", _wl3[2] * _wl3[2]),
+                      ("PC+CP", 2 * _wl3[1] * _wl3[3]), ("SC+CS", 2 * _wl3[2] * _wl3[3]), ("CC", _wl3[3] * _wl3[3])])
+require(_m3 == "SC+CS > CC > SS = PC+CP > PS+SP > PP", "merged Landau order at L=3")
+print("  (merged Landau order evaluated at L=3: %s : PASS)" % _m3)
 print()
 print("2x2 block ranking:")
 for K in [100, 270, 500] + DECADES:
@@ -376,7 +393,8 @@ n_viol_ss = 0
 n_viol_mid = 0
 # mirror differences: D12 = N12 - N21, D13 = N13 - N31, D23 = N23 - N32
 mirror = {"PS-SP": (cid(1, 2), cid(2, 1)), "PC-CP": (cid(1, 3), cid(3, 1)), "SC-CS": (cid(2, 3), cid(3, 2))}
-mstat = {m: {"zeros": 0, "maxabs": 0, "argmax": 0, "flips": 0, "prev_sign": 0} for m in mirror}
+mstat = {m: {"zeros": 0, "maxabs": 0, "argmax": 0, "flips": 0, "prev_sign": 0,
+             "zero_runs": 0, "prev_zero": False, "first_nonzero": 0} for m in mirror}
 # CC vs PS+SP and CC vs each: track last K where CC <= PS (per cell) for the crossover report
 PSSP = [cid(1, 2), cid(2, 1)]
 PCCP = [cid(1, 3), cid(3, 1)]
@@ -426,7 +444,14 @@ for start in range(0, KMAX, CHUNK):
     for m, (a, b) in mirror.items():
         D = C[:, a] - C[:, b]
         ms = mstat[m]
-        ms["zeros"] += int((D == 0).sum())
+        z = (D == 0)
+        ms["zeros"] += int(z.sum())
+        # maximal runs of D == 0 ('returns to zero'); the first run starts at K=1
+        zprev = np.concatenate([[ms["prev_zero"]], z[:-1]])
+        ms["zero_runs"] += int(np.sum(z & ~zprev))
+        ms["prev_zero"] = bool(z[-1])
+        if ms["first_nonzero"] == 0 and (~z).any():
+            ms["first_nonzero"] = int(Ks[np.flatnonzero(~z)[0]])
         am = int(np.argmax(np.abs(D)))
         if abs(int(D[am])) > ms["maxabs"]:
             ms["maxabs"] = abs(int(D[am]))
@@ -467,6 +492,15 @@ print("  #K violating SS > max(PS,SP): %d ; last violating K = %d" % (n_viol_ss,
 print("  #K violating min(PS,SP) > PP: %d ; last violating K = %d" % (n_viol_mid, max(viol_mid) if viol_mid else 0))
 K_STABLE = max(max(viol_ss) if viol_ss else 0, max(viol_mid) if viol_mid else 0) + 1
 print("  => SS > {PS,SP} > PP holds for every K in [%d, %d]  (FINITE-EXACT)" % (K_STABLE, KMAX))
+# explicit failure sets (audit-established): {1..761} and {1..160} minus {128..136}
+require(n_viol_ss == 761 and max(viol_ss) == 761, "SS > max(PS,SP) fails exactly on K = 1..761")
+_c1000 = np.cumsum(np.eye(16, dtype=np.int64)[cell[:1000]], axis=0)
+_fail_mid = [int(k) for k in range(1, 1001)
+             if not (min(_c1000[k - 1][cid(1, 2)], _c1000[k - 1][cid(2, 1)]) > _c1000[k - 1][cid(1, 1)])]
+require(_fail_mid == [k for k in range(1, 161) if not (128 <= k <= 136)] and n_viol_mid == 151,
+        "min(PS,SP) > PP fails exactly on {1..160} minus {128..136}")
+print("  failure sets: SS > max(PS,SP) fails exactly for K in {1,...,761};")
+print("                min(PS,SP) > PP fails exactly for K in {1,...,160} minus {128,...,136} (151 values): PASS")
 print("  (PS vs SP itself keeps flipping; see mirror statistics.)")
 print()
 print("Mirror differences D(K)=N_ij-N_ji (sibling lane owns the mechanism; here only census):")
@@ -475,6 +509,12 @@ for m, ms in mstat.items():
     tot = int(offset[a] + offset[b])
     print("  %-6s final D=%+d  sqrt(N_ij+N_ji)=%.0f  #K with D=0: %d  strict sign flips: %d  max|D|=%d at K=%d"
           % (m, int(offset[a] - offset[b]), math.sqrt(tot), ms["zeros"], ms["flips"], ms["maxabs"], ms["argmax"]))
+    print("         maximal zero runs (returns to zero, counting the initial run K=1..%d): %d"
+          % (ms["first_nonzero"] - 1, ms["zero_runs"]))
+require(mstat["PS-SP"]["zero_runs"] == 1928 and mstat["PC-CP"]["zero_runs"] == 1368
+        and mstat["SC-CS"]["zero_runs"] == 1004, "zero-run counts 1928/1368/1004")
+require(mstat["PS-SP"]["first_nonzero"] == 4, "first mixed cell PS/SP at k=4")
+print("  (#K with D=0 is not the number of returns to zero; the run counts above are.)")
 print()
 print("Crossovers A vs B (FINITE-EXACT; 'A>B for good' means for every K in (K_last, 10^7]):")
 for key, (lastle, nle, lastgt, ngt) in cross_last.items():
@@ -507,7 +547,10 @@ for K in FIT_SCALES:
     ROWS.append((K, Lv, N33, N22, N33 / N22, rminus, rplus, c33 / c22, c33, c22))
     print("  %9d %8.4f %9d %9d %9.5f %9.5f %9.5f %9.5f %9.4f" % (K, Lv, N33, N22, N33 / N22, rminus, rplus, c33 / c22, Lv**2 / 4))
 print("  STATUS: counts FINITE-EXACT; L=loglog(6K).  Naive Landau ratio L^2/4 predicts N33>N22 already")
-print("  at K~272: REFUTED (N33(272)=%d, N22(272)=%d)." % (int(matrix_at(272)[2][2]), int(matrix_at(272)[1][1])))
+print("  at K=e^{e^2}/6~270: REFUTED (N33(270)=%d, N22(270)=%d; N33(272)=%d, N22(272)=%d)."
+      % (int(matrix_at(270)[2][2]), int(matrix_at(270)[1][1]), int(matrix_at(272)[2][2]), int(matrix_at(272)[1][1])))
+require(int(matrix_at(270)[2][2]) == 1 and int(matrix_at(270)[1][1]) == 42, "N33(270)=1, N22(270)=42")
+require(int(matrix_at(272)[2][2]) == 1 and int(matrix_at(272)[1][1]) == 43, "N33(272)=1, N22(272)=43")
 
 print()
 print("Independence-ratio matrix  R_ij = N_ij * K / (N_i. * N_.j)  (1 = product of marginals):")
@@ -532,6 +575,9 @@ for K in DECADES:
         print("    %-4s " % LABEL[i + 1] + "".join("%9.4f" % Rm[i][j] for j in range(4)))
 print("  Row/column marginals at K=10^7: rows N_i. =", MATS[KMAX].sum(axis=1).tolist(),
       " cols N_.j =", MATS[KMAX].sum(axis=0).tolist())
+print("  N_1. - N_.1 = %d at K=10^7 (class-5 minus class-1 primes, the prime race; sibling lane sandwich_bias)"
+      % (int(MATS[KMAX].sum(axis=1)[0]) - int(MATS[KMAX].sum(axis=0)[0])))
+require(int(MATS[KMAX].sum(axis=1)[0]) - int(MATS[KMAX].sum(axis=0)[0]) == 363, "N_1. - N_.1 = 363")
 print("  Hostile control: randomly re-pair right endpoints (seed 20260917) at K=10^7 and recompute R_ij:")
 rng = np.random.default_rng(20260917)
 Rsh = Rc[rng.permutation(KMAX)]
@@ -654,17 +700,25 @@ for mask in range(64):
     scores.add(tuple(sorted(s)))
 scores = sorted(scores)
 print("Score sequences of all 64 labelled tournaments on 4 vertices:", scores)
-require(scores == [(0, 1, 2, 3), (0, 2, 2, 2), (1, 1, 1, 3), (1, 1, 2, 2)], "Landau score sequences n=4")
+require(scores == [(0, 1, 2, 3), (0, 2, 2, 2), (1, 1, 1, 3), (1, 1, 2, 2)], "H. G. Landau score sequences n=4")
+# one-line proof: scores sum to C(4,2)=6, so (a,m,m,b) with 0<=a<m<b<=3 needs a+2m+b=6: no solution
+parity_sols = [(a, m, b) for a in range(4) for m in range(4) for b in range(4) if a < m < b and a + 2 * m + b == 6]
+require(parity_sols == [], "a+2m+b=6 with 0<=a<m<b<=3 has no solution")
+print("One-line proof: scores sum to C(4,2)=6, so profile (b,m,m,a) with 0<=a<m<b<=3 needs a+2m+b=6;")
+print("  integer solutions with a<m<b in {0,1,2,3}: %s (none).  Enumeration above is the check." % parity_sols)
 has_max_two_equal_min = any(len(set(s)) == 3 and s[1] == s[2] for s in scores)
 require(not has_max_two_equal_min, "no 4-tournament has score profile max > two equal middles > min")
 print("PROVED/FINITE-EXACT: no 4-vertex tournament has score profile (max, mid, mid, min) with")
 print("  max > mid > min.  The user's 'max, min, two equal middles' is therefore not the score")
 print("  profile of any tournament; it is a weak order (total preorder) with one tie, i.e. a")
 print("  transitive comparability digraph on 4 vertices with 5 arcs, not 6.")
-print("Intrinsic relations between cells: only the involution iota: k -> -k, which maps cell (i,j)")
-print("  to (j,i) (inherited SW2).  On the nine cells iota has 3 fixed points (PP,SS,CC) and 3")
-print("  2-cycles; it is symmetric, so it orients nothing.  An orientation such as (i,j)->(j,i) for")
-print("  i<j is a gauge (left endpoint < right endpoint), not data.")
+print("Intrinsic relations between cells: the involution iota: k -> -k maps cell (i,j) to (j,i)")
+print("  (inherited SW2; |6(-k)-1| = 6k+1).  On the nine cells iota has 3 fixed points (PP,SS,CC) and 3")
+print("  2-cycles; it is symmetric, so it orients nothing, and it leaves the positive prefix 1<=k<=K")
+print("  (it relates the positive and the signed census, not members of two cells).  An orientation")
+print("  such as (i,j)->(j,i) for i<j is a gauge (left endpoint < right endpoint), not data.")
+print("  SCOPE: no other intrinsic pairwise relation between cells was found (a non-discovery, not a")
+print("  theorem); the non-tournament verdict itself is inherited from section SW1 of the divisors note.")
 print("Frequency ordering = a scale-dependent total preorder on the cells; at K=%d:" % KMAX)
 M = MATS[KMAX]
 print("  " + ranking_string([(cname(i, j), int(M[i - 1][j - 1])) for (i, j) in NINE]))
@@ -696,8 +750,33 @@ for K in DECADES:
 print()
 print("How C changes the picture (HEURISTIC asymptotic symmetry, FINITE-EXACT order):")
 print("  asymptotic ties by mirror symmetry: PS~SP, PC~CP, SC~CS (3 tied pairs); PP,SS,CC unpaired.")
-print("  Landau leading order for L>2 would put CC on top; at every computed K<=10^7 SS is on top,")
-print("  SC/CS second, PS/SP third, CC fourth (CC overtakes PC/CP and PP early; see crossover table).")
+def _rank(items, name):
+    v = dict(items)
+    return 1 + sum(1 for k in v if v[k] > v[name])
+
+
+ranks = {"nine SS": [], "nine CC": [], "six SS": [], "six CC": []}
+for K in DECADES:
+    M = MATS[K]
+    nine = [(cname(i, j), int(M[i - 1][j - 1])) for (i, j) in NINE]
+    six = [("PP", int(M[0][0])), ("PS+SP", int(M[0][1] + M[1][0])), ("SS", int(M[1][1])),
+           ("PC+CP", int(M[0][2] + M[2][0])), ("SC+CS", int(M[1][2] + M[2][1])), ("CC", int(M[2][2]))]
+    ranks["nine SS"].append(_rank(nine, "SS"))
+    ranks["nine CC"].append(_rank(nine, "CC"))
+    ranks["six SS"].append(_rank(six, "SS"))
+    ranks["six CC"].append(_rank(six, "CC"))
+print("  Ranks at K=10^3..10^7 (1 = most frequent):")
+for key, val in ranks.items():
+    print("    %-8s %s" % (key + ":", val))
+require(ranks["nine SS"] == [1, 1, 1, 1, 1], "SS first in the nine-cell ranking at every decade")
+require(ranks["nine CC"] == [9, 9, 8, 6, 4], "CC nine-cell ranks 9,9,8,6,4")
+require(ranks["six SS"] == [2, 2, 3, 2, 2], "SS six-class ranks 2,2,3,2,2")
+require(ranks["six CC"] == [6, 6, 5, 5, 5], "CC six-class ranks 6,6,5,5,5")
+print("  Landau's nine-cell leading order for L>2 puts CC on top.  Actual: in the nine-cell ranking SS is")
+print("  first at every decade and CC rises from ninth (10^3, 10^4) to eighth, sixth, fourth (10^7); in the")
+print("  merged six-class ranking SS is second (third at 10^5) and CC sixth (10^3, 10^4) then fifth")
+print("  (10^5..10^7).  Only at 10^7 does the nine-cell order read SS > CS > SC > CC > ... (CC overtakes")
+print("  PC/CP and PP early; see crossover table).")
 print("  With C the 2x2 'max, min, two middles' becomes a 9-cell preorder with three symmetric pairs")
 print("  and three singletons: 6 classes, of which only the pairs are asymptotically tied.")
 

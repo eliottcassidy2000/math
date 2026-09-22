@@ -51,9 +51,11 @@ HEURISTIC product model: N_ij(K) ~ c_ij * N_i.(K) N_.j(K) / K with Landau margin
   Landau weights w_ij = L^{i+j-2}/((i-1)!(j-1)!) for the nine cells:
    (1,1):1  (1,2)=(2,1):L  (2,2):L^2  (1,3)=(3,1):L^2/2  (2,3)=(3,2):L^3/2  (3,3):L^4/4
   Pairs (i,j),(j,i) tie exactly (symmetric weight).  (2,2) vs (1,3): factor 1 vs 1/2.
-  Threshold crossings under Landau weights: (3,3)=(2,3)=(2,2) all at L=2 (K=e^{e^2}/6~272);
+  Threshold crossings under Landau weights: (3,3)=(2,3)=(2,2) all at L=2 (K=e^{e^2}/6=269.7~270);
   (2,2)>(1,2) for L>1; (3,3)>(1,1) for L>sqrt(2); CC>PS for L^3>4 i.e. L>1.587.
-  Landau predicted order for L>2:  CC > CS=SC > SS > CP=PC > PS=SP > PP
+  Landau predicted nine-cell order for L>2:  CC > CS=SC > SS > CP=PC > PS=SP > PP
+  Landau predicted MERGED six-class order: SC+CS > CC > SS = PC+CP > PS+SP > PP for 2<L<4
+    (CC = L^4/4 vs SC+CS = L^3: CC first in the merged order only for L>4, x=exp(exp(4))~10^23.7)
   Landau predicted order for 1<L<2: SS > CS=SC > CC ...  (see actual data below)
   STATUS: HEURISTIC (Hardy-Littlewood-type product with a common singular series);
           the marginal Landau term itself is very inaccurate at these scales (table above).
@@ -164,7 +166,9 @@ Predicted six-class rankings from three symmetric product models vs actual (FINI
     marg   : SC+CS > SS > PS+SP > PC+CP > CC > PP   MATCH
   SD-F6 matches the actual six-class ranking at 3 of 5 decades; measured-marginal product at 3 of 5.
   STATUS: the observed ordering is explained by the marginals (HEURISTIC product model with c~1);
-  the naive Landau ordering is REFUTED at every decade (it puts CC first for L>2).
+  the naive Landau ordering is REFUTED at every decade (nine-cell order: CC first for L>2;
+  merged six-class order for 2<L<4: SC+CS > CC > SS = PC+CP > PS+SP > PP, CC second).
+  (merged Landau order evaluated at L=3: SC+CS > CC > SS = PC+CP > PS+SP > PP : PASS)
 
 2x2 block ranking:
   K=100       PS > PP > SP > SS
@@ -195,12 +199,18 @@ Ranking-change census over all K = 1..10000000 (a change = the weak order incl. 
   #K violating SS > max(PS,SP): 761 ; last violating K = 761
   #K violating min(PS,SP) > PP: 151 ; last violating K = 160
   => SS > {PS,SP} > PP holds for every K in [762, 10000000]  (FINITE-EXACT)
+  failure sets: SS > max(PS,SP) fails exactly for K in {1,...,761};
+                min(PS,SP) > PP fails exactly for K in {1,...,160} minus {128,...,136} (151 values): PASS
   (PS vs SP itself keeps flipping; see mirror statistics.)
 
 Mirror differences D(K)=N_ij-N_ji (sibling lane owns the mechanism; here only census):
   PS-SP  final D=+139  sqrt(N_ij+N_ji)=1125  #K with D=0: 14947  strict sign flips: 992  max|D|=650 at K=5512997
+         maximal zero runs (returns to zero, counting the initial run K=1..3): 1928
   PC-CP  final D=+79  sqrt(N_ij+N_ji)=1038  #K with D=0: 12330  strict sign flips: 639  max|D|=570 at K=7331193
+         maximal zero runs (returns to zero, counting the initial run K=1..20): 1368
   SC-CS  final D=-725  sqrt(N_ij+N_ji)=1496  #K with D=0: 4654  strict sign flips: 470  max|D|=1323 at K=9539838
+         maximal zero runs (returns to zero, counting the initial run K=1..40): 1004
+  (#K with D=0 is not the number of returns to zero; the run counts above are.)
 
 Crossovers A vs B (FINITE-EXACT; 'A>B for good' means for every K in (K_last, 10^7]):
   SS      > PS      for good after K=761       (#K with A<=B: 761)
@@ -236,7 +246,7 @@ Crossovers A vs B (FINITE-EXACT; 'A>B for good' means for every K in (K_last, 10
     5000000   2.8459    403704    717699   0.56250   0.74793   0.74752   1.00609    2.0248
    10000000   2.8854    837851   1380659   0.60685   0.77384   0.77362   1.01367    2.0813
   STATUS: counts FINITE-EXACT; L=loglog(6K).  Naive Landau ratio L^2/4 predicts N33>N22 already
-  at K~272: REFUTED (N33(272)=1, N22(272)=43).
+  at K=e^{e^2}/6~270: REFUTED (N33(270)=1, N22(270)=42; N33(272)=1, N22(272)=43).
 
 Independence-ratio matrix  R_ij = N_ij * K / (N_i. * N_.j)  (1 = product of marginals):
   twin-prime constant C_2 (primes<=10^6) = 0.6601619 ; Hardy-Littlewood prediction for R_PP -> 4C_2/3 = 0.88022
@@ -271,6 +281,7 @@ Independence-ratio matrix  R_ij = N_ij * K / (N_i. * N_.j)  (1 = product of marg
     C       1.0394   1.0206   0.9880   0.9271
     4+      1.1955   1.0877   0.9279   0.6966
   Row/column marginals at K=10^7: rows N_i. = [1781238, 3763472, 2912338, 1542952]  cols N_.j = [1780875, 3763996, 2911912, 1543217]
+  N_1. - N_.1 = 363 at K=10^7 (class-5 minus class-1 primes, the prime race; sibling lane sandwich_bias)
   Hostile control: randomly re-pair right endpoints (seed 20260917) at K=10^7 and recompute R_ij:
     L\R          P        S        C       4+
     P       0.9997   0.9997   0.9998   1.0016
@@ -307,14 +318,19 @@ When does the SD-F6 product model (c=1) reach the Landau asymptotic order CC > S
 4. Tournament audit (repo guardrail)
 ==============================================================================
 Score sequences of all 64 labelled tournaments on 4 vertices: [(0, 1, 2, 3), (0, 2, 2, 2), (1, 1, 1, 3), (1, 1, 2, 2)]
+One-line proof: scores sum to C(4,2)=6, so profile (b,m,m,a) with 0<=a<m<b<=3 needs a+2m+b=6;
+  integer solutions with a<m<b in {0,1,2,3}: [] (none).  Enumeration above is the check.
 PROVED/FINITE-EXACT: no 4-vertex tournament has score profile (max, mid, mid, min) with
   max > mid > min.  The user's 'max, min, two equal middles' is therefore not the score
   profile of any tournament; it is a weak order (total preorder) with one tie, i.e. a
   transitive comparability digraph on 4 vertices with 5 arcs, not 6.
-Intrinsic relations between cells: only the involution iota: k -> -k, which maps cell (i,j)
-  to (j,i) (inherited SW2).  On the nine cells iota has 3 fixed points (PP,SS,CC) and 3
-  2-cycles; it is symmetric, so it orients nothing.  An orientation such as (i,j)->(j,i) for
-  i<j is a gauge (left endpoint < right endpoint), not data.
+Intrinsic relations between cells: the involution iota: k -> -k maps cell (i,j) to (j,i)
+  (inherited SW2; |6(-k)-1| = 6k+1).  On the nine cells iota has 3 fixed points (PP,SS,CC) and 3
+  2-cycles; it is symmetric, so it orients nothing, and it leaves the positive prefix 1<=k<=K
+  (it relates the positive and the signed census, not members of two cells).  An orientation
+  such as (i,j)->(j,i) for i<j is a gauge (left endpoint < right endpoint), not data.
+  SCOPE: no other intrinsic pairwise relation between cells was found (a non-discovery, not a
+  theorem); the non-tournament verdict itself is inherited from section SW1 of the divisors note.
 Frequency ordering = a scale-dependent total preorder on the cells; at K=10000000:
   SS > CS > SC > CC > PS > SP > PC > CP > PP
 VERDICT: the '4-tournament' reading is a cosmetic ranking.  It carries no content beyond the
@@ -363,8 +379,16 @@ K=10000000  block total=7079702 of 10000000 centers (0.7080)
 
 How C changes the picture (HEURISTIC asymptotic symmetry, FINITE-EXACT order):
   asymptotic ties by mirror symmetry: PS~SP, PC~CP, SC~CS (3 tied pairs); PP,SS,CC unpaired.
-  Landau leading order for L>2 would put CC on top; at every computed K<=10^7 SS is on top,
-  SC/CS second, PS/SP third, CC fourth (CC overtakes PC/CP and PP early; see crossover table).
+  Ranks at K=10^3..10^7 (1 = most frequent):
+    nine SS: [1, 1, 1, 1, 1]
+    nine CC: [9, 9, 8, 6, 4]
+    six SS:  [2, 2, 3, 2, 2]
+    six CC:  [6, 6, 5, 5, 5]
+  Landau's nine-cell leading order for L>2 puts CC on top.  Actual: in the nine-cell ranking SS is
+  first at every decade and CC rises from ninth (10^3, 10^4) to eighth, sixth, fourth (10^7); in the
+  merged six-class ranking SS is second (third at 10^5) and CC sixth (10^3, 10^4) then fifth
+  (10^5..10^7).  Only at 10^7 does the nine-cell order read SS > CS > SC > CC > ... (CC overtakes
+  PC/CP and PP early; see crossover table).
   With C the 2x2 'max, min, two middles' becomes a 9-cell preorder with three symmetric pairs
   and three singletons: 6 classes, of which only the pairs are asymptotically tied.
 
