@@ -5,7 +5,9 @@ Exact controls for the user's geometric claims about primitive Pythagorean
 triples (PPTs): hypotenuse-plus-leg odd squares, the "hypotenuse = square+1"
 family, the Thales semicircle normalization, the one-parameter (e/d, l, theta)
 variation, angle doubling (Gaussian squaring, x^2-2), the near-isosceles Pell
-family, and the 29 = 5^2+2^2 coincidence test against THM-4146.
+family, and the 29 = 5^2+2^2 coincidence test against THM-4146.  Section S6
+carries the 2026-09-21 audit-driven additions (THM-2142 half-angle map, parity
+split, Fermat closure of reading (b1), THM-3341 citations).
 
 Run from the repository root:
   python3 04-computation/experiments/collatz_mod6_20260917_pythagorean_semicircle.py
@@ -124,7 +126,8 @@ for s in (3, 5, 7, 9, 15):
 # ---------------------------------------------------------------------------
 banner("S2. Readings of 'hypotenuse = square + 1, altitude = square root'")
 k, u_, j_ = sp.symbols('k u j', positive=True)
-print("(b1) literal: hypotenuse k^2+1, altitude-to-hypotenuse sqrt(k).")
+print("(b1) literal: hypotenuse k^2+1, altitude-to-hypotenuse sqrt(k), k a POSITIVE INTEGER")
+print("    (for rational k the rational-leg argument below needs k a rational square).")
 print("    A right triangle with hypotenuse C and altitude H exists iff C >= 2H")
 print("    (legs are roots of X^2 - S X + C H with S^2 = C^2 + 2CH, (a-b)^2 = C^2-2CH).")
 poly = sp.expand(u_ ** 4 - 2 * u_ + 1)  # u = sqrt(k): k^2+1-2sqrt(k)
@@ -157,8 +160,26 @@ for idx in range(400):
         pell_square_hits.append((idx, x))
     x, y = 3 * x + 4 * y, 2 * x + 3 * y
 print(f"    squares among x^2-2y^2=-1 numerators through index 400: {pell_square_hits}")
-print("    (only x=1, i.e. j=1, the isosceles sqrt2,sqrt2,2 case).  Beyond the finite")
-print("    range this is UNCITED-RECOLLECTION (Ljunggren-type quartic Pell result).")
+print("    (only x=1, i.e. j=1, and j=1 is NOT a rational-leg member: (j^4+1+2j)/2 = 2")
+print("    is not a square, its legs are sqrt2, sqrt2).")
+require(not is_square((1 + 1 + 2) // 2), "j=1 would have rational legs")
+# Fermat closure of the j-odd branch: 2w^2 = j^4+1  =>  w^4 - j^4 = ((j^4-1)/2)^2
+w_ = sp.symbols('w', positive=True)
+lhs = sp.expand((w_ ** 4 - j_ ** 4).subs(w_ ** 4, (j_ ** 4 + 1) ** 2 / 4))
+require(sp.expand(lhs - ((j_ ** 4 - 1) / 2) ** 2) == 0, "Fermat identity fails")
+require(sp.expand((j_ ** 4 + 1) ** 2 - 4 * j_ ** 4 - (j_ ** 4 - 1) ** 2) == 0, "square identity")
+JODD = 10 ** 5
+odd_hits = [j for j in range(1, JODD + 1, 2) if is_square((j ** 4 + 1) // 2)]
+require(odd_hits == [1], f"j^4+1=2w^2 hits {odd_hits}")
+print("    Fermat closure: if j^4+1 = 2w^2 then w^4 - j^4 = ((j^4-1)/2)^2 (identity")
+print("    (j^4+1)^2 - 4j^4 = (j^4-1)^2, checked symbolically), a solution of X^4-Y^4=Z^2")
+print("    with Z != 0 whenever j > 1.  CITED: Fermat's descent theorem (X^4-Y^4=Z^2 has")
+print("    no solution with XYZ != 0; classical, e.g. Hardy-Wright ch. XIII, Mordell")
+print("    'Diophantine Equations' ch. 4; theorem numbers not verified here) forces j=1.")
+print(f"    Corroboration: odd j<={JODD} with (j^4+1)/2 square: {odd_hits}.")
+print("    Hence reading (b1) has NO rational-leg member for any positive integer k:")
+print("    PROVED modulo the classical citation (the earlier 'Ljunggren-type' boundary")
+print("    is retired; Ljunggren's equation x^2-2y^4=-1 is a different equation).")
 # 3-4-5 under (b1): hyp 5 -> k=2, altitude would be sqrt2; actual altitude 12/5
 alt345 = Fraction(3 * 4, 5)
 require(alt345 == Fraction(12, 5), "3-4-5 altitude")
@@ -175,7 +196,8 @@ for kk in range(2, 12):
     rows.append((kk, (a, b, c), "primitive" if g == 1 else f"gcd {g}", alt))
 for r in rows:
     print(f"    k={r[0]:2d}: {r[1]}  {r[2]:>10}  altitude={r[3]}")
-print("    hypotenuse = k^2+1 EXACTLY; primitive iff k even; first member k=2 is 3-4-5;")
+print("    hypotenuse = k^2+1 EXACTLY; primitive iff k even; k>=2 (k=1 is the degenerate")
+print("    (0,2,2)); first member k=2 is 3-4-5;")
 print("    the half-angle triangle (k,1,sqrt(k^2+1)) has leg k = sqrt(k^2): this is the")
 print("    only length equal to 'the square root of that same number'.  Angle opposite")
 print("    the even leg = 2*arctan(1/k) -> 0, vertex -> diameter endpoint.  HEURISTIC")
@@ -265,11 +287,42 @@ for i in range(2, len(pell)):
     require(c2 == 6 * c1 - c0, "hypotenuse recursion fails")
     x0, x1, x2 = (min(p[0], p[1]) for p in pell[i - 2:i + 1])
     require(x2 == 6 * x1 - x0 + 2, "short-leg recursion fails")
-for p in pell:
+# convergents h_i/k_i of sqrt2-1 = [0;2,2,2,...] and their mediants (intermediate fractions)
+conv = [Fraction(0, 1), Fraction(1, 2)]
+while len(conv) < len(pell) + 1:
+    h = 2 * conv[-1].numerator + conv[-2].numerator
+    kk_ = 2 * conv[-1].denominator + conv[-2].denominator
+    conv.append(Fraction(h, kk_))
+mediants = [Fraction(conv[i - 1].numerator + conv[i].numerator,
+                     conv[i - 1].denominator + conv[i].denominator) for i in range(1, len(conv))]
+pell_numbers = [0, 1]
+while len(pell_numbers) < 2 * len(pell) + 2:
+    pell_numbers.append(2 * pell_numbers[-1] + pell_numbers[-2])
+small_seq = []
+for i, p in enumerate(pell):
     a, b, c, m, n = p
-    print(f"    (a,b,c)=({a},{b},{c}), (m,n)=({m},{n}), (s,t)=({m+n},{m-n}), tan(theta/2)={m-n}/{m+n}")
-print("    PROVED: |a-b|=1 <=> (m-n)^2-2n^2=+-1 (Pell); c_{i+1}=6c_i-c_{i-1}, x_{i+1}=6x_i-x_{i-1}+2,")
-print("    tan(theta/2)=t/s runs through the convergents of sqrt2-1.")
+    phi_half, psi_half = Fraction(n, m), Fraction(m - n, m + n)
+    require(phi_half == conv[i + 1], f"n/m is not convergent {i+1} of sqrt2-1")
+    require(psi_half == mediants[i], f"t/s is not the mediant of convergents {i},{i+1}")
+    require(psi_half not in conv, "t/s unexpectedly a convergent")
+    require(c == pell_numbers[2 * i + 3], "hypotenuse is not the odd-index Pell number pell_(2i+3)")
+    theta_half = psi_half if a < b else phi_half     # theta = smaller angle (S3 convention)
+    small_seq.append(theta_half)
+    which = "psi (odd leg shorter)" if a < b else "phi (even leg shorter)"
+    print(f"    (a,b,c)=({a},{b},{c}), (m,n)=({m},{n}), (s,t)=({m+n},{m-n}), "
+          f"tan(phi/2)=n/m={phi_half}, tan(psi/2)=t/s={psi_half}, smaller angle = {which}")
+require(all(small_seq[i] < small_seq[i + 1] for i in range(len(small_seq) - 1)), "smaller-angle sequence not monotone")
+require(all(h * h + 2 * h - 1 < 0 for h in small_seq), "smaller-angle half-tangent not < sqrt2-1")
+print("    PROVED: |a-b|=1 <=> (m-n)^2-2n^2=+-1 (Pell); c_{i+1}=6c_i-c_{i-1}, x_{i+1}=6x_i-x_{i-1}+2.")
+print(f"    tan(phi/2)=n/m = {', '.join(str(x) for x in conv[1:len(pell)+1])} are the CONVERGENTS of sqrt2-1=[0;2,2,...];")
+print(f"    tan(psi/2)=t/s = {', '.join(str(x) for x in mediants[:len(pell)])} are the INTERMEDIATE fractions")
+print("    (mediants of consecutive convergents; ratios of consecutive companion Pell numbers 1,3,7,17,41,99,...),")
+print("    never convergents.  With theta the SMALLER angle (S3 convention) tan(theta/2) alternates:")
+print(f"    {', '.join(str(x) for x in small_seq)} (monotone, < sqrt2-1).")
+print(f"    hypotenuses = odd-index Pell numbers pell_3, pell_5, ... = {[pell_numbers[2*i+3] for i in range(len(pell))]}")
+print("    (pell_0=0, pell_1=1, pell_(r+2)=2pell_(r+1)+pell_r; THM-3341 (12) also lists the degenerate m_0=pell_1=1):")
+print("    INHERITED: this family, its recursions and the odd-index-Pell hypotenuses are")
+print("    THM-3341 (6)-(12) and (24) (the Berggren A_+ ray); THM-3357 (22) lists the same ray.")
 CMAX_NI = 10 ** 6
 ni_all = sorted(c for a, b, c, m, n in ppts(CMAX_NI) if abs(a - b) == 1)
 ni_pell = sorted(p[2] for p in pell if p[2] <= CMAX_NI)
@@ -290,9 +343,14 @@ def G_orbit(a, b, h):
 D345, orb345 = G_orbit(3, 4, 5)
 require(D345 == 29 and orb345[0] == orb345[3] and orb345[1] == 5 and orb345[2] == -1, "3-4-5 cycle")
 D2029, orb2029 = G_orbit(20, 21, 29)
+D2120, orb2120 = G_orbit(21, 20, 29)
 print(f"    (3,4,5): D={D345}, orbit {[str(v) for v in orb345]}  (closes, THM-4146 (33))")
 print(f"    (20,21,29): D={D2029}, orbit {[str(v) for v in orb2029]}  (does NOT close)")
+print(f"    (21,20,29): D={D2120}, orbit {[str(v) for v in orb2120]}  (does NOT close either)")
 require(orb2029[0] != orb2029[3] and orb2029[1] != 29, "(20,21,29) unexpectedly cycles")
+require(D2029 == 862 and D2120 == 821, "D values of the two labelings")
+require(orb2120[0] != orb2120[3] and orb2120[1] != 29 and 29 not in orb2120, "(21,20,29) unexpectedly cycles")
+require(3 * 20 - 21 != 29 and 3 * 21 - 20 != 29, "THM-4146 (31) 3a-b=h holds for a (20,21,29) labeling?")
 mm, nn = sp.symbols('m n', integer=True, positive=True)
 A_, B_, C_ = mm ** 2 - nn ** 2, 2 * mm * nn, mm ** 2 + nn ** 2
 P_D = sp.expand(A_ ** 2 + 2 * B_ ** 2 - A_ * B_)          # THM-4146 constant at Euclid (m,n)
@@ -304,9 +362,22 @@ print(f"    D - c_next = {diff}")
 agree = [(m, n) for m in range(1, 301) for n in range(1, m) if P_D.subs({mm: m, nn: n}) == P_pell.subs({mm: m, nn: n})]
 print(f"    integer agreement with 300>=m>n>=1: {agree}")
 require(agree == [(2, 1)], "unexpected agreement locus")
+# all-(m,n) proof of the agreement locus
+at_n1 = sp.factor((P_D - P_pell).subs(nn, 1))
+require(sp.expand(at_n1 - mm * (mm - 2) * (mm ** 2 + 1)) == 0, "n=1 factorization")
+decomp = (mm ** 2 * ((mm - nn) ** 2 - 1) + mm ** 2 * (5 * nn ** 2 - 4)
+          + 2 * mm * nn * (nn ** 2 - 2) + nn ** 2 * (nn ** 2 - 1))
+require(sp.expand(P_D - P_pell - decomp) == 0, "positivity decomposition")
+require(sp.expand(P_D - (C_ ** 2 + B_ * (B_ - A_))) == 0, "D = c^2 + b(b-a)")
+print(f"    at n=1: D - c_next = {at_n1}, zero only at m=2;")
+print("    for n>=2: D - c_next = m^2((m-n)^2-1) + m^2(5n^2-4) + 2mn(n^2-2) + n^2(n^2-1) > 0")
+print("    (every term >= 0 for m>n>=2, the last > 0).  PROVED: D(m,n)=c_next(m,n) only at")
+print("    (m,n)=(2,1) for ALL m>n>=1; the 300-search is corroboration only.")
 print("    REFUTED as a map: 29 is 5^2+2^2 in THM-4146 (c^2 + b(b-a), b(b-a)=4 at 3-4-5)")
 print("    and c=m^2+n^2 for the Pell pair (5,2); the two polynomials in (m,n) agree only")
-print("    at (2,1).  (20,21,29) is not in the 3:4:5 class and plays no role in the cycle.")
+print("    at (2,1).  Neither labeling of (20,21,29) is in the 3:4:5 class (THM-4146 (31)")
+print("    needs 3a-b=h) and it plays no role in the cycle.  THM-4146 (33a) already types")
+print("    29=5^2+2^2=2^2+3^2+4^2 as a non-analogy; new content here is the negative test only.")
 
 # ---------------------------------------------------------------------------
 banner("S4. Angle doubling = Gaussian squaring; hypotenuse squaring forest; x^2-2")
@@ -318,7 +389,9 @@ z2 = sp.expand((b_ + sp.I * a_) ** 2)
 require(sp.re(z2) == b_ ** 2 - a_ ** 2 and sp.im(z2) == 2 * a_ * b_, "Gaussian square")
 print("PROVED: (b+ai)^2 = (b^2-a^2) + 2ab i, |.|=c^2: the doubling (a,b,c)->(2ab,|b^2-a^2|,c^2)")
 print("is Gaussian squaring; THM-3333's lift Phi(m,n) = (m+ni)^2 is the SAME map, so the")
-print("half-angle (m,n) triangle -> PPT is one doubling step.")
+print("half-angle (m,n) triangle -> PPT is one doubling step.  INHERITED: this map is")
+print("THM-3341 (23), Gamma(a,b,c)=(|a^2-b^2|,2ab,c^2), with (3,4,5)->(7,24,25) and")
+print("(21,20,29)->(41,840,841) at THM-3341 (26).")
 CMAX4 = 10 ** 4
 T4 = ppts_by_hyp(CMAX4)
 all4 = [t for lst in T4.values() for t in lst]
@@ -345,7 +418,10 @@ for c in sorted(T4):
     if c <= isqrt(CMAX4):
         require(len(T4[c]) == 2 ** (omega(c) - 1) == len(T4[c * c]), "2^(omega-1) count")
 print(f"PROVED: (a,b,c) is an angle-double of a PPT <=> c is a perfect square <=> (n,m,sqrt c)")
-print(f"is a PPT; doubling is a bijection PPT(c) -> PPT(c^2), both of size 2^(omega(c)-1).")
+print(f"is a PPT; doubling is a bijection PPT(c) -> PPT(c^2), both of size 2^(omega(c)-1)")
+print("(for c a PPT hypotenuse, i.e. every prime factor 1 mod 4: THM-3334 (36), Tripathi;")
+print("THM-3341 (31) uses the same count).  The all-PPT bijection is the only new statement;")
+print("THM-3341 section 2 has square hypotenuse <=> Gamma-image on the U-spine only.")
 print(f"FINITE-EXACT: #PPT(c<={isqrt(CMAX4)}) = {n_small} = #square-hypotenuse PPTs (c<={CMAX4}).")
 print("Hypotenuse orbit c, c^2, c^4, ... is a ray of the squaring forest of")
 print("arithmetic_braids_20260917_summand.md section 2; on hypotenuses the square-root")
@@ -387,7 +463,12 @@ for N, minpoly in ((9, Y ** 3 - 3 * Y + 1), (7, Y ** 3 + Y ** 2 - 2 * Y - 1)):
     r1 = sp.rem(sp.expand(Y ** 2 - 2 - Y), minpoly, Y)
     require(r3 == 0 and r1 != 0, f"2cos(2pi/{N}) not exact period 3")
     ordN = next(e for e in range(1, 20) if pow(2, e, N) == 1)
-    print(f"  N={N}: ord_{N}(2)={ordN}; 2cos(2pi k/{N}) (min poly {minpoly}) has exact period 3.")
+    print(f"  N={N}: ord_{N}(2)={ordN}; 2cos(2pi k/{N}), gcd(k,{N})=1 (min poly {minpoly}) has exact period 3.")
+require(pow(2, 3, 7) == 1 and pow(2, 3, 9) != 1, "ord_7(2)=3 / ord_9(2)!=3")
+require((-1) ** 2 - 2 == -1, "2cos(2pi*3/9) = -1 is fixed")
+print("  (k=3 at N=9 gives 2cos(2pi/3) = -1, a fixed point, hence the gcd condition.)")
+print("  N=7 has ord_7(2)=3 already, so its 3-cycle needs no -1 fold: the 'order six over")
+print("  three via a central -1' shape below is N=9-specific.")
 print("  N=9: the angle orbit {1,2,4,8,7,5} has order 6 = ord_9(2) (the same fact as the")
 print("  inherited 'exponents 1,5,3 mod 6' row law); its fold by -1 is the 3-cycle {1,2,4}.")
 rows_res = {2, 5, 8}
@@ -434,6 +515,41 @@ print("  at all (no integer cycles).  REFUTED as written, survivor: the sign is 
 print("  consistent with the user's own x^2-7/4 and x^2-29/16.  Typing: x^2 is z->z^2 on")
 print("  the unit circle (angle doubling on the circle), x^2-2 its trace projection")
 print("  y=z+1/z; x^2-1 has no circle/angle reading (not conjugate to a power or Chebyshev map).")
+
+# ---------------------------------------------------------------------------
+banner("S6. Audit-driven additions (2026-09-21): THM-2142 map, parity split, half-angle triangles")
+n_odd_short = n_even_short = 0
+for a, b, c, m, n in P1:
+    s, t = m + n, m - n
+    # THM-2142: b(a(cos phi)) = (1+cos phi)/2 = cos^2(phi/2), evaluated on a PPT
+    require(Fraction(c + a, 2 * c) == Fraction(m * m, c), "cos^2(phi/2) != m^2/c")
+    require(Fraction(c - a, 2 * c) == Fraction(n * n, c), "sin^2(phi/2) != n^2/c")
+    require(Fraction(c + b, 2 * c) == Fraction(s * s, 2 * c), "cos^2(psi/2) != s^2/(2c)")
+    require(Fraction(c - b, 2 * c) == Fraction(t * t, 2 * c), "sin^2(psi/2) != t^2/(2c)")
+    # consistency with tan(phi/2)=n/m: cos^2 = 1/(1+tan^2)
+    require(1 / (1 + Fraction(n * n, m * m)) == Fraction(m * m, c), "half-angle cosine vs tangent")
+    require(1 / (1 + Fraction(t * t, s * s)) == Fraction(s * s, 2 * c), "half-angle cosine vs tangent (psi)")
+    # the (n,m,sqrt c) triangle halves phi ONLY: its other acute angle is pi/2-phi/2, not psi/2
+    require(Fraction(m, n) != Fraction(t, s), "m/n = t/s?")
+    if a < b:
+        n_odd_short += 1
+    else:
+        n_even_short += 1
+print("PROVED (map to THM-2142 section 1, b(a(cos theta)) = (1+cos theta)/2 = cos^2(theta/2)):")
+print("  on a PPT, cos^2(phi/2) = (c+a)/(2c) = m^2/c, sin^2(phi/2) = (c-a)/(2c) = n^2/c,")
+print("  cos^2(psi/2) = (c+b)/(2c) = s^2/(2c), sin^2(psi/2) = (c-b)/(2c) = t^2/(2c);")
+print("  i.e. 'hypotenuse +- leg' is 2c times the half-angle cosine/sine squared, and")
+print(f"  Theorem 1 is THM-2142's half-angle functional evaluated at PPT angles (checked on {len(P1)} PPTs).")
+print("  The (n,m,sqrt c) triangle is the half-angle triangle of phi only (its other acute")
+print("  angle is pi/2-phi/2, and m/n != t/s always); psi is halved by the (t,s,sqrt(2c)) triangle.")
+require(n_odd_short + n_even_short == len(P1), "parity split total")
+print(f"FINITE-EXACT parity split of the smaller angle over the {len(P1)} PPTs with c<={CMAX1}:")
+print(f"  opposite the odd leg (tan(theta/2)=t/s, both odd): {n_odd_short};")
+print(f"  opposite the even leg (tan(theta/2)=n/m, opposite parity): {n_even_short}.  Both charts occur.")
+print("SCOPE: the arithmetic_braids2_20260917_* notes contain no Pythagorean, Pell or")
+print("Gaussian-squaring content (grep: no match), so no braids2 inheritance applies here;")
+print("the braids geometry note's Gaussian squaring (its section 5, via THM-3336) concerns")
+print("fresh leg primes and content, not the hypotenuse bijection of S4.")
 
 print()
 print("ALL CHECKS PASSED")

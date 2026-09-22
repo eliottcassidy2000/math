@@ -19,7 +19,8 @@ two coordinates, t=m-n is the other.  First fibres:
 ==============================================================================
 S2. Readings of 'hypotenuse = square + 1, altitude = square root'
 ==============================================================================
-(b1) literal: hypotenuse k^2+1, altitude-to-hypotenuse sqrt(k).
+(b1) literal: hypotenuse k^2+1, altitude-to-hypotenuse sqrt(k), k a POSITIVE INTEGER
+    (for rational k the rational-leg argument below needs k a rational square).
     A right triangle with hypotenuse C and altitude H exists iff C >= 2H
     (legs are roots of X^2 - S X + C H with S^2 = C^2 + 2CH, (a-b)^2 = C^2-2CH).
     with u=sqrt(k): C-2H = u^4-2u+1 = (u - 1)*(u**3 + u**2 + u - 1)
@@ -30,8 +31,17 @@ S2. Readings of 'hypotenuse = square + 1, altitude = square root'
     j^4+1 square, impossible (PROVED).  j odd: forces (j^4+1)/2 square, i.e.
     j^4+1=2w^2, equivalently a near-isosceles PPT whose leg sum is a square;
     squares among x^2-2y^2=-1 numerators through index 400: [(0, 1)]
-    (only x=1, i.e. j=1, the isosceles sqrt2,sqrt2,2 case).  Beyond the finite
-    range this is UNCITED-RECOLLECTION (Ljunggren-type quartic Pell result).
+    (only x=1, i.e. j=1, and j=1 is NOT a rational-leg member: (j^4+1+2j)/2 = 2
+    is not a square, its legs are sqrt2, sqrt2).
+    Fermat closure: if j^4+1 = 2w^2 then w^4 - j^4 = ((j^4-1)/2)^2 (identity
+    (j^4+1)^2 - 4j^4 = (j^4-1)^2, checked symbolically), a solution of X^4-Y^4=Z^2
+    with Z != 0 whenever j > 1.  CITED: Fermat's descent theorem (X^4-Y^4=Z^2 has
+    no solution with XYZ != 0; classical, e.g. Hardy-Wright ch. XIII, Mordell
+    'Diophantine Equations' ch. 4; theorem numbers not verified here) forces j=1.
+    Corroboration: odd j<=100000 with (j^4+1)/2 square: [1].
+    Hence reading (b1) has NO rational-leg member for any positive integer k:
+    PROVED modulo the classical citation (the earlier 'Ljunggren-type' boundary
+    is retired; Ljunggren's equation x^2-2y^4=-1 is a different equation).
     3-4-5: hypotenuse 5 = 2^2+1 but altitude ab/c = 12/5, not sqrt(2);
     REFUTED as a description of 3-4-5 (minimal witness: the triple itself).
 (b2) family (k^2-1, 2k, k^2+1) = Euclid (m,n)=(k,1):
@@ -45,7 +55,8 @@ S2. Readings of 'hypotenuse = square + 1, altitude = square root'
     k= 9: (80, 18, 82)       gcd 2  altitude=720/41
     k=10: (99, 20, 101)   primitive  altitude=1980/101
     k=11: (120, 22, 122)       gcd 2  altitude=1320/61
-    hypotenuse = k^2+1 EXACTLY; primitive iff k even; first member k=2 is 3-4-5;
+    hypotenuse = k^2+1 EXACTLY; primitive iff k even; k>=2 (k=1 is the degenerate
+    (0,2,2)); first member k=2 is 3-4-5;
     the half-angle triangle (k,1,sqrt(k^2+1)) has leg k = sqrt(k^2): this is the
     only length equal to 'the square root of that same number'.  Angle opposite
     the even leg = 2*arctan(1/k) -> 0, vertex -> diameter endpoint.  HEURISTIC
@@ -75,27 +86,42 @@ e=a^2/c^2=sin^2, d=b^2/c^2=cos^2, l=ab/c^2=sin(2theta)/2, e/d=tan^2 theta.
   sqrt5; (e/d,l) depend on tan(theta) only; PPT <=> tan(theta/2) also rational.
 Extremal family A (theta->0): (k^2-1,2k,k^2+1), k even, and (s,(s^2-1)/2,(s^2+1)/2), s odd.
 Extremal family B (theta->pi/4): near-isosceles |a-b|=1, Pell (m,n)->(2m+n,m):
-    (a,b,c)=(3,4,5), (m,n)=(2,1), (s,t)=(3,1), tan(theta/2)=1/3
-    (a,b,c)=(21,20,29), (m,n)=(5,2), (s,t)=(7,3), tan(theta/2)=3/7
-    (a,b,c)=(119,120,169), (m,n)=(12,5), (s,t)=(17,7), tan(theta/2)=7/17
-    (a,b,c)=(697,696,985), (m,n)=(29,12), (s,t)=(41,17), tan(theta/2)=17/41
-    (a,b,c)=(4059,4060,5741), (m,n)=(70,29), (s,t)=(99,41), tan(theta/2)=41/99
-    (a,b,c)=(23661,23660,33461), (m,n)=(169,70), (s,t)=(239,99), tan(theta/2)=99/239
-    (a,b,c)=(137903,137904,195025), (m,n)=(408,169), (s,t)=(577,239), tan(theta/2)=239/577
-    (a,b,c)=(803761,803760,1136689), (m,n)=(985,408), (s,t)=(1393,577), tan(theta/2)=577/1393
-    PROVED: |a-b|=1 <=> (m-n)^2-2n^2=+-1 (Pell); c_{i+1}=6c_i-c_{i-1}, x_{i+1}=6x_i-x_{i-1}+2,
-    tan(theta/2)=t/s runs through the convergents of sqrt2-1.
+    (a,b,c)=(3,4,5), (m,n)=(2,1), (s,t)=(3,1), tan(phi/2)=n/m=1/2, tan(psi/2)=t/s=1/3, smaller angle = psi (odd leg shorter)
+    (a,b,c)=(21,20,29), (m,n)=(5,2), (s,t)=(7,3), tan(phi/2)=n/m=2/5, tan(psi/2)=t/s=3/7, smaller angle = phi (even leg shorter)
+    (a,b,c)=(119,120,169), (m,n)=(12,5), (s,t)=(17,7), tan(phi/2)=n/m=5/12, tan(psi/2)=t/s=7/17, smaller angle = psi (odd leg shorter)
+    (a,b,c)=(697,696,985), (m,n)=(29,12), (s,t)=(41,17), tan(phi/2)=n/m=12/29, tan(psi/2)=t/s=17/41, smaller angle = phi (even leg shorter)
+    (a,b,c)=(4059,4060,5741), (m,n)=(70,29), (s,t)=(99,41), tan(phi/2)=n/m=29/70, tan(psi/2)=t/s=41/99, smaller angle = psi (odd leg shorter)
+    (a,b,c)=(23661,23660,33461), (m,n)=(169,70), (s,t)=(239,99), tan(phi/2)=n/m=70/169, tan(psi/2)=t/s=99/239, smaller angle = phi (even leg shorter)
+    (a,b,c)=(137903,137904,195025), (m,n)=(408,169), (s,t)=(577,239), tan(phi/2)=n/m=169/408, tan(psi/2)=t/s=239/577, smaller angle = psi (odd leg shorter)
+    (a,b,c)=(803761,803760,1136689), (m,n)=(985,408), (s,t)=(1393,577), tan(phi/2)=n/m=408/985, tan(psi/2)=t/s=577/1393, smaller angle = phi (even leg shorter)
+    PROVED: |a-b|=1 <=> (m-n)^2-2n^2=+-1 (Pell); c_{i+1}=6c_i-c_{i-1}, x_{i+1}=6x_i-x_{i-1}+2.
+    tan(phi/2)=n/m = 1/2, 2/5, 5/12, 12/29, 29/70, 70/169, 169/408, 408/985 are the CONVERGENTS of sqrt2-1=[0;2,2,...];
+    tan(psi/2)=t/s = 1/3, 3/7, 7/17, 17/41, 41/99, 99/239, 239/577, 577/1393 are the INTERMEDIATE fractions
+    (mediants of consecutive convergents; ratios of consecutive companion Pell numbers 1,3,7,17,41,99,...),
+    never convergents.  With theta the SMALLER angle (S3 convention) tan(theta/2) alternates:
+    1/3, 2/5, 7/17, 12/29, 41/99, 70/169, 239/577, 408/985 (monotone, < sqrt2-1).
+    hypotenuses = odd-index Pell numbers pell_3, pell_5, ... = [5, 29, 169, 985, 5741, 33461, 195025, 1136689]
+    (pell_0=0, pell_1=1, pell_(r+2)=2pell_(r+1)+pell_r; THM-3341 (12) also lists the degenerate m_0=pell_1=1):
+    INHERITED: this family, its recursions and the odd-index-Pell hypotenuses are
+    THM-3341 (6)-(12) and (24) (the Berggren A_+ ray); THM-3357 (22) lists the same ray.
     FINITE-EXACT: near-isosceles hypotenuses c<=10^6 are exactly [5, 29, 169, 985, 5741, 33461, 195025].
 29 test against THM-4146 (D=a^2+2b^2-ab, cycle -(a+b)->h->-(b-a)):
     (3,4,5): D=29, orbit ['-7', '5', '-1', '-7']  (closes, THM-4146 (33))
     (20,21,29): D=862, orbit ['-41', '39', '659/21', '54139/9261']  (does NOT close)
+    (21,20,29): D=821, orbit ['-41', '43', '257/5', '11381/125']  (does NOT close either)
     D(m,n) = m**4 - 2*m**3*n + 6*m**2*n**2 + 2*m*n**3 + n**4
     c_next(m,n) = 5*m**2 + 4*m*n + n**2
     D - c_next = m**4 - 2*m**3*n + 6*m**2*n**2 - 5*m**2 + 2*m*n**3 - 4*m*n + n**4 - n**2
     integer agreement with 300>=m>n>=1: [(2, 1)]
+    at n=1: D - c_next = m*(m - 2)*(m**2 + 1), zero only at m=2;
+    for n>=2: D - c_next = m^2((m-n)^2-1) + m^2(5n^2-4) + 2mn(n^2-2) + n^2(n^2-1) > 0
+    (every term >= 0 for m>n>=2, the last > 0).  PROVED: D(m,n)=c_next(m,n) only at
+    (m,n)=(2,1) for ALL m>n>=1; the 300-search is corroboration only.
     REFUTED as a map: 29 is 5^2+2^2 in THM-4146 (c^2 + b(b-a), b(b-a)=4 at 3-4-5)
     and c=m^2+n^2 for the Pell pair (5,2); the two polynomials in (m,n) agree only
-    at (2,1).  (20,21,29) is not in the 3:4:5 class and plays no role in the cycle.
+    at (2,1).  Neither labeling of (20,21,29) is in the 3:4:5 class (THM-4146 (31)
+    needs 3a-b=h) and it plays no role in the cycle.  THM-4146 (33a) already types
+    29=5^2+2^2=2^2+3^2+4^2 as a non-analogy; new content here is the negative test only.
 
 ==============================================================================
 S4. Angle doubling = Gaussian squaring; hypotenuse squaring forest; x^2-2
@@ -103,7 +129,9 @@ S4. Angle doubling = Gaussian squaring; hypotenuse squaring forest; x^2-2
 PROVED: cos(2theta)=2cos^2-1; with y=2cos(theta), y -> y^2-2 (Chebyshev T_2).
 PROVED: (b+ai)^2 = (b^2-a^2) + 2ab i, |.|=c^2: the doubling (a,b,c)->(2ab,|b^2-a^2|,c^2)
 is Gaussian squaring; THM-3333's lift Phi(m,n) = (m+ni)^2 is the SAME map, so the
-half-angle (m,n) triangle -> PPT is one doubling step.
+half-angle (m,n) triangle -> PPT is one doubling step.  INHERITED: this map is
+THM-3341 (23), Gamma(a,b,c)=(|a^2-b^2|,2ab,c^2), with (3,4,5)->(7,24,25) and
+(21,20,29)->(41,840,841) at THM-3341 (26).
 universe: PPTs with c<=10000: 1593
 PPTs with square hypotenuse, c<=10000: 16
   (7,24,25) = double of (3, 4, 5)   (m,n)=(4,3), sqrt(c)=5
@@ -123,7 +151,10 @@ PPTs with square hypotenuse, c<=10000: 16
   (6887,2184,7225) = double of (13, 84, 85)   (m,n)=(84,13), sqrt(c)=85
   (4879,6240,7921) = double of (39, 80, 89)   (m,n)=(80,39), sqrt(c)=89
 PROVED: (a,b,c) is an angle-double of a PPT <=> c is a perfect square <=> (n,m,sqrt c)
-is a PPT; doubling is a bijection PPT(c) -> PPT(c^2), both of size 2^(omega(c)-1).
+is a PPT; doubling is a bijection PPT(c) -> PPT(c^2), both of size 2^(omega(c)-1)
+(for c a PPT hypotenuse, i.e. every prime factor 1 mod 4: THM-3334 (36), Tripathi;
+THM-3341 (31) uses the same count).  The all-PPT bijection is the only new statement;
+THM-3341 section 2 has square hypotenuse <=> Gamma-image on the U-spine only.
 FINITE-EXACT: #PPT(c<=100) = 16 = #square-hypotenuse PPTs (c<=10000).
 Hypotenuse orbit c, c^2, c^4, ... is a ray of the squaring forest of
 arithmetic_braids_20260917_summand.md section 2; on hypotenuses the square-root
@@ -138,8 +169,11 @@ valuation and 2-adic ones too, so PrePer(y^2-2, Q) = {-2,-1,0,1,2}.  Graph:
    1 (2cos  pi/3) -> -1
   -1 (2cos 2pi/3) -> -1
   = angle doubling on {0, pi/3, pi/2, 2pi/3, pi}: pi->0, pi/2->pi, pi/3->2pi/3->4pi/3~2pi/3.
-  N=9: ord_9(2)=6; 2cos(2pi k/9) (min poly y**3 - 3*y + 1) has exact period 3.
-  N=7: ord_7(2)=3; 2cos(2pi k/7) (min poly y**3 + y**2 - 2*y - 1) has exact period 3.
+  N=9: ord_9(2)=6; 2cos(2pi k/9), gcd(k,9)=1 (min poly y**3 - 3*y + 1) has exact period 3.
+  N=7: ord_7(2)=3; 2cos(2pi k/7), gcd(k,7)=1 (min poly y**3 + y**2 - 2*y - 1) has exact period 3.
+  (k=3 at N=9 gives 2cos(2pi/3) = -1, a fixed point, hence the gcd condition.)
+  N=7 has ord_7(2)=3 already, so its 3-cycle needs no -1 fold: the 'order six over
+  three via a central -1' shape below is N=9-specific.
   N=9: the angle orbit {1,2,4,8,7,5} has order 6 = ord_9(2) (the same fact as the
   inherited 'exponents 1,5,3 mod 6' row law); its fold by -1 is the 3-cycle {1,2,4}.
   The Collatz row residues {2,5,8} mod 9 meet each +-pair {1,8},{2,7},{4,5} exactly once
@@ -161,5 +195,23 @@ S5. The user's 'x^2+{0,1,2}' graphs are x^2-{0,1,2}; sign audit
   consistent with the user's own x^2-7/4 and x^2-29/16.  Typing: x^2 is z->z^2 on
   the unit circle (angle doubling on the circle), x^2-2 its trace projection
   y=z+1/z; x^2-1 has no circle/angle reading (not conjugate to a power or Chebyshev map).
+
+==============================================================================
+S6. Audit-driven additions (2026-09-21): THM-2142 map, parity split, half-angle triangles
+==============================================================================
+PROVED (map to THM-2142 section 1, b(a(cos theta)) = (1+cos theta)/2 = cos^2(theta/2)):
+  on a PPT, cos^2(phi/2) = (c+a)/(2c) = m^2/c, sin^2(phi/2) = (c-a)/(2c) = n^2/c,
+  cos^2(psi/2) = (c+b)/(2c) = s^2/(2c), sin^2(psi/2) = (c-b)/(2c) = t^2/(2c);
+  i.e. 'hypotenuse +- leg' is 2c times the half-angle cosine/sine squared, and
+  Theorem 1 is THM-2142's half-angle functional evaluated at PPT angles (checked on 158 PPTs).
+  The (n,m,sqrt c) triangle is the half-angle triangle of phi only (its other acute
+  angle is pi/2-phi/2, and m/n != t/s always); psi is halved by the (t,s,sqrt(2c)) triangle.
+FINITE-EXACT parity split of the smaller angle over the 158 PPTs with c<=1000:
+  opposite the odd leg (tan(theta/2)=t/s, both odd): 80;
+  opposite the even leg (tan(theta/2)=n/m, opposite parity): 78.  Both charts occur.
+SCOPE: the arithmetic_braids2_20260917_* notes contain no Pythagorean, Pell or
+Gaussian-squaring content (grep: no match), so no braids2 inheritance applies here;
+the braids geometry note's Gaussian squaring (its section 5, via THM-3336) concerns
+fresh leg primes and content, not the hypotenuse bijection of S4.
 
 ALL CHECKS PASSED
