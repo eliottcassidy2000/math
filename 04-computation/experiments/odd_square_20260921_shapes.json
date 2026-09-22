@@ -1,0 +1,433 @@
+{
+  "checks": 480912,
+  "epsilon_rows": [
+    {
+      "altitude_count": 138745,
+      "binding": "ratio",
+      "epsilon": {
+        "denominator": 10,
+        "numerator": 1
+      },
+      "joint_count": 97074,
+      "limit_fraction_diagnostic": 0.6100355419157266,
+      "ratio_count": 97074
+    },
+    {
+      "altitude_count": 106087,
+      "binding": "ratio",
+      "epsilon": {
+        "denominator": 4,
+        "numerator": 1
+      },
+      "joint_count": 65190,
+      "limit_fraction_diagnostic": 0.40966552939826695,
+      "ratio_count": 65190
+    },
+    {
+      "altitude_count": 65190,
+      "binding": "ratio",
+      "epsilon": {
+        "denominator": 5,
+        "numerator": 2
+      },
+      "joint_count": 44869,
+      "limit_fraction_diagnostic": 0.28196592805724774,
+      "ratio_count": 44869
+    },
+    {
+      "altitude_count": 45692,
+      "binding": "ratio",
+      "epsilon": {
+        "denominator": 20,
+        "numerator": 9
+      },
+      "joint_count": 39412,
+      "limit_fraction_diagnostic": 0.2476774486084331,
+      "ratio_count": 39412
+    },
+    {
+      "altitude_count": 32168,
+      "binding": "altitude",
+      "epsilon": {
+        "denominator": 40,
+        "numerator": 19
+      },
+      "joint_count": 32168,
+      "limit_fraction_diagnostic": 0.2021652482085199,
+      "ratio_count": 36868
+    },
+    {
+      "altitude_count": 20295,
+      "binding": "altitude",
+      "epsilon": {
+        "denominator": 100,
+        "numerator": 49
+      },
+      "joint_count": 20295,
+      "limit_fraction_diagnostic": 0.12753712171703968,
+      "ratio_count": 35391
+    },
+    {
+      "altitude_count": 0,
+      "binding": "empty",
+      "epsilon": {
+        "denominator": 2,
+        "numerator": 1
+      },
+      "joint_count": 0,
+      "limit_fraction_diagnostic": 0.0,
+      "ratio_count": 34426
+    }
+  ],
+  "fibres": {
+    "aggregate_outer_height_1001": {
+      "angle_at_atan_3_over_4_count": 84740,
+      "asymptotic_count_diagnostic": 101523.9273308061,
+      "limit_angle_CDF": {
+        "denominator": 6,
+        "numerator": 5
+      },
+      "triples": 101690
+    },
+    "fibres": 500,
+    "selected": [
+      {
+        "angle_at_atan_3_over_4_count": 1,
+        "angle_at_atan_3_over_4_fraction": {
+          "denominator": 1,
+          "numerator": 1
+        },
+        "proved_bound": {
+          "denominator": 1,
+          "numerator": 1
+        },
+        "size": 1,
+        "slope_Kolmogorov_discrepancy": {
+          "denominator": 3,
+          "numerator": 2
+        },
+        "u": 3
+      },
+      {
+        "angle_at_atan_3_over_4_count": 2,
+        "angle_at_atan_3_over_4_fraction": {
+          "denominator": 1,
+          "numerator": 1
+        },
+        "proved_bound": {
+          "denominator": 2,
+          "numerator": 1
+        },
+        "size": 2,
+        "slope_Kolmogorov_discrepancy": {
+          "denominator": 5,
+          "numerator": 2
+        },
+        "u": 5
+      },
+      {
+        "angle_at_atan_3_over_4_count": 3,
+        "angle_at_atan_3_over_4_fraction": {
+          "denominator": 1,
+          "numerator": 1
+        },
+        "proved_bound": {
+          "denominator": 3,
+          "numerator": 1
+        },
+        "size": 3,
+        "slope_Kolmogorov_discrepancy": {
+          "denominator": 9,
+          "numerator": 2
+        },
+        "u": 9
+      },
+      {
+        "angle_at_atan_3_over_4_count": 3,
+        "angle_at_atan_3_over_4_fraction": {
+          "denominator": 4,
+          "numerator": 3
+        },
+        "proved_bound": {
+          "denominator": 2,
+          "numerator": 1
+        },
+        "size": 4,
+        "slope_Kolmogorov_discrepancy": {
+          "denominator": 30,
+          "numerator": 7
+        },
+        "u": 15
+      },
+      {
+        "angle_at_atan_3_over_4_count": 20,
+        "angle_at_atan_3_over_4_fraction": {
+          "denominator": 6,
+          "numerator": 5
+        },
+        "proved_bound": {
+          "denominator": 6,
+          "numerator": 1
+        },
+        "size": 24,
+        "slope_Kolmogorov_discrepancy": {
+          "denominator": 840,
+          "numerator": 53
+        },
+        "u": 105
+      },
+      {
+        "angle_at_atan_3_over_4_count": 60,
+        "angle_at_atan_3_over_4_fraction": {
+          "denominator": 6,
+          "numerator": 5
+        },
+        "proved_bound": {
+          "denominator": 18,
+          "numerator": 1
+        },
+        "size": 72,
+        "slope_Kolmogorov_discrepancy": {
+          "denominator": 2520,
+          "numerator": 53
+        },
+        "u": 315
+      },
+      {
+        "angle_at_atan_3_over_4_count": 270,
+        "angle_at_atan_3_over_4_fraction": {
+          "denominator": 6,
+          "numerator": 5
+        },
+        "proved_bound": {
+          "denominator": 162,
+          "numerator": 1
+        },
+        "size": 324,
+        "slope_Kolmogorov_discrepancy": {
+          "denominator": 999,
+          "numerator": 4
+        },
+        "u": 999
+      },
+      {
+        "angle_at_atan_3_over_4_count": 300,
+        "angle_at_atan_3_over_4_fraction": {
+          "denominator": 6,
+          "numerator": 5
+        },
+        "proved_bound": {
+          "denominator": 90,
+          "numerator": 1
+        },
+        "size": 360,
+        "slope_Kolmogorov_discrepancy": {
+          "denominator": 180180,
+          "numerator": 1193
+        },
+        "u": 1001
+      }
+    ],
+    "universe": "all odd u=3..1001, every admissible odd v"
+  },
+  "heights": [
+    {
+      "X_over_2pi_diagnostic": 15.915494309189533,
+      "count_divided_by_X": {
+        "denominator": 25,
+        "numerator": 4
+      },
+      "hypotenuse_height": 100,
+      "primitive_triples": 16
+    },
+    {
+      "X_over_2pi_diagnostic": 159.15494309189535,
+      "count_divided_by_X": {
+        "denominator": 500,
+        "numerator": 79
+      },
+      "hypotenuse_height": 1000,
+      "primitive_triples": 158
+    },
+    {
+      "X_over_2pi_diagnostic": 1591.5494309189535,
+      "count_divided_by_X": {
+        "denominator": 10000,
+        "numerator": 1593
+      },
+      "hypotenuse_height": 10000,
+      "primitive_triples": 1593
+    },
+    {
+      "X_over_2pi_diagnostic": 15915.494309189535,
+      "count_divided_by_X": {
+        "denominator": 100000,
+        "numerator": 15919
+      },
+      "hypotenuse_height": 100000,
+      "primitive_triples": 15919
+    },
+    {
+      "X_over_2pi_diagnostic": 159154.94309189534,
+      "count_divided_by_X": {
+        "denominator": 1000000,
+        "numerator": 159139
+      },
+      "hypotenuse_height": 1000000,
+      "primitive_triples": 159139
+    }
+  ],
+  "hostiles": {
+    "3_4_5_altitude": {
+      "denominator": 5,
+      "numerator": 12
+    },
+    "3_4_5_angle_hypotenuse_limit_CDF_diagnostic": 0.8193310587965338,
+    "3_4_5_angle_outer_fibre_limit_CDF": {
+      "denominator": 6,
+      "numerator": 5
+    },
+    "3_4_5_normalized_altitude": {
+      "denominator": 25,
+      "numerator": 12
+    },
+    "sampling_measures_differ": true
+  },
+  "parity_boxes": [
+    {
+      "M": 10,
+      "coprime": 63,
+      "coprime_odd_odd": 19,
+      "coprime_opposite_parity": 44,
+      "odd_odd_denominator": 25,
+      "opposite_parity_denominator": 50,
+      "pairs": 100
+    },
+    {
+      "M": 100,
+      "coprime": 6087,
+      "coprime_odd_odd": 2007,
+      "coprime_opposite_parity": 4080,
+      "odd_odd_denominator": 2500,
+      "opposite_parity_denominator": 5000,
+      "pairs": 10000
+    },
+    {
+      "M": 1000,
+      "coprime": 608383,
+      "coprime_odd_odd": 202661,
+      "coprime_opposite_parity": 405722,
+      "odd_odd_denominator": 250000,
+      "opposite_parity_denominator": 500000,
+      "pairs": 1000000
+    }
+  ],
+  "scope": {
+    "all_fixed_outer_fibres": "odd u=3..1001",
+    "all_triples_enumerated": 159139,
+    "asymptotic_decimals": "diagnostics only; limits proved in note",
+    "exact_Fraction_shape_max_hypotenuse": 1000,
+    "independent_integer_leg_max_hypotenuse": 300,
+    "independent_odd_root_max_hypotenuse": 10000,
+    "max_hypotenuse": 1000000
+  },
+  "shape_cdfs": [
+    {
+      "angle_uniform_limit_diagnostic": 0.15833369664226218,
+      "count": 25200,
+      "finite_fraction": {
+        "denominator": 159139,
+        "numerator": 25200
+      },
+      "tan_theta_cutoff": {
+        "denominator": 8,
+        "numerator": 1
+      }
+    },
+    {
+      "angle_uniform_limit_diagnostic": 0.3119165215094773,
+      "count": 49640,
+      "finite_fraction": {
+        "denominator": 159139,
+        "numerator": 49640
+      },
+      "tan_theta_cutoff": {
+        "denominator": 4,
+        "numerator": 1
+      }
+    },
+    {
+      "angle_uniform_limit_diagnostic": 0.45680100487963254,
+      "count": 72700,
+      "finite_fraction": {
+        "denominator": 159139,
+        "numerator": 72700
+      },
+      "tan_theta_cutoff": {
+        "denominator": 8,
+        "numerator": 3
+      }
+    },
+    {
+      "angle_uniform_limit_diagnostic": 0.590334470601733,
+      "count": 93949,
+      "finite_fraction": {
+        "denominator": 159139,
+        "numerator": 93949
+      },
+      "tan_theta_cutoff": {
+        "denominator": 2,
+        "numerator": 1
+      }
+    },
+    {
+      "angle_uniform_limit_diagnostic": 0.7112307379574111,
+      "count": 113183,
+      "finite_fraction": {
+        "denominator": 159139,
+        "numerator": 113183
+      },
+      "tan_theta_cutoff": {
+        "denominator": 8,
+        "numerator": 5
+      }
+    },
+    {
+      "angle_uniform_limit_diagnostic": 0.8193310587965338,
+      "count": 130389,
+      "finite_fraction": {
+        "denominator": 159139,
+        "numerator": 130389
+      },
+      "tan_theta_cutoff": {
+        "denominator": 4,
+        "numerator": 3
+      }
+    },
+    {
+      "angle_uniform_limit_diagnostic": 0.9152427814602144,
+      "count": 145647,
+      "finite_fraction": {
+        "denominator": 159139,
+        "numerator": 145647
+      },
+      "tan_theta_cutoff": {
+        "denominator": 8,
+        "numerator": 7
+      }
+    },
+    {
+      "angle_uniform_limit_diagnostic": 1.0,
+      "count": 159139,
+      "finite_fraction": {
+        "denominator": 1,
+        "numerator": 1
+      },
+      "tan_theta_cutoff": {
+        "denominator": 1,
+        "numerator": 1
+      }
+    }
+  ],
+  "status": "FINITE-EXACT PASS"
+}

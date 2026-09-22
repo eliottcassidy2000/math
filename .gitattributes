@@ -160,3 +160,7 @@ scripts/*.ps1 text eol=crlf
 # Glued number lines: portable exact replay certificates and proof notes.
 04-computation/experiments/glued_xor_20260921_* text eol=lf
 05-knowledge/results/glued_xor_20260921_* text eol=lf
+
+# Odd-square families: invariant bytes for exact replay and source bindings.
+04-computation/experiments/odd_square_20260921_* text eol=lf
+05-knowledge/results/odd_square_20260921_* text eol=lf

@@ -245,6 +245,11 @@ all heights (THM-1289, published), δ ineffective.
   CITED quantitative sparsity estimate strengthens this to a full limit;
   on the `3n-1` sheet, budget exhaustion is equivalent to eventual
   periodicity. Neither universal convergence nor cycle completeness follows.
+  [The odd-square continuation](../05-knowledge/results/odd_square_20260921_synthesis.md)
+  encodes legal edges as a thin, angle-restricted PPT family. Berggren
+  descent and fixed-root doubling fail to preserve those edges. Its
+  parameter-minus-five completion fills compatible finite 2/3/5 cylinders
+  in disjoint basins; height-controlled universal coverage remains OPEN.
 - **Erdős Problem 592** [DEEP — $1000 problem] — the p=2 Schur-seam theorem (THM-469),
   R(n,2)=2n+1 linear conjecture, Chang-tower m=3 open; 21 scripts, a survey draft.
 - **{7,21} forbidden H-spectrum** [DEEP, repo-signature] — permanent exclusions by

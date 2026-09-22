@@ -1,5 +1,14 @@
 # Script Results Index
 
+- [Odd-square triangles, shell cycles and legal Collatz edges](odd_square_20260921_synthesis.md):
+  **PROVED scoped / FINITE-EXACT / independently audited.** Recovers
+  THM-3756's two-root chart; adds the four-inradii fibre permutation and
+  finite Chebyshev conjugacy, exact thin integer-parameter family, two
+  height-dependent shape laws, sharp Collatz-edge angle gaps and atomic
+  edge measure, and mixed 2/3/5-adic inverse completion for parameter -5.
+  [Manifest](odd_square_20260921_manifest.json). Global Collatz convergence
+  and cycle completeness remain OPEN; no new Lean claim.
+
 - [Glued number lines, XOR and signed clock budgets](glued_xor_20260921_synthesis.md):
   **PROVED scoped / CITED quantitative sparsity / FINITE-EXACT.**
   Affine conjugacy and shell classification; elementary discrepancy

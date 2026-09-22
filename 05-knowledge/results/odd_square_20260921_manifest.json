@@ -1,0 +1,227 @@
+{
+  "all_signed_cycles_classified": false,
+  "artifacts_sha256_lf": {
+    "01-canon/theorems/THM-3756-odd-square-ordinal-berggren-affine-descent.md": "eb4982e2971ae46d54102724aacc208bce7682f48ae941b15588a22f69029ea9",
+    "04-computation/experiments/odd_square_20260921_edges.json": "064de8349f6414a9cd0e841875ccbbb44aea31410d6e68dbd16ae1d1b77f6757",
+    "04-computation/experiments/odd_square_20260921_edges.py": "fca92acad9799ada7ef717167a11cea906874136f71cfcaa05ca141c90c6c788",
+    "04-computation/experiments/odd_square_20260921_inverse.json": "436d63b14681dd80adfd6c303f15e91ffc3ab491e4e75e87de98185fb47d87c0",
+    "04-computation/experiments/odd_square_20260921_inverse.py": "a42c8ee7ea6fe3a424e9f580eb3435771f3b5cbb700aabafb85156f1bd2bb24c",
+    "04-computation/experiments/odd_square_20260921_shapes.json": "ec54eadfc33b7eb1a99ead90638ef3f0826631364e031197a11632b5c2dd0b27",
+    "04-computation/experiments/odd_square_20260921_shapes.py": "183b549a45c914861fd291607be0c6337422246746ddb748428bb26dd974f28e",
+    "04-computation/experiments/odd_square_20260921_triangles.json": "536cdc5e2f2dc551ce4163154108f6059b0d37e35fd9f7bbde90a6ee11642556",
+    "04-computation/experiments/odd_square_20260921_triangles.py": "3e702ec1602b8c9b17a7350579f2c393c41530b49b3be64bed151f1bc23932c9",
+    "04-computation/experiments/odd_square_20260921_verify.py": "8419515722b7f97e539f34dc341a050cc93012bf6335e3b255782e343a1b65b3",
+    "05-knowledge/reference/ODD-SQUARE-GLUED-LINE-2026-09-21-SOURCE.md": "89362adafbaf3c3b1c960ab9bc6a2408a1b213b24383370c4ab8d7c0cd95adf9",
+    "05-knowledge/results/arithmetic_braids2_20260917_floor_reciprocity.md": "62a8dd308d945bab40b3ef90189a15c0e961180732f85a756d81db47fe9c4bd1",
+    "05-knowledge/results/arithmetic_braids2_20260917_inverse_completion.md": "e4307e5828a4c2a1fb5c0dc7ebb8e1583939bb9aff0f2fa5d23cce1a98fcbd91",
+    "05-knowledge/results/arithmetic_braids2_20260917_signed_cycles.md": "a87c344d37e8a3aca22e817e059f9860dbfa3c442a90bdac70f53c1da4bd408a",
+    "05-knowledge/results/arithmetic_braids_20260917_divisors.md": "2c9224962e8395082bdafaf490f664be1943511a82e28ef4a86569b637aca958",
+    "05-knowledge/results/odd_square_20260921_edges.md": "3e13bfeb2cc06584ecaee94ff5ef334df448d93cc987dbeb642c60fbf5cf3da8",
+    "05-knowledge/results/odd_square_20260921_inverse.md": "f0a4feb9891cc2cf1da9b6e01467211655e95d0b66ef6ac9c3f54509077204a1",
+    "05-knowledge/results/odd_square_20260921_shapes.md": "1c9f541b498aa4edd5b305dd85f9e08a7a64dd43601c202a04f3a53c2ec0e036",
+    "05-knowledge/results/odd_square_20260921_synthesis.md": "bf7d07557607370fe577c51d9d77c45b324dd4f981f6371927073af4f8f99711",
+    "05-knowledge/results/odd_square_20260921_triangles.md": "10fc94cda77e0a61e9c5dbafce115d3b9b0bcde6695de020565938a7314c1126"
+  },
+  "cited_context": {
+    "Krasikov_Lagarias": "https://arxiv.org/pdf/math/0205002",
+    "pin": "Section2 counting definitions; Theorem6.1 and proof in section6",
+    "role": "Historical inverse-orbit lower bound; no current-best or universal-coverage claim."
+  },
+  "collatz_convergence_proved": false,
+  "commands": [
+    {
+      "command": [
+        "python",
+        "04-computation/experiments/odd_square_20260921_triangles.py"
+      ],
+      "cwd": ".",
+      "exit_code": 0,
+      "output": "{\"status\": \"PASS\", \"checks_passed\": 368573, \"primitive_root_pairs\": 9242, \"height_count\": 1593, \"output\": \"odd_square_20260921_triangles.json\"}"
+    },
+    {
+      "command": [
+        "python",
+        "-O",
+        "04-computation/experiments/odd_square_20260921_triangles.py"
+      ],
+      "cwd": ".",
+      "exit_code": 0,
+      "output": "{\"status\": \"PASS\", \"checks_passed\": 368573, \"primitive_root_pairs\": 9242, \"height_count\": 1593, \"output\": \"odd_square_20260921_triangles.json\"}"
+    },
+    {
+      "command": [
+        "python",
+        "04-computation/experiments/odd_square_20260921_shapes.py"
+      ],
+      "cwd": ".",
+      "exit_code": 0,
+      "output": "{\"status\": \"FINITE-EXACT PASS\", \"checks\": 480912, \"triples\": 159139, \"output\": \"<repo>\\\\04-computation\\\\experiments\\\\odd_square_20260921_shapes.json\"}"
+    },
+    {
+      "command": [
+        "python",
+        "-O",
+        "04-computation/experiments/odd_square_20260921_shapes.py"
+      ],
+      "cwd": ".",
+      "exit_code": 0,
+      "output": "{\"status\": \"FINITE-EXACT PASS\", \"checks\": 480912, \"triples\": 159139, \"output\": \"<repo>\\\\04-computation\\\\experiments\\\\odd_square_20260921_shapes.json\"}"
+    },
+    {
+      "command": [
+        "python",
+        "04-computation/experiments/odd_square_20260921_edges.py"
+      ],
+      "cwd": ".",
+      "exit_code": 0,
+      "output": "PASS: 813891 exact edge/triangle controls"
+    },
+    {
+      "command": [
+        "python",
+        "-O",
+        "04-computation/experiments/odd_square_20260921_edges.py"
+      ],
+      "cwd": ".",
+      "exit_code": 0,
+      "output": "PASS: 813891 exact edge/triangle controls"
+    },
+    {
+      "command": [
+        "python",
+        "04-computation/experiments/odd_square_20260921_inverse.py"
+      ],
+      "cwd": ".",
+      "exit_code": 0,
+      "output": "{\"status\": \"PASS\", \"output\": \"<repo>\\\\04-computation\\\\experiments\\\\odd_square_20260921_inverse.json\", \"mixed_completions\": 14040, \"source_sha256_lf\": \"a42c8ee7ea6fe3a424e9f580eb3435771f3b5cbb700aabafb85156f1bd2bb24c\"}"
+    },
+    {
+      "command": [
+        "python",
+        "-O",
+        "04-computation/experiments/odd_square_20260921_inverse.py"
+      ],
+      "cwd": ".",
+      "exit_code": 0,
+      "output": "{\"status\": \"PASS\", \"output\": \"<repo>\\\\04-computation\\\\experiments\\\\odd_square_20260921_inverse.json\", \"mixed_completions\": 14040, \"source_sha256_lf\": \"a42c8ee7ea6fe3a424e9f580eb3435771f3b5cbb700aabafb85156f1bd2bb24c\"}"
+    }
+  ],
+  "finished_utc": "2026-09-22T05:27:13+00:00",
+  "hash_basis": "SHA256 UTF8 bytes with CRLF and lone CR normalized to LF; embedded hashes checked in their declared basis.",
+  "lanes": {
+    "edges": {
+      "certificate": "04-computation/experiments/odd_square_20260921_edges.json",
+      "decoded_json_sha256": "51012eda013093913524ca5dfd7536015b85f902af1995dfb5c594bc59feb72e",
+      "embedded_hash_fields_checked": [
+        "source_sha256_lf"
+      ],
+      "finite_universe": {
+        "exclude_fixed_edges": true,
+        "hypotenuse_bounds": [
+          1,
+          5,
+          13,
+          29,
+          97,
+          100,
+          1000,
+          10000,
+          100000
+        ],
+        "negative_limit_family_j": [
+          0,
+          999
+        ],
+        "parameters": [
+          -1,
+          1
+        ],
+        "positive_odd_starts": [
+          1,
+          100001
+        ]
+      },
+      "normal_optimized_decoded_json_equal": true,
+      "note": "05-knowledge/results/odd_square_20260921_edges.md",
+      "script": "04-computation/experiments/odd_square_20260921_edges.py",
+      "source_frozen_and_bound_by_master": true,
+      "status": "PASS"
+    },
+    "inverse": {
+      "certificate": "04-computation/experiments/odd_square_20260921_inverse.json",
+      "decoded_json_sha256": "c0f2dc2a1408edbba9993b02087601a112454ba227654f58c0e059264463b677",
+      "embedded_hash_fields_checked": [
+        "source_sha256_lf"
+      ],
+      "finite_universe": {
+        "no_extrapolation": true,
+        "sections": [
+          "cycle_witnesses",
+          "edge_controls",
+          "inverse_controls",
+          "one_step_source_residues_mod5_for_target1",
+          "primitive_mixed_completions",
+          "source_sha256_lf",
+          "status",
+          "two_tail_sharpness"
+        ],
+        "specified_in_certificate": "04-computation/experiments/odd_square_20260921_inverse.json"
+      },
+      "normal_optimized_decoded_json_equal": true,
+      "note": "05-knowledge/results/odd_square_20260921_inverse.md",
+      "script": "04-computation/experiments/odd_square_20260921_inverse.py",
+      "source_frozen_and_bound_by_master": true,
+      "status": "PASS"
+    },
+    "shapes": {
+      "certificate": "04-computation/experiments/odd_square_20260921_shapes.json",
+      "decoded_json_sha256": "87cf66b11971b5176477069109c74e1409fd181b05308dad36772cf5bbea7cf5",
+      "embedded_hash_fields_checked": [],
+      "finite_universe": {
+        "all_fixed_outer_fibres": "odd u=3..1001",
+        "all_triples_enumerated": 159139,
+        "asymptotic_decimals": "diagnostics only; limits proved in note",
+        "exact_Fraction_shape_max_hypotenuse": 1000,
+        "independent_integer_leg_max_hypotenuse": 300,
+        "independent_odd_root_max_hypotenuse": 10000,
+        "max_hypotenuse": 1000000
+      },
+      "normal_optimized_decoded_json_equal": true,
+      "note": "05-knowledge/results/odd_square_20260921_shapes.md",
+      "script": "04-computation/experiments/odd_square_20260921_shapes.py",
+      "source_frozen_and_bound_by_master": true,
+      "status": "PASS"
+    },
+    "triangles": {
+      "certificate": "04-computation/experiments/odd_square_20260921_triangles.json",
+      "decoded_json_sha256": "5d0a1c8b745342e34296ee3ba4cb3bbbe530504c9928138ba20d84ba2b5a285c",
+      "embedded_hash_fields_checked": [
+        "source_sha256_lf"
+      ],
+      "finite_universe": {
+        "direct_side_count": 158,
+        "direct_side_hypotenuse_max": 1000,
+        "independent_hypotenuse_count": 1593,
+        "independent_hypotenuse_max": 10000,
+        "integer_k_range": [
+          2,
+          2000
+        ],
+        "nonprimitive_root_pairs": 2083,
+        "odd_root_max": 301,
+        "primitive_root_pairs": 9242,
+        "rational_k_reconstructions": 18484
+      },
+      "normal_optimized_decoded_json_equal": true,
+      "note": "05-knowledge/results/odd_square_20260921_triangles.md",
+      "script": "04-computation/experiments/odd_square_20260921_triangles.py",
+      "source_frozen_and_bound_by_master": true,
+      "status": "PASS"
+    }
+  },
+  "manifest_self_hash": "Excluded to avoid circularity; master source is pinned.",
+  "new_general_Lean_formalization": false,
+  "scope": "Four exact finite replays with separately proved infinite statements and explicit inherited dependencies.",
+  "started_utc": "2026-09-22T05:27:04+00:00",
+  "status": "PASS"
+}

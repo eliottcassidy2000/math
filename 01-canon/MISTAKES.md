@@ -9,6 +9,44 @@ Format per entry:
 - Why it was wrong
 - The correct framing
 
+## 2026-09-21 Odd-square geometry -- lost roots, measures and legal edges
+
+- **LOST inner square:** `c+even_leg=u^2` identifies a fibre of size
+  `phi(u)/2`, not one primitive triangle. At u=5, (5,12,13) and (15,8,17)
+  already collide. Retain `c-even_leg=v^2`; this is the inherited
+  [THM-3756 chart](theorems/THM-3756-odd-square-ordinal-berggren-affine-descent.md).
+- **MIXED parameter universes:** integer k in `(k^2-1,2k,k^2+1)` gives
+  two boundary rays after primitive reduction, with k=2 and3 duplicating
+  3-4-5. Rational k covers all shapes. Closing the integer family under
+  `v->abs(u-2v)` still misses (51,140,149), in the second u=17 cycle.
+- **MIXED shape measures:** `(e/d,l,theta)` are dependent coordinates.
+  Hypotenuse-bounded PPTs have uniform limiting smaller angle; outer-root
+  height gives a different CDF. Coprime density is `6/pi^2` among all
+  lattice pairs, but `8/pi^2` conditional on either parity class used by
+  primitive triangles. A shared continuum support does not fix a measure.
+- **LOST legal edge:** every distinct positive odd `3n+/-1` edge yields
+  a PPT. The legal edge7->11 gives(77,36,85), but its Berggren parent
+  (21,20,29) has no legal orientation. The fixed-root permutation also
+  sends the minus edge5->7 to that illegal root pair. Ambient tree descent
+  therefore cannot be inherited without a predicate-preserving map.
+- **MIXED directed/unmarked counts:** the proved atomic shape law samples
+  directed Collatz edges under triangle height. A bare triangle forgets
+  direction and parameter. At parameter -5, equal-magnitude endpoints
+  such as1->-1 give a zero leg despite unit content; exclude them from PPTs.
+- **FALSE pasted conservation:** F=S+U holds only at the three classified
+  exponent shapes, not at every integer; N=4 gives1!=1+1. A squarefree
+  spatial density is not a descent inequality or an entropy derivative.
+  The large-halving step1077->101 also needs no smooth odd core.
+- **INSUFFICIENT finite coverage:** parameter-minus-five's five known
+  primitive negative basins all realize every compatible finite binary,
+  ternary and quinary cylinder. The explicit same-sign witness families
+  grow geometrically and individually have density zero. Preserve height,
+  sign and the fixed integer whose membership is actually in question.
+- **Repair and next obligation:** [the synthesis](../05-knowledge/results/odd_square_20260921_synthesis.md)
+  gives exact maps, angle exclusions, counting laws and audited replays.
+  A legal-edge-preserving descent operation or a height-controlled
+  inverse certificate for every integer remains the open Collatz step.
+
 ## 2026-09-21 Glued number lines -- guards, cycle types and sampling
 
 - **LOST division rule:** raw `3n+b` affine embeddings allow translations,
