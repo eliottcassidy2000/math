@@ -1,0 +1,121 @@
+=== collatz_mod6_20260921 lane fruit_rank_positive_multiples ===
+E: y^2 = x^3 + 109x^2 + 224x ; G = (-4,28) ; T = (56,728)
+
+--- S1: PARI 2.17 data (verbatim outputs) ---
+disc = 8818933760 = [2, 14; 5, 1; 7, 2; 13, 3]
+conductor = 910 = [2, 1; 5, 1; 7, 1; 13, 1]
+minimal model change [u,r,s,t] = [2, -36, 1, 4]
+local data (kodaira, cp) = [[1, 6, 0, 2], [1, 5, 0, 1], [1, 6, 0, 2], [1, 7, 0, 3]]
+tamagawa product = 24
+elltors = [6, [6], [[56, 728]]]
+ellisoncurve(G) = 1
+ellorder(G) = 0
+ellheight(G) = 1.5187021867268516013726836429773604445
+ellheight(2G) = 6.0748087469074064054907345719094417781
+ellheight(9G) = 123.01487712487497971118737508116619601
+ellheight(9G)/81 = 1.5187021867268516013726836429773604445
+ellheight(G+T) = 1.5187021867268516013726836429773604445
+ellheight(T) = 0
+ellrank(E) = [1, 1, 0, [[-100, 260]]]
+ellrank(E,,[G]) = [1, 1, 0, [[-100, 260]]]
+ellsaturation(E,[G],1000) = [[-4, 28]]
+ellsaturation(E,[[-100,260]],1000) = [[-100, 260]]
+ellrootno = -1
+ellanalyticrank = [1, 1.3176683943444326217031467282048324986]
+L(E,1) = 0.E-38
+L'(E,1) = 1.3176683943444326217031467282048324986
+E.omega = [0.65072092764166661835192516435949075893, -0.30535007529353092372934279240368548103*I]
+ellbsd(E) = 0.86762790352222215780256688581265434524
+Sha_an = L'(E,1)/(ellbsd(E)*ellheight(G)) = 0.99999999999999999999999999999999999999
+9G = [-66202368404229585264842409883878874707453676645038225/13514400292716288512070907945002943352692578000406921, 58800835157308083307376751727347181330085672850296730351871748713307988700611210/1571068668597978434556364707291896268838086945430031322196754390420280407346469]
+ellmul(E,G,80) x-numerator digits = 4222
+
+--- S2: exact group law, torsion, PARI generator vs G ---
+kT, k=0..5: [None, (56, 728), (4, 52), (0, 0), (4, -52), (56, -728)]
+  kT fruit triple k=0: (1, -1, 0)  pair-sum-zero: True
+  kT fruit triple k=1: (-1, 1, 1)  pair-sum-zero: True
+  kT fruit triple k=2: (1, 0, -1)  pair-sum-zero: True
+  kT fruit triple k=3: (1, 1, -1)  pair-sum-zero: True
+  kT fruit triple k=4: (0, 1, -1)  pair-sum-zero: True
+  kT fruit triple k=5: (1, -1, 1)  pair-sum-zero: True
+PARI generator (-100,260) = (+1G) + 2T
+
+--- S2: multiples mG, 1<=m<=80 (exact) ---
+m | x(mG) digits(num,den) | fruit digits (a,b,c) | positive? | test(10) | log10(maxcoord)/m^2 | F4==0 | sum==4
+ 1 | (1, 1) | (2, 1, 1) | False | False | 1.0414 | True | True
+ 2 | (3, 2) | (4, 4, 4) | False | False | 0.9944 | True | True
+ 3 | (6, 5) | (9, 9, 9) | False | False | 0.9940 | True | True
+ 4 | (9, 10) | (16, 16, 16) | False | False | 0.9891 | True | True
+ 5 | (17, 16) | (25, 25, 25) | False | False | 0.9906 | True | True
+ 6 | (24, 23) | (36, 36, 36) | False | False | 0.9899 | True | True
+ 7 | (33, 32) | (49, 49, 48) | False | False | 0.9904 | True | True
+ 8 | (43, 40) | (64, 64, 63) | False | False | 0.9894 | True | True
+ 9 | (53, 53) | (81, 80, 79) | True | True | 0.9900 | True | True
+10 | (67, 66) | (99, 99, 99) | False | False | 0.9895 | True | True
+11 | (81, 79) | (120, 120, 120) | False | False | 0.9897 | True | True
+12 | (93, 94) | (143, 143, 143) | False | False | 0.9894 | True | True
+13 | (112, 111) | (167, 168, 168) | False | False | 0.9894 | True | True
+14 | (130, 129) | (194, 194, 194) | False | False | 0.9894 | True | True
+15 | (148, 148) | (223, 223, 223) | False | False | 0.9896 | True | True
+16 | (170, 167) | (254, 254, 253) | False | False | 0.9894 | True | True
+17 | (191, 190) | (286, 286, 286) | True | True | 0.9895 | True | True
+18 | (214, 213) | (321, 320, 321) | False | False | 0.9894 | True | True
+19 | (239, 237) | (357, 357, 358) | False | False | 0.9895 | True | True
+20 | (263, 264) | (396, 396, 396) | False | False | 0.9894 | True | True
+43 | (1221, 1219) | (1829, 1829, 1830) | True | True | 0.9894 | True | True
+51 | (1716, 1714) | (2573, 2573, 2574) | True | True | 0.9894 | True | True
+77 | (3911, 3910) | (5865, 5866, 5866) | True | True | 0.9894 | True | True
+80 | (4222, 4221) | (6332, 6332, 6332) | False | False | 0.9893 | True | True
+all-positive m in 1..80: [9, 17, 43, 51, 77]
+  prime_shells tree children of 9G (3m-1,3m,3m+1) positive?: [(26, False), (27, False), (28, False)]
+  prime_shells tree children of 17G (3m-1,3m,3m+1) positive?: [(50, False), (51, True), (52, False)]
+  prime_shells tree children of 43G (3m-1,3m,3m+1) positive?: [(128, 'out of range'), (129, 'out of range'), (130, 'out of range')]
+  prime_shells tree children of 51G (3m-1,3m,3m+1) positive?: [(152, 'out of range'), (153, 'out of range'), (154, 'out of range')]
+  prime_shells tree children of 77G (3m-1,3m,3m+1) positive?: [(230, 'out of range'), (231, 'out of range'), (232, 'out of range')]
+count positive: 5  parity of positive m: [1]
+odd multiples with x<-14/3 (bounded component) count: 29
+even multiples with x<-14/3 count: 0
+9G fruit triple: (154476802108746166441951315019919837485664325669565431700026634898253202035277999, 36875131794129999827197811565225474825492979968971970996283137471637224634055579, 4373612677928697257861252602371390152816537558161613618621437993378423467772036)
+9G digits: (81, 80, 79)
+9G point x: -66202368404229585264842409883878874707453676645038225/13514400292716288512070907945002943352692578000406921 
+     y: 58800835157308083307376751727347181330085672850296730351871748713307988700611210/1571068668597978434556364707291896268838086945430031322196754390420280407346469
+9G == repaired input triple (A, B/10, C/10): True
+
+--- S2: digit growth vs canonical height ---
+hhat(G) (PARI, Cremona normalisation) = 1.5187021867268515
+hhat(G)/log(10) = 0.6595639793498735
+(3/2) hhat(G)/log(10) = 0.9893459690248102
+m= 9: log10(max fruit coord)/m^2 = 0.98999 ; log10|x num|/m^2 = 0.65211 ; log10 x den/m^2 = 0.64359 ; log10 H(x)/m^2 = 0.65211
+m=20: log10(max fruit coord)/m^2 = 0.98939 ; log10|x num|/m^2 = 0.65670 ; log10 x den/m^2 = 0.65809 ; log10 H(x)/m^2 = 0.65809
+m=40: log10(max fruit coord)/m^2 = 0.98936 ; log10|x num|/m^2 = 0.65990 ; log10 x den/m^2 = 0.65849 ; log10 H(x)/m^2 = 0.65990
+m=60: log10(max fruit coord)/m^2 = 0.98935 ; log10|x num|/m^2 = 0.65935 ; log10 x den/m^2 = 0.65919 ; log10 H(x)/m^2 = 0.65935
+m=80: log10(max fruit coord)/m^2 = 0.98935 ; log10|x num|/m^2 = 0.65961 ; log10 x den/m^2 = 0.65939 ; log10 H(x)/m^2 = 0.65961
+prediction: fruit digits ~ (3/2) m^2 hhat(G)/log10 ; x-height digits ~ m^2 hhat(G)/log10
+m=9 predicted fruit digits (3/2)*81*hG/ln10 = 80.14 ; actual max = 81
+m=9 predicted with factor 1: 81*hG/ln10 = 53.42
+
+--- S2: torsion translates mG + kT, 1<=m<=80, 0<=k<=5 ---
+(convention: sign s=+1 only; -(mG+kT) gives the same triple with a,b swapped)
+k=0: positive m = [9, 17, 43, 51, 77] (count 5)
+k=1: positive m = [13, 21, 39, 47, 55, 73] (count 6)
+k=2: positive m = [9, 17, 43, 51, 77] (count 5)
+k=3: positive m = [13, 21, 39, 47, 55, 73] (count 6)
+k=4: positive m = [9, 17, 43, 51, 77] (count 5)
+k=5: positive m = [13, 21, 39, 47, 55, 73] (count 6)
+total positive (m,k) in 1..80 x 0..5: 33 of 480
+smallest positive by digit count: [(9, 0, 81), (9, 2, 81), (9, 4, 81), (13, 1, 168), (13, 3, 168), (13, 5, 168), (17, 0, 286), (17, 2, 286)]
+x(2G) = 676/49  x(2G+3T)= 2744/169
+x(G+3T) = -56  (catalan_elliptic: U-translate of G is (-56,-392))
+egg component: x between roots of x^2+109x+224: (-109 +- sqrt(10985))/2
+numerically: [-106.904675, -2.095325]
+G on egg (x=-4 in interval): True  ; 2G x=676/49 on egg: False
+all odd mG on egg: True  all even mG on unbounded component: True
+positive window (10): x in [egg_left, -104.497423) U (-7.502577, -14/3)
+egg_left = -106.904675 ; window lengths 2.407253 and 2.835911 ; egg length 104.809351
+HEURISTIC arc-measure fraction of egg that is positive: 0.13638 (expected density of positive odd m)
+observed fraction among odd m<=80: 5/40 = 0.1250
+
+--- S3: structural statement ---
+E(Q) = Z*G (+) Z/6*T  [rank 1 PROVED by ellrank bounds; G generates mod torsion: saturation at p<=1000 FINITE-EXACT, full CITED Bremner-Macleod Rem 2.2]
+positive solutions among {mG+kT : 1<=m<=80, 0<=k<=5} = sparse subset listed above; no Collatz map used.
+=== END ===
