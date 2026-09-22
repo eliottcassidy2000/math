@@ -7,9 +7,13 @@ conjectures, and LRC(14) remain OPEN. The user's geometric blueprint and its
 "peripheral scaffolding" are REFUTED as a proof (inherited audit, extended
 here). No literature-priority claim is made for the classical parts.**
 
-Session `collatz-mod6-20260917` (machine `mac-mini`, worked 2026-09-17 and
-2026-09-21). Twelve lane notes carry the proofs and exact tables; this note is
-the cross-lane synthesis and the honest connection ledger. Lane notes:
+Session `collatz-mod6-20260917` (machine `mac-mini`, worked 2026-09-17,
+2026-09-21 and 2026-09-22). Twenty-two lane notes across five waves carry
+the proofs and exact tables; this note is the cross-lane synthesis and the
+honest connection ledger. Sections 1--10 cover the first three waves
+(twelve lanes, prefix `collatz_mod6_20260917_`), section 11 the fourth
+wave (prefix `collatz_mod6_20260921_`) and section 12 the fifth
+(prefix `collatz_mod6_20260922_`). First-wave lane notes:
 
 | Lane | Note | Script |
 |---|---|---|
@@ -218,8 +222,9 @@ the Collatz cycles), the superadditivity `c(b_1b_2)>=c(b_1)+c(b_2)-c(1)` is
 PROVED for true counts, the number of fixed points is
 `#{K>=1 : (2^K-3) | b}`, and `7=c(11)=c(37)=c(49)` is attained, so the
 spectrum has no relation to the tournament holes `{7,21}` of the
-Hamiltonian-path count (THM-1370, where completeness of the hole list is
-conjectural; THM-1745 is its arborescence shadow) (SCOPE). The user's `3n-5` is exactly `T_(-5)(n)=T(n-2)`: it is
+Hamiltonian-path count (`THM-1370-h-spectrum-omits-7-21-all-n`, where
+completeness of the hole list is conjectural; THM-1745 is its
+arborescence shadow) (SCOPE). The user's `3n-5` is exactly `T_(-5)(n)=T(n-2)`: it is
 conjugate to `m -> T(m)-2`, not to Collatz, its rows are Collatz's rows
 precomposed with `r -> r-2 mod 6`, and its nine cycles are the negatives
 of the nine `b=5` cycles.
@@ -554,6 +559,93 @@ it, and `phi` enters the audited notes only inside refuted or SCOPE items
 summand note). None of the three proposed
 formalizations has a map; the honest formalizable bridges remain the
 Pillai clocks through the cycle gate and the `E`-graph/`G` mirror.
+
+## 12. Wave five (2026-09-22): the portrait of a counterexample, the minus-sheet control, and the third blueprint
+
+| Lane | Note | Script |
+|---|---|---|
+| Counterexample portrait | [counterexample_portrait](collatz_mod6_20260922_counterexample_portrait.md) | `collatz_mod6_20260922_counterexample_portrait.py` |
+| Minus-sheet positive control | [minus_sheet_positive_control](collatz_mod6_20260922_minus_sheet_positive_control.md) | `collatz_mod6_20260922_minus_sheet_positive_control.py` |
+| Paley `T_7`, two Fano planes, octonions | [paley_fano_octonion_design](collatz_mod6_20260922_paley_fano_octonion_design.md) | `collatz_mod6_20260922_paley_fano_octonion_design.py` |
+| Block-matrix spectrum audit | [block_spectrum_audit](collatz_mod6_20260922_block_spectrum_audit.md) | `collatz_mod6_20260922_block_spectrum_audit.py` |
+| Compression entropy and Lean audit | [compression_and_lean_audit](collatz_mod6_20260922_compression_and_lean_audit.md) | `collatz_mod6_20260922_compression_and_lean_audit.py` |
+
+**Portrait of a counterexample (PROVED from CITED inputs; no contradiction
+found).** Every proved necessary condition on a hypothetical nontrivial
+positive `3n+1` cycle and on a hypothetical divergent orbit is collected
+in two tables and tested on the `3n-1` sheet through the sheet criterion
+`T_+(-n)=-T_-(n)`. The gate `q=1`, the halving-word cylinders, the
+stopping-time densities and the bounded-strip exclusions are SHEET-BLIND;
+only the sign law (`Delta>0` for a positive `3n+1` cycle, `Delta<0` on the
+minus sheet), the convergent theorem's magnitude hypothesis, and the `2^68`
+verification are SIGN-SPECIFIC. From the `2^68` bound, Legendre and
+Hardy--Wright 171 alone, every nontrivial positive `3n+1` cycle has
+`L > 14,878,203,146`; the minus-sheet mirror from a new `10^7` census is
+`L > 2738` for any fourth positive `3n-1` cycle. No two conditions in the
+portrait contradict each other, which is the honest statement of where a
+proof stands: the conjunction of everything proved is still satisfiable.
+
+**The minus sheet as a positive control (PROVED).** The parity-word map
+modulo `2^J` is a bijection on both sheets and the prefix-descent counts
+of the two sheets coincide for every `J`; hence any "density-one descent"
+argument proves the same statement for `3n-1`, where three cycles exist,
+and cannot be a proof. Coefficient descent implies actual descent on the
+minus sheet (and conversely on the plus sheet); the Berggren child `B3`
+is a bijection from `k=1` edges of one sheet to `k=2` edges of the other,
+the exact coupling of the sheets through the tree; the budget
+`sum q_i = 3n_0` is exhausted by the three cycles (inherited from the
+glued-lines note). Basins to `10^7`: no escape.
+
+**Paley `T_7`, two Fano planes and the octonions (PROVED).** A regular
+tournament on `n` vertices has `(n^3-n)/24` cyclic triples, so the Paley
+tournament on `F_7` has `14`, not the pasted `21` (its arc count; `21` is
+also a value the Hamiltonian-path count omits, canon
+`THM-1370-h-spectrum-omits-7-21-all-n`, an ID collision with
+`THM-1370-elliptic-...`). The `14` cyclic triples are exactly the two
+disjoint cyclic Steiner triple systems `dev{0,1,3}` and `dev{0,1,5}`; on
+the first the Paley orientation is `s->s+1->s+3->s`, the octonion rule
+`e_r e_(r+1)=e_(r+3)`, and the algebra it defines is alternative and a
+composition algebra (checked by construction); the second plane carries
+the opposite table under `x->-x`. For every prime `p = 3 mod 4` the cyclic
+triples of the Paley tournament form a `2-(p,3,(p+1)/4)` design by
+arc-transitivity; `p=7` is the only case where it splits into two Steiner
+systems. `h(T_7)=189` is the Hamiltonian-path count already recorded in
+the braids-two Fano notes; the `2640` labelled regular tournaments on
+seven vertices split `240/720/1680` by automorphism group order
+`21/7/3` with `h=189/175/171`.
+
+**The block matrix (REFUTED).** The pasted block layout is square only
+for `m=n=1`; the consistent `(m+n+2)`-vertex reading with a one-directional
+cross-link is block triangular, so its characteristic polynomial is
+`x^2 chi_A chi_B` and a source or sink only appends zero eigenvalues.
+Transitive blocks are nilpotent, but every non-transitive tournament block
+has Perron root `rho >= 1` (all `32,994` labelled non-transitive
+tournaments on at most six vertices), and more generally a nonnegative
+integer matrix has `rho in {0} cup [1,infinity)`; one-directional bipartite
+blocks are nilpotent and two-directional ones have real spectrum
+`+-sqrt(mn)`, so "purely imaginary pairs" occur only for a signed skew
+block; Perron--Frobenius refutes "`Re(lambda)<0` for every trajectory" for
+every `0/1` matrix. Brauer--Gentry's bounds `Re(lambda) >= -1/2` and
+`|lambda| <= (n-1)/2` are re-proved in one line each and every non-Perron
+eigenvalue of a regular tournament has real part exactly `-1/2`.
+Kuratowski minors appear trivially (`K_{m+n}`) and carry no map to any
+integer orbit (SCOPE).
+
+**Compression and Lean (PROVED/REFUTED).** `8/pi^2` is the density of
+coprime pairs among odd pairs (exact count `81,058,757/10^8`), its binary
+entropy is `0.7002786534` bits (not `0.704`, and not zero); no lossless
+code of arbitrary streams beats one bit per bit (pigeonhole), a suffix
+lookahead is a bijection, and the tournament layout costs `C(n,2)` bits
+for `T_(n-2)` payload bits; consecutive odd Collatz values are always
+coprime, so a "coprime mask" on orbit edges has density `1`. The pasted
+Lean fails at its first line in the repo's toolchain (no Mathlib build
+exists), and with Mathlib names stubbed every remaining error is the
+paste's own (undefined identifiers, an unbound `n`, a one-point
+`FanoPlane`, an equivalence between a structure and a set, four
+`sorry`s). The audited package `CollatzBlueprintAudit` builds with
+`35` theorems and axioms at most `propext`/`Quot.sound`; a correct minimal
+descent-certificate statement typechecks in core Lean with `decide`-closed
+witnesses `n=3` (`t=6,K=4,L=2,B=5`) and `n=7`.
 
 ## Reproduction and audit scope
 

@@ -50,7 +50,15 @@
   `B1`-rays), fruit-curve rank one by 2-descent with the positive multiples,
   Pillai clocks through the cycle gate, `G` on the negatives with the
   bounded-strip analogue proved, and a verdict table on the Giuga/AAC/
-  Littlewood/Sarnak "circuit". Collatz remains OPEN.
+  Littlewood/Sarnak "circuit". Wave five (2026-09-22): a portrait of every
+  proved necessary condition on a Collatz counterexample tested on the
+  `3n-1` sheet (sheet-blind vs sign-specific; `L > 1.49*10^10` for a
+  nontrivial positive cycle; no contradiction found), the minus sheet as a
+  positive control (identical prefix-descent counts on both sheets), the
+  Paley `T_7` cyclic triples as two Fano planes with the octonion rule and
+  the `2-(p,3,(p+1)/4)` design, and refutations of the adjunction-bipartite
+  spectrum, the `8/pi^2` "zero-entropy" compression and the pasted Lean.
+  Collatz remains OPEN.
 - [Arithmetic seams](arithmetic_seams_20260921_synthesis.md): **PROVED scoped / VERIFIED Lean arithmetic.** Fermat tournament path counts; sharp fifteen-term coprimality; Fermat-prime decimal clocks; dihedral three-cycle lifts; pointed-product and remainder repairs. [Manifest](arithmetic_seams_20260921_manifest.json). Global Collatz convergence remains OPEN.
 
 - [Collatz guard extensions](collatz_guards_20260921_synthesis.md): **PROVED scoped / VERIFIED Lean reductions.** Irrational reset density; no bounded discrepancy; sharp squarefree word obstructions. Global convergence OPEN. [Manifest](collatz_guards_20260921_manifest.json).
