@@ -1,0 +1,153 @@
+# Paley T_7, the two Fano planes, the octonion sign tournament, and the 2-(p,3,(p+1)/4) design
+
+**Status:** PROVED: a regular tournament on `n` vertices has `(n^3-n)/24` cyclic triples (S1); the 14 cyclic triples of the Paley tournament `T_7` are exactly the two disjoint cyclic Steiner triple systems `dev{0,1,3}` and `dev{0,1,5}` (S6); the Paley orientation on `dev{0,1,3}` is the octonion index rule `e_r e_{r+1} = e_{r+3}`, and the algebra it defines is alternative and a composition algebra, isomorphic to the Cayley-Dickson octonions by an explicit relabelling (S10-S13); for every prime `p = 3 mod 4` the cyclic triples of `T_p` form a 2-`(p,3,(p+1)/4)` design (S20); arithmetic-progression triples are cyclic in `T_p` iff `p = 3 mod 8` (S21). FINITE-EXACT: `h(T_7) = 189` by subset DP (S3); the decomposition into two STS(7) is unique (S7); the 128 orientations of a Fano plane split 16 alternative (all `h = 189`, all Paley) versus 112 non-alternative (all `h = 171`, all the `|Aut| = 3` regular tournament) (S14-S16); the 2640 labelled regular 7-tournaments and which of the three classes are Fano-line orientations (S17-S19); cyclic STS(p) inside the Paley design for `p = 7, 19, 31, 43` and an exact-cover STS(19) (S22-S23); six `decide` theorems in core Lean 4 without Mathlib (S27). CITED: THM-1370, THM-1575, THM-338, THM-133, THM-1926, LEM-002, the braids2 fano_code and squarefree_symmetry notes, Baez for the Cayley-Dickson convention, the second supplement of quadratic reciprocity. REFUTED: "`T_7` contains exactly 21 directed 3-cycles" (14; the 21 is the arc count) (S4); "which match its forbidden Hamiltonian path count" (`h(T_7) = 189`; 7 and 21 are the holes of THM-1370, values no tournament attains) (S5); "7 x 3 = 21 directed cycles" (each line is one directed 3-cycle; 7 x 3 = 21 counts rotations, and the true rooted count is `tr A^3 = 42`) (S4); "the cyclic triples of `T_7` are the 7 Fano lines" (they are 14 = two Fano planes) (S6); "0.704 bits, zero entropy" (0.70028 bits, not zero) (S28). SCOPE / no map: "fractal generator", "nested tiers", "network scaling" (S25); the paste's Lean blueprint (S26); any bridge to Collatz (S29). OPEN: whether the Paley 2-`(19,3,5)` and 2-`(31,3,8)` designs split into 5 resp. 8 block-disjoint STS when non-cyclic systems are allowed (S24). Results note of session `collatz-mod6-20260917`, wave 2026-09-22, lane `paley_fano_octonion_design`; not a reserved canon ID; nothing under `01-canon/` was touched.
+
+## Inheritance and concept board
+
+The paste's section 2 makes four claims about the Paley tournament `T_7` (vertices `Z/7`, arc `i -> j` iff `j - i` is in `{1,2,4}`): 21 directed 3-cycles, a match with "its forbidden Hamiltonian path count", a bijection of the 7 Fano lines onto "the 7 fundamental directed 3-cycle triads", and a "fractal generator". The repo already owns most of the surrounding facts and they are cited, not re-proved: `h(QR_7) = 189` is the maximum over all 7-tournaments and 7, 21 are holes of the `h`-spectrum for every `n` ([THM-1370](../../01-canon/theorems/THM-1370-h-spectrum-omits-7-21-all-n.md), whose n = 7 attained top values include 171, 175, 189); `QR_7` is the optimal circulant with `h = 189` ([THM-338](../../01-canon/theorems/THM-338-circulant-optimality-threshold.md)); `H = (462 - tr A^4)/2` with Paley the unique maximiser among `Z_7` circulants ([THM-133](../../01-canon/theorems/THM-133-h-trace-formula-p7.md)); there are exactly three regular 7-tournaments with skew characteristic polynomials `x(x^6+21x^4+35x^2+7)` (rotational `R_7`), `x(x^2+7)^3` (Paley) and `x(x^2+7)(x^4+14x^2+1)` ([THM-1575](../../01-canon/theorems/THM-1575-the-circulant-skew-spectrum-is-a-tangent.md)); `N_3 = tr A^3 = 3 c_3` and the Paley Gauss-sum spectrum ([THM-1926](../../01-canon/theorems/THM-1926-tournament-zeta-euler-product-over-strong-core.md)); the `T_11` sub-tournament ([LEM-002](../../01-canon/theorems/LEM-002-T11-sub-tournament.md)). The braids2 notes built the octonion sign tournament from the Cayley-Dickson table, found that it has 14 directed triangles and `h = 189`, that 128 imaginary-basis sign gauges give 16 distinct orientations forming an affine Hamming coset with base mask `m0 = 96`, that the other 112 line orientations have `h = 171`, and that `GL(3,2)` splits the 16 into two orbits of 8 ([fano_code](arithmetic_braids2_20260917_fano_code.md), [squarefree_symmetry](arithmetic_braids2_20260917_squarefree_symmetry.md) section 5). What is new here and not in canon: the identification of the Paley tournament itself with that sign tournament by an explicit vertex bijection (S13), the two-STS structure of its cyclic triples with uniqueness (S6-S7), the equivalence "alternative iff composition iff `h = 189`" over all 128 orientations together with the isomorphism type of the 112 (S14-S16), the classification of which regular 7-tournaments are Fano-line orientations (S18), the general 2-design theorem with its arc-regular group (S20), the arithmetic-progression lemma (S21), and the cyclic-STS census at `p = 19, 31, 43` (S22). **Closest proved mechanism:** the arc-regularity of the affine group `{x -> ax + b : a a nonzero square}` on `T_p`, which makes every arc lie in the same number `(p+1)/4` of 3-cycles and turns the cyclic triples into a 2-design in one line (S20); at `p = 7` that number is 2 and the design is two Fano planes. **Canonical hostile:** the third regular 7-tournament (`|Aut| = 3`, `h = 171`): it is also an orientation of a Fano plane and its 14 cyclic triples also contain two STS(7), but those two share 3 blocks, its arcs lie in 1, 2 or 3 cyclic triples, and its algebra is not alternative; so "orient the Fano lines" does not by itself produce Paley, octonions, or a design (S15, S18). **Corrected near miss:** the paste's "7 lines, 7 x 3 = 21 cycles, bijection with the Fano plane" is the count of rotations of the seven line-cycles of ONE of the two Fano planes hiding inside `T_7`; the correct statement is 7 + 7 = 14 directed 3-cycles forming two disjoint Fano planes, each arc in exactly 2 of them, i.e. a 2-(7,3,2) design, and `21 = tr A^3 / 2` is not a cycle count of anything (S4, S6). **Least-used sidecar:** negation `x -> -x` is an anti-automorphism of `T_p` (because `-1` is a non-residue) that swaps the two Fano planes at `p = 7` and carries the octonion table on `dev{0,1,3}` to the opposite algebra of the table on `dev{0,1,5}` (S9, S12); this is the exact reason the paste's "other" rule `i -> -i` gives a second alternative table rather than a different algebra. **No map found (SCOPE):** "fractal attractor", "nested tier of the tree", "network scaling", and every bridge to Collatz (S25, S29).
+
+Typed analogy, **Paley orientation -> octonion multiplication**: source = the Paley tournament `T_7` together with the Steiner system `dev{0,1,3}`; target = the imaginary octonion basis `e_0, ..., e_6` with `e_r e_s = +-e_t` on the line `{r,s,t}`; map = arc `r -> s` becomes sign `+1` in `e_r e_s = +e_t`, the third point of the line is the output label, `e_r^2 = -1`, `1` adjoined; preserved = the sign of every product of distinct basis elements and the line structure (so the whole multiplication table); lost = nothing on the algebra side, but the tournament alone does not know which of its two Fano planes is the line structure (the other plane gives the opposite algebra, S12); sidecar = the choice of Fano plane (`dev{0,1,3}` versus `dev{0,1,5}`); test = alternativity and `N(xy) = N(x)N(y)` as exact polynomial identities (PROVED, S11), and the explicit isomorphism with the Cayley-Dickson table (S13). This is the braids2 map (F1) read backwards, with the Paley tournament now on the source side.
+
+## 1. Counts on `T_7`, and the "21 directed 3-cycles"
+
+**S1 (PROVED).** In a tournament on `n` vertices with scores `s_1, ..., s_n`, every triple of vertices is either a directed 3-cycle or transitive, and a transitive triple has a unique source (the vertex beating the other two). Hence the number of transitive triples is `sum_i C(s_i, 2)` and the number of cyclic triples is `c_3 = C(n,3) - sum_i C(s_i,2)`. For a regular tournament (`n` odd, all `s_i = (n-1)/2`): `c_3 = n(n-1)(n-2)/6 - n (n-1)(n-3)/8 = n(n-1)(n+1)/24 = (n^3-n)/24`. QED. At `n = 7`: `35 - 7*3 = 14`.
+
+**S2 (FINITE-EXACT, session lead probe verified).** `T_7`: 21 arcs, scores `[3,3,3,3,3,3,3]`, 14 cyclic triples, 21 transitive triples, `C(7,3) = 35`, `(7^3-7)/24 = 14`, `tr A^3 = 42 = 3 c_3`. Every arc lies in exactly 2 cyclic triples (21 arcs, multiplicity set `[2]`): the cyclic triples form a 2-(7,3,2) design.
+
+**S3 (FINITE-EXACT).** `h(T_7)`, the number of directed Hamiltonian paths, by subset dynamic programming: `189`. This agrees with `h(QR_7) = 189` in THM-338 and THM-1370 (which lists 189 as the n = 7 maximum).
+
+**S4 (REFUTED).** "`T_7` contains exactly 21 directed 3-cycles": the count is 14. The paste's derivation "7 lines x 3 cyclic permutations = 21" counts the three rotations `(i,j,k), (j,k,i), (k,i,j)` of ONE directed 3-cycle as three cycles, and only over the 7 lines of one Fano plane; the number 21 coincides with the arc count and with the transitive-triple count, and the rooted (closed-walk) count is `tr A^3 = 42`, not 21. No reading of "directed 3-cycle" gives 21.
+
+**S5 (REFUTED).** "which match its forbidden Hamiltonian path count": the holes 7 and 21 of THM-1370 are values of `h(T)` that NO tournament attains; `h(T_7) = 189`. There is nothing to match: 21 is not `h` of `T_7` or of anything else.
+
+## 2. The 14 cyclic triples are two disjoint Fano planes
+
+**S6 (PROVED).** Translation `x -> x+1` is an automorphism of `T_7`, so cyclicity of a triple depends only on its translation class. The 35 triples of `Z/7` fall into 5 classes of 7 (no triple is fixed by a translation since `3` does not divide `7`): the three arithmetic-progression classes `{x, x+a, x+2a}`, `a = 1, 2, 3`, and the two non-progression classes of `{0,1,3}` and `{0,1,5}`. By S21 (with `7 = 7 mod 8`, `2` a square) no progression triple is cyclic. On `{0,1,3}`: `0 -> 1` (difference 1), `1 -> 3` (2), `3 -> 0` (4): cyclic. On `{0,1,5}`: `0 -> 1` (1), `1 -> 5` (4), `5 -> 0` (2): cyclic. Hence the cyclic triples are exactly `dev{0,1,3}` union `dev{0,1,5}`, 7 + 7 = 14, disjoint. Each is a cyclic Steiner triple system: the differences of `{0,1,3}` are `+-1, +-2, +-3` and those of `{0,1,5}` are `+-1, +-4, +-5`, each exhausting `Z/7 \ {0}` once, so every pair lies on exactly one block. QED. FINITE-EXACT confirmation in the `.out` (section B), with the two systems listed:
+
+| system | blocks |
+|---|---|
+| `dev{0,1,3}` | (0,1,3) (0,2,6) (0,4,5) (1,2,4) (1,5,6) (2,3,5) (3,4,6) |
+| `dev{0,1,5}` | (0,1,5) (0,2,3) (0,4,6) (1,2,6) (1,3,4) (2,4,5) (3,5,6) |
+
+**S7 (FINITE-EXACT; uniqueness).** There are 30 labelled STS(7) on `{0,...,6}` (`7!/168 = 30`, generated as the `S_7`-images of the XOR Fano plane). Exactly 2 of them have all 7 blocks among the 14 cyclic triples of `T_7`, namely `dev{0,1,3}` and `dev{0,1,5}`. So the decomposition of the 14 cyclic triples into two Fano planes is unique, and no other STS(7) sits inside them.
+
+**S8 (PROVED, session lead probe verified).** On every line `{s, s+1, s+3}` the Paley orientation is `s -> s+1 -> s+3 -> s` (differences 1, 2, 4, all squares), and on every line `{s, s+1, s+5}` it is `s -> s+1 -> s+5 -> s` (differences 1, 4, 2). Checked for all `s` in the `.out` (both `True`).
+
+**S9 (PROVED).** Negation `x -> -x` maps `dev{0,1,3}` to `dev{0,1,5}` (`{0,-1,-3} = {0,6,4}`, a block of `dev{0,1,5}`) and is an anti-automorphism of `T_7`: `-1` is a non-residue mod 7, so `-(j-i)` is a square iff `j-i` is not, i.e. `A[-i][-j] = A[j][i]`. Both facts are also checked exhaustively (`True`, `True`).
+
+## 3. Octonions from the Paley orientation
+
+Fix the basis `1, e_0, ..., e_6` (imaginary index `r` in `Z/7`), and for the Fano plane `dev{0,1,3}` define `e_r e_s = +e_t` if `r -> s` in `T_7` and `-e_t` if `s -> r`, where `t` is the third point of the line through `r, s`; `e_r^2 = -1`; `1` is the identity. This is the braids2 map (F1) with Paley as the sign tournament.
+
+**S10 (PROVED; CITED as the standard mnemonic).** The table satisfies `e_r e_{r+1} = +e_{r+3}`, `e_{r+1} e_{r+3} = +e_r`, `e_{r+3} e_r = +e_{r+1}` for all `r` (checked, `True`): this is the "`e_i e_{i+1} = e_{i+3}`, indices mod 7" rule of the usual Fano-plane mnemonic for the octonions (Baez, *The Octonions*, Bull. AMS 39 (2002), section 2, Fano-plane figure; the exact page and index convention there are UNCITED-RECOLLECTION, the rule itself is verified here on the constructed table).
+
+**S11 (PROVED, by exact computation).** The algebra is alternative: the left- and right-alternative laws are quadratic in one variable, so over `Q` they hold iff their polarisations `(ab)c + (ba)c = a(bc) + b(ac)` and `a(bc) + a(cb) = (ab)c + (ac)b` hold on all `8^3 = 512` basis triples, and they do (`True`). It is a composition algebra: `N(xy) = N(x)N(y)` is biquadratic, so it holds iff its full polarisation `<xy,wz> + <xz,wy> = 2<x,w><y,z>` holds on all `8^4 = 4096` basis quadruples, and it does (`True`); 200 random integer pairs also satisfy `N(xy) = N(x)N(y)`, `(xx)y = x(xy)`, `(yx)x = y(xx)` (`True`). It is not associative: `(e_0 e_1) e_2 = -e_6` while `e_0 (e_1 e_2) = +e_6` (the `.out` prints the coordinate vectors `[0,0,0,0,0,0,-1,0]` and `[0,0,0,0,0,0,1,0]`, position 7 being `e_6`). An 8-dimensional alternative composition algebra with identity over `Q` is a form of the octonions; S13 makes the isomorphism explicit.
+
+**S12 (PROVED).** The same construction on the other Fano plane `dev{0,1,5}` (rule `e_r e_{r+1} = +e_{r+5}`, the paste's "`i -> -i`" table) is also alternative and a composition algebra (exact, `True`, `True`). Relation between the two: `x -> -x` carries the `dev{0,1,3}` table to the OPPOSITE algebra of the `dev{0,1,5}` table (checked on all ordered pairs, `True`), by S9. Since the opposite of the octonions is isomorphic to the octonions (conjugation), the two tables are isomorphic algebras.
+
+**S13 (PROVED, explicit).** The Cayley-Dickson octonions in the convention `(a,b)(c,d) = (ac - d b*, a* d + c b)`, basis labelled by `F_2^3` so that `e_a e_b = +-e_{a xor b}` for distinct nonzero `a, b` (checked, `True`), have a sign tournament (`a -> b` iff the sign is `+`) which in the fano_code convention (lines indexed by their normal `a = 1..7`, points in increasing order, bit `a-1` set iff the cycle is `x -> y -> z -> x`) has mask `96`, reproducing fano_code's `m0 = 96`. There are 168 bijections `Z/7 -> {1,...,7}` carrying `dev{0,1,3}` onto the XOR lines; the relabelling `r -> label` given by `{0:1, 1:3, 2:5, 3:2, 4:6, 5:7, 6:4}` carries the Paley tournament exactly onto the Cayley-Dickson sign tournament (checked). Because it also carries the lines to the XOR lines, it carries the Paley table of S10 onto the Cayley-Dickson multiplication table: the Paley octonions ARE the Cayley-Dickson octonions.
+
+**S14 (FINITE-EXACT; the 128 orientations of `dev{0,1,3}`).** Orient each of the 7 lines independently as a directed triangle (128 tournaments, all regular of out-degree 3), build the algebra as above, and test alternativity and composition exactly:
+
+| alternative | composition | `h` | `c_3` | skew char poly of `A - A^T` | count |
+|---|---|---:|---:|---|---:|
+| True | True | 189 | 14 | `x^7 + 21x^5 + 147x^3 + 343x = x(x^2+7)^3` | 16 |
+| False | False | 171 | 14 | `x^7 + 21x^5 + 99x^3 + 7x = x(x^2+7)(x^4+14x^2+1)` | 112 |
+
+For every one of the 128: alternative iff composition iff `h = 189` (`True`). The 16/112 split and the `h` values are the fano_code census; the equivalence with alternativity and the two skew polynomials are new. In the lane's own convention (bit `s` = line `{s,s+1,s+3}` oriented `s -> s+1 -> s+3 -> s`) Paley is mask `127` (all seven lines forward) and its converse is mask `0`; both are alternative.
+
+**S15 (FINITE-EXACT; which of the 128 is Paley).** The collineation group of `dev{0,1,3}` has order 168 (`GL(3,2)`) and splits the 16 alternative masks into two orbits of 8: the orbit of Paley `[7, 25, 42, 52, 76, 82, 97, 127]` and the orbit of its converse `[0, 30, 45, 51, 75, 85, 102, 120]`. Exactly 21 collineations fix the Paley orientation, and `|Aut(T_7)| = 21` over all of `S_7`, so every automorphism of `T_7` is a collineation of `dev{0,1,3}` (and of `dev{0,1,5}`): `Aut(T_7)` is the affine group `{x -> ax+b : a in {1,2,4}}`, of order `7 * 3 = 21`. In fano_code's convention, over all 168 identifications, Paley induces exactly the 8 masks `[6, 24, 43, 53, 77, 83, 96, 126]` and its converse the 8 masks `[1, 31, 44, 50, 74, 84, 103, 121]`; all 16 have relative syndrome 0, and the Cayley-Dickson mask 96 lies in the Paley orbit (not the converse orbit). So: the 16 gauge orientations of fano_code are exactly "Paley and its converse, in all Fano labellings"; the Paley tournament induces the syndrome-zero (octonion) orientation and never one of the 112 defective ones.
+
+**S16 (FINITE-EXACT).** The 112 non-alternative orientations have a single invariant triple `(h, c_3, skew char poly) = (171, 14, x(x^2+7)(x^4+14x^2+1))`; by S18 they are all the third regular 7-tournament of THM-1575.
+
+## 4. Which regular 7-tournaments are orientations of a Fano plane
+
+**S17 (FINITE-EXACT; all `2^21` labelled 7-tournaments).** Exactly 2640 are regular (OEIS A007079(7) = 2640; UNCITED-RECOLLECTION for the OEIS number, the 2640 is computed here). They fall into three isomorphism classes, separated by the skew characteristic polynomial (these are the three polynomials of THM-1575):
+
+| skew char poly | labelled count | `|Aut|` | `h` | `c_3` | STS(7) inside the cyclic triples | per-pair 3-cycle multiplicities |
+|---|---:|---:|---:|---:|---:|---|
+| `x(x^2+7)^3` (Paley) | 240 | 21 | 189 | 14 | 2, block-disjoint (share 0) | `{2}` |
+| `x(x^6+21x^4+35x^2+7)` (`R_7`, circulant `{1,2,3}`) | 720 | 7 | 175 | 14 | 0 | `{1,2,3}` |
+| `x(x^2+7)(x^4+14x^2+1)` (third) | 1680 | 3 | 171 | 14 | 2, sharing 3 blocks | `{1,2,3}` |
+
+`240 + 720 + 1680 = 2640`; `|Aut| = 5040 / count`. The three `h` values 189, 175, 171 are among the attained n = 7 values listed in THM-1370.
+
+**S18 (FINITE-EXACT, classification).** A regular 7-tournament is an orientation of the lines of some Fano plane iff its cyclic triples contain an STS(7), iff it is not `R_7`. The 1920 labelled Fano-line orientations (`240 + 1680`) each contain exactly 2 STS(7), and `2 * 1920 = 3840 = 30 * 128` (30 planes times 128 orientations): every Fano-line orientation arises from exactly two (plane, orientation) pairs. Paley is the ONLY class whose 14 cyclic triples are two disjoint Fano planes, the only one whose cyclic triples form a 2-design (every pair in exactly 2), and (S14) the only one whose line algebra is alternative. The third tournament is the canonical hostile: a Fano-line orientation with two STS inside that share 3 blocks.
+
+**S19 (PROVED, from S17-S18).** The paste's "7 fundamental directed 3-cycle triads = 7 Fano lines" holds for 1920 of the 2640 regular labelled 7-tournaments and therefore does not characterise `T_7`; what characterises `T_7` among Fano-line orientations is S18's disjointness / 2-design / alternativity, which the paste does not mention.
+
+## 5. The 2-`(p,3,(p+1)/4)` design for every prime `p = 3 mod 4`
+
+**S20 (PROVED).** Let `p = 3 mod 4`, `Q` the nonzero squares mod `p`, `T_p` the Paley tournament (`i -> j` iff `j - i` in `Q`; a tournament because `-1` is not in `Q`). The affine group `G = {x -> ax + b : a in Q, b in F_p}` has order `p(p-1)/2` and acts by automorphisms (`a(j-i)` is a square iff `j-i` is). It is transitive on arcs: the stabiliser of the arc `(0,1)` is trivial (`b = 0`, then `a = 1`), so the orbit of `(0,1)` has size `p(p-1)/2` = the number of arcs; hence `G` is regular on arcs. Every arc therefore lies in the same number `lambda` of cyclic triples; counting incidences, `3 c_3 = lambda * p(p-1)/2` with `c_3 = (p^3-p)/24` (S1, `T_p` is regular of score `(p-1)/2`), so `lambda = (p+1)/4`. Every unordered pair is an arc in one direction, so every pair lies in exactly `(p+1)/4` blocks: the cyclic triples form a 2-`(p, 3, (p+1)/4)` design with `(p^3-p)/24` blocks. `lambda = 1` iff `p = 3` (one block), `lambda = 2` iff `p = 7`. QED. FINITE-EXACT for `p` in `{3, 7, 11, 19, 23, 31, 43, 47}`:
+
+| `p` | `c_3 = (p^3-p)/24` | pairs covered | `lambda` (pairs) | `lambda` (arcs) | `(p+1)/4` | arc orbit of `G` = arcs |
+|---:|---:|---:|---:|---:|---:|---:|
+| 3 | 1 | 3/3 | 1 | 1 | 1 | 3 |
+| 7 | 14 | 21/21 | 2 | 2 | 2 | 21 |
+| 11 | 55 | 55/55 | 3 | 3 | 3 | 55 |
+| 19 | 285 | 171/171 | 5 | 5 | 5 | 171 |
+| 23 | 506 | 253/253 | 6 | 6 | 6 | 253 |
+| 31 | 1240 | 465/465 | 8 | 8 | 8 | 465 |
+| 43 | 3311 | 903/903 | 11 | 11 | 11 | 903 |
+| 47 | 4324 | 1081/1081 | 12 | 12 | 12 | 1081 |
+
+**S21 (PROVED; arithmetic-progression lemma).** A triple `{x, x+a, x+2a}` (`a != 0`) is cyclic in `T_p` iff `2` is a non-residue mod `p`, i.e. (second supplement of quadratic reciprocity, CITED) iff `p = 3 mod 8`. Proof: translate to `{0, a, 2a}`. If `a` is a square, `0 -> a` and `a -> 2a`, and the triple is cyclic iff `2a -> 0`, i.e. `-2a` a square, i.e. `2a` a non-square, i.e. `2` a non-square. If `a` is a non-square, `a -> 0` and `2a -> a`, and cyclicity needs `0 -> 2a`, i.e. `2a` a square, again iff `2` is a non-square. QED. The translation classes of progression triples number `(p-1)/2` (`a` up to sign); FINITE-EXACT for `p` in `{3, 7, 11, 19, 23, 31, 43, 47, 59, 67, 71, 79, 83}`: all `p-1` base triples `(0,a,2a)` are cyclic when `p = 3 mod 8`, none when `p = 7 mod 8`. Consequence: at `p = 7` (and every `p = 7 mod 8`) no block of the Paley design is a progression, and the `(p^2-1)/24` translation classes of blocks are all candidate base blocks of a cyclic STS; at `p = 3 mod 8` exactly `(p-1)/2` classes are progressions, which can never be base blocks of a cyclic difference family (their difference multiset repeats `+-a`).
+
+**S22 (FINITE-EXACT; cyclic STS(p) inside the design).** A cyclic STS(p) (`p = 1 mod 6`) is a set of `(p-1)/6` base blocks whose differences partition `Z_p \ {0}`. Counting those whose base blocks are all cyclic triples of `T_p`:
+
+| `p` | `lambda` | translation classes of blocks `(p^2-1)/24` | non-progression classes | base blocks needed | cyclic STS(p) inside the design | partitions of all non-progression classes into `lambda` block-disjoint cyclic STS |
+|---:|---:|---:|---:|---:|---:|---|
+| 7 | 2 | 2 | 2 | 1 | 2 (`{0,1,3}`, `{0,1,5}`) | 1 (unique) |
+| 19 | 5 | 15 | 6 | 3 | 8 | impossible: 9 progression classes, and `6 != 5*3` |
+| 31 | 8 | 40 | 40 | 5 | 192 | 0 (exhaustive over the 192) |
+| 43 | 11 | 77 | 56 | 7 | 1024 | impossible: 21 progression classes, and `56 != 11*7` |
+
+`p = 11, 23, 47`: no STS(p) exists at all (`p = 5 mod 6`). First base-block sets: `p = 19`: `{(0,1,8), (0,2,5), (0,4,10)}`; `p = 31`: `{(0,1,3), (0,4,11), (0,5,15), (0,6,18), (0,8,17)}`; `p = 43`: `{(0,1,5), (0,2,14), (0,3,21), (0,6,19), (0,7,15), (0,9,20), (0,10,26)}` (the `.out` lists four each). So the "union of Steiner systems" reading of the design is exact only at `p = 7`: at `p = 31`, where the numerology `40 = 8 * 5` allows it, no partition into 8 cyclic STS(31) exists; at `p = 19, 43` the progression blocks block any cyclic partition.
+
+**S23 (FINITE-EXACT; a non-cyclic STS(19) inside).** Algorithm X exact cover over the 285 cyclic triples of `T_19` finds an STS(19) inside the Paley 2-(19,3,5) design after 73 search nodes (status `complete`, found `yes`; the 57 blocks are listed in the `.out`, e.g. `(0,1,2), (0,4,8), (0,5,10)`, which are progression blocks, so this system is not cyclic). So progression blocks do lie in STS inside the design, only not in cyclic ones.
+
+**S24 (OPEN).** Whether the Paley designs at `p = 19` (5 systems of 57 blocks from 285) and `p = 31` (8 systems of 155 blocks from 1240) partition into `lambda` block-disjoint STS when non-cyclic systems are allowed. Not attempted: the p = 7 answer (unique partition, S7) is the only one this lane needed.
+
+## 6. "Fractal generator", "nested tiers", and the Lean blueprint
+
+**S25 (SCOPE; no map).** "Under network scaling this geometry is a fractal attractor: the global 21-path network replicates the same three-way non-transitive dominance pattern at every nested tier of the tree." No object is defined: there is no "network scaling" of a 7-vertex tournament in the paste or in any inherited note, no "tree" with tiers, and the "21-path network" is the arc set. The only true nesting statement in this neighbourhood is S18: the Fano plane sits inside `T_7` twice, and inside 1920 of 2640 regular labelled 7-tournaments; that is a statement about `n = 7`, with nothing above it. No map found.
+
+**S26 (SCOPE / REFUTED as written; the Lean blueprint).** `structure FanoPlane where (points : Fin 7) ...` declares ONE point, not seven; `Set.Card` is not a Mathlib name (UNCITED-RECOLLECTION: the cardinality functions are `Set.ncard`, `Set.encard`, `Nat.card`); `∃ psi : FanoPlane ≃ paley_3_cycles M7, True` has body `True` and asserts only that the two types are in bijection, which says nothing about incidence, orientation or `M7`; `paley_3_cycles` is `sorry`; `collatz_functor_path` is undeclared; `theorem suffix_seeded_compression_optimized ... : ∃ layout : Matrix (Fin n) (Fin n) ℤ, true` has a free `n` and body `true`. `Mathlib.Combinatorics.SimpleGraph.Kuratowski` cannot be checked here: the worktree's Lean package is Std-only with no local Mathlib checkout (`.out` section G: `local Mathlib checkout present: False`); to this lane's recollection Mathlib has no planarity or Kuratowski module (UNCITED-RECOLLECTION).
+
+**S27 (PROVED in core Lean 4, no Mathlib).** The companion file `04-computation/experiments/collatz_mod6_20260922_paley_fano_octonion_design.lean` proves by `decide`: `T_7` is a tournament, 21 arcs, 35 triples, 14 cyclic triples, and the line orientations `s -> s+1 -> s+3 -> s` and `s -> s+1 -> s+5 -> s` for all `s`; Lean 4.30.0 exit code 0, and `#print axioms` reports that `paley7_cyclic_triples` and `paley7_dev013` depend on no axioms.
+
+## 7. Entropy of `8/pi^2`, and the analogy to Collatz
+
+**S28 (FINITE-EXACT, session lead probe verified).** `8/pi^2 = 0.81057`; its binary entropy is `0.70028` bits, not the paste's `0.704`, and not zero: "absolute zero-entropy storage" is REFUTED by the paste's own formula. For the record, `6/pi^2 = 0.60793` has binary entropy `0.96612` bits.
+
+**S29 (SCOPE; no map).** The paste offers no map from `T_7`, the Fano plane, or the octonions to the Collatz map, to `3n+1`, to `2^K - 3^L`, or to any inherited session object (the E-graph, the greedy 3-adic map `G`, the cycle gate `n_0 = bB/(2^K - 3^L)`, the sandwich matrix, the Berggren transport). The "triadic inflation functor `F(N) = 3N+1` replacing every odd node with an intransitive 3-cycle block" is a relabelling with no stated action on arcs; the Fano isomorphism of section 2 does not mention integers. The braids2 notes reached the same verdict for their octonion sign tournament ("No Collatz ... implication"). No map found; the analogy is typed as: source = `T_7`; target = Collatz orbits; map = none.
+
+## 8. Verdict table
+
+| paste claim | verdict | evidence |
+|---|---|---|
+| `T_7` has exactly 21 directed 3-cycles | REFUTED | 14 (S1, S2, S27); 21 = arcs; `tr A^3 = 42` |
+| 21 matches its "forbidden Hamiltonian path count" | REFUTED | `h(T_7) = 189` (S3); 7, 21 are unattained values, THM-1370 (S5) |
+| bijection: 7 Fano lines <-> 7 directed 3-cycle triads | REFUTED as stated, CORRECTED | 14 cyclic triples = two disjoint Fano planes, unique (S6, S7); 2-(7,3,2) design (S2) |
+| lines `{i,j,k}` satisfy `i -> j -> k -> i` | PROVED (for `dev{0,1,3}` and `dev{0,1,5}`) | S8; octonion rule `e_r e_{r+1} = e_{r+3}` (S10) |
+| "other" table via `i -> -i` | PROVED | S9, S12: negation swaps the planes and gives the opposite algebra |
+| this is octonion multiplication | PROVED | alternative and composition, exact (S11); explicit isomorphism to Cayley-Dickson (S13); the Paley orientation is the syndrome-0 gauge (S15) |
+| Fano orientation characterises `T_7` | REFUTED | the `|Aut| = 3` regular tournament is also a Fano-line orientation (S17, S18) |
+| generalisation to `p = 3 mod 4` | PROVED | 2-`(p,3,(p+1)/4)` design (S20); progression lemma (S21); Steiner union only at `p = 7` (S22) |
+| fractal generator, nested tiers | SCOPE | S25 |
+| Lean blueprint | SCOPE / ill-typed | S26; what is provable is S27 |
+| `0.704` bits, zero entropy | REFUTED | `0.70028` bits (S28) |
+| bridge to Collatz | SCOPE, no map | S29 |
+
+## Reproduction
+
+```
+python3 04-computation/experiments/collatz_mod6_20260922_paley_fano_octonion_design.py > 05-knowledge/results/collatz_mod6_20260922_paley_fano_octonion_design.out
+lean 04-computation/experiments/collatz_mod6_20260922_paley_fano_octonion_design.lean
+```
+
+Pure Python (itertools, fractions); no numpy, sympy or PARI needed. The script runs the Lean file itself in section G when `lean` is on the path (Lean 4.30.0 here, core only, no Mathlib). Every check is an explicit `raise`; the `python3 -O` run was diffed against the normal run and is identical except for the runtime and the exact-cover seconds. Runtime 29 s, memory far below 1 GB. Every number quoted in this note appears in the `.out`.
+
+## Stopping boundary / next question
+
+Stopped at the boundary of the paste's section 2: its every countable claim is now either proved in corrected form or refuted with a witness, the Paley tournament is pinned to the octonion sign tournament of the braids2 notes by an explicit relabelling, and the general 2-design theorem is proved. Not attempted: the non-cyclic partition questions of S24 (exact-cover searches for 5 disjoint STS(19) inside 285 blocks, or 8 disjoint STS(31) inside 1240), any explanation of the cyclic-STS counts 8, 192, 1024 at `p = 19, 31, 43`, and any statement about the 2-(7,3,2) designs that are NOT the Paley one. The one live next question this lane exposes for the tournament side of the repo: S18 says "Fano-line orientation" is a property of two of the three regular 7-tournaments and "alternative" of only one; the analogous statement for `p = 11` (where no STS exists) and for the doubly regular tournaments on 11, 15, 19 vertices would say whether "cyclic triples form a 2-design" is exactly "doubly regular" (the one-line argument `|N^+(j) ∩ N^-(i)| = (n-3)/4 + ...` suggests yes for tournaments, and that would be the correct general form of the paste's "isomorphism").

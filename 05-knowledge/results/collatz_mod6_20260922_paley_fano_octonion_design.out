@@ -1,0 +1,116 @@
+=== A. Paley tournament T_7 ===
+QR_7 = [1, 2, 4] ; arcs = 21 ; scores = [3, 3, 3, 3, 3, 3, 3]
+cyclic triples c3 = 14 ; transitive triples = 21 ; C(7,3) = 35
+formula (p^3-p)/24 = 14 ; score formula C(7,3) - 7*C(3,2) = 14
+tr A^3 = 42 = 3*c3 (rooted 3-cycles = closed 3-walks)
+h(T_7) = number of directed Hamiltonian paths = 189
+paste's '21 directed 3-cycles': 21 = arcs = transitive triples = 7 lines x 3 rotations; true directed 3-cycle count = 14, rooted = 42; h(T_7) = 189 is neither 7 nor 21.
+arcs covered by cyclic triples: 21 ; multiplicities: [2]
+
+=== B. Two cyclic Steiner triple systems ===
+dev{0,1,3} = [(0, 1, 3), (0, 2, 6), (0, 4, 5), (1, 2, 4), (1, 5, 6), (2, 3, 5), (3, 4, 6)]
+dev{0,1,5} = [(0, 1, 5), (0, 2, 3), (0, 4, 6), (1, 2, 6), (1, 3, 4), (2, 4, 5), (3, 5, 6)]
+cyclic triples of T_7 == dev{0,1,3} u dev{0,1,5} (disjoint): True
+number of labelled STS(7) on {0..6} = 30 = 7!/168 = 30
+STS(7) whose 7 blocks are all cyclic triples of T_7: 2 ; they are dev013 and dev015: True
+decompositions of the 14 cyclic triples into two STS(7): 1 (unordered), unique
+on every line {s,s+1,s+3}: Paley orientation is s->s+1->s+3->s: True
+on every line {s,s+1,s+5}: Paley orientation is s->s+1->s+5->s: True
+negation x->-x maps dev013 to dev015: True ; negation is an anti-automorphism of T_7 (-1 is a non-residue): True
+
+=== C. Octonions from the Paley orientation ===
+Paley/dev013 table satisfies e_r e_{r+1} = +e_{r+3}, e_{r+1} e_{r+3} = +e_r, e_{r+3} e_r = +e_{r+1}: True
+Paley/dev013 algebra: alternative (exact, linearized on all 512 basis triples): True ; N(xy)=N(x)N(y) exact (polarized, all 4096 basis quadruples): True ; N(xy)=N(x)N(y) and (xx)y=x(xy),(yx)x=y(xx) on 200 random integer pairs: True
+non-associativity witness: (e_0 e_1) e_2 = [0, 0, 0, 0, 0, 0, -1, 0] ; e_0 (e_1 e_2) = [0, 0, 0, 0, 0, 0, 1, 0] (imaginary indices r=0,1,2)
+Paley/dev015 algebra (rule e_r e_{r+1} = +e_{r+5}): alternative: True ; composition exact: True ; composition random: True
+x->-x carries the dev013 table to the opposite algebra of the dev015 table: True
+
+--- census of the 128 orientations of the 7 lines of dev{0,1,3} ---
+alternative=True h=189 c3=14 skew charpoly=+1x^7 +21x^5 +147x^3 +343x^1 : 16 orientations
+alternative=False h=171 c3=14 skew charpoly=+1x^7 +21x^5 +99x^3 +7x^1 : 112 orientations
+for every one of the 128 orientations: alternative <=> composition (exact) <=> h = 189: True
+Paley = mask 127 (bits = lines dev013 in order s=0..6, bit 1 = s->s+1->s+3->s); Paley^op = mask 0 ; both alternative: True
+collineations of dev{0,1,3} (perms of Z/7 preserving the lines): 168
+GL(3,2)-orbits on the 16 alternative masks: [8, 8]
+orbit of Paley (mask 127): [7, 25, 42, 52, 76, 82, 97, 127]
+orbit of Paley^op (mask 0): [0, 30, 45, 51, 75, 85, 102, 120]
+collineations fixing the Paley orientation (= Aut(T_7) inside GL(3,2)): 21
+|Aut(T_7)| over all of S_7: 21 (so Aut(T_7) preserves dev013: every automorphism is a collineation)
+distinct (h, c3, skew charpoly) among the 112 non-alternative orientations: 1
+Cayley-Dickson: e_a e_b = +-e_(a xor b) for all distinct a,b in 1..7: True ; sign tournament is a tournament: True
+Cayley-Dickson orientation mask in the fano_code convention (bit a-1 <-> normal a): 96 (fano_code m0 = 96)
+bijections Z/7 -> {1..7} carrying dev{0,1,3} onto the XOR Fano lines: 168
+fano_code masks induced by Paley over all 168 identifications: [6, 24, 43, 53, 77, 83, 96, 126]
+fano_code masks induced by Paley^op over all 168 identifications: [1, 31, 44, 50, 74, 84, 103, 121]
+their relative syndromes: [0]
+Cayley-Dickson mask 96 lies in the Paley orbit: True ; in the Paley^op orbit: False
+one explicit isomorphism Paley -> Cayley-Dickson sign tournament: r -> label {0: 1, 1: 3, 2: 5, 3: 2, 4: 6, 5: 7, 6: 4}
+
+=== D. All 2^21 labelled 7-tournaments; the regular ones ===
+labelled regular tournaments on 7 vertices: 2640 (OEIS A007079(7) = 2640)
+isomorphism-type invariants of the 2640 (skew charpoly, c3, #STS(7) inside cyclic triples, per-pair 3-cycle multiplicities):
+  charpoly +1x^7 +21x^5 +147x^3 +343x^1 : count=240 |Aut|=21 h=189 c3=14 STS-inside=2 pair-mults=[2] rep-mask=85298
+  charpoly +1x^7 +21x^5 +35x^3 +7x^1 : count=720 |Aut|=7 h=175 c3=14 STS-inside=0 pair-mults=[1, 2, 3] rep-mask=17976
+  charpoly +1x^7 +21x^5 +99x^3 +7x^1 : count=1680 |Aut|=3 h=171 c3=14 STS-inside=2 pair-mults=[1, 2, 3] rep-mask=22066
+  class h=171: the 2 STS(7) inside its 14 cyclic triples share 3 blocks; they partition the 14 cyclic triples: False
+  class h=189: the 2 STS(7) inside its 14 cyclic triples share 0 blocks; they partition the 14 cyclic triples: True
+class sizes: [240, 720, 1680] ; |Aut| = [21, 7, 3]
+R_7 = circulant {1,2,3}: skew charpoly +1x^7 +21x^5 +35x^3 +7x^1 ; h = 175 ; STS inside its cyclic triples: 0
+Paley: skew charpoly +1x^7 +21x^5 +147x^3 +343x^1
+classes that are orientations of some Fano plane (an STS inside the cyclic triples): [('+1x^7 +21x^5 +99x^3 +7x^1', 1680, 171, 2), ('+1x^7 +21x^5 +147x^3 +343x^1', 240, 189, 2)]
+labelled Fano-line orientations total: 1920 ; each contains exactly 2 STS, so 2 * 1920 = 3840 = 30 STS x 128 orientations = 3840
+
+=== E. Paley T_p, p = 3 mod 4: the 2-(p,3,(p+1)/4) design ===
+p=3: c3=1 (p^3-p)/24=1 scoreformula=1 pairs-covered=3/3 lambda(pairs)=[1] lambda(arcs)=[1] (p+1)/4=1 arc-orbit-of-G=3 arcs=3
+p=7: c3=14 (p^3-p)/24=14 scoreformula=14 pairs-covered=21/21 lambda(pairs)=[2] lambda(arcs)=[2] (p+1)/4=2 arc-orbit-of-G=21 arcs=21
+p=11: c3=55 (p^3-p)/24=55 scoreformula=55 pairs-covered=55/55 lambda(pairs)=[3] lambda(arcs)=[3] (p+1)/4=3 arc-orbit-of-G=55 arcs=55
+p=19: c3=285 (p^3-p)/24=285 scoreformula=285 pairs-covered=171/171 lambda(pairs)=[5] lambda(arcs)=[5] (p+1)/4=5 arc-orbit-of-G=171 arcs=171
+p=23: c3=506 (p^3-p)/24=506 scoreformula=506 pairs-covered=253/253 lambda(pairs)=[6] lambda(arcs)=[6] (p+1)/4=6 arc-orbit-of-G=253 arcs=253
+p=31: c3=1240 (p^3-p)/24=1240 scoreformula=1240 pairs-covered=465/465 lambda(pairs)=[8] lambda(arcs)=[8] (p+1)/4=8 arc-orbit-of-G=465 arcs=465
+p=43: c3=3311 (p^3-p)/24=3311 scoreformula=3311 pairs-covered=903/903 lambda(pairs)=[11] lambda(arcs)=[11] (p+1)/4=11 arc-orbit-of-G=903 arcs=903
+p=47: c3=4324 (p^3-p)/24=4324 scoreformula=4324 pairs-covered=1081/1081 lambda(pairs)=[12] lambda(arcs)=[12] (p+1)/4=12 arc-orbit-of-G=1081 arcs=1081
+2-(p,3,(p+1)/4) design verified for p in {3,7,11,19,23,31,43,47}; lambda=1 only at p=3, lambda=2 only at p=7.
+p=3 (p mod 8 = 3): 2 is a non-residue: True; AP base triples (0,a,2a) that are cyclic: 2 of 2 -> translation classes 1
+p=7 (p mod 8 = 7): 2 is a non-residue: False; AP base triples (0,a,2a) that are cyclic: 0 of 6 -> translation classes 0
+p=11 (p mod 8 = 3): 2 is a non-residue: True; AP base triples (0,a,2a) that are cyclic: 10 of 10 -> translation classes 5
+p=19 (p mod 8 = 3): 2 is a non-residue: True; AP base triples (0,a,2a) that are cyclic: 18 of 18 -> translation classes 9
+p=23 (p mod 8 = 7): 2 is a non-residue: False; AP base triples (0,a,2a) that are cyclic: 0 of 22 -> translation classes 0
+p=31 (p mod 8 = 7): 2 is a non-residue: False; AP base triples (0,a,2a) that are cyclic: 0 of 30 -> translation classes 0
+p=43 (p mod 8 = 3): 2 is a non-residue: True; AP base triples (0,a,2a) that are cyclic: 42 of 42 -> translation classes 21
+p=47 (p mod 8 = 7): 2 is a non-residue: False; AP base triples (0,a,2a) that are cyclic: 0 of 46 -> translation classes 0
+p=59 (p mod 8 = 3): 2 is a non-residue: True; AP base triples (0,a,2a) that are cyclic: 58 of 58 -> translation classes 29
+p=67 (p mod 8 = 3): 2 is a non-residue: True; AP base triples (0,a,2a) that are cyclic: 66 of 66 -> translation classes 33
+p=71 (p mod 8 = 7): 2 is a non-residue: False; AP base triples (0,a,2a) that are cyclic: 0 of 70 -> translation classes 0
+p=79 (p mod 8 = 7): 2 is a non-residue: False; AP base triples (0,a,2a) that are cyclic: 0 of 78 -> translation classes 0
+p=83 (p mod 8 = 3): 2 is a non-residue: True; AP base triples (0,a,2a) that are cyclic: 82 of 82 -> translation classes 41
+AP lemma verified: all p-1 AP triples (0,a,2a) are cyclic when p = 3 mod 8, none when p = 7 mod 8.
+p=7: translation classes of cyclic triples = 2 (=(p^2-1)/24 = 2); non-arithmetic-progression classes (candidate base blocks) = 2; base blocks needed = 1; cyclic STS(p) inside the Paley 2-(p,3,2) design: 2
+   first four base-block sets: [[(0, 1, 3)], [(0, 1, 5)]]
+   partitions of all 2 classes into 2 block-disjoint cyclic STS(7): 1
+p=19: translation classes of cyclic triples = 15 (=(p^2-1)/24 = 15); non-arithmetic-progression classes (candidate base blocks) = 6; base blocks needed = 3; cyclic STS(p) inside the Paley 2-(p,3,5) design: 8
+   first four base-block sets: [[(0, 1, 8), (0, 2, 5), (0, 4, 10)], [(0, 1, 8), (0, 2, 5), (0, 4, 13)], [(0, 1, 8), (0, 2, 16), (0, 4, 10)], [(0, 1, 8), (0, 2, 16), (0, 4, 13)]]
+   no partition into 5 cyclic STS is possible: 9 arithmetic-progression classes (never in an STS) and 6 != 5*3
+p=31: translation classes of cyclic triples = 40 (=(p^2-1)/24 = 40); non-arithmetic-progression classes (candidate base blocks) = 40; base blocks needed = 5; cyclic STS(p) inside the Paley 2-(p,3,8) design: 192
+   first four base-block sets: [[(0, 1, 3), (0, 4, 11), (0, 5, 15), (0, 6, 18), (0, 8, 17)], [(0, 1, 3), (0, 4, 11), (0, 5, 15), (0, 6, 18), (0, 8, 22)], [(0, 1, 3), (0, 4, 11), (0, 5, 15), (0, 6, 19), (0, 8, 17)], [(0, 1, 3), (0, 4, 11), (0, 5, 15), (0, 6, 19), (0, 8, 22)]]
+   partitions of all 40 classes into 8 block-disjoint cyclic STS(31): 0
+p=43: translation classes of cyclic triples = 77 (=(p^2-1)/24 = 77); non-arithmetic-progression classes (candidate base blocks) = 56; base blocks needed = 7; cyclic STS(p) inside the Paley 2-(p,3,11) design: 1024
+   first four base-block sets: [[(0, 1, 5), (0, 2, 14), (0, 3, 21), (0, 6, 19), (0, 7, 15), (0, 9, 20), (0, 10, 26)], [(0, 1, 5), (0, 2, 14), (0, 3, 21), (0, 6, 19), (0, 7, 15), (0, 9, 20), (0, 10, 27)], [(0, 1, 5), (0, 2, 14), (0, 3, 21), (0, 6, 19), (0, 7, 15), (0, 9, 32), (0, 10, 26)], [(0, 1, 5), (0, 2, 14), (0, 3, 21), (0, 6, 19), (0, 7, 15), (0, 9, 32), (0, 10, 27)]]
+   no partition into 11 cyclic STS is possible: 21 arithmetic-progression classes (never in an STS) and 56 != 11*7
+p=11, 23, 47: STS(p) does not exist (p = 5 mod 6).
+p=19 exact cover (any STS(19) among the 285 cyclic triples): status=complete, found=yes, search nodes=73, seconds=0
+VERDICT p=19: an STS(19) inside the Paley design EXISTS; blocks:
+  blocks: [(0, 1, 2), (0, 4, 8), (0, 5, 10), (0, 6, 12), (0, 3, 16), (0, 11, 15), (0, 14, 17), (0, 7, 18), (0, 9, 13), (2, 11, 12), (8, 11, 13), (1, 8, 9), (2, 8, 14), (2, 6, 17), (2, 3, 4), (2, 5, 13), (2, 7, 16), (10, 13, 16), (6, 8, 10), (7, 8, 15), (4, 12, 15), (1, 12, 13), (3, 7, 13), (3, 5, 8), (8, 17, 18), (8, 12, 16), (3, 10, 11), (1, 10, 15), (1, 3, 17), (3, 12, 18), (5, 12, 17), (7, 11, 17), (3, 6, 14), (6, 13, 18), (2, 15, 18), (2, 9, 10), (9, 16, 17), (10, 14, 18), (4, 10, 17), (4, 13, 14), (7, 10, 12), (9, 12, 14), (1, 16, 18), (4, 5, 16), (4, 11, 18), (5, 9, 18), (3, 9, 15), (1, 5, 11), (5, 14, 15), (11, 14, 16), (6, 9, 11), (4, 7, 9), (1, 4, 6), (13, 15, 17), (1, 7, 14), (6, 15, 16), (5, 6, 7)]
+
+=== F. Binary entropy of 8/pi^2 ===
+8/pi^2 = 0.81057; binary entropy = 0.70028 bits (paste says 0.704 and calls it 'absolute zero-entropy')
+6/pi^2 = 0.60793; binary entropy = 0.96612 bits (for the record)
+
+=== G. Core-Lean (no Mathlib) decide checks ===
+lean exit code: 0
+  'paley7_cyclic_triples' does not depend on any axioms
+  'paley7_dev013' does not depend on any axioms
+theorems checked by `decide` (core Lean 4, no Mathlib): isTournament, numArcs = 21, numTriples = 35, numCyclic = 14, dev013 and dev015 orientations
+local Mathlib checkout present: False (the paste's `Mathlib.Combinatorics.SimpleGraph.Kuratowski` cannot be checked locally)
+
+total runtime 29 s
+ALL CHECKS PASSED
