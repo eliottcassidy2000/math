@@ -1,0 +1,135 @@
+# The summand closure holes `{1,4,6}` and the square-sum graph `Q_n`: three chains, two merges, one finite scar
+
+**Status:** PROVED: `Q_n` (vertices `1..n`, `x ~ y` iff `x + y` is a square, `x != y`) is a union of paths exactly for `n <= 12` (S4), has exactly the three chains `{1,3,6,8,10}`, `{2,7,9}`, `{4,5,11,12}` (cut at `n`) for `4 <= n <= 12` (S5), merges to two components at `n = 13` (vertex `13` joins `3` by `16` and `12` by `25`) and to one at `n = 14` (vertex `14` joins `2` by `16` and `11` by `25`) (S6), and is connected for EVERY `n >= 14` because the newest vertex `n >= 6` always has a neighbour (S7-S8); the founders of the three chains are the vertices born isolated, exactly `{1,2,4}` (S9); the degree formulas `deg_n(m) = floor(sqrt(m+n)) - floor(sqrt m) - [2m square]` and `deg_n(n) = floor(sqrt(2n-1)) - floor(sqrt n)` (S10); the born-leaf set is exactly `{3,5,6,7,8,9,10,11,12,16,17,18}` (S11); `Q_n` has a leaf iff `3 <= n <= 30`, with `18` the last leaf because `36 = 2*18` is the excluded diagonal and `49 - 18 = 31` (S12-S13); the `2j^2` leaf scar exists only for `j <= 3` (S14); the unique Hamiltonian path of `Q_15` is forced by degrees and omits exactly the edge `{1,3}` of square `4` (S19); `Q_18` has no Hamiltonian path by a three-leaf count (S18); the Collatz odd-arrow target `(3n+1)/2` is never a square (S22). FINITE-EXACT: connectivity `14 <= n <= 2000`, leaf sets to `2000`, Hamiltonian existence `n <= 32` and path counts `15 <= n <= 30` matching OEIS A090460, cycles absent at `30, 31` and present at `32`. CITED: THM-2422 (14)-(26) by path; OEIS A090460/A090461 (fetched 2026-09-22). REFUTED: the recollection "three chains `{1,4,6}`" (the three chains are founded by `{1,2,4}`; `6` sits in the chain of `1`), the paste's "`N = 14` first unification (3 components join)" (two merges, at `13` and `14`), "`N >= 25` conjectured connected" (connected from `14`), "at `N = 15` the number `4` is the edge to avoid" as a statement about vertex `4` (degree `2`, both edges forced; true only as "the square `4`, i.e. the edge `{1,3}`, is the one unused edge"), the "prime AP `3,7,11,17`" (differences `4,4,6`), the pasted loopless Lean graph (value `2` is self-adjacent). SCOPE: no dyadic or fractal law in `Q_n`; THM-2422's `M_t = 27*2^(t-4)+1` has no counterpart, the only exact repetition being the reflection algebra `x -> k^2 - x` whose two-step translations `l^2 - k^2` avoid residue `2 mod 4` (S15-S16). No Collatz consequence is claimed (S23-S24). Results note of session `collatz-mod6-20260917` (machine `mac-mini`), wave 2026-09-22 (wave 6), lane `summand_closure_square_filter`; not a reserved canon ID.
+
+## Inheritance and concept board
+
+The user recalls that building the summand graph one vertex at a time produces "three distinct independent chains `{1,4,6}`" and asks how this relates to square-sum arrangements of `1..15` to `1..25` and to a "fractal" macrocosm. The exact inherited object is THM-2422 ([canon](../../01-canon/theorems/THM-2422-operation-fibres-summand-closure-and-twin-center-ancestry.md)): under distinct sums `a < b => a + b`, the closure of the seeds `{2,3}` is `N minus {1,4,6}` (its (14)-(16)); `{1,4,6}` is a closed dependency MODULE (`1` has no parents; `4 = 1+3` only, `2+2` being the excluded diagonal; `6 = 1+5` or `2+4`, `3+3` excluded), described by the AND-of-ORs law (17a); the synchronous closure `S_t` is `{2,3,5} u [7, M_t]` with `M_t = 27*2^(t-4)+1` for `t >= 4` (its (19)-(26)), the exact dyadic self-similarity; the labelled fibre deficit is `r_Cl(z) = r(z) - 3` for `z >= 13` (its (18)). The old [reflection](../../07-reflections/summand-graph-fermat-zeckendorf.md) reads the three holes as "three modes" (`1` unary, `4` binary bridge, `6 = T_3 = 1+2+3` ternary); its error "adjoining any one of `{1,4,6}` restores all three" is corrected in [arithmetic_braids summand section 8](arithmetic_braids_20260917_summand.md): adjoining `1` fills all, `4` fills `6` but never `1`, `6` fills neither (re-checked to `200`, `.out` A1-A2). The strict summand shadow complement is the doubling forest (same note, section 1), and the Collatz odd arrow `n -> n + (n+1)/2` is a summand arrow with companion `(n+1)/2` whose `n = 1` instance is the excluded diagonal `(1,1)` ([braids collatz](arithmetic_braids_20260917_collatz.md)). THM-2433 supplies the phrase used below, "startup scar". This note does not re-prove any of that; it verifies (block A) and cites. The session lead's firsthand probe (three components for `4 <= n <= 12`, two at `13`, connected `14..32`, the leaf lists `n = 18..32`, the two witness paths, A090461) is verified in full and extended (B1-B6, C10, E1-E5). Nothing in the pasted "octonion monodromy / `196` horizon / sign-specific certificate" block is touched beyond the arithmetic checks F3-F5. **Closest proved mechanism:** THM-2422's startup-module argument, transported: a vertex of `Q_n` is born isolated iff no square lies strictly in `(n, 2n)`, and `(sqrt n + 1)^2 < 2n` for all `n >= 6` (the threshold is `(1+sqrt2)^2 = 5.828`), so the component count of `Q_n` is non-increasing from `n = 5` on and the three-chain phase is a finite startup, exactly as `{1,4,6}` is a finite startup module (S7-S9). **Canonical hostile:** vertex `18`. It is a leaf of `Q_n` for every `18 <= n <= 30` because the squares in `(18, 18+n]` are `25` and `36`, and `36 = 2*18` is the excluded diagonal; the third square `49` enters only at `n = 31`. This single vertex is the whole reason "no leaves iff `n >= 31`", and it is the same diagonal-exclusion mechanism that makes `2` born isolated (`2+2 = 4`) and that deletes the routes `2+2 -> 4`, `3+3 -> 6` in THM-2422 (S12-S13, G6). **Corrected near miss:** the recollection "`{1,4,6}` are three chains". The three chains of `Q_12` are real (S4-S5) but are founded by `{1,2,4}`, the vertices born isolated; `1` and `4` are shared with the closure module, `2` and `6` are swapped (`6` lies in the chain of `1`). No map was found from the reflection's three modes to the three chains (S9). **Least-used sidecar:** the two-step algebra of `Q_n`. Every edge is a reflection `x -> k^2 - x`; composing two gives the translation `x -> x + (l^2 - k^2)`, and `l^2 - k^2` takes every residue mod `4` except `2` (`.out` D5). This is the only exact structure that "repeats in the macrocosm"; it is arithmetic, not fractal (S15-S16).
+
+Typed analogy, **summand closure -> square filter -> Collatz arrow**: source = the labelled additive fibre `{a,b} -> a+b` of THM-2422; target 1 = the edge `{x,y}` of `Q_n` with `x + y = k^2`; target 2 = the Collatz odd arrow `n -> n + (n+1)/2`; map = "keep the hyperedge `{x,y} -> z`, change the admission rule"; preserved = the additive hyperedge with the excluded diagonal `x = y` (it bites as `2+2`, `3+3` in the closure, as `2m` square in `Q_n`, as `(1,1)` at the Collatz root); lost = the selection rule (closure: every distinct pair; `Q_n`: target must be a square; Collatz: companion is `(x+1)/2`, out-degree `1`); sidecar = S22, the two filters are disjoint: `(3n+1)/2` is never a square; test = out-degree (`Q_2000` has max degree `43`, the Collatz odd map has out-degree `1`), so no Hamiltonicity or connectivity statement about `Q_n` transfers (S23-S24).
+
+## 1. What `{1,4,6}` is (inherited, verified)
+
+**S1 (CITED THM-2422 (14)-(17a); FINITE-EXACT re-check to `200`).** `Cl^<({2,3}) cap [1,200] = [1,200] minus {1,4,6}` (`.out` A1). The module is closed: `1` has no parents, the only strict parent pair of `4` is `{1,3}`, and both strict parent pairs of `6`, `{1,5}` and `{2,4}`, meet `{1,4}`; the diagonals `2+2 = 4` and `3+3 = 6` are excluded by the strictness rule. These are three MISSING ELEMENTS of one closure, not three chains.
+
+**S2 (CITED braids summand section 8; FINITE-EXACT).** Seeds `{1,2,3}` leave no hole; `{2,3,4}` leaves `{1}`; `{2,3,6}` leaves `{1,4}` (`.out` A2). The reflection's "any one restores all three" is false; dependency is directed.
+
+**S3 (CITED THM-2422 (19)-(26); FINITE-EXACT `t <= 9`).** The synchronous closure has `S_3 = {2,3,5,7,8,9,10,11,12,13,15}` with the single internal gap `14`, and `S_t = {2,3,5} u [7, M_t]` with `M_t = 28, 55, 109, 217, 433, 865` for `t = 4..9`, i.e. `M_t = 27*2^(t-4)+1` (`.out` A3). This is the exact dyadic law the user's "fractal" memory refers to; it belongs to the closure, and section 4 shows it has no counterpart in `Q_n`.
+
+## 2. The square-sum graph `Q_n` and its three chains
+
+Definitions. `Q_n` has vertex set `{1..n}` and `x ~ y` iff `x + y` is a perfect square and `x != y`. The directed summand version has arrows `x -> z`, `y -> z` iff `x + y = z` is a square, i.e. the hyperedge `{x,y} -> k^2` of THM-2422's fibre restricted to square targets; `Q_n` is its companion graph (join the two parents). The neighbours of `m` in `Q_n` are the `k^2 - m` with `m < k^2 <= m + n`, `k^2 != 2m`. Equivalently every edge is a reflection `x -> k^2 - x`.
+
+**S4 (PROVED).** `Q_n` has maximum degree `<= 2` iff `n <= 12`. Proof. For `n <= 12` the sums are `<= 2n - 1 <= 23`, and the squares `<= 23` are `1, 4, 9, 16` (`.out` G5), of which only `4, 9, 16` exceed `1 + 2`. So `deg_n(m) <= 3`, with equality only if `4, 9, 16` all lie in `(m, m+n]`, forcing `m <= 3` and `m + n >= 16`, i.e. `n >= 13`. Conversely in `Q_13` the vertex `3` has neighbours `1, 6, 13` (sums `4, 9, 16`), degree `3` (`.out` B3). QED. Hence for `n <= 12` the graph `Q_n` is a linear forest: a disjoint union of paths. This is the correct content of "chains".
+
+**S5 (PROVED; FINITE-EXACT listing).** For `4 <= n <= 12`, `Q_n` has exactly three components, the cuts at `n` of
+
+| chain (founder) | vertices in `Q_12` | path order and squares |
+|---|---|---|
+| founded by `1` | `{1,3,6,8,10}` | `10 -16- 6 -9- 3 -4- 1 -9- 8` |
+| founded by `2` | `{2,7,9}` | `2 -9- 7 -16- 9` |
+| founded by `4` | `{4,5,11,12}` | `11 -16- 5 -9- 4 -16- 12` |
+
+Proof. The reflection `x -> 4 - x` acts on `{1,3}`; `x -> 9 - x` on `{1..8}` pairs `(1,8),(2,7),(3,6),(4,5)`; `x -> 16 - x` on `{1..15}` pairs `(1,15),(2,14),(3,13),(4,12),(5,11),(6,10),(7,9)` (its fixed point `8` is the excluded diagonal). Restricted to `{1..12}` the orbits of the group generated by these three involutions are exactly the three sets above (edges of `Q_12` with squares: `(1,3,4),(1,8,9),(2,7,9),(3,6,9),(4,5,9),(4,12,16),(5,11,16),(6,10,16),(7,9,16)`, `.out` B1). Each cut at `n >= 4` is nonempty and connected because every vertex of a chain attaches to an earlier vertex of the same chain when it arrives (`5 -> 4`, `6 -> 3`, `7 -> 2`, `8 -> 1`, `9 -> 7`, `10 -> 6`, `11 -> 5`, `12 -> 4`; union-find merge list, `.out` B5). For `n <= 3`: `Q_1` has `1` component, `Q_2` two (`{1},{2}`), `Q_3` two (`{1,3},{2}`). QED.
+
+**S6 (PROVED, by the edge lists).** Vertex `13` attaches to `3` (square `16`) and to `12` (square `25`), merging the chains of `1` and `4`: `c(Q_13) = 2`, components `{1,3,4,5,6,8,10,11,12,13}` (size `10`) and `{2,7,9}` (size `3`). Vertex `14` attaches to `2` (square `16`) and to `11` (square `25`), merging the last chain: `c(Q_14) = 1` (`.out` B1, B4, G9). Both merges are made by one new vertex touching squares `16` and `25` simultaneously; the paste's "`N = 14` first unification (3 components join)" is REFUTED: the counts are `3, 2, 1` at `12, 13, 14` (`.out` F6).
+
+**S7 (PROVED).** For every `n >= 6` the newest vertex `n` has a neighbour in `Q_n`; consequently `c(Q_n) <= c(Q_{n-1})` for all `n >= 6` (adding a vertex with at least one edge cannot split a component). Proof. Let `s = floor(sqrt n)`, so `(s+1)^2 > n`. Also `(s+1)^2 <= (sqrt n + 1)^2 = n + 2 sqrt n + 1 < 2n` iff `sqrt n > 1 + sqrt 2`, i.e. `n > (1+sqrt2)^2 = 5.828`. So for `n >= 6` the square `(s+1)^2` lies strictly inside `(n, 2n)`, and `(s+1)^2 - n` is a neighbour in `[1, n-1]`. QED. (Checked: `c` is non-increasing for `n >= 5` over `n <= 2000`, `.out` G8, C6.)
+
+**S8 (PROVED; base FINITE-EXACT).** `Q_n` is connected iff `n = 1` or `n >= 14`. Proof: S5-S6 give `c(Q_n) >= 2` for `2 <= n <= 13` and `c(Q_14) = 1`; S7 gives `c(Q_n) <= c(Q_14) = 1` for all `n >= 14`. QED. The paste's "`N >= 25` conjectured connected" is superseded; the direct union-find census confirms `c(Q_n) = 1` for all `14 <= n <= 2000` (`.out` B5). (This elementary argument is presumably known; no source was opened: UNCITED-RECOLLECTION for priority, PROVED for content.)
+
+**S9 (PROVED).** The vertices born isolated, i.e. with `c(Q_n) = c(Q_{n-1}) + 1`, are exactly `1, 2, 4`: `n = 1` (no square in `(1,2)`), `n = 2` (the only square in `(2,4]` is `4 = 2+2`, the diagonal), `n = 4` (no square in `(4,8)`), while `3` (square `4`) and `5` (square `9`) attach, and `n >= 6` attaches by S7 (`.out` B6, C3). These are the founders (least elements) of the three chains of S5. The recollection "`{1,4,6}`" is therefore REFUTED as a description of the chains: intersection with the founders `{1,4}`, symmetric difference `{2,6}` (`.out` G6); `6 = T_3` sits in the chain founded by `1` (`.out` G9). No map found from the reflection's three modes (unary / binary bridge / ternary) to the three chains: the chains are orbits of three reflections, and `6`'s membership is by `3 + 6 = 9`, not by `1 + 2 + 3`.
+
+## 3. Incremental build: degrees, founders, leaves
+
+**S10 (PROVED; verified for all `m <= n < 400`).** `deg_n(m) = floor(sqrt(m+n)) - floor(sqrt m) - [2m is a square]` (the squares in `(m, m+n]` minus the diagonal), and the newest vertex has `deg_n(n) = floor(sqrt(2n-1)) - floor(sqrt n)` (`.out` C1). Adding `n` adds exactly the edges `{n, k^2 - n}` for `n < k^2 < 2n`, as the task states; `deg_n(n)/sqrt n` is `0.4000` at `n = 100, 400, 900, 1600` and `0.4249` at `2000`, against the limit `sqrt2 - 1 = 0.4142` (`.out` D4).
+
+**S11 (PROVED; FINITE-EXACT list).** The born-leaf set `{n : deg_n(n) = 1}` is exactly `{3,5,6,7,8,9,10,11,12,16,17,18}` (twelve values, max `18`). Finiteness: `(s+2)^2 <= (sqrt n + 2)^2 = n + 4 sqrt n + 4 <= 2n - 1` once `n - 4 sqrt n - 5 >= 0`, i.e. `n >= 25`; the values `19..24` have `deg_n(n) = 2` directly (`.out` C4, G4, C2).
+
+**S12 (PROVED, leaf law; FINITE-EXACT tables).** `m` is a leaf of `Q_n` iff exactly one square `k^2` with `k^2 != 2m` lies in `(m, m+n]`. The leaf sets are
+
+| `n` | leaves `L(n)` | isolated |
+|---|---|---|
+| `3..4` | `{1,3}` | `{2}` then `{2,4}` |
+| `5` | `{1,3,4,5}` | `{2}` |
+| `7` | `{1,2,4,5,6,7}` | none |
+| `12` | `{2,8,9,10,11,12}` | none |
+| `13` | `{2,8,9,10,11}` | none |
+| `14` | `{8,9,10}` | none |
+| `15` | `{8,9}` | none |
+| `16` | `{8,16}` | none |
+| `17` | `{16,17}` | none |
+| `18` | `{16,17,18}` | none |
+| `19` | `{16,18}` | none |
+| `20..30` | `{18}` | none |
+| `31..2000` | none | none |
+
+(full table `n = 1..32` in `.out` C7; C10 reproduces the session lead's `n = 18..32` lists exactly). Per vertex, the leaf windows are intervals: `m = 2` for `n in [7,13]`, `m = 8` for `[8,16]`, `m = 18` for `[18,30]`, `m = 12` only at `n = 12`, `m = 16` for `[16,19]`, `m = 17` for `[17,18]` (`.out` C9). The three longest windows (`7`, `9`, `13` values) are exactly the three vertices `2, 8, 18` with `2m` a square.
+
+**S13 (PROVED).** `Q_n` has no leaf iff `n in {1,2}` or `n >= 31`. Proof. For `3 <= n <= 30` the table exhibits a leaf (`.out` C8). For `n >= 31` and `1 <= m <= n` write `s = floor(sqrt m)`. Case `2m` not a square: need two squares in `(m, m+n]`; `(s+2)^2 <= m + 4 sqrt m + 4 <= m + n` whenever `4 sqrt n + 4 <= n`, which holds for `n >= 24` (threshold `(2+sqrt8)^2 = 23.314`, `.out` G2, C11). Case `2m = (2i)^2`, `m = 2i^2`: need three squares in `(m, m+n]`; `(s+3)^2 <= m + 6 sqrt m + 9 <= m + n` whenever `6 sqrt n + 9 <= n`, i.e. `n >= 53` (threshold `(3+sqrt18)^2 = 52.456`, `.out` G3); for `31 <= n <= 52` the only such `m <= n` are `2, 8, 18, 32, 50`, and the census gives `deg_n(m) in {2,3,4,5}` for all `31 <= n <= 60` (`.out` C11). QED. The threshold is set by `m = 18` alone: squares in `(18, 48]` are `25, 36`; in `(18, 49]` they are `25, 36, 49`; `36 = 2*18` is excluded, so `deg_n(18) = 1` for `18 <= n <= 30` and `2` from `n = 31 = 49 - 18` on (`.out` C11).
+
+## 4. Self-similarity: what repeats and what does not
+
+**S14 (PROVED).** For `m = 2j^2` the number of squares strictly between `2j^2` and `4j^2` is `2j - 1 - floor(j sqrt2)`: `0, 1, 1, 2, 2, 3, 4, 4, 5, 5, 6, 7` for `j = 1..12` (`.out` D2-D3). Since all these squares are `<= 2m <= m + n`, `m = 2j^2` can be a leaf of some `Q_n` only if this count is `<= 1`, i.e. `j <= 3` (`2j - 1 - j sqrt2 = j(2 - sqrt2) - 1 >= 2` for `j >= 6`, and `j = 4, 5` give `2, 2` directly). So the "`2m`-square leaf" phenomenon occurs exactly for `m = 2, 8, 18`, with windows `[7,13]`, `[8,16]`, `[18,30]`, and never again (`.out` D2, D6). This is a finite startup scar in the sense of THM-2433, not a law.
+
+**S15 (SCOPE, statement of non-discovery).** THM-2422's synchronous frontier doubles, `M_t - 1 = 27*2^(t-4)`, because a gap-free interval `[7,M]` regenerates `[7, 2M-1]` under all distinct sums. Nothing in `Q_n` doubles: the component count is `1` for all `n >= 14`, the born-isolated set `{1,2,4}` and the born-leaf set (max `18`) are finite, and the degree grows like `(sqrt2 - 1) sqrt n`. The three-chain phase does not recur at any scale; the user's "fractal repetition in the macrocosm" has no exact witness in `Q_n`.
+
+**S16 (PROVED, the one exact repetition).** Two consecutive edges of `Q_n` compose to the translation `x -> x + (l^2 - k^2)`, and the differences of squares `l^2 - k^2 <= 60` are `3,5,7,8,9,11,12,13,15,16,...`: every residue mod `4` except `2` (`.out` D5). So a walk of even length in `Q_n` moves by an integer `!= 2 mod 4`; this reflection/translation algebra is the same at every scale and is the honest content of "the same pattern in the macrocosm". It is arithmetic (infinite dihedral), not self-similar.
+
+## 5. Hamiltonian paths (session lead probe verified; OEIS A090460/A090461)
+
+**S17 (FINITE-EXACT; CITED OEIS).** Backtracking gives Hamiltonian paths for `n = 1, 15, 16, 17, 23, 25, 26, ..., 32` and none for `2..14, 18..22, 24` (`.out` E1), matching the session lead and A090461 (`15, 16, 17, 23, 25, 26, ...`). Counting paths up to reversal for `n = 15..30` gives `1, 1, 1, 0, 0, 0, 0, 0, 3, 0, 10, 12, 35, 52, 19, 20`, equal term by term to A090460 (offset `15`, fetched 2026-09-22; `.out` E2). The session lead's witnesses for `15` and `23` are valid (`.out` E5; the `23`-path has consecutive sums in `{4, 9, 16, 25, 36}`).
+
+**S18 (PROVED).** `Q_18` has no Hamiltonian path: its leaves are `16, 17, 18` (neighbours `9, 8, 7`), and a Hamiltonian path has at most two vertices of degree `1` (`.out` E3). Leaf counts for `n = 15..32` are `2,2,2,3,2,1,...,1,0,0`; for `19..22` and `24` the non-existence is FINITE-EXACT by search only. The paste's "parity desert `[18,22]`" is the leaf obstruction at `18` plus four searched cases; no parity mechanism was found.
+
+**S19 (PROVED).** The Hamiltonian path of `Q_15` is unique and is `8,1,15,10,6,3,13,12,4,5,11,14,2,7,9`. Proof: `Q_15` has `15` edges; degrees are `3` at `1, 3`, `1` at `8, 9`, and `2` at the eleven other vertices (`.out` E4, G7). Every edge at a degree-`2` vertex and the edge at each leaf is forced; the only edge with both ends in `{1,3,8,9}` other than the leaf edges is `{1,3}`, so the forced set is all edges except `{1,3}`, `14` edges on `15` vertices, which form the path above. QED. The paste's "at `N = 15` the number `4` is the edge to avoid" is REFUTED for the vertex `4` (degree `2`, neighbours `5, 12`, both forced) and is TRUE for the square `4`: the unique unused edge is `{1,3}`, `1 + 3 = 4` (`.out` E4).
+
+**S20 (FINITE-EXACT; CITED).** No Hamiltonian cycle in `Q_30`, `Q_31`; one in `Q_32`: `1,8,28,21,4,32,17,19,30,6,3,13,12,24,25,11,5,31,18,7,29,20,16,9,27,22,14,2,23,26,10,15` (`.out` E6), consistent with A090460's comment (circular solutions from `32`) and A090461's (Hamiltonian cycles for `k >= 32`, proved per Gerbicz, Mersenneforum; CITED via the OEIS comment, the forum was not opened).
+
+**S21 (REFUTED, pasted arithmetic).** `3, 7, 11, 17` has differences `4, 4, 6`, not an AP (`.out` F3). The pasted Lean `square_sum_graph` with `Adj x y := exists k, (x+1)+(y+1) = k^2` is not loopless: value `2` gives `2 + 2 = 4`; the self-adjacent values `<= 32` are `2, 8, 18, 32` (`.out` F4), exactly the `2m`-square vertices of S14. The sum `1+3+5+7+11+13+17+19+23+29+31+37 = 196` is arithmetically correct (`.out` F5) and carries no `Q_n` content.
+
+## 6. Typing the analogy; no Collatz consequence
+
+**S22 (PROVED).** For odd `n` the Collatz odd-arrow target `(3n+1)/2 = n + (n+1)/2` is never a perfect square: `(3n+1)/2 = k^2` forces `2k^2 = 1 mod 3`, but `k^2 mod 3 in {0,1}`, so `2k^2 mod 3 in {0,2}` (`.out` F1). By contrast `3n+1` itself is a square for odd `n = 1, 5, 21, 33, 65, 85, 133, 161, ...` (`26` values `<= 2000`, `k = 2, 4, 8, 10, 14, 16, 20, 22, ...`), but that target is then halved, so the square-sum edge and the summand-arrow form of the Collatz step select disjoint targets.
+
+**S23 (typed analogy; no map found for consequences).** Source: the labelled fibre `{a,b} -> a+b` of THM-2422. Targets: (i) the `Q_n` edge, a summand arrow with a square target; (ii) the Collatz odd arrow, a summand arrow with companion `(n+1)/2`. Map: keep the hyperedge, change the admission rule. Preserved: the additive hyperedge and the excluded diagonal (`2+2`, `3+3` in the closure; `2m` square in `Q_n`; `(1,1)` at the Collatz root). Lost: the selection rule, and with it the graph type: the closure fills everything above `6`, `Q_n` is a connected graph of degree `~ 0.4 sqrt n` (max degree `43` at `n = 2000`), the Collatz odd map is a functional graph of out-degree `1` (`.out` F2). Sidecar: S22 (the two filters are disjoint). Decisive test: any transfer would have to carry a statement about `Q_n` (connectivity, Hamiltonicity, leaf-freeness) to a functional graph; none of those notions is defined for out-degree `1` in the relevant sense, so the test fails at the definition. No Collatz consequence is claimed.
+
+**S24 (SCOPE).** The pasted "sheet-blind routes are dead / `196` horizon / octonion monodromy / martingale transfer to the minus sheet" block is outside this lane; its `Q_n` assertions are settled above (S6, S8, S18, S19, S21) and nothing else is evaluated here.
+
+## 7. Verdict table
+
+| claim (source) | verdict | witness |
+|---|---|---|
+| `{1,4,6}` = three chains (recollection) | REFUTED | chains founded by `{1,2,4}`; `6` in chain of `1` (S9) |
+| `{1,4,6}` = closed module, `Cl^<({2,3}) = N minus {1,4,6}` (THM-2422) | CITED, re-checked | `.out` A1 |
+| `M_t = 27*2^(t-4)+1` (THM-2422) | CITED, re-checked | `.out` A3 |
+| three components `4 <= n <= 12`, two at `13`, one at `14` (session lead) | PROVED | S5-S6 |
+| connected for all `n >= 14` | PROVED | S7-S8 |
+| `Q_n` linear forest iff `n <= 12` | PROVED | S4 |
+| leaf lists `n = 18..32` (session lead) | PROVED + FINITE-EXACT | S12-S13 |
+| no leaves iff `n >= 31` (task) | PROVED (also none for `n = 1, 2`) | S13 |
+| `2j^2` leaf scar recurs "fractally" | REFUTED | only `j <= 3` (S14) |
+| dyadic law in `Q_n` | SCOPE / not found | S15 |
+| Hamiltonian existence `n <= 32`, counts `15..30` | FINITE-EXACT = A090460 | S17 |
+| `Q_18` non-Hamiltonian | PROVED | S18 |
+| `Q_15` path unique, avoids square `4` | PROVED | S19 |
+| "`N=14` first unification", "`N>=25` connected", "vertex `4` to avoid", "AP `3,7,11,17`", loopless Lean graph (paste) | REFUTED | S6, S8, S19, S21 |
+| `(3n+1)/2` never a square | PROVED | S22 |
+| Collatz consequence | none claimed | S23 |
+
+## Reproduction
+
+```bash
+cd /tmp/math-wt-collatz-mod6-b
+python3 04-computation/experiments/collatz_mod6_20260922_w6_summand_closure_square_filter.py \
+  > 05-knowledge/results/collatz_mod6_20260922_w6_summand_closure_square_filter.out
+python3 -O 04-computation/experiments/collatz_mod6_20260922_w6_summand_closure_square_filter.py | diff - \
+  05-knowledge/results/collatz_mod6_20260922_w6_summand_closure_square_filter.out   # only the elapsed line
+curl -s -A "Mozilla/5.0 (research)" "https://oeis.org/search?q=id:A090460&fmt=json"   # counts, offset 15
+```
+
+Runtime `1.3 s`, pure Python (`math.isqrt`, union-find, bitmask backtracking with the one-leaf prune); every numbered claim's numbers are in the `.out` sections A-G.
+
+## Stopping boundary / next question
+
+Stopped at the exact structure of `Q_n` as an incremental graph (components, degrees, leaves, forced edges) and at the verdict that the three-chain phase is a finite startup with no self-similar echo. Not attempted: a leaf-free/degree argument for Hamiltonicity at `n >= 25` (A090461's proof by Gerbicz uses explicit constructions; the degree data here only settles non-existence at `18` and uniqueness at `15`); the directed summand version with square targets as a fibre count `r_sq(z) = floor((z-1)/2)` at square `z` was not tabulated. The next question that would actually use this lane: is there a `Q_n`-style filter (target in a set `T`) for which the born-isolated set is exactly `{1,4,6}`? By S9 the born-isolated set is `{n : no t in T with n < t < 2n}` together with the diagonal exclusion, so `T` would need no element in `(1,2)`, `(4,8)`, `(6,12)` but one in `(2,4)`, `(3,6)`, `(5,10)`: `3 in T`, `4 notin T` or `4 = 2*2` excluded, and `(6,12) cap T = {}` contradicts `(5,10) cap T != {}` unless that element is `<= 6`, i.e. `6 in T` with `6 = 2*3` excluded for `3` only. Whether such a `T` exists is a two-line check left open; it would say whether "`{1,4,6}` as founders" can be realised by any additive filter at all.
