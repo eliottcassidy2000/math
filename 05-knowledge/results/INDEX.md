@@ -58,7 +58,15 @@
   Paley `T_7` cyclic triples as two Fano planes with the octonion rule and
   the `2-(p,3,(p+1)/4)` design, and refutations of the adjunction-bipartite
   spectrum, the `8/pi^2` "zero-entropy" compression and the pasted Lean.
-  Collatz remains OPEN.
+  Wave six (2026-09-22): the summand holes `{1,4,6}` versus the three
+  chains of the square-filtered summand graph `Q_n` (founders `1,2,4`;
+  connected for all `n>=14`, leaf-free iff `n>=31`; no filter has founders
+  `{1,4,6}`), square-sum Hamiltonicity with proved obstructions and the
+  `25n+12` self-similar blow-up, Tao's Syracuse random variable negated on
+  the `3n-1` sheet (mixing and Fourier decay transfer; the full theorem
+  stays OPEN), the word-function theorem (sign-specific invariants must be
+  order statements) and core-Lean `decide` proofs of the `Q_n` component
+  counts. Collatz remains OPEN.
 - [Arithmetic seams](arithmetic_seams_20260921_synthesis.md): **PROVED scoped / VERIFIED Lean arithmetic.** Fermat tournament path counts; sharp fifteen-term coprimality; Fermat-prime decimal clocks; dihedral three-cycle lifts; pointed-product and remainder repairs. [Manifest](arithmetic_seams_20260921_manifest.json). Global Collatz convergence remains OPEN.
 
 - [Collatz guard extensions](collatz_guards_20260921_synthesis.md): **PROVED scoped / VERIFIED Lean reductions.** Irrational reset density; no bounded discrepancy; sharp squarefree word obstructions. Global convergence OPEN. [Manifest](collatz_guards_20260921_manifest.json).

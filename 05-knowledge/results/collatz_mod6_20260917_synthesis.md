@@ -8,12 +8,13 @@ conjectures, and LRC(14) remain OPEN. The user's geometric blueprint and its
 here). No literature-priority claim is made for the classical parts.**
 
 Session `collatz-mod6-20260917` (machine `mac-mini`, worked 2026-09-17,
-2026-09-21 and 2026-09-22). Twenty-two lane notes across five waves carry
+2026-09-21 and 2026-09-22). Twenty-seven lane notes across six waves carry
 the proofs and exact tables; this note is the cross-lane synthesis and the
 honest connection ledger. Sections 1--10 cover the first three waves
 (twelve lanes, prefix `collatz_mod6_20260917_`), section 11 the fourth
-wave (prefix `collatz_mod6_20260921_`) and section 12 the fifth
-(prefix `collatz_mod6_20260922_`). First-wave lane notes:
+wave (prefix `collatz_mod6_20260921_`), section 12 the fifth
+(prefix `collatz_mod6_20260922_`) and section 13 the sixth
+(prefix `collatz_mod6_20260922_w6_`). First-wave lane notes:
 
 | Lane | Note | Script |
 |---|---|---|
@@ -646,6 +647,109 @@ paste's own (undefined identifiers, an unbound `n`, a one-point
 `35` theorems and axioms at most `propext`/`Quot.sound`; a correct minimal
 descent-certificate statement typechecks in core Lean with `decide`-closed
 witnesses `n=3` (`t=6,K=4,L=2,B=5`) and `n=7`.
+
+## 13. Wave six (2026-09-22): the summand holes `{1,4,6}`, the square-filtered summand graph, Tao on the minus sheet, and the root asymmetry
+
+| Lane | Note | Script |
+|---|---|---|
+| Summand closure and the square filter | [summand_closure_square_filter](collatz_mod6_20260922_w6_summand_closure_square_filter.md) | `collatz_mod6_20260922_w6_summand_closure_square_filter.py` |
+| Square-sum Hamiltonicity | [square_sum_hamiltonicity](collatz_mod6_20260922_w6_square_sum_hamiltonicity.md) | `collatz_mod6_20260922_w6_square_sum_hamiltonicity.py` |
+| Tao on the minus sheet, the `Delta=4` ladder | [tao_minus_sheet_ladder](collatz_mod6_20260922_w6_tao_minus_sheet_ladder.md) | `collatz_mod6_20260922_w6_tao_minus_sheet_ladder.py` |
+| Sign-specific probes | [sign_specific_probes](collatz_mod6_20260922_w6_sign_specific_probes.md) | `collatz_mod6_20260922_w6_sign_specific_probes.py` |
+| Lean paste audit | [lean_paste_audit_w6](collatz_mod6_20260922_w6_lean_paste_audit_w6.md) | `collatz_mod6_20260922_w6_lean_paste_audit_w6.py` |
+
+**Two different "threes" (PROVED).** THM-2422's `{1,4,6}` is the closed
+hole module of the distinct-summand closure of the seeds `{2,3}`: three
+missing elements, not chains. The square-filtered summand graph `Q_n`
+(`x~y` iff `x+y` is a square, `x != y`) really does have three chains for
+`4<=n<=12`, but they are founded by the vertices born isolated, `1`, `2`
+and `4`: `{1,3,6,8,10}`, `{2,7,9}`, `{4,5,11,12}`, the orbits of the
+reflections `x->4-x`, `9-x`, `16-x`; `Q_n` is a linear forest exactly for
+`n<=12`, vertex `13` merges the chains of `1` and `4` (squares `16`, `25`)
+and vertex `14` absorbs `{2,7,9}`, and `Q_n` is connected for every
+`n>=14` because for `n>=6` the square `(floor(sqrt n)+1)^2` lies strictly
+inside `(n,2n)` (as `(1+sqrt 2)^2 = 5.83`), so the newest vertex always
+attaches. The degree law is
+`deg_n(m) = floor(sqrt(m+n)) - floor(sqrt m) - [2m square]`; `Q_n` has a
+leaf iff `3<=n<=30`, the threshold set solely by vertex `18` (`36=2*18` is
+the excluded diagonal, and the square `49` reaches `18` only at `n=31`).
+There is no dyadic or fractal law in `Q_n`: the `2j^2` leaf scar exists
+only for `j<=3`, the born-isolated and born-leaf sets are finite, degrees
+grow like `(sqrt2-1)sqrt n`. And the two threes cannot be identified:
+no additive target filter `T` has born-isolated set `{1,4,6}` (founders
+`4` and `6` would force `5` to be a founder; exhaustive over all `2^12`
+subsets of `{2..13}`), so the closure holes are intrinsically a
+labelled-fibre phenomenon. The Collatz target `(3n+1)/2` is never a
+square (`2k^2 = 1 mod 3` is impossible), so the square filter and the
+Collatz arrow select disjoint targets: the analogy preserves only the
+additive hyperedge with its excluded diagonal (SCOPE for any consequence).
+
+**Square-sum Hamiltonicity (FINITE-EXACT and PROVED obstructions).** Path
+existence for `1<=n<=40` is exactly `n in {1,15,16,17,23} cup [25,40]`,
+path counts up to reversal agree with OEIS A090460 term by term, cycles are
+absent at `30,31` and present from `32`; the `Q_15` path is unique, forced
+by its eleven degree-two vertices with leaves `8` and `9`, and omits exactly
+the edge `{1,3}` of square `4` (the pasted "avoid `4`" is refuted: `4` is
+interior with degree two). `Q_18` fails by its three leaves `{16,17,18}`;
+`n=19..22` fail by one-round forced-edge certificates and `n=24` by a
+two-round one, all written as proofs from the two general obstructions
+(three leaves; a cut set `S` with more than `|S|+1` components). OEIS
+A090461 records the "all `k>=25`" conjecture as proved with Hamiltonian
+cycles for `k>=32` (Gerbicz 2018, CITED via the OEIS comments and the
+archived Mersenneforum thread: a 49-fold blow-up of "nice pairs" of
+chains); the simpler self-similar step is re-proved here by a finite
+junction check: any chain of `Q_n` from `1` to `3` (`n` odd) blows up to a
+Hamiltonian cycle of `Q_(25n+12)` from `1` to `3`, which from the base
+`n=35` gives the family `(71*25^m-1)/2` (verified at `887`, `22187`,
+`554687`). This is the honest form of the user's "microcosm generating the
+macrocosm": a finite base plus an explicit self-similar embedding by an
+odd square. The pasted horizon table is corrected entry by entry: component
+counts `3,2,1` at `12,13,14`; the `18--22` failures are leaf and cut
+obstructions, not parity; `23` succeeds because `18` can be an endpoint
+next to `7`.
+
+**Tao on the minus sheet (PROVED from CITED inputs; the full theorem stays
+OPEN).** Tao's paper (arXiv:1909.03562, fetched and text-converted) makes
+no remark about `3n-1`; the pasted "dyadic martingale renewal process" and
+"entropy decrement" descriptions are refuted (the paper's renewal process is
+two-dimensional and serves only the Fourier decay). What is proved here:
+the minus-sheet iteration is `Syr_-^n(N) = 3^n 2^(-|a|) N - F_n(a)` with
+Tao's own offset polynomial and the identical valuation-word law, hence
+`Syrac_-(Z/3^nZ) = -Syrac_+(Z/3^nZ)` and Propositions 1.14 and 1.17
+(fine-scale mixing, characteristic-function decay) hold verbatim on
+`3n-1`; whether the whole almost-all theorem transfers is OPEN (Sections 3
+and 5 of the paper were not re-run with the sign flipped), and "almost-all
+bounded values implies a single root" is refuted by the three minus
+basins (odd `n<=10^6`: `0.327/0.324/0.349`). The "`Delta=4` prime ladder"
+`3,7,11,17` has differences `4,4,6`, and primes in arithmetic progression
+with difference `4` have length at most three; "`3` is a first nontrivial
+prime target" is false since `3` has no Syracuse preimage on either sheet.
+
+**The root asymmetry (PROVED).** `1` is a fixed point of `(an+b)/2^k` iff
+`a+b` is a power of two; in the summand reading the plus arrow
+`n -> n+(n+1)/2` has companion `(n+1)/2`, which fixes `1` (the excluded
+diagonal `1+1`), while the minus companion `(n-1)/2` sends `1` to `0`,
+which is not a positive summand. This asymmetry is confined to `n=1` and
+is reading-dependent; the count of `(3,b,k)` edges with hypotenuse `<=X`
+has the sheet-blind main term `0.507819 sqrt X` and the sheets differ by at
+most `2 log_2(3 sqrt(2X)+1)`. The carry is an odd word function times `b`
+(`v_2(B_L)=0` always, `B_L(w,-1)=-B_L(w,+1)`), the `E`-graph picture is
+sheet-blind (`Q1_-` and `Q2_-` hold to `10^6`, the minus cycles being
+escaped through even arrows), and the general **word-function theorem**
+says why: any invariant that is a function of the parameter `b` and the
+parity word is sheet-blind, so a sign-specific invariant must be an
+*order* statement. The one such statement found is the residue-of-minimum
+law on the known cycles (plus-sheet cycle minimum `3 mod 4` and maximum
+`1 mod 4`, minus sheet the reverse), recorded as an observation on four
+cycles, not a theorem.
+
+**Lean (core Lean, `decide`, no Mathlib, no `sorry`).** The pasted
+`square_sum_graph` is not loopless (values `2, 8, 18, 32` are self-adjacent);
+`Q_14` connected and `Q_12`, `Q_13` disconnected with component counts
+`3,2,1,1,1,1` for `n=12..17` are machine-checked; the pasted
+`delta_four` statement is true but `15` and `21` are composite; the
+pasted `SignSpecificCertificate` is inhabited for every `n>=1` (`L=0,
+K=1, B=0`) and mentions no orbit, so it guards nothing.
 
 ## Reproduction and audit scope
 
