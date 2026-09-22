@@ -1,0 +1,62 @@
+=== AUDIT: fruit_rank_positive_multiples ===
+elltors = [6, [6], [[56, 728]]]
+ellrank(E,1) = [1, 1, 0, [[-100, 260]]]
+ellrootno = -1
+ellanalyticrank = [1, 1.3176683943444326217031467282048324986]
+hG = 1.5187021867268516013726836429773604445
+ellbsd = 0.86762790352222215780256688581265434524
+ratio L'/(ellbsd*hG) = 0.99999999999999999999999999999999999999
+BSD reading: ratio = |Sha| * hhat(P0)/hhat(G) = |Sha|/n^2 where G = n*P0 + tors ; so |Sha| = n^2 * ratio
+if n=1: |Sha| = 0.99999999999999999999999999999999999999 ; if n=2: |Sha| = 4.0000000000000000000000000000000000000 ; if n=1009: |Sha| = 1018081.0000000000000000000000000000000
+omega1 = 0.65072092764166661835192516435949075893 ; 2*omega1*24/36 = 0.86762790352222215780256688581265434524
+Pg=(-100,260) - G = [4, 52] ; 2T = [4, 52]
+ellsaturation(E,[G],1000) = [[-4, 28]]
+ellsaturation(E,[G],10000) = [[-4, 28]] time ms 999
+ellratpoints(E,10^5): count 29
+ellratpoints: points outside <G,T> = 0 ; largest |n| among them all = 2
+
+--- B. exact triples from PARI points ---
+(56-x)^2 - (x^3+109x^2+224x) factors as -(x - 4)*(x**2 + 112*x + 784)
+=> for x<4: a*b>0 iff x^2+112x+784>0 ; c>0 iff x<-14/3 ; so (10) is an iff (PROVED)
+gcds of cleared triples (m=1..80, k=0): [1, 8]  all divide 728: True
+k=0 positive m: [9, 17, 43, 51, 77] count 5
+k=1 positive m: [13, 21, 39, 47, 55, 73] count 6
+k=2 positive m: [9, 17, 43, 51, 77] count 5
+k=3 positive m: [13, 21, 39, 47, 55, 73] count 6
+k=4 positive m: [9, 17, 43, 51, 77] count 5
+k=5 positive m: [13, 21, 39, 47, 55, 73] count 6
+total positive: 33 of 480
+smallest positive by max digits (digits,m,k): [(81, 9, 0), (81, 9, 2), (81, 9, 4), (168, 13, 1), (168, 13, 3), (168, 13, 5), (286, 17, 0), (286, 17, 2)]
+max digits of positive k=0 rows: [(9, 81), (17, 286), (43, 1830), (51, 2574), (77, 5866)]
+k=0 fruit digit tuples m=9,13,17: [(81, 80, 79), (167, 168, 168), (286, 286, 286)]
+k=1 fruit digit tuple m=13: (167, 168, 167)
+exact: mG+kT on egg (x^2+109x+224<=0) iff m odd, for all 480 points: True
+odd m with x<-14/3 (k=0): 29 ; even: 0
+triple(mG+2T) vs triple(mG) = (a,b,c): counts {'id': 0, 'bca': 80, 'cab': 0}  (one fixed cyclic direction for all m)
+triple(mG+3T) = J(triple(mG)), triple(mG+T) = J(triple(mG+4T)), triple(mG+5T) = J(triple(mG+2T)): all 80 m: True
+J of every positive triple (33) has exactly one negative coordinate: True
+rows disjoint: True
+
+--- C. digits vs height (hG = 1.518702186726852) ---
+(3/2) hG/ln10 = 0.9893459690248102 ; hG/ln10 = 0.6595639793498735
+m= 9 log10(max fruit)/m^2 = 0.98999 ; log10 H(x)/m^2 = 0.65211 ; x digits (num,den) = (53,53) ; fruit max digits 81
+m=20 log10(max fruit)/m^2 = 0.98939 ; log10 H(x)/m^2 = 0.65809 ; x digits (num,den) = (263,264) ; fruit max digits 396
+m=40 log10(max fruit)/m^2 = 0.98936 ; log10 H(x)/m^2 = 0.65990 ; x digits (num,den) = (1056,1054) ; fruit max digits 1583
+m=60 log10(max fruit)/m^2 = 0.98935 ; log10 H(x)/m^2 = 0.65935 ; x digits (num,den) = (2374,2374) ; fruit max digits 3562
+m=80 log10(max fruit)/m^2 = 0.98935 ; log10 H(x)/m^2 = 0.65961 ; x digits (num,den) = (4222,4221) ; fruit max digits 6332
+m=9 predictions: (3/2)*81*hG/ln10 = 80.14 ; 81*hG/ln10 = 53.42 ; actual fruit digits 81, x digits 53
+gcd bound: gcd(cleared triple) | 728 so log10(max fruit) = 3 log10 q + O(1) on the egg (|x|,|y| bounded): PROVED for odd m
+
+--- D. arc-measure fraction of positive window on the egg ---
+egg = [-106.904675, -2.09532464] ; window = [egg_left, -104.497423) U (-7.50257739, -14/3)
+int dx/sqrt(f) over egg = (0.650720927641667 - 1.12934074868439e-16j) ; over window = 0.0886214809108191 ; fraction = (0.13618968923 + 2.36360256854e-17j)
+egg integral vs PARI omega1 (0.650720927641666618...): ratio = (1.0 - 1.73552240402e-16j)
+observed 5/40 = 0.125 (k=0, odd m<=80) ; 6/40 = 0.150 (k=1) ; 11/80 = 0.1375 (both rows)
+
+--- E. BSD index bookkeeping ---
+ellbsd doc: L'(E,1) = c*R*S with R = hhat(P0) (generator), S = |Sha|.  G = n P0 + tors => hhat(G) = n^2 R.
+=> L'/(c*hhat(G)) = S/n^2.  Computed value 1 (38 digits) => S = n^2 under BSD, NOT S*n^2 = 1.
+with ellsaturation(1000): n = 1 or n > 997 ; under BSD: n = 1 <=> Sha trivial ; n>997 <=> |Sha| > 994009.
+largest prime below 10^4 = 9973 ; with ellsaturation(10000): n = 1 or n > 9973 ; then hhat(P0) = hG/n^2 < hG/10^8 = 1.5187e-08 (= 1.5188/10^8)
+explorer's midpoint arc fraction 0.13638 vs tanh-sinh 0.13619: the midpoint rule is wrong in the 4th digit
+=== AUDIT END ===

@@ -1,0 +1,123 @@
+==============================================================================
+AUDIT of lane grand_circuit_typing (independent recomputation)
+==============================================================================
+
+### A1  AAC: negative Pell x^2 - p y^2 = -1 by continued fractions, then the half-integral unit
+A1 primes p = 1 mod 4 in [5, 3000): 211  (explorer: 211)
+    all 211 satisfy t^2 - p u^2 = -4 and p !| u; histogram v3(u): {0: 211}; v2(u): {0: 79, 1: 132}  (explorer: {0: 211}, {0: 79, 1: 132})
+    census: p=1 mod 8: 101 (all v2(u)=1: True); p=5 mod 8: 110, v2(u)=0: 79, v2(u)=1: 31  (explorer: 101, True, 110, 79, 31)
+    longest u: p=2689, 38 digits, u mod p = 2646  (explorer: p=2689, 38 digits, 2646)
+    small cases (p, t, u): [(5, 1, 1), (13, 3, 1), (17, 8, 2), (29, 5, 1), (37, 12, 2), (41, 64, 10)]
+    S7 / S7b: CONFIRMED (independent solver agrees on every number; t = u mod 2 on all 211).
+
+### A2  GIUGA: direct sum (pure Python) n <= 5000; criteria by sympy.factorint n <= 10^5
+A2 direct sum n <= 5000: primes failing Fermat: 0; composites with sum = -1: none  (explorer: none up to 30000)
+    Carmichael numbers <= 10^5: 16 [561, 1105, 1729, 2465, 2821, 6601, 8911, 10585, 15841, 29341, 41041, 46657, 52633, 62745, 63973, 75361]
+    Giuga numbers <= 10^5: [30, 858, 1722, 66198]; composites satisfying BBBG: none; user's criterion: none; disagreements (all n, primes included): 0
+    sum 1/p - 1/n = 1 for each Giuga number: True
+    S2 prime-power lemma at k = -1 mod q (the case that occurs), q = p^a <= 5000, a >= 2: failures 0
+    S1-S4: CONFIRMED.  Note: BBBG's equivalence is already in Giuga (1950); BBBG restate and extend it.
+
+### A3  the trunk: R^j(1) vs (4^j-1)/3
+A3 R^j(1), j=0..8: [1, 5, 21, 85, 341, 1365, 5461, 21845, 87381]
+    R^j(0), j=0..8: [0, 1, 5, 21, 85, 341, 1365, 5461, 21845]
+    t_j=(4^j-1)/3, j=0..8: [0, 1, 5, 21, 85, 341, 1365, 5461, 21845]
+    => t_j = R^j(0) = R^(j-1)(1), NOT R^j(1) (explorer's S5 header is off by one; wild_typing lane has N_j = R^(j-1)(1)).
+    j: (squarefree, Korselt, Giuga, first failing prime) for j in 3..12, 20, 30, 40:
+       3: (True, False, False, 7)
+       4: (True, False, False, 5)
+       5: (True, False, False, 11)
+       6: (True, False, False, 3)
+       7: (True, False, False, 43)
+       8: (True, False, False, 5)
+       9: (False, False, False, 3)
+      10: (False, False, False, 5)
+      11: (True, False, False, 23)
+      12: (True, False, False, 7)
+      20: (False, False, False, 5)
+      30: (False, False, False, 5)
+      40: (False, False, False, 5)
+    S5 table: CONFIRMED (0 Korselt, 0 Giuga for 3 <= j <= 40; all 13 first-failing primes agree).
+
+### A4  continued fraction of log_2 3 by mpmath (independent of PARI)
+A4 mpmath at 220 digits; first 60 partial quotients: [1, 1, 1, 2, 2, 3, 1, 5, 2, 23, 2, 2, 1, 1, 55, 1, 4, 3, 1, 1, 15, 1, 9, 2, 5, 7, 1, 1, 4, 8, 1, 11, 1, 20, 2, 1, 10, 1, 4, 1, 1, 1, 1, 1, 37, 4, 55, 1, 1, 49, 1, 1, 1, 4, 1, 3, 2, 3, 3, 1]
+    records: [(0, 1), (3, 2), (5, 3), (7, 5), (9, 23), (14, 55)]; max 55; sum 388; 55 recurs at index 46
+    convergents (q <= 10^12), q||q alpha||: ['1/1:0.584963', '2/1:0.415037', '3/2:0.339850', '8/5:0.375937', '19/12:0.234600', '65/41:0.678036', '84/53:0.159665', '485/306:0.451282', '1054/665:0.041881', '24727/15601:0.409514', '50508/31867:0.334001', '125743/79335:0.419450', '176251/111202:0.577584', '301994/190537:0.017732', '16785921/10590737:0.799110', '17087915/10781274:0.189869', '85137581/53715833:0.269110', '272500658/171928773:0.443799', '357638239/225644606:0.547999', '630138897/397573379:0.060709', '9809721694/6189245291:0.854706', '10439860591/6586818670:0.096198', '103768467013/65470613321:0.435645', '217976794617/137528045312:0.178303', '1193652440098/753110839881:0.129252']
+    S10: CONFIRMED (60 quotients, records, sum, all 25 convergent qualities agree to 1e-6).
+
+### A5  S12 float64 minimum re-checked at high precision
+A5 n=10946=F_21: n||n alpha|| ||n phi|| = 0.000209 (explorer float64: 0.000209); n||n alpha|| = 5.112945, n||n phi|| = 0.447214
+    q=190537: exact q||q alpha|| = 0.017732; the float64 scan reported 0.017734 (error ~ q^2 * 2^-53 = 4.0e-06): a float64 artefact,
+    consistent with the HEURISTIC label.  min_n n||n phi|| over n<=10^6 is 1/phi^2 = 0.381966 at n=1; liminf is 1/sqrt5 = 0.447214.
+
+### A6  S15: the index slip in the Mobius-correlated 2-adic point
+A6 explorer's target [mu(k+1)=1], k=0..31: 10000100010001100000110001000000 -> x = 890931253 mod 2^32 (explorer: 890931253)
+    corrected target (parity(x)=0; [mu(k)=1] for k=1..31): 01000010001000110000011000100000 -> x = 1781862506 mod 2^32
+    With the explorer's indexing f(T^n x) = parity(T^n x) = [mu(n+1)=1], so (1/N) sum mu(n) f(T^n x) = (1/N) sum mu(n)[mu(n+1)=1],
+    NOT (1/N)#{mu(n)=1}.  Demonstration on 2000-bit truncations, N = 1999:
+    explorer's point: (1/N) sum mu(n) parity(T^n x) = -0.002001;  corrected point: +0.305153;  #{mu(n)=1}/N = 0.305153;  3/pi^2 = 0.303964
+    (Trivial repair, and the conclusion 'disjointness is FALSE on Z_2' survives with the corrected point; the note's
+    formula (1/N)#{mu(n)=1} was wrong for the point as defined.  The correlation with the explorer's point is
+    (1/2) sum mu(n) mu(n+1)^2 + (1/2) sum mu(n) mu(n+1), whose second term is the 2-point Chowla sum: OPEN for natural density.)
+    A 2-adic point with parity vector [mu=1] is not in Q: rational x have eventually periodic parity vectors (Lagarias 1985, CITED)
+    and [mu=1] is not eventually periodic (every class r mod P contains infinitely many n with mu(n)=1 and with mu(n)=0).
+
+### A7  S16 correlations by an independent linear sieve and direct iteration, N = 10^6
+A7 linear sieve: squarefree count to 10^6 = 607926 (expected 607926)
+    j=0  c_j = -0.000068 (explorer -0.000068)  parity mean 0.500000  periodic mod 2: True  periodic mod 1: False
+    j=1  c_j = +0.000344 (explorer +0.000344)  parity mean 0.500000  periodic mod 4: True  periodic mod 2: False
+    j=2  c_j = +0.000306 (explorer +0.000306)  parity mean 0.500000  periodic mod 8: True  periodic mod 4: False
+    j=3  c_j = +0.000086 (explorer +0.000086)  parity mean 0.500000  periodic mod 16: True  periodic mod 8: False
+    j=4  c_j = -0.000054 (explorer -0.000054)  parity mean 0.500000  periodic mod 32: True  periodic mod 16: False
+    j=5  c_j = +0.000600 (explorer +0.000600)  parity mean 0.500000  periodic mod 64: True  periodic mod 32: False
+    j=6  c_j = -0.000760 (explorer -0.000760)  parity mean 0.499992  periodic mod 128: True  periodic mod 64: False
+    S16: CONFIRMED; sharpness: parity(T^j n) is periodic mod 2^(j+1) and NOT mod 2^j (Terras 1976 / Everett 1977, CITED).
+
+### A8  S20 / S21 coprimality
+A8 max gcd(x_j, x_{j+1}) on the R-orbit of 7 (j<30): 1; consecutive odd iterates: 326623 pairs, max gcd 1 (explorer: 326623, 1)
+    S20/S21: CONFIRMED (the pair loop stops at the fixed point 1 = (3*1+1)/4 and at x=1; the fixed point is excluded from the count).
+
+### A9  repository greps re-done
+A9 tournament-titled canon theorems: 182 (explorer 182); with 17 in title: 10 (explorer 10); body hits for n=17 tournaments: 2 ['THM-868-e8-bridge-score-lattice.md', 'THM-871-fermat-rung-rigidity.md']
+    => the explorer's NOTE said 0 body hits; its own .out said 2.  THM-871 is ABOUT 17-vertex (rotational) tournaments:
+      THM-871 body: ## 2. The sedenion census (n = 17)
+      THM-871 title: FERMAT-RUNG RIGIDITY AND THE SEDENION CENSUS — for prime n with n−1 a 2-power (Fermat primes: the CD rungs 3, 5, 17, 257, …), the multiplier group Z_{n−1} is a 2-group, so (tournament Aut being odd) every rotational tournament has Aut = Z_n exactly; at n = 17 
+    results notes (own lane excluded) matching S^6 / S6 monodromy / S_2 x S_3: 5: ['arithmetic_seams_20260921_dynamics.md', 'arithmetic_seams_20260921_synthesis.md', 'collatz_blueprint_20260921_synthesis.md', 'planar_jc48_sep06_global_curve.md', 'planar_jc48_sep06_resolution_budget.md']
+    classification: planar_jc48_sep06_* : 'S^6' is the monomial S^6 in projective coordinates [S:T] (not a sphere, not a paste audit);
+      arithmetic_seams_20260921_{synthesis,dynamics}: an explicit S_2 x S_3 action on a six-vector lift of a rational three-point cycle
+      (a concurrent opus lane on the same paste family); collatz_blueprint_20260921_synthesis: the S6-monodromy refutation.
+    => the explorer's 'S_2 x S_3 appears once (catalan_elliptic)' is wrong: the catalan_elliptic synthesis writes 'C2 x S3' (not matched
+      by its own regex) and the arithmetic_seams lanes carry a defined S_2 x S_3 action.  Also the count 5/6 is unstable (it counted itself).
+    Wythoff / Zeckendorf / 'golden ratio' in the audited notes: {'arithmetic_braids_20260917_summand.md': ['zeckendorf'], 'collatz_blueprint_20260921_energy.md': ['wythoff'], 'collatz_blueprint_20260921_synthesis.md': ['wythoff'], 'collatz_guards_20260921_valves.md': ['golden ratio'], 'collatz_mod6_20260917_scaffolding_audit.md': ['wythoff'], 'collatz_mod6_20260917_synthesis.md': ['wythoff']}
+    => the explorer's 'Wythoff, Zeckendorf and the golden ratio occur in none of the audited notes' is FALSE as stated:
+      the blueprint energy note defines the lower Wythoff sequence W(k)=floor(k phi) and the scaffolding audit / mod6 synthesis
+      carry 'Wythoff diffraction' as a SCOPE token; the guards valves note mentions the golden ratio.  The correct statement is that
+      no audited note attaches a golden-ratio object to a Collatz orbit (all occurrences are SCOPE typings of the same paste family).
+
+### A10  S25 table: 2^K - 3^L along the convergents
+    K=     1 L=     1 sign -1  |2^K-3^L|/3^L = 3.333e-01  (1 digits)
+    K=     2 L=     1 sign +1  |2^K-3^L|/3^L = 3.333e-01  (1 digits)
+    K=     3 L=     2 sign -1  |2^K-3^L|/3^L = 1.111e-01  (1 digits)
+    K=     8 L=     5 sign +1  |2^K-3^L|/3^L = 5.350e-02  (2 digits)
+    K=    19 L=    12 sign -1  |2^K-3^L|/3^L = 1.346e-02  (4 digits)
+    K=    65 L=    41 sign +1  |2^K-3^L|/3^L = 1.153e-02  (18 digits)
+    K=    84 L=    53 sign -1  |2^K-3^L|/3^L = 2.086e-03  (23 digits)
+    K=   485 L=   306 sign +1  |2^K-3^L|/3^L = 1.023e-03  (144 digits)
+    K=  1054 L=   665 sign -1  |2^K-3^L|/3^L = 4.365e-05  (313 digits)
+    K= 24727 L= 15601 sign +1  |2^K-3^L|/3^L = 1.819e-05  (7439 digits)
+    K= 50508 L= 31867 sign -1  |2^K-3^L|/3^L = 7.265e-06  (15200 digits)
+    K=125743 L= 79335 sign +1  |2^K-3^L|/3^L = 3.665e-06  (37847 digits)
+    K=176251 L=111202 sign -1  |2^K-3^L|/3^L = 3.600e-06  (53052 digits)
+    K=301994 L=190537 sign +1  |2^K-3^L|/3^L = 6.451e-08  (90903 digits)
+    S25: CONFIRMED (signs alternate; 2^8-3^5 = 13 = 5.350e-02 * 3^5).
+
+### AUDIT SUMMARY
+CONFIRMED: S1-S4 (Giuga, BBBG, user's criterion), S7/S7b (AAC data and forced valuations), S10-S12 (cf of log_2 3; S12 float artefact noted),
+           S16 (c_j and periodicity, sharp), S18-S21, S25, the 182/10 title greps.
+REFUTED-AS-WRITTEN and repaired: S5 header t_j = R^j(1) (is R^(j-1)(1) = R^j(0)); S15 correlation formula (index slip mu(n) vs mu(n+1));
+           S22 '0 body hits' (2: THM-868, THM-871 -- THM-871 is a theorem about 17-vertex rotational tournaments); S24 'S_2 x S_3 appears once'
+           (arithmetic_seams lanes carry a defined action; the grep count was unstable and included non-paste planar_jc48 monomials);
+           S13 'Wythoff in none of the audited notes' (blueprint energy defines W(k)=floor(k phi)); S23 h-spectrum cited to THM-1745 (it is THM-1370,
+           whose completeness 'odds minus {7,21}' is a CONJECTURE there).
+DOWNGRADES: 'Stroeker-Tijdeman 1982' exponent not asserted (shape only); the norm -1 fact is CITED classical (Legendre); Terras/Everett added for S16.
+ALL AUDIT CHECKS PASSED

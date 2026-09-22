@@ -222,7 +222,8 @@ print("    if p^2 | n then p | n/p, so p does not divide n/p-1.  For prime n the
 print("    So the paste's restatement is correct (it is the BBBG criterion in one line), and no map to Collatz is involved.")
 
 # S5: the Cipolla trunk (4^j-1)/3 = R^j(1): never Carmichael, never Giuga (j<=40)
-print("S5 FINITE-EXACT: trunk numbers t_j=(4^j-1)/3 (the R-orbit of 1, inherited), j=3..40 (t_2=5 is prime, vacuous):")
+print("S5 FINITE-EXACT: trunk numbers t_j=(4^j-1)/3 = R^j(0) = R^(j-1)(1) (the inherited trunk N_j of the wild_typing lane;")
+print("    audit fix: the first version wrote R^j(1), off by one), j=3..40 (t_2=5 is prime, vacuous):")
 print("    j  t_j  squarefree  Korselt(all p-1 | t_j-1)  Giuga(all p | t_j/p-1)  first failing prime")
 trunk_bad = 0
 for j in range(3, 41):
@@ -373,7 +374,10 @@ print("S12 HEURISTIC (float64): min_{n<=10^6} n ||n log_2 3|| ||n phi|| = %.6f a
 print("    min_{n<=10^6} n ||n log_2 3|| = %.6f, min n ||n phi|| = %.6f (phi's constant is 1/sqrt5 = %.6f)"
       % (float((n_arr * da).min()), float((n_arr * dp).min()), 1 / 5 ** 0.5))
 print("S13 SCOPE / NO MAP: the Collatz discrepancy K_j - j log_2 3 involves ONE irrational (inhomogeneous, one-number).")
-print("    Wythoff/Zeckendorf/golden ratio occur in none of the audited notes (grep: 'phi' there is an angle).")
+print("    Wythoff/Zeckendorf/golden ratio occur in the audited notes only as SCOPE tokens of the same paste family (blueprint energy")
+print("    note: lower Wythoff sequence floor(k phi) typed and dismissed; scaffolding audit / mod6 synthesis: 'Wythoff diffraction' SCOPE;")
+print("    braids summand: Zeckendorf; guards valves: 'golden ratio'); no audited note attaches a golden-ratio object to a Collatz")
+print("    orbit, and in the pythagorean_semicircle lane 'phi' is an angle.  (Audit fix: the first version said 'in none of the notes'.)")
 print("    'Bragg peaks q_{m,n}=(2 pi/phi^2)(m+n phi)' is the Fibonacci-chain diffraction module (Levine-Steinhardt 1984,")
 print("    CITED as a formula family; the paste's normalisation is not load-bearing); '5 pi/6 phase from 5 mod 6': no object.")
 
@@ -388,8 +392,10 @@ print("    (three_adic_g_map lane, Theorem 1.3).  Both have positive entropy: Sa
 
 # S15: an explicit 2-adic point whose parity vector IS the indicator of mu = 1 (full-shift surjectivity)
 K = 32
-mu_small = [int(sympy.mobius(k + 1)) for k in range(K)]
-target = [1 if m == 1 else 0 for m in mu_small]
+mu_small = [int(sympy.mobius(k)) for k in range(1, K)]
+# parity(x) = 0 (k = 0, mu(0) undefined) and parity(T^k x) = [mu(k) = 1] for 1 <= k < K, so that f(T^n x) = [mu(n) = 1].
+# (Audit fix: the first version used [mu(k+1) = 1], for which sum mu(n) f(T^n x) is sum mu(n)[mu(n+1)=1], not #{mu(n)=1}.)
+target = [0] + [1 if m == 1 else 0 for m in mu_small]
 
 
 def parity_vector(x, k):
@@ -408,10 +414,13 @@ for k in range(1, K + 1):
     check(len(ok) == 1, "parity lift not unique at k=%d" % k)
     x = ok[0]
 check(parity_vector(x, K) == target, "parity vector mismatch")
-print("S15 PROVED + FINITE-EXACT: Q is a bijection, so there is a 2-adic x with parity(T^k x) = [mu(k+1) = 1] for ALL k.")
-print("    Truncation: x = %d mod 2^%d realises the first %d values of [mu=1] = %s" % (x, K, K, "".join(map(str, target))))
-print("    For that x the Mobius correlation of f = parity is (1/N) sum_{mu(n)=1} 1 -> 3/pi^2 = %.6f, not 0:" % (3 / math.pi ** 2))
-print("    Mobius disjointness is FALSE for the Collatz system on Z_2 (as for any full shift).  Such x is irrational.")
+print("S15 PROVED + FINITE-EXACT: Q is a bijection, so there is a 2-adic x with parity(x) = 0 and parity(T^k x) = [mu(k) = 1] for ALL k >= 1.")
+print("    Truncation: x = %d mod 2^%d realises parity(x)=0 and the first %d values of [mu=1]: %s" % (x, K, K - 1, "".join(map(str, target))))
+print("    For that x, f(T^n x) = parity(T^n x) = [mu(n)=1] for n >= 1, so (1/N) sum_{n<=N} mu(n) f(T^n x) = (1/N) #{n<=N : mu(n)=1} -> 3/pi^2 = %.6f, not 0:"
+      % (3 / math.pi ** 2))
+print("    Mobius disjointness is FALSE for the Collatz system on Z_2 (as for any full shift).  Such x is not in Q: rational 2-adic")
+print("    integers have eventually periodic parity vectors (Lagarias 1985, CITED) and [mu=1] is not eventually periodic (every")
+print("    class r mod P contains infinitely many n with mu(n)=1 and infinitely many with mu(n)=0).")
 
 # S16: finite-j correlations, N = 10^6
 N4 = 10 ** 6
@@ -437,7 +446,8 @@ for j in range(0, 7):
     print("    j=%d  c_j = %+.6f   parity mean = %.6f   parity(T^j n) periodic mod %d: %s" % (j, c, mean_par, mod, periodic))
     check(periodic, "parity not periodic")
     cur = np.where(cur & 1 == 1, (3 * cur + 1) // 2, cur // 2)
-print("    PROVED (via CITED PNT in arithmetic progressions, Landau): each c_j -> 0 because parity(T^j n) is periodic mod 2^(j+1),")
+print("    PROVED (via CITED PNT in arithmetic progressions, Landau; the periodicity mod 2^(j+1) is Terras 1976 / Everett 1977, CITED,")
+print("    and is sharp: not periodic mod 2^j, see the audit): each c_j -> 0 because parity(T^j n) is periodic mod 2^(j+1),")
 print("    hence a finite combination of residue-class indicators, each Mobius-orthogonal.  This is the zero-entropy rotation on")
 print("    Z/2^(j+1), not the Collatz dynamics, and says nothing about Collatz.")
 print("S17 SCOPE / NO MAP: 'F=S+U' is the divisor identity F=S+U iff N in {p,p^3,p^2qr} (divisor_balance lane); the 4-vertex")
@@ -509,24 +519,33 @@ for fn, t in tourn_titles:
     if re.search(r"17[- ]vert|\bn\s*=\s*17\b|order[- ]17\b|17-tournament|17 vertices", body, re.I):
         body17.append(fn)
 print("    tournament-titled theorems whose BODY mentions a 17-vertex / order-17 / n=17 tournament: %d %s" % (len(body17), body17[:6]))
-print("    (the ten title hits above are: 17 as a coefficient of the 7-tournament spectrum x^4+14x^2+17, the Fermat prime 17,")
-print("    the fingerprint twin (17,13), and mod-16/2-adic statements; none defines a capacity of a 17-vertex tournament.)")
+check(body17 == ["THM-868-e8-bridge-score-lattice.md", "THM-871-fermat-rung-rigidity.md"], "body-17 hit list changed")
+print("    THM-871 IS a theorem about 17-vertex tournaments: for the Fermat prime n=17 every rotational tournament has Aut = Z_17")
+print("    and there are exactly 16 rotational classes (a free Z_16-torsor); THM-868 lists the sedenion rung n=17.  Neither defines a")
+print("    'capacity'.  (The ten title hits above are: 17 as a coefficient of the 7-tournament spectrum x^4+14x^2+17, the Fermat prime 17,")
+print("    the fingerprint twin (17,13), and mod-16/2-adic statements.)")
 res_dir = os.path.join(REPO, "05-knowledge", "results")
-s6_hits = 0
-for fn in os.listdir(res_dir):
-    if not fn.endswith(".md"):
+s6_files = []
+for fn in sorted(os.listdir(res_dir)):
+    # own-lane files excluded so that the count is stable under rewrites of this note
+    if not fn.endswith(".md") or fn.startswith("collatz_mod6_20260921_grand_circuit_typing"):
         continue
     with open(os.path.join(res_dir, fn), "r", encoding="utf-8", errors="replace") as fh:
         txt = fh.read()
     if re.search(r"S\^6\b|\bS6 monodromy|S_2 x S_3|S2 x S3", txt):
-        s6_hits += 1
-print("    results notes mentioning 'S^6', 'S6 monodromy' or 'S_2 x S_3': %d (all are audits of the same paste family)." % s6_hits)
-print("S23 SCOPE: the only '17's in tournament context in this session are the h-value 17 attained at n=6 (scaffolding_audit,")
-print("    section 5 census; h-spectrum = odds minus {7,21}, THM-1370/THM-1745) and the class 17 of the mod-30 wheel.")
-print("    No 'capacity' of a 17-vertex tournament is defined anywhere: no object.")
-print("S24 SCOPE: 'S^6 with an S_2 x S_3 projective lift': S^6 (the 6-sphere) appears in no note; S_2 x S_3 = C2 x S3 (order 12)")
-print("    appears once, as the actual automorphism action on the fruit curve triple (catalan_elliptic lane, section 4); a")
-print("    'projective lift of S^6' is undefined.  The blueprint audit already found no S6 monodromy.  No object.")
+        s6_files.append(fn)
+print("    results notes (own lane excluded) matching 'S^6', 'S6 monodromy' or 'S_2 x S_3': %d: %s" % (len(s6_files), s6_files))
+print("    classified: planar_jc48_sep06_* match the monomial S^6 in projective coordinates [S:T] (not a sphere, not this paste family);")
+print("    arithmetic_seams_20260921_{synthesis,dynamics} build an explicit S_2 x S_3 action on a six-vector lift of a rational")
+print("    three-point cycle (concurrent opus lane, same paste family); collatz_blueprint_20260921_synthesis refutes the S6 monodromy.")
+print("S23 SCOPE: the '17's in tournament context in this session are the h-value 17 attained at n=6 (scaffolding_audit, section 5")
+print("    census; 7 and 21 omitted from the h-spectrum for all n is THM-1370, whose completeness 'odds minus {7,21}' is a CONJECTURE")
+print("    there; THM-1745 is the arborescence shadow of {7,21}), the class 17 of the mod-30 wheel, and canon THM-871's 16 rigid")
+print("    rotational classes at n=17.  No 'capacity' of a 17-vertex tournament is defined anywhere: no object.")
+print("S24 SCOPE: 'S^6 with an S_2 x S_3 projective lift': S^6 (the 6-sphere) appears in no note of this paste family; S_2 x S_3 = C2 x S3")
+print("    (order 12) appears as the automorphism action on the fruit-curve triple (catalan_elliptic synthesis, written 'C2 x S3') and as")
+print("    the arithmetic_seams lanes' explicit action on the six-vector lift of a rational three-point cycle; a 'projective lift of S^6'")
+print("    is undefined in all of them.  The blueprint audit already found no S6 monodromy.  No object.")
 
 # ---------------------------------------------------------------------------
 print("\n### P7  THE HONEST BRIDGE: 2^K - 3^L ALONG THE CONVERGENTS OF log_2 3")
@@ -535,8 +554,9 @@ print("    (inherited) needs 2^K - 3^L small and positive relative to B.  Table:
 for h, k in conv[:14]:
     d = 2 ** h - 3 ** k
     print("      K=%3d L=%3d  sign %+d  |2^K-3^L|/3^L = %.3e  (%d digits)" % (h, k, 1 if d > 0 else -1, abs(d) / 3 ** k, len(str(abs(d)))))
-print("    CITED: Baker-type lower bounds |2^K-3^L| > 2^K / K^C (Pillai's problem; Stroeker-Tijdeman 1982 for this pair) are the")
-print("    only formal input that bounds cycle lengths through the gate; that is the pillai lane's object, not this lane's.")
+print("    CITED (shape only; the exponent C is not asserted here): Baker-type lower bounds |2^K-3^L| > 2^K / K^C (Pillai's problem;")
+print("    Stroeker-Tijdeman 1982 for this pair) are the standard formal input that bounds cycle lengths through the gate; that is")
+print("    the pillai lane's object, not this lane's.")
 
 print("\n### VERDICT")
 print("V1 Giuga: statement CITED; BBBG equivalence re-PROVED and FINITE-EXACT n<=30000 direct, n<=10^5 by criterion; user's")

@@ -1,5 +1,5 @@
 # collatz_mod6_20260921_g_negatives_joint_carry
-source sha256 8be6120e4fd0875c74c349a5d09af0c056ba42c190629bef661a1926ed7cdba2
+source sha256 3ff68f2a106527824a962de4fbf80f8f1f5f72e7616e8ddd3bc7f497bb8e8647
 
 ## S1. G on negative integers coprime to 3: cycles and basins
 S1.1 G(-p) = -G_-(p) with the same k for all p <= 20000, 3 !| p; k-tables k_+(r)={1: 2, 2: 1, 4: 0, 5: 3, 7: 0, 8: 1}, k_-(r)={1: 1, 2: 0, 4: 3, 5: 0, 7: 1, 8: 2}, k_-(r) = k_+(-r mod 9).
@@ -8,7 +8,7 @@ S1.2 gate: m0=-1 word=(1,) (J,L)=(1,1) 2^J-3^L=-1 B'=1
 S1.2 gate: m0=-4 word=(3, 0) (J,L)=(3,2) 2^J-3^L=-1 B'=4
 S1.2 gate: m0=-11 word=(0, 3) (J,L)=(3,2) 2^J-3^L=-1 B'=11
 S1.2 gate: m0=1 word=(2,) (J,L)=(2,1) 2^J-3^L=1 B'=1
-[time] S1.3 census 11.5s
+[time] S1.3 census 11.3s
 S1.3 FINITE-EXACT: every m in [-10^7, -1] with 3 !| m reaches {-1} or {-4,-11} under G; escapes to |m| > 10^18: 0; new cycles: 0.
 S1.3 basins: to {-1}: 2897798; to {-4,-11}: 3768869; total 6666667 (= 6666667 non-multiples of 3).
 S1.3 basin fraction to {-4,-11}: 0.565330
@@ -30,7 +30,7 @@ S1.3 the two worst ratios: negative 318145727/2391484, positive 644874241/484748
 S1.4 direct evaluation of G on m in [-10^5, -1] reproduces the conjugated basin labels.
 S1.5 basin of {-4,-11} below 100: [-4, -8, -11, -13, -16, -17, -19, -23, -25, -26, -28, -31, -32, -34, -35, -37, -38, -46, -47, -50, -52, -53, -55, -56, -58, -62, -68, -70, -71, -74, -76, -77, -79, -82, -83, -85, -92, -95]
 S1.5 powers of two: -2^e for e=0..12 go to [(0, '{-1}'), (1, '{-1}'), (2, '{-4,-11}'), (3, '{-4,-11}'), (4, '{-4,-11}'), (5, '{-4,-11}'), (6, '{-1}'), (7, '{-1}'), (8, '{-4,-11}'), (9, '{-4,-11}'), (10, '{-4,-11}'), (11, '{-4,-11}'), (12, '{-4,-11}')]
-[time] S1 done 11.9s
+[time] S1 done 11.6s
 
 ## S1b. Cycle-gate census: q = 1 words, greedy-legal (G) and all-odd (T), both signs
 S1b census: letters 0..3, 1 <= L <= 10, 1398100 words scanned.
@@ -79,10 +79,32 @@ S1b census: letters 0..6, 1 <= L <= 7, 960799 words scanned.
       q=1 closed walks at (12,7): [[1, 2, 5, 7, 11, 13, 17]]
   totals: G-cycles + 1, - 2; reversed T-cycles + 1, - 3
   greedy-legal q=1 cycles are exactly {1}, {-1}, {-4,-11}; the sign law sign(m0) = sign(2^J-3^L) holds on every q=1 cycle.
-[time] S1b done 12.6s
+[time] S1b done 12.3s
+
+## S1c. Global gate census by E-cycle length n = J + L <= 21, ALL letters (compositions of J into L parts)
+  n=2 (J,L)=(1,1) D=-1: 1 primitive integral walks, 1 simple, 1 greedy, 1 all-odd, max letter 1, max |E-node| 2
+  n=3 (J,L)=(2,1) D=1: 1 primitive integral walks, 1 simple, 1 greedy, 1 all-odd, max letter 2, max |E-node| 4
+  n=5 (J,L)=(3,2) D=-1: 2 primitive integral walks, 2 simple, 1 greedy, 1 all-odd, max letter 3, max |E-node| 32
+  n=8 (J,L)=(5,3) D=5: 1 primitive integral walks, 1 simple, 0 greedy, 0 all-odd, max letter 3, max |E-node| 40
+  n=11 (J,L)=(7,4) D=47: 1 primitive integral walks, 0 simple, 0 greedy, 0 all-odd, max letter 4, max |E-node| 40
+  n=13 (J,L)=(8,5) D=13: 6 primitive integral walks, 6 simple, 0 greedy, 0 all-odd, max letter 6, max |E-node| 832
+  n=15 (J,L)=(9,6) D=-217: 2 primitive integral walks, 2 simple, 0 greedy, 0 all-odd, max letter 6, max |E-node| 176
+  n=16 (J,L)=(10,6) D=295: 1 primitive integral walks, 1 simple, 0 greedy, 0 all-odd, max letter 3, max |E-node| 52
+  n=17 (J,L)=(10,7) D=-1163: 2 primitive integral walks, 0 simple, 0 greedy, 0 all-odd, max letter 7, max |E-node| 176
+  n=18 (J,L)=(11,7) D=-139: 13 primitive integral walks, 13 simple, 0 greedy, 1 all-odd, max letter 8, max |E-node| 2732
+      (11,7) cycle beyond the letters-0..6 scan and the nodes<=2000 census: [-911, -683, -304, -203, -68, -23, -8] word (0, 0, 0, 8, 2, 0, 1) max|E-node| 2732
+  n=19 (J,L)=(12,7) D=1909: 1 primitive integral walks, 0 simple, 0 greedy, 0 all-odd, max letter 4, max |E-node| 52
+  n=20 (J,L)=(12,8) D=-2465: 1 primitive integral walks, 0 simple, 0 greedy, 0 all-odd, max letter 5, max |E-node| 128
+  n=21 (J,L)=(13,8) D=1631: 4 primitive integral walks, 2 simple, 0 greedy, 0 all-odd, max letter 6, max |E-node| 256
+      (13,8) simple cycle [5, 7, 11, 13, 16, 17, 37, 49] word (0, 0, 3, 2, 1, 1, 4, 2) max letter 4
+      (13,8) simple cycle [5, 8, 11, 13, 17, 19, 25, 29] word (0, 1, 3, 2, 1, 3, 1, 2) max letter 3
+S1c simple E-cycles (positive sheet) by length: [(3, 1), (8, 1), (13, 6), (16, 1), (21, 2)]
+S1c simple E_- cycles (negative sheet) by length: [(2, 1), (5, 2), (15, 2), (18, 13)]
+S1c the letters-0..6 scan of S1b sees 12 of the 13 simple E_- cycles of length 18; the inherited bounded census (nodes <= 2000) also sees 12; the 13th needs the letter 8 and the E-node 2732. Greedy-legal cycles: still exactly {1}, {-1}, {-4,-11} (all letters, all lengths <= 21).
+[time] S1c done 20.1s
 
 ## S2. Joint carry: forward T-word to the peak, greedy G-word from the peak
-[time] S2 loop 14.4s
+[time] S2 loop 21.8s
 S2.1 odd n <= 100000: 45281 records; 4719 skipped because M = n is a multiple of 3 (G undefined): first [21, 33, 45, 69, 81, 93, 117, 141]
 S2.1 largest peak M = 523608245 at n = 77671; every greedy path from a peak reached 1 (cap 5000).
 S2.1 carry formulas verified: B1 = sum_{i<=L1} 3^(L1-i) 2^(k_1+..+k_(i-1)), B2 = sum_{s<=J} 3^(s-1) 2^(K2-K_s), on every record.
@@ -142,7 +164,7 @@ S2.6 sample rows (n, M, L1, K1, B1, J, K2, B2, overlap):
       (871, 63665, 14, 16, 6383441, 14, 7, 3366151, 5, (0, 1), 2)
       (6171, 325133, 32, 45, 4612864953503845, 30, 30, 143217768367943, 5, (0, 0), 4)
       (77031, 7311005, 42, 60, 360732998652733542401, 31, 27, 363593084212693, 3, (0, 0), 4)
-[time] S2 done 20.1s
+[time] S2 done 28.6s
 
 ## S3. G-analogue of the bounded-strip theorem: numerical anchors
 S3.1 sum_{s=1}^{300} 3^s/2^{K_s} < 3 m_0 verified for every positive m_0 <= 5000; largest ratio (sum)/m_0 = 3.000000 at m_0 = 1 (bound 3).
@@ -161,6 +183,6 @@ S3.3 negative cycle from -1: (K,L)=(1,1), 3^L/2^K = 3/2 > 1, so 3^j/2^{K_j} -> i
 S3.3 negative cycle from -4: (K,L)=(3,2), 3^L/2^K = 9/8 > 1, so 3^j/2^{K_j} -> infinity along it.
 S3.3 positive cycle {1}: (K,L)=(2,1), 3^L/2^K = 3/4 < 1, ratio -> 0.
 S3.4 capacity bound for a hypothetical G_- strip A <= 3^j/2^{K_j} <= B: images are coprime to 3, count <= 2X/3 + 1, giving B/A >= 9/2 (Collatz odd-and-coprime count gives 9).
-[time] S3 done 24.7s
+[time] S3 done 33.1s
 
-[done] total 24.7s
+[done] total 33.1s

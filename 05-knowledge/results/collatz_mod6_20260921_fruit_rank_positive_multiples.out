@@ -6,6 +6,7 @@ disc = 8818933760 = [2, 14; 5, 1; 7, 2; 13, 3]
 conductor = 910 = [2, 1; 5, 1; 7, 1; 13, 1]
 minimal model change [u,r,s,t] = [2, -36, 1, 4]
 local data (kodaira, cp) = [[1, 6, 0, 2], [1, 5, 0, 1], [1, 6, 0, 2], [1, 7, 0, 3]]
+minimal discriminant = 2153060 = [2, 2; 5, 1; 7, 2; 13, 3]
 tamagawa product = 24
 elltors = [6, [6], [[56, 728]]]
 ellisoncurve(G) = 1
@@ -20,6 +21,8 @@ ellrank(E) = [1, 1, 0, [[-100, 260]]]
 ellrank(E,,[G]) = [1, 1, 0, [[-100, 260]]]
 ellsaturation(E,[G],1000) = [[-4, 28]]
 ellsaturation(E,[[-100,260]],1000) = [[-100, 260]]
+ellsaturation(E,[G],10000) = [[-4, 28]]
+ellratpoints(E,10^5): 29 points with naive x-height <= 10^5 ; outside <G,T>: 0 ; largest |n| among them: 2
 ellrootno = -1
 ellanalyticrank = [1, 1.3176683943444326217031467282048324986]
 L(E,1) = 0.E-38
@@ -112,10 +115,12 @@ G on egg (x=-4 in interval): True  ; 2G x=676/49 on egg: False
 all odd mG on egg: True  all even mG on unbounded component: True
 positive window (10): x in [egg_left, -104.497423) U (-7.502577, -14/3)
 egg_left = -106.904675 ; window lengths 2.407253 and 2.835911 ; egg length 104.809351
-HEURISTIC arc-measure fraction of egg that is positive: 0.13638 (expected density of positive odd m)
-observed fraction among odd m<=80: 5/40 = 0.1250
+egg integral int dx/sqrt(f) = 0.650720927641667 = PARI omega1 to 1e-12 ; window integral = 0.0886214809108191
+arc-measure fraction of egg that is positive: 0.13619 (limit density of positive odd m in each coset row, Weyl equidistribution)
+observed fraction among odd m<=80: k=0 row 5/40 = 0.1250 ; k=1 row 6/40 = 0.1500 ; both rows 11/80 = 0.1375
 
 --- S3: structural statement ---
 E(Q) = Z*G (+) Z/6*T  [rank 1 PROVED by ellrank bounds; G generates mod torsion: saturation at p<=1000 FINITE-EXACT, full CITED Bremner-Macleod Rem 2.2]
 positive solutions among {mG+kT : 1<=m<=80, 0<=k<=5} = sparse subset listed above; no Collatz map used.
+cited canon/session labels: THM-3341, THM-3756, THM-3620, THM-4139, THM-4146; session collatz-mod6-20260917; wave 20260921
 === END ===

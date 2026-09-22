@@ -1,0 +1,81 @@
+==============================================================================
+AUDIT of lane berggren_edge_transport (independent recomputation)
+==============================================================================
+
+### A1  root-coordinate Berggren maps via the TRIPLE matrices (not Euclid (m,n))
+A1 root pairs (s,t) coprime odd, s<=201: 4141 ; triple-matrix children == {(s+2t,t),(2s+t,s),(2s-t,s)} on all
+    S1: CONFIRMED (independent route through the (A,B,C) matrices).
+
+### A2  transport table: solve the child's guard FROM the child pair (a<=31, |b|<=31, x<1000)
+A2 children examined: 631320 ; guard mismatches: 0
+    S2: CONFIRMED (explorer: 20233 edges a<=15; here a<=31, |b|<=31, wider).
+
+### A3  multiplier-keeping classification (3) for all odd a<=129, k<=14
+A3 (a,k,alpha,M) with M a power of two, a<=9: [(1, 1, 1, 4), (3, 1, 1, 8), (3, 1, -1, 4), (3, 2, -1, 2), (5, 1, -1, 8), (5, 3, -1, 2), (7, 1, 1, 16), (9, 1, -1, 16), (9, 4, -1, 2)]
+    formula (3) mismatches over a<=129, k<=14: 0
+    S3: CONFIRMED.
+
+### A4  orientation = valuation for (3,+-1); smallest |b| witnesses for the two 'possible only if' rows
+A4 violations of (y>x <=> k=1), b=+-1, x<=2*10^5: 0
+    smallest |b| edge with k=1 and y<x: (3, 1, -7, 1) ; its B1 child (5, 1) reads 5->1 in (3,-7,3)
+    smallest |b| edge with k=2 and y>x: (1, 3, 9, 2) ; its B3 child (5, 3) reads 5->3 in (3,-9,1)
+    b=-3,-5 have NO k=1 edge with y<x and b=3,5,7 have NO k=2 edge with y>x (the note's 'b<=-3', 'b>=3'
+    are necessary conditions only; sharpened in the note).  S4: CONFIRMED.
+
+### A5  sporadic readings: exact integer linear solve (k,j<=60) + brute force max(x,y)<=20000
+A5 generic identities: 8 (explorer: 8) ; sporadic readings for k,j<=60: 5 (explorer: 5)
+    (3, 1, -1, 3, 'B1', (5, 1), 5, 1, 1, 4)
+    (3, 1, -1, 3, 'B3', (5, 3), 3, 5, 1, 1)
+    (3, 5, 1, 1, 'B3', (7, 5), 5, 7, -1, 1)
+    (7, 5, -1, 2, 'B2', (19, 7), 19, 7, -1, 3)
+    (7, 5, -1, 2, 'B3', (9, 7), 9, 7, 1, 2)
+    brute force max(x,y)<=5000: edges 4165, k=1 edges 1666, generic legal children 3332, sporadic 5
+    brute force max(x,y)<=20000: edges 16665, k=1 edges 6666, generic legal children 13332, sporadic 5
+    S5: CONFIRMED (explorer: 4165 edges, 1666 k=1, 3332 generic, 5 sporadic at 5000).
+
+### A6  legal sub-forest: degree census at max<=4000 and connected components
+A6 legal pairs max<=4000: 3330 ; (min k, legal children) census: {(1, 2): 1332, (2, 0): 998, (3, 0): 499, (3, 2): 1, (4, 0): 250, (5, 0): 125, (6, 0): 63, (7, 0): 31, (8, 0): 15, (9, 0): 8, (10, 0): 4, (11, 0): 2, (12, 0): 1, (13, 0): 1}
+    component sizes (parent links inside the window): {1: 832, 2: 500, 3: 497, 7: 1}
+    components with more than 3 pairs: [[(3, 1), (5, 1), (5, 3), (7, 5), (9, 7), (13, 5), (19, 7)]]
+    S6: CONFIRMED (the size-1 components are k>=4 pairs, and k=1 pairs whose children exceed the window;
+    size-2 components are k=1 pairs with one child in the window).
+
+### A7  parent transport: cones by k at max<=4000, and ACCIDENTAL legal parents (note section 4 wording)
+A7 (k,cone) counts, max<=4000: {(1, 'C3'): 1332, (2, 'C3'): 999, (3, 'C2'): 499, (3, 'root'): 1, (4, 'C1'): 250, (5, 'C1'): 125, (6, 'C1'): 63, (7, 'C1'): 31, (8, 'C1'): 15, (9, 'C1'): 8, (10, 'C1'): 4, (11, 'C1'): 2, (12, 'C1'): 1, (13, 'C1'): 1}
+    k=1 or k>=4 edges whose PARENT PAIR is itself a (3,+-1) edge (accidental, not by identity): [((3, 5, 1, 1), (3, 1), [(3, 1, -1, 3)]), ((5, 1, 1, 4), (3, 1), [(3, 1, -1, 3)]), ((5, 7, -1, 1), (5, 3), [(3, 5, 1, 1)])]
+    => the note's sentence 'the parent of a Collatz k=1 edge is never a (3,+-1) edge' is WRONG as written:
+       3->5 (k=1) has parent (3,1) = 3->1 in (3,-1,3) (E5 reversed), 5->7 (k=1) has parent (5,3) = 3->5 in (3,1,1)
+       (E1 reversed), and 5->1 (k=4) has parent (3,1) (E4 reversed).  Correct statement: never by identity;
+       exactly these three accidental cases, which are the sporadic list of S5 read upward (so complete for
+       all x, not only this window).  S7: WEAKENED -> fixed in the note.
+
+### A8  census s<=2000, a<=15, |b|<=15 by DIRECT EDGE ENUMERATION (no numpy pair grid)
+A8 coprime odd pairs t<s<=2000: 405432 (explorer 405432) ; realizations 57837 (57837) ; pairs 54755 (54755) = 13.51%
+    histogram: {1: 52860, 2: 1415, 3: 256, 4: 103, 5: 43, 6: 18, 7: 22, 8: 8, 9: 8, 10: 3, 11: 4, 12: 2, 14: 5, 15: 1, 17: 1, 18: 1, 21: 1, 22: 1, 24: 1, 29: 1, 40: 1}
+    per a: {1: 12685, 3: 10582, 5: 8253, 7: 6804, 9: 5817, 11: 5049, 13: 4516, 15: 4131}
+    a=3 row: {-15: 444, -13: 769, -11: 756, -9: 555, -7: 714, -5: 666, -3: 555, -1: 833, 1: 832, 3: 555, 5: 666, 7: 714, 9: 555, 11: 757, 13: 767, 15: 444}
+    a=3: pairs with a b=+1 reading 832, with a b=-1 reading 832, union 1664, intersection []
+    => '1664 pairs: the overlap is (7,5)' is right in count but (7,5) is a double b=-1 reading, not a b=+1/b=-1 overlap.
+    S8: CONFIRMED (numbers); wording sharpened.
+
+### A9  hypotenuse <= 10^6 by Euclid (m,n) enumeration
+A9 primitive triangles with C<=10^6: 159139 (explorer 159139)
+    directed edges by b: {-5: 406, -3: 337, -1: 506, 1: 507, 3: 338, 5: 404} ; distinct triangles b=+1: 507, b=-1: 505, b=+-1 union: 1012, |b|<=5 union: 2483 (1.560%)
+    C_edge = 0.5078191557 ; C_edge*sqrt(X) = 507.8 ; b=+1 count minus prediction = -0.8
+    S9: CONFIRMED.
+
+### A10 inverse-fibre braid as a Berggren word: closed-form exponents by direct B1 counting
+A10 fibre words checked (y<1000, k0<=11, j<=3, b=+-1): 10983 ; exponents (4^j-4)/3 resp. (2^(k0+2j)-2^k0)/6 exact on all
+    note: the k=1 element (y, x_1) of an odd-k fibre has t = x_1 != y, so it is NOT on the B1-ray t=y;
+    'the fibre is the subset of the B1-ray' holds for the fibre minus its k=1 element.  S10: CONFIRMED, wording sharpened.
+
+### A11 consecutive orbit triangles: independent recount + EXACT linear solve of the 'proof sketch'
+A11 consecutive pairs, odd starts <= 10^5: 1849203 (explorer 1849203) ; parent/child incidences: 0
+    exact solutions (x,y,z,k,j) with consecutive triangles parent/child, k,j<=60: [(1, 1, 1, 2, 2)]
+    ratio intervals per k (x<=10^5, b=+1): {1: (1.5, 1.6667), 2: (1.2857, 1.3333), 3: (2.6, 2.6667), 4: (5.0, 5.3333), 5: (10.6, 10.6666), 6: (21.0, 21.3333), 7: (42.6, 42.6665), 8: (85.0, 85.333)}
+    violations of k=1: (3/2,5/3], k>=2: [0.3*2^k, 2^k/3): 0
+    => B2/B3 parent-child needs (k,j) in {(1,3),(3,3),(3,1),(2,2)} up to direction, B1 never; all inside the
+       exact solve, whose only solution is x=y=z=1.  S11: CONFIRMED and upgraded from 'PROVED sketch' to PROVED
+       (ratio bound + exact linear solve), with the 10^5 census as the FINITE-EXACT companion.
+
+ALL AUDIT CHECKS PASSED

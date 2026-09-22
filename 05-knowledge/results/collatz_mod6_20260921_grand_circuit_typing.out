@@ -31,7 +31,8 @@ S4 PROVED: the user's criterion is EQUIVALENT to BBBG.  n-p = p(n/p-1), so p^2(p
     p(p-1) | n/p-1  iff  p | n/p-1 and (p-1) | n/p-1  (gcd(p,p-1)=1).  Squarefreeness is implied:
     if p^2 | n then p | n/p, so p does not divide n/p-1.  For prime n the criterion is vacuous (n-p=0).
     So the paste's restatement is correct (it is the BBBG criterion in one line), and no map to Collatz is involved.
-S5 FINITE-EXACT: trunk numbers t_j=(4^j-1)/3 (the R-orbit of 1, inherited), j=3..40 (t_2=5 is prime, vacuous):
+S5 FINITE-EXACT: trunk numbers t_j=(4^j-1)/3 = R^j(0) = R^(j-1)(1) (the inherited trunk N_j of the wild_typing lane;
+    audit fix: the first version wrote R^j(1), off by one), j=3..40 (t_2=5 is prime, vacuous):
     j  t_j  squarefree  Korselt(all p-1 | t_j-1)  Giuga(all p | t_j/p-1)  first failing prime
      3  21  True  False  False  7
      4  85  True  False  False  5
@@ -116,7 +117,10 @@ S11 PROVED (one line): if alpha has unbounded partial quotients then for every b
 S12 HEURISTIC (float64): min_{n<=10^6} n ||n log_2 3|| ||n phi|| = 0.000209 at n = 10946 (a Fibonacci number: True, index 21);
     min_{n<=10^6} n ||n log_2 3|| = 0.017734, min n ||n phi|| = 0.381966 (phi's constant is 1/sqrt5 = 0.447214)
 S13 SCOPE / NO MAP: the Collatz discrepancy K_j - j log_2 3 involves ONE irrational (inhomogeneous, one-number).
-    Wythoff/Zeckendorf/golden ratio occur in none of the audited notes (grep: 'phi' there is an angle).
+    Wythoff/Zeckendorf/golden ratio occur in the audited notes only as SCOPE tokens of the same paste family (blueprint energy
+    note: lower Wythoff sequence floor(k phi) typed and dismissed; scaffolding audit / mod6 synthesis: 'Wythoff diffraction' SCOPE;
+    braids summand: Zeckendorf; guards valves: 'golden ratio'); no audited note attaches a golden-ratio object to a Collatz
+    orbit, and in the pythagorean_semicircle lane 'phi' is an angle.  (Audit fix: the first version said 'in none of the notes'.)
     'Bragg peaks q_{m,n}=(2 pi/phi^2)(m+n phi)' is the Fibonacci-chain diffraction module (Levine-Steinhardt 1984,
     CITED as a formula family; the paste's normalisation is not load-bearing); '5 pi/6 phase from 5 mod 6': no object.
 
@@ -127,10 +131,12 @@ S14 CITED: the map T(x)=x/2 (even), (3x+1)/2 (odd) on Z_2 is topologically conju
     to the one-sided full 2-shift (Lagarias 1985, Bernstein-Lagarias 1996); h_top = log 2 = 0.693147.
     The greedy 3-adic map G of this session is conjugate to a 6-state SFT of entropy log 3 = 1.098612
     (three_adic_g_map lane, Theorem 1.3).  Both have positive entropy: Sarnak's hypothesis fails; no statement follows.
-S15 PROVED + FINITE-EXACT: Q is a bijection, so there is a 2-adic x with parity(T^k x) = [mu(k+1) = 1] for ALL k.
-    Truncation: x = 890931253 mod 2^32 realises the first 32 values of [mu=1] = 10000100010001100000110001000000
-    For that x the Mobius correlation of f = parity is (1/N) sum_{mu(n)=1} 1 -> 3/pi^2 = 0.303964, not 0:
-    Mobius disjointness is FALSE for the Collatz system on Z_2 (as for any full shift).  Such x is irrational.
+S15 PROVED + FINITE-EXACT: Q is a bijection, so there is a 2-adic x with parity(x) = 0 and parity(T^k x) = [mu(k) = 1] for ALL k >= 1.
+    Truncation: x = 1781862506 mod 2^32 realises parity(x)=0 and the first 31 values of [mu=1]: 01000010001000110000011000100000
+    For that x, f(T^n x) = parity(T^n x) = [mu(n)=1] for n >= 1, so (1/N) sum_{n<=N} mu(n) f(T^n x) = (1/N) #{n<=N : mu(n)=1} -> 3/pi^2 = 0.303964, not 0:
+    Mobius disjointness is FALSE for the Collatz system on Z_2 (as for any full shift).  Such x is not in Q: rational 2-adic
+    integers have eventually periodic parity vectors (Lagarias 1985, CITED) and [mu=1] is not eventually periodic (every
+    class r mod P contains infinitely many n with mu(n)=1 and infinitely many with mu(n)=0).
 S16 FINITE-EXACT (N=1000000): c_j = (1/N) sum_{n<=N} mu(n) (-1)^{parity(T^j n)}, and the periodicity check mod 2^(j+1).
     j=0  c_j = -0.000068   parity mean = 0.500000   parity(T^j n) periodic mod 2: True
     j=1  c_j = +0.000344   parity mean = 0.500000   parity(T^j n) periodic mod 4: True
@@ -139,7 +145,8 @@ S16 FINITE-EXACT (N=1000000): c_j = (1/N) sum_{n<=N} mu(n) (-1)^{parity(T^j n)},
     j=4  c_j = -0.000054   parity mean = 0.500000   parity(T^j n) periodic mod 32: True
     j=5  c_j = +0.000600   parity mean = 0.500000   parity(T^j n) periodic mod 64: True
     j=6  c_j = -0.000760   parity mean = 0.499992   parity(T^j n) periodic mod 128: True
-    PROVED (via CITED PNT in arithmetic progressions, Landau): each c_j -> 0 because parity(T^j n) is periodic mod 2^(j+1),
+    PROVED (via CITED PNT in arithmetic progressions, Landau; the periodicity mod 2^(j+1) is Terras 1976 / Everett 1977, CITED,
+    and is sharp: not periodic mod 2^j, see the audit): each c_j -> 0 because parity(T^j n) is periodic mod 2^(j+1),
     hence a finite combination of residue-class indicators, each Mobius-orthogonal.  This is the zero-entropy rotation on
     Z/2^(j+1), not the Collatz dynamics, and says nothing about Collatz.
 S17 SCOPE / NO MAP: 'F=S+U' is the divisor identity F=S+U iff N in {p,p^3,p^2qr} (divisor_balance lane); the 4-vertex
@@ -170,15 +177,22 @@ S22 FINITE-EXACT (repo grep): 182 canon theorems have 'tournament' in their titl
       THM-871-fermat-rung-rigidity.md :: FERMAT-RUNG RIGIDITY AND THE SEDENION CENSUS — for prime n with n−1 a 2-power (Fermat primes: the CD rungs 3, 5, 17, 257, …), the multiplier
       THM-893-eroded-diamond-coincidence.md :: THE ERODED-DIAMOND COINCIDENCE THEOREM — the THM-789 fingerprint twins (x,y) = (13,9) and (17,13) over U₀ have LITERALLY EQUAL eroded diamon
     tournament-titled theorems whose BODY mentions a 17-vertex / order-17 / n=17 tournament: 2 ['THM-868-e8-bridge-score-lattice.md', 'THM-871-fermat-rung-rigidity.md']
-    (the ten title hits above are: 17 as a coefficient of the 7-tournament spectrum x^4+14x^2+17, the Fermat prime 17,
-    the fingerprint twin (17,13), and mod-16/2-adic statements; none defines a capacity of a 17-vertex tournament.)
-    results notes mentioning 'S^6', 'S6 monodromy' or 'S_2 x S_3': 5 (all are audits of the same paste family).
-S23 SCOPE: the only '17's in tournament context in this session are the h-value 17 attained at n=6 (scaffolding_audit,
-    section 5 census; h-spectrum = odds minus {7,21}, THM-1370/THM-1745) and the class 17 of the mod-30 wheel.
-    No 'capacity' of a 17-vertex tournament is defined anywhere: no object.
-S24 SCOPE: 'S^6 with an S_2 x S_3 projective lift': S^6 (the 6-sphere) appears in no note; S_2 x S_3 = C2 x S3 (order 12)
-    appears once, as the actual automorphism action on the fruit curve triple (catalan_elliptic lane, section 4); a
-    'projective lift of S^6' is undefined.  The blueprint audit already found no S6 monodromy.  No object.
+    THM-871 IS a theorem about 17-vertex tournaments: for the Fermat prime n=17 every rotational tournament has Aut = Z_17
+    and there are exactly 16 rotational classes (a free Z_16-torsor); THM-868 lists the sedenion rung n=17.  Neither defines a
+    'capacity'.  (The ten title hits above are: 17 as a coefficient of the 7-tournament spectrum x^4+14x^2+17, the Fermat prime 17,
+    the fingerprint twin (17,13), and mod-16/2-adic statements.)
+    results notes (own lane excluded) matching 'S^6', 'S6 monodromy' or 'S_2 x S_3': 5: ['arithmetic_seams_20260921_dynamics.md', 'arithmetic_seams_20260921_synthesis.md', 'collatz_blueprint_20260921_synthesis.md', 'planar_jc48_sep06_global_curve.md', 'planar_jc48_sep06_resolution_budget.md']
+    classified: planar_jc48_sep06_* match the monomial S^6 in projective coordinates [S:T] (not a sphere, not this paste family);
+    arithmetic_seams_20260921_{synthesis,dynamics} build an explicit S_2 x S_3 action on a six-vector lift of a rational
+    three-point cycle (concurrent opus lane, same paste family); collatz_blueprint_20260921_synthesis refutes the S6 monodromy.
+S23 SCOPE: the '17's in tournament context in this session are the h-value 17 attained at n=6 (scaffolding_audit, section 5
+    census; 7 and 21 omitted from the h-spectrum for all n is THM-1370, whose completeness 'odds minus {7,21}' is a CONJECTURE
+    there; THM-1745 is the arborescence shadow of {7,21}), the class 17 of the mod-30 wheel, and canon THM-871's 16 rigid
+    rotational classes at n=17.  No 'capacity' of a 17-vertex tournament is defined anywhere: no object.
+S24 SCOPE: 'S^6 with an S_2 x S_3 projective lift': S^6 (the 6-sphere) appears in no note of this paste family; S_2 x S_3 = C2 x S3
+    (order 12) appears as the automorphism action on the fruit-curve triple (catalan_elliptic synthesis, written 'C2 x S3') and as
+    the arithmetic_seams lanes' explicit action on the six-vector lift of a rational three-point cycle; a 'projective lift of S^6'
+    is undefined in all of them.  The blueprint audit already found no S6 monodromy.  No object.
 
 ### P7  THE HONEST BRIDGE: 2^K - 3^L ALONG THE CONVERGENTS OF log_2 3
 S25 FINITE-EXACT: a convergent p/q of log_2 3 gives 2^p ~ 3^q, i.e. (K,L)=(p,q); the cycle gate n_0 = bB/(2^K-3^L)
@@ -197,8 +211,9 @@ S25 FINITE-EXACT: a convergent p/q of log_2 3 gives 2^p ~ 3^q, i.e. (K,L)=(p,q);
       K=125743 L=79335  sign +1  |2^K-3^L|/3^L = 3.665e-06  (37847 digits)
       K=176251 L=111202  sign -1  |2^K-3^L|/3^L = 3.600e-06  (53052 digits)
       K=301994 L=190537  sign +1  |2^K-3^L|/3^L = 6.451e-08  (90903 digits)
-    CITED: Baker-type lower bounds |2^K-3^L| > 2^K / K^C (Pillai's problem; Stroeker-Tijdeman 1982 for this pair) are the
-    only formal input that bounds cycle lengths through the gate; that is the pillai lane's object, not this lane's.
+    CITED (shape only; the exponent C is not asserted here): Baker-type lower bounds |2^K-3^L| > 2^K / K^C (Pillai's problem;
+    Stroeker-Tijdeman 1982 for this pair) are the standard formal input that bounds cycle lengths through the gate; that is
+    the pillai lane's object, not this lane's.
 
 ### VERDICT
 V1 Giuga: statement CITED; BBBG equivalence re-PROVED and FINITE-EXACT n<=30000 direct, n<=10^5 by criterion; user's

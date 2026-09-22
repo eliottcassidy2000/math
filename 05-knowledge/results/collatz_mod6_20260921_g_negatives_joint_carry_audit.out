@@ -1,0 +1,129 @@
+# audit of collatz_mod6_20260921_g_negatives_joint_carry
+A0 letter tables recomputed from the definition: k_+ = {1: 2, 2: 1, 4: 0, 5: 3, 7: 0, 8: 1}, k_- = {1: 1, 2: 0, 4: 3, 5: 0, 7: 1, 8: 2}, k_-(r) = k_+(-r mod 9).
+A1 direct G on [-10000000, -1], 3 !| m: to {-1}: 2897798, to {-4,-11}: 3768869, total 6666667; fraction 0.565330
+A1 decade X=10: 5 2 0.285714
+A1 decade X=100: 29 38 0.567164
+A1 decade X=1000: 292 375 0.562219
+A1 decade X=10000: 2869 3798 0.569672
+A1 decade X=100000: 29065 37602 0.564027
+A1 decade X=1000000: 291160 375507 0.563260
+A1 decade X=10000000: 2897798 3768869 0.565330
+A1 max steps 99 at m=-7139938; max peak 805306367 at m=-7174453; max peak/|m| = 318145727/2391484 = 133.033 at m=-2391484
+A1 805306367 = 3*2^28 - 1: True
+A1 basin of {-4,-11} below 100: [-4, -8, -11, -13, -16, -17, -19, -23, -25, -26, -28, -31, -32, -34, -35, -37, -38, -46, -47, -50, -52, -53, -55, -56, -58, -62, -68, -70, -71, -74, -76, -77, -79, -82, -83, -85, -92, -95]
+A1 -2^e, e=0..12: ['{-1}', '{-1}', '{-4,-11}', '{-4,-11}', '{-4,-11}', '{-4,-11}', '{-1}', '{-1}', '{-4,-11}', '{-4,-11}', '{-4,-11}', '{-4,-11}', '{-4,-11}']
+A1 hostile m0=-2391484: peak 318145727 at step 17 with K=34, peak/|m0| = 133.033, 2^K/3^j = 133.033
+A1 hostile m0=4847486: peak 644874241 at step 17 with K=34, peak/|m0| = 133.033, 2^K/3^j = 133.033
+A1 G-preimages of -11 in [-40,-1]: [-32, -16, -8, -4]; of -4: [-11]
+[time] A1 13.4s
+A2 letters 0..3, L<=10: 1398100 words
+A2 0..3 (J,L)=(1,1) D=-1 walks 1 simple 1 greedy 1 allodd 1 max|E-node| 2 greedy=[[-1]] allodd=[[-1]]
+A2 0..3 (J,L)=(2,1) D=1 walks 1 simple 1 greedy 1 allodd 1 max|E-node| 4 greedy=[[1]] allodd=[[1]]
+A2 0..3 (J,L)=(3,2) D=-1 walks 2 simple 2 greedy 1 allodd 1 max|E-node| 32 greedy=[[-11, -4]] allodd=[[-7, -5]]
+A2 0..3 (J,L)=(5,3) D=5 walks 1 simple 1 greedy 0 allodd 0 max|E-node| 40 greedy=[] allodd=[]
+A2 0..3 (J,L)=(8,5) D=13 walks 2 simple 2 greedy 0 allodd 0 max|E-node| 196 greedy=[] allodd=[]
+A2 0..3 (J,L)=(10,6) D=295 walks 1 simple 1 greedy 0 allodd 0 max|E-node| 52 greedy=[] allodd=[]
+A2 0..3 (J,L)=(11,7) D=-139 walks 1 simple 1 greedy 0 allodd 0 max|E-node| 344 greedy=[] allodd=[]
+A2 0..3 (J,L)=(13,8) D=1631 walks 1 simple 1 greedy 0 allodd 0 max|E-node| 88 greedy=[] allodd=[]
+A2 0..3 (J,L)=(14,9) D=-3299 walks 1 simple 1 greedy 0 allodd 0 max|E-node| 140 greedy=[] allodd=[]
+A2 letters 0..6, L<=7: 960799 words
+A2 0..6 (J,L)=(1,1) D=-1 walks 1 simple 1 greedy 1 allodd 1 max|E-node| 2 greedy=[[-1]] allodd=[[-1]]
+A2 0..6 (J,L)=(2,1) D=1 walks 1 simple 1 greedy 1 allodd 1 max|E-node| 4 greedy=[[1]] allodd=[[1]]
+A2 0..6 (J,L)=(3,2) D=-1 walks 2 simple 2 greedy 1 allodd 1 max|E-node| 32 greedy=[[-11, -4]] allodd=[[-7, -5]]
+A2 0..6 (J,L)=(5,3) D=5 walks 1 simple 1 greedy 0 allodd 0 max|E-node| 40 greedy=[] allodd=[]
+A2 0..6 (J,L)=(7,4) D=47 walks 1 simple 0 greedy 0 allodd 0 max|E-node| 40 greedy=[] allodd=[]
+A2 0..6 (J,L)=(8,5) D=13 walks 6 simple 6 greedy 0 allodd 0 max|E-node| 832 greedy=[] allodd=[]
+A2 0..6 (J,L)=(9,6) D=-217 walks 2 simple 2 greedy 0 allodd 0 max|E-node| 176 greedy=[] allodd=[]
+A2 0..6 (J,L)=(10,6) D=295 walks 1 simple 1 greedy 0 allodd 0 max|E-node| 52 greedy=[] allodd=[]
+A2 0..6 (J,L)=(10,7) D=-1163 walks 1 simple 0 greedy 0 allodd 0 max|E-node| 176 greedy=[] allodd=[]
+A2 0..6 (J,L)=(11,7) D=-139 walks 12 simple 12 greedy 0 allodd 1 max|E-node| 1472 greedy=[] allodd=[[-91, -61, -55, -41, -37, -25, -17]]
+A2 0..6 (J,L)=(12,7) D=1909 walks 1 simple 0 greedy 0 allodd 0 max|E-node| 52 greedy=[] allodd=[]
+A2 the two tables DIFFER in the walk counts at (8,5) (2 vs 6) and (11,7) (1 vs 12), and (7,4),(9,6),(10,7),(12,7) need a letter >= 4; they agree on the greedy and all-odd columns.
+A2 greedy-legal cycles in both scans: exactly {1}, {-1}, {-4,-11}.
+A2 ALL letters, length n=2, (J,L)=(1,1), D=-1: 1 primitive integral walks, 1 simple, 1 greedy, 1 all-odd; max letter 1; largest |E-node| 2
+A2 ALL letters, length n=3, (J,L)=(2,1), D=1: 1 primitive integral walks, 1 simple, 1 greedy, 1 all-odd; max letter 2; largest |E-node| 4
+A2 ALL letters, length n=5, (J,L)=(3,2), D=-1: 2 primitive integral walks, 2 simple, 1 greedy, 1 all-odd; max letter 3; largest |E-node| 32
+      [-11, -4] word (0, 3) simple=True max|E-node|=32
+      [-7, -5] word (1, 2) simple=True max|E-node|=20
+A2 ALL letters, length n=8, (J,L)=(5,3), D=5: 1 primitive integral walks, 1 simple, 0 greedy, 0 all-odd; max letter 3; largest |E-node| 40
+A2 ALL letters, length n=11, (J,L)=(7,4), D=47: 1 primitive integral walks, 0 simple, 0 greedy, 0 all-odd; max letter 4; largest |E-node| 40
+A2 ALL letters, length n=13, (J,L)=(8,5), D=13: 6 primitive integral walks, 6 simple, 0 greedy, 0 all-odd; max letter 6; largest |E-node| 832
+A2 ALL letters, length n=15, (J,L)=(9,6), D=-217: 2 primitive integral walks, 2 simple, 0 greedy, 0 all-odd; max letter 6; largest |E-node| 176
+      [-59, -20, -11, -7, -5, -2] word (0, 0, 1, 0, 4, 4) simple=True max|E-node|=176
+      [-43, -29, -10, -7, -5, -2] word (0, 1, 1, 0, 6, 1) simple=True max|E-node|=128
+A2 ALL letters, length n=16, (J,L)=(10,6), D=295: 1 primitive integral walks, 1 simple, 0 greedy, 0 all-odd; max letter 3; largest |E-node| 52
+A2 ALL letters, length n=17, (J,L)=(10,7), D=-1163: 2 primitive integral walks, 0 simple, 0 greedy, 0 all-odd; max letter 7; largest |E-node| 176
+A2 ALL letters, length n=18, (J,L)=(11,7), D=-139: 13 primitive integral walks, 13 simple, 0 greedy, 1 all-odd; max letter 8; largest |E-node| 2732
+      [-911, -683, -304, -203, -68, -23, -8] word (0, 0, 0, 8, 2, 0, 1) simple=True max|E-node|=2732
+      [-491, -164, -55, -37, -25, -23, -17] word (0, 0, 1, 1, 1, 2, 6) simple=True max|E-node|=1472
+      [-419, -235, -157, -140, -47, -16, -11] word (0, 0, 0, 1, 6, 1, 3) simple=True max|E-node|=1256
+      [-371, -139, -124, -83, -28, -19, -13] word (0, 1, 0, 1, 1, 5, 3) simple=True max|E-node|=1112
+      [-331, -221, -74, -31, -25, -23, -17] word (0, 0, 1, 2, 2, 5, 1) simple=True max|E-node|=992
+      [-203, -91, -68, -61, -41, -19, -14] word (0, 2, 1, 1, 0, 2, 5) simple=True max|E-node|=608
+      [-203, -83, -68, -31, -28, -23, -19] word (0, 0, 2, 3, 0, 1, 5) simple=True max|E-node|=608
+      [-191, -143, -107, -64, -43, -29, -10] word (0, 1, 1, 0, 5, 2, 2) simple=True max|E-node|=572
+      [-187, -167, -125, -56, -35, -19, -13] word (0, 0, 1, 3, 4, 1, 2) simple=True max|E-node|=560
+      [-155, -52, -47, -43, -35, -29, -16] word (0, 1, 2, 0, 3, 1, 4) simple=True max|E-node|=464
+      [-115, -77, -47, -43, -35, -26, -16] word (0, 2, 2, 0, 3, 3, 1) simple=True max|E-node|=344
+      [-95, -79, -71, -59, -53, -32, -11] word (0, 0, 4, 2, 1, 2, 2) simple=True max|E-node|=284
+      [-91, -61, -55, -41, -37, -25, -17] word (1, 1, 1, 4, 1, 1, 2) simple=True max|E-node|=272
+A2 ALL letters, length n=19, (J,L)=(12,7), D=1909: 1 primitive integral walks, 0 simple, 0 greedy, 0 all-odd; max letter 4; largest |E-node| 52
+A2 ALL letters, length n=20, (J,L)=(12,8), D=-2465: 1 primitive integral walks, 0 simple, 0 greedy, 0 all-odd; max letter 5; largest |E-node| 128
+A2 ALL letters, length n=21, (J,L)=(13,8), D=1631: 4 primitive integral walks, 2 simple, 0 greedy, 0 all-odd; max letter 6; largest |E-node| 256
+      [4, 5, 13, 16, 28, 37, 49, 85] word (0, 0, 3, 0, 6, 0, 2, 2) simple=False max|E-node|=256
+      [4, 5, 13, 20, 23, 35, 53, 61] word (0, 1, 0, 2, 5, 1, 1, 3) simple=False max|E-node|=184
+      [5, 7, 11, 13, 16, 17, 37, 49] word (0, 0, 3, 2, 1, 1, 4, 2) simple=True max|E-node|=148
+      [5, 8, 11, 13, 17, 19, 25, 29] word (0, 1, 3, 2, 1, 3, 1, 2) simple=True max|E-node|=88
+A2 ALL letters at (J,L)=(14,9), D=-3299 (length 23, this row only): 9 primitive integral walks, 4 simple, 0 greedy, 0 all-odd; max letter 9; largest |E-node| 2732; simple ones: [([-203, -68, -59, -23, -20, -19, -11, -8, -7], (0, 0, 0, 2, 4, 0, 0, 3, 5), 608), ([-203, -68, -43, -29, -23, -19, -10, -8, -7], (0, 0, 0, 4, 1, 0, 1, 3, 5), 608), ([-59, -47, -35, -20, -19, -16, -13, -11, -7], (0, 0, 3, 1, 3, 2, 0, 1, 4), 176), ([-47, -43, -35, -29, -19, -16, -13, -10, -7], (0, 1, 3, 1, 3, 2, 0, 3, 1), 140)]
+A2 GLOBAL simple-cycle counts by length and sign (all words, all letters): [((2, '-'), 1), ((3, '+'), 1), ((5, '-'), 2), ((8, '+'), 1), ((11, '+'), 0), ((13, '+'), 6), ((15, '-'), 2), ((16, '+'), 1), ((17, '-'), 0), ((18, '-'), 13), ((19, '+'), 0), ((20, '-'), 0), ((21, '+'), 2)]
+A2 E (positive sheet) simple cycles of length <= 21: 1, 1, 6, 1, 2 at lengths 3, 8, 13, 16, 21 (agrees with the extended lane's global completion); E_- (negative sheet): 1, 2, 2, 13 at lengths 2, 5, 15, 18 and none else <= 21.
+A2 (11,7): the letters-0..6 scan sees 12 of the 13 simple E_- 18-cycles; the 13th, {-8,-23,-68,-203,-304,-911,-683}, has word (8,2,0,1,0,0,0) (letter 8) and E-node 2732 > 2000, so the inherited bounded census (nodes <= 2000) also misses it: the '12 = 12' agreement is between two truncated scans, not a global count.
+A2 (13,8): the second length-21 E-cycle {5,7,11,13,16,17,37,49} has word (0,0,3,2,1,1,4,2), max letter 4, as the note deduced.
+A2 T seven-cycle: m0 = -17, 2^11 - 3^7 = -139, B' = 2363 = 17*139 (agrees with catalan_elliptic (C6)).
+A2 negative T-cycle bound: L=1 needs J <= 1, so every letter <= 1
+A2 negative T-cycle bound: L=2 needs J <= 3, so every letter <= 2
+A2 negative T-cycle bound: L=3 needs J <= 4, so every letter <= 2
+A2 negative T-cycle bound: L=4 needs J <= 6, so every letter <= 3
+A2 negative T-cycle bound: L=5 needs J <= 7, so every letter <= 3
+A2 negative T-cycle bound: L=6 needs J <= 9, so every letter <= 4
+A2 negative T-cycle bound: L=7 needs J <= 11, so every letter <= 5
+[time] A2 19.0s
+A3 retrace classes mod 48: [1, 7, 11, 13, 19, 23, 25, 31, 35, 43, 47] (11 classes), verified for odd p < 10^5 together with the k-form.
+A3 odd n <= 100000: 45281 records, 4719 skipped (M = n multiple of 3); cases {'K1>=K2': 6408, 'K1<K2': 38873}; largest M = 523608245 at n = 77671
+A3 overlap histogram: [(0, 11875), (1, 11684), (2, 7888), (3, 5670), (4, 3257), (5, 2340), (6, 1200), (7, 709), (8, 325), (9, 193), (10, 58), (11, 54), (12, 15), (13, 6), (14, 5), (15, 2)]
+A3 L1=0 records: 9485; full retrace with L1>=1: 11015 of 35796 = 0.3077; mean overlap 1.9264, mean L1 5.8642
+A3 full-retrace fraction by L1 versus (11/16)^L1, and the sign of the difference:
+      L1=1: 4748/7138 = 0.6652  guess 0.6875  truth-guess -0.0223
+      L1=2: 2979/5354 = 0.5564  guess 0.4727  truth-guess +0.0838
+      L1=3: 1470/3570 = 0.4118  guess 0.3250  truth-guess +0.0868
+      L1=4: 879/2890 = 0.3042  guess 0.2234  truth-guess +0.0807
+      L1=5: 449/2156 = 0.2083  guess 0.1536  truth-guess +0.0547
+      L1=6: 242/1777 = 0.1362  guess 0.1056  truth-guess +0.0306
+      L1=7: 127/1576 = 0.0806  guess 0.0726  truth-guess +0.0080
+      L1=8: 62/1282 = 0.0484  guess 0.0499  truth-guess -0.0015
+      L1=9: 31/1135 = 0.0273  guess 0.0343  truth-guess -0.0070
+      L1=10: 15/926 = 0.0162  guess 0.0236  truth-guess -0.0074
+      L1=11: 6/823 = 0.0073  guess 0.0162  truth-guess -0.0089
+      L1=12: 2/769 = 0.0026  guess 0.0111  truth-guess -0.0085
+      L1=13: 3/640 = 0.0047  guess 0.0077  truth-guess -0.0030
+      L1=14: 2/577 = 0.0035  guess 0.0053  truth-guess -0.0018
+A3 first L1 >= 2 with truth below (11/16)^L1: 8 (the note's draft said 9; the crossing is between 7 and 8)
+A3 gcd(B1,B2) = 1 on 32725 of 35796; penultimate data [(((0, 0), 4), 31399), (((0, 1), 2), 4397)]
+A3 exact ranges: {'K1-K2': [-74, 74], 'K2-J': [-13, 18], 'J-L1': [-38, 56], 'K1-2L1': [-32, -1], 'K1-L1': [0, 36]}
+A3 zero-letter chain [1, 4, 13, 40, 121, 364, 1093, 3280, 9841, 29524, 88573, 265720], mod 8 [1, 4, 5, 0, 1, 4, 5, 0, 1, 4, 5, 0]
+[time] A3 20.3s
+A4 positive sheet: sum_(s<=j) 3^(s-1)/2^(K_s) < m_0 for m_0 <= 2000, j <= 120 (equivalently 3 sum 3^s/2^K_s < 3 m_0).
+A4 G_- words of length J <= 5 are functions of p mod 3^(J+1) (all unit classes, lifts t = 1..8).
+A4 J=1: E[2^K_J] = 3 = 3(7/3)^(J-1); bad classes (2^K_J >= 3^J/2): 4 of 6 = 0.666667 <= 2(7/9)^(J-1) = 2.000000
+A4 J=2: E[2^K_J] = 7 = 3(7/3)^(J-1); bad classes (2^K_J >= 3^J/2): 7 of 18 = 0.388889 <= 2(7/9)^(J-1) = 1.555556
+A4 J=3: E[2^K_J] = 49/3 = 3(7/3)^(J-1); bad classes (2^K_J >= 3^J/2): 22 of 54 = 0.407407 <= 2(7/9)^(J-1) = 1.209877
+A4 J=4: E[2^K_J] = 343/9 = 3(7/3)^(J-1); bad classes (2^K_J >= 3^J/2): 37 of 162 = 0.228395 <= 2(7/9)^(J-1) = 0.941015
+A4 J=5: E[2^K_J] = 2401/27 = 3(7/3)^(J-1); bad classes (2^K_J >= 3^J/2): 121 of 486 = 0.248971 <= 2(7/9)^(J-1) = 0.731901
+A4 J=6: E[2^K_J] = 16807/81 = 3(7/3)^(J-1); bad classes (2^K_J >= 3^J/2): 201 of 1458 = 0.137860 <= 2(7/9)^(J-1) = 0.569256
+A4 J=7: E[2^K_J] = 117649/243 = 3(7/3)^(J-1); bad classes (2^K_J >= 3^J/2): 316 of 4374 = 0.072245 <= 2(7/9)^(J-1) = 0.442755
+A4 J=8: E[2^K_J] = 823543/729 = 3(7/3)^(J-1); bad classes (2^K_J >= 3^J/2): 1112 of 13122 = 0.084743 <= 2(7/9)^(J-1) = 0.344365
+A4 the tilted-matrix recursion reproduces 3(7/3)^(J-1) for J <= 8 (the G_- moment equals the G moment by negation).
+A4 #{a <= X : 3 !| a} <= 2X/3 + 1 for X < 3000; capacity B/A >= 9/2 follows as in the note.
+A4 cycle ratios 3^L/2^K: {-1}: 3/2, {-4,-11}: 9/8, {1}: 3/4.
+[time] A4 21.1s
+[done] audit total 21.1s

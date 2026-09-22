@@ -1,8 +1,8 @@
 ==============================================================================
 S1. Continued fraction of alpha = log_2 3 (PARI/GP at 320 digits, cross-checked
-    by an independent Python decimal computation at 320 digits)
+    by an independent Python decimal computation at 330 digits)
 ==============================================================================
-partial quotients a_0..a_44:
+partial quotients a_0..a_44 (45 terms):
   [1, 1, 1, 2, 2, 3, 1, 5, 2, 23, 2, 2, 1, 1, 55, 1, 4, 3, 1, 1, 15, 1, 9, 2, 5, 7, 1, 1, 4, 8, 1, 11, 1, 20, 2, 1, 10, 1, 4, 1, 1, 1, 1, 1, 37]
 index: value  (index 0 is the integer part)
   a_9 = 23
@@ -106,7 +106,7 @@ factorizations of |Delta| along convergents and intermediates with L <= 100, plu
 S3. Legendre / Fatou-Grace placement of small power gaps (exact integers)
 ==============================================================================
 For each L <= 400 take every K with |2^K - 3^L| < 3^L / L (at most one K for
-L >= 4) and classify the reduced fraction of K/L: convergent, intermediate
+L >= 6) and classify the reduced fraction of K/L: convergent, intermediate
 (with j and whether j is extreme), or neither.  Three tiers of the hypothesis:
   tier A: |Delta| <= 3^L/(4L)  -> PROVED to force a convergent (Legendre)
   tier B: |Delta| <= 3^L/(2L)  -> PROVED to force |alpha-K/L| < 1/L^2, hence
@@ -133,6 +133,9 @@ tier-B hits: 11, all convergents or extreme intermediates (checked)
 tier-C hits that are NOT convergents and NOT extreme intermediates:
    none for L <= 400
 tier-C hits classified NEITHER (neither convergent nor any intermediate): 0
+tier arithmetic on the two witnesses (|Delta|*L, 2L|Delta|, 4L|Delta| versus 3^L):
+  5/3: |Delta|*L=15  2L|Delta|=30  4L|Delta|=60  3^L=27  -> tierC=True tierB=False tierA=False
+  11/7: |Delta|*L=973  2L|Delta|=1946  4L|Delta|=3892  3^L=2187  -> tierC=True tierB=True tierA=False
 elementary inequality |log_2(1+e)| <= |e|/((1-|e|) ln 2) checked on a grid |e| < 0.25; max ratio 0.9999
 
 ==============================================================================
@@ -172,6 +175,7 @@ For every (K,L), L<=13, whose reduced K/L is a convergent or intermediate
 fraction, all C(K-1,L-1) compositions w of K into L positive parts are
 enumerated; B(w) = sum 3^(L-1-i) 2^(K_i), q = |Delta|/gcd(B,|Delta|).
 q=1 means an exact integer odd cycle of 3n+1 (Delta>0) or 3n-1 (Delta<0).
+number of convergent/intermediate clocks with L<=13: 40
 clock  class                     Delta      #words   #q=1  min_q  q-histogram (q<=20)
    1/1  convergent n=0             -1         1        1     1      1:1
    2/1  convergent n=1             1          1        1     1      1:1
@@ -285,6 +289,7 @@ per L (all clocks) and the number of clocks with min_q = |Delta| (no cancellatio
   L=10  words=184756   q=1 words=4    min_q=1 at K=10 (convergent n=0 (x10))  clocks with no cancellation: 2/11  three smallest min_q: K=10:q=1, K=15:q=1, K=20:q=1
   L=11  words=705432   q=1 words=2    min_q=1 at K=11 (convergent n=0 (x11))  clocks with no cancellation: 6/12  three smallest min_q: K=11:q=1, K=22:q=1, K=17:q=19
 total words enumerated in S6: 956384 = sum_{L<=11} C(2L,L)
+q=1 words summed over L<=10 (all clocks, = b=1 cycle markings of least period <=10): 37
 
 ==============================================================================
 S7. Pillai-type census |2^a - 10^b| <= 100 (complete, with proof of completeness)

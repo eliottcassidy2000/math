@@ -52,7 +52,7 @@ def gp(cmd, timeout=300):
 # ---------------------------------------------------------------------------
 out("=" * 78)
 out("S1. Continued fraction of alpha = log_2 3 (PARI/GP at 320 digits, cross-checked")
-out("    by an independent Python decimal computation at 320 digits)")
+out("    by an independent Python decimal computation at 330 digits)")
 out("=" * 78)
 NTERMS = 45
 gp_out = gp("default(realprecision,320); v=contfrac(log(3)/log(2)); "
@@ -70,7 +70,7 @@ for _ in range(NTERMS):
     frac = x - a
     x = 1 / frac
 check(cf_py == cf_gp, "gp and decimal continued fractions disagree")
-out("partial quotients a_0..a_%d:" % (NTERMS - 1))
+out("partial quotients a_0..a_%d (%d terms):" % (NTERMS - 1, NTERMS))
 out(" ", cf_gp)
 out("index: value  (index 0 is the integer part)")
 for i in (9, 14, 20, 44):
@@ -176,7 +176,7 @@ out("=" * 78)
 out("S3. Legendre / Fatou-Grace placement of small power gaps (exact integers)")
 out("=" * 78)
 out("For each L <= 400 take every K with |2^K - 3^L| < 3^L / L (at most one K for")
-out("L >= 4) and classify the reduced fraction of K/L: convergent, intermediate")
+out("L >= 6) and classify the reduced fraction of K/L: convergent, intermediate")
 out("(with j and whether j is extreme), or neither.  Three tiers of the hypothesis:")
 out("  tier A: |Delta| <= 3^L/(4L)  -> PROVED to force a convergent (Legendre)")
 out("  tier B: |Delta| <= 3^L/(2L)  -> PROVED to force |alpha-K/L| < 1/L^2, hence")
@@ -244,6 +244,11 @@ else:
     out("   none for L <= %d" % LMAX_TIER)
 n_neither = sum(1 for h in hits if h[5] == "NEITHER")
 out("tier-C hits classified NEITHER (neither convergent nor any intermediate): %d" % n_neither)
+out("tier arithmetic on the two witnesses (|Delta|*L, 2L|Delta|, 4L|Delta| versus 3^L):")
+for (K, L) in ((5, 3), (11, 7)):
+    D = abs(2 ** K - 3 ** L)
+    out("  %d/%d: |Delta|*L=%d  2L|Delta|=%d  4L|Delta|=%d  3^L=%d  -> tierC=%s tierB=%s tierA=%s"
+        % (K, L, D * L, 2 * L * D, 4 * L * D, 3 ** L, D * L < 3 ** L, 2 * L * D <= 3 ** L, 4 * L * D <= 3 ** L))
 
 # the elementary inequality |log2(1+e)| <= |e|/((1-|e|) ln 2) checked numerically
 worst = 0.0
@@ -384,6 +389,7 @@ for L in range(1, 14):
         cls = classify(K, L)
         if cls != "NEITHER":
             clocks.append((L, K, cls))
+out("number of convergent/intermediate clocks with L<=13: %d" % len(clocks))
 out("clock  class                     Delta      #words   #q=1  min_q  q-histogram (q<=20)")
 grand_q1 = {1: [], -1: []}
 for (L, K, cls) in clocks:
@@ -449,6 +455,7 @@ out("whether that clock is a convergent/intermediate; plus the number of q=1 wor
 out("per L (all clocks) and the number of clocks with min_q = |Delta| (no cancellation).")
 FULL_L = 11
 tot_words = 0
+q1_by_L_sum10 = 0
 for L in range(1, FULL_L + 1):
     best = None
     q1_total = 0
@@ -459,6 +466,8 @@ for L in range(1, FULL_L + 1):
         total, n_q1, min_q, hist, q1w = census(K, L)
         tot_words += total
         q1_total += n_q1
+        if L <= 10:
+            q1_by_L_sum10 += n_q1
         if min_q == abs(D):
             no_cancel += 1
         per_clock.append((K, min_q, n_q1))
@@ -471,6 +480,7 @@ for L in range(1, FULL_L + 1):
            classify(best[1], L), no_cancel, L + 1,
            ", ".join("K=%d:q=%d" % (K, mq) for (K, mq, nq) in per_clock_sorted[:3])))
 out("total words enumerated in S6: %d = sum_{L<=%d} C(2L,L)" % (tot_words, FULL_L))
+out("q=1 words summed over L<=10 (all clocks, = b=1 cycle markings of least period <=10): %d" % q1_by_L_sum10)
 check(tot_words == sum(comb(2 * L, L) for L in range(1, FULL_L + 1)), "word total")
 
 # ---------------------------------------------------------------------------

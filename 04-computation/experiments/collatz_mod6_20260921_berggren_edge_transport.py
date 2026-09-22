@@ -271,6 +271,8 @@ print("  => for a=3: k=1: B2 -> (3, b, 3) and B3 -> (3, -b, 2) [y>x case, s=y]; 
 print("     B1 -> (3, b, 3); k=2 with y>x (needs b > x >= 1, so b>=3): B3 -> (3, -b, 1).  Nothing else.")
 print("  SCOPE: negative multipliers 2^(k+1)-a<0 (x-type, y<x) need b<0 with |b|>(a-2^k)x; M=-2 (a=2^(k-1)-1)")
 print("         would be multiplier -a.  Both are outside the positive-multiplier families and are not counted.")
+check(edge_reading(3, 1, 9, -23) == 2 and B3(3, 1) == (5, 3) and -1 * 3 + 23 == 4 * 5, "negative multiplier example")
+print("  example: 3->1 in E_{9,-23,2} (27-23=4=4*1) has B3 child (5,3) with (2^3-9)*3+23 = -3+23 = 20 = 4*5, multiplier -1.")
 
 # ---------------------------------------------------------------- S4
 print("\n### S4  PROVED: for a=3, b=+-1 the orientation is the valuation: y>x iff k=1")

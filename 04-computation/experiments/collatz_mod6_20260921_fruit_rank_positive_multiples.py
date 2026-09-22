@@ -9,6 +9,8 @@ Fruit curve E: y^2 = x^3 + 109 x^2 + 224 x  (Bremner--Macleod N=4).
     catalan_elliptic_20260921_elliptic.md eq. (3), exact verification of
     a/(b+c)+b/(c+a)+c/(a+b)=4, positivity census, digit counts vs height.
 (3) Structural statement (E(Q) = Z x Z/6) and the sparse positive subset.
+Audit 2026-09-22: mpmath quadrature for the arc measure, saturation to 10^4,
+ellratpoints membership check added.
 
 No Collatz map. Exact Fractions throughout; PARI only for rank/height data.
 Explicit raise, no assert.
@@ -134,9 +136,11 @@ gr = ellglobalred(E);
 print("conductor = ", gr[1], " = ", factor(gr[1]));
 print("minimal model change [u,r,s,t] = ", gr[2]);
 print("local data (kodaira, cp) = ", gr[5]);
+print("kodaira codes 4+nu = I_nu: ", [k[2] for k in gr[5]], " -> I_nu with nu = ", [k[2]-4 for k in gr[5]]);
+print("minimal discriminant = ", ellminimalmodel(E).disc, " = ", factor(ellminimalmodel(E).disc));
 print("tamagawa product = ", elltamagawa(E));
 print("elltors = ", elltors(E));
-G = [-4,28];
+G = [-4,28]; T = [56,728];
 print("ellisoncurve(G) = ", ellisoncurve(E,G));
 print("ellorder(G) = ", ellorder(E,G));
 print("ellheight(G) = ", ellheight(E,G));
@@ -150,6 +154,11 @@ print("ellrank(E) = ", r);
 print("ellrank(E,,[G]) = ", ellrank(E,,[G]));
 print("ellsaturation(E,[G],1000) = ", ellsaturation(E,[G],1000));
 print("ellsaturation(E,[[-100,260]],1000) = ", ellsaturation(E,[[-100,260]],1000));
+print("ellsaturation(E,[G],10000) = ", ellsaturation(E,[G],10000));
+pts = ellratpoints(E, 100000);
+bad = 0; maxn = 0;
+for(i=1,#pts, P = pts[i]; if(P==[0], next); h = ellheight(E,P); if(h < 1e-20, next); nn = round(sqrt(h/ellheight(E,G))); ok = 0; for(k=0,5, for(s=0,1, Q = elladd(E, ellmul(E,G,(-1)^s*nn), ellmul(E,T,k)); if(Q==P, ok=1))); if(!ok, bad++; print("  point not in <G,T>: ", P)); maxn = max(maxn, nn));
+print("ellratpoints(E,10^5): ", #pts, " points with naive x-height <= 10^5 ; outside <G,T>: ", bad, " ; largest |n| among them: ", maxn);
 print("ellrootno = ", ellrootno(E));
 print("ellanalyticrank = ", ellanalyticrank(E));
 print("L(E,1) = ", elllseries(E,1));
@@ -165,6 +174,8 @@ print("ellmul(E,G,80) x-numerator digits = ", #Str(numerator(ellmul(E,G,80)[1]))
     check("elltors = [6, [6], [[56, 728]]]" in gp_out, "torsion Z/6 by T")
     check("ellrank(E) = [1, 1, 0, [[-100, 260]]]" in gp_out, "ellrank bounds 1,1")
     check("ellsaturation(E,[G],1000) = [[-4, 28]]" in gp_out, "G saturated to 1000")
+    check("ellsaturation(E,[G],10000) = [[-4, 28]]" in gp_out, "G saturated to 10000")
+    check("outside <G,T>: 0" in gp_out, "all rational points of naive height <= 10^5 lie in <G,T>")
     check("ellorder(G) = 0" in gp_out, "G infinite order")
     hG = None
     for ln in gp_out.splitlines():
@@ -293,25 +304,33 @@ print("ellmul(E,G,80) x-numerator digits = ", #Str(numerator(ellmul(E,G,80)[1]))
     w2 = -56 + 28 * math.sqrt(3)
     print("positive window (10): x in [egg_left, %.6f) U (%.6f, -14/3)" % (w1, w2))
     print("egg_left = %.6f ; window lengths %.6f and %.6f ; egg length %.6f" % (r1, w1 - r1, -14 / 3 - w2, r2 - r1))
-    # Haar-measure proportion of positive arc on egg (elliptic-log measure dx/|y|)
-    def arc(xa, xb, n=200000):
-        # integrate dx/|y| numerically by midpoint (crude, labelled HEURISTIC)
-        tot = 0.0
-        h = (xb - xa) / n
-        for i in range(n):
-            x = xa + (i + 0.5) * h
-            v = x ** 3 + 109 * x * x + 224 * x
-            if v > 0:
-                tot += h / math.sqrt(v)
-        return tot
-    egg = arc(r1, r2)
-    win = arc(r1, w1) + arc(w2, -14 / 3)
-    print("HEURISTIC arc-measure fraction of egg that is positive: %.5f (expected density of positive odd m)" % (win / egg))
-    print("observed fraction among odd m<=80: %d/40 = %.4f" % (len([m for m in pos_m if m % 2 == 1]), len(pos_m) / 40))
+    # Haar-measure proportion of positive arc on egg (elliptic-log measure dx/|y|).
+    # Audit fix: the earlier midpoint rule mishandled the 1/sqrt endpoint
+    # singularities (gave 0.13638); tanh-sinh quadrature (mpmath) is used instead
+    # and its egg integral is checked against PARI's real period omega1.
+    import mpmath
+    mpmath.mp.dps = 30
+    R1 = (-109 - mpmath.sqrt(10985)) / 2
+    R2 = (-109 + mpmath.sqrt(10985)) / 2
+    W1 = -56 - 28 * mpmath.sqrt(3)
+    W2 = -56 + 28 * mpmath.sqrt(3)
+    fq = lambda u: 1 / mpmath.sqrt(u ** 3 + 109 * u ** 2 + 224 * u)
+    egg = mpmath.re(mpmath.quad(fq, [R1, R2]))
+    win = mpmath.re(mpmath.quad(fq, [R1, W1]) + mpmath.quad(fq, [W2, mpmath.mpf(-14) / 3]))
+    omega1 = None
+    for ln in gp_out.splitlines():
+        if ln.startswith("E.omega = ["):
+            omega1 = mpmath.mpf(ln.split("[")[1].split(",")[0])
+    check(omega1 is not None and abs(egg - omega1) < mpmath.mpf(10) ** (-12), "egg integral equals PARI omega1")
+    print("egg integral int dx/sqrt(f) = %s = PARI omega1 to 1e-12 ; window integral = %s" % (mpmath.nstr(egg, 15), mpmath.nstr(win, 15)))
+    print("arc-measure fraction of egg that is positive: %.5f (limit density of positive odd m in each coset row, Weyl equidistribution)" % float(win / egg))
+    print("observed fraction among odd m<=80: k=0 row %d/40 = %.4f ; k=1 row %d/40 = %.4f ; both rows %d/80 = %.4f" % (
+        len(pos_m), len(pos_m) / 40, len(pos_list) // 3 - len(pos_m), (len(pos_list) // 3 - len(pos_m)) / 40, len(pos_list) // 3, len(pos_list) / 3 / 80))
 
     print("\n--- S3: structural statement ---")
     print("E(Q) = Z*G (+) Z/6*T  [rank 1 PROVED by ellrank bounds; G generates mod torsion: saturation at p<=1000 FINITE-EXACT, full CITED Bremner-Macleod Rem 2.2]")
     print("positive solutions among {mG+kT : 1<=m<=80, 0<=k<=5} = sparse subset listed above; no Collatz map used.")
+    print("cited canon/session labels: THM-3341, THM-3756, THM-3620, THM-4139, THM-4146; session collatz-mod6-20260917; wave 20260921")
     print("=== END ===")
 
 

@@ -351,6 +351,81 @@ for (maxL, maxletter) in ((10, 3), (7, 6)):
 tline("S1b done")
 out()
 
+# ---------------------------------------------------------------- S1c (added at the audit of 2026-09-22)
+out("## S1c. Global gate census by E-cycle length n = J + L <= 21, ALL letters (compositions of J into L parts)")
+import itertools
+def compositions(J, L):
+    for cuts in itertools.combinations(range(J + L - 1), L - 1):
+        prev = -1
+        w = []
+        for c in cuts:
+            w.append(c - prev - 1)
+            prev = c
+        w.append(J + L - 1 - prev - 1)
+        yield tuple(w)
+bylen = Counter()
+row_info = {}
+extra = []
+for n in range(1, 22):
+    for L in range(1, n + 1):
+        J = n - L
+        D = (1 << J) - 3 ** L
+        seen = {}
+        for w in compositions(J, L):
+            A, Bn = 1, 0
+            for s_, k in enumerate(w):
+                A <<= k
+                Bn = (Bn << k) + 3 ** s_
+            if Bn % D:
+                continue
+            x = m0 = Bn // D
+            nodes, enodes, ok, greedy, allodd = [], [], True, True, True
+            for k in w:
+                if x % 3 == 0 or ((x << k) - 1) % 3:
+                    ok = False
+                    break
+                nodes.append(x)
+                enodes.extend(x << t for t in range(k + 1))
+                if KPOS[x % 9] != k:
+                    greedy = False
+                if x % 2 == 0:
+                    allodd = False
+                x = ((x << k) - 1) // 3
+            if not ok or len(set(nodes)) < len(nodes):
+                continue
+            check(x == m0, "S1c closure at %s" % (w,))
+            key = frozenset(nodes)
+            if key not in seen:
+                seen[key] = (len(set(enodes)) == len(enodes), greedy, allodd, max(abs(e) for e in enodes), w)
+        if seen:
+            ns = sum(1 for v in seen.values() if v[0])
+            ng = sum(1 for v in seen.values() if v[1])
+            nt = sum(1 for v in seen.values() if v[2])
+            sg = "+" if D > 0 else "-"
+            bylen[(n, sg)] += ns
+            row_info[(J, L)] = (len(seen), ns, ng, nt, max(max(v[4]) for v in seen.values()), max(v[3] for v in seen.values()))
+            out("  n=%d (J,L)=(%d,%d) D=%d: %d primitive integral walks, %d simple, %d greedy, %d all-odd, max letter %d, max |E-node| %d" %
+                ((n, J, L, D) + row_info[(J, L)]))
+            for c, v in seen.items():
+                if v[1]:
+                    extra.append(tuple(sorted(c)))
+                if (J, L) == (11, 7) and (max(v[4]) > 6 or v[3] > 2000):
+                    out("      (11,7) cycle beyond the letters-0..6 scan and the nodes<=2000 census: %s word %s max|E-node| %d" %
+                        (sorted(c), v[4], v[3]))
+                if (J, L) == (13, 8) and v[0]:
+                    out("      (13,8) simple cycle %s word %s max letter %d" % (sorted(c), v[4], max(v[4])))
+out("S1c simple E-cycles (positive sheet) by length: %s" % sorted((n, c) for (n, sg), c in bylen.items() if sg == "+" and c))
+out("S1c simple E_- cycles (negative sheet) by length: %s" % sorted((n, c) for (n, sg), c in bylen.items() if sg == "-" and c))
+check({n: c for (n, sg), c in bylen.items() if sg == "+" and c} == {3: 1, 8: 1, 13: 6, 16: 1, 21: 2}, "S1c E counts")
+check({n: c for (n, sg), c in bylen.items() if sg == "-" and c} == {2: 1, 5: 2, 15: 2, 18: 13}, "S1c E_- counts")
+check(set(extra) == {(1,), (-1,), (-11, -4)}, "S1c greedy cycles")
+check(row_info[(11, 7)] == (13, 13, 0, 1, 8, 2732) and row_info[(13, 8)] == (4, 2, 0, 0, 6, 256), "S1c rows")
+out("S1c the letters-0..6 scan of S1b sees 12 of the 13 simple E_- cycles of length 18; the inherited bounded census "
+    "(nodes <= 2000) also sees 12; the 13th needs the letter 8 and the E-node 2732. Greedy-legal cycles: still exactly "
+    "{1}, {-1}, {-4,-11} (all letters, all lengths <= 21).")
+tline("S1c done")
+out()
+
 # ---------------------------------------------------------------- S2
 out("## S2. Joint carry: forward T-word to the peak, greedy G-word from the peak")
 N2 = 10 ** 5

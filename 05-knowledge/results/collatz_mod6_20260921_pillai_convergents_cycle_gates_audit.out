@@ -1,0 +1,167 @@
+==============================================================================
+A1. Continued fraction of log_2 3 by mpmath (400 dps), convergents, intermediates
+==============================================================================
+45 partial quotients agree with the lane: True
+largest among the 45: 55 at index 14; second largest: 37 at index 44; a_20=15, a_44=37
+convergents n=0..14 agree with the lane and satisfy p_(n-1) q_n - p_n q_(n-1) = +-1: True
+convergents with L <= 200000 checked exactly for |Delta|*L < 3^L: 14
+classification of 5/3, 11/7, 27/17, 46/29, 149/94, 233/147, 7/4, 19/12, 6/4 agrees with the lane
+Delta at 5/3, 8/5, 11/7, 19/12, 27/17, 46/29, 65/41, 84/53 agree with the lane's table
+|Delta|/3^L at 1/1, 3/2, 5/3, 11/7, 19/12: 3.3333e-01, 1.1111e-01, 1.8519e-01, 6.3557e-02, 1.3460e-02
+
+==============================================================================
+A2. Factorizations quoted in the note: products and primality (sympy isprime)
+==============================================================================
+  |2^19-3^12| = 23*311 : product and primality OK (3-digit largest factor)
+  |2^27-3^17| = 5*71*14303 : product and primality OK (5-digit largest factor)
+  |2^46-3^29| = 39409*44110909 : product and primality OK (8-digit largest factor)
+  |2^65-3^41| = 19*29*17021*44835377399 : product and primality OK (11-digit largest factor)
+  |2^84-3^53| = 11*467*11979433*657030219467 : product and primality OK (12-digit largest factor)
+  |2^149-3^94| = 7*7*7*30809*1765553*1009273943*353617911534038093791 : product and primality OK (21-digit largest factor)
+  |2^485-3^306| = 929*84958721*1437465479*46777127526357837196396057*19231970699168568692206159641463898527274405039282219231295668859629511743697206424938341838460889 : product and primality OK (98-digit largest factor)
+  |Delta| = 5, 13, 139 prime at 5/3, 8/5, 11/7: OK
+
+==============================================================================
+A3. Tier constants, the elementary log inequality, and the L <= 400 hit list
+==============================================================================
+3 ln 2 = 2.079442 > 2: True;  2/(3 ln 2) = 0.961797 < 1: True;  2/ln 2 = 2.885390 < 2.9: True
+|log_2(1+e)| <= |e|/((1-|e|) ln 2) on 199998 grid points |e| < 1/4 (mpmath 50 dps): max ratio 0.999999
+(the lemma is also proved by ln(1+e) <= e for e >= 0 and -ln(1-|e|) = int_0^|e| dt/(1-t) <= |e|/(1-|e|))
+tier-C hits (|Delta| L < 3^L), L <= 400: 19
+    1/1   A=0 B=1 convergent n=0
+    2/1   A=0 B=1 convergent n=1
+    3/2   A=1 B=1 convergent n=2
+    5/3   A=0 B=0 intermediate n=2 j=1/1 extreme
+    6/4   A=0 B=0 convergent n=2 (x2)
+    8/5   A=0 B=1 convergent n=3
+   11/7   A=0 B=1 intermediate n=3 j=1/1 extreme
+   19/12  A=1 B=1 convergent n=4
+   27/17  A=0 B=0 intermediate n=4 j=1/2 extreme
+   38/24  A=0 B=0 convergent n=4 (x2)
+   46/29  A=0 B=0 intermediate n=4 j=2/2 extreme
+   65/41  A=0 B=1 convergent n=5
+   84/53  A=1 B=1 convergent n=6
+  149/94  A=0 B=0 intermediate n=6 j=1/4 extreme
+  168/106 A=0 B=1 convergent n=6 (x2)
+  252/159 A=0 B=0 convergent n=6 (x3)
+  401/253 A=0 B=0 intermediate n=6 j=4/4 extreme
+  485/306 A=0 B=1 convergent n=7
+  569/359 A=0 B=1 intermediate n=7 j=1/1 extreme
+tier A: 3 hits (3/2, 19/12, 84/53), all convergents, all Delta < 0: True
+tier B: 11 hits, all convergents or extreme intermediates; tier C: all 19 convergent-or-extreme (no INTERIOR, no NEITHER)
+hits with L > 60 (not listed in the lane's .out): 149/94, 168/106, 252/159, 401/253, 485/306, 569/359
+L values with two or more hits: {1: [1, 2]} (bound 2/(L ln 2) < 1/2 for L >= 6)
+
+empirical placement test, all reduced p/q with q <= 2000 and |x - p/q| < 1/q^2 (resp. < 1/(2q^2)):
+  log_2 3   |x-p/q|<1/q^2:  13 fractions, all convergent-or-extreme: True;  <1/(2q^2):   7, all convergents: True;  interior intermediates with 1/q^2 <= err < 3/q^2: 3
+  sqrt 2    |x-p/q|<1/q^2:  18 fractions, all convergent-or-extreme: True;  <1/(2q^2):   9, all convergents: True;  interior intermediates with 1/q^2 <= err < 3/q^2: 0
+  pi        |x-p/q|<1/q^2:   6 fractions, all convergent-or-extreme: True;  <1/(2q^2):   3, all convergents: True;  interior intermediates with 1/q^2 <= err < 3/q^2: 8
+  e         |x-p/q|<1/q^2:  12 fractions, all convergent-or-extreme: True;  <1/(2q^2):   7, all convergents: True;  interior intermediates with 1/q^2 <= err < 3/q^2: 4
+  2^(1/3)   |x-p/q|<1/q^2:  11 fractions, all convergent-or-extreme: True;  <1/(2q^2):   6, all convergents: True;  interior intermediates with 1/q^2 <= err < 3/q^2: 5
+
+==============================================================================
+A4. Eliahou product bound on the eight known cycles; thresholds; L* at N = 2^68
+==============================================================================
+  (1,)                             b= 1 w=[2] K/L=2/1 Delta=1 B=1 q=1 N=1 rel=1/3=0.3333 bound=1/3=0.3333
+  (-1,)                            b= 1 w=[1] K/L=1/1 Delta=-1 B=1 q=1 N=1 rel=1/3=0.3333 bound=1/3=0.3333
+  (-5, -7)                         b= 1 w=[1, 2] K/L=3/2 Delta=-1 B=5 q=1 N=5 rel=1/9=0.1111 bound=29/225=0.1289
+  (-17, -25, -37, -55, -41, -61, -91) b= 1 w=[1, 1, 1, 2, 1, 1, 4] K/L=11/7 Delta=-139 B=2363 q=1 N=17 rel=139/2187=0.0636 bound=116160677851/897410677851=0.1294
+  (1,)                             b=-1 w=[1] K/L=1/1 Delta=-1 B=1 q=1 N=1 rel=1/3=0.3333 bound=1/3=0.3333
+  (5, 7)                           b=-1 w=[1, 2] K/L=3/2 Delta=-1 B=5 q=1 N=5 rel=1/9=0.1111 bound=29/225=0.1289
+  (17, 25, 37, 55, 41, 61, 91)     b=-1 w=[1, 1, 1, 2, 1, 1, 4] K/L=11/7 Delta=-139 B=2363 q=1 N=17 rel=139/2187=0.0636 bound=116160677851/897410677851=0.1294
+  (-1,)                            b=-1 w=[2] K/L=2/1 Delta=1 B=1 q=1 N=1 rel=1/3=0.3333 bound=1/3=0.3333
+  seven-cycle word rotations: B(rot w) = (3B + Delta)/2^k_1 (inherited signed_cycles sec.3), n_0 = -B/Delta:
+  (1, 1, 1, 2, 1, 1, 4) B=2363 n_0=17; (1, 1, 2, 1, 1, 4, 1) B=3475 n_0=25; (1, 2, 1, 1, 4, 1, 1) B=5143 n_0=37; (2, 1, 1, 4, 1, 1, 1) B=7645 n_0=55; (1, 1, 4, 1, 1, 1, 2) B=5699 n_0=41; (1, 4, 1, 1, 1, 2, 1) B=8479 n_0=61; (4, 1, 1, 1, 2, 1, 1) B=12649 n_0=91
+  (the lane's .out lists the same seven (B, n_0) pairs in lexicographic word order)
+Legendre threshold N_min(L) = 1/(3((1+1/(4L))^(1/L)-1)) versus 4L^2/3 (mpmath):
+  L=5      N_min = 33.993   4L^2/3 = 33.333   ratio = 1.0198
+  L=12     N_min = 193.83   4L^2/3 = 192.0   ratio = 1.00951
+  L=41     N_min = 2248.0   4L^2/3 = 2241.3   ratio = 1.00297
+  L=53     N_min = 3754.0   4L^2/3 = 3745.3   ratio = 1.00231
+  L=306    N_min = 1.249e+5   4L^2/3 = 1.2485e+5   ratio = 1.00041
+  L=665    N_min = 5.8974e+5   4L^2/3 = 5.8963e+5   ratio = 1.00019
+  L=15601  N_min = 3.2452e+8   4L^2/3 = 3.2452e+8   ratio = 1.00001
+  L=31867  N_min = 1.354e+9   4L^2/3 = 1.354e+9   ratio = 1.0
+  L=79335  N_min = 8.3921e+9   4L^2/3 = 8.3921e+9   ratio = 1.0
+exp(L/(3*2^68)) - 1 <= 1/(4L) holds at the lane's L = 14878195707 (a sufficient bound found with a 1e-6 float margin);
+  the exact largest L is 14878203146 (mpmath 40 dps bisection), i.e. 7439 above the lane's; isqrt(3*2^68/4) = 14878203147
+
+==============================================================================
+A5. Cycle-gate census, independent enumeration (cut positions + Horner carry)
+==============================================================================
+convergent/intermediate clocks with L <= 13: 40 (same set as the lane)
+clock   words    #q=1  min_q  hist(q<=20)             DP(mod |Delta|, run when |Delta| <= 30000) total/#q=1/min_q
+   1/1  1        1     1      1:1                      1/1/1 agree
+   2/1  1        1     1      1:1                      1/1/1 agree
+   2/2  1        1     1      1:1                      1/1/1 agree
+   3/2  2        2     1      1:2                      2/2/1 agree
+   4/2  3        1     1      1:1 7:2                  3/1/1 agree
+   3/3  1        1     1      1:1                      1/1/1 agree
+   5/3  6        0     5      5:6                      6/0/5 agree
+   6/3  10       1     1      1:1                      10/1/1 agree
+   4/4  1        1     1      1:1                      1/1/1 agree
+   6/4  10       2     1      1:2 17:8                 10/2/1 agree
+   8/4  35       1     1      1:1 7:2                  35/1/1 agree
+   5/5  1        1     1      1:1                      1/1/1 agree
+   8/5  35       0     13     13:35                    35/0/13 agree
+  10/5  126      1     1      1:1                      126/1/1 agree
+   6/6  1        1     1      1:1                      1/1/1 agree
+   9/6  56       2     1      1:2                      56/2/1 agree
+  10/6  126      0     5      5:6                      126/0/5 agree
+  12/6  462      1     1      1:1 7:2                  462/1/1 agree
+   7/7  1        1     1      1:1                      1/1/1 agree
+  11/7  210      7     1      1:7                      210/7/1 agree
+  14/7  1716     1     1      1:1                      1716/1/1 agree
+   8/8  1        1     1      1:1                      1/1/1 agree
+  12/8  330      2     1      1:2 17:8                 330/2/1 agree
+  16/8  6435     1     1      1:1 7:2                  
+   9/9  1        1     1      1:1                      1/1/1 agree
+  15/9  3003     0     5      5:6                      3003/0/5 agree
+  18/9  24310    1     1      1:1                      
+  10/10 1        1     1      1:1                      
+  15/10 2002     2     1      1:2                      2002/2/1 agree
+  16/10 5005     0     13     13:35                    5005/0/13 agree
+  20/10 92378    1     1      1:1 7:2                  
+  11/11 1        1     1      1:1                      
+  22/11 352716   1     1      1:1                      
+  12/12 1        1     1      1:1                      
+  18/12 12376    2     1      1:2 17:8                 
+  19/12 31824    0     23                              31824/0/23 agree
+  20/12 75582    0     5      5:6                      
+  24/12 1352078  1     1      1:1 7:2                  
+  13/13 1        1     1      1:1                      
+  26/13 5200300  1     1      1:1                      
+residue DP agrees with the enumeration on all 28 clocks with |Delta| <= 30000
+q=1 words: 3n+1 side 13 (all (2,...,2)), 3n-1 side 32
+closed forms verified: B((2)^d) = 4^d - 3^d = Delta (n_0 = 1); B((1)^d) = 3^d - 2^d = -Delta (n_0 = 1);
+  B((1,2)^d) = 5 (9^d - 8^d) and B((2,1)^d) = 7 (9^d - 8^d) with Delta = 8^d - 9^d (n_0 = 5, 7), d <= 6
+3n-1 q=1 words per clock: {(1, 1): 1, (2, 2): 1, (3, 2): 2, (3, 3): 1, (4, 4): 1, (5, 5): 1, (6, 4): 2, (6, 6): 1, (7, 7): 1, (8, 8): 1, (9, 6): 2, (9, 9): 1, (10, 10): 1, (11, 7): 7, (11, 11): 1, (12, 8): 2, (12, 12): 1, (13, 13): 1, (15, 10): 2, (18, 12): 2}
+on (5d,3d), d=2,3,4: the six q=5 words are exactly the d-fold repeats of the six words of 5/3 (checked)
+19/12 (|Delta| = 7153 = 23*311): q spectrum over all 31824 words: {23: 96, 311: 1404, 7153: 30324}
+
+==============================================================================
+A6. Full-clock census L <= 11 (all K in [L, 2L])
+==============================================================================
+  L= 1 q=1 words=2 no-cancel clocks=2/2 three smallest min_q: [(1, 1), (1, 2)]
+  L= 2 q=1 words=4 no-cancel clocks=1/3 three smallest min_q: [(1, 2), (1, 3), (1, 4)]
+  L= 3 q=1 words=2 no-cancel clocks=2/4 three smallest min_q: [(1, 3), (1, 6), (5, 5)]
+  L= 4 q=1 words=4 no-cancel clocks=2/5 three smallest min_q: [(1, 4), (1, 6), (1, 8)]
+  L= 5 q=1 words=2 no-cancel clocks=4/6 three smallest min_q: [(1, 5), (1, 10), (13, 8)]
+  L= 6 q=1 words=4 no-cancel clocks=2/7 three smallest min_q: [(1, 6), (1, 9), (1, 12)]
+  L= 7 q=1 words=9 no-cancel clocks=3/8 three smallest min_q: [(1, 7), (1, 11), (1, 14)]
+  L= 8 q=1 words=4 no-cancel clocks=2/9 three smallest min_q: [(1, 8), (1, 12), (1, 16)]
+  L= 9 q=1 words=2 no-cancel clocks=5/10 three smallest min_q: [(1, 9), (1, 18), (5, 15)]
+  L=10 q=1 words=4 no-cancel clocks=2/11 three smallest min_q: [(1, 10), (1, 15), (1, 20)]
+  L=11 q=1 words=2 no-cancel clocks=6/12 three smallest min_q: [(1, 11), (1, 22), (19, 17)]
+  L=11 q=1 words are exactly (1^11) and (2^11): no signed cycle of least period 11 at b=+-1
+total words 956384; q=1 per L [2, 4, 2, 4, 2, 4, 9, 4, 2, 4, 2] (sum over L<=10: 37); no-cancellation clocks per L [2, 1, 2, 2, 4, 2, 3, 2, 5, 2, 6] (L=1 degenerate: |Delta|=1)
+
+==============================================================================
+A7. Pillai censuses in wider boxes
+==============================================================================
+|2^a - 10^b| <= 100, 0 <= a <= 300, 0 <= b <= 90: 23 solutions; with a, b >= 1: 14; largest b: 3; largest a: 10
+|2^K - 3^L| <= 100, 1 <= K <= 700, 1 <= L <= 400: 26 solutions (lane box K<=200, L<=130 had 26); largest L: 5; NEITHER: 15; tier-C: 6
+for L <= 400, |Delta| <= 100 forces K <= 634 < 700, so this list is complete for ALL K and all L <= 400 (FINITE-EXACT);
+  beyond that, 100 <= 3^L/(4L) for every L >= 8, so any further solution would be in tier A and sit on a convergent
+  multiple (PROVED via Legendre); no elementary bound on L follows, which is why the full list stays CITED context.
+AUDIT DONE
