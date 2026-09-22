@@ -1,0 +1,364 @@
+
+==============================================================================
+S0. Sieves and universes
+==============================================================================
+sieve bound NS = 6000001  primes: 412849
+sieve audits vs sympy on 400 random n: PASS
+  #squarefree <= 100000 = 60794 ; density 0.607940 ; 6/pi^2 = 0.607927
+  #squarefree <= 1000000 = 607926 ; density 0.607926 ; 6/pi^2 = 0.607927
+
+==============================================================================
+S1. TYPING TABLE probes
+==============================================================================
+
+--- S1.1  Squarefree divisors of N=p^2 q r : F_2^3, PG(2,2), the Fano plane, and the octonion orientation ---
+N = 60 = 2^2*3*5 : F=10 S=7 U=3 ; F=S+U: True
+   shape p      N=     7 : F= 0 S=0 U=0
+   shape p^3    N=   343 : F= 2 S=1 U=1
+   shape p^2qr  N=  7007 : F=10 S=7 U=3
+   the user's {0,2,10} = F at the three DB1 shapes p, p^3, p^2qr (inherited arithmetic_braids_20260917_divisors.md DB1).
+divisor box [0,2]x[0,1]^2 has 12 points = 8 (Boolean cube {squarefree divisors incl. 1}) + 3 (nonsquarefree proper: [4, 12, 20]) + 1 (N)
+PROVED (+checked 64 products): squarefree divisors under (multiply, drop squares) = F_2^3 ; 1 = zero vector.
+Fano lines of the divisor lattice (triples of proper squarefree divisors with square product):
+   [2, 3, 6]      product 36 = 6^2
+   [2, 5, 10]     product 100 = 10^2
+   [2, 15, 30]    product 900 = 30^2
+   [3, 5, 15]     product 225 = 15^2
+   [3, 10, 30]    product 900 = 30^2
+   [5, 6, 30]     product 900 = 30^2
+   [6, 10, 15]    product 900 = 30^2
+PROVED: 7 points, 7 lines, 3 points/line, 3 lines/point = PG(2,2).
+orientations of the 7 Fano lines: 128 ; giving an ALTERNATIVE algebra (linearized alternativity on the basis): 16
+checked: the valid orientations satisfy |xy|^2=|x|^2|y|^2 exactly on 120 random integer pairs (composition algebra = octonions).
+hostile witness: orientation (0, 0, 0, 0, 0, 0, 0) fails linearized alternativity at basis triple (1, 2, 4)
+first valid orientation (line -> cyclic order): [((2, 4, 6), 'a->b->c'), ((1, 4, 5), 'a->b->c'), ((3, 4, 7), 'a->b->c'), ((1, 2, 3), 'a->b->c'), ((2, 5, 7), 'a->b->c'), ((1, 6, 7), 'a->c->b'), ((3, 5, 6), 'a->c->b')]
+VERDICT: the divisor lattice of p^2qr fixes the 7 points (S=7) and the 7 lines (square-product triples) = F_2^3 / PG(2,2),
+         but nothing in the lattice selects one of the 16 octonion orientations out of 128: the multiplication is LOST DATA.
+         16 = 128/8 is rank-nullity of the incidence map (inherited arithmetic_braids2_20260917_fano_code.md sec.1); re-derived here
+         by brute alternativity as an independent path.  Fano points 7 = S(p^2qr), dim 3 = U(p^2qr).
+
+--- S1.2  Cayley-Dickson dimensions vs Omega / omega ---
+   a=2        Omega= 1 omega=1 d(N)=  2 2^omega=2  2^Omega=2  divisor box = 2 points
+   b=6        Omega= 2 omega=2 d(N)=  4 2^omega=4  2^Omega=4  divisor box = 4 points
+   a^2b=24    Omega= 4 omega=2 d(N)=  8 2^omega=4  2^Omega=16  divisor box = 8 points
+   c^2b=5400  Omega= 8 omega=3 d(N)= 48 2^omega=8  2^Omega=256  divisor box = 48 points
+PROVED: Omega is additive (Omega(MN)=Omega(M)+Omega(N)), Cayley-Dickson dimension is multiplicative (dim doubles),
+        so 'Omega(a^2 b)=4 <-> dim H = 4' and 'Omega(c^2 b)=8 <-> dim O = 8' compare 2*Omega(a)+Omega(b) = 2+2, 6+2 with 2^2, 2^3:
+        the equalities 4=4 and 8=8 are two coincidences of small numbers; the next member 'Omega(d^2 b) = 10' (d a 4-almost-prime)
+        has no Cayley-Dickson partner (dimension 16 = sedenions).  Inherited DB3: literal C^2B is the 8-almost-primes, not p^2qr.
+        d(N) = prod(a_i+1) <= 2^Omega(N) with equality iff N squarefree; and d(N) = 2^omega(N) iff N squarefree.
+        (checked 2<=N<=2000).  The only functorial match: for SQUAREFREE N with omega(N)=j the squarefree-divisor group is F_2^j,
+        its real group algebra R[F_2^j] has dimension 2^j = d(N), and the Cayley-Dickson algebra of that dimension is a
+        twisted group algebra R_F[F_2^j] (CITED: Albuquerque-Majid, 'Quasialgebra structure of the octonions', J. Algebra 220 (1999)).
+        Map: N=1->R, p->C, pq->H, pqr->O (omega = 0,1,2,3).  LOST: the cocycle F (signs/orientation).  a^2b and c^2b are NOT squarefree,
+        their divisor boxes (8 and 48 points above) are not groups: VERDICT numerology for the Omega version.
+
+--- S1.3  Bott periodicity 8: probe ---
+odd moduli m<2000 with ord_m(2)=8 exactly: [17, 51, 85, 255]  (all divide 2^8-1=255)
+Collatz row moduli and their orders of 2:  [(3, 2), (9, 6), (7, 3), (63, 6), (21, 6), (27, 18)]
+R-braid period on rows = ord_9(4) = 3; source period mod 42 and target mod 63: 3 (inherited row_braid_typing RB4).
+VERDICT: NO MAP FOUND.  8 = Bott period is the Morita period of the Clifford cocycle on F_2^n (Cl_{n+8} = Cl_n (x) M_16(R));
+         the shared object with S1.1 is only 'twisted group algebra of F_2^n' (Clifford AND octonion are such: CITED Albuquerque-Majid).
+         No Collatz modulus has ord(2)=8; the row/braid periods are 2,3,6.  Nothing in the divisor lattice carries a cocycle.
+         The one '8' with a mechanism is 2(r+1)=2^r iff r=3 (self-dual RM(1,3)): inherited fano_code.md sec.5, not Bott.
+
+--- S1.4  6/pi^2 candidates: exact densities at 10^6 odd n ---
+(a) odd n with T(n) squarefree             : 911902/1000000 = 0.911902 ; predicted prod_{p>=5}(1-1/p^2) = 0.911891 = 9/pi^2 = 0.911891 = (3/2)*6/pi^2
+(b) odd n with gcd(n,T(n))=1               : 1000000/1000000 = 1 exactly (PROVED: gcd(n,3n+1)=1); NOT 6/pi^2 (hostile control)
+    odd n with gcd(n+2,T(n))=1             : 0.800000 ; PROVED: gcd(n+2,3n+1) | 5, so density = 1 - 1/5 = 0.800000
+(c) odd n with n AND T(n) squarefree        : 737515/1000000 = 0.737515 ; predicted (8/9)*prod_{p>=5}(1-2/p^2) = 0.737449 (Mirsky-type product, NOT a multiple of 6/pi^2)
+    (a) restricted to row n = 1 mod 6: 0.911887  (predicted 9/pi^2 = 0.911891, row-uniform)
+    (a) restricted to row n = 3 mod 6: 0.911917  (predicted 9/pi^2 = 0.911891, row-uniform)
+    (a) restricted to row n = 5 mod 6: 0.911902  (predicted 9/pi^2 = 0.911891, row-uniform)
+WHY (PROVED, CRT + Moebius): T(n) squarefree iff p^2 !| 3n+1 for every odd p; for p>=5 that is one excluded class of n mod p^2,
+     for p=3 it is automatic (3n+1 = 1 mod 3), for p=2 the odd part is taken.  Density = prod_{p>=5}(1-1/p^2) = (6/pi^2)*(4/3)*(9/8) = 9/pi^2.
+     The factor 3/2 over 6/pi^2 is exactly the two local factors killed by 'odd core' (p=2) and 'image is 2 mod 3' (p=3).
+     Coprimality of (n, T(n)) or of any two affine forms in n is trivial: gcd(an+b, cn+d) | (ad-bc).  So 6/pi^2 = P(gcd=1) cannot arise
+     from Collatz-linear pairs; it arises only through squarefreeness, and there with the local factors at 2 and 3 removed.
+     Negative n: T(-n) = -T_{-1}(n) (inherited summand.md sec.7) swaps rows 1 and 5 and preserves |.|-squarefreeness: the same densities.
+
+==============================================================================
+S2. {7,21}: tournaments n<=6 (control), 3n+b cycle-count spectrum, Mersenne probe, Cipolla trunk
+==============================================================================
+
+--- S2.1  Tournament census n=3..6: Hamiltonian paths h and |Aut| (vectorised DP) ---
+  n=3:      8 labelled tournaments; h values = [1, 3] ; |Aut| values = [1, 3] ; max h = 3
+  n=4:     64 labelled tournaments; h values = [1, 3, 5] ; |Aut| values = [1, 3] ; max h = 5
+  n=5:   1024 labelled tournaments; h values = [1, 3, 5, 9, 11, 13, 15] ; |Aut| values = [1, 3, 5] ; max h = 15
+  n=6:  32768 labelled tournaments; h values = [1, 3, 5, 9, 11, 13, 15, 17, 19, 23, 25, 27, 29, 31, 33, 37, 41, 43, 45] ; |Aut| values = [1, 3, 5, 9] ; max h = 45
+  union of attained h for n<=6: [1, 3, 5, 9, 11, 13, 15, 17, 19, 23, 25, 27, 29, 31, 33, 37, 41, 43, 45]
+  odd values <= 45 NOT attained for n<=6: [7, 21, 35, 39]  (7 and 21 absent, as THM-1745 / death-star S70 state for all n; the others fill in at larger n per the theorem)
+  Mersenne probe: 2^j-1 = [1, 3, 7, 15, 31, 63] ; attained for n<=6: [1, 3, 15, 31] ; max h per n vs 2^(n-1)-1: [(3, 3, 3), (4, 5, 7), (5, 15, 15), (6, 45, 31)]
+  VERDICT (a): 7 = 2^3-1 has no Mersenne mechanism: the spectrum is 'odds minus {7,21}' so 1,3,15,31,63,... ARE attained;
+      the max h at n=4 is 5 (< 7) and at n=5 it is 15 = 2^4-1 while 7 is skipped; 63 = 2^6-1 = 9*7 is in the spectrum (THM-1745 head).
+      The row-braid fact ord_9(2)=6 (9 | 63) and the tournament hole 7 share the prime 7 only as a numeral: NO MAP FOUND.
+
+--- S2.2  3n+b cycle census, gcd(b,6)=1, 1<=b<=99, both signs of n; U1: |n|<=10^5 escape 10^18; U2: |n|<=2*10^5 escape 10^40 ---
+  U1 (|n|<=10^5, escape 10^18): census done for 33 values of b (and their negatives); unresolved (escaped) starts: 0; all cycles verified; C_{-b} = -C_b checked
+  U2 (|n|<=2*10^5, escape 10^40): census done for 33 values of b (and their negatives); unresolved (escaped) starts: 0; all cycles verified; C_{-b} = -C_b checked
+  positive control vs the session-lead census F3 (|n|<=2*10^5): c(1)=4, c(5)=9, c(7)=5, c(11)=7, c(13)=13 : PASS
+  (c(5)=9 = the nine b=-5 cycles of arithmetic_braids2_20260917_signed_cycles.md sec.5 under negation; c(1)=4 = the four known signed Collatz cycles.)
+  PROVED bound: every element of a cycle with word (k_1..k_L), K=sum k_i, satisfies |n| <= b*2^(K-L)(3^L-2^L)/|2^K-3^L|
+    (B = sum 3^(L-1-i) 2^(K_i) <= 2^(K-L)(3^L-2^L) since K_i <= K-(L-i); and n = bB/(2^K-3^L)).
+  => U1 is COMPLETE for all cycles of length L <= L*_1(b): {1: 23, 5: 16, 7: 16, 11: 11, 13: 11, 17: 11, 19: 11, 23: 11, 25: 11, 29: 11, 31: 11, 35: 11, 37: 11, 41: 11, 43: 11, 47: 11, 49: 11, 53: 11, 55: 11, 59: 11, 61: 11, 65: 11, 67: 11, 71: 11, 73: 11, 77: 11, 79: 11, 83: 11, 85: 11, 89: 11, 91: 11, 95: 11, 97: 11}
+  => U2 is COMPLETE for all cycles of length L <= L*_2(b): {1: 23, 5: 21, 7: 21, 11: 16, 13: 16, 17: 16, 19: 16, 23: 11, 25: 11, 29: 11, 31: 11, 35: 11, 37: 11, 41: 11, 43: 11, 47: 11, 49: 11, 53: 11, 55: 11, 59: 11, 61: 11, 65: 11, 67: 11, 71: 11, 73: 11, 77: 11, 79: 11, 83: 11, 85: 11, 89: 11, 91: 11, 95: 11, 97: 11}
+  cycle-count spectrum c(b) (both signs of n):
+    b= 1  c(b)= 4  (+: 1, -: 3)  lengths=[1, 1, 2, 7]
+    b= 5  c(b)= 9  (+: 6, -: 3)  lengths=[1, 1, 1, 2, 3, 3, 7, 17, 17]
+    b= 7  c(b)= 5  (+: 2, -: 3)  lengths=[1, 1, 2, 2, 7]
+    b=11  c(b)= 7  (+: 3, -: 4)  lengths=[1, 1, 2, 2, 3, 7, 8]
+    b=13  c(b)=13  (+:10, -: 3)  lengths=[1, 1, 1, 2, 5, 5, 5, 5, 5, 5, 5, 7, 15]
+    b=17  c(b)= 8  (+: 3, -: 5)  lengths=[1, 1, 2, 2, 4, 4, 7, 18]
+    b=19  c(b)= 6  (+: 2, -: 4)  lengths=[1, 1, 2, 5, 7, 11]
+    b=23  c(b)=15  (+: 4, -:11)  lengths=[1, 1, 2, 2, 2, 7, 12, 12, 12, 12, 12, 12, 12, 12, 26]
+    b=25  c(b)=12  (+: 8, -: 4)  lengths=[1, 1, 1, 2, 3, 3, 4, 7, 8, 17, 17, 22]
+    b=29  c(b)= 9  (+: 5, -: 4)  lengths=[1, 1, 1, 2, 7, 8, 9, 41, 41]
+    b=31  c(b)= 6  (+: 2, -: 4)  lengths=[1, 1, 2, 6, 7, 12]
+    b=35  c(b)=12  (+: 9, -: 3)  lengths=[1, 1, 1, 2, 2, 3, 3, 4, 4, 7, 17, 17]
+    b=37  c(b)= 7  (+: 4, -: 3)  lengths=[1, 1, 2, 3, 3, 3, 7]
+    b=41  c(b)= 5  (+: 2, -: 3)  lengths=[1, 1, 2, 7, 8]
+    b=43  c(b)= 5  (+: 2, -: 3)  lengths=[1, 1, 2, 3, 7]
+    b=47  c(b)=11  (+: 8, -: 3)  lengths=[1, 1, 2, 4, 4, 4, 4, 4, 7, 7, 16]
+    b=49  c(b)= 7  (+: 3, -: 4)  lengths=[1, 1, 2, 2, 4, 7, 22]
+    b=53  c(b)= 5  (+: 2, -: 3)  lengths=[1, 1, 2, 7, 17]
+    b=55  c(b)=15  (+:11, -: 4)  lengths=[1, 1, 1, 2, 2, 2, 3, 3, 3, 4, 7, 8, 16, 17, 17]
+    b=59  c(b)=11  (+: 8, -: 3)  lengths=[1, 1, 2, 6, 6, 6, 6, 6, 6, 7, 11]
+    b=61  c(b)= 6  (+: 3, -: 3)  lengths=[1, 1, 1, 2, 7, 41]
+    b=65  c(b)=19  (+:16, -: 3)  lengths=[1, 1, 1, 1, 2, 3, 3, 5, 5, 5, 5, 5, 5, 5, 7, 12, 15, 17, 17]
+    b=67  c(b)= 5  (+: 2, -: 3)  lengths=[1, 1, 2, 7, 16]
+    b=71  c(b)=11  (+: 8, -: 3)  lengths=[1, 1, 2, 5, 5, 7, 17, 17, 17, 17, 17]
+    b=73  c(b)= 7  (+: 4, -: 3)  lengths=[1, 1, 2, 4, 7, 8, 32]
+    b=77  c(b)=12  (+: 5, -: 7)  lengths=[1, 1, 2, 2, 2, 3, 7, 8, 14, 14, 14, 16]
+    b=79  c(b)= 8  (+: 5, -: 3)  lengths=[1, 1, 2, 7, 14, 14, 20, 20]
+    b=83  c(b)= 7  (+: 4, -: 3)  lengths=[1, 1, 2, 7, 7, 7, 14]
+    b=85  c(b)=15  (+: 9, -: 6)  lengths=[1, 1, 1, 2, 2, 3, 3, 4, 4, 7, 8, 17, 17, 18, 56]
+    b=89  c(b)= 5  (+: 2, -: 3)  lengths=[1, 1, 2, 7, 8]
+    b=91  c(b)=17  (+:14, -: 3)  lengths=[1, 1, 1, 2, 2, 5, 5, 5, 5, 5, 5, 5, 6, 6, 7, 15, 24]
+    b=95  c(b)=15  (+:10, -: 5)  lengths=[1, 1, 1, 2, 3, 3, 5, 5, 5, 7, 11, 11, 17, 17, 36]
+    b=97  c(b)= 8  (+: 3, -: 5)  lengths=[1, 1, 2, 3, 6, 7, 11, 11]
+  b with c_U1(b) != c_U2(b) (cycles whose least |element| lies in (10^5, 2*10^5]): []
+  attained values of c(b), |b|<=99, U2: [4, 5, 6, 7, 8, 9, 11, 12, 13, 15, 17, 19]
+  attained values of c(b), |b|<=99, U1: [4, 5, 6, 7, 8, 9, 11, 12, 13, 15, 17, 19]
+  values in [1,19] NOT attained as c(b) (U2): [1, 2, 3, 10, 14, 16, 18]
+  values in [1,19] NOT attained as c(b) (U1): [1, 2, 3, 10, 14, 16, 18]
+  odd ones not attained (U2): [1, 3]  (U1): [1, 3]  ; compare {7,21}: 7 attained? True ; 21 attained? False (max c(b) = 19, so 21 is above the range, not a hole)
+  b with c(b)=7: [11, 37, 49, 73, 83]
+  parity of c(b): even for b in [1, 17, 19, 25, 31, 35, 61, 77, 79, 97] ; odd for b in [5, 7, 11, 13, 23, 29, 37, 41, 43, 47, 49, 53, 55, 59, 65, 67, 71, 73, 83, 85, 89, 91, 95]
+  cycle LENGTHS occurring (any b<=99): [1, 2, 3, 4, 5, 6, 7, 8, 9, 11, 12, 14, 15, 16, 17, 18, 20, 22, 24, 26, 32, 36, 41, 56]  ; 7 occurs (the 3n-1 seven-cycle scaled by b), 21 occurs? False
+  VERDICT (b): c(b) hits 7 (b=11, 37, 49, 73, 83) so the tournament hole is not a cycle-count hole; c(b) never equals 1 or 3 because
+      c(b) >= 4 always (C5 below: b*C_1 subset C_b), and 21 is simply beyond max c(b)=19 in this universe: NO MAP.
+  VERDICT (c): h-spectrum 'odds minus {7,21}' vs F=S+U solution set {0,2,10} vs Collatz rows {1,3,5} mod 6: NO MAP FOUND.
+      Numerology on record: S(p^2qr)=7 and S*U = 7*3 = 21 reproduce {7,21}; no mechanism connects |Aut(T)| | h to divisor counts.
+
+--- S2.3  Cipolla pseudoprimes on the trunk: the inverse fibre of 1 is N_j = (4^j-1)/3 = R^{j-1}(1), R(n)=4n+1 ---
+  PROVED (+checked j<=40): N_j = R^{j-1}(1) (inherited (B1) with u=1, h0=1), 3N_j+1 = 4^j, so T(N_j)=1 with halving exponent exactly 2j;
+  rows mod 6 of N_1..N_9: [1, 5, 3, 1, 5, 3, 1, 5, 3] (period 3: 1->5->3, inherited RB4).
+  j   N_j                    factorization                 primitive primes of 4^j-1     base-2 psp?  4^j=4 mod 6j?
+   1  1                      1                             []                            False        False
+   2  5                      5                             [5]                           False        False
+   3  21                     3*7                           [7]                           False        False
+   4  85                     5*17                          [17]                          False        False
+   5  341                    11*31                         [11, 31]                      True         True
+   6  1365                   3*5*7*13                      [13]                          False        False
+   7  5461                   43*127                        [43, 127]                     True         True
+   8  21845                  5*17*257                      [257]                         False        False
+   9  87381                  3^2*7*19*73                   [19, 73]                      False        False
+  10  349525                 5^2*11*31*41                  [41]                          False        False
+  11  1398101                23*89*683                     [23, 89, 683]                 True         True
+  12  5592405                3*5*7*13*17*241               [241]                         False        False
+  13  22369621               2731*8191                     [2731, 8191]                  True         True
+  14  89478485               5*29*43*113*127               [29, 113]                     False        False
+  15  357913941              3*7*11*31*151*331             [151, 331]                    False        False
+  16  1431655765             5*17*257*65537                [65537]                       False        False
+  17  5726623061             43691*131071                  [131071, 43691]               True         True
+  18  22906492245            3^2*5*7*13*19*37*73*109       [37, 109]                     False        False
+  19  91625968981            174763*524287                 [174763, 524287]              True         True
+  20  366503875925           5^2*11*17*31*41*61681         [61681]                       False        False
+  21  1466015503701          3*7^2*43*127*337*5419         [337, 5419]                   False        False
+  22  5864062014805          5*23*89*397*683*2113          [397, 2113]                   False        False
+  23  23456248059221         47*178481*2796203             [47, 178481, 2796203]         True         True
+  24  93824992236885         3*5*7*13*17*97*241*257*673    [97, 673]                     False        False
+  25  375299968947541        11*31*251*601*1801*4051       [251, 601, 1801, 4051]        False        False
+  26  1501199875790165       5*53*157*1613*2731*8191       [53, 157, 1613]               False        False
+  27  6004799503160661       3^3*7*19*73*87211*262657      [262657, 87211]               False        False
+  28  24019198012642645      5*17*29*43*113*127*15790321   [15790321]                    False        False
+  29  96076792050570581      59*233*1103*2089*3033169      [59, 233, 1103, 2089, 3033169] True         True
+  30  384307168202282325     3*5^2*7*11*13*31*41*61*151... [61, 1321]                    False        False
+  31  1537228672809129301    715827883*2147483647          [715827883, 2147483647]       True         True
+  32  6148914691236517205    5*17*257*641*65537*6700417    [641, 6700417]                False        False
+  33  24595658764946068821   3*7*23*67*89*683*20857*599479 [67, 20857, 599479]           False        False
+  34  98382635059784275285   5*137*953*26317*43691*131071  [137, 953, 26317]             False        False
+  35  393530540239137101141  11*31*43*71*127*281*86171*... [71, 281, 86171, 122921]      False        False
+  36  ~2^70                  3^2*5*7*13*17*19*37*73*109... [433, 38737]                  False        False
+  37  ~2^72                  223*1777*25781083*616318177   [223, 1777, 25781083, 616318177] True         True
+  38  ~2^74                  5*229*457*174763*524287*52... [229, 457, 525313]            False        False
+  39  ~2^76                  3*7*79*2731*8191*121369*22... [79, 121369, 22366891]        False        False
+  40  ~2^78                  5^2*11*17*31*41*257*61681*... [4278255361]                  False        False
+  j<=40 with N_j a base-2 pseudoprime: [5, 7, 11, 13, 17, 19, 23, 29, 31, 37]
+  CITED (Cipolla 1904): (4^p-1)/3 is a base-2 pseudoprime for every prime p>=5.  Elementary PROOF: N=(4^p-1)/3; 2^{2p}=4^p=3N+1=1 mod N;
+    N-1 = 4(4^{p-1}-1)/3 is even, and p | 4^{p-1}-1 (Fermat) with p !| 3, so p | N-1; hence 2p | N-1 and 2^{N-1} = (2^{2p})^{(N-1)/2p} = 1 mod N.
+    N is composite: N = (2^p-1)*((2^p+1)/3) with both factors >1 for p>=3.  p=3 fails exactly because 3 | 3 (N_3=21: 2^20 = 4 mod 21).
+  PROVED (exact criterion, all j>=3): ord_{N_j}(2) = 2j (it divides 2j; a proper divisor d<=j would give N_j | 2^j-1 < N_j),
+    so N_j is a base-2 pseudoprime iff N_j is composite (true for j>=3) and 2j | N_j-1 = (4^j-4)/3, i.e. iff 6j | 4^j-4.
+    Corollary: N_j base-2 psp iff N_j base-4 psp (same divisibility j | N_j-1 with ord_{N_j}(4)=j).
+  REFUTED (user's pasted claim '341 stalls primitive prime generation of 4x+1'): 341 = N_5 = 11*31 brings TWO new primes (both primitive),
+    and Zsigmondy for 4^j-1 has NO exception (4-1=3 != 1; 4+1=5 not a power of 2; (2,1,6) is base 2 not 4): every N_j, j>=2, has a
+    prime dividing no earlier trunk term (checked j<=40 above; primitive primes are never 3 since 3 | 4-1).
+  W = {j>=3 : 6j | 4^j-4} = {j : N_j is a base-2 pseudoprime}, j<=20000: |W| = 2321 = 2260 primes >= 5 + 61 composite indices
+    composite members j<=20000: [85, 91, 341, 451, 703, 946, 1105, 1247, 1271, 1387, 1729, 1891, 2047, 2071, 2465, 2701, 2821, 2926, 3133, 3277, 3367, 3683, 4033, 4369, 4681, 4795, 4859, 5461, 5551, 6601, 6643, 7957, 8321, 8614, 8695, 8911, 9061, 9131, 9211, 9605, 9919, 10261, 10585, 11305, 12403, 13019, 13741, 13747, 13981, 14351, 14491, 14701, 15211, 15709, 15841, 16021, 16471, 16705, 18721, 19669, 19951]
+    even members: [946, 2926, 8614]
+    direct verification: N_85, N_91, N_341, N_946 are base-2 (and base-4) pseudoprimes (85=5*17, 91=7*13, 341=11*31, 946=2*11*43).
+  PROVED (tower closure): j in W  =>  N_j in W.  Proof: ord_{N_j}(4)=j and 2j | N_j-1 give 4^{N_j-1}=1 mod N_j, i.e. N_j | 4^{N_j}-4;
+    N_j is odd (1+4+...+4^{j-1}) and 3 !| N_j (N_j = j mod 3, 3 !| j), and 4^m = 4 mod 6 for all m>=1; CRT gives 6N_j | 4^{N_j}-4.
+    Hence every prime p>=5 starts an infinite chain p -> N_p -> N_{N_p} -> ... of base-2 pseudoprimes (Cipolla's construction iterated).
+    checked: N_5=341, N_7=5461, N_11, N_13 are in W; second level N_341 (682 bits) and N_5461 (10922 bits) verified base-2 pseudoprimes.
+
+--- S2.4  TYPING LINES (machine-readable summary of the maps that exist; see the note's table) ---
+  [MAP] p^2qr squarefree divisors -> Fano/PG(2,2) :: source divisor lattice; target F_2^3; map exponent vector mod 2; preserved S=7 points, 7 square-product lines; lost exponent heights + 112 of 128 orientations; sidecar XOR label; test: lattice selects none of the 16 octonion orientations (S1.1)
+  [NO MAP (numerology)] Omega(a^2b)=4, Omega(c^2b)=8 -> dim H, dim O :: additive count vs multiplicative doubling; next term 10 vs 16 (S1.2)
+  [NO MAP FOUND] Bott period 8 -> Collatz rows/braid :: no Collatz modulus has ord(2)=8; periods 2,3,6 (S1.3)
+  [MAP via squarefreeness only] 6/pi^2 -> Collatz :: T(n) squarefree has density 9/pi^2 row-uniformly; gcd-coprimality of affine pairs is trivial (S1.4); floor identities detect squarefreeness (inherited)
+  [NO MAP] {7,21} h-holes -> c(b) cycle counts :: 7 = c(11); 1,3 are the only odd holes of c(b) (S2.2)
+  [NO MAP] {7,21} -> 63=2^6-1 / Mersenne :: 15,31,63 attained; 7 falls in inter-band gaps (THM-1745) (S2.1)
+  [NO MAP FOUND] {7,21} -> {0,2,10} / rows {1,3,5} :: numerology S=7, S*U=21 only (S2.2)
+  [MAP] Cipolla trunk (4^j-1)/3 -> inverse braid R(n)=4n+1 :: N_j = R^{j-1}(1); halving exponent 2j = ord_{N_j}(2); psp iff 6j | 4^j-4 (S2.3)
+  [REFUTED] '341 stalls primitive primes' -> Zsigmondy :: 11, 31 primitive at j=5; no exception for base 4 (S2.3)
+  [MAP (shift, not conjugacy)] 3N-5 -> Collatz :: T_{-5}(n) = T(n-2); rows precomposed by r -> r-2 (S4); cycles = -(3n+5 cycles) (inherited)
+  [MAP (odd functions <-> odd powers), NO MAP to Redei odd cycles] odd cycles ~ odd functions ~ odd powers :: negation conjugacy and the odd-function floor law (inherited floor lanes); proof template only for tournaments
+
+==============================================================================
+S3. Six bold conjectures, probes, follow-ups
+==============================================================================
+
+--- C1 (G-map x primes): the greedy 3-adic stopping-time law on primes equals the law on composites ---
+  pooled m<=10^6, 3!|m: primes 78497 (mean steps 28.7373, max 73) ; composites 588169 (mean 29.0404, max 74) ; TV distance 0.0174
+  CORRECTED NEAR MISS (recovered draft): its hostile control 'm=1 mod 9 vs m=8 mod 9 differ' is FALSE:
+    TV(1 mod 9, 8 mod 9) = 0.0072 pooled, 0.0088 in [2^19,2^20); the two classes have equal means (31.616 vs 31.630 in the block).
+  TRUE PICTURE: the step count grows like log m, so any pooled comparison mixes sizes; primes are relatively denser at small m,
+    which produces the pooled mean gap 0.303.  Size-controlled comparison (dyadic blocks):
+    [131072,262144): primes  10749 mean 27.4540 ; composites  76632 mean 27.4152 ; TV 0.0187 ; |mean gap| 0.0388
+    [262144,524288): primes  20390 mean 29.0968 ; composites 154373 mean 29.1176 ; TV 0.0143 ; |mean gap| 0.0208
+    [524288,1048576): primes  35108 mean 30.6987 ; composites 282034 mean 30.7757 ; TV 0.0122 ; |mean gap| 0.0770
+  hostile controls (both DIFFER): block [2^17,2^18) vs [2^19,2^20): TV 0.2085 (size); classes 4 vs 5 mod 9 in [2^19,2^20): TV 0.2953
+    (class means in [2^19,2^20) by m mod 9: [(1, 31.616), (2, 29.898), (4, 28.188), (5, 33.345), (7, 29.927), (8, 31.63)] )
+  mechanism: the first J greedy letters are a function of m mod 3^(J+1) (inherited extended_collatz_scc Theorem 4.1), so the
+    residue class of m matters (4 mod 9: first step x1/3; 5 mod 9: x8/3) and primes are equidistributed in the unit classes (Dirichlet):
+    primes vs composites mod 81: TV 0.0040.
+  STATUS: SURVIVES in the size-controlled form (FINITE-EXACT at 10^6: TV < 0.03 in each block); PROVED for every fixed-depth prefix
+    event (Theorem 4.1 + Dirichlet); the full-law equality is HEURISTIC.  The pooled statement is REFUTED as stated (size mixing).
+  follow-up F1: within a fixed block AND a fixed class mod 9, do primes and composites still agree? -> [(1, 31.502, 31.63, 0.0272), (2, 29.795, 29.911, 0.0317), (4, 28.108, 28.198, 0.0268), (5, 33.29, 33.351, 0.029), (7, 29.882, 29.933, 0.0288), (8, 31.632, 31.63, 0.0234)]  (all TV < 0.04 with ~5800 primes per cell: yes)
+
+--- C2 (signed cycles x cycle gate): b = 2^K - 3^L  =>  EVERY composition of K into L parts is realized as a cycle word ---
+  INHERITED (PROVED in 04-computation/experiments/collatz_mod6_20260917_three_n_plus_k_catalan.py, necklace theorem; and the
+  q | b iff of arithmetic_braids2_20260917_signed_cycles.md sec.3): 3B(w)+2^K-3^L = 2^(k_1) B(rot w), so for b=2^K-3^L the orbit of B(w)
+  realizes w and closes; distinct necklaces give distinct cycles.  Re-verified here as an independent path (bold form: ALL compositions).
+  representations b = 2^K - 3^L with |b|<=99, K<70, L<45 (FINITE-EXACT): {-79: [(1, 4)], -77: [(2, 4)], -73: [(3, 4)], -65: [(4, 4)], -49: [(5, 4)], -25: [(1, 3)], -23: [(2, 3)], -19: [(3, 3)], -17: [(6, 4)], -11: [(4, 3)], -7: [(1, 2)], -5: [(2, 2)], -1: [(1, 1), (3, 2)], 1: [(2, 1)], 5: [(3, 1), (5, 3)], 7: [(4, 2)], 13: [(4, 1), (8, 5)], 23: [(5, 2)], 29: [(5, 1)], 37: [(6, 3)], 47: [(7, 4)], 55: [(6, 2)], 61: [(6, 1)]}
+   b= 1 = 2^2-3^1 : 1 compositions, all realized; distinct census cycles they populate: 1 = rotation classes 1
+   b= 5 = 2^3-3^1 : 1 compositions, all realized; distinct census cycles they populate: 1 = rotation classes 1
+   b= 5 = 2^5-3^3 : 6 compositions, all realized; distinct census cycles they populate: 2 = rotation classes 2
+   b= 7 = 2^4-3^2 : 3 compositions, all realized; distinct census cycles they populate: 2 = rotation classes 2
+   b=13 = 2^4-3^1 : 1 compositions, all realized; distinct census cycles they populate: 1 = rotation classes 1
+   b=13 = 2^8-3^5 : 35 compositions, all realized; distinct census cycles they populate: 7 = rotation classes 7
+   b=23 = 2^5-3^2 : 4 compositions, all realized; distinct census cycles they populate: 2 = rotation classes 2
+   b=29 = 2^5-3^1 : 1 compositions, all realized; distinct census cycles they populate: 1 = rotation classes 1
+   b=37 = 2^6-3^3 : 10 compositions, all realized; distinct census cycles they populate: 4 = rotation classes 4
+   b=47 = 2^7-3^4 : 20 compositions, all realized; distinct census cycles they populate: 5 = rotation classes 5
+   b=55 = 2^6-3^2 : 5 compositions, all realized; distinct census cycles they populate: 3 = rotation classes 3
+   b=61 = 2^6-3^1 : 1 compositions, all realized; distinct census cycles they populate: 1 = rotation classes 1
+  bold sub-conjecture 'c(b) is maximal among b<=99 exactly at the doubly-representable b (5, 13)': max c(b) = 19 at b=[65] -> REFUTED (witness b=[65], c=19: 65 = 5*13 inherits both scaled families)
+  follow-up F2: fixed points of 3n+b are exactly n = b/(2^K-3), K>=1, so #1-cycles = #{K>=1 : (2^K-3) | b}: check -> PASS for all b<=99 (PROVED + FINITE-EXACT).  b=65=5*13 has 4 fixed points: [(5,), (13,), (65,), (-65,)]
+
+--- C3 (floor sums x rows/braid): the squarefree detector Z_3 on the trunk: 'N_j squarefree iff gcd(j, N_j) = gcd(j, 3)' ---
+  INHERITED (PROVED, arithmetic_braids2_20260917_floor_reciprocity.md; collatz_mod6_20260917_floor_sums_odd_functions.md S1-S2):
+    sum_{k<n} floor(k^3/n) = (n-2)(n-1)(n+1)/4 + Z_3(n)/2 with Z_3(n) = n/n_3 - 1, so the cube floor identity holds iff n is squarefree.
+    re-verified on the trunk terms N_2..N_10 (Z_3 by brute force for j<=6).  Detector reading: identity holds at N_j iff N_j squarefree.
+  PROVED exact law (LTE): for an odd prime p, v_p(4^j-1) = v_p(4^d-1) + v_p(j/d) when d = ord_p(4) | j (else 0); and v_p(4^d-1) = v_p(2^{p-1}-1).
+    Hence p^2 | N_j (p>=5) iff ord_p(4) | j and (p | j or p is a Wieferich prime); 9 | N_j iff 9 | j (v_3(N_j) = v_3(j)).
+    So the conjecture 'N_j squarefree iff gcd(j,N_j) = gcd(j,3)' is exactly the statement that no Wieferich prime interferes.
+  FINITE-EXACT j<=40: conjecture holds; non-squarefree trunk terms and their square factors: [(9, {3: 2}), (10, {5: 2}), (18, {3: 2}), (20, {5: 2}), (21, {7: 2}), (27, {3: 3}), (30, {5: 2}), (36, {3: 2}), (40, {5: 2})]
+  REFUTED in general: Wieferich primes 1093, 3511 (CITED: the only ones below 6.7e15, Dorais-Klyve 2011 / PrimeGrid) with ord_1093(4) = 182, ord_3511(4) = 1755:
+    witness j=182 = 2*7*13: 1093^2 | N_182 while 1093 !| 182; gcd(182, N_182) = 1 = gcd(182,3) (ord_7(4)=3 and ord_13(4)=6 do not divide 182,
+      so the p | j mechanism is silent), i.e. the conjecture predicts 'squarefree' and N_182 is not: REFUTED, Wieferich witness.
+    minimal witness: j=182 is the least j with a Wieferich contribution, conditional on no unknown Wieferich prime p with ord_p(4) < 182;
+      unconditionally the conjecture is FINITE-EXACT-true for j<=40 and false at j=182.
+  STATUS: PROVED law; conjecture FINITE-EXACT for j<=40 and REFUTED at j=182 (Wieferich).  The floor-sum squarefree detector on
+    the Collatz trunk sees the Wieferich primes: cross-thread map (rows/braid trunk) x (floor sums) with a concrete sidecar (LTE).
+  follow-up F3: is N_j EVER squarefree for j = 0 mod 9? No (9 | N_j).  Fraction of j<=40 with N_j squarefree: 31/40.
+
+--- C4 (sandwich x squares): N_PS - N_SP = #{p>=5: p^2<=6K+1, p^2-2 prime} + bounded residual ? ---
+  K=100000: N_PS-N_SP = 41 (matches collatz_mod6_20260917_sandwich_bias.md sec.1) ; square-driven pairs (p^2-2 prime, p^2) = 46 ; residual after squares = -5 ; independence pred = 36.6
+  K=1000000: N_PS-N_SP = 412 (matches collatz_mod6_20260917_sandwich_bias.md sec.1) ; square-driven pairs (p^2-2 prime, p^2) = 99 ; residual after squares = 313 ; independence pred = 113.2
+  CORRECTED NEAR MISS (recovered draft): its status line quoted square counts 64 and 137; the true counts of pairs (6k-1, 6k+1) = (p^2-2, p^2)
+    with both entries as stated are 46 and 99 (two independent counts agree).
+  STATUS: REFUTED as 'bounded residual': residual after removing squares is -5 at 10^5 and 313 at 10^6 (grows with the drift, not bounded).
+  The square term is PROVED to be one-sided (p^2 = 1 mod 6 always sits on the right), but it is small against the mixed-class semiprime bias.
+  follow-up F4: does the p^2 count alone explain the S-column excess of the marginals?  S_1 - S_5 identity (inherited) already has pi'(sqrt x)/2:
+    K=100000: pi'(sqrt x) = 135, (S_1 - S_5) = 66 (col-row sum of class 2) ; half the squares = 67.5
+    K=1000000: pi'(sqrt x) = 361, (S_1 - S_5) = 244 (col-row sum of class 2) ; half the squares = 180.5
+
+--- C5 (3n+b x G-map conjugacy): T_b(b n) = b T_1(n), G_b(b m) = b G_1(m); c(b) >= 4 and superadditivity ---
+  PROVED: (3(bn)+b)/2^v = b(3n+1)/2^v ; so b*C_1 subset C_b, c(b) >= 4 for every b coprime to 6 (checked b<=99).
+  (This is the dilation half of the content theorem, arithmetic_braids2_20260917_signed_cycles.md sec.2: cycles of T_b = disjoint union over g | b of g*(primitive cycles of T_{b/g}).)
+  b<=99 with c(b) = 4 exactly (no cycle beyond the four scaled Collatz cycles): [1]
+  superadditivity for coprime b1,b2: c(b1 b2) >= c(b1) + c(b2) - 4 (scaled cycles b2*C_{b1}, b1*C_{b2} meet only in b1b2*C_1):
+    violations among b1*b2<=99: [] -> PROVED inequality holds (FINITE-EXACT confirmation)
+  PROVED (+checked m<3000, b=5,7,11,13): G_b(b m) = b G_1(m) with the same letter; the residue chain mod 9 of G_b is the
+    chain of G_1 conjugated by multiplication by b^{-1} mod 9, so the stationary law, E[letter]=1 and the drift log(2/3)
+    (inherited extended_collatz_scc S4.2) are b-independent.  What changes with b is the CYCLE set (C2), not the local law.
+  follow-up F5: are the 'new' cycles (beyond b*C_1) of 3n+b all divisor-gate cycles n = bB/(2^K-3^L) with (2^K-3^L) !| B? -> 175 new cycles, 175 have (2^K-3^L) !| B (need the factor b), 0 have (2^K-3^L) | B
+
+--- C6 (Cipolla trunk x primes): 'N_j is a base-2 pseudoprime iff j is a prime >= 5' ---
+  FINITE-EXACT j<=40: holds (S2.3 table).  REFUTED at j=85 (= N_4 = 5*17): N_85 is a base-2 pseudoprime with composite index;
+    mechanism: for odd j with 3 !| j, 6j | 4^j-4 iff 4^{j-1} = 1 mod j, i.e. j is a base-4 Fermat (pseudo)prime; 85, 91, 341, ... are base-4 pseudoprimes.
+    hostile: 15 is a base-4 pseudoprime but 3 | 15, so N_15 is NOT a pseudoprime (9 !| 4^15-4 since 3 !| 14): the factor 3 of the trunk matters.
+  follow-up F6 (recursion, PROVED in S2.3): W is closed under j -> N_j, so the index set contains p, N_p, N_{N_p}, ... for every prime p>=5;
+    the first composite index NOT of the form N_j is 91 = 7*13 (85 = N_4 is of that form; 341 = N_5 and 5461 = N_7 are the tower's second level).
+
+==============================================================================
+S4. 3N-5 = 3(N-2)+1: exact relation to Collatz under the shift n -> n-2
+==============================================================================
+PROVED (+checked odd |n|<=10^5): T_{-5}(n) = T(n-2) exactly (3n-5 = 3(n-2)+1, same 2-adic valuation).
+  Hence with the shift s(m)=m+2: s^{-1} T_{-5} s (m) = T(m) - 2.  This is NOT a conjugacy of T with itself: the exact
+  discrepancy is the constant -2 after every odd step, i.e. T_{-5} is conjugate to the map m -> T(m)-2, and the orbit of n
+  under 3n-5 is the orbit of n-2 under 'Collatz then subtract 2 each odd step'.
+  rows mod 6 -> single-halving image (3n-5)/2 :
+    n = 6j+1 : (3n-5)/2 = 9*j - 1  = 8 mod 9  (Collatz row image of 6j+1 would be 2 mod 9)
+    n = 6j+3 : (3n-5)/2 = 9*j + 2  = 2 mod 9  (Collatz row image of 6j+3 would be 5 mod 9)
+    n = 6j+5 : (3n-5)/2 = 9*j + 5  = 5 mod 9  (Collatz row image of 6j+5 would be 8 mod 9)
+  PROVED: the 3n-5 row map is the Collatz row map precomposed with r -> r-2 mod 6 (1->5->3->1): images 8,2,5 instead of 2,5,8;
+  all images are 2 mod 3 exactly as for Collatz (multiples of 3 are leaves for 3n-5 as well).
+  cycles of 3n-5 on odd integers, both signs, min-element |n|<=2*10^5 (= negatives of the 9 cycles of 3n+5):
+    length 17  min |n|    347 : (-347, -523, -787, -1183, -1777, -667, -1003, -1507, '...')
+    length 17  min |n|    187 : (-187, -283, -427, -643, -967, -1453, -1091, -1639, '...')
+    length  3  min |n|     23 : (-23, -37, -29)
+    length  3  min |n|     19 : (-19, -31, -49)
+    length  1  min |n|      5 : (-5,)
+    length  1  min |n|      1 : (-1,)
+    length  1  min |n|      5 : (5,)
+    length  2  min |n|     25 : (25, 35)
+    length  7  min |n|     85 : (85, 125, 185, 275, 205, 305, 455)
+  POSITIVE 3n-5 cycles = 3 (the user's '3N-5 on positives' = 3N+5 on negatives): [(5,), (25, 35), (85, 125, 185, 275, 205, 305, 455)]
+  the two 3-cycles live on the POSITIVE side of 3n+5 = NEGATIVE side of 3n-5: (19,31,49),(23,37,29),
+  and are the C2 construction for 5 = 2^5-3^3 (words (1,1,3) and (1,2,2)); 3n-5 has them as (-19,-31,-49),(-23,-37,-29).
+  shifted picture: a 3n-5 cycle (n_i) is a cycle (n_i - 2) of m -> T(m)-2, e.g. fixed point -5 of 3n-5 <-> m=-7: T(-7)-2 = -5-2 = -7.
+  PROVED: 3n-5 on negatives = -(3n+5 on positives); 3n-5 on positives = -(3n+5 on negatives) (sign conjugation, inherited summand note sec.7;
+  the nine cycles, their contents d in {1,5} and minimal parameters q in {1,5}: arithmetic_braids2_20260917_signed_cycles.md sec.5).
+
+==============================================================================
+S5. Status summary
+==============================================================================
+PROVED: S1.1 F_2^3/Fano structure of squarefree divisors and {0,2,10}; d(N)<=2^Omega with equality iff squarefree; 9/pi^2 density of
+        odd n with T(n) squarefree and the (8/9)prod(1-2/p^2) density; gcd(n,T(n))=1, gcd(n+2,T(n)) | 5; census completeness bound;
+        S2.3 Cipolla (elementary proof), criterion 6j | 4^j-4, tower closure of W, Zsigmondy exception-freeness for base 4;
+        C2 re-verification of the necklace theorem (inherited) and the fixed-point count #{K:(2^K-3)|b}; C3 LTE law for squares in N_j;
+        C5 scaling b*C_1 in C_b, superadditivity, G_b conjugacy; S4 T_{-5}(n)=T(n-2) and the row map; C_{-b} = -C_b.
+FINITE-EXACT: 16/128 octonion orientations; tournament census n<=6; c(b) spectrum |b|<=99 in U1 and U2 (complete for L<=L*(b));
+        6/pi^2 candidates at 10^6; C1 block TV distances at 10^6; C4 sandwich numbers at 10^5,10^6; W to 20000; C3 j<=40.
+CITED: Cipolla 1904; Albuquerque-Majid twisted group algebra; Dirichlet; THM-1745 / death-star S70 h-spectrum; Redei; Wieferich list.
+HEURISTIC: full G-stopping-time law equality primes vs composites (size-controlled); C4 residual.
+REFUTED: '341 stalls primitive primes' (11,31 at j=5); 'N_j psp iff j prime' (j=85); 'N_j squarefree iff gcd(j,N_j)=gcd(j,3)' (j=182, 1093^2);
+        draft hostile 'classes 1 vs 8 mod 9 differ' (TV 0.007); pooled C1 (size mixing); 'N_PS-N_SP minus squares bounded' (-5 -> 313);
+        'c(b) maximal exactly at doubly representable b' (b=65, c=19).
+NO MAP FOUND: Bott 8; {7,21} vs c(b) or cycle lengths or rows or {0,2,10}; Omega(a^2b)=4 / Omega(c^2b)=8 vs H, O (numerology);
+        x^2+c period-3 bifurcation vs 3n+b 3-cycles (exponential Diophantine gate 2^K-27 | bB).
+total runtime [t=26.2s]
