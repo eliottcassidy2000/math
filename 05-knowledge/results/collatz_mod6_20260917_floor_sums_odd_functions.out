@@ -1,0 +1,275 @@
+
+==============================================================================
+S1  The odd-function floor law (PROVED) and its even-function failure
+==============================================================================
+
+THEOREM S1 (odd-function floor law).  Let f in Z[x] with f(-x) = -f(x), n >= 2, and
+  Z_f(n) = #{1 <= k <= n-1 : n | f(k)}.   Then
+  sum_{k=1}^{n-1} floor(f(k)/n) = (1/n) sum_{k=1}^{n-1} f(k) - (n-1)/2 + Z_f(n)/2.
+PROOF.  Write f(k) = n q_k + r_k with 0 <= r_k < n, so floor(f(k)/n) = q_k and
+  sum q_k = ( sum f(k) - sum r_k ) / n.                                   (a)
+Pairing.  f(n-k) = f(-k) = -f(k) (mod n) because f is odd and polynomial, so
+  r_k + r_{n-k} = 0 (mod n), hence r_k + r_{n-k} in {0, n}; it is 0 iff r_k = 0 iff r_{n-k} = 0.
+Fixed point.  If n is even, k = n/2 is the unique fixed point of k -> n-k, and
+  2 r_{n/2} = 0 (mod n) gives r_{n/2} in {0, n/2}, i.e. r_{n/2} = (n/2) [r_{n/2} != 0].
+Summing.  Each non-fixed k contributes n/2 per nonzero residue on average over its pair, and the
+  fixed point contributes n/2 [r != 0] exactly; in all cases
+  sum_k r_k = (n/2) * #{k : r_k != 0} = (n/2) (n - 1 - Z_f(n)).                (b)
+Insert (b) in (a):  sum q_k = (sum f)/n - (n-1)/2 + Z_f(n)/2.                   QED
+Remark.  Only f(-x) = -f(x) mod n was used; the law holds for any odd function Z/n -> Z/n.
+
+  FINITE-EXACT  f=x             law holds for all 2 <= n <= 400
+  FINITE-EXACT  f=x^3           law holds for all 2 <= n <= 400
+  FINITE-EXACT  f=x^5           law holds for all 2 <= n <= 400
+  FINITE-EXACT  f=x^3+x         law holds for all 2 <= n <= 400
+  FINITE-EXACT  f=3x            law holds for all 2 <= n <= 400
+  FINITE-EXACT  f=x^7-5x^3+x    law holds for all 2 <= n <= 400
+  n= 4 f=x^3: pairs (k, r_k, r_{n-k}) = [(1, 1, 3)] ; fixed k=n/2 residue = 0 in {0,2}
+  n= 6 f=x^3: pairs (k, r_k, r_{n-k}) = [(1, 1, 5), (2, 2, 4)] ; fixed k=n/2 residue = 3 in {0,3}
+  n=10 f=x^3: pairs (k, r_k, r_{n-k}) = [(1, 1, 9), (2, 8, 2), (3, 7, 3), (4, 4, 6)] ; fixed k=n/2 residue = 5 in {0,5}
+  n=12 f=x^3: pairs (k, r_k, r_{n-k}) = [(1, 1, 11), (2, 8, 4), (3, 3, 9), (4, 4, 8), (5, 5, 7)] ; fixed k=n/2 residue = 0 in {0,6}
+
+EVEN f: the pairing gives r_{n-k} = r_k (no cancellation).  Minimal failures:
+  REFUTED for even f=x^2        minimal n=3 : floor sum = 1, odd-law value = 2/3
+  REFUTED for even f=x^4        minimal n=3 : floor sum = 5, odd-law value = 14/3
+  REFUTED for even f=x^2+x      minimal n=3 : floor sum = 2, odd-law value = 13/6
+  REFUTED for even f=2 (const)  minimal n=3 : floor sum = 0, odd-law value = 1/3
+  (f=x^2, n=2 holds: the single term k=1 is the fixed point; n=3 is the minimal failure, matching the session lead's (p,e)=(3,2).)
+[t=0.3s]
+
+==============================================================================
+S2  Z_{x^e}(n) = n/n_e - 1 (PROVED); identity (1) and all odd e <=> squarefree; density 6/pi^2
+==============================================================================
+
+THEOREM S2.  For e >= 1 and n >= 2 put n_e = prod_{p^a || n} p^{ceil(a/e)}.  Then
+  Z_{x^e}(n) = #{1 <= k <= n-1 : n | k^e} = n/n_e - 1.
+PROOF.  n | k^e  iff  for every p^a || n,  a <= e v_p(k)  iff  v_p(k) >= ceil(a/e)  iff  n_e | k.
+  n_e | n since ceil(a/e) <= a, so the multiples of n_e in [1, n-1] number n/n_e - 1.   QED
+COROLLARY S2a.  Z_{x^e}(n) = 0  iff  n_e = n  iff  ceil(a/e) = a for all a  iff  (e = 1) or (n squarefree).
+COROLLARY S2b (identity (1)).  (sum k^3)/n - (n-1)/2 = (n-1)^2 n/4 - (n-1)/2 = (n-1)(n-2)(n+1)/4, so
+  sum_{k=1}^{n-1} floor(k^3/n) = (n-2)(n-1)(n+1)/4 + Z_3(n)/2,   equality with the user's RHS iff n squarefree.
+COROLLARY S2c.  For every odd e >= 3:  sum floor(k^e/n) = (sum k^e)/n - (n-1)/2  iff  n squarefree.
+  For e = 1 the identity holds for every n (Z_1 = 0), so e = 1 is the degenerate member of the odd family.
+CITED (Gegenbauer 1885; Hardy-Wright Thm 333): the squarefree numbers have natural density 1/zeta(2) = 6/pi^2.
+  Hence the truth set of (1), and of the odd-power identity for every fixed odd e >= 3, has density 6/pi^2.
+
+  FINITE-EXACT  Z_{x^e}(n) = n/n_e - 1 for 1 <= e <= 9, 2 <= n <= 2000
+  FINITE-EXACT  truth set of (1) on [2,2000] = squarefree numbers exactly (1214 values)
+     n= 4: floor sum =     8, RHS(1) = 15/2, Z_3(n) = 1, deviation = Z_3/2 = 1/2
+     n= 9: floor sum =   141, RHS(1) = 140, Z_3(n) = 2, deviation = Z_3/2 = 1
+     n=12: floor sum =   358, RHS(1) = 715/2, Z_3(n) = 1, deviation = Z_3/2 = 1/2
+     n= 8: floor sum =    96, RHS(1) = 189/2, Z_3(n) = 3, deviation = Z_3/2 = 3/2
+     n=36: floor sum = 11010, RHS(1) = 22015/2, Z_3(n) = 5, deviation = Z_3/2 = 5/2
+  FINITE-EXACT  e=3: identity sum floor(k^e/n) = (sum k^e)/n - (n-1)/2 holds on [2,1200] iff squarefree
+  FINITE-EXACT  e=5: identity sum floor(k^e/n) = (sum k^e)/n - (n-1)/2 holds on [2,1200] iff squarefree
+  FINITE-EXACT  e=7: identity sum floor(k^e/n) = (sum k^e)/n - (n-1)/2 holds on [2,1200] iff squarefree
+  FINITE-EXACT  e=9: identity sum floor(k^e/n) = (sum k^e)/n - (n-1)/2 holds on [2,1200] iff squarefree
+  FINITE-EXACT  e=1: holds for every n in [2,1200] (degenerate member)
+  PROVED+FINITE-EXACT  Z_7(n) = n/rad(n)-1 iff every exponent a <= 7 (then n_7 = rad n); first failure n=256=2^8: Z_7(256) = 63, 256/rad-1 = 255
+  FINITE-EXACT  #squarefree <= 10^6 = 607926 ; 6/pi^2 * 10^6 = 607927.1 ; ratio 0.607926
+
+TYPED ANALOGY (the user's "6/pi^2" remark).  source: truth set of identity (1) (and of every odd-e identity);
+  target: squarefree integers; map: n -> Z_e(n) = n/n_e - 1 (the identity holds iff Z_e(n) = 0);
+  preserved predicate: 'squarefree' exactly, both directions (PROVED, S2a-c); lost information: none
+  (the deviation Z_e(n)/2 = (n/n_e - 1)/2 is itself the exact local invariant); sidecar: the exponent
+  profile (a_p) of n through n_e; cheapest decisive test: n = 4, 9, 12 (deviations 1/2, 1, 1/2 for e=3).
+  The 6/pi^2 is CITED squarefree density; nothing about Collatz enters this map.
+
+[t=5.9s]
+
+==============================================================================
+S3  Cube-root lattice reciprocity (PROVED); identity (2) <=> squarefree; exact integer cube roots
+==============================================================================
+
+THEOREM S3.  For n >= 2 let Y = floor((n-1)^3/n), N1(n) = sum_{x=1}^{n-1} floor(x^3/n),
+  N2(n) = sum_{y=1}^{Y} floor((ny)^{1/3}).  Then
+  (i)  Y = (n-1)(n-2);
+  (ii) N1(n) + N2(n) = (n-1)^2 (n-2) + Z_3(n);
+  (iii) N2(n) = (3n-5)(n-2)(n-1)/4 + Z_3(n)/2, so identity (2) holds iff n is squarefree.
+PROOF.  (i) (n-1)^3 = n(n^2-3n+3) - 1, so floor((n-1)^3/n) = n^2-3n+2 = (n-1)(n-2).
+  (ii) Count lattice points (x,y), 1<=x<=n-1, 1<=y<=Y.  For x <= n-1 we have x^3/n <= (n-1)^3/n, so
+  floor(x^3/n) <= Y and N1 = #{(x,y) in box : ny <= x^3}.  For y <= Y we have ny <= (n-1)^3, so
+  floor((ny)^{1/3}) <= n-1 and N2 = #{(x,y) in box : x^3 <= ny}.  Every box point lies in at least one
+  set; the overlap is the curve x^3 = ny, whose points in the box are exactly the x in [1,n-1] with
+  n | x^3 (then y = x^3/n is automatically in [1,Y]).  So N1 + N2 = (n-1) Y + Z_3(n).
+  (iii) Subtract S2b: N2 = (n-1)^2(n-2) + Z_3 - (n-1)(n-2)(n+1)/4 - Z_3/2
+       = (n-1)(n-2) (4(n-1) - (n+1))/4 + Z_3/2 = (n-1)(n-2)(3n-5)/4 + Z_3/2.                    QED
+Cube roots are computed EXACTLY: since (ny)^{1/3} is nondecreasing in y, walk x upward while (x+1)^3 <= ny.
+
+  FINITE-EXACT  reciprocity (ii) and closed form (iii) for all 2 <= n <= 220 and n in [225, 243, 250, 256, 289, 300, 331, 343, 360, 361, 385, 399, 400]
+  FINITE-EXACT  truth set of (2) on that universe = squarefree exactly (covers the lead's n<120 claim)
+     n= 7: N1=    60 N2=   120 N1+N2=    180 (n-1)^2(n-2)=    180 Z_3= 0 ; N2-RHS(2)=0
+     n= 8: N1=    96 N2=   201 N1+N2=    297 (n-1)^2(n-2)=    294 Z_3= 3 ; N2-RHS(2)=3/2
+     n= 9: N1=   141 N2=   309 N1+N2=    450 (n-1)^2(n-2)=    448 Z_3= 2 ; N2-RHS(2)=1
+     n=12: N1=   358 N2=   853 N1+N2=   1211 (n-1)^2(n-2)=   1210 Z_3= 1 ; N2-RHS(2)=1/2
+     n=31: N1=  6960 N2= 19140 N1+N2=  26100 (n-1)^2(n-2)=  26100 Z_3= 0 ; N2-RHS(2)=0
+     n=32: N1=  7676 N2= 21161 N1+N2=  28837 (n-1)^2(n-2)=  28830 Z_3= 7 ; N2-RHS(2)=7/2
+[t=7.0s]
+
+==============================================================================
+S4  The bilinear sum via Pillai's gcd-sum (PROVED); identity (3) <=> prime; 4 N3 vs N1 + N2
+==============================================================================
+
+THEOREM S4.  For n >= 2 let N3(n) = sum_{i,j=1}^{n-1} floor(ij/n), S(n) = sum_{i,j=1}^{n-1} (ij mod n),
+  P(n) = sum_{d|n} d phi(n/d) = sum_{k=1}^{n} gcd(k,n)  (Pillai, A018804).  Then
+  (i)  S(n) = n (n^2 - P(n)) / 2;
+  (ii) N3(n) = ((n-1)^2 n^2/4 - S(n))/n = (n-1)^2 (n-2)/4 + (P(n) - 2n + 1)/2;
+  (iii) P(n) >= 2n-1 with equality iff n is prime; hence identity (3) holds iff n is prime.
+PROOF.  (i) Extend i,j to [0,n-1] (the added terms are 0).  Fix i and put d = gcd(i,n), i = d i',
+  gcd(i', n/d) = 1.  Then ij mod n = d (i' j mod n/d).  As j runs over [0,n-1], i' j mod n/d takes each
+  residue r in [0, n/d - 1] exactly d times (i' is a unit mod n/d), so
+  sum_j (ij mod n) = d * d * (n/d)(n/d - 1)/2 = n (n - d)/2.
+  The number of i in [0,n-1] with gcd(i,n) = d is phi(n/d).  Hence
+  S(n) = (n/2) sum_{d|n} phi(n/d) (n - d) = (n/2) ( n * n - sum_{d|n} d phi(n/d) ) = n (n^2 - P(n))/2,
+  using sum_{d|n} phi(n/d) = n.
+  (ii) sum_{i,j} ij = (n(n-1)/2)^2; subtract S and divide by n; simplify with (n-1)^2(n-2) = n^3-4n^2+5n-2.
+  (iii) P(n)/n = sum_{d|n} phi(d)/d is multiplicative with value 1 + a(1 - 1/p) at p^a.  For n = p:
+  P = 2p - 1.  For n = p^a, a >= 2: P/n = 1 + a - a/p >= 1 + a/2 >= 2 > 2 - 1/n.  For n with two
+  distinct prime factors: P/n >= (2 - 1/p)(2 - 1/q) >= (3/2)(5/3) = 5/2 > 2.  So P(n) > 2n - 1 unless n is prime.
+  Identity (3) says N3 = (n-1)^2(n-2)/4, i.e. P(n) = 2n-1, i.e. n prime.                        QED
+  For prime n, (i) is the permutation argument: j -> ij mod n permutes [1,n-1], S = (n-1) n(n-1)/2.
+
+  FINITE-EXACT  (i),(ii),(iii) for all 2 <= n <= 260 ; truth set of (3) = primes exactly (covers lead's n<200)
+     n | P(n) | P-2n+1 | N3 | (n-1)^2(n-2)/4 | deviation
+     4 |    8 |      1 |     5 | 9/2 | 1/2
+     5 |    9 |      0 |    12 | 12 | 0
+     6 |   15 |      4 |    27 | 25 | 2
+     7 |   13 |      0 |    45 | 45 | 0
+     8 |   20 |      5 |    76 | 147/2 | 5/2
+     9 |   21 |      4 |   114 | 112 | 2
+    12 |   40 |     17 |   311 | 605/2 | 17/2
+    15 |   45 |     16 |   645 | 637 | 8
+
+COROLLARY S4b (PROVED).  4 N3(n) - (N1(n) + N2(n)) = 2 (P(n) - 2n + 1) - Z_3(n).
+  For prime n both correction terms vanish: 4 N3 = N1 + N2 = (n-1)^2 (n-2).
+  For composite n the left side is 2*(P(n)-2n+1) - (n/n_3 - 1): the bilinear sum sees the WHOLE divisor
+  lattice (through P), the cubic sums see only the exponent profile through n_3.  The two corrections
+  are independent: n = 6 has Z_3 = 0, P-2n+1 = 4; n = 8 has Z_3 = 3, P-2n+1 = 5.
+
+  FINITE-EXACT  S4b verified for 2 <= n < 150 (4 N3 = N1 + N2 at every prime)
+[t=7.7s]
+
+==============================================================================
+S5  Even powers see class numbers: sum floor(k^2/p) = law + h(-p) for p = 3 (mod 4), p > 3
+==============================================================================
+
+Setup.  For prime p and e >= 1 let g = gcd(e, p-1).  The map k -> k^e on (Z/p)^* has image the unique
+subgroup H_g of index g, each value taken g times, so  sum_{k=1}^{p-1} (k^e mod p) = g * sum_{r in H_g} r.
+If -1 in H_g (iff (p-1)/g is even), H_g is symmetric under r -> p-r and sum_{H_g} r = p |H_g| / 2 = p(p-1)/(2g),
+so the odd-law value (sum k^e)/p - (p-1)/2 is exact (this recovers S1 for odd e, since then g is odd,
+(p-1)/g even).  If (p-1)/g is odd (forcing g even) there is a genuine correction:
+  sum floor(k^e/p) = (sum k^e)/p - (p-1)/2 + D_{e}(p),  D_e(p) = (p-1)/2 - g sum_{H_g} r / p.
+Quadratic case g = 2, p = 3 (mod 4).  Let R, N be the sums of quadratic residues / non-residues in [1,p-1].
+R + N = p(p-1)/2 and (CITED: Dirichlet class number formula for Q(sqrt(-p)); Davenport, Multiplicative
+Number Theory, ch. 6; for p > 3, w = 2)   R - N = sum_a (a/p) a = -p h(-p).   Hence R = p(p-1)/4 - p h(-p)/2 and
+  sum_{k=1}^{p-1} floor(k^2/p) = (p-1)(2p-1)/6 - (p-1)/2 + h(-p)         (p = 3 mod 4, p > 3).
+So the deviation from the odd law is EXACTLY the class number (not h/2).  For p = 3 the unit count w = 6
+changes the formula: sum floor(k^2/3) = 1 while (2*5)/6 - 1 + h(-3) = 5/3 (p = 3 is the excluded prime).
+For p = 1 (mod 4) the quadratic sum obeys the odd law exactly (D_2 = 0): the even power sees nothing.
+h(-p) is computed below INDEPENDENTLY by counting reduced primitive forms (a,b,c), b^2-4ac = -p,
+so the Dirichlet recollection is itself checked exactly on the finite universe.
+
+  FINITE-EXACT  primes p < 500, p = 3 mod 4, p > 3: sum floor(k^2/p) = (p-1)(2p-1)/6 - (p-1)/2 + h(-p),
+                with h(-p) from reduced forms; Dirichlet's -(1/p) sum (a/p) a = h(-p) confirmed on the same range.
+  FINITE-EXACT  primes p < 500, p = 1 mod 4: quadratic sum obeys the odd law exactly (deviation 0).
+  REFUTED for p = 3: deviation -2/3 (w = 6 exception), h(-3) = 1.
+     p | sum floor(k^2/p) | odd-law value | deviation | h(-p)
+     3 |                1 |           2/3 |       1/3 | 1
+     7 |               11 |            10 |         1 | 1
+    11 |               31 |            30 |         1 | 1
+    19 |              103 |           102 |         1 | 1
+    23 |              157 |           154 |         3 | 3
+    31 |              293 |           290 |         3 | 3
+    43 |              575 |           574 |         1 | 1
+    47 |              695 |           690 |         5 | 5
+    59 |             1105 |          1102 |         3 | 3
+    67 |             1431 |          1430 |         1 | 1
+    71 |             1617 |          1610 |         7 | 7
+    79 |             2007 |          2002 |         5 | 5
+    83 |             2217 |          2214 |         3 | 3
+   103 |             3439 |          3434 |         5 | 5
+   107 |             3713 |          3710 |         3 | 3
+   127 |             5255 |          5250 |         5 | 5
+   ... (all 50 primes p = 3 mod 4 below 500 checked)
+
+  General even e (PROVED above, verified): deviation D_e(p) = h(-p) whenever gcd(e,p-1) = 2 and p = 3 mod 4;
+  D_e(p) = 0 whenever (p-1)/gcd(e,p-1) is even.
+  FINITE-EXACT  all primes 3 <= p < 500, e in {2,4,6,8,10,12}: both cases verified.
+
+  Exploratory (FINITE-EXACT table, no formula claimed): g = 4, p = 5 (mod 8) [(p-1)/4 odd], e = 4:
+     p | D_4(p) | h(-p) [disc -4p since p=1 mod 4] | h(-4p) | D_4 - 2h(-4p)
+     5 |    6/5 | n/a | 2 | -14/5
+    13 |      2 | n/a | 2 | -2
+    29 |     -2 | n/a | 6 | -14
+    37 |      2 | n/a | 2 | -2
+    53 |     -2 | n/a | 6 | -14
+    61 |      2 | n/a | 6 | -10
+   101 |     -6 | n/a | 14 | -34
+   109 |     10 | n/a | 6 | -2
+   149 |      6 | n/a | 14 | -22
+   157 |      2 | n/a | 6 | -10
+   173 |     -6 | n/a | 14 | -34
+   181 |     14 | n/a | 10 | -6
+   197 |     -2 | n/a | 10 | -22
+  verdict: D_4(p) == h(-4p) for all p=5 mod 8 below 500: False ; D_4(p) == 2 h(-4p): False
+  (Whatever the verdict, the quartic deviation is left OPEN as a formula; the quadratic one is CITED+verified.)
+[t=7.9s]
+
+==============================================================================
+S6  Typing 'odd cycles ~ odd functions ~ odd powers'
+==============================================================================
+
+(a) odd functions <-> negation conjugacy of the 3n+k family.  PROVED one-liner: for odd n and odd k put
+    T_k(n) = (3n+k)/2^{v_2(3n+k)}.  Then T_{-k}(-n) = (-(3n+k))/2^{v_2(3n+k)} = -T_k(n), because v_2(-m) = v_2(m).
+    So n -> T_k(n) is an odd function up to the sign flip of k; cycles of 3n-k are exactly the negatives of the
+    cycles of 3n+k (inherited F3 and arithmetic_braids_20260917_summand.md, C_+(-n) = -C_-(n)).  This is the
+    SAME algebraic fact as the pairing f(n-k) = -f(k) of S1: both are the statement that the map commutes with
+    x -> -x, read mod n (S1) or on Z (Collatz).  Preserved predicate: 'orbit structure up to global sign'.
+    Lost: nothing.  Decisive test: the 3n-1 cycle (5,7) is the 3n+1 cycle (-5,-7).
+(b) odd powers <-> the pairing law.  x^e is an odd function iff e is odd; S1 then applies and the residue
+    r_k + r_{n-k} in {0, n} cancels everything except the fixed layer Z_f(n).  Even e destroys the pairing
+    (r_{n-k} = r_k) and the residue mass becomes a character sum -> class number (S5).  The user's slogan
+    'odd powers' is therefore literally 'the exponent is odd so x^e is an odd function'; nothing deeper.
+(c) 'odd cycles'.  Repo meaning (grep of 01-canon/theorems for Redei): THM-001 = Redei's theorem, every
+    tournament has an ODD number of Hamiltonian paths; LEM-020 = 'Redei involution': a fixed-point-free pairing
+    of witnesses plus a fixed layer, with the parity law #witnesses = #fixed points (mod 2); THM-1745 = the
+    Hamiltonian-path spectrum is the odd numbers minus {7,21}.  Comparison with S1:
+      source: S1 residue multiset {r_k};  target: LEM-020/THM-001 witness sets;
+      map: NONE between the objects.  What IS shared is the PROOF TEMPLATE: an involution (k <-> n-k here,
+      tau <-> 1-tau there, path reversal in Route A of THM-001) whose non-fixed orbits cancel exactly and whose
+      fixed layer carries the whole residue.  In S1 the cancellation is exact and integer-valued
+      (sum r_k = (n/2)(n-1-Z)), so it is strictly stronger than a parity law; in THM-001 only parity survives.
+      Preserved predicate: 'the unpaired part is the fixed layer'.  Lost: all arithmetic of tournaments;
+      the {7,21} hole has no counterpart in the floor sums (the truth sets here are squarefree / prime,
+      cofinite in nothing).  Cheapest decisive test: the floor-sum fixed layer Z_f(n) can be any n/n_e - 1,
+      e.g. Z_3(8) = 3 is odd while every Redei fixed layer has odd cardinality 1 -- there is no parity match.
+    The three 3n-1 cycles and the 'three cycles' fascination: no map found from the floor-sum truth sets to
+    cycle counts (the k=+-1,5,7,11,13 counts 4,9,5,7,13 of F3 have no relation to squarefreeness or
+    primality that survives the decisive test: n=9 and n=4 are both non-squarefree but 9 counts cycles of
+    3n+5 and 4 counts cycles of 3n+1).  Honest verdict: beyond the word 'odd' (= commutes with negation),
+    'odd cycles' shares only the involution proof template with 'odd functions/powers'.
+
+  FINITE-EXACT  T_{-k}(-n) = -T_k(n) for k in {+-1,+-5,+-7,+-13}, odd |n| <= 10001
+  FINITE-EXACT  the (5,7) 2-cycle of 3n-1 is the (-5,-7) cycle of 3n+1: T_1(-5) = -7, T_1(-7) = -5
+  FINITE-EXACT  Z_3(8) = 3 (odd fixed layer of size 3, so no Redei-style 'exactly one fixed point')
+
+==============================================================================
+SUMMARY OF LABELS
+==============================================================================
+
+PROVED   S1 odd-function floor law (all n >= 2, even n included via the fixed point r_{n/2} in {0,n/2}).
+PROVED   S2 Z_{x^e}(n) = n/n_e - 1; (1) and every odd-e identity hold iff n squarefree (e=1 degenerate: all n).
+CITED    squarefree density 6/pi^2 = 1/zeta(2) (Gegenbauer 1885 / Hardy-Wright Thm 333).
+PROVED   S3 lattice reciprocity N1 + N2 = (n-1)^2(n-2) + Z_3(n); (2) iff squarefree; exact integer cube roots.
+PROVED   S4 S(n) = n(n^2-P(n))/2, N3 = (n-1)^2(n-2)/4 + (P(n)-2n+1)/2, P(n) >= 2n-1 iff-equality prime;
+         (3) iff prime; 4 N3 - (N1+N2) = 2(P-2n+1) - Z_3.
+CITED    S5 Dirichlet: sum (a/p) a = -p h(-p) for p = 3 mod 4, p > 3 (verified against reduced forms, p < 500).
+PROVED   S5 given Dirichlet: sum floor(k^2/p) = (p-1)(2p-1)/6 - (p-1)/2 + h(-p) (p = 3 mod 4, p > 3); deviation 0
+         for p = 1 mod 4; general even e: deviation h(-p) iff gcd(e,p-1)=2 and p=3 mod 4, else 0 when (p-1)/g even.
+REFUTED  even f obeys the odd law: minimal witness (f, n) = (x^2, 3); p = 3 quadratic formula (w=6).
+OPEN     closed form of the quartic deviation D_4(p) for p = 5 mod 8 (table only).
+PROVED   S6(a) negation conjugacy T_{-k}(-n) = -T_k(n).  S6(c): no object-level map from floor sums to
+         tournament odd cycles / Redei; shared involution proof template only.
+
+total time [t=8.0s]
+ALL CHECKS PASSED

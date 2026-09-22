@@ -1,0 +1,344 @@
+
+==============================================================================
+0. SIEVE Omega / omega / b on [1, 60000007]  (uint8, exact)
+==============================================================================
+primes <= 60000007 : 3562115   [t=8.3s]
+trial-division audit: 33000 integers agree with the sieve  [t=8.7s]
+class-parity law b(6k-1) odd, b(6k+1) even: holds for all k <= 10000000 (inherited SW4)
+
+==============================================================================
+1. ORDERED SANDWICH MATRICES N_ij(K), pair (6k-1, 6k+1)
+==============================================================================
+
+ K = 100000  (centers 6..600000)
+   rows: Omega(6k-1) in 1,2,3,>=4 ; cols: Omega(6k+1) in 1,2,3,>=4
+            1          2          3        >=4 |    row sum
+         5330      10091       6537       2614 |      24572
+        10050      17794      10719       3851 |      42414
+         6561      10751       5600       1664 |      24576
+         2583       3844       1666        345 |       8438
+        24524      42480      24522       8474 |     100000  (col sums)
+   K=100000  pairs (i,j): actual N_ij-N_ji | independence (R_i C_j - R_j C_i)/K | residual
+     N_PS - N_SP =      41 | pred =      36.58 | residual =       4.42
+     N_PC - N_CP =     -24 | pred =      -1.47 | residual =     -22.53
+     N_SC - N_CS =     -32 | pred =     -39.12 | residual =       7.12
+     N_PQ - N_QP =      31 | pred =      12.90 | residual =      18.10
+     N_SQ - N_QS =       7 | pred =       9.70 | residual =      -2.70
+     N_CQ - N_QC =      -2 | pred =      13.40 | residual =     -15.40
+
+ K = 1000000  (centers 6..6000000)
+   rows: Omega(6k-1) in 1,2,3,>=4 ; cols: Omega(6k+1) in 1,2,3,>=4
+            1          2          3        >=4 |    row sum
+        37915      78689      59706      30192 |     206502
+        78277     157420     112416      52182 |     400295
+        59992     112305      72363      28755 |     273415
+        30161      52125      28736       8766 |     119788
+       206345     400539     273221     119895 |    1000000  (col sums)
+   cross-check: identical to the inherited K=10^6 table (divisors note, SW3)  [PASS]
+   K=1000000  pairs (i,j): actual N_ij-N_ji | independence (R_i C_j - R_j C_i)/K | residual
+     N_PS - N_SP =     412 | pred =     113.23 | residual =     298.77
+     N_PC - N_CP =    -286 | pred =       2.86 | residual =    -288.86
+     N_SC - N_CS =     111 | pred =    -144.37 | residual =     255.37
+     N_PQ - N_QP =      31 | pred =      40.90 | residual =      -9.90
+     N_SQ - N_QS =      57 | pred =      13.60 | residual =      43.40
+     N_CQ - N_QC =      19 | pred =      52.49 | residual =     -33.49
+
+ K = 10000000  (centers 6..60000000)
+   rows: Omega(6k-1) in 1,2,3,>=4 ; cols: Omega(6k+1) in 1,2,3,>=4
+            1          2          3        >=4 |    row sum
+       280557     632905     539140     328636 |    1781238
+       632766    1380659    1118019     632028 |    3763472
+       539061    1118744     837851     416682 |    2912338
+       328491     631688     416902     165871 |    1542952
+      1780875    3763996    2911912    1543217 |   10000000  (col sums)
+   K=10000000  pairs (i,j): actual N_ij-N_ji | independence (R_i C_j - R_j C_i)/K | residual
+     N_PS - N_SP =     139 | pred =     229.95 | residual =     -90.95
+     N_PC - N_CP =      79 | pred =      29.84 | residual =      49.16
+     N_SC - N_CS =    -725 | pred =    -312.93 | residual =    -412.07
+     N_PQ - N_QP =     145 | pred =     103.21 | residual =      41.79
+     N_SQ - N_QS =     340 | pred =      18.88 | residual =     321.12
+     N_CQ - N_QC =    -220 | pred =     142.91 | residual =    -362.91
+
+ Running sign of the three signed discrepancies, K' = 1..10000000
+   N_PS-N_SP: K'<=10000000 with diff>0: 7716244, =0: 14947, <0: 2268809 ; sign changes: 992 (first at K'=1453, last at K'=8714332)
+        last K' with diff<=0: 8714401 ; last K' with diff>=0: 10000000 ; min diff -436 ; max diff 650 ; final 139
+   N_PC-N_CP: K'<=10000000 with diff>0: 8049513, =0: 12330, <0: 1938157 ; sign changes: 639 (first at K'=1307, last at K'=6022060)
+        last K' with diff<=0: 6022059 ; last K' with diff>=0: 10000000 ; min diff -517 ; max diff 570 ; final 79
+   N_SC-N_CS: K'<=10000000 with diff>0: 880787, =0: 4654, <0: 9114559 ; sign changes: 470 (first at K'=57, last at K'=1880886)
+        last K' with diff<=0: 10000000 ; last K' with diff>=0: 1880933 ; min diff -1323 ; max diff 319 ; final -725
+
+   tracked values of the three differences:
+            K      PS-SP      PC-CP      SC-CS
+        10000         15          2        -20
+        20000         31        -28         11
+        50000         57        -22        -36
+       100000         41        -24        -32
+       200000        -26         61        -81
+       500000         38        149       -308
+      1000000        412       -286        111
+      2000000         19         78       -209
+      5000000        216        197       -737
+     10000000        139         79       -725
+[t=9.4s]
+
+==============================================================================
+2. CLASS DECOMPOSITION: primes, semiprimes, 3-almost-primes by class mod 6
+==============================================================================
+
+ x = 6K+1 = 600001  (K=100000)
+   Omega class :      1 (P)      2 (S)      3 (C)    >=4 (Q)
+   n = 1 mod 6 :      24524      42480      24522       8474   (right endpoints, column sums)
+   n = 5 mod 6 :      24572      42414      24576       8438   (left  endpoints, row sums)
+   chi-sum     :        -48         66        -54         36   (= #class1 - #class5 ; sign pattern by Omega)
+   check: matrix row sums == class-5 counts, column sums == class-1 counts  [PASS]
+   semiprime patterns (n<=x, gcd(n,6)=1):
+      (1,1) distinct          18962
+      (5,5) distinct          23383
+      (1,5) mixed             42414
+      p^2, p=1 mod 6             66
+      p^2, p=5 mod 6             69
+      same-class (incl. squares) = 42480 = S_1 ; mixed = 42414 = S_5   [PROVED law, PASS]
+   PROVED identity S_1-S_5 = (1/2)[sum_p chi(p) pi_chi(x/p) + pi'(sqrt x)]:
+      S_1-S_5 = 66 ; ordered double sum = -3 ; pi'(sqrt x) = 135 ; rhs = 66  [PASS]
+      partial ordered sums through p = 5,7,11,13,17,19,23,29,31,37 and p<=100, p<=1000:
+         p<=5     :       31
+         p<=7     :       -9
+         p<=11    :       17
+         p<=13    :      -10
+         p<=17    :       22
+         p<=19    :        8
+         p<=23    :       19
+         p<=29    :       28
+         p<=31    :       17
+         p<=37    :       -4
+         p<=100   :       -2
+         p<=1000  :        9
+      pi_chi(600001) = -48
+      pi_chi(120000) = -31
+      pi_chi(85714) = -40
+      pi_chi(54545) = -26
+      pi_chi(46153) = -27
+
+ x = 6K+1 = 6000001  (K=1000000)
+   Omega class :      1 (P)      2 (S)      3 (C)    >=4 (Q)
+   n = 1 mod 6 :     206345     400539     273221     119895   (right endpoints, column sums)
+   n = 5 mod 6 :     206502     400295     273415     119788   (left  endpoints, row sums)
+   chi-sum     :       -157        244       -194        107   (= #class1 - #class5 ; sign pattern by Omega)
+   check: matrix row sums == class-5 counts, column sums == class-1 counts  [PASS]
+   semiprime patterns (n<=x, gcd(n,6)=1):
+      (1,1) distinct         182209
+      (5,5) distinct         217969
+      (1,5) mixed            400295
+      p^2, p=1 mod 6            176
+      p^2, p=5 mod 6            185
+      same-class (incl. squares) = 400539 = S_1 ; mixed = 400295 = S_5   [PROVED law, PASS]
+   PROVED identity S_1-S_5 = (1/2)[sum_p chi(p) pi_chi(x/p) + pi'(sqrt x)]:
+      S_1-S_5 = 244 ; ordered double sum = 127 ; pi'(sqrt x) = 361 ; rhs = 244  [PASS]
+      partial ordered sums through p = 5,7,11,13,17,19,23,29,31,37 and p<=100, p<=1000:
+         p<=5     :       44
+         p<=7     :      -47
+         p<=11    :        4
+         p<=13    :      -55
+         p<=17    :        1
+         p<=19    :      -41
+         p<=23    :       18
+         p<=29    :       49
+         p<=31    :       29
+         p<=37    :      -13
+         p<=100   :       27
+         p<=1000  :       75
+      pi_chi(6000001) = -157
+      pi_chi(1200000) = -44
+      pi_chi(857143) = -91
+      pi_chi(545454) = -51
+      pi_chi(461538) = -59
+
+ x = 6K+1 = 60000001  (K=10000000)
+   Omega class :      1 (P)      2 (S)      3 (C)    >=4 (Q)
+   n = 1 mod 6 :    1780875    3763996    2911912    1543217   (right endpoints, column sums)
+   n = 5 mod 6 :    1781238    3763472    2912338    1542952   (left  endpoints, row sums)
+   chi-sum     :       -363        524       -426        265   (= #class1 - #class5 ; sign pattern by Omega)
+   check: matrix row sums == class-5 counts, column sums == class-1 counts  [PASS]
+   semiprime patterns (n<=x, gcd(n,6)=1):
+      (1,1) distinct        1732047
+      (5,5) distinct        2030969
+      (1,5) mixed           3763472
+      p^2, p=1 mod 6            484
+      p^2, p=5 mod 6            496
+      same-class (incl. squares) = 3763996 = S_1 ; mixed = 3763472 = S_5   [PROVED law, PASS]
+   PROVED identity S_1-S_5 = (1/2)[sum_p chi(p) pi_chi(x/p) + pi'(sqrt x)]:
+      S_1-S_5 = 524 ; ordered double sum = 68 ; pi'(sqrt x) = 980 ; rhs = 524  [PASS]
+      partial ordered sums through p = 5,7,11,13,17,19,23,29,31,37 and p<=100, p<=1000:
+         p<=5     :      242
+         p<=7     :      -17
+         p<=11    :       80
+         p<=13    :      -24
+         p<=17    :       93
+         p<=19    :     -100
+         p<=23    :        3
+         p<=29    :      142
+         p<=31    :      -28
+         p<=37    :     -140
+         p<=100   :     -117
+         p<=1000  :      133
+      pi_chi(60000001) = -363
+      pi_chi(12000000) = -242
+      pi_chi(8571428) = -259
+      pi_chi(5454545) = -97
+      pi_chi(4615384) = -104
+
+ Independence (product-of-marginals) prediction for N_PS - N_SP and the two-mechanism split
+   pred = (R_1 C_2 - R_2 C_1)/K = 2(pibar*dS + Sbar*dpi)/K,  pibar=(R_1+C_1)/2, dpi=(R_1-C_1)/2,
+   Sbar=(R_2+C_2)/2, dS=(C_2-R_2)/2.   R = class-5 (left) counts, C = class-1 (right) counts.
+          K     pi_5     pi_1      S_5      S_1     actual       pred  semi-part prime-part   residual act/pred
+     100000    24572    24524    42414    42480         41      36.58      16.20      20.37       4.42    1.121
+    1000000   206502   206345   400295   400539        412     113.23      50.37      62.87     298.77    3.639
+   10000000  1781238  1780875  3763472  3763996        139     229.95      93.33     136.62     -90.95    0.604
+   ratio form: N_PS/N_SP actual vs (pi_5 S_1)/(pi_1 S_5):
+      K=100000 : actual 1.004080  predicted 1.003516  (pi_5/pi_1 = 1.001957, S_1/S_5 = 1.001556)
+      K=1000000 : actual 1.005263  predicted 1.001371  (pi_5/pi_1 = 1.000761, S_1/S_5 = 1.000610)
+      K=10000000 : actual 1.000220  predicted 1.000343  (pi_5/pi_1 = 1.000204, S_1/S_5 = 1.000139)
+[t=10.5s]
+
+==============================================================================
+3. 3-ALMOST-PRIME CLASS PATTERNS (omega, b) AND THE (P,C)/(C,P), (S,C)/(C,S) DISCREPANCIES
+==============================================================================
+
+ x = 600001 (K=100000): 3-almost-primes coprime to 6 by pattern
+      p1^3            [right,b=0]              10
+      p5^3            [left, b=3]              11
+      p1^2 q1         [right,b=0]            1310
+      p1^2 q5         [left, b=1]            1383
+      p5^2 q1         [right,b=2]            2132
+      p5^2 q5         [left, b=3]            2191
+      p1 q1 r1        [right,b=0]            3607
+      p1 q1 r5        [left, b=1]           14755
+      p1 q5 r5        [right,b=2]           17463
+      p5 q5 r5        [left, b=3]            6236
+      left total (b odd) = 24576 = C_5 ; right total (b even) = 24522 = C_1   [PASS]
+   two-mechanism split for the other two pairs (independence prediction, exact):
+      N_PC-N_CP: actual     -24  pred     -1.47  [Omega=3-bias part    -13.26, Omega=1-bias part     11.78]  residual    -22.53
+      N_SC-N_CS: actual     -32  pred    -39.12  [Omega=3-bias part    -22.92, Omega=2-bias part    -16.20]  residual      7.12
+
+ x = 6000001 (K=1000000): 3-almost-primes coprime to 6 by pattern
+      p1^3            [right,b=0]              19
+      p5^3            [left, b=3]              21
+      p1^2 q1         [right,b=0]           10394
+      p1^2 q5         [left, b=1]           10633
+      p5^2 q1         [right,b=2]           16906
+      p5^2 q5         [left, b=3]           17111
+      p1 q1 r1        [right,b=0]           45570
+      p1 q1 r5        [left, b=1]          173638
+      p1 q5 r5        [right,b=2]          200332
+      p5 q5 r5        [left, b=3]           72012
+      left total (b odd) = 273415 = C_5 ; right total (b even) = 273221 = C_1   [PASS]
+   two-mechanism split for the other two pairs (independence prediction, exact):
+      N_PC-N_CP: actual    -286  pred      2.86  [Omega=3-bias part    -40.05, Omega=1-bias part     42.91]  residual   -288.86
+      N_SC-N_CS: actual     111  pred   -144.37  [Omega=3-bias part    -77.68, Omega=2-bias part    -66.69]  residual    255.37
+
+ x = 60000001 (K=10000000): 3-almost-primes coprime to 6 by pattern
+      p1^3            [right,b=0]              36
+      p5^3            [left, b=3]              39
+      p1^2 q1         [right,b=0]           84521
+      p1^2 q5         [left, b=1]           85178
+      p5^2 q1         [right,b=2]          138521
+      p5^2 q5         [left, b=3]          139167
+      p1 q1 r1        [right,b=0]          522639
+      p1 q1 r5        [left, b=1]         1909337
+      p1 q5 r5        [right,b=2]         2166195
+      p5 q5 r5        [left, b=3]          778617
+      left total (b odd) = 2912338 = C_5 ; right total (b even) = 2911912 = C_1   [PASS]
+   two-mechanism split for the other two pairs (independence prediction, exact):
+      N_PC-N_CP: actual      79  pred     29.84  [Omega=3-bias part    -75.87, Omega=1-bias part    105.71]  residual     49.16
+      N_SC-N_CS: actual    -725  pred   -312.93  [Omega=3-bias part   -160.34, Omega=2-bias part   -152.60]  residual   -412.07
+
+==============================================================================
+4. HOSTILE CONTROLS
+==============================================================================
+ (i) shifted pairs.  H1 predicts: class-reversed pair (6k+1,6k+5) -> sign of N_PS-N_SP REVERSED;
+     same-class pairs (6k-1,6k+5) and (6k+1,6k+7) -> no class-driven term (pred=0 exactly up to
+     the marginal mismatch between the two shifted copies), residual only.
+
+ pair (6k-1,6k+1) [5|1]
+   K=100000  PP=5330 PS=10091 SP=10050 SS=17794 | PS-SP: act     41 pred     36.58 res      4.42 ; PC-CP: act    -24 pred     -1.47 res    -22.53 ; SC-CS: act    -32 pred    -39.12 res      7.12
+   K=1000000  PP=37915 PS=78689 SP=78277 SS=157420 | PS-SP: act    412 pred    113.23 res    298.77 ; PC-CP: act   -286 pred      2.86 res   -288.86 ; SC-CS: act    111 pred   -144.37 res    255.37
+   K=10000000  PP=280557 PS=632905 SP=632766 SS=1380659 | PS-SP: act    139 pred    229.95 res    -90.95 ; PC-CP: act     79 pred     29.84 res     49.16 ; SC-CS: act   -725 pred   -312.93 res   -412.07
+      running N_PS-N_SP: K'<=10000000 with diff>0: 7716244, =0: 14947, <0: 2268809 ; sign changes: 992 (first at K'=1453, last at K'=8714332)
+        last K' with diff<=0: 8714401 ; last K' with diff>=0: 10000000 ; min diff -436 ; max diff 650 ; final 139
+
+ pair (6k+1,6k+5) [1|5]
+   K=100000  PP=5333 PS=10089 SP=10094 SS=17714 | PS-SP: act     -5 pred    -36.15 res     31.15 ; PC-CP: act      6 pred      1.72 res      4.28 ; SC-CS: act     68 pred     39.12 res     28.88
+   K=1000000  PP=37786 PS=78568 SP=78611 SS=157461 | PS-SP: act    -43 pred   -112.83 res     69.83 ; PC-CP: act   -117 pred     -2.59 res   -114.41 ; SC-CS: act    236 pred    144.37 res     91.63
+   K=10000000  PP=280205 PS=633474 SP=633013 SS=1379611 | PS-SP: act    461 pred   -229.57 res    690.57 ; PC-CP: act   -651 pred    -29.55 res   -621.45 ; SC-CS: act   1025 pred    312.93 res    712.07
+      running N_PS-N_SP: K'<=10000000 with diff>0: 7549297, =0: 11139, <0: 2439564 ; sign changes: 839 (first at K'=35, last at K'=5444663)
+        last K' with diff<=0: 5444805 ; last K' with diff>=0: 10000000 ; min diff -441 ; max diff 679 ; final 461
+
+ pair (6k-1,6k+5) [5|5]
+   K=100000  PP=5345 PS=10067 SP=10028 SS=17818 | PS-SP: act     39 pred      0.42 res     38.58 ; PC-CP: act    -26 pred      0.25 res    -26.25 ; SC-CS: act     14 pred      0.00 res     14.00
+   K=1000000  PP=37788 PS=78629 SP=78799 SS=157384 | PS-SP: act   -170 pred      0.40 res   -170.40 ; PC-CP: act    232 pred      0.27 res    231.73 ; SC-CS: act   -269 pred      0.00 res   -269.00
+   K=10000000  PP=280140 PS=633720 SP=633591 SS=1378937 | PS-SP: act    129 pred      0.38 res    128.62 ; PC-CP: act    547 pred      0.29 res    546.71 ; SC-CS: act   -234 pred      0.00 res   -234.00
+      running N_PS-N_SP: K'<=10000000 with diff>0: 3463367, =0: 9096, <0: 6527537 ; sign changes: 430 (first at K'=102, last at K'=9872189)
+        last K' with diff<=0: 9876827 ; last K' with diff>=0: 10000000 ; min diff -708 ; max diff 336 ; final 129
+
+ pair (6k+1,6k+7) [1|1]
+   K=100000  PP=5343 PS=10070 SP=9961 SS=17890 | PS-SP: act    109 pred      0.67 res    108.33 ; PC-CP: act   -130 pred      0.25 res   -130.25 ; SC-CS: act     81 pred     -0.25 res     81.25
+   K=1000000  PP=37629 PS=78682 SP=78869 SS=157013 | PS-SP: act   -187 pred      0.40 res   -187.40 ; PC-CP: act    213 pred      0.27 res    212.73 ; SC-CS: act   -108 pred      0.00 res   -108.00
+   K=10000000  PP=280030 PS=633437 SP=633329 SS=1380345 | PS-SP: act    108 pred      0.38 res    107.62 ; PC-CP: act   -594 pred      0.47 res   -594.47 ; SC-CS: act   -388 pred      0.38 res   -388.38
+      running N_PS-N_SP: K'<=10000000 with diff>0: 3801137, =0: 13848, <0: 6185015 ; sign changes: 668 (first at K'=286, last at K'=9162842)
+        last K' with diff<=0: 9162841 ; last K' with diff>=0: 10000000 ; min diff -436 ; max diff 389 ; final 108
+
+ (ii) local mod-35 strata of the original pair (6k-1,6k+1).
+     stratum = (h5-,h5+,h7-,h7+) divisibility pattern of (6k-1,6k+1) by 5 and 7.
+     Symmetric strata: 'none' (no 5,7 divisor either side) and 'cross' (one each side).
+     A local-sieve explanation would make the sign vanish in symmetric strata; H1 predicts it persists
+     with the same independence-predicted magnitude computed from the stratum's own marginals.
+
+   K = 100000
+     none  (h-=h+=0)                n=   42858  PP=  5329 PS=  7334 SP=  7313 SS=  9690  PS-SP act     21 pred     5.60 res    15.40
+     cross (5|left,7|right)         n=    2858  PP=     1 PS=     0 SP=     0 SS=   327  PS-SP act      0 pred     0.03 res    -0.03
+     cross (7|left,5|right)         n=    2857  PP=     0 PS=     0 SP=     0 SS=   336  PS-SP act      0 pred     0.00 res     0.00
+     left-only (5|left, 7 none)     n=   14285  PP=     0 PS=     0 SP=  1656 SS=  2208  PS-SP act  -1656 pred -1684.48 res    28.48
+     right-only (5|right, 7 none)   n=   14286  PP=     0 PS=  1657 SP=     0 SS=  2251  PS-SP act   1657 pred  1696.16 res   -39.16
+     left-only (7|left, 5 none)     n=    8571  PP=     0 PS=     0 SP=  1080 SS=  1524  PS-SP act  -1080 pred -1113.73 res    33.73
+     right-only (7|right, 5 none)   n=    8571  PP=     0 PS=  1100 SP=     0 SS=  1458  PS-SP act   1100 pred  1123.00 res   -23.00
+     symmetric strata combined: act 21  pred 5.63  res 15.37
+
+   K = 1000000
+     none  (h-=h+=0)                n=  428571  PP= 37914 PS= 59819 SP= 59637 SS= 93147  PS-SP act    182 pred   139.37 res    42.63
+     cross (5|left,7|right)         n=   28572  PP=     1 PS=     0 SP=     0 SS=  2264  PS-SP act      0 pred     0.03 res    -0.03
+     cross (7|left,5|right)         n=   28571  PP=     0 PS=     0 SP=     0 SS=  2245  PS-SP act      0 pred     0.00 res     0.00
+     left-only (5|left, 7 none)     n=  142856  PP=     0 PS=     0 SP= 11205 SS= 18045  PS-SP act -11205 pred -11657.91 res   452.91
+     right-only (5|right, 7 none)   n=  142858  PP=     0 PS= 11422 SP=     0 SS= 17934  PS-SP act  11422 pred 11683.72 res  -261.72
+     left-only (7|left, 5 none)     n=   85714  PP=     0 PS=     0 SP=  7434 SS= 11955  PS-SP act  -7434 pred -7685.91 res   251.91
+     right-only (7|right, 5 none)   n=   85715  PP=     0 PS=  7448 SP=     0 SS= 11830  PS-SP act   7448 pred  7680.06 res  -232.06
+     symmetric strata combined: act 182  pred 139.40  res 42.60
+
+   K = 10000000
+     none  (h-=h+=0)                n= 4285715  PP=280556 PS=495509 SP=495843 SS=863179  PS-SP act   -334 pred   255.22 res  -589.22
+     cross (5|left,7|right)         n=  285715  PP=     1 PS=     0 SP=     0 SS= 16079  PS-SP act      0 pred     0.02 res    -0.02
+     cross (7|left,5|right)         n=  285714  PP=     0 PS=     0 SP=     0 SS= 16157  PS-SP act      0 pred     0.00 res     0.00
+     left-only (5|left, 7 none)     n= 1428570  PP=     0 PS=     0 SP= 82573 SS=146409  PS-SP act -82573 pred -85296.36 res  2723.36
+     right-only (5|right, 7 none)   n= 1428572  PP=     0 PS= 83023 SP=     0 SS=146252  PS-SP act  83023 pred 85340.87 res -2317.87
+     left-only (7|left, 5 none)     n=  857142  PP=     0 PS=     0 SP= 54349 SS= 96386  PS-SP act -54349 pred -56070.81 res  1721.81
+     right-only (7|right, 5 none)   n=  857143  PP=     0 PS= 54373 SP=     0 SS= 96197  PS-SP act  54373 pred 56033.04 res -1660.04
+     symmetric strata combined: act -334  pred 255.24  res -589.24
+   CRT check: on one block of 35 centers the strata have sizes none=15, cross=1+1, left/right-only=5,5,3,3  [PASS]
+
+ (iii) prime-only Chebyshev census pi(x;6,5)-pi(x;6,1) and the running sign of the class-1 vs class-5
+      prime race up to 6*10^7+1, to place the sandwich sign next to the classical bias.
+      primes >= 5 up to 60000007: 3562113 ; pi_chi at end = -363 ; #prefixes with pi_chi<0: 3562104, =0: 9, >0: 0
+      largest prime at which pi_chi > 0 (class 1 ahead): never
+[t=12.7s]
+
+==============================================================================
+5. VERDICTS (finite-exact facts; the labels are for the note)
+==============================================================================
+ K=100000: N_PS-N_SP = 41 ; independence pred 36.58 (semiprime-class part 16.20, prime-class part 20.37) ; residual 4.42
+ K=1000000: N_PS-N_SP = 412 ; independence pred 113.23 (semiprime-class part 50.37, prime-class part 62.87) ; residual 298.77
+ K=10000000: N_PS-N_SP = 139 ; independence pred 229.95 (semiprime-class part 93.33, prime-class part 136.62) ; residual -90.95
+ running sign K'<=10000000: N_PS>N_SP for 7716244 values, = for 14947, < for 2268809; last K' with N_PS<=N_SP: 8714401
+ class-reversed pair (6k+1,6k+5): final N_PS-N_SP = 461 ; K'<=10000000 with diff<0: 2439564, >0: 7549297
+ same-class pair (6k-1,6k+5) [5|5]: final N_PS-N_SP = 129 ; K'<=10000000 with diff>0: 3463367, =0: 9096, <0: 6527537 ; min -446 max 129
+ same-class pair (6k+1,6k+7) [1|1]: final N_PS-N_SP = 108 ; K'<=10000000 with diff>0: 3801137, =0: 13848, <0: 6185015 ; min -267 max 161
+ total time [t=12.7s]
+ALL CHECKS PASSED

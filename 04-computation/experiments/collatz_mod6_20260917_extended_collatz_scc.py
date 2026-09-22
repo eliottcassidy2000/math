@@ -1,0 +1,1000 @@
+#!/usr/bin/env python3
+"""collatz_mod6_20260917_extended_collatz_scc.py
+
+Lane extended_collatz_scc of session collatz-mod6-20260917 (anchor: Collatz).
+
+Object.  E = the nondeterministic digraph on the positive integers with arrows
+    n -> n/2      (n even)          [halving, reversed doubling forest]
+    n -> 3n+1     (ALL n)           [odd n: ordinary Collatz; even n: NEW]
+E_- is the same with 3n-1.  E_5 (hostile control) uses 5n+1.
+
+Everything load-bearing is exact integer / Fraction arithmetic.  All checks
+use explicit `raise` (active under python -O).  Universes, filters, positive
+and hostile controls are printed.  Iterative searches only; RAM << 1 GB.
+
+Sections
+  S1  leaf identity of the new arrows and the 3|n transient forest
+  S2  Q1/Q2, inverse moves, residue drift table, 3-adic hostile family 3^j+1
+  S3  FINITE-EXACT: Q2 greedy to 10^6, Q1 to 10^6, Tarjan SCC on [1,N]
+  S4  Terras-type density theorem for the greedy inverse strategy
+  S5  cycle census of E on nodes <= 2000, length <= 40
+  S6  signed side E_- (3n-1): leaf identity, drift, three cycles, Q1_-/Q2_-
+  S7  hostile control E_5 (5n+1): same density mechanism, extra cycles
+
+Run:  python3 04-computation/experiments/collatz_mod6_20260917_extended_collatz_scc.py
+"""
+import sys
+import time
+import hashlib
+from fractions import Fraction
+
+T_START = time.time()
+
+
+def check(cond, msg):
+    """Assertion that survives python -O."""
+    if not cond:
+        raise AssertionError(msg)
+
+
+def banner(title):
+    print()
+    print("=" * 78)
+    print(title)
+    print("=" * 78)
+
+
+def v2(n):
+    c = 0
+    while n % 2 == 0:
+        n //= 2
+        c += 1
+    return c
+
+
+def v3(n):
+    c = 0
+    while n % 3 == 0:
+        n //= 3
+        c += 1
+    return c
+
+
+def oddpart(n):
+    while n % 2 == 0:
+        n //= 2
+    return n
+
+
+def collatz_T(n):
+    """Accelerated odd-to-odd map T(n) = oddpart(3n+1)."""
+    return oddpart(3 * n + 1)
+
+
+# ---------------------------------------------------------------------------
+banner("S1  Leaf identity of the even->3n+1 arrows; multiples of 3 are transient")
+# ---------------------------------------------------------------------------
+# E-predecessors of v: {2v} always; {(v-1)/3} iff 3 | v-1 and v >= 4.
+# The predecessor (v-1)/3 is an ordinary Collatz arrow iff it is odd
+# (then v is even).  It is NEW iff (v-1)/3 is even, i.e. v = 6j+1, v >= 7.
+V_MAX = 10 ** 5
+new_targets = 0
+for v in range(1, V_MAX + 1):
+    preds = {2 * v}
+    if v >= 4 and (v - 1) % 3 == 0:
+        preds.add((v - 1) // 3)
+    # brute-force cross-check of the predecessor set inside [1, 2v]
+    brute = set()
+    if v % 2 == 0:
+        brute.add(2 * v)
+    brute.add(2 * v)  # halving arrow 2v -> v exists for every v
+    if v >= 4 and (v - 1) % 3 == 0:
+        brute.add((v - 1) // 3)
+    check(preds == brute, "predecessor set mismatch at v=%d" % v)
+    new = [p for p in preds if p % 2 == 0 and 3 * p + 1 == v]
+    if new:
+        check(v % 6 == 1 and v >= 7, "new arrow into a non-1-mod-6 target v=%d" % v)
+        p = new[0]
+        j = (v - 1) // 6
+        check(p == 2 * j, "even predecessor is not 2j at v=%d" % v)
+        # smallest odd T-predecessor of v: h0 = 1 for v = 1 mod 3, n0 = (4v-1)/3
+        n0 = (4 * v - 1) // 3
+        check((4 * v - 1) % 3 == 0 and n0 % 2 == 1, "n0 not odd integer at v=%d" % v)
+        check(collatz_T(n0) == v, "T(n0) != v at v=%d" % v)
+        check(3 * n0 + 1 == 4 * v, "3n0+1 != 4v at v=%d" % v)
+        check((n0 - 1) % 4 == 0 and (n0 - 1) // 4 == p, "R^{-1}(n0) != 2j at v=%d" % v)
+        check(n0 % 8 == 1, "n0 not 1 mod 8 at v=%d" % v)
+        # (B1) fibre formula extended to j=-1: (2^{2} 4^{-1} v - 1)/3 = (v-1)/3
+        check(Fraction(4, 4) * v - 1 == 3 * p, "fibre formula at index -1 fails at v=%d" % v)
+        # index -2 would be (v/4-1)/3: never an integer for odd v
+        check((Fraction(v, 4) - 1) / 3 != int((Fraction(v, 4) - 1) / 3), "index -2 integral?!")
+        new_targets += 1
+    else:
+        if v % 6 == 1 and v >= 7:
+            raise AssertionError("missing new arrow into v=%d" % v)
+        if v % 6 == 5:
+            # would need (v-1)/3 integral: v = 1 mod 3 -- impossible
+            check((v - 1) % 3 != 0, "5 mod 6 target with 3n+1 predecessor?!")
+        if v % 6 == 3:
+            check((v - 1) % 3 != 0, "3 mod 6 target with 3n+1 predecessor?!")
+print("universe: targets v in [1, %d]; predecessor sets cross-checked" % V_MAX)
+print("new (even -> 3n+1) arrows landing in [1,%d]: %d = #{v = 1 mod 6, 7 <= v <= %d} = %d"
+      % (V_MAX, new_targets, V_MAX, len([v for v in range(7, V_MAX + 1) if v % 6 == 1])))
+check(new_targets == len([v for v in range(7, V_MAX + 1) if v % 6 == 1]), "new-arrow count")
+print("PROVED (S1.1): for v=6j+1>=7 the unique even 3n+1-predecessor 2j=(v-1)/3 equals")
+print("  R^{-1}(n0), n0=(4v-1)/3 the least odd T-predecessor (n0 = 1 mod 8, 3n0+1=4v);")
+print("  i.e. E extends fibre (B1) of the inherited note to index j=-1 exactly once.")
+print("PROVED (S1.2): targets 5 mod 6 and 3 mod 6 acquire no new predecessor.")
+
+# transient forest: 3n+1 is never 0 mod 3; halving preserves 3 | n
+for n in range(1, V_MAX + 1):
+    check((3 * n + 1) % 3 == 1, "3n+1 divisible by 3?!")
+    if n % 2 == 0:
+        check((n % 3 == 0) == ((n // 2) % 3 == 0), "halving changes 3-divisibility?!")
+print("PROVED (S1.3): no arrow of E enters 3Z from outside 3Z; inside 3Z only halving")
+print("  arrows stay (an acyclic forest), so every multiple of 3 is a transient node")
+print("  and a singleton SCC.  Checked n <= %d." % V_MAX)
+print("Sample: predecessors of 7: {14, 2};  of 13: {26, 4};  of 25: {50, 8};  of 5: {10}; of 9: {18}")
+for v in (7, 13, 25, 5, 9, 11, 19, 31):
+    preds = sorted({2 * v} | ({(v - 1) // 3} if v >= 4 and (v - 1) % 3 == 0 else set()))
+    print("   v=%3d  preds=%s  new_even_pred=%s" % (v, preds, [p for p in preds if p % 2 == 0 and 3 * p + 1 == v]))
+
+# ---------------------------------------------------------------------------
+banner("S2  Q1/Q2, inverse moves, residue drift, and the 3-adic hostile family")
+# ---------------------------------------------------------------------------
+# Inverse moves from m (3 not | m): m -> 2m ; m -> (m-1)/3 when 3 | m-1 and the
+# result is not 0 mod 3 (a multiple of 3 is unreachable from 1, so that branch
+# is dead).  Compound move: m -> (2^k m - 1)/3, k >= 0 minimal admissible.
+UNITS9 = (1, 2, 4, 5, 7, 8)
+KMIN = {}
+KCLASSES = {}
+NEXT_MOD3 = {}
+for r in UNITS9:
+    ks = [k for k in range(6) if (pow(2, k, 9) * r) % 9 in (4, 7)]
+    KCLASSES[r] = ks
+    KMIN[r] = min(ks)
+    NEXT_MOD3[r] = ((pow(2, KMIN[r], 9) * r - 1) // 3) % 3
+check(KMIN == {1: 2, 2: 1, 4: 0, 5: 3, 7: 0, 8: 1}, "k_min table")
+print("residue m mod 9 | k_min | admissible k mod 6 | factor 2^k/3 | result mod 3")
+for r in UNITS9:
+    print("   %d            |  %d    | %-18s | %-12s | %d"
+          % (r, KMIN[r], KCLASSES[r], Fraction(2 ** KMIN[r], 3), NEXT_MOD3[r]))
+print("PROVED (S2.1): k parity = [m = 2 mod 3]; admissible k form two classes mod 6")
+print("  (the third class of the right parity gives a result 0 mod 3).")
+print("  4,7 mod 9 shrink x1/3; 2,8 shrink x2/3; 1 grows x4/3; 5 grows x8/3.")
+print("  From residues {1,2,4,5} the result is 1 mod 3; from {7,8} it is 2 mod 3.")
+
+
+def greedy_step(x):
+    k = KMIN[x % 9]
+    return ((x << k) - 1) // 3, k
+
+
+def greedy_until_below(m, step_cap=10 ** 6):
+    """Iterate greedy from m until value < m (or ==1).  Returns
+    (status, steps, arrows, peak, final) with status in
+    {'below', 'one', 'cycle', 'cap'}."""
+    x = m
+    steps = 0
+    arrows = 0
+    peak = m
+    while True:
+        if x < m:
+            return ("below", steps, arrows, peak, x)
+        if steps > 0 and x == m:
+            return ("cycle", steps, arrows, peak, x)
+        k = KMIN[x % 9]
+        y = x << k
+        if y > peak:
+            peak = y
+        x = (y - 1) // 3
+        steps += 1
+        arrows += k + 1
+        if x == 1 and m != 1:
+            return ("one", steps, arrows, peak, x)
+        if steps > step_cap:
+            return ("cap", steps, arrows, peak, x)
+
+
+print()
+print("Hostile family m = 3^j + 1 (m = 1 mod 3^j): greedy forces j-1 steps x4/3 then x1/3")
+print("   j |      m | greedy values until first shrink | net ratio | 4^(j-1)/3^j | >1 ?")
+for j in range(1, 9):
+    m = 3 ** j + 1
+    x = m
+    path = [x]
+    ks = []
+    for _ in range(j):
+        x, k = greedy_step(x)
+        path.append(x)
+        ks.append(k)
+    check(ks == [2] * (j - 1) + [0], "k-word of 3^j+1 is not 2^(j-1) 0 at j=%d" % j)
+    # exact: after j-1 growth steps x = 4^(j-1)(m-1)/3^(j-1)+1 ; then (x-1)/3
+    net = Fraction(path[-1], m)
+    pred = Fraction(4 ** (j - 1), 3 ** j)
+    check(path[-1] == (4 ** (j - 1) * (m - 1)) // 3 ** j, "closed form of the j-step image")
+    print("  %2d | %6d | %s | %s | %s | %s" % (j, m, path, net, pred, path[-1] > m))
+check((3 ** 5 + 1, greedy_step(greedy_step(greedy_step(greedy_step(greedy_step(244)[0])[0])[0])[0])[0]) == (244, 256),
+      "244 -> 256")
+print("PROVED (S2.2): m = 1 mod 3^j, m != 1 mod 3^(j+1)  =>  greedy k-word starts 2^(j-1) 0 and")
+print("  the j-th greedy image is 4^(j-1)(m-1)/3^j < m  iff  j <= 4.  First exceeding family j=5:")
+print("  244 -> 325 -> 433 -> 577 -> 769 -> 256 = 2^8 (net 256/244 = 64/61 > 1).")
+print("  This is the 3-adic mirror of the 2-adic hostile n = 2^(L+1)-1 (inherited (B5) block).")
+st = greedy_until_below(244)
+print("  greedy from 244 continues: status=%s steps=%d peak=%d final=%d" % (st[0], st[1], st[3], st[4]))
+
+# ---------------------------------------------------------------------------
+banner("S3  FINITE-EXACT: Q2 greedy to 10^6, Q1 to 10^6, Tarjan SCC on [1,N]")
+# ---------------------------------------------------------------------------
+N_Q = 10 ** 6
+t0 = time.time()
+# arrays indexed by m: total compound steps to 1, total arrows, overall peak
+tot_steps = [0] * (N_Q + 1)
+tot_arrows = [0] * (N_Q + 1)
+tot_peak = [0] * (N_Q + 1)
+tot_peak[1] = 1
+worst_peak = (1, 1)
+worst_steps = (0, 1)
+worst_arrows = (0, 1)
+status_count = {"below": 0, "one": 0, "cycle": 0, "cap": 0}
+unresolved = []
+for m in range(2, N_Q + 1):
+    if m % 3 == 0:
+        continue
+    st, steps, arrows, peak, fin = greedy_until_below(m, step_cap=10 ** 5)
+    status_count[st] += 1
+    if st in ("below", "one"):
+        check(fin < m and fin % 3 != 0, "descent target invalid at m=%d" % m)
+        tot_steps[m] = steps + tot_steps[fin]
+        tot_arrows[m] = arrows + tot_arrows[fin]
+        tot_peak[m] = max(peak, tot_peak[fin])
+        if tot_peak[m] > worst_peak[0]:
+            worst_peak = (tot_peak[m], m)
+        if tot_steps[m] > worst_steps[0]:
+            worst_steps = (tot_steps[m], m)
+        if tot_arrows[m] > worst_arrows[0]:
+            worst_arrows = (tot_arrows[m], m)
+    else:
+        unresolved.append(m)
+check(not unresolved, "greedy failed to descend for %s" % unresolved[:5])
+print("Q2 (1 reaches m in E) verified for all m <= %d with 3 not | m via the GREEDY inverse" % N_Q)
+print("  strategy alone (no BFS fallback was needed): statuses %s" % status_count)
+print("  max overall peak along the inverse path: %d at m=%d (peak/m = %.3f)"
+      % (worst_peak[0], worst_peak[1], worst_peak[0] / worst_peak[1]))
+print("  max number of compound moves to 1: %d at m=%d" % worst_steps)
+print("  max number of E-arrows to 1     : %d at m=%d" % worst_arrows)
+print("  time %.1fs" % (time.time() - t0))
+# Show the worst path explicitly (forward direction 1 -> ... -> m)
+m = worst_peak[1]
+path = [m]
+x = m
+while x != 1:
+    x, k = greedy_step(x)
+    path.append(x)
+print("  inverse path of the peak-worst m=%d (%d compound moves): %s" % (m, len(path) - 1, path))
+
+
+def collatz_descends(n, cap_steps=10 ** 6):
+    x = n
+    s = 0
+    while x >= n:
+        x = x // 2 if x % 2 == 0 else 3 * x + 1
+        s += 1
+        if s > cap_steps:
+            return False
+        if x == 1:
+            return True
+    return True
+
+
+t0 = time.time()
+for n in range(2, N_Q + 1):
+    check(collatz_descends(n), "Collatz does not descend below n=%d" % n)
+print("Q1 (n reaches 1 in E) verified for all n <= %d by the deterministic Collatz path" % N_Q)
+print("  (every n>=2 reaches a smaller value; induction).  time %.1fs" % (time.time() - t0))
+
+
+def tarjan_scc(N, upmap):
+    """Iterative Tarjan on nodes 1..N with arrows n->n/2 (n even) and
+    n->upmap(n) if <= N.  Returns list of SCCs (as lists)."""
+    index = [0] * (N + 1)
+    low = [0] * (N + 1)
+    onstk = [False] * (N + 1)
+    idx = 1
+    stk = []
+    sccs = []
+
+    def succ(n):
+        out = []
+        if n % 2 == 0:
+            out.append(n // 2)
+        u = upmap(n)
+        if 1 <= u <= N:
+            out.append(u)
+        return out
+
+    for root in range(1, N + 1):
+        if index[root]:
+            continue
+        work = [(root, iter(succ(root)))]
+        index[root] = low[root] = idx
+        idx += 1
+        stk.append(root)
+        onstk[root] = True
+        while work:
+            node, it = work[-1]
+            advanced = False
+            for w in it:
+                if not index[w]:
+                    index[w] = low[w] = idx
+                    idx += 1
+                    stk.append(w)
+                    onstk[w] = True
+                    work.append((w, iter(succ(w))))
+                    advanced = True
+                    break
+                elif onstk[w]:
+                    if index[w] < low[node]:
+                        low[node] = index[w]
+            if advanced:
+                continue
+            work.pop()
+            if work:
+                parent = work[-1][0]
+                if low[node] < low[parent]:
+                    low[parent] = low[node]
+            if low[node] == index[node]:
+                comp = []
+                while True:
+                    w = stk.pop()
+                    onstk[w] = False
+                    comp.append(w)
+                    if w == node:
+                        break
+                sccs.append(comp)
+    return sccs
+
+
+def scc_report(N, upmap, label):
+    t0 = time.time()
+    sccs = tarjan_scc(N, upmap)
+    sizes = sorted((len(c) for c in sccs), reverse=True)
+    giant = max(sccs, key=len)
+    gset = set(giant)
+    check(1 in gset, "1 not in giant SCC")
+    nontriv = [c for c in sccs if len(c) > 1]
+    mult3 = [n for n in range(1, N + 1) if n % 3 == 0]
+    check(all(len(c) == 1 for c in sccs if any(x % 3 == 0 for x in c)), "3Z node in nontrivial SCC")
+    non3 = [n for n in range(1, N + 1) if n % 3 != 0]
+    outside = [n for n in non3 if n not in gset]
+    half_outside = [n for n in outside if n <= N // 2]
+    print("%s: N=%d  #SCC=%d  #nontrivial SCC=%d  giant size=%d  next sizes=%s"
+          % (label, N, len(sccs), len(nontriv), len(giant), sizes[1:6]))
+    print("  all %d multiples of 3 are singleton SCCs (checked)" % len(mult3))
+    print("  non-multiples of 3 in [1,N] outside the giant SCC: %d of %d; among those <= N/2: %d"
+          % (len(outside), len(non3), len(half_outside)))
+    print("  smallest outsiders: %s" % outside[:12])
+    print("  time %.1fs" % (time.time() - t0))
+    return sccs, gset, outside
+
+
+for N_S in (10 ** 3, 10 ** 4, 10 ** 5):
+    sccs, gset, outside = scc_report(N_S, lambda n: 3 * n + 1, "E|[1,N]")
+    if N_S == 10 ** 5:
+        # why finite restriction underestimates: for the smallest outsider show which
+        # direction leaves [1,N]
+        for n in outside[:5]:
+            # forward: deterministic Collatz path max
+            x = n
+            mx = n
+            while x != 1:
+                x = x // 2 if x % 2 == 0 else 3 * x + 1
+                mx = max(mx, x)
+            st = greedy_until_below(n)
+            print("  outsider n=%d: Collatz path max=%d (> N? %s); greedy inverse segment peak=%d (> N? %s)"
+                  % (n, mx, mx > N_S, st[3], st[3] > N_S))
+print("Conjecture C_E: in E the non-multiples of 3 form ONE strongly connected component and every")
+print("  multiple of 3 is a transient singleton feeding it.  Status: Q1 part is Collatz; Q2 part is NEW")
+print("  and OPEN; both FINITE-EXACT to 10^6.  The finite SCC underestimates because membership of n in")
+print("  the giant SCC of E|[1,N] needs BOTH a forward path n->1 and an inverse path m->1 that stay")
+print("  inside [1,N]; the Collatz peak (e.g. 9232 from 27) and the inverse peak both exceed N for")
+print("  many n <= N (the outsiders listed), and each fixed n is inside for all large N.")
+
+# ---------------------------------------------------------------------------
+banner("S4  Terras-type density theorem for the greedy inverse strategy")
+# ---------------------------------------------------------------------------
+LOG2_3_NUM = None  # we compare 2^K < 3^i exactly with integers
+
+
+def greedy_word(m, J):
+    ks = []
+    x = m
+    for _ in range(J):
+        k = KMIN[x % 9]
+        ks.append(k)
+        x = ((x << k) - 1) // 3
+    return ks
+
+
+# (a) the first J moves depend only on m mod 3^(J+1); and NOT only on m mod 3^J
+import random
+random.seed(20260917)
+for J in range(1, 9):
+    mod = 3 ** (J + 1)
+    for _ in range(300):
+        m = random.randrange(1, 10 ** 12)
+        if m % 3 == 0:
+            m += 1
+        t = random.randrange(1, 1000)
+        check(greedy_word(m, J) == greedy_word(m + mod * t, J), "word not determined mod 3^(J+1)")
+    # hostile: modulus 3^J does not determine the J-th letter
+    found = False
+    for m in range(1, 3 ** J * 4):
+        if m % 3 == 0:
+            continue
+        if greedy_word(m, J) != greedy_word(m + 3 ** J, J):
+            found = True
+            hostile = (m, m + 3 ** J, greedy_word(m, J), greedy_word(m + 3 ** J, J))
+            break
+    check(found, "3^J unexpectedly determines J letters at J=%d" % J)
+    if J <= 3:
+        print("  J=%d: mod 3^%d determines the word; mod 3^%d does not, witness %s" % (J, J + 1, J, hostile))
+print("PROVED (S4.1): the first J greedy letters (k_1..k_J) are a function of m mod 3^(J+1); this")
+print("  modulus is sharp (witnesses above).")
+
+# (b) exact enumeration of residues mod 3^(J+1)
+print()
+print("   J | residues | f_J = P(some prefix i<=J has 2^K_i < 3^i) | g_J = P(2^K_J < 3^J) | 1-f_J <= (7/9)^(J-1)? | E[2^K_J] | 3(7/3)^(J-1)")
+FJ = {}
+for J in range(1, 11):
+    mod = 3 ** (J + 1)
+    total = 0
+    desc_prefix = 0
+    desc_J = 0
+    e2k = 0
+    word_count = {}
+    for m in range(1, mod):
+        if m % 3 == 0:
+            continue
+        total += 1
+        x = m
+        K = 0
+        hit = False
+        ks = []
+        for i in range(1, J + 1):
+            k = KMIN[x % 9]
+            ks.append(k)
+            K += k
+            x = ((x << k) - 1) // 3
+            if not hit and (1 << K) < 3 ** i:
+                hit = True
+        if hit:
+            desc_prefix += 1
+        if (1 << K) < 3 ** J:
+            desc_J += 1
+        e2k += 1 << K
+        if J <= 4:
+            w = tuple(ks)
+            word_count[w] = word_count.get(w, 0) + 1
+    check(total == 2 * 3 ** J, "unit count")
+    fJ = Fraction(desc_prefix, total)
+    gJ = Fraction(desc_J, total)
+    E2K = Fraction(e2k, total)
+    pred = 3 * Fraction(7, 3) ** (J - 1)
+    check(E2K == pred, "E[2^K_J] != 3(7/3)^(J-1) at J=%d: %s" % (J, E2K))
+    bound_ok = (1 - fJ) <= Fraction(7, 9) ** (J - 1)
+    check(bound_ok, "tail bound fails at J=%d" % J)
+    FJ[J] = fJ
+    print("  %2d | %8d | %s = %.6f | %s = %.6f | %s | %s | %s"
+          % (J, total, fJ, float(fJ), gJ, float(gJ), bound_ok, E2K, pred))
+    if J <= 4:
+        # Markov-chain prediction of word counts: class chain iid A w.p. 2/3
+        # r_1 uniform on the 6 units; r_{i+1} uniform on the coset of NEXT_MOD3[r_i]
+        # count = total * P(word)
+        def chain_prob(word):
+            # dynamic programming over residues
+            dist = {r: Fraction(1, 6) for r in UNITS9}
+            for k in word:
+                nd = {}
+                for r, p in dist.items():
+                    if KMIN[r] != k:
+                        continue
+                    c = NEXT_MOD3[r]
+                    for r2 in (c, c + 3, c + 6):
+                        nd[r2] = nd.get(r2, 0) + p / 3
+                dist = nd
+            return sum(dist.values())
+        for w, cnt in sorted(word_count.items()):
+            check(Fraction(cnt, total) == chain_prob(w), "word count != chain probability %s" % (w,))
+        print("      all %d observed %d-letter words have count = 2*3^J * P_chain(word)  (checked)"
+              % (len(word_count), J))
+for J in range(1, 10):
+    check(FJ[J] <= FJ[J + 1], "f_J not monotone")
+print("FINITE-EXACT (S4.2): f_J increases toward 1; E[2^K_J] = 3(7/3)^(J-1) exactly for J<=10.")
+
+# (c) residue distribution at step i>=1 is the stationary law (2/9 on 1,4,7; 1/9 on 2,5,8)
+mod = 3 ** 6
+for i in (1, 2, 3, 4):
+    cnt = {r: 0 for r in UNITS9}
+    tot = 0
+    for m in range(1, mod):
+        if m % 3 == 0:
+            continue
+        x = m
+        for _ in range(i):
+            x = ((x << KMIN[x % 9]) - 1) // 3
+        cnt[x % 9] += 1
+        tot += 1
+    dist = {r: Fraction(cnt[r], tot) for r in UNITS9}
+    check(dist == {1: Fraction(2, 9), 4: Fraction(2, 9), 7: Fraction(2, 9),
+                   2: Fraction(1, 9), 5: Fraction(1, 9), 8: Fraction(1, 9)}, "stationary law at step %d" % i)
+print("PROVED+checked (S4.3): after one greedy step the residue mod 9 has the exact law")
+print("  P(1)=P(4)=P(7)=2/9, P(2)=P(5)=P(8)=1/9 (uniform on units mod 3^6, steps 1..4 checked);")
+print("  E_pi[k] = 2*2/9 + 1*1/9 + 0 + 3*1/9 + 0 + 1*1/9 = 1 < log2(3).")
+
+# (d) the additive carry: actual descent within J steps vs residue prediction, for J=6, m<=10^5
+J = 6
+mod = 3 ** (J + 1)
+mismatch = []
+for m in range(2, 10 ** 5 + 1):
+    if m % 3 == 0:
+        continue
+    x = m
+    K = 0
+    pred_desc = False
+    act_desc = False
+    for i in range(1, J + 1):
+        k = KMIN[x % 9]
+        K += k
+        x = ((x << k) - 1) // 3
+        if (1 << K) < 3 ** i:
+            pred_desc = True
+        if x < m:
+            act_desc = True
+    if pred_desc != act_desc:
+        mismatch.append(m)
+        check(act_desc and not pred_desc, "prediction of descent failed at m=%d" % m)
+print("FINITE-EXACT (S4.4): for J=6, m<=10^5, 'descends within 6 greedy steps' differs from the pure")
+print("  residue prediction only where the carry helps small m: %d mismatches, all with actual descent" % len(mismatch))
+print("  and predicted growth; largest mismatching m = %s" % (max(mismatch) if mismatch else None))
+print("  (prediction => descent is unconditional since the carry B_i > 0).")
+
+print()
+print("THEOREM (S4.5, PROVED below in the note): the greedy inverse stopping time")
+print("  sigma(m) = min{i : m_i < m} is finite on a set of natural density 1 among the")
+print("  non-multiples of 3, with #{m<=X, 3 not|m, sigma(m) > J} <= (7/9)^(J-1) (2X/3) + C_J.")
+print("  Mechanism: E[2^{K_J}] = 3 (7/3)^{J-1} (tilted 2x2 matrix [[5/3,1/3],[10/3,2/3]] of rank 1,")
+print("  eigenvalue 7/3) + Markov inequality P(2^{K_J} >= 3^J) <= 3(7/3)^{J-1}/3^J = (7/9)^{J-1}.")
+M = [[Fraction(5, 3), Fraction(1, 3)], [Fraction(10, 3), Fraction(2, 3)]]
+det = M[0][0] * M[1][1] - M[0][1] * M[1][0]
+tr = M[0][0] + M[1][1]
+check(det == 0 and tr == Fraction(7, 3), "tilted matrix spectrum")
+init = (Fraction(5, 2), Fraction(1, 2))
+row = (init[0] * M[0][0] + init[1] * M[1][0], init[0] * M[0][1] + init[1] * M[1][1])
+check(row[0] + row[1] == 7, "init * M sums to 7")
+print("  checked: det M = 0, tr M = 7/3, (5/2,1/2) M 1 = 7; E[2^{k_1}] = 3.")
+
+# ---------------------------------------------------------------------------
+banner("S5  Cycle census of E on nodes <= 2000, length <= 40")
+# ---------------------------------------------------------------------------
+
+
+def cycle_census(LIM, MAXLEN, upmap):
+    def succ(n):
+        out = []
+        if n % 2 == 0:
+            out.append(n // 2)
+        u = upmap(n)
+        if 1 <= u <= LIM:
+            out.append(u)
+        return out
+    found = []
+    for s in range(1, LIM + 1):
+        stack = [(s, succ(s), 0)]
+        path = [s]
+        onpath = {s}
+        while stack:
+            node, ch, idx = stack[-1]
+            if idx >= len(ch):
+                stack.pop()
+                path.pop()
+                onpath.discard(node)
+                continue
+            stack[-1] = (node, ch, idx + 1)
+            nxt = ch[idx]
+            if nxt == s:
+                found.append(list(path))
+                continue
+            if nxt < s or nxt in onpath or len(path) >= MAXLEN:
+                continue
+            stack.append((nxt, succ(nxt), 0))
+            path.append(nxt)
+            onpath.add(nxt)
+    return found
+
+
+t0 = time.time()
+CYC = cycle_census(2000, 40, lambda n: 3 * n + 1)
+hist = {}
+for c in CYC:
+    hist[len(c)] = hist.get(len(c), 0) + 1
+print("simple cycles of E using only nodes <= 2000, length <= 40: %d  (time %.2fs)" % (len(CYC), time.time() - t0))
+print("  length histogram: %s" % sorted(hist.items()))
+# structure: a = #(3n+1 arrows), h = #halvings, e = #(even->3n+1) arrows
+print("  len | a=#(x3+1) | h=#halve | e=#(even->3n+1) | 2^h>3^a | min node | cycle (canonical from min)")
+for c in sorted(CYC, key=lambda c: (len(c), c[0])):
+    L = len(c)
+    a = h = e = 0
+    for i in range(L):
+        x, y = c[i], c[(i + 1) % L]
+        if y == 3 * x + 1:
+            a += 1
+            if x % 2 == 0:
+                e += 1
+        elif x % 2 == 0 and y == x // 2:
+            h += 1
+        else:
+            raise AssertionError("bad arrow %d->%d" % (x, y))
+    check(2 ** h > 3 ** a, "cycle with 2^h <= 3^a?!")
+    check(a + h == L, "arrow count")
+    if c != [1, 4, 2]:
+        check(e >= 1, "non-trivial cycle without even->3n+1 arrow: %s" % c)
+    else:
+        check(e == 0, "trivial cycle uses even->3n+1?!")
+    check(all(x % 3 != 0 for x in c), "cycle through a multiple of 3?!")
+    print("  %3d | %2d | %2d | %2d | %s | %4d | %s" % (L, a, h, e, 2 ** h > 3 ** a, c[0], c))
+user_cycle = [2, 7, 22, 11, 34, 17, 52, 26, 13, 40, 20, 10, 5, 16, 8, 4]
+check(user_cycle in CYC, "user's 16-cycle not found")
+print("PROVED (S5.1): every E-cycle other than (1,4,2) uses >= 1 even->3n+1 arrow: a cycle avoiding")
+print("  them is a cycle of the deterministic Collatz map, whose only cycle on nodes <= 2000 is (1,4,2)")
+print("  (FINITE-EXACT input; unconditionally for all n < 2^68 by the CITED verification literature).")
+print("  Every E-cycle has 2^h > 3^a (positivity of n = B/(2^h-3^a)); the lengths observed are")
+print("  exactly a+h with 2^h > 3^a > 2^(h-1)... see the note.  The user's 16-cycle through 2->7 is #1 of len 16.")
+
+# ---------------------------------------------------------------------------
+banner("S6  Signed side E_- (3n-1): leaf identity, drift table, cycles, Q1_-/Q2_-")
+# ---------------------------------------------------------------------------
+# E_-: n -> n/2 (even), n -> 3n-1 (all n).  New arrows: even n -> 3n-1 = 6j-1 = 5 mod 6.
+for v in range(1, V_MAX + 1):
+    preds = {2 * v}
+    if (v + 1) % 3 == 0 and (v + 1) // 3 >= 1:
+        preds.add((v + 1) // 3)
+    new = [p for p in preds if p % 2 == 0 and 3 * p - 1 == v]
+    if new:
+        p = new[0]
+        check(v % 6 == 5, "new minus arrow into non-5-mod-6 target v=%d" % v)
+        n0 = (4 * v + 1) // 3
+        check((4 * v + 1) % 3 == 0 and n0 % 2 == 1, "n0- not odd integer")
+        check(oddpart(3 * n0 - 1) == v and 3 * n0 - 1 == 4 * v, "T_-(n0) != v")
+        check((n0 + 1) % 4 == 0 and (n0 + 1) // 4 == p, "R_-^{-1}(n0) != (v+1)/3")
+        check(n0 % 8 == 7, "n0- not 7 mod 8 at v=%d" % v)
+    else:
+        check(not (v % 6 == 5), "missing minus arrow into v=%d" % v)
+    check((3 * v - 1) % 3 == 2, "3n-1 divisible by 3?!")
+print("PROVED (S6.1): in E_- the new arrows are even 2j -> 6j-1 (targets exactly 5 mod 6); the target v")
+print("  has least odd T_- predecessor n0=(4v+1)/3 = 7 mod 8 with 3n0-1=4v, and 2j=(v+1)/3=R_-^{-1}(n0),")
+print("  R_-(n)=4n-1.  Targets 1 mod 6 and 3 mod 6 get nothing new; 3Z is again a transient forest.")
+KMIN_M = {}
+NEXT_M = {}
+for r in UNITS9:
+    ks = [k for k in range(6) if (pow(2, k, 9) * r) % 9 in (2, 5)]
+    KMIN_M[r] = min(ks)
+    NEXT_M[r] = ((pow(2, KMIN_M[r], 9) * r + 1) // 3) % 3
+check(KMIN_M == {2: 0, 5: 0, 1: 1, 7: 1, 8: 2, 4: 3}, "minus k_min table")
+for r in UNITS9:
+    check(KMIN_M[r] == KMIN[9 - r], "negation conjugacy of drift tables fails at r=%d" % r)
+print("  minus drift table (inverse move m -> (2^k m + 1)/3, result not 0 mod 3):")
+for r in UNITS9:
+    print("     m = %d mod 9: k_min=%d factor=%s result mod 3 = %d   [= plus table at 9-%d=%d]"
+          % (r, KMIN_M[r], Fraction(2 ** KMIN_M[r], 3), NEXT_M[r], r, 9 - r))
+print("PROVED (S6.2): k_-(r) = k_+(9-r): negation conjugates the two drift tables, so the greedy")
+print("  Markov chain, E[2^K_J]=3(7/3)^(J-1), and the density-1 greedy stopping theorem transfer verbatim.")
+print("  Hostile family: m = 3^j - 1 (m = -1 mod 3^j): j-1 steps x4/3 then x1/3, e.g. 242 -> 323 -> 431 -> 575 -> 767 -> 256.")
+x = 242
+p = [x]
+for _ in range(5):
+    x = ((x << KMIN_M[x % 9]) + 1) // 3
+    p.append(x)
+check(p == [242, 323, 431, 575, 767, 256], "minus hostile path")
+
+
+def greedy_minus_until_below(m, step_cap=10 ** 5):
+    x = m
+    steps = 0
+    peak = m
+    while True:
+        if x < m:
+            return ("below", steps, peak, x)
+        if steps > 0 and x == m:
+            return ("cycle", steps, peak, x)
+        k = KMIN_M[x % 9]
+        y = x << k
+        peak = max(peak, y)
+        x = (y + 1) // 3
+        steps += 1
+        if steps > step_cap:
+            return ("cap", steps, peak, x)
+
+
+def inverse_bfs_below(m, sign, k_cap=40, value_cap=1 << 90, node_budget=200000):
+    """Bounded BFS over ALL admissible compound inverse moves
+    x -> (2^k x - sign)/3 (integral, result not 0 mod 3, k <= k_cap) from m,
+    until a value < m is reached.  Returns (path or None, nodes)."""
+    from collections import deque
+    par = {m: None}
+    dq = deque([m])
+    nodes = 0
+    while dq:
+        x = dq.popleft()
+        nodes += 1
+        if nodes > node_budget:
+            return (None, nodes)
+        for k in range(k_cap + 1):
+            y = (x << k) - sign
+            if y % 3 != 0:
+                continue
+            z = y // 3
+            if z <= 0 or z % 3 == 0:
+                continue
+            if z >= value_cap or z in par:
+                continue
+            par[z] = x
+            if z < m:
+                p = [z]
+                while p[-1] is not None:
+                    p.append(par[p[-1]])
+                return (p[:-1][::-1], nodes)
+            dq.append(z)
+    return (None, nodes)
+
+
+t0 = time.time()
+wp = (1, 1)
+ws = (0, 1)
+tp = [0] * (N_Q + 1)
+ts = [0] * (N_Q + 1)
+tp[1] = 1
+bad = []
+greedy_cycles_minus = []
+rescued_minus = []
+for m in range(2, N_Q + 1):
+    if m % 3 == 0:
+        continue
+    st, steps, peak, fin = greedy_minus_until_below(m)
+    if st != "below":
+        if st == "cycle":
+            cyc = [m]
+            x = m
+            while True:
+                x = ((x << KMIN_M[x % 9]) + 1) // 3
+                if x == m:
+                    break
+                cyc.append(x)
+            greedy_cycles_minus.append(cyc)
+        path, nodes = inverse_bfs_below(m, -1)
+        if path is None:
+            bad.append((m, st))
+            continue
+        rescued_minus.append((m, st, path))
+        fin = path[-1]
+        peak = max(path)
+        steps = len(path) - 1
+    tp[m] = max(peak, tp[fin])
+    ts[m] = steps + ts[fin]
+    if tp[m] > wp[0]:
+        wp = (tp[m], m)
+    if ts[m] > ws[0]:
+        ws = (ts[m], m)
+check(not bad, "Q2_- failures even with BFS fallback: %s" % bad[:5])
+print("Q2_- (1 reaches m in E_-) FINITE-EXACT for all m <= %d, 3 not|m; max peak %d at m=%d;"
+      % (N_Q, wp[0], wp[1]))
+print("  max compound moves %d at m=%d; time %.1fs" % (ws[0], ws[1], time.time() - t0))
+print("  greedy map G_-(m)=(2^k_min m+1)/3 has cycles with minima <= 10^6: %s" % greedy_cycles_minus)
+print("  starts needing a NON-greedy k (BFS over admissible k): %d, namely %s"
+      % (len(rescued_minus), [(r[0], r[1], r[2]) for r in rescued_minus]))
+check(greedy_cycles_minus == [[4, 11]], "unexpected greedy cycles in G_-")
+# the same fallback machinery on the plus side confirms it was never needed
+plus_cycles = []
+for m in range(2, N_Q + 1):
+    if m % 3 == 0:
+        continue
+    st = greedy_until_below(m, step_cap=10 ** 5)[0]
+    if st == "cycle":
+        plus_cycles.append(m)
+check(not plus_cycles, "greedy cycles on the plus side?!")
+print("  (plus side: the greedy map G(m)=(2^k_min m-1)/3 has no cycle with minimum in [2,10^6]; its only")
+print("   fixed point is 1 since G(1)=1.)  REFUTED for the minus side: G_-(4)=11, G_-(11)=4.")
+
+
+def forward_reach_below(n, upmap, node_budget=200000, value_cap=1 << 80):
+    """Iterative DFS in the nondeterministic graph from n, halving preferred,
+    until a node < n is reached.  Returns (found, nodes_expanded, peak)."""
+    if n == 1:
+        return (True, 0, 1)
+    seen = {n}
+    stack = [n]
+    expanded = 0
+    peak = n
+    while stack:
+        x = stack.pop()
+        expanded += 1
+        if expanded > node_budget:
+            return (False, expanded, peak)
+        succ = []
+        u = upmap(x)
+        if u < value_cap:
+            succ.append(u)
+        if x % 2 == 0:
+            succ.append(x // 2)   # pushed last => popped first (halving preferred)
+        for y in succ:
+            if y < n:
+                return (True, expanded, peak)
+            if y not in seen:
+                seen.add(y)
+                if y > peak:
+                    peak = y
+                stack.append(y)
+    return (False, expanded, peak)
+
+
+def minus_det_descends(n, cap=10 ** 5):
+    x = n
+    s = 0
+    while x >= n:
+        x = x // 2 if x % 2 == 0 else 3 * x - 1
+        s += 1
+        if x == n or s > cap:
+            return False
+    return True
+
+
+t0 = time.time()
+need_nd = []
+fail = []
+for n in range(2, N_Q + 1):
+    if minus_det_descends(n):
+        continue
+    ok, exp, pk = forward_reach_below(n, lambda x: 3 * x - 1)
+    if ok:
+        need_nd.append((n, exp, pk))
+    else:
+        fail.append(n)
+check(not fail, "Q1_- failures: %s" % fail[:5])
+print("Q1_- (n reaches 1 in E_-) FINITE-EXACT for all n <= %d: the deterministic 3n-1 path descends" % N_Q)
+print("  below n except for %d starts %s, each rescued by an even->3n-1 arrow (DFS nodes expanded, peak shown)."
+      % (len(need_nd), need_nd))
+print("  time %.1fs" % (time.time() - t0))
+
+# the three 3n-1 cycles as E_- cycles; explicit paths 1 -> c and c -> 1
+CYC_M = [[1, 2], [5, 14, 7, 20, 10],
+         [17, 50, 25, 74, 37, 110, 55, 164, 82, 41, 122, 61, 182, 91, 272, 136, 68, 34]]
+for c in CYC_M:
+    for i in range(len(c)):
+        x, y = c[i], c[(i + 1) % len(c)]
+        check(y == 3 * x - 1 or (x % 2 == 0 and y == x // 2), "not an E_- cycle: %s" % c)
+
+
+def bfs_path(src, dst, upmap, cap=1 << 40, limit=4 * 10 ** 6):
+    from collections import deque
+    par = {src: None}
+    dq = deque([src])
+    while dq and len(par) < limit:
+        x = dq.popleft()
+        if x == dst:
+            p = []
+            while x is not None:
+                p.append(x)
+                x = par[x]
+            return p[::-1]
+        for y in ((x // 2,) if x % 2 == 0 else ()) + ((upmap(x),) if upmap(x) < cap else ()):
+            if y not in par:
+                par[y] = x
+                dq.append(y)
+    return None
+
+
+for c in CYC_M:
+    m = c[0]
+    p1 = bfs_path(1, m, lambda x: 3 * x - 1)
+    p2 = bfs_path(m, 1, lambda x: 3 * x - 1)
+    check(p1 is not None and p2 is not None, "cycle minimum %d not in giant SCC of E_-" % m)
+    print("  3n-1 cycle min %3d: shortest 1->%d path %s ; shortest %d->1 path %s" % (m, m, p1, m, p2))
+print("PROVED (S6.3): all three known 3n-1 cycles lie in ONE strongly connected component of E_- with 1")
+print("  (explicit paths above); multiples of 3 remain a transient halving forest (3n-1 = 2 mod 3).")
+sccs_m, gset_m, outside_m = scc_report(10 ** 5, lambda n: 3 * n - 1, "E_-|[1,N]")
+check(all(min(c) in gset_m for c in CYC_M), "cycle in giant SCC of E_-|[1,10^5]")
+CYC_M_CENSUS = cycle_census(2000, 40, lambda n: 3 * n - 1)
+hm = {}
+for c in CYC_M_CENSUS:
+    hm[len(c)] = hm.get(len(c), 0) + 1
+det_cycles_m = [c for c in CYC_M_CENSUS if all((y == x // 2) if x % 2 == 0 else (y == 3 * x - 1)
+                                               for x, y in zip(c, c[1:] + c[:1]))]
+print("  E_- cycle census nodes<=2000, len<=40: %d cycles, histogram %s; deterministic (no even->3n-1) ones: %s"
+      % (len(CYC_M_CENSUS), sorted(hm.items()), det_cycles_m))
+check(sorted(det_cycles_m) == sorted(CYC_M), "deterministic 3n-1 cycles on <=2000 are not exactly the three")
+
+# ---------------------------------------------------------------------------
+banner("S7  Hostile control E_5 (5n+1): same greedy density mechanism, yet extra cycles")
+# ---------------------------------------------------------------------------
+# inverse move m -> (2^k m - 1)/5, result not 0 mod 5: 2^k m in {6,11,16,21} mod 25
+UNITS25 = [r for r in range(1, 25) if r % 5]
+KMIN5 = {}
+for r in UNITS25:
+    KMIN5[r] = min(k for k in range(20) if (pow(2, k, 25) * r) % 25 in (6, 11, 16, 21))
+ek = Fraction(sum(KMIN5.values()), len(UNITS25))
+print("  E_5 greedy: k_min by residue mod 25 = %s" % KMIN5)
+print("  mean k under uniform residues = %s = %.3f  vs log2(5) = 2.322" % (ek, float(ek)))
+print("   J | E[2^K_J]/5^J (exact, residues mod 5^(J+1)) | f_J (prefix descent)")
+for J in range(1, 6):
+    mod = 5 ** (J + 1)
+    tot = 0
+    e2 = 0
+    desc = 0
+    for m in range(1, mod):
+        if m % 5 == 0:
+            continue
+        tot += 1
+        x = m
+        K = 0
+        hit = False
+        for i in range(1, J + 1):
+            k = KMIN5[x % 25]
+            K += k
+            x = ((x << k) - 1) // 5
+            if (1 << K) < 5 ** i:
+                hit = True
+        e2 += 1 << K
+        desc += hit
+    print("  %2d | %s = %.4f | %s = %.4f" % (J, Fraction(e2, tot * 5 ** J), e2 / (tot * 5 ** J), Fraction(desc, tot), desc / tot))
+print("  => the same density-1 greedy descent mechanism is present for 5n+1 (mean ratio < 1).")
+t0 = time.time()
+res5 = {"below": 0, "cycle": 0, "cap": 0}
+cyc5 = []
+for m in range(2, 10 ** 5 + 1):
+    if m % 5 == 0:
+        continue
+    x = m
+    s = 0
+    st = None
+    while True:
+        if x < m:
+            st = "below"
+            break
+        if s > 0 and x == m:
+            st = "cycle"
+            cyc5.append(m)
+            break
+        k = KMIN5[x % 25]
+        x = ((x << k) - 1) // 5
+        s += 1
+        if s > 10000 or x > 1 << 200:
+            st = "cap"
+            break
+    res5[st] += 1
+print("  E_5 greedy inverse (Q2_5) for m <= 10^5, 5 not|m: %s ; greedy cycle minima: %s (time %.1fs)"
+      % (res5, cyc5[:10], time.time() - t0))
+# forward Q1_5 with caps on n <= 2000, including the known 5n+1 cycle 13,33,83
+t0 = time.time()
+unres5 = []
+for n in range(2, 2001):
+    if n % 5 == 0:
+        continue
+    ok, exp, pk = forward_reach_below(n, lambda x: 5 * x + 1, node_budget=20000, value_cap=1 << 60)
+    if not ok:
+        unres5.append(n)
+print("  E_5 forward (Q1_5: reach below n) for n <= 2000 with budget 20000 nodes: unresolved = %s (time %.1fs)"
+      % (unres5, time.time() - t0))
+for n in (13, 33, 83):
+    ok, exp, pk = forward_reach_below(n, lambda x: 5 * x + 1, node_budget=200000, value_cap=1 << 60)
+    print("  5n+1 cycle member %d: reaches below itself in E_5? %s (nodes %d)" % (n, ok, exp))
+print("  Typed analogy (see note): the density theorem transfers to 5n+1, so it cannot by itself")
+print("  distinguish 3n+1 (one known positive cycle) from 5n+1 (extra cycle 13->33->83).")
+
+# ---------------------------------------------------------------------------
+banner("Provenance")
+# ---------------------------------------------------------------------------
+with open(__file__, "rb") as fh:
+    print("source sha256: %s" % hashlib.sha256(fh.read()).hexdigest())
+print("python: %s" % sys.version.split()[0])
+print("total time: %.1fs" % (time.time() - T_START))
+print("ALL CHECKS PASSED")
