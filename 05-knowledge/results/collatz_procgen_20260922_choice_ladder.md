@@ -274,7 +274,20 @@ in `04-computation/lean/standalone/collatz_procgen_20260922_q2_mod27_descent.lea
 exact-rational search (`collatz_procgen_20260922_q2_uniform_descent_check.py`)
 confirm it independently. With lookahead 6 the worst class still has
 factor `8/9` (`..._q2_worst_factor.c`), so deeper search does not beat this
-table. In the two excluded classes the two-move routes fail. From
+table. **Mirror theorem for the `3n-1` sheet** (same Lean file, also
+kernel-checked with axioms `propext`, `Quot.sound` only):
+`q2_minus_descent_off_26_and_13` covers graph `E_-` (`n->3n-1`, `n->n/2`)
+for `m>4`, `3` not dividing `m`, `m` not `26` or `13 mod 27`. These are
+the negations of `1` and `14`. The hypothesis `m>4` is necessary. At
+`m=4` the route `(8m+4)/9` returns `4` itself, along the `E_-` cycle
+`4->11->32->16->8->4`. Its negation is the plus-sheet cycle
+`-4->-11->-32->-16->-8->-4`, the inherited `G`-cycle `{-4,-11}`
+([g_negatives_joint_carry](collatz_mod6_20260921_g_negatives_joint_carry.md)).
+So the two mirror lemmas differ exactly at a known signed cycle.
+Direct BFS confirms that `1` reaches every `m<=5000` prime to `3` in `E_-`
+(`collatz_procgen_20260922_q2_minus_small.py`).
+
+In the two excluded classes the two-move routes fail. From
 `14 mod 27`, `(8m-1)/3=1 mod 9` and the next `k=0` move gives a multiple
 of `3`. From `1 mod 27`, `(4m-1)/3=1 mod 9` fails in the same way.
 **Consequence: Q2 reduces exactly to the two hostile neighbourhoods

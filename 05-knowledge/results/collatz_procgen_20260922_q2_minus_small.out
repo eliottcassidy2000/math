@@ -1,0 +1,2 @@
+minus sheet: m<=5000, 3!|m, not reached from 1 (cap 1e7): []
+m=2 reached: True m=4 reached: True
