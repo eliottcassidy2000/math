@@ -1,0 +1,149 @@
+# Procedurally generated approaches to Collatz: the choice ladder, the missing no-divergence mechanism, and a relaxed problem that almost closes
+
+**Status: SYNTHESIS of session `collatz-procgen-20260922` (mac-mini,
+2026-09-22). PROVED statements are those proved in the lane notes (hand
+proofs and one core-Lean theorem). FINITE-EXACT statements have stated
+bounds and, where marked, two independent code paths. CITED statements
+come from primary sources read in the barrier-atlas lane. Typology entries
+are modelling judgments. Collatz, E-SCC (Q1 and Q2), HYP-9120--9122 and
+Althöfer's game remain OPEN.**
+
+## 0. What was asked and how it was answered
+
+The request was to generate new approaches to open problems like Collatz
+*procedurally*, test the hypotheses, and look through past work for the
+fringe ideas the repository has brushed, "to see how the missing insights
+have been lurking." Six earlier Collatz waves (`collatz_mod6_*`,
+`arithmetic_braids*`, `collatz_guards_*`, `collatz_blueprint_*`) had
+mostly audited pasted blueprints. The pasted snippet itself had already
+been audited
+([level11_short](level11_short_20260922.md): the `1/15` law is PROVED; the
+gluing and tournament numerology is typed).
+
+This session built two instruments and pointed them at many siblings:
+
+1. **A foundry.** It generates approach cards
+   `problem x sub-target x mechanism x lens` over seven Collatz-type
+   problems. Each mechanism is typed by the controls it is blind to (the
+   `3n-1` sheet, `5n+1` drift, planted defects, rational 2-adic cycles,
+   undecidability) and by whether it needs a thin exceptional set
+   ([foundry](collatz_procgen_20260922_foundry.md)).
+2. **An exceptional-set profiler.** It computes, for a descent game, the
+   residue classes that have no descending certificate, for Collatz, its
+   sheets, `5n+1`, and any relaxation with choice
+   ([choice ladder](collatz_procgen_20260922_choice_ladder.md)).
+
+## 1. Results
+
+**The ladder of freedoms** (FINITE-EXACT counts; one dimension PROVED):
+
+| system | freedom | exceptional set |
+|---|---|---|
+| Collatz `T` (either sheet) | none | dimension `h(log_3 2)=0.9500` (PROVED; not found in print, per the atlas); `1,037,374` classes mod `2^26` |
+| `E_S`, `S={6 mod 8}` | extra `3n+1` only at rising-run entries | `3,238` mod `2^22` (Collatz `93,222`) |
+| greedy fingerprint | 8 of 32 even classes mod 64, led by `54 mod 64` | `893` mod `2^20` (full choice `664`) |
+| graph `E` (Q1 forward) | extra `3n+1` at every even | `908` mod `2^36`; dimension OPEN (0 or about 0.1) |
+| backward `E` (Q2) | reverse moves with choice | `157` mod `3^32` |
+| Applegate--Lagarias semigroup | arbitrary wild multipliers | one class, `-1 mod 2^j` (CITED) |
+| additive choice `3n+b`, `b in B`, `|B|>=2` | choice of sheet | **empty** at `2^22` |
+| `5n+1`, with or without choice | any | positive measure (DRIFT) |
+
+**The relaxed problem E-SCC** (HYP-9120). `E` turns out to be Le--Smith's
+*Loosened Collatz Graph* (arXiv 2109.01180, CITED; they state neither Q1,
+nor Q2, nor strong connectivity).
+
+* Q1 (every `n` reaches `1`) is implied by Collatz, so it holds below
+  `2^71` (CITED).
+* Q2 (`1` reaches every `m` prime to `3`):
+  * **reduced by a Lean-checked mod-27 lemma to the two classes
+    `1, 14 mod 27`.** Every other `m` descends within two reverse moves by
+    a factor of at most `8/9`;
+  * **verified below `2.02*10^13`** by 3-adic certificate threads;
+  * the neighbourhood of `1` is handled by a PROVED escape lemma together
+    with loops through `1` (every depth up to 41);
+  * the neighbourhood of `1/2` costs at least `32/27` to escape (PROVED),
+    and its exits are exactly the Collatz trunk `(4^i-1)/3`.
+* Consequence: Le--Smith's Conjecture 1 (every `n` prime to `3` lies on an
+  `E`-cycle) holds below `2.02*10^13`.
+* Hostile points (PROVED examples, FINITE-EXACT families):
+  * forward: `-1` and `-1-2^i c/3^j`, e.g. `-13/9`, negative, with
+    power-of-3 denominators;
+  * backward: `1`, `1/2` and `1/2+3^j c/2^e`, positive dyadics.
+
+  Each family accumulates at its base point in its own adic metric. They
+  are mirror images under `2<->3` and the sign.
+
+**The typology** (foundry plus atlas):
+
+* The Collatz cycle half has four live mechanism types (Baker-type,
+  carry anti-concentration, functional equations, order patterns).
+* The **no-divergence half has none**, and neither do the `3n-1` sheet or
+  rational periodicity.
+* No published mechanism overcomes SHEET and DRIFT together at unbounded
+  complexity (atlas, 22 primary results).
+* Removing DIMENSION by choice exposes SHEET: Applegate--Lagarias's
+  hostile class and `E`'s hostile rationals sit at the minus sheet's
+  cycles.
+
+**Where the sign enters** (PROVED, elementary). Positive plus-sheet cycles
+contract multiplicatively (`3^L<2^K`), so they are invisible to
+class-level descent certificates and live only at the thresholds
+`B/(2^K-3^L)`. Positive minus-sheet cycles expand (`9/8`, `2187/2048`), so
+their minima are hostile points. Hence the class-level method sees only
+the divergence half of Collatz, and the sign enters exactly as the sign of
+`2^K-3^L`.
+
+**Negative controls.**
+
+* The undirected Collatz game is equivalent to Collatz and does not
+  collapse: max depth `59` and `0.2%` unresolved to `10^6`.
+* The F2[x] analogue has no drift and no sheets, which is why it is
+  provable (atlas).
+
+## 2. Lanes still to integrate (placeholders)
+
+* Sibling dimension ladder: PENDING.
+* Sign-specific order laws: PENDING.
+* Loops through 1 and escapes: PENDING.
+
+## 3. The snippet, dispatched
+
+| pasted claim | verdict | where |
+|---|---|---|
+| root cycle length 3 versus 4 "breaks sheet symmetry" | TRUE as the Catalan unit-gap table: plus `(2,1)`, minus `(1,1),(3,2)`. It is cycle-half content only; class-level data cannot see the sheet because all odd `b` are conjugate | lead reflection 1; choice ladder §5b |
+| extra freedom "matches" loops at `-7/4, -29/16` | SCOPE: shared numerals only | zsigmondy lane |
+| Hecke `b_r`, the 4-block law, density `1/15` | TRUE for the level-11 eigenform. Its exact Collatz echo is that odd `n` with `v_2(3n+1)=3 mod 4` have density `2/15`, a density statistic blocked by DEFECT and SHEET | level11_short; this session |
+| gluings `3n+-sgn(n)` | TRUE: two reflected copies. A fixed gluing gains nothing; a *choice* of sign trivializes descent (additive zoo), and a two-player choice is Althöfer's open game | choice ladder |
+| `1,5,17` system | three cycles, of lengths 1, 2, 7 | inherited |
+| `36=18+18`, `C(6,2)+6=21`, Fano orientations | arithmetic true, no map | level11_short |
+| `11_B x=Bx+x` | TRUE | level11_short |
+| Lean `forced_zero_density_limit` | FALSE: `sum (1/16)^j=16/15`, and `1/16=0` in `N` | this session |
+| Lean `shift_memory_rule` | FALSE at `B=3, x=1` | this session |
+| Lean `descent_condition` | the correct descent certificate | inherited |
+
+## 4. Where the missing insight lurks
+
+The instrument locates it. Choice (graph `E`) collapses the `0.95`-dimensional
+exceptional set into a thin set of rationals over the other prime. The
+collapse is driven by freedom at rising-run entries. Collatz has no such
+freedom, and its equivalent choiceful reformulation (the undirected game)
+does not supply it. A proof of the divergence half must therefore
+substitute for choice. It must see the drift, handle each orbit exactly,
+use a non-uniform arithmetic input, and cope with a `0.95`-dimensional
+exceptional set, since finitely many parametrized escape families cannot
+cover it. The pasted snippet's themes map to exact places: the sign enters
+as the sign of `2^K-3^L`, the Catalan clocks belong to the cycle half, and
+the trunk `(4^i-1)/3` is the exit set of the hardest relaxed obstruction.
+
+## 5. Frontier and next probes
+
+1. Q2 near `1/2`: an amortized see-saw. The chain recursion
+   `w_{t+1}=(2^(K_t+3)w_t-1)/3^(j_{t+1})` governs repeated hostile
+   landings.
+2. Loops through `1` of every length with bounded ratio (HYP-9122). This is
+   a carry-covering statement at the convergent clocks.
+3. The exact dimension of `Bad_inf(E)`: zero or small positive.
+4. Althöfer's `3n+-1` game (prize open to 2037; a claimed proof is under
+   review). Capped retrograde analysis to `10^8` resolves every odd start
+   below `834,437`, with about 28% P-positions and no draw found.
+5. The divergence half of Collatz: the four-property job description above.
