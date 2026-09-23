@@ -268,6 +268,24 @@ amortized, Applegate--Lagarias-type argument. It must charge each escape
 uniform `8/9` lemma on fresh classes. This is the precise remaining gap
 for Q2 (HYP-9120).
 
+**The exits of `1/2` are the Collatz trunk (PROVED, and checked on 2000
+random cases).** Let `2m-1=3^j w` with `j>=2`. The legal first reverse
+moves from `m` are exactly `k=2i+1` with `i` not `0 mod 3`, and they land at
+`N_i+4^i 3^(j-1)w`, where `N_i=(4^i-1)/3=1,5,85,341,5461,...` is the
+inherited trunk `R^(i-1)(1)`
+([row_braid_typing](collatz_mod6_20260917_row_braid_typing.md)). The
+illegal ones, `N_3=21, N_6=1365, ...`, are multiples of `3`. So the hostile
+point `1/2` is the common 3-adic limit of the trunk's reverse images, and
+every escape passes near a trunk integer. The cheapest route goes through
+`N_1=1`. Its offset cost has floor `(8/3)(4/3)/3=32/27` at `j=3` and
+`(8/3)(13/9)/3=104/81` for `j>=4`. The post-escape value `X=2^(K+2)w`
+depends only on the loop's total halving count `K`, which a ratio `<3`
+allows in at most two values. An adversarial `w` can put one choice near
+`1/2` again and the other near `1`. So Applegate--Lagarias's near-free
+escape (their cost is `1+2^(-j)`) has no analogue here. The amortization
+must use the descent near `1`, or steer by exits through the higher trunk
+points `N_i`.
+
 **The forward half does not reduce to one class (FINITE-EXACT,
 `collatz_procgen_20260922_q1_worst_factor.c`).** Outside `x=-1 mod 4` every
 forward class descends at once (factor at most `3/4`). But at `2^22` there
