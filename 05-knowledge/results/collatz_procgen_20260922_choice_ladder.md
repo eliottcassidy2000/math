@@ -178,8 +178,8 @@ above the path's threshold `B/(2^b-3^a)`. Q1 itself is implied
 pointwise by Collatz, since Collatz orbits are `E`-paths. It therefore
 holds for every `n<2^68` by the published Collatz verification (CITED,
 Barina; exact bound per the barrier-atlas lane). Q2 is not implied by
-Collatz (the arrows point the other way), and `7.17*10^12` below is its
-own verification.
+Collatz (the arrows point the other way); section 5 gives its own
+verification (`2.02*10^13`).
 
 **Backward `E` (3-adic), PROVED membership.**
 
@@ -262,11 +262,11 @@ thread DFS (`collatz_procgen_20260922_e_reverse_dfs.c`) agrees with the DP
 at every depth `r<=16`. Pushed to depth `30`, the exceptional counts are
 `67, 94, 134, 190` at `r=19, 24, 27, 30`. The smallest positive
 representative of an exceptional class other than `1` grows like
-`3^(r-4)`: it is `1.86*10^6` at `r=16`, `1.96*10^8` at `r=19`, and
-`7.17*10^12` at `r=30`. On the backward side a multiplicative certificate
+`3^(r-4)`: it is `1.86*10^6` at `r=16`, `1.96*10^8` at `r=19`,
+`7.17*10^12` at `r=30`, and `2.02*10^13` at `r=31` (about `2*10^10` DFS nodes). On the backward side a multiplicative certificate
 always gives actual descent (the carry only subtracts), and values stay
 positive integers prime to `3`. Strong induction therefore shows that
-**`1` reaches every `m<7.17*10^12` with `3` not dividing `m` in `E`**. The
+**`1` reaches every `m<2.02*10^13` with `3` not dividing `m` in `E`**. The
 inherited verification was `10^7`, by greedy `G`.
 
 **The `1/2` neighbourhood costs at least `8/3` (PROVED).** Every legal
