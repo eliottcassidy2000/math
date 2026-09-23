@@ -292,7 +292,7 @@ unless marked).**
 * A one-round see-saw does not close at any level. Chains of hostile
   transfers can raise the value by at most about `m^0.104` (known thread
   prices), and **the endgame is the base-3 digits of `2^K`**, a
-  transversality statement of Erdős's ternary type.
+  transversality statement of Erdős's ternary type. **Refined (wave 3, 2026-09-23):** the chains read the **low** (3-adic) digits of `2^K w`, controlled by the kappa formula `v_3(2^K - r) = 1 + v_3(K - kappa(r))`, not the full or top expansion that Erdős's problem concerns. Every 3-adic-window form of Erdős is FALSE ([transversality foundry](collatz_procgen_20260922_transversality_foundry.md) §3; [Q1 mirror](collatz_procgen_20260922_q1_mirror.md) §5).
 
 **Uniform descent off two classes (PROVED; elementary; Lean-checked).**
 Let `m>1` with `3` not dividing `m` and `m` not `1` or `14 mod 27`. Then at

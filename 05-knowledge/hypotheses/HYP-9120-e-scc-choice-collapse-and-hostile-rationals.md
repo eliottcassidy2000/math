@@ -46,6 +46,9 @@ precision, or an exceptional thread converging to a positive integer.
   most about `m^0.104` (known thread prices), and the endgame is governed
   by the **base-3 digits of `2^K`**: an Erdős-ternary-type transversality,
   the same shape as the divergence-half target of the synthesis.
+  **Refined (wave 3, 2026-09-23):** the chains read the **low** (3-adic) digits of `2^K w`, controlled by the kappa formula `v_3(2^K - r) = 1 + v_3(K - kappa(r))`, not the full or top expansion that Erdős's problem concerns. Every 3-adic-window form of Erdős is FALSE ([transversality foundry](../results/collatz_procgen_20260922_transversality_foundry.md) §3; [Q1 mirror](../results/collatz_procgen_20260922_q1_mirror.md) §5).
+  The Q1 half has the mirror structure: every exit from `-1` costs `3^eta > 1`, and the
+  endgame is the low binary digits of `3^A u` (PROVED reduction).
 
 ## Dimension-lane update (same session)
 

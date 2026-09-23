@@ -104,7 +104,11 @@ above must be read as "do what choice does, *but specifically for
    capped statistic). Both are logged in MISTAKES 2026-09-22.
 6. **Both hard cores end in 2-versus-3 digits.** The divergence half
    points to p-adic irrationality of the Bernstein series, and the
-   relaxed Q2 points to the base-3 digits of `2^K` (Erdős).
+   relaxed Q2 points to the base-3 digits of `2^K` (Erdős). *Wave 3
+   corrected both halves of that sentence.*
+   * The first is Lagarias's Periodicity Conjecture.
+   * The second reads the **low** 3-adic digits, not Erdős's top digits.
+     Q1 has the mirror image, the low binary digits of `3^A u`.
 
 ## Candidate card (not promoted)
 
@@ -122,3 +126,50 @@ above must be read as "do what choice does, *but specifically for
   statement carries the original's special features.
 * Evidence: this session; Applegate--Lagarias's single-class obstruction;
   Caraiani's `5x+1` semigroup (per the atlas).
+
+## Wave 3 (2026-09-23): the relaxation renormalizes the difficulty
+
+Three lanes ran after the first close-out. They changed the picture in
+three ways.
+
+1. **The missing insight now has a name and a smallest instance.**
+   * The divergence half is Lagarias's Periodicity Conjecture on the
+     positive integers.
+   * Every proved every-orbit result works either by growth and capacity
+     (subcritical words; bounded critical discrepancy, an in-house
+     theorem from 2026-09-21) or by repetition (zero entropy).
+   * The transversality lane added the repetition case for Sturmian
+     words. **Theorem S**: no rational has an eventually Sturmian parity
+     vector. It is a 2-adic Liouville argument whose approximants are the
+     word's own periodic extensions. I audited it by a separate code
+     path.
+   * What no technique reaches is the HARD class: supercritical,
+     positive-entropy, non-repetitive words. The smallest open instance
+     is bounded discrepancy around a supercritical slope.
+2. **The relaxation does not escape Collatz. It renormalizes it.**
+   * In E-SCC both base points cost more than 1 to escape:
+     * `1/2` for Q2, at `2^eps`;
+     * `-1` for Q1, at `3^eta`, which the mirror lane PROVED.
+   * So hostile landings chain.
+   * Each chain is a new Collatz-type map with memory, read off the low
+     `p`-adic digits of `2^K w` or `3^A u`.
+   * Excluding infinite chains is again a no-divergence statement of the
+     same HARD type.
+   * The foundry (v4) now gives every all-orbits target in the family the
+     same single missing mechanism: Collatz, `3n-1`, the Periodicity
+     Conjecture, both E-SCC halves, Mahler and Erdős.
+3. **The duality I hoped for was a straddle.** The shared numerators
+   `793585` and `419868489953` looked like a forward–backward duality. In
+   fact each pairs a hostile point with a descending one. An exact identity
+   `(|x|-3/2)(y-3/2) = -(rho-1)^2/(2 rho)` puts exactly one partner of
+   each pair above `3/2`. The earlier observation had compared a certified
+   census with an uncertified one.
+
+**What this says about where the insight has been lurking.** It has not
+been hiding in a clever relaxation, a symmetry or a choice. Each of those
+moves the same obstruction somewhere else. It lurks in one kind of
+statement that the literature and this repository have circled from many
+sides without proving: a 2-adic or 3-adic non-integrality statement strong
+enough to reach positive-entropy digit words. The Sturmian theorem shows the
+method that works on the zero-entropy edge. C2 is where it has to be
+pushed.
