@@ -2,13 +2,15 @@
 id: HYP-9122
 title: "Loops through 1 of every length with ratio below 3 (robust 1-escape)"
 status: >
-  OPEN HYPOTHESIS with FINITE-EXACT support to s=40. For every s>=1 there is
-  a forward E-cycle through 1 with s multiplications and K halvings,
-  2^K<3^(s+1). Together with the PROVED 1-escape lemma this handles every m
-  with v_3(m-1)>=2 in Q2. For s>=2 every loop has ratio >= 13/9, and the
-  observed minimal ratios lie in [1.517, 2.96], thin at s=11 and s=23. The
-  robust form allows other exit words and is what the E-SCC induction
-  actually needs.
+  OPEN HYPOTHESIS. FINITE-EXACT for s <= 6000 (loops lane: minK(s) = K0(s)),
+  with explicit verified loops for s <= 2500. For every s >= 2 there is a
+  forward E-cycle through 1 with s multiplications and exactly
+  K0(s) = floor((s+1) log_2 3) halvings. PROVED: every loop has ratio
+  > 3/2 (so K >= K0(s)). HYP-9122 reduces to record objects at the upper
+  best approximations of log_2 3 (splicing Theorem 4.2), and no finite
+  loop family suffices (height bound). The endgame lane uses it in
+  Theorems 3.1 and 6.2. Its Q1 mirror is HYP-9125. (The 2026-09-22 draft
+  status, "s <= 40, ratio >= 13/9", is superseded.)
 source: collatz-procgen-20260922 (mac-mini)
 depends_on:
   - 05-knowledge/results/collatz_procgen_20260922_choice_ladder.md
