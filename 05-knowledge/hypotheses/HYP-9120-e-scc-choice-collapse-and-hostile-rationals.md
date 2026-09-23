@@ -13,7 +13,7 @@ status: >
   for every m not 1 or 14 mod 27, Lean-checked (q2_descent_off_1_and_14), so Q2 reduces
   to the two hostile neighbourhoods; Q2 verified to 2.02e13; escaping 1/2 costs at least 8/3. FINITE-EXACT: exceptional counts 908 mod 2^36 and 52 mod 3^17; no
   positive integer below 1.5e8 is exceptional at precision 2^36.
-source: collatz-procgen-20260922 (mac-mini)
+source: collatz-procgen-20260922 (mac-mini); E is Le--Smith's Loosened Collatz Graph (arXiv 2109.01180), where Q1/Q2/SCC are not stated
 depends_on:
   - 05-knowledge/results/collatz_procgen_20260922_choice_ladder.md
 related:

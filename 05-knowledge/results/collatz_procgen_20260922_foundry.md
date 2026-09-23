@@ -93,7 +93,26 @@ choice still `133,600` (the DRIFT barrier made visible).
    needed, since the relaxed problem is sheet-symmetric and true on both
    sheets). The choice ladder shows that the thinness comes from the
    `6 mod 8` rising-run excursion. HYP-9120 is the concrete next target.
-4. **Caveat on UNIFORM.** Undecidability blocks only criteria claimed to be
+5. **Corrections from the literature lane**
+   ([barrier atlas](collatz_procgen_20260922_barrier_atlas.md), primary
+   sources):
+   * **UNIFORM.** Kurtz--Simon exclude only uniform *complete* methods, not
+     sound ones.
+   * **THIN/DIMENSION.** This is a heuristic, not a theorem, and "finitely
+     many escape lemmas" should read "finitely many parametrized escape
+     families". Applegate--Lagarias needed an infinite multiplier family
+     for their one class.
+   * **SHEET.** Residue statements must be transported by `x->-x`, not
+     compared class by class.
+   * **Tao.** Tao's theorem is now PROVED blind to SHEET: GGM 2025 covers
+     `3N+r` for every odd `r`.
+   * **Verification.** The bound is `2^71` (Barina 2025).
+
+   The atlas also finds that no published all-orbits mechanism overcomes
+   both SHEET and DRIFT at unbounded complexity. Removing DIMENSION by
+   choice (Applegate--Lagarias, `E`) exposes SHEET: the hostile class `-1`
+   is the minus sheet's fixed point. This matches section 3 item 2 here.
+6. **Caveat on UNIFORM (original wording).** Undecidability blocks only criteria claimed to be
    necessary and sufficient. A decidable *sufficient* condition, such as a
    rewriting-termination interpretation found by search, is not blocked.
    So automata-type searches are marked UNIFORM-blind only as full

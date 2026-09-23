@@ -33,6 +33,19 @@ DFS nodes (about 20 minutes), and the `3^17` count from
   (Q1: every `n` reaches `1`; Q2: `1` reaches every `m` with `3 does not divide m`).
   The earlier session tested Q2 only with the *greedy* 3-adic map `G`
   ([three_adic_g_map](collatz_mod6_20260917_three_adic_g_map.md)).
+* **Prior work on `E` itself (found by the barrier-atlas lane).** Le &
+  Smith, "Observations on cycles in a variant of the Collatz Graph"
+  ([arXiv 2109.01180](https://arxiv.org/abs/2109.01180), unrefereed; the
+  abstract was confirmed this session), define the *Loosened Collatz
+  Function*: `3x+1` may be applied to even and odd `x`. That is exactly
+  `E`. They study its cycle tuples and conjecture that every `n` with `3`
+  not dividing `n` lies on a cycle (Conj. 1, per the lane's reading of the
+  paper). They do not state Q1, Q2 or strong connectivity. Q1 and Q2
+  together give a cycle `1->n->1`, which implies their Conj. 1. **With Q1
+  known below `2^71` (every Collatz orbit is an `E`-path; Barina 2025,
+  CITED) and Q2 verified here below `2.02*10^13`, Le--Smith's Conj. 1 holds
+  for every `n<2.02*10^13` with `3` not dividing `n` (FINITE-EXACT plus
+  CITED).**
 * Canonical hostile: the rising family `n=2^k u-1` (forward) and
   `m=3^j u+1` (backward, `244->...->256`).
 * Least-used sidecar: the choice itself. Every earlier certificate in the
@@ -142,6 +155,21 @@ neighbourhood `62 mod 64` removes first. Five of the eight classes are
 `6 mod 8` (`54, 62, 22, 14, 30`), two are `4 mod 8` (`60, 28`) and one is
 `2 mod 8` (`50`).
 
+**The additive-choice zoo (FINITE-EXACT, `2^22`,
+`collatz_procgen_20260922_additive_choice_zoo.c`).** Suppose each odd step
+may use `3x+b` for any `b` in a set `B`. Then every `B` with two distinct
+odd elements has **zero** exceptional classes: `{1,-1}`, `{1,3}`, `{1,5}`,
+`{1,9}`, `{1,17}`, `{1,33}`, `{1,-3}`, `{1,7}`, `{1,-7}`, `{1,5,9,13}`.
+Singletons `{1}` and `{-1}` give `93,222`. All odd `b` are 2-adically
+conjugate (`x->lambda x`), so switching between two copies moves the orbit
+between disjoint hostile sets, and nothing stays hostile. For `{1,-1}` the
+reason is elementary: exactly one of `3x+-1` is divisible by `4`, the case
+the barrier-atlas lane calls the trivial one-player form of Althöfer's
+`3n+-1` game. The ladder of freedoms is therefore: none (dimension
+`0.95`), branch choice `E` (thin), additive choice (empty). The pasted
+snippet's `3n+sgn(n)` is a fixed rule, not a choice, so it gains nothing
+here.
+
 ## 4. The hostile points are rationals over the other prime
 
 **Forward `E` (2-adic), PROVED membership.**
@@ -176,8 +204,8 @@ a class with a multiplicative certificate of precision 36**. On the
 forward side, a multiplicative certificate becomes actual descent only
 above the path's threshold `B/(2^b-3^a)`. Q1 itself is implied
 pointwise by Collatz, since Collatz orbits are `E`-paths. It therefore
-holds for every `n<2^68` by the published Collatz verification (CITED,
-Barina; exact bound per the barrier-atlas lane). Q2 is not implied by
+holds for every `n<2^71` by the published Collatz verification (CITED,
+Barina 2025, per the barrier-atlas lane). Q2 is not implied by
 Collatz (the arrows point the other way); section 5 gives its own
 verification (`2.02*10^13`).
 

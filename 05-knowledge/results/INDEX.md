@@ -1,5 +1,15 @@
 # Script Results Index
 
+- [Collatz barrier atlas](collatz_procgen_20260922_barrier_atlas.md):
+  **CITED (primary sources) plus session typing.** Covers 22 published
+  results (Terras to Barina `2^71`), each typed by the barriers it
+  overcomes or is blind to. No published all-orbits mechanism overcomes
+  both SHEET and DRIFT at unbounded complexity. Removing DIMENSION by
+  choice exposes SHEET. Corrections: UNIFORM binds only complete methods;
+  GGM 2025 prove Tao's theorem for `3N+r`, including `3N-1`. The
+  dimension `h(log_3 2)` is not in print. The E-graph is Le--Smith's
+  Loosened Collatz Graph; Q1, Q2 and SCC are not stated there.
+
 - [Procedural approach foundry](collatz_procgen_20260922_foundry.md):
   **METHOD / TYPOLOGY + FINITE-EXACT probes.** Generates 473 approach
   cards (problem x sub-target x mechanism x lens) over seven Collatz-type
