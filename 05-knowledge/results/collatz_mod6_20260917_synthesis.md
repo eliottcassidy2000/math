@@ -717,7 +717,7 @@ the minus-sheet iteration is `Syr_-^n(N) = 3^n 2^(-|a|) N - F_n(a)` with
 Tao's own offset polynomial and the identical valuation-word law, hence
 `Syrac_-(Z/3^nZ) = -Syrac_+(Z/3^nZ)` and Propositions 1.14 and 1.17
 (fine-scale mixing, characteristic-function decay) hold verbatim on
-`3n-1`; whether the whole almost-all theorem transfers is OPEN (Sections 3
+`3n-1`; whether the whole almost-all theorem transfers is OPEN (UPDATE 2026-09-22: now CITED-PROVED by Gonçalves--Greenfeld--Madrid 2025, arXiv 2111.06170, Thm 1.3, which covers `3N-1`; see [barrier atlas](collatz_procgen_20260922_barrier_atlas.md)) (Sections 3
 and 5 of the paper were not re-run with the sign flipped), and "almost-all
 bounded values implies a single root" is refuted by the three minus
 basins (odd `n<=10^6`: `0.327/0.324/0.349`). The "`Delta=4` prime ladder"
