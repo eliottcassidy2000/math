@@ -48,3 +48,23 @@ At every depth `3<=k<=41` of the 1-neighbourhood, at least one exit
 works: (A) a loop of length `k-1` with ratio `<3`, or (B) a loop of length
 `k-2` with ratio `<9/4` followed by the mod-27 descent `(4x-4)/9`.
 
+## Sharpened by the loops lane (collatz_procgen_20260922_loops_and_escapes.md)
+
+* **PROVED.** Every loop through 1 with `s>=2` has `2^(K+1)>3^(s+1)`. So
+  HYP-9122 is **equivalent** to "`minK(s)=K0(s)=floor((s+1) log_2 3)` for all
+  `s>=2`", and the 1-escape at depth `k` is the only descent within `k`
+  moves.
+* **PROVED (record reduction, Theorem 4.2).** HYP-9122 follows from one
+  base loop `B_q` and one hub cycle `C_q` per record (upper
+  best-approximation) denominator `q` of `log_2 3`: `3, 5, 17, 29, 41, 94,
+  147, 200, 253, 306, 971, 1636, 2301, ...`. These are spliced in Ostrowski
+  order.
+* **FINITE-EXACT.** `minK(s)=K0(s)` for all `s<=6000`. Explicit verified
+  loops for all `s<=2500` come from 13 base loops and 11 cycles through the
+  hubs `1, 4, 13, 40, 121, 1093`.
+* **PROVED obstruction.** Loop height is at least about `s/(3 eps(s+1) ln 2)`,
+  so no finite family works, and record base loops cannot come from
+  splicing. The hard base loops climb, wander at height about `s/eps`, and
+  land on a trunk value `R_j=(4^j-1)/3`, for example `341` or `5461`.
+* **OPEN.** Records `q>5626`.
+

@@ -140,7 +140,17 @@ the divergence half of Collatz, and the sign enters exactly as the sign of
   * Best plus-only statement: "every growth window grows" (the sign law).
     Its smallest minus witness is the transient near-cycle `165->163`
     (clock `19/12`).
-* Loops through 1 and escapes: PENDING.
+* **Loops through 1 and escapes**
+  ([note](collatz_procgen_20260922_loops_and_escapes.md)):
+  * PROVED: loop ratio `>3/2` (a Catalan-type fact), so the 1-escape needs
+    exactly `K0` halvings and is the only exit. HYP-9122 reduces to the
+    record denominators of `log_2 3`.
+  * FINITE-EXACT: loops exist to `s=6000`, so the thread of `1` is settled
+    to depth `6001`.
+  * PROVED: the height lower bound (no finite family); the `1/2` escape
+    price is exactly `2c(k-1)/3`; seven dyadic hostile points.
+  * The see-saw does not close. **The endgame of Q2 is the base-3 digits of
+    `2^K` (Erdős ternary type).**
 
 ## 2b. The approach deck: every approach generated or considered, with its disposition
 
@@ -219,6 +229,16 @@ orbit of `27`. So a sign-aware argument must act on windows whose clock
 which the snippet calls "unit-gap clocks". That is exactly where a
 Baker-type Diophantine input enters, matching the transversality
 target in section 5.
+
+**Both halves end in the same kind of statement.** The divergence half
+of Collatz points to p-adic irrationality of the Bernstein series (the
+2-adic digits of an integer versus a dense odd-step set). The relaxed
+backward half, after every certificate and escape, points to the base-3
+digits of `2^K` (loops lane): Erdős's ternary problem, which the foundry
+listed as a sibling with dimension `log_3 2`. The missing insight is a
+*2-versus-3 digit transversality* theorem. This is the fringe idea the
+session kept returning to from different directions (Mahler `3/2`,
+Erdős `2^n`, the S596 two-block question).
 
 The pasted snippet's themes map to exact places: the sign enters
 as the sign of `2^K-3^L`, the Catalan clocks belong to the cycle half, and

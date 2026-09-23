@@ -36,3 +36,14 @@ See the lane note for definitions and data. The decisive next tests are:
 
 Refutation form: an integer `n>1` whose class is exceptional at every
 precision, or an exceptional thread converging to a positive integer.
+
+## Q2 status after the loops lane (same session)
+
+* The thread of `1` is settled for every depth `<=6001`, since the 1-escape
+  loops exist for `s<=6000`.
+* The `1/2` escape price is exactly `2c(k-1)/3`, in `(1,2)`. A one-round
+  see-saw cannot close. Chains of hostile transfers raise the value by at
+  most about `m^0.104` (known thread prices), and the endgame is governed
+  by the **base-3 digits of `2^K`**: an Erdős-ternary-type transversality,
+  the same shape as the divergence-half target of the synthesis.
+

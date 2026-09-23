@@ -256,6 +256,30 @@ therefore fail at a rare `s`; a robust version must allow other exit
 words (HYP-9122). Every loop through `1` has ratio at least
 `13/9` for `s>=2`, from the last two carry terms.
 
+**Update from the loops lane
+([loops_and_escapes](collatz_procgen_20260922_loops_and_escapes.md), PROVED
+unless marked).**
+* Every loop through `1` with `s>=2` has `2^(K+1)>3^(s+1)`: writing
+  `2^K=sum 3^i 2^(e_i)` gives `2^(K+1)>=3^(s+1)-1`, with equality only if
+  `3^(s+1)-1` is a power of `2`. So the 1-escape at depth `k` needs exactly
+  `K0(k-1)=floor(k log_2 3)`, and its factor is `c(k-1)/3` with
+  `c(s)=(3/2)2^(eps(s+1))`. Within `k` moves no other exit exists, which
+  makes my "exit B" the special case of exit A with the trivial loop
+  appended.
+* Loops with exactly `K0(s)` exist for every `s<=6000` (FINITE-EXACT). So
+  **every `m` with `2<=v_3(m-1)<=6001` descends**.
+* HYP-9122 reduces to the record denominators of `log_2 3` (splicing,
+  Theorem 4.2). No finite loop family can work: the height is at least
+  about `s/(3 eps ln 2)`.
+* Near `1/2` the escape price is exactly `2c(k-1)/3`, in `(1,2)`. This
+  supersedes the `32/27` floor below.
+* The dyadic points `1/2, 43/32, 59/64, 145/128, 209/256, 371/256, 499/512`
+  are all in `Bad_inf`.
+* A one-round see-saw does not close at any level. Chains of hostile
+  transfers can raise the value by at most about `m^0.104` (known thread
+  prices), and **the endgame is the base-3 digits of `2^K`**, a
+  transversality statement of Erdős's ternary type.
+
 **Uniform descent off two classes (PROVED; elementary; Lean-checked).**
 Let `m>1` with `3` not dividing `m` and `m` not `1` or `14 mod 27`. Then at
 most two reverse `E`-moves reach an integer `y<m` with `3` not dividing

@@ -1,0 +1,401 @@
+### 0. baseline (lane one program, values <= 2e7), extended to s <= 80
+s=41 minK= 66 ratio 2^K/3^s=2.0231  <3 OK
+s=42 minK= 68 ratio 2^K/3^s=2.6974  <3 OK
+s=43 minK= 69 ratio 2^K/3^s=1.7983  <3 OK
+s=44 minK= 71 ratio 2^K/3^s=2.3977  <3 OK
+s=45 minK= 72 ratio 2^K/3^s=1.5985  <3 OK
+s=46 minK= 74 ratio 2^K/3^s=2.1313  <3 OK
+s=47 minK= 76 ratio 2^K/3^s=2.8417  <3 OK
+s=48 minK= 77 ratio 2^K/3^s=1.8945  <3 OK
+s=49 minK= 79 ratio 2^K/3^s=2.5260  <3 OK
+s=50 minK= 80 ratio 2^K/3^s=1.6840  <3 OK
+s=51 minK= 82 ratio 2^K/3^s=2.2453  <3 OK
+s=52 minK= 84 ratio 2^K/3^s=2.9937  <3 OK
+s=53 minK= 85 ratio 2^K/3^s=1.9958  <3 OK
+s=54 minK= 87 ratio 2^K/3^s=2.6611  <3 OK
+s=55 minK= 88 ratio 2^K/3^s=1.7741  <3 OK
+s=56 minK= 90 ratio 2^K/3^s=2.3654  <3 OK
+s=57 minK= 91 ratio 2^K/3^s=1.5770  <3 OK
+s=58 minK= 93 ratio 2^K/3^s=2.1026  <3 OK
+s=59 minK= 95 ratio 2^K/3^s=2.8035  <3 OK
+s=60 minK= 96 ratio 2^K/3^s=1.8690  <3 OK
+s=61 minK= 98 ratio 2^K/3^s=2.4920  <3 OK
+s=62 minK= 99 ratio 2^K/3^s=1.6613  <3 OK
+s=63 minK=101 ratio 2^K/3^s=2.2151  <3 OK
+s=64 minK=103 ratio 2^K/3^s=2.9534  <3 OK
+s=65 minK=104 ratio 2^K/3^s=1.9690  <3 OK
+s=66 minK=106 ratio 2^K/3^s=2.6253  <3 OK
+s=67 minK=107 ratio 2^K/3^s=1.7502  <3 OK
+s=68 minK=109 ratio 2^K/3^s=2.3336  <3 OK
+s=69 minK=110 ratio 2^K/3^s=1.5557  <3 OK
+s=70 minK=112 ratio 2^K/3^s=2.0743  <3 OK
+s=71 minK=114 ratio 2^K/3^s=2.7657  <3 OK
+s=72 minK=115 ratio 2^K/3^s=1.8438  <3 OK
+s=73 minK=117 ratio 2^K/3^s=2.4584  <3 OK
+s=74 minK=118 ratio 2^K/3^s=1.6390  <3 OK
+s=75 minK=120 ratio 2^K/3^s=2.1853  <3 OK
+s=76 minK=122 ratio 2^K/3^s=2.9137  <3 OK
+s=77 minK=123 ratio 2^K/3^s=1.9425  <3 OK
+s=78 minK=125 ratio 2^K/3^s=2.5900  <3 OK
+s=79 minK=126 ratio 2^K/3^s=1.7266  <3 OK
+s=80 minK=128 ratio 2^K/3^s=2.3022  <3 OK
+
+### 1. lexicographic DP (min K, then min height) for loops through 1, s <= 6000, values <= 3e7
+rows 6000; s>=2 with minK != K0(s): none;  s=1: minK=2 (trivial loop)
+largest minimal heights H(s) (all s <= 6000), with eps = log2(c/1.5) and H*eps*3ln2/s (proved lower bound ~ 1):
+  s= 5625 c=1.501010 eps=0.000971 H= 10735213  H*eps*3ln2/s=3.85
+  s= 4960 c=1.501075 eps=0.001034 H=  8955445  H*eps*3ln2/s=3.88
+  s= 4295 c=1.501141 eps=0.001097 H=  7369229  H*eps*3ln2/s=3.91
+  s= 3630 c=1.501206 eps=0.001159 H=  5903957  H*eps*3ln2/s=3.92
+  s= 2965 c=1.501272 eps=0.001223 H=  4651789  H*eps*3ln2/s=3.99
+  s= 5931 c=1.502545 eps=0.002446 H=  4651789  H*eps*3ln2/s=3.99
+  s= 5266 c=1.502611 eps=0.002509 H=  3915841  H*eps*3ln2/s=3.88
+  s= 2300 c=1.501338 eps=0.001286 H=  3384637  H*eps*3ln2/s=3.94
+  s= 4601 c=1.502676 eps=0.002571 H=  3384637  H*eps*3ln2/s=3.93
+  s= 3936 c=1.502742 eps=0.002635 H=  2882693  H*eps*3ln2/s=4.01
+  s= 5572 c=1.504147 eps=0.003983 H=  2627549  H*eps*3ln2/s=3.91
+  s= 1635 c=1.501403 eps=0.001349 H=  2309861  H*eps*3ln2/s=3.96
+  s in (0,1000]: median H = 2005, max H = 1257905
+  s in (1000,2000]: median H = 6097, max H = 2309861
+  s in (2000,3000]: median H = 9521, max H = 4651789
+  s in (3000,4000]: median H = 12289, max H = 5903957
+  s in (4000,5000]: median H = 17981, max H = 8955445
+  s in (5000,6000]: median H = 21073, max H = 10735213
+
+### 2. minimal-height loops for s <= 80 (checkpointed reconstruction at value cap H(s)), independent check, table
+verified loops: 80, failures: 0, s>=2 with K != K0(s): none
+
+### 3. hub cycles: minimal (q,p) through climb points; records (smallest eps = p - q log2 3 so far)
+  hub 4: record cycles (q,p,ratio) for q <= 120: [(3, 5, 1.185185), (15, 24, 1.169233), (27, 43, 1.153496), (39, 62, 1.13797), (92, 146, 1.135596)]
+  hub 13: record cycles (q,p,ratio) for q <= 120: [(3, 5, 1.185185), (5, 8, 1.053498), (17, 27, 1.039318)]
+  hub 40: record cycles (q,p,ratio) for q <= 120: [(10, 16, 1.109858), (17, 27, 1.039318), (29, 46, 1.025329), (82, 130, 1.023191)]
+  hub 121: record cycles (q,p,ratio) for q <= 120: [(10, 16, 1.109858), (17, 27, 1.039318), (29, 46, 1.025329), (41, 65, 1.011529), (94, 149, 1.009419)]
+  record denominators q <= 2600 (upper best approximations of log2 3): 1 3 5 17 29 41 94 147 200 253 306 971 1636 2301 
+  cycle through 1093 verified: (q,p)=(17,27), p = ceil(q log2 3), ratio 2^p/3^q = 1.039318, max value 597901
+  cycle through 1093 verified: (q,p)=(29,46), p = ceil(q log2 3), ratio 2^p/3^q = 1.025329, max value 448405
+  cycle through 1093 verified: (q,p)=(41,65), p = ceil(q log2 3), ratio 2^p/3^q = 1.011529, max value 2873029
+  cycle through 1093 verified: (q,p)=(94,149), p = ceil(q log2 3), ratio 2^p/3^q = 1.009419, max value 3882989
+  cycle through 1093 verified: (q,p)=(147,233), p = ceil(q log2 3), ratio 2^p/3^q = 1.007313, max value 3882989
+  cycle through 1093 verified: (q,p)=(200,317), p = ceil(q log2 3), ratio 2^p/3^q = 1.005212, max value 3952577
+  cycle through 1093 verified: (q,p)=(253,401), p = ceil(q log2 3), ratio 2^p/3^q = 1.003115, max value 3952577
+  cycle through 1093 verified: (q,p)=(306,485), p = ceil(q log2 3), ratio 2^p/3^q = 1.001023, max value 3952577
+
+### 4. record base loops (s = q-1 for records q <= 2301, and s = 2) and the splicing family, 2 <= s <= 2500
+s=   2 K=   4 K0=   4 OK ratio=1.777778 height=1 climb=1 prim=0 thru13=0
+s=   4 K=   7 K0=   7 OK ratio=1.580247 height=13 climb=3 prim=1 thru13=1
+s=  16 K=  26 K0=  26 OK ratio=1.558977 height=533 climb=3 prim=1 thru13=1
+s=  28 K=  45 K0=  45 OK ratio=1.537994 height=949 climb=5 prim=1 thru13=1
+s=  40 K=  64 K0=  64 OK ratio=1.517293 height=3949 climb=7 prim=1 thru13=1
+s=  93 K= 148 K0= 148 OK ratio=1.514128 height=11501 climb=9 prim=1 thru13=1
+s= 146 K= 232 K0= 232 OK ratio=1.510970 height=24001 climb=9 prim=1 thru13=1
+s= 199 K= 316 K0= 316 OK ratio=1.507818 height=55109 climb=9 prim=1 thru13=1
+s= 252 K= 400 K0= 400 OK ratio=1.504673 height=107885 climb=9 prim=1 thru13=1
+s= 305 K= 484 K0= 484 OK ratio=1.501534 height=376657 climb=11 prim=1 thru13=1
+s= 970 K=1538 K0=1538 OK ratio=1.501469 height=1257905 climb=11 prim=1 thru13=1
+s=1635 K=2592 K0=2592 OK ratio=1.501403 height=2309861 climb=13 prim=1 thru13=1
+s=2300 K=3646 K0=3646 OK ratio=1.501338 height=3384637 climb=13 prim=1 thru13=1
+verified loops: 13, failures: 0, s>=2 with K != K0(s): none
+SMAX=2500 with 8 record hub cycles at 1093: 13 base loops, 2486 spliced; base s: [2, 4, 16, 28, 40, 93, 146, 199, 252, 305, 970, 1635, 2300]
+verified loops: 2499, failures: 0, s>=2 with K != K0(s): none
+loop table, s <= 80 (minimal-height loop; construction of the family loop):
+s   K0   c(s)=2^K0/3^s  eps(s+1)  H(s)   climb  family construction   | minimal-height loop: forward word (from 1) ; reverse moves k_1..k_s
+1   2    1.333333      -0.16993  1      1      trivial               | M H2 ; 2
+2   4    1.777778      +0.24511  1      1      base                  | M H2 M H2 ; 2,2
+3   6    2.370370      +0.66015  1      1      C1+loop(2)            | M H2 M H2 M H2 ; 2,2,2
+4   7    1.580247      +0.07519  13     3      base                  | M3 H3 M H4 ; 4,3,0,0
+5   9    2.106996      +0.49022  13     3      C1+loop(4)            | M3 H3 M H4 M H2 ; 2,4,3,0,0
+6   11   2.809328      +0.90526  13     3      C1+loop(5)            | M3 H3 M H4 M H2 M H2 ; 2,2,4,3,0,0
+7   12   1.872885      +0.32030  13     3      C3+loop(4)            | M3 H3 M H2 M2 H3 M H4 ; 4,3,0,2,3,0,0
+8   14   2.497180      +0.73534  13     3      C3+loop(5)            | M3 H3 M H2 M2 H3 M H4 M H2 ; 2,4,3,0,2,3,0,0
+9   15   1.664787      +0.15037  61     3      C5+loop(4)            | M3 H M2 H3 M H M H M H5 M H4 ; 4,5,1,1,3,0,1,0,0
+10  17   2.219716      +0.56541  13     3      C5+loop(5)            | M3 H3 M H2 M2 H3 M H2 M2 H3 M H4 ; 4,3,0,2,3,0,2,3,0,0
+11  19   2.959621      +0.98045  13     3      C5+loop(6)            | M3 H3 M H2 M2 H3 M H2 M2 H3 M H4 M H2 ; 2,4,3,0,2,3,0,2,3,0,0
+12  20   1.973081      +0.39549  29     3      C5+loop(7)            | M3 H3 M H M2 H2 M H M H3 M H M H2 M H3 M H4 ; 4,3,2,1,3,1,2,0,1,3,0,0
+13  22   2.630774      +0.81052  13     3      C5+loop(8)            | M3 H3 M H2 M2 H3 M H2 M2 H3 M H2 M2 H3 M H4 ; 4,3,0,2,3,0,2,3,0,2,3,0,0
+14  23   1.753850      +0.22556  61     3      C5+loop(9)            | M3 H M2 H3 M H M H M H3 M2 H3 M H M H M H5 M H4 ; 4,5,1,1,3,0,3,1,1,3,0,1,0,0
+15  25   2.338466      +0.64060  29     3      C5+loop(10)           | M3 H3 M H M2 H2 M H M H3 M H M H2 M H3 M H2 M2 H3 M H4 ; 4,3,0,2,3,2,1,3,1,2,0,1,3,0,0
+16  26   1.558977      +0.05564  533    3      base                  | M3 H M2 H M2 H4 M2 H2 M2 H M H4 M2 H3 M H2 M H8 ; 8,2,3,0,4,1,0,2,0,4,0,1,0,1,0,0
+17  28   2.078636      +0.47067  61     3      C5+loop(12)           | M3 H M2 H3 M H M H M H3 M2 H3 M H M H M H5 M H2 M2 H3 M H4 ; 4,3,0,2,5,1,1,3,0,3,1,1,3,0,1,0,0
+18  30   2.771515      +0.88571  29     3      C5+loop(13)           | M3 H3 M H M2 H2 M H M H3 M H M H2 M H3 M H2 M2 H3 M H2 M2 H3 M H4 ; 4,3,0,2,3,0,2,3,2,1,3,1,2,0,1,3,0,0
+19  31   1.847677      +0.30075  61     3      C5+loop(14)           | M3 H M2 H3 M H M H M H3 M2 H3 M H M H M H3 M2 H3 M H M H M H5 M H4 ; 4,5,1,1,3,0,3,1,1,3,0,3,1,1,3,0,1,0,0
+20  33   2.463569      +0.71579  29     3      C5+loop(15)           | M3 H3 M H M2 H2 M H M H3 M H M H2 M H3 M H M2 H2 M H M H3 M H M H2 M H3 M H4 ; 4,3,2,1,3,1,2,0,1,3,2,1,3,1,2,0,1,3,0,0
+21  34   1.642379      +0.13082  209    3      C5+loop(16)           | M3 H M2 H2 M2 H M H2 M H3 M H M H2 M H M H3 M2 H M H3 M H2 M H2 M H2 M2 H8 ; 8,0,2,2,2,3,1,0,3,1,2,1,3,2,1,0,2,0,1,0,0
+22  36   2.189839      +0.54586  61     3      C5+loop(17)           | M3 H M2 H3 M H M H M H3 M2 H3 M H M H M H3 M2 H3 M H M H M H5 M H2 M2 H3 M H4 ; 4,3,0,2,5,1,1,3,0,3,1,1,3,0,3,1,1,3,0,1,0,0
+23  38   2.919786      +0.96090  29     3      C5+loop(18)           | M3 H3 M H M2 H2 M H M H3 M H M H2 M H3 M H M2 H2 M H M H3 M H M H2 M H3 M H2 M2 H3 M H4 ; 4,3,0,2,3,2,1,3,1,2,0,1,3,2,1,3,1,2,0,1,3,0,0
+24  39   1.946524      +0.37594  61     3      C5+loop(19)           | M3 H M2 H3 M H M H M H3 M2 H3 M H M H M H3 M2 H3 M H M H M H3 M2 H3 M H M H M H5 M H4 ; 4,5,1,1,3,0,3,1,1,3,0,3,1,1,3,0,3,1,1,3,0,1,0,0
+25  41   2.595365      +0.79097  61     3      C5+loop(20)           | M3 H M2 H3 M H M H M H3 M2 H3 M H M H M H3 M2 H3 M H M H M H3 M2 H3 M H M H M H5 M H4 M H2 ; 2,4,5,1,1,3,0,3,1,1,3,0,3,1,1,3,0,3,1,1,3,0,1,0,0
+26  42   1.730243      +0.20601  209    3      C5+loop(21)           | M3 H M2 H2 M2 H M H2 M H3 M H M H2 M H M H3 M2 H M H3 M H2 M H2 M H2 M2 H4 M2 H2 M H2 M2 H8 ; 8,0,2,2,0,4,0,2,2,2,3,1,0,3,1,2,1,3,2,1,0,2,0,1,0,0
+27  44   2.306991      +0.62105  61     3      C5+loop(22)           | M3 H M2 H3 M H M H M H3 M2 H3 M H M H M H3 M2 H3 M H M H M H3 M2 H3 M H M H M H5 M H2 M2 H3 M H4 ; 4,3,0,2,5,1,1,3,0,3,1,1,3,0,3,1,1,3,0,3,1,1,3,0,1,0,0
+28  45   1.537994      +0.03609  949    5      base                  | M5 H M2 H M H3 M2 H3 M H M H2 M H M H M H2 M H4 M2 H3 M2 H2 M2 H5 M3 H4 M H M H M H10 ; 10,1,1,4,0,0,5,0,2,0,3,0,4,2,1,1,2,1,3,0,3,1,0,1,0,0,0,0
+29  47   2.050659      +0.45112  61     3      C5+loop(24)           | M3 H M2 H3 M H M H M H3 M2 H3 M H M H M H3 M2 H3 M H M H M H3 M2 H3 M H M H M H3 M2 H3 M H M H M H5 M H4 ; 4,5,1,1,3,0,3,1,1,3,0,3,1,1,3,0,3,1,1,3,0,3,1,1,3,0,1,0,0
+30  49   2.734212      +0.86616  61     3      C5+loop(25)           | M3 H M2 H3 M H M H M H3 M2 H3 M H M H M H3 M2 H3 M H M H M H3 M2 H3 M H M H M H3 M2 H3 M H M H M H5 M H4 M H2 ; 2,4,5,1,1,3,0,3,1,1,3,0,3,1,1,3,0,3,1,1,3,0,3,1,1,3,0,1,0,0
+31  50   1.822808      +0.28120  209    3      C5+loop(26)           | M3 H M2 H2 M2 H M H2 M H3 M H M H2 M H M H3 M2 H M H3 M H2 M H2 M H2 M2 H4 M2 H2 M H2 M2 H4 M2 H2 M H2 M2 H8 ; 8,0,2,2,0,4,0,2,2,0,4,0,2,2,2,3,1,0,3,1,2,1,3,2,1,0,2,0,1,0,0
+32  52   2.430410      +0.69624  61     3      C5+loop(27)           | M3 H M2 H3 M H M H M H3 M2 H3 M H M H M H3 M2 H3 M H M H M H3 M2 H3 M H M H M H3 M2 H3 M H M H M H5 M H2 M2 H3 M H4 ; 4,3,0,2,5,1,1,3,0,3,1,1,3,0,3,1,1,3,0,3,1,1,3,0,3,1,1,3,0,1,0,0
+33  53   1.620274      +0.11127  533    3      C5+loop(28)           | M3 H M2 H M2 H4 M2 H2 M2 H M H4 M2 H3 M H2 M H M2 H2 M H2 M H2 M H M H3 M2 H4 M2 H2 M2 H M H4 M2 H3 M H2 M H8 ; 8,2,3,0,4,1,0,2,0,4,0,3,1,2,2,2,0,1,2,3,0,4,1,0,2,0,4,0,1,0,1,0,0
+34  55   2.160365      +0.52631  61     3      C5+loop(29)           | M3 H M2 H3 M H M H M H3 M2 H3 M H M H M H3 M2 H3 M H M H M H3 M2 H3 M H M H M H3 M2 H3 M H M H M H3 M2 H3 M H M H M H5 M H4 ; 4,5,1,1,3,0,3,1,1,3,0,3,1,1,3,0,3,1,1,3,0,3,1,1,3,0,3,1,1,3,0,1,0,0
+35  57   2.880486      +0.94135  61     3      C5+loop(30)           | M3 H M2 H3 M H M H M H3 M2 H3 M H M H M H3 M2 H3 M H M H M H3 M2 H3 M H M H M H3 M2 H3 M H M H M H3 M2 H3 M H M H M H5 M H4 M H2 ; 2,4,5,1,1,3,0,3,1,1,3,0,3,1,1,3,0,3,1,1,3,0,3,1,1,3,0,3,1,1,3,0,1,0,0
+36  58   1.920324      +0.35639  209    3      C5+loop(31)           | M3 H M2 H2 M2 H M H2 M H3 M H M H2 M H M H3 M2 H M H3 M H2 M H2 M H2 M2 H4 M2 H2 M H2 M2 H4 M2 H2 M H2 M2 H4 M2 H2 M H2 M2 H8 ; 8,0,2,2,0,4,0,2,2,0,4,0,2,2,0,4,0,2,2,2,3,1,0,3,1,2,1,3,2,1,0,2,0,1,0,0
+37  60   2.560432      +0.77142  61     3      C5+loop(32)           | M3 H M2 H3 M H M H M H3 M2 H3 M H M H M H3 M2 H3 M H M H M H3 M2 H3 M H M H M H3 M2 H3 M H M H M H3 M2 H3 M H M H M H5 M H2 M2 H3 M H4 ; 4,3,0,2,5,1,1,3,0,3,1,1,3,0,3,1,1,3,0,3,1,1,3,0,3,1,1,3,0,3,1,1,3,0,1,0,0
+38  61   1.706955      +0.18646  497    3      C5+loop(33)           | M3 H M2 H M2 H4 M2 H3 M H M H2 M H M H2 M2 H3 M2 H M H4 M H M2 H M H2 M H3 M2 H4 M H M H M H M H3 M H2 M2 H4 M H M H2 M H2 M H2 M2 H8 ; 8,0,2,2,2,1,4,0,2,3,1,1,1,4,0,3,2,1,0,1,4,1,0,3,0,2,1,2,1,3,0,4,0,1,0,1,0,0
+39  63   2.275940      +0.60150  61     3      C5+loop(34)           | M3 H M2 H3 M H M H M H3 M2 H3 M H M H M H3 M2 H3 M H M H M H3 M2 H3 M H M H M H3 M2 H3 M H M H M H3 M2 H3 M H M H M H3 M2 H3 M H M H M H5 M H4 ; 4,5,1,1,3,0,3,1,1,3,0,3,1,1,3,0,3,1,1,3,0,3,1,1,3,0,3,1,1,3,0,3,1,1,3,0,1,0,0
+40  64   1.517293      +0.01654  3949   7      base                  | M7 H2 M2 H3 M H M H2 M H M H M H M H3 M2 H3 M H2 M H M H M H4 M H M2 H2 M H2 M H2 M2 H3 M2 H4 M H M2 H2 M H3 M2 H4 M H M H3 M H M H10 ; 10,1,3,1,4,0,3,2,0,1,4,0,3,0,2,2,2,0,1,4,1,1,2,3,0,3,1,1,1,2,1,3,0,2,0,0,0,0,0,0
+41  66   2.023058      +0.43157  209    3      C5+loop(36)           | M3 H M2 H2 M2 H M H2 M H3 M H M H2 M H M H3 M2 H M H3 M H2 M H2 M H2 M2 H4 M2 H2 M H2 M2 H4 M2 H2 M H2 M2 H4 M2 H2 M H2 M2 H4 M2 H2 M H2 M2 H8 ; 8,0,2,2,0,4,0,2,2,0,4,0,2,2,0,4,0,2,2,0,4,0,2,2,2,3,1,0,3,1,2,1,3,2,1,0,2,0,1,0,0
+42  68   2.697410      +0.84661  61     3      C5+loop(37)           | M3 H M2 H3 M H M H M H3 M2 H3 M H M H M H3 M2 H3 M H M H M H3 M2 H3 M H M H M H3 M2 H3 M H M H M H3 M2 H3 M H M H M H3 M2 H3 M H M H M H5 M H2 M2 H3 M H4 ; 4,3,0,2,5,1,1,3,0,3,1,1,3,0,3,1,1,3,0,3,1,1,3,0,3,1,1,3,0,3,1,1,3,0,3,1,1,3,0,1,0,0
+43  69   1.798274      +0.26165  317    3      C5+loop(38)           | M3 H M2 H M2 H4 M2 H3 M H M H2 M H M H2 M2 H4 M H M H2 M H2 M H2 M2 H2 M2 H2 M H2 M H3 M H M2 H M H2 M H M H3 M H M H M H3 M H2 M2 H4 M H M H2 M H2 M H2 M2 H8 ; 8,0,2,2,2,1,4,0,2,3,1,1,3,1,2,1,0,1,3,2,2,0,2,0,2,2,2,1,4,0,2,1,2,1,3,0,4,0,1,0,1,0,0
+44  71   2.397698      +0.67669  61     3      C5+loop(39)           | M3 H M2 H3 M H M H M H3 M2 H3 M H M H M H3 M2 H3 M H M H M H3 M2 H3 M H M H M H3 M2 H3 M H M H M H3 M2 H3 M H M H M H3 M2 H3 M H M H M H3 M2 H3 M H M H M H5 M H4 ; 4,5,1,1,3,0,3,1,1,3,0,3,1,1,3,0,3,1,1,3,0,3,1,1,3,0,3,1,1,3,0,3,1,1,3,0,3,1,1,3,0,1,0,0
+45  72   1.598465      +0.09172  821    5      C5+loop(40)           | M5 H M2 H M H5 M3 H2 M H M H2 M H3 M H2 M2 H M H3 M H2 M H M H3 M H M H M H3 M H M2 H2 M H M H M H4 M H2 M H M2 H3 M H2 M H M H2 M H M2 H4 M H2 M2 H3 M H2 M H8 ; 8,2,3,0,2,4,0,1,2,1,2,3,0,1,2,4,1,1,2,0,1,3,1,1,3,1,2,3,1,0,2,3,2,1,2,0,0,5,1,0,1,0,0,0,0
+46  74   2.131287      +0.50676  209    3      C5+loop(41)           | M3 H M2 H2 M2 H M H2 M H3 M H M H2 M H M H3 M2 H M H3 M H2 M H2 M H2 M2 H4 M2 H2 M H2 M2 H4 M2 H2 M H2 M2 H4 M2 H2 M H2 M2 H4 M2 H2 M H2 M2 H4 M2 H2 M H2 M2 H8 ; 8,0,2,2,0,4,0,2,2,0,4,0,2,2,0,4,0,2,2,0,4,0,2,2,0,4,0,2,2,2,3,1,0,3,1,2,1,3,2,1,0,2,0,1,0,0
+47  76   2.841716      +0.92180  61     3      C5+loop(42)           | M3 H M2 H3 M H M H M H3 M2 H3 M H M H M H3 M2 H3 M H M H M H3 M2 H3 M H M H M H3 M2 H3 M H M H M H3 M2 H3 M H M H M H3 M2 H3 M H M H M H3 M2 H3 M H M H M H5 M H2 M2 H3 M H4 ; 4,3,0,2,5,1,1,3,0,3,1,1,3,0,3,1,1,3,0,3,1,1,3,0,3,1,1,3,0,3,1,1,3,0,3,1,1,3,0,3,1,1,3,0,1,0,0
+48  77   1.894477      +0.33684  317    3      C5+loop(43)           | M3 H M2 H M2 H4 M2 H3 M H M H2 M H M H2 M2 H4 M H M H2 M H2 M H2 M2 H2 M2 H2 M H2 M H3 M H M2 H M H2 M H M H3 M H M H M H3 M H2 M2 H4 M H M H2 M H2 M H2 M2 H4 M2 H2 M H2 M2 H8 ; 8,0,2,2,0,4,0,2,2,2,1,4,0,2,3,1,1,3,1,2,1,0,1,3,2,2,0,2,0,2,2,2,1,4,0,2,1,2,1,3,0,4,0,1,0,1,0,0
+49  79   2.525970      +0.75187  61     3      C5+loop(44)           | M3 H M2 H3 M H M H M H3 M2 H3 M H M H M H3 M2 H3 M H M H M H3 M2 H3 M H M H M H3 M2 H3 M H M H M H3 M2 H3 M H M H M H3 M2 H3 M H M H M H3 M2 H3 M H M H M H3 M2 H3 M H M H M H5 M H4 ; 4,5,1,1,3,0,3,1,1,3,0,3,1,1,3,0,3,1,1,3,0,3,1,1,3,0,3,1,1,3,0,3,1,1,3,0,3,1,1,3,0,3,1,1,3,0,1,0,0
+50  80   1.683980      +0.16691  533    3      C5+loop(45)           | M3 H M2 H M2 H4 M2 H2 M2 H M H4 M2 H3 M H2 M H M2 H2 M H2 M H2 M H M H3 M2 H4 M2 H2 M2 H M H4 M2 H3 M H2 M H M2 H2 M H2 M H2 M H M H3 M2 H4 M2 H2 M2 H M H4 M2 H3 M H2 M H8 ; 8,2,3,0,4,1,0,2,0,4,0,3,1,2,2,2,0,1,2,3,0,4,1,0,2,0,4,0,3,1,2,2,2,0,1,2,3,0,4,1,0,2,0,4,0,1,0,1,0,0
+51  82   2.245307      +0.58195  209    3      C5+loop(46)           | M3 H M2 H2 M2 H M H2 M H3 M H M H2 M H M H3 M2 H M H3 M H2 M H2 M H2 M2 H4 M2 H2 M H2 M2 H4 M2 H2 M H2 M2 H4 M2 H2 M H2 M2 H4 M2 H2 M H2 M2 H4 M2 H2 M H2 M2 H4 M2 H2 M H2 M2 H8 ; 8,0,2,2,0,4,0,2,2,0,4,0,2,2,0,4,0,2,2,0,4,0,2,2,0,4,0,2,2,0,4,0,2,2,2,3,1,0,3,1,2,1,3,2,1,0,2,0,1,0,0
+52  84   2.993742      +0.99699  61     3      C5+loop(47)           | M3 H M2 H3 M H M H M H3 M2 H3 M H M H M H3 M2 H3 M H M H M H3 M2 H3 M H M H M H3 M2 H3 M H M H M H3 M2 H3 M H M H M H3 M2 H3 M H M H M H3 M2 H3 M H M H M H3 M2 H3 M H M H M H5 M H2 M2 H3 M H4 ; 4,3,0,2,5,1,1,3,0,3,1,1,3,0,3,1,1,3,0,3,1,1,3,0,3,1,1,3,0,3,1,1,3,0,3,1,1,3,0,3,1,1,3,0,3,1,1,3,0,1,0,0
+53  85   1.995828      +0.41202  317    3      C5+loop(48)           | M3 H M2 H M2 H4 M2 H3 M H M H2 M H M H2 M2 H4 M H M H2 M H2 M H2 M2 H2 M2 H2 M H2 M H3 M H M2 H M H2 M H M H3 M H M H M H3 M H2 M2 H4 M H M H2 M H2 M H2 M2 H4 M2 H2 M H2 M2 H4 M2 H2 M H2 M2 H8 ; 8,0,2,2,0,4,0,2,2,0,4,0,2,2,2,1,4,0,2,3,1,1,3,1,2,1,0,1,3,2,2,0,2,0,2,2,2,1,4,0,2,1,2,1,3,0,4,0,1,0,1,0,0
+54  87   2.661104      +0.82706  61     3      C5+loop(49)           | M3 H M2 H3 M H M H M H3 M2 H3 M H M H M H3 M2 H3 M H M H M H3 M2 H3 M H M H M H3 M2 H3 M H M H M H3 M2 H3 M H M H M H3 M2 H3 M H M H M H3 M2 H3 M H M H M H3 M2 H3 M H M H M H3 M2 H3 M H M H M H5 M H4 ; 4,5,1,1,3,0,3,1,1,3,0,3,1,1,3,0,3,1,1,3,0,3,1,1,3,0,3,1,1,3,0,3,1,1,3,0,3,1,1,3,0,3,1,1,3,0,3,1,1,3,0,1,0,0
+55  88   1.774069      +0.24210  497    3      C5+loop(50)           | M3 H M2 H M2 H4 M2 H3 M H M H2 M H M H2 M2 H3 M2 H M H4 M H M2 H M H2 M H3 M2 H4 M H M H M H M H3 M H2 M2 H3 M2 H M H4 M H M2 H M H2 M H3 M2 H4 M H M H M H M H3 M H2 M2 H4 M H M H2 M H2 M H2 M2 H8 ; 8,0,2,2,2,1,4,0,2,3,1,1,1,4,0,3,2,1,0,1,4,1,0,3,0,2,3,1,1,1,4,0,3,2,1,0,1,4,1,0,3,0,2,1,2,1,3,0,4,0,1,0,1,0,0
+56  90   2.365426      +0.65714  209    3      C5+loop(51)           | M3 H M2 H2 M2 H M H2 M H3 M H M H2 M H M H3 M2 H M H3 M H2 M H2 M H2 M2 H4 M2 H2 M H2 M2 H4 M2 H2 M H2 M2 H4 M2 H2 M H2 M2 H4 M2 H2 M H2 M2 H4 M2 H2 M H2 M2 H4 M2 H2 M H2 M2 H4 M2 H2 M H2 M2 H8 ; 8,0,2,2,0,4,0,2,2,0,4,0,2,2,0,4,0,2,2,0,4,0,2,2,0,4,0,2,2,0,4,0,2,2,0,4,0,2,2,2,3,1,0,3,1,2,1,3,2,1,0,2,0,1,0,0
+57  91   1.576951      +0.07217  1397   7      C17+loop(40)          | M7 H4 M H M2 H3 M H M H2 M H M H M H2 M H4 M2 H3 M2 H2 M2 H3 M2 H3 M H2 M H3 M H2 M3 H2 M H2 M H2 M H2 M2 H3 M H M H2 M2 H M H4 M2 H M H3 M H M H2 M H M H3 M H2 M H M H2 M2 H M H2 M H4 M H M H M H10 ; 10,1,1,4,2,1,0,2,1,2,3,1,2,1,3,1,0,4,1,0,2,1,3,0,2,2,2,2,0,0,2,3,2,3,0,3,0,2,0,3,0,4,2,1,1,2,1,3,0,1,4,0,0,0,0,0,0
+58  93   2.102601      +0.48721  317    3      C5+loop(53)           | M3 H M2 H M2 H4 M2 H3 M H M H2 M H M H2 M2 H4 M H M H2 M H2 M H2 M2 H2 M2 H2 M H2 M H3 M H M2 H M H2 M H M H3 M H M H M H3 M H2 M2 H4 M H M H2 M H2 M H2 M2 H4 M2 H2 M H2 M2 H4 M2 H2 M H2 M2 H4 M2 H2 M H2 M2 H8 ; 8,0,2,2,0,4,0,2,2,0,4,0,2,2,0,4,0,2,2,2,1,4,0,2,3,1,1,3,1,2,1,0,1,3,2,2,0,2,0,2,2,2,1,4,0,2,1,2,1,3,0,4,0,1,0,1,0,0
+59  95   2.803468      +0.90225  61     3      C5+loop(54)           | M3 H M2 H3 M H M H M H3 M2 H3 M H M H M H3 M2 H3 M H M H M H3 M2 H3 M H M H M H3 M2 H3 M H M H M H3 M2 H3 M H M H M H3 M2 H3 M H M H M H3 M2 H3 M H M H M H3 M2 H3 M H M H M H3 M2 H3 M H M H M H3 M2 H3 M H M H M H5 M H4 ; 4,5,1,1,3,0,3,1,1,3,0,3,1,1,3,0,3,1,1,3,0,3,1,1,3,0,3,1,1,3,0,3,1,1,3,0,3,1,1,3,0,3,1,1,3,0,3,1,1,3,0,3,1,1,3,0,1,0,0
+60  96   1.868978      +0.31729  497    3      C5+loop(55)           | M3 H M2 H M2 H4 M2 H3 M H M H2 M H M H2 M2 H3 M2 H M H4 M H M2 H M H2 M H3 M2 H4 M H M H M H M H3 M H2 M2 H3 M2 H M H4 M H M2 H M H2 M H3 M2 H4 M H M H M H M H3 M H2 M2 H3 M2 H M H4 M H M2 H M H2 M H5 M H M H5 M H4 ; 4,5,1,5,2,1,0,1,4,1,0,3,0,2,3,1,1,1,4,0,3,2,1,0,1,4,1,0,3,0,2,3,1,1,1,4,0,3,2,1,0,1,4,1,0,3,0,2,1,2,1,3,0,4,0,1,0,1,0,0
+61  98   2.491971      +0.73232  209    3      C5+loop(56)           | M3 H M2 H2 M2 H M H2 M H3 M H M H2 M H M H3 M2 H M H3 M H2 M H2 M H2 M2 H4 M2 H2 M H2 M2 H4 M2 H2 M H2 M2 H4 M2 H2 M H2 M2 H4 M2 H2 M H2 M2 H4 M2 H2 M H2 M2 H4 M2 H2 M H2 M2 H4 M2 H2 M H2 M2 H4 M2 H2 M H2 M2 H8 ; 8,0,2,2,0,4,0,2,2,0,4,0,2,2,0,4,0,2,2,0,4,0,2,2,0,4,0,2,2,0,4,0,2,2,0,4,0,2,2,0,4,0,2,2,2,3,1,0,3,1,2,1,3,2,1,0,2,0,1,0,0
+62  99   1.661314      +0.14736  821    5      C17+loop(45)          | M5 H M2 H M H5 M3 H2 M H M H2 M H3 M H2 M2 H M H3 M H2 M H M H3 M H M H M H3 M H M2 H2 M H M H M H4 M H2 M H M2 H3 M H2 M H M H2 M H M2 H4 M H2 M2 H3 M H2 M3 H2 M H2 M H2 M H4 M H M2 H2 M2 H2 M H3 M2 H2 M H3 M H4 M2 H8 ; 8,0,4,3,2,0,3,2,0,2,0,1,4,2,2,2,0,0,2,3,0,2,4,0,1,2,1,2,3,0,1,2,4,1,1,2,0,1,3,1,1,3,1,2,3,1,0,2,3,2,1,2,0,0,5,1,0,1,0,0,0,0
+63  101  2.215086      +0.56240  317    3      C5+loop(58)           | M3 H M2 H M2 H4 M2 H3 M H M H2 M H M H2 M2 H4 M H M H2 M H2 M H2 M2 H2 M2 H2 M H2 M H3 M H M2 H M H2 M H M H3 M H M H M H3 M H2 M2 H4 M H M H2 M H2 M H2 M2 H2 M2 H2 M H2 M H3 M H M2 H M H2 M H M H3 M H M H M H3 M H4 M H M H3 M H M H2 M H3 M H4 ; 4,3,2,1,3,1,4,3,1,1,3,1,2,1,0,1,3,2,2,0,2,0,2,2,2,1,4,0,2,3,1,1,3,1,2,1,0,1,3,2,2,0,2,0,2,2,2,1,4,0,2,1,2,1,3,0,4,0,1,0,1,0,0
+64  103  2.953447      +0.97744  61     3      C5+loop(59)           | M3 H M2 H3 M H M H M H3 M2 H3 M H M H M H3 M2 H3 M H M H M H3 M2 H3 M H M H M H3 M2 H3 M H M H M H3 M2 H3 M H M H M H3 M2 H3 M H M H M H3 M2 H3 M H M H M H3 M2 H3 M H M H M H3 M2 H3 M H M H M H3 M2 H3 M H M H M H3 M2 H3 M H M H M H5 M H4 ; 4,5,1,1,3,0,3,1,1,3,0,3,1,1,3,0,3,1,1,3,0,3,1,1,3,0,3,1,1,3,0,3,1,1,3,0,3,1,1,3,0,3,1,1,3,0,3,1,1,3,0,3,1,1,3,0,3,1,1,3,0,1,0,0
+65  104  1.968965      +0.39247  317    3      C5+loop(60)           | M3 H M2 H M2 H4 M2 H3 M H M H2 M H M H2 M2 H4 M H M H2 M H2 M H2 M2 H2 M2 H2 M H2 M H3 M H M2 H M H2 M H M H3 M H M H M H3 M H2 M2 H4 M H M H2 M H2 M H2 M2 H2 M2 H2 M H2 M H3 M H M2 H M H2 M H M H3 M H M H M H3 M H2 M2 H4 M H M H2 M H2 M H2 M2 H8 ; 8,0,2,2,2,1,4,0,2,3,1,1,3,1,2,1,0,1,3,2,2,0,2,0,2,2,2,1,4,0,2,3,1,1,3,1,2,1,0,1,3,2,2,0,2,0,2,2,2,1,4,0,2,1,2,1,3,0,4,0,1,0,1,0,0
+66  106  2.625287      +0.80751  209    3      C5+loop(61)           | M3 H M2 H2 M2 H M H2 M H3 M H M H2 M H M H3 M2 H M H3 M H2 M H2 M H2 M2 H4 M2 H2 M H2 M2 H4 M2 H2 M H2 M2 H4 M2 H2 M H2 M2 H4 M2 H2 M H2 M2 H4 M2 H2 M H2 M2 H4 M2 H2 M H2 M2 H4 M2 H2 M H2 M2 H4 M2 H2 M H2 M2 H4 M2 H2 M H2 M2 H8 ; 8,0,2,2,0,4,0,2,2,0,4,0,2,2,0,4,0,2,2,0,4,0,2,2,0,4,0,2,2,0,4,0,2,2,0,4,0,2,2,0,4,0,2,2,0,4,0,2,2,2,3,1,0,3,1,2,1,3,2,1,0,2,0,1,0,0
+67  107  1.750191      +0.22255  533    3      C17+loop(50)          | M3 H M2 H M2 H4 M2 H2 M2 H M H4 M2 H3 M H2 M H M2 H2 M H2 M H2 M H M H3 M2 H4 M2 H2 M2 H M H4 M2 H3 M H2 M H M2 H2 M H2 M H2 M H M H3 M2 H4 M2 H2 M2 H M H4 M2 H3 M H2 M H M2 H2 M H2 M H2 M H M H3 M2 H4 M2 H2 M2 H M H4 M2 H3 M H2 M H8 ; 8,2,3,0,4,1,0,2,0,4,0,3,1,2,2,2,0,1,2,3,0,4,1,0,2,0,4,0,3,1,2,2,2,0,1,2,3,0,4,1,0,2,0,4,0,3,1,2,2,2,0,1,2,3,0,4,1,0,2,0,4,0,1,0,1,0,0
+68  109  2.333588      +0.63759  317    3      C5+loop(63)           | M3 H M2 H M2 H4 M2 H3 M H M H2 M H M H2 M2 H4 M H M H2 M H2 M H2 M2 H2 M2 H2 M H2 M H3 M H M2 H M H2 M H M H3 M H M H M H3 M H2 M2 H4 M H M H2 M H2 M H2 M2 H2 M2 H2 M H2 M H3 M H M2 H M H2 M H M H3 M H M H M H3 M H2 M2 H4 M H M H2 M H2 M H2 M2 H6 M2 H3 M H4 ; 4,3,0,6,0,2,2,2,1,4,0,2,3,1,1,3,1,2,1,0,1,3,2,2,0,2,0,2,2,2,1,4,0,2,3,1,1,3,1,2,1,0,1,3,2,2,0,2,0,2,2,2,1,4,0,2,1,2,1,3,0,4,0,1,0,1,0,0
+69  110  1.555725      +0.05262  2081   7      C29+loop(40)          | M7 H4 M3 H2 M H M H2 M H2 M H M H3 M H M H3 M H M H3 M3 H3 M H M H3 M2 H M H2 M H2 M H2 M H3 M2 H2 M2 H2 M H2 M H2 M H M H2 M H2 M H3 M H2 M3 H3 M H3 M H M2 H2 M H3 M H M H M H3 M H M H M H2 M H M2 H5 M2 H2 M2 H2 M H M H2 M H M H3 M H3 M H M H10 ; 10,1,3,3,1,2,1,2,0,2,0,5,0,1,2,1,1,3,1,1,3,2,0,1,3,3,0,0,2,3,2,2,1,2,2,2,0,2,0,3,2,2,2,1,0,3,1,3,0,0,3,1,3,1,3,1,2,2,1,2,0,0,4,0,0,0,0,0,0
+70  112  2.074301      +0.46766  317    3      C5+loop(65)           | M3 H M2 H M2 H4 M2 H3 M H M H2 M H M H2 M2 H4 M H M H2 M H2 M H2 M2 H2 M2 H2 M H2 M H3 M H M2 H M H2 M H M H3 M H M H M H3 M H2 M2 H4 M H M H2 M H2 M H2 M2 H2 M2 H2 M H2 M H3 M H M2 H M H2 M H M H3 M H M H M H3 M H2 M2 H4 M H M H2 M H2 M H2 M2 H4 M2 H2 M H2 M2 H8 ; 8,0,2,2,0,4,0,2,2,2,1,4,0,2,3,1,1,3,1,2,1,0,1,3,2,2,0,2,0,2,2,2,1,4,0,2,3,1,1,3,1,2,1,0,1,3,2,2,0,2,0,2,2,2,1,4,0,2,1,2,1,3,0,4,0,1,0,1,0,0
+71  114  2.765734      +0.88270  209    3      C5+loop(66)           | M3 H M2 H2 M2 H M H2 M H3 M H M H2 M H M H3 M2 H M H3 M H2 M H2 M H2 M2 H4 M2 H2 M H2 M2 H4 M2 H2 M H2 M2 H4 M2 H2 M H2 M2 H4 M2 H2 M H2 M2 H4 M2 H2 M H2 M2 H4 M2 H2 M H2 M2 H4 M2 H2 M H2 M2 H4 M2 H2 M H2 M2 H4 M2 H2 M H2 M2 H4 M2 H2 M H2 M2 H8 ; 8,0,2,2,0,4,0,2,2,0,4,0,2,2,0,4,0,2,2,0,4,0,2,2,0,4,0,2,2,0,4,0,2,2,0,4,0,2,2,0,4,0,2,2,0,4,0,2,2,0,4,0,2,2,2,3,1,0,3,1,2,1,3,2,1,0,2,0,1,0,0
+72  115  1.843823      +0.29774  497    3      C17+loop(55)          | M3 H M2 H M2 H4 M2 H3 M H M H2 M H M H2 M2 H3 M2 H M H4 M H M2 H M H2 M H3 M2 H4 M H M H M H M H3 M H2 M2 H3 M2 H M H4 M H M2 H M H2 M H3 M2 H4 M H M H M H M H3 M H2 M2 H3 M2 H M H4 M H M2 H M H2 M H3 M2 H4 M H M H M H M H3 M H2 M2 H4 M H M H2 M H2 M H2 M2 H8 ; 8,0,2,2,2,1,4,0,2,3,1,1,1,4,0,3,2,1,0,1,4,1,0,3,0,2,3,1,1,1,4,0,3,2,1,0,1,4,1,0,3,0,2,3,1,1,1,4,0,3,2,1,0,1,4,1,0,3,0,2,1,2,1,3,0,4,0,1,0,1,0,0
+73  117  2.458430      +0.71277  317    3      C5+loop(68)           | M3 H M2 H M2 H4 M2 H3 M H M H2 M H M H2 M2 H4 M H M H2 M H2 M H2 M2 H2 M2 H2 M H2 M H3 M H M2 H M H2 M H M H3 M H M H M H3 M H2 M2 H4 M H M H2 M H2 M H2 M2 H2 M2 H2 M H2 M H3 M H M2 H M H2 M H M H3 M H M H M H3 M H2 M2 H4 M H M H2 M H2 M H2 M2 H4 M2 H2 M H2 M2 H6 M2 H3 M H4 ; 4,3,0,6,0,2,2,0,4,0,2,2,2,1,4,0,2,3,1,1,3,1,2,1,0,1,3,2,2,0,2,0,2,2,2,1,4,0,2,3,1,1,3,1,2,1,0,1,3,2,2,0,2,0,2,2,2,1,4,0,2,1,2,1,3,0,4,0,1,0,1,0,0
+74  118  1.638954      +0.12781  949    5      C29+loop(45)          | M5 H M2 H M H3 M2 H3 M H M H2 M H M H M H2 M H4 M2 H3 M2 H2 M2 H5 M3 H4 M H M H M H2 M2 H2 M H2 M H2 M H4 M H M2 H2 M2 H2 M H3 M2 H2 M H3 M H M2 H2 M H2 M H M H2 M H M H2 M H2 M H2 M H M H M H M H4 M2 H4 M3 H3 M H2 M H M H M H3 M H2 M H M2 H4 M H2 M2 H3 M H2 M H8 ; 8,2,3,0,2,4,0,1,2,3,1,1,2,3,0,0,4,0,4,1,1,1,2,2,2,1,2,1,2,2,0,1,3,2,0,3,2,0,2,0,1,4,2,2,2,0,2,1,1,4,0,0,5,0,2,0,3,0,4,2,1,1,2,1,3,0,3,1,0,1,0,0,0,0
+75  120  2.185271      +0.54285  317    3      C5+loop(70)           | M3 H M2 H M2 H4 M2 H3 M H M H2 M H M H2 M2 H4 M H M H2 M H2 M H2 M2 H2 M2 H2 M H2 M H3 M H M2 H M H2 M H M H3 M H M H M H3 M H2 M2 H4 M H M H2 M H2 M H2 M2 H2 M2 H2 M H2 M H3 M H M2 H M H2 M H M H3 M H M H M H3 M H2 M2 H4 M H M H2 M H2 M H2 M2 H4 M2 H2 M H2 M2 H4 M2 H2 M H2 M2 H8 ; 8,0,2,2,0,4,0,2,2,0,4,0,2,2,2,1,4,0,2,3,1,1,3,1,2,1,0,1,3,2,2,0,2,0,2,2,2,1,4,0,2,3,1,1,3,1,2,1,0,1,3,2,2,0,2,0,2,2,2,1,4,0,2,1,2,1,3,0,4,0,1,0,1,0,0
+76  122  2.913695      +0.95789  209    3      C5+loop(71)           | M3 H M2 H2 M2 H M H2 M H3 M H M H2 M H M H3 M2 H M H3 M H2 M H2 M H2 M2 H4 M2 H2 M H2 M2 H4 M2 H2 M H2 M2 H4 M2 H2 M H2 M2 H4 M2 H2 M H2 M2 H4 M2 H2 M H2 M2 H4 M2 H2 M H2 M2 H4 M2 H2 M H2 M2 H4 M2 H2 M H2 M2 H4 M2 H2 M H2 M2 H4 M2 H2 M H2 M2 H4 M2 H2 M H2 M2 H8 ; 8,0,2,2,0,4,0,2,2,0,4,0,2,2,0,4,0,2,2,0,4,0,2,2,0,4,0,2,2,0,4,0,2,2,0,4,0,2,2,0,4,0,2,2,0,4,0,2,2,0,4,0,2,2,0,4,0,2,2,2,3,1,0,3,1,2,1,3,2,1,0,2,0,1,0,0
+77  123  1.942463      +0.37292  497    3      C17+loop(60)          | M3 H M2 H M2 H4 M2 H3 M H M H2 M H M H2 M2 H3 M2 H M H4 M H M2 H M H2 M H3 M2 H4 M H M H M H M H3 M H2 M2 H3 M2 H M H4 M H M2 H M H2 M H3 M2 H4 M H M H M H M H3 M H2 M2 H3 M2 H M H4 M H M2 H M H2 M H3 M2 H4 M H M H M H M H3 M H2 M2 H3 M2 H M H4 M H M2 H M H2 M H5 M H M H5 M H4 ; 4,5,1,5,2,1,0,1,4,1,0,3,0,2,3,1,1,1,4,0,3,2,1,0,1,4,1,0,3,0,2,3,1,1,1,4,0,3,2,1,0,1,4,1,0,3,0,2,3,1,1,1,4,0,3,2,1,0,1,4,1,0,3,0,2,1,2,1,3,0,4,0,1,0,1,0,0
+78  125  2.589951      +0.78796  317    3      C5+loop(73)           | M3 H M2 H M2 H4 M2 H3 M H M H2 M H M H2 M2 H4 M H M H2 M H2 M H2 M2 H2 M2 H2 M H2 M H3 M H M2 H M H2 M H M H3 M H M H M H3 M H2 M2 H4 M H M H2 M H2 M H2 M2 H2 M2 H2 M H2 M H3 M H M2 H M H2 M H M H3 M H M H M H3 M H2 M2 H4 M H M H2 M H2 M H2 M2 H4 M2 H2 M H2 M2 H4 M2 H2 M H2 M2 H6 M2 H3 M H4 ; 4,3,0,6,0,2,2,0,4,0,2,2,0,4,0,2,2,2,1,4,0,2,3,1,1,3,1,2,1,0,1,3,2,2,0,2,0,2,2,2,1,4,0,2,3,1,1,3,1,2,1,0,1,3,2,2,0,2,0,2,2,2,1,4,0,2,1,2,1,3,0,4,0,1,0,1,0,0
+79  126  1.726634      +0.20300  821    5      C29+loop(50)          | M5 H M2 H M H5 M3 H2 M H M H2 M H3 M H2 M2 H M H3 M H2 M H M H3 M H M H M H3 M H M2 H2 M H M H M H4 M H2 M H M2 H3 M H2 M H M H2 M H M2 H4 M H2 M2 H3 M H2 M3 H2 M H2 M H2 M H4 M H M2 H2 M2 H2 M H3 M2 H2 M H3 M H2 M2 H2 M H3 M H M H M H M H M H3 M2 H M H5 M H M2 H3 M H M H4 M H2 M2 H8 ; 8,0,2,4,1,3,0,1,5,1,0,3,1,1,1,1,3,2,0,2,3,2,0,3,2,0,2,0,1,4,2,2,2,0,0,2,3,0,2,4,0,1,2,1,2,3,0,1,2,4,1,1,2,0,1,3,1,1,3,1,2,3,1,0,2,3,2,1,2,0,0,5,1,0,1,0,0,0,0
+80  128  2.302179      +0.61804  317    3      C5+loop(75)           | M3 H M2 H M2 H4 M2 H3 M H M H2 M H M H2 M2 H4 M H M H2 M H2 M H2 M2 H2 M2 H2 M H2 M H3 M H M2 H M H2 M H M H3 M H M H M H3 M H2 M2 H4 M H M H2 M H2 M H2 M2 H2 M2 H2 M H2 M H3 M H M2 H M H2 M H M H3 M H M H M H3 M H2 M2 H4 M H M H2 M H2 M H2 M2 H4 M2 H2 M H2 M2 H4 M2 H2 M H2 M2 H4 M2 H2 M H2 M2 H8 ; 8,0,2,2,0,4,0,2,2,0,4,0,2,2,0,4,0,2,2,2,1,4,0,2,3,1,1,3,1,2,1,0,1,3,2,2,0,2,0,2,2,2,1,4,0,2,3,1,1,3,1,2,1,0,1,3,2,2,0,2,0,2,2,2,1,4,0,2,1,2,1,3,0,4,0,1,0,1,0,0
+family constructions for s = 81..160:
+81:C41+loop(40) 82:C17+loop(65) 83:C5+loop(78) 84:C29+loop(55) 85:C5+loop(80) 86:C41+loop(45) 87:C17+loop(70) 88:C5+loop(83) 89:C29+loop(60) 90:C5+loop(85) 91:C41+loop(50) 92:C17+loop(75) 93:base 94:C
+29+loop(65) 95:C5+loop(90) 96:C41+loop(55) 97:C17+loop(80) 98:C41+loop(57) 99:C29+loop(70) 100:C5+loop(95) 101:C41+loop(60) 102:C17+loop(85) 103:C41+loop(62) 104:C29+loop(75) 105:C5+loop(100) 106:C41+
+loop(65) 107:C17+loop(90) 108:C41+loop(67) 109:C29+loop(80) 110:C41+loop(69) 111:C41+loop(70) 112:C17+loop(95) 113:C41+loop(72) 114:C29+loop(85) 115:C41+loop(74) 116:C41+loop(75) 117:C17+loop(100) 118
+:C41+loop(77) 119:C29+loop(90) 120:C41+loop(79) 121:C41+loop(80) 122:C41+loop(81) 123:C41+loop(82) 124:C29+loop(95) 125:C41+loop(84) 126:C41+loop(85) 127:C41+loop(86) 128:C41+loop(87) 129:C29+loop(100
+) 130:C41+loop(89) 131:C41+loop(90) 132:C41+loop(91) 133:C41+loop(92) 134:C94+loop(40) 135:C41+loop(94) 136:C41+loop(95) 137:C41+loop(96) 138:C41+loop(97) 139:C94+loop(45) 140:C41+loop(99) 141:C41+loo
+p(100) 142:C41+loop(101) 143:C41+loop(102) 144:C94+loop(50) 145:C41+loop(104) 146:base 147:C41+loop(106) 148:C41+loop(107) 149:C94+loop(55) 150:C41+loop(109) 151:C94+loop(57) 152:C41+loop(111) 153:C41
++loop(112) 154:C94+loop(60) 155:C41+loop(114) 156:C94+loop(62) 157:C41+loop(116) 158:C41+loop(117) 159:C94+loop(65) 160:C41+loop(119) 
+
+### 5. hostile points 1/2 and dyadic threads: Bad_inf proofs, transfer lemmas on integers, prices
+1/2: non-integer reverse-tree nodes: []
+   non-integer nodes all > 1: True; q < 7/3: True; s* = 1 (value 1 must not occur before depth s*), first node of the form 4/2^k at depth 1; smallest depth-1 integer node 1
+   => 1/2 in Bad_inf: True
+43/32: non-integer reverse-tree nodes: ['13/4']
+   node   13/4 at depth 1, moves [3], multiplier 2^3/3^1 = 2.6667
+   non-integer nodes all > 1: True; q < 7/3: True; s* = 2 (value 1 must not occur before depth s*), first node of the form 4/2^k at depth 2; smallest depth-1 integer node 14
+   => 43/32 in Bad_inf: True
+59/64: non-integer reverse-tree nodes: ['1/2', '17/8', '19/2', '5/2']
+   node   17/8 at depth 1, moves [3], multiplier 2^3/3^1 = 2.6667
+   node   19/2 at depth 1, moves [5], multiplier 2^5/3^1 = 10.6667
+   node    5/2 at depth 2, moves [3, 2], multiplier 2^5/3^2 = 3.5556
+   node    1/2 at depth 3, moves [3, 2, 0], multiplier 2^5/3^3 = 1.1852
+   non-integer nodes all > 1: True; q < 7/3: True; s* = 1 (value 1 must not occur before depth s*), first node of the form 4/2^k at depth 3; smallest depth-1 integer node 157
+   => 59/64 in Bad_inf: True
+145/128: non-integer reverse-tree nodes: ['13/4', '43/16', '47/4']
+   node  43/16 at depth 1, moves [3], multiplier 2^3/3^1 = 2.6667
+   node   47/4 at depth 1, moves [5], multiplier 2^5/3^1 = 10.6667
+   node   13/4 at depth 2, moves [3, 2], multiplier 2^5/3^2 = 3.5556
+   non-integer nodes all > 1: True; q < 7/3: True; s* = 1 (value 1 must not occur before depth s*), first node of the form 4/2^k at depth 3; smallest depth-1 integer node 193
+   => 145/128 in Bad_inf: True
+209/256: non-integer reverse-tree nodes: ['1/2', '17/8', '19/2', '5/2', '59/32', '67/8']
+   node  59/32 at depth 1, moves [3], multiplier 2^3/3^1 = 2.6667
+   node   67/8 at depth 1, moves [5], multiplier 2^5/3^1 = 10.6667
+   node   17/8 at depth 2, moves [3, 2], multiplier 2^5/3^2 = 3.5556
+   node   19/2 at depth 2, moves [3, 4], multiplier 2^7/3^2 = 14.2222
+   node    5/2 at depth 3, moves [3, 2, 2], multiplier 2^7/3^3 = 4.7407
+   node    1/2 at depth 4, moves [3, 2, 2, 0], multiplier 2^7/3^4 = 1.5802
+   non-integer nodes all > 1: True; q < 7/3: True; s* = 1 (value 1 must not occur before depth s*), first node of the form 4/2^k at depth 4; smallest depth-1 integer node 139
+   => 209/256 in Bad_inf: True
+371/256: non-integer reverse-tree nodes: ['11/2', '113/32', '121/8', '35/8', '37/2']
+   node 113/32 at depth 1, moves [3], multiplier 2^3/3^1 = 2.6667
+   node  121/8 at depth 1, moves [5], multiplier 2^5/3^1 = 10.6667
+   node   35/8 at depth 2, moves [3, 2], multiplier 2^5/3^2 = 3.5556
+   node   37/2 at depth 2, moves [3, 4], multiplier 2^7/3^2 = 14.2222
+   node   11/2 at depth 3, moves [3, 2, 2], multiplier 2^7/3^3 = 4.7407
+   non-integer nodes all > 1: True; q < 7/3: True; s* = 3 (value 1 must not occur before depth s*), first node of the form 4/2^k at depth >1; smallest depth-1 integer node 247
+   => 371/256 in Bad_inf: True
+499/512: non-integer reverse-tree nodes: ['1/2', '13/4', '145/64', '161/16', '17/2', '43/16', '47/4', '5/2', '53/2']
+   node 145/64 at depth 1, moves [3], multiplier 2^3/3^1 = 2.6667
+   node 161/16 at depth 1, moves [5], multiplier 2^5/3^1 = 10.6667
+   node  43/16 at depth 2, moves [3, 2], multiplier 2^5/3^2 = 3.5556
+   node   47/4 at depth 2, moves [3, 4], multiplier 2^7/3^2 = 14.2222
+   node   53/2 at depth 2, moves [5, 3], multiplier 2^8/3^2 = 28.4444
+   node   13/4 at depth 3, moves [3, 2, 2], multiplier 2^7/3^3 = 4.7407
+   node   17/2 at depth 3, moves [5, 3, 0], multiplier 2^8/3^3 = 9.4815
+   node    5/2 at depth 4, moves [5, 3, 0, 0], multiplier 2^8/3^4 = 3.1605
+   node    1/2 at depth 5, moves [5, 3, 0, 0, 0], multiplier 2^8/3^5 = 1.0535
+   non-integer nodes all > 1: True; q < 7/3: True; s* = 1 (value 1 must not occur before depth s*), first node of the form 4/2^k at depth 4; smallest depth-1 integer node 166
+   => 499/512 in Bad_inf: True
+Part B: exact integer checks passed: 1-escape 1552, 1/2-transfer 1552, 43/32 route 30, 59/64 route 11
+Part C: prices along the threads (c = c(s) = 2^K0(s)/3^s, s = k-1 for 1 and 1/2, s = k-4 for 43/32, 59/64)
+  k   c(k-1)   1-escape c/3   1/2 price 2c/3   2-move exit y=2,8 mod 9 (c<9/4)   43/32: 32c(k-4)/81  59/64 price 64c(k-4)/81
+   3  1.7778   0.5926        1.1852          yes                                  -              -
+   4  2.3704   0.7901        1.5802          no                                   -              -
+   5  1.5802   0.5267        1.0535          yes                                  -              -
+   6  2.1070   0.7023        1.4047          yes                               0.7023 <1            1.4047
+   7  2.8093   0.9364        1.8729          no                                0.9364 <1            1.8729
+   8  1.8729   0.6243        1.2486          yes                               0.6243 <1            1.2486
+   9  2.4972   0.8324        1.6648          no                                0.8324 <1            1.6648
+  10  1.6648   0.5549        1.1099          yes                               1.1099 >1            2.2197
+  11  2.2197   0.7399        1.4798          yes                               0.7399 <1            1.4798
+  12  2.9596   0.9865        1.9731          no                                0.9865 <1            1.9731
+  13  1.9731   0.6577        1.3154          yes                               0.6577 <1            1.3154
+  14  2.6308   0.8769        1.7538          no                                0.8769 <1            1.7538
+  15  1.7538   0.5846        1.1692          yes                               1.1692 >1            2.3385
+  16  2.3385   0.7795        1.5590          no                                0.7795 <1            1.5590
+  17  1.5590   0.5197        1.0393          yes                               1.0393 >1            2.0786
+  18  2.0786   0.6929        1.3858          yes                               0.6929 <1            1.3858
+  19  2.7715   0.9238        1.8477          no                                0.9238 <1            1.8477
+  20  1.8477   0.6159        1.2318          yes                               0.6159 <1            1.2318
+  21  2.4636   0.8212        1.6424          no                                0.8212 <1            1.6424
+  22  1.6424   0.5475        1.0949          yes                               1.0949 >1            2.1898
+  23  2.1898   0.7299        1.4599          yes                               0.7299 <1            1.4599
+  24  2.9198   0.9733        1.9465          no                                0.9733 <1            1.9465
+  25  1.9465   0.6488        1.2977          yes                               0.6488 <1            1.2977
+  26  2.5954   0.8651        1.7302          no                                0.8651 <1            1.7302
+  27  1.7302   0.5767        1.1535          yes                               1.1535 >1            2.3070
+  28  2.3070   0.7690        1.5380          no                                0.7690 <1            1.5380
+  29  1.5380   0.5127        1.0253          yes                               1.0253 >1            2.0507
+  30  2.0507   0.6836        1.3671          yes                               0.6836 <1            1.3671
+  31  2.7342   0.9114        1.8228          no                                0.9114 <1            1.8228
+  32  1.8228   0.6076        1.2152          yes                               0.6076 <1            1.2152
+  33  2.4304   0.8101        1.6203          no                                0.8101 <1            1.6203
+  34  1.6203   0.5401        1.0802          yes                               1.0802 >1            2.1604
+  35  2.1604   0.7201        1.4402          yes                               0.7201 <1            1.4402
+  36  2.8805   0.9602        1.9203          no                                0.9602 <1            1.9203
+  37  1.9203   0.6401        1.2802          yes                               0.6401 <1            1.2802
+  38  2.5604   0.8535        1.7070          no                                0.8535 <1            1.7070
+  39  1.7070   0.5690        1.1380          yes                               1.1380 >1            2.2759
+  40  2.2759   0.7586        1.5173          no                                0.7586 <1            1.5173
+  frequencies over k (eps(k) equidistributed): 1/2 two-move exit on y=2,8 (mod 9) needs c<9/4: 0.5850;  43/32 direct route needs c<81/32: 0.7549
+Part D: 1/2-transfer followed by one level-12 certificate of the landing class y = 2^K w
+  k   c(k-1)   threshold 3/(2c)   failing classes (f >= threshold or exceptional) of 2*3^12   fraction
+   3  1.7778   0.8438               65                                   6.12e-05
+   4  2.3704   0.6328              165                                   1.55e-04
+   5  1.5802   0.9492               56                                   5.27e-05
+   6  2.1070   0.7119              145                                   1.36e-04
+   7  2.8093   0.5339              271                                   2.55e-04
+   8  1.8729   0.8009               82                                   7.71e-05
+   9  2.4972   0.6007              198                                   1.86e-04
+  10  1.6648   0.9010               62                                   5.83e-05
+  11  2.2197   0.6758              160                                   1.51e-04
+  12  2.9596   0.5068              285                                   2.68e-04
+  13  1.9731   0.7602               85                                   8.00e-05
+  14  2.6308   0.5702              202                                   1.90e-04
+  15  1.7538   0.8553               65                                   6.12e-05
+  16  2.3385   0.6414              165                                   1.55e-04
+  17  1.5590   0.9622               56                                   5.27e-05
+  18  2.0786   0.7216              145                                   1.36e-04
+  19  2.7715   0.5412              271                                   2.55e-04
+  20  1.8477   0.8118               82                                   7.71e-05
+  21  2.4636   0.6089              198                                   1.86e-04
+  22  1.6424   0.9133               62                                   5.83e-05
+  23  2.1898   0.6850              160                                   1.51e-04
+  24  2.9198   0.5137              285                                   2.68e-04
+  25  1.9465   0.7706               85                                   8.00e-05
+  26  2.5954   0.5780              202                                   1.90e-04
+  27  1.7302   0.8669               65                                   6.12e-05
+  28  2.3070   0.6502              165                                   1.55e-04
+  29  1.5380   0.9753               56                                   5.27e-05
+  30  2.0507   0.7315              145                                   1.36e-04
+  31  2.7342   0.5486              271                                   2.55e-04
+  32  1.8228   0.8229               82                                   7.71e-05
+  33  2.4304   0.6172              198                                   1.86e-04
+  34  1.6203   0.9258               62                                   5.83e-05
+  35  2.1604   0.6943              160                                   1.51e-04
+  36  2.8805   0.5207              285                                   2.68e-04
+  37  1.9203   0.7811               85                                   8.00e-05
+  38  2.5604   0.5858              202                                   1.90e-04
+  39  1.7070   0.8788               65                                   6.12e-05
+  40  2.2759   0.6591              165                                   1.55e-04
+
+### 6. see-saw: exact certificates at level r = 12 (classes mod 3^13)
+level r=12 (mod 3^13): exceptional classes 30
+  exceptional: 1 88574 174380 193064 193550 265721 311648 322583 344453 462551 495113 797162 825188 915260 926195 969206 974309 1033358 1044293 1055228 1087304 1127237 1141250 1145921 1184261 1245335 1328603 1457312 1466654 1486067
+  units 1062882, certified 1062852
+  worst certified factor overall: 2^19/3^12 = 0.986540 at class 64355 (dist 12)
+  fraction of certified classes with factor >= 0.50: 2.399e-04 (255)
+  fraction of certified classes with factor >= 0.60: 1.581e-04 (168)
+  fraction of certified classes with factor >= 0.70: 1.223e-04 (130)
+  fraction of certified classes with factor >= 0.80: 4.892e-05 (52)
+  fraction of certified classes with factor >= 0.90: 3.011e-05 (32)
+  fraction of certified classes with factor >= 0.95: 2.446e-05 (26)
+  fraction of certified classes with factor >= 0.98: 2.446e-05 (26)
+  worst certified factor among classes whose 3-adic distance to the exceptional set is exactly 3^-d
+  (d = largest j with c = e mod 3^j):
+   d= 1  classes    708588  worst 2^1/3^1 = 0.666667 (class 2)
+   d= 2  classes    236196  worst 2^3/3^2 = 0.888889 (class 199292)
+   d= 3  classes     39366  worst 2^4/3^3 = 0.592593 (class 348760)
+   d= 4  classes     39366  worst 2^6/3^4 = 0.790123 (class 660151)
+   d= 5  classes     17496  worst 2^11/3^7 = 0.936443 (class 523139)
+   d= 6  classes     13122  worst 2^9/3^6 = 0.702332 (class 207077)
+   d= 7  classes      5346  worst 2^11/3^7 = 0.936443 (class 258067)
+   d= 8  classes      2025  worst 2^19/3^12 = 0.986540 (class 1313294)
+   d= 9  classes       864  worst 2^14/3^9 = 0.832393 (class 20777)
+   d=10  classes       279  worst 2^19/3^12 = 0.986540 (class 429746)
+   d=11  classes       150  worst 2^17/3^11 = 0.739905 (class 5306)
+   d=12  classes        54  worst 2^19/3^12 = 0.986540 (class 64355)
+  cumulative worst over classes with d <= j:
+   d<= 1: 2^1/3^1 = 0.666667
+   d<= 2: 2^3/3^2 = 0.888889
+   d<= 3: 2^3/3^2 = 0.888889
+   d<= 4: 2^3/3^2 = 0.888889
+   d<= 5: 2^11/3^7 = 0.936443
+   d<= 6: 2^11/3^7 = 0.936443
+   d<= 7: 2^11/3^7 = 0.936443
+   d<= 8: 2^19/3^12 = 0.986540
+   d<= 9: 2^19/3^12 = 0.986540
+   d<=10: 2^19/3^12 = 0.986540
+   d<=11: 2^19/3^12 = 0.986540
+   d<=12: 2^19/3^12 = 0.986540
+  best descent rate per consumed digit, max_s (s ln3 - Kmin_s ln2)/s, worst class among d <= j:
+   d<= 1: worst best-rate 0.40547 nats/move (class 2, at length 1)
+   d<= 2: worst best-rate 0.05889 nats/move (class 36446, at length 2)
+   d<= 3: worst best-rate 0.05889 nats/move (class 36446, at length 2)
+   d<= 4: worst best-rate 0.05889 nats/move (class 36446, at length 2)
+   d<= 5: worst best-rate 0.00938 nats/move (class 523139, at length 7)
+   d<= 6: worst best-rate 0.00938 nats/move (class 523139, at length 7)
+   d<= 7: worst best-rate 0.00938 nats/move (class 523139, at length 7)
+   d<= 8: worst best-rate 0.00113 nats/move (class 1313294, at length 12)
+   d<= 9: worst best-rate 0.00113 nats/move (class 1313294, at length 12)
+   d<=10: worst best-rate 0.00113 nats/move (class 1313294, at length 12)
+   d<=11: worst best-rate 0.00113 nats/move (class 1313294, at length 12)
+   d<=12: worst best-rate 0.00113 nats/move (class 1313294, at length 12)
+  thread 1: classes 1 + 3^k u mod 3^13, certified factor (worst over u mod 3^(R+1-k)):
+   k= 1  all certified worst 2^0/3^1 = 0.333333
+   k= 2  all certified worst 2^2/3^2 = 0.444444
+   k= 3  all certified worst 2^4/3^3 = 0.592593
+   k= 4  all certified worst 2^6/3^4 = 0.790123
+   k= 5  all certified worst 2^7/3^5 = 0.526749
+   k= 6  all certified worst 2^9/3^6 = 0.702332
+   k= 7  all certified worst 2^11/3^7 = 0.936443
+   k= 8  all certified worst 2^12/3^8 = 0.624295
+   k= 9  all certified worst 2^14/3^9 = 0.832393
+   k=10  all certified worst 2^15/3^10 = 0.554929
+   k=11  all certified worst 2^17/3^11 = 0.739905
+   k=12  all certified worst 2^19/3^12 = 0.986540
+  thread 1/2: classes (1 + 3^k w)/2 mod 3^13, certified factor (worst over w):
+   k= 1  exceptional 0/354294, worst certified 2^1/3^1 = 0.666667
+   k= 2  exceptional 0/118098, worst certified 2^3/3^2 = 0.888889
+   k= 3  exceptional 3/39366, worst certified 2^19/3^12 = 0.986540
+   k= 4  exceptional 4/13122, worst certified 2^19/3^12 = 0.986540
+   k= 5  exceptional 2/4374, worst certified 2^19/3^12 = 0.986540
+   k= 6  exceptional 3/1458, worst certified 2^19/3^12 = 0.986540
+   k= 7  exceptional 4/486, worst certified 2^19/3^12 = 0.986540
+   k= 8  exceptional 3/162, worst certified 2^19/3^12 = 0.986540
+   k= 9  exceptional 3/54, worst certified 2^19/3^12 = 0.986540
+   k=10  exceptional 2/18, worst certified 2^19/3^12 = 0.986540
+   k=11  exceptional 2/6, worst certified 2^19/3^12 = 0.986540
+   k=12  exceptional 2/2, worst certified 2^0/3^0 = 0.000000

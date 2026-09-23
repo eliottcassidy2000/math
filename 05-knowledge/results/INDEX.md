@@ -1,5 +1,14 @@
 # Script Results Index
 
+- [Loops through 1 and escapes](collatz_procgen_20260922_loops_and_escapes.md):
+  **PROVED / FINITE-EXACT.** Loop ratio `>3/2` (Catalan-type), so the
+  1-escape needs exactly `floor(k log_2 3)` halvings and is the only exit.
+  Loops exist to `s=6000`, which settles the thread of `1` to depth
+  `6001`. HYP-9122 reduces to the record denominators of `log_2 3`. A
+  height lower bound excludes finite families. The `1/2` escape price is
+  exactly `2c(k-1)/3`. Seven dyadic points are proved hostile. The see-saw
+  does not close: its endgame is the base-3 digits of `2^K` (Erdős type).
+
 - [Sibling dimension ladder](collatz_procgen_20260922_sibling_dimension_ladder.md):
   **PROVED / FINITE-EXACT / CITED.** The `3n+b` exceptional set has
   dimension `h(log_3 2)`; exact counts to `m=10^5` fit exponent
