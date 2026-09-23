@@ -1,5 +1,14 @@
 # Script Results Index
 
+- [E-game exceptional set looks countable](collatz_procgen_20260922_exceptional_dimension.md):
+  **PROVED / FINITE-EXACT; dimension OPEN.** An exact integer
+  reformulation carries the threads to `2^64` and `3^41` (a speedup of
+  about `10^4`). The growth favours a power law (dimension `0`).
+  PROVED: the safety lemma, the carry identity, perturbation Theorem P, and
+  Theorem F (`-1-2^i/3^alpha(i)` hostile, so the set is infinite). A census
+  certifies 382 hostile rationals `-p/3^j`. Q2 is verified below
+  `7.87*10^17`.
+
 - [Althöfer's 3n±1 game](collatz_procgen_20260922_althofer_game.md):
   **FINITE-EXACT / PROVED structure / CITED.** This is Conway's
   Beans-Don't-Talk (Guy's Problem 42), with a prize open to 2037. No draws

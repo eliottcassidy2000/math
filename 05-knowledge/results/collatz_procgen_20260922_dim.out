@@ -1,0 +1,636 @@
+# collatz_procgen_20260922_dim.out -- exceptional-set dimension lane (session collatz-procgen-20260922, mac-mini, 2026-09-22)
+# Note: 05-knowledge/results/collatz_procgen_20260922_exceptional_dimension.md.  Reproduce: bash 04-computation/experiments/collatz_procgen_20260922_dim_run.sh  (FULL=1 for the production parameters)
+
+## A. Validation (quick mode of collatz_procgen_20260922_dim_run.sh): new exact programs vs the old float DPs, combined vs single lift, TT variant, known counts
+### 1. validation
+--- old float DP (forward) m<=24 vs new exact integer DP (P0=24): counts must agree
+CHECK: forward counts m=1..24 identical (old float DP vs new integer DP): 24 369
+--- combined-lift DFS vs single-lift DFS (P0=20, m<=44): bad lists must be identical
+CHECK m=27: identical (     255 classes)
+CHECK m=32: identical (     561 classes)
+CHECK m=35: identical (     454 classes)
+CHECK m=40: identical (    1030 classes)
+CHECK m=43: identical (     809 classes)
+CHECK m=44: identical (    1618 classes)
+--- transposition-table version (independent search code) must give the same counts
+m=27 bad=255
+m=32 bad=561
+m=35 bad=454
+m=40 bad=1030
+m=43 bad=809
+m=44 bad=1618
+--- known forward counts (choice-ladder note): m=16:124 21:391 24:369 27:255 32:561 35:454 40:1030
+m=16 bad=124 m=21 bad=391 m=24 bad=369 m=27 bad=255 m=32 bad=561 m=35 bad=454 m=40 bad=1030 
+--- backward: old float DP r<=14 vs new; known r=19:67 24:94 27:134 30:190 31:157, minrep r=30: 7167614823536, r=31: 20230651018121
+CHECK: backward counts r=1..14 identical (old float DP vs new integer DP)
+r=19 bad=67 minrep=195551699 r=24 bad=94 minrep=5627292062 r=27 bad=134 minrep=327953285393 r=30 bad=190 minrep=7167614823536 r=31 bad=157 minrep=20230651018121 
+
+## B. Forward production run: collatz_procgen_20260922_dim_forward 30 64 (oracle P0=30, 0.8 GB). Columns: m, A_m=floor(m log_3 2), beatty, |Bad_m|, minrep (smallest nonnegative rep of a non-trivial exceptional class), minabs (least |n| of a signed integer rep), DFS nodes, cumulative cpu s
+# forward E-game: m A_m beatty count min_nontriv_rep min_abs_signed_nontriv nodes cpu_s
+m=1 A=0 beatty=1 bad=1 minrep=- minabs=- nodes=0 t=0.0
+m=2 A=1 beatty=1 bad=1 minrep=18446744073709551615 minabs=18446744073709551615 nodes=0 t=0.0
+m=3 A=1 beatty=0 bad=2 minrep=3 minabs=3 nodes=0 t=0.0
+m=4 A=2 beatty=1 bad=3 minrep=7 minabs=5 nodes=0 t=0.0
+m=5 A=3 beatty=1 bad=4 minrep=7 minabs=5 nodes=0 t=0.0
+m=6 A=3 beatty=0 bad=8 minrep=7 minabs=5 nodes=0 t=0.0
+m=7 A=4 beatty=1 bad=11 minrep=27 minabs=5 nodes=0 t=0.0
+m=8 A=5 beatty=1 bad=11 minrep=27 minabs=17 nodes=0 t=0.0
+m=9 A=5 beatty=0 bad=22 minrep=27 minabs=17 nodes=0 t=0.0
+m=10 A=6 beatty=1 bad=31 minrep=31 minabs=17 nodes=0 t=0.0
+m=11 A=6 beatty=0 bad=62 minrep=31 minabs=17 nodes=0 t=0.0
+m=12 A=7 beatty=1 bad=88 minrep=127 minabs=17 nodes=0 t=0.0
+m=13 A=8 beatty=1 bad=81 minrep=127 minabs=65 nodes=0 t=0.0
+m=14 A=8 beatty=0 bad=162 minrep=127 minabs=65 nodes=0 t=0.0
+m=15 A=9 beatty=1 bad=201 minrep=223 minabs=65 nodes=0 t=0.0
+m=16 A=10 beatty=1 bad=124 minrep=1055 minabs=321 nodes=0 t=0.0
+m=17 A=10 beatty=0 bad=248 minrep=1055 minabs=321 nodes=0 t=0.0
+m=18 A=11 beatty=1 bad=274 minrep=1055 minabs=321 nodes=0 t=0.0
+m=19 A=11 beatty=0 bad=548 minrep=1055 minabs=321 nodes=0 t=0.0
+m=20 A=12 beatty=1 bad=664 minrep=1407 minabs=321 nodes=0 t=0.0
+m=21 A=13 beatty=1 bad=391 minrep=1407 minabs=321 nodes=0 t=0.0
+m=22 A=13 beatty=0 bad=782 minrep=1407 minabs=321 nodes=0 t=0.0
+m=23 A=14 beatty=1 bad=862 minrep=27807 minabs=321 nodes=0 t=0.1
+m=24 A=15 beatty=1 bad=369 minrep=113151 minabs=74497 nodes=0 t=0.2
+m=25 A=15 beatty=0 bad=738 minrep=113151 minabs=74497 nodes=0 t=0.3
+m=26 A=16 beatty=1 bad=777 minrep=160511 minabs=160511 nodes=0 t=0.9
+m=27 A=17 beatty=1 bad=255 minrep=160511 minabs=160511 nodes=0 t=3.1
+m=28 A=17 beatty=0 bad=510 minrep=160511 minabs=160511 nodes=0 t=8.3
+m=29 A=18 beatty=1 bad=526 minrep=160511 minabs=160511 nodes=0 t=17.9
+m=30 A=18 beatty=0 bad=1052 minrep=160511 minabs=160511 nodes=0 t=40.4
+m=31 A=19 beatty=1 bad=1197 minrep=160511 minabs=160511 nodes=5578 t=40.4
+m=32 A=20 beatty=1 bad=561 minrep=160511 minabs=160511 nodes=15472 t=40.4
+m=33 A=20 beatty=0 bad=1122 minrep=160511 minabs=160511 nodes=0 t=40.4
+m=34 A=21 beatty=1 bad=1195 minrep=160511 minabs=160511 nodes=129307 t=40.4
+m=35 A=22 beatty=1 bad=454 minrep=150314751 minabs=17797505 nodes=164207 t=40.5
+m=36 A=22 beatty=0 bad=908 minrep=150314751 minabs=17797505 nodes=0 t=40.5
+m=37 A=23 beatty=1 bad=936 minrep=216121855 minabs=93945857 nodes=884020 t=40.5
+m=38 A=23 beatty=0 bad=1872 minrep=216121855 minabs=93945857 nodes=0 t=40.5
+m=39 A=24 beatty=1 bad=2152 minrep=982286847 minabs=93945857 nodes=6023148 t=40.5
+m=40 A=25 beatty=1 bad=1030 minrep=3695617471 minabs=744687457 nodes=7733317 t=40.5
+m=41 A=25 beatty=0 bad=2060 minrep=3695617471 minabs=744687457 nodes=0 t=40.5
+m=42 A=26 beatty=1 bad=2194 minrep=5572132543 minabs=992916609 nodes=33884889 t=40.7
+m=43 A=27 beatty=1 bad=809 minrep=25800977535 minabs=3547172097 nodes=34821147 t=40.9
+m=44 A=27 beatty=0 bad=1618 minrep=25800977535 minabs=3547172097 nodes=0 t=40.9
+m=45 A=28 beatty=1 bad=1667 minrep=125341560447 minabs=3547172097 nodes=127208482 t=41.5
+m=46 A=29 beatty=1 bad=518 minrep=143362104063 minabs=32175923265 nodes=119849165 t=42.1
+m=47 A=29 beatty=0 bad=1036 minrep=143362104063 minabs=32175923265 nodes=0 t=42.1
+m=48 A=30 beatty=1 bad=1054 minrep=143362104063 minabs=87131942401 nodes=371379117 t=43.7
+m=49 A=30 beatty=0 bad=2108 minrep=143362104063 minabs=87131942401 nodes=0 t=43.7
+m=50 A=31 beatty=1 bad=2344 minrep=617163266815 minabs=87131942401 nodes=1858187210 t=54.0
+m=51 A=32 beatty=1 bad=988 minrep=3912274917887 minabs=3386549026305 nodes=2132023875 t=64.3
+m=52 A=32 beatty=0 bad=1976 minrep=3912274917887 minabs=3386549026305 nodes=0 t=64.3
+m=53 A=33 beatty=1 bad=2073 minrep=3912274917887 minabs=3386549026305 nodes=7258717389 t=97.8
+m=54 A=34 beatty=1 bad=758 minrep=3912274917887 minabs=3912274917887 nodes=7328948608 t=134.0
+m=55 A=34 beatty=0 bad=1516 minrep=3912274917887 minabs=3912274917887 nodes=0 t=134.0
+m=56 A=35 beatty=1 bad=1548 minrep=61220463837183 minabs=6098853560321 nodes=23127811041 t=246.6
+m=57 A=35 beatty=0 bad=3096 minrep=61220463837183 minabs=6098853560321 nodes=0 t=246.6
+m=58 A=36 beatty=1 bad=3523 minrep=61220463837183 minabs=61220463837183 nodes=108605310489 t=731.6
+m=59 A=37 beatty=1 bad=1601 minrep=61220463837183 minabs=61220463837183 nodes=132100771989 t=1381.2
+m=60 A=37 beatty=0 bad=3202 minrep=61220463837183 minabs=61220463837183 nodes=0 t=1381.2
+m=61 A=38 beatty=1 bad=3379 minrep=319467949880559 minabs=292872403751169 nodes=442360548276 t=3248.2
+m=62 A=39 beatty=1 bad=1198 minrep=319467949880559 minabs=292872403751169 nodes=445075041545 t=5223.5
+m=63 A=39 beatty=0 bad=2396 minrep=319467949880559 minabs=292872403751169 nodes=0 t=5223.5
+m=64 A=40 beatty=1 bad=2454 minrep=22035617684341247 minabs=292872403751169 nodes=1337770784577 t=10814.3
+
+## C. Backward production run: collatz_procgen_20260922_dim_backward built with -DW128 -DP0C=17, run '17 42', stopped after r=41. Columns: r, C_r=floor(r log_2 3), |Bad_r| (classes mod 3^(r+1)), lifts tested, minrep (smallest positive rep of a non-trivial exceptional class), nodes, cumulative cpu s
+# backward E-game: r C_r bad tested min_nontriv_rep nodes cpu_s   (classes mod 3^(r+1); 'nontriv' = not the class of 1)
+r=1 C=1 bad=2 tested=6 minrep=5 nodes=0 t=0.0
+r=2 C=3 bad=2 tested=6 minrep=14 nodes=0 t=0.0
+r=3 C=4 bad=4 tested=12 minrep=14 nodes=0 t=0.0
+r=4 C=6 bad=6 tested=18 minrep=41 nodes=0 t=0.0
+r=5 C=7 bad=12 tested=36 minrep=41 nodes=0 t=0.0
+r=6 C=9 bad=14 tested=42 minrep=365 nodes=0 t=0.0
+r=7 C=11 bad=14 tested=42 minrep=770 nodes=0 t=0.0
+r=8 C=12 bad=18 tested=54 minrep=770 nodes=0 t=0.0
+r=9 C=14 bad=20 tested=60 minrep=3281 nodes=0 t=0.0
+r=10 C=15 bad=32 tested=96 minrep=5306 nodes=0 t=0.0
+r=11 C=17 bad=34 tested=102 minrep=24422 nodes=0 t=0.0
+r=12 C=19 bad=30 tested=90 minrep=88574 nodes=0 t=0.0
+r=13 C=20 bad=34 tested=102 minrep=88574 nodes=0 t=0.1
+r=14 C=22 bad=36 tested=108 minrep=193550 nodes=0 t=0.3
+r=15 C=23 bad=50 tested=150 minrep=1860044 nodes=0 t=1.0
+r=16 C=25 bad=52 tested=156 minrep=1860044 nodes=0 t=4.6
+r=17 C=26 bad=80 tested=240 minrep=1860044 nodes=0 t=18.7
+r=18 C=28 bad=82 tested=237 minrep=14542457 nodes=237 tthits=0 t=18.7
+r=19 C=30 bad=67 tested=246 minrep=195551699 nodes=1103 tthits=0 t=18.7
+r=20 C=31 bad=79 tested=201 minrep=327923519 nodes=4577 tthits=0 t=18.7
+r=21 C=33 bad=81 tested=237 minrep=332545379 nodes=15076 tthits=0 t=18.7
+r=22 C=34 bad=111 tested=243 minrep=446754893 nodes=55845 tthits=0 t=18.7
+r=23 C=36 bad=113 tested=333 minrep=1340264678 nodes=160838 tthits=0 t=18.7
+r=24 C=38 bad=94 tested=339 minrep=5627292062 nodes=346383 tthits=0 t=18.7
+r=25 C=39 bad=102 tested=282 minrep=47071589414 nodes=833658 tthits=0 t=18.7
+r=26 C=41 bad=104 tested=306 minrep=165867450179 nodes=1921328 tthits=0 t=18.7
+r=27 C=42 bad=134 tested=312 minrep=327953285393 nodes=4946001 tthits=0 t=18.8
+r=28 C=44 bad=136 tested=402 minrep=863837215097 nodes=11563444 tthits=0 t=19.0
+r=29 C=45 bad=188 tested=408 minrep=863837215097 nodes=29988701 tthits=0 t=19.4
+r=30 C=47 bad=190 tested=564 minrep=7167614823536 nodes=70109189 tthits=0 t=20.5
+r=31 C=49 bad=157 tested=570 minrep=20230651018121 nodes=130912215 tthits=0 t=22.5
+r=32 C=50 bad=181 tested=471 minrep=20230651018121 nodes=262380793 tthits=0 t=26.2
+r=33 C=52 bad=183 tested=543 minrep=20230651018121 nodes=572370016 tthits=0 t=34.3
+r=34 C=53 bad=233 tested=549 minrep=20230651018121 nodes=1305717236 tthits=0 t=51.6
+r=35 C=55 bad=235 tested=699 minrep=631653658339757 nodes=2881672042 tthits=0 t=90.5
+r=36 C=57 bad=198 tested=705 minrep=631653658339757 nodes=5469832814 tthits=0 t=162.7
+r=37 C=58 bad=212 tested=594 minrep=1950203147754524 nodes=10015077439 tthits=0 t=290.9
+r=38 C=60 bad=214 tested=636 minrep=59625789507618467 nodes=20821486588 tthits=0 t=557.4
+r=39 C=61 bad=258 tested=642 minrep=59625789507618467 nodes=44182982374 tthits=0 t=1106.3
+r=40 C=63 bad=260 tested=774 minrep=95336705658565409 nodes=94578637583 tthits=0 t=2266.5
+r=41 C=64 bad=338 tested=780 minrep=786759327538998251 nodes=213426091855 tthits=0 t=4797.3
+
+## D. Growth analysis (collatz_procgen_20260922_dim_analysis.py on the production logs and dumps)
+=== FORWARD (Z_2): raw counts N_m ===
+  1:1 2:1 3:2 4:3 5:4 6:8 7:11 8:11 9:22 10:31 11:62 12:88 13:81 14:162 15:201 16:124 17:248 18:274 19:548 20:664 21:391 22:782 23:862 24:369 25:738 26:777 27:255 28:510 29:526 30:1052 31:1197 32:561 33:1122 34:1195 35:454 36:908 37:936 38:1872 39:2152 40:1030 41:2060 42:2194 43:809 44:1618 45:1667 46:518 47:1036 48:1054 49:2108 50:2344 51:988 52:1976 53:2073 54:758 55:1516 56:1548 57:3096 58:3523 59:1601 60:3202 61:3379 62:1198 63:2396 64:2454
+  local minima: m=13:81, m=16:124, m=21:391, m=24:369, m=27:255, m=32:561, m=35:454, m=40:1030, m=43:809, m=46:518, m=51:988, m=54:758, m=59:1601, m=62:1198
+  smallest nonnegative representative of a non-trivial exceptional class (minrep) and min |signed rep| (minabs):
+  30:160511/160511  31:160511/160511  32:160511/160511  33:160511/160511  34:160511/160511  35:150314751/17797505  36:150314751/17797505  37:216121855/93945857  38:216121855/93945857  39:982286847/93945857  40:3695617471/744687457  41:3695617471/744687457  42:5572132543/992916609  43:25800977535/3547172097  44:25800977535/3547172097  45:125341560447/3547172097  46:143362104063/32175923265  47:143362104063/32175923265  48:143362104063/87131942401  49:143362104063/87131942401  50:617163266815/87131942401  51:3912274917887/3386549026305  52:3912274917887/3386549026305  53:3912274917887/3386549026305  54:3912274917887/3912274917887  55:3912274917887/3912274917887  56:61220463837183/6098853560321  57:61220463837183/6098853560321  58:61220463837183/61220463837183  59:61220463837183/61220463837183  60:61220463837183/61220463837183  61:319467949880559/292872403751169  62:319467949880559/292872403751169  63:319467949880559/292872403751169  64:22035617684341247/292872403751169
+=== FORWARD projected counts P_m(M), M in [59, 64] ===
+  2:1 4:3 6:5 8:11 10:23 12:43 14:65 16:91 18:127 20:147 22:163 24:190 26:234 28:250 30:270 32:300 34:341 36:354 38:383 40:416 42:454 44:468 46:518 48:571 50:637 52:659 54:758 56:856(1071) 58:978(1590) 60:1018 62:1198 64:2454
+  P_m(M) identical for M=59 and M=64 for all m <= 54
+  Strahler number of the splitting tree: L=10:4, L=16:5, L=22:5, L=28:5, L=34:5, L=40:5, L=46:5, L=52:5, L=58:5
+  FORWARD P_m: window m=[16,54] (20 pts)
+    exponential: P ~ 56.3 * 2^(0.0710 m)   rms(log)=0.0997
+    power law  : P ~ 1.18 * m^1.600            rms(log)=0.0441
+    linear     : P ~ -192.7 + 15.98 m                rms(log)=0.1229
+  FORWARD local exponents over windows of 10 levels (m: d_loc bits/level, e_loc):
+    16:0.136,1.95  18:0.098,1.53  20:0.088,1.50  22:0.088,1.63  24:0.084,1.68  26:0.060,1.27  28:0.062,1.40  30:0.062,1.50  32:0.060,1.52  34:0.046,1.23  36:0.055,1.55  38:0.058,1.71  40:0.061,1.91  42:0.054,1.74  44:0.070,2.35
+  PROVED lower bound (classes meeting the Theorem-P closure): 8:10 12:36 16:55 20:77 24:96 28:119 32:139 36:163 40:191 44:213 48:249 52:269 56:317
+  FORWARD proved closure: window m=[16,56] (11 pts)
+    exponential: P ~ 34.4 * 2^(0.0594 m)   rms(log)=0.0831
+    power law  : P ~ 1.28 * m^1.358            rms(log)=0.0210
+    linear     : P ~ -55.6 + 6.31 m                rms(log)=0.0717
+=== BACKWARD (Z_3 units): raw counts N_r (classes mod 3^(r+1)) ===
+  1:2 2:2 3:4 4:6 5:12 6:14 7:14 8:18 9:20 10:32 11:34 12:30 13:34 14:36 15:50 16:52 17:80 18:82 19:67 20:79 21:81 22:111 23:113 24:94 25:102 26:104 27:134 28:136 29:188 30:190 31:157 32:181 33:183 34:233 35:235 36:198 37:212 38:214 39:258 40:260 41:338
+  minrep (smallest positive rep of a non-trivial exceptional class):
+  24:5627292062  25:47071589414  26:165867450179  27:327953285393  28:863837215097  29:863837215097  30:7167614823536  31:20230651018121  32:20230651018121  33:20230651018121  34:20230651018121  35:631653658339757  36:631653658339757  37:1950203147754524  38:59625789507618467  39:59625789507618467  40:95336705658565409  41:786759327538998251
+=== BACKWARD projected counts Q_r(R), R=41 (R=37 in parentheses where different) ===
+  1:2 2:2 3:4 4:6 5:10 6:12 7:14 8:17 9:19 10:26 11:28 12:30 13:34 14:36 15:44 16:46 17:61 18:63 19:65 20:72 21:74 22:90 23:92 24:94 25:102 26:104 27:120 28:122 29:149 30:151 31:153 32:166 33:168 34:194 35:196 36:198 37:212 38:214 39:258 40:260 41:338
+  Q_r identical for R=37,41 for all r <= 37
+  Strahler number: L=6:3, L=10:3, L=14:3, L=18:3, L=22:3, L=26:3, L=30:3, L=34:3, L=38:3
+  BACKWARD Q_r (exponential rate in bits/level; divide by log2(3) for trits): window m=[8,37] (30 pts)
+    exponential: P ~ 11.8 * 2^(0.1205 m)   rms(log)=0.1279
+    power law  : P ~ 0.48 * m^1.678            rms(log)=0.0585
+    linear     : P ~ -55.5 + 6.80 m                rms(log)=4.3098
+  BACKWARD local exponents over windows of 8 levels (m: d_loc bits/level, e_loc):
+    8:0.180,1.44  9:0.210,1.83  10:0.160,1.51  11:0.152,1.54  12:0.158,1.71  13:0.140,1.62  14:0.165,2.03  15:0.133,1.73  16:0.129,1.76  17:0.093,1.33  18:0.090,1.36  19:0.111,1.74  20:0.095,1.57  21:0.126,2.17  22:0.093,1.67  23:0.092,1.70  24:0.103,1.98  25:0.090,1.80  26:0.112,2.32  27:0.088,1.89  28:0.087,1.93  29:0.064,1.45
+=== BACKWARD dyadic census from Bad_41: 98 points p/2^e (e<=40) with value in [0.3,2]; range [0.5000,1.5376]
+  count by e: {0: 1, 1: 1, 5: 1, 6: 1, 7: 1, 8: 2, 9: 3, 10: 1, 11: 1, 12: 1, 13: 2, 14: 2, 15: 1, 16: 2, 17: 6, 18: 1, 19: 2, 20: 1, 21: 2, 22: 2, 23: 1, 24: 2, 25: 7, 26: 1, 27: 2, 28: 14, 29: 1, 30: 1, 31: 1, 32: 2, 33: 6, 34: 1, 35: 2, 36: 15, 37: 1, 38: 2, 39: 1, 40: 4}
+  r=10: projected classes 26, containing a dyadic point: 26
+  r=15: projected classes 44, containing a dyadic point: 44
+  r=20: projected classes 72, containing a dyadic point: 72
+  r=25: projected classes 102, containing a dyadic point: 98
+=== FORWARD certified lower bound from hostile_z13_M61_J25.txt: classes mod 2^L containing a certified hostile point
+  8:11 10:23 12:41 14:61 16:83 18:116 20:132 22:146 24:170 26:203 28:215 30:233 32:257 34:288 36:300 38:329 40:343 42:343 44:343 46:343 48:343 50:343 52:343 54:343 56:343 58:343 60:343
+=== FORWARD candidates -p/3^j (j<=25) with 3/2<|x|<=1.6 in Bad_61: 62; still exceptional at higher levels:
+  m=62: 62
+  m=63: 62
+  m=64: 62
+
+## E. alpha(i) = f_i(-1 mod 2^i), i=1..56 (collatz_procgen_20260922_dim_alpha 26 56 -1 1)
+h=-1/1 alpha: 1 2 3 4 5 6 7 7 7 7 8 9 9 10 11 11 12 12 13 14 14 15 16 16 17 18 18 19 19 20 21 21 22 23 23 24 24 25 26 26 27 28 28 29 30 30 31 31 32 33 33 34 35 35 36 36
+
+## F. Closure of {-1} under Theorem P (collatz_procgen_20260922_dim_generations.py ./dim_alpha 26 56; every point PROVED hostile)
+generation 1: 61 new PROVED hostile points; |x| range [1.0585,1.4933]; by scale i: {3: 1, 4: 1, 5: 2, 6: 3, 7: 4, 8: 2, 9: 1, 10: 1, 11: 1, 12: 1, 13: 1, 14: 1, 15: 1, 16: 1, 17: 1, 18: 1, 19: 1, 20: 1, 21: 1, 22: 1, 23: 1, 24: 1, 25: 1, 26: 1, 27: 1, 28: 1, 29: 1, 30: 1, 31: 1, 32: 1, 33: 1, 34: 1, 35: 1, 36: 1, 37: 1, 38: 1, 39: 1, 40: 1, 41: 1, 42: 1, 43: 1, 44: 1, 45: 1, 46: 1, 47: 1, 48: 1, 49: 1, 50: 1, 51: 1, 52: 1, 53: 1, 54: 1, 55: 1, 56: 1}
+generation 2: 231 new PROVED hostile points; |x| range [1.1951,1.4996]; by scale i: {6: 1, 7: 1, 8: 2, 9: 5, 10: 4, 11: 4, 12: 3, 13: 1, 14: 7, 16: 3, 17: 9, 19: 4, 20: 4, 21: 1, 22: 7, 23: 1, 24: 2, 25: 11, 27: 4, 28: 7, 30: 7, 31: 2, 32: 2, 33: 12, 35: 4, 36: 13, 38: 5, 39: 4, 40: 1, 41: 12, 42: 1, 43: 2, 44: 18, 46: 4, 47: 8, 49: 11, 50: 2, 51: 2, 52: 18, 54: 4, 55: 18}
+generation 3: 25 new PROVED hostile points; |x| range [1.3609,1.4989]; by scale i: {10: 1, 11: 1, 12: 2, 14: 2, 17: 2, 22: 2, 25: 2, 33: 2, 36: 2, 41: 2, 44: 2, 49: 1, 52: 2, 55: 2}
+generation 4: 0 new PROVED hostile points; |x| range -; by scale i: {}
+L=8: classes mod 2^L meeting the generated set: 10
+L=12: classes mod 2^L meeting the generated set: 36
+L=16: classes mod 2^L meeting the generated set: 55
+L=20: classes mod 2^L meeting the generated set: 77
+L=24: classes mod 2^L meeting the generated set: 96
+L=28: classes mod 2^L meeting the generated set: 119
+L=32: classes mod 2^L meeting the generated set: 139
+L=36: classes mod 2^L meeting the generated set: 163
+L=40: classes mod 2^L meeting the generated set: 191
+L=44: classes mod 2^L meeting the generated set: 213
+L=48: classes mod 2^L meeting the generated set: 249
+L=52: classes mod 2^L meeting the generated set: 269
+L=56: classes mod 2^L meeting the generated set: 317
+python3  ./dim_alpha 26 56 gen_points_56.txt  158.06s user 0.53s system 99% cpu 2:38.93 total
+
+## G. Exact prover (collatz_procgen_20260922_dim_hostile_prover.py): certificates for hostile points; explicit descents (prefix / escape / excursion route for |x|>3/2)
+              -1 = -1.000000: ('hostile', 1)
+           -13/9 = -1.444444: ('hostile', 5)
+          -35/27 = -1.296296: ('hostile', 9)
+          -97/81 = -1.197531: ('hostile', 16)
+        -355/243 = -1.460905: ('hostile', 31)
+      -3211/2187 = -1.468221: ('hostile', 93)
+    -87209/59049 = -1.476892: ('hostile', 719)
+  -781553/531441 = -1.470630: ('hostile', 2777)
+-2374355/1594323 = -1.489256: ('hostile', 5550)
+           -11/9 = -1.222222: ('descends', ('prefix', 1, 2, '-2/3'))
+          -37/27 = -1.370370: ('descends', ('prefix', 1, 2, '-7/9'))
+      -7585/6561 = -1.156074: ('descends', ('prefix', 7, 12, '-1/3'))
+       -17797505 = -17797505.000000: ('descends', ('route', 1, (46, 73)))
+    -90025/59049 = -1.524581: ('descends', ('route', 6, (41, 65)))
+    -89641/59049 = -1.518078: ('descends', ('route', 8, (41, 65)))
+      -9953/6561 = -1.516994: ('descends', ('route', 10, (41, 65)))
+      -9905/6561 = -1.509678: ('descends', ('route', 10, (147, 233)))
+
+## H. Exact thread function for the slow descender -90025/59049: first precision with a certificate
+h=-90025/59049 f_i (i=1..66): [1, 2, 3, 4, 5, 6, 7, 7, 8, 8, 8, 9, 9, 10, 10, 11, 11, 12, 12, 13, 14, 14, 15, 16, 16, 17, 18, 18, 19, 19, 20, 21, 21, 22, 23, 23, 24, 24, 25, 26, 26, 27, 28, 28, 29, 30, 30, 31, 31, 32, 33, 33, 34, 35, 35, 36, 36, 37, 38, 38, 39, 40, 40, 41, 41, 42]
+first i with f_i<=A_i: 65
+
+## I. Census of x=-p/3^j (j<=25, 1<=|x|<=1.6) lying in classes of Bad_61, classified by the exact prover (collatz_procgen_20260922_dim_z13scan.py ... 61 25 3e7)
+# M=61 classes=3379 J=25; expected random hits for j: 0.6*3^j*classes/2^M
+j= 0: candidates    1  {'hostile': 1}  (random hits expected 8.79e-16)  0.0s
+j= 1: candidates    0  {}  (random hits expected 2.64e-15)  0.0s
+j= 2: candidates    1  {'hostile': 1}  (random hits expected 7.91e-15)  0.0s
+j= 3: candidates    1  {'hostile': 1}  (random hits expected 2.37e-14)  0.0s
+j= 4: candidates    2  {'hostile': 2}  (random hits expected 7.12e-14)  0.0s
+j= 5: candidates    3  {'hostile': 3}  (random hits expected 2.14e-13)  0.0s
+j= 6: candidates    6  {'hostile': 6}  (random hits expected 6.41e-13)  0.0s
+j= 7: candidates   10  {'hostile': 10}  (random hits expected 1.92e-12)  0.0s
+j= 8: candidates   18  {'|x|>3/2 (not proved; see route())': 3, 'hostile': 15}  (random hits expected 5.77e-12)  0.0s
+j= 9: candidates   19  {'|x|>3/2 (not proved; see route())': 1, 'hostile': 18}  (random hits expected 1.73e-11)  0.0s
+j=10: candidates   25  {'|x|>3/2 (not proved; see route())': 3, 'hostile': 22}  (random hits expected 5.19e-11)  0.0s
+j=11: candidates   16  {'|x|>3/2 (not proved; see route())': 4, 'hostile': 12}  (random hits expected 1.56e-10)  0.0s
+j=12: candidates   26  {'hostile': 26}  (random hits expected 4.67e-10)  0.1s
+j=13: candidates   18  {'|x|>3/2 (not proved; see route())': 4, 'hostile': 14}  (random hits expected 1.40e-09)  0.1s
+j=14: candidates   16  {'|x|>3/2 (not proved; see route())': 1, 'hostile': 15}  (random hits expected 4.21e-09)  0.1s
+j=15: candidates   24  {'|x|>3/2 (not proved; see route())': 4, 'hostile': 20}  (random hits expected 1.26e-08)  0.4s
+j=16: candidates   14  {'|x|>3/2 (not proved; see route())': 3, 'hostile': 11}  (random hits expected 3.78e-08)  0.4s
+j=17: candidates   35  {'|x|>3/2 (not proved; see route())': 9, 'hostile': 26}  (random hits expected 1.14e-07)  1.9s
+j=18: candidates   15  {'|x|>3/2 (not proved; see route())': 3, 'hostile': 12}  (random hits expected 3.41e-07)  1.7s
+j=19: candidates   20  {'|x|>3/2 (not proved; see route())': 2, 'hostile': 18}  (random hits expected 1.02e-06)  5.2s
+j=20: candidates   23  {'|x|>3/2 (not proved; see route())': 6, 'hostile': 17}  (random hits expected 3.07e-06)  9.7s
+j=21: candidates   14  {'|x|>3/2 (not proved; see route())': 2, 'hostile': 12}  (random hits expected 9.20e-06)  13.8s
+j=22: candidates   34  {'|x|>3/2 (not proved; see route())': 8, 'hostile': 26}  (random hits expected 2.76e-05)  60.8s
+j=23: candidates   13  {'|x|>3/2 (not proved; see route())': 1, 'hostile': 12}  (random hits expected 8.28e-05)  56.2s
+j=24: candidates   29  {'hostile': 29}  (random hits expected 2.48e-04)  270.4s
+j=25: candidates   22  {'|x|>3/2 (not proved; see route())': 8, 'hostile': 14}  (random hits expected 7.45e-04)  261.7s
+TOTAL {'hostile': 343, '|x|>3/2 (not proved; see route())': 62}
+level 20: projected classes 147; containing a PROVED hostile -p/3^j (j<=25): 132
+level 30: projected classes 270; containing a PROVED hostile -p/3^j (j<=25): 233
+level 40: projected classes 416; containing a PROVED hostile -p/3^j (j<=25): 343
+level 50: projected classes 637; containing a PROVED hostile -p/3^j (j<=25): 343
+
+## J. Tree structure of the certified census (collatz_procgen_20260922_dim_census_tree.py)
+census points: 343; with parent: 342
+agreement-depth deficit 1.585 j - i: {1: 43, 2: 269, 3: 30}
+relative cost rho = (|x|-|h|) R_min^h(i): {'-3': 1, '-1': 15, '-1/3': 4, '1/3': 6, '1': 312, '3': 4}
+children whose scale does not exceed the parent's own scale: 0
+generation distribution: {0: 1, 1: 37, 2: 58, 3: 147, 4: 62, 5: 27, 6: 10, 7: 1}
+max generation per j: {0: 0, 2: 1, 3: 1, 4: 1, 5: 2, 6: 3, 7: 3, 8: 4, 9: 4, 10: 5, 11: 5, 12: 6, 13: 6, 14: 7, 15: 6, 16: 5, 17: 6, 18: 5, 19: 6, 20: 6, 21: 5, 22: 6, 23: 5, 24: 6, 25: 6}
+nodes with children: 48; children of -1: 37; max children: 37
+canonical steps x = h - 2^i/3^alpha_h(i): 312; failing (A): 1 ['-13/9']
+non-canonical steps by j: {4: 1, 5: 2, 6: 3, 7: 3, 8: 4, 9: 6, 10: 3, 11: 3, 12: 3, 13: 1, 14: 1} ; largest j with a non-canonical step: 14 ; census points above it (all canonical): 197
+census points outside the Theorem-P closure: 157; with an all-canonical (A)-satisfying ancestry: 0
+
+## K. The 343 certified hostile points -p/3^j (j<=25), one per line
+-15673650547/10460353203
+-47000187161/31381059609
+-1268933601955/847288609443
+-2387411/1594323
+-21482539/14348907
+-7160057/4782969
+-64427329/43046721
+-140900372843/94143178827
+-29443/19683
+-140747317835/94143178827
+-29411/19683
+-192927683/129140163
+-192899267/129140163
+-793585/531441
+-1265017857187/847288609443
+-46850701337/31381059609
+-5205498769/3486784401
+-21404779/14348907
+-5195421073/3486784401
+-21377563/14348907
+-2374355/1594323
+-15571613875/10460353203
+-9761/6561
+-21342571/14348907
+-263419/177147
+-419868489953/282429536481
+-87721/59049
+-1258079363491/847288609443
+-191621315/129140163
+-5172746257/3486784401
+-574546121/387420489
+-1081/729
+-87529/59049
+-139522877771/94143178827
+-46501341209/31381059609
+-29155/19683
+-5164506001/3486784401
+-63743041/43046721
+-786929/531441
+-191006147/129140163
+-46413445145/31381059609
+-46399304537/31381059609
+-572656553/387420489
+-63603073/43046721
+-7066745/4782969
+-21197419/14348907
+-87209/59049
+-5148391825/3486784401
+-572026697/387420489
+-87097/59049
+-29027/19683
+-21155947/14348907
+-46229243417/31381059609
+-86953/59049
+-138570535499/94143178827
+-46169722025/31381059609
+-781553/531441
+-15367540531/10460353203
+-46093194521/31381059609
+-46086289433/31381059609
+-5119838353/3486784401
+-3211/2187
+-189568451/129140163
+-21062635/14348907
+-63183169/43046721
+-414411749857/282429536481
+-2336339/1594323
+-413708581345/282429536481
+-189148547/129140163
+-566987849/387420489
+-413066377441/282429536481
+-1699132379/1162261467
+-258811/177147
+-1237876102435/847288609443
+-20962411/14348907
+-355/243
+-2328563/1594323
+-86185/59049
+-188448707/129140163
+-2325971/1594323
+-45775747097/31381059609
+-258235/177147
+-188203763/129140163
+-1233743617219/847288609443
+-137073997643/94143178827
+-45685047833/31381059609
+-28643/19683
+-187888835/129140163
+-773105/531441
+-187860419/129140163
+-1232366122147/847288609443
+-563068745/387420489
+-85801/59049
+-136767887627/94143178827
+-20844907/14348907
+-771377/531441
+-409922136289/282429536481
+-15163467187/10460353203
+-45480974489/31381059609
+-9505/6561
+-409131071713/282429536481
+-62343361/43046721
+-409003806241/282429536481
+-256507/177147
+-45406812185/31381059609
+-768497/531441
+-2305235/1594323
+-186582467/129140163
+-5036697361/3486784401
+-13/9
+-767489/531441
+-9473/6561
+-135849557579/94143178827
+-407473256161/282429536481
+-45261784601/31381059609
+-186209219/129140163
+-766193/531441
+-1221346161571/847288609443
+-406937563633/282429536481
+-5019691249/3486784401
+-1049/729
+-6880121/4782969
+-406248816097/282429536481
+-406186670305/282429536481
+-5014022545/3486784401
+-84905/59049
+-556910153/387420489
+-2289107/1594323
+-185369411/129140163
+-555650441/387420489
+-45004803353/31381059609
+-3131/2187
+-760817/531441
+-1212775081123/847288609443
+-9377/6561
+-20502763/14348907
+-61503553/43046721
+-759281/531441
+-253051/177147
+-184467395/129140163
+-403391789281/282429536481
+-402688620769/282429536481
+-402575495905/282429536481
+-4968672913/3486784401
+-551871305/387420489
+-20432779/14348907
+-134012897483/94143178827
+-20409451/14348907
+-755825/531441
+-183409859/129140163
+-2263763/1594323
+-400738835809/282429536481
+-2258579/1594323
+-400071375073/282429536481
+-27875/19683
+-1645687771/1162261467
+-1199306240419/847288609443
+-752113/531441
+-4933400977/3486784401
+-83497/59049
+-1642328539/1162261467
+-1196551250275/847288609443
+-398766126817/282429536481
+-14755320499/10460353203
+-44256534425/31381059609
+-3083/2187
+-20222827/14348907
+-83209/59049
+-249595/177147
+-83113/59049
+-747761/531441
+-2243027/1594323
+-1634770267/1162261467
+-44103479417/31381059609
+-544313033/387420489
+-1632023515/1162261467
+-132176237387/94143178827
+-44052461081/31381059609
+-396453295585/282429536481
+-1188286279843/847288609443
+-9185/6561
+-1626652123/1162261467
+-20077675/14348907
+-4877973649/3486784401
+-180330563/129140163
+-4866636241/3486784401
+-113/81
+-82345/59049
+-179700707/129140163
+-1617134299/1162261467
+-43644314393/31381059609
+-9121/6561
+-179490755/129140163
+-59823937/43046721
+-2211923/1594323
+-4832624017/3486784401
+-536754761/387420489
+-19849579/14348907
+-735089/531441
+-1171756338979/847288609443
+-43326866969/31381059609
+-19802923/14348907
+-389718875233/282429536481
+-81449/59049
+-732497/531441
+-177811139/129140163
+-731633/531441
+-731377/531441
+-388341380161/282429536481
+-387882215137/282429536481
+-8993/6561
+-19662955/14348907
+-242683/177147
+-80809/59049
+-2180819/1594323
+-1589420635/1162261467
+-176504771/129140163
+-4764599569/3486784401
+-2987/2187
+-80617/59049
+-128502917195/94143178827
+-42828021017/31381059609
+-724721/531441
+-1155226398115/847288609443
+-1583751931/1162261467
+-42725984345/31381059609
+-1581862363/1162261467
+-8929/6561
+-6506873/4782969
+-384208894945/282429536481
+-6484729/4782969
+-80041/59049
+-719345/531441
+-42419874329/31381059609
+-985/729
+-6461401/4782969
+-174451907/129140163
+-19383019/14348907
+-381351868129/282429536481
+-6453625/4782969
+-1566745819/1162261467
+-174032003/129140163
+-4696575121/3486784401
+-521638217/387420489
+-26339/19683
+-1554988507/1162261467
+-172772291/129140163
+-710897/531441
+-6391417/4782969
+-78889/59049
+-709169/531441
+-376862254561/282429536481
+-41807654297/31381059609
+-19103083/14348907
+-375943924513/282429536481
+-2118611/1594323
+-6343033/4782969
+-26083/19683
+-703985/531441
+-1122166516387/847288609443
+-1536512731/1162261467
+-2891/2187
+-373188934369/282429536481
+-77993/59049
+-1532733595/1162261467
+-170252867/129140163
+-77737/59049
+-41195434265/31381059609
+-13726461107/10460353203
+-8609/6561
+-6267001/4782969
+-1521396187/1162261467
+-4560526225/3486784401
+-953/729
+-6251449/4782969
+-693617/531441
+-367678954081/282429536481
+-25571/19683
+-167733443/129140163
+-6204793/4782969
+-13560179123/10460353203
+-35/27
+-25507/19683
+-13526166899/10460353203
+-2827/2187
+-18543211/14348907
+-228859/177147
+-1498721371/1162261467
+-8449/6561
+-25315/19683
+-683249/531441
+-13424130227/10460353203
+-362168973793/282429536481
+-6111481/4782969
+-75433/59049
+-39970994201/31381059609
+-8353/6561
+-54794561/43046721
+-1476046555/1162261467
+-24931/19683
+-13220056883/10460353203
+-307/243
+-162694595/129140163
+-6018169/4782969
+-53954753/43046721
+-221947/177147
+-1994195/1594323
+-24547/19683
+-662513/531441
+-13015983539/10460353203
+-351149013217/282429536481
+-24419/19683
+-2699/2187
+-53114945/43046721
+-1430696923/1162261467
+-216827/177147
+-114996368203/94143178827
+-5831545/4782969
+-23779/19683
+-12607836851/10460353203
+-2635/2187
+-70825/59049
+-97/81
+-7841/6561
+-51435329/43046721
+-209915/177147
+-111323048011/94143178827
+-23267/19683
+-857/729
+-454529353/387420489
+-621041/531441
+-68521/59049
+-7457/6561
+-275/243
+-22243/19683
+-2443/2187
+-196091/177147
+-21475/19683
+-793/729
+-7073/6561
+-2315/2187
+-6817/6561
+-1
+
+## L. Transposition-table variant (collatz_procgen_20260922_dim_forward_tt 26 50 24 with TTMIN=30): identical counts, ~7x fewer nodes than the plain DFS at P0=26 (6.3e9 nodes at m=50)
+m=40 A=25 beatty=1 bad=1030 tested=4304 nodes=6702768 tthits=461893 ttstores=2915042 slackLB=[1030 0 0 0 0] t=1.4
+m=43 A=27 beatty=1 bad=809 tested=4388 nodes=16063625 tthits=1121051 ttstores=7492791 slackLB=[809 0 0 0 0] t=2.7
+m=46 A=29 beatty=1 bad=518 tested=3334 nodes=40699240 tthits=2435902 ttstores=19344411 slackLB=[518 0 0 0 0] t=5.8
+m=48 A=30 beatty=1 bad=1054 tested=2072 nodes=133518728 tthits=6837903 ttstores=64718598 slackLB=[1054 0 0 0 0] t=9.7
+m=50 A=31 beatty=1 bad=2344 tested=4216 nodes=943149621 tthits=45315114 ttstores=458940893 slackLB=[2344 0 0 0 0] t=36.6
+
+## M. Census extension to j=26,27 on Bad_63 (JMIN=26 collatz_procgen_20260922_dim_z13scan.py ... 63 28 1e8; stopped during j=28) and Conjecture G check (collatz_procgen_20260922_dim_conjG_check.py ... 26,27)
+# M=63 classes=2396 J=28; expected random hits for j: 0.6*3^j*classes/2^M
+j=26: candidates   17  {'|x|>3/2 (not proved; see route())': 3, 'hostile': 14}  (random hits expected 3.96e-04)  499.9s
+j=27: candidates   32  {'|x|>3/2 (not proved; see route())': 7, 'hostile': 24, 'undecided': 1}  (random hits expected 1.19e-03)  1789.1s  undecided: ['-11330911601771/7625597484987']
+j=26: candidates with 1<=|x|<3/2 in Bad_63: 14; canonical steps from the nearest lower-exponent point: 14; satisfying (A): 14; deficit 1.585j-i: [1, 2]
+j=27: candidates with 1<=|x|<3/2 in Bad_63: 25; canonical steps from the nearest lower-exponent point: 25; satisfying (A): 25; deficit 1.585j-i: [2]

@@ -43,8 +43,9 @@ DFS nodes (about 20 minutes), and the `3^17` count from
   paper). They do not state Q1, Q2 or strong connectivity. Q1 and Q2
   together give a cycle `1->n->1`, which implies their Conj. 1. **With Q1
   known below `2^71` (every Collatz orbit is an `E`-path; Barina 2025,
-  CITED) and Q2 verified here below `2.02*10^13`, Le--Smith's Conj. 1 holds
-  for every `n<2.02*10^13` with `3` not dividing `n` (FINITE-EXACT plus
+  CITED) and Q2 verified below `7.87*10^17` (this lane `2.02*10^13`, the
+  dimension lane to `r=41`), Le--Smith's Conj. 1 holds for every
+  `n<7.87*10^17` with `3` not dividing `n` (FINITE-EXACT plus
   CITED).**
 * Canonical hostile: the rising family `n=2^k u-1` (forward) and
   `m=3^j u+1` (backward, `244->...->256`).
@@ -126,9 +127,15 @@ determined.** Local minima of the forward counts (`124, 255, 454` at
 `m=16, 27, 35`) grow by about `0.1` bit per level. The backward counts
 (`14` at `r=6` to `52` at `r=16`) grow by about `0.12` trit per level.
 This fits a small positive dimension, near `0.1`, as well as
-polynomial growth (about `m^2`). `dim Bad_inf(E)=0` is therefore
-OPEN, not supported. Deciding it needs `m` near `80`, beyond the
-present DFS.
+polynomial growth (about `m^2`). **Update (dimension lane,
+[exceptional_dimension](collatz_procgen_20260922_exceptional_dimension.md)).**
+An exact integer reformulation carries the threads to `m=64`
+(forward) and `r=41` (backward). The converged counts now favour a
+power law of about `m^1.6`, i.e. dimension `0` and a countable set,
+over `2^(0.06m)`, though the window cannot fully decide. It is PROVED
+that `Bad_inf(E)` is infinite: `-1-2^i/3^alpha(i)` is hostile for every
+`i>=3` (Theorem F). So `dim Bad_inf(E)` stays OPEN, with the evidence
+now pointing to `0`.
 
 ## 3. Where the gain comes from: the rising-run excursion (FINITE-EXACT)
 
@@ -198,8 +205,11 @@ rationals `-5/3, -11/9, -37/27, -41/27, -7/5, -9/7` descend within 2 to 5 halvin
 criterion for the family is OPEN (HYP-9120 item 1). The positive
 reconstructions have height products near `5*10^7`, where about ten chance
 matches are expected among `908` classes; they are not claimed. The only
-exceptional class mod `2^36` containing an integer of absolute value below
-`1.5*10^8` is `-1`. Hence **every positive integer below `1.5*10^8` lies in
+exceptional class mod `2^36` whose least *positive* representative is
+below `1.5*10^8` is the class of `-1`, which contains `2^36-1`.
+**CORRECTED:** an earlier wording said "absolute value", which is false.
+Negative integers such as `-17797505` do lie in exceptional classes
+(dimension lane). Hence **every positive integer below `1.5*10^8` lies in
 a class with a multiplicative certificate of precision 36**. On the
 forward side, a multiplicative certificate becomes actual descent only
 above the path's threshold `B/(2^b-3^a)`. Q1 itself is implied
@@ -207,7 +217,7 @@ pointwise by Collatz, since Collatz orbits are `E`-paths. It therefore
 holds for every `n<2^71` by the published Collatz verification (CITED,
 Barina 2025, per the barrier-atlas lane). Q2 is not implied by
 Collatz (the arrows point the other way); section 5 gives its own
-verification (`2.02*10^13`).
+verification (`2.02*10^13` here, `7.87*10^17` via the dimension lane).
 
 **Backward `E` (3-adic), PROVED membership.**
 
@@ -331,7 +341,7 @@ representative of an exceptional class other than `1` grows like
 `7.17*10^12` at `r=30`, and `2.02*10^13` at `r=31` (about `2*10^10` DFS nodes). On the backward side a multiplicative certificate
 always gives actual descent (the carry only subtracts), and values stay
 positive integers prime to `3`. Strong induction therefore shows that
-**`1` reaches every `m<2.02*10^13` with `3` not dividing `m` in `E`**. The
+**`1` reaches every `m<2.02*10^13` with `3` not dividing `m` in `E`** (extended to `7.87*10^17` by the dimension lane's exact threads to `r=41`). The
 inherited verification was `10^7`, by greedy `G`.
 
 **The `1/2` neighbourhood costs at least `8/3` (PROVED).** Every legal

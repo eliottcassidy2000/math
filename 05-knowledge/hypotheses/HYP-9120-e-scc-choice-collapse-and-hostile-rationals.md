@@ -8,10 +8,10 @@ status: >
   set in Z_3^x; (c) structure: every rational point of Bad_inf(E) is negative
   with a power-of-3 denominator near -1 (observed range [-1.6,-1]), every rational point of the
   backward set is 1, 1/2 or a positive dyadic rational, and both sets are far
-  thinner than the no-choice set (dimension 0.95); dimension 0 versus about 0.1 is OPEN. PROVED: -1, -13/9, 1, 1/2 are hostile; the 1-escape
+  thinner than the no-choice set (dimension 0.95); dimension OPEN; exact threads to 2^64 favour 0 (power law about m^1.6); Bad_inf(E) is infinite (Theorem F: -1-2^i/3^alpha(i) hostile for all i>=3). PROVED: -1, -13/9, 1, 1/2 are hostile; the 1-escape
   lemma; descent by at most two reverse moves (factor <= 8/9, depending only on m mod 27)
   for every m not 1 or 14 mod 27, Lean-checked (q2_descent_off_1_and_14), so Q2 reduces
-  to the two hostile neighbourhoods; Q2 verified to 2.02e13; escaping 1/2 costs at least 8/3. FINITE-EXACT: exceptional counts 908 mod 2^36 and 52 mod 3^17; no
+  to the two hostile neighbourhoods; Q2 verified to 7.87e17; escaping 1/2 costs at least 8/3. FINITE-EXACT: exceptional counts 908 mod 2^36 and 52 mod 3^17; no
   positive integer below 1.5e8 is exceptional at precision 2^36.
 source: collatz-procgen-20260922 (mac-mini); E is Le--Smith's Loosened Collatz Graph (arXiv 2109.01180), where Q1/Q2/SCC are not stated
 depends_on:
@@ -46,4 +46,18 @@ precision, or an exceptional thread converging to a positive integer.
   most about `m^0.104` (known thread prices), and the endgame is governed
   by the **base-3 digits of `2^K`**: an Erdős-ternary-type transversality,
   the same shape as the divergence-half target of the synthesis.
+
+## Dimension-lane update (same session)
+
+* **PROVED:** Theorem F makes `Bad_inf(E)` infinite, with `-1` an
+  accumulation point. Theorem P, the perturbation lemma, generates the
+  hostile rationals.
+* **FINITE-EXACT:** 382 hostile points `-p/3^j` with `j<=27` and
+  `1<=|x|<3/2` are certified. The counts per `j` stay bounded (11--29),
+  and the points form a perturbation tree of depth at most 7.
+* Q2 is verified below `7.87*10^17`.
+* The growth evidence favours dimension `0`. Conjecture G (a finite seed
+  generates every hostile rational) is verified for `15<=j<=27`.
+
+See [exceptional_dimension](../results/collatz_procgen_20260922_exceptional_dimension.md).
 

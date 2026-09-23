@@ -42,8 +42,8 @@ This session built two instruments and pointed them at many siblings:
 | Collatz `T` (either sheet) | none | dimension `h(log_3 2)=0.9500` (PROVED; not found in print, per the atlas); `1,037,374` classes mod `2^26` |
 | `E_S`, `S={6 mod 8}` | extra `3n+1` only at rising-run entries | `3,238` mod `2^22` (Collatz `93,222`) |
 | greedy fingerprint | 8 of 32 even classes mod 64, led by `54 mod 64` | `893` mod `2^20` (full choice `664`) |
-| graph `E` (Q1 forward) | extra `3n+1` at every even | `908` mod `2^36`; dimension OPEN (0 or about 0.1) |
-| backward `E` (Q2) | reverse moves with choice | `157` mod `3^32` |
+| graph `E` (Q1 forward) | extra `3n+1` at every even | `908` mod `2^36`, `2454` mod `2^64`; dimension OPEN, evidence favours 0 (power law about `m^1.6`); infinite (Theorem F) |
+| backward `E` (Q2) | reverse moves with choice | `157` mod `3^32`; `338` mod `3^42` (dimension lane) |
 | Applegate--Lagarias semigroup | arbitrary wild multipliers | one class, `-1 mod 2^j` (CITED) |
 | additive choice `3n+b`, `b in B`, `|B|>=2` | choice of sheet | **empty** at `2^22` |
 | `5n+1`, no choice | none | positive measure `mu_5=0.17603` (PROVED, sibling ladder) |
@@ -60,13 +60,13 @@ nor Q2, nor strong connectivity).
   * **reduced by a Lean-checked mod-27 lemma to the two classes
     `1, 14 mod 27`.** Every other `m` descends within two reverse moves by
     a factor of at most `8/9`;
-  * **verified below `2.02*10^13`** by 3-adic certificate threads;
+  * **verified below `7.87*10^17`** by exact 3-adic certificate threads to depth 41 (dimension lane; `2.02*10^13` by lane one's DFS);
   * the neighbourhood of `1` is handled by a PROVED escape lemma together
     with loops through `1` (every depth up to 41);
   * the neighbourhood of `1/2` costs at least `32/27` to escape (PROVED),
     and its exits are exactly the Collatz trunk `(4^i-1)/3`.
 * Consequence: Le--Smith's Conjecture 1 (every `n` prime to `3` lies on an
-  `E`-cycle) holds below `2.02*10^13`.
+  `E`-cycle) holds below `7.87*10^17`.
 * Past-work link: Le--Smith's Conjecture 2 says every nontrivial `E`-cycle
   uses an `E`-only arrow (`3n+1` at an even `n`). It is equivalent to
   Collatz having no nontrivial positive cycle. The 2026-09-17 session's
@@ -157,7 +157,7 @@ the divergence half of Collatz, and the sign enters exactly as the sign of
 | # | approach (lens + mechanism) | barrier verdict | probe run | outcome |
 |---|---|---|---|---|
 | 1 | residue certificates for Collatz (Terras) | blind to SHEET, DEFECT; needs THIN | exceptional counts | the dimension `0.95` set remains; not a route alone |
-| 2 | relax by branch choice (graph `E`), certificates + escapes | live for E-SCC | profiler, DP/DFS, Lean | Q2 reduced mod 27 (Lean), verified to `2.02e13`; gap: `1/2` chains |
+| 2 | relax by branch choice (graph `E`), certificates + escapes | live for E-SCC | profiler, DP/DFS, Lean | Q2 reduced mod 27 (Lean), verified to `7.87e17`; gap: `1/2` chains (endgame: ternary digits of `2^K`) |
 | 3 | partial choice `E_S` | diagnostic | profiler over `S` | `6 mod 8` does most of the work; fingerprint led by `54 mod 64` |
 | 4 | additive / sign choice | diagnostic | zoo | empty exceptional set; one-player trivial |
 | 5 | two-player sign choice (Althöfer game = Conway's Beans-Don't-Talk, Guy Problem 42) | live | game lane | no draws below `2^32` (FINITE-EXACT); ray/exit-parity law PROVED; P-density about `0.48` |
@@ -171,7 +171,7 @@ the divergence half of Collatz, and the sign enters exactly as the sign of
 | 13 | transversality: p-adic irrationality of Bernstein series | live (divergence half) | formulation only | the named missing ingredient |
 | 14 | sound certificate searches (rewriting/automata) | live (divergence half) | literature | YAH prize conjectures fail on negatives (atlas) |
 | 15 | sign-specific order laws | the only sign-aware class | order-laws lane | PENDING |
-| 16 | exceptional dimension of `E` | structural | deeper threads, credit construction | open (0 or about 0.1); dimension lane PENDING |
+| 16 | exceptional dimension of `E` | structural | dimension lane (exact threads to `2^64`, `3^42`) | OPEN; evidence favours 0; infinite (Theorem F PROVED); 382 hostile `-p/3^j` certified |
 | 17 | sibling ladder (`qx+1`, F2[x], Mahler, Erdős) | calibration | ladder lane | PENDING |
 | 18 | Tao-type Fourier / renewal | blind to SHEET, DEFECT, INTEGRAL | literature | GGM 2025: PROVED for `3N-1` (sheet-blind as a theorem) |
 | 19 | bounded-modulus Lyapunov potentials | none in the model | inherited | REFUTED (earlier sessions) |
@@ -179,7 +179,7 @@ the divergence half of Collatz, and the sign enters exactly as the sign of
 | 21 | Baker / continued fractions | cycle half | literature | Hercher: no m-cycles, `m<=91` (CITED) |
 | 22 | functional equations (Berg--Meinardus) | DEFECT | none | typed only |
 | 23 | measure rigidity (`x2 x3`) | DEFECT, INTEGRAL | none | blocked |
-| 24 | E-cycle covering (Le--Smith Conj. 1, 2) | relaxation / cycle half | our verifications | Conj. 1 holds below `2.02e13`; Conj. 2 is equivalent to no positive Collatz cycle |
+| 24 | E-cycle covering (Le--Smith Conj. 1, 2) | relaxation / cycle half | our verifications | Conj. 1 holds below `7.87e17`; Conj. 2 is equivalent to no positive Collatz cycle |
 
 ## 3. The snippet, dispatched
 
@@ -270,8 +270,13 @@ the trunk `(4^i-1)/3` is the exit set of the hardest relaxed obstruction.
    which ratios `2^K/3^s` can legal words through `1` realize at every
    length? That analogy was left untested there; here it has a precise
    finite form (every length `<=40` realized with ratio in `[1.517, 2.96]`).
-3. The exact dimension of `Bad_inf(E)`: zero or small positive. A
-   heuristic favours positive dimension. A stretch near `-1` banks a
+3. The exact dimension of `Bad_inf(E)`. **Update: the dimension lane's
+   exact threads to `2^64` favour dimension 0** (a power law about
+   `m^1.6`, a countable set). It PROVED the family
+   `-1-2^i/3^alpha(i)` hostile (Theorem F, so the set is infinite) and
+   showed the "credit" below is a fixed slack `1/2-(|x|-1)` that every
+   block spends, which undercuts the heuristic. The original heuristic,
+   kept for provenance: it favoured positive dimension. A stretch near `-1` banks a
    multiplicative credit of at least `3/2` (the PROVED bound on paths from
    `-1`). The next segment then only has to avoid descending by more
    than that credit, a weaker and larger condition. Concatenating such
