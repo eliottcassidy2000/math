@@ -66,7 +66,11 @@ glue between the parts is the remaining proof obligation.
 Probe row (FINITE-EXACT, `2^20`): Collatz `27,328` exceptional classes;
 minus sheet `27,328` (identical, the SHEET barrier made visible); E-SCC
 `664`; `E_S` with `S={6 mod 8}` `2,165`; `5n+1` `232,912`, and with
-choice still `133,600` (the DRIFT barrier made visible).
+choice `133,600`. **CORRECTED:** the with-choice fraction keeps falling
+with depth (`0.066` at `2^26`, about `4e-5` at `2^64`). So choice is
+*not* stopped by the `5n+1` drift, and choice mechanisms are DRIFT-blind
+at the Collatz threshold. The choice-game threshold is heuristically
+`q` between 9 and 11 (sibling ladder §4; MISTAKES 2026-09-22).
 
 ## 3. What the typology says
 

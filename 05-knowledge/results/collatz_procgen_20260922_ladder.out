@@ -1,0 +1,249 @@
+# collatz_procgen_20260922_ladder.out -- produced by collatz_procgen_20260922_ladder_run.py
+# sibling dimension ladder: see 05-knowledge/results/collatz_procgen_20260922_sibling_dimension_ladder.md
+
+==============================================================================
+LADDER-A. exact no-choice counts N_m(q) (ballot DP) and Lemma 1 checks
+==============================================================================
+Lemma 1 (parity-vector bijection mod 2^k, k<=14) for q=3: PASS
+Lemma 1 (parity-vector bijection mod 2^k, k<=14) for q=5: PASS
+Lemma 1 (parity-vector bijection mod 2^k, k<=14) for q=7: PASS
+q=3: ballot DP N_m vs lane-one Collatz-T counts, m=1..26: IDENTICAL (26 levels)
+q=3: N_m for m=16,20,24,26 -> 16:2114 20:27328 24:286581 26:1037374
+q=5: N_m for m=16,20,24,26 -> 16:15320 20:232912 24:3573290 26:14055112
+q=7: N_m for m=16,20,24,26 -> 16:20866 20:324884 24:5166172 26:20578679
+q=9: N_m for m=16,20,24,26 -> 16:25655 20:409052 24:6526472 26:26050589
+(these are compared with the lane-one C program in collatz_procgen_20260922_ladder_choice.py)
+
+==============================================================================
+LADDER-B. q=3 dimension: float DP to m=100000; model log2 N_m = alpha m + beta log2 m + gamma
+==============================================================================
+p = log_3 2 = 0.630929753571;  h(p) = 0.949955527188 bits (predicted Hausdorff dimension)
+float DP vs exact big-int DP, m=1..2000: max |log2 difference| = 6.82e-13
+      m       log2 N_m   log2N/m  (log2N+1.5log2m)/m  R_m=log2N-hm+1.5log2m  theta_m
+     10         6.0000   0.60000             1.09829                1.48334   0.3093
+     20        14.7381   0.73690             1.06105                2.22187   0.6186
+     26        19.9845   0.76863             1.03981                2.33632   0.4042
+     50        41.7640   0.83528             1.00459                2.73197   0.5465
+    100        87.9674   0.87967             0.97933                2.93759   0.0930
+    300       275.8752   0.91958             0.96073                3.23182   0.2789
+   1000       938.4204   0.93842             0.95337                3.41353   0.9298
+   3000      2835.9776   0.94533             0.95110                3.43715   0.7893
+  10000      9483.0389   0.94830             0.95030                3.41518   0.2975
+  30000     28479.8434   0.94933             0.95007                3.48655   0.8926
+ 100000     94974.1191   0.94974             0.94999                3.48089   0.9754
+least-squares fits (alpha should be h = 0.94996, beta should be -1.5):
+  m in [5,26] (free beta): alpha=0.92777 beta=-0.6648 gamma=-1.0031
+  m in [5,26] (beta fixed -1.5): alpha=1.01565 beta=-1.5000 gamma=+0.8158
+  m in [10,26] (beta fixed +0.0): alpha=0.87139 beta=+0.0000 gamma=-2.7207
+  m in [100,1000] (free beta): alpha=0.94968 beta=-1.3201 gamma=+1.8593
+  m in [1000,10000] (free beta): alpha=0.94995 beta=-1.4748 gamma=+3.1453
+  m in [10000,100000] (free beta): alpha=0.94996 beta=-1.4972 gamma=+3.4027
+  m in [10000,100000] (beta fixed -1.5): alpha=0.94996 beta=-1.5000 gamma=+3.4414
+  residual R_m, m in [1000,5000],  20 theta-bins: overall range 0.1526; within-bin range median 0.0588, max 0.0958
+  residual R_m, m in [1000,5000], 400 theta-bins: overall range 0.1526; within-bin range median 0.0360, max 0.0812
+  residual R_m, m in [5000,20000],  20 theta-bins: overall range 0.1186; within-bin range median 0.0253, max 0.0636
+  residual R_m, m in [5000,20000], 400 theta-bins: overall range 0.1186; within-bin range median 0.0091, max 0.0630
+  residual R_m, m in [50000,100000],  20 theta-bins: overall range 0.1110; within-bin range median 0.0178, max 0.0563
+  residual R_m, m in [50000,100000], 400 theta-bins: overall range 0.1110; within-bin range median 0.0017, max 0.0563
+  jumps of C(theta) (m in [50000,100000], means over theta-windows of width 0.002 on each side):
+    theta = frac(1 log_3 2) = 0.6309: C- = 3.4826, C+ = 3.4276, jump -0.0550
+    theta = frac(2 log_3 2) = 0.2619: C- = 3.4372, C+ = 3.4086, jump -0.0286
+    theta = frac(3 log_3 2) = 0.8928: C- = 3.4872, C+ = 3.4587, jump -0.0286
+    theta = frac(4 log_3 2) = 0.5237: C- = 3.4750, C+ = 3.4529, jump -0.0220
+    theta = frac(5 log_3 2) = 0.1546: C- = 3.4203, C+ = 3.4049, jump -0.0154
+    theta = frac(6 log_3 2) = 0.7856: C- = 3.4704, C+ = 3.4550, jump -0.0154
+  theta-average of C(theta) (log2) = 3.4442; range of the 400-bin profile [3.3777, 3.4872]
+  finite-size part F_m = R_m - C(theta_m) (C from the 400-bin profile above):
+    m=    26: R_m=2.3363  C(theta_m)=3.4511  F_m=-1.1148
+    m=    50: R_m=2.7320  C(theta_m)=3.4627  F_m=-0.7307
+    m=   100: R_m=2.9376  C(theta_m)=3.4032  F_m=-0.4656
+    m=   300: R_m=3.2318  C(theta_m)=3.4164  F_m=-0.1846
+    m=  1000: R_m=3.4135  C(theta_m)=3.4714  F_m=-0.0579
+    m=  3000: R_m=3.4371  C(theta_m)=3.4564  F_m=-0.0192
+    m= 10000: R_m=3.4152  C(theta_m)=3.4214  F_m=-0.0062
+  decomposition at m=26: log2(N)/m = 0.7686 = h 0.9500 - 1.5 log2(26)/26 -0.2712 + R_26/26 +0.0899
+    corrected exponent (log2 N_m + 1.5 log2 m - 3.444)/m at m=26: 0.907346   (naive log2 N_m/m = 0.768635)
+    corrected exponent (log2 N_m + 1.5 log2 m - 3.444)/m at m=100: 0.944890   (naive log2 N_m/m = 0.879674)
+    corrected exponent (log2 N_m + 1.5 log2 m - 3.444)/m at m=1000: 0.949925   (naive log2 N_m/m = 0.938420)
+    corrected exponent (log2 N_m + 1.5 log2 m - 3.444)/m at m=10000: 0.949953   (naive log2 N_m/m = 0.948304)
+    corrected exponent (log2 N_m + 1.5 log2 m - 3.444)/m at m=100000: 0.949956   (naive log2 N_m/m = 0.949741)
+  fixed theta ~ 0.1 (|theta-0.1|<0.01, m in [2000,100000], 1961 pts): alpha=0.94995539 beta=-1.4942;  with a delta/m term: alpha=0.94995552 beta=-1.4997 delta=-59.8
+  fixed theta ~ 0.5 (|theta-0.5|<0.01, m in [2000,100000], 1959 pts): alpha=0.94995539 beta=-1.4945;  with a delta/m term: alpha=0.94995552 beta=-1.4999 delta=-59.3
+  fixed theta ~ 0.9 (|theta-0.9|<0.01, m in [2000,100000], 1961 pts): alpha=0.94995539 beta=-1.4946;  with a delta/m term: alpha=0.94995551 beta=-1.4995 delta=-54.1
+  exceptional Haar mass at level m: N_m/2^m = 2^(log2N_m - m): m=26 0.01546, m=1000 2.902e-19, m=100000 2^-5025.9
+
+==============================================================================
+LADDER-C. q>=5: mu_q = Haar(Bad(q)) = lim N_m/2^m, rigorous enclosure
+==============================================================================
+tail bound: 0 <= f_m - mu_q <= sum_{n>m} P(S_n<0) <= rho^(m+1)/(1-rho),
+            rho = 2^(t-1)(1+q^(-t)) at the stated fixed t (Chernoff; any t>0 is valid)
+drift E[S_1] = log2(3)/2 - 1 = -0.207519  (< 0: mu_3 = 0 by the strong law)
+drift E[S_1] = log2(5)/2 - 1 = +0.160964  (> 0: mu_q > 0)
+drift E[S_1] = log2(7)/2 - 1 = +0.403677  (> 0: mu_q > 0)
+q= 5: t=0.1734 rho=0.990403828 m=5736 tail<=9.84e-23  mu_q in [0.17602578456212269512895, 0.176025784562122695129049]   [f_20=0.222122, f_24=0.212985]
+q= 7: t=0.3042 rho=0.9589249168 m=1284 tail<=9.54e-23  mu_q in [0.300751353095002575715478, 0.300751353095002575715573]   [f_20=0.309834, f_24=0.307928]
+q= 9: t=0.3526 rho=0.9326329633 m=766 tail<=8.7e-23  mu_q in [0.386130024411221032978107, 0.386130024411221032978194]   [f_20=0.390102, f_24=0.389008]
+q=11: t=0.3753 rho=0.9122556934 m=579 tail<=8.4e-23  mu_q in [0.400275472209998391449021, 0.400275472209998391449105]   [f_20=0.402725, f_24=0.401593]
+q=13: t=0.3873 rho=0.8961462889 m=483 tail<=8.61e-23  mu_q in [0.417221311688359086411956, 0.417221311688359086412042]   [f_20=0.418348, f_24=0.417931]
+q=15: t=0.394 rho=0.883061314 m=425 tail<=8.4e-23  mu_q in [0.419629922403084673185841, 0.419629922403084673185925]   [f_20=0.420147, f_24=0.419885]
+q=17: t=0.3979 rho=0.8721745573 m=386 tail<=8.07e-23  mu_q in [0.456314247779206883256592, 0.456314247779206883256672]   [f_20=0.457184, f_24=0.456722]
+q=19: t=0.4001 rho=0.8629337669 m=358 tail<=7.57e-23  mu_q in [0.456724974544805257877556, 0.456724974544805257877631]   [f_20=0.457184, f_24=0.456953]
+q=21: t=0.4012 rho=0.8549594279 m=336 tail<=8.02e-23  mu_q in [0.45856591467480232904284, 0.45856591467480232904292]   [f_20=0.458977, f_24=0.458691]
+q=23: t=0.4017 rho=0.8479828004 m=319 tail<=7.98e-23  mu_q in [0.462662457610202852119285, 0.462662457610202852119365]   [f_20=0.462917, f_24=0.462743]
+q=25: t=0.4017 rho=0.8418082282 m=305 tail<=8.24e-23  mu_q in [0.462761130917825078674035, 0.462761130917825078674118]   [f_20=0.462917, f_24=0.462830]
+q=27: t=0.4014 rho=0.8362897122 m=294 tail<=7.61e-23  mu_q in [0.46371060412368985369275, 0.463710604123689853692826]   [f_20=0.463856, f_24=0.463750]
+q=29: t=0.401 rho=0.8313159221 m=284 tail<=8.06e-23  mu_q in [0.463779023742417116464178, 0.463779023742417116464259]   [f_20=0.463856, f_24=0.463856]
+q=31: t=0.4003 rho=0.8268003424 m=276 tail<=7.61e-23  mu_q in [0.463780987740840974271255, 0.463780987740840974271331]   [f_20=0.463856, f_24=0.463856]
+
+==============================================================================
+LADDER-D. independent check: Spitzer / Sparre Andersen  mu_q = exp(-sum P(S_n<0)/n)
+==============================================================================
+q= 5: Spitzer (n<=6213) mu in [0.17602578456212269513, 0.17602578456212269513]; DP enclosure [0.17602578456212269513, 0.17602578456212269513]; CONSISTENT; |diff|=5.47e-29
+q= 7: Spitzer (n<=1394) mu in [0.30075135309500257572, 0.30075135309500257572]; DP enclosure [0.30075135309500257572, 0.30075135309500257572]; CONSISTENT; |diff|=4.1e-28
+q= 9: Spitzer (n<=832) mu in [0.38613002441122103298, 0.38613002441122103298]; DP enclosure [0.38613002441122103298, 0.38613002441122103298]; CONSISTENT; |diff|=8.16e-28
+q=11: Spitzer (n<=629) mu in [0.40027547220999839145, 0.40027547220999839145]; DP enclosure [0.40027547220999839145, 0.40027547220999839145]; CONSISTENT; |diff|=9.54e-28
+q=13: Spitzer (n<=525) mu in [0.41722131168835908641, 0.41722131168835908641]; DP enclosure [0.41722131168835908641, 0.41722131168835908641]; CONSISTENT; |diff|=1.51e-27
+(ballot script time 5.0s)
+[step ballot: 5.2s, exit 0]
+
+(1a) x*(T(f)+1) == (x+1)*(f+1) for all 65536 odd f with deg<=16: PASS
+(1b) T^k(x^k u+1) == (x+1)^k u+1 with all k iterates odd, k<=12, odd u deg<=12 (49152 cases): PASS
+(2a) deg T(f) = deg f (f odd) / deg f - 1 (f even), all 33554431 nonzero f with deg<=24: PASS
+(2b) initial odd-run length == v_x(f+1) for all f != 1 with deg<=24: PASS
+(2c) every nonzero f with deg<=24 reaches 1 (no other cycle): PASS
+(2d) t_HMYZ(f) == 2 t_short(f) - deg f for all nonzero f with deg<=24: PASS
+  d  #polys  maxT_short argmax_short                  maxT_HMYZ  d^2+2d  maxH/d^1.5 maxH/(d ln d) meanT_short/d meanT_HMYZ/d
+  1       2          2  x+1                                    3       3      3.000         0.000        1.5000       2.0000
+  2       4          4  x^2+1                                  6       8      2.121         4.328        1.5000       2.0000
+  3       8          7  x^3+1                                 11      15      2.117         3.338        1.5833       2.1667
+  4      16          9  x^4+x^3+x^2+1                         14      24      1.750         2.525        1.5938       2.1875
+  5      32         13  x^5+1                                 21      35      1.878         2.610        1.6625       2.3250
+  6      64         15  x^6+x^5+x^4+1                         24      48      1.633         2.232        1.7031       2.4062
+  7     128         18  x^7+x^6+x^3+1                         29      63      1.566         2.129        1.7299       2.4598
+  8     256         21  x^8+x^7+x^6+x^5+x^3+1                 34      80      1.503         2.044        1.7471       2.4941
+  9     512         25  x^9+1                                 41      99      1.519         2.073        1.7678       2.5356
+ 10    1024         29  x^10+x^9+x^7+1                        48     120      1.518         2.085        1.7896       2.5793
+ 11    2048         33  x^11+x^9+x^8+x^5+x^4+1                55     143      1.508         2.085        1.8080       2.6159
+ 12    4096         35  x^12+x^11+x^9+x^8+x^7+x^5+x^4+x^3+x^2+1        58     168      1.395         1.945        1.8232       2.6464
+ 13    8192         39  x^13+x^11+x^10+x^9+x^5+1              65     195      1.387         1.949        1.8369       2.6738
+ 14   16384         43  x^14+x^13+x^12+x^10+x^8+x^5+x^4+1        72     224      1.374         1.949        1.8478       2.6957
+ 15   32768         48  x^15+x^14+x^13+x^10+x^5+1             81     255      1.394         1.994        1.8575       2.7149
+ 16   65536         51  x^16+x^15+x^12+x^10+x^8+x^5+x^4+1        86     288      1.344         1.939        1.8660       2.7321
+ 17  131072         55  x^17+x^15+x^12+x^10+x^9+x^5+x^4+1        93     323      1.327         1.931        1.8734       2.7467
+ 18  262144         59  x^18+x^17+x^16+x^13+x^10+x^9+x^5+1       100     360      1.309         1.922        1.8798       2.7596
+ 19  524288         68  x^19+x^18+x^17+x^14+x^9+1            117     399      1.413         2.091        1.8859       2.7717
+ 20 1048576         71  x^20+x^19+x^16+x^14+x^12+x^9+x^8+1       122     440      1.364         2.036        1.8916       2.7832
+ 21 2097152         75  x^21+x^19+x^16+x^14+x^13+x^9+x^8+x^5+x^4+1       129     483      1.340         2.018        1.8965       2.7930
+ 22 4194304         77  x^22+x^21+x^17+x^16+x^14+x^13+x^12+x^11+x^9+x^8+x^7+x^5+x^4+x^3+x^2+1       132     528      1.279         1.941        1.9011       2.8023
+ 23 8388608         81  x^23+x^21+x^19+x^18+x^17+x^16+x^14+x^13+x^12+x^11+x^9+x^8+x^6+x^5+x^4+1       139     575      1.260         1.927        1.9053       2.8106
+ 24 16777216         88  x^24+x^19+x^14+x^9+x^8+1             152     624      1.293         1.993        1.9091       2.8183
+  all 2^21-1 nonzero f with deg<=20: max shortcut steps 71, max HMYZ steps 122
+(3) k : bijection(f mod x^k -> first k parities) ; #classes mod x^k with k odd steps (exceptional count)
+    k= 1 : bijection ; exceptional classes = 1 (class of 1)
+    k= 2 : bijection ; exceptional classes = 1 (class of 1)
+    k= 3 : bijection ; exceptional classes = 1 (class of 1)
+    k= 4 : bijection ; exceptional classes = 1 (class of 1)
+    k= 8 : bijection ; exceptional classes = 1 (class of 1)
+    k=12 : bijection ; exceptional classes = 1 (class of 1)
+    k=16 : bijection ; exceptional classes = 1 (class of 1)
+    k=20 : bijection ; exceptional classes = 1 (class of 1)
+(3) all k<=20: PASS
+F2[x] TOTAL: ALL CHECKS PASS
+[step f2x: 0.9s, exit 0]
+
+==============================================================================
+LADDER-MAHLER. THM-3848 safe-prefix language re-counted three ways
+==============================================================================
+greedy word d (first 40): 1010000010010010100000000010000001000010
+counts a_m, m=0..20: [1, 2, 3, 5, 8, 12, 18, 27, 40, 60, 90, 134, 201, 302, 452, 678, 1018, 1527, 2291, 3438, 5157]
+(a) DFS over (S2) == (b) renewal == (c) Parry-lexicographic for m<=30: YES
+C = 9/(2 D'(2/3)) = 1.5510451884 (THM-3848 states 1.5510451884)
+  m= 10: a_m/(3/2)^m = 1.5607376924   log2(a_m)/m = 0.649185   (log2 a_m - log2 C)/m = 0.58586124
+  m= 20: a_m/(3/2)^m = 1.5508576987   log2(a_m)/m = 0.616616   (log2 a_m - log2 C)/m = 0.58495378
+  m= 50: a_m/(3/2)^m = 1.5510451964   log2(a_m)/m = 0.597627   (log2 a_m - log2 C)/m = 0.58496250
+  m=100: a_m/(3/2)^m = 1.5510451884   log2(a_m)/m = 0.591295   (log2 a_m - log2 C)/m = 0.58496250
+  m=200: a_m/(3/2)^m = 1.5510451884   log2(a_m)/m = 0.588129   (log2 a_m - log2 C)/m = 0.58496250
+  m=400: a_m/(3/2)^m = 1.5510451884   log2(a_m)/m = 0.586546   (log2 a_m - log2 C)/m = 0.58496250
+log2(3/2) = 0.58496250  (entropy in bits = binary-ultrametric / 2-adic dimension)
+Haar mass of the level-m safe cylinders a_m/2^m: m=20 4.918e-03, m=100 4.975e-13
+THM-2228 Phi: length-m words -> Z/2^m bijective for m<=12 (isometry onto Z_2): YES
+LADDER-MAHLER TOTAL: ALL CHECKS PASS
+[step mahler: 16.5s, exit 0]
+
+==============================================================================
+LADDER-CHOICE. exceptional classes mod 2^m (lane-one program exceptional_general.c)
+==============================================================================
+system                           m=16       m=20       m=24  frac m=20  frac m=24 log2/m @24
+q=3 no choice (Collatz)          2114      27328     286581    0.02606    0.01708      0.755
+                           mode-0 counts == exact ballot N_m(3) at m=16,20,24: YES
+q=3 E_S, S={6 mod 8}              327       2165       2109    0.00206    0.00013      0.460
+q=3 E_S, S={2 mod 4}              223       1254        611    0.00120    0.00004      0.386
+q=3 full choice E                 124        664        369    0.00063    0.00002      0.355
+q=5 no choice (5x+1)            15320     232912    3573290    0.22212    0.21298      0.907
+                           mode-0 counts == exact ballot N_m(5) at m=16,20,24: YES
+q=5 E_S, S={6 mod 8}            14852     219070    3225154    0.20892    0.19223      0.901
+q=5 E_S, S={2 mod 4}            11220     137762    1551497    0.13138    0.09248      0.857
+q=5 full choice E_5             11128     133600    1427116    0.12741    0.08506      0.852
+q=7 no choice (7x+1)            20866     324884    5166172    0.30983    0.30793      0.929
+                           mode-0 counts == exact ballot N_m(7) at m=16,20,24: YES
+q=7 full choice E_7             20642     312884    4916894    0.29839    0.29307      0.926
+
+longer runs (MM=26; m = 18, 22, 26):
+  q=3 full choice E        m=18: 274 (frac 0.00105)  m=22: 782 (frac 0.00019)  m=26: 777 (frac 0.00001)
+  q=5 full choice E_5      m=18: 39748 (frac 0.15163)  m=22: 417260 (frac 0.09948)  m=26: 4457200 (frac 0.06642)
+  q=5 no choice (5x+1)     m=18: 59850 (frac 0.22831)  m=22: 905758 (frac 0.21595)  m=26: 14055112 (frac 0.20944)
+                           == exact ballot counts: YES
+  q=5 reference: mu_5 = Haar(Bad(5)) = 0.1760257846 (no-choice limit, LADDER-C)
+  q=5 ratio (full choice)/(no choice) at m=26: 0.3171
+
+cross-checks against lane one's independent programs (choice_ladder.out):
+  q=3 full E: general program vs e_forward_dp_full at m=[14, 16, 18, 20, 22, 24]: IDENTICAL [(162, 162), (124, 124), (274, 274), (664, 664), (782, 782), (369, 369)]
+  q=3 full E at m=26: 777 vs lane one 777: IDENTICAL
+  q=3 S={6 mod 8}: general program vs e_forward_dp at m=18,22: IDENTICAL [(822, 822), (3238, 3238)]
+  q=3 S={2 mod 4}: general program vs e_forward_dp at m=18,22: IDENTICAL [(515, 515), (1452, 1452)]
+LADDER-CHOICE TOTAL: ALL CHECKS PASS
+[step choice: 13.9s, exit 0]
+
+==============================================================================
+LADDER-MC. exact per-class search (eq_dfs.c) vs DP, then Monte Carlo to m=64
+==============================================================================
+  q=5 E_5            exhaustive DFS m=16,20:   11128   133600   DP:   11128   133600   IDENTICAL
+  q=5 no choice      exhaustive DFS m=16,20:   15320   232912   DP:   15320   232912   IDENTICAL
+  q=3 E              exhaustive DFS m=16,20:     124      664   DP:     124      664   IDENTICAL
+  q=3 S={6 mod 8}    exhaustive DFS m=16,20:     327     2165   DP:     327     2165   IDENTICAL
+  q=3 S={2 mod 4}    exhaustive DFS m=16,20:     223     1254   DP:     223     1254   IDENTICAL
+  q=7 E_7            exhaustive DFS m=16,20:   20642   312884   DP:   20642   312884   IDENTICAL
+
+q=5: level-m exceptional Haar mass f_m (no choice: exact ballot; E_5: exact DP for m<=26, MC beyond)
+  m=26: no-choice f_m=0.20944   E_5 MC 6579/100000 = 0.06579 +- 0.00078 (95% ub 0.06732)  (exact DP 0.06642)
+  m=32: no-choice f_m=0.20387   E_5 MC 3760/100000 = 0.03760 +- 0.00060 (95% ub 0.03878)  local exponent log2(count)/m-slope: 0.865
+  m=40: no-choice f_m=0.19626   E_5 MC 877/100000 = 0.00877 +- 0.00029 (95% ub 0.00934)  local exponent log2(count)/m-slope: 0.737
+  m=48: no-choice f_m=0.19245   E_5 MC 191/100000 = 0.00191 +- 0.00014 (95% ub 0.00218)  local exponent log2(count)/m-slope: 0.725
+  m=56: no-choice f_m=0.18864   E_5 MC 31/100000 = 0.00031 +- 0.00006 (95% ub 0.00044)  local exponent log2(count)/m-slope: 0.672
+  m=64: no-choice f_m=0.18668   E_5 MC 4/100000 = 0.00004 +- 0.00002 (95% ub 0.00010)  local exponent log2(count)/m-slope: 0.631
+  control: no-choice MC at m=64: 0.18683 +- 0.00123 vs exact ballot f_64(5) = 0.18668: CONSISTENT
+  mu_5 = lim f_m (no choice) = 0.176025784562 (LADDER-C);  E_5 upper bound (rigorous, exact DP): Haar(Bad(E_5)) <= f_26(E_5) = 0.06642
+
+q = 7, 9, 11, 13: E_q exceptional fraction (MC) vs no-choice f_m (exact) and mu_q
+  q= 7: m=32: 0.2781+-0.0032 (no-choice 0.3045)   m=48: 0.2451+-0.0030 (no-choice 0.3019)   m=64: 0.2183+-0.0029 (no-choice 0.3012)
+  q= 9: m=32: 0.3676+-0.0034 (no-choice 0.3871)   m=48: 0.3472+-0.0034 (no-choice 0.3863)   m=64: 0.3374+-0.0033 (no-choice 0.3862)
+  q=11: m=32: 0.3927+-0.0034 (no-choice 0.4006)   m=48: 0.3916+-0.0034 (no-choice 0.4003)   m=64: 0.3864+-0.0034 (no-choice 0.4003)
+  q=13: m=32: 0.4127+-0.0035 (no-choice 0.4174)   m=48: 0.4104+-0.0035 (no-choice 0.4172)   m=64: 0.4062+-0.0035 (no-choice 0.4172)
+
+first-moment indices (min over t on a grid; any fixed t gives a valid bound):
+  rho_q = min_t 2^(t-1)(1+q^-t)   [no choice: < 1 iff drift > 0 iff q >= 5]
+  r_q   = min_t 2^(t-1)/(1-q^-t)  [full choice: expected number of descending certificates per bit]
+  q=  3: rho_q= 1.00007  r_q= 1.48469  K_q(0.713)=    +inf  => Theorem 3 lower bound Haar(Bad(E_q)) >= 0.0
+  q=  5: rho_q=0.990404  r_q= 1.19967  K_q(0.713)=    +inf  => Theorem 3 lower bound Haar(Bad(E_q)) >= 0.0
+  q=  7: rho_q=0.958925  r_q= 1.09174  K_q(0.713)=    +inf  => Theorem 3 lower bound Haar(Bad(E_q)) >= 0.0
+  q=  9: rho_q=0.932633  r_q=   1.032  K_q(0.713)=    +inf  => Theorem 3 lower bound Haar(Bad(E_q)) >= 0.0
+  q= 11: rho_q=0.912256  r_q=0.992953  K_q(0.713)=    +inf  => Theorem 3 lower bound Haar(Bad(E_q)) >= 0.0
+  q= 13: rho_q=0.896146  r_q=0.964923  K_q(0.713)= 11.4617  => Theorem 3 lower bound Haar(Bad(E_q)) >= 0.0
+  q= 21: rho_q=0.854959  r_q=0.900856  K_q(0.713)= 2.53186  => Theorem 3 lower bound Haar(Bad(E_q)) >= 0.0
+  q= 31: rho_q=  0.8268  r_q=0.861425  K_q(0.713)= 1.38778  => Theorem 3 lower bound Haar(Bad(E_q)) >= 0.0
+  q= 41: rho_q=0.809115  r_q=0.837972  K_q(0.713)= 0.98912  => Theorem 3 lower bound Haar(Bad(E_q)) >= 0.0054401
+  q=101: rho_q=0.763297  r_q=0.780778  K_q(0.713)=0.411004  => Theorem 3 lower bound Haar(Bad(E_q)) >= 0.2945
+LADDER-MC TOTAL: ALL CHECKS PASS
+[step choice_mc: 477.5s, exit 0]
+
+LADDER RUN TOTAL: ALL STEPS EXITED 0

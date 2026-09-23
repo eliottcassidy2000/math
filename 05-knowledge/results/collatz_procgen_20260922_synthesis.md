@@ -46,7 +46,9 @@ This session built two instruments and pointed them at many siblings:
 | backward `E` (Q2) | reverse moves with choice | `157` mod `3^32` |
 | Applegate--Lagarias semigroup | arbitrary wild multipliers | one class, `-1 mod 2^j` (CITED) |
 | additive choice `3n+b`, `b in B`, `|B|>=2` | choice of sheet | **empty** at `2^22` |
-| `5n+1`, with or without choice | any | positive measure (DRIFT) |
+| `5n+1`, no choice | none | positive measure `mu_5=0.17603` (PROVED, sibling ladder) |
+| `5n+1` with `E`-choice | branch choice | falls `0.26->0.066` (`2^26`, exact) and about `4e-5` (`2^64`, MC): collapse CONJECTURED; `Haar<=0.0664` PROVED. **Choice is blind to the Collatz drift** (corrected; MISTAKES 2026-09-22) |
+| `qn+1`, `E`-choice, `q>=41` | branch choice | positive Haar measure (PROVED, sibling-ladder Thm 3); heuristic threshold `q` about 10 |
 
 **The relaxed problem E-SCC** (HYP-9120). `E` turns out to be Le--Smith's
 *Loosened Collatz Graph* (arXiv 2109.01180, CITED; they state neither Q1,
@@ -109,8 +111,35 @@ the divergence half of Collatz, and the sign enters exactly as the sign of
 
 ## 2. Lanes still to integrate (placeholders)
 
-* Sibling dimension ladder: PENDING.
-* Sign-specific order laws: PENDING.
+* **Sibling dimension ladder**
+  ([note](collatz_procgen_20260922_sibling_dimension_ladder.md)):
+  * PROVED: `dim=h(log_3 2)` for `3n+b`, for every odd `b`. Exact counts to
+    `m=10^5` fit `C 2^(hm) m^(-3/2)` with fitted exponent `0.94995552`
+    against the proved `0.9499555`, and power `-1.4997`.
+  * PROVED: positive measure for `q>=5`, with `mu_5=0.17603`,
+    `mu_7=0.30075` to `10^-22` (Spitzer series).
+  * PROVED: the F2[x] exceptional set is `{1}`.
+  * The choice-game threshold is heuristically near `q=10`; positivity is
+    proved for `q>=41`. This **corrects** the drift claim above.
+  * Mahler's safe set has dimension `log_2(3/2)` (THM-3848).
+  * Lagarias 2009: `dim E^(1)=log_3 2`, `dim E^(2)<=1/2`; he conjectures
+    `dim E(Z_3)=0` (CITED).
+* **Sign-specific order laws**
+  ([note](collatz_procgen_20260922_order_laws.md)):
+  * FINITE-EXACT: 6,016 grammar-generated order statements on both sheets
+    to `10^7`; no sign-specific law beyond the sign law.
+  * PROVED (direction lemma): a plus window can contradict its parity
+    word's prediction only by decay going up, a minus window only by
+    growth going down. So windows of at most 12 odd steps are sheet-blind,
+    and the realized ordinal patterns are exactly the word-realizable
+    ones.
+  * The inherited "min `3 mod 4`, max `1 mod 4`" law is a normalization
+    artifact.
+  * Terras's `sigma=tau` holds to `10^7` on both sheets and is PROVED for
+    `tau<=38` (plus).
+  * Best plus-only statement: "every growth window grows" (the sign law).
+    Its smallest minus witness is the transient near-cycle `165->163`
+    (clock `19/12`).
 * Loops through 1 and escapes: PENDING.
 
 ## 2b. The approach deck: every approach generated or considered, with its disposition

@@ -1,5 +1,18 @@
 # Script Results Index
 
+- [Sibling dimension ladder](collatz_procgen_20260922_sibling_dimension_ladder.md):
+  **PROVED / FINITE-EXACT / CITED.** The `3n+b` exceptional set has
+  dimension `h(log_3 2)`; exact counts to `m=10^5` fit exponent
+  `0.94995552`. For `q>=5` the measure is `mu_q` (`mu_5=0.17603`). The
+  F2[x] exceptional set is `{1}`. Choice games are blind to the Collatz
+  drift: the `E_5` mass falls to about `4e-5` at `2^64`, the heuristic
+  threshold is near `q=10`, and positivity is proved for `q>=41`.
+- [Sign-specific order laws](collatz_procgen_20260922_order_laws.md):
+  **FINITE-EXACT / PROVED direction lemma.** 6,016 generated order
+  statements on both sheets to `10^7` give nothing beyond the sign law.
+  Windows of at most 12 odd steps are sheet-blind. The "reversed residue"
+  law is a normalization artifact. Terras's `sigma=tau` holds to `10^7`.
+
 - [Collatz barrier atlas](collatz_procgen_20260922_barrier_atlas.md):
   **CITED (primary sources) plus session typing.** Covers 22 published
   results (Terras to Barina `2^71`), each typed by the barriers it

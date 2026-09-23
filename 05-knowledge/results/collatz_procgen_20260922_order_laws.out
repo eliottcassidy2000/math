@@ -1,0 +1,354 @@
+==============================================================================================================
+collatz_procgen_20260922_order_laws: procedural search for sign-specific ORDER laws of Syracuse orbits
+U_b(x) = oddpart(3x+b), b = +1 (plus sheet) / -1 (minus sheet), positive odd x; stopped orbits x_0..x_T
+(T = first index with x_T in C_b; C_+ = {1}; C_- = {1,5,7,17,25,37,41,55,61,91}); word k_i = v_2(3x_i+b),
+K_j = k_0+...+k_(j-1); signed residues b*x mod M.  A window (i, i+l) is GROWTH if 3^l > 2^K, DECAY if 2^K > 3^l
+(K = K_(i+l) - K_i); its GATE is g = B/(2^K - 3^l) where 2^K x_(i+l) = 3^l x_i + B, sign(B) = b.
+==============================================================================================================
+
+## S0. C census runs
+  chk  plus  # b=1 N=20001 orbits=10001 maxT=102 (n=17647) maxval=9038141 cst_start_fail=0
+  chk  minus # b=-1 N=20001 orbits=10001 maxT=109 (n=18273) maxval=29628019 cst_start_fail=0
+  srch plus  # b=1 N=1000001 orbits=500001 maxT=195 (n=837799) maxval=18997161173 cst_start_fail=0
+  srch minus # b=-1 N=1000001 orbits=500001 maxT=209 (n=858341) maxval=26164105327 cst_start_fail=0
+  ext  plus  # b=1 N=10000001 orbits=5000001 maxT=256 (n=8400511) maxval=20114203639877 cst_start_fail=0
+  ext  minus # b=-1 N=10000001 orbits=5000001 maxT=257 (n=6546273) maxval=10180477676467 cst_start_fail=0
+
+## S1. Independent pure-Python recomputation at N = 20001 (exact integers / Fractions)
+  plus: patterns (w=3..6 x 4 scopes, counts + first/last witness), lag tables (l <= 64), 148 gate crossings, 318 near-gate windows (mu < 1), 0 sigma/tau disagreements, 929 record-histogram cells, 10001 per-n rows: IDENTICAL
+  minus: patterns (w=3..6 x 4 scopes, counts + first/last witness), lag tables (l <= 64), 12 gate crossings, 23 near-gate windows (mu < 1), 0 sigma/tau disagreements, 867 record-histogram cells, 10001 per-n rows: IDENTICAL
+  plus: 2998 random odd n <= 10^7: sigma, tau, T, max, argmax, K_T recomputed in Python: identical
+  minus: 3000 random odd n <= 10^7: sigma, tau, T, max, argmax, K_T recomputed in Python: identical
+  gate bound G_b(l) >= max |B|/|2^K - 3^l| over all words with k_i <= 11, l <= 6, both sheets: checked
+  plus: U_b(4n+b) = U_b(n) for 10000 n; SP pairs (n, n + 2^(K_sigma+1)): same word through sigma(n) and x_j(m) - x_j(n) = 3^j (m-n)/2^K_j > 0 for all j <= sigma(n), 10000 pairs
+  minus: U_b(4n+b) = U_b(n) for 9991 n; SP pairs (n, n + 2^(K_sigma+1)): same word through sigma(n) and x_j(m) - x_j(n) = 3^j (m-n)/2^K_j > 0 for all j <= sigma(n), 9991 pairs
+  log2 3 = [1; 1, 1, 2, 2, 3, 1, 5, 2, 23, 2, 2, 1, 1, 55, 1]; convergents 1/1, 2/1, 3/2, 8/5, 19/12, 65/41, 84/53, 485/306, 1054/665, 24727/15601, 50508/31867
+  generic (word-realizable, k_i <= 9 suffices) ordinal patterns: {3: 6, 4: 16, 5: 48, 6: 140} of {3: 6, 4: 24, 5: 120, 6: 720}
+
+## S2. Grammar and evaluation at N = 1000001 (all odd n <= N, both sheets)
+  family | description | candidates | plus-only | minus-only | both | neither
+  P | ordinal patterns of windows, w = 3..6, 4 scopes | 3480 | 0 | 0 | 2640 | 840
+  L | lag comparisons x_(i+l) vs x_i (l <= 64; from start / anywhere; word-conditioned or not) + all-lag | 516 | 6 | 10 | 244 | 256
+  G | gate margins mu = x_i/g - 1 on positive-gate windows (equivariant) | 7 | 0 | 0 | 0 | 7
+  R | running max/min records: signed/raw residues mod 16, 27; k_(j-1); gap; index | 1344 | 64 | 44 | 242 | 994
+  S | per-n features NEVER(v): sigma, tau, T, argmax, rho, #max/#min records, first record | 528 | 5 | 13 | 99 | 411
+  X | cross-orbit pairs (same prefix SP/SPT, R_b(n) = 4n+b, raw 4n+1, n+2) x 9 features x <=,>=,= | 135 | 15 | 1 | 28 | 91
+  C | coefficient stopping time sigma vs tau; finiteness | 6 | 0 | 0 | 6 | 0
+  TOTAL | | 6016 | 90 | 68 | 3259 | 2599
+  grammar parameters: P: w in {3,4,5,6}, all w! patterns, scopes {all, t=0, x_T excluded, values>=1000};
+  L: l = 1..64, scope {any i, i = 0}, conditions {growth->up, decay->down, never up, never down}, plus the
+  all-lag growth/decay statements; G: c in {0, .01, .03, .1, .3, .5, 1}; R: record type {max, min} x scope
+  {j>=1, j<T} x feature {signed / raw value and predecessor mod 16 (odd v) and mod 27 (3 !| v), k_(j-1) =
+  1..40, gap = 1..64, index = 1..128}; S: 8 features x v = -1..64 (n outside C_b); X: 5 pair types x 9
+  features x {<=, >=, =}; C: 6 statements.
+  P family: for every w and scope, the set of realized patterns on EACH sheet equals the set of generic
+  (word-realizable) patterns exactly (checked): [6, 16, 48, 140] generic patterns for w = 3..6.
+
+## S3. Classification of the survivors (search range N = 1000001; extension N = 10000001)
+  side | family | label | count
+  both | C | BOTH | 6
+  both | L | NO-CROSSING-AT-THIS-LAG | 244
+  both | P | WORD-FORBIDDEN | 2640
+  both | R | BOTH | 242
+  both | S | BOTH | 99
+  both | X | BOTH | 28
+  minus-only | L | SIGN-LAW | 10
+  minus-only | R | NORMALIZATION | 34
+  minus-only | R | SIGN-LAW-STURMIAN | 8
+  minus-only | R | SMALL-N | 2
+  minus-only | S | SIGN-LAW-STURMIAN | 4
+  minus-only | S | SMALL-N | 9
+  minus-only | X | NORMALIZATION | 1
+  plus-only | L | SIGN-LAW | 6
+  plus-only | R | NORMALIZATION | 34
+  plus-only | R | SMALL-N | 30
+  plus-only | S | SMALL-N | 4
+  plus-only | S | TERMINAL | 1
+  plus-only | X | NORMALIZATION | 11
+  plus-only | X | TERMINAL | 4
+
+  label key: SIGN-LAW = holds on one sheet by sign(B) = b applied to a window (PROVED there), fails on
+  the other at gate crossings (S4); SIGN-LAW-STURMIAN = a record gap / first-record index g that no WORD
+  can produce (floor(g log2 3) - floor((g-1) log2 3) = 1, S4b), realized only through a crossing;
+  TERMINAL = fails only because a minus orbit enters C_- above its start (names the cycles); SMALL-N = the
+  other sheet realizes it by 10^7 (explicit n); NORMALIZATION = raw residue / raw 4n+1, whose signed
+  (equivariant) form is sheet-blind; WORD-FORBIDDEN = pattern produced by no word, and windows this short
+  are generic (S4); UNRESOLVED = still one-sided at 10^7 with no explanation; BOTH = holds on both sheets.
+  UNRESOLVED / UNEXPLAINED survivors: 0 []
+  SIGN-LAW-STURMIAN witnesses verified (witness n, record x_i, gap g, next record): [(171, 257, 17, 263), (257, 257, 17, 263), (327, 2369, 29, 2429), (685, 685, 29, 719), (1287, 2897, 41, 3077), (2035, 3053, 46, 3077), (2897, 2897, 41, 3077), (3053, 3053, 46, 3077)]
+  TERMINAL: the minus orbits (n <= 10^7) with no new minimum before entering C_- are n = [33, 49]; each enters C_- at an element larger than n (entries [61, 61])
+
+  --- plus-only survivors (true on the plus sheet for all odd n <= 1000001, false on the minus sheet) ---
+  [L] 6
+    L l12 any growth-up        SIGN-LAW   first minus witness 165 (3 failures); 10^7: plus-only
+    L l12 start growth-up      SIGN-LAW   first minus witness 165 (3 failures); 10^7: plus-only
+    L l53 any growth-up        SIGN-LAW   first minus witness 2981 (3183 failures); 10^7: plus-only
+    L l53 start growth-up      SIGN-LAW   first minus witness 2981 (12 failures); 10^7: plus-only
+    L all any growth-up        SIGN-LAW   first minus witness (165, 12) (15 failures); 10^7: plus-only
+    L all start growth-up      SIGN-LAW   first minus witness (165, 12) (15 failures); 10^7: plus-only
+  [R] 64
+    labels: {'NORMALIZATION': 34, 'SMALL-N': 30}
+    R max all gap=62           SMALL-N      minus witness n=229043; 10^7 on the plus sheet: 1185565
+    R max all idx=92           SMALL-N      minus witness n=512741; 10^7 on the plus sheet: 1027431
+    R max all idx=93           SMALL-N      minus witness n=607697; 10^7 on the plus sheet: 1199847
+    R max all idx=95           SMALL-N      minus witness n=607697; 10^7 on the plus sheet: 1199847
+    R max all idx=96           SMALL-N      minus witness n=810263; 10^7 on the plus sheet: 1027431
+    R max all idx=97           SMALL-N      minus witness n=607697; 10^7 on the plus sheet: 1027431
+    R max all idx=98           SMALL-N      minus witness n=810263; 10^7 on the plus sheet: 1027431
+    R max all idx=103          SMALL-N      minus witness n=993029; 10^7 on the plus sheet: 2533535
+    R max all idx=105          SMALL-N      minus witness n=882693; 10^7 on the plus sheet: 1126015
+    R max all idx=115          SMALL-N      minus witness n=979665; 10^7 on the plus sheet: 1126015
+    R max all idx=122          SMALL-N      minus witness n=917401; 10^7 on the plus sheet: 5338145
+    R max all idx=123          SMALL-N      minus witness n=611601; 10^7 on the plus sheet: 3558763
+    R max all idx=127          SMALL-N      minus witness n=966481; 10^7 on the plus sheet: 1501353
+    R max all idx=128          SMALL-N      minus witness n=644321; 10^7 on the plus sheet: 4003609
+    R max int gap=62           SMALL-N      minus witness n=229043; 10^7 on the plus sheet: 1185565
+    R max int idx=92           SMALL-N      minus witness n=512741; 10^7 on the plus sheet: 1027431
+    R max int idx=93           SMALL-N      minus witness n=607697; 10^7 on the plus sheet: 1199847
+    R max int idx=95           SMALL-N      minus witness n=607697; 10^7 on the plus sheet: 1199847
+    R max int idx=96           SMALL-N      minus witness n=810263; 10^7 on the plus sheet: 1027431
+    R max int idx=97           SMALL-N      minus witness n=607697; 10^7 on the plus sheet: 1027431
+    R max int idx=98           SMALL-N      minus witness n=810263; 10^7 on the plus sheet: 1027431
+    R max int idx=103          SMALL-N      minus witness n=993029; 10^7 on the plus sheet: 2533535
+    R max int idx=105          SMALL-N      minus witness n=882693; 10^7 on the plus sheet: 1126015
+    R max int idx=115          SMALL-N      minus witness n=979665; 10^7 on the plus sheet: 1126015
+    R max int idx=122          SMALL-N      minus witness n=917401; 10^7 on the plus sheet: 5338145
+    R max int idx=123          SMALL-N      minus witness n=611601; 10^7 on the plus sheet: 3558763
+    R max int idx=127          SMALL-N      minus witness n=966481; 10^7 on the plus sheet: 1501353
+    R max int idx=128          SMALL-N      minus witness n=644321; 10^7 on the plus sheet: 4003609
+    R min all kprev=21         SMALL-N      minus witness n=699051; 10^7 on the plus sheet: 3106891
+    R min int kprev=20         SMALL-N      minus witness n=928353; 10^7 on the plus sheet: 1346319
+  [S] 5
+    labels: {'TERMINAL': 1, 'SMALL-N': 4}
+    S rmin=0                   TERMINAL     minus witness n=33; 10^7 on the plus sheet: None
+    S fmr=59                   SMALL-N      minus witness n=193251; 10^7 on the plus sheet: 1500485
+    S fmr=60                   SMALL-N      minus witness n=897375; 10^7 on the plus sheet: 2000645
+    S fmr=62                   SMALL-N      minus witness n=229043; 10^7 on the plus sheet: 1185565
+    S fmr=64                   SMALL-N      minus witness n=203599; 10^7 on the plus sheet: 1580753
+  [X] 15
+    X SPT sigma ge         TERMINAL       minus witness (n,m)=(33, 289); 2 violations; 10^7: plus-only
+    X SPT sigma eq         TERMINAL       minus witness (n,m)=(33, 289); 2 violations; 10^7: plus-only
+    X SPT tau ge           TERMINAL       minus witness (n,m)=(33, 289); 2 violations; 10^7: plus-only
+    X SPT tau eq           TERMINAL       minus witness (n,m)=(33, 289); 2 violations; 10^7: plus-only
+    X RAW sigma le         NORMALIZATION  minus witness (n,m)=(3, 13); 92657 violations; 10^7: plus-only
+    X RAW tau le           NORMALIZATION  minus witness (n,m)=(3, 13); 92657 violations; 10^7: plus-only
+    X RAW T le             NORMALIZATION  minus witness (n,m)=(3, 13); 53684 violations; 10^7: plus-only
+    X RAW T ge             NORMALIZATION  minus witness (n,m)=(71, 285); 32622 violations; 10^7: plus-only
+    X RAW T eq             NORMALIZATION  minus witness (n,m)=(3, 13); 86306 violations; 10^7: plus-only
+    X RAW argmax le        NORMALIZATION  minus witness (n,m)=(3, 13); 59969 violations; 10^7: plus-only
+    X RAW rho le           NORMALIZATION  minus witness (n,m)=(3, 13); 68571 violations; 10^7: plus-only
+    X RAW rmax le          NORMALIZATION  minus witness (n,m)=(3, 13); 56903 violations; 10^7: plus-only
+    X RAW rmin ge          NORMALIZATION  minus witness (n,m)=(71, 285); 37509 violations; 10^7: plus-only
+    X RAW fmr ge           NORMALIZATION  minus witness (n,m)=(39, 157); 26452 violations; 10^7: plus-only
+    X RAW M ge             NORMALIZATION  minus witness (n,m)=(87, 349); 10870 violations; 10^7: plus-only
+
+  --- minus-only survivors (true on the minus sheet for all odd n <= 1000001, false on the plus sheet) ---
+  [L] 10
+    L l17 any decay-down       SIGN-LAW   first plus witness 165 (49605 failures); 10^7: minus-only
+    L l17 start decay-down     SIGN-LAW   first plus witness 165 (12 failures); 10^7: minus-only
+    L l29 any decay-down       SIGN-LAW   first plus witness 63 (191859 failures); 10^7: minus-only
+    L l29 start decay-down     SIGN-LAW   first plus witness 313 (56 failures); 10^7: minus-only
+    L l41 any decay-down       SIGN-LAW   first plus witness 313 (51425 failures); 10^7: minus-only
+    L l41 start decay-down     SIGN-LAW   first plus witness 313 (62 failures); 10^7: minus-only
+    L l46 any decay-down       SIGN-LAW   first plus witness 1071 (15256 failures); 10^7: minus-only
+    L l46 start decay-down     SIGN-LAW   first plus witness 1071 (18 failures); 10^7: minus-only
+    L all any decay-down       SIGN-LAW   first plus witness (165, 17) (148 failures); 10^7: minus-only
+    L all start decay-down     SIGN-LAW   first plus witness (165, 17) (148 failures); 10^7: minus-only
+  [R] 44
+    labels: {'NORMALIZATION': 34, 'SIGN-LAW-STURMIAN': 8, 'SMALL-N': 2}
+    R max all gap=17           SIGN-LAW-STURMIAN plus witness n=171; 10^7 on the minus sheet: None
+    R max all gap=29           SIGN-LAW-STURMIAN plus witness n=327; 10^7 on the minus sheet: None
+    R max all gap=41           SIGN-LAW-STURMIAN plus witness n=1287; 10^7 on the minus sheet: None
+    R max all gap=46           SIGN-LAW-STURMIAN plus witness n=2035; 10^7 on the minus sheet: None
+    R max int gap=17           SIGN-LAW-STURMIAN plus witness n=171; 10^7 on the minus sheet: None
+    R max int gap=29           SIGN-LAW-STURMIAN plus witness n=327; 10^7 on the minus sheet: None
+    R max int gap=41           SIGN-LAW-STURMIAN plus witness n=1287; 10^7 on the minus sheet: None
+    R max int gap=46           SIGN-LAW-STURMIAN plus witness n=2035; 10^7 on the minus sheet: None
+    R min all kprev=22         SMALL-N      plus witness n=932067; 10^7 on the minus sheet: 4173209
+    R min int kprev=19         SMALL-N      plus witness n=873813; 10^7 on the minus sheet: 2213661
+  [S] 13
+    labels: {'SMALL-N': 9, 'SIGN-LAW-STURMIAN': 4}
+    S rmax=28                  SMALL-N      plus witness n=159487; 10^7 on the minus sheet: 1372313
+    S rmax=30                  SMALL-N      plus witness n=974079; 10^7 on the minus sheet: 1022105
+    S rmax=34                  SMALL-N      plus witness n=288615; 10^7 on the minus sheet: 1553637
+    S rmax=35                  SMALL-N      plus witness n=270271; 10^7 on the minus sheet: 3686369
+    S rmin=25                  SMALL-N      plus witness n=205607; 10^7 on the minus sheet: 1352087
+    S rmin=26                  SMALL-N      plus witness n=365523; 10^7 on the minus sheet: 1802783
+    S rmin=27                  SMALL-N      plus witness n=626511; 10^7 on the minus sheet: 2403711
+    S rmin=28                  SMALL-N      plus witness n=782251; 10^7 on the minus sheet: 3440969
+    S fmr=17                   SIGN-LAW-STURMIAN plus witness n=257; 10^7 on the minus sheet: None
+    S fmr=29                   SIGN-LAW-STURMIAN plus witness n=685; 10^7 on the minus sheet: None
+    S fmr=41                   SIGN-LAW-STURMIAN plus witness n=2897; 10^7 on the minus sheet: None
+    S fmr=46                   SIGN-LAW-STURMIAN plus witness n=3053; 10^7 on the minus sheet: None
+    S fmr=57                   SMALL-N      plus witness n=65601; 10^7 on the minus sheet: 2060223
+  [X] 1
+    X RAW fmr le           NORMALIZATION  plus witness (n,m)=(27, 109); 24999 violations; 10^7: minus-only
+
+  --- both-sheet survivors that are order statements, not word functions by construction ---
+    (X: pairs tested at 10^6 / 10^7 per sheet; SP/SPT pairs exist only when m <= N, i.e. short shared words)
+    X SP sigma le          10^7: both      m = n + 2^(K_sigma(n)+1) (same word through the stopping time of n): sigma(m) <= sigma(n) [pairs plus 463979/4727802, minus 463988/4727781]
+    X SP sigma ge          10^7: both      m = n + 2^(K_sigma(n)+1) (same word through the stopping time of n): sigma(m) >= sigma(n) [pairs plus 463979/4727802, minus 463988/4727781]
+    X SP sigma eq          10^7: both      m = n + 2^(K_sigma(n)+1) (same word through the stopping time of n): sigma(m) = sigma(n) [pairs plus 463979/4727802, minus 463988/4727781]
+    X SP tau le            10^7: both      m = n + 2^(K_sigma(n)+1) (same word through the stopping time of n): tau(m) <= tau(n) [pairs plus 463979/4727802, minus 463988/4727781]
+    X SP tau ge            10^7: both      m = n + 2^(K_sigma(n)+1) (same word through the stopping time of n): tau(m) >= tau(n) [pairs plus 463979/4727802, minus 463988/4727781]
+    X SP tau eq            10^7: both      m = n + 2^(K_sigma(n)+1) (same word through the stopping time of n): tau(m) = tau(n) [pairs plus 463979/4727802, minus 463988/4727781]
+    X SPT sigma le         10^7: both      m = n + 2^(K_T(n)+1) (same stopped word as n): sigma(m) <= sigma(n) [pairs plus 119/380, minus 1249/3919]
+    X SPT tau le           10^7: both      m = n + 2^(K_T(n)+1) (same stopped word as n): tau(m) <= tau(n) [pairs plus 119/380, minus 1249/3919]
+    X SPT T ge             10^7: both      m = n + 2^(K_T(n)+1) (same stopped word as n): T(m) >= T(n) [pairs plus 119/380, minus 1249/3919]
+    X SPT argmax ge        10^7: both      m = n + 2^(K_T(n)+1) (same stopped word as n): argmax(m) >= argmax(n) [pairs plus 119/380, minus 1249/3919]
+    X SPT rho ge           10^7: both      m = n + 2^(K_T(n)+1) (same stopped word as n): rho(m) >= rho(n) [pairs plus 119/380, minus 1249/3919]
+    X SPT rmax ge          10^7: both      m = n + 2^(K_T(n)+1) (same stopped word as n): rmax(m) >= rmax(n) [pairs plus 119/380, minus 1249/3919]
+    X SPT rmin ge          10^7: both      m = n + 2^(K_T(n)+1) (same stopped word as n): rmin(m) >= rmin(n) [pairs plus 119/380, minus 1249/3919]
+    X SPT fmr le           10^7: both      m = n + 2^(K_T(n)+1) (same stopped word as n): fmr(m) <= fmr(n) [pairs plus 35/114, minus 381/1213]
+    X SPT fmr ge           10^7: both      m = n + 2^(K_T(n)+1) (same stopped word as n): fmr(m) >= fmr(n) [pairs plus 35/114, minus 381/1213]
+    X SPT fmr eq           10^7: both      m = n + 2^(K_T(n)+1) (same stopped word as n): fmr(m) = fmr(n) [pairs plus 35/114, minus 381/1213]
+    X SPT M ge             10^7: both      m = n + 2^(K_T(n)+1) (same stopped word as n): M(m) >= M(n) [pairs plus 119/380, minus 1249/3919]
+    X R sigma le           10^7: both      m = R_b(n) = 4n + b (U_b(m) = U_b(n)): sigma(m) <= sigma(n) [pairs plus 124999/1249999, minus 124989/1249989]
+    X R tau le             10^7: both      m = R_b(n) = 4n + b (U_b(m) = U_b(n)): tau(m) <= tau(n) [pairs plus 124999/1249999, minus 124989/1249989]
+    X R T le               10^7: both      m = R_b(n) = 4n + b (U_b(m) = U_b(n)): T(m) <= T(n) [pairs plus 124999/1249999, minus 124989/1249989]
+    X R T ge               10^7: both      m = R_b(n) = 4n + b (U_b(m) = U_b(n)): T(m) >= T(n) [pairs plus 124999/1249999, minus 124989/1249989]
+    X R T eq               10^7: both      m = R_b(n) = 4n + b (U_b(m) = U_b(n)): T(m) = T(n) [pairs plus 124999/1249999, minus 124989/1249989]
+    X R argmax le          10^7: both      m = R_b(n) = 4n + b (U_b(m) = U_b(n)): argmax(m) <= argmax(n) [pairs plus 124999/1249999, minus 124989/1249989]
+    X R rho le             10^7: both      m = R_b(n) = 4n + b (U_b(m) = U_b(n)): rho(m) <= rho(n) [pairs plus 124999/1249999, minus 124989/1249989]
+    X R rmax le            10^7: both      m = R_b(n) = 4n + b (U_b(m) = U_b(n)): rmax(m) <= rmax(n) [pairs plus 124999/1249999, minus 124989/1249989]
+    X R rmin ge            10^7: both      m = R_b(n) = 4n + b (U_b(m) = U_b(n)): rmin(m) >= rmin(n) [pairs plus 124999/1249999, minus 124989/1249989]
+    X R fmr ge             10^7: both      m = R_b(n) = 4n + b (U_b(m) = U_b(n)): fmr(m) >= fmr(n) [pairs plus 24999/251863, minus 25007/253339]
+    X R M ge               10^7: both      m = R_b(n) = 4n + b (U_b(m) = U_b(n)): M(m) >= M(n) [pairs plus 124999/1249999, minus 124989/1249989]
+    C sigma=tau            10^7: both      sigma(n) = tau(n): the first descent below n happens exactly at the first decay prefix
+    C sigma>=tau           10^7: both      sigma(n) >= tau(n): no descent below n before the first decay prefix
+    C sigma<=tau           10^7: both      sigma(n) <= tau(n): the first decay prefix always descends below n
+    C sigma<inf            10^7: both      sigma(n) < infinity for n not in C_b
+    C tau<inf              10^7: both      tau(n) < infinity for n not in C_b
+    C orbit-points         10^7: both      sigma = tau at every point x_i of every stopped orbit where both occur inside it
+    [L] 244 word-conditioned lag statements hold on both sheets (all lags except the crossing lags)
+    [P] {'WORD-FORBIDDEN': 2640}
+
+## S4. Deviation spectrum (gate crossings on transients) with exact gates
+  Direction lemma (PROVED): x_(i+l) - x_i = (B - (2^K - 3^l) x_i)/2^K and sign(B) = b.  Hence on the plus
+  sheet a GROWTH window always goes up and only a DECAY window can fail (go up); on the minus sheet a DECAY
+  window always goes down and only a GROWTH window can fail (go down); a failure needs 0 < x_i < gate.
+  plus N=1000001: 148 distinct crossing windows; (type, l, K): count = {('U', 17, 27): 12, ('U', 29, 46): 56, ('U', 41, 65): 62, ('U', 46, 73): 18}
+  plus N=10000001: 148 distinct crossing windows; (type, l, K): count = {('U', 17, 27): 12, ('U', 29, 46): 56, ('U', 41, 65): 62, ('U', 46, 73): 18}
+  plus: all 148 crossings re-verified in exact arithmetic (word, 2^K x_l = 3^l x_0 + B, 0 < x_i < gate)
+    clock 27/17 (intermediate (p2+3p3)/(q2+3q3)): 2^K/3^l = 1.039318; 12 windows, x_i in [165, 589]; G_b(l) = 1.734e+04 -> list COMPLETE (PROVED)
+      x_i -> x_(i+l): 165->167, 171->175, 231->233, 257->263, 259->263, 387->395, 389->395, 391->395, 437->445, 581->593, 587->593, 589->593
+    clock 46/29 (intermediate (p3+2p4)/(q3+2q4)): 2^K/3^l = 1.025329; 56 windows, x_i in [313, 3073]; G_b(l) = 3.45e+06 -> list COMPLETE (PROVED)
+      x_i -> x_(i+l): 313->319, 323->325, 411->425, 415->425, 417->425, 429->433, 457->479, 459->479, 463->479, 471->479, 573->577, 685->719, 689->719, 691->719, 695->719, 697->719, 707->719, 881->911, 885->911, 899->911, 903->911, 1029->1079, 1035->1079, 1037->1079, 1041->1079, 1043->1079, 1047->1079, 1061->1079, 1333->1367, 1345->1367, 1349->1367, 1355->1367, 1549->1619, 1553->1619, 1557->1619, 1565->1619, 1571->1619, 1579->1619, 1593->1619, 1597->1619, 2005->2051, 2019->2051, 2033->2051, 2325->2429, 2349->2429, 2357->2429, 2369->2429, 2391->2429, 2397->2429, 2409->2429, 2415->2429, 2427->2429, 3029->3077, 3043->3077, 3057->3077, 3073->3077
+    clock 65/41 (convergent p5/q5): 2^K/3^l = 1.011529; 62 windows, x_i in [313, 3031]; G_b(l) = 9.702e+08 -> completeness not certified
+      x_i -> x_(i+l): 313->325, 411->433, 415->433, 417->433, 543->577, 553->577, 859->911, 865->911, 873->911, 879->911, 889->911, 1017->1079, 1033->1079, 1287->1367, 1289->1367, 1299->1367, 1309->1367, 1319->1367, 1335->1367, 1519->1619, 1527->1619, 1537->1619, 1551->1619, 1563->1619, 1921->2051, 1931->2051, 1935->2051, 1949->2051, 1965->2051, 1977->2051, 1979->2051, 2003->2051, 2279->2429, 2281->2429, 2291->2429, 2299->2429, 2307->2429, 2311->2429, 2327->2429, 2329->2429, 2343->2429, 2345->2429, 2371->2429, 2883->3077, 2889->3077, 2897->3077, 2899->3077, 2903->3077, 2907->3077, 2911->3077, 2923->3077, 2925->3077, 2935->3077, 2949->3077, 2955->3077, 2967->3077, 2969->3077, 2977->3077, 2983->3077, 2985->3077, 3005->3077, 3031->3077
+    clock 73/46 (not a best approximation): 2^K/3^l = 1.065644; 18 windows, x_i in [1071, 3075]; G_b(l) = 1.363e+09 -> completeness not certified
+      x_i -> x_(i+l): 1071->1079, 1351->1367, 1607->1619, 2023->2051, 2025->2051, 2027->2051, 2035->2051, 2043->2051, 2049->2051, 2401->2429, 2411->2429, 3035->3077, 3039->3077, 3041->3077, 3051->3077, 3053->3077, 3065->3077, 3075->3077
+  plus: G_b(l) <= 10^7 for every l <= 38 (G_b(39) = 4.053e+07), so the 10^7 census PROVES that the gate crossings of lag <= 38 are exactly the lags [17, 29] listed above
+  plus: short-lag genericity (PROVED): for l < 17 every comparison x_(i+l) vs x_i on a transient equals its word prediction (max G_b(l), l < 17, is 2012)
+  minus N=1000001: 15 distinct crossing windows; (type, l, K): count = {('D', 12, 19): 3, ('D', 53, 84): 12}
+  minus N=10000001: 15 distinct crossing windows; (type, l, K): count = {('D', 12, 19): 3, ('D', 53, 84): 12}
+  minus: all 15 crossings re-verified in exact arithmetic (word, 2^K x_l = 3^l x_0 + B, 0 < x_i < gate)
+    clock 19/12 (convergent p4/q4): 2^K/3^l = 0.986540; 3 windows, x_i in [165, 549]; G_b(l) = 6291 -> list COMPLETE (PROVED)
+      x_i -> x_(i+l): 165->163, 309->307, 549->547
+    clock 84/53 (convergent p6/q6): 2^K/3^l = 0.997914; 12 windows, x_i in [2981, 44433]; G_b(l) = 6.863e+11 -> completeness not certified
+      x_i -> x_(i+l): 2981->2953, 4471->4429, 6005->5995, 6705->6643, 17537->17497, 24933->24911, 26305->26245, 29593->29525, 39457->39367, 44325->44287, 44389->44287, 44433->44287
+  minus: G_b(l) <= 10^7 for every l <= 35 (G_b(36) = 3.509e+07), so the 10^7 census PROVES that the gate crossings of lag <= 35 are exactly the lags [12] listed above
+  minus: short-lag genericity (PROVED): for l < 12 every comparison x_(i+l) vs x_i on a transient equals its word prediction (max G_b(l), l < 12, is 162.5)
+
+  near-gate windows (0 < mu < 1: not crossings) at 10^7: plus 170, minus 14
+    plus smallest positive margins: (3079, l=46, K=73, mu=0.0107), (2431, l=46, K=73, mu=0.0135), (3081, l=46, K=73, mu=0.0215), (1081, l=34, K=54, mu=0.0256)
+    minus smallest positive margins: (809, l=12, K=19, mu=0.2213), (521, l=12, K=19, mu=0.3915), (5505, l=53, K=84, mu=0.5328), (8257, l=53, K=84, mu=0.5329)
+
+  anatomy of the smallest crossings (dip = minimum inside the window):
+    plus: 165 -(17 steps, K=27)-> 167  dip 31 at step 1, peak 593; word [4, 1, 1, 1, 1, 2, 2, 1, 2, 1, 1, 2, 1, 1, 1, 2, 3]
+    plus: 171 -(17 steps, K=27)-> 175  dip 31 at step 6, peak 257; word [1, 2, 2, 2, 3, 2, 1, 1, 1, 1, 2, 2, 1, 2, 1, 1, 2]
+    plus: 231 -(17 steps, K=27)-> 233  dip 31 at step 7, peak 881; word [1, 1, 2, 1, 1, 2, 6, 1, 1, 1, 1, 2, 2, 1, 2, 1, 1]
+    plus: every crossing window dips strictly below both endpoints; dip values: {31: 55, 47: 47, 71: 6, 91: 37, 103: 3}
+    minus: 165 -(12 steps, K=19)-> 163  dip 49 at step 9, peak 523; word [1, 2, 1, 1, 2, 2, 1, 1, 5, 1, 1, 1]
+    minus: 309 -(12 steps, K=19)-> 307  dip 65 at step 3, peak 547; word [1, 2, 4, 1, 1, 1, 1, 1, 2, 1, 3, 1]
+    minus: 549 -(12 steps, K=19)-> 547  dip 65 at step 5, peak 1387; word [1, 2, 1, 1, 6, 1, 1, 1, 1, 1, 2, 1]
+    minus: every crossing window dips strictly below both endpoints; dip values: {49: 1, 65: 2, 229: 3, 481: 6, 961: 2, 1249: 1}
+  plus: 148 of 148 crossing windows share a value with the orbit of 27
+  plus: 1170879 of 5000001 odd n <= 10^7 have a gate crossing inside their stopped orbit
+  minus: 15255 of 5000001 odd n <= 10^7 have a gate crossing inside their stopped orbit
+  plus: (lag, lags of crossing sub-windows) -> count: {(17, ()): 12, (29, ()): 44, (29, (17,)): 12, (41, ()): 22, (41, (17, 29)): 22, (41, (29,)): 18, (46, ()): 3, (46, (17, 29)): 4, (46, (17, 29, 41)): 5, (46, (41,)): 6}
+  minus: (lag, lags of crossing sub-windows) -> count: {(12, ()): 3, (53, ()): 12}
+
+## S4b. Ladder epochs: which record gaps can a WORD produce?
+  Lemma (PROVED): if x_j > x_i and x_m < x_i for i < m < j (a first passage above x_i at lag g = j - i),
+  and no pair in the window is a crossing, then 2^(K_m) > 3^m for 0 < m < g and 2^(K_g) < 3^g with the last
+  exponent 1, which forces floor(g log2 3) - floor((g-1) log2 3) = 2 (g >= 2).  Excluded lags g <= 128
+  (density 2 - log2 3 = 0.415): [3, 5, 8, 10, 13, 15, 17, 20, 22, 25, 27, 29, 32, 34, 37, 39, 41, 44, 46, 49, 51, 54, 56, 58, 61, 63, 66, 68, 70, 73, 75, 78, 80, 82, 85, 87, 90, 92, 94, 97, 99, 102, 104, 107, 109, 111, 114, 116, 119, 121, 123, 126, 128]
+  (cross-checked for g <= 64 by a dynamic program over exponent words: identical)
+  plus (10^7): max-record gaps realized: 61 values up to 118; EXCLUDED gaps realized: {17: (8, 171), 29: (57, 327), 41: (6, 1287), 46: (3, 2035)}; first-record indices realized at excluded lags: [17, 29, 41, 46]
+  minus (10^7): max-record gaps realized: 63 values up to 112; EXCLUDED gaps realized: {}; first-record indices realized at excluded lags: []
+  minus sheet, PROVED (computer-assisted): an excluded gap g needs a crossing (x_i, m), m < g, whose start
+  x_i is a running maximum; on the minus sheet the crossings with m <= 35 are exactly (165|309|549, 12)
+  (S4), and a running maximum x_i forces the start n <= x_i <= 549, inside the census.  Hence NO minus
+  orbit (any n) has a max-record gap or first-record index g <= 36 that is excluded; to 10^7 no excluded
+  gap of any size occurs on the minus sheet.  Plus sheet: excluded gaps occur exactly at the crossing
+  lags 17, 29, 41, 46 (witnesses verified in S3).
+
+## S5. Coefficient stopping time: sigma(n) = tau(n) on both sheets
+  plus N=1000001: sigma = tau for 500000 of 500000 odd n outside C_b; sigma = infinity for 0 of them; orbit-point disagreements 0; max sigma 111 at n = 626331
+  plus N=10000001: sigma = tau for 5000000 of 5000000 odd n outside C_b; sigma = infinity for 0 of them; orbit-point disagreements 0; max sigma 155 at n = 8088063
+  plus cycle elements n:(sigma, tau) over 70 steps: 1:(None,1)
+  minus N=1000001: sigma = tau for 499991 of 499991 odd n outside C_b; sigma = infinity for 0 of them; orbit-point disagreements 0; max sigma 125 at n = 482817
+  minus N=10000001: sigma = tau for 4999991 of 4999991 odd n outside C_b; sigma = infinity for 0 of them; orbit-point disagreements 0; max sigma 172 at n = 5960769
+  minus cycle elements n:(sigma, tau) over 70 steps: 1:(None,None) 5:(None,None) 7:(1,1) 17:(None,None) 25:(6,6) 37:(5,5) 41:(3,3) 55:(1,1) 61:(2,2) 91:(1,1)
+  PROVED (computer-assisted): a failure of sigma = tau at n is a gate crossing from the start at lag
+  l = tau(n) (plus: the first decay prefix does not descend) or l = sigma(n) (minus: a growth prefix
+  descends), hence n < G_b(l); the 10^7 census has none, so sigma = tau holds for every odd n >= 3
+  with tau(n) <= 38 on the plus sheet and for every odd n outside C_- with sigma(n) <= 35 on the minus
+  sheet.  The minus cycles are compatible with the law because their words never become decay words
+  (tau = sigma = infinity at every cycle element); a plus cycle would violate it at its minimum
+  (tau finite because 2^K > 3^L, sigma infinite).
+  plus CST margin: windows first-decay window (0, tau(n)) with mu = n/gate - 1 < 1, n <= 10^7: ['n=63 l=34 K=54 x_l=61 mu=0.7472']; complete for l <= 33 (2 G_b(l) <= 10^7)
+  minus CST margin: windows growth prefix (0, l), l < sigma(n) with mu = n/gate - 1 < 1, n <= 10^7: none; complete for l <= 35 (2 G_b(l) <= 10^7)
+
+## S6. Extension of every one-sided survivor to N = 10000001
+  minus-only | L | SIGN-LAW | unchanged | 10
+  minus-only | R | NORMALIZATION | unchanged | 34
+  minus-only | R | SIGN-LAW-STURMIAN | unchanged | 8
+  minus-only | R | SMALL-N | now neither | 2
+  minus-only | S | SIGN-LAW-STURMIAN | unchanged | 4
+  minus-only | S | SMALL-N | now neither | 9
+  minus-only | X | NORMALIZATION | unchanged | 1
+  plus-only | L | SIGN-LAW | unchanged | 6
+  plus-only | R | NORMALIZATION | unchanged | 34
+  plus-only | R | SMALL-N | now neither | 30
+  plus-only | S | SMALL-N | now neither | 4
+  plus-only | S | TERMINAL | unchanged | 1
+  plus-only | X | NORMALIZATION | unchanged | 11
+  plus-only | X | TERMINAL | unchanged | 4
+  statements that were two-sided failures at 10^6 and one-sided at 10^7: {} (impossible: failures persist)
+  both-sheet survivors at 10^6 that fail somewhere at 10^7: {('R', 'neither'): 48, ('R', 'minus-only'): 3, ('R', 'plus-only'): 1, ('S', 'neither'): 9, ('S', 'plus-only'): 2, ('S', 'minus-only'): 4}
+    R min all kprev=24       -> minus-only at 10^7 (first plus witness n = 5592405)  TAIL (first realized between 10^6 and 10^7, on one sheet so far)
+    R min all kprev=25       -> plus-only  at 10^7 (first minus witness n = 5891589)  TAIL (first realized between 10^6 and 10^7, on one sheet so far)
+    R min int kprev=22       -> minus-only at 10^7 (first plus witness n = 9082863)  TAIL (first realized between 10^6 and 10^7, on one sheet so far)
+    R min int kprev=23       -> minus-only at 10^7 (first plus witness n = 6213783)  TAIL (first realized between 10^6 and 10^7, on one sheet so far)
+    S rmax=39                -> plus-only  at 10^7 (first minus witness n = 7541953)  TAIL (first realized between 10^6 and 10^7, on one sheet so far)
+    S rmax=40                -> plus-only  at 10^7 (first minus witness n = 5027969)  TAIL (first realized between 10^6 and 10^7, on one sheet so far)
+    S rmin=31                -> minus-only at 10^7 (first plus witness n = 2197599)  TAIL (first realized between 10^6 and 10^7, on one sheet so far)
+    S rmin=32                -> minus-only at 10^7 (first plus witness n = 3472747)  TAIL (first realized between 10^6 and 10^7, on one sheet so far)
+    S rmin=33                -> minus-only at 10^7 (first plus witness n = 4630329)  TAIL (first realized between 10^6 and 10^7, on one sheet so far)
+    S rmin=34                -> minus-only at 10^7 (first plus witness n = 7317063)  TAIL (first realized between 10^6 and 10^7, on one sheet so far)
+  plus 10^7 maxima: rmax 43, rmin 34, fmr 91, argmax 149, rho 188, T 256
+  minus 10^7 maxima: rmax 43, rmin 30, fmr 93, argmax 149, rho 201, T 257
+
+## S7. The three best candidates
+  (1) WINDOW SIGN LAW (plus-only).  "Every growth window grows": if 3^l > 2^(K_(i+l)-K_i) then
+      x_(i+l) > x_i.  PLUS: PROVED for all n (2^K x_(i+l) - 3^l x_i = B > 0).  MINUS: false exactly at the
+      gate crossings; smallest witness 165 -(12 odd steps, clock 19/12)-> 163; complete list at lag 12:
+      165, 309, 549 (PROVED complete); lag 53 (clock 84/53): 12 windows, 2981 ... 44433 (to 10^7); no other
+      lag <= 35 (PROVED).  Plus sheet 10^7: 0 failures.  STATUS: PROVED on plus, a restatement of the sign
+      law sign(B) = b on windows; the new content is the anatomy (transient near-cycles at the growth-side
+      convergents 19/12, 84/53; the minus cycles occupy 1/1, 3/2, 11/7).
+  (2) STURMIAN RECORD LAW (minus-only).  "Consecutive running-max records are never g apart, and the first
+      record is never at index g, for g with floor(g log2 3) - floor((g-1) log2 3) = 1 (g = 3, 5, 8, 10,
+      13, 15, 17, ...)".  MINUS: PROVED for g <= 36 (all n), FINITE-EXACT for every g to 10^7.  PLUS: false;
+      first plus witnesses (gap g: n) {17: 171, 29: 327, 41: 1287, 46: 2035} and (first-record index g: n) {17: 257, 29: 685, 41: 2897, 46: 3053}; every witness window is a plus
+      gate crossing.  STATUS: the word part is PROVED; the sheet asymmetry is the sign law again (plus
+      crossings are decay windows that go up, and only they can create an excluded first passage).
+  (3) COEFFICIENT STOPPING TIME sigma(n) = tau(n) (BOTH sheets; order-based, not a word function).
+      FINITE-EXACT: all 5000000 plus and 4999991 minus non-cycle odd n <= 10^7, and every orbit point.
+      PROVED (computer-assisted) for tau(n) <= 38 (plus) and sigma(n) <= 35 (minus).  OPEN in general
+      (Terras's coefficient stopping time conjecture on the plus sheet).  Sheet-blind as a statement;
+      combined with the sign law it excludes every nontrivial positive 3n+1 cycle, while the minus cycles
+      satisfy it (their words never turn decay).  It is the order law that the minus cycles do not
+      violate and a plus cycle would.

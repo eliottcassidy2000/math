@@ -9,6 +9,27 @@ Format per entry:
 - Why it was wrong
 - The correct framing
 
+## 2026-09-22 Choice-game drift barrier -- a one-level snapshot is not a limit
+
+- **WRONG (collatz-procgen-20260922, lane one; the foundry note and
+  synthesis draft):** "choice does nothing for `5n+1` or `7n+1`; the
+  exceptional fraction stays at 13% and 31%". This was a single level
+  (`2^20`) of the choice game read as a structural DRIFT barrier for
+  choice mechanisms.
+- **Why wrong:** the `E_5` exceptional fraction falls steadily with depth:
+  `0.258` (`m=8`), `0.127` (`20`), `0.066` (`26`, exact), about `4e-5`
+  (`64`, Monte Carlo with exact per-class decisions). Plain `5x+1` stays
+  near `0.19-0.21` (`mu_5=0.17603`). The relaxed reachability `Q1_5` holds
+  for every `n<=3000` (BFS), including `7`, whose plain orbit is believed
+  to diverge.
+- **Correct framing:** choice relaxations are blind to the Collatz drift
+  threshold. For choice games the heuristic threshold is `r_q=1`, between
+  `q=9` and `q=11`. Positivity is proved only for `q>=41` (sibling-ladder
+  Theorem 3), and `Haar(Bad(E_5))<=0.0664` is rigorous
+  ([sibling ladder](../05-knowledge/results/collatz_procgen_20260922_sibling_dimension_ladder.md) §4).
+- **Error genus:** a level-`m` count reported as the limit without checking
+  the trend across levels. Compare MISTAKE-544 (a small census hid growth).
+
 ## 2026-09-22 Level-eleven dyadic normalization
 
 The incoming lead reflection's trigonometric formula had prefactor
