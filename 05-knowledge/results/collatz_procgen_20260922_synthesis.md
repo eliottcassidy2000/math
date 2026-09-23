@@ -244,7 +244,12 @@ the trunk `(4^i-1)/3` is the exit set of the hardest relaxed obstruction.
    digit-propagation question. The relaxation is far thinner than
    Collatz but keeps a genuine Collatz core.
 2. Loops through `1` of every length with bounded ratio (HYP-9122). This is
-   a carry-covering statement at the convergent clocks.
+   a carry-covering statement at the convergent clocks. It is a concrete
+   instance of the S596 "two-block" analogy
+   ([reflection](../../07-reflections/lrc-collatz-the-same-two-block-question-s596.md)):
+   which ratios `2^K/3^s` can legal words through `1` realize at every
+   length? That analogy was left untested there; here it has a precise
+   finite form (every length `<=40` realized with ratio in `[1.517, 2.96]`).
 3. The exact dimension of `Bad_inf(E)`: zero or small positive. A
    heuristic favours positive dimension. A stretch near `-1` banks a
    multiplicative credit of at least `3/2` (the PROVED bound on paths from
