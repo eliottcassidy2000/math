@@ -1,0 +1,6 @@
+theta= 0.5000: x0=0.395345  s(theta)=0.84470  no other zero with |x|<0.95
+theta= 1.0000: x0=0.441283  s(theta)=0.74464  next |x|=0.934684 (N=300: 0.934684)  Re s_1=0.06148  gap eta=0.68316
+theta= 2.0000: x0=0.487433  s(theta)=0.65410  next |x|=0.858277 (N=300: 0.858277)  Re s_1=0.13911  gap eta=0.51499
+theta= 4.0000: x0=0.477165  s(theta)=0.67348  next |x|=0.638807 (N=300: 0.638807)  Re s_1=0.40793  gap eta=0.26555
+theta= 8.6434: x0=0.333332  s(theta)=1.00000  next |x|=0.369406 (N=300: 0.369406)  Re s_1=0.90647  gap eta=0.09353
+min distance of (s+1)log2 3 to an integer, s<2000: 6.298e-05 (>> double-precision error)

@@ -2,14 +2,16 @@
 id: HYP-9133
 title: "Resonance gap for the dynamical zeta of the canonical E-game escape Psi"
 status: >
-  OPEN; floating-point evidence. Every non-leading pole of zeta_Psi(.; theta)
-  with |3^-s| < 1 satisfies Re s <= s(theta) - eta, with eta > 0 uniform for
-  theta in compact subsets of (0, infinity). Here zeta_Psi is the E-game's
-  own dynamical zeta, in which the 1/2-escape price enters as a factor
-  1 + 2^theta. Numerics: the gap is 0.64150 - 0.23547 = 0.406 at theta*,
-  and 1 - 0.90647 = 0.094 at theta_L. The trunk/RH lane found this to be the
-  only precise form of the "hostile point 1/2 vs critical line" analogy. The
-  naive Ihara-type Riemann hypothesis for zeta_Psi is REFUTED numerically.
+  SETTLED -- PROVED (orchestrator, 2026-09-23; proof in
+  collatz_procgen_20260923_trunk_rh.md section 9). The leading pole x_0 of
+  zeta_Psi = 1/(1 - W(3^-s; theta)) is simple and is the only pole with
+  |x| <= x_0. Every other pole with |3^-s| < 1 satisfies
+  Re s <= s(theta) - eta, uniformly for theta in compact subsets of
+  (0, infinity), modulo the 2 pi i/log 3 period. The proof uses positive
+  coefficients with c_1 > 0 (Pringsheim plus aperiodicity), isolated zeros,
+  and Hurwitz plus simplicity. Numerically the gap is 0.683, 0.515, 0.266
+  and 0.094 at theta = 1, 2, 4 and 8.6434. The Ihara-type "RH" remains
+  refuted numerically.
 source: collatz-procgen-20260923 trunk/RH lane (candidate C2)
 depends_on:
   - 05-knowledge/results/collatz_procgen_20260923_trunk_rh.md

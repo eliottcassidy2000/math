@@ -442,3 +442,52 @@ Downloaded literature stays in `scratch/procgen_trunkrh/lit/`, which is git-igno
 * L. C. Washington, *Introduction to Cyclotomic Fields*: the moment formula for Mazur's `E_(1,c)` used by the script. It is not needed: the proof uses RJW's `mu_4`, and P7 checks numerically that the two measures have the same moments on `Z_3^x`.
 * The Riesz criterion, Littlewood's Möbius criterion (the primary sources), and the Hecke–Mahler natural boundary.
 * Strassmann's theorem and von Staudt–Clausen are standard; I did not read a specific textbook page.
+
+## 9. HYP-9133 is PROVED (orchestrator, 2026-09-23)
+
+**Theorem (resonance gap for the canonical escape).** Let
+`zeta_Psi(s; theta) = 1/(1 - W(3^-s; theta))` with
+`W(x; theta) = (1 + 2^theta) sum_(k>=1) rho_1(k)^theta x^k`, where `rho_1(k) = 2^(K*(k-1))/3^k`.
+For every `theta > 0` the leading pole `s(theta)` (`x_0 = 3^(-s(theta))`) is simple, and it is the only pole on
+`|x| <= x_0`. Every other pole with `|3^-s| < 1` satisfies `Re s <= s(theta) - eta`. The gap `eta > 0` is uniform for
+`theta` in compact subsets of `(0, infinity)`. Since every digit count `k` is an integer, `zeta_Psi` is
+`2 pi i/log 3`-periodic in `s`. "Other" poles are therefore meant modulo this period, i.e. in the variable
+`x = 3^-s`. The copies `s(theta) + 2 pi i m/log 3` are the same pole `x_0`.
+
+*Proof.*
+1. **Coefficients.** `c_k = (1+2^theta) rho_1(k)^theta` satisfies `(1+2^theta) 3^(-theta) <= c_k < 1 + 2^theta`,
+   because `1/3 <= rho_1(k) < 1` (the loops-lane values: `rho_1(1) = 1/3`, `rho_1(2) = 4/9`, and
+   `rho_1(k) = c(k-1)/3` in `(1/2, 1)` for `k >= 3`). So `W` is analytic on `|x| < 1`, with radius exactly 1,
+   and `W(r) -> infinity` as `r -> 1^-`.
+2. **The leading zero.** `W` is strictly increasing on `[0,1)` from `0`. So `1 - W` has a unique zero
+   `x_0 in (0,1)`, and it is simple, since `W'(x_0) > 0`.
+3. **Pringsheim with aperiodicity.** If `|x| <= x_0`, then `|W(x)| <= W(|x|) <= 1`. Equality throughout
+   forces `|x| = x_0` and `x^k > 0` for every `k` with `c_k > 0`. Since `c_1 > 0`, this forces `x = x_0`.
+   So `x_0` is the only zero of `1 - W` in the closed disc `|x| <= x_0`.
+4. **The gap for fixed theta.** Zeros of `1 - W` are isolated in `|x| < 1`. So for any `r_1 in (x_0, 1)` only
+   finitely many lie in `|x| <= r_1`, and all of them other than `x_0` have modulus `> x_0`. Take
+   `eta = log_3(min(r_1, min |x_j|)/x_0) > 0`.
+5. **Uniformity.** Suppose `theta_n` lie in a compact set `K`, `x_n != x_0(theta_n)` are zeros, and
+   `|x_n|/x_0(theta_n) -> 1`. Pass to a subsequence with `theta_n -> theta_inf` and
+   `x_n -> x_inf`, `|x_inf| = x_0(theta_inf)`. Here `x_0` is continuous, and `W(.; theta_n) -> W(.; theta_inf)`
+   locally uniformly on `|x| < 1`, because the coefficients are continuous and uniformly bounded on `K`.
+   By Hurwitz, `x_inf` is a zero, so by step 3 `x_inf = x_0(theta_inf)`. That zero is simple, so near it
+   `1 - W(.; theta_n)` has exactly one zero for large `n`. That zero is `x_0(theta_n)`, which contradicts
+   `x_n != x_0(theta_n)`. ∎
+
+**Numerics** (`04-computation/experiments/collatz_procgen_20260923_hyp9133_gap.py`). The roots of the
+degree-300 and degree-600 truncations agree to 6 digits inside `|x| <= 0.95`.
+
+| theta | s(theta) | next resonance, Re s | gap |
+|---|---|---|---|
+| 1 | 0.74464 | 0.06148 | 0.683 |
+| 2 | 0.65410 | 0.13911 | 0.515 |
+| 4 | 0.67348 | 0.40793 | 0.266 |
+| 8.6434 (theta_L) | 1.00000 | 0.90647 | 0.094 |
+
+The last row matches §4.3 above. At `theta = 0.5` no other zero lies in `|x| < 0.95`.
+
+**What this does and does not say.** The Ihara-type "Riemann hypothesis" (all non-leading resonances on one line)
+is still REFUTED numerically (§4.3). The gap statement holds for the elementary reason above: positive
+coefficients with `c_1 > 0`. So the one precise form of the "hostile 1/2 versus critical line" analogy is a
+spectral gap, and it holds. It is a renewal-theoretic fact, not an RH-type fact.
