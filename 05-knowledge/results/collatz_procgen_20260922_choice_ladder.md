@@ -228,17 +228,27 @@ therefore fail at a rare `s`; a robust version must allow other exit
 words (HYP-9122). Every loop through `1` has ratio at least
 `13/9` for `s>=2`, from the last two carry terms.
 
-**Uniform descent off two classes (PROVED by an exhaustive certificate
-table).** Let `m>=1` with `3` not dividing `m` and `m` not `1` or `14 mod
-27`. Then `m` has a legal reverse `E`-path of at most six moves to an
-integer `m'<=(8/9)m` with `3` not dividing `m'`. The certificate depends
-only on `m mod 3^7`. All `1296` such unit classes were checked by two
-independent programs: a C dynamic programme and an exact-rational Python
-path search (`collatz_procgen_20260922_q2_uniform_descent_check.py`,
-output `..._q2_uniform_descent.out`). The worst class is `275 mod 3^7`, with
-path `k=3, k=0` and multiplier exactly `8/9`. The worst factor stays `8/9`
-at every depth `6<=r<=16` (`..._q2_worst_factor.c`). Positivity: values stay
-positive integers, since the move `k=0` from `1` is illegal.
+**Uniform descent off two classes (PROVED; elementary; Lean-checked).**
+Let `m>1` with `3` not dividing `m` and `m` not `1` or `14 mod 27`. Then at
+most two reverse `E`-moves reach an integer `y<m` with `3` not dividing
+`y`. The certificate depends only on `m mod 27`:
+
+| `m` | route (forward reading `y -> ... -> m`) | `y` | factor |
+|---|---|---|---|
+| `4, 7 mod 9` | `y -> 3y+1 = m` | `(m-1)/3` | `1/3` |
+| `2, 8 mod 9` | `y -> 3y+1 = 2m -> m` | `(2m-1)/3` | `2/3` |
+| `10, 19 mod 27` | `y -> 3y+1 -> 4m -> 2m -> m` | `(4m-4)/9` | `4/9` |
+| `5, 23 mod 27` | `y -> 3y+1 -> 8m -> 4m -> 2m -> m` | `(8m-4)/9` | `8/9` |
+
+Kernel-checked in core Lean 4.30 (no Mathlib) as `q2_descent_off_1_and_14`
+in `04-computation/lean/standalone/collatz_procgen_20260922_q2_mod27_descent.lean`
+(`lean <file>`; axioms `propext`, `Quot.sound` only). The DP and the
+exact-rational search (`collatz_procgen_20260922_q2_uniform_descent_check.py`)
+confirm it independently. With lookahead 6 the worst class still has
+factor `8/9` (`..._q2_worst_factor.c`), so deeper search does not beat this
+table. In the two excluded classes the two-move routes fail. From
+`14 mod 27`, `(8m-1)/3=1 mod 9` and the next `k=0` move gives a multiple
+of `3`. From `1 mod 27`, `(4m-1)/3=1 mod 9` fails in the same way.
 **Consequence: Q2 reduces exactly to the two hostile neighbourhoods
 `m=1 mod 27` and `m=14=1/2 mod 27`.** The thread computation to depth 27
 agrees. The `134` exceptional classes mod `3^28` are the class of `1` and
