@@ -1,0 +1,4 @@
+m=14 mod 27, m<=3000000: count=111111 fail(depth>14 or cap)=9; max shortest depth=14 (m=88574); max excursion=809.086 (m=2721560); paths revisiting a hostile class: 34841
+depth histogram: 4:49383 5:16460 6:27434 7:11891 8:3351 9:1628 10:440 11:340 12:129 13:31 14:15
+m=14 mod 27, m<=30000000: count=1111111 fail(depth>16 or cap)=16; max shortest depth=16 (m=2520518); max excursion=958.917 (m=28891364); paths revisiting a hostile class: 348480
+depth histogram: 4:493827 5:164609 6:274348 7:118887 8:33529 9:16259 10:4404 11:3387 12:1314 13:327 14:143 15:38 16:23

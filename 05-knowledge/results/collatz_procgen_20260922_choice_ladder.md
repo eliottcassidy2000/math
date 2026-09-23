@@ -341,6 +341,23 @@ The backward family `1/2+3^j/2^e` starts at depth `3`, and the backward
 move `k=0` contracts by `1/3`, which no forward move matches. This is why
 Q2 is the cleaner half.
 
+**Chained hostile landings are common (FINITE-EXACT,
+`collatz_procgen_20260922_half_chain.c`).** Take every
+`m=14 mod 27` up to `3*10^7` (`1,111,111` values) and search for a shortest
+reverse path below `m` (iterative deepening; excursions capped at
+`1000m`; depth at most `16`):
+* depths are mostly `4..7` (histogram `4:493827, 5:164609, 6:274348,
+  7:118887, ...`), with maximum `16` (at `m=2520518`);
+* `16` values need more, all deep in the `1/2` neighbourhood, e.g.
+  `m=(3^11+1)/2=88574` needs `14`;
+* the largest excursion on a shortest path is about `959m`;
+* **`31.4%` of shortest paths pass through another hostile class**
+  (`1` or `14 mod 27` at depth at least `3`).
+
+So chains of `1/2`-type landings are typical, not exceptional, for
+integers. Any amortized proof of Q2 must pay for them. This is the empirical
+side of the gap analysed in the synthesis (section 5, item 1).
+
 **The price of escaping `-1` on the forward side (FINITE-EXACT upper bounds).**
 This is the least multiplier over `E`-paths from `-1` that consume exactly
 `b` bits, counting the forced multiplication after the last halving. It
