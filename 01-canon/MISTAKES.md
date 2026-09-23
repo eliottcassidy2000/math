@@ -29,6 +29,12 @@ Format per entry:
   ([sibling ladder](../05-knowledge/results/collatz_procgen_20260922_sibling_dimension_ladder.md) §4).
 - **Error genus:** a level-`m` count reported as the limit without checking
   the trend across levels. Compare MISTAKE-544 (a small census hid growth).
+- **Same session, same genus:** "about 28% P-positions" in Althöfer's
+  `3n+-1` game came from a capped retrograde analysis. It was computed over
+  a range where about a third of the positions were still undetermined by
+  the cap. The uncapped P-density is about `0.48` (`0.4775` below `2^32`,
+  [game lane](../05-knowledge/results/collatz_procgen_20260922_althofer_game.md)).
+  A statistic over the resolved subset is not the population value.
 
 ## 2026-09-22 Level-eleven dyadic normalization
 
