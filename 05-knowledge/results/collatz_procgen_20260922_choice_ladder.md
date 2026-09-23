@@ -336,12 +336,19 @@ Allowing backward moves along `T` itself gives a game that is
 **equivalent to Collatz (PROVED)**. Every `m>1` has an undirected
 `T`-path to a smaller integer iff every component contains `1`, by taking
 the minimum of a component. It does **not** collapse the exceptional set
-(argued, not computed). A backward `T`-move to an odd predecessor
+(argued, and supported FINITE-EXACT: `collatz_procgen_20260922_undirected_game.c`,
+output `..._undirected_game.out`). A backward `T`-move to an odd predecessor
 `(2^k y-1)/3` requires `k>=1` and yields nothing at multiples of `3`.
 From a class `=1 mod 3` the cheapest predecessor grows by `4/3`, so the
 3-adic hostile set of the backward `T`-game has positive measure, for
 example `3Z_3`. The one move `T` lacks is `E`'s `k=0` move, the even
 predecessor `(y-1)/3`. This locates the relaxation's power exactly.
+A BFS on the undirected shortcut graph over all `3<=m<=10^6` looks for the
+first value `<m`, with depth at most `60` and values at most `64m`. The
+mean depth is `2.21`: all evens and all odd `m=2 mod 3` take one move, via
+`m/2` or `(2m-1)/3`. The tail does not collapse. The maximum depth grows
+(`40, 43, 59` at `N=10^3, 10^4, 10^5`), and the unresolved fraction stays
+near `0.2%` (`2077` at `10^6`), much like forward stopping times.
 
 ## 7. What this says about the anchor
 
