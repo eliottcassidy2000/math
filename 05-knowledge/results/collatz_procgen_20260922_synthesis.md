@@ -178,3 +178,13 @@ the trunk `(4^i-1)/3` is the exit set of the hardest relaxed obstruction.
    review). Capped retrograde analysis to `10^8` resolves every odd start
    below `834,437`, with about 28% P-positions and no draw found.
 5. The divergence half of Collatz: the four-property job description above.
+   The corrected foundry leaves exactly two unblocked mechanism types:
+   sound certificate searches, and transversality with a Diophantine
+   input. The concrete transversality target (a restatement, Bernstein's
+   formula, CITED via the atlas) is the following. A positive integer
+   `n=-sum_l 2^(d_l)/3^l` in `Z_2`, with `d_l` the times of odd steps, can
+   diverge only if `d_l` grows no faster than about `l log_2 3`, in a
+   non-periodic way. The needed input is therefore a *p-adic irrationality*
+   statement: such a series is never a positive integer. This is the
+   Mahler--Baker-type ingredient the job description calls for. Periodic
+   `d_l` give exactly the rational cycle points `B/(2^K-3^L)`.
