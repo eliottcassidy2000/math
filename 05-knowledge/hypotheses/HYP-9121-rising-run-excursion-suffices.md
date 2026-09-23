@@ -2,12 +2,14 @@
 id: HYP-9121
 title: "Partial choice at 6 mod 8 already makes the Collatz exceptional set subexponential"
 status: >
-  OPEN HYPOTHESIS with FINITE-EXACT support. For E_S (Collatz plus the extra
-  arrow n->3n+1 at even n with n mod 8 = 6), the number of residue classes
-  mod 2^m without a multiplicatively descending certificate grows
-  subexponentially. At 2^22: 3,238 versus 93,222 for Collatz, 1,452 for
-  S={2 mod 4}, and 782 for all evens. S={0 mod 8}, {8 mod 16} and {0 mod 16}
-  give no measurable gain, and S={2 mod 8} gives little.
+  REFUTED (2026-09-23, hypothesis-sweep lane; orchestrator-audited). In
+  E_{6 mod 8} the forward orbit of -1 is a closed 16-point trap whose cycles
+  have rate >= 2/3 > log_3 2 (Lemmas F, G). Perturbing -1 therefore yields
+  |Bad_m(E_S)| >= 2^(0.0536 m - 6) for every m >= 120 (Theorem R), so the
+  lower box dimension is >= 0.0536. The converged counts grow like
+  2^(0.17 m) on m = 25..45. The flat counts at m <= 27 were a local plateau.
+  Replacement question (OPEN): dim_B Bad_inf(E_{6 mod 8}) lies in
+  [0.0536, 0.95], and the data suggest about 0.17.
 source: collatz-procgen-20260922 (mac-mini)
 depends_on:
   - 05-knowledge/results/collatz_procgen_20260922_choice_ladder.md

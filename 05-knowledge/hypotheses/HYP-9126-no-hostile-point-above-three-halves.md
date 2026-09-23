@@ -30,3 +30,9 @@ depends_on:
   descend only at depths 53 to 212.
 * The wall is also where integers `m >= 2` sit, which is why the
   hypothesis bears on HYP-9124.
+
+## 2026-09-23 update (sweep lane)
+* **Implications (PROVED):** `HYP-9126 ⟹ HYP-9124 ⟹ Q2`. So this is at least as hard as `X_min`.
+* **The easy clocks** of the generation-1 points above `3/2` provably descend, given the loop hypotheses. That makes them unconditional for `i <= 190536` (backward) and `i <= 176249` (forward).
+* **Obstructions:** at the remaining clocks the canonical route provably fails (C4, C6).
+* **FINITE-EXACT:** all 589 generation-1 points above `3/2` with `i <= 300` descend. The hardest needs a first move of 13097.

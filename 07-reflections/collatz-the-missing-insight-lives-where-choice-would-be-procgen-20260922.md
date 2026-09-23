@@ -38,7 +38,7 @@ of freedom move it:
 * sign choice (`3n+-1`) makes it empty;
 * wild multipliers (Applegate--Lagarias) leave a single class.
 
-Partial choice pins the effect to the entries of rising runs (`6 mod 8`;
+Partial choice pins the effect to the entries of rising runs at finite levels. *Wave 7 correction:* the partial choice alone keeps a positive-dimensional exceptional set (`>= 0.0536`; HYP-9121 REFUTED), because the orbit of `-1` stays in a 16-point trap of rate `2/3` (`6 mod 8`;
 the greedy fingerprint leads with `54 mod 64`). The equivalent
 choiceful reformulation of Collatz, the undirected game, does *not*
 collapse.

@@ -2,14 +2,12 @@
 id: HYP-9125
 title: "Mirror of HYP-9122: loops through -1 with the least admissible number of multiplications exist for every K >= 10"
 status: >
-  OPEN HYPOTHESIS. FINITE-EXACT for 10 <= K <= 4000, with explicit loops
-  verified by an independent checker. The exceptions K = 5..9 are PROVED by
-  exhaustion. For every K >= 10 there is a loop -1 -> ... -> -1 in the
-  negative E-graph with K halvings and a0(K) = ceil((K+1) log_3 2)
-  multiplications, i.e. with the least conceivable ratio 2*3^(eta(K+1)).
-  It reduces (PROVED) to record objects at the lower best approximations
-  of log_2 3 (19/12, 84/53, 569/359, 1054/665, ...). The first three
-  record cycles are the three negative Collatz cycles.
+  OPEN HYPOTHESIS. FINITE-EXACT for 10 <= K <= 176249 (sweep lane
+  2026-09-23; previously K <= 4000), with explicit, independently verified
+  record objects for every record n <= 50508. For every K >= 10 there is a
+  loop through -1 with a0(K) = ceil((K+1) log_3 2) multiplications. The
+  exceptions K = 5..9 are PROVED by exhaustion. The analogue for E_{6 mod 8}
+  is false for all K >= 35, via the rate-2/3 trap of HYP-9121's refutation.
 source: collatz-procgen-20260922 (mac-mini), Q1-mirror lane (candidate M1)
 depends_on:
   - 05-knowledge/results/collatz_procgen_20260922_q1_mirror.md

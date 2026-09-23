@@ -45,6 +45,7 @@ Format per entry:
   `2^336 < 3^212`, `2^168 < 3^106`). The Q1-mirror lane found the
   certificates, and they were replayed independently. The shared
   numerators are an exchange-and-straddle identity, not a duality.
+- **Same genus, 2026-09-23 (HYP-9121).** Flat exceptional counts for `E_{6 mod 8}` up to `m = 27` were read as "subexponential". The converged counts grow like `2^(0.17 m)`, and a proof gives `>= 2^(0.0536 m - 6)` (hypothesis-sweep lane). A plateau in a finite window is not a growth rate.
 - **Error genus:** one route's or one depth's value promoted to a universal
   bound. It is the same genus as the entry below: check the limit, not a
   representative.

@@ -61,7 +61,7 @@ This session built two instruments and pointed them at many siblings:
 | system | freedom | exceptional set |
 |---|---|---|
 | Collatz `T` (either sheet) | none | dimension `h(log_3 2)=0.9500` (PROVED; not found in print, per the atlas); `1,037,374` classes mod `2^26` |
-| `E_S`, `S={6 mod 8}` | extra `3n+1` only at rising-run entries | `3,238` mod `2^22` (Collatz `93,222`) |
+| `E_S`, `S={6 mod 8}` | extra `3n+1` only at rising-run entries | `3,238` mod `2^22` (Collatz `93,222`). Dimension `>= 0.0536` PROVED; about `0.17` by counts (HYP-9121 REFUTED, wave 7) |
 | greedy fingerprint | 8 of 32 even classes mod 64, led by `54 mod 64` | `893` mod `2^20` (full choice `664`) |
 | graph `E` (Q1 forward) | extra `3n+1` at every even | `908` mod `2^36`, `2454` mod `2^64`; dimension OPEN, evidence favours 0 (power law about `m^1.6`); infinite (Theorem F) |
 | backward `E` (Q2) | reverse moves with choice | `157` mod `3^32`; `338` mod `3^42` (dimension lane) |
@@ -373,7 +373,7 @@ the divergence half of Collatz, and the sign enters exactly as the sign of
 |---|---|---|---|---|
 | 1 | residue certificates for Collatz (Terras) | blind to SHEET, DEFECT; needs THIN | exceptional counts | the dimension `0.95` set remains; not a route alone |
 | 2 | relax by branch choice (graph `E`), certificates + escapes | live for E-SCC | profiler, DP/DFS, Lean | Q2 reduced mod 27 (Lean), verified to `10^18`; Q2 follows from `X_min` (PROVED implication); gap: `1/2` chains (endgame: ternary digits of `2^K`) |
-| 3 | partial choice `E_S` | diagnostic | profiler over `S` | `6 mod 8` does most of the work; fingerprint led by `54 mod 64` |
+| 3 | partial choice `E_S` | diagnostic | profiler over `S` | `6 mod 8` does most of the work at finite levels; fingerprint led by `54 mod 64`. But its exceptional set keeps positive dimension (`>= 0.0536`, PROVED): the orbit of `-1` is a 16-point trap of rate `2/3` (wave 7) |
 | 4 | additive / sign choice | diagnostic | zoo | empty exceptional set; one-player trivial |
 | 5 | two-player sign choice (Althöfer game = Conway's Beans-Don't-Talk, Guy Problem 42) | live | game lane | no draws below `2^32` (FINITE-EXACT); ray/exit-parity law PROVED; P-density about `0.48` |
 | 6 | undirected Collatz (grand-orbit moves) | equivalent to Collatz | BFS to `10^6` | no collapse (negative control) |

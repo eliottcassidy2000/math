@@ -1,0 +1,565 @@
+# collatz_procgen_20260923_sweep.out -- output of 04-computation/experiments/collatz_procgen_20260923_sweep_run.sh
+# (REUSE=1: record objects S1/S2 were produced by the full pipeline earlier in this session with the same code and are
+#  re-verified here in S3; S6 was re-run with the exact-prover cap raised to 1e7; S7b ran separately.)
+# Note: 05-knowledge/results/collatz_procgen_20260923_hypothesis_sweep.md
+### S1. HYP-9122 record objects (sign +): B_q, C_q for every record q <= 79335 (tight DP, reconstruction, verification)
+{"record": 3, "B_found": "1", "B_climb": "-1", "B_maxstates": "32", "B_xmax": 10000000, "B_time": 0.4, "B_verified": true, "B_height": 1, "B_hubs_visited_max": 0, "C_hub_index": 1, "C_hub": 4, "C_maxstates": "48", "C_xmax": 1000000, "C_time": 0.0, "C_verified": true, "C_height": 13}
+{"record": 5, "B_found": "1", "B_climb": "2", "B_maxstates": "192", "B_xmax": 10000000, "B_time": 0.0, "B_verified": true, "B_height": 13, "B_hubs_visited_max": 2, "C_hub_index": 2, "C_hub": 13, "C_maxstates": "150", "C_xmax": 1000000, "C_time": 0.0, "C_verified": true, "C_height": 277}
+{"record": 17, "B_found": "1", "B_climb": "8", "B_maxstates": "50068", "B_xmax": 10000000, "B_time": 0.0, "B_verified": true, "B_height": 9841, "B_hubs_visited_max": 8, "C_hub_index": 3, "C_hub": 40, "C_maxstates": "6233", "C_xmax": 1000000, "C_time": 0.0, "C_verified": true, "C_height": 597901}
+{"record": 29, "B_found": "1", "B_climb": "10", "B_maxstates": "98255", "B_xmax": 10000000, "B_time": 0.0, "B_verified": true, "B_height": 448405, "B_hubs_visited_max": 10, "C_hub_index": 3, "C_hub": 40, "C_maxstates": "5094", "C_xmax": 1000000, "C_time": 0.0, "C_verified": true, "C_height": 448405}
+{"record": 41, "B_found": "1", "B_climb": "14", "B_maxstates": "48728", "B_xmax": 10000000, "B_time": 0.0, "B_verified": true, "B_height": 8071261, "B_hubs_visited_max": 14, "C_hub_index": 4, "C_hub": 121, "C_maxstates": "3103", "C_xmax": 1000000, "C_time": 0.0, "C_verified": true, "C_height": 681797}
+{"record": 94, "B_found": "1", "B_climb": "14", "B_maxstates": "41442", "B_xmax": 10000000, "B_time": 0.2, "B_verified": true, "B_height": 9828769, "B_hubs_visited_max": 14, "C_hub_index": 4, "C_hub": 121, "C_maxstates": "2290", "C_xmax": 1000000, "C_time": 0.0, "C_verified": true, "C_height": 970769}
+{"record": 147, "B_found": "1", "B_climb": "14", "B_maxstates": "32212", "B_xmax": 10000000, "B_time": 0.2, "B_verified": true, "B_height": 9828769, "B_hubs_visited_max": 14, "C_hub_index": 4, "C_hub": 121, "C_maxstates": "1372", "C_xmax": 1000000, "C_time": 0.0, "C_verified": true, "C_height": 970769}
+{"record": 200, "B_found": "1", "B_climb": "14", "B_maxstates": "22962", "B_xmax": 10000000, "B_time": 0.2, "B_verified": true, "B_height": 9828769, "B_hubs_visited_max": 14, "C_hub_index": 5, "C_hub": 364, "C_maxstates": "1664", "C_xmax": 1000000, "C_time": 0.0, "C_verified": true, "C_height": 974977}
+{"record": 253, "B_found": "1", "B_climb": "14", "B_maxstates": "13788", "B_xmax": 10000000, "B_time": 0.2, "B_verified": true, "B_height": 9828769, "B_hubs_visited_max": 14, "C_hub_index": 5, "C_hub": 364, "C_maxstates": "736", "C_xmax": 1000000, "C_time": 0.0, "C_verified": true, "C_height": 977089}
+{"record": 306, "B_found": "1", "B_climb": "14", "B_maxstates": "4521", "B_xmax": 10000000, "B_time": 0.1, "B_verified": true, "B_height": 9828769, "B_hubs_visited_max": 14, "C_hub_index": 6, "C_hub": 1093, "C_maxstates": "390", "C_xmax": 1625562, "C_time": 0.0, "C_verified": true, "C_height": 1582933}
+{"record": 971, "B_found": "1", "B_climb": "14", "B_maxstates": "4319", "B_xmax": 10000000, "B_time": 0.2, "B_verified": true, "B_height": 9901789, "B_hubs_visited_max": 14, "C_hub_index": 6, "C_hub": 1093, "C_maxstates": "1258", "C_xmax": 5590127, "C_time": 0.1, "C_verified": true, "C_height": 5575381}
+{"record": 1636, "B_found": "1", "B_climb": "14", "B_maxstates": "4124", "B_xmax": 10000000, "B_time": 0.4, "B_verified": true, "B_height": 9996241, "B_hubs_visited_max": 14, "C_hub_index": 6, "C_hub": 1093, "C_maxstates": "2154", "C_xmax": 10279288, "C_time": 0.2, "C_verified": true, "C_height": 10239217}
+{"record": 2301, "B_found": "1", "B_climb": "14", "B_maxstates": "3924", "B_xmax": 10000000, "B_time": 0.5, "B_verified": true, "B_height": 9996241, "B_hubs_visited_max": 14, "C_hub_index": 6, "C_hub": 1093, "C_maxstates": "3055", "C_xmax": 15911735, "C_time": 0.3, "C_verified": true, "C_height": 15895093}
+{"record": 2966, "B_found": "1", "B_climb": "14", "B_maxstates": "3731", "B_xmax": 10000000, "B_time": 0.5, "B_verified": true, "B_height": 9996241, "B_hubs_visited_max": 14, "C_hub_index": 6, "C_hub": 1093, "C_maxstates": "3921", "C_xmax": 22804005, "C_time": 0.6, "C_verified": true, "C_height": 22800289}
+{"record": 3631, "B_found": "1", "B_climb": "14", "B_maxstates": "4135", "B_xmax": 11742498, "B_time": 0.7, "B_verified": true, "B_height": 11735329, "B_hubs_visited_max": 14, "C_hub_index": 6, "C_hub": 1093, "C_maxstates": "4837", "C_xmax": 31432097, "C_time": 0.9, "C_verified": true, "C_height": 31428485}
+{"record": 4296, "B_found": "1", "B_climb": "14", "B_maxstates": "4929", "B_xmax": 14690763, "B_time": 0.9, "B_verified": true, "B_height": 14689201, "B_hubs_visited_max": 14, "C_hub_index": 6, "C_hub": 1093, "C_maxstates": "5699", "C_xmax": 42546358, "C_time": 1.3, "C_verified": true, "C_height": 42515813}
+{"record": 4961, "B_found": "1", "B_climb": "14", "B_maxstates": "5719", "B_xmax": 17998204, "B_time": 1.4, "B_verified": true, "B_height": 17996017, "B_hubs_visited_max": 14, "C_hub_index": 6, "C_hub": 1093, "C_maxstates": "6609", "C_xmax": 57402416, "C_time": 1.7, "C_verified": true, "C_height": 57399041}
+{"record": 5626, "B_found": "1", "B_climb": "14", "B_maxstates": "6512", "B_xmax": 21734716, "B_time": 1.8, "B_verified": true, "B_height": 21729649, "B_hubs_visited_max": 14, "C_hub_index": 6, "C_hub": 1093, "C_maxstates": "7538", "C_xmax": 78272584, "C_time": 2.2, "C_verified": true, "C_height": 78151601}
+{"record": 6291, "B_found": "1", "B_climb": "14", "B_maxstates": "7251", "B_xmax": 25989583, "B_time": 2.2, "B_verified": true, "B_height": 25981697, "B_hubs_visited_max": 14, "C_hub_index": 6, "C_hub": 1093, "C_maxstates": "8367", "C_xmax": 109736055, "C_time": 2.7, "C_verified": true, "C_height": 109669637}
+{"record": 6956, "B_found": "1", "B_climb": "14", "B_maxstates": "8005", "B_xmax": 30878710, "B_time": 2.7, "B_verified": true, "B_height": 30873989, "B_hubs_visited_max": 14, "C_hub_index": 7, "C_hub": 3280, "C_maxstates": "9247", "C_xmax": 48174328, "C_time": 3.2, "C_verified": true, "C_height": 48148801}
+{"record": 7621, "B_found": "1", "B_climb": "14", "B_maxstates": "8749", "B_xmax": 36555340, "B_time": 3.2, "B_verified": true, "B_height": 36554125, "B_hubs_visited_max": 14, "C_hub_index": 7, "C_hub": 3280, "C_maxstates": "10157", "C_xmax": 58692210, "C_time": 3.9, "C_verified": true, "C_height": 58684205}
+{"record": 8286, "B_found": "1", "B_climb": "14", "B_maxstates": "9539", "B_xmax": 43226405, "B_time": 3.8, "B_verified": true, "B_height": 43211101, "B_hubs_visited_max": 14, "C_hub_index": 7, "C_hub": 3280, "C_maxstates": "11015", "C_xmax": 71864168, "C_time": 4.6, "C_verified": true, "C_height": 71853749}
+{"record": 8951, "B_found": "1", "B_climb": "14", "B_maxstates": "10315", "B_xmax": 51178300, "B_time": 4.6, "B_verified": true, "B_height": 51165533, "B_hubs_visited_max": 14, "C_hub_index": 7, "C_hub": 3280, "C_maxstates": "11897", "C_xmax": 88839969, "C_time": 5.5, "C_verified": true, "C_height": 88833845}
+{"record": 9616, "B_found": "1", "B_climb": "14", "B_maxstates": "11081", "B_xmax": 60819070, "B_time": 5.5, "B_verified": true, "B_height": 60805825, "B_hubs_visited_max": 14, "C_hub_index": 7, "C_hub": 3280, "C_maxstates": "12850", "C_xmax": 111545583, "C_time": 6.6, "C_verified": true, "C_height": 111517573}
+{"record": 10281, "B_found": "1", "B_climb": "14", "B_maxstates": "11836", "B_xmax": 72750684, "B_time": 6.2, "B_verified": true, "B_height": 72739613, "B_hubs_visited_max": 14, "C_hub_index": 7, "C_hub": 3280, "C_maxstates": "13729", "C_xmax": 143471191, "C_time": 7.5, "C_verified": true, "C_height": 143420017}
+{"record": 10946, "B_found": "1", "B_climb": "14", "B_maxstates": "12634", "B_xmax": 87899757, "B_time": 7.0, "B_verified": true, "B_height": 87830885, "B_hubs_visited_max": 14, "C_hub_index": 7, "C_hub": 3280, "C_maxstates": "14590", "C_xmax": 191663779, "C_time": 8.5, "C_verified": true, "C_height": 191613377}
+{"record": 11611, "B_found": "1", "B_climb": "14", "B_maxstates": "13412", "B_xmax": 107770529, "B_time": 7.9, "B_verified": true, "B_height": 107770529, "B_hubs_visited_max": 14, "C_hub_index": 7, "C_hub": 3280, "C_maxstates": "15440", "C_xmax": 272806959, "C_time": 9.6, "C_verified": true, "C_height": 272794561}
+{"record": 12276, "B_found": "1", "B_climb": "14", "B_maxstates": "14131", "B_xmax": 134978034, "B_time": 8.9, "B_verified": true, "B_height": 134957621, "B_hubs_visited_max": 14, "C_hub_index": 7, "C_hub": 3280, "C_maxstates": "16366", "C_xmax": 438250122, "C_time": 10.7, "C_verified": true, "C_height": 438239605}
+{"record": 12941, "B_found": "1", "B_climb": "14", "B_maxstates": "14952", "B_xmax": 174505576, "B_time": 9.9, "B_verified": true, "B_height": 174460193, "B_hubs_visited_max": 14, "C_hub_index": 8, "C_hub": 9841, "C_maxstates": "17183", "C_xmax": 273412201, "C_time": 11.7, "C_verified": true, "C_height": 273390497}
+{"record": 13606, "B_found": "1", "B_climb": "14", "B_maxstates": "15753", "B_xmax": 237170357, "B_time": 10.5, "B_verified": true, "B_height": 237067981, "B_hubs_visited_max": 14, "C_hub_index": 8, "C_hub": 9841, "C_maxstates": "18111", "C_xmax": 415046825, "C_time": 12.6, "C_verified": true, "C_height": 414960001}
+{"record": 14271, "B_found": "1", "B_climb": "14", "B_maxstates": "16477", "B_xmax": 351693003, "B_time": 11.9, "B_verified": true, "B_height": 351641117, "B_hubs_visited_max": 14, "C_hub_index": 8, "C_hub": 9841, "C_maxstates": "19112", "C_xmax": 782762375, "C_time": 14.2, "C_verified": true, "C_height": 782699605}
+{"record": 14936, "B_found": "1", "B_climb": "18", "B_maxstates": "17269", "B_xmax": 627880628, "B_time": 12.7, "B_verified": true, "B_height": 627840205, "B_hubs_visited_max": 18, "C_hub_index": 9, "C_hub": 29524, "C_maxstates": "19873", "C_xmax": 997674160, "C_time": 16.1, "C_verified": true, "C_height": 997578097}
+{"record": 15601, "B_found": "1", "B_climb": "18", "B_maxstates": "18088", "B_xmax": 2229377173, "B_time": 14.7, "B_verified": true, "B_height": 2229226189, "B_hubs_visited_max": 18, "C_hub_index": 10, "C_hub": 88573, "C_maxstates": "20812", "C_xmax": 3729481866, "C_time": 17.3, "C_verified": true, "C_height": 3728716901}
+{"record": 47468, "B_found": "1", "B_climb": "20", "B_maxstates": "55101", "B_xmax": 11291921418, "B_time": 150.6, "B_verified": true, "B_height": 11291804293, "B_hubs_visited_max": 19, "C_hub_index": 10, "C_hub": 88573, "C_maxstates": "63517", "C_xmax": 26947001688, "C_time": 184.5, "C_verified": true, "C_height": 26946154685}
+{"record": 79335, "B_found": "1", "B_climb": "22", "B_maxstates": "92013", "B_xmax": 56285599444, "B_time": 445.2, "B_verified": true, "B_height": 56283959185, "B_hubs_visited_max": 19, "C_hub_index": 11, "C_hub": 265720, "C_maxstates": "106160", "C_xmax": 133482636914, "C_time": 541.9, "C_verified": true, "C_height": 133475439469}
+### S2. HYP-9125 record objects (sign -): B_n (n>=11), C_n for every record n <= 50508
+{"record": 3, "B_found": null, "B_climb": null, "B_maxstates": null, "B_xmax": 10000000, "B_time": 0.0}
+{"record": 11, "B_found": "1", "B_climb": "2", "B_maxstates": "2668", "B_xmax": 10000000, "B_time": 0.0, "B_verified": true, "B_height": 59, "B_hubs_visited_max": 2, "C_hub_index": 3, "C_hub": 14, "C_maxstates": "705", "C_xmax": 1000000, "C_time": 0.0, "C_verified": true, "C_height": 203}
+{"record": 19, "B_found": "1", "B_climb": "6", "B_maxstates": "8309", "B_xmax": 10000000, "B_time": 0.0, "B_verified": true, "B_height": 547, "B_hubs_visited_max": 6, "C_hub_index": 5, "C_hub": 122, "C_maxstates": "1729", "C_xmax": 1000000, "C_time": 0.0, "C_verified": true, "C_height": 44267}
+{"record": 84, "B_found": "1", "B_climb": "14", "B_maxstates": "8914", "B_xmax": 10000000, "B_time": 0.0, "B_verified": true, "B_height": 9080159, "B_hubs_visited_max": 14, "C_hub_index": 6, "C_hub": 365, "C_maxstates": "293", "C_xmax": 1000000, "C_time": 0.0, "C_verified": true, "C_height": 808027}
+{"record": 569, "B_found": "1", "B_climb": "14", "B_maxstates": "4691", "B_xmax": 10000000, "B_time": 0.1, "B_verified": true, "B_height": 9736895, "B_hubs_visited_max": 14, "C_hub_index": 7, "C_hub": 1094, "C_maxstates": "449", "C_xmax": 1768659, "C_time": 0.0, "C_verified": true, "C_height": 1752847}
+{"record": 1054, "B_found": "1", "B_climb": "14", "B_maxstates": "736", "B_xmax": 39606808, "B_time": 0.0, "B_verified": true, "B_height": 39520931, "B_hubs_visited_max": 14, "C_hub_index": 10, "C_hub": 29525, "C_maxstates": "861", "C_xmax": 74664506, "C_time": 0.0, "C_verified": true, "C_height": 74328415}
+{"record": 25781, "B_found": "1", "B_climb": "18", "B_maxstates": "18771", "B_xmax": 1661130937, "B_time": 16.2, "B_verified": true, "B_height": 1660660319, "B_hubs_visited_max": 18, "C_hub_index": 10, "C_hub": 29525, "C_maxstates": "21757", "C_xmax": 5724364668, "C_time": 23.8, "C_verified": true, "C_height": 5720398223}
+{"record": 50508, "B_found": "1", "B_climb": "20", "B_maxstates": "36917", "B_xmax": 11404673702, "B_time": 75.1, "B_verified": true, "B_height": 11403567055, "B_hubs_visited_max": 20, "C_hub_index": 12, "C_hub": 265721, "C_maxstates": "42637", "C_xmax": 17758896463, "C_time": 85.2, "C_verified": true, "C_height": 17758555043}
+### S3. independent re-verification of every stored object; tightness lemmas T1-T3 (records <= 6000); hub hypothesis
+pos B_3: moves=2 K=4 verified=True height=1
+pos B_5: moves=4 K=7 verified=True height=13
+pos B_17: moves=16 K=26 verified=True height=9841
+pos B_29: moves=28 K=45 verified=True height=448405
+pos B_41: moves=40 K=64 verified=True height=8071261
+pos B_94: moves=93 K=148 verified=True height=9828769
+pos B_147: moves=146 K=232 verified=True height=9828769
+pos B_200: moves=199 K=316 verified=True height=9828769
+pos B_253: moves=252 K=400 verified=True height=9828769
+pos B_306: moves=305 K=484 verified=True height=9828769
+pos B_971: moves=970 K=1538 verified=True height=9901789
+pos B_1636: moves=1635 K=2592 verified=True height=9996241
+pos B_2301: moves=2300 K=3646 verified=True height=9996241
+pos B_2966: moves=2965 K=4700 verified=True height=9996241
+pos B_3631: moves=3630 K=5754 verified=True height=11735329
+pos B_4296: moves=4295 K=6808 verified=True height=14689201
+pos B_4961: moves=4960 K=7862 verified=True height=17996017
+pos B_5626: moves=5625 K=8916 verified=True height=21729649
+pos B_6291: moves=6290 K=9970 verified=True height=25981697
+pos B_6956: moves=6955 K=11024 verified=True height=30873989
+pos B_7621: moves=7620 K=12078 verified=True height=36554125
+pos B_8286: moves=8285 K=13132 verified=True height=43211101
+pos B_8951: moves=8950 K=14186 verified=True height=51165533
+pos B_9616: moves=9615 K=15240 verified=True height=60805825
+pos B_10281: moves=10280 K=16294 verified=True height=72739613
+pos B_10946: moves=10945 K=17348 verified=True height=87830885
+pos B_11611: moves=11610 K=18402 verified=True height=107770529
+pos B_12276: moves=12275 K=19456 verified=True height=134957621
+pos B_12941: moves=12940 K=20510 verified=True height=174460193
+pos B_13606: moves=13605 K=21564 verified=True height=237067981
+pos B_14271: moves=14270 K=22618 verified=True height=351641117
+pos B_14936: moves=14935 K=23672 verified=True height=627840205
+pos B_15601: moves=15600 K=24726 verified=True height=2229226189
+pos B_47468: moves=47467 K=75234 verified=True height=11291804293
+pos B_79335: moves=79334 K=125742 verified=True height=56283959185
+pos C_1 at 1: moves=1 K=2 verified=True height=1
+pos C_3 at 4: moves=3 K=5 verified=True height=13
+pos C_5 at 13: moves=5 K=8 verified=True height=277
+pos C_17 at 40: moves=17 K=27 verified=True height=597901
+pos C_29 at 40: moves=29 K=46 verified=True height=448405
+pos C_41 at 121: moves=41 K=65 verified=True height=681797
+pos C_94 at 121: moves=94 K=149 verified=True height=970769
+pos C_147 at 121: moves=147 K=233 verified=True height=970769
+pos C_200 at 364: moves=200 K=317 verified=True height=974977
+pos C_253 at 364: moves=253 K=401 verified=True height=977089
+pos C_306 at 1093: moves=306 K=485 verified=True height=1582933
+pos C_971 at 1093: moves=971 K=1539 verified=True height=5575381
+pos C_1636 at 1093: moves=1636 K=2593 verified=True height=10239217
+pos C_2301 at 1093: moves=2301 K=3647 verified=True height=15895093
+pos C_2966 at 1093: moves=2966 K=4701 verified=True height=22800289
+pos C_3631 at 1093: moves=3631 K=5755 verified=True height=31428485
+pos C_4296 at 1093: moves=4296 K=6809 verified=True height=42515813
+pos C_4961 at 1093: moves=4961 K=7863 verified=True height=57399041
+pos C_5626 at 1093: moves=5626 K=8917 verified=True height=78151601
+pos C_6291 at 1093: moves=6291 K=9971 verified=True height=109669637
+pos C_6956 at 3280: moves=6956 K=11025 verified=True height=48148801
+pos C_7621 at 3280: moves=7621 K=12079 verified=True height=58684205
+pos C_8286 at 3280: moves=8286 K=13133 verified=True height=71853749
+pos C_8951 at 3280: moves=8951 K=14187 verified=True height=88833845
+pos C_9616 at 3280: moves=9616 K=15241 verified=True height=111517573
+pos C_10281 at 3280: moves=10281 K=16295 verified=True height=143420017
+pos C_10946 at 3280: moves=10946 K=17349 verified=True height=191613377
+pos C_11611 at 3280: moves=11611 K=18403 verified=True height=272794561
+pos C_12276 at 3280: moves=12276 K=19457 verified=True height=438239605
+pos C_12941 at 9841: moves=12941 K=20511 verified=True height=273390497
+pos C_13606 at 9841: moves=13606 K=21565 verified=True height=414960001
+pos C_14271 at 9841: moves=14271 K=22619 verified=True height=782699605
+pos C_14936 at 29524: moves=14936 K=23673 verified=True height=997578097
+pos C_15601 at 88573: moves=15601 K=24727 verified=True height=3728716901
+pos C_47468 at 88573: moves=47468 K=75235 verified=True height=26946154685
+pos C_79335 at 265720: moves=79335 K=125743 verified=True height=133475439469
+neg B_11: moves=7 K=10 verified=True height=59
+neg B_19: moves=12 K=18 verified=True height=547
+neg B_84: moves=53 K=83 verified=True height=9080159
+neg B_569: moves=359 K=568 verified=True height=9736895
+neg B_1054: moves=665 K=1053 verified=True height=39520931
+neg B_25781: moves=16266 K=25780 verified=True height=1660660319
+neg B_50508: moves=31867 K=50507 verified=True height=11403567055
+neg C_1 at 1: moves=1 K=1 verified=True height=1
+neg C_3 at 5: moves=2 K=3 verified=True height=7
+neg C_11 at 14: moves=7 K=11 verified=True height=203
+neg C_19 at 122: moves=12 K=19 verified=True height=44267
+neg C_84 at 365: moves=53 K=84 verified=True height=808027
+neg C_569 at 1094: moves=359 K=569 verified=True height=1752847
+neg C_1054 at 29525: moves=665 K=1054 verified=True height=74328415
+neg C_25781 at 29525: moves=16266 K=25781 verified=True height=5720398223
+neg C_50508 at 265721: moves=31867 K=50508 verified=True height=17758555043
+tightcheck pos: 37 objects, violations 0
+tightcheck neg: 12 objects, violations 0
+hubcheck pos: bases [3, 5, 17, 29, 41, 94, 147, 200, 253, 306, 971, 1636, 2301, 2966, 3631, 4296, 4961, 5626, 6291, 6956, 7621, 8286, 8951, 9616, 10281, 10946, 11611, 12276, 12941, 13606, 14271, 14936, 15601, 47468, 79335] cycles [1, 3, 5, 17, 29, 41, 94, 147, 200, 253, 306, 971, 1636, 2301, 2966, 3631, 4296, 4961, 5626, 6291, 6956, 7621, 8286, 8951, 9616, 10281, 10946, 11611, 12276, 12941, 13606, 14271, 14936, 15601, 47468, 79335] failures 0
+hubcheck neg: bases [11, 19, 84, 569, 1054, 25781, 50508] cycles [1, 3, 11, 19, 84, 569, 1054, 25781, 50508] failures 0
+### S4. explicit spliced loops (Theorem 4.2 / 2.2) at sample lengths, each verified exactly
+pos s=2 ok=True base=3 parts=(0, []) height=1
+pos s=3 ok=True base=3 parts=(1, [1]) height=1
+pos s=40 ok=True base=41 parts=(0, []) height=8071261
+pos s=305 ok=True base=306 parts=(0, []) height=9828769
+pos s=6001 ok=True base=5626 parts=(3, [29, 41, 306]) height=21729649
+pos s=6290 ok=True base=6291 parts=(0, []) height=25981697
+pos s=12345 ok=True base=12276 parts=(2, [29, 41]) height=134957621
+pos s=15600 ok=True base=15601 parts=(0, []) height=2229226189
+pos s=20000 ok=True base=15601 parts=(4, [5, 94, 4296]) height=2229226189
+pos s=47466 ok=True base=15601 parts=(8, [1, 5, 41, 306, 15601]) height=3728716901
+pos s=47467 ok=True base=47468 parts=(0, []) height=11291804293
+pos s=79333 ok=True base=47468 parts=(8, [1, 5, 41, 306, 15601]) height=11291804293
+pos s=79334 ok=True base=79335 parts=(0, []) height=56283959185
+pos s=120000 ok=True base=79335 parts=(8, [1, 5, 200, 306, 8951, 15601]) height=56283959185
+pos s=190535 ok=True base=79335 parts=(9, [1, 5, 41, 306, 15601, 79335]) height=133475439469
+neg s=10 ok=True base=11 parts=(0, []) height=59
+neg s=18 ok=True base=19 parts=(0, []) height=547
+neg s=4001 ok=True base=1054 parts=(7, [19, 84, 569, 1054]) height=74328415
+neg s=25779 ok=True base=1054 parts=(34, [1, 3, 19, 84, 1054]) height=74328415
+neg s=25780 ok=True base=25781 parts=(0, []) height=1660660319
+neg s=40000 ok=True base=25781 parts=(21, [3, 11, 84, 1054]) height=1660660319
+neg s=50506 ok=True base=25781 parts=(34, [1, 3, 19, 84, 1054]) height=1660660319
+neg s=50507 ok=True base=50508 parts=(0, []) height=11403567055
+neg s=100000 ok=True base=50508 parts=(31, [1, 19, 84, 1054, 25781]) height=11403567055
+neg s=176249 ok=True base=50508 parts=(36, [1, 3, 19, 84, 1054, 50508]) height=17758555043
+### S5. HYP-9121: E control (J=1,S={0}) and E_S (6 mod 8) thread counts and projections
+m=30 A=18 beatty=0 bad=1052 minrep=160511 minabs=160511 nodes=0 t=0.8
+m=31 A=19 beatty=1 bad=1197 minrep=160511 minabs=160511 nodes=160465 t=0.8
+m=32 A=20 beatty=1 bad=561 minrep=160511 minabs=160511 nodes=246839 t=0.8
+m=35 A=22 beatty=1 bad=454 minrep=150314751 minabs=17797505 nodes=1347823 t=0.9
+m=40 A=25 beatty=1 bad=1030 minrep=3695617471 minabs=744687457 nodes=35501459 t=1.1
+m=43 A=27 beatty=1 bad=809 minrep=25800977535 minabs=3547172097 nodes=140584216 t=2.1
+m=46 A=29 beatty=1 bad=518 minrep=143362104063 minabs=32175923265 nodes=442470954 t=5.5
+m=50 A=31 beatty=1 bad=2344 minrep=617163266815 minabs=87131942401 nodes=5097617245 t=28.9
+P m=16 91
+P m=20 147
+P m=24 190
+P m=25 200
+P m=28 250
+P m=30 270
+P m=32 300
+P m=35 343
+P m=36 354
+P m=40 416
+P m=44 468
+P m=45 517
+m=1 A=0 beatty=1 bad=1 minrep=- minabs=- nodes=0 t=0.0
+m=2 A=1 beatty=1 bad=1 minrep=18446744073709551615 minabs=18446744073709551615 nodes=0 t=0.0
+m=3 A=1 beatty=0 bad=2 minrep=3 minabs=3 nodes=0 t=0.0
+m=4 A=2 beatty=1 bad=3 minrep=7 minabs=5 nodes=0 t=0.0
+m=5 A=3 beatty=1 bad=4 minrep=7 minabs=5 nodes=0 t=0.0
+m=6 A=3 beatty=0 bad=8 minrep=7 minabs=5 nodes=0 t=0.0
+m=7 A=4 beatty=1 bad=12 minrep=27 minabs=5 nodes=0 t=0.0
+m=8 A=5 beatty=1 bad=13 minrep=27 minabs=17 nodes=0 t=0.0
+m=9 A=5 beatty=0 bad=26 minrep=27 minabs=17 nodes=0 t=0.0
+m=10 A=6 beatty=1 bad=39 minrep=27 minabs=17 nodes=0 t=0.0
+m=11 A=6 beatty=0 bad=78 minrep=27 minabs=17 nodes=0 t=0.0
+m=12 A=7 beatty=1 bad=119 minrep=27 minabs=17 nodes=0 t=0.0
+m=13 A=8 beatty=1 bad=133 minrep=27 minabs=27 nodes=0 t=0.0
+m=14 A=8 beatty=0 bad=266 minrep=27 minabs=27 nodes=0 t=0.0
+m=15 A=9 beatty=1 bad=375 minrep=159 minabs=65 nodes=0 t=0.0
+m=16 A=10 beatty=1 bad=327 minrep=159 minabs=159 nodes=0 t=0.0
+m=17 A=10 beatty=0 bad=654 minrep=159 minabs=159 nodes=0 t=0.0
+m=18 A=11 beatty=1 bad=822 minrep=159 minabs=159 nodes=0 t=0.0
+m=19 A=11 beatty=0 bad=1644 minrep=159 minabs=159 nodes=0 t=0.0
+m=20 A=12 beatty=1 bad=2165 minrep=159 minabs=159 nodes=0 t=0.0
+m=21 A=13 beatty=1 bad=1619 minrep=1307 minabs=321 nodes=0 t=0.0
+m=22 A=13 beatty=0 bad=3238 minrep=1307 minabs=321 nodes=0 t=0.0
+m=23 A=14 beatty=1 bad=3852 minrep=3055 minabs=321 nodes=0 t=0.0
+m=24 A=15 beatty=1 bad=2109 minrep=33051 minabs=11777 nodes=0 t=0.0
+m=25 A=15 beatty=0 bad=4218 minrep=33051 minabs=11777 nodes=0 t=0.0
+m=26 A=16 beatty=1 bad=4652 minrep=33051 minabs=11777 nodes=0 t=0.1
+m=27 A=17 beatty=1 bad=2025 minrep=160511 minabs=160511 nodes=6792 t=0.1
+m=28 A=17 beatty=0 bad=4050 minrep=160511 minabs=160511 nodes=0 t=0.1
+m=29 A=18 beatty=1 bad=4250 minrep=160511 minabs=160511 nodes=32628 t=0.1
+m=30 A=18 beatty=0 bad=8500 minrep=160511 minabs=160511 nodes=0 t=0.1
+m=31 A=19 beatty=1 bad=9882 minrep=160511 minabs=160511 nodes=171031 t=0.1
+m=32 A=20 beatty=1 bad=5292 minrep=160511 minabs=160511 nodes=223867 t=0.1
+m=33 A=20 beatty=0 bad=10584 minrep=160511 minabs=160511 nodes=0 t=0.1
+m=34 A=21 beatty=1 bad=12012 minrep=160511 minabs=160511 nodes=572809 t=0.1
+m=35 A=22 beatty=1 bad=5545 minrep=6612479 minabs=6291457 nodes=604413 t=0.1
+m=36 A=22 beatty=0 bad=11090 minrep=6612479 minabs=6291457 nodes=0 t=0.1
+m=37 A=23 beatty=1 bad=12154 minrep=6612479 minabs=6291457 nodes=1272328 t=0.1
+m=38 A=23 beatty=0 bad=24308 minrep=6612479 minabs=6291457 nodes=0 t=0.1
+m=39 A=24 beatty=1 bad=28980 minrep=6612479 minabs=6291457 nodes=4354104 t=0.1
+m=40 A=25 beatty=1 bad=15924 minrep=117781743 minabs=13131929 nodes=4865573 t=0.1
+m=41 A=25 beatty=0 bad=31848 minrep=117781743 minabs=13131929 nodes=0 t=0.1
+m=42 A=26 beatty=1 bad=36295 minrep=150314751 minabs=150314751 nodes=11320390 t=0.2
+m=43 A=27 beatty=1 bad=16908 minrep=329587951 minabs=329587951 nodes=11006555 t=0.2
+m=44 A=27 beatty=0 bad=33816 minrep=329587951 minabs=329587951 nodes=0 t=0.2
+m=45 A=28 beatty=1 bad=37233 minrep=329587951 minabs=329587951 nodes=23642477 t=0.3
+m=46 A=29 beatty=1 bad=15627 minrep=12584222719 minabs=2421442469 nodes=20914088 t=0.4
+m=47 A=29 beatty=0 bad=31254 minrep=12584222719 minabs=2421442469 nodes=0 t=0.4
+m=48 A=30 beatty=1 bad=33856 minrep=12584222719 minabs=2421442469 nodes=43575778 t=0.6
+m=49 A=30 beatty=0 bad=67712 minrep=12584222719 minabs=2421442469 nodes=0 t=0.6
+m=50 A=31 beatty=1 bad=80239 minrep=28761376539 minabs=2421442469 nodes=145020850 t=1.2
+m=51 A=32 beatty=1 bad=44688 minrep=39911976575 minabs=39911976575 nodes=154684855 t=1.8
+m=52 A=32 beatty=0 bad=89376 minrep=39911976575 minabs=39911976575 nodes=0 t=1.8
+m=53 A=33 beatty=1 bad=102441 minrep=39911976575 minabs=39911976575 nodes=386203431 t=3.2
+m=54 A=34 beatty=1 bad=51017 minrep=88412233575 minabs=88412233575 nodes=366955285 t=4.6
+m=55 A=34 beatty=0 bad=102034 minrep=88412233575 minabs=88412233575 nodes=0 t=4.6
+m=56 A=35 beatty=1 bad=113387 minrep=211527139327 minabs=211527139327 nodes=876937381 t=7.7
+m=57 A=35 beatty=0 bad=226774 minrep=211527139327 minabs=211527139327 nodes=0 t=7.7
+m=58 A=36 beatty=1 bad=275768 minrep=211527139327 minabs=211527139327 nodes=2952293589 t=18.0
+m=59 A=37 beatty=1 bad=165171 minrep=4398046511103 minabs=4278900936857 nodes=3216377167 t=29.2
+m=60 A=37 beatty=0 bad=330342 minrep=4398046511103 minabs=4278900936857 nodes=0 t=29.2
+m=61 A=38 beatty=1 bad=383431 minrep=21445845450751 minabs=9266665899941 nodes=8565573689 t=58.2
+m=62 A=39 beatty=1 bad=199337 minrep=27209095038747 minabs=27209095038747 nodes=8056080671 t=85.4
+m=63 A=39 beatty=0 bad=398674 minrep=27209095038747 minabs=27209095038747 nodes=0 t=85.4
+m=64 A=40 beatty=1 bad=446763 minrep=27209095038747 minabs=27209095038747 nodes=20221286414 t=151.8
+P m=20 554
+P m=25 1034
+P m=30 1827
+P m=35 3340
+P m=40 6135
+P m=45 12255
+P m=50 27859
+P m=20 554
+P m=25 1034
+P m=30 1821
+P m=35 3333
+P m=40 6075
+P m=45 12038
+P m=50 26461
+P m=20 554
+P m=25 1046
+P m=30 1857
+P m=35 3502
+P m=40 7046
+P m=45 14820
+### S6. HYP-9121 refutation: Lemma F, Lemma G, loops through -1 in E_S, Theorem R, cross-checks
+Lemma F: forward E_S-orbit of -1 = [-1, -2, -4, -5, -7, -8, -10, -14, -16, -20, -29, -32, -43, -64, -86, -128] (16 values, closed)
+Lemma G: negative-weight cycles: none
+  C_F = max over E_S paths from -1 of (2b - 3a) = 0  => a >= (2b - C_F)/3
+  simple cycles (vertex set size, #M, #H, rate #M/#H): [(2, 1, 1, 1.0), (5, 2, 3, 0.6667), (15, 6, 9, 0.6667)]
+alpha_S(b) - ceil((b+1) log3 2), b=1..80: [-1, 0, 0, 0, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 1, 0, 0, 1, 0, 0, 1, 0, 1, 1, 0, 1, 1, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2, 1, 1, 2, 1, 1, 2, 1, 2, 2, 1, 2, 2, 1, 2, 2, 1, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 3, 2, 2, 3, 2, 2]
+check a >= (2b - C_F)/3 for b <= 400: True
+alpha_S(b) - 2b/3 at b = 100, 200, 300, 400: [0.333, 0.667, 1.0, 0.333]
+E_S loops through -1: K with a loop of a0(K) multiplications (K<=80): [2, 3, 4, 10, 11, 12, 13, 14, 15, 16, 17, 19, 20, 22, 23, 25, 26, 28, 31, 34]
+  check 3a >= 2K+1 on every loop (K<=80): True
+  least a minus a0(K), K=1..80: [-1, 0, 0, 0, 1, 1, 1, 2, 2, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 1, 0, 0, 1, 0, 0, 1, 0, 1, 1, 0, 1, 1, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2, 1, 1, 2, 1, 1, 2, 1, 2, 2, 1, 2, 2, 1, 2, 2, 1, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 3, 2, 2, 3, 2, 2]
+scale i: j = alpha_S(i-3), number of hostile perturbations c_max(i):
+  i=10 j=7 c_max=1  (log2 c_max = 0.00)
+  i=20 j=12 c_max=0  (log2 c_max = -inf)
+  i=40 j=25 c_max=0  (log2 c_max = -inf)
+  i=60 j=39 c_max=1  (log2 c_max = 0.00)
+  i=80 j=52 c_max=2  (log2 c_max = 1.00)
+  i=100 j=65 c_max=4  (log2 c_max = 2.00)
+  i=150 j=99 c_max=60  (log2 c_max = 5.91)
+  i=200 j=132 c_max=297  (log2 c_max = 8.21)
+|Bad_m(E_S)| >= : [(40, 1), (55, 1), (64, 1), (100, 7), (200, 278), (300, 12059), (400, 522659)]
+  exponent log2(bound)/m at m = 200, 300, 400: [0.0406, 0.0452, 0.0475]
+  alpha_S(b) >= ceil(2b/3) for b <= 2100: True
+  min_{200<=m<=2000} [log2(bound) - (0.0536 m - 6)] = 3.394 at m = 254
+(4a) family members (i<52, c<=min(c_max,2^(55-i))): 3; in Bad_55 of the thread DFS: 3
+(4b) exact prover on 2 sample family members: {'hostile': 2}
+(5) tight DP with ES_FILTER=1 vs exact F-DP on loops through -1: 26/26 agree
+(6) size of the forward orbit of -1 (values <= 10^4 / <= 10^6):
+   S = 6 mod 8             16      16
+   S = 6,14 mod 16         16      16
+   S = 2 mod 8              2       2
+   S = 0 mod 8              2       2
+   S = 0 mod 4              2       2
+   S = 54 mod 64            2       2
+   S = 2 mod 4            984  113972
+   S = all evens (E)     2999  297545
+### S7. HYP-9126 generation-1 points above 3/2 (i <= 300)
+# backward T_i^{-1}(2) = 1/2 + 3^i/2^floor(i log2 3)
+  i=4 c=2.3704 value=1.76562 DESCENDS k1=9 s=12 K=19 replay=True
+  i=7 c=2.8093 value=1.56787 DESCENDS k1=17 s=24 K=38 replay=True
+  i=9 c=2.4972 value=1.70135 DESCENDS k1=15 s=19 K=30 replay=True
+  i=12 c=2.9596 value=1.51364 DESCENDS k1=33 s=53 K=84 replay=True
+  i=14 c=2.6308 value=1.64035 DESCENDS k1=33 s=53 K=84 replay=True
+  i=16 c=2.3385 value=1.78289 DESCENDS k1=27 s=48 K=76 replay=True
+  i=19 c=2.7715 value=1.58244 DESCENDS k1=41 s=65 K=103 replay=True
+  i=21 c=2.4636 value=1.71775 DESCENDS k1=33 s=53 K=84 replay=True
+  i=24 c=2.9198 value=1.52747 DESCENDS k1=101 s=212 K=336 replay=True
+  i=26 c=2.5954 value=1.65591 DESCENDS k1=77 s=137 K=217 replay=True
+  i=28 c=2.3070 value=1.80040 DESCENDS k1=45 s=60 K=95 replay=True
+  i=31 c=2.7342 value=1.59721 DESCENDS k1=51 s=89 K=141 replay=True
+  i=33 c=2.4304 value=1.73436 DESCENDS k1=53 s=84 K=133 replay=True
+  i=36 c=2.8805 value=1.54149 DESCENDS k1=95 s=171 K=271 replay=True
+  i=38 c=2.5604 value=1.67168 DESCENDS k1=63 s=106 K=168 replay=True
+  i=40 c=2.2759 value=1.81814 DESCENDS k1=63 s=84 K=133 replay=True
+  i=43 c=2.6974 value=1.61218 DESCENDS k1=69 s=113 K=179 replay=True
+  i=45 c=2.3977 value=1.75120 DESCENDS k1=71 s=130 K=206 replay=True
+  i=48 c=2.8417 value=1.55570 DESCENDS k1=155 s=265 K=420 replay=True
+  i=50 c=2.5260 value=1.68766 DESCENDS k1=81 s=137 K=217 replay=True
+  i=53 c=2.9937 value=1.50209 DESCENDS k1=179 s=359 K=569 replay=True
+  i=55 c=2.6611 value=1.62735 DESCENDS k1=125 s=219 K=347 replay=True
+  i=57 c=2.3654 value=1.76827 DESCENDS k1=93 s=142 K=225 replay=True
+  i=60 c=2.8035 value=1.57010 DESCENDS k1=95 s=159 K=252 replay=True
+  i=62 c=2.4920 value=1.70387 DESCENDS k1=99 s=154 K=244 replay=True
+  i=65 c=2.9534 value=1.51576 DESCENDS k1=1545 s=2713 K=4300 replay=True
+  i=67 c=2.6253 value=1.64273 DESCENDS k1=107 s=125 K=198 replay=True
+  i=69 c=2.3336 value=1.78557 DESCENDS k1=111 s=183 K=290 replay=True
+  i=72 c=2.7657 value=1.58470 DESCENDS k1=125 s=236 K=374 replay=True
+  i=74 c=2.4584 value=1.72029 DESCENDS k1=119 s=159 K=252 replay=True
+  i=77 c=2.9137 value=1.52962 DESCENDS k1=165 s=265 K=420 replay=True
+  i=79 c=2.5900 value=1.65832 DESCENDS k1=195 s=337 K=534 replay=True
+  i=81 c=2.3022 value=1.80311 DESCENDS k1=129 s=226 K=358 replay=True
+  i=84 c=2.7285 value=1.59950 DESCENDS k1=135 s=224 K=355 replay=True
+  i=86 c=2.4253 value=1.73694 DESCENDS k1=165 s=267 K=423 replay=True
+  i=89 c=2.8745 value=1.54367 DESCENDS k1=195 s=359 K=569 replay=True
+  i=91 c=2.5551 value=1.67413 DESCENDS k1=147 s=265 K=420 replay=True
+  i=93 c=2.2712 value=1.82089 DESCENDS k1=147 s=250 K=396 replay=True
+  i=96 c=2.6918 value=1.61450 DESCENDS k1=177 s=354 K=561 replay=True
+  i=98 c=2.3927 value=1.75382 DESCENDS k1=171 s=277 K=439 replay=True
+  i=101 c=2.8358 value=1.55791 DESCENDS k1=165 s=318 K=504 replay=True
+  i=103 c=2.5207 value=1.69015 DESCENDS k1=171 s=296 K=469 replay=True
+  i=106 c=2.9875 value=1.50418 DESCENDS k1=795 s=1383 K=2192 replay=True
+  i=108 c=2.6556 value=1.62971 DESCENDS k1=177 s=354 K=561 replay=True
+  i=110 c=2.3605 value=1.77092 DESCENDS k1=177 s=354 K=561 replay=True
+  i=113 c=2.7976 value=1.57234 DESCENDS k1=195 s=359 K=569 replay=True
+  i=115 c=2.4868 value=1.70638 DESCENDS k1=183 s=325 K=515 replay=True
+  i=118 c=2.9473 value=1.51789 DESCENDS k1=327 s=571 K=905 replay=True
+  i=120 c=2.6198 value=1.64512 DESCENDS k1=203 s=395 K=626 replay=True
+  i=122 c=2.3287 value=1.78826 DESCENDS k1=195 s=397 K=629 replay=True
+  i=125 c=2.7600 value=1.58697 DESCENDS k1=203 s=354 K=561 replay=True
+  i=127 c=2.4533 value=1.72284 DESCENDS k1=201 s=361 K=572 replay=True
+  i=130 c=2.9076 value=1.53177 DESCENDS k1=207 s=371 K=588 replay=True
+  i=132 c=2.5845 value=1.66074 DESCENDS k1=209 s=371 K=588 replay=True
+  i=134 c=2.2974 value=1.80584 DESCENDS k1=213 s=332 K=526 replay=True
+  i=137 c=2.7228 value=1.60180 DESCENDS k1=261 s=465 K=737 replay=True
+  i=139 c=2.4203 value=1.73953 DESCENDS k1=221 s=371 K=588 replay=True
+  i=142 c=2.8685 value=1.54585 DESCENDS k1=233 s=412 K=653 replay=True
+  i=144 c=2.5498 value=1.67658 DESCENDS k1=231 s=395 K=626 replay=True
+  i=146 c=2.2665 value=1.82365 DESCENDS k1=231 s=337 K=534 replay=True
+  i=149 c=2.6862 value=1.61683 DESCENDS k1=293 s=518 K=821 replay=True
+  i=151 c=2.3877 value=1.75644 DESCENDS k1=239 s=455 K=721 replay=True
+  i=154 c=2.8299 value=1.56012 DESCENDS k1=245 s=424 K=672 replay=True
+  i=156 c=2.5154 value=1.69263 DESCENDS k1=249 s=419 K=664 replay=True
+  i=159 c=2.9813 value=1.50628 no certificate k1<=3000
+  i=161 c=2.6500 value=1.63207 DESCENDS k1=255 s=407 K=645 replay=True
+  i=163 c=2.3556 value=1.77358 DESCENDS k1=261 s=489 K=775 replay=True
+  i=166 c=2.7918 value=1.57458 DESCENDS k1=293 s=489 K=775 replay=True
+  i=168 c=2.4816 value=1.70890 DESCENDS k1=293 s=525 K=832 replay=True
+  i=171 c=2.9411 value=1.52001 DESCENDS k1=569 s=983 K=1558 replay=True
+  i=173 c=2.6143 value=1.64751 DESCENDS k1=275 s=436 K=691 replay=True
+  i=175 c=2.3239 value=1.79095 DESCENDS k1=279 s=513 K=813 replay=True
+  i=178 c=2.7542 value=1.58924 DESCENDS k1=341 s=636 K=1008 replay=True
+  i=180 c=2.4482 value=1.72540 DESCENDS k1=285 s=436 K=691 replay=True
+  i=183 c=2.9016 value=1.53393 DESCENDS k1=309 s=530 K=840 replay=True
+  i=185 c=2.5792 value=1.66317 DESCENDS k1=309 s=571 K=905 replay=True
+  i=187 c=2.2926 value=1.80857 DESCENDS k1=297 s=515 K=816 replay=True
+  i=190 c=2.7171 value=1.60410 DESCENDS k1=309 s=530 K=840 replay=True
+  i=192 c=2.4152 value=1.74212 DESCENDS k1=309 s=537 K=851 replay=True
+  i=195 c=2.8625 value=1.54804 DESCENDS k1=371 s=624 K=989 replay=True
+  i=197 c=2.5444 value=1.67904 DESCENDS k1=327 s=590 K=935 replay=True
+  i=199 c=2.2617 value=1.82642 DESCENDS k1=315 s=496 K=786 replay=True
+  i=202 c=2.6806 value=1.61917 DESCENDS k1=327 s=530 K=840 replay=True
+  i=204 c=2.3827 value=1.75906 DESCENDS k1=323 s=518 K=821 replay=True
+  i=207 c=2.8240 value=1.56233 DESCENDS k1=881 s=1554 K=2463 replay=True
+  i=209 c=2.5102 value=1.69513 DESCENDS k1=333 s=571 K=905 replay=True
+  i=212 c=2.9750 value=1.50839 DESCENDS k1=2379 s=4096 K=6492 replay=True
+  i=214 c=2.6445 value=1.63444 DESCENDS k1=383 s=619 K=981 replay=True
+  i=216 c=2.3507 value=1.77624 DESCENDS k1=345 s=583 K=924 replay=True
+  i=219 c=2.7860 value=1.57683 DESCENDS k1=519 s=848 K=1344 replay=True
+  i=221 c=2.4764 value=1.71143 DESCENDS k1=351 s=554 K=878 replay=True
+  i=224 c=2.9350 value=1.52215 DESCENDS k1=1029 s=1795 K=2845 replay=True
+  i=226 c=2.6089 value=1.64991 DESCENDS k1=383 s=689 K=1092 replay=True
+  i=228 c=2.3190 value=1.79365 DESCENDS k1=363 s=544 K=862 replay=True
+  i=231 c=2.7485 value=1.59152 DESCENDS k1=369 s=571 K=905 replay=True
+  i=233 c=2.4431 value=1.72796 DESCENDS k1=369 s=571 K=905 replay=True
+  i=236 c=2.8955 value=1.53609 DESCENDS k1=461 s=771 K=1222 replay=True
+  i=238 c=2.5738 value=1.66560 DESCENDS k1=377 s=566 K=897 replay=True
+  i=240 c=2.2878 value=1.81130 DESCENDS k1=381 s=578 K=916 replay=True
+  i=243 c=2.7115 value=1.60641 DESCENDS k1=743 s=1289 K=2043 replay=True
+  i=245 c=2.4102 value=1.74471 DESCENDS k1=389 s=638 K=1011 replay=True
+  i=248 c=2.8565 value=1.55023 DESCENDS k1=393 s=665 K=1054 replay=True
+  i=250 c=2.5391 value=1.68150 DESCENDS k1=425 s=749 K=1187 replay=True
+  i=252 c=2.2570 value=1.82919 DESCENDS k1=399 s=660 K=1046 replay=True
+  i=255 c=2.6750 value=1.62151 DESCENDS k1=503 s=848 K=1344 replay=True
+  i=257 c=2.3778 value=1.76169 DESCENDS k1=407 s=672 K=1065 replay=True
+  i=260 c=2.8181 value=1.56455 DESCENDS k1=579 s=1036 K=1642 replay=True
+  i=262 c=2.5050 value=1.69762 DESCENDS k1=417 s=684 K=1084 replay=True
+  i=265 c=2.9688 value=1.51050 DESCENDS k1=497 s=824 K=1306 replay=True
+  i=267 c=2.6390 value=1.63681 DESCENDS k1=423 s=672 K=1065 replay=True
+  i=269 c=2.3458 value=1.77891 DESCENDS k1=429 s=713 K=1130 replay=True
+  i=272 c=2.7801 value=1.57908 DESCENDS k1=831 s=1436 K=2276 replay=True
+  i=274 c=2.4712 value=1.71396 DESCENDS k1=503 s=814 K=1290 replay=True
+  i=277 c=2.9289 value=1.52428 DESCENDS k1=497 s=824 K=1306 replay=True
+  i=279 c=2.6035 value=1.65232 DESCENDS k1=443 s=742 K=1176 replay=True
+  i=281 c=2.3142 value=1.79636 DESCENDS k1=447 s=742 K=1176 replay=True
+  i=284 c=2.7427 value=1.59380 DESCENDS k1=497 s=807 K=1279 replay=True
+  i=286 c=2.4380 value=1.73053 DESCENDS k1=453 s=783 K=1241 replay=True
+  i=289 c=2.8895 value=1.53826 DESCENDS k1=497 s=824 K=1306 replay=True
+  i=291 c=2.5684 value=1.66804 DESCENDS k1=473 s=766 K=1214 replay=True
+  i=293 c=2.2830 value=1.81404 DESCENDS k1=465 s=737 K=1168 replay=True
+  i=296 c=2.7058 value=1.60872 DESCENDS k1=471 s=824 K=1306 replay=True
+  i=298 c=2.4052 value=1.74731 DESCENDS k1=473 s=836 K=1325 replay=True
+backward i<=300: easy clocks (c<9/4) certified 175; hard clocks 123, certified 122, open [159]
+# forward X_i = -1 - 2^i/3^(a0(i)-1)
+  i=12 |x|=1.62430 DESCENDS a=46 3^287<2^455
+  i=15 |x|=1.55493 DESCENDS a=22 3^70<2^111
+  i=17 |x|=1.73991 DESCENDS a=16 3^85<2^135
+  i=20 |x|=1.65769 DESCENDS a=13 3^51<2^81
+  i=23 |x|=1.58462 DESCENDS a=15 3^46<2^73
+  i=26 |x|=1.51966 DESCENDS a=48 3^253<2^401
+  i=28 |x|=1.69288 DESCENDS a=18 3^68<2^108
+  i=31 |x|=1.61589 DESCENDS a=24 3^75<2^119
+  i=34 |x|=1.54746 DESCENDS a=22 3^82<2^130
+  i=36 |x|=1.72995 DESCENDS a=32 3^138<2^219
+  i=39 |x|=1.64884 DESCENDS a=25 3^116<2^184
+  i=42 |x|=1.57675 DESCENDS a=27 3^58<2^92
+  i=45 |x|=1.51266 no route certificate
+  i=47 |x|=1.68355 DESCENDS a=80 3^386<2^612
+  i=50 |x|=1.60760 DESCENDS a=58 3^287<2^455
+  i=53 |x|=1.54009 DESCENDS a=38 3^241<2^382
+  i=55 |x|=1.72012 DESCENDS a=35 3^186<2^295
+  i=58 |x|=1.64011 DESCENDS a=37 3^157<2^249
+  i=61 |x|=1.56898 DESCENDS a=40 3^164<2^260
+  i=64 |x|=1.50576 no route certificate
+  i=66 |x|=1.67435 DESCENDS a=42 3^145<2^230
+  i=69 |x|=1.59942 DESCENDS a=44 3^229<2^363
+  i=72 |x|=1.53282 DESCENDS a=56 3^253<2^401
+  i=74 |x|=1.71043 DESCENDS a=48 3^174<2^276
+  i=77 |x|=1.63149 DESCENDS a=108 3^511<2^810
+  i=80 |x|=1.56133 DESCENDS a=52 3^217<2^344
+  i=82 |x|=1.74844 DESCENDS a=56 3^232<2^368
+  i=85 |x|=1.66528 DESCENDS a=58 3^275<2^436
+  i=88 |x|=1.59136 DESCENDS a=56 3^258<2^409
+  i=91 |x|=1.52565 DESCENDS a=60 3^253<2^401
+  i=93 |x|=1.70087 DESCENDS a=78 3^350<2^555
+  i=96 |x|=1.62299 DESCENDS a=70 3^287<2^455
+  i=99 |x|=1.55377 DESCENDS a=78 3^429<2^680
+  i=101 |x|=1.73836 DESCENDS a=64 3^297<2^471
+  i=104 |x|=1.65632 DESCENDS a=78 3^451<2^715
+  i=107 |x|=1.58340 DESCENDS a=72 3^352<2^558
+  i=110 |x|=1.51858 DESCENDS a=146 3^612<2^970
+  i=112 |x|=1.69143 DESCENDS a=108 3^480<2^761
+  i=115 |x|=1.61461 DESCENDS a=73 3^340<2^539
+  i=118 |x|=1.54632 DESCENDS a=78 3^335<2^531
+  i=120 |x|=1.72842 DESCENDS a=76 3^297<2^471
+  i=123 |x|=1.64749 DESCENDS a=78 3^475<2^753
+  i=126 |x|=1.57554 DESCENDS a=86 3^453<2^718
+  i=129 |x|=1.51160 DESCENDS a=392 3^2036<2^3227
+  i=131 |x|=1.68213 DESCENDS a=83 3^386<2^612
+  i=134 |x|=1.60634 DESCENDS a=85 3^393<2^623
+  i=137 |x|=1.53896 DESCENDS a=124 3^506<2^802
+  i=139 |x|=1.71862 DESCENDS a=88 3^415<2^658
+  i=142 |x|=1.63877 DESCENDS a=100 3^463<2^734
+  i=145 |x|=1.56780 DESCENDS a=120 3^576<2^913
+  i=148 |x|=1.50471 no route certificate
+  i=150 |x|=1.67295 DESCENDS a=104 3^516<2^818
+  i=153 |x|=1.59817 DESCENDS a=97 3^405<2^642
+  i=156 |x|=1.53171 DESCENDS a=334 3^1624<2^2574
+  i=158 |x|=1.70895 DESCENDS a=156 3^810<2^1284
+  i=161 |x|=1.63018 DESCENDS a=104 3^528<2^837
+  i=164 |x|=1.56016 DESCENDS a=108 3^629<2^997
+  i=166 |x|=1.74687 DESCENDS a=105 3^444<2^704
+  i=169 |x|=1.66389 DESCENDS a=124 3^863<2^1368
+  i=172 |x|=1.59012 DESCENDS a=130 3^641<2^1016
+  i=175 |x|=1.52455 DESCENDS a=214 3^1118<2^1772
+  i=177 |x|=1.69940 DESCENDS a=112 3^521<2^826
+  i=180 |x|=1.62169 DESCENDS a=214 3^1005<2^1593
+  i=183 |x|=1.55262 DESCENDS a=134 3^588<2^932
+  i=185 |x|=1.73682 DESCENDS a=156 3^750<2^1189
+  i=188 |x|=1.65495 DESCENDS a=296 3^1617<2^2563
+  i=191 |x|=1.58218 DESCENDS a=234 3^1229<2^1948
+  i=194 |x|=1.51749 DESCENDS a=626 3^2901<2^4598
+  i=196 |x|=1.68999 DESCENDS a=126 3^480<2^761
+  i=199 |x|=1.61333 DESCENDS a=148 3^634<2^1005
+  i=202 |x|=1.54518 DESCENDS a=128 3^600<2^951
+  i=204 |x|=1.72690 DESCENDS a=130 3^509<2^807
+  i=207 |x|=1.64614 DESCENDS a=131 3^716<2^1135
+  i=210 |x|=1.57434 DESCENDS a=192 3^858<2^1360
+  i=213 |x|=1.51053 no route certificate
+  i=215 |x|=1.68070 DESCENDS a=144 3^798<2^1265
+  i=218 |x|=1.60507 DESCENDS a=172 3^870<2^1379
+  i=221 |x|=1.53784 DESCENDS a=144 3^706<2^1119
+  i=223 |x|=1.71712 DESCENDS a=141 3^668<2^1059
+  i=226 |x|=1.63744 DESCENDS a=154 3^675<2^1070
+  i=229 |x|=1.56661 DESCENDS a=172 3^865<2^1371
+  i=232 |x|=1.50366 no route certificate
+  i=234 |x|=1.67154 DESCENDS a=224 3^1051<2^1666
+  i=237 |x|=1.59693 DESCENDS a=208 3^911<2^1444
+  i=240 |x|=1.53060 DESCENDS a=234 3^1118<2^1772
+  i=242 |x|=1.70747 DESCENDS a=156 3^1010<2^1601
+  i=245 |x|=1.62886 DESCENDS a=155 3^740<2^1173
+  i=248 |x|=1.55899 DESCENDS a=157 3^841<2^1333
+  i=250 |x|=1.74532 DESCENDS a=158 3^733<2^1162
+  i=253 |x|=1.66250 DESCENDS a=160 3^793<2^1257
+  i=256 |x|=1.58889 DESCENDS a=166 3^1017<2^1612
+  i=259 |x|=1.52346 DESCENDS a=220 3^1277<2^2024
+  i=261 |x|=1.69795 DESCENDS a=266 3^1492<2^2365
+  i=264 |x|=1.62040 DESCENDS a=167 3^993<2^1574
+  i=267 |x|=1.55146 DESCENDS a=170 3^841<2^1333
+  i=269 |x|=1.73528 DESCENDS a=170 3^632<2^1002
+  i=272 |x|=1.65359 DESCENDS a=234 3^1181<2^1872
+  i=275 |x|=1.58097 DESCENDS a=214 3^1159<2^1837
+  i=278 |x|=1.51641 no route certificate
+  i=280 |x|=1.68855 DESCENDS a=177 3^839<2^1330
+  i=283 |x|=1.61205 DESCENDS a=179 3^882<2^1398
+  i=286 |x|=1.54404 DESCENDS a=220 3^1171<2^1856
+  i=288 |x|=1.72539 DESCENDS a=304 3^1516<2^2403
+  i=291 |x|=1.64479 DESCENDS a=266 3^1499<2^2376
+  i=294 |x|=1.57315 DESCENDS a=234 3^1347<2^2135
+  i=297 |x|=1.50946 no route certificate
+  i=299 |x|=1.67928 DESCENDS a=189 3^1051<2^1666
+forward 10<=i<=300: easy clocks certified 184; hard clocks 107, certified 100, open [45, 64, 148, 213, 232, 278, 297]
+### S7b. deeper searches for the open generation-1 points (run separately; DEEP=1 reproduces them)
+# python3 04-computation/experiments/collatz_procgen_20260923_sweep_gen1.py deep-fwd 45,64,148,213,232,278,297 1500 60000
+deep-fwd i=45: DESCENDS a=72 3^306<2^485
+deep-fwd i=64: DESCENDS a=228 3^1224<2^1940
+deep-fwd i=148: DESCENDS a=1168 3^5879<2^9318
+deep-fwd i=213: DESCENDS a=135 3^612<2^970
+deep-fwd i=232: DESCENDS a=147 3^612<2^970
+deep-fwd i=278: DESCENDS a=208 3^1118<2^1772
+deep-fwd i=297: DESCENDS a=1520 3^7768<2^12312
+# python3 04-computation/experiments/collatz_procgen_20260923_sweep_gen1.py deep-back 159 40000
+deep-back i=159: DESCENDS k1=13097 s=22663 K=35920 replay=True
+# independent re-verification: the lanes' 11 lower-clock certificates (mirror note section 6.5) are reproduced exactly in S7
+### S8. chain-sum coverage R_s (note section 3.5)
+j=8 uncovered per bin(0.1): 29 17 7 10 16 2 3 2 5 4 6 9 7 6 9 9 6 12 13 12 18 18 24 24 27 12 14 12 17 19 18 21 23 22 25 | total 478 maxratio 3.9971
+j=9 uncovered per bin(0.1): 53 28 10 19 22 2 2 7 3 6 7 8 13 16 17 24 23 13 13 20 19 15 23 25 33 35 42 47 48 51 56 61 70 41 31 | total 903 maxratio 3.9981
+j=10 uncovered per bin(0.1): 91 43 12 21 46 2 2 1 8 13 17 9 10 18 16 18 27 36 38 49 59 66 38 31 31 36 44 48 48 56 60 68 71 88 93 | total 1314 maxratio 3.9987
+j=11 uncovered per bin(0.1): 146 69 11 39 44 0 2 3 1 6 14 21 24 39 48 20 28 34 38 39 50 58 74 94 96 120 132 142 168 131 66 70 85 90 91 | total 2093 maxratio 3.9996
+j=12 uncovered per bin(0.1): 226 83 6 41 111 0 1 2 11 16 5 13 18 24 41 54 66 86 114 122 48 56 64 90 93 94 106 136 146 172 211 232 238 289 301 | total 3316 maxratio 3.9996
+j=13 uncovered per bin(0.1): 315 152 14 34 83 0 0 1 3 10 19 37 57 25 28 37 49 61 78 99 141 168 195 237 289 350 198 129 135 163 184 231 259 208 264 | total 4253 maxratio 3.9993
+j=14 uncovered per bin(0.1): 481 117 4 66 110 0 0 5 12 3 9 17 32 56 68 107 167 133 58 81 100 147 134 162 205 246 315 383 425 478 544 634 730 844 959 | total 7832 maxratio 4.0000
+j=15 uncovered per bin(0.1): 602 176 17 29 156 0 0 1 6 15 37 50 14 28 46 65 88 125 196 218 301 401 510 323 181 190 242 307 380 359 408 459 537 610 692 | total 7769 maxratio 3.9999
+j=16 uncovered per bin(0.1): 795 185 7 102 88 0 1 5 1 6 14 28 60 94 162 160 54 79 120 152 197 224 299 403 521 | total 3757 maxratio 2.9999
