@@ -367,6 +367,44 @@ the divergence half of Collatz, and the sign enters exactly as the sign of
   * Super-blocks beat every separately balanced block at `N = 8, 64, 128, 256` (FINITE-EXACT) and approach about `1.570` numerically (HYP-9128).
   * Whether `C* < 3/2` is OPEN (HYP-9129). The proved window is `[1.375, 1.598]`.
 
+## 2e. Waves 6–7 (2026-09-23): the owner's "prove the rest" — status of every session hypothesis
+
+| hypothesis | status after waves 6–7 | where |
+|---|---|---|
+| HYP-9120 (E-SCC) | OPEN. It contains Q1 and Q2; the dimension route via HYP-9121 is void | sweep note |
+| HYP-9121 (rising-run excursion) | **REFUTED**. In `E_{6 mod 8}` the orbit of `-1` is a 16-point trap of rate `2/3`, so `dim >= 0.0536` (PROVED) | sweep note §2 |
+| HYP-9122 (loops through 1) | OPEN; FINITE-EXACT to `s <= 190535` (was 6000) | sweep note §3 |
+| HYP-9123 (C2, supercritical strips) | OPEN; placement `PC ⟹ C2 ⟹ HYP-9127` | sweep note §6 |
+| HYP-9124 (`X_min`, implies Q2) | OPEN; `⟸ HYP-9126` | sweep note §5 |
+| HYP-9125 (loops through -1) | OPEN; FINITE-EXACT to `K <= 176249` (was 4000) | sweep note §3 |
+| HYP-9126 (3/2 wall) | OPEN; `⟹ HYP-9124 ⟹ Q2`; the easy clocks are PROVED given the loops; all 589 generation-1 points with `i <= 300` descend | sweep note §4 |
+| HYP-9127 (cube-swap number) | OPEN. Proved no-go for every natural determinant family (parabola lemma, Theorem NG, exact `e3(n)`); loophole: quartic cyclotomic content | theta round 2 |
+| **HYP-9128** (super-blocks) | **PROVED, THM-4468**: `C* <= 159/100 < 1+log_5(phi^2)` | hyp9128 proof note |
+| HYP-9129 (`C* < 3/2`?) | OPEN. Proved window `[1.377, 1.59]`; realizable states stall at about `1.567` | same |
+| HYP-9130 (cube zero estimate) | OPEN; restricted forms only | theta notes |
+| **HYP-9131** (square swap beyond `phi`) | **PROVED**: 2-adic Hankel (Bézivin) for `mu_bar < 7/4`, and `28/11` and `2.878` via KRVZ; every square swap under `5x+1` and `7x+1` is settled | theta-beyond-phi |
+| HYP-9132 (transcendence of the square-swap number) | OPEN; **degree `>= 3` PROVED** (2-adic KRVZ non-quadraticity, cited inputs) | theta round 2 |
+| **HYP-9133** (E-game zeta gap) | **PROVED** (Pringsheim + aperiodicity + Hurwitz) | trunk/RH §9 |
+
+**Structural findings of these waves.**
+* **One product-formula argument, two places.** THM-4467's Pólya argument and the H1 Hankel proof are the same argument; AMM runs it at the real place, Collatz at the 2-adic place ([bridges](procgen_bridges_20260923_lrc_amm_collatz.md)).
+* **`phi` marks the limit of one-scale methods.** In every case it is beaten by coupling scales:
+  * Bugeaud–Kim `2.51` in Theorem D;
+  * `7/4`, `28/11` and `2.878` for theta values;
+  * super-blocks at `1.59`, below the golden `1.598`, with about `1.570` numerically.
+* **The owner's AM–GM principle, made exact.**
+  * The Collatz drift is exactly the AM–GM gap `log(2/sqrt3)`, and `q = 3` is the only odd `q` with arithmetic-mean step factor 1.
+  * THM-4467's termwise majorant is sharp (a negative result, §9 of the hyp9128 note). The real loss is cross-level cancellation, and HYP-9128's super-blocks exploit exactly that.
+  * For LRC, "excised Bonferroni" certificates are exact on the tested 13-speed rows. Example: `{1..12, 5460}` has lonely measure `301/10296`, re-computed independently.
+* **The owner's inspiration texts, dispatched** ([dispatch](procgen_numerology_20260923_snippet_dispatch.md), [brackets](procgen_numerology_20260923_odd_square_brackets.md)).
+  * PROVED: `{2,3,11}` are exactly the primes that reach their own double inside their odd-square bracket.
+  * The "every 5th" pulse is a real local-density effect: `13σ` mod 5, with similar effects mod 3 and 7.
+  * REFUTED: the pentagonal-pulse lemma (at `j = 15`) and the Tower Packing Limit (at `M_4 = 2^127-1`).
+  * REAL anchors:
+    * Catalan parity at Mersenne indices is THM-4467's Lemma P;
+    * Euler's pentagonal function is irrational at `2^10/3^9` (Theorem E);
+    * `11` is a base-3 Wieferich prime, but no mechanism was found for `33^2 = 1089`.
+
 ## 2b. The approach deck: every approach generated or considered, with its disposition
 
 | # | approach (lens + mechanism) | barrier verdict | probe run | outcome |
