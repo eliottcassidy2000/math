@@ -198,7 +198,11 @@ reconstructed as rationals of small height. Every reliable reconstruction
 is negative with a power-of-3 denominator, in about `[-1.6,-1]`:
 `-1, -13/9, -35/27, -97/81, -113/81, -275/243, -307/243, -355/243, -371/243,
 -793/729, ...`, accumulating at `-1` from below. The family is not bounded by `-3/2`:
-`-371/243=-1.527` and `-43/27=-1.593` also show no descent. Exact-rational DFS
+`-371/243=-1.527` and `-43/27=-1.593` also show no descent. **UPDATE (Q1-mirror lane,
+2026-09-23): both descend.** They lie outside `Bad_61`, so the 2-million-node limit was too
+small for these slow descenders ([q1_mirror](collatz_procgen_20260922_q1_mirror.md) §6.5).
+Whether any hostile point lies beyond `-3/2` is now OPEN (candidate M3 there): 28 of 72
+forward candidates above `3/2` are proved to descend and the rest are undetermined. Exact-rational DFS
 from each listed point finds no descent before a 2-million-node limit, whereas nearby
 rationals `-5/3, -11/9, -37/27, -41/27, -7/5, -9/7` descend within 2 to 5 halvings
 (`collatz_procgen_20260922_hostile_rational_check.py`). An exact membership

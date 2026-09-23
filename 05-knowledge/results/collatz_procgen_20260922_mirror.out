@@ -1,0 +1,583 @@
+### 0. loop equation through -1, exhaustive for K <= 12, a <= 12 (Prop 1.1, Prop 1.2, exceptions)
+(1)-(3) exhaustive loop equation, K <= 12, a <= 12 (all nondecreasing K_i in [0,K]):
+   words tested 10400574; identity <=> legal loop through -1 on all of them: True
+   K: a0(K), exact amin(K) (a <= 12), all (a, #solutions):
+   K= 1 a0= 2 amin=1 <a0 (a=1 loop)  solutions by a: {1: 1}
+   K= 2 a0= 2 amin=2 =a0  solutions by a: {2: 1}
+   K= 3 a0= 3 amin=3 =a0  solutions by a: {3: 1}
+   K= 4 a0= 4 amin=4 =a0  solutions by a: {4: 1}
+   K= 5 a0= 4 amin=5 >a0  solutions by a: {5: 1}
+   K= 6 a0= 5 amin=6 >a0  solutions by a: {6: 1}
+   K= 7 a0= 6 amin=7 >a0  solutions by a: {7: 1}
+   K= 8 a0= 6 amin=8 >a0  solutions by a: {8: 1}
+   K= 9 a0= 7 amin=9 >a0  solutions by a: {9: 1}
+   K=10 a0= 7 amin=7 =a0  solutions by a: {7: 2, 10: 1}
+   K=11 a0= 8 amin=8 =a0  solutions by a: {8: 4, 11: 1}
+   K=12 a0= 9 amin=9 =a0  solutions by a: {9: 6, 12: 1}
+
+### 1. layered DP (min a, then min height) for loops through -1, K <= 4000, multiplication points <= 30000000, pruning slack 2
+rows 4000 (K = 1..4000); K with amin != a0(K): [1, 5, 6, 7, 8, 9]
+  (K=1: the basic loop MH, a=1 < a0; K=5..9: a=K > a0, proved optimal in section 0)
+  max height H(K) = 20008879; the cap is not binding (all H <= 2/3 of the state cap)
+hard cases eta(K+1) < 0.006: K+1, K, a0, ratio 3^a0/2^K, eta, H(K), proved lower bound (Prop 3.1), H*eta*3ln3/a0:
+     84    83    53 2.004181 0.0019007      23947      8040  2.830
+    168   167   106 2.008370 0.0038014      28019      8250  3.312
+    252   251   159 2.012568 0.0057021      28019      8320  3.312
+    569   568   359 2.002133 0.0009702     458899    111448  4.087
+    653   652   412 2.006318 0.0028709     164495     43264  3.778
+    737   736   465 2.010512 0.0047716     111427     29400  3.768
+   1054  1053   665 2.000087 0.0000397   19012579   5062252  3.741
+   1138  1137   718 2.004268 0.0019404     458899    111859  4.087
+   1222  1221   771 2.008458 0.0038411     245491     60694  4.031
+   1306  1305   824 2.012656 0.0057418     164495     43403  3.778
+   1623  1622  1024 2.002220 0.0010100    1229387    306828  3.996
+   1707  1706  1077 2.006406 0.0029107     458899    111992  4.088
+   1791  1790  1130 2.010600 0.0048114     274651     71093  3.854
+   2108  2107  1330 2.000175 0.0000795   20008879   5065926  3.942
+   2192  2191  1383 2.004356 0.0019802     820271    211504  3.871
+   2276  2275  1436 2.008545 0.0038809     458899    112062  4.088
+   2360  2359  1489 2.012744 0.0057816     303139     78003  3.879
+   2677  2676  1689 2.002308 0.0010497    1877195    487440  3.845
+   2761  2760  1742 2.006493 0.0029504     707167    178873  3.947
+   2845  2844  1795 2.010687 0.0048511     458899    112104  4.088
+   3162  3161  1995 2.000262 0.0001192   20008879   5071399  3.940
+   3246  3245  2048 2.004443 0.0020199    1229387    307238  3.996
+   3330  3329  2101 2.008633 0.0039206     643939    162391  3.960
+   3414  3413  2154 2.012832 0.0058213     458899    112131  4.087
+   3731  3730  2354 2.002395 0.0010894    2556799    654889  3.900
+   3815  3814  2407 2.006581 0.0029901     981695    243977  4.019
+   3899  3898  2460 2.010775 0.0048908     576995    152449  3.781
+  K in (0,1000]: median H = 655, max H = 458899
+  K in (1000,2000]: median H = 2467, max H = 19012579
+  K in (2000,3000]: median H = 4111, max H = 20008879
+  K in (3000,4000]: median H = 4691, max H = 20008879
+full table K <= 100 (K a0 amin ratio eta H):
+    1   2   1 1.500000 0.73814 1
+    2   2   2 2.250000 0.10721 1
+    3   3   3 3.375000 0.47628 1
+    4   4   4 5.062500 0.84535 1
+    5   4   5 7.593750 0.21442 1
+    6   5   6 11.390625 0.58349 1
+    7   6   7 17.085937 0.95256 1
+    8   6   8 25.628906 0.32163 1
+    9   7   9 38.443359 0.69070 1
+   10   7   7 2.135742 0.05977 43
+   11   8   8 3.203613 0.42884 43
+   12   9   9 4.805420 0.79791 43
+   13   9   9 2.402710 0.16698 43
+   14  10  10 3.604065 0.53605 43
+   15  11  11 5.406097 0.90512 43
+   16  11  11 2.703049 0.27419 43
+   17  12  12 4.054573 0.64326 43
+   18  12  12 2.027287 0.01233 547
+   19  13  13 3.040930 0.38140 43
+   20  14  14 4.561395 0.75048 43
+   21  14  14 2.280697 0.11955 95
+   22  15  15 3.421046 0.48862 43
+   23  16  16 5.131569 0.85769 43
+   24  16  16 2.565785 0.22676 47
+   25  17  17 3.848677 0.59583 43
+   26  18  18 5.773015 0.96490 43
+   27  18  18 2.886508 0.33397 47
+   28  19  19 4.329761 0.70304 43
+   29  19  19 2.164881 0.07211 203
+   30  20  20 3.247321 0.44118 47
+   31  21  21 4.870982 0.81025 43
+   32  21  21 2.435491 0.17932 95
+   33  22  22 3.653236 0.54839 47
+   34  23  23 5.479854 0.91746 43
+   35  23  23 2.739927 0.28653 95
+   36  24  24 4.109891 0.65560 47
+   37  24  24 2.054945 0.02467 911
+   38  25  25 3.082418 0.39374 47
+   39  26  26 4.623627 0.76281 47
+   40  26  26 2.311814 0.13188 203
+   41  27  27 3.467720 0.50095 47
+   42  28  28 5.201580 0.87002 47
+   43  28  28 2.600790 0.23909 95
+   44  29  29 3.901185 0.60816 47
+   45  30  30 5.851778 0.97723 47
+   46  30  30 2.925889 0.34630 95
+   47  31  31 4.388833 0.71537 47
+   48  31  31 2.194417 0.08444 331
+   49  32  32 3.291625 0.45351 95
+   50  33  33 4.937438 0.82258 47
+   51  33  33 2.468719 0.19165 203
+   52  34  34 3.703078 0.56072 47
+   53  35  35 5.554617 0.92979 47
+   54  35  35 2.777309 0.29886 95
+   55  36  36 4.165963 0.66793 47
+   56  36  36 2.082981 0.03700 911
+   57  37  37 3.124472 0.40607 95
+   58  38  38 4.686708 0.77514 47
+   59  38  38 2.343354 0.14421 223
+   60  39  39 3.515031 0.51328 95
+   61  40  40 5.272547 0.88236 47
+   62  40  40 2.636273 0.25143 203
+   63  41  41 3.954410 0.62050 95
+   64  42  42 5.931615 0.98957 47
+   65  42  42 2.965808 0.35864 95
+   66  43  43 4.448711 0.72771 47
+   67  43  43 2.224356 0.09678 475
+   68  44  44 3.336534 0.46585 95
+   69  45  45 5.004800 0.83492 47
+   70  45  45 2.502400 0.20399 203
+   71  46  46 3.753600 0.57306 95
+   72  47  47 5.630400 0.94213 47
+   73  47  47 2.815200 0.31120 203
+   74  48  48 4.222800 0.68027 95
+   75  48  48 2.111400 0.04934 911
+   76  49  49 3.167100 0.41841 95
+   77  50  50 4.750650 0.78748 95
+   78  50  50 2.375325 0.15655 331
+   79  51  51 3.562988 0.52562 95
+   80  52  52 5.344482 0.89469 47
+   81  52  52 2.672241 0.26376 203
+   82  53  53 4.008361 0.63283 95
+   83  53  53 2.004181 0.00190 23947
+   84  54  54 3.006271 0.37097 203
+   85  55  55 4.509406 0.74004 95
+   86  55  55 2.254703 0.10911 547
+   87  56  56 3.382055 0.47818 95
+   88  57  57 5.073082 0.84725 95
+   89  57  57 2.536541 0.21632 223
+   90  58  58 3.804812 0.58539 95
+   91  59  59 5.707217 0.95446 95
+   92  59  59 2.853609 0.32353 203
+   93  60  60 4.280413 0.69260 95
+   94  60  60 2.140207 0.06167 911
+   95  61  61 3.210310 0.43074 203
+   96  62  62 4.815465 0.79981 95
+   97  62  62 2.407732 0.16888 419
+   98  63  63 3.611599 0.53795 95
+   99  64  64 5.417398 0.90702 95
+  100  64  64 2.708699 0.27609 223
+
+### 2. minimal-height loops for K <= 80 (checkpointed reconstruction at cap H(K)), independent verification
+  reconstructions OK: 79
+  K= 2 a= 2 H=1: M1 H1 M1 H1
+  K= 3 a= 3 H=1: M1 H1 M1 H1 M1 H1
+  K= 4 a= 4 H=1: M1 H1 M1 H1 M1 H1 M1 H1
+  K= 5 a= 5 H=1: M1 H1 M1 H1 M1 H1 M1 H1 M1 H1
+  K= 6 a= 6 H=1: M1 H1 M1 H1 M1 H1 M1 H1 M1 H1 M1 H1
+  K= 7 a= 7 H=1: M1 H1 M1 H1 M1 H1 M1 H1 M1 H1 M1 H1 M1 H1
+  K= 8 a= 8 H=1: M1 H1 M1 H1 M1 H1 M1 H1 M1 H1 M1 H1 M1 H1 M1 H1
+  K= 9 a= 9 H=1: M1 H1 M1 H1 M1 H1 M1 H1 M1 H1 M1 H1 M1 H1 M1 H1 M1 H1
+  K=10 a= 7 H=43: M3 H1 M1 H1 M2 H1 M1 H7
+  K=11 a= 8 H=43: M1 H1 M3 H1 M1 H1 M2 H1 M1 H7
+  K=12 a= 9 H=43: M1 H1 M1 H1 M3 H1 M1 H1 M2 H1 M1 H7
+  K=13 a= 9 H=43: M3 H1 M1 H2 M1 H1 M1 H1 M2 H1 M1 H7
+  K=14 a=10 H=43: M1 H1 M3 H1 M1 H2 M1 H1 M1 H1 M2 H1 M1 H7
+  K=15 a=11 H=43: M1 H1 M1 H1 M3 H1 M1 H2 M1 H1 M1 H1 M2 H1 M1 H7
+  K=16 a=11 H=43: M3 H1 M1 H2 M1 H1 M1 H2 M1 H1 M1 H1 M2 H1 M1 H7
+  K=17 a=12 H=43: M1 H1 M3 H1 M1 H2 M1 H1 M1 H2 M1 H1 M1 H1 M2 H1 M1 H7
+  K=18 a=12 H=547: M7 H1 M1 H3 M1 H1 M1 H3 M1 H3 M1 H7
+  K=19 a=13 H=43: M3 H1 M1 H2 M1 H1 M1 H2 M1 H1 M1 H2 M1 H1 M1 H1 M2 H1 M1 H7
+  K=20 a=14 H=43: M1 H1 M3 H1 M1 H2 M1 H1 M1 H2 M1 H1 M1 H2 M1 H1 M1 H1 M2 H1 M1 H7
+  K=21 a=14 H=95: M3 H1 M1 H1 M2 H1 M1 H2 M2 H2 M1 H2 M1 H1 M1 H2 M1 H4 M1 H5
+  K=22 a=15 H=43: M3 H1 M1 H2 M1 H1 M1 H2 M1 H1 M1 H2 M1 H1 M1 H2 M1 H1 M1 H1 M2 H1 M1 H7
+  K=23 a=16 H=43: M1 H1 M3 H1 M1 H2 M1 H1 M1 H2 M1 H1 M1 H2 M1 H1 M1 H2 M1 H1 M1 H1 M2 H1 M1 H7
+  K=24 a=16 H=47: M3 H1 M1 H1 M2 H1 M1 H3 M2 H2 M1 H3 M1 H1 M1 H3 M1 H1 M2 H1 M1 H7
+  K=25 a=17 H=43: M3 H1 M1 H2 M1 H1 M1 H2 M1 H1 M1 H2 M1 H1 M1 H2 M1 H1 M1 H2 M1 H1 M1 H1 M2 H1 M1 H7
+  K=26 a=18 H=43: M1 H1 M3 H1 M1 H2 M1 H1 M1 H2 M1 H1 M1 H2 M1 H1 M1 H2 M1 H1 M1 H2 M1 H1 M1 H1 M2 H1 M1 H7
+  K=27 a=18 H=47: M3 H1 M1 H2 M1 H1 M1 H1 M2 H1 M1 H3 M2 H2 M1 H3 M1 H1 M1 H3 M1 H1 M2 H1 M1 H7
+  K=28 a=19 H=43: M3 H1 M1 H2 M1 H1 M1 H2 M1 H1 M1 H2 M1 H1 M1 H2 M1 H1 M1 H2 M1 H1 M1 H2 M1 H1 M1 H1 M2 H1 M1 H7
+  K=29 a=19 H=203: M5 H1 M1 H1 M1 H2 M2 H5 M3 H2 M1 H1 M1 H4 M1 H2 M2 H1 M1 H3 M1 H7
+  K=30 a=20 H=47: M3 H1 M1 H2 M1 H1 M1 H2 M1 H1 M1 H1 M2 H1 M1 H3 M2 H2 M1 H3 M1 H1 M1 H3 M1 H1 M2 H1 M1 H7
+  K=31 a=21 H=43: M3 H1 M1 H2 M1 H1 M1 H2 M1 H1 M1 H2 M1 H1 M1 H2 M1 H1 M1 H2 M1 H1 M1 H2 M1 H1 M1 H2 M1 H1 M1 H1 M2 H1 M1 H7
+  K=32 a=21 H=95: M3 H1 M1 H1 M2 H1 M1 H2 M2 H2 M1 H2 M1 H1 M1 H2 M1 H4 M3 H2 M1 H2 M1 H1 M1 H2 M1 H4 M1 H5
+  K=33 a=22 H=47: M3 H1 M1 H2 M1 H1 M1 H2 M1 H1 M1 H2 M1 H1 M1 H1 M2 H1 M1 H3 M2 H2 M1 H3 M1 H1 M1 H3 M1 H1 M2 H1 M1 H7
+  K=34 a=23 H=43: M3 H1 M1 H2 M1 H1 M1 H2 M1 H1 M1 H2 M1 H1 M1 H2 M1 H1 M1 H2 M1 H1 M1 H2 M1 H1 M1 H2 M1 H1 M1 H2 M1 H1 M1 H1 M2 H1 M1 H7
+  K=35 a=23 H=95: M3 H1 M1 H1 M2 H1 M1 H2 M2 H2 M1 H2 M1 H1 M1 H2 M1 H4 M1 H1 M2 H2 M1 H3 M1 H1 M1 H3 M1 H1 M2 H1 M1 H7
+  K=36 a=24 H=47: M3 H1 M1 H2 M1 H1 M1 H2 M1 H1 M1 H2 M1 H1 M1 H2 M1 H1 M1 H1 M2 H1 M1 H3 M2 H2 M1 H3 M1 H1 M1 H3 M1 H1 M2 H1 M1 H7
+  K=37 a=24 H=911: M5 H1 M1 H1 M1 H2 M2 H2 M2 H2 M1 H1 M1 H2 M1 H2 M1 H2 M1 H2 M1 H1 M1 H1 M1 H1 M1 H1 M1 H3 M2 H2 M1 H11
+  K=38 a=25 H=47: M3 H1 M1 H1 M2 H1 M1 H3 M2 H2 M1 H3 M1 H1 M1 H3 M1 H1 M2 H1 M1 H3 M2 H2 M1 H3 M1 H1 M1 H3 M1 H1 M2 H1 M1 H7
+  K=39 a=26 H=47: M1 H1 M3 H1 M1 H1 M2 H1 M1 H3 M2 H2 M1 H3 M1 H1 M1 H3 M1 H1 M2 H1 M1 H3 M2 H2 M1 H3 M1 H1 M1 H3 M1 H1 M2 H1 M1 H7
+  K=40 a=26 H=203: M3 H1 M3 H2 M2 H3 M1 H1 M1 H1 M1 H1 M1 H3 M1 H1 M1 H2 M2 H5 M3 H2 M1 H1 M1 H4 M1 H2 M2 H1 M1 H3 M1 H7
+  K=41 a=27 H=47: M3 H1 M1 H2 M1 H1 M1 H1 M2 H1 M1 H3 M2 H2 M1 H3 M1 H1 M1 H3 M1 H1 M2 H1 M1 H3 M2 H2 M1 H3 M1 H1 M1 H3 M1 H1 M2 H1 M1 H7
+  K=42 a=28 H=47: M1 H1 M3 H1 M1 H2 M1 H1 M1 H1 M2 H1 M1 H3 M2 H2 M1 H3 M1 H1 M1 H3 M1 H1 M2 H1 M1 H3 M2 H2 M1 H3 M1 H1 M1 H3 M1 H1 M2 H1 M1 H7
+  K=43 a=28 H=95: M3 H1 M1 H1 M2 H1 M1 H2 M2 H2 M1 H2 M1 H1 M1 H2 M1 H4 M3 H2 M1 H2 M1 H1 M1 H2 M1 H4 M3 H2 M1 H2 M1 H1 M1 H2 M1 H4 M1 H5
+  K=44 a=29 H=47: M3 H1 M1 H2 M1 H1 M1 H2 M1 H1 M1 H1 M2 H1 M1 H3 M2 H2 M1 H3 M1 H1 M1 H3 M1 H1 M2 H1 M1 H3 M2 H2 M1 H3 M1 H1 M1 H3 M1 H1 M2 H1 M1 H7
+  K=45 a=30 H=47: M1 H1 M3 H1 M1 H2 M1 H1 M1 H2 M1 H1 M1 H1 M2 H1 M1 H3 M2 H2 M1 H3 M1 H1 M1 H3 M1 H1 M2 H1 M1 H3 M2 H2 M1 H3 M1 H1 M1 H3 M1 H1 M2 H1 M1 H7
+  K=46 a=30 H=95: M3 H1 M1 H1 M2 H1 M1 H2 M2 H2 M1 H2 M1 H1 M1 H2 M1 H4 M3 H2 M1 H2 M1 H1 M1 H2 M1 H4 M1 H1 M2 H2 M1 H3 M1 H1 M1 H3 M1 H1 M2 H1 M1 H7
+  K=47 a=31 H=47: M3 H1 M1 H2 M1 H1 M1 H2 M1 H1 M1 H2 M1 H1 M1 H1 M2 H1 M1 H3 M2 H2 M1 H3 M1 H1 M1 H3 M1 H1 M2 H1 M1 H3 M2 H2 M1 H3 M1 H1 M1 H3 M1 H1 M2 H1 M1 H7
+  K=48 a=31 H=331: M5 H1 M1 H1 M1 H2 M2 H3 M2 H3 M1 H1 M1 H2 M1 H2 M1 H2 M1 H1 M1 H2 M1 H1 M2 H2 M1 H1 M1 H2 M1 H1 M1 H5 M1 H1 M2 H1 M1 H1 M1 H3 M1 H3 M1 H7
+  K=49 a=32 H=95: M3 H1 M1 H1 M2 H1 M1 H2 M2 H2 M1 H2 M1 H1 M1 H2 M1 H4 M1 H1 M2 H2 M1 H3 M1 H1 M1 H3 M1 H1 M2 H1 M1 H3 M2 H2 M1 H3 M1 H1 M1 H3 M1 H1 M2 H1 M1 H7
+  K=50 a=33 H=47: M3 H1 M1 H2 M1 H1 M1 H2 M1 H1 M1 H2 M1 H1 M1 H2 M1 H1 M1 H1 M2 H1 M1 H3 M2 H2 M1 H3 M1 H1 M1 H3 M1 H1 M2 H1 M1 H3 M2 H2 M1 H3 M1 H1 M1 H3 M1 H1 M2 H1 M1 H7
+  K=51 a=33 H=203: M3 H1 M1 H1 M2 H1 M1 H2 M2 H2 M1 H2 M1 H1 M1 H2 M1 H2 M2 H3 M1 H1 M1 H1 M1 H1 M1 H3 M1 H1 M1 H2 M2 H5 M3 H2 M1 H1 M1 H4 M1 H2 M2 H1 M1 H3 M1 H7
+  K=52 a=34 H=47: M3 H1 M1 H1 M2 H1 M1 H3 M2 H2 M1 H3 M1 H1 M1 H3 M1 H1 M2 H1 M1 H3 M2 H2 M1 H3 M1 H1 M1 H3 M1 H1 M2 H1 M1 H3 M2 H2 M1 H3 M1 H1 M1 H3 M1 H1 M2 H1 M1 H7
+  K=53 a=35 H=47: M1 H1 M3 H1 M1 H1 M2 H1 M1 H3 M2 H2 M1 H3 M1 H1 M1 H3 M1 H1 M2 H1 M1 H3 M2 H2 M1 H3 M1 H1 M1 H3 M1 H1 M2 H1 M1 H3 M2 H2 M1 H3 M1 H1 M1 H3 M1 H1 M2 H1 M1 H7
+  K=54 a=35 H=95: M3 H1 M1 H1 M2 H1 M1 H2 M2 H2 M1 H2 M1 H1 M1 H2 M1 H4 M3 H2 M1 H2 M1 H1 M1 H2 M1 H4 M3 H2 M1 H2 M1 H1 M1 H2 M1 H4 M3 H2 M1 H2 M1 H1 M1 H2 M1 H4 M1 H5
+  K=55 a=36 H=47: M3 H1 M1 H2 M1 H1 M1 H1 M2 H1 M1 H3 M2 H2 M1 H3 M1 H1 M1 H3 M1 H1 M2 H1 M1 H3 M2 H2 M1 H3 M1 H1 M1 H3 M1 H1 M2 H1 M1 H3 M2 H2 M1 H3 M1 H1 M1 H3 M1 H1 M2 H1 M1 H7
+  K=56 a=36 H=911: M5 H1 M1 H1 M1 H2 M2 H2 M2 H2 M1 H1 M1 H2 M1 H2 M1 H2 M1 H2 M1 H1 M1 H1 M1 H1 M1 H1 M1 H4 M2 H2 M1 H1 M1 H2 M1 H2 M1 H2 M1 H2 M1 H1 M1 H1 M1 H1 M1 H1 M1 H3 M2 H2 M1 H11
+  K=57 a=37 H=95: M3 H1 M1 H1 M2 H1 M1 H2 M2 H2 M1 H2 M1 H1 M1 H2 M1 H4 M3 H2 M1 H2 M1 H1 M1 H2 M1 H4 M3 H2 M1 H2 M1 H1 M1 H2 M1 H4 M1 H1 M2 H2 M1 H3 M1 H1 M1 H3 M1 H1 M2 H1 M1 H7
+  K=58 a=38 H=47: M3 H1 M1 H2 M1 H1 M1 H2 M1 H1 M1 H1 M2 H1 M1 H3 M2 H2 M1 H3 M1 H1 M1 H3 M1 H1 M2 H1 M1 H3 M2 H2 M1 H3 M1 H1 M1 H3 M1 H1 M2 H1 M1 H3 M2 H2 M1 H3 M1 H1 M1 H3 M1 H1 M2 H1 M1 H7
+  K=59 a=38 H=223: M5 H1 M1 H1 M1 H4 M3 H1 M1 H2 M1 H2 M1 H1 M1 H4 M1 H2 M2 H1 M1 H3 M1 H1 M2 H2 M1 H2 M1 H3 M2 H2 M1 H1 M1 H1 M1 H2 M1 H1 M1 H2 M1 H2 M1 H1 M1 H4 M1 H2 M2 H1 M1 H3 M1 H7
+  K=60 a=39 H=95: M3 H1 M1 H1 M2 H1 M1 H2 M2 H2 M1 H2 M1 H1 M1 H2 M1 H4 M3 H2 M1 H2 M1 H1 M1 H2 M1 H4 M1 H1 M2 H2 M1 H3 M1 H1 M1 H3 M1 H1 M2 H1 M1 H3 M2 H2 M1 H3 M1 H1 M1 H3 M1 H1 M2 H1 M1 H7
+  K=61 a=40 H=47: M3 H1 M1 H2 M1 H1 M1 H2 M1 H1 M1 H2 M1 H1 M1 H1 M2 H1 M1 H3 M2 H2 M1 H3 M1 H1 M1 H3 M1 H1 M2 H1 M1 H3 M2 H2 M1 H3 M1 H1 M1 H3 M1 H1 M2 H1 M1 H3 M2 H2 M1 H3 M1 H1 M1 H3 M1 H1 M2 H1 M1 H7
+  K=62 a=40 H=203: M3 H1 M1 H1 M2 H1 M1 H3 M2 H2 M1 H2 M2 H1 M1 H3 M1 H2 M2 H2 M1 H2 M1 H1 M1 H2 M1 H2 M2 H3 M1 H1 M1 H1 M1 H1 M1 H3 M1 H1 M1 H2 M2 H5 M3 H2 M1 H1 M1 H4 M1 H2 M2 H1 M1 H3 M1 H7
+  K=63 a=41 H=95: M3 H1 M1 H1 M2 H1 M1 H2 M2 H2 M1 H2 M1 H1 M1 H2 M1 H4 M1 H1 M2 H2 M1 H3 M1 H1 M1 H3 M1 H1 M2 H1 M1 H3 M2 H2 M1 H3 M1 H1 M1 H3 M1 H1 M2 H1 M1 H3 M2 H2 M1 H3 M1 H1 M1 H3 M1 H1 M2 H1 M1 H7
+  K=64 a=42 H=47: M3 H1 M1 H2 M1 H1 M1 H2 M1 H1 M1 H2 M1 H1 M1 H2 M1 H1 M1 H1 M2 H1 M1 H3 M2 H2 M1 H3 M1 H1 M1 H3 M1 H1 M2 H1 M1 H3 M2 H2 M1 H3 M1 H1 M1 H3 M1 H1 M2 H1 M1 H3 M2 H2 M1 H3 M1 H1 M1 H3 M1 H1 M2 H1 M1 H7
+  K=65 a=42 H=95: M3 H1 M1 H1 M2 H1 M1 H2 M2 H2 M1 H2 M1 H1 M1 H2 M1 H4 M3 H2 M1 H2 M1 H1 M1 H2 M1 H4 M3 H2 M1 H2 M1 H1 M1 H2 M1 H4 M3 H2 M1 H2 M1 H1 M1 H2 M1 H4 M3 H2 M1 H2 M1 H1 M1 H2 M1 H4 M1 H5
+  K=66 a=43 H=47: M3 H1 M1 H1 M2 H1 M1 H3 M2 H2 M1 H3 M1 H1 M1 H3 M1 H1 M2 H1 M1 H3 M2 H2 M1 H3 M1 H1 M1 H3 M1 H1 M2 H1 M1 H3 M2 H2 M1 H3 M1 H1 M1 H3 M1 H1 M2 H1 M1 H3 M2 H2 M1 H3 M1 H1 M1 H3 M1 H1 M2 H1 M1 H7
+  K=67 a=43 H=475: M5 H1 M1 H1 M1 H3 M2 H1 M1 H2 M1 H1 M1 H1 M1 H1 M1 H4 M1 H1 M2 H1 M1 H4 M1 H1 M1 H1 M1 H2 M1 H1 M1 H2 M1 H2 M1 H1 M1 H2 M2 H3 M1 H1 M1 H3 M2 H2 M1 H1 M1 H2 M1 H1 M1 H5 M1 H1 M2 H1 M1 H1 M1 H3 M1 H3 M1 H7
+  K=68 a=44 H=95: M3 H1 M1 H1 M2 H1 M1 H2 M2 H2 M1 H2 M1 H1 M1 H2 M1 H4 M3 H2 M1 H2 M1 H1 M1 H2 M1 H4 M3 H2 M1 H2 M1 H1 M1 H2 M1 H4 M3 H2 M1 H2 M1 H1 M1 H2 M1 H4 M1 H1 M2 H2 M1 H3 M1 H1 M1 H3 M1 H1 M2 H1 M1 H7
+  K=69 a=45 H=47: M3 H1 M1 H2 M1 H1 M1 H1 M2 H1 M1 H3 M2 H2 M1 H3 M1 H1 M1 H3 M1 H1 M2 H1 M1 H3 M2 H2 M1 H3 M1 H1 M1 H3 M1 H1 M2 H1 M1 H3 M2 H2 M1 H3 M1 H1 M1 H3 M1 H1 M2 H1 M1 H3 M2 H2 M1 H3 M1 H1 M1 H3 M1 H1 M2 H1 M1 H7
+  K=70 a=45 H=203: M5 H1 M1 H1 M1 H2 M2 H5 M3 H2 M1 H1 M1 H4 M1 H2 M2 H1 M1 H3 M1 H2 M2 H2 M1 H2 M1 H1 M1 H2 M1 H2 M2 H3 M1 H1 M1 H1 M1 H1 M1 H3 M1 H1 M1 H2 M2 H5 M3 H2 M1 H1 M1 H4 M1 H2 M2 H1 M1 H3 M1 H7
+  K=71 a=46 H=95: M3 H1 M1 H1 M2 H1 M1 H2 M2 H2 M1 H2 M1 H1 M1 H2 M1 H4 M3 H2 M1 H2 M1 H1 M1 H2 M1 H4 M3 H2 M1 H2 M1 H1 M1 H2 M1 H4 M1 H1 M2 H2 M1 H3 M1 H1 M1 H3 M1 H1 M2 H1 M1 H3 M2 H2 M1 H3 M1 H1 M1 H3 M1 H1 M2 H1 M1 H7
+  K=72 a=47 H=47: M3 H1 M1 H2 M1 H1 M1 H2 M1 H1 M1 H1 M2 H1 M1 H3 M2 H2 M1 H3 M1 H1 M1 H3 M1 H1 M2 H1 M1 H3 M2 H2 M1 H3 M1 H1 M1 H3 M1 H1 M2 H1 M1 H3 M2 H2 M1 H3 M1 H1 M1 H3 M1 H1 M2 H1 M1 H3 M2 H2 M1 H3 M1 H1 M1 H3 M1 H1 M2 H1 M1 H7
+  K=73 a=47 H=203: M3 H1 M1 H2 M3 H1 M1 H1 M1 H2 M2 H5 M3 H2 M1 H1 M1 H4 M1 H2 M2 H1 M1 H3 M1 H2 M2 H2 M1 H2 M1 H1 M1 H2 M1 H2 M2 H3 M1 H1 M1 H1 M1 H1 M1 H3 M1 H1 M1 H2 M2 H5 M3 H2 M1 H1 M1 H4 M1 H2 M2 H1 M1 H3 M1 H7
+  K=74 a=48 H=95: M3 H1 M1 H1 M2 H1 M1 H2 M2 H2 M1 H2 M1 H1 M1 H2 M1 H4 M3 H2 M1 H2 M1 H1 M1 H2 M1 H4 M1 H1 M2 H2 M1 H3 M1 H1 M1 H3 M1 H1 M2 H1 M1 H3 M2 H2 M1 H3 M1 H1 M1 H3 M1 H1 M2 H1 M1 H3 M2 H2 M1 H3 M1 H1 M1 H3 M1 H1 M2 H1 M1 H7
+  K=75 a=48 H=911: M5 H1 M1 H1 M1 H2 M2 H2 M2 H2 M1 H1 M1 H2 M1 H2 M1 H2 M1 H2 M1 H1 M1 H1 M1 H1 M1 H1 M1 H4 M2 H2 M1 H1 M1 H2 M1 H2 M1 H2 M1 H2 M1 H1 M1 H1 M1 H1 M1 H1 M1 H4 M2 H2 M1 H1 M1 H2 M1 H2 M1 H2 M1 H2 M1 H1 M1 H1 M1 H1 M1 H1 M1 H3 M2 H2 M1 H11
+  K=76 a=49 H=95: M3 H1 M1 H1 M2 H1 M1 H2 M2 H2 M1 H2 M1 H1 M1 H2 M1 H4 M3 H2 M1 H2 M1 H1 M1 H2 M1 H4 M3 H2 M1 H2 M1 H1 M1 H2 M1 H4 M3 H2 M1 H2 M1 H1 M1 H2 M1 H4 M3 H2 M1 H2 M1 H1 M1 H2 M1 H4 M3 H2 M1 H2 M1 H1 M1 H2 M1 H4 M1 H5
+  K=77 a=50 H=95: M3 H1 M1 H1 M2 H1 M1 H2 M2 H2 M1 H2 M1 H1 M1 H2 M1 H4 M1 H1 M2 H2 M1 H3 M1 H1 M1 H3 M1 H1 M2 H1 M1 H3 M2 H2 M1 H3 M1 H1 M1 H3 M1 H1 M2 H1 M1 H3 M2 H2 M1 H3 M1 H1 M1 H3 M1 H1 M2 H1 M1 H3 M2 H2 M1 H3 M1 H1 M1 H3 M1 H1 M2 H1 M1 H7
+  K=78 a=50 H=331: M5 H1 M1 H1 M1 H2 M2 H3 M2 H3 M1 H1 M1 H2 M1 H2 M1 H2 M1 H1 M1 H2 M1 H2 M2 H3 M1 H1 M1 H1 M1 H1 M1 H3 M1 H1 M1 H2 M2 H3 M2 H3 M1 H1 M1 H2 M1 H2 M1 H2 M1 H1 M1 H2 M1 H1 M2 H2 M1 H1 M1 H2 M1 H1 M1 H5 M1 H1 M2 H1 M1 H1 M1 H3 M1 H3 M1 H7
+  K=79 a=51 H=95: M3 H1 M1 H1 M2 H1 M1 H2 M2 H2 M1 H2 M1 H1 M1 H2 M1 H4 M3 H2 M1 H2 M1 H1 M1 H2 M1 H4 M3 H2 M1 H2 M1 H1 M1 H2 M1 H4 M3 H2 M1 H2 M1 H1 M1 H2 M1 H4 M3 H2 M1 H2 M1 H1 M1 H2 M1 H4 M1 H1 M2 H2 M1 H3 M1 H1 M1 H3 M1 H1 M2 H1 M1 H7
+  K=80 a=52 H=47: M3 H1 M1 H1 M2 H1 M1 H3 M2 H2 M1 H3 M1 H1 M1 H3 M1 H1 M2 H1 M1 H3 M2 H2 M1 H3 M1 H1 M1 H3 M1 H1 M2 H1 M1 H3 M2 H2 M1 H3 M1 H1 M1 H3 M1 H1 M2 H1 M1 H3 M2 H2 M1 H3 M1 H1 M1 H3 M1 H1 M2 H1 M1 H3 M2 H2 M1 H3 M1 H1 M1 H3 M1 H1 M2 H1 M1 H7
+  independently verified: 79/79 (a = a0(K) for K >= 10 and K = 2,3,4; a = K for K = 5..9)
+
+### 3. hub cycles through the climb points -(3^j+1)/2; eta-records (lower best approximations of log2 3)
+  hub -1: successive minima of eta over cycles (p halvings, q = mult.): (1,1,1.500000)
+  hub -5: successive minima of eta over cycles (p halvings, q = mult.): (3,2,1.125000) (68,43,1.112178)
+  hub -14: successive minima of eta over cycles (p halvings, q = mult.): (11,7,1.067871) (57,36,1.041491)
+  hub -41: successive minima of eta over cycles (p halvings, q = mult.): (11,7,1.067871) (19,12,1.013643)
+  hub -122: successive minima of eta over cycles (p halvings, q = mult.): (19,12,1.013643)
+  hub -365: successive minima of eta over cycles (p halvings, q = mult.): (19,12,1.013643) (84,53,1.002090)
+  hub -1094: successive minima of eta over cycles (p halvings, q = mult.): (19,12,1.013643) (84,53,1.002090)
+  hub -3281: successive minima of eta over cycles (p halvings, q = mult.): (57,36,1.041491) (84,53,1.002090) (569,359,1.001066)
+  hub -9842: successive minima of eta over cycles (p halvings, q = mult.): (57,36,1.041491) (84,53,1.002090) (569,359,1.001066)
+  eta-records n <= 60000 (n/a with a = ceil(n log3 2); lower best approximations of log2 3): 1/1 3/2 11/7 19/12 84/53 569/359 1054/665 25781/16266 50508/31867
+
+### 4. record base loops B_n (K = n-1) and record cycles C_n; the splicing family (Theorem 2.2), K <= 1100
+  RECON_CHECK h=-1 P=10 q=7 H=43 end=-1 OK
+  RECON_CHECK h=-1 P=18 q=12 H=547 end=-1 OK
+  RECON_CHECK h=-1 P=83 q=53 H=23947 end=-1 OK
+  RECON_CHECK h=-1 P=568 q=359 H=458899 end=-1 OK
+  RECON_CHECK h=-1 P=1 q=1 H=1 end=-1 OK
+  RECON_CHECK h=-5 P=3 q=2 H=7 end=-5 OK
+  RECON_CHECK h=-14 P=11 q=7 H=203 end=-14 OK
+  RECON_CHECK h=-41 P=19 q=12 H=9331 end=-41 OK
+  RECON_CHECK h=-365 P=84 q=53 H=272851 end=-365 OK
+  RECON_CHECK h=-1094 P=569 q=359 H=1991567 end=-1094 OK
+  RECON h=-1 P=10 q=7 word: M3 H1 M1 H1 M2 H1 M1 H7
+  RECON h=-1 P=18 q=12 word: M7 H1 M1 H3 M1 H1 M1 H3 M1 H3 M1 H7
+  RECON h=-1 P=83 q=53 word: M9 H1 M1 H1 M1 H1 M1 H2 M1 H2 M1 H3 M1 H1 M2 H1 M1 H1 M1 H3 M1 H2 M1 H2 M1 H1 M1 H1 M1 H2 M1 H2 M2 H3 M2 H2 M1 H1 M1 H5 M1 H1 M1 H1 M2 H1 M1 H3 M1 H1 M1 H1 M1 H3 M1 H1 M1 H2 M1 H2 M1 H1 M1 H1 M1 H1 M1 H3 M1 H2 M2 
+  RECON h=-1 P=568 q=359 word: M9 H1 M3 H1 M1 H1 M2 H2 M1 H1 M1 H4 M1 H1 M1 H3 M1 H1 M2 H2 M1 H3 M3 H5 M1 H1 M1 H1 M1 H1 M1 H3 M2 H3 M1 H1 M2 H3 M2 H1 M1 H2 M1 H2 M1 H2 M1 H1 M1 H1 M1 H3 M1 H1 M1 H1 M1 H2 M1 H1 M1 H2 M1 H1 M1 H5 M1 H1 M2 H1 M
+  RECON h=-1 P=1 q=1 word: M1 H1
+  RECON h=-5 P=3 q=2 word: M1 H1 M1 H2
+  RECON h=-14 P=11 q=7 word: M2 H1 M1 H1 M1 H2 M2 H5 M1 H2
+  RECON h=-41 P=19 q=12 word: M3 H1 M1 H1 M2 H2 M2 H3 M2 H1 M1 H3 M1 H8
+  RECON h=-365 P=84 q=53 word: M1 H1 M3 H1 M2 H1 M1 H2 M1 H1 M2 H3 M2 H2 M1 H2 M1 H1 M1 H2 M1 H3 M1 H1 M2 H1 M1 H2 M1 H1 M1 H4 M1 H2 M2 H3 M2 H3 M1 H1 M2 H1 M1 H3 M1 H2 M1 H2 M2 H1 M1 H2 M1 H3 M1 H1 M1 H1 M1 H3 M1 H3 M1 H1 M2 H1 M1 H3 M2 H2 M
+  RECON h=-1094 P=569 q=359 word: M2 H1 M1 H1 M1 H1 M1 H2 M1 H2 M1 H2 M2 H1 M1 H1 M1 H2 M1 H2 M1 H1 M1 H1 M3 H1 M1 H2 M1 H2 M1 H2 M1 H1 M1 H1 M1 H3 M2 H2 M1 H2 M1 H1 M2 H5 M1 H1 M2 H2 M1 H2 M2 H1 M1 H2 M1 H1 M1 H4 M1 H1 M1 H3 M2 H1 M1 H2 M2 H
+records n <= 1101 (lower best approximations n/a < log_2 3): [1, 3, 11, 19, 84, 569, 1054]
+base loops available for n = [11, 19, 84, 569]; cycles for p = [1, 3, 11, 19, 84, 569] (hubs [-1, -5, -14, -41, -365, -1094])
+verified a0-loops (independent exact check) for K in: 2..4, 10..1052  (1046 values)
+not produced by the splicing family: 5..9, 1053..1100
+   K=5: parts [3] base B_3
+   K=6: parts [3, 1] base B_3
+   K=7: parts [3, 1, 1] base B_3
+   K=8: parts [3, 3] base B_3
+   K=9: parts [3, 3, 1] base B_3
+   K=1053: no base
+   K=1054: no base
+   K=1055: no base
+   K=1056: no base
+   K=1057: no base
+   K=1058: no base
+   K=1059: no base
+
+### 5. the escape near -1: exact prices, exit lemma on integers, landing classes, canonical chains
+(A) exit prices at the (m+1)-th halving, m = 2..40  [A* exact; P(m) = 3^A*/2^(m+1)]
+   m=  2 a0(m)=  2 A*=  2 =a0 P=  1.12500  3^eta(m+1)= 1.12500  lnP/(m+1)=0.0393  endpoints v at A*: [-1]
+   m=  3 a0(m)=  3 A*=  3 =a0 P=  1.68750  3^eta(m+1)= 1.68750  lnP/(m+1)=0.1308  endpoints v at A*: [-1]
+   m=  4 a0(m)=  4 A*=  4 =a0 P=  2.53125  3^eta(m+1)= 2.53125  lnP/(m+1)=0.1857  endpoints v at A*: [-1]
+   m=  5 a0(m)=  4 A*=  5 >a0 P=  3.79688  3^eta(m+1)= 1.26562  lnP/(m+1)=0.2224  endpoints v at A*: [-1]
+   m=  6 a0(m)=  5 A*=  6 >a0 P=  5.69531  3^eta(m+1)= 1.89844  lnP/(m+1)=0.2485  endpoints v at A*: [-5, -1]
+   m=  7 a0(m)=  6 A*=  7 >a0 P=  8.54297  3^eta(m+1)= 2.84766  lnP/(m+1)=0.2681  endpoints v at A*: [-7, -5, -1]
+   m=  8 a0(m)=  6 A*=  8 >a0 P= 12.81445  3^eta(m+1)= 1.42383  lnP/(m+1)=0.2834  endpoints v at A*: [-11, -7, -5, -1]
+   m=  9 a0(m)=  7 A*=  8 >a0 P=  6.40723  3^eta(m+1)= 2.13574  lnP/(m+1)=0.1857  endpoints v at A*: [-5]
+   m= 10 a0(m)=  7 A*=  7 =a0 P=  1.06787  3^eta(m+1)= 1.06787  lnP/(m+1)=0.0060  endpoints v at A*: [-1]
+   m= 11 a0(m)=  8 A*=  8 =a0 P=  1.60181  3^eta(m+1)= 1.60181  lnP/(m+1)=0.0393  endpoints v at A*: [-1]
+   m= 12 a0(m)=  9 A*=  9 =a0 P=  2.40271  3^eta(m+1)= 2.40271  lnP/(m+1)=0.0674  endpoints v at A*: [-1]
+   m= 13 a0(m)=  9 A*=  9 =a0 P=  1.20135  3^eta(m+1)= 1.20135  lnP/(m+1)=0.0131  endpoints v at A*: [-1]
+   m= 14 a0(m)= 10 A*= 10 =a0 P=  1.80203  3^eta(m+1)= 1.80203  lnP/(m+1)=0.0393  endpoints v at A*: [-1]
+   m= 15 a0(m)= 11 A*= 11 =a0 P=  2.70305  3^eta(m+1)= 2.70305  lnP/(m+1)=0.0621  endpoints v at A*: [-1]
+   m= 16 a0(m)= 11 A*= 11 =a0 P=  1.35152  3^eta(m+1)= 1.35152  lnP/(m+1)=0.0177  endpoints v at A*: [-1]
+   m= 17 a0(m)= 12 A*= 12 =a0 P=  2.02729  3^eta(m+1)= 2.02729  lnP/(m+1)=0.0393  endpoints v at A*: [-1]
+   m= 18 a0(m)= 12 A*= 12 =a0 P=  1.01364  3^eta(m+1)= 1.01364  lnP/(m+1)=0.0007  endpoints v at A*: [-1]
+   m= 19 a0(m)= 13 A*= 13 =a0 P=  1.52046  3^eta(m+1)= 1.52046  lnP/(m+1)=0.0210  endpoints v at A*: [-1]
+   m= 20 a0(m)= 14 A*= 14 =a0 P=  2.28070  3^eta(m+1)= 2.28070  lnP/(m+1)=0.0393  endpoints v at A*: [-1]
+   m= 21 a0(m)= 14 A*= 14 =a0 P=  1.14035  3^eta(m+1)= 1.14035  lnP/(m+1)=0.0060  endpoints v at A*: [-1]
+   m= 22 a0(m)= 15 A*= 15 =a0 P=  1.71052  3^eta(m+1)= 1.71052  lnP/(m+1)=0.0233  endpoints v at A*: [-1]
+   m= 23 a0(m)= 16 A*= 16 =a0 P=  2.56578  3^eta(m+1)= 2.56578  lnP/(m+1)=0.0393  endpoints v at A*: [-1]
+   m= 24 a0(m)= 16 A*= 16 =a0 P=  1.28289  3^eta(m+1)= 1.28289  lnP/(m+1)=0.0100  endpoints v at A*: [-1]
+   m= 25 a0(m)= 17 A*= 17 =a0 P=  1.92434  3^eta(m+1)= 1.92434  lnP/(m+1)=0.0252  endpoints v at A*: [-1]
+   m= 26 a0(m)= 18 A*= 18 =a0 P=  2.88651  3^eta(m+1)= 2.88651  lnP/(m+1)=0.0393  endpoints v at A*: [-1]
+   m= 27 a0(m)= 18 A*= 18 =a0 P=  1.44325  3^eta(m+1)= 1.44325  lnP/(m+1)=0.0131  endpoints v at A*: [-1]
+   m= 28 a0(m)= 19 A*= 19 =a0 P=  2.16488  3^eta(m+1)= 2.16488  lnP/(m+1)=0.0266  endpoints v at A*: [-1]
+   m= 29 a0(m)= 19 A*= 19 =a0 P=  1.08244  3^eta(m+1)= 1.08244  lnP/(m+1)=0.0026  endpoints v at A*: [-1]
+   m= 30 a0(m)= 20 A*= 20 =a0 P=  1.62366  3^eta(m+1)= 1.62366  lnP/(m+1)=0.0156  endpoints v at A*: [-1]
+   m= 31 a0(m)= 21 A*= 21 =a0 P=  2.43549  3^eta(m+1)= 2.43549  lnP/(m+1)=0.0278  endpoints v at A*: [-1]
+   m= 32 a0(m)= 21 A*= 21 =a0 P=  1.21775  3^eta(m+1)= 1.21775  lnP/(m+1)=0.0060  endpoints v at A*: [-1]
+   m= 33 a0(m)= 22 A*= 22 =a0 P=  1.82662  3^eta(m+1)= 1.82662  lnP/(m+1)=0.0177  endpoints v at A*: [-1]
+   m= 34 a0(m)= 23 A*= 23 =a0 P=  2.73993  3^eta(m+1)= 2.73993  lnP/(m+1)=0.0288  endpoints v at A*: [-1]
+   m= 35 a0(m)= 23 A*= 23 =a0 P=  1.36996  3^eta(m+1)= 1.36996  lnP/(m+1)=0.0087  endpoints v at A*: [-1]
+   m= 36 a0(m)= 24 A*= 24 =a0 P=  2.05495  3^eta(m+1)= 2.05495  lnP/(m+1)=0.0195  endpoints v at A*: [-1]
+   m= 37 a0(m)= 24 A*= 24 =a0 P=  1.02747  3^eta(m+1)= 1.02747  lnP/(m+1)=0.0007  endpoints v at A*: [-1]
+   m= 38 a0(m)= 25 A*= 25 =a0 P=  1.54121  3^eta(m+1)= 1.54121  lnP/(m+1)=0.0111  endpoints v at A*: [-1]
+   m= 39 a0(m)= 26 A*= 26 =a0 P=  2.31181  3^eta(m+1)= 2.31181  lnP/(m+1)=0.0210  endpoints v at A*: [-1]
+   m= 40 a0(m)= 26 A*= 26 =a0 P=  1.15591  3^eta(m+1)= 1.15591  lnP/(m+1)=0.0035  endpoints v at A*: [-1]
+   seesaw argument list: 2:2 3:3 4:4 5:5 6:6 7:7 8:8 9:8 10:7 11:8 12:9 13:9 14:10 15:11 16:11 17:12 18:12 19:13 20:14 21:14 22:15 23:16 24:16 25:17 26:18 27:18 28:19 29:19 30:20 31:21 32:21 33:22 34:23 35:23 36:24 37:24 38:25 39:26 40:26
+(B) exit lemma on random integers n = 2^m u - 1 (u odd, 2 <= m <= 14):
+   all states with <= m halvings exceed n: True; least value at the (m+1)-th halving exceeds n: True; least value = (3^A* u - |v_min|)/2 over the A*-endpoints, = (3^A* u - 1)/2 when the only one is -1: True
+(C) landing classes y = (3^A u - 1)/2:
+   A=7: u odd mod 2^15 -> y mod 2^14: 16384 classes (bijection: True)
+   A=12: u odd mod 2^15 -> y mod 2^14: 16384 classes (bijection: True)
+   A=53: u odd mod 2^15 -> y mod 2^14: 16384 classes (bijection: True)
+   landing precision vs the 2-adic-log formula on 118499 pairs (odd u < 3000, A < 80): mismatches 0 (skipped 1 beyond the 16-bit resolution of lambda)
+(D) canonical exit chains (repeated landings on the -1 thread with precision >= 2):
+   random n = 7 mod 8 below 2^40 (200000): length histogram {1: 149897, 2: 37596, 3: 9478, 4: 2296, 5: 534, 6: 149, 7: 37, 8: 11, 9: 2}
+   P(length >= k): 1:1.0000, 2:0.2505, 3:0.0625, 4:0.0151, 5:0.0037, 6:0.0010, 7:0.0003, 8:0.0001
+   longest 9 (n=629393061311, precisions [6, 5, 2, 3, 3, 3, 3, 5, 3, 1]); largest cumulative price 2663.21 (n=589407767711, precisions [5, 4, 5, 8, 6, 1])
+   all n = 7 mod 8 below 2^22: {1: 393217, 2: 98304, 3: 24574, 4: 6117, 5: 1558, 6: 393, 7: 88, 8: 28, 9: 9}; longest 9 at n=1096359 [3, 2, 2, 3, 2, 2, 3, 3, 2, 0]; max cumulative price 4494.17 at n=3563631 ([4, 2, 5, 7, 7, 6, 1]), i.e. n^0.557
+  cross-check with the dimension lane's dim_alpha (f_(m+1)(2^m - 1), independent code): 39 values, mismatches 0
+
+### 6. level-24 forward certificates (mirror of the level-12 see-saw): classes mod 2^24
+level r=24: classes 16777216, exceptional 369
+worst certified factor: 0.949219 at class 4349647 mod 2^24 (= 4349647 as a signed residue)
+certified classes with factor >= c:  0.25:66583  0.50:10713  0.75:2687  0.90:19  0.95:0  0.99:0  1.00:0
+worst certified factor by distance d to the exceptional set (d = shared low bits):
+  d= 0:   8388608 classes, worst factor 0.500000
+  d= 1:   4194304 classes, worst factor 0.750000
+  d= 3:   1048576 classes, worst factor 0.562500
+  d= 4:   1048576 classes, worst factor 0.760232
+  d= 5:    786432 classes, worst factor 0.949219
+  d= 6:    262144 classes, worst factor 0.632813
+  d= 7:    327680 classes, worst factor 0.855262
+  d= 8:    196608 classes, worst factor 0.901016
+  d= 9:    114688 classes, worst factor 0.711914
+  d=10:    131072 classes, worst factor 0.901016
+  d=11:     65536 classes, worst factor 0.901016
+  d=12:     79872 classes, worst factor 0.800903
+  d=13:     51200 classes, worst factor 0.901016
+  d=14:     23040 classes, worst factor 0.901016
+  d=15:     27904 classes, worst factor 0.901016
+  d=16:     10880 classes, worst factor 0.855262
+  d=17:      8512 classes, worst factor 0.855262
+  d=18:      5280 classes, worst factor 0.855262
+  d=19:      2320 classes, worst factor 0.855262
+  d=20:      1888 classes, worst factor 0.760232
+  d=21:       952 classes, worst factor 0.855262
+  d=22:       416 classes, worst factor 0.855262
+  d=23:       359 classes, worst factor 0.855262
+-1 thread exit at precision m: price P(m)=3^A*/2^(m+1); landing y is uniform mod 2^r;
+  fail = #classes y mod 2^24 with best factor >= 1/P(m) (incl. exceptional)
+  m=  2 A*=  2 P=1.125000 1/P=0.888889 fail=      388 (2.313e-05)
+  m=  3 A*=  3 P=1.687500 1/P=0.592593 fail=     3552 (2.117e-04)
+  m=  4 A*=  4 P=2.531250 1/P=0.395062 fail=    12041 (7.177e-04)
+  m=  5 A*=  5 P=3.796875 1/P=0.263374 fail=    52236 (3.114e-03)
+  m=  6 A*=  6 P=5.695313 1/P=0.175583 fail=   123936 (7.387e-03)
+  m=  7 A*=  7 P=8.542969 1/P=0.117055 fail=   181816 (1.084e-02)
+  m=  8 A*=  8 P=12.814453 1/P=0.078037 fail=   491700 (2.931e-02)
+  m=  9 A*=  8 P=6.407227 1/P=0.156074 fail=   144028 (8.585e-03)
+  m= 10 A*=  7 P=1.067871 1/P=0.936443 fail=      370 (2.205e-05)
+  m= 11 A*=  8 P=1.601807 1/P=0.624295 fail=     3496 (2.084e-04)
+  m= 12 A*=  9 P=2.402710 1/P=0.416197 fail=    11949 (7.122e-04)
+  m= 13 A*=  9 P=1.201355 1/P=0.832393 fail=     1972 (1.175e-04)
+  m= 14 A*= 10 P=1.802032 1/P=0.554929 fail=     8510 (5.072e-04)
+  m= 15 A*= 11 P=2.703049 1/P=0.369953 fail=    16370 (9.757e-04)
+  m= 16 A*= 11 P=1.351524 1/P=0.739905 fail=     3062 (1.825e-04)
+  m= 17 A*= 12 P=2.027287 1/P=0.493270 fail=    11185 (6.667e-04)
+  m= 18 A*= 12 P=1.013643 1/P=0.986540 fail=      369 (2.199e-05)
+  m= 19 A*= 13 P=1.520465 1/P=0.657694 fail=     3494 (2.083e-04)
+  m= 20 A*= 14 P=2.280697 1/P=0.438462 fail=    11945 (7.120e-04)
+  m= 21 A*= 14 P=1.140349 1/P=0.876925 fail=      388 (2.313e-05)
+  m= 22 A*= 15 P=1.710523 1/P=0.584617 fail=     3552 (2.117e-04)
+  m= 23 A*= 16 P=2.565785 1/P=0.389744 fail=    12041 (7.177e-04)
+  m= 24 A*= 16 P=1.282892 1/P=0.779489 fail=     2000 (1.192e-04)
+  m= 25 A*= 17 P=1.924338 1/P=0.519659 fail=     8554 (5.099e-04)
+  m= 26 A*= 18 P=2.886508 1/P=0.346439 fail=    16385 (9.766e-04)
+  m= 27 A*= 18 P=1.443254 1/P=0.692879 fail=     3068 (1.829e-04)
+  m= 28 A*= 19 P=2.164881 1/P=0.461919 fail=    11191 (6.670e-04)
+  m= 29 A*= 19 P=1.082440 1/P=0.923838 fail=      370 (2.205e-05)
+  m= 30 A*= 20 P=1.623661 1/P=0.615892 fail=     3496 (2.084e-04)
+  m= 31 A*= 21 P=2.435491 1/P=0.410595 fail=    11949 (7.122e-04)
+  m= 32 A*= 21 P=1.217745 1/P=0.821190 fail=     1972 (1.175e-04)
+  m= 33 A*= 22 P=1.826618 1/P=0.547460 fail=     8510 (5.072e-04)
+  m= 34 A*= 23 P=2.739927 1/P=0.364973 fail=    16370 (9.757e-04)
+  m= 35 A*= 23 P=1.369964 1/P=0.729946 fail=     3062 (1.825e-04)
+  m= 36 A*= 24 P=2.054945 1/P=0.486631 fail=    11185 (6.667e-04)
+  m= 37 A*= 24 P=1.027473 1/P=0.973262 fail=      369 (2.199e-05)
+  m= 38 A*= 25 P=1.541209 1/P=0.648841 fail=     3494 (2.083e-04)
+  m= 39 A*= 26 P=2.311814 1/P=0.432561 fail=    11945 (7.120e-04)
+  m= 40 A*= 26 P=1.155907 1/P=0.865122 fail=      388 (2.313e-05)
+
+### 7. shortest descents from the -1 thread (mirror of half_chain.c): all n = 7 mod 8, n <= 4294967296
+n = 7 mod 8, n <= 4294967296: count=536870912, no descent within D<=120 halvings or cap 1000: 0
+max shortest D=43 (n=780669439); max excursion value/n on the shortest path found = 985.266 (n=240767)
+paths with a post-exit state = 7 mod 8 (hostile re-landing, precision >= 3): 11803353 (0.0220); = 3 mod 4 (precision >= 2): 26261554 (0.0489)
+number of post-exit precision>=3 re-landings per path: 0:525067559 1:7472974 2:3935749 3:230770 4:116944 5:37289 6:5135 7:2440 8:2052
+D histogram: 5:134217728 7:100663296 8:134217728 10:46137344 12:33554432 13:46137344 15:15728640 16:17629184 18:3768320 20:1867776 21:2037760 23:402432 24:390912 26:54848 27:51360 29:5648 31:2616 32:2661 34:390 35:390 37:48 39:25 40:25 42:2 43:3
+D - (m+1) by precision m (rows m, entries excess:count):
+  m= 3 (268435456): 1:134217728 3:67108864 4:50331648 6:8388608 8:3145728 9:3145728 11:917504 12:983040 14:98304 16:45056 17:40960 19:5632 20:5120 22:704 23:704 25:64 27:30 28:27 30:4 31:2 33:1
+  m= 4 (134217728): 2:33554432 3:67108864 5:12582912 7:8388608 8:8912896 10:1703936 11:1507328 13:212992 15:102400 16:108544 18:16896 19:14592 21:1600 22:1344 24:184 26:88 27:90 29:10 30:10 32:1 34:1
+  m= 5 (67108864): 2:16777216 4:16777216 6:10485760 7:14680064 9:3670016 10:3670016 12:507904 14:229376 15:233472 17:35328 18:34048 20:4032 21:3680 23:360 25:164 26:162 28:29 29:14 31:5 33:1 34:1
+  m= 6 (33554432): 3:8388608 5:7340032 6:9437184 8:3407872 9:3670016 11:622592 13:286720 14:296960 16:46592 17:44800 19:6144 20:5760 22:560 24:254 25:257 27:36 28:37 30:2 32:2 33:2 35:1 36:1
+  m= 7 (16777216): 4:3145728 5:6291456 7:2752512 8:3014656 10:688128 12:348160 13:372736 15:73728 16:70400 18:9152 19:8448 21:1008 23:474 24:475 26:66 27:75 29:5 31:5 32:4
+  m= 8 ( 8388608): 4:2097152 6:1835008 7:2555904 9:819200 11:409600 12:454656 14:95232 15:93440 17:13184 18:12480 20:1312 22:608 23:620 25:84 26:105 28:13 30:3 31:6 34:1
+  m= 9 ( 4194304): 3:524288 5:786432 6:1441792 8:557056 10:307200 11:366592 13:90112 14:90880 16:13888 17:13056 19:1456 21:658 22:670 24:96 25:95 27:14 29:9 30:9 33:1
+  m=10 ( 2097152): 1:1048576 2:524288 4:262144 5:196608 7:32768 9:12288 10:14336 12:3072 13:2816 15:128 16:96 18:16 20:6 21:8 23:2
+  m=11 ( 1048576): 1:524288 3:131072 4:262144 6:65536 8:28672 9:26624 11:4608 12:4352 14:576 15:640 17:32 19:14 20:13 22:2 23:2 28:1
+  m=12 (  524288): 2:131072 3:196608 5:81920 7:45056 8:51200 10:8704 11:7424 13:1088 14:992 16:104 18:52 19:54 21:9 22:5
+  m=13 (  262144): 1:131072 2:65536 4:32768 6:12288 7:14336 9:3072 10:2816 12:128 13:96 15:16 17:6 18:7 20:1 21:2
+  m=14 (  131072): 1:65536 3:16384 5:16384 6:20480 8:5632 9:5120 11:704 12:704 14:64 16:30 17:27 19:4 20:2 22:1
+  m=15 (   65536): 2:16384 4:16384 5:18432 7:6144 8:5888 10:1088 11:960 13:120 15:58 16:60 18:11 19:6 23:1
+  m=16 (   32768): 1:16384 3:4096 4:8192 6:1536 7:1792 9:384 10:352 12:16 14:6 15:7 18:3
+  m=17 (   16384): 2:4096 3:6144 5:2560 6:2560 8:448 9:448 11:64 13:30 14:27 16:5 17:1 22:1
+  m=18 (    8192): 2:2048 4:2048 5:2560 7:704 8:640 10:88 12:42 13:45 15:7 16:7 20:2 23:1
+  m=19 (    4096): 1:2048 3:512 4:1024 6:256 7:224 9:16 11:6 12:7 15:3
+  m=20 (    2048): 2:512 3:768 5:320 6:352 8:40 10:22 11:25 13:6 14:1 16:1 19:1
+  m=21 (    1024): 1:512 2:256 4:128 5:96 7:16 9:6 10:7 13:2 15:1
+  m=22 (     512): 1:256 3:64 4:128 6:32 8:14 9:13 11:3 12:2
+  m=23 (     256): 2:64 3:96 5:40 7:22 8:25 10:6 11:2 13:1
+  m=24 (     128): 1:64 2:32 4:16 6:6 7:7 9:1 10:2
+  m=25 (      64): 1:32 3:8 5:8 6:10 8:2 9:3 11:1
+  m=26 (      32): 2:8 4:8 5:9 7:3 8:4
+  m=27 (      16): 1:8 3:2 4:4 7:1 11:1
+  m=28 (       8): 2:2 3:3 5:1 6:1 8:1
+  m=29 (       4): 2:1 4:2 5:1
+  m=30 (       2): 1:1 4:1
+  m=31 (       1): 5:1
+  m=32 (       1): 2:1
+
+### 8. backward prover, forward/backward numerator duality, generation-1 clocks
+                         1/2 = 0.500000: hostile (0)
+                           1 = 1.000000: hostile (0)
+                       43/32 = 1.343750: hostile (1)
+                       59/64 = 0.921875: hostile (4)
+                     145/128 = 1.132812: hostile (3)
+                     209/256 = 0.816406: hostile (6)
+                     371/256 = 1.449219: hostile (5)
+                     499/512 = 0.974609: hostile (9)
+                         1/4 = 0.250000: descends (path [0])
+                         5/4 = 1.250000: descends (path [1])
+                         7/8 = 0.875000: descends (path [1])
+(1) forward hostile census: 343 points (j<=25) + 39 new with j=26,27 = 382; forward candidates with 3/2 < |x| <= 1.6 (j <= 27): 72
+(2) backward census (Bad_41, value in [0.3,2]): 121 points with e <= 45 (98 with e <= 40); 4 above 3/2
+(3) backward census statuses: {'hostile': 117, 'above 3/2, DESCENDS': 4}
+                       793585/524288 = 1.513643: above 3/2, DESCENDS (k1=33, 2^84<3^53)
+         1675672562339/1099511627776 = 1.524015: above 3/2, DESCENDS (k1=45, 2^103<3^65)
+           419868489953/274877906944 = 1.527473: above 3/2, DESCENDS (k1=101, 2^336<3^212)
+         1690578594467/1099511627776 = 1.537572: above 3/2, DESCENDS (k1=57, 2^168<3^106)
+(4) numerators shared between the forward census (hostile, j<=27) or forward candidates above 3/2, and the backward census:
+      N=1: forward -1 (|x|=1.00000, fwd hostile); backward 1/2 (= 0.50000): hostile
+      N=1: forward -1 (|x|=1.00000, fwd hostile); backward 1 (= 1.00000): hostile
+      N=196249027: forward -196249027/129140163 (|x|=1.51966, fwd candidate >3/2); backward 196249027/134217728 (= 1.46217): hostile; gen-1 N=3^17+2^26, rho=3^17/2^27=0.96217, straddle identity True
+      N=793585: forward -793585/531441 (|x|=1.49327, fwd hostile); backward 793585/524288 (= 1.51364): above 3/2, DESCENDS (k1=33, 2^84<3^53); gen-1 N=3^12+2^18, rho=3^12/2^19=1.01364, straddle identity True
+      N=419868489953: forward -419868489953/282429536481 (|x|=1.48663, fwd hostile); backward 419868489953/274877906944 (= 1.52747): above 3/2, DESCENDS (k1=101, 2^336<3^212); gen-1 N=3^24+2^37, rho=3^24/2^38=1.02747, straddle identity True
+(5) generation-1 backward points 1/2 + 3^j/2^e with 1 < 3^j/2^e < 1.06, e <= 200, search k1 <= 2500 (forward partner -1 - 2^(e-1)/3^j is hostile by Theorem F, alpha(e-1) = a0(e-1)):
+      (e,j)=(19,12) rho=1.013643 y=1.513643: DESCENDS: k1=33, then greedy, 2^84 < 3^53 (R=0.997914), replay True
+      (e,j)=(38,24) rho=1.027473 y=1.527473: DESCENDS: k1=101, then greedy, 2^336 < 3^212 (R=0.991682), replay True
+      (e,j)=(57,36) rho=1.041491 y=1.541491: DESCENDS: k1=95, then greedy, 2^271 < 3^171 (R=0.980380), replay True
+      (e,j)=(76,48) rho=1.055700 y=1.555700: DESCENDS: k1=155, then greedy, 2^420 < 3^265 (R=0.989614), replay True
+      (e,j)=(84,53) rho=1.002090 y=1.502090: DESCENDS: k1=179, then greedy, 2^569 < 3^359 (R=0.998935), replay True
+      (e,j)=(103,65) rho=1.015762 y=1.515762: DESCENDS: k1=1545, then greedy, 2^4300 < 3^2713 (R=0.997740), replay True
+      (e,j)=(122,77) rho=1.029620 y=1.529620: DESCENDS: k1=165, then greedy, 2^420 < 3^265 (R=0.989614), replay True
+      (e,j)=(141,89) rho=1.043668 y=1.543668: DESCENDS: k1=195, then greedy, 2^569 < 3^359 (R=0.998935), replay True
+      (e,j)=(160,101) rho=1.057907 y=1.557907: DESCENDS: k1=165, then greedy, 2^504 < 3^318 (R=0.987549), replay True
+      (e,j)=(168,106) rho=1.004185 y=1.504185: DESCENDS: k1=795, then greedy, 2^2192 < 3^1383 (R=0.997827), replay True
+      (e,j)=(187,118) rho=1.017885 y=1.517885: DESCENDS: k1=327, then greedy, 2^905 < 3^571 (R=0.990626), replay True
+(6) the reverse straddle: clocks with 0.94 < rho = 3^j/2^e < 1, e <= 70: backward point 1/2 + rho < 3/2 (backward prover), forward partner -1 - 2^(e-1)/3^j above 3/2 (route M^a + negative Collatz, a <= j+400):
+      (e,j)=(8,5) rho=0.949219: backward 371/256 = 1.449219: hostile (5); forward -371/243 (|x|=1.526749): DESCENDS (a=32, 3^147 < 2^233)
+      (e,j)=(27,17) rho=0.962169: backward 196249027/134217728 = 1.462169: hostile (4131); forward -196249027/129140163 (|x|=1.519659): DESCENDS (a=48, 3^253 < 2^401)
+      (e,j)=(46,29) rho=0.975296: backward 103814749453715/70368744177664 = 1.475296: hostile (1824543); forward -103814749453715/68630377364883 (|x|=1.512665): no route descent found
+      (e,j)=(65,41) rho=0.988603: backward 54919740450880338019/36893488147419103232 = 1.488603: undecided (state cap, S*=3); forward -54919740450880338019/36472996377170786403 (|x|=1.505764): no route descent found
+(7) forward candidates with 3/2 < |x| <= 1.6 (j <= 27): 72; explicit route descents (M^a, a <= j+400, then negative Collatz): 25; none found: 47
+                      -90025/59049 (|x|=1.524581): DESCENDS a=74, 3^306 < 2^485
+          -47841674777/31381059609 (|x|=1.524540): DESCENDS a=38, 3^200 < 2^317
+                  -2429651/1594323 (|x|=1.523939): DESCENDS a=22, 3^147 < 2^233
+       -1291139245219/847288609443 (|x|=1.523848): DESCENDS a=32, 3^147 < 2^233
+      -3872796628201/2541865828329 (|x|=1.523604): DESCENDS a=30, 3^147 < 2^233
+              -196706819/129140163 (|x|=1.523204): DESCENDS a=24, 3^94 < 2^149
+      -11608176417467/7625597484987 (|x|=1.522265): DESCENDS a=60, 3^306 < 2^485
+              -589662665/387420489 (|x|=1.522022): DESCENDS a=66, 3^306 < 2^485
+       -1289532167635/847288609443 (|x|=1.521951): DESCENDS a=62, 3^306 < 2^485
+                -65492641/43046721 (|x|=1.521432): DESCENDS a=44, 3^200 < 2^317
+          -47725781273/31381059609 (|x|=1.520847): DESCENDS a=166, 3^865 < 2^1371
+            -1767156827/1162261467 (|x|=1.520447): DESCENDS a=182, 3^865 < 2^1371
+          -47710664729/31381059609 (|x|=1.520365): DESCENDS a=70, 3^306 < 2^485
+      -3864531657769/2541865828329 (|x|=1.520352): DESCENDS a=28, 3^94 < 2^149
+                -65422657/43046721 (|x|=1.519806): DESCENDS a=42, 3^188 < 2^298
+              -196249027/129140163 (|x|=1.519659): DESCENDS a=48, 3^253 < 2^401
+      -11585825767355/7625597484987 (|x|=1.519334): DESCENDS a=46, 3^253 < 2^401
+       -1287279487651/847288609443 (|x|=1.519293): DESCENDS a=106, 3^612 < 2^970
+          -47637885209/31381059609 (|x|=1.518046): DESCENDS a=204, 3^971 < 2^1539
+          -15873944755/10460353203 (|x|=1.517534): DESCENDS a=72, 3^306 < 2^485
+              -586956617/387420489 (|x|=1.515038): DESCENDS a=60, 3^253 < 2^401
+      -11532714629819/7625597484987 (|x|=1.512369): DESCENDS a=380, 3^1889 < 2^2994
+       -1278894844579/847288609443 (|x|=1.509397): DESCENDS a=156, 3^759 < 2^1203
+                        -9889/6561 (|x|=1.507240): DESCENDS a=348, 3^1836 < 2^2910
+          -15707662771/10460353203 (|x|=1.501638): DESCENDS a=64, 3^306 < 2^485
+      -11609854353851/7625597484987 (|x|=1.522485): no route descent found
+       -1287465925027/847288609443 (|x|=1.519513): no route descent found
+              -196044995/129140163 (|x|=1.518079): no route descent found
+                      -89641/59049 (|x|=1.518078): no route descent found
+                        -9953/6561 (|x|=1.516994): no route descent found
+                  -7253369/4782969 (|x|=1.516499): no route descent found
+                -21757291/14348907 (|x|=1.516303): no route descent found
+            -5286120337/3486784401 (|x|=1.516045): no route descent found
+          -47521707929/31381059609 (|x|=1.514344): no route descent found
+                  -2413523/1594323 (|x|=1.513823): no route descent found
+              -195418691/129140163 (|x|=1.513229): no route descent found
+            -5274782929/3486784401 (|x|=1.512793): no route descent found
+              -195353795/129140163 (|x|=1.512727): no route descent found
+                      -89257/59049 (|x|=1.511575): no route descent found
+                -21688939/14348907 (|x|=1.511539): no route descent found
+                  -2408915/1594323 (|x|=1.510933): no route descent found
+              -195084227/129140163 (|x|=1.510639): no route descent found
+      -3839736746473/2541865828329 (|x|=1.510598): no route descent found
+      -11513729079995/7625597484987 (|x|=1.509879): no route descent found
+                        -9905/6561 (|x|=1.509678): no route descent found
+          -47317634585/31381059609 (|x|=1.507841): no route descent found
+          -47310729497/31381059609 (|x|=1.507621): no route descent found
+      -11496389574587/7625597484987 (|x|=1.507605): no route descent found
+            -5255887249/3486784401 (|x|=1.507374): no route descent found
+              -194607299/129140163 (|x|=1.506946): no route descent found
+       -1276785339043/847288609443 (|x|=1.506907): no route descent found
+              -583784009/387420489 (|x|=1.506849): no route descent found
+                -64862785/43046721 (|x|=1.506800): no route descent found
+                -21617771/14348907 (|x|=1.506580): no route descent found
+                    -266875/177147 (|x|=1.506517): no route descent found
+       -1276445964451/847288609443 (|x|=1.506507): no route descent found
+              -194545091/129140163 (|x|=1.506465): no route descent found
+                    -266747/177147 (|x|=1.505795): no route descent found
+            -5249273761/3486784401 (|x|=1.505477): no route descent found
+          -47218751513/31381059609 (|x|=1.504690): no route descent found
+      -11473888182203/7625597484987 (|x|=1.504654): no route descent found
+                  -2398547/1594323 (|x|=1.504430): no route descent found
+                      -29603/19683 (|x|=1.503988): no route descent found
+            -5240770705/3486784401 (|x|=1.503038): no route descent found
+            -5240003473/3486784401 (|x|=1.502818): no route descent found
+                    -266011/177147 (|x|=1.501640): no route descent found
+         -141359537867/94143178827 (|x|=1.501538): no route descent found
+            -1744482011/1162261467 (|x|=1.500938): no route descent found
+              -193767491/129140163 (|x|=1.500443): no route descent found
+                -21529195/14348907 (|x|=1.500407): no route descent found
+                    -265723/177147 (|x|=1.500014): no route descent found
+       -1270935984163/847288609443 (|x|=1.500004): no route descent found
+
+### 9. the record base loop B_1054 (height 1.9e7) and cycle C_1054 by divide-and-conquer reconstruction; family to K <= 4000
+  RECON_CHECK h=-1 P=1053 q=665 H=19012579 end=-1 OK
+  B_1054 begins with a climb of 15 multiplications; scanning climb hubs for a (1054,665) cycle
+  hub -2391485: (1054,665) realized
+  RECON_CHECK h=-2391485 P=1054 q=665 H=29732963 end=-2391485 OK
+records n <= 4001 (lower best approximations n/a < log_2 3): [1, 3, 11, 19, 84, 569, 1054]
+base loops available for n = [11, 19, 84, 569, 1054]; cycles for p = [1, 3, 11, 19, 84, 569, 1054] (hubs [-1, -5, -14, -41, -365, -1094, -2391485])
+verified a0-loops (independent exact check) for K in: 2..4, 10..4000  (3994 values)
+not produced by the splicing family: 5..9
+   K=5: parts [3] base B_3
+   K=6: parts [3, 1] base B_3
+   K=7: parts [3, 1, 1] base B_3
+   K=8: parts [3, 3] base B_3
+   K=9: parts [3, 3, 1] base B_3
+done

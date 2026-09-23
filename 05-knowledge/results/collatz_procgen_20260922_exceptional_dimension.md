@@ -687,6 +687,15 @@ HYP-9122.
   `419868489953` (over `3^24` and `2^38`). They come from the convergents
   `19/12` and `38/24` of `log_2 3`. This is a near-coincidence, not a
   duality.
+  **UPDATE (Q1-mirror lane, 2026-09-23).** The backward partners
+  `793585/2^19` and `419868489953/2^38` are slow descenders, not hostile
+  points. Their certificates are `2^84 < 3^53` and `2^336 < 3^212`, beyond
+  depth 41. Within `j <= 27` and `e <= 45`, the only numerator shared by
+  two hostile points is `1`. The coincidence is an exchange-and-straddle
+  identity: for `N = 3^j + 2^(e-1)`, exactly one of `-N/3^j` and `N/2^e`
+  lies above `3/2` (PROVED). Of the backward census, the 117 points below
+  `3/2` with `e <= 45` are certified hostile, and the 4 above `3/2`
+  descend ([q1_mirror](collatz_procgen_20260922_q1_mirror.md) §6).
 
 ## 5. Consequences for E-SCC and next steps
 
