@@ -174,8 +174,12 @@ exceptional class mod `2^36` containing an integer of absolute value below
 `1.5*10^8` is `-1`. Hence **every positive integer below `1.5*10^8` lies in
 a class with a multiplicative certificate of precision 36**. On the
 forward side, a multiplicative certificate becomes actual descent only
-above the path's threshold `B/(2^b-3^a)`; direct verification of Q1
-remains the inherited `10^6`.
+above the path's threshold `B/(2^b-3^a)`. Q1 itself is implied
+pointwise by Collatz, since Collatz orbits are `E`-paths. It therefore
+holds for every `n<2^68` by the published Collatz verification (CITED,
+Barina; exact bound per the barrier-atlas lane). Q2 is not implied by
+Collatz (the arrows point the other way), and `7.17*10^12` below is its
+own verification.
 
 **Backward `E` (3-adic), PROVED membership.**
 
