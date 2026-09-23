@@ -1,5 +1,14 @@
 # Script Results Index
 
+- [Q2 endgame: one expensive link and a sharp budget](collatz_procgen_20260922_q2_endgame.md):
+  **PROVED / FINITE-EXACT / CITED; Q2 OPEN.** Every 3-adic unit lies on
+  the thread of `1` or `1/2`. The canonical escape has one expanding
+  branch, the `1/2`-transfer, with price `2c(k-1)/3`. The budget
+  `exp(0.1144 D)` is sharp and holds for all threads. REFUTED:
+  "digits run out" and "`m^0.104`". Q2 follows from `X_min`, "no integer
+  `>= 2` is hostile", with no thresholds (PROVED implication). Theorem F_b
+  makes the backward hostile set infinite. Q2 is verified below `10^18`.
+
 - [Transversality foundry and Theorem S](collatz_procgen_20260922_transversality_foundry.md):
   **PROVED (audited) / CITED / FINITE-EXACT; PC OPEN.** The divergence
   half is Lagarias's Periodicity Conjecture. A catalogue types 35 2-vs-3

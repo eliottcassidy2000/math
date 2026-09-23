@@ -74,11 +74,29 @@ nor Q2, nor strong connectivity).
   * **reduced by a Lean-checked mod-27 lemma to the two classes
     `1, 14 mod 27`.** Every other `m` descends within two reverse moves by
     a factor of at most `8/9`;
-  * **verified below `7.87*10^17`** by exact 3-adic certificate threads to depth 41 (dimension lane; `2.02*10^13` by lane one's DFS);
+  * **verified below `10^18`** (wave 3,
+    [endgame lane](collatz_procgen_20260922_q2_endgame.md)): an exhaustive
+    DFS over the `Psi`-alive classes mod `3^38` gives every `m <= 10^18` a
+    multiplicative descent. Earlier bounds were `7.87*10^17` (dimension
+    lane, exact threads to depth 41) and `2.02*10^13` (lane one's DFS);
+  * **PROVED conditional form** (endgame lane, Theorem 6.1): Q2 follows
+    from `X_min`, "no integer `m >= 2` lies in `Bad_inf`", with no
+    threshold and no HYP-9122. Assuming HYP-9122, it also follows from
+    `X_T`, a statement about the digit-exhausted points
+    `2^(floor(k log_2 3)) w` (Theorem 6.2);
   * the neighbourhood of `1` is handled by a PROVED escape lemma together
     with loops through `1` (every depth up to 41);
-  * the neighbourhood of `1/2` costs at least `32/27` to escape (PROVED),
-    and its exits are exactly the Collatz trunk `(4^i-1)/3`.
+  * every escape from the neighbourhood of `1/2` costs more than 1. The
+    canonical price is `2c(k-1)/3`, in `(1,2)`, with infimum 1 at the
+    records of `log_2 3` (PROVED). Its exits are exactly the Collatz trunk
+    `(4^i-1)/3`. **CORRECTED 2026-09-23:** this line previously read "at
+    least `32/27`", which is the floor of one route only (MISTAKES
+    2026-09-22);
+  * the canonical chains obey a sharp budget `exp(c* D)`, with
+    `c* = ln(128/81)/4 = 0.1144` per digit consumed by expensive links,
+    for every hostile thread (PROVED, conditional on HYP-9122 at the
+    precisions used). The backward exceptional set is infinite
+    (Theorem F_b, the mirror of Theorem F).
 * Q1's thread of `-1` (wave 3, [Q1 mirror](collatz_procgen_20260922_q1_mirror.md)):
   * every exit from `n = 2^m u - 1` costs exactly `3^(eta(m+1))`, which
     lies in `(1,3)`. At the rigid precisions `m = 5..9` it costs `3.8`
@@ -90,7 +108,7 @@ nor Q2, nor strong connectivity).
   * hostile chains follow `u' = (3^A u + 1)/2^(m'+1)`, a Collatz-type map
     with memory.
 * Consequence: Le--Smith's Conjecture 1 (every `n` prime to `3` lies on an
-  `E`-cycle) holds below `7.87*10^17`.
+  `E`-cycle) holds below `10^18`.
 * Past-work link: Le--Smith's Conjecture 2 says every nontrivial `E`-cycle
   uses an `E`-only arrow (`3n+1` at an even `n`). It is equivalent to
   Collatz having no nontrivial positive cycle. The 2026-09-17 session's
@@ -246,6 +264,31 @@ the divergence half of Collatz, and the sign enters exactly as the sign of
   * **Census.** 117 backward dyadic points below `3/2` (`e <= 45`) are
     certified hostile, and the 4 above `3/2` descend. Whether any hostile
     point lies above `3/2`, on either side, is OPEN.
+* **Q2 endgame** ([note](collatz_procgen_20260922_q2_endgame.md)).
+  * **Structure** (PROVED). Every 3-adic unit lies on the thread of `1`
+    or of `1/2`. The canonical escape `Psi` has exactly one expanding
+    branch, the `1/2`-transfer at precision `k >= 3`, with price
+    `2c(k-1)/3` in `(1,2)`. Every hostile thread's link factors through
+    it (lift lemma); all 98 census points are `Psi`-preimages of `1` or
+    `1/2`.
+  * **Budget theorem** (PROVED and sharp). Chains cost at most
+    `exp(0.1144 D)`. Two claims are REFUTED: "digits run out" (a
+    37.6-digit `m` runs 15 expensive links over 60 digits) and "at most
+    `m^0.104`" (`6082250` reaches `6.57`).
+  * **Conditional theorems** (PROVED implications). Q2 follows from
+    `X_min`, "no integer `>= 2` is hostile", with no thresholds. Assuming
+    HYP-9122, Q2 also follows from `X_T`, on the digit-exhausted points
+    `2^(floor(k log_2 3)) w`.
+  * **Theorem F_b** (PROVED). `1/2 + 3^i/2^(K0(i-1)+1)` and
+    `1/2 + 3^i/2^(K0(i-1)+2)` are hostile for every `i >= 3`, so the
+    backward exceptional set is infinite.
+  * **Diophantine inputs** (CITED). LTE, Yu, Senge–Straus/Stewart and
+    Lagarias 2009 each control a piece of the endgame; none controls all
+    of it.
+  * **Numerics.** Q2 holds below `10^18` (FINITE-EXACT).
+  * **Census points above `3/2`.** The four undecided census points above
+    `3/2` all descend, by the mirror lane's certificates, replayed
+    independently by the orchestrator.
 * **Foundry v4** ([note](collatz_procgen_20260922_foundry.md), section 3b).
   * It adds the structural requirements ENTROPY and CHAIN. In the
     relaxation both base points cost more than 1 to escape, so the
@@ -264,13 +307,13 @@ the divergence half of Collatz, and the sign enters exactly as the sign of
 | # | approach (lens + mechanism) | barrier verdict | probe run | outcome |
 |---|---|---|---|---|
 | 1 | residue certificates for Collatz (Terras) | blind to SHEET, DEFECT; needs THIN | exceptional counts | the dimension `0.95` set remains; not a route alone |
-| 2 | relax by branch choice (graph `E`), certificates + escapes | live for E-SCC | profiler, DP/DFS, Lean | Q2 reduced mod 27 (Lean), verified to `7.87e17`; gap: `1/2` chains (endgame: ternary digits of `2^K`) |
+| 2 | relax by branch choice (graph `E`), certificates + escapes | live for E-SCC | profiler, DP/DFS, Lean | Q2 reduced mod 27 (Lean), verified to `10^18`; Q2 follows from `X_min` (PROVED implication); gap: `1/2` chains (endgame: ternary digits of `2^K`) |
 | 3 | partial choice `E_S` | diagnostic | profiler over `S` | `6 mod 8` does most of the work; fingerprint led by `54 mod 64` |
 | 4 | additive / sign choice | diagnostic | zoo | empty exceptional set; one-player trivial |
 | 5 | two-player sign choice (Althöfer game = Conway's Beans-Don't-Talk, Guy Problem 42) | live | game lane | no draws below `2^32` (FINITE-EXACT); ray/exit-parity law PROVED; P-density about `0.48` |
 | 6 | undirected Collatz (grand-orbit moves) | equivalent to Collatz | BFS to `10^6` | no collapse (negative control) |
 | 7 | sideways moves `n~4n+1` | inside #6 | argued | no power beyond Terras |
-| 8 | Applegate--Lagarias see-saw transplanted to `E` | needs cheap escapes | cost bounds | escape cost `>=32/27`, not `1+2^(-j)`: does not close as is |
+| 8 | Applegate--Lagarias see-saw transplanted to `E` | needs cheap escapes | cost bounds, endgame lane | escape prices `2c(k-1)/3` in `(1,2)` (infimum 1), but the price per digit reaches `0.1144` (sharp budget), so the see-saw does not close as is. Corrected from "`>=32/27`" |
 | 9 | 1-escape via loops through `1` | live (Q2 near `1`) | loops lane | PROVED exact and optimal (ratio `>3/2`); loops exist to `s=6000`; HYP-9122 reduced to record denominators; no finite family (PROVED) |
 | 10 | Hecke / `X_0(11)` density lens | DEFECT, SHEET | exact density | echo density `2/15`; statistic only |
 | 11 | Catalan unit-gap clocks | cycle half only | table | inherited; not a divergence tool |
@@ -286,7 +329,7 @@ the divergence half of Collatz, and the sign enters exactly as the sign of
 | 21 | Baker / continued fractions | cycle half | literature | Hercher: no m-cycles, `m<=91` (CITED) |
 | 22 | functional equations (Berg--Meinardus) | DEFECT | none | typed only |
 | 23 | measure rigidity (`x2 x3`) | DEFECT, INTEGRAL | none | blocked |
-| 24 | E-cycle covering (Le--Smith Conj. 1, 2) | relaxation / cycle half | our verifications | Conj. 1 holds below `7.87e17`; Conj. 2 is equivalent to no positive Collatz cycle |
+| 24 | E-cycle covering (Le--Smith Conj. 1, 2) | relaxation / cycle half | our verifications | Conj. 1 holds below `10^18`; Conj. 2 is equivalent to no positive Collatz cycle |
 | 25 | periodic-approximant Liouville (Theorem R) | ENTROPY-blind, DRIFT-blind | Sturmian test, audit | **Theorem S PROVED** (no rational has an eventually Sturmian parity vector, `3x+r`, all slopes) |
 | 26 | capacity plus ordered carry (bounded critical discrepancy) | ENTROPY-blind (critical slope only) | inherited, Prop B | PROVED for positive integers (in-house) and rationals (Prop B, via an in-house sketch) |
 | 27 | Q1 mirror: loops through `-1`, exit prices | relaxation, Q1 | mirror lane | exit costs `3^eta > 1` (PROVED); mirror of HYP-9122 to `K = 4000`; endgame = low binary digits of `3^A u` |
@@ -391,18 +434,31 @@ the trunk `(4^i-1)/3` is the exit set of the hardest relaxed obstruction.
 
 1. Q2 near `1/2`: an amortized see-saw. The chain recursion
    `w_{t+1}=(2^(K_t+3)w_t-1)/3^(j_{t+1})` governs repeated hostile
-   landings.
+   landings. **Wave-3 update ([endgame lane](collatz_procgen_20260922_q2_endgame.md)).**
+   * This recursion is correct for its route, but it lands twice as high
+     whenever `K0(k-1) = K0(k-2) + 1`.
+   * The optimal (canonical) recursion is
+     `w_(t+1) = (2^(K0(k_t - 1)+1) w_t - 1)/3^(k_(t+1))`.
+   * Every 3-adic unit lies on the thread of `1` or of `1/2`. Every
+     dyadic thread's link factors through the single expensive link, the
+     `1/2`-transfer with `k >= 3`.
+   * The budget `exp(0.1144 D)` is sharp.
+   * The two remaining statements, `X_min` and `X_T`, are integer-avoidance
+     statements of Collatz/Erdős type.
 
    **Why this is the real core (analysis).** Applegate--Lagarias close
    because their escape cost `1+2^(-j)` tends to `1`, so a chain of
    escapes costs a bounded product. In `E`, every escape from the `1/2`
-   neighbourhood costs at least `32/27`. The post-escape value
+   neighbourhood costs more than 1: the canonical price `2c(k-1)/3` has
+   infimum 1, but the price per digit reaches `0.1144` ("at least `32/27`"
+   was corrected on 2026-09-23). The post-escape value
    `x=1+3*2^(K-1)w (mod 3^D)` depends only on the loop's total halving
    count `K`. Multi-move exits (factor `3^(-t)`) need `x` in specific
    classes mod `3^(t+1)`, but a loop ratio below `27/8` (or `81/8`)
    leaves only one to three admissible values of `K`, too few to steer
    `2^(K-1)w` against an adversarial `w` modulo `ord_(3^t)(2)`. So chains
-   of hostile landings can accumulate cost at least `32/27` per link.
+   of hostile landings can accumulate cost up to `exp(0.1144 D)` over `D`
+   digits. That bound is sharp, and chains can outrun the digits of `m`.
    Bounding their length for integers is a Collatz-type
    digit-propagation question. The relaxation is far thinner than
    Collatz but keeps a genuine Collatz core.

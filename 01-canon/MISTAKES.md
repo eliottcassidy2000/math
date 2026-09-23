@@ -9,6 +9,46 @@ Format per entry:
 - Why it was wrong
 - The correct framing
 
+## 2026-09-23 E-SCC escape costs -- one route's floor is not the infimum, and chains are not bounded by the input's digits
+
+- **WRONG 1 (collatz-procgen-20260922; synthesis sections 1 and 5, deck
+  row 8, reflection, choice-ladder section 7):** "every escape from the `1/2`
+  neighbourhood costs at least `32/27` (PROVED)".
+  - **Why wrong:** `32/27` is the floor of one route, the one through the
+    node `1`. The optimal escape costs `2c(k-1)/3`, which lies in `(1,2)`
+    and has infimum `1`: `1.0535` at `k = 5`, `1.0010` at `k = 306`. The
+    loops lane had already superseded the route. The synthesis kept the
+    old floor with a PROVED label.
+  - **Correct framing:** what blocks the Applegate--Lagarias closure is
+    the price *per consumed digit*, up to `c* = ln(128/81)/4 = 0.1144` at
+    `k = 4`. It is not a per-escape floor
+    ([q2_endgame](../05-knowledge/results/collatz_procgen_20260922_q2_endgame.md) §3).
+- **WRONG 2 (loops lane section 8, repeated in the choice ladder and in
+  HYP-9120):** "a chain of hostile transfers can raise the value by at most
+  about `m^0.104` before the digits of `m` run out".
+  - **Why wrong:** each expensive link replaces `m` by `2^a (2m-1)/3^k`,
+    and the next precision is bounded by `log_3(2 m_t)`, not by what
+    remains of `m_0`.
+    - `829812238225934675` (37.6 digits) runs 15 consecutive expensive
+      links over 60 digits.
+    - `6082250` reaches excursion `6.57 > 6082250^0.104 = 5.08`.
+  - **Correct statement:** the sharp canonical budget is
+    `exp(c* D_L1)`. In terms of `m` there is no budget; the random-model
+    worst excursion is `X^0.1157`.
+- **WRONG 3 (dimension lane section 4.7; the endgame lane's candidate C5):**
+  - "three numerators occur on both sides" compared a *certified* hostile
+    census with a census of `Bad_41` classes;
+  - C5 conjectured that four points above `3/2` are hostile.
+
+  **Why wrong:** membership in `Bad_41` is not hostility. All four points
+  descend beyond depth 41 (`2^84 < 3^53`, `2^103 < 3^65`,
+  `2^336 < 3^212`, `2^168 < 3^106`). The Q1-mirror lane found the
+  certificates, and they were replayed independently. The shared
+  numerators are an exchange-and-straddle identity, not a duality.
+- **Error genus:** one route's or one depth's value promoted to a universal
+  bound. It is the same genus as the entry below: check the limit, not a
+  representative.
+
 ## 2026-09-22 Choice-game drift barrier -- a one-level snapshot is not a limit
 
 - **WRONG (collatz-procgen-20260922, lane one; the foundry note and

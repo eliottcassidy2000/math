@@ -72,8 +72,10 @@ above must be read as "do what choice does, *but specifically for
   exit set of the 3-adic hostile point `1/2`.
 * **Applegate--Lagarias's lone class `-1 mod 2^j`:** the one-point end of
   the ladder. Their near-free escape `1+2^(-j)` is exactly what `E` lacks
-  near `1/2` (cost at least `32/27`). That is why E-SCC keeps a
-  Collatz-type core.
+  near `1/2`. Every escape there costs more than 1: `2c(k-1)/3`, whose
+  infimum is 1 but whose price per digit reaches `0.1144`. The earlier
+  "at least `32/27`" was the floor of one route and is corrected. That is
+  why E-SCC keeps a Collatz-type core.
 * **Althöfer's `3n+-1` game:** the two-player version of the sign
   choice. The one-player version is trivial; the two-player version is
   open, with a prize.

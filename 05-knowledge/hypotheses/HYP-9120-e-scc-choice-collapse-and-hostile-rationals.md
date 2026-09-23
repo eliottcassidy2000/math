@@ -43,7 +43,9 @@ precision, or an exceptional thread converging to a positive integer.
   loops exist for `s<=6000`.
 * The `1/2` escape price is exactly `2c(k-1)/3`, in `(1,2)`. A one-round
   see-saw cannot close. Chains of hostile transfers raise the value by at
-  most about `m^0.104` (known thread prices), and the endgame is governed
+  most about `m^0.104` (known thread prices; **REFUTED 2026-09-23**: the sharp canonical budget is
+  `exp(0.1144 D_L1)` and chains can outrun the digits of `m`; see
+  [q2_endgame](../results/collatz_procgen_20260922_q2_endgame.md)), and the endgame is governed
   by the **base-3 digits of `2^K`**: an Erdős-ternary-type transversality,
   the same shape as the divergence-half target of the synthesis.
   **Refined (wave 3, 2026-09-23):** the chains read the **low** (3-adic) digits of `2^K w`, controlled by the kappa formula `v_3(2^K - r) = 1 + v_3(K - kappa(r))`, not the full or top expansion that Erdős's problem concerns. Every 3-adic-window form of Erdős is FALSE ([transversality foundry](../results/collatz_procgen_20260922_transversality_foundry.md) §3; [Q1 mirror](../results/collatz_procgen_20260922_q1_mirror.md) §5).

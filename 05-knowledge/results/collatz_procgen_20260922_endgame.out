@@ -1,0 +1,362 @@
+# collatz_procgen_20260922_endgame.out -- Q2 endgame lane, session collatz-procgen-20260922 (mac-mini), 2026-09-23
+# Part 1: quick run   bash 04-computation/experiments/collatz_procgen_20260922_endgame_run.sh   (timing at the end)
+# Part 2: FULL-mode logs of the same programs (endgame_psi.c): scan of m = 14 mod 27 to 1e11, exhaustive
+#         Psi-alive DFS mod 3^38 (m <= 1e18) and, if present, mod 3^40 (m <= 1e19); with their timings.
+
+### 1. exact chain calculus: Psi, budget constant, explicit escapes, frontier recursion, thread table
+====================================================================================================
+A. Psi multipliers rho_h(k) and the budget constant c* = max ln(rho)/k
+   k   rho_1(k)           rho_1/2(k)          ln(rho_1/2)/k
+   1              1/3=0.3333             2/3=0.6667   -0.405465
+   2              4/9=0.4444             8/9=0.8889   -0.058892
+   3            16/27=0.5926           32/27=1.1852   +0.056633
+   4            64/81=0.7901          128/81=1.5802   +0.114395
+   5          128/243=0.5267         256/243=1.0535   +0.010423
+   6          512/729=0.7023        1024/729=1.4047   +0.056633
+   7        2048/2187=0.9364       4096/2187=1.8729   +0.089640
+   8        4096/6561=0.6243       8192/6561=1.2486   +0.027752
+   9      16384/19683=0.8324     32768/19683=1.6648   +0.056633
+  10      32768/59049=0.5549     65536/59049=1.1099   +0.010423
+  11    131072/177147=0.7399   262144/177147=1.4798   +0.035629
+  12    524288/531441=0.9865  1048576/531441=1.9731   +0.056633
+  c* = max over all branches = ln(128/81)/4 = 0.114395277, attained only at (h=1/2, k=4); rho_1(k) < 1 < rho_1/2(k) < 2 for all 3 <= k <= 6001
+====================================================================================================
+B. explicit escapes with minimal loops (layered DP, s <= 80)
+  loops with K = K0(s) found for all 2 <= s <= 80 (HYP-9122 instances), K*(1)=2 (trivial loop)
+  972 escapes executed move by move on random integers (legality asserted): endpoint = Psi(m) = 2^K* u exactly, for every k <= 81
+  digit consumption: on each shell {v_3(x-h)=k}, x mod 3^(n+k) determines Psi(x) mod 3^n, uniformly onto the units (checked k<=5, n<=4): every Psi step consumes exactly k ternary digits
+====================================================================================================
+C. optimality inside k moves (inherited Prop 2.1 / Lemma 7.2), brute force over all legal paths
+  160 random shells (k=3..6): least endpoint over all legal paths of length <= k equals Psi(m); > m on the 1/2 class, < m on the 1 class
+====================================================================================================
+D. the frontier-item-1 recursion versus the optimal transfer
+  the frontier route (3, loop(k-2), 0) is legal and lands at 2^(K*(k-2)+2) w (checked, k=4..81);
+  it equals the optimal landing 2^(K0(k-1)) w iff K0(k-1) = K0(k-2)+2; it is twice as large for 32 of 78 k (fraction 0.410; limit 2 - log2 3 = 0.415), e.g. k = [5, 8, 10, 13, 15, 17, 20, 22]
+  optimal recursion on the 1/2 thread:  w' = (2^(K0(k-1)+1) w - 1)/3^k'   (frontier: 2^(K_t+3), K_t=K0(k-2))
+====================================================================================================
+E. universal landing recursion on random Psi-orbits (big integers)
+  3300 consecutive steps: u_(t+1) = (2^(a_t) u_t - h_(t+1)) / 3^(k_(t+1)) with a_t = K*(k_t - 1) + [h_t = 1/2]
+====================================================================================================
+F. thread table: Psi-itineraries of the known threads and of the 98-point census
+  all 98 census points reach 1 or 1/2 exactly, every prefix multiplier > 1; terminals: 1 -> 63, 1/2 -> 35; max itinerary length 3 steps, max digits 26
+  max over threads and precisions of ln(link price)/digits = 0.114395 <= c* = 0.114395
+  known threads (value, itinerary [class@precision], digits D_h, multiplier P_h, terminal):
+         1/2 = 0.5000:   (base point)  D=0 P=1 -> 1/2
+       43/32 = 1.3438:          1/2@3  D=3 P=32/27 -> 1
+       59/64 = 0.9219:          1/2@3  D=3 P=32/27 -> 1/2
+     145/128 = 1.1328:          1/2@4  D=4 P=128/81 -> 1
+     209/256 = 0.8164:          1/2@4  D=4 P=128/81 -> 1/2
+     371/256 = 1.4492:          1/2@5  D=5 P=256/243 -> 1
+     499/512 = 0.9746:          1/2@5  D=5 P=256/243 -> 1/2
+  Psi-lift lemma: 6984 random integers m with v_3(m - h) = j > D_h follow h's itinerary exactly and land at tau + 3^(j-D_h) 2^(A_h) W / 2^e  (A_h = log2(P_h 3^D_h))
+  link landing y' = 2^(A_h + a_tau(j - D_h)) W / 2^e exactly (a_tau(k) = K*(k-1) + [tau = 1/2]); link multiplier 2^(A_h + a_tau(j-D_h)) / 3^j
+  => a repeated landing at a thread h'' = p''/2^e'' with precision j'' has W'' = (2^(A_h + a_tau(j-D_h) + e'' - e) W - p'') / 3^j''
+
+### 2. exact hostility prover: census, Theorem F_b families, T^-1(2) points, Psi-candidates
+====================================================================================================
+G. exact prover on the 98-point census (97 non-integer points)
+  results: {'hostile': 93, 'undecided': 4}   (55s)
+    793585/524288 = 1.51364: undecided ('3R <= 2z', '793585/2^19', 0, 0)
+    1675672562339/1099511627776 = 1.52402: undecided ('3R <= 2z', '1675672562339/2^40', 0, 0)
+    419868489953/274877906944 = 1.52747: undecided ('3R <= 2z', '419868489953/2^38', 0, 0)
+    1690578594467/1099511627776 = 1.53757: undecided ('3R <= 2z', '1690578594467/2^40', 0, 0)
+  PROVED hostile: 93 points, real values in [0.5000, 1.4622]
+====================================================================================================
+H. generation-1 families (Theorem F_b) and the T^-1(2) points, i = 3..22
+   x+(i) = 1/2 + 3^i/2^(K0(i-1)+2) = T_i^-1(1/2);  x-(i) = 1/2 + 3^i/2^(K0(i-1)+1) = T_i^-1(1);  t2(i) = 1/2 + 3^i/2^K0(i-1) = T_i^-1(2)
+  i= 3 c(i-1)=1.7778:  x+=0.9219:H  x-=1.3438:H  t2=2.1875:D
+  i= 4 c(i-1)=2.3704:  x+=0.8164:H  x-=1.1328:H  t2=1.7656:D
+  i= 5 c(i-1)=1.5802:  x+=0.9746:H  x-=1.4492:H  t2=2.3984:D
+  i= 6 c(i-1)=2.1070:  x+=0.8560:H  x-=1.2119:H  t2=1.9238:D
+  i= 7 c(i-1)=2.8093:  x+=0.7670:H  x-=1.0339:H  t2=1.5679:D
+  i= 8 c(i-1)=1.8729:  x+=0.9005:H  x-=1.3009:H  t2=2.1018:D
+  i= 9 c(i-1)=2.4972:  x+=0.8003:H  x-=1.1007:H  t2=1.7014:D
+  i=10 c(i-1)=1.6648:  x+=0.9505:H  x-=1.4010:H  t2=2.3020:D
+  i=11 c(i-1)=2.2197:  x+=0.8379:H  x-=1.1758:H  t2=1.8515:D
+  i=12 c(i-1)=2.9596:  x+=0.7534:H  x-=1.0068:H  t2=1.5136:?
+  i=13 c(i-1)=1.9731:  x+=0.8801:H  x-=1.2602:H  t2=2.0205:D
+  i=14 c(i-1)=2.6308:  x+=0.7851:H  x-=1.0702:H  t2=1.6403:?
+  i=15 c(i-1)=1.7538:  x+=0.9276:H  x-=1.3553:H  t2=2.2105:D
+  i=16 c(i-1)=2.3385:  x+=0.8207:H  x-=1.1414:H  t2=1.7829:?
+  i=17 c(i-1)=1.5590:  x+=0.9811:H  x-=1.4622:H  t2=2.4243:D
+  i=18 c(i-1)=2.0786:  x+=0.8608:H  x-=1.2216:H  t2=1.9433:?
+  i=19 c(i-1)=2.7715:  x+=0.7706:H  x-=1.0412:H  t2=1.5824:?
+  i=20 c(i-1)=1.8477:  x+=0.9059:H  x-=1.3118:H  t2=2.1237:?
+  i=21 c(i-1)=2.4636:  x+=0.8044:H  x-=1.1089:H  t2=1.7177:?
+  i=22 c(i-1)=1.6424:  x+=0.9567:H  x-=1.4133:H  t2=2.3266:?
+====================================================================================================
+I. Psi-candidates (Psi-preimages of 1, 1/2 with every prefix multiplier > 1), denominators <= 2^24
+  842 candidates (8890 backward nodes, 0.7s); census points with e <= 24 among them: 35; census points with e <= 24 missing: 0
+  candidates outside the census: 807: {'descends': 805, 'undecided': 2} (3s); not descended: [('26989043/16777216', 1.6087, 'undecided'), ('27216491/16777216', 1.6222, 'undecided')]
+  census (e<=24) by value [<=1, (1,3/2], >3/2]: (12, 22, 1);  non-census candidates: (5, 195, 607)
+====================================================================================================
+J. census points above 3/2: depth-limited search for descents (the root has infinitely many unsafe children)
+  793585/524288 = 1.51364; itinerary 1/2@12 1/2@1 -> 1
+     depth<=12,k<=60: limit (400001 nodes)
+     depth<=16,k<=44: limit (400001 nodes)
+     depth<=20,k<=34: limit (400001 nodes)
+     rest of the tree (root children with k <= 60): explored, 695 nodes; unresolved nodes (3R <= 2z): 18, all at depth(s) [1], e.g. [('290851978376205653/2^0', 59, 1), ('72712994594051413/2^0', 57, 1)]
+  1675672562339/1099511627776 = 1.52402; itinerary 1/2@12 1/2@13 1/2@1 -> 1
+     depth<=12,k<=60: limit (400001 nodes)
+     depth<=16,k<=44: limit (400001 nodes)
+     depth<=20,k<=34: limit (400001 nodes)
+     rest of the tree (root children with k <= 60): node limit, 2000001 nodes; unresolved nodes (3R <= 2z): 18, all at depth(s) [1], e.g. [('292845005454529877/2^0', 59, 1), ('73211251363632469/2^0', 57, 1)]
+  419868489953/274877906944 = 1.52747; itinerary 1/2@24 1/2@1 -> 1
+     depth<=12,k<=60: limit (400001 nodes)
+     depth<=16,k<=44: limit (400001 nodes)
+     depth<=20,k<=34: limit (400001 nodes)
+     rest of the tree (root children with k <= 60): explored, 1241606 nodes; unresolved nodes (3R <= 2z): 18, all at depth(s) [1], e.g. [('293509347813971285/2^0', 59, 1), ('73377336953492821/2^0', 57, 1)]
+  1690578594467/1099511627776 = 1.53757; itinerary 1/2@7 1/2@18 1/2@1 -> 1
+     depth<=12,k<=60: limit (400001 nodes)
+     depth<=16,k<=44: limit (400001 nodes)
+     depth<=20,k<=34: limit (400001 nodes)
+     rest of the tree (root children with k <= 60): explored, 1819175 nodes; unresolved nodes (3R <= 2z): 19, all at depth(s) [1], e.g. [('295450023378638165/2^0', 59, 1), ('73862505844659541/2^0', 57, 1)]
+
+### 3. Diophantine inputs (LTE, Yu, Senge-Straus/Stewart, digit-exhausted family) and renewal structure
+====================================================================================================
+K. LTE in 3-adic form and the digits of alpha_w = -log(w')/log 4
+  checked v_3(2^n w - 1) = [n=n0 mod 2](1 + v_3((n-n0)/2 - alpha_w)) for all w < 400 (3 !| w), n < 600: 79800 cases
+  excess depth max_(1<=M<3^20) v_3(M - alpha_w) - 20 over w < 400: max 4 (w=341), distribution [-1, 0, 1, 2, 3, 4]
+  (w a power of 4 times 1 or 2: alpha_w is a non-positive integer and v_3 = 1 + v_3(M + a) exactly; otherwise alpha_w is a 3-adic irrational and the depth is the length of a digit coincidence)
+    alpha_1   mod 3^20 digits (low first): 00000000000000000000
+    alpha_2   mod 3^20 digits (low first): 22222222222222222222
+    alpha_4   mod 3^20 digits (low first): 22222222222222222222
+    alpha_5   mod 3^20 digits (low first): 02122012201100201021
+    alpha_7   mod 3^20 digits (low first): 10210212122110201220
+    alpha_11  mod 3^20 digits (low first): 20201102100011110111
+    alpha_13  mod 3^20 digits (low first): 21220011202201111021
+====================================================================================================
+L. Yu's p-adic bound (two logarithms, p = 3), explicit form
+  v_3(x1^b1 x2^b2 - 1) < C (log A1)(log A2) max(log T, delta B/B2),  C = (16e)^6 2^1.5 (log 4)^2 3/(log 3)^2 = 9.1448e+10
+  applied to 2^n w - p = p (2^(n-r) (2^r w/p) - 1), r in {0,1,2} with 3 !| n-r (so v_3 condition holds):
+  v_3(2^n w - p) <= C * 1 * log(4 max(w,p,e)) * (log n + 7 log 3 + 17 + log log 4 max(w,p,e) + 2): O(log n log H)
+    n=1e+03 w=1 p=1: Yu bound 1.294e+13   trivial bound n log_3 2 = 6.309e+02   (trivial better)
+    n=1e+06 w=7 p=1: Yu bound 2.017e+13   trivial bound n log_3 2 = 6.309e+05   (trivial better)
+    n=1e+09 w=1 p=43: Yu bound 3.973e+13   trivial bound n log_3 2 = 6.309e+08   (trivial better)
+    n=1e+18 w=1000 p=1: Yu bound 7.117e+13   trivial bound n log_3 2 = 6.309e+17   (Yu better)
+====================================================================================================
+M. double exhaustion: 2^(a+1) u - 1 = 3^k w' (1/2 thread) and 2^a u - 1 = 3^k w' (1 thread), u odd <= 6000, w' <= 6000, k >= 3, a <= 300
+  1/2 thread: 719 solutions; largest n = 2^a u: n=2^9*4117=2107904 = (1+3^6*5783)/2; n=2^10*2423=2481152 = (1+3^7*2269)/2; n=2^11*2305=4720640 = (1+3^8*1439)/2; n=2^12*4433=18157568 = (1+3^11*205)/2
+    solutions with n > 10^6: 7; largest a among all: 12
+  1 thread: 830 solutions; largest n = 2^a u: n=2^10*4117=4215808 = 1+3^6*5783; n=2^11*2423=4962304 = 1+3^7*2269; n=2^12*2305=9441280 = 1+3^8*1439; n=2^13*4433=36315136 = 1+3^11*205
+    solutions with n > 10^6: 16; largest a among all: 13
+====================================================================================================
+N. digit-exhausted family m = (1 + 3^k w)/2, odd w <= 49, 3 !| w, 3 <= k <= 400 (m up to ~10^192)
+  6766 members: all descend under Psi; LTE predicted the second precision exactly in all 398 w=1 cases
+  worst excursion 5.0889 at (w,k)=(49, 184);  most Psi-steps 7 at (5, 360);  most L1 digits 403 at (29, 399)
+  precision of the second Psi-step (the landing 2^K0(k-1) w): max 12 over the family; per w (max): 1:6, 5:7, 7:6, 11:6, 13:7, 17:6, 19:6, 23:7, 25:6, 29:7, 31:7, 35:8
+====================================================================================================
+O. renewal structure of Psi under Haar measure on the 3-adic units
+  branch (h,k) has Haar mass 3^-k, consumes k digits; E[digits] = 1.500000, E[ln rho] = -0.617109, drift -0.411406 nats/digit (greedy G: ln(2/3) = -0.405465)
+  dim_H(Bad_Psi) = min_theta s(theta), sum 3^(-s k) rho^theta = 1:  0.64150 (theta = 2.674)
+  Haar-probability that Psi survives D digits ~ 3^(-0.3585 D) = 0.6745^D  (greedy G: 0.758751^D, dim 0.748)
+  Lundberg exponent theta* = 8.64335 (E[rho^theta*] = 1): random-model worst excursion over m <= X is X^0.11570;  X=1e11: 18.74, X=1e18: 120.93
+  exact number of Psi-alive unit classes mod 3^(n+1) [n: count (log_3 count / n)]:
+   10:170 (0.4675)  20:71744 (0.5089)  30:50787200 (0.5384)  37:4726196440 (0.5480)  40:34421825676 (0.5521)  60:22336660497005202 (0.5711)  100:23881045418721037452378866118 (0.5948)  150:26575391496004220841474546493739681517598008 (0.6068)  200:39122051236585979742649972488628547207159823974250530233536 (0.6140)
+  compare full choice (dimension lane, backward threads): 338 classes mod 3^42 (n=41), growth ~ n^1.7
+
+### 4. Psi-orbit numerics (128-bit)
+--- 4a. every m = 14 (mod 27) up to 10^9
+scan m = 14 (step 27) up to 1000000000: 37037037 orbits, not descended within cap 0, overflow 0, mean Psi-steps to descent 2.2848
+  histogram of Psi-steps to descent: 2:28156813 3:7623539 4:935455 5:257126 6:43809 7:14753 8:4215 9:978 10:248 11:71 12:21 13:7 14:1 15:1
+  histogram of L1 links (half, k>=3) before descent: 1:34590540 2:2266291 3:164841 4:13878 5:1336 6:136 7:13 8:2
+  most Psi-steps:              m=262054508  steps=15 L1=7 D_L1=24 D_tot=36 longest L1-run=4 links/14 digits (price 3.5077) max excursion 4.3797 (ln 1.4770) vs budget exp(c* D_L1)=15.5722
+  most L1 links:               m=209187914  steps=12 L1=8 D_L1=29 D_tot=38 longest L1-run=7 links/26 digits (price 6.9210) max excursion 7.2912 (ln 1.9867) vs budget exp(c* D_L1)=27.5904
+  most L1 digits:              m=209187914  steps=12 L1=8 D_L1=29 D_tot=38 longest L1-run=7 links/26 digits (price 6.9210) max excursion 7.2912 (ln 1.9867) vs budget exp(c* D_L1)=27.5904
+  longest consecutive L1 run:  m=209187914  steps=12 L1=8 D_L1=29 D_tot=38 longest L1-run=7 links/26 digits (price 6.9210) max excursion 7.2912 (ln 1.9867) vs budget exp(c* D_L1)=27.5904
+  largest excursion:           m=816055925  steps=9 L1=5 D_L1=20 D_tot=25 longest L1-run=5 links/20 digits (price 9.8543) max excursion 9.8543 (ln 2.2879) vs budget exp(c* D_L1)=9.8543
+  descents that are not multiplicative: 0
+  budget check: max over orbits and times of ln(m_t/m_0) - c* D_L1(t) = -0.000001 (<= 0 required) at m=999999959
+--- 4b. random m = (p + 3^j W)/2^e <= 10^18 near each of the 98 census threads, 2000 per (thread, j)
+  384290243/2^28: j<=37, 73609 orbits (no descent 0): max L1 links 6, longest L1 run 5 (price 2.3385), max excursion 5.5430 at m=111172279470744722
+  371/2^8: j<=37, 73619 orbits (no descent 0): max L1 links 4, longest L1 run 4 (price 5.5430), max excursion 5.5430 at m=892725700081741034
+  196249027/2^27: j<=37, 73566 orbits (no descent 0): max L1 links 5, longest L1 run 4 (price 2.3385), max excursion 3.6954 at m=582620183093992865
+  793585/2^19: j<=37, 72983 orbits (no descent 0): max L1 links 5, longest L1 run 5 (price 4.1573), max excursion 4.3797 at m=918954788655742763
+  1675672562339/2^40: j<=37, 73994 orbits (no descent 0): max L1 links 7, longest L1 run 5 (price 3.0760), max excursion 9.2280 at m=58213352611183082
+  419868489953/2^38: j<=37, 73991 orbits (no descent 0): max L1 links 5, longest L1 run 4 (price 3.5077), max excursion 6.8278 at m=545583398311939991
+  1690578594467/2^40: j<=37, 73968 orbits (no descent 0): max L1 links 6, longest L1 run 5 (price 3.6954), max excursion 9.2280 at m=692579592542238881
+  all points: 7216965 orbits, 0 without descent; max excursion 10.9368 at m=505241099358478547; max L1 links 9 at m=957804761290929431; budget excess max -0.000000 (<= 0 required)
+--- 4c. exhaustive DFS over Psi-alive classes, m <= 10^13 (quick)
+dfs over Psi-alive classes to 3^27, representatives <= 10000000000000: nodes 10362242, alive leaves 2816640, leaves with least rep <= M: 2816639, of which not descended within cap: 0
+  largest digits-to-descent D among them: 62 at m=3245779822919
+  largest excursion among them: 29.1649 at m=3731675364995
+  longest consecutive L1 run: 9 links / 35 digits (price 23.0439) at m=6498553381196
+  most L1 links: 12 at m=2754242127509
+  most L1 digits: 48 at m=3245779822919
+  descents that are not multiplicative (2^A >= 3^D at the first m_t < m_0): 0
+  histogram of D (digits consumed until descent): 27:594414 28:931515 29:243447 30:420494 31:304838 32:72834 33:106287 34:28897 35:46696 36:32792 37:7944 38:11243 39:3086 40:5010 41:1288 42:2325 43:1657 44:428 45:599 46:169 47:275 48:192 49:42 50:69 51:19 52:34 53:19 54:6 55:9 56:2 57:5 59:2 60:1 62:1
+--- 4d. extreme orbits
+orbit of 6082250:
+  1/2 k=4 -> 9611456   ratio 1.580247
+  1/2 k=2 -> 8543516   ratio 1.404664
+  1/2 k=7 -> 16001024   ratio 2.630774
+  1/2 k=4 -> 25285568   ratio 4.157272
+  1/2 k=4 -> 39957440   ratio 6.569516
+  1/2 k=2 -> 35517724   ratio 5.839570
+  1   k=1 -> 11839241   ratio 1.946523
+  1/2 k=1 -> 7892827   ratio 1.297682
+  1   k=1 -> 2630942   ratio 0.432561
+orbit of 60091390742:
+  1/2 k=4 -> 94959234752   ratio 1.580247
+  1/2 k=4 -> 150059037632   ratio 2.497180
+  1/2 k=4 -> 237130331072   ratio 3.946161
+  1/2 k=4 -> 374724473792   ratio 6.235909
+  1/2 k=4 -> 592157193152   ratio 9.854277
+  1/2 k=4 -> 935754576832   ratio 15.572190
+  1   k=2 -> 415890923036   ratio 6.920974
+  1/2 k=2 -> 369680820476   ratio 6.151976
+  1/2 k=2 -> 328605173756   ratio 5.468424
+  1/2 k=1 -> 219070115837   ratio 3.645616
+  1/2 k=1 -> 146046743891   ratio 2.430410
+  1/2 k=1 -> 97364495927   ratio 1.620274
+  1/2 k=1 -> 64909663951   ratio 1.080182
+  1   k=1 -> 21636554650   ratio 0.360061
+orbit of 19296859109:
+  1/2 k=4 -> 30493802048   ratio 1.580247
+  1/2 k=2 -> 27105601820   ratio 1.404664
+  1/2 k=6 -> 38074260992   ratio 1.973081
+  1/2 k=3 -> 45125050064   ratio 2.338466
+  1/2 k=7 -> 84514039808   ratio 4.379679
+  1/2 k=7 -> 158285096960   ratio 8.202635
+  1/2 k=4 -> 250129535936   ratio 12.962189
+  1/2 k=3 -> 296449820368   ratio 15.362594
+  1   k=1 -> 98816606789   ratio 5.120865
+  1/2 k=4 -> 156154637888   ratio 8.092231
+  1/2 k=1 -> 104103091925   ratio 5.394821
+  1/2 k=1 -> 69402061283   ratio 3.596547
+  1/2 k=2 -> 61690721140   ratio 3.196931
+  1   k=2 -> 27418098284   ratio 1.420858
+  1/2 k=1 -> 18278732189   ratio 0.947239
+orbit of 909072835151420597:
+  1/2 k=4 -> 1436559541967676992   ratio 1.580247
+  1/2 k=4 -> 2270118782368674752   ratio 2.497180
+  1/2 k=2 -> 2017883362105488668   ratio 2.219716
+  1/2 k=4 -> 3188753954932130240   ratio 3.507699
+  1/2 k=4 -> 5039018595448304576   ratio 5.543031
+  1/2 k=4 -> 7962893582930654144   ratio 8.759357
+  1/2 k=7 -> 14913585786778216448   ratio 16.405271
+  1/2 k=4 -> 23567147909970514880   ratio 25.924378
+  1/2 k=4 -> 37241912746620072896   ratio 40.966918
+  1/2 k=4 -> 58851417673671226304   ratio 64.737847
+  1/2 k=6 -> 82666463234347511296   ratio 90.934917
+  1   k=1 -> 27555487744782503765   ratio 30.311639
+  1/2 k=1 -> 18370325163188335843   ratio 20.207759
+  1   k=3 -> 10886118615222717536   ratio 11.974969
+  1/2 k=1 -> 7257412410148478357   ratio 7.983312
+  1/2 k=1 -> 4838274940098985571   ratio 5.322208
+  1/2 k=1 -> 3225516626732657047   ratio 3.548139
+  1   k=1 -> 1075172208910885682   ratio 1.182713
+  1/2 k=1 -> 716781472607257121   ratio 0.788475
+orbit of 829812238225934675:
+  1/2 k=4 -> 1311308228307649856   ratio 1.580247
+  1/2 k=3 -> 1554143085401659088   ratio 1.872885
+  1/2 k=3 -> 1841947360476040400   ratio 2.219716
+  1/2 k=3 -> 2183048723527158992   ratio 2.630774
+  1/2 k=4 -> 3449756007549090752   ratio 4.157273
+  1/2 k=6 -> 4845747807586102784   ratio 5.839571
+  1/2 k=3 -> 5743108512694640336   ratio 6.920974
+  1/2 k=3 -> 6806647126156610768   ratio 8.202635
+  1/2 k=3 -> 8067137334704131280   ratio 9.721642
+  1/2 k=3 -> 9561051655945637072   ratio 11.521946
+  1/2 k=5 -> 10072548246592934528   ratio 12.138346
+  1/2 k=3 -> 11937834958924959440   ratio 14.386188
+  1/2 k=3 -> 14148545136503655632   ratio 17.050297
+  1/2 k=7 -> 26498601225020106752   ratio 31.933249
+  1/2 k=7 -> 49628838874111731712   ratio 59.807311
+  1   k=3 -> 29409682295769915088   ratio 35.441370
+  1   k=4 -> 23237279838633019328   ratio 28.003058
+  1/2 k=1 -> 15491519892422012885   ratio 18.668705
+  1/2 k=2 -> 13770239904375122564   ratio 16.594404
+  1/2 k=1 -> 9180159936250081709   ratio 11.062936
+  1/2 k=1 -> 6120106624166721139   ratio 7.375291
+  1   k=2 -> 2720047388518542728   ratio 3.277907
+  1/2 k=1 -> 1813364925679028485   ratio 2.185271
+  1   k=5 -> 955188108999652864   ratio 1.151089
+  1   k=1 -> 318396036333217621   ratio 0.383696
+orbit of 962019445183081187:
+  1/2 k=3 -> 1140171194291059184   ratio 1.185185
+  1/2 k=3 -> 1351314008048662736   ratio 1.404664
+  1/2 k=4 -> 2135409790496652224   ratio 2.219716
+  1/2 k=1 -> 1423606526997768149   ratio 1.479811
+  1/2 k=7 -> 2666251639041087488   ratio 2.771515
+  1/2 k=3 -> 3160001942567214800   ratio 3.284759
+  1/2 k=4 -> 4993583316649425856   ratio 5.190730
+  1   k=2 -> 2219370362955300380   ratio 2.306991
+  1/2 k=2 -> 1972773655960267004   ratio 2.050659
+  1/2 k=5 -> 2078312987349087872   ratio 2.160365
+  1/2 k=3 -> 2463185762784104144   ratio 2.560432
+  1/2 k=3 -> 2919331274410790096   ratio 3.034587
+  1/2 k=4 -> 4613264236105939904   ratio 4.795396
+  1/2 k=5 -> 4860064380424364672   ratio 5.051940
+  1/2 k=3 -> 5760076302725172944   ratio 5.987484
+  1/2 k=8 -> 7191974557525471232   ratio 7.475914
+  1/2 k=6 -> 10102307197402033664   ratio 10.501147
+  1/2 k=5 -> 10642759845822718592   ratio 11.062936
+  1/2 k=4 -> 16818188398337135552   ratio 17.482171
+  1/2 k=3 -> 19932667731362531024   ratio 20.719610
+  1/2 k=1 -> 13288445154241687349   ratio 13.813073
+  1/2 k=1 -> 8858963436161124899   ratio 9.208716
+  1/2 k=1 -> 5905975624107416599   ratio 6.139144
+  1   k=1 -> 1968658541369138866   ratio 2.046381
+  1   k=1 -> 656219513789712955   ratio 0.682127
+orbit of 5728828425613736:
+  1/2 k=3 -> 6789722578505168   ratio 1.185185
+  1/2 k=3 -> 8047078611561680   ratio 1.404664
+  1/2 k=3 -> 9537278354443472   ratio 1.664787
+  1/2 k=4 -> 15071254683564992   ratio 2.630774
+  1/2 k=3 -> 17862227773114064   ratio 3.117955
+  1/2 k=2 -> 15877535798323612   ratio 2.771515
+  1   k=4 -> 12545213470280384   ratio 2.189839
+  1/2 k=3 -> 14868401149961936   ratio 2.595365
+  1/2 k=1 -> 9912267433307957   ratio 1.730243
+  1/2 k=2 -> 8810904385162628   ratio 1.537994
+  1/2 k=1 -> 5873936256775085   ratio 1.025329
+  1/2 k=4 -> 9282269640335936   ratio 1.620274
+  1/2 k=3 -> 11001208462620368   ratio 1.920324
+  1/2 k=2 -> 9778851966773660   ratio 1.706955
+  1/2 k=3 -> 11589750479139152   ratio 2.023058
+  1/2 k=7 -> 21706272502310912   ratio 3.788955
+  1/2 k=2 -> 19294464446498588   ratio 3.367960
+  1/2 k=4 -> 30490017890763200   ratio 5.322208
+  1/2 k=7 -> 57104304197789696   ratio 9.967885
+  1/2 k=6 -> 80212355965070848   ratio 14.001529
+  1   k=2 -> 35649935984475932   ratio 6.222902
+  1/2 k=7 -> 66768238588209152   ratio 11.654781
+  1/2 k=2 -> 59349545411741468   ratio 10.359805
+  1/2 k=1 -> 39566363607827645   ratio 6.906537
+  1/2 k=2 -> 35170100984735684   ratio 6.139144
+  1/2 k=1 -> 23446733989823789   ratio 4.092762
+  1/2 k=2 -> 20841541324287812   ratio 3.638011
+  1/2 k=1 -> 13894360882858541   ratio 2.425341
+  1/2 k=1 -> 9262907255239027   ratio 1.616894
+  1   k=1 -> 3087635751746342   ratio 0.538965
+orbit of 4847486:
+  1/2 k=7 -> 9078784   ratio 1.872885
+  1   k=1 -> 3026261   ratio 0.624295
+# quick run timing:
+# bash 04-computation/experiments/collatz_procgen_20260922_endgame_run.sh >  2>  88.98s user 0.20s system 99% cpu 1:29.70 total
+
+==================================================================================================
+# Part 2. FULL-mode logs
+--- 4e. FULL: every m = 14 (mod 27) up to 10^11   (./psi scan 100000000000)
+scan m = 14 (step 27) up to 100000000000: 3703703704 orbits, not descended within cap 0, overflow 0, mean Psi-steps to descent 2.2848
+  histogram of Psi-steps to descent: 2:2815680861 3:762354281 4:93545462 5:25710677 6:4382003 7:1475150 8:422078 9:96386 10:26538 11:6982 12:2346 13:695 14:184 15:47 16:8 17:5 19:1
+  histogram of L1 links (half, k>=3) before descent: 1:3459054292 2:226628771 3:16486228 4:1383690 5:135448 6:13630 7:1468 8:166 9:10 10:1
+  most Psi-steps:              m=26426067953  steps=19 L1=8 D_L1=30 D_tot=49 longest L1-run=3 links/11 digits (price 2.9596) max excursion 5.1209 (ln 1.6333) vs budget exp(c* D_L1)=30.9342
+  most L1 links:               m=54784020641  steps=17 L1=10 D_L1=32 D_tot=48 longest L1-run=7 links/23 digits (price 5.8396) max excursion 5.8396 (ln 1.7647) vs budget exp(c* D_L1)=38.8867
+  most L1 digits:              m=19296859109  steps=15 L1=8 D_L1=38 D_tot=48 longest L1-run=6 links/30 digits (price 10.9368) max excursion 15.3626 (ln 2.7319) vs budget exp(c* D_L1)=77.2483
+  longest consecutive L1 run:  m=23853568379  steps=11 L1=8 D_L1=28 D_tot=31 longest L1-run=8 links/28 digits (price 12.3040) max excursion 12.3040 (ln 2.5099) vs budget exp(c* D_L1)=24.6080
+  largest excursion:           m=60091390742  steps=14 L1=6 D_L1=24 D_tot=35 longest L1-run=6 links/24 digits (price 15.5722) max excursion 15.5722 (ln 2.7455) vs budget exp(c* D_L1)=15.5722
+  descents that are not multiplicative: 0
+  budget check: max over orbits and times of ln(m_t/m_0) - c* D_L1(t) = -0.000000 (<= 0 required) at m=99997476467
+./endgame_psi scan 100000000000 > scan1e11b.out 2> scan1e11b.err  211.52s user 0.33s system 99% cpu 3:32.41 total
+--- 4f. FULL: exhaustive DFS over Psi-alive classes mod 3^38, m <= 10^18   (./psi dfs 38 1000000000000000000)
+dfs over Psi-alive classes to 3^38, representatives <= 1000000000000000000: nodes 12817618627, alive leaves 3498679528, leaves with least rep <= M: 3498679527, of which not descended within cap: 0
+  largest digits-to-descent D among them: 87 at m=5728828425613736
+  largest excursion among them: 90.9349 at m=909072835151420597
+  longest consecutive L1 run: 15 links / 60 digits (price 59.8073) at m=829812238225934675
+  most L1 links: 17 at m=466685813006909240
+  most L1 digits: 73 at m=962019445183081187
+  descents that are not multiplicative (2^A >= 3^D at the first m_t < m_0): 0
+  histogram of D (digits consumed until descent): 38:1495996545 39:407689164 40:651224839 41:173209433 42:302617488 43:222832536 44:53983537 45:79880940 46:21972195 47:35768484 48:25722723 49:6238243 50:9071294 51:2487652 52:4017785 53:2874946 54:697253 55:1009712 56:276317 57:446113 58:120361 59:210470 60:155768 61:38388 62:56832 63:15605 64:25833 65:18662 66:4546 67:6582 68:1790 69:2999 70:840 71:1454 72:1047 73:260 74:377 75:101 76:173 77:106 78:31 79:34 80:11 81:29 82:5 83:9 84:8 85:3 86:3 87:1
+nice -n 5 ./endgame_psi dfs 38 1000000000000000000 > dfs38c.out 2> dfs38c.err  1727.37s user 5.04s system 99% cpu 29:07.72 total

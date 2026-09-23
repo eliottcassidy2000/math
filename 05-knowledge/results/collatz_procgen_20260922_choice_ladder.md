@@ -291,7 +291,9 @@ unless marked).**
   are all in `Bad_inf`.
 * A one-round see-saw does not close at any level. Chains of hostile
   transfers can raise the value by at most about `m^0.104` (known thread
-  prices), and **the endgame is the base-3 digits of `2^K`**, a
+  prices) [**REFUTED 2026-09-23:** the sharp budget is `exp(0.1144 D)` in the digits `D` consumed by
+  expensive links, which need not stop when the digits of `m` run out
+  ([q2_endgame](collatz_procgen_20260922_q2_endgame.md) §3)], and **the endgame is the base-3 digits of `2^K`**, a
   transversality statement of Erdős's ternary type. **Refined (wave 3, 2026-09-23):** the chains read the **low** (3-adic) digits of `2^K w`, controlled by the kappa formula `v_3(2^K - r) = 1 + v_3(K - kappa(r))`, not the full or top expansion that Erdős's problem concerns. Every 3-adic-window form of Erdős is FALSE ([transversality foundry](collatz_procgen_20260922_transversality_foundry.md) §3; [Q1 mirror](collatz_procgen_20260922_q1_mirror.md) §5).
 
 **Uniform descent off two classes (PROVED; elementary; Lean-checked).**
@@ -493,7 +495,10 @@ near `0.2%` (`2077` at `10^6`), much like forward stopping times.
   escapes. For Q2 the first step is done: the Lean-checked mod-27 lemma
   leaves only `1` and `14 mod 27`. The last step is the real core: near
   `1/2` escapes cost at least `32/27`, not `1+2^(-j)`, and chains of
-  hostile landings are typical (section 5).
+  hostile landings are typical (section 5). [**CORRECTED 2026-09-23:** `32/27` is the floor of the
+  route through `1` only. The optimal escape costs `2c(k-1)/3`, in `(1,2)`, with infimum 1 at the
+  records of `log_2 3`. What blocks the Applegate--Lagarias closure is the price per consumed digit,
+  up to `c* = 0.1144` ([q2_endgame](collatz_procgen_20260922_q2_endgame.md)).]
 
 ## 8. Research cards used / candidate
 
