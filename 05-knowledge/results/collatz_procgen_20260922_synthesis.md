@@ -65,6 +65,13 @@ nor Q2, nor strong connectivity).
     and its exits are exactly the Collatz trunk `(4^i-1)/3`.
 * Consequence: Le--Smith's Conjecture 1 (every `n` prime to `3` lies on an
   `E`-cycle) holds below `2.02*10^13`.
+* Past-work link: Le--Smith's Conjecture 2 says every nontrivial `E`-cycle
+  uses an `E`-only arrow (`3n+1` at an even `n`). It is equivalent to
+  Collatz having no nontrivial positive cycle. The 2026-09-17 session's
+  census, in which all `74` simple `E`-cycles of length at most `40` in
+  `[1,2000]` use such an arrow
+  ([extended_collatz_scc](collatz_mod6_20260917_extended_collatz_scc.md)),
+  is a window check of it, made before the paper was known.
 * Hostile points (PROVED examples, FINITE-EXACT families):
   * forward: `-1` and `-1-2^i c/3^j`, e.g. `-13/9`, negative, with
     power-of-3 denominators;
