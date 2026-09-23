@@ -1,0 +1,264 @@
+collatz_procgen_20260922_hard: hard-class lane; quick=False; words up to 1048576 letters
+==============================================================================================================
+H0  CONSTANTS AND THRESHOLDS  (Theorem D: Phi_T(w) irrational whenever Dio(w) > eta(w) = mu(beta))
+==============================================================================================================
+  Bugeaud-Kim (TAMS 371 (2019)) Thm 3.4/3.6: rep(s) <= sqrt10 - 3/2 = 1.6622776602 for every (quasi-)Sturmian s;
+    Lemma 10.3: Dio = rep/(rep-1)  ->  Dio(s) >= 2.5099407094  (= 5/3 + 4 sqrt10/15 = 2.5099407094)
+  Theorem S (options A/B, limsup q_(n+1)/q_n >= phi): mu(mu-1) < phi  <=>  mu < 1.8667603992;  ADQZ/BHZ initial squares: mu < 2
+  Lemma J' (codings of a rotation, k0 endpoint classes): Dio >= mu*(k0, L), mu*(mu*^k0 - 1) = L = limsup q_(n+1)/q_n:
+    k0 | L=    phi | L=      2 | L=1+sqrt2 | L=      3 | L=      5 | L=     10 |  complexity p(n)<=kn: 1+1/k
+     1 |    1.8668 |    2.0000 |    2.1322 |    2.3028 |    2.7913 |    3.7016 |  k=2: 1.5000
+     2 |    1.4536 |    1.5214 |    1.5876 |    1.6717 |    1.9042 |    2.3089 |  k=4: 1.2500
+     3 |    1.3079 |    1.3532 |    1.3972 |    1.4526 |    1.6030 |    1.8556 |  k=6: 1.1667
+     4 |    1.2331 |    1.2672 |    1.3001 |    1.3413 |    1.4519 |    1.6336 |  k=8: 1.1250
+     5 |    1.1876 |    1.2149 |    1.2411 |    1.2739 |    1.3612 |    1.5024 |  k=10: 1.1000
+     6 |    1.1570 |    1.1797 |    1.2016 |    1.2287 |    1.3008 |    1.4160 |  k=12: 1.0833
+  Height exponent mu(beta) = max(1, beta log2 m1) for T(x) = x/2, (m1 x + 1)/2  (m0 = 1, r1 = 1):
+    map    | log2 m1 | critical beta | beta range with mu < Dio_BK (all Sturmian & quasi-Sturmian) | mu < 2 (ADQZ) | mu < 1.8668 (Thm S)
+    3x+1   |  1.5850 |        0.6309 | beta < 1.0000 (ALL slopes) | beta < 1.0000 | beta < 1.0000
+    5x+1   |  2.3219 |        0.4307 | beta < 1.0000 (ALL slopes) | beta < 0.8614 | beta < 0.8040
+    7x+1   |  2.8074 |        0.3562 | beta < 0.8941 | beta < 0.7124 | beta < 0.6650
+    9x+1   |  3.1699 |        0.3155 | beta < 0.7918 | beta < 0.6309 | beta < 0.5889
+    19x+1  |  4.2479 |        0.2354 | beta < 0.5909 | beta < 0.4708 | beta < 0.4395
+    Mahler ceil(3a/2): m0 = m1 = 3, mu = log2 3 = 1.5850 < Dio_BK: every Sturmian/quasi-Sturmian carry word.
+  Lemma P (2-adic Tschakaloff, Theorem Y): sum_(k>=0) rho^(k^2) is irrational in Q_2 for rho = 2^L/M (M odd) whenever mu_bar = max(1, log2(M)/L) < phi = 1.618034; with the unshifted construction (m = 0): mu_bar < 3/2.
+  Linear complexity (AB ETDS 2007, proof of Thm 3): p(n) <= c n infinitely often => Dio >= 1 + 1/c; 3x+1 needs c < 1/(beta log2 3 - 1), e.g. beta = 0.9: c < 2.345; beta = 1: c < 1.710
+==============================================================================================================
+H1  CALIBRATION OF THE Dio ENGINE  (Dio = 1 + limsup LPF(j)/j; r(n) = n + min{j: LPF(j) >= n})
+==============================================================================================================
+  Fibonacci fixed point 0->01,1->0                              : Dio_est(scales 12..18) = 2.618028 (known 2.618034); rep_est = 1.61804 (known 1.618033988749895)
+  Thue-Morse                                                    : Dio_est(scales 12..18) = 1.666667 (known 1.666667); rep_est = 2.5 (known 2.5)
+  Bugeaud-Kim s' (slope (sqrt10-2)/3=[0;(2,1,1)], intercept 1/3): Dio_est(scales 12..18) = 2.509912 (known 2.509941); rep_est = 1.66229 (known 1.6622776601683795)
+  random fair bits (seed 1)                                     : Dio_est(scales 12..18) = 1.005278 (known 1.000000); rep_est = None (known inf)
+  words of length 1048576; the Bugeaud-Kim equality case (their Thm 3.4, (3.1)) is reproduced to 6 digits.  [2s]
+==============================================================================================================
+H2  STURMIAN AND QUASI-STURMIAN WORDS  (Theorem S extended: all maps with mu < 2.5099; per-slope beyond)
+==============================================================================================================
+  slope alpha = [0;1,7,(1)] = 0.8839642543; partial quotients [0, 1, 7, 1, 1, 1]...; limsup q_(n+1)/q_n = 1.6180
+    check: lower mechanical word with rho = 0 equals 0 c_alpha (standard-word limit) on 152634 letters: True
+  Sturmian slope above, rho=0 under 3x+1: beta=0.88396 mu=1.4010 Dio_est=2.6180 (> mu); rep_est=1.618038; covered by: Theorem S (mu(mu-1) < phi)
+      exact certificates: parity ok=True isometry ok=True (7 checked) lambda ok=True max canonical gcd=0 bits; best exact gain 16746.7 bits
+      |UV|=2008,|U|=0,lam=5256:gain=2441.0(h=2815,canon.gcd=0b,iso=Y) |UV|=3250,|U|=1,lam=8505:gain=3951.3(h=4554,canon.gcd=0b,iso=Y) |UV|=5257,|U|=0,lam=13762:gain=6395.0(h=7367,canon.gcd=0b,iso=Y) |UV|=13763,|U|=0,lam=36031:gain=16746.7(h=19284,canon.gcd=0b,iso=Y)
+      reconstruction at N=10^4 bits: -
+  Sturmian slope above, rho=0 under 5x+1: beta=0.88396 mu=2.0525 Dio_est=2.6180 (> mu); rep_est=1.618038; covered by: Bugeaud-Kim uniform bound only (mu < 2.5099)
+      exact certificates: parity ok=True isometry ok=True (7 checked) lambda ok=True max canonical gcd=0 bits; best exact gain 7781.7 bits
+      |UV|=2008,|U|=0,lam=5256:gain=1133.8(h=4122,canon.gcd=0b,iso=Y) |UV|=3250,|U|=1,lam=8505:gain=1835.7(h=6669,canon.gcd=0b,iso=Y) |UV|=5257,|U|=0,lam=13762:gain=2971.3(h=10791,canon.gcd=0b,iso=Y) |UV|=13763,|U|=0,lam=36031:gain=7781.7(h=28249,canon.gcd=0b,iso=Y)
+      reconstruction at N=10^4 bits: NONE(no candidate of height<=2^4999)
+  Sturmian slope above, rho=0 under 7x+1: beta=0.88396 mu=2.4816 Dio_est=2.6180 (> mu); rep_est=1.618038; covered by: Bugeaud-Kim uniform bound only (mu < 2.5099)
+      exact certificates: parity ok=True isometry ok=True (7 checked) lambda ok=True max canonical gcd=0 bits; best exact gain 1876.2 bits
+      |UV|=2008,|U|=0,lam=5256:gain=272.5(h=4984,canon.gcd=0b,iso=Y) |UV|=3250,|U|=1,lam=8505:gain=441.8(h=8063,canon.gcd=0b,iso=Y) |UV|=5257,|U|=0,lam=13762:gain=715.7(h=13046,canon.gcd=0b,iso=Y) |UV|=13763,|U|=0,lam=36031:gain=1876.2(h=34155,canon.gcd=0b,iso=Y)
+      reconstruction at N=10^4 bits: NONE: the unique candidate (height 2^4999) leaves w at letter 10000 (N=10000); no rational of height<=2^4999
+  Sturmian slope above, rho=1/3 under 3x+1: beta=0.88396 mu=1.4011 Dio_est=3.4906 (> mu); rep_est=1.460676; covered by: Theorem S (mu(mu-1) < phi)
+      exact certificates: parity ok=True isometry ok=True (8 checked) lambda ok=True max canonical gcd=0 bits; best exact gain 17772.4 bits
+      |UV|=1024,|U|=257,lam=2932:gain=1634.2(h=1298,canon.gcd=0b,iso=Y) |UV|=3249,|U|=0,lam=7422:gain=2868.7(h=4553,canon.gcd=0b,iso=Y) |UV|=7424,|U|=4175,lam=15928:gain=5526.2(h=10402,canon.gcd=0b,iso=Y) |UV|=8506,|U|=0,lam=29691:gain=17772.4(h=11919,canon.gcd=0b,iso=Y)
+      reconstruction at N=10^4 bits: -
+  Sturmian slope above, rho=1/3 under 5x+1: beta=0.88396 mu=2.0525 Dio_est=3.4906 (> mu); rep_est=1.460676; covered by: Bugeaud-Kim uniform bound only (mu < 2.5099)
+      exact certificates: parity ok=True isometry ok=True (8 checked) lambda ok=True max canonical gcd=0 bits; best exact gain 12232.0 bits
+      |UV|=1024,|U|=257,lam=2932:gain=1032.2(h=1900,canon.gcd=0b,iso=Y) |UV|=2167,|U|=926,lam=5414:gain=967.0(h=4447,canon.gcd=0b,iso=Y) |UV|=5257,|U|=0,lam=12679:gain=1888.5(h=10790,canon.gcd=0b,iso=Y) |UV|=8506,|U|=0,lam=29691:gain=12232.0(h=17459,canon.gcd=0b,iso=Y)
+      reconstruction at N=10^4 bits: NONE: the unique candidate (height 2^4999) leaves w at letter 10000 (N=10000); no rational of height<=2^4999
+  Sturmian slope above, rho=1/3 under 7x+1: beta=0.88396 mu=2.4816 Dio_est=3.4906 (> mu); rep_est=1.460676; covered by: Bugeaud-Kim uniform bound only (mu < 2.5099)
+      exact certificates: parity ok=True isometry ok=True (8 checked) lambda ok=True max canonical gcd=0 bits; best exact gain 8582.2 bits
+      |UV|=1024,|U|=257,lam=2932:gain=635.3(h=2297,canon.gcd=0b,iso=Y) |UV|=2167,|U|=926,lam=5414:gain=37.6(h=5376,canon.gcd=0b,iso=Y) |UV|=5257,|U|=0,lam=12679:gain=-367.1(h=13046,canon.gcd=0b,iso=Y) |UV|=8506,|U|=0,lam=29691:gain=8582.2(h=21109,canon.gcd=0b,iso=Y)
+      reconstruction at N=10^4 bits: NONE(no candidate of height<=2^4999)
+  slope alpha = [0;1,8,(1)] = 0.8960286477; partial quotients [0, 1, 8, 1, 1, 1]...; limsup q_(n+1)/q_n = 1.6181
+    check: lower mechanical word with rho = 0 equals 0 c_alpha (standard-word limit) on 170345 letters: True
+  Sturmian slope above, rho=0 under 7x+1: beta=0.89603 mu=2.5155 Dio_est=2.6180 (> mu); rep_est=1.618038; covered by: BHZ Thm 1.2 (characteristic word 0c_alpha: Dio >= ice = 1 + limsup q_(n+1)/q_n = 2.6181 > mu); no uniform bound applies
+      exact certificates: parity ok=True isometry ok=True (8 checked) lambda ok=True max canonical gcd=0 bits; best exact gain 1573.9 bits
+      |UV|=1386,|U|=1,lam=3625:gain=140.6(h=3484,canon.gcd=0b,iso=Y) |UV|=3627,|U|=1,lam=9492:gain=370.4(h=9122,canon.gcd=0b,iso=Y) |UV|=5867,|U|=0,lam=15359:gain=600.2(h=14759,canon.gcd=0b,iso=Y) |UV|=15360,|U|=0,lam=40212:gain=1573.9(h=38638,canon.gcd=0b,iso=Y)
+      reconstruction at N=10^4 bits: NONE: the unique candidate (height 2^4999) leaves w at letter 10004 (N=10000); no rational of height<=2^4999
+  Sturmian slope above, rho=1/3 under 7x+1: beta=0.89603 mu=2.5155 Dio_est=3.4907 (> mu); rep_est=1.666689; covered by: NO uniform or per-slope guarantee: decided by Dio of the individual word
+      exact certificates: parity ok=True isometry ok=True (7 checked) lambda ok=True max canonical gcd=0 bits; best exact gain 6694.1 bits
+      |UV|=1495,|U|=639,lam=3734:gain=-25.3(h=3759,canon.gcd=0b,iso=Y) |UV|=3626,|U|=0,lam=8745:gain=-376.4(h=9121,canon.gcd=0b,iso=Y) |UV|=5867,|U|=0,lam=20479:gain=5720.5(h=14759,canon.gcd=0b,iso=Y) |UV|=15360,|U|=0,lam=45332:gain=6694.1(h=38638,canon.gcd=0b,iso=Y)
+      reconstruction at N=10^4 bits: NONE: the unique candidate (height 2^5000) leaves w at letter 10000 (N=10000); no rational of height<=2^4999
+  slope alpha = [0;1,(10)] = 0.9099019514; partial quotients [0, 1, 10, 10, 10, 10]...; limsup q_(n+1)/q_n = 10.0990
+    check: lower mechanical word with rho = 0 equals 0 c_alpha (standard-word limit) on 200000 letters: True
+  Sturmian slope above, rho=0 under 7x+1: beta=0.90990 mu=2.5544 Dio_est=11.0980 (> mu); rep_est=1.09903; covered by: BHZ Thm 1.2 (characteristic word 0c_alpha: Dio >= ice = 1 + limsup q_(n+1)/q_n = 11.0990 > mu); no uniform bound applies
+      exact certificates: parity ok=True isometry ok=True (8 checked) lambda ok=True max canonical gcd=0 bits; best exact gain 96732.0 bits
+      |UV|=4096,|U|=2975,lam=12441:gain=9577.0(h=2864,canon.gcd=0b,iso=Y) |UV|=11322,|U|=1,lam=125651:gain=96732.0(h=28919,canon.gcd=0b,iso=Y) |UV|=11386,|U|=65,lam=125651:gain=96732.0(h=28919,canon.gcd=0b,iso=Y) |UV|=16384,|U|=5063,lam=125651:gain=96732.0(h=28919,canon.gcd=0b,iso=Y)
+      reconstruction at N=10^4 bits: NONE: the unique candidate (height 2^2864) leaves w at letter 12441 (N=10000); no rational of height<=2^4999
+  Bugeaud-Kim s' complemented under 5x+1: beta=0.61257 mu=1.4224 Dio_est=2.5099 (> mu); rep_est=1.66229; mu < Dio(s') = 2.5099: covered
+      exact certificates: parity ok=True isometry ok=True (8 checked) lambda ok=True max canonical gcd=0 bits; best exact gain 12469.5 bits
+      |UV|=1861,|U|=0,lam=4669:gain=2021.1(h=2648,canon.gcd=0b,iso=Y) |UV|=2810,|U|=1633,lam=7023:gain=3026.0(h=3997,canon.gcd=0b,iso=Y) |UV|=7253,|U|=0,lam=17314:gain=6996.7(h=10317,canon.gcd=0b,iso=Y) |UV|=11468,|U|=0,lam=28782:gain=12469.5(h=16312,canon.gcd=0b,iso=Y)
+      reconstruction at N=10^4 bits: -
+  Bugeaud-Kim s' complemented under 19x+1: beta=0.61257 mu=2.6022 Dio_est=2.5099 (<= mu); rep_est=1.66229; mu > Dio(s') = 2.5099: Theorem D does NOT apply (sharpness of the uniform Sturmian threshold)
+      exact certificates: parity ok=True isometry ok=True (8 checked) lambda ok=True max canonical gcd=0 bits; best exact gain -8.3 bits
+      |UV|=1861,|U|=0,lam=4669:gain=-173.8(h=4843,canon.gcd=0b,iso=Y) |UV|=2810,|U|=1633,lam=7023:gain=-287.8(h=7311,canon.gcd=0b,iso=Y) |UV|=4215,|U|=0,lam=10061:gain=-907.3(h=10968,canon.gcd=0b,iso=Y) |UV|=11468,|U|=0,lam=28782:gain=-1059.9(h=29842,canon.gcd=0b,iso=Y)
+      reconstruction at N=10^4 bits: -
+  quasi-Sturmian q = 00 S(s), S(0)=1101, S(1)=111 (S(01) != S(10)), s golden Sturmian: p(n) - n for n=11..40 in [5]
+  quasi-Sturmian q under 3x+1: beta=0.88706 mu=1.4060 Dio_est=2.6180 (> mu); rep_est=1.618051; Bugeaud-Kim Thm 3.6 + Lemma 10.3 => Dio(q) >= 2.5099 > mu
+      exact certificates: parity ok=True isometry ok=True (8 checked) lambda ok=True max canonical gcd=4 bits; best exact gain 17137.0 bits
+      |UV|=1280,|U|=5,lam=3339:gain=1544.7(h=1794,canon.gcd=4b,iso=Y) |UV|=3343,|U|=5,lam=8740:gain=4040.9(h=4699,canon.gcd=0b,iso=Y) |UV|=5403,|U|=2,lam=14141:gain=6544.6(h=7596,canon.gcd=0b,iso=Y) |UV|=14142,|U|=2,lam=37020:gain=17137.0(h=19883,canon.gcd=0b,iso=Y)
+      reconstruction at N=10^4 bits: -
+  quasi-Sturmian q under 5x+1: beta=0.88706 mu=2.0597 Dio_est=2.6180 (> mu); rep_est=1.618051; Bugeaud-Kim Thm 3.6 + Lemma 10.3 => Dio(q) >= 2.5099 > mu
+      exact certificates: parity ok=True isometry ok=True (8 checked) lambda ok=True max canonical gcd=5 bits; best exact gain 7894.7 bits
+      |UV|=1280,|U|=5,lam=3339:gain=712.2(h=2627,canon.gcd=5b,iso=Y) |UV|=3343,|U|=5,lam=8740:gain=1858.8(h=6881,canon.gcd=0b,iso=Y) |UV|=5403,|U|=2,lam=14141:gain=3016.9(h=11124,canon.gcd=1b,iso=Y) |UV|=14142,|U|=2,lam=37020:gain=7894.7(h=29125,canon.gcd=0b,iso=Y)
+      reconstruction at N=10^4 bits: NONE(no candidate of height<=2^4999)
+  quasi-Sturmian q under 7x+1: beta=0.88706 mu=2.4903 Dio_est=2.6180 (> mu); rep_est=1.618051; Bugeaud-Kim Thm 3.6 + Lemma 10.3 => Dio(q) >= 2.5099 > mu
+      exact certificates: parity ok=True isometry ok=True (8 checked) lambda ok=True max canonical gcd=0 bits; best exact gain 1806.4 bits
+      |UV|=1280,|U|=5,lam=3339:gain=157.4(h=3182,canon.gcd=0b,iso=Y) |UV|=3343,|U|=5,lam=8740:gain=420.9(h=8319,canon.gcd=0b,iso=Y) |UV|=5403,|U|=2,lam=14141:gain=690.1(h=13451,canon.gcd=0b,iso=Y) |UV|=14142,|U|=2,lam=37020:gain=1806.4(h=35214,canon.gcd=0b,iso=Y)
+      reconstruction at N=10^4 bits: NONE(no candidate of height<=2^4999)
+  [20s]
+==============================================================================================================
+H3  CODINGS OF A ROTATION BY SEVERAL ARCS  (Lemma J'; complexity p(n) <= k n)
+==============================================================================================================
+  golden rotation, 1-set [0, 9/10) (endpoints 0, 9/10: k0 = 2 classes), rho = 0, under 3x+1: beta=0.9000 mu=1.4265; Lemma J' guarantee mu*(2,phi) = 1.4536 > mu: PROVED; Dio_est = 2.6180
+      exact: iso ok=True parity ok=True best gain 6041.5; |UV|=2048,|U|=451,lam=4181:gain=1902.4(h=2279,canon.gcd=0b,iso=Y) |UV|=8180,|U|=1415,lam=17711:gain=6041.5(h=11670,canon.gcd=0b,iso=Y) |UV|=8192,|U|=1427,lam=17711:gain=6041.5(h=11670,canon.gcd=0b,iso=Y)
+  golden rotation, 1-set [0, 9/10) (endpoints 0, 9/10: k0 = 2 classes), rho = 0, under 5x+1: beta=0.9000 mu=2.0897; Lemma J' guarantee mu*(2,phi) = 1.4536 < mu: not guaranteed; Dio_est = 2.6180
+      exact: iso ok=True parity ok=True best gain 2209.8; |UV|=2048,|U|=451,lam=4181:gain=844.0(h=3337,canon.gcd=0b,iso=Y) |UV|=4181,|U|=0,lam=10946:gain=2209.8(h=8736,canon.gcd=1b,iso=Y) |UV|=8192,|U|=1427,lam=17711:gain=620.3(h=17091,canon.gcd=3b,iso=Y)
+  golden rotation, 1-set [0, 9/10) (endpoints 0, 9/10: k0 = 2 classes), rho = 0, under 7x+1: beta=0.9000 mu=2.5266; Lemma J' guarantee mu*(2,phi) = 1.4536 < mu: not guaranteed; Dio_est = 2.6180
+      exact: iso ok=True parity ok=True best gain 381.7; |UV|=2048,|U|=451,lam=4181:gain=148.9(h=4032,canon.gcd=2b,iso=Y) |UV|=4181,|U|=0,lam=10946:gain=381.7(h=10564,canon.gcd=0b,iso=Y) |UV|=8192,|U|=1427,lam=17711:gain=-2952.4(h=20663,canon.gcd=4b,iso=Y)
+  Lemma J' check, k0 = 2, per convergent (q_n, q_(n+1)/q_n, best option ratio (b+q)/(a+q) over stretches starting before 2(q_n+q_(n+1)), bound mu*(2, q_(n+1)/q_n)): [(5, 1.6, 1.6, 1.4503), (8, 1.625, 1.7778, 1.4549), (13, 1.6154, 2.2308, 1.4531), (21, 1.619, 2.5, 1.4538), (34, 1.6176, 1.7451, 1.4536), (55, 1.6182, 1.875, 1.4537), (89, 1.618, 2.618, 1.4536), (144, 1.6181, 1.9333, 1.4537), (233, 1.618, 1.8326, 1.4536), (377, 1.618, 2.127, 1.4536), (610, 1.618, 2.318, 1.4536), (987, 1.618, 2.4302, 1.4536), (1597, 1.618, 2.618, 1.4536), (2584, 1.618, 1.6917, 1.4536), (4181, 1.618, 2.618, 1.4536), (6765, 1.618, 2.1652, 1.4536), (10946, 1.618, 1.7472, 1.4536), (17711, 1.618, 2.6179, 1.4536), (28657, 1.618, 2.0367, 1.4536), (46368, 1.618, 1.7944, 1.4536), (75025, 1.618, 2.109, 1.4536)]
+    all best ratios >= bound: True
+  census: 160 golden codings, 0-set = union of 2..6 arcs [c_i, c_i + {m alpha}) (m in 13,21,34; bounded discrepancy), c_i rational, rho rational; words of 2^16 letters; 3x+1:
+    min (Dio_est - mu) = +0.3130 (Dio_est 1.8146, mu 1.5015, beta 0.9474, 4 arcs); fraction with Dio_est > mu: 160/160; median Dio_est 2.3641
+    under 5x+1 (mu = 2.3219 beta): fraction with Dio_est > mu: 124/160  [139s]
+==============================================================================================================
+H4  PRIMITIVE SUBSTITUTIONS  (exact: Dio(sigma^w(a)) = sup of l-weighted prefix-pattern ratios)
+==============================================================================================================
+  Fibonacci 0->01,1->0: left PF vector l = (1.0000,0.6180); sup over all j of l-weighted ratio = 2.618028 (phi^2 = 2.618034); prefix certificate (first 300 letters) = 2.596748
+  sigma(0)=0110010100, sigma(1)=11110111111 (primitive), x = sigma^w(0): theta=10.8284 |theta_2|=5.1716 (>1: discrepancy ~ N^0.690, Adamczewski TCS 2003 Thm 13); beta = 0.82843
+    under 3x+1: mu = 1.3130; Dio_est (lengths) = 1.6057; certificate 1.6081 > mu: PROVED (pattern U=x[0,158), V=x[158,169), lambda>=268)
+      exact: iso ok=True parity ok=True best gain 2819.2; |UV|=2408,|U|=1104,lam=3712:gain=690.7(h=3021,canon.gcd=1b,iso=Y) |UV|=7224,|U|=4816,lam=10736:gain=1686.4(h=9050,canon.gcd=8b,iso=Y) |UV|=8328,|U|=2408,lam=13144:gain=2819.2(h=10325,canon.gcd=1b,iso=Y)
+    under 5x+1: mu = 1.9235; Dio_est (lengths) = 1.6057; no certificate > mu found (sup l-ratio over 2^20 letters = 1.6081): method-limited
+      exact: iso ok=True parity ok=True best gain -47.5; |UV|=2408,|U|=1104,lam=3712:gain=-710.3(h=4422,canon.gcd=0b,iso=Y) |UV|=4816,|U|=0,lam=7224:gain=-1614.9(h=8839,canon.gcd=4b,iso=Y) |UV|=8328,|U|=2408,lam=13144:gain=-1977.8(h=15122,canon.gcd=0b,iso=Y)
+  census: 9716 random primitive binary substitutions (|images| <= 16) with aperiodic supercritical fixed points (beta log2 3 > 1; 11 periodic ones excluded):
+    3x+1: min(certificate - mu) = +0.2951; all certified (certificate > mu): True -> PC PROVED on each of these fixed points (Theorem D + Lemma F); 3944 of them have |theta_2| < 1 (bounded discrepancy: members of a C2 strip); periodic fixed points excluded beforehand
+    tightest bounded-discrepancy member: sigma(0)=0111010111101111 sigma(1)=11110 start 0: beta=0.7760 certificate 1.6906 vs mu_3 = 1.2299, |theta_2| = 0.536
+    5x+1: fraction with certificate > mu_5 = 9617/9716; min margin -0.3154 (method-limited instances exist on the DRIFT side)  [172s]
+==============================================================================================================
+H5  THE SQUARE-SWAP BLOCK WORD Y = b_0 b_1 ...,  b_n = 1^8 0 1 if n is a nonzero square, else 1^9 0
+==============================================================================================================
+  length 1048570, beta = 0.9 (exact 9/10), discrepancy a_s - 0.9 s in [-0.100, 0.900] (width 1), complexity p(n) at n=1,11,...: [2, 14, 32, 44, 64, 84]
+  3x+1, mu = 0.9 log2 3 = 1.4265.  max_j (j+LPF)/j per dyadic scale: [(6, 2.1143), (7, 1.8594), (8, 1.7071), (9, 1.5346), (10, 1.3864), (11, 1.2623), (12, 1.1887), (13, 1.1372), (14, 1.0973), (15, 1.0688), (16, 1.0493), (17, 1.0348), (18, 1.0247)]
+  LPF(j)/sqrt(j) at the per-scale maximiser (Proposition Y: LPF(j) <= 13 sqrt(j) + 60): [(8, 11.83), (9, 12.19), (10, 12.4), (11, 12.52), (12, 12.58), (13, 12.6), (14, 12.62), (15, 12.63), (16, 12.64), (17, 12.64), (18, 12.64), (19, 12.65)]
+  Theorem D does not apply (Dio(Y) = 1 < mu).  Exact Theorem-R gains of the best periodic approximants: best 77.6 bits at |UV|=280; iso ok=True; per-scale best linear-gain estimates [(4, 35), (5, 32), (6, 67), (7, 77), (8, 79), (9, 56), (10, -41), (11, -373), (12, -1015), (13, -2441), (14, -5544), (15, -11944), (16, -24755), (17, -51815), (18, -105457), (19, -214498)]
+      |UV|=1030,|U|=820,lam=1428:gain=-42.3(h=1470,canon.gcd=0b,iso=Y) |UV|=2048,|U|=1758,lam=2548:gain=-291.7(h=2840,canon.gcd=0b,iso=Y) |UV|=4096,|U|=3686,lam=4828:gain=-921.7(h=5750,canon.gcd=0b,iso=Y) |UV|=8440,|U|=7850,lam=9598:gain=-2442.4(h=12040,canon.gcd=0b,iso=Y) |UV|=16840,|U|=16010,lam=18478:gain=-5544.7(h=24023,canon.gcd=0b,iso=Y) |UV|=32768,|U|=31618,lam=34798:gain=-11591.7(h=46390,canon.gcd=0b,iso=Y)
+  reconstruction at N=10^4 bits: NONE(no candidate of height<=2^4999)
+  block identity: Phi_2(Y) = -(1/3^9) sum_n c_n rho^n, rho = 2^10/3^9, c_n = R_B = 19171 (n not a square), R_B' = 19427 (n a square): exact mod 2^30000: True
+    i.e. Phi_2(Y) = -1 - 512/(3^9-2^10) - (256/3^9) sum_(k>=1) rho^(k^2);  Phi_2(Y) in Q <=> theta(rho) in Q (in Q_2).
+  Phi_R(Y) = -1.028116576124011430290946170679076594258 (same expression summed in R; theta values at algebraic q in (0,1) are transcendental [R])
+  Theorem Y certificate (2-adic Tschakaloff-Pade linear forms N_n(A_n theta - B_n), exact): (n, m, v2, predicted, log2 H_n, margin v2 - log2 H_n):
+    (1,0,70,70,43,+27) (1,1,140,140,86,+54) (2,0,190,190,143,+47) (2,1,300,300,214,+86) (3,0,370,370,300,+70) (3,2,690,690,528,+162) (4,0,610,610,514,+96) (4,2,1010,1010,799,+211) (5,0,910,910,785,+125) (5,3,1660,1660,1341,+319) (6,0,1270,1270,1113,+157) (6,4,2470,2470,2026,+444) (7,0,1690,1690,1498,+192) (7,4,3050,3050,2525,+525) (8,0,2170,2170,1940,+230) (8,5,4120,4120,3438,+682) (9,0,2710,2710,2439,+271) (9,6,5350,5350,4493,+857) (10,0,3310,3310,2996,+314) (10,6,6190,6190,5221,+969) (11,0,3970,3970,3609,+361) (11,7,7680,7680,6505,+1175) (12,0,4690,4690,4279,+411) (12,7,8680,8680,7375,+1305) (13,0,5470,5470,5007,+463) (13,8,10430,10430,8887,+1543) (14,0,6310,6310,5792,+518) (14,9,12340,12340,10542,+1798)
+    all v2 == predicted: True; margins increase: True; asymptotic margin (m=0): L n^2 (3 - 2 mu) = 1.47 n^2 > 0  =>  Phi_2(Y) is IRRATIONAL (PROVED)
+  5x+1 square-swap word with B = 1^60^4: block identity ok=True; mu_bar = max(1, log2(5^6)/10) = 1.3932 < phi: Lemma P applies; margins at n=10: [384, 1091]
+  5x+1 square-swap word with B = 1^80^2: block identity ok=True; mu_bar = max(1, log2(5^8)/10) = 1.8575 > phi: Lemma P does not apply; margins at n=10: [-591, -609]
+  [185s]
+==============================================================================================================
+H6  THE CUBE-SWAP BLOCK WORD Y3 (b_n = 1^8 0 1 iff n is a nonzero cube): the smallest open instance found
+==============================================================================================================
+  beta = 9/10, discrepancy in [-0.100, 0.900] (width 1); Dio profile [(8, 2.2345), (9, 2.0989), (10, 1.9731), (11, 1.8609), (12, 1.6877), (13, 1.5672), (14, 1.4807), (15, 1.39), (16, 1.3108), (17, 1.2475), (18, 1.1987)]
+  exact Theorem-R gains: best 1533.5 bits at |UV|=7840 (iso ok=True); per-scale linear-gain estimates [(6, 135), (7, 168), (8, 362), (9, 598), (10, 853), (11, 1312), (12, 1534), (13, 1493), (14, 977), (15, -1263), (16, -8064), (17, -24995), (18, -61900), (19, -148329)]
+  reconstruction at N=10^4 bits: NONE: the unique candidate (height 2^5000) leaves w at letter 10002 (N=10000); no rational of height<=2^4999
+  block identity: Phi_2(Y3) = -1 - 512/(3^9-2^10) - (256/3^9) sum_(k>=1) rho^(k^3), rho = 2^10/3^9: exact mod 2^30000: True
+  partial sums s_K of sum rho^(k^3): height 3^(9K^3) = 2^(14.26 K^3) vs 2-adic error 2^(-10 (K+1)^3): Liouville fails (needs log2(3^9)/10 < 1); the series has no first-order q-difference equation, so Lemma P's construction does not apply.
+  STATUS: irrationality of Phi_2(Y3) (equivalently of sum_(k>=1) (2^10/3^9)^(k^3) in Q_2) is OPEN.  [193s]
+==============================================================================================================
+C1  SUPERCRITICAL STRIPS: automaton, entropy, E-sets K_q (E = -Phi_R of the tail), decoupled-Mahler pressure
+==============================================================================================================
+  strip(A/B, W): states k = B a_s - A s in [0, floor(BW)]; letter 1: k += B-A, letter 0: k -= A.
+  K_q = {E(w') : w' strip tail from q}, E(1w) = 1/3 + 2E(w)/3, E(0w) = 2E(w).  If the one-step images of the hulls
+  overlap at every state, K_q = [lo_q, hi_q] exactly (graph-directed IFS; 'overlap' column).  m_q = min(1, hi_q - lo_q)
+  = measure of frac(K_q) then.  Decoupled pressure P_MZ = log2(3^alpha/2) + log2 rho(A_q,q' m_q'): P_MZ > 0 means the
+  word-free Mahler relaxation MZ is heuristically FALSE (vacuous when all m_q = 1); P_MZ < 0 means MZ is non-vacuous
+  and heuristically TRUE, and MZ => C2 for that strip (Proposition M).  Where 'overlap' is False, m_q is the hull
+  length, an upper bound for the measure of frac(K_q), so the printed P_MZ is an upper bound.
+  'forced cycle' = a cycle through states with a single allowed letter (Proposition Rnd needs: none).
+   alpha  |  W  | states | entropy(bits/letter) | E hull            | overlap | min/max m_q   | #q with m_q<1 | P_MZ   | forced cycle
+   2/3   | 1.0 |      4 |               0.3333 | [ 3.667,  14.000] | True    | 1.000/1.000 |             0 | +0.390 | False
+   2/3   | 1.5 |      5 |               0.5283 | [ 2.778,  20.000] | True    | 1.000/1.000 |             0 | +0.585 | False
+   2/3   | 2.0 |      7 |               0.7018 | [ 1.790,  40.000] | True    | 1.000/1.000 |             0 | +0.758 | False
+   2/3   | 3.0 |     10 |               0.8041 | [ 1.234, 112.000] | True    | 1.000/1.000 |             0 | +0.861 | False
+   3/4   | 1.0 |      5 |               0.2500 | [ 1.485,   4.182] | True    | 0.242/0.818 |             5 | -0.478 | False
+   3/4   | 1.5 |      7 |               0.5000 | [ 1.215,   6.909] | True    | 0.512/1.000 |             2 | +0.604 | False
+   3/4   | 2.0 |      9 |               0.6115 | [ 1.096,  10.545] | True    | 0.632/1.000 |             2 | +0.778 | False
+   3/4   | 3.0 |     13 |               0.7088 | [ 1.019,  27.636] | True    | 0.708/1.000 |             1 | +0.892 | False
+   4/5   | 1.0 |      6 |               0.2000 | [ 1.218,   2.980] | False   | 0.109/0.551 |             6 | -1.362 | False
+   4/5   | 1.5 |      8 |               0.4000 | [ 1.097,   4.204] | True    | 0.230/1.000 |             4 | +0.354 | False
+   4/5   | 2.0 |     11 |               0.5419 | [ 1.029,   6.939] | True    | 0.298/1.000 |             3 | +0.730 | False
+   4/5   | 3.0 |     16 |               0.6310 | [ 1.004,  16.816] | True    | 0.323/1.000 |             3 | +0.874 | False
+   9/10  | 1.0 |     11 |               0.1000 | [ 1.018,   2.082] | False   | 0.009/0.352 |            11 | -3.514 | False
+   9/10  | 1.5 |     16 |               0.2807 | [ 1.002,   2.625] | False   | 0.025/0.962 |            16 | -0.099 | False
+   9/10  | 2.0 |     21 |               0.3554 | [ 1.000,   4.247] | False   | 0.027/1.000 |             9 | +0.631 | False
+   9/10  | 3.0 |     31 |               0.4135 | [ 1.000,   8.741] | False   | 0.027/1.000 |             9 | +0.800 | False
+  [193s]
+==============================================================================================================
+C2  SUPERCRITICAL STRIP WORDS OF WIDTH >= 1 (random / greedy low-repetition / Sturmian-perturbed)
+==============================================================================================================
+  strip 3/4 W=2.0 random: beta=0.7500 mu=1.1887 discrepancy in [-1.00,1.00] entropy~0.334 bits/letter
+      Dio profile (scale: max (j+LPF)/j): [(8, 1.0856), (9, 1.0637), (10, 1.029), (11, 1.0154), (12, 1.0084), (13, 1.0053), (14, 1.003)]
+      exact Theorem-R gains: best 18.7 bits at |UV|=34 (iso ok=True, parity ok=True); per-scale linear-gain estimates [(6, 8), (7, -3), (8, -26), (9, -71), (10, -165), (11, -356), (12, -746), (13, -1518), (14, -3066)]
+      reconstruction N=10^4: NONE(no candidate of height<=2^4999)
+      Phi_R(w) = -2.8814725952923576772773664732338181   Phi_2(w) mod 2^64 = 0x6560eaee9db51d37
+  strip 3/4 W=2.0 greedy: beta=0.7500 mu=1.1887 discrepancy in [-1.00,1.00] entropy~0.327 bits/letter
+      Dio profile (scale: max (j+LPF)/j): [(8, 1.0737), (9, 1.0358), (10, 1.031), (11, 1.017), (12, 1.0141), (13, 1.0057), (14, 1.0034)]
+      exact Theorem-R gains: best 4.7 bits at |UV|=25 (iso ok=True, parity ok=True); per-scale linear-gain estimates [(6, 1), (7, -13), (8, -33), (9, -81), (10, -163), (11, -360), (12, -729), (13, -1517), (14, -3055)]
+      reconstruction N=10^4: NONE(no candidate of height<=2^4999)
+      Phi_R(w) = -3.2259623484503857754162894151635563   Phi_2(w) mod 2^64 = 0x5993ba2d073e9879
+  strip 4/5 W=1.5 random: beta=0.8000 mu=1.2680 discrepancy in [-0.60,0.80] entropy~0.427 bits/letter
+      Dio profile (scale: max (j+LPF)/j): [(8, 1.1344), (9, 1.0625), (10, 1.0457), (11, 1.0199), (12, 1.0108), (13, 1.0065), (14, 1.0037)]
+      exact Theorem-R gains: best 18.5 bits at |UV|=49 (iso ok=True, parity ok=True); per-scale linear-gain estimates [(6, 0), (7, -4), (8, -41), (9, -108), (10, -241), (11, -517), (12, -1069), (13, -2155), (14, -4358)]
+      reconstruction N=10^4: NONE(no candidate of height<=2^4999)
+      Phi_R(w) = -1.6154189340448560993212204455206541   Phi_2(w) mod 2^64 = 0x6579e6c78bed0e2f
+  strip 4/5 W=1.5 greedy: beta=0.8000 mu=1.2680 discrepancy in [-0.60,0.80] entropy~0.417 bits/letter
+      Dio profile (scale: max (j+LPF)/j): [(8, 1.0796), (9, 1.0415), (10, 1.0305), (11, 1.0274), (12, 1.0114), (13, 1.0071), (14, 1.004)]
+      exact Theorem-R gains: best 6.6 bits at |UV|=34 (iso ok=True, parity ok=True); per-scale linear-gain estimates [(6, -5), (7, -15), (8, -49), (9, -120), (10, -246), (11, -520), (12, -1058), (13, -2159), (14, -4350)]
+      reconstruction N=10^4: NONE: the unique candidate (height 2^5000) leaves w at letter 10000 (N=10000); no rational of height<=2^4999
+      Phi_R(w) = -2.0433721639776007603454599373544385   Phi_2(w) mod 2^64 = 0x5ff3971fac433be9
+  strip 9/10 W=1.5 random: beta=0.9000 mu=1.4265 discrepancy in [-0.70,0.80] entropy~0.320 bits/letter
+      Dio profile (scale: max (j+LPF)/j): [(8, 1.2305), (9, 1.1166), (10, 1.066), (11, 1.0455), (12, 1.0229), (13, 1.0114), (14, 1.0069)]
+      exact Theorem-R gains: best 30.5 bits at |UV|=85 (iso ok=True, parity ok=True); per-scale linear-gain estimates [(6, 31), (7, -29), (8, -50), (9, -171), (10, -390), (11, -802), (12, -1675), (13, -3420), (14, -6924)]
+      reconstruction N=10^4: NONE: the unique candidate (height 2^4998) leaves w at letter 10000 (N=10000); no rational of height<=2^4999
+      Phi_R(w) = -1.1556754323435170807486619650611169   Phi_2(w) mod 2^64 = 0x5f01e2f02629c89f
+  strip 9/10 W=1.5 greedy: beta=0.9000 mu=1.4265 discrepancy in [-0.70,0.80] entropy~0.326 bits/letter
+      Dio profile (scale: max (j+LPF)/j): [(8, 1.125), (9, 1.0845), (10, 1.0469), (11, 1.043), (12, 1.0235), (13, 1.0149), (14, 1.0073)]
+      exact Theorem-R gains: best 11.6 bits at |UV|=35 (iso ok=True, parity ok=True); per-scale linear-gain estimates [(6, 9), (7, -9), (8, -83), (9, -186), (10, -399), (11, -828), (12, -1676), (13, -3394), (14, -6902)]
+      reconstruction N=10^4: NONE(no candidate of height<=2^4999)
+      Phi_R(w) = -1.4681671256972429912972005892095834   Phi_2(w) mod 2^64 = 0xf09e3d43ad7e971b
+  strip 9/10 W=2.0 random: beta=0.9000 mu=1.4265 discrepancy in [-1.00,1.00] entropy~0.283 bits/letter
+      Dio profile (scale: max (j+LPF)/j): [(8, 1.2188), (9, 1.1172), (10, 1.0671), (11, 1.046), (12, 1.0233), (13, 1.0116), (14, 1.007)]
+      exact Theorem-R gains: best 32.1 bits at |UV|=82 (iso ok=True, parity ok=True); per-scale linear-gain estimates [(6, 32), (7, -29), (8, -53), (9, -171), (10, -389), (11, -792), (12, -1668), (13, -3444), (14, -6911)]
+      reconstruction N=10^4: NONE(no candidate of height<=2^4999)
+      Phi_R(w) = -1.3772564360112219993785859839331214   Phi_2(w) mod 2^64 = 0x139ce2a821fc6d67
+  strip 9/10 W=2.0 greedy: beta=0.9000 mu=1.4265 discrepancy in [-1.00,0.80] entropy~0.280 bits/letter
+      Dio profile (scale: max (j+LPF)/j): [(8, 1.1278), (9, 1.0979), (10, 1.0557), (11, 1.0412), (12, 1.0267), (13, 1.0123), (14, 1.0067)]
+      exact Theorem-R gains: best 13.2 bits at |UV|=32 (iso ok=True, parity ok=True); per-scale linear-gain estimates [(6, -11), (7, -9), (8, -79), (9, -171), (10, -382), (11, -826), (12, -1667), (13, -3437), (14, -6922)]
+      reconstruction N=10^4: NONE: the unique candidate (height 2^4998) leaves w at letter 10000 (N=10000); no rational of height<=2^4999
+      Phi_R(w) = -1.7489157861107981707972260977796182   Phi_2(w) mod 2^64 = 0x76cb7fcae73de8a9
+  strip sqrt2/2 W=3/2 random: beta=0.7071 mu=1.1207 discrepancy in [-0.75,0.75] entropy~0.429 bits/letter
+      Dio profile (scale: max (j+LPF)/j): [(8, 1.0938), (9, 1.0632), (10, 1.0274), (11, 1.0156), (12, 1.0085), (13, 1.0052), (14, 1.0026)]
+      exact Theorem-R gains: best 15.4 bits at |UV|=98 (iso ok=True, parity ok=True); per-scale linear-gain estimates [(6, 17), (7, 10), (8, -7), (9, -38), (10, -102), (11, -220), (12, -467), (13, -960), (14, -1947)]
+      reconstruction N=10^4: NONE(no candidate of height<=2^4999)
+      Phi_R(w) = -3.7339644119394849089772698006859416   Phi_2(w) mod 2^64 = 0xe2bc1dab8efb74eb
+  strip sqrt2/2 W=3/2 perturbed: beta=0.7071 mu=1.1207 discrepancy in [-0.75,0.75] entropy~0.247 bits/letter
+      Dio profile (scale: max (j+LPF)/j): [(8, 1.184), (9, 1.0886), (10, 1.1103), (11, 1.0537), (12, 1.0352), (13, 1.0211), (14, 1.0124)]
+      exact Theorem-R gains: best 21.8 bits at |UV|=375 (iso ok=True, parity ok=True); per-scale linear-gain estimates [(6, 11), (7, 9), (8, 24), (9, -20), (10, -12), (11, -160), (12, -376), (13, -834), (14, -1861)]
+      reconstruction N=10^4: NONE(no candidate of height<=2^4999)
+      Phi_R(w) = -3.636853469542569891334856905032578   Phi_2(w) mod 2^64 = 0xed7e33fa07d073de
+  [215s]
+==============================================================================================================
+C3  PROPOSITION M CHECKS
+==============================================================================================================
+  (i) eventually periodic supercritical words u v^inf: Phi_R(u v^inf) = Phi_2(u v^inf) (same rational), so L = 0:
+      u=-    v=1            supercritical=True: P/Q = -1  real series = -1.0  |diff| = 2.67e-51
+      u=-    v=110          supercritical=True: P/Q = -5  real series = -5.0  |diff| = 7.35e-46
+      u=01   v=110          supercritical=True: P/Q = -22/3  real series = -7.333333333333333333333333  |diff| = 7.74e-46
+      u=-    v=11101        supercritical=True: P/Q = -73/49  real series = -1.48979591836734693877551  |diff| = 3.74e-50
+      u=100  v=1101110      supercritical=True: P/Q = -2411/345  real series = -6.988405797101449275362319  |diff| = 9.7e-48
+      u=-    v=11110111001  supercritical=True: P/Q = -8113/4513  real series = -1.7976955461998670507423  |diff| = 2.92e-48
+  (ii) tail recursion E_(s+1) = E_s/2 (w_s = 0), (3E_s - 1)/2 (w_s = 1), E_s = -Phi_R(sigma^s w) > 0, on a 3/4-strip word:
+      E_0..E_7 = ['3.7341614', '1.8670807', '2.3006211', '2.9509316', '1.4754658', '1.7131987', '2.069798', '2.6046971']; recursion holds to 1e-20: True
+  [215s]
+==============================================================================================================
+C4  WHY THE PROVED MECHANISMS STOP (measurements)
+==============================================================================================================
+   alpha  | lambda = 3^alpha/2 | orbit values <= X (hypothetical strip orbit) | Monks-Yazinski liminf a_s/s >= log_3 2 = 0.6309
+    0.65  |             1.0212 | ~ log X / log lambda =  47.73 log X (density zero)  | satisfied (0.65 > 0.6309)
+    0.70  |             1.0788 | ~ log X / log lambda =  13.18 log X (density zero)  | satisfied (0.70 > 0.6309)
+    0.75  |             1.1398 | ~ log X / log lambda =   7.64 log X (density zero)  | satisfied (0.75 > 0.6309)
+    0.80  |             1.2041 | ~ log X / log lambda =   5.38 log X (density zero)  | satisfied (0.80 > 0.6309)
+    0.90  |             1.3439 | ~ log X / log lambda =   3.38 log X (density zero)  | satisfied (0.90 > 0.6309)
+    0.95  |             1.4198 | ~ log X / log lambda =   2.85 log X (density zero)  | satisfied (0.95 > 0.6309)
+   capacity (in-house (D2)-(D2c)) needs n_j <= C j; supercritical strips give n_j >= c lambda^j: the counting inequality
+   N <= #{admissible integers <= C lambda^N} ~ lambda^N / 3 always holds, and E_eps (density zero) contains the orbit
+   without contradiction.  [215s]
+DONE [215s]
