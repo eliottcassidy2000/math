@@ -105,6 +105,9 @@ above must be read as "do what choice does, *but specifically for
   treat the hostile points of the relaxation as its escape obligations.
 * Counterindication: equivalent reformulations with choice can keep the
   full dimension (the undirected game). A thin exceptional set can still
-  carry an unbounded chain of escapes (Q2 near `1/2`).
+  carry an unbounded chain of escapes (Q2 near `1/2`). The ladder
+  cannot separate `3n+1` from `5n+1`: choice games tip only near `q=10`.
+  Use the ladder to locate difficulty, never as evidence that the relaxed
+  statement carries the original's special features.
 * Evidence: this session; Applegate--Lagarias's single-class obstruction;
   Caraiani's `5x+1` semigroup (per the atlas).
