@@ -436,6 +436,13 @@ near `0.2%` (`2077` at `10^6`), much like forward stopping times.
   in interrupting rising runs (`6 mod 8`). Collatz offers no such move, so a
   proof must control long rises with order or archimedean information.
   This is consistent with the inherited word-function theorem.
+* **Choice is generic (correction).** The same choice collapses the `5n+1`
+  relaxation: its mass falls to about `4e-5` at `2^64`, and choice games
+  tip only near `q=10`
+  ([sibling ladder](collatz_procgen_20260922_sibling_dimension_ladder.md) §4;
+  MISTAKES 2026-09-22). So the ladder locates the difficulty but does not
+  carry the drift or the sign, the two features that make Collatz
+  special. A proof strategy suggested by the relaxation must add both.
 * **E-SCC proof program (HYP-9120).**
   1. Finite certificate tables at a fixed level.
   2. Escape lemmas for the hostile families `-1` (bounded price, section 5),
@@ -445,7 +452,10 @@ near `0.2%` (`2077` at `10^6`), much like forward stopping times.
 
   Open are the exact description of `Bad_inf`, uniform escape lemmas for
   its infinitely many rational points, and the bookkeeping of repeated
-  escapes.
+  escapes. For Q2 the first step is done: the Lean-checked mod-27 lemma
+  leaves only `1` and `14 mod 27`. The last step is the real core: near
+  `1/2` escapes cost at least `32/27`, not `1+2^(-j)`, and chains of
+  hostile landings are typical (section 5).
 
 ## 8. Research cards used / candidate
 
@@ -457,7 +467,7 @@ obstruction), and "Use redundant code paths as detectors" (DP versus DFS).
 **Candidate card: "Measure the exceptional set of the relaxation ladder."**
 When an all-orbits statement resists proof, compute the exceptional-set
 growth for the no-choice system, a partial-choice family and a
-full-choice relaxation. A drop from positive to zero dimension pins the
+full-choice relaxation. A large drop in exceptional growth pins the
 missing freedom (here the `6 mod 8` excursion). The hostile points of the
 relaxed system are its escape obligations.
 Counterindication: equivalent reformulations with choice, such as the
