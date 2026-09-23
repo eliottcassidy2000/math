@@ -307,6 +307,29 @@ shows no growth. Cheap long negative `E`-cycles, such as the `{-5,-7}` ride
 at `9/8` per three bits and the seven-cycle at `2187/2048` per eleven,
 keep it bounded. Plain Collatz pays `(3/2)^b`.
 
+## 5b. Which half of Collatz the class-level method can see (PROVED, elementary)
+
+For the shortcut map, a positive integer `n` whose orbit enters a positive
+`3n+1` cycle descends multiplicatively. A positive cycle satisfies
+`x(2^K-3^L)=B>0`, so its loop multiplier `3^L/2^K` is `<1`, and repeated
+loops drive the path multiplier to `0`. Hence **the plus-sheet exceptional
+set `Bad_inf(T)` contains no positive integer that is eventually periodic.
+Its positive integer points, if any, have divergent orbits.** Nontrivial
+plus-sheet cycles are invisible to multiplicative descent. They sit
+exactly at the actual-descent thresholds `B/(2^K-3^L)`, which is the
+inherited cycle gate.
+
+On the minus sheet the loop multiplier is `>1`: `3/2, 9/8, 2187/2048` for
+`{1}, {5,7}` and the seven-cycle. The cycle minima `1, 5, 17` are
+multiplicatively hostile (checked over 60 odd steps). Non-minimal cycle
+points such as `7` descend to the minimum.
+
+So the class-level instruments of this lane address only the divergence
+half of Collatz. The sign enters as follows: positive plus-sheet cycles
+contract multiplicatively, positive minus-sheet cycles expand. This is a
+concrete *order* statement, the sign of `2^K-3^L`, of the kind the
+inherited word-function theorem requires.
+
 ## 6. A negative control: the undirected Collatz game
 
 Allowing backward moves along `T` itself gives a game that is
