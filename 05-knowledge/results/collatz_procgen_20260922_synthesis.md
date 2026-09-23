@@ -142,6 +142,20 @@ the trunk `(4^i-1)/3` is the exit set of the hardest relaxed obstruction.
 1. Q2 near `1/2`: an amortized see-saw. The chain recursion
    `w_{t+1}=(2^(K_t+3)w_t-1)/3^(j_{t+1})` governs repeated hostile
    landings.
+
+   **Why this is the real core (analysis).** Applegate--Lagarias close
+   because their escape cost `1+2^(-j)` tends to `1`, so a chain of
+   escapes costs a bounded product. In `E`, every escape from the `1/2`
+   neighbourhood costs at least `32/27`. The post-escape value
+   `x=1+3*2^(K-1)w (mod 3^D)` depends only on the loop's total halving
+   count `K`. Multi-move exits (factor `3^(-t)`) need `x` in specific
+   classes mod `3^(t+1)`, but a loop ratio below `27/8` (or `81/8`)
+   leaves only one to three admissible values of `K`, too few to steer
+   `2^(K-1)w` against an adversarial `w` modulo `ord_(3^t)(2)`. So chains
+   of hostile landings can accumulate cost at least `32/27` per link.
+   Bounding their length for integers is a Collatz-type
+   digit-propagation question. The relaxation is far thinner than
+   Collatz but keeps a genuine Collatz core.
 2. Loops through `1` of every length with bounded ratio (HYP-9122). This is
    a carry-covering statement at the convergent clocks.
 3. The exact dimension of `Bad_inf(E)`: zero or small positive. A
