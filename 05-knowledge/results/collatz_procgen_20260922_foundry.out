@@ -1,119 +1,114 @@
-generated cards: 559 over 9 problems, 17 mechanisms, 13 lenses
+generated cards: 728 over 10 problems, 21 mechanisms, 13 lenses
 
 === collatz: 3n+1: every positive integer reaches 1  [OPEN; exceptional dim 0.95]
-  no-divergence          unblocked: ['automata-rewriting', 'transversality']  (placeholder: lyapunov-potential)
-  unique-cycle           unblocked: ['automata-rewriting', 'carry-staircase', 'functional-equation', 'linear-forms-logs', 'order-pattern', 'transversality']  (placeholder: lyapunov-potential)
+  no-divergence          unblocked: ['automata-rewriting']  (placeholder: lyapunov-potential,transversality-hard)
+  unique-cycle           unblocked: ['automata-rewriting', 'carry-staircase', 'functional-equation', 'linear-forms-logs', 'order-pattern', 'transversality-proved']  (placeholder: lyapunov-potential,transversality-hard)
   finite-check           unblocked: ['sparse-verification']
-  hybrid plans (one unblocked real mechanism per sub-target): 12
+  hybrid plans (one unblocked real mechanism per sub-target): 6
     - no-divergence<-automata-rewriting + unique-cycle<-automata-rewriting + finite-check<-sparse-verification
     - no-divergence<-automata-rewriting + unique-cycle<-carry-staircase + finite-check<-sparse-verification
     - no-divergence<-automata-rewriting + unique-cycle<-functional-equation + finite-check<-sparse-verification
     - no-divergence<-automata-rewriting + unique-cycle<-linear-forms-logs + finite-check<-sparse-verification
     - no-divergence<-automata-rewriting + unique-cycle<-order-pattern + finite-check<-sparse-verification
-    - no-divergence<-automata-rewriting + unique-cycle<-transversality + finite-check<-sparse-verification
+    - no-divergence<-automata-rewriting + unique-cycle<-transversality-proved + finite-check<-sparse-verification
 
 === e-scc: graph E: every n reaches 1 and 1 reaches every non-multiple of 3  [OPEN (HYP-9120); exceptional dim 0.0]
-  Q1-forward             unblocked: ['automata-rewriting', 'escape-induction', 'finite-state-periodicity', 'lp-difference-ineq', 'order-pattern', 'transversality']  (placeholder: lyapunov-potential)
-  Q2-backward            unblocked: ['automata-rewriting', 'escape-induction', 'finite-state-periodicity', 'lp-difference-ineq', 'order-pattern', 'transversality']  (placeholder: lyapunov-potential)
-  hybrid plans (one unblocked real mechanism per sub-target): 36
+  Q1-forward             unblocked: ['automata-rewriting']  (placeholder: lyapunov-potential,transversality-hard)
+  Q2-backward            unblocked: ['automata-rewriting']  (placeholder: lyapunov-potential,transversality-hard)
+  hybrid plans (one unblocked real mechanism per sub-target): 1
     - Q1-forward<-automata-rewriting + Q2-backward<-automata-rewriting
-    - Q1-forward<-automata-rewriting + Q2-backward<-escape-induction
-    - Q1-forward<-automata-rewriting + Q2-backward<-finite-state-periodicity
-    - Q1-forward<-automata-rewriting + Q2-backward<-lp-difference-ineq
-    - Q1-forward<-automata-rewriting + Q2-backward<-order-pattern
-    - Q1-forward<-automata-rewriting + Q2-backward<-transversality
 
 === minus-sheet: 3n-1: the three known cycles are all  [OPEN; exceptional dim 0.95]
-  no-divergence          unblocked: ['automata-rewriting', 'transversality']  (placeholder: lyapunov-potential)
-  cycle-catalog          unblocked: ['automata-rewriting', 'carry-staircase', 'functional-equation', 'linear-forms-logs', 'order-pattern', 'transversality']  (placeholder: lyapunov-potential)
-  hybrid plans (one unblocked real mechanism per sub-target): 12
+  no-divergence          unblocked: ['automata-rewriting']  (placeholder: lyapunov-potential,transversality-hard)
+  cycle-catalog          unblocked: ['automata-rewriting', 'capacity-discrepancy', 'carry-staircase', 'functional-equation', 'linear-forms-logs', 'order-pattern', 'periodic-approximant-liouville', 'transversality-proved']  (placeholder: lyapunov-potential,transversality-hard)
+  hybrid plans (one unblocked real mechanism per sub-target): 8
     - no-divergence<-automata-rewriting + cycle-catalog<-automata-rewriting
+    - no-divergence<-automata-rewriting + cycle-catalog<-capacity-discrepancy
     - no-divergence<-automata-rewriting + cycle-catalog<-carry-staircase
     - no-divergence<-automata-rewriting + cycle-catalog<-functional-equation
     - no-divergence<-automata-rewriting + cycle-catalog<-linear-forms-logs
     - no-divergence<-automata-rewriting + cycle-catalog<-order-pattern
-    - no-divergence<-automata-rewriting + cycle-catalog<-transversality
 
 === 5n+1-divergence: some orbit of 5n+1 is unbounded (e.g. 7)  [OPEN; exceptional dim 1.0]
-  one-divergent-orbit    unblocked: ['automata-rewriting', 'order-pattern', 'transversality']  (placeholder: lyapunov-potential)
-  hybrid plans (one unblocked real mechanism per sub-target): 3
+  one-divergent-orbit    unblocked: ['automata-rewriting']  (placeholder: lyapunov-potential,transversality-hard)
+  hybrid plans (one unblocked real mechanism per sub-target): 1
     - one-divergent-orbit<-automata-rewriting
-    - one-divergent-orbit<-order-pattern
-    - one-divergent-orbit<-transversality
 
-=== e-scc-q2: graph E backward half: 1 reaches every m prime to 3 (reduced to m=1,14 mod 27; verified < 7.87e17; endgame = ternary digits of 2^K)  [OPEN (HYP-9120); exceptional dim 0.1]
-  hostile-1-and-1/2      unblocked: ['automata-rewriting', 'order-pattern', 'transversality']  (placeholder: lyapunov-potential)
-  hybrid plans (one unblocked real mechanism per sub-target): 3
+=== e-scc-q2: graph E backward half: 1 reaches every m prime to 3 (reduced to m=1,14 mod 27; verified < 7.87e17; endgame = LOW ternary digits of 2^K w via the kappa formula, not Erdos's top digits)  [OPEN (HYP-9120); exceptional dim 0.0]
+  hostile-1-and-1/2      unblocked: ['automata-rewriting']  (placeholder: lyapunov-potential,transversality-hard)
+  hybrid plans (one unblocked real mechanism per sub-target): 1
     - hostile-1-and-1/2<-automata-rewriting
-    - hostile-1-and-1/2<-order-pattern
-    - hostile-1-and-1/2<-transversality
+
+=== e-scc-q1: graph E forward half: every n reaches 1 (implied by Collatz; -1 thread; endgame = low binary digits of 3^A u)  [OPEN; exceptional dim 0.0]
+  hostile-minus-1-thread unblocked: ['automata-rewriting']  (placeholder: lyapunov-potential,transversality-hard)
+  hybrid plans (one unblocked real mechanism per sub-target): 1
+    - hostile-minus-1-thread<-automata-rewriting
 
 === althofer-game: Althofer 3n+-1 two-player game: no drawn positions  [OPEN (prize 2037; claimed proof under review); exceptional dim 0.0]
-  no-draws               unblocked: ['automata-rewriting', 'escape-induction', 'finite-state-periodicity', 'lp-difference-ineq', 'order-pattern', 'transversality']  (placeholder: lyapunov-potential)
-  hybrid plans (one unblocked real mechanism per sub-target): 6
+  no-draws               unblocked: ['automata-rewriting', 'escape-induction']  (placeholder: lyapunov-potential,transversality-hard)
+  hybrid plans (one unblocked real mechanism per sub-target): 2
     - no-draws<-automata-rewriting
     - no-draws<-escape-induction
-    - no-draws<-finite-state-periodicity
-    - no-draws<-lp-difference-ineq
-    - no-draws<-order-pattern
-    - no-draws<-transversality
 
-=== rational-periodicity: Lagarias: every rational with odd denominator has an eventually periodic 3x+1 orbit  [OPEN; exceptional dim 0.95]
-  no-divergence-all-b    unblocked: ['automata-rewriting', 'transversality']  (placeholder: lyapunov-potential)
-  hybrid plans (one unblocked real mechanism per sub-target): 2
+=== rational-periodicity: Lagarias's Periodicity Conjecture (1985 s2.8): every rational with odd denominator has an eventually periodic 3x+1 parity vector  [OPEN; exceptional dim 0.95]
+  no-divergence-all-b    unblocked: ['automata-rewriting']  (placeholder: lyapunov-potential,transversality-hard)
+  hybrid plans (one unblocked real mechanism per sub-target): 1
     - no-divergence-all-b<-automata-rewriting
-    - no-divergence-all-b<-transversality
 
 === mahler-z: Mahler: no Z-number (xi>0, frac(xi (3/2)^n) < 1/2 for all n)  [OPEN; exceptional dim 0.585]
-  no-safe-integer-code   unblocked: ['automata-rewriting', 'order-pattern', 'transversality']  (placeholder: lyapunov-potential)
-  hybrid plans (one unblocked real mechanism per sub-target): 3
+  no-safe-integer-code   unblocked: ['automata-rewriting']  (placeholder: lyapunov-potential,transversality-hard)
+  hybrid plans (one unblocked real mechanism per sub-target): 1
     - no-safe-integer-code<-automata-rewriting
-    - no-safe-integer-code<-order-pattern
-    - no-safe-integer-code<-transversality
 
 === erdos-ternary: Erdos: 2^n has a ternary digit 2 for n>8  [OPEN; exceptional dim 0.6309]
-  transversal-avoidance  unblocked: ['automata-rewriting', 'order-pattern', 'transversality']  (placeholder: lyapunov-potential)
-  hybrid plans (one unblocked real mechanism per sub-target): 3
+  transversal-avoidance  unblocked: ['automata-rewriting']  (placeholder: lyapunov-potential,transversality-hard)
+  hybrid plans (one unblocked real mechanism per sub-target): 1
     - transversal-avoidance<-automata-rewriting
-    - transversal-avoidance<-order-pattern
-    - transversal-avoidance<-transversality
 
 Blindness rationales:
   residue-certificate: SHEET (class data is 2-adic; conjugate for all odd b); DEFECT (a sparse planted defect changes no residue-class certificate density); UNIFORM (the certificate search is uniform over affine residue maps) [requires thin exceptional set]
-  escape-induction: SHEET (escape lemmas at negated hostile points transfer to the other sheet); DRIFT (Applegate-Lagarias see-saw proves the 5x+1 analogue too (Caraiani 2010)) [requires thin exceptional set]
+  escape-induction: SHEET (escape lemmas at negated hostile points transfer to the other sheet); DRIFT (Applegate-Lagarias see-saw proves the 5x+1 analogue too (Caraiani 2010)); CHAIN (the A-L see-saw needs escape costs 1+2^(-j) -> 1; in E both base points cost >1 at every precision (v4)); DIRECTION (exclusion only) [requires thin exceptional set]
   density-drift: SHEET (function of parity words); DEFECT (measure-theoretic); INTEGRAL (rational cycles have measure zero); UNIFORM (drift sign is decidable)
   fourier-3adic: SHEET (Syrac_- = -Syrac_+ (inherited)); DEFECT (log-density statement); INTEGRAL (measure-theoretic); UNIFORM (applies to all 3n+b)
   linear-forms-logs: DRIFT (says nothing about unbounded orbits); DEFECT (blind to planted divergence)
-  lp-difference-ineq: SHEET (inverse-tree counts are word functions); UNIFORM (LP systems exist for all 3n+b) [requires thin exceptional set]
+  lp-difference-ineq: SHEET (inverse-tree counts are word functions); UNIFORM (LP systems exist for all 3n+b); DEFECT ((v4) gives counting lower bounds (about x^0.84 integers reach 1), never an every-orbit statement); DIRECTION (exclusion/counting only) [requires thin exceptional set]
   lyapunov-potential: none (placeholder)
   conjugacy-shift: SHEET (2-adic); DEFECT (measure); DRIFT (topological); INTEGRAL (all of Z_2); UNIFORM (all maps)
-  finite-state-periodicity: SHEET (bounded orbits on both sheets are periodic) [requires thin exceptional set]
-  transversality: UNIFORM (a dimension criterion alone is decidable)
+  finite-state-periodicity: SHEET (bounded orbits on both sheets are periodic); ENTROPY ((v4) applies only to bounded orbits; growing orbits or chains are out of reach); DIRECTION (exclusion only) [requires thin exceptional set]
+  transversality-proved: ENTROPY (each excludes only a zero-entropy class: few digits, bounded p-adic closeness, end runs, balanced words (transversality lane catalogue)); DRIFT (uniform over multiplicatively independent pairs (Theorem S holds for 5x+1 at alpha<0.804)); DIRECTION (exclusion only)
+  transversality-hard: none (placeholder)
+  periodic-approximant-liouville: ENTROPY (needs long early repetitions: reaches Sturmian/stammering (zero-entropy) words only); DRIFT (Theorem S holds for 5x+1 at alpha<0.804 and for Mahler's map); SHEET (holds for every 3x+r); DIRECTION (exclusion only)
+  capacity-discrepancy: ENTROPY (reaches only the critical slope: supercritical orbits grow exponentially and occupy density zero); SHEET (holds on 3n-1 in the stronger form (D8)); DIRECTION (exclusion only)
+  forward-backward-duality: none
   choice-strategy: SHEET (relaxations are sheet-symmetric); DEFECT (residue-class based); DRIFT (E_5 exceptional mass -> 0 numerically; choice threshold q~10, not 4 (sibling ladder; Caraiani for the semigroup)) [requires thin exceptional set]
-  order-pattern: DRIFT (ordinal patterns alone do not see growth rates)
-  carry-staircase: DRIFT (cycle-only); DEFECT (cycle-only)
+  order-pattern: DRIFT (ordinal patterns alone do not see growth rates); ENTROPY ((v4) realized ordinal patterns are exactly the word-realizable ones (direction lemma); no exclusion of growing words); DIRECTION (exclusion only)
+  carry-staircase: DRIFT (cycle-only); DEFECT (cycle-only); DIRECTION (exclusion only)
   functional-equation: DEFECT (encodes the map globally but proofs so far use growth heuristics)
   automata-rewriting: UNIFORM (a successful interpretation family would be a decidable criterion)
   measure-rigidity: DEFECT (measure statements); INTEGRAL (measure statements)
   sparse-verification: DRIFT (finite); DEFECT (finite); INTEGRAL (finite)
 
 Prior repository notes per mechanism (grep):
-  residue-certificate         47 notes  e.g. arithmetic_braids2_20260917_inverse_completion.md
-  escape-induction            25 notes  e.g. arithmetic_braids2_20260917_synthesis.md
-  density-drift               21 notes  e.g. arithmetic_braids_20260917_collatz.md
-  fourier-3adic                9 notes  e.g. arithmetic_braids_20260917_collatz.md
-  linear-forms-logs           10 notes  e.g. collatz_blueprint_20260921_affine.md
+  residue-certificate         50 notes  e.g. arithmetic_braids2_20260917_inverse_completion.md
+  escape-induction            28 notes  e.g. arithmetic_braids2_20260917_synthesis.md
+  density-drift               23 notes  e.g. arithmetic_braids_20260917_collatz.md
+  fourier-3adic               10 notes  e.g. arithmetic_braids_20260917_collatz.md
+  linear-forms-logs           11 notes  e.g. collatz_blueprint_20260921_affine.md
   lp-difference-ineq           8 notes  e.g. arithmetic_braids2_20260917_inverse_completion.md
   lyapunov-potential           7 notes  e.g. arithmetic_braids_20260917_collatz.md
-  conjugacy-shift             29 notes  e.g. arithmetic_braids2_20260917_signed_cycles.md
+  conjugacy-shift             30 notes  e.g. arithmetic_braids2_20260917_signed_cycles.md
   finite-state-periodicity     3 notes  e.g. collatz_mod6_20260917_reverse_tree_pieces.md
-  transversality               8 notes  e.g. collatz_mod6_20260922_w6_tao_minus_sheet_ladder.md
-  choice-strategy             13 notes  e.g. arithmetic_seams_20260921_operations.md
+  transversality-proved       11 notes  e.g. collatz_mod6_20260922_w6_tao_minus_sheet_ladder.md
+  transversality-hard          3 notes  e.g. collatz_procgen_20260922_barrier_atlas.md
+  periodic-approximant-liouville   9 notes  e.g. arithmetic_braids2_20260917_squarefree_symmetry.md
+  capacity-discrepancy         6 notes  e.g. collatz_guards_20260921_discrepancy.md
+  forward-backward-duality     2 notes  e.g. collatz_procgen_20260922_exceptional_dimension.md
+  choice-strategy             14 notes  e.g. arithmetic_seams_20260921_operations.md
   order-pattern                4 notes  e.g. collatz_mod6_20260922_lead_reflection3.md
-  carry-staircase             54 notes  e.g. arithmetic_braids2_20260917_inverse_completion.md
+  carry-staircase             57 notes  e.g. arithmetic_braids2_20260917_inverse_completion.md
   functional-equation          3 notes  e.g. collatz_procgen_20260922_barrier_atlas.md
   automata-rewriting           3 notes  e.g. collatz_procgen_20260922_barrier_atlas.md
-  measure-rigidity             6 notes  e.g. arithmetic_braids_20260917_geometry.md
+  measure-rigidity             7 notes  e.g. arithmetic_braids_20260917_geometry.md
   sparse-verification          7 notes  e.g. collatz_mod6_20260917_extended_collatz_scc.md
 
 PROBE exceptional counts at 2^20 (the THIN requirement, measured):
