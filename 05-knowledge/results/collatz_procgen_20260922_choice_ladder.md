@@ -107,9 +107,15 @@ consequence. On the backward side the inherited sharp rate
 `exp(-I(c))=0.758751` gives greedy-`G` exponent `log_3(3*0.758751)=0.748`.
 
 So the ladder is: no choice, dimension `0.95` (forward) and `0.75`
-(backward); `E`-choice, counts that grow at most slowly (dimension `0` is
-conjectured, HYP-9120); Applegate--Lagarias multipliers, the single point
-`-1`.
+(backward); `E`-choice, counts that grow slowly; Applegate--Lagarias
+multipliers, the single point `-1`. **The `E` exponent is not
+determined.** Local minima of the forward counts (`124, 255, 454` at
+`m=16, 27, 35`) grow by about `0.1` bit per level. The backward counts
+(`14` at `r=6` to `52` at `r=16`) grow by about `0.12` trit per level.
+This fits a small positive dimension, near `0.1`, as well as
+polynomial growth (about `m^2`). `dim Bad_inf(E)=0` is therefore
+OPEN, not supported. Deciding it needs `m` near `80`, beyond the
+present DFS.
 
 ## 3. Where the gain comes from: the rising-run excursion (FINITE-EXACT)
 
@@ -122,6 +128,19 @@ continues the run (`(3x+1)/2=3 mod 4`). The collapse is therefore driven by
 neighbourhood of `-1`. Excursions at `0 mod 8` do nothing measurable.
 HYP-9121 records the conjecture that `S={6 mod 8}` already has
 subexponential exceptional growth.
+
+**Greedy fingerprint (FINITE-EXACT, `2^20`,
+`collatz_procgen_20260922_greedy_choice_fingerprint.py`).** The script
+adds even classes mod `64` to `S` greedily, each time taking the class
+that most reduces the exceptional count. The order is `54, 62, 60, 28, 22,
+14, 50, 30`, with counts `14509, 7643, 4503, 2369, 1631, 1282, 1046, 893`,
+against `27328` for Collatz and `664` for all evens. Eight of the 32 even
+classes mod 64 recover `97%` of the full collapse. The first choice is
+`54=-10 mod 64`, the image `3x+1` of odd `x=39 mod 64`, the entry of a
+three-rise run; it alone removes `47%`, more than the deep `-1`
+neighbourhood `62 mod 64` removes first. Five of the eight classes are
+`6 mod 8` (`54, 62, 22, 14, 30`), two are `4 mod 8` (`60, 28`) and one is
+`2 mod 8` (`50`).
 
 ## 4. The hostile points are rationals over the other prime
 
@@ -202,6 +221,51 @@ therefore fail at a rare `s`; a robust version must allow other exit
 words (HYP-9122). Every loop through `1` has ratio at least
 `13/9` for `s>=2`, from the last two carry terms.
 
+**Uniform descent off two classes (PROVED by an exhaustive certificate
+table).** Let `m>=1` with `3` not dividing `m` and `m` not `1` or `14 mod
+27`. Then `m` has a legal reverse `E`-path of at most six moves to an
+integer `m'<=(8/9)m` with `3` not dividing `m'`. The certificate depends
+only on `m mod 3^7`. All `1296` such unit classes were checked by two
+independent programs: a C dynamic programme and an exact-rational Python
+path search (`collatz_procgen_20260922_q2_uniform_descent_check.py`,
+output `..._q2_uniform_descent.out`). The worst class is `275 mod 3^7`, with
+path `k=3, k=0` and multiplier exactly `8/9`. The worst factor stays `8/9`
+at every depth `6<=r<=16` (`..._q2_worst_factor.c`). Positivity: values stay
+positive integers, since the move `k=0` from `1` is illegal.
+**Consequence: Q2 reduces exactly to the two hostile neighbourhoods
+`m=1 mod 27` and `m=14=1/2 mod 27`.** The thread computation to depth 27
+agrees. The `134` exceptional classes mod `3^28` are the class of `1` and
+`133` classes `=1/2 mod 27`; the latter include the dyadic points
+`1/2+3^j/2^e`, such as `43/32=1/2+27/32`, `209/256=1/2+81/256` and
+`4235/4096=1/2+2187/4096`. The counts at depths `12,19,24,27` are
+`30,67,94,134`.
+
+**The `1/2` neighbourhood costs at least `8/3` (PROVED).** Every legal
+reverse path from the 3-adic point `1/2` first lands on an integer
+`y>=1`. The move `k=1` gives `0` and is illegal. So
+`y=(2^K/3^s)(1/2)-B/3^s`, which gives `2^K/3^s=2(y+B/3^s)>=2(1+1/3)=8/3`.
+Hence an integer `m` with `v_3(2m-1)=j` that follows a path of `1/2` for
+`s<j` steps multiplies its offset `m-1/2` by at least `8/3`. Routing through
+`1` with the 1-escape lemma never descends directly: the offset multiplier
+is at least `(8/3)(13/9)/3>1`. Closing Q2 near `1/2` therefore needs an
+amortized, Applegate--Lagarias-type argument. It must charge each escape
+(bounded cost) against the 3-adic digits it consumes, and use the
+uniform `8/9` lemma on fresh classes. This is the precise remaining gap
+for Q2 (HYP-9120).
+
+**The forward half does not reduce to one class (FINITE-EXACT,
+`collatz_procgen_20260922_q1_worst_factor.c`).** Outside `x=-1 mod 4` every
+forward class descends at once (factor at most `3/4`). But at `2^22` there
+remain `6, 18, 48, 120` exceptional classes outside `-1 mod 8, 16, 32, 64`,
+and the worst certified factor outside `-1 mod 2^J` is `1.5` for `J>=5`.
+The exceptional classes mod `2^36` have `v_2(c+1)` spread from `2` to `36`
+(bulk `4..9`). The forward hostile family reads `-1-2^i/3^j` (`-13/9=-1-4/9`,
+`-35/27=-1-8/27`, `-97/81=-1-16/81`, `-113/81=-1-32/81`, `-275/243=-1-32/243`,
+`-307/243=-1-64/243`), accumulating 2-adically at `-1` from depth `i=2`.
+The backward family `1/2+3^j/2^e` starts at depth `3`, and the backward
+move `k=0` contracts by `1/3`, which no forward move matches. This is why
+Q2 is the cleaner half.
+
 **The price of escaping `-1` on the forward side (FINITE-EXACT upper bounds).**
 This is the least multiplier over `E`-paths from `-1` that consume exactly
 `b` bits, counting the forced multiplication after the last halving. It
@@ -225,8 +289,10 @@ predecessor `(y-1)/3`. This locates the relaxation's power exactly.
 
 ## 7. What this says about the anchor
 
-* **Mechanism.** Choice turns a positive-dimensional exceptional set into a
-  thin set of rationals over the other prime. The Collatz obstruction is
+* **Mechanism.** Choice turns the `0.95`-dimensional exceptional set into a
+  far thinner one: finite-level counts fall by three orders of
+  magnitude. Its rational points lie over the other prime, and its
+  exact dimension is open (section 2). The Collatz obstruction is
   therefore not a density phenomenon but a *no-choice* phenomenon. A proof
   must show that positive integers avoid a `0.95`-dimensional 2-adic
   Cantor set. This is a transversality problem of the same type as

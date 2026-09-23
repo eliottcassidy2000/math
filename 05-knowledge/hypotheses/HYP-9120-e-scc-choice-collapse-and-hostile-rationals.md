@@ -7,9 +7,11 @@ status: >
   Bad_inf(E) in Z_2; (b) Q2: no integer m>1 lies in the backward exceptional
   set in Z_3^x; (c) structure: every rational point of Bad_inf(E) is negative
   with a power-of-3 denominator near -1 (observed range [-1.6,-1]), every rational point of the
-  backward set is 1, 1/2 or a positive dyadic rational, and both sets have
-  Hausdorff dimension 0. PROVED: -1, -13/9, 1, 1/2 are hostile; the 1-escape
-  lemma. FINITE-EXACT: exceptional counts 908 mod 2^36 and 52 mod 3^17; no
+  backward set is 1, 1/2 or a positive dyadic rational, and both sets are far
+  thinner than the no-choice set (dimension 0.95); dimension 0 versus about 0.1 is OPEN. PROVED: -1, -13/9, 1, 1/2 are hostile; the 1-escape
+  lemma; uniform descent by 8/9 within six reverse moves for every m not 1
+  or 14 mod 27 (exhaustive table), so Q2 reduces to the two hostile
+  neighbourhoods; escaping 1/2 costs at least 8/3. FINITE-EXACT: exceptional counts 908 mod 2^36 and 52 mod 3^17; no
   positive integer below 1.5e8 is exceptional at precision 2^36.
 source: collatz-procgen-20260922 (mac-mini)
 depends_on:

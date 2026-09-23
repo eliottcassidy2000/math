@@ -1,0 +1,7 @@
+classes checked: 1296  worst best-multiplier: 8/9 at class 275 path [3, 0]
+multiplier histogram (best per class): [('1/729', 2), ('2/729', 12), ('1/243', 2), ('4/729', 40), ('2/243', 10), ('8/729', 94), ('1/81', 2), ('4/243', 28), ('16/729', 162), ('2/81', 8), ('8/243', 54), ('1/27', 2)]
+r= 6: worst guaranteed factor outside {1,14 mod 27}: exp(V)=0.8889 at class 275 (mod 3^7);  hist[<.1,<.2,<.3,<.4,<.5,<.7,<1,>=1]=944 224 56 46 4 16 6 0 
+r= 8: worst guaranteed factor outside {1,14 mod 27}: exp(V)=0.8889 at class 2462 (mod 3^9);  hist[<.1,<.2,<.3,<.4,<.5,<.7,<1,>=1]=10450 876 162 122 26 21 7 0 
+r=10: worst guaranteed factor outside {1,14 mod 27}: exp(V)=0.8889 at class 22145 (mod 3^11);  hist[<.1,<.2,<.3,<.4,<.5,<.7,<1,>=1]=101358 2804 614 92 64 35 9 0 
+r=12: worst guaranteed factor outside {1,14 mod 27}: exp(V)=0.8889 at class 199292 (mod 3^13);  hist[<.1,<.2,<.3,<.4,<.5,<.7,<1,>=1]=938287 5360 831 185 81 29 11 0 
+r=14: worst guaranteed factor outside {1,14 mod 27}: exp(V)=0.8889 at class 1793615 (mod 3^15);  hist[<.1,<.2,<.3,<.4,<.5,<.7,<1,>=1]=8489001 12030 1519 329 131 35 11 0 

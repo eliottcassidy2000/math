@@ -1,0 +1,10 @@
+S=empty: 27328
+S=all evens mod 64: 664
+round 1: add 54 (mod 64, = 6 mod 8) -> exceptional 14509  S=[54]
+round 2: add 62 (mod 64, = 6 mod 8) -> exceptional 7643  S=[54, 62]
+round 3: add 60 (mod 64, = 4 mod 8) -> exceptional 4503  S=[54, 60, 62]
+round 4: add 28 (mod 64, = 4 mod 8) -> exceptional 2369  S=[28, 54, 60, 62]
+round 5: add 22 (mod 64, = 6 mod 8) -> exceptional 1631  S=[22, 28, 54, 60, 62]
+round 6: add 14 (mod 64, = 6 mod 8) -> exceptional 1282  S=[14, 22, 28, 54, 60, 62]
+round 7: add 50 (mod 64, = 2 mod 8) -> exceptional 1046  S=[14, 22, 28, 50, 54, 60, 62]
+round 8: add 30 (mod 64, = 6 mod 8) -> exceptional 893  S=[14, 22, 28, 30, 50, 54, 60, 62]

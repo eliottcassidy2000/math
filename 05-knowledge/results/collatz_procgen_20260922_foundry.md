@@ -54,7 +54,7 @@ glue between the parts is the remaining proof obligation.
 | Collatz (dim `0.95`) | no-divergence | **none** (only the placeholder "some potential function") |
 | Collatz | unique-cycle | linear forms in logs, staircase anti-concentration, functional equations, order patterns |
 | Collatz | finite check | verification |
-| E-SCC (thin) | Q1, Q2 | escape induction, Krasikov--Lagarias LP, finite-state, transversality, automata (25 hybrid plans) |
+| E-SCC (thin at finite levels; dimension open) | Q1, Q2 | escape induction, Krasikov--Lagarias LP, finite-state, transversality, automata (25 hybrid plans) |
 | `3n-1` sheet | no-divergence | **none** |
 | rational periodicity | no-divergence for all `3x+d` | **none** |
 | `5n+1` divergence | one divergent orbit | automata, order patterns, transversality |
