@@ -1,0 +1,245 @@
+# collatz_procgen_20260923_theta2 -- HYP-9132 (non-quadraticity, Theorem NQ) and HYP-9127 (cube determinant no-go)
+# python: 3.10.0 gmpy2 2.3.0 python-flint 0.9.0 sympy 1.14.0 mpmath 1.3.0 numpy 2.2.6
+collatz_procgen_20260923_theta2_nq.py
+
+==============================================================================
+Q0  thresholds: irrationality (d = 1) and non-quadraticity (d = 2), 2-adic transcription of KRVZ
+==============================================================================
+  C_cyc = 5/54 - Im Li2(e^(2 pi i/3))/(pi^2 sqrt3) = 0.05301135   (Im Li2 = 0.676627737606)
+  per n^3: 2-adic gain (7/3) L; clearing 4/3 log2 M0 per archimedean conjugate; forced divisor kappa log2 M0
+  theta, no divisor              : d=1 mu_bar < 1.75000;  d=2 mu_bar < 0.87500;  d=3 mu_bar < 0.58333
+  theta, + q-order (Prop. 2)     : d=1 mu_bar < 2.54545;  d=2 mu_bar < 1.27273;  d=3 mu_bar < 0.84848
+  theta, + cyclotomic (Prop. 4)  : d=1 mu_bar < 2.87837;  d=2 mu_bar < 1.43919;  d=3 mu_bar < 0.95946
+  closed form c_NQ = 126 pi^2/(79 pi^2 + 72 sqrt3 Im Li2) = 1.439185
+  dictionary: KRVZ Thm 1 (lambda = 0) gamma > 3.27694461 (they print 3.27694460); gamma/(gamma-1) = 1.439185
+  d = 3 would need mu_bar < 0.9595 < 1: as in KRVZ (5.11), only d = 1, 2 are reachable.
+  Euler, no divisor              : d=1 mu_bar < 1.50000;  d=2 mu_bar < 0.75000
+  Euler, + q-order (Prop. 1)     : d=1 mu_bar < 2.00000;  d=2 mu_bar < 1.00000
+  Euler, + cyclotomic (Prop. 4)  : d=1 mu_bar < 2.23719;  d=2 mu_bar < 1.11860
+  dictionary: KRVZ Thm 1 (lambda != 0) gamma > 9.43194241 (they print 9.43194241); gamma/(gamma-1) = 1.118597
+  3x+1 Y3 rho = 2^10/3^9          : mu_bar = 1.42647 -> theta not quadratic: True
+  5x+1 HYP-9131 rho = 2^33/5^23   : mu_bar = 1.61831 -> theta not quadratic: False
+  3x+1 2^8/3^7                    : mu_bar = 1.38684 -> theta not quadratic: True
+  5x+1 2^5/5^3                    : mu_bar = 1.39316 -> theta not quadratic: True
+  7x+1 2^2/7                      : mu_bar = 1.40368 -> theta not quadratic: True
+
+==============================================================================
+Q1  random alpha = u + v sqrt(d): forced divisor and archimedean bound in O_K (2 splits: d = 17, -7)
+==============================================================================
+  d =  17: 12 cases (n <= 5); G_n^2 | Norm(N_n): True; max[log2|Norm| - 2 log2(n! C^n M0^K_n)] = -4.20 (must be <= 0)
+  d =  -7: 12 cases (n <= 5); G_n^2 | Norm(N_n): True; max[log2|Norm| - 2 log2(n! C^n M0^K_n)] = -3.80 (must be <= 0)
+
+==============================================================================
+Q2  Theta-approximants in Q(sqrt 17) and Q(sqrt -7): one embedding carries the full Hankel valuation
+==============================================================================
+  rho = 2^10/3^9, Theta mod 2^4000; alpha = u + v sqrt(d) with iota_1(alpha)/w = Theta mod 2^(P - v2(w))
+   d |  n | v2(iota_1 N_n) | pred. L K_n + v2(T_n) + n v2(w) | v2(iota_2 N_n) | v2(Norm) | G_n^2 | Norm | arch. bound
+   17 |  2 |            130 |                             130 |              2 |      132 | True  | !=0  | True
+   17 |  3 |            500 |                             500 |              3 |      503 | True  | !=0  | True
+   17 |  4 |           1260 |                            1260 |              4 |     1264 | True  | !=0  | True
+   17 |  5 |           2550 |                            2550 |              5 |     2555 | True  | !=0  | True
+      (approximant: log2 max(|u|,|v|,|w|) = 1332.4, v2(w) = 0, v2(u + v s - w Theta) >= 4000)
+   -7 |  2 |            130 |                             130 |              4 |      134 | True  | !=0  | True
+   -7 |  3 |            500 |                             500 |              6 |      506 | True  | !=0  | True
+   -7 |  4 |           1260 |                            1260 |              8 |     1268 | True  | !=0  | True
+   -7 |  5 |           2550 |                            2550 |             10 |     2560 | True  | !=0  | True
+      (approximant: log2 max(|u|,|v|,|w|) = 1332.0, v2(w) = 0, v2(u + v s - w Theta) >= 4000)
+  v2(iota_1 N_n) equals the prediction: the embedding that sees Theta carries the whole Hankel
+  valuation, the other embedding contributes >= 0. This is the only 2-adic input of Theorem NQ.
+
+==============================================================================
+Q3  exact margin A_NQ(n) = L K_n + v2(T_n) + 2 log2 G_n - 2 log2(n! M0^K_n) at rho = 2^10/3^9
+==============================================================================
+  closed form of e_l(n) equals the defining sum for n < 120: True
+  float log2 G_n agrees with the exact integer to 1.46e-11 bits (n < 26)
+  leading coefficient of A_NQ(n)/n^3: +0.20621 bits (positive iff mu_bar < c_NQ)
+  A_NQ(n):      n=10: -1245, n=50: -1.148e+04, n=100: 5.709e+04, n=200: 1.047e+06, n=400: 1.081e+07, n=800: 9.593e+07, n=1600: 8.064e+08, n=3200: 6.603e+09, n=6400: 5.344e+10
+  A_NQ(n)/n^3:  -1.2454, -0.0919, 0.0571, 0.1309, 0.1688, 0.1874, 0.1969, 0.2015, 0.2039
+  A_NQ(n) <= 0 exactly for n <= 72 among n <= 8000; positive for 73 <= n <= 8000
+  quadratic equations of height <= 2^10: excluded at n = 75
+  quadratic equations of height <= 2^100: excluded at n = 87
+  quadratic equations of height <= 2^1000: excluded at n = 143
+  quadratic equations of height <= 2^10000: excluded at n = 351
+  (a root of A x^2 + B x + C with max|A|,|B|,|C| <= H has alpha = A Theta in O_K, w = |A| and
+   |sigma(alpha)| <= 2H, so C_sigma <= (2n+1)H; exclusion needs A_NQ(n) > 2n log2((2n+1)H)).
+
+==============================================================================
+Q4  Euler's function (rho;rho)_inf (lambda = 1): the same transcription at rho = 2^10/3^9
+==============================================================================
+  leading n^3 coefficient of the norm margin: -2.7523 bits: NOT reached
+  (non-quadraticity needs mu_bar < 1/(1 - 2 C_cyc) = 1.11860; irrationality holds for mu_bar < 2.23719, round-2 Theorem E)
+
+[nq done in 15.6s]
+collatz_procgen_20260923_theta2_cube.py
+rho = 2^10/3^9, mu_bar = 1.42647
+
+==============================================================================
+C1  parabola lemma: the X-orbit in the (a,b)-plane of G(rho^a, rho^b) = sum_k rho^(k^3 + b k^2 + a k)
+==============================================================================
+  functional equation G(rho^a, rho^b) = 1 + rho^(a+b+1) G(rho^(a+2b+3), rho^(b+3)) (mod 2^3000): True
+  tails: sum_(k>=s) rho^(k^3) = rho^(s^3) G(rho^(3s^2), rho^(3s)), i.e. the point P(s) = (3s^2, 3s): True
+  s < 60: nondegenerate parallelograms P(s1)+P(s2) = P(s3)+P(s4): 0;  collinear triples: 0
+  (proof: s1+s2 = s3+s4 and s1^2+s2^2 = s3^2+s4^2 force {s1,s2} = {s3,s4}; equivalently
+   (x1+y1)^2 + (x2+y2)^2 - (x1+y2)^2 - (x2+y1)^2 = 2(x1-x2)(y1-y2) != 0 for a sum pattern)
+  v-direction: the points (0, n) lie on the line a = 0, which meets the parabola only at (0, 0) = X.
+
+==============================================================================
+C2  leading layers at the places 2 and xi: determinant valuation versus minimal matching
+==============================================================================
+  cost at place 2 (units L): c2(s) = (s+1)^3 - psi(s) (level m = 1);  at xi: cM(s) = psi(s) - s^3 (k = s)
+  precision is set just above the minimal matching m0, so 'det valuation = m0' is decided exactly and
+  'cancellation' means det valuation > m0
+  psi   | place | #patterns | min matching unique | det valuation = min matching | cancellation seen
+  raw   | 2     |        16 |                  16 |                           16 | 0
+  c=-1  | 2     |        16 |                  16 |                           16 | 0
+  c=-1  | xi    |        16 |                  16 |                           16 | 0
+  c=0   | 2     |        16 |                  16 |                           16 | 0
+  c=0   | xi    |        16 |                   0 |                            0 | 16
+  c=1   | 2     |        16 |                  16 |                           16 | 0
+  c=1   | xi    |        16 |                  16 |                           16 | 0
+  c=2   | 2     |        16 |                  16 |                           16 | 0
+  c=2   | xi    |        16 |                  16 |                           16 | 0
+  c=3   | 2     |        16 |                   0 |                            0 | 16
+  c=3   | xi    |        16 |                  16 |                           16 | 0
+  c=4   | 2     |        16 |                  16 |                           16 | 0
+  c=4   | xi    |        16 |                  16 |                           16 | 0
+  => unique minimal matching <=> no cancellation; ties occur only where the leading cost is affine in s:
+     c = 3 at 2 (c2 = 3s + 1) and c = 0 at xi (cM = 0); there the leading layer has rank one.
+
+==============================================================================
+C3  the two rank-one cases, Hankel pattern, proved by row-difference peeling
+==============================================================================
+  (i) c = 0 (K7): rows i >= 1 replaced by row_i - row_(i-1); xi-order of det F = e3(n) = (n-1)(3n^2-15n+19)
+   n | xi-order of forced divisor | e3(n) | peeled assignment unique
+   2 |                          0 |     0 | True (min 0)
+   3 |                          2 |     2 | True (min 2)
+   4 |                         21 |    21 | True (min 21)
+   5 |                         76 |    76 | True (min 76)
+   6 |                        185 |   185 | True (min 185)
+   7 |                        366 |   366 | True (min 366)
+   8 |                        637 |   637 | True (min 637)
+   9 |                       1016 |  1016 | (not enumerated)
+  10 |                       1521 |  1521 | (not enumerated)
+  11 |                       2170 |  2170 | (not enumerated)
+  12 |                       2981 |  2981 | (not enumerated)
+  (ii) c = 3, psi(s) = (s+1)^3: t'_s = 1 + rho^(3s^2+9s+7) + ..., leading 2-adic layer = all-ones matrix;
+       after row differences v2 det = L (n-1)(3n^2-3n+1)
+   n | v2 det(t'_(i+j)) | L(n-1)(3n^2-3n+1) | min matching (units L, all tied)
+   2 |               70 |                70 | 0 (x2 permutations)
+   3 |              380 |               380 | 0 (x6 permutations)
+   4 |             1110 |              1110 | 0 (x24 permutations)
+   5 |             2440 |              2440 | 0 (x120 permutations)
+   6 |             4550 |              4550 | 0 (x720 permutations)
+   7 |             7620 |              7620 | 0 (x5040 permutations)
+   8 |            11830 |             11830 | 0 (x40320 permutations)
+   9 |            17360 |             17360 | 0 (x362880 permutations)
+
+==============================================================================
+C4  certificate margins of the Hankel family psi_c(s) = s^3 + c s^2 (c = 3 taken as (s+1)^3)
+==============================================================================
+  single-tail reach: max_s L[(s+1)^3 - mu_bar s^3] = 376.9 bits (s = 5); a single tail excludes a/b if
+  log2(|a| + (s+1)|b|) < L[(s+1)^3 - mu_bar s^3]
+  margin_n = V2 + (xi-order) log2 M0 + sum_d m_d log2|Phi_d^hom| - (mu_bar-1) L max_pi sum psi(s) - log2 n!;
+  a rational with |a| + (2n-1)|b| <= C is excluded at size n if margin_n > n log2 C: reach_n = margin_n / n
+  c=0 (K7):
+     n |      V2 | xi-ord | cyc deg | other |  quartic loss | margin_n (bits) | reach_n (bits)
+     2 |     140 |      0 |       0 |     0 |          34.1 |           104.9 |          52.4
+     3 |     570 |      2 |       6 |     0 |         307.1 |           374.5 |         124.8
+     4 |    1480 |     21 |      13 |     0 |        1228.2 |           732.1 |         183.0
+     5 |    3050 |     76 |      20 |     0 |        3411.7 |          1000.6 |         200.1
+     6 |    5460 |    185 |      37 |     0 |        7676.4 |           940.7 |         156.8
+     7 |    8890 |    366 |      67 |     0 |       15045.7 |             8.3 |           1.2
+     8 |   13520 |    637 |     106 |     0 |       26748.0 |         -2644.9 |        -330.6
+     9 |   19530 |   1016 |     152 |     0 |       44216.0 |         -8043.8 |        -893.8
+    10 |   27100 |   1521 |     221 |     0 |       69087.5 |        -17161.0 |       -1716.1
+     best reach 200.1 bits at n = 5  (single tail: 376.9)
+  c=1:
+     n |      V2 | xi-ord | cyc deg | other |  quartic loss | margin_n (bits) | reach_n (bits)
+     2 |     120 |      2 |       0 |     0 |          51.2 |            96.4 |          48.2
+     3 |     450 |     12 |       2 |     0 |         392.3 |           254.8 |          84.9
+     4 |    1120 |     36 |       7 |     0 |        1467.0 |           261.7 |          65.4
+     5 |    2250 |     80 |      12 |     0 |        3923.5 |          -368.1 |         -73.6
+     6 |    3960 |    150 |      23 |     0 |        8614.6 |         -2196.3 |        -366.0
+     7 |    6370 |    252 |      37 |     0 |       16598.1 |         -6117.9 |        -874.0
+     8 |    9600 |    392 |      52 |     0 |       29136.2 |        -13218.0 |       -1652.2
+     9 |   13770 |    576 |      70 |     0 |       47696.0 |        -24729.6 |       -2747.7
+    10 |   19000 |    810 |      97 |     0 |       73949.2 |        -42033.3 |       -4203.3
+     best reach 84.9 bits at n = 3  (single tail: 376.9)
+  c=2:
+     n |      V2 | xi-ord | cyc deg | other |  quartic loss | margin_n (bits) | reach_n (bits)
+     2 |     100 |      4 |       0 |     0 |          68.2 |            87.8 |          43.9
+     3 |     330 |     24 |       2 |     0 |         477.6 |           220.7 |          73.6
+     4 |     760 |     72 |       7 |     0 |        1705.9 |           176.5 |          44.1
+     5 |    1450 |    160 |      12 |     0 |        4435.2 |          -538.6 |        -107.7
+     6 |    2460 |    300 |      23 |     0 |        9552.8 |         -2494.8 |        -415.8
+     7 |    3850 |    504 |      37 |     0 |       18150.4 |         -6595.5 |        -942.2
+     8 |    5680 |    784 |      52 |     0 |       31524.4 |        -13934.5 |       -1741.8
+     9 |    8010 |   1152 |      70 |     0 |       51176.0 |        -25753.1 |       -2861.5
+    10 |   10900 |   1620 |      95 |     0 |       78811.0 |        -43469.1 |       -4346.9
+     best reach 73.6 bits at n = 3  (single tail: 376.9)
+  c=3:
+     n |      V2 | xi-ord | cyc deg | other |  quartic loss | margin_n (bits) | reach_n (bits)
+     2 |      70 |     14 |       0 |     0 |         119.4 |           149.3 |          74.6
+     3 |     380 |     57 |       6 |     0 |         652.5 |           623.6 |         207.9
+     4 |    1110 |    148 |      13 |     0 |        2115.3 |          1286.7 |         321.7
+     5 |    2440 |    305 |      20 |     0 |        5224.2 |          1844.7 |         368.9
+     6 |    4550 |    546 |      37 |     0 |       10900.5 |          1956.2 |         326.0
+     7 |    7620 |    889 |      67 |     0 |       20269.9 |           974.5 |         139.2
+     8 |   11830 |   1352 |     106 |     0 |       34663.2 |         -2050.9 |        -256.4
+     9 |   17360 |   1953 |     152 |     0 |       55615.5 |         -8247.3 |        -916.4
+    10 |   24390 |   2710 |     223 |     0 |       84866.8 |        -18661.0 |       -1866.1
+     best reach 368.9 bits at n = 5  (single tail: 376.9)
+
+==============================================================================
+C4b cyclotomic multiplicities m_d(n) of the forced divisor, c = 0 (K7), versus KRVZ's e_1(n)
+==============================================================================
+   n | xi-order | cyc deg | cyc deg / n^3 | needed for a certificate ~ 2(1-1/mu_bar) n^4 | m_1 | e_1(n) | m_d
+   3 |        2 |       6 |         0.222 |                                           48 |   1 |      1 | 1:1, 2:1, 3:1, 6:1
+   4 |       21 |      13 |         0.203 |                                          153 |   3 |      3 | 1:3, 2:2, 3:2, 6:2
+   5 |       76 |      20 |         0.160 |                                          374 |   5 |      5 | 1:5, 2:3, 3:3, 6:3
+   6 |      185 |      37 |         0.171 |                                          775 |   8 |      8 | 1:8, 2:5, 3:5, 5:1, 6:5
+   7 |      366 |      67 |         0.195 |                                         1436 |  12 |     12 | 1:12, 2:7, 3:7, 5:2, 6:7, 9:1, 18:1
+   8 |      637 |     106 |         0.207 |                                         2449 |  16 |     16 | 1:16, 2:10, 3:10, 5:3, 6:10, 9:2, 10:1, 18:2
+   9 |     1016 |     152 |         0.209 |                                         3923 |  21 |     21 | 1:21, 2:13, 3:13, 4:1, 5:4, 6:13, 9:3, 10:2, 12:1, 18:3
+  10 |     1521 |     221 |         0.221 |                                         5979 |  27 |     27 | 1:27, 2:16, 3:16, 4:2, 5:5, 6:16, 9:5, 10:3, 12:2, 15:1, 18:4, 30:1
+  11 |     2170 |     307 |         0.231 |                                         8754 |  33 |     33 | 1:33, 2:20, 3:20, 4:3, 5:6, 6:20, 8:1, 9:7, 10:4, 12:3, 15:2, 18:5, 24:1, 30:2
+  12 |     2981 |     404 |         0.234 |                                        12399 |  40 |     40 | 1:40, 2:24, 3:24, 4:4, 5:7, 6:24, 8:2, 9:9, 10:5, 11:1, 12:4, 15:3, 18:6, 24:2, 30:3
+  The Phi_1 multiplicity equals KRVZ's e_1(n) in range; all other m_d are small. The cyclotomic degree
+  grows like ~0.23 n^3 in range, against the ~0.6 n^4 a certificate would need.
+
+==============================================================================
+C5  v-direction: Z_n = G(1, rho^n) = sum_k rho^(k^3) (rho^(k^2))^n, Hankel determinants in n
+==============================================================================
+   n | v2 det(Z_(i+j)) | L n(n-1)^2(5n-4)/12
+   1 |               0 | 0
+   2 |              10 | 10
+   3 |             110 | 110
+   4 |             480 | 480
+   5 |            1400 | 1400
+   6 |            3250 | 3250
+   7 |            6510 | 6510
+   8 |           11760 | 11760
+  Proof: Cauchy-Binet over subsets K = {k_1 < ... < k_n} of the nodes rho^(k^2); the term has valuation
+  L[sum k^3 + 2 sum_(l<l') k_l^2], uniquely minimal at K = {0, ..., n-1}. The valuation is quartic,
+  but the entries Z_n (n >= 1) are values of G off the X-orbit: they are not in Q + Q X, so under
+  'X rational' the determinant is not an integer and gives no contradiction.
+
+==============================================================================
+C6  weighted and residue-class tails (Hermite-Pade companions)
+==============================================================================
+  sum_k k^j x^(k^3) = sum_(k odd) x^(k^3) mod 2 for j = 1..5: True  (over F_2 at most two companions survive)
+  F_even(x) = sum_(k even) x^(k^3) = F(x^8); F_(0 mod 3)(x) = F(x^27): residue classes bring in the new
+  numbers X(rho^8), X(rho^27) (the same problem at another rho, same mu_bar).
+  two-sequence block-Hankel (rows: weight k^0 and weight k^1 tails, columns shifted):
+   m | n = 2m | min-matching (bits) unique | v2 det
+   1 |      2 | 80 (unique) | 80
+   2 |      4 | 820 (unique) | 820
+   3 |      6 | 3060 (unique) | 3060
+   4 |      8 | 7640 (unique) | 7640
+  dimension count (Siegel's lemma, type-I forms in r+1 companions with the common cube support):
+    r = 0: needs mu_bar < 2.0000  -> within reach at mu_bar = 1.4265
+    r = 1: needs mu_bar < 1.5000  -> within reach at mu_bar = 1.4265
+    r = 2: needs mu_bar < 1.3333  -> OUT OF reach at mu_bar = 1.4265
+    r = 3: needs mu_bar < 1.2500  -> OUT OF reach at mu_bar = 1.4265
+
+[cube done in 82.8s]

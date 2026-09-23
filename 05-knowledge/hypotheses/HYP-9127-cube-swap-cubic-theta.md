@@ -35,3 +35,13 @@ number of that kind the session found. The square-swap analogue,
 only to have algebraic degree at least 4 (Ghidelli 2019; abstract only).
 The partial sums have heights `2^(14.26 K^3)` against 2-adic errors
 `2^(-10(K+1)^3)`, so a Liouville argument would need `log2(3^9)/10 < 1`.
+
+## 2026-09-23 update (cube-theta and theta lanes)
+Still OPEN. Proved obstructions:
+* no linear q-difference equation of any order (Proposition H, via Garoufalidis);
+* Mahler's method is inadmissible (unipotent matrix);
+* the Subspace theorem needs a growing dimension (Proposition S);
+* single-sequence Hankel determinants have cubic valuation against quartic clearing (K7), and the exact law `e3(n) = (n-1)(3n^2-15n+19)` is PROVED;
+* the tails lie on a parabola, with no parallelograms (Lemma P), so no determinant without cancellation beats a single tail (Theorem NG).
+
+The remaining loophole is a quartic cyclotomic content (degree `>= 0.598 n^4`), where at most `0.234 n^3` is observed. Reductions: HYP-9130 (2-adic zero estimate), and the S-unit gap `U(1/3)`. Certificate: `X` is not a rational of height `<= 2^4999999`.

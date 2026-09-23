@@ -2,12 +2,14 @@
 id: HYP-9132
 title: "p-adic Nesterenko at q = rho^2: the square-swap Bernstein number is transcendental"
 status: >
-  OPEN. theta_3(rho) = sum_k rho^(k^2) with rho = 2^10/3^9 is transcendental
-  in Q_2. PROVED: it is irrational (Theorem Y). PROVED modulo BDGP 1996: it
-  is not algebraic together with psi(rho^2) (Corollary M; the Tate curve with
-  q = rho^2, whose j has the 196884 coefficient). A p-adic analogue of
-  Nesterenko's theorem (complex case: 1996) would settle it; only the
-  Chudnovsky-Bertrand tr.deg >= 2 is known p-adically.
+  OPEN (transcendence), with PARTIAL progress (2026-09-23): theta_3(2^10/3^9)
+  is neither rational (Theorem Y / H1) nor quadratic (Theorem NQ, a 2-adic
+  transcription of KRVZ's non-quadraticity theorem, valid for
+  mu_bar < 1.43918; here mu_bar = 1.42647). So its degree over Q is at least 3,
+  modulo the cited KRVZ Propositions 2 and 4 and Lemma 3. Degree >= 4 by this
+  method would need mu_bar < 0.9595, so it is out of reach. Also PROVED modulo
+  BDGP 1996: not algebraic together with psi(rho^2) (Corollary M). A p-adic
+  Nesterenko theorem would settle it.
 source: collatz-procgen-20260923 sources lane (candidate PS2')
 depends_on:
   - 05-knowledge/results/procgen_sources_20260923_interplay.md
