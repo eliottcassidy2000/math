@@ -113,6 +113,35 @@ the divergence half of Collatz, and the sign enters exactly as the sign of
 * Sign-specific order laws: PENDING.
 * Loops through 1 and escapes: PENDING.
 
+## 2b. The approach deck: every approach generated or considered, with its disposition
+
+| # | approach (lens + mechanism) | barrier verdict | probe run | outcome |
+|---|---|---|---|---|
+| 1 | residue certificates for Collatz (Terras) | blind to SHEET, DEFECT; needs THIN | exceptional counts | the dimension `0.95` set remains; not a route alone |
+| 2 | relax by branch choice (graph `E`), certificates + escapes | live for E-SCC | profiler, DP/DFS, Lean | Q2 reduced mod 27 (Lean), verified to `2.02e13`; gap: `1/2` chains |
+| 3 | partial choice `E_S` | diagnostic | profiler over `S` | `6 mod 8` does most of the work; fingerprint led by `54 mod 64` |
+| 4 | additive / sign choice | diagnostic | zoo | empty exceptional set; one-player trivial |
+| 5 | two-player sign choice (Althöfer game) | live | retrograde to `10^8`, game lane | no draws below `834,437`; PENDING lane |
+| 6 | undirected Collatz (grand-orbit moves) | equivalent to Collatz | BFS to `10^6` | no collapse (negative control) |
+| 7 | sideways moves `n~4n+1` | inside #6 | argued | no power beyond Terras |
+| 8 | Applegate--Lagarias see-saw transplanted to `E` | needs cheap escapes | cost bounds | escape cost `>=32/27`, not `1+2^(-j)`: does not close as is |
+| 9 | 1-escape via loops through `1` | live (Q2 near `1`) | loop search to `s=40` | PROVED lemma; loops exist to depth 41; bounded family OPEN (HYP-9122); loops lane PENDING |
+| 10 | Hecke / `X_0(11)` density lens | DEFECT, SHEET | exact density | echo density `2/15`; statistic only |
+| 11 | Catalan unit-gap clocks | cycle half only | table | inherited; not a divergence tool |
+| 12 | fixed sheet gluing `3n+sgn(n)` | no new freedom | zoo | gains nothing |
+| 13 | transversality: p-adic irrationality of Bernstein series | live (divergence half) | formulation only | the named missing ingredient |
+| 14 | sound certificate searches (rewriting/automata) | live (divergence half) | literature | YAH prize conjectures fail on negatives (atlas) |
+| 15 | sign-specific order laws | the only sign-aware class | order-laws lane | PENDING |
+| 16 | exceptional dimension of `E` | structural | deeper threads, credit construction | open (0 or about 0.1); dimension lane PENDING |
+| 17 | sibling ladder (`qx+1`, F2[x], Mahler, Erdős) | calibration | ladder lane | PENDING |
+| 18 | Tao-type Fourier / renewal | blind to SHEET, DEFECT, INTEGRAL | literature | GGM 2025: PROVED for `3N-1` (sheet-blind as a theorem) |
+| 19 | bounded-modulus Lyapunov potentials | none in the model | inherited | REFUTED (earlier sessions) |
+| 20 | carry anti-concentration mod `2^K-3^L` | cycle half | heuristic count | live for cycles; not run |
+| 21 | Baker / continued fractions | cycle half | literature | Hercher: no m-cycles, `m<=91` (CITED) |
+| 22 | functional equations (Berg--Meinardus) | DEFECT | none | typed only |
+| 23 | measure rigidity (`x2 x3`) | DEFECT, INTEGRAL | none | blocked |
+| 24 | E-cycle covering (Le--Smith Conj. 1, 2) | relaxation / cycle half | our verifications | Conj. 1 holds below `2.02e13`; Conj. 2 is equivalent to no positive Collatz cycle |
+
 ## 3. The snippet, dispatched
 
 | pasted claim | verdict | where |
