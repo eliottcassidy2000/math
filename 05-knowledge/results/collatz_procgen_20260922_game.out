@@ -1,0 +1,556 @@
+# collatz_procgen_20260922_game.out -- Althofer 3n+-1 game (= Conway's Beans-Don't-Talk on odd positions)
+# produced 2026-09-22 on mac-mini (8 GB, Apple clang 17, -O3 -march=native); programs in 04-computation/experiments/collatz_procgen_20260922_game_*.{c,py}
+# binaries and large intermediate files: scratch/procgen_game/ (not committed)
+
+############ 0. web check (2026-09-22) -- see the note for links
+althofer.de/collatz-prizes.html: 'Latest Update of this Site: September 21, 2026'; Prize 3 'Updated on August 08, 2026';
+  rules: odd n; mover builds 3n+1 or 3n-1, halves to odd; reaching 1 wins; 500 EUR for a proof that all odd starts lead to 1 under optimal play;
+  Hartisch: optimal play ends in 1 for n < 1 million; Pochuev manuscript: 'Sept 07, 2026: Checks are still underway'.
+github.com/Grisha-Pochuev/3n-plus-minus-1-game (created 2026-08-06, last push 2026-09-01): README 'OPEN', docs/global-proof.md 'OPEN -- HOSTILE AUDIT FAILED'.
+Guy, Unsolved Problems in Combinatorial Games (MSRI Publ. 29, 1996), Problem 42: Beans-Don't-Talk, 'are there any O-positions?'
+
+############ 1. dense incremental bottleneck retrograde, cap 10^8 (game_dense 100000001) -- reproduces the earlier sweep program exactly
+FINAL CAP=100000001 first unresolved odd start B=834437 ; elapsed 1s
+non-multiples-of-3 in [5,CAP]: N=14806707 P=9465560 unresolved=9061066 (U1=6455133)
+all odd 3<=n<=CAP: N=22210114 P=14199339 unresolved=13590547
+BLOCKREC n=40723 h=1671787 h/n=41.05 newfrontier=69987
+BLOCKREC n=93165 h=3876829 h/n=41.61 newfrontier=131409
+BLOCKREC n=162477 h=8441819 h/n=51.96 newfrontier=361451
+BLOCKREC n=817837 h=67148587 h/n=82.11 newfrontier=834437
+
+############ 2. exact heights for every odd start < 10^9 (game_sparse 8589934593 1 1000000001 40000000 times.bin)
+# game_sparse CAP=8589934593 B1=1 B2=1000000001 HLIMIT=40000000 table=715.8MB
+PHASE1 cap=2^10 frontier=147
+PHASE1 cap=2^11 frontier=569
+PHASE1 cap=2^12 frontier=659
+PHASE1 cap=2^13 frontier=1041
+PHASE1 cap=2^14 frontier=1631
+PHASE1 cap=2^15 frontier=2899
+PHASE1 cap=2^16 frontier=5807
+PHASE1 cap=2^17 frontier=9235
+PHASE1 cap=2^18 frontier=18205
+PHASE1 cap=2^19 frontier=22907
+PHASE1 cap=2^20 frontier=39111
+PHASE1 cap=2^21 frontier=93165
+PHASE1 cap=2^22 frontier=131409
+PHASE1 cap=2^23 frontier=162477
+PHASE1 cap=2^24 frontier=415803
+PHASE1 cap=2^25 frontier=817837
+PHASE1 cap=2^26 frontier=817837
+PHASE1 cap=2^27 frontier=2325165
+PHASE1 cap=2^28 frontier=2924165
+PHASE1 cap=2^29 frontier=7301503
+PHASE1 cap=2^30 frontier=9152251
+PHASE1 cap=2^31 frontier=13166331
+PHASE1 cap=2^32 frontier=18752721
+PHASE1 FINAL CAP=8589934593 frontier=45683717 elapsed=48s
+PHASE2 targets (unresolved odd starts in [45683717,1000000001)): 579249
+PHASE2 initial explored table positions=4884704 candidates=1302370
+PHASE2 DONE: every odd start < 1000000001 resolved (N or P, finite remoteness); targets 579249/579249; max time used=1499556851731; flushes=0; H=9720244 E=6328986 heapmax=1433670 pops=9720244 skips=3514010 trap=0 elapsed=67s
+PHASE2 per-target: largest height 1499556851731 at start n=703036003 ; largest height/n = 2133.0 at n=703036003 (exact: no flush)
+PHASE2 histogram of floor(log2(height/n)) over phase-2 targets: 3:315328 4:224377 5:34169 6:4493 7:743 8:120 9:16 10:2 11:1
+# exact heights, odd n < 10^9 (phase-2 targets of the single-batch run from cap 2^33): top 12 by height
+  n=703036003  h=1499556851731  h/n=2133.0
+  n=825978239  h=940681949237  h/n=1138.9
+  n=929225519  h=940681949237  h/n=1012.3
+  n=734202879  h=940681949237  h/n=1281.2
+  n=650717521  h=577665619325  h/n=887.7
+  n=867623361  h=577665619325  h/n=665.8
+  n=976076281  h=577665619325  h/n=591.8
+  n=941443375  h=423577973045  h/n=449.9
+  n=948328507  h=374162542651  h/n=394.5
+  n=919474245  h=331328524867  h/n=360.3
+  n=935557805  h=328110105293  h/n=350.7
+  n=647273093  h=327626664253  h/n=506.2
+# top 12 by h/n
+  n=703036003  h=1499556851731  h/n=2133.0
+  n=734202879  h=940681949237  h/n=1281.2
+  n=825978239  h=940681949237  h/n=1138.9
+  n=929225519  h=940681949237  h/n=1012.3
+  n=650717521  h=577665619325  h/n=887.7
+  n=403653249  h=322868063395  h/n=799.9
+  n=182314933  h=145827314477  h/n=799.9
+  n=209540661  h=153074447603  h/n=730.5
+  n=205104299  h=145827314477  h/n=711.0
+  n=454109905  h=322868063395  h/n=711.0
+  n=867623361  h=577665619325  h/n=665.8
+  n=235733243  h=153074447603  h/n=649.4
+# exact heights in the block [3233354757,3250131973) (single batch from cap 2^33): top 5
+  n=3238138315  h=13112245406701  h/n=4049.3
+  n=3247182449  h=2597307252091  h/n=799.9
+  n=3233620205  h=1149537461573  h/n=355.5
+  n=3233862197  h=1021887545339  h/n=316.0
+  n=3240342657  h=910164750821  h/n=280.9
+# tail of h(n)/n over odd non-multiples of 3 in [10^6,3*10^6) (dense exact heights, cap 2^32):
+  P(h/n>2)=1.46e-01  P(h/n>4)=2.77e-02  P(h/n>8)=5.73e-03  P(h/n>16)=9.19e-04  P(h/n>32)=1.02e-04  P(h/n>64)=1.50e-05  P(h/n>128)=0.00e+00
+
+############ 3. no draws below 2^32, block mode (game_blocks 8589934593 1 4294967297 11000000 400000); two identical runs
+# game_blocks CAP=8589934593 B1=1 B2=4294967297 HLIMIT=11000000 TMAXB=400000 table=715.8MB
+PHASE1 FINAL CAP=8589934593 frontier=45683717 elapsed=41s
+# hash slots=16777216 (151.0 MB)
+# P-counts among odd n < X (X = 10^k, 2*10^k, 5*10^k): X  N  P  P/(N+P)
+PCOUNT 10 4 1 0.200000
+PCOUNT 20 8 2 0.200000
+PCOUNT 50 18 7 0.280000
+PCOUNT 100 31 19 0.380000
+PCOUNT 200 57 43 0.430000
+PCOUNT 500 137 113 0.452000
+PCOUNT 1000 269 231 0.462000
+PCOUNT 2000 533 467 0.467000
+PCOUNT 5000 1320 1180 0.472000
+PCOUNT 10000 2639 2361 0.472200
+PCOUNT 20000 5264 4736 0.473600
+PCOUNT 50000 13211 11789 0.471560
+PCOUNT 100000 26407 23593 0.471860
+PCOUNT 200000 52709 47291 0.472910
+PCOUNT 500000 132318 117682 0.470728
+PCOUNT 1000000 264076 235924 0.471848
+PCOUNT 2000000 526926 473074 0.473074
+PCOUNT 5000000 1322703 1177297 0.470919
+PCOUNT 10000000 2640571 2359429 0.471886
+PCOUNT 20000000 5270115 4729885 0.472988
+PCOUNT 50000000 13222435 11777565 0.471103
+PCOUNT 100000000 26396983 23603017 0.472060
+PCOUNT 200000000 52689164 47310836 0.473108
+PCOUNT 500000000 132143425 117856575 0.471426
+PCOUNT 1000000000 263841911 236158089 0.472316
+PCOUNT 2000000000 526722425 473277575 0.473278
+# SAMPLE (xorshift64, 64 odd starts in [10^9,4294967297)): n value
+SAMPLE 1665506943 N
+SAMPLE 3168989267 P
+SAMPLE 1215256895 N
+SAMPLE 3226549279 P
+SAMPLE 3824617035 N
+SAMPLE 1626805431 P
+SAMPLE 3526749471 P
+SAMPLE 2651630545 N
+SAMPLE 4078330787 P
+SAMPLE 1001913081 N
+SAMPLE 1609773973 P
+SAMPLE 1799316381 P
+SAMPLE 3193205351 P
+SAMPLE 1670843941 N
+SAMPLE 2789697121 P
+SAMPLE 1723848057 P
+SAMPLE 2258189039 P
+SAMPLE 2829225469 P
+SAMPLE 1578711729 P
+SAMPLE 1513003557 N
+SAMPLE 3013084547 N
+SAMPLE 3752197181 N
+SAMPLE 3447715969 N
+SAMPLE 1808090271 P
+SAMPLE 1954944371 N
+SAMPLE 1298872389 N
+SAMPLE 1931102353 N
+SAMPLE 2131484769 P
+SAMPLE 2573210417 P
+SAMPLE 2403868665 N
+SAMPLE 1843092565 P
+SAMPLE 3006018605 N
+SAMPLE 3736957793 N
+SAMPLE 1387878667 N
+SAMPLE 1556065609 N
+SAMPLE 2152504933 N
+SAMPLE 1187969469 N
+SAMPLE 3197263725 N
+SAMPLE 3032170995 N
+SAMPLE 2979450761 N
+SAMPLE 1179527633 N
+SAMPLE 3133354493 N
+SAMPLE 3859123473 N
+SAMPLE 3117082627 N
+SAMPLE 2870598659 P
+SAMPLE 2161663289 N
+SAMPLE 2357385333 P
+SAMPLE 2695277775 N
+SAMPLE 2349544129 P
+SAMPLE 1149455669 N
+SAMPLE 1518097911 N
+SAMPLE 1136584009 P
+SAMPLE 3077624513 N
+SAMPLE 2126327273 N
+SAMPLE 1008329003 P
+SAMPLE 1460367503 N
+SAMPLE 3547688687 P
+SAMPLE 1819905069 N
+SAMPLE 4075122309 P
+SAMPLE 2205078445 N
+SAMPLE 1068675881 N
+SAMPLE 3724352151 N
+SAMPLE 1773284591 P
+SAMPLE 3911860913 N
+DONE: every odd start < 4294967297 resolved (finite remoteness, no draw); N=1122146470 P=1025337178 (odd n<4294967297, n=1 counted N); total phase-2 targets=28221648 flushes=2 pops=541777757; height upper bound Tmax=13112245406701; aborted=0 trap=0 elapsed=263s
+# per-block lines (targets, flushes, insertions, blockmax):
+BLOCK [45683717,112792581) targets=86 flushes=0 pops=1371 blockmax=32813160931 BLK=67108864 elapsed=41s
+BLOCK [112792581,247010309) targets=1688 flushes=0 pops=43947 blockmax=153074447603 BLK=134217728 elapsed=42s
+BLOCK [247010309,515445765) targets=31860 flushes=0 pops=778758 blockmax=322868063395 BLK=268435456 elapsed=43s
+BLOCK [515445765,783881221) targets=131430 flushes=0 pops=2989364 blockmax=1499556851731 BLK=268435456 elapsed=45s
+BLOCK [783881221,1052316677) targets=261361 flushes=0 pops=7054600 blockmax=522797709997 BLK=268435456 elapsed=49s
+BLOCK [1052316677,1186534405) targets=152885 flushes=0 pops=4899969 blockmax=588895930387 BLK=134217728 elapsed=51s
+BLOCK [1186534405,1320752133) targets=191164 flushes=0 pops=5565521 blockmax=666163258643 BLK=134217728 elapsed=54s
+BLOCK [1320752133,1454969861) targets=175348 flushes=0 pops=5098894 blockmax=605429340139 BLK=134217728 elapsed=56s
+BLOCK [1454969861,1589187589) targets=306760 flushes=0 pops=7619476 blockmax=2597307252091 BLK=134217728 elapsed=59s
+BLOCK [1589187589,1656296453) targets=309341 flushes=0 pops=7130684 blockmax=431033599565 BLK=67108864 elapsed=63s
+BLOCK [1656296453,1723405317) targets=205183 flushes=0 pops=3885090 blockmax=846911660309 BLK=67108864 elapsed=64s
+BLOCK [1723405317,1790514181) targets=103934 flushes=0 pops=2814570 blockmax=1455645187123 BLK=67108864 elapsed=65s
+BLOCK [1790514181,1857623045) targets=398862 flushes=0 pops=9327592 blockmax=933732451397 BLK=67108864 elapsed=69s
+BLOCK [1857623045,1924731909) targets=286719 flushes=0 pops=5511219 blockmax=1856596388995 BLK=67108864 elapsed=72s
+BLOCK [1924731909,1991840773) targets=141347 flushes=0 pops=2931487 blockmax=836542086371 BLK=67108864 elapsed=73s
+BLOCK [1991840773,2058949637) targets=288690 flushes=0 pops=8057482 blockmax=584511014221 BLK=67108864 elapsed=76s
+BLOCK [2058949637,2092504069) targets=340700 flushes=0 pops=8047449 blockmax=941112707461 BLK=33554432 elapsed=80s
+BLOCK [2092504069,2126058501) targets=213615 flushes=0 pops=4473261 blockmax=4768253723629 BLK=33554432 elapsed=81s
+BLOCK [2126058501,2159612933) targets=33691 flushes=0 pops=718230 blockmax=419459452885 BLK=33554432 elapsed=82s
+BLOCK [2159612933,2226721797) targets=217254 flushes=0 pops=3457360 blockmax=832603278115 BLK=67108864 elapsed=83s
+BLOCK [2226721797,2293830661) targets=323213 flushes=0 pops=8671746 blockmax=756500615747 BLK=67108864 elapsed=87s
+BLOCK [2293830661,2327385093) targets=379150 flushes=1 pops=11000915 blockmax=1695228295349 BLK=33554432 elapsed=92s
+BLOCK [2327385093,2344162309) targets=209148 flushes=0 pops=5151893 blockmax=1475259661757 BLK=16777216 elapsed=94s
+BLOCK [2344162309,2360939525) targets=208904 flushes=0 pops=4666123 blockmax=823241477491 BLK=16777216 elapsed=95s
+BLOCK [2360939525,2377716741) targets=86525 flushes=0 pops=1913400 blockmax=933131893573 BLK=16777216 elapsed=96s
+BLOCK [2377716741,2411271173) targets=83892 flushes=0 pops=1728418 blockmax=529801319837 BLK=33554432 elapsed=97s
+BLOCK [2411271173,2478380037) targets=255820 flushes=0 pops=3351464 blockmax=544125866813 BLK=67108864 elapsed=98s
+BLOCK [2478380037,2511934469) targets=250752 flushes=0 pops=3456414 blockmax=932996895797 BLK=33554432 elapsed=99s
+BLOCK [2511934469,2545488901) targets=198489 flushes=0 pops=4454223 blockmax=600193144307 BLK=33554432 elapsed=101s
+BLOCK [2545488901,2579043333) targets=273785 flushes=0 pops=8741660 blockmax=542712065141 BLK=33554432 elapsed=105s
+BLOCK [2579043333,2595820549) targets=214989 flushes=0 pops=6256087 blockmax=517059525197 BLK=16777216 elapsed=107s
+BLOCK [2595820549,2612597765) targets=270703 flushes=0 pops=7059327 blockmax=617822392709 BLK=16777216 elapsed=110s
+BLOCK [2612597765,2629374981) targets=272863 flushes=0 pops=6954993 blockmax=1311229200635 BLK=16777216 elapsed=112s
+BLOCK [2629374981,2646152197) targets=204099 flushes=0 pops=4267873 blockmax=1321139904875 BLK=16777216 elapsed=114s
+BLOCK [2646152197,2662929413) targets=169951 flushes=0 pops=3796137 blockmax=828760597499 BLK=16777216 elapsed=115s
+BLOCK [2662929413,2679706629) targets=53354 flushes=0 pops=1057407 blockmax=748339848037 BLK=16777216 elapsed=115s
+BLOCK [2679706629,2713261061) targets=75067 flushes=0 pops=1461829 blockmax=743046203843 BLK=33554432 elapsed=116s
+BLOCK [2713261061,2780369925) targets=298532 flushes=0 pops=4068549 blockmax=923085935683 BLK=67108864 elapsed=118s
+BLOCK [2780369925,2813924357) targets=272685 flushes=0 pops=4082243 blockmax=663423862139 BLK=33554432 elapsed=120s
+BLOCK [2813924357,2847478789) targets=281089 flushes=0 pops=5668262 blockmax=962603760269 BLK=33554432 elapsed=122s
+BLOCK [2847478789,2881033221) targets=255102 flushes=0 pops=7543450 blockmax=670645927613 BLK=33554432 elapsed=125s
+BLOCK [2881033221,2914587653) targets=373770 flushes=1 pops=11009243 blockmax=1142800134517 BLK=33554432 elapsed=130s
+BLOCK [2914587653,2931364869) targets=248954 flushes=0 pops=6304200 blockmax=1312135464355 BLK=16777216 elapsed=132s
+BLOCK [2931364869,2948142085) targets=253791 flushes=0 pops=6748328 blockmax=918006375763 BLK=16777216 elapsed=134s
+BLOCK [2948142085,2964919301) targets=188176 flushes=0 pops=4420891 blockmax=1163253758723 BLK=16777216 elapsed=136s
+BLOCK [2964919301,2981696517) targets=189509 flushes=0 pops=3999166 blockmax=752253987931 BLK=16777216 elapsed=137s
+BLOCK [2981696517,2998473733) targets=98405 flushes=0 pops=2052391 blockmax=588237359861 BLK=16777216 elapsed=138s
+BLOCK [2998473733,3032028165) targets=73879 flushes=0 pops=1328778 blockmax=1052774171755 BLK=33554432 elapsed=139s
+BLOCK [3032028165,3099137029) targets=195091 flushes=0 pops=2969852 blockmax=816053117443 BLK=67108864 elapsed=140s
+BLOCK [3099137029,3132691461) targets=268863 flushes=0 pops=3834793 blockmax=575994810341 BLK=33554432 elapsed=141s
+BLOCK [3132691461,3166245893) targets=282564 flushes=0 pops=4865213 blockmax=1043824757627 BLK=33554432 elapsed=143s
+BLOCK [3166245893,3199800325) targets=317818 flushes=0 pops=6342028 blockmax=472785103883 BLK=33554432 elapsed=146s
+BLOCK [3199800325,3233354757) targets=349614 flushes=0 pops=9183695 blockmax=1076164061029 BLK=33554432 elapsed=151s
+BLOCK [3233354757,3250131973) targets=245147 flushes=0 pops=6937845 blockmax=13112245406701 BLK=16777216 elapsed=154s
+BLOCK [3250131973,3266909189) targets=243121 flushes=0 pops=7007433 blockmax=1155918322547 BLK=16777216 elapsed=157s
+BLOCK [3266909189,3283686405) targets=286491 flushes=0 pops=7899648 blockmax=1291754448803 BLK=16777216 elapsed=161s
+BLOCK [3283686405,3300463621) targets=284751 flushes=0 pops=6498803 blockmax=1313522341253 BLK=16777216 elapsed=164s
+BLOCK [3300463621,3317240837) targets=294364 flushes=0 pops=7480622 blockmax=2087742637717 BLK=16777216 elapsed=167s
+BLOCK [3317240837,3334018053) targets=185804 flushes=0 pops=4083168 blockmax=3369339856573 BLK=16777216 elapsed=168s
+BLOCK [3334018053,3350795269) targets=176304 flushes=0 pops=3414043 blockmax=3384732693853 BLK=16777216 elapsed=169s
+BLOCK [3350795269,3367572485) targets=129929 flushes=0 pops=2642514 blockmax=929216758283 BLK=16777216 elapsed=170s
+BLOCK [3367572485,3384349701) targets=38642 flushes=0 pops=713907 blockmax=664357883285 BLK=16777216 elapsed=170s
+BLOCK [3384349701,3417904133) targets=86088 flushes=0 pops=1308279 blockmax=1072613335517 BLK=33554432 elapsed=171s
+BLOCK [3417904133,3485012997) targets=273151 flushes=0 pops=4109387 blockmax=533257188509 BLK=67108864 elapsed=173s
+BLOCK [3485012997,3518567429) targets=314534 flushes=0 pops=4809664 blockmax=1663769873069 BLK=33554432 elapsed=174s
+BLOCK [3518567429,3552121861) targets=362796 flushes=0 pops=6129361 blockmax=1060312952971 BLK=33554432 elapsed=177s
+BLOCK [3552121861,3585676293) targets=392701 flushes=0 pops=7214885 blockmax=937722806045 BLK=33554432 elapsed=180s
+BLOCK [3585676293,3602453509) targets=297706 flushes=0 pops=5981708 blockmax=1677376438859 BLK=16777216 elapsed=182s
+BLOCK [3602453509,3619230725) targets=305322 flushes=0 pops=6330195 blockmax=1901067182515 BLK=16777216 elapsed=184s
+BLOCK [3619230725,3636007941) targets=321037 flushes=0 pops=6947278 blockmax=2039509329931 BLK=16777216 elapsed=187s
+BLOCK [3636007941,3652785157) targets=373788 flushes=0 pops=8426938 blockmax=1434675324997 BLK=16777216 elapsed=190s
+BLOCK [3652785157,3669562373) targets=396831 flushes=0 pops=9134875 blockmax=1030231535605 BLK=16777216 elapsed=194s
+BLOCK [3669562373,3677950981) targets=198729 flushes=0 pops=4597142 blockmax=978398164853 BLK=8388608 elapsed=195s
+BLOCK [3677950981,3686339589) targets=203375 flushes=0 pops=4340534 blockmax=690175211779 BLK=8388608 elapsed=197s
+BLOCK [3686339589,3694728197) targets=205781 flushes=0 pops=4577788 blockmax=1474706222965 BLK=8388608 elapsed=198s
+BLOCK [3694728197,3703116805) targets=174591 flushes=0 pops=3287009 blockmax=1460737191637 BLK=8388608 elapsed=199s
+BLOCK [3703116805,3711505413) targets=195391 flushes=0 pops=3454363 blockmax=548221266181 BLK=8388608 elapsed=200s
+BLOCK [3711505413,3719894021) targets=213072 flushes=0 pops=4534944 blockmax=1882238413741 BLK=8388608 elapsed=202s
+BLOCK [3719894021,3728282629) targets=189551 flushes=0 pops=3728760 blockmax=929502132955 BLK=8388608 elapsed=203s
+BLOCK [3728282629,3736671237) targets=155105 flushes=0 pops=2788489 blockmax=932929477613 BLK=8388608 elapsed=204s
+BLOCK [3736671237,3745059845) targets=135231 flushes=0 pops=2508185 blockmax=1328995694981 BLK=8388608 elapsed=205s
+BLOCK [3745059845,3753448453) targets=75879 flushes=0 pops=1140019 blockmax=936722856907 BLK=8388608 elapsed=205s
+BLOCK [3753448453,3770225669) targets=194363 flushes=0 pops=2903851 blockmax=660635029357 BLK=16777216 elapsed=206s
+BLOCK [3770225669,3787002885) targets=136899 flushes=0 pops=2150903 blockmax=1678898843269 BLK=16777216 elapsed=207s
+BLOCK [3787002885,3803780101) targets=51863 flushes=0 pops=823766 blockmax=945771108091 BLK=16777216 elapsed=207s
+BLOCK [3803780101,3837334533) targets=92445 flushes=0 pops=1056182 blockmax=595119513637 BLK=33554432 elapsed=208s
+BLOCK [3837334533,3904443397) targets=368230 flushes=0 pops=5141041 blockmax=647409877739 BLK=67108864 elapsed=210s
+BLOCK [3904443397,3937997829) targets=339675 flushes=0 pops=4842725 blockmax=1830961255085 BLK=33554432 elapsed=211s
+BLOCK [3937997829,3954775045) targets=243467 flushes=0 pops=3582478 blockmax=924079334267 BLK=16777216 elapsed=213s
+BLOCK [3954775045,3971552261) targets=254027 flushes=0 pops=3567903 blockmax=587045688355 BLK=16777216 elapsed=214s
+BLOCK [3971552261,3988329477) targets=257780 flushes=0 pops=4007195 blockmax=930349106749 BLK=16777216 elapsed=215s
+BLOCK [3988329477,4005106693) targets=279584 flushes=0 pops=4941604 blockmax=590538501037 BLK=16777216 elapsed=217s
+BLOCK [4005106693,4021883909) targets=269350 flushes=0 pops=4335605 blockmax=528721157963 BLK=16777216 elapsed=218s
+BLOCK [4021883909,4030272517) targets=233938 flushes=0 pops=2820529 blockmax=836182870291 BLK=8388608 elapsed=219s
+BLOCK [4030272517,4038661125) targets=264235 flushes=0 pops=3211469 blockmax=1194512983451 BLK=8388608 elapsed=220s
+BLOCK [4038661125,4047049733) targets=285071 flushes=0 pops=3798232 blockmax=896924243675 BLK=8388608 elapsed=222s
+BLOCK [4047049733,4055438341) targets=298340 flushes=0 pops=4042030 blockmax=599975220509 BLK=8388608 elapsed=223s
+BLOCK [4055438341,4063826949) targets=302916 flushes=0 pops=4212801 blockmax=474726791933 BLK=8388608 elapsed=225s
+BLOCK [4063826949,4072215557) targets=290428 flushes=0 pops=3754728 blockmax=915839448661 BLK=8388608 elapsed=226s
+BLOCK [4072215557,4080604165) targets=296407 flushes=0 pops=4138898 blockmax=2900604278027 BLK=8388608 elapsed=227s
+BLOCK [4080604165,4088992773) targets=309831 flushes=0 pops=4547608 blockmax=805092294917 BLK=8388608 elapsed=229s
+BLOCK [4088992773,4097381381) targets=333673 flushes=0 pops=5164664 blockmax=909114831443 BLK=8388608 elapsed=231s
+BLOCK [4097381381,4105769989) targets=339307 flushes=0 pops=4841233 blockmax=1023984147547 BLK=8388608 elapsed=232s
+BLOCK [4105769989,4114158597) targets=359393 flushes=0 pops=5371745 blockmax=1081900021085 BLK=8388608 elapsed=234s
+BLOCK [4114158597,4122547205) targets=361358 flushes=0 pops=5542885 blockmax=1484655417197 BLK=8388608 elapsed=236s
+BLOCK [4122547205,4130935813) targets=337438 flushes=0 pops=5306287 blockmax=1030217133907 BLK=8388608 elapsed=238s
+BLOCK [4130935813,4139324421) targets=359188 flushes=0 pops=5411160 blockmax=774945520981 BLK=8388608 elapsed=240s
+BLOCK [4139324421,4147713029) targets=348826 flushes=0 pops=5008348 blockmax=1310460882563 BLK=8388608 elapsed=241s
+BLOCK [4147713029,4156101637) targets=352436 flushes=0 pops=5259324 blockmax=2911103188307 BLK=8388608 elapsed=243s
+BLOCK [4156101637,4164490245) targets=258434 flushes=0 pops=3077671 blockmax=1024291569187 BLK=8388608 elapsed=244s
+BLOCK [4164490245,4172878853) targets=302138 flushes=0 pops=3537816 blockmax=1481844780811 BLK=8388608 elapsed=245s
+BLOCK [4172878853,4181267461) targets=354914 flushes=0 pops=4739670 blockmax=1174104795797 BLK=8388608 elapsed=247s
+BLOCK [4181267461,4189656069) targets=335307 flushes=0 pops=4785664 blockmax=5946286593115 BLK=8388608 elapsed=248s
+BLOCK [4189656069,4198044677) targets=281959 flushes=0 pops=3462590 blockmax=1653201262549 BLK=8388608 elapsed=249s
+BLOCK [4198044677,4206433285) targets=218390 flushes=0 pops=2542717 blockmax=1512980525629 BLK=8388608 elapsed=250s
+BLOCK [4206433285,4214821893) targets=153300 flushes=0 pops=1695714 blockmax=1050835722011 BLK=8388608 elapsed=251s
+BLOCK [4214821893,4223210501) targets=122244 flushes=0 pops=1180549 blockmax=832601403035 BLK=8388608 elapsed=251s
+BLOCK [4223210501,4231599109) targets=87357 flushes=0 pops=722460 blockmax=1669249962413 BLK=8388608 elapsed=251s
+BLOCK [4231599109,4248376325) targets=319484 flushes=0 pops=3311065 blockmax=1072309433651 BLK=16777216 elapsed=252s
+BLOCK [4248376325,4265153541) targets=131001 flushes=0 pops=1340407 blockmax=2552712644357 BLK=16777216 elapsed=253s
+BLOCK [4265153541,4281930757) targets=49793 flushes=0 pops=535500 blockmax=421116703733 BLK=16777216 elapsed=253s
+BLOCK [4281930757,4294967297) targets=21183 flushes=0 pops=215639 blockmax=752177500805 BLK=33554432 elapsed=253s
+# exact-height rerun of the block holding Tmax (game_sparse 8589934593 3233354757 3250131973):
+# game_sparse CAP=8589934593 B1=3233354757 B2=3250131973 HLIMIT=60000000 table=715.8MB
+PHASE1 FINAL CAP=8589934593 frontier=45683717 elapsed=42s
+PHASE2 targets (unresolved odd starts in [3233354757,3250131973)): 713479
+PHASE2 initial explored table positions=9330750 candidates=3645315
+PHASE2 DONE: every odd start in [3233354757,3250131973) resolved (N or P, finite remoteness) (starts between the phase-1 frontier and B1 were not processed in this run); targets 713479/713479; max time used=13112245406701; flushes=0; H=30979678 E=13448239 heapmax=3739250 pops=30979678 skips=10514796 trap=0 elapsed=61s
+PHASE2 per-target: largest height 13112245406701 at start n=3238138315 ; largest height/n = 4049.3 at n=3238138315 (exact: no flush)
+PHASE2 histogram of floor(log2(height/n)) over phase-2 targets: 1:430773 2:207062 3:59217 4:14876 5:1432 6:101 7:13 8:3 9:1 11:1
+
+############ 4. independent checks (game_check.py: Python BFS retrograde, OEIS, certificate checker)
+(A) BFS cap C=2097153: odd 3<=n<=C resolved=733899 (N=448020, P=285879), unresolved=314677; first unresolved odd start=93165
+    max remoteness among odd n < 93165: 73 at n=41417 (capped remoteness = upper bound; exact when optimal lines stay <= C)
+(B) compared with C dump (dump_2p21.bin, cap 2097153, n<=2097153): 1048576 odd positions, 0 mismatches
+(C) remoteness 2 (A005698) all n in [2,174762]: ours 10 terms, OEIS 10 terms, equal=True
+(C) remoteness 3 (A005695) all n in [2,19797]: ours 46 terms, OEIS 46 terms, equal=True
+(C) remoteness 4 (A005696) all n in [2,52793]: ours 41 terms, OEIS 41 terms, equal=True
+(C) remoteness 5 (A005697) all n in [2,2153]: ours 48 terms, OEIS 48 terms, equal=True
+(C) remoteness 6 (A005694) all n in [2,5689]: ours 48 terms, OEIS 48 terms, equal=True
+(C') remoteness-2 positions n<=1954687338269 (Jacobsthal characterization): 26 terms; equal to A005698 data: True
+(D) cert_small.txt: VALID certificate, 952 nodes, 7 targets, largest node 104169269; 7=P, 13=P, 15=N, 23=P, 27=N, 817837=N, 834437=P
+(D) cert_703036003.txt: VALID certificate, 1255 nodes, 1 targets, largest node 1499556851731; 703036003=N
+(D) cert_3238138315.txt: VALID certificate, 1437 nodes, 1 targets, largest node 13112245406701; 3238138315=P
+(D) cert_sample64.txt: VALID certificate, 15752 nodes, 64 targets, largest node 11139635179; 1665506943=N, 3168989267=P, 1215256895=N, 3226549279=P, 3824617035=N, 1626805431=P, 3526749471=P, 2651630545=N ...
+(D') cert_sample64.txt: 64 sampled starts from blocks_2p33_2p32_run2.txt; certificate values agree for 64, disagree for 0 []
+# sparse heights (cap 2^24 start) vs dense exact heights (cap 2^32) on all non-multiple-of-3 targets < 3e6: 4049 equal, 0 mismatches
+# block mode with caps 2^27 / 2^28 / 2^33 and different HLIMIT/TMAXB: identical PCOUNT lines at all common checkpoints
+
+############ 5. structure on odd n < 2^27 (game_struct 2147483649 134217728)
+# game_struct CAP=2147483649 BA=134217728 NB=201326596; phase-1 frontier 13166331 (9s)
+# phase 2: 63738 targets, 1083376 insertions, max inserted 145827314477 (10s)
+
+## S1 P-density
+octave [2^3,2^4): P-fraction 0.25000   (cumulative odd n<2^4, n=1 counted N: 0.25000)
+octave [2^4,2^5): P-fraction 0.37500   (cumulative odd n<2^5, n=1 counted N: 0.31250)
+octave [2^5,2^6): P-fraction 0.31250   (cumulative odd n<2^6, n=1 counted N: 0.31250)
+octave [2^6,2^7): P-fraction 0.50000   (cumulative odd n<2^7, n=1 counted N: 0.40625)
+octave [2^7,2^8): P-fraction 0.46875   (cumulative odd n<2^8, n=1 counted N: 0.43750)
+octave [2^8,2^9): P-fraction 0.49219   (cumulative odd n<2^9, n=1 counted N: 0.46484)
+octave [2^9,2^10): P-fraction 0.48438   (cumulative odd n<2^10, n=1 counted N: 0.47461)
+octave [2^10,2^11): P-fraction 0.48438   (cumulative odd n<2^11, n=1 counted N: 0.47949)
+octave [2^11,2^12): P-fraction 0.49121   (cumulative odd n<2^12, n=1 counted N: 0.48535)
+octave [2^12,2^13): P-fraction 0.49121   (cumulative odd n<2^13, n=1 counted N: 0.48828)
+octave [2^13,2^14): P-fraction 0.48853   (cumulative odd n<2^14, n=1 counted N: 0.48840)
+octave [2^14,2^15): P-fraction 0.49146   (cumulative odd n<2^15, n=1 counted N: 0.48993)
+octave [2^15,2^16): P-fraction 0.48840   (cumulative odd n<2^16, n=1 counted N: 0.48917)
+octave [2^16,2^17): P-fraction 0.48898   (cumulative odd n<2^17, n=1 counted N: 0.48907)
+octave [2^17,2^18): P-fraction 0.48878   (cumulative odd n<2^18, n=1 counted N: 0.48893)
+octave [2^18,2^19): P-fraction 0.48856   (cumulative odd n<2^19, n=1 counted N: 0.48875)
+octave [2^19,2^20): P-fraction 0.48759   (cumulative odd n<2^20, n=1 counted N: 0.48817)
+octave [2^20,2^21): P-fraction 0.48696   (cumulative odd n<2^21, n=1 counted N: 0.48756)
+octave [2^21,2^22): P-fraction 0.48632   (cumulative odd n<2^22, n=1 counted N: 0.48694)
+octave [2^22,2^23): P-fraction 0.48505   (cumulative odd n<2^23, n=1 counted N: 0.48600)
+octave [2^23,2^24): P-fraction 0.48416   (cumulative odd n<2^24, n=1 counted N: 0.48508)
+octave [2^24,2^25): P-fraction 0.48330   (cumulative odd n<2^25, n=1 counted N: 0.48419)
+octave [2^25,2^26): P-fraction 0.48227   (cumulative odd n<2^26, n=1 counted N: 0.48323)
+octave [2^26,2^27): P-fraction 0.48129   (cumulative odd n<2^27, n=1 counted N: 0.48226)
+mantissa profile: P-fraction in 16 bins of n/2^k in [1,2) (rows = octave k)
+ k=16: 0.1172 0.8618 0.0820 0.8574 0.2070 0.5537 0.6631 0.0557 0.8774 0.4238 0.0942 0.8994 0.5396 0.0176 0.6855 0.8882
+ k=17: 0.1211 0.8555 0.0842 0.8787 0.1750 0.5972 0.6050 0.0820 0.9011 0.3772 0.1348 0.9165 0.4758 0.0298 0.7415 0.8452
+ k=18: 0.1307 0.8450 0.0876 0.8899 0.1486 0.6414 0.5602 0.1169 0.9166 0.3215 0.1766 0.9282 0.4171 0.0515 0.7883 0.7968
+ k=19: 0.1437 0.8240 0.1001 0.8922 0.1227 0.6840 0.5086 0.1539 0.9255 0.2747 0.2235 0.9307 0.3669 0.0772 0.8295 0.7441
+ k=20: 0.1658 0.7999 0.1198 0.8850 0.1088 0.7227 0.4600 0.1941 0.9259 0.2325 0.2722 0.9294 0.3148 0.1094 0.8620 0.6892
+ k=21: 0.1898 0.7709 0.1448 0.8716 0.0995 0.7585 0.4134 0.2371 0.9205 0.1918 0.3236 0.9208 0.2698 0.1474 0.8879 0.6337
+ k=22: 0.2177 0.7393 0.1745 0.8510 0.0964 0.7890 0.3673 0.2813 0.9074 0.1578 0.3761 0.9050 0.2282 0.1900 0.9060 0.5738
+ k=23: 0.2484 0.7053 0.2077 0.8253 0.0998 0.8148 0.3232 0.3281 0.8880 0.1292 0.4293 0.8836 0.1910 0.2376 0.9178 0.5176
+ k=24: 0.2808 0.6702 0.2432 0.7954 0.1094 0.8348 0.2830 0.3751 0.8625 0.1066 0.4822 0.8577 0.1595 0.2880 0.9233 0.4610
+ k=25: 0.3146 0.6336 0.2804 0.7619 0.1241 0.8489 0.2458 0.4225 0.8317 0.0897 0.5342 0.8260 0.1332 0.3409 0.9222 0.4066
+ k=26: 0.3492 0.5966 0.3188 0.7259 0.1435 0.8567 0.2131 0.4695 0.7963 0.0792 0.5844 0.7904 0.1118 0.3949 0.9150 0.3553
+ pooled k>=20: 0.3174 0.6309 0.2838 0.7575 0.1291 0.8446 0.2470 0.4251 0.8258 0.0939 0.5360 0.8205 0.1359 0.3453 0.9169 0.4057
+
+## S2 residues (odd 3<=n<BA)
+mod 2^3 : P-fraction range [0.4665, 0.4981]; max |p(r)-p(-r)| = 0.00006 (max z-score 0.34 over 2 pairs)
+mod 2^4 : P-fraction range [0.4307, 0.5083]; max |p(r)-p(-r)| = 0.00009 (max z-score 0.38 over 4 pairs)
+mod 2^5 : P-fraction range [0.4047, 0.5345]; max |p(r)-p(-r)| = 0.00013 (max z-score 0.37 over 8 pairs)
+   mod 32 table r:p(r) : 1:0.4811 3:0.5221 5:0.4567 7:0.5345 9:0.4819 11:0.4049 13:0.4823 15:0.4945 17:0.4945 19:0.4822 21:0.4047 23:0.4821 25:0.5345 27:0.4567 29:0.5222 31:0.4812
+mod 2^6 : P-fraction range [0.3856, 0.5671]; max |p(r)-p(-r)| = 0.00022 (max z-score 0.45 over 16 pairs)
+mod 2^7 : P-fraction range [0.3500, 0.5906]; max |p(r)-p(-r)| = 0.00041 (max z-score 0.59 over 32 pairs)
+mod 2^8 : P-fraction range [0.3245, 0.6167]; max |p(r)-p(-r)| = 0.00097 (max z-score 1.01 over 64 pairs)
+mod 2^9 : P-fraction range [0.3060, 0.6485]; max |p(r)-p(-r)| = 0.00124 (max z-score 0.91 over 128 pairs)
+mod 2^10: P-fraction range [0.2714, 0.6714]; max |p(r)-p(-r)| = 0.00237 (max z-score 1.22 over 256 pairs)
+mod 2^11: P-fraction range [0.2478, 0.6963]; max |p(r)-p(-r)| = 0.00327 (max z-score 1.18 over 512 pairs)
+mod 2^12: P-fraction range [0.2318, 0.7260]; max |p(r)-p(-r)| = 0.00699 (max z-score 1.80 over 1024 pairs)
+mod 3^1: P-fraction range [0.4822, 0.4823] : 0:0.4822 1:0.4823 2:0.4822
+mod 3^2: P-fraction range [0.4822, 0.4823] : 0:0.4822 1:0.4823 2:0.4822 3:0.4823 4:0.4823 5:0.4822 6:0.4822 7:0.4823 8:0.4823
+mod 3^3: P-fraction range [0.4820, 0.4825]
+mod 3^4: P-fraction range [0.4817, 0.4827]
+descent exponent j=v2(3n+-1) of the descending move: P-fraction: j=2:0.4980(50.000%) j=3:0.5022(25.000%) j=4:0.4567(12.500%) j=5:0.4239(6.250%) j=6:0.4212(3.125%) j=7:0.3755(1.562%) j=8:0.3430(0.781%) j=9:0.3408(0.391%) j=10:0.2955(0.195%) j=11:0.2640(0.098%) j=12:0.2632(0.049%) j=13:0.2197(0.024%) j=14:0.1925(0.012%) j=15:0.1936(0.006%) j=16:0.1514(0.003%) j=17:0.1426(0.002%)
+
+## S3 winning moves (odd 3<=n<BA)
+N=34744914 P=32363949; among N: only-descent wins 0.0800 (incl. immediate wins 26), only-ascent wins 0.0842, both win 0.8359
+forced-ascent positions (only the ascending move wins): 2924170 = 0.0436 of all odd n; on plus sheet (n=3 mod 4): 0.5000 of them
+first forced-ascent positions: 15 27 47 49 53 59 83 107 117 131 147 187 207 213 235 331 369 371 373 427
+
+## S4 down-only game (value = parity of the descending chain length L(n) to 1)
+agreement 0.3725; confusion (true,down): NN=13129788 NP=21615126 PN=20492435 PP=11871514; mean L=17.86 max L=43
+first disagreements: 15 27 47 49 53 59 63 65 71 79 83 87 95 105 107 111 117 125 127 141
+P-fraction by L (L even => down-only says P): 6:0.250 7:0.624 8:0.264 9:0.637 10:0.283 11:0.636 12:0.316 13:0.628 14:0.320 15:0.615 16:0.341 17:0.658 18:0.362 19:0.600 20:0.383 21:0.585 22:0.348 23:0.566 24:0.415 25:0.543 26:0.431 27:0.516 28:0.458 29:0.579 30:0.486 31:0.490 32:0.516 33:0.460
+
+## S7 sheets (n=1 mod 4: descending move on plus sheet; n=3 mod 4: on minus sheet)
+n=1 mod 4: P=0.4822  only plus-child P=0.0414  only minus-child P=0.0436  both=0.4328
+n=3 mod 4: P=0.4823  only plus-child P=0.0436  only minus-child P=0.0414  both=0.4327
+
+## S8 reflection tests
+k=24: agreement of v(n) and v(3*2^k-n) = 0.4898 (independence baseline 0.5006)
+k=25: agreement of v(n) and v(3*2^k-n) = 0.5098 (independence baseline 0.5006)
+k=26: agreement of v(n) and v(3*2^k-n) = 0.5294 (independence baseline 0.5007)
+
+## S5 ascending rays: k(x) = min{i>=0 : d(u^i(x)) is P or 1}; rule: x is N iff k(x) even
+x < 32768: exit-index rule violations 0 of 16383 (censored 0)
+distribution of k: 0:0.46731 1:0.47433 2:0.03614 3:0.01550 4:0.00635 5:0.00012 6:0.00024
+P(k=0)=q=0.4673; geometric model would give P(k even)=1/(2-q)=0.6524 vs observed 0.5100
+side values along a ray step (s_i -> s_{i+1}, s = [d-child is P]): P(s1=P|s0=N)=0.8895  P(s1=P|s0=P)=0.0304
+
+## S9 phase predictor: value vs theta = frac(log2 n) (majority vote per theta-bin, last octave)
+octave 2^26, 64 theta-bins: accuracy 0.8231 ; with n mod 16 as well: 0.8252
+octave 2^26, 256 theta-bins: accuracy 0.8337 ; with n mod 16 as well: 0.8365
+octave 2^26, 1024 theta-bins: accuracy 0.8413 ; with n mod 16 as well: 0.8444
+octave 2^26, 4096 theta-bins: accuracy 0.8502 ; with n mod 16 as well: 0.8533
+octave 2^26, 16384 theta-bins: accuracy 0.8624 ; with n mod 16 as well: 0.8661
+
+## S10 the two children d(n),u(n) (same phase theta+log2 3 mod 1, up to O(1/n)) have equal values in 0.9150 of cases
+
+## S11 pointwise partners in octave 2^26: mirror partner n' = n+delta, delta = (-2n mod 2^m) (so n' = -n mod 2^m);
+##     control partner n+delta'' with delta'' the mirror distance of an unrelated point (same distance law, no residue relation)
+ m= 4: mirror 0.8949  control 0.8825
+ m= 6: mirror 0.8739  control 0.8594
+ m= 8: mirror 0.8554  control 0.8371
+ m=10: mirror 0.8380  control 0.8174
+ m=12: mirror 0.8225  control 0.7994
+ m=14: mirror 0.8087  control 0.7835
+ m=16: mirror 0.7991  control 0.7713
+
+# done (16s)
+
+############ 6. remoteness (game_remote 268435457; game_remote 536870913 rem_268435457.bin)
+# game_remote CAP=268435457: levels=155 unresolved=26081198 (30s)
+fully resolved prefix: every odd start < 2924165
+remoteness by octave (odd n in [2^k,2^{k+1}), n<B): mean, max (argmax)
+ k= 1: mean 1.00  max 1 at n=3
+ k= 2: mean 1.50  max 2 at n=7
+ k= 3: mean 3.75  max 7 at n=15
+ k= 4: mean 4.62  max 9 at n=27
+ k= 5: mean 7.94  max 24 at n=63
+ k= 6: mean 12.00  max 31 at n=117
+ k= 7: mean 14.38  max 33 at n=207
+ k= 8: mean 16.27  max 38 at n=441
+ k= 9: mean 18.86  max 50 at n=879
+ k=10: mean 20.93  max 53 at n=1041
+ k=11: mean 22.42  max 57 at n=3295
+ k=12: mean 24.60  max 57 at n=6579
+ k=13: mean 26.70  max 64 at n=12441
+ k=14: mean 28.78  max 71 at n=23297
+ k=15: mean 30.81  max 73 at n=41417
+ k=16: mean 32.89  max 91 at n=112413
+ k=17: mean 34.97  max 93 at n=199845
+ k=18: mean 37.05  max 95 at n=355279
+ k=19: mean 39.14  max 107 at n=709063
+ k=20: mean 41.20  max 109 at n=1260557
+ k=21: mean 42.55  max 114 at n=2625765 (partial octave)
+remoteness records (odd n < B): 1:1 7:2 9:3 13:4 15:7 27:9 47:23 63:24 83:25 111:26 117:31 157:32 207:33 279:34 369:35 441:38 587:39 659:49 879:50 1041:53 2775:54 3295:57 8787:58 10415:61 12441:64 16587:65 21945:66 23297:71 41417:73 103425:81 112413:91 199845:93 355279:95 561429:99 709063:107 1260557:109 2215489:111 2625765:114
+optimal play (odd 3<=n<B): N-positions 747664: fastest win is ascending in 0.0983 (forced: only ascent wins 0.0819; ties 0.7321)
+                           P-positions 714417: slowest loss is ascending in 0.0947 (ties 0.8939)
+# cap 2^29:
+# game_remote CAP=536870913: levels=160 unresolved=51860909 (62s)
+fully resolved prefix: every odd start < 7301503
+remoteness by octave (odd n in [2^k,2^{k+1}), n<B): mean, max (argmax)
+ k= 1: mean 1.00  max 1 at n=3
+ k= 2: mean 1.50  max 2 at n=7
+ k= 3: mean 3.75  max 7 at n=15
+ k= 4: mean 4.62  max 9 at n=27
+ k= 5: mean 7.94  max 24 at n=63
+ k= 6: mean 12.00  max 31 at n=117
+ k= 7: mean 14.38  max 33 at n=207
+ k= 8: mean 16.27  max 38 at n=441
+ k= 9: mean 18.86  max 50 at n=879
+ k=10: mean 20.93  max 53 at n=1041
+ k=11: mean 22.42  max 57 at n=3295
+ k=12: mean 24.60  max 57 at n=6579
+ k=13: mean 26.70  max 64 at n=12441
+ k=14: mean 28.78  max 71 at n=23297
+ k=15: mean 30.81  max 73 at n=41417
+ k=16: mean 32.89  max 91 at n=112413
+ k=17: mean 34.97  max 93 at n=199845
+ k=18: mean 37.05  max 95 at n=355279
+ k=19: mean 39.14  max 107 at n=709063
+ k=20: mean 41.20  max 109 at n=1260557
+ k=21: mean 43.27  max 130 at n=4094795
+ k=22: mean 45.00  max 132 at n=7279635 (partial octave)
+remoteness records (odd n < B): 1:1 7:2 9:3 13:4 15:7 27:9 47:23 63:24 83:25 111:26 117:31 157:32 207:33 279:34 369:35 441:38 587:39 659:49 879:50 1041:53 2775:54 3295:57 8787:58 10415:61 12441:64 16587:65 21945:66 23297:71 41417:73 103425:81 112413:91 199845:93 355279:95 561429:99 709063:107 1260557:109 2215489:111 2625765:114 3154531:117 3279535:122 4094795:130 5459727:131 7279635:132
+optimal play (odd 3<=n<B): N-positions 1873726: fastest win is ascending in 0.0957 (forced: only ascent wins 0.0807; ties 0.7397)
+                           P-positions 1777024: slowest loss is ascending in 0.0887 (ties 0.9009)
+PV from 7 (remoteness 2): v5 v1  [plies 2; ascents by first player 0, by second 0]
+PV from 13 (remoteness 4): ^19 v7 v5 v1  [plies 4; ascents by first player 1, by second 0]
+PV from 15 (remoteness 7): ^23 v17 v13 ^19 v7 v5 v1  [plies 7; ascents by first player 1, by second 1]
+PV from 23 (remoteness 6): v17 v13 ^19 v7 v5 v1  [plies 6; ascents by first player 1, by second 0]
+PV from 27 (remoteness 9): ^41 v31 v23 v17 v13 ^19 v7 v5 v1  [plies 9; ascents by first player 1, by second 1]
+PV from 41417 (remoteness 73): ^62125 v23297 ^34945 v26209 ^39313 v29485 ^44227 ^66341 ^99511 v74633 v55975 v41981 v15743 ^23615 v17711 ^26567 v19925 ^29887 v22415 ^33623 v25217 v18913 v14185 v10639 ...  [plies 73; ascents by first player 7, by second 20]
+PV from 817837 (remoteness 57): ^1226755 v460033 ^690049 v517537 ^776305 v582229 ^873343 v655007 ^982511 v736883 ^1105325 v414497 ^621745 v466309 ^699463 v524597 ^786895 v590171 v110657 v82993 ^124489 v93367 v70025 v52519 ...  [plies 57; ascents by first player 18, by second 1]
+PV from 834437 (remoteness 98): ^1251655 v938741 ^1408111 v1056083 ^1584125 ^2376187 ^3564281 ^5346421 ^8019631 ^12029447 v9022085 ^13533127 v10149845 ^15224767 v11418575 ^17127863 v12845897 v9634423 v7225817 v5419363 v2032261 ^3048391 v2286293 ^3429439 ...  [plies 98; ascents by first player 13, by second 24]
+comparison with cap 268435457: of 63397287 positions resolved there, remoteness equal for 63004920, different for 392367 (max excess 118)
+# on the prefix n < 2924165 all 974721 odd non-multiples of 3 have identical remoteness at caps 2^28 and 2^29
+
+############ 7. phase law (game_phase.py rem_536870913.bin 4 30)
+# rem table cap=536870913; every odd start < 7301503 has a capped remoteness
+# octave k: [min phi, max phi] over odd n in [2^k,2^(k+1)); top endgames (last 3 PV positions); accuracy of theta-bin majority predictor (64/256/1024 bins)
+k= 4: phi in [-0.0227,+0.0489]  P=0.3750  theta-predictor acc 1.0000/1.0000/1.0000  endgames: 19>7>5:6, 21:1, 29>11:1
+k= 5: phi in [-0.0357,+0.0541]  P=0.3125  theta-predictor acc 1.0000/1.0000/1.0000  endgames: 19>7>5:12, 37>7>5:1, 39>29>11:1, 43:1
+k= 6: phi in [-0.0308,+0.0489]  P=0.5000  theta-predictor acc 1.0000/1.0000/1.0000  endgames: 19>7>5:27, 77>29>11:2, 75>7>5:1, 85:1
+k= 7: phi in [-0.0259,+0.0460]  P=0.4688  theta-predictor acc 1.0000/1.0000/1.0000  endgames: 19>7>5:56, 77>29>11:2, 149>7>5:2, 151>227>85:1
+k= 8: phi in [-0.0257,+0.0475]  P=0.4922  theta-predictor acc 0.9375/1.0000/1.0000  endgames: 19>7>5:116, 77>29>11:3, 149>7>5:2, 299>7>5:1
+k= 9: phi in [-0.0250,+0.0454]  P=0.4844  theta-predictor acc 0.9414/0.9961/1.0000  endgames: 19>7>5:238, 77>29>11:4, 149>7>5:3, 605>227>85:2
+k=10: phi in [-0.0249,+0.0453]  P=0.4844  theta-predictor acc 0.9277/0.9590/1.0000  endgames: 19>7>5:482, 77>29>11:8, 149>7>5:5, 299>7>5:3
+k=11: phi in [-0.0250,+0.0455]  P=0.4912  theta-predictor acc 0.9238/0.9473/0.9932  endgames: 19>7>5:980, 77>29>11:13, 149>7>5:8, 299>7>5:4
+k=12: phi in [-0.0249,+0.0457]  P=0.4912  theta-predictor acc 0.9194/0.9395/0.9604  endgames: 19>7>5:1972, 77>29>11:25, 149>7>5:13, 151>227>85:6
+k=13: phi in [-0.0249,+0.0456]  P=0.4885  theta-predictor acc 0.9084/0.9270/0.9463  endgames: 19>7>5:3986, 77>29>11:36, 149>7>5:18, 299>7>5:10
+k=14: phi in [-0.0249,+0.0456]  P=0.4915  theta-predictor acc 0.8959/0.9159/0.9325  endgames: 19>7>5:4001, 77>29>11:29, 149>7>5:15, 151>227>85:9
+k=15: phi in [-0.0249,+0.0456]  P=0.4884  theta-predictor acc 0.8862/0.9064/0.9216  endgames: 19>7>5:4019, 77>29>11:27, 149>7>5:11, 151>227>85:7
+k=16: phi in [-0.0249,+0.0456]  P=0.4890  theta-predictor acc 0.8780/0.8965/0.9108  endgames: 19>7>5:4061, 77>29>11:12, 299>7>5:5, 607>455>341:5
+k=17: phi in [-0.0249,+0.0456]  P=0.4888  theta-predictor acc 0.8695/0.8878/0.9006  endgames: 19>7>5:4056, 77>29>11:10, 299>7>5:6, 151>227>85:4
+k=18: phi in [-0.0249,+0.0456]  P=0.4886  theta-predictor acc 0.8607/0.8812/0.8930  endgames: 19>7>5:4073, 77>29>11:4, 155>29>11:3, 4843>227>85:3
+k=19: phi in [-0.0249,+0.0456]  P=0.4876  theta-predictor acc 0.8578/0.8736/0.8848  endgames: 19>7>5:3999, 77>29>11:13, 149>7>5:5, 299>7>5:5
+k=20: phi in [-0.0249,+0.0456]  P=0.4870  theta-predictor acc 0.8521/0.8670/0.8770  endgames: 19>7>5:3981, 77>29>11:8, 149>7>5:3, 299>7>5:2
+k=21: phi in [-0.0249,+0.0456]  P=0.4863  theta-predictor acc 0.8479/0.8602/0.8701  endgames: 19>7>5:3988, 77>29>11:7, 149>7>5:3, 4949>29>11:1
+# over all octaves checked: phi in [-0.0357,+0.0541]
+# exact phase contributions log2(3n/(3n+e)) of small moves (descending and ascending):
+   3 -> 1 (descending, 3n-1=8): +0.16993
+   3 -> 5 (ascending, 3n+1=10): -0.15200
+   5 -> 1 (descending, 3n+1=16): -0.09311
+   5 -> 7 (ascending, 3n-1=14): +0.09954
+   7 -> 5 (descending, 3n-1=20): +0.07039
+   7 -> 11 (ascending, 3n+1=22): -0.06711
+   9 -> 7 (descending, 3n+1=28): -0.05247
+   9 -> 13 (ascending, 3n-1=26): +0.05445
+   11 -> 1 (descending, 3n-1=32): +0.04439
+   11 -> 17 (ascending, 3n+1=34): -0.04307
+   13 -> 5 (descending, 3n+1=40): -0.03653
+   13 -> 19 (ascending, 3n-1=38): +0.03747
+   17 -> 13 (descending, 3n+1=52): -0.02801
+   17 -> 25 (ascending, 3n-1=50): +0.02857
+   19 -> 7 (descending, 3n-1=56): +0.02554
+   19 -> 29 (ascending, 3n+1=58): -0.02509
+   21 -> 1 (descending, 3n+1=64): -0.02272
+   21 -> 31 (ascending, 3n-1=62): +0.02308
+   23 -> 17 (descending, 3n-1=68): +0.02106
+   23 -> 35 (ascending, 3n+1=70): -0.02076
+   43 -> 1 (descending, 3n-1=128): +0.01123
+   43 -> 65 (ascending, 3n+1=130): -0.01114
+   85 -> 1 (descending, 3n+1=256): -0.00565
+   85 -> 127 (ascending, 3n-1=254): +0.00567
+#   e.g. endgame 19->7->5->1 contributes +0.00282

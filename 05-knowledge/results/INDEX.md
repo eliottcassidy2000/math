@@ -1,5 +1,13 @@
 # Script Results Index
 
+- [Althöfer's 3n±1 game](collatz_procgen_20260922_althofer_game.md):
+  **FINITE-EXACT / PROVED structure / CITED.** This is Conway's
+  Beans-Don't-Talk (Guy's Problem 42), with a prize open to 2037. No draws
+  below `2^32`; exact heights to `10^9`; checked against OEIS A005694--8.
+  PROVED: the ascending-ray decomposition and the exit-index parity rule.
+  The phase `frac(log_2 n)` predicts values, and negation equivariance
+  holds. The prize question stays OPEN.
+
 - [Loops through 1 and escapes](collatz_procgen_20260922_loops_and_escapes.md):
   **PROVED / FINITE-EXACT.** Loop ratio `>3/2` (Catalan-type), so the
   1-escape needs exactly `floor(k log_2 3)` halvings and is the only exit.

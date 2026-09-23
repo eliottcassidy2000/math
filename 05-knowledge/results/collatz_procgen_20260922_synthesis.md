@@ -160,7 +160,7 @@ the divergence half of Collatz, and the sign enters exactly as the sign of
 | 2 | relax by branch choice (graph `E`), certificates + escapes | live for E-SCC | profiler, DP/DFS, Lean | Q2 reduced mod 27 (Lean), verified to `2.02e13`; gap: `1/2` chains |
 | 3 | partial choice `E_S` | diagnostic | profiler over `S` | `6 mod 8` does most of the work; fingerprint led by `54 mod 64` |
 | 4 | additive / sign choice | diagnostic | zoo | empty exceptional set; one-player trivial |
-| 5 | two-player sign choice (Althöfer game) | live | retrograde to `10^8`, game lane | no draws below `834,437`; PENDING lane |
+| 5 | two-player sign choice (Althöfer game = Conway's Beans-Don't-Talk, Guy Problem 42) | live | game lane | no draws below `2^32` (FINITE-EXACT); ray/exit-parity law PROVED; P-density about `0.48` |
 | 6 | undirected Collatz (grand-orbit moves) | equivalent to Collatz | BFS to `10^6` | no collapse (negative control) |
 | 7 | sideways moves `n~4n+1` | inside #6 | argued | no power beyond Terras |
 | 8 | Applegate--Lagarias see-saw transplanted to `E` | needs cheap escapes | cost bounds | escape cost `>=32/27`, not `1+2^(-j)`: does not close as is |
@@ -279,9 +279,19 @@ the trunk `(4^i-1)/3` is the exit set of the hardest relaxed obstruction.
    the observed growth of about `0.1` bit per level. If this holds, an
    E-SCC proof needs parametrized escape families, as the atlas notes,
    not finitely many lemmas.
-4. Althöfer's `3n+-1` game (prize open to 2037; a claimed proof is under
-   review). Capped retrograde analysis to `10^8` resolves every odd start
-   below `834,437`, with about 28% P-positions and no draw found.
+4. Althöfer's `3n+-1` game (prize open to 2037). This is Conway's
+   *Beans-Don't-Talk* and Guy's 1996 Problem 42 (CITED via the
+   [game lane](collatz_procgen_20260922_althofer_game.md)). A public
+   repository under the claimant's name labels its own proof OPEN.
+   * FINITE-EXACT: **no draws below `2^32`** (every odd start has finite
+     remoteness; heights up to `1.31*10^13`), matching OEIS A005694--A005698.
+   * PROVED: ascending moves split the odd numbers into increasing rays,
+     and a position is N iff the first point on its ray whose descending
+     move reaches a P-position has even index.
+   * The P-density is about `0.48`. **CORRECTION:** my earlier "about 28%
+     P" was an artifact of the value cap.
+   * Observed: the phase `frac(log_2 n)` predicts the value 84--100% of
+     the time. Negation equivariance explains the `r<->-r` symmetry.
 5. The divergence half of Collatz: the four-property job description above.
    The corrected foundry leaves exactly two unblocked mechanism types:
    sound certificate searches, and transversality with a Diophantine
