@@ -1,0 +1,500 @@
+collatz_procgen_20260922_transversality: 2-versus-3 transversality foundry
+====================================================================================================
+S1 Targets
+  T1: no divergent positive 3x+1 orbit (Periodicity for Z^+, k=1): Phi(w) not in Z^+ for every non-EP word w
+  T2: E-SCC Q2 endgame (loops_and_escapes sec. 8): every hostile see-saw chain ends at 2^K w_final in a descending class
+  T3: Erdos: 2^n has a ternary digit 2 for every n >= 9
+  T4: Mahler: there is no Z-number (Phi_M(S) contains no positive integer, THM-2228)
+  PC: Lagarias's Periodicity Conjecture: Phi(w) irrational for every non-EP word w (all 3x+k, k = +-1 mod 6)
+  grammar: objects [2^K] 2^K in base 3 (full expansion) / in Z_3; [2^K|low] 2^K mod 3^D (lowest D ternary digits, a 3-adic window); [2^K w|clock] 2^(K0(s)) w, K0(s)=floor((s+1)log2 3) (E-SCC Q2 landing classes); [3^a] 3^a in base 2 / in Z_2; [Phi_T(W)] Bernstein number Phi_T(w) = -sum 2^(d_l) 3^(-l) of parity words w in class W; [Phi_M(W)] Mahler-map Bernstein number Phi_M(c) = -sum c_j 2^j 3^(-j-1) (THM-2228) of carry words c in W; [lambda 2^n] lambda*2^n in R (base-3 digits of the integer part; Lagarias's real system); [xi(3/2)^n] xi*(3/2)^n mod 1 (Mahler)
+           properties [digit] digit avoidance / presence; [nnz] number of nonzero digits; [dist] p-adic (or archimedean) distance to a rational; [runs] run lengths of equal digits; [rat] rationality / integrality
+           quantifiers [all] for all indices (beyond a threshold); [almost] for almost all indices (density 1 / Haar a.e.); [inf] for infinitely many indices
+           word classes [EP] eventually periodic words; [STURM] Sturmian words (all irrational slopes, all intercepts, lower and upper); [SUB] non-EP words with liminf density of 1s < log_3 2; [BCD] non-EP words with bounded critical discrepancy sup_s |a_s - s log_3 2| < inf; [REP] non-EP words with strong initial repetitions (gain lambda - log2(|P|+|Q|) unbounded; Theorem R); [LIN] non-EP words of linear factor complexity; [HARD] non-EP words outside SUB, BCD, STURM and REP; [ALL] all non-EP words
+
+S2 Catalogue of PROVED 2-versus-3 transversality theorems (typing: B = blind, O = overcomes, - = not applicable)
+  Typing rule:
+    SHEET    B if the conclusion holds verbatim for the negated / minus-sheet analogue; O if it fails there; - no analogue.
+    DRIFT    B if the theorem holds for every multiplicatively independent pair (e.g. (2,5), or 5/2, where the Collatz
+             drift 3<2^2, resp. Mahler's threshold p<q^2, has the other sign); O if it uses 3<2^2 (p<q^2) essentially.
+    DEFECT   B for counting/density/measure/dimension statements (a planted density-zero set is invisible);
+             O for every-element statements (every n, every orbit, every point beyond a threshold).
+    INTEGRAL O if the statement isolates the rational/periodic exceptional points; B if it tolerates extra ones; - n/a.
+    UNIFORM  B if the proof runs unchanged over an explicit infinite family (all pairs, all maps of a class);
+             O if per-instance (explicit finite computation / bounded complexity, decidable for each instance).
+    kind     COUNT (i) = counting/density/dimension;  EVERY (ii) = every element/orbit/point;  FINITE = finite range.
+  cols: key | kind | effective | SHEET DRIFT DEFECT INTEGRAL UNIFORM | serves
+  -- items asked for --
+  Furstenberg1967          | EVERY  | no (BLMV 2009 effectiv | B  B  O  O  B  | none directly (orbit of a 2-parameter semigroup, not of {2^n} or of Z)
+                             Furstenberg 1967, Math. Systems Theory 1, 1-49  [R] via Rudolph 1990 intro, Lindenstrauss 2005 Thm 1.1, zbMATH Zbl 0146.28502 (primary paywalled)
+                             statement: p,q >= 2 multiplicatively independent, X subset R/Z closed with pX, qX subset X => X finite (rationals) or X = R/Z; equivalently {p^m q^n alpha} is dense mod 1 for every irrational alpha. The measure form (atomless ergodic x2,x3-invariant mu is Lebesgue) is Furstenberg's conjecture: OPEN.
+  SengeStraus1973          | EVERY  | no (Ridout-type p-adic | B  B  O  -  B  | T3/T1 only in the zero-dimensional form (few nonzero digits)
+                             Senge-Straus 1973, Period. Math. Hungar. 3, 93-100  [R] via Stewart 1980 intro, Spiegelhofer 2023, Dimitrov-Howe (cite 'Thm 3, p. 100'); Springer bot-check
+                             statement: a, b >= 2: {n : s_a(n) <= c and s_b(n) <= c} is finite for every c iff log a/log b is irrational (equivalently with numbers of nonzero digits); e.g. 2^n has unboundedly many nonzero ternary digits
+  Stewart1980              | EVERY  | yes                    | B  B  O  -  B  | T3 only in the zero-dimensional form
+                             Stewart 1980, J. reine angew. Math. 319, 63-72  [P] GDZ scan, Thm 1, Thm 2
+                             statement: Thm 1: log a/log b irrational => L_(alpha,a)(n) + L_(beta,b)(n) > loglog n/(logloglog n + C) - 1 for n > 25, C effective in a,b (L counts digits different from alpha, beta). Thm 2: 3^n has more than log n/(loglog n + C0) - 1 nonzero binary digits for n > 4 (same for 2^n in base 3)
+  Mahler1957               | EVERY  | no (Mahler); yes with  | B  B  O  O  B  | T4 only for xi = 1 (not Z-numbers)
+                             Mahler 1957, Mathematika 4, 122-124 (with Corvaja-Zannier 2004, Zudilin 2007)  [R] via Corvaja-Zannier (arXiv math/0403522 [P]), Bilu, Zudilin JTNB 19 (2007) [P]
+                             statement: alpha > 1 rational non-integer, 0 < theta < 1 => ||alpha^n|| < theta^n for only finitely many n; so ||(3/2)^n|| > (3/4)^n for n >= n0 (ineffective, Ridout). Effective: ||(3/2)^k|| > 0.5803^k for k >= K (Zudilin 2007, K effective). Corvaja-Zannier Thm 1: ||alpha^n|| < l^n infinitely often => a power of alpha is Pisot
+                             notes: INTEGRAL: O (Pisot/integer alpha are exactly the exceptions)
+  Mahler1968               | COUNT  | yes                    | -  O  B  -  O  | T4 (countability; partial)
+                             Mahler 1968, J. Austral. Math. Soc. 8, 313-321  [P] reprint in Mahler Selecta (Documenta Math. 2019); Flatto 1992 [R] via Lagarias bibliography
+                             statement: each [g, g+1) contains at most one Z-number, and it lies in [g, g+1/2) (so Z-numbers are countable); at most x^0.7 Z-numbers in [0,x] for large x (Flatto 1992: exponent log_2(3/2))
+                             notes: DRIFT: O (for p/q = 5/2 > q^2 Z_{p/q}-numbers exist: Tijdeman 1972, Flatto 1992 [R via Andrieu-Eliahou-Vivion])
+  FLP1995                  | EVERY  | yes                    | B  B  O  -  B  | T4 partial (needs spread > 1/2)
+                             Flatto-Lagarias-Pollington 1995, Acta Arith. 70, 125-147  [R] via Lu-Zheng arXiv 2603.16794 [P], Farhi arXiv math/0611622 [P] (Acta Arith. PDF bot-blocked)
+                             statement: Thm 1.4: for every xi > 0 and coprime p > q > 1, limsup {xi (p/q)^n} - liminf {xi (p/q)^n} >= 1/p (spread >= 1/3 for 3/2). Negative ratio -3/2: spread >= 11/27 (Lu-Zheng 2026)
+                             notes: SHEET: B (both signs); DRIFT: B (uniform in p/q)
+  Lagarias2009             | COUNT  | yes                    | -  B  B  B  B  | T3 counting and dimension
+                             Lagarias 2009, J. London Math. Soc. 79, 562-588  [P] arXiv math/0512006v4
+                             statement: Thm 1.1: for lambda > 0, #{n <= X : floor(lambda 2^n)_3 omits 2} <= 25 X^0.9725 (X >= n0(lambda)); Thm 1.2: uncountably many lambda omit 2 along a sparse sequence; Thm 1.4: for nonzero lambda in Z_3, #{n <= X : (lambda 2^n)_3 omits 2} <= 2 X^(log_3 2); Thm 1.5: dim E^(1) = log_3 2, (1/2)log_3 2 <= dim E^(2) <= 1/2, (1/6)log_3 2 <= dim E^(3) <= dim E^(2). Conj. A, B: dim 0; Erdos <=> 1 not in E(Z_3)
+  Narkiewicz1980           | COUNT  | yes                    | -  B  B  B  B  | T3 counting only
+                             Narkiewicz 1980 (Univ. Beograd Publ. Elektrotehn. Fak. 678-715, 173-174); HKR 2015  [R] via Lagarias 2009 [P]; Holdum-Klausen-Rasmussen INTEGERS 15 (2015) A43 [P]
+                             statement: #{n <= X : (2^n)_3 omits the digit 2} <= 1.62 X^(log_3 2); HKR Thm 2.13: <= 1.3 a^(log_3 2) for 0 <= s < a; Thm 2.14: any prime p, digits >= p/2 avoided at most 4 a^(log_p((p+1)/2)) times
+  DupuyWeirich2016         | COUNT  | yes                    | -  B  B  B  B  | none (low digits, averaged)
+                             Dupuy-Weirich 2016, J. Number Theory 158, 268-280  [R] via Li-Zhao arXiv 2601.12753 [P] (ScienceDirect captcha)
+                             statement: Thm 3: for primes p != q and a digit b, the Cesaro average over n of the frequency of b among the m least significant base-q digits of p^n tends to 1/q as m -> infinity; Thm 6: no 'higher Wieferich primes'
+  HochmanShmerkin2012      | COUNT  | -                      | B  B  B  B  B  | none
+                             Hochman-Shmerkin 2012, Ann. of Math. 175, 1001-1059  [P] arXiv 0910.1956v2 Thm 1.3, Sec. 10.4
+                             statement: mu, nu invariant under T_m, T_n (m,n not powers of one integer) => dim pi(mu x nu) = min(1, dim(mu x nu)) for every non-principal linear projection; sets: dim(X + sY) = min(1, dim X + dim Y) for closed x2-, x3-invariant X, Y and s != 0
+  ShmerkinWu2019           | COUNT  | -                      | B  B  B  B  B  | none (a dimension-0 intersection can be nonempty: never excludes a point)
+                             Shmerkin 2019 (Ann. of Math. 189, 319-391); Wu 2019 (Ann. of Math. 189, 707-751)  [P] arXiv 1609.07802v3 Thm 1.2; arXiv 1609.08053v3 Thm 1.4
+                             statement: A, B subset [0,1] closed, x p- resp. x q-invariant, p,q multiplicatively independent: for every invertible affine g (Shmerkin) / all real u,v (Wu), upper box dim (A cap g(B)) <= max(0, dim_H A + dim_H B - 1) (Furstenberg's intersection conjecture)
+  Tao2022                  | COUNT  | no (A arbitrary, const | B  B  B  B  B  | none (log density; DEFECT-blind by construction)
+                             Tao 2022, Forum Math. Pi 10, e12  [P] arXiv 1909.03562v7 and published version
+                             statement: Prop 1.17: for n >= 1 and xi in Z/3^n not divisible by 3, |E e(-2 pi i xi Syrac(Z/3^n Z)/3^n)| <<_A n^(-A) uniformly, Syrac(Z/3^n Z) = sum_{i=1..n} 3^(i-1) 2^(-(a_1+..+a_i)) mod 3^n (eq. 1.29), a_i iid Geom(2); equivalent to fine-scale mixing (Prop 1.14). Thm 1.3: Col_min(N) < f(N) for log-almost all N, any f -> infinity
+                             notes: DRIFT: B for Prop 1.17 (the drift 3<2^2 enters only through first-passage stabilisation; GGM's q<p^(p/(p-1)) for Thm 1.3)
+  Yu                       | EVERY  | yes                    | B  B  O  O  B  | T2 partial (terminal landing depth <= C log K)
+                             Yu 1989-2007 (Forum Math. 19 (2007) 187-280); Bugeaud-Laurent 1996 (J. Number Theory 61)  [R] via Palojarvi-Seppala Thm A.2 (Yu, rational case) and Pink-Ziegler Thm 2 (Bugeaud-Laurent)
+                             statement: explicit upper bounds for v_p(prod (x_i/y_i)^(b_i) - 1); consequence (lit_B derivation, standard, not found stated): v_3(2^n - r) <= C(r) log n for rational r not a power of 2, v_2(3^n - r) <= C'(r) log n (effective)
+                             notes: INTEGRAL: O (r a power of the base: exact LTE)
+  Saye2022                 | FINITE | yes                    | -  -  O  -  O  | T3 finite range
+                             Saye 2022, J. Integer Seq. 25, Art. 22.3.4  [P] arXiv 2202.13256v2
+                             statement: for every 16 <= n <= 2*3^45 = 5.9e21, 2^n contains each ternary digit 0, 1, 2 (so Erdos holds for 8 < n <= 2*3^45)
+                             notes: DEFECT: O (below the bound)
+  -- further items --
+  MonksYazinski2004        | EVERY  | yes                    | B  B  O  O  B  | PC/T1 on the subcritical class (Thm 2.7(b))
+                             Monks-Yazinski 2004, Discrete Math. 275, 219-236  [P] author preprint AutoConjV13 (numbering matches the published version)
+                             statement: Thm 2.1: PC <=> Autoconjugacy Conjecture Omega(Q_odd) subset Q_odd <=> no rational 2-adic integer has a divergent T-orbit; Omega(Z^+) subset Q_odd <=> no divergent positive orbit. Thm 2.7(b): a rational x with a divergent orbit has liminf kappa_n(x)/n >= ln 2/ln 3 (Lemma L of the note). Thm 2.5: {1,2} is the only self-conjugate integer cycle
+  Akin2004                 | EVERY  | -                      | B  O  O  O  B  | PC framing; the drift barrier in Akin's heuristic
+                             Akin 2004, Contemp. Math. 356, 1-20  [R] via zbMATH review (Berthe), Lagarias bibliography II, Rozier 2019 (AMS 403)
+                             statement: Rationality Conjecture for tau_a(x) = x/2, (ax+1)/2 (a odd rational): the parity map Q_a sends Q_odd to Q; true for a = +-1, false for every non-integer odd rational a; open for odd integers |a| >= 3; heuristic: true for a = +-3, false for odd |a| >= 5
+                             notes: DRIFT: O (the heuristic threshold is the drift)
+  LopezStoll2009           | EVERY  | -                      | B  B  O  -  B  | prior study of Phi on Sturmian words (irrationality not settled there)
+                             Lopez-Stoll 2009, Integers 9, A13, 141-162  [P] (Integers online)
+                             statement: Thm 1: a 2-adically convergent series for Phi(1c_alpha) (characteristic Sturmian word) in terms of the convergents of alpha; Cor. 2: a generalized continued fraction for -1/Phi(1c_alpha); sec. 4: the real sum Phi_R(m_x) is a strictly increasing devil's staircase on (ln2/ln3, 1]. They state that it is unknown whether any aperiodic word has an eventually periodic Phi (i.e. PC is open even for Sturmian words). Lopez-Stoll 2021 (arXiv 2101.12747, unrefereed) claims liminf = ln2/ln3 for divergent rationals; lit_A finds an apparent gap
+  Knight2026               | EVERY  | yes                    | O  -  O  O  O  | Collatz cycles on the zero-entropy (Christoffel) class: the periodic twin of Theorem S
+                             Knight 2026, Discrete Math. 349, Art. 114812 ('Collatz high cycles do not exist')  [P] HAL preprint hal-04261183; published form via zbMATH
+                             statement: Thm 5.4: no positive integer cycle other than {1,2} has a Christoffel (upper mechanical, rational slope) parity word; two cycle members differ by 2^(k-2)/(2^k - 3^x), an integer only if |2^k - 3^x| = 1. On the negative integers the Christoffel cycle {-5,-7,-10} (word 110, 2^3 - 3^2 = -1) exists
+                             notes: SHEET: O (fails for 3n-1: {5,7,10} has word 110)
+  ADQZ2001                 | EVERY  | -                      | -  -  O  -  B  | gives Theorem S directly for mu < 2 (u = empty, v^2 prefixes)
+                             Allouche-Davison-Queffelec-Zamboni 2001 (J. Number Theory 91); Berthe-Holton-Zamboni 2006 (Acta Arith. 122)  ADQZ [R] via BHZ intro; BHZ [P] (IMPAN CC-BY)
+                             statement: every Sturmian word begins with infinitely many squares (initial critical exponent >= 2); BHZ Thm 1.1: some word of slope alpha has initial critical exponent exactly 2 iff a partial-quotient pattern condition holds (forces unbounded partial quotients); Prop 4.1: every slope has a word with ice <= 1 + golden ratio
+  RudolphJohnson           | COUNT  | -                      | B  B  B  B  B  | none
+                             Rudolph 1990 (ETDS 10, 395-406); Johnson 1992 (Israel J. Math. 77)  Rudolph [P] Thm 4.9; Johnson [R] via Lindenstrauss survey
+                             statement: an ergodic x p, x q-invariant probability measure (p,q coprime: Rudolph; multiplicatively independent: Johnson) with positive entropy is Lebesgue measure
+  Host1995                 | COUNT  | -                      | B  B  B  B  B  | none
+                             Host 1995 (Israel J. Math. 91); Hochman-Shmerkin 2015 (Invent. Math. 202)  Host [R] via HS2015 Thm 1.9; HS2015 [P] arXiv 1302.5792
+                             statement: mu x n-invariant ergodic with positive entropy, gcd(m,n)=1 => mu-a.e. point is normal in base m (Host); HS2015 Thm 1.10 extends to multiplicatively independent bases
+  CasselsSchmidt           | COUNT  | -                      | B  B  B  B  B  | none
+                             Cassels 1959 (Colloq. Math. 7); Schmidt 1960 (Pacific J. Math. 10)  Cassels [R] via Khoshnevisan, HS2015; Schmidt [P] Thm 1-2
+                             statement: Cantor-Lebesgue-a.e. point of the middle-third Cantor set is normal in every base that is not a power of 3; Schmidt: r, s multiplicatively independent => continuum many numbers normal to r and not simply normal to s
+  AbramLagarias            | COUNT  | yes                    | -  B  B  B  B  | T3 dimension
+                             Abram-Lagarias 2014 (J. Fractal Geom. 1); Abram-Bolshakov-Lagarias 2017 (Exp. Math. 26)  [P] arXiv 1308.3133, 1508.05967
+                             statement: path-set fractals: dim E(Z_3) <= log_3 phi = 0.4380 (ABL Thms 2.5-2.6); dim E^(2) >= log_3 phi, dim E^(3) >= 0.2284 (AL Thm 5.2)
+  DimitrovHowe2021         | EVERY  | yes (complete, explici | -  B  O  -  O  | T3 partial (every-n, bounded complexity)
+                             Dimitrov-Howe, Rocky Mountain J. Math. 55 (2025) 45-61  [P] arXiv 2105.06440v4
+                             statement: Thm 1.1: the only powers of 3 that are sums of <= 22 distinct powers of 2 are 3^x, 0 <= x <= 25; Thm 1.2: the only powers of 2 that are sums of <= 25 distinct powers of 3 are 2^0, 2^2, 2^8 (so for x not in {0,2,8}, 2^x has a ternary digit 2 or at least 26 ternary 1s)
+  DubickasMossinghoff2009  | FINITE | yes                    | -  -  O  -  O  | T4 finite range
+                             Dubickas-Mossinghoff 2009, Math. Comp. 78, 1837-1851  [R] via Andrieu-Eliahou-Vivion arXiv 2510.11723v2 [P] (AMS bot-check)
+                             statement: Thm 5.1: no Z_{p/q}-number below 2^57, 10^32, 3^42 for p/q = 3/2, 4/3, 5/3 (computation); they conjecture non-existence for q < p < q(q-1)
+                             notes: DEFECT: O (below the bound)
+  Ellison1971              | EVERY  | yes                    | B  B  O  O  B  | cycle half (denominators of rational cycles)
+                             Ellison 1971, Sem. Theorie Nombres Bordeaux 1970-71, exp. 10  [P] Numdam, Thm 3
+                             statement: |2^x - 3^y| > 2^x e^(-x/10) for all positive x, y with x not in {1,...,11,13,14,16,19,27}
+                             notes: INTEGRAL: O (bounds cycle denominators 2^K-3^L)
+  RhinSdW                  | EVERY  | yes                    | B  B  O  O  B  | cycle half; Lagarias 2009 Lemma 2.2
+                             Rhin 1987; Simons-de Weger 2005 (Lemma 12)  [R] via Simons-de Weger [P preprint]
+                             statement: |(K+L) log 2 - K log 3| > exp(-13.3 (0.46057 + log K)); irrationality measure of log 3/log 2 at most 8.616
+  BLMV2009                 | EVERY  | yes                    | B  B  O  O  B  | none directly
+                             Bourgain-Lindenstrauss-Michel-Venkatesh 2009, ETDS 29, 1705-1722  [P] per lit_B; [R] via Gayfulin-Moshchevitin arXiv 2301.08212 per lit_C
+                             statement: a, b multiplicatively independent, alpha Diophantine-generic (|alpha - p/q| >= k1 q^(-k2)) => {a^u b^v alpha : u, v <= M} is (log log M)^(-kappa)-dense for M >= M0 (effective Furstenberg)
+  RenRoettger2025          | EVERY  | yes                    | -  B  O  -  B  | T3 partial (top-digit runs)
+                             Ren-Roettger 2025, arXiv 2511.03861  [P] per lit_B (Corollary 1)
+                             statement: the run of zeros following the leading ternary digit of 2^n has length O(log n) (by Baker's theorem)
+  Spiegelhofer2023         | COUNT  | yes                    | -  B  B  -  B  | none
+                             Spiegelhofer 2023, Israel J. Math. 258, 475-502  [P] arXiv 2105.11173
+                             statement: s_2(n) = s_3(n) for infinitely many n; the count below N is >> N^(log 3/log 4 - delta)
+  BCZ2003                  | EVERY  | no                     | -  B  O  -  B  | none directly
+                             Bugeaud-Corvaja-Zannier 2003, Math. Z. 243, 79-84  [R] via Cohen-Sonn JTNB 27 (2015)
+                             statement: log gcd(2^n - 1, 3^n - 1) < eps n for all large n (ineffective); infinitely often > exp(c log n/loglog n)
+  Koksma1935               | COUNT  | -                      | B  B  B  B  B  | none (T4 blocked: DEFECT)
+                             Koksma 1935 (classical metric theorem)  [R] classical; not re-read (citation details UNVERIFIED)
+                             statement: for every theta > 1, (xi theta^n) is uniformly distributed mod 1 for almost every xi
+  Calegari2005             | EVERY  | yes (explicit exponent | -  -  O  -  O  | none (specific periods; see the note's holonomy remark)
+                             Calegari 2005, Int. Math. Res. Not. 2005, no. 20, 1235-1249  [P] arXiv math/0408214; publication checked via zbMATH and Crossref (lit_C)
+                             statement: zeta_p(3) (Kubota-Leopoldt) is irrational for p = 2 and p = 3, and L_2(2, chi_4) is irrational (Thms 3.3, 3.4, 4.2), via the p-adic criterion Lemma 2.2 and approximations from overconvergent Eisenstein families
+  InHouseBCD               | EVERY  | yes                    | B  O  O  O  B  | T1 and PC on the positive-entropy class BCD (critical slope only)
+                             repo: collatz_guards_20260921_discrepancy sec. 2a, 3, 4  [repo] PROVED there; audited by the formalization lane (not in Lean)
+                             statement: no positive-integer 3n+1 orbit has bounded critical discrepancy K_j - j log_2 3 (even after a finite prefix); extends to 3n+b, b > 0 odd (sec. 4); for b < 0 every positive orbit has discrepancy -> -infinity ((D8)); corollary: no critical-slope mechanical halving word is the word or tail of a positive integer
+                             notes: SHEET: B (true on 3n-1 by (D8)); DRIFT: O in the proof (needs mean halving 2 > log_2 3); 5n+1 statement OPEN (only (D7)); INTEGRAL: O (integer capacity; rationals via Proposition B); UNIFORM: B (all 3n+b, b>0)
+  ThisLaneThmS             | EVERY  | yes (explicit height b | B  B  O  O  B  | T1, PC, T4 on zero-entropy classes
+                             this note: Theorems R, S, Lemma L, Proposition B  [repo] PROVED in collatz_procgen_20260922_transversality_foundry.md
+                             statement: no rational with odd denominator has an eventually Sturmian parity vector under 3x+r (any slope, any intercept); 5x+1 for slopes < 0.804 (< 0.861 via ADQZ squares); no Z-number has an eventually Sturmian carry word; general 2-adic repetition criterion (Thm R); PC on bounded-critical-discrepancy words (Prop B, from InHouseBCD)
+                             notes: SHEET: B (Phi_{3,-1} = -Phi); DRIFT: B (5x+1 analogue PROVED too); INTEGRAL: O (EP words give x = x'); UNIFORM: B (affine 2-adic shift maps with mu < 1.867)
+  pattern: EVERY items 20, COUNT items 13; items whose DRIFT entry is O: ['Mahler1968', 'Akin2004', 'InHouseBCD']
+  every COUNT item is DEFECT-blind.  Among the EVERY items about integers or single orbits, the Diophantine /
+  transversality ones (Senge-Straus, Stewart, Dimitrov-Howe, Yu, Ren-Roettger, Knight, Theorem S) exclude only
+  zero-entropy classes (few nonzero digits, bounded p-adic closeness, short top runs, Christoffel or Sturmian
+  words).  The two that constrain positive-entropy classes of parity words (Monks-Yazinski 2.7(b): subcritical
+  density; InHouseBCD: bounded critical discrepancy) use growth and capacity, not 2-versus-3 transversality, and
+  work only where the orbit would shrink or grow at most linearly.  Supercritical positive-entropy words: nothing.
+
+S3.0 FINITE-EXACT engines
+  Erdos scan 0<=K<=200000: K without ternary digit 2: [0, 2, 8]; deepest lowest-2 position 29 at K=159140; full conversions 3
+  base-5 analogue 0<=K<=200000: K with all base-5 digits of 2^K in {0,1}: [0]
+  ternary profile 50<=K<=20000: min nonzero proportion 0.5429 (K=54), min digit-2 proportion 0.2083 (K=76), min #nonzero 19 (K=54), longest 0-run 15 (K=12398), longest run 18 (K=5677)
+  low-digit classes N_j = #{K mod 2*3^(j-1): lowest j ternary digits of 2^K in {0,1}}: {1: 1, 2: 2, 3: 4, 4: 8, 5: 16, 6: 32, 7: 64, 8: 128, 9: 256, 10: 512, 11: 1024, 12: 2048, 13: 4096, 14: 8192, 15: 16384, 16: 32768}  (= 2^(j-1), PROVED; brute force agrees for small j)
+  kappa identity v_3(2^K b - a) = [K=e mod 2](1 + v_3(K - kappa(a/b))) verified for K <= 3000:
+     r=1/1: e=0, kappa = ...0 (base 3, low digits last), max v_3 = inf
+     r=1/2: e=1, kappa = ...222222222222 (base 3, low digits last), max v_3 = 7
+     r=5/1: e=1, kappa = ...001010100212 (base 3, low digits last), max v_3 = 10
+     r=7/1: e=0, kappa = ...200202112121 (base 3, low digits last), max v_3 = 9
+     r=1/5: e=1, kappa = ...221212122011 (base 3, low digits last), max v_3 = 8
+     r=43/32: e=1, kappa = ...222020021122 (base 3, low digits last), max v_3 = 8
+     r=59/64: e=1, kappa = ...012010222022 (base 3, low digits last), max v_3 = 10
+  v_3 scan r=1/2, K<=300000: max v_3 11 at K=118097; max(v_3 - log_3 K) = 1.000 at K=1
+  v_3 scan r=5/1, K<=300000: max v_3 12 at K=199283; max(v_3 - log_3 K) = 3.146 at K=23
+  v_3 scan r=7/1, K<=300000: max v_3 12 at K=14974; max(v_3 - log_3 K) = 3.249 at K=14974
+  v_3 scan r=1/5, K<=300000: max v_3 12 at K=155011; max(v_3 - log_3 K) = 2.000 at K=1
+  v_3 scan r=43/32, K<=300000: max v_3 11 at K=102995; max(v_3 - log_3 K) = 1.421 at K=17
+  v_3 scan r=59/64, K<=300000: max v_3 12 at K=278459; max(v_3 - log_3 K) = 2.744 at K=2897
+  3^a in binary, 20<=a<=30000: min popcount proportion 0.4103 (a=24), min popcount 16 (a=24), longest 0-run 29 (a=24564), longest low run 15 (a=16384); LTE v_2(3^a-1) checked a<3000
+  exponents a<=30000 with popcount(3^a) <= 22: [(0, 1), (1, 2), (2, 2), (3, 4), (4, 3), (5, 6), (6, 6), (7, 5), (8, 6), (9, 8), (10, 9), (11, 13), (12, 10), (13, 11), (14, 14), (15, 15), (16, 11), (17, 14), (18, 14), (19, 17), (20, 17), (21, 20), (22, 19), (23, 22), (24, 16), (25, 18)]
+  Q2 landings: K0(s)=floor((s+1)log2 3), first values [1, 3, 4, 6, 7, 9, 11, 12, 14, 15, 17, 19]; for s<=20000000, hits of the 3-adic balls v_3(2^K0(s) w - h) >= 13, h in {1, 1/2}:
+     w=1/1: {'1': 20, '1/2': 17} first s {'1': 670603, '1/2': 2682414}   (expected per ball ~ 18.82)
+     w=5/1: {'1': 18, '1/2': 20} first s {'1': 321335, '1/2': 991938}   (expected per ball ~ 18.82)
+     w=7/1: {'1': 19, '1/2': 20} first s {'1': 437621, '1/2': 1108224}   (expected per ball ~ 18.82)
+
+S3 Transversality statements generated: 49
+S3.1 Generated statements: id | object | property | quantifier | status | statement | evidence
+      barrier profile: 3n-1 analogue | 5n+1 analogue | DEFECT (EVERY sees defects, COUNT is blind) | INTEGRAL | UNIFORM
+  A1                   | 2^K          | digit | all    | OPEN    | for all K >= 9, 2^K has a ternary digit 2
+                         evidence: Erdos's conjecture; FINITE-EXACT here for 9<=K<=200000 (the K<=200000 without a 2 are [0, 2, 8]); Saye 2022, J. Integer Seq. 25, Art. 22.3.4 [P]
+                         finite: FINITE-EXACT 9<=K<=200000
+                         3n-1: n/a | 5n+1: for all K >= 1, 2^K has a base-5 digit in {2,3,4}: OPEN; FINITE-EXACT for 1<=K<=200000 (K with only digits 0,1: [0]) | DEFECT: sees (EVERY) | INTEGRAL: n/a | UNIFORM: per-instance (one sequence)
+  A2                   | 2^K          | digit | almost | PROVED  | for almost all K, 2^K has a ternary digit 2 (exceptions <= 1.62 X^(log_3 2) up to X)
+                         evidence: Narkiewicz 1980 (Univ. Beograd Publ. Elektrotehn. Fak. 678-715, 173-174); HKR 2015 [R]; Lagarias 2009, J. London Math. Soc. 79, 562-588 [P]
+                         3n-1: n/a | 5n+1: for almost all K, 2^K has a base-5 digit in {2,3,4}: PROVED (same counting, log_5 2 < 1) | DEFECT: blind (COUNT) | INTEGRAL: n/a | UNIFORM: uniform over bases
+  A3                   | 2^K          | digit | inf    | PROVED  | for infinitely many K, 2^K has a ternary digit 2
+                         evidence: odd K: 2^K = 2 mod 3, last digit 2 (elementary)
+                         3n-1: n/a | 5n+1: n/a | DEFECT: blind (COUNT) | INTEGRAL: n/a | UNIFORM: n/a
+  A4                   | 2^K          | nnz   | all    | PROVED  | for all K not in {0,2,8}, 2^K has a ternary digit 2 or at least 26 ternary digits 1
+                         evidence: Dimitrov-Howe, Rocky Mountain J. Math. 55 (2025) 45-61 [P] Thm 1.2
+                         3n-1: n/a | 5n+1: same shape in base 5: OPEN (not studied) | DEFECT: sees (EVERY) | INTEGRAL: n/a | UNIFORM: per-instance (explicit computation)
+  B1[D=1]              | 2^K|low      | digit | all    | FALSE   | for all K, the lowest 1 ternary digits of 2^K contain a 2
+                         evidence: counterexample K = 2*3^0 = 2: 2^K = 1 mod 3^1 (LTE), low digits 0..01
+                         3n-1: same for -2^K (digits of the negation: avoid 0 above the last digit): FALSE | 5n+1: lowest 1 base-5 digits of 2^K contain a digit >= 2: FALSE (K = 4*5^(D-1): 2^K = 1 mod 5^D) | DEFECT: sees (EVERY) | INTEGRAL: B (3-adic limit 2^K -> 1 along K = 2*3^j) | UNIFORM: per-instance
+  B2[D=1]              | 2^K|low      | digit | almost | FALSE   | for almost all K, the lowest 1 ternary digits of 2^K contain a 2
+                         evidence: exceptional density exactly 2^(1-1)/(2*3^(1-1)) = 0.5 (PROVED: N_j = 2^(j-1) classes mod 2*3^(j-1); FINITE-EXACT j<=16)
+                         3n-1: n/a | 5n+1: n/a | DEFECT: blind (COUNT) | INTEGRAL: n/a | UNIFORM: n/a
+  B1[D=13]             | 2^K|low      | digit | all    | FALSE   | for all K, the lowest 13 ternary digits of 2^K contain a 2
+                         evidence: counterexample K = 2*3^12 = 1062882: 2^K = 1 mod 3^13 (LTE), low digits 0..01
+                         3n-1: same for -2^K (digits of the negation: avoid 0 above the last digit): FALSE | 5n+1: lowest 13 base-5 digits of 2^K contain a digit >= 2: FALSE (K = 4*5^(D-1): 2^K = 1 mod 5^D) | DEFECT: sees (EVERY) | INTEGRAL: B (3-adic limit 2^K -> 1 along K = 2*3^j) | UNIFORM: per-instance
+  B2[D=13]             | 2^K|low      | digit | almost | FALSE   | for almost all K, the lowest 13 ternary digits of 2^K contain a 2
+                         evidence: exceptional density exactly 2^(13-1)/(2*3^(13-1)) = 0.00385 (PROVED: N_j = 2^(j-1) classes mod 2*3^(j-1); FINITE-EXACT j<=16)
+                         3n-1: n/a | 5n+1: n/a | DEFECT: blind (COUNT) | INTEGRAL: n/a | UNIFORM: n/a
+  C1                   | 2^K          | nnz   | all    | PROVED  | the number of nonzero ternary digits of 2^K tends to infinity (>= c log K / log log K)
+                         evidence: Stewart 1980, J. reine angew. Math. 319, 63-72 [P]; Senge-Straus 1973, Period. Math. Hungar. 3, 93-100 [R]
+                         finite: FINITE-EXACT: min #nonzero digits over 50<=K<=20000 is 19 (K=54)
+                         3n-1: same for -2^K: PROVED | 5n+1: nonzero base-5 digits of 2^K -> infinity: PROVED (Stewart) | DEFECT: sees (EVERY) | INTEGRAL: n/a | UNIFORM: uniform over multiplicatively independent bases
+  C2                   | 2^K          | nnz   | all    | OPEN    | for all K >= 50, at least 10% of the ternary digits of 2^K are nonzero
+                         evidence: no every-K linear bound is known
+                         finite: FINITE-EXACT 50<=K<=20000: min proportion 0.543 (K=54)
+                         3n-1: n/a | 5n+1: n/a | DEFECT: sees (EVERY) | INTEGRAL: n/a | UNIFORM: n/a
+  C3                   | 2^K          | nnz   | almost | PROVED  | for almost all K, 2^K has >= c log K nonzero ternary digits (among its lowest log_3 K digits)
+                         evidence: elementary: 2^K mod 3^D is equidistributed over the units as K runs over a period (proof in the note)
+                         3n-1: n/a | 5n+1: n/a | DEFECT: blind (COUNT) | INTEGRAL: n/a | UNIFORM: n/a
+  R1                   | 2^K          | runs  | all    | PROVED  | the run of 0s right after the leading ternary digit of 2^K has length <= C log K (top digits, archimedean)
+                         evidence: Ren-Roettger 2025, arXiv 2511.03861 [P] (Baker)
+                         finite: FINITE-EXACT 50<=K<=20000: longest such run 7 (K=14187)
+                         3n-1: n/a | 5n+1: same in base 5: PROVED (same method) | DEFECT: sees (EVERY) | INTEGRAL: n/a | UNIFORM: n/a
+  R2                   | 2^K|low      | runs  | all    | PROVED  | the run above the lowest ternary digit of 2^K has length exactly v_3(K) (0s, K even) or 1+v_3(K) (2s, K odd)
+                         evidence: lifting the exponent (elementary); checked for every K in the profile range
+                         3n-1: n/a | 5n+1: same in base 5 with v_5: PROVED (LTE) | DEFECT: sees (EVERY) | INTEGRAL: B (limit points 1, -1 in Z_3) | UNIFORM: n/a
+  R3                   | 2^K          | runs  | all    | OPEN    | every run of equal ternary digits of 2^K has length <= C log K
+                         evidence: PROVED only at the two ends (R1, R2); the middle digits are the Erdos-type unknown
+                         finite: FINITE-EXACT 50<=K<=20000: longest run 18 (K=5677), longest 0-run 15 (K=12398)
+                         3n-1: n/a | 5n+1: same in base 5: OPEN | DEFECT: sees (EVERY) | INTEGRAL: n/a | UNIFORM: n/a
+  D1                   | 2^K          | dist  | all    | FALSE   | v_3(2^K - 1) is bounded
+                         evidence: K = 2*3^j gives v_3 = j+1 (LTE)
+                         3n-1: n/a | 5n+1: v_5(2^K - 1) bounded: FALSE (K = 4*5^j) | DEFECT: sees (EVERY) | INTEGRAL: B | UNIFORM: n/a
+  D2                   | 2^K          | dist  | all    | PROVED  | for every rational r not of the form 2^k, v_3(2^K - r) <= C_r log K (effective)
+                         evidence: Yu 1989-2007 (Forum Math. 19 (2007) 187-280); Bugeaud-Laurent 1996 (J. Number Theory 61) [R]; exact form v_3(2^K - r) = [K=e mod 2](1+v_3(K-kappa(r))), kappa(r)=log_3(+-r)/log_3(-2) in Z_3 (checked here for r in {1,1/2,5,7,1/5,43/32}, K<=2000)
+                         3n-1: v_3(-2^K - r) <= C log K: PROVED (same theorem) | 5n+1: v_5(2^K - r) <= C_r log K: PROVED (same theorem) | DEFECT: sees (EVERY) | INTEGRAL: O (fails exactly at r = 2^k) | UNIFORM: uniform over primes and rationals
+  D3                   | 2^K          | dist  | all    | OPEN    | for every rational r (3-adic unit, not +-2^k) and eps > 0, v_3(2^K - r) <= (1+eps) log_3 K + C(r,eps)
+                         evidence: equivalent to |K - kappa(r)|_3 >> K^(-1-eps) (a p-adic Lang-Waldschmidt-type bound for kappa(r)); with eps = 0 it is expected FALSE for generic r (Borel-Cantelli: sum 1/K diverges); for r = +-2^k it holds with eps = 0 (LTE)
+                         finite: FINITE-EXACT K<=300000: max of v_3(2^K-r) - log_3 K over the sample r is 3.25
+                         3n-1: n/a | 5n+1: v_5 analogue: OPEN | DEFECT: sees (EVERY) | INTEGRAL: n/a | UNIFORM: n/a
+  D4                   | 2^K          | dist  | almost | PROVED  | for almost all K, v_3(2^K - r) <= g(K) for any g -> infinity
+                         evidence: density of {K : v_3(2^K - r) >= D} is at most 3^(1-D)/2 (kappa formula)
+                         3n-1: n/a | 5n+1: n/a | DEFECT: blind (COUNT) | INTEGRAL: n/a | UNIFORM: n/a
+  E1                   | 2^K w|clock  | dist  | all    | FALSE   | for all s, 2^(K0(s)) w lies outside the 3-adic balls of radius 3^-13 around 1 and 1/2
+                         evidence: K0(s)=floor((s+1)log2 3) is equidistributed mod 2*3^12 (Weyl), so each ball is hit with density 1/(2*3^12); FINITE-EXACT s<=20000000: w=1/1: 1-ball 20 (first s=670603), 1/2-ball 17 (first s=2682414), w=5/1: 1-ball 18 (first s=321335), 1/2-ball 20 (first s=991938), w=7/1: 1-ball 19 (first s=437621), 1/2-ball 20 (first s=1108224)
+                         3n-1: same for -w: FALSE | 5n+1: 2^(K) w in Z_5 along floor((s+1)log2 5): FALSE (same argument) | DEFECT: sees (EVERY) | INTEGRAL: B | UNIFORM: n/a
+  E2                   | 2^K w|clock  | dist  | inf    | PROVED  | for infinitely many s, 2^(K0(s)) w lands outside both balls
+                         evidence: Weyl equidistribution (positive density)
+                         3n-1: n/a | 5n+1: n/a | DEFECT: blind (COUNT) | INTEGRAL: n/a | UNIFORM: n/a
+  E3                   | 2^K w|clock  | dist  | all    | OPEN    | every hostile see-saw chain ends at a landing 2^K w_final in a descending class (steering statement)
+                         evidence: loops_and_escapes sec. 8 (the chain terminal is controlled by the ternary digits of 2^K)
+                         3n-1: same statement on the minus sheet (E is sheet-symmetric): OPEN | 5n+1: E_5 backward analogue: OPEN (untested) | DEFECT: sees (EVERY) | INTEGRAL: n/a | UNIFORM: n/a
+  F1                   | 3^a          | nnz   | all    | PROVED  | popcount(3^a) -> infinity (>= c log a / log log a)
+                         evidence: Stewart 1980, J. reine angew. Math. 319, 63-72 [P]
+                         finite: FINITE-EXACT 20<=a<=30000: min popcount 16 (a=24)
+                         3n-1: n/a | 5n+1: popcount(5^a) -> infinity: PROVED | DEFECT: sees (EVERY) | INTEGRAL: n/a | UNIFORM: uniform
+  F2                   | 3^a          | nnz   | all    | PROVED  | popcount(3^a) >= 23 for all a beyond the explicit list
+                         evidence: Dimitrov-Howe, Rocky Mountain J. Math. 55 (2025) 45-61 [P]; FINITE-EXACT a<=30000: a with popcount<=22: [(0, 1), (1, 2), (2, 2), (3, 4), (4, 3), (5, 6), (6, 6), (7, 5), (8, 6), (9, 8), (10, 9), (11, 13), (12, 10), (13, 11), (14, 14), (15, 15), (16, 11), (17, 14), (18, 14), (19, 17), (20, 17), (21, 20), (22, 19), (23, 22), (24, 16), (25, 18)]
+                         3n-1: n/a | 5n+1: n/a | DEFECT: sees (EVERY) | INTEGRAL: n/a | UNIFORM: n/a
+  F3                   | 3^a          | dist  | all    | FALSE   | v_2(3^a - 1) is bounded
+                         evidence: v_2(3^a - 1) = 2 + v_2(a) for even a (LTE; checked a < 3000)
+                         3n-1: n/a | 5n+1: v_2(5^a - 1) bounded: FALSE (= 2 + v_2(a)) | DEFECT: sees (EVERY) | INTEGRAL: B | UNIFORM: n/a
+  F4                   | 3^a          | runs  | all    | OPEN    | the longest run of 0s in the binary expansion of 3^a is <= C log a
+                         evidence: PROVED only for runs just above the lowest bit (LTE: length v_2(a)+1)
+                         finite: FINITE-EXACT 20<=a<=30000: longest zero run 29 (a=24564)
+                         3n-1: n/a | 5n+1: same for 5^a: OPEN | DEFECT: sees (EVERY) | INTEGRAL: n/a | UNIFORM: n/a
+  G[EP].irr.all        | Phi_T(W)     | rat   | all    | FALSE   | for every w in EP (eventually periodic words), Phi(w) is irrational
+                         evidence: every EP word gives a rational (cycle formula); e.g. (10)^inf -> 1
+                         3n-1: same: FALSE | 5n+1: same: FALSE | DEFECT: sees (EVERY) | INTEGRAL: B | UNIFORM: uniform over affine 2-adic shift maps (sound, not complete)
+  G[EP].notZ+.all      | Phi_T(W)     | rat   | all    | FALSE   | for every w in EP (eventually periodic words), Phi(w) is not a positive integer
+                         evidence: (10)^inf -> 1
+                         3n-1: -Phi(w) not in Z^+: FALSE: 3n-1 has the positive cycles {1}, {5,7}, {17,...,91} | 5n+1: same: FALSE (13 -> 33 -> 83 -> 13) | DEFECT: sees (EVERY) | INTEGRAL: B | UNIFORM: uniform over affine 2-adic shift maps (sound, not complete)
+  G[STURM].irr.all     | Phi_T(W)     | rat   | all    | PROVED  | for every w in STURM (Sturmian words (all irrational slopes, all intercepts, lower and upper)), Phi(w) is irrational
+                         evidence: Theorem S (this note; elementary; mu=max(1,alpha log2 3) < 1.867; < 2 via ADQZ squares); literature: open for slopes >= log_3 2 (lit_A; Lopez-Stoll 2009 leave it open)
+                         3n-1: same (Phi_{3,-1} = -Phi): PROVED | 5n+1: 5x+1, slopes alpha < 0.804 (mu<1.867): PROVED (Theorem S); OPEN above | DEFECT: sees (EVERY) | INTEGRAL: O (EP words excluded; x != x') | UNIFORM: uniform over affine 2-adic shift maps (sound, not complete)
+  G[SUB].irr.all       | Phi_T(W)     | rat   | all    | PROVED  | for every w in SUB (non-EP words with liminf density of 1s < log_3 2), Phi(w) is irrational
+                         evidence: Monks-Yazinski 2004 Thm 2.7(b) [P] (Lemma L of the note re-proves it; Lagarias 1985 (2.31) for integers)
+                         3n-1: same: PROVED | 5n+1: threshold log_5 2: PROVED | DEFECT: sees (EVERY) | INTEGRAL: O (EP words excluded; x != x') | UNIFORM: uniform over affine 2-adic shift maps (sound, not complete)
+  G[BCD].notZ+.all     | Phi_T(W)     | rat   | all    | PROVED  | for every w in BCD (non-EP words with bounded critical discrepancy sup_s |a_s - s log_3 2| < inf), Phi(w) is not a positive integer
+                         evidence: in-house discrepancy note sec. 2a (capacity count + density-zero stopping-time lemma)
+                         3n-1: minus sheet: PROVED ((D8): q_j -> 0 on every positive 3n-1 orbit) | 5n+1: critical slope log_2 5: OPEN (in-house sec. 4: the density step has the wrong drift; only (D7) width bound) | DEFECT: sees (EVERY) | INTEGRAL: O (EP words excluded; x != x') | UNIFORM: uniform over affine 2-adic shift maps (sound, not complete)
+  G[BCD].irr.all       | Phi_T(W)     | rat   | all    | PROVED  | for every w in BCD (non-EP words with bounded critical discrepancy sup_s |a_s - s log_3 2| < inf), Phi(w) is irrational
+                         evidence: assembly (this note): in-house sec. 2a for 3n+k, k>0 (sec. 4) on positive tails, (D8) on negative tails
+                         3n-1: same: PROVED | 5n+1: critical slope log_2 5: OPEN | DEFECT: sees (EVERY) | INTEGRAL: O (EP words excluded; x != x') | UNIFORM: uniform over affine 2-adic shift maps (sound, not complete)
+  G[REP].irr.all       | Phi_T(W)     | rat   | all    | PROVED  | for every w in REP (non-EP words with strong initial repetitions (gain lambda - log2(|P|+|Q|) unbounded; Theorem R)), Phi(w) is irrational
+                         evidence: Theorem R (this note; 2-adic Liouville argument)
+                         3n-1: same: PROVED | 5n+1: same criterion with q=5 heights: PROVED | DEFECT: sees (EVERY) | INTEGRAL: O (EP words excluded; x != x') | UNIFORM: uniform over affine 2-adic shift maps (sound, not complete)
+  G[LIN].irr.all       | Phi_T(W)     | rat   | all    | OPEN    | for every w in LIN (non-EP words of linear factor complexity), Phi(w) is irrational
+                         evidence: Theorem R needs repetition exponent > mu; linear complexity only gives > 1
+                         3n-1: same: OPEN | 5n+1: same: OPEN | DEFECT: sees (EVERY) | INTEGRAL: O (EP words excluded; x != x') | UNIFORM: uniform over affine 2-adic shift maps (sound, not complete)
+  G[HARD].notZ+.all    | Phi_T(W)     | rat   | all    | OPEN    | for every w in HARD (non-EP words outside SUB, BCD, STURM and REP), Phi(w) is not a positive integer
+                         evidence: T1 restricted to the complement of the proved classes (equivalent to T1)
+                         3n-1: no divergent positive 3n-1 orbit with such a word: OPEN | 5n+1: no divergent 5n+1 orbit with such a word: OPEN (expected FALSE: K-L) | DEFECT: sees (EVERY) | INTEGRAL: O (EP words excluded; x != x') | UNIFORM: uniform over affine 2-adic shift maps (sound, not complete)
+  G[ALL].notZ+.all     | Phi_T(W)     | rat   | all    | OPEN    | for every w in ALL (all non-EP words), Phi(w) is not a positive integer
+                         evidence: = T1 (Lagarias 1985; Bernstein 1994)
+                         3n-1: no divergent positive 3n-1 orbit: OPEN | 5n+1: no divergent positive 5n+1 orbit: OPEN (expected FALSE: Kontorovich-Lagarias) | DEFECT: sees (EVERY) | INTEGRAL: O (EP words excluded; x != x') | UNIFORM: uniform over affine 2-adic shift maps (sound, not complete)
+  G[ALL].irr.all       | Phi_T(W)     | rat   | all    | OPEN    | for every w in ALL (all non-EP words), Phi(w) is irrational
+                         evidence: = PC (Lagarias 1985; Bernstein-Lagarias 1996)
+                         3n-1: same statement: OPEN | 5n+1: PC for 5x+1: OPEN (expected FALSE) | DEFECT: sees (EVERY) | INTEGRAL: O (EP words excluded; x != x') | UNIFORM: uniform over affine 2-adic shift maps (sound, not complete)
+  G[ALL].irr.almost    | Phi_T(W)     | rat   | almost | PROVED  | for Haar-almost every w in ALL (all non-EP words), Phi(w) is irrational
+                         evidence: Q is countable and Phi preserves Haar measure
+                         3n-1: same: PROVED | 5n+1: same: PROVED | DEFECT: blind (COUNT) | INTEGRAL: O (EP words excluded; x != x') | UNIFORM: uniform over affine 2-adic shift maps (sound, not complete)
+  M1                   | Phi_M(W)     | rat   | all    | OPEN    | for every carry word c in S (safe: all tails Y_n(c) < 1), Phi_M(c) is not a positive integer
+                         evidence: equivalent to T4 by THM-2228; FINITE-EXACT via Dubickas-Mossinghoff (no Z-number below 2^57, CITED)
+                         3n-1: n/a | 5n+1: ratio 5/2 (carry alphabet {0,1,2}): FALSE: Z_{5/2}-numbers exist (p = 5 > q^2 = 4; Tijdeman 1972, Flatto 1992 [R via Andrieu-Eliahou-Vivion]) | DEFECT: sees (EVERY) | INTEGRAL: n/a | UNIFORM: n/a
+  M2                   | Phi_M(W)     | rat   | all    | PROVED  | for every Sturmian carry word c (in S or not), Phi_M(c) is irrational; hence no Z-number has an eventually Sturmian carry word
+                         evidence: Theorem S, Mahler version (mu = log2 3 < 1.867)
+                         3n-1: n/a | 5n+1: (5/2)-analogue a -> ceil(5a/2): OPEN by this method (mu = log2 5 = 2.32 > 1.867) | DEFECT: sees (EVERY) | INTEGRAL: n/a | UNIFORM: n/a
+  M3                   | Phi_M(W)     | rat   | all    | FALSE   | for every non-EP carry word c, Phi_M(c) is irrational (PC for the Mahler map)
+                         evidence: Phi_M(parity word of 1 under ceil(3a/2)) = 1 and that word is not EP (THM-2228)
+                         3n-1: n/a | 5n+1: n/a | DEFECT: sees (EVERY) | INTEGRAL: n/a | UNIFORM: n/a
+  H0                   | lambda 2^n   | digit | all    | FALSE   | for every lambda > 0, floor(lambda 2^n) has a ternary digit 2 for all large n
+                         evidence: Lagarias 2009, J. London Math. Soc. 79, 562-588 [P] Thm 1.2: uncountably many lambda omit 2 along an infinite sparse sequence
+                         3n-1: n/a | 5n+1: n/a | DEFECT: sees (EVERY) | INTEGRAL: n/a | UNIFORM: n/a
+  H1                   | lambda 2^n   | digit | almost | PROVED  | for every lambda > 0, the integer part of lambda 2^n has a ternary digit 2 for all n outside a set of size <= 25 X^0.9725
+                         evidence: Lagarias 2009, J. London Math. Soc. 79, 562-588 [P]
+                         3n-1: n/a | 5n+1: n/a | DEFECT: blind (COUNT) | INTEGRAL: n/a | UNIFORM: n/a
+  H2                   | xi(3/2)^n    | dist  | all    | PROVED  | for every xi > 0, limsup - liminf of frac(xi (3/2)^n) >= 1/3
+                         evidence: Flatto-Lagarias-Pollington 1995, Acta Arith. 70, 125-147 [R]
+                         3n-1: n/a | 5n+1: (5/2)^n: range >= 1/5: PROVED (same theorem, 1/p) | DEFECT: sees (EVERY) | INTEGRAL: n/a | UNIFORM: n/a
+  H3                   | xi(3/2)^n    | dist  | all    | OPEN    | for every xi > 0, limsup - liminf of frac(xi (3/2)^n) > 1/2
+                         evidence: would imply T4
+                         3n-1: ratio -3/2: OPEN (Lu-Zheng 2026 prove spread >= 11/27) | 5n+1: ratio 5/2: spread > 1/2 for every xi: FALSE: Z_{5/2}-numbers exist (p = 5 > q^2 = 4; Tijdeman 1972, Flatto 1992 [R via Andrieu-Eliahou-Vivion]) | DEFECT: sees (EVERY) | INTEGRAL: n/a | UNIFORM: n/a
+  H4                   | xi(3/2)^n    | digit | all    | OPEN    | for every xi > 0 there is n with frac(xi (3/2)^n) >= 1/2
+                         evidence: Mahler 1968 (= no Z-number)
+                         3n-1: n/a | 5n+1: ratio 5/2: FALSE: Z_{5/2}-numbers exist (p = 5 > q^2 = 4; Tijdeman 1972, Flatto 1992 [R via Andrieu-Eliahou-Vivion]) | DEFECT: sees (EVERY) | INTEGRAL: n/a | UNIFORM: n/a
+  H5                   | xi(3/2)^n    | dist  | almost | PROVED  | for almost every xi > 0, (xi (3/2)^n) is uniformly distributed mod 1
+                         evidence: Koksma 1935 (classical metric theorem) [R]
+                         3n-1: n/a | 5n+1: n/a | DEFECT: blind (COUNT) | INTEGRAL: n/a | UNIFORM: n/a
+  H6                   | xi(3/2)^n    | dist  | all    | PROVED  | ||(3/2)^n|| > (3/4)^n for all n >= n0 (ineffective)
+                         evidence: Mahler 1957, Mathematika 4, 122-124 (with Corvaja-Zannier 2004, Zudilin 2007) [R]
+                         3n-1: n/a | 5n+1: n/a | DEFECT: sees (EVERY) | INTEGRAL: n/a | UNIFORM: n/a
+  H7                   | xi(3/2)^n    | digit | all    | PROVED  | each interval [m, m+1) contains at most one Z-number (so they are countable)
+                         evidence: Mahler 1968, J. Austral. Math. Soc. 8, 313-321 [P]
+                         3n-1: n/a | 5n+1: n/a | DEFECT: sees (EVERY) | INTEGRAL: n/a | UNIFORM: n/a
+  H8                   | xi(3/2)^n    | digit | all    | PROVED  | no Z-number lies below the Dubickas-Mossinghoff bound
+                         evidence: Dubickas-Mossinghoff 2009, Math. Comp. 78, 1837-1851 [R]
+                         3n-1: n/a | 5n+1: n/a | DEFECT: sees (EVERY) | INTEGRAL: n/a | UNIFORM: n/a
+
+S3.2 Statement x target matrix  (<=> equivalent, => implies, =>c conditional, part = PROVED/OPEN partial (excludes a thin class of counterexamples), . none).  Status column: PRV/FIN/OPN/FLS.
+  id                     status     T1    T2    T3    T4    PC   blocked-by (where the relation is part/none)
+  A1                     OPN         .     .   <=>     .     .
+  A2                     PRV         .     .     .     .     .   T3: DEFECT: a counting statement allows a sparse exceptional set
+  A3                     PRV         .     .     .     .     .   T3: DEFECT
+  A4                     PRV         .     .  part     .     .   T3: bounded complexity only: excludes counterexamples with <= 25 ternary ones
+  B1[D=1]                FLS         .     .     .     .     .   T3: INTEGRAL: periodic in K mod 2*3^(D-1); the 3-adic window cannot see the size of 2^K; T2: INTEGRAL: same periodicity
+  B2[D=1]                FLS         .     .     .     .     .   T3: INTEGRAL; T2: INTEGRAL
+  B1[D=13]               FLS         .     .     .     .     .   T3: INTEGRAL: periodic in K mod 2*3^(D-1); the 3-adic window cannot see the size of 2^K; T2: INTEGRAL: same periodicity
+  B2[D=13]               FLS         .     .     .     .     .   T3: INTEGRAL; T2: INTEGRAL
+  C1                     PRV         .     .     .     .     .   T3: DIM: excludes only a zero-dimensional exceptional set; T3's set has dimension log_3 2
+  C2                     OPN         .     .     .     .     .   T3: does not force the digit 2
+  C3                     PRV         .     .     .     .     .   T3: DEFECT
+  R1                     PRV         .     .  part     .     .   T3: a short top run does not force a digit 2
+  R2                     PRV         .  part     .     .     .   T3: 3-adic window (INTEGRAL); T2: the landing needs all hostile balls, not only 1 and -1
+  R3                     OPN         .     .     .     .     .   T3: does not force a digit 2
+  D1                     FLS         .     .     .     .     .   T2: INTEGRAL: 1 is a 3-adic limit point of 2^K
+  D2                     PRV         .  part     .     .     .   T2: controls one terminal landing (fixed w_final); not the adversarial chain
+  D3                     OPN         .  part     .     .     .   T2: as D2
+  D4                     PRV         .     .     .     .     .   T2: DEFECT
+  E1                     FLS         .     .     .     .     .   T2: equidistribution forces hostile landings; T2 needs chain steering
+  E2                     PRV         .     .     .     .     .   T2: DEFECT: the adversary picks the chain
+  E3                     OPN         .   <=>     .     .     .
+  F1                     PRV         .     .     .     .     .   T1: DIM
+  F2                     PRV         .     .     .     .     .   T1: DIM
+  F3                     FLS         .     .     .     .     .
+  F4                     OPN         .     .     .     .     .
+  G[EP].irr.all          FLS         .     .     .     .     .
+  G[EP].notZ+.all        FLS         .     .     .     .     .
+  G[STURM].irr.all       PRV      part     .     .     .  part   T1: DRIFT: the 5n+1 analogue is PROVED too; PC: DRIFT
+  G[SUB].irr.all         PRV      part     .     .     .  part   T1: DRIFT: the 5n+1 analogue is PROVED too; PC: DRIFT
+  G[BCD].notZ+.all       PRV      part     .     .     .     .   T1: critical slope only: orbits with bounded discrepancy grow at most linearly
+  G[BCD].irr.all         PRV         .     .     .     .  part   PC: critical slope only
+  G[REP].irr.all         PRV      part     .     .     .  part   T1: DRIFT; PC: DRIFT
+  G[LIN].irr.all         OPN      part     .     .     .  part   T1: DRIFT (expected); PC: DRIFT (expected)
+  G[HARD].notZ+.all      OPN       <=>     .     .     .     .
+  G[ALL].notZ+.all       OPN       <=>     .     .     .     .
+  G[ALL].irr.all         OPN        =>     .     .     .   <=>
+  G[ALL].irr.almost      PRV         .     .     .     .     .   T1: DEFECT; PC: DEFECT
+  M1                     OPN         .     .     .   <=>     .
+  M2                     PRV         .     .     .  part     .   T4: Sturmian words are a zero-entropy class; S has entropy log(3/2)
+  M3                     FLS         .     .     .     .     .   T4: the Mahler map expands on both branches, so integers have non-EP words
+  H0                     FLS         .     .     .     .     .   T3: UNIFORM (in lambda): any lambda-uniform argument meets Lagarias's exceptions; T3 needs lambda = 1
+  H1                     PRV         .     .     .     .     .   T3: DEFECT
+  H2                     PRV         .     .     .  part     .   T4: gap: needs > 1/2
+  H3                     OPN         .     .     .    =>     .
+  H4                     OPN         .     .     .   <=>     .
+  H5                     PRV         .     .     .     .     .   T4: DEFECT
+  H6                     PRV         .     .     .     .     .   T4: concerns xi = 1 only
+  H7                     PRV         .     .     .  part     .   T4: countability only
+  H8                     PRV         .     .     .  part     .   T4: finite range
+
+S3.3 Minimal unblocked statements per target: statements that imply the target, are not FALSE, and are not blocked; among them the weakest (<=> before =>, conditional last).  PROVED partial results listed separately.
+  T1: no divergent positive 3x+1 orbit (Periodicity for Z^+, k=1): Phi(w) not in Z^+ for every non-EP word w
+     <=>  G[HARD].notZ+.all: for every w in HARD (non-EP words outside SUB, BCD, STURM and REP), Phi(w) is not a positive integer  [OPEN] | 3n-1 analogue: OPEN | 5n+1 analogue: OPEN (expected FALSE: K-L)
+     <=>  G[ALL].notZ+.all: for every w in ALL (all non-EP words), Phi(w) is not a positive integer  [OPEN] | 3n-1 analogue: OPEN | 5n+1 analogue: OPEN (expected FALSE: Kontorovich-Lagarias)
+     =>   G[ALL].irr.all: for every w in ALL (all non-EP words), Phi(w) is irrational  [OPEN] | 3n-1 analogue: OPEN | 5n+1 analogue: OPEN (expected FALSE)
+     PROVED partial: G[STURM].irr.all; G[SUB].irr.all; G[BCD].notZ+.all; G[REP].irr.all
+  T2: E-SCC Q2 endgame (loops_and_escapes sec. 8): every hostile see-saw chain ends at 2^K w_final in a descending class
+     <=>  E3: every hostile see-saw chain ends at a landing 2^K w_final in a descending class (steering statement)  [OPEN] | 3n-1 analogue: OPEN | 5n+1 analogue: OPEN (untested)
+     PROVED partial: R2; D2
+  T3: Erdos: 2^n has a ternary digit 2 for every n >= 9
+     <=>  A1: for all K >= 9, 2^K has a ternary digit 2  [OPEN] | 5n+1 analogue: OPEN; FINITE-EXACT for 1<=K<=200000 (K with only digits 0,1: [0])
+     PROVED partial: A4; R1
+  T4: Mahler: there is no Z-number (Phi_M(S) contains no positive integer, THM-2228)
+     <=>  H4: for every xi > 0 there is n with frac(xi (3/2)^n) >= 1/2  [OPEN] | 5n+1 analogue: FALSE: Z_{5/2}-numbers exist (p = 5 > q^2 = 4; Tijdeman 1972, Flatto 1992 [R via Andrieu-Eliahou-Vivion])
+     <=>  M1: for every carry word c in S (safe: all tails Y_n(c) < 1), Phi_M(c) is not a positive integer  [OPEN] | 5n+1 analogue: FALSE: Z_{5/2}-numbers exist (p = 5 > q^2 = 4; Tijdeman 1972, Flatto 1992 [R via Andrieu-Eliahou-Vivion])
+     =>   H3: for every xi > 0, limsup - liminf of frac(xi (3/2)^n) > 1/2  [OPEN] | 3n-1 analogue: OPEN (Lu-Zheng 2026 prove spread >= 11/27) | 5n+1 analogue: FALSE: Z_{5/2}-numbers exist (p = 5 > q^2 = 4; Tijdeman 1972, Flatto 1992 [R via Andrieu-Eliahou-Vivion])
+     PROVED partial: M2; H2; H7; H8
+  PC: Lagarias's Periodicity Conjecture: Phi(w) irrational for every non-EP word w (all 3x+k, k = +-1 mod 6)
+     <=>  G[ALL].irr.all: for every w in ALL (all non-EP words), Phi(w) is irrational  [OPEN] | 3n-1 analogue: OPEN | 5n+1 analogue: OPEN (expected FALSE)
+     PROVED partial: G[STURM].irr.all; G[SUB].irr.all; G[BCD].irr.all; G[REP].irr.all
+
+S4.1 Sturmian words: Phi(w) mod 2^20000 (exact).  Rational certificate: Wang reconstruction at N bits gives the unique candidate of height <= 2^9999; its parity vector is compared with w up to 160000 letters.
+     'NONE@lam(hb)': the candidate (height 2^hb) leaves w at letter lam, so no rational of height <= 2^9999 equals Phi(w).
+     intercept 'rnd' = 829488025602166941/2^60; 'U' = upper mechanical word.
+     cols: map | slope | intercept | 1-density | mu | 1-mu(mu-1) | bitlen(Phi mod 2^N) | rational certificate | best gain [p,t,lambda] | gain at q_n (proof bound q_{n+1}/mu-(mu-1)q_n) for the last 4 q_n
+  3x+1   | log_3 2 (critical q=3)               | crit  | 0       | 0.63090 | 1.0000 | +1.000 |  20000 | NONE@25780(1063)       | 50493.5 [24727,50509,125742] | 485:1045(1054) 1054:25771(24727) 24727:50494(50508) 50508:-13(125743)
+  3x+1   | log_3 2 (critical q=3)               | crit  | 0 upper U | 0.63095 | 1.0000 | +1.000 |  20000 | NONE@25780(1062)       | 50493.5 [24727,50509,125742] | 84:563(485) 485:1045(1054) 1054:25771(24727) 24727:50494(50508)
+  3x+1   | log_3 2 (critical q=3)               | crit  | 1/2     | 0.63095 | 1.0000 | +1.000 |  19998 | NONE@25253(1063)       | 50493.5 [24727,75763,150996] | 84:563(485) 485:1045(1054) 1054:25771(24727) 24727:50494(50508)
+  3x+1   | log_3 2 (critical q=3)               | crit  | rnd     | 0.63095 | 1.0000 | +1.000 |  19999 | NONE@33374(8657)       | 108595.7 [50508,0,159117] | 485:1045(1054) 1054:25771(24727) 24727:50494(50508) 50508:108596(125743)
+  3x+1   | [0;1,1,1,(2)] quadratic, below crit. | sub   | 0       | 0.63060 | 1.0000 | +1.000 |  19998 | NONE@31082(9115)       | 53062.0 [21979,53063,128102] | 1562:5333(3771) 3771:12873(9104) 9104:31083(21979) 21979:53062(53062)
+  3x+1   | [0;1,1,1,(2)] quadratic, below crit. | sub   | 0 upper U | 0.63065 | 1.0000 | +1.000 |  20000 | NONE@31082(9115)       | 53062.0 [21979,53063,128102] | 3771:12875(9104) 9104:31083(21979) 21979:53062(53062) 53062:-10(128103)
+  3x+1   | [0;1,1,1,(2)] quadratic, below crit. | sub   | 1/2     | 0.63060 | 1.0000 | +1.000 |  19999 | NONE@26530(9114)       | 101561.5 [53062,0,154633] | 3771:12871(9104) 9104:31083(21979) 21979:53062(53062) 53062:101561(128103)
+  3x+1   | [0;1,1,1,(2)] quadratic, below crit. | sub   | rnd     | 0.63060 | 1.0000 | +1.000 |  20000 | NONE@31980(9114)       | 75928.8 [53062,0,129000] | 3771:12873(9104) 9104:31083(21979) 21979:75041(53062) 53062:75929(128103)
+  3x+1   | [0;1,1,1,2,2,(3)] quadratic          | sub   | 0       | 0.63080 | 1.0000 | +1.000 |  19997 | NONE@33182(7724)       | 84112.0 [25471,1,109595] | 707:3034(2335) 2335:10040(7712) 7712:33184(25471) 25471:84112(84125)
+  3x+1   | [0;1,1,1,2,2,(3)] quadratic          | sub   | 0 upper U | 0.63085 | 1.0000 | +1.000 |  20000 | NONE@33182(7724)       | 84113.6 [25471,0,109595] | 707:3034(2335) 2335:10040(7712) 7712:33184(25471) 25471:84114(84125)
+  3x+1   | [0;1,1,1,2,2,(3)] quadratic          | sub   | 1/2     | 0.63085 | 1.0000 | +1.000 |  19999 | NONE@29326(7723)       | 84116.4 [25471,29328,138922] | 707:3033(2335) 2335:10039(7712) 7712:33183(25471) 25471:84116(84125)
+  3x+1   | [0;1,1,1,2,2,(3)] quadratic          | sub   | rnd     | 0.63085 | 1.0000 | +1.000 |  20000 | NONE(no cand.)         | 84118.2 [25471,41651,151245] | 707:3034(2335) 2335:10041(7712) 7712:33176(25471) 25471:84118(84125)
+  3x+1   | [0;1,1,1,2,2,3,1,5,2,23,2,(3)] quadr | super | 0       | 0.63090 | 1.0000 | +1.000 |  20000 | NONE@25780(1063)       | 50493.5 [24727,50509,125742] | 485:1045(1054) 1054:25771(24727) 24727:50494(50508) 50508:-13(176251)
+  3x+1   | [0;1,1,1,2,2,3,1,5,2,23,2,(3)] quadr | super | 0 upper U | 0.63095 | 1.0000 | +1.000 |  20000 | NONE@25780(1062)       | 50493.5 [24727,50509,125742] | 84:563(485) 485:1045(1054) 1054:25771(24727) 24727:50494(50508)
+  3x+1   | [0;1,1,1,2,2,3,1,5,2,23,2,(3)] quadr | super | 1/2     | 0.63095 | 1.0000 | +1.000 |  19998 | NONE@25253(1063)       | 50493.5 [24727,75763,150996] | 84:563(485) 485:1045(1054) 1054:25771(24727) 24727:50494(50508)
+  3x+1   | [0;1,1,1,2,2,3,1,5,2,23,2,(3)] quadr | super | rnd     | 0.63095 | 1.0000 | +1.000 |  19999 | NONE@33374(8657)       | 108595.7 [50508,0,159117] | 485:1045(1054) 1054:25771(24727) 24727:50494(50508) 50508:108596(176251)
+  3x+1   | [0;1,1,1,(3)] quadratic, above crit. | super | 0       | 0.63865 | 1.0123 | +0.988 |  20000 | NONE(no cand.)         | 46583.4 [14159,0,60922] | 1298:5404(4219) 4287:17865(13935) 14159:46583(46023) 46764:-578(152004)
+  3x+1   | [0;1,1,1,(3)] quadratic, above crit. | super | 0 upper U | 0.63870 | 1.0123 | +0.988 |  20000 | NONE(no cand.)         | 46583.3 [14159,1,60922] | 393:1632(1277) 1298:5404(4219) 4287:17865(13935) 14159:46583(46023)
+  3x+1   | [0;1,1,1,(3)] quadratic, above crit. | super | 1/2     | 0.63870 | 1.0123 | +0.988 |  20000 | NONE@23381(9342)       | 46296.3 [14159,23383,84304] | 393:1640(1277) 1298:5518(4219) 4287:18152(13935) 14159:46296(46023)
+  3x+1   | [0;1,1,1,(3)] quadratic, above crit. | super | rnd     | 0.63870 | 1.0123 | +0.988 |  20000 | NONE@23758(9724)       | 51897.5 [14159,0,66235] | 1298:5513(4219) 4287:17800(13935) 14159:51897(46023) 46764:4733(152004)
+  3x+1   | 1/phi=[0;(1)] quadratic              | sub   | 0       | 0.61800 | 1.0000 | +1.000 |  20000 | NONE(no cand.)         | 75025.0 [28657,46369,150049] | 10946:28657(17711) 17711:46368(28657) 28657:75025(46368) 46368:75019(75025)
+  3x+1   | 1/phi=[0;(1)] quadratic              | sub   | 0 upper U | 0.61805 | 1.0000 | +1.000 |  20000 | NONE(no cand.)         | 75025.0 [28657,46369,150049] | 10946:28657(17711) 17711:46368(28657) 28657:75025(46368) 46368:75020(75025)
+  3x+1   | 1/phi=[0;(1)] quadratic              | sub   | 1/2     | 0.61805 | 1.0000 | +1.000 |  19998 | NONE(no cand.)         | 98203.7 [46368,0,144576] | 10946:28657(17711) 17711:46368(28657) 28657:46368(46368) 46368:98204(75025)
+  3x+1   | 1/phi=[0;(1)] quadratic              | sub   | rnd     | 0.61805 | 1.0000 | +1.000 |  20000 | NONE@24668(6960)       | 75025.0 [46368,17905,139296] | 10946:28657(17711) 17711:46368(28657) 28657:64267(46368) 46368:75025(75025)
+  3x+1   | sqrt2/2=[0;1,(2)] quadratic          | super | 0       | 0.70710 | 1.1207 | +0.865 |  19996 | NONE@27719(9102)       | 44950.7 [19601,0,66921] | 3363:9112(6838) 8119:22003(16509) 19601:44951(39857) 47321:-5715(96222)
+  3x+1   | sqrt2/2=[0;1,(2)] quadratic          | super | 0 upper U | 0.70715 | 1.1207 | +0.865 |  19994 | NONE@27719(9101)       | 44950.1 [19601,1,66921] | 1393:3771(2833) 3363:9111(6838) 8119:22002(16509) 19601:44950(39857)
+  3x+1   | sqrt2/2=[0;1,(2)] quadratic          | super | 1/2     | 0.70710 | 1.1207 | +0.865 |  20000 | NONE(no cand.)         | 62878.0 [19601,13861,100382] | 3363:10785(6838) 8119:26043(16509) 19601:62878(39857) 47321:27744(96222)
+  3x+1   | sqrt2/2=[0;1,(2)] quadratic          | super | rnd     | 0.70710 | 1.1207 | +0.865 |  19999 | NONE(no cand.)         | 93622.6 [47321,0,146659] | 3363:10911(6838) 8119:23802(16509) 19601:41036(39857) 47321:93623(96222)
+  3x+1   | [0;1,(1,2)] quadratic, near 0.73     | sub   | 0       | 0.57735 | 1.0000 | +1.000 |  20000 | NONE(no cand.)         | 70226.0 [18817,51410,140451] | 5042:18817(13775) 13775:32592(18817) 18817:70226(51409) 51409:70222(70226)
+  3x+1   | [0;1,(1,2)] quadratic, near 0.73     | sub   | 0 upper U | 0.57740 | 1.0000 | +1.000 |  19999 | NONE(no cand.)         | 70226.0 [18817,51410,140451] | 5042:18817(13775) 13775:32592(18817) 18817:70226(51409) 51409:70223(70226)
+  3x+1   | [0;1,(1,2)] quadratic, near 0.73     | sub   | 1/2     | 0.57735 | 1.0000 | +1.000 |  19999 | NONE@21337(5045)       | 70226.0 [18817,16297,105338] | 5042:18817(13775) 13775:32592(18817) 18817:70226(51409) 51409:70226(70226)
+  3x+1   | [0;1,(1,2)] quadratic, near 0.73     | sub   | rnd     | 0.57735 | 1.0000 | +1.000 |  19999 | NONE@28296(9479)       | 70226.0 [18817,42073,131114] | 5042:18817(13775) 13775:32592(18817) 18817:70226(51409) 51409:60886(70226)
+  3x+1   | [0;1,(12)] quadratic, near 0.92      | super | 0       | 0.92355 | 1.4638 | +0.321 |  19999 | NONE@24817(2778)       | 22038.6 [1897,0,24817] | 13:148(101) 157:1822(1223) 1897:22039(14779) 22921:-10631(178566)
+  3x+1   | [0;1,(12)] quadratic, near 0.92      | super | 0 upper U | 0.92360 | 1.4638 | +0.321 |  20000 | NONE@24817(2779)       | 22037.6 [1897,1,24817] | 1:12(8) 13:147(101) 157:1822(1223) 1897:22038(14779)
+  3x+1   | [0;1,(12)] quadratic, near 0.92      | super | 1/2     | 0.92355 | 1.4638 | +0.321 |  20000 | NONE@20001(9999)       | 116380.9 [22921,0,149934] | 13:115(101) 157:1418(1223) 1897:17163(14779) 22921:116381(178566)
+  3x+1   | [0;1,(12)] quadratic, near 0.92      | super | rnd     | 0.92355 | 1.4638 | +0.321 |  20000 | NONE@28555(8250)       | 20304.3 [1897,3739,28555] | 1:8(8) 13:101(101) 157:1609(1223) 1897:20304(14779)
+  3x-1   | log_3 2 (critical q=3)               | crit  | 0       | 0.63090 | 1.0000 | +1.000 |  19999 | NONE@25780(1063)       | 50493.5 [24727,50509,125742] | 485:1045(1054) 1054:25771(24727) 24727:50494(50508) 50508:-13(125743)
+  3x-1   | sqrt2/2=[0;1,(2)] quadratic          | super | 0       | 0.70710 | 1.1207 | +0.865 |  20000 | NONE@27719(9102)       | 44950.7 [19601,0,66921] | 3363:9112(6838) 8119:22003(16509) 19601:44951(39857) 47321:-5715(96222)
+  5x+1   | log_5 2 (critical q=5)               | crit  | 0       | 0.43065 | 1.0000 | +1.000 |  19994 | NONE@29383(9309)       | 49457.4 [20087,78856,148412] | 1493:10780(9297) 9297:29372(20087) 20087:49457(29384) 29384:49457(49471)
+  5x+1   | log_5 2 (critical q=5)               | crit  | 0 upper U | 0.43070 | 1.0000 | +1.000 |  19999 | NONE@29383(9307)       | 49459.2 [29384,0,78854] | 9297:29372(20087) 20087:49457(29384) 29384:49459(49471) 49471:-14(177797)
+  5x+1   | log_5 2 (critical q=5)               | crit  | 1/2     | 0.43070 | 1.0000 | +1.000 |  20000 | NONE(no cand.)         | 78840.8 [29384,34780,143017] | 9297:29372(20087) 20087:49457(29384) 29384:78841(49471) 49471:64149(177797)
+  5x+1   | [0;2,3,(9)] quadratic, near log_5 2  | super | 0       | 0.43070 | 1.0002 | +1.000 |  20000 | NONE@54521(5405)       | 49116.8 [5393,1,54521] | 7:68(65) 65:587(592) 592:5384(5392) 5393:49117(49121)
+  5x+1   | [0;2,3,(9)] quadratic, near log_5 2  | super | 0 upper U | 0.43075 | 1.0002 | +1.000 |  20000 | NONE@54521(5402)       | 49119.2 [5393,0,54521] | 65:589(592) 592:5384(5392) 5393:49119(49121) 49129:-19(447477)
+  5x+1   | [0;2,3,(9)] quadratic, near log_5 2  | super | 1/2     | 0.43075 | 1.0002 | +1.000 |  19999 | NONE@27260(5403)       | 49113.4 [5393,21869,76389] | 7:66(65) 65:587(592) 592:5973(5392) 5393:49113(49121)
+  5x+1   | [0;2,(3)] quadratic, near 0.434      | super | 0       | 0.43425 | 1.0083 | +0.992 |  20000 | NONE@38909(9124)       | 98388.8 [29867,1,128510] | 829:3485(2709) 2738:11526(8946) 9043:38083(29545) 29867:98389(97582)
+  5x+1   | [0;2,(3)] quadratic, near 0.434      | super | 0 upper U | 0.43430 | 1.0083 | +0.992 |  20000 | NONE@38909(9124)       | 98391.0 [29867,0,128510] | 829:3485(2709) 2738:11526(8946) 9043:38083(29545) 29867:98391(97582)
+  5x+1   | [0;2,(3)] quadratic, near 0.434      | super | 1/2     | 0.43425 | 1.0083 | +0.992 |  20000 | NONE(no cand.)         | 49067.9 [29867,0,79188] | 829:3496(2709) 2738:11688(8946) 9043:38493(29545) 29867:49068(97582)
+  5x+1   | sqrt2-1=[0;(2)] quadratic, 0.414     | sub   | 0       | 0.41420 | 1.0000 | +1.000 |  19995 | NONE(no cand.)         | 80777.4 [33461,0,114242] | 2378:8119(5741) 5741:19601(13860) 13860:47321(33461) 33461:80777(80782)
+  5x+1   | sqrt2-1=[0;(2)] quadratic, 0.414     | sub   | 0 upper U | 0.41425 | 1.0000 | +1.000 |  19992 | NONE(no cand.)         | 80777.1 [33461,1,114242] | 2378:8119(5741) 5741:19601(13860) 13860:47321(33461) 33461:80777(80782)
+  5x+1   | sqrt2-1=[0;(2)] quadratic, 0.414     | sub   | 1/2     | 0.41420 | 1.0000 | +1.000 |  20000 | NONE@20789(8122)       | 80782.0 [33461,40392,154633] | 2378:8119(5741) 5741:19601(13860) 13860:47321(33461) 33461:80782(80782)
+  5x+1   | 1/phi=[0;(1)] quadratic              | super | 0       | 0.61800 | 1.4350 | +0.376 |  19999 | NONE(no cand.)         | 54851.4 [46368,1,121392] | 10946:16188(7580) 17711:26194(12265) 28657:42385(19845) 46368:54851(32110)
+  5x+1   | 1/phi=[0;(1)] quadratic              | super | 0 upper U | 0.61805 | 1.4350 | +0.376 |  20000 | NONE(no cand.)         | 54852.0 [46368,0,121392] | 10946:16186(7580) 17711:26193(12265) 28657:42383(19845) 46368:54852(32110)
+  5x+1   | 1/phi=[0;(1)] quadratic              | super | 1/2     | 0.61805 | 1.4350 | +0.376 |  20000 | NONE(no cand.)         | 78035.8 [46368,0,144576] | 10946:18420(7580) 17711:36279(12265) 28657:23813(19845) 46368:78036(32110)
+  5x+1   | sqrt2/2=[0;1,(2)] quadratic          | super | 0       | 0.70710 | 1.6419 | -0.054 |  20000 | NONE@20000(10000)      | 34738.2 [19601,0,66921] | 3363:5959(2786) 8119:14388(6727) 19601:34738(16241) 47321:-30372(39209)
+  5x+1   | sqrt2/2=[0;1,(2)] quadratic          | super | 0 upper U | 0.70715 | 1.6419 | -0.054 |  20000 | NONE@20001(9999)       | 34736.3 [19601,1,66921] | 1393:2467(1154) 3363:5957(2786) 8119:14388(6727) 19601:34736(16241)
+  5x+1   | sqrt2/2=[0;1,(2)] quadratic          | super | 1/2     | 0.70710 | 1.6419 | -0.054 |  19998 | NONE@20002(10000)      | 45442.3 [19601,13861,100382] | 3363:7794(2786) 8119:18821(6727) 19601:45442(16241) 47321:3086(39209)
+  mahler | [0;3,(3)] quadratic, 0.303 (Mahler-s | -     | 0       | 0.30275 | 1.5850 | +0.073 |  20000 | NONE(no cand.)         | 35248.8 [12970,0,55806] | 1189:3230(1782) 3927:10670(5886) 12970:35249(19440) 42837:-25058(64207)
+  mahler | sqrt2-1=[0;(2)] quadratic, 0.414     | -     | 0       | 0.41420 | 1.5850 | +0.073 |  19999 | NONE(no cand.)         | 61207.3 [33461,0,114242] | 2378:4347(2231) 5741:10500(5386) 13860:25351(13004) 33461:61207(31394)
+
+S4.2 Controls (3x+1): cols: word | 1-density | rational certificate | best repetition gain, periods 1..400 (p,t,lambda)
+  eventually periodic u=1101, v=10011                  | 0.6000 | AGREES>=160000: 223/45       |     3.4 (p=3, t=0, lam=6)
+  eventually periodic: parity vector of 27             | 0.5003 | AGREES>=160000: 27           |     4.7 (p=5, t=6, lam=15)
+  Thue-Morse (density 1/2)                             | 0.5000 | NONE@20001(10000)            |   261.9 (p=256, t=256, lam=768)
+  random, density 1/2 (seed 1)                         | 0.4980 | NONE(no cand.)               |     9.4 (p=207, t=9, lam=226)
+  random, density 0.7 (seed 2)                         | 0.6995 | NONE@20002(9998)             |     7.9 (p=55, t=0, lam=66)
+  critical halving word rho=0 (in-house sec. 3)        | 0.6310 | NONE@25780(1062)             |   562.7 (p=84, t=971, lam=1622)
+  critical halving word rho=1/2 (in-house sec. 3)      | 0.6310 | NONE(no cand.)               |   562.7 (p=84, t=729, lam=1380)
+  random bounded critical discrepancy, width 3 (seed 3) | 0.6309 | NONE(no cand.)               |    13.6 (p=273, t=8, lam=300)
+
+S4.3 Deep row: 3x+1, slope log_3 2, intercept 0, N = 100000 bits, words to 300000 letters: bitlen(Phi mod 2^N) = 100000; rational certificate NONE(no cand.) (no rational of height <= 2^49999); best repetition gain 125727.5 at p=50508, t=1, lambda=176250; gains 1:1 2:4 3:9 8:25 19:80 65:78 84:563 485:1045 1054:25771 24727:75221 50508:125728
+
+S5 Cross-problem matrix: problem | status | single missing ingredient | proved partial ingredients | grammar statement
+  Collatz divergence (T1) | OPEN | every-orbit 2-adic non-integrality of Phi on the class HARD (supercritical, unbounded discrepancy, no strong repetitions) | SUB (Monks-Yazinski Thm 2.7(b)), BCD (in-house), STURM (Thm S), REP (Thm R) | G[HARD].notZ+ (Bernstein family)
+  Collatz cycles | OPEN | exclusion of positive integer cycle points R_v/(2^|v| - 3^a(v)): a divisibility/carry statement at the convergent clocks | m-cycles m <= 91 (Hercher), circuits (Steiner), Christoffel cycles (Knight 2026, sheet-aware), Ellison/Rhin bounds on 2^K - 3^L | outside the grammar (Theorem R is vacuous on EP words)
+  E-SCC Q1 | OPEN (verified with Collatz below 2^71) | a sheet-sensitive escape family for the hostile points near -1 (-1 - 2^i c/3^j): 2-adic distance of 3-power-denominator rationals | dimension evidence favours 0 (dimension lane); A-L escape is sheet-blind | mirror of D/F families; not closed
+  E-SCC Q2 (T2) | OPEN (reduced mod 27; verified below 7.87e17) | chain control plus the terminal landing statement E3: 2^K w_final avoids the hostile 3-adic balls for the dynamically chosen K | terminal depth <= C log K (Yu, D2); kappa formula v_3(2^K - r) = 1 + v_3(K - kappa(r)) | E3 (steering)
+  Erdos ternary (T3) | OPEN (verified 8 < n <= 2*3^45) | an every-n statement about the TOP ternary digits of 2^n (archimedean), i.e. 1 not in E(Z_3); no 3-adic window statement suffices (B family FALSE) | Narkiewicz/HKR counts, dim E(Z_3) <= log_3 phi, Dimitrov-Howe (>= 26 ones), Saye | A1
+  Mahler 3/2 (T4) | OPEN (no Z-number below 2^57) | 2-adic non-integrality of Phi_M on the positive-entropy beta-shift S (THM-2228): the T1-type statement for the map ceil(3a/2) | Mahler countability, FLP spread >= 1/3, Sturmian carry words excluded (Thm S) | M1 (same Bernstein type as T1)
+  divergent 5x+1 orbit exists | OPEN (expected TRUE) | the reverse transfer: ONE rational (e.g. 7) whose parity vector is not eventually periodic, i.e. irrationality of a parity vector | none (Theorem S shows its divergent orbits cannot be Sturmian for slopes < 0.804) | outside the grammar (opposite direction)
+  Periodicity Conjecture (PC) | OPEN | Phi(w) irrational for every non-EP w (= no divergent orbit for any 3x+k, k = +-1 mod 6) | SUB, BCD (Proposition B), STURM, REP | G[ALL].irr
+  Furstenberg x2x3 measure conjecture | OPEN | measure rigidity at zero entropy (Rudolph-Johnson settle positive entropy) | Rudolph, Johnson, Host, Hochman-Shmerkin, Shmerkin-Wu | none: even a proof is COUNT-type, DEFECT-blind for T1-T4
+  shared statements: the Bernstein family (Phi_T not in Z^+ / not in Q on a word class) serves T1, PC and T4 in the
+  same form (different maps and classes), and Theorem S proves all three on the Sturmian class at once. The 2^K-in-Z_3
+  family serves T2 and T3 with different windows (T2: low digits along dynamically chosen K; T3: top digits). The 5x+1
+  question needs the opposite transfer, and Furstenberg's conjecture serves none of the every-orbit targets.
+
