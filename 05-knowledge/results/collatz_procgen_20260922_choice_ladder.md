@@ -171,8 +171,11 @@ criterion for the family is OPEN (HYP-9120 item 1). The positive
 reconstructions have height products near `5*10^7`, where about ten chance
 matches are expected among `908` classes; they are not claimed. The only
 exceptional class mod `2^36` containing an integer of absolute value below
-`1.5*10^8` is `-1`. Hence **every positive integer below `1.5*10^8` has a
-certificate of precision 36**.
+`1.5*10^8` is `-1`. Hence **every positive integer below `1.5*10^8` lies in
+a class with a multiplicative certificate of precision 36**. On the
+forward side, a multiplicative certificate becomes actual descent only
+above the path's threshold `B/(2^b-3^a)`; direct verification of Q1
+remains the inherited `10^6`.
 
 **Backward `E` (3-adic), PROVED membership.**
 
@@ -239,6 +242,18 @@ agrees. The `134` exceptional classes mod `3^28` are the class of `1` and
 `1/2+3^j/2^e`, such as `43/32=1/2+27/32`, `209/256=1/2+81/256` and
 `4235/4096=1/2+2187/4096`. The counts at depths `12,19,24,27` are
 `30,67,94,134`.
+
+**Finite verification of Q2 to `7.1*10^12` (FINITE-EXACT).** The
+thread DFS (`collatz_procgen_20260922_e_reverse_dfs.c`) agrees with the DP
+at every depth `r<=16`. Pushed to depth `30`, the exceptional counts are
+`67, 94, 134, 190` at `r=19, 24, 27, 30`. The smallest positive
+representative of an exceptional class other than `1` grows like
+`3^(r-4)`: it is `1.86*10^6` at `r=16`, `1.96*10^8` at `r=19`, and
+`7.17*10^12` at `r=30`. On the backward side a multiplicative certificate
+always gives actual descent (the carry only subtracts), and values stay
+positive integers prime to `3`. Strong induction therefore shows that
+**`1` reaches every `m<7.17*10^12` with `3` not dividing `m` in `E`**. The
+inherited verification was `10^7`, by greedy `G`.
 
 **The `1/2` neighbourhood costs at least `8/3` (PROVED).** Every legal
 reverse path from the 3-adic point `1/2` first lands on an integer
