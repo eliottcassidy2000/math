@@ -1,5 +1,15 @@
 # Script Results Index
 
+- [Procedural approach foundry](collatz_procgen_20260922_foundry.md):
+  **METHOD / TYPOLOGY + FINITE-EXACT probes.** Generates 473 approach
+  cards (problem x sub-target x mechanism x lens) over seven Collatz-type
+  problems and types each mechanism by the controls it is blind to (sheet,
+  drift, defect, integrality, undecidability) and whether it needs a thin
+  exceptional set. Diagnosis: the Collatz cycle half has four live
+  mechanisms; the no-divergence half has none, and the same gap appears
+  for the `3n-1` sheet and for rational periodicity. E-SCC has 25 live
+  hybrid plans.
+
 - [Choice collapses the Collatz exceptional set](collatz_procgen_20260922_choice_ladder.md):
   **PROVED scoped lemmas / FINITE-EXACT ladder (two code paths).**
   Exceptional-set counts for the Collatz descent game: `1,037,374` classes

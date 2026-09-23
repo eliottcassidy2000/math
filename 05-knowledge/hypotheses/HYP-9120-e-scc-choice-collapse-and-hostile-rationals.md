@@ -6,7 +6,7 @@ status: >
   (a) Q1: no positive integer n>1 lies in the forward exceptional set
   Bad_inf(E) in Z_2; (b) Q2: no integer m>1 lies in the backward exceptional
   set in Z_3^x; (c) structure: every rational point of Bad_inf(E) is negative
-  with a power-of-3 denominator in (-3/2,-1], every rational point of the
+  with a power-of-3 denominator near -1 (observed range [-1.6,-1]), every rational point of the
   backward set is 1, 1/2 or a positive dyadic rational, and both sets have
   Hausdorff dimension 0. PROVED: -1, -13/9, 1, 1/2 are hostile; the 1-escape
   lemma. FINITE-EXACT: exceptional counts 908 mod 2^36 and 52 mod 3^17; no
@@ -23,7 +23,7 @@ related:
 
 See the lane note for definitions and data. The decisive next tests are:
 
-1. Prove membership of the whole family `-p/3^j` in `(-3/2,-1]` by the
+1. Prove membership of the whole family `-p/3^j` near `-1` by the
    carry-lower-bound argument used for `-13/9`, or find a member that
    escapes.
 2. Push the backward thread computation to `3^25` with a tree-restricted

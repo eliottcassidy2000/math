@@ -141,9 +141,14 @@ subexponential exceptional growth.
 
 **FINITE-EXACT structure.** The `908` exceptional classes mod `2^36` were
 reconstructed as rationals of small height. Every reliable reconstruction
-is negative with a power-of-3 denominator in `(-3/2,-1]`:
+is negative with a power-of-3 denominator, in about `[-1.6,-1]`:
 `-1, -13/9, -35/27, -97/81, -113/81, -275/243, -307/243, -355/243, -371/243,
--793/729, ...`, accumulating at `-1` from below. The positive
+-793/729, ...`, accumulating at `-1` from below. The family is not bounded by `-3/2`:
+`-371/243=-1.527` and `-43/27=-1.593` also show no descent. Exact-rational DFS
+from each listed point finds no descent before a 2-million-node limit, whereas nearby
+rationals `-5/3, -11/9, -37/27, -41/27, -7/5, -9/7` descend within 2 to 5 halvings
+(`collatz_procgen_20260922_hostile_rational_check.py`). An exact membership
+criterion for the family is OPEN (HYP-9120 item 1). The positive
 reconstructions have height products near `5*10^7`, where about ten chance
 matches are expected among `908` classes; they are not claimed. The only
 exceptional class mod `2^36` containing an integer of absolute value below
