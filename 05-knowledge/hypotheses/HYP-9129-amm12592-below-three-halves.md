@@ -27,3 +27,11 @@ possible?
   HYP-9128.
 * The two sides meet in a potential-theoretic optimisation: the best
   handoff measure against the Pólya capacity of the quotient domain.
+
+## 2026-09-23 update
+* The proved window is now `1.377 <= C* <= 1.59`: THM-4467 extended, and THM-4468.
+* Numerically, realizable handoff states reach `1.567`.
+* The unrestricted real zero-measure relaxation reaches about `1.50`. But its zeros sit on an arc of `|w| = 1`, and an integer discriminant/Kronecker/parity argument (only sketched) excludes that for integer states.
+* The necessary-condition LP stays feasible down to `1.435` (`B = 4`), so it cannot prove `C* >= 3/2`.
+
+Still OPEN.

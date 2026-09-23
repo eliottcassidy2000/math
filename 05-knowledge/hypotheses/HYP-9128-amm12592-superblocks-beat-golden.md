@@ -2,15 +2,12 @@
 id: HYP-9128
 title: "AMM 12592: super-blocks with cross-annulus handoff give C* < C_* = 1 + log_5(phi^2)"
 status: >
-  OPEN HYPOTHESIS. Evidence is FINITE-EXACT at block level and NUMERICAL
-  asymptotically. Super-blocks [N,4N) let imbalance cross the inner dyadic
-  boundary through one integer handoff polynomial S_N(w). Exactly verified
-  integer super-blocks reach max T(L)/L = 53/34 on [64,256), 83/53 on
-  [128,512) and 157/100 on [256,1024). At those ratios no separately
-  balanced block exists; this is certified exactly by Long's evaluation
-  inequality. Handoff states vanishing to order about N/16 at the golden
-  point w = -1 numerically converge to about 1.570 < C_* = 1.59799. The
-  proved window is C* in [11/8, C_*] (THM-4467 and Long/THM-3009 constructions).
+  SETTLED -- PROVED and promoted as THM-4468 (2026-09-23). Golden-zero
+  super-blocks [N,4N) with S_N = (1+w)^(N/16) sum_(j<16) w^(jN/16) give an
+  exactly fair extractor with T(L) <= ceil(159L/100). So
+  C* <= 1.59 < C_* = 1.59799. The orchestrator audited it: fairness of the
+  N = 16 and 64 blocks was re-verified from the definition, and the interval
+  contour certificate for N >= 4096 was re-run.
 source: collatz-procgen-20260923 AMM lane (candidate H1)
 depends_on:
   - 05-knowledge/results/amm12592_procgen_20260923_uniform_frontier.md

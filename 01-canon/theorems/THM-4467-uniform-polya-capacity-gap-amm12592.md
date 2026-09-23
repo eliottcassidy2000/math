@@ -109,3 +109,20 @@ gives `C* >= 1 + gamma`.
   * Whether super-blocks prove `C* < C_*` (HYP-9128). There is FINITE-EXACT
     block-level evidence at `53/34`, `83/53` and `157/100`, and numerical
     asymptotics of about `1.570`.
+
+## 5. Update (2026-09-23): extended to gamma = 0.377, and the upper side
+
+* **Extension.** A second subordination certificate at `gamma = 377/1000`
+  gives `C* >= 1.377`, with the same FFT caveat as the `3/8` certificate:
+  * the certificate polynomial has `b_1 = 1.0001609`;
+  * the boundary is checked on `2^23` nodes, with a maximum certified bound
+    of `0.99999023 < 1`.
+
+  The orchestrator re-verified it with `--verify-only`. See
+  `05-knowledge/results/amm12592_procgen_20260923_hyp9128_proof.md` §8.
+* **Upper side.** THM-4468 proves `C* <= 159/100`.
+* **Proved window:** `1.377 <= C* <= 1.59`.
+* **The owner's structured-majorant question** (same note, §9) has a
+  negative answer. No termwise majorant can beat `S^(d_m)` exponentially,
+  because fairness-kernel moves saturate single levels. The loss is
+  cross-level.
