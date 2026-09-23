@@ -1,5 +1,17 @@
 # Script Results Index
 
+- [AMM 12592 uniform frontier: C* >= 11/8](amm12592_procgen_20260923_uniform_frontier.md):
+  **PROVED (THM-4467, audited) / FINITE-EXACT / NUMERICAL.** A Pólya-capacity argument on the `p<->1-p` quotient gives the first uniform gap, `C* >= 11/8` (`27/20` by pure interval arithmetic; reach `1.3775`). Theorem B shows the golden constant is a natural boundary. Super-blocks beat separately balanced blocks at finite scales and approach about `1.570` (HYP-9128). Whether `C* < 3/2` is OPEN (HYP-9129).
+
+- [The cube-swap number: obstructions and reductions](collatz_procgen_20260923_cube_theta.md):
+  **PROVED / FINITE-EXACT; HYP-9127 OPEN.** Theorem Q settles the quadratic tier. The cube series has no q-difference equation, and Mahler's method is inadmissible. HYP-9127 follows from a 2-adic zero estimate or from `U(1/3)`. There is no rational of height `<= 2^4999999`.
+
+- [The trunk and the Riemann hypothesis](collatz_procgen_20260923_trunk_rh.md):
+  **PROVED / CITED / FINITE-EXACT; RH OPEN.** The trunk is a 3-adic isometry and `1/3` of the Iwasawa coordinate of `zeta_3`, which has no zeros. The E-game's `1/2` and the critical `1/2` do not correspond. RH foundry controls; no functional equations found.
+
+- [Outside results against the PC frontier](procgen_sources_20260923_interplay.md):
+  **PROVED (conditional) / FINITE-EXACT / CITED.** Erdős 1062(ii) runs on the same three-place engine as Theorems S and D. Proposition T′. Corollary M (Tate curve plus p-adic Mahler–Manin). The moonshine chain `6 = 5+1 -> 196884`. Seven hexagons at `5/sqrt3`.
+
 - [The HARD class: Diophantine exponent, Theorem Y, and the cube-swap word](collatz_procgen_20260922_hard_class.md):
   **PROVED (audited) / FINITE-EXACT; C2 and PC OPEN.** Theorem D: `Phi_T(w)` is irrational when
   `Dio(w) > eta(w)`, so Sturmian and quasi-Sturmian words are settled for every map with

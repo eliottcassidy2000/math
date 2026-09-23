@@ -202,3 +202,27 @@ The HARD-class lane corrected my wave-3 description in a useful direction.
    "theta-like densities" turn out to be closer to the core than its
    numerology suggested: the core is the arithmetic of `2^a/3^b` inside
    lacunary series.
+
+## Wave 5 (2026-09-23): what the outside results did
+
+The owner brought a new batch of papers and puzzles. The procedure typed
+each one against the frontier.
+* **The best-matched outside result is a Lean proof.** The accepted proof
+  of Erdős 1062(ii) runs on exactly our engine: small nonzero S-unit forms
+  at `{inf, 2, 3}`. The only thing between its series and a Collatz parity
+  word is the height paid per bit. That one exchange rate, `eta`, is also
+  why the cube-swap number resists.
+* **The moonshine puzzle was not a detour.** The square-swap Bernstein
+  number is a theta value on a 2-adic Tate curve, and the p-adic
+  Mahler–Manin theorem then gives a transcendence-type corollary. The
+  original snippet's level-11 recurrence is Mathieu moonshine: the eta
+  product of `M_24`'s order-11 elements.
+* **The "hostile 1/2 is RH's 1/2" hope failed cleanly.** The trunk really
+  is a zeta coordinate, but of the 3-adic zeta, which has no zeros. The
+  two halves are provably different points.
+* **The fair-coin question produced a theorem.** A classical capacity
+  theorem (Pólya 1928) applied after folding `p <-> 1-p` gives the first
+  uniform gap for AMM 12592, `C* >= 11/8`. The repository's 44-theorem
+  corpus had not found one. Folding by a symmetry to turn two-point
+  integrality into one-point integrality is the same move as the session's
+  E-game quotient, and it is a reusable card.

@@ -1,0 +1,220 @@
+# AMM 12592 procgen 2026-09-23 -- run 2026-09-23T16:46:54Z
+# python: Python 3.10.0; numpy 2.2.6; scipy 1.15.3; mpmath 1.3.0; ortools 9.15.6755
+# sha256 b6faff92cd47fe8050ca633d4e98c9edc6bd5f678c9d4090081778f8a5e0be15  04-computation/experiments/amm12592_procgen_20260923_long_audit.py
+# sha256 f01a4fd77cfa606e83818c4b5aaff1057e9968b85872d6d4e97b8e0271d1fd3d  04-computation/experiments/amm12592_procgen_20260923_polya_capacity.py
+# sha256 2daf65ac0815036ef275870b6f0a607709d40104025b18b61e3de80bc98ced83  04-computation/experiments/amm12592_procgen_20260923_superblocks.py
+# sha256 42062b69d344e76484697f26f50c9cba382dad043f38b136aca932ba6b149eb8  04-computation/experiments/amm12592_procgen_20260923_run.sh
+
+################ Part 0. Long's draft: fetch (if absent) and his own exact verifier
+# draft commit inspected: 6c5b43349cf96973d434d4cf43d6f92568b6c0ef (2026-09-22T23:16:43Z)
+# sha256 verifier: 07801d62aedf91b87e122bd96f53a9bd450d64dd4e265caaff364f3da0dced61
+Certified beta interval:
+  0.5979874356654401 < beta < 0.5979874356654403
+Independent character checks: 861 exact polynomial comparisons
+Fair-binomial modal square bound: m=0,...,200 checked exactly
+Rational constants: 3250/121 < 27 and 27/125 < 1/4
+Algebraic floors: m=1,...,2048 agree with the rigorous log enclosure
+
+N    shift h    sites    max|f-u|       min margin  max positive norm
+2    0     0    3        1              0           0
+4    0     1    9        1              2           0.25
+8    0     2    32       2.3125         2           0.59375
+16   0     4    122      3.393798828    2           0.463806152344
+32   0     8    474      3.454914212    2           0.361610896885
+64   0     16   1869     4.188070966    2           0.324908444187
+
+All exact checks passed.
+Certified beta interval:
+  0.5979874356654401 < beta < 0.5979874356654403
+Independent certificate checker: all six required blocks passed
+Independent finite-witness checker: all six blocks passed
+Deterministic prefix realization N=2: 6 words, all signed type counts zero
+Deterministic prefix realization N=4: 30 words, all signed type counts zero
+Deterministic prefix realization N=8: 510 words, all signed type counts zero
+Deterministic prefix realization N=16: 131070 words, all signed type counts zero
+Fair-coin mixture identity and modal square bound: 132 exact rational tests
+Dyadic parity criterion: N=1,...,64 checked
+Large-block radix checker rejects a deliberate nonzero polynomial
+All independent supplementary checks passed.
+Certified beta interval:
+  0.5979874356654401 < beta < 0.5979874356654403
+Independent character checks: 861 exact polynomial comparisons
+Fair-binomial modal square bound: m=0,...,200 checked exactly
+Rational constants: 3250/121 < 27 and 27/125 < 1/4
+Algebraic floors: m=1,...,2048 agree with the rigorous log enclosure
+
+N    shift h    sites    max|f-u|       min margin  max positive norm
+2    0     0    3        1              0           0
+4    0     1    9        1              2           0.25
+8    0     2    32       2.3125         2           0.59375
+16   0     4    122      3.393798828    2           0.463806152344
+32   0     8    474      3.454914212    2           0.361610896885
+64   0     16   1869     4.188070966    2           0.324908444187
+128  0     32   7418     4.241126395    2           0.256354992306
+256  0     64   29564    4.541055011    2           0.167197313145
+512  0     129  118032   4.639057134    2           0.127637267246
+1024 1     258  471442   4.698230311    2           0.185055601942
+
+Finite certificate exported: amm12592_long_reexport.json
+
+All exact checks passed.
+re-exported certificate identical to distributed one: yes
+
+################ Part 1. Independent audit of Long's draft
+=== AMM12592 procgen 2026-09-23: audit of Long's draft ===
+  sha256 4edfc10b245d0cfe8d4313aef9392041fad291b3745ca4ed1cc6d6b5dcc2fef2  deterministic_von_neumann_fair_extractor.tex
+  sha256 07801d62aedf91b87e122bd96f53a9bd450d64dd4e265caaff364f3da0dced61  scripts/verify_glazer_critical.py
+  sha256 adaf0731b1acf06099c22f143c43007e38c7bbcc01fd32bdab8e7ff4cf4d1175  scripts/supplementary_checks.py
+  sha256 1be015fd44fad98c4e0f8f30901ebe085cfeb730246c7389f08840e1684cb2a9  scripts/certificates/finite_blocks.json
+  sha256 72183ed35587fcec393c3c7bed48f641ae8fc8b1a6454292acae0fffca091903  scripts/verification_output.txt
+  verifier digest matches manuscript/README: True
+
+[B1] distributed finite certificate (N = 2..64), independent checker:
+  N=   2: sites=     3 identity=True margin=None s_N=0 sum_lb=2.4377 ok=True
+  N=   4: sites=     9 identity=True margin=2 s_N=0 sum_lb=2.9950 ok=True
+  N=   8: sites=    32 identity=True margin=2 s_N=0 sum_lb=4.2383 ok=True
+  N=  16: sites=   122 identity=True margin=2 s_N=0 sum_lb=7.6809 ok=True
+  N=  32: sites=   474 identity=True margin=2 s_N=0 sum_lb=13.9485 ok=True
+  N=  64: sites=  1869 identity=True margin=2 s_N=0 sum_lb=27.2394 ok=True
+
+[B2] Long's construction (fold + lattice rounding) regenerated for N = 128 .. nmax, re-checked by independent code:
+  N=  128: sites=   7418 identity=True margin=2 s_N=0 max(T-ceil)=0 max(T-(C*L-log5L))=4.069 lb_sum=50.9425 D0_vs_floor_profile=0 max|f-u|=4.2411
+  N=  256: sites=  29564 identity=True margin=2 s_N=0 max(T-ceil)=0 max(T-(C*L-log5L))=4.531 lb_sum=101.9655 D0_vs_floor_profile=0 max|f-u|=4.5411
+  N=  512: sites= 118032 identity=True margin=2 s_N=0 max(T-ceil)=0 max(T-(C*L-log5L))=4.958 lb_sum=197.5315 D0_vs_floor_profile=0 max|f-u|=4.6391
+
+[C] lacunary 0-spine deviation: block N contributes exactly eps_N (pq)^N
+  (N, eps_N): [(2, 1), (4, 1), (8, 1), (16, 1), (32, 1), (64, 1), (128, 1)]   plus the L=1 rule 01->H,10->T giving +pq.
+  => 2F(p) - p = sum_j eps_j (pq)^(2^j): phi(w) is lacunary (Hadamard gaps), natural boundary |w|=1.
+
+All audit checks passed.
+
+################ Part 2. Polya-capacity lower bound (obstruction side)
+=== AMM12592 procgen 2026-09-23: Polya-capacity lower bound for the uniform constant C* ===
+gamma* = log_5(phi^2) = 0.597987435665440   (C_* = 1.597987435665440)
+
+[1] validation at gamma=0 (U_0 = D(0,1) u D(1,1)):
+    V=log R(U,0): lightning 0.0849495192  closed form log(4sqrt6/9) 0.0849495184  two-disk formula 0.0849495184
+    g_U(0,1)    : lightning 0.3465735910  closed form (1/2)ln2      0.3465735903
+    Lambda=log R(W,0): on-U 0.4315231102  direct-on-W 0.4315231195  closed form log(8sqrt3/9) 0.4315231087  two-disk 0.4315231087
+    boundary residual of the U-solve: 3.21e-08
+
+[2] table: gamma, V=log R(U,0), G=g_U(0,1), Lambda=V+G (on U), Lambda (direct on W), r_pi
+     0.00000  V=+0.08494952  G=0.34657359  Lambda=+0.43152311  direct=+0.43152312  r_pi=1.000000  resid=3.2e-08
+     0.05000  V=+0.03912792  G=0.32033305  Lambda=+0.35946098  direct=+0.35946098  r_pi=0.948215  resid=3.3e-08
+     0.09550  V=-0.00000811  G=0.29882965  Lambda=+0.29882155  direct=+0.29882154  r_pi=0.905982  resid=3.3e-08
+     0.10000  V=-0.00375697  G=0.29681437  Lambda=+0.29305740  direct=+0.29305740  r_pi=0.902031  resid=3.3e-08
+     0.20000  V=-0.08204765  G=0.25653363  Lambda=+0.17448599  direct=+0.17448599  r_pi=0.823139  resid=3.0e-08
+     0.30000  V=-0.15208873  G=0.22345772  Lambda=+0.07136899  direct=+0.07136899  r_pi=0.758174  resid=2.8e-08
+     0.35000  V=-0.18452345  G=0.20909654  Lambda=+0.02457309  direct=+0.02457309  r_pi=0.729791  resid=2.7e-08
+     0.37000  V=-0.19706696  G=0.20370503  Lambda=+0.00663806  direct=+0.00663806  r_pi=0.719093  resid=2.7e-08
+     0.37500  V=-0.20016623  G=0.20238684  Lambda=+0.00222061  direct=+0.00222061  r_pi=0.716474  resid=2.7e-08
+     0.37750  V=-0.20171046  G=0.20173210  Lambda=+0.00002163  direct=+0.00002164  r_pi=0.715172  resid=2.7e-08
+     0.38000  V=-0.20325112  G=0.20108024  Lambda=-0.00217088  direct=-0.00217088  r_pi=0.713875  resid=2.7e-08
+     0.40000  V=-0.21544962  G=0.19596719  Lambda=-0.01948243  direct=-0.01948243  r_pi=0.703691  resid=2.6e-08
+     0.50000  V=-0.27329945  G=0.17287956  Lambda=-0.10041989  direct=-0.10041988  r_pi=0.657298  resid=2.4e-08
+     0.59799  V=-0.32549954  G=0.15367668  Lambda=-0.17182285  direct=-0.17182285  r_pi=0.618034  resid=2.1e-08
+     0.70000  V=-0.37583589  G=0.13659762  Lambda=-0.23923827  direct=-0.23923827  r_pi=0.582387  resid=1.9e-08
+     1.00000  V=-0.50519681  G=0.09892397  Lambda=-0.40627284  direct=-0.40627284  r_pi=0.500000  resid=1.4e-08
+
+[3] thresholds (bisection):
+    npol=40 nlight=24: gamma_0 (one-point Polya) = 0.095490295   gamma_1 (quotient) = 0.377524630   => C* >= 1.3775246
+    npol=50 nlight=30: gamma_0 (one-point Polya) = 0.095490296   gamma_1 (quotient) = 0.377524634   => C* >= 1.3775246
+    npol=70 nlight=40: gamma_0 (one-point Polya) = 0.095490295   gamma_1 (quotient) = 0.377524632   => C* >= 1.3775246
+
+[4] max_{closure W_g}|w| = r_pi(1+r_pi) (attained at p=-r_pi);  <= 1  iff  g >= gamma*:
+    g=0.300000: sampled max|w|=1.3330014508  r_pi(1+r_pi)=1.3330014508
+    g=0.500000: sampled max|w|=1.0893389065  r_pi(1+r_pi)=1.0893389065
+    g=0.590000: sampled max|w|=1.0067216809  r_pi(1+r_pi)=1.0067216809
+    g=0.597987: sampled max|w|=1.0000000000  r_pi(1+r_pi)=1.0000000000
+    g=0.610000: sampled max|w|=0.9900614524  r_pi(1+r_pi)=0.9900614524
+    g=0.800000: sampled max|w|=0.8559967046  r_pi(1+r_pi)=0.8559967046
+    exact: (1/phi)(1+2/phi)^gamma* - 1 = 0.0  (1+2/phi = sqrt5, sqrt5^gamma* = phi), and r_pi(1+r_pi)=1 at r_pi=1/phi
+
+[5] rigorous two-disk certificate (mpmath interval arithmetic):
+    float scan at gamma=0.35: best two-disk Lambda = +0.008108 at c=0.0650, rho=0.781066
+    gamma=7/20, c=13/200, rho=39/50: {'containment': True, 'pieces': 172, 'max_upper_T_on_circle': 0.9998997777190378, 'Lambda_interval': (0.005935392062734376, 0.005935392062734376), 'Lambda_positive': True}
+    => R(W_{7/20},0) >= R(w(D(c,rho) u D(1-c,rho)),0) > 1  =>  C* >= 27/20 = 1.35 (PROVED, given Polya/Fatou)
+
+[6] subordination certificate at gamma = 3/8:
+    Riemann-map estimate R(W_3/8,0) = 1.00222308 (lightning residual 8.6e-09)
+    certificate polynomial: degree 2047, P(0)=0, P'(0)=b1=1.00071974, sum k|b_k|=1.911521
+    grid 2^21, delta=2.865e-06, max T on grid=0.99989830, max certified bound=0.99990624, min|1-2p|=1.3192
+    certified P(unit circle) in W_3/8: True
+    certificate written: amm12592_procgen_20260923_subordination_certificate.json  sha256=5eccbc0c85794a35297aceb75bb2b3df51f19a71bc9035983e283bc7cf5a5fc5
+    => by Schwarz's lemma R(W_{3/8},0) >= P'(0) > 1  =>  C* >= 11/8 = 1.375 (PROVED, given Polya/Fatou)
+
+[7] consistency (the obstruction must NOT fire where constructions exist):
+    gamma* (Long / golden block construction): V=-0.325500, Lambda=-0.171823  -> both negative: True
+    gamma=1 (classical 2n): V=-0.505197, Lambda=-0.406273  -> both negative: True
+
+[8] p(w) = sum_n Cat(n-1) w^n ; Cat(n-1) odd  iff  n is a power of two (checked n <= 4096):
+    verified: True   => every complement-symmetric fair extractor has phi(w) = sum_j w^(2^j) (mod 2)
+
+All checks passed. [53.4s]
+
+################ Part 3. Super-blocks (construction side)
+=== AMM12592 procgen 2026-09-23: super-blocks (cross-annulus cancellation) ===
+
+[A] exact CP-SAT  rho_B(N) := min over complement-symmetric super-blocks [N,BN) of max T(L)/L
+  B=2 N=  2: best 3/2 = 1.50000; largest ratio proved INFEASIBLE None; timeouts at []  [0s]
+        T(L), L=2..3: [3, 4]
+  B=2 N=  4: best 3/2 = 1.50000; largest ratio proved INFEASIBLE 7/5; timeouts at []  [0s]
+        T(L), L=4..7: [6, 7, 8, 8]
+  B=2 N=  8: best 14/9 = 1.55556; largest ratio proved INFEASIBLE 3/2; timeouts at []  [0s]
+        T(L), L=8..15: [12, 14, 15, 16, 16, 16, 16, 16]
+  B=2 N= 16: best 25/16 = 1.56250; largest ratio proved INFEASIBLE 14/9; timeouts at []  [0s]
+        T(L), L=16..31: [25, 26, 28, 29, 31, 32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 32]
+  B=4 N=  2: best 3/2 = 1.50000; largest ratio proved INFEASIBLE 7/5; timeouts at []  [0s]
+        T(L), L=2..7: [3, 4, 6, 7, 8, 8]
+  B=4 N=  4: best 3/2 = 1.50000; largest ratio proved INFEASIBLE 16/11; timeouts at []  [0s]
+        T(L), L=4..15: [6, 7, 9, 10, 12, 13, 15, 16, 16, 16, 16, 16]
+  B=4 N=  8: best 28/19 = 1.47368; largest ratio proved INFEASIBLE 29/20; timeouts at ['25/17']  [120s]
+        T(L), L=8..31: [11, 13, 14, 16, 17, 19, 20, 22, 23, 25, 26, 28, 29, 30, 32, 32, 32, 32, 32, 32, 32, 32, 32, 32]
+  B=8 N=  2: best 3/2 = 1.50000; largest ratio proved INFEASIBLE 16/11; timeouts at []  [0s]
+        T(L), L=2..15: [3, 4, 6, 7, 9, 10, 12, 13, 15, 16, 16, 16, 16, 16]
+  B=8 N=  4: best 3/2 = 1.50000; largest ratio proved INFEASIBLE 31/21; timeouts at []  [0s]
+        T(L), L=4..31: [6, 7, 9, 10, 12, 13, 15, 16, 18, 19, 21, 22, 24, 25, 27, 28, 30, 31, 32, 32, 32, 32, 32, 32, 32, 32, 32, 32]
+
+[B] handoff states S_N (super-block 0-spine deviation = w^N S_N(w)):
+  B=4 N=2: S_N(w) = (w - 1)*(w + 1)    S_N(-1) = 0
+  B=4 N=4: S_N(w) = -(w + 1)**2*(w**2 + 1)    S_N(-1) = 0
+  B=4 N=8: S_N(w) = -(w + 1)**2*(w**2 + 1)*(w**4 + 1)    S_N(-1) = 0
+  B=8 N=2: S_N(w) = -w**6 - 2*w**5 - 2*w**4 - 2*w**3 - w**2 - 1    S_N(-1) = -1
+  B=8 N=4: S_N(w) = w**12 + 2*w**11 + 2*w**10 + 2*w**9 + 2*w**8 + 2*w**7 + 2*w**6 + 2*w**5 + w**4 - 1    S_N(-1) = -1
+
+[C] asymptotic necessary thresholds for S_N ~ (1+w)^(kappa N) (1-w^N)/(1-w^(kappa N)), B=4 (NUMERICAL grid):
+  kappa=0.0000: natural boundary C >= 1.5980;  single-block evaluation C >= 1.5975   (C_* = 1.5980)
+  kappa=0.0625: natural boundary C >= 1.5634;  single-block evaluation C >= 1.5632   (C_* = 1.5980)
+  kappa=0.1250: natural boundary C >= 1.5528;  single-block evaluation C >= 1.5523   (C_* = 1.5980)
+  kappa=0.1500: natural boundary C >= 1.5552;  single-block evaluation C >= 1.5552   (C_* = 1.5980)
+  kappa=0.2500: natural boundary C >= 1.5803;  single-block evaluation C >= 1.5801   (C_* = 1.5980)
+
+[D] exact fold thresholds C (profile ceil(C L), l1 masses <= 1, exact level-0 box), B=4:
+  N=   64: S=1:1.5758  k=1/32:1.5649  k=1/16:1.5515  k=1/8:1.5539
+  N=  128: S=1:1.5834  k=1/32:1.5683  k=1/16:1.5654  k=1/8:1.5598
+  N=  256: S=1:1.5902  k=1/32:1.5739  k=1/16:1.5662  k=1/8:1.5674
+  N=  512: S=1:1.5932  k=1/32:1.5753  k=1/16:1.5681  k=1/8:1.5712
+  N= 1024: S=1:1.5952  k=1/32:1.5769  k=1/16:1.5691  k=1/8:1.5736
+
+[E] integer super-blocks (fold center + Long's lattice rounding, independent re-verification):
+  [64,256) kappa=0.0625: balanced=True (target reproduced True), sites=10571, max|f-u|=4.513, max T(L)/L = 53/34 = 1.55882
+     separately balanced [64,128) at the same ratio: Long's evaluation sum = 0.62580 < 1 at theta=42/125  => impossible: True
+  [128,512) kappa=0.125: balanced=True (target reproduced True), sites=42677, max|f-u|=4.744, max T(L)/L = 83/53 = 1.56604
+     separately balanced [128,256) at the same ratio: Long's evaluation sum = 0.31341 < 1 at theta=181/500  => impossible: True
+  [256,1024) kappa=0.0625: balanced=True (target reproduced True), sites=171545, max|f-u|=4.852, max T(L)/L = 157/100 = 1.57000
+     separately balanced [256,512) at the same ratio: Long's evaluation sum = 0.04287 < 1 at theta=93/250  => impossible: True
+
+[G] asymptotic SUFFICIENT fold thresholds by optimal-contour (steepest-descent) bounds, B=4 (NUMERICAL grid):
+  S=1 (golden family): C <= 1.5967   (exact value C_* = 1.5980; grid error ~1e-3)
+  kappa=0.0312: C <= 1.5794
+  kappa=0.0625: C <= 1.5720
+  kappa=0.0900: C <= 1.5700
+  kappa=0.1250: C <= 1.5750
+
+[F] chained ILP family sum_j w^(4^j) S_(4^j)(w), S_N = -(1+w)(1-w^N)/(1-w):
+  = -((1+w)/(1-w)) sum_k (-1)^k w^(2^k)  modulo w^256: True  (Hadamard gaps: natural boundary |w|=1)
+
+Done. [505s]
+
+# sha256 subordination certificate: 5eccbc0c85794a35297aceb75bb2b3df51f19a71bc9035983e283bc7cf5a5fc5
+# end 2026-09-23T16:57:09Z

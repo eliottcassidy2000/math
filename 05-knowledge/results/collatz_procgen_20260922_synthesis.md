@@ -335,6 +335,38 @@ the divergence half of Collatz, and the sign enters exactly as the sign of
   * **The relaxation renormalizes the difficulty rather than removing
     it.**
 
+## 2d. Wave 5 (2026-09-23): the cube-swap number, the trunk and RH, outside results, and AMM 12592
+
+* **Cube-swap number** (HYP-9127; [note](collatz_procgen_20260923_cube_theta.md); audited). HYP-9127 is still OPEN.
+  * **Theorem Q** (PROVED). Every single quadratic swap family (triangular, pentagonal, any `alpha k^2 + beta k`, with a sign twist) is irrational when `mu_bar < phi`, so for every `3x+r` map.
+  * **Why cubes resist** (PROVED). They have no linear q-difference equation of any order (via Garoufalidis). Mahler's method is inadmissible, since the matrix is unipotent. A Subspace argument needs a growing number of S-unit terms, and no shift nearly preserves the cubes; this is exactly what separates it from Erdős 1062(ii).
+  * **Reductions.**
+    * A combinatorial 2-adic zero estimate (HYP-9130) implies HYP-9127.
+    * So does a uniform S-unit gap `U(1/3)`. The n-term abc conjecture does not suffice.
+  * **Certificates.**
+    * The number is not a rational of height `<= 2^4999999`.
+    * Lattice hunts sit exactly at the Dirichlet baseline.
+    * The Hankel census shows no Padé miracle for cubes. Squares show one: their determinants are 4.4 times below random.
+  * **Cheaper open instances.** A square swap just past `phi` (HYP-9131), and the near-critical cube `sum (2^19/3^12)^(k^3)`.
+* **The trunk and the Riemann hypothesis** ([note](collatz_procgen_20260923_trunk_rh.md); audited).
+  * **The trunk as a 3-adic object** (PROVED). `T(i) = (4^i-1)/3` is a 3-adic isometry of `Z_3` with fixed points exactly `{0, 1, -1/2}`, and `T(1/2) = -1`. The plus and minus trunks interleave as the Jacobsthal numbers.
+  * **The trunk as an Iwasawa coordinate** (REAL). The trunk is `1/3` of Iwasawa's coordinate `4^s - 1` for the Kubota–Leopoldt `zeta_3`, which has no zeros.
+  * **The two "1/2"s differ** (PROVED). The E-game's hostile `1/2` sits at the irrational exponent `i* = log(5/2)/log 4`, while `s = 1/2` maps to `-1`.
+  * **Blindness.** Every trunk identity is blind to DRIFT and to SHEET.
+  * **RH controls.** An RH foundry types the bridges against Davenport–Heilbronn and Epstein, whose off-line zeros were located numerically.
+  * **The only precise leftover** is a resonance gap for the E-game's own dynamical zeta (HYP-9133).
+* **Outside results** ([note](procgen_sources_20260923_interplay.md); audited).
+  * **Erdős 1062(ii)**, which is Lean-accepted, runs on the same three-place S-unit engine as Theorems S and D. Its only difference is the height exponent `eta = 1`. The same exponent bookkeeping gives the no-go for `Y3` along natural-height approximants.
+  * **Proposition T′** (conditional on the Subspace Theorem): for supercritical bounded-discrepancy words with `Dio > 1`, the 2-adic and real Bernstein values are not both rational.
+  * **Corollary M** (PROVED modulo the p-adic Mahler–Manin theorem, BDGP 1996). The square-swap number is a 2-adic theta value on the Tate curve `q = rho^2`, whose `j` carries the 196884. So the square-swap and pronic-swap numbers are not both algebraic.
+  * **The owner's moonshine exercise** (verified): `6 = 5+1` goes through `S_5 = PGL(2,5)` inside `S_6`, then `M_12`, `M_24`, Golay and Leech, to `196884 = 300 + 24 + 196560 = 1 + 196883`. Also, the snippet's level-11 recurrence is the eta product `eta(tau)^2 eta(11 tau)^2` attached to `M_24`'s order-11 elements.
+  * **Seven hexagons** fit at side `5/sqrt3`, exactly (Morandi 2015, a record; optimality open).
+* **AMM 12592, the owner's extractor question** ([note](amm12592_procgen_20260923_uniform_frontier.md); audited and **promoted as [THM-4467](../../01-canon/theorems/THM-4467-uniform-polya-capacity-gap-amm12592.md)**).
+  * A Pólya-capacity argument on the `p <-> 1-p` quotient proves the first uniform gap, **`C* >= 11/8`**. Pure interval arithmetic gives `27/20`, and the method reaches `1.3775`. So a constant `1+eps` is impossible for `eps <= 3/8`.
+  * Theorem B makes the golden constant a natural boundary of the lacunary series.
+  * Super-blocks beat every separately balanced block at `N = 8, 64, 128, 256` (FINITE-EXACT) and approach about `1.570` numerically (HYP-9128).
+  * Whether `C* < 3/2` is OPEN (HYP-9129). The proved window is `[1.375, 1.598]`.
+
 ## 2b. The approach deck: every approach generated or considered, with its disposition
 
 | # | approach (lens + mechanism) | barrier verdict | probe run | outcome |
