@@ -55,6 +55,14 @@ So the "missing insight" has a job description:
   cycles contract multiplicatively, so class-level certificates never see
   them. Positive minus-sheet cycles expand, and their minima are hostile.
 
+**Correction within the session.** I first read one level (`2^20`) of
+the `5n+1` choice game as a "drift barrier". The sibling-ladder lane
+showed that the fraction keeps falling (about `4e-5` at `2^64`). Choice
+games tip only near `q=10`; positivity is proved for `q>=41`. So choice
+is blind to the drift as well as the sign, and the job description
+above must be read as "do what choice does, *but specifically for
+`3n+1`*". The ledger entry is MISTAKES 2026-09-22.
+
 ## How the fringe ideas connected
 
 * **Signed sheets (the snippet):** all class-level data are sheet-blind,

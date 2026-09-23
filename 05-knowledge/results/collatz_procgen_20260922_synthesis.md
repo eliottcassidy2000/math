@@ -198,7 +198,17 @@ does not supply it. A proof of the divergence half must therefore
 substitute for choice. It must see the drift, handle each orbit exactly,
 use a non-uniform arithmetic input, and cope with a `0.95`-dimensional
 exceptional set, which no known escape construction covers; the
-`E`-relaxation's much thinner set is already hard (see item 3 of section 5). The pasted snippet's themes map to exact places: the sign enters
+`E`-relaxation's much thinner set is already hard (see item 3 of section 5). **Corrected emphasis (after the sibling-ladder lane).** What choice buys is
+*generic*. The `5n+1` relaxation collapses as well (its mass falls to about
+`4e-5` at `2^64`), and choice games switch only near `q=10`, so choice
+relaxations are blind to both the sign and the drift. A relaxation that
+becomes provable by choice therefore discards exactly the two features
+that make Collatz special. The missing ingredient must be specific to
+`3n+1` in both respects: it must see `log 3<2 log 2` and the sign of
+`2^K-3^L` together. Choice is a diagnostic of *where* the difficulty
+sits (rising runs), not a template for the proof.
+
+The pasted snippet's themes map to exact places: the sign enters
 as the sign of `2^K-3^L`, the Catalan clocks belong to the cycle half, and
 the trunk `(4^i-1)/3` is the exit set of the hardest relaxed obstruction.
 
