@@ -1,0 +1,356 @@
+# collatz_procgen_20260923_cube_theta -- HYP-9127 lane output
+# python: 3.10.0 gmpy2 2.3.0 python-flint 0.9.0
+# gp: [2, 17, 4]
+collatz_procgen_20260923_cube_theta_ledger.py
+
+==============================================================================
+L0  constants
+==============================================================================
+rho = 2^10/3^9 ; |rho|_2 = 2^-10 ; H(rho) = 3^9 = 19683
+mu_bar(Y3, 3x+1) = log2(3^9)/10 = 1.426466   (= 9/10 * log2 3)
+phi = 1.618034 ; Lemma P / Theorem Q need mu_bar < phi ; unshifted (m=0) needs mu_bar < 3/2
+Liouville (partial sums) for sum rho^(k^d), d>=2: works iff mu_bar = 1 (exponent ratio -> 1/mu_bar = 0.701033)
+formal Pade budget per unit degree at W = 2E (diagonal):  2L - log2 M0 = 5.7353 bits
+formal budget at W = w E: L*w - log2 M0 ; zero at w = mu_bar = 1.4265
+
+==============================================================================
+L1  independent check of the Y3 identity (Bernstein formula + parity iteration)
+==============================================================================
+N = 20000 bits, word length 20020 letters, nonzero cubes used: 12
+Phi(word) == RHS mod 2^N : True   (0.46s)
+parity iteration of Phi(word) mod 2^N reproduces the first 20000 letters of Y3 (expected 20000)
+X mod 2^64 = 0x10d7cc499d632c01
+real analogue: X_R = sum (2^10/3^9)^(k^3) = 1.052024589801160144536635448506505408046
+               Phi_R(Y3) (same series summed in R) = -1.028116480848713921941372840810469987048
+
+==============================================================================
+L2  Liouville ledger for X: partial sums S_K = A_K/3^(9K^3)
+==============================================================================
+ K |  v2(D X - A)  | 10(K+1)^3 | log2 max(|A|,D) | gain = v2 - log2 H | v2/log2 H | 1/mu_bar
+ 1 |            80 |        80 |            14.3 |               65.7 |    5.5796 | 0.7010
+ 2 |           270 |       270 |           114.2 |              155.8 |    2.3645 | 0.7010
+ 3 |           640 |       640 |           385.2 |              254.8 |    1.6614 | 0.7010
+ 4 |          1250 |      1250 |           913.0 |              337.0 |    1.3691 | 0.7010
+ 5 |          2160 |      2160 |          1783.2 |              376.8 |    1.2113 | 0.7010
+ 6 |          3430 |      3430 |          3081.2 |              348.8 |    1.1132 | 0.7010
+ 7 |          5120 |      5120 |          4892.9 |              227.1 |    1.0464 | 0.7010
+ 8 |          7290 |      7290 |          7303.6 |              -13.6 |    0.9981 | 0.7010
+ 9 |         10000 |     10000 |         10399.0 |             -399.0 |    0.9616 | 0.7010
+10 |         13310 |     13310 |         14264.7 |             -954.7 |    0.9331 | 0.7010
+11 |         17280 |     17280 |         18986.3 |            -1706.3 |    0.9101 | 0.7010
+12 |         21970 |     21970 |         24649.4 |            -2679.4 |    0.8913 | 0.7010
+gain < 0 from K = 8 on; asymptotically gain = L[(K+1)^3 - mu_bar K^3] + O(log K) ~ -(mu_bar-1) L K^3: partial sums certify only finitely many heights.
+
+==============================================================================
+L3  Theorem Q: Tschakaloff-Zudilin forms for quadratic position families (exact)
+==============================================================================
+
+-- map 3x+1, block 1^9 0 (Y): rho = 2^10/19683, mu_bar = 1.4265 (< phi)
+   squares k^2              P(0..5)=[0, 1, 4, 9, 16, 25]  v2==predicted: True
+      m=0     margins v2 - log2 H, n=1..: +27 +47 +70 +96 +125 +157 +192 +230 +271 +314 +361 +411
+      m=n/phi margins v2 - log2 H, n=1..: +54 +86 +162 +211 +319 +444 +525 +682 +857 +969 +1175 +1305
+   triangular k(k+1)/2      P(0..5)=[0, 1, 3, 6, 10, 15]  v2==predicted: True
+      m=0     margins v2 - log2 H, n=1..: +21 +34 +49 +65 +82 +101 +121 +143 +166 +191 +217 +245
+      m=n/phi margins v2 - log2 H, n=1..: +33 +52 +90 +118 +172 +236 +279 +358 +446 +505 +609 +677
+   pentagonal k(3k-1)/2     P(0..5)=[0, 1, 5, 12, 22, 35]  v2==predicted: True
+      m=0     margins v2 - log2 H, n=1..: +33 +60 +92 +128 +169 +214 +263 +317 +375 +438 +505 +576
+      m=n/phi margins v2 - log2 H, n=1..: +76 +120 +234 +304 +466 +653 +771 +1006 +1267 +1433 +1741 +1933
+   pentagonal k(3k+1)/2     P(0..5)=[0, 2, 7, 15, 26, 40]  v2==predicted: True
+      m=0     margins v2 - log2 H, n=1..: +49 +82 +119 +161 +207 +258 +313 +373 +437 +505 +578 +655
+      m=n/phi margins v2 - log2 H, n=1..: +87 +138 +253 +329 +492 +680 +804 +1041 +1303 +1475 +1785 +1982
+   2k^2+k                   P(0..5)=[0, 3, 10, 21, 36, 55]  v2==predicted: True
+      m=0     margins v2 - log2 H, n=1..: +70 +116 +168 +226 +290 +359 +435 +516 +603 +696 +795 +900
+      m=n/phi margins v2 - log2 H, n=1..: +120 +189 +343 +447 +664 +916 +1083 +1399 +1749 +1980 +2394 +2659
+
+-- map 5x+1, block 1^6 0^4: rho = 2^10/15625, mu_bar = 1.3932 (< phi)
+   squares k^2              P(0..5)=[0, 1, 4, 9, 16, 25]  v2==predicted: True
+      m=0     margins v2 - log2 H, n=1..: +28 +51 +77 +108 +144 +183 +227 +275 +328 +384 +445 +510
+      m=n/phi margins v2 - log2 H, n=1..: +56 +91 +174 +230 +350 +492 +584 +762 +961 +1091 +1327 +1477
+   triangular k(k+1)/2      P(0..5)=[0, 1, 3, 6, 10, 15]  v2==predicted: True
+      m=0     margins v2 - log2 H, n=1..: +22 +36 +53 +71 +92 +115 +140 +167 +196 +227 +261 +297
+      m=n/phi margins v2 - log2 H, n=1..: +34 +55 +97 +128 +189 +261 +310 +401 +501 +569 +688 +766
+   pentagonal k(3k-1)/2     P(0..5)=[0, 1, 5, 12, 22, 35]  v2==predicted: True
+      m=0     margins v2 - log2 H, n=1..: +34 +65 +102 +145 +195 +252 +314 +384 +459 +541 +630 +724
+      m=n/phi margins v2 - log2 H, n=1..: +78 +127 +252 +331 +511 +722 +858 +1124 +1422 +1613 +1966 +2188
+   pentagonal k(3k+1)/2     P(0..5)=[0, 2, 7, 15, 26, 40]  v2==predicted: True
+      m=0     margins v2 - log2 H, n=1..: +50 +87 +130 +180 +236 +298 +367 +442 +524 +612 +706 +807
+      m=n/phi margins v2 - log2 H, n=1..: +91 +146 +272 +358 +540 +753 +895 +1163 +1463 +1660 +2015 +2244
+   2k^2+k                   P(0..5)=[0, 3, 10, 21, 36, 55]  v2==predicted: True
+      m=0     margins v2 - log2 H, n=1..: +72 +124 +183 +251 +328 +413 +507 +609 +720 +839 +967 +1104
+      m=n/phi margins v2 - log2 H, n=1..: +125 +200 +369 +486 +729 +1014 +1205 +1564 +1964 +2229 +2704 +3010
+
+-- map 5x+1, block 1^7 0^3: rho = 2^10/78125, mu_bar = 1.6253 (>= phi)
+   squares k^2              P(0..5)=[0, 1, 4, 9, 16, 25]  v2==predicted: True
+      m=0     margins v2 - log2 H, n=1..: +21 +27 +29 +25 +16 +2 -17 -40 -69 -103 -142 -186
+      m=n/phi margins v2 - log2 H, n=1..: +42 +56 +89 +100 +132 +162 +173 +203 +230 +241 +268 +277
+   triangular k(k+1)/2      P(0..5)=[0, 1, 3, 6, 10, 15]  v2==predicted: True
+      m=0     margins v2 - log2 H, n=1..: +17 +22 +25 +25 +22 +17 +10 -0 -13 -28 -45 -66
+      m=n/phi margins v2 - log2 H, n=1..: +25 +34 +49 +56 +71 +85 +92 +106 +118 +126 +138 +144
+   pentagonal k(3k-1)/2     P(0..5)=[0, 1, 5, 12, 22, 35]  v2==predicted: True
+      m=0     margins v2 - log2 H, n=1..: +25 +32 +32 +25 +10 -13 -43 -81 -126 -179 -239 -307
+      m=n/phi margins v2 - log2 H, n=1..: +60 +79 +129 +143 +193 +239 +254 +300 +342 +357 +399 +410
+   pentagonal k(3k+1)/2     P(0..5)=[0, 2, 7, 15, 26, 40]  v2==predicted: True
+      m=0     margins v2 - log2 H, n=1..: +39 +50 +54 +50 +38 +20 -7 -41 -82 -131 -188 -252
+      m=n/phi margins v2 - log2 H, n=1..: +67 +90 +137 +156 +203 +247 +265 +309 +348 +367 +406 +421
+   2k^2+k                   P(0..5)=[0, 3, 10, 21, 36, 55]  v2==predicted: True
+      m=0     margins v2 - log2 H, n=1..: +56 +72 +79 +75 +61 +37 +3 -41 -95 -159 -233 -317
+      m=n/phi margins v2 - log2 H, n=1..: +92 +124 +186 +212 +274 +331 +357 +415 +466 +492 +544 +565
+
+-- map 5x+1, block 1^8 0^2: rho = 2^10/390625, mu_bar = 1.8575 (>= phi)
+   squares k^2              P(0..5)=[0, 1, 4, 9, 16, 25]  v2==predicted: True
+      m=0     margins v2 - log2 H, n=1..: +14 +4 -20 -59 -112 -179 -260 -356 -466 -591 -730 -883
+      m=n/phi margins v2 - log2 H, n=1..: +29 +21 +3 -30 -86 -168 -238 -357 -501 -609 -790 -923
+   triangular k(k+1)/2      P(0..5)=[0, 1, 3, 6, 10, 15]  v2==predicted: True
+      m=0     margins v2 - log2 H, n=1..: +13 +9 -3 -22 -47 -80 -120 -167 -222 -283 -352 -428
+      m=n/phi margins v2 - log2 H, n=1..: +16 +13 -0 -16 -47 -92 -126 -189 -265 -318 -412 -478
+   pentagonal k(3k-1)/2     P(0..5)=[0, 1, 5, 12, 22, 35]  v2==predicted: True
+      m=0     margins v2 - log2 H, n=1..: +16 -0 -37 -96 -176 -278 -401 -545 -711 -898 -1107 -1337
+      m=n/phi margins v2 - log2 H, n=1..: +41 +30 +5 -45 -125 -244 -350 -524 -738 -899 -1168 -1369
+   pentagonal k(3k+1)/2     P(0..5)=[0, 2, 7, 15, 26, 40]  v2==predicted: True
+      m=0     margins v2 - log2 H, n=1..: +27 +13 -23 -80 -159 -259 -381 -524 -688 -874 -1082 -1310
+      m=n/phi margins v2 - log2 H, n=1..: +44 +34 +3 -46 -133 -259 -364 -546 -766 -927 -1203 -1402
+   2k^2+k                   P(0..5)=[0, 3, 10, 21, 36, 55]  v2==predicted: True
+      m=0     margins v2 - log2 H, n=1..: +40 +21 -26 -102 -206 -339 -501 -691 -910 -1157 -1433 -1738
+      m=n/phi margins v2 - log2 H, n=1..: +60 +47 +3 -62 -181 -351 -490 -735 -1031 -1244 -1615 -1880
+
+==============================================================================
+L3b Theorem Q forms just above phi: squares, 5x+1 block 1^7 0^3 (mu_bar = 1.6253), larger n
+==============================================================================
+   best margin over m in [n/phi-2, n/phi+2]:  n=4: +125 (m=4); n=8: +214 (m=6); n=12: +297 (m=9); n=16: +370 (m=11); n=20: +434 (m=14); n=24: +492 (m=16); n=28: +540 (m=18); n=32: +580 (m=21); n=36: +612 (m=23); n=40: +634 (m=26)
+   leading coefficient (alpha L n^2) * [(x^2+4x+3) - mu_bar (x^2+2x+2)] at x = 1/phi: -0.02647 < 0:
+   the margins are eventually negative, but only after the O(n) terms are overtaken.
+
+==============================================================================
+L4  cubic analogue of the Zudilin construction (exact, tiny n)
+==============================================================================
+R(t) = sum_s c_s rho^(3ts(t+s)) vanishing at t = 0..n-1 (c = kernel of the n x (n+1) matrix);
+Lambda = sum_s c_s rho^(-s^3) (X - S_(s-1)) = p X - r = sum_{t>=n} R(t) rho^(t^3).
+ n | v2(P X - R) | log2 max(|P|,|R|) | exponent v2/log2H | (Liouville K=n: v2/log2H)
+ 1 |          20 |              14.3 |            1.4021 | 5.5796
+ 2 |         220 |             285.4 |            0.7709 | 2.3645
+ 3 |         840 |            1654.9 |            0.5076 | 1.6614
+ 4 |        2120 |            5007.0 |            0.4234 | 1.3691
+ 5 |        4300 |           11352.0 |            0.3788 | 1.2113
+ 6 |        7620 |           23160.8 |            0.3290 | 1.1132
+The kernel coefficients c_s carry the full tropical spread of rho^(3ts(t+s)); the construction
+is worse than the partial sums at every n (no q-binomial cancellation exists for f(t,s) = ts(t+s)).
+
+==============================================================================
+L5  threshold map
+==============================================================================
+Square-swap words (Theorem Y / Q) need mu_bar = A log2 m / L < phi = 1.6180.
+  3x+1: supercritical iff A/L > 0.6309; Lemma P covers A/L < 1.0000  (all supercritical blocks covered)
+  5x+1: supercritical iff A/L > 0.4307; Lemma P covers A/L < 0.6968
+  7x+1: supercritical iff A/L > 0.3562; Lemma P covers A/L < 0.5764
+  9x+1: supercritical iff A/L > 0.3155; Lemma P covers A/L < 0.5104
+
+Cheapest open square-swap instances (mu_bar in [phi, phi+0.01), L <= 40):
+   5x+1: A = 23 ones in L = 33: mu_bar = 1.61831  (phi + 0.00028)
+   5x+1: A =  7 ones in L = 10: mu_bar = 1.62535  (phi + 0.00732)
+   7x+1: A = 15 ones in L = 26: mu_bar = 1.61963  (phi + 0.00159)
+   7x+1: A = 11 ones in L = 19: mu_bar = 1.62531  (phi + 0.00728)
+   e.g. 5x+1 with block 1^7 0^3 has mu_bar = 1.62535 (checked in L3: margins turn negative).
+
+Cube-swap words: every supercritical block has mu_bar > 1, and every method on record needs mu_bar <= 1.
+Nearest-to-critical supercritical 3x+1 blocks (L <= 60), mu_bar - 1:
+   A = 12, L = 19: mu_bar = 1 + 0.001029
+   A = 24, L = 38: mu_bar = 1 + 0.001029
+   A = 36, L = 57: mu_bar = 1 + 0.001029
+   A = 31, L = 49: mu_bar = 1 + 0.002731
+   A = 19, L = 30: mu_bar = 1 + 0.003810
+   A = 38, L = 60: mu_bar = 1 + 0.003810
+
+==============================================================================
+L6  near-critical cube swap: reach of the partial-sum certificates
+==============================================================================
+  A=12, L=19: mu_bar = 1.001029; max_K gain = 7.189e+07 bits at K = 1944 (every gain < 0 beyond K ~ 2916)
+  A=9, L=10: mu_bar = 1.426466; max_K gain = 374.3 bits at K = 5 (every gain < 0 beyond K ~ 7)
+  So near-critical cube-swap numbers have huge FINITE certificates (no rational of height
+  <= 2^(max gain)) from their partial sums alone, yet no proof: the gain is eventually negative.
+  exact (A=12, L=19): K=1: v2=152 (pred 152), gain=132.0; K=2: v2=513 (pred 513), gain=359.3; K=3: v2=1216 (pred 1216), gain=700.6; K=4: v2=2375 (pred 2375), gain=1155.7; K=5: v2=4104 (pred 4104), gain=1724.5; K=6: v2=6517 (pred 6517), gain=2406.7; K=7: v2=9728 (pred 9728), gain=3202.2; K=8: v2=13851 (pred 13851), gain=4110.9; K=9: v2=19000 (pred 19000), gain=5132.7
+
+==============================================================================
+L7  repetition profile of swap words at block level: squares, floor(k^(3/2)), cubes
+==============================================================================
+LPF(j) = max_{a<j} LCE(a,j) of the swap indicator (block level; letters = 10 x blocks up to O(1)).
+Two sources: (i) inside one gap (period 1 block): LPF >= distance to the next swap;
+(ii) runs of equal consecutive gaps (matched swap patterns), extended by one partial gap.
+Dio(w) - 1 = limsup LPF(j)/j; the table gives max LPF(j)/j over dyadic ranges of j.
+  square  (blocks < 4e+06): 2^6:0.246 2^7:0.166 2^8:0.125 2^9:0.087 2^10:0.062 2^11:0.043 2^12:0.031 2^13:0.022 2^14:0.016 2^15:0.011 2^16:0.008 2^17:0.006 2^18:0.004 2^19:0.003 2^20:0.002 2^21:0.001
+          fitted decay over the last dyadic ranges: LPF(j)/j ~ j^(-0.50)
+  k32     (blocks < 4e+06): 2^6:0.393 2^7:0.318 2^8:0.227 2^9:0.160 2^10:0.125 2^11:0.095 2^12:0.061 2^13:0.044 2^14:0.036 2^15:0.024 2^16:0.017 2^17:0.012 2^18:0.009 2^19:0.006 2^20:0.005 2^21:0.003
+          fitted decay over the last dyadic ranges: LPF(j)/j ~ j^(-0.48)
+  cube    (blocks < 4e+09): 2^6:0.923 2^7:0.581 2^8:0.488 2^9:0.421 2^10:0.297 2^11:0.248 2^12:0.199 2^13:0.150 2^14:0.120 2^15:0.097 2^16:0.075 2^17:0.060 2^18:0.048 2^19:0.037 2^20:0.030 2^21:0.024 2^22:0.019 2^23:0.015 2^24:0.012 2^25:0.009 2^26:0.007 2^27:0.006 2^28:0.005 2^29:0.004 2^30:0.003 2^31:0.002
+          fitted decay over the last dyadic ranges: LPF(j)/j ~ j^(-0.33)
+All three profiles decay to 0: Dio = 1 for each, so Theorem D reaches none of them;
+floor(k^(3/2)) is no easier than Y3 by this measure.
+
+[ledger done in 11.0s]
+collatz_procgen_20260923_cube_theta_lattice.py
+
+==============================================================================
+T1  rational reconstruction certificates for X = sum rho^(k^3), rho = 2^10/3^9
+==============================================================================
+[python] N = 100000: Lagrange-shortest (a,b) with a == bX mod 2^N: log2 max(|a|,|b|) = 49999.38 (N/2 = 50000); congruence holds: True  (0.2s)
+         Wang reconstruction (A = B = 2^(N/2-1)): NONE  => FINITE-EXACT: X is not a rational of height < 2^49999
+[pari] N = 100000: bestappr(Mod(X, 2^N)) -> NONE  (0.1s)
+        => FINITE-EXACT: X is not a rational a/b with |a|, |b| <= 2^49999 (PARI: unique reconstruction bound sqrt(N/2))
+[pari] N = 1000000: bestappr(Mod(X, 2^N)) -> NONE  (1.5s)
+        => FINITE-EXACT: X is not a rational a/b with |a|, |b| <= 2^499999 (PARI: unique reconstruction bound sqrt(N/2))
+[pari] N = 10000000: bestappr(Mod(X, 2^N)) -> NONE  (56.6s)
+        => FINITE-EXACT: X is not a rational a/b with |a|, |b| <= 2^4999999 (PARI: unique reconstruction bound sqrt(N/2))
+
+==============================================================================
+T2  2-adic approximation profile: h(N) = log2 of the shortest (a,b), ratio h/(N/2)
+==============================================================================
+grid: 195 values of N in [64, 20000] (geometric, ratio 1.03)
+ number                      | all N: min ratio (at N) | N >= 2000: min ratio (at N) | mean | #N>=2000 with ratio < 0.95
+ X (cubes, rho)              | 0.3676 (    78)        | 0.9985 (  3075)            | 0.9997 | 0
+ Theta_2(rho) (squares)      | 0.9449 (    64)        | 0.9980 (  3075)            | 0.9996 | 0
+ Y_1 = sum k rho^(k^3)       | 0.3522 (    81)        | 0.9980 (  2500)            | 0.9997 | 0
+ random 2-adic #1            | 0.9357 (   126)        | 0.9977 (  2221)            | 0.9997 | 0
+ random 2-adic #2            | 0.9316 (    88)        | 0.9957 (  2156)            | 0.9996 | 0
+ control sum 2^(3^k)         | 0.6667 (    81)        | 0.6743 ( 19797)            | 0.8784 | 46
+ control sum 2^(k^3)         | 0.8438 (    64)        | 0.9972 (  2221)            | 0.9996 | 0
+Small-N dips for X and Y_1 are the partial sums S_K (N <= 10(K+1)^3, height 14.26 K^3 bits),
+which beat the Dirichlet scale only for K <= 3; beyond N ~ 2000 nothing dips.
+Reading: ratio < 1 by a fixed factor on a sequence of N = an approximation beating Dirichlet
+(irrationality exponent > 2). The lacunary controls show the detector works: sum 2^(3^k) dips
+to 2/3 at N = 3^(k+1) (Hadamard gaps) and the unit cubic control sum 2^(k^3) dips only by
+O(1/k) (its partial sums have exponent (k+1)^3/k^3).
+
+==============================================================================
+T3  LLL relation hunts (Dirichlet baseline: shortest relation vector ~ 2^(N/m))
+==============================================================================
+-- N = 20000 bits (checked at 2^40000) --
+ 1, X, X^2, X^3 (degree <= 3)       | m= 4 | log2|c|max =    4998.6 | N/m =   5000.0 | ratio 0.9997 | tau/m = 1.0003 | v2 at 2^40000: 20005 | no exact relation with |c|_2 < 2^4999.0  [0.1s]
+ 1, X, ..., X^6 (degree <= 6)       | m= 7 | log2|c|max =    2856.4 | N/m =   2857.1 | ratio 0.9997 | tau/m = 1.0003 | v2 at 2^40000: 20000 | no exact relation with |c|_2 < 2^2857.0  [0.7s]
+ 1, X, Y1, Y2 (G and u-derivs at (1,1)) | m= 4 | log2|c|max =    4999.2 | N/m =   5000.0 | ratio 0.9998 | tau/m = 1.0002 | v2 at 2^40000: 20000 | no exact relation with |c|_2 < 2^4999.7  [0.1s]
+ 1, X, Y1, Y2, Y3, Y4               | m= 6 | log2|c|max =    3332.3 | N/m =   3333.3 | ratio 0.9997 | tau/m = 1.0003 | v2 at 2^40000: 20001 | no exact relation with |c|_2 < 2^3333.0  [0.4s]
+ 1, X, Theta2, X*Theta2             | m= 4 | log2|c|max =    4999.5 | N/m =   5000.0 | ratio 0.9999 | tau/m = 1.0001 | v2 at 2^40000: 20001 | no exact relation with |c|_2 < 2^4999.8  [0.1s]
+ 1, X, G(rho,1), G(1,rho), G(rho,rho) | m= 5 | log2|c|max =    3999.1 | N/m =   4000.0 | ratio 0.9998 | tau/m = 1.0002 | v2 at 2^40000: 20001 | no exact relation with |c|_2 < 2^3999.6  [0.3s]
+ 1, X, X^2, Y1, X*Y1, Y1^2          | m= 6 | log2|c|max =    3332.7 | N/m =   3333.3 | ratio 0.9998 | tau/m = 1.0002 | v2 at 2^40000: 20000 | no exact relation with |c|_2 < 2^3333.3  [0.4s]
+ CONTROL random: 1, r, r^2, r^3     | m= 4 | log2|c|max =    4999.7 | N/m =   5000.0 | ratio 0.9999 | tau/m = 1.0001 | v2 at 2^40000: 20006 | no exact relation with |c|_2 < 2^5000.0  [0.1s]
+ CONTROL random: 1, r1, r2, r3      | m= 4 | log2|c|max =    4999.0 | N/m =   5000.0 | ratio 0.9998 | tau/m = 1.0002 | v2 at 2^40000: 20001 | no exact relation with |c|_2 < 2^4999.6  [0.1s]
+ CONTROL algebraic: 1, c, c^2, c^3  | m= 4 | log2|c|max =       4.1 | N/m =   5000.0 | ratio 0.0008 | tau/m = 1223.2527 | v2 at 2^40000: EXACT | no exact relation with |c|_2 < 2^4.1  [0.1s]
+-- N = 40000 bits (checked at 2^80000) --
+ 1, X, X^2, X^3 (degree <= 3)       | m= 4 | log2|c|max =    9998.6 | N/m =  10000.0 | ratio 0.9999 | tau/m = 1.0001 | v2 at 2^80000: 40001 | no exact relation with |c|_2 < 2^9999.3  [0.5s]
+ 1, X, ..., X^6 (degree <= 6)       | m= 7 | log2|c|max =    5713.6 | N/m =   5714.3 | ratio 0.9999 | tau/m = 1.0001 | v2 at 2^80000: 40001 | no exact relation with |c|_2 < 2^5714.1  [2.6s]
+ 1, X, Y1, Y2 (G and u-derivs at (1,1)) | m= 4 | log2|c|max =    9999.3 | N/m =  10000.0 | ratio 0.9999 | tau/m = 1.0001 | v2 at 2^80000: 40000 | no exact relation with |c|_2 < 2^9999.8  [0.5s]
+ 1, X, Y1, Y2, Y3, Y4               | m= 6 | log2|c|max =    6665.5 | N/m =   6666.7 | ratio 0.9998 | tau/m = 1.0002 | v2 at 2^80000: 40002 | no exact relation with |c|_2 < 2^6666.2  [1.6s]
+ 1, X, Theta2, X*Theta2             | m= 4 | log2|c|max =    9999.1 | N/m =  10000.0 | ratio 0.9999 | tau/m = 1.0001 | v2 at 2^80000: 40000 | no exact relation with |c|_2 < 2^9999.4  [0.5s]
+ 1, X, G(rho,1), G(1,rho), G(rho,rho) | m= 5 | log2|c|max =    7999.1 | N/m =   8000.0 | ratio 0.9999 | tau/m = 1.0001 | v2 at 2^80000: 40000 | no exact relation with |c|_2 < 2^7999.8  [0.9s]
+ 1, X, X^2, Y1, X*Y1, Y1^2          | m= 6 | log2|c|max =    6666.0 | N/m =   6666.7 | ratio 0.9999 | tau/m = 1.0001 | v2 at 2^80000: 40005 | no exact relation with |c|_2 < 2^6666.5  [1.6s]
+ CONTROL random: 1, r, r^2, r^3     | m= 4 | log2|c|max =    9998.9 | N/m =  10000.0 | ratio 0.9999 | tau/m = 1.0001 | v2 at 2^80000: 40001 | no exact relation with |c|_2 < 2^9999.6  [0.5s]
+ CONTROL random: 1, r1, r2, r3      | m= 4 | log2|c|max =    9999.5 | N/m =  10000.0 | ratio 1.0000 | tau/m = 1.0000 | v2 at 2^80000: 40000 | no exact relation with |c|_2 < 2^9999.9  [0.5s]
+ CONTROL algebraic: 1, c, c^2, c^3  | m= 4 | log2|c|max =       4.1 | N/m =  10000.0 | ratio 0.0004 | tau/m = 2446.5054 | v2 at 2^80000: EXACT | no exact relation with |c|_2 < 2^4.1  [0.2s]
+Reading: ratio ~ 1 (tau/m ~ 1) is the Dirichlet/pigeonhole baseline for a generic vector;
+a relation would show ratio << 1 and survive the check at double precision (EXACT).
+
+[lattice done in 71.3s]
+collatz_procgen_20260923_cube_theta_pade.py
+
+==============================================================================
+P1  Hankel determinants H_n = det(c_{i+j})_{i,j<n}: cubes, squares, random controls
+==============================================================================
+bits(H_n) [v2(H_n)]; last column of each row = bits/(n log2 n)
+   n  |              cubes |     rand~cubes s=1 |     rand~cubes s=2 |            squares |   rand~squares s=1 |   rand~squares s=2 |       floor(k^1.5) |  rand~floor(k^1.5) 
+   50 |      0 [None] 0.0000 |      1 [   0] 0.0035 |      0 [None] 0.0000 |      6 [   3] 0.0213 |     13 [   2] 0.0461 |     18 [   0] 0.0638 |     16 [   2] 0.0567 |     42 [   0] 0.1488 
+  100 |      1 [   0] 0.0015 |      0 [None] 0.0000 |      0 [None] 0.0000 |     23 [   3] 0.0346 |     77 [   0] 0.1159 |     69 [   2] 0.1039 |     66 [   0] 0.0993 |    126 [   0] 0.1896 
+  200 |     17 [   3] 0.0111 |      1 [   0] 0.0007 |      8 [   0] 0.0052 |     46 [   0] 0.0301 |    186 [   5] 0.1217 |    167 [   4] 0.1092 |    198 [   3] 0.1295 |    329 [   0] 0.2152 
+  300 |     45 [   4] 0.0182 |     21 [  16] 0.0085 |     64 [   0] 0.0259 |     80 [   0] 0.0324 |    316 [   0] 0.1280 |    292 [   1] 0.1183 |    398 [   2] 0.1612 |    538 [   5] 0.2179 
+  400 |     68 [   2] 0.0197 |     15 [   0] 0.0043 |     72 [   0] 0.0208 |    116 [   1] 0.0335 |    472 [   0] 0.1365 |    458 [   6] 0.1325 |    589 [   2] 0.1704 |    768 [   0] 0.2221 
+  600 |    158 [   0] 0.0285 |    182 [   0] 0.0329 |    157 [   0] 0.0284 |    189 [   1] 0.0341 |    779 [   1] 0.1407 |    783 [   0] 0.1414 |    996 [   0] 0.1799 |   1281 [   1] 0.2313 
+  800 |    275 [   1] 0.0356 |    324 [   1] 0.0420 |    319 [   3] 0.0413 |    262 [   0] 0.0340 |   1075 [   0] 0.1393 |   1120 [   1] 0.1452 |   1434 [   4] 0.1859 |   1801 [   0] 0.2334 
+ 1000 |    451 [   0] 0.0453 |    474 [   0] 0.0476 |    434 [   0] 0.0435 |    361 [   3] 0.0362 |   1411 [   1] 0.1416 |   1466 [   7] 0.1471 |   1930 [   1] 0.1937 |   2375 [   0] 0.2383 
+ 1400 |    665 [   0] 0.0454 |    729 [   0] 0.0498 |    743 [   0] 0.0508 |    505 [   1] 0.0345 |   2221 [   3] 0.1518 |   2193 [   3] 0.1499 |   3044 [   0] 0.2080 |   3509 [   0] 0.2398 
+
+  cubes vs same-counting-function random controls at n = 2000:
+   cubes            n=2000: bits(H_n) = 1063  (bits/(n log2 n) = 0.0485)
+   rand~cubes s=1   n=2000: bits(H_n) = 1172  (bits/(n log2 n) = 0.0534)
+   rand~cubes s=2   n=2000: bits(H_n) = 1035  (bits/(n log2 n) = 0.0472)
+
+zero determinants (Pade-table non-normality) among n = 1..300:
+   cubes             :  88 zeros (first: [3, 4, 5, 6, 10, 11, 12, 13, 14, 15]); odd H_n for 143/300
+   rand~cubes s=1    : 163 zeros (first: [4, 5, 6, 7, 8, 9, 10, 11, 12, 13]); odd H_n for 85/300
+   rand~cubes s=2    : 138 zeros (first: [2, 3, 4, 5, 6, 11, 12, 13, 14, 15]); odd H_n for 105/300
+   squares           :   3 zeros (first: [11, 13, 70]); odd H_n for 157/300
+   rand~squares s=1  :   7 zeros (first: [3, 4, 5, 6, 9, 25, 26]); odd H_n for 164/300
+   rand~squares s=2  :   1 zeros (first: [11]); odd H_n for 148/300
+   floor(k^1.5)      :  11 zeros (first: [2, 4, 6, 7, 8, 9, 10, 11, 12, 19]); odd H_n for 152/300
+   rand~floor(k^1.5) :   2 zeros (first: [4, 5]); odd H_n for 172/300
+
+Reading: the budget of a diagonal Pade certificate for Y3 is (2L - log2 M0) = 5.735 bits per
+unit of n; every column grows like kappa * n log2 n with kappa << 5.735/log2 n in range,
+so diagonal Pade certifies at every computed n, but n log n growth is asymptotically fatal.
+
+==============================================================================
+P2  diagonal Pade forms of Theta_3 at rho = 2^10/3^9 (the number of HYP-9127)
+==============================================================================
+  E = n, W = 2n+1 (Pade [n/n]); budget (2L - log2 M0) n = 5.735 n
+   n | nullity | log2 h | nnz(A) |  W'  | v2(r_W') | NP-nonvanish | v2(PX-Q) (=pred) | log2 H | margin | 5.735n
+   50 |       6 |    0.0 |      2 |   101 |        0 |         True |     1010 ( True) |     713 |    297 |    287   [0.0s]
+  100 |       1 |    0.0 |     12 |   201 |        0 |         True |     2010 ( True) |    1427 |    583 |    574   [0.0s]
+  150 |       1 |    0.0 |     34 |   301 |        0 |         True |     3010 ( True) |    2135 |    875 |    860   [0.0s]
+  200 |       1 |   12.3 |    184 |   401 |        0 |         True |     4010 ( True) |    2865 |   1145 |   1147   [0.0s]
+  300 |       1 |   46.6 |    301 |   601 |        0 |         True |     6010 ( True) |    4325 |   1685 |   1721   [0.0s]
+  400 |       1 |   67.2 |    401 |   801 |        2 |         True |     8012 ( True) |    5772 |   2240 |   2294   [0.1s]
+  600 |       1 |  155.7 |    601 |  1201 |        0 |         True |    12010 ( True) |    8713 |   3297 |   3441   [0.3s]
+  800 |       1 |  273.0 |    801 |  1601 |        0 |         True |    16010 ( True) |   11685 |   4325 |   4588   [0.6s]
+ 1000 |       1 |  451.4 |   1001 |  2001 |        3 |         True |    20013 ( True) |   14716 |   5297 |   5735   [1.0s]
+  Every row is a FINITE certificate: X is not a rational a/b with log2(|a|+|b|) < margin.
+
+==============================================================================
+P3  diagonal Pade forms of Theta_2 (squares) beyond Lemma P's threshold phi
+==============================================================================
+-- 5x+1 block 1^7 0^3: mu_bar = 1.6253 (phi = 1.6180); diagonal budget L(2-mu_bar) = 3.747 bits/n
+   n=  50: log2 h =    8.2, W' = 101, v2(r_W') = 0, NP-nonvanish = True, v2 = 1010 (pred 1010), margin = 191
+   n= 100: log2 h =   21.9, W' = 201, v2(r_W') = 3, NP-nonvanish = True, v2 = 2013 (pred 2013), margin = 368
+   n= 200: log2 h =   52.6, W' = 401, v2(r_W') = 3, NP-nonvanish = True, v2 = 4013 (pred 4013), margin = 724
+   n= 300: log2 h =   86.1, W' = 601, v2(r_W') = 1, NP-nonvanish = True, v2 = 6011 (pred 6011), margin = 1056
+   n= 400: log2 h =  122.7, W' = 801, v2(r_W') = 2, NP-nonvanish = True, v2 = 8012 (pred 8012), margin = 1397
+   n= 600: log2 h =  200.3, W' = 1201, v2(r_W') = 0, NP-nonvanish = True, v2 = 12010 (pred 12010), margin = 2071
+   n= 800: log2 h =  275.4, W' = 1601, v2(r_W') = 0, NP-nonvanish = True, v2 = 16010 (pred 16010), margin = 2747
+-- 5x+1 block 1^8 0^2: mu_bar = 1.8575 (phi = 1.6180); diagonal budget L(2-mu_bar) = 1.425 bits/n
+   n=  50: log2 h =    8.2, W' = 101, v2(r_W') = 0, NP-nonvanish = True, v2 = 1010 (pred 1010), margin = 75
+   n= 100: log2 h =   21.9, W' = 201, v2(r_W') = 3, NP-nonvanish = True, v2 = 2013 (pred 2013), margin = 136
+   n= 200: log2 h =   52.6, W' = 401, v2(r_W') = 3, NP-nonvanish = True, v2 = 4013 (pred 4013), margin = 258
+   n= 300: log2 h =   86.1, W' = 601, v2(r_W') = 1, NP-nonvanish = True, v2 = 6011 (pred 6011), margin = 359
+   n= 400: log2 h =  122.7, W' = 801, v2(r_W') = 2, NP-nonvanish = True, v2 = 8012 (pred 8012), margin = 468
+   n= 600: log2 h =  200.3, W' = 1201, v2(r_W') = 0, NP-nonvanish = True, v2 = 12010 (pred 12010), margin = 677
+   n= 800: log2 h =  275.4, W' = 1601, v2(r_W') = 0, NP-nonvanish = True, v2 = 16010 (pred 16010), margin = 889
+-- 7x+1 A=15,L=26: mu_bar = 1.6196 (phi = 1.6180); diagonal budget L(2-mu_bar) = 9.890 bits/n
+   n=  50: log2 h =    8.2, W' = 101, v2(r_W') = 0, NP-nonvanish = True, v2 = 2626 (pred 2626), margin = 514
+   n= 100: log2 h =   21.9, W' = 201, v2(r_W') = 3, NP-nonvanish = True, v2 = 5229 (pred 5229), margin = 999
+   n= 200: log2 h =   52.6, W' = 401, v2(r_W') = 3, NP-nonvanish = True, v2 = 10429 (pred 10429), margin = 1967
+   n= 300: log2 h =   86.1, W' = 601, v2(r_W') = 1, NP-nonvanish = True, v2 = 15627 (pred 15627), margin = 2915
+   n= 400: log2 h =  122.7, W' = 801, v2(r_W') = 2, NP-nonvanish = True, v2 = 20828 (pred 20828), margin = 3870
+   n= 600: log2 h =  200.3, W' = 1201, v2(r_W') = 0, NP-nonvanish = True, v2 = 31226 (pred 31226), margin = 5773
+   n= 800: log2 h =  275.4, W' = 1601, v2(r_W') = 0, NP-nonvanish = True, v2 = 41626 (pred 41626), margin = 7677
+  Lemma P (Zudilin forms) has NEGATIVE asymptotic margin at these maps (ledger L3); the
+  diagonal Pade forms still certify at every computed n. A proof would need their heights
+  to stay below L(2-mu_bar) n for all n: the Hankel data (P1) grow like n log n instead.
+
+==============================================================================
+P4  sub-diagonal (Siegel) forms: LLL-short vectors of the kernel lattice, W = w E
+==============================================================================
+   E |   w  | dim ker | log2 h | W' - W | v2(r_W') | NP-nonvanish | margin | (Lw - log2 M0) E
+  40 | 1.50 |      22 |   0.00 |      4 |        0 |         True |     69 |      29
+  40 | 1.75 |      12 |   0.00 |      0 |        0 |         True |    155 |     129
+  40 | 1.90 |       6 |   0.00 |      0 |        0 |         True |    241 |     189
+  80 | 1.50 |      42 |   0.00 |      5 |        0 |         True |    109 |      59
+  80 | 1.75 |      22 |   0.00 |      0 |        0 |         True |    323 |     259
+  80 | 1.90 |      10 |   0.00 |      0 |        0 |         True |    392 |     379
+ 120 | 1.50 |      62 |   0.00 |      0 |        0 |         True |    323 |      88
+ 120 | 1.75 |      32 |   0.00 |      0 |        0 |         True |    491 |     388
+ 120 | 1.90 |      14 |   0.00 |      0 |        0 |         True |    619 |     568
+ 200 | 1.50 |     102 |   0.00 |      7 |        0 |         True |    217 |     147
+ 200 | 1.75 |      52 |   0.00 |      0 |        0 |         True |    830 |     647
+ 200 | 1.90 |      22 |   0.00 |      0 |        0 |         True |    951 |     947
+ 300 | 1.50 |     152 |   0.00 |     20 |        0 |         True |    421 |     221
+ 300 | 1.75 |      77 |   0.00 |      0 |        0 |         True |   1026 |     971
+ 300 | 1.90 |      32 |   7.01 |      0 |        0 |         True |   1415 |    1421
+  Siegel forms have tiny heights; what is missing for a proof is a guarantee that some short
+  kernel vector has v2(r_W') < L = 10 (a 2-adic zero estimate), for infinitely many E.
+
+[pade done in 243.8s]
