@@ -21,6 +21,13 @@ Althöfer's game remain OPEN.**
   digits. It is not Erdős's top-digit problem.
 * **Foundry v4:** every all-orbits target in the family has the same
   single missing mechanism.
+* **Wave 4 (HARD class):**
+  * Theorem D (PROVED; audited): periodic approximants reach exactly the
+    words with `Dio > eta`.
+  * Theorem Y (PROVED; audited): a zero-entropy word with `Dio = 1`
+    falls to a 2-adic Tschakaloff–Padé argument.
+  * The smallest open instance is the explicit cube-swap word `Y3`,
+    whose Bernstein number is a cubic 2-adic theta value (HYP-9127).
 
 ## 0. What was asked and how it was answered
 
@@ -289,8 +296,34 @@ the divergence half of Collatz, and the sign enters exactly as the sign of
   * **Census points above `3/2`.** The four undecided census points above
     `3/2` all descend, by the mirror lane's certificates, replayed
     independently by the orchestrator.
+* **HARD class, wave 4** ([note](collatz_procgen_20260922_hard_class.md); audited).
+  * **Theorem D.** `Phi_T(w)` is irrational whenever the Adamczewski–Bugeaud
+    Diophantine exponent exceeds the height rate: `Dio(w) > eta(w)`.
+    Bugeaud–Kim's `Dio >= 2.50994` for every Sturmian and quasi-Sturmian
+    word then covers every map with `eta < 2.50994`, **including every
+    slope of `5x+1`**. The threshold is sharp for the method: an extremal
+    word under `19x+1` escapes it.
+  * **Theorem Y.** The square-swap word `Y` is explicit, supercritical
+    (`beta = 9/10`), of zero entropy and of width 1, and has `Dio(Y) = 1`,
+    so Theorem D does not apply. Its Bernstein number is
+    `-1 - 512/(3^9-2^10) - (256/3^9) sum_k rho^(k^2)` with
+    `rho = 2^10/3^9`, a 2-adic theta value. A 2-adic transcription of
+    Zudilin's Tschakaloff–Padé construction proves it irrational: no
+    rational has an eventually square-swap parity vector under any
+    `3x+r` map.
+  * **The smallest open instance** is the cube-swap word `Y3`, whose
+    Bernstein number is `sum rho^(k^3)`, a cubic theta value (HYP-9127).
+    Both mechanisms fail on it: `Dio = 1`, and there is no first-order
+    q-difference equation.
+  * **C2** (HYP-9123) is equivalent, for integers, to a *coupled* Z-number
+    statement: no `L != 0` and strip word `w` with
+    `frac(L 3^(a_s)/2^s) = frac(E_s(w))` for all `s`. It is PROVED on strip
+    words with `Dio > mu` and on square-swap words.
+  * **Correction to foundry v4.** HARD is not "positive entropy". It is
+    "`Dio <= eta` and no functional equation behind the word". The foundry
+    requirement is renamed accordingly.
 * **Foundry v4** ([note](collatz_procgen_20260922_foundry.md), section 3b).
-  * It adds the structural requirements ENTROPY and CHAIN. In the
+  * It adds the structural requirements HARD (first called ENTROPY; refined in wave 4) and CHAIN. In the
     relaxation both base points cost more than 1 to escape, so the
     hostile chains are again a no-divergence problem, for a Collatz-type
     map with memory.
@@ -330,11 +363,14 @@ the divergence half of Collatz, and the sign enters exactly as the sign of
 | 22 | functional equations (Berg--Meinardus) | DEFECT | none | typed only |
 | 23 | measure rigidity (`x2 x3`) | DEFECT, INTEGRAL | none | blocked |
 | 24 | E-cycle covering (Le--Smith Conj. 1, 2) | relaxation / cycle half | our verifications | Conj. 1 holds below `10^18`; Conj. 2 is equivalent to no positive Collatz cycle |
-| 25 | periodic-approximant Liouville (Theorem R) | ENTROPY-blind, DRIFT-blind | Sturmian test, audit | **Theorem S PROVED** (no rational has an eventually Sturmian parity vector, `3x+r`, all slopes) |
-| 26 | capacity plus ordered carry (bounded critical discrepancy) | ENTROPY-blind (critical slope only) | inherited, Prop B | PROVED for positive integers (in-house) and rationals (Prop B, via an in-house sketch) |
+| 25 | periodic-approximant Liouville (Theorem R) | HARD-blind (reaches `Dio > eta` only), DRIFT-blind | Sturmian test, audit | **Theorem S PROVED** (no rational has an eventually Sturmian parity vector, `3x+r`, all slopes) |
+| 26 | capacity plus ordered carry (bounded critical discrepancy) | HARD-blind (critical slope only) | inherited, Prop B | PROVED for positive integers (in-house) and rationals (Prop B, via an in-house sketch) |
 | 27 | Q1 mirror: loops through `-1`, exit prices | relaxation, Q1 | mirror lane | exit costs `3^eta > 1` (PROVED); mirror of HYP-9122 to `K = 4000`; endgame = low binary digits of `3^A u` |
 | 28 | forward-backward word duality | — | mirror lane | REFUTED (straddle identity PROVED; Gelfond–Schneider lemma) |
-| 29 | supercritical strips (C2) | the smallest HARD instance | wave-4 lane | OPEN |
+| 29 | supercritical strips (C2) | a HARD instance (HYP-9123) | wave-4 lane | OPEN; equivalent to a coupled Z-number statement; PROVED on `Dio > mu` and on square-swap words |
+| 30 | Diophantine-exponent criterion (Theorem D) | reaches `Dio > eta` only | HARD lane | PROVED: Sturmian and quasi-Sturmian words for every map with `eta < 2.50994` (all slopes of `5x+1`) |
+| 31 | q-series Padé (2-adic Tschakaloff) | needs a q-difference equation | HARD lane | **Theorem Y PROVED** (square-swap words, `Dio = 1`, zero entropy) |
+| 32 | cubic 2-adic theta values | the smallest open instance | HARD lane | the cube-swap word `Y3`: OPEN (HYP-9127) |
 
 ## 3. The snippet, dispatched
 
@@ -407,6 +443,16 @@ S596 two-block question).
    third). What is missing is a mechanism for **supercritical,
    positive-entropy, non-repetitive** words: the HARD class, whose
    smallest open instance is C2.
+   **Refined by wave 4.**
+   * Entropy is not the dividing line. Periodic approximants reach
+     exactly `Dio > eta` (Theorem D).
+   * The zero-entropy square-swap word (`Dio = 1`) falls to a Padé
+     argument from a q-difference equation (Theorem Y).
+   * The first word we could not settle is the cube-swap word `Y3`,
+     whose Bernstein number is a cubic 2-adic theta value (HYP-9127).
+   * So the missing mechanism must handle words with `Dio <= eta` and no
+     functional equation behind them. The simplest test case is a single
+     explicit 2-adic number.
 2. **Both halves of the relaxed problem end in low `p`-adic digits, and
    the relaxation renormalizes rather than removes the difficulty.**
    * Q2's hostile chains are governed by `v_3(2^K w - h)`, via the kappa
@@ -499,8 +545,11 @@ the trunk `(4^i-1)/3` is the exit set of the hardest relaxed obstruction.
 5. The divergence half of Collatz: the four-property job description above.
    **Wave 3 names it:** Lagarias's Periodicity Conjecture on the positive
    integers (T1, Bernstein 1994). It is proved on SUB, BCD and STURM
-   (section 2c). The next target is C2, bounded discrepancy around a
-   supercritical slope, which the wave-4 HARD-class lane is attacking.
+   (section 2c), and by Theorem D and Theorem Y also on every
+   `Dio > eta` word and on the square-swap words. The open targets are C2
+   (HYP-9123, a coupled Z-number problem) and, smallest of all, the
+   cube-swap word `Y3` (HYP-9127): is
+   `sum_(k>=1) (2^10/3^9)^(k^3)` irrational in `Q_2`?
    The corrected foundry leaves exactly two unblocked mechanism types:
    sound certificate searches, and transversality with a Diophantine
    input. The concrete transversality target (a restatement, Bernstein's

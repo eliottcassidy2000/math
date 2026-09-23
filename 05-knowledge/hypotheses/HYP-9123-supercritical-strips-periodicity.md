@@ -33,6 +33,14 @@ Conjecture, both E-SCC halves, Mahler and Erdős. Among the HARD words, the
 bounded-discrepancy ones around a fixed supercritical slope are the most
 regular that still have positive entropy (strip width `>= 1`).
 
-**Related.** A wave-4 lane (`collatz_procgen_20260922_hard_class.md`, when
-written) analyses this statement. In particular it looks for a reduction
-to a Mahler-type fractional-parts statement for `L*3^(a_s)/2^s`.
+**Wave-4 update ([HARD-class lane](../results/collatz_procgen_20260922_hard_class.md), audited).**
+* For integers, C2 is **equivalent** to a *coupled* Z-number statement:
+  no `L != 0` and strip word `w` with
+  `frac(L 3^(a_s)/2^s) = frac(E_s(w))` for all `s`, where
+  `E_s = -Phi_R(tail) > 0` (Proposition M). The decoupled Mahler relaxation
+  implies C2, but it is vacuous for wide strips.
+* C2 is PROVED on every strip word with `Dio > mu` (Theorem D) and on the
+  square-swap words (Theorem Y).
+* Random strip words have `Dio = 1` almost surely.
+* "Smallest instance" is superseded: a single explicit zero-entropy word
+  (HYP-9127) is already open.

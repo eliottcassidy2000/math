@@ -16,11 +16,15 @@ Probes:   automated computations attached to mechanisms (exceptional-set counts,
 A card is not a claim.  Rationales for every blindness assignment are printed with --explain.
 
 v4 (wave 3, 2026-09-23): two structural requirements were added from the wave-3 lanes.
-  ENTROPY  a no-divergence target must exclude the HARD class of parity words (supercritical,
-           positive entropy, no strong repetitions).  Every proved every-orbit mechanism reaches
-           only subcritical words (Monks-Yazinski), bounded critical discrepancy (in-house
-           capacity theorem) or zero-entropy words (Theorem S, periodic-approximant Liouville);
-           see collatz_procgen_20260922_transversality_foundry.md.
+  HARD     a no-divergence target must exclude the HARD parity words.  Wave 4 refined the
+           definition: HARD means Dio(w) <= eta(w) (no strong early repetitions relative to the
+           map's height rate) AND no functional equation behind the word.  "Positive entropy" was
+           the first description; it is REFUTED, since the zero-entropy cube-swap word Y3 is HARD.
+           Every proved every-orbit mechanism reaches only subcritical words (Monks-Yazinski),
+           bounded critical discrepancy (in-house capacity theorem), Dio > eta words
+           (Theorem D / Theorem S, periodic approximants) or q-difference words (Theorem Y,
+           2-adic Tschakaloff-Pade); see collatz_procgen_20260922_transversality_foundry.md and
+           collatz_procgen_20260922_hard_class.md.
   CHAIN    in the E-relaxation every escape from a hostile base point costs more than 1
            (Q2 at 1/2: 2^eps in (1,2); Q1 at -1: 3^eta in (1,3)), so a see-saw must control chains of
            hostile landings, which form a Collatz-type map with memory (q1_mirror, q2_endgame).
@@ -44,7 +48,7 @@ CONTROLS = {
     "DEFECT": "planted density-zero modifications keep all density statistics but add a cycle/divergent orbit",
     "INTEGRAL": "every parity word has a rational 2-adic cycle (Z_(2) is full of cycles)",
     "UNIFORM": "generalized Collatz maps are undecidable (Conway; Kurtz-Simon): blocks only mechanisms claimed as COMPLETE uniform criteria (atlas correction)",
-    "ENTROPY": "(structural, v4) the target contains the HARD parity words: supercritical, positive entropy, no strong repetitions",
+    "HARD": "(structural, v4; refined wave 4) the target contains HARD parity words: Dio(w) <= eta(w) and no functional equation (e.g. the zero-entropy cube-swap word Y3)",
     "CHAIN": "(structural, v4) every base-point escape costs >1, so hostile landings chain; the chains form a Collatz-type map with memory",
     "DIRECTION": "(structural, v4) an existence target (exhibit one divergent orbit) cannot be served by an exclusion mechanism",
 }
@@ -62,35 +66,35 @@ class Problem:
 
 PROBLEMS = [
     Problem("collatz", "3n+1: every positive integer reaches 1",
-            {"no-divergence": {"DRIFT", "DEFECT", "UNIFORM", "ENTROPY"},
+            {"no-divergence": {"DRIFT", "DEFECT", "UNIFORM", "HARD"},
              "unique-cycle": {"INTEGRAL", "SHEET", "UNIFORM"},
              "finite-check": set()},
             0.9500, "OPEN", "exceptional set dim h(log_3 2) (choice ladder lane)"),
     Problem("e-scc", "graph E: every n reaches 1 and 1 reaches every non-multiple of 3",
-            {"Q1-forward": {"DEFECT", "CHAIN", "ENTROPY"}, "Q2-backward": {"DEFECT", "CHAIN", "ENTROPY"}},   # 5x+1 is not a valid control: E_5 relaxation also holds numerically
+            {"Q1-forward": {"DEFECT", "CHAIN", "HARD"}, "Q2-backward": {"DEFECT", "CHAIN", "HARD"}},   # 5x+1 is not a valid control: E_5 relaxation also holds numerically
             0.0, "OPEN (HYP-9120)", "thin exceptional sets (dimension OPEN, evidence 0); sheet-symmetric so SHEET not needed; both base points cost >1 to escape (v4)"),
     Problem("minus-sheet", "3n-1: the three known cycles are all",
-            {"no-divergence": {"DRIFT", "DEFECT", "UNIFORM", "ENTROPY"},
+            {"no-divergence": {"DRIFT", "DEFECT", "UNIFORM", "HARD"},
              "cycle-catalog": {"INTEGRAL", "UNIFORM"}},
             0.9500, "OPEN", "same exceptional set up to negation"),
     Problem("5n+1-divergence", "some orbit of 5n+1 is unbounded (e.g. 7)",
             {"one-divergent-orbit": {"INTEGRAL", "DEFECT", "DIRECTION"}},
             1.0, "OPEN", "positive-measure non-descending set; proving ONE orbit escapes is the dual problem"),
     Problem("e-scc-q2", "graph E backward half: 1 reaches every m prime to 3 (reduced to m=1,14 mod 27; verified < 7.87e17; endgame = LOW ternary digits of 2^K w via the kappa formula, not Erdos's top digits)",
-            {"hostile-1-and-1/2": {"DEFECT", "CHAIN", "ENTROPY"}}, 0.0, "OPEN (HYP-9120)", "escape price 2^eps in (1,2) at 1/2; chains w'=(2^(K+3)w-1)/3^j"),
+            {"hostile-1-and-1/2": {"DEFECT", "CHAIN", "HARD"}}, 0.0, "OPEN (HYP-9120)", "escape price 2^eps in (1,2) at 1/2; chains w'=(2^(K+3)w-1)/3^j"),
     Problem("e-scc-q1", "graph E forward half: every n reaches 1 (implied by Collatz; -1 thread; endgame = low binary digits of 3^A u)",
-            {"hostile-minus-1-thread": {"DEFECT", "CHAIN", "ENTROPY"}}, 0.0, "OPEN",
+            {"hostile-minus-1-thread": {"DEFECT", "CHAIN", "HARD"}}, 0.0, "OPEN",
             "escape price 3^eta in (1,3) at -1, rigid m=5..9 (q1_mirror); chains u'=(3^A u+1)/2^(m'+1); all n=7 mod 8 < 2^32 descend within 43 halvings"),
     Problem("althofer-game", "Althofer 3n+-1 two-player game: no drawn positions",
-            {"no-draws": {"DEFECT", "UNIFORM", "ENTROPY"}}, 0.0, "OPEN (prize 2037; claimed proof under review)", "sheet-choice game; one-player version trivial"),
+            {"no-draws": {"DEFECT", "UNIFORM", "HARD"}}, 0.0, "OPEN (prize 2037; claimed proof under review)", "sheet-choice game; one-player version trivial"),
     Problem("rational-periodicity", "Lagarias's Periodicity Conjecture (1985 s2.8): every rational with odd denominator has an eventually periodic 3x+1 parity vector",
-            {"no-divergence-all-b": {"DRIFT", "DEFECT", "UNIFORM", "ENTROPY"}}, 0.9500, "OPEN",
+            {"no-divergence-all-b": {"DRIFT", "DEFECT", "UNIFORM", "HARD"}}, 0.9500, "OPEN",
             "equivalent to no divergence for every 3x+k (Bernstein-Lagarias 1996); PROVED on SUB, BCD (Prop B), STURM (Theorem S)"),
     Problem("mahler-z", "Mahler: no Z-number (xi>0, frac(xi (3/2)^n) < 1/2 for all n)",
-            {"no-safe-integer-code": {"DEFECT", "UNIFORM", "ENTROPY"}}, 0.585, "OPEN",
+            {"no-safe-integer-code": {"DEFECT", "UNIFORM", "HARD"}}, 0.585, "OPEN",
             "safe-tail shift dim log_2(3/2) (THM-3848); Sturmian carry words excluded (Theorem S); drift control 5/2 PROVED (Tijdeman)"),
     Problem("erdos-ternary", "Erdos: 2^n has a ternary digit 2 for n>8",
-            {"transversal-avoidance": {"DEFECT", "UNIFORM", "ENTROPY"}}, 0.6309, "OPEN",
+            {"transversal-avoidance": {"DEFECT", "UNIFORM", "HARD"}}, 0.6309, "OPEN",
             "Cantor set of {0,1}-digit 3-adics, dim log_3 2 (Lagarias 2009 partial); needs the TOP digits: every 3-adic-window form is FALSE (transversality lane B1, B2)"),
 ]
 
@@ -141,23 +145,28 @@ MECHANISMS = [
               complete=True, source="Lagarias 1985; Bernstein 1994"),
     Mechanism("finite-state-periodicity", "eventual periodicity forced by finiteness (bounded orbits, finite fields, F2[x])",
               {"SHEET": "bounded orbits on both sheets are periodic",
-               "ENTROPY": "(v4) applies only to bounded orbits; growing orbits or chains are out of reach",
+               "HARD": "(v4) applies only to bounded orbits; growing orbits or chains are out of reach",
                "DIRECTION": "exclusion only"}, requires_thin=True,
               source="Hicks-Mullen-Yucas-Zavislak 2008"),
     Mechanism("transversality-proved", "the PROVED every-element 2-vs-3 theorems (Senge-Straus, Stewart, Yu, Ren-Roettger, Knight, Theorem S)",
-              {"ENTROPY": "each excludes only a zero-entropy class: few digits, bounded p-adic closeness, end runs, balanced words (transversality lane catalogue)",
+              {"HARD": "each excludes only a structured class: few digits, bounded p-adic closeness, end runs, balanced or Dio>eta words (transversality lane catalogue)",
                "DRIFT": "uniform over multiplicatively independent pairs (Theorem S holds for 5x+1 at alpha<0.804)",
                "DIRECTION": "exclusion only"},
               source="transversality lane catalogue (35 items)"),
     Mechanism("transversality-hard", "2-adic non-integrality / irrationality of Bernstein numbers on the HARD word class",
               {}, placeholder=True, source="no instance known: the missing mechanism (transversality lane, candidate C2 first)"),
     Mechanism("periodic-approximant-liouville", "Theorem R: periodic-extension approximants + the 2-adic gap (Calegari's criterion with Pade replaced)",
-              {"ENTROPY": "needs long early repetitions: reaches Sturmian/stammering (zero-entropy) words only",
+              {"HARD": "reaches exactly the words with Dio(w) > eta(w) (Theorem D); HARD words have Dio <= eta",
                "DRIFT": "Theorem S holds for 5x+1 at alpha<0.804 and for Mahler's map",
                "SHEET": "holds for every 3x+r", "DIRECTION": "exclusion only"},
               source="transversality lane, Theorem R/S (audited 2026-09-23)"),
+    Mechanism("q-series-pade", "Pade approximants from a q-difference equation (2-adic Tschakaloff; Theorem Y)",
+              {"HARD": "needs a functional equation behind the word (square-swap words); cube-swap Y3 has none",
+               "DRIFT": "Lemma P holds whenever mu_bar < phi, including some 5x+1 block words",
+               "DIRECTION": "exclusion only"},
+              source="HARD-class lane, Theorem Y (audited 2026-09-23)"),
     Mechanism("capacity-discrepancy", "capacity count + ordered carry + density-zero stopping (bounded critical discrepancy)",
-              {"ENTROPY": "reaches only the critical slope: supercritical orbits grow exponentially and occupy density zero",
+              {"HARD": "reaches only the critical slope: supercritical orbits grow exponentially and occupy density zero",
                "SHEET": "holds on 3n-1 in the stronger form (D8)", "DIRECTION": "exclusion only"},
               source="collatz_guards_20260921_discrepancy (in-house); Prop B"),
     Mechanism("forward-backward-duality", "transfer E-SCC results between Q1 and Q2 by a word duality",
@@ -169,7 +178,7 @@ MECHANISMS = [
               requires_thin=True, probe="exceptional", source="choice ladder lane"),
     Mechanism("order-pattern", "order statements on orbits (uses the order of Z)",
               {"DRIFT": "ordinal patterns alone do not see growth rates",
-               "ENTROPY": "(v4) realized ordinal patterns are exactly the word-realizable ones (direction lemma); no exclusion of growing words",
+               "HARD": "(v4) realized ordinal patterns are exactly the word-realizable ones (direction lemma); no exclusion of growing words",
                "DIRECTION": "exclusion only"}, probe="order",
               source="word-function theorem (w6 sign-specific probes)"),
     Mechanism("carry-staircase", "anti-concentration of 3-smooth staircase sums B(w) mod 2^K-3^L",
@@ -200,6 +209,7 @@ LENS_FIT = {
     "transversality-proved": ["exceptional-dimension", "adelic"],
     "transversality-hard": ["exceptional-dimension", "adelic", "2-adic"],
     "periodic-approximant-liouville": ["2-adic", "beatty-clock"],
+    "q-series-pade": ["2-adic", "function-field"],
     "capacity-discrepancy": ["archimedean", "beatty-clock"],
     "forward-backward-duality": ["2-adic", "3-adic"],
     "choice-strategy": ["choice-relaxation", "tropical"],
@@ -245,6 +255,7 @@ KEYWORDS = {
     "lyapunov-potential": ["lyapunov"], "conjugacy-shift": ["conjugacy"], "finite-state-periodicity": ["finite-state"],
     "transversality-proved": ["transvers"], "transversality-hard": ["periodicity conjecture"],
     "periodic-approximant-liouville": ["theorem s"], "capacity-discrepancy": ["bounded strip"],
+    "q-series-pade": ["tschakaloff"],
     "forward-backward-duality": ["straddle"], "choice-strategy": ["graph e", "e-scc"], "order-pattern": ["order statement"],
     "carry-staircase": ["carry"], "functional-equation": ["functional equation"], "automata-rewriting": ["rewriting"],
     "measure-rigidity": ["rigidity"], "sparse-verification": ["2^68"],

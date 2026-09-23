@@ -24,7 +24,7 @@ Lagarias's rational periodicity conjecture, Mahler's `Z`-numbers and
 Erdős's ternary digits of `2^n`. The lenses include 2-adic, 3-adic,
 archimedean, adelic, affine-monoid, staircase carry, Beatty clock, base-6
 CA, tropical, function field, exceptional dimension, choice relaxation
-and sheet. The generator currently emits `728` cards over ten problems and twenty-one mechanisms (v4, section 3b), including E-SCC's two halves and Althöfer's game.
+and sheet. The generator currently emits `756` cards over ten problems and twenty-two mechanisms (v4, section 3b), including E-SCC's two halves and Althöfer's game.
 
 Each mechanism carries:
 
@@ -128,29 +128,36 @@ at the Collatz threshold. The choice-game threshold is heuristically
    no-divergence half. Yolcu--Aaronson--Heule tried this and it has not
    succeeded (CITED, not re-verified here).
 
-## 3b. Version 4 (wave 3, 2026-09-23): the ENTROPY and CHAIN requirements, and one missing mechanism for all the problems
+## 3b. Version 4 (waves 3–4, 2026-09-23): the HARD and CHAIN requirements, and one missing mechanism for all the problems
 
 The wave-3 lanes added three things to the typology. The script's
 docstring records them; `--explain` prints each rationale.
 
-* **ENTROPY (structural).** A no-divergence target must exclude the HARD
-  parity words: supercritical, positive entropy, with no strong
-  repetitions. The [transversality foundry](collatz_procgen_20260922_transversality_foundry.md)
-  catalogues 35 proved 2-versus-3 results. Every proved every-orbit
-  mechanism reaches only one of three classes:
+* **HARD (structural; named ENTROPY in the first v4 draft).** A no-divergence
+  target must exclude the HARD parity words. The
+  [transversality foundry](collatz_procgen_20260922_transversality_foundry.md)
+  catalogues 35 proved 2-versus-3 results. The wave-4
+  [HARD-class lane](collatz_procgen_20260922_hard_class.md) refines their
+  reach. Every proved every-orbit mechanism covers only one of these
+  classes:
   * subcritical words (Monks–Yazinski);
   * bounded critical discrepancy (the in-house capacity theorem);
-  * zero-entropy words (Theorem S, a 2-adic Liouville argument with
-    periodic approximants; independently audited).
+  * words with Diophantine exponent `Dio > eta` (Theorem D, which contains
+    Theorem S);
+  * words whose Bernstein number satisfies a q-difference equation
+    (Theorem Y, 2-adic Tschakaloff–Padé).
 
-  The old single `transversality` mechanism is therefore split in two:
-  * `transversality-proved` is ENTROPY-blind;
+  So HARD means **`Dio <= eta` and no functional equation**. The first
+  description, "positive entropy", is REFUTED: the zero-entropy cube-swap
+  word `Y3` is HARD (HYP-9127).
+
+  The old single `transversality` mechanism is split in two:
+  * `transversality-proved` is HARD-blind;
   * `transversality-hard` is a placeholder with no known instance.
 
-  Two new mechanisms, `periodic-approximant-liouville` and
-  `capacity-discrepancy`, are ENTROPY-blind. So are the
-  `finite-state-periodicity` and `order-pattern` mechanisms, which only
-  treat bounded orbits and word-realizable patterns.
+  Also HARD-blind are the mechanisms `periodic-approximant-liouville`,
+  `q-series-pade`, `capacity-discrepancy`, `finite-state-periodicity` and
+  `order-pattern`.
 * **CHAIN (structural).** In the `E`-relaxation, every escape from a
   hostile base point costs more than 1:
   * Q2 at `1/2` costs `2^eps` in `(1,2)`;
@@ -160,7 +167,7 @@ docstring records them; `--explain` prints each rationale.
   Hostile landings therefore chain, and the chains are a Collatz-type map
   with memory. The Applegate–Lagarias see-saw is blocked because it needs
   escape costs tending to `1`. Excluding infinite chains is itself a
-  no-divergence statement, so the `E`-subtargets carry ENTROPY too.
+  no-divergence statement, so the `E`-subtargets carry HARD too.
 * **DIRECTION and REFUTED.** An exclusion mechanism cannot exhibit a
   divergent `5n+1` orbit. A forward–backward word duality is REFUTED as a
   mechanism, by the Gelfond–Schneider lemma of the Q1 mirror.
@@ -170,8 +177,8 @@ docstring records them; `--explain` prints each rationale.
   * Erdős's problem needs the top digits, so every 3-adic-window version
     of it is FALSE.
 
-**Result (typology, not a theorem).** v4 generates 728 cards over 10
-problems and 21 mechanisms. Every all-orbits target now has **the same
+**Result (typology, not a theorem).** v4 generates 756 cards over 10
+problems and 22 mechanisms. Every all-orbits target now has **the same
 single real unblocked mechanism type**: a sound certificate search
 (automata/rewriting). The same two placeholders also survive:
 `transversality-hard` and an unrestricted `lyapunov-potential`. The
@@ -189,7 +196,9 @@ missing insight" is thus one kind of statement: a 2-adic (or 3-adic)
 non-integrality or irrationality statement that reaches positive-entropy,
 supercritical, non-repetitive digit words. Its smallest open instance is
 candidate C2 of the transversality note: bounded discrepancy around a
-supercritical slope.
+supercritical slope. After wave 4, the smallest test case is a single
+explicit number: is `sum_k (2^10/3^9)^(k^3)` irrational in `Q_2`?
+This is the cube-swap word, HYP-9127.
 
 ## 4. How to extend
 

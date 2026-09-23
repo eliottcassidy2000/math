@@ -1,6 +1,9 @@
 # The hard class: the Diophantine exponent decides Theorem S, a q-series method goes past it, and C2 is a coupled Z-number problem
 
 **Status.**
+* **AUDIT (orchestrator, 2026-09-23):**
+  * Re-derived by hand, with no gap found: Theorem D and Lemma H' (the natural extension of the audited Theorem R); Corollary D1's constant `(sqrt10-3/2)/(sqrt10-5/2) = 2.50994`; the block identity; the whole of Lemma P, namely the `I_n` expansion, `|I_n|_2 = 2^(-L(n+m+1)^2)`, the clearing range `[-e_off, m^2]` with `e_off = n + 2n(n+m)`, and the bracket maximum `phi` at `x = 1/phi`.
+  * Independent code: `Phi_2(Y) = -1 - 512/(3^9-2^10) - (256/3^9) sum_(k>=1) rho^(k^2)` holds modulo `2^6000`, and the residue's parity prefix is exactly `Y`.
 * **PROVED** (this note; elementary given the cited inputs; independent exact checks in the `.out`):
   * **Theorem D.** `Phi_T(w)` is irrational whenever `Dio(w) > eta(w)`. Here `Dio` is the Adamczewski–Bugeaud Diophantine exponent and `eta` the height exponent (`= max(1, beta log2 m)` for `x/2, (mx+r)/2`).
   * **Corollary D1.** Every eventually Sturmian word, and every word `u S(s)` with `s` Sturmian and `S(01) != S(10)` (this includes every recurrent quasi-Sturmian word), under every affine 2-adic shift map with `eta < 5/3 + 4 sqrt10/15 = 2.50994`. This covers every slope for `3x+r` and for Mahler's map, and **every slope for `5x+1`** (the parent note had `alpha < 0.804`). For `7x+1` it covers `beta < 0.894`. The threshold is sharp for the method.

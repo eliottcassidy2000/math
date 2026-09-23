@@ -1,5 +1,13 @@
 # Script Results Index
 
+- [The HARD class: Diophantine exponent, Theorem Y, and the cube-swap word](collatz_procgen_20260922_hard_class.md):
+  **PROVED (audited) / FINITE-EXACT; C2 and PC OPEN.** Theorem D: `Phi_T(w)` is irrational when
+  `Dio(w) > eta(w)`, so Sturmian and quasi-Sturmian words are settled for every map with
+  `eta < 2.50994` (all slopes of `5x+1`). Theorem Y: the zero-entropy square-swap word
+  (`Dio = 1`) falls to a 2-adic Tschakaloff–Padé argument. C2 is equivalent to a coupled
+  Z-number statement. The smallest open instance is the cube-swap word (cubic theta,
+  HYP-9127). "HARD = positive entropy" is REFUTED.
+
 - [Q2 endgame: one expensive link and a sharp budget](collatz_procgen_20260922_q2_endgame.md):
   **PROVED / FINITE-EXACT / CITED; Q2 OPEN.** Every 3-adic unit lies on
   the thread of `1` or `1/2`. The canonical escape has one expanding

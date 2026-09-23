@@ -175,3 +175,30 @@ sides without proving: a 2-adic or 3-adic non-integrality statement strong
 enough to reach positive-entropy digit words. The Sturmian theorem shows the
 method that works on the zero-entropy edge. C2 is where it has to be
 pushed.
+
+## Wave 4 (2026-09-23): the smallest open instance is one explicit number
+
+The HARD-class lane corrected my wave-3 description in a useful direction.
+1. **Entropy was the wrong axis.**
+   * Periodic approximants settle exactly the words whose Diophantine
+     exponent beats the map's height rate (Theorem D). Via Bugeaud–Kim,
+     that covers every Sturmian word under every slope of `5x+1` too.
+   * The zero-entropy square-swap word has exponent 1, so no Liouville
+     argument touches it. Its Bernstein number is nonetheless a 2-adic
+     theta value, and a 2-adic transcription of Zudilin's
+     Tschakaloff–Padé construction proves it irrational (Theorem Y). I
+     re-derived the linear form and checked the identity to `2^6000`.
+2. **The frontier collapses to a single explicit 2-adic number.** For the
+   cube-swap word both mechanisms fail. There is no repetition, and no
+   first-order q-difference equation. Everything reduces to one question:
+   is `sum_k (2^10/3^9)^(k^3)` irrational in `Q_2` (HYP-9127)?
+
+   That is where the procedure ends up. It started with "procedurally
+   generate approaches to Collatz" and went through relaxations, ladders,
+   typed barriers, mirrors and a transversality catalogue. The missing
+   mechanism turned out to be a p-adic transcendence question about lacunary
+   q-series. It is the p-adic cousin of problems that are open even over
+   `R` (cubic theta values). The pasted snippet's "Catalan clocks" and
+   "theta-like densities" turn out to be closer to the core than its
+   numerology suggested: the core is the arithmetic of `2^a/3^b` inside
+   lacunary series.
