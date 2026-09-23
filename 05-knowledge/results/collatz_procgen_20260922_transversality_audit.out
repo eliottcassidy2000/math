@@ -1,0 +1,127 @@
+Independent audit of Theorem R/S; N=20000 bits of Phi, words of length 60000.
+gain = lambda - log2(|P|+|Q|) (reduced P/Q); bound = q_(n+1)/mu - (mu-1) q_n (proof, up to -O(log q_(n+1)));
+'cap' = lambda reached N (true lambda larger). A row passes if every check is True.
+
+== 3x+1 critical log_3 2, rho=0: mu=1.0000 mu(mu-1)=0.0000 (<phi? True); pq=[1, 1, 1, 2, 2, 3, 1, 5, 2, 23, 2]; letters certified=True; parity prefix of Phi residue == word: True
+   q_n=     2 q_n+1=      3 j0=     3: LemmaJ(period,gaps,first)=True,True,True lambda A/B=4/7 bounds ok=True isometry=True | gain=      3.5 bound=      3.0
+   q_n=     3 q_n+1=      8 j0=     0: LemmaJ(period,gaps,first)=True,True,True lambda A/B=3/10 bounds ok=True isometry=True | gain=      6.1 bound=      8.0
+   q_n=     8 q_n+1=     19 j0=    19: LemmaJ(period,gaps,first)=True,True,True lambda A/B=26/45 bounds ok=True isometry=True | gain=     16.5 bound=     19.0
+   q_n=    19 q_n+1=     65 j0=     0: LemmaJ(period,gaps,first)=True,True,True lambda A/B=19/83 bounds ok=True isometry=True | gain=     60.8 bound=     65.0
+   q_n=    65 q_n+1=     84 j0=    84: LemmaJ(period,gaps,first)=True,True,True lambda A/B=148/232 bounds ok=True isometry=True | gain=     78.2 bound=     84.0
+   q_n=    84 q_n+1=    485 j0=     0: LemmaJ(period,gaps,first)=True,True,True lambda A/B=84/568 bounds ok=True isometry=True | gain=    478.7 bound=    485.0
+   q_n=   485 q_n+1=   1054 j0=  1054: LemmaJ(period,gaps,first)=True,True,True lambda A/B=1538/2592 bounds ok=True isometry=True | gain=   1045.2 bound=   1054.0
+   q_n=  1054 q_n+1=  24727 j0=     0: LemmaJ(period,gaps,first)=True,True,True lambda A/B=1054/25780 bounds ok=True isometry=True | gain=  18937.1 bound=  24727.0 cap
+   ROW PASS
+
+== 3x+1 critical log_3 2, rho=1/2: mu=1.0000 mu(mu-1)=0.0000 (<phi? True); pq=[1, 1, 1, 2, 2, 3, 1, 5, 2, 23, 2]; letters certified=True; parity prefix of Phi residue == word: True
+   q_n=     2 q_n+1=      3 j0=     2: LemmaJ(period,gaps,first)=True,True,True lambda A/B=3/8 bounds ok=True isometry=True | gain=      4.7 bound=      3.0
+   q_n=     3 q_n+1=      8 j0=     4: LemmaJ(period,gaps,first)=True,True,True lambda A/B=6/14 bounds ok=True isometry=True | gain=      5.9 bound=      8.0
+   q_n=     8 q_n+1=     19 j0=    15: LemmaJ(period,gaps,first)=True,True,True lambda A/B=22/49 bounds ok=True isometry=True | gain=     24.4 bound=     19.0
+   q_n=    19 q_n+1=     65 j0=    23: LemmaJ(period,gaps,first)=True,True,True lambda A/B=41/125 bounds ok=True isometry=True | gain=     79.8 bound=     65.0
+   q_n=    65 q_n+1=     84 j0=    42: LemmaJ(period,gaps,first)=True,True,True lambda A/B=106/190 bounds ok=True isometry=True | gain=     78.1 bound=     84.0
+   q_n=    84 q_n+1=    485 j0=   443: LemmaJ(period,gaps,first)=True,True,True lambda A/B=526/1095 bounds ok=True isometry=True | gain=    562.7 bound=    485.0
+   q_n=   485 q_n+1=   1054 j0=   527: LemmaJ(period,gaps,first)=True,True,True lambda A/B=1011/2065 bounds ok=True isometry=True | gain=   1045.2 bound=   1054.0
+   q_n=  1054 q_n+1=  24727 j0= 24200: LemmaJ(period,gaps,first)=True,True,True lambda A/B=25253/51034 bounds ok=True isometry=True | gain=  18937.9 bound=  24727.0 cap
+   ROW PASS
+
+== 3x+1 critical, rho=(3-sqrt5)/2: mu=1.0000 mu(mu-1)=0.0000 (<phi? True); pq=[1, 1, 1, 2, 2, 3, 1, 5, 2, 23, 2]; letters certified=True; parity prefix of Phi residue == word: True
+   q_n=     2 q_n+1=      3 j0=     4: LemmaJ(period,gaps,first)=True,True,True lambda A/B=5/8 bounds ok=True isometry=True | gain=      4.0 bound=      3.0
+   q_n=     3 q_n+1=      8 j0=     1: LemmaJ(period,gaps,first)=True,True,True lambda A/B=3/11 bounds ok=True isometry=True | gain=      6.0 bound=      8.0
+   q_n=     8 q_n+1=     19 j0=    12: LemmaJ(period,gaps,first)=True,True,True lambda A/B=19/46 bounds ok=True isometry=True | gain=     24.4 bound=     19.0
+   q_n=    19 q_n+1=     65 j0=    20: LemmaJ(period,gaps,first)=True,True,True lambda A/B=38/103 bounds ok=True isometry=True | gain=     60.8 bound=     65.0
+   q_n=    65 q_n+1=     84 j0=   104: LemmaJ(period,gaps,first)=True,True,True lambda A/B=168/252 bounds ok=True isometry=True | gain=     98.7 bound=     84.0
+   q_n=    84 q_n+1=    485 j0=    20: LemmaJ(period,gaps,first)=True,True,True lambda A/B=103/588 bounds ok=True isometry=True | gain=    478.7 bound=    485.0
+   q_n=   485 q_n+1=   1054 j0=   589: LemmaJ(period,gaps,first)=True,True,True lambda A/B=1073/2127 bounds ok=True isometry=True | gain=   1045.2 bound=   1054.0
+   q_n=  1054 q_n+1=  24727 j0= 14776: LemmaJ(period,gaps,first)=True,True,True lambda A/B=15829/40556 bounds ok=True isometry=True | gain=  14766.7 bound=  24727.0 cap
+   ROW PASS
+
+== 3x+1 supercritical sqrt2/2, rho=0: mu=1.1207 mu(mu-1)=0.1353 (<phi? True); pq=[1, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2]; letters certified=True; parity prefix of Phi residue == word: True
+   q_n=     3 q_n+1=      7 j0=     7: LemmaJ(period,gaps,first)=True,True,True lambda A/B=9/16 bounds ok=True isometry=True | gain=      5.5 bound=      5.9
+   q_n=     7 q_n+1=     17 j0=     0: LemmaJ(period,gaps,first)=True,True,True lambda A/B=7/23 bounds ok=True isometry=True | gain=     13.4 bound=     14.3
+   q_n=    17 q_n+1=     41 j0=    41: LemmaJ(period,gaps,first)=True,True,True lambda A/B=57/98 bounds ok=True isometry=True | gain=     35.6 bound=     34.5
+   q_n=    41 q_n+1=     99 j0=     0: LemmaJ(period,gaps,first)=True,True,True lambda A/B=41/139 bounds ok=True isometry=True | gain=     90.3 bound=     83.4
+   q_n=    99 q_n+1=    239 j0=   239: LemmaJ(period,gaps,first)=True,True,True lambda A/B=337/576 bounds ok=True isometry=True | gain=    223.3 bound=    201.3
+   q_n=   239 q_n+1=    577 j0=     0: LemmaJ(period,gaps,first)=True,True,True lambda A/B=239/815 bounds ok=True isometry=True | gain=    544.4 bound=    486.0
+   q_n=   577 q_n+1=   1393 j0=  1393: LemmaJ(period,gaps,first)=True,True,True lambda A/B=1969/3362 bounds ok=True isometry=True | gain=   1319.6 bound=   1173.3
+   q_n=  1393 q_n+1=   3363 j0=     0: LemmaJ(period,gaps,first)=True,True,True lambda A/B=1393/4755 bounds ok=True isometry=True | gain=   3191.1 bound=   2832.5
+   q_n=  3363 q_n+1=   8119 j0=  8119: LemmaJ(period,gaps,first)=True,True,True lambda A/B=11481/19600 bounds ok=True isometry=True | gain=   7709.2 bound=   6838.3
+   q_n=  8119 q_n+1=  19601 j0=     0: LemmaJ(period,gaps,first)=True,True,True lambda A/B=8119/27719 bounds ok=True isometry=True | gain=  10898.0 bound=  16509.1 cap
+   ROW PASS
+
+== 3x-1 supercritical sqrt2/2, rho=1/3: mu=1.1207 mu(mu-1)=0.1353 (<phi? True); pq=[1, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2]; letters certified=True; parity prefix of Phi residue == word: True
+   q_n=     3 q_n+1=      7 j0=     8: LemmaJ(period,gaps,first)=True,True,True lambda A/B=10/17 bounds ok=True isometry=True | gain=      7.0 bound=      5.9
+   q_n=     7 q_n+1=     17 j0=     1: LemmaJ(period,gaps,first)=True,True,True lambda A/B=7/31 bounds ok=True isometry=True | gain=     20.2 bound=     14.3
+   q_n=    17 q_n+1=     41 j0=     8: LemmaJ(period,gaps,first)=True,True,True lambda A/B=24/65 bounds ok=True isometry=True | gain=     34.5 bound=     34.5
+   q_n=    41 q_n+1=     99 j0=    66: LemmaJ(period,gaps,first)=True,True,True lambda A/B=106/205 bounds ok=True isometry=True | gain=     82.2 bound=     83.4
+   q_n=    99 q_n+1=    239 j0=   206: LemmaJ(period,gaps,first)=True,True,True lambda A/B=304/642 bounds ok=True isometry=True | gain=    297.3 bound=    201.3
+   q_n=   239 q_n+1=    577 j0=   305: LemmaJ(period,gaps,first)=True,True,True lambda A/B=543/1359 bounds ok=True isometry=True | gain=    746.4 bound=    486.0
+   q_n=   577 q_n+1=   1393 j0=   544: LemmaJ(period,gaps,first)=True,True,True lambda A/B=1120/3090 bounds ok=True isometry=True | gain=   1830.8 bound=   1173.3
+   q_n=  1393 q_n+1=   3363 j0=  1121: LemmaJ(period,gaps,first)=True,True,True lambda A/B=2513/5876 bounds ok=True isometry=True | gain=   3055.6 bound=   2832.5
+   q_n=  3363 q_n+1=   8119 j0=  9240: LemmaJ(period,gaps,first)=True,True,True lambda A/B=12602/20721 bounds ok=True isometry=True | gain=   8830.6 bound=   6838.3 cap
+   q_n=  8119 q_n+1=  19601 j0=  1121: LemmaJ(period,gaps,first)=True,True,True lambda A/B=9239/36959 bounds ok=True isometry=True | gain=   9641.5 bound=  16509.1 cap
+   ROW PASS
+
+== 3x+1 subcritical 1/phi, rho=0: mu=1.0000 mu(mu-1)=0.0000 (<phi? True); pq=[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]; letters certified=True; parity prefix of Phi residue == word: True
+   q_n=     2 q_n+1=      3 j0=     3: LemmaJ(period,gaps,first)=True,True,True lambda A/B=4/9 bounds ok=True isometry=True | gain=      5.5 bound=      3.0
+   q_n=     3 q_n+1=      5 j0=     0: LemmaJ(period,gaps,first)=True,True,True lambda A/B=3/7 bounds ok=True isometry=True | gain=      3.1 bound=      5.0
+   q_n=     5 q_n+1=      8 j0=     8: LemmaJ(period,gaps,first)=True,True,True lambda A/B=12/25 bounds ok=True isometry=True | gain=     11.5 bound=      8.0
+   q_n=     8 q_n+1=     13 j0=     0: LemmaJ(period,gaps,first)=True,True,True lambda A/B=8/20 bounds ok=True isometry=True | gain=     10.1 bound=     13.0
+   q_n=    13 q_n+1=     21 j0=    21: LemmaJ(period,gaps,first)=True,True,True lambda A/B=33/67 bounds ok=True isometry=True | gain=     31.2 bound=     21.0
+   q_n=    21 q_n+1=     34 j0=     0: LemmaJ(period,gaps,first)=True,True,True lambda A/B=21/54 bounds ok=True isometry=True | gain=     29.9 bound=     34.0
+   q_n=    34 q_n+1=     55 j0=    55: LemmaJ(period,gaps,first)=True,True,True lambda A/B=88/177 bounds ok=True isometry=True | gain=     85.6 bound=     55.0
+   q_n=    55 q_n+1=     89 j0=     0: LemmaJ(period,gaps,first)=True,True,True lambda A/B=55/143 bounds ok=True isometry=True | gain=     83.8 bound=     89.0
+   q_n=    89 q_n+1=    144 j0=   144: LemmaJ(period,gaps,first)=True,True,True lambda A/B=232/465 bounds ok=True isometry=True | gain=    230.7 bound=    144.0
+   q_n=   144 q_n+1=    233 j0=     0: LemmaJ(period,gaps,first)=True,True,True lambda A/B=144/376 bounds ok=True isometry=True | gain=    227.1 bound=    233.0
+   q_n=   233 q_n+1=    377 j0=   377: LemmaJ(period,gaps,first)=True,True,True lambda A/B=609/1219 bounds ok=True isometry=True | gain=    610.5 bound=    377.0
+   q_n=   377 q_n+1=    610 j0=     0: LemmaJ(period,gaps,first)=True,True,True lambda A/B=377/986 bounds ok=True isometry=True | gain=    604.0 bound=    610.0
+   q_n=   610 q_n+1=    987 j0=   987: LemmaJ(period,gaps,first)=True,True,True lambda A/B=1596/3193 bounds ok=True isometry=True | gain=   1597.0 bound=    987.0
+   q_n=   987 q_n+1=   1597 j0=     0: LemmaJ(period,gaps,first)=True,True,True lambda A/B=987/2583 bounds ok=True isometry=True | gain=   1591.0 bound=   1597.0
+   q_n=  1597 q_n+1=   2584 j0=  2584: LemmaJ(period,gaps,first)=True,True,True lambda A/B=4180/8361 bounds ok=True isometry=True | gain=   4181.0 bound=   2584.0
+   q_n=  2584 q_n+1=   4181 j0=     0: LemmaJ(period,gaps,first)=True,True,True lambda A/B=2584/6764 bounds ok=True isometry=True | gain=   4175.0 bound=   4181.0
+   q_n=  4181 q_n+1=   6765 j0=  6765: LemmaJ(period,gaps,first)=True,True,True lambda A/B=10945/21891 bounds ok=True isometry=True | gain=   9055.0 bound=   6765.0 cap
+   q_n=  6765 q_n+1=  10946 j0=     0: LemmaJ(period,gaps,first)=True,True,True lambda A/B=6765/17710 bounds ok=True isometry=True | gain=  10940.0 bound=  10946.0
+   ROW PASS
+
+== 5x+1 alpha=1/phi (mu=1.435), rho=0: mu=1.4350 mu(mu-1)=0.6243 (<phi? True); pq=[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]; letters certified=True; parity prefix of Phi residue == word: True
+   q_n=     2 q_n+1=      3 j0=     3: LemmaJ(period,gaps,first)=True,True,True lambda A/B=4/9 bounds ok=True isometry=True | gain=      3.1 bound=      1.2
+   q_n=     3 q_n+1=      5 j0=     0: LemmaJ(period,gaps,first)=True,True,True lambda A/B=3/7 bounds ok=True isometry=True | gain=      1.9 bound=      2.2
+   q_n=     5 q_n+1=      8 j0=     8: LemmaJ(period,gaps,first)=True,True,True lambda A/B=12/25 bounds ok=True isometry=True | gain=      5.8 bound=      3.4
+   q_n=     8 q_n+1=     13 j0=     0: LemmaJ(period,gaps,first)=True,True,True lambda A/B=8/20 bounds ok=True isometry=True | gain=      7.4 bound=      5.6
+   q_n=    13 q_n+1=     21 j0=    21: LemmaJ(period,gaps,first)=True,True,True lambda A/B=33/67 bounds ok=True isometry=True | gain=     17.2 bound=      9.0
+   q_n=    21 q_n+1=     34 j0=     0: LemmaJ(period,gaps,first)=True,True,True lambda A/B=21/54 bounds ok=True isometry=True | gain=     22.7 bound=     14.6
+   q_n=    34 q_n+1=     55 j0=    55: LemmaJ(period,gaps,first)=True,True,True lambda A/B=88/177 bounds ok=True isometry=True | gain=     48.2 bound=     23.5
+   q_n=    55 q_n+1=     89 j0=     0: LemmaJ(period,gaps,first)=True,True,True lambda A/B=55/143 bounds ok=True isometry=True | gain=     63.0 bound=     38.1
+   q_n=    89 q_n+1=    144 j0=   144: LemmaJ(period,gaps,first)=True,True,True lambda A/B=232/465 bounds ok=True isometry=True | gain=    129.6 bound=     61.6
+   q_n=   144 q_n+1=    233 j0=     0: LemmaJ(period,gaps,first)=True,True,True lambda A/B=144/376 bounds ok=True isometry=True | gain=    168.3 bound=     99.7
+   q_n=   233 q_n+1=    377 j0=   377: LemmaJ(period,gaps,first)=True,True,True lambda A/B=609/1219 bounds ok=True isometry=True | gain=    342.5 bound=    161.4
+   q_n=   377 q_n+1=    610 j0=     0: LemmaJ(period,gaps,first)=True,True,True lambda A/B=377/986 bounds ok=True isometry=True | gain=    443.9 bound=    261.1
+   q_n=   610 q_n+1=    987 j0=   987: LemmaJ(period,gaps,first)=True,True,True lambda A/B=1596/3193 bounds ok=True isometry=True | gain=    900.2 bound=    422.4
+   q_n=   987 q_n+1=   1597 j0=     0: LemmaJ(period,gaps,first)=True,True,True lambda A/B=987/2583 bounds ok=True isometry=True | gain=   1165.5 bound=    683.5
+   q_n=  1597 q_n+1=   2584 j0=  2584: LemmaJ(period,gaps,first)=True,True,True lambda A/B=4180/8361 bounds ok=True isometry=True | gain=   2360.1 bound=   1105.9
+   q_n=  2584 q_n+1=   4181 j0=     0: LemmaJ(period,gaps,first)=True,True,True lambda A/B=2584/6764 bounds ok=True isometry=True | gain=   3054.8 bound=   1789.4
+   q_n=  4181 q_n+1=   6765 j0=  6765: LemmaJ(period,gaps,first)=True,True,True lambda A/B=10945/21891 bounds ok=True isometry=True | gain=   4944.1 bound=   2895.3 cap
+   q_n=  6765 q_n+1=  10946 j0=     0: LemmaJ(period,gaps,first)=True,True,True lambda A/B=6765/17710 bounds ok=True isometry=True | gain=   8000.9 bound=   4684.7
+   ROW PASS
+
+== 5x+1 alpha=sqrt2/2 (mu=1.642), rho=0: mu=1.6419 mu(mu-1)=1.0538 (<phi? True); pq=[1, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2]; letters certified=True; parity prefix of Phi residue == word: True
+   q_n=     3 q_n+1=      7 j0=     7: LemmaJ(period,gaps,first)=True,True,True lambda A/B=9/16 bounds ok=True isometry=True | gain=      4.0 bound=      2.3
+   q_n=     7 q_n+1=     17 j0=     0: LemmaJ(period,gaps,first)=True,True,True lambda A/B=7/23 bounds ok=True isometry=True | gain=     10.6 bound=      5.9
+   q_n=    17 q_n+1=     41 j0=    41: LemmaJ(period,gaps,first)=True,True,True lambda A/B=57/98 bounds ok=True isometry=True | gain=     28.3 bound=     14.1
+   q_n=    41 q_n+1=     99 j0=     0: LemmaJ(period,gaps,first)=True,True,True lambda A/B=41/139 bounds ok=True isometry=True | gain=     70.8 bound=     34.0
+   q_n=    99 q_n+1=    239 j0=   239: LemmaJ(period,gaps,first)=True,True,True lambda A/B=337/576 bounds ok=True isometry=True | gain=    173.6 bound=     82.0
+   q_n=   239 q_n+1=    577 j0=     0: LemmaJ(period,gaps,first)=True,True,True lambda A/B=239/815 bounds ok=True isometry=True | gain=    421.7 bound=    198.0
+   q_n=   577 q_n+1=   1393 j0=  1393: LemmaJ(period,gaps,first)=True,True,True lambda A/B=1969/3362 bounds ok=True isometry=True | gain=   1020.8 bound=    478.1
+   q_n=  1393 q_n+1=   3363 j0=     0: LemmaJ(period,gaps,first)=True,True,True lambda A/B=1393/4755 bounds ok=True isometry=True | gain=   2467.0 bound=   1154.2
+   q_n=  3363 q_n+1=   8119 j0=  8119: LemmaJ(period,gaps,first)=True,True,True lambda A/B=11481/19600 bounds ok=True isometry=True | gain=   5958.6 bound=   2786.5
+   q_n=  8119 q_n+1=  19601 j0=     0: LemmaJ(period,gaps,first)=True,True,True lambda A/B=8119/27719 bounds ok=True isometry=True | gain=   6669.0 bound=   6727.2 cap
+   ROW PASS
+
+== CONTROL 5x+1 alpha=0.9+ (mu~2.1 > thresholds), rho=0: mu=2.0930 mu(mu-1)=2.2877 (<phi? False); pq=[1, 9, 6, 1, 33, 1, 1, 3, 2, 3, 5]; letters certified=True; parity prefix of Phi residue == word: True
+   q_n=    10 q_n+1=     61 j0=    61: LemmaJ(period,gaps,first)=True,True,True lambda A/B=70/141 bounds ok=True isometry=True | gain=     48.4 bound=     18.2
+   q_n=    61 q_n+1=     71 j0=     0: LemmaJ(period,gaps,first)=True,True,True lambda A/B=61/131 bounds ok=True isometry=True | gain=      2.6 bound=    -32.8
+   q_n=    71 q_n+1=   2404 j0=  2404: LemmaJ(period,gaps,first)=True,True,True lambda A/B=2474/4949 bounds ok=True isometry=True | gain=   2324.7 bound=   1071.0
+   q_n=  2404 q_n+1=   2475 j0=     0: LemmaJ(period,gaps,first)=True,True,True lambda A/B=2404/4878 bounds ok=True isometry=True | gain=   -154.4 bound=  -1445.1
+   q_n=  2475 q_n+1=   4879 j0=  4879: LemmaJ(period,gaps,first)=True,True,True lambda A/B=7353/12232 bounds ok=True isometry=True | gain=   2172.0 bound=   -374.1
+   q_n=  4879 q_n+1=  17112 j0=     0: LemmaJ(period,gaps,first)=True,True,True lambda A/B=4879/21990 bounds ok=True isometry=True | gain=   9787.4 bound=   2842.9 cap
+   ROW PASS
+
