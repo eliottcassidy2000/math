@@ -40,6 +40,12 @@ canonical links.
 * 93 of the 97 non-integer census points PROVED hostile by complete exact certificates;
 * exact counts of `Psi`-alive classes to `n = 200`.
 
+**SPOT-AUDIT (orchestrator, 2026-09-23, independent code):**
+* `max_k ln(rho_(1/2)(k))/k = 0.1143953` over `k <= 20000`, attained only at `k = 4`, as the budget
+  theorem states;
+* `rho_1(k) < 1` for every `k <= 20000`;
+* `rho_(1/2)(k)` lies in `(1,2)` for every `3 <= k <= 20000`.
+
 **CITED:** Yu (2007), Stewart (1980), Senge–Straus (1973), Lagarias (2009); statements verified as
 recorded in section 5.
 **OPEN:** Q2; `X_min`; `X_Psi`; HYP-9122; whether `Bad_inf` is countable.
