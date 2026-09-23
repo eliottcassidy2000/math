@@ -208,6 +208,18 @@ that make Collatz special. The missing ingredient must be specific to
 `2^K-3^L` together. Choice is a diagnostic of *where* the difficulty
 sits (rising runs), not a template for the proof.
 
+**Where the sign can act (order-laws lane, PROVED direction lemma).**
+A window contradicts its parity word's order prediction only at a *gate
+crossing*: a decay window going up on the plus sheet, a growth window
+going down on the minus sheet. Windows of at most 12 odd steps are
+provably sheet-blind. The first minus crossings sit at clock `19/12`
+(the transient `165->163`), and every plus crossing found rides the
+orbit of `27`. So a sign-aware argument must act on windows whose clock
+`K/L` is near a convergent of `log_2 3`: the inherited Pillai clocks,
+which the snippet calls "unit-gap clocks". That is exactly where a
+Baker-type Diophantine input enters, matching the transversality
+target in section 5.
+
 The pasted snippet's themes map to exact places: the sign enters
 as the sign of `2^K-3^L`, the Catalan clocks belong to the cycle half, and
 the trunk `(4^i-1)/3` is the exit set of the hardest relaxed obstruction.
