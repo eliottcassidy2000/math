@@ -24,7 +24,7 @@ Lagarias's rational periodicity conjecture, Mahler's `Z`-numbers and
 Erdős's ternary digits of `2^n`. The lenses include 2-adic, 3-adic,
 archimedean, adelic, affine-monoid, staircase carry, Beatty clock, base-6
 CA, tropical, function field, exceptional dimension, choice relaxation
-and sheet. The generator currently emits `473` cards.
+and sheet. The generator currently emits `559` cards over nine problems, now including E-SCC's Q2 half and Althöfer's game.
 
 Each mechanism carries:
 
@@ -51,12 +51,14 @@ glue between the parts is the remaining proof obligation.
 
 | problem | sub-target | unblocked real mechanisms |
 |---|---|---|
-| Collatz (dim `0.95`) | no-divergence | **none** (only the placeholder "some potential function") |
+| Collatz (dim `0.95`) | no-divergence | strict reading: **none**. Corrected reading (UNIFORM blocks only complete criteria): **exactly two**, sound certificate searches (automata/rewriting) and transversality with a Diophantine input |
 | Collatz | unique-cycle | linear forms in logs, staircase anti-concentration, functional equations, order patterns |
 | Collatz | finite check | verification |
 | E-SCC (thin at finite levels; dimension open) | Q1, Q2 | escape induction, Krasikov--Lagarias LP, finite-state, transversality, automata (25 hybrid plans) |
-| `3n-1` sheet | no-divergence | **none** |
-| rational periodicity | no-divergence for all `3x+d` | **none** |
+| `3n-1` sheet | no-divergence | strict **none**; corrected: automata, transversality |
+| rational periodicity | no-divergence for all `3x+d` | strict **none**; corrected: automata, transversality |
+| E-SCC Q2 (dim of hostile set open, set to `0.1`) | hostile `1` and `1/2` neighbourhoods | automata, transversality; escape induction is blocked if the dimension is positive |
+| Althöfer `3n+-1` game | no draws | open to several; see [game lane](collatz_procgen_20260922_althofer_game.md) |
 | `5n+1` divergence | one divergent orbit | automata, order patterns, transversality |
 | Mahler `Z` (dim `0.585`) | no safe integer code | order patterns |
 | Erdős ternary (dim `0.631`) | transversal avoidance | order patterns |
@@ -83,7 +85,8 @@ choice still `133,600` (the DRIFT barrier made visible).
    * work against an exceptional set of dimension `h(log_3 2)=0.95`, so no
      finite list of escape lemmas can suffice.
 
-   The only listed candidate is "transversality plus a Diophantine input".
+   Under the corrected UNIFORM reading, two mechanism types stay unblocked:
+   sound certificate searches, and transversality with a Diophantine input.
    It would say that the parity sequence of a positive integer cannot
    persistently stay above density `log_3 2`, and it is exactly the
    unproved "every-`n`" form of Tao's theorem. The foundry does not supply

@@ -32,7 +32,7 @@ CONTROLS = {
     "DRIFT": "5n+1/7n+1: positive-measure exceptional sets, expected divergence",
     "DEFECT": "planted density-zero modifications keep all density statistics but add a cycle/divergent orbit",
     "INTEGRAL": "every parity word has a rational 2-adic cycle (Z_(2) is full of cycles)",
-    "UNIFORM": "generalized Collatz maps are undecidable (Conway; Kurtz-Simon): no decidable-hypothesis criterion",
+    "UNIFORM": "generalized Collatz maps are undecidable (Conway; Kurtz-Simon): blocks only mechanisms claimed as COMPLETE uniform criteria (atlas correction)",
 }
 
 # ------------------------------------------------------------------ problems
@@ -62,6 +62,10 @@ PROBLEMS = [
     Problem("5n+1-divergence", "some orbit of 5n+1 is unbounded (e.g. 7)",
             {"one-divergent-orbit": {"INTEGRAL", "DEFECT"}},
             1.0, "OPEN", "positive-measure non-descending set; proving ONE orbit escapes is the dual problem"),
+    Problem("e-scc-q2", "graph E backward half: 1 reaches every m prime to 3 (reduced to m=1,14 mod 27; verified < 2.02e13)",
+            {"hostile-1-and-1/2": {"DRIFT", "DEFECT"}}, 0.1, "OPEN (HYP-9120)", "escape cost >= 32/27 near 1/2; chains typical"),
+    Problem("althofer-game", "Althofer 3n+-1 two-player game: no drawn positions",
+            {"no-draws": {"DEFECT", "UNIFORM"}}, 0.0, "OPEN (prize 2037; claimed proof under review)", "sheet-choice game; one-player version trivial"),
     Problem("rational-periodicity", "Lagarias: every rational with odd denominator has an eventually periodic 3x+1 orbit",
             {"no-divergence-all-b": {"DRIFT", "DEFECT", "UNIFORM"}}, 0.9500, "OPEN",
             "equivalent to no divergence for every 3x+d"),
@@ -81,6 +85,7 @@ class Mechanism:
     blind: dict               # control -> rationale
     requires_thin: bool = False
     placeholder: bool = False
+    complete: bool = False   # True if the mechanism is used as a complete uniform criterion
     probe: str = ""
     source: str = ""
 
@@ -96,10 +101,10 @@ MECHANISMS = [
               requires_thin=True, probe="exceptional", source="Applegate-Lagarias 2006; choice ladder lane"),
     Mechanism("density-drift", "random-walk drift / large deviations on parity words",
               {"SHEET": "function of parity words", "DEFECT": "measure-theoretic", "INTEGRAL": "rational cycles have measure zero",
-               "UNIFORM": "drift sign is decidable"}, source="Terras; Everett; Korec"),
+               "UNIFORM": "drift sign is decidable"}, complete=True, source="Terras; Everett; Korec"),
     Mechanism("fourier-3adic", "3-adic Fourier decay of the Syracuse random variable + renewal",
               {"SHEET": "Syrac_- = -Syrac_+ (inherited)", "DEFECT": "log-density statement",
-               "INTEGRAL": "measure-theoretic", "UNIFORM": "applies to all 3n+b"}, source="Tao 2019"),
+               "INTEGRAL": "measure-theoretic", "UNIFORM": "applies to all 3n+b"}, complete=True, source="Tao 2019"),
     Mechanism("linear-forms-logs", "Baker/Rhin bounds on |K log 2 - L log 3| with continued fractions and computation",
               {"DRIFT": "says nothing about unbounded orbits", "DEFECT": "blind to planted divergence"},
               probe="cycles", source="Steiner; Simons-de Weger; Hercher"),
@@ -110,7 +115,7 @@ MECHANISMS = [
               {}, placeholder=True, source="all bounded-modulus/log-periodic forms refuted in repo"),
     Mechanism("conjugacy-shift", "2-adic conjugacy to the full shift",
               {"SHEET": "2-adic", "DEFECT": "measure", "DRIFT": "topological", "INTEGRAL": "all of Z_2", "UNIFORM": "all maps"},
-              source="Lagarias 1985; Bernstein 1994"),
+              complete=True, source="Lagarias 1985; Bernstein 1994"),
     Mechanism("finite-state-periodicity", "eventual periodicity forced by finiteness (bounded orbits, finite fields, F2[x])",
               {"SHEET": "bounded orbits on both sheets are periodic"}, requires_thin=True,
               source="Hicks-Mullen-Yucas-Zavislak 2008"),
@@ -171,7 +176,8 @@ class Card:
 
 def verdict(problem, sub, mech):
     need = problem.subtargets[sub]
-    blocked = [f"{c}:{mech.blind[c]}" for c in sorted(need & set(mech.blind))]
+    blind_eff = {c for c in mech.blind if not (c == 'UNIFORM' and not mech.complete)}
+    blocked = [f"{c}:{mech.blind[c]}" for c in sorted(need & blind_eff)]
     if mech.requires_thin and problem.exceptional_dim is not None and problem.exceptional_dim > 0.0 \
             and sub not in ("finite-check",):
         blocked.append(f"THIN: needs a thin exceptional set, problem has dim {problem.exceptional_dim}")

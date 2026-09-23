@@ -1,11 +1,16 @@
-generated cards: 473 over 7 problems, 17 mechanisms, 13 lenses
+generated cards: 559 over 9 problems, 17 mechanisms, 13 lenses
 
 === collatz: 3n+1: every positive integer reaches 1  [OPEN; exceptional dim 0.95]
-  no-divergence          unblocked: NONE  (placeholder: lyapunov-potential)
-  unique-cycle           unblocked: ['carry-staircase', 'functional-equation', 'linear-forms-logs', 'order-pattern']  (placeholder: lyapunov-potential)
+  no-divergence          unblocked: ['automata-rewriting', 'transversality']  (placeholder: lyapunov-potential)
+  unique-cycle           unblocked: ['automata-rewriting', 'carry-staircase', 'functional-equation', 'linear-forms-logs', 'order-pattern', 'transversality']  (placeholder: lyapunov-potential)
   finite-check           unblocked: ['sparse-verification']
-  hybrid plans (one unblocked real mechanism per sub-target): 0
-  MISSING MECHANISM for: ['no-divergence']  <- where a new idea is required
+  hybrid plans (one unblocked real mechanism per sub-target): 12
+    - no-divergence<-automata-rewriting + unique-cycle<-automata-rewriting + finite-check<-sparse-verification
+    - no-divergence<-automata-rewriting + unique-cycle<-carry-staircase + finite-check<-sparse-verification
+    - no-divergence<-automata-rewriting + unique-cycle<-functional-equation + finite-check<-sparse-verification
+    - no-divergence<-automata-rewriting + unique-cycle<-linear-forms-logs + finite-check<-sparse-verification
+    - no-divergence<-automata-rewriting + unique-cycle<-order-pattern + finite-check<-sparse-verification
+    - no-divergence<-automata-rewriting + unique-cycle<-transversality + finite-check<-sparse-verification
 
 === e-scc: graph E: every n reaches 1 and 1 reaches every non-multiple of 3  [OPEN (HYP-9120); exceptional dim 0.0]
   Q1-forward             unblocked: ['automata-rewriting', 'escape-induction', 'finite-state-periodicity', 'lp-difference-ineq', 'transversality']  (placeholder: lyapunov-potential)
@@ -19,10 +24,15 @@ generated cards: 473 over 7 problems, 17 mechanisms, 13 lenses
     - Q1-forward<-escape-induction + Q2-backward<-automata-rewriting
 
 === minus-sheet: 3n-1: the three known cycles are all  [OPEN; exceptional dim 0.95]
-  no-divergence          unblocked: NONE  (placeholder: lyapunov-potential)
-  cycle-catalog          unblocked: ['carry-staircase', 'functional-equation', 'linear-forms-logs', 'order-pattern']  (placeholder: lyapunov-potential)
-  hybrid plans (one unblocked real mechanism per sub-target): 0
-  MISSING MECHANISM for: ['no-divergence']  <- where a new idea is required
+  no-divergence          unblocked: ['automata-rewriting', 'transversality']  (placeholder: lyapunov-potential)
+  cycle-catalog          unblocked: ['automata-rewriting', 'carry-staircase', 'functional-equation', 'linear-forms-logs', 'order-pattern', 'transversality']  (placeholder: lyapunov-potential)
+  hybrid plans (one unblocked real mechanism per sub-target): 12
+    - no-divergence<-automata-rewriting + cycle-catalog<-automata-rewriting
+    - no-divergence<-automata-rewriting + cycle-catalog<-carry-staircase
+    - no-divergence<-automata-rewriting + cycle-catalog<-functional-equation
+    - no-divergence<-automata-rewriting + cycle-catalog<-linear-forms-logs
+    - no-divergence<-automata-rewriting + cycle-catalog<-order-pattern
+    - no-divergence<-automata-rewriting + cycle-catalog<-transversality
 
 === 5n+1-divergence: some orbit of 5n+1 is unbounded (e.g. 7)  [OPEN; exceptional dim 1.0]
   one-divergent-orbit    unblocked: ['automata-rewriting', 'order-pattern', 'transversality']  (placeholder: lyapunov-potential)
@@ -31,20 +41,41 @@ generated cards: 473 over 7 problems, 17 mechanisms, 13 lenses
     - one-divergent-orbit<-order-pattern
     - one-divergent-orbit<-transversality
 
+=== e-scc-q2: graph E backward half: 1 reaches every m prime to 3 (reduced to m=1,14 mod 27; verified < 2.02e13)  [OPEN (HYP-9120); exceptional dim 0.1]
+  hostile-1-and-1/2      unblocked: ['automata-rewriting', 'transversality']  (placeholder: lyapunov-potential)
+  hybrid plans (one unblocked real mechanism per sub-target): 2
+    - hostile-1-and-1/2<-automata-rewriting
+    - hostile-1-and-1/2<-transversality
+
+=== althofer-game: Althofer 3n+-1 two-player game: no drawn positions  [OPEN (prize 2037; claimed proof under review); exceptional dim 0.0]
+  no-draws               unblocked: ['automata-rewriting', 'escape-induction', 'finite-state-periodicity', 'lp-difference-ineq', 'order-pattern', 'transversality']  (placeholder: lyapunov-potential)
+  hybrid plans (one unblocked real mechanism per sub-target): 6
+    - no-draws<-automata-rewriting
+    - no-draws<-escape-induction
+    - no-draws<-finite-state-periodicity
+    - no-draws<-lp-difference-ineq
+    - no-draws<-order-pattern
+    - no-draws<-transversality
+
 === rational-periodicity: Lagarias: every rational with odd denominator has an eventually periodic 3x+1 orbit  [OPEN; exceptional dim 0.95]
-  no-divergence-all-b    unblocked: NONE  (placeholder: lyapunov-potential)
-  hybrid plans (one unblocked real mechanism per sub-target): 0
-  MISSING MECHANISM for: ['no-divergence-all-b']  <- where a new idea is required
+  no-divergence-all-b    unblocked: ['automata-rewriting', 'transversality']  (placeholder: lyapunov-potential)
+  hybrid plans (one unblocked real mechanism per sub-target): 2
+    - no-divergence-all-b<-automata-rewriting
+    - no-divergence-all-b<-transversality
 
 === mahler-z: Mahler: no Z-number (xi>0, frac(xi (3/2)^n) < 1/2 for all n)  [OPEN; exceptional dim 0.585]
-  no-safe-integer-code   unblocked: ['order-pattern']  (placeholder: lyapunov-potential)
-  hybrid plans (one unblocked real mechanism per sub-target): 1
+  no-safe-integer-code   unblocked: ['automata-rewriting', 'order-pattern', 'transversality']  (placeholder: lyapunov-potential)
+  hybrid plans (one unblocked real mechanism per sub-target): 3
+    - no-safe-integer-code<-automata-rewriting
     - no-safe-integer-code<-order-pattern
+    - no-safe-integer-code<-transversality
 
 === erdos-ternary: Erdos: 2^n has a ternary digit 2 for n>8  [OPEN; exceptional dim 0.6309]
-  transversal-avoidance  unblocked: ['order-pattern']  (placeholder: lyapunov-potential)
-  hybrid plans (one unblocked real mechanism per sub-target): 1
+  transversal-avoidance  unblocked: ['automata-rewriting', 'order-pattern', 'transversality']  (placeholder: lyapunov-potential)
+  hybrid plans (one unblocked real mechanism per sub-target): 3
+    - transversal-avoidance<-automata-rewriting
     - transversal-avoidance<-order-pattern
+    - transversal-avoidance<-transversality
 
 Blindness rationales:
   residue-certificate: SHEET (class data is 2-adic; conjugate for all odd b); DEFECT (a sparse planted defect changes no residue-class certificate density); UNIFORM (the certificate search is uniform over affine residue maps) [requires thin exceptional set]
@@ -66,23 +97,23 @@ Blindness rationales:
   sparse-verification: DRIFT (finite); DEFECT (finite); INTEGRAL (finite)
 
 Prior repository notes per mechanism (grep):
-  residue-certificate         40 notes  e.g. arithmetic_braids2_20260917_inverse_completion.md
-  escape-induction            20 notes  e.g. arithmetic_braids2_20260917_synthesis.md
-  density-drift               15 notes  e.g. arithmetic_braids_20260917_collatz.md
-  fourier-3adic                6 notes  e.g. arithmetic_braids_20260917_collatz.md
-  linear-forms-logs            7 notes  e.g. collatz_blueprint_20260921_affine.md
-  lp-difference-ineq           6 notes  e.g. arithmetic_braids2_20260917_inverse_completion.md
+  residue-certificate         44 notes  e.g. arithmetic_braids2_20260917_inverse_completion.md
+  escape-induction            23 notes  e.g. arithmetic_braids2_20260917_synthesis.md
+  density-drift               19 notes  e.g. arithmetic_braids_20260917_collatz.md
+  fourier-3adic                8 notes  e.g. arithmetic_braids_20260917_collatz.md
+  linear-forms-logs           10 notes  e.g. collatz_blueprint_20260921_affine.md
+  lp-difference-ineq           8 notes  e.g. arithmetic_braids2_20260917_inverse_completion.md
   lyapunov-potential           6 notes  e.g. arithmetic_braids_20260917_collatz.md
-  conjugacy-shift             28 notes  e.g. arithmetic_braids2_20260917_signed_cycles.md
-  finite-state-periodicity     2 notes  e.g. collatz_mod6_20260917_reverse_tree_pieces.md
-  transversality               4 notes  e.g. collatz_mod6_20260922_w6_tao_minus_sheet_ladder.md
-  choice-strategy              9 notes  e.g. arithmetic_seams_20260921_operations.md
+  conjugacy-shift             29 notes  e.g. arithmetic_braids2_20260917_signed_cycles.md
+  finite-state-periodicity     3 notes  e.g. collatz_mod6_20260917_reverse_tree_pieces.md
+  transversality               6 notes  e.g. collatz_mod6_20260922_w6_tao_minus_sheet_ladder.md
+  choice-strategy             12 notes  e.g. arithmetic_seams_20260921_operations.md
   order-pattern                2 notes  e.g. collatz_mod6_20260922_lead_reflection3.md
-  carry-staircase             48 notes  e.g. arithmetic_braids2_20260917_inverse_completion.md
-  functional-equation          0 notes
-  automata-rewriting           0 notes
+  carry-staircase             52 notes  e.g. arithmetic_braids2_20260917_inverse_completion.md
+  functional-equation          3 notes  e.g. collatz_procgen_20260922_barrier_atlas.md
+  automata-rewriting           2 notes  e.g. collatz_procgen_20260922_barrier_atlas.md
   measure-rigidity             5 notes  e.g. arithmetic_braids_20260917_geometry.md
-  sparse-verification          6 notes  e.g. collatz_mod6_20260917_extended_collatz_scc.md
+  sparse-verification          7 notes  e.g. collatz_mod6_20260917_extended_collatz_scc.md
 
 PROBE exceptional counts at 2^20 (the THIN requirement, measured):
   collatz               27328  fraction 0.02606
