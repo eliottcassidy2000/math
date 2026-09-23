@@ -109,7 +109,7 @@ the divergence half of Collatz, and the sign enters exactly as the sign of
 * The F2[x] analogue has no drift and no sheets, which is why it is
   provable (atlas).
 
-## 2. Lanes still to integrate (placeholders)
+## 2. The remaining lanes (all integrated)
 
 * **Sibling dimension ladder**
   ([note](collatz_procgen_20260922_sibling_dimension_ladder.md)):
@@ -164,15 +164,15 @@ the divergence half of Collatz, and the sign enters exactly as the sign of
 | 6 | undirected Collatz (grand-orbit moves) | equivalent to Collatz | BFS to `10^6` | no collapse (negative control) |
 | 7 | sideways moves `n~4n+1` | inside #6 | argued | no power beyond Terras |
 | 8 | Applegate--Lagarias see-saw transplanted to `E` | needs cheap escapes | cost bounds | escape cost `>=32/27`, not `1+2^(-j)`: does not close as is |
-| 9 | 1-escape via loops through `1` | live (Q2 near `1`) | loop search to `s=40` | PROVED lemma; loops exist to depth 41; bounded family OPEN (HYP-9122); loops lane PENDING |
+| 9 | 1-escape via loops through `1` | live (Q2 near `1`) | loops lane | PROVED exact and optimal (ratio `>3/2`); loops exist to `s=6000`; HYP-9122 reduced to record denominators; no finite family (PROVED) |
 | 10 | Hecke / `X_0(11)` density lens | DEFECT, SHEET | exact density | echo density `2/15`; statistic only |
 | 11 | Catalan unit-gap clocks | cycle half only | table | inherited; not a divergence tool |
 | 12 | fixed sheet gluing `3n+sgn(n)` | no new freedom | zoo | gains nothing |
 | 13 | transversality: p-adic irrationality of Bernstein series | live (divergence half) | formulation only | the named missing ingredient |
 | 14 | sound certificate searches (rewriting/automata) | live (divergence half) | literature | YAH prize conjectures fail on negatives (atlas) |
-| 15 | sign-specific order laws | the only sign-aware class | order-laws lane | PENDING |
+| 15 | sign-specific order laws | the only sign-aware class | order-laws lane | nothing beyond the sign law among 6,016 generated laws (FINITE-EXACT to `10^7`); direction lemma PROVED; windows of at most 12 odd steps sheet-blind |
 | 16 | exceptional dimension of `E` | structural | dimension lane (exact threads to `2^64`, `3^42`) | OPEN; evidence favours 0; infinite (Theorem F PROVED); 382 hostile `-p/3^j` certified |
-| 17 | sibling ladder (`qx+1`, F2[x], Mahler, Erdős) | calibration | ladder lane | PENDING |
+| 17 | sibling ladder (`qx+1`, F2[x], Mahler, Erdős) | calibration | ladder lane | dimensions and measures PROVED; F2[x] set `{1}`; choice games drift-blind (threshold near `q=10`) |
 | 18 | Tao-type Fourier / renewal | blind to SHEET, DEFECT, INTEGRAL | literature | GGM 2025: PROVED for `3N-1` (sheet-blind as a theorem) |
 | 19 | bounded-modulus Lyapunov potentials | none in the model | inherited | REFUTED (earlier sessions) |
 | 20 | carry anti-concentration mod `2^K-3^L` | cycle half | heuristic count | live for cycles; not run |

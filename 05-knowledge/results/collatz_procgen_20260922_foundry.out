@@ -41,7 +41,7 @@ generated cards: 559 over 9 problems, 17 mechanisms, 13 lenses
     - one-divergent-orbit<-order-pattern
     - one-divergent-orbit<-transversality
 
-=== e-scc-q2: graph E backward half: 1 reaches every m prime to 3 (reduced to m=1,14 mod 27; verified < 2.02e13)  [OPEN (HYP-9120); exceptional dim 0.1]
+=== e-scc-q2: graph E backward half: 1 reaches every m prime to 3 (reduced to m=1,14 mod 27; verified < 7.87e17; endgame = ternary digits of 2^K)  [OPEN (HYP-9120); exceptional dim 0.1]
   hostile-1-and-1/2      unblocked: ['automata-rewriting', 'order-pattern', 'transversality']  (placeholder: lyapunov-potential)
   hybrid plans (one unblocked real mechanism per sub-target): 3
     - hostile-1-and-1/2<-automata-rewriting
@@ -98,19 +98,19 @@ Blindness rationales:
   sparse-verification: DRIFT (finite); DEFECT (finite); INTEGRAL (finite)
 
 Prior repository notes per mechanism (grep):
-  residue-certificate         44 notes  e.g. arithmetic_braids2_20260917_inverse_completion.md
-  escape-induction            23 notes  e.g. arithmetic_braids2_20260917_synthesis.md
-  density-drift               19 notes  e.g. arithmetic_braids_20260917_collatz.md
+  residue-certificate         47 notes  e.g. arithmetic_braids2_20260917_inverse_completion.md
+  escape-induction            25 notes  e.g. arithmetic_braids2_20260917_synthesis.md
+  density-drift               21 notes  e.g. arithmetic_braids_20260917_collatz.md
   fourier-3adic                9 notes  e.g. arithmetic_braids_20260917_collatz.md
   linear-forms-logs           10 notes  e.g. collatz_blueprint_20260921_affine.md
   lp-difference-ineq           8 notes  e.g. arithmetic_braids2_20260917_inverse_completion.md
   lyapunov-potential           7 notes  e.g. arithmetic_braids_20260917_collatz.md
   conjugacy-shift             29 notes  e.g. arithmetic_braids2_20260917_signed_cycles.md
   finite-state-periodicity     3 notes  e.g. collatz_mod6_20260917_reverse_tree_pieces.md
-  transversality               7 notes  e.g. collatz_mod6_20260922_w6_tao_minus_sheet_ladder.md
-  choice-strategy             12 notes  e.g. arithmetic_seams_20260921_operations.md
-  order-pattern                3 notes  e.g. collatz_mod6_20260922_lead_reflection3.md
-  carry-staircase             53 notes  e.g. arithmetic_braids2_20260917_inverse_completion.md
+  transversality               8 notes  e.g. collatz_mod6_20260922_w6_tao_minus_sheet_ladder.md
+  choice-strategy             13 notes  e.g. arithmetic_seams_20260921_operations.md
+  order-pattern                4 notes  e.g. collatz_mod6_20260922_lead_reflection3.md
+  carry-staircase             54 notes  e.g. arithmetic_braids2_20260917_inverse_completion.md
   functional-equation          3 notes  e.g. collatz_procgen_20260922_barrier_atlas.md
   automata-rewriting           3 notes  e.g. collatz_procgen_20260922_barrier_atlas.md
   measure-rigidity             6 notes  e.g. arithmetic_braids_20260917_geometry.md

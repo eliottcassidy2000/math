@@ -91,9 +91,20 @@ above must be read as "do what choice does, *but specifically for
 3. **Chained hostile landings are typical** (31% of shortest descents from
    the `1/2` class). A thin exceptional set does not mean an easy
    all-integers statement.
-4. **My own claim that "dimension 0" holds for `E` did not survive.**
-   Local-minimum growth of about `0.1` per level fits a small positive
-   dimension just as well. I withdrew it within the session.
+4. **My claims about the dimension of `Bad_inf(E)` moved twice.** I first
+   said "dimension 0". I withdrew that when local minima to `2^40` fit
+   about `0.1` per level. I then offered a "credit construction" for
+   positive dimension. The dimension lane's exact threads to `2^64`
+   favour `0` again (a power law about `m^1.6`). It proved the set
+   infinite (Theorem F) and showed the credit is a fixed slack that every
+   block spends. The question stays OPEN; the lesson is not to fit a
+   dimension from a window of 24 levels.
+5. **Two finite-truncation artifacts were caught by the lanes:** the
+   `5n+1` "drift barrier" (one level) and the "28% P-positions" (a
+   capped statistic). Both are logged in MISTAKES 2026-09-22.
+6. **Both hard cores end in 2-versus-3 digits.** The divergence half
+   points to p-adic irrationality of the Bernstein series, and the
+   relaxed Q2 points to the base-3 digits of `2^K` (Erdős).
 
 ## Candidate card (not promoted)
 

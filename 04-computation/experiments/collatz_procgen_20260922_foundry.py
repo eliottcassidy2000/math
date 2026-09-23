@@ -62,7 +62,7 @@ PROBLEMS = [
     Problem("5n+1-divergence", "some orbit of 5n+1 is unbounded (e.g. 7)",
             {"one-divergent-orbit": {"INTEGRAL", "DEFECT"}},
             1.0, "OPEN", "positive-measure non-descending set; proving ONE orbit escapes is the dual problem"),
-    Problem("e-scc-q2", "graph E backward half: 1 reaches every m prime to 3 (reduced to m=1,14 mod 27; verified < 2.02e13)",
+    Problem("e-scc-q2", "graph E backward half: 1 reaches every m prime to 3 (reduced to m=1,14 mod 27; verified < 7.87e17; endgame = ternary digits of 2^K)",
             {"hostile-1-and-1/2": {"DEFECT"}}, 0.1, "OPEN (HYP-9120)", "escape cost >= 32/27 near 1/2; chains typical"),
     Problem("althofer-game", "Althofer 3n+-1 two-player game: no drawn positions",
             {"no-draws": {"DEFECT", "UNIFORM"}}, 0.0, "OPEN (prize 2037; claimed proof under review)", "sheet-choice game; one-player version trivial"),
