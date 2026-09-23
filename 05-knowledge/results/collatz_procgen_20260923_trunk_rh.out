@@ -1,0 +1,407 @@
+collatz_procgen_20260923_trunk_rh.out -- trunk / Riemann hypothesis lane (session collatz-procgen-20260922, 2026-09-23)
+Produced by:
+  python3 04-computation/experiments/collatz_procgen_20260923_trunk_rh_padic.py
+  python3 04-computation/experiments/collatz_procgen_20260923_trunk_rh_dirichlet.py
+  python3 04-computation/experiments/collatz_procgen_20260923_trunk_rh_data.py
+(one process at a time; peak RSS <= 0.75 GB for the data script, <= 0.25 GB otherwise)
+
+################################ PART 1: 3-adic (padic.py) ################################
+
+==============================================================================
+P1  3-adic log/exp self-tests; lambda = log_3(4)
+==============================================================================
+working precision P = 60 ternary digits (all checks below are mod 3^(P-3) or finer)
+v_3(lambda) = 1   (expected 1)
+v_3(lambda - 3) = 2   (expected 2, used by Strassmann)
+lambda/3 mod 3^12 = 455560  (base 3, low digits last: 212010220121)
+exp(a+b)=exp(a)exp(b) and log(exp(a))=a on 200 random a,b in 3Z_3: OK
+4^(1/2) = exp(lambda/2) == -2 mod 3^58: True
+log(-2) = lambda/2 mod 3^58: True
+
+==============================================================================
+P2  T(i) = (4^i-1)/3 is an isometry of Z_3 onto Z_3; the trunk chart
+==============================================================================
+v_3(T(x)-T(y)) == v_3(x-y) on 22800 pairs (incl. 1/2, -1/2, 1/4, 1/5, 5/7): all OK
+i(T(s)) = s and T(i(m)) = m on 310 samples: OK
+T(i) agrees with the integers (4^i-1)/3 for i<200 and v_3(T(i)) = v_3(i): OK
+first trunk values T(1..8) = [1, 5, 21, 85, 341, 1365, 5461, 21845] ; illegal (3 | T(i) iff 3 | i): [21, 1365, 87381]
+
+==============================================================================
+P3  fixed points and special values
+==============================================================================
+  T(0)     == 0      mod 3^56: True
+  T(1)     == 1      mod 3^56: True
+  T(-1/2)  == -1/2   mod 3^56: True
+  T(1/2)   == -1     mod 3^56: True
+  T(-1)    == -1/4   mod 3^56: True
+  T(2)     == 5      mod 3^56: True
+  T(-2)    == -5/16  mod 3^56: True
+  i* := i(1/2) = log(5/2)/log(4);  T(i*) == 1/2 mod 3^56: True
+  i* mod 3^30 (base 3, most significant first): 101220102010212022112001200102
+  v_3(i* - 1/2) = 1,  v_3(i* - 1) = 0,  v_3(i*) = 0
+  i* is irrational: if i* = a/b then (5/2)^b = 4^a, i.e. 5^b = 2^(2a+b), impossible for b != 0.
+  Strassmann for f(i) = T(i) - i = sum_n a_n i^n:  a_1 = lambda/3 - 1,  a_n = lambda^n/(3 n!)
+   v_3(a_n), n=1..30: [1, 1, 1, 2, 3, 3, 4, 5, 4, 5, 6, 6, 7, 8, 8, 9, 10, 9, 10, 11, 11, 12, 13, 13, 14, 15, 13, 14, 15, 15]
+   min valuation 1, attained last at n = 3; tail bound v_3(a_n) >= (n-1)/2 > 1 for n >= 4
+   => f has at most 3 zeros in Z_3; 0, 1, -1/2 are zeros  => Fix(T) = {0, 1, -1/2} exactly.
+   #{i mod 3^r : T(i) = i mod 3^r}, r = 1..9: [3, 6, 12, 21, 21, 21, 21, 21, 21]
+   v_3(T'(0) - 1) = 1
+   v_3(T'(1) - 1) = 2
+   v_3(T'(-1/2) - 1) = 2
+   consistency: a simple zero z with v_3(f'(z)) = d accounts for 3^d residues mod 3^r (r large); 3^1 + 3^2 + 3^2 = 21 = the stable count 21.
+
+==============================================================================
+P4  minus sheet: exit set, positive-integer trunk, Jacobsthal interleaving
+==============================================================================
+  E_- reverse move (2^k x + 1)/3 from the minus hostile point -1/2 with k = 2n+1 gives -T(n): True
+  ... and from -1 with k = 2n gives -T(n) as well: True
+  positive-integer minus trunk S(n) = (2^(2n+1)+1)/3 = 2T(n)+1 (3S-1 a power of 2): [1, 3, 11, 43, 171, 683, 2731, 10923, 43691, 174763]
+  Jacobsthal J_t = (2^t - (-1)^t)/3: [0, 1, 1, 3, 5, 11, 21, 43, 85, 171, 341, 683, 1365, 2731, 5461, 10923]
+  ((-2)^t - 1)/3 = (-1)^t J_t;  J_(2n) = T(n) (plus trunk), J_(2n+1) = S(n) (minus trunk): True
+  so both trunks are the lattice points of ONE chart, t(m) = log(3m+1)/log(-2) = 2 i(m).
+  S(0)     == 1    : True
+  S(1)     == 3    : True
+  S(-1)    == 1/2  : True
+  S(1/2)   == -1   : True
+  S(-1/2)  == 0    : True
+  S(i) - i = sum_n b_n i^n with b_0 = 1, b_1 = 2 lambda/3 - 1, b_n = 2 lambda^n/(3 n!): v_3(b_n), n=0..11 = [0, 0, 1, 1, 2, 3, 3, 4, 5, 4, 5, 6]
+  => (Strassmann, N = 1) S has exactly one fixed point i_S, i_S = 2 mod 3; S(i_S) = i_S: True; i_S mod 3^20 = 10022111000121111202
+  conjugate chart Tt(i) = -T(-i): Tt(0) == 0: True
+  conjugate chart Tt(i) = -T(-i): Tt(-1) == -1: True
+  conjugate chart Tt(i) = -T(-i): Tt(1/2) == 1/2: True
+  Tt(-1/2) = -T(1/2) = 1: True
+
+==============================================================================
+P5  the backward E-game in logarithmic charts (translation law = kappa formula)
+==============================================================================
+  departure chart delta(x) = log(2^eps x)/log 4 (eps = 0 if x=1 mod 3, 1 if x=2 mod 3),
+  arrival chart i(y) = log(3y+1)/log 4.  Claim: a legal move k = 2n+eps(x) lands at
+  y = (2^k x - 1)/3 with i(y) = n + delta(x), and v_3(y - h) = v_3(i(y) - i(h)) for every h.
+  checked 5000 moves (and 4 targets h each): all OK
+  delta(1) = delta(1/2) = 0 (both primary hostile points sit at the chart origin): True
+  precision k(x) = v_3(x - h(x)) = 1 + v_3(delta(x)): OK
+  kappa formula v_3(2^K - r) = [K=e mod 2](1 + v_3(K - kappa(r))), kappa(r) = log(r_1)/log(-2): 16000 cases, OK
+  kappa(3m+1) = 2 i(m) (kappa IS the doubled trunk coordinate): OK
+
+==============================================================================
+P6  the functional-equation involution s -> 1-s in the trunk chart
+==============================================================================
+  M(m) = (1-m)/(3m+1).  Claim: T(1-s) = M(T(s)) for all s in Z_3.
+  checked on 200 samples: OK
+  M is an involution: M(M(m)) = m (exact, 20 rationals): True
+  fixed points of M in Q: m = -1 (= T(1/2)) and m = 1/3 (not in Z_3); M(-1) = -1
+  M(1) = 0, M(1/2) = 1/5, M(0) = 1, M(-1/2) = -3
+  => the hostile set {1, 1/2} of the backward E-game is NOT M-invariant (1 -> 0 illegal, 1/2 -> 1/5
+     generic): the E-game has no s <-> 1-s symmetry in the trunk chart.
+
+==============================================================================
+P7  Mazur measure E_{1,c} on Z_3 and its moments
+==============================================================================
+  c = 2, N = 9: v_3( sum_a a^(k-1) E(a+3^N Z_3) - (1-c^k)B_k/k ), k=1..12: [inf, 9, 9, 19, 9, 18, 10, 19, 9, 20, 9, 18]
+        restricted to Z_3^x vs (1-c^k)(1-3^(k-1))B_k/k: [inf, inf, 9, 19, 9, 18, 10, 19, 9, 20, 9, 18]
+  c = 4, N = 9: v_3( sum_a a^(k-1) E(a+3^N Z_3) - (1-c^k)B_k/k ), k=1..12: [inf, 9, 9, 10, 9, 9, 10, 9, 9, 11, 9, 9]
+        restricted to Z_3^x vs (1-c^k)(1-3^(k-1))B_k/k: [inf, 9, 9, 10, 9, 9, 10, 9, 9, 11, 9, 9]
+  (valuations ~ N - O(log k): the Riemann sums converge 3-adically to the stated moments;
+   c = 2 gives the Genocchi moments (1-2^k)B_k/k = G_k/(2k) on Z_3.)
+
+==============================================================================
+P8  Iwasawa power series of zeta_3 in the trunk variable X = 4^s - 1 = 3 T(s)
+==============================================================================
+  zeta_3(1-s) = G(X)/X,  G(X) = int_{Z_3^x} (1+X)^{l(x)} x^{-1} dE_{1,4}(x),  l(x) = log<x>/log 4
+  (Washington normalization L_3(s,1); RJW Thm 4.1: int x^k zeta_p = (1-p^(k-1)) zeta(1-k)).
+   c_0 mod 3^10 =    33664   (base 3: 1201011211)   v_3(c_0) = 0
+   c_1 mod 3^10 =    36242   (base 3: 1211201022)   v_3(c_1) = 0
+   c_2 mod 3^10 =    35311   (base 3: 1210102211)   v_3(c_2) = 0
+   c_3 mod 3^9 =     8648   (base 3: 102212022)   v_3(c_3) = 0
+   c_4 mod 3^9 =      946   (base 3: 001022001)   v_3(c_4) = 0
+   c_5 mod 3^9 =    10522   (base 3: 112102201)   v_3(c_5) = 0
+   c_6 mod 3^8 =     1775   (base 3: 02102202)   v_3(c_6) = 0
+   c_7 mod 3^8 =     6500   (base 3: 22220202)   v_3(c_7) = 0
+   c_8 mod 3^8 =     3879   (base 3: 12022200)   v_3(c_8) = 2
+   c_9 mod 3^6 =      555   (base 3: 202120)   v_3(c_9) = 1
+  G(0) = c_0 is a 3-adic UNIT (c_0 mod 3 = 1) => G is a unit of Z_3[[X]]:
+   mu = lambda = 0, and G(X) != 0 for every X in the open unit disc of C_3.
+  residue check G(0) = -(2/3) log 4  (pole of zeta_3 at s=1 with residue 1-1/3): True
+  interpolation check: G(4^k-1)/(4^k-1) vs zeta_3(1-k) = (1-3^(k-1))zeta(1-k) (k even),
+                                        vs L(omega,1-k) (k odd; RJW Thm 5.1, chi = omega):
+   k= 1: zeta_3(1-k) =                          1/3   v_3 =  -1   G(4^k-1) = X*zeta_3(1-k) mod 3^6: OK
+   k= 2: zeta_3(1-k) =                          1/6   v_3 =  -1   G(4^k-1) = X*zeta_3(1-k) mod 3^6: OK
+   k= 3: zeta_3(1-k) =                         -2/9   v_3 =  -2   G(4^k-1) = X*zeta_3(1-k) mod 3^6: OK
+   k= 4: zeta_3(1-k) =                       -13/60   v_3 =  -1   G(4^k-1) = X*zeta_3(1-k) mod 3^6: OK
+   k= 5: zeta_3(1-k) =                          2/3   v_3 =  -1   G(4^k-1) = X*zeta_3(1-k) mod 3^6: OK
+   k= 6: zeta_3(1-k) =                      121/126   v_3 =  -2   G(4^k-1) = X*zeta_3(1-k) mod 3^6: OK
+   k= 7: zeta_3(1-k) =                        -14/3   v_3 =  -1   G(4^k-1) = X*zeta_3(1-k) mod 3^6: OK
+   k= 8: zeta_3(1-k) =                    -1093/120   v_3 =  -1   G(4^k-1) = X*zeta_3(1-k) mod 3^6: OK
+   k= 9: zeta_3(1-k) =                      1618/27   v_3 =  -3   G(4^k-1) = X*zeta_3(1-k) mod 3^6: OK
+   k=10: zeta_3(1-k) =                      9841/66   v_3 =  -1   G(4^k-1) = X*zeta_3(1-k) mod 3^6: OK
+   k=11: zeta_3(1-k) =                      -3694/3   v_3 =  -1   G(4^k-1) = X*zeta_3(1-k) mod 3^6: OK
+   k=12: zeta_3(1-k) =              -61203943/16380   v_3 =  -2   G(4^k-1) = X*zeta_3(1-k) mod 3^6: OK
+  X at s = 1/2 is 4^(1/2)-1 = -3 (= 3*T(1/2) = 3*(-1)): True
+  zeta_3(1/2) = G(-3)/(-3):  G(-3) mod 3^7 = 1789 (unit: True) => |zeta_3(1/2)|_3 = 3, nonzero
+  E-game point s = i*: X = 3 T(i*) = 3/2;  G(3/2) mod 3^7 = 826 (unit: True) => zeta_3(1-i*) = (2/3) G(3/2) != 0, |.|_3 = 3
+
+==============================================================================
+P9  |(s-1) zeta_3(s)|_3 = 3 at s = 1-k (von Staudt-Clausen), exact
+==============================================================================
+  even k <= 300: v_3((s-1) zeta_3(s)) = v_3((1-3^(k-1)) B_k) = -1 for all: True
+  odd k <= 119:  v_3(k L(omega,1-k)) = v_3(B_(k,omega)) = -1 for all: True
+  Proof (all k): for even k, (3-1) | k so 3 B_k = -1 mod 3; odd k similarly via B_(k,omega).
+  Since the points 1-k are dense in Z_3 and (s-1)zeta_3(s) is continuous, |(s-1)zeta_3(s)|_3 = 3
+  on all of Z_3: zeta_3 has NO zeros (in particular none at s = 1/2, none at s = i*).
+
+==============================================================================
+P10 archimedean special values: eta and Genocchi numbers carry the trunk
+==============================================================================
+  eta(1-2i) = (1 - 4^i) zeta(1-2i) = -3 T(i) zeta(1-2i), i = 1..40: True
+  Genocchi numbers (2t/(e^t+1)): G_2..G_12 = [-1, 1, -3, 17, -155, 2073]
+  G_n = 2(1-2^n)B_n (n<=60): True;   G_(2i) = -6 T(i) B_(2i) (i<=30): True
+  These are values at NEGATIVE integers; zeta(1-2i) != 0; the factor 1-4^i vanishes only at
+  i = pi*k*sqrt(-1)/log 2, i.e. s = 1-2i on the line Re s = 1 (zeros of 1-2^(1-s)), never on Re s = 1/2.
+
+==============================================================================
+P11 DRIFT/SHEET control: the trunk of every qx+1 map is an Iwasawa coordinate (q non-Wieferich)
+==============================================================================
+  trunk of qx+1 = {x : qx+1 is a power of 2} = {(u^i - 1)/q}, u = 2^ord_q(2).  LTE: v_q(u^i - 1) =
+  v_q(u - 1) + v_q(i); so i -> (u^i-1)/q is an isometry of Z_q onto Z_q iff v_q(u - 1) = 1.
+   q =     3: ord_q(2) =    2, u = 1+q (Mersenne prime)   v_q(u-1) = 1  LTE check i<400: True  => trunk IS an isometry onto Z_q
+   q =     5: ord_q(2) =    4, u = 16                     v_q(u-1) = 1  LTE check i<400: True  => trunk IS an isometry onto Z_q
+   q =     7: ord_q(2) =    3, u = 1+q (Mersenne prime)   v_q(u-1) = 1  LTE check i<400: True  => trunk IS an isometry onto Z_q
+   q =    11: ord_q(2) =   10, u = 1024                   v_q(u-1) = 1  LTE check i<400: True  => trunk IS an isometry onto Z_q
+   q =    13: ord_q(2) =   12, u = 4096                   v_q(u-1) = 1  LTE check i<400: True  => trunk IS an isometry onto Z_q
+   q =    17: ord_q(2) =    8, u = 256                    v_q(u-1) = 1  LTE check i<400: True  => trunk IS an isometry onto Z_q
+   q =    31: ord_q(2) =    5, u = 1+q (Mersenne prime)   v_q(u-1) = 1  LTE check i<400: True  => trunk IS an isometry onto Z_q
+   q =   127: ord_q(2) =    7, u = 1+q (Mersenne prime)   v_q(u-1) = 1  LTE check i<400: True  => trunk IS an isometry onto Z_q
+   q =  1093: ord_q(2) =  364, u = 2^364                  v_q(u-1) = 2  LTE check i<400: True  => trunk is NOT an isometry onto Z_q (Wieferich prime: image q^1Z_q)
+  The 5x+1 and 7x+1 maps (expected to have divergent orbits) carry the same structure; 7x+1 even has
+  u = 1+q exactly, like 3x+1.  The minus sheet uses the negated trunk.  So the identity is DRIFT- and
+  SHEET-blind: it cannot carry information that distinguishes 3x+1 from its controls.
+
+==============================================================================
+P12 half-integer values: T(n/2) = ((-2)^n - 1)/3 and the exits of -1
+==============================================================================
+  T(n/2) = ((-2)^n - 1)/3 for -20 <= n <= 40 (since 4^(1/2) = -2 in 1+3Z_3): True
+  hence T(n + 1/2) = -S(n) = -(2^(2n+1)+1)/3: the plus trunk passes through the negated minus trunk: True
+  departure chart: delta(-1) = 1/2: True;  delta(-1/2) = -1/2: True;  delta(1) = delta(1/2) = 0
+  plus-game reverse moves from -1 with k = 2n+1 land at -S(n) = T(n + 1/2): True
+  So "s = 1/2" in the trunk chart is the first exit of the point -1 (a hostile point of the forward game
+  and of the minus sheet), because log(-2)/log(4) = 1/2.  The number 1/2 here is the exponent relating the
+  two generators -2 and 4 of 1+3Z_3.
+
+[padic] done in 7.0 s
+
+################################ PART 2: archimedean (dirichlet.py) ################################
+
+==============================================================================
+D0  validation of the Euler-Maclaurin Hurwitz zeta against mpmath
+==============================================================================
+max relative error over 36 test points (t up to 250): 3.60e-13
+
+==============================================================================
+D1  the trunk Dirichlet series D_T(s) = sum_{i>=1} T_i^(-s)
+==============================================================================
+sigma_0 (all trunk numbers)       = 0.459365562137   (sum_{i>=2} T_i^-sigma_0 = 1; tail < 3.88e-83)
+sigma_0 (legal exits, 3 does not divide i) = 0.353857453736
+PROVED: for Re s > sigma_0,  |D_T(s)| >= 1 - sum_{i>=2} T_i^(-Re s) > 0.  Since sigma_0 < 1/2,
+        D_T has NO zeros on the critical line Re s = 1/2 (nor anywhere in Re s > sigma_0).
+   margin at Re s = 0.5: 1 - sum_(i>=2) T_i^-sigma = 0.11781989
+   margin at Re s = 0.6: 1 - sum_(i>=2) T_i^-sigma = 0.33526149
+   margin at Re s = 1.0: 1 - sum_(i>=2) T_i^-sigma = 0.73670694
+   continuation check at s = (2+0j): direct 1.042415154329+0.000000000000j  formula 1.042415154329+0.000000000000j  |diff| = 2.2e-16
+   continuation check at s = (1+3j): direct 0.986112376354+0.179414661350j  formula 0.986112376354+0.179414661350j  |diff| = 5.7e-16
+   continuation check at s = (0.7+10j): direct 0.797478654871+0.186476070834j  formula 0.797478654871+0.186476070834j  |diff| = 1.8e-15
+   continuation check at s = (0.3+25j): direct 0.712937745540-0.476580345770j  formula 0.712937745540-0.476580345770j  |diff| = 1.4e-13
+   pole at s = i*pi/log 2 = 0.000000+4.532360j: residue ~ 0.19026231-0.69580344j; predicted 3^s/log 4 = 0.19026220-0.69580352j
+   box [-3.9,1.2] x [0.15,30]: 30 zero cells, 24 pole cells (poles expected at Re s = 0,-1,-2,-3, Im s = pi k/log 2: 24)
+   30 zeros polished (|D_T| < 1e-20 at 30 digits); real parts range [-3.7909, 0.4485]
+      -1.02916990+0.98001062i   -2.35853204+1.15308725i   -3.57568638+1.22769744i
+      +0.05358833+5.07560765i   -1.27074782+5.35284688i   -2.52594650+5.46886929i
+      -3.72115544+5.52998172i   +0.35780408+9.30698056i   -0.83776285+9.75417630i
+      -2.08835973+9.93220339i   -3.29035055+10.01719267i   +0.44852425+13.50489271i
+      -0.54122465+14.14669531i   -1.79354578+14.39834373i   -3.00607101+14.51241425i
+      +0.40288737+17.64968299i   -0.28653974+18.54975404i   -1.55410443+18.87018544i
+      -2.78444990+19.01255188i   +0.28131788+21.70613603i   -0.06767466+22.98894415i
+      -1.34151056+23.35641979i   -2.59719160+23.52122562i   -3.79088892+23.60130176i
+      +0.14563678+25.68958475i   +0.09628894+27.43848242i   -1.14687184+27.86458792i
+      -2.43438967+28.04217678i   -3.64269261+28.12430546i   +0.01119823+29.62836305i
+   zeros with |Re s - 1/2| < 0.05: 0  (the proof above forbids any with Re s > 0.4594)
+
+==============================================================================
+D2  complex zeros of the trunk = zeros of the Euler-type factor 1 - 2^(1-s) on Re s = 1
+==============================================================================
+   k=1: T(i pi k/log2) = 2.64e-31;  s = 1 - 2z = (1.0 - 9.06472028365j);  |eta(s)| = 1.07e-30,  |zeta(s)| = 1.3510562
+   k=2: T(i pi k/log2) = 5.28e-31;  s = 1 - 2z = (1.0 - 18.1294405673j);  |eta(s)| = 2.91e-30,  |zeta(s)| = 1.8374894
+   k=3: T(i pi k/log2) = 4.27e-31;  s = 1 - 2z = (1.0 - 27.194160851j);  |eta(s)| = 2.51e-30,  |zeta(s)| = 1.9619798
+   k=4: T(i pi k/log2) = 1.06e-30;  s = 1 - 2z = (1.0 - 36.2588811346j);  |eta(s)| = 5.34e-30,  |zeta(s)| = 1.6881451
+   k=5: T(i pi k/log2) = 2.26e-31;  s = 1 - 2z = (1.0 - 45.3236014183j);  |eta(s)| = 1.58e-30,  |zeta(s)| = 2.3381481
+   => the trunk vanishes exactly where eta(s) = (1-2^(1-s)) zeta(s) has its non-zeta zeros, on Re s = 1.
+      Any vertical line can be moved to Re s = 1/2 by an affine change of variable; this is not content.
+
+==============================================================================
+D3  control: the Davenport-Heilbronn function (functional equation, no Euler product)
+==============================================================================
+   root number W(chi) = tau/(i sqrt5) = 0.850650808352+0.525731112119j (|W| = 1.000000000000)
+   kappa from (1+i kappa)/(1-i kappa) = W: 0.284079043840412;  closed form (sqrt(10-2sqrt5)-2)/(sqrt5-1) = 0.284079043840412
+   functional equation Lambda(s) = Lambda(1-s) at s = (0.3 + 7.0j): |diff|/|Lambda| = 9.23e-17
+   functional equation Lambda(s) = Lambda(1-s) at s = (0.9 + 40.0j): |diff|/|Lambda| = 3.04e-16
+   functional equation Lambda(s) = Lambda(1-s) at s = (2.0 + 1.0j): |diff|/|Lambda| = 2.33e-17
+   coefficients: a_n = Re-part combination, a_1 = 1, not multiplicative: a_2 = 0.2841+0.0000j, a_3 = -0.2841+0.0000j, a_4 = -1.0000+0.0000j, a_2*a_2 = 0.0807+0.0000j
+   zeros of DH in [0.52, 1.6] x [1, 200] (argument principle): 4.0000 (max phase step 0.482 rad)
+     t in [81,91]: 1 zero(s): 0.808517+85.699348i
+     t in [111,121]: 1 zero(s): 0.650830+114.163343i
+     t in [161,171]: 1 zero(s): 0.574356+166.479306i
+     t in [171,181]: 1 zero(s): 0.724258+176.702461i
+   => 4 zeros with 0.52 < Re s < 1.6 and t <= 200; by the functional equation each has a
+      mirror at 1 - conj(rho): the DH function satisfies the zeta-type functional equation and
+      VIOLATES the Riemann hypothesis.  (Zeros ON the line are also plentiful; not counted here.)
+
+==============================================================================
+D4  control: the Epstein zeta function of x^2 + 5y^2 (class number 2)
+==============================================================================
+   direct sum_(|m|<=3000,|n|<=1500)' (m^2+5n^2)^-2 = 2.5024221262;  zeta(2)L(2,chi_-20)+L(2,chi_-4)L(2,chi_5) = 2.5024222413
+   functional equation Lambda(s) = Lambda(1-s) at s = (0.3 + 7.0j): |diff|/|Lambda| = 2.55e-21
+   functional equation Lambda(s) = Lambda(1-s) at s = (0.8 + 33.0j): |diff|/|Lambda| = 1.64e-20
+   zeros of the Epstein zeta in [0.52, 1.6] x [1, 300] (argument principle): 60.0000 (max phase step 0.488)
+     t in [11,21]: 1 zero(s): 0.932970+15.668250i
+     t in [21,31]: 1 zero(s): 0.937667+29.983395i
+     t in [31,41]: 1 zero(s): 0.696927+36.374064i
+     t in [41,51]: 2 zero(s): 0.823187+44.000113i, 0.634908+46.758409i
+     t in [51,61]: 2 zero(s): 0.597437+52.743266i, 0.811172+58.507737i
+     t in [61,71]: 2 zero(s): 0.799778+61.140256i, 0.724850+64.991945i
+     t in [71,81]: 2 zero(s): 0.807718+79.419545i, 0.845467+75.340005i
+     t in [81,91]: 1 zero(s): 0.907993+89.559828i
+     t in [91,101]: 1 zero(s): 0.850281+96.107171i
+     t in [101,111]: 3 zero(s): 0.591213+103.794593i, 0.627406+107.264662i, 0.904913+110.555448i
+     t in [111,121]: 1 zero(s): 0.834751+120.876973i
+     t in [121,131]: 2 zero(s): 0.708763+127.378168i, 0.786623+124.848698i
+     t in [131,141]: 2 zero(s): 0.828750+138.917375i, 0.673660+135.008819i
+     t in [141,151]: 3 zero(s): 0.913871+141.691693i, 0.653632+149.253149i, 0.674777+147.682907i
+     t in [151,161]: 4 zero(s): 0.591563+151.908219i, 0.556231+159.797578i, 0.903218+155.895046i, 0.719596+153.164755i
+     t in [161,171]: 2 zero(s): 0.954868+170.131947i, 0.651689+166.925558i
+     t in [171,181]: 1 zero(s): 0.689854+180.219021i
+     t in [181,191]: 2 zero(s): 0.894707+184.497602i, 0.683573+186.926566i
+     t in [191,201]: 2 zero(s): 0.763091+191.070140i, 0.705683+198.604559i
+     t in [201,211]: 4 zero(s): 0.905356+201.226710i, 0.672482+207.609976i, 0.753111+205.516897i, 0.605644+202.265435i
+     t in [211,221]: 2 zero(s): 0.550187+219.322989i, 0.844388+215.653849i
+     t in [221,231]: 2 zero(s): 0.686685+230.237873i, 0.705787+221.970539i
+     t in [231,241]: 2 zero(s): 0.783196+236.498497i, 0.555873+232.181419i
+     t in [241,251]: 3 zero(s): 0.574723+250.859470i, 0.806878+246.924441i, 0.764517+244.156776i
+     t in [251,261]: 1 zero(s): 0.665121+253.047552i
+     t in [261,271]: 2 zero(s): 0.587663+261.046142i, 0.851830+265.004601i
+     t in [271,281]: 3 zero(s): 0.839126+275.328213i, 0.579106+273.503358i, 0.664019+278.535810i
+     t in [281,291]: 3 zero(s): 0.617575+282.357137i, 0.730920+281.676899i, 0.787557+289.753825i
+     t in [291,301]: 3 zero(s): 0.640524+299.009918i, 0.548528+295.825101i, 0.822701+296.351875i
+
+==============================================================================
+D5  the E-game's own zeta: dynamical zeta of the canonical escape Psi
+==============================================================================
+   Psi has full branches (h,k), h in {1,1/2}, k >= 1, each a bijection of its shell onto Z_3^x,
+   expanding by 3^k, with price rho_h(k); rho_(1/2)(k) = 2 rho_1(k) (the 1/2-thread pays one extra
+   doubling).  For the weighted full shift the Ruelle zeta is 1/(1 - W), W(x;theta) =
+   (1 + 2^theta) sum_k rho_1(k)^theta x^k, x = 3^-s  (rho_1(1)=1/3, rho_1(2)=4/9, rho_1(k) =
+   2^floor(k log2 3)/3^k = 2^-{k log2 3} for k>=3).  Its poles are the "resonances".
+   min_theta s(theta) = 0.64150 at theta* = 2.6735  (endgame note: dim_H Bad_Psi <= 0.64150)
+   Lundberg exponent: W(1/3; theta_L) = 1 at theta_L = 8.6433  (endgame note: 8.6434)
+   theta* (dimension): leading pole x_0 = 0.494228 (s = 0.64150); stable poles with |x| < 0.8 (3), as |x| and Re s = -log|x|/log 3:
+      x = +0.494228+0.000000i   |x| = 0.494228   Re s = +0.64150   (Ihara-type critical value s_0/2 = 0.32075)
+      x = -0.124207+0.762002i   |x| = 0.772059   Re s = +0.23547   (Ihara-type critical value s_0/2 = 0.32075)
+      x = -0.124207-0.762002i   |x| = 0.772059   Re s = +0.23547   (Ihara-type critical value s_0/2 = 0.32075)
+   theta_L (Lundberg): leading pole x_0 = 0.333333 (s = 1.00000); stable poles with |x| < 0.8 (7), as |x| and Re s = -log|x|/log 3:
+      x = +0.333333+0.000000i   |x| = 0.333333   Re s = +1.00000   (Ihara-type critical value s_0/2 = 0.50000)
+      x = -0.036860+0.367564i   |x| = 0.369408   Re s = +0.90647   (Ihara-type critical value s_0/2 = 0.50000)
+      x = -0.036860-0.367564i   |x| = 0.369408   Re s = +0.90647   (Ihara-type critical value s_0/2 = 0.50000)
+      x = -0.438314+0.000000i   |x| = 0.438314   Re s = +0.75078   (Ihara-type critical value s_0/2 = 0.50000)
+      x = -0.560124+0.000000i   |x| = 0.560124   Re s = +0.52757   (Ihara-type critical value s_0/2 = 0.50000)
+      x = +0.328241+0.535007i   |x| = 0.627674   Re s = +0.42393   (Ihara-type critical value s_0/2 = 0.50000)
+      x = +0.328241-0.535007i   |x| = 0.627674   Re s = +0.42393   (Ihara-type critical value s_0/2 = 0.50000)
+   theta = 1 (prices): leading pole x_0 = 0.441283 (s = 0.74464); stable poles with |x| < 0.8 (1), as |x| and Re s = -log|x|/log 3:
+      x = +0.441283+0.000000i   |x| = 0.441283   Re s = +0.74464   (Ihara-type critical value s_0/2 = 0.37232)
+
+[dirichlet] done in 182.8 s
+
+################################ PART 3: data series (data.py) ################################
+
+==============================================================================
+C0  data: Psi-descent statistics (E-SCC backward game) and Collatz stopping times, m <= 10^6
+==============================================================================
+Psi descent: all 666666 m <= 10^6 prime to 3 descend; mean d = 1.0714, max d = 9 at m = 221576; mean L1 = 0.0595; mean H = 0.1190
+   (cross-check with the endgame lane: mean Psi steps on m = 14 mod 27 up to 1e11 was 2.2848)
+   mean d on m = 14 (mod 27), m <= 10^6: 2.2846
+Collatz shortcut: mean stopping time sigma = 3.4849 (max 176 at m = 626331); mean total stopping time tau = 87.827 (max 329 at m = 837799)
+controls built: Moebius (M(10^6) = 212), Liouville (L(10^6) = -530)
+
+==============================================================================
+T1  fluctuation exponents of the summatory functions S(x) = sum_{m<=x} (a_m - mean)
+==============================================================================
+    alpha = growth exponent of S = abscissa of convergence of sum (a_m - mean) m^-s.
+    RH <=> alpha(Moebius) = 1/2 (Littlewood); every weakly dependent sequence also gives 1/2.
+    vectorized recomputation to 10^7 agrees with the loop code on m <= 10^6; max Psi steps to 10^7: 11 (m = 8751065); max sigma to 10^7: 246 (m = 8088063)
+sequence (m <= 10^7)                            mean  a(max)  a(rms)      H |  shuffle null: a(max)        a(rms)             H
+Psi steps d(m)                                1.0714   0.256   0.290  0.255 |   0.467 +- 0.064   0.464 +- 0.075  0.496 +- 0.006
+L1 links                                      0.0595   0.261   0.310  0.219 |   0.478 +- 0.106   0.471 +- 0.148  0.498 +- 0.008
+hostile landings H                            0.1190   0.250   0.279  0.253 |   0.443 +- 0.093   0.421 +- 0.120  0.498 +- 0.009
+Collatz stopping time sigma                   3.4908   0.602   0.640  0.446 |   0.467 +- 0.123   0.448 +- 0.173  0.498 +- 0.008
+Moebius mu (RH <=> alpha = 1/2)                        0.477   0.491  0.496
+Liouville lambda                                       0.489   0.501  0.496
+random signs                                           0.565   0.601  0.488
+1_(m = 1 mod 27) - 1/27 (periodic 3-adic)              0.000  -0.000 -0.012
+v_3(m) - 1/2 (3-adic digit function)                   0.082   0.080  0.030
+  scale dependence of H (block lengths 2^4..2^11 vs 2^11..2^18):
+     Psi steps d(m)                           H_low = 0.208   H_high = 0.312
+     L1 links                                 H_low = 0.222   H_high = 0.251
+     hostile landings H                       H_low = 0.311   H_high = 0.253
+     Collatz stopping time sigma              H_low = 0.400   H_high = 0.500
+  Collatz: exact N_k (classes mod 2^k without descent) N_22 = 93222, N_26 = 1037374 (= the choice-ladder counts);
+  local growth rate log2(N_(k+1)/N_k) averaged over k = 4..10: 0.774, k = 11..18: 0.859, k = 30..39: 0.897  (-> h(log_3 2) = 0.9500)
+  predicted H = rate/2: 0.387 (low), 0.429 (high), limit 0.4750.
+  Psi: the endgame lane counts 24, 274, 3050, 31438 alive classes at n = 7, 11, 15, 19 give local rates
+  0.554, 0.548, 0.531 -> predicted H about 0.272 (limit <= 0.32075).
+  Heuristic (random placement of the exceptional residue classes; see note): for a statistic that is
+  determined by the digits consumed, alpha = H = (exceptional dimension)/2.  Collatz: h(log_3 2)/2 = 0.47498;
+  Psi descent: dim Bad_Psi / 2 <= 0.64150/2 = 0.32075.  RH plays no role in either number.
+
+==============================================================================
+T2  functional-equation detector (theta-modularity), degree 1 and degree 2
+==============================================================================
+   Ramanujan tau(1..6) = [1, -24, 252, -1472, 4830, -6048]
+sequence                                                    best deg-1 residual (q,kappa,eps)                best deg-2 residual (q,w,eps)
+CONTROL zeta (a_n = 1)                                          6.9e-14 1,0,+1.0000 [233 deg]                                            -
+CONTROL zeta with a_2 perturbed by 1e-6                           1.5e-06 1,0,+1.0000 [0 deg]                                            -
+CONTROL L(s, chi_-4)                                              1.2e-15 4,1,+1.0000 [0 deg]                                            -
+CONTROL L(s, chi_5)                                               8.4e-15 5,0,+1.0000 [0 deg]                                            -
+CONTROL random signs                                            7.2e-02 176,0,-1.0790 [0 deg]                                            -
+CONTROL Delta (weight 12), a_n = tau(n)/n^5.5                                               -                 4.0e-11 1,12,+1.0000 [0 deg]
+CONTROL Delta with tau(2) perturbed by 1e-6                                                 -                 3.8e-04 1,12,+1.0001 [0 deg]
+CONTROL E_4, a_n = sigma_3(n)/n^1.5                                                         -                  5.4e-12 1,4,+1.0000 [3 deg]
+trunk indicator                                                  1.3e-01 41,1,-0.6549 [0 deg]                9.1e-03 89,12,+0.1118 [0 deg]
+Psi steps d(m)                                                   1.8e-01 36,1,-0.5480 [0 deg]                 2.9e-02 79,1,+0.9873 [0 deg]
+L1 links                                                        8.2e-02 275,1,-1.2075 [0 deg]                5.9e-01 150,1,+1.4403 [0 deg]
+hostile landings H                                              4.1e-02 197,0,+1.0068 [0 deg]                7.4e-01 150,1,+1.6257 [0 deg]
+Collatz stopping time sigma                                       2.8e-01 3,0,-0.4392 [0 deg]              4.6e-01 150,12,+85.7932 [0 deg]
+Collatz total stopping time tau                                  1.9e-01 17,1,+2.0739 [0 deg]                4.9e-01 150,2,+3.2286 [0 deg]
+  Residual = ||fit - theta(1/t)|| / ||part of theta(1/t) orthogonal to the polar terms|| over 81 t in [1/12, 12];
+  [n deg] = number of (q, .) pairs skipped because that orthogonal part vanishes (no arithmetic signal).
+  A genuine functional equation gives ~1e-12 or less with eps = +-1; one coefficient changed by 1e-6 gives
+  a residual orders of magnitude larger; an unrelated sequence gives O(1e-2..1).
+
+==============================================================================
+T3  zeros of Dirichlet polynomials sum_{n<=1000} a_n n^-s in [-1.5, 2] x [2, 40]
+==============================================================================
+sequence                           #cells         Re s range  |Re-1/2|<0.05  median|Re-1/2|    dist to zeta zeros (t<40)
+zeta partial sum (a_n = 1)             42 [ +0.304, +0.932]          0.238           0.125   0.34 0.31 0.24 0.29 0.30 0.28
+Moebius mu                             39 [ +0.079, +0.540]          0.513           0.042   0.88 0.81 0.81 0.82 0.84 0.82
+random signs                           42 [ -0.876, +1.272]          0.143           0.237   0.37 0.08 0.71 0.20 0.23 0.26
+trunk indicator (5 terms)              35 [ -0.294, +0.418]          0.000           0.549   0.64 0.66 0.66 0.68 0.52 0.47
+Psi steps d(m)                         37 [ +0.215, +0.985]          0.162           0.144   0.35 0.18 0.21 0.19 0.04 0.08
+L1 links                               26 [ -1.069, +0.824]          0.077           0.208   0.42 0.69 0.22 0.44 0.57 0.80
+hostile landings H                     26 [ -0.586, +0.890]          0.115           0.235   0.42 0.50 0.05 0.40 0.54 0.96
+Collatz stopping time sigma            35 [ -0.361, +1.518]          0.029           0.414   0.88 0.60 0.35 0.78 0.83 0.48
+Psi steps d(m) (10 mean-matched shuffles)                              0.170+-0.063     0.154+-0.021   0.35 0.16 0.31 0.27 0.16 0.22  (mean)
+                                                                                              0.27 0.03 0.22 0.14 0.03 0.04  (min over shuffles)
+Collatz stopping time sigma (10 mean-matched shuffles)                              0.086+-0.054     0.274+-0.100   0.48 0.40 0.41 0.39 0.37 0.48  (mean)
+                                                                                              0.21 0.18 0.07 0.21 0.03 0.11  (min over shuffles)
+  The zeros of zeta itself in this window are the 6 points 1/2 + i*gamma listed above (all on the line);
+  finite Dirichlet polynomials, including the partial sums of zeta, show no alignment with Re s = 1/2.
+  A sequence with mean c contains c*zeta_N(s) (times (1-3^-s) on units), so its zeros are perturbed zeta_N
+  zeros; the shuffles show what that alone produces.
+
+[data] done in 135.0 s
