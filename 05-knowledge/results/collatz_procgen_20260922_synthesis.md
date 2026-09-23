@@ -123,15 +123,17 @@ the divergence half of Collatz, and the sign enters exactly as the sign of
 
 ## 4. Where the missing insight lurks
 
-The instrument locates it. Choice (graph `E`) collapses the `0.95`-dimensional
-exceptional set into a thin set of rationals over the other prime. The
+The instrument locates it. Choice (graph `E`) shrinks the `0.95`-dimensional
+exceptional set by three orders of magnitude at every tested level, into a
+far thinner set whose rational points lie over the other prime. Its exact
+dimension is open. The
 collapse is driven by freedom at rising-run entries. Collatz has no such
 freedom, and its equivalent choiceful reformulation (the undirected game)
 does not supply it. A proof of the divergence half must therefore
 substitute for choice. It must see the drift, handle each orbit exactly,
 use a non-uniform arithmetic input, and cope with a `0.95`-dimensional
-exceptional set, since finitely many parametrized escape families cannot
-cover it. The pasted snippet's themes map to exact places: the sign enters
+exceptional set, which no known escape construction covers; the
+`E`-relaxation's much thinner set is already hard (see item 3 of section 5). The pasted snippet's themes map to exact places: the sign enters
 as the sign of `2^K-3^L`, the Catalan clocks belong to the cycle half, and
 the trunk `(4^i-1)/3` is the exit set of the hardest relaxed obstruction.
 
@@ -142,7 +144,15 @@ the trunk `(4^i-1)/3` is the exit set of the hardest relaxed obstruction.
    landings.
 2. Loops through `1` of every length with bounded ratio (HYP-9122). This is
    a carry-covering statement at the convergent clocks.
-3. The exact dimension of `Bad_inf(E)`: zero or small positive.
+3. The exact dimension of `Bad_inf(E)`: zero or small positive. A
+   heuristic favours positive dimension. A stretch near `-1` banks a
+   multiplicative credit of at least `3/2` (the PROVED bound on paths from
+   `-1`). The next segment then only has to avoid descending by more
+   than that credit, a weaker and larger condition. Concatenating such
+   blocks should give uncountably many hostile points, consistent with
+   the observed growth of about `0.1` bit per level. If this holds, an
+   E-SCC proof needs parametrized escape families, as the atlas notes,
+   not finitely many lemmas.
 4. Althöfer's `3n+-1` game (prize open to 2037; a claimed proof is under
    review). Capped retrograde analysis to `10^8` resolves every odd start
    below `834,437`, with about 28% P-positions and no draw found.
