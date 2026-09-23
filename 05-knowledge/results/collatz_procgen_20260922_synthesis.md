@@ -8,6 +8,20 @@ come from primary sources read in the barrier-atlas lane. Typology entries
 are modelling judgments. Collatz, E-SCC (Q1 and Q2), HYP-9120--9122 and
 Althöfer's game remain OPEN.**
 
+**Wave 3 (2026-09-23), summarized in section 2c.**
+* **Named target.** The divergence half is Lagarias's **Periodicity
+  Conjecture** (PC) restricted to positive integers.
+* **Theorem S** (PROVED and independently audited): no rational number has
+  an eventually Sturmian parity vector under any `3x+r` map, for any
+  slope.
+* **Q1 mirror** (PROVED): every escape from `-1` costs more than 1.
+* **Duality:** the forward–backward duality is REFUTED; the shared
+  numerators are a PROVED straddle.
+* **Endgames:** in both halves of E-SCC the endgame reads **low** `p`-adic
+  digits. It is not Erdős's top-digit problem.
+* **Foundry v4:** every all-orbits target in the family has the same
+  single missing mechanism.
+
 ## 0. What was asked and how it was answered
 
 The request was to generate new approaches to open problems like Collatz
@@ -65,6 +79,16 @@ nor Q2, nor strong connectivity).
     with loops through `1` (every depth up to 41);
   * the neighbourhood of `1/2` costs at least `32/27` to escape (PROVED),
     and its exits are exactly the Collatz trunk `(4^i-1)/3`.
+* Q1's thread of `-1` (wave 3, [Q1 mirror](collatz_procgen_20260922_q1_mirror.md)):
+  * every exit from `n = 2^m u - 1` costs exactly `3^(eta(m+1))`, which
+    lies in `(1,3)`. At the rigid precisions `m = 5..9` it costs `3.8`
+    to `12.8` (PROVED);
+  * so `-1` behaves like Q2's `1/2`, not like Q2's `1`, and a see-saw is
+    needed on both sides;
+  * every `n = 7 mod 8` below `2^32` descends within 43 halvings
+    (FINITE-EXACT);
+  * hostile chains follow `u' = (3^A u + 1)/2^(m'+1)`, a Collatz-type map
+    with memory.
 * Consequence: Le--Smith's Conjecture 1 (every `n` prime to `3` lies on an
   `E`-cycle) holds below `7.87*10^17`.
 * Past-work link: Le--Smith's Conjecture 2 says every nontrivial `E`-cycle
@@ -149,8 +173,91 @@ the divergence half of Collatz, and the sign enters exactly as the sign of
     to depth `6001`.
   * PROVED: the height lower bound (no finite family); the `1/2` escape
     price is exactly `2c(k-1)/3`; seven dyadic hostile points.
-  * The see-saw does not close. **The endgame of Q2 is the base-3 digits of
-    `2^K` (Erdős ternary type).**
+  * The see-saw does not close. **The endgame of Q2 is read from the base-3
+    digits of `2^K w`.** Wave 3 (section 2c) refines this: the digits read
+    are the **low** (3-adic) ones, which the kappa formula
+    `v_3(2^K - r) = 1 + v_3(K - kappa(r))` controls. Erdős's problem is
+    about the top digits, and every 3-adic-window version of it is FALSE.
+
+## 2c. Wave 3 (2026-09-23): the named target, a Sturmian theorem, the Q1 mirror, and one missing mechanism
+
+* **Transversality foundry**
+  ([note](collatz_procgen_20260922_transversality_foundry.md)).
+  * **The target is named** (CITED). The "p-adic irrationality of the
+    Bernstein series" of section 5 is exactly Lagarias's **Periodicity
+    Conjecture** (1985, section 2.8; Bernstein–Lagarias 1996;
+    Monks–Yazinski 2004). Its positive-integer instance, "a Bernstein
+    number is never a positive integer", is Bernstein's 1994 form of no
+    divergence (T1).
+  * **Catalogue** (35 typed items). Every counting or dimension theorem is
+    DEFECT-blind. Every every-element 2-versus-3 theorem excludes only a
+    **zero-entropy** class. The only proved every-orbit results on
+    positive-entropy classes of parity words use growth or capacity:
+    * subcritical words, by Monks–Yazinski;
+    * bounded critical discrepancy, by the in-house
+      [discrepancy theorem](collatz_guards_20260921_discrepancy.md),
+      extended to rationals as Proposition B.
+  * **Theorem S** (PROVED; independently audited on 9 rows by a separate
+    code path). No rational with odd denominator has an eventually
+    Sturmian parity vector under any `3x+r` map, for every slope and every
+    intercept. It also holds for `5x+1` at slopes `alpha < 0.804` and for
+    Mahler's map, so no Z-number has a Sturmian carry word.
+    * The proof is a 2-adic Liouville argument. The parity-vector map is
+      an isometry, and the periodic extensions `u v^inf` of a word's own
+      repetitions give rational approximants. A rational cannot be
+      approximated that well.
+    * Sturmian words repeat a block of length `q_n` for a stretch of order
+      `q_(n+1)`, which suffices because `mu(mu-1) < phi`.
+  * **Generator.** It produces 49 statements, with a matrix of statements
+    against targets. The rows that matter most:
+    * Erdős's problem needs the top ternary digits; the 3-adic-window
+      forms B1 and B2 are FALSE;
+    * the E-SCC Q2 endgame needs the low digits along a dynamically chosen
+      `K` (the kappa formula);
+    * for Mahler, the drift control `5/2` is a proved theorem.
+  * **The HARD class.** Words that are supercritical, positive-entropy and
+    non-repetitive are untouched by every proved mechanism. This is the
+    precise missing piece of T1 and PC. The smallest open instance is
+    candidate **C2**: bounded discrepancy around a supercritical slope.
+* **Q1 mirror** ([note](collatz_procgen_20260922_q1_mirror.md)).
+  * **Loops through `-1`** (PROVED):
+    * their equation is `2^K + B = 3^a`;
+    * every loop has ratio above 2 except the basic loop `MH`;
+    * the records are the **lower** best approximations of `log_2 3`,
+      against the **upper** ones for Q2;
+    * the first three record cycles are exactly the three negative
+      Collatz cycles, which is how the Catalan unit-gap clocks enter.
+  * **Mirror of HYP-9122.**
+    * FINITE-EXACT: it holds for `10 <= K <= 4000`, with explicit
+      verified loops.
+    * PROVED: it fails for `K = 5..9`, the rigid `-1` neighbourhood.
+  * **The exit from `-1` costs more than 1 at every precision** (PROVED).
+    The chain recursion and the landing law are PROVED as well. The
+    endgame reduces exactly (PROVED) to the low binary digits of `3^A u`,
+    with landing depth `v_2(A - lambda(u)) + 1`. Dupuy–Weirich 2016 is
+    the averaged analogue (CITED; not read). The pointwise statement is
+    OPEN.
+  * **Duality REFUTED.** The shared numerators `793585` and
+    `419868489953` pair a hostile forward point with a backward point
+    that descends, at depths 53 and 212. For `N = 3^j + 2^(e-1)` the
+    straddle identity `(|x|-3/2)(y-3/2) = -(rho-1)^2/(2 rho)` (PROVED)
+    places exactly one partner above `3/2`. No letter-count-linear word
+    map preserves non-descent (PROVED via Gelfond–Schneider).
+  * **Census.** 117 backward dyadic points below `3/2` (`e <= 45`) are
+    certified hostile, and the 4 above `3/2` descend. Whether any hostile
+    point lies above `3/2`, on either side, is OPEN.
+* **Foundry v4** ([note](collatz_procgen_20260922_foundry.md), section 3b).
+  * It adds the structural requirements ENTROPY and CHAIN. In the
+    relaxation both base points cost more than 1 to escape, so the
+    hostile chains are again a no-divergence problem, for a Collatz-type
+    map with memory.
+  * **Every all-orbits target now has the same single unblocked real
+    mechanism type** (sound certificate search), plus the placeholder
+    "transversality on HARD words". The targets are Collatz and `3n-1`
+    divergence, PC, both halves of E-SCC, Mahler, Erdős, and the `5n+1`
+    existence question.
+  * **The relaxation renormalizes the difficulty rather than removing
+    it.**
 
 ## 2b. The approach deck: every approach generated or considered, with its disposition
 
@@ -168,7 +275,7 @@ the divergence half of Collatz, and the sign enters exactly as the sign of
 | 10 | Hecke / `X_0(11)` density lens | DEFECT, SHEET | exact density | echo density `2/15`; statistic only |
 | 11 | Catalan unit-gap clocks | cycle half only | table | inherited; not a divergence tool |
 | 12 | fixed sheet gluing `3n+sgn(n)` | no new freedom | zoo | gains nothing |
-| 13 | transversality: p-adic irrationality of Bernstein series | live (divergence half) | formulation only | the named missing ingredient |
+| 13 | transversality: p-adic irrationality of Bernstein series | = Lagarias's Periodicity Conjecture (wave 3) | transversality foundry | named; proved on SUB, BCD, STURM; OPEN on the HARD class (C2 smallest) |
 | 14 | sound certificate searches (rewriting/automata) | live (divergence half) | literature | YAH prize conjectures fail on negatives (atlas) |
 | 15 | sign-specific order laws | the only sign-aware class | order-laws lane | nothing beyond the sign law among 6,016 generated laws (FINITE-EXACT to `10^7`); direction lemma PROVED; windows of at most 12 odd steps sheet-blind |
 | 16 | exceptional dimension of `E` | structural | dimension lane (exact threads to `2^64`, `3^42`) | OPEN; evidence favours 0; infinite (Theorem F PROVED); 382 hostile `-p/3^j` certified |
@@ -180,6 +287,11 @@ the divergence half of Collatz, and the sign enters exactly as the sign of
 | 22 | functional equations (Berg--Meinardus) | DEFECT | none | typed only |
 | 23 | measure rigidity (`x2 x3`) | DEFECT, INTEGRAL | none | blocked |
 | 24 | E-cycle covering (Le--Smith Conj. 1, 2) | relaxation / cycle half | our verifications | Conj. 1 holds below `7.87e17`; Conj. 2 is equivalent to no positive Collatz cycle |
+| 25 | periodic-approximant Liouville (Theorem R) | ENTROPY-blind, DRIFT-blind | Sturmian test, audit | **Theorem S PROVED** (no rational has an eventually Sturmian parity vector, `3x+r`, all slopes) |
+| 26 | capacity plus ordered carry (bounded critical discrepancy) | ENTROPY-blind (critical slope only) | inherited, Prop B | PROVED for positive integers (in-house) and rationals (Prop B, via an in-house sketch) |
+| 27 | Q1 mirror: loops through `-1`, exit prices | relaxation, Q1 | mirror lane | exit costs `3^eta > 1` (PROVED); mirror of HYP-9122 to `K = 4000`; endgame = low binary digits of `3^A u` |
+| 28 | forward-backward word duality | — | mirror lane | REFUTED (straddle identity PROVED; Gelfond–Schneider lemma) |
+| 29 | supercritical strips (C2) | the smallest HARD instance | wave-4 lane | OPEN |
 
 ## 3. The snippet, dispatched
 
@@ -234,11 +346,42 @@ target in section 5.
 of Collatz points to p-adic irrationality of the Bernstein series (the
 2-adic digits of an integer versus a dense odd-step set). The relaxed
 backward half, after every certificate and escape, points to the base-3
-digits of `2^K` (loops lane): Erdős's ternary problem, which the foundry
-listed as a sibling with dimension `log_3 2`. The missing insight is a
-*2-versus-3 digit transversality* theorem. This is the fringe idea the
-session kept returning to from different directions (Mahler `3/2`,
-Erdős `2^n`, the S596 two-block question).
+digits of `2^K` (loops lane). The missing insight is a *2-versus-3 digit
+transversality* theorem. This is the fringe idea the session kept
+returning to from different directions (Mahler `3/2`, Erdős `2^n`, the
+S596 two-block question).
+
+**Refined by wave 3 (section 2c).**
+1. **The divergence half is named.** It is Lagarias's Periodicity
+   Conjecture on the positive integers. It is proved on three word
+   classes:
+   * subcritical words;
+   * bounded critical discrepancy;
+   * Sturmian words (Theorem S, this session).
+
+   Every proved every-orbit technique works either by *growth/capacity*
+   (the first two classes) or by *repetition*, i.e. zero entropy (the
+   third). What is missing is a mechanism for **supercritical,
+   positive-entropy, non-repetitive** words: the HARD class, whose
+   smallest open instance is C2.
+2. **Both halves of the relaxed problem end in low `p`-adic digits, and
+   the relaxation renormalizes rather than removes the difficulty.**
+   * Q2's hostile chains are governed by `v_3(2^K w - h)`, via the kappa
+     formula.
+   * Q1's chains are governed by `v_2(3^A u + 1)`, via
+     `v_2(A - lambda(u))`.
+   * Each chain is again a Collatz-type map with memory. Its termination
+     is a no-divergence statement of the same HARD type.
+   * The Erdős attribution above is corrected. Erdős's problem concerns
+     the **top** ternary digits, and every 3-adic-window version of it is
+     FALSE. Both E-SCC endgames are pointwise versions of Dupuy–Weirich's
+     *averaged* low-digit equidistribution.
+3. **One missing mechanism for the whole family.** In foundry v4, every
+   all-orbits target has the same single real unblocked mechanism type:
+   Collatz and `3n-1` divergence, PC, both halves of E-SCC, Mahler,
+   Erdős, and the `5n+1` existence question. So the "missing insight" is
+   one kind of statement: a non-integrality or irrationality statement,
+   2-adic or 3-adic, that reaches positive-entropy digit words.
 
 The pasted snippet's themes map to exact places: the sign enters
 as the sign of `2^K-3^L`, the Catalan clocks belong to the cycle half, and
@@ -298,6 +441,10 @@ the trunk `(4^i-1)/3` is the exit set of the hardest relaxed obstruction.
    * Observed: the phase `frac(log_2 n)` predicts the value 84--100% of
      the time. Negation equivariance explains the `r<->-r` symmetry.
 5. The divergence half of Collatz: the four-property job description above.
+   **Wave 3 names it:** Lagarias's Periodicity Conjecture on the positive
+   integers (T1, Bernstein 1994). It is proved on SUB, BCD and STURM
+   (section 2c). The next target is C2, bounded discrepancy around a
+   supercritical slope, which the wave-4 HARD-class lane is attacking.
    The corrected foundry leaves exactly two unblocked mechanism types:
    sound certificate searches, and transversality with a Diophantine
    input. The concrete transversality target (a restatement, Bernstein's

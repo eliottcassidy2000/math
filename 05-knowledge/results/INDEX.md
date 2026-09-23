@@ -1,5 +1,24 @@
 # Script Results Index
 
+- [Transversality foundry and Theorem S](collatz_procgen_20260922_transversality_foundry.md):
+  **PROVED (audited) / CITED / FINITE-EXACT; PC OPEN.** The divergence
+  half is Lagarias's Periodicity Conjecture. A catalogue types 35 2-vs-3
+  theorems; COUNT theorems are DEFECT-blind, and every-element theorems
+  reach only zero-entropy classes. A generator produces 49 statements.
+  **Theorem S:** no rational has an eventually Sturmian parity vector
+  under `3x+r` (every slope), by a 2-adic Liouville argument with periodic
+  approximants. The missing HARD class is supercritical, positive-entropy
+  and non-repetitive; its smallest instance is C2.
+
+- [Q1 mirror and the straddle](collatz_procgen_20260922_q1_mirror.md):
+  **PROVED / FINITE-EXACT; Q1 OPEN.** Loops through `-1` satisfy
+  `2^K + B = 3^a`, with ratio `>2` and records at the lower best
+  approximations; the first three record cycles are the negative Collatz
+  cycles. The mirror of HYP-9122 holds for `10 <= K <= 4000` and fails
+  for `K = 5..9`. Every exit from `-1` costs `3^eta > 1`, so a see-saw is
+  needed. The endgame is the low binary digits of `3^A u`. The
+  forward-backward duality is REFUTED (straddle identity).
+
 - [E-game exceptional set looks countable](collatz_procgen_20260922_exceptional_dimension.md):
   **PROVED / FINITE-EXACT; dimension OPEN.** An exact integer
   reformulation carries the threads to `2^64` and `3^41` (a speedup of
@@ -24,7 +43,7 @@
   `6001`. HYP-9122 reduces to the record denominators of `log_2 3`. A
   height lower bound excludes finite families. The `1/2` escape price is
   exactly `2c(k-1)/3`. Seven dyadic points are proved hostile. The see-saw
-  does not close: its endgame is the base-3 digits of `2^K` (Erdős type).
+  does not close: its endgame is the low (3-adic) digits of `2^K w`, not Erdős's top digits (wave-3 refinement).
 
 - [Sibling dimension ladder](collatz_procgen_20260922_sibling_dimension_ladder.md):
   **PROVED / FINITE-EXACT / CITED.** The `3n+b` exceptional set has
