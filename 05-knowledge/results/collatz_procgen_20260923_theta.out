@@ -1,0 +1,414 @@
+# collatz_procgen_20260923_theta -- HYP-9131 (theta beyond phi), Euler's function, HYP-9130 (restricted), defects, '1089'
+# python: 3.10.0 gmpy2 2.3.0 python-flint 0.9.0 sympy 1.14.0 mpmath 1.3.0
+collatz_procgen_20260923_theta_hankel.py
+
+==============================================================================
+K0  thresholds (mu_bar = log2(M0)/L)
+==============================================================================
+Tschakaloff-Zudilin (Lemma P): phi = 1.618034
+H1 (Hankel, elementary):       7/4 = 1.750000
+H2 (+ KRVZ Prop. 2 q-order):   28/11 = 2.545455
+H3 (+ KRVZ Prop. 4 cyclotomic): (7/3)/(11/12 - 2 C_cyc) = 2.878370,  C_cyc = sum_l e_l phi(l)/n^3 = 0.05301135
+dictionary check with the real-case gamma = log|num q|/log|den q|: mu_bar = gamma/(gamma-1)
+   Tschakaloff/Bundschuh  gamma > 2.61803399  <->  mu_bar < 1.618034
+   naive Hankel           gamma > 2.33333333  <->  mu_bar < 1.750000
+   Bezivin 1998           gamma > 1.86666667  <->  mu_bar < 2.153846
+   Choulet 2001           gamma > 1.64705882  <->  mu_bar < 2.545455
+   KRVZ 2009 Thm 2        gamma > 1.53237645  <->  mu_bar < 2.878370
+
+==============================================================================
+K1  exact v2(T_n) of the Hankel determinant of the 2-adic tails (Cauchy-Binet prediction)
+==============================================================================
+  3x+1 Y (A=9,L=10)            mu_bar=1.4265: v2(T_n), n=1..12: [10, 90, 300, 700, 1350, 2310]...  all == L n(n+1)(2n-1)/2: True
+  5x+1 HYP-9131 (A=23,L=33)    mu_bar=1.6183: v2(T_n), n=1..12: [33, 297, 990, 2310, 4455, 7623]...  all == L n(n+1)(2n-1)/2: True
+  5x+1 1^7 0^3                 mu_bar=1.6253: v2(T_n), n=1..12: [10, 90, 300, 700, 1350, 2310]...  all == L n(n+1)(2n-1)/2: True
+  5x+1 1^8 0^2                 mu_bar=1.8575: v2(T_n), n=1..12: [10, 90, 300, 700, 1350, 2310]...  all == L n(n+1)(2n-1)/2: True
+  5x+1 1^10 (A=L)              mu_bar=2.3219: v2(T_n), n=1..12: [1, 9, 30, 70, 135, 231]...  all == L n(n+1)(2n-1)/2: True
+  7x+1 1^10 0 (A=10,L=11)      mu_bar=2.5521: v2(T_n), n=1..12: [11, 99, 330, 770, 1485, 2541]...  all == L n(n+1)(2n-1)/2: True
+  7x+1 A=L                     mu_bar=2.8074: v2(T_n), n=1..12: [1, 9, 30, 70, 135, 231]...  all == L n(n+1)(2n-1)/2: True
+  9x+1 1^9 0                   mu_bar=2.8529: v2(T_n), n=1..12: [10, 90, 300, 700, 1350, 2310]...  all == L n(n+1)(2n-1)/2: True
+
+==============================================================================
+K2  integer identity N_n = 2^(L K_n) b^n T_n(a/b) and the archimedean bound (random fake rationals)
+==============================================================================
+  3x+1 Y (A=9,L=10)            identity holds: True;  max over trials, 2<=n<=7, of log2|N_n| - log2(n! C^n M0^K_n) = -1.00 (must be <= 0)
+  5x+1 HYP-9131 (A=23,L=33)    identity holds: True;  max over trials, 2<=n<=7, of log2|N_n| - log2(n! C^n M0^K_n) = -1.00 (must be <= 0)
+  5x+1 1^7 0^3                 identity holds: True;  max over trials, 2<=n<=7, of log2|N_n| - log2(n! C^n M0^K_n) = -1.00 (must be <= 0)
+
+==============================================================================
+K3  divisibility of N_n: X-order (KRVZ Prop. 2) and cyclotomic factors (KRVZ Prop. 4)
+==============================================================================
+  X-order with X = 10007 (prime), Y = 2, min over 5 random (a,b):  e(n) versus e'(n) = 2e0(n) - n(n-1)
+   n=1:0>=0  n=2:0>=0  n=3:2>=0  n=4:9>=0  n=5:23>=10  n=6:47>=26  n=7:83>=56  n=8:134>=96  n=9:202>=156  n=10:290>=230  n=11:400>=330  n=12:535>=448
+   e(n)/n^3 at n=12: 0.3096  (limit 5/12 = 0.4167)
+  actual maps: N_n divisible by M0^(e'(n)) * prod_(l<n/2) Phi_l^hom(M0^2, 2^(2L))^(e_l(n))  (5 random (a,b) each)
+   3x+1 Y (A=9,L=10)            n=2..10: divisibility holds for all trials: True
+   5x+1 HYP-9131 (A=23,L=33)    n=2..10: divisibility holds for all trials: True
+   5x+1 1^7 0^3                 n=2..10: divisibility holds for all trials: True
+   7x+1 1^10 0 (A=10,L=11)      n=2..10: divisibility holds for all trials: True
+
+==============================================================================
+K4  margin functions (exact): A_k(n) = v2(N_n) + log2(odd divisor, level k) - log2(n! M0^K_n)
+==============================================================================
+  3x+1 Y (A=9,L=10)            mu_bar=1.42647: leading n^3 coeff  H1 +4.314  H2 +10.257  H3 +11.770
+      A1(n) for n=[5, 10, 20, 40, 80, 120]: 831 5.57e+03 3.97e+04 2.97e+05 2.29e+06 7.65e+06
+      A2(n) for n=[5, 10, 20, 40, 80, 120]: 974 8.85e+03 7.62e+04 6.33e+05 5.16e+06 1.75e+07
+      A3(n) for n=[5, 10, 20, 40, 80, 120]: 1.15e+03 1.03e+04 8.83e+04 7.29e+05 5.93e+06 2.01e+07
+  5x+1 HYP-9131 (A=23,L=33)    mu_bar=1.61831: leading n^3 coeff  H1 +5.794  H2 +28.046  H3 +33.708
+      A1(n) for n=[5, 10, 20, 40, 80, 120]: 2e+03 1.12e+04 6.86e+04 4.61e+05 3.33e+06 1.08e+07
+      A2(n) for n=[5, 10, 20, 40, 80, 120]: 2.53e+03 2.35e+04 2.05e+05 1.72e+06 1.4e+07 4.78e+07
+      A3(n) for n=[5, 10, 20, 40, 80, 120]: 3.17e+03 2.89e+04 2.5e+05 2.08e+06 1.69e+07 5.75e+07
+  5x+1 1^8 0^2                 mu_bar=1.85754: leading n^3 coeff  H1 -1.434  H2 +6.306  H3 +8.275
+      A1(n) for n=[5, 10, 20, 40, 80, 120]: 314 652 -2.89e+03 -5.69e+04 -5.94e+05 -2.16e+06
+      A2(n) for n=[5, 10, 20, 40, 80, 120]: 500 4.92e+03 4.47e+04 3.8e+05 3.13e+06 1.07e+07
+      A3(n) for n=[5, 10, 20, 40, 80, 120]: 723 6.82e+03 6.03e+04 5.06e+05 4.14e+06 1.41e+07
+  5x+1 1^10 (A=L)              mu_bar=2.32193: leading n^3 coeff  H1 -0.763  H2 +0.205  H3 +0.451
+      A1(n) for n=[5, 10, 20, 40, 80, 120]: -30.5 -484 -4.93e+03 -4.4e+04 -3.71e+05 -1.27e+06
+      A2(n) for n=[5, 10, 20, 40, 80, 120]: -7.32 50.3 1.01e+03 1.06e+04 9.51e+04 3.32e+05
+      A3(n) for n=[5, 10, 20, 40, 80, 120]: 19.5 284 2.97e+03 2.63e+04 2.21e+05 7.57e+05
+  7x+1 1^10 0 (A=10,L=11)      mu_bar=2.55214: leading n^3 coeff  H1 -11.765  H2 -0.067  H3 +2.909
+      A1(n) for n=[5, 10, 20, 40, 80, 120]: -571 -7.99e+03 -7.87e+04 -6.9e+05 -5.77e+06 -1.98e+07
+      A2(n) for n=[5, 10, 20, 40, 80, 120]: -290 -1.53e+03 -6.79e+03 -3.01e+04 -1.39e+05 -3.52e+05
+      A3(n) for n=[5, 10, 20, 40, 80, 120]: 46.9 1.33e+03 1.69e+04 1.6e+05 1.38e+06 4.79e+06
+  7x+1 A=L                     mu_bar=2.80735: leading n^3 coeff  H1 -1.410  H2 -0.240  H3 +0.058
+      A1(n) for n=[5, 10, 20, 40, 80, 120]: -88.8 -1.04e+03 -9.73e+03 -8.39e+04 -6.96e+05 -2.38e+06
+      A2(n) for n=[5, 10, 20, 40, 80, 120]: -60.7 -391 -2.54e+03 -1.78e+04 -1.33e+05 -4.37e+05
+      A3(n) for n=[5, 10, 20, 40, 80, 120]: -27.5 -107 -175 1.17e+03 1.95e+04 7.72e+04
+  Reading: a rational a/b = Theta(rho) forces n log2(|a|+(2n-1)|b|) >= A_k(n) for EVERY n;
+  A_k(n) ~ c n^3 with c > 0 exactly when mu_bar < 7/4, 28/11, 2.8784 (k = 1, 2, 3).
+  HYP-9131 map, elementary level: least n with A1(n) > n log2(2n 2^h + 2^h):
+      height 2^100: n = 2
+      height 2^10000: n = 37
+      height 2^1000000: n = 416
+      height 2^1000000000: n = 13305
+
+==============================================================================
+K5  coverage: square-swap block words under m x + 1 (blocks of length L with A ones)
+==============================================================================
+   m | supercritical A/L > | H1 covers A/L < | H2 covers A/L < | H3 covers A/L < | all blocks covered at level
+   3 | 0.6309             | 1.0000          | 1.0000          | 1.0000          | H1
+   5 | 0.4307             | 0.7537          | 1.0000          | 1.0000          | H2
+   7 | 0.3562             | 0.6234          | 0.9067          | 1.0000          | H3
+   9 | 0.3155             | 0.5521          | 0.8030          | 0.9080          | none (partial)
+  11 | 0.2891             | 0.5059          | 0.7358          | 0.8320          | none (partial)
+  13 | 0.2702             | 0.4729          | 0.6879          | 0.7778          | none (partial)
+  15 | 0.2560             | 0.4479          | 0.6515          | 0.7367          | none (partial)
+  17 | 0.2447             | 0.4281          | 0.6227          | 0.7042          | none (partial)
+
+==============================================================================
+K6  other quadratic families P(m) = a m(m-1)/2 + s m: v2(T_n) = L[sum_(m<=n) P(m) + a n(n+1)(n-1)/3]
+==============================================================================
+   squares          (a=2, s=1) under 3x+1 Y-map: formula exact for n <= 9: True
+   triangular       (a=1, s=1) under 3x+1 Y-map: formula exact for n <= 9: True
+   pent k(3k-1)/2   (a=3, s=1) under 3x+1 Y-map: formula exact for n <= 9: True
+   pent k(3k+1)/2   (a=3, s=2) under 3x+1 Y-map: formula exact for n <= 9: True
+   2k^2+k           (a=4, s=3) under 3x+1 Y-map: formula exact for n <= 9: True
+
+==============================================================================
+K7  cubes: naive Hankel determinant of the cube tails t_s = sum_m rho^(m^3+3m^2 s+3m s^2)
+==============================================================================
+   n | v2(T_n^cube) | clearing K3_n = 8 sum i^3 | margin v2(T) - (mu_bar-1) L K3_n (Y3 map)
+   1 |           10 (law 10) |                        0 |       10.0
+   2 |          140 (law 140) |                        8 |      105.9
+   3 |          570 (law 570) |                       72 |      262.9
+   4 |         1480 (law 1480) |                      288 |      251.8
+   5 |         3050 (law 3050) |                      800 |     -361.7
+   6 |         5460 (law 5460) |                     1800 |    -2216.4
+   7 |         8890 (law 8890) |                     3528 |    -6155.7
+   exact law (proved, note section 2.3): v2(T_n^cube) = L(3n^3 - 3n^2 + n), attained by the
+   anti-diagonal permutation alone (no Cauchy-Binet cancellation), checked above.
+   v2(T_n^cube) grows like 3 L n^3 while the clearing is 2 n^4 (quartic): the margin is
+   negative from small n on, for every mu_bar > 1. The cube tails are not exponential sums in s
+   (factor (rho^(3m))^(s^2)), so Cauchy-Binet gives no rank gain.
+
+[hankel done in 6.2s]
+collatz_procgen_20260923_theta_euler.py
+
+==============================================================================
+E0  (rho;rho)_inf: product = Euler q-series = pentagonal bilateral sum (mod 2^N)
+==============================================================================
+  3x+1 (A=9,L=10): rho = 2^10/3^9    product==pentagonal: True;  product==q-series: True
+  3x+1 A=L (rho = 2/3)               product==pentagonal: True;  product==q-series: True
+  5x+1 1^6 0^4                       product==pentagonal: True;  product==q-series: True
+  5x+1 A=L (rho = 2/5)               product==pentagonal: True;  product==q-series: True
+
+==============================================================================
+E1  v2(V_n) of the Hankel determinant of the 2-adic tails: prediction L n(n+1)(2n+1)/6
+==============================================================================
+  3x+1 (A=9,L=10): rho = 2^10/3^9    n=1..12: [10, 50, 140, 300, 550, 910]...  all == prediction: True
+  3x+1 A=L (rho = 2/3)               n=1..12: [1, 5, 14, 30, 55, 91]...  all == prediction: True
+  5x+1 1^6 0^4                       n=1..12: [10, 50, 140, 300, 550, 910]...  all == prediction: True
+  5x+1 A=L (rho = 2/5)               n=1..12: [1, 5, 14, 30, 55, 91]...  all == prediction: True
+
+==============================================================================
+E2/E3  integer N_n: identity, v2 = L n^3, archimedean bound; divisibility (KRVZ Props. 1, 4)
+==============================================================================
+  3x+1 (A=9,L=10): rho = 2^10/3^9    N_n integer: True;  M0^e0 * prod Phi_l^hom divides N_n: True;  max log2|N_n| - bound = -3.2 (<= 0)
+  3x+1 A=L (rho = 2/3)               N_n integer: True;  M0^e0 * prod Phi_l^hom divides N_n: True;  max log2|N_n| - bound = -6.2 (<= 0)
+  5x+1 1^6 0^4                       N_n integer: True;  M0^e0 * prod Phi_l^hom divides N_n: True;  max log2|N_n| - bound = -3.2 (<= 0)
+
+==============================================================================
+E4  margins E_k(n) = v2(N_n) + log2(odd divisor) - log2(archimedean bound w/o the C^n term)
+==============================================================================
+  thresholds: E1 (elementary) mu_bar < 3/2;  E2 (+KRVZ Prop. 1) < 2;  E3 (+KRVZ Prop. 4) < 2.237193
+  real-case dictionary: KRVZ Thm 2 (lambda != 0) gamma > 1.80828115  <->  mu_bar < 2.237193
+  3x+1 (A=9,L=10): rho = 2^10/3^9    mu_bar=1.42647 leading n^3 coeff: E1 +0.4902  E2 +2.8677  E3 +3.6239
+      E1(n), n=[5, 10, 20, 40, 80, 160]: 224.6 1115 6381 4.116e+04 2.901e+05 2.165e+06
+      E2(n), n=[5, 10, 20, 40, 80, 160]: 367.2 2827 2.264e+04 1.821e+05 1.462e+06 1.172e+07
+      E3(n), n=[5, 10, 20, 40, 80, 160]: 452.5 3554 2.866e+04 2.304e+05 1.849e+06 1.482e+07
+  3x+1 A=L (rho = 2/3)               mu_bar=1.58496 leading n^3 coeff: E1 -0.0566  E2 +0.2075  E3 +0.2915
+      E1(n), n=[5, 10, 20, 40, 80, 160]: -12.85 -86.54 -571.9 -4066 -3.062e+04 -2.381e+05
+      E2(n), n=[5, 10, 20, 40, 80, 160]: 2.995 103.7 1235 1.159e+04 9.96e+04 8.237e+05
+      E3(n), n=[5, 10, 20, 40, 80, 160]: 5.317 155.5 1827 1.678e+04 1.422e+05 1.167e+06
+  5x+1 1^6 0^4                       mu_bar=1.39316 leading n^3 coeff: E1 +0.7123  E2 +3.0342  E3 +3.7727
+      E1(n), n=[5, 10, 20, 40, 80, 160]: 247.9 1320 8090 5.511e+04 4.027e+05 3.07e+06
+      E2(n), n=[5, 10, 20, 40, 80, 160]: 387.2 2992 2.397e+04 1.927e+05 1.547e+06 1.24e+07
+      E3(n), n=[5, 10, 20, 40, 80, 160]: 470.4 3701 2.985e+04 2.399e+05 1.925e+06 1.543e+07
+  5x+1 A=L (rho = 2/5)               mu_bar=2.32193 leading n^3 coeff: E1 -0.5480  E2 -0.1610  E3 -0.0379
+      E1(n), n=[5, 10, 20, 40, 80, 160]: -64.44 -539.8 -4353 -3.492e+04 -2.798e+05 -2.241e+06
+      E2(n), n=[5, 10, 20, 40, 80, 160]: -41.22 -261.1 -1706 -1.197e+04 -8.904e+04 -6.855e+05
+      E3(n), n=[5, 10, 20, 40, 80, 160]: -30.49 -154.1 -751.5 -4168 -2.617e+04 -1.816e+05
+  rho = 2^10/3^9, elementary level: least n with E1(n) > n log2(3 * 2^h) (excludes all a/b of height <= 2^h):
+      h = 100: n = 10
+      h = 10000: n = 137
+      h = 1000000: n = 1432
+
+==============================================================================
+E5  signed bilateral pentagonal swap words: blocks with R_B'' = 2 R_B - R_B' (3x+1)
+==============================================================================
+  L= 9 A= 6 mu_bar=1.0566: B'=111110100  B=111011100  B''=111101001  (R in arithmetic progression)
+  L=10 A= 7 mu_bar=1.1095: B'=1111110100  B=1111011100  B''=1111101001  (R in arithmetic progression)
+  L=11 A= 7 mu_bar=1.0086: B'=11111110000  B=11111001100  B''=11111100001  (R in arithmetic progression)
+  L=11 A= 8 mu_bar=1.1527: B'=11111110100  B=11111011100  B''=11111101001  (R in arithmetic progression)
+  L=12 A= 8 mu_bar=1.0566: B'=111111110000  B=111111001100  B''=111111100001  (R in arithmetic progression)
+  L=12 A= 9 mu_bar=1.1887: B'=111111110100  B=111111011100  B''=111111101001  (R in arithmetic progression)
+  L=13 A= 9 mu_bar=1.0973: B'=1111111110000  B=1111111001100  B''=1111111100001  (R in arithmetic progression)
+  L=13 A=10 mu_bar=1.2192: B'=1111111110100  B=1111111011100  B''=1111111101001  (R in arithmetic progression)
+  L=14 A= 9 mu_bar=1.0189: B'=11111111100000  B=11111110011000  B''=11111111000010  (R in arithmetic progression)
+  L=14 A=10 mu_bar=1.1321: B'=11111111110000  B=11111111001100  B''=11111111100001  (R in arithmetic progression)
+  L=14 A=11 mu_bar=1.2453: B'=11111111110100  B=11111111011100  B''=11111111101001  (R in arithmetic progression)
+  (L, A) = (10, 9): no arithmetic progression of R-values among the 10 blocks with nine 1s, so no
+  signed-pentagonal swap word has exactly rho = 2^10/3^9; the NUMBER (rho;rho)_inf is still proved
+  irrational by Theorem E1, and every listed (L, A) gives signed pentagonal swap words covered by E1/E2.
+
+==============================================================================
+E6  unsigned bilateral pentagonal sum_(k in Z) rho^(k(3k-1)/2): two-family Hankel (naive)
+==============================================================================
+  signed two-family tails (= Euler's function): v2(T_n) = L[sum g_i + 2 sum (n-i) e_i] for n <= 9: True
+  leading terms (5/8) L n^3 against a clearing 2 n^3 log2 M0: naive threshold mu_bar < 21/16 = 1.3125;
+  the q-exponential representation (E1) is strictly better (3/2), and the unsigned sum has no
+  single q-exponential representation (it is a product of three q-Pochhammer symbols).
+
+[euler done in 3.2s]
+collatz_procgen_20260923_theta_defect.py
+
+==============================================================================
+D1  cubes: partial sums S_K = A_K / 3^(9K^3): exact height versus triangle bound
+==============================================================================
+  K | gcd(A_K, 3^(9K^3)) | log2 H exact | log2 triangle bound (K+1) 3^(9K^3) | defect bits | v2/log2H
+   1 |                  1 |        14.34 |                                15.26 |        0.93 | 5.5796
+   2 |                  1 |       114.19 |                               115.70 |        1.51 | 2.3645
+   3 |                  1 |       385.22 |                               387.15 |        1.93 | 1.6614
+   4 |                  1 |       913.01 |                               915.26 |        2.25 | 1.3691
+   5 |                  1 |      1783.16 |                              1785.67 |        2.51 | 1.2113
+   6 |                  1 |      3081.24 |                              3083.97 |        2.73 | 1.1132
+   7 |                  1 |      4892.85 |                              4895.78 |        2.93 | 1.0464
+   8 |                  1 |      7303.58 |                              7306.68 |        3.10 | 0.9981
+   9 |                  1 |     10399.01 |                             10402.26 |        3.25 | 0.9616
+  10 |                  1 |     14264.74 |                             14268.12 |        3.39 | 0.9331
+  11 |                  1 |     18986.34 |                             18989.85 |        3.51 | 0.9101
+  12 |                  1 |     24649.41 |                             24653.04 |        3.63 | 0.8913
+  The denominator 3^(9K^3) is exact (A_K = 2^(10K^3) mod 3), so the triangle inequality loses only
+  log2(K+1) - log2(1.052) bits: the Liouville exponent 1/mu_bar = 0.7010 has no calculable defect.
+
+==============================================================================
+D2  cubes: periodic approximants Phi(u v^inf) of Y3 (best per period end j): gcd defect
+==============================================================================
+  426 best approximants (period end j < 3000): max log2 gcd(P,Q) = 879.7, mean 239.36 bits;
+  in 164 of them v is a proper power; after canonicalization (primitive period, minimal preperiod) the residual gcd is <= 14.3 bits
+    j=   20: lambda=   38, log2 H natural     28.6, after gcd     28.6; canonical: v = w^1, preperiod shortened by 0, height     28.6 (residual gcd 0.0); gain lambda-H     +9.4
+    j=  517: lambda= 1018, log2 H natural    738.6, after gcd    656.2; canonical: v = w^1, preperiod shortened by 57, height    656.2 (residual gcd 0.0); gain lambda-H   +361.8
+    j= 1014: lambda= 1868, log2 H natural   1447.1, after gcd   1269.6; canonical: v = w^1, preperiod shortened by 124, height   1269.6 (residual gcd 0.0); gain lambda-H   +598.4
+    j= 1511: lambda= 2168, log2 H natural   2155.6, after gcd   1811.6; canonical: v = w^25, preperiod shortened by 1, height   1811.6 (residual gcd 0.0); gain lambda-H   +356.4
+    j= 2008: lambda= 3078, log2 H natural   2865.7, after gcd   2225.3; canonical: v = w^1, preperiod shortened by 448, height   2225.3 (residual gcd 0.0); gain lambda-H   +852.7
+    j= 2505: lambda= 3438, log2 H natural   3574.1, after gcd   3109.7; canonical: v = w^33, preperiod shortened by 5, height   3109.7 (residual gcd 0.0); gain lambda-H   +328.3
+  The large gcds are the calculable defect of a NON-CANONICAL representation (non-primitive period,
+  non-minimal preperiod: factors (2^|v|-M_v)/(2^|w|-M_w) and M_z); after canonicalization the residual
+  gcd is small and the gains stay bounded (they are the partial-sum approximants in disguise).
+
+==============================================================================
+D3  squares: Zudilin forms (gcd, heights) and the exponent ladder at the Y map (mu_bar = 1.4265)
+==============================================================================
+  n  m | log2 H natural | log2 H after gcd | log2 gcd | v2 of form | ratio log2H / v2  (18659 = 3^9 - 2^10)
+   2  0 |          142.7 |            128.5 |     14.2 |        190 | 0.6765   gcd = 3^0 * 18659^1 * (0.0 bits)
+   2  1 |          214.0 |            199.9 |     14.2 |        300 | 0.6662   gcd = 3^0 * 18659^1 * (0.0 bits)
+   4  0 |          513.6 |            428.1 |     85.5 |        610 | 0.7018   gcd = 3^0 * 18659^2 * (57.1 bits)
+   4  2 |          798.9 |            742.0 |     56.9 |       1010 | 0.7346   gcd = 3^0 * 18659^2 * (28.5 bits)
+   6  0 |         1112.7 |           1013.0 |     99.7 |       1270 | 0.7976   gcd = 3^0 * 18659^3 * (57.1 bits)
+   6  4 |         2025.7 |           1926.0 |     99.7 |       2470 | 0.7797   gcd = 3^0 * 18659^3 * (57.1 bits)
+   8  0 |         1940.1 |           1740.6 |    199.5 |       2170 | 0.8021   gcd = 3^0 * 18659^4 * (142.7 bits)
+   8  5 |         3437.9 |           3235.6 |    202.3 |       4120 | 0.7853   gcd = 3^0 * 18659^4 * (145.5 bits)
+  10  0 |         2995.7 |           2610.6 |    385.1 |       3310 | 0.7887   gcd = 3^0 * 18659^5 * (314.1 bits)
+  10  6 |         5220.9 |           4921.5 |    299.4 |       6190 | 0.7951   gcd = 3^0 * 18659^5 * (228.5 bits)
+  12  0 |         4279.5 |           3880.3 |    399.2 |       4690 | 0.8274   gcd = 3^0 * 18659^6 * (314.1 bits)
+  12  7 |         7374.9 |           6971.5 |    403.4 |       8680 | 0.8032   gcd = 3^0 * 18659^6 * (318.3 bits)
+  asymptotic height exponent per unit of 2-adic valuation (irrationality needs < 1):
+     periodic approximants (natural, Lemma H')     1.4265
+     Zudilin/Lemma P, m = 0                        0.9510
+     Zudilin/Lemma P, m = n/phi                    0.8816
+     Hankel H1 (Cauchy-Binet)                      0.8151
+     Hankel H2 (+ q-order divisor)                 0.5604
+     Hankel H3 (+ cyclotomic divisor)              0.4956
+  (the defect exploited at each step: Pade cancellation, Vandermonde rank, forced odd divisors)
+
+==============================================================================
+D4  squares at the Y map: forced divisor (content of N_n(a,b)) versus the proven divisor D_n
+==============================================================================
+  n | log2 content | log2 D_n proven | extra bits | v3(extra) | v11(content) | v11(D_n)
+   2 |          0.0 |             0.0 |        0.0 |         0 |            0 |        0   extra = 3^0 * 18659^0 * (0.0 bits)
+   3 |         71.2 |            28.5 |       42.7 |        18 |            0 |        0   extra = 3^18 * 18659^1 * (0.0 bits)
+   4 |        228.1 |            85.6 |      142.6 |        81 |            0 |        0   extra = 3^81 * 18659^1 * (0.0 bits)
+   5 |        570.3 |           313.8 |      256.5 |       117 |            0 |        0   extra = 3^117 * 18659^3 * (28.5 bits)
+   6 |       1069.5 |           656.2 |      413.4 |       189 |            0 |        0   extra = 3^189 * 18659^4 * (57.1 bits)
+   7 |       1868.3 |          1312.3 |      555.9 |       243 |            0 |        0   extra = 3^243 * 18659^6 * (85.7 bits)
+   8 |       2881.0 |          2111.1 |      769.8 |       342 |            0 |        0   extra = 3^342 * 18659^8 * (114.3 bits)
+   9 |       4350.1 |          3280.8 |     1069.2 |       414 |            0 |        0   extra = 3^414 * 18659^11 * (257.0 bits)
+  The extra content is 3^(O(n^2)) (the tied alpha = q^(1/2) term of KRVZ Prop. 2) times powers of
+  M0 - 2^L = 18659 = Phi_1^hom(M0, 2^L) (from Phi_1(xi) | Phi_1(q) = (xi-1)(xi+1), growing slowly):
+  no additional cubic lever.
+
+==============================================================================
+D5  cubes at the Y3 map: forced divisor of the Hankel integers of the cube tails
+==============================================================================
+  n | K3 = 8 sum i^3 | log2 content | v3(content)/9 (X-order) | e3 law 3n^3-18n^2+34n-19 | v11(content) | quartic loss (mu_bar-1) L K3
+   2 |              8 |          0.0 |                       0.0 |                         0 |            0 |         34   content = 3^0 * 18659^0 * (0.0 bits)
+   3 |             72 |        114.1 |                       2.0 |                         2 |            0 |        307   content = 3^18 * 18659^1 * (71.4 bits)
+   4 |            288 |        484.9 |                      21.0 |                        21 |            0 |       1228   content = 3^189 * 18659^3 * (142.8 bits)
+   5 |            800 |       1369.3 |                      76.0 |                        76 |            0 |       3412   content = 3^684 * 18659^5 * (214.2 bits)
+   6 |           1800 |       3166.6 |                     185.0 |                       185 |            1 |       7676   content = 3^1665 * 18659^8 * (414.1 bits)
+   7 |           3528 |       6176.4 |                     366.0 |                       366 |            2 |      15046   content = 3^3294 * 18659^12 * (785.3 bits)
+  The forced divisor of cube Hankel integers is M0^(3n^3 + O(n^2)) (cubic) times O(1)-size factors;
+  closing the 0.299 gap needs a forced divisor of size M0^((1 - 1/mu_bar) K3) ~ M0^(0.6 n^4) (quartic).
+  No systematic 11-adic (or 1089) factor appears: mod-11 structure cannot supply the missing lever.
+
+==============================================================================
+D6  exact forced divisor of det F(xi) (gcd over (a,b)) versus KRVZ's proven divisor (xi-degree units)
+==============================================================================
+  squares:  n | K_n | forced deg (xi-order + cyclotomic) | KRVZ proven deg | excess | excess/n^2 | forced/n^3
+             4 |    56 |                                 16 |               6 |     10 |      0.625 | 0.2500
+             5 |   120 |                                 40 |              22 |     18 |      0.720 | 0.3200
+             6 |   220 |                                 75 |              46 |     29 |      0.806 | 0.3472
+             7 |   364 |                                131 |              92 |     39 |      0.796 | 0.3819
+             8 |   560 |                                202 |             148 |     54 |      0.844 | 0.3945
+             9 |   816 |                                305 |             230 |     75 |      0.926 | 0.4184
+            10 |  1140 |                                431 |             332 |     99 |      0.990 | 0.4310
+            11 |  1540 |                                593 |             470 |    123 |      1.017 | 0.4455
+            12 |  2024 |                                781 |             628 |    153 |      1.062 | 0.4520
+            13 |  2600 |                               1015 |             830 |    185 |      1.095 | 0.4620
+            14 |  3276 |                               1279 |            1054 |    225 |      1.148 | 0.4661
+  cubes:    n | K3_n | xi-order (law 3n^3-18n^2+34n-19) | cyclotomic deg | forced/K3_n
+             3 |    72 |      2 (     2)                      |              6 | 0.1111
+             4 |   288 |     21 (    21)                      |             13 | 0.1181
+             5 |   800 |     76 (    76)                      |             20 | 0.1200
+             6 |  1800 |    185 (   185)                      |             37 | 0.1233
+             7 |  3528 |    366 (   366)                      |             67 | 0.1227
+  All forced factors are xi-powers and cyclotomic Phi_d(xi) (no other irreducible factor occurs).
+  Squares: the tied (theta-null) case carries MORE forced factors than KRVZ prove (Phi_1(xi), Phi_3(xi),
+  Phi_4(xi), ... with larger exponents); the excess grows slowly (excess/n^2 from 0.6 to ~1.2 for
+  n = 4..14, excess/n^3 decreasing), i.e. below the cubic order of the proven part: no extra cubic
+  lever in range. Cubes: the xi-order follows the cubic law (checked to n = 12 in the scratch runs) and
+  the cyclotomic part is small, against a quartic clearing K3 ~ 2n^4, so forced/K3 -> 0.
+
+[defect done in 6.5s]
+collatz_procgen_20260923_theta_zero.py
+
+==============================================================================
+Z1  F2-rank frontier W_2(E)/E for the cube indicator (Lemma F2: parity half of HC-CT1)
+==============================================================================
+  tested 446 values of E in [10, 1500]  (1.1s)
+  min W_2(E)/E = 1.4706 (E = 17, W_2 = 25);  mean = 1.9850
+  #E with W_2(E) >= 1.4265 E: 446/446
+  #E with W_2(E) >= 1.5 E: 445/446
+  #E with W_2(E) >= 1.75 E: 439/446
+  #E with W_2(E) >= 1.9 E: 425/446
+  #E with W_2(E) >= 1.95 E: 405/446
+  E >= 100: min ratio 1.9379, max 2.0100; 2E - W_2(E) ranges over [-1, 9]
+
+==============================================================================
+Z2  heights of odd-leading (v2 < 10) forms in Lambda_(E, ceil(wE)) for the cube series
+==============================================================================
+  (6.1s)
+  w = 1.5: HC-CT1 witness (v2(lead) < 10) found for 62/62 values of E; max witness height 1 (log2 0.0); max LLL-basis height log2 0.0
+      worst height at E = 20: (h, W'-W, v2, margin) = (1, 0, 0, 7), dim 12
+      minimal margin 10 W' + v2 - log2(3^9) E - log2(h (E+1) dim) over all E: 6.7 at E = 20
+  w = 1.75: HC-CT1 witness (v2(lead) < 10) found for 62/62 values of E; max witness height 655200 (log2 19.3); max LLL-basis height log2 20.7
+      worst height at E = 600: (h, W'-W, v2, margin) = (655200, 0, 3, 1908), dim 152
+      minimal margin 10 W' + v2 - log2(3^9) E - log2(h (E+1) dim) over all E: 57.5 at E = 20
+  w = 1.9: HC-CT1 witness (v2(lead) < 10) found for 62/62 values of E; max witness height 5721036864561271037854840613 (log2 92.2); max LLL-basis height log2 93.4
+      worst height at E = 600: (h, W'-W, v2, margin) = (5721036864561271037854840613, 0, 2, 2736), dim 62
+      minimal margin 10 W' + v2 - log2(3^9) E - log2(h (E+1) dim) over all E: 88.3 at E = 20
+  every witness certifies 'X is not a rational of height < 2^margin' (FINITE certificates only).
+
+==============================================================================
+Z3  echelon case: (E, W] inside one cube interval [N^3, (N+1)^3) => rows independent
+==============================================================================
+  for E = N^3 - 1, N = 4..12: W_2(E) >= (N+1)^3 - 1 (distinct minimal columns j - N^3): True
+  (ratio (N+1)^3/N^3 -> 1: a provable but weak restricted form; the data of Z1 show W_2(E) ~ 2E)
+
+==============================================================================
+Z4  F2 linear complexity profile of the cube indicator (Berlekamp-Massey)
+==============================================================================
+  N = 40000: final linear complexity 20000 (N/2 = 20000); max |L_n - n/2| = 8.0; #jumps 9960, max jump 16  (0.4s)
+  LCP increments (= degrees of the F2 partial quotients) distribution: 1:4966, 2:2537, 3:1222, 4:572, 5:327, 6:172, 7:72, 8:38, 9:32, 10:10
+  random binary sequences: increment k with frequency 2^-k; here k=1: 0.499, k=2: 0.255, k=3: 0.123, k=4: 0.057
+  A near-perfect profile (bounded deviation) is the F2 behaviour behind W_2(E) ~ 2E in Z1.
+
+[zero done in 7.7s]
+collatz_procgen_20260923_theta_1089.py
+
+==============================================================================
+N1  arithmetic facts
+==============================================================================
+  1089 = 33^2 = 3^2 * 11^2                                True
+  33 = 2^5 + 1                                            True
+  3^5 = 2*11^2 + 1                                        True
+  3^9 = 18*1089 + 81                                      True
+  2^10 = 1089 - 65 (= 32^2 = 33^2 - 65)                   True
+  3^7 - 2^11 = 139 = 2^7 + 11                             True
+  3^10 = 1 mod 121  (11 is a base-3 Wieferich prime)      True
+  3^9 - 2^10 = 18659 = 47 * 397                           True
+  rho = 2^10/3^9 mod 11 = 3, mod 121 = 47 (coincidence: 47 also divides 3^9 - 2^10); multiplicative order mod 121 = 55
+  rho^5 mod 121 = 34 = 2^50 mod 121 = 34 (because 3^45 = 1 mod 121)
+  3^5 = 2*11^2 + 1 is the last solution of 3^n = 2y^2 + 1 (n = 1, 2, 5): classical.
+  None of these involves the prime 2 beyond 2^5 + 1 = 33; HYP-9127 is a statement about 2-adic digits.
+
+==============================================================================
+N2  11-adic view: terms rho^(k^3) are 11-adic units; the series does not converge in Q_11
+==============================================================================
+  k -> rho^(k^3) mod 121 is periodic with period 55; the partial sums S_K mod 121 drift by 0 per period
+  so S_K mod 121 is periodic with period 55 and has no 11-adic limit
+  (drift 0 is generic: cubing permutes Z/55, so a period sums to (rho^55 - 1)/(rho - 1) = 0 mod 121)
+  (|rho^(k^3)|_11 = 1). Nothing 11-adic constrains the 2-adic number X or a putative rational value a/b.
+
+==============================================================================
+N3  the real value X_R = sum (2^10/3^9)^(k^3): continued fraction and integer relations
+==============================================================================
+  X_R = 1.0520245898011601445366354485065054080462396464408  (14 terms, 3000 digits)
+  reliable partial quotients: 2700; max a_n = 3929; #a_n >= 100: 41 (Gauss-Kuzmin expects 38.7)
+  Levy constant estimate log(q_n)/n = 1.1742 (typical: pi^2/(12 ln 2) = 1.1866)
+  PSLQ, degree <= 6, coefficients <= 10^40 at 400 digits: None
+  PSLQ on [1, X, X/1089, 33 X, 1/1089] (sanity: finds the trivial rational dependencies): [0, -33, 0, 1, 0]
+
+==============================================================================
+N4  2-adic X: denominators built from 1089, and the block length 33
+==============================================================================
+  for d = 1089^j, 33^j, 11^j, 121^j, 3^j (j < 60): the balanced residue of d X mod 2^N has >= 99989 bits (N = 100000), so X != c/d for every integer c with |c| < 2^99988.
+  (Rational reconstruction in the previous note already excludes every a/b with |a|,|b| <= 2^4999999.)
+  Block length 33 of the HYP-9131 word enters only through mu_bar = 23 log2(5)/33; Theorem H1 proves
+  the word irrational for every L with mu_bar < 7/4, so '33' plays no role in the proof.
+
+VERDICT: NUMEROLOGY. The arithmetic facts are real (11 is a base-3 Wieferich prime); no periodicity,
+identity or functional equation of X or of the 33-letter word modulo 1089, 11-adically, or through
+block length 33/1089 was found, and the proof of HYP-9131 does not use 33.
+
+[1089 done in 2.4s]

@@ -2,14 +2,16 @@
 id: HYP-9131
 title: "Square swaps beyond the Tschakaloff threshold: the 5x+1 square-swap word with 23 ones in 33 letters has an irrational Bernstein number"
 status: >
-  OPEN. This is the cheapest open instance of the PC square tier. Theorem Q
-  settles every quadratic swap family when mu_bar < phi (every 3x+r map).
-  For the 5x+1 square-swap word with blocks of 23 ones in 33 letters,
-  mu_bar = 1.61831 = phi + 0.00028. Diagonal Pade forms beat the threshold
-  at every tested size (margins +889 at mu_bar = 1.8575, n = 800), but their
-  heights grow like n log n, so this is evidence, not proof (candidate
-  HC-CT4 asks for a linear height bound). An improvement of Zudilin's phi
-  for 2-adic theta values would settle it.
+  SETTLED -- PROVED (2026-09-23; theta-beyond-phi lane, orchestrator-audited).
+  The 5x+1 square-swap number sum (2^33/5^23)^(k^2) is irrational in Q_2.
+  Proof: Theorem H1, the 2-adic transcription of Bezivin's Hankel-determinant
+  method. The tails are exponential sums, and Cauchy-Binet gives a unique
+  minimal-valuation term, so the Hankel determinant has exact valuation
+  L n(n+1)(2n-1)/2. This beats the archimedean clearing whenever
+  mu_bar < 7/4, and here mu_bar = 1.61831. With the transcribed KRVZ
+  divisibilities (cited): mu_bar < 28/11 (every 5x+1 square-swap word) and
+  mu_bar < 2.87837 (every 7x+1 word). The phi threshold of Zudilin's
+  one-parameter construction was not the true frontier.
 source: collatz-procgen-20260923 cube-theta lane (candidates HC-CT7, HC-CT4)
 depends_on:
   - 05-knowledge/results/collatz_procgen_20260923_cube_theta.md
