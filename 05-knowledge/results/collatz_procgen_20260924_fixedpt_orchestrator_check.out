@@ -1,0 +1,8 @@
+R1  Theorem 3.1 holds for x,y < 400: ok
+R2  condition (5) holds pairwise for x,y < 400: ok
+R3  uncovered steps p < 5000 are exactly the odd p >= 3 ( 2499 ): ok
+R4  decay claim fails at x = 5, n = 1 (16 > 9/2): ok
+R5  3-point 3-cycle satisfies Theorem 2.3(5) with M = 4, has no fixed point: ok
+R6  x -> x+1 on (N,|x-y|) satisfies Theorem 2.3(5) with the paper's constants, has no fixed point: ok
+R7  the paper's table, verbatim, satisfies all hypotheses for 3n-1 (x,y < 400); 3n-1 orbit of 5 is the 3-cycle [5, 7, 10] : ok
+ALL CHECKS PASSED

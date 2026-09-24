@@ -1,0 +1,412 @@
+collatz_procgen_20260924_fixedpt.out -- output of 04-computation/experiments/collatz_procgen_20260924_fixedpt_{kawasaki,inequality,chains}.py
+(session collatz-procgen-20260922, lane: fixed points, the owner's inequality, arXiv:2502.20642v1)
+
+#################### collatz_procgen_20260924_fixedpt_kawasaki.py ####################
+
+====================================================================================================
+K1  Theorem 3.1 (the paper's WGP inequality for its T), exact, all 1 <= x, y < 400
+====================================================================================================
+  all 159201 pairs satisfy the inequality; max LHS = 0 (at (1, 1)); LHS = 0 at 238 pairs
+  vectorized extension: all pairs 1 <= x, y < 3000 satisfy it too (max LHS 0)
+  the paper's case polynomials, re-derived (b = +1):
+    ('one', 'even'): derived -2*l**2 + 2*l;  paper prints -2*l**2 + 2*l;  agree
+    ('one', 'odd'): derived -6*l**2 + 4*l + 2;  paper prints -6*l**2 + 4*l + 2;  agree
+    ('even', 'one'): derived -2*k**2 + 2*k;  paper prints -2*k**2 + 2*k;  agree
+    ('even', 'even'): derived -k**2 + 2*k*l - 2*l**2;  paper prints -k**2 + 2*k*l - 2*l**2;  agree
+    ('even', 'odd'): derived 1 - 2*l**2;  paper prints -4*k*l - 2*k - 2*l**2 - 1;  DISAGREE
+    ('odd', 'one'): derived -6*k**2 + 4*k + 2;  paper prints -6*k**2 + 4*k + 2;  agree
+    ('odd', 'even'): derived 1 - 2*k**2;  paper prints 1 - 2*k**2;  agree
+    -> one algebra slip: for (x even, y odd >= 3) the value is -2l^2 + 1 (<= -1), not the printed
+       -2l^2 - 4kl - 2k - 1 (<= -9).  Harmless: the inequality still holds.  Checked numerically:
+       at (x,y) = (2,3) the LHS is -1, not the printed -9.
+  odd/odd: generic form (18+4d0)(k-l)^2 - 5b0(k-l)(k+l+2) + e0(k+1)^2 + z0(l+1)^2 and all five
+  sub-case factorizations of the paper re-derived symbolically: agree.
+  VERDICT K1: Theorem 3.1 is TRUE (the Collatz-specific algebra holds), with one harmless slip.
+
+====================================================================================================
+K2  Condition (5) of Theorem 2.3 (lambda = 0, A = 1/2, B = 2, M = 2), every pair 1 <= x, y < 400
+====================================================================================================
+  (5) holds at all 159201 pairs; census: {'alt1 only': 99302, 'alt2 only': 59700, 'both': 199}
+  odd/odd coefficient tuples: x > y [(2, 1, -1, -1, 0, 0), (2, 2, -2, -2, 0, 2), (2, 2, -2, -1, 0, 0)]; x <= y [(2, -2, 2, -2, 2, 0), (2, -2, 2, -1, 0, 0), (2, -1, 1, -1, 0, 0), (2, 0, 0, -1, 0, 0)] (= the paper's lists)
+  alt1 fails at (3,2) = (odd, even) and alt2 fails at (2,3) = (even, odd), even without the B-clause
+  (first failures with the B-clause: alt1 at (2, 1), alt2 at (1, 1)):
+  so the GLOBAL reading of (5) ('alt1 at every pair' or 'alt2 at every pair') is NOT satisfied;
+  Section 3 uses the PAIRWISE reading (its own verification switches alternatives by pair type).
+  VERDICT K2: condition (5), pairwise reading, holds for the Collatz table (at least below 400).
+
+====================================================================================================
+K3  The swap gap: the proof of Theorem 2.1(5) needs alt1(p,Tp) OR alt2(Tp,p) (A only, no B)
+====================================================================================================
+  Proof step A (x,y) = (T^(n-1)x, T^n x) in the beta-eliminated inequality uses alt1 at (p, Tp);
+  proof step B (x,y) = (T^n x, T^(n-1)x) in the gamma-eliminated inequality uses alt2 at (Tp, p).
+  Hypothesis (5) gives [alt1 or alt2] at (p,Tp) and, separately, at (Tp,p).  Uncovered case:
+  alt2 only at (p,Tp) and alt1 only at (Tp,p).
+  steps p -> Tp with 1 <= p < 5000: 2499 uncovered = exactly the odd p >= 3 (2499 of them); every even step and p = 1 are covered.
+  (5) nevertheless holds at both pairs of every step.  VERDICT K3: the proof of Theorem 2.1(5)
+  has a quantifier gap, and for the Collatz table it is hit at EVERY up-step.
+
+====================================================================================================
+K4  The paper's intermediate claim and orbit-radius bound
+====================================================================================================
+  claim: d(T^n x, T^(n+1) x)^2 <= A^n d(x,Tx)^2 (A = 1/2).  x = 5: orbit [5, 8, 4, 2, 1];  n = 1: d(8,4)^2 = 16 > A d(5,8)^2 = 9/2.  FALSE.
+  census x <= 10^4: the claim fails at n = 1 for EVERY odd x >= 3; it holds for all n at only 136 starts,
+  all 1 or even (a long initial halving phase can pay for the later stretch, e.g. x = 96 = 3*2^5).
+  orbit radius: the proof gives d(x, T^m x) <= d(x,Tx)/(1 - sqrt(A)), i.e. T^m(27) <= 27 + 14/(1-1/sqrt2) = 74.80;  actual max T^m(27) = 4616 (shortcut orbit, 70 steps).
+  the radius bound fails for 3197 of the 9999 starts 2 <= x <= 10^4.
+
+====================================================================================================
+K5  Up-steps stretch consecutive distances; the Mersenne family
+====================================================================================================
+  for odd p >= 3:  d(Tp,T^2 p)/d(p,Tp) = 3/2 (p = 3 mod 4) and (3p+1)/(2(p+1)) (p = 1 mod 4)
+  (exact, p < 2*10^5); minimum 4/3 at p = 5, supremum 3/2; even steps never stretch.
+  x = 2^m - 1 (m = 2..80): T^j x = 3^j 2^(m-j) - 1 (j <= m), so
+     d(T^(m-1)x, T^m x) / d(x,Tx) = (3/2)^(m-1)  and  d(x, T^m x)/d(x,Tx) = (3^m - 2^m)/2^(m-1).
+  Hence no bound d(T^n x,T^(n+1)x) <= g(n) d(x,Tx) uniform in x holds with g(n) < (3/2)^n, and no
+  uniform orbit-radius bound d(x,T^m x) <= K d(x,Tx) holds for any K.
+
+====================================================================================================
+K6  Counterexamples to Theorems 2.1(5), 2.2(5), 2.3(5) (pairwise reading)
+====================================================================================================
+  (a) X = {0,1,2} (|x-y|), T = 3-cycle 0->1->2->0, lambda=0, A=1/2, B=2, M=4, coefficients
+      (M,0,-M,0,0,0) on the diagonal, (1,-M,M,0,0,0) at (p,Tp), (1,M,-M,0,0,0) at (Tp,p):
+      all 9 WGP inequalities and (5) hold (alt1 at 6 pairs, alt2 at 3); no fixed point; the orbit
+      0,1,2,0,... is not Cauchy.  [This scheme needs M >= 4 at the pair (1,2).]
+  (b) X = {0,1,2}, 3-cycle, the PAPER'S constants (lambda=0, A=1/2, B=2, M=2); table:
+        (0, 0) diag    (2, 0, 0, 0, 0, 0)  alt1
+        (0, 1) (p,Tp)  (0, -1, 0, 0, 2, 0)  alt2
+        (0, 2) (Tp,p)  (0, 0, 0, -1, 2, 0)  alt2
+        (1, 0) (Tp,p)  (0, 0, -1, 0, 0, 2)  alt1
+        (1, 1) diag    (2, 0, 0, 0, 0, 0)  alt1
+        (1, 2) (p,Tp)  (0, 0, 0, 0, 2, -1)  alt2
+        (2, 0) (p,Tp)  (0, 0, 0, -1, 0, 2)  alt1
+        (2, 1) (Tp,p)  (0, 0, 0, 0, -1, 2)  alt1
+        (2, 2) diag    (2, 0, 0, 0, 0, 0)  alt1
+      all hypotheses hold; T has no fixed point.
+  (b) X = {5,7,10}, the 3n-1 cycle 5->7->10->5, the PAPER'S constants (lambda=0, A=1/2, B=2, M=2); table:
+        (5, 5) diag    (2, 0, 0, 0, 0, 0)  alt1
+        (5, 7) (p,Tp)  (0, -1, 0, 0, 2, 0)  alt2
+        (5, 10) (Tp,p)  (0, 0, 0, -1, 2, 0)  alt2
+        (7, 5) (Tp,p)  (0, 0, -1, 0, 0, 2)  alt1
+        (7, 7) diag    (2, 0, 0, 0, 0, 0)  alt1
+        (7, 10) (p,Tp)  (0, 0, 0, 0, 2, -1)  alt2
+        (10, 5) (p,Tp)  (0, 0, 0, -1, 0, 2)  alt1
+        (10, 7) (Tp,p)  (0, 0, 0, 0, -1, 2)  alt1
+        (10, 10) diag    (2, 0, 0, 0, 0, 0)  alt1
+      all hypotheses hold; T has no fixed point.
+      (also: the equilateral 3-point space with V2 = (1,-2,1,0,0,0) at (p,Tp), V1 = (1,1,-2,0,0,0)
+       elsewhere satisfies everything with the paper's constants.)
+  (c) X = N = {1,2,...} (the paper's own space), T(x) = x + 1, lambda=0, A=1/2, B=2, M=2 (the
+      paper's own constants): coefficients V1 = (1,1,-2,0,0,0) [alt1] if x >= y, V2 = (1,-2,1,0,0,0)
+      [alt2] if x < y.  With e = x - y the WGP left side is -6e-1 (e >= 0) and 6e-1 (e < 0): <= 0.
+      Checked exactly for 1 <= x,y <= 1200.  T^n x = x + n is not Cauchy and T has no fixed point.
+      => Theorems 2.1(5), 2.2(5), 2.3(5) are FALSE, on (N,|x-y|) with the paper's constants.
+  (d) X = {0} u {1/n : n >= 1} (complete), T(1/n) = 1/(n+1), T(0) = 1.  Coefficients (1,1,-5,0,0,0)
+      when d(Tx,y) >= d(x,Ty), else (1,-5,1,0,0,0); lambda=0, A=1/2, B=2, M=5.  All hypotheses hold
+      (checked exactly on {0} u {1/n: n <= 300}; proof in the note).  Every orbit converges to 0,
+      but T(0) = 1: Theorem 2.3(5) fails even where Theorem 2.2's conclusion holds.  The fixed-point
+      step of its proof needs alt1 at (T^n x, u) or alt2 at (u, T^n x); here, for every n >= 2, the
+      table has alt2 at (1/n, 0) and alt1 at (0, 1/n): the same swap gap.
+
+====================================================================================================
+K7  Minimality: 1 and 2 points are impossible, 3 points suffice; every 2-cycle violates (5)
+====================================================================================================
+  A 1-point space has a fixed point.  A fixed-point-free map on 2 points is the swap a <-> b; at the
+  pair (a,b) the distance vector is D^2 (1,0,0,1,1,1), so the WGP inequality reads al+de+ep+ze <= 0,
+  while alt1 forces al+de+ep+ze >= (1-A)(al+ze+2min(be,0)) - 4 min(be,0) > 0 and alt2 forces
+  al+de+ep+ze >= (1-A)(al+ep+2min(ga,0)) - 4 min(ga,0) > 0.  This uses only A < 1; lambda-mixing
+  (Lemma 2.2) produces another coefficient vector obeying the same inequality at the same pair,
+  so no lambda helps.  The same computation applies to any 2-cycle {a,b} in any metric space.
+  sanity grid: none of the 117649 vectors in {-3..3}^6 passes both, for A = 1/2 and A = 99/100.
+  With the true shortcut map (T(1) = 2), the pair (1,2) has distance vector (1, 0, 0, 1, 1, 1): the 2-cycle lemma
+  forbids every coefficient choice there (the paper's own table gives LHS = +1 > 0).  Hence the paper's
+  redefinition T(1) := 1 is FORCED by condition (5).  3-point counterexamples exist (K6a,b).
+  VERDICT K7: the least counterexample has exactly 3 points (a 3-cycle); by K6b it can be taken inside
+  N with the paper's constants: {5,7,10} under 3n-1.
+
+====================================================================================================
+K8  Universality: (5) + WGP carry no dynamics beyond excluding (near-)2-cycles
+====================================================================================================
+  Proposition U. If d(Tx,Ty) <= C max(d(Tx,y), d(x,Ty)) for all x,y, then with K = (B/2)(C^2+1) the
+  coefficients (B/2,B/2,-K,0,0,0) [alt1] when d(Tx,y) >= d(x,Ty), else (B/2,-K,B/2,0,0,0) [alt2],
+  satisfy WGP and (5) (lambda = 0, any A in (0,1)), with M = max(B/2, K).
+    C(paper T (3x+1, T(1)=1)) over 1 <= x,y < 2500: sup = 5.0000 at (12, 7)
+    C(3x-1) over 1 <= x,y < 2500: sup = 3.9960 at (2498, 1499)
+    C(x+1) over 1 <= x,y < 2500: sup = 0.9996 at (2499, 1)
+  For T_+ (paper) and T_- on N the ratio is bounded (<= 11 by the elementary argument in the note;
+  numerically 5 and < 4).  So BOTH sheets admit bounded coefficient tables satisfying every
+  hypothesis of Theorem 2.3(5): the hypothesis carries no dynamical information at all.
+
+====================================================================================================
+K9  SHEET control: the paper's table, VERBATIM, for 3n-1 on N
+====================================================================================================
+  WGP inequality for T_-(x) = x/2, (3x-1)/2 with the paper's table: all pairs < 400 exact, all
+  pairs < 3000 vectorized (max LHS 0).  Symbolic case polynomials (b = -1):
+    ('one', 'even'): -2*l**2 + 2*l
+    ('one', 'odd'): -6*l**2
+    ('even', 'one'): -2*k**2 + 2*k
+    ('even', 'even'): -k**2 + 2*k*l - 2*l**2
+    ('even', 'odd'): -2*l**2 - 4*l - 1
+    ('odd', 'one'): -6*k**2
+    ('odd', 'even'): -2*k**2 - 4*k - 1
+    odd/odd: (18+4d0)(k-l)^2 - 5b0(k-l)(k+l) + e0 k^2 + z0 l^2, sub-cases 2k(11k-10l),
+    4(k-l)(6k-l), 2l(11l-10k), 4(k-l)(k-6l), (k-l)^2(14-5(k+l)): each <= 0 on its range.
+  Condition (5) depends only on the table, so it holds verbatim (K2).  The only fixed point of T_- in N
+  is 1.  So Theorem 3.2's argument, verbatim, 'proves' that every positive integer reaches 1 under 3n-1.
+  FALSE: [5, 7, 10, 5].  The method is SHEET-blind (the foundry's typing, now a theorem about this paper).
+
+====================================================================================================
+K10 The corrected Theorem 2.1 is one-step decay, and Collatz violates it for EVERY coefficient choice
+====================================================================================================
+  Corrected Theorem 2.1. If for every p in the orbit, alt1_lambda(p,Tp) or alt2_lambda(Tp,p) holds, then
+  d(Tp,T^2p)^2 <= A d(p,Tp)^2 along the orbit, hence d(T^n x,T^m x) <= A^(n/2)/(1-A^(1/2)) d(x,Tx).
+  Converse at a single step: if d(Tp,T^2p)^2 <= A d(p,Tp)^2, the vector (B,0,0,-AB,0,0) at (p,Tp)
+  satisfies WGP there and alt1 (with B).  So the corrected hypothesis IS one-step decay.
+  Collatz, p < 5000: one-step decay (A = 1/2) fails exactly at the odd p >= 3, where the ratio is
+  >= 16/9 > 1 > A for ANY A < 1; the Collatz table covers exactly the decay steps.  At p = 5 the
+  corrected hypothesis would force 16 <= 9A < 9.  Hence NO coefficient functions and NO lambda make
+  the corrected Theorem 2.1 apply to Collatz on (N,|x-y|) -- already at the single point p = 5.
+  (3n-1, odd p < 20001: every up-step stretches consecutive distances by at least 3/2, so the
+   corrected theorem fails at every 3n-1 up-step too.)
+
+====================================================================================================
+K11 Caristi: the one metric fixed-point principle that survives is equivalent to Collatz
+====================================================================================================
+  Caristi: if phi >= 0 (l.s.c.) with d(x,Tx) <= phi(x) - phi(Tx), then T has a fixed point.  On
+  (N,|x-y|) with the paper's T such phi exists iff every orbit reaches 1; then phi = the orbit's total
+  variation, sum over n < tau(x) of ceil(T^n x / 2), with equality d(x,Tx) = phi(x) - phi(Tx).
+  verified for 2 <= x <= 100000: |T(n)-n| = ceil(n/2) and d(x,Tx) = phi(x) - phi(Tx); e.g. phi(27) = 20328, phi(97) = 20734.
+  A Caristi argument therefore needs exactly the finiteness of phi, i.e. Collatz itself.
+
+====================================================================================================
+K12 Contraction metrics for T: |x-y| fails; some metric <=> no cycles (Bessaga); a discrete one <=> Collatz
+====================================================================================================
+  (i)  d = |x-y|: no contraction-type certificate (K5, K10).
+  (ii) Bessaga's converse (1959; statement as in Wikipedia 'Banach fixed-point theorem', Converses): if
+       every iterate T^n of a self-map of a set has a unique fixed point, then for every q in (0,1) some
+       complete metric makes T a q-contraction.  Conversely a contraction's iterates have unique fixed
+       points.  For the paper's T on N (T(1) = 1) this says: a Banach-contraction metric exists iff N has
+       no T-cycle other than {1} -- the CYCLE half only; divergent orbits would still converge to 1 in it.
+  (iii) A UNIFORMLY DISCRETE complete metric making T a contraction exists iff every orbit reaches 1:
+       (=>) rho(T^n x, 1) <= q^n rho(x, 1) < inf rho forces T^n x = 1;  (<=) rho(x,y) = K^max(h(x),h(y))
+       for x != y (h = steps to 1, K = 1/q > 1) is an ultrametric, >= 1 off the diagonal, and
+       rho(Tx,Ty) = q rho(x,y) or 0.
+  checked for 1 <= x, y <= 1500 (q = 1/2, heights from the actual orbits): rho >= 1 off the diagonal,
+  rho(Tx,Ty) <= rho(x,y)/2, and the ultrametric inequality on 20000 random triples.
+  So metric contraction reformulates Collatz exactly as 'the height h is finite everywhere'; the
+  divergence half is precisely the uniform discreteness that the paper's last step takes for granted.
+
+[fixedpt_kawasaki] ALL CHECKS PASSED
+
+#################### collatz_procgen_20260924_fixedpt_inequality.py ####################
+
+====================================================================================================
+I1  Lemma 2.1 = triangle inequality + AM-QM; what it discards
+====================================================================================================
+  Lemma 2.1: 2 min(theta,0) (a^2 + b^2) <= theta c^2, with a = d(x,z), b = d(z,y), c = d(x,y).
+   * theta >= 0: it reads 0 <= theta c^2 -- the LOWER half of the sandwich, (a-b)^2 <= c^2, is thrown away;
+   * theta < 0: it reads c^2 <= 2(a^2 + b^2), i.e. c^2 <= (a+b)^2 (triangle) and (a+b)^2 <= 2(a^2+b^2)
+     (AM-QM, equivalently 2ab <= a^2 + b^2).  The cross term +-2ab is replaced by its sign-blind bound.
+   * equality (theta < 0) iff c = a + b and a = b: z is a metric midpoint of x and y.
+  Lemma 2.1 checked on 483480 (metric, triple, theta) instances: random 7-point path metrics, R^2 with l1, l2, l_inf.
+  Collatz triples (p, Tp, T^2 p), 2 <= p <= 10^5: 50000 monotone (upper equality, Lemma 2.1 loses (d1-d2)^2), 49999 turning (lower equality, loses (d1+d2)^2).
+  Sharpness needs a monotone triple with d1 = d2; d1 = d2 happens only at p = 2 (the turning triple
+  2, 1, 2 of the 2-cycle), so Lemma 2.1 is never sharp along a positive Collatz orbit.  What it discards
+  is the orientation (turn / no turn) of the orbit together with the size mismatch d1 - d2.
+
+====================================================================================================
+I2  On the line every orbit triple is an equality case; the cross-term sign is side-blind
+====================================================================================================
+  4240799 consecutive triples of orbits from [-2*10^4, 2*10^4] \ {0} (120 steps each):
+  d(x_(n-1), x_(n+1)) = d1 + d2 exactly when x_(n-1), x_n have the same parity (cross term +2 d1 d2),
+  and |d1 - d2| exactly when the parity changes (cross term -2 d1 d2) -- on BOTH half-lines.
+  The rule depends only on the parity word, hence (Theorem 6 of the mod-192 note) it is side-blind.
+  The 'central part' (cross term 0 with both steps nonzero) never occurs on the line: a zero step
+  occurs only at a fixed point (here [-1]; 0 is the other one).  A strictly-inside
+  triangle needs a second dimension, where the middle case is orthogonality (section I5).
+
+====================================================================================================
+I3  The sign law is the pair of equality cases of the sandwich, with z = 0 in the middle
+====================================================================================================
+  all words of length p <= 12, 6-7 lifts each (both signs): 57318 checks of
+    2^p T^p(x) = 3^a x + c_w  and  |2^p T^p(x)| = 3^a|x| + sgn(x) c_w  (c_w >= 0),
+  i.e. with X = 3^a x, Y = -c_w and z = 0:  x > 0 <=> 0 lies between X and Y <=> UPPER equality
+  d(X,Y) = d(X,0) + d(0,Y) (cross term +2 3^a|x| c_w);  x < 0 <=> LOWER equality d(X,Y) = |d(X,0) - d(0,Y)|.
+  Transport T_+^p(-x) = -T_-^p(x) turns the negative half-line of 3n+1 into the positive half-line of
+  3n-1: the lower side of the sandwich IS the 3n-1 sheet.  The middle point of the owner's inequality
+  is literally 0, and the sign law says on which side of it the orbit's two ingredients sit.
+
+====================================================================================================
+I4  The central sheet b = 0 (Mahler's multiplicative map) and the Mahler bridge
+====================================================================================================
+  for all 2046 words with p <= 10:  T_0^w = (T_+^w + T_-^w)/2 = odd part of T_+^w, and
+  (T_b^w x)^2 = (9^a x^2 + 2b 3^a c_w x + b^2 c_w^2)/4^p: the cross term has sign b*sgn(x).  So the three
+  sheets b = -1, 0, +1 are the left side, the centre and the right side of the owner's sandwich (x > 0).
+  odd branch: T_b(x) + b = (3/2)(x + b) -- the central map x -> 3x/2 centred at the fixed point -b;
+  the even branch x -> x/2 is centred at 0.  The b = 0 sheet is where both centres coincide.
+  shadowing identity (exact, x in [-500,500], n <= 60, both sheets): T_b^n(x) = (3^a_n/2^n) xi_n with
+  xi_n = x + b c_n/3^a_n; xi_n increases on the plus sheet and decreases on the minus sheet.  Every
+  orbit point is the CENTRAL-sheet image of a shifted start; the shift is the Bernstein partial sum.
+  THM-4469 instance (blocks 0111101110 / 1101100111, R = 4726 / 4727, cylinder classes 990 / 187 mod 1024,
+  alpha = 2187/1024): for 40 random block sequences of length 6, realized by the least positive integer
+  of their Terras class,
+  x_j = xi alpha^j - t_j with t_j in [4726,4727]/1163 * (1 - rho^(6-j)) exactly: the +1 orbit is the
+  central-sheet (Mahler) orbit xi alpha^j pushed DOWN by a confined carry; the 3n-1 orbit of -x is the
+  central orbit of -xi pushed UP by the same carry.  This is the precise sense in which the Mahler bridge
+  says '+-1-corner orbits are confined like central-sheet orbits'.
+
+====================================================================================================
+I5  Orthogonality in C: the Pythagorean middle, Chamberland's f and the LSW f_0
+====================================================================================================
+  |z + w|^2 = |z|^2 + |w|^2 + 2 Re(z conj w): the middle (Pythagorean) case is Re(z conj w) = 0.  For an
+  affine branch L_w(z) = (3^a z + c_w)/2^p the cross term is 2 3^a c_w Re(z): right half-plane = '+2ab',
+  left half-plane = '-2ab', imaginary axis = the orthogonal middle.  (20000 random checks.)
+  Chamberland f(x) = x + 1/4 - ((2x+1)/4) cos(pi x): f = T on Z and f'(n) = 1/2 (even), 3/2 (odd) --
+  f keeps the branch slopes, so it is conformal at integers (orthogonal stays orthogonal).
+  LSW f_0(z) = z/2 + (1 - cos pi z)(z + 1/2)/2 + (1/2 - cos pi z) sin(pi z)/pi (h = 0, as printed in
+  Chamberland's survey): f_0 = T on Z and f_0'(n) = 0 -- every integer is a critical point.  (n in [-30,30].)
+  f_0'(x) = sin(pi x) (2 sin(pi x) + (pi/2)(x + 1/2)) (checked); its real zeros are Z together with
+  -1.644421083, -1.179060746, -0.1013635846 (only |x + 1/2| <= 4/pi can solve the second factor).
+  NOTE: Lagarias's annotated bibliography (entry 115) summarizes the real critical points of f_0 as
+  'the integers together with -1/2'; for the formula as printed, f_0'(-1/2) = 2, so this could not be
+  reconciled (primary source not read: publisher bot-check).  Nothing below depends on it.
+  At each critical integer n, f_0(n + y) - T(n) ~ c_n y^2 and f_0(n + iy) - T(n) ~ -c_n y^2 (c_n real,
+  checked at n = -5,-2,1,2,7): the fold sends the ORTHOGONAL direction onto the OPPOSITE real ray.  This is
+  the exact content of 'the corner at 0 introducing orthogonality': squaring (the smooth version of |x|)
+  identifies +-x and turns the orthogonal axis into the sign.
+  Stability consequence: in Chamberland's f an integer cycle has multiplier 3^a/2^p, so (sign law) it is
+  attracting iff its points are >= 0; in LSW's f_h every integer cycle is superattracting on BOTH sides.
+
+====================================================================================================
+I6  |T(x)| = T_sgn(x)(|x|); linear pair sums, quadratic pair products, and the cross term
+====================================================================================================
+  |T_+(x)| = T_sgn(x)(|x|) for all |x| <= 10^6 (T_0(0) = 0), and iterated for p <= 50, |x| <= 10^4.
+  On the size coordinate |x| the single map T_+ becomes the PAIR T_+1, T_-1, selected by sgn x = d|x|/dx:
+  on odd x, |T(x)| = (3|x| + sgn x)/2.  The corner of |x| at 0 is exactly where the selector jumps.
+  THM-4470 pairs {2i-1, 2i} -> {3i-1, i}, i <= 10^6:  (a+b) conserved (LINEAR invariant),
+  ab scaled by 3/4 + 1/(8i-4) (QUADRATIC contraction), and exactly  D(2ab) = -2i(i-1) = -D(a^2+b^2):
+  in (a+b)^2 = a^2 + 2ab + b^2 the left side is fixed and T moves mass from the cross term to the squares.
+  Equivalently QM^2 + GM^2 = 2 AM^2 with AM fixed: T lowers GM and raises QM by the same amount.  Lemma 2.1
+  keeps only QM >= AM; the Collatz drift log(2/sqrt3) (the AM-GM gap) lives in the discarded cross term.
+  Even observables (|x|, x^2, |x - y|) are invariant under x -> -x, hence side-blind (Theorem 6 of the
+  mod-192 note); only odd observables (x, sgn x, ...) can carry the sign law.
+
+====================================================================================================
+I7  The fixed points {0, -b}: the centres of the two branches; the self-mapped pairs
+====================================================================================================
+  Fix(T_b) on Z is {0, -b} (checked on [-10^5, 10^5]); D(0) = 0 and E_b(-b) = -b are the Banach fixed
+  points of the one-letter inverse words (chains script F1); E_b(x) + b = (2/3)(x + b).
+  Consecutive pairs of 3n+1, {2i-1, 2i}, mapped onto themselves (|i| <= 10^5): i = 0, the pair {-1, 0}
+  of the two fixed points (pointwise), and i = 1, {1, 2} (swapped: the 2-cycle).  For 3n-1, {2i, 2i+1}:
+  {0, 1} (pointwise) and {-2, -1} (swapped) -- the mirror images.  The 'central pair' straddling the
+  sign is {-1, 0} for 3n+1 and {0, 1} for 3n-1: b decides on which side of 0 the odd branch is centred.
+
+[fixedpt_inequality] ALL CHECKS PASSED
+
+#################### collatz_procgen_20260924_fixedpt_chains.py ####################
+
+====================================================================================================
+F1  Banach in Z_2: every inverse word has exactly one fixed point, the rational periodic point
+====================================================================================================
+  D(x) = 2x and E(x) = (2x-1)/3 are 2-adic contractions with factor 1/2 (3 is a unit in Z_2); their
+  fixed points are 0 and -1.  For every word w of length p <= 12 (all 8190 words):
+    the inverse word W has exactly one fixed point in Z_2 (Banach), namely x_w = c_w/(2^p - 3^a);
+    Banach iteration from 0 agrees with x_w modulo 2^64 after ceil(64/p)+1 rounds;
+    T^p(x_w) = x_w exactly, with parity word w; distinct words give distinct points.
+  So Per_p(T) in Z_2 = {Banach fixed points of the 2^p words of length p}: the 'fixed point chain'.
+
+====================================================================================================
+F2  Growth of the fixed-point chain by period p <= 24; integral points; the points in Bad
+====================================================================================================
+   p | points 2^p | primitive | cycles | primitive x_w>0 | primitive x_w<0 | in Bad (primitive) | integral
+   1 |          2 |         2 |      2 |               0 |               1 |                  1 |        2
+   2 |          4 |         2 |      1 |               2 |               0 |                  0 |        2
+   3 |          8 |         6 |      2 |               3 |               3 |                  1 |        3
+   4 |         16 |        12 |      3 |               8 |               4 |                  2 |        0
+   5 |         32 |        30 |      6 |              25 |               5 |                  3 |        0
+   6 |         64 |        54 |      9 |              36 |              18 |                  6 |        0
+   7 |        128 |       126 |     18 |              98 |              28 |                 12 |        0
+   8 |        256 |       240 |     30 |             208 |              32 |                 16 |        0
+   9 |        512 |       504 |     56 |             378 |             126 |                 36 |        0
+  10 |       1024 |       990 |     99 |             820 |             170 |                 60 |        0
+  11 |       2048 |      2046 |    186 |            1485 |             561 |                127 |       11
+  12 |       4096 |      4020 |    335 |            3252 |             768 |                216 |        0
+  13 |       8192 |      8190 |    630 |            7098 |            1092 |                366 |        0
+  14 |      16384 |     16254 |   1161 |           12810 |            3444 |                721 |        0
+  15 |      32768 |     32730 |   2182 |           27795 |            4935 |               1290 |        0
+  16 |      65536 |     65280 |   4080 |           58432 |            6848 |               2095 |        0
+  17 |     131072 |    131070 |   7710 |          109293 |           21777 |               4227 |        0
+  18 |     262144 |    261576 |  14532 |          230544 |           31032 |               7451 |        0
+  19 |     524288 |    524286 |  27594 |          430103 |           94183 |              14989 |        0
+  20 |    1048576 |   1047540 |  52377 |          909740 |          137800 |              27262 |        0
+  21 |    2097152 |   2097018 |  99858 |         1898610 |          198408 |              46597 |        0
+  22 |    4194304 |   4192254 | 190557 |         3592446 |          599808 |              93094 |        0
+  23 |    8388608 |   8388606 | 364722 |         7507637 |          880969 |             168806 |        0
+  24 |   16777216 |  16772880 | 698870 |        15502080 |         1270800 |             286339 |        0
+  * the in-Bad column reproduces the mod-192 note's K5 counts for p <= 18 (independent code) and
+    extends them to p = 24: 14989, 27262, 46597, 93094, 168806, 286339.
+  * integral points, all p <= 24: [-136, -91, -82, -68, -61, -55, -41, -37, -34, -25, -17, -10, -7, -5, -1, 0, 1, 2] = the five known cycles
+    {0}, {1,2}, {-1}, {-5,-7,-10}, {-17,...,-136} (periods 1, 2, 1, 3, 11).  Positive integral points occur
+    only on contracting words (2^p > 3^a), negative ones only on expanding words (sign law).
+  * growth: all points 2^p (exponent 1); points in Bad 2^(e p) with log2(count)/p = 0.690, 0.737, 0.755 at p = 16, 20, 24
+    (slowly approaching h(log_3 2) = 0.950, the PROVED exponent of the word count |Bad_p| in the choice
+    ladder; the polynomial factor is still visible at p = 24).  Integral points: 18 in total, no growth.
+
+====================================================================================================
+F3  Banach in R and in Z_3: the sign law decides which words are real contractions
+====================================================================================================
+  words of length <= 10 with a >= 1: 411 inverse maps are real contractions (slope 2^p/3^a < 1),
+  exactly those with x_w < 0; 1625 are real expansions, exactly those with x_w > 0.
+  backward (inverse-word) iteration in R converges to -1 (slope 2/3), -5 (8/9) and -17 (2048/2187),
+  and is repelled by 1 (word 10, slope 4/3).  So Banach in R sees exactly the NEGATIVE cycles; the
+  positive ones are forward-attracting.  In Z_2 every word contracts (factor 2^-p): Banach sees all.
+  In Z_3, D is an isometry and E expands by 3: no contraction principle at the prime 3, where
+  integrality (the gate (2^p - 3^a) | c_w and the legality x = 2 mod 3) is decided.
+
+====================================================================================================
+F4  Brouwer (IVT) for continuous extensions: Chamberland's f, Sharkovskii, covering chains
+====================================================================================================
+  f(x) = (x/2) cos^2(pi x/2) + ((3x+1)/2) sin^2(pi x/2) = x + 1/4 - ((2x+1)/4) cos(pi x)  [Chamberland 1996]:
+  f(n) = T(n) exactly for |n| <= 10^4, and f'(n) = 1 - (-1)^n/2 in {1/2, 3/2}.
+    {0}            period  1  multiplier 1/2        attracting
+    {1,2}          period  2  multiplier 3/4        attracting
+    {-1}           period  1  multiplier 3/2        repelling
+    {-5,-7,-10}    period  3  multiplier 9/8        repelling
+    {-17,...}      period 11  multiplier 2187/2048  repelling
+  An integer cycle of T is an f-cycle with multiplier 3^a/2^p; by the sign law it is attracting iff its
+  points are >= 0.  So in Chamberland's extension the SIGN decides the STABILITY of integer cycles.
+  Chamberland's numbers re-derived: mu1 = 0.277733766172, mu2 = 1.57737324444, mu3 = 2.44570769366;
+  second attracting 2-cycle A2 = {1.19253190705, 2.13865633552} (multiplier -0.230753);
+  f([mu1, mu3]) inside [mu1, mu3] on a 4*10^5-point grid (range [0.2777, 2.4457]).
+  These match the values cited from Chamberland 1996 via Lagarias's bibliography (entry 35) and
+  Chamberland's 2003 survey (section 6.5).
+  positive side, J0=[2,3], J1=[3,4] (full 2-shift; f(J0), f(J1) contain J0 u J1):
+    periodic orbits constructed by the IVT chain, one per admissible Lyndon itinerary, periods 1..7: [2, 1, 2, 3, 6, 9, 18]
+  negative side, I0=[-10,-7], I1=[-7,-5] from the 3-cycle (f(I0) contains I0 u I1, f(I1) contains I0):
+    periodic orbits constructed by the IVT chain, one per admissible Lyndon itinerary, periods 1..7: [1, 1, 1, 1, 2, 2, 4]
+  negative side, [-4,-3], [-3,-2] (full 2-shift, like the positive side):
+    periodic orbits constructed by the IVT chain, one per admissible Lyndon itinerary, periods 1..7: [2, 1, 2, 3, 6, 9, 18]
+  So every continuous extension of T has periodic points of EVERY period on the positive side (from the
+  three values T(2)=1, T(3)=5, T(4)=2: Block-Coppel turbulence) and on the negative side (from the 3-cycle
+  {-5,-7,-10} via Sharkovskii/Li-Yorke, and also from T(-4)=-2, T(-3)=-4, T(-2)=-1).  The sign does NOT
+  decide the Sharkovskii type of f; it decides only which INTEGER cycles exist (positive: periods 1, 2;
+  negative: 1, 3, 11, for p <= 24 by F2) and, in Chamberland's f, their stability.
+  Growth of the real chain: at least 2^n points of period dividing n in [2,4] (one per itinerary), the
+  same 2^n as the Banach count in Z_2 (F1).
+  monotone divergent orbit (Chamberland; LSW: a Cantor set of them): f([2j+2,2j+3]) contains [2j+4,2j+5]
+  for all j >= 0, so nested compact pullbacks give x0 = 2.88652508471819 with f^j(x0) in [2j+2, 2j+3],
+  j = 0..13 (checked); by compactness some point does this for all j.  Divergence of a real extension
+  is not Collatz divergence: it lives between the integers.
+
+====================================================================================================
+F5  Parity principles: Sperner, Redei, and the Banach count
+====================================================================================================
+  Sperner: 3000 random 1D and 400 random 2D Sperner labellings -- the number of fully labelled cells is
+  always odd (the combinatorial core of Brouwer).
+  Redei: all 33867 labelled tournaments on n <= 6 vertices have an odd number of Hamiltonian paths;
+  n = 6 values: [1, 3, 5, 9, 11, 13, 15, 17, 19, 23, 25, 27, 29, 31, 33, 37, 41, 43, 45].
+  Common mechanism: |S| = |Fix(i)| mod 2 for an involution i (door-to-door pairing for Sperner; arc-flip
+  or OCF parity for Redei, repo THM-001/THM-002).  For Collatz the corresponding count is not a parity:
+  each word has EXACTLY ONE 2-adic fixed point (F1), and the whole difficulty is integrality at the gate
+  (2^p - 3^a) | c_w, a congruence modulo an odd number prime to 6 -- invisible to every mod-2 count.
+
+[fixedpt_chains] ALL CHECKS PASSED

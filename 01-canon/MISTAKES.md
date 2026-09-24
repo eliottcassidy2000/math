@@ -9,6 +9,29 @@ Format per entry:
 - Why it was wrong
 - The correct framing
 
+## 2026-09-24 "The sign decides the Sharkovskii type" -- refuted; and an external claimed proof of Collatz (arXiv:2502.20642)
+
+- **WRONG (collatz-procgen-20260922 wave 9, coordinator prompt).** "The
+  integer 3-cycle {-5,-7,-10} forces all periods on the negative side by
+  Sharkovskii, while the positive side carries only period 2, so the sign
+  decides the Sharkovskii type of the real extension." **Correct:** REFUTED.
+  Every continuous extension `F` of `T` has points of every period on BOTH
+  half-lines, because `F(2) = 1`, `F(3) = 5`, `F(4) = 2` make `[2,3]`, `[3,4]`
+  a turbulent pair. What the sign does decide is the *stability* of the
+  integer cycles in Chamberland's extension (multiplier `3^a/2^p`: attracting
+  iff the points are `>= 0`) and which integer cycles exist (FINITE-EXACT
+  `p <= 24`) ([fixed-point audit](../05-knowledge/results/collatz_procgen_20260924_fixed_points_kawasaki_audit.md)
+  Theorem K).
+- **EXTERNAL (recorded to prevent reuse).** arXiv:2502.20642v1 [math.GM]
+  claims a proof of Collatz from a "weighted generalized pseudocontraction"
+  fixed-point theorem. The theorem is false (the successor map satisfies its
+  hypotheses), and the argument equally "proves" `3n-1` reaches 1
+  (THM-4471). Do not cite it as evidence of anything about Collatz.
+- **Lesson.** Before building on a fixed-point or metric argument for
+  Collatz, run the SHEET control (does it also "prove" `3n-1`?) and the
+  successor/`x+1` control (does it also "prove" that a map without fixed
+  points has one?).
+
 ## 2026-09-24 Collatz tree/brackets prompts -- three coordinator readings corrected by the lanes
 
 - **WRONG 1 (collatz-procgen-20260922 wave 8, lane prompt).** "A residue
