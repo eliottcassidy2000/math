@@ -1,0 +1,2 @@
+232 quadruples: forward (0,2,2,2)/H=3 iff b*s_o>0 else transitive/H=1; backward = converse; rho(F) = converse(B): ok
+ALL CHECKS PASSED
