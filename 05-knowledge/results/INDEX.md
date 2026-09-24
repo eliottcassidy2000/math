@@ -1,5 +1,8 @@
 # Script Results Index
 
+- [The owner's inverse tree mod 192: exact automaton and the side-awareness no-go](collatz_procgen_20260924_inverse_tree_mod192.md):
+  **PROVED / FINITE-EXACT / CITED (coordinator-audited: byte-identical rerun, independent spot checks).** Collatz holds iff the `D/E` tree of `{1,2}` is all of `Z_{>0}`. The type automaton mod `3*2^k` has one core component, the non-multiples of 3, with growth `4/3`. `x -> -x` transports every residue, Haar, integrality, `l`-adic and size datum from `3n+1` to `3n-1`, so any proof must be side-aware (use the sign law). The averaged tree series has residue `1/log(2/sqrt3)`, the reciprocal drift. The mod-3 refinement keeps the `0.95` exponent. The HYP-9121 16-point trap is the mirror of the `3n-1` cycles. Two-sided target (Theorem 15): `(i) AND (ii)` iff Collatz and 3n-1 no-divergence.
+
 - [AMM 12592 uniform frontier: C* >= 11/8](amm12592_procgen_20260923_uniform_frontier.md):
   **PROVED (THM-4467, audited) / FINITE-EXACT / NUMERICAL.** A Pólya-capacity argument on the `p<->1-p` quotient gives the first uniform gap, `C* >= 11/8` (`27/20` by pure interval arithmetic; reach `1.3775`). Theorem B shows the golden constant is a natural boundary. Super-blocks beat separately balanced blocks at finite scales and approach about `1.570` (HYP-9128). Whether `C* < 3/2` is OPEN (HYP-9129).
 

@@ -1,0 +1,415 @@
+collatz_procgen_20260924_tree.out -- inverse tree mod 192 (session collatz-procgen-20260922, 2026-09-24)
+Produced by 04-computation/experiments/collatz_procgen_20260924_tree_run.sh
+Sections A1-A8: ..._tree_automaton.py;  C1-C4: ..._tree_controls.py;  K1-K7: ..._tree_counts.py
+
+==============================================================================
+A1  Well-definedness of the moves on types mod 3*2^k
+==============================================================================
+Claim F: T(n) mod 3*2^(k-1) is a function of n mod 3*2^k.
+Claim D: 2n mod 3*2^(k+1) is a function of n mod 3*2^k (injective, image = even classes).
+Claim E: for n = 2 mod 3, E(n) mod 2^(k+1) is a function of n mod 3*2^k; the map is a
+         bijection onto the odd classes mod 2^(k+1); E(n) mod 3 is NOT a function of
+         n mod 3*2^k: the three lifts mod 9*2^k give E(n) = 0,1,2 mod 3 once each.
+Claim E': E(n) mod 3*2^j is a function of n mod 9*2^(j-1) (j >= 1), and not of n mod 3*2^k for any k.
+  verified for both sheets, k = 1..10 (Claims F, D, E) and j = 1..8 (Claim E'),
+  six lifts per class.  In particular E(n) mod 192 needs n mod 288 = 9*32, D(n) mod 192
+  needs n mod 96, and T(n) mod 96 needs n mod 192.
+
+==============================================================================
+A2  The owner's inverse-tree type automaton A_k at modulus 3*2^k; k = 6 (192) in detail
+==============================================================================
+States Z/3*2^k.  Edges:  r -D-> 2r mod 3*2^k  (every r);
+                         r -E-> s  for the three s with s = (2r-1)/3 mod 2^k   (r = 2 mod 3).
+The E-edge is nondeterministic exactly in the mod-3 digit (A1, Claim E); each of the three
+targets carries Haar weight 1/3.  This is a sound over-approximation: m in T^-1(n) implies
+type(m) in delta(type(n)).
+
+ k  | states | SCC sizes (largest first, then counts)            | big SCC = non-multiples of 3? | nontrivial SCCs
+  1 |      6 | [4] + 2 singletons                              | True                          | big, {0} (D-self-loop)
+  2 |     12 | [8] + 4 singletons                              | True                          | big, {0} (D-self-loop)
+  3 |     24 | [16] + 8 singletons                              | True                          | big, {0} (D-self-loop)
+  4 |     48 | [32] + 16 singletons                              | True                          | big, {0} (D-self-loop)
+  5 |     96 | [64] + 32 singletons                              | True                          | big, {0} (D-self-loop)
+  6 |    192 | [128] + 64 singletons                              | True                          | big, {0} (D-self-loop)
+  7 |    384 | [256] + 128 singletons                              | True                          | big, {0} (D-self-loop)
+  8 |    768 | [512] + 256 singletons                              | True                          | big, {0} (D-self-loop)
+  9 |   1536 | [1024] + 512 singletons                              | True                          | big, {0} (D-self-loop)
+ 10 |   3072 | [2048] + 1024 singletons                              | True                          | big, {0} (D-self-loop)
+
+A_6 (modulus 192):
+  SCCs: one of size 128 = the 128 non-multiples of 3 (2-part free, mod-3 part in {1,2}),
+        and 64 singletons = the multiples of 3; only {0} carries a loop (D(0) = 0).
+  Condensation: big SCC --E(choice 0 mod 3)--> odd multiples of 3 --D-chain--> 0 (sink).
+  Steps to reach 0 inside the multiples of 3 (D is nilpotent on the 2-part mod 64): {0: 1, 1: 1, 2: 2, 3: 4, 4: 8, 5: 16, 6: 32}
+  Every one of the 192 types is reachable from the root types {1, 2}.
+  Out-degree census (with multiplicity): {1: 128, 4: 64}   (64 branch states r = 2 mod 3 have D + 3 E-choices)
+  Weighted matrix (D weight 1, each E-choice 1/3): mean row sum = 1.333333 = 4/3;
+  spectral radius = 1.333333333333 = 4/3; on the core the Perron vector is 1 on r = 1 mod 3 and 4/3 on r = 2 mod 3
+  (solves 3L^2 - L - 4 = 0, roots 4/3 and -1); leading core eigenvalues: +1.333333+0.000000i, -1.000000+0.000000i, +0.002250+0.000000i, +0.001123+0.001948i
+  Pruned branching (children that are not multiples of 3): from r = 1 mod 3: 1 (the D-child);
+  from r = 2 mod 3: 1 + 2/3; average over the core 4/3.  Probability that an E-child is a leaf: 1/3.
+
+  Forward automaton on Z/192 (r -> T(r) mod 192, two choices of the top bit): one SCC of the
+  128 non-multiples of 3 and 64 singleton SCCs (the multiples of 3; only 0 carries a loop, T(0) = 0).
+  The core never enters 3Z: after the first odd step an orbit never meets 3Z again.  So 3Z is a
+  SOURCE region forward and a SINK region backward: the leaf cones of the inverse tree.
+
+==============================================================================
+A3  Finite-level shadows of the generators and of the root at modulus 192
+==============================================================================
+  D: fixed type 0 and the 2-cycle {64, 128} (the 2-part is nilpotent, the mod-3 digit swaps 1<->2).
+     Real meaning: 0 is the fixed point of D; deep D-chains of a multiple of 3 end in type 0.
+  E: the type 191 = -1 mod 192 has an E-self-loop, E(-1) = -1 exactly (E's fixed point is -1).
+  S: every sibling ladder p, 4p+1, 16p+5, ... ends in the 3-cycle {21, 85, 149} mod 192:
+     all three residues mod 3 of -1/3 mod 64 (3*21+1 = 64).  S^j(p) -> -1/3 in Z_2, and -1/3 = E(0).
+  Root: 1 -D-> 2 -E-> 1 is a 2-cycle of A_6 (the cycle {1,2} of T).
+  Trunk (4^i-1)/3 = E D^(2i-1)(1) = S^(i-1)(1) mod 192: [1, 5, 21, 85, 149, 21, 85, 149, 21] ... (enters {21,85,149} at i = 3).
+
+==============================================================================
+A4  What a residue mod 192 decides
+==============================================================================
+  For every r mod 192 and both sheets (59 lifts each):
+   * n mod 64 decides the parity window (x_0, ..., x_5) of the T-orbit (Terras; a bijection Z/64 -> {0,1}^6);
+   * n mod 192 decides the mod-3 types of T^0(n), ..., T^6(n): after the first odd step the type is
+     2 at an odd-step image and alternates 1,2 along halvings; before it, it is 2^(-j) n mod 3;
+   * n mod 192 decides T^6(n) mod 3^(1+a), a = #odd steps in the window, and not mod 3^(2+a);
+   * backward: n mod 192 decides D(n) mod 384 and, for n = 2 mod 3, E(n) mod 128, but not E(n) mod 3.
+  Read on a tree node m = w(root): m mod 64 is the LAST six moves of its path (E = odd, D = even),
+  m mod 3 is its own branching type.  So the owner's type is: one branching trit + a six-move window.
+  #classes mod 192 by odd steps a in the window: {0: 3, 1: 18, 2: 45, 3: 60, 4: 45, 5: 18, 6: 3} = 3*C(6,a).
+
+==============================================================================
+A5  Order relations inside the 6-step window: exact gate bound and census, both sheets
+==============================================================================
+For a window x_i -> x_j (j-i = m <= 6) with a odd steps: 2^m x_j = 3^a x_i + b*c, c >= 0 (c = 0 iff a = 0).
+Word prediction: x_j > x_i iff 3^a > 2^m.  A crossing (actual order != prediction) needs
+x_i < gate = c/|2^m - 3^a| on the side where b*c and 2^m - 3^a have the same sign.
+  sheet b=+1: largest gate over all words of length <= 6 = 76/5 = 15.2000 at (m, word) = (5, (0, 0, 1, 1, 1))
+  sheet b=-1: largest gate over all words of length <= 6 = 260/17 = 15.2941 at (m, word) = (6, (0, 0, 1, 1, 1, 1))
+  sheet b=+1: n <= 10^6 with a non-generic comparison inside the window T^0..T^6: 9 starts, 37 windows (equalities at cycle points included); starts = [1, 2, 3, 4, 5, 8, 10, 16, 32]
+  sheet b=-1: n <= 10^6 with a non-generic comparison inside the window T^0..T^6: 21 starts, 111 windows (equalities at cycle points included); starts = [1, 2, 3, 4, 5, 6, 7, 8, 10, 11, 12, 14, 16, 19, 20, 27, 28, 32, 40, 56, 80]
+  PROVED: every value in the window is >= n/64 (each step at least halves), so for n > 64*76/5 (plus)
+  resp. n > 64*260/17 (minus), i.e. for every n > 979, the full order pattern of (T^0 n, ..., T^6 n)
+  is the word's generic pattern: a function of n mod 64, the same on both sheets after r -> -r.
+  The census shows the true exceptions are the listed starts (all <= 32 plus, <= 80 minus).
+  (Consistent with the order-laws note: short-lag genericity; the first sheet-separating window
+  has 12 odd steps, far beyond the 6 steps a residue mod 192 sees.)
+
+==============================================================================
+A6  The owner's dictionary: siblings, the 4x recursion and the hidden choice
+==============================================================================
+  T^-1(n) = {2n} U {(2n-1)/3 : n = 2 mod 3} (brute force n <= 1000, identity n <= 20000).
+  E D^2 = S E with S(p) = 4p+1 on every legal x in [-3000, 3000] (identity: (8x-1)/3 = 4(2x-1)/3 + 1).
+  U(4p+1) = U(p), v_2(3S(p)+1) = v_2(3p+1)+2 and 3S^j(p)+1 = 4^j(3p+1) (odd p < 20000):
+  the siblings converge 2-adically to -1/3 = E(0), whose T-image is 0 = D's fixed point.
+  For N = 1 mod 3 (N <= 30000): (4N-1)/3 = 4*(N-1)/3 + 1, consecutive rungs of one sibling ladder.
+   N even (5000 cases): (N-1)/3 = E(N/2) is odd, a genuine T-predecessor of N/2; the 'A/2 branch'.
+   N odd  (5000 cases): (N-1)/3 is EVEN; it is the phantom rung j = -1, and the arrow
+          (N-1)/3 -> 3*(N-1)/3 + 1 = N is exactly the extra arrow of the E-graph relaxation.
+  So the owner's 'hidden choice between both odds' is the sibling index; A/2 exists iff the lower rung
+  is a genuine T-odd; the relaxation E-SCC is the ladder extended one rung down.
+
+==============================================================================
+A7  The equivalence theorem, checked
+==============================================================================
+Theorem 1 (PROVED in the note): R := closure of {1,2} under D and guarded E equals the T-basin of {1,2};
+hence Collatz (every n >= 1 reaches 1) iff R = Z_{>0}.  Checks:
+  (i) every n <= 1000000 reaches {1,2} under T (descent to an already-resolved smaller value).
+  (ii) the D/E-closure of {1,2} inside [1, 10^5] contains exactly the n <= 3000 whose T-orbit
+       stays <= 10^5 (2964 of 3000; the others peak above the cap, e.g. [703, 937, 1055, 1249, 1406, 1407]).
+  (iii) functional graph: every node has exactly one parent T(n); by (i) the only cycle meeting
+        [1, 10^6] is {1,2} (E(2) = 1 and D(1) = 2 are its two edges).
+
+==============================================================================
+A8  The negation isomorphism nu(r) = -r between the plus and minus automata
+==============================================================================
+  For k = 1..12 the bijection r -> -r mod 3*2^k maps every D- and E_+-edge of the plus automaton
+  onto a D- resp. E_- -edge of the minus automaton (guard 2 mod 3 <-> 1 mod 3), and T_-(-n) = -T_+(n).
+  Root types: {1,2} (plus) <-> {-1,-2} (the minus sheet's NEGATIVE cycle); the minus sheet's positive
+  fixed point 1 <-> the plus type -1, i.e. the E_+-fixed point.
+
+[tree_automaton] ALL CHECKS PASSED
+
+==============================================================================
+C1  SHEET control: the minus sheet has three positive cycles; its type data equal the plus sheet's
+==============================================================================
+  plus sheet  T_+ cycles with minimum <= 10^5: [[1, 2]]
+  minus sheet T_- cycles with minimum <= 10^5: [[1], [5, 7, 10], [17, 25, 34, 37, 41, 55, 61, 68, 82, 91, 136]]
+    minus cycle min   1:  1 T-steps, 1 odd steps, multiplier 3^1/2^1 = 1.500000 > 1
+    minus cycle min   5:  3 T-steps, 2 odd steps, multiplier 3^2/2^3 = 1.125000 > 1
+    minus cycle min  17: 11 T-steps, 7 odd steps, multiplier 3^7/2^11 = 1.067871 > 1
+    plus cycle {1,2}: 2 T-steps, 1 odd step, multiplier 3/4 < 1 (contracting; sign law: positive plus
+    cycles have 2^K > 3^L, positive minus cycles have 3^L > 2^K).
+  N =  1000000: minus basins of 1, 5, 17 contain [327679, 323351, 348970] integers; densities [0.32768, 0.32335, 0.34897]   (199 rounds)
+  N = 10000000: minus basins of 1, 5, 17 contain [3273791, 3244985, 3481224] integers; densities [0.32738, 0.3245, 0.34812]   (273 rounds)
+    basin share by class mod 3:
+      basin( 1): 0.3275 0.3273 0.3273
+      basin( 5): 0.3245 0.3246 0.3244
+      basin(17): 0.3481 0.3480 0.3483
+    mod   3: chi-square of each basin's residue profile against uniform (2 d.o.f.): basin(1) 0.3, basin(5) 0.5, basin(17) 0.5
+    basin share by class mod 9:
+      basin( 1): 0.3272 0.3272 0.3273 0.3276 0.3274 0.3276 0.3277 0.3273 0.3271
+      basin( 5): 0.3244 0.3251 0.3247 0.3246 0.3247 0.3242 0.3243 0.3241 0.3243
+      basin(17): 0.3484 0.3477 0.3480 0.3478 0.3479 0.3482 0.3479 0.3486 0.3487
+    mod   9: chi-square of each basin's residue profile against uniform (8 d.o.f.): basin(1) 2.2, basin(5) 4.0, basin(17) 5.0
+    basin share by class mod 8:
+      basin( 1): 0.3282 0.3267 0.3271 0.3275 0.3275 0.3275 0.3274 0.3272
+      basin( 5): 0.3237 0.3257 0.3251 0.3245 0.3245 0.3242 0.3241 0.3242
+      basin(17): 0.3481 0.3476 0.3478 0.3481 0.3481 0.3483 0.3484 0.3487
+    mod   8: chi-square of each basin's residue profile against uniform (7 d.o.f.): basin(1) 6.8, basin(5) 16.0, basin(17) 4.7
+    mod 192: chi-square of each basin's residue profile against uniform (191 d.o.f.): basin(1) 197.2, basin(5) 217.7, basin(17) 194.6
+
+  Type data are sheet-blind (PROVED in the note, Theorem 6 (transport)).  Finite check: the forward
+  multiplicative exceptional classes mod 2^k (no prefix with 3^a < 2^j within k steps) satisfy
+  Bad_k(minus) = -Bad_k(plus) as sets of residues, k = 1..18:
+    k =  6: |Bad_k| = 8 on both sheets, and the sets correspond under r -> -r
+    k = 12: |Bad_k| = 226 on both sheets, and the sets correspond under r -> -r
+    k = 18: |Bad_k| = 7495 on both sheets, and the sets correspond under r -> -r
+
+==============================================================================
+C2  Integer points of the multiplicative exceptional set on both sheets
+==============================================================================
+x in Bad_b iff every prefix of the T_b-parity sequence of x has 3^a > 2^j.  For an integer whose
+orbit enters a cycle, membership is decided by following the orbit one full period past the entry
+(the cycle multiplier then repeats), so the check below is exact.
+  (prefilter: n mod 2^16 in Bad_16 leaves 322572 resp. 322569 candidates below 10^7)
+  Bad_- cap [1, 10^7] = [1, 5, 17]      (= -(Bad_+ cap [-10^7, -1]) by negation)
+  Bad_+ cap [1, 10^7] = []
+  Hence (FINITE-EXACT): Bad_+ cap [-10^7, 10^7] = {-17, -5, -1}  and  Bad_- cap [-10^7, 10^7] = {1, 5, 17}.
+  The statement 'Bad cap Z = the points of least |x| on the three expanding integer cycles' is sheet-symmetric;
+  only the SIGN of those three integers tells the sheets apart.
+
+==============================================================================
+C3  DEFECT controls: planted density-zero modifications invisible to the type data
+==============================================================================
+Control P1 (one trit).  T1(n) = 2n if n = 3*2^m (m >= 1), T1(n) = T(n) otherwise.
+  * S1 = {3*2^m : m >= 1} is T1-invariant and T1^-1(S1) is inside S1 (T^-1 of a multiple of 3 is its
+    double only), so every orbit starting outside S1 is its T-orbit; S1 itself is a divergent orbit.
+  * T1(3*2^m) - T(3*2^m) = 9*2^(m-1): at level k (types mod 3*2^k) the type map of T1 equals that
+    of T except at the k-1 integers 3*2^m, m < k.  #S1 cap [1,X] = floor(log2(X/3)).
+  verified: discrepancy 9*2^(m-1), agreement mod 3*2^(k-1) for all k <= m (m < 39).
+
+Control P2 (all 2- and 3-adic levels).  s_1 = 12 and s_(i+1) = s_i/2 + 6^i k_i, with the least k_i
+  making 2^(i+2) | s_(i+1) and s_(i+1) > s_i^2.  T2(s_i) = s_(i+1); T2 = T elsewhere.
+  s_1..s_4 = [12, 168, 28272, 799306368]; s_5 has 18 digits, s_7 has 72 digits.
+  verified: T2(s_i) = T(s_i) mod 6^i (so the discrepancy tends to 0 in Z_2 AND in Z_3), s_(i+1) > s_i^2,
+  3 | s_i, and the D-chains {s_i 2^j} are pairwise disjoint.  The affected set is the union of the
+  D-chains of the s_i: O(log X * log log X) integers up to X.  T2 has the divergent orbit s_1, s_2, ...
+  Affected integers <= 10^6 (both controls together): 37.  Every statement about T that
+  tolerates exceptions on a density-zero set of starting points (densities, log-densities, 'almost all',
+  tree-count lower bounds, residue-class statements with density-zero exceptions, and the one-step type
+  maps F_k up to finitely many exceptions per level) holds verbatim for T1 and T2; Collatz fails for both.
+
+==============================================================================
+C4  Z-Collatz on [-N, N]: the sheet-symmetric statement that contains Collatz
+==============================================================================
+  T_+ on [-10^6, 10^6]: 0 is fixed; every positive integer reaches {1,2}; every negative integer x
+  reaches -1, {-5,-7,-10} or {-17,...,-34} (checked as T_-(-x) = -T_+(x) on [1, 10^6]).
+  The five integer cycles of T_+ on [-10^6, 10^6], with parity words read from the listed point:
+    0              word 0            p= 1 a=0  contracting zero
+    {1,2}          word 10           p= 2 a=1  contracting positive
+    {-1}           word 1            p= 1 a=1  expanding   negative
+    {-5,-7,-10}    word 110          p= 3 a=2  expanding   negative
+    {-17,...}      word 11110111000  p=11 a=7  expanding   negative
+  (i) every integer orbit in [-10^6, 10^6] is bounded; (ii) the contracting integer cycles are exactly
+  0 and {1,2}.  Both are sheet-symmetric statements; the sign law (contracting <=> positive on the plus
+  sheet) turns them into Collatz (Theorem 15 of the note).
+  Z-Collatz (all integers, both signs, five cycles named by their parity words) is invariant under
+  negation: it is the same statement for T_+ and for T_-.  Z-Collatz plus the sign check '{1,2} is the
+  only one of the five cycles inside Z_{>0}' implies Collatz (the check is true for T_+ and false for T_-,
+  whose positive cycles are 1, 5, 17).  Z-Collatz is strictly stronger than Collatz: it contains the
+  3n-1 conjecture on the positive integers.
+
+[tree_controls] ALL CHECKS PASSED
+
+==============================================================================
+K1  Predecessor-count functions on Z/3^d (the 3-adic half of the owner's type)
+==============================================================================
+N_d(a) = number of depth-d T-predecessors of a (words in D, E legal at a).  Legality is 3-adic only;
+N_d is a function of a mod 3^d:  N_d(a) = N_(d-1)(2a) + [a = 2 mod 3] N_(d-1)((2a-1)/3).
+
+  d | mean over Z/3^d | (4/3)^d  | mean(a=1)  mean(a=2) | min over units (arg a mod 3^d) | max    | E[N^2]/E[N]^2 (units)
+  1 |        1.333333 |   1.3333 |    1.0000     2.0000 |      1 (       1)           |      2 | 1.1111
+  2 |        1.777778 |   1.7778 |    2.0000     2.3333 |      2 (       1)           |      3 | 1.0296
+  3 |        2.370370 |   2.3704 |    2.3333     3.7778 |      2 (       1)           |      5 | 1.0889
+  4 |        3.160494 |   3.1605 |    3.7778     4.7037 |      3 (       5)           |      7 | 1.0699
+  5 |        4.213992 |   4.2140 |    4.7037     6.9383 |      3 (       7)           |     10 | 1.1031
+  6 |        5.618656 |   5.6187 |    6.9383     8.9177 |      5 (       7)           |     14 | 1.0782
+  7 |        7.491541 |   7.4915 |    8.9177    12.5569 |      6 (       7)           |     20 | 1.0898
+  8 |        9.988721 |   9.9887 |   12.5569    16.4092 |      8 (      25)           |     26 | 1.0780
+  9 |       13.318295 |  13.3183 |   16.4092    22.5456 |     10 (      25)           |     36 | 1.0865
+ 10 |       17.757727 |  17.7577 |   22.5456    29.7275 |     14 (      34)           |     48 | 1.0858
+ 11 |       23.676969 |  23.6770 |   29.7275    40.3034 |     18 (      34)           |     64 | 1.0912
+ 12 |       31.569292 |  31.5693 |   40.3034    53.4045 |     25 (      25)           |     84 | 1.0877
+ 13 |       42.092389 |  42.0924 |   53.4045    71.8727 |     32 (      25)           |    112 | 1.0901
+ 14 |       56.123185 |  56.1232 |   71.8727    95.4969 |     43 (      25)           |    149 | 1.0886
+  Exact: sum_a N_d(a) = 4^d over Z/3^d, so the Haar mean is (4/3)^d.  Per-type means (m0 = 1 on 3Z):
+  m1_d = m2_(d-1) (the D-child of a = 1 is = 2 mod 3), m2_d = m1_(d-1) + (4/3)^(d-1) (the E-child is Haar-
+  uniform on Z_3); ratio m2/m1 -> 4/3, the Perron vector of A_6.
+  (recursion checked exactly: (m0 + m1_d + m2_d)/3 = (4/3)^d for d <= 14)
+  Bivariate identity sum_a N_(d,e)(a) = C(d,e) 3^(d-e), i.e. E[N_(d,e)] = C(d,e) 3^-e, checked d <= 9;
+  generating function E[sum_(d,e) N_(d,e) z^d u^e] = 1/(1 - z(1 + u/3)).
+  The minimum over 3-adic units grows by factors 1.250, 1.400, 1.286, 1.389, 1.280, 1.344 (last six):
+  min_d^(1/d) at d = 14: 1.3082 (vs 4/3 = 1.3333).  The spread is the object of Wirsching's
+  'heuristic principle' (individual counts comparable to the mean); the automaton computes it exactly
+  level by level but does not bound it uniformly.  (The minimising unit classes are those of the small
+  integers 5, 7, 25, 34: thin trees are a property of specific 3-adic points, visible level by level.)
+
+==============================================================================
+K2  The Haar-averaged size series: poles at s = 1, 2 and the reciprocal AM-GM gap
+==============================================================================
+A depth-d predecessor with e E-steps has size ~ a 2^d/3^e (carry ignored).  Haar average over a in Z_3:
+  F(s) = sum_(d,e) C(d,e) 3^-e (2^d/3^e)^-s = 1/(1 - g(s)),   g(s) = 2^-s + (3/2)^s/3.
+  g(1) = 1/2 + 1/2 = 1 (arithmetic mean of the step factors 1/2, 3/2 is 1);  g(2) = 1/4 + 3/4 = 1;
+  g < 1 exactly on (1, 2).  -g'(1) = (1/2) log(4/3) = log(2/sqrt 3) = 0.143841, the Collatz drift.
+  Residue of F at s = 1:  R = 1/log(2/sqrt 3) = 6.952119.  (No other pole on Re s = 1: |g(1+it)| = 1
+  would need 2^-it = (3/2)^it = 1, impossible for t != 0.)  By Wiener-Ikehara the averaged number of
+  predecessors of relative size <= X is ~ R X, and in each dyadic window [2^n, 2^(n+1)) it is ~ R 2^n.
+  Per-type residues (root uniform on a class mod 3): a = 0: 0 (the tree is the D-chain);
+  a = 1 mod 3: 6.95212 = R;  a = 2 mod 3: 13.90424 = 2R.  Average over Z_3: (0 + R + 2R)/3 = R.
+  Reading: orbits visit 2 mod 3 twice as often as 1 mod 3 (stationary law 2/3, 1/3 after the first odd
+  step), and the visit rate at size y is 1/(y log(2/sqrt3)): renewal theory with the drift as mean step.
+  Dyadic window means M_n = sum over n <= d - e log2 3 < n+1 of C(d,e) 3^-e (d < 6000):
+   n  :      0       5      10      15      20      25      30      35      40
+  M/2^n:  5.989   6.958   6.970   6.968   6.976   6.980   6.978   6.972   6.967
+  mean of M_n/2^n over n = 30..40: 6.9721   (R = 6.9521)
+  cumulative A(2^n)/2^n (Wiener-Ikehara predicts -> R): n=20: 6.9724, n=40: 6.9688, n=60: 6.9556, n=80: 6.9431
+  The ratio oscillates slowly around R (the non-lattice renewal theorem gives convergence without a
+  rate; the near-lattice structure comes from the convergents 19/12, 84/53, ... of log2 3).
+  Same series for the shortcut qx+1 map (branch probability 1/q): g_q(s) = 2^-s (1 + q^(s-1)).
+    q = 3: roots of g_q = 1 at s = [1.0, 2.0]; tree-count exponent = 1.0
+    q = 5: roots of g_q = 1 at s = [0.650919, 1.0]; tree-count exponent = 0.650919
+    q = 7: roots of g_q = 1 at s = [0.373501, 1.0]; tree-count exponent = 0.373501
+    q = 9: roots of g_q = 1 at s = [0.258108, 1.0]; tree-count exponent = 0.258108
+  s = 1 is always a root (arithmetic mean of 1/2 and q/2 is (q+1)/4, and the s = 1 identity reads
+  1/2 + (1/q)(q/2) = 1).  For q = 3 the other root is 2 > 1, so the averaged tree has POSITIVE DENSITY;
+  for q >= 5 the other root is < 1 (0.651 for q = 5): averaged trees have density zero.  The automaton
+  sees DRIFT exactly.  It is blind to the sheet: g does not contain the offset b.
+
+==============================================================================
+K3  Actual tree densities of integer roots on both sheets (X = 10^7) against the averaged model
+==============================================================================
+  Model (Haar average over the root's 3-adic class, carries ignored): density ~ c R / a, with c = 2 at
+  branch roots (a = 2 mod 3 plus, a = 1 mod 3 minus), c = 1 at the other units, and a tree of
+  ~log2(X/a) elements (density 0) at multiples of 3.  Ratio rho = a * density / (c R).
+   a     | plus: count      rho   | minus: count     rho
+       4 |    9999998   0.5754   |    3273789   0.0942
+       8 |    9999997   0.5754   |    3273766   0.3767
+      13 |    4755827   0.8893   |    1288193   0.1204
+      16 |     620919   0.1429   |    3273765   0.3767
+      20 |    9379053   1.3491   |     562247   0.1617
+      21 |         19      nan   |         19      nan
+      22 |    2538716   0.8034   |    1334872   0.2112
+      26 |    4755826   0.8893   |    1288171   0.4818
+      29 |    2383343   0.4971   |     177718   0.0741
+      32 |     620918   0.1429   |    1938891   0.8925
+      35 |    4503488   1.1336   |    1141644   0.5748
+      40 |    4623225   2.6600   |     562246   0.1617
+     100 |     341738   0.4916   |     548518   0.3945
+     101 |    1426647   1.0363   |     176061   0.2558
+     103 |    3051475   4.5210   |     588566   0.4360
+     105 |         17      nan   |         17      nan
+    1000 |     244917   3.5229   |     124610   0.8962
+    1001 |      74570   0.5368   |       7378   0.1062
+    1002 |         14      nan   |         14      nan
+    2000 |     244916   3.5229   |       3988   0.1147
+    2001 |         13      nan   |         13      nan
+    2002 |       8950   0.2577   |       7377   0.1062
+   roots in [4,20] (units): mean rho plus 0.706 (range 0.143..1.349), minus 0.226 (range 0.094..0.377), 5 roots
+   roots in [100,113] (units): mean rho plus 0.941 (range 0.085..4.521), minus 0.511 (range 0.088..1.468), 10 roots
+   roots in [1000,1016] (units): mean rho plus 0.828 (range 0.146..3.523), minus 0.789 (range 0.106..2.898), 12 roots
+   roots in [2000,2020] (units): mean rho plus 1.187 (range 0.176..5.203), minus 0.724 (range 0.106..2.483), 14 roots
+   64 consecutive units a in [10001, 10096]: mean rho plus 1.024 +- 0.173 (sd 1.385), minus 0.910 +- 0.151 (sd 1.206)
+   rho range plus 0.067..6.726, minus 0.063..6.794
+  Reading: for large roots the averaged model is right on average on BOTH sheets (it is sheet-blind);
+  individual roots scatter strongly with their 3-adic expansion (Wirsching's s_n(a) is unbounded on a
+  dense set of 3-adic a).  Small minus-sheet roots sit inside one of the three basins, so their trees
+  are capped by 0.327, 0.3245 or 0.348: SHEET appears only at the small end.  Near the root cycle the model
+  fails by an order-one factor (tree(4) = all n >= 3 on the plus sheet: rho = 4/R = 0.575): that is the
+  archimedean boundary, where carries are as large as the values.
+
+==============================================================================
+K4  Incongruent (undecided) classes mod 3*2^k
+==============================================================================
+A class (n mod 3, parity word of length k) is DECIDED if the class determines a certificate of
+multiplier < 1.  Three certificate sets:
+  (I)   forward only: some prefix j <= k with 3^(a_j) < 2^j (Terras).  The mod-3 digit plays no role.
+  (II)  owner-refined: (I), or n = 2 mod 3 (E(n) = (2n-1)/3 < n), or an even step j-1 -> j with
+        T^j(n) = 2 mod 3 and (2/3) 3^(a_j)/2^j < 1 (the 'A/2 branch' E(T^j n) = (T^(j-1) n - 1)/3).
+  (III) minimal-chain refined: (II), plus at every window point the non-retracing predecessor branch
+        followed along its minimal-child chain for as many E-steps as the class determines
+        (T^j(n) is known mod 3^(1+a_j): odd steps MANUFACTURE 3-adic precision).
+  DP counts agree with brute force over all classes mod 3*2^k for k <= 12.
+
+   k | 3*2^k      | (I) 3|Bad_k| | (II) owner  | (III) chains | (II)/(I) | (III)/(I) | log2(I)/k log2(II)/k log2(III)/k
+   2 |         12 |            3 |           2 |            2 |   0.6667 |    0.6667 |    0.7925    0.5000    0.5000
+   4 |         48 |            9 |           6 |            6 |   0.6667 |    0.6667 |    0.7925    0.6462    0.6462
+   6 |        192 |           24 |          14 |           14 |   0.5833 |    0.5833 |    0.7642    0.6346    0.6346
+   8 |        768 |           57 |          36 |           32 |   0.6316 |    0.5614 |    0.7291    0.6462    0.6250
+  10 |       3072 |          192 |         114 |           92 |   0.5938 |    0.4792 |    0.7585    0.6833    0.6524
+  12 |      12288 |          678 |         384 |          288 |   0.5664 |    0.4248 |    0.7838    0.7154    0.6808
+  14 |      49152 |         2202 |        1186 |          872 |   0.5386 |    0.3960 |    0.7932    0.7294    0.6977
+  16 |     196608 |         6342 |        3712 |         2726 |   0.5853 |    0.4298 |    0.7894    0.7411    0.7133
+  18 |     786432 |        22485 |       12684 |         9200 |   0.5641 |    0.4092 |    0.8031    0.7573    0.7315
+   24 |            | 8.5974e+05 | 4.8878e+05 |              |   0.5685 |           |    0.8214    0.7875
+   32 |            | 1.2404e+08 | 6.9026e+07 |              |   0.5565 |           |    0.8402    0.8138
+   40 |            | 1.9209e+10 | 1.0577e+10 |              |   0.5506 |           |    0.8540    0.8325
+   48 |            | 2.9870e+12 | 1.6197e+12 |              |   0.5423 |           |    0.8634    0.8450
+   64 |            | 8.2627e+16 | 4.4357e+16 |              |   0.5368 |           |    0.8781    0.8641
+   96 |            | 7.3116e+25 | 3.8546e+25 |              |   0.5272 |           |    0.8950    0.8854
+  128 |            | 7.1233e+34 | 3.6793e+34 |              |   0.5165 |           |    0.9045    0.8971
+  192 |            | 8.0272e+52 | 4.3030e+52 |              |   0.5360 |           |    0.9153    0.9107
+  256 |            | 1.1380e+71 | 5.9808e+70 |              |   0.5255 |           |    0.9220    0.9184
+  384 |            | 2.4817e+107 | 1.3083e+107 |              |   0.5272 |           |    0.9291    0.9267
+  (III) was checked to be a class invariant on three lifts per class for k <= 10.
+  mod 192, (I): 24 classes = 3 lifts of [7, 15, 27, 31, 39, 47, 59, 63] mod 64
+  mod 192, (II): 14 classes [7, 27, 31, 39, 63, 91, 103, 111, 123, 127, 135, 159, 175, 187]
+   all begin with two odd steps and are 0 or 1 mod 3.  The class 191 = -1 is DECIDED in (II): for n >= 1
+   in it, E(n) = (2n-1)/3 < n.  The 3-adic/2-adic point -1 itself is E's fixed point (E(-1) = -1), where
+   the multiplier 2/3 never becomes descent: the class is decided, the hostile point is not.
+  Reading: the mod-3 refinement removes a fraction of the undecided classes (about 45-50% for (II), with
+  the ratio drifting slowly, and about 60% for (III) at k <= 18), never the exponent: log2(count)/k
+  creeps up towards h(log_3 2) = 0.9500 in every column.  PROVED for (II) in the note (shifted barrier);
+  (III) is FINITE-EXACT only.
+
+==============================================================================
+K5  Rational periodic points: sign, integrality, and which lie in Bad
+==============================================================================
+A primitive parity word w of length p with a odd steps has the unique 2-adic periodic point
+x_w = c_w/(2^p - 3^a) (plus sheet; c_w > 0).  Sign(x_w) = sign(2^p - 3^a) [sign law]; x_w is an integer
+iff (2^p - 3^a) | c_w, a congruence modulo a number PRIME TO 6, invisible to the 3*2^k tower.
+  integer periodic points for p <= 18 (all primitive words): [-136, -91, -82, -68, -61, -55, -41, -37, -34, -25, -17, -10, -7, -5, -1, 0, 1, 2]
+  = {0}, {1,2}, {-1}, {-5,-7,-10}, {-17,...,-136}: positive ones only on contracting words (2^p > 3^a),
+  negative ones only on expanding words.
+  periodic points lying in Bad (every prefix of the period above the line): integer ones [-17, -5, -1];
+   count of rational ones per period p: p=1: 1, p=2: 0, p=3: 1, p=4: 2, p=5: 3, p=6: 6, p=7: 12, p=8: 16, p=9: 36, p=10: 60, p=11: 127, p=12: 216, p=13: 366, p=14: 721, p=15: 1290, p=16: 2095, p=17: 4227, p=18: 7451
+  All of them are negative.  Under x -> -x they are the positive rational cycle points of 3x-1 that lie
+  in Bad_-, among them the minima 1, 5, 17 of its three integer cycles.
+
+==============================================================================
+K6  The 16-point trap of E_{6 mod 8} is the negative image of the 3n-1 cycles
+==============================================================================
+  -F = [1, 2, 4, 5, 7, 8, 10, 14, 16, 20, 29, 32, 43, 64, 86, 128]
+  is closed under the minus-sheet relaxation (x odd -> 3x-1; x even -> x/2, and 3x-1 also at x = 2 mod 8),
+  equals the orbit of 1 there, and contains the 3n-1 cycles 1 -> 2 -> 1 and 5 -> 14 -> 7 -> 20 -> 10 -> 5
+  (C-form), glued by the excursions at 2 and 10.  Its rate 2/3 is the rate of the 3n-1 cycle {5,7,10}
+  (2 odd steps, 3 halvings; multiplier 9/8).  So the trap that refutes HYP-9121 is SHEET, seen from
+  inside the plus sheet: the hostile neighbourhood of -1 is the mirror image of 3n-1's small cycles.
+  In the full relaxation E (3x+1 allowed at every even) the orbit of -1 also meets the third cycle:
+  -1 -> -2 -> -5 -> -14 -> -41 (3x+1 at the even -14), and -41 lies on the C-form -17 cycle.
+  So all three 3n-1 cycles sit, mirrored, inside the plus sheet's hostile neighbourhood of -1.
+
+==============================================================================
+K7  The renewal identity for basins and its neutral main term
+==============================================================================
+For any set R with T^-1(R) = R (a basin, or a union of basins):  R = D(R) disjoint-union E(R cap G),
+G = guard class (2 mod 3 plus, 1 mod 3 minus).  Hence, exactly, for every X:
+   N_R(X) = N_R(X/2) + #{n in R cap G : E(n) <= X}.
+  verified exactly for the plus basin of {1,2} and each of the three minus basins, X in {10^3,
+  12345, 2*10^5, 6*10^5}.  Main terms: if R has density delta, equidistributed mod 3 (as the census
+  shows for all four basins), then delta = delta/2 + (3/2)(delta/3) = delta for EVERY delta.
+  The equation is neutral because the arithmetic mean of the step factors is 1: the automaton's
+  renewal structure cannot fix a basin's density.  Density 1 (plus) versus 0.327/0.3245/0.348 (minus)
+  is boundary data from the small numbers, i.e. non-residue information.
+
+[tree_counts] ALL CHECKS PASSED
