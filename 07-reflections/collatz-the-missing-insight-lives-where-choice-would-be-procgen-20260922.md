@@ -226,3 +226,49 @@ each one against the frontier.
   corpus had not found one. Folding by a symmetry to turn two-point
   integrality into one-point integrality is the same move as the session's
   E-game quotient, and it is a reusable card.
+
+## Wave 8 (2026-09-24): every faithful re-expression is blind somewhere
+
+The owner asked what each feature of Collatz *represents*, and offered four
+re-expressions: the backward tree built by doubling and by `(2n-1)/3`, its
+mod-192 automaton, a balanced up/down pairing, and a graceful-tree analogy.
+All four turned out exact. The lanes proved each one faithful:
+* the tree is equivalent to Collatz;
+* the automaton is sound;
+* the pairing identity holds for every pair;
+* the two edge classes are perfect difference systems.
+
+The same lanes also proved exactly where each one goes blind.
+
+* **The sign.** `x -> -x` carries every residue, density, integrality and
+  size fact about `3n+1` onto `3n-1`. So the tree and its automaton cannot
+  tell the positive half-line from the negative one, where `3n+1` has
+  three more cycles. The sign enters a proof only through the sign law.
+* **Defects.** The pairing's balance and gracefulness hold for a whole
+  family of maps. That family contains trees, maps with extra cycles, and a
+  map that differs from Collatz on a density-zero set of pairs and
+  diverges.
+
+So the owner's "orderly, perfectly arranged" picture is right about Collatz's
+local structure, and that local structure is provably not where the
+conjecture is decided. This is the same lesson as the choice ladder from the
+other side. Choice changes the exceptional set without changing the problem.
+The pairing ladder keeps every statistic and changes the truth value.
+
+**What was new.** A classical problem family turned out to be *equivalent* to
+a slice of Collatz: Mahler's fractional parts of `xi (p/q)^n` (THM-4469). The
+proved Mahler-type exclusions stop at interval length `1/p`, and the Collatz
+slices need `alpha/(alpha-1)` times that. So the Collatz divergence half
+sits just past the edge of what Flatto–Lagarias–Pollington-type arguments
+reach. That edge is exactly where two free digits per step first become
+possible. The theme of this session recurs once more: proved methods stop at
+the threshold where Collatz-type freedom begins (Sturmian vs positive
+entropy; `phi` vs coupled scales; `1/p` vs `1.88/p`).
+
+**Corrections I made to my own prompts** (logged in MISTAKES 2026-09-24):
+* a residue `n mod 3*2^k` decides the predecessor mod `2^(k+1)`, not `2^k`,
+  and never its class mod 3;
+* the bracket threshold formula I gave is the real-interval one, and for
+  integers it overshoots by one on explicit windows;
+* "tree growth counted by size" cannot separate the sheets, because `x -> -x`
+  preserves `|x|`.

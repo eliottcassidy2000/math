@@ -9,6 +9,32 @@ Format per entry:
 - Why it was wrong
 - The correct framing
 
+## 2026-09-24 Collatz tree/brackets prompts -- three coordinator readings corrected by the lanes
+
+- **WRONG 1 (collatz-procgen-20260922 wave 8, lane prompt).** "A residue
+  `n mod 3*2^k` determines the odd predecessor `(2n-1)/3` modulo `2^k`."
+  **Correct:** it determines the predecessor modulo `2^(k+1)` (one bit more)
+  and **never** its class mod 3, which needs `n mod 9`. The full type mod 192
+  of the predecessor needs `n mod 288`
+  ([inverse tree mod 192](../05-knowledge/results/collatz_procgen_20260924_inverse_tree_mod192.md)
+  Proposition 2).
+- **WRONG 2 (same session, lane prompt).** "The escape threshold for
+  multiplier `r` is `m_max(r) = floor((sqrt r + 1)/(2(sqrt r - 1)))`."
+  **Correct:** that is the real-interval threshold. For integers the exact
+  cutoff is `max{m : r <= (2m+1)^2/((2m-1)^2+1)}`, which is one lower
+  exactly on the windows `r in (g(m), h(m)]`, e.g. every `r in (4.5, 9]`
+  ([pairings and transitions](../05-knowledge/results/procgen_brackets_20260924_pairings_transitions.md)
+  §1.1).
+- **WRONG 3 (same session, suggested reformulation).** "Tree growth counted
+  by size might separate the `3n+1` and `3n-1` sheets." **Correct:** REFUTED.
+  `x -> -x` preserves `|x|` and carries the whole type structure of one sheet
+  onto the other (Theorem 6). Size-counted growth is identical for the
+  `T_+`-tree of `{1,2}` and the `T_-`-tree of `{-1,-2}`. Only the sign law
+  separates the sheets.
+- **Lesson.** When a prompt states a "fact" for a lane to build on, tell the
+  lane to verify it first. All three were caught because the prompts said
+  "verify".
+
 ## 2026-09-23 E-SCC escape costs -- one route's floor is not the infimum, and chains are not bounded by the input's digits
 
 - **WRONG 1 (collatz-procgen-20260922; synthesis sections 1 and 5, deck

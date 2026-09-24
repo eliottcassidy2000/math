@@ -29,6 +29,8 @@ Althöfer's game remain OPEN.**
   * The smallest open instance is the explicit cube-swap word `Y3`,
     whose Bernstein number is a cubic 2-adic theta value (HYP-9127).
 
+**Wave 8 (2026-09-24), summarized in section 2f.** The owner's tree/mod-192 programme is exact, and residue types are provably side-blind (`x -> -x` transport), so any proof needs the sign law. **THM-4469** (Mahler bridge): no-divergence on adjacent supercritical block pairs is equivalent to a generalized Mahler Z-number statement beyond the Flatto–Lagarias–Pollington length (HYP-9134). **THM-4470** (pairing ladder): 3x+1 is the unique AM-fair consecutive pairing, its graph is two perfect difference systems, and density-zero flips falsify it (HYP-9135 and HYP-9136). Brackets: `{2,3,11}` fully mapped. Verdicts on the owner's analogy: graceful is an ANALOGY; square-sum with the brackets is REAL; square-sum with Collatz is NUMEROLOGY.
+
 ## 0. What was asked and how it was answered
 
 The request was to generate new approaches to open problems like Collatz
@@ -404,6 +406,77 @@ the divergence half of Collatz, and the sign enters exactly as the sign of
     * Catalan parity at Mersenne indices is THM-4467's Lemma P;
     * Euler's pentagonal function is irrational at `2^10/3^9` (Theorem E);
     * `11` is a base-3 Wieferich prime, but no mechanism was found for `33^2 = 1089`.
+
+## 2f. Wave 8 (2026-09-24): what the features represent, the owner's mod-192 tree, the implication atlas, and the pairing ladder
+
+The owner asked four things:
+* what each fundamental feature of Collatz *represents*, and how it can be reduced or re-expressed;
+* for links to famous problems "so that one can be shown to prove the other";
+* to study "incongruency", singletons and small sets (`{2,3,11}`, odd-square brackets);
+* to replace "prove every number reaches 1" by the tree programme: double every odd, double the evens, send each number `2 mod 3` to `(2n-1)/3`, and decide where it goes mod 192.
+
+The owner also offered an analogy: graceful tree : 3N+1 :: square-sum arrangements : a microcosm–macrocosm transition. Three lanes ran, each audited by the orchestrator.
+
+**1. The owner's tree programme is exact, and provably needs one outside input** ([inverse tree mod 192](collatz_procgen_20260924_inverse_tree_mod192.md); audited: byte-identical rerun, independent Perron root, ladder cycle, Z-cycles and lattice sum).
+* **Equivalence (PROVED).** Collatz holds iff the `D/E` tree of `{1,2}` (`D(x) = 2x`, `E(x) = (2x-1)/3` at `x = 2 mod 3`) is all of `Z_(>0)`.
+* **The "4x fractal recursion"** is the identity `E D^2 = S E` with `S(p) = 4p+1`. The owner's "`(N-1)/3` versus `(4N-1)/3`" are consecutive rungs of the sibling ladder. When `N` is odd, the lower rung is even, and the step from it is exactly the extra arrow of the E-graph relaxation.
+* **The automaton mod `3*2^k`** has one core component (the non-multiples of 3) with growth `4/3`. Multiples of 3 are leaf cones.
+* **What mod 192 decides.** A residue mod 192 decides six parity steps and `E(n) mod 128`, but never `E(n) mod 3`, which needs `n mod 9`.
+* **The no-go (PROVED, Theorem 6 / Corollary 7).** `x -> -x` carries every residue, Haar, integrality, `l`-adic and **size** datum of `3n+1` onto `3n-1`. Residue types are therefore *side-blind*: they prove for the positive half-line exactly what they prove for the negative half-line, where `3n+1` has three more cycles. Any proof must use the **sign law** (`2^p T^p(x) - 3^a x = c_w >= 0`), and after that, integrality at the gates `2^p - 3^a` and pointwise avoidance of the null set `Bad`.
+* **The two-sided target (Theorem 15).** Collatz and 3n-1 no-divergence together are equivalent to a sheet-symmetric statement about all integers.
+* **Small sets.** The HYP-9121 16-point trap is exactly the mirror image of the three `3n-1` cycles. `Bad_+ cap Z` in `[-10^7, 10^7]` is `{-17, -5, -1}`.
+* **The drift is a residue.** The averaged tree series `1/(1 - 2^-s - (3/2)^s/3)` has residue `1/log(2/sqrt3) = 6.95` at `s = 1`: the reciprocal of the drift.
+* **"Incongruency".** The owner's mod-3 refinement removes about half of the undecided classes but keeps the exponent `h(log_3 2) = 0.95` (PROVED).
+
+**2. The one arrow out of the family: THM-4469 (Mahler bridge)** ([atlas](procgen_atlas_20260924_collatz_implication_atlas.md); PROVED + INDEPENDENTLY AUDITED).
+* **The equivalence.** No-divergence on an adjacent supercritical block pair is *equivalent* to a generalized Mahler Z-number statement. The smallest instance: no positive integer's parity vector is eventually made of `0111101110` and `1101100111` **iff** no `xi > 0` has all `xi (2187/1024)^j in Z + [4726, 4727]/1163`.
+* **Beyond FLP.** Proved Mahler-type exclusions (Flatto–Lagarias–Pollington, Dubickas, Bugeaud) stop at length `1/p`, and this instance needs `1.88/p`. So Collatz, T1 or PC implies new Mahler-type theorems, and a Mahler-side proof would settle a HARD slice of no-divergence (HYP-9134).
+* **The rest of the atlas** (58 nodes, 83 edges):
+  * no famous conjecture is known to imply Collatz, T1, NC or PC;
+  * Lang–Waldschmidt gives cycle length `>= N^(1/2-eps)` in the verification bound;
+  * abc gives prefix bounds (extending Rozier), but at the cycle gate abc is dominated by Baker;
+  * CST together with T1 implies Collatz;
+  * with Hercher and Barina's `2^71`, a nontrivial cycle has at least `137,528,045,312` odd terms (CITED);
+  * Kohl: Collatz is equivalent to transitivity of a three-generator class-transposition group, and wildness is DRIFT- and SHEET-blind;
+  * Collatz's 1932 permutation shares the cycle gates, and its signed carries cancel `13` and `7153`;
+  * the pair-sum property is the martingale property, and Doob's theorem gives Terras's.
+
+**3. The pairing ladder: THM-4470** ([pairings and transitions](procgen_brackets_20260924_pairings_transitions.md); PROVED + INDEPENDENTLY AUDITED).
+* **Arithmetic-mean fairness.** `T(2i-1) + T(2i) = (2i-1) + 2i`: each consecutive pair keeps its sum while its product shrinks by `3/4 + 1/(8i-4)`. This is the owner's AM–GM principle in exact pairwise form.
+* **Uniqueness.** Only `3n+1` on `{2i-1, 2i}` and `3n-1` on `{2i, 2i+1}` preserve pair sums: the sheets *are* the two consecutive pairings.
+* **Graceful form.** The halving edges and the up edges each realise every difference exactly once, yet no subtree with at least 2 edges is literally graceful.
+* **The family.** In the family of all pairings every member shares these properties, and `3n-1` is Collatz's antipodal corner.
+* **Fragility.** A single flip creates a cycle at exactly 24 fragile pairs, all `<= 2308` (to `10^7`; HYP-9135).
+* **Density-zero falsification.** A density-zero flip set yields a divergent orbit. So no pairing statistic decides tree-ness (DEFECT, made concrete).
+* **Provability.** No periodic pairing is provable by bounded lookahead (the pair-0 obstruction is Applegate–Lagarias's `-1`). A provable (landing ⇒ down) pairing must flip at least 29% of the pairs, and window designs suggest the price tends to 0 (HYP-9136).
+
+**4. Brackets and the analogy (same note).**
+* **The escape set.** `{2,3,11}` is the prime escape set for every ratio `r in (25/13, 25/11]`. The complete list of `(k,p)` with `kp` in `p`'s bracket is `(2,2), (3,2), (4,2), (2,3), (3,3), (2,11)`. So every other prime is the only multiple of itself in its own bracket.
+* **The microcosm.** Every Collatz move from `n >= 54` changes bracket.
+* **Nothing special about 11.** Being a base-3 Wieferich prime is a 1-in-11 event, and the trunk match has probability 1/6: NUMEROLOGY.
+* **Verdicts on the analogy.**
+  * "Graceful tree : 3N+1" is an ANALOGY: the structure is exact but shared by divergent members.
+  * "Square-sum : brackets" is REAL: both are square-density thresholds ending near 24–25.
+  * "Square-sum : Collatz microcosm" is NUMEROLOGY: Collatz's exceptions are Diophantine, pinned to convergents of `log_2 3`, and recur.
+  * The square-sum problem has an exact `x49` microcosm-to-macrocosm engine (`(49a+c) + (49b-c) = (7s)^2`, partitioning `[25, 1249]`). Collatz has none.
+
+**What the features represent (the owner's first question, answered in one table).**
+
+| feature | represents | sees | blind to |
+|---|---|---|---|
+| parity bit | a 2-adic digit (Terras bijection; conjugacy to the shift) | all residue statistics | the sign, integrality |
+| multiplier `3` | the unique AM-fair multiplier (pair sums preserved) | the drift, as the AM–GM gap `log(2/sqrt3)` = 1/(tree residue) | which orbits realize it |
+| `+1` vs `-1` | which consecutive pairing, i.e. the side of `0` | only the sign law and the gates' signs | every residue, density, size datum |
+| `2 mod 3` | branch points of the inverse tree = images of up-moves | branching `4/3` | SHEET |
+| `4p+1` ladder | `E D^2 = S E`, the owner's "4x recursion"; limit `-1/3` | the 3-adic rotation | order |
+| trunk `(4^i-1)/3` | the sibling ladder of the root | Q2's exits | SHEET, DRIFT |
+| `2^K - 3^L` | the incongruence of 2 and 3: cycle gates | cycles and fragile pairs | divergence |
+| exceptional set | classes no congruence decides (`dim 0.95`, with or without the mod-3 refinement) | where certificates fail | whether a positive integer lies in it |
+
+**The wave's answer to "reduce or re-express, and connect".**
+1. Every re-expression the owner proposed (the tree, the mod-192 automaton, the pairing, the graceful form) is exact and PROVED equivalent or faithful. Each one is also provably blind to the sign, to density-zero defects, or to both.
+2. The inputs a proof must add are now named exactly: the sign law, integrality at `2^p - 3^a`, and pointwise avoidance of a null set.
+3. The one new two-way bridge to a classical problem family is Mahler's (THM-4469). There Collatz implies exclusions just beyond the Flatto–Lagarias–Pollington length, and the smallest such exclusion is a HARD slice of no-divergence.
 
 ## 2b. The approach deck: every approach generated or considered, with its disposition
 
