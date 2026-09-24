@@ -29,6 +29,8 @@ Althöfer's game remain OPEN.**
   * The smallest open instance is the explicit cube-swap word `Y3`,
     whose Bernstein number is a cubic 2-adic theta value (HYP-9127).
 
+**Wave 9 (2026-09-24), summarized in section 2g.** arXiv 2502.20642 (a claimed fixed-point proof of Collatz) is invalid (**THM-4471**): its general theorem fails on `x -> x+1`, and its table also "proves" `3n−1`. The owner's triangle sandwich is its Lemma 2.1, and the sign law is exactly the sandwich's two equality cases with `0` in the middle. The correct fixed-point theorem is Banach in `Z_2`: one gate per word, and 18 integral points for `p ≤ 24`. **THM-4472**: the owner's converse 4-tournaments are forward map versus inverse tree (time reversal), not the sheets. **THM-4473**: Collatz's digit chains are exact Markov laws (mod 10 entries `2^j/15`, `3 -> 5` certain, `9 -> 9 = 8/15`), unlike the vanishing prime-digit bias. Repunit primes are the prime fixed points of digit rotation, and `Q` has the new odd 2-cycle `{−1/5, 5/7}`.
+
 **Wave 8 (2026-09-24), summarized in section 2f.** The owner's tree/mod-192 programme is exact, and residue types are provably side-blind (`x -> -x` transport), so any proof needs the sign law. **THM-4469** (Mahler bridge): no-divergence on adjacent supercritical block pairs is equivalent to a generalized Mahler Z-number statement beyond the Flatto–Lagarias–Pollington length (HYP-9134). **THM-4470** (pairing ladder): 3x+1 is the unique AM-fair consecutive pairing, its graph is two perfect difference systems, and density-zero flips falsify it (HYP-9135 and HYP-9136). Brackets: `{2,3,11}` fully mapped. Verdicts on the owner's analogy: graceful is an ANALOGY; square-sum with the brackets is REAL; square-sum with Collatz is NUMEROLOGY.
 
 ## 0. What was asked and how it was answered
@@ -477,6 +479,61 @@ The owner also offered an analogy: graceful tree : 3N+1 :: square-sum arrangemen
 1. Every re-expression the owner proposed (the tree, the mod-192 automaton, the pairing, the graceful form) is exact and PROVED equivalent or faithful. Each one is also provably blind to the sign, to density-zero defects, or to both.
 2. The inputs a proof must add are now named exactly: the sign law, integrality at `2^p - 3^a`, and pointwise avoidance of a null set.
 3. The one new two-way bridge to a classical problem family is Mahler's (THM-4469). There Collatz implies exclusions just beyond the Flatto–Lagarias–Pollington length, and the smallest such exclusion is a HARD slice of no-divergence.
+
+## 2g. Wave 9 (2026-09-24): Brouwer and fixed points, the owner's triangle sandwich, four-vertex tournaments, and digits/repunits
+
+The owner asked us to:
+* think Brouwer's fixed point theorem;
+* connect Rédei, Hamiltonian paths and "fixed point chain growth" with arXiv 2502.20642;
+* hone in on the triangle sandwich `|d(x,z) − d(z,y)| ≤ d(x,y) ≤ d(x,z) + d(z,y)` and its squares, reading the two sides as positive and negative with the centre as 0;
+* consider the claim that "3" and "±1" are the two 4-vertex tournaments swapped by reversing all arcs;
+* look at the non-uniform last-digit transitions of consecutive primes, circular primes such as `{337, 373, 733}`, and repunit primes and their lengths.
+
+Three lanes ran, each audited by the orchestrator.
+
+**1. The paper is a claimed proof of Collatz, and it is invalid: THM-4471** ([fixed-point audit](collatz_procgen_20260924_fixed_points_kawasaki_audit.md)).
+* **What the paper is.** arXiv 2502.20642 is Kawasaki's "A proof of the Collatz conjecture". The owner's sandwich is its Lemma 2.1, and the lemma is correct: it is the triangle inequality followed by AM–QM, and it discards the cross term `±2ab`.
+* **The general theorem is false.** Its weighted-pseudocontraction fixed-point theorem (Theorems 2.1(5)–2.3(5)) fails:
+  * `x -> x+1` on `(N, |x−y|)` satisfies every hypothesis with the paper's own constants;
+  * the least counterexample has 3 points.
+* **The gap.** The proof swaps a quantifier: it needs the second alternative at the pair `(Tp, p)`, but the hypothesis only supplies it at `(p, Tp)`. Collatz falls into the gap at every odd step.
+* **Sheet control.** The paper's coefficient table, copied verbatim, also "proves" that `3n−1` reaches 1.
+* **No contraction argument in `|x−y|` can work.** Up-steps stretch consecutive distances by up to `3/2`. Caristi's principle and a discrete contraction metric are each *equivalent* to Collatz, and Bessaga's contraction metric to its cycle half.
+* **The owner's sandwich, made exact.**
+  * The sign law is precisely the two equality cases, with `z = 0` in the middle: positives realize the upper case and negatives the lower.
+  * The `b = 0` "central" sheet is Mahler's `3x/2`, and THM-4469 says the `±1` orbits shadow the central Mahler orbit with a confined carry.
+  * The paper breaks exactly at the `+2ab` up-steps.
+* **The correct fixed-point theorem is Banach's in `Z_2`, applied to the inverse branches.** Every parity word has exactly one fixed point, its cycle gate `c_w/(2^p − 3^a)`. This fixed-point chain grows like `2^p`, and for `p ≤ 24` exactly 18 of its points are integers: the five known cycles.
+* **My Sharkovskii suggestion was REFUTED.** Every continuous extension has all periods on both sides. The sign does decide *stability* in Chamberland's extension.
+
+**2. The two diamonds are time reversal, not the two sheets: THM-4472** ([four-vertex note](procgen_tourn_20260924_four_vertex_sheets_redei.md)).
+* **The quadruple.** Take the AM-fair pair and its two images, with the map arcs and every other pair oriented by numerical order. The result is the 3-cycle over a sink `(0,2,2,2)`, with `H = 3`, iff `b·s_o > 0`; otherwise it is transitive.
+* **The inverse tree gives the converse.** The inverse tree yields the source over a 3-cycle `(1,1,1,3)`, and the reflection `x -> s_o + s_e − x` identifies the two.
+* **The owner's "±1" is the direction of time.** `3n+b` inverts to `(y−b)/3`.
+* **Negation fixes the class,** and reversing all six arcs equals negation composed with time reversal.
+* **Rédei's parity is the opposite of Collatz's.** Rédei leaves exactly one unpaired configuration. Collatz's `2^p` periodic points are paired off completely by a free involution that commutes with `T`.
+
+**3. Digits, rotation and repunits** ([repunit note](procgen_repunit_20260924_digits_rotation_repunits.md)).
+* **Lemke Oliver–Soundararajan, reproduced and extended.** Their tables are reproduced exactly and extended to `10^11`. The bias is real but decays, and their second-order term explains 86% of it.
+* **Collatz's analogue is exact and does not decay.** For consecutive odd Syracuse terms:
+  * mod 10, `3 -> 5` has probability 1, and every other entry is `2^j/15`, `j ∈ {0,1,2,3}`; for example `9 -> 9` has probability `8/15`;
+  * mod 3 the terms are i.i.d. with law `(0, 1/3, 2/3)`;
+  * mod 9 the stationary law is `(8,16,11,4,2,22)/63`.
+
+  The owner's first snippet's "1/15" reappears as the unit of this matrix.
+* **Rotation.** Rotating digits is multiplication by `b` modulo `b^k − 1`. Repunit primes are exactly its prime fixed points, and `{337, 373, 733}` is a free orbit. So "Brouwer: fixed point versus orbit" is REAL. The claim that the digit bias *generates* circular primes is NOT SUPPORTED.
+* **The repunits inside Collatz.**
+  * `T^k(2^k − 1) = 3^k − 1`, i.e. base-2 repunits run up to twice base-3 repunits.
+  * The 2-adic repunit limits `ξ_b = 1/(1−b)` are moved by the Möbius map `b -> −(b+2)/(b−4)`.
+  * The parity-vector map `Q` of Bernstein–Lagarias has odd fixed points `−1` and `1/3`: the repunits of bases 2 and −2.
+  * `Q` has a **second odd 2-cycle `{−1/5, 5/7}`** alongside `{1, −1/3}`. It is exact, and its literature status is UNVERIFIED.
+* **Lengths of all-ones primes.** As hidden Collatz structure this is NUMEROLOGY: 24 tests, none significant.
+* **Corrected lead.** `−1/3` is not a fixed point of `T`, since `T(−1/3) = 0`.
+
+**What wave 9 adds to the picture.**
+1. The owner's inequality instinct is right in a precise sense. The sign lives in the cross term of the triangle sandwich, i.e. at the centre `0`. Every even observable (`|x|`, `x²`, `|x−y|`) discards it. That is why a metric fixed-point argument in `|x−y|` cannot be side-aware.
+2. The right fixed-point theorem, Banach in `Z_2`, supplies every periodic point for free. It leaves exactly the integrality question at the gates.
+3. The owner's tournament picture is real, but it encodes *time reversal*. The sheet swap is negation, and the full converse is their composite.
 
 ## 2b. The approach deck: every approach generated or considered, with its disposition
 

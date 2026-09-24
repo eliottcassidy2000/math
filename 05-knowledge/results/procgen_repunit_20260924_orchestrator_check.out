@@ -1,0 +1,6 @@
+D1  Syracuse last-digit law: 3 -> 5 certain; other rows are a permutation of (1,2,4,8)/15; 9 -> 9 = 8/15: ok
+D2  mod-9 stationary law (8,16,11,4,2,22)/63 and mod-3 rows (0,1/3,2/3): ok
+D3  fixed points of digit rotation (base 10, k <= 6) are exactly the repdigits c*R_k: ok
+D4  Q fixed points {-1, 1/3}; odd 2-cycles {1,-1/3} and {-1/5,5/7} (odd p, |p|<=121, odd q<60): ok
+D5  T^k(2^k-1) = 3^k-1 and T^(k+1)(2^k-1) = (3^k-1)/2 for k <= 200: ok
+ALL CHECKS PASSED

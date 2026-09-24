@@ -22,6 +22,7 @@ Format per entry:
   iff the points are `>= 0`) and which integer cycles exist (FINITE-EXACT
   `p <= 24`) ([fixed-point audit](../05-knowledge/results/collatz_procgen_20260924_fixed_points_kawasaki_audit.md)
   Theorem K).
+- **WRONG (same session, wave 9 repunit prompt).** "The infinite repunits of bases 2 and 4 are Collatz's 2-adic fixed points `-1` and `-1/3`." **Correct:** only `-1` is fixed. `T(-1/3) = 0`, so `-1/3` is the fixed point of the sibling-ladder map `p -> 4p+1` (and half of the Bernstein–Lagarias 2-cycle `{1, -1/3}`), not of `T` ([repunit note](../05-knowledge/results/procgen_repunit_20260924_digits_rotation_repunits.md) CORRECTED leads).
 - **EXTERNAL (recorded to prevent reuse).** arXiv:2502.20642v1 [math.GM]
   claims a proof of Collatz from a "weighted generalized pseudocontraction"
   fixed-point theorem. The theorem is false (the successor map satisfies its

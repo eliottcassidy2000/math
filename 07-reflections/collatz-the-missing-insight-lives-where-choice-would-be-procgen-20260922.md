@@ -272,3 +272,51 @@ entropy; `phi` vs coupled scales; `1/p` vs `1.88/p`).
   integers it overshoots by one on explicit windows;
 * "tree growth counted by size" cannot separate the sheets, because `x -> -x`
   preserves `|x|`.
+
+## Wave 9 (2026-09-24): the sign lives in the cross term
+
+The owner pointed at a claimed proof of Collatz, arXiv 2502.20642. It is a
+fixed-point argument in the metric `|x−y|`, and its key lemma is the
+triangle sandwich `|a−b| ≤ c ≤ a+b`. The owner asked us to read the two
+sides as positive and negative and the middle as zero.
+
+The lemma is correct. The general theorem is false: the successor map
+satisfies all of its hypotheses. It is still worth recording *why* such
+an argument had to fail, because the owner's reading of the sandwich says
+exactly why.
+
+* **The sign lives in the cross term `±2ab`.** For a parity word `w`,
+  `2^p |T^p x| = |3^a x + c_w|`. It sits on the upper side of the sandwich
+  for `x > 0` and on the lower side for `x < 0`, with `0` as the middle
+  point. So the sign law is precisely the sandwich's two equality cases.
+* **Even observables throw it away.** The quantities `|x|`, `x²` and
+  `|x−y|`, and the AM–QM step that the paper's lemma uses, all discard
+  the cross term. The negation symmetry `x -> −x` (the mod-192 note) is an
+  isometry of `|x−y|`. A metric argument in `|x−y|` therefore sees the
+  positive half-line exactly as it sees the negative one, where Collatz
+  has three extra cycles.
+* **The breakdown is visible.** The paper's coefficient table, copied
+  verbatim, also "proves" that `3n−1` reaches 1. Its error falls at every
+  up-step, where positive orbits sit on the `+2ab` side.
+
+**The fixed-point theorem that does fit Collatz is Banach's in `Z_2`.** The
+inverse branches contract, and every parity word has exactly one periodic
+point, its cycle gate. Existence is free; the problem is integrality.
+Brouwer's one-dimensional form (the intermediate value theorem) gives all
+periods on both half-lines. My guess that the sign decides the Sharkovskii
+type was wrong.
+
+**The owner's tournament picture found a different symmetry.** The two
+4-vertex tournaments that swap under reversing every arc are the forward
+map and the inverse tree of one AM-fair pair, i.e. time reversal. They are
+not the two sheets. `3n+b` inverts to `(y−b)/3`, so the owner's "±1"
+really does flip, but it flips with time, not with sign.
+
+**Digits.** Collatz has an exact, non-decaying version of the
+consecutive-prime digit bias. Its transition probabilities are
+`1/15, 2/15, 4/15, 8/15`, and `3 -> 5` is certain. The difference from
+primes is structural: halving counts are identically distributed at every
+size, while prime gaps grow.
+
+Repunit primes are the prime fixed points of digit rotation. In base 2 the
+infinite repunit `...1111 = −1` is Collatz's own hostile fixed point.
