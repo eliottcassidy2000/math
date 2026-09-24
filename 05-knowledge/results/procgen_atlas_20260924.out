@@ -1,0 +1,749 @@
+procgen_atlas_20260924: implication atlas output (deterministic; timing on stderr)
+
+################################################################################
+# procgen_atlas_20260924_graph.py
+################################################################################
+
+==============================================================================
+G1  nodes
+==============================================================================
+  COL     [C] OPEN    Collatz conjecture: every n >= 1 reaches 1 under T(x)=x/2, (3x+1)/2; verified for n < 2^71 (Barina 2025)
+  T1      [C] OPEN    T1: no divergence: no positive integer has an unbounded T-orbit; = PC on Z^+ (Bernstein 1994: Z^+ meets Phi(non-EP words) nowhere)
+  NC      [C] OPEN    NC: no nontrivial cycle: no positive T-cycle other than {1,2}; a Pi^0_1 statement
+  PC      [C] OPEN    PC (Lagarias 1985): Periodicity Conjecture Q_inf(Q_2)=Q_2: every rational in Z_2 has an eventually periodic parity vector
+  C2      [C] OPEN    C2 (HYP-9123): no rational has a non-EP parity vector of bounded discrepancy around a supercritical slope
+  Y3      [C] OPEN    cube-swap (HYP-9127): sum_k (2^10/3^9)^(k^3) is irrational in Q_2
+  Q1      [C] OPEN    E-SCC Q1: every n reaches 1 in the relaxed graph E (Le-Smith loosened graph)
+  Q2      [C] OPEN    E-SCC Q2: 1 reaches every m prime to 3 in E; verified below 10^18
+  XMIN    [C] OPEN    X_min (HYP-9124): no integer m >= 2 lies in the backward exceptional set Bad_inf
+  CST     [C] OPEN    Terras sigma = tau: coefficient stopping time conjecture: sigma(n) = tau(n) for n >= 2; verified to 2.8*10^19 (Rozier-Terracol)
+  TAU     [H] OPEN    tau finite on Z^+: every n >= 1 has 3^(a_j(n)) < 2^j for some j (finite coefficient stopping time)
+  PC3K    [H] OPEN    no divergence for all 3x+k: no map (3x+k)/2, x/2 with k = +-1 mod 6 has a divergent integer orbit
+  SP      [H] OPEN    swap principle SP(2^L/3^a): for 2^L < 3^a, 1 <= a < L, non-EP S: sum_{s in S} (2^L/3^a)^s is irrational in Q_2 (PROVED for 3^a < 2^L; FALSE at a = L, base 2/3)
+  T1A     [H] OPEN    T1 on block classes A^N: no positive integer has a T-parity vector eventually in A^N, A = >=2 blocks of length L and weight a, 3^a > 2^L (supercritical, positive entropy)
+  T1AS    [H] OPEN    T1 on an adjacent pair class: the case A = {B,B'}, R_B' = R_B + 1, 3^a > 2^(L+1): e.g. L=10, a=7, A = {0111101110, 1101100111}
+  GMAS    [F] OPEN    Z(3^a/2^L, [R,R+1]/(3^a-2^L)): e.g. no xi > 0 with xi (2187/1024)^j in Z + [4726,4727]/1163 for all j; an interval 1.88 times the FLP length 1/p
+  H9126   [H] OPEN    HYP-9126 (3/2 wall): in-house hypothesis; implies X_min
+  LS2     [H] OPEN    Le-Smith Conj. 2: every nontrivial E-cycle uses an E-only arrow
+  LBH     [H] OPEN    Rozier's LBH: Lower Bound Hypothesis: n >= j^(-C) 2^((1-H(q/j)) j) for the first j iterates with q odd terms
+  LBHS    [H] OPEN    LBH slices: n >= c_eps 2^((1-eps) j) for parity prefixes with one even term (Rozier) or of shape 1^k 0^l (Prop. R2)
+  MCYC    [H] PROVED  m-cycle / length bounds: no m-cycle for m <= 91 (Hercher 2023); with Barina's 2^71 and Hercher Cor. 29 every nontrivial cycle has >= 137,528,045,312 odd terms
+  CYCGR   [H] OPEN    L_min(N) >= N^(1/2-eps): least cycle length grows like the square root of the verification bound
+  TERRAS  [H] PROVED  Terras/Everett density 1: almost every n (natural density) has finite stopping time
+  DDOOB   [N] PROVED  deterministic Doob: d{n : max_{j<=k} T^j(n) >= lam n} = P_k(lam) <= 1/lam, with a Pareto(1) tail (Lundberg exponent 1)
+  PAIR    [N] PROVED  pair-sum fairness: T(2i-1)+T(2i) = (2i-1)+2i; (3,1) and (3,-1) are the only (q,r) preserving a consecutive pairing
+  PERM8   [N] OPEN    orbit of 8 (Collatz 1932): under g(3m)=2m, g(3m+1)=4m+1, g(3m+2)=4m+3 the orbit of 8 is infinite
+  PERMF   [N] OPEN    g has finitely many cycles: Lagarias's (C4) for Collatz's permutation; 4 positive cycles known (min 1, 2, 4, 44); finitely many of each length (Keller) and of each m (Simons 2022)
+  KOHLC   [H] OPEN    Kohl: T contracting: every integer trajectory enters the 18-point centre {-136,...,2} of the five known cycles (Kohl thesis 3.6)
+  GTRANS  [H] OPEN    G_C transitive: <tau_1(2),4(6), tau_1(3),2(6), tau_2(3),4(6)> acts transitively on N minus 0(6) (Kohl 2017)
+  GATE    [N] PROVED  shared gate 2^K vs 3^L: T-cycles: n(2^K-3^L)=B(w)>0; g-cycles: n(3^k-2^K)=D_w signed; both on the convergent clocks of log_2 3
+  DIV5    [H] OPEN    5x+1 diverges somewhere: control: a divergent 5x+1 orbit exists (expected)
+  U13     [H] OPEN    U(1/3) S-unit gap: in-house uniform S-unit gap hypothesis (cube-theta note)
+  GCOLL   [F] PROVED  generalized-Collatz encodings: each Pi^0_1 / Pi^0_2 statement is equivalent to a statement about an explicit generalized Collatz map, a different map for each problem (not 3x+1)
+  ABC     [F] OPEN    abc conjecture: Oesterle-Masser; explicit forms (A. Baker 2004) and the n-term conjecture
+  PILLAI  [F] OPEN    Pillai's conjecture: |x^p - y^q| grows; fixed-c finiteness; for bases 2,3 proved (Stroeker-Tijdeman, Bennett)
+  BAKER   [F] PROVED  Baker / effective linear forms: Baker's theorem; explicit two-log bounds (Laurent-Mignotte-Nesterenko, Rhin); Ellison 1971
+  LW      [F] OPEN    Lang-Waldschmidt: sharp lower bound for linear forms in logarithms; gives irrationality exponent 2 for log_2 3
+  PSCH    [F] OPEN    p-adic Schanuel: p-adic analogue of Schanuel's conjecture
+  ERDOS   [F] OPEN    Erdos ternary problem: 2^n has a ternary digit 2 for every n > 8
+  MAHLER  [F] OPEN    Mahler 3/2 Z-numbers: no xi > 0 with 0 <= {xi (3/2)^n} < 1/2 for all n
+  GMAH    [F] OPEN    generalized Z(p/q, I): no xi > 0 with xi (p/q)^n in Z + I for all n (Mahler/FLP/Bugeaud/AFS family)
+  FLP     [F] PROVED  FLP / Dubickas / Bugeaud: no xi > 0 keeps {xi (p/q)^n} in an interval of length < 1/p (FLP), nor in a closed [s,s+1/p] when q<p<q^2 (Dubickas 2009)
+  FURST   [F] OPEN    Furstenberg x2x3: x2,x3-invariant ergodic measures are Lebesgue or finitely supported
+  NORMAL  [F] OPEN    normality of log_2 3, sqrt 2: digit normality
+  LITTLE  [F] OPEN    (mixed) Littlewood: liminf n ||n a|| ||n b|| = 0; inf n |n|_p ||n a|| = 0
+  TWIN    [F] OPEN    twin primes: infinitely many p with p+2 prime (Pi^0_2)
+  GOLD    [F] OPEN    Goldbach: every even n > 2 is a sum of two primes (Pi^0_1)
+  LEG     [F] OPEN    Legendre: a prime between n^2 and (n+1)^2 (Pi^0_1)
+  RH      [F] OPEN    RH / GRH: Riemann hypothesis (Pi^0_1 via an elementary criterion)
+  LEHMER  [F] OPEN    Lehmer's problem: Mahler measures of non-cyclotomic integer polynomials are bounded away from 1
+  GRACE   [F] OPEN    graceful tree: every tree is graceful (Pi^0_1)
+  LRC     [F] OPEN    lonely runner: LRC (Pi^0_1 for each n, finitely checkable per n by Tao 2018)
+  KL      [F] PROVED  Kontorovich-Lagarias models: theorems about stochastic models; as predictions for T they are heuristic
+  UNDEC   [F] PROVED  Conway / Kurtz-Simon: generalized Collatz problems are undecidable (Conway 1972), Pi^0_2-complete (Kurtz-Simon 2007)
+  CATAL   [F] PROVED  Catalan-Mihailescu: 3^2 - 2^3 = 1 is the only consecutive perfect powers; for 2,3 already Levi ben Gershon
+  RCWA    [N] PROVED  Kohl RCWA theory: T is wild (Mod(T^k) = 2^k); surjective non-injective => wild; unbalanced permutations are wild, so Collatz's permutation is wild; tame orbits are rigid
+  DOOB    [N] PROVED  Doob martingale theorems: convergence and maximal inequality for nonnegative martingales
+  ERG2    [N] PROVED  2-adic ergodic theory of T: T on Z_2 measure-preserving, strongly mixing, conjugate to the shift (Lagarias 1985 Thm K, L; Bernstein-Lagarias 1996; Akin 2004)
+
+==============================================================================
+G2  edges (kind: => implication, <=> equivalence, ~ relation, x barrier)
+==============================================================================
+  E01      COL =>  NC      PROVED       : a cycle other than {1,2} contains no 1  <elementary>
+  E02      COL =>  T1      PROVED       : orbits reaching 1 are bounded  <elementary>
+  E03    NC+T1 =>  COL     PROVED        [HIGHLIGHT]: a bounded orbit is eventually periodic; the only positive cycle is {1,2}  <elementary>
+  E04       PC <=> PC3K    CITED         [HIGHLIGHT]: Periodicity Conjecture iff no 3x+k (k = +-1 mod 6) has a divergent integer orbit  <Bernstein-Lagarias 1996 [P], via Lagarias 1990 Cor. 2.1b [R]>
+  E05     PC3K =>  T1      PROVED        [HIGHLIGHT]: the instance k = 1 on the positive integers  <Lagarias 1985 sec. 2.8 [P]>
+  E06       PC =>  C2      PROVED        [HIGHLIGHT]: C2 is the bounded-discrepancy supercritical slice of PC  <hypothesis sweep sec. 6>
+  E07       C2 =>  Y3      PROVED        [HIGHLIGHT]: an eventually-Y3 vector has width 1 at slope 9/10  <hypothesis sweep sec. 6; hard-class note>
+  E08       PC =>  SP      PROVED        *NEW* [HIGHLIGHT]: block identity: Phi_T(Y_S) = -(1/3^a)[R_B/(1-rho) + (R_B'-R_B) Theta_S(rho)]  <this note, Prop. SP>
+  E09       SP =>  T1A     PROVED        *NEW* [HIGHLIGHT]: for two-block alphabets A = {B,B'}  <this note, Prop. SP>
+  E10       C2 =>  T1A     PROVED        *NEW*: A^N words have discrepancy <= L around the slope a/L  <this note>
+  E11       T1 =>  T1A     PROVED        [HIGHLIGHT]: restriction  <trivial>
+  E12     GMAH =>  T1A     CONDITIONAL   *NEW* [HIGHLIGHT]: Theorem M: xi = x + (1/3^a) sum R_{c_i} rho^i satisfies xi (3^a/2^L)^j in Z + I_A  <this note, Theorem M>
+  E13      FLP x   T1A     FALSE         *NEW*: as a route: |I_A| >= 1/(3^a-2^L) > 1/3^a, so the FLP spread bound never applies  <this note, Lemma M2>
+  E14      T1A =>  T1AS    PROVED        *NEW* [HIGHLIGHT]: specialisation to adjacent pairs  <trivial>
+  E15     GMAS <=> T1AS    PROVED        *NEW* [HIGHLIGHT]: Theorem M': for R_B' = R_B + 1 and 3^a > 2^(L+1) the confinement xi alpha^j in Z + I forces the digits R_B, R_B+1, i.e. the Collatz blocks  <this note, Theorem M'>
+  E16      FLP x   GMAS    FALSE         *NEW*: as a route: the needed exclusion length is (alpha/(alpha-1))/p = 1.88/p, 1.59/p, 1.49/p, 1.28/p at L = 10, 16, 19, 20; proved exclusions stop at 1/p  <this note B8; FLP 1995 [R]; Dubickas 2009 [R]; Bugeaud 2004 [P]>
+  E17   MAHLER x   T1      NO KNOWN LINK: different map (all steps x3/2); SP(2/3) is FALSE; two-place orthogonality (2-adic free vs real free)  <this note; THM-2228; hard-class note>
+  E18   MAHLER ~   GMAH    PROVED        *NEW*: Mahler's problem is the instance (3/2, [0,1/2)); Theorem M needs 3^a/2^L with a < L  <this note>
+  E19      ABC ~   MAHLER  CONDITIONAL  : abc gives only radical floors on carry steps; no Z-number obstruction  <THM-3848 sec. 7>
+  E20      COL =>  Q1      PROVED        [HIGHLIGHT]: an orbit to 1 is a path in E  <synthesis sec. 1>
+  E21     XMIN =>  Q2      PROVED        [HIGHLIGHT]: endgame Theorem 6.1  <Q2 endgame note>
+  E22    H9126 =>  XMIN    PROVED        [HIGHLIGHT]: Proposition C1  <hypothesis sweep sec. 4>
+  E23      CST =>  NC      CITED         [HIGHLIGHT]: the minimum m of a nontrivial cycle has tau(m) <= K < sigma(m) = infinity  <Lagarias 1985 sec. 2.3 [P]; re-proved here>
+  E24       T1 =>  TAU     PROVED        *NEW* [HIGHLIGHT]: tau(n) = infinity forces T^j(n) >= n for all j and no periodic tail  <this note, Prop. CST>
+  E25      COL =>  TAU     PROVED        *NEW*: the tail (1,2)^inf has coefficients (3/4)^(j/2) -> 0  <this note>
+  E26  CST+TAU =>  COL     PROVED        *NEW* [HIGHLIGHT]: sigma(n) = tau(n) < infinity for every n >= 2, then strong induction  <this note, Prop. CST>
+  E27       NC <=> LS2     PROVED       : Le-Smith Conj. 2 is equivalent to no positive Collatz cycle  <synthesis sec. 1>
+  E28      LBH =>  COL     CITED         [HIGHLIGHT]: LBH implies the Collatz conjecture (least term of a trajectory avoiding 1 forces q/j >= 0.575)  <Rozier 2017 FACM, Lemma 3.1 [P]>
+  E29      LBH =>  LBHS    PROVED       : specialisation (the slices are weaker than LBH at the same j)  <trivial>
+  E30      ABC =>  LBHS    CONDITIONAL   [HIGHLIGHT]: abc => n >= K(eps) 2^((1-eps) j) for prefixes with exactly one even term; two-block 1^k 0^l version  <Rozier 2025 Thm 2.1 [P]; Prop. R2 here (PROVED)>
+  E31      ABC x   NC      NO KNOWN LINK: gate route: abc gives |2^K-3^L| >= 2^(K(1-eps))/C, exponentially weaker than proved Baker bounds; unbounded number of carry terms  <this note C4 (PROVED comparison); Rozier 2025 sec. 6 [P]>
+  E32      ABC x   Y3      NO KNOWN LINK: the n-term abc conjecture is too weak (radical exponent 2n-5 grows)  <cube-theta note sec. 4>
+  E33      U13 =>  Y3      CONDITIONAL  : Theorem U  <cube-theta note sec. 4>
+  E34    BAKER =>  MCYC    CITED         [HIGHLIGHT]: linear forms + continued fraction + verification  <Simons-de Weger 2005; Hercher 2023 [P]>
+  E35     MCYC ~   NC      PROVED       : proved partial results toward NC (bounded complexity only)  <Hercher 2023; recomputed here>
+  E36       LW =>  CYCGR   CONDITIONAL   *NEW* [HIGHLIGHT]: irrationality exponent 2 of log_2 3 => L > (3 c N ln2)^(1/(2+eps))  <this note, Prop. LW>
+  E37    BAKER =>  CYCGR   PROVED        *NEW*: weaker form L >> N^(1/mu_eff) with the effective irrationality exponent  <this note>
+  E38    CYCGR ~   NC      PROVED       : quantitative NC relative to verification; never NC itself  <this note>
+  E39   PILLAI x   NC      NO KNOWN LINK: fixed-c finiteness fixes the clock of a gate value but not the carry divisibility D | B(w)  <gates note sec. 7; this note C6>
+  E40    CATAL =>  GATE    PROVED        *NEW* [HIGHLIGHT]: unit gaps (1,1),(2,1),(3,2) classify the cycles of T+-, and the g-cycles on 2/1, 3/2  <catalan lane; this note P6>
+  E41     GATE ~   NC      PROVED        *NEW*: same gate and product identity as a 3x+1 cycle  <this note P6>
+  E42     GATE ~   PERMF   PROVED        *NEW* [HIGHLIGHT]: g-cycles sit on 2/1, 3/2, 8/5, 19/12; Eliahou transfer: a g-cycle with elements > 10^6 has length >= 665  <this note P6>
+  E43    PERM8 ~   PERMF   NO KNOWN LINK: different questions (infinite orbit vs number of cycles)  <->
+  E44    PERM8 ~   DIV5    NO KNOWN LINK: same type: existence of an infinite orbit against positive drift (reverse transfer)  <this note P2, P5>
+  E45     RCWA x   PERM8   NO KNOWN LINK: g is wild (unbalanced), but wildness does not force an infinite cycle: Kohl's thesis B.4 gives a wild permutation with only finite cycles; no wildness => infinite-cycle conjecture exists  <Kohl thesis 2.5.12, B.4 [P]; this note sec. 8>
+  E46     RCWA x   T1      NO KNOWN LINK: wildness is DRIFT- and SHEET-blind: every surjective non-injective rcwa map (3x-1, 5x+1) is wild  <Kohl AAM 2007 Thm 2.9 [P]; this note sec. 8>
+  E47    KOHLC =>  COL     CITED        : a contraction centre meeting every trajectory gives the 3n+1 conjecture (and more: Collatz on Z)  <Kohl thesis 3.6 [P]>
+  E48   GTRANS <=> COL     CITED         [HIGHLIGHT]: Collatz holds iff G_C acts transitively on N minus 0(6)  <Kohl, J. Group Theory 20 (2017) Prop. 1.2 [P]>
+  E49     RCWA ~   GTRANS  CITED        : RCWA reformulations of 3x+1 (class-transposition groups; sigma_T on Z^2)  <Kohl 2017; thesis 3.13 [P]>
+  E50    BAKER ~   PERMF   CITED        : finitely many m-cycles of Collatz-type permutations; none for m <= 2 besides the known ones  <Simons 2022 [P]; Keller [P via Kohl]>
+  E51    ERDOS x   Q2      NO KNOWN LINK: Q2 needs low 3-adic digits along dynamically chosen K; every 3-adic-window Erdos statement is FALSE  <transversality foundry sec. 3>
+  E52    ERDOS x   T1      NO KNOWN LINK: different map and place  <transversality foundry sec. 5>
+  E53    FURST x   T1      NO KNOWN LINK: a measure statement: DEFECT-blind for every every-orbit target  <transversality foundry sec. 5>
+  E54   NORMAL x   NC      NO KNOWN LINK: cycle bounds use the continued fraction / irrationality exponent of log_2 3, not its digits  <this note>
+  E55   LITTLE x   Q2      NO KNOWN LINK: no statement of either form controls the carry/landing conditions  <this note>
+  E56     PSCH x   PC      NO KNOWN LINK: Bernstein numbers are not exponential-type values  <cube-theta note sec. 0>
+  E57     TWIN ~   GCOLL   CITED        : Pi^0_2 statement; Kurtz-Simon reduction to an 'all orbits reach 1' statement of a generalized Collatz map  <Kurtz-Simon 2007 [P]>
+  E58     GOLD ~   GCOLL   CITED        : Pi^0_1: non-halting of an explicit program; Conway's FRACTRAN encoding  <Conway 1972/1987 [R]>
+  E59      LEG ~   GCOLL   CITED        : Pi^0_1, as for Goldbach  <Conway [R]>
+  E60       RH ~   GCOLL   CITED        : Pi^0_1 via Lagarias's elementary criterion (sigma(n) <= H_n + exp(H_n) log H_n)  <Lagarias 2002 Thm 1.1 [P]; Conway [R]>
+  E61    GRACE ~   GCOLL   CITED        : Pi^0_1 (finite search per tree)  <Conway [R]>
+  E62      LRC ~   GCOLL   CITED        : Pi^0_1 (Tao 2018: finite check for each n)  <Tao 2018 Thm 1.3, Cor. 1.4 [P]; Conway [R]>
+  E63    UNDEC ~   GCOLL   CITED        : universality of generalized Collatz maps  <Conway 1972; Kurtz-Simon 2007>
+  E64    GCOLL x   COL     NO KNOWN LINK: the encodings use other maps; the 3x+1 map itself is not known to be universal or undecidable  <Kurtz-Simon; GGM 2025 remark>
+  E65       RH x   COL     NO KNOWN LINK: trunk/Iwasawa coordinate only; zeta_3 zero-free; no bridge  <trunk/RH note>
+  E66   LEHMER x   COL     NO KNOWN LINK: no shared object  <this note>
+  E67      LRC x   COL     NO KNOWN LINK: analogy only (S596 two-block question)  <bridges note>
+  E68       KL =>  COL     OPEN         : stochastic models predict Collatz (and 5x+1 divergence); transfer to the map is unproved  <Kontorovich-Lagarias 2010 [P]>
+  E69       KL =>  DIV5    OPEN         : the 5x+1 model has positive drift  <Kontorovich-Lagarias 2010 [P]>
+  E70     PAIR ~   KL      PROVED       : AM factor (q+1)/4 = 1 iff q = 3; the model drift log(sqrt3/2) is the AM-GM gap  <this note F2; bridges note>
+  E71     ERG2 ~   DOOB    CITED        : Haar-independence of parity bits makes M_j = 3^a_j/2^j a martingale  <Lagarias 1985 Thm K [P]>
+  E72     DOOB =>  TERRAS  PROVED        *NEW* [HIGHLIGHT]: M_j -> 0 a.s., so tau < infinity a.s., so the stopping density is 1  <this note F4 (Terras 1976 [R] first)>
+  E73     DOOB =>  DDOOB   PROVED        *NEW*: Doob's maximal inequality on the exact finite martingale  <this note F3, F5>
+  E74     PAIR =>  DDOOB   PROVED        *NEW* [HIGHLIGHT]: fairness = martingale = Lundberg exponent 1 (Pareto(1) excursion tail)  <this note F2, F3>
+  E75   TERRAS x   COL     NO KNOWN LINK: density statements are DEFECT-blind  <barrier atlas>
+  E76    DDOOB x   T1      NO KNOWN LINK: density statements are DEFECT-blind  <barrier atlas>
+  E77    UNDEC x   COL     NO KNOWN LINK: UNIFORM barrier binds uniform methods only  <barrier atlas sec. 3>
+  E78    CATAL ~   PILLAI  CITED        : Catalan is the case c = 1 of Pillai's Conj. 1.3  <Mihailescu 2004 [R]; Waldschmidt 2004 Thm 1.2 [P]>
+  E79      ABC =>  PILLAI  CONDITIONAL  : abc implies Pillai's Conj. 2.6: |x^p - y^q| >= C max^(1-1/p-1/q-eps)  <Waldschmidt 2004, p. 13 [P]>
+  E80       LW =>  PILLAI  CONDITIONAL  : Lang-Waldschmidt (Conj. 2.5) implies Conj. 2.6; for 2, 3: |2^a - 3^b| >= 2^a a^(-1-eps)  <Waldschmidt 2004, p. 13 [P]>
+  E81    BAKER =>  PILLAI  CITED        : for bases 2, 3: |2^x - 3^y| > 2^x e^(-x/10) (x outside a finite list); 3^x - 2^y = c has at most one solution for |c| > 13; at most two for general a, b  <Ellison 1971 Thm 3 [P]; Stroeker-Tijdeman 1982 [R]; Bennett 2001 Thm 1.1 [P]>
+  E82       SP x   MAHLER  FALSE         *NEW*: the unrestricted swap principle at Mahler's base 2/3 is FALSE (M-orbit of 1)  <this note B5>
+  E83       PC x   Q2      NO KNOWN LINK: different quantifier structure (backward reachability, low 3-adic digits)  <foundry v4>
+  label counts: {'PROVED': 31, 'CITED': 18, 'CONDITIONAL': 7, 'FALSE': 3, 'NO KNOWN LINK': 22, 'OPEN': 2}  total: 83
+
+==============================================================================
+G3  reachability through PROVED/CITED/CONDITIONAL implications (single-premise edges)
+==============================================================================
+  GMAS    => T1AS
+  ABC     => LBHS
+  BAKER   => CYCGR, MCYC
+  LW      => CYCGR
+  GMAH    => T1A, T1AS
+  DOOB    => TERRAS
+  Collatz-family nodes that imply a famous-problem node: COL=>GMAS, T1=>GMAS, PC=>GMAS, C2=>GMAS, PC3K=>GMAS, SP=>GMAS, T1A=>GMAS, T1AS=>GMAS, LBH=>GMAS, KOHLC=>GMAS, GTRANS=>GMAS
+
+==============================================================================
+G4  highlighted chains
+==============================================================================
+  PC =CITED=> PC3K ; PC3K =PROVED=> T1 ; T1 =PROVED=> T1A ; T1A =PROVED=> T1AS ; T1AS =PROVED=> GMAS
+  PC =PROVED=> C2 ; C2 =PROVED=> Y3
+  PC =PROVED=> SP ; SP =PROVED=> T1A
+  GMAH =CONDITIONAL=> T1A
+  GTRANS =CITED=> COL
+  KOHLC =CITED=> COL
+  LW =CONDITIONAL=> CYCGR
+  BAKER =CITED=> MCYC
+  ABC =CONDITIONAL=> LBHS
+  LBH =CITED=> COL
+  CST =CITED=> NC
+  T1 =PROVED=> TAU
+  H9126 =PROVED=> XMIN ; XMIN =PROVED=> Q2
+  COL =PROVED=> Q1
+  CATAL =PROVED=> GATE
+  DOOB =PROVED=> TERRAS
+  DOOB =PROVED=> DDOOB
+  AND-chains: NC & T1 =PROVED=> COL ; CST & TAU =PROVED=> COL (so CST & T1 => COL).
+
+  wrote 05-knowledge/results/procgen_atlas_20260924_implications.dot (58 nodes, 83 edges); syntax check PASS (60 node statements, 89 edge statements incl. AND junctions)
+
+DONE graph
+
+################################################################################
+# procgen_atlas_20260924_cycles.py
+################################################################################
+
+==============================================================================
+C1  continued fraction of log_2 3
+==============================================================================
+  partial quotients a_0..a_59: [1, 1, 1, 2, 2, 3, 1, 5, 2, 23, 2, 2, 1, 1, 55, 1, 4, 3, 1, 1, 15, 1, 9, 2, 5, 7, 1, 1, 4, 8, 1, 11, 1, 20, 2, 1, 10, 1, 4, 1, 1, 1, 1, 1, 37, 4, 55, 1, 1, 49, 1, 1, 1, 4, 1, 3, 2, 3, 3, 1]
+  PARI/GP cross-check of the first 60 partial quotients: True
+    p_0/q_0 = 1/1  (-)
+    p_1/q_1 = 2/1  (+)
+    p_2/q_2 = 3/2  (-)
+    p_3/q_3 = 8/5  (+)
+    p_4/q_4 = 19/12  (-)
+    p_5/q_5 = 65/41  (+)
+    p_6/q_6 = 84/53  (-)
+    p_7/q_7 = 485/306  (+)
+    p_8/q_8 = 1054/665  (-)
+    p_9/q_9 = 24727/15601  (+)
+    p_10/q_10 = 50508/31867  (-)
+    p_11/q_11 = 125743/79335  (+)
+    p_12/q_12 = 176251/111202  (-)
+    p_13/q_13 = 301994/190537  (+)
+    p_14/q_14 = 16785921/10590737  (-)
+    p_15/q_15 = 17087915/10781274  (+)
+    p_16/q_16 = 85137581/53715833  (-)
+    p_17/q_17 = 272500658/171928773  (+)
+    p_18/q_18 = 357638239/225644606  (-)
+    p_19/q_19 = 630138897/397573379  (+)
+    p_20/q_20 = 9809721694/6189245291  (-)
+    p_21/q_21 = 10439860591/6586818670  (+)
+    p_22/q_22 = 103768467013/65470613321  (-)
+    p_23/q_23 = 217976794617/137528045312  (+)
+    p_24/q_24 = 1193652440098/753110839881  (-)
+    p_25/q_25 = 8573543875303/5409303924479  (+)
+    p_26/q_26 = 9767196315401/6162414764360  (-)
+    p_27/q_27 = 18340740190704/11571718688839  (+)
+    p_28/q_28 = 83130157078217/52449289519716  (-)
+    p_29/q_29 = 683381996816440/431166034846567  (+)
+
+==============================================================================
+C2  Eliahou-type bound: least possible (L, K) of a nontrivial positive cycle, given all n < N converge
+==============================================================================
+  N = 2^40 (Eliahou 1993 input)   : L >=             10781274 odd terms, K >=             17087915 T-steps, K+L >= 27869189
+  N = 2^50                        : L >=             64497107 odd terms, K >=            102225496 T-steps, K+L >= 166722603
+  N = 2^60                        : L >=            397573379 odd terms, K >=            630138897 T-steps, K+L >= 1027712276
+  N = 5*2^60                      : L >=           6586818670 odd terms, K >=          10439860591 T-steps, K+L >= 17026679261
+  N = 2^68 (Barina 2021)          : L >=          72057431991 odd terms, K >=         114208327604 T-steps, K+L >= 186265759595
+  N = 704*2^60 (Hercher's X_0)    : L >=          72057431991 odd terms, K >=         114208327604 T-steps, K+L >= 186265759595
+  N = 2^71 (Barina 2025)          : L >=          72057431991 odd terms, K >=         114208327604 T-steps, K+L >= 186265759595
+  N = 2^72                        : L >=         137528045312 odd terms, K >=         217976794617 T-steps, K+L >= 355504839929
+  N = 2^80                        : L >=        2396860564955 odd terms, K >=        3798934114911 T-steps, K+L >= 6195794679866
+  N = 2^100                       : L >=     3332857981044265 odd terms, K >=     5282454920184382 T-steps, K+L >= 8615312901228647
+  check: N = 2^40 reproduces Eliahou's period bound K = 17,087,915 (the fraction 17087915/10781274).
+
+  verification thresholds N* = 1/(3(2^d - 1)), d = K/L - log_2 3, above which the clock K/L is excluded:
+    L =        10781274, K =        17087915:  N* =  2.944018243e+14 = 2^48.06478
+    L =        64497107, K =       102225496:  N* =  2.461422725e+15 = 2^51.128414
+    L =       118212940, K =       187363077:  N* =   7.48874445e+15 = 2^52.733645
+    L =       171928773, K =       272500658:  N* =  3.203055713e+16 = 2^54.830298
+    L =       397573379, K =       630138897:  N* =  1.252079477e+18 = 2^60.119032
+    L =      6586818670, K =     10439860591:  N* =  2.168901553e+20 = 2^67.555526
+    L =     72057431991, K =    114208327604:  N* =   4.35848721e+21 = 2^71.884317
+    L =    137528045312, K =    217976794617:  N* =  5.101255583e+22 = 2^75.43327
+    L =    890638885193, K =   1411629234715:  N* =  3.807642848e+23 = 2^78.333244
+    L =   1643749725074, K =   2605281674813:  N* =  8.292554897e+23 = 2^79.456163
+    L =   2396860564955, K =   3798934114911:  N* =  1.474703638e+24 = 2^80.286699
+    L =   3149971404836, K =   4992586555009:  N* =  2.483354273e+24 = 2^81.038564
+    L =   3903082244717, K =   6186238995107:  N* =   4.28180088e+24 = 2^81.824492
+    L =   4656193084598, K =   7379891435205:  N* =  8.394544446e+24 = 2^82.795726
+    L =   5409303924479, K =   8573543875303:  N* =  2.734923048e+25 = 2^84.499703
+  The crude threshold for excluding L = 72,057,431,991 is N* = 4.3584872e+21 = 3780.385 * 2^60:
+  this reproduces exactly Hercher's Remark 28 value X0 >= 3781*2^60 for 'previous methods'.
+  Hercher's Theorem 27 shrinks the window by 3/4 (X0 >= 2836*2^60) and his computer-assisted Corollary 29
+  needs only X0 >= 1536*2^60 = 3*2^69 < 2^71.  Hence (CITED: Hercher 2023 Cor. 29 + Barina 2025):
+  every nontrivial cycle has L >= 137,528,045,312 odd terms and K >= 217,976,794,617 T-steps
+  (355,504,839,929 steps of the unshortened map).
+  Next jump (to L >= 890,638,885,193): crude threshold 5.10126e+22 = 2^75.4333;
+  with Hercher's Theorem 27 factor 3/4: 3.82594e+22 = 2^75.0182, i.e. about 16.2 times Barina's 2^71.
+
+==============================================================================
+C3  conditional growth of the least cycle length with the verification bound N
+==============================================================================
+  If |log_2 3 - p/q| >= c q^(-mu) for all q, then a cycle with all elements >= N has 0 < K/L - alpha <
+  delta_N ~ 1/(3N ln 2), hence L > (3 c N ln 2)^(1/mu).  Lang-Waldschmidt (two logarithms, fixed
+  algebraic 2 and 3) gives mu = 2 + eps; the computed least L tracks sqrt(N):
+    N = 2^ 40: L_min =             10781274   L_min/sqrt(N) =    10.2818   log L_min / log N = 0.5841
+    N = 2^ 50: L_min =             64497107   L_min/sqrt(N) =     1.9222   log L_min / log N = 0.5189
+    N = 2^ 60: L_min =            397573379   L_min/sqrt(N) =     0.3703   log L_min / log N = 0.4761
+    N = 2^ 68: L_min =          72057431991   L_min/sqrt(N) =     4.1943   log L_min / log N = 0.5304
+    N = 2^ 71: L_min =          72057431991   L_min/sqrt(N) =     1.4829   log L_min / log N = 0.5080
+    N = 2^ 75: L_min =         137528045312   L_min/sqrt(N) =     0.7076   log L_min / log N = 0.4933
+    N = 2^ 80: L_min =        2396860564955   L_min/sqrt(N) =     2.1799   log L_min / log N = 0.5141
+    N = 2^ 90: L_min =       64021008208555   L_min/sqrt(N) =     1.8196   log L_min / log N = 0.5096
+    N = 2^100: L_min =     3332857981044265   L_min/sqrt(N) =     2.9602   log L_min / log N = 0.5157
+  Unconditionally: Lagarias 2009 Lemma 2.2 (from Rhin 1987): |log_3 2 - p/q| >= q^(-14.3)/1200 for all q >= 1.
+  With |log_3 2 - L/K| < (L/K) delta_N / alpha this gives the fully explicit, unconditional bound
+    N = 2^71: K > 21.3553  (versus the continued-fraction truth above)
+    N = 2^100: K > 87.0936  (versus the continued-fraction truth above)
+    N = 2^200: K > 11094.1  (versus the continued-fraction truth above)
+  so proved irrationality measures are useless at the present N; asymptotically they give L >> N^(1/14.3)
+  (explicit) or N^(1/8.616) (Rhin, asymptotic [R]), against the LW prediction N^(1/2) that the record tracks.
+
+==============================================================================
+C4  the gate barrier: lower bounds for D = |2^K - 3^L| (log_2 D - K shown)
+==============================================================================
+  abc on 3^L + D = 2^K (coprime, rad(2^K 3^L D) <= 6 rad(D) <= 6D):  2^K <= K_eps (6D)^(1+eps),
+     so log2 D >= K/(1+eps) - log2 6 - log2(K_eps)/(1+eps)   [shown with the optimistic K_eps = 1].
+  Baker's explicit abc (c < (6/5) N (log N)^w / w!, N = rad, w = #primes):  D >= (5/36) 2^K w!/(K ln2 + ln6)^w
+     with w = omega(D) + 2 (shown for w = 3 and for the worst admissible w ~ K ln2/ln K).
+  Ellison 1971 Thm 3: D > 2^K e^(-K/10) for K not in {1..11,13,14,16,19,27} [P].
+  Rhin 1987 (via Simons-de Weger Lemma 12 [R]): |u0 + u1 log2 + u2 log3| >= H^(-13.3), so D >= c 2^K K^(-13.3).
+  truth at the record clocks K = p_n: log2 D = K + log2|1 - 2^(-(K - L alpha))|, from the continued fraction.
+
+   K            abc eps=.1   abc eps=.01   expl.abc w=3   expl.abc worst   Ellison     C=13.3      truth(record clock)
+              65        -8.494        -3.229        -16.91          -36.56      -9.378       -80.1      -6.4551
+           24727         -2250        -247.4        -42.46           -8096       -3567      -194.1     -15.7461
+          301994    -2.746e+04         -2993        -53.29       -8.46e+04  -4.357e+04      -242.1     -23.8860
+       272500658    -2.477e+07    -2.698e+06        -82.74      -5.565e+07  -3.931e+07      -372.7     -29.0580
+     10439860591    -9.491e+08    -1.034e+08        -98.52      -1.873e+09  -1.506e+09      -442.6     -36.5236
+   8573543875303    -7.794e+11    -8.489e+10        -127.6      -1.265e+12  -1.237e+12      -571.4     -43.7861
+  683381996816440    -6.213e+13    -6.766e+12        -146.5      -9.065e+13  -9.859e+13      -655.4     -49.4134
+  Reading: plain abc loses a factor 2^(eps K/(1+eps)) -- exponentially worse than the proved Baker-type
+  bounds (polynomial or quasi-polynomial loss) and than the truth (~ K^-1); it beats only Ellison's
+  exponential-loss bound for eps < 0.168.  Explicit abc is polynomial only when omega(D) is small.
+  PROVED (comparison): every cycle-length or cycle-element bound obtained from 'gate lower bound +
+  product identity + verification' is monotone in the gate bound, so abc adds nothing to Baker there.
+
+==============================================================================
+C5  abc and the two-block parity prefix 1^k 0^l
+==============================================================================
+  n has T-parity prefix 1^k 0^l  <=>  n = 2^k A - 1 with 3^k A = 1 + 2^l B (A odd).  abc on (1, 2^l B, 3^k A):
+  3^k A <= K_eps (6AB)^(1+eps) and B < 3^k A/2^l give log2 A >= l(1+eps)/(1+2eps) - eps k log2(3)/(1+2eps) - O_eps(1),
+  i.e. n >= c_eps 2^(k + (1-eps) l - 1.59 eps k)  (Proposition R2 of the note; Rozier's Thm 2.1 is the prefix 1^k 0 1^(j-k-1)).
+  Unconditionally A_min(k,l) = (3^(-k) mod 2^l) can be tiny only when k is huge: A = 1 needs 2^(l-2) | k.
+
+  worst cases of log2(A_min)/l over 1 <= k <= 2l, for l = 8..48 (exact):
+    l= 8: min_k log2(A_min)/l = 0.5109 at k= 12 (A_min=17)
+    l=12: min_k log2(A_min)/l = 0.5313 at k= 19 (A_min=83)
+    l=16: min_k log2(A_min)/l = 0.5368 at k= 32 (A_min=385)
+    l=20: min_k log2(A_min)/l = 0.7479 at k= 13 (A_min=31835)
+    l=24: min_k log2(A_min)/l = 0.7850 at k= 15 (A_min=469571)
+    l=28: min_k log2(A_min)/l = 0.7891 at k= 11 (A_min=4480819)
+    l=32: min_k log2(A_min)/l = 0.8408 at k= 23 (A_min=125804899)
+    l=36: min_k log2(A_min)/l = 0.7474 at k= 23 (A_min=125804899)
+    l=40: min_k log2(A_min)/l = 0.8047 at k= 31 (A_min=4891346051)
+    l=44: min_k log2(A_min)/l = 0.8342 at k= 38 (A_min=112115219177)
+    l=48: min_k log2(A_min)/l = 0.8872 at k= 11 (A_min=6590900231987)
+
+  abc quality q = log c / log rad(abc) of the triples (1, 2^l B, 3^k A_min), k <= 20, 4 <= l <= 40:
+    q = 1.4433  (k=5, l=12, A=2107, n = 2^k A - 1 = 67423)
+    q = 1.3176  (k=3, l=9, A=19, n = 2^k A - 1 = 151)
+    q = 1.3176  (k=3, l=8, A=19, n = 2^k A - 1 = 151)
+    q = 1.3176  (k=3, l=7, A=19, n = 2^k A - 1 = 151)
+    q = 1.3176  (k=3, l=6, A=19, n = 2^k A - 1 = 151)
+    q = 1.3176  (k=3, l=5, A=19, n = 2^k A - 1 = 151)
+    q = 1.3176  (k=2, l=9, A=57, n = 2^k A - 1 = 227)
+    q = 1.3176  (k=2, l=8, A=57, n = 2^k A - 1 = 227)
+  abc-hits (q > 1) among these 740 triples: 487; max quality 1.4433.
+
+==============================================================================
+C6  Catalan and Pillai for the bases 2 and 3 (finite checks)
+==============================================================================
+  |2^K - 3^L| = 1 with K, L >= 1, K <= 400: [(1, 1), (2, 1), (3, 2)]  (Gersonides/Levi ben Gershon; Mihailescu in general)
+  values c = 3^L - 2^K with 0 < |c| <= 10^4 in the box K <= 400, L < 260: 124 values;
+  values attained twice or more: {-13: [(4, 1), (8, 5)], -7: [(3, 0), (4, 2)], -5: [(3, 1), (5, 3)], -1: [(1, 0), (2, 1)], 1: [(1, 1), (3, 2)]}
+  (consistent with the cited Pillai-type theorems for 3^x - 2^y = c; the note gives the exact statements.)
+  Collatz relevance: a gate value D = 2^K - 3^L determines its clock for |D| > 13 in this box; the carry
+  condition D | B(w) is untouched by any fixed-c Pillai statement.
+
+==============================================================================
+C7  Terras's coefficient stopping time: sigma(n) = tau(n) for 2 <= n <= 2000000
+==============================================================================
+  mismatches: 0; max tau = 224
+  Implications (PROVED in the note, elementary):
+   (i)  CST => no nontrivial positive cycle: the minimum m of such a cycle has tau(m) <= K < sigma(m) = infinity.
+   (ii) T1 => tau(n) < infinity for all n >= 1: if tau(n) = infinity, T^j(n) >= n for all j and the orbit
+        is not eventually periodic (a positive cycle forces 3^a_j/2^j -> 0), so it diverges.
+   (iii) CST & (tau finite) => Collatz (sigma(n) = tau(n) < infinity for every n >= 2, then induction);
+        hence CST & T1 => Collatz, and Collatz <=> NC & T1.
+
+DONE cycles
+
+################################################################################
+# procgen_atlas_20260924_mahler_bridge.py
+################################################################################
+
+==============================================================================
+B1  block identities (exact)
+==============================================================================
+  T^L(x) = (3^a x + R_B)/2^L and 'x in cylinder(B) <=> 2^L | 3^a x + R_B': 6138 checks PASS
+  (for a constant-weight alphabet the divisibility alone forces the parity letters, so an
+   integer sequence x_{j+1} = (p x_j + R_{c_j})/q with c_j in A IS a T-orbit with word c.)
+
+==============================================================================
+B2  census of constant-weight instances: 1 <= a <= L-1, 3^a > 2^L, L <= 12
+==============================================================================
+  columns: L a  alpha=3^a/2^L  best pair (min spread)  R-values  |I_A|  alpha*|I_A|  FLP needs |I|<1/p?  status
+   3  2  9/8=   1.1250  110,101  R=5,7  |I|=2.00000  a|I|=2.2500  FLP:False  vacuous (|I|>=1)
+   4  3  27/16=   1.6875  1110,1101  R=19,23  |I|=0.36364  a|I|=0.6136  FLP:False  non-vacuous, heuristically TRUE (alpha|I|<1)
+   5  4  81/32=   2.5312  11110,11101  R=65,73  |I|=0.16327  a|I|=0.4133  FLP:False  non-vacuous, heuristically TRUE (alpha|I|<1)
+   6  4  81/64=   1.2656  110101,101110  R=101,103  |I|=0.11765  a|I|=0.1489  FLP:False  non-vacuous, heuristically TRUE (alpha|I|<1)
+   6  5  243/64=   3.7969  111110,111101  R=211,227  |I|=0.08939  a|I|=0.3394  FLP:False  non-vacuous, heuristically TRUE (alpha|I|<1)
+   7  5  243/128=   1.8984  1011011,0111110  R=421,422  |I|=0.00870  a|I|=0.0165  FLP:False  non-vacuous, heuristically TRUE (alpha|I|<1)
+   7  6  729/128=   5.6953  1111110,1111101  R=665,697  |I|=0.05324  a|I|=0.3032  FLP:False  non-vacuous, heuristically TRUE (alpha|I|<1)
+   8  6  729/256=   2.8477  11011011,10111110  R=1085,1087  |I|=0.00423  a|I|=0.0120  FLP:False  non-vacuous, heuristically TRUE (alpha|I|<1)
+   8  7  2187/256=   8.5430  11111110,11111101  R=2059,2123  |I|=0.03314  a|I|=0.2831  FLP:False  non-vacuous, heuristically TRUE (alpha|I|<1)
+   9  6  729/512=   1.4238  110110110,101111100  R=1085,1087  |I|=0.00922  a|I|=0.0131  FLP:False  non-vacuous, heuristically TRUE (alpha|I|<1)
+   9  7  2187/512=   4.2715  111011011,110111110  R=2899,2903  |I|=0.00239  a|I|=0.0102  FLP:False  non-vacuous, heuristically TRUE (alpha|I|<1)
+   9  8  6561/512=  12.8145  111111110,111111101  R=6305,6433  |I|=0.02116  a|I|=0.2712  FLP:False  non-vacuous, heuristically TRUE (alpha|I|<1)
+  10  7  2187/1024=   2.1357  0111101110,1101100111  R=4726,4727  |I|=0.00086  a|I|=0.0018  FLP:False  non-vacuous, heuristically TRUE (alpha|I|<1)
+  10  8  6561/1024=   6.4072  1111011011,1110111110  R=7985,7993  |I|=0.00144  a|I|=0.0093  FLP:False  non-vacuous, heuristically TRUE (alpha|I|<1)
+  10  9  19683/1024=  19.2217  1111111110,1111111101  R=19171,19427  |I|=0.01372  a|I|=0.2637  FLP:False  non-vacuous, heuristically TRUE (alpha|I|<1)
+  11  7  2187/2048=   1.0679  01111011100,11011001110  R=4726,4727  |I|=0.00719  a|I|=0.0077  FLP:False  non-vacuous, heuristically TRUE (alpha|I|<1)
+  11  8  6561/2048=   3.2036  10111101110,11101100111  R=11639,11641  |I|=0.00044  a|I|=0.0014  FLP:False  non-vacuous, heuristically TRUE (alpha|I|<1)
+  11  9  19683/2048=   9.6108  11111011011,11110111110  R=22531,22547  |I|=0.00091  a|I|=0.0087  FLP:False  non-vacuous, heuristically TRUE (alpha|I|<1)
+  11 10  59049/2048=  28.8325  11111111110,11111111101  R=58025,58537  |I|=0.00898  a|I|=0.2590  FLP:False  non-vacuous, heuristically TRUE (alpha|I|<1)
+  12  8  6561/4096=   1.6018  101111011100,111011001110  R=11639,11641  |I|=0.00081  a|I|=0.0013  FLP:False  non-vacuous, heuristically TRUE (alpha|I|<1)
+  12  9  19683/4096=   4.8054  110111101110,111101100111  R=29839,29843  |I|=0.00026  a|I|=0.0012  FLP:False  non-vacuous, heuristically TRUE (alpha|I|<1)
+  12 10  59049/4096=  14.4163  111111011011,111110111110  R=64745,64777  |I|=0.00058  a|I|=0.0084  FLP:False  non-vacuous, heuristically TRUE (alpha|I|<1)
+  12 11  177147/4096=  43.2488  111111111110,111111111101  R=175099,176123  |I|=0.00592  a|I|=0.2559  FLP:False  non-vacuous, heuristically TRUE (alpha|I|<1)
+  In every row |I_A| >= 1/(p-q) > 1/p, so the Flatto-Lagarias-Pollington spread bound 1/p
+  never excludes an instance (PROVED: dR >= 1).
+  Y3 blocks: 1111111110 (R=19171), 1111111101 (R=19427), dR=256, |I|=256/18659=0.013720, alpha|I|=0.2637
+  single-zero blocks: R(zero at z) - R(zero at z+1) = 3^(L-2-z) 2^z (checked L<=11); the minimum 2^(L-2)
+  is attained by the Y3-type pair 1^(L-2)01, 1^(L-1)0.
+
+==============================================================================
+B3  the bridge on finite prefixes (exact rationals)
+==============================================================================
+  L=4 a=3 A={1110,1101}: classes mod 2^(L n) with n A-blocks: [2, 4, 8, 16, 32, 64] (ratio 2/2^L per block);  identity xi alpha^j = x_j + t_j checked on 128 integers
+  L=5 a=4 A={11110,11101}: classes mod 2^(L n) with n A-blocks: [2, 4, 8, 16, 32, 64] (ratio 2/2^L per block);  identity xi alpha^j = x_j + t_j checked on 128 integers
+  L=10 a=9 A={1111111110,1111111101}: classes mod 2^(L n) with n A-blocks: [2, 4, 8] (ratio 2/2^L per block);  identity xi alpha^j = x_j + t_j checked on 16 integers
+
+==============================================================================
+B4  decoupled Mahler-type problem Z(alpha, I_A): exact survivor search
+==============================================================================
+  Z(alpha,I): no xi > 0 with xi alpha^j in Z + I for all j >= 0.  Theorem M: Z(alpha,I_A) => no positive
+  integer has a T-parity vector eventually in A^N.  Survivors below are xi with integer part x0 <= X.
+  L=4 a=3 alpha=27/16 I=[19/11,23/11] (|I|=0.3636, alpha|I|=0.6136):
+     x0 <= 20000: death-depth histogram {0: 1250, 1: 4764, 2: 4489, 3: 3317, 4: 2267, 5: 1444, 6: 954, 7: 603, 8: 379, 9: 210, 10: 132, 11: 77, 12: 42, 13: 27, 14: 19, 15: 10, 16: 8, 17: 3, 18: 2, 19: 2, 23: 1}; max depth reached 23
+  L=5 a=4 alpha=81/32 I=[65/49,73/49] (|I|=0.1633, alpha|I|=0.4133):
+     x0 <= 20000: death-depth histogram {0: 8125, 1: 6354, 2: 3136, 3: 1381, 4: 591, 5: 234, 6: 101, 7: 42, 8: 24, 9: 5, 10: 3, 11: 1, 12: 2, 13: 1}; max depth reached 13
+  L=7 a=5 alpha=243/128 I=[421/115,422/115] (|I|=0.0087, alpha|I|=0.0165):
+     x0 <= 20000: death-depth histogram {0: 19375, 1: 610, 2: 15}; max depth reached 2
+  L=10 a=9 alpha=19683/1024 I=[19171/18659,19427/18659] (|I|=0.0137, alpha|I|=0.2637):
+     x0 <= 20000: death-depth histogram {0: 14434, 1: 4085, 2: 1090, 3: 305, 4: 64, 5: 16, 6: 4, 7: 2}; max depth reached 7
+
+==============================================================================
+B5  swap principle SP(rho): Theta_S(rho) = sum_{s in S} rho^s in Q_2 is irrational for every
+==============================================================================
+      non-eventually-periodic S.  rho = 2^L/3^a: PROVED for 3^a < 2^L (Lemma L); implied by PC
+      for 2^L < 3^a, a < L (open, HARD); FALSE at a = L (rho = 2/3) by Mahler's map:
+  D = odd positions of the M-orbit of 1 (first 20: [0, 2, 3, 7, 8, 10, 13, 14, 16, 18, 21, 22, 24, 27, 29, 35, 36, 38, 46, 48]), non-periodic (the orbit is increasing).
+  Theta_D(2/3) = sum_(d in D) (2/3)^d == -3 (mod 2^4000): True
+  So SP(2/3) is FALSE: a non-periodic 0/1 series in base 2/3 has the rational 2-adic value -3.
+  (Every positive integer g gives such a witness: Theta_{D_g}(2/3) = -3g, THM-2228's carry identity.)
+
+==============================================================================
+B6  two-place orthogonality for Mahler's map (real tails of the same series)
+==============================================================================
+  g0=  1: xi=1.6222705029  #n<40 with f_n >= 1/2: 13  max|{xi(3/2)^n} - f_n| = 0.0e+00
+  g0=  2: xi=2.4334057543  #n<40 with f_n >= 1/2: 12  max|{xi(3/2)^n} - f_n| = 0.0e+00
+  g0=  3: xi=3.6501086315  #n<40 with f_n >= 1/2: 12  max|{xi(3/2)^n} - f_n| = 0.0e+00
+  g0=  4: xi=4.2259180044  #n<40 with f_n >= 1/2: 14  max|{xi(3/2)^n} - f_n| = 0.0e+00
+  g0=  5: xi=5.4751629472  #n<40 with f_n >= 1/2: 11  max|{xi(3/2)^n} - f_n| = 0.0e+00
+  g0=  6: xi=6.3388770066  #n<40 with f_n >= 1/2: 15  max|{xi(3/2)^n} - f_n| = 0.0e+00
+  g0=  7: xi=7.8641772621  #n<40 with f_n >= 1/2: 19  max|{xi(3/2)^n} - f_n| = 0.0e+00
+  g0=  8: xi=8.2127444209  #n<40 with f_n >= 1/2: 11  max|{xi(3/2)^n} - f_n| = 0.0e+00
+  g0=  9: xi=9.5083155098  #n<40 with f_n >= 1/2: 16  max|{xi(3/2)^n} - f_n| = 0.0e+00
+  g0= 10: xi=10.5447958583  #n<40 with f_n >= 1/2: 16  max|{xi(3/2)^n} - f_n| = 0.0e+00
+  g0= 11: xi=11.7962658931  #n<40 with f_n >= 1/2: 18  max|{xi(3/2)^n} - f_n| = 0.0e+00
+  g0= 12: xi=12.3191166313  #n<40 with f_n >= 1/2: 11  max|{xi(3/2)^n} - f_n| = 0.0e+00
+  Every positive integer has a 2-adic M-word (no 2-adic constraint); the Z-number condition is the
+  real tail condition f_n < 1/2 for all n.  For T-swap orbits it is the opposite: the real tails lie in
+  I_A automatically and the whole difficulty is 2-adic integrality (B3).
+
+==============================================================================
+B7  independent check of the swap identity behind Proposition SP (Bernstein formula, mod 2^N)
+==============================================================================
+  Phi_T(Y_S) == -(1/3^a)[R_B/(1-rho) + (R_B'-R_B) Theta_S(rho)]  (mod 2^3000) on 15 random (L,a,B,B',S): PASS
+
+==============================================================================
+B8  Theorem M': exact equivalence for adjacent pairs (R_B' = R_B + 1) with alpha = 3^a/2^L > 2
+==============================================================================
+  If R_B' = R_B + 1 and p > 2q, then for I = [R_B, R_B+1]/(p-q) the integer e_j = q x_{j+1} - p x_j = p t_j - q t_{j+1}
+  lies in [R_B - q/(p-q), R_B + 1 + q/(p-q)], whose only integers are R_B, R_B + 1: the real confinement
+  xi alpha^j in Z + I FORCES the digits, hence the Collatz blocks.  So Z(alpha, I) <=> T1 on {B,B'}^N.
+  L=10 a= 7 alpha=2187/1024=2.1357: 4 adjacent pair(s), e.g. 0111101110 (R=4726), 1101100111 (R=4727); I = [4726, 4727]/1163; |I|*p = 1.8805 (FLP needs < 1)
+  L=16 a=11 alpha=177147/65536=2.7030: 5 adjacent pair(s), e.g. 0111011111100110 (R=481798), 1101111000111011 (R=481799); I = [481798, 481799]/111611; |I|*p = 1.5872 (FLP needs < 1)
+  L=19 a=13 alpha=1594323/524288=3.0409: 1 adjacent pair(s), e.g. 1011111001101010111 (R=5018677), 0111011110110101110 (R=5018678); I = [5018677, 5018678]/1070035; |I|*p = 1.4900 (FLP needs < 1)
+  L=20 a=14 alpha=4782969/1048576=4.5614: 8 adjacent pair(s), e.g. 11101010111111110010 (R=10674673), 01111111011110110001 (R=10674674); I = [10674673, 10674674]/3734393; |I|*p = 1.2808 (FLP needs < 1)
+  (10,7), x0 <= 2^22: d=1: #S_1 (integer test) = 8192, #C_1 (T-iteration) = 8192, equal: True
+  (10,7), x0 <= 2^22: d=2: S_d = [555195, 694238, 873659, 1012702, 1603771, 1742814, 1922235, 2061278, 2652347, 2791390, 2970811, 3109854, 3700923, 3839966, 4019387, 4158430]  C_d = [555195, 694238, 873659, 1012702, 1603771, 1742814, 1922235, 2061278, 2652347, 2791390, 2970811, 3109854, 3700923, 3839966, 4019387, 4158430]  equal: True
+  (10,7), x0 <= 2^22: d=3: S_d = []  C_d = []  equal: True
+  So, for these explicit pairs, 'no divergent Collatz orbit with parity vector eventually in {B,B'}^N' is
+  EQUIVALENT to the Mahler-type statement 'no xi > 0 has xi (3^a/2^L)^j in Z + [R_B, R_B+1]/(3^a-2^L) for all j'.
+
+DONE mahler_bridge
+
+################################################################################
+# procgen_atlas_20260924_collatz_permutation.py
+################################################################################
+
+==============================================================================
+P1  bijection and exact identities
+==============================================================================
+  U(g(n)) = g(U(n)) = n and g(-n) = -g(n) for |n| <= 1000000: PASS (g is an odd permutation of Z)
+  g(n) = round(4n/3) (3 !| n);  U(m) = 3m/2 = W(m) (m even), round(3m/4) = floor(W(m)/2) (m odd),
+  with W(m) = ceil(3m/2) Mahler's map: PASS on |n| <= 3000.
+  odd k: U(k) = (3k+s)/4 with the unique sign s making 4 | 3k+s (Althoefer's one-player descending
+  3n+-1 move); U(k) = T^2(k) = T_-((k+1)/2) for k = 1 mod 4 and U(k) = T_-^2(k) = T((k-1)/2) for k = 3 mod 4: PASS.
+  g(T(n)) = 2n+1, equivalently T(n) = U(2n+1), for every odd |n| < 10^6: PASS
+  g(m) = 2 T_+^{-1}(m) + 1 (m = 2 mod 3), g(m) = 2 T_-^{-1}(m) - 1 (m = 1 mod 3), g(3m) = 2m: PASS
+  -> Collatz's permutation = (odd-branch predecessor on the sheet chosen by m mod 3) followed by x -> 2x+-1.
+  g(3m+1) = 2 g(3m) + 1, g(3m+2) = 2 g(3m) + 3: PASS  (the triple 3m,3m+1,3m+2 -> x, 2x+1, 2x+3, x=2m)
+  T^3(4m+1) = T(m) for odd m (the '4x+1 fractal recursion' of the T-tree): PASS; hence for odd m,
+  T^3(g(3m+1)) = T(g(3m)/2).
+
+==============================================================================
+P2  p-adic extensions and itinerary statistics (exact)
+==============================================================================
+  g: for each r mod 3, {n = r mod 3} mod 3^(k+1) -> Z/3^k is a bijection (k <= 8): g extends to a
+     full-branch map of Z_3 with three branches of expansion 3; Haar measure is invariant.
+  U: the branches 2Z_2, 1+4Z_2, 3+4Z_2 map onto Z_2 with expansions 2, 4, 4 (k <= 11): Haar-invariant,
+     itinerary letters Bernoulli(1/2, 1/4, 1/4).
+  the first k letters of the ternary g-itinerary are a bijection of Z/3^k (k <= 8): Terras-type theorem.
+  Haar probability that the g-orbit's log-walk ever drops below its start: 0.763108
+  (the analogue of Terras's theorem FAILS: a positive-density set of integers never descends in the
+   model -- the drift is positive, as for 5x+1.)
+
+==============================================================================
+P3  cycle census: all orbits meeting [1, 1000000], escape bound B = 10^24
+==============================================================================
+  cycle of length 1: min 1, max 1: [1]
+  cycle of length 2: min 2, max 3: [2, 3]
+  cycle of length 5: min 4, max 9: [4, 5, 6, 7, 9]
+  cycle of length 12: min 44, max 111: [44, 59, 62, 66, 70, 74, 79, 83, 93, 99, 105, 111]
+  distinct non-periodic-looking orbits meeting [1,1000000] (exceed B both ways): 49957; max steps 2688
+  FINITE-EXACT: every positive g-cycle with minimum <= 1000000 and maximum <= B is one of the 4 above.
+
+==============================================================================
+P4  the orbit of 8: 100000 steps forward (g) and backward (U)
+==============================================================================
+  forward g: min value seen 8; ln|x_s|/s at s=1e3,1e4,1e5: 0.058224, 0.049075, 0.055909;  letter counts {0: 33441, 1: 33173, 2: 33386}
+  backward U: min value seen 8; ln|x_s|/s at s=1e3,1e4,1e5: 0.052679, 0.058918, 0.061115;  letter counts {0: 50317, 1: 24860, 3: 24823}
+  predicted drifts: g +0.056633 (letters mod 3 uniform), U +0.058892 (even : 1 mod 4 : 3 mod 4 = 2:1:1).
+  8 is not periodic within 10^5 steps in either direction (known; the orbit of 8 is conjectured infinite).
+
+==============================================================================
+P5  typing of 'the orbit of 8 is infinite' against the foundry controls
+==============================================================================
+  SHEET   : g is odd (g(-n) = -g(n)): no sign asymmetry at all; but each step mixes the 3x+1 and 3x-1 odd
+            branches (P1), so every sheet-specific Collatz tool is inapplicable
+  DRIFT   : both directions expand (P2: +0.0566, +0.0589 per step); infinite orbits are the EXPECTED behaviour,
+            as for 5x+1: the statement is an existence-of-divergence problem (reverse transfer), not a no-divergence one
+  DEFECT  : a single orbit; density/Haar statements (P2) say nothing about 8
+  INTEGRAL: rational cycles of g exist for every periodic ternary itinerary (full-branch map)
+            so an argument must isolate the integer 8
+  UNIFORM : g is an RCWA permutation; for the class of RCWA permutations cycle questions are undecidable-type
+            (Kurtz-Simon type; see the note)
+  LOGIC   : 'orbit of 8 infinite' <=> 'g^k(8) != 8 for all k >= 1' is Pi^0_1 (refutable by finding a cycle)
+            like Goldbach/RH; 'finite' is Sigma^0_1
+
+==============================================================================
+P6  the gate shared with 3x+1: g-cycles sit on the clocks K/k of log_2 3 (exact)
+==============================================================================
+  A g-step is x -> (c x + d)/3 with (c,d) = (2,0), (4,-1), (4,1) for x = 0,1,2 mod 3.  Over a word w
+  of length k with a zeros and b = k-a nonzero letters, g^k(x) = (2^K x + D_w)/3^k, K = a + 2b,
+  D_() = 0, D_{w r} = c_r D_w + d_r 3^{|w|}.  A cycle point satisfies  n (3^k - 2^K) = D_w,
+  the same gate 2^K - 3^L as a 3x+1 cycle (Boehm-Sontacchi: n (2^K - 3^L) = B(w) > 0), but with a
+  SIGNED carry D_w.  Product identity: 3^k/2^K = prod over nonzero letters of (1 + d_r/(4 n_i)).
+  cycle min   1: k= 1 a=0 b=1 K= 2  clock K/k=2/1  gate 3^k-2^K=    -1  D_w=      -1  n0 = D/gate: True   reduced clock 2/1 convergent: True
+  cycle min   2: k= 2 a=1 b=1 K= 3  clock K/k=3/2  gate 3^k-2^K=     1  D_w=       2  n0 = D/gate: True   reduced clock 3/2 convergent: True
+  cycle min   4: k= 5 a=2 b=3 K= 8  clock K/k=8/5  gate 3^k-2^K=   -13  D_w=     -52  n0 = D/gate: True   reduced clock 8/5 convergent: True
+  cycle min  44: k=12 a=5 b=7 K=19  clock K/k=19/12  gate 3^k-2^K=  7153  D_w=  314732  n0 = D/gate: True   reduced clock 19/12 convergent: True
+  (Shanks 1965 [R] already noted that the cycle lengths 1, 2, 5, 12 are convergent denominators of log_2 3;
+   Atkin 1966 [R]: no further cycle of period < 200; Simons 2022 [P, arXiv 2205.10582]: finitely many m-cycles
+   by Baker/Rhin, none for m <= 2 besides the known ones.  New here: the signed-carry comparison below.)
+  unit-gap clocks (1/1, 2/1, 3/2; |3^k - 2^K| = 1 only there by Catalan/Gersonides): every word gives an
+  integer cycle, and the cycles are exactly [(-3, -2), (-1,), (0,), (1,), (2, 3)]: the unit gaps carry only the known small cycles.
+  3x+-1 comparison (inherited gate census): the signed 3x+-1 cycles sit on 1/1, 2/1, 3/2, 11/7
+  (gates -1, 1, -1, -139); Collatz's permutation uses 2/1, 3/2, 8/5, 19/12 (gates -1, 1, -13, 7153).
+  The unit (Catalan) gaps 2/1 and 3/2 carry cycles of BOTH; 13 and 7153, which no 3x+-1 carry cancels
+  (all 35 words on 8/5 have q=13; min q=23 on 19/12), are cancelled by g's signed carries.
+  Eliahou-type transfer: a g-cycle with every element > N0 = 1000000 has |K/k - log_2 3| < 1/((4N0-1) ln 2)
+  = 3.607e-07, so k >= 665 (smallest denominator in that window, fraction 1054/665).
+  With P3: any g-cycle besides the four has min > 1000000 (hence length >= 665) or max > 10^24.
+
+DONE collatz_permutation
+
+################################################################################
+# procgen_atlas_20260924_martingale.py
+################################################################################
+
+==============================================================================
+F1  pair-sum classification of f_{q,r}(n) = n/2 (even), (qn+r)/2 (odd); q,r odd
+==============================================================================
+consecutive pairings preserving every pair sum (|q|,|r|<=51, checked on |i|<=300):
+    ('{2i,2i+1}', 3, -1)
+    ('{2i-1,2i}', 3, 1)
+  symbolic: f(2i-1)+f(2i) = (q+1)i + (r-q)/2 ; f(2i)+f(2i+1) = (q+1)i + (q+r)/2;
+  equality with 4i-1 resp. 4i+1 for all i forces q=3 and r=1 resp. r=-1.  PROVED.
+  arbitrary matchings: EE pairs need i+j=0, OO pairs need (q-2)(n+m) = -2r, EO pairs are {n,(q-2)n+r}.
+  On Z the reflection pairs make degenerate matchings possible, e.g. 5x+3: {0,-1}, {n,-2-n}, {2i,-2i}:
+    (checked).  On the positive integers there are no EE pairs and only finitely many OO pairs, so all but
+    finitely many evens must be (q-2)n + r with n odd: this forces |q-2| = 1, and q = 1 gives only finitely
+    many positive partners.  Census of unmatched integers in [X/2, X], X = 20000, for the EO matching:
+    q=1, r=+1: evens in [X/2,X] with no odd partner: 5001 of 5001
+    q=3, r=-3: evens in [X/2,X] with no odd partner: 0 of 5001
+    q=3, r=-1: evens in [X/2,X] with no odd partner: 0 of 5001
+    q=3, r=+1: evens in [X/2,X] with no odd partner: 0 of 5001
+    q=3, r=+3: evens in [X/2,X] with no odd partner: 0 of 5001
+    q=3, r=+5: evens in [X/2,X] with no odd partner: 0 of 5001
+    q=5, r=+1: evens in [X/2,X] with no odd partner: 3334 of 5001
+    q=7, r=+1: evens in [X/2,X] with no odd partner: 4001 of 5001
+    q=9, r=+1: evens in [X/2,X] with no odd partner: 4286 of 5001
+  => up to finitely many exceptions, a sum-preserving matching of the positive integers exists iff q = 3
+     (partner n + r); it is exact on N iff (q,r) = (3,1) with pairs {2i-1,2i}, and on N_0 for (3,-1) with {2i,2i+1}.
+    3x+1 on N: evens uncovered <40: []  odds without partner <40: []
+    3x-1 on N: evens uncovered <40: []  odds without partner <40: [1]
+    3x+3 on N: evens uncovered <40: [2]  odds without partner <40: []
+    3x+5 on N: evens uncovered <40: [2, 4]  odds without partner <40: []
+    3x-3 on N: evens uncovered <40: []  odds without partner <40: [1, 3]
+  CHECK T(2i-1)+T(2i) = 4i-1 for i <= 100000: PASS
+
+==============================================================================
+F2  arithmetic-mean vs geometric-mean step factors; Lundberg exponents
+==============================================================================
+  qx+1 shortcut map, parity fair coin: AM factor (q/2+1/2)/2 = (q+1)/4 ; GM factor sqrt(q)/2
+    q=1: AM=0.5000  GM=0.500000  log-drift=-0.693147  Lundberg theta=None
+    q=3: AM=1.0000  GM=0.866025  log-drift=-0.143841  Lundberg theta=0.9999999999999991
+    q=5: AM=1.5000  GM=1.118034  log-drift=+0.111572  Lundberg theta=None
+    q=7: AM=2.0000  GM=1.322876  log-drift=+0.279808  Lundberg theta=None
+    q=9: AM=2.5000  GM=1.500000  log-drift=+0.405465  Lundberg theta=None
+  q=3 is the only odd q with AM factor 1 (a martingale), and theta(3)=1 exactly because
+  ((3/2)^1+(1/2)^1)/2 = 1.  Drift log(sqrt3/2) = -0.143841 = the AM-GM gap.
+  Collatz permutation g: AM=1.111111 GM=1.058267 (log +0.056633) ; inverse U: AM=1.125000 GM=1.060660 (log +0.058892)
+  both directions expand in AM and GM: g is NOT fair; infinite orbits are the expected behaviour.
+  Duality (elementary; the image-density identity is Kohl, JSC 2008 Remark 1.2 [P]): for an rcwa map with
+  branches n -> (a n + b)/c on the classes mod m, the Haar mean of the inverse ratio c/|a| is its image density,
+  which equals 1 for every permutation; by Jensen its log-drift E log(|a|/c) >= 0, with equality iff |a|/c is
+  constant.  T is the mirror case: the Haar mean of the FORWARD ratio a/c is 1 (the pair-sum property), so its
+  log-drift is < 0.  Check:
+    T (3x+1)          : Haar mean of a/c =     1, of c/a (image density) =   4/3, log-drift = -0.143841
+    g (Collatz 1932)  : Haar mean of a/c =  10/9, of c/a (image density) =     1, log-drift = +0.056633
+    U = g^-1          : Haar mean of a/c =   9/8, of c/a (image density) =     1, log-drift = +0.058892
+    5x+1              : Haar mean of a/c =   3/2, of c/a (image density) =   6/5, log-drift = +0.111572
+
+==============================================================================
+F3  the Haar martingale M_j = 3^{a_j}/2^j: exact maximal probabilities vs Doob
+==============================================================================
+  Under Haar measure on Z_2 the T-parity bits are iid fair (Terras/Everett bijection;
+  Lagarias 1985 Thm K), so E[M_{j+1}|F_j] = M_j((3/2)+(1/2))/2 = M_j: a nonnegative martingale.
+  Doob's maximal inequality: P_k(lam) := Haar{max_{j<=k} M_j >= lam} <= 1/lam.
+
+  exact rationals, k = 60:
+    lam= 3/2: P_60 = 0.639718641615   lam*P = 0.959578   Doob bound 1/lam = 0.666667
+    lam=   2: P_60 = 0.425421769173   lam*P = 0.850844   Doob bound 1/lam = 0.500000
+    lam=   3: P_60 = 0.279793068831   lam*P = 0.839379   Doob bound 1/lam = 0.333333
+    lam=   4: P_60 = 0.200828482984   lam*P = 0.803314   Doob bound 1/lam = 0.250000
+    lam=   8: P_60 = 0.101928464957   lam*P = 0.815428   Doob bound 1/lam = 0.125000
+    lam=  16: P_60 = 0.051149934498   lam*P = 0.818399   Doob bound 1/lam = 0.062500
+
+  floats, k = 4000, with Doob-controlled truncation error (limit k -> infinity):
+    lam=        2: P_inf ~ 0.4273692069 (+ at most 4.32e-15)   lam*P = 0.854738
+    lam=        4: P_inf ~ 0.2034376977 (+ at most 6.00e-15)   lam*P = 0.813751
+    lam=       10: P_inf ~ 0.0826863208 (+ at most 6.91e-15)   lam*P = 0.826863
+    lam=      100: P_inf ~ 0.0082011714 (+ at most 7.53e-15)   lam*P = 0.820117
+    lam=     1000: P_inf ~ 0.0008267083 (+ at most 7.58e-15)   lam*P = 0.826708
+    lam=    10000: P_inf ~ 0.0000832215 (+ at most 7.60e-15)   lam*P = 0.832215
+    lam=   100000: P_inf ~ 0.0000082594 (+ at most 7.60e-15)   lam*P = 0.825942
+    lam=  1000000: P_inf ~ 0.0000008283 (+ at most 7.59e-15)   lam*P = 0.828314
+  lam*P_inf(lam) stays in a bounded band below 1: Pareto(1) tail of sup_j M_j (Cramer-Lundberg
+  with exponent theta = 1, which is exactly the martingale property); the band oscillation
+  reflects the two-step lattice log(3/2), log 2 at moderate lam.
+
+==============================================================================
+F4  Doob's convergence theorem => Terras: Haar{tau > k} -> 0, tau = first j with M_j < 1
+==============================================================================
+  M_j -> M_inf a.s. (nonnegative martingale); |log M_{j+1} - log M_j| >= log(3/2) forces
+  M_inf = 0 a.s., hence tau < infinity a.s., hence (Terras 1976 / Everett 1977) the natural density
+  of {n : sigma(n) < infinity} is lim_k Haar{tau <= k} = 1.  Exact values of Haar{tau > k}:
+    k=   1: Haar{tau > k} = 5.000000e-01
+    k=   2: Haar{tau > k} = 2.500000e-01
+    k=   5: Haar{tau > k} = 1.250000e-01
+    k=  10: Haar{tau > k} = 6.250000e-02
+    k=  20: Haar{tau > k} = 2.606201e-02
+    k=  50: Haar{tau > k} = 3.316689e-03
+    k= 100: Haar{tau > k} = 2.386783e-04
+    k= 200: Haar{tau > k} = 3.060424e-06
+  (decay is exponential, rate given by the large-deviation cost of staying above slope log_3 2).
+
+==============================================================================
+F5  deterministic Doob: density of {n : max_{j<=k} T^j(n) >= lam n} equals P_k(lam) <= 1/lam
+==============================================================================
+  lam=2: #n in [2^40, 2^40+2^20) = 420544  vs  2^20 * P_20 = 420544  (equal: True)   ;  #n in [1,2^20] = 420545  ; Doob 2^20/lam = 524288
+  lam=4: #n in [2^40, 2^40+2^20) = 184569  vs  2^20 * P_20 = 184569  (equal: True)   ;  #n in [1,2^20] = 184569  ; Doob 2^20/lam = 262144
+  lam=8: #n in [2^40, 2^40+2^20) = 81810  vs  2^20 * P_20 = 81810  (equal: True)   ;  #n in [1,2^20] = 81810  ; Doob 2^20/lam = 131072
+  PROVED (elementary): for every k and lam > 1, d{n : max_{j<=k} T^j(n) >= lam n} = P_k(lam) <= 1/lam,
+  since T^j(n)/n = M_j(n) + R_j/(2^j n) with 0 < R_j/2^j <= 3^{a_j}/4, and the k-prefix of n is Haar-uniform.
+
+==============================================================================
+F6  exactness only in the leading coefficient: sum_{n<=X} T^k(n) - sum_{n<=X} n
+==============================================================================
+  k=1: X=2^13: sum T^k - sum n = 0  ( = 0 per element )
+  k=2: X=2^14: sum T^k - sum n = 8192  ( = 1/2 per element )
+  k=3: X=2^15: sum T^k - sum n = 40960  ( = 5/4 per element )
+  k=4: X=2^16: sum T^k - sum n = 212992  ( = 13/4 per element )
+  k=5: X=2^17: sum T^k - sum n = 696320  ( = 85/16 per element )
+  k=6: X=2^18: sum T^k - sum n = 2752512  ( = 21/2 per element )
+  k=1: exactly 0 (the pair-sum identity on {2i-1,2i}); k>=2: a linear excess ~ c_k X from the +1's.
+
+DONE martingale
+
+################################################################################
+# procgen_atlas_20260924_primegame.py
+################################################################################
+
+==============================================================================
+L1  Conway's PRIMEGAME is a generalized Collatz map; the powers of 2 in the orbit of 2
+==============================================================================
+  the fraction used depends only on n mod lcm(denominators) = 6469693230: a residue-class-wise linear map
+  Guy 1983 list (..., 15/14, 15/2, 55/1): exponents of the powers of 2 in the orbit of 2: [2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37, 41, 43, 47]
+     steps: [19, 69, 280, 707, 2363, 3876, 8068, 11319, 19201, 36866, 45551, 75224, 101112, 117831, 152025]; equal to the first 15 primes: True
+  standard list (..., 15/2, 1/7, 55/1): exponents of the powers of 2 in the orbit of 2: [2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37, 41, 43, 47]
+     steps: [19, 69, 281, 710, 2375, 3893, 8102, 11361, 19268, 36981, 45680, 75417, 101354, 118093, 152344]; equal to the first 15 primes: True
+  consecutive visits 2^p, 2^(p+2) so far (twin primes): [(3, 5), (5, 7), (11, 13), (17, 19), (29, 31), (41, 43)]
+  Twin prime conjecture <=> infinitely many such consecutive visits (Conway's theorem, CITED).  The map is
+  not 3x+1; this is the universality phenomenon behind the UNIFORM barrier, not a bridge to Collatz.
+
+==============================================================================
+L2  arithmetical complexity (elementary; used for the logic edges of the atlas)
+==============================================================================
+  no nontrivial Collatz cycle (NC)                 Pi^0_1  each word/clock is a finite check; a counterexample is finite
+  Terras sigma = tau (CST)                         Pi^0_1  for all n, k: tau(n) = k => sigma(n) = k (sigma >= tau always)
+  orbit of 8 under Collatz's permutation infinite  Pi^0_1  for all k >= 1: g^k(8) != 8
+  Goldbach                                         Pi^0_1  bounded search for each even n
+  Legendre                                         Pi^0_1  bounded search in (n^2,(n+1)^2)
+  Riemann hypothesis                               Pi^0_1  Lagarias 2002: sigma(n) <= H_n + exp(H_n) log H_n for all n
+  graceful tree conjecture                         Pi^0_1  finite search per tree
+  lonely runner (all n)                            Pi^0_1  for fixed n a finite check (Tao 2018)
+  Erdos ternary problem                            Pi^0_1  for each n > 8 inspect the ternary digits of 2^n
+  Collatz conjecture                               Pi^0_2  for all n there is k with T^k(n) = 1
+  no divergence (T1)                               Pi^0_2  for all n there are i < j with T^i(n) = T^j(n)
+  Periodicity Conjecture                           Pi^0_2  for all rationals x in Z_2 there are i < j with T^i(x) = T^j(x)
+  E-SCC Q1, Q2; X_min                              Pi^0_2  for all n there is a finite path / certificate
+  HYP-9127 (2-adic irrationality)                  Pi^0_2  for all a/b there is N with X != a/b mod 2^N
+  twin prime conjecture                            Pi^0_2  for all N there is p > N with p, p+2 prime
+  abc conjecture                                   Pi^0_3  for all eps there is K with c <= K rad^(1+eps) for all triples
+  Consequences: a Pi^0_1 statement that is independent of PA is true; each Pi^0_1 statement is
+  equivalent to the non-halting of an explicit program, hence (Conway) to a statement about an explicit
+  generalized Collatz map; Pi^0_2 statements reduce likewise (Kurtz-Simon).  None of these reductions
+  lands on the 3x+1 map itself.
+
+DONE primegame

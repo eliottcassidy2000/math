@@ -255,6 +255,15 @@ all heights (THM-1289, published), δ ineffective.
   Wieferich valuation into triangle-cycle splitting and inverse-braid
   digit loss. It separates a finite cube conjugacy and a labelled
   elliptic/Berggren subtree from preservation of positive guarded edges.
+  [The 2026-09-22..24 procedural session](../05-knowledge/results/collatz_procgen_20260922_synthesis.md)
+  locates the missing mechanism in the Periodicity Conjecture's HARD class.
+  Its smallest open instances are the cube-swap 2-adic theta value (HYP-9127)
+  and the adjacent-block Mahler instance (HYP-9134). **THM-4469 (2026-09-24)**
+  proves that no-divergence on an adjacent supercritical block pair is
+  *equivalent* to a generalized Mahler Z-number statement, one lying beyond
+  the Flatto–Lagarias–Pollington length. So Collatz implies new Mahler-type
+  exclusions. Residue types are provably side-blind (`x -> -x` transport), so
+  any proof must use the sign law.
 - **Erdős Problem 592** [DEEP — $1000 problem] — the p=2 Schur-seam theorem (THM-469),
   R(n,2)=2n+1 linear conjecture, Chang-tower m=3 open; 21 scripts, a survey draft.
 - **{7,21} forbidden H-spectrum** [DEEP, repo-signature] — permanent exclusions by

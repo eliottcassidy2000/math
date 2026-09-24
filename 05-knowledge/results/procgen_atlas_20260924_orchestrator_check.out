@@ -1,0 +1,7 @@
+O1  R_B = 4726, R_B' = 4727, p - q = 1163, p = 2187 > 2q = 2048: ok
+O2  cylinder of 0111101110 = class 990 mod 1024 = divisibility class: ok
+O2  cylinder of 1101100111 = class 187 mod 1024 = divisibility class: ok
+O3  adjacent-pair census L <= 20: {(10, 7): 4, (16, 11): 5, (19, 13): 1, (20, 14): 8} : ok
+O4  T-side counts d = 1, 2, 3 on [1, 2^22]: 8192, 16, 0: ok; two-block starts: [555195, 694238, 873659, 1012702, 1603771, 1742814, 1922235, 2061278, 2652347, 2791390, 2970811, 3109854, 3700923, 3839966, 4019387, 4158430]
+O5  xi-side = T-side at depth 2 on 56 samples; 200 non-cylinder starts fail at j = 1: ok
+ALL CHECKS PASSED
