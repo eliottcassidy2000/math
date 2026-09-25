@@ -139,7 +139,7 @@ n   paths(=A071983)  cycles(=A071984)  A090460 = paths-(n-1)*cycles   OEIS A0719
 check: all counted terms agree with A071983 / A090460 / A071984 : OK
 n=32: 392 paths up to reversal = 361 essentially different + 31 cuts of the unique cycle
 
-== S4  forced-edge obstruction certificates for n = 18..22, 24 (PROVED by the printed reduction)
+== S4  sound forced-edge reductions and cut certificates (endpoint correction 2026-09-25)
 Degree lists of the failing graphs (vertex: neighbours):
   n=18: 1:[3, 8, 15]; 2:[7, 14]; 3:[1, 6, 13]; 4:[5, 12]; 5:[4, 11]; 6:[3, 10]; 7:[2, 9, 18]; 8:[1, 17]; 9:[7, 16]; 10:[6, 15]; 11:[5, 14]; 12:[4, 13]; 13:[3, 12]; 14:[2, 11]; 15:[1, 10]; 16:[9]; 17:[8]; 18:[7]
   n=19: 1:[3, 8, 15]; 2:[7, 14]; 3:[1, 6, 13]; 4:[5, 12]; 5:[4, 11]; 6:[3, 10, 19]; 7:[2, 9, 18]; 8:[1, 17]; 9:[7, 16]; 10:[6, 15]; 11:[5, 14]; 12:[4, 13]; 13:[3, 12]; 14:[2, 11]; 15:[1, 10]; 16:[9]; 17:[8, 19]; 18:[7]; 19:[6, 17]
@@ -169,105 +169,15 @@ Degree lists of the failing graphs (vertex: neighbours):
   round 1: deg(18)=1 forces edge 7-18
   round 1: deg(19)=2 forces edge 6-19
   round 1: vertex 7 has forced edges to [2, 9, 18] -> contradiction (R3)
--- n=20: verdict DEG3 5
-  round 1: deg(2)=2 forces edge 2-14
-  round 1: deg(2)=2 forces edge 2-7
-  round 1: deg(4)=2 forces edge 4-12
-  round 1: deg(4)=2 forces edge 4-5
-  round 1: deg(8)=2 forces edge 1-8
-  round 1: deg(8)=2 forces edge 8-17
-  round 1: deg(9)=2 forces edge 9-16
-  round 1: deg(9)=2 forces edge 7-9
-  round 1: deg(10)=2 forces edge 6-10
-  round 1: deg(10)=2 forces edge 10-15
-  round 1: deg(11)=2 forces edge 5-11
-  round 1: deg(11)=2 forces edge 11-14
-  round 1: deg(12)=2 forces edge 12-13
-  round 1: deg(13)=2 forces edge 3-13
-  round 1: deg(15)=2 forces edge 1-15
-  round 1: deg(16)=2 forces edge 16-20
-  round 1: deg(17)=2 forces edge 17-19
+-- n=20: verdict OPEN None
   round 1: deg(18)=1 forces edge 7-18
-  round 1: deg(19)=2 forces edge 6-19
-  round 1: deg(20)=2 forces edge 5-20
-  round 1: vertex 5 has forced edges to [4, 11, 20] -> contradiction (R3)
--- n=21: verdict DEG3 7
-  round 1: deg(2)=2 forces edge 2-14
-  round 1: deg(2)=2 forces edge 2-7
-  round 1: deg(8)=2 forces edge 1-8
-  round 1: deg(8)=2 forces edge 8-17
-  round 1: deg(9)=2 forces edge 9-16
-  round 1: deg(9)=2 forces edge 7-9
-  round 1: deg(10)=2 forces edge 6-10
-  round 1: deg(10)=2 forces edge 10-15
-  round 1: deg(11)=2 forces edge 5-11
-  round 1: deg(11)=2 forces edge 11-14
-  round 1: deg(12)=2 forces edge 4-12
-  round 1: deg(12)=2 forces edge 12-13
-  round 1: deg(13)=2 forces edge 3-13
-  round 1: deg(16)=2 forces edge 16-20
-  round 1: deg(17)=2 forces edge 17-19
+-- n=21: verdict OPEN None
   round 1: deg(18)=1 forces edge 7-18
-  round 1: deg(19)=2 forces edge 6-19
-  round 1: deg(20)=2 forces edge 5-20
-  round 1: deg(21)=2 forces edge 4-21
-  round 1: deg(21)=2 forces edge 15-21
-  round 1: vertex 7 has forced edges to [2, 9, 18] -> contradiction (R3)
--- n=22: verdict DEG3 7
-  round 1: deg(2)=2 forces edge 2-14
-  round 1: deg(2)=2 forces edge 2-7
-  round 1: deg(8)=2 forces edge 1-8
-  round 1: deg(8)=2 forces edge 8-17
-  round 1: deg(9)=2 forces edge 9-16
-  round 1: deg(9)=2 forces edge 7-9
-  round 1: deg(10)=2 forces edge 6-10
-  round 1: deg(10)=2 forces edge 10-15
-  round 1: deg(11)=2 forces edge 5-11
-  round 1: deg(11)=2 forces edge 11-14
-  round 1: deg(12)=2 forces edge 4-12
-  round 1: deg(12)=2 forces edge 12-13
-  round 1: deg(13)=2 forces edge 3-13
-  round 1: deg(16)=2 forces edge 16-20
-  round 1: deg(17)=2 forces edge 17-19
+-- n=22: verdict OPEN None
   round 1: deg(18)=1 forces edge 7-18
-  round 1: deg(19)=2 forces edge 6-19
-  round 1: deg(20)=2 forces edge 5-20
-  round 1: deg(21)=2 forces edge 4-21
-  round 1: deg(21)=2 forces edge 15-21
-  round 1: deg(22)=2 forces edge 3-22
-  round 1: deg(22)=2 forces edge 14-22
-  round 1: vertex 7 has forced edges to [2, 9, 18] -> contradiction (R3)
--- n=24: verdict LEAVES>=3 [2, 4, 18]
-  round 1: deg(8)=2 forces edge 1-8
-  round 1: deg(8)=2 forces edge 8-17
-  round 1: deg(9)=2 forces edge 9-16
-  round 1: deg(9)=2 forces edge 7-9
-  round 1: deg(10)=2 forces edge 6-10
-  round 1: deg(10)=2 forces edge 10-15
-  round 1: deg(11)=2 forces edge 5-11
-  round 1: deg(11)=2 forces edge 11-14
-  round 1: deg(16)=2 forces edge 16-20
-  round 1: deg(17)=2 forces edge 17-19
+-- n=24: verdict OPEN None
   round 1: deg(18)=1 forces edge 7-18
-  round 1: deg(19)=2 forces edge 6-19
-  round 1: deg(20)=2 forces edge 5-20
-  round 1: deg(21)=2 forces edge 4-21
-  round 1: deg(21)=2 forces edge 15-21
-  round 1: deg(22)=2 forces edge 3-22
-  round 1: deg(22)=2 forces edge 14-22
-  round 1: deg(23)=2 forces edge 2-23
-  round 1: deg(23)=2 forces edge 13-23
-  round 1: deg(24)=2 forces edge 1-24
-  round 1: deg(24)=2 forces edge 12-24
-  round 1: 1 saturated by forced edges [8, 24] -> delete 1-3 (R5)
-  round 1: 1 saturated by forced edges [8, 24] -> delete 1-15 (R5)
-  round 1: 5 saturated by forced edges [11, 20] -> delete 5-4 (R5)
-  round 1: 6 saturated by forced edges [10, 19] -> delete 6-3 (R5)
-  round 1: 7 saturated by forced edges [9, 18] -> delete 7-2 (R5)
-  round 1: 14 saturated by forced edges [11, 22] -> delete 14-2 (R5)
-  round 1: fragment 4-21-15-10-6-19-17-8-1-24-12 has ends 4,12; delete 4-12 (R6)
-  round 2: leaves [2, 4, 18] -> contradiction (R4)
-  n=24: forced edges in round 1: 21
+  n=24: forced edges in round 1: 1
 cut-set search: smallest S with c(Q_n - S) > |S| + 1, |S| <= 3
   n=18: S=[7], c(Q-S)=3
   n=19: S=[7], c(Q-S)=3
@@ -275,14 +185,16 @@ cut-set search: smallest S with c(Q_n - S) > |S| + 1, |S| <= 3
   n=21: S=[5, 7], c(Q-S)=4
   n=22: S=[5, 7, 14], c(Q-S)=5
   n=24: none with |S|<=3
+n=24: the former degree-2 forcing certificate is RETRACTED; nonexistence remains FINITE-EXACT (S2/S3).
 n=23 control: leaf 18 (neighbour 7) is an endpoint; forced-edge reduction verdict:
   n=23: verdict OPEN (a path exists: 18,7,9,16,20,5,11,14,2,23,13,12,4,21,15,10,6,19,17,8,1,3,22)
+R2 hostile controls: K3 forces no edges; Q23 endpoint 22 does not force 14-22: OK
   n=23: directed path counts by start vertex: {2: 1, 9: 1, 18: 3, 22: 1}  (every path has 18 at one end)
 
 == S5  n = 15: the vertex 4 and the pasted '4 is the edge to avoid' (FINITE-EXACT)
 neighbours of 4 in Q_15: [5, 12] (4+5=9, 4+12=16; 4+21=25 needs 21>15)
 Hamiltonian paths of Q_15 up to reversal: 1; through 4-5: 1; through 4-12: 1; through both: 1
-  -> deg(4)=2 so BOTH edges at 4 are forced in every Hamiltonian path; '4 is the edge to avoid' is REFUTED (4 is an interior vertex of the unique path)
+  -> leaves 8 and 9 fix the endpoints, so deg(4)=2 forces BOTH edges in every Hamiltonian path; '4 is the edge to avoid' is REFUTED (4 is an interior vertex of the unique path)
 degree-2 vertices of Q_15 (all edges forced): [2, 4, 5, 6, 7, 10, 11, 12, 13, 14, 15]; leaves: [8, 9]
 
 == S6  Gerbicz's 25-fold blow-up (Mersenneforum post #19, 2018-01-17): finite check + verified instances
@@ -342,14 +254,14 @@ A071984 offset 32, data: [1, 1, 11, 57, 31, 20, 25, 50, 64]
   [CORRECT (weak)] N=16,17 connected
       -> connected from N=14 on; paths exist (1 each)
   [REFUTED (mechanism)] N in [18,22] 'parity desert'
-      -> N=18: three leaves 16,17,18; N=19,21,22: vertex 7 acquires three forced edges 2-7, 7-9, 7-18; N=20: vertex 5 acquires 4-5, 5-11, 5-20 (S4); no parity statement is involved
+      -> N=18: three leaves 16,17,18; N=19: two certified endpoints force three edges at 7; all N=18..22 have cut certificates (S4); degree 2 alone is insufficient to force both edges
   [CORRECT (data), name unearned] N=23 'the 23 valve'
       -> N=23: leaf 18 is an endpoint with neighbour 7; 3 paths, all start or end at 18
-  [CORRECT (data); obstruction is a second-round triple of leaves] N=24 stalled
-      -> N=24: verdict LEAVES>=3 [2, 4, 18]: after the forced-edge saturations delete 1-3, 1-15, 4-5, 3-6, 2-7, 2-14 and the fragment-closing edge 4-12, the vertices 2, 4, 18 are all leaves
+  [FINITE-EXACT; former certificate RETRACTED] N=24 stalled
+      -> N=24: corrected forcing verdict OPEN; no path by the independent exhaustive searches; former two-round forcing proof retracted
   [REFUTED (wrong notion, wrong status)] N>=25 conjectured connected
       -> connected from 14; Hamiltonian PATH for all N>=25 is a THEOREM (Gerbicz 2018, CITED), not a conjecture
   [REFUTED] '4 is the edge to avoid' at N=15
-      -> 4 has degree 2; both edges 4-5, 4-12 are forced and used
+      -> leaves 8,9 fix the endpoints, so 4 is interior; both edges 4-5, 4-12 are forced and used
 
 == done

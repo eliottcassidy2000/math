@@ -198,7 +198,8 @@ def forced_reduction(n, adj0, log):
     Rules (each is a theorem about any Hamiltonian path P of a graph H):
       R0  an isolated vertex (n >= 2) => no path.
       R1  a degree-1 vertex is an endpoint of P and its edge is in P (forced).
-      R2  a degree-2 vertex has both edges in P.
+      R2  a degree-2 vertex CERTIFIED NOT TO BE AN ENDPOINT has both edges
+          in P. Here this is certified only when two other leaves exist.
       R3  a vertex with 3 forced edges => contradiction (P has max degree 2).
       R4  three leaves => contradiction (P has exactly two endpoints).
       R5  if v has two forced edges, its other edges are not in P: delete them.
@@ -264,7 +265,7 @@ def forced_reduction(n, adj0, log):
             if d == 0 and n >= 2:
                 log.append(f"  round {rnd}: vertex {v} isolated -> contradiction")
                 return ("ISOLATED", v)
-            if d in (1, 2):
+            if d == 1 or (d == 2 and len(leaves) == 2):
                 for w in adj[v]:
                     e = (min(v, w), max(v, w))
                     if e not in forced:
@@ -552,7 +553,7 @@ def main():
     P()
 
     # ---- S4: obstruction certificates for the failing n --------------------
-    P("== S4  forced-edge obstruction certificates for n = 18..22, 24 (PROVED by the printed reduction)")
+    P("== S4  sound forced-edge reductions and cut certificates (endpoint correction 2026-09-25)")
     P("Degree lists of the failing graphs (vertex: neighbours):")
     for n in [18, 19, 20, 21, 22, 24]:
         adj = graphs[n]
@@ -567,19 +568,31 @@ def main():
             P(line)
     n24_forced = sum(1 for line in log if "round 1" in line and "forces edge" in line)
     P(f"  n=24: forced edges in round 1: {n24_forced}")
-    for n in [19, 20, 21, 22, 24]:
-        if verdicts[n][0] == "OPEN":
-            fail(f"reduction inconclusive at n={n}")
+    if verdicts[19][0] == "OPEN":
+        fail("two certified endpoints should resolve n=19")
+    for n in [20, 21, 22, 24]:
+        if verdicts[n][0] != "OPEN":
+            fail(f"without a second certified endpoint reduction should stay open at n={n}")
     if verdicts[18][0] != "LEAVES>=3":
         fail("n=18 should be the three-leaf case")
     P("cut-set search: smallest S with c(Q_n - S) > |S| + 1, |S| <= 3")
     for n in [18, 19, 20, 21, 22, 24]:
         r = cut_search(graphs[n], 3)
         P(f"  n={n}: {('S=' + str(list(r[0])) + ', c(Q-S)=' + str(r[1])) if r else 'none with |S|<=3'}")
+        if n <= 22 and r is None:
+            fail(f"missing independent cut certificate at n={n}")
+    P("n=24: the former degree-2 forcing certificate is RETRACTED; nonexistence remains FINITE-EXACT (S2/S3).")
     P("n=23 control: leaf 18 (neighbour 7) is an endpoint; forced-edge reduction verdict:")
     log = []
     v23 = forced_reduction(23, graphs[23], log)
     P(f"  n=23: verdict {v23[0]} (a path exists: {','.join(map(str, witness[23]))})")
+    if v23[0] != "OPEN" or any("forces edge 14-22" in line for line in log):
+        fail("Q23 endpoint 22 must not force both incident edges")
+    triangle = {1: {2, 3}, 2: {1, 3}, 3: {1, 2}}
+    triangle_log = []
+    if forced_reduction(3, triangle, triangle_log)[0] != "OPEN" or triangle_log:
+        fail("K3 has a Hamiltonian path: degree 2 alone must not force edges")
+    P("R2 hostile controls: K3 forces no edges; Q23 endpoint 22 does not force 14-22: OK")
     # which vertices are endpoints in n=23 paths
     H23 = Ham(graphs[23])
     ends = {}
@@ -628,7 +641,7 @@ def main():
             both += a and b
     P(f"Hamiltonian paths of Q_15 up to reversal: {tot}; through 4-5: {thru45}; "
       f"through 4-12: {thru412}; through both: {both}")
-    P("  -> deg(4)=2 so BOTH edges at 4 are forced in every Hamiltonian path; "
+    P("  -> leaves 8 and 9 fix the endpoints, so deg(4)=2 forces BOTH edges in every Hamiltonian path; "
       "'4 is the edge to avoid' is REFUTED (4 is an interior vertex of the unique path)")
     deg2_15 = [v for v in sorted(adj15) if len(adj15[v]) == 2]
     P(f"degree-2 vertices of Q_15 (all edges forced): {deg2_15}; leaves: {leaf_table[15]}")
@@ -742,11 +755,11 @@ def main():
         ("N=14 first unification, 3 components join", "2 components at N=13 join at N=14 (edge 14-2, 14-11); the 3rd component vanished at N=13 (13+3=16, 13+12=25)", "REFUTED as stated"),
         ("N=15 first Hamiltonian path 'braiding 9,16,25'", f"first path at N=15, unique up to reversal ({counts[15][0]}); squares used by it: {sq15}; the edge 1-3 (sum 4) exists in Q_15 but is unused", "CORRECT"),
         ("N=16,17 connected", "connected from N=14 on; paths exist (1 each)", "CORRECT (weak)"),
-        ("N in [18,22] 'parity desert'", "N=18: three leaves 16,17,18; N=19,21,22: vertex 7 acquires three forced edges 2-7, 7-9, 7-18; N=20: vertex 5 acquires 4-5, 5-11, 5-20 (S4); no parity statement is involved", "REFUTED (mechanism)"),
+        ("N in [18,22] 'parity desert'", "N=18: three leaves 16,17,18; N=19: two certified endpoints force three edges at 7; all N=18..22 have cut certificates (S4); degree 2 alone is insufficient to force both edges", "REFUTED (mechanism)"),
         ("N=23 'the 23 valve'", f"N=23: leaf 18 is an endpoint with neighbour 7; {counts[23][0]} paths, all start or end at 18", "CORRECT (data), name unearned"),
-        ("N=24 stalled", f"N=24: verdict {verdicts[24][0]} {verdicts[24][1]}: after the forced-edge saturations delete 1-3, 1-15, 4-5, 3-6, 2-7, 2-14 and the fragment-closing edge 4-12, the vertices 2, 4, 18 are all leaves", "CORRECT (data); obstruction is a second-round triple of leaves"),
+        ("N=24 stalled", f"N=24: corrected forcing verdict {verdicts[24][0]}; no path by the independent exhaustive searches; former two-round forcing proof retracted", "FINITE-EXACT; former certificate RETRACTED"),
         ("N>=25 conjectured connected", "connected from 14; Hamiltonian PATH for all N>=25 is a THEOREM (Gerbicz 2018, CITED), not a conjecture", "REFUTED (wrong notion, wrong status)"),
-        ("'4 is the edge to avoid' at N=15", "4 has degree 2; both edges 4-5, 4-12 are forced and used", "REFUTED"),
+        ("'4 is the edge to avoid' at N=15", "leaves 8,9 fix the endpoints, so 4 is interior; both edges 4-5, 4-12 are forced and used", "REFUTED"),
     ]
     for a_, b_, c_ in rows:
         P(f"  [{c_}] {a_}\n      -> {b_}")

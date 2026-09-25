@@ -1,0 +1,6 @@
+Admissibility: all 2500 even I in [2,5000]; I=8 rejected.
+Prime overlap: 100 odd seeds, 7 rungs each; nonadjacent hostile 5,85.
+Distance: 2500 ordered pairs, 172-vertex orbit-union tree;
+  LCA formula agrees with independent 0-1 BFS; example (10,16)=(2,1), meet=8.
+  Root-cycle hostile 1<->2 retained; domain excludes 1,2.
+FINITE-EXACT only for the stated universes; no global Collatz test claimed.

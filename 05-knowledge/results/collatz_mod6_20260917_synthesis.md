@@ -691,9 +691,14 @@ absent at `30,31` and present from `32`; the `Q_15` path is unique, forced
 by its eleven degree-two vertices with leaves `8` and `9`, and omits exactly
 the edge `{1,3}` of square `4` (the pasted "avoid `4`" is refuted: `4` is
 interior with degree two). `Q_18` fails by its three leaves `{16,17,18}`;
-`n=19..22` fail by one-round forced-edge certificates and `n=24` by a
-two-round one, all written as proofs from the two general obstructions
-(three leaves; a cut set `S` with more than `|S|+1` components). OEIS
+`n=19` fails by forced edges with both endpoints certified by leaves;
+`n=18..22` also have cut certificates with more than `|S|+1` components.
+**Corrected 2026-09-25:** the old forcing proofs for `20..22` and `24`
+incorrectly forced both edges at unclassified degree-two endpoints and
+are retracted. At `24`, two independent exhaustive searches still give
+zero paths (FINITE-EXACT); a short structural certificate remains OPEN.
+See the repaired square-sum note, section4, and the corresponding
+MISTAKES entry. OEIS
 A090461 records the "all `k>=25`" conjecture as proved with Hamiltonian
 cycles for `k>=32` (Gerbicz 2018, CITED via the OEIS comments and the
 archived Mersenneforum thread: a 49-fold blow-up of "nice pairs" of

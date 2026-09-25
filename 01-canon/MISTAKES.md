@@ -9,6 +9,14 @@ Format per entry:
 - Why it was wrong
 - The correct framing
 
+## 2026-09-25 Square-sum degree-two forcing forgot the endpoint coordinate
+
+- **WRONG.** The [square-sum Hamiltonicity note](../05-knowledge/results/collatz_mod6_20260922_w6_square_sum_hamiltonicity.md) S4, its `forced_reduction` script, and its 2026-09-22 audit treated both edges of every degree-2 vertex as forced in an arbitrary Hamiltonian path.
+- **Minimal witness / first failed implication.** A triangle has a Hamiltonian path whose endpoints have graph-degree 2 but path-degree 1. Internally, the note's valid `Q_23` path ends at `22`, with neighbours `{3,14}`, and omits `22-14`. Thus graph-degree 2 does not imply path-degree 2.
+- **Strongest survivor / repair.** Force both edges only for a certified nonendpoint. Two leaves certify both endpoints; this preserves the `Q_15` uniqueness reasoning and the `Q_19` contradiction. The three-leaf obstruction at `18` and independent cut certificates at `18..22` survive. Retract the former forcing arguments at `20..22` and `24`. The separate independent exhaustive searches still certify zero paths at `24` (FINITE-EXACT); the corrected reducer returns `OPEN` there.
+- **Missing coordinate / new question.** Retain endpoint status with every forcing deduction. A short structural certificate for `Q_24` remains OPEN. Replaying the same incorrect rule in an independent implementation was not an independent validity audit.
+- **Reproduction.** Run `python 04-computation/experiments/collatz_mod6_20260922_w6_square_sum_hamiltonicity.py` and its `_audit.py` companion. Their controls now include the triangle and the `Q_23` endpoint hostile; counts and cut certificates are unchanged.
+
 ## 2026-09-24 "The sign decides the Sharkovskii type" -- refuted; and an external claimed proof of Collatz (arXiv:2502.20642)
 
 - **WRONG (collatz-procgen-20260922 wave 9, coordinator prompt).** "The

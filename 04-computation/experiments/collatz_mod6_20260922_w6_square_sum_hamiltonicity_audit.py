@@ -8,8 +8,8 @@ Independent recomputation, written without reusing the lane's Ham class:
       lane's three-rule prune, hence an independent oracle); exact undirected
       path counts for 15 <= n <= 33 and cycle counts for 32 <= n <= 36
   A3  cut sets |S| <= 3 for n = 18..24, brute force
-  A4  the n = 24 certificate: the forced fragment printed by the lane in DFS
-      order is NOT a path (4-24 is not an edge); the path order is checked
+  A4  the degree-2 endpoint hostile: Q23's valid path omits 14-22 even though
+      vertex 22 has degree 2. The former n=24 forcing certificate is retracted.
   A5  n = 15 census at vertex 4; n = 23 endpoint distribution
   A6  Gerbicz's 25-fold blow-up re-implemented from his PARI pseudo-code
       (F(a,b,c,ty)), independent of the lane's GLUE/blow_up; the partition
@@ -239,35 +239,21 @@ def main():
     P()
 
     # ---- A4 ----
-    P("== A4  n=24 certificate details")
-    adj = G[24]
-    frag_lane = [1, 8, 17, 19, 6, 10, 15, 21, 4, 24, 12]
-    frag_path = [4, 21, 15, 10, 6, 19, 17, 8, 1, 24, 12]
-    lane_ok = all(sq(frag_lane[i] + frag_lane[i + 1]) for i in range(10))
-    path_ok = all(sq(frag_path[i] + frag_path[i + 1]) for i in range(10))
-    P(f"  lane's printed fragment order {frag_lane} is a path: {lane_ok} (4+24={4 + 24} not a square)")
-    P(f"  correct path order {frag_path}: {path_ok}; ends 4,12; 4+12=16 is an edge: {12 in adj[4]}")
-    if lane_ok or not path_ok:
-        fail("A4 fragment")
-    deg2 = [v for v in adj if len(adj[v]) == 2]
-    forced = set()
-    for v in adj:
-        if len(adj[v]) <= 2:
-            for w in adj[v]:
-                forced.add((min(v, w), max(v, w)))
-    P(f"  degree-2 vertices of Q_24: {deg2} ({len(deg2)} of them) + leaf 18 -> {len(forced)} forced edges in round 1")
-    if len(forced) != 21:
-        fail("A4 forced count")
-    deleted = {(1, 3), (1, 15), (4, 5), (3, 6), (2, 7), (2, 14), (4, 12)}
-    red = {v: [w for w in adj[v] if (min(v, w), max(v, w)) not in deleted] for v in adj}
-    P(f"  after the seven deletions: N(2)={red[2]}, N(4)={red[4]}, N(18)={red[18]} -> three leaves")
-    if not (red[2] == [23] and red[4] == [21] and red[18] == [7]):
-        fail("A4 leaves")
-    for n in [19, 21, 22]:
-        P(f"  n={n}: N(2)={G[n][2]} N(9)={G[n][9]} N(18)={G[n][18]} -> 7 carries 2-7, 7-9, 7-18")
-        if not (G[n][2] == [7, 14] and G[n][9] == [7, 16] and G[n][18] == [7]):
-            fail("A4 deg3")
-    P(f"  n=20: N(4)={G[20][4]} N(11)={G[20][11]} N(20)={G[20][20]} -> 5 carries 4-5, 5-11, 5-20")
+    P("== A4  endpoint correction (2026-09-25)")
+    p23 = [18, 7, 9, 16, 20, 5, 11, 14, 2, 23, 13, 12, 4, 21, 15, 10, 6, 19, 17, 8, 1, 3, 22]
+    edges23 = {tuple(sorted((a, b))) for a, b in zip(p23, p23[1:])}
+    if not valid_chain(23, p23) or G[23][22] != [3, 14] or (14, 22) in edges23:
+        fail("A4 endpoint hostile")
+    P(f"  valid Q23 path: {p23}")
+    P("  degree-2 vertex 22 is an endpoint using only 22-3, not 22-14: unguarded R2 is FALSE")
+    P("  repaired R2: force both edges only at a certified nonendpoint; two leaves certify all other vertices")
+    if low[15] != [8, 9] or low[19] != [16, 18]:
+        fail("A4 certified endpoint controls")
+    P("  Q15 and Q19 have two leaves: their degree-2 nonendpoint forcing survives")
+    if pc[24] != 0:
+        fail("A4 n=24 independent census")
+    P("  n=20..22: cut certificates A3 survive; former one-round forcing proofs are retracted")
+    P("  n=24: former two-round forcing certificate RETRACTED; independent exhaustive path count A2 is 0")
     P()
 
     # ---- A5 ----
