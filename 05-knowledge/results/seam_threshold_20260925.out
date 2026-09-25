@@ -1,0 +1,20 @@
+STATUS: elementary structural proofs plus exact finite controls
+UNIVERSES: Q1..Q16; local G14..G16; all1024 orientations of K5; all perfect matchings of L(K5)
+Q_N Hamiltonian paths up to reversal, N1..16: {1: 1, 2: 0, 3: 0, 4: 0, 5: 0, 6: 0, 7: 0, 8: 0, 9: 0, 10: 0, 11: 0, 12: 0, 13: 0, 14: 0, 15: 1, 16: 1}
+Q14 V 14 E 13 components 1 cycle_rank 0 leaves [8, 9, 10] new_neighbors [2, 11]
+G14 V 14 E 18 components 1 cycle_rank 5 leaves [13] new_neighbors [7, 12]
+Q15 V 15 E 15 components 1 cycle_rank 1 leaves [8, 9] new_neighbors [1, 10]
+G15 V 15 E 19 components 1 cycle_rank 5 leaves [15] new_neighbors [13]
+Q16 V 16 E 16 components 1 cycle_rank 1 leaves [8, 16] new_neighbors [9]
+G16 V 16 E 21 components 1 cycle_rank 6 leaves [15] new_neighbors [8, 14]
+Q14 three arms: [[3, 1, 8], [3, 6, 10], [3, 13, 12, 4, 5, 11, 14, 2, 7, 9]]
+Q15 unique path: [8, 1, 15, 10, 6, 3, 13, 12, 4, 5, 11, 14, 2, 7, 9] ; omitted edge1--3
+Q ear1--15--10 replaces its third leaf; G ear8--16--14 completes the recorded K3,3
+T4=10=edges(K5)=vertices(L(K5)); L edges30 degree6; complement edges15 degree3
+L(K5) has no two-vertex module despite its perfect matchings
+All L(K5) perfect matchings: 144 center profiles [((1, 1, 1, 1, 1), 24), ((1, 1, 1, 2), 120)]
+Decoded even-score K5 orientations64 = regular24 + source-C3-sink40
+Matching identity144 =24*1+40*3; all24 regular matchings give connected-pair K5 minor models
+K5 cannot partition into three edge-disjoint triangle edge-sets plus one edge:0 packs
+Independent NetworkX 3.5 planarity: {'Q14': True, 'G14': True, 'Q15': True, 'G15': True, 'Q16': True, 'G16': False}
+PASS; no square-sum/Collatz/minor equivalence claimed

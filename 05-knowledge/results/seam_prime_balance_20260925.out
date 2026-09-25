@@ -1,0 +1,29 @@
+seam_prime_balance_20260925: divisor counts, not tournament sizes
+Independent direct divisor counts n=1..1000: PASS
+Profiles:r=1..8,each exponent1..8,sorted profiles 12869 PASS
+First mixed balanced example: 60 {2: 2, 3: 1, 5: 1} (10, 7, 3)
+n 1 profile () (F,S,U) (0, 0, 0) D 0
+n 2 profile (1,) (F,S,U) (0, 0, 0) D 0
+n 4 profile (2,) (F,S,U) (1, 1, 1) D -1
+n 6 profile (1, 1) (F,S,U) (2, 2, 2) D -2
+n 8 profile (3,) (F,S,U) (2, 1, 1) D 0
+n 12 profile (1, 2) (F,S,U) (4, 3, 2) D -1
+n 16 profile (4,) (F,S,U) (3, 1, 1) D 1
+n 24 profile (1, 3) (F,S,U) (6, 3, 2) D 1
+n 27 profile (3,) (F,S,U) (2, 1, 1) D 0
+n 32 profile (5,) (F,S,U) (4, 1, 1) D 2
+n 60 profile (1, 1, 2) (F,S,U) (10, 7, 3) D 0
+n 81 profile (4,) (F,S,U) (3, 1, 1) D 1
+n 120 profile (1, 1, 3) (F,S,U) (14, 7, 3) D 4
+automaton () accept True [('new prime', (1,))]
+automaton (1,) accept True [('new prime', (1, 1)), ('raise exponent1', (2,))]
+automaton (2,) accept False [('new prime', (1, 2)), ('raise exponent2', (3,))]
+automaton (3,) accept True [('new prime', 'REJECT'), ('raise exponent3', 'REJECT')]
+automaton (1, 1) accept False [('new prime', (1, 1, 1)), ('raise exponent1', (1, 2))]
+automaton (1, 2) accept False [('new prime', (1, 1, 2)), ('raise exponent1', 'REJECT'), ('raise exponent2', 'REJECT')]
+automaton (1, 1, 1) accept False [('new prime', 'REJECT'), ('raise exponent1', (1, 1, 2))]
+automaton (1, 1, 2) accept True [('new prime', 'REJECT'), ('raise exponent1', 'REJECT'), ('raise exponent2', 'REJECT')]
+Forgetting named support:6,15 same profile;*4 gives24 false,60 true
+Static quartic filter is not Collatz closed:16->8;odd-accelerated81->61
+Odd-function hostile:f(x)=x^3+x is odd but integer values always even
+ALL CHECKS PASSED

@@ -1,5 +1,17 @@
 # Script Results Index
 
+- [Scale, fourth powers, exponent exchange, and exact decoder boundaries](seam_power_coordinates_20260925.md):
+  **PROVED / INHERITED PROVED / FINITE-EXACT.** With d=B-A, `R=A^B/B^A=A^d/(1+d/A)^A` and `R(4A,4B)=[4^d R]^4`; taking fourth powers of compared values preserves order, whereas scaling bases need not. Raw and gcd-normalized simultaneous power comparisons stabilize from exponent2, with different predicates (THM-4107). Odd gap expansions retain every higher odd term; the regular H5's five-cycles contribute4 to its Hamiltonian count15. Sophie Germain gives the precise quartic prime-candidate exclusion. Routes to the three companion decoders below; no Collatz convergence implication claimed.
+
+- [Divisor balance: a finite profile controller with named-prime registers](seam_prime_balance_20260925.md):
+  **INHERITED PROVED / PROVED / FINITE-EXACT.** `F=S+U` has shapes `p,p^3,p^2qr`, with F-values0,2,10. Any prime-fourth-power divisor safely excludes balance, but total degree4 and deeper dyadic layers do not. Eight live profiles plus an absorbing multiplicative reject state form an exact controller with at most three named primes; support overlap cannot be erased. Direct definitions through1000 and12,869 exponent profiles pass. The reject region is not closed under Collatz halving.
+
+- [The 15/16 ear transitions and the triangular-ten decoder](seam_threshold_20260925.md):
+  **PROVED / FINITE-EXACT.** Q14's three-leaf tree gains ear1--15--10 and a Hamiltonian path; G15 gains ear8--16--14 and a K3,3 obstruction. Q15 already succeeds, so the thresholds are distinct. Triangular ten counts K5 edges:144 incident-edge pairings decompose as24 regular-five decoders plus120 other pairings. Support and center labels make the marked10-to5 construction reversible. K5 cannot partition into three triangles and one extra edge.
+
+- [Mills prime shells, floor carries, and the odd-power doubles seam](seam_mills_20260925.md):
+  **PROVED / FINITE-EXACT / CITED.** Infinite prime-shell chains have unique nested-interval decoders; gap digits and fractional carries remain essential. Odd powers of the odd +2 chain have difference valuation1; even powers have `v2(c)+v2(p+1)+1`. Cubic gaps4,16,24 occur at certified primes, while pure cubic-power gaps and quartic gap4 have algebraic exclusions. Primary Saito2025 theorems make the least cubic constant irrational and least integer-exponent constants c>=4 transcendental; square-chain existence does not prove every square shell contains a prime.
+
 - [Intrinsic tournament halving and the decoder interface](decoder_halving_20260925.md):
   **PROVED / FINITE-EXACT / OPEN coverage.** Nested regular odd cores grow by two; `E(2^k q)=H_q[TT_(2^k)]` has pair-module graph `q P_(2^k)`, hence a unique intrinsic halving matching for every even order. Every raw `Q[H,H,H,1]` with regular odd `|H|>=3` has no pair modules, for all four-cores Q. The guarded ordinary-Collatz verifier certifies all targets through 2000; universal odd-row certificate generation is OPEN. Companion lanes: [pair repair](decoder_pair_repair_20260925.md), [square classes, prime brackets and repaired Q24 proof](decoder_prime_square_20260925.md), [ordered carries and Mahler domain loss](decoder_mahler_catalan_20260925.md), and [sparse-operation minors](decoder_minors_20260925.md).
 

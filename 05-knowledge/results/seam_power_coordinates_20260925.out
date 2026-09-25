@@ -1,0 +1,13 @@
+All 2016 pairs 1<=A<B<=64: sum/product/gap identities, quartic parity, scale transports PASS
+Raw equality pairs: [(2, 4)]
+Square-level comparison: smaller wins except A=1; all pairs checked
+All 66 pairs 1<=A<B<=12: exact fourth-power comparisons and gcd-normalized classifier PASS
+Dyadic tie: R(A,2A)=(A/2)^A; unique integer tie A=2
+Scale hostile: R(2,4)=1, R(8,16)=65536; R(2,3)<1 but R(8,12)>1
+GCD-normalized quartic cycle: 16 -> 81 -> 256 -> 16
+Sophie Germain factorization: all 4096 positive pairs <=64; only (1,1) has unit factor
+Log-gap formal series independently multiplied through degree21; even terms zero, all higher odd terms negative
+First nonlinear coefficients: [Fraction(-5, 3), Fraction(-9, 10), Fraction(-13, 21), Fraction(-17, 36)]
+Regular H5: 5 directed triangles, 2 directed5cycles, 15 Hamiltonian paths
+Triangle-only OCF gives11, not15; quintic layer contributes4
+ALL CHECKS PASSED; universal statements use companion proofs, not finite extrapolation

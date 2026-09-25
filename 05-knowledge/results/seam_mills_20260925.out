@@ -1,0 +1,20 @@
+FINITE-EXACT; primality universe integers2..10^10
+sieve_verified_by_full_trial_division_integers2..100000
+prime_parents<=97_exponents2..6_under_bound 114
+gap_valuation_counts [((2, 0), 1), ((2, 1), 11), ((2, 2), 13), ((3, 0), 1), ((3, 1), 17), ((3, 2), 5), ((3, 3), 1), ((3, 4), 1), ((4, 0), 1), ((4, 1), 13), ((4, 2), 4), ((4, 4), 7), ((5, 0), 1), ((5, 1), 12), ((5, 2), 8), ((5, 3), 4), ((6, 0), 1), ((6, 1), 3), ((6, 2), 8), ((6, 4), 2)]
+finite_greedy_chain 2 [2, 5, 29, 853, 727613] gaps [1, 4, 12, 4]
+finite_greedy_chain 3 [2, 11, 1361, 2521008887] gaps [3, 30, 6]
+finite_greedy_chain 4 [2, 17, 83537] gaps [1, 16]
+finite_greedy_chain 5 [2, 37, 69343979] gaps [5, 22]
+finite_greedy_chain 6 [2, 67] gaps [3]
+any_constant_realizing_cubic_prefix_outer_bracket 1306377883863080 1306377883869479 denominator 1000000000000000
+all_cubic_children_of_2 [11, 13, 17, 19, 23]
+full_binomial_and_halving_fraction_controls 4608
+discard_theta_cubed_hostile 1183/50 24389/1000 floors 23 24
+odd_chain_power_valuation_controls 5489
+cubic_factor_controls 150 quartic_factor_controls 25
+multiple_of_four_positive_control 347=7^3+4;first_prime_above343
+higher_gap_controls 79531=43^3+24;300779=67^3+16;both_greedy
+exponent5_control 37=2^5+5;first_prime_above32
+halving_controls 11->5prime;1361->680composite
+scope:finite_prefixes;no_unconditional_least_Mills_decimal_identification
