@@ -1,0 +1,11 @@
+INTRINSIC_TRIPLE_DECODER 128 all64cores q3,5; exact reconstruction PASS
+STRONG_MODULE_CONTROLS 192 all subsets of all64 order10 objects PASS
+SWITCH_PAIR_HOSTILE 32768 all64cores x512switches at order10; no pair modules PASS
+FOUR_CORE_SWITCH_CLASSES [((1, (0, 1, 2, 3)), 24), ((1, (1, 1, 2, 2)), 24), ((3, (0, 2, 2, 2)), 8), ((3, (1, 1, 1, 3)), 8)]
+TRIANGLE_CONTRACTIONS {'single_arc': 16, 'digon': 48} all marked directed triangles in all64cores; all-pairs reachability and ports PASS
+HAMILTONIAN_ROOT_PROFILE [((27, 0), 18), ((27, 27), 6), ((297, 0), 6), ((297, 27), 6), ((1269, 27), 12), ((3159, 0), 2), ((3159, 3159), 2), ((13635, 1053), 6), ((13635, 2106), 6)]
+PROFILE_SCOPE: full path-cover data and terminal quotient word retained; scalar H alone not used
+PRIME_STOP H5: no proper nontrivial modules, H=15
+PARITY_STOP: triangle contractions remove2; order10 cannot become5 by triangles alone
+ARITHMETIC_SCOPE: recovered N->(N-1)/3 is guarded REVERSE construction, not forward descent
+ALL CHECKS PASS; no universal Collatz root generator claimed

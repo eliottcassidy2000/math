@@ -1,0 +1,14 @@
+CANONICAL FLOOR/SHIFT: all n=0..100000; 100001 PASS
+DISTINCT REPRESENTATIONS: all 65536 subsets of first16 Fibonacci weights; 4180 values; 131072 rewrite edges PASS
+CONFLUENCE: all4096 subsets of first12 weights; all legal rewrite orders PASS
+REPEATED REPRESENTATIONS: 4^7= 16384 ; all one-bit repairs PASS; defect range -2 1
+STRICT SUM DIAGONALS n<=512: carry counts {-1: 12449, 0: 48042, 1: 4789} ; disjoint safe pairs 26106 ; first split 5
+DIAGONAL5: 1+4 has (1, 1) ;2+3 has (1, 0) ;canonical5 (1, 0)
+ASSOCIATIVE CARRY: all65^3 triples a,b,c=0..64 PASS
+TERNARY COLOR-WORD CODEC: depths1..7, all3279 residues PASS; scalar color fails every tested prefix quotient
+RESIDUE CLOCK TRANSPORT: k0=2..5,depth1..5; 1452 height/phase/color commuting squares PASS
+GROUP CONTROL: cyclic R,G,B is an order3 action on F2^2; the only period3 additive Z3 atom coloring is zero
+THM3339 INTERFACE: atom charges i3..49; golden norm and color-B content2 seam PASS
+GAUGE HOSTILE: diagonal1+4 requires rotating carry-G toB; fixed-channel correction fails
+SQUARE FILTER HOSTILES: same colors at square/nonsquare pairs1/5,4/2,9/3,16/6
+ALL EXACT CHECKS PASS; no square-sum/graceful/Collatz equivalence follows

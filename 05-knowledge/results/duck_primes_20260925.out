@@ -1,0 +1,27 @@
+DUCK PRIME/PREFIX/DIVISOR AUDIT 2026-09-25
+Universe: first30 retained prime prefixes for three specified filters; exact threshold196 witnesses; divisor examples and literal word orbits at k1..5 for N60 and k1..3 for N84; first decimal candidates k2..9. Standard library; explicit checks survive -O.
+Filter omit[]: retained prefixes straddle196 at (11, 160),(12, 197); square sums among first30=[(9, 100)]
+  k8..15: (k,cutoff-then-delete,first-k-retained)=[(8, 77, 77), (9, 100, 100), (10, 129, 129), (11, 160, 160), (12, 197, 197), (13, 238, 238), (14, 281, 281), (15, 328, 328)]
+Filter omit[11]: retained prefixes straddle196 at (11, 186),(12, 227); square sums among first30=[]
+  k8..15: (k,cutoff-then-delete,first-k-retained)=[(8, 66, 89), (9, 89, 118), (10, 118, 149), (11, 149, 186), (12, 186, 227), (13, 227, 270), (14, 270, 317), (15, 317, 370)]
+Filter omit[2, 3, 11]: retained prefixes straddle196 at (9, 181),(10, 222); square sums among first30=[(3, 25), (8, 144)]
+  k8..15: (k,cutoff-then-delete,first-k-retained)=[(8, 61, 144), (9, 84, 181), (10, 113, 222), (11, 144, 265), (12, 181, 312), (13, 222, 365), (14, 265, 424), (15, 312, 485)]
+All nonnegative square differences high-low=11: [(36, 25)]
+All nonnegative square differences high-low=16: [(16, 0), (25, 9)]
+Beyond cutoff11, subtracting11 or16 cannot leave BOTH original and filtered prime-prefix sums square: candidate highs36 or{16,25} miss the required prefix.
+Value4: factors={2: 2}, (F,S,U)=(1,1,1), balanced=False
+Value8: factors={2: 3}, (F,S,U)=(2,1,1), balanced=True
+Value10: factors={2: 1, 5: 1}, (F,S,U)=(2,2,2), balanced=False
+Value60: factors={2: 2, 3: 1, 5: 1}, (F,S,U)=(10,7,3), balanced=True
+Value84: factors={2: 2, 3: 1, 7: 1}, (F,S,U)=(10,7,3), balanced=True
+Value196: factors={2: 2, 7: 2}, (F,S,U)=(7,3,2), balanced=False
+10 additive pairs=[(1, 9), (2, 8), (3, 7), (4, 6), (5, 5)]; prime pairs=[(3, 7), (5, 5)], distinct-only leaves(3,7).
+60 has one prime factorization but five unordered proper factor groupings=[(2, 30), (3, 20), (4, 15), (5, 12), (6, 10)].
+N60 literal divisor permutation=[(2, 3), (3, 5), (4, 12), (5, 2), (6, 15), (10, 6), (12, 20), (15, 10), (20, 4), (30, 30)]; squarefree subset=[2, 3, 5, 6, 10, 15, 30]
+Literal free-word orbit counts at k1..5=[1, 31, 331, 3331, 33331]; all orbits size3; each prior orbit has10 children, with21 new orbits at every next level.
+Independent value84, same exponent profile: orbit counts1,31,331 agree; prime values are discarded by this count.
+Hostiles:4|12 but g(4)=12 does not divide g(12)=20; 3+6=9 but g(3)+g(6)=5+15=20; divisor group action is not an arithmetic graph automorphism.
+On rank labels1..10, the gracefully labeled star centered1 has edge differences[1, 2, 3, 4, 5, 6, 7, 8, 9]; after transported C3 permutation, center=2, differences=[2, 5, 1, 6, 3, 7, 4, 1, 8], no longer distinct.
+Cube profilep^3: two-letter proper-divisor words minus the sole squarefree constant word count2^k-1; mixed profile gives(10^k-7)/3 after the free C3 quotient.
+Orbit COUNT values themselves: (k,value,(F,S,U),balanced)=[(2, 31, (0, 0, 0), True), (3, 331, (0, 0, 0), True), (4, 3331, (0, 0, 0), True), (5, 33331, (0, 0, 0), True), (6, 333331, (0, 0, 0), True), (7, 3333331, (0, 0, 0), True), (8, 33333331, (0, 0, 0), True), (9, 333333331, (2, 2, 2), False)]
+ALL CHECKS PASSED. Infinite orbit formulas and no-prefix196 conclusion have proofs in the note; no primality or Collatz rank follows from the word quotient.

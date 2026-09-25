@@ -9,6 +9,13 @@ Format per entry:
 - Why it was wrong
 - The correct framing
 
+## 2026-09-25 Representation colors and the intrinsic matching-parity probe
+
+- **Failed design implication, not a retraction of proved canon.** Summing the perfect matchings induced by all Hamiltonian paths of an even tournament over F2 gives an intrinsic odd-degree graph. It need not give a nonsingular alternating matrix. The smallest even order is6: orient every edge downward on0..5 except0->4. Its nine paths produce a rank4 matrix with null vectors e0+e4 and e2+e5. All tournaments at orders2 and4 have full rank, so small positive controls concealed the failure.
+- **Survivor and repair.** Retain the odd-degree edge-chain, the full matching family, or all four channels of each2x2 crossing block. Neither odd Hamiltonian-path parity nor the number of compressed containers proves a decreasing arithmetic rank. The [four-color/ten-letter decoder](../05-knowledge/results/duck_decoder_20260925.md) records the exhaustive six-vertex census, independent path witness, reversible contrast transform, and remaining certificate obligation.
+- **Representation boundary.** Distinct Fibonacci decompositions preserve the specified F2^2 charge; repeated atoms do not. The minimal repeated-atom witness is2=2=1+1. On strict additive diagonals the first split is5=1+4=2+3. The exact signed carry delta(a,b)=b(a)+b(b)-b(a+b), b(n)=floor((n+1)/phi^2), repairs charge and its parity repairs color. Neutral is a fourth state. This is an explicit convention, not an attribution of an unlocated three-color theorem.
+- **Group-action boundary.** Simultaneous three-color rotation has order3. The ternary residue clock modulo9 has order9 and needs digit carries. The new divisor-word orbit count(10^k-7)/3 preserves a C3 action, not primality, divisor incidence, or either arithmetic graph-label predicate. A future proposed equivalence must retain those predicates and the actual clock.
+
 ## 2026-09-25 Rotation invariance and one-digit fixed-point boundary
 
 - **Wrong historical statement.** The [digits/repunits note](../05-knowledge/results/procgen_repunit_20260924_digits_rotation_repunits.md), section4.6, said circular primality is not rotation-invariant. It is invariant by definition; the intended noninvariant predicate was ordinary primality of one rotation. Minimal allowed-digit witness:19 is prime but91=7*13. The note now states the correct comparison with integrality on a known finite Collatz cycle.

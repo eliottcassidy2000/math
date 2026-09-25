@@ -1,0 +1,18 @@
+C3 action: Sym^2_set(F2^2) = 1 fixed letter + 3 free three-cycles; S=7,U=3
+K5 edge action: equivariant bijection, two fixed vertices
+k=1: residual color-word orbits=1, neutral=1, nonzero=0
+k=2: residual color-word orbits=31, neutral=7, nonzero=24
+k=3: residual color-word orbits=331, neutral=85, nonzero=246
+k=4: residual color-word orbits=3331, neutral=835, nonzero=2496
+k=9: orbit count333333331 = 17 * 19607843 (counting does not imply primality)
+HP matching parity: n=2, ranks={2: 2}, first singular=None
+HP matching parity: n=4, ranks={4: 64}, first singular=None
+HP matching parity: n=6, ranks={2: 1680, 4: 17520, 6: 13568}, first singular=8
+rank2 supports: K1,5=960 (first code72), K3,3=720 (first code83)
+independent path-completion audit: 720 orders x1024 completions, all32768 kernels agree
+n6 code8: nine HPs; null vectors e0+e4 and e2+e5; universal symplectic halving refuted
+independent C3 rotation: n=4, matchings=3, invariant matchings=0
+independent C3 rotation: n=10, matchings=945, invariant matchings=0
+all16 signed2x2 blocks reconstruct exactly; module boundary = zero three contrasts
+color odometer and R4/R10 clocks: full cycles at depths1..5; diagonal color rotation fails at depth2
+PASS: exact finite controls; no convergence or graceful/square-sum equivalence claim
