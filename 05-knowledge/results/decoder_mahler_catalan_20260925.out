@@ -1,0 +1,13 @@
+STATUS FINITE-EXACT; general statements proved in companion note
+binary_words_lengths_1_to_12 8190
+cylinder_lift_controls 24570
+adjacent_exchange_controls 20481
+all_cylinder_bijections_and_fixed_weight_carry_extrema PASS
+clock_2_1_collatz_carries 01:2 10:1; ceiling_carries 01:2 10:3
+clock_2_1_root_candidates 01:14/3 10:5
+root4_same_word_ceiling_image -4/15
+root_controls_start_3_to_4096 4094 maximum_depth 148
+all_root_images_negative_and_same_word PASS
+root_suffix_10101_mahler_partial_tail 266/243
+signed_minus_cycle_exponents [1, 1, 1, 2, 1, 1, 4] power_gap -139 carry 2363
+SCOPE no universal root certificate or Mahler Z-number conclusion

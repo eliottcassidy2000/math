@@ -1,5 +1,20 @@
 # Script Results Index
 
+- [Intrinsic tournament halving and the decoder interface](decoder_halving_20260925.md):
+  **PROVED / FINITE-EXACT / OPEN coverage.** Nested regular odd cores grow by two; `E(2^k q)=H_q[TT_(2^k)]` has pair-module graph `q P_(2^k)`, hence a unique intrinsic halving matching for every even order. Every raw `Q[H,H,H,1]` with regular odd `|H|>=3` has no pair modules, for all four-cores Q. The guarded ordinary-Collatz verifier certifies all targets through 2000; universal odd-row certificate generation is OPEN. Companion lanes: [pair repair](decoder_pair_repair_20260925.md), [square classes, prime brackets and repaired Q24 proof](decoder_prime_square_20260925.md), [ordered carries and Mahler domain loss](decoder_mahler_catalan_20260925.md), and [sparse-operation minors](decoder_minors_20260925.md).
+
+- [Square-sum halving and the exact 24-to-25 repair](decoder_prime_square_20260925.md):
+  **PROVED / FINITE-EXACT.** Halving induced even labels exchanges square sums and twice-square sums; distinct valuation layers require their minimum valuation even. A new endpoint-aware proof closes the Q24 structural slot while retaining the old forcing-rule retraction. Every Q25 Hamiltonian path uses `11--25--24`; suppressing25 gives an exact marked-edge decoder. The same-bracket prime doubling set is precisely `{2,3,11}`. Independent endpoint cases and path census14..25 pass.
+
+- [Exact cost of repairing ten-vertex tripling for halving](decoder_pair_repair_20260925.md):
+  **PROVED cost formula / FINITE-EXACT complete optimization.** For all64 marked four-cores, repair to some pair-module quotient costs3,6,7,8; repair to canonical `H5[TT2]` costs7,10,12,13,15. Complete independent audit covers945 matchings and24 regular five-vertex quotients per core. Requiring the canonical quotient changes the optimal matching: a core class needs two internal triangle pairs, whereas every unrestricted optimum uses three. Flip lists reconstruct the original tournament; no arithmetic descent follows from the repair cost alone.
+
+- [Ordered-carry decoder and the Mahler comparison](decoder_mahler_catalan_20260925.md):
+  **PROVED / FINITE-EXACT / CITED.** Exact root equation `3^a n+R=4*2^L`; adjacent01/10 swaps change Collatz and Mahler carries with opposite signs. Shared parity itineraries send root4 to the 2-adic Mahler state `-4/15`; every certified root input maps to a negative rational and has an unsafe10101 suffix. Catalan controls power gaps but does not supply the ordered carry. HYP-9134 remains OPEN.
+
+- [The literal +2/doubling graph becomes nonplanar at16](decoder_minors_20260925.md):
+  **PROVED / CITED.** The sparse undirected graph on1..N with `{x,x+2}` and `{x,2x}` is planar iff N<=15: rotation certificate at15 and explicit K3,3 subdivision at16. Row-scaled addition instead gives a planar grid. Strong tournament minors differ from pair-module contraction; arithmetic path compression needs guarded-word data. No square-sum threshold equivalence is claimed.
+
 - [Four-core tournament tripling and Collatz certificate obligations](collatz_tournament_core_20260925.md):
   **PROVED scoped / FINITE-EXACT.** The marked core gives `binom(3A+1,2)=3binom(A,2)+3(A-1)^2+9(A-1)+6`; the submitted count overcounts by9. Substitution `Q[H,H,H,1]` has an invariant marked four-vertex quotient when cross-block arcs are uniform. The ten-vertex source-over-three-cycles example has no two-vertex module, so compatible halving is extra structure. Hamiltonian paths do not by themselves decode to root certificates. The orientation rule and universal Collatz certificate remain OPEN.
 

@@ -1,0 +1,15 @@
+STATUS: exact certificates; no Collatz convergence conclusion
+GRAPH: vertices 1..N; undirected simple edges {x,x+2}, {x,2x}
+UNIVERSE: certificates N=15,16; valuation n=1..256; optional cross-check N=1..64
+G15: V=15 E=19 F=6 Euler=2; planar rotation verified
+G15 face boundary lengths: [3, 4, 5, 5, 7, 14]
+G16: K3,3 branch shores [5,8,12] and [6,10,14]
+G16 paths: [[5, 3, 6], [5, 10], [5, 7, 14], [8, 6], [8, 10], [8, 16, 14], [12, 6], [12, 10], [12, 14]]
+G16 pairwise-disjoint internal vertices: [3, 7, 16]
+ALL-N CONCLUSION: G_N planar iff N<=15 (nested family plus fixed certificates)
+VALUATION +2 controls: {'odd_to_odd': 128, 'seam_to_sea': 64, 'sea_to_seam': 64}
+ROW-SCALED +2^(r+1): quadrant-grid coordinate identities verified n=1..256
+GUARDED CONTRACTED PATH: word DDO; trace [4, 8, 16, 5]
+UNDERLYING TOURNAMENT: K5 subgraph from order5; K3,3 subgraph from order6
+NETWORKX 3.5 independent planarity cross-check N=1..64: PASS
+PASS

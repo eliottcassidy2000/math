@@ -696,7 +696,10 @@ interior with degree two). `Q_18` fails by its three leaves `{16,17,18}`;
 **Corrected 2026-09-25:** the old forcing proofs for `20..22` and `24`
 incorrectly forced both edges at unclassified degree-two endpoints and
 are retracted. At `24`, two independent exhaustive searches still give
-zero paths (FINITE-EXACT); a short structural certificate remains OPEN.
+zero paths (FINITE-EXACT). The subsequent
+[endpoint-aware proof](decoder_prime_square_20260925.md), section 4,
+closes the short structural-certificate slot (PROVED): the other endpoint
+lies in `{2,9,11,22}`, after which a proper eleven-vertex cycle is forced.
 See the repaired square-sum note, section4, and the corresponding
 MISTAKES entry. OEIS
 A090461 records the "all `k>=25`" conjecture as proved with Hamiltonian

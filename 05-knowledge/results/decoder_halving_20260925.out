@@ -1,0 +1,11 @@
+Odd +2 cores: all 64 odd orders 1..127 are regular; each extends the previous core induced.
+Intrinsic pairs: all n=1..128; pair-module graph is q disjoint paths of order 2^k (2794 pairs).
+  Odd cores have no pairs; first doubles have disjoint edges; higher rows have unique perfect matchings.
+Canonical halving: every even n=2..128 has intrinsic pair modules and quotient exactly E(n/2).
+Tripling hostile: 448 substitutions, all 64 labeled four-cores and regular odd q=3..15;
+  no two-vertex module in any; cannot equal canonical E(3q+1), which is pairable.
+Literal +2 seam: all n=1..4096; odd stays odd, v2=1 enters v2>=2, v2>=2 enters v2=1.
+Guarded decoder: all 2000 targets 1..2000 certified; 1000 odd witnesses then append doublings.
+  Maximum certificate length=179; discovery limit 10000 steps, no filtered starts.
+  Example 3: DDODO; invalid O-at-8, wrong endpoint, and unknown symbol rejected.
+FINITE-EXACT discovery only. Tournament halving is universal; odd root-certificate existence stays OPEN.
