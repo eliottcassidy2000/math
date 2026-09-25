@@ -1,0 +1,26 @@
+CLOCK odd lengths [1, 2, 7] states 10 two-sign states 20 minimal root completion 12
+ CYCLE (1,)
+ CYCLE (5, 7)
+ CYCLE (17, 25, 37, 55, 41, 61, 91)
+CLOCK shortcut lengths [1, 3, 11] states 15 two-sign states 30 minimal root completion 15
+ CYCLE (1,)
+ CYCLE (5, 7, 10)
+ CYCLE (17, 25, 37, 55, 82, 41, 61, 91, 136, 68, 34)
+CLOCK ordinary lengths [2, 5, 18] states 25 two-sign states 50 minimal root completion 45
+ CYCLE (1, 2)
+ CYCLE (5, 14, 7, 20, 10)
+ CYCLE (17, 50, 25, 74, 37, 110, 55, 164, 82, 41, 122, 61, 182, 91, 272, 136, 68, 34)
+ODD WORD 1 (1,) L,K,L+K 1 1 2
+ODD WORD 5 (1, 2) L,K,L+K 2 3 5
+ODD WORD 17 (1, 1, 1, 2, 1, 1, 4) L,K,L+K 7 11 18
+ROOT THEOREM CONTROL all permutations n0..8: 46234 PASS
+MINIMAL ORDINARY COMPLETION states45 roots36 root-cycle-types {(4, 5, 36): 36}
+REFLECTED ORDINARY LOCUS states50 roots216 root-cycle-types {(4, 5, 5, 36): 36, (4, 10, 36): 180}
+REFLECTION GAUGE length 2 commuting half-step phases []
+REFLECTION GAUGE length 5 commuting half-step phases [3]
+REFLECTION GAUGE length 18 commuting half-step phases []
+OTHER CLOCK COMPLETIONS shortcut15 unique root; odd12 exactly2 roots PASS
+36-CYCLE two sections each reproduce ordinary17 cycle; phase alternates PASS
+COUNT FIREWALL representatives6 -> ordered pairs36; actual glued states odd20/shortcut30/ordinary50
+SCOPE phase-root is time-clock construction; arithmetic inverse-fibre half-step is separate
+ALL CHECKS PASS; no completeness, convergence, or prime-distribution claim

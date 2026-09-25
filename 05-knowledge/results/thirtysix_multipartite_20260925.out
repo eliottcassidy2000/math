@@ -1,0 +1,520 @@
+{
+  "odd_degree_rank_two_graphs": {
+    "(1, 5)": 6,
+    "(3, 3)": 10
+  },
+  "quotient_positive_and_hostile_pairs": 64,
+  "rank_and_replication_cases": 325,
+  "rank_two_graphs": 651,
+  "regular_ternary_tournaments": [
+    {
+      "arcs": 3,
+      "depth": 1,
+      "outdegree": 1,
+      "vertices": 3
+    },
+    {
+      "arcs": 36,
+      "depth": 2,
+      "outdegree": 4,
+      "vertices": 9
+    },
+    {
+      "arcs": 351,
+      "depth": 3,
+      "outdegree": 13,
+      "vertices": 27
+    },
+    {
+      "arcs": 3240,
+      "depth": 4,
+      "outdegree": 40,
+      "vertices": 81
+    }
+  ],
+  "six_vertex_graphs": 32768,
+  "status": "FINITE-EXACT; algebraic proofs in source note",
+  "sym2": {
+    "added": [
+      [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ]
+      ],
+      [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          3
+        ]
+      ],
+      [
+        [
+          0,
+          2
+        ],
+        [
+          0,
+          3
+        ]
+      ],
+      [
+        [
+          1,
+          2
+        ],
+        [
+          1,
+          3
+        ]
+      ],
+      [
+        [
+          1,
+          2
+        ],
+        [
+          2,
+          3
+        ]
+      ],
+      [
+        [
+          1,
+          3
+        ],
+        [
+          2,
+          3
+        ]
+      ]
+    ],
+    "charge_degrees": [
+      6,
+      6,
+      6,
+      6,
+      8,
+      8,
+      8,
+      8,
+      8,
+      8
+    ],
+    "common_edges": 30,
+    "letters": [
+      [
+        0,
+        0
+      ],
+      [
+        0,
+        1
+      ],
+      [
+        0,
+        2
+      ],
+      [
+        0,
+        3
+      ],
+      [
+        1,
+        1
+      ],
+      [
+        1,
+        2
+      ],
+      [
+        1,
+        3
+      ],
+      [
+        2,
+        2
+      ],
+      [
+        2,
+        3
+      ],
+      [
+        3,
+        3
+      ]
+    ],
+    "orbit_degrees": [
+      7,
+      7,
+      7,
+      7,
+      7,
+      7,
+      7,
+      7,
+      7,
+      9
+    ],
+    "removed": [
+      [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          1
+        ]
+      ],
+      [
+        [
+          0,
+          0
+        ],
+        [
+          2,
+          2
+        ]
+      ],
+      [
+        [
+          0,
+          0
+        ],
+        [
+          3,
+          3
+        ]
+      ],
+      [
+        [
+          0,
+          1
+        ],
+        [
+          2,
+          3
+        ]
+      ],
+      [
+        [
+          0,
+          2
+        ],
+        [
+          1,
+          3
+        ]
+      ],
+      [
+        [
+          0,
+          3
+        ],
+        [
+          1,
+          2
+        ]
+      ]
+    ],
+    "symmetric_difference_degree_histogram": [
+      [
+        1,
+        3
+      ],
+      [
+        3,
+        7
+      ]
+    ],
+    "triangles": [
+      54,
+      56
+    ]
+  },
+  "types_with_36_edges": [
+    {
+      "obstruction": null,
+      "parts": [
+        1,
+        36
+      ],
+      "planar_rotation": {
+        "euler": 2,
+        "faces": 1
+      },
+      "rank_F2": 2,
+      "vertices": 37
+    },
+    {
+      "obstruction": null,
+      "parts": [
+        2,
+        18
+      ],
+      "planar_rotation": {
+        "euler": 2,
+        "faces": 18
+      },
+      "rank_F2": 2,
+      "vertices": 20
+    },
+    {
+      "obstruction": {
+        "K33": [
+          [
+            0,
+            1,
+            2
+          ],
+          [
+            3,
+            4,
+            5
+          ]
+        ]
+      },
+      "parts": [
+        3,
+        12
+      ],
+      "planar_rotation": null,
+      "rank_F2": 2,
+      "vertices": 15
+    },
+    {
+      "obstruction": {
+        "K33": [
+          [
+            0,
+            1,
+            2
+          ],
+          [
+            4,
+            5,
+            6
+          ]
+        ]
+      },
+      "parts": [
+        4,
+        9
+      ],
+      "planar_rotation": null,
+      "rank_F2": 2,
+      "vertices": 13
+    },
+    {
+      "obstruction": {
+        "K33": [
+          [
+            0,
+            1,
+            2
+          ],
+          [
+            6,
+            7,
+            8
+          ]
+        ]
+      },
+      "parts": [
+        6,
+        6
+      ],
+      "planar_rotation": null,
+      "rank_F2": 2,
+      "vertices": 12
+    },
+    {
+      "obstruction": {
+        "K33": [
+          [
+            0,
+            1,
+            2
+          ],
+          [
+            4,
+            5,
+            6
+          ]
+        ]
+      },
+      "parts": [
+        2,
+        2,
+        8
+      ],
+      "planar_rotation": null,
+      "rank_F2": 2,
+      "vertices": 12
+    },
+    {
+      "obstruction": {
+        "K33": [
+          [
+            2,
+            3,
+            4
+          ],
+          [
+            0,
+            1,
+            5
+          ]
+        ]
+      },
+      "parts": [
+        2,
+        3,
+        6
+      ],
+      "planar_rotation": null,
+      "rank_F2": 2,
+      "vertices": 11
+    },
+    {
+      "obstruction": {
+        "K33": [
+          [
+            0,
+            1,
+            2
+          ],
+          [
+            3,
+            4,
+            5
+          ]
+        ]
+      },
+      "parts": [
+        1,
+        1,
+        1,
+        11
+      ],
+      "planar_rotation": null,
+      "rank_F2": 4,
+      "vertices": 14
+    },
+    {
+      "obstruction": {
+        "K33": [
+          [
+            1,
+            2,
+            3
+          ],
+          [
+            0,
+            4,
+            5
+          ]
+        ]
+      },
+      "parts": [
+        1,
+        3,
+        3,
+        3
+      ],
+      "planar_rotation": null,
+      "rank_F2": 4,
+      "vertices": 10
+    },
+    {
+      "obstruction": {
+        "K33": [
+          [
+            0,
+            1,
+            2
+          ],
+          [
+            4,
+            5,
+            6
+          ]
+        ]
+      },
+      "parts": [
+        2,
+        2,
+        2,
+        4
+      ],
+      "planar_rotation": null,
+      "rank_F2": 4,
+      "vertices": 10
+    },
+    {
+      "obstruction": {
+        "K33": [
+          [
+            0,
+            1,
+            2
+          ],
+          [
+            3,
+            4,
+            5
+          ]
+        ]
+      },
+      "parts": [
+        1,
+        1,
+        1,
+        3,
+        4
+      ],
+      "planar_rotation": null,
+      "rank_F2": 4,
+      "vertices": 10
+    },
+    {
+      "obstruction": {
+        "K33": [
+          [
+            0,
+            1,
+            2
+          ],
+          [
+            3,
+            4,
+            5
+          ]
+        ]
+      },
+      "parts": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "planar_rotation": null,
+      "rank_F2": 8,
+      "vertices": 9
+    }
+  ]
+}

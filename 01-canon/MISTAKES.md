@@ -9,6 +9,12 @@ Format per entry:
 - Why it was wrong
 - The correct framing
 
+## 2026-09-25 Thirty-six counts and the zero-backbone triple correction
+
+- **Recovered distinction.** The earlier [level-eleven note](../05-knowledge/results/level11_short_20260922.md) counted36 ordered pairs of six signed cycle representatives, not36 representatives or tournament arcs. The selected ordinary minus cycles instead have periods2,5,18. Their minimal permutation-square-root completion has45 states, exactly36 possible roots, and a36-cycle coming from the paired18-cycles. These are different carriers with explicit maps; see [the current synthesis](../05-knowledge/results/thirtysix_bridge_20260925.md).
+- **Wrong local canon sentence.** [THM-060, bipartite skeleton](theorems/THM-060-bipartite-skeleton.md) Type A said that reversing all arcs of every zero-backbone triple contributes exactly2 cycles before plus after. A transitive triple contributes0. The old correction blamed backbone edges and left the zero-backbone error live. The repaired statement is0 for transitive and2 for cyclic, so the required evenness survives. All eight triple orientations are checked; other global claims of that theorem were not newly audited.
+- **Clock and sign repair.** Positive plus glued to negative minus produces two reflected plus systems. The six known minus-cycle copies use positive minus and negative plus. A forward-clock square root, the signed inverse-fibre map(n,sigma)->(2n+sigma,-sigma), and the Pell norm-reversing matrix are separate operations. The modulo17 Pell/decimal isomorphism retains its finite scope and its32-state/two16-cycle decomposition; a residue-period statement is not an ordinary orbit or primality theorem.
+
 ## 2026-09-25 Representation colors and the intrinsic matching-parity probe
 
 - **Failed design implication, not a retraction of proved canon.** Summing the perfect matchings induced by all Hamiltonian paths of an even tournament over F2 gives an intrinsic odd-degree graph. It need not give a nonsingular alternating matrix. The smallest even order is6: orient every edge downward on0..5 except0->4. Its nine paths produce a rank4 matrix with null vectors e0+e4 and e2+e5. All tournaments at orders2 and4 have full rank, so small positive controls concealed the failure.

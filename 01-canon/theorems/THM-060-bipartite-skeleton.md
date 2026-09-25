@@ -26,13 +26,17 @@ For a tiling T with backbone 0->1->...->n-1, classify all C(n,3) triples:
 **Type A** (0 backbone edges): all 3 edges are non-backbone.
 - Flip reverses ALL three edge directions
 - CW 3-cycle before flip <-> CCW 3-cycle after flip
-- Each triple has exactly 1 directed 3-cycle (CW or CCW) before and after
-- Individual contribution: always 2
-- Total Type A contribution: 2 * |Type A triples| (always even)
+- A cyclic triple stays cyclic; a transitive triple stays transitive
+- Individual contribution: 2 for a cyclic triple, 0 for a transitive triple
+- Total Type A contribution: twice the number of cyclic Type A triples (always even)
 
-CORRECTION: Individual Type A triples do NOT always contribute exactly 2 when
-some edges happen to be backbone. The total is empirically always even for GS
-tilings, but the per-triple argument only works for truly 0-backbone triples.
+CORRECTION (2026-09-25, replacing the inadequate earlier correction): even a
+truly zero-backbone triple can be transitive. The former assertion that each
+contributes exactly2 was false. Reversing all three arcs preserves cyclicity,
+so each contributes0 or2 and the parity argument survives without an
+empirical assumption. All eight triple orientations are checked in
+[the thirty-six bridge controls](../../04-computation/thirtysix_bridge_20260925.py).
+This repairs Type A only; no new audit of the other tiling claims is implied.
 
 **Type B** (1 backbone edge): exactly one edge is backbone, the other two non-backbone.
 - The backbone is some edge (i, i+1)
