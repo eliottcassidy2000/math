@@ -193,3 +193,100 @@ During inheritance, an unrelated proof error was found in the square-sum
 note's degree-2 forcing rule: path endpoints may have degree2 in the host
 graph. The repaired note and MISTAKES entry retain endpoint information.
 This correction does not alter the square-sum existence pattern.
+
+## 6. Follow-up: a sum/difference correspondence and its exact boundary
+
+**User hypothesis (OPEN proposed structural reduction, 2026-09-25).**
+Square-sum Hamiltonian paths and graceful labelings of all trees might admit
+constructions in both directions, in parallel with proposed implications
+between positive 3n+1 and positive 3n-1 convergence. The positive-domain
+Collatz implications are part of the proposed connection, not inherited facts.
+
+Both graph questions can be put on the same complete graph with vertices
+1..n. Color its edges either by sum i+j or by difference |i-j|:
+
+* Square-sum asks for a spanning path using only square sum-colors; colors
+  may repeat. For N>=25 this existence statement is already CITED above.
+* Gracefulness asks, for each abstract n-vertex tree T, for a spanning copy
+  using each difference-color 1..n-1 exactly once. Scaling every label by2
+  replaces these with distinct even differences 2,4,..,2n-2, but the vertex
+  labels also scale to 2,4,..,2n. With the original labels, edge values are
+  1..n-1, not distinct even sums. Requiring all differences (or all sums)
+  to be even on the unchanged labels1..n disconnects the two parity classes
+  for n>=2, so cannot produce a spanning tree.
+
+This formulation changes both the tree-shape quantifier and the edge-value
+predicate. Paths themselves are graceful for every n: order the labels
+1,n,2,n-1,3,n-2,..., obtaining differences n-1,n-2,...,1. In contrast Q3
+has just edge1-3 and no spanning path. This refutes a same-size equivalence
+of those two path-labeling predicates, not an unspecified deeper reduction.
+
+**Exact bridge (PROVED; inherited mechanism).** Every tree has bipartition
+A union B. Given a bijection x:V(T)->{1,..,n}, set z=x on A and z=-x
+on B. On an edge ab with a in A and b in B,
+
+    z_a-z_b=x_a+x_b,     |z_a-z_b|=x_a+x_b.
+
+Thus square sums become square differences on a signed label set whose
+absolute values are exactly1..n. The operation is reversible, preserves
+the tree and every edge value, and is the sign gauge of
+[THM-2761, graph edge-sum discriminant and graceful sign gauge](../../01-canon/theorems/THM-2761-graph-edge-sum-discriminant-codegree-factorization-and-graceful-sign-gauge.md).
+The graceful target conditions not supplied are the consecutive positive
+vertex-label interval and the required distinct edge values. Multiplicities
+are preserved by the gauge, not removed. For the actual
+Q15 path 8,1,15,10,6,3,13,12,4,5,11,14,2,7,9, the transformed labels
+8,-1,15,-10,... give differences9,16,25,16,9,...: they remain repeated
+squares. Negation has not supplied the permutation1..14.
+
+**Direct all-tree extension is REFUTED (PROVED obstruction).** Q_n cannot
+contain a spanning star for any n>=2. All possible edge sums lie in
+3..2n-1, giving at most floor(sqrt(2n-1))-1 square values. Each value
+supplies at most one neighbor of a chosen center, so
+
+    maximum_degree(Q_n) <= floor(sqrt(2n-1))-1 < n-1.
+
+The same star is graceful: label its center1 and leaves2..n. Therefore
+a deeper reduction must change size, encode branching, or change the label
+constraints; merely allowing every tree in the same square-sum graph fails.
+This obstruction does not refute the user's unrestricted reduction conjecture.
+
+**Reconstruction coordinate (PROVED).** On a rooted tree, assigning arbitrary
+edge sums s_e and a root label t determines all remaining labels by
+x_child=s_e-x_parent; no cycle consistency obstruction exists. For a root
+path with edge values s_1,..,s_d,
+
+    x_v=(-1)^d t + sum_(j=1..d) (-1)^(d-j) s_j.
+
+Square-sum labeling is exactly the requirement that choices of square s_e
+and integer root label t make these vertex values a permutation1..n (with path shape for the
+original problem). Graceful labeling analogously assigns signed differences
+epsilon_e*d_e, with d_e a permutation1..n-1, and asks for the integrated
+vertex values to be a permutation1..n. This puts the interval-coverage
+obligation in a common coordinate without silently solving it. Two square
+reflections give x_(j+2)=x_j+s_(j+1)-s_j. A viable proposed reduction must
+control this coverage, the edge multiplicities, and branching simultaneously.
+
+**Collatz sign identity (PROVED).** Let T_+ and T_- use (3n+1)/2 and
+(3n-1)/2 on odd integers, respectively, and n/2 on evens. Then
+
+    T_-(-n)=-T_+(n).
+
+It conjugates T_+ on positive integers to T_- on negative integers, and
+T_- on positive integers to T_+ on negative integers. It does not map the
+positive domain to itself. The one known positive T_+ cycle is {1,2};
+positive T_- has the three explicit cycles listed in section4, so even an
+orbit-by-orbit conjugacy of the two positive systems cannot be assumed.
+In fact these two positive shortcut systems have no bijective conjugacy:
+T_- fixes1, whereas T_+ has no positive fixed point (the odd fixed-point
+equation would force n=-1). This rules out a map preserving every single
+iteration, not a more general reduction between conjectures.
+A proof that their respective positive-domain exhaustion conjectures imply
+one another would need an additional reduction beyond negation. This is
+the same precise warning in both proposed bridges: transport the admissible
+label domain as well as the local equations.
+
+Board revisit: root height remains the bug-distance obligation; edge-sum
+reflection links the graph niche to signed reconstruction; prime support
+alone controls neither interval coverage nor orbit return; the star and
+repeated-square controls expose distinct losses under the proposed graceful
+bridge. No universal proof or theorem-ID promotion is claimed.
