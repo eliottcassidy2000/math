@@ -1,0 +1,94 @@
+{
+  "status": "FINITE-EXACT controls; all-depth statements proved in note",
+  "decoder_universe": "both signs, every binary word of length0..12",
+  "decoder_checks": 16382,
+  "guard_universe": "both signs, lengths0..8, n1..64",
+  "guard_checks": 65408,
+  "sewing_universe": "both signs, lengths2..8, every split, n1/9/17, actual target and target+1",
+  "sewing_checks": 36912,
+  "rank_two_nonzero_minors": 288,
+  "invalid_matrices_rejected": [
+    [
+      2,
+      0,
+      2
+    ],
+    [
+      3,
+      0,
+      2
+    ],
+    [
+      1,
+      1,
+      2
+    ],
+    [
+      1,
+      0,
+      3
+    ],
+    [
+      1,
+      2,
+      1
+    ]
+  ],
+  "nine_certificate": {
+    "states": [
+      9,
+      14,
+      7,
+      11,
+      17,
+      26,
+      13,
+      20,
+      10,
+      5,
+      8,
+      4
+    ],
+    "word": [
+      1,
+      0,
+      1,
+      1,
+      1,
+      0,
+      1,
+      0,
+      0,
+      1,
+      0
+    ],
+    "prefix": [
+      3,
+      1,
+      4
+    ],
+    "suffix": [
+      243,
+      347,
+      512
+    ],
+    "seam": "7",
+    "endpoint": 4
+  },
+  "ordered_carry_hostile": {
+    "01": [
+      3,
+      2,
+      4
+    ],
+    "10": [
+      3,
+      1,
+      4
+    ],
+    "n9_endpoints": [
+      "29/4",
+      "7"
+    ]
+  }
+}

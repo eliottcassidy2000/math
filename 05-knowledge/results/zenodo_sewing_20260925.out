@@ -1,0 +1,59 @@
+{
+  "D3_elements": 6,
+  "basis_columns": [
+    [
+      1,
+      1
+    ],
+    [
+      -1,
+      1
+    ]
+  ],
+  "distinct_mod2_actions": 6,
+  "integer_Fibonacci_cube": [
+    [
+      1,
+      2
+    ],
+    [
+      2,
+      3
+    ]
+  ],
+  "integral_C": [
+    [
+      0,
+      -1
+    ],
+    [
+      1,
+      -1
+    ]
+  ],
+  "integral_F": [
+    [
+      0,
+      -1
+    ],
+    [
+      -1,
+      0
+    ]
+  ],
+  "mod2_kernel_size": 2,
+  "negative_C_order": 6,
+  "negative_C_reduction_order": 3,
+  "norm_and_intertwining_cases": 6534,
+  "norm_lost_example": [
+    1,
+    9
+  ],
+  "parity_times_D3_elements": 12,
+  "source": "https://doi.org/10.5281/zenodo.22800071",
+  "source_metric": [
+    3,
+    1
+  ],
+  "status": "EXACT representation transfer; no amplitude recomputation"
+}
