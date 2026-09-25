@@ -9,6 +9,13 @@ Format per entry:
 - Why it was wrong
 - The correct framing
 
+## 2026-09-25 Guarded decoder audit: a quotient lost proof choices; verifier domains were implicit
+
+- **Failed design implication.** Replacing a sibling fibre by its smallest representative preserves the common future but need not preserve an available decreasing-rank certificate. Direct descent certifies 241 through 181, while canonical reduction demands 11; even raw-plus-canonical selection misses 483, whose useful intermediate sibling is 181. The [repaired sibling grammar](../05-knowledge/results/creative_sibling_20260925.md) retains all eligible ladder heights, increasing its exact restricted closure from 541 to 640 odd sources through 100000. No prior Collatz convergence theorem is retracted.
+- **Separate obstruction.** More locally descending inverse ports do not imply more root-certified sources. The repaired grammar is forward-closed, so every inverse-orbit implication from an already certified source is redundant. The [join synthesis](../05-knowledge/results/creative_decoder_20260925.md) proves this for ports of arbitrary length; 19/24 local residue coverage is not a root-coverage theorem.
+- **Draft implementation error / minimal witnesses.** The first standalone inverse-word routine accepted endpoint 2 for word (1), returning 1 even though the actual plus exponent at 1 is 2. A join with source 5, dependency 3, and clock (-1,1) also passed because Python treats a negative range as empty. Existing experiment callers used positive odd endpoints and nonnegative clocks, so their results were unchanged; the reusable verifier contract was too weak.
+- **Repair / missing coordinates.** Explicitly check positive odd input and target domains, integer nonnegative clocks, sign, and recomputed word metadata. Reject forged metadata as well as parity and rank failures. Independent exact-exponent replay verifies the repaired [compiler](../04-computation/experiments/creative_decoder_20260925.py) under normal and optimized Python. Preserve certificate alternatives before quotienting; preserve domain and clock sidecars before claiming a verifier.
+
 ## 2026-09-25 Square-sum degree-two forcing forgot the endpoint coordinate
 
 - **WRONG.** The [square-sum Hamiltonicity note](../05-knowledge/results/collatz_mod6_20260922_w6_square_sum_hamiltonicity.md) S4, its `forced_reduction` script, and its 2026-09-22 audit treated both edges of every degree-2 vertex as forced in an arbitrary Hamiltonian path.

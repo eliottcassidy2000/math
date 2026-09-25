@@ -1,0 +1,17 @@
+creative_sibling_20260925: guarded common-future descent
+sign 1 odd inputs<=20000:normal form,valuation,descent,8 clocks PASS
+sign -1 odd inputs<=20000:normal form,valuation,descent,8 clocks PASS
+Plus residual classes mod48: [7, 15, 27, 31, 39, 43] ; covered18/24 oddclasses=3/4
+Exact odd source universe<=100000; baseline/Q/(F+Q)/(F+Q+reverse) counts: 252 274 541 541
+New sources beyond every-step forward descent: 289 first30 [3, 35, 93, 227, 373, 497, 605, 643, 739, 857, 985, 1313, 1325, 1493, 1507, 1613, 1715, 1971, 1989, 2009, 2275, 2285, 2421, 2627, 3033, 3427, 3429, 3501, 3533, 3939]
+Q-only loses forward certificate:241 path [241, 181, 17, 13, 5, 1] Q241 11
+Full sibling ladder / ladder plus inverse1,2 counts: 640 640
+First ladder-interior gain:483 ancestors [(725, 0), (181, 1), (45, 2), (11, 3)] certificate [483, 725, 17, 13, 5, 1]
+All640 generated certificates compile to ordinary root4:PASS
+Reverse rule usable on already certified sources: 62
+First source outside both generated families: 7
+Family20 certifiedbases x8 parameters:160 root4 certificates PASS
+Base1 two-odd-step family (ell,n,first image): [(0, 3, 5), (1, 227, 341), (2, 14563, 21845), (3, 932067, 1398101), (4, 59652323, 89478485), (5, 3817748707, 5726623061), (6, 244335917283, 366503875925), (7, 15637498706147, 23456248059221)]
+Minus hostiles:Q has5<->7; reverse7->5 stops at5; family13->19->7->5 stays offroot1
+Long growth hostile L=1..20:2^(L+2)-1 has L uncompacted increasingQsteps PASS
+ALL CHECKS PASSED; universal termination remains OPEN

@@ -1,0 +1,7 @@
+WORD GUARDS: 87040 cases; signs=-1,+1; lengths=1..4; exponents=1..4; odd inputs=1..255
+Accepted forward / inverse: 877 2198
+BASE JOINS: sign -1 ; odd inputs<10000; verified joins 10000
+BASE JOINS: sign 1 ; odd inputs<10000; verified joins 9991
+VERIFIER HOSTILES: rejected 8 of 8
+MINUS CONTROLS: distinct cycle minima 1,5,17 retain no strict base joins
+ALL FINITE AUDIT CHECKS PASS; universal root coverage remains OPEN

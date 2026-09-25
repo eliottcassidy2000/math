@@ -1,5 +1,8 @@
 # Script Results Index
 
+- [Guarded join graphs replace the tournament decoder](creative_decoder_20260925.md):
+  **PROVED / FINITE-EXACT / OPEN global coverage.** Finite binary carry machines give intrinsic arithmetic halving; common-future joins transport root certificates with a decreasing dependency rank. Keeping intermediate sibling heights certifies 483 via 181 and enlarges the restricted closure 252→541→640 through 100000. Any inverse-orbit extension is redundant for this forward-closed family, even though local residue coverage increases. Suffix completion reduces searched obligations 442→406 through 10000 and produces 3016 infinite descent ports; an explicit all-ones family defeats every finite such bank. Unbounded reset schemas supply complete root certificates beyond every fixed lookahead. Companions: [sibling grammar](creative_sibling_20260925.md), [finite-word transducer](creative_transducer_20260925.md), and [affine residual/root schemas](creative_descent_20260925.md).
+
 - [Scale, fourth powers, exponent exchange, and exact decoder boundaries](seam_power_coordinates_20260925.md):
   **PROVED / INHERITED PROVED / FINITE-EXACT.** With d=B-A, `R=A^B/B^A=A^d/(1+d/A)^A` and `R(4A,4B)=[4^d R]^4`; taking fourth powers of compared values preserves order, whereas scaling bases need not. Raw and gcd-normalized simultaneous power comparisons stabilize from exponent2, with different predicates (THM-4107). Odd gap expansions retain every higher odd term; the regular H5's five-cycles contribute4 to its Hamiltonian count15. Sophie Germain gives the precise quartic prime-candidate exclusion. Routes to the three companion decoders below; no Collatz convergence implication claimed.
 

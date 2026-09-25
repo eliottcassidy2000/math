@@ -1,0 +1,22 @@
+PROVED RULES + FINITE-EXACT REPLAY; global Collatz remains OPEN
+Inverse contracting port bank: depth<=8, words= 953
+Depth 1 inverse density 1/3 combined local descent density 3/4
+Depth 2 inverse density 4/9 combined local descent density 19/24
+Depth 4 inverse density 37/81 combined local descent density 43/54
+Depth 6 inverse density 335/729 combined local descent density 775/972
+Depth 8 inverse density 1013/2187 combined local descent density 2329/2916
+Residual modulo144 for base+two-step rule: [7, 15, 27, 39, 43, 55, 63, 75, 79, 87, 91, 111, 123, 127, 135]
+Witness31 <- 41 <- 27: 31 ; rank reduction31->27
+Root closure on odds<=10000, forward+reverse1 / all base / base+inverse bank: 81 154 154
+First ten new root-certified inputs from inverse bank: []
+Learned seed obligations, raw / suffix-complete / suffix-complete without inverse bank: 442 406 406
+Adaptive compiler: certified odds= 5000 learned infinite ports= 3016
+Chosen joins: {'forward': 453, 'forward-sibling': 652, 'learned-port': 3043, 'new-port': 406, 'sibling': 445}
+Maximum expanded odd steps: 96
+Finite-bank obstruction: max forward word length= 51 ; uncovered all-ones input2^a-1 at a= 54 ; all larger even exponents also uncovered
+First learned exact-exponent words: [(1, 1, 2, 3), (1, 2, 3), (2, 3), (3,), (1, 1, 1, 5), (1, 1, 5), (1, 5), (5,)]
+Independent ordinary root4 check: all1..10000; maximumsteps= 259
+Independent algebra/guard replay at port samples: 11907
+Minus-sheet cycle minima1,5,17: no strict local join; allcycles replayed
+Hostile sign, circle, parity, clock, target-domain and metadata certificates rejected: 6
+Residual obligation: every positive odd input needs a finite chain of verified joins to1.
