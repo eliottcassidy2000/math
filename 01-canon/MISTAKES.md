@@ -9,6 +9,13 @@ Format per entry:
 - Why it was wrong
 - The correct framing
 
+## 2026-09-25 Rotation invariance and one-digit fixed-point boundary
+
+- **Wrong historical statement.** The [digits/repunits note](../05-knowledge/results/procgen_repunit_20260924_digits_rotation_repunits.md), section4.6, said circular primality is not rotation-invariant. It is invariant by definition; the intended noninvariant predicate was ordinary primality of one rotation. Minimal allowed-digit witness:19 is prime but91=7*13. The note now states the correct comparison with integrality on a known finite Collatz cycle.
+- **Missing boundary in canon.** [THM-4473, digit chains and repunits](theorems/THM-4473-collatz-digit-chains-rotation-repunits.md) omitted k>=2 from its prime-fixed-point summary. Single-digit primes2,3,5,7 are rotation-fixed and are not repunits. The repaired title, status and statement say multidigit; the underlying result note already had the correct k>=2 hypothesis. Its bounded five repunit-prime lengths through1100 remain correct and are not retracted as an obsolete global list.
+- **Current prompt probes.** In (10^k-7)/3, k2..8 gives seven initial primes; k9 is the displayed17-factor composite. The first twelve primes sum to197. The exact surviving mechanism is binary-carry two-step descent for k>=4 and a separate17-divisibility phase k=9mod16, proved in [the current digit audit](../05-knowledge/results/ternary_digits_20260925.md). A factorization event does not force a halving event or bound growing Collatz prefixes.
+- **Repair discipline.** Preserve the predicate being acted on, the digit-length domain, and ordinary/3-adic size separately. All one-digit exceptions and the19/91 witness are in the new exact controls; historical numerical scans and their hashes were not altered.
+
 ## 2026-09-25 Guarded decoder audit: a quotient lost proof choices; verifier domains were implicit
 
 - **Failed design implication.** Replacing a sibling fibre by its smallest representative preserves the common future but need not preserve an available decreasing-rank certificate. Direct descent certifies 241 through 181, while canonical reduction demands 11; even raw-plus-canonical selection misses 483, whose useful intermediate sibling is 181. The [repaired sibling grammar](../05-knowledge/results/creative_sibling_20260925.md) retains all eligible ladder heights, increasing its exact restricted closure from 541 to 640 odd sources through 100000. No prior Collatz convergence theorem is retracted.

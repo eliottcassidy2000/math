@@ -1,0 +1,18 @@
+TERNARY DIGIT AUDIT 2026-09-25: exact integers, no random samples
+Universe: seven prime candidates by exhaustive trial division; circular primes below 10^6 by sieve and independent alphabet enumeration; ternary quotient levels 1..8; valuation k,t=1..60; Collatz decimal k=2..300; composite rising controls m=2..100.
+N_k initial run: [(2, 31, True), (3, 331, True), (4, 3331, True), (5, 33331, True), (6, 333331, True), (7, 3333331, True), (8, 33333331, True), (9, 333333331, False)]
+Seven consecutive primes k=2..8; first composite k=9: 333333331=17*19607843.
+ord_17(10)=16, 17|N_k iff k=9 mod16; ord_641(2)=64, F5=641*6700417.
+Cubic values=[7, 34, 93, 196, 355]; a_n=n*(2(n+1)^2-1), composite for n>=2.
+First twelve primes=[2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37]; sum=197, whereas a4=196=14^2.
+Circular count below 10^6=55; counts by length={1: 4, 2: 9, 3: 12, 4: 8, 5: 10, 6: 12}; orbit representatives=[2, 3, 5, 7, 11, 13, 17, 37, 79, 113, 197, 199, 337, 1193, 3779, 11939, 19937, 193939, 199933]
+One-digit exception: 2,3,5,7 are prime rotation fixed points and are not repunits; the prime-fixed-point repunit theorem requires k>=2.
+Hostile: 331 is prime but rotation133=7*19; the 333...31 prime run is not a circular-prime run.
+Valuations verified: N_{k+t}-N_k has v3=1+v3(t); S^t(n)-n and A^t(n)-n have v3=v3(t), S=4n+1, A=10n+10.
+Compatible bijective conjugacies H_r(S^j(1))=A^j(0) verified for every residue at r=1..8.
+H_2 on inputs0..8: [8, 0, 7, 2, 3, 1, 5, 6, 4]; H_1(n)=n-1 mod3, so raw unit guard is not preserved.
+Rotation: rho=10n-d(10^k-1); carry-free multiplication mod3^r iff r<=2+v3(k), for all k-digit strings. Always identity mod9; not identity mod27 (337->373). At length2 mod27 even multiplication needs carry (13->31).
+Decimal two-step samples (k,n,U(n),U²(n),a1,a2): [(2, 31, 47, 71, 1, 1), (3, 331, 497, 373, 1, 2), (4, 3331, 4997, 937, 1, 4), (5, 33331, 49997, 18749, 1, 3), (6, 333331, 499997, 187499, 1, 3), (7, 3333331, 4999997, 1874999, 1, 3), (8, 33333331, 49999997, 18749999, 1, 3), (9, 333333331, 499999997, 187499999, 1, 3), (10, 3333333331, 4999999997, 1874999999, 1, 3)]
+For every k>=4, U²(N_k)<N_k; for k>=5, gap=(7*10^k-64)/48. Prime factorization is unused.
+Composite hostile: all n=2^(2m)-1, m=2..100, have first2m-1 accelerated odd steps strictly growing with exponent1; formula proves arbitrary lengths.
+ALL ASSERTIONS PASSED. Infinite claims are proved in the companion note; external giant primality certificates are CITED, not rerun here.

@@ -2,7 +2,7 @@
 
 **Status.**
 * **PROVED** (hand proofs below; every statement is also checked by the scripts):
-  1. **Rotation theorem.** Rotating the `k` base-`b` digits of `n` is multiplication by `b` modulo `b^k - 1`. Its fixed points are exactly the repdigits `c R_k`. A prime with `k >= 2` digits lies on a rotation orbit of exactly `k` numbers unless it is a repunit, which is fixed. So the repunit primes are exactly the prime fixed points of rotation, and `{337, 373, 733}` is a free orbit of size 3. Every repunit `R_k/(b^k - 1) = 1/(b-1)` is the same fixed point of the circle map `x -> bx`, seen at period `k`.
+  1. **Rotation theorem.** Rotating the `k` base-`b` digits of `n` is multiplication by `b` modulo `b^k - 1`. Its fixed points are exactly the repdigits `c R_k`. A prime with `k >= 2` digits lies on a rotation orbit of exactly `k` numbers unless it is a repunit, which is fixed. So the repunit primes are exactly the multidigit prime fixed points of rotation, and `{337, 373, 733}` is a free orbit of size 3. Every repunit `R_k/(b^k - 1) = 1/(b-1)` is the same fixed point of the circle map `x -> bx`, seen at period `k`.
   2. **Exact Haar laws of Collatz's digit chains.** Under Haar measure, consecutive odd Syracuse terms `U(n)` form an exact Markov chain modulo 10, 3, 9 and 8, and the shortcut map `T` does too (explicit matrices in §2). Examples:
      * mod 3, every row is `(0, 1/3, 2/3)`: the classes are i.i.d.;
      * mod 10, `3 -> 5` has probability 1 and `9 -> 9` has probability `8/15`;
@@ -60,7 +60,7 @@ The owner wrote: "Think Brouwer's fixed point theorem, and how in base 10 primes
 | lead | verdict | where |
 |---|---|---|
 | (a) the digit bias of consecutive primes is Lemke Oliver–Soundararajan's, a Hardy–Littlewood second-order term of size `log log x/log x` | **TRUE, CITED and reproduced exactly**. The paper's Main Conjecture has `c1 = 1/2 - (phi(q)/2)[a=b]` plus a constant `c2/log x`. At `10^11` the two-term prediction explains 86% of the diagonal deficit | §1 |
-| (b) rotation is multiplication by `b` mod `b^k - 1`; its fixed points are the repdigits; repunit primes are the prime fixed points, and `{337,373,733}` is a prime orbit | **TRUE, PROVED**. Sharpened: every prime with `k >= 2` digits other than a repunit has an orbit of exactly `k` elements | §3.1 |
+| (b) rotation is multiplication by `b` mod `b^k - 1`; its fixed points are the repdigits; repunit primes are the multidigit prime fixed points, and `{337,373,733}` is a prime orbit | **TRUE, PROVED**. Sharpened: every prime with `k >= 2` digits other than a repunit has an orbit of exactly `k` elements | §3.1 |
 | (c) base 2: `T^k(2^k-1) = 3^k - 1`, and `...1111 = -1` is the hostile fixed point | **TRUE, PROVED**, with the exact run lemma (`v_2(n+1)` odd steps for every `n`) | §4.1 |
 | (c) base 4: the trunk `(4^k-1)/3` tends to `-1/3 = E(0)`, the limit of every sibling ladder | **TRUE**. The ladder map `p -> 4p+1` *is* the base-4 repunit generator | §4.2 |
 | (c) "the repunits of bases 2 and 4 are exactly Collatz's 2-adic fixed points `-1` and `-1/3`" | **CORRECTED**. `-1` is `T`-fixed, but `T(-1/3) = 0`. The fixed-point reading is right one level up: `-1` and `1/3` (bases 2 and `-2`) are the known odd fixed points of the Bernstein–Lagarias conjugacy, and `-1/3` (base 4) lies on its known 2-cycle | §4.4, §4.5 |
@@ -197,7 +197,7 @@ The one-step law does not change. Merged paths are counted with multiplicity, wh
 **3.1 Theorem R (PROVED; checked on 36,000 random `(b, k, n)` with `b in {2,3,4,10,12,16}`, `k <= 30`).** Let `b >= 2`, `0 <= n <= b^k - 1`, and let `rho(n)` move the leading digit `d` of the `k`-digit base-`b` string of `n` (leading zeros allowed) to the end.
 1. `rho(n) = bn - d(b^k - 1)`. So `rho(n) = bn (mod b^k - 1)`, and `rho` is multiplication by `b` on `Z/(b^k - 1)` (the all-`(b-1)` string represents 0).
 2. `rho(n) = n` iff `n = d R_k`, i.e. `n` is a repdigit. There are `b` such strings, and `b - 1` classes in `Z/(b^k-1)`.
-3. Let `n` be a prime with exactly `k >= 2` digits. Its rotation orbit has exactly `k` elements unless `n = R_k`, which is fixed. In particular **the repunit primes are exactly the prime fixed points of rotation**, and `{337, 373, 733}`, `{113, 131, 311}` and `{1193, 1931, 9311, 3119}` are free orbits.
+3. Let `n` be a prime with exactly `k >= 2` digits. Its rotation orbit has exactly `k` elements unless `n = R_k`, which is fixed. In particular **the repunit primes are exactly the multidigit prime fixed points of rotation**, and `{337, 373, 733}`, `{113, 131, 311}` and `{1193, 1931, 9311, 3119}` are free orbits.
 4. A circular prime with `k >= 2` digits uses only `1, 3, 7, 9`: a digit `0, 2, 4, 5, 6, 8` rotated into the last place gives a multiple of 2 or 5.
 
 *Proof.*
@@ -355,7 +355,7 @@ This is the exact content of the owner's "Brouwer" instinct on the Collatz side.
 * **Rotation.** The shift `S` (drop the last binary digit) acts on the period-`k` points `-B/(2^k-1)`, where `B` is the `k`-bit block, by **rotating the block**: this is base-2 digit rotation (§3.1).
 * **Cycles.** Since `T = Phi S Phi^(-1)`, each rational `T`-cycle is the image of the rotation orbit of its parity word `w`. Its points are `x_w = c_w/(2^p - 3^a)`, and `x_(w^m) = x_w`: a repeated word is the same point, just as `R_k/(10^k-1) = 1/9`.
 * **Fixed points.** Rotation fixes the blocks `0^k` and `1^k`, and these correspond to `T`'s fixed points `0` and `-1`. For prime `p` there are `(2^p - 2)/p` cycles of exact period `p`.
-* **Circular primes versus integral cycles.** The circular-prime condition "every rotation is prime" is *not* rotation-invariant, which is why it needs `k` coincidences. Integrality *is* invariant along a cycle (`T` maps `Z` to `Z`), so **integral cycles are the Collatz circular primes with one coincidence instead of `k`**.
+* **Circular primes versus integral cycles (corrected 2026-09-25).** Circular primality, meaning every rotation is prime, **is rotation-invariant** by definition. Ordinary primality of one member is not: 19 is prime while its rotation91=7*13 is composite. On a finite Collatz cycle, one integral vertex forces every vertex integral because the integer map preserves integrality. This compares predicate propagation; it does not identify integral cycles with circular-prime orbits. See the [digit audit](ternary_digits_20260925.md) and MISTAKES for the correction lineage.
 * **The integral cycles found.** The integral periodic points with primitive words of length `<= 18` are exactly the five known cycles:
   * `0` (word `0`);
   * `-1` (word `1`);
@@ -430,7 +430,7 @@ A naive global comparison of whole-orbit discrepancies gives spurious "effects":
 |---|---|---|
 | primes `> 5` end in `1, 3, 7, 9`, and the transitions between them are not uniform | **REAL** (CITED; reproduced exactly) | Lemke Oliver–Soundararajan. The diagonal deficit is `-0.24` at `10^11` against `-0.20` predicted, and the ratio falls toward 1 |
 | that non-uniformity "generates" the finite family `{337, 373, 733}` | **NOT SUPPORTED** | circular primes need all `k` rotations prime; rotations are not consecutive primes. Their scarcity is the `(c/k)^k` decay of `k` coincidences (§3.5). The consecutive-prime bias vanishes as `x` grows and enters nowhere |
-| Brouwer: repunits are to rotation what fixed points are to a map | **REAL, PROVED** | Theorem R. Rotation is `x -> bx` on `Z/(b^k-1)` and on the circle; its fixed points are the repdigits, and the only prime ones are repunits. Every repunit is the single fixed point `1/(b-1)` |
+| Brouwer: repunits are to rotation what fixed points are to a map | **REAL, PROVED** | Theorem R. Rotation is `x -> bx` on `Z/(b^k-1)` and on the circle; its fixed points are the repdigits, and the only multidigit prime ones are repunits. Every repunit is the single fixed point `1/(b-1)` |
 | a finite family of orbits plus an infinite family of fixed points | **REAL as a heuristic dichotomy; both halves OPEN** | `k` coincidences decay like `(c/k)^k`; one coincidence per prime length (probability of order `(log k)/k`) diverges |
 | "the length of all-one primes" is hidden Collatz structure | **NUMEROLOGY** | no statistic of `2^k - 1` separates the exponent families (§5.2). The convergent coincidence fails out of sample (§5.3) |
 | micro/macrocosm | **REAL, two exact forms** | rotation: `R_k/(b^k-1) = 1/(b-1)` for all `k`. Collatz: the shadowing lemma (a finite repunit follows its 2-adic limit for exactly `k v_2(b)` steps), and the rising run of every `n` is a microcosm of `-1` |

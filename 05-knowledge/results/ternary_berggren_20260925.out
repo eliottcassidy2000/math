@@ -1,0 +1,10 @@
+TREE_CHARTS 9841 all Berggren words depth0..8 PASS
+ORDINAL_DOMAIN 21845 k1..65535, exactly k=3,5 mod6 PASS
+CONSECUTIVE_PLUS 49992 odd x3..100001, nondegenerate {'rise-rise': 12500, 'rise-fall': 12500, 'fall-rise': 12496, 'fall-fall': 12496}
+INDEPENDENT_TRIPLE_ANCESTRY 4994 odd x<=10001 PASS
+MINUS_HOSTILES 27->5->7: pair(27,5)=B1^2(7,5); 5<->7 shares one triangle PASS
+PROJECTIVE_OBSTRUCTION 9841 unimodular words; 1808 affine slope controls r1..16,K=r..64,both signs PASS
+RAY_TERNARY 8736 complete residues, k0=2..9, depth1..6; 25920 valuation pairs PASS
+TERNARY_INVERSE 1944 height classes at depth5, k0=2..9; inverse digits and commuting squares PASS
+RAY_FIRST_RETURN 237 all signed valid fibres y<=101,k2..8; every intermediate height checked PASS
+ALL CHECKS PASS; no Collatz convergence implication

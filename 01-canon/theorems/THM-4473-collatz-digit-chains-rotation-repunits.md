@@ -1,6 +1,6 @@
 ---
 id: THM-4473
-title: "Collatz's digit chains are exact Markov laws (last digit: 3 -> 5 certain, all other entries 2^j/15), unlike the vanishing consecutive-prime digit bias; repunit primes are the prime fixed points of digit rotation; the parity-vector map has the odd 2-cycle {-1/5, 5/7}"
+title: "Collatz's digit chains are exact Markov laws (last digit: 3 -> 5 certain, all other entries 2^j/15), unlike the vanishing consecutive-prime digit bias; repunit primes are the multidigit prime fixed points of digit rotation; the parity-vector map has the odd 2-cycle {-1/5, 5/7}"
 status: >
   PROVED + INDEPENDENTLY AUDITED (items 1-4); FINITE-EXACT (the Q-search
   bound in item 4). Under Haar measure, consecutive odd Syracuse terms
@@ -17,8 +17,9 @@ status: >
   exactly, and extended to 1e11) is a vanishing second-order effect.
   (3) Rotating the k base-b digits of n is multiplication by b modulo
   b^k - 1. Its fixed points are exactly the repdigits c R_k, so the repunit
-  primes are exactly the prime fixed points of rotation, and every other
-  prime with k digits lies on a free orbit of size k (e.g. {337, 373, 733}).
+  primes are exactly the prime fixed points when k>=2, and every other
+  prime with k>=2 digits lies on a free orbit of size k (e.g. {337, 373, 733}).
+  For k=1 every digit is fixed; the primes below the base are exceptions.
   (4) In Collatz, T^k(2^k - 1) = 3^k - 1 and T^(k+1)(2^k - 1) = (3^k - 1)/2.
   The Bernstein-Lagarias parity-vector map Q has odd fixed points -1 and
   1/3, the 2-adic repunits of bases 2 and -2. Q(-1/5) = 5/7 and
@@ -96,7 +97,7 @@ Let `n` be odd and Haar-random, and let `v = v_2(3n+1)`, so that `P(v = k) = 2^-
 
 * Write `n = d_(k-1) ... d_0` in base `b`. Rotating by one place gives `b n - d_(k-1)(b^k - 1)`, i.e. `b n mod (b^k - 1)`.
 * The fixed points satisfy `(b - 1) n = 0 mod (b^k - 1)`, i.e. `n = c R_k` with `R_k = (b^k - 1)/(b - 1)` and `0 <= c <= b-1`: the repdigits.
-* A repdigit with `c >= 2` is divisible by `c`, so the only prime fixed points are the repunit primes `R_k`. In base 10, `k = 2, 19, 23, 317, 1031, ...`, and for `n <= 1100` exactly these.
+* For `k >= 2`, a repdigit with `c >= 2` is composite because it is `c R_k` with both factors greater than one. Thus the multidigit prime fixed points are exactly repunit primes `R_k`. For `k=1`, every digit is fixed, including the single-digit primes (2,3,5,7 in base10). In base10 the repunit-prime lengths through1100 are exactly `2,19,23,317,1031`. This boundary correction was audited on2026-09-25 in [the digit lane](../../05-knowledge/results/ternary_digits_20260925.md); it leaves the original multidigit calculations unchanged.
 * Every other prime with `k` digits has a free orbit of exact size `k`: rotation acts through `Z/k`, and a non-trivial stabilizer would make `n` a repeated block, which a prime cannot be.
 * So "repunits versus `{337, 373, 733}`" is exactly "fixed point versus free orbit": the owner's Brouwer reading is REAL.
 * The claim that the digit bias *generates* circular primes is NOT SUPPORTED.

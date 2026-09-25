@@ -1,0 +1,22 @@
+PROVED scoped bridge; FINITE-EXACT independent controls; Collatz remains OPEN
+Intrinsic map vs independent spinor normalization: {1: 13231, -1: 11024}
+Strict hypotenuse contraction checks off integer denominator level: {1: 3329, -1: 2770}
+Exact r-step entry into unit-gap stratum: r0..8, odd s<=1023; cases= 3240
+Marked triple trajectory: (117, 44, 125) -> (3, -4, 5) -> (1, 0, 1)
+Marked triple trajectory: (39, 80, 89) -> (7, 24, 25) -> (11, 60, 61)
+Marked triple trajectory: (45, 28, 53) -> (5, -12, 13) -> (5, -12, 13)
+Orientation hostile: same unmarked5-12-13 triangle has fixed vs root-directed dynamics
+Noninteger fixed point family1/(2^k-3) independently checked k3..19
+Minus boundary: (783, 56, 785) -> (45, -28, 53) -> (3, -4, 5) -> rejected zero
+Ternary repunit tree level 1 : 3 vertices; both permutations, inverses, parent maps, conjugacy PASS
+Ternary repunit tree level 2 : 9 vertices; both permutations, inverses, parent maps, conjugacy PASS
+Ternary repunit tree level 3 : 27 vertices; both permutations, inverses, parent maps, conjugacy PASS
+Ternary repunit tree level 4 : 81 vertices; both permutations, inverses, parent maps, conjugacy PASS
+Ternary repunit tree level 5 : 243 vertices; both permutations, inverses, parent maps, conjugacy PASS
+Ternary repunit tree level 6 : 729 vertices; both permutations, inverses, parent maps, conjugacy PASS
+Ternary repunit tree level 7 : 2187 vertices; both permutations, inverses, parent maps, conjugacy PASS
+Ternary repunit tree level 8 : 6561 vertices; both permutations, inverses, parent maps, conjugacy PASS
+Exact binomial carry expansion for bases4,10 and lengths0..40 PASS
+Collatz inverse fibre / literal Berggren ray sampling checks: 189
+Height hole: R4(j)=0,1,5,21,... omits2 despite bijection at every ternary level
+No universal integer convergence or full Berggren-tree conjugacy inferred

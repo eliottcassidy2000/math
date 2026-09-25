@@ -1,0 +1,11 @@
+ODD COPRIME PAIRS: s<=255,t<=127; pairs 6636 ; native signed edges 12716 ; off-axis contractions 3127
+EUCLID-FREE COVERAGE: oriented primitive triples with c<=300: 95
+POWER9 GAP FILTRATION: r=0..6,s<=255; exact entries 638 ; signed inverse edges k=1..12 14984
+PLUS ORIENTATION CROSSING: [(117, 44, 125), (3, -4, 5), (1, 0, 1)]
+UNMARKED COLLISION: (3,+4,5)->(5,12,13), but (3,-4,5)->(1,0,1)
+FULL-TRIPLE HOSTILE: x=1/(2^k-3) fixed for k>=3; k=3..20 checked; (5,-12,13) is first
+COUNTER FAMILY: s_r=(2*8^(r-1)+3^r)/5,t_r=3^r; r=1..20; exact word 3^(r-1),1
+DYADIC LOCAL OBSTRUCTION: equal full triples mod2^h with distinct halving counts; h=1..32: 32
+MINUS POSITIVITY HOSTILE: [(783, 56, 785), (45, -28, 53), (3, -4, 5)] then 3x-1=0, rejected
+MINUS INTEGER AXIS: cycles at 1,5,17 retained; off-axis contraction does not settle the boundary
+ALL EXACT CHECKS PASS; universal integer-axis root generation remains OPEN
