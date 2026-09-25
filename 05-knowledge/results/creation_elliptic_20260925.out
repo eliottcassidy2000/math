@@ -1,0 +1,12 @@
+INTRINSIC DECODER all294 points n=-24..24,k0..5: 294 edges PASS; maxtrace 5
+KUMMER HOMOMORPHISM all54^2= 2916 pairs including O/U PASS
+DUPLICATION POSITIVITY OBSTRUCTION all72 non-torsion test points PASS
+9G certificate digits [(1, 0), (0, 0), (0, 0), (1, 0)] terminalO; chain9G->4G->2G->G->O
+9G descendants fruit-positive flags: [True, False, False, False]
+COLLATZ LIFT all48 signed-sheet steps n1..24 PASS; plus9G->14G differs from creation9G->4G
+QUOTIENT L/ 2 L has 4 classes
+QUOTIENT L/ 3 L has 9 classes
+QUOTIENT L/ 6 L has 36 classes
+QUOTIENT L/ 8 L has 16 classes
+HOSTILE -G is decoderfixed; terminalbank/selectedtarget cannot be omitted
+ALL CHECKS PASS; certificates verify elliptic subgroup membership, not Collatz convergence

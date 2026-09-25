@@ -1,0 +1,54 @@
+{
+  "Clifford_generators": 8,
+  "Clifford_monomials": 256,
+  "E8_roots": 240,
+  "affine_state_cases": 32768,
+  "code_words": 16,
+  "common_D8_roots": 112,
+  "doubled_lattice_root_checks": 3840,
+  "expansion_examples": [
+    {
+      "end": 217,
+      "n": 65,
+      "sigma": -1
+    },
+    {
+      "end": 215,
+      "n": 63,
+      "sigma": 1
+    }
+  ],
+  "guard_cases": 10920,
+  "intersection_code_dimension": 3,
+  "left_unit_root_checks": 1680,
+  "minus_shortcut_cycle": [
+    5,
+    7,
+    10
+  ],
+  "orthogonal_monomial_pairs": 32640,
+  "q_minus": [
+    0,
+    7,
+    6,
+    1,
+    4,
+    3,
+    2,
+    5
+  ],
+  "q_plus": [
+    0,
+    5,
+    2,
+    3,
+    4,
+    1,
+    6,
+    7
+  ],
+  "roots_in_each_glue_difference": 128,
+  "same_residue_expansion_cases": 128,
+  "status": "EXACT; no convergence claim",
+  "volume_equals_D_times": -1
+}

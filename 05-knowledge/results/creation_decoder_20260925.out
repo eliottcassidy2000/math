@@ -1,0 +1,328 @@
+{
+  "status": "FINITE-EXACT controls; all-depth proofs are in the companion note",
+  "universe": "q plus/minus for all residues through depth12; section controls k1..12,m0..63",
+  "affine_inverse_checks": 16380,
+  "degree_rows": [
+    {
+      "depth": 1,
+      "plus_minus_degrees": [
+        1,
+        1
+      ],
+      "plus_minus_terms": [
+        1,
+        1
+      ],
+      "signs": [
+        1,
+        1
+      ]
+    },
+    {
+      "depth": 2,
+      "plus_minus_degrees": [
+        1,
+        1
+      ],
+      "plus_minus_terms": [
+        1,
+        2
+      ],
+      "signs": [
+        1,
+        -1
+      ]
+    },
+    {
+      "depth": 3,
+      "plus_minus_degrees": [
+        2,
+        1
+      ],
+      "plus_minus_terms": [
+        3,
+        3
+      ],
+      "signs": [
+        -1,
+        1
+      ]
+    },
+    {
+      "depth": 4,
+      "plus_minus_degrees": [
+        3,
+        2
+      ],
+      "plus_minus_terms": [
+        5,
+        6
+      ],
+      "signs": [
+        -1,
+        1
+      ]
+    },
+    {
+      "depth": 5,
+      "plus_minus_degrees": [
+        4,
+        3
+      ],
+      "plus_minus_terms": [
+        9,
+        11
+      ],
+      "signs": [
+        -1,
+        1
+      ]
+    },
+    {
+      "depth": 6,
+      "plus_minus_degrees": [
+        5,
+        4
+      ],
+      "plus_minus_terms": [
+        17,
+        20
+      ],
+      "signs": [
+        -1,
+        1
+      ]
+    },
+    {
+      "depth": 7,
+      "plus_minus_degrees": [
+        6,
+        5
+      ],
+      "plus_minus_terms": [
+        33,
+        35
+      ],
+      "signs": [
+        -1,
+        1
+      ]
+    },
+    {
+      "depth": 8,
+      "plus_minus_degrees": [
+        7,
+        6
+      ],
+      "plus_minus_terms": [
+        69,
+        68
+      ],
+      "signs": [
+        -1,
+        1
+      ]
+    },
+    {
+      "depth": 9,
+      "plus_minus_degrees": [
+        8,
+        7
+      ],
+      "plus_minus_terms": [
+        133,
+        135
+      ],
+      "signs": [
+        -1,
+        1
+      ]
+    },
+    {
+      "depth": 10,
+      "plus_minus_degrees": [
+        9,
+        8
+      ],
+      "plus_minus_terms": [
+        263,
+        260
+      ],
+      "signs": [
+        -1,
+        1
+      ]
+    },
+    {
+      "depth": 11,
+      "plus_minus_degrees": [
+        10,
+        9
+      ],
+      "plus_minus_terms": [
+        537,
+        525
+      ],
+      "signs": [
+        -1,
+        1
+      ]
+    },
+    {
+      "depth": 12,
+      "plus_minus_degrees": [
+        11,
+        10
+      ],
+      "plus_minus_terms": [
+        1025,
+        1052
+      ],
+      "signs": [
+        -1,
+        1
+      ]
+    }
+  ],
+  "q_plus_3": [
+    0,
+    5,
+    2,
+    3,
+    4,
+    1,
+    6,
+    7
+  ],
+  "q_minus_3": [
+    0,
+    7,
+    6,
+    1,
+    4,
+    3,
+    2,
+    5
+  ],
+  "fano_common": [
+    [
+      1,
+      4,
+      5
+    ],
+    [
+      2,
+      4,
+      6
+    ],
+    [
+      3,
+      4,
+      7
+    ]
+  ],
+  "fano_removed": [
+    [
+      1,
+      2,
+      3
+    ],
+    [
+      1,
+      6,
+      7
+    ],
+    [
+      2,
+      5,
+      7
+    ],
+    [
+      3,
+      5,
+      6
+    ]
+  ],
+  "fano_added": [
+    [
+      1,
+      2,
+      7
+    ],
+    [
+      1,
+      3,
+      6
+    ],
+    [
+      2,
+      3,
+      5
+    ],
+    [
+      5,
+      6,
+      7
+    ]
+  ],
+  "distinct_sections_at_tail_zero_mod_2pow20": [
+    699050,
+    699048,
+    349458,
+    349456,
+    835034,
+    835032,
+    182562,
+    182560,
+    173066,
+    173064,
+    343026,
+    343024
+  ],
+  "affine_sign_controls": [
+    {
+      "bits": 2,
+      "odd_fiber_flips": 1
+    },
+    {
+      "bits": 3,
+      "odd_fiber_flips": 1
+    },
+    {
+      "bits": 4,
+      "odd_fiber_flips": 3
+    },
+    {
+      "bits": 5,
+      "odd_fiber_flips": 5
+    },
+    {
+      "bits": 6,
+      "odd_fiber_flips": 11
+    },
+    {
+      "bits": 7,
+      "odd_fiber_flips": 21
+    },
+    {
+      "bits": 8,
+      "odd_fiber_flips": 43
+    },
+    {
+      "bits": 9,
+      "odd_fiber_flips": 85
+    },
+    {
+      "bits": 10,
+      "odd_fiber_flips": 171
+    },
+    {
+      "bits": 11,
+      "odd_fiber_flips": 341
+    },
+    {
+      "bits": 12,
+      "odd_fiber_flips": 683
+    }
+  ]
+}
