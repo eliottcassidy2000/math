@@ -1,0 +1,7 @@
+Edge partition: all A=1..25, unfiltered; direct pair classification agrees with formula.
+Original count exceeds actual count by9; A=1 gives15 vs6, A=3 gives54 vs45.
+Positive control: Q[C3,C3,C3,1], Q=source over C3; all27 representative cores equalQ.
+Halving hostile: this same10-vertex substitution has0 two-vertex modules among45 pairs.
+Hamiltonian positive path: [9, 8, 6, 7, 2, 0, 1, 5, 3, 4]
+Rooted-route hostile: converse has Hamiltonian path[8, 7, 6, 5, 4, 3, 2, 1, 0, 9], but root9 has no outgoing arc.
+FINITE-EXACT controls only; no universal Collatz certificate is claimed.

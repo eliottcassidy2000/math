@@ -1,5 +1,8 @@
 # Script Results Index
 
+- [Four-core tournament tripling and Collatz certificate obligations](collatz_tournament_core_20260925.md):
+  **PROVED scoped / FINITE-EXACT.** The marked core gives `binom(3A+1,2)=3binom(A,2)+3(A-1)^2+9(A-1)+6`; the submitted count overcounts by9. Substitution `Q[H,H,H,1]` has an invariant marked four-vertex quotient when cross-block arcs are uniform. The ten-vertex source-over-three-cycles example has no two-vertex module, so compatible halving is extra structure. Hamiltonian paths do not by themselves decode to root certificates. The orientation rule and universal Collatz certificate remain OPEN.
+
 - [Collatz bugs: admissible motifs, directional distance, and prime overlap](collatz_bugs_20260925.md):
   **PROVED scoped / FINITE-EXACT.** Bugs require `I=4 mod6`; consecutive odd leaves obey `a -> 4a+1` and are coprime. On the known root basin with its cycle removed, the two reversal costs are distances to the least common ancestor; their sum is tree distance. Finiteness from every admissible bug to4 is equivalent to Collatz, not an established global coordinate. Verified all 2,500 ordered bug pairs through298 by LCA and independent 0-1 BFS. Square-sum inheritance additionally repaired the degree-2 endpoint forcing error; see the 2026-09-25 MISTAKES entry.
 
