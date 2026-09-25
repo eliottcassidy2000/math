@@ -1,0 +1,387 @@
+procgen_continuous_20260925.out -- lane: natural boundaries, Mahler/Cobham, harmonic trees, Hex
+session collatz-procgen-20260922, 2026-09-25; produced by procgen_continuous_20260925_run.py
+
+  part A: procgen_continuous_20260925_natural_boundary.py      exit 0  (23.9s)  [mem] end: max RSS so far 339 MB
+  part B: procgen_continuous_20260925_mahler.py                exit 0  (6.9s)  [mem] end: max RSS so far 313 MB
+  part C: procgen_continuous_20260925_tree_harmonic.py         exit 0  (2.8s)  [mem] end: max RSS so far 556 MB
+  part D: procgen_continuous_20260925_hex_game.py              exit 0  (0.8s)  [mem] n/a
+
+##############################################################################
+# PART A: procgen_continuous_20260925_natural_boundary.py
+##############################################################################
+
+==============================================================================
+NB1  The functional equations (w-form with 2q-th roots; Berg-Meinardus form with q-th roots)
+==============================================================================
+  q=3 b=+1: truncated graph on [1,3000] has 501 components; random invariant sequence: w-form residual 0 on 8000 coefficients, BM-form residual 0 on 8500; a 50-point perturbation gives residuals 1, 1 (detected)
+  q=3 b=-1: truncated graph on [1,3000] has 503 components; random invariant sequence: w-form residual 0 on 8000 coefficients, BM-form residual 0 on 8500; a 50-point perturbation gives residuals 1, 1 (detected)
+  q=5 b=+1: truncated graph on [1,3000] has 903 components; random invariant sequence: w-form residual 0 on 13800 coefficients, BM-form residual 0 on 14100; a 50-point perturbation gives residuals 1, 1 (detected)
+  q=5 b=-1: truncated graph on [1,3000] has 901 components; random invariant sequence: w-form residual 0 on 13800 coefficients, BM-form residual 0 on 14100; a 50-point perturbation gives residuals 1, 1 (detected)
+  q=7 b=+1: truncated graph on [1,3000] has 1072 components; random invariant sequence: w-form residual 0 on 19714 coefficients, BM-form residual 0 on 19929; a 50-point perturbation gives residuals 1, 1 (detected)
+  => the w-form and the BM-form are each EXACTLY the invariance relations s(2n)=s(n),
+     s(2m+1) = s(qm+(q+b)/2) (coefficient comparison; converse checked by perturbation).
+
+==============================================================================
+NB3  SHEET control: the 3n-1 basins to N = 10^7 (independent census)
+==============================================================================
+  3n-1: cycle minima found in [1,10000000]: [1, 5, 17]  (census steps 273, 1.1s)
+  cycles: [[1], [5, 7, 10], [17, 25, 37, 55, 82, 41, 61, 91, 136, 68, 34]]
+  counts of n <= X in the basins of 1, 5, 17  (Berg-Opfer Table 1.3 in brackets):
+    X =        10: (6, 4, 0)   [(6, 4, 0)]   densities 0.60000, 0.40000, 0.00000
+    X =       100: (38, 31, 31)   [(38, 31, 31)]   densities 0.38000, 0.31000, 0.31000
+    X =      1000: (349, 306, 345)   [(349, 306, 345)]   densities 0.34900, 0.30600, 0.34500
+    X =     10000: (3244, 3213, 3543)   [(3244, 3213, 3543)]   densities 0.32440, 0.32130, 0.35430
+    X =    100000: (33030, 32104, 34866)   [(33030, 32104, 34866)]   densities 0.33030, 0.32104, 0.34866
+    X =   1000000: (327679, 323351, 348970)   [(327679, 323351, 348970)]   densities 0.32768, 0.32335, 0.34897
+    X =  10000000: (3273791, 3244985, 3481224)   [(3273791, 3244985, 3481224)]   densities 0.32738, 0.32450, 0.34812
+  each basin contains its cycle and misses the other two: nonempty and proper.
+  => by NB2 (r' = 1) no basin is eventually periodic; by Szego (0/1 coefficients) or
+     Polya-Carlson each basin series has |z| = 1 as natural boundary (Bell-Lagarias 2015,
+     Thm 1.3, proving Berg-Opfer's conjecture).
+    basin of 1: max |LHS-RHS| over 6 random |z|<=0.85 (BM-form and w-form, b=-1): 4.48e-16
+    basin of 5: max |LHS-RHS| over 6 random |z|<=0.85 (BM-form and w-form, b=-1): 2.96e-16
+    basin of 17: max |LHS-RHS| over 6 random |z|<=0.85 (BM-form and w-form, b=-1): 3.94e-18
+  3n+1: every n <= 10000000 reaches 1 (1.0s); so B's first 10^7 coefficients are all 1
+  (Barina: all n < 2^71), and every numerical test on B itself is vacuous.
+  NB7  kappa_c = sum_{n in basin(c)} 2^-n (binary digits = basin indicator), to 60 digits:
+    kappa_1  = 0.957809749294202940943410163489770507529438976971388090467683
+    kappa_5  = 0.042181994814207993236995004917807891606468133663962963364194
+    kappa_17 = 0.000008255891589065819594831592421600864092889364648946168122
+    sum = 1 - 5.660e-73 (= 1 - 2^-240 from the truncation; the sum is exactly 1 iff every
+    positive integer reaches one of the three cycles).  Each kappa_c is irrational (its binary
+    expansion is not eventually periodic, Theorem A); for 3n+1, kappa = B(1/2) = 1 iff Collatz.
+
+==============================================================================
+NB6  Non-periodicity sanity for the 3n-1 basins (no period p <= 3000 on [N-10^6, N])
+==============================================================================
+    basin of 1: min over p<=3000 of the mismatch fraction #{n: s(n) != s(n+p)}/#n on [N-10^6,N] = 0.2353 (at p = 1)
+    basin of 5: min over p<=3000 of the mismatch fraction #{n: s(n) != s(n+p)}/#n on [N-10^6,N] = 0.2310 (at p = 1)
+    basin of 17: min over p<=3000 of the mismatch fraction #{n: s(n) != s(n+p)}/#n on [N-10^6,N] = 0.2424 (at p = 1)
+
+==============================================================================
+NB2  The general periodicity lemma: classes of x~2x, x~qx+r on Z/M, M odd
+==============================================================================
+  90180 (M, q, r) triples (all odd M <= 1001, 9 q's, 20 r's): the class count
+  equals the number of <2,q>-orbits on Z/gcd(M, r') in every case.
+  single-class triples: 75808.  For r' = 1 (every odd prime of r divides q, e.g. r = +-1)
+  there is always exactly one class, for every odd M.
+    q= 3 r=+1: r' = 1; classes mod 3*5*7*9 = 1
+    q= 3 r=-1: r' = 1; classes mod 3*5*7*9 = 1
+    q= 5 r=+1: r' = 1; classes mod 3*5*7*9 = 1
+    q= 3 r=+5: r' = 5; classes mod 3*5*7*9 = 2
+    q= 5 r=+3: r' = 3; classes mod 3*5*7*9 = 2
+    q=15 r=+7: r' = 7; classes mod 3*5*7*9 = 3
+
+==============================================================================
+NB4  DRIFT control: 5n+1 (q=5, b=1)
+==============================================================================
+  cycle [1, 3, 8, 4, 2]  (length 5, min 1)
+  cycle [13, 33, 83, 208, 104, 52, 26]  (length 7, min 13)
+  cycle [17, 43, 108, 54, 27, 68, 34]  (length 7, min 17)
+  three disjoint cycles => basin(1) of 5n+1 is nonempty and proper, r' = 1, so its series
+  (and every nonempty proper invariant set's series) has |z| = 1 as natural boundary;
+  and every backward-orbit series of 5n+1 is irrational (no backward orbit is cofinite).
+  census n <= 20000: reach 1: 385, reach 13: 603, reach 17: 133, exceed 10^60 (unresolved): 18879
+
+==============================================================================
+NB5  DEFECT control: the planted map T1 (T1(3*2^m) = 3*2^(m+1), m >= 1; T1 = T otherwise)
+==============================================================================
+  on [1, 10000000]: T(n) in S1 = {3*2^m : m>=1} only if n in S1 (the 21 points of S1 below 10^7)
+  [proof: T^-1(3*2^m) = {3*2^(m+1)} since 3*2^m = 0 mod 3 has no odd T-preimage].
+  Hence T1-orbits from outside S1 are T-orbits (they never enter S1), S1 is one divergent T1-orbit,
+  and basin_T1(1) = basin_T(1) minus S1.  Given the census above, basin_T1(1) cap [1,10^7] =
+  [1,10^7] minus S1.  Its series is z/(1-z) - sum_{m>=1} z^(3*2^m) up to 2^71 (Barina), and
+  irrational unconditionally (the periodicity lemma runs verbatim avoiding the density-zero S1),
+  so |z| = 1 is a natural boundary.  The criterion 'B continues across an arc' is DEFECT-aware.
+
+ALL CHECKS PASSED  (23.5s)
+
+##############################################################################
+# PART B: procgen_continuous_20260925_mahler.py
+##############################################################################
+[3n-1 basins to 10^7 computed in 1.1s]
+
+==============================================================================
+MB1  Pure k-Mahler equations of small order d and degree delta (exact, mod p = 2^31-1)
+==============================================================================
+  L = 3000 coefficients; (d, delta) grid [(1, 40), (2, 30), (3, 24), (4, 19)]; 'FOUND' = kernel nonzero mod p
+  Thue-Morse (control, 2-automatic)                    k=2: FOUND at (d,delta)=(2,30) rank 66/93; k=3: none (full rank at every grid point)
+  base-3 Cantor set (control, 3-automatic)             k=2: none (full rank at every grid point); k=3: FOUND at (d,delta)=(1,40) rank 43/82
+  eventually periodic set (control, rational)          k=2: FOUND at (d,delta)=(1,40) rank 62/82; k=3: FOUND at (d,delta)=(1,40) rank 79/82
+  3n+1 basin(1) truncation = all ones (control, rational) k=2: FOUND at (d,delta)=(1,40) rank 42/82; k=3: FOUND at (d,delta)=(1,40) rank 43/82
+  planted T1: basin = N minus {3*2^m} (DEFECT control) k=2: FOUND at (d,delta)=(2,30) rank 77/93; k=3: none (full rank at every grid point)
+  3-smooth numbers {2^a 3^b}                           k=2: none (full rank at every grid point); k=3: none (full rank at every grid point)
+  3n-1 basin of 1                                      k=2: none (full rank at every grid point); k=3: none (full rank at every grid point)
+  3n-1 basin of 5                                      k=2: none (full rank at every grid point); k=3: none (full rank at every grid point)
+  3n-1 basin of 17                                     k=2: none (full rank at every grid point); k=3: none (full rank at every grid point)
+  => FINITE-EXACT: no 3n-1 basin series satisfies a 2- or 3-Mahler equation with
+     (order, degree) in the grid; the solver finds the equations of every control.
+  DEFECT: the planted map T1 has basin(1) = N minus {3*2^m : m>=1} (Part A, NB5); its series
+  z/(1-z) - G(z), G(z) = z^6 + G(z^2), is 2-Mahler (PROVED) and irrational, while T1 has a
+  divergent orbit.  So a single pure Mahler equation cannot imply Collatz by any argument that
+  survives density-zero planting; the SECOND (3-Mahler) equation of Adamczewski-Bell is essential.
+
+==============================================================================
+MB2  k-kernel complexity (distinct length-W prefixes of n -> s(k^e n + r), cumulative over e)
+==============================================================================
+  k = 2, e = 0..16, W = 48:
+    Thue-Morse             1 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2
+    3-smooth               1 2 4 7 11 15 18 20 22 25 27 29 31 32 34 35 36
+    3n-1 basin of 1        1 2 4 7 12 21 38 69 127 235 438 819 1535 2883 5425 10218 19275
+    3n-1 basin of 5        1 2 4 7 12 21 38 69 127 235 438 819 1535 2883 5425 10218 19275
+    3n-1 basin of 17       1 2 4 7 12 21 38 69 127 235 438 819 1535 2883 5425 10218 19275
+  k = 3, e = 0..10, W = 48:
+    Thue-Morse             1 4 13 40 121 364 1093 3280 9636 29319 88368
+    3-smooth               1 3 9 15 18 21 25 28 30 32 34
+    3n-1 basin of 1        1 4 13 40 121 364 1093 3280 9841 29523 88572
+    3n-1 basin of 5        1 4 13 40 121 364 1093 3280 9841 29523 88570
+    3n-1 basin of 17       1 4 13 40 121 364 1093 3280 9841 29524 88573
+  Terras identity (PROVED): for ANY T-invariant s, s(2^e n + r) = s(3^a n + T^e(r)), a = number of
+  odd steps among the first e steps of r.  So the 2-kernel of an invariant set is a set of
+  subsequences n -> s(3^a n + t); the k=2 rows of the three basins coincide EXACTLY with the
+  cumulative number of distinct pairs (a, T^e(r)): [1, 2, 4, 7, 12, 21, 38, 69, 127, 235, 438, 819, 1535, 2883, 5425, 10218, 19275]
+  (every pair gives a different subsequence, for each basin, up to e = 16).  The statistic is
+  type-level: it cannot tell the basins apart, and it is 1 for the Collatz basin (all ones).
+  Reading: bounded rows are automatic; rows growing like k^e are consistent with
+  non-automaticity (evidence only; automaticity of the 3n-1 basins is not decided here).
+
+==============================================================================
+MB3  The rotation obstruction: 3-smooth numbers satisfy both rotation-Mahler equations
+==============================================================================
+  s(2n) = s(n), s(3n) = s(n) on [1, 1000000] (exact); #S cap [1,1000000] = 142 (~ (ln N)^2/(2 ln2 ln3) = 125)
+  numerically: max |F(z^2)-(F(z)+F(-z))/2|, |F(z^3)-mean_j F(w^j z)| over 8 points = 8.0e-16
+  S is infinite with density 0, hence not eventually periodic, so F is irrational; its exponents
+  n_k satisfy n_k/k -> infinity (counting function O(log^2 N)), so |z| = 1 is a natural boundary
+  (Fabry-Faber gap theorem).  Uncountably many more: S_A = {2^a 3^b m : m in A} for any A of
+  integers prime to 6.  => The Adamczewski-Bell / Schafke-Singer theorem has no analogue for
+  Mahler equations with roots of unity; the Collatz (Berg-Meinardus) equation is of that type.
+
+==============================================================================
+MB4  SHEET at the level of series: the negative half of 3n+1 is the 3n-1 problem
+==============================================================================
+  for every m <= 100000: the T_+-orbit of -m ends in the cycle of -1, -5 or -17 exactly when the
+  T_- orbit of m ends in the cycle of 1, 5 or 17 (direct iteration of T_+ on negatives).
+  T_+ cycle through -17: [-17, -25, -37, -55, -82, -41, -61, -91, -136, -68, -34]
+  So for a T_+-invariant S in Z\{0}: sum_{n in S, n>0} z^n solves E_{3,+1} and
+  sum_{n in S, n<0} z^{-n} solves E_{3,-1}; the second equation has three natural-boundary
+  0/1 solutions (the 3n-1 basins).  A proof that E_{3,+1} has only rational 0/1 solutions
+  must therefore use what distinguishes b = +1 from b = -1 in
+      h(z^3) - h(z^6) = z^{-b} (1/3) sum_j w^{bj} h(w^j z^2):
+  the monomial z^{-b} and the sieved class n = -b mod 3, i.e. the sign.
+
+ALL CHECKS PASSED  (6.8s)
+
+##############################################################################
+# PART C: procgen_continuous_20260925_tree_harmonic.py
+##############################################################################
+
+==============================================================================
+TC1  PROVED lower bound for the branching number (worst-case ladder flow)
+==============================================================================
+  q=3: u3 = 0.6572981061 (2u^3+u^2=1), lambda_3 = u3^(-1/2) = 1.2334422187
+  q=5: u5 = 0.6294095925 (2u^5+u^4+u^3+u^2=1), lambda_5 = u5^(-1/4) = 1.1227075951
+  q=3: at lambda = 1.2334422187, min over ladder types (h0, first-rung residue r0) of
+        sum_(live rungs) lambda^-(distance) = 1.000000000000 at (h0, r0) = (1, 0)
+  q=5: at lambda = 1.1227075951, min over ladder types (h0, first-rung residue r0) of
+        sum_(live rungs) lambda^-(distance) = 1.000000000000 at (h0, r0) = (3, 0)
+  q=7: at lambda = 1.0870353564, min over ladder types (h0, first-rung residue r0) of
+        sum_(live rungs) lambda^-(distance) = 1.000000000000 at (h0, r0) = (2, 5)
+  q=7 (7n+1): live residues {1,2,4} mod 7, legal every 3 doublings, rungs 8p+1 = p+1 mod 7:
+        lambda_7 = 1.0870353564 (numerical root; the same induction applies)
+  Ladder facts used (PROVED, Prop. 11 of the mod-192 note and its 5n+1 analogue):
+    q=3: E is legal on the doubling chain of x at positions h0, h0+2, h0+4, ...; the rungs
+         satisfy S(p) = 4p+1 = p+1 mod 3 (b=+1) or 4p-1 = p-1 mod 3 (b=-1), so exactly one
+         rung in three consecutive is a multiple of 3 (a bare ray).
+    q=5: legal positions h0, h0+4, ...; rungs S(p) = 16p+3 = p+3 mod 5: one dead rung in five.
+  With phi <= lambda-1, induction from the truncation depth up gives g_D(v) >= phi for every
+  live v and every D, hence br >= lambda_q; Lyons (1990) Thm: br > 1 => SRW transient.
+  Percolation corollary: p_c = 1/br <= 1/lambda_3 = 0.8107 on every live 3n+-1 tree.
+  flow check on the actual truncated trees at lambda = lambda_q, phi = min(1, lambda_q - 1):
+    3n+1, root 1    D=46: min over live nodes (excluding [1, 2]) of g_D(v; lambda_q) = 0.5330 (>= phi = 0.2334); g_D(root) = 0.5143 > 0
+    3n-1, root 1    D=46: min over live nodes (excluding [1]) of g_D(v; lambda_q) = 0.5330 (>= phi = 0.2334); g_D(root) = 0.4321 > 0
+    3n-1, root 5    D=44: min over live nodes (excluding [5, 7]) of g_D(v; lambda_q) = 0.5330 (>= phi = 0.2334); g_D(root) = 0.7824 > 0
+    3n-1, root 17   D=42: min over live nodes (excluding [17, 25]) of g_D(v; lambda_q) = 0.5332 (>= phi = 0.2334); g_D(root) = 0.8107 > 0
+    5n+1, root 1    D=60: min over live nodes (excluding [1, 3]) of g_D(v; lambda_q) = 0.4491 (>= phi = 0.1227); g_D(root) = 0.7066 > 0
+    7n+1, root 1    D=60: min over live nodes (excluding [1, 2, 4]) of g_D(v; lambda_q) = 0.4539 (>= phi = 0.0870); g_D(root) = 0.6588 > 0
+
+==============================================================================
+TC6  Transport (PROVED): the T_+ tree of 1 is the negative of the T_- tree of -1
+==============================================================================
+  levels 0..30 agree as sets after x -> -x (so every graph invariant of backward trees is
+  the same on the two sheets for mirror roots; the sheets differ only in WHICH roots are positive).
+
+==============================================================================
+TC2  Level sizes and growth (FINITE-EXACT)
+==============================================================================
+  3n+1, root 1       |T_D| =    375129 (D=46); last ratios 1.3332 1.3328 1.3333 1.3336 1.3337 1.3334; |T_D|^(1/D) = 1.3218
+  3n-1, root 1       |T_D| =    324292 (D=46); last ratios 1.3346 1.3338 1.3337 1.3328 1.3329 1.3331; |T_D|^(1/D) = 1.3177
+  3n-1, root 5       |T_D| =    332202 (D=44); last ratios 1.3322 1.3339 1.3340 1.3339 1.3338 1.3331; |T_D|^(1/D) = 1.3350
+  3n-1, root 17      |T_D| =    282062 (D=42); last ratios 1.3330 1.3326 1.3339 1.3337 1.3335 1.3334; |T_D|^(1/D) = 1.3482
+  5n+1, root 1       |T_D| =     39059 (D=60); last ratios 1.1998 1.1999 1.1976 1.1976 1.2049 1.1994; |T_D|^(1/D) = 1.1927
+  7n+1, root 1       |T_D| =      2891 (D=60); last ratios 1.1366 1.1322 1.1504 1.1363 1.1367 1.1472; |T_D|^(1/D) = 1.1420
+  Haar-model GW #1   |T_D| =    927982 (D=46); last ratios 1.3339 1.3322 1.3333 1.3330 1.3335 1.3325; |T_D|^(1/D) = 1.3481
+  Haar-model GW #2   |T_D| =    527981 (D=46); last ratios 1.3322 1.3343 1.3332 1.3349 1.3322 1.3338; |T_D|^(1/D) = 1.3317
+  => growth 4/3 per level for 3n+-1 (the Haar mean E[N_d] = (4/3)^d), 6/5 for 5n+1, 8/7 for 7n+1.
+
+==============================================================================
+TC3  Branching-number profile: g_D(root; lambda) for several D (FINITE-EXACT)
+==============================================================================
+  3n+1, root 1:  lambda -> g_D(root) for D in [30, 36, 42, 46]
+     lambda=1.2     5.787e-01  5.787e-01  5.787e-01  5.787e-01
+     lambda=1.2334  5.180e-01  5.154e-01  5.146e-01  5.145e-01
+     lambda=1.26    4.502e-01  4.487e-01  4.484e-01  4.483e-01
+     lambda=1.29    3.862e-01  3.854e-01  3.853e-01  3.852e-01
+     lambda=1.31    3.495e-01  3.490e-01  3.489e-01  3.489e-01
+     lambda=1.32    3.327e-01  3.323e-01  3.323e-01  3.323e-01
+     lambda=1.33    3.146e-01  3.102e-01  3.082e-01  3.076e-01
+     lambda=1.3333  3.070e-01  3.018e-01  2.972e-01  2.945e-01
+     lambda=1.34    2.888e-01  2.749e-01  2.650e-01  2.591e-01
+     lambda=1.36    2.181e-01  1.925e-01  1.708e-01  1.578e-01
+     lambda=1.4     1.112e-01  8.288e-02  6.188e-02  5.091e-02
+  3n-1, root 1:  lambda -> g_D(root) for D in [30, 36, 42, 46]
+     lambda=1.2     4.865e-01  4.837e-01  4.827e-01  4.825e-01
+     lambda=1.2334  4.339e-01  4.326e-01  4.322e-01  4.322e-01
+     lambda=1.26    3.977e-01  3.970e-01  3.968e-01  3.968e-01
+     lambda=1.29    3.484e-01  3.476e-01  3.474e-01  3.474e-01
+     lambda=1.31    3.138e-01  3.133e-01  3.132e-01  3.132e-01
+     lambda=1.32    2.936e-01  2.918e-01  2.915e-01  2.914e-01
+     lambda=1.33    2.707e-01  2.686e-01  2.664e-01  2.657e-01
+     lambda=1.3333  2.636e-01  2.606e-01  2.568e-01  2.549e-01
+     lambda=1.34    2.493e-01  2.385e-01  2.286e-01  2.237e-01
+     lambda=1.36    1.884e-01  1.667e-01  1.478e-01  1.366e-01
+     lambda=1.4     9.629e-02  7.172e-02  5.356e-02  4.404e-02
+  3n-1, root 5:  lambda -> g_D(root) for D in [30, 36, 42]
+     lambda=1.2     8.333e-01  8.333e-01  8.333e-01
+     lambda=1.2334  7.843e-01  7.830e-01  7.826e-01
+     lambda=1.26    7.126e-01  7.119e-01  7.117e-01
+     lambda=1.29    6.378e-01  6.350e-01  6.344e-01
+     lambda=1.31    5.651e-01  5.617e-01  5.607e-01
+     lambda=1.32    5.210e-01  5.147e-01  5.124e-01
+     lambda=1.33    4.737e-01  4.662e-01  4.633e-01
+     lambda=1.3333  4.590e-01  4.510e-01  4.480e-01
+     lambda=1.34    4.301e-01  4.203e-01  4.124e-01
+     lambda=1.36    3.389e-01  3.029e-01  2.690e-01
+     lambda=1.4     1.748e-01  1.306e-01  9.741e-02
+  3n-1, root 17:  lambda -> g_D(root) for D in [30, 36, 42]
+     lambda=1.2     8.333e-01  8.333e-01  8.333e-01
+     lambda=1.2334  8.108e-01  8.108e-01  8.108e-01
+     lambda=1.26    7.937e-01  7.937e-01  7.937e-01
+     lambda=1.29    7.752e-01  7.752e-01  7.752e-01
+     lambda=1.31    7.634e-01  7.634e-01  7.634e-01
+     lambda=1.32    7.437e-01  7.422e-01  7.416e-01
+     lambda=1.33    7.144e-01  7.119e-01  7.113e-01
+     lambda=1.3333  7.047e-01  7.021e-01  6.985e-01
+     lambda=1.34    6.808e-01  6.499e-01  6.273e-01
+     lambda=1.36    5.154e-01  4.579e-01  4.055e-01
+     lambda=1.4     2.644e-01  1.968e-01  1.470e-01
+  Haar-model GW #1:  lambda -> g_D(root) for D in [30, 36, 42, 46]
+     lambda=1.2     8.333e-01  8.333e-01  8.333e-01  8.333e-01
+     lambda=1.2334  8.108e-01  8.108e-01  8.108e-01  8.108e-01
+     lambda=1.26    7.937e-01  7.937e-01  7.937e-01  7.937e-01
+     lambda=1.29    7.752e-01  7.752e-01  7.738e-01  7.728e-01
+     lambda=1.31    6.955e-01  6.850e-01  6.763e-01  6.731e-01
+     lambda=1.32    6.529e-01  6.384e-01  6.282e-01  6.225e-01
+     lambda=1.33    6.068e-01  5.812e-01  5.649e-01  5.551e-01
+     lambda=1.3333  5.878e-01  5.618e-01  5.415e-01  5.310e-01
+     lambda=1.34    5.510e-01  5.213e-01  4.960e-01  4.829e-01
+     lambda=1.36    4.456e-01  3.949e-01  3.512e-01  3.233e-01
+     lambda=1.4     2.521e-01  1.875e-01  1.400e-01  1.148e-01
+  Haar-model GW #2:  lambda -> g_D(root) for D in [30, 36, 42, 46]
+     lambda=1.2     7.494e-01  7.410e-01  7.382e-01  7.375e-01
+     lambda=1.2334  6.399e-01  6.359e-01  6.348e-01  6.346e-01
+     lambda=1.26    5.661e-01  5.617e-01  5.606e-01  5.604e-01
+     lambda=1.29    4.643e-01  4.600e-01  4.580e-01  4.572e-01
+     lambda=1.31    4.013e-01  3.950e-01  3.903e-01  3.870e-01
+     lambda=1.32    3.719e-01  3.652e-01  3.572e-01  3.538e-01
+     lambda=1.33    3.450e-01  3.358e-01  3.274e-01  3.221e-01
+     lambda=1.3333  3.366e-01  3.266e-01  3.145e-01  3.054e-01
+     lambda=1.34    3.199e-01  3.030e-01  2.833e-01  2.731e-01
+     lambda=1.36    2.568e-01  2.241e-01  1.960e-01  1.820e-01
+     lambda=1.4     1.427e-01  1.063e-01  7.917e-02  6.524e-02
+  5n+1, root 1:  lambda -> g_D(root) for D in (40, 50, 60)
+     lambda=1.1     7.513e-01  7.513e-01  7.513e-01
+     lambda=1.123   7.061e-01  7.061e-01  7.061e-01
+     lambda=1.15    6.575e-01  6.575e-01  6.575e-01
+     lambda=1.18    4.953e-01  4.803e-01  4.709e-01
+     lambda=1.19    4.169e-01  3.888e-01  3.787e-01
+     lambda=1.2     3.391e-01  3.115e-01  2.960e-01
+     lambda=1.21    2.738e-01  2.427e-01  2.215e-01
+     lambda=1.25    1.030e-01  6.615e-02  4.367e-02
+  Reading: g_D(root) stabilizes for lambda below about 4/3 (6/5 for 5n+1) and decays in D
+  above it, consistent with br = gr = 4/3 (resp. 6/5); only br >= 1.2334 (1.1230) is PROVED.
+
+==============================================================================
+TC4  Harmonic measure of SRW (root reflecting, boundary at depth D)
+==============================================================================
+  3n+1, root 1       D=46: entropy dimension (2-adic) on levels [15,30] = 0.3553; log2(growth) = 0.4151; E-frequency on harmonic rays = 0.1786; E_theta[log x_n]/n = 0.4948
+  3n-1, root 1       D=46: entropy dimension (2-adic) on levels [15,30] = 0.3408; log2(growth) = 0.4149; E-frequency on harmonic rays = 0.1647; E_theta[log x_n]/n = 0.5133
+  3n-1, root 5       D=44: entropy dimension (2-adic) on levels [14,29] = 0.3576; log2(growth) = 0.4152; E-frequency on harmonic rays = 0.1900; E_theta[log x_n]/n = 0.5413
+  3n-1, root 17      D=42: entropy dimension (2-adic) on levels [14,28] = 0.3609; log2(growth) = 0.4152; E-frequency on harmonic rays = 0.2048; E_theta[log x_n]/n = 0.5699
+  5n+1, root 1       D=60: entropy dimension (2-adic) on levels [20,40] = 0.2432; log2(growth) = 0.2622; E-frequency on harmonic rays = 0.1251; E_theta[log x_n]/n = 0.4909
+  7n+1, root 1       D=60: entropy dimension (2-adic) on levels [20,40] = 0.1413; log2(growth) = 0.1901; E-frequency on harmonic rays = 0.0671; E_theta[log x_n]/n = 0.5622
+  Haar-model GW #1   D=46: entropy dimension (2-adic) on levels [15,30] = 0.3489; log2(growth) = 0.4146; E-frequency on harmonic rays = 0.2013
+  Haar-model GW #2   D=46: entropy dimension (2-adic) on levels [15,30] = 0.3301; log2(growth) = 0.4147; E-frequency on harmonic rays = 0.1690
+  Dimension drop: harmonic measure lives on a set of 2-adic dimension well below the
+  boundary's log2(4/3) = 0.4150 (cf. Lyons-Pemantle-Peres 1995 for Galton-Watson trees).
+
+==============================================================================
+TC5  Tutte's barycentric embedding (boundary on the unit circle at the move-word angle)
+==============================================================================
+  3n+1, root 1       D=38: h(root)=+0.94495+0.24920i, energy=0.01824; D=42: h(root)=+0.94541+0.24798i, energy=0.01794; D=46: h(root)=+0.94579+0.24696i, energy=0.01769
+      mean |h| by depth (D=46): 0.978 0.982 0.995 0.999 1.000 1.000 1.000 1.000
+      |h_D(root) - h_(D-4)(root)| = 1.08e-03 (previous step 1.31e-03)
+  3n-1, root 1       D=38: h(root)=+0.95932+0.17620i, energy=0.01421; D=42: h(root)=+0.96205+0.17021i, energy=0.01321; D=46: h(root)=+0.96435+0.16518i, energy=0.01237
+      mean |h| by depth (D=46): 0.978 0.982 0.995 0.999 1.000 1.000 1.000 1.000
+      |h_D(root) - h_(D-4)(root)| = 5.53e-03 (previous step 6.59e-03)
+  3n-1, root 5       D=36: h(root)=+0.38516+0.56084i, energy=0.20409; D=40: h(root)=+0.38417+0.56044i, energy=0.20295; D=44: h(root)=+0.38336+0.56012i, energy=0.20204
+      mean |h| by depth (D=44): 0.679 0.843 0.957 0.991 0.998 1.000 1.000 1.000
+      |h_D(root) - h_(D-4)(root)| = 8.77e-04 (previous step 1.06e-03)
+  3n-1, root 17      D=34: h(root)=+0.36475+0.63435i, energy=0.25049; D=38: h(root)=+0.36651+0.63453i, energy=0.24807; D=42: h(root)=+0.36794+0.63467i, energy=0.24614
+      mean |h| by depth (D=42): 0.734 0.874 0.969 0.993 0.999 1.000 1.000 1.000
+      |h_D(root) - h_(D-4)(root)| = 1.44e-03 (previous step 1.77e-03)
+  5n+1, root 1       D=52: h(root)=+0.96320+0.18845i, energy=0.00873; D=56: h(root)=+0.96324+0.18830i, energy=0.00870; D=60: h(root)=+0.96327+0.18818i, energy=0.00868
+      mean |h| by depth (D=60): 0.981 0.984 0.992 0.997 0.999 1.000 1.000 1.000 1.000 1.000 1.000
+      |h_D(root) - h_(D-4)(root)| = 1.29e-04 (previous step 1.51e-04)
+  7n+1, root 1       D=52: h(root)=+0.99742+0.05071i, energy=0.00052; D=56: h(root)=+0.99745+0.05036i, energy=0.00051; D=60: h(root)=+0.99747+0.05005i, energy=0.00050
+      mean |h| by depth (D=60): 0.999 0.999 0.999 0.999 1.000 1.000 1.000 1.000 1.000 1.000 1.000
+      |h_D(root) - h_(D-4)(root)| = 3.15e-04 (previous step 3.54e-04)
+  Haar-model GW #1   D=38: h(root)=+0.23832+0.59111i, energy=0.31020; D=42: h(root)=+0.23720+0.59124i, energy=0.30864; D=46: h(root)=+0.23626+0.59135i, energy=0.30735
+      mean |h| by depth (D=46): 0.637 0.841 0.953 0.990 0.998 1.000 1.000 1.000
+      |h_D(root) - h_(D-4)(root)| = 9.47e-04 (previous step 1.13e-03)
+  Haar-model GW #2   D=38: h(root)=+0.40953+0.53509i, energy=0.19111; D=42: h(root)=+0.41573+0.53370i, energy=0.18698; D=46: h(root)=+0.42097+0.53253i, energy=0.18357
+      mean |h| by depth (D=46): 0.679 0.792 0.941 0.989 0.998 1.000 1.000 1.000
+      |h_D(root) - h_(D-4)(root)| = 5.37e-03 (previous step 6.36e-03)
+  The embedding of each vertex is the harmonic-measure average of the boundary angles, so its
+  convergence in D is transience made visible; it is sign-blind by TC6.
+
+==============================================================================
+TC7  Cheeger constant (PROVED 0)
+==============================================================================
+  Every multiple of q in a backward tree has only the doubling child, so the tree contains bare
+  rays 3m, 6m, 12m, ...; a segment of L vertices has boundary 2, so inf |dS|/|S| = 0 on every tree
+  (3n+-1, 5n+1).  Anchored expansion and br > 1 carry the transience instead.
+
+ALL CHECKS PASSED  (2.7s)
+
+##############################################################################
+# PART D: procgen_continuous_20260925_hex_game.py
+##############################################################################
+==============================================================================
+HG1  Every odd n >= 3 has an infinite (never-ending) play
+==============================================================================
+  for all odd 3 <= n < 10^6: exactly one of 3n+1, 3n-1 is 2 mod 4 and it yields the odd
+  successor (3n+-1)/2 > n.  A 10^4-move ascending play from 3 ends at a number with 1762 digits.
+  => infinite plays exist from every odd n >= 3; unlike Hex, a 'complete play' need not
+     have a winner, so Gale's Hex <=> Brouwer mechanism (every filled board has exactly one
+     winner) has no analogue.  The prize question is determinacy of optimal play.
+
+==============================================================================
+HG2  P-positions exist (the mover can lose): capped retrograde for odd n < 200
+==============================================================================
+  retrograde to cap 262144 (43 rounds): among odd n < 200: 57 N, 43 P, 0 unresolved
+  P-positions below 200: [7, 13, 23, 25, 29, 41, 45, 51, 57, 63, 65, 71, 73, 79, 81, 89, 91, 93, 99, 101, 103, 111, 113, 115, 125, 127, 129, 141, 143, 145, 157, 159, 161, 163, 165, 175, 177, 179, 181, 183, 185, 197, 199]
+  7 is P: its moves go to 11 and 5, and both are N (5 -> 1 wins; 11 -> 32 -> 1 wins).
+  So the player to move loses at about half the positions (repo: P-density about 0.48 below
+  2^32); no strategy-stealing argument gives a first-player win, and none addresses draws.
+
+ALL CHECKS PASSED  (0.8s)
