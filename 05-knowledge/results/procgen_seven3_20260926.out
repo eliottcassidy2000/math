@@ -1,0 +1,128 @@
+procgen_seven3_20260926_run.py -- lane seven3, itinerary-coded sign strategies of 7n+-1
+  sha256 9e365ad39ab2acae procgen_seven3_20260926_lib.py
+  sha256 b6ed98aafddd8b5a procgen_seven3_20260926_itree.py
+  sha256 3ba7934dda3cb48b procgen_seven3_20260926_search.py
+  sha256 94bb2cf0efc20d37 procgen_seven3_20260926_markov.c
+  sha256 4276d177b7aceff2 procgen_seven3_20260926_game.c
+  sha256 1628615dcf72fa00 procgen_seven3_20260926_adv.c
+  sha256 ea89e7a8aefe13d0 procgen_seven2_20260926_rhomax.c
+  sha256 d252295fb0094314 procgen_seven3_20260926_rules.json
+
+== C. Exact threshold comparisons   (t = 0 s)
+[ok] C1 37/100 and 7/19 exceed log_7 2 (7^37 > 2^100, 7^7 > 2^19)
+[ok] C2 2/5 > log_7 2 = 0.35621
+[ok] C2 3/7 > log_7 2 = 0.35621
+[ok] C2 7/18 > log_7 2 = 0.35621
+[ok] C2 1/3 < log_7 2 = 0.35621
+
+== M. Lemma M (Markov refinement): exact rho_max of variable-depth rules, two implementations + uniform engine   (t = 0 s)
+[ok] M0 itinerary cylinders are residue classes of depth 1 + sum v (Lemma MH(ii)), 7 words re-parsed
+[ok] M0b every odd class c mod 2^d (d <= 12, 4095 classes) is an itinerary node w or w(s,>=m) (Fact I)
+[ok] M1 MH: rho_max = 1/2 (C and Python Markov engines), witness 2/3
+[ok] M2 18-class rule: rho_max = 2/5 by both Markov engines, 170 leaves (uniform level 10: 1024 nodes), witness -12/17
+[ok] M3 18-class rule at uniform level 10 (seven2 engine): 2/5, witness -12/17 re-walked
+[ok] M3 18-class rule at uniform level 12 (seven2 engine): 2/5, witness 2/17 re-walked
+[ok] M3 18-class rule at uniform level 14 (seven2 engine): 2/5, witness 3352/1377 re-walked
+
+== F. Family G + A_D (flip (s,2)(s,2) and alternating v=2 runs of length >= D)   (t = 0 s)
+[ok] F1 D=2: rho_max = 1/2 (both engines); the MH-periodic orbit through -3/17 (alternating run of length 1, then valuation 3) is never flipped and has density 2/5
+[ok] F2 D=2: the seven2 uniform engine at level 5 agrees (1/2)
+[ok] F1 D=3: rho_max = 3/7 (both engines); the MH-periodic orbit through -37/471 (alternating run of length 2, then valuation 3) is never flipped and has density 3/7
+[ok] F2 D=3: the seven2 uniform engine at level 7 agrees (3/7)
+[ok] F1 D=4: rho_max = 4/9 (both engines); the MH-periodic orbit through -195/1889 (alternating run of length 3, then valuation 3) is never flipped and has density 4/9
+[ok] F2 D=4: the seven2 uniform engine at level 9 agrees (4/9)
+[ok] F1 D=5: rho_max = 5/11 (both engines); the MH-periodic orbit through -1621/18855 (alternating run of length 4, then valuation 3) is never flipped and has density 5/11
+[ok] F2 D=5: the seven2 uniform engine at level 11 agrees (5/11)
+[ok] F1 D=6: rho_max = 6/13 (both engines); the MH-periodic orbit through -10323/109457 (alternating run of length 5, then valuation 3) is never flipped and has density 6/13
+[ok] F2 D=6: the seven2 uniform engine at level 13 agrees (6/13)
+[ok] F1 D=7: rho_max = 7/15 (both engines); the MH-periodic orbit through -76357/856311 (alternating run of length 6, then valuation 3) is never flipped and has density 7/15
+[ok] F2 D=7: the seven2 uniform engine at level 15 agrees (7/15)
+[ok] F1 D=8: rho_max = 8/17 (both engines); the MH-periodic orbit through -518115/5633729 (alternating run of length 7, then valuation 3) is never flipped and has density 8/17
+[ok] F2 D=8: the seven2 uniform engine at level 17 agrees (8/17)
+[ok] F1 D=9: rho_max = 9/19 (both engines); the MH-periodic orbit through -3692341/40877895 (alternating run of length 8, then valuation 3) is never flipped and has density 9/19
+[ok] F2 D=9: the seven2 uniform engine at level 19 agrees (9/19)
+[ok] F1 D=10: rho_max = 10/21 (both engines); the MH-periodic orbit through -25584243/280378097 (alternating run of length 9, then valuation 3) is never flipped and has density 10/21
+[ok] F1 D=11: rho_max = 11/23 (both engines); the MH-periodic orbit through -180138277/1985715351 (alternating run of length 10, then valuation 3) is never flipped and has density 11/23
+[ok] F1 D=12: rho_max = 12/25 (both engines); the MH-periodic orbit through -1256773635/13807732769 (alternating run of length 11, then valuation 3) is never flipped and has density 12/25
+[ok] F1 D=13: rho_max = 13/27 (both engines); the MH-periodic orbit through -8814192661/97023228135 (alternating run of length 12, then valuation 3) is never flipped and has density 13/27
+[ok] F1 D=14: rho_max = 14/29 (both engines); the MH-periodic orbit through -61632239763/677686201937 (alternating run of length 13, then valuation 3) is never flipped and has density 14/29
+[ok] F1 D=15: rho_max = 15/31 (both engines); the MH-periodic orbit through -431694113797/4749708993591 (alternating run of length 14, then valuation 3) is never flipped and has density 15/31
+
+== L. Counterexample-guided itinerary search: the stored trees, re-evaluated exactly   (t = 0 s)
+[ok] L1 tree "itinerary-search 2/5": 48 itinerary leaves (96 residue classes, max depth 13), rho_max = 2/5 by both Markov engines (365 Markov leaves), witness period 10
+[ok] L2 tree "itinerary-search 2/5": the seven2 uniform engine at level 13 agrees
+[ok] L3 tree "itinerary-search 2/5" canonical sha256[:16] = e2d2aaaa6efe0925
+[ok] L1 tree "itinerary-search 15/38": 344 itinerary leaves (688 residue classes, max depth 20), rho_max = 15/38 by both Markov engines (3085 Markov leaves), witness period 38
+[ok] L2 tree "itinerary-search 15/38": the seven2 uniform engine at level 20 agrees
+[ok] L3 tree "itinerary-search 15/38" canonical sha256[:16] = c957bd181d4d3d86
+[ok] L1 tree "itinerary-search 7/18": 783 itinerary leaves (1566 residue classes, max depth 46), rho_max = 7/18 by both Markov engines (11181 Markov leaves), witness period 54
+[ok] L3 tree "itinerary-search 7/18" canonical sha256[:16] = 1409d3094b5cf3b7
+[ok] L4 re-running the counterexample-guided search from MH reproduces tree "itinerary-search 2/5" at move 20
+[ok] L4 re-running the counterexample-guided search from MH reproduces tree "itinerary-search 15/38" at move 140
+[ok] L4 re-running the counterexample-guided search from MH reproduces tree "itinerary-search 7/18" at move 346
+[ok] L5 the search from MH (400 moves) ends at 7/18 = rho*(7,16)
+[ok] L6 the 7/18 tree flips 0.1784 of the odd numbers, all with v_1 = 2: 2 =2: 0.1024, 2 !2: 0.0451, 2 =3: 0.0218, 2 !3: 0.0091
+
+== G. Greedy optimal trees (THM-4508 construction, this lane's driver): stored, re-evaluated exactly   (t = 128 s)
+[ok] G1 greedy k=10: 46 leaves, rho_max = 2/5 by both Markov engines (170 Markov leaves vs 2^10 = 1024) and by the seven2 uniform engine at level 10
+[ok] G1 greedy k=14: 300 leaves, rho_max = 15/38 by both Markov engines (1151 Markov leaves vs 2^14 = 16384) and by the seven2 uniform engine at level 14
+[ok] G1 greedy k=16: 508 leaves, rho_max = 7/18 by both Markov engines (2595 Markov leaves vs 2^16 = 65536) and by the seven2 uniform engine at level 16
+
+== O. Optimal level-k rules (Min least fixed point, MH wherever admissible), minimal trees, Markov sizes   (t = 128 s)
+[ok] O1 k=12: optimal rule with 270 leaves (126 flipped), Markov refinement 883 leaves = 21.6% of 2^k; rho_max = 2/5 = rho*(7,12) by the Markov engine
+[ok] O1 k=14: optimal rule with 1268 leaves (574 flipped), Markov refinement 4085 leaves = 24.9% of 2^k; rho_max = 15/38 = rho*(7,14) by the Markov engine
+[ok] O1 k=16: optimal rule with 3480 leaves (1660 flipped), Markov refinement 12593 leaves = 19.2% of 2^k; rho_max = 7/18 = rho*(7,16) by the Markov engine
+[ok] O1 k=18: optimal rule with 11972 leaves (5810 flipped), Markov refinement 44879 leaves = 17.1% of 2^k; rho_max = 19/49 = rho*(7,18) by the Markov engine
+[ok] O1 k=19: optimal rule with 22894 leaves (11264 flipped), Markov refinement 87775 leaves = 16.7% of 2^k; rho_max = 13/34 = rho*(7,19) by the Markov engine
+[ok] O1 k=20: optimal rule with 42498 leaves (20624 flipped), Markov refinement 163471 leaves = 15.6% of 2^k; rho_max = 34/89 = rho*(7,20) by the Markov engine
+
+== I. Forced decisions of the least Min potential: itinerary cylinders vs bit cylinders (EMPIRICAL)   (t = 130 s)
+[ok] I1 k=14 (F=15/38): free 0.065 forced-MH 0.754 forced-flip 0.181; conflict-free share, itinerary vs bits: n=3: 416 cyl 0.567 vs b=10: 512 cyl 0.676; n=4: 1392 cyl 0.776 vs b=12: 2048 cyl 0.870; n=5: 2288 cyl 0.925 vs b=13: 4096 cyl 0.949
+[ok] I1 k=16 (F=7/18): free 0.086 forced-MH 0.748 forced-flip 0.166; conflict-free share, itinerary vs bits: n=3: 516 cyl 0.547 vs b=11: 1024 cyl 0.727; n=4: 2676 cyl 0.733 vs b=13: 4096 cyl 0.872; n=5: 6628 cyl 0.894 vs b=14: 8192 cyl 0.947
+[ok] I1 k=18 (F=19/49): free 0.076 forced-MH 0.761 forced-flip 0.163; conflict-free share, itinerary vs bits: n=3: 552 cyl 0.547 vs b=11: 1024 cyl 0.621; n=4: 4032 cyl 0.648 vs b=13: 4096 cyl 0.745; n=5: 15024 cyl 0.804 vs b=15: 16384 cyl 0.876
+
+== R. Lemma R (rigidity of rejoining), Lemma S (shadowing), single flips on S_inf   (t = 132 s)
+[ok] S1 Lemma S on 3000 random cylinders: E = (z - s)/2 copies the valuations of z while z has sign -s and valuations in {2,3}
+[ok] R1 1500 random 1000-bit x: 989 single-flip orbits rejoined the MH orbit (mod 2^200) and every rejoin used the same numbers of odd steps and halvings (Lemma R)
+[ok] R2 200 random S_inf points: after one flip the orbit never met the MH orbit again (EMPIRICAL); mean MH valuation afterwards 2.985 over 65209 steps (typical value 3)
+
+== B. Max: itinerary / rational adversaries (exact values; certificate and maximality inside the engine)   (t = 133 s)
+[ok] B1 k=8: top lift (negative integers) has value exactly 1/3 (|W| = 256; Min reaches density 1/3 from every node)
+[ok] B1 k=9: top lift (negative integers) has value exactly 1/3 (|W| = 512; Min reaches density 1/3 from every node)
+[ok] B1 k=10: top lift (negative integers) has value exactly 1/3 (|W| = 1024; Min reaches density 1/3 from every node)
+[ok] B1 k=11: top lift (negative integers) has value exactly 1/3 (|W| = 2048; Min reaches density 1/3 from every node)
+[ok] B1 k=12: top lift (negative integers) has value exactly 1/3 (|W| = 4096; Min reaches density 1/3 from every node)
+[ok] B1 k=13: top lift (negative integers) has value exactly 1/3 (|W| = 8192; Min reaches density 1/3 from every node)
+[ok] B1 k=14: top lift (negative integers) has value exactly 1/3 (|W| = 16384; Min reaches density 1/3 from every node)
+[ok] B1 k=15: top lift (negative integers) has value exactly 1/3 (|W| = 32768; Min reaches density 1/3 from every node)
+[ok] B1 k=16: top lift (negative integers) has value exactly 1/3 (|W| = 65536; Min reaches density 1/3 from every node)
+[ok] B1 k=17: top lift (negative integers) has value exactly 1/3 (|W| = 131072; Min reaches density 1/3 from every node)
+[ok] B1 k=18: top lift (negative integers) has value exactly 1/3 (|W| = 262144; Min reaches density 1/3 from every node)
+[ok] B2 d-scaled top lifts (follow -c/d), values at k = 10,14,18 (all <= 1/3): d=1: 1/3,1/3,1/3; d=3: 1/3,1/3,1/3; d=5: 1/3,1/3,1/3; d=11: 9/29,11/36,12/43; d=13: 8/25,11/39,3/10; d=17: 9/28,20/63,14/45; d=19: 16/49,13/44,2/7; d=23: 1/4,1/4,1/4; d=29: 1/3,3/11,8/29; d=43: 3/11,4/13,23/80
+[ok] B4 MH-density lifts (prefer the lift whose determined MH itinerary is denser; by density, by (odd steps, -bits)): k=8: 1/3, 1/3; k=9: 4/13, 1/3; k=10: 1/3, 1/3; k=11: 5/17, 1/3; k=12: 24/73, 1/3; k=13: 5/21, 6/19; k=14: 7/24, 9/32; k=15: 2/9, 16/51; k=16: 7/26, 13/44 (all <= 1/3 for k >= 12)
+[ok] B3 itinerary-prefix adversary "prefix-n2-hillclimbed-k10" (n=2 symbols): values 14/41,1/5,11/41,12/49 at k = [10, 12, 14, 16]
+
+== P/U. Exhaustive searches: pattern sets and itinerary automata   (t = 135 s)
+[ok] P1 complete normalized trees of length 2 over (2, 3, ('ge', 4)): 13 leaves, all 8192 flip sets; the least rho_max is 1/2
+[ok] P1 complete normalized trees of length 3 over (2, ('ge', 3)): 11 leaves, all 2048 flip sets; the least rho_max is 3/7
+[ok] U1 all 432 itinerary automata (start + 1 transient states, valuation classes (2, ('ge', 3)), truncated at bit depth 16, both defaults): least rho_max = 8/17
+[ok] U1 all 65536 itinerary automata (start + 2 transient states, valuation classes (2, ('ge', 3)), truncated at bit depth 16, both defaults): least rho_max = 3/7
+[ok] U1 all 11664 itinerary automata (start + 1 transient states, valuation classes (2, 3, ('ge', 4)), truncated at bit depth 16, both defaults): least rho_max = 8/17
+
+== D. rho*(7,k) with this lane's own game engine (Stern-Brocot from scratch for k <= 16, both certificates)   (t = 369 s)
+[ok] D1 k=8: Stern-Brocot + both certificates give rho*(7,8) = 3/7
+[ok] D1 k=9: Stern-Brocot + both certificates give rho*(7,9) = 3/7
+[ok] D1 k=10: Stern-Brocot + both certificates give rho*(7,10) = 2/5
+[ok] D1 k=11: Stern-Brocot + both certificates give rho*(7,11) = 2/5
+[ok] D1 k=12: Stern-Brocot + both certificates give rho*(7,12) = 2/5
+[ok] D1 k=13: Stern-Brocot + both certificates give rho*(7,13) = 2/5
+[ok] D1 k=14: Stern-Brocot + both certificates give rho*(7,14) = 15/38
+[ok] D1 k=15: Stern-Brocot + both certificates give rho*(7,15) = 15/38
+[ok] D1 k=16: Stern-Brocot + both certificates give rho*(7,16) = 7/18
+[ok] D2 k=17: Min and Max least fixed points finite at 7/18, both certificates exact: rho*(7,17) = 7/18
+[ok] D2 k=18: Min and Max least fixed points finite at 19/49, both certificates exact: rho*(7,18) = 19/49
+[ok] D2 k=19: Min and Max least fixed points finite at 13/34, both certificates exact: rho*(7,19) = 13/34
+[ok] D2 k=20: Min and Max least fixed points finite at 34/89, both certificates exact: rho*(7,20) = 34/89
+
+94 checks, 380 s
+ALL CHECKS PASSED

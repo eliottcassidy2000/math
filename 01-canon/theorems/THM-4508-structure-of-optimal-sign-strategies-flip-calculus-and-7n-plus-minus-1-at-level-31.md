@@ -105,6 +105,34 @@ audit: >
 
 **PROVED + INDEPENDENTLY AUDITED; FINITE-EXACT.** Full note: [procgen_seven2_20260926_seven_structure](../../05-knowledge/results/procgen_seven2_20260926_seven_structure.md).
 
+**UPDATE 2026-09-26 (seven3 lane, [itinerary note](../../05-knowledge/results/procgen_seven3_20260926_itinerary_strategies.md); orchestrator-audited).** Coding strategies and adversaries by the max-halving itinerary did not move either bound. The upper side stays at `37/100` (level 30); the all-level floor stays `1/3` (Theorem N).
+
+What is new:
+- **Lemma R (PROVED).** Outside a countable set of rationals, a flipped orbit that rejoins the max-halving orbit does so with exactly the same numbers of odd steps and halvings. So the local gains of Corollary F are paid back in full on rejoining.
+- **Corollary R (PROVED).** Any rule with `rho_max < 1/2` must move generic `S_inf` orbits permanently off their max-halving orbits.
+- **Lemma S (PROVED).** After the gaining flip, the new orbit shadows the old one with equal valuations for as long as the signs stay `-s` and the valuations stay in `{2,3}`. A good rule must therefore read far ahead.
+- **Lemma M (PROVED).** The exact `rho_max` of a variable-depth rule is the densest cycle of the leaf graph of its Markov refinement. It evaluates rules of depth 46 with about 10^4 nodes.
+- **Proposition A.** The rule "flip `(s,2),(s,2)` and alternating valuation-2 runs of length `D`" has `rho_max >= D/(2D+1)` (PROVED), with equality for `D = 3..15` (FINITE-EXACT).
+
+Negative results (FINITE-EXACT):
+- Small itinerary automata and pattern sets never beat `3/7`.
+- A counterexample-guided itinerary search reaches `7/18` with a depth-46 rule and then stalls.
+- Optimal rules are not sparse: their Markov refinements hold 16–25% of `2^k`.
+- Every tested uniform adversary family stays `<= 1/3` from `k = 12` on.
+
+**The limit object.** `lim rho*(7,k)` is an ergodic-optimization min-max: the infimum over clopen flip sets `F` of the densest periodic orbit of "shift off `F`, flip map on `F`". A value below `log_7 2` would be certified by one finite rule; a value at or above it needs a uniform lower certificate at every level.
+
+**Why `q = 5` closes and `q = 7` does not.**
+- For `5n±1`, Min's first rejoining flip (at the fixed point 1) closes the sporadic cycle `1,3,8,4,2`. Max forces that same cycle on the negative integers as `-1,-3,-8,-4,-2`, so the bounds meet at `2/5`.
+- For `7n±1`, the fixed-point flip closes a cycle of density `1/3`, too good to be forced. The value is then set by an unbounded hierarchy of exceptional rational closures.
+
+**Audit.** Independent code (procgen_seven3_20260926_orchestrator_check.py) confirms:
+- Lemma R on 1047 exact rejoins among 2000 random 600-bit flips;
+- Lemma S on 3000 random itineraries;
+- Proposition A's witnesses for `D = 3..12`.
+
+The lane's own engine reproduced `rho*(7,k)` for `k = 8..20`, a third independent reproduction.
+
 ## 1. What a strategy is, once it is written down
 
 THM-4486 made provability a game on the parity graph at level `k`. Lemma C removes the level:
