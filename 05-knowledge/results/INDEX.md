@@ -1,5 +1,12 @@
 # Script Results Index
 
+- [Wave 13 orchestrator findings: Gersonides's four cycles, 3+1=4, cheap edits under positive drift, the Kuratowski–Tutte reading](procgen_wave13_20260926_orchestrator_findings.md):
+  **PROVED (elementary; orchestrator) / FINITE-EXACT / ANALOGY (typed).**
+  * The free integer cycles of 3x+1 on Z are exactly `{0}, {-1}, {1,2}, {-5,-7,-10}`: a shift argument plus Levi ben Gershon's `|3^a - 2^p| = 1` theorem. `-17` is sporadic (`139`), and the five densities are the first best approximations of `log_3 2`.
+  * `3+1 = 2^2` is at once the pairing-ladder identity, the moment criticality `g(2) = 1` and the trivial cycle.
+  * For `5n+1`, arbitrary fixed-horizon edits (catch the orbit high) cost `<= 2^(-0.0119L)` and `>= 2^(-0.0139L - o(L))`, although the undecided density stays near `0.2`.
+  * A typed Kuratowski–Tutte dictionary: excluded substructures, a counting reason, and a sporadic third.
+
 - [Collatz's distance to provability in the strategy cube: flip the undecided residues](procgen_cubedist_20260925_distance_to_provability.md):
   **PROVED (THM-4479, audited; HYP-9138 SETTLED) / FINITE-EXACT.** Flipping exactly `Bad_k`, the residues with no `k`-step Collatz descent, is class (i). The reason is heredity: a decided residue meets no flip before its first descent, and at an undecided residue `3 (mod 4)` the flip is a `3/4` descent. Its critical density is `F_k`, the best lower approximation of `log_3 2` with denominator `<= k`, attained by an upper Christoffel word. Expanding necklaces of `B(2,k)` force `delta_k >= N_k >= 2^(hk)/(3k^2)`, so the Haar distance is `2^(-(1-h)k+O(log k))`, a sharp exponent. Exact values `delta_k = 1,2,2,4,5,9,14,23` (k = 2..9), `40 <= delta_10 <= 44`; the approximants are transitive for `k <= 300`. DRIFT: the 5n±1 provable class is empty at levels 2–6, and 5n+1's distance is `29/64` at `k = 7` (about `3.2/k` up to `k = 14`); whether it tends to 0 is OPEN. Orchestrator re-implementation from the note's statements confirms every theorem-level claim; the pipeline rerun is identical up to timing.
 

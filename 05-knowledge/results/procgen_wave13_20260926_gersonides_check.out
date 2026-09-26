@@ -1,0 +1,28 @@
+1. Gersonides pairs |3^a - 2^p| = 1 (p <= 400)
+   [(1, 0), (1, 1), (2, 1), (3, 2)]
+  ok: only (p,a) = (1,0), (1,1), (2,1), (3,2): 2-1, 3-2, 4-3, 9-8 (Levi ben Gershon 1343)
+2. every word of a Gersonides shape gives an integer cycle
+   [(-1,), (0,), (1, 2), (-10, -5, -7)]
+  ok: the free cycles are exactly {0}, {1,2}, {-1}, {-5,-7,-10}
+3. shape (p,a) = (11,7): 3^7 - 2^11 = 139
+   D = 139; words with 139 | c_w: 11 of 330; cycles: {(-136, -68, -34, -17, -25, -37, -55, -82, -41, -61, -91)}
+  ok: exactly one necklace (11 rotations) of shape (11,7) is integral: the -17 cycle (min -136), a sporadic cycle
+4. census of integer cycles of 3x+1 on Z for words of length p <= 20
+   cycles: [(-1,), (0,), (1, 2), (-10, -5, -7), (-136, -68, -34, -17, -25, -37, -55, -82, -41, -61, -91)]
+  ok: p <= 20: exactly the five known cycles {0}, {1,2}, {-1}, {-5,-7,-10}, {-17,...}
+5. densities as Stern-Brocot approximants of log_3 2
+                     (0,)...  density 0  (contracting)
+                   (1, 2)...  density 1/2  (contracting)
+    (-136, -68, -34, -17)...  density 7/11  (expanding)
+            (-10, -5, -7)...  density 2/3  (expanding)
+                    (-1,)...  density 1  (expanding)
+  ok: 1/1, 2/3, 7/11 are best upper approximations of log_3 2
+  ok: 0/1, 1/2 are best lower approximations of log_3 2
+  ok: with denominators <= 11 the best upper approximations are exactly 1/1, 2/3, 7/11
+  ok: 7/11 is the mediant of 2/3 (the -5 cycle) and 5/8 (sigma_k's critical Christoffel cycle, 319/13)
+6. the identity 3 + 1 = 4 in three roles
+  ok: for odd q <= 39: pairing-sum preservation (THM-4470) <=> g_q(2) = 1 (THM-4477) <=> 1 -> 2 -> 1 is a cycle <=> q = 3
+  ok: integer roots of g_3(s) = 1 are s = 1, 2, the Gersonides pairs (2,1), (4,3), i.e. the cycles {0} and {1,2} (words 0 and 10)
+7. other multipliers: free cycles need |2^p - q^a| = 1
+  ok: for odd 5 <= q <= 101 every solution of |q^a - 2^p| = 1 has a <= 1 (p < 400, a < 60; Mihailescu for all): q = 3 is the only multiplier with a free cycle having two odd steps (the -5 cycle)
+  ok: 5x+1: free cycles only {0} and {-1,-2} (5 - 4 = 1)

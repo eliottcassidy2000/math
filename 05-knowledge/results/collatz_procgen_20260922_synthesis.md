@@ -33,6 +33,8 @@ Althöfer's game remain OPEN.**
 
 **Wave 12 (2026-09-25, opus session), summarized in section 2j.** The owner's seed "multiplication : squares :: addition : doubles" was run as a transport axis (128 cells, 47 cards). PROVED: the parity graph mod `2^k` is the `+-sqrt` graph on `F_p^*` for Fermat primes; the multiplicative Collatz `sqrt X / rad(X) X^3` is Collatz on the diagonal `m^e` and divergent off it; `chi_{-4}` is the unique level-2 provable strategy; the orbitwise two-place identity `m_L 2^(d_L)/3^L = n prod(1 + b/(3 m_l))` gives `R(d) <= n` on every `3n-1` orbit. **HYP-9160** (no slow divergence) was then PROVED by **THM-4476** (thin divergence: every non-periodic orbit has `O(X^(0.95+eps))` elements below `X`; Terras count plus a landing pigeonhole), which also recovers the in-house no-bounded-strip theorem and gives `R(d) < n` strictly; still no divergence exclusion.
 
+**Wave 13 (2026-09-26), summarized in section 2k.** **THM-4479** (HYP-9138 PROVED): flip exactly the undecided residues; the cube distance is `2^(-(1-h)k+O(log k))`, so the exponent is sharp. With the crossroads THM-4478 (HYP-9137), the exponent `1-h(log_3 2)` is now sharp in three settings, by three mechanisms: integer capacity, necklace packing, and moments (the last stopping at `2(1-h)`). Gersonides: four of the five known integer cycles of 3x+1 on Z are forced by `2-1, 3-2, 4-3, 9-8 = 1`, and `-17` is the sporadic one (`139`). `3+1 = 2^2` is at once the pairing ladder, the moment criticality and the trivial cycle. Positive drift makes arbitrary edits exponentially cheap (the peak-discounted price). The owner's Kuratowski–Tutte triple is read as excluded structures, a counting reason, and a sporadic third. Wave 14 lanes: mykk, drift, tension, peak.
+
 **Wave 10 (2026-09-25), summarized in section 2h.** Codex's incoming work was audited (20 checks, no errors), and the square-sum graph turns out to be planar iff `N ≤ 24`, a Kuratowski event at 25. Kohl's Collatz group is a Tait-coloured graph: its Kempe chains are the doubling orbits and the rising runs, and its only closed chain is `{−1, −2}`. In the strategy square, Collatz is the only open corner among four sign strategies. The exact triple shape is Tutte's "dual pair + self-dual" `{F_7, F_7*, U_{2,4}}`. Natural boundary is KNOWN (Bell–Lagarias 2015); the Mahler/harmonic bridges are blocked by the controls.
 
 **Wave 9 (2026-09-24), summarized in section 2g.** arXiv 2502.20642 (a claimed fixed-point proof of Collatz) is invalid (**THM-4471**): its general theorem fails on `x -> x+1`, and its table also "proves" `3n−1`. The owner's triangle sandwich is its Lemma 2.1, and the sign law is exactly the sandwich's two equality cases with `0` in the middle. The correct fixed-point theorem is Banach in `Z_2`: one gate per word, and 18 integral points for `p ≤ 24`. **THM-4472**: the owner's converse 4-tournaments are forward map versus inverse tree (time reversal), not the sheets. **THM-4473**: Collatz's digit chains are exact Markov laws (mod 10 entries `2^j/15`, `3 -> 5` certain, `9 -> 9 = 8/15`), unlike the vanishing prime-digit bias. Repunit primes are the prime fixed points of digit rotation, and `Q` has the new odd 2-cycle `{−1/5, 5/7}`.
@@ -712,6 +714,99 @@ GM-fairness, heights, sums of squares) against eight Collatz ingredients:
   laws that need not be regenerated (cosmetic, degenerate and blocked cells
   are recorded, including the cubic theta polarization already excluded by
   HYP-9127's unipotent Mahler obstruction).
+
+## 2k. Wave 13 (2026-09-26): one exponent in three settings, the crossroads work, Gersonides's cycles, and the Kuratowski–Tutte reading
+
+**1. HYP-9138 PROVED = THM-4479** ([cube-distance note](procgen_cubedist_20260925_distance_to_provability.md)).
+* **Construction.** Flip exactly the undecided residues `Bad_k`. The construction works by heredity:
+  * a decided residue meets no flip before its first descent;
+  * at an undecided residue (always `3 (mod 4)`) the flip is itself a `3/4` descent.
+  
+  So every orbit of `sigma_k` is a chain of contracting blocks, and `sigma_k` is class (i). Its critical density `F_k`, the best lower approximation of `log_3 2` with denominator `<= k`, is attained by an upper Christoffel word.
+* **Lower bound.** The disjoint expanding necklaces of `B(2,k)` force `delta_k >= N_k >= 2^(hk)/(3k^2)`. So the Haar distance is `2^(-(1-h)k + O(log k))`, and the exponent is sharp.
+* **Exact data.** `delta_k = 1, 2, 2, 4, 5, 9, 14, 23` for `k = 2..9`, and `40 <= delta_10 <= 44`. The approximants are transitive for `k <= 300`.
+* **DRIFT.** The 5n±1 provable class is empty at levels 2–6. 5n+1's distance is `29/64` at `k = 7` and about `3.2/k` up to `k = 14`; whether it tends to 0 is OPEN.
+* **Audit.** An independent re-implementation, written from the note's statements, confirms every theorem-level claim, and the pipeline rerun is identical up to timing.
+
+**2. Incoming work, synthesized.** Sources: crossroads-20260926, collatz-reframe-20260925, bernoulli-boundary-20260925, and opus S5.
+* **THM-4478 (crossroads) PROVES HYP-9137.** Arbitrary fixed-horizon edits, and the pairing family, cost `2^(-(1-h)L+o(L))`.
+  * *Mechanism.* On undecided words `T^k(n) = w_k(n + h_k)` with an affine offset `h_k in [0, k/3]`. So a fixed endpoint, time and odd count admit at most `floor(k/3)+1` integer ancestors. A growth band keeps `2^(hL-o(L))` words, and a first-hit cut finishes the proof.
+  * *Relation to THM-4477.* This bypasses THM-4477's distribution-only barrier `2(1-h)` without contradicting it.
+  * *Refuted in the same work.* (i) The conditioned energy, since `E Q^2 >= 1/8` via a Bernoulli(3/4) martingale. (ii) Fixed-slope injectivity: `N = 2^153 u - 1` and `N - 4` merge at time 233 with 153 odd steps, shadowing `-1` and the `-5` cycle. Injectivity does hold for every `k <= 31`.
+  * HYP-9139 is untouched, and no exponent depends on it any more.
+* **Reframe.** It audits the owner's Kuratowski–Tutte paste on Berggren addresses and proves three things:
+  * the block repetition lemma `R_w(n) = floor((v_2(E_w n) - 1)/S)`;
+  * the reset family `n_H = (2^(H+3) - 13)/9`;
+  * no rank `a log n + sum c_i v_2(n - beta_i)` over finitely many fixed centers can decrease at every odd step.
+  
+  [derived] The reset family's 2-adic limit `-13/9` is HYP-9120's proved hostile point, and the repetition count for `w = (1)` is the `<a,c>` Kempe chain length of wave 10.
+* **Bernoulli boundary.** The first Bernoulli function's jump is an exact divisor indicator: `J_m(z) = 1/m + psi((z-1)/m) - psi(z/m) = 1_(m|z)`. No `a log n + h(n)` with bounded `h` decreases at every odd step. [derived] THM-4474's Lemma P potentials are exactly bounded residue corrections, so this obstruction is "Collatz is not bounded-lookahead provable", caused by the loop at `-1`. Lane `tension` is proving the equivalence.
+* **THM-4476 (S5) audited SOUND. Updates to §2j:**
+  * the log-band statement is superseded by the one-sided bound: no injective orbit has `Delta_j >= -a log_2 j - O(1)` with `a < 1/h*`;
+  * Cor 8 speaks only to the no-divergence half.
+* **Cross-links** [derived by the digest, unaudited]:
+  * THM-4469's HYP-9134 pair (carries `4726, 4727`) meets the crossroads Thue–Morse and Rudin–Shapiro irrationality conditions (`2187 < 4^10`, `2187^7 < 2^110`). So TM- and RS-selected tapes over this pair are not the parity vectors of any rational.
+  * Kohl's colour `b` on `{y, 2y}` (`y = 1 mod 3`) is Berggren's letter `C`.
+  * The source's B and C graphs are Kohl's quotients by the `<b,c>` Kempe chains, so `B ∪ C` is Althöfer's union graph with the doubling rays contracted.
+
+**3. One exponent, three settings, three mechanisms.** The price of bounded-lookahead provability now has the sharp exponent `1 - h(log_3 2) = 0.0500445` in every setting studied.
+
+| setting | upper bound | lower bound | mechanism of the lower bound |
+|---|---|---|---|
+| pairing family | THM-4475 (`2 rho_L`) | THM-4478 | integer capacity (affine offsets) |
+| arbitrary fixed-horizon edits | THM-4478 (`rho_L`) | THM-4478 | integer capacity |
+| strategy cube (periodic) | THM-4479 (`\|Bad_k\|`) | THM-4479 | necklace packing (periodicity) |
+| (distribution-only arguments) | — | THM-4477: stops at `2(1-h)` | moments, which lose a square |
+
+**4. Orchestrator findings** ([note](procgen_wave13_20260926_orchestrator_findings.md), with two check scripts).
+* **Gersonides's four cycles.** An integer cycle of `3x+1` on `Z` is *free* when every parity word of its shape is integral. The free cycles are exactly `{0}, {-1}, {1,2}, {-5,-7,-10}`, i.e. `2-1`, `3-2`, `4-3`, `9-8 = 1`. The proof is a shift argument plus Levi ben Gershon's theorem of 1343.
+  * The fifth known cycle `{-17, ...}` is sporadic: its shape `(11,7)` has `3^7 - 2^11 = 139`, and exactly one of its 30 necklaces is integral.
+  * The five densities `0, 1/2 | 1, 2/3, 7/11` are the first best lower and upper approximations of `log_3 2`.
+  * `7/11` is the mediant of `2/3` (the `-5` cycle) and `5/8` (the critical Christoffel density of `sigma_k`).
+* **`3 + 1 = 2^2` in three roles.** It is simultaneously:
+  * THM-4470's pairing-sum preservation;
+  * THM-4477's moment criticality `g_q(2) = (1+q)/4 = 1`;
+  * the trivial cycle `1 -> 2 -> 1`.
+  
+  Each of the three holds iff `q = 3`. The continuous moment curve `g_3(s)` meets 1 exactly at the integer points `s = 1, 2`, which are the free cycles `{0}` and `{1,2}`.
+* **Positive drift makes arbitrary edits cheap.** For `5n+1` the undecided density stays near `0.2`. Yet catching each bad orbit high up makes `eps_L(5)` exponentially small.
+  * The digest's sharper form is the *peak-discounted density*: `eps_L(q) = rho^peak_L(q) = 2^(-L) sum_(Bad_L) 1/max_j slope_j`, up to `poly(L)`. The upper bound sends each bad source to 1 at its peak; the lower bound stratifies THM-4478's capacity by peak height.
+  * If this holds, the exponent is `1 - H(log_q 2)` for every odd `q`, whatever the drift sign (`0.01391` for `q = 5`). For `q = 3` the peak discount is `exp(-Theta(L^(1/3)))`, which would answer THM-4478's question P1 negatively for arbitrary edits.
+  * Lane `peak` is auditing and extending this. The periodic cube cannot see height and is polynomially sharp.
+
+**5. The owner's triple `{Petersen, K_{3,3}, K_5}` under Kuratowski and Tutte (typed; full table in the findings note §3).**
+* **The pattern.**
+  * **Kuratowski/Wagner** characterize a property (planarity) by excluded substructures.
+  * **Euler's formula** is the counting reason: each of the three graphs violates `E <= g(V-2)/(g-2)` at its girth `3, 4, 5`.
+  * **Tutte** adds a sporadic third obstruction for a neighbouring property, the Petersen graph for 4-flows, which contains both Kuratowski graphs as minors. His regular-matroid list `{F_7, F_7*}` + `U_{2,4}` is a dual pair plus a self-dual.
+* **The same pattern in Collatz.**
+  * Bounded-lookahead provability is characterized by excluded substructures, namely expanding cycles (THM-4474 A).
+  * The counting reason is entropy: `h(log_3 2)` sets the price in all three settings above.
+  * The two smallest expanding obstructions, `{-1}` and `{-5,-7,-10}`, are *forced by an identity*: `3 - 2 = 1` and `9 - 8 = 1` (Gersonides/Catalan).
+  * The third, `{-17, ...}`, is *sporadic* (`139 | c_w`). Its word `11110111000` contains the words `1` and `110`, it sits at the next Stern–Brocot approximant, and it is barely expanding (`3^7/2^11 = 1.068`).
+  * Every class-(i) strategy at every level must break all three.
+  * The level-2 cube is Tutte's shape: the `nu`-dual pair Collatz/3n−1 (both class (iv)), plus the self-duals `chi_(-4)` (the unique provable) and `-chi_(-4)` (maximally expanding).
+* **Typing.** The classifications are PROVED; the correspondences are ANALOGY. The flow numbers `2, 3, 5` against the multipliers `2, 3, 5` are NUMEROLOGY.
+* **Where the analogy stops, and what it isolates.** Kuratowski's list is finite, whereas the expanding cycles are an infinite family (necklaces `~ 2^(hk)`). The finite, integral part of the obstruction list is exactly the negative-side cycle problem: are `{-1}`, `{-5,...}` and `{-17,...}` the only expanding integer cycles? That is the 3x−1 cycle conjecture.
+* **Pythagorean root.** `(3,4,5)` reads as `3 + 1 = 2^2 = 5 - 1`: the trivial cycle of `3x+1` (contracting) and of `5x-1` (expanding), a ±1 sandwich around `2^2`. The arithmetic is PROVED; the reading is ANALOGY.
+
+**6. Discrete ↔ continuous, as of wave 13.**
+* **Integer spacing versus moments.**
+  * Distribution-only (Haar/moment) arguments lose a square, giving `2(1-h)` (THM-4477).
+  * Actual integer spacing recovers it (THM-4478), and so does periodicity through necklaces (THM-4479).
+* **Christoffel words.** These discrete lines of slope `F_k -> log_3 2` are the critical cycles of the provable approximants. The five integer cycles sit at the first best approximants of `log_3 2`.
+* **The moment curve** `g_3(s)` meets 1 at the integers `s = 1, 2`, which are free cycles.
+* **Potentials versus cycles.** This is LP duality. Real potentials are exactly the bounded Bernoulli-type corrections, and they exist iff there is no expanding cycle.
+* **Two places.** Periodic (2-adic) modifications cannot see height; archimedean ones can. Under positive drift this separates polynomial from exponential price. It is the same split as S5's `R(d)` against `R_2(d)`.
+
+**7. Wave 14 lanes (launched).**
+* **`mykk`.** Golomb–Mykkeltveit for expanding cycles: is the minimum feedback set of the expanding cycles of `B(2,k)` equal to the number of expanding necklaces? This gives the exact price of periodic deletions, and DRIFT for deletions via Mykkeltveit's sine-weight construction.
+* **`drift`.** Is 5n+1 in the Haar closure of the provable sign strategies?
+* **`tension`.** Three questions:
+  * periodic rank functions `<=>` class (i) `<=>` Lemma P, which connects Bernoulli-boundary's obstruction;
+  * Christoffel maximizers and "Christoffel rigidity" (`rho_max <= F_k` for every provable level-`k` strategy?);
+  * the `nu`-duality census.
+* **`peak`.** The peak-discounted price for every `q`, the `L^(1/3)` second-order term, and the pairing family.
 
 ## 2b. The approach deck: every approach generated or considered, with its disposition
 

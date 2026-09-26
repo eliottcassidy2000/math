@@ -1,0 +1,51 @@
+1. exponents
+   q=3: c_q = log_q 2 = 0.630930, 1 - H(c_q) = 0.050044 (negative drift: THM-4478 applies)
+   q=5: c_q = log_q 2 = 0.430677, 1 - H(c_q) = 0.013911, catch-high balance exponent theta_q = 0.011921
+   q=7: c_q = log_q 2 = 0.356207, 1 - H(c_q) = 0.060510, catch-high balance exponent theta_q = 0.047071
+   q=9: c_q = log_q 2 = 0.315465, 1 - H(c_q) = 0.100619, catch-high balance exponent theta_q = 0.075784
+  ok: q=5: theta_5 = 0.0119 (upper construction) and 1 - H(log_5 2) = 0.01392 (lower bound exponent)
+2. undecided density of 5n+1 stays positive
+   L=10: |Bad_L(5)|/2^L = 0.2598
+   L=14: |Bad_L(5)|/2^L = 0.2338
+   L=18: |Bad_L(5)|/2^L = 0.2283
+   L=22: |Bad_L(5)|/2^L = 0.2159
+3. the catch-high construction, built and verified on sources <= N
+   q=5 L= 8 W=  2.000: undecided 0.2734  edit density 0.1094 (high 0.1094, low 0.0000)  bound 1/W + band = 1.0000  all n<=N descend: True
+   q=5 L= 8 W=  4.000: undecided 0.2734  edit density 0.0338 (high 0.0338, low 0.0000)  bound 1/W + band = 0.7500  all n<=N descend: True
+   q=5 L= 8 W=  8.000: undecided 0.2734  edit density 0.0464 (high 0.0156, low 0.0313)  bound 1/W + band = 0.8984  all n<=N descend: True
+   q=5 L= 8 W=  1.500: undecided 0.2734  edit density 0.1094 (high 0.1094, low 0.0000)  bound 1/W + band = 1.1667  all n<=N descend: True
+   q=5 L=12 W=  2.000: undecided 0.2461  edit density 0.0985 (high 0.0985, low 0.0000)  bound 1/W + band = 1.0000  all n<=N descend: True
+   q=5 L=12 W=  4.000: undecided 0.2461  edit density 0.0304 (high 0.0304, low 0.0000)  bound 1/W + band = 0.7500  all n<=N descend: True
+   q=5 L=12 W=  8.000: undecided 0.2461  edit density 0.0206 (high 0.0149, low 0.0059)  bound 1/W + band = 0.8506  all n<=N descend: True
+   q=5 L=12 W=  1.500: undecided 0.2461  edit density 0.0985 (high 0.0985, low 0.0000)  bound 1/W + band = 0.9411  all n<=N descend: True
+   q=5 L=16 W=  2.000: undecided 0.2338  edit density 0.0935 (high 0.0935, low 0.0000)  bound 1/W + band = 0.8036  all n<=N descend: True
+   q=5 L=16 W=  4.000: undecided 0.2338  edit density 0.0289 (high 0.0289, low 0.0000)  bound 1/W + band = 0.7500  all n<=N descend: True
+   q=5 L=16 W=  8.000: undecided 0.2338  edit density 0.0149 (high 0.0144, low 0.0005)  bound 1/W + band = 0.6250  all n<=N descend: True
+   q=5 L=16 W=  1.500: undecided 0.2338  edit density 0.0935 (high 0.0935, low 0.0000)  bound 1/W + band = 0.9703  all n<=N descend: True
+   q=7 L= 8 W=  2.000: undecided 0.3438  edit density 0.0982 (high 0.0982, low 0.0000)  bound 1/W + band = 0.7266  all n<=N descend: True
+   q=7 L= 8 W=  4.000: undecided 0.3438  edit density 0.0370 (high 0.0370, low 0.0000)  bound 1/W + band = 0.7500  all n<=N descend: True
+   q=7 L= 8 W=  8.000: undecided 0.3438  edit density 0.0299 (high 0.0223, low 0.0078)  bound 1/W + band = 0.6250  all n<=N descend: True
+   q=7 L= 8 W=  1.500: undecided 0.3438  edit density 0.0982 (high 0.0982, low 0.0000)  bound 1/W + band = 0.8932  all n<=N descend: True
+   q=7 L=12 W=  2.000: undecided 0.3227  edit density 0.0922 (high 0.0922, low 0.0000)  bound 1/W + band = 0.7744  all n<=N descend: True
+   q=7 L=12 W=  4.000: undecided 0.3227  edit density 0.0346 (high 0.0346, low 0.0000)  bound 1/W + band = 0.5244  all n<=N descend: True
+   q=7 L=12 W=  8.000: undecided 0.3227  edit density 0.0217 (high 0.0214, low 0.0002)  bound 1/W + band = 0.3994  all n<=N descend: True
+   q=7 L=12 W=  1.500: undecided 0.3227  edit density 0.0922 (high 0.0922, low 0.0000)  bound 1/W + band = 0.9411  all n<=N descend: True
+   q=7 L=16 W=  2.000: undecided 0.3184  edit density 0.0909 (high 0.0909, low 0.0000)  bound 1/W + band = 0.6509  all n<=N descend: True
+   q=7 L=16 W=  4.000: undecided 0.3184  edit density 0.0341 (high 0.0341, low 0.0000)  bound 1/W + band = 0.5536  all n<=N descend: True
+   q=7 L=16 W=  8.000: undecided 0.3184  edit density 0.0212 (high 0.0212, low 0.0001)  bound 1/W + band = 0.4286  all n<=N descend: True
+   q=7 L=16 W=  1.685: undecided 0.3184  edit density 0.0909 (high 0.0909, low 0.0000)  bound 1/W + band = 0.7442  all n<=N descend: True
+  ok: q=5,7: G = 1 on E makes every 2 <= n <= 4e5 descend within L; the edit density respects 1/W + band(W)
+4. the bound as L grows (exact arithmetic on words), q = 5, W = 2^(theta L)
+   L=  50: upper bound 8.574e-01   (1/L) log2 = -0.00444
+   L= 100: upper bound 5.515e-01   (1/L) log2 = -0.00859
+   L= 200: upper bound 2.241e-01   (1/L) log2 = -0.01079
+   L= 400: upper bound 4.126e-02   (1/L) log2 = -0.01150
+   L= 800: upper bound 1.497e-03   (1/L) log2 = -0.01173
+  ok: the upper bound decays like 2^(-0.0119 L + o(L)) for q = 5
+5. THM-4478 Theorem A transferred to q = 5 (R_L with floor(k/q), window log_q K)
+   L= 8: lower bound 2.219e-04 <= eps_L(5) <= 7.500e-01
+   L=12: lower bound 3.040e-05 <= eps_L(5) <= 7.500e-01
+   L=16: lower bound 9.827e-06 <= eps_L(5) <= 6.250e-01
+   L=20: lower bound 2.456e-06 <= eps_L(5) <= 5.625e-01
+   L=24: lower bound 8.642e-07 <= eps_L(5) <= 5.625e-01
+  ok: lower (capacity) <= upper (catch-high) at every tested L
