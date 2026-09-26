@@ -1,0 +1,16 @@
+(Q) exact two-place identity 2^(d_l) m_l = 3^l n + S_(l-1), and Q_l = n C_l = m_l 2^(Delta_l) increasing, |Q_l|_2 = 2^(-d_l):
+   n=    27: 41 odd iterates; identity exact: True; Q_l increasing: True; C_final = 1.198849, R_final/n = 0.198849
+   n=   703: 62 odd iterates; identity exact: True; Q_l increasing: True; C_final = 1.209947, R_final/n = 0.209947
+   n= 26623: 113 odd iterates; identity exact: True; Q_l increasing: True; C_final = 1.147785, R_final/n = 0.147785
+(P) phase equidistribution: discrepancy D_N of {log_2 m_l} (uniform) and of {log_2 m_l - l alpha} (should converge, not equidistribute):
+   3n+1 from 2^60-1         N=  310  D_N(phase)=0.0126 (uniform ~ 0.0568)  shift log2 C_l: first -0.00000, last 0.24659, max-min over last half 2.47e-01
+   3n+1 from 2^200-1        N=  980  D_N(phase)=0.0046 (uniform ~ 0.0319)  shift log2 C_l: first 0.00000, last 0.32171, max-min over last half 3.22e-01
+   5n+1 from 7 (alpha = log2 5) N= 3001  D_N(phase)=0.0016 (uniform ~ 0.0183)  shift log2 C_l: first 0.04064, last 0.10258, max-min over last half 9.09e-13
+   3n+1 record 63728127     N=  358  D_N(phase)=0.0063 (uniform ~ 0.0529)  shift log2 C_l: first 0.00000, last 0.24296, max-min over last half 2.43e-01
+(X) crossings of dyadic levels by the odd iterates (record-holder 3n+1 orbits and 5n+1): level 2^t, #odd iterates below, #downcrossings (m_(l-1) > 2^t >= m_l)
+   3n+1 from 63728127     2^10: 16/2  2^14: 35/3  2^18: 66/4  2^22: 93/2  2^26: 107/2  2^30: 172/5
+      band (2^17, 2^18]: visits at l = [265, 280, 317, 318, 319, 322]; (M, D) between successive visits: [(15, 24), (37, 59), (1, 1), (1, 2), (3, 5)]; |M alpha - D| = ['0.23', '0.36', '0.58', '0.42', '0.25']
+   3n+1 from 2^60-1       2^10: 36/3  2^14: 54/4  2^18: 65/1  2^22: 65/1  2^26: 72/4  2^30: 107/2
+      band (2^17, 2^18]: visits at l = [245, 246, 247]; (M, D) between successive visits: [(1, 1), (1, 2)]; |M alpha - D| = ['0.58', '0.42']
+   5n+1 from 7            2^10: 8/0  2^14: 14/0  2^18: 25/1  2^22: 37/1  2^26: 56/1  2^30: 70/2
+      band (2^17, 2^18]: visits at l = [20, 23, 32]; (M, D) between successive visits: [(3, 7), (9, 21)]; |M alpha - D| = ['2.25', '6.74']

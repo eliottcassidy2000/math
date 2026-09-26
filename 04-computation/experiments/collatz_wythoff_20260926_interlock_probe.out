@@ -1,0 +1,11 @@
+colour classes equal (AA, B, AB) for n < 20000: True; densities: red 0.3820 black 0.3820 blue 0.2361 (phi^-2 = 0.3820, phi^-1 = 0.6180... expected red 1/phi^3=0.2361? black 1/phi^2=0.3820 blue 1/phi^3=0.2361)
+N = 300000: mutual information I(colour(n); target) [target entropy]
+   parity: 0.00000 [1.000]   v2(3n+1) mod 3 (odd): 0.00000 [1.379]   descent<=20: 0.00001 [0.174]   stop mod 3: 0.00000 [1.585]   colour(U(n)) (odd): 0.00518 [1.552]   colour(2n): 0.36914 [1.552]
+colour(n) -> colour(2n) (doubling), row-normalised:
+   red: 0.1910  0.5000  0.3090
+   black: 0.5000  0.5000  0.0000
+   blue: 0.5000  0.0000  0.5000
+colour(n) -> colour(U(n)) for odd n (Syracuse step), row-normalised:
+   red: 0.3931  0.3531  0.2538
+   black: 0.3611  0.3853  0.2537
+   blue: 0.3975  0.4236  0.1788

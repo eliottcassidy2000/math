@@ -309,6 +309,13 @@ all heights (THM-1289, published), δ ineffective.
   [THM-4502/4503 and atomic mass](../05-knowledge/results/crossroads_poset_20260926_board.md)
   give certified growth families and an exact poset/height bridge; pointwise
   decay of the full-support mass remains equivalent to OPEN Collatz.
+  **Crossings (opus, 2026-09-26):** the real place of a divergent orbit is a
+  rigid rotation (Benford along the orbit), the two-place clock `Q_l` moves
+  by `O(1/m)` per step, stays below `X` of length `>= log_2 X` are ballot-thin
+  but short stays are not counted by anything; HYP-9161 restated in
+  THM-4506's averaged form (`#Dip(X,D) <= C L^mu N(X 2^-D) + C L^2` along the
+  orbit), the literal per-segment reading being refuted; the no-descent
+  posets (THM-4503) have balance constant `1/2`.
 - **Erdős Problem 592** [DEEP — $1000 problem] — the p=2 Schur-seam theorem (THM-469),
   R(n,2)=2n+1 linear conjecture, Chang-tower m=3 open; 21 scripts, a survey draft.
 - **{7,21} forbidden H-spectrum** [DEEP, repo-signature] — permanent exclusions by
