@@ -1,0 +1,28 @@
+tube 6 3 sources 4 max_actual_hub 1 M 18
+tube 6 9 sources 28 max_actual_hub 4 M 27
+tube 6 27 sources 32 max_actual_hub 4 M 36
+tube 8 3 sources 4 max_actual_hub 1 M 30
+tube 8 9 sources 60 max_actual_hub 6 M 45
+tube 8 27 sources 76 max_actual_hub 6 M 60
+tube 10 3 sources 4 max_actual_hub 1 M 44
+tube 10 9 sources 164 max_actual_hub 7 M 66
+tube 10 27 sources 248 max_actual_hub 7 M 88
+tube 12 3 sources 4 max_actual_hub 1 M 60
+tube 12 9 sources 432 max_actual_hub 7 M 90
+tube 12 27 sources 816 max_actual_hub 10 M 120
+rotation 2 2 distinct_good 1 binomial 1
+rotation 3 2 distinct_good 1 binomial 3
+rotation 4 3 distinct_good 2 binomial 4
+rotation 5 4 distinct_good 3 binomial 5
+rotation 6 4 distinct_good 3 binomial 15
+rotation 7 5 distinct_good 7 binomial 21
+rotation 8 6 distinct_good 12 binomial 28
+rotation 9 6 distinct_good 12 binomial 84
+rotation 10 7 distinct_good 30 binomial 120
+rotation 11 7 distinct_good 30 binomial 330
+rotation 12 8 distinct_good 85 binomial 495
+rotation 13 9 distinct_good 173 binomial 715
+rotation 14 9 distinct_good 173 binomial 2002
+rotation 15 10 distinct_good 476 binomial 3003
+rotation 16 11 distinct_good 961 binomial 4368
+PASS independent actual-source capacity and critical-block rotation audit

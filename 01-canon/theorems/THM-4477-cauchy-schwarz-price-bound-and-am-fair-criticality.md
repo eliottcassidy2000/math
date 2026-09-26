@@ -24,8 +24,10 @@ status: >
   (AM-HM) loss, which abstracts away which orbit meets which hub. It is
   forced because the cascade's second root kappa = 2 of g = 1 holds iff
   E_fwd[w] = (1+q)/4 = 1, iff q = 3.
-  OPEN: M2(L) = poly(L) (HYP-9139, which would give 0.1001); the sharp
-  exponent 1 - h (HYP-9137).
+  OPEN: M2(L) = poly(L) (HYP-9139, which would give 0.1001 within this
+  moment method). UPDATE 2026-09-26: the sharp exponent 1-h (HYP-9137) is
+  PROVED by THM-4478, using a growth-band restriction and actual integer
+  incidence, beyond the distribution-only scope of this theorem.
 source: collatz-procgen-20260922 session, Cauchy-Schwarz lane (2026-09-25), from the coordinator's observation g_q(2) = (1+q)/4 and the owner's thesis that Cauchy-Schwarz / AM-GM marks where structure is abstracted away; audited and promoted by the session orchestrator 2026-09-25
 depends_on:
   - 01-canon/theorems/THM-4475-price-of-provable-descent-tends-to-zero.md
@@ -104,6 +106,11 @@ audit: >
   * The data show the abstraction is costly. Bad orbits carry about `2–2.6` times the average hub weight, where Cauchy–Schwarz must allow `1/rho_L`, which is about `31` at `L = 16`.
 
 ## 5. Beyond moments (for HYP-9137)
+
+**Current resolution, 2026-09-26:** [THM-4478](THM-4478-critical-tube-affine-capacity-sharp-provability-price.md)
+proves HYP-9137 via critical growth bands and affine integer intervals.
+The historical harmonic route below remains interesting, but is not needed
+for the sharp exponent. HYP-9139 itself remains OPEN.
 
 * **The harmonic bound (lane Theorem P, PROVED).** `delta_bar >= H_L = E[1_Bad / max_(j<L) W_L(X_j)] >= max(rho_L^2/M2(L), rho_L/max W_L)`.
 * **Data.** Numerically `H_L ≈ 3.2 rho_L/M2(L)` for `L <= 16`, i.e. only a polynomial loss against `rho_L`.

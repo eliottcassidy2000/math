@@ -3,8 +3,9 @@ from fractions import Fraction
 from collections import Counter
 from hashlib import sha256
 from pathlib import Path
-from math import comb
+from math import comb, prod
 from itertools import combinations
+from functools import lru_cache
 
 
 def odd_step(n, q=3, sign=1):
@@ -42,6 +43,7 @@ def balanced_lift(r):
     return n, path
 
 
+@lru_cache(None)
 def factor(n):
     out, p = {}, 2
     while p*p <= n:
@@ -76,6 +78,33 @@ def transition_rank(path):
                 if row[p] == 0:
                     del row[p]
     return len(basis)
+
+
+def transition_rank_mod(path, q=3, sign=1, closing=None):
+    prime = 1000000007
+    basis = {}
+    pairs = list(zip(path, path[1:]))
+    if closing is not None:
+        pairs.append((path[-1],closing))
+    for x,y in pairs:
+        z = q*x+sign
+        k = (z & -z).bit_length()-1
+        assert z >> k == y
+        row = {(0,p):e for p,e in factor(q*x).items()}
+        row.update({(1,p):e for p,e in factor(y).items()})
+        row[1,2] = k
+        while row:
+            pivot = min(row)
+            if pivot not in basis:
+                a = pow(row[pivot],prime-2,prime)
+                basis[pivot] = {p:v*a%prime for p,v in row.items()}
+                break
+            a = row[pivot]
+            for p,v in basis[pivot].items():
+                row[p] = (row.get(p,0)-a*v)%prime
+                if row[p] == 0:
+                    del row[p]
+    return len(basis), len(pairs)
 
 
 def main():
@@ -136,6 +165,30 @@ def main():
         if rank != len(path)-1:
             rank_failures.append((n, len(path)-1, rank))
     print('FULL_TRANSITION_RANK_HYPOTHESIS',1000,'paths',len(rank_failures),'failures',rank_failures[:10])
+    modular_failures = []
+    assert factor(1000000007) == {1000000007:1}
+    for n in range(1,100001,2):
+        path, _, _ = distinct_path(n)
+        rank, edges = transition_rank_mod(path)
+        if rank < edges:
+            modular_failures.append((n,edges,rank))
+    print('PLUS_MODULAR_FULL_RANK',50000,'odd sources through99999',
+          'prime1000000007','failures',modular_failures)
+    for n in (1,5,17,23,9351):
+        path,end,closed = distinct_path(n,3,-1)
+        rank,edges = transition_rank_mod(path,3,-1,end if closed else None)
+        print('MINUS_CYCLE_INCLUSIVE_RANK',n,edges,rank)
+    positive = (11,43,65,253)
+    negative = (13,23,121,215)
+    assert prod(3*n for n in positive) == prod(3*n for n in negative)
+    assert prod(3*n+1 for n in positive) == prod(3*n+1 for n in negative)
+    nodes = sorted(positive+negative)
+    successors = [odd_step(n)[0] for n in nodes]
+    assert len(set(successors)) == len(nodes)
+    print('GENERIC_INJECTIVE_EDGE_HOSTILE',nodes,successors,'positive',positive,'negative',negative)
+    assert odd_step(55) == (83,1) and odd_step(83) == (125,1)
+    assert set(factor(125)) <= set(factor(55)) | set(factor(83))
+    print('NO_FRESH_PRIME_RISE_HOSTILE',55,83,125,'factor125',factor(125))
     print('INDEPENDENT PRICE AUDIT: b, ceil(b log_3 2), good_rotated_words, binomial')
     for b in range(1, 15):
         e = 0

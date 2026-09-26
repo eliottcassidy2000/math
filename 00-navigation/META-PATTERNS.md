@@ -3,13 +3,13 @@
 **Status:** CURRENT. Cards require distinct-thread evidence or a severe
 repaired failure; retain triggers and counterindications.
 
-## Separate unbounded local support from a height-bounded modular cover
+## Separate local support from bounded-height coverage
 
-**Trigger/action:** retain height and terminal tests when local maps are onto. **Evidence:** THM-4026/4027; THM-2059 and THM-2043/2050; [three dense Collatz basins](../05-knowledge/results/arithmetic_braids2_20260917_inverse_completion.md). **Counterindication:** a new integer per finite prefix does not control one integer's tail. Check quantifiers and no-reentry.
+**Action:** keep height, terminal tests and no-reentry: local surjectivity gives no integer tail. **Evidence:** THM-4026/4027/2059/2043/2050; [Collatz basins](../05-knowledge/results/arithmetic_braids2_20260917_inverse_completion.md).
 
-## Separate observer type, recurrence class, and finite head
+## Keep observer, recurrence class, and finite head
 
-**Action:** separate observer, evaluator, C/P class, zeros, and bulk/residue/head; no column determines another. THM-3288's degree-14 tail with prefix/Hankel order 15 is a sharp head tax. **Evidence:** THM-3172/3186/3210, THM-3200/3211, THM-3202/3213/3288.
+**Action:** retain observer, evaluator, C/P class, zeros, bulk, residue and head separately. **Evidence:** THM-3172/3186/3210, THM-3200/3211, THM-3202/3213/3288; THM-3288 has degree14 but prefix/Hankel order15.
 
 ## Peel the distinguished prime, then force a small torsion collision
 
@@ -52,13 +52,10 @@ retain color/amplitude/owner, and test phase-invisible same-axis dilation.
 
 **Action:** before naming a lemma, search constants, quantifiers, shape, IDs, synonyms, and citations; different methods hide the same theorem. Independent rederivation remains useful as explicit verification. **Evidence:** MISTAKE-158/183/187/189/200 in [`MISTAKES.md`](../01-canon/MISTAKES.md).
 
-## Retain the local profile until its global counting weights are known
+## Retain local incidence through counting
 
-**Action:** when deletion or intersection loses a scale-dependent term, search
-small exact profiles for a joint inequality and retain ambient occurrence counts.
-**Boundary:** individual layers may vanish; averaging supplies no entry map.
-**Evidence:** THM-4416's local cycle comparisons close D5/D6; independently,
-THM-4418's sheet-phase mass/count bounds pay the omitted-comb tail. The maps differ.
+**Action/boundary:** retain incidence when margins lose targets. Trim tails only after proving enough population remains; averages give no entry or infinite-tail theorem.
+**Evidence:** THM-4416 (D5/D6), THM-4418 (comb tails), [THM-4478](../01-canon/theorems/THM-4478-critical-tube-affine-capacity-sharp-provability-price.md) combines entropy-preserving growth bands with integer source intervals.
 
 ## Correct the object before sharpening the technique
 

@@ -194,11 +194,38 @@ def inverse_multiplicity_audit():
             "admissible_ancestors_checked":ancestors_checked,"largest_count_over_bound":str(largest_ratio)}
 
 
+def parameter_tube_audit():
+    """Forward-source implementation for A<1 and signed intercepts."""
+    groups_checked=0
+    old_bound_hostile=None
+    for q,sign,A in [(3,1,Fraction(1,16)),(3,-1,Fraction(1,4)),(5,1,Fraction(1,2))]:
+        groups={}
+        for source in range(1,8193):
+            v,e=source,0
+            for k in range(1,19):
+                e += v&1
+                v=shortcut(v,q,sign)
+                w=Fraction(q**e,2**k)
+                if w < A: break
+                h=Fraction(v,w)-source
+                assert 0 <= sign*h <= Fraction(k,q)/A
+                groups.setdefault((v,k,e),[]).append(source)
+        for (hub,k,e),sources in groups.items():
+            bound=int(Fraction(k,q)/A)+1
+            assert len(sources)<=bound
+            groups_checked+=1
+            if len(sources)>k//q+1 and old_bound_hostile is None:
+                old_bound_hostile={"q":q,"sign":sign,"A":str(A),"hub":hub,"k":k,"e":e,"sources":sources,"old_bound":k//q+1,"repaired_bound":bound}
+    assert old_bound_hostile is not None
+    return {"sources_per_sheet":8192,"max_depth":18,"groups_checked":groups_checked,"A1_bound_hostile":old_bound_hostile}
+
+
 def main():
     print("Exact incidence, not a random-orbit model. Badness is the slope-prefix predicate.")
     print("Direct pointwise energy audits:", sum(direct_audit(L,q,s) for q,s in [(3,1),(3,-1),(5,1)] for L in range(1,5)))
     print("Affine/cycle controls:", json.dumps(cohomology_probes(), sort_keys=True))
     print("Independent inverse multiplicity audit:",json.dumps(inverse_multiplicity_audit(),sort_keys=True))
+    print("Parameterized affine tubes:",json.dumps(parameter_tube_audit(),sort_keys=True))
     plus = []
     for q,s,maxdepth in [(3,1,14),(3,-1,10),(5,1,10)]:
         print("SHEET", q, s)

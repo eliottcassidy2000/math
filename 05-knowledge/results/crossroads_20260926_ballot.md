@@ -111,3 +111,40 @@ a different family of ordinary integers for every finite L, not one integer
 with an infinite bounded or slowly widening itinerary.
 
 Reproduce: `python3 04-computation/experiments/crossroads_20260926_ballot.py`.
+
+## 5. Retaining the exact block gain improves finite certificates
+
+The asymptotic proof used P=3^k/2^b<3. Retaining P instead gives
+
+    K=max(P^(t-1)(3/2)^k, P^t(3/2)^r),               (3)
+
+because a block with k ones has no internal multiplier above (3/2)^k.
+This is a concrete use for rational approximations k/b to log_3(2): a small
+endpoint error reduces accumulated growth. It supplies a certificate
+parameter, not a cycle exclusion or an irrationality theorem.
+
+For a completely integral capacity constant, use
+
+    M=sum_(j<L)(j+1)(floor(j/3)+1),
+
+which overcounts all possible odd counts. If K=3^x/2^y is the larger term
+in (3), the following factored lower bound is exact:
+
+    binom(b,k)^t 2^y / (b^t 2^L 3^x M).              (4)
+
+The script chooses among an explicitly stated finite candidate bank using
+approximate logarithms; it does not certify global optimality. Selection
+does not affect the validity of (4), and comparison of the two possible
+values of K uses integer powers. Descriptive decimal negative logarithms:
+
+| L | chosen b | -log_2 of lower bound (4), approximately |
+|---|---|---|
+| 100 | 50 | 59.455331 |
+| 1000 | 125 | 211.107883 |
+| 10000 | 500 | 1020.878229 |
+| 100000 | 1369 | 6821.161268 |
+| 1000000 | 7812 | 55616.245172 |
+
+These finite bounds are weak at small L even though the limiting exponent
+is sharp. The output retains every exact binomial, power and capacity
+factor, rather than treating the displayed decimal as a certificate.

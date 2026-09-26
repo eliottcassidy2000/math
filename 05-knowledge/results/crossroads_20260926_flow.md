@@ -190,21 +190,21 @@ Write
 
     alpha=log_3 2,  h=H_2(alpha),  eta=1-h.
 
-The coordinator supplies the following elementary population construction, repeated here to make the consequence explicit. Choose block length `b=floor(sqrt L)` and exactly `e=ceil(alpha b)` odd symbols per block. Then the block's final slope is strictly between 1 and 3. Rotating immediately after a minimum partial log-slope produces a word with every prefix slope greater than one. Each resulting word has at most b preimages under this rotation selection, so there are at least `binomial(b,e)/b` good blocks.
+The coordinator supplies the following elementary population construction, repeated here to make the consequence explicit. Choose a block length b with `b=o(L)` and exactly `e=ceil(alpha b)` odd symbols per block. Then the block's final slope is strictly between 1 and 3. Rotating immediately after a minimum partial log-slope produces a word with every prefix slope greater than one. Each resulting word has at most b preimages under this rotation selection, so there are at least `binomial(b,e)/b` good blocks.
 
 Concatenate `t=floor(L/b)` such blocks and fill the remainder with odd symbols. Every prefix slope is at least one and is bounded by
 
-    K_L=3^(t+1) (3/2)^b=exp(O(sqrt L)).                  (18)
+    K_L=3^(t+1) (3/2)^b=exp(O(L/b+b)).                   (18)
 
 The number of selected words is at least `(binomial(b,e)/b)^t`, hence elementary Stirling bounds give
 
-    rho_L^tube >= 2^(-eta L-O(sqrt L log L)).             (19)
+    rho_L^tube >= 2^(-eta L-O(b+(L/b)log b)).             (19)
 
 Strictness at nonempty prefixes follows from irrationality of log_3 2: no nonempty prefix has slope exactly one. Concatenation is injective because block boundaries are fixed.
 
-Since `K_L M_L(K_L)=exp(O(sqrt L)) poly(L)`, (17) and (19) give
+Choosing `b` of order `sqrt(L log L)` balances the remainder and block-count costs. Equations (17)--(19) give
 
-    lower flip density >= 2^(-eta L-O(sqrt L log L)).     (20)
+    lower flip density >= 2^(-eta L-O(sqrt(L log L))).    (20)
 
 Together with the inherited THM-4475 upper bound `delta_L<=2 rho_L<=2^(1-eta L)`, the consequence is
 
@@ -214,7 +214,129 @@ This closes the stated sharp exponential-rate target for the price of enforcing 
 
 The result is consistent with THM-4477's distribution-only square-loss theorem: (17) uses actual source intervals at fixed ordered affine slope, information absent from the unrestricted hub-weight law. It is also consistent with the minus sheet: its negative normalized carry has the same interval width, and for any fixed finite family all sufficiently large sources with slopes above one still fail to descend. Thus the price exponent can agree even though the minus map has nontrivial positive cycles.
 
-## 7. Controls, scope, and reproduction
+### Arbitrary edit maps have the same exponential price
+
+Let G be any deterministic map from positive integers to positive integers and let `D={n:G(n)!=T(n)}`. Require every n>1 to descend below itself within L G-steps. Every selected tube source must meet D in its first L T-vertices. The same finite count, now with individual edited vertices instead of pairs, yields
+
+    lower density(D)>=rho/[K M_L(K)].                    (22)
+
+For the upper bound define the actual finite-horizon bad set
+
+    B_L={n>1:T^j(n)>=n for all 1<=j<=L}
+
+and set G(n)=1 on B_L and G(n)=T(n) elsewhere. A source in B_L descends immediately. Any other source follows its original descending path until it either descends or encounters B_L and is sent to 1. Thus G satisfies the required L-step property.
+
+The density of B_L is exactly rho_L. Indeed, each length-L parity class is affine at every prefix. A class with a prefix slope below one descends there above a finite threshold; a class with all prefix slopes above one never descends under the positive carry. No nonempty prefix has slope exactly one. Therefore B_L differs from the periodic slope-bad set by only finitely many integers.
+
+Consequently, if epsilon_L is the infimum upper edit density over these arbitrary G, then
+
+    2^(-eta L-O(sqrt(L log L))) <= epsilon_L
+                                  <=rho_L<=2^(-eta L).   (23)
+
+The rate is therefore the same for arbitrary edits and for the more constrained pairing family. The shortcut T itself has no uniform finite L; a zero edit set cannot satisfy this property. Neither the existence of arbitrarily sparse successful edits nor their exact rate proves convergence of T.
+
+## 7. Parameter form: affine tubes beyond the Collatz alphabet
+
+The mechanism is more general than its entropy application. Let `T_(q,sigma)` use n/2 on even n and `(qn+sigma)/2` on odd n, where q>=3 and sigma are odd integers. Consider any selected length-L actual source paths whose slopes satisfy
+
+    0<A<=w_j=q^e_j/2^j<=K,    0<=j<=L,    A<=1<=K.
+
+Their offsets have one sign and obey
+
+    |h_k|<=k |sigma|/(q A).
+
+At fixed time k the exponent e has at most `floor(log_q(K/A))+1` possible values, and each fixed slope has at most `floor(k |sigma|/(q A))+1` integer ancestors at any hub. Thus replace (13) by
+
+    M_(q,sigma,A,K,L)
+      =(floor(log_q(K/A))+1)
+        sum_(k<L)(floor(k |sigma|/(q A))+1).              (24)
+
+Any edit set required to hit every selected path satisfies the same density cut `density(D)>=rho/(K M)`, provided the selected source set has density rho; finitely many small sources that leave the positive domain may be omitted. The endpoint range is now bounded above by `K(X+L |sigma|/(q A))`.
+
+For A<1 this is only a **hitting-set theorem**: membership in the tube no longer guarantees lack of numerical descent. The reason the edit set must hit these paths must be supplied separately. No drift conclusion follows merely from (24). The q=5 control retains its positive cycles, and the theorem has no automatic population estimate for a new multiplier.
+
+The lower slope bound is load-bearing. For q=3 and sigma=1 the three sources `4,5,6` all reach hub 2 in exactly five shortcut steps with exactly two odd steps. Their prefix slopes stay above 1/16, but the A=1 multiplicity bound would give only `floor(5/3)+1=2`. The repaired bound (24) permits these three. The failure is caused by accumulated normalized offset during the contracting prefixes, exactly the coordinate A controls.
+
+An even broader finite-alphabet version needs no prime powers. Suppose a deterministic integer map has d positive slopes `a_1,...,a_d` and finitely many affine branches `a_i n+b_i`, with `|b_i/a_i|<=B`. Along a path with every product slope at least A, the normalized offset lies in `[-kB/A,kB/A]`. At time k there are at most `binomial(k+d-1,d-1)` possible products of slopes. Hence a valid uniform capacity is
+
+    sum_(k<L) binomial(k+d-1,d-1)(floor(2kB/A)+1).       (25)
+
+If all intercepts have the same sign, replace 2kB/A by kB/A. This is polynomial in L for a fixed branch alphabet and fixed A,B. A slope cap K again converts it to an edit-density bound. Allowed branch words, actual integer guards, source population density, and the need to hit a path remain explicit inputs; an arbitrary affine alphabet does not inherit Collatz's parity-word count.
+
+## 8. Fixed-slope injectivity is REFUTED; the carry interval survives
+
+**REFUTED candidate, never used in the price proof:** at fixed time k and odd count e, the slope-undecided integer source-to-hub map need not be injective. The temptation was to replace `floor(k/3)+1` in (13) by one. The counterexample below retains two actual positive sources, every slope prefix, the endpoint, and both ordered carries. Minimality is not claimed.
+
+The candidate first survived two finite probes: all sources through 1000000 and times through 40 (2388567 surviving prefixes), and all symbolic slope-undecided words through length 24 (654279 words, covering all integer heights at those depths). A structured carry decoder then found a collision at
+
+    k=233,  e=153,  source difference=4.
+
+### Exact positive source construction
+
+Let u be the least positive inverse of `3^153` modulo `2^80`, and set
+
+    u=186937257649965781719819,
+    N=2^153 u-1,
+    M=N-4,
+    v=(3^153 u-1)/2^80.
+
+Both sources are positive odd integers. Explicitly,
+
+    M=2134446157293545680116155684904813624866473205075599455753325089128443,
+    N=2134446157293545680116155684904813624866473205075599455753325089128447,
+    v=1544714368800273392784179563875656116569530364984522231576309181404945461.
+
+Their actual shortcut parity words, where 1 means an odd step, are
+
+    N: 1^153 0^80,
+    M: (110)^51 t,
+    t=01110111100111110111011110110011111111110010011110000100101111010011001101010101.
+
+The tail t has length 80 and contains 51 ones, so both complete words have length 233 and contain 153 ones. Every nonempty prefix in both words satisfies `3^e_j>2^j`. The actual integer trajectories both finish at v; this is explicitly replayed, rather than inferred solely from an affine equation.
+
+Put `A=3^153`. The ordered carries are
+
+    C_N=A-2^153,
+    C_M=5A-2^153,
+    C_M-C_N=4A.
+
+Thus `A(N-4)+C_M=A N+C_N`, exactly explaining the merger. The normalized offsets differ by the integer 4. The safe interval capacity remains valid; the failed implication was that two admissible offsets could never differ by an integer source separation.
+
+The construction also recovers earlier negative-center structure: `N=-1 mod2^153` initially follows the all-odd center -1, whereas `M=-5 mod2^153` follows the negative shortcut cycle `-5 -> -7 -> -10 -> -5`, with word 110 for 51 copies. The common parity-prefix lengths with these respective negative trajectories are exactly 153: each positive word next takes an even step where its negative reference takes an odd step. Their normalized final offsets are exactly `1-(2/3)^153` and `5-(2/3)^153`. This is a precise shared-prefix and carry statement, not a claim that either positive source lies on a negative orbit.
+
+### How the hostile was found
+
+For odd positions `0=p_1<p_2<...<p_e`, the carry is
+
+    C=sum_(i=1)^e 3^(e-i) 2^p_i.
+
+Given C and e, a candidate position list is decoded greedily: take the two-adic valuation of the remaining carry as p_i, subtract `3^(e-i)2^p_i`, and continue. Retain only increasing positions with `2^p_i<3^(i-1)` for i>=2, zero final remainder, and final slope above one. The bounded family `C=(d+1)3^e-2^e`, `3<=e<=200`, and `d=4,8,...<=e/3` compares against the dense-odd carry `3^e-2^e`. It produced the displayed e=153,d=4 witness without a huge source enumeration.
+
+### Strongest surviving injectivity statement: all heights through time 31
+
+Every slope-undecided source for k>=2 has its first two symbols odd, so its source class is `3 mod4`. At fixed k,e the minimum normalized carry is
+
+    h_min=1-(2/3)^e,
+
+attained by putting all odd symbols first. The largest legal positions are
+
+    p_1^max=0,
+    p_i^max=min(ceil((i-1)log_2 3)-1, k-e+i-1),
+    h_max=sum_(i=1)^e 2^(p_i^max)/3^i.
+
+These bounds are simultaneous: the position ceilings increase strictly, satisfy every prefix guard, and leave room for the remaining odd symbols. Hence they give the exact offset width for fixed k,e.
+
+For all 199 possible `(k,e)` pairs with `1<=k<=31` and `3^e>2^k`, the width is strictly below 4. The maximum is
+
+    13805179460/3486784401 = 3.9592868...,
+
+at k=31,e=20. Two distinct sources in the same `3 mod4` class differ by at least 4, so no collision is possible through time 31 at any height. The case k=1 has only one word. At k=32,e=21 the width becomes `43561973452/10460353203>4`; this is an opening of the interval bound, not a collision assertion.
+
+A separate obstruction explains why one-position experiments miss the phenomenon. Moving just the i-th odd position by d changes C by `3^(e-i)2^p(2^d-1)`. Divisibility by `3^e` requires d even and `d>=2*3^(i-1)`. The slope guard instead gives `d<(i-1)(log_2 3-1)`, an impossibility. Thus a collision needs coordinated changes of several odd positions, as in the explicit witness.
+
+Reproduce with [crossroads_20260926_flow_collision.py](../../04-computation/experiments/crossroads_20260926_flow_collision.py); exact [normal output](crossroads_20260926_flow_collision.out) and [optimized output](crossroads_20260926_flow_collision_optimized.out). Both runs pass and are byte-identical. Validation uses explicit checks that remain enabled under `python3 -O`, including both actual parity words, every strict prefix slope, final endpoint, odd counts, carry difference, and the modular-inverse source construction. Independently, the root coordinator reconstructed the least source class as `(-C_N * (3^153)^(-1)) mod2^233`, obtained the same N, and directly replayed both positive shortcut trajectories with all prefix guards and both carries. The conjectured injectivity is retired; the polynomial interval capacity and sharp-price theorem are unchanged.
+
+## 9. Controls, scope, and reproduction
 
 The script [crossroads_20260926_flow.py](../../04-computation/experiments/crossroads_20260926_flow.py) uses Python integers and Fraction only. Output: [crossroads_20260926_flow.out](crossroads_20260926_flow.out).
 
@@ -226,6 +348,7 @@ Universes:
 * pointwise verification of cylinder-intersection energy on every CRT residue through L=4 for all three maps;
 * exact full-period source/hub harmonic dual through L=6, including the independent change-of-variables check;
 * an independent inverse-tree implementation for hubs 1..128 and depths 1..18 on all three maps, checking the affine-offset interval and fixed-(k,e) multiplicity;
+* a separate forward implementation on sources 1..8192, depths through 18, and three signed/multiplier parameter settings, checking 209730 source groups with lower slope A<1 and retaining the explicit `4,5,6` hostile above;
 * exact Bernoulli(3/4) tilted survival through L=256;
 * slope caps 2,4,8,16,32 and L=6,8,10,12,14, retaining every exact source offset.
 

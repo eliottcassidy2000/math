@@ -371,17 +371,27 @@ orbit has distinct terms and Corollary 1 applies. For the Dirichlet series,
 denominator, as `r in Z_2`), then `d` is the `T_(+1)`-word of `-r` and the
 `T_(-1)`-word of `r` (Proposition 6(6)), and `-r` has a non-eventually-
 periodic orbit, thin by the theorem applied to `T_(+-D)` with `D` the
-denominator. If `-r > 0` its orbit is `m_j = 2^(-Delta_j)(|r| + (1/3) sum_(i<j) 2^(Delta_i)) <= K j^(max(1,a)+o(1))`,
-so `N(X) >= X^(1/max(1,a) - o(1))`, contradicting thinness since
-`1/max(1,a) > h*`. If `r > 0` the orbit is on the minus sheet, where
-`m_j = 2^(-Delta_j) c_j <= r j^(a+o(1))` gives the same contradiction when
-`a > 1`, while for `a <= 1` the series `sum 2^(Delta_j) >= sum j^(-a-o(1))`
-diverges, contradicting `sum_j 2^(Delta_j) = 3R(d) <= 3r` (Proposition 6(4)).
-The plus-sheet case uses `sum_(i<j) 2^(Delta_i) <= 3R(d) < infinity`, which is
-Corollary 5. A sign change needs a visit to `(0, 1/3)`, which happens at
-most once (it can happen from `r > 1`: `8/5 -> 4/5 -> 2/5 -> 1/5 -> -1/5`);
-after it the orbit is a positive plus-sheet orbit of the negated tail with
-the discrepancy shifted by a constant, so the plus-sheet case applies. ∎
+denominator. After discarding a finite prefix, the orbit has constant sign;
+negating if necessary gives a positive orbit on one of the two sheets.
+Corollary 2's convergent nonzero normalized product makes
+`c_j=m_j 2^(Delta_j)` bounded on either sheet, with time and discrepancy
+rebased at that tail. A finite shift changes the discrepancy condition only
+by a bounded additive constant.
+The assumed one-sided discrepancy bound gives `2^(-Delta_j)<=C j^a`, hence
+`m_j<=C' j^a` for all large j. If a<=0 this contradicts distinctness in
+the fixed rational lattice. If 0<a<1/h*, choose gamma with h*<gamma<1/a;
+the first J distinct terms would lie below O(J^a), contradicting the
+thinness bound `J<=O(J^(a gamma))`. This proves the claim for the entire
+stated range without a separate partial-sum growth assumption. ∎
+
+**2026-09-26 proof refinement (crossroads audit).** The previous audit in
+`777e4e137` supplied the missing bounded-product justification. The rewrite
+above makes it explicit and removes the unnecessary bound
+`sum j^(-a-o(1))=infinity`, which is not valid at a=1 without controlling
+the o(1) term. It also gives the stronger direct consequence: on either
+sheet no injective positive orbit has
+`Delta_j>=-a log_2 j-O(1)` eventually for any a<1/h*. The older symmetric
+plus-sheet threshold 0.02634 in Corollary 3 remains true but is weaker.
 
 ## 1.8 The same proof for every contracting Collatz-like map (Matthews–Watts framework)
 

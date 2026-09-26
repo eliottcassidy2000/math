@@ -1,6 +1,7 @@
 # Cauchy–Schwarz criticality: the square loss in the provability price is the AM-fairness `g(2) = 1`; a proved exponent 0.1445 (was 0.7737), the conditional 0.1001, and a harmonic bound that sees past moments
 
 **Status.**
+- **UPDATE 2026-09-26:** [THM-4478](../../01-canon/theorems/THM-4478-critical-tube-affine-capacity-sharp-provability-price.md) proves HYP-9137's sharp exponent by retaining actual integer incidence in a critical growth band. This bypasses, and does not contradict, the distribution-only moment barrier below. HYP-9139 remains OPEN; references below to HYP-9137 as open describe the historical route.
 - **PROVED** (hand proofs below; every identity is also checked in exact arithmetic by the scripts):
   1. **Theorem CS.** Every member of `P_L` has upper flip density `δ̄ >= ρ_L^2 / M2(L)`, where `M2(L) = E_Haar[W_L^2]` and `W_L(v) = sum_(k<L) sum_(T^k n = v) 3^(a(n,k))/2^k` (THM-4475 §3 bounds this weight by its maximum). The depth-`k` backward tree of `v`, with its weights, is a function of `v mod 3^k` exactly, so `W_L` is a function of `v mod 3^(L-1)`: for `v >= 1` the integer backward tree is the formal 3-adic tree.
   2. **Theorem T (transfer operator; criticality).**

@@ -1,6 +1,7 @@
 # The price of provability: explicit L-step-descent trees at flip density at most 2ρ_L ≤ 2^(1−0.05L) (HYP-9136 proved), a 2^(−0.774L) lower bound, and the cycle −5 → −7 → −10 as the second obstruction
 
 **Status.**
+- **UPDATE 2026-09-26:** [THM-4478](../../01-canon/theorems/THM-4478-critical-tube-affine-capacity-sharp-provability-price.md) proves the matching sharp exponent, `delta_L >= 2^(-(1-h)L-O(sqrt(L log L)))`, by critical growth bands and affine integer capacity. HYP-9137 is PROVED; the open-price language and weaker lower bounds below are historical. Collatz remains OPEN.
 - **PROVED** (hand proofs below; the consequences of every lemma are also checked by code):
   - **(A) HYP-9136.** For every `L >= 8` there is an explicit member `G_L` of `P_L`. It is a tree whose only cycle is `{1,2}`, and its upper flip density is at most `2ρ_L <= 2^(1-(1-h)L)`, with `1 - h = 0.050044`. Hence `δ_L <= 2^(1-(1-h)L) -> 0`. This is the upper half of the coordinator's sharp conjecture, with the conjectured exponent.
   - **(B) The undecided density.** `ρ_L = |Bad_L|/2^L` satisfies `2^(-(1-h)L)/poly(L) <= ρ_L <= 2^(-(1-h)L)` (Chernoff bound and cycle lemma), where `h = h(log_3 2)`.

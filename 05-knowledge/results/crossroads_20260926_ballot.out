@@ -25,4 +25,16 @@ block construction: q L b t r good_blocks log2(lower_count)/L log2(cap)
 5 1024 32 32 0 19676358 0.757186246 148.603398073
 5 4096 64 64 0 30237034945547024 0.855424472 297.206796146
 guarded positive integer realizations on both signs and multipliers: 32
+finite-price candidates: L b k t r log2(K) minus_log2(lower_bound)
+100 50 32 2 0 19.437600 59.455331
+ exact certificate: C(50,32)^2 * 2^82 / (50^2 * 2^100 * 3^64 * 114478)
+1000 125 79 8 0 47.696300 211.107883
+ exact certificate: C(125,79)^8 * 2^954 / (125^8 * 2^1000 * 3^632 * 111444778)
+10000 500 316 20 0 200.963005 1020.878229
+ exact certificate: C(500,316)^20 * 2^9816 / (500^20 * 2^10000 * 3^6320 * 111144447778)
+100000 1369 864 73 63 534.754845 6821.161268
+ exact certificate: C(1369,864)^73 * 2^99432 / (1369^73 * 2^100000 * 3^63072 * 111114444477778)
+1000000 7812 4929 128 64 2918.861255 55616.245172
+ exact certificate: C(7812,4929)^128 * 2^997053 / (7812^128 * 2^1000000 * 3^630912 * 111111444444777778)
+Candidate selection uses approximate logs; each displayed factored bound is exact.
 PASS; finite critical strips do not establish an infinite integer survivor.

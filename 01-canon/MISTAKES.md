@@ -9,6 +9,52 @@ Format per entry:
 - Why it was wrong
 - The correct framing
 
+## 2026-09-26 Collatz crossroads: tilted moments, pullback periods, and lost chronology
+
+- **Fixed-slope injectivity REFUTED after strong finite support.** All
+  654,279 admissible symbolic words through depth 24 and 2,388,567 tested
+  positive source-prefixes had no merger at equal time and odd count.
+  Exact offset width further proves uniqueness at all heights through 31.
+  Nevertheless, let `u=3^(-153) mod 2^80=186937257649965781719819` and
+  `N=2^153 u-1`. Sources N and N-4 merge at time 233, with 153 odd steps
+  and every prefix slope>1. Their carries are `3^153-2^153` and
+  `5*3^153-2^153`. No minimality is claimed. N shadows -1 and N-4 shadows
+  the negative -5 cycle for exactly 153 parity symbols; coordinated later
+  carries cause the merger. The missing coordinate is ordered carry,
+  not the endpoint slope. The valid polynomial integer-interval bound is
+  unaffected. [Flow section 8 and exact certificate](../05-knowledge/results/crossroads_20260926_flow.md).
+- **REFUTED candidate, not a retraction of canon.** Conditioning hub capacity
+  on slope-undecided sources does not imply `E Q_L^2<=poly(L)rho_L`.
+  The diagonal changes the parity law to Bernoulli(3/4), and an elementary
+  inverse-slope martingale gives `E Q_L^2>=1/8` uniformly. Strongest survivor:
+  select a subexponential prefix-growth band, prove it retains the entropy
+  rate, and use actual integer source intervals. This yields
+  [THM-4478](theorems/THM-4478-critical-tube-affine-capacity-sharp-provability-price.md),
+  independently of the false moment estimate.
+- **Draft experiment repaired before checkpoint.** The endpoint capacity's
+  period `P=2^L 3^(L-1)` was reused for a pulled-back source average.
+  The observable `Q(T^k n)` generally requires the source period
+  `2^(L-1)P`. Initial harmonic values were withdrawn; the repaired exact
+  computation checks the change-of-variables identity over that full
+  period. See [flow section 2](../05-knowledge/results/crossroads_20260926_flow.md).
+- **Chronology is not generic injectivity.** The four sources
+  `{11,43,65,253}` and `{13,23,121,215}` have equal products of both `3n`
+  and `3n+1`. All eight successors are distinct, so generic injective edges
+  can have dependent paired prime-valuation vectors. Full rank on one
+  chronological orbit remains OPEN; the broader claim is false. Likewise
+  `55->83->125` refutes a fresh-prime-per-rise claim. Zsigmondy's fixed-base
+  hypotheses cannot be imported to moving Collatz coefficients. See
+  [geometry section 6](../05-knowledge/results/crossroads_20260926_geometry.md).
+- **Thin-orbit proof lineage.** Incoming `777e4e137` independently corrected
+  harmonic divergence to mean no divergent orbit, not exclusion of extra
+  cycles, and supplied the bounded-product argument for Corollary 9.
+  The crossroads refinement makes that argument explicit on a rebased
+  one-signed tail and removes the unused assertion
+  `sum j^(-a-o(1))=infinity` at a=1, where it is false without controlling
+  the error. The correct one-sided discrepancy obstruction holds for every
+  `a<1/H_2(log_3 2)`. See the
+  [repaired proof](../05-knowledge/results/collatz_thin_20260925_thin_divergent_orbits.md).
+
 ## 2026-09-25 Thin divergence (THM-4476) -- a bijection lemma was transferred to residue-dependent shifts without re-checking injectivity
 
 - **What was assumed.** The first pushed draft of THM-4476 (opus, `collatz-squares-doubles-20260925`) stated as item (4) that the thinness bound `N(X) = O(X^(h*+eps))` holds for every level-`k` sign strategy `T_sigma` of THM-4474, on the grounds that the parity map `Z/2^k -> {0,1}^k` "is still a bijection" for any odd shift `b(x)` determined by `x mod 2^(k_0)`.

@@ -51,6 +51,9 @@ It also applies uniformly to finite injective trajectory segments, with
 the final k points treated as boundary exceptions.
 
 Two corrections were communicated to the parent for repair in the sources.
+Incoming commit `777e4e137` independently repairs the harmonic wording and
+mentions the bounded-product repair; the parent retains that lineage and
+tightens the displayed inequality and symmetric threshold accordingly.
 
 1. The statement that Collatz is equivalent to harmonic divergence on all
    positive orbits omits exclusion of other positive cycles. Harmonic
@@ -212,11 +215,41 @@ proved here, and no priority is claimed for application (7).
 **OPEN hypothesis G2:** transition pairs along every finite injective
 positive plus orbit segment are multiplicatively independent (`r_N=N`).
 This stronger statement is deliberately separated from the cited theorem.
-Exact rank probes on1000 source paths through1999 and nine selected long
-paths are recorded in the output. Rank129 occurs on the129-edge path
-starting77031. A proof or counterexample should retain the actual
-chronological successor coupling. Generic solutions of x+y=1 need not
-be multiplicatively independent; this is a dynamical hypothesis.
+Exact rational rank probes on1000 source paths through1999 and nine
+selected long paths are recorded in the output. A separate modular rank
+computation at the prime1000000007 certifies FULL rank on all50000
+complete distinct plus paths from odd starts through99999. Full rank
+modulo a prime implies full rational rank, since the matrix entries are
+integers and a nonzero modular minor is a nonzero integer minor. There
+were no deficient modular cases requiring a second-prime replay.
+Rank129 occurs on the129-edge path starting77031. Minus cycles1,5/7,
+and the seven-cycle through17 retain full rank when each closing edge is
+included exactly once. Repeated laps would duplicate columns and are
+deliberately excluded.
+
+**Exact hostile: local edge injectivity is insufficient.** Put
+
+```
+P={11,43,65,253},   N={13,23,121,215}.
+product_(n in P) (3n)   = product_(n in N) (3n),
+product_(n in P) (3n+1) = product_(n in N) (3n+1).        (H)
+```
+
+The eight nodes in sorted order have distinct successors
+`17,5,35,65,49,91,323,95`. Thus even a finite injective edge set can carry
+a nontrivial paired multiplicative relation. They are not all comparable
+along one chronological orbit: their later branches merge. G2 must keep
+full chronology, not merely distinct source and target labels.
+
+**Fresh-prime shortcut REFUTED.** The literal rising run `55->83->125`
+has valuations1,1, but125=5^3 introduces no new prime:5 already divides55.
+In the general rise formula `m_j=3^j 2^(H-j)u-1`, standard Zsigmondy for
+fixed-base differences does not automatically apply. The prefactor
+`2^H u` depends on the run height; the needed uniformity is absent.
+See the recovered primitive-divisor thread
+`collatz_mod6_20260917_zsigmondy_triad.md` for the correctly scoped
+fixed-base theorem and its exceptions. The exact rank carrier can retain
+multiplicity and coordinate position even when prime support does not grow.
 
 Even G2 would not prove Collatz; its useful consequence would be a linear
 lower bound on fresh prime-coordinate complexity. Cheapest next tests:
@@ -283,3 +316,30 @@ limits were all audited independently of the parent's implementation.
 The accompanying script independently enumerates cyclic-minimum words
 through b14 and actual source/hub incidence through source5000 at
 L4,8,12 and K2,4,16. These are controls, not substitutes for (8).
+
+## 8. Independent audit of arbitrary vertex edits
+
+The same proof extends to any deterministic positive-integer map G that
+agrees with T outside an edit set E and gives every n>=2 descent withinL.
+Each retained source must first encounter E before stepL. A hub serves at
+mostM sources and is at mostK(X+L/3), so
+
+```
+rho X+O_L(1) <= M #E(K(X+L/3)),
+lower_density(E) >= rho/(KM).
+```
+
+For the upper bound, edit exactly the actual no-descent set
+`Bad_L={n>=2: T^j(n)>=n for 1<=j<=L}` by putting G(n)=1 there.
+An originally bad source descends immediately. An originally good source
+either follows T to its old descent or first hits an edited vertex and
+then reaches1<its source inside the horizon. Thus G has the required
+property. The actual set differs by finitely many integers from the
+slope-undecided residue union: each fixed word with some slope<1 has
+only finitely many small carry exceptions, while words with all slopes>1
+never descend. Equality of a nonempty slope with1 is impossible because
+3^e!=2^j forj>0. Therefore its density is rho_L.
+
+The arbitrary-edit optimum has the same sharp exponent1-h*, with upper
+boundrho_L, whereas the pairing construction has upper bound2rho_L.
+This audit finds no additional analytic-density or first-hit assumption.

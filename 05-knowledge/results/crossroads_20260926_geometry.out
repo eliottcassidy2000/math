@@ -1,5 +1,5 @@
 GEOMETRY CROSSROADS: exact finite controls, not a Collatz proof
-source_sha256 29cfdb7ae53aeb17a3c16ac98eb7b17903ff16b5bf1983fcee1bed4f36c13518
+source_sha256 e8cef8f093df75409a3ddb36f4ec4f9baf67471f6ee5702f8e68817dd1f39c1a
 BALANCED: length, source_bits, visits_[n,3n], max_dyadic_shell_visits
 8 33 9 8
 16 63 17 16
@@ -26,6 +26,14 @@ TRANSITION-RANK: source, distinct edges, rank, deficiency
 53529 55 55 0
 77031 129 129 0
 FULL_TRANSITION_RANK_HYPOTHESIS 1000 paths 0 failures []
+PLUS_MODULAR_FULL_RANK 50000 odd sources through99999 prime1000000007 failures []
+MINUS_CYCLE_INCLUSIVE_RANK 1 1 1
+MINUS_CYCLE_INCLUSIVE_RANK 5 2 2
+MINUS_CYCLE_INCLUSIVE_RANK 17 7 7
+MINUS_CYCLE_INCLUSIVE_RANK 23 8 8
+MINUS_CYCLE_INCLUSIVE_RANK 9351 75 75
+GENERIC_INJECTIVE_EDGE_HOSTILE [11, 13, 23, 43, 65, 121, 215, 253] [17, 5, 35, 65, 49, 91, 323, 95] positive (11, 43, 65, 253) negative (13, 23, 121, 215)
+NO_FRESH_PRIME_RISE_HOSTILE 55 83 125 factor125 {5: 3}
 INDEPENDENT PRICE AUDIT: b, ceil(b log_3 2), good_rotated_words, binomial
 1 1 1 1
 2 2 1 1

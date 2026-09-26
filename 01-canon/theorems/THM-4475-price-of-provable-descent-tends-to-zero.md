@@ -15,7 +15,9 @@ status: >
   (C) Every member of P_L has flip density at least rho_L / W_L, where
   W_L ~ c lambda^L and lambda = (3 + sqrt 13)/4. So
   delta_L >= 2^(-(0.7737+o(1))L).
-  The sharp lower bound (exponent 1 - h) is OPEN (HYP-9137).
+  UPDATE 2026-09-26: THM-4478 proves the sharp lower bound
+  2^(-(1-h)L-O(sqrt(L log L))); HYP-9137 is PROVED. The construction here
+  supplies its matching upper bound. Collatz remains OPEN.
   SHEET: the construction transfers to the 3n-1 pairing, giving provable
   trees that destroy all three 3n-1 cycles.
 source: collatz-procgen-20260922 session, price lane (2026-09-25), proving the session's HYP-9136 (candidate P1 of the brackets lane) with the coordinator's conjectured exponent; audited and promoted by the session orchestrator 2026-09-25
@@ -87,6 +89,11 @@ audit: >
 * **Density.** Each flip is owned by a rescued `n` in `Bad_L` and has pair index in `(n/2, n]`. So the flip density is at most `2 rho_L`. ∎
 
 ## 4. Lower bound
+
+**Current bound, 2026-09-26.** [THM-4478](THM-4478-critical-tube-affine-capacity-sharp-provability-price.md)
+proves `delta_L >= 2^(-(1-h)L-O(sqrt(L log L)))` by a critical growth band
+and actual-integer capacity cut. Thus HYP-9137 is proved. The bounds below
+remain valid historical estimates, and the construction above is unchanged.
 
 **Update 2026-09-25.** THM-4477 improves the lower bound to `delta_L >= rho_L^2/M2(L) >= 2^(-(0.1445+o(1))L)` (Cauchy–Schwarz with a certified second-moment majorant). It also shows that `2(1-h) = 0.1001` is the limit of any distribution-only argument.
 

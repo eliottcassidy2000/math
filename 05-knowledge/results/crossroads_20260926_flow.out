@@ -2,6 +2,7 @@ Exact incidence, not a random-orbit model. Badness is the slope-prefix predicate
 Direct pointwise energy audits: 3258
 Affine/cycle controls: {"3n+1": "-1", "3n-1": "1", "5n+1": "-1/3"}
 Independent inverse multiplicity audit: {"admissible_ancestors_checked": 376, "groups_checked": 376, "hubs_per_sheet": 128, "largest_count_over_bound": "1", "max_depth": 18}
+Parameterized affine tubes: {"A1_bound_hostile": {"A": "1/16", "e": 2, "hub": 2, "k": 5, "old_bound": 2, "q": 3, "repaired_bound": 27, "sign": 1, "sources": [4, 5, 6]}, "groups_checked": 209730, "max_depth": 18, "sources_per_sheet": 8192}
 SHEET 3 1
 {"L": 1, "bad_classes": 1, "bound": "1/2", "cells": 1, "energy_over_L2_rho": 1.0, "mean": "1/2", "rho": "1/2", "second": "1/2"}
 {"L": 2, "bad_classes": 1, "bound": "1/14", "cells": 2, "energy_over_L2_rho": 0.875, "mean": "1/2", "rho": "1/4", "second": "7/8"}

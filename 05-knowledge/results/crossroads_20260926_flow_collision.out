@@ -1,0 +1,44 @@
+{"k": 1, "survivors": 500000, "distinct_hubs_and_counts": 500000}
+{"k": 2, "survivors": 250000, "distinct_hubs_and_counts": 250000}
+{"k": 3, "survivors": 250000, "distinct_hubs_and_counts": 250000}
+{"k": 4, "survivors": 187500, "distinct_hubs_and_counts": 187500}
+{"k": 5, "survivors": 125000, "distinct_hubs_and_counts": 125000}
+{"k": 6, "survivors": 125000, "distinct_hubs_and_counts": 125000}
+{"k": 7, "survivors": 101561, "distinct_hubs_and_counts": 101561}
+{"k": 8, "survivors": 74218, "distinct_hubs_and_counts": 74218}
+{"k": 9, "survivors": 74218, "distinct_hubs_and_counts": 74218}
+{"k": 10, "survivors": 62500, "distinct_hubs_and_counts": 62500}
+{"k": 11, "survivors": 62500, "distinct_hubs_and_counts": 62500}
+{"k": 12, "survivors": 55177, "distinct_hubs_and_counts": 55177}
+{"k": 13, "survivors": 44801, "distinct_hubs_and_counts": 44801}
+{"k": 14, "survivors": 44801, "distinct_hubs_and_counts": 44801}
+{"k": 15, "survivors": 39517, "distinct_hubs_and_counts": 39517}
+{"k": 16, "survivors": 32256, "distinct_hubs_and_counts": 32256}
+{"k": 17, "survivors": 32256, "distinct_hubs_and_counts": 32256}
+{"k": 18, "survivors": 28586, "distinct_hubs_and_counts": 28586}
+{"k": 19, "survivors": 28586, "distinct_hubs_and_counts": 28586}
+{"k": 20, "survivors": 26056, "distinct_hubs_and_counts": 26056}
+{"k": 21, "survivors": 22225, "distinct_hubs_and_counts": 22225}
+{"k": 22, "survivors": 22225, "distinct_hubs_and_counts": 22225}
+{"k": 23, "survivors": 20101, "distinct_hubs_and_counts": 20101}
+{"k": 24, "survivors": 17083, "distinct_hubs_and_counts": 17083}
+{"k": 25, "survivors": 17083, "distinct_hubs_and_counts": 17083}
+{"k": 26, "survivors": 15476, "distinct_hubs_and_counts": 15476}
+{"k": 27, "survivors": 13149, "distinct_hubs_and_counts": 13149}
+{"k": 28, "survivors": 13149, "distinct_hubs_and_counts": 13149}
+{"k": 29, "survivors": 11868, "distinct_hubs_and_counts": 11868}
+{"k": 30, "survivors": 11868, "distinct_hubs_and_counts": 11868}
+{"k": 31, "survivors": 10965, "distinct_hubs_and_counts": 10965}
+{"k": 32, "survivors": 9565, "distinct_hubs_and_counts": 9565}
+{"k": 33, "survivors": 9565, "distinct_hubs_and_counts": 9565}
+{"k": 34, "survivors": 8766, "distinct_hubs_and_counts": 8766}
+{"k": 35, "survivors": 7538, "distinct_hubs_and_counts": 7538}
+{"k": 36, "survivors": 7538, "distinct_hubs_and_counts": 7538}
+{"k": 37, "survivors": 6903, "distinct_hubs_and_counts": 6903}
+{"k": 38, "survivors": 6903, "distinct_hubs_and_counts": 6903}
+{"k": 39, "survivors": 6417, "distinct_hubs_and_counts": 6417}
+{"k": 40, "survivors": 5647, "distinct_hubs_and_counts": 5647}
+{"max_depth": 40, "source_limit": 1000000, "status": "FINITE-EXACT no collision in the source box", "tested_source_prefixes": 2388567}
+{"max_depth": 24, "status": "FINITE-EXACT all-height injectivity through fixed depth only", "symbolic_words_checked": 654279}
+{"attaining_e": 20, "attaining_k": 31, "cases": 199, "first_width_opening": {"e": 21, "k": 32, "width": "43561973452/10460353203"}, "max_width": "13805179460/3486784401", "status": "PROVED finite all-height injectivity k<=31 by carry interval width"}
+{"e": 153, "hub": 1544714368800273392784179563875656116569530364984522231576309181404945461, "k": 233, "normalized_offset_difference": "4", "odd_positions_small": [0, 1, 3, 4, 6, 7, 9, 10, 12, 13, 15, 16, 18, 19, 21, 22, 24, 25, 27, 28, 30, 31, 33, 34, 36, 37, 39, 40, 42, 43, 45, 46, 48, 49, 51, 52, 54, 55, 57, 58, 60, 61, 63, 64, 66, 67, 69, 70, 72, 73, 75, 76, 78, 79, 81, 82, 84, 85, 87, 88, 90, 91, 93, 94, 96, 97, 99, 100, 102, 103, 105, 106, 108, 109, 111, 112, 114, 115, 117, 118, 120, 121, 123, 124, 126, 127, 129, 130, 132, 133, 135, 136, 138, 139, 141, 142, 144, 145, 147, 148, 150, 151, 154, 155, 156, 158, 159, 160, 161, 164, 165, 166, 167, 168, 170, 171, 172, 174, 175, 176, 177, 179, 180, 183, 184, 185, 186, 187, 188, 189, 190, 191, 192, 195, 198, 199, 200, 201, 206, 209, 211, 212, 213, 214, 216, 219, 220, 223, 224, 226, 228, 230, 232], "search_family": "C=(d+1)3^e-2^e; 3<=e<=200; d=4,8,...<=e/3", "source_construction": "u=3^(-e) mod2^(k-e); N=2^e*u-1; sources N-d,N", "source_difference": 4, "source_parameter_u": 186937257649965781719819, "sources": [2134446157293545680116155684904813624866473205075599455753325089128443, 2134446157293545680116155684904813624866473205075599455753325089128447], "status": "REFUTED exact positive coordinated collision", "words": ["11011011011011011011011011011011011011011011011011011011011011011011011011011011011011011011011011011011011011011011011011011011011011011011011011011011001110111100111110111011110110011111111110010011110000100101111010011001101010101", "11111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111100000000000000000000000000000000000000000000000000000000000000000000000000000000"]}

@@ -1,10 +1,10 @@
-# Collatz crossroads: exact parity sections and a Thue--Morse Padé certificate
+# Collatz crossroads: exact parity sections and two automatic Padé certificates
 
 **Status:** PROVED in the elementary scopes below; FINITE-EXACT for the
 enumerated universes; OPEN for the proposed automatic-tape programme.
 No Collatz convergence, periodicity conjecture, or Rule-30 prize is proved.
 No novelty claim is made for the parity conjugacy, finite carry machines,
-Thue--Morse product, or Mahler approximation mechanism.
+Thue--Morse product, Rudin--Shapiro system, or Mahler approximation mechanism.
 
 ## Inheritance and concept board
 
@@ -261,6 +261,112 @@ ones density. Lost by the density quotient: ordering, hence the value of
 `F(rho)`. Sidecar: the functional equation and its finite Padé defect.
 Decisive test: (P4) against (P5), with failed case `q=5,L=10` retained.
 
+## 3a. A second round: the Rudin--Shapiro transverse channel closes
+
+Let `a_n=(-1)^(number of occurrences of 11 in the binary expansion of n)`
+and `R(z)=sum a_n z^n`. Splitting the index into its even and odd parts gives
+
+```
+R(z)=R(z^2)+z R(-z^2),
+R(-z)=R(z^2)-z R(-z^2).                           (RS1)
+```
+
+Thus a scalar section alone is not closed. Keeping the two channels
+produces a finite exact system. The word and its binary definition are
+also Example 3 of [Schaeffer--Shallit](https://arxiv.org/pdf/1104.2303);
+the derivation and all arithmetic estimates here are elementary.
+
+An exact coefficient solve gives
+
+```
+P(z)=1+z-2z^3-z^4+z^5-4z^6,
+Q(z)=1-z^2-z^4-z^6,
+Q(z)R(z)-P(z)=-4z^11-2z^12-2z^13+O(z^17).       (RS2)
+```
+
+All later defect coefficients are even, because each is a sum of four
+signs. Therefore for `v2(x)>=2`,
+
+```
+v2(R(x)-P(x)/Q(x))=11v2(x)+2.                    (RS3)
+```
+
+There is no pole: `Q(x)` is a 2-adic unit whenever `v2(x)>0`.
+The restriction `v2(x)>=2` is intentional; the leading and next terms
+need not have strictly different valuations at `v2(x)=1`.
+
+For `N=2^K`, `K>=1`, define
+
+```
+A_K(z)=sum_(0<=n<N/2) a_n z^n,
+B_K(z)=sum_(N/2<=n<N) a_n z^n.
+```
+
+The binary digit split, retaining the possible `11` across the joining
+boundary, gives the exact identity
+
+```
+R(z)=A_K(z)R(z^N)+B_K(z)R(-z^N).                 (RS4)
+```
+
+Indeed for `n=jN+r`, the boundary contributes `(-1)^j` precisely when
+`r>=N/2`. This both proves (RS4) and explains why the second channel
+cannot be dropped.
+
+For `rho=p/b` as in section 3, put `a=v2(p)`, `M=max(p,b)`. Since `Q`
+is even, the common-denominator approximant is
+
+```
+S_K=[A_K(rho)P(rho^N)+B_K(rho)P(-rho^N)]/Q(rho^N).
+```
+
+Here `A_K(rho)` is a unit and `v2(B_K(rho))=aN/2`. The two approximation
+errors in (RS4) have valuation `11aN+2`, so their coefficients separate
+those valuations and prevent cancellation. Consequently
+
+```
+v2(R(rho)-S_K)=11aN+2.                           (RS5)
+```
+
+The numerator polynomial has degree at most `7N-1` and coefficient
+one-norm at most `10N`, since `||P||_1=10`; the denominator has degree
+`6N` and one-norm four. Clearing powers of `b` gives
+
+```
+H(S_K) <= 10N M^(7N-1).                          (RS6)
+```
+
+The same nonzero-integer separation used in section 3 now proves:
+
+**PROVED.** `R(p/b)` is irrational in `Q_2` whenever
+
+```
+max(p,b)^7 < 2^(11v2(p)).                        (RS7)
+```
+
+The nonzero error is supplied by (RS5), not by an assumed transcendence
+theorem. Replacing the selector `t_n` in (B2) by `(1-a_n)/2` replaces
+`F(rho)` by `R(rho)` and leaves the rest of the bridge unchanged.
+In particular, `q=3,L=10`, with `rho=1024/19683`, is certified, as is
+`q=5,L=3`, with `rho=8/25`.
+
+For `q=3`, this particular certificate works exactly for `3<=L<=117`.
+The first method miss is `L=118`, because
+`3^(7*117)>=2^(11*118)`. This is not a claim that the corresponding
+value is rational, or that its irrationality is open in the literature.
+It only states the boundary of (RS7). An exact search of the
+**full-rank even-denominator ansatz** with `deg Q<=2d`, `deg P<=2d`,
+`d<=32`, finds no better contact-to-height-degree ratio than `11/7`
+at `d=3`. Singular linear systems and other Padé shapes are outside
+this finite search, so this is a recorded stopping reason, not a no-go.
+
+This second round is a concrete success for the Rule-30 inheritance:
+keeping the transverse channel enabled an arithmetic certificate after
+scalar compression failed to close. No map between the two dynamics is
+claimed. Both automatic-tape families are special structured tests;
+their arithmetic exclusion does not establish that arbitrary integer
+Collatz tapes belong to either family.
+
 ## 4. Synthesis, hypotheses, and stopping reasons
 
 **OPEN programme A: automatic equal-weight selectors.** For a specified
@@ -269,10 +375,11 @@ equal-weight block coding into a vector of values at `rho`, and search
 for low-degree simultaneous Padé forms whose gain beats coefficient
 height. This is a bounded and falsifiable task per automaton. It does not
 assume the parity tape of an arbitrary Collatz source is automatic.
-The smallest next test is the Rudin--Shapiro selector with the same two
-blocks, retaining its full two-channel Mahler system rather than only its
-balanced scalar output. A successful certificate would strengthen the
-method catalogue; it would still cover only those tapes.
+The Rudin--Shapiro test was pursued in section 3a and passed after its
+full two-channel system was retained. The next small method test is its
+block length `L=118`, or a different automatic selector whose vector
+Padé contact beats the relevant height. A successful certificate would
+strengthen the method catalogue; it would still cover only those tapes.
 
 **OPEN programme B: exact repetition versus Padé classification.**
 [Schaeffer--Shallit, Theorem 22](https://arxiv.org/pdf/1104.2303)
@@ -324,3 +431,97 @@ bridges. The latter use `q in {3,5,7,9,11}`, `L=3,...,12`, and
 least source verifies every generated parity bit. Failed sufficient
 inequalities are reported rather than excluded from the sample.
 Assertions use explicit exceptions and survive Python `-O`.
+
+The second round adds 28 Rudin--Shapiro exact valuation/height checks,
+the two-channel coefficient identity for `K=1,...,7` through degree
+`5*2^K-1`, five block bridges with independent ordinary dynamics,
+and the full-rank even-denominator Padé search `d<=32`.
+
+The separately requested price audit is saved as
+`04-computation/experiments/crossroads_20260926_automata_price_audit.py`.
+It imports none of the other lane's code. Direct integer trajectories
+for `n<4*2^L`, `L in {6,8,10,12}`, `K in {3,9,27}` check the actual
+affine source interval, per-hub capacity, and both members of each
+flipped pair. Every fixed-weight word of block length `2,...,16` is
+checked under cyclic-minimum rotation. The independent proof audit
+found the density factor correct: a pair serves at most `2M` starts,
+while its index is at most `[K(X+L/3)+1]/2`, cancelling the factor two
+and yielding lower flip density at least `rho_trim/(KM)`.
+
+## 6. Final synthesis: identical growth clocks can have different arithmetic types
+
+The critical-band flow proof and the automatic-value certificates have a
+precise common object: **blocks with the same length and odd count**.
+This yields a useful generalization of section 2 and a decisive stopping
+reason for a proposed scalar growth-clock closure.
+
+Let U and V be any two distinct binary words with common length b and
+common number k of ones, for the `3n+1` map. The inverse block maps are
+
+```
+x -> rho x+g_U,      x -> rho x+g_V,
+rho=2^b/3^k,
+g_W=-sum_(j:W_j=1) 2^j/3^(number of ones in W through j).
+```
+
+The constants differ. Otherwise the two inverse branches would send
+zero to the same 2-adic source, despite prescribing different initial
+parity words; the parity isometry forbids that. With `d=g_V-g_U`,
+Thue--Morse selection of U or V gives exactly
+
+```
+Phi=(g_U+d/2)/(1-rho)-(d/2)F(rho).                  (C1)
+```
+
+**PROVED.** This source is irrational for every such pair U,V. Indeed
+`max(2^b,3^k)<4^b`, so section 3 applies, and `d!=0`. The proof is
+independent of the internal positions of the ones. This class is still
+inside the inherited repetition-covered scope; the contribution here is
+its explicit common-slope affine map and functional-equation certificate.
+
+An exact near-critical control is
+
+```
+b=11, k=7,
+U=11111110000,       V=11111101000,
+P=3^7/2^11=2187/2048,
+g_U=-2059/2187,      g_V-g_U=-64/2187.
+```
+
+Both blocks have every prefix slope at least one, and every concatenation
+has the identical endpoint clock `w_(11j)=P^j`. Both also obey the same
+finite internal-growth bound used in the refined ballot certificate.
+Nevertheless U repeated forever has rational source `-2059/139`, while
+Thue--Morse choice has irrational source
+
+```
+-2091/139 + (32/2187) F(2048/2187).
+```
+
+Every finite prefix in either case has positive integer realizations.
+Neither observation makes the infinite source a positive integer.
+Thus **rational source realizability cannot be decided from the common
+block endpoint clock and that growth cap**. The missing datum is the
+ordered affine carry, encoded by F in (C1). This does not challenge the
+flow theorem: its proof uses actual integer incidence, not that scalar
+clock alone. It explains exactly why its entropy and cap estimates cannot
+be promoted to an infinite integer-survivor theorem without another input.
+
+Connection contract: source = equal-composition admissible blocks; target
+= a common flow growth band plus a 2-adic source. Map = block composition
+and (C1). Preserved by the endpoint quotient = every block slope and the
+finite cap. Destroyed = rational versus irrational source type. Restoring
+sidecar = the ordered translations `g_U,g_V` and selector. Decisive test =
+the displayed periodic/Thue--Morse pair. For this pair the full scalar
+clock is exactly identical, not merely asymptotically close.
+
+The final independent audit of the refined finite certificate also passed:
+for every b<=12, t=1,...,5 and r=0,...,b-1, exhaustive admissible block
+enumeration checked the cap
+`max(P^(t-1)(3/2)^k,P^t(3/2)^r)`, the grouped integral capacity, and the
+factored lower bound (390 exact checks). The main THM-4478 proof's
+arbitrary-edit construction and lower-density passage were re-audited;
+no new gap was found. This final probe was run independently from a
+standard-library stdin script; the maintained ballot script reproduces
+the displayed certificate parameters, while the earlier standalone
+price-audit script retains the independently implemented source counts.

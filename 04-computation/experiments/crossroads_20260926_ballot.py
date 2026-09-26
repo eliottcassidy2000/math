@@ -6,7 +6,7 @@ All acceptance decisions use integer powers, never floating logarithms.
 Logarithms below describe integer counts, not validity gates.
 """
 from itertools import product
-from math import comb, isqrt, log2
+from math import comb, isqrt, log2, sqrt
 
 
 def ceil_critical(q, b):
@@ -65,6 +65,58 @@ def source_residue(q, word, shift=1):
     return residue, modulus
 
 
+def finite_price_bounds():
+    """Evaluate exact factored lower bounds; decimal logs are descriptive.
+
+    A block with k ones has internal slope at most (3/2)^k. Its endpoint
+    slope P=3^k/2^b need not be relaxed to 3. We retain that exact ratio,
+    exposing the utility of upper rational approximants to log_3(2).
+    The count of e at depth j is bounded by j+1, so no rounded log is used
+    to certify the capacity M.
+    """
+    print('finite-price candidates: L b k t r log2(K) minus_log2(lower_bound)')
+    for length in (100, 1000, 10000, 100000, 1000000):
+        scale = sqrt(length * log2(length + 1))
+        candidates = set(range(1, min(length, 500) + 1))
+        candidates.update(min(length, max(1, int(scale * factor / 16)))
+                          for factor in range(4, 65))
+        # Sum (j+1)(floor(j/3)+1), grouped by j=3u+s.
+        groups, remainder = divmod(length, 3)
+        sum_u = groups * (groups - 1) // 2
+        sum_u2 = groups * (groups - 1) * (2 * groups - 1) // 6
+        capacity = 9 * sum_u2 + 15 * sum_u + 6 * groups
+        capacity += sum((3 * groups + s + 1) * (groups + 1)
+                        for s in range(remainder))
+        if length == 100:
+            assert capacity == sum((j + 1) * (j // 3 + 1) for j in range(length))
+        best = None
+        for b in candidates:
+            k = ceil_critical(3, b)
+            t, r = divmod(length, b)
+            # max(P^(t-1)*(3/2)^k, P^t*(3/2)^r)
+            choices = [(k * t, b * (t - 1) + k),
+                       (k * t + r, b * t + r)]
+            # Exact ratio comparison, with exponents differing by O(b).
+            x1, y1 = choices[0]
+            x2, y2 = choices[1]
+            dx, dy = x1 - x2, y1 - y2
+            first_larger = (3 ** max(dx, 0) * 2 ** max(-dy, 0)
+                            >= 3 ** max(-dx, 0) * 2 ** max(dy, 0))
+            x, y = choices[0 if first_larger else 1]
+            log_cap = x * log2(3) - y
+            cost = (length - t * (log2(comb(b, k)) - log2(b))
+                    + log_cap + log2(capacity))
+            row = (cost, b, k, t, r, log_cap, x, y, capacity)
+            if best is None or row[0] < best[0]:
+                best = row
+        cost, b, k, t, r, log_cap, x, y, capacity = best
+        print(length, b, k, t, r, format(log_cap, '.6f'), format(cost, '.6f'))
+        print(' exact certificate: C(%d,%d)^%d * 2^%d /'
+              ' (%d^%d * 2^%d * 3^%d * %d)'
+              % (b, k, t, y, b, t, length, x, capacity))
+    print('Candidate selection uses approximate logs; each displayed factored bound is exact.')
+
+
 def main():
     print('FINITE-EXACT: critical-strip counts, rotation and realization controls')
     checks = 0
@@ -121,6 +173,7 @@ def main():
                     assert y > 0
                 realizations += 1
     print('guarded positive integer realizations on both signs and multipliers:', realizations)
+    finite_price_bounds()
     print('PASS; finite critical strips do not establish an infinite integer survivor.')
 
 

@@ -8,4 +8,14 @@ block_certificate {'q': 3, 'length': 10, 'ones': 9, 'rho': '1024/19683', 'suffic
 block_certificate {'q': 5, 'length': 5, 'ones': 4, 'rho': '32/625', 'sufficient_inequality': True}
 block_certificate {'q': 5, 'length': 10, 'ones': 9, 'rho': '1024/1953125', 'sufficient_inequality': False}
 block_certificate {'q': 7, 'length': 3, 'ones': 2, 'rho': '8/49', 'sufficient_inequality': True}
+Rudin_Shapiro_Pade_defect_first_nonzero [(11, -4), (12, -2), (13, -2), (17, 4), (20, -2), (21, 2), (22, -4)]
+Rudin_Shapiro_value_and_height_checks 28
+Rudin_Shapiro_block_certificate {'q': 3, 'length': 3, 'sufficient_inequality': True}
+Rudin_Shapiro_block_certificate {'q': 3, 'length': 10, 'sufficient_inequality': True}
+Rudin_Shapiro_block_certificate {'q': 3, 'length': 117, 'sufficient_inequality': True}
+Rudin_Shapiro_block_certificate {'q': 3, 'length': 118, 'sufficient_inequality': False}
+Rudin_Shapiro_block_certificate {'q': 5, 'length': 3, 'sufficient_inequality': True}
+Rudin_Shapiro_bridges_and_independent_dynamics 5
+Rudin_Shapiro_full_rank_even_Pade_d_le_32_best (Fraction(11, 7), 3, 11)
+Rudin_Shapiro_first_q3_block_length_not_certified_by_this_form 118
 PASS: finite exact checks; infinite irrationality and nonfinite-state claims use proofs in note.
