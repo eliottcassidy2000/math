@@ -166,3 +166,58 @@ missing proof is a statement about the specific initial data (the
 primes; one integer's address), not about the automaton. This is the
 same conclusion as the crossings note: the one-window method is
 complete, and what remains is arithmetic of the seed.
+
+## 6. Calibration in the random-address model: the natural conjecture is `mu = 1/2`, not `0` (FINITE-EXACT)
+
+The script `collatz_oscillation_20260926_randommodel.py` runs the
+shell-revisit statistics on the address of no integer: heights in bits
+with i.i.d. valuations, `P(v = 1) = p`, `P(v = j) = (1-p) 2^(-(j-1))` for
+`j >= 2`, drift `log_2 3 - (3 - 2p)` per odd step (divergent iff `p > 0.7075`),
+twenty trajectories of `10^5` steps for each `(p, L)`, `D = ceil(1.05 log_2 L)`:
+
+```text
+random-address model: p = P(v=1); drift per odd step = log_2 3 - (3 - 2p) bits; 20 trajectories of 100000 T-steps each
+ p     drift   L    D   mean tot<=L  mean ND  mean multiplicity  max multiplicity (over trajectories)  mean landing pts
+0.72  +0.025   32   6      5082.3    4018.4     3.01              13                             342.9
+0.72  +0.025   64   7      6906.5    4935.6     4.53              21                             441.1
+0.72  +0.025  128   8     10456.7    6554.6     6.53              37                             597.6
+0.72  +0.025  256   9     14957.7    8639.9     8.76              56                             717.0
+0.75  +0.085   32   6       720.5     600.6     2.86              14                              38.8
+0.75  +0.085   64   7      1532.3    1186.2     4.63              22                              74.8
+0.75  +0.085  128   8      2080.9    1621.7     5.81              28                              76.3
+0.75  +0.085  256   9      4970.1    3621.5     8.05              47                             165.2
+0.80  +0.185   32   6       216.4     199.5     2.07              10                               5.6
+0.80  +0.185   64   7       491.6     443.4     3.49              15                              12.3
+0.80  +0.185  128   8       948.2     869.8     4.78              26                              16.4
+0.80  +0.185  256   9      1894.6    1754.3     5.20              33                              24.6
+0.90  +0.385   32   6       103.9     101.5     1.11               5                               0.9
+0.90  +0.385   64   7       196.1     194.7     0.59               6                               0.6
+0.90  +0.385  128   8       411.9     407.5     1.03              12                               1.4
+0.90  +0.385  256   9       780.7     774.1     1.22               6                               2.4
+```
+
+Reading. For the near-critical drifts (`p = 0.72`, `0.75`; the regime of a
+hypothetical divergent orbit that is thin, since such an orbit has
+`Delta_l -> -infinity` slowly, i.e. vanishing drift) the mean multiplicity
+grows like `L^(1/2)` (`3.0, 4.5, 6.5, 8.8` at `L = 32, 64, 128, 256`; doubling
+exponents `0.59, 0.53, 0.42`): a zero-drift walk returns to a unit shell
+about `sqrt L` times in `L` steps, and each return before the `2^D`-drop is
+one more dipper of the same landing point. For a fixed positive drift
+`delta` the returns saturate at about `1/delta` (`p = 0.80`: `2.1, 3.5, 4.8, 5.2`;
+`p = 0.90`: about `1`). So the random-address heuristic for the shell form is
+
+```text
+mean multiplicity  ~  min( sqrt L,  C/delta ),      hence  mu = 1/2 at criticality,
+```
+
+and the S7 statement "the random-walk heuristic gives `O(theta L)`" was the
+positive-drift case, not the critical one. The actual segments of
+section 1 (means `2.4`-`5.8` at `L = 24`-`64`) sit on the `p = 0.72`-`0.75` rows.
+Consequences: the honest conjectural exponent of the one-window method
+for the thinnest orbits is `a*(1/2) = lambda*/(2h*) - 3/2 = -1.243`, not the
+ballot floor `-3/2`; `mu = 0` should be expected only for orbits with
+positive drift, whose element count is `O(log X)` anyway. HYP-9161 is
+restated accordingly below and in its file. The Gilbreath side has no
+such correction: its defects live at threshold `0` where the survival is
+`2^(-F)` with no square-root effect (they are killed by the first `2`, not
+by a return statistic).

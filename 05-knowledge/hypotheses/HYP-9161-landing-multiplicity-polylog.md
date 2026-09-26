@@ -93,3 +93,12 @@ leaving it downward by `2^D`, at most `C L^mu` times on average over the
 elements below `X 2^(-D)`; equivalently `N(X) <= (C L^mu + 1) N(X 2^(-D)) + #ND(X, D) + C L^2`.
 Probes (`collatz_oscillation_20260926_shells.py`): mean multiplicity `2`-`6`,
 heaviest landing points `4`-`13` returns to one shell, scale ratios `1.0`-`2.4`.
+
+**Random-address calibration (opus, collatz-oscillation-20260926, 2026-09-26).**
+With i.i.d. valuations at near-critical drift the mean multiplicity grows like
+`sqrt L` (`3.0, 4.5, 6.5, 8.8` at `L = 32..256`, `collatz_oscillation_20260926_randommodel.py`),
+because a zero-drift walk returns to a unit shell about `sqrt L` times per
+window; at fixed positive drift it saturates at about `1/drift`. So the
+natural conjecture for the thinnest divergent orbits is `mu = 1/2`, giving
+`a*(1/2) = lambda*/(2h*) - 3/2 = -1.243`, not `mu = 0`; the earlier "conjecturally
+`O(theta log X)`" was the positive-drift case.
