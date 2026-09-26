@@ -29,6 +29,11 @@ status: >
   (was 52) and delta_12 >= 95 (was N_12 = 70), from exact feedback sets of
   the expanding cycles; the upper bounds remain 72 (k = 11) and 131 (k = 12,
   pruned).
+  UPDATE 2026-09-26 (THM-4495, opus): |Bad_k| = W_k satisfies the exact
+  identity k W_k = sum_n B_n W_(k-n) (B_n = binomial tails) and
+  0.26 * 2^(hk) k^(-3/2) <= N_k <= delta_k <= |Bad_k| <= 545 * 2^(hk) k^(-3/2),
+  so delta_k = Theta(2^(hk) k^(-3/2)): the polynomial is pinned, and the
+  necklace bound 2^(hk)/(3k^2) improves by k^(1/2).
   UPDATE 2026-09-26 (THM-4482): the upper Christoffel word is one maximizer
   of sigma_k, not the only one. The maximal cycles are all periodic
   concatenations of density-F_k first-descent blocks, a positive-entropy

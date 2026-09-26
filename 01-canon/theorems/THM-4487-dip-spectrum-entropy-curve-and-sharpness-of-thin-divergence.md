@@ -142,6 +142,10 @@ For `b = +-1`, `alpha = log_2 3`, `h` the binary entropy:
 * **`5n+1`.** `gamma/log_2 5 < 1/2` for every `gamma <= 1`: the dip count has
   exponent `1` and there is no Korec-type theorem, consistent with the
   expected divergent orbits.
+* **Exact order at `gamma = 1` (THM-4495, post-audit).** `D_b(X, 1) = Theta(X^h (log X)^(-3/2))`
+  on both sheets, and the residue count `|Bad_k|` obeys the exact identity
+  `k W_k = sum_n B_n W_(k-n)` with binomial tails `B_n`; the bracket
+  `log^(-3/2) .. log^(+1)` of (1) closes at its lower end for `gamma = 1`.
 * **General form.** For every Conway map with `max p_i > m` and every
   `gamma in (0, 1]` the dip exponent is the constrained maximum entropy of
   the multiplier law (Theorem 4 of the note, post-audit); Korec's threshold

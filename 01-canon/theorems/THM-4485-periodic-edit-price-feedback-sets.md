@@ -41,6 +41,10 @@ status: >
   70). nu < FVS at (q,k) = (3,7), with a certified fractional cover of
   weight 22/3.
   These are prices of modified maps. Collatz is OPEN.
+  UPDATE 2026-09-26 (THM-4495, opus): for q = 3 the whole chain
+  N <= nu <= FVS <= FVS^odd <= delta_k <= |Bad_k| is Theta(2^(hk) k^(-3/2))
+  with explicit constants (0.26 and 545), so the price is
+  Theta(2^(-(1-h)k) k^(-3/2)) rather than 2^(-(1-h)k)/(3k^2) .. 2^(-(1-h)k).
 source: collatz-procgen-20260922 session, mykk lane (2026-09-26); audited and promoted by the session orchestrator 2026-09-26
 depends_on:
   - 01-canon/theorems/THM-4474-strategy-cube-provability-by-cycle-densities.md

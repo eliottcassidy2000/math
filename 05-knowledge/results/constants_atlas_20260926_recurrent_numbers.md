@@ -79,7 +79,7 @@ the point where the mechanism is a Terras count.
 | `2/1` | `+1` | free cycle `{1,2}` |
 | `3/2` | `-1` | free cycle `{-5,-7,-10}`; minus-sheet expansion factor `9/8` |
 | `8/5` | `+13` | first positive convergent gap; `13 = (3^3-1)/2` as well |
-| `11/7` | `-139` | the sporadic cycle `{-17, ...}`: shape `(11,7)`, one integral necklace of 30; expansion `2187/2048 = 1.068` |
+| `11/7` | `-139` | the sporadic cycle `{-17, ...}`: shape `(11,7)`, one integral necklace of 30; expansion `2187/2048 = 1.068`; THM-4484 (procgen) names this the sporadic cycle, gap `139`, next to the four Gersonides-forced cycles |
 | `7/4` | `128 - 81 = 47` | E-SCC budget `c* = ln(128/81)/4 = 0.1144` per digit |
 | `19/12` | `-7153` | Pillai clock of the plus crossings (`27` orbit), `7153 = 23 * 311` |
 

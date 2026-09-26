@@ -289,6 +289,12 @@ all heights (THM-1289, published), δ ineffective.
   exponent `0.95` is optimal for that method; the Collatz constants `0.95,
   0.05, 0.7925, 0.2075, 0.488, 1.0527` lie on one entropy curve
   ([atlas](../05-knowledge/results/constants_atlas_20260926_recurrent_numbers.md)).
+  **THM-4495 (exact order, PROVED):** the no-descent residue count `|Bad_k|`
+  obeys `k W_k = sum_n B_n W_(k-n)` (binomial tails; Spitzer, self-contained)
+  and is `Theta(2^(hk) k^(-3/2))`, so THM-4479's strategy-cube distance
+  `delta_k`, THM-4485's deletion-price chain, the expanding-necklace count
+  and the `gamma = 1` dip count are all of that order: one exponent and one
+  polynomial in four settings.
 - **Erdős Problem 592** [DEEP — $1000 problem] — the p=2 Schur-seam theorem (THM-469),
   R(n,2)=2n+1 linear conjecture, Chang-tower m=3 open; 21 scripts, a survey draft.
 - **{7,21} forbidden H-spectrum** [DEEP, repo-signature] — permanent exclusions by

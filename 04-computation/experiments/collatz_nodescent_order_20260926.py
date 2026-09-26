@@ -124,7 +124,7 @@ def main():
         up = n * hp - 0.5 * math.log2(2 * math.pi * n * p * (1 - p))
         worst_low = min(worst_low, lc - low)
         worst_up = max(worst_up, lc - up)
-        worst_tail = max(worst_tail, B[n] / (c * RHO / (2 * RHO - 1)))
+        worst_tail = max(worst_tail, 2 ** (math.log2(B[n]) - lc) * (2 * RHO - 1) / RHO)
         worst_h = max(worst_h, hp - H)
     print("(B) for 3 <= n <= %d and j0 = floor(n log_3 2) + 1: min(log2 C(n,j0) - lower bound) = %.4f (>= 0), max(log2 C - upper bound) = %.4f (<= 0), "
           "max B_n / ((rho/(2rho-1)) C(n,j0)) = %.6f (<= 1), max h(j0/n) - h = %.2e (<= 0)" % (KMAX, worst_low, worst_up, worst_tail, worst_h))
@@ -139,7 +139,7 @@ def main():
         rw = 2 ** (math.log2(Wr[k]) - H * k + 1.5 * math.log2(k))
         rn = 2 ** (math.log2(Nk) - H * k + 1.5 * math.log2(k))
         rb = 2 ** (math.log2(B[k]) - H * k + 0.5 * math.log2(k))
-        print("    %5d  %8.4f  %8.4f  %8.4f  %8.3f  %.4f" % (k, rw, rn, rb, Wr[k] / Nk, (k * RHO) % 1))
+        print("    %5d  %8.4f  %8.4f  %8.4f  %8.3f  %.4f" % (k, rw, rn, rb, 2 ** (math.log2(Wr[k]) - math.log2(Nk)), (k * RHO) % 1))
     lo, hi = 1e9, 0.0
     lob, hib = 1e9, 0.0
     for k in range(max(2, KMAX // 6), KMAX + 1):
@@ -163,6 +163,9 @@ def main():
           "sigma = sum b_n/n = %.6f (+ tail <= %.4f); explicit upper constant C e^(2 sqrt2 sigma) = %.2f"
           % (Cg, KMAX, 2.4094 / math.sqrt(2 * math.pi * RHO * (1 - RHO)), sigma, tail, 1.99 * math.exp(2 * math.sqrt(2) * (sigma + tail))))
     # cumulative sums for the dip count D(2^T, 1): sum_{t < T} W_t
+    mn_w = min(2 ** (math.log2(Wr[k]) - H * k + 1.5 * math.log2(k)) for k in range(1, KMAX + 1))
+    mn_n = min(2 ** (math.log2(necklaces_above(k)) - H * k + 1.5 * math.log2(k)) for k in range(2, 400))
+    print("    min over 1 <= k <= %d of W_k k^1.5/2^(hk) = %.4f;  min over 2 <= k < 400 of N_k k^1.5/2^(hk) = %.4f  (both >= 0.26)" % (KMAX, mn_w, mn_n))
     print("    sum_(t<T) W_t for T = 8, 12, 16, 20, 24:", [sum(Wr[t] for t in range(1, T)) for T in (8, 12, 16, 20, 24)])
 
 
