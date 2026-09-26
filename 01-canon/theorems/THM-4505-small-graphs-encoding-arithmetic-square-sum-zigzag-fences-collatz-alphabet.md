@@ -62,8 +62,8 @@ status: >
   (ANALOGY: no map). Hamiltonian paths are tabulated for n <= 2200.
   OPEN:
   - whether lambda = 1/2 (wave 19 fence lane);
-  - uniqueness of s = 2 in the simultaneous Pell system (checked for the
-    first 400 Pell solutions);
+  - [CLOSED, see UPDATE below: s = 2 is the unique positive solution of
+    the simultaneous Pell system (CITED, Anglin 1996)];
   - which n in each window W_a admit a Hamiltonian path of C_n;
   - the zigzag converse for all c.
 source: collatz-procgen-20260922 session, smallgraph lane (2026-09-26), answering the owner's prompts on Friedman's fence problem, small graphs that encode arithmetic, and the square-sum problem at 15 with 8 at one end and 9 at the other; audited and promoted by the session orchestrator 2026-09-26
@@ -112,6 +112,11 @@ audit: >
 # THM-4505 — small graphs that encode arithmetic: square sums, zigzags, fences, and the Collatz alphabet
 
 **PROVED + INDEPENDENTLY AUDITED.** Full note: [procgen_smallgraph_20260926_small_graphs_arithmetic](../../05-knowledge/results/procgen_smallgraph_20260926_small_graphs_arithmetic.md).
+
+**UPDATE 2026-09-26 (orchestrator; CITED).** The simultaneous Pell system `t^2 - 2s^2 = 1`, `u^2 - 6s^2 = 1` has the unique positive solution `s = 2`.
+- **Source.** W. S. Anglin, "Simultaneous Pell equations", Math. Comp. 65 (1996) 355–359, proved that `x^2 - a z^2 = 1`, `y^2 - b z^2 = 1` (with `a != b`) has at most one positive solution whenever `max{a,b} <= 200`. This is quoted from M. A. Bennett, "On the number of solutions of simultaneous Pell equations" (J. reine angew. Math. 1998). Bennett's text was read 2026-09-26 from the author's page; Anglin's table itself was not read.
+- **Consequence for square sums.** With `(a,b) = (2,6)` and the solution `(3,5,2)`, the three targets `2k+1, 4k, 6k+1` are all squares only for `k = 4`, i.e. `9, 16, 25`. So the zigzag of the square-sum problem is unique, and the owner's "8 at one end, 9 at the other" happens for squares exactly once.
+- **Equivalent classical problem** (our deduction). Writing `s = 2m`, the system says that `m^2` is triangular (`8m^2 + 1 = t^2`) and generalized pentagonal (`24m^2 + 1 = u^2`). The pair `(a,b) = (8,24)` is also in Anglin's range, so `m = 1` is the only solution: 1 is the only square that is both triangular and generalized pentagonal. Wikipedia's "Pentagonal number" article (read 2026-09-26) says that no formal proof of the pentagonal square triangular case "has yet appeared in print", and credits unpublished work applying Anglin's paper. The deduction here rests on Bennett's statement of Anglin's theorem.
 
 ## 1. Why the square-sum problem first becomes possible at 15, from 8 to 9
 
