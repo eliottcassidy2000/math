@@ -378,3 +378,16 @@ The small graphs behaved differently: they kept their arithmetic exactly.
 * Lemma S's single dyadic shell for multiplicity;
 * isoperimetry for fences;
 * the contraction `g_s(y) = (4y - s)/q` for the max-halving skeleton.
+
+## Wave 19 (2026-09-26): a Pythagorean triple behind the owner's 15, and a hierarchy behind 7n±1
+
+* **The owner's 15, 8, 9.** In the square-sum problem, 8 and 9 turn out to be the Pythagorean triple (3,4,5).
+  * The chain `8,1,15,...,7,9` uses exactly the squares `9, 16, 25`. It is one orbit of the rotation by 9 on `Z/16`, because a sum graph is a union of reflections `x -> t - x` and two reflections make a translation.
+  * Every primitive triple gives such a chain: `(5,12,13)` chains `1..143`.
+  * Among the triples, only `(3,4,5)` also has the zigzag shape of THM-4505 (Anglin).
+  * The owner's instinct that 8 and 9 mean something was right. The meaning is Pythagoras and a rotation, not the Catalan pair that also sits on (8,9).
+* **7n±1 against 5n±1.** The flip calculus names the only profitable local move, and Lemma R adds that a flip which rejoins pays its gain back exactly.
+  * For 5n±1, Min's first rejoining flip closes the sporadic cycle `1,3,8,4,2`, which Max forces anyway on the negative integers, so the game ends at `2/5`.
+  * For 7n±1 the corresponding closure (density `1/3`) is too good to be forced. The value is then set by an unbounded hierarchy of rational coincidences that must be separated one level at a time.
+  * This is the same shape as the whole program: finitely many forced structures decide `q = 3, 5`, and an infinite exceptional family is what an all-level proof would have to organize.
+* **Fences.** The Corner Lemma gives the fence problem its Euler identity. The LP it spawns proves `lambda <= 0.5225` and cannot prove more by angles alone (0.51677). Whether pentagons can beat squares at all is a question about fence lengths, which no corner count sees.

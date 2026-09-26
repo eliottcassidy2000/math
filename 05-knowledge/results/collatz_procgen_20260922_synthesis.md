@@ -1052,6 +1052,47 @@ primes and the five Platonic solids. Note
 * Bearing on Collatz: none beyond the drift sign; the S9 verdict (no
   reduction either way) stands.
 
+## 2r. Wave 19 (2026-09-26, this session; 2q was taken by the gilbreath-fermat session): fences get an Euler identity for corners, sum graphs become rotations, and 7n±1 through itineraries
+
+**1. THM-4509: Friedman's fences, the Corner Lemma** ([fencelim note](procgen_fencelim_20260926_fence_density.md)).
+* **Discrete half.** At every junction, `ends + through + (sectors >= pi) >= 3`, with equality exactly at T, X, Y and L. Summed with each face's angle identity, this gives the **Corner Lemma**: the fields have at most `3·#fields + n - 3` convex corners.
+* **Continuous half.** Polygon isoperimetry (L'Huilier) prices corners against perimeter. Together: `A + 2 mu sqrt(pi A) <= 2(mu + rho) n - 6 rho`, so `lambda <= (6 - P_5)/(8 - P_5) = 0.5224525`. This is an LP optimum made of regular pentagons and unit squares. It is below `1/sqrt(pi)` and below Hales's `12^(-1/4)`.
+* **Limits of the method.**
+  * Angle-potential certificates stall at `(4 - 12^(1/4))/(6 - 12^(1/4)) = 0.5167670` (proved). Their extremal "tiling" (hexagons at triangular roundabouts) is forbidden only by fence lengths.
+  * For convex fields: `0.5168084` (computer-assisted).
+  * Beating the grid's `1/2` needs fields with at most 4 and with at least 5 convex corners together. No construction was found.
+* **Reading.** The discrete count of corners (Euler, the Kuratowski lane's counting) and the continuous isoperimetric price close each other exactly, in an LP whose dual is the Corner Lemma. Whether `lambda = 1/2` needs per-fence accounting, which neither half sees.
+
+**2. THM-4510: sum graphs as reflection orbits** ([sumgraph note](procgen_sumgraph_20260926_reflection_orbits.md)).
+* **The mechanism.** A sum graph is a union of reflections `x -> t - x`. Two of them compose to the translation by the target gap. Hence:
+  * two targets never close a cycle, and give a chain only for gaps 1 and 2 (the Gersonides pairs);
+  * three targets give a chain iff the union is tight and the gaps are coprime; the chain is then one orbit of a rotation.
+* **The owner's 15, 8, 9.** The chain `8,1,15,...,7,9` uses the squares `9, 16, 25` with `9 + 16 = 25`: it is the Pythagorean triple `(3,4,5)`, a rotation by 9 mod 16 with ends `3^2` and `4^2/2`.
+  * Every primitive triple gives such a three-square chain of `1..t^2 - 1`: `(5,12,13)` chains `1..143`, and `(8,15,17)` chains `1..224`.
+  * The first window `{15,16,17}` is this one triple.
+  * THM-4505's Pell identity (with Anglin) says only `(3,4,5)` has the zigzag shape.
+* **The Collatz alphabet `C_n` at every scale.**
+  * The top layer is forced into a zigzag translating by `|3^a - 2P|`.
+  * Choke families W1–W3 switch Hamiltonicity off on explicit ranges affine in `2^p` and `3^(a-1)`, whenever `rho_a = 2^p/3^(a-1)` lies in fixed intervals (level densities 0.363, 0.263, 0.170 by Weyl).
+  * `W_8` is fully Hamiltonian.
+  * This is the exact form of "fractal recursion across levels". The Beatty letter records only whether `rho_a > 3/2`; `rho_a` itself decides.
+* **Audit.** Brute force over all pairs and triples, all Pythagorean triples with `t <= 60`, the W1–W3 certificates at levels 5, 7, 10, 12, and CP-SAT on `W_5`, all independent.
+
+**3. 7n±1 through itineraries (update to THM-4508)** ([seven3 note](procgen_seven3_20260926_itinerary_strategies.md)).
+* **The attempt.** Code strategies and adversaries by the max-halving itinerary, where the flip calculus lives. It moved neither bound: upper `37/100` (level 30), all-level floor `1/3`.
+* **What it proved.**
+  * **Lemma R.** A flipped orbit that rejoins pays back its local gain exactly: same odd steps, same halvings.
+  * **Corollary R.** A rule below `1/2` must switch every generic `S_inf` orbit permanently.
+  * **Lemma S.** The switched orbit first shadows the old one, so good rules must read far ahead.
+  * **Lemma M.** Exact evaluation of variable-depth rules.
+* **What it found (FINITE-EXACT).**
+  * Itinerary automata never beat `3/7`.
+  * The itinerary search stalls at `7/18` with a depth-46 rule.
+  * Optimal rules are not sparse.
+  * Uniform adversaries stay `<= 1/3`.
+* **Why q = 5 closes and q = 7 does not.** For 5n±1, Min's first rejoining flip (at 1) closes the sporadic cycle `1,3,8,4,2`, which Max forces on the negative integers; the bounds meet at `2/5`. For 7n±1 the fixed-point flip closes a cycle of density `1/3`, too good to be forced. The value is set by an unbounded hierarchy of exceptional rational closures.
+* **The limit.** An ergodic-optimization min-max over clopen flip sets. A value below `log_7 2` would be certified by one finite object; a value at or above it needs a uniform certificate. Both remain OPEN.
+
 ## 2b. The approach deck: every approach generated or considered, with its disposition
 
 | # | approach (lens + mechanism) | barrier verdict | probe run | outcome |
