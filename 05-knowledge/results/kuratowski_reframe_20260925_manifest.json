@@ -1,13 +1,13 @@
 {
   "status": "FINITE-EXACT controls; infinite claims have separate proofs",
-  "byte_basis": "raw file bytes",
+  "byte_basis": "raw UTF-8 file bytes, LF newlines, no BOM",
   "files": {
     "04-computation/experiments/kuratowski_reframe_20260925.py": "9a5128b0f617921200877140f56085a3e6630bbd79bcba815f11b2674471607a",
-    "04-computation/experiments/kuratowski_reframe_20260925_audit.py": "9640bb07554b871113dfc79262394032475a76cd9f365e37348e0d28df2f4103",
-    "04-computation/experiments/kuratowski_reframe_20260925_centers.py": "83d4dd2f33b75f40e983ce4bc58b6e0ef2e95906fd3b2bc84c31c82634fc30df",
-    "05-knowledge/results/kuratowski_reframe_20260925.out": "5738164d93af72eb69219f04e3f1436f39137ff2f26f9e787c985e8b82859a81",
-    "05-knowledge/results/kuratowski_reframe_20260925_audit.out": "b8eee791f44b1a6d622626dca014fb7ac475054de730ccd4aae4a37603b2c9c9",
-    "05-knowledge/results/kuratowski_reframe_20260925_centers.out": "ec11847a2184417dfd9898978f795e8e9c5bd1d4dbb6ccfb7e3e424482442b1a",
-    "05-knowledge/reference/COLLATZ-KURATOWSKI-2026-09-25-SOURCE.md": "55df934251fae3c93fa6ca68499c0c3b703818dae6ef31635f46687ce9654437"
+    "04-computation/experiments/kuratowski_reframe_20260925_audit.py": "6d9fa94ddcf55cc9fe0cfeb1a2719ab1b176a5ee5ffcbf7a01948065a8c74c8f",
+    "04-computation/experiments/kuratowski_reframe_20260925_centers.py": "12b5e53744bc2219638dc33383b47315ad33b526a5d67b87ee12a356c4d20401",
+    "05-knowledge/results/kuratowski_reframe_20260925.out": "32ada21c6ebb8316560582f0917bd57da2a54b741c3225025676da26e2c0fdbf",
+    "05-knowledge/results/kuratowski_reframe_20260925_audit.out": "00ea3c19b4993a39bc2ddee3bc40d974f3a5dbdb4e5410d0749a3556de4253f4",
+    "05-knowledge/results/kuratowski_reframe_20260925_centers.out": "6078da8965751abfb4c96f5c2101fc8344ce672d2da32bb1bdefa81502354190",
+    "05-knowledge/reference/COLLATZ-KURATOWSKI-2026-09-25-SOURCE.md": "a54a70588a609fa53a34d5c7d26fee403c353ce5b19fbcf113ebef9a5f8a7384"
   }
 }
