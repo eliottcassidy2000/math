@@ -40,7 +40,9 @@ Read with their contexts they fall into three kinds:
 
 The one deeper pattern that survived typing is the first: the Collatz
 constants `0.95, 0.05, 0.7925, 0.2075, 1.0527, 0.488` are values, slopes and
-reciprocals of one function, and that is now a theorem.
+reciprocals of one function, and that is now a theorem. Closed forms in
+`alpha = log_2 3`: `h* = log_2 alpha - (1 - 1/alpha) log_2(alpha - 1) = 0.949956`,
+`lambda* = log_3(1/(alpha - 1)) = 0.48807`, `theta_0 = 1 - alpha/2`.
 
 ## 1. Family A (STRUCTURAL, PROVED): the entropy curve of `3n±1`
 
@@ -55,7 +57,7 @@ on both sheets. The constants:
 | `1 - E(1)` | `0.050044` | sharp price of bounded-lookahead provability in the pairing family, for arbitrary edits, in the strategy cube; Chernoff rate | THM-4475, THM-4478, THM-4479, THM-4480 (`q = 3` column), synthesis 2k |
 | `log_4 3 = alpha/2` | `0.792481` | Korec's exponent: `E = 1` there | barrier atlas, THM-4487 |
 | `theta_0 = 1 - alpha/2` | `0.207519` | mean drift per `T`-step in bits; largest dip the counting sees | THM-4476, THM-4487 |
-| `-E'(1) = -h'(log_3 2)/alpha` | `0.48796` | the Chernoff tilt of the price exponent (`lambda* = 0.4881`) | THM-4476 note section 1.8, THM-4480 |
+| `-E'(1) = -h'(log_3 2)/alpha` | `0.48807` | exactly the Chernoff tilt `lambda* = log_3(1/log_2(3/2))` of the price exponent (tilt = slope of the rate) | THM-4476 note section 1.8, THM-4480, THM-4487 |
 | `1/E(1)` | `1.052681` | growth exponent below which no divergent orbit exists | THM-4476 Cor. 3 |
 | `alpha - 1 = log_2(3/2)` | `0.584963` | carry exponent `X^0.585`; lower limit of the dip spectrum; `(1-rho_0)/rho_0` | THM-4476, THM-4478, THM-4487 |
 | `1 - H(log_q 2)` | `0.013911 (q=5)`, `0.060510 (q=7)`, `0.100619 (q=9)` | the same curve for other multipliers (edit price); the dip spectrum is trivial for `q >= 5` because `gamma/log_2 q < 1/2` | THM-4480, THM-4487 remark |
@@ -147,7 +149,7 @@ Family B.
 
 | pair | values | why unrelated |
 |---|---|---|
-| THM-4475's lower-bound exponent vs the slope constant of Family A | `0.7737 = 0.0500 + log_2((3+sqrt13)/4)` vs `0.7735 = |log_2 log_2(3/2)|` | one involves `sqrt 13` from a two-term recurrence, the other the derivative of the entropy at `log_3 2`; they differ in the fourth decimal |
+| THM-4475's lower-bound exponent vs the slope constant of Family A | `0.7737 = 0.0500 + log_2((3+sqrt13)/4)` vs `0.7736 = |log_2 log_2(3/2)|` | one involves `sqrt 13` from a two-term recurrence, the other the derivative of the entropy at `log_3 2`; they differ in the fourth decimal |
 | AMM golden constant vs the Collatz drift | `1.59799` vs `1.58496` | different problems; the AMM constant is `1 + 2 log_5 phi` |
 | `189` thrice | `h(T_7)`, `1/189` LRC reserve, fragile pair `189` | three factorizations of `7 * 27` |
 | `139` four times | Collatz gap, `139/154`, `3*97*139`, `13*139 = 1807` | one small prime |

@@ -927,6 +927,7 @@ Six lanes, all audited by independent orchestrator code and pipeline reruns. Fiv
 | 30 | Diophantine-exponent criterion (Theorem D) | reaches `Dio > eta` only | HARD lane | PROVED: Sturmian and quasi-Sturmian words for every map with `eta < 2.50994` (all slopes of `5x+1`) |
 | 31 | q-series Padé (2-adic Tschakaloff) | needs a q-difference equation | HARD lane | **Theorem Y PROVED** (square-swap words, `Dio = 1`, zero entropy) |
 | 32 | cubic 2-adic theta values | the smallest open instance | HARD lane | the cube-swap word `Y3`: OPEN (HYP-9127) |
+| 33 | single-orbit density counting (Terras count + landing pigeonhole; opus S5/S6) | divergence half: a constraint, not an exclusion; SHEET-blind count with sign-specific consequence | THM-4476, THM-4487 | every non-periodic orbit has `O(X^(0.95+eps))` points below `X`, reciprocal sums converge, `R(d) < n` strictly; the count is sharp for the lemma (`X^(h(rho)+o(1))`), so `0.95` is the method's floor |
 
 ## 3. The snippet, dispatched
 

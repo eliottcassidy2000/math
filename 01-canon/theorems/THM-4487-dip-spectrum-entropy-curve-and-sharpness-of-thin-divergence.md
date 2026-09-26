@@ -11,8 +11,8 @@ status: >
   for gamma in (log_2(3/2), log_4 3] the limit is 1. So the exponent is
   h(log_3 2) = 0.949956 at gamma = 1 (Terras's undecided count) and rises to
   1 exactly at Korec's exponent log_4 3 = 0.792481; the constants
-  0.949956, 0.050044, 0.792481, 0.207519, 0.48796 (the Chernoff tilt =
-  -E'(1)) and 1.052681 (= 1/E(1)) of the procgen, crossroads and opus lanes
+  0.949956, 0.050044, 0.792481, 0.207519, 0.48807 (the Chernoff tilt
+  lambda* = log_3(1/log_2(3/2)) = -E'(1) exactly) and 1.052681 (= 1/E(1)) of the procgen, crossroads and opus lanes
   are values, slopes and reciprocals of the one function
   E(gamma) = h(max(1/2, gamma/alpha)).
   (2) The no-dip set F_b(X, theta) of THM-4476 satisfies
@@ -90,7 +90,7 @@ For `b = +-1`, `alpha = log_2 3`, `h` the binary entropy:
 * **One curve.** `E(gamma) = h(max(1/2, gamma/alpha))` carries `0.949956`
   (`E(1)`), `0.050044` (`1 - E(1)`: the sharp price exponent of THM-4475/4478/4479
   and the Chernoff rate), `0.792481` (where `E = 1`: Korec), `0.207519`
-  (`1 - alpha/2`: the drift), `0.48796` (`-E'(1)`: the Chernoff tilt) and
+  (`1 - alpha/2`: the drift), `0.48807` (`-E'(1) = log_3(1/log_2(3/2))`: the Chernoff tilt, exactly) and
   `1.052681` (`1/E(1)`: THM-4476's growth threshold).
 * **THM-4476 is optimal for its method.** Any lower exponent for a
   divergent orbit needs a constraint on no-dip points beyond one

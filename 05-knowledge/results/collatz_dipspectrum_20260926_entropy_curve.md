@@ -61,7 +61,7 @@ Collatz threads:
 |---|---|---|
 | `E(1) = h(log_3 2)` | `0.949956` | Terras's undecided density `2^(-(1-h)L)`; the exceptional 2-adic dimension (choice ladder); the thin-divergence exponent (THM-4476); `1 - E(1) = 0.050044` is the sharp price exponent in the pairing family, for arbitrary edits and in the strategy cube (THM-4475/4478/4479, synthesis 2k) and the Chernoff rate `I(T)` |
 | `E(log_4 3) = 1` | at `gamma = 0.792481` | Korec's exponent: the set of `n` with no dip below `n^c` has density zero iff `c > log_4 3`; `1 - log_4 3 = theta_0 = 0.207519` is the mean drift per `T`-step in bits and the largest dip exponent the counting sees |
-| `-E'(1)` | `0.48796` | the Chernoff tilt `lambda* = 0.4881` of the price exponent (`E'(1) = h'(log_3 2)/alpha`, and `h'(log_3 2) = log_2(alpha - 1) = log_2(log_2(3/2)) = -0.77353`) |
+| `-E'(1)` | `0.48807` | exactly the Chernoff tilt `lambda*` of the price exponent: `lambda*` minimises `(2^(-lambda) + (3/2)^lambda)/2`, so `3^(lambda*) = 1/log_2(3/2)`, i.e. `lambda* = log_3(1/log_2(3/2)) = -log_2(alpha - 1)/alpha = -h'(log_3 2)/alpha = -E'(1)` (with `h'(log_3 2) = log_2(alpha - 1) = log_2(log_2(3/2)) = -0.77358`); large-deviation duality, tilt = slope of the rate |
 | `1/E(1)` | `1.052681` | the growth exponent below which no divergent orbit exists (`m_j > j^a` infinitely often for `a < 1/h*`, THM-4476 Cor. 3) |
 | `1 - alpha/2` | `0.207519` | `theta_0`; the drift; Korec's `1 - log_4 3` |
 | `log_2(3/2) = alpha - 1` | `0.584963` | the carry exponent `(3/2)^(log_2 X) = X^(0.585)`, the lower limit of validity of the dip spectrum, and the ratio `(1 - rho_0)/rho_0` |
@@ -203,4 +203,5 @@ sheet-blind class count predicts.
 * **For the atlas.** The recurrence of `0.95`, `0.05`, `0.7925`, `0.2075`,
   `1.0527`, `0.488` across the procgen, crossroads and opus lanes is
   structural: they are values, slopes and reciprocals of `E(gamma)` at two
-  points. The near-coincidence `0.7737 ~ 0.7735` is not.
+  points. Closed forms in `alpha = log_2 3`: `h* = log_2 alpha - (1 - 1/alpha) log_2(alpha - 1)`,
+  `1 - h*` the Chernoff rate, `lambda* = log_3(1/(alpha - 1))`, `theta_0 = 1 - alpha/2`. The near-coincidence `0.7737 ~ 0.7735` is not.
