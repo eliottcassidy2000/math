@@ -1,0 +1,9 @@
+repetition_checks 1361360 zero_defect_checks 23 switch_identity_checks 13644
+reset_family_checks 21
+hostile 3 1 (1,) -1 D 1 C 1 E 0
+hostile 3 -1 (1, 2) 5 D 1 C -5 E 0
+hostile 5 1 (1, 1, 5) 13 D -3 C 39 E 0
+hostile 3 1 (2,) 1 D -1 C 1 E 0
+reset_example 5 (27, 41, 31) old_budget 1 new_budget 4 hidden_center_numerator 256
+reset_example 11 (1819, 2729, 2047) old_budget 1 new_budget 10 hidden_center_numerator 16384
+reset_example 17 (116507, 174761, 131071) old_budget 1 new_budget 16 hidden_center_numerator 1048576

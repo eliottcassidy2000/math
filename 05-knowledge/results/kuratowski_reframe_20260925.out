@@ -1,0 +1,13 @@
+FINITE-EXACT repetition controls: 1392640 cases; 23 fixed-block cases; zero mismatches
+FINITE-EXACT cylinder lift controls: 4080 ; all sign complements exact
+REFUTED pasted orbit corollary: [23, 17, 25, 37, 55, 41, 61, 91, 17] ; ABCC < ABCCAA
+FINITE-EXACT repeated (1,2) family: N=1..64, both signs;
+plus forced k=3 exit remains above start exactly at N>=9 in this range
+FINITE-EXACT unbounded-reset family: H=6j+5, j=0..32
+(H, start, seam, subsequent k=1 count): [(5, 27, 31, 4), (11, 1819, 2047, 10), (17, 116507, 131071, 16)]
+Representative control: (2,) sign 1 [1, 1, 1, 1, 1, 1, 1, 1]
+Representative control: (1,) sign -1 [1, 1, 1, 1, 1, 1, 1, 1]
+Representative control: (1, 2) sign -1 [5, 5, 5, 5, 5, 5, 5, 5]
+Representative control: (1, 1, 1, 2, 1, 1, 4) sign -1 [17, 17, 17, 17, 17, 17, 17, 17]
+Hostile 5x+1 cycles at 1,13,17 retained; formula is multiplier-general
+script_sha256 9a5128b0f617921200877140f56085a3e6630bbd79bcba815f11b2674471607a

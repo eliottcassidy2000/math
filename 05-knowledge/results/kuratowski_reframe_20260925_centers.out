@@ -1,0 +1,8 @@
+preperiodic_center 1 -5/3 first_H 3
+preperiodic_center 2 -23/9 first_H 7
+preperiodic_center 3 -101/27 first_H 19
+preperiodic_center 4 -431/81 first_H 55
+preperiodic_center 5 -1805/243 first_H 163
+preperiodic_center 6 -7463/729 first_H 487
+preperiodic_center 7 -30581/2187 first_H 1459
+pullback_family_checks 56

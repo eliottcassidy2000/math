@@ -9,6 +9,13 @@ Format per entry:
 - Why it was wrong
 - The correct framing
 
+## 2026-09-25 Kuratowski/Collatz paste -- recurrence, escape, and finite-bit scope
+
+- **False orbit corollary.** The pasted note's section 3.3 assumes an orbit visits each odd value once. Under `3n-1`, `23->17->25->37->55->41->61->91->17` contains distinct edges into 17 with addresses `ABCC` and `ABCCAA`. The source's same-target comparability theorem survives; orbit incomparability needs distinct targets. This does not retract its separate consecutive-edge statement.
+- **Missing obstruction.** Sections 7.2/7.4 identify coverage with exclusion of nontrivial integer cycles, omitting aperiodic escape. Both must be excluded. Raw `3a+q` cycle censuses also need `gcd(a,q)=1` to describe the reduced denominator-q sheet: `a=q=5` is the integer fixed point 1.
+- **Quantifier overreach.** Arbitrarily long initial rises exclude a uniform bounded descent horizon, not all finite-description proofs with adaptive counters or induction. The full edge-address encoding retains the dynamics; only its ancestry relation is insufficient as a forward rank.
+- **Repair and continuation.** The [current reframe](../05-knowledge/results/kuratowski_reframe_20260925.md) preserves the [input](../05-knowledge/reference/COLLATZ-KURATOWSKI-2026-09-25-SOURCE.md), proves an exact repeated-block countdown, and exhibits unbounded replenishment at block changes. It also rules out the precisely stated class `a log n + sum c_i v2(n-beta_i)` with positive a and finitely many fixed negative rational centers. Nonlinear, adaptive, and unbounded-family ranks remain open. The failed transfer was from local finite escape to global termination.
+
 ## 2026-09-25 Clock, seed, and symmetry losses in the Zenodo extension
 
 - **Clock repair.** The one-step increase9→14 prevents copying the old binary-creation rank, but does not prevent a valid longer descent:9→14→7 decreases both odd-spine depth and elliptic height. The odd-part quotient is not a one-step dynamical quotient:14 and7 share odd part7, while their successors have odd parts7 and11. Retain a marked parity gap or use the explicitly guarded first-return clock; [the triangle note](../05-knowledge/results/zenodo_triples_20260925.md) proves the infinite8a+1→6a+1 cylinder. Under the shortcut clock,1↔2 does not revisit4; root4 coverage uses n>2 or terminal bank1,2,4.
