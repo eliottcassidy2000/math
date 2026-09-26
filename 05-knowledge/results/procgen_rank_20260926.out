@@ -1,0 +1,156 @@
+procgen_rank_20260926 -- two-place Lyapunov functions: forced charges, banks, adaptive centers, heights
+python 3.10.0, numpy 2.2.6, ortools 9.15.6755, arm64
+sha256 7fd831c01a1f67282bc7f90f1c0ceebded8c11fc98349a7b953d91f965b59cbf  procgen_rank_20260926_lib.py
+sha256 49c14b77d400071dbc41fda68307cc69e875f81f51a603a750e3e53bbb195793  procgen_rank_20260926_q1.py
+sha256 062f804603395fe09abbff2d537ca6c60596f98d700f4195dfd5713792dbb8e4  procgen_rank_20260926_cube.py
+sha256 6fd71ec7844bfac7b0dc802c27d16bca81ad9347ce4854dbe03d0b1e0fa6cce2  procgen_rank_20260926_q2.py
+sha256 d80e102d7e555a68488ad60fc249c4be4ecb575344531b50cbcac6db23e7d602  procgen_rank_20260926_q3.py
+sha256 7fb1df408904fdc90120340f4f71eab00783b159e2111c21daa23551f964b519  procgen_rank_20260926_run.py
+
+== A. product-formula (Liouville) bound and heights of periodic points ==
+ok: Liouville bound v2(n - beta) <= log2((n+1) H(beta)) on 23994 (n, beta) pairs, including 12000 pairs with n 2-adically close to beta (max slack -7.087)
+ok: H(x_w) <= 3^(a-1) 2^p for all 32752 words of length <= 14 with a >= 1; max log2 H / p = 1.5426 < log2 6 = 2.5850
+== B. Lemma L (local expansion of a bank at a rational point) ==
+ok: Lemma L at zeta = -1 (signed bank with 240 near atoms of height ~2^m): |Phi(y) - c D - Phi*| = 1.7e-04, 1.1e-04, 2.5e-05 <= bound 2.1e-02, 9.2e-03, 2.3e-03 at D = 40, 80, 160
+ok: Lemma L at zeta = -2 (signed bank with 240 near atoms of height ~2^m): |Phi(y) - c D - Phi*| = 6.3e-04, 2.4e-04, 4.4e-06 <= bound 3.6e-02, 1.4e-02, 3.1e-03 at D = 40, 80, 160
+ok: Lemma L at zeta = -5/3 (signed bank with 240 near atoms of height ~2^m): |Phi(y) - c D - Phi*| = 2.4e-04, 1.0e-04, 2.2e-05 <= bound 4.9e-02, 1.9e-02, 4.6e-03 at D = 40, 80, 160
+ok: Lemma L at zeta = -13/9 (signed bank with 240 near atoms of height ~2^m): |Phi(y) - c D - Phi*| = 3.9e-05, 8.5e-05, 6.1e-07 <= bound 6.6e-02, 2.5e-02, 6.1e-03 at D = 40, 80, 160
+ok: Lemma L at zeta = -5 (signed bank with 240 near atoms of height ~2^m): |Phi(y) - c D - Phi*| = 3.0e-04, 1.4e-04, 3.7e-06 <= bound 5.0e-02, 2.0e-02, 5.0e-03 at D = 40, 80, 160
+ok: Lemma L at zeta = -17 (signed bank with 240 near atoms of height ~2^m): |Phi(y) - c D - Phi*| = 6.4e-05, 5.5e-05, 1.6e-05 <= bound 6.2e-02, 2.5e-02, 6.3e-03 at D = 40, 80, 160
+ok: Lemma L at zeta = -65/49 (signed bank with 240 near atoms of height ~2^m): |Phi(y) - c D - Phi*| = 3.6e-04, 6.9e-05, 4.3e-05 <= bound 8.5e-02, 3.7e-02, 9.0e-03 at D = 40, 80, 160
+ok: Lemma L error bound respected in all 49 (zeta, D) cases (max |err|/bound = 0.031)
+== C. Theorem A: forced charges on the backward orbit of -1; explicit violations ==
+ok: the backward tree of -1 to depth 6 has 64 points, all negative rationals
+ok: B1 {-1: 0.9 kappa}: charge at -1 below kappa, so every step inside the shadow of -1 increases R by about kappa - c(-1) = 0.04055 (min over 40 steps at depth 80: 0.04055)
+ok: B2 {-2^j: 1.2 kappa 2^-j, j<=30}: the preimage z = -2 of -1 (j = 1) has a charge increase at chain step 0 (-2 -> -1); R(T^(i+1) y) - R(T^i y) = 13.174, 27.771, 56.964 at depths 60, 120, 240: linear with slope 0.24328 = c(T^(i+1) z) - c(T^i z)
+ok: B3 {-2^j: 1.2 kappa, j<=20}: the preimage z = -5/3 of -1 (j = 2) has a charge increase at chain step 0 (-5/3 -> -2); R(T^(i+1) y) - R(T^i y) = 37.870, 67.064, 125.451 at depths 60, 120, 240: linear with slope 0.48656 = c(T^(i+1) z) - c(T^i z)
+ok: B4 random (periodic points p<=8, tree of -1 to depth 6): the preimage z = -2 of -1 (j = 1) has a charge increase at chain step 0 (-2 -> -1); R(T^(i+1) y) - R(T^i y) = 17.181, 28.775, 51.962 at depths 60, 120, 240: linear with slope 0.19323 = c(T^(i+1) z) - c(T^i z)
+ok: every one of the 4 test banks has an explicit, predicted violation
+ok: lookahead L = 5: from the good integer y at depth 60 from -8 (bank B2), R(T^j y) - R(y) >= 2.652 > 0 for every 1 <= j <= L
+ok: lookahead L = 20: from the good integer y at depth 120 from -8 (bank B2), R(T^j y) - R(y) >= 6.301 > 0 for every 1 <= j <= L
+ok: lookahead L = 50: from the good integer y at depth 240 from -8 (bank B2), R(T^j y) - R(y) >= 13.599 > 0 for every 1 <= j <= L
+== D. sufficiency inside shadows; failure at the entry ==
+ok: -1 (3n+1) (p = 1, chi = 0.40547): with charge c = chi + 0.02 on the 1 cycle points and the periodic correction h = -c tau + g on the deep nodes mod 2^2, every one of 317 shadow steps has R(Tn) - R(n) <= -0.02000 < mubar/2 = -0.01000
+ok: -1 (3n+1): the entry step from the uncharged preimage -2 of -1 increases R by 24.41, 49.94, 100.99 at depths 60, 120, 240 (slope exactly c = 0.42547): the shadow is paid, the seam is not
+ok: -5 cycle (3n+1) (p = 3, chi = 0.03926): with charge c = chi + 0.02 on the 3 cycle points and the periodic correction h = -c tau + g on the deep nodes mod 2^3, every one of 317 shadow steps has R(Tn) - R(n) <= -0.02000 < mubar/2 = -0.01000
+ok: -5 cycle (3n+1): the entry step from the uncharged preimage -11/3 of -5 increases R by 3.72, 7.28, 14.39 at depths 60, 120, 240 (slope exactly c = 0.05926): the shadow is paid, the seam is not
+ok: -17 cycle (3n+1) (p = 11, chi = 0.00597): with charge c = chi + 0.02 on the 11 cycle points and the periodic correction h = -c tau + g on the deep nodes mod 2^6, every one of 317 shadow steps has R(Tn) - R(n) <= -0.02000 < mubar/2 = -0.01000
+ok: -17 cycle (3n+1): the entry step from the uncharged preimage -35/3 of -17 increases R by 1.52, 3.08, 6.20 at depths 60, 120, 240 (slope exactly c = 0.02597): the shadow is paid, the seam is not
+ok: 5 -> 7 -> 10 cycle (3n-1) (p = 3, chi = 0.03926): with charge c = chi + 0.02 on the 3 cycle points and the periodic correction h = -c tau + g on the deep nodes mod 2^3, every one of 317 shadow steps has R(Tn) - R(n) <= -0.02000 < mubar/2 = -0.01000
+ok: 5 -> 7 -> 10 cycle (3n-1): the entry step from the uncharged preimage 11/3 of 5 increases R by 3.72, 7.28, 14.39 at depths 60, 120, 240 (slope exactly c = 0.05926): the shadow is paid, the seam is not
+== E. the forced charges are not summable: mass per period ==
+   p   expanding points P(p)   forced mass M(p)   M(p) / (2^(h p) p^(-3/2))
+    1                        1           0.405465   0.2099
+    2                        0                  0   0.0000
+    3                        3           0.117783   0.0849
+    4                        4           0.523248   0.3006
+    5                        5           0.928713   0.3859
+    6                       18            1.80531   0.5105
+    7                       28            3.66274   0.6756
+    8                       32             5.2846   0.6165
+    9                      126            11.5386   0.8314
+   10                      170            19.4915   0.8515
+   11                      561            34.1102   0.8899
+   12                      768            64.2094   0.9881
+   16                     6848            653.008   1.1109
+   20                   137800             7809.9   1.3332
+   24                  1270800            86348.1   1.3913
+   32                236611808        1.24749e+07   1.5954
+   40              44359915760        1.90521e+09   1.7556
+   48            8368724803872        3.01986e+11   1.8859
+   64       302210786001787136        8.16085e+15   2.0856
+ok: M(p) > 0 for every p != 2 (M(2) = 0: no expanding primitive word of length 2) and M(64) = 8.16e+15; |log2 M(p) - h p| <= 2 log2 p + 2 for p = 16..64, as the binomial bounds M(p) = 2^(h p + O(log p)) predict: the forced charges are not summable
+ok: M(p) / (2^(h p) p^(-3/2)) stays in [1.111, 2.086] for p = 16..64 (h = 0.94996), consistent with the local-CLT order 2^(h p) p^(-3/2) (heuristic, not claimed)
+ok: the orbits O_L of 1^(L-1)0 alone need total charge log lambda_L = 0.118, 2.956, 11.065, 39.448 (L = 3, 10, 30, 100)
+== F. Theorem D: the private-atom bank (from stopping times) on a finite window ==
+ok: the orbits of 2..1000 (shortcut map) stay below M = 125252
+ok: construction admissible on [1, 125252]: every D_m >= log2 m + 2 (min D_m = 99)
+ok: every D_m exceeds log2 M + 2, so v2(n - z_m) = v2(n - m) for all n != m in the window
+ok: the finite bank {z_m = m + 2^(D_m)/3, eps_m} (m <= 125252) has -eps_n < Phi(n) - F(n) <= 0 on the window
+ok: Theorem D window check: along all 39889 steps of the orbits of 2..1000, R(Tn) - R(n) <= -1.9991 <= -C + delta/2 = -1.9750 (the finite bank is exact on the window; the infinite construction adds a tail in [0, delta((3 + log2 M)/M + 1/(M ln 2))])
+ok: height moment sum_{m<=M} eps_m D_m = 7.63e+04, 1.08e+06, 1.36e+07, 1.74e+07 for M = 10^3, 10^4, 10^5, 125252: it diverges (Theorem C)
+ok: the shadow lower bound Phi(y) >= kappa (V-1) - j log 2 holds at all 107 points y = 2^j (2^V - 1) of the window
+  [Q1 wall 0.5 s]
+
+== cube.a census of classes (i) and (i') at levels 2..5 (exhaustive) ==
+   level 2: class (i) 1, class (i') 0, other 3; isolated expanding SCCs 0
+ok: level 2: 1 class-(i) strategies (as THM-4474) and no class-(i') strategy
+   level 3: class (i) 1, class (i') 0, other 15; isolated expanding SCCs 0
+ok: level 3: 1 class-(i) strategies (as THM-4474) and no class-(i') strategy
+   level 4: class (i) 16, class (i') 0, other 240; isolated expanding SCCs 0
+ok: level 4: 16 class-(i) strategies (as THM-4474) and no class-(i') strategy
+   level 5: class (i) 1052, class (i') 0, other 64484; isolated expanding SCCs 4
+ok: level 5: 1052 class-(i) strategies (as THM-4474) and no class-(i') strategy
+ok: level 5: exactly 4 isolated expanding SCCs occur (all inside strategies that also have a non-isolated expanding cycle)
+== cube.b Theorem R+ mechanism on a non-Collatz strategy (level 5, isolated expanding 2-cycle) ==
+ok: strategy #23876 at level 5 has the isolated expanding cycle [13, 19] with periodic orbit ['1/5', '-1/5'] (odd density 1, multiplier 9/4)
+ok: inside the shadow of the cycle (158 steps): R(T n) - R(n) <= -0.0200 <= mubar/2 = -0.0100 with charge c = chi + 0.02 = 0.4255 on the two cycle points
+ok: the entry step from the uncharged even preimage 2/5 increases R by 24.41, 49.94, 100.99 at depths 60, 120, 240 (slope c): charging the backward orbit is forced here too
+== cube.c the loop at -1: isolation is possible, isolation with a contracting rest is not (k <= 10) ==
+ok: level 6: CP-SAT finds a strategy whose loop at -1 is an isolated SCC (re-verified by BFS: -1 is not reachable from its exit 31)
+ok: levels 4..10: CP-SAT proves INFEASIBLE 'loop at -1 isolated and every other cycle contracting' (k=4 INFEASIBLE, k=5 INFEASIBLE, k=6 INFEASIBLE, k=7 INFEASIBLE, k=8 INFEASIBLE, k=9 INFEASIBLE, k=10 INFEASIBLE; 4.5 s)
+  [cube wall 27.6 s]
+
+== Q2.0 parity vectors are a 2-adic isometry: v2(m - x_w) = common prefix of Q(m) and w^inf ==
+ok: v2(m - x_w) equals the common-prefix length of the parity words in 1750 random cases
+== Q2.1 current-center ranks (period <= P) fail at the even preimages y_V = 2^(V+1) - 2 ==
+ok: P = 1: Lam_P(y_V) = 0 = Lam_P(-2) for V = 30..240 while Lam_P(T y_V) >= V; min over 1 <= j <= 10 of R(T^j y_V) - R(y_V) = 12.3, 25.7, 52.5, 106.0 (>= c(V - 9 - P) - log 2): lookahead 10 fails
+ok: P = 3: Lam_P(y_V) = 3 = Lam_P(-2) for V = 30..240 while Lam_P(T y_V) >= V; min over 1 <= j <= 10 of R(T^j y_V) - R(y_V) = 11.0, 24.4, 51.1, 104.6 (>= c(V - 9 - P) - log 2): lookahead 10 fails
+ok: P = 11: Lam_P(y_V) = 11 = Lam_P(-2) for V = 30..240 while Lam_P(T y_V) >= V; min over 1 <= j <= 10 of R(T^j y_V) - R(y_V) = 7.4, 20.8, 47.6, 101.1 (>= c(V - 9 - P) - log 2): lookahead 10 fails
+ok: P = 20: Lam_P(y_V) = 20 = Lam_P(-2) for V = 30..240 while Lam_P(T y_V) >= V; min over 1 <= j <= 10 of R(T^j y_V) - R(y_V) = 3.4, 16.8, 43.5, 97.1 (>= c(V - 9 - P) - log 2): lookahead 10 fails
+ok: reset family n_H (H = 35..245): Lam_20(n_H) = 22 constant, Lam_20(T^3 n_H) >= H, and R(T^3 n_H) - R(n_H) = 5.9, 19.3, 46.1, 99.6
+== Q2.2 bounded preperiod Q (period <= 3) fails on y = 2^(Q+1) (2^V - 1) ==
+ok: Q = 5: at y = 2^6 (2^V - 1) the first halving step increases R_B by 15.81, 33.65, 69.33 at V = 40, 80, 160 (slope c: the preimage -2^6 of -1 lies just outside the window)
+ok: Q = 10: at y = 2^11 (2^V - 1) the first halving step increases R_B by 15.81, 33.65, 69.33 at V = 40, 80, 160 (slope c: the preimage -2^11 of -1 lies just outside the window)
+== Q2.3 the unbounded-period counter is an excursion time: l* <= Lam_inf < 2 l* ==
+ok: l*(m) <= Lam_inf(m) < 2 l*(m) at all 16911 orbit points with l* > 0 (max ratio 1.818)
+ok: on the same orbits: l*(T m) <= l*(m) - 1 at odd m, and l*(m) = 1 + max{l : M_l(m/2) > 2} (0 if none) at even m
+ok: l*(n) <= last passage of the orbit above n for every 3 <= n < 3000, with equality for 2893 of 2997 (the multiplier bound 3^a/2^l > 1 implies T^l n > n)
+   hovering family (Proposition Q2.3(c)): k with parity word w^r 0^s, w = lower Christoffel word of an
+   upper best approximation a/p of log_3 2, r <= log 2 / log(3^a/2^p); violation at 2k -> k >= c r p - log 2
+     a/p = 2/3, r = 1: s = 3, k has 3 bits, T^(rp) k = 2^s, l*(k) = 3 >= rp = 3, l*(2k) = 0, so Lam_inf(2k) = 0 and R_inf(k) - R_inf(2k) >= 0.64
+     a/p = 2/3, r = 3: s = 267, k has 267 bits, T^(rp) k = 2^s, l*(k) = 9 >= rp = 9, l*(2k) = 0, so Lam_inf(2k) = 0 and R_inf(k) - R_inf(2k) >= 3.32
+     a/p = 2/3, r = 5: s = 22137, k has 22137 bits, T^(rp) k = 2^s, l*(k) = 15 >= rp = 15, l*(2k) = 0, so Lam_inf(2k) = 0 and R_inf(k) - R_inf(2k) >= 6.00
+     a/p = 7/11, r = 1: s = 267, k has 267 bits, T^(rp) k = 2^s, l*(k) = 11 >= rp = 11, l*(2k) = 0, so Lam_inf(2k) = 0 and R_inf(k) - R_inf(2k) >= 4.21
+     a/p = 7/11, r = 2: s = 946509, k has 946509 bits, T^(rp) k = 2^s, l*(k) = 22 >= rp = 22, l*(2k) = 0, so Lam_inf(2k) = 0 and R_inf(k) - R_inf(2k) >= 9.12
+     a/p = 12/19, r = 1: s = 237921, k has 237921 bits, T^(rp) k = 2^s, l*(k) = 19 >= rp = 19, l*(2k) = 0, so Lam_inf(2k) = 0 and R_inf(k) - R_inf(2k) >= 7.78
+ok: the hovering integers exist and behave as proved for 2/3 (r = 1, 3, 5), 7/11 (r = 1, 2), 12/19 (r = 1); the proved bound c p floor(log 2/log lambda) - log 2 is 6.0, 48.4, 431.5, 12400.2 for 2/3, 7/11, 12/19, 53/84, unbounded as a/p -> log_3 2
+== Q2.4 violation statistics (every step m -> T m with m >= 3 before reaching 1) ==
+   set                                                 steps  A1               A3               A20              Ainf             B3_10            D2               D4               D8               D16              C2               C4               C8               C16            
+   orbits of 3..5000                                  254283  34396/5.11       53759/4.42       45121/10.90      39297/36.33      71308/4.87        9677/1.22        8353/1.41         757/0.41           0/0.00        5449/2.66          38/2.66           0/0.00           0/0.00     
+   path+delay records <= 10^12 (A006884, A006877)      49771   6893/9.12       11291/7.78       10317/11.80       9118/126.42     14233/7.78        2100/1.22         832/1.62         108/2.43           0/0.00        1236/5.01         198/4.53          23/0.65           0/0.00     
+   600 random n in [1e11, 1e12]                       110295  14132/6.44       22623/6.20       19810/13.58      18881/100.11     31091/6.20        1358/1.22        1049/1.41          85/0.24           0/0.00        1027/3.56          29/2.00           0/0.00           0/0.00     
+ok: orbits of 3..5000: every violation of A_1, A_3, A_20, A_inf (c = 1.1 log(3/2)) at a point m >= 11 happens at a reset (Delta Lam >= 0), never inside a shadow
+ok: orbits of 3..5000: the static and bounded-window candidates A_1, A_3, A_20, A_inf, B_3,10 all have violations (max increments 5.11, 4.42, 10.90, 36.33, 4.87)
+ok: path+delay records <= 10^12 (A006884, A006877): every violation of A_1, A_3, A_20, A_inf (c = 1.1 log(3/2)) at a point m >= 11 happens at a reset (Delta Lam >= 0), never inside a shadow
+ok: path+delay records <= 10^12 (A006884, A006877): the static and bounded-window candidates A_1, A_3, A_20, A_inf, B_3,10 all have violations (max increments 9.12, 7.78, 11.80, 126.42, 7.78)
+ok: 600 random n in [1e11, 1e12]: every violation of A_1, A_3, A_20, A_inf (c = 1.1 log(3/2)) at a point m >= 11 happens at a reset (Delta Lam >= 0), never inside a shadow
+ok: 600 random n in [1e11, 1e12]: the static and bounded-window candidates A_1, A_3, A_20, A_inf, B_3,10 all have violations (max increments 6.44, 6.20, 13.58, 100.11, 6.20)
+== Q2.5 windowed future envelopes: the horizon needed on the tested sets ==
+ok: orbits of 3..5000: max over orbit points m of (time to the future peak)/log2 m = 9.464; the windowed envelope D_theta is non-increasing on every step for theta = 9.48, and has 9919 violations for theta = 4.732
+ok: records <= 10^12: max over orbit points m of (time to the future peak)/log2 m = 12.932; the windowed envelope D_theta is non-increasing on every step for theta = 12.95, and has 376 violations for theta = 6.466
+ok: random [1e11,1e12]: max over orbit points m of (time to the future peak)/log2 m = 8.478; the windowed envelope D_theta is non-increasing on every step for theta = 8.49, and has 640 violations for theta = 4.239
+== Q2.6 cycle controls (3n-1 and 5n+1) ==
+ok: 5n+1 cycle through 13 (period 7, contracting: 5^a < 2^p): A_20 (with the 5n+1 expanding words) is finite and periodic on the cycle, its increments sum to 0, max 9.565 > 0: flagged
+ok: 5n+1 cycle through 17 (period 7, contracting: 5^a < 2^p): A_20 (with the 5n+1 expanding words) is finite and periodic on the cycle, its increments sum to 0, max 8.673 > 0: flagged
+ok: 3n-1 cycle 5,7,10: the cycle is an expanding periodic point that is a positive integer, so Lam_20 = infinity there (the run equals the whole computed sequence: 61/61, 121/121, 241/241): the candidate is not finite on this map
+ok: 3n-1 cycle through 17: the cycle is an expanding periodic point that is a positive integer, so Lam_20 = infinity there (the run equals the whole computed sequence: 221/221, 441/441, 881/881): the candidate is not finite on this map
+== Q2.7 where the largest violations of A_20 and A_inf occur (records <= 10^12) ==
+   A20: largest increment 11.80 at step 30 of the orbit of 106239: m = 9314882 (even step), Lam 0 -> 28, l* 41 -> 42
+   Ainf: largest increment 126.42 at step 194 of the orbit of 881715740415: m = 414028311267890 (even step), Lam 0 -> 285, l* 0 -> 285
+ok: the largest A_inf violation is an even step m -> m/2 at which the excursion time l* jumps by 285 (the multiplier of m/2 stays in (1, 2] for a long stretch after its last visit above 2)
+ok: the largest A_20 violation is a reset: Lam_20 jumps from 0 to 28
+  [Q2 wall 63.7 s]
+
+== Q3.a the shadow identity: 2-adic loss + 3-adic gain = archimedean growth ==
+ok: in 1685 shadow steps (cycles -1, -5, O_5, O_7, -17): y_j = (3^a_j/2^j) y_0, v2 drops by j, v3 of the numerator rises by a_j, the prime-to-6 part and the denominator are invariant, and the local log-changes at infinity, 2, 3 sum to 0
+== Q3.b the forced charge as a ratio of local expansion rates ==
+ok: for all 1767 expanding words of length <= 12: log|lam|_inf + log|lam|_2 + log|lam|_3 = 0 and chi = log 2 * log|lam|_inf / log|lam|_2
+== Q3.c the backward tree of -1: binary, heights linear in the depth ==
+ok: the backward tree of -1 has exactly 2^(j-1) points at depth j = 1..14 (every point of Z_(2) has the two preimages 2x and (2x-1)/3; only -1 is its own)
+ok: log2 H(z) <= 1.472 j for every z at depth 3 <= j <= 14 (< log2 6)
+ok: forced charge kappa on the tree up to depth 14 already totals 6643: the forced charges on one backward orbit are not summable
+  [Q3 wall 0.2 s]
+
+ok: peak RSS 381 MB < 700 MB (getrusage)
+  [total wall 91.9 s]

@@ -1,0 +1,4 @@
+  ok: backward tree of -1 has 2^(j-1) new points at depth j for j = 1..12
+  ok: bank {-1: 0.9 kappa}: every shadow step increases R by 0.1 kappa = 0.04055 (D = 30, 60, 120)
+  ok: bank {-1: 1.2 kappa}: entering the shadow from the uncharged preimage -4 raises R by 1.2 kappa (D - 2) + O(1), linear in D
+  ok: cycle -5,-7,-10: charge 0.95 chi fails over a period (increment > 0), 1.05 chi passes (increment < 0)

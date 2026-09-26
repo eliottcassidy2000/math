@@ -1,5 +1,12 @@
 # Script Results Index
 
+- [Two-place Lyapunov functions: what a Collatz rank must look like](procgen_rank_20260926_two_place_lyapunov.md):
+  **PROVED (THM-4483, audited) / FINITE-EXACT / EMPIRICAL / OPEN.**
+  * **Forced charges.** A rank `a log n + bounded h + sum c_beta v_2(n - beta)` with a height-summable bank must charge every point of the backward tree of every expanding cycle `x` with `>= a chi(x)`.
+  * **Hence** no such bank works for Collatz (the tree of `-1` has `2^(j-1)` points at depth `j`). Nonnegative banks need infinite height moment in every open set. Nonnegative rational-center banks with strict descent exist iff every orbit reaches 1 (stopping times stored in heights).
+  * **Adaptive centers** fail at seams (resets), never in shadows, on data to `10^12`.
+  * **Unification.** Four rank obstructions — bounded corrections, finite banks, bounded lookahead, and height-summable banks — are one fact: expanding cycles and their backward trees.
+
 - [Tensions, ranks and Christoffel words in the strategy cube](procgen_tension_20260926_ranks_christoffel_duality.md):
   **PROVED (THM-4482, audited) / FINITE-EXACT / REFUTED / OPEN.** Class (i) holds iff a rank `a log n + h(n mod 2^k)` decreases by a margin, iff a bounded-correction rank never increases, iff a Lemma P certificate exists. The least rank defect is the maximum cycle mean (LP duality between tensions and circulations).
   * Collatz's defect is `log(3/2)` (the loop at `-1`), so no periodic or bounded correction beats `log n`. Finite banks of 2-adic valuation counters also fail; this contains the reframe's §5 and explains the Bernoulli-boundary obstruction.
