@@ -1,0 +1,8 @@
+  ok: Theorem A2: two-target unions are acyclic and Hamiltonian exactly as predicted for 3 <= n <= 60 (203 Hamiltonian pairs)
+  ok: Theorem A3: over all 85261 triples with 3 <= n <= 24, the union is a Hamiltonian path iff (i) max degree <= 2, (ii) n-1 edges, (iii) gcd condition (758 paths)
+  ok: Corollary A3''': all 11 primitive triples with t <= 60: the squares s^2, t^2, u^2 give a Hamiltonian path of [n] exactly at n = t^2-1, t^2 (and 17 for (3,4,5)) within [t^2-3, t^2+3], with the stated ends; (3,4,5) gives Q_15 with ends 9 and 8
+  ok: Corollary A3'': three consecutive squares give a Hamiltonian union only at [(4, 15), (4, 16), (4, 17)] (j <= 25, n <= 700)
+  ok: Lemma T: for 3 <= n <= 5000 every target in (max(P,Q), 2n-1] is 2P or 3Q
+  ok: W1-W3 certificates re-derived from neighbour lists: a=5 W1 [160, 178] (19 n); a=5 W2 [207, 210] (4 n); a=7 W1 [1419, 1535] (117 n); a=7 W2 [1714, 1791] (78 n); a=7 W3 [1803, 1919] (117 n); a=10 W1 [40960, 42664] (1705 n); a=12 W1 [334833, 393215] (202 n); a=12 W2 [419830, 458751] (202 n); a=12 W3 [458752, 465904] (202 n)
+  ok: W1/W2/W3 ranges are nonempty exactly for rho in (4/3,12/7), (4/3,8/5), (4/3,3/2), all levels 3 <= a <= 200
+  ok: CP-SAT (independent of both lanes' custom solvers; paths verified edge by edge) agrees with the Hamiltonian set of W_5 at n = 179:PATH, 180:PATH, 194:PATH, 195:NONE, 200:NONE, 206:NONE, 207:NONE, 223:NONE, 224:PATH, 243:PATH

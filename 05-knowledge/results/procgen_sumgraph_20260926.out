@@ -1,0 +1,74 @@
+
+=== A. two and three reflection matchings (t = 0.0 s) ===
+[OK] A.0 Lemma R1: |M_t| = floor((n - |t-n-1|)/2) for all n < 120, 1 <= t <= 2n+1
+[OK] A.1 Theorem A2: two-target unions are acyclic (all pairs, n <= 40) and Hamiltonian exactly as predicted, 3 <= n <= 150 (518 Hamiltonian pairs)
+[OK] A.2 Theorem A3: for 3 <= n <= 80: (i) <=> max degree <= 2 <=> the explicit list; among the 12814 triples with (i),(ii) (incl. 4 sporadic n=6,7 cases), the union is a Hamiltonian path iff (iii) (9652 paths)
+[OK] A.3 Corollary A3': explicit generic table == (ii) for all a<b<c with c-a >= n, n <= 60
+[OK] A.4 Corollary A3'' (squares): three consecutive squares form a Hamiltonian union only for (j,n) in [(4, 15), (4, 16), (4, 17)] (j <= 40, n <= 2000)
+[OK] A.4b Pythagorean zigzags: for all 18 primitive triples s^2+t^2=u^2 (s<t<=100): the three squares give a Hamiltonian union exactly for n in {t^2-1, t^2} (+ n = 17 for (3,4,5)), with ends {s^2, t^2/2} (t even) or {s^2/2, s^2} (t odd) at n = t^2-1, and rotation by s^2 mod t^2; t^2 = 2s^2-2 with a Pythagorean triple only for (3,4), t <= 10000
+[OK] A.5 zigzag: for k <= 60, M_{2k+1} u M_{4k} u M_{6k+1} on [4k-1] is exactly the path Z_k, (i)-(iii) hold, and the return map is the rotation by c-b mod c-a
+[OK] A.6 rotation: return map to the b-matching is x -> x + (c-b) mod (c-a) on all 5234 generic tight triples, n <= 60
+[OK] A.7 Corollary A2' (C_n): two-target Hamiltonian paths of C_n, 3 <= n <= 3000: n in [3, 7, 8]
+
+=== B. the Collatz-alphabet sum graph C_n (t = 17.2 s) ===
+[OK] B.1 Lemma T: targets in (M, 2n-1] are among {2P, 3^(b+1)} for all n <= 20000, and the neighbour lists of all top vertices are exactly {2P-x, 3^(b+1)-x} for n <= 1500
+[OK] B.1b top translations: delta = |3^a - 2P| for the values of P met in W_a (below 3^a): [(3, [5]), (4, [17, 47]), (5, [13]), (6, [217, 295]), (7, [139, 1909]), (8, [1631]), (9, [3299, 13085])]
+[OK] B.2 Ham set to 2200: independent solver: C_n has a Hamiltonian path for n <= 2200 exactly on 1-3, 5-8, 18-26, 49-63, 65-66, 68-80, 179-194, 224-243, 473-575, 665-728, 1319-1418, 1536-1616, 1620-1663, 1703-1713, 1792-1802, 1920-2114, 2120-2186 (LOCAL 945, PATH 758, NONE 497; 19 s)
+[OK] B.2b propagation completeness to 2200: all 497 non-local NONE verdicts are reached by unit propagation alone (0 branching nodes)
+[OK] B.2c unique forced paths: two-leaf Hamiltonian n <= 2200 whose path is forced by propagation alone (hence unique): [3, 5, 8, 65, 243]
+[OK] B.3 W_8: W_8 = [4374,6561] (all admissible): Hamiltonian exactly on 4374-6561; 0 NONE, all by propagation alone: True; 1329 s
+[OK] B.3b propagation completeness on W_8: no branching node was needed for any NONE in W_8
+[OK] B.3c W_8 choke at 512: base propagation (end 4096 forced) finds the choke core [512, 1536, 1675, 2421, 2560, 2977, 3584, 4608, 4886, 5025] at n = 5025, 5100, 5214 and no conflict at 5024, 5215
+[OK] B.4 W5 K32 (ends forced): hypotheses hold for every n in [162, 178] and the solver agrees (NONE)
+[OK] B.4 W5 K32+K16 (second order): hypotheses hold for every n in [195, 206] and the solver agrees (NONE)
+[OK] B.4 W5 K32 doubly choked: hypotheses hold for every n in [207, 210] and the solver agrees (NONE)
+[OK] B.4 W5 K32 + K16 (first order): hypotheses hold for every n in [211, 223] and the solver agrees (NONE)
+[OK] B.4 W6 K64 (ends forced): hypotheses hold for every n in [576, 664] and the solver agrees (NONE)
+[OK] B.4 W7 K256 (ends forced): hypotheses hold for every n in [1419, 1535] and the solver agrees (NONE)
+[OK] B.4 W7 K128(second order)+K256: hypotheses hold for every n in [1664, 1702] and the solver agrees (NONE)
+[OK] B.4 W7 K256 doubly choked: hypotheses hold for every n in [1714, 1791] and the solver agrees (NONE)
+[OK] B.4 W7 K128+K256 (first order): hypotheses hold for every n in [1803, 1919] and the solver agrees (NONE)
+[OK] B.4 all instances: no hypothesis failed
+[OK] B.4b families W1-W3: for 3 <= a <= 200: W1/W2/W3 ranges are nonempty exactly when 4/3 < rho < 12/7, 8/5, 3/2 (rho = P/3^(a-1)); their hypotheses hold on the whole range (both ends, monotone; every n for a <= 10) and fail just outside; the solver agrees for a <= 8. Ranges for a <= 12: W1@a=5: [160,178]; W2@a=5: [207,210]; W1@a=7: [1419,1535]; W2@a=7: [1714,1791]; W3@a=7: [1803,1919]; W1@a=10: [40960,42664]; W1@a=12: [334833,393215]; W2@a=12: [419830,458751]; W3@a=12: [458752,465904]
+[OK] B.4b2 W3 disjointness (all levels): no element of R(P/4) can equal an element of R(P/8) for rho = 2^p/3^(a-1) in (4/3, 3/2): each coincidence forces rho to a rational that is not of the form 2^i/3^j or lies outside the range
+[OK] B.4c family densities: levels 3..200 with a nonempty range: W1 71, W2 52, W3 33 of 198 (equidistribution predicts log2(9/7) = 0.363, log2(6/5) = 0.263, log2(9/8) = 0.170 of the levels: observed 0.359, 0.263, 0.167)
+[OK] B.4d W_10 at n = 40960: solver: ends forced [16384, 32768]; propagation contradiction with core [8192, 24576, 34473, 40960] = {P/4, 3P/4, 3B-3P/4, 5P/4} (Proposition W1)
+[OK] B.4d W_10 at n = 42664: solver: ends forced [16384, 32768]; propagation contradiction with core [8192, 24576, 34473, 40960] = {P/4, 3P/4, 3B-3P/4, 5P/4} (Proposition W1)
+[OK] B.5 Choke Lemma soundness: first-order conflicts never refute a Hamiltonian n (all admissible n checked above); NONE verdicts explained at first order: 435, needing deeper propagation: 62
+    boundary 179 (start): n = r_243(v), v = 64 reached from 64 in 0 lower reflections: [64]
+    boundary 195 (stop): n = r_243(v), v = 48 reached from 16 in 1 lower reflections: [16, 48]
+    boundary 224 (start): n = r_256(v), v = 32 reached from 32 in 0 lower reflections: [32]
+    boundary 576 (stop): n = r_1024(v), v = 448 reached from 64 in 1 lower reflections: [64, 448]
+    boundary 665 (start): n = r_729(v), v = 64 reached from 64 in 0 lower reflections: [64]
+    boundary 1419 (stop): n = r_2187(v), v = 768 reached from 256 in 1 lower reflections: [256, 768]
+    boundary 1536 (start): n = r_2048(v), v = 512 reached from 512 in 0 lower reflections: [512]
+    boundary 1617 (stop): n = r_2048(v), v = 431 reached from 81 in 1 lower reflections: [81, 431]
+    boundary 1620 (start): n = r_2187(v), v = 567 reached from 81 in 2 lower reflections: [81, 162, 567]
+    boundary 1664 (stop): n = r_2048(v), v = 384 reached from 128 in 1 lower reflections: [128, 384]
+    boundary 1703 (start): n = r_2048(v), v = 345 reached from 128 in 2 lower reflections: [128, 384, 345]
+    boundary 1714 (stop): n = r_2187(v), v = 473 reached from 256 in 1 lower reflections: [256, 473]
+    boundary 1792 (start): n = r_2048(v), v = 256 reached from 256 in 0 lower reflections: [256]
+    boundary 1803 (stop): n = r_2187(v), v = 384 reached from 128 in 1 lower reflections: [128, 384]
+    boundary 1920 (start): n = r_2048(v), v = 128 reached from 128 in 0 lower reflections: [128]
+    boundary 2115 (stop): n = r_2187(v), v = 72 reached from 9 in 1 lower reflections: [9, 72]
+    boundary 2120 (start): n = r_2187(v), v = 67 reached from 2 in 2 lower reflections: [2, 14, 67]
+[OK] B.6 boundary words: every one of the 17 inner boundaries (n > 150) is T - w(s): T a top target, s a power of 2 or 3, |w| <= 2; |w| = 0 for 6, |w| <= 1 for 14
+[OK] B.6b base rate W_5: all n in W_5 (82): |w| = 0: 0.183; |w| <= 1: 0.768; |w| <= 2: 0.988
+[OK] B.6b base rate W_6: all n in W_6 (256): |w| = 0: 0.090; |w| <= 1: 0.434; |w| <= 2: 0.887
+[OK] B.6b base rate W_7: all n in W_7 (868): |w| = 0: 0.037; |w| <= 1: 0.265; |w| <= 2: 0.760
+[OK] B.6b base rate W_8: every 8th n in W_8 (274): |w| = 0: 0.015; |w| <= 1: 0.084; |w| <= 2: 0.471
+
+=== C. square sums near the thresholds (t = 1390.2 s) ===
+[OK] C.1 square-sum paths: independent solver: Q_n has a Hamiltonian path for n <= 40 exactly on 1, 15-17, 23, 25-40 (A090461, CITED)
+[OK] C.1b statuses 18-24: 18 LOCAL (three leaves 16,17,18); 19-22 and 24 NONE by propagation; 23 PATH
+[OK] C.2 Q_19: ends forced {16,18}; N(3) = {1,6,13}, 1 saturated by the degree-2 vertices 8,15 and 6 by 10,19: 3 would have to be an end
+[OK] C.2b Q_20: over-saturation at 5 (degree-2 neighbours 4,11,20: free end in {4,11,20}) and the choke at 3 (free end in {3,8,10,15,19}) are disjoint
+[OK] C.3 Q_21: lock: 18 and 9 (degree 1, 2) saturate 7, so 2 (N = {7,14}) is choked: base core [2, 7, 9, 18]; the three candidates are refuted by propagation (core sizes [(2, 8), (7, 3), (9, 8)])
+[OK] C.3 Q_22: lock: 18 and 9 (degree 1, 2) saturate 7, so 2 (N = {7,14}) is choked: base core [2, 7, 9, 18]; the three candidates are refuted by propagation (core sizes [(2, 7), (7, 3), (9, 4)])
+[OK] C.3b Q_23: the lock opens at 23 = r_25(2): vertex 2 gains the partner 23
+[OK] C.4 Q_24: base core has 18 vertices; all 18 candidates refuted, cores of sizes [3, 3, 3, 3, 3, 6, 7, 7, 9, 12, 12, 13, 13, 14, 15, 15, 18, 19]
+
+=== D. rotation bridge (numerical companions) (t = 1390.3 s) ===
+[OK] D.1 square window as rotations: Q_15, Q_16, Q_17 chains: every return to the 16-matching is x -> x + 9 mod 16 (gcd(9,16) = 1, a single rotation orbit)
+
+RUN 47 checks passed; wall 1390 s; peak RSS 67 MB

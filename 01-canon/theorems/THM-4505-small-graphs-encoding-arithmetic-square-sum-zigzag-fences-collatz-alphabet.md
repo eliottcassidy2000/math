@@ -64,7 +64,7 @@ status: >
   - whether lambda = 1/2 (THM-4509 narrows it to [1/2, 0.5224525]);
   - [CLOSED, see UPDATE below: s = 2 is the unique positive solution of
     the simultaneous Pell system (CITED, Anglin 1996)];
-  - which n in each window W_a admit a Hamiltonian path of C_n;
+  - which n in each window W_a admit a Hamiltonian path of C_n (THM-4510: forced top zigzag, choke families W1-W3 at every level, W_8 fully Hamiltonian; Conjecture B);
   - the zigzag converse for all c.
 source: collatz-procgen-20260922 session, smallgraph lane (2026-09-26), answering the owner's prompts on Friedman's fence problem, small graphs that encode arithmetic, and the square-sum problem at 15 with 8 at one end and 9 at the other; audited and promoted by the session orchestrator 2026-09-26
 depends_on:
