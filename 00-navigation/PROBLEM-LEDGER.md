@@ -377,9 +377,10 @@ all heights (THM-1289, published), δ ineffective.
   triangle is the Frobenius tower of the Fermat numbers (step-t kernel = row t of Pascal mod 2 =
   prod of F_i over the bits of t, verified to t = 2047 on the primes below 200000); the five Fermat
   primes enter only through Gauss-Wantzel, von Staudt-Clausen (forest) and THM-871, the five Platonic
-  solids only through {3,4,5} = Schlafli numbers = PSL fields. THM-4511 (PROVED): a lone size-4 defect
-  never crosses the first sea 2 on its left, extinction exactly 2^(1-F); sizes >= 6 and interacting
-  defects remain open (exact table: re-emissions add 4-10 per cent). HYP-9162: the skew-Hadamard doubling
+  solids only through {3,4,5} = Schlafli numbers = PSL fields. THM-4511 (PROVED, audited): in a row of 0s, 2s and 4s no 4 crosses the first
+  sea 2 left of the first 4 (any number of 4s), the leading 1 dies iff the first 4 is preceded by
+  zeros only; lone-defect extinction exactly 2^(1-F); a finite triangle is decided at its first
+  all-{0,2,4} row; sizes >= 6 remain open (finite-context table: re-emissions add 4-10 per cent). HYP-9162: the skew-Hadamard doubling
   tower of doubly regular tournaments on the Mersenne zero-triangle sides keeps exactly the Paley
   heptagon's F_21. Note: `05-knowledge/results/gilbreath_fermat_platonic_20260926.md`.
 

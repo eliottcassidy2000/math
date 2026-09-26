@@ -19,16 +19,17 @@ and [HYP-3771](../hypotheses/HYP-3771-five-tilings-five-solids-apex-prime-geomet
 rigidity of rotational tournaments: at a Fermat prime `p`, `Aut = Z_p`).
 
 **Status: PROVED small statements (the sea kernel theorem; the Mersenne-side
-and `3^(K-1-m)` count of the single-seed zero triangles; the skew-Hadamard
+and `3^(K-1-m)` count of the single-seed zero triangles, proof in section 2; the skew-Hadamard
 doubling tower and the containment `F_21 <= Aut(T_k)`; THM-4511, the wall
-theorem for a lone size-4 defect, with the exact extinction law `2^(1-F)`);
+theorem for any number of size-4 defects, with the exact extinction law `2^(1-F)` for a lone one);
 FINITE-EXACT (all checks on the primes below `200000`, the tower tournaments to
-order `255` including their automorphism groups, the group identifications, the extinction table to `F = 12` over
-all `2^(F-1+10)` contexts); CLASSICAL facts cited as such; SPECULATION marked.
-No claim on Gilbreath's conjecture, none on Collatz.** Scripts:
+order `255` including their automorphism groups, the group identifications, the extinction table to `F = 12` over all `2^(F-1+R)` contexts, `R = 10`, `R = 9` at
+`F = 12`); CLASSICAL facts cited as such; SPECULATION marked; INDEPENDENTLY
+AUDITED (HAS GAPS -> repaired, section 8). No claim on Gilbreath's conjecture,
+none on Collatz.** Scripts:
 `04-computation/experiments/gilbreath_fermat_tower_20260926.py`,
 `..._tournaments.py`, `gilbreath_fermat_platonic_20260926_groups.py`,
-`gilbreath_extinction_20260926.py`, with `.out` files.
+`gilbreath_extinction_20260926.py`, `gilbreath_certificate_20260926.py`, with `.out` files.
 
 ## 0. The answer in one paragraph
 
@@ -50,15 +51,20 @@ solids come from a different mechanism (the Schlafli inequality
 the polygons Euclid needs in Book XIII, *and the sizes of the fields whose
 projective groups are the rotation groups of the solids*
 (`PSL(2,3) = A_4`, `PGL(2,3) = S_4`, `PSL(2,5) = PSL(2,4) = A_5`). The two fives
-are not the same five. What the automaton picture does deliver is a theorem
-about Gilbreath's actual dynamics: **a lone defect of size `4` never crosses
-the first sea `2` on its left, whatever lies to its right** (THM-4511), so its
-extinction probability is exactly `2^(1-F)`, and the owner's "zeros of
-tournament size edged by 2s" is made exact: in the single-seed diagram every
-zero triangle has Mersenne side `2^m - 1`, each such order carries a doubly
-regular tournament built by the same doubling, and the symmetry those
-tournaments keep is precisely the Paley heptagon's Frobenius group of order
-`21`.
+are not the same five. What the automaton picture does deliver is a theorem about Gilbreath's actual
+dynamics: **in a row whose entries are `0`, `2` and `4` only, no `4` ever
+crosses the first sea `2` on the left of the first `4`, whatever `0/2/4`
+pattern lies to the right, and the leading `1` is destroyed iff the first `4`
+is preceded by zeros only** (THM-4511; the audit removed my restriction to a
+single defect, which the proof never used). So a lone size-`4` defect's
+extinction probability is exactly `2^(1-F)`, a finite Gilbreath triangle is
+decided at its first all-`{0,2,4}` row, and all danger to the leading `1`
+comes from entries `>= 6`. And the owner's "zeros of tournament size edged by
+2s" is made exact: in the single-seed diagram every zero triangle has
+Mersenne side `2^m - 1`, each such order carries a doubly regular tournament
+built by the same doubling, and the symmetry those tournaments keep, as far
+as computed (orders up to `511`), is the Paley heptagon's Frobenius group of
+order `21` (HYP-9162).
 
 ## 1. The sea kernel theorem: Fermat numbers as coarse-graining kernels (PROVED, FINITE-EXACT)
 
@@ -95,7 +101,7 @@ at step `2^k - 1` it is the full window parity over `2^k` cells (the kernel
 `prod_(i<k) F_i = 2^(2^k) - 1`). **The primality of `F_k` is invisible to the
 automaton.**
 
-## 2. Where the five Fermat primes do live (CLASSICAL + FINITE-EXACT)
+## 2. Where the five Fermat primes do live (CLASSICAL + PROVED + FINITE-EXACT)
 
 * **Rows of the single-seed diagram.** Row `2^k` has value `F_k`; rows
   `2^k - 1` are all ones with value `2^(2^k) - 1 = prod_(i<k) F_i`
@@ -116,11 +122,25 @@ automaton.**
   triangles with top row `n < 2^K` is `sum_(n: exactly m trailing ones)
   2^(popcount(n) - m) = 3^(K-1-m)` for `m < K`, plus the single triangle of
   side `2^K - 1` under the all-ones row `2^K - 1`. Checked for `K = 5, 7, 9`:
-  counts `27, 9, 3, 1, 1`; `243, 81, 27, 9, 3, 1, 1`; `2187, ..., 3, 1, 1`.
-  The sides `1, 3, 7, 15, 31` in the first `32` rows are the Sierpinski sides
-  of the five known Fermat primes' rows (the side-`(2^k - 1)` triangle opens
-  under row `2^k`, whose binary value is `F_k`); every side `2^m - 1` with
-  `m >= 2` is `3 mod 4`. In the primes' triangle (S9, audited) the sides are
+  counts `27, 9, 3, 1, 1`; `243, 81, 27, 9, 3, 1, 1`; `2187, ..., 3, 1, 1`; the
+  audit also checked that every interior zero lies in exactly one such
+  triangle and the closed form to `K = 16`. *Proof.* A maximal zero run of
+  length `t` in row `r + 1` comes from `t + 1` equal cells of row `r` bounded
+  by unequal neighbours, and those cells are ones unless the run continues a
+  zero run above; so the zero region is exactly the union of the inverted
+  triangles under the maximal runs of ones. In row `n` the ones sit at
+  `p - j` for `j subset n` (Lucas); if `n` has exactly `m` trailing ones, the
+  sets `{H, H + 1, ..., H + 2^m - 1}`, `H` ranging over the subsets of the
+  higher bits of `n`, are the maximal intervals of such `j` (adding `1` to
+  `H + 2^m - 1` carries into the zero bit `m` of `n`; `H - 1` has bit `m` set),
+  so every run has length `2^m`, every side is `2^m - 1`, and the count over
+  `n < 2^K` with exactly `m` trailing ones is `sum_H 2^(popcount H) =
+  3^(K-1-m)`. ∎ The sides `1, 3, 7, 15, 31` in the first `32` rows are the
+  Sierpinski sides of the five known Fermat primes' rows: the side-`(2^k - 1)`
+  triangle opens under the all-ones row `2^k - 1` (value `prod_(i<k) F_i`) and
+  its top zero row is row `2^k`, whose binary value is `F_k = 1 0...0 1` (a
+  first draft said the triangle opens under row `2^k`); every side `2^m - 1`
+  with `m >= 2` is `3 mod 4`. In the primes' triangle (S9, audited) the sides are
   geometric with ratio `2.00`, all sizes: **the owner's tournament-size
   triangles are the seed's, not the primes'** (S9, unchanged).
 * **THM-871.** At a Fermat prime `p` the multiplier group `Z_(p-1)` is a
@@ -171,8 +191,11 @@ i.e. the Frobenius group `Z_7 x| Z_3` of the heptagon, with orbits of sizes
 equals `P_31`'s (the census did not separate them; the automorphism
 groups do). So: the zero-triangle sides `2^k - 1` of the sea are exactly the orders
 of a tower of doubly regular tournaments generated by the sea's own doubling,
-the Paley heptagon is its `k = 3` level, and from there on the tower keeps the
-heptagon's `21` symmetries and nothing else ([HYP-9162](../hypotheses/HYP-9162-sierpinski-tournament-tower-frobenius-21.md)).
+the Paley heptagon is its `k = 3` level, and as far as computed (`k <= 8` here, `k = 9` in the audit) the tower
+keeps the heptagon's `21` symmetries and nothing else; the audit also proved
+that the stabilizer of `0'` in `Aut(T_(k+1))` consists exactly of the diagonal
+extensions, so `Aut(T_k) = F_21` for all `k` is equivalent to `0'` being fixed
+by every automorphism ([HYP-9162](../hypotheses/HYP-9162-sierpinski-tournament-tower-frobenius-21.md)).
 This is the exact content behind the owner's "zeros of some tournament size
 edged by 2s": true of the seed diagram (sides Mersenne, tournaments doubly
 regular), false of the primes' rows (sides geometric).
@@ -214,88 +237,105 @@ regular), false of the primes' rows (sides geometric).
   sizes of the rotation groups, and `3 = F_0` is also the Collatz multiplier
   (the only Fermat multiplier with negative drift, section 2).
 
-## 5. THM-4511: the wall theorem for a lone size-4 defect, and the exact extinction law (PROVED + FINITE-EXACT)
+## 5. THM-4511: the wall theorem for size-4 defects, and the exact extinction law (PROVED + AUDITED + FINITE-EXACT)
 
 **Theorem.** Run `a_(r+1)(i) = |a_r(i) - a_r(i+1)|` from a row with
-`a_0(0) = 1`, `a_0(F) = 4`, and `a_0(i) in {0, 2}` for every other `i`
-(finitely or infinitely many columns to the right). Let `c < F` be the largest
-column with `a_0(c) = 2` and `1 <= c`, if it exists. Then
+`a_0(0) = 1` and `a_0(i) in {0, 2, 4}` for every `i >= 1` (finitely or
+infinitely many columns), containing at least one `4`. Let `F` be the first
+column with `a_0(F) = 4` and `c` the largest column with `1 <= c < F` and
+`a_0(c) = 2`, if it exists. Then
 
-1. if `c` exists, every column `i <= c` stays in `{0, 2}` for all rows and the
-   leading entry stays `1`: **no entry `>= 4` ever crosses the wall `c`**,
-   whatever the cells right of `F` are;
+1. if `c` exists, every column `1 <= i <= c` stays in `{0, 2}` for all rows
+   and the leading entry stays `1`: **no entry `>= 4` ever crosses the wall
+   `c`**, whatever `0/2/4` pattern lies to the right of `c`;
 2. if `c` does not exist (`a_0(1..F-1) = 0`), then `a_(F-1)(1) = 4` and
    `a_F(0) = 3`: the leading `1` is destroyed at row `F`.
 
-Hence a lone size-`4` defect at distance `F` destroys the leading `1` iff the
-`F - 1` cells between them are all `0`; in a uniform random sea the
-probability is exactly `2^(1-F)`, and re-emissions from the stationary copy
-never add anything.
+Hence a row of `0`s, `2`s and `4`s destroys the leading `1` iff its first `4`
+is preceded by zeros only; for a lone size-`4` defect at distance `F` in a
+uniform random sea the probability is exactly `2^(1-F)`, and re-emissions
+from the stationary copy never add anything. (My first draft assumed a
+single `4` and claimed that a second `4` could reopen the wall; the audit
+observed that the proof never uses the assumption, and that mechanism does
+not exist.)
 
 *Proof.* Column `i` depends only on columns `i` and `i + 1` (the rule looks
-right). Columns `> F` start in `{0, 2}` and stay there. Column `F` starts at
-`4`; while its right neighbour is `0` it stays `4`, the first time the
-neighbour is `2` it becomes `|4 - 2| = 2`, and afterwards it stays in `{0, 2}`.
-Call a column sequence *good* if it takes values in `{0, 4}` up to some row,
-then possibly the value `2`, then values in `{0, 2}` for ever (or stays in
-`{0, 4}` for ever). Column `F` is good. If column `i + 1` is good and column
-`i` starts at `0` (`c < i < F`), column `i` is good: it stays in `{0, 4}` while
-column `i + 1` does (`|x - y|` for `x, y in {0, 4}`), it becomes `|x - 2| = 2`
-the row after column `i + 1` first shows a `2`, and afterwards both are in
-`{0, 2}`. So columns `F - 1, ..., c + 1` are good. Column `c` starts at `2`:
-`|2 - x| = 2` for `x in {0, 4}`, so it stays `2` while column `c + 1` is in
-`{0, 4}`; it becomes `0` when column `c + 1` shows `2`; afterwards both are in
-`{0, 2}`. So column `c` never leaves `{0, 2}`, hence (induction leftward)
-neither do columns `< c`, and `|1 - a(1)| = 1`. For 2: on `{0, 4}` the rule is
-XOR in units of `4`, so the cone of the defect over the zeros is Pascal mod
-`2` and its left edge `(s, F - s)` is `4` for every `s`; the cone
-`[F - s, F]` never reaches column `F + 1`, so the right side is irrelevant.
-∎
+right), and cell `(r, i)` only on `a_0(i..i+r)`, so for a statement about
+rows `<= R` and columns `<= C` the row may be truncated at column `C + R`;
+assume finitely many `4`s. Call a column sequence *good* if it takes values
+in `{0, 4}` up to some row and values in `{0, 2}` from the next row on
+(either phase may be empty). Every column right of the last `4` is in
+`{0, 2}` for ever, hence good. If column `i + 1` is good, column `i` is good
+whatever its initial value: while column `i + 1` is in its `{0, 4}` phase,
+column `i` stays in `{0, 4}` if it started there and stays `2` if it started
+at `2` (`|2 - 0| = |2 - 4| = 2`); from the first row where column `i + 1` is
+in `{0, 2}`, a column `i` at `0` or `2` is in `{0, 2}` from then on, and a
+column `i` at `4` stays `4` while its neighbour is `0`, becomes `2` at the
+neighbour's first `2`, and is then in `{0, 2}`. So every column is good, by
+induction from the right. Columns `c + 1, ..., F - 1` start at `0`, so their
+`{0, 4}` phases begin at row `0`; column `c` starts at `2`, stays `2` while
+column `c + 1` is in `{0, 4}`, becomes `0` at the first row where column
+`c + 1` is `2`, and stays in `{0, 2}` for ever; hence (induction leftward) so
+do columns `1, ..., c - 1`, and `|1 - a(1)| = 1`. For 2: on `{0, 4}` the rule
+is XOR in units of `4`, so the cone of the first `4` over the zeros is
+Pascal mod `2` and its left edge `(s, F - s)` is `4` for every `s <= F - 1`;
+that cone is `[F - s, F]` and never reaches column `F + 1`, so everything to
+the right is irrelevant. ∎
 
 *Verification.* Exhaustive enumeration over all `2^(F-1+R)` sea contexts
-(`F - 1` cells left, `R = 10` right, tableau run for `F + R` rows, which is
-exact for every loss caused while the copy is provably alive) for `F = 3..12`:
+(`F - 1` cells left, `R = 10` right, `R = 9` at `F = 12`, tableau run for
+`F + R` rows) for `F = 3..12`:
 the minimum column ever holding a `4` equals `F - z` (`z` = trailing zeros of
 the left sea) in every configuration, and `p_4(F) = 2^(1-F)` to all printed
 digits; Monte Carlo with `4 * 10^6` samples: `p_4(14) = 1.267e-4` vs
-`1.221e-4`, `p_4(16) = 2.875e-5` vs `3.052e-5` (Poisson noise).
+`1.221e-4`, `p_4(16) = 2.875e-5` vs `3.052e-5` (Poisson noise). The audit
+verified the multi-`4` form exhaustively on all `3^L` rows of length `L <= 13`
+and on `200000` random rows of length `40` with about eight `4`s each.
 Canon file: [THM-4511](../../01-canon/theorems/THM-4511-gilbreath-size-four-wall-theorem.md).
 
-*What the theorem says about Gilbreath.* Rows `1`-`64` of the primes below
-`200000` contain `29` fresh fronts (rows where the frontier is not the previous
-frontier minus one), `23` of them of size `4`, at distances `3, 8, 14, 14, 25,
-59, 98, ...` (list in the `.out`). A size-`4` front is harmless unless its
-whole zero-run reaches column `1`; the riskiest moment of the whole triangle
-was row `1` (the `4` at distance `3`, with the sea `2, 2` before it: survival
-probability `1/4` in the random model), then row `2` (distance `8`,
-`1/128`). The front-only risk sum over fresh fronts is `0.258`, over all rows
-`0.258`, with exact re-emission corrections `0.258`; Gilbreath's conjecture
-survived its first two rows with random-model probability about `0.74` and
-has faced only negligible risk since. **The theorem does not touch larger
-sizes**: for a lone `6` the wall breaks to a `4` (`|6 - 2| = 4`) and the exact
-extinction probability exceeds the front-only tail `F 2^(1-F)` by
-`6`-`10` per cent (`F = 8`: `0.067993` vs `0.062500`; `F = 12`: `0.006338` vs
-`0.005859`); for a lone `8` by `4`-`8` per cent (`F = 8`: `0.244003` vs
+*What the theorem says about Gilbreath.* **Corollary (light cone).** If row
+`r` has `a_r(1..t)` in `{0, 2, 4}`, the leading `1` survives at least until
+row `r + t`, unless the first `4` among those cells is preceded by zeros
+only, in which case it is destroyed at row `r + F` (truncate the row at
+column `t`; the finite-row theorem applies). So **all danger to the leading
+`1` comes from entries `>= 6`**, and a finite Gilbreath triangle is decided at
+its first all-`{0,2,4}` row `r_4`: the leading `1` survives every later row
+iff the first `4` of row `r_4` is preceded by a `2`. For the primes below
+`200000`: `r_4 = 59` against the first all-`0/2` row `r_2 = 65`; below `10^6`:
+`r_4 = r_2 = 95`; below `10^7`: `r_4 = 132`, `r_2 = 135`; in each case the
+certificate holds, and no computed row has a first `4` preceded by zeros only
+(`gilbreath_certificate_20260926.py`). The light-cone certificate per row is
+modest in the first rows (`t = 7` at row `1`, `27` at row `2`, `119` at row
+`9`, `1804` at row `30`, `3366` at row `50`, all certified) because entries
+`>= 6` sit near the edge there. The random-model numbers of the S9 heuristic
+(front-only tails: for the primes below `200000` the `29` fresh fronts of
+rows `1`-`64`, `23` of size `4`, give a risk sum `0.258` dominated by the
+row-`1` term `1/4`) are **not** consequences of the theorem, since rows
+`1`-`64` contain thousands of entries `>= 6`; a first draft called the
+row-`1` defect "the riskiest moment", a model artefact the audit removed.
+**The theorem does not cover sizes `>= 6`**: for a lone `6` the wall breaks
+to a `4` (`|6 - 2| = 4`) and the finite-context (`R = 10`) extinction
+probability exceeds the front-only tail `F 2^(1-F)` by `6`-`10` per cent
+(`F = 8`: `0.067993` vs `0.062500`; `F = 12`: `0.006338` vs `0.005859`; these
+values are `R`-stable to seven digits); for a lone `8` by `4`-`8` per cent
+(`F = 8`: `0.244003` at `R = 10`, still moving to `0.244017` at `R = 14`, vs
 `0.226563`), the excess being the stationary copy's re-emitted fronts, which
-for `d >= 6` can pass a wall the first front has already weakened. Nor does it
-cover several defects: a second `4` arriving at column `F` after the first has
-died can reopen the wall (column `c` may then be `0`), which is the one-window
-limitation of every persistence argument (S9).
+for `d >= 6` can pass a wall the first front has already weakened.
 
 ## 6. Bearing on the two conjectures (honest)
 
 * **Gilbreath.** The Fermat tower is the structure of the *safe* region; the
   conjecture is a statement about the frontier, i.e. about defect extinction.
-  THM-4511 settles extinction for lone size-`4` defects exactly (the wall);
-  sizes `>= 6` and interacting defects are governed by the same left-looking
-  mechanism but no closed law is proved. The five Fermat primes and the five
+  THM-4511 settles the size-`4` question exactly (any number of `4`s: the
+  wall, the light-cone certificate); sizes `>= 6` are governed by the same
+  left-looking mechanism but no closed law is proved. The five Fermat primes and the five
   solids do not enter the conjecture.
 * **Collatz.** `3 = F_0` is the multiplier; the base-`6` automaton (S9) is
   nonlinear; the `F_k n + 1` maps for `k >= 1` have positive drift. No
   reduction in either direction (S9 and forest, unchanged).
 * **Tournaments.** The Mersenne orders `2^k - 1` of the sea's zero triangles
   carry the doubling tower `T_k`, doubly regular with `Aut = F_21` for
-  `k = 3..8`; the Paley heptagon is its third level; THM-871's Fermat-rung
+  `k = 3..8` (`k = 9` in the audit); the Paley heptagon is its third level; THM-871's Fermat-rung
   rigidity is the other face of the same five primes.
 
 ## 7. Speculation, marked
@@ -314,3 +354,36 @@ limitation of every persistence argument (S9).
    add `32` constructible rows and nothing would change in the sea, in the
    tower, or in the solids. The fives are a coincidence of counts; the exact
    common object is the set `{3, 4, 5}`.
+
+## 8. Independent audit (2026-09-26)
+
+Auditor subagent: `04-computation/experiments/gilbreath_fermat_platonic_20260926_audit.py`
+(sha256 `365f22327926b4974fde93431bc5a26c18b6af24bd516d65397ee8f886062a0a`) ->
+`05-knowledge/results/gilbreath_fermat_platonic_20260926_audit.out`
+(sha256 `a969b97e330299e19b4ed8cd761c5b0aa604d6fe389c5b3883800d3e89ca33e5`),
+everything re-implemented from scratch. Verdict: HAS GAPS -> repaired.
+CONFIRMED: every quoted number (frontier, kernel checks, triangle counts,
+automorphism orders by two independent methods and `|Aut(T_9)| = 21`,
+`Aut(P_7), Aut(P_11), Aut(P_31)`, the census, group orders and
+identifications with sympy, Klein subgroups, the extinction table and the
+seeded Monte Carlo, the fresh-front statistics, von Staudt-Clausen against
+actual Bernoulli denominators to `2^9`), every written proof, every citation
+(THM-871, THM-870, HYP-3771, HYP-3772, forest, S9), and the classical facts.
+CORRECTED (applied above): (1) the scope of THM-4511, which holds for any
+number of `4`s (the first draft's "a second `4` reopens the wall" cannot
+happen), and with it the "interacting defects open" wording everywhere; (2)
+the `3^(K-1-m)` count and the completeness of the triangle decomposition were
+labelled PROVED without a proof on the page (now proved in section 2); (3)
+"whatever lies to its right" now reads "whatever `0/2/4` pattern lies to the
+right" (`1 2 4 10` is a counterexample to the literal reading); (4) the
+random-model risk numbers for the primes were presented as consequences of
+the theorem, which they are not (rows `1`-`64` contain entries `>= 6`);
+replaced by the light-cone corollary and the `r_4` certificates; (5) the
+size-`8` "exact" values are finite-context values still moving in the fifth
+digit, and `F = 12` used `R = 9`; (6) the side-`(2^k - 1)` triangle opens under
+row `2^k - 1`, with row `2^k` as its top zero row; (7) the summary stated the
+`F_21` conjecture as fact; (8) column `0` excluded from "columns `<= c`"; (9)
+`T_5 != P_31` is established, not conditional on HYP-9162; (10) the word
+"once" in the definition of a good column. Novelty of THM-4511 relative to
+Odlyzko 1993 is not established (the auditor recalls the light-cone and
+absorption remarks there, not the all-time wall statement or the exact law).

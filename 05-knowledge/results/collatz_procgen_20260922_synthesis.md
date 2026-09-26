@@ -1044,11 +1044,15 @@ primes and the five Platonic solids. Note
   Schlafli numbers `{3,4,5} = {F_0, 2^2, F_1}` (verified as permutation groups).
   The two fives share the set `{3, 5}` and no mechanism. `3 = F_0` is the only
   Fermat multiplier with negative Collatz drift.
-* THM-4511 (PROVED): a lone size-`4` defect never crosses the first sea `2` on
-  its left, whatever lies to its right (columns look right; column sequences
-  go `{0,4}` then `2` then `{0,2}`); extinction exactly `2^(1-F)`. Exact
-  extinction table for sizes `6`, `8` (re-emissions add `4`-`10` per cent);
-  the prime frontier's random-model risk (`0.258`) sits in rows `1`-`2`.
+* THM-4511 (PROVED, audited): in a row of `0`s, `2`s and `4`s no `4` ever
+  crosses the first sea `2` on the left of the first `4`, whatever `0/2/4`
+  pattern lies to the right (any number of `4`s; columns look right, column
+  sequences go `{0,4}` then `{0,2}`); the leading `1` dies iff the first `4`
+  is preceded by zeros only; lone-defect extinction exactly `2^(1-F)`; a
+  finite triangle is decided at its first all-`{0,2,4}` row (`59` vs `65` for
+  the primes below `200000`); all danger comes from entries `>= 6`.
+  Finite-context extinction table for sizes `6`, `8` (re-emissions add
+  `4`-`10` per cent).
 * Bearing on Collatz: none beyond the drift sign; the S9 verdict (no
   reduction either way) stands.
 

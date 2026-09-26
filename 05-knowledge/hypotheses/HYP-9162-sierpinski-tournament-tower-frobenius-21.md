@@ -1,6 +1,6 @@
 ---
 id: HYP-9162
-title: "The Sierpinski tournament tower: H_2 = [[1,1],[-1,1]], H_(2n) = [[H,H],[-H^T,H^T]] gives skew Hadamard matrices of every order 2^k and hence doubly regular tournaments T_k of every Mersenne order 2^k - 1 (the zero-triangle sides of Gilbreath's single-seed sea); T_3 is the Paley heptagon, Aut(T_k) contains its Frobenius group F_21 for all k >= 3, and the conjecture is that Aut(T_k) = F_21 exactly for all k >= 3 (so T_k is never Paley for k >= 4, in particular T_5 != P_31)"
+title: "The Sierpinski tournament tower: H_2 = [[1,1],[-1,1]], H_(2n) = [[H,H],[-H^T,H^T]] gives skew Hadamard matrices of every order 2^k and hence doubly regular tournaments T_k of every Mersenne order 2^k - 1 (the zero-triangle sides of Gilbreath's single-seed sea); T_3 is the Paley heptagon, Aut(T_k) contains its Frobenius group F_21 for all k >= 3, and the conjecture is that Aut(T_k) = F_21 exactly for all k >= 3 (so T_k would never be Paley for k >= 4; T_5 != P_31 and T_7 != P_127 are established outright by the automorphism orders)"
 status: >
   PROVED: the doubling preserves skewness and orthogonality (two-line check),
   double regularity is the classical skew-Hadamard correspondence, the
@@ -8,7 +8,10 @@ status: >
   T_k extends diagonally, so F_21 <= Aut(T_k) for k >= 3. FINITE-EXACT:
   |Aut(T_k)| = 3, 21, 21, 21, 21, 21, 21 for k = 2..8 (orders 3 to 255),
   T_3 = P_7, T_5 not isomorphic to P_31 (|Aut(P_31)| = 465) though both have
-  the same 4-vertex census. OPEN: equality Aut(T_k) = F_21 for all k >= 3.
+  the same 4-vertex census. The independent audit added |Aut(T_9)| = 21 (n = 511) by two methods and
+  proved that the stabilizer of 0' in Aut(T_(k+1)) consists exactly of the
+  diagonal extensions of Aut(T_k), so the conjecture is equivalent to: 0' is
+  fixed by every automorphism of T_(k+1), k >= 3. OPEN: that equality.
 source: opus-2026-09-26 session gilbreath-fermat-platonic-20260926
 related: [THM-871 (Fermat-rung rigidity of rotational tournaments), HYP-3805 (Paley heptagon as extremal object), S9 note collatz_oscillation_gilbreath_20260926.md (zero triangles of the sea)]
 verification: 04-computation/experiments/gilbreath_fermat_tower_20260926_tournaments.py -> .out
@@ -31,8 +34,11 @@ T_(k+1) = T_k + {0'} + T_k' (arcs reversed),  i -> i',  i -> j' iff i -> j,  i' 
 `7, 1, 7, 1, 7, 1, 7`. `T_5` is not isomorphic to `P_31`, and `T_7` is not `P_127`
 (`|Aut(P_127)| = 8001`).
 
-**Conjecture.** `Aut(T_k) = F_21` for every `k >= 3`; equivalently, no
-automorphism of `T_(k+1)` fails to fix `0'` once `k >= 3`. If true, `T_k` is
+**Conjecture.** `Aut(T_k) = F_21` for every `k >= 3`; equivalently (audit:
+the stabilizer of `0'` is exactly the set of diagonal extensions, proved via
+the constant number `(n+1)/4` of `3`-cycles through every arc), no
+automorphism of `T_(k+1)` moves `0'` once `k >= 3`. Verified for
+`k = 3..9` (orders `7` to `511`). If true, `T_k` is
 not vertex-transitive for `k >= 4` and never Paley (a Paley tournament on a
 Mersenne prime `2^k - 1` has `|Aut| = (2^k - 1)(2^(k-1) - 1) > 21`).
 

@@ -1,0 +1,190 @@
+gilbreath_fermat_platonic_20260926_audit.py -- independent auditor run, numpy 2.3.2
+
+== A. sea kernel theorem ==  (t = 0s)
+ A1 Lucas: C(n, j) odd iff j subset n, all n < 256: OK
+ A2 sum_(j subset t) 2^j = prod_(i in bits t) F_i for all t < 1024: OK (expand the product: one term per subset)
+ A3 random row (L = 300, 25 defects in {4,6,8,10}, 100 rows): cells whose row-0 window is all 0/2: 2413 correct, 0 wrong; cells whose window contains a defect: 22537, XOR formula wrong for 7457 of them (so the window condition is needed)
+ A4 primes < 200000: first row that is 1 followed by 0/2 only: 65 (note says 65); rows 1..64 each contain an entry >= 4: True
+    frontier F(r) at r = 1,2,5,10,20,30,40,50,60,64: [3, 8, 25, 59, 291, 870, 2770, 2763, 5942, 5940] (note: [3, 8, 25, 59, 291, 870, 2770, 2763, 5942, 5940])
+    rows 65+t = Lucas-kernel image of row 65 for t = 1..64, 127, 255, 511, 1023, 2047: 69 checks OK, leading 1 throughout (note: 69)
+    row 10: F = 59, defect 4, in-cone cells over t = 1..57 all equal the kernel image: 1653 cells (note: 1653; 57*58/2 = 1653)
+
+== B. single-seed diagram: zero triangles ==  (t = 0s)
+ K=5: sides [1, 3, 7, 15, 31]; counts [27, 9, 3, 1, 1]; sum formula [27, 9, 3, 1, 1]; closed form 3^(K-1-m) (+1 for the all-ones row) [27, 9, 3, 1, 1]; interior zeros in rows 1..31: 285, not covered by a triangle: 0
+ K=7: sides [1, 3, 7, 15, 31, 63, 127]; counts [243, 81, 27, 9, 3, 1, 1]; sum formula [243, 81, 27, 9, 3, 1, 1]; closed form 3^(K-1-m) (+1 for the all-ones row) [243, 81, 27, 9, 3, 1, 1]; interior zeros in rows 1..127: 6069, not covered by a triangle: 0
+ K=9: sides [1, 3, 7, 15, 31, 63, 127, 255, 511]; counts [2187, 729, 243, 81, 27, 9, 3, 1, 1]; sum formula [2187, 729, 243, 81, 27, 9, 3, 1, 1]; closed form 3^(K-1-m) (+1 for the all-ones row) [2187, 729, 243, 81, 27, 9, 3, 1, 1]; interior zeros in rows 1..511: 111645, not covered by a triangle: 0
+ identity  sum_(n < 2^K, exactly m trailing ones) 2^(popcount(n) - m) = 3^(K-1-m)  for K <= 16, 1 <= m <= K-1: OK (proof: bits 0..m-1 are 1, bit m is 0, the K-1-m bits above are free and contribute (1+2)^(K-1-m))
+
+== C. the skew-Hadamard doubling tower and its tournaments ==  (t = 1s)
+ H_(2^k) skew Hadamard + normalized for k = 1..9; T_k doubly regular for k = 2..9 (n = 3..511); recursion T_(k+1) = T_k + {0'} + T_k' verified for k = 1..8
+ every arc x -> y of T_k (k = 2..9) lies on exactly (n+1)/4 three-cycles, so the closed out-neighbourhoods N^+[i] separate points
+ |Aut(T_k)| by invariant-pruned arc-consistency backtracking (own code):
+   T_2 (n =   3): |Aut| = 3 [done, 10 nodes, 0.0s]; invariant classes (sizes) [3]
+   T_3 (n =   7): |Aut| = 21 [done, 155 nodes, 0.0s]; invariant classes (sizes) [7]
+   T_4 (n =  15): |Aut| = 21 [done, 323 nodes, 0.0s]; invariant classes (sizes) [8, 7]
+   T_5 (n =  31): |Aut| = 21 [done, 639 nodes, 0.0s]; invariant classes (sizes) [9, 7, 7, 7, 1]
+   T_6 (n =  63): |Aut| = 21 [done, 1271 nodes, 0.0s]; invariant classes (sizes) [10, 8, 7, 7, 7, 7, 7, 7, 1, 1, 1]
+   T_7 (n = 127): |Aut| = 21 [done, 2535 nodes, 0.0s]; invariant classes (sizes) [11, 9, 8, 8, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 1, 1, 1, 1, 1, 1, 1]
+   T_8 (n = 255): |Aut| = 21 [done, 5063 nodes, 0.2s]; invariant classes (sizes) [12, 10, 9, 9, 8, 8, 8, 8, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]
+   T_9 (n = 511): |Aut| = 21 [done, 10119 nodes, 1.0s]; invariant classes (sizes) [13, 11, 10, 10, 9, 9, 9, 9, 8, 8, 8, 8, 8, 8, 8, 8, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]
+   k=2: all 3 automorphisms of T_2 extend diagonally to T_3 (checked); automorphisms of T_3 fixing 0': 3, all diagonal: True; |Aut(T_3)| = 21
+   k=3: all 21 automorphisms of T_3 extend diagonally to T_4 (checked); automorphisms of T_4 fixing 0': 21, all diagonal: True; |Aut(T_4)| = 21
+   k=4: all 21 automorphisms of T_4 extend diagonally to T_5 (checked); automorphisms of T_5 fixing 0': 21, all diagonal: True; |Aut(T_5)| = 21
+   k=5: all 21 automorphisms of T_5 extend diagonally to T_6 (checked); automorphisms of T_6 fixing 0': 21, all diagonal: True; |Aut(T_6)| = 21
+ Aut(T_5): order 21, element orders {1: 1, 3: 14, 7: 6} (note: {3: 14, 7: 6}), abelian: False (the nonabelian group of order 21 is Z_7 x| Z_3), orbit sizes [7, 1, 7, 1, 7, 1, 7] (note: 7,1,7,1,7,1,7)
+ networkx VF2 automorphism counts (independent implementation):
+   T_2  (n =  3): |Aut| = 3  (0.2s)
+   T_3  (n =  7): |Aut| = 21  (0.0s)
+   T_4  (n = 15): |Aut| = 21  (0.0s)
+   T_5  (n = 31): |Aut| = 21  (0.2s)
+   T_6  (n = 63): |Aut| = 21  (1.1s)
+   P_7  (n =  7): |Aut| = 21  (0.0s)
+   P_11 (n = 11): |Aut| = 55  (0.0s)
+   P_31 (n = 31): |Aut| = 465  (1.5s)
+   backtracking on P_7, P_11, P_31: 21, 55, 465 = q(q-1)/2: OK
+ T_3 isomorphic to the Paley heptagon P_7 (networkx): True
+ T_5 vs P_31: the vertex invariant takes 5 distinct values on T_5 (class sizes [9, 7, 7, 7, 1]) and 1 on P_31; multisets equal: False -> NOT isomorphic (also |Aut| 21 vs 465)
+   4-vertex census T_3 : {'sink+3cycle': 7, 'source+3cycle': 7, 'strong': 21}
+   4-vertex census T_4 : {'transitive': 315, 'sink+3cycle': 210, 'source+3cycle': 210, 'strong': 630}
+   4-vertex census T_5 : {'transitive': 9765, 'sink+3cycle': 4340, 'source+3cycle': 4340, 'strong': 13020}
+   4-vertex census P_7 : {'sink+3cycle': 7, 'source+3cycle': 7, 'strong': 21}
+   4-vertex census P_31: {'transitive': 9765, 'sink+3cycle': 4340, 'source+3cycle': 4340, 'strong': 13020}
+   T_5 and P_31 have the same 4-vertex census (4340 source, 13020 strong, 4340 sink, 9765 transitive; sum 31465 = C(31,4)): OK
+ induction |Aut(T_(k+1))| = |Orb(0')| * |Aut(T_k)| with Orb(0') from the vertex invariant (0' = vertex index 2^k - 1 of T_(k+1)):
+   T_4 (n =  15): vertices with the invariant of 0': 8, |Orb(0')| = 1, |Aut(T_4)| = 21  (0.0s)
+   T_5 (n =  31): vertices with the invariant of 0': 9, |Orb(0')| = 1, |Aut(T_5)| = 21  (0.0s)
+   T_6 (n =  63): vertices with the invariant of 0': 10, |Orb(0')| = 1, |Aut(T_6)| = 21  (0.0s)
+   T_7 (n = 127): vertices with the invariant of 0': 11, |Orb(0')| = 1, |Aut(T_7)| = 21  (0.0s)
+   T_8 (n = 255): vertices with the invariant of 0': 12, |Orb(0')| = 1, |Aut(T_8)| = 21  (0.1s)
+   T_9 (n = 511): vertices with the invariant of 0': 13, |Orb(0')| = 1, |Aut(T_9)| = 21  (0.7s)
+
+== D. rotation groups of the solids as projective groups (all matrices enumerated; sympy identification) ==  (t = 6s)
+ Schlafli: (p-2)(q-2) < 4: [(3, 3), (3, 4), (3, 5), (4, 3), (5, 3)] (5); = 4: [(3, 6), (4, 4), (6, 3)] (3)
+ PSL(2,2)         order    6 on  3 points (formula    6); sympy: is_alternating=False is_symmetric=True
+ PSL(2,3)         order   12 on  4 points (formula   12); sympy: is_alternating=True is_symmetric=False
+ PGL(2,3)         order   24 on  4 points (formula   24); sympy: is_alternating=False is_symmetric=True
+ PSL(2,4)=SL(2,4) order   60 on  5 points (formula   60); sympy: is_alternating=True is_symmetric=False
+ PSL(2,5)         order   60 on  6 points (formula   60); sympy: is_alternating=False is_symmetric=False; involutions 15, Klein four-subgroups 5, conjugation action on them: kernel 1, image order 60, image is A_5: True; point stabilizer order 10 (D_10), transitive on 6 points: True
+ PSL(2,7)         order  168 on  8 points (formula  168); sympy: is_alternating=False is_symmetric=False
+ PSL(2,17)        order 2448 on 18 points (formula 2448)
+ orders 6, 12, 24, 60, 60, 168, 2448 confirmed; finite rotation groups of R^3 have orders n, 2n, 12, 24, 60 (Klein), so PSL(2,7) and PSL(2,17) are not among them
+
+== E. von Staudt-Clausen: denominator of B_(2^r) = 2 prod_(F_j prime, 2^j <= r) F_j ==  (t = 7s)
+  r=1, n=  2: denom(B_n) = 6 ; 2 prod F_j = 6 ; prod_(p-1 | n) p = 6 ; equal: True
+  r=2, n=  4: denom(B_n) = 30 ; 2 prod F_j = 30 ; prod_(p-1 | n) p = 30 ; equal: True
+  r=3, n=  8: denom(B_n) = 30 ; 2 prod F_j = 30 ; prod_(p-1 | n) p = 30 ; equal: True
+  r=4, n= 16: denom(B_n) = 510 ; 2 prod F_j = 510 ; prod_(p-1 | n) p = 510 ; equal: True
+  r=5, n= 32: denom(B_n) = 510 ; 2 prod F_j = 510 ; prod_(p-1 | n) p = 510 ; equal: True
+  r=6, n= 64: denom(B_n) = 510 ; 2 prod F_j = 510 ; prod_(p-1 | n) p = 510 ; equal: True
+  r=7, n=128: denom(B_n) = 510 ; 2 prod F_j = 510 ; prod_(p-1 | n) p = 510 ; equal: True
+  r=8, n=256: denom(B_n) = 131070 ; 2 prod F_j = 131070 ; prod_(p-1 | n) p = 131070 ; equal: True
+  r=9, n=512: denom(B_n) = 131070 ; 2 prod F_j = 131070 ; prod_(p-1 | n) p = 131070 ; equal: True
+
+== F. THM-4511 (wall theorem) brute force ==  (t = 7s)
+  exhaustive F= 2 R=10: N = 2048 configurations: (leading 1 destroyed) == (left cells all 0): True; if destroyed, a_(F-1)(1) = 4 and a_F(0) = 3: True; min column of any entry >= 4 is exactly F - z (> c): True
+  exhaustive F= 3 R=10: N = 4096 configurations: (leading 1 destroyed) == (left cells all 0): True; if destroyed, a_(F-1)(1) = 4 and a_F(0) = 3: True; min column of any entry >= 4 is exactly F - z (> c): True
+  exhaustive F= 4 R=10: N = 8192 configurations: (leading 1 destroyed) == (left cells all 0): True; if destroyed, a_(F-1)(1) = 4 and a_F(0) = 3: True; min column of any entry >= 4 is exactly F - z (> c): True
+  exhaustive F= 5 R=10: N = 16384 configurations: (leading 1 destroyed) == (left cells all 0): True; if destroyed, a_(F-1)(1) = 4 and a_F(0) = 3: True; min column of any entry >= 4 is exactly F - z (> c): True
+  exhaustive F= 6 R=10: N = 32768 configurations: (leading 1 destroyed) == (left cells all 0): True; if destroyed, a_(F-1)(1) = 4 and a_F(0) = 3: True; min column of any entry >= 4 is exactly F - z (> c): True
+  exhaustive F= 7 R=10: N = 65536 configurations: (leading 1 destroyed) == (left cells all 0): True; if destroyed, a_(F-1)(1) = 4 and a_F(0) = 3: True; min column of any entry >= 4 is exactly F - z (> c): True
+  exhaustive F= 8 R=10: N = 131072 configurations: (leading 1 destroyed) == (left cells all 0): True; if destroyed, a_(F-1)(1) = 4 and a_F(0) = 3: True; min column of any entry >= 4 is exactly F - z (> c): True
+  exhaustive F= 9 R=10: N = 262144 configurations: (leading 1 destroyed) == (left cells all 0): True; if destroyed, a_(F-1)(1) = 4 and a_F(0) = 3: True; min column of any entry >= 4 is exactly F - z (> c): True
+  exhaustive F=10 R=10: N = 524288 configurations: (leading 1 destroyed) == (left cells all 0): True; if destroyed, a_(F-1)(1) = 4 and a_F(0) = 3: True; min column of any entry >= 4 is exactly F - z (> c): True
+  all left words x 64 random right contexts, F= 2 R=30: N = 128 configurations: (leading 1 destroyed) == (left cells all 0): True; if destroyed, a_(F-1)(1) = 4 and a_F(0) = 3: True; min column of any entry >= 4 is exactly F - z (> c): True
+  all left words x 8 random right contexts, F= 2 R=60: N = 16 configurations: (leading 1 destroyed) == (left cells all 0): True; if destroyed, a_(F-1)(1) = 4 and a_F(0) = 3: True; min column of any entry >= 4 is exactly F - z (> c): True
+  all left words x 64 random right contexts, F= 3 R=30: N = 256 configurations: (leading 1 destroyed) == (left cells all 0): True; if destroyed, a_(F-1)(1) = 4 and a_F(0) = 3: True; min column of any entry >= 4 is exactly F - z (> c): True
+  all left words x 8 random right contexts, F= 3 R=60: N = 32 configurations: (leading 1 destroyed) == (left cells all 0): True; if destroyed, a_(F-1)(1) = 4 and a_F(0) = 3: True; min column of any entry >= 4 is exactly F - z (> c): True
+  all left words x 64 random right contexts, F= 4 R=30: N = 512 configurations: (leading 1 destroyed) == (left cells all 0): True; if destroyed, a_(F-1)(1) = 4 and a_F(0) = 3: True; min column of any entry >= 4 is exactly F - z (> c): True
+  all left words x 8 random right contexts, F= 4 R=60: N = 64 configurations: (leading 1 destroyed) == (left cells all 0): True; if destroyed, a_(F-1)(1) = 4 and a_F(0) = 3: True; min column of any entry >= 4 is exactly F - z (> c): True
+  all left words x 64 random right contexts, F= 5 R=30: N = 1024 configurations: (leading 1 destroyed) == (left cells all 0): True; if destroyed, a_(F-1)(1) = 4 and a_F(0) = 3: True; min column of any entry >= 4 is exactly F - z (> c): True
+  all left words x 8 random right contexts, F= 5 R=60: N = 128 configurations: (leading 1 destroyed) == (left cells all 0): True; if destroyed, a_(F-1)(1) = 4 and a_F(0) = 3: True; min column of any entry >= 4 is exactly F - z (> c): True
+  all left words x 64 random right contexts, F= 6 R=30: N = 2048 configurations: (leading 1 destroyed) == (left cells all 0): True; if destroyed, a_(F-1)(1) = 4 and a_F(0) = 3: True; min column of any entry >= 4 is exactly F - z (> c): True
+  all left words x 8 random right contexts, F= 6 R=60: N = 256 configurations: (leading 1 destroyed) == (left cells all 0): True; if destroyed, a_(F-1)(1) = 4 and a_F(0) = 3: True; min column of any entry >= 4 is exactly F - z (> c): True
+  all left words x 64 random right contexts, F= 7 R=30: N = 4096 configurations: (leading 1 destroyed) == (left cells all 0): True; if destroyed, a_(F-1)(1) = 4 and a_F(0) = 3: True; min column of any entry >= 4 is exactly F - z (> c): True
+  all left words x 8 random right contexts, F= 7 R=60: N = 512 configurations: (leading 1 destroyed) == (left cells all 0): True; if destroyed, a_(F-1)(1) = 4 and a_F(0) = 3: True; min column of any entry >= 4 is exactly F - z (> c): True
+  all left words x 64 random right contexts, F= 8 R=30: N = 8192 configurations: (leading 1 destroyed) == (left cells all 0): True; if destroyed, a_(F-1)(1) = 4 and a_F(0) = 3: True; min column of any entry >= 4 is exactly F - z (> c): True
+  all left words x 8 random right contexts, F= 8 R=60: N = 1024 configurations: (leading 1 destroyed) == (left cells all 0): True; if destroyed, a_(F-1)(1) = 4 and a_F(0) = 3: True; min column of any entry >= 4 is exactly F - z (> c): True
+  all left words x 64 random right contexts, F= 9 R=30: N = 16384 configurations: (leading 1 destroyed) == (left cells all 0): True; if destroyed, a_(F-1)(1) = 4 and a_F(0) = 3: True; min column of any entry >= 4 is exactly F - z (> c): True
+  all left words x 8 random right contexts, F= 9 R=60: N = 2048 configurations: (leading 1 destroyed) == (left cells all 0): True; if destroyed, a_(F-1)(1) = 4 and a_F(0) = 3: True; min column of any entry >= 4 is exactly F - z (> c): True
+  all left words x 64 random right contexts, F=10 R=30: N = 32768 configurations: (leading 1 destroyed) == (left cells all 0): True; if destroyed, a_(F-1)(1) = 4 and a_F(0) = 3: True; min column of any entry >= 4 is exactly F - z (> c): True
+  all left words x 8 random right contexts, F=10 R=60: N = 4096 configurations: (leading 1 destroyed) == (left cells all 0): True; if destroyed, a_(F-1)(1) = 4 and a_F(0) = 3: True; min column of any entry >= 4 is exactly F - z (> c): True
+  column-sequence shapes of the proof (columns c+1..F are {0,4}* then 2 then {0,2}*, each one row after its right neighbour; column c is 2 until then, then 0; columns < c in {0,2}): F=2 R=7, violations: 0
+  column-sequence shapes of the proof (columns c+1..F are {0,4}* then 2 then {0,2}*, each one row after its right neighbour; column c is 2 until then, then 0; columns < c in {0,2}): F=3 R=7, violations: 0
+  column-sequence shapes of the proof (columns c+1..F are {0,4}* then 2 then {0,2}*, each one row after its right neighbour; column c is 2 until then, then 0; columns < c in {0,2}): F=4 R=7, violations: 0
+  column-sequence shapes of the proof (columns c+1..F are {0,4}* then 2 then {0,2}*, each one row after its right neighbour; column c is 2 until then, then 0; columns < c in {0,2}): F=5 R=7, violations: 0
+  column-sequence shapes of the proof (columns c+1..F are {0,4}* then 2 then {0,2}*, each one row after its right neighbour; column c is 2 until then, then 0; columns < c in {0,2}): F=6 R=7, violations: 0
+  column-sequence shapes of the proof (columns c+1..F are {0,4}* then 2 then {0,2}*, each one row after its right neighbour; column c is 2 until then, then 0; columns < c in {0,2}): F=7 R=7, violations: 0
+  front path weights: exactly C(F-1, w) sea words give weight w, F = 3..12 (own subset loop): OK
+  outside the hypothesis (these are NOT covered by the theorem, and the theorem's conclusion fails):
+    non-sea right context 1 2 4 10 (c = 1 exists): rows = [[1, 2, 4, 10], [1, 2, 6], [1, 4], [3]] -> leading entry 3
+    a lone 6 (c = 1): rows = [[1, 2, 0, 6, 0, 0, 0, 0], [1, 2, 6, 6, 0, 0, 0], [1, 4, 0, 6, 0, 0], [3, 4, 6, 6, 0], [1, 2, 0, 6], [1, 2, 6], [1, 4], [3]] -> the wall column becomes |6-2| = 4 and the leading entry ends as 3
+  SEVERAL size-4 defects (all cells in {0,2,4}, any number of 4s; c = largest 2 before the FIRST 4):
+    L= 2: all       9 rows (      1 with >= 2 fours): destroyed iff (a 4 exists and no 2 before the first 4): True; no entry >= 4 ever at a column <= c: True
+    L= 3: all      27 rows (      7 with >= 2 fours): destroyed iff (a 4 exists and no 2 before the first 4): True; no entry >= 4 ever at a column <= c: True
+    L= 4: all      81 rows (     33 with >= 2 fours): destroyed iff (a 4 exists and no 2 before the first 4): True; no entry >= 4 ever at a column <= c: True
+    L= 5: all     243 rows (    131 with >= 2 fours): destroyed iff (a 4 exists and no 2 before the first 4): True; no entry >= 4 ever at a column <= c: True
+    L= 6: all     729 rows (    473 with >= 2 fours): destroyed iff (a 4 exists and no 2 before the first 4): True; no entry >= 4 ever at a column <= c: True
+    L= 7: all    2187 rows (   1611 with >= 2 fours): destroyed iff (a 4 exists and no 2 before the first 4): True; no entry >= 4 ever at a column <= c: True
+    L= 8: all    6561 rows (   5281 with >= 2 fours): destroyed iff (a 4 exists and no 2 before the first 4): True; no entry >= 4 ever at a column <= c: True
+    L= 9: all   19683 rows (  16867 with >= 2 fours): destroyed iff (a 4 exists and no 2 before the first 4): True; no entry >= 4 ever at a column <= c: True
+    L=10: all   59049 rows (  52905 with >= 2 fours): destroyed iff (a 4 exists and no 2 before the first 4): True; no entry >= 4 ever at a column <= c: True
+    L=11: all  177147 rows ( 163835 with >= 2 fours): destroyed iff (a 4 exists and no 2 before the first 4): True; no entry >= 4 ever at a column <= c: True
+    L=12: all  531441 rows ( 502769 with >= 2 fours): destroyed iff (a 4 exists and no 2 before the first 4): True; no entry >= 4 ever at a column <= c: True
+    L=13: all 1594323 rows (1532883 with >= 2 fours): destroyed iff (a 4 exists and no 2 before the first 4): True; no entry >= 4 ever at a column <= c: True
+    L=40, 200000 random rows with P(4) = 0.2 (mean 8.0 fours per row): destroyed iff (4 exists, no 2 before it): True; no entry >= 4 at a column <= c: True
+    => the wall holds for ANY number of size-4 defects (proof: the 'good column' induction only needs each column right of c to START in {0,2,4}; start the induction at the rightmost 4). The note's 'a second 4 ... can reopen the wall' does not happen.
+
+== G. extinction table p_d(F) (own code), R-dependence, Monte Carlo replication ==  (t = 13s)
+  d   F   R   p_d(F)         front-only     ratio
+  4   3  10   0.250000000    0.250000000    1.0000
+  4   4  10   0.125000000    0.125000000    1.0000
+  4   5  10   0.062500000    0.062500000    1.0000
+  4   6  10   0.031250000    0.031250000    1.0000
+  4   7  10   0.015625000    0.015625000    1.0000
+  4   8  10   0.007812500    0.007812500    1.0000  (quoted 0.007812500: match)
+  4   9  10   0.003906250    0.003906250    1.0000
+  4  10  10   0.001953125    0.001953125    1.0000
+  4  11  10   0.000976562    0.000976562    1.0000
+  4  12   9   0.000488281    0.000488281    1.0000  (quoted 0.000488281: match)
+  6   3  10   0.812500000    0.750000000    1.0833
+  6   4  10   0.531250000    0.500000000    1.0625
+  6   5  10   0.340820312    0.312500000    1.0906
+  6   6  10   0.201660156    0.187500000    1.0755
+  6   7  10   0.120361328    0.109375000    1.1004
+  6   8  10   0.067993164    0.062500000    1.0879  (quoted 0.067993164: match)
+  6   9  10   0.038017273    0.035156250    1.0814
+  6  10  10   0.020961761    0.019531250    1.0732
+  6  11  10   0.011701584    0.010742188    1.0893
+  6  12   9   0.006338120    0.005859375    1.0817  (quoted 0.006338120: match)
+  8   3  10   1.000000000    1.000000000    1.0000
+  8   4  10   0.906250000    0.875000000    1.0357
+  8   5  10   0.732177734    0.687500000    1.0650
+  8   6  10   0.528686523    0.500000000    1.0574
+  8   7  10   0.371795654    0.343750000    1.0816
+  8   8  10   0.244003296    0.226562500    1.0770  (quoted 0.244003296: match)
+  8   9  10   0.154140472    0.144531250    1.0665
+  8  10  10   0.094703674    0.089843750    1.0541
+  8  11  10   0.058607101    0.054687500    1.0717
+  8  12   9   0.034801483    0.032714844    1.0638  (quoted 0.034801483: match)
+  ratio ranges over F = 3..12: d=6: 1.0625..1.1004 ; d=8 (F >= 4): 1.0357..1.0816 ; d=4: all exactly 1 (p_4(F) = 2^(1-F))
+  R-dependence of the 'exact' value, d=6, F=8: ['R=6: 0.0679932', 'R=8: 0.0679932', 'R=10: 0.0679932', 'R=12: 0.0679932', 'R=14: 0.0679932']  (the quoted 6-digit values are the R=10 truncation)
+  R-dependence of the 'exact' value, d=8, F=8: ['R=6: 0.2437744', 'R=8: 0.2439575', 'R=10: 0.2440033', 'R=12: 0.2440147', 'R=14: 0.2440166']  (the quoted 6-digit values are the R=10 truncation)
+  Monte Carlo size 4, 4e6 samples, R = 16, seed 20260926: ['F=14: 1.267e-04 (quoted 1.267e-04) vs 2^(1-F) = 1.221e-04', 'F=16: 2.875e-05 (quoted 2.875e-05) vs 2^(1-F) = 3.052e-05']
+
+== H. prime frontier (primes < 200000) ==  (t = 45s)
+  rows with a defect: 64 (note: 64); fresh fronts: 29 (note: 29); sizes: {4: 23, 6: 4, 8: 1, 10: 1} (note: 23 of size 4)
+  size-4 fresh-front distances: [3, 8, 14, 14, 25, 59, 98, 98, 174, 176, 176, 176, 176, 740, 2180, 2763, 2763, 2763, 3366, 4208, 5943, 5940, 5940]
+  fresh fronts (row, F, d): [(1, 3, 4), (2, 8, 4), (3, 14, 4), (4, 14, 4), (5, 25, 8), (9, 25, 4), (10, 59, 4), (11, 98, 4), (13, 98, 4), (15, 174, 4), (16, 176, 4), (17, 176, 4), (18, 176, 4), (19, 176, 4), (20, 291, 6), (23, 740, 4), (24, 874, 6), (27, 873, 6), (35, 2180, 4), (39, 2771, 10), (48, 2763, 4), (49, 2763, 4), (50, 2763, 4), (51, 3366, 4), (52, 4208, 4), (57, 5943, 4), (58, 5944, 6), (63, 5940, 4), (64, 5940, 4)]
+  front-only risk sum over fresh fronts: 0.258075 (note: 0.258); over all rows: 0.258114 (note: 0.258); largest terms: [(0.25, 1, 3, 4), (0.0078125, 2, 8, 4), (0.0001220703125, 4, 14, 4), (0.0001220703125, 3, 14, 4), (1.7940998077392578e-05, 5, 25, 8), (5.960464477539063e-08, 9, 25, 4)]
+  (1 - 1/4)(1 - 1/128) = 0.7441 (note: 'about 0.74')
+  row 1: first 40 entries [1, 2, 2, 4, 2, 4, 2, 4, 6, 2, 6, 4, 2, 4, 6, 6, 2, 6, 4, 2, 6, 4, 6, 8, 4, 2, 4, 2, 4, 14, 4, 6, 2, 10, 2, 6, 6, 4, 6, 6]; entries >= 4 in the row: 15822 (the wall theorem's hypothesis 'every other cell in {0,2}' fails)
+  row 2: first 40 entries [1, 0, 2, 2, 2, 2, 2, 2, 4, 4, 2, 2, 2, 2, 0, 4, 4, 2, 2, 4, 2, 2, 2, 4, 2, 2, 2, 2, 10, 10, 2, 4, 8, 8, 4, 0, 2, 2, 0, 4]; entries >= 4 in the row: 13213 (the wall theorem's hypothesis 'every other cell in {0,2}' fails)
+
+== J. miscellaneous numbers quoted in the note ==  (t = 45s)
+  drifts log2(F_k) - 2: ['3: -0.4150', '5: +0.3219', '17: +2.0875', '257: +6.0056', '65537: +14.0000']
+  rows 0..31 of the single-seed diagram as binary numbers == the 32 products of distinct known Fermat primes: True; row 32 = 4294967297 = 641 * 6700417: True
+  rows 2^k - 1 all ones, value 2^(2^k) - 1 = prod_(i<k) F_i: [(1, 3, 3), (3, 15, 15), (7, 255, 255), (15, 65535, 65535), (31, 4294967295, 4294967295)]
+  leading column of the absolute difference triangle of s_n = prod_(i in bits n) F_i, rows 1..11: [2, 0, 8, 8, 16, 0, 80, 64, 32, 32, 896] (note: 2, 0, 8, 8, 16, 0, 80, 64, 32, 32, 896)
+  F_k in binary is 1 0^(2^k - 1) 1: the zeros of row 2^k ARE the top row of the side-(2^k - 1) zero triangle (the note says the triangle 'opens under row 2^k'; it opens under row 2^k - 1, IN row 2^k)
+
+ALL AUDIT ASSERTIONS PASSED (t = 45s)

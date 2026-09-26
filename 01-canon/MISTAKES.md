@@ -9,6 +9,13 @@ Format per entry:
 - Why it was wrong
 - The correct framing
 
+## 2026-09-26 Gilbreath wall theorem (opus S10): a hypothesis the proof never used, a PROVED label without a proof, and a heuristic called a consequence
+
+- **What was written.** THM-4511 was stated for a *lone* defect of size `4`, with the remark that "a second `4` arriving at column `F` after the first has died can find column `c` at `0` and cross", and the ledger/index said "interacting defects remain open".
+- **Why it was wrong.** The good-column induction of the proof never uses that the columns between the wall and the defect start at `0` beyond the wall's own neighbours, nor that there is one `4`: every column of a `0/2/4` row has a `{0,4}` phase followed by a `{0,2}` phase, so the theorem holds for any number of `4`s and the "second `4` reopens the wall" mechanism cannot occur (audit, exhaustive to length `13`). I restricted the statement to what I had enumerated instead of to what the proof gave.
+- **Two more slips.** The `3^(K-1-m)` count of the single-seed zero triangles and the completeness of the triangle decomposition were labelled PROVED with only a `K = 5, 7, 9` check on the page (proof added). The S9 random-model risk numbers for the primes (`0.258`, "the riskiest moment was row `1`") were presented as consequences of the theorem, whose hypothesis fails in rows `1`-`64` (thousands of entries `>= 6`); they are a heuristic, and the row-`1` defect, preceded by `2, 2`, is harmless by the very theorem. Also: "whatever lies to its right" needed "whatever `0/2/4` pattern" (`1 2 4 10` crosses).
+- **Mechanism to remember.** When a proof is finished, reread it to list the hypotheses it actually used, and state the theorem with those, not with the setting of the experiment. Write PROVED only when the derivation is on the page. Never call a random-model number a consequence of a theorem whose hypothesis the data violate.
+
 ## 2026-09-26 forest: additivity does not forbid trace encoding
 
 - **Continuation audit.** A duplicate results-index synopsis still repeated
