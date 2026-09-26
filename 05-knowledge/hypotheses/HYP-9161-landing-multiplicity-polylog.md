@@ -13,6 +13,8 @@ related:
 
 # HYP-9161 -- the landing multiplicity is polylogarithmic
 
+**UPDATE 2026-09-26 (collatz-procgen session, THM-4506).** The worst case is now exact: all dippers of a landing point lie in one dyadic shell, consecutive ones are separated by an odd letter, so m(j) <= ceil((k-D)/log_2 3) (about 0.631(k-D)), attained by residue classes and by actual orbits (13255 at L = 20). This sharpens the one-bit band bound 2 ceil(k/3) below. So "residue classes realise multiplicity k" in the retained original text should read ceil((k-D)/log_2 3). THM-4506 also proves that the recursion is saturated at a*(mu), that depth averaging is neutral, and that orbit-blind residue-class splits and parity-word data cannot give mu < 1 (Proposition H). The endpoint-corrected, orbit-coupled version of this hypothesis remains OPEN; in THM-4506's language it is a local-time bound for visits to the shell D bits above later landing points. See [THM-4506](../../01-canon/theorems/THM-4506-landing-multiplicity-exact-worst-case-and-recursion-saturation.md).
+
 **CORRECTION, 2026-09-26: the literal finite-segment hypothesis below is
 REFUTED.** The [fixed-integer audit, section 5](../results/crossroads_poset_20260926_integer.md)
 constructs one actual positive integer and K distinct positive orbit steps

@@ -1,0 +1,5 @@
+  ok: Lemmas S, O and Theorem 2 on every first dipper y <= 2^(k+1)-1 (b = 1, -1, 5; k = 10, 12, 14; D = 1, 1.5, 2, 3); for b = 1 the maximum equals ceil((k-D)/log2 3) in all 12 cells
+  ok: orbit of 13255 at L = 20, D = 2: max landing multiplicity 12 = ceil(18/log2 3)
+  ok: Proposition H class (b = 1, D = 3, O = 10, l = 19): in 40 random members every safe visit is a dipper landing at index l; all-visit hits 440/440
+  ok: Theorem 1(ii): psi = X^h* L^a*(mu) satisfies (R_mu) on the grid (mu in 0..1, C in 0.01..100, L = 2^4..2^17, D in [1, L/2]); min log2(RHS/psi) = 0.925; a*(1) = -0.986211
+  ok: Lemma A: along six record orbits (k = 40), each of 60684 pairs (i, j) serves at most one integer depth

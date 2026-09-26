@@ -1,0 +1,253 @@
+procgen_landing_20260926_run.py -- landing multiplicity of the THM-4476 / THM-4499 recursion
+python 3.10.0
+== A. constants and Theorem 1 ==
+alpha = 1.5849625, h* = 0.9499555, lambda* = 0.4880771, lambda*/h* = 0.513789
+ok: h* = 0.9499555 and lambda* = 0.488077 (THM-4499)
+a*(1.00) = mu lambda*/h* - 3/2 = -0.986211
+ok: a*(1.0) = -0.986211
+a*(0.50) = mu lambda*/h* - 3/2 = -1.243105
+ok: a*(0.5) = -1.243105
+a*(0.00) = mu lambda*/h* - 3/2 = -1.500000
+ok: a*(0.0) = -1.500000
+ok: multiplicity L^(1/2) gives lambda*/(2h*) - 3/2 (THM-4499 remark confirmed)
+saturation mu=0.00: min over L in {2^4..2^20}, 1 <= D < L/2 of log2(RHS/psi) = 0.9413
+saturation mu=0.25: min over L in {2^4..2^20}, 1 <= D < L/2 of log2(RHS/psi) = 0.9250
+saturation mu=0.50: min over L in {2^4..2^20}, 1 <= D < L/2 of log2(RHS/psi) = 0.9248
+saturation mu=0.75: min over L in {2^4..2^20}, 1 <= D < L/2 of log2(RHS/psi) = 0.9367
+saturation mu=1.00: min over L in {2^4..2^20}, 1 <= D < L/2 of log2(RHS/psi) = 0.9363
+ok: Theorem 1(ii): psi(X) = X^h* L^(a*(mu)) satisfies the recursion (R_mu) at every depth D, K=C=1, E=C^(-lambda*/h*)
+Lemma A: effective multiplicity factor 2^((W-1)h*)/W of the best of W depths: W=1: 1.0000, W=2: 0.9659, W=3: 1.2440, W=4: 1.8023
+ok: depth averaging lowers the effective multiplicity by at most the factor 0.965907 (W = 2): mu unchanged
+== B. exhaustive worst case (C scan) ==
+ok: scan scan_b1.txt finished
+ok: scan scan_bm1.txt finished
+ok: scan scan_b5.txt finished
+ok: scan scan_bm5.txt finished
+ok: 444 (b, k, D) cells scanned (b = 1, -1: k = 10..25; b = 5, -5: k = 10..22)
+ok: no violation of Lemma S (shell), Lemma O (odd separation), halving into the landing index, or Proposition U in any cell
+b= 1: cells with max multiplicity == ceil((k-D)/alpha): 144 of 144
+b= 5: cells with max multiplicity == ceil((k-D)/alpha): 78 of 78
+b=-1: cells with max multiplicity == ceil((k-D)/alpha): 144 of 144
+b=-5: cells with max multiplicity == ceil((k-D)/alpha): 74 of 78
+ok: b = 1, 5, -1: the worst case over all integers equals ceil((k-D)/alpha) in every cell (Proposition U is sharp)
+table b=1 (X = 2^(k+1)-1, all y <= X): max multiplicity / ceil((k-D)/alpha) / k
+   k |  D=1.0   D=2.0   D=3.0   D=4.0   D=5.0   D=6.0 
+  15 |  9/9     9/9     8/8     7/7     7/7     6/6     (k = 15)
+  20 | 12/12   12/12   11/11   11/11   10/10    9/9     (k = 20)
+  25 | 16/16   15/15   14/14   14/14   13/13   12/12    (k = 25)
+heavy counts H_M = #{y <= X : multiplicity counted from y >= M}, b=1, k=25, D=2:
+   M:      1      2      3      4      5      6      7      8      9     10     11     12     13     14     15
+   log2(H_M/X):  -0.17  -0.95  -1.66  -2.35  -3.03  -3.73  -4.48  -5.31  -6.21  -7.22  -8.38  -9.79 -11.58 -13.90 -17.21
+   bits lost per unit M:  0.78  0.71  0.70  0.68  0.70  0.75  0.83  0.90  1.00  1.16  1.41  1.78  2.32  3.31
+ok: heavy counts lose < 1.1 bits per unit M for M <= 9, well inside Proposition H's lower-bound rate 2 alpha = 3.17
+== C. constructed hostile segments: Sturmian hover, then floor(D)+1 halvings ==
+   b     k      D   m(j)  ceil((k-D)/alpha)  m/k    word length   y (first dipper)
+ok: b=1 k=30 D=165/32: actual segment of distinct integers, landing index 29 has 16 dippers <= X, Lemmas S/O hold
+   1    30   5.156    16      16              0.533     29   876502011
+ok: within Proposition U
+ok: b=1 k=30 D=3: actual segment of distinct integers, landing index 29 has 17 dippers <= X, Lemmas S/O hold
+   1    30   3.000    17      18              0.567     29   1285392889
+ok: within Proposition U
+ok: b=1 k=30 D=6: actual segment of distinct integers, landing index 29 has 15 dippers <= X, Lemmas S/O hold
+   1    30   6.000    15      16              0.500     29   1781611321
+ok: within Proposition U
+ok: b=1 k=40 D=179/32: actual segment of distinct integers, landing index 39 has 22 dippers <= X, Lemmas S/O hold
+   1    40   5.594    22      22              0.550     39   676231882619
+ok: within Proposition U
+ok: b=1 k=40 D=4: actual segment of distinct integers, landing index 39 has 23 dippers <= X, Lemmas S/O hold
+   1    40   4.000    23      23              0.575     39   873800378235
+ok: within Proposition U
+ok: b=1 k=40 D=8: actual segment of distinct integers, landing index 39 has 20 dippers <= X, Lemmas S/O hold
+   1    40   8.000    20      21              0.500     39   1989934213793
+ok: within Proposition U
+ok: b=1 k=64 D=403/64: actual segment of distinct integers, landing index 62 has 36 dippers <= X, Lemmas S/O hold
+   1    64   6.297    36      37              0.562     62   19253584281409562491
+ok: within Proposition U
+ok: b=1 k=64 D=205/32: actual segment of distinct integers, landing index 62 has 36 dippers <= X, Lemmas S/O hold
+   1    64   6.406    36      37              0.562     62   16582032205292742523
+ok: within Proposition U
+ok: b=1 k=64 D=819/64: actual segment of distinct integers, landing index 64 has 33 dippers <= X, Lemmas S/O hold
+   1    64  12.797    33      33              0.516     64   7586137512418856953
+ok: within Proposition U
+ok: b=1 k=100 D=223/32: actual segment of distinct integers, landing index 99 has 59 dippers <= X, Lemmas S/O hold
+   1   100   6.969    59      59              0.590     99   866524843715694803011903...
+ok: within Proposition U
+ok: b=1 k=100 D=10: actual segment of distinct integers, landing index 99 has 57 dippers <= X, Lemmas S/O hold
+   1   100  10.000    57      57              0.570     99   887799001505919427052691...
+ok: within Proposition U
+ok: b=1 k=100 D=20: actual segment of distinct integers, landing index 98 has 50 dippers <= X, Lemmas S/O hold
+   1   100  20.000    50      51              0.500     98   144230245145297215041960...
+ok: within Proposition U
+ok: b=1 k=200 D=257/32: actual segment of distinct integers, landing index 199 has 121 dippers <= X, Lemmas S/O hold
+   1   200   8.031   121     122              0.605    199   255364334178890816787086...
+ok: within Proposition U
+ok: b=1 k=200 D=20: actual segment of distinct integers, landing index 198 has 113 dippers <= X, Lemmas S/O hold
+   1   200  20.000   113     114              0.565    198   208455536707663145752627...
+ok: within Proposition U
+ok: b=1 k=200 D=40: actual segment of distinct integers, landing index 199 has 101 dippers <= X, Lemmas S/O hold
+   1   200  40.000   101     101              0.505    199   146822636022662432644296...
+ok: within Proposition U
+ok: b=1 k=400 D=581/64: actual segment of distinct integers, landing index 399 has 247 dippers <= X, Lemmas S/O hold
+   1   400   9.078   247     247              0.618    399   216717191278060980571491...
+ok: within Proposition U
+ok: b=1 k=400 D=40: actual segment of distinct integers, landing index 399 has 227 dippers <= X, Lemmas S/O hold
+   1   400  40.000   227     228              0.568    399   342321230637547137885495...
+ok: within Proposition U
+ok: b=1 k=400 D=80: actual segment of distinct integers, landing index 399 has 202 dippers <= X, Lemmas S/O hold
+   1   400  80.000   202     202              0.505    399   249218482173904321989722...
+ok: within Proposition U
+ok: b=-1 k=30 D=165/32: actual segment of distinct integers, landing index 29 has 16 dippers <= X, Lemmas S/O hold
+  -1    30   5.156    16      16              0.533     29   734110725
+ok: within Proposition U
+ok: b=-1 k=30 D=3: actual segment of distinct integers, landing index 29 has 17 dippers <= X, Lemmas S/O hold
+  -1    30   3.000    17      18              0.567     29   1398961671
+ok: within Proposition U
+ok: b=-1 k=30 D=6: actual segment of distinct integers, landing index 29 has 15 dippers <= X, Lemmas S/O hold
+  -1    30   6.000    15      16              0.500     29   1439614151
+ok: within Proposition U
+ok: b=-1 k=40 D=179/32: actual segment of distinct integers, landing index 39 has 22 dippers <= X, Lemmas S/O hold
+  -1    40   5.594    22      22              0.550     39   973035559045
+ok: within Proposition U
+ok: b=-1 k=40 D=4: actual segment of distinct integers, landing index 39 has 23 dippers <= X, Lemmas S/O hold
+  -1    40   4.000    23      23              0.575     39   775467063429
+ok: within Proposition U
+ok: b=-1 k=40 D=8: actual segment of distinct integers, landing index 39 has 20 dippers <= X, Lemmas S/O hold
+  -1    40   8.000    20      21              0.500     39   1858356483423
+ok: within Proposition U
+ok: b=-1 k=64 D=403/64: actual segment of distinct integers, landing index 62 has 36 dippers <= X, Lemmas S/O hold
+  -1    64   6.297    36      37              0.562     62   17639903866009540741
+ok: within Proposition U
+ok: b=-1 k=64 D=205/32: actual segment of distinct integers, landing index 62 has 36 dippers <= X, Lemmas S/O hold
+  -1    64   6.406    36      37              0.562     62   15699769923698972805
+ok: within Proposition U
+ok: b=-1 k=64 D=819/64: actual segment of distinct integers, landing index 64 has 33 dippers <= X, Lemmas S/O hold
+  -1    64  12.797    33      33              0.516     64   10860606561290694663
+ok: within Proposition U
+ok: b=-1 k=100 D=223/32: actual segment of distinct integers, landing index 99 has 59 dippers <= X, Lemmas S/O hold
+  -1   100   6.969    59      59              0.590     99   103495105662664929923315...
+ok: within Proposition U
+ok: b=-1 k=100 D=10: actual segment of distinct integers, landing index 99 has 57 dippers <= X, Lemmas S/O hold
+  -1   100  10.000    57      57              0.570     99   101367689883642467519236...
+ok: within Proposition U
+ok: b=-1 k=100 D=20: actual segment of distinct integers, landing index 98 has 50 dippers <= X, Lemmas S/O hold
+  -1   100  20.000    50      51              0.500     98   140991139906054400294797...
+ok: within Proposition U
+ok: b=-1 k=200 D=257/32: actual segment of distinct integers, landing index 199 has 121 dippers <= X, Lemmas S/O hold
+  -1   200   8.031   121     122              0.605    199   226717079098806265875502...
+ok: within Proposition U
+ok: b=-1 k=200 D=20: actual segment of distinct integers, landing index 198 has 113 dippers <= X, Lemmas S/O hold
+  -1   200  20.000   113     114              0.565    198   193278974357084423132863...
+ok: within Proposition U
+ok: b=-1 k=200 D=40: actual segment of distinct integers, landing index 199 has 101 dippers <= X, Lemmas S/O hold
+  -1   200  40.000   101     101              0.505    199   174564972829135622464096...
+ok: within Proposition U
+ok: b=-1 k=400 D=581/64: actual segment of distinct integers, landing index 399 has 247 dippers <= X, Lemmas S/O hold
+  -1   400   9.078   247     247              0.618    399   170620290434975307876896...
+ok: within Proposition U
+ok: b=-1 k=400 D=40: actual segment of distinct integers, landing index 399 has 227 dippers <= X, Lemmas S/O hold
+  -1   400  40.000   227     228              0.568    399   432353732788525439011280...
+ok: within Proposition U
+ok: b=-1 k=400 D=80: actual segment of distinct integers, landing index 399 has 202 dippers <= X, Lemmas S/O hold
+  -1   400  80.000   202     202              0.505    399   267231493443477395941461...
+ok: within Proposition U
+ok: constructed integers reach ceil((k-D)/alpha) - 2 or better in all 36 cases (max gap 1)
+gap histogram (ceil((k-D)/alpha) - m): [(0, 18), (1, 18)]
+== D. Proposition H: residue classes of heavy dippers with margin 1/8 ==
+   O     D     l = word length   safe visits   samples   min m   log2 class density
+ok: O=10 D=3: every sampled y in the class (48 l < y <= X/4) has all 9 safe visits as dippers at index 19
+ok: at least ceil(O/2)+1 safe visits (one of any two consecutive r has ||r alpha + D|| >= 1/8)
+ok: class length l = 19 <= 2 alpha (M-1) + D + 3 + 2 alpha with M = #safe
+   10   3.000      19               9            40       11      -19.00
+ok: O=20 D=4: every sampled y in the class (48 l < y <= X/4) has all 16 safe visits as dippers at index 36
+ok: at least ceil(O/2)+1 safe visits (one of any two consecutive r has ||r alpha + D|| >= 1/8)
+ok: class length l = 36 <= 2 alpha (M-1) + D + 3 + 2 alpha with M = #safe
+   20   4.000      36              16            40       21      -36.00
+ok: O=40 D=11/2: every sampled y in the class (48 l < y <= X/4) has all 30 safe visits as dippers at index 69
+ok: at least ceil(O/2)+1 safe visits (one of any two consecutive r has ||r alpha + D|| >= 1/8)
+ok: class length l = 69 <= 2 alpha (M-1) + D + 3 + 2 alpha with M = #safe
+   40   5.500      69              30            40       41      -69.00
+ok: O=80 D=7: every sampled y in the class (48 l < y <= X/4) has all 62 safe visits as dippers at index 134
+ok: at least ceil(O/2)+1 safe visits (one of any two consecutive r has ||r alpha + D|| >= 1/8)
+ok: class length l = 134 <= 2 alpha (M-1) + D + 3 + 2 alpha with M = #safe
+   80   7.000     134              62            40       81     -134.00
+ok: O=120 D=37/4: every sampled y in the class (48 l < y <= X/4) has all 91 safe visits as dippers at index 200
+ok: at least ceil(O/2)+1 safe visits (one of any two consecutive r has ||r alpha + D|| >= 1/8)
+ok: class length l = 200 <= 2 alpha (M-1) + D + 3 + 2 alpha with M = #safe
+  120   9.250     200              91            40      121     -200.00
+consequence (Proposition H): #H_M(X) >= X 2^-(2 alpha (M-1) + D + 5) - O(1); an orbit-blind split needs
+   L =    100: heavy threshold M >= ((1-h*)L - D - 5)/(2 alpha) + 1 =      -1.2  (= -0.0120 L)
+   L =   1000: heavy threshold M >= ((1-h*)L - D - 5)/(2 alpha) + 1 =      11.9  (= 0.0119 L)
+   L =  10000: heavy threshold M >= ((1-h*)L - D - 5)/(2 alpha) + 1 =     152.9  (= 0.0153 L)
+   L = 100000: heavy threshold M >= ((1-h*)L - D - 5)/(2 alpha) + 1 =    1572.6  (= 0.0157 L)
+ok: the forced threshold is linear in L (slope (1-h*)/(2 alpha) = 0.0158)
+== F. delay records (A006877) and path records (A006884) <= 10^12, T_1-orbits to 1 ==
+b006877.txt sha256 4bdd9c264ffb33f6252adad6716f8f0ad55c84687d4300a9bfbe646a1a81327f (90 delay records <= 10^12, largest 989345275647)
+b006884.txt sha256 657ec2fbc0ade279ce052005ae11234ea795c47b0fdaf9add6fff5d4f214de86 (61 path records <= 10^12, largest 871673828443)
+ok: record lists as cached
+ok: 144 distinct record starts; every orbit segment up to 1 has distinct terms
+   L  depth       D   landing  dippers  mean-mult  max-mult (record)       max/ceil((k-D)/a)  #D/N(X2^-D)
+  20  theta_X  4.531     1929     4884     2.532      9 (  59152641055)      0.900            0.434
+  20  0.1L     2.000     3108     8415     2.708     12 (        13255)      1.000            0.603
+  20  0.2L     4.000     2178     5850     2.686     11 (        13255)      1.000            0.494
+  30  theta_X  5.156     3178     9106     2.865     15 (        13255)      0.938            0.440
+  30  0.1L     3.000     4314    13869     3.215     15 (        13255)      0.833            0.600
+  30  0.2L     6.000     2707     7487     2.766     12 (      3542887)      0.750            0.377
+  40  theta_X  5.594     3973    13582     3.419     21 (   4578853915)      0.955            0.410
+  40  0.1L     4.000     4990    18503     3.708     18 (   4578853915)      0.783            0.521
+  40  0.2L     8.000     2776     7806     2.812     16 (   4578853915)      0.762            0.263
+  50  theta_X  5.922     4353    17061     3.919     22 (     80049391)      0.786            0.385
+  50  0.1L     5.000     4888    20192     4.131     21 (      3542887)      0.724            0.447
+  50  0.2L    10.000     2422     7165     2.958     20 (     80049391)      0.769            0.180
+  60  theta_X  6.203     4454    18835     4.229     24 (      3542887)      0.706            0.394
+  60  0.1L     6.000     4560    19728     4.326     23 (      3542887)      0.657            0.412
+  60  0.2L    12.000     2123     6170     2.906     15 (    210964383)      0.484            0.132
+ok: Lemmas S, O and the halving into the landing index hold at every landing point of every record orbit
+ok: every record-orbit multiplicity is within Proposition U (largest ratio to ceil((k-D)/alpha): 1.000)
+== E. Lemma A (depth averaging): each pair (i, j) serves at most one integer depth ==
+ok: Lemma A on 18929 windows (k = 40) of the record orbits: 757160 pairs, each serves <= 1 integer depth, so sum_D m_D(j) <= k - 1
+== G. the collatz-landing probe segments; climb-then-drop; a W-bit hover ==
+   L  start        D      max-mult  dippers(index range)  initial odd run  max dippers from the run per landing point
+  20  2^L-1       4.531      4       64..70                   20              0
+ok: L=20 2^L-1: the initial odd run contributes <= 2 dippers to any landing point
+  20  2^(L-1)+1   4.531      6       39..47                    1              0
+ok: L=20 2^(L-1)+1: the initial odd run contributes <= 2 dippers to any landing point
+  30  2^L-1       5.156      7      125..143                  30              0
+ok: L=30 2^L-1: the initial odd run contributes <= 2 dippers to any landing point
+  30  2^(L-1)+1   5.156      9       37..54                    1              1
+ok: L=30 2^(L-1)+1: the initial odd run contributes <= 2 dippers to any landing point
+  40  2^L-1       5.594     11      149..177                  40              0
+ok: L=40 2^L-1: the initial odd run contributes <= 2 dippers to any landing point
+  40  2^(L-1)+1   5.594      9       32..45                    1              1
+ok: L=40 2^(L-1)+1: the initial odd run contributes <= 2 dippers to any landing point
+  60  2^L-1       6.203     16      369..417                  60              0
+ok: L=60 2^L-1: the initial odd run contributes <= 2 dippers to any landing point
+  60  2^(L-1)+1   6.203     21       54..105                   1              1
+ok: L=60 2^(L-1)+1: the initial odd run contributes <= 2 dippers to any landing point
+  80  2^L-1       6.641     19      416..461                  80              0
+ok: L=80 2^L-1: the initial odd run contributes <= 2 dippers to any landing point
+  80  2^(L-1)+1   6.641     11      263..292                   1              1
+ok: L=80 2^(L-1)+1: the initial odd run contributes <= 2 dippers to any landing point
+ok: climb-then-drop integer y = 72464114801907393888255 follows 1^40 0^35
+climb-then-drop (40 odd steps then 35 halvings, X = 2^100, D = 6.969): climb dippers 40 spread over 24 landing points, max 2 per landing point
+ok: climb points share landing points at most in pairs (Lemma S: one dyadic shell holds <= 2 points of an odd run)
+W-bit hover (W = 4, 60 steps, then 13 halvings, X = 2^100): 60 hover dippers on 4 landing points, multiplicities [7, 10, 15, 28]
+ok: the hover's dippers split among <= ceil(W)+1 landing points (one per unit shell); average >= (hover dippers)/(W+1)
+== H. a 2-adic hostile word (repeated hover-crash-climb cycles) and its integer realisation ==
+pure walk, 20 cycles, word length 967, design k = 40, D = 4: landing points 42, mean multiplicity 16.83 (= 0.421 k), designed landing points: min 23 max 23, ceil((k-D)/alpha) = 23, #D/N(X2^-D) = 6.61
+ok: k=40: every cycle's designed landing point has multiplicity >= ceil((k-D)/alpha) - 1 (2-adic model, all 20 cycles)
+ok: k=40: mean multiplicity over all landing points >= 0.25 k
+ok: the integer y = r + 2^N u (967 bits) follows the whole word (Terras)
+integer realisation: scale 2^969, k = 969, D = 667/64: landing points inside the word 0, max multiplicity 0, max/k = 0.000
+ok: at the integer's own scale the cycles are invisible (crash depth 5 < D): max multiplicity/k <= 0.1
+pure walk, 20 cycles, word length 1821, design k = 80, D = 4: landing points 42, mean multiplicity 35.90 (= 0.449 k), designed landing points: min 48 max 48, ceil((k-D)/alpha) = 48, #D/N(X2^-D) = 14.64
+ok: k=80: every cycle's designed landing point has multiplicity >= ceil((k-D)/alpha) - 1 (2-adic model, all 20 cycles)
+ok: k=80: mean multiplicity over all landing points >= 0.25 k
+ok: the averaged ratio #D/N(X2^-D) grows linearly with the design window (6.61 -> 14.64)
+== reproduction ==
+sha256 a4a5b54094a27678ba6531b787e5035b7a66c926779c07ba7e17267ddd75b491  procgen_landing_20260926_lib.py
+sha256 4d41acf48658a531e52a797d788aa28e5ac0ca0b4790ef316f9c100af864d458  procgen_landing_20260926_run.py
+sha256 59ba0b059794d5300b029e62bd5bdbe6f45833af9cf726981020e8f1e0b8042d  procgen_landing_20260926_scan.c
+peak RSS: runner 14.4 MB, largest child 47.1 MB
+ok: every process under 700 MB RSS
+wall time 184.4 s
+ALL CHECKS PASSED
