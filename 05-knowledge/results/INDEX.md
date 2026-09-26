@@ -1,5 +1,12 @@
 # Script Results Index
 
+- [The min-max cycle density of sign strategies: a game, the negative-integer adversary, and 5n+1 settled](procgen_floor_20260926_density_floor.md):
+  **PROVED (THM-4486, audited) / FINITE-EXACT / REFUTED.** `rho*(q,k)` is a mean-payoff game value with exact certificates (to `k = 22`).
+  * Every sign strategy has a cycle of density `>= log_(q+1) 2`. The adversary plays the negative integers; at `q = 3` this is the pin `1/2`.
+  * **5n+1 settled:** `rho* = 1/2, 3/7, 5/12`, then exactly `2/5` for `k >= 15`. That is the sporadic cycle `(1,3,8,4,2)`, via the potential `u^2`.
+  * Stationary-law (entropy) floors are capped at `1/3`. No provable 7n±1 strategy exists at `k <= 22` (value `14/37`).
+  * The `3/7` floor is REFUTED.
+
 - [The exact price of periodic Collatz edits: feedback sets for expanding cycles (Golomb–Mykkeltveit fails for thresholds)](procgen_mykk_20260926_expanding_cycle_feedback.md):
   **PROVED (THM-4485, audited) / FINITE-EXACT / REFUTED.** A periodic edit is provable iff it meets every expanding cycle of `B(2,k)`, so the exact price is `FVS_c(k)/2^k`.
   * Mykkeltveit (re-derived) gives `FVS <= Z(k) - 1`.

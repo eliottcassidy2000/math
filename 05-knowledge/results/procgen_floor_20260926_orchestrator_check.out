@@ -1,0 +1,5 @@
+  ok: rho*(q,k) = 1/2 for q = 5, 7 and k = 2, 3, 4 (exhaustive, exact Karp)
+  ok: Theorem N: rho_max >= log_(q+1) 2 on 260 random strategies (q = 5..13, k = 3..7)
+  ok: Corollary 5: Phi(v) <= 8 Phi(u) (odd) and 4 Phi(v) <= Phi(u) (even) on U_k for all k <= 16, so every cycle has 5a >= 2p
+  ok: the 5x+1 cycle (1,3,8,4,2) has density exactly 2/5
+  ok: Prop F: the max-halving strategy has stationary law (1/3,1/6,1/3,1/6), odd frequency 1/3, rho_max 1/2 (q = 3..23)

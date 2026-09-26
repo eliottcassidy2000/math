@@ -15,6 +15,12 @@ status: >
   Second question: for 7n+1, 9n+1 and 11n+1 the least rho_max is 3/7, above
   their critical densities, through k = 9, 8, 8. Does rho*(q,k) ever drop
   below log_q 2 for some 7 <= q <= 21?
+  UPDATE 2026-09-26 (THM-4486): the "3/7 floor" is REFUTED. For 5n+1,
+  rho*(5,k) = 2/5 exactly for k >= 15. For 7n+-1 the certified values
+  reach 14/37 = 0.3784 at k = 22, still above log_7 2 = 0.3562; the
+  proved all-level floor is 1/3 (Theorem N). For q = 9..21, no provable
+  strategy exists at k <= 18. The second question stays OPEN, and
+  entropy-type arguments provably cannot settle q <= 7 (cap 1/3).
 source: collatz-procgen-20260922 session, cube-distance lane (DRIFT, 2026-09-25) and drift lane (2026-09-26)
 depends_on:
   - 01-canon/theorems/THM-4481-entropy-merge-law-sign-strategies.md

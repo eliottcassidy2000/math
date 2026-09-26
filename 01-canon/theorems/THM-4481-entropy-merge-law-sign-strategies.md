@@ -36,6 +36,12 @@ status: >
   fraction 0.391 (k=8) down to 0.180 (k=19).
   OPEN: whether 5n+1's Haar distance tends to 0 (HYP-9141); whether any
   q in 7..21 is ever provable. Collatz itself is untouched.
+  UPDATE 2026-09-26 (THM-4486): the min-max density is a game value.
+  Every strategy has a cycle of density >= log_(q+1) 2, which beats p0 for
+  q <= 19. For 5n+1 the min-max density is exactly 2/5 for k >= 15 (the
+  sporadic cycle 1,3,8,4,2). Stationary-law (entropy) floors cannot exceed
+  1/3. No provable sign strategy exists for 7n+-1 at k <= 22, nor for
+  q = 9..21 at k <= 18.
 source: collatz-procgen-20260922 session, drift lane (2026-09-26); audited and promoted by the session orchestrator 2026-09-26
 depends_on:
   - 01-canon/theorems/THM-4474-strategy-cube-provability-by-cycle-densities.md

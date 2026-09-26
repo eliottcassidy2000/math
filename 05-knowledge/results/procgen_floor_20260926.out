@@ -1,0 +1,188 @@
+procgen_floor_20260926_run.py -- floor lane, collatz-procgen-20260922, 2026-09-26
+python 3.10.0, numpy 2.2.6; KMAX5=21 KMAX7=22 KMAXQ=18 KALLQ=11
+  sha256 procgen_floor_20260926_lib.py = be7024fa7dc147c21d3eacabfc59d09c558943dcfa3cb30b421abda79e3e4f2f
+  sha256 procgen_floor_20260926_game.c = dc2b9e7eec12971ff5a7c54e55cd40144867856d9a33053cfa49f8f088d8cf71
+  sha256 procgen_floor_20260926_run.py = 311862d4c19e37378e35c8a64f8f023ec29da875156338ae30576a40ae6aa8cf
+
+== A. The game solver and its certificates ==
+A1. rho*(q,k) from the game solver vs exhaustive enumeration of all 2^(2^(k-1)) strategies (C, Karp):
+  [ok] k=2: game value = exhaustive min for all 2 odd q < 2^2: ['1/2']; optimal strategy counts [1, 1]
+  [ok] k=3: game value = exhaustive min for all 4 odd q < 2^3: ['1/2']; optimal strategy counts [1, 1, 1, 1]
+  [ok] k=4: game value = exhaustive min for all 8 odd q < 2^4: ['1/2']; optimal strategy counts [4, 8, 4, 8, 4, 8, 4, 8]
+  [ok] k=5: game value = exhaustive min for all 16 odd q < 2^5: ['1/2']; optimal strategy counts [36, 128, 100, 133, 73, 204, 64, 84, 36, 128, 100, 133, 73, 204, 64, 84]
+A2. independent pure-python Karp on the extracted optimal strategies (k <= 7):
+  [ok] 48 (q,k) pairs: rho_max(extracted sigma) by pure-python Karp equals the certified value
+A3. cross-check with the drift lane's independent engine (Dinkelbach + SPFA, procgen_drift_20260926_lib):
+  [ok] 25 pairs (q,k), k <= 12: the drift lane's exact rho_max of our optimal strategies equals rho*
+A4. negative tests (the verifiers reject corrupted certificates):
+  [ok] upper certificate (q=7,k=12) passes; lowering psi by 1 at a tight node makes it fail
+  [ok] lower certificate (q=7,k=12) passes; raising f by 1 at the head of a tight edge makes it fail
+  [ok] the q=7,k=12 certificates do not certify the neighbouring values 7/18 (upper) or 3/7 (lower)
+A5. Max certificates re-checked by an independent algorithm (Karp on the reachable part of G^tau):
+  [ok] 7 cases: the least cycle density Min can reach against the certified tau is >= rho*
+
+== B. Exact min-max densities rho*(q,k) (both certificates re-checked for every entry) ==
+    q= 3 k=14: rho* =     1/2 = 0.50000  (|W| = 16384, cert ebdf16754fbe8911, 0.0s, RSS 30 MB)
+    q= 3 k=15: rho* =     1/2 = 0.50000  (|W| = 32768, cert e56ebb2c1c97b0b8, 0.0s, RSS 33 MB)
+    q= 3 k=16: rho* =     1/2 = 0.50000  (|W| = 65536, cert 2047ca3797de3f0e, 0.0s, RSS 37 MB)
+  q= 3 (log_q 2 = 0.63093): k=2:1/2  [first k with rho* < 3/7: None]
+    q= 5 k=14: rho* =    5/12 = 0.41667  (|W| = 16384, cert b125fedb1f857f49, 0.0s, RSS 38 MB)
+    q= 5 k=15: rho* =     2/5 = 0.40000  (|W| = 32768, cert dd11b22c158607b7, 0.0s, RSS 39 MB)
+    q= 5 k=16: rho* =     2/5 = 0.40000  (|W| = 65536, cert f77c6546df9db5fa, 0.1s, RSS 43 MB)
+    q= 5 k=17: rho* =     2/5 = 0.40000  (|W| = 131072, cert 80c853f781be475d, 0.1s, RSS 48 MB)
+    q= 5 k=18: rho* =     2/5 = 0.40000  (|W| = 262144, cert d08e8c2c3a06e71f, 0.3s, RSS 75 MB)
+    q= 5 k=19: rho* =     2/5 = 0.40000  (|W| = 524288, cert 8bacd09083fd0544, 0.5s, RSS 121 MB)
+    q= 5 k=20: rho* =     2/5 = 0.40000  (|W| = 1048576, cert f10e435d4cfef940, 1.2s, RSS 213 MB)
+    q= 5 k=21: rho* =     2/5 = 0.40000  (|W| = 2097152, cert 59cfefa3e8ea3a97, 3.4s, RSS 348 MB)
+  q= 5 (log_q 2 = 0.43068): k=2:1/2, k=7:3/7, k=11:5/12, k=15:2/5  [first k with rho* < 3/7: 11]
+    q= 7 k=14: rho* =   15/38 = 0.39474  (|W| = 16384, cert 0ecddf1626f980cd, 0.3s, RSS 348 MB)
+    q= 7 k=15: rho* =   15/38 = 0.39474  (|W| = 32768, cert a381898ae6e8d397, 0.6s, RSS 348 MB)
+    q= 7 k=16: rho* =    7/18 = 0.38889  (|W| = 65536, cert e89ba4c3909e3b82, 0.3s, RSS 348 MB)
+    q= 7 k=17: rho* =    7/18 = 0.38889  (|W| = 131072, cert 594b615f209ed36b, 0.6s, RSS 348 MB)
+    q= 7 k=18: rho* =   19/49 = 0.38776  (|W| = 262144, cert 220c9f43a1e73120, 4.0s, RSS 348 MB)
+    q= 7 k=19: rho* =   13/34 = 0.38235  (|W| = 524288, cert 5412a0e5bf96f534, 5.9s, RSS 348 MB)
+    q= 7 k=20: rho* =   34/89 = 0.38202  (|W| = 1048576, cert 8fb483af1d4327dc, 30.1s, RSS 348 MB)
+    q= 7 k=21: rho* =    8/21 = 0.38095  (|W| = 2097152, cert 08cf5815a1346489, 10.3s, RSS 348 MB)
+    q= 7 k=22: rho* =   14/37 = 0.37838  (|W| = 4194304, cert 0b95f44caf0c2b2c, 230.7s, RSS 481 MB)
+  q= 7 (log_q 2 = 0.35621): k=2:1/2, k=7:3/7, k=10:2/5, k=14:15/38, k=16:7/18, k=18:19/49, k=19:13/34, k=20:34/89, k=21:8/21, k=22:14/37  [first k with rho* < 3/7: 10]
+    q= 9 k=14: rho* =     2/5 = 0.40000  (|W| = 16384, cert 24c053853a3e3230, 0.0s, RSS 481 MB)
+    q= 9 k=15: rho* =     2/5 = 0.40000  (|W| = 32768, cert 84e01751ae69a774, 0.0s, RSS 481 MB)
+    q= 9 k=16: rho* =     2/5 = 0.40000  (|W| = 65536, cert 921316964c21c24d, 0.1s, RSS 481 MB)
+    q= 9 k=17: rho* =   12/31 = 0.38710  (|W| = 131072, cert 0e9db7e1699e9040, 1.6s, RSS 481 MB)
+    q= 9 k=18: rho* =    5/13 = 0.38462  (|W| = 262144, cert 220da01d9d956b2a, 0.7s, RSS 481 MB)
+  q= 9 (log_q 2 = 0.31546): k=2:1/2, k=7:3/7, k=10:5/12, k=14:2/5, k=17:12/31, k=18:5/13  [first k with rho* < 3/7: 10]
+    q=11 k=14: rho* =   13/33 = 0.39394  (|W| = 16384, cert cf3011f5cb3d0d28, 0.2s, RSS 482 MB)
+    q=11 k=15: rho* =  45/116 = 0.38793  (|W| = 32768, cert d4c521402b2dfdec, 1.2s, RSS 482 MB)
+    q=11 k=16: rho* =   21/55 = 0.38182  (|W| = 65536, cert 3ddd9b036d855b05, 1.3s, RSS 482 MB)
+    q=11 k=17: rho* =   29/77 = 0.37662  (|W| = 131072, cert 8d586848ad42e83c, 13.6s, RSS 482 MB)
+    q=11 k=18: rho* =  41/110 = 0.37273  (|W| = 262144, cert 46d3b48d4183947b, 13.8s, RSS 482 MB)
+  q=11 (log_q 2 = 0.28906): k=2:1/2, k=7:3/7, k=10:5/12, k=12:9/22, k=13:2/5, k=14:13/33, k=15:45/116, k=16:21/55, k=17:29/77, k=18:41/110  [first k with rho* < 3/7: 10]
+    q=13 k=14: rho* =     2/5 = 0.40000  (|W| = 16384, cert a587f3206d4a5cea, 0.0s, RSS 482 MB)
+    q=13 k=15: rho* =   35/88 = 0.39773  (|W| = 32768, cert 9a34cfab55b66f92, 3.2s, RSS 482 MB)
+    q=13 k=16: rho* =   16/41 = 0.39024  (|W| = 65536, cert 59f92b54c507663f, 1.0s, RSS 482 MB)
+    q=13 k=17: rho* =    5/13 = 0.38462  (|W| = 131072, cert 267f43450991544c, 0.4s, RSS 482 MB)
+    q=13 k=18: rho* =    8/21 = 0.38095  (|W| = 262144, cert 656b5c8f4fe6f77b, 2.0s, RSS 482 MB)
+  q=13 (log_q 2 = 0.27024): k=2:1/2, k=9:4/9, k=11:11/26, k=12:5/12, k=13:20/49, k=14:2/5, k=15:35/88, k=16:16/41, k=17:5/13, k=18:8/21  [first k with rho* < 3/7: 11]
+    q=15 k=14: rho* =    7/17 = 0.41176  (|W| = 16384, cert 96b840c2a6d263b2, 0.1s, RSS 482 MB)
+    q=15 k=15: rho* =     2/5 = 0.40000  (|W| = 32768, cert 043fa88b3203177b, 0.0s, RSS 482 MB)
+    q=15 k=16: rho* =     2/5 = 0.40000  (|W| = 65536, cert 2161b7d45ff1854d, 0.1s, RSS 482 MB)
+    q=15 k=17: rho* =   32/81 = 0.39506  (|W| = 131072, cert 182b6dc118c5884a, 5.5s, RSS 482 MB)
+    q=15 k=18: rho* =  39/100 = 0.39000  (|W| = 262144, cert 80422542db86244d, 10.0s, RSS 482 MB)
+  q=15 (log_q 2 = 0.25596): k=2:1/2, k=8:5/11, k=10:9/20, k=11:7/16, k=12:3/7, k=13:21/50, k=14:7/17, k=15:2/5, k=17:32/81, k=18:39/100  [first k with rho* < 3/7: 13]
+    q=17 k=14: rho* =    7/17 = 0.41176  (|W| = 16384, cert 48f15e405c4cdeed, 0.1s, RSS 482 MB)
+    q=17 k=15: rho* =   15/37 = 0.40541  (|W| = 32768, cert 10a6e98ae12f54c2, 1.0s, RSS 482 MB)
+    q=17 k=16: rho* =   27/67 = 0.40299  (|W| = 65536, cert d850671bc6e15949, 6.1s, RSS 482 MB)
+    q=17 k=17: rho* =  53/133 = 0.39850  (|W| = 131072, cert 4d41eb5f6b95dbe5, 33.1s, RSS 482 MB)
+    q=17 k=18: rho* =   24/61 = 0.39344  (|W| = 262144, cert 3331b2a31dd1a8c3, 7.3s, RSS 482 MB)
+  q=17 (log_q 2 = 0.24465): k=2:1/2, k=8:5/11, k=9:4/9, k=11:7/16, k=12:10/23, k=13:29/69, k=14:7/17, k=15:15/37, k=16:27/67, k=17:53/133, k=18:24/61  [first k with rho* < 3/7: 13]
+    q=19 k=14: rho* =   15/37 = 0.40541  (|W| = 16384, cert 77e0227a8be84e8c, 0.5s, RSS 482 MB)
+    q=19 k=15: rho* =     2/5 = 0.40000  (|W| = 32768, cert 8f78aa9221b4e91a, 0.0s, RSS 482 MB)
+    q=19 k=16: rho* =   13/33 = 0.39394  (|W| = 65536, cert 88b4754f48e5a683, 1.2s, RSS 482 MB)
+    q=19 k=17: rho* =   23/59 = 0.38983  (|W| = 131072, cert dce37bdf49b46500, 3.7s, RSS 482 MB)
+    q=19 k=18: rho* =  43/112 = 0.38393  (|W| = 262144, cert b6815c4f7bd00b94, 17.5s, RSS 482 MB)
+  q=19 (log_q 2 = 0.23541): k=2:1/2, k=9:4/9, k=10:3/7, k=11:8/19, k=12:7/17, k=14:15/37, k=15:2/5, k=16:13/33, k=17:23/59, k=18:43/112  [first k with rho* < 3/7: 11]
+    q=21 k=14: rho* =     2/5 = 0.40000  (|W| = 16384, cert 09e318335c745b41, 0.0s, RSS 482 MB)
+    q=21 k=15: rho* =   24/61 = 0.39344  (|W| = 32768, cert d563fdb032300be9, 0.8s, RSS 482 MB)
+    q=21 k=16: rho* =   33/85 = 0.38824  (|W| = 65536, cert a31ce3419402d322, 2.0s, RSS 482 MB)
+    q=21 k=17: rho* =   38/99 = 0.38384  (|W| = 131072, cert 0614025b566a0095, 6.8s, RSS 482 MB)
+    q=21 k=18: rho* =   25/66 = 0.37879  (|W| = 262144, cert 355a8ed6f8d5df9c, 6.6s, RSS 482 MB)
+  q=21 (log_q 2 = 0.22767): k=2:1/2, k=9:4/9, k=10:10/23, k=11:3/7, k=12:7/17, k=13:11/27, k=14:2/5, k=15:24/61, k=16:33/85, k=17:38/99, k=18:25/66  [first k with rho* < 3/7: 12]
+  [ok] the drift lane's values are reproduced (q=5,7,9,11: 1/2 for k<=6, 3/7 at k=7,8; q=7: 3/7 at k=9; q=13: 1/2 for k<=8; q=3: 1/2)
+  [ok] Q1: rho* >= 3/7 FAILS: rho*(7,10) = 2/5, rho*(9,10) = rho*(11,10) = 5/12, rho*(5,11) = 5/12; the q-coincidence breaks at k = 10 (5: 3/7, 7: 2/5, 9: 5/12, 11: 5/12, 13: 4/9)
+  [ok] rho*(5,k) = 2/5 for 15 <= k <= 21 (and 5/12 at k = 14)
+  [ok] for every q in 7..21 and every computed level (q=7: k <= 22; q=9..21: k <= 18) rho*(q,k) > log_q 2 exactly (q^a > 2^p): class (i) is EMPTY there
+  [ok] q = 5: rho*(5,k) < log_5 2 exactly iff k >= 7 (class (i) nonempty from k = 7)
+  [ok] q = 7: the lowest value 14/37 = 0.37838 (k = 22) still exceeds log_7 2 = 0.35621 by more than 0.02
+
+== C. Symmetries of rho*(.,k) and the level floors ==
+C1. the arena at level k depends only on q mod 2^(k-1): in arena(q + 2^(k-1)) node s has the options of node s + 2^(k-1) in arena(q) (odd s):
+  [ok] k = 3..12, every odd q: option sets match (so G_sigma(q) and G_sigma'(q + 2^(k-1)) are isomorphic parity graphs with sigma'(s) = sigma(s + 2^(k-1)))
+C2. rho*(q,k) = rho*(q + 2^(k-1),k) = rho*(-q,k) for every odd q mod 2^k, k = 3..10:
+  [ok] both symmetries hold at k = 3..10 (all 2^(k-1) odd residues)
+C3. the proof of rho*(-q,k) = rho*(q,k): the least fixed point f* of the Min operator at F = rho*(q,k) is nu-invariant, and (-sigma*, f*) certifies F for -q:
+  [ok] 10 cases: nu-invariant f*, sigma* certify F for q; -sigma* with the same f* certifies F for -q (and the nu-symmetric Max certificate transports unchanged)
+C4. strategy-level comparison at k = 4, 5 (pure-python Karp): the full rho_max distributions of q and -q can differ, the nu-invariant strategies (sigma(-s) = -sigma(s)) match under sigma -> -sigma:
+  [ok] k = 4, 5: for every nu-invariant sigma of arena(q), rho_max(sigma) = rho_max(-sigma in arena(-q))
+  [ok] k = 4: all-strategy distributions differ (q=3: [('1', 217), ('1/2', 8), ('2/3', 9)]..., q=5: [('1', 217), ('1/2', 4), ('2/3', 15)]...) but the minima agree (1/2)
+C5. level floors min_q rho*(q,k) over the 2^(k-3) classes (+-q mod 2^(k-1)), k <= 11:
+    k= 3: floor 1/2 (0.50000) attained by +-q mod 2^2 for q in [1] (1 of 1 classes); value spectrum [('1/2', 1)]...
+    k= 4: floor 1/2 (0.50000) attained by +-q mod 2^3 for q in [1, 3] (2 of 2 classes); value spectrum [('1/2', 2)]...
+    k= 5: floor 1/2 (0.50000) attained by +-q mod 2^4 for q in [1, 3, 5, 7] (4 of 4 classes); value spectrum [('1/2', 4)]...
+    k= 6: floor 1/2 (0.50000) attained by +-q mod 2^5 for q in [1, 3, 5, 7, 9, 11, 13, 15] (8 of 8 classes); value spectrum [('1/2', 8)]...
+    k= 7: floor 3/7 (0.42857) attained by +-q mod 2^6 for q in [5, 7, 9, 11] (4 of 16 classes); value spectrum [('3/7', 4), ('1/2', 12)]...
+  [ok] k = 7: the classes with rho* = 3/7 are exactly +-5, +-7, +-9, +-11 mod 64 (all others 1/2): this is the q = 5..11 coincidence
+    k= 8: floor 3/7 (0.42857) attained by +-q mod 2^7 for q in [5, 7, 9, 11, 53, 55, 57, 59] (8 of 32 classes); value spectrum [('3/7', 8), ('7/16', 1), ('4/9', 3), ('9/20', 1), ('5/11', 7), ('1/2', 12)]...
+    k= 9: floor 3/7 (0.42857) attained by +-q mod 2^8 for q in [5, 7, 9, 11, 37, 53, 55, 57, 59, 69]... (20 of 64 classes); value spectrum [('3/7', 20), ('7/16', 2), ('4/9', 21), ('5/11', 6), ('7/15', 2), ('8/17', 1)]...
+    k=10: floor 2/5 (0.40000) attained by +-q mod 2^9 for q in [7, 59, 117, 245] (4 of 128 classes); value spectrum [('2/5', 4), ('7/17', 1), ('5/12', 12), ('8/19', 5), ('11/26', 2), ('3/7', 36)]...
+    k=11: floor 2/5 (0.40000) attained by +-q mod 2^10 for q in [7, 59, 69, 117, 245, 267, 373, 395, 443, 453]... (12 of 256 classes); value spectrum [('2/5', 12), ('9/22', 4), ('7/17', 12), ('12/29', 1), ('17/41', 1), ('5/12', 42)]...
+  [ok] k <= 6: rho*(q,k) = 1/2 for EVERY odd q
+  [ok] level floors: 3/7 (k = 7..9), 2/5 (k = 10..11); q = 7 attains the floor at every k = 7..11
+
+== D. Theorem N: the negative-integer adversary; rho_max >= log_{q+1} 2 for every strategy of every q ==
+D1. U_k (u -> u/2; u odd -> rho((qu -+ 1)/2) in [1, H]) is the Min graph of the arena when Max always takes the lift with top bit 1 (node N - u):
+  [ok] k = 2..14, q = 3..65: edge sets coincide
+D2. the multiplicative potential u: every odd step has 2 v <= (q+1) u, every even step v = u/2:
+  [ok] k = 2..18, q = 3..65: all edges of U_k satisfy the potential inequalities (hence every cycle has (q+1)^a >= 2^p, density >= log_{q+1} 2)
+D3. independent confirmation: least cycle density of U_k (numpy Karp) = value of the frozen strategy tau = 1 (game solver), and it is >= log_{q+1} 2:
+  [ok] q = 3..21, k = 5..10: Karp(U_k) = frozen-tau value; all >= log_{q+1} 2
+    q= 3: tau=1 value at k=10,12,14,16: ['1/2', '1/2', '1/2', '1/2']; log_(q+1) 2 = 0.50000, log_q 2 = 0.63093
+    q= 5: tau=1 value at k=10,12,14,16: ['2/5', '2/5', '2/5', '2/5']; log_(q+1) 2 = 0.38685, log_q 2 = 0.43068
+    q= 7: tau=1 value at k=10,12,14,16: ['1/3', '1/3', '1/3', '1/3']; log_(q+1) 2 = 0.33333, log_q 2 = 0.35621
+    q= 9: tau=1 value at k=10,12,14,16: ['5/16', '5/16', '5/16', '5/16']; log_(q+1) 2 = 0.30103, log_q 2 = 0.31546
+    q=11: tau=1 value at k=10,12,14,16: ['2/7', '2/7', '2/7', '2/7']; log_(q+1) 2 = 0.27894, log_q 2 = 0.28906
+    q=13: tau=1 value at k=10,12,14,16: ['3/11', '17/63', '17/63', '17/63']; log_(q+1) 2 = 0.26265, log_q 2 = 0.27024
+    q=15: tau=1 value at k=10,12,14,16: ['1/4', '1/4', '1/4', '1/4']; log_(q+1) 2 = 0.25000, log_q 2 = 0.25596
+    q=17: tau=1 value at k=10,12,14,16: ['1/4', '1/4', '1/4', '1/4']; log_(q+1) 2 = 0.23981, log_q 2 = 0.24465
+    q=19: tau=1 value at k=10,12,14,16: ['3/11', '7/26', '4/17', '4/17']; log_(q+1) 2 = 0.23138, log_q 2 = 0.23541
+    q=21: tau=1 value at k=10,12,14,16: ['1/4', '8/29', '13/51', '9/35']; log_(q+1) 2 = 0.22424, log_q 2 = 0.22767
+D4. tightness for q = 2^j - 1: the cycle 1 -> 2^(j-1) -> ... -> 2 -> 1 lies in U_k and has density 1/j = log_(q+1) 2:
+  [ok] q = 3, 7, 15, 31, 63: the free cycle through 1 is in U_k and the tau = 1 value equals 1/j exactly
+D5. the critical cycles of the tau = 1 adversary are sign-choice cycles of q u -+ 1 on the positive integers (no wrap-around) for q <= 19; for q = 21 the critical cycle at k = 16 uses wrap-arounds:
+    q= 3 k=12: value 1/2 (contracting); cycle of length 2, min 1, max 2, wraps 0: [1, 2]
+    q= 5 k=12: value 2/5 (contracting); cycle of length 5, min 1, max 8, wraps 0: [1, 3, 8, 4, 2]
+    q= 7 k=12: value 1/3 (contracting); cycle of length 3, min 1, max 4, wraps 0: [1, 4, 2]
+    q= 9 k=14: value 5/16 (contracting); cycle of length 16, min 1, max 112, wraps 0: [1, 5, 22, 11, 50, 25, 112, 56, 28, 14, 7, 32, 16, 8, 4, 2]
+    q=11 k=14: value 2/7 (contracting); cycle of length 7, min 1, max 16, wraps 0: [1, 6, 3, 16, 8, 4, 2]
+    q=13 k=14: value 17/63 (contracting); cycle of length 63, min 3, max 1840, wraps 0: [3, 20, 10, 5, 33, 214, 107, 696, 348, 174, 87, 566, '...']
+    q=15 k=14: value 1/4 (contracting); cycle of length 4, min 1, max 8, wraps 0: [1, 8, 4, 2]
+    q=17 k=14: value 1/4 (expanding); cycle of length 4, min 1, max 8, wraps 0: [1, 8, 4, 2]
+    q=19 k=16: value 4/17 (contracting); cycle of length 17, min 9, max 4608, wraps 0: [9, 86, 43, 408, 204, 102, 51, 485, 4608, 2304, 1152, 576, 288, 144, 72, 36, 18]
+    q=21 k=16: value 9/35 (expanding); cycle of length 70, min 19, max 30084, wraps 3: [19, 200, 100, 50, 25, 262, 131, 1376, 688, 344, 172, 86, '...']
+  [ok] q = 3..19: the tau = 1 value is attained by an exact cycle of u -> u/2, (q u -+ 1)/2 on positive integers: free cycles (1,2) [q=3], (1,4,2) [q=7], (1,8,4,2) [q=15, 17]; sporadic ones (1,3,8,4,2) [q=5], ...
+  [ok] log_(q+1) 2 > p0 = 0.2270922 exactly for q in [3, 5, 7, 9, 11, 13, 15, 17, 19] (q <= 19): Theorem N raises the floor for these q; for q >= 21 the entropy floor p0 is larger
+  [ok] log_(q+1) 2 < log_q 2 always: Theorem N settles no new q (class (i) needs rho_max in [log_(q+1) 2, log_q 2))
+
+== E. q = 5 is settled at every level: rho*(5,k) = 1/2, 3/7, 5/12, 2/5 (k <= 6, 7..10, 11..14, >= 15) ==
+E1. corrected potential Phi(u) = u^2 (u != 3), Phi(3) = 8 on U_k (q = 5): Phi(v) <= 8 Phi(u) on odd steps, 4 Phi(u/2) <= Phi(u) on even steps:
+  [ok] k = 2..22: all edges of U_k satisfy it (hand proof for all k in the note), so every cycle of U_k has 8^a >= 4^(p-a), density >= 2/5, for every k
+  [ok] the 5x+1 cycle (1, 3, 8, 4, 2) lies in U_k (k >= 5), density 2/5: the bound is attained
+  [ok] with the certified rho*(5,15) = 2/5 and lifting: rho*(5,k) = 2/5 for EVERY k >= 15; the whole sequence is 1/2 (k <= 6), 3/7 (7..10), 5/12 (11..14), 2/5 (k >= 15)
+
+== F. Limits of arguments through the uniform-lift stationary law (entropy-type bounds) ==
+F1. level-2 max-halving (greedy) strategy: exact stationary law (Fractions) of its uniform-lift chain:
+  [ok] q = 3..23: pi(odd) = 1/3 exactly (unique stationary law) while rho_max = 1/2; so no inequality valid for all stationary laws of all strategies can give a floor above 1/3, and none can settle q <= 7
+F2. certified strategies whose every closed class has pi(odd) < log_q 2 (exact sub-invariance certificates):
+  [ok] q=7, k=10: every closed class has pi(odd) <= 31/100 = 0.3100 < log_q 2 = 0.3562 (class values [0.3017]); rho_max of this strategy is still >= rho*(7,10) = 2/5
+  [ok] q=9, k=10: every closed class has pi(odd) <= 31/100 = 0.3100 < log_q 2 = 0.3155 (class values [0.2999]); rho_max of this strategy is still >= rho*(9,10) = 5/12
+  [ok] q=11, k=12: every closed class has pi(odd) <= 577/2000 = 0.2885 < log_q 2 = 0.2891 (class values [0.2841]); rho_max of this strategy is still >= rho*(11,12) = 9/22
+F3. EMPIRICAL (float value iteration): m(q,k) = least stationary odd frequency over all level-k strategies:
+    q= 5: m(q,8), m(q,12), m(q,16) = [0.3062, 0.3039, 0.3032];  log_q 2 = 0.4307   (cap already below log_q 2)
+    q= 7: m(q,8), m(q,12), m(q,16) = [0.3036, 0.2988, 0.2962];  log_q 2 = 0.3562   (cap already below log_q 2)
+    q= 9: m(q,8), m(q,12), m(q,16) = [0.3045, 0.295, 0.2905];  log_q 2 = 0.3155   (cap already below log_q 2)
+    q=11: m(q,8), m(q,12), m(q,16) = [0.2975, 0.2841, 0.2772];  log_q 2 = 0.2891   (cap already below log_q 2)
+    q=13: m(q,8), m(q,12), m(q,16) = [0.3019, 0.2868, 0.2786];  log_q 2 = 0.2702
+    q=15: m(q,8), m(q,12), m(q,16) = [0.3063, 0.2944, 0.2864];  log_q 2 = 0.2560
+    q=17: m(q,8), m(q,12), m(q,16) = [0.3055, 0.295, 0.287];  log_q 2 = 0.2447
+    q=19: m(q,8), m(q,12), m(q,16) = [0.3029, 0.2873, 0.2785];  log_q 2 = 0.2354
+    q=21: m(q,8), m(q,12), m(q,16) = [0.303, 0.2885, 0.2805];  log_q 2 = 0.2277
+    q=23: m(q,8), m(q,12), m(q,16) = [0.2991, 0.2868, 0.2781];  log_q 2 = 0.2211
+  [ok] table printed (EMPIRICAL): the stationary-law cap is below log_q 2 for q = 7, 9, 11 and above it (so far) for q = 13..23
+
+== G. Approaches that do not beat Theorem N ==
+G1. exact traps (finite rational sets closed under x/2 and (qx+-1)/2) give level-independent bounds; best found (denominators <= 31, numerators <= 4 den):
+  [ok] best exact-trap bounds: [(3, '1/2'), (5, '1/3'), (7, '1/4'), (9, '1/4'), (11, '0'), (13, '0')] -- all weaker than Theorem N (q=5: {1/3, 2/3, 4/3} gives 1/3 < 2/5)
+G2. rational-window adversaries for q = 7 (Max plays a/D with a in a window of length H):
+  [ok] their best value is 1/3 = Theorem N's bound (the free cycle {D, 4D, 2D} of 7x +- D is always available to Min)
+
+checks: 41; wall time 710 s; peak RSS 482 MB
+ALL CHECKS PASSED
