@@ -1,5 +1,11 @@
 # Script Results Index
 
+- [The peak-discounted provability price: catch every undecided orbit at its highest point](procgen_peak_20260926_peak_discounted_price.md):
+  **PROVED (THM-4480, audited) / PROVED modulo CITED Mogul'skii / FINITE-EXACT / EMPIRICAL.** For every odd `q`, `rho^peak_L/M*_L <= eps_L(q) <= rho^peak_L`, where `rho^peak_L = 2^-L sum_Bad 1/w*` and `M*_L = O(L^3)`.
+  * So the arbitrary-edit price has exponent `1 - H(log_q 2)` for every multiplier: `0.013911` for `5n+1`, whose undecided density stays at `0.176`.
+  * For `q = 3`, `rho^peak/rho_L = exp(-Theta(L^(1/3)))`, and THM-4478's P1 is negative for arbitrary edits. The sharp constant `kappa_3 = 2.1076` holds modulo Mogul'skii.
+  * The pairing family's greedy peak catch tracks `rho^peak` for `L <= 32` (HYP-9140). The periodic cube is polynomially sharp: height is what residue classes cannot see.
+
 - [Wave 13 orchestrator findings: Gersonides's four cycles, 3+1=4, cheap edits under positive drift, the Kuratowski–Tutte reading](procgen_wave13_20260926_orchestrator_findings.md):
   **PROVED (elementary; orchestrator) / FINITE-EXACT / ANALOGY (typed).**
   * The free integer cycles of 3x+1 on Z are exactly `{0}, {-1}, {1,2}, {-5,-7,-10}`: a shift argument plus Levi ben Gershon's `|3^a - 2^p| = 1` theorem. `-17` is sporadic (`139`), and the five densities are the first best approximations of `log_3 2`.

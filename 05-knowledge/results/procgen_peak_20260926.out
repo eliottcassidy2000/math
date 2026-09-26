@@ -1,0 +1,220 @@
+
+====================================================================================================
+0. Constants
+====================================================================================================
+   q=3: c=log_q 2=0.630930  1-H(c)=0.050044  sigma^2=c(1-c)=0.232857  lambda=(1-c)/c=0.584963  z=q/max(1,lambda)=3.000000  kappa_q=2.107580
+   q=5: c=log_q 2=0.430677  1-H(c)=0.013911  sigma^2=c(1-c)=0.245194  lambda=(1-c)/c=1.321928  z=q/max(1,lambda)=3.782354  kappa_q=2.435966
+   q=7: c=log_q 2=0.356207  1-H(c)=0.060510  sigma^2=c(1-c)=0.229324  lambda=(1-c)/c=1.807355  z=q/max(1,lambda)=3.873063  kappa_q=2.410440
+   q=9: c=log_q 2=0.315465  1-H(c)=0.100619  sigma^2=c(1-c)=0.215947  lambda=(1-c)/c=2.169925  z=q/max(1,lambda)=4.147609  kappa_q=2.441639
+  ok: 1 - H(log_3 2) = 0.050044 (THM-4478's eta)
+  ok: 1 - H(log_5 2) = 0.013911
+  ok: c_q (q+1) >= 1 for every odd 3 <= q <= 101 (Chernoff tilt z = q c/(1-c) >= 1; in general 2^(q+1) >= q)
+  ok: kappa_3 = 2.107580, kappa_5 = 2.435966, kappa_7 = 2.410440 (Mogulskii constants, z_3 = 3, z_5 = 3.7824, z_7 = 3.8731)
+[time] section 0: 0.0s elapsed, peak RSS 85 MB
+
+====================================================================================================
+1. Exact small-L validation: brute force = exact layer cake = float layer cake; the digest's numbers
+====================================================================================================
+  ok: q=3,5,7 and 1<=L<=16: enumeration of all 2^L words and the exact layer-cake DP give identical rho_L, rho^peak_L (exact rationals) and identical stratum counts |S_j|
+  ok: q=3, L=18: enumeration = exact layer cake
+  ok: float layer cake (truncated at s<=80) agrees with the exact rationals to 1.3e-15 (q=3: L=24..64; q=5,7: L=24..48)
+   exact values (q=3):  L  rho_L  rho^peak_L  E[1/w*|bad]
+       4  1.875000e-01  6.481481e-02  0.345679
+       8  7.421875e-02  1.310299e-02  0.176546
+      12  5.517578e-02  6.681278e-03  0.121091
+      16  3.225708e-02  2.660874e-03  0.082490
+      24  1.708156e-02  8.333989e-04  0.048789
+      32  9.626961e-03  3.012321e-04  0.031290
+      48  3.537286e-03  5.431076e-05  0.015354
+      64  1.493065e-03  1.302336e-05  0.008723
+   L=16: E[1/w* | bad] = 8.248961e-02  (digest: 0.0825)
+   L=60: E[1/w* | bad] = 1.016487e-02  (digest: 0.0102)
+   L=100: E[1/w* | bad] = 3.034496e-03  (digest: 0.00303)
+   L=200: E[1/w* | bad] = 4.032200e-04  (digest: 0.000403)
+   L=400: E[1/w* | bad] = 2.792899e-05  (digest: 2.79e-05)
+  ok: the digest's numbers E[1/w*|bad] = 0.0825, 0.0102, 3.03e-3, 4.03e-4, 2.79e-5 (L=16,60,100,200,400) are reproduced to 3 significant figures
+[time] section 1: 3.4s elapsed, peak RSS 377 MB
+
+====================================================================================================
+2. T1: the two-sided peak theorem (upper construction on integers; lower capacity constants)
+====================================================================================================
+2a. peak-catch modification G = 1 on E = {first peak point of every actual-bad source}, sources <= N = 10^6
+   q=3 L= 8: bad density 0.07422 (rho_L 0.07422)  #bad sources with peak<=N: 0.013102*N (rho^peak 0.013103)  |E cap [1,N]| = 0.009957*N = 0.760 rho^peak  exceptional X = []
+   q=3 L=10: bad density 0.06250 (rho_L 0.06250)  #bad sources with peak<=N: 0.008907*N (rho^peak 0.008909)  |E cap [1,N]| = 0.006462*N = 0.725 rho^peak  exceptional X = []
+   q=3 L=12: bad density 0.05518 (rho_L 0.05518)  #bad sources with peak<=N: 0.006681*N (rho^peak 0.006681)  |E cap [1,N]| = 0.004250*N = 0.636 rho^peak  exceptional X = []
+   q=3 L=14: bad density 0.04480 (rho_L 0.04480)  #bad sources with peak<=N: 0.004571*N (rho^peak 0.004563)  |E cap [1,N]| = 0.002780*N = 0.609 rho^peak  exceptional X = []
+   q=3 L=16: bad density 0.03226 (rho_L 0.03226)  #bad sources with peak<=N: 0.002659*N (rho^peak 0.002661)  |E cap [1,N]| = 0.001586*N = 0.596 rho^peak  exceptional X = []
+   q=5 L= 8: bad density 0.27344 (rho_L 0.27344)  #bad sources with peak<=N: 0.014297*N (rho^peak 0.014295)  |E cap [1,N]| = 0.011060*N = 0.774 rho^peak  exceptional X = [13, 17]
+   q=5 L=10: bad density 0.25977 (rho_L 0.25977)  #bad sources with peak<=N: 0.009049*N (rho^peak 0.009049)  |E cap [1,N]| = 0.006415*N = 0.709 rho^peak  exceptional X = [13, 17]
+   q=5 L=12: bad density 0.24610 (rho_L 0.24609)  #bad sources with peak<=N: 0.006029*N (rho^peak 0.006039)  |E cap [1,N]| = 0.004096*N = 0.678 rho^peak  exceptional X = [13, 17]
+   q=5 L=14: bad density 0.23377 (rho_L 0.23376)  #bad sources with peak<=N: 0.004044*N (rho^peak 0.004057)  |E cap [1,N]| = 0.002736*N = 0.674 rho^peak  exceptional X = [13, 17]
+   q=5 L=16: bad density 0.23377 (rho_L 0.23376)  #bad sources with peak<=N: 0.003171*N (rho^peak 0.003188)  |E cap [1,N]| = 0.002063*N = 0.647 rho^peak  exceptional X = [13, 17]
+   q=7 L= 8: bad density 0.34375 (rho_L 0.34375)  #bad sources with peak<=N: 0.008859*N (rho^peak 0.008858)  |E cap [1,N]| = 0.006921*N = 0.781 rho^peak  exceptional X = []
+   q=7 L=10: bad density 0.33008 (rho_L 0.33008)  #bad sources with peak<=N: 0.005085*N (rho^peak 0.005084)  |E cap [1,N]| = 0.003821*N = 0.752 rho^peak  exceptional X = []
+   q=7 L=12: bad density 0.32275 (rho_L 0.32275)  #bad sources with peak<=N: 0.003170*N (rho^peak 0.003172)  |E cap [1,N]| = 0.002336*N = 0.736 rho^peak  exceptional X = []
+   q=7 L=14: bad density 0.32275 (rho_L 0.32275)  #bad sources with peak<=N: 0.002261*N (rho^peak 0.002262)  |E cap [1,N]| = 0.001591*N = 0.703 rho^peak  exceptional X = []
+   q=7 L=16: bad density 0.31838 (rho_L 0.31839)  #bad sources with peak<=N: 0.001524*N (rho^peak 0.001519)  |E cap [1,N]| = 0.001055*N = 0.694 rho^peak  exceptional X = []
+  ok: q=3,5,7, L=8,10,12,14,16: every 2<=n<=10^6 falls below itself within L steps under G; |E cap [1,N]| <= #{bad n: peak(n) <= N} <= N rho^peak + |Bad_L| + |X| (the finite form of eps_L <= rho^peak); no lift of a bad word is actually good
+  ok: exceptional sets in [2,10^6]: empty for q=3; {13, 17} for q=5 (the minima of the 5n+1 cycles 13->33->83->208->104->52->26 and 17->43->108->54->27->68->34)
+  ok: measured edit density = 0.45..0.85 rho^peak (shared peaks: several bad sources on one orbit share its peak point) -- EMPIRICAL
+  ok: for L<=12 (>= 244 lifts per residue class below N): #{bad n : peak(n) <= N} = N rho^peak (1 +- 3%): the upper-bound count is tight before collisions
+2b. single-scale capacity M*_L = sum_{k<L} sum_{e=e_min(k)}^{k} (floor(e/q)+1)
+   q=3: L=8:29 (1.694)  L=16:181 (1.321)  L=32:1264 (1.154)  L=64:9421 (1.075)  L=128:72722 (1.037)  L=256:571349 (1.018)  L=512:4529300 (1.009)
+   q=5: L=8:26 (1.870)  L=16:158 (1.421)  L=32:1076 (1.209)  L=64:7864 (1.105)  L=128:59910 (1.052)  L=256:467348 (1.026)  L=512:3691320 (1.013)
+   q=7: L=8:23 (2.161)  L=16:134 (1.574)  L=32:877 (1.287)  L=64:6226 (1.142)  L=128:46694 (1.071)  L=256:361152 (1.035)  L=512:2839639 (1.018)
+  ok: M*_L <= L(L+1)(2L-2+3q)/(6q) for q=3,5,7 and L = 8..512 (closed-form bound)
+  ok: M*_L ~ (1-c^2) L^3/(6q) (ratio within 6% of 1 at L=512)
+2c. lower bounds for eps_L: single-scale rho^peak/M*_L, stratified max_j |S_j| 2^-L/(2^{j+1} M_L(2^{j+1})), THM-4478 Theorem A max_t rho_L(2^t)/(2^t M_L(2^t))
+   q=3 L= 16: rho^peak=2.661e-03  single=1.470e-05  stratified=8.134e-06  ThmA=6.775e-06 (K=2^4)  best lower / rho^peak = 1/181
+   q=3 L= 32: rho^peak=3.012e-04  single=2.383e-07  stratified=1.266e-07  ThmA=1.518e-07 (K=2^5)  best lower / rho^peak = 1/1264
+   q=3 L= 64: rho^peak=1.302e-05  single=1.382e-09  stratified=1.041e-09  ThmA=1.395e-09 (K=2^6)  best lower / rho^peak = 1/9339
+        peak-weighted strata (j: share of rho^peak, 2^j <= w* < 2^(j+1)): 4: 0.187, 5: 0.318, 6: 0.253, 7: 0.130, 8: 0.055
+   q=3 L=128: rho^peak=1.125e-07  single=1.547e-12  stratified=1.263e-12  ThmA=1.937e-12 (K=2^9)  best lower / rho^peak = 1/58083
+        peak-weighted strata (j: share of rho^peak, 2^j <= w* < 2^(j+1)): 5: 0.068, 6: 0.198, 7: 0.261, 8: 0.214, 9: 0.134
+   q=5 L= 16: rho^peak=3.188e-03  single=2.018e-05  stratified=8.527e-06  ThmA=9.983e-06 (K=2^6)  best lower / rho^peak = 1/158
+   q=5 L= 32: rho^peak=4.511e-04  single=4.192e-07  stratified=1.878e-07  ThmA=2.492e-07 (K=2^6)  best lower / rho^peak = 1/1076
+   q=5 L= 64: rho^peak=3.574e-05  single=4.545e-09  stratified=3.215e-09  ThmA=4.629e-09 (K=2^9)  best lower / rho^peak = 1/7721
+        peak-weighted strata (j: share of rho^peak, 2^j <= w* < 2^(j+1)): 6: 0.106, 7: 0.181, 8: 0.214, 9: 0.175, 10: 0.109
+   q=5 L=128: rho^peak=1.171e-06  single=1.955e-11  stratified=1.681e-11  ThmA=2.359e-11 (K=2^12)  best lower / rho^peak = 1/49653
+        peak-weighted strata (j: share of rho^peak, 2^j <= w* < 2^(j+1)): 9: 0.126, 10: 0.167, 11: 0.160, 12: 0.158, 13: 0.109
+  ok: all three rigorous lower bounds lie below the rigorous upper bound rho^peak (and below the measured E density at L=16); the gap is the polynomial capacity factor
+  ok: every bad word has w_L <= (q/2) w* (checked by enumeration at L=12, q=3,5,7): a stratum 2^j <= w* < 2^(j+1) lies in THM-4478's band B_L(q 2^j) (upper condition at j=L included) and in B'_L(2^(j+1)) (upper condition only for j<=L-1, which is all Theorem A's proof uses)
+[time] section 2: 31.1s elapsed, peak RSS 377 MB
+
+====================================================================================================
+3. T2: the exponent 1 - H(log_q 2) for every odd q
+====================================================================================================
+  ok: exact, q=3,5,7,9, 1<=L<=40: rho^peak_L <= (q/2) sum_{e>cL} C(L,e) q^-e <= (q/2) 2^-(1-H(c))L
+  ok: float, q=3,5,7, L=100..800: log2 rho^peak <= log2 Chernoff sum <= log2(q/2) - (1-H(c))L
+   q=3 L= 100: log2 rho^peak =    -20.397   block minorant (best b) =    -80.022   -(1-H)L =    -5.004
+   q=3 L= 400: log2 rho^peak =    -44.813   block minorant (best b) =   -184.780   -(1-H)L =   -20.018
+   q=3 L=1000: log2 rho^peak =    -83.703   block minorant (best b) =   -335.244   -(1-H)L =   -50.044
+   q=5 L= 100: log2 rho^peak =    -17.796   block minorant (best b) =    -92.869   -(1-H)L =    -1.391
+   q=5 L= 400: log2 rho^peak =    -32.371   block minorant (best b) =   -202.092   -(1-H)L =    -5.564
+   q=5 L=1000: log2 rho^peak =    -50.645   block minorant (best b) =   -348.716   -(1-H)L =   -13.911
+   q=7 L= 100: log2 rho^peak =    -23.125   block minorant (best b) =   -107.080   -(1-H)L =    -6.051
+   q=7 L= 400: log2 rho^peak =    -51.925   block minorant (best b) =   -241.313   -(1-H)L =   -24.204
+   q=7 L=1000: log2 rho^peak =    -98.277   block minorant (best b) =   -428.645   -(1-H)L =   -60.510
+  ok: the cyclic-rotation block minorant (THM-4478 section 4 with c_q, valid for c_q < 1/2) lies below rho^peak for q=3,5,7
+   q=5 catch-high balance exponent theta_5 = 0.011921
+   q=5 L=200: catch-high bound 2.241e-01   rho^peak 6.815e-08   (1/L)log2 rho^peak = -0.11903   ratio 3.04e-07
+   q=5 L=400: catch-high bound 4.126e-02   rho^peak 1.800e-10   (1/L)log2 rho^peak = -0.08093   ratio 4.36e-09
+   q=5 L=800: catch-high bound 1.497e-03   rho^peak 2.527e-14   (1/L)log2 rho^peak = -0.05646   ratio 1.69e-11
+  ok: q=5: the peak construction beats the catch-high bound by > 10^4 at L=200,400,800
+   q=3 L=1000: -(1/L) log2 rho^peak = 0.083703 vs 1-H(c) = 0.050044; [ln rho^peak + (1-H)L ln2]/L^(1/3) = -2.3330
+   q=5 L=1000: -(1/L) log2 rho^peak = 0.050645 vs 1-H(c) = 0.013911; [ln rho^peak + (1-H)L ln2]/L^(1/3) = -2.5462
+   q=7 L=1000: -(1/L) log2 rho^peak = 0.098277 vs 1-H(c) = 0.060510; [ln rho^peak + (1-H)L ln2]/L^(1/3) = -2.6178
+  ok: at L=1000 the per-step exponent exceeds 1-H(c) by < 0.05 bit and the excess is -Theta(L^(1/3)) (normalised log between -3.5 and -1.5 times L^(1/3)), q=3,5,7
+[time] section 3: 109.9s elapsed, peak RSS 377 MB
+
+====================================================================================================
+4. T3: second order exp(-Theta(L^(1/3))); elementary lemma checks; sharp constant (Mogulskii) vs data
+====================================================================================================
+  ok: tilting identity rho^peak = 2^-(1-H)L E_Q[lambda^S_L q^-M; bad] (Q: iid Bernoulli(c) letters, S_j = e_j - jc) verified by enumeration at L=12, q=3,5
+  ok: Lemma C(i): E_Q S_n^4 = 3 n^2 sigma^4 + n sigma^2 (1 - 6 sigma^2) (40-digit check, n<=60, q in {3,5,7,9,27,101})
+  ok: Lemma C(ii): min P(S_n>0), P(S_n<0) over n sigma^2>=1, n<=3000, q=3,5,7 is 0.3512 >= 1/16 (proved bound)
+  ok: Lemma C(iv): min P(|S_n| > a) over n sigma^2 >= 2a^2 (tested a<=34) is 0.4795 >= 1/14 (proved bound)
+[time] layer cake q=3: 177.7s elapsed, peak RSS 377 MB
+[time] layer cake q=5: 189.5s elapsed, peak RSS 377 MB
+[time] layer cake q=7: 201.0s elapsed, peak RSS 377 MB
+   q=3 L= 200: elementary lower    -187.03 <= ln[2^(1-H)L rho^peak] =  -13.575 <= elementary upper   -0.554
+   q=3 L= 400: elementary lower    -235.99 <= ln[2^(1-H)L rho^peak] =  -17.187 <= elementary upper   -1.165
+   q=3 L=1000: elementary lower    -319.88 <= ln[2^(1-H)L rho^peak] =  -23.330 <= elementary upper   -2.086
+   q=5 L= 200: elementary lower    -196.66 <= ln[2^(1-H)L rho^peak] =  -14.573 <= elementary upper   -0.641
+   q=5 L= 400: elementary lower    -246.63 <= ln[2^(1-H)L rho^peak] =  -18.581 <= elementary upper   -1.372
+   q=5 L=1000: elementary lower    -334.56 <= ln[2^(1-H)L rho^peak] =  -25.462 <= elementary upper   -2.477
+   q=7 L= 200: elementary lower    -212.82 <= ln[2^(1-H)L rho^peak] =  -15.128 <= elementary upper   -0.410
+   q=7 L= 400: elementary lower    -266.75 <= ln[2^(1-H)L rho^peak] =  -19.215 <= elementary upper   -1.137
+   q=7 L=1000: elementary lower    -363.77 <= ln[2^(1-H)L rho^peak] =  -26.178 <= elementary upper   -2.211
+  ok: the explicit elementary bounds of Lemma C / Theorem 3 bracket the exact values (they are far from sharp: constants ~31.8 and ~0.36 against the true kappa_3 = 2.108)
+  ok: rho_L(3) >= 2^(-eta L)/(2.72 L(L+1)) on the tested range (proved for L>=10 by the cycle lemma)
+   q=3 table:   L    rho_L        rho^peak_L    ratio        ln ratio    ln ratio/L^(1/3)
+               25  1.7082e-02  8.1328e-04  4.7612e-02     -3.0447   -1.0413   (bracket rel. width 0.0e+00)
+               50  3.3167e-03  4.8286e-05  1.4558e-02     -4.2296   -1.1481   (bracket rel. width 0.0e+00)
+               75  8.2381e-04  5.0022e-06  6.0720e-03     -5.1041   -1.2103   (bracket rel. width 0.0e+00)
+              100  2.3868e-04  7.2427e-07  3.0345e-03     -5.7977   -1.2491   (bracket rel. width 0.0e+00)
+              150  2.5693e-05  2.5832e-08  1.0054e-03     -6.9023   -1.2991   (bracket rel. width 0.0e+00)
+              200  3.0604e-06  1.2340e-09  4.0322e-04     -7.8160   -1.3365   (bracket rel. width 0.0e+00)
+              300  5.4667e-08  5.0434e-12  9.2256e-05     -9.2909   -1.3879   (bracket rel. width 0.0e+00)
+              400  1.1587e-09  3.2360e-14  2.7929e-05    -10.4858   -1.4231   (bracket rel. width 0.0e+00)
+              500  2.6584e-11  2.6582e-16  9.9992e-06    -11.5130   -1.4505   (bracket rel. width 0.0e+00)
+              600  6.4455e-13  2.6028e-18  4.0381e-06    -12.4197   -1.4725   (bracket rel. width 0.0e+00)
+              800  4.0963e-16  3.4318e-22  8.3778e-07    -13.9925   -1.5073   (bracket rel. width 0.0e+00)
+             1000  2.9019e-19  6.3523e-26  2.1890e-07    -15.3347   -1.5335   (bracket rel. width 0.0e+00)
+             1200  2.0621e-22  1.3714e-29  6.6506e-08    -16.5260   -1.5552   (bracket rel. width 0.0e+00)
+             1500  4.6194e-27  6.4561e-35  1.3976e-08    -18.0859   -1.5800   (bracket rel. width 0.0e+00)
+             2000  9.0581e-35  1.3817e-43  1.5254e-09    -20.3010   -1.6113   (bracket rel. width 1.2e-15)
+   q=5 table:   L    rho_L     rho^peak_L    ln[2^((1-H)L) rho^peak]   /L^(1/3)
+               25  0.2130  9.5878e-04       -6.7088   -2.2944
+               50  0.1912  9.4138e-05       -8.7886   -2.3856
+               75  0.1841  1.7864e-05      -10.2095   -2.4209
+              100  0.1806  4.3938e-06      -11.3711   -2.4498
+              150  0.1779  4.5953e-07      -13.1467   -2.4743
+              200  0.1769  6.8149e-08      -14.5731   -2.4920
+              300  0.1762  2.7725e-09      -16.8108   -2.5112
+              400  0.1761  1.8004e-10      -18.5808   -2.5218
+              500  0.1760  1.5385e-11      -20.0763   -2.5295
+              600  0.1760  1.5964e-12      -21.3777   -2.5346
+              800  0.1760  2.5271e-14      -23.5951   -2.5417
+             1000  0.1760  5.6789e-16      -25.4621   -2.5462
+   q=7 table:   L    rho_L     rho^peak_L    ln[2^((1-H)L) rho^peak]   /L^(1/3)
+               25  0.3079  3.1597e-04       -7.0113   -2.3978
+               50  0.3019  1.2828e-05       -9.1667   -2.4882
+               75  0.3010  1.0056e-06      -10.6642   -2.5288
+              100  0.3008  1.0935e-07      -11.8345   -2.5497
+              150  0.3008  2.1254e-09      -13.6779   -2.5743
+              200  0.3008  6.1248e-11      -15.1276   -2.5868
+              300  0.3008  9.4298e-14      -17.4096   -2.6006
+              400  0.3008  2.3390e-16      -19.2146   -2.6078
+              500  0.3008  7.7356e-19      -20.7320   -2.6121
+              600  0.3008  3.1188e-21      -22.0513   -2.6145
+              800  0.3008  7.5320e-26      -24.2941   -2.6170
+             1000  0.3008  2.6038e-30      -26.1781   -2.6178
+   q=3 ln(rho^peak/rho), L>=100: beta=2/3 fixed -> {'kappa': np.float64(2.0953588302105106), 'gamma': np.float64(1.1425235478352171), 'delta': np.float64(-1.344349935513676)} (max resid 0.0081);  free -> {'kappa': np.float64(2.157841337263611), 'beta': np.float64(0.9960352170099228), 'gamma': np.float64(-0.8724918102541144), 'delta': np.float64(2.3419053329457498)} (max resid 0.0053);  kappa fixed -> {'beta': np.float64(0.7332218284878325), 'gamma': np.float64(0.7289739204230681), 'delta': np.float64(-0.5765615490651106)} (max resid 0.0071)
+  ok: q=3: with the heuristic prefactor L^(2/3) the fitted kappa = 2.0954 is within 5% of kappa_3 = 2.1076 -- EMPIRICAL
+  ok: q=3: a free 4-parameter fit gives kappa = 2.1578, within 15% of kappa_3 -- EMPIRICAL
+  ok: q=3: with kappa fixed at kappa_3 the fitted prefactor exponent is beta = 0.733 (heuristic 2/3) -- EMPIRICAL
+   q=3 local slopes d ln ratio / d L^(1/3): -1.805 (pred -1.846), -1.823 (pred -1.863), -1.853 (pred -1.882), -1.872 (pred -1.900), -1.901 (pred -1.914), -1.901 (pred -1.926), -1.923 (pred -1.941)
+  ok: q=3: local slopes between L=400 and 2000 match -kappa_3 + 2/L^(1/3) within 0.08 -- EMPIRICAL
+   q=5 ln[2^((1-H)L) rho^peak], L>=200: free -> {'kappa': np.float64(2.5166565291500103), 'beta': np.float64(-0.32495146462787383), 'gamma': np.float64(2.065981330994741), 'delta': np.float64(-1.170095281930358)} (max resid 0.0018); beta=-5/6 -> {'kappa': np.float64(2.4179048145503046), 'gamma': np.float64(5.168917938794892), 'delta': np.float64(-6.9462071862627015)} (resid 0.0027)
+  ok: q=5: fitted kappa 2.5167 (free) and 2.4179 (beta=-5/6) agree with kappa_5 = 2.4360 (z = q c/(1-c)) within 10% / 5%, and exclude the naive z = q value 2.7657 -- EMPIRICAL
+   q=7 ln[2^((1-H)L) rho^peak], L>=200: free -> {'kappa': np.float64(2.404534385906909), 'beta': np.float64(-0.9181600123310348), 'gamma': np.float64(4.788377671526568), 'delta': np.float64(-5.786130318895252)} (max resid 0.0006); beta=-5/6 -> {'kappa': np.float64(2.4210117241254037), 'gamma': np.float64(4.270633385621228), 'delta': np.float64(-4.822350096733803)} (resid 0.0007)
+  ok: q=7: fitted kappa 2.4045 (free) and 2.4210 (beta=-5/6) agree with kappa_7 = 2.4104 (z = q c/(1-c)) within 10% / 5%, and exclude the naive z = q value 3.0697 -- EMPIRICAL
+[time] section 4: 201.0s elapsed, peak RSS 377 MB
+
+====================================================================================================
+5. T5: the pairing family -- source-level rescue (THM-4475) versus partner-isolated peak catch
+====================================================================================================
+   L= 8: THM-4475 rule 0.068052   peak catch 0.031274   2rho_L 0.148438   2rho^peak 0.026206   peak/2rho^peak 1.193   peak/2rho_L 0.211   (rescues 42718, fallback A/F/B 0, multi 0, mean rank of flip 1.29)
+[time] pairing L=8: 205.6s elapsed, peak RSS 377 MB
+   L=10: THM-4475 rule 0.056396   peak catch 0.022826   2rho_L 0.125000   2rho^peak 0.017818   peak/2rho^peak 1.281   peak/2rho_L 0.183   (rescues 35087, fallback A/F/B 0, multi 0, mean rank of flip 1.68)
+[time] pairing L=10: 210.2s elapsed, peak RSS 377 MB
+   L=12: THM-4475 rule 0.049190   peak catch 0.017886   2rho_L 0.110352   2rho^peak 0.013363   peak/2rho^peak 1.339   peak/2rho_L 0.162   (rescues 29931, fallback A/F/B 0, multi 0, mean rank of flip 2.01)
+[time] pairing L=12: 214.8s elapsed, peak RSS 377 MB
+   L=14: THM-4475 rule 0.039804   peak catch 0.012282   2rho_L 0.089600   2rho^peak 0.009126   peak/2rho^peak 1.346   peak/2rho_L 0.137   (rescues 23397, fallback A/F/B 6, multi 0, mean rank of flip 2.27)
+[time] pairing L=14: 219.7s elapsed, peak RSS 377 MB
+   L=16: THM-4475 rule 0.028426   peak catch 0.006902   2rho_L 0.064514   2rho^peak 0.005322   peak/2rho^peak 1.297   peak/2rho_L 0.107   (rescues 15930, fallback A/F/B 3, multi 0, mean rank of flip 2.43)
+[time] pairing L=16: 224.6s elapsed, peak RSS 377 MB
+   L=18: THM-4475 rule 0.025022   peak catch 0.005554   2rho_L 0.057182   2rho^peak 0.004151   peak/2rho^peak 1.338   peak/2rho_L 0.097   (rescues 13763, fallback A/F/B 1, multi 0, mean rank of flip 2.72)
+[time] pairing L=18: 229.5s elapsed, peak RSS 377 MB
+   L=20: THM-4475 rule 0.022694   peak catch 0.004658   2rho_L 0.052124   2rho^peak 0.003414   peak/2rho^peak 1.364   peak/2rho_L 0.089   (rescues 12319, fallback A/F/B 2, multi 0, mean rank of flip 3.02)
+[time] pairing L=20: 234.7s elapsed, peak RSS 377 MB
+   L=24: THM-4475 rule 0.014986   peak catch 0.002284   2rho_L 0.034163   2rho^peak 0.001667   peak/2rho^peak 1.370   peak/2rho_L 0.067   (rescues 7616, fallback A/F/B 0, multi 0, mean rank of flip 3.39)
+[time] pairing L=24: 239.8s elapsed, peak RSS 377 MB
+   L=28: THM-4475 rule 0.011532   peak catch 0.001542   2rho_L 0.026260   2rho^peak 0.001032   peak/2rho^peak 1.495   peak/2rho_L 0.059   (rescues 5646, fallback A/F/B 1, multi 0, mean rank of flip 3.84)
+[time] pairing L=28: 245.5s elapsed, peak RSS 377 MB
+   L=32: THM-4475 rule 0.008398   peak catch 0.000908   2rho_L 0.019254   2rho^peak 0.000602   peak/2rho^peak 1.507   peak/2rho_L 0.047   (rescues 3956, fallback A/F/B 0, multi 0, mean rank of flip 4.18)
+[time] pairing L=32: 252.1s elapsed, peak RSS 377 MB
+  ok: post-flip freshness (PROVED: T^k is affine with odd slope 3^e_k on the class, so b = b_0 + 3^e_k t): for every prefix of length k+1 <= 7 ending in an odd step, b = (T^k n - 1)/2 hits every residue mod 2^l (l = 1,3,6,8) exactly once as n runs over the class -- FINITE-EXACT
+  ok: the re-implemented THM-4475 rule reproduces the audited flip densities 0.06806 (L=8) and 0.02850 (L=16) on pairs <= N/4, N = 10^6
+  ok: partner-isolated peak catch: every 3 <= n <= 10^6 falls below itself within L (L = 8..32): a valid finite section of a member of P_L -- FINITE-EXACT
+  ok: the peak catch uses less than half the flips of THM-4475's source-level rule at every tested L
+  ok: peak-catch flip density / (2 rho^peak) lies in (1.0, 1.6) for L = 8..32 -- EMPIRICAL
+  ok: peak-catch flip density / (2 rho_L) falls from 0.211 (L=8) to 0.047 (L=32): the pairing price behaves like rho^peak, not like rho_L, on the tested range -- EMPIRICAL
+[time] section 5: 252.2s elapsed, peak RSS 377 MB
+
+====================================================================================================
+6. Done
+====================================================================================================
+[time] total: 252.2s elapsed, peak RSS 377 MB
+ALL CHECKS PASSED

@@ -10,6 +10,12 @@ status: >
   bound 2 rho_L. Consequently both have exponent 1-H_2(log_3(2)) and
   HYP-9137 is proved. This is a finite-horizon modification theorem, not
   convergence of the unmodified Collatz map.
+  UPDATE 2026-09-26 (THM-4480, collatz-procgen session): the arbitrary-edit
+  price equals the peak-discounted density rho^peak_L up to a cubic factor,
+  for every odd multiplier q. The error term improves to Theta(L^(1/3)):
+  eps_L = rho_L exp(-Theta(L^(1/3))) for q = 3, so P1 is answered
+  negatively for arbitrary edits. The exponent is 1 - H(log_q 2) for every
+  odd q, including q = 5, whose undecided density does not tend to 0.
 source: collatz-crossroads-20260926 session
 depends_on:
   - THM-4475-price-of-provable-descent-tends-to-zero

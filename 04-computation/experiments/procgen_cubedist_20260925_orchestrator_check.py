@@ -16,8 +16,8 @@ Parts (run with the part name as argument; default runs A-F):
   G  delta_7, delta_8 (3n+1) by an implicit hitting set with OR-tools CP-SAT
   H  5n+-1: no class-(i) strategy at k<=5 (exhaustive) and k=6 (IHS, UNSAT);
      a class-(i) strategy exists at k=7; 5n+1's exact distance at k=7
-  K  the stored k=10 certificate: every no-good re-derived; own seeds; CP-SAT
-     proves no hitting set of size <= 39
+  K  the stored k=10 certificate: every no-good re-derived; own seeds; HiGHS
+     proves no hitting set of size <= 39 (CP-SAT returned UNKNOWN after 3000 s)
 """
 import sys, math, itertools, gzip, json, time
 from fractions import Fraction
@@ -604,7 +604,7 @@ def part_H():
     check(True, "5n+1's exact distance to class (i) at k=7 is 29/64")
 
 
-def part_K(time_limit=3000):
+def part_K(time_limit=1500):
     print("K. k=10 certificate")
     path = "05-knowledge/results/procgen_cubedist_20260925_k10_certificate.json.gz"
     d = json.load(gzip.open(path, "rt"))
@@ -626,23 +626,33 @@ def part_K(time_limit=3000):
     assert ok and len(best) == 44 and rho == Fraction(5, 8)
     seeds = simple_expanding_cycles_G0(k, 3, k + 3)
     print(f"  own seeds: {len(seeds)} simple expanding cycles of G_0 of length <= 13")
-    from ortools.sat.python import cp_model
-    mdl = cp_model.CpModel()
-    x = [mdl.NewBoolVar(f"x{i}") for i in range(H)]
+    # The hitting-set bound is solved with HiGHS (MIP) on this script's own model:
+    # the stored no-goods (each re-derived above) plus this script's own seeds.
+    # (A CP-SAT attempt with 2 workers returned UNKNOWN after 3000 s.)
+    import highspy
+    h = highspy.Highs()
+    h.setOptionValue("output_flag", False)
+    h.setOptionValue("threads", 2)
+    h.setOptionValue("time_limit", float(time_limit))
+    inf = highspy.kHighsInf
+    for i in range(H):
+        h.addVar(0, 1)
+        h.changeColIntegrality(i, highspy.HighsVarType.kInteger)
+        h.changeColCost(i, 1.0)
     for cyc, minus in ngs + seeds:
-        lits = []
-        for s in set(cyc):
-            if s % 2:
-                lits.append(x[s // 2].Not() if s in minus else x[s // 2])
-        mdl.AddBoolOr(lits)
-    mdl.Add(sum(x) <= 39)
-    sol = cp_model.CpSolver()
-    sol.parameters.num_search_workers = 2
-    sol.parameters.max_time_in_seconds = time_limit
+        pos = [s // 2 for s in set(cyc) if s % 2 and s not in minus]
+        neg = [s // 2 for s in set(cyc) if s % 2 and s in minus]
+        idx = pos + neg
+        val = [1.0] * len(pos) + [-1.0] * len(neg)
+        h.addRow(1.0 - len(neg), inf, len(idx), np.array(idx, dtype=np.int32), np.array(val))
     t0 = time.time()
-    st = sol.Solve(mdl)
-    print(f"  CP-SAT on {len(ngs)+len(seeds)} no-goods with sum <= 39: {sol.StatusName(st)} ({time.time()-t0:.0f}s)")
-    check(st == cp_model.INFEASIBLE, "no hitting set of size <= 39: delta_10 >= 40 (independent solver)")
+    h.run()
+    info = h.getInfo()
+    status = h.modelStatusToString(h.getModelStatus())
+    print(f"  HiGHS on {len(ngs)+len(seeds)} no-goods: {status}, optimum {info.objective_function_value:.6f}, "
+          f"dual bound {info.mip_dual_bound:.6f} ({time.time()-t0:.0f}s)")
+    check(status == "Optimal" and info.mip_dual_bound > 39.5,
+          "min hitting set of the re-derived no-goods is 40: delta_10 >= 40 (independent model and seeds)")
 
 
 if __name__ == "__main__":

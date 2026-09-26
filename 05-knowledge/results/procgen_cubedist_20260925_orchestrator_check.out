@@ -63,4 +63,52 @@ F. delta_k exhaustive for k<=6
   ok: delta_k = 1,2,2,4,5 for k=2..6 by exhaustive search over flip sets of increasing size
   [part F: 17.1s]
 
-[parts G, H, K (solver re-derivations) were still running at promotion time; their output is appended below when complete]
+== parts G, H (run: orchestrator_check.py G H) ==
+G. delta_7, delta_8 (3n+1) by IHS with CP-SAT (independent solver)
+  k=7: CLASS_I size 9 after 31 iterations, 69 no-goods (39 seeds), 0s
+        optimum flips [27, 39, 47, 63, 79, 91, 107, 121, 127], exact rho_max = 5/8
+    ... it 50: 138 no-goods, LB 14, 2359s
+  k=8: CLASS_I size 14 after 54 iterations, 141 no-goods (88 seeds), 3240s
+        optimum flips [27, 31, 39, 71, 95, 127, 155, 167, 171, 207, 223, 231, 251, 255], exact rho_max = 5/8
+  ok: delta_7 = 9, delta_8 = 14 re-derived with a third solver (CP-SAT IHS)
+  [part G: 3241.7s]
+H. 5n+-1 cube
+  k=2: 4 strategies, class (i): 0
+  k=3: 16 strategies, class (i): 0
+  k=4: 256 strategies, class (i): 0
+  k=5: 65536 strategies, class (i): 0
+    ... it 50: 128 no-goods, LB -, 0s
+  k=6: IHS feasibility -> INFEASIBLE after 71 iterations, 148 no-goods
+    ... it 50: 193 no-goods, LB -, 0s
+    ... it 100: 245 no-goods, LB -, 1s
+    ... it 150: 296 no-goods, LB -, 1s
+    ... it 200: 346 no-goods, LB -, 2s
+    ... it 250: 396 no-goods, LB -, 3s
+    ... it 300: 447 no-goods, LB -, 4s
+    ... it 350: 501 no-goods, LB -, 4s
+    ... it 400: 552 no-goods, LB -, 5s
+    ... it 450: 602 no-goods, LB -, 6s
+    ... it 500: 653 no-goods, LB -, 7s
+    ... it 550: 704 no-goods, LB -, 8s
+    ... it 600: 755 no-goods, LB -, 9s
+    ... it 650: 805 no-goods, LB -, 10s
+    ... it 700: 857 no-goods, LB -, 12s
+  k=7: class-(i) strategy found (30 flips from 5n+1), exact rho_max = 3/7 < log_5 2 = 0.430677
+  ok: 5n+-1: provable class empty at k=2..6 (exhaustive k<=5, IHS UNSAT k=6), nonempty at k=7
+    ... it 100: 237 no-goods, LB 19, 911s
+    ... it 200: 338 no-goods, LB 22, 1064s
+    ... it 300: 438 no-goods, LB 28, 1074s
+  k=7: 5n+1 exact distance = 29 of 64 (CLASS_I, 330 it, 1075s)
+  ok: 5n+1's exact distance to class (i) at k=7 is 29/64
+  [part H: 1093.1s]
+
+== part K (run: orchestrator_check.py K; HiGHS) ==
+K. k=10 certificate
+  ok: all 1949 stored no-goods re-derived as expanding closed walks
+  upper-bound set: 44 flips, potential at 5/8 ok=True, exact rho_max=5/8
+  own seeds: 237 simple expanding cycles of G_0 of length <= 13
+  HiGHS on 2186 no-goods: Optimal, optimum 40.000000, dual bound 40.000000 (785s)
+  ok: min hitting set of the re-derived no-goods is 40: delta_10 >= 40 (independent model and seeds)
+  [part K: 785.0s]
+
+(An earlier part-K attempt with CP-SAT, 2 workers, returned UNKNOWN after 3000 s on the same 2186 no-goods; part K now uses HiGHS.)

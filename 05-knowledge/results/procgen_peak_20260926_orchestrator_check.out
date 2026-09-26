@@ -1,0 +1,28 @@
+1. exact DP versus enumeration and the note's table
+  ok: DP = enumeration exactly for q = 3, 5, 7 and L in {1,2,3,5,8,11,14}
+   q=3 L= 8: rho = 7.421875e-02, rho^peak = 1.310299e-02
+   q=3 L=16: rho = 3.225708e-02, rho^peak = 2.660874e-03
+   q=3 L=24: rho = 1.708156e-02, rho^peak = 8.333989e-04
+   q=3 L=32: rho = 9.626961e-03, rho^peak = 3.012321e-04
+   q=3 L=48: rho = 3.537286e-03, rho^peak = 5.431076e-05
+   q=3 L=64: rho = 1.493065e-03, rho^peak = 1.302336e-05
+   q=5 L=16: rho = 2.337646e-01, rho^peak = 3.187816e-03
+  ok: rho_L and rho^peak_L equal the note's printed values (q = 3: L = 8..64; q = 5: L = 16)
+2. Theorem 2's chain
+  ok: rho^peak <= (q/2) sum_{q^e > 2^L} C(L,e) q^-e <= (q/2) 2^(-(1-H(log_q 2))L) for q = 3,5,7,9, L <= 48
+  ok: the Chernoff tilt z = qc/(1-c) >= 1 (c(q+1) >= 1) for every odd q < 200
+3. the peak construction on actual integers
+   q=3 L= 8: all n <= 300000 descend: True; |E cap [1,N]| = 2985 <= N rho^peak + |Bad_L| + |X_L| = 3950; X_L cap [2,N] = []
+   q=3 L=12: all n <= 300000 descend: True; |E cap [1,N]| = 1274 <= N rho^peak + |Bad_L| + |X_L| = 2230; X_L cap [2,N] = []
+   q=5 L= 8: all n <= 300000 descend: True; |E cap [1,N]| = 3318 <= N rho^peak + |Bad_L| + |X_L| = 4360; X_L cap [2,N] = [13, 17]
+   q=5 L=12: all n <= 300000 descend: True; |E cap [1,N]| = 1237 <= N rho^peak + |Bad_L| + |X_L| = 2822; X_L cap [2,N] = [13, 17]
+   q=7 L=10: all n <= 300000 descend: True; |E cap [1,N]| = 1152 <= N rho^peak + |Bad_L| + |X_L| = 1863; X_L cap [2,N] = []
+  ok: peak construction: every 2 <= n <= 3e5 descends within L, and the density count of Theorem 1 holds
+4. the capacity constant
+  ok: M*_L <= L(L+1)(2L-2+3q)/(6q) for q = 3,5,7 and L <= 64
+5. q = 5: undecided density versus peak-discounted density
+   L=16: rho_L(5) = 0.2338, rho^peak_L(5) = 3.188e-03, -(1/L) log2 rho^peak = 0.51833
+   L=32: rho_L(5) = 0.2039, rho^peak_L(5) = 4.511e-04, -(1/L) log2 rho^peak = 0.34732
+   L=48: rho_L(5) = 0.1924, rho^peak_L(5) = 1.114e-04, -(1/L) log2 rho^peak = 0.27359
+   L=64: rho_L(5) = 0.1867, rho^peak_L(5) = 3.574e-05, -(1/L) log2 rho^peak = 0.23081
+  ok: rho_L(5) stays above 0.17 while rho^peak_L(5) decays (exponent 1 - H(log_5 2) = 0.013911 asymptotically)

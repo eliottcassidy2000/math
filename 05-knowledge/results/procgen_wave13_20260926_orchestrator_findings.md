@@ -16,7 +16,7 @@
   - The catch-high construction of §2 was built and verified for `q = 5, 7` and `L = 8, 12, 16` on all sources `<= 4*10^5`.
 - **ANALOGY / NUMEROLOGY (typed row by row).** §3, the Kuratowski–Tutte dictionary.
 - **OPEN.**
-  - The exact exponent of `eps_L(5)`, which lies in `[0.0119, 0.0139]`. The peak-discounted refinement (below; lane `peak`) should give exactly `1 - H(log_5 2) = 0.013911`.
+  - ~~The exact exponent of `eps_L(5)`~~ SETTLED by [THM-4480](../../01-canon/theorems/THM-4480-peak-discounted-provability-price.md). Catching at the peak gives `eps_L(q) <= rho^peak_L <= (q/2) 2^(-(1-H(log_q 2))L)` for every odd `q`, so the exponent is exactly `0.013911` for `q = 5`. Proposition 4 below (catch at a fixed height `W`) is superseded; it remains a valid but weaker bound.
   - Whether periodic modifications of `5n+1` approach provability (wave-14 lanes).
 
 Scripts: [gersonides check](../../04-computation/experiments/procgen_wave13_20260926_gersonides_check.py) → [output](procgen_wave13_20260926_gersonides_check.out); [positive-drift edits](../../04-computation/experiments/procgen_wave13_20260926_drift_arbitrary_edits.py) → [output](procgen_wave13_20260926_drift_arbitrary_edits.out). Session `collatz-procgen-20260922`, orchestrator, 2026-09-26.

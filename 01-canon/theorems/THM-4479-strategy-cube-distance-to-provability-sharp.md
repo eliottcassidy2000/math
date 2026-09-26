@@ -64,10 +64,18 @@ audit: >
   * delta_k = 1, 2, 2, 4, 5 for k = 2..6, by exhaustive search over flip
     sets of increasing size (a third method after the cube lane's MaxSAT
     and this lane's HiGHS implicit hitting set).
-  * Still running at promotion time, to be recorded in a follow-up:
-    - a CP-SAT implicit-hitting-set re-derivation of delta_7 and delta_8;
-    - the 5n+-1 emptiness at k <= 6 and the value 29/64 at k = 7;
-    - an independent-solver check of the k = 10 certificate's lower bound.
+  * delta_7 = 9 and delta_8 = 14, re-derived by an implicit hitting set
+    with OR-tools CP-SAT: a third solver after MaxSAT and HiGHS.
+  * 5n+-1: no class-(i) strategy at levels 2..5 (exhaustive, 65,812
+    strategies). The level-6 hitting-set problem is infeasible (148 no-goods).
+    A class-(i) strategy exists at level 7 with rho_max = 3/7, and 5n+1's
+    exact distance there is 29/64.
+  * The k = 10 certificate: all 1949 stored no-goods are re-derived as
+    expanding closed walks, and the 44-flip upper set is class (i) with
+    rho_max = 5/8. The script generates its own 237 seeds. HiGHS on this
+    independent model (2186 no-goods) proves the minimum hitting set is
+    exactly 40, so delta_10 >= 40. CP-SAT with 2 workers returned UNKNOWN
+    after 3000 s on the same model.
   The lane's full pipeline was re-run (787 s, 358 MB). Its output is
   identical to the committed .out except for timing fields.
 ---
