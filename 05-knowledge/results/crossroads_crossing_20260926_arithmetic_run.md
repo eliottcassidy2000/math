@@ -84,6 +84,72 @@ compressed run has length one. There is then also the compressed identity
 The mod8 condition identifies the next compressed block with a single
 odd step; mod4 alone proves the synchronized odd-step identity above.
 
+### A finite binary recognizer and exact tower matchings
+
+For a larger eligible source write `m=2^R u-1`, with `R>=2` and `u` odd.
+Its binary digits, read least-significant first, begin
+
+    1^R 0 b ...,  with u=1+2b mod4.
+
+Finite positive integers are padded by implicit leading zeros; this
+includes Mersenne numbers without an exceptional parsing rule. The smaller
+source has exponent `r=R-1`, so eligibility is exactly
+
+    3^(R-1)u=3 mod4  iff  b=R mod2.
+
+An eight-state deterministic automaton suffices: start, exactly-one-one,
+positive-even-run, odd-run-at-least-three, expect-zero, expect-one,
+accept, reject. The run states count parity, but distinguish the forbidden
+length1. At the first zero after at least two ones, the automaton asks for
+the next bit to equal that parity; all later bits are irrelevant to this
+predicate. The script gives its complete transition table.
+
+This is an exact finite graph recognizing a fate-preserving reduction,
+not a finite-state implementation of Collatz. No information needed for
+the eligibility predicate is lost, but the original integer must still
+be retained to compute the reduced source `(m-1)/2` and its height.
+
+For each fixed positive odd `u`, the tower `{2^r u-1:r>=1}` therefore has
+an exact matching of neighboring exponents:
+
+| u modulo4 | Paired exponents | Unpaired initial exponent |
+|---|---|---|
+| 1 | (1,2),(3,4),(5,6),... | none |
+| 3 | (2,3),(4,5),(6,7),... | 1 |
+
+For `u=7`, the actual pairs begin `(27,55),(111,223),(447,895)`.
+Every pair shares a future, proved algebraically; convergence is not
+being inferred for the whole infinite tower from any finite number of
+known seeds. The unconnected pairs are precisely the missing connection.
+
+### The three total stopping-time conventions
+
+Let `tau_U`, `tau_T`, and `tau_S` denote first-hit times of1 for the odd
+accelerated, shortcut, and standard maps, respectively. Suppose `n>1`
+satisfies the cheap-reset criterion and reaches1. Then its larger sibling
+also reaches1, and
+
+    tau_U(2n+1)=tau_U(n),
+    tau_T(2n+1)=tau_T(n)+1,
+    tau_S(2n+1)=tau_S(n)+1.
+
+For proof set `a=v2(3z+1)`. The first `r+1` odd steps of `n` have
+valuations `1,...,1,2,a` (with `r-1` initial ones); their sum is
+`r+1+a`. For the larger sibling they are `1,...,1,a+2` (with `r`
+initial ones), with sum `r+a+2`. Both lists have `r+1` odd steps and
+the same endpoint. No first hit of1 was passed earlier: the initial
+rises are strict for starts greater than1, and `z=1` would force
+`3^r u=3`, hence `n=1`. A shortcut trajectory takes exactly the valuation
+sum to execute these odd steps; a standard trajectory takes that sum
+plus the number of odd steps. Appending the common tail proves all three
+identities, with their exact convention dependence.
+
+The exclusion of `n=1` is essential because its first-hit time is zero.
+The larger partner3 has odd/shortcut/standard first-hit times2/5/7.
+For the nonterminal control `27,55`, the times are respectively41/41,
+70/71, and111/112. These equalities are consequences of exact coupling;
+they are not a statistical law or a termination proof for new seeds.
+
 ## 3. Binary repunits: exact reset classification and a hostile merger
 
 For `u=1`, elementary factorization gives
@@ -120,8 +186,9 @@ of those odd-exponent neighbors. The first useful hostile is
     C(31)=121,  C(121)=91=C(63),  91>63>31.
 
 Both starts merge after six odd steps, but their shared endpoint exceeds
-both. Coalescence preserves eventual fate, not descent, stopping time,
-or any negative average drift. For every odd `r>=9`, the common endpoint
+both. Coalescence preserves eventual fate; the precise stopping-time
+changes above depend on the retained prefix counts. It does not preserve
+descent or supply a negative average drift. For every odd `r>=9`, the common endpoint
 likewise exceeds the larger sibling, by the just-proved classification
 at even exponent `r+1>=10`.
 
@@ -146,7 +213,11 @@ successive permitted reductions along one fixed integer orbit.
 Run `python -B 04-computation/experiments/crossroads_crossing_20260926_arithmetic_run.py`.
 The retained output checks every odd source below200000 against direct
 iteration, Mersenne exponents1--256, both positive and strict-separation
-controls, and the mod8 compressed identity. All checks remain enabled
+controls, and the mod8 compressed identity. It checks the binary automaton
+on every positive integer below200000, including even hostile inputs;
+tower pairs for all odd `u<64` and exponents1--32; and the three stopping
+identities on eligible odd sources3--9999 by independent direct iteration
+in each convention, with a declared finite cap. All checks remain enabled
 under `python -O`. The same script independently computes the root dyadic
 note's *unwrapped* carries `287,251,227,211`, not just their residues modulo64.
 This catches an erroneous common multiple-of64 offset which a residue-only

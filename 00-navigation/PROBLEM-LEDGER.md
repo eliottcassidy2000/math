@@ -315,7 +315,9 @@ all heights (THM-1289, published), δ ineffective.
   but short stays are not counted by anything; HYP-9161 restated in
   THM-4506's averaged form (`#Dip(X,D) <= C L^mu N(X 2^-D) + C L^2` along the
   orbit), the literal per-segment reading being refuted; the no-descent
-  posets (THM-4503) have balance constant `1/2`.
+  positive-multiplier posets (THM-4503) have varying finite balance constants;
+  no uniform1/2 theorem is proved. THM-4507 excludes arbitrary nonlinear
+  finite polynomial-valuation corrections to globally decreasing log height.
 - **Erdős Problem 592** [DEEP — $1000 problem] — the p=2 Schur-seam theorem (THM-469),
   R(n,2)=2n+1 linear conjecture, Chang-tower m=3 open; 21 scripts, a survey draft.
 - **{7,21} forbidden H-spectrum** [DEEP, repo-signature] — permanent exclusions by

@@ -7,6 +7,12 @@ This strengthens the single-resource reset obstruction in
 [the crossing note, section 5B](crossroads_crossing_20260926_potential.md).
 It addresses arbitrary nonlinear dependence on finitely many unbounded
 valuation features, not merely bounded colour or residue corrections.
+The expanding-cycle mechanism is inherited from
+[THM-4483, forced charges and two-place ranks](../../01-canon/theorems/THM-4483-forced-charges-two-place-ranks.md),
+which already excludes finite linear banks of rational-centred 2-adic
+counters and suitable infinite banks. The present extension permits an
+arbitrary nonlinear function of polynomial valuations at multiple primes;
+it does not strengthen THM-4483's infinite-bank theorem.
 
 ## 1. Statement and scope
 
@@ -28,7 +34,11 @@ computable, or bounded. The finite set of positive integer roots of the
 P_i can be absorbed into H. The same conclusion holds if nonincrease is
 required at every sufficiently large accelerated odd-to-odd transition:
 each repeated word has odd-step valuation word 1^(a-1),(B+1), and its
-endpoints are odd. The result includes valuations at {2,3,11},
+endpoints are odd. It also holds for the maximal-rise reset map
+`C(n)=U^(v_2(n+1))(n)`: every shadow period in the proof is exactly one
+C step, consisting of a-1 valuation-one odd steps and a final valuation
+B+1. Arbitrary selected return rules are not covered by this extension.
+The result includes valuations at {2,3,11},
 at the mod30 primes, and of forms n+1,n-1,3n+5,2n+1 together. Bounded
 Fibonacci, log-periodic, finite-state and residue corrections can enter g.
 
@@ -79,7 +89,9 @@ positive finite segments, not a positive integer counterexample.
 
 For p in S union {2}, choose
 
-    e_p > max_i v_p(P_i(r)).
+    e_p >= 1,    e_p > max_i v_p(P_i(r)).
+
+For an empty polynomial list, take the empty maximum here to be zero.
 
 If n-r is divisible by p^e_p, polynomial continuity gives
 v_p(P_i(n))=v_p(P_i(r)) for every i. This follows directly by factoring
@@ -116,6 +128,14 @@ Thus
 which is positive for large k. Summing the hypothetical one-step
 nonincrease inequalities along this actual high positive block gives
 the opposite inequality. Contradiction.
+
+The same proof allows any correction R(n) that is bounded on each fixed
+valuation fibre, with a bound allowed to depend on the fibre. In particular
+an arbitrary function of the valuation vector and finitely many colours
+also fails: the chosen fixed vector permits only finitely many correction
+values. The proof does not require that the endpoint colours themselves
+coincide. A correction unbounded within that fixed fibre is outside this
+extension.
 
 ## 4. What changed in the research direction
 

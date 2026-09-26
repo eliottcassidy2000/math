@@ -103,7 +103,9 @@ def family(primes, polynomials):
         require([vp(poly(P, source), p) for p in primes for P in polynomials] == feature, "source features match rational shadow")
         state = source
         minimum = source
-        for bit in word * repeats:
+        for offset, bit in enumerate(word * repeats):
+            if offset % len(word) == 0:
+                require(vp(state + 1, 2) == a, "one period is exactly one maximal-rise reset")
             require(state > cutoff, "whole positive block stays outside finite core")
             require(state % 2 == bit, "actual positive parity prefix")
             require(all(poly(P, state) != 0 for P in polynomials), "no undefined feature on intermediate states")

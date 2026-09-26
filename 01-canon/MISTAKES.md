@@ -16,6 +16,37 @@ Format per entry:
 - **Second slip.** `sum 1/m_l <= 3 log(Q_inf/n)` was written with the inequality reversed; `log(1+x) < x` gives `sum 1/m_l > 3 log` always, and `x/(1+x) <= log(1+x)` gives the upper bound `4 log`.
 - **Mechanism to remember.** A quantity that is invariant in one base because an integer drops out of a fractional part is not invariant in another base. And check the direction of `log(1+x) <= x` before summing.
 
+## 2026-09-26 crossing crossroads: balance, clocks, and authoritative data
+
+- **Balance and entropy were over-transferred.** The positive-prefix cells
+  (length, odd count)=(5,4),(7,5),(10,7) have best balances1/3,3/7,7/15,
+  respectively. Total word entropy is not each cell's entropy, and a
+  1/3--2/3 comparison gives a worst-case log_(3/2) decision bound, not a
+  log_2 upper bound. Fixed-source conditioning can leave one word. Keep
+  the extension measure, affine carry, and source projection explicit.
+- **The reciprocal-clock inequality had its direction reversed.** For
+  C=product(1+1/(3m)), natural logs give3log C<sum1/m<=4log C. The single
+  step27->41 already defeats the former upper bound3log C. Bounded carry
+  additionally needs nonperiodic summability; Q_0=n and the3-adic norm
+  needs its initial valuation. Same-band depth includes the accumulated
+  carry, and exit counting needs distinct states and completed stays.
+- **The run invariant lost its sign and shift.** On valuation-one rises,
+  log_2(n+1)+log_2(3/2)v_2(n+1) is constant; a negative-sign log n version
+  increases. Reset costs include height as well as resource. Root1 also
+  has only the edge5->1 after its self-loop is removed.
+- **A near-fit is not the supplied sequence.** The Fibonacci/Wythoff
+  model fits34 colours, but supplied symbol35 is blue instead of predicted
+  red. The exact compressed word is not balanced. Preserve the data and
+  distinguish the candidate continuation from a fitted rule.
+- **A residue check cannot validate unwrapped carry.** A draft table had
+  C+320 in place of C, invisible modulo64. Direct composition corrected
+  the constants to287,251,227,211 before checkpoint. Check both the
+  integer affine identity and the residue projection independently.
+
+The [integration audit](../05-knowledge/results/crossroads_crossing_20260926_integration.md)
+records witnesses, failure boundaries, repaired incoming routes, and
+reproduction. These are corrections, not unresolved court disputes.
+
 ## 2026-09-26 poset crossroads: source laws, endpoint multiplicity, and peak carry
 
 - **HYP-9161's endpoint-free finite-segment average is false.** Exact

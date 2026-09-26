@@ -270,9 +270,11 @@ precisely the valuation sidecar that must not be replaced by a random
 or independent sampling rule. Two valid phase laws do not automatically
 prove an independence law for phase and parity.
 
-This extends the inherited ordered-carry calculation, rather than
-claiming an unrelated new dynamical conjugacy. The root session is
-checking primary literature for related log-coordinate constructions.
+This extends the inherited ordered-carry calculation. The
+[literature scope check](crossroads_crossing_20260926_dyadic.md#6-literature-boundary-and-reproduction)
+distinguishes Kontorovich--Miller's source-population limits from the
+fixed-orbit conditional identity and records the related January 2026
+near-conjugacy preprint without certifying its full argument.
 
 ## 5. Excursion posets, exact flux, and the failed contraction
 

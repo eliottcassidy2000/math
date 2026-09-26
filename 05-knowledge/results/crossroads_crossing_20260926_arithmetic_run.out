@@ -6,6 +6,58 @@
     "compressed_two_to_one": 25006,
     "sources": 100000
   },
+  "automaton_universe": "all positive integers below200000, including even hostile inputs",
+  "tower_universe": "all odd u<64, smaller exponent1<=r<=32",
+  "u7_coupled_pairs": [
+    [
+      27,
+      55
+    ],
+    [
+      111,
+      223
+    ],
+    [
+      447,
+      895
+    ]
+  ],
+  "stopping_probe": {
+    "eligible_odd_sources_3_to9999": 2499,
+    "iteration_cap_per_source_per_convention": 10000,
+    "examples": {
+      "1": {
+        "odd": 0,
+        "shortcut": 0,
+        "standard": 0
+      },
+      "3": {
+        "odd": 2,
+        "shortcut": 5,
+        "standard": 7
+      },
+      "27": {
+        "odd": 41,
+        "shortcut": 70,
+        "standard": 111
+      },
+      "55": {
+        "odd": 41,
+        "shortcut": 71,
+        "standard": 112
+      },
+      "111": {
+        "odd": 24,
+        "shortcut": 45,
+        "standard": 69
+      },
+      "223": {
+        "odd": 24,
+        "shortcut": 46,
+        "standard": 70
+      }
+    }
+  },
   "Mersenne_exponents_checked": [
     1,
     256

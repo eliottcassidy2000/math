@@ -8,7 +8,7 @@ import sys
 
 ROOT = Path(__file__).resolve().parents[2]
 PREFIX = "crossroads_crossing_20260926_"
-LANES = ("colour", "potential", "arithmetic", "arithmetic_run", "dyadic", "resource", "phase_audit")
+LANES = ("colour", "potential", "arithmetic", "arithmetic_run", "dyadic", "resource", "phase_audit", "integration")
 MANIFEST = ROOT / "05-knowledge/results" / (PREFIX + "manifest.json")
 
 
@@ -28,9 +28,8 @@ def digest(data):
 def main():
     parser = argparse.ArgumentParser()
     parser.add_argument("--refresh", action="store_true")
-    parser.add_argument("--partial", action="store_true", help="Checkpoint the first six lanes before the independent audit lands")
     args = parser.parse_args()
-    lanes = LANES[:-1] if args.partial else LANES
+    lanes = LANES
     hashes = {}
     for lane in lanes:
         relative = Path("04-computation/experiments") / (PREFIX + lane + ".py")
@@ -64,7 +63,7 @@ def main():
     ]
     for relative in deps:
         hashes[relative] = digest(norm((ROOT / relative).read_bytes()))
-    manifest = {"hash_basis": "UTF-8 with LF line endings", "partial": args.partial, "sha256": hashes}
+    manifest = {"hash_basis": "UTF-8 with LF line endings", "partial": False, "sha256": hashes}
     if args.refresh:
         MANIFEST.write_text(json.dumps(manifest, indent=2) + "\n", encoding="utf-8")
     else:
