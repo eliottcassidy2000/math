@@ -6,8 +6,10 @@ status: >
   FINITE-EXACT controls to 2^24. Let b = +-1, T_b(x) = x/2 (x even),
   (3x+b)/2 (x odd), alpha = log_2 3, h the binary entropy, and
   D_b(X, gamma) = #{n <= X : T_b^i(n) >= n^gamma for all 0 <= i <= floor(log_2 n)}.
-  (1) For every gamma in (log_4 3, 1], c X^(h(gamma/alpha))/log^3 X <= D_b(X, gamma)
-  <= C X^(h(gamma/alpha)) log^2 X, so log D_b(X, gamma)/log X -> h(gamma/alpha);
+  (1) For every gamma in (log_4 3, 1], X^(h(gamma/alpha)-o(1)) <= D_b(X, gamma)
+  <= C X^(h(gamma/alpha)) log^2 X, the lower bound being c X^h/log^3 X except
+  at gamma = 1 on the minus sheet (block construction there, because the
+  negative carry needs a margin below n); so log D_b/log X -> h(gamma/alpha);
   for gamma in (log_2(3/2), log_4 3] the limit is 1. So the exponent is
   h(log_3 2) = 0.949956 at gamma = 1 (Terras's undecided count) and rises to
   1 exactly at Korec's exponent log_4 3 = 0.792481; the constants
@@ -76,8 +78,11 @@ For `b = +-1`, `alpha = log_2 3`, `h` the binary entropy:
    odd letters, at least `C(t, o)/t` have all partial sums
    `S_i = i - o_i alpha` at most `max(0, S_t)` (rotate after the maximum
    partial sum: THM-4478 section 4). Their representatives in `[2^t, 2^(t+1))`
-   satisfy `T^i(n) >= n 2^(-max(0,S_t)) - n^0.585 >= 3 n^gamma - n^0.585 >= n^gamma`;
-   the count is `C(t, o)/t = X^(h(gamma/alpha))/poly(log X)`.
+   satisfy `T^i(n) >= n 2^(-max(0,S_t)) - n^0.585 >= 3 n^gamma - n^0.585 >= n^gamma`
+   for `gamma < 1`; the count is `C(t, o)/t = X^(h(gamma/alpha))/poly(log X)`.
+   At `gamma = 1` the plus sheet has nonnegative carry and `S_i <= 0` suffices;
+   the minus sheet needs `S_i` bounded away from `0`, obtained by concatenating
+   rotated blocks of fixed length `L` (exponent `h(o_L/L) -> h*`).
 3. **Both sheets.** The carry is nonnegative on the plus sheet and
    nonpositive on the minus sheet; both directions only use `|carry| <= (3/2)^t`.
 4. **Sharpness.** The same construction with `theta` in place of `1 - gamma`

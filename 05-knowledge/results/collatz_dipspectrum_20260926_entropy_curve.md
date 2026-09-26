@@ -24,14 +24,18 @@ Throughout `b = +-1`, `T_b(x) = x/2` (`x` even), `(3x+b)/2` (`x` odd),
 D_b(X, gamma) = #{ n in [1, X] : T_b^i(n) >= n^gamma for all 0 <= i <= floor(log_2 n) }.
 ```
 
-**Theorem 1 (dip spectrum).** For every `gamma in (log_4 3, 1]` there are
-constants `c, C > 0` (depending on `gamma`) with
+**Theorem 1 (dip spectrum).** For every `gamma in (log_4 3, 1]`, on both
+sheets,
 
 ```text
-c X^(h(gamma/alpha)) / log^3 X  <=  D_b(X, gamma)  <=  C X^(h(gamma/alpha)) log^2 X        (both sheets),
+X^(h(gamma/alpha) - o(1))  <=  D_b(X, gamma)  <=  C X^(h(gamma/alpha)) log^2 X,
 ```
 
-in particular `log D_b(X, gamma)/log X -> h(gamma/alpha)`;
+and for `gamma < 1`, and for `gamma = 1` on the plus sheet, the lower bound
+can be taken `c X^(h(gamma/alpha))/log^3 X` (for `gamma = 1` on the minus
+sheet the negative carry needs a margin that the rotation alone does not
+give, and a block construction supplies it at the cost of the `o(1)`). In
+particular `log D_b(X, gamma)/log X -> h(gamma/alpha)`;
 
 and for `gamma in (log_2(3/2), log_4 3]` the limit is `1`. At `gamma = 1`
 the exponent is `h(log_3 2) = 0.949956` (the Terras undecided count); as
@@ -125,15 +129,36 @@ the affine form (both sheets) gives
 T_b^i(n) >= n 2^(-S_i) - (3/2)^t >= n 2^(-max(0, S_t)) - n^(log_2(3/2)).
 ```
 
-If `rho alpha >= 1` the first term is at least `3n/2`... more precisely at
-least `n`; otherwise it is at least `3 n 2^(-t(1 - rho alpha)) >= 3 n^(rho alpha) >= 3 n^gamma`
-(using `2^t <= n`). In both cases `T_b^i(n) >= 3 n^gamma - n^(log_2(3/2)) >= n^gamma`
-once `n >= n_1(gamma)`, because `gamma > log_2(3/2)`. Hence the dyadic block
-`[2^t, 2^(t+1))` contributes at least `C(t, o)/t` to `D_b`, and
+*Case `gamma < 1`.* Then `rho alpha = gamma < 1` (for `rho = gamma/alpha`) and
+`S_t <= t(1 - gamma) - alpha`, which is positive for `t >= t_1(gamma)`; so
+`max(0, S_t) = S_t` and the first term is at least
+`n 2^(-S_t) >= 3 n 2^(-t(1 - gamma)) >= 3 n^gamma` (using `2^t <= n`). Hence
+`T_b^i(n) >= 3 n^gamma - n^(log_2(3/2)) >= n^gamma` once `n >= n_1(gamma)`,
+because `gamma > log_2(3/2)`. (If `rho = 1/2 > gamma/alpha` the same holds with
+`S_t <= t(1 - alpha/2) - alpha`.)
+
+*Case `gamma = 1`, plus sheet.* `S_t <= -alpha < 0`, so every rotated partial sum
+is `<= 0` and, the carry being nonnegative, `T_+^i(n) >= n 2^(-S_i) >= n`.
+
+*Case `gamma = 1`, minus sheet.* Here `max(0, S_t) = 0` and a partial sum
+`S_i < 0` may be arbitrarily close to `0`, while the carry is negative, so
+the rotation alone does not give `T_-^i(n) >= n`. Use blocks: fix `L` and
+let `W_L` be the set of words of length `L` with `o_L = ceil(L/alpha) + 1` odd
+letters and all partial sums `<= 0` (at least `C(L, o_L)/L` of them, by the
+cycle lemma, since their total `S_L <= -alpha < 0`). For `t = jL`, concatenate
+`j` words of `W_L`. A partial sum inside the `r`-th block is at most
+`-(r-1) alpha + 0`; inside the first block it is `< 0` and, since the finitely
+many values `i - o alpha` with `i <= L` are nonzero, at most `-c_L` for some
+`c_L > 0` depending only on `L`. Hence for `n >= n_2(L)`,
+`T_-^i(n) >= n 2^(c_L) - (3/2)^t >= n` in the first block and
+`T_-^i(n) >= 3n - (3/2)^t >= n` afterwards. The number of such words is at
+least `(C(L, o_L)/L)^(t/L) = 2^(t h(o_L/L) - O((t/L) log L))`, and
+`h(o_L/L) -> h(1/alpha) = h*` as `L -> infinity`, which gives
+`D_-(X, 1) >= X^(h* - o(1))`. In the first two cases the dyadic block `[2^t, 2^(t+1))` contributes at
+least `C(t, o)/t` to `D_b`, and
 `C(t, ceil(rho t) + 1) >= c_rho C(t, ceil(rho t)) >= c'_rho 2^(t h(rho))/sqrt t`
-(the ratio of consecutive binomials is bounded for `rho < 1`, and Stirling).
-Summing the top dyadic block alone, `D_b(X, gamma) >= c X^(h(rho))/log^3 X`
-(the block `[2^t, 2^(t+1))` with `2^(t+1) <= X`, losing a constant `2^(h(rho))`).
+(the ratio of consecutive binomials is bounded for `rho < 1`, and Stirling);
+the top dyadic block alone gives `D_b(X, gamma) >= c X^(h(rho))/log^3 X`.
 For `gamma <= log_4 3`, `rho = 1/2` and the exponent is `h(1/2) = 1`. ∎
 
 ### 1.4 Proposition 2
