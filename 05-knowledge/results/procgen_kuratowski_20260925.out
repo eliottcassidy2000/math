@@ -1,0 +1,428 @@
+#### procgen_kuratowski_20260925_kohl_tait.py
+====================================================================================================
+K1  generators, vertex types, Schreier graph = undirected C-graph on Z \ 0(6)
+====================================================================================================
+  a, b, c are involutions on |n| <= 60000
+  class pairs 1(2)|4(6), 1(3)|2(6), 2(3)|4(6) are disjoint
+  residue mod 6 -> moving generators (degree), semi-edges:
+    0: moved by -   degree 0   semi-edges abc
+    1: moved by ab  degree 2   semi-edges c
+    2: moved by bc  degree 2   semi-edges a
+    3: moved by a   degree 1   semi-edges bc
+    4: moved by abc degree 3   semi-edges -
+    5: moved by ac  degree 2   semi-edges b
+  Schreier multigraph == undirected C-multigraph on (Z \ 0(6)) cap [-60000,60000]: 60000 edges
+  the only multi-edge: [(-2, -1)] (the C 2-cycle -1 -> -2 -> -1)
+  C maps N \ 0(6) into itself; C^{-1}(0(3)) = 0(6): multiples of 3 are transient (0(6) rays hang off the leaves 3(6))
+
+====================================================================================================
+K2  cycles and their colours
+====================================================================================================
+  every n in [1,200000] reaches the cycle (1 4 2); on N \ 0(6) the only cycle met is the triangle
+  triangle colours: [(1, 4, 'a'), (4, 2, 'c'), (2, 1, 'b')]
+  C-cycles met from [-200000,-1]: 3
+    length  2: (-1, -2)
+               colour word (C-direction): ac   counts {'a': 1, 'c': 1}
+    length  5: (-5, -14, -7, -20, -10)
+               colour word (C-direction): acacb   counts {'a': 2, 'c': 2, 'b': 1}
+    length 18: (-17, -50, -25, -74, -37, -110, -55, -164, -82, -41, -122, -61, -182, -91, -272, -136, -68, -34)
+               colour word (C-direction): acacacacbacacacbcb   counts {'a': 7, 'c': 8, 'b': 3}
+  (0 is the C-fixed point; 0 in 0(6) is removed by Kohl)
+
+====================================================================================================
+K3  Kempe chains (orbits of the dihedral groups <b,c>, <a,b>, <a,c>)
+====================================================================================================
+  checked every vertex of (Z \ 0(6)) cap [-60000,60000] (100000 vertices):
+   <b,c>: the doubling ray {o 2^j} of the odd part o (b/c alternate: 2 = -1 mod 3), singleton if 3 | o
+   <a,b>: P_n = {2n (if n = 1 mod 6), n, 3n+1, 6n+2}, a path with 3 or 2 edges and exactly one a-edge
+   <a,c>: the odd run y, 3y+1, T(y), ..., T^k(y) with k = v2(y+1), y = 1,3 mod 6; 2k edges
+  closed Kempe chains found: [('ac', (-2, -1)), ('ac', (-2, -1))]
+  two Kempe steps c,a from x = 5 mod 6 give E(x) = (2x-1)/3; b/c steps along a ray are D(x) = 2x:
+  <a,c>-chains are maximal E-orbit segments, <b,c>-chains are D-orbits; D fixes 0 (in 0(6), deleted),
+  E fixes -1 (the digon). v2(y+1) = -log2|y+1|_2: the <a,c> chain through y has 2k edges with 2^-k = |y+1|_2.
+  Mersenne start y = 2^k - 1 opens the <a,c> chain of length 2k ending at 3^k - 1 (k = 1..11 checked)
+  run-parameter k = v2(y+1) over starts y <= X: {1: 10000, 2: 5000, 3: 2500, 4: 1250, 5: 625, 6: 313, 7: 156, 8: 78}
+
+====================================================================================================
+K4  Kempe quotients
+====================================================================================================
+  K/<b,c>: vertices = odd numbers (rays), edges = a-edges {n, S(n)}, S = Syracuse map: the undirected Syracuse graph
+  K/<a,b>: vertices = odd n (chains P_n), edges = c-edges; every edge is {n,4n+1}, {n,T(n)} (n=3 mod 4)
+           or {n,T^2(n)} (n=1 mod 8); degree 3 if 3 does not divide n, 2 if n = 3 mod 6 (checked |n| <= X/8)
+           P_1 carries a loop (the c-edge {2,4} of the triangle) and the edge {1,5}
+  K/<a,c>: vertices = odd runs (start y = 1,3 mod 6), edges = b-edges; degree 1 + [y = 1 mod 6] + v2(y+1)
+  connectivity of K <=> connectivity of each quotient (chains are connected); the loop/triangle survives in each
+
+====================================================================================================
+K5  the Z2 x Z2 boundary of the Tait colouring (a=(1,0), b=(0,1), c=(1,1))
+====================================================================================================
+  boundary delta(v) = sum of the colours at v = sum of the missing colours:
+    v = 1 mod 6: delta = ['c']
+    v = 2 mod 6: delta = ['a']
+    v = 3 mod 6: delta = ['a']
+    v = 4 mod 6: delta = ['0']
+    v = 5 mod 6: delta = ['b']
+  the colouring is a nowhere-zero Z2^2-flow exactly at the branch points 4(6) (two C-preimages);
+  every other vertex is a source: 1,2,5 mod 6 (degree 2) and the leaves 3(6) (degree 1)
+
+====================================================================================================
+K6  switches: Kempe switches keep the graph; nu and single-colour conjugations change it
+====================================================================================================
+  Kempe switch a<->b on the chains P_n, n = 1 mod 4: new involutions a', b' (rcwa, modulus of a' = 24),
+  a' != a at 50000 window points, Schreier graph identical (139999 edges): transitivity is unchanged.
+  nu a nu = a^h0 = tau_{1(2),2(6)} (n <-> 3n-1), nu b nu = c, nu c nu = b, with h0 = tau_{2(6),4(6)}:
+  nu G_C nu = <a^h0, c, b> = G_C^- (the 3n-1 group); the sheet swap = one-colour conjugation of a by the
+  '+-2' class transposition h0, composed with the global Kempe relabelling b <-> c (which keeps the graph).
+  3n-1 C-cycles met from [1,20000]: [(1, 2), (5, 14, 7, 20, 10), (17, 50, 25, 74, 37, 110, '...')]
+  => G_C^- = <tau_{1(2),2(6)}, b, c> has >= 3 orbits on N \ 0(6) (PROVED: three distinct cycles)
+  single-colour switch census: h = tau_{c1,c2}, c1,c2 disjoint classes inside 2(6) u 4(6), support meeting 4(6);
+  F_h(n) = h(3n+1) (n odd), n/2 (n even) is the map whose functional graph is the Schreier graph of <a^h,b,c>.
+  columns: up-slopes | Haar log-drift of the odd->odd map | cycles met from [1,3000] | escapes past 1e30
+   tau_{2(6),4(6)}: odd n -> 3n-1 [n=1 mod 2]
+        Haar drift -0.287  cycles 3 (min, length) [(1, 2), (5, 5), (17, 18)]  escapes    0  => SHEET-type (>=2 cycles, PROVED intransitive)
+   tau_{2(6),4(12)}: odd n -> (3n+1)/2 [n=1 mod 4]; 3n+1 [n=3 mod 4]
+        Haar drift -0.288  cycles 1 (min, length) [(1, 2)]  escapes    0  => Collatz-like (1 cycle; OPEN)
+   tau_{2(6),10(12)}: odd n -> (3n-5)/2 [n=3 mod 4]; 3n+1 [n=1 mod 4]
+        Haar drift -0.980  cycles 1 (min, length) [(1, 3)]  escapes    0  => PROVED transitive (odd-step descent beyond n0 = 1)
+   tau_{4(6),2(12)}: odd n -> 6n-4 [n=1 mod 2]
+        Haar drift +1.099  cycles 1 (min, length) [(1, 2)]  escapes 2988  => DRIFT-type, PROVED divergent beyond n1 = 1 (one-step ascent) => PROVED intransitive
+   tau_{4(6),8(12)}: odd n -> 6n+2 [n=1 mod 2]
+        Haar drift -0.287  cycles 1 (min, length) [(1, 4)]  escapes    0  => Collatz-like (1 cycle; OPEN)
+   tau_{2(12),4(12)}: odd n -> 3n-1 [n=1 mod 4]; 3n+1 [n=3 mod 4]
+        Haar drift +0.405  cycles 1 (min, length) [(1, 2)]  escapes 2988  => DRIFT-type, PROVED divergent beyond n1 = 1 (one-step ascent) => PROVED intransitive
+   tau_{2(12),10(12)}: odd n -> 3n-7 [n=3 mod 4]; 3n+1 [n=1 mod 4]
+        Haar drift -0.287  cycles 4 (min, length) [(1, 3), (7, 2), (19, 5), (23, 10)]  escapes    0  => SHEET-type (>=2 cycles, PROVED intransitive)
+   tau_{4(12),8(12)}: odd n -> 3n+1 [n=3 mod 4]; 3n+5 [n=1 mod 4]
+        Haar drift -0.287  cycles 4 (min, length) [(1, 4), (5, 3), (7, 8), (47, 13)]  escapes    0  => SHEET-type (>=2 cycles, PROVED intransitive)
+   tau_{4(12),10(12)}: odd n -> 3n-5 [n=3 mod 4]; 3n+7 [n=1 mod 4]
+        Haar drift -0.287  cycles 3 (min, length) [(1, 12), (17, 8), (41, 39)]  escapes    0  => SHEET-type (>=2 cycles, PROVED intransitive)
+   tau_{8(12),10(12)}: odd n -> 3n-1 [n=3 mod 4]; 3n+1 [n=1 mod 4]
+        Haar drift -0.980  cycles 1 (min, length) [(1, 3)]  escapes    0  => PROVED transitive (odd-step descent beyond n0 = 1)
+  (control: Collatz itself fails the descent test -- n = 3 mod 4 has s/2^k = 3/2)
+  the four mod-4 sign strategies of Althofer's 3n+-1 game are one-colour switches of G_C:
+    (+,+) identity           : 3n+1                       -> Collatz (OPEN)
+    (-,-) tau_{2(6),4(6)}    : 3n-1                       -> SHEET-type (>=2 cycles, PROVED intransitive)
+    (-,+) tau_{2(12),4(12)}  : 3n-1 (n=1 mod 4), 3n+1 (n=3 mod 4): one halving each -> DRIFT-type, PROVED divergent beyond n1 = 1 (one-step ascent) => PROVED intransitive
+    (+,-) tau_{8(12),10(12)} : 3n+1 (n=1 mod 4), 3n-1 (n=3 mod 4): 4 | 3n+-1        -> PROVED transitive (odd-step descent beyond n0 = 1)
+  => Collatz is one corner of a square whose three other corners are PROVED (two intransitive, one transitive).
+  moduli 6..24: 114 switches: {'SHEET-type (>=2 cycles: PROVED intransitive)': 48, 'Collatz-like (1 cycle, no escapes; OPEN)': 37, 'PROVED transitive (odd-step descent)': 3, 'DRIFT-type, PROVED divergent (one-step ascent)': 8, 'DRIFT-type (positive drift, escapes; heuristic)': 16, 'mixed (escapes with negative drift, or none)': 2}
+  no class-transposition switch is a DEFECT control: a nonidentity rcwa change has positive-density support.
+
+====================================================================================================
+K7  Kohl's mod-3 shape <a_q, b, c> tracks C_q (qn+1) only when 3 | q; the mod-p generalisation
+====================================================================================================
+  q = 3: a_q = tau_{1(2),4(6)}; odd n with qn+1 = 0 mod 3: none
+  q = 5: a_q = tau_{1(2),6(10)}; odd n with qn+1 = 0 mod 3: [1, 7, 13, 19]
+  q = 9: a_q = tau_{1(2),10(18)}; odd n with qn+1 = 0 mod 3: none
+  q = 5: C_5 path 7 -> 36 -> 18 -> 9 -> 46; in <a_5,b,c>: 36 has neighbours [7] , 18 has none (isolated)
+  so the q = 5 Kohl-shape (mod-3) group cuts C_5-orbits (18 is a fixed point of all three generators):
+  Kohl's mod-3 shape needs 3 | q (multiples of 3 transient) as well as 2 = -1 mod 3 (doubling flips the sign).
+  mod-p generalisation: {m,2m} (p not dividing m) can be 2-coloured properly by m mod p iff -1 is a power of 2
+  mod p (the doubling cycles on (Z/p)^x have even length): p=3:yes, p=5:yes, p=7:no, p=11:yes, p=13:yes, p=17:yes, p=19:yes, p=23:no, p=29:yes, p=31:no, p=37:yes, p=41:yes, p=43:yes, p=47:no
+  q = 5 with p = 5: <tau_{1(2),6(10)}, b_5, c_5> (b_5, c_5 = doubling split by the parity of log_2 m mod 5)
+  has Schreier graph = the C_5-graph on Z \ 0(10) (window |n| <= 20000), multiples of 5 transient;
+  it is intransitive on N \ 0(10) (cycles through 1, 13, 17): the Tait framework is DRIFT-blind as well.
+
+====================================================================================================
+K8  Kohl's second group G_T
+====================================================================================================
+  Schreier graph of G_T on [0,20000]: 18334 edges, 1668 window components, cyclomatic number 1
+  multi-edges: [((1, 2), ['b', 'c'])]
+  colour a of G_T is the consecutive pairing {2k, 2k+1} (THM-4470's 3n-1 pairing); the graph is a Tait-
+  coloured tree plus one digon on the window (FINITE-EXACT).
+
+ALL CHECKS PASSED (kohl_tait)
+
+#### procgen_kuratowski_20260925_union_minors.py
+====================================================================================================
+U1  the sign fold pi(x) = |x| and the dodecahedron -> Petersen control
+====================================================================================================
+  pi is a graph homomorphism Gamma_+ -> U on |x| <= 30000; (edge type, sheet, multiplicity) -> #U-edges:
+     ('halving', 'neg', 1) 14999
+     ('halving', 'pos', 1) 14999
+     ('halving=up- (the digon {1,2})', 'neg', 2) 1
+     ('halving=up- (the digon {1,2})', 'pos', 1) 1
+     ('up+', 'pos', 1) 5000
+     ('up-', 'neg', 1) 4999
+  local deficit deg_U(|x|) - deg_Gamma+(x) equals 1 exactly at x = 1,2,3,5 mod 6 and 0 at x = 0,4 mod 6,
+  for all 0 < |x| <= 7500, the only exceptions being [1, 2] (the simple-graph digon {1,2})
+  => pi is locally injective but not locally surjective: an immersion (fold), not a covering; the
+     deficit set 1,2,3,5 mod 6 is exactly the support of Kohl's Tait boundary delta (part K5):
+     the fold attaches the other sheet's up-edge at every Tait defect.
+  W = Gamma_+ u Gamma_- -> U is locally bijective (a covering) with deck involution nu, but no W-edge joins
+     x > 0 to y < 0: W = U + nu(U), the TRIVIAL double cover (every Collatz-type move preserves sign).
+  control: dodecahedron -> dodecahedron/antipode = Petersen is a CONNECTED double covering (planar cover of a
+     nonplanar graph). The Collatz sign cover is disconnected, so the analogy fails at the key point.
+
+====================================================================================================
+U2  U is subcubic
+====================================================================================================
+  (n mod 6, degree) counts for n < 7500: {('n=1', 2): 1, ('n=2', 2): 1, (0, 2): 1249, (1, 3): 1249, (2, 3): 1249, (3, 3): 1250, (4, 3): 1250, (5, 3): 1250}
+  odd n: neighbours 2n, 3n+1, 3n-1 (all larger); even n: n/2, 2n and (n-1)/3 or (n+1)/3 when odd;
+  degree 3 except n = 0 mod 6 and n = 1, 2 (the digon {1,2}: 2 = 1/2... = 3*1-1)
+
+====================================================================================================
+U3  girth and short cycles
+====================================================================================================
+  triangles in U_2000: [(1, 2, 4)]
+  cycles of length 3..8 in U_600: {3: 1, 5: 2, 7: 2, 8: 33}
+  the 3n-1 cycles {5,14,7,20,10} and {17,...} (length 18) and the 3n+1 triangle are among them
+
+====================================================================================================
+U4  planarity threshold N = 52 with certificates
+====================================================================================================
+  first nonplanar U_N: N = 52
+  U_51: rotation system verified by face tracing: V - E + F = 2 on all 15 components
+  explicit K_{3,3} subdivision in U_52: shores [5, 7, 26] [11, 14, 20]
+     5 - 10 - 20    [ 10/2=5; 20/2=10 ]
+     5 - 14    [ 3*5-1=14 ]
+     5 - 16 - 32 - 11    [ 3*5+1=16; 32/2=16; 3*11-1=32 ]
+     7 - 14    [ 14/2=7 ]
+     7 - 20    [ 3*7-1=20 ]
+     7 - 22 - 11    [ 3*7+1=22; 22/2=11 ]
+     11 - 34 - 17 - 52 - 26    [ 3*11+1=34; 34/2=17; 3*17+1=52; 52/2=26 ]
+     14 - 28 - 9 - 26    [ 28/2=14; 3*9+1=28; 3*9-1=26 ]
+     20 - 40 - 13 - 26    [ 40/2=20; 3*13+1=40; 26/2=13 ]
+  the last vertex 52 enters through the ear 17 -- 52 -- 26: 3*17+1=52 , 52/2=26
+  kernel(U_51) = triangular prism (= K4 with a truncated vertex) on [5, 7, 10, 14, 16, 20]
+  kernel(U_52) = K_{3,3} with a truncated vertex (contract its triangle [5, 10, 16] -> K_{3,3})
+  both contain the 3n-1 5-cycle 5 -14 - 7 - 20 - 10 (as kernel edges) : first nonplanarity = sheet interaction
+
+====================================================================================================
+U5  K5 minor threshold N = 68
+====================================================================================================
+  U_68: K5 branch sets (verified in U_68 itself; 0.5s):
+     [3, 8, 10, 20, 40]
+     [13, 17, 26, 34, 38, 52, 68]
+     [5, 14, 19, 28, 56]
+     [7, 15, 22, 23, 44, 46]
+     [11, 16, 32]
+  U_67: kernel is cubic on 10 vertices; a K5 model there needs 5 two-vertex branch sets (>= 4 exits each),
+        i.e. a perfect matching M with kernel/M = K5; all 6 perfect matchings fail -> no K5 minor.
+        CP-SAT cross-check: INFEASIBLE (0.4s).  Monotone in N: K5 minor iff N >= 68.
+
+====================================================================================================
+U6  Petersen minor threshold N = 104
+====================================================================================================
+  explicit Petersen subdivision in U_104 (6.8s): branch vertices [10, 13, 19, 20, 23, 26, 28, 34, 38, 44]
+    19 - 58 - 29 - 88 - 44                   [3*19+1=58; 58/2=29; 3*29+1=88; 88/2=44]
+    19 - 56 - 28                             [3*19-1=56; 56/2=28]
+    19 - 38                                  [38/2=19]
+    44 - 15 - 46 - 23                        [3*15-1=44; 3*15+1=46; 46/2=23]
+    44 - 22 - 7 - 20                         [44/2=22; 3*7+1=22; 3*7-1=20]
+    23 - 70 - 35 - 104 - 52 - 26             [3*23+1=70; 70/2=35; 3*35-1=104; 104/2=52; 52/2=26]
+    23 - 68 - 34                             [3*23-1=68; 68/2=34]
+    26 - 9 - 28                              [3*9-1=26; 3*9+1=28]
+    26 - 13                                  [26/2=13]
+    28 - 14 - 5 - 10                         [28/2=14; 3*5-1=14; 10/2=5]
+    38 - 76 - 25 - 50 - 17 - 34              [76/2=38; 3*25+1=76; 50/2=25; 3*17-1=50; 34/2=17]
+    38 - 13                                  [3*13-1=38]
+    20 - 40 - 13                             [40/2=20; 3*13+1=40]
+    20 - 10                                  [20/2=10]
+    34 - 11 - 32 - 16 - 8 - 3 - 10           [3*11+1=34; 3*11-1=32; 32/2=16; 16/2=8; 3*3-1=8; 3*3+1=10]
+  U_103: exhaustive subdivision search on its 18-vertex cubic kernel: none (8361 candidate deletions, 0.9s)
+         CP-SAT cross-check: INFEASIBLE (31.3s).  Since U is subcubic, Petersen minor =
+         Petersen subdivision; monotone in N: Petersen minor iff N >= 104.
+  positive control: the exhaustive search finds one in kernel(U_104) (20 vertices, 0.0s)
+
+====================================================================================================
+U7  kernels: bridgeless cubic and 3-edge-colourable
+====================================================================================================
+  N =    52: kernel V =    8, cubic, connected, bridges = 0, 3-edge-colourable = True
+  N =   104: kernel V =   20, cubic, connected, bridges = 0, 3-edge-colourable = True
+  N =   500: kernel V =  108, cubic, connected, bridges = 0, 3-edge-colourable = True
+  N =  2000: kernel V =  442, cubic, connected, bridges = 0, 3-edge-colourable = True
+  N =  4000: kernel V =  886, cubic, connected, bridges = 0, 3-edge-colourable = True
+  checked every distinct kernel for 52 <= N <= 1000 (106 kernels) and N = 2000, 4000
+  => the Petersen minors of U_N obstruct nothing: every kernel is Tait-colourable (no snark).
+
+====================================================================================================
+U8  planar double covers (the Petersen/dodecahedron phenomenon) of U_N
+====================================================================================================
+  N = 52: kernel V = 8, beta = 5: planar double cover FOUND (connected=True; negative kernel edges [(10, 20), (14, 26)])
+  N = 56: kernel V = 10, beta = 6: planar double cover FOUND (connected=True; negative kernel edges [(11, 16), (13, 20)])
+  N = 68: kernel V = 12, beta = 7: planar double cover FOUND (connected=True; negative kernel edges [(10, 20), (14, 28)])
+  N = 76: kernel V = 14, beta = 8: planar double cover NONE (all 256 signings nonplanar)
+  => for N >= 52: U_N has a planar double cover iff N <= 75 (monotone: covers restrict to subgraphs).
+     U_76 is therefore not projective-planar (a projective embedding lifts to a planar double cover);
+     U_N (52 <= N <= 76) has exactly one component with a cycle (checked), so U_52..U_75 are projective-planar
+     by Negami's theorem for connected graphs (CITED, not re-read); the tree components embed in any face.
+  signing 'Collatz sign cover (trivial)': double cover first nonplanar at N = 52
+  signing 'up- edges negative': double cover first nonplanar at N = 52
+  signing 'up+ edges negative': double cover first nonplanar at N = 52
+  signing 'halving edges negative': double cover first nonplanar at N = 32
+  => no edge-type signing (in particular not the sign/negation cover) realises the planar double covers:
+     the projective window 52 <= N <= 75 is real but its covers are not arithmetic.
+
+====================================================================================================
+U9  Petersen family (linkless embedding; Colin de Verdiere mu <= 4)
+====================================================================================================
+  kernel(U_91): 16 vertices; kernel(U_92): 18 vertices (cubic)
+  K6         degrees [5, 5, 5, 5, 5, 5]: needs >= 18 kernel vertices; U_91: excluded by count; U_92: minor FOUND, branch sets verified in U_92
+  7v/15e     degrees [3, 4, 4, 4, 5, 5, 5]: needs >= 16 kernel vertices; U_91: CP-SAT INFEASIBLE (8s); U_92: minor FOUND, branch sets verified in U_92
+  8v/15e     degrees [3, 3, 3, 4, 4, 4, 4, 5]: needs >= 14 kernel vertices; U_91: CP-SAT INFEASIBLE (9s); U_92: minor FOUND, branch sets verified in U_92
+  8v/15e     degrees [3, 3, 4, 4, 4, 4, 4, 4]: needs >= 14 kernel vertices; U_91: CP-SAT INFEASIBLE (11s); U_92: minor FOUND, branch sets verified in U_92
+  9v/15e     degrees [3, 3, 3, 3, 3, 3, 4, 4, 4]: needs >= 12 kernel vertices; U_91: CP-SAT INFEASIBLE (13s); U_92: minor FOUND, branch sets verified in U_92
+  K_{3,3,1}  degrees [4, 4, 4, 4, 4, 4, 6]: needs >= 16 kernel vertices; U_91: CP-SAT INFEASIBLE (8s); U_92: minor FOUND, branch sets verified in U_92
+  Petersen   degrees [3, 3, 3, 3, 3, 3, 3, 3, 3, 3]: needs >= 10 kernel vertices; U_91: CP-SAT INFEASIBLE (17s); U_92: none (U6: Petersen only from N = 104)
+  => U_N is linklessly embeddable iff N <= 91 (RST: linkless <=> no Petersen-family minor; CITED), so by
+     Colin de Verdiere / Lovasz-Schrijver (CITED): mu(U_N) <= 3 iff N <= 51, mu(U_N) = 4 for 52 <= N <= 91,
+     mu(U_N) >= 5 for N >= 92 (the N <= 91 side is solver-certified; Petersen itself only enters at 104).
+
+ALL CHECKS PASSED (union_minors)
+
+#### procgen_kuratowski_20260925_triples.py
+====================================================================================================
+T1  KT-a in graphs
+====================================================================================================
+  contracting the 5 spokes (a perfect matching) of Petersen gives K5
+  Petersen contains a K33 subdivision (branch vertices [2, 3, 6, 7, 8, 9] ) -- never a K5 subdivision (cubic)
+  K5 and K33 are minor-incomparable (5 < 6 vertices; 9 < 10 edges)
+  Delta-Y on a triangle of K5 gives K33 + one edge (the extra edge (3, 4) ): the twins are one
+  star-triangle (Kennelly 1899, electrical) move apart, up to an edge
+  the Delta-Y / Y-Delta class of K6 has 7 graphs (vertices: [6, 7, 7, 8, 8, 9, 10] ) and contains Petersen: the Petersen family
+  (CITED, Wikipedia pages read 2026-09-25: these 7 are the forbidden minors for linkless embedding [RST],
+   and for Colin de Verdiere mu <= 4 [Lovasz-Schrijver 1998]; mu <= 3 <=> planar <=> no K5, K33 minor.)
+
+====================================================================================================
+T2  KT-b in matroids (Tutte 1958/1965: regular <=> no U24, F7, F7*; graphic adds M*(K5), M*(K33))
+====================================================================================================
+  F7 (7 nonzero vectors of GF(2)^3): rank 3; its dual F7* has rank 7 - 3 = 4: a dual PAIR
+  U_{2,4}: dual is U_{4-2,4} = U_{2,4}: SELF-DUAL
+  M(K5): rank 4, corank 6; M*(K5) is regular, not graphic
+  M(K33): rank 5, corank 4; M*(K33) is regular, not graphic
+  => Tutte's regular-matroid triple {F7, F7*, U24} is exactly KT-b: a dual pair plus a self-dual third
+
+====================================================================================================
+T3  sheets b in {-1, 0, +1}
+====================================================================================================
+  nu T_b nu = T_{-b} on Z for b = 1, 3, 5 (|x| <= 5000): nu swaps the sheets +-1
+  the central sheet b = 0 (x -> x/2 or 3x/2) commutes with nu: SELF-DUAL; so {-1,0,+1} is KT-b exactly.
+  It is not KT-a: b = 0 is the common scaling limit (x -> lambda x, lambda -> inf) of BOTH sheets, i.e. BELOW
+  them (a degeneration), not a container above them.
+
+====================================================================================================
+T4  means GM, AM, QM
+====================================================================================================
+  QM^2 + GM^2 = 2 AM^2; the involution s -> 2 AM^2 - s swaps GM^2 <-> QM^2 and fixes AM^2: KT-b exactly
+  (the parallelogram law (a+b)^2 + (a-b)^2 = 2a^2 + 2b^2: the sign of the cross term +-2ab is the swap;
+   THM-4471 puts the sign law in exactly this cross term)
+
+====================================================================================================
+T5  the negative cycles -1, -5, -17
+====================================================================================================
+  cycle of   -1: T-word 1            K =  1 steps, L = 1 odd, clock K/L = 1/1, 2^K - 3^L = -1
+  cycle of   -5: T-word 110          K =  3 steps, L = 2 odd, clock K/L = 3/2, 2^K - 3^L = -1
+  cycle of  -17: T-word 11110111000  K = 11 steps, L = 7 odd, clock K/L = 11/7, 2^K - 3^L = -139
+  Stern-Brocot path to log2 3 (p/q = K/L): 1/1<, 2/1>, 3/2<, 5/3>, 8/5>, 11/7<, 19/12<, 27/17>, 46/29>, 65/41>, 84/53<, 149/94>, 233/147>, 317/200>
+  the clocks 1/1, 3/2, 11/7 are SB-path nodes at depths 0, 2, 5, all LOWER
+  approximations: a CHAIN on one path, not twins + container; 11/7 = mediant(3/2, 8/5), and 8/5 is an upper node
+  cycle -1: cyclic word balanced (Christoffel/Sturmian) = True
+  cycle -5: cyclic word balanced (Christoffel/Sturmian) = True
+  cycle -17: cyclic word balanced (Christoffel/Sturmian) = False
+  the balanced word of slope 7/11 is 01011011011 -- the -17 word 11110111000 is not a rotation of it:
+  so '11/7 = 3/2 (+) 8/5' holds for the clocks only; no mediant structure on the cycle words (NUMEROLOGY)
+
+====================================================================================================
+T6  four-vertex tournaments
+====================================================================================================
+  one-arc-reversal adjacencies between classes: [('C3+sink', 'TT'), ('C3+sink', 'strong'), ('TT', 'source+C3'), ('TT', 'strong'), ('source+C3', 'strong')]
+  converse: {'TT': 'TT', 'C3+sink': 'source+C3', 'source+C3': 'C3+sink', 'strong': 'strong'}   H: {'TT': [1], 'C3+sink': [3], 'strong': [5], 'source+C3': [3]}
+  => KT-b with TWO self-dual members (TT, strong) around the converse pair; H(TT) + H(strong) = 1 + 5 =
+     2 H(diamond): the diamonds sit at the arithmetic mean, like AM between GM and QM (a coincidence of
+     small numbers: THM-4472 reads the pair as time reversal)
+
+====================================================================================================
+T7  Kohl colours and the places {inf, 2, 3}
+====================================================================================================
+  the colour of the doubling edge {m, 2m} is the mod-3 sign (m | 3) in (Z/3)^x = {+1, -1} (b = +1, c = -1);
+  doubling flips it because 2 = -1 mod 3 (so doubling rays are properly 2-coloured), and nu flips it
+  (nu b nu = c): the archimedean sign acts on the Tait colouring through the 3-adic sign.
+  multiples of 3 have no mod-3 sign: they are exactly Kohl's deleted/leaf vertices 0(6), 3(6).
+
+ALL CHECKS PASSED (triples)
+
+#### procgen_kuratowski_20260925_excluded_minors.py
+====================================================================================================
+M1  the rcwa minor relation on two-branch maps
+====================================================================================================
+  T_{q,r}(d x) = d T_{q,r/d}(x) for every odd d | r (q = 1,3,5,7; r = 3,5,9,15,21,25; |x| <= 3000):
+  (q, r/d) is the restriction of (q, r) to the invariant set dZ, conjugated by x -> x/d
+  the multiplier q is a minor invariant (restriction and affine conjugation keep the affine slopes q/2, 1/2),
+  so the q-slices are pairwise incomparable: {(q, 1) : q odd} is an infinite ANTICHAIN (no wqo, no
+  Robertson-Seymour finiteness for this order).
+
+====================================================================================================
+M2  census of two-branch maps: cycles from starts 1..3000 on N and on -N, escapes past 1e40
+====================================================================================================
+  q | r=1..25: (#cycles on N, #escapes) ; (#cycles on -N, #escapes)
+  q= 1 N :     1/0     2/0     2/0     3/0     3/0     2/0     2/0     5/0     3/0     2/0     6/0     3/0     3/0
+  q= 1 -N:     1/0     2/0     2/0     3/0     3/0     2/0     2/0     5/0     3/0     2/0     6/0     3/0     3/0
+  q= 3 N :     1/0     1/0     6/0     2/0     1/0     3/0    10/0     6/0     3/0     2/0     2/0     4/0     8/0
+  q= 3 -N:     3/0     4/0     4/0     4/0     5/0     5/0     4/0     5/0     6/0     5/0     5/0    13/0     6/0
+  q= 5 N :  3/2662  7/2697  3/2395  6/2046 10/1855  5/2470  5/2323  7/2457  4/2718  4/2858 12/2333 11/2368  3/1974
+  q= 5 -N:  1/2499  2/2253  2/2169  2/2189  4/2235  3/2284  2/2492  4/1776  4/2574  1/2928  4/1875  2/2639  3/1677
+  q= 7 N :  1/2940  1/2960  3/2692  1/2796  2/2942  2/2824  1/2975  4/2679  1/2975  2/2807  1/2881  2/2941  4/2790
+  q= 7 -N:  0/3000  2/2740  1/2959  1/2988  5/2751  1/2592  0/3000  4/2849  2/2857  1/2928  3/2467  1/2720  2/2741
+  q= 9 N :  0/3000  0/3000  0/3000  1/2978  0/3000  0/3000  1/2903  0/3000  0/3000  0/3000  1/2952  1/2973  0/3000
+  q= 9 -N:  1/2981  1/2953  2/2924  2/2966  2/2908  1/2988  2/2851  2/2851  3/2921  1/2990  3/2913  3/2959  2/2957
+  q=11 N :  0/3000  0/3000  1/2972  3/2956  1/2977  0/3000  0/3000  1/2982  0/3000  0/3000  4/2952  0/3000  1/2984
+  q=11 -N:  0/3000  1/2985  1/2947  1/2984  2/2972  1/2988  0/3000  2/2948  0/3000  1/2979  3/2930  0/3000  1/2962
+  q=13 N :  0/3000  1/2988  0/3000  0/3000  2/2961  0/3000  0/3000  1/2990  0/3000  1/2988  1/2991  0/3000  0/3000
+  q=13 -N:  0/3000  0/3000  1/2987  1/2977  1/2986  1/2981  1/2988  2/2955  0/3000  0/3000  1/2981  0/3000  1/2990
+  q=15 N :  1/2959  1/2951  1/2925  1/2977  1/2931  1/2980  1/2982  1/2852  2/2960  1/2982  1/2974  1/2985  1/2877
+  q=15 -N:  0/3000  0/3000  0/3000  1/2962  0/3000  1/2969  1/2968  1/2988  1/2988  0/3000  1/2946  0/3000  1/2988
+  q = 1: every orbit enters a cycle (PROVED: (x+r)/2 < x for x > r); q = 3: no escape (Lagarias's 3x+k
+  conjectures, OPEN); q >= 5: most starts escape past 1e40 (divergence expected, never PROVED for any q >= 5)
+  123 scaled cycles d * (cycle of (q, r/d)) verified as cycles of (q, r): cycle sets grow along the order
+  (3,1) on N: cycles [1] ; on -N (= (3,-1) on N after nu): [-17, -5, -1]
+  (5,1) on N: cycles [1, 13, 17]
+
+====================================================================================================
+M3  Conn (single grand orbit on N): excluded minors
+====================================================================================================
+  codes: X2 = two cycles found (NOT Conn), Xp = invariant pN with invariant complement (NOT Conn),
+         ok = one cycle and no escape (consistent with Conn), ?e = escapes (status open)
+  for primes p not dividing 2q, x in pN <=> T_{q,p}(x) in pN (checked q = 1,3,5,7, p <= 25, x <= 20000):
+  both pN and N \ pN are unions of grand orbits, so (q, p) is never Conn (PROVED for all such q, p).
+  q = 1: r=1..25 -> 1:ok 3:X2 5:X2 7:X2 9:X2 11:X2 13:X2 15:X2 17:X2 19:X2 21:X2 23:X2 25:X2
+         minimal non-Conn r (excluded minors of the slice, r <= 25): [3, 5, 7, 11, 13, 17, 19, 23]
+  q = 3: r=1..25 -> 1:ok 3:ok 5:X2 7:X2 9:ok 11:X2 13:X2 15:X2 17:X2 19:X2 21:X2 23:X2 25:X2
+         minimal non-Conn r (excluded minors of the slice, r <= 25): [5, 7, 11, 13, 17, 19, 23]
+  q = 5: r=1..25 -> 1:X2 3:X2 5:X2 7:X2 9:X2 11:X2 13:X2 15:X2 17:X2 19:X2 21:X2 23:X2 25:X2
+         minimal non-Conn r (excluded minors of the slice, r <= 25): [1]
+  q = 7: r=1..25 -> 1:?e 3:Xp 5:X2 7:?e 9:X2 11:X2 13:Xp 15:X2 17:Xp 19:X2 21:Xp 23:X2 25:X2
+         minimal non-Conn r (excluded minors of the slice, r <= 25): [3, 5, 11, 13, 17, 19, 23]
+  (q = 1: r = 1 is PROVED Conn; q = 3: r = 1 is Collatz; q = 7: r = 1 is open, so its list is conditional)
+  q = 3: if Collatz holds, (3,1) is Conn and the excluded minors of the slice are {(3,p): p prime >= 5},
+  an infinite antichain; if Collatz fails, (3,1) itself is the unique excluded minor of the slice.
+  So 'the q = 3 slice has a finite Kuratowski set' <=> 'Collatz is false' -- a restatement, not a reduction.
+  The SHEET control (3,-1) on N and the DRIFT control (5,1) are ATOMS (r = 1) and non-Conn: genuine excluded
+  minors (PROVED by their extra cycles); they are incomparable (different sheet / different multiplier).
+
+====================================================================================================
+M4  the three controls and their independence
+====================================================================================================
+  epsilon (single flip of pair 4 = {7,8}): cycles met from starts < 3000: [(1, 2), (3, 5, 6, 8, 12)]
+  epsilon (density-zero flips, THM-4470(4)): c_0 = 3, c_(t+1) = c_t + ceil(c_t/2), flip the pair of every even
+  c_t: the orbit of 3 is c_0 < c_1 < ... (300 steps verified, c_300 ~ 10^53); flipped pairs
+  below 10^30: 81 (density zero)
+  epsilon C is not rcwa: an rcwa map agreeing with T on a density-one set agrees with T on every residue
+  class where both are affine, i.e. everywhere; epsilon C differs from T on the flipped pairs.
+
+  system                     drift sign  b*side  rcwa   status
+  C = (3,+1) on N                     -      +1  True   Collatz (OPEN)
+  sigma C = (3,-1) on N               -      -1  True   NOT Conn: 3 cycles
+  delta C = (5,+1) on N               +      +1  True   NOT Conn: 3 cycles
+  epsilon C = flips of T              -      +1 False   NOT Conn: new cycle / divergent orbit
+
+  which invariant separates C from which control (True = separates):
+    drift sign: sigma False  delta True   epsilon False
+    b*side    : sigma True   delta False  epsilon False
+    rcwa      : sigma False  delta False  epsilon True 
+  => each invariant separates exactly one control: the controls are pairwise independent (separating one
+     never forces separating another), and a sound method proving Collatz must see all three kinds of data:
+     the archimedean order (sheet), size with the multiplier (drift), and pointwise/non-density data (defect).
+
+ALL CHECKS PASSED (excluded_minors)
+

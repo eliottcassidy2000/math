@@ -29,6 +29,8 @@ Althöfer's game remain OPEN.**
   * The smallest open instance is the explicit cube-swap word `Y3`,
     whose Bernstein number is a cubic 2-adic theta value (HYP-9127).
 
+**Wave 10 (2026-09-25), summarized in section 2h.** Codex's incoming work was audited (20 checks, no errors), and the square-sum graph turns out to be planar iff `N ≤ 24`, a Kuratowski event at 25. Kohl's Collatz group is a Tait-coloured graph: its Kempe chains are the doubling orbits and the rising runs, and its only closed chain is `{−1, −2}`. In the strategy square, Collatz is the only open corner among four sign strategies. The exact triple shape is Tutte's "dual pair + self-dual" `{F_7, F_7*, U_{2,4}}`. Natural boundary is KNOWN (Bell–Lagarias 2015); the Mahler/harmonic bridges are blocked by the controls.
+
 **Wave 9 (2026-09-24), summarized in section 2g.** arXiv 2502.20642 (a claimed fixed-point proof of Collatz) is invalid (**THM-4471**): its general theorem fails on `x -> x+1`, and its table also "proves" `3n−1`. The owner's triangle sandwich is its Lemma 2.1, and the sign law is exactly the sandwich's two equality cases with `0` in the middle. The correct fixed-point theorem is Banach in `Z_2`: one gate per word, and 18 integral points for `p ≤ 24`. **THM-4472**: the owner's converse 4-tournaments are forward map versus inverse tree (time reversal), not the sheets. **THM-4473**: Collatz's digit chains are exact Markov laws (mod 10 entries `2^j/15`, `3 -> 5` certain, `9 -> 9 = 8/15`), unlike the vanishing prime-digit bias. Repunit primes are the prime fixed points of digit rotation, and `Q` has the new odd 2-cycle `{−1/5, 5/7}`.
 
 **Wave 8 (2026-09-24), summarized in section 2f.** The owner's tree/mod-192 programme is exact, and residue types are provably side-blind (`x -> -x` transport), so any proof needs the sign law. **THM-4469** (Mahler bridge): no-divergence on adjacent supercritical block pairs is equivalent to a generalized Mahler Z-number statement beyond the Flatto–Lagarias–Pollington length (HYP-9134). **THM-4470** (pairing ladder): 3x+1 is the unique AM-fair consecutive pairing, its graph is two perfect difference systems, and density-zero flips falsify it (HYP-9135 and HYP-9136). Brackets: `{2,3,11}` fully mapped. Verdicts on the owner's analogy: graceful is an ANALOGY; square-sum with the brackets is REAL; square-sum with Collatz is NUMEROLOGY.
@@ -534,6 +536,81 @@ Three lanes ran, each audited by the orchestrator.
 1. The owner's inequality instinct is right in a precise sense. The sign lives in the cross term of the triangle sandwich, i.e. at the centre `0`. Every even observable (`|x|`, `x²`, `|x−y|`) discards it. That is why a metric fixed-point argument in `|x−y|` cannot be side-aware.
 2. The right fixed-point theorem, Banach in `Z_2`, supplies every periodic point for free. It leaves exactly the integrality question at the gates.
 3. The owner's tournament picture is real, but it encodes *time reversal*. The sheet swap is negation, and the full converse is their composite.
+
+## 2h. Wave 10 (2026-09-25): the incoming codex work, Kuratowski/Tutte, and discrete ↔ continuous
+
+The owner asked for three things:
+* a deep synthesis of all new incoming work;
+* a long session of creative proof angles;
+* a comparison of `{Petersen, K_{3,3}, K_5}` under Kuratowski and Tutte with the session's triples, including bridges between discrete and continuous mathematics.
+
+Three lanes ran, each audited by the orchestrator.
+
+**1. Incoming work** ([incoming synthesis](collatz_procgen_20260925_incoming_synthesis.md)). Codex's session `collatz-bugs-20260925` produced 11 commits and 40 notes.
+* **What it built.** Careful re-encodings of Collatz: tournaments, marked Pythagorean triples, Fano/E8 lattices, and "decoders" with sidecar data.
+* **Audit.** Twenty independent spot checks found no numerical or logical disagreement.
+* **Genuine contributions.**
+  * Three repairs. Codex fixed the square-sum degree-2 forcing and gave a new `Q_24` proof, fixed THM-060 Type A, and fixed THM-4473's `k ≥ 2` boundary.
+  * Limitation theorems for finite certificate searches. One of them shows that no finite-state encoder computes the parity-vector map, which closes the automata route to PC.
+* **Flags.** The "plus nonlinear / minus linear" carry result is a binary-digit artifact, and no DRIFT controls were run.
+* **New here: the owner's square-sum transition is a Kuratowski event.** `Q_N` is planar iff `N ≤ 24`. Its first `K_{3,3}` (branch vertices `{3,4,5,11,12,13}`) runs through the ear `11–25–24`, and all 10 Hamiltonian paths of `Q_25` must use that ear. The orchestrator re-verified both facts.
+
+**2. Kuratowski, Tutte and Kohl's Collatz group** ([Tait/Kempe note](procgen_kuratowski_20260925_tait_kempe_triples.md)).
+* **Kohl's graph is a Tait colouring.** Kohl's theorem says Collatz is equivalent to transitivity of `G_C = <a, b, c>`, three class transpositions. The Schreier graph of `G_C` is exactly the undirected Collatz graph on `Z \ 0(6)`, **properly 3-edge-coloured**: `a` is the up-edge, and doubling edges are coloured `b` or `c` by the sign of `m mod 3`. So Collatz is the statement that one Tait-coloured subcubic graph is connected.
+* **Kempe chains are the session's objects.**
+  * `<b,c>` chains are the orbits of the Banach contraction `D(x) = 2x`.
+  * `<a,c>` chains are the **rising runs**, segments of `E(x) = (2x−1)/3` of length `2 v_2(y+1)` (the 2-adic distance to `−1`; re-verified to `2·10^5`).
+  * `<a,b>` chains have at most 3 edges.
+  * The only closed Kempe chain is the digon `{−1, −2}`, the Banach fixed point of `E`.
+* **Petersen obstructs nothing inside a single sheet.** Every component of a functional graph has at most one cycle, so each sheet's graph is planar. Kuratowski graphs appear only when the two sheets are superimposed, in Althöfer's `3n±1` union graph `U_N`:
+
+  | first `N` | event |
+  |---|---|
+  | 52 | `K_{3,3}`, on branch vertices `{5, 7, 11, 14, 20, 26}` (re-verified), which lie on the `3n−1` cycle's neighbourhood |
+  | 68 | `K_5` |
+  | 76 | no planar double cover |
+  | 92 | Petersen-family minors (Colin de Verdière `μ ≥ 5`) |
+  | 104 | Petersen |
+
+  Every kernel of `U_N` checked (all `N ≤ 1000`, and `N = 2000, 4000`) is 3-edge-colourable, so there are no snarks.
+* **The strategy square.** Choose the sign of `3n±1` by `n mod 4`:
+  * always `+` is Collatz (OPEN);
+  * always `−` is `3n−1` (PROVED intransitive);
+  * the sign that always forces two or more halvings is PROVED transitive;
+  * the sign that always forces exactly one halving is PROVED divergent.
+
+  **Collatz is the only open corner.** Negation swaps Collatz and `3n−1` and fixes the two mixed strategies.
+* **The exact triple shape is Tutte's, not Kuratowski's.**
+  * The recurring shape is **"dual pair + self-dual"**, as in Tutte's regular-matroid obstructions `{F_7, F_7*, U_{2,4}}`. It is REAL for:
+    * the sheets `{+1, −1 | 0}`;
+    * the means `{GM, QM | AM}`, where `QM² + GM² = 2AM²`;
+    * the 4-tournaments `{diamonds | TT, strong}`;
+    * Kohl's generators `{b, c | a}`, since the sheet switch exchanges `b ↔ c`;
+    * the strategy square.
+  * "Twins + container" (`K_5`, `K_{3,3} ⊂` Petersen) is REAL only for the SHEET/DRIFT twin atoms (no container) and literally inside `U`.
+* **An excluded-minor theorem for methods (PROVED).**
+  * A sound method proving Collatz must separate all three controls.
+  * The three controls are independent (a diagonal table of invariants).
+  * SHEET and DRIFT are incomparable excluded minors of the rcwa order, and DEFECT lies outside RCWA.
+  * The rcwa order is not a well-quasi-order, so there is no finite Kuratowski list. Connectivity has infinitely many excluded minors.
+
+**3. Discrete ↔ continuous** ([natural boundary / Mahler / harmonic note](procgen_continuous_20260925_natural_boundary_mahler_harmonic.md)).
+* **The natural boundary is KNOWN.** Collatz holds iff the basin series `B(z)` is rational, iff it is D-finite, iff it continues analytically across some arc of `|z| = 1` (Pólya–Carlson). This is Bell–Lagarias, Acta Arith. 170 (2015), Thms 1.1–1.3. The coordinator's lead was a rediscovery; the lane extended it to every odd `q`.
+* **Mahler/Cobham.**
+  * Separate pure 2-Mahler and 3-Mahler equations for `B` would force rationality (Schäfke–Singer), hence Collatz.
+  * The real equation mixes in roots of unity, and those provably destroy the rigidity.
+  * SHEET, DRIFT and DEFECT each block the route; for example, the planted-defect map satisfies a pure 2-Mahler equation and still diverges.
+* **Trees and Tutte embeddings.**
+  * The branching numbers are `≥ 1.2334` for `3n±1`, `1.1227` for `5n+1` and `1.0870` for `7n+1`, so simple random walk is transient on all these trees.
+  * The Tutte (barycentric) embedding is the harmonic-measure transform.
+  * All of these invariants are sign-blind and drift-blind.
+* **Hex/Brouwer does not transfer.** Althöfer's game has infinite plays from every odd `n ≥ 3`.
+
+**What wave 10 adds.**
+1. The owner's triple is best read through Tutte's matroid form, "dual pair + self-dual". That shape is realized exactly by the sheets, the means, the tournaments, Kohl's generators and the strategy square.
+2. Collatz is literally a connectivity statement about a Tait-coloured cubic graph. Its Kempe chains are the doubling orbits and the rising runs, and the 2-adic point `−1` is the only closed chain.
+3. Every discrete ↔ continuous bridge tested is either already known (natural boundaries) or blind to a control (harmonic, tree and Mahler data).
+4. The creative frontier is where the three controls meet. The strategy square isolates Collatz as the one undecided corner among its nearest neighbours.
 
 ## 2b. The approach deck: every approach generated or considered, with its disposition
 
