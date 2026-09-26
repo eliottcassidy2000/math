@@ -39,6 +39,7 @@ Althöfer's game remain OPEN.**
 * **THM-4482.** Ranks are tensions: Collatz's rank defect is `log(3/2)`, at `-1`.
 * **THM-4483.** Forced charges on backward trees: no finite-mass 2-adic potential rank exists, and nonnegative ones exist iff Collatz.
 * **THM-4484.** Free and sporadic cycles; the Belaga–Mignotte off-by-one is resolved.
+* **THM-4485.** Periodic edit price = feedback sets of expanding cycles; Golomb–Mykkeltveit fails for thresholds.
 
 New hypotheses: HYP-9140 (pairing peak price, rationale corrected), HYP-9141 (5n+1 concentration), HYP-9142 (Robin inequality).
 
@@ -877,6 +878,17 @@ Six lanes, all audited by independent orchestrator code and pipeline reruns. Fiv
 * `M_7` (`17/27` or `29/46`).
 * The residual 42757 vs 42765 in Belaga–Mignotte's totals.
 * The mykk lane (periodic deletions and Golomb–Mykkeltveit for expanding cycles) is still running; see the addendum when it lands.
+
+**Addendum (mykk lane landed): THM-4485, the exact price of periodic edits** ([mykk note](procgen_mykk_20260926_expanding_cycle_feedback.md)).
+* **The price.** A periodic edit (`G = v_0` on residues `R`) is provable iff `R` meets every expanding cycle of `B(2,k)`. So the exact price is `FVS_c(k)/2^k`.
+* **Mykkeltveit.** His solution of Golomb's conjecture (the least feedback set of `B(2,k)` is the necklace count, selected by a continuous sine weight) gives `FVS <= Z(k) - 1`.
+* **Drift.** 5n+1's deletion price is `~1/k` (`k price -> 1`), 3n+1's is `2^(-(1-h)k)`: positive drift changes the rate, not the limit.
+* **The Golomb analogue for thresholds is REFUTED.** Cycles of length `k+1` pack more densely than necklaces. For `log_3 2`, `FVS/N >= 1.35` on a density-0.369 set of `k`.
+* **Chain and new bounds.** `delta >= FVS^odd >= FVS >= nu >= N`, with new flip bounds `delta_11 >= 58` and `delta_12 >= 95`.
+* **Three kinds of modification, one table** (THM-4485 §1).
+  * Arbitrary edits see height and are exponentially cheap for every `q`.
+  * Periodic deletions are exponential for `q = 3` and `~1/k` for `q = 5`.
+  * Periodic flips cost at least deletions, because they merge only two orbits (THM-4481).
 
 ## 2b. The approach deck: every approach generated or considered, with its disposition
 
