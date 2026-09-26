@@ -1,0 +1,590 @@
+{
+  "status": "FINITE-EXACT controls of proved rational-shadow obstruction",
+  "cases": [
+    {
+      "primes": [
+        2
+      ],
+      "a": 3,
+      "B": 1,
+      "rational_shadow": "-19/11",
+      "rejected_polynomial_roots": 1,
+      "polynomials_low_coefficient_first": [
+        [
+          1,
+          1
+        ],
+        [
+          -1,
+          1
+        ],
+        [
+          5,
+          3
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          5,
+          1
+        ],
+        [
+          17,
+          1
+        ],
+        [
+          1,
+          0,
+          1
+        ],
+        [
+          1,
+          1,
+          1
+        ]
+      ],
+      "feature_vector": [
+        3,
+        1,
+        1,
+        0,
+        2,
+        3,
+        1,
+        0
+      ],
+      "precision": {
+        "2": 4
+      },
+      "controls": [
+        {
+          "repeats": 1,
+          "steps": 4,
+          "source_bits": 22,
+          "target_bits": 23,
+          "endpoint_features_equal": true
+        },
+        {
+          "repeats": 2,
+          "steps": 8,
+          "source_bits": 30,
+          "target_bits": 32,
+          "endpoint_features_equal": true
+        },
+        {
+          "repeats": 5,
+          "steps": 20,
+          "source_bits": 54,
+          "target_bits": 58,
+          "endpoint_features_equal": true
+        },
+        {
+          "repeats": 10,
+          "steps": 40,
+          "source_bits": 94,
+          "target_bits": 102,
+          "endpoint_features_equal": true
+        },
+        {
+          "repeats": 20,
+          "steps": 80,
+          "source_bits": 174,
+          "target_bits": 190,
+          "endpoint_features_equal": true
+        }
+      ]
+    },
+    {
+      "primes": [
+        2,
+        3
+      ],
+      "a": 3,
+      "B": 1,
+      "rational_shadow": "-19/11",
+      "rejected_polynomial_roots": 1,
+      "polynomials_low_coefficient_first": [
+        [
+          1,
+          1
+        ],
+        [
+          -1,
+          1
+        ],
+        [
+          5,
+          3
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          5,
+          1
+        ],
+        [
+          17,
+          1
+        ],
+        [
+          1,
+          0,
+          1
+        ],
+        [
+          1,
+          1,
+          1
+        ]
+      ],
+      "feature_vector": [
+        3,
+        1,
+        1,
+        0,
+        2,
+        3,
+        1,
+        0,
+        0,
+        1,
+        0,
+        3,
+        2,
+        1,
+        0,
+        1
+      ],
+      "precision": {
+        "2": 4,
+        "3": 4
+      },
+      "controls": [
+        {
+          "repeats": 1,
+          "steps": 4,
+          "source_bits": 29,
+          "target_bits": 30,
+          "endpoint_features_equal": true
+        },
+        {
+          "repeats": 2,
+          "steps": 8,
+          "source_bits": 37,
+          "target_bits": 38,
+          "endpoint_features_equal": true
+        },
+        {
+          "repeats": 5,
+          "steps": 20,
+          "source_bits": 61,
+          "target_bits": 65,
+          "endpoint_features_equal": true
+        },
+        {
+          "repeats": 10,
+          "steps": 40,
+          "source_bits": 101,
+          "target_bits": 108,
+          "endpoint_features_equal": true
+        },
+        {
+          "repeats": 20,
+          "steps": 80,
+          "source_bits": 181,
+          "target_bits": 196,
+          "endpoint_features_equal": true
+        }
+      ]
+    },
+    {
+      "primes": [
+        2,
+        3,
+        11
+      ],
+      "a": 21,
+      "B": 10,
+      "rational_shadow": "-10458256051/8312869555",
+      "rejected_polynomial_roots": 0,
+      "polynomials_low_coefficient_first": [
+        [
+          1,
+          1
+        ],
+        [
+          -1,
+          1
+        ],
+        [
+          5,
+          3
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          5,
+          1
+        ],
+        [
+          17,
+          1
+        ],
+        [
+          1,
+          0,
+          1
+        ],
+        [
+          1,
+          1,
+          1
+        ]
+      ],
+      "feature_vector": [
+        21,
+        1,
+        1,
+        0,
+        2,
+        4,
+        1,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "precision": {
+        "2": 22,
+        "3": 2,
+        "11": 2
+      },
+      "controls": [
+        {
+          "repeats": 1,
+          "steps": 31,
+          "source_bits": 105,
+          "target_bits": 107,
+          "endpoint_features_equal": true
+        },
+        {
+          "repeats": 2,
+          "steps": 62,
+          "source_bits": 167,
+          "target_bits": 171,
+          "endpoint_features_equal": true
+        },
+        {
+          "repeats": 5,
+          "steps": 155,
+          "source_bits": 353,
+          "target_bits": 364,
+          "endpoint_features_equal": true
+        },
+        {
+          "repeats": 10,
+          "steps": 310,
+          "source_bits": 663,
+          "target_bits": 685,
+          "endpoint_features_equal": true
+        },
+        {
+          "repeats": 20,
+          "steps": 620,
+          "source_bits": 1283,
+          "target_bits": 1328,
+          "endpoint_features_equal": true
+        }
+      ]
+    },
+    {
+      "primes": [
+        2,
+        3,
+        5,
+        11
+      ],
+      "a": 41,
+      "B": 20,
+      "rational_shadow": "-36472994178147530851/34167153367957092451",
+      "rejected_polynomial_roots": 0,
+      "polynomials_low_coefficient_first": [
+        [
+          1,
+          1
+        ],
+        [
+          -1,
+          1
+        ],
+        [
+          5,
+          3
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          5,
+          1
+        ],
+        [
+          17,
+          1
+        ],
+        [
+          1,
+          0,
+          1
+        ],
+        [
+          1,
+          1,
+          1
+        ]
+      ],
+      "feature_vector": [
+        41,
+        1,
+        1,
+        0,
+        2,
+        4,
+        1,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        2,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "precision": {
+        "2": 42,
+        "3": 2,
+        "5": 3,
+        "11": 2
+      },
+      "controls": [
+        {
+          "repeats": 1,
+          "steps": 61,
+          "source_bits": 192,
+          "target_bits": 196,
+          "endpoint_features_equal": true
+        },
+        {
+          "repeats": 2,
+          "steps": 122,
+          "source_bits": 314,
+          "target_bits": 321,
+          "endpoint_features_equal": true
+        },
+        {
+          "repeats": 5,
+          "steps": 305,
+          "source_bits": 680,
+          "target_bits": 699,
+          "endpoint_features_equal": true
+        },
+        {
+          "repeats": 10,
+          "steps": 610,
+          "source_bits": 1290,
+          "target_bits": 1329,
+          "endpoint_features_equal": true
+        },
+        {
+          "repeats": 20,
+          "steps": 1220,
+          "source_bits": 2510,
+          "target_bits": 2589,
+          "endpoint_features_equal": true
+        }
+      ]
+    },
+    {
+      "primes": [
+        2,
+        3,
+        5,
+        7,
+        11,
+        13
+      ],
+      "a": 121,
+      "B": 60,
+      "rational_shadow": "-16287102416142881061138613391351194221899151868558890121/16277842624355171762908830194787052872589696085707510921",
+      "rejected_polynomial_roots": 0,
+      "polynomials_low_coefficient_first": [
+        [
+          1,
+          1
+        ],
+        [
+          -1,
+          1
+        ],
+        [
+          5,
+          3
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          5,
+          1
+        ],
+        [
+          17,
+          1
+        ],
+        [
+          1,
+          0,
+          1
+        ],
+        [
+          1,
+          1,
+          1
+        ]
+      ],
+      "feature_vector": [
+        121,
+        1,
+        1,
+        0,
+        2,
+        4,
+        1,
+        0,
+        2,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        2,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "precision": {
+        "2": 122,
+        "3": 3,
+        "5": 3,
+        "7": 2,
+        "11": 2,
+        "13": 2
+      },
+      "controls": [
+        {
+          "repeats": 1,
+          "steps": 181,
+          "source_bits": 526,
+          "target_bits": 537,
+          "endpoint_features_equal": true
+        },
+        {
+          "repeats": 2,
+          "steps": 362,
+          "source_bits": 888,
+          "target_bits": 910,
+          "endpoint_features_equal": true
+        },
+        {
+          "repeats": 5,
+          "steps": 905,
+          "source_bits": 1974,
+          "target_bits": 2028,
+          "endpoint_features_equal": true
+        },
+        {
+          "repeats": 10,
+          "steps": 1810,
+          "source_bits": 3784,
+          "target_bits": 3892,
+          "endpoint_features_equal": true
+        },
+        {
+          "repeats": 20,
+          "steps": 3620,
+          "source_bits": 7404,
+          "target_bits": 7620,
+          "endpoint_features_equal": true
+        }
+      ]
+    }
+  ]
+}

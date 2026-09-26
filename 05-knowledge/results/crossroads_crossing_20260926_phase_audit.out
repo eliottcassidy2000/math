@@ -1,0 +1,10 @@
+independent_cut_stability_checks 72
+height_thresholds_L1_to_L24 [2, 6, 9, 12, 32, 39, 45, 52, 58, 64, 71, 296, 320, 345, 369, 394, 419, 443, 468, 492, 517, 541, 566, 591]
+actual_all_a1_saturation_witnesses 324
+largest_saturation_source_bits 101
+polynomial_prime_set (2,) B 1 L 1 a 3 precision {2: 5} repetitions [1, 2, 4, 8] largest_endpoint_bits 58 excluded_candidate_roots 1 PASS
+polynomial_prime_set (2, 3) B 1 L 1 a 3 precision {2: 5, 3: 3} repetitions [1, 2, 4, 8] largest_endpoint_bits 58 excluded_candidate_roots 1 PASS
+polynomial_prime_set (2, 3, 5, 11) B 20 L 20 a 41 precision {2: 43, 3: 3, 5: 3, 11: 2} repetitions [1, 2, 4, 8] largest_endpoint_bits 582 excluded_candidate_roots 0 PASS
+polynomial_prime_set (2, 3, 7, 13) B 12 L 12 a 25 precision {2: 27, 3: 3, 7: 2, 13: 2} repetitions [1, 2, 4, 8] largest_endpoint_bits 362 excluded_candidate_roots 0 PASS
+polynomial_shadow_blocks 16 polynomial_features 9
+PASS: independent integer/Fraction audit; no implementation under review imported

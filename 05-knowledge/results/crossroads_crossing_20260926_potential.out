@@ -1,0 +1,38 @@
+exact_odd_sources=50000, range=1..100000, flux/no00/no111 PASS
+length, language_size, sufficient_minimum, eligible_exact_controls
+1, 2, 2, 49999
+2, 3, 6, 49983
+3, 4, 9, 49924
+4, 5, 12, 49761
+5, 6, 32, 49112
+6, 7, 39, 48435
+7, 8, 45, 47530
+8, 9, 52, 46237
+9, 10, 58, 44871
+10, 11, 64, 43164
+11, 12, 71, 41588
+12, 13, 296, 33496
+13, 14, 320, 31207
+14, 15, 345, 28971
+15, 16, 369, 26855
+16, 17, 394, 24678
+finite_height_language_controls=665811 PASS
+all_a1_saturation: lengths1..16, words=152 PASS
+resource_controls: shallow_resets=100, run_invariant alloddn<=100000 PASS
+finite_prime_resources=(2,), period=6, parameters=1..3 PASS
+finite_prime_resources=(3,), period=6, parameters=1..3 PASS
+finite_prime_resources=(11,), period=30, parameters=1..3 PASS
+finite_prime_resources=(2, 3, 11), period=30, parameters=1..3 PASS
+finite_prime_resources=(2, 3, 5, 11), period=60, parameters=1..3 PASS
+finite_prime_resources=(2, 3, 5, 7, 11, 13, 17, 19), period=720, parameters=1..3 PASS
+orbit27: steps=70, matched_excursions=25, unmatched_down=4, growing_returns=[(27, 31, 3), (107, 121, 3), (91, 103, 3), (395, 445, 3), (1619, 1822, 3), (719, 911, 6), (103, 122, 41), (47, 61, 52)]
+source=1, odd_steps=80, up_crossings=80, even_halvings=80, carry_bits=33.202999942307, float_identity_error=7.11e-15
+source=3, odd_steps=80, up_crossings=80, even_halvings=81, carry_bits=32.618037441586, float_identity_error=-1.78e-15
+source=27, odd_steps=80, up_crossings=64, even_halvings=68, carry_bits=16.448112440144, float_identity_error=8.88e-15
+source=703, odd_steps=80, up_crossings=55, even_halvings=64, carry_bits=7.745619063235, float_identity_error=-1.07e-14
+source=10087, odd_steps=80, up_crossings=47, even_halvings=58, carry_bits=0.224718494963, float_identity_error=-1.38e-14
+source=35655, odd_steps=80, up_crossings=46, even_halvings=44, carry_bits=0.000133720777, float_identity_error=1.78e-15
+source=626331, odd_steps=80, up_crossings=47, even_halvings=40, carry_bits=0.000004671770, float_identity_error=-3.55e-15
+source=1208925819614629174706175, odd_steps=80, up_crossings=47, even_halvings=6, carry_bits=0.000000000000, float_identity_error=7.11e-15
+positive_cycle_controls: 3n-1 odd cycle(5,7); 5n+1(13,33,83); 3n+1 odd fixed point1, all reciprocal sums divergent PASS
+PASS: exact arithmetic controls; no numerical proof of a hypothetical orbit

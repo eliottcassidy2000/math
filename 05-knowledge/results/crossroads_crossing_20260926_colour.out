@@ -1,0 +1,31 @@
+authoritative_colours RKBRKRKBRKBRKRKBRKRKBRKBRKRKBRKBRKB
+authoritative_blue_positions [3, 8, 11, 16, 21, 24, 29, 32, 35]
+nonblue_spaces [4, 2, 4, 4, 2, 4, 2, 2]
+spaces_including_initial_boundary [2, 4, 2, 4, 4, 2, 4, 2, 2]
+paired_tokens ABAABABAABAABABAABABAB
+fibonacci_token_mismatches [(22, 'B', 'A')]
+unbalanced_length5_factors (8, 'AABAA', 1) (18, 'BABAB', 3)
+candidate_colour_mismatches [(35, 'B', 'R')]
+candidate_blue_positions [3, 8, 11, 16, 21, 24, 29, 32, 37, 42, 45, 50]
+independent_candidate_agreement_through 100000
+rejected_rule inherited_four_state_charge same_feature_different_listed_colours (2, 4, (0, 1), 'K', 'R')
+rejected_rule lowest_Fibonacci_index_mod3 same_feature_different_listed_colours (4, 5, 0, 'R', 'K')
+rejected_rule highest_Fibonacci_index_mod3 same_feature_different_listed_colours (3, 4, 2, 'B', 'R')
+rejected_rule number_of_Fibonacci_terms_mod3 same_feature_different_listed_colours (1, 2, 1, 'R', 'K')
+rejected_rule sum_of_Fibonacci_indices_mod3 same_feature_different_listed_colours (3, 4, 2, 'B', 'R')
+candidate_state_not_closed successor modulus 1 (2, 5, ('K', 0), 'B', 'R')
+candidate_state_not_closed triple_plus_one modulus 1 (1, 4, ('R', 0), 'R', 'K')
+candidate_state_not_closed shortcut modulus 1 (2, 5, ('K', 0), 'R', 'B')
+candidate_state_not_closed successor modulus 30 (5, 65, ('K', 5), 'R', 'B')
+candidate_state_not_closed triple_plus_one modulus 30 (2, 62, ('K', 2), 'K', 'R')
+candidate_state_not_closed shortcut modulus 30 (1, 61, ('R', 1), 'K', 'B')
+candidate_state_not_closed successor modulus 60 (5, 65, ('K', 5), 'R', 'B')
+candidate_state_not_closed triple_plus_one modulus 60 (2, 62, ('K', 2), 'K', 'R')
+candidate_state_not_closed shortcut modulus 60 (1, 61, ('R', 1), 'K', 'B')
+inherited_charge_triple_carries_first_sources [(-1, 7), (0, 2), (1, 1), (2, 4)]
+charge_plus_mod30_not_closed (1, 31, ((1, 0), 1), (0, 1), (0, 0))
+two_boundary_units_exact_through_Fibonacci_index 100
+boundary_unit_examples [(0, 1, [], (1, 0)), (1, 2, [1], (-1, 1)), (2, 3, [2], (1, 0)), (3, 5, [3, 1], (-1, 1)), (4, 8, [5, 2], (1, 0)), (5, 13, [8, 3, 1], (-1, 1)), (6, 21, [13, 5, 2], (1, 0)), (7, 34, [21, 8, 3, 1], (-1, 1))]
+six_fibonacci_phase_states [((1, 0), (1, 0)), ((0, 1), (1, 1)), ((1, 1), (1, 0)), ((1, 0), (1, 1)), ((0, 1), (1, 0)), ((1, 1), (1, 1))]
+all_odd_growth_exact_controls [1, 2, 3, 10, 100, 1000]
+PASS

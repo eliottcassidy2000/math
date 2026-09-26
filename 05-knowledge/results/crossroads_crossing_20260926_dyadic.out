@@ -1,0 +1,155 @@
+{
+  "scope": "FINITE-EXACT finite parity universes; analytic floats diagnostic only",
+  "residue_projection": {
+    "all_words_checked": 32766,
+    "positive_prefix_counts": [
+      [
+        1,
+        1
+      ],
+      [
+        2,
+        1
+      ],
+      [
+        3,
+        2
+      ],
+      [
+        4,
+        3
+      ],
+      [
+        5,
+        4
+      ],
+      [
+        6,
+        8
+      ],
+      [
+        7,
+        13
+      ],
+      [
+        8,
+        19
+      ],
+      [
+        9,
+        38
+      ],
+      [
+        10,
+        64
+      ],
+      [
+        11,
+        128
+      ],
+      [
+        12,
+        226
+      ],
+      [
+        13,
+        367
+      ],
+      [
+        14,
+        734
+      ]
+    ],
+    "six_event_rows": [
+      [
+        "110111",
+        287,
+        27,
+        false
+      ],
+      [
+        "111011",
+        251,
+        39,
+        false
+      ],
+      [
+        "111101",
+        227,
+        47,
+        true
+      ],
+      [
+        "111110",
+        211,
+        31,
+        true
+      ]
+    ],
+    "uniform_A4_before_B1": "1/2",
+    "source27_probability": 0,
+    "source31_probability": 1
+  },
+  "analytic": {
+    "float_diagnostics_not_proofs": [
+      {
+        "n": 1,
+        "Tn": 2,
+        "delta_log2F": 1.0,
+        "delta_VG": 1.0
+      },
+      {
+        "n": 3,
+        "Tn": 5,
+        "delta_log2F": 1.397231037193,
+        "delta_VG": 0.811685722826
+      },
+      {
+        "n": 19,
+        "Tn": 29,
+        "delta_log2F": -0.806901932957,
+        "delta_VG": 0.515703647975
+      },
+      {
+        "n": 27,
+        "Tn": 41,
+        "delta_log2F": 1.575302800091,
+        "delta_VG": 0.697083415311
+      },
+      {
+        "n": 31,
+        "Tn": 47,
+        "delta_log2F": 1.409504107711,
+        "delta_VG": 0.597608950906
+      },
+      {
+        "n": 41,
+        "Tn": 62,
+        "delta_log2F": -0.711195022099,
+        "delta_VG": 0.54019402004
+      },
+      {
+        "n": 703,
+        "Tn": 1055,
+        "delta_log2F": 1.428692821455,
+        "delta_VG": 0.585777563419
+      },
+      {
+        "n": 10087,
+        "Tn": 15131,
+        "delta_log2F": -0.761470175134,
+        "delta_VG": 0.499547974272
+      }
+    ],
+    "Fourier_quarter_exact": {
+      "printed": "0",
+      "fractional_part": "1/4"
+    },
+    "all_odd_lengths_checked": [
+      2,
+      300
+    ],
+    "dyadic_jump_ratio_exact": 4,
+    "VG_derivative_in_log2_coordinate": "1+(1/3)cos(2*pi*t), in [2/3,4/3]"
+  }
+}

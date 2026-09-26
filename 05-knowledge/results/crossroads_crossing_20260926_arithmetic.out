@@ -1,0 +1,15 @@
+Bracket exceptions [2, 3, 4, 10, 11, 12] prime/multiplier pairs [(2, 2), (2, 3), (2, 4), (3, 2), (3, 3), (11, 2)]
+Wheel units [1, 7, 11, 13, 17, 19, 23, 29] Chebyshev image residues [17, 29] hostile11^2-2=119
+Quadratic seed orbits c= 0 [[-1, 1, 1, 1, 1], [0, 0, 0, 0, 0], [1, 1, 1, 1, 1]]
+Quadratic seed orbits c= -1 [[-1, 0, -1, 0, -1], [0, -1, 0, -1, 0], [1, 0, -1, 0, -1]]
+Quadratic seed orbits c= -2 [[-1, -1, -1, -1, -1], [0, -2, 2, 2, 2], [1, -1, -1, -1, -1]]
+Quadratic rational denominator checks 1520
+Nonconstant Mobius chart hostile census 372 unrolled positive controls15
+Primitive triples through5000 792 square-hypotenuse bijection targets 80
+Ancestry hostile: U -> AA, while empty -> UU
+Equal-hypotenuse fibres at65,85,1105: [(65, 2), (85, 2), (1105, 4)]
+Theta coefficients exact through 2000 primitive projection hypotenuses2..150
+Modulo30 hostile: r2(13)=8, r2(43)=0
+Primitive fibre multiplicity for r split primes: 2^(r+2); positivity does not bound v2
+Theta power support hostiles1->2,2->3,3->7; four-square formula exact through300
+PASS exact finite controls; all-depth statements use the written proofs; no Collatz closure

@@ -1,0 +1,166 @@
+{
+  "scope": "FINITE-EXACT controls; general claims proved in companion note",
+  "source_universe": "all 100000 positive odd n below 200000; larger partners below400000",
+  "counts": {
+    "cheap_resets": 50002,
+    "compressed_two_to_one": 25006,
+    "sources": 100000
+  },
+  "Mersenne_exponents_checked": [
+    1,
+    256
+  ],
+  "Mersenne_columns": [
+    "r",
+    "2^r-1",
+    "s",
+    "C(n)",
+    "sign(C(n)-n)"
+  ],
+  "Mersenne_rows": [
+    [
+      1,
+      1,
+      1,
+      1,
+      0
+    ],
+    [
+      2,
+      3,
+      3,
+      1,
+      -1
+    ],
+    [
+      3,
+      7,
+      1,
+      13,
+      1
+    ],
+    [
+      4,
+      15,
+      4,
+      5,
+      -1
+    ],
+    [
+      5,
+      31,
+      1,
+      121,
+      1
+    ],
+    [
+      6,
+      63,
+      3,
+      91,
+      1
+    ],
+    [
+      7,
+      127,
+      1,
+      1093,
+      1
+    ],
+    [
+      8,
+      255,
+      5,
+      205,
+      -1
+    ],
+    [
+      9,
+      511,
+      1,
+      9841,
+      1
+    ],
+    [
+      10,
+      1023,
+      3,
+      7381,
+      1
+    ],
+    [
+      11,
+      2047,
+      1,
+      88573,
+      1
+    ],
+    [
+      12,
+      4095,
+      4,
+      33215,
+      1
+    ],
+    [
+      13,
+      8191,
+      1,
+      797161,
+      1
+    ],
+    [
+      14,
+      16383,
+      3,
+      597871,
+      1
+    ],
+    [
+      15,
+      32767,
+      1,
+      7174453,
+      1
+    ],
+    [
+      16,
+      65535,
+      6,
+      672605,
+      1
+    ]
+  ],
+  "hostile": {
+    "n": 31,
+    "larger_partner": 63,
+    "common_value": 91,
+    "common_value_exceeds_both": true
+  },
+  "root_unwrapped_carry_audit": [
+    [
+      "110111",
+      287,
+      27
+    ],
+    [
+      "111011",
+      251,
+      39
+    ],
+    [
+      "111101",
+      227,
+      47
+    ],
+    [
+      "111110",
+      211,
+      31
+    ]
+  ],
+  "theorem_relative_density_among_odds": {
+    "cheap_reset_sources": "1/2",
+    "reducible_larger_partners": "1/4"
+  }
+}
