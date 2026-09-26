@@ -3,8 +3,9 @@
 Status: **PROVED + independently audited by root and geometry; FINITE-EXACT coefficients; THM-4491.**
 This note concerns the pairing family with global two-step descent. It does
 not prove Collatz or a longer-horizon price result. The limit below concerns
-finite-prefix optima and the minimum lower natural density; natural-density
-attainment is a separate question.
+finite-prefix optima and the minimum lower natural density. The later
+[THM-4492](../../01-canon/theorems/THM-4492-pairing-two-cutoff-density-separation.md)
+refutes natural-density attainment and quantitatively forces oscillation.
 
 ## 1. Inheritance and the new invariant
 
@@ -193,7 +194,8 @@ depth bounds and mean-difference identity are checked through depth twenty.
 The printed decimal interval is a rendering of the exact rational bounds.
 
 The averaged local increments in this range are at most one half, but no
-uniform theorem about that sharper bound is claimed. A sharper tail or a
-proof of natural-density attainment would be additional work. The guarded
+uniform theorem about that sharper bound is claimed. A sharper tail remains
+additional work; natural-density attainment was subsequently refuted by
+THM-4492. The guarded
 actual-incidence tree is essential: the global horizon-four counterexample
 in the preceding note invalidates direct reuse of these two-step clauses.

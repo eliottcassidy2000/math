@@ -58,7 +58,10 @@ tau_h. Put A_h=sum_(i mod2^h)tau_h(i). Then
     0<=alpha-sum_(h=1)^H A_h/3^(h+1)<=(H+3)(2/3)^(H+1).
 
 Every global P_2 member has lower density at least alpha, and one member
-attains lower density alpha. Natural-density attainment is not asserted.
+attains lower density alpha. Subsequent
+[THM-4492](THM-4492-pairing-two-cutoff-density-separation.md) proves that
+natural-density attainment of alpha is impossible: every member attaining
+this lower density has upper density at least0.3116986076.
 The first twenty exact coefficients give
 
     3041388727/10460353203 <= alpha <= 3089623223/10460353203,

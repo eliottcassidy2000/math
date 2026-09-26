@@ -48,13 +48,18 @@ not carry Rédei's parity either.
 
 ## Reading
 
-The true content of the seed is the slot formula, i.e. that the arcs from
-`v` to a path are read as a `0/1` word whose `10` transitions are the
-insertion points. The repo's proved Hamiltonian-path machinery (THM-002
+This vertex-insertion reading of the seed gives the slot formula: the
+actual interior insertion gaps are `01` transitions, whereas one plus
+the number of `10` transitions counts all slots, including endpoints.
+The separate [marked-spine edge chart](crossroads233_20260926_graph.md)
+realizes another exact reading of the seed. The repo's proved Hamiltonian-path machinery (THM-002
 OCF, PROP-001 arc-flip identity, LEM-004 odd functions) works with arc
 flips and with the cycle-count expansion, not with vertex insertion, and
 this probe shows why: insertion is not a bijection between paths of `T`
 and decorated paths of `T - v`. The metric-space analogy of the seed
-("the triangle inequality is one relation between two points") is the
-tournament axiom itself (exactly one arc per pair, LEM-004(a)), and adds no
-constraint beyond it.
+("the triangle inequality is one relation between two points") combines
+different types: exactly one arc per distinct pair is the tournament
+axiom, whereas triangle inequality constrains distance values. A loop-free
+complete weighted graph with edge lengths1,1,3 satisfies edge uniqueness
+but violates triangle inequality. The seed's unique-relation portion adds
+no condition to the tournament axiom; the metric equivalence is false.

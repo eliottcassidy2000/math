@@ -9,6 +9,37 @@ Format per entry:
 - Why it was wrong
 - The correct framing
 
+## 2026-09-26 233 crossroads: common cutoffs, metric types, and carry rank
+
+- **Refuted extension, original theorem intact.** THM-4491's minimum lower
+  density alpha is attained, but its ordinary-density attainment target is
+  false. At cutoffs2 and5, the separate optima0 and1 cannot be attained by
+  one assignment: the joint optimum is2. A weighted fringe proof propagates
+  this to positive scale. THM-4492 forces upper density at least0.3116986076
+  when lower density is alpha<=0.2953650956. The missing coordinate is the
+  shared assignment at intermediate cutoffs; sparse-scale gluing retains
+  liminf but cannot provide a density limit.
+- **Metric inequality is not edge uniqueness.** The one-edge-per-pair
+  weighted K3 with lengths1,1,3 has no loops but violates triangle inequality.
+  The marked Hamiltonian-spine chart is an edge-coordinate bijection,
+  not a vertex map: a reduced backward K2 lifts to a directed triangle.
+  The simultaneous betweenness ordering, or the actual chord incidence,
+  is the missing coordinate. The incoming insertion-slot note also
+  confused the count1+#10 with slot locations, which are interior01 gaps;
+  its valid count and its C3 counterexample are unchanged.
+- **Carry collision is not rank failure.** Both paths in the depth233
+  same-slope merger have153 independent first slots. Repeating its two
+  blocks preserves capacity two by rational-base suffix decoding.
+  THM-4493 instead uses all-node gcd dominance and an explicit height
+  threshold. The maximal-coefficient proof identifies ONE supported
+  divisibility witness, not a vanishing coefficient at every large node.
+  Its general block lemma requires positive A,B; gcd(A,B)=1 alone
+  incorrectly permits the constant-map case A=0,B=1.
+
+Proofs and witnesses: [233 synthesis](../05-knowledge/results/crossroads233_20260926_board.md),
+[THM-4492](theorems/THM-4492-pairing-two-cutoff-density-separation.md),
+[THM-4493](theorems/THM-4493-collatz-gcd-height-rank-certificate.md).
+
 ## 2026-09-26 THM-4488 collision (opus S6) -- a fetch-then-write reservation lost a race of minutes
 
 - **What happened.** `THM-4488` was checked free on `origin/main` minutes before the file was written; the crossroads session created its own `THM-4488` in the same interval, and the checkpoint script rebased and pushed both files with one ID (`agents/check_docs.py` flagged the duplicate only after the push).

@@ -1,0 +1,105 @@
+{
+  "status": "REPRODUCTION VERIFIED; scope is stated in the audited proofs",
+  "generated_utc": "2026-09-26T16:39:54.382411+00:00",
+  "python": "3.13.14",
+  "hash_basis": "raw UTF-8 LF bytes",
+  "cases": [
+    {
+      "source": "04-computation/experiments/crossroads233_20260926_carry.py",
+      "output": "05-knowledge/results/crossroads233_20260926_carry.out",
+      "normal_equals_optimized": true
+    },
+    {
+      "source": "04-computation/experiments/crossroads233_20260926_flow.py",
+      "output": "05-knowledge/results/crossroads233_20260926_flow.out",
+      "normal_equals_optimized": true
+    },
+    {
+      "source": "04-computation/experiments/crossroads233_20260926_graph.py",
+      "output": "05-knowledge/results/crossroads233_20260926_graph.out",
+      "normal_equals_optimized": true
+    },
+    {
+      "source": "04-computation/experiments/crossroads233_20260926_scale_audit.py",
+      "output": "05-knowledge/results/crossroads233_20260926_scale_audit.out",
+      "normal_equals_optimized": true
+    }
+  ],
+  "artifacts": [
+    {
+      "path": "01-canon/theorems/THM-4492-pairing-two-cutoff-density-separation.md",
+      "sha256": "67e77a21aea6e50ce40b3959456337e410ab4ca2c1415adcf1cfab740c3cf535",
+      "bytes": 6546
+    },
+    {
+      "path": "01-canon/theorems/THM-4493-collatz-gcd-height-rank-certificate.md",
+      "sha256": "1da52d0acb4ecb5c70f76ea3b6e59e02d76e22ef5b9bd6466773154cc5846770",
+      "bytes": 5902
+    },
+    {
+      "path": "04-computation/experiments/crossroads233_20260926_carry.py",
+      "sha256": "af734249afe570317548986215e143ffce506ebbda0f54912146d9e588b0f65a",
+      "bytes": 11652
+    },
+    {
+      "path": "04-computation/experiments/crossroads233_20260926_flow.py",
+      "sha256": "112f11f15c33a2fa2489f5afd1e40a34e12ec2bb63f4245f0df32f1715a98a29",
+      "bytes": 10800
+    },
+    {
+      "path": "04-computation/experiments/crossroads233_20260926_graph.py",
+      "sha256": "537cbf8283fda437547763a76f7569592551f6b6f164c284296c70eb1ecc002d",
+      "bytes": 10309
+    },
+    {
+      "path": "04-computation/experiments/crossroads233_20260926_scale_audit.py",
+      "sha256": "8ba4801fb66c52ab8ea2c4823907ae10691113f44b739ecfb6075469510fd528",
+      "bytes": 6124
+    },
+    {
+      "path": "04-computation/experiments/crossroads233_20260926_verify.py",
+      "sha256": "55076e5cf110dfecbf49840daf4ad5e84be3aa051e1d4921d7bc9fb2001672a8",
+      "bytes": 2677
+    },
+    {
+      "path": "05-knowledge/results/crossroads233_20260926_board.md",
+      "sha256": "92be7569d7788126d2200cf7bc8fb0d61af115983198613b6a1a11a31adc8a77",
+      "bytes": 11106
+    },
+    {
+      "path": "05-knowledge/results/crossroads233_20260926_carry.md",
+      "sha256": "1702491065fe6834231c723250f9462eb760455e1687be6702d7b68084bcc401",
+      "bytes": 15606
+    },
+    {
+      "path": "05-knowledge/results/crossroads233_20260926_carry.out",
+      "sha256": "0032c17e5681def87686d1c4485a99eff206e67c37bc1e6c2941bc2cf3644041",
+      "bytes": 1384
+    },
+    {
+      "path": "05-knowledge/results/crossroads233_20260926_flow.md",
+      "sha256": "a905785c7b297bec2272d40f651f6ae2deeb0b11fc1bba1c212ed76ccb24a2f7",
+      "bytes": 15114
+    },
+    {
+      "path": "05-knowledge/results/crossroads233_20260926_flow.out",
+      "sha256": "57eb88b4806a38d668894a91c5aba159bc97ff50e45a558024782c2646e36f8b",
+      "bytes": 5204
+    },
+    {
+      "path": "05-knowledge/results/crossroads233_20260926_graph.md",
+      "sha256": "52804a5bdaf4a78a9fb3e670991acb649e306334e23b27ba6bf3906436a83c57",
+      "bytes": 18176
+    },
+    {
+      "path": "05-knowledge/results/crossroads233_20260926_graph.out",
+      "sha256": "4e12db5233844f46ad09e11e137d83f3814bbb9a51e21ab60487cfd3d891c4e2",
+      "bytes": 1575
+    },
+    {
+      "path": "05-knowledge/results/crossroads233_20260926_scale_audit.out",
+      "sha256": "11f16d003a82a9caa4f45046803d55f0babddb3de138bee299055027ffa2a405",
+      "bytes": 1010
+    }
+  ]
+}

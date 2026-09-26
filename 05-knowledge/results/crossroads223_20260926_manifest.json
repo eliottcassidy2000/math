@@ -97,8 +97,8 @@
     },
     {
       "path": "01-canon/theorems/THM-4491-pairing-two-step-tree-extra-density.md",
-      "sha256": "0736331708b8515da8941687415b7bdddbbbe881dcdecb0999174aea47bc778b",
-      "bytes": 5272
+      "sha256": "929731520439805dbef997e2a4358ea00607423c6cc03d97d01074439aefb4bd",
+      "bytes": 5446
     },
     {
       "path": "04-computation/experiments/crossroads223_20260926_automata.py",
@@ -177,8 +177,8 @@
     },
     {
       "path": "05-knowledge/results/crossroads223_20260926_board.md",
-      "sha256": "8a6485ae9e2a8d269ae7c0f144b27e12ab7485b5b0e53fd52e73f37bde40df0e",
-      "bytes": 10875
+      "sha256": "10d4dff0593f55f145d594593a6a49970800f192d4371a7f6c9d96a0892ce16b",
+      "bytes": 11322
     },
     {
       "path": "05-knowledge/results/crossroads223_20260926_boundary_audit.out",
@@ -227,8 +227,8 @@
     },
     {
       "path": "05-knowledge/results/crossroads223_20260926_flow_series.md",
-      "sha256": "b9fc08b17d9128f67a3bdb1d2ca554e3b08c832c6a1819a9a20b7cd2509335f9",
-      "bytes": 7399
+      "sha256": "3dac22414c307f57123b5b290beb37287bb01fa2c8210d4d98b49023d3a42c9d",
+      "bytes": 7541
     },
     {
       "path": "05-knowledge/results/crossroads223_20260926_flow_series.out",
@@ -286,5 +286,6 @@
       "bytes": 458
     }
   ],
-  "documentation_hashes_refreshed_utc": "2026-09-26T15:27:08.695236+00:00"
+  "documentation_hashes_refreshed_utc": "2026-09-26T16:40:33.460646+00:00",
+  "documentation_update": "THM-4492 refutes ordinary-density attainment of the proved minimum lower density; original experiment sources unchanged."
 }

@@ -5,6 +5,12 @@ FINITE-EXACT controls / OPEN Collatz.** Research session, 2026-09-26,
 starting from 0e0301490cc8 and integrating concurrent main-line work.
 This replaces the initial research-in-progress board.
 
+**Update from the corrected 233 session:** [THM-4492](../../01-canon/theorems/THM-4492-pairing-two-cutoff-density-separation.md)
+refutes the natural-density attainment target below and forces oscillation.
+[THM-4493](../../01-canon/theorems/THM-4493-collatz-gcd-height-rank-certificate.md)
+adds an elementary pointwise height/rank alternative. See the
+[current 233 synthesis](crossroads233_20260926_board.md).
+
 The strongest progress is a sharp finite-horizon price theorem, a growing
 orbit-prefix rank theorem, and an exact series for two-step pairing cost.
 223 supplied useful objects and hostile examples; recurrence of the number
@@ -122,7 +128,7 @@ Global two-step constraints form a rooted tree. Their prefix optimum is
 
 with explicit nonnegative integer periodic cost sums A_h. Alpha is the
 attained minimum LOWER density among global two-step members;
-natural-density attainment remains open. Twenty exact coefficients give
+natural-density attainment is now REFUTED by THM-4492. Twenty exact coefficients give
 
     0.2907539227382626... <= alpha <=0.2953650955221956... .
 
@@ -158,8 +164,8 @@ claim convergence.
 - **OPEN HYP-9142:** a uniform constant Robin comparison, especially shift1.
 - **OPEN G2:** independence on every injective chronological orbit, plus
   a height-sensitive consequence strong enough to force descent.
-- **OPEN two-step refinement:** natural-density attainment of alpha;
-  only minimum lower density is presently attained.
+- **REFUTED two-step refinement:** natural-density attainment of alpha;
+  THM-4492 forces oscillation for every minimum-lower-density attainer.
 - **REFUTED extensions:** every223-return descends; a complete finite
   lift lowers inherited cycle growth; the extra two-step clause holds
   at four steps; fixed-word finiteness implies eventual rank at every
