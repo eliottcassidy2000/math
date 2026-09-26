@@ -65,3 +65,23 @@ divergent orbit whose window points repeatedly crowd into 1-bit bands
 before each descent would have multiplicity a constant fraction of `L` at
 every landing point; the strip entropy shows such stretches are rare among
 integers but does not exclude them on one orbit.
+
+**Whole-orbit restatement (opus, collatz-crossings-20260926, 2026-09-26).**
+The version that the recursion needs, and the one meant, is the averaged
+and endpoint-tolerant form of THM-4506: for every orbit that is not
+eventually periodic there are `mu < 1` and `C` such that, for all large
+`X` and every depth `D >= 1`,
+
+```text
+#Dip(X, D)  <=  C (log_2 X)^mu N(X 2^(-D))  +  C (log_2 X)^2,
+```
+
+equivalently (crossroads-poset integer note, (5.4)) `|dippers| <= C polylog(L) |landing points| + C' k`
+with the endpoint allowance. THM-4506 proves this form is exactly
+sufficient: it gives `N(X) <= K X^(h*) (log_2 X)^a` for every
+`a > mu lambda*/h* - 3/2`, and no averaged bound can do better. In crossing
+form (crossings note, section 3.5): the length of a stay below `X` is at
+most `C (log X)^mu` times the number of future-minimum records inside it,
+plus `O(log X)`. The finite-segment reading is refuted by the hover/drop
+segments above; the whole-orbit form remains OPEN, and every residue-class
+count is blind to it.
