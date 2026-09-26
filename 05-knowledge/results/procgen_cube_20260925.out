@@ -1,0 +1,426 @@
+
+====================================================================================================
+A. Setup
+====================================================================================================
+  C engine built: scratch/procgen_cube/strategy_cube/engine  (source 04-computation/experiments/procgen_cube_20260925_engine.c)
+  strategy sigma of level k: odd residues mod 2^k -> {+1,-1};  T(n) = n/2 (even), (3n + sigma(n mod 2^k))/2 (odd)
+  mask bit i <-> residue 2i+1, bit 1 = minus.  Strings list sigma(1), sigma(3), ..., sigma(2^k-1).
+  u/d word: at r, 'd' iff 4 | 3r + sigma(r) (>= 2 halvings follow), 'u' iff exactly one.
+  critical odd density c = log_3 2 = 0.630929753571; a cycle (a odd steps, length p) is EXPANDING iff 3^a > 2^p iff a/p > c
+  cycle-search budget at levels <= 5: positive starts 1..131072, value cap 2^60, Brent detection
+  exact table amin(j) = least a with 3^a > 2^j checked for j <= 401 (the engine uses the same table)
+
+====================================================================================================
+B. Levels 1-4: the exact Python reference against the C engine
+====================================================================================================
+  level 1: 2 strategies; for every one of them:
+     (i)-test [engine float Karp] == exact integer Karp on odd densities == simple-cycle enumeration
+     (ii)-test likewise on every bottom SCC; bottom SCCs and stationary odd mass == exact Fractions
+     |Bad_L| (L<=40): engine DP == Python DP == brute force (L<=9)
+     cycle lists and escape counts for starts <= 20000: engine == Python reference
+     numeric exceptional dimension: -inf exactly on (i); = 1 exactly when a bottom SCC has positive drift
+  level 2: 4 strategies; for every one of them:
+     (i)-test [engine float Karp] == exact integer Karp on odd densities == simple-cycle enumeration
+     (ii)-test likewise on every bottom SCC; bottom SCCs and stationary odd mass == exact Fractions
+     |Bad_L| (L<=40): engine DP == Python DP == brute force (L<=9)
+     cycle lists and escape counts for starts <= 20000: engine == Python reference
+     numeric exceptional dimension: -inf exactly on (i); = 1 exactly when a bottom SCC has positive drift
+  level 3: 16 strategies; for every one of them:
+     (i)-test [engine float Karp] == exact integer Karp on odd densities == simple-cycle enumeration
+     (ii)-test likewise on every bottom SCC; bottom SCCs and stationary odd mass == exact Fractions
+     |Bad_L| (L<=40): engine DP == Python DP == brute force (L<=9)
+     cycle lists and escape counts for starts <= 20000: engine == Python reference
+     numeric exceptional dimension: -inf exactly on (i); = 1 exactly when a bottom SCC has positive drift
+  level 4: 256 strategies; for every one of them:
+     (i)-test [engine float Karp] == exact integer Karp on odd densities == simple-cycle enumeration
+     (ii)-test likewise on every bottom SCC; bottom SCCs and stationary odd mass == exact Fractions
+     |Bad_L| (L<=40): engine DP == Python DP (brute force L<=7 on 16 masks)
+     cycle lists and escape counts for starts <= 3000: engine == Python reference
+     numeric exceptional dimension: -inf exactly on (i); = 1 exactly when a bottom SCC has positive drift
+
+====================================================================================================
+C. Level 5: all 65536 strategies
+====================================================================================================
+  engine output parsed: 65536 records (cache scratch/procgen_cube/strategy_cube/lvl5_N131072.txt.gz, not committed)
+  exact integer Karp (max/min odd density, global and per bottom SCC) re-derived for all 65536: classes (i), (ii) agree
+  every reported cycle re-verified exactly: 114320 cycles; no unresolved start; drift within 1e-9 of 0: 0
+  (83 s)
+
+====================================================================================================
+C'. Certificates: (i) descent (Terras DP + thresholds + finite check), (ii) trap expansion
+====================================================================================================
+  level 1: (i) 0 strategies, L_min histogram {}, max threshold n0 = 0;
+            complete cycle lists of the (i) strategies (by min element): {}
+            (ii) 0 strategies, block length M histogram {}, max W = 0.0000
+  level 2: (i) 1 strategies, L_min histogram {2: 1}, max threshold n0 = 1;
+            complete cycle lists of the (i) strategies (by min element): {(1,): 1}
+            (ii) 1 strategies, block length M histogram {2: 1}, max W = 0.5556
+  level 3: (i) 1 strategies, L_min histogram {2: 1}, max threshold n0 = 1;
+            complete cycle lists of the (i) strategies (by min element): {(1,): 1}
+            (ii) 1 strategies, block length M histogram {2: 1}, max W = 0.5556
+  level 4: (i) 16 strategies, L_min histogram {2: 1, 4: 7, 5: 4, 7: 4}, max threshold n0 = 4;
+            complete cycle lists of the (i) strategies (by min element): {(1,): 16}
+            (ii) 3 strategies, block length M histogram {2: 1, 18: 2}, max W = 5.0673
+  level 5: (i) 1052 strategies, L_min histogram {2: 1, 4: 67, 5: 254, 7: 368, 8: 164, 10: 132, 12: 34, 18: 24, 20: 8}, max threshold n0 = 22;
+            complete cycle lists of the (i) strategies (by min element): {(1,): 1052}
+            (ii) 32 strategies, block length M histogram {2: 1, 8: 6, 18: 17, 29: 8}, max W = 9.3808
+
+====================================================================================================
+D. Classification per level: (i) PROVED convergent, (ii) PROVED divergent, (iii) extra cycle found, (iv) OPEN
+====================================================================================================
+  (i)  all cycles of G_sigma contracting  <=>  Bad_L empty for some L (certificate + finite check)
+  (ii) a bottom SCC of G_sigma all of whose cycles expand (trap certificate)
+  (iii) a positive-integer cycle not through 1 found among starts <= 131072 (verified exactly)
+  (iv) OPEN: none of the above;  a strategy may carry two labels (I+III, II+III)
+  level 1: 2 strategies (2 new at this level)
+     I       all      0 ( 0.0000)   new      0
+     I+III   all      0 ( 0.0000)   new      0
+     II      all      0 ( 0.0000)   new      0
+     II+III  all      0 ( 0.0000)   new      0
+     III     all      1 ( 0.5000)   new      1
+     IV      all      1 ( 0.5000)   new      1
+     totals: (i) 0  (ii) 0  (iii) 1  (iv) 1
+  level 2: 4 strategies (2 new at this level)
+     I       all      1 ( 0.2500)   new      1
+     I+III   all      0 ( 0.0000)   new      0
+     II      all      1 ( 0.2500)   new      1
+     II+III  all      0 ( 0.0000)   new      0
+     III     all      1 ( 0.2500)   new      0
+     IV      all      1 ( 0.2500)   new      0
+     totals: (i) 1  (ii) 1  (iii) 1  (iv) 1
+  level 3: 16 strategies (12 new at this level)
+     I       all      1 ( 0.0625)   new      0
+     I+III   all      0 ( 0.0000)   new      0
+     II      all      1 ( 0.0625)   new      0
+     II+III  all      0 ( 0.0000)   new      0
+     III     all      5 ( 0.3125)   new      4
+     IV      all      9 ( 0.5625)   new      8
+     totals: (i) 1  (ii) 1  (iii) 5  (iv) 9
+  level 4: 256 strategies (240 new at this level)
+     I       all     16 ( 0.0625)   new     15
+     I+III   all      0 ( 0.0000)   new      0
+     II      all      2 ( 0.0078)   new      1
+     II+III  all      1 ( 0.0039)   new      1
+     III     all    114 ( 0.4453)   new    109
+     IV      all    123 ( 0.4805)   new    114
+     totals: (i) 16  (ii) 3  (iii) 115  (iv) 123
+  level 5: 65536 strategies (65280 new at this level)
+     I       all   1052 ( 0.0161)   new   1036
+     I+III   all      0 ( 0.0000)   new      0
+     II      all     16 ( 0.0002)   new     14
+     II+III  all     16 ( 0.0002)   new     15
+     III     all  35383 ( 0.5399)   new  35269
+     IV      all  29069 ( 0.4436)   new  28946
+     totals: (i) 1052  (ii) 32  (iii) 35399  (iv) 29069
+
+  Level 3, every strategy (rho_min / pi_odd / rho_max per bottom SCC; D = exceptional dimension):
+  sigma  ud    class   rho_max(G)  bottom SCC: size, rho_min, pi_odd, rho_max, drift/step   D       extra cycles (min)  nu-partner
+  ++++   dudu  IV         1/1       8,   0/1, 0.5000,   1/1, -0.1438   +0.950   []                  ----
+  -+++   uudu  III        1/1       8,   0/1, 0.5000,   1/1, -0.1438   +0.950   [7]                 ---+
+  +-++   dddu  IV         1/1       8,   0/1, 0.3750,   1/1, -0.2812   +0.804   []                  --+-
+  --++   uddu  IV         1/1       8,   0/1, 0.4000,   1/1, -0.2537   +0.846   []                  --++
+  ++-+   duuu  IV         1/1       6,   1/2, 0.8333,   1/1, +0.2224   +1.000   []                  -+--
+  -+-+   uuuu  II         1/1       4,   1/1, 1.0000,   1/1, +0.4055   +1.000   []                  -+-+
+  +--+   dduu  IV         1/1       8,   0/1, 0.4444,   1/1, -0.2049   +0.876   []                  -++-
+  ---+   uduu  IV         1/1       8,   0/1, 0.5000,   1/1, -0.1438   +0.950   []                  -+++
+  +++-   dudd  IV         2/3       8,   0/1, 0.4167,   2/3, -0.2354   +0.440   []                  +---
+  -++-   uudd  IV         1/1       8,   0/1, 0.4444,   1/1, -0.2049   +0.876   []                  +--+
+  +-+-   dddd  I          1/2       8,   0/1, 0.3333,   1/2, -0.3269   -inf   []                  +-+-
+  --+-   uddd  IV         1/1       8,   0/1, 0.3750,   1/1, -0.2812   +0.804   []                  +-++
+  ++--   duud  III        1/1       6,   1/2, 0.6667,   1/1, +0.0393   +1.000   [5, 13, 53]         ++--
+  -+--   uuud  III        1/1       6,   1/2, 0.8333,   1/1, +0.2224   +1.000   [5]                 ++-+
+  +---   ddud  III        2/3       8,   0/1, 0.4167,   2/3, -0.2354   +0.440   [5]                 +++-
+  ----   udud  III        1/1       8,   0/1, 0.5000,   1/1, -0.1438   +0.950   [5, 17]             ++++
+
+====================================================================================================
+C''. Budget sensitivity of (iii) at level 5: OPEN strategies re-searched with starts <= 2^20
+====================================================================================================
+  29069 OPEN strategies at starts <= 131072; with starts <= 1048576: 0 acquire a (verified) extra cycle
+  OPEN strategies with some start escaping past 2^60 (starts <= 1048576): 2248
+
+====================================================================================================
+E. The negation involution nu: sigma'(m) = -sigma(-m mod 2^k)
+====================================================================================================
+  level 2: nu = {'++': '--', '-+': '-+', '+-': '+-', '--': '++'}
+  => nu exchanges Collatz (++) and 3n-1 (--), and fixes (+-) and (-+)  [CHECKED]
+  In u/d coordinates nu is the reflection r -> -r of the word (tau'(r) = tau(-r)); self-dual <=> tau symmetric.
+  level 1: 2 strategies = 0 self-dual + 1 dual pairs  [formula: 2^(2^(k-2)) self-dual]
+     G-level data (classes (i),(ii), densities, bottom SCC data, |Bad_L|, D) identical on every nu-pair [CHECKED]
+     self-dual strategies by class: {}
+     dual pairs by (class, class): {('III', 'IV'): 1}
+     OPEN: 1; with OPEN partner (or self-dual): 0; with partner in (iii) [sheet-obstructed]: 1; OPEN closed under nu: False
+  level 2: 4 strategies = 2 self-dual + 1 dual pairs  [formula: 2^(2^(k-2)) self-dual]
+     G-level data (classes (i),(ii), densities, bottom SCC data, |Bad_L|, D) identical on every nu-pair [CHECKED]
+     self-dual strategies by class: {'II': 1, 'I': 1}
+     dual pairs by (class, class): {('III', 'IV'): 1}
+     OPEN: 1; with OPEN partner (or self-dual): 0; with partner in (iii) [sheet-obstructed]: 1; OPEN closed under nu: False
+  level 3: 16 strategies = 4 self-dual + 6 dual pairs  [formula: 2^(2^(k-2)) self-dual]
+     G-level data (classes (i),(ii), densities, bottom SCC data, |Bad_L|, D) identical on every nu-pair [CHECKED]
+     self-dual strategies by class: {'IV': 1, 'II': 1, 'I': 1, 'III': 1}
+     dual pairs by (class, class): {('III', 'IV'): 4, ('IV', 'IV'): 2}
+     OPEN: 9; with OPEN partner (or self-dual): 5; with partner in (iii) [sheet-obstructed]: 4; OPEN closed under nu: False
+  level 4: 256 strategies = 16 self-dual + 120 dual pairs  [formula: 2^(2^(k-2)) self-dual]
+     G-level data (classes (i),(ii), densities, bottom SCC data, |Bad_L|, D) identical on every nu-pair [CHECKED]
+     self-dual strategies by class: {'III': 5, 'IV': 8, 'II': 1, 'I': 2}
+     dual pairs by (class, class): {('I', 'I'): 7, ('II', 'II+III'): 1, ('III', 'III'): 38, ('III', 'IV'): 33, ('IV', 'IV'): 41}
+     OPEN: 123; with OPEN partner (or self-dual): 90; with partner in (iii) [sheet-obstructed]: 33; OPEN closed under nu: False
+  level 5: 65536 strategies = 256 self-dual + 32640 dual pairs  [formula: 2^(2^(k-2)) self-dual]
+     G-level data (classes (i),(ii), densities, bottom SCC data, |Bad_L|, D) identical on every nu-pair [CHECKED]
+     self-dual strategies by class: {'III': 127, 'IV': 113, 'II+III': 2, 'II': 2, 'I': 12}
+     dual pairs by (class, class): {('I', 'I'): 520, ('II', 'II'): 3, ('II', 'II+III'): 8, ('II+III', 'II+III'): 3, ('III', 'III'): 10224, ('III', 'IV'): 14808, ('IV', 'IV'): 7074}
+     OPEN: 29069; with OPEN partner (or self-dual): 14261; with partner in (iii) [sheet-obstructed]: 14808; OPEN closed under nu: False
+
+====================================================================================================
+F. Structure of the OPEN set: densities, drift, exceptional dimension
+====================================================================================================
+  level 2: OPEN 1
+     all bottom SCCs of negative drift (Collatz-like): 1;  some positive-drift bottom SCC (5n+1-like): 0
+     exceptional set nonempty for every OPEN strategy (Theorem A; |Bad_40| > 0): True
+     D over Collatz-like OPEN: min 0.9500  q25 0.9500  median 0.9500  q75 0.9500  max 0.9500
+     rho_max(G) over OPEN (most common): [('1/1', 1)]
+     OPEN with sigma(1) = -1 (1 is an expanding fixed point): 0;  with sigma(-1) = +1 (the Collatz -1 loop): 1;  either: 1;  neither: 0
+     drift/step of (i): [-0.3269, -0.3269];  of Collatz-like OPEN: [-0.1438, -0.1438]  -> overlap: False
+     least rho_max(G) among Collatz-like OPEN: 1 (log_3 2 = 0.6309); strategies attaining it: 1, e.g. ++ (du) with D = 0.9500
+     least D among Collatz-like OPEN: 0.9500 at ++ (du), rho_max 1/1
+     escapes past 2^60 among starts <= 131072: Collatz-like OPEN max 0; positive-drift OPEN min -
+  level 3: OPEN 9
+     all bottom SCCs of negative drift (Collatz-like): 8;  some positive-drift bottom SCC (5n+1-like): 1
+     exceptional set nonempty for every OPEN strategy (Theorem A; |Bad_40| > 0): True
+     D over Collatz-like OPEN: min 0.4398  q25 0.8043  median 0.8761  q75 0.9500  max 0.9500
+     rho_max(G) over OPEN (most common): [('1/1', 8), ('2/3', 1)]
+     OPEN with sigma(1) = -1 (1 is an expanding fixed point): 4;  with sigma(-1) = +1 (the Collatz -1 loop): 6;  either: 8;  neither: 1
+     drift/step of (i): [-0.3269, -0.3269];  of Collatz-like OPEN: [-0.2812, -0.1438]  -> overlap: False
+     largest bottom drift of (ii): [+0.4055, +0.4055];  of positive-drift OPEN: [+0.2224, +0.2224]
+     least rho_max(G) among Collatz-like OPEN: 2/3 (log_3 2 = 0.6309); strategies attaining it: 1, e.g. +++- (dudd) with D = 0.4398
+     least D among Collatz-like OPEN: 0.4398 at +++- (dudd), rho_max 2/3
+     escapes past 2^60 among starts <= 131072: Collatz-like OPEN max 0; positive-drift OPEN min 19985
+  level 4: OPEN 123
+     all bottom SCCs of negative drift (Collatz-like): 112;  some positive-drift bottom SCC (5n+1-like): 11
+     exceptional set nonempty for every OPEN strategy (Theorem A; |Bad_40| > 0): True
+     D over Collatz-like OPEN: min 0.4141  q25 0.8030  median 0.8689  q75 0.9242  max 0.9998
+     rho_max(G) over OPEN (most common): [('1/1', 114), ('2/3', 6), ('3/4', 3)]
+     OPEN with sigma(1) = -1 (1 is an expanding fixed point): 63;  with sigma(-1) = +1 (the Collatz -1 loop): 69;  either: 101;  neither: 22
+     drift/step of (i): [-0.3269, -0.2659];  of Collatz-like OPEN: [-0.2937, -0.0116]  -> overlap: True
+     largest bottom drift of (ii): [+0.2681, +0.4055];  of positive-drift OPEN: [+0.0393, +0.3139]
+     least rho_max(G) among Collatz-like OPEN: 2/3 (log_3 2 = 0.6309); strategies attaining it: 6, e.g. +-++-++- (ddduuudd) with D = 0.4141
+     least D among Collatz-like OPEN: 0.4141 at +-++-++- (ddduuudd), rho_max 2/3
+     escapes past 2^60 among starts <= 131072: Collatz-like OPEN max 8; positive-drift OPEN min 1305
+  level 5: OPEN 29069
+     all bottom SCCs of negative drift (Collatz-like): 28064;  some positive-drift bottom SCC (5n+1-like): 1005
+     exceptional set nonempty for every OPEN strategy (Theorem A; |Bad_40| > 0): True
+     D over Collatz-like OPEN: min 0.3629  q25 0.8269  median 0.8921  q75 0.9454  max 1.0000
+     rho_max(G) over OPEN (most common): [('1/1', 25492), ('3/4', 1021), ('2/3', 788), ('4/5', 724), ('5/6', 372), ('5/7', 336), ('6/7', 176), ('7/8', 73)]
+     OPEN with sigma(1) = -1 (1 is an expanding fixed point): 14617;  with sigma(-1) = +1 (the Collatz -1 loop): 15159;  either: 22440;  neither: 6629
+     drift/step of (i): [-0.3269, -0.2412];  of Collatz-like OPEN: [-0.3203, -0.0002]  -> overlap: True
+     largest bottom drift of (ii): [+0.2224, +0.4055];  of positive-drift OPEN: [+0.0002, +0.3597]
+     least rho_max(G) among Collatz-like OPEN: 2/3 (log_3 2 = 0.6309); strategies attaining it: 788, e.g. +-++--++++++--+- (ddduuddududuuddd) with D = 0.3629
+     least D among Collatz-like OPEN: 0.3629 at +-++--++++++--+- (ddduuddududuuddd), rho_max 2/3
+     escapes past 2^60 among starts <= 131072: Collatz-like OPEN max 122423; positive-drift OPEN min 11438
+
+====================================================================================================
+F2. Where the (iii) witnesses live: smallest extra cycle, and the near-critical giants
+====================================================================================================
+  level 3: strategies with an extra cycle: 5; smallest extra minimum: <=10: 5, <=100: 0, <=1000: 0, <=10^4: 0, >10^4: 0
+     most common extra-cycle minima: [(5, 4), (7, 1), (13, 1), (53, 1), (17, 1)]
+  level 4: strategies with an extra cycle: 115; smallest extra minimum: <=10: 102, <=100: 13, <=1000: 0, <=10^4: 0, >10^4: 0
+     most common extra-cycle minima: [(5, 73), (7, 29), (17, 15), (43, 10), (11, 8), (31, 6), (53, 5), (91, 4), (857, 3), (139, 2)]
+  level 5: strategies with an extra cycle: 35399; smallest extra minimum: <=10: 25508, <=100: 9104, <=1000: 700, <=10^4: 64, >10^4: 23
+     most common extra-cycle minima: [(5, 18966), (7, 6542), (11, 4570), (17, 3470), (29, 2319), (43, 1063), (41, 1036), (53, 804), (13, 780), (23, 493)]
+  level 5: 2094 cycles of length >= 300 in 1742 strategies; every one has |a/p - log_3 2| < 3e-4, and 1834 have < 1e-5.
+  (exact identity for any cycle: a log 3 - p log 2 = -sum over its odd points x of log(1 + sigma(x)/(3x)))
+  most frequent (length p, odd steps a):
+     p =  1054, a =   665  (= 1 x (1054, 665))   3^a > 2^p   1052 cycles in 902 strategies
+     p =   485, a =   306  (= 1 x (485, 306))   3^a < 2^p   199 cycles in 198 strategies
+     p =   569, a =   359  (= 1 x (569, 359))   3^a > 2^p   155 cycles in 155 strategies
+     p =   401, a =   253  (= 1 x (401, 253))   3^a < 2^p   97 cycles in 96 strategies
+     p =  2108, a =  1330  (= 2 x (1054, 665))   3^a > 2^p   84 cycles in 84 strategies
+     p =   317, a =   200  (= 1 x (317, 200))   3^a < 2^p   48 cycles in 48 strategies
+     p =   336, a =   212  (= 4 x (84, 53))   3^a > 2^p   40 cycles in 40 strategies
+     p =   653, a =   412  (= 1 x (653, 412))   3^a > 2^p   26 cycles in 26 strategies
+     p =  1539, a =   971  (= 1 x (1539, 971))   3^a < 2^p   24 cycles in 24 strategies
+     p =  3162, a =  1995  (= 3 x (1054, 665))   3^a > 2^p   23 cycles in 23 strategies
+     p =   970, a =   612  (= 2 x (485, 306))   3^a < 2^p   21 cycles in 21 strategies
+     p =   325, a =   205  (= 5 x (65, 41))   3^a < 2^p   18 cycles in 18 strategies
+  (the convergents of log_2 3 are 1, 2, 3/2, 8/5, 19/12, 65/41, 84/53, 485/306, 1054/665, ...)
+
+====================================================================================================
+G. The provability boundary, checked on every strategy of levels 1-5
+====================================================================================================
+  checked on 65814 strategies:
+   Theorem A:  (i) <=> every cycle of G_sigma has odd density < log_3 2 <=> Bad_L = empty for some L
+   Theorem B:  (ii) <=> some bottom SCC has every cycle of odd density > log_3 2  (=> that trap has positive drift)
+   sandwich:   rho_min(C) <= pi_odd(C) <= rho_max(C) on every bottom SCC C (drift = pi_odd log 3 - log 2)
+  level 2: non-(i) by the two fixed-point obstructions (sigma(1)=-1, sigma(-1)=+1): {'.-1': 1, '1.': 1, '1-1': 1}
+  level 3: non-(i) by the two fixed-point obstructions (sigma(1)=-1, sigma(-1)=+1): {'..': 3, '.-1': 4, '1.': 4, '1-1': 4}
+  level 4: non-(i) by the two fixed-point obstructions (sigma(1)=-1, sigma(-1)=+1): {'..': 48, '.-1': 64, '1.': 64, '1-1': 64}
+  level 5: non-(i) by the two fixed-point obstructions (sigma(1)=-1, sigma(-1)=+1): {'..': 15332, '.-1': 16384, '1.': 16384, '1-1': 16384}
+
+====================================================================================================
+H. Collatz's neighbourhood: Hamming / Haar distance from all-plus to each class
+====================================================================================================
+  level 2 (2 odd residues):
+     nearest (i): Hamming 1 = Haar 0.5000; 1 strategies at that distance, e.g. ['+-']
+     nearest (ii): Hamming 1 = Haar 0.5000; 1 strategies at that distance, e.g. ['-+']
+     nearest (iii): Hamming 2 = Haar 1.0000; 1 strategies at that distance, e.g. ['--']
+     single-flip neighbours of Collatz by class: {'II': 1, 'I': 1}
+     Collatz itself: class IV, rho_max 1/1, rho_min 0/1, D 0.949956
+  level 3 (4 odd residues):
+     nearest (i): Hamming 2 = Haar 0.5000; 1 strategies at that distance, e.g. ['+-+-']
+     nearest (ii): Hamming 2 = Haar 0.5000; 1 strategies at that distance, e.g. ['-+-+']
+     nearest (iii): Hamming 1 = Haar 0.2500; 1 strategies at that distance, e.g. ['-+++']
+     single-flip neighbours of Collatz by class: {'III': 1, 'IV': 3}
+     Collatz itself: class IV, rho_max 1/1, rho_min 0/1, D 0.949956
+  level 4 (8 odd residues):
+     nearest (i): Hamming 2 = Haar 0.2500; 1 strategies at that distance, e.g. ['+++++-+-']
+     nearest (ii): Hamming 3 = Haar 0.3750; 1 strategies at that distance, e.g. ['-+-+++-+']
+     nearest (iii): Hamming 1 = Haar 0.1250; 3 strategies at that distance, e.g. ['-+++++++', '++-+++++', '++++++-+']
+     single-flip neighbours of Collatz by class: {'III': 3, 'IV': 5}
+     Collatz itself: class IV, rho_max 1/1, rho_min 0/1, D 0.949956
+  level 5 (16 odd residues):
+     nearest (i): Hamming 4 = Haar 0.2500; 11 strategies at that distance, e.g. ['+++-+++-++++-++-', '+++-+++++-++-++-', '+++-+++++++--++-', '+++-+++-+++++-+-']
+     nearest (ii): Hamming 5 = Haar 0.3125; 1 strategies at that distance, e.g. ['-+-+++-+++-+++-+']
+     nearest (iii): Hamming 1 = Haar 0.0625; 5 strategies at that distance, e.g. ['-+++++++++++++++', '++-+++++++++++++', '++++++-+++++++++', '++++++++-+++++++']
+     single-flip neighbours of Collatz by class: {'III': 5, 'IV': 11}
+     Collatz itself: class IV, rho_max 1/1, rho_min 0/1, D 0.949956
+
+====================================================================================================
+H2. Hamming-ball searches around Collatz at levels 6 and 7 (engine 'ball' mode, exhaustive within the radius)
+====================================================================================================
+  level 3, class (i): nearest at Hamming 2 = Haar 0.5000 (1 strategies); e.g. flips at residues [3, 7] mod 8
+       each hit re-verified exactly: all cycles contracting, descent certificate, finite check -> only the cycle {1,2}
+  level 4, class (i): nearest at Hamming 2 = Haar 0.2500 (1 strategies); e.g. flips at residues [11, 15] mod 16
+       each hit re-verified exactly: all cycles contracting, descent certificate, finite check -> only the cycle {1,2}
+  level 5, class (i): nearest at Hamming 4 = Haar 0.2500 (11 strategies); e.g. flips at residues [7, 15, 25, 31] mod 32
+       each hit re-verified exactly: all cycles contracting, descent certificate, finite check -> only the cycle {1,2}
+  level 6, class (i): nearest at Hamming 5 = Haar 0.1562 (1 strategies); e.g. flips at residues [7, 15, 27, 59, 63] mod 64
+       each hit re-verified exactly: all cycles contracting, descent certificate, finite check -> only the cycle {1,2}
+  level 7, class (i): none within Hamming 6 (Haar 0.0938); 7068621 strategies tested
+  level 3, class (ii): nearest at Hamming 2 = Haar 0.5000 (1 strategies); e.g. flips at residues [1, 5] mod 8
+  level 4, class (ii): nearest at Hamming 3 = Haar 0.3750 (1 strategies); e.g. flips at residues [1, 5, 13] mod 16
+  level 5, class (ii): nearest at Hamming 5 = Haar 0.3125 (1 strategies); e.g. flips at residues [1, 5, 13, 21, 29] mod 32
+  level 6, class (ii): none within Hamming 9 (Haar 0.2812); 43081973 strategies tested
+
+====================================================================================================
+H3. Exact distances from Collatz to the provable classes (lazy-constraint MaxSAT / CP-SAT, solver-certified)
+====================================================================================================
+  delta_k = least number of odd residues mod 2^k at which sigma must differ from Collatz for class (i);
+  eps_k   = the same for class (ii).  Lazy no-good clauses are necessary conditions, so the solver optimum is a
+  lower bound, and the first optimum without offending cycles is optimal.  Every optimum is re-verified exactly.
+  Lifting preserves the map, so delta_k / 2^(k-1) and eps_k / 2^(k-1) are non-increasing in k.
+  (i)  level 2: delta =   1 of   2  Haar 0.5000   [2 iterations, 2 clauses, 0 s]  witness verified: rho_max 1/2, L_min 2, n0 1
+       flips at residues [3]
+  (i)  level 3: delta =   2 of   4  Haar 0.5000   [3 iterations, 3 clauses, 0 s]  witness verified: rho_max 1/2, L_min 2, n0 1
+       flips at residues [3, 7]
+  (i)  level 4: delta =   2 of   8  Haar 0.2500   [2 iterations, 4 clauses, 0 s]  witness verified: rho_max 3/5, L_min 5, n0 3
+       flips at residues [11, 15]
+  (i)  level 5: delta =   4 of  16  Haar 0.2500   [3 iterations, 9 clauses, 0 s]  witness verified: rho_max 3/5, L_min 5, n0 4
+       flips at residues [7, 23, 27, 31]
+  (i)  level 6: delta =   5 of  32  Haar 0.1562   [6 iterations, 25 clauses, 0 s]  witness verified: rho_max 5/8, L_min 8, n0 16
+       flips at residues [7, 15, 27, 59, 63]
+  (i)  level 7: delta =   9 of  64  Haar 0.1406   [18 iterations, 101 clauses, 0 s]  witness verified: rho_max 5/8, L_min 10, n0 24
+       flips at residues [7, 27, 39, 71, 79, 95, 103, 121, 127]
+  (i)  level 8: delta =  14 of 128  Haar 0.1094   [28 iterations, 300 clauses, 0 s]  witness verified: rho_max 5/8, L_min 64, n0 221
+  (i)  level 9: delta =  23 of 256  Haar 0.0898   [55 iterations, 1019 clauses, 297 s]  witness verified: rho_max 5/8, L_min 21, n0 24
+  (ii) level 2: eps   =   1 of   2  Haar 0.5000   [2 iterations, 3 clauses, 0 s]  witness verified by exact Karp
+       flips at residues [1]
+  (ii) level 3: eps   =   2 of   4  Haar 0.5000   [2 iterations, 4 clauses, 0 s]  witness verified by exact Karp
+       flips at residues [1, 5]
+  (ii) level 4: eps   =   3 of   8  Haar 0.3750   [2 iterations, 6 clauses, 0 s]  witness verified by exact Karp
+       flips at residues [1, 5, 13]
+  (ii) level 5: eps   =   5 of  16  Haar 0.3125   [2 iterations, 15 clauses, 0 s]  witness verified by exact Karp
+       flips at residues [1, 5, 13, 21, 29]
+  (ii) level 6: eps   =  10 of  32  Haar 0.3125   [5 iterations, 44 clauses, 0 s]  witness verified by exact Karp
+       flips at residues [1, 5, 13, 21, 29, 33, 37, 45, 53, 61]
+  (ii) level 7: eps   =  18 of  64  Haar 0.2812   [15 iterations, 162 clauses, 0 s]  witness verified by exact Karp
+  (ii) level 8: eps   =  30 of 128  Haar 0.2344   [23 iterations, 407 clauses, 324 s]  witness verified by exact Karp
+
+====================================================================================================
+F3. Exceptional dimension: Perron formula against exact counts |Bad_L| to L = 600
+====================================================================================================
+  ++    (level 2): D = 0.949956;  slopes of log2|Bad_L| on [200,300], [300,400], [400,600]: 0.9419, 0.9444, 0.9459
+  +-++  (level 3): D = 0.804263;  slopes of log2|Bad_L| on [200,300], [300,400], [400,600]: 0.7959, 0.7989, 0.8005
+  +++-  (level 3): D = 0.439822;  slopes of log2|Bad_L| on [200,300], [300,400], [400,600]: 0.4301, 0.4377, 0.4376
+  (the slopes carry the usual O(log L / L) correction; Collatz's D is h(log_3 2) = 0.949956)
+
+====================================================================================================
+H4. The single-flip neighbours of Collatz, levels 2-9 (same budget: starts <= 131072, cap 2^60)
+====================================================================================================
+  level 2: 2 single flips; in (i): 1, in (ii): 1, with an extra cycle (iii): 0  [flipped residue: smallest extra cycle] []
+  level 3: 4 single flips; in (i): 0, in (ii): 0, with an extra cycle (iii): 1  [flipped residue: smallest extra cycle] [(1, 7)]
+  level 4: 8 single flips; in (i): 0, in (ii): 0, with an extra cycle (iii): 3  [flipped residue: smallest extra cycle] [(1, 11), (5, 5), (13, 7)]
+  level 5: 16 single flips; in (i): 0, in (ii): 0, with an extra cycle (iii): 5  [flipped residue: smallest extra cycle] [(1, 103), (5, 5), (13, 11), (17, 11), (29, 31)]
+  level 6: 32 single flips; in (i): 0, in (ii): 0, with an extra cycle (iii): 6  [flipped residue: smallest extra cycle] [(1, 31), (5, 5), (13, 11), (17, 11), (59, 47), (61, 31)]
+  level 7: 64 single flips; in (i): 0, in (ii): 0, with an extra cycle (iii): 11  [flipped residue: smallest extra cycle] [(5, 5), (13, 11), (17, 11), (39, 47), (49, 31), (61, 31), (65, 31), (69, 31), (81, 91), (123, 47), (125, 31)]
+  level 8: 128 single flips; in (i): 0, in (ii): 0, with an extra cycle (iii): 12  [flipped residue: smallest extra cycle] [(5, 5), (13, 11), (17, 11), (61, 61), (65, 31), (69, 31), (81, 91), (125, 31), (167, 47), (177, 31), (189, 91), (251, 47)]
+  level 9: 256 single flips; in (i): 0, in (ii): 0, with an extra cycle (iii): 12  [flipped residue: smallest extra cycle] [(5, 5), (13, 11), (17, 11), (61, 61), (65, 31), (81, 91), (167, 47), (251, 47), (325, 31), (381, 31), (433, 31), (445, 91)]
+
+====================================================================================================
+I. Microcosm -> macrocosm: class fractions as k grows
+====================================================================================================
+  levels 1-5: all strategies (exact); levels 6-12: uniform samples (seed 20260925), each with its nu-partner;
+  the same certificates and the same cycle budget (starts <= 131072, cap 2^60) at every level.
+
+   k   strategies   (i)      (ii)     (iii)    (iv)=OPEN  | OPEN sheet-obstructed | pos-drift  rho_max=1  sigma(1)=- or sigma(-1)=+
+   1        2 all    0.0000   0.0000   0.5000   0.5000     | 1.000 of OPEN         | 0.0000    1.0000     1.0000
+   2        4 all    0.2500   0.2500   0.2500   0.2500     | 1.000 of OPEN         | 0.2500    0.7500     0.7500
+   3       16 all    0.0625   0.0625   0.3125   0.5625     | 0.444 of OPEN         | 0.2500    0.8125     0.7500
+   4      256 all    0.0625   0.0117   0.4492   0.4805     | 0.268 of OPEN         | 0.1836    0.8477     0.7500
+   5    65536 all    0.0161   0.0005   0.5401   0.4436     | 0.509 of OPEN         | 0.1047    0.8776     0.7500
+   6     4000 sample 0.0008   0.0000   0.5630   0.4363     | 0.519 of OPEN         | 0.0395    0.9123     0.7598
+   7     3000 sample 0.0000   0.0000   0.5723   0.4277     | 0.571 of OPEN         | 0.0060    0.9163     0.7550
+   8     2000 sample 0.0000   0.0000   0.5770   0.4230     | 0.534 of OPEN         | 0.0000    0.9275     0.7405
+   9     1500 sample 0.0000   0.0000   0.5633   0.4367     | 0.592 of OPEN         | 0.0000    0.9493     0.7433
+  10     1000 sample 0.0000   0.0000   0.5740   0.4260     | 0.566 of OPEN         | 0.0000    0.9490     0.7620
+  11      600 sample 0.0000   0.0000   0.5850   0.4150     | 0.574 of OPEN         | 0.0000      n/a      0.7367
+  12      400 sample 0.0000   0.0000   0.5575   0.4425     | 0.582 of OPEN         | 0.0000      n/a      0.7475
+
+   k = 6: OPEN fraction 0.4363 +- 0.0078 (1 s.e.)
+   k = 7: OPEN fraction 0.4277 +- 0.0090 (1 s.e.)
+   k = 8: OPEN fraction 0.4230 +- 0.0110 (1 s.e.)
+   k = 9: OPEN fraction 0.4367 +- 0.0128 (1 s.e.)
+   k = 10: OPEN fraction 0.4260 +- 0.0156 (1 s.e.)
+   k = 11: OPEN fraction 0.4150 +- 0.0201 (1 s.e.)
+   k = 12: OPEN fraction 0.4425 +- 0.0248 (1 s.e.)
+
+====================================================================================================
+I3. Drift concentration: stationary odd density pi_odd of the main bottom SCC
+====================================================================================================
+   critical density log_3 2 = 0.630930;  Collatz pi_odd = 1/2 (drift log(3/4) per odd step)
+   k    mean pi_odd   s.d.     s.d.*2^(k/2)   frac(pi_odd > log_3 2)   mean D over negative-drift non-(i)
+   1    0.50000      0.00000   0.000          0.0000                   0.9500 (n=2)
+   2    0.58333      0.25000   0.500          0.2500                   0.9500 (n=2)
+   3    0.53368      0.18890   0.534          0.2500                   0.8079 (n=11)
+   4    0.52018      0.12870   0.515          0.1836                   0.8895 (n=193)
+   5    0.50918      0.09117   0.516          0.1047                   0.9075 (n=57620)
+   6    0.50510      0.06541   0.523          0.0395                   0.9274 (n=3839)
+   7    0.50308      0.04738   0.536          0.0060                   0.9392 (n=2982)
+   8    0.50022      0.03253   0.520          0.0000                   0.9439 (n=2000)
+   9    0.50043      0.02396   0.542          0.0000                   n/a
+  10    0.50030      0.01765   0.565          0.0000                   n/a
+  11    0.49882      0.01255   0.568          0.0000                   n/a
+  12    0.50036      0.00860   0.551          0.0000                   n/a
+   (Collatz: pi_odd = 1/2, D = h(log_3 2) = 0.94996)
+
+====================================================================================================
+I4. The k = infinity model: independent random sign for every odd integer
+====================================================================================================
+   1000 independent sign fields, starts 1..1000000, cap 2^60
+   X        P(no extra cycle with minimum <= X)
+   10       0.6130
+   30       0.4960
+   100      0.4360
+   300      0.4360
+   1000     0.4350
+   3000     0.4350
+   10000    0.4350
+   30000    0.4350
+   100000   0.4350
+   300000   0.4350
+   1000000  0.4350
+   number of extra cycles met (starts <= 1000000): {0: 435, 1: 476, 2: 85, 3: 4}; mean 0.658
+   escapes past 2^60: max over fields 0
+
+====================================================================================================
+DONE
+====================================================================================================
+  ALL CHECKS PASSED  (1849 s)

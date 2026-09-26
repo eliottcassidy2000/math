@@ -1,0 +1,5 @@
+S1-S4 level 2: class (i) = 1 strategies; all converge (n<3000); all have sigma(1)=+, sigma(-1)=-; nu-invariant densities: ok
+S1-S4 level 3: class (i) = 1 strategies; all converge (n<3000); all have sigma(1)=+, sigma(-1)=-; nu-invariant densities: ok
+S1-S4 level 4: class (i) = 16 strategies; all converge (n<3000); all have sigma(1)=+, sigma(-1)=-; nu-invariant densities: ok
+S5  Collatz and 3n-1 have max cycle density 1 at levels 2-6: ok
+ALL CHECKS PASSED
