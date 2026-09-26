@@ -411,6 +411,128 @@ and `E_g(0.90) = 0.87`, and it is the general form of the "slope of
 **Status of the audit:** SOUND for Theorems 1–3 (theorem file, audit
 field); Theorem 4 was added after the audit and is not covered by it.
 
+### 1.6 Theorem 5 (PROVED, post-audit; THM-4498): the polynomial orders of the dip spectrum
+
+**Theorem 5.** For `b = +-1`, `alpha = log_2 3`, `rho = gamma/alpha`, `h* = h(log_3 2)`:
+
+```text
+(a)  log_4 3 < gamma < 1 :  D_b(X, gamma) = Theta_gamma( X^(h(rho)) (log_2 X)^(-1/2) );
+(b)  gamma = 1           :  D_b(X, 1)     = Theta( X^(h*) (log_2 X)^(-3/2) )          (THM-4495, C3);
+(c)  0 < gamma <= log_4 3:  D_b(X, gamma) = Theta_gamma( X )   (positive density on both sheets).
+```
+
+So along the entropy curve the polynomial factor is `1` up to Korec's
+endpoint, `(log X)^(-1/2)` strictly between Korec and Terras, and
+`(log X)^(-3/2)` at Terras's endpoint; the constant in (a) blows up like
+`1/(1 - (1-rho)/rho)` as `gamma` decreases to `log_4 3`, where the geometric
+tail of the binomial stops converging.
+
+*Proof of (a), upper bound.* Section 1.2b.
+
+*Proof of (a), lower bound.* Put `c = 1 - gamma in (0, 1 - log_4 3)`; a word
+with `rho` odd letters per step has drift `rho alpha - 1 = -c`. Fix an integer
+`K` (chosen below), let `t >= t_0`, `t' = t - K`, `j = ceil(rho t')`, and let `V`
+be the set of words `v in {0,1}^(t')` with exactly `j` odd letters, so
+`|V| = C(t', j)` and `S_(t')(v) = j alpha - t' >= -c t'`. For `v in V` define the
+*final rise* `F(v) = max_(0 <= i <= t') (S_(t')(v) - S_(t'-i)(v))`, the largest
+sum of a terminal block of letters. Sampling the letters of a uniformly
+random `v in V` from the end, the number `Y_i` of odd letters among the
+last `i` is hypergeometric with mean `ij/t' <= rho i + 1`, and the terminal
+block sum is `alpha Y_i - i`, of mean at most `-c i + alpha`. Hoeffding's
+inequality for sampling without replacement (Hoeffding 1963, Theorem 4:
+the same bound as for independent sampling) gives
+`P(alpha Y_i - i >= -c i/2 + alpha) <= P(Y_i - E Y_i >= c i/(2 alpha)) <= exp(-c^2 i/(2 alpha^2))`.
+Let `i_0 = i_0(c)` be such that `sum_(i >= i_0) exp(-c^2 i/(2 alpha^2)) <= 1/2`.
+With probability at least `1/2` every terminal block of length `i >= i_0`
+sums to less than `alpha`, and every block of length `i < i_0` sums to at
+most `0.585 i_0`; so at least half of `V` has `F(v) <= delta_0 := max(alpha, 0.585 i_0)`.
+Call these `v` good and choose `K` with `(c + 0.585) K >= delta_0 + c + 2`.
+For good `v` let `w = 1^K v` (`K` odd letters, then `v`), a word of length `t`.
+Its partial sums satisfy `S_i(w) = 0.585 i > 0` for `i <= K` and, for
+`i = K + l`, `S_i(w) = 0.585 K + S_l(v) >= 0.585 K + S_(t')(v) - F(v) >= 0.585 K - c t' - delta_0 >= -c(t + 1) + 2`;
+hence `M_i(w) >= 4 * 2^((gamma - 1)(t + 1)) >= 4 n^(gamma - 1)` for every
+`n in [2^t, 2^(t+1))` and every `1 <= i <= t`. For such `n` in the residue
+class of `w` (one per class in the block), the affine form and the carry
+bound give `T_b^i(n) >= M_i n - (3/2)^t >= 4 n^gamma - (3/2)^t >= n^gamma`
+for `t >= t_0` (as `gamma > log_4 3 > log_2(3/2)`), on both sheets. So the
+block `[2^t, 2^(t+1))` contains at least `C(t', j)/2` non-dippers, and by
+Stirling's lower bound with `j/t' in [rho, rho + 1/t']`,
+`C(t', j)/2 >= 2^(t' h(rho)) 2^(-1)/(2 sqrt(8 t' p(1-p))) >= c_1'(gamma) 2^(t h(rho)) t^(-1/2)`
+(the `2^(-K h(rho))` and the `|h'| <= 1` loss are constants). Summing over
+`t <= log_2 X - 1` gives the lower bound of (a). ∎
+
+*Proof of (c).* Upper bound: `D_b(X, gamma) <= X`. Lower bound: put
+`c_0 = 1 - log_4 3 = 0.2075`, the drift of a uniformly random word
+(`alpha/2 - 1 = -c_0`), and `c = 1 - gamma >= c_0`. Take `w = 1^K v` with `v`
+uniform in `{0,1}^(t')`. As above, `S_(K+l)(w) > -c t + 2` for all `l` as soon
+as `S_l(v) > -c_0 t' - delta'` for all `l <= t'`, where `delta' = (c_0 + 0.585) K - 2`.
+This holds when the final rise of `v` is at most `delta'/2` and
+`S_(t')(v) >= -c_0 t' - delta'/2`. By Hoeffding for independent letters,
+`P(terminal block of length i sums to >= delta'/2) <= exp(-2(c_0 i + delta'/2)^2/(alpha^2 i)) <= e^(-2 c_0 delta'/alpha^2) e^(-2 c_0^2 i/alpha^2)`,
+and the sum over `i >= 1` is at most `1/4` once `delta' >= 29`, i.e.
+`K >= 40`. By the central limit theorem `P(S_(t')(v) >= E S_(t')(v)) -> 1/2`,
+so for `t' >= t_1` at least a fifth of all `v` are good, the block contributes
+at least `2^(t')/5` non-dippers, and `D_b(X, gamma) >= c X`. For
+`gamma <= log_2(3/2)` the additive carry bound is replaced by the
+multiplicative one of Theorem 4 (`y_i = M_i n (1 + O(n^(-gamma) log n))`
+along a no-dip orbit), which needs only `gamma > 0`. ∎
+
+*Remarks.* (i) At `gamma = log_4 3` itself the count is `Theta(X)`: (c)
+applies with `c = c_0`. Korec's theorem is the statement that the density
+drops to `0` immediately above it, and (a) says how: like
+`X^(h(rho) - 1) (log X)^(-1/2)`. (ii) The constant `c_1'(gamma)` of (a)
+carries `2^(-K h(rho))` with `K` of order `i_0(c) ~ alpha^2 c^(-2) log(1/c)`:
+the construction is wasteful, and the true constant is the reversed-bridge
+probability of staying below a line of slope `c`, of order `c` for small
+`c`. The control below shows the normalised counts `W_t(gamma) t^(1/2) 2^(-tE)`
+converging slowly for `gamma` near `log_4 3` (where the geometric ratio
+`(1-rho)/rho` is close to `1`) and settled for `gamma >= 0.94`. (iii) Nothing
+here concerns Collatz orbits; it completes THM-4487's description of the
+no-dip sets of the free window.
+
+**Control (FINITE-EXACT)** (`collatz_dipspectrum_20260926_orders.py`, exact
+DP word counts `W_t(gamma)` with the barrier `(gamma - 1) t`, the brute-force
+orbit counts of section 2 renormalised, and the constants of the
+construction):
+
+```text
+gamma:          0.820    0.850    0.880    0.910    0.940    0.970    1.000
+E(gamma):      0.9991   0.9962   0.9912   0.9841   0.9749   0.9635   0.9500
+(1) exact word counts: W_t(gamma) t^(1/2) 2^(-tE)  [last column gamma = 1 uses t^(3/2)]
+   t=   25:    1.7128   1.3399   1.0950   0.7925   0.6064   0.3151   5.0823
+   t=   50:    2.4199   1.8416   1.3944   1.0077   0.6778   0.4041   6.6436
+   t=  100:    3.2664   2.4204   1.7534   1.2214   0.7798   0.4102   7.6613
+   t=  150:    3.9263   2.7135   1.8754   1.2901   0.8750   0.4436   8.5838
+   t=  200:    4.3617   2.9278   1.9746   1.4231   0.9141   0.4520   8.9188
+   t=  300:    4.9948   3.3323   2.2362   1.4723   0.9508   0.4759   9.3945
+   t=  400:    5.6058   3.5282   2.2521   1.5291   0.9472   0.4794   9.8402
+   t=  500:    5.9506   3.5986   2.4220   1.5218   0.9839   0.4558  10.1281
+   t=  600:    6.2936   3.7958   2.3910   1.6134   1.0044   0.4755  10.3613
+   t=  800:    6.8955   1.6048  10.4458   (gamma = 0.82, 0.91, 1.0 only)
+   t= 1000:    7.1951   1.6220  10.6555   (gamma = 0.82, 0.91, 1.0 only)
+   t= 1500:    7.7999   1.6596  10.6182   (gamma = 0.82, 0.91, 1.0 only)
+   t= 2000:    8.3555   1.6728  10.9233   (gamma = 0.82, 0.91, 1.0 only)
+   t= 3000:    8.8205   1.7187  10.8314   (gamma = 0.82, 0.91, 1.0 only)
+(2) THM-4487's brute-force D_+(2^T, gamma) normalised: D T^(1/2) / 2^(T E)   (gamma = 0.792 is Korec's endpoint, E = 1)
+    gamma:     0.792    0.820    0.850    0.880    0.910    0.940    0.970    1.000
+    T=10:     1.2785   1.0688   0.9449   0.8207   0.6104   0.5330   0.4494   0.3888
+    T=12:     1.4031   1.1645   1.0134   0.8154   0.6469   0.5431   0.4010   0.3603
+    T=14:     1.5148   1.2582   1.0952   0.8670   0.7247   0.5025   0.3889   0.3244
+    T=16:     1.6296   1.3379   1.1441   0.8990   0.7545   0.5226   0.4020   0.3086
+    T=18:     1.7397   1.4317   1.1652   0.9780   0.7721   0.5461   0.4098   0.2794
+    T=20:     1.8440   1.5266   1.2208   1.0388   0.7976   0.5780   0.3980   0.2708
+    T=22:     1.9452   1.6105   1.2759   1.0539   0.7781   0.6044   0.3826   0.2535
+    T=24:     2.0415   1.6891   1.3385   1.0782   0.8244   0.6107   0.3619   0.2469
+    the alternative normalisation D T^(3/2) / 2^(T E) at gamma = 0.91: 6.10, 7.76, 10.15, 12.07, 13.90, 15.95, 17.12, 19.79
+(3) lower-bound construction: c = 1 - gamma, Hoeffding tail exp(-c^2 i/(2 alpha^2)); i_0(c) with the tail sum <= 1/2, delta_0 = max(alpha, 0.585 i_0), K_0 = ceil((delta_0 + c + 2)/(c + 0.585))
+   gamma=0.82: c=0.18, i_0=891, delta_0=521.20, K_0=685, cost 2^(-K_0 E) = 9.42e-207
+   gamma=0.85: c=0.15, i_0=1363, delta_0=797.30, K_0=1088, cost 2^(-K_0 E) = 0.00e+00
+   gamma=0.88: c=0.12, i_0=2286, delta_0=1337.22, K_0=1900, cost 2^(-K_0 E) = 0.00e+00
+   gamma=0.91: c=0.09, i_0=4419, delta_0=2584.95, K_0=3833, cost 2^(-K_0 E) = 0.00e+00
+   gamma=0.94: c=0.06, i_0=11074, delta_0=6477.87, K_0=10047, cost 2^(-K_0 E) = 0.00e+00
+   gamma=0.97: c=0.03, i_0=52032, delta_0=30436.77, K_0=49497, cost 2^(-K_0 E) = 0.00e+00
+```
+
 ## 2. Controls (FINITE-EXACT)
 
 `collatz_dipspectrum_20260926.py 24` iterates every `n <= 2^24` for

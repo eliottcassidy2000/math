@@ -146,11 +146,12 @@ For `b = +-1`, `alpha = log_2 3`, `h` the binary entropy:
   on both sheets, and the residue count `|Bad_k|` obeys the exact identity
   `k W_k = sum_n B_n W_(k-n)` with binomial tails `B_n`; the bracket
   `log^(-3/2) .. log^(+1)` of (1) closes at its lower end for `gamma = 1`.
-* **Sharper upper bound for every `gamma` (note 1.2b, post-audit).** A
-  geometric binomial tail replaces `(t+1) max_o C(t,o)`:
-  `D_b(X, gamma) <= C X^(h(rho)) (log X)^(-1/2)` for `gamma in (log_4 3, 1]`, so the
-  bracket of (1) is `[log^(-3/2), log^(-1/2)]`, and (2)'s `log^2 X` becomes
-  `(log X)^(-1/2)`; the same tail turns THM-4476's `eps` into `(log X)^(0.014+eps)`.
+* **Polynomial orders at every `gamma` (THM-4498, post-audit).** 
+  `D_b(X, gamma) = Theta(X^(h(rho)) (log X)^(-1/2))` for `gamma in (log_4 3, 1)`
+  (geometric binomial tail above, Hoeffding-block construction below, note
+  1.2b and 1.6), `Theta(X^(h*) (log X)^(-3/2))` at `gamma = 1` (THM-4495) and
+  `Theta(X)` for `gamma <= log_4 3`; (2)'s `log^2 X` becomes `(log X)^(-1/2)`,
+  and the same tail turns THM-4476's `eps` into `(log X)^(0.014+eps)`.
 * **General form.** For every Conway map with `max p_i > m` and every
   `gamma in (0, 1]` the dip exponent is the constrained maximum entropy of
   the multiplier law (Theorem 4 of the note, post-audit); Korec's threshold

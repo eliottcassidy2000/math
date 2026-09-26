@@ -47,19 +47,24 @@ def main():
     print("gamma:        " + "  ".join("%7.3f" % g for g in gammas))
     print("E(gamma):     " + "  ".join("%7.4f" % E(g) for g in gammas))
     print("(1) exact word counts: W_t(gamma) t^(1/2) 2^(-tE)  [last column gamma = 1 uses t^(3/2)]")
-    for t in (25, 50, 100, 150, 200, 300, 400, 500, 600, 800, 1000):
+    ts = [25, 50, 100, 150, 200, 300, 400, 500, 600, 800, 1000, 1500, 2000, 3000]
+    for t in ts:
         if t > TMAX:
             break
         row = []
-        for g in gammas:
+        for g in (gammas if t <= 600 else [0.82, 0.91, 1.0]):
             W = W_dp(t, g)
             pw = 1.5 if g == 1.0 else 0.5
             row.append(2 ** (math.log2(W) + pw * math.log2(t) - t * E(g)) if W > 0 else float('nan'))
-        print("   t=%5d:   " % t + "  ".join("%7.4f" % r for r in row))
+        if t <= 600:
+            print("   t=%5d:   " % t + "  ".join("%7.4f" % r for r in row))
+        else:
+            print("   t=%5d:   " % t + "  ".join("%7.4f" % r for r in row) + "   (gamma = 0.82, 0.91, 1.0 only)")
     # (2) brute-force orbit counts from THM-4487's control
     here = os.path.dirname(os.path.abspath(__file__))
-    outp = os.path.join(here, 'collatz_dipspectrum_20260926.out')
-    if os.path.exists(outp):
+    cands = [os.path.join(here, 'collatz_dipspectrum_20260926.out'), os.path.join(here, '..', '..', '05-knowledge', 'results', 'collatz_dipspectrum_20260926.out')]
+    outp = next((c for c in cands if os.path.exists(c)), None)
+    if outp:
         txt = open(outp, encoding='utf-8', errors='replace').read().split('== sheet 3n-1')[0]
         gam_line = next(l for l in txt.split('\n') if l.strip().startswith('gamma:'))
         gs = [float(x) for x in gam_line.split(':')[1].split()]

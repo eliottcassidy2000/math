@@ -1,5 +1,7 @@
 # Script Results Index
 
+- [The dip spectrum with its polynomial orders (THM-4498): Theta(X^E (log X)^(-1/2)) between Korec and Terras, Theta(X^(h*) (log X)^(-3/2)) at Terras, Theta(X) up to Korec](collatz_dipspectrum_20260926_entropy_curve.md): **PROVED (elementary + CITED Hoeffding) + FINITE-EXACT.** Section 1.6 of the dip-spectrum note; upper bounds by a geometric binomial tail (1.2b), lower bounds by a prepended odd block and Hoeffding's inequality; exact DP counts to t = 3000. Script `collatz_dipspectrum_20260926_orders.py`.
+
 - [The no-descent count W_k = |Bad_k| has exact order 2^(hk) k^(-3/2): Spitzer identity k W_k = sum B_n W_(k-n) and an elementary convolution bound](collatz_nodescent_order_20260926_spitzer_ballot.md): **PROVED self-contained (THM-4495) + FINITE-EXACT.** The no-descent residue counts are determined by binomial tails (identity checked against a ballot DP to k=300, integral to k=3000; W_1..W_11 = THM-4479's |Bad_k|); 0.26 * 2^(hk) k^(-3/2) <= N_k <= delta_k <= |Bad_k| <= 545 * 2^(hk) k^(-3/2), so THM-4479's distance to provability and THM-4485's deletion-price chain are Theta(2^(hk) k^(-3/2)); THM-4487's gamma = 1 dip count is Theta(X^h log^(-3/2) X) on both sheets (sum_(t<24) W_t = 367698 = the brute-force count at 2^24 exactly). Script `collatz_nodescent_order_20260926.py`.
 
 - [233 crossroads: density oscillation, explicit height/rank certificates, and path coordinates](crossroads233_20260926_board.md):
