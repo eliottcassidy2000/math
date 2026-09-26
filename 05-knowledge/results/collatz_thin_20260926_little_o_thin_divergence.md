@@ -1,7 +1,8 @@
 # Thin divergence is `o(X^(h*))`: a moving-barrier ballot bound (weighted Spitzer identity) turns THM-4476's `X^(h*+eps)` into `X^(h*) (log_2 X)^a` for every `a > lambda*/h* - 3/2 = -0.9862`
 
 **Status: PROVED (elementary, self-contained modulo THM-4476's recursion
-and the counting apparatus of THM-4495) + FINITE-EXACT controls. Session
+and the counting apparatus of THM-4495) + FINITE-EXACT controls +
+INDEPENDENTLY AUDITED (SOUND, 2026-09-26; cosmetic notes applied). Session
 `collatz-exponent-atlas-20260926` (opus), 2026-09-26. Supersedes addendum
 1.6b of the thin-divergence note (`a > 0.0138`), which used the counting
 lemma with a geometric tail but no ballot factor. Collatz orbits are still
@@ -46,9 +47,9 @@ Then for every `s > 0` there is `D_s` such that for all `k >= 1`, `y >= 0`,
 M_k(y) <= D_s 2^(hk) k^(-3/2) 2^(lambda* y) e^(s y).
 ```
 
-(The truth is `M_k(y) ~ c (y+1) 2^(hk) k^(-3/2) 2^(lambda* y)` for
-`y << k^(1/2)`, as the control shows; the lemma trades the factor `y+1` for
-`e^(sy)` to stay elementary.)
+(The control suggests `M_k(y)` of order `(y+1) 2^(hk) k^(-3/2) 2^(lambda* y)` for
+`y << k^(1/2)`; that linear law is an observation, not a claim, and the
+lemma trades the factor `y+1` for `e^(sy)` to stay elementary.)
 
 **Lemma 1.4c (counting lemma with the ballot factor).** For
 `theta in (0, theta_1]`, `theta_1 = 0.10376`, `X >= 2^200` and every `s > 0`,
@@ -164,8 +165,11 @@ So Lemma M holds with `D_s = c_2 + D'_s (1 + 14.8 c_2)`. ∎
 As in THM-4476's section 1.4: elements `y_0 < Y_0 = 2|b| X^(log_2(3/2) + theta)`
 of `F_b(X, theta)` number at most `Y_0`; an element `n >= Y_0` has, with
 `k = floor(log_2 X)`, `3^(o_i)/2^i >= X^(-theta)/2` for every `i <= k`
-(the carry is at most half of `n X^(-theta)`), i.e. `S_i > -theta log_2 X - 1`
-for all `1 <= i <= k`. So the word of `n` is counted by `M_k(y)` with
+(the carry bound `|beta_i| <= |b|((3/2)^i - 1)` is at most half of
+`n X^(-theta)` for every `i <= k`), hence `S_i > -theta log_2 X - 1` for all
+`1 <= i <= k`, strictly (the `-1` in the carry bound). The hypothesis
+`theta <= theta_1` is inherited from Lemma 1.4b's form of the small-element
+term and is not needed by Lemma M. So the word of `n` is counted by `M_k(y)` with
 `y = theta log_2 X + 1`, each word is one class modulo `2^k` with at most
 two representatives in `[1, X]`, and Lemma M gives
 `2 M_k(y) <= 2 D_s 2^(hk) k^(-3/2) 2^(lambda*(theta log_2 X + 1)) e^(s(theta log_2 X + 1))`;

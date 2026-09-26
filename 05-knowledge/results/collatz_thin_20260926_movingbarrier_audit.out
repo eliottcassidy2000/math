@@ -1,0 +1,147 @@
+collatz_thin_20260926_movingbarrier_audit.py: independent audit of THM-4499 (moving-barrier ballot bound, weighted Spitzer identity, bootstrap)
+alpha = log_2 3 = 1.58496250072116, rho* = 0.630929753571457, h* = 0.949955527188331, lambda* = 0.488077132093872, a* = -0.986210545520507 (mpmath, 60 digits)
+== 1. Lemma M: the decomposition (D) at the minimum ==
+  [PASS] exact comparator: S(o,i) != S(o+d,i+e) for the convergent shifts (d,e) in {(1,1),(1,2),(2,3),(5,8),(12,19)}, o,i < 40
+  [PASS] no ties: all S_1..S_k of every word of length k <= 14 are distinct and nonzero (minima unique)
+  [PASS] reversal algebra S_i(a^R) = S_m(a) - S_(m-i)(a) exactly (as pairs (o, i)) for all words of length <= 10
+  barriers y tested: 0, 1/2, 1, 3/2, 2, 5/2, 3, 7/2, 4, 13/2, 8
+  [PASS] brute-force W_k, k <= 14, equals THM-4495's list 1,1,2,3,4,8,13,19,38,64,128,226,367,734
+  [PASS] positive min-ending words P_m == first-passage words L_m (m <= 14): [1, 0, 1, 0, 0, 2, 0, 0, 7, 0, 30, 0, 0, 113]
+  [PASS] THM-4495 Step 1: W_k = sum_m L_m W_(k-m) for k <= 14 (the W_k term of (D))
+  [PASS] (D) M_k(y) = W_k + sum_(m=1)^k N_m(y) W_(k-m) holds EXACTLY by brute force for k <= 14 and all 11 barriers
+  [PASS] the two-case decomposition at the argmin is a bijection onto {pos min-ending} x {pos} + sum_m {neg, total > -y} x {pos}; gluing is its inverse (argmin at |a|)
+  [PASS] words with all prefix sums positive are exactly the case S_m(a) > 0 and are counted once, by the W_k term
+  [PASS] y = 0: M_k(0) = W_k and N_m(0) = 0 (no negative word has total > 0)
+  [PASS] m = k term (b empty, W_0 = 1): words of M_k(1/2) whose minimum is at k and negative are in bijection with N_k(1/2)
+  integer barriers: the all-zero prefix of length y has S_y = -y exactly; the strict test S_i > -y excludes it, and (D) transports
+  the strict condition verbatim (checked above at y = 1, 2, 3, 4, 8 with the exact integer comparison), so no tie-breaking is needed
+== 2. The weighted Spitzer identity for negative words (the negated proof, step by step) ==
+  P_n^- (negative words, unit weights), n = 1..12: [1, 2, 3, 6, 12, 22, 44, 88, 169, 338, 646, 1292]
+  [PASS] Step 1^-: a negative word splits at its unique argmax into a max-ending negative word and a negative word; bijection with inverse gluing (n <= 12)
+  [PASS] P_n^- = sum_m PM_m^- P_(n-m)^-  (n <= 12), PM_m^- = max-ending negative words: [1, 1, 0, 1, 2, 0, 3, 7, 0, 12, 0, 30]
+  [PASS] Step 2^-: reversal maps max-ending negative words of length m ONTO first-passage-below words (S_i > 0 for i < m, S_m < 0), m <= 12
+  [PASS] reversal preserves the letter multiset, hence the weight x(w) = x_0^(#0) x_1^(#1)
+  [PASS] Step 3^-: a word ends at its minimum iff it is a concatenation of first-passage-below words (cut at descending ladder epochs); E^-_(n,r) = [t^n] L^-(t)^r as polynomials in x_1 (n <= 12)
+  [PASS] Step 4^-: record test over the window [j-n, j) agrees with [j-3n, j) (S_(l-n) = S_l - S_n > S_l when S_n < 0)
+  [PASS] Step 4^-: for every x with S_n(x) < 0 (n <= 12): records exist, j record iff j+n record, rot_i(x) ends at its min iff i is a record residue, its descending ladder epochs number r(x), sum_i [..]/r(rot_i x) = 1; hence B_n^-(x_1) = n sum_r E^-_(n,r)(x_1)/r as polynomials
+  words with negative total examined: 6423.  The per-word identity is unweighted; multiplying by x(x) and regrouping by y = rot_i(x)
+  uses only x(rot_i x) = x(x) (same letter multiset) and that x -> rot_i(x) is a bijection of the words with negative total: the
+  weighted Step 4 needs exactly rotation-invariance of the weight, nothing else.  Steps 1-3 are letter-multiset-preserving bijections.
+  [PASS] n P_n = sum_m B_m P_(n-m) holds as an EXACT identity of bivariate polynomials in (x_0, x_1) for negative words, n <= 48 (hence for ALL weights)
+  [PASS] n P_n = sum_m B_m P_(n-m) holds as an EXACT identity of bivariate polynomials in (x_0, x_1) for positive words, n <= 48 (hence for ALL weights)
+  [PASS] n P_n(x) = sum_m B_m(x) P_(n-m)(x) exactly (Fractions) for weights (1,1), (1/2,2), (3,1/3), (5/7,11/2), both signs, n <= 30
+== 3. The tilt identity Q(w) = 2^(-hm) 2^(lambda* S_m(w)) ==
+  h* = 0.9499555272, lambda* = 0.4880771321, lambda*/h* = 0.51378945, a* = lambda*/h* - 3/2 = -0.9862105455
+  [PASS] the note's constants h* = 0.9499555, lambda* = 0.488077, lambda*/h* = 0.5138, a* = -0.986211 are correct to the digits printed
+  [PASS] zero drift: rho* alpha = 1 (the letter 1 steps alpha - 1, the letter 0 steps -1; E_Q step = rho* alpha - 1 = 0)
+  [PASS] coefficient of o: lambda* alpha = log_2(rho*/(1-rho*))
+  [PASS] coefficient of m: -h - lambda* = log_2(1 - rho*)  [uses rho* = 1/alpha]
+  symbolic: log_2 Q(w) = o log_2 rho* + (m-o) log_2(1-rho*) = m log_2(1-rho*) + o log_2(rho*/(1-rho*)) = -hm - lambda* m + lambda* alpha o = -hm + lambda* S_m(w).
+  [PASS] numerically (60 digits): max |log_2 Q(w) - (-hm + lambda* S_m)| over a grid of (o, m), m <= 200, is 3.98e-59
+  [PASS] lambda* > 0 (rho* = 0.6309 > 1/2), so S_m > -y gives Q(w) >= 2^(-hm) 2^(-lambda* y)
+== 4. Section 1.2: the tilt inequality and the exponential weight ==
+  [PASS] pointwise: every negative word with S_m > -y has Q(w) >= 2^(-hm) 2^(-lambda* y) (m <= 60, y in {1/2,1,2,4,8})
+  [PASS] first inequality N_m(y) <= 2^(hm) 2^(lambda* y) Q(negative, S_m > -y) (exact N_m, 60-digit Q); min ratio bound/N = 1.00331
+  [PASS] second inequality Q(neg, S_m > -y) <= e^(sy) E_Q[e^(sS_m); neg, S_m > -y] <= e^(sy) E_Q[e^(sS_m); neg] for s in {0.05, 0.1, 0.5}; min ratio full bound/N = 1.3582
+  signs: lambda* > 0 and S_m > -y give the first; s > 0 and S_m + y > 0 on the event give e^(s(S_m+y)) >= 1 for the second; the integrand
+  e^(sS_m) 1_(negative) is nonnegative so the constraint S_m > -y can be dropped.  Both directions correct.
+== 5. Sections 1.3-1.4: the weights, the local bound, the convolution ==
+  [PASS] x_1 = rho* e^(s(alpha-1)), x_0 = (1-rho*) e^(-s) give x(w) = Q(w) e^(s S_n(w)) exactly (60 digits, grid)
+  [PASS] admissible o (o alpha < n) form an initial segment 0..o_top, values o alpha - n negative, spaced by alpha, the largest in (-alpha, 0) (n <= 2000)
+  hence the exponential factors are at most 1, e^(-s alpha), e^(-2 s alpha), ... and g_n <= (max_o Bin) * 1/(1 - e^(-s alpha)).
+  [PASS] max_o Bin(n, rho*)(o) <= 3.2 n^(-1/2) for all 1 <= n <= 5000: max of sqrt(n) max_o Bin = 0.8267 at n = 4994
+  [PASS] the mode floor((n+1) rho*) is within 1 of rho* n for all n <= 5000
+  [PASS] Stirling (C(n,k) <= 2^(n h(k/n))/sqrt(2 pi n q(1-q)) for 1 <= k <= n-1, Robbins) gives Bin(mode) <= 0.890 n^(-1/2) for n >= 11 (q(1-q) >= 0.2008); for n <= 10, 3.2/sqrt(n) >= 3.2/sqrt(10) = 1.012 >= 1 >= Bin
+  [PASS] s = 0.05: g_n sqrt(n) <= C_s = 42.001 for n <= 2000 (max 8.7896); g_n = E_Q[e^(sS_n); S_n < 0]
+  [PASS] s = 0.05: the weighted identity n p_n = sum_m g_m p_(n-m) holds numerically for the real weights, n <= 2000 (max rel err 2.4e-13)
+  [PASS] s = 0.05: p_n n^(3/2) in [95.3898, 187.3691] for 500 <= n <= 2000 (max over all n <= 2000: 187.3691), bounded; D'_s(numerical sigma) = 4.527e+07 >= it
+  s = 0.05: sigma_s numerical = 3.0327 (+ tail <= 1.8783), proved bound C_s zeta(3/2) = 109.721; p_n n^(3/2) at n = 2000: 186.9997
+  [PASS] s = 0.10: g_n sqrt(n) <= C_s = 21.832 for n <= 2000 (max 5.2572); g_n = E_Q[e^(sS_n); S_n < 0]
+  [PASS] s = 0.10: the weighted identity n p_n = sum_m g_m p_(n-m) holds numerically for the real weights, n <= 2000 (max rel err 4.0e-13)
+  [PASS] s = 0.10: p_n n^(3/2) in [47.3690, 69.1957] for 500 <= n <= 2000 (max over all n <= 2000: 69.1957), bounded; D'_s(numerical sigma) = 4.848e+05 >= it
+  s = 0.10: sigma_s numerical = 2.5620 (+ tail <= 0.9764), proved bound C_s zeta(3/2) = 57.033; p_n n^(3/2) at n = 2000: 68.6530
+  [PASS] s = 0.50: g_n sqrt(n) <= C_s = 5.847 for n <= 2000 (max 1.5043); g_n = E_Q[e^(sS_n); S_n < 0]
+  [PASS] s = 0.50: the weighted identity n p_n = sum_m g_m p_(n-m) holds numerically for the real weights, n <= 2000 (max rel err 8.3e-13)
+  [PASS] s = 0.50: p_n n^(3/2) in [3.3935, 4.3091] for 500 <= n <= 2000 (max over all n <= 2000: 4.3091), bounded; D'_s(numerical sigma) = 4.656e+02 >= it
+  s = 0.50: sigma_s numerical = 1.2861 (+ tail <= 0.2615), proved bound C_s zeta(3/2) = 15.275; p_n n^(3/2) at n = 2000: 3.6230
+  [PASS] convolution lemma on a = b = n^(-3/2): k^(3/2) (a*a)_k <= 2^(3/2) * 2 zeta(3/2) = 14.778 (max observed 5.224)
+  lemma proof: split at i = k/2; i >= k/2: a_i <= A (k/2)^(-3/2), sum b <= beta; i < k/2: b_(k-i) <= B (k/2)^(-3/2), sum a <= alpha; total 2^(3/2)(A beta + B alpha) k^(-3/2).
+  induction (g^(*m))_k <= C m (2^(3/2) sigma)^(m-1) k^(-3/2): step needs 2^(3/2) sigma^m <= (2^(3/2) sigma)^m, true for m >= 1;
+  exp(G) = sum_m G^(*m)/m! with G_n = g_n/n <= C_s n^(-3/2), G_0 = 0, G >= 0, sum G = sigma_s <= C_s zeta(3/2): p_n <= C_s e^(2 sqrt2 sigma_s) n^(-3/2).
+  [PASS] s = 0.1: the induction bound (G^(*m))_k <= C_s m (2^(3/2) sigma)^(m-1) k^(-3/2) holds numerically for m <= 7, k <= 400 (sigma = numerical sum to 400)
+== 6. Section 1.5: the assembly ==
+  [PASS] 2^(3/2) * 2 * zeta(3/2) = 14.7778 <= 14.8
+  [PASS] k^(3/2) sum_(m=1)^(k-1) m^(-3/2) (k-m)^(-3/2) <= 14.8 for k <= 200 and k in {500, 1000, 1600, 3000} (max 5.223)
+  m = k term: N_k(y) W_0 with W_0 = 1 gives D'_s 2^(lambda* y) e^(sy) 2^(hk) k^(-3/2), the '1' inside the bracket [1 + 14.8 c_2];
+  the W_k term c_2 2^(hk) k^(-3/2) is absorbed using 2^(lambda* y) e^(sy) >= 1 (y >= 0, lambda*, s > 0): D_s = c_2 + D'_s (1 + 14.8 c_2).
+  [PASS] THM-4495's W_k <= 545 2^(hk) k^(-3/2) holds for the independently computed W_k, k <= 1600
+  [PASS] s = 0.05: C_s = 42.0006, sigma bound = 109.721, log10 D'_s = 136.4, log10 D_s = 140.31; M_k(y) <= D_s 2^(hk) k^(-3/2) 2^(lambda* y) e^(sy) on the (B) grid (max log10 M/bound = -138.3)
+  [PASS] s = 0.10: C_s = 21.832, sigma bound = 57.0334, log10 D'_s = 71.397, log10 D_s = 75.304; M_k(y) <= D_s 2^(hk) k^(-3/2) 2^(lambda* y) e^(sy) on the (B) grid (max log10 M/bound = -73.52)
+  [PASS] s = 0.50: C_s = 5.8471, sigma bound = 15.2748, log10 D'_s = 19.53, log10 D_s = 23.437; M_k(y) <= D_s 2^(hk) k^(-3/2) 2^(lambda* y) e^(sy) on the (B) grid (max log10 M/bound = -22.27)
+  [PASS] s = 0.05 (sanity): with the numerical P_s = max_(n<=2000) p_n n^(3/2) = 187.369 in place of D'_s the chain still bounds the (B) grid (max ln M/bound = -9.57)
+  [PASS] s = 0.10 (sanity): with the numerical P_s = max_(n<=2000) p_n n^(3/2) = 69.196 in place of D'_s the chain still bounds the (B) grid (max ln M/bound = -9.13)
+  [PASS] s = 0.50 (sanity): with the numerical P_s = max_(n<=2000) p_n n^(3/2) = 4.309 in place of D'_s the chain still bounds the (B) grid (max ln M/bound = -7.80)
+== 7. Lemma 1.4c: the counting lemma with the ballot factor ==
+  [PASS] carry bound |beta_i(w)| <= |b| ((3/2)^i - 1) < |b| (3/2)^i for all words of length <= 12, b in {1,-1,3,-5,7} (exact)
+  for every i <= k = floor(log_2 X): |beta_i| < |b| (3/2)^i <= |b| (3/2)^k <= |b| X^(log_2(3/2)) = Y_0 X^(-theta)/2 <= n X^(-theta)/2 for n >= Y_0;
+  no-dip T_b^i(n) >= n X^(-theta) then gives 3^(o_i) n / 2^i >= n X^(-theta) - |beta_i| > n X^(-theta)/2, i.e. S_i > -theta log_2 X - 1 STRICTLY
+  (the strictness, hidden in the note's 'i.e.', comes from the '-1' of the carry bound; it matters only when theta log_2 X is an integer and o_i = 0).
+  [PASS] b = +1, theta = 3/100, X = 2^18: every n >= Y_0 = 4298 in F_b(X, theta) (12138 of #F = 12339) has S_i > -(theta log_2 X + 1) for ALL 1 <= i <= k (exact barrier y = 77/50)
+  [PASS] b = +1, theta = 3/100: #F_b = 12339 <= Y_0 + 2 M_k(y) = 4298 + 2 * 34544
+  [PASS] b = +1, theta = 1/10, X = 2^18: every n >= Y_0 = 10293 in F_b(X, theta) (36648 of #F = 38146) has S_i > -(theta log_2 X + 1) for ALL 1 <= i <= k (exact barrier y = 14/5)
+  [PASS] b = +1, theta = 1/10: #F_b = 38146 <= Y_0 + 2 M_k(y) = 10293 + 2 * 72087
+  [PASS] b = -1, theta = 3/100, X = 2^18: every n >= Y_0 = 4298 in F_b(X, theta) (12145 of #F = 12337) has S_i > -(theta log_2 X + 1) for ALL 1 <= i <= k (exact barrier y = 77/50)
+  [PASS] b = -1, theta = 3/100: #F_b = 12337 <= Y_0 + 2 M_k(y) = 4298 + 2 * 34544
+  [PASS] b = -1, theta = 1/10, X = 2^18: every n >= Y_0 = 10293 in F_b(X, theta) (36640 of #F = 38142) has S_i > -(theta log_2 X + 1) for ALL 1 <= i <= k (exact barrier y = 14/5)
+  [PASS] b = -1, theta = 1/10: #F_b = 38142 <= Y_0 + 2 M_k(y) = 10293 + 2 * 72087
+  [PASS] k = floor(log_2 X) >= log_2 X - 1 >= 0.995 log_2 X for X >= 2^200; 2^(hk) <= X^(h*)
+  a residue class mod 2^k meets [1, X] in at most floor((X-1)/2^k) + 1 <= 2 integers since 2^k > X/2.
+  [PASS] 2^(lambda*) e^(s) 2 (0.995)^(-3/2) = 3.12357 <= 4 for s <= 0.1 (monotone in s)
+  Lemma M needs no restriction on theta; the hypothesis theta <= theta_1 of Lemma 1.4c is inherited from 1.4b and unused here (harmless).
+== 8. Section 3: the bootstrap ==
+  [PASS] THM-4476's recursion (R) found in its note: N(X) <= k + k N(X^(1-theta)) + 2|b| X^(log_2(3/2)+theta) + A(theta)(log_2 X + 1) X^(h(rho)).   (R)
+  (R'') replaces the counting-lemma term by Lemma 1.4c's bound; log_2(3/2) = 0.584963 <= 0.585 so X^(log_2(3/2)+theta) <= X^(0.585+theta).
+  a = -0.98: eta = 0.00077632, c_1 = 1.0535, s = 0.00051078, lambda* c_1 - 3/2 + eta = -0.985035 <= a - 2 eta = -0.981553; L_3 ~ 3.495e+1155; (ii) True (iii) True (iv) True (v) True
+  a = -0.9: eta = 0.010776, c_1 = 1.06402, s = 0.0070201, lambda* c_1 - 3/2 + eta = -0.969897 <= a - 2 eta = -0.921553; L_3 ~ 1.023e+81; (ii) True (iii) True (iv) True (v) True
+  a = -0.5: eta = 0.060776, c_1 = 1.11666, s = 0.037726, lambda* c_1 - 3/2 + eta = -0.894208 <= a - 2 eta = -0.621553; L_3 ~ 2.414e+12; (ii) True (iii) True (iv) True (v) True
+  a = 0.0: eta = 0.12328, c_1 = 1.18245, s = 0.072264, lambda* c_1 - 3/2 + eta = -0.799596 <= a - 2 eta = -0.246553; L_3 ~ 7.653e+4; (ii) True (iii) True (iv) True (v) True
+  a = 0.5: eta = 0.18578, c_1 = 1.24824, s = 0.1, lambda* c_1 - 3/2 + eta = -0.704984 <= a - 2 eta = 0.128447; L_3 ~ 1.125e+4; (ii) True (iii) True (iv) True (v) True
+  a = 2.0: eta = 0.37328, c_1 = 1.44562, s = 0.1, lambda* c_1 - 3/2 + eta = -0.421149 <= a - 2 eta = 1.25345; L_3 ~ 1682.0; (ii) True (iii) True (iv) True (v) True
+  [PASS] (ii) lambda* c_1 - 3/2 + eta = a* + eta(1 + lambda*/h*) <= a* + 1.52 eta = a - 6.48 eta <= a - 2 eta; (iii) e^(s theta_X L) = L^(s c_1/ln 2) <= L^eta; (iv) a - 2 eta > a* > -1; (v) Y in [X^(1/2), X), log_2 Y in [L/2, L), (log_2 Y)^a <= 2^|a| L^a, Y^(h*) = X^(h*) L^(-1-eta), bracket <= K, and L^(c_1) >= 200
+  (iv) X^(0.585+theta_X) L^(-(a-2eta)) = X^(0.585) L^(c_1 - a + 2 eta) = o(X^(h*)) since 0.585 < h* = 0.95: the polylog is harmless for either sign of a;
+       the note's 'O(X^(0.7))' is correct once theta_X <= 0.115, and X^(0.7) <= X^(h*) L^(a-2eta) for large X because h* - 0.7 = 0.25 > 0.
+  (v)  base: N(X) <= X (distinct positive integers <= X) and K >= sup_(2<=X<X_3) X^(1-h*) (log_2 X)^(-a), finite on a bounded range; K >= 8 D_s + 1 >= (1+4D_s)/3 suffices.
+  (vi) well-founded: Y = X L^(-c_1) <= X/200 for L >= 200 (c_1 > 1), a uniform gap; if the set of counterexamples were nonempty with infimum X_0 >= X_3,
+       a counterexample X < 2 X_0 has Y <= X/200 < X_0, so the claim holds at Y and hence at X: contradiction.  'Y < X' alone would not suffice for a real variable.
+  [PASS] Corollary 4's recursion found in 1.7 of THM-4476's note (quoted once more in its addendum 1.6b): So `N_A(X) <= k N_A(X^(1-theta)) + #F_b(X,theta) + #F_(-b)(X,theta) + (k+1)(|b|/3 + 1)`,
+  (vii) it is (R) with #F_b replaced by #F_b(X,theta) + #F_(-b)(X,theta) and the (E)-term k by (k+1)(|b|/3 + 1), base N_A(X) <= 2X: NOT verbatim (R),
+        but Lemma 1.4c applies to both F_b and F_(-b) with the same |b|, so the bootstrap goes through with 8 D_s in place of 4 D_s and the O(L) term absorbed in X_2.
+== 9. Consistency with THM-4487(2) ==
+  [PASS] h'(rho*) = log_2((1-rho*)/rho*) = -alpha lambda*
+  [PASS] concavity: h(rho(theta)) <= h* + lambda* theta for theta in (0, 0.1] (max h(rho) - h* - lambda* theta = -1.233e-8 < 0)
+  [PASS] h(rho(theta)) > h* for theta in (0, 0.1] (rho < rho* < ... h decreasing on [1/2, 1]): THM-4487's fixed-theta exponent exceeds h*
+  THM-4487(2): c X^(h(rho)) L^(-3/2) <= #F_b <= C X^(h(rho)) L^2.  Lemma 1.4c: #F_b <= 2|b| X^(0.585+theta) + 4 D_s X^(h* + lambda* theta + s theta/ln 2) L^(-3/2).
+  upper >= lower needs h(rho) <= h* + lambda* theta + s theta/ln 2: true by concavity (strictly, for theta > 0). No contradiction; for fixed theta the
+  lemma is WEAKER than THM-4487's upper bound in the exponent and only wins in the polynomial factor as theta -> 0: 'the ballot factor is a polynomial, not an exponent' is accurate.
+== 10. Provenance, the float-margin barrier test, the (B) table and (A) lists reproduced ==
+  [PASS] script sha256 (raw = LF-normalised, no CR bytes) matches the header: da2d12874ab368db...
+  [PASS] output sha256 (raw = LF-normalised) matches the header: 0b2c11a427dd218c...
+  continued fraction of log_2 3: [1, 1, 1, 2, 2, 3, 1, 5, 2, 23, 2, 2, 1, 1]; convergents [(1, 1), (2, 1), (3, 2), (8, 5), (19, 12), (65, 41), (84, 53), (485, 306), (1054, 665), (24727, 15601), (50508, 31867)]
+  [PASS] min_(1<=o<=3200) ||o log_2 3|| = 6.298e-5 at o = 665 (denominator of the convergent 1054/665; next 24727/15601); max float error of o*ALPHA, o <= 1600: 3.92e-13
+  for integer y the script's v = o alpha - j + y has |v| >= 6.3e-5 for o in [1, 1600]; for y = 1/2, |v| = |2o alpha - (2j-1)|/2 >= 0.000126/2 (o' = 2o even, min at o' = 1330);
+  the 1e-9 margin is therefore never approached (gap/margin > 6e4) and the float sign is exact: the barrier test is justified, o = 0 being compared exactly.
+  [PASS] the (B) table of the .out (6 rows x 7 barriers) is reproduced by the exact DP with 60-digit normalisation (max |diff| = 0.00049, 3 printed decimals)
+  k =  100: exact M_k(y) bit lengths [88, 90, 91, 93, 95, 98, 100]; normalised ['7.661', '15.586', '28.600', '48.143', '59.581', '32.208', '0.580']
+  k =  200: exact M_k(y) bit lengths [182, 184, 185, 187, 189, 193, 198]; normalised ['8.919', '18.103', '33.396', '57.541', '88.287', '80.363', '9.730']
+  k =  400: exact M_k(y) bit lengths [371, 372, 374, 376, 378, 382, 389]; normalised ['9.840', '19.566', '34.837', '66.560', '110.165', '143.160', '60.588']
+  k =  800: exact M_k(y) bit lengths [749, 751, 752, 754, 757, 761, 769]; normalised ['10.446', '19.841', '38.363', '68.667', '125.813', '198.499', '179.219']
+  k = 1200: exact M_k(y) bit lengths [1128, 1130, 1131, 1133, 1136, 1141, 1149]; normalised ['10.255', '21.046', '39.493', '72.794', '126.674', '213.808', '260.569']
+  k = 1600: exact M_k(y) bit lengths [1508, 1509, 1511, 1513, 1515, 1520, 1528]; normalised ['10.757', '21.422', '38.467', '73.888', '134.681', '235.768', '303.151']
+  [PASS] the (A) lists P_1..P_7 of the .out (three weight pairs, both signs) agree with the independent weighted DP; all six flags True
+  [PASS] W_1..W_20 from the exact barrier DP at y = 0 equal THM-4495's list
+  status-block claims: 'PROVED (elementary; rests on THM-4476's (R) and THM-4495's apparatus)', 'every a > a*', 'N(X) = o(X^(h*))', 'same for injective
+  invariant sets' -- all supported by sections 1-9 (the last with the non-verbatim recursion of 1.7, see section 8).  Overclaim in wording only: the note's
+  'the truth is M_k(y) ~ c (y+1) ...' is an observation (the /(y+1) column moves from 10.8 to 15.0 at k = 1600), not a proved statement; not used in the proof.
+== summary ==
+  checks: 78, failures: 0
+  verdict of the numerical/exact part: all checks passed

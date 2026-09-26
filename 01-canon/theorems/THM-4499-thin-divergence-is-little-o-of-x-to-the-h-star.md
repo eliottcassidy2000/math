@@ -3,7 +3,8 @@ id: THM-4499
 title: "Thin divergence is o(X^(h*)): every non-eventually-periodic orbit of x -> x/2, (3x+b)/2 (b odd), and every injective invariant set, has N(X) <= K X^(h*) (log_2 X)^a for every a > lambda*/h* - 3/2 = -0.9862; the Terras exponent h* = h(log_3 2) is not attained"
 status: >
   PROVED (elementary; rests on THM-4476's recursion (R) and THM-4495's
-  Spitzer/convolution apparatus) + FINITE-EXACT controls. Setting as in
+  Spitzer/convolution apparatus) + FINITE-EXACT controls + INDEPENDENTLY
+  AUDITED (SOUND, 2026-09-26; cosmetic notes applied). Setting as in
   THM-4476: T_b(x) = x/2 (x even), (3x+b)/2 (x odd), (x_i) an orbit in
   Z\{0} that is not eventually periodic, N(X) = #{i : |x_i| <= X},
   h* = h(log_3 2) = 0.9499555, lambda* = log_2(rho*/(1-rho*))/log_2 3 =
@@ -59,12 +60,30 @@ audit: >
   tilt identity, the endpoint weight, the local binomial bound and both
   applications of the convolution lemma re-derived; the bootstrap
   bookkeeping written out for negative a (log_2 Y in [L/2, L]).
-  Independent audit not yet performed.
+  Independent adversarial audit (separate agent, 2026-09-26): script
+  04-computation/experiments/collatz_thin_20260926_movingbarrier_audit.py (sha256
+  9af70c922047ce0a5dd2bb8aeadcc471cebb5da95802a00a7ccad6acd7bbbd08) ->
+  05-knowledge/results/collatz_thin_20260926_movingbarrier_audit.out (sha256
+  645ef0d39fab9b85441bf05650ba0ce788baa46a0c07152d0390290fcd7cbee3), 78 checks,
+  0 failures, every partial-sum comparison exact (sign of 3^o 2^i' - 3^o' 2^i).
+  (D) re-derived as a bijection and exact by brute force (k <= 14, 11
+  integer/half-integer barriers); the negated Spitzer proof (argmax split,
+  reversal onto first-passage-below words, descending ladders, rotation with
+  strict-minimum records) checked word by word (n <= 12), the weighted identity
+  proved as an exact bivariate-polynomial identity (n <= 48, both signs); tilt,
+  both 1.2 inequalities, local bound (max sqrt(n) Bin = 0.827, n <= 5000),
+  convolution induction, p_n n^(3/2) bounded (n <= 2000), assembly, Lemma 1.4c
+  (barrier for every i <= k, strict; F_b(2^18, theta) enumerated on both sheets
+  against 2 M_k(y)), bootstrap, THM-4487 consistency, hashes and the (B) table
+  all confirmed. Cosmetic (applied): Cor. 4's recursion is (R) with
+  #F_b + #F_(-b) and (k+1)(|b|/3+1), not "verbatim" (8 D_s); the induction is on
+  floor(X) with the gap Y <= X/264; the "(y+1)" law is an observation, not a
+  claim; theta <= theta_1 is inherited from 1.4b and unused. Verdict: SOUND.
 ---
 
 # THM-4499 -- thin divergence is o(X^(h*))
 
-**PROVED + FINITE-EXACT.** Full note:
+**PROVED + FINITE-EXACT + INDEPENDENTLY AUDITED (SOUND).** Full note:
 [collatz_thin_20260926_little_o_thin_divergence](../../05-knowledge/results/collatz_thin_20260926_little_o_thin_divergence.md).
 
 ## 1. Statement
