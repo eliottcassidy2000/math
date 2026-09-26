@@ -1,0 +1,222 @@
+
+====================================================================================================
+0. Constants
+====================================================================================================
+   c = log_3 2 = 0.630930  sigma^2 = 0.232857  lambda = 0.584963  1-H(c) = 0.050044  rho_b = 1-(1-lambda^2)/14 = 0.953013
+   elementary exponent gamma = (3/2) (ln(1/rho_b) sigma^2)^(1/3) (ln 3)^(2/3) = 0.35739 ; Mogulskii kappa_3 = 2.10758
+  ok: 1 - H(log_3 2) = 0.050044
+  ok: rho_b = 0.953013 < 1
+  ok: gamma = 0.3574
+
+====================================================================================================
+1. Coupling lemma of a single flip: y_t = 3^(a_t) x_t + b_t; merge iff the Collatz word of y_1 begins 1^r 0 0
+====================================================================================================
+  ok: for 3000 random odd v < 2^400 the identity y_t = 3^(a_t) x_t + b_t (four-case chain from (a,b) = (1,2)) and parity(x_t) = parity(y_t) + b_t hold at every step until a_t = 0 (up to 250 steps); whenever the word of y_1 begins 1^r 0 0 the orbits merge exactly at time r+3 (1531 merges)
+  ok: exact merge law: among the 2^15 odd classes v mod 2^16, exactly 2^14 - 1 have a word of y_1 beginning 1^r00 with r+2 <= 15 (Haar probability 1/2 in the limit; under the tilted measure Q it is 1-c = 0.3691)
+   single flip at the highest odd point of a bad source (L steps; n random ~ 2^90, rejection sampling):
+     L=16: rescued 0.334, re-merged with the bad Collatz orbit 0.395, other failure 0.271
+  ok: L=16: the single high flip re-merges with the undecided orbit for more than 35% of bad sources (EMPIRICAL)
+     L=32: rescued 0.250, re-merged with the bad Collatz orbit 0.548, other failure 0.202
+  ok: L=32: the single high flip re-merges with the undecided orbit for more than 35% of bad sources (EMPIRICAL)
+     L=48: rescued 0.199, re-merged with the bad Collatz orbit 0.636, other failure 0.165
+  ok: L=48: the single high flip re-merges with the undecided orbit for more than 35% of bad sources (EMPIRICAL)
+[time] section 1: 5.1s elapsed, peak RSS 24 MB
+
+====================================================================================================
+2. Bijection lemma for the reflected barrier Pi^(m); slope survival = non-descent; private realization
+====================================================================================================
+  ok: L=8 m=2: the 2^8 classes give 2^8 distinct modified words; survivors 9 = DP count N_m(L) = 9; slope survival <=> no actual descent
+  ok: L=8 m=3: the 2^8 classes give 2^8 distinct modified words; survivors 19 = DP count N_m(L) = 19; slope survival <=> no actual descent
+  ok: L=8 m=4: the 2^8 classes give 2^8 distinct modified words; survivors 19 = DP count N_m(L) = 19; slope survival <=> no actual descent
+  ok: L=8 m=5: the 2^8 classes give 2^8 distinct modified words; survivors 19 = DP count N_m(L) = 19; slope survival <=> no actual descent
+  ok: L=10 m=2: the 2^10 classes give 2^10 distinct modified words; survivors 27 = DP count N_m(L) = 27; slope survival <=> no actual descent
+  ok: L=10 m=3: the 2^10 classes give 2^10 distinct modified words; survivors 63 = DP count N_m(L) = 63; slope survival <=> no actual descent
+  ok: L=10 m=4: the 2^10 classes give 2^10 distinct modified words; survivors 64 = DP count N_m(L) = 64; slope survival <=> no actual descent
+  ok: L=10 m=5: the 2^10 classes give 2^10 distinct modified words; survivors 64 = DP count N_m(L) = 64; slope survival <=> no actual descent
+  ok: L=12 m=2: the 2^12 classes give 2^12 distinct modified words; survivors 81 = DP count N_m(L) = 81; slope survival <=> no actual descent
+  ok: L=12 m=3: the 2^12 classes give 2^12 distinct modified words; survivors 220 = DP count N_m(L) = 220; slope survival <=> no actual descent
+  ok: L=12 m=4: the 2^12 classes give 2^12 distinct modified words; survivors 226 = DP count N_m(L) = 226; slope survival <=> no actual descent
+  ok: L=12 m=5: the 2^12 classes give 2^12 distinct modified words; survivors 226 = DP count N_m(L) = 226; slope survival <=> no actual descent
+  ok: L=14 m=2: the 2^14 classes give 2^14 distinct modified words; survivors 162 = DP count N_m(L) = 162; slope survival <=> no actual descent
+  ok: L=14 m=3: the 2^14 classes give 2^14 distinct modified words; survivors 690 = DP count N_m(L) = 690; slope survival <=> no actual descent
+  ok: L=14 m=4: the 2^14 classes give 2^14 distinct modified words; survivors 734 = DP count N_m(L) = 734; slope survival <=> no actual descent
+  ok: L=14 m=5: the 2^14 classes give 2^14 distinct modified words; survivors 734 = DP count N_m(L) = 734; slope survival <=> no actual descent
+  ok: L=14, m=3, all 2^14 classes (n ~ 2^80): the pairing member with exactly the pairs flipped by Pi^(m) reproduces the Pi^(m) path
+[time] section 2: 5.9s elapsed, peak RSS 29 MB
+
+====================================================================================================
+3. Theorem A: N_m(L)/2^L <= 2^(-(1-H)L) rho_b^floor(L/n_m), n_m = ceil(2(m+1)^2/sigma^2)
+====================================================================================================
+  ok: exact DP, 1 <= L <= 180, 1 <= m <= L+1: N_m(L)/2^L <= block bound (max ratio 0.5176)
+  ok: barrier above the reachable range: N_m(L) = |Bad_L| (L = 20, m = 25; L = 60, m = 65); N_m(L) <= |Bad_L| always
+  ok: m = 1 (barrier at level 0): no class survives
+   exact N_m(L)/2^L versus |Bad_L|/2^L:
+     L=60  rho_L=1.9222e-03  m=2:1.815e-08  m=3:1.079e-04  m=4:7.492e-04  m=5:1.438e-03  m=6:1.787e-03  m=8:1.919e-03
+     L=120  rho_L=9.8795e-05  m=2:4.939e-16  m=3:4.031e-08  m=4:3.704e-06  m=5:2.199e-05  m=6:4.964e-05  m=8:8.789e-05
+     L=180  rho_L=7.3608e-06  m=2:2.017e-23  m=3:1.731e-11  m=4:1.999e-08  m=5:3.607e-07  m=6:1.476e-06  m=8:4.723e-06
+  ok: float DP, L=256, 2 <= m <= 40: N_m(L)/2^L <= block bound (max ratio 2.355e-03)
+  ok: float DP, L=512, 2 <= m <= 40: N_m(L)/2^L <= block bound (max ratio 8.346e-04)
+  ok: float DP, L=1024, 2 <= m <= 40: N_m(L)/2^L <= block bound (max ratio 3.080e-04)
+[time] section 3: 6.5s elapsed, peak RSS 30 MB
+
+====================================================================================================
+4. The private price: 2 rho^peak_L <= pi_L <= single/multi-scale DP bounds; elementary exponent gamma
+====================================================================================================
+  ok: L=32: lower bound 2 rho^peak = 6.025e-04 <= upper bound 1.449e-02
+  ok: L=48: lower bound 2 rho^peak = 1.086e-04 <= upper bound 4.688e-03
+  ok: L=64: lower bound 2 rho^peak = 2.605e-05 <= upper bound 1.865e-03
+  ok: L=96: lower bound 2 rho^peak = 2.128e-06 <= upper bound 3.353e-04
+  ok: L=128: lower bound 2 rho^peak = 2.250e-07 <= upper bound 7.376e-05
+  ok: L=192: lower bound 2 rho^peak = 3.936e-09 <= upper bound 4.325e-06
+  ok: L=256: lower bound 2 rho^peak = 1.124e-10 <= upper bound 3.065e-07
+  ok: L=384: lower bound 2 rho^peak = 1.395e-13 <= upper bound 8.170e-10
+  ok: L=512: lower bound 2 rho^peak = 2.847e-16 <= upper bound 2.309e-12
+  ok: L=768: lower bound 2 rho^peak = 2.813e-21 <= upper bound 3.571e-17
+  ok: L=1024: lower bound 2 rho^peak = 4.309e-26 <= upper bound 7.479e-22
+      L   rho_L        2rho^peak    single-scale bound  /rho   multi-scale bound  /rho    (2rho^peak)/rho
+      32  9.6270e-03  6.0246e-04  1.4494e-02    1.5056  1.6465e-01   17.1031   6.258e-02
+      48  3.5373e-03  1.0862e-04  4.6883e-03    1.3254  5.1197e-02   14.4736   3.071e-02
+      64  1.4931e-03  2.6047e-05  1.8649e-03    1.2491  1.7746e-02   11.8858   1.745e-02
+      96  3.0762e-04  2.1276e-06  3.3533e-04    1.0901  2.4061e-03    7.8219   6.917e-03
+     128  6.9778e-05  2.2503e-07  7.3761e-05    1.0571  3.6153e-04    5.1811   3.225e-03
+     192  4.2627e-06  3.9364e-09  4.3247e-06    1.0145  1.0298e-05    2.4158   9.235e-04
+     256  3.2760e-07  1.1238e-10  3.0648e-07    0.9355  4.1304e-07    1.2608   3.430e-04
+     384  2.0995e-09  1.3950e-13  1.1507e-09    0.5481  8.1701e-10    0.3891   6.645e-05
+     512  1.6153e-11  2.8470e-16  4.9585e-12    0.3070  2.3095e-12    0.1430   1.762e-05
+     768  1.3275e-15  2.8135e-21  1.7516e-16    0.1319  3.5708e-17    0.0269   2.119e-06
+    1024  1.1537e-19  4.3090e-26  7.1744e-21    0.0622  7.4790e-22    0.0065   3.735e-07
+  ok: the rigorous multi-scale bound is below rho_L at L = 512 and below 0.01 rho_L at L = 1024 (float DP)
+   elementary bound (Theorem A inserted in the multi-scale bound), normalised: ln(2^((1-H)L) B_L) / L^(1/3):
+     L=1e+03 : 0.6630   (target -gamma = -0.3574)
+     L=1e+04 : 0.3072   (target -gamma = -0.3574)
+     L=1e+05 : 0.0096   (target -gamma = -0.3574)
+     L=1e+06 : -0.1604   (target -gamma = -0.3574)
+     L=1e+07 : -0.2535   (target -gamma = -0.3574)
+     L=1e+08 : -0.3034   (target -gamma = -0.3574)
+     L=1e+09 : -0.3296   (target -gamma = -0.3574)
+     L=1e+10 : -0.3433   (target -gamma = -0.3574)
+  ok: the normalised elementary bound decreases monotonically toward -gamma (it is -0.3433 at L = 1e10)
+   sampled private cost of the multi-scale barrier strategy (uniform bad classes, n ~ 2^(L+80)):
+     L=32: rho_L=9.627e-03 2rho^peak=6.025e-04 (sample 6.087e-04); private barrier cost 3.902e-03 = 6.48 x 2rho^peak = 0.4053 x rho_L; fallbacks 2/1500; mean flips 1.43
+  ok: L=32: the sample reproduces 2 rho^peak within 10%
+  ok: L=32: sampled private barrier cost < 12 x 2 rho^peak (EMPIRICAL)
+     L=64: rho_L=1.493e-03 2rho^peak=2.605e-05 (sample 2.768e-05); private barrier cost 2.211e-04 = 8.49 x 2rho^peak = 0.1481 x rho_L; fallbacks 0/1500; mean flips 1.58
+  ok: L=64: the sample reproduces 2 rho^peak within 10%
+  ok: L=64: sampled private barrier cost < 12 x 2 rho^peak (EMPIRICAL)
+     L=128: rho_L=6.978e-05 2rho^peak=2.250e-07 (sample 2.260e-07); private barrier cost 2.040e-06 = 9.06 x 2rho^peak = 0.0292 x rho_L; fallbacks 0/700; mean flips 1.74
+  ok: L=128: the sample reproduces 2 rho^peak within 10%
+  ok: L=128: sampled private barrier cost < 12 x 2 rho^peak (EMPIRICAL)
+[time] section 4: 22.6s elapsed, peak RSS 202 MB
+
+====================================================================================================
+5. The Robin inequality N_m(L) <= K0 A_(m+K)(L) and the conditional private bound
+====================================================================================================
+  ok: exact, 1 <= L <= 180, all m: N_m(L) <= 1.0033 A_(m+1)(L) (max 1.003255 at (L,m) = (50, 7))
+  ok: exact, 1 <= L <= 180, all m: N_m(L) <= 1.0001 A_(m+2)(L) (max 1.0000889 at (58, 9)); the ratio does exceed 1
+  ok: the ratio N_m/A_(m+1) exceeds 1 somewhere (so K0 = 1 is false for K = 1)
+  ok: float DP, L=256, 2 <= m <= 60: N_m(L) <= 1.01 A_(m+1)(L) (max ratio 1.00049)
+  ok: float DP, L=512, 2 <= m <= 60: N_m(L) <= 1.01 A_(m+1)(L) (max ratio 1.00003)
+  ok: float DP, L=1024, 2 <= m <= 60: N_m(L) <= 1.01 A_(m+1)(L) (max ratio 1.00000)
+   conditional private bound (Theorem C with K = 1, K0 = 1.0033): pi_L <= K0 3 (27 L + 18) rho^peak_L + 2L 2^(1-L) rho^peak_L
+[time] section 5: 23.9s elapsed, peak RSS 202 MB
+
+====================================================================================================
+6. The consistent construction (single member of the pairing family), valid on n <= N
+====================================================================================================
+  ok: MODE 2 (THM-4475's G_L) L=8: density 0.068052 = the peak lane's re-implementation 0.068052 (simulator check)
+  ok: MODE 2 (THM-4475's G_L) L=12: density 0.049190 = the peak lane's re-implementation 0.049190 (simulator check)
+  ok: MODE 2 (THM-4475's G_L) L=16: density 0.028426 = the peak lane's re-implementation 0.028426 (simulator check)
+  ok: MODE 2 (THM-4475's G_L) L=20: density 0.022694 = the peak lane's re-implementation 0.022694 (simulator check)
+
+   MODE 0 (all certificates frozen), N = 10^6, scales W = 12..2 then THM-4475 fallback:
+     L   density    2rho_L     2rho^peak   /2rho^peak  /2rho_L  peak-lane  rescues barrier  fallback  degraded  private-cost  riders(late)
+  ok: L=8: no stuck n; every 3 <= n <= 10^6 falls below itself within L steps (valid section of a member of P_L)
+      8  0.052052  0.148438  0.026206   1.986     0.3507  0.031274   46430   14585   31845       0    0.082576  10646(0)
+  ok: L=10: no stuck n; every 3 <= n <= 10^6 falls below itself within L steps (valid section of a member of P_L)
+     10  0.039096  0.125000  0.017818   2.194     0.3128     -       37483   15331   22152       0    0.061868  12422(320)
+  ok: L=12: no stuck n; every 3 <= n <= 10^6 falls below itself within L steps (valid section of a member of P_L)
+     12  0.032246  0.110352  0.013363   2.413     0.2922  0.017886   32257   14812   17445       0    0.051171  13011(601)
+  ok: L=14: no stuck n; every 3 <= n <= 10^6 falls below itself within L steps (valid section of a member of P_L)
+     14  0.023276  0.089600  0.009126   2.550     0.2598     -       25179   13704   11475      23    0.036565  13501(766)
+  ok: L=16: no stuck n; every 3 <= n <= 10^6 falls below itself within L steps (valid section of a member of P_L)
+     16  0.013534  0.064514  0.005322   2.543     0.2098  0.006902   16918   11393    5525     231    0.020537  13540(965)
+  ok: L=18: no stuck n; every 3 <= n <= 10^6 falls below itself within L steps (valid section of a member of P_L)
+     18  0.011078  0.057182  0.004151   2.669     0.1937     -       14611   10441    4170     305    0.016515  13364(1176)
+  ok: L=20: no stuck n; every 3 <= n <= 10^6 falls below itself within L steps (valid section of a member of P_L)
+     20  0.009512  0.052124  0.003414   2.786     0.1825  0.004658   13055    9626    3429     320    0.014088  13054(1308)
+  ok: L=22: no stuck n; every 3 <= n <= 10^6 falls below itself within L steps (valid section of a member of P_L)
+     22  0.007396  0.044452  0.002568   2.880     0.1664     -       10848    8423    2425     337    0.010681  12466(1368)
+  ok: L=24: no stuck n; every 3 <= n <= 10^6 falls below itself within L steps (valid section of a member of P_L)
+     24  0.005008  0.034163  0.001667   3.005     0.1466  0.002284    8027    6587    1440     442    0.006758  11344(1354)
+  ok: L=26: no stuck n; every 3 <= n <= 10^6 falls below itself within L steps (valid section of a member of P_L)
+     26  0.004234  0.030916  0.001373   3.083     0.1370     -        7106    5935    1171     440    0.005616  10782(1354)
+  ok: L=28: no stuck n; every 3 <= n <= 10^6 falls below itself within L steps (valid section of a member of P_L)
+     28  0.003288  0.026260  0.001032   3.187     0.1252  0.001542    5906    5047     859     410    0.004254  10097(1321)
+  ok: L=30: no stuck n; every 3 <= n <= 10^6 falls below itself within L steps (valid section of a member of P_L)
+     30  0.002770  0.023788  0.000855   3.240     0.1164     -        5232    4540     692     378    0.003536  9485(1271)
+  ok: L=32: no stuck n; every 3 <= n <= 10^6 falls below itself within L steps (valid section of a member of P_L)
+     32  0.002050  0.019254  0.000602   3.403     0.1065  0.000908    4118    3626     492     313    0.002474  8313(1127)
+  ok: L=34: no stuck n; every 3 <= n <= 10^6 falls below itself within L steps (valid section of a member of P_L)
+     34  0.001846  0.017686  0.000513   3.597     0.1044     -        3758    3317     441     307    0.002175  7789(1065)
+  ok: L=36: no stuck n; every 3 <= n <= 10^6 falls below itself within L steps (valid section of a member of P_L)
+     36  0.001484  0.015358  0.000402   3.687     0.0966     -        3166    2818     348     270    0.001699  7060(980)
+  ok: L=38: no stuck n; every 3 <= n <= 10^6 falls below itself within L steps (valid section of a member of P_L)
+     38  0.001312  0.014077  0.000343   3.826     0.0932     -        2877    2568     309     250    0.001484  6624(922)
+  ok: L=40: no stuck n; every 3 <= n <= 10^6 falls below itself within L steps (valid section of a member of P_L)
+     40  0.000928  0.011647  0.000252   3.683     0.0797     -        2294    2085     209     208    0.001023  5703(786)
+  ok: L=48: no stuck n; every 3 <= n <= 10^6 falls below itself within L steps (valid section of a member of P_L)
+     48  0.000432  0.007075  0.000109   3.977     0.0611     -        1321    1214     107     135    0.000453  3962(547)
+  ok: L=56: no stuck n; every 3 <= n <= 10^6 falls below itself within L steps (valid section of a member of P_L)
+     56  0.000272  0.004536  0.000052   5.262     0.0600     -         809     743      66      93    0.000225  2749(358)
+  ok: L=64: no stuck n; every 3 <= n <= 10^6 falls below itself within L steps (valid section of a member of P_L)
+     64  0.000138  0.002986  0.000026   5.298     0.0462     -         527     495      32      57    0.000101  2008(261)
+  ok: every rescued n is Collatz-bad (no harm to Collatz-good n) in all MODE 0 runs
+  ok: L=40: density < 5 x 2rho^peak and < 0.1 x 2rho_L (FINITE-EXACT on n <= 10^6)
+
+   interference in MODE 0: degraded = rescues whose actual best scale is below the private best scale; first deviation of the actual barrier path from the private one:
+     L=16: degraded 231 of 16918 rescues (1.4%): blocked (a desired flip point already frozen) 231, high flip 0, low flip 0; private needs a low rescue: 7160
+     L=24: degraded 442 of 8027 rescues (5.5%): blocked (a desired flip point already frozen) 442, high flip 0, low flip 0; private needs a low rescue: 1359
+     L=32: degraded 313 of 4118 rescues (7.6%): blocked (a desired flip point already frozen) 313, high flip 0, low flip 0; private needs a low rescue: 262
+     L=40: degraded 208 of 2294 rescues (9.1%): blocked (a desired flip point already frozen) 207, high flip 1, low flip 0; private needs a low rescue: 53
+     L=48: degraded 135 of 1321 rescues (10.2%): blocked (a desired flip point already frozen) 135, high flip 0, low flip 0; private needs a low rescue: 9
+     L=64: degraded 57 of 527 rescues (10.8%): blocked (a desired flip point already frozen) 57, high flip 0, low flip 0; private needs a low rescue: 0
+  ok: L = 16..40: at least 95% of the degraded rescues are blocked flips (the desired point lies on an earlier frozen certificate)
+
+   expensive (fallback A/F/B/P/dfs) rescues per undecided source, MODE 0 versus MODE 1 (default paths of Collatz-good n not frozen; diagnostic, NOT a valid member):
+     L   rho_L*N   MODE0: fallback  /(rho_L N)   degraded | MODE1: fallback  /(rho_L N)  degraded  density    verify-failures
+     16    32257     5525        0.1713        231   |    5604        0.1737        24    0.014886   55
+  ok: L=16: not freezing Collatz-good paths reduces degraded rescues (24 < 231)
+  ok: L=16: MODE 1 breaks some earlier n (verify failures 55): freezing is needed without a domination argument
+     24    17082     1440        0.0843        442   |    1102        0.0645        86    0.005036   16
+  ok: L=24: not freezing Collatz-good paths reduces degraded rescues (86 < 442) and fallbacks (1102 <= 1440)
+  ok: L=24: MODE 1 breaks some earlier n (verify failures 16): freezing is needed without a domination argument
+     32     9627      492        0.0511        313   |     266        0.0276        67    0.001998   3
+  ok: L=32: not freezing Collatz-good paths reduces degraded rescues (67 < 313) and fallbacks (266 <= 492)
+  ok: L=32: MODE 1 breaks some earlier n (verify failures 3): freezing is needed without a domination argument
+     40     5823      209        0.0359        208   |      77        0.0132        41    0.000864   6
+  ok: L=40: not freezing Collatz-good paths reduces degraded rescues (41 < 208) and fallbacks (77 <= 209)
+  ok: L=40: MODE 1 breaks some earlier n (verify failures 6): freezing is needed without a domination argument
+     48     3537      107        0.0302        135   |      28        0.0079        28    0.000392   5
+  ok: L=48: not freezing Collatz-good paths reduces degraded rescues (28 < 135) and fallbacks (28 <= 107)
+  ok: L=48: MODE 1 breaks some earlier n (verify failures 5): freezing is needed without a domination argument
+     64     1493       32        0.0214         57   |       4        0.0027         9    0.000114   1
+  ok: L=64: not freezing Collatz-good paths reduces degraded rescues (9 < 57) and fallbacks (4 <= 32)
+  ok: L=64: MODE 1 breaks some earlier n (verify failures 1): freezing is needed without a domination argument
+
+   MODE 0 at N = 10^7:
+  ok: L=16 N=10^7: valid (no stuck n, all n <= 10^7 descend within L, no harm); density 0.013578 (N=10^6: 0.013534)
+  ok: L=32 N=10^7: valid (no stuck n, all n <= 10^7 descend within L, no harm); density 0.002045 (N=10^6: 0.002050)
+[time] section 6: 27.6s elapsed, peak RSS 202 MB
+
+====================================================================================================
+7. One-flip domination (1FD): T^(j-1)((v-1)/2) <= T^j(v) for 1 <= j <= L
+====================================================================================================
+     L=16: 1FD fails for 0.200 of random v = 11 mod 12
+  ok: L=16: one-flip domination fails for a constant fraction of barrier-type points (EMPIRICAL)
+     L=32: 1FD fails for 0.292 of random v = 11 mod 12
+  ok: L=32: one-flip domination fails for a constant fraction of barrier-type points (EMPIRICAL)
+     L=64: 1FD fails for 0.361 of random v = 11 mod 12
+  ok: L=64: one-flip domination fails for a constant fraction of barrier-type points (EMPIRICAL)
+[time] section 7: 28.1s elapsed, peak RSS 202 MB
+
+ALL CHECKS PASSED

@@ -1,5 +1,11 @@
 # Script Results Index
 
+- [The pairing family at the peak: coupling, barriers and the private price](procgen_pairpeak_20260926_pairing_peak_price.md):
+  **PROVED / FINITE-EXACT / EMPIRICAL / OPEN (HYP-9140 still open).**
+  * **Coupling Lemma 1.** A single pairing flip re-merges with the unflipped orbit at time `r+3` whenever `T(v)`'s word begins `1^r 00`, i.e. with probability `1/2`. This CORRECTS HYP-9140's freshness rationale.
+  * **Private price.** The price `pi_L` (per-source flips, no consistency) is `rho_L exp(-Theta(L^(1/3)))`, via a reflected-barrier construction and an elementary strip bound, so P1 is negative for it. It is `O(L) rho^peak` under Conjecture R (HYP-9142; ratio `<= 1.0033` for `L <= 180`).
+  * **Consistent construction.** Valid sections to `n <= 10^7`, at `2.0–5.3 × 2 rho^peak` (`L = 8..64`). Interference with frozen certificates is the open obstacle.
+
 - [Free and sporadic cycles of qx+d, and the Belaga–Mignotte off-by-one](procgen_sporadic_20260926_free_and_sporadic_cycles.md):
   **PROVED (THM-4484, audited) / FINITE-EXACT / EMPIRICAL.** A mixed shape `(p,a)` of `(qy+d)/2` is free iff `(2^p - q^a) | d` (shift criterion), and `|2^p - q^a| = 1` only for `a = 1` or `3^2 - 2^3`.
   * So the free integer cycles of 3x+1 on Z are exactly `{0}, {-1}, {1,2}, {-5,-7,-10}`, and `-17` is sporadic; wave 13 is confirmed.
