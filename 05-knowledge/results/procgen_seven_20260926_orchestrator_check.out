@@ -1,0 +1,4 @@
+  ok: Theorem Q, q = 11: the least fixed point on u < 1024 satisfies C1-C5 exactly (16 sweeps; max Phi/u^2 on [512,1024) = 0.9683); floor 2/7 at every level
+  ok: Theorem Q, q = 9: the least fixed point on u < 16384 satisfies C1-C5 exactly (25 sweeps; max Phi/u^5 on [8192,16384) = 0.9312); floor 5/16 at every level
+  ok: the critical sign-choice cycles (1,6,3,16,8,4,2) of 11u-+1 (density 2/7) and the 16-cycle of 9u-+1 (density 5/16) are genuine
+  ok: Proposition S: every cycle reached under the real-sign rule (q = 3,5,7,9; 692 sample orbits) is contracting (q^a < 2^p)

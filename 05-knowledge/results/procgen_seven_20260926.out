@@ -1,0 +1,192 @@
+procgen_seven_20260926_run.py -- lane seven, collatz-procgen-20260922, 2026-09-26
+python 3.10.0, numpy 2.2.6; KMAX7=27 KMAXQ=24 KSTRUCT=24
+  sha256 procgen_seven_20260926_game.c = 4d2a193f96126ca5c13e4377c9d9018da7c25034cf0feda1152198750e5d7b34
+  sha256 procgen_seven_20260926_verify.c = 53576fbcf5472a989055623af881defafe9c16b54df28fb2b836989c54cdef39
+  sha256 procgen_seven_20260926_tight.c = 1ff6968c4d7509d079259f4f7eb771309dd9078df0f93ed07d439f1fda9efb14
+  sha256 procgen_seven_20260926_potential.py = f322b3bb001d6fa05c0eb9f041b2d6e98290baa473f116d1e795cc9e559b9682
+  sha256 procgen_seven_20260926_cycles.py = a7a66ac72b86c9ee1083aca3dfa6d1e3d5cbf8e1245fa3ab18127ee5d814daae
+  sha256 procgen_seven_20260926_run.py = 8325e6d49c5de577b7dde1a4f5cd7f202511cd6fada187281850d109a4dfe0fc
+  sha256 procgen_floor_20260926_lib.py = be7024fa7dc147c21d3eacabfc59d09c558943dcfa3cb30b421abda79e3e4f2f
+
+== A. The lean solver and the independent checker ==
+A1. rho*(q,k) from the lean solver equals the floor lane's certified values (THM-4486), every value re-checked by the independent checker:
+  [ok] 20 (q,k) pairs (q = 5, 7, 9, 11; k = 8..18): lean-solver value = THM-4486 value, both certificates accepted by the independent checker
+A2. the independent checker agrees with the floor lane's Python verifiers (a third implementation) on the same certificates, converted to node form (x = P + tau(P) H carries g(P); psi(x) = Psi(x mod H)):
+  [ok] 5 certificates (q = 5, 7, 11; k = 12..16) are accepted by the floor lane's verify_lower/verify_upper
+A3. negative tests: the checker rejects corrupted certificates:
+  [ok] the q=7, k=16 certificate uses the uint8 format
+  [ok] raising g by 1 at the head of a tight lower edge -> LOWER FAIL; raising psi by 1 at the head of a tight upper edge -> UPPER FAIL; the q=7, k=16 certificates do not certify 5/13; restored files pass again
+A5. the certified strategies re-evaluated by Karp's algorithm (the floor lane's pure-Python rho_max_exact for sigma; its C Karp on the reachable part of G^tau for tau):
+  [ok] 5 instances (k = 8..10): rho_max of the certified sign strategy (exhaustive Karp) equals the value, and the least cycle density Min can reach against the certified lift strategy (Karp) is >= the value
+A4. agreement with the floor lane's engine (a different solver) on fresh instances:
+  [ok] 6 instances (q = 7, 13, 15, 17, 21; k = 11..13): identical values from both engines, both certified
+
+== B. Exact min-max densities beyond THM-4486 (every entry: both certificates re-checked on all 2^k nodes) ==
+B1. q = 7:
+  [ok] solver found a value for q=7, k=19
+  [ok] q=7 k=19: rho* = 13/34 certified by the independent checker (lower and upper certificates, all 524288 nodes); |W| = 262144 of 262144 pairs
+    q= 7 k=19: rho* =   13/34 = 0.38235   (lean search 1.2 s, RSS 2 MB; checker 0.0 s, RSS 2 MB; digest 59d89a26dc056a46; max g 234, max psi 100)
+  [ok] q=7 k=19: equals the THM-4486 value 13/34
+  [ok] q=7 k=19: non-increasing (13/34 <= 19/49)
+  [ok] solver found a value for q=7, k=20
+  [ok] q=7 k=20: rho* = 34/89 certified by the independent checker (lower and upper certificates, all 1048576 nodes); |W| = 524288 of 524288 pairs
+    q= 7 k=20: rho* =   34/89 = 0.38202   (lean search 4.9 s, RSS 3 MB; checker 0.0 s, RSS 2 MB; digest 78c4061c208ef9dd; max g 646, max psi 300)
+  [ok] q=7 k=20: equals the THM-4486 value 34/89
+  [ok] q=7 k=20: non-increasing (34/89 <= 13/34)
+  [ok] solver found a value for q=7, k=21
+  [ok] q=7 k=21: rho* = 8/21 certified by the independent checker (lower and upper certificates, all 2097152 nodes); |W| = 1048576 of 1048576 pairs
+    q= 7 k=21: rho* =    8/21 = 0.38095   (lean search 1.6 s, RSS 4 MB; checker 0.0 s, RSS 3 MB; digest 7107d483481a94fd; max g 160, max psi 46)
+  [ok] q=7 k=21: equals the THM-4486 value 8/21
+  [ok] q=7 k=21: non-increasing (8/21 <= 34/89)
+  [ok] solver found a value for q=7, k=22
+  [ok] q=7 k=22: rho* = 14/37 certified by the independent checker (lower and upper certificates, all 4194304 nodes); |W| = 2097152 of 2097152 pairs
+    q= 7 k=22: rho* =   14/37 = 0.37838   (lean search 17.0 s, RSS 8 MB; checker 0.0 s, RSS 7 MB; digest 2951e67dd929754a; max g 294, max psi 108)
+  [ok] q=7 k=22: equals the THM-4486 value 14/37
+  [ok] q=7 k=22: non-increasing (14/37 <= 8/21)
+  [ok] solver found a value for q=7, k=23
+  [ok] q=7 k=23: rho* = 14/37 certified by the independent checker (lower and upper certificates, all 8388608 nodes); |W| = 4194304 of 4194304 pairs
+    q= 7 k=23: rho* =   14/37 = 0.37838   (lean search 14.0 s, RSS 13 MB; checker 0.1 s, RSS 14 MB; digest 4dea28c1a7eb66bc; max g 308, max psi 108)
+  [ok] q=7 k=23: non-increasing (14/37 <= 14/37)
+  [ok] solver found a value for q=7, k=24
+  [ok] q=7 k=24: rho* = 3/8 certified by the independent checker (lower and upper certificates, all 16777216 nodes); |W| = 8388608 of 8388608 pairs
+    q= 7 k=24: rho* =     3/8 = 0.37500   (lean search 5.9 s, RSS 19 MB; checker 0.1 s, RSS 19 MB; digest 782450bf25653a8f; max g 69, max psi 21)
+  [ok] q=7 k=24: non-increasing (3/8 <= 14/37)
+  [ok] solver found a value for q=7, k=25
+  [ok] q=7 k=25: rho* = 3/8 certified by the independent checker (lower and upper certificates, all 33554432 nodes); |W| = 16777216 of 16777216 pairs
+    q= 7 k=25: rho* =     3/8 = 0.37500   (lean search 12.1 s, RSS 36 MB; checker 0.2 s, RSS 21 MB; digest 30d41a96dbec9981; max g 72, max psi 21)
+  [ok] q=7 k=25: non-increasing (3/8 <= 3/8)
+  [ok] solver found a value for q=7, k=26
+  [ok] q=7 k=26: rho* = 3/8 certified by the independent checker (lower and upper certificates, all 67108864 nodes); |W| = 33554432 of 33554432 pairs
+    q= 7 k=26: rho* =     3/8 = 0.37500   (lean search 25.5 s, RSS 70 MB; checker 0.3 s, RSS 41 MB; digest e9b5889dd24f3f2a; max g 75, max psi 21)
+  [ok] q=7 k=26: non-increasing (3/8 <= 3/8)
+    (hint for q=7, k=27: Farey bracket [16/43, 3/8])
+  [ok] solver found a value for q=7, k=27
+  [ok] q=7 k=27: rho* = 35/94 certified by the independent checker (lower and upper certificates, all 134217728 nodes); |W| = 67108864 of 67108864 pairs
+    q= 7 k=27: rho* =   35/94 = 0.37234   (lean search 425.8 s, RSS 140 MB; checker 1.0 s, RSS 145 MB; digest a3a27f9ae05396dd; max g 910, max psi 345)
+  [ok] q=7 k=27: non-increasing (35/94 <= 3/8)
+  [ok] 7^a > 2^p for rho*(7,k) = a/p at every k = 19..27: class (i) is EMPTY for 7n+-1 at every level k <= 27 (k <= 18 by THM-4486 and monotonicity)
+  [ok] q = 7: 14/37 at k = 22, 23; a plateau at exactly 3/8 for k = 24, 25, 26; below 3/8 at k = 27 (35/94 = 0.37234)
+  [ok] q = 7: rho*(7,27) = 35/94; the value at k = 27 (35/94) still exceeds log_7 2 = 0.356207 by 0.0161
+B1'. q = 7 at k = 28, 29, 30 by one-sided certificates (compact engine; a lower and an upper certificate at the same threshold certify the value):
+  [ok] lower energy fixed point at F = 13/35 finite for q=7, k=28 (10.6 s, RSS 140 MB)
+  [ok] q=7 k=28: rho* >= 13/35 certified by the independent checker (0.9 s, RSS 273 MB; |W| = 134217728 of 134217728 pairs, violations 0, max g 351, tau=1 at 54861836 pairs)
+  [ok] upper energy fixed point at F = 13/35 finite for q=7, k=28 (72.0 s, RSS 138 MB)
+  [ok] q=7 k=28: rho* <= 13/35 certified by the independent checker (0.8 s, RSS 145 MB; violations 0, max psi 130)
+  [ok] lower energy fixed point at F = 13/35 finite for q=7, k=29 (21.4 s, RSS 276 MB)
+  [ok] q=7 k=29: rho* >= 13/35 certified by the independent checker (1.9 s, RSS 545 MB; |W| = 268435456 of 268435456 pairs, violations 0, max g 364, tau=1 at 111164910 pairs)
+  [ok] lower energy fixed point at F = 7/19 finite for q=7, k=30 (35.5 s, RSS 546 MB)
+  [ok] q=7 k=30: rho* >= 7/19 certified by the independent checker (2.7 s, RSS 577 MB; |W| = 536870912 of 536870912 pairs, violations 0, max g 203, tau=1 at 178912732 pairs)
+  [ok] rho*(7,28) = 13/35 (both certificates at 13/35) < 35/94 = rho*(7,27): the value drops again; rho*(7,29) = 13/35 (lower certificate at k = 29, upper bound by monotonicity); rho*(7,30) >= 7/19 = 0.36842. Since 7^13 > 2^35 and 7^7 > 2^19, class (i) is EMPTY for 7n+-1 at every level k <= 30 (monotonicity below)
+B2. q = 9 and q = 11 (THM-4486 computed k <= 18):
+  [ok] solver found a value for q=9, k=17
+  [ok] q=9 k=17: rho* = 12/31 certified by the independent checker (lower and upper certificates, all 131072 nodes); |W| = 65536 of 65536 pairs
+    q= 9 k=17: rho* =   12/31 = 0.38710   (lean search 0.3 s, RSS 1 MB; checker 0.0 s, RSS 1 MB; digest f27d3803a48797b9; max g 192, max psi 88)
+  [ok] q=9 k=17: equals the THM-4486 value 12/31
+  [ok] q=9 k=17: non-increasing (12/31 <= 2/5)
+  [ok] solver found a value for q=9, k=18
+  [ok] q=9 k=18: rho* = 5/13 certified by the independent checker (lower and upper certificates, all 262144 nodes); |W| = 131072 of 131072 pairs
+    q= 9 k=18: rho* =    5/13 = 0.38462   (lean search 0.2 s, RSS 2 MB; checker 0.0 s, RSS 1 MB; digest b265dc72fe2336fd; max g 85, max psi 38)
+  [ok] q=9 k=18: equals the THM-4486 value 5/13
+  [ok] q=9 k=18: non-increasing (5/13 <= 12/31)
+  [ok] solver found a value for q=9, k=19
+  [ok] q=9 k=19: rho* = 8/21 certified by the independent checker (lower and upper certificates, all 524288 nodes); |W| = 262144 of 262144 pairs
+    q= 9 k=19: rho* =    8/21 = 0.38095   (lean search 1.0 s, RSS 2 MB; checker 0.0 s, RSS 1 MB; digest cacd909eb12686d8; max g 144, max psi 61)
+  [ok] q=9 k=19: non-increasing (8/21 <= 5/13)
+  [ok] solver found a value for q=9, k=20
+  [ok] q=9 k=20: rho* = 17/45 certified by the independent checker (lower and upper certificates, all 1048576 nodes); |W| = 524288 of 524288 pairs
+    q= 9 k=20: rho* =   17/45 = 0.37778   (lean search 8.0 s, RSS 4 MB; checker 0.0 s, RSS 3 MB; digest 96d0c52d7b289ea7; max g 323, max psi 150)
+  [ok] q=9 k=20: non-increasing (17/45 <= 8/21)
+  [ok] solver found a value for q=9, k=21
+  [ok] q=9 k=21: rho* = 3/8 certified by the independent checker (lower and upper certificates, all 2097152 nodes); |W| = 1048576 of 1048576 pairs
+    q= 9 k=21: rho* =     3/8 = 0.37500   (lean search 0.8 s, RSS 4 MB; checker 0.0 s, RSS 2 MB; digest ee6938963d0fe118; max g 60, max psi 23)
+  [ok] q=9 k=21: non-increasing (3/8 <= 17/45)
+  [ok] solver found a value for q=9, k=22
+  [ok] q=9 k=22: rho* = 19/51 certified by the independent checker (lower and upper certificates, all 4194304 nodes); |W| = 2097152 of 2097152 pairs
+    q= 9 k=22: rho* =   19/51 = 0.37255   (lean search 22.3 s, RSS 8 MB; checker 0.0 s, RSS 7 MB; digest f92a7ca0dedf61e2; max g 399, max psi 171)
+  [ok] q=9 k=22: non-increasing (19/51 <= 3/8)
+  [ok] solver found a value for q=9, k=23
+  [ok] q=9 k=23: rho* = 27/73 certified by the independent checker (lower and upper certificates, all 8388608 nodes); |W| = 4194304 of 4194304 pairs
+    q= 9 k=23: rho* =   27/73 = 0.36986   (lean search 43.2 s, RSS 12 MB; checker 0.1 s, RSS 18 MB; digest 2e11dd65f13a5d41; max g 594, max psi 263)
+  [ok] q=9 k=23: non-increasing (27/73 <= 19/51)
+  [ok] solver found a value for q=9, k=24
+  [ok] q=9 k=24: rho* = 18/49 certified by the independent checker (lower and upper certificates, all 16777216 nodes); |W| = 8388608 of 8388608 pairs
+    q= 9 k=24: rho* =   18/49 = 0.36735   (lean search 55.9 s, RSS 21 MB; checker 0.1 s, RSS 26 MB; digest 8a1446050ee2478e; max g 414, max psi 174)
+  [ok] q=9 k=24: non-increasing (18/49 <= 27/73)
+  [ok] solver found a value for q=11, k=17
+  [ok] q=11 k=17: rho* = 29/77 certified by the independent checker (lower and upper certificates, all 131072 nodes); |W| = 65536 of 65536 pairs
+    q=11 k=17: rho* =   29/77 = 0.37662   (lean search 2.5 s, RSS 1 MB; checker 0.0 s, RSS 1 MB; digest e0b6dc1a90b0e81c; max g 464, max psi 272)
+  [ok] q=11 k=17: equals the THM-4486 value 29/77
+  [ok] q=11 k=17: non-increasing (29/77 <= 21/55)
+  [ok] solver found a value for q=11, k=18
+  [ok] q=11 k=18: rho* = 41/110 certified by the independent checker (lower and upper certificates, all 262144 nodes); |W| = 131072 of 131072 pairs
+    q=11 k=18: rho* =  41/110 = 0.37273   (lean search 3.5 s, RSS 2 MB; checker 0.0 s, RSS 1 MB; digest 06aff8360ab545b3; max g 697, max psi 433)
+  [ok] q=11 k=18: equals the THM-4486 value 41/110
+  [ok] q=11 k=18: non-increasing (41/110 <= 29/77)
+  [ok] solver found a value for q=11, k=19
+  [ok] q=11 k=19: rho* = 7/19 certified by the independent checker (lower and upper certificates, all 524288 nodes); |W| = 262144 of 262144 pairs
+    q=11 k=19: rho* =    7/19 = 0.36842   (lean search 0.5 s, RSS 2 MB; checker 0.0 s, RSS 1 MB; digest 3bfe633726e0c4da; max g 126, max psi 62)
+  [ok] q=11 k=19: non-increasing (7/19 <= 41/110)
+  [ok] solver found a value for q=11, k=20
+  [ok] q=11 k=20: rho* = 4/11 certified by the independent checker (lower and upper certificates, all 1048576 nodes); |W| = 524288 of 524288 pairs
+    q=11 k=20: rho* =    4/11 = 0.36364   (lean search 0.4 s, RSS 3 MB; checker 0.0 s, RSS 2 MB; digest 6edb027d6c788ead; max g 76, max psi 35)
+  [ok] q=11 k=20: non-increasing (4/11 <= 7/19)
+  [ok] solver found a value for q=11, k=21
+  [ok] q=11 k=21: rho* = 71/197 certified by the independent checker (lower and upper certificates, all 2097152 nodes); |W| = 1048576 of 1048576 pairs
+    q=11 k=21: rho* =  71/197 = 0.36041   (lean search 54.9 s, RSS 5 MB; checker 0.0 s, RSS 3 MB; digest c53451307a237596; max g 1420, max psi 755)
+  [ok] q=11 k=21: non-increasing (71/197 <= 4/11)
+  [ok] solver found a value for q=11, k=22
+  [ok] q=11 k=22: rho* = 29/81 certified by the independent checker (lower and upper certificates, all 4194304 nodes); |W| = 2097152 of 2097152 pairs
+    q=11 k=22: rho* =   29/81 = 0.35802   (lean search 75.4 s, RSS 8 MB; checker 0.0 s, RSS 5 MB; digest f4be47cb86f99303; max g 609, max psi 293)
+  [ok] q=11 k=22: non-increasing (29/81 <= 71/197)
+  [ok] solver found a value for q=11, k=23
+  [ok] q=11 k=23: rho* = 11/31 certified by the independent checker (lower and upper certificates, all 8388608 nodes); |W| = 4194304 of 4194304 pairs
+    q=11 k=23: rho* =   11/31 = 0.35484   (lean search 26.2 s, RSS 11 MB; checker 0.0 s, RSS 10 MB; digest 47f2ec7cc9b35f02; max g 242, max psi 126)
+  [ok] q=11 k=23: non-increasing (11/31 <= 29/81)
+  [ok] solver found a value for q=11, k=24
+  [ok] q=11 k=24: rho* = 31/88 certified by the independent checker (lower and upper certificates, all 16777216 nodes); |W| = 8388608 of 8388608 pairs
+    q=11 k=24: rho* =   31/88 = 0.35227   (lean search 207.2 s, RSS 21 MB; checker 0.1 s, RSS 19 MB; digest 90fa1ffb487563f9; max g 713, max psi 371)
+  [ok] q=11 k=24: non-increasing (31/88 <= 11/31)
+  [ok] q=9: rho*(q,k) > log_q 2 = 0.31546 exactly at every k <= 24 (class (i) empty); values ['12/31', '5/13', '8/21', '17/45', '3/8', '19/51', '27/73', '18/49']
+  [ok] q=11: rho*(q,k) > log_q 2 = 0.28906 exactly at every k <= 24 (class (i) empty); values ['29/77', '41/110', '7/19', '4/11', '71/197', '29/81', '11/31', '31/88']
+
+== C. Structure: the 3/8 plateau (k = 24) and the level k = 27 ==
+  [ok] k = 24 lies on the plateau (rho* = 3/8)
+  [ok] C1. the 7x+1 cycle (-169, -548, -274, -137, -436, -218, -109, -338)/87 (shape (8,3), 2^8 - 7^3 = -87, density 3/8) is a cycle of the certified optimal sign strategy at k = 24, and every edge of it is tight for the certified potential psi
+  [ok] C2. lower certificate at k = 24: tight core of 38044 pairs; Min's best responses against the certified Max strategy (tight cycles) all have density exactly 3/8, with shapes [(8, 3), (24, 9), (32, 12), (40, 15), (48, 18), (56, 21), (64, 24)]; the (8,3) ones are rational cycles with denominators dividing 87; all are real-bounded (|x| <= 170)
+C3. census of the simple rational cycles of small shape kept by the certified optimal strategies (a cycle is kept iff sigma agrees with its sign at the residue of each of its odd points):
+    k=24 (rho* = 3/8): (2,1) exp 0/2, (5,2) exp 0/8, (7,3) exp 0/38, (8,3) exp 4/54, (13,5) exp 0/3164, (11,4) exp 61/480, (14,5) exp 374/4568
+    k=27 (rho* = 35/94): (2,1) exp 0/2, (5,2) exp 0/8, (7,3) exp 0/38, (8,3) exp 0/54, (13,5) exp 0/3164, (11,4) exp 33/480, (14,5) exp 323/4568
+  [ok] every simple cycle of density > rho* among these shapes is broken (as it must be), the plateau strategy keeps 4 of the 54 simple (8,3)-cycles, and at k = 27 none of them; hundreds of expanding (14,5)-cycles (7^5 > 2^14, density 5/14 = 0.35714) survive in these optimal strategies, while a class-(i) strategy would have to break all 4568 of them
+C4. the rational relaxation: the real-sign assignment sigma(x) = sgn(x) keeps no expanding cycle (Proposition S of the note, proved by hand); exhaustive check over all simple cycles of 7x+-1 with p <= 11:
+  [ok] 24653 expanding simple cycles (p <= 11): sgn keeps none; 395 contracting ones: sgn keeps 132 (e.g. the free cycle (1, 4, 2)); so no finite set of rational cycles obstructs provability at every level
+
+== D. All-level floors for q = 9 and q = 11 from the negative-integer adversary (corrected potentials) ==
+  [ok] q=9: Phi(u) = u^5 for u >= 16384, least solution below (exact rationals, 25 passes): C1 (E),(O) on u < 16384; C2 Phi(w) <= w^5 on [8192, 16384); C3 (9*16384+1)^5 <= A 2^5 16384^5 with A = 2^11; C4 max Phi <= A 16384^5; C5 Phi > 0; max Phi(u)/u^5 = 0.9312 (0.9 s)
+  [ok] q=9: hence every cycle of U_k has density >= 5/16 for every k >= 18 (H >= 73729), and so rho*(9,k) >= 5/16 for EVERY k (monotonicity below 18); the cycle (1, 5, 22, 11, 50, 25, 112, 56, 28, 14, 7, 32, 16, 8, 4, 2) of u -> u/2, (9u -+ 1)/2 lies in U_k (k >= 18) and has density exactly 5/16: the negative-integer adversary's value is exactly 5/16
+  [ok] q=9: direct exact check (independent of the case analysis) of Phi(v) <= lambda Phi(u) on every edge of U_k for k = 18, 19, 20 (wrap-arounds included)
+  [ok] q=9 control: with U0 = 4096 the least solution exists but C2 fails (max Phi(u)/u^5 = 1.0334 > 1), so a large U0 is needed
+  [ok] q=9: log_10 2 = 0.30103 < 5/16 = 0.31250 < log_9 2 = 0.31546: Theorem N is improved at every level, but the floor stays below the provability threshold (9^5 < 2^16)
+  [ok] q=11: Phi(u) = u^2 for u >= 1024, least solution below (exact rationals, 16 passes): C1 (E),(O) on u < 1024; C2 Phi(w) <= w^2 on [512, 1024); C3 (11*1024+1)^2 <= A 2^2 1024^2 with A = 2^5; C4 max Phi <= A 1024^2; C5 Phi > 0; max Phi(u)/u^2 = 0.9683 (0.0 s)
+  [ok] q=11: hence every cycle of U_k has density >= 2/7 for every k >= 14 (H >= 5633), and so rho*(11,k) >= 2/7 for EVERY k (monotonicity below 14); the cycle (1, 6, 3, 16, 8, 4, 2) of u -> u/2, (11u -+ 1)/2 lies in U_k (k >= 14) and has density exactly 2/7: the negative-integer adversary's value is exactly 2/7
+  [ok] q=11: direct exact check (independent of the case analysis) of Phi(v) <= lambda Phi(u) on every edge of U_k for k = 14, 15, 16 (wrap-arounds included)
+  [ok] q=11: log_12 2 = 0.27894 < 2/7 = 0.28571 < log_11 2 = 0.28906: Theorem N is improved at every level, but the floor stays below the provability threshold (11^2 < 2^7)
+
+== E. Level-independent adversaries tried for q = 7 (none beats 1/3; exact values of frozen lift strategies) ==
+    top lift (Theorem N)              : value at k = 8, 10, 12: ['1/3', '1/3', '1/3']
+    window -x in [7/8H, 15/8H)        : value at k = 8, 10, 12: ['3/10', '1/4', '1/4']
+    window -x in [3/4H, 7/4H)         : value at k = 8, 10, 12: ['5/19', '6/25', '18/67']
+    window -x in [1/2H, 3/2H)         : value at k = 8, 10, 12: ['1/3', '1/3', '1/3']
+    window -x in [1/4H, 5/4H)         : value at k = 8, 10, 12: ['1/8', '1/10', '1/12']
+    window -x in [1/8H, 9/8H)         : value at k = 8, 10, 12: ['3/10', '1/4', '1/4']
+    top lift switched at the class of -1: value at k = 8, 10, 12: ['7/24', '7/24', '5/19']
+    top lift switched at -1, -2, -4   : value at k = 8, 10, 12: ['1/3', '7/24', '11/38']
+    uniformly random lifts            : value at k = 8, 10, 12: ['2/7', '2/7', '1/4']
+  [ok] the best of these frozen adversaries is exactly 1/3 = Theorem N (EMPIRICAL at k = 8, 10, 12); switching the top lift at the free cycle's classes (breaking (-1,-4,-2)) makes the adversary WORSE at k = 10, 12 (['7/24', '5/19', '7/24', '11/38']): the switched class is 2-adically next to the free cycle and gives Min a free ascent
+
+== F. Summary ==
+  q= 7 (log_q 2 = 0.35621): k=19:13/34, k=20:34/89, k=21:8/21, k=22:14/37, k=24:3/8, k=27:35/94, k=28:13/35 (exact to k = 29; rho*(7,30) >= 7/19)
+  q= 9 (log_q 2 = 0.31546): k=17:12/31, k=18:5/13, k=19:8/21, k=20:17/45, k=21:3/8, k=22:19/51, k=23:27/73, k=24:18/49 (exact to k = 24)
+  q=11 (log_q 2 = 0.28906): k=17:29/77, k=18:41/110, k=19:7/19, k=20:4/11, k=21:71/197, k=22:29/81, k=23:11/31, k=24:31/88 (exact to k = 24)
+
+checks: 118; wall time 1209 s; peak RSS of a child process 577 MB (checker lower q=7 k=30); runner RSS 278 MB
+ALL CHECKS PASSED

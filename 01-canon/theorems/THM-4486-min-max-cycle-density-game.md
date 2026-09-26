@@ -38,6 +38,23 @@ status: >
   k <= 18, or for any q >= 7 at k <= 11.
   OPEN: whether lim rho*(7,k) < log_7 2 (proved floor 1/3; at k = 22 still
   0.022 above); a floor above p0 valid for all q.
+  UPDATE 2026-09-26 (seven lane, procgen_seven_20260926_seven_n_plus_one_provability.md;
+  orchestrator-audited):
+  (Q) Theorem Q: rho*(9,k) >= 5/16 and rho*(11,k) >= 2/7 at every level,
+  via corrected potentials u^5 and u^2 for the negative-integer adversary
+  (exact least fixed points below U0 = 16384 and 1024). These are exactly
+  that adversary's values, with critical cycles of 9u-+1 and 11u-+1. They
+  lie just below log_9 2 and log_11 2, so the class-(i) windows narrow to
+  [0.3125, 0.3155) and [0.2857, 0.2891).
+  (S) Proposition S: the real-sign rule sigma(x) = sgn(x) on rationals makes
+  every cycle contracting. So no finite list of rational cycles can
+  obstruct provability at every level; an all-level impossibility proof
+  must use residue collisions.
+  FINITE-EXACT extended: rho*(7,k) = 13/34, 34/89, 8/21, 14/37, 14/37,
+  3/8, 3/8, 3/8, 35/94, 13/35, 13/35 for k = 19..29, and
+  rho*(7,30) >= 7/19. So 7n+-1 has no provable sign strategy at any level
+  k <= 30, and the guessed limit 3/8 is REFUTED.
+  Exact q = 9, 11 values for k = 17..24.
   Collatz is untouched: q = 3 is pinned at 1/2 < log_3 2.
 source: collatz-procgen-20260922 session, floor lane (2026-09-26); audited and promoted by the session orchestrator 2026-09-26
 depends_on:

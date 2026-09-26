@@ -21,6 +21,10 @@ status: >
   proved all-level floor is 1/3 (Theorem N). For q = 9..21, no provable
   strategy exists at k <= 18. The second question stays OPEN, and
   entropy-type arguments provably cannot settle q <= 7 (cap 1/3).
+  UPDATE (seven lane): 7n+-1 is not provable at any level k <= 30;
+  rho*(7,29) = 13/35 is 0.0152 above log_7 2. All-level floors 5/16 (q = 9)
+  and 2/7 (q = 11) fall 0.003 short of log_q 2. By Proposition S, an
+  all-level "never provable" proof must exploit residue collisions.
 source: collatz-procgen-20260922 session, cube-distance lane (DRIFT, 2026-09-25) and drift lane (2026-09-26)
 depends_on:
   - 01-canon/theorems/THM-4481-entropy-merge-law-sign-strategies.md

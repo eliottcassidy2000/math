@@ -17,6 +17,12 @@
 
 - [223 crossroads: current synthesis and four audited theorems](crossroads223_20260926_board.md):
   **PROVED / CITED / FINITE-EXACT / OPEN Collatz.** THM-4488 proves private q=3 price O(L^3)rho_peak and sharp peak/arbitrary-edit asymptotics with O_q(log L) error for every fixed odd q>=3. THM-4489 classifies empty Fermat sextics (largest projective prime223, torus prime277) and proves the sharp halving-budget-eight223 return gate. THM-4490 gives interval-uniform growing-prefix rank through sqrt(log H loglog H)/8; rank failures inside the no-descent candidates have exponent at most0.469361. THM-4491 identifies the exact minimum lower density of global two-step pairings as a convergent tree series, with rigorous lower bound0.2907539227. Twelve reproduced scripts include independent controls. Global pairing consistency, uniform Robin comparison, chronological G2 and Collatz remain OPEN.
+- [Is 7n±1 ever provable? Game certificates to level 30, all-level floors for q = 9, 11](procgen_seven_20260926_seven_n_plus_one_provability.md):
+  **FINITE-EXACT / PROVED (update to THM-4486, audited) / OPEN.**
+  * `rho*(7,k)` is exact to `k = 29` (`13/35`) and `>= 7/19` at `k = 30`, so no provable 7n±1 sign strategy exists at `k <= 30`. The guessed limit `3/8` is REFUTED.
+  * Theorem Q: all-level floors `5/16` (q = 9) and `2/7` (q = 11), each within `0.003` of `log_q 2`.
+  * Proposition S: the real-sign rule makes every rational cycle contracting, so all-level impossibility needs residue collisions.
+  * The limit for q = 7 is OPEN.
 
 - [Robin versus Dirichlet: sine supersolutions for the reflected barrier and the sharp second-order price](procgen_robin_20260926_robin_inequality.md):
   **PROVED (orchestrator-audited, including an independent interval-arithmetic re-check) / FINITE-EXACT; an independent second proof alongside crossroads223.** Built on exact eigenfunctions `e^(beta s) sin(theta s + phi)` of the letter walk:
