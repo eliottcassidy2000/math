@@ -1,0 +1,4 @@
+  ok: Theorems 1 and 2 hold on every closed class of 790 strategies (q = 3,5,7,9,23; k = 3..9)
+  ok: p0 = 0.2270922; log_23 2 = 0.2211 < p0 < log_21 2 = 0.2277
+  ok: the constants 1 - h(log_q 2) = 0.01391, 0.06051, 0.10062 for q = 5, 7, 9
+  ok: exhaustively no class-(i) strategy for q = 7 and q = 23 at k = 2, 3, 4

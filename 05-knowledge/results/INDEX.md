@@ -1,5 +1,10 @@
 # Script Results Index
 
+- [Positive drift and provability in the strategy cube: an entropy law for sign flips](procgen_drift_20260926_positive_drift_provability.md):
+  **PROVED (THM-4481, audited) / FINITE-EXACT / VERIFIED / OPEN.** For every stationary law of every `qn±1` sign strategy: `pi(odd) = 1/2 - sum_R pi(s) g(s)` (gain identity), and `1 - h(pi(odd)) <= merge entropy <= pi(R ∪ R*) <= pi(odd)` (entropy/merge law).
+  * Consequences: `rho_max >= 0.2270922` always, so no provable sign strategy exists for odd `q >= 23`. Provable 5n±1 strategies need flip mass `> 0.01391`, so 5n+1's Haar distance tends to 0 only if invariant densities concentrate on the flips (HYP-9141).
+  * Data: `44 <= delta_8(5) <= 50`; certified sets to `k = 19` at about `3.1/k–3.4/k`; `q = 7, 9, 11` have no provable strategy at the levels computed (min-max `3/7`).
+
 - [The peak-discounted provability price: catch every undecided orbit at its highest point](procgen_peak_20260926_peak_discounted_price.md):
   **PROVED (THM-4480, audited) / PROVED modulo CITED Mogul'skii / FINITE-EXACT / EMPIRICAL.** For every odd `q`, `rho^peak_L/M*_L <= eps_L(q) <= rho^peak_L`, where `rho^peak_L = 2^-L sum_Bad 1/w*` and `M*_L = O(L^3)`.
   * So the arbitrary-edit price has exponent `1 - H(log_q 2)` for every multiplier: `0.013911` for `5n+1`, whose undecided density stays at `0.176`.

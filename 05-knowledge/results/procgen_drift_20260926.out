@@ -1,0 +1,177 @@
+procgen_drift_20260926 -- drift lane: distance of q n + 1 (q = 5 mainly) to bounded-lookahead provability
+python 3.10.0, numpy 2.2.6; KMAX = 19, K8_TIME = 100000s
+
+====================================================================================================
+E. Exact distances delta_k(5) of 5n+1 to class (i) (implicit hitting set, RC2 / SAT)
+====================================================================================================
+E1. k=2: class (i) EMPTY: 6 re-derived expanding-cycle no-goods are UNSAT (Glucose4)
+E1. k=3: class (i) EMPTY: 10 re-derived expanding-cycle no-goods are UNSAT (Glucose4)
+E1. k=4: class (i) EMPTY: 30 re-derived expanding-cycle no-goods are UNSAT (Glucose4)
+E1. k=5: class (i) EMPTY: 233 re-derived expanding-cycle no-goods are UNSAT (Glucose4)
+E1. k=6: class (i) EMPTY: 550 re-derived expanding-cycle no-goods are UNSAT (Glucose4)
+E2. k=7: delta_7(5) = 29 (Haar 0.4531): no hitting set of size 28 over 1215 re-derived no-goods (RC2); optimum rho_max = 3/7 (Dinkelbach = pure-Python Karp); set [9, 13, 17, 21, 25, 29, 31, 37, 41, 45, 49, 53, 61, 63, 71, 73, 77, 81, 85, 93, 95, 101, 105, 109, 113, 117, 121, 125, 127]
+E3. k=8: 44 <= delta_8(5) <= 50 (Haar 0.3438 .. 0.3906); lower bound = exact RC2 optimum of the hitting-set problem over the no-goods of the last round (3116 no-goods in total, each re-derived as a genuine expanding cycle) after 10 IHS rounds (1102s); upper bound = best of 21 seeded prunings of the lifted k=7 optimum, class (i) verified
+
+====================================================================================================
+A. Engine self-tests
+====================================================================================================
+A1. C engine (Karp, potential certificate, Dinkelbach) agrees with an independent pure-Python Karp on 300 random strategies (q in {3,5,7,9}, k in {3,4,5}): OK
+A2. incremental toggles (q=5, k=7, 200 random toggles from the optimum: 15 accepted, 185 rejected) agree with pure-Python Karp, and the maintained potential is valid after each: OK
+
+====================================================================================================
+B. Theorem 1 (stationary gain identity): pi(odd) = theta - sum_{s in R} pi(s) g(s)
+====================================================================================================
+B1. identity checked on 360 (strategy, theta, closed class) triples (q in {3,5,7,9}, k = 4..8, theta in {0.3,0.5,0.8}): max |error| = 3.3e-16 (float64 solves): OK
+B2. k=7 optimum of 5n+1, theta=0.5: pi(odd) = 0.309524 = theta - sum pi g = 0.309524; sum pi g = 0.1905 > theta - log_5 2 = 0.0693; pi(R) = 0.1577 > (theta - c)/(k-1) = 0.0116
+B2. k=7 optimum of 5n+1, theta=0.9: pi(odd) = 0.346268 = theta - sum pi g = 0.346268; sum pi g = 0.5537 > theta - log_5 2 = 0.4693; pi(R) = 0.2750 > (theta - c)/(k-1) = 0.0782
+B3. gain distribution over odd residues (q = 5) and the tail bound #{g >= x} <= 2^(k-1) * 2 exp(-x^2/(2(k-1))):
+    k= 8: mean +0.0000, variance 4.172 (= 0.521 k), max 4, min -5; tail bound holds for every x > 0
+    k=12: mean +0.0000, variance 6.345 (= 0.529 k), max 6, min -7; tail bound holds for every x > 0
+    k=16: mean +0.0000, variance 8.444 (= 0.528 k), max 9, min -11; tail bound holds for every x > 0
+    k=20: mean +0.0000, variance 10.490 (= 0.524 k), max 12, min -14; tail bound holds for every x > 0
+
+====================================================================================================
+D. Lemma 3 (carry lemma, q = 5): the orbit of y - 1 against the orbit of y under 5n+1
+====================================================================================================
+D1. for all 400001 integers y in [-2e5, 2e5] (the identities are polynomial, hence 2-adic): y=1 mod 4: 11 -> 00, T^2 y = 25 T^2(y-1) + 8 (next 3 parities agree); y=3 mod 4: 10 -> 01, T^2(y-1) = T^2 y - 1; y=2 mod 4: 01 -> 11, T^2(y-1) = 5 T^2 y - 7; y=0 mod 4: 00 -> 10, T^2(y-1) = 5 T^2 y - 1: OK
+D2. sign of the exact gain g(s) matches the carry prediction (+ at a '11' stop, - at a '0x' stop) or g = 0 for 1633/2046 odd residues at k = 12 (EMPIRICAL: later disagreements can reverse the sign)
+
+====================================================================================================
+F. Min-max cycle density rho*(q,k) = min over level-k strategies of max cycle density (exact)
+====================================================================================================
+F. q= 3 (log_q 2 = 0.63093): k=2: 1/2, k=3: 1/2, k=4: 1/2, k=5: 1/2, k=6: 1/2, k=7: 1/2, k=8: 1/2
+      class (i) nonempty at levels [2, 3, 4, 5, 6, 7, 8] of those computed; each value certified by a strategy with that exact rho_max and a UNSAT set of re-derived no-goods (Glucose4)
+F. q= 5 (log_q 2 = 0.43068): k=2: 1/2, k=3: 1/2, k=4: 1/2, k=5: 1/2, k=6: 1/2, k=7: 3/7, k=8: 3/7
+      class (i) nonempty at levels [7, 8] of those computed; each value certified by a strategy with that exact rho_max and a UNSAT set of re-derived no-goods (Glucose4)
+F. q= 7 (log_q 2 = 0.35621): k=2: 1/2, k=3: 1/2, k=4: 1/2, k=5: 1/2, k=6: 1/2, k=7: 3/7, k=8: 3/7, k=9: 3/7
+      class (i) nonempty at levels none of those computed; each value certified by a strategy with that exact rho_max and a UNSAT set of re-derived no-goods (Glucose4)
+F. q= 9 (log_q 2 = 0.31546): k=2: 1/2, k=3: 1/2, k=4: 1/2, k=5: 1/2, k=6: 1/2, k=7: 3/7, k=8: 3/7
+      class (i) nonempty at levels none of those computed; each value certified by a strategy with that exact rho_max and a UNSAT set of re-derived no-goods (Glucose4)
+F. q=11 (log_q 2 = 0.28906): k=2: 1/2, k=3: 1/2, k=4: 1/2, k=5: 1/2, k=6: 1/2, k=7: 3/7, k=8: 3/7
+      class (i) nonempty at levels none of those computed; each value certified by a strategy with that exact rho_max and a UNSAT set of re-derived no-goods (Glucose4)
+F. q=13 (log_q 2 = 0.27024): k=2: 1/2, k=3: 1/2, k=4: 1/2, k=5: 1/2, k=6: 1/2, k=7: 1/2, k=8: 1/2
+      class (i) nonempty at levels none of those computed; each value certified by a strategy with that exact rho_max and a UNSAT set of re-derived no-goods (Glucose4)
+
+====================================================================================================
+G. Upper bounds for 5n+1: lift + prune from the k=7 optimum, k = 7..19 (every set certified)
+====================================================================================================
+G1. k= 8: |R| =     50, Haar = 0.39062, k*Haar = 3.125; necklace lower bound N_k(5) = 23 (Haar 0.1797, k*Haar 1.438); certificate at F = 59/137 (max psi 272) checked on all 512 edges [0s]
+G1. k= 9: |R| =     94, Haar = 0.36719, k*Haar = 3.305; necklace lower bound N_k(5) = 44 (Haar 0.1719, k*Haar 1.547); certificate at F = 205/476 (max psi 1011) checked on all 1024 edges [0s]
+G1. k=10: |R| =    158, Haar = 0.30859, k*Haar = 3.086; necklace lower bound N_k(5) = 67 (Haar 0.1309, k*Haar 1.309); certificate at F = 351/815 (max psi 1969) checked on all 2048 edges [0s]
+G1. k=11: |R| =    295, Haar = 0.28809, k*Haar = 3.169; necklace lower bound N_k(5) = 136 (Haar 0.1328, k*Haar 1.461); certificate at F = 643/1493 (max psi 4664) checked on all 4096 edges [0s]
+G1. k=12: |R| =    529, Haar = 0.25830, k*Haar = 3.100; necklace lower bound N_k(5) = 216 (Haar 0.1055, k*Haar 1.266); certificate at F = 643/1493 (max psi 4871) checked on all 8192 edges [0s]
+G1. k=13: |R| =   1000, Haar = 0.24414, k*Haar = 3.174; necklace lower bound N_k(5) = 448 (Haar 0.1094, k*Haar 1.422); certificate at F = 643/1493 (max psi 5514) checked on all 16384 edges [0s]
+G1. k=14: |R| =   1890, Haar = 0.23071, k*Haar = 3.230; necklace lower bound N_k(5) = 714 (Haar 0.0872, k*Haar 1.220); certificate at F = 4647/10790 (max psi 41346) checked on all 32768 edges [1s]
+G1. k=15: |R| =   3546, Haar = 0.21643, k*Haar = 3.246; necklace lower bound N_k(5) = 1525 (Haar 0.0931, k*Haar 1.396); certificate at F = 8651/20087 (max psi 82541) checked on all 65536 edges [1s]
+G1. k=16: |R| =   6754, Haar = 0.20612, k*Haar = 3.298; necklace lower bound N_k(5) = 3178 (Haar 0.0970, k*Haar 1.552); certificate at F = 21306/49471 (max psi 203285) checked on all 131072 edges [2s]
+G1. k=17: |R| =  12837, Haar = 0.19588, k*Haar = 3.330; necklace lower bound N_k(5) = 5286 (Haar 0.0807, k*Haar 1.371); certificate at F = 21306/49471 (max psi 224591) checked on all 262144 edges [11s]
+G1. k=18: |R| =  24762, Haar = 0.18892, k*Haar = 3.401; necklace lower bound N_k(5) = 11091 (Haar 0.0846, k*Haar 1.523); certificate at F = 97879/227268 (max psi 1129642) checked on all 524288 edges [41s]
+G1. k=19: |R| =  47081, Haar = 0.17960, k*Haar = 3.412; necklace lower bound N_k(5) = 18660 (Haar 0.0712, k*Haar 1.352); certificate at F = 97879/227268 (max psi 1161152) checked on all 1048576 edges [262s]
+G2. fits over k = 10..19 (EMPIRICAL; heuristic upper bounds, not delta_k):
+    log2 Haar = +1.838 +0.0328 k -1.161 log2 k   (rms 0.0110)
+    log2 Haar = +1.091 -0.842 log2 k   (power law k^-0.842; rms 0.0139)
+    Haar = +0.0355 + 2.729/k   (rms 0.00219);   Haar = 3.203/k   (rms 0.00755)
+
+====================================================================================================
+C. Theorem 2 (entropy / merge inequality) and its corollaries
+====================================================================================================
+C1. 1 - h(pi(odd)) <= sum_merge (a+b) h(a/(a+b)) <= pi(R u R*) <= pi(odd) checked on 150 closed classes of random strategies (q in {3,5,7,9,11}, k = 4..9); smallest pi(odd) seen 0.3333: OK
+C1b. the max-halving (greedy) strategy has stationary odd frequency 1/3 (to 1e-6) for q = 5, 7, 9 at k = 8, 10, 12 (9 closed classes)
+C2. universal floor: p0 = root of p + h(p) = 1 in (0,1/2) lies in [0.227092195219348, 0.227092195219348]; every stationary law of every strategy has pi(odd) >= p0, hence rho_max >= p0 (sandwich)
+    => class (i) is EMPTY at every level for every odd q >= 23 (log_q 2 <= log_23 2 = 0.22106 < p0); q = 21 (log_21 2 = 0.22767) is not covered by this bound
+C3. flip-mass constants for class-(i) strategies (Theorem 2 with pi(odd) < c = log_q 2):
+    q= 5: c = 0.43068, drift (1/2)log(q/4) = +0.1116; pi(R u R*) > 1 - h(c) = 0.01391; pi(R) > A_q = 0.00126 (A log2(e/A) = 1 - h(c)); gain form: sum pi g > 1/2 - c = 0.0693
+    q= 7: c = 0.35621, drift (1/2)log(q/4) = +0.2798; pi(R u R*) > 1 - h(c) = 0.06051; pi(R) > A_q = 0.00704 (A log2(e/A) = 1 - h(c)); gain form: sum pi g > 1/2 - c = 0.1438
+    q= 9: c = 0.31546, drift (1/2)log(q/4) = +0.4055; pi(R u R*) > 1 - h(c) = 0.10062; pi(R) > A_q = 0.01307 (A log2(e/A) = 1 - h(c)); gain form: sum pi g > 1/2 - c = 0.1845
+    q=11: c = 0.28906, drift (1/2)log(q/4) = +0.5058; pi(R u R*) > 1 - h(c) = 0.13249; pi(R) > A_q = 0.01838 (A log2(e/A) = 1 - h(c)); gain form: sum pi g > 1/2 - c = 0.2109
+    q=13: c = 0.27024, drift (1/2)log(q/4) = +0.5893; pi(R u R*) > 1 - h(c) = 0.15819; pi(R) > A_q = 0.02297 (A log2(e/A) = 1 - h(c)); gain form: sum pi g > 1/2 - c = 0.2298
+    q=15: c = 0.25596, drift (1/2)log(q/4) = +0.6609; pi(R u R*) > 1 - h(c) = 0.17941; pi(R) > A_q = 0.02696 (A log2(e/A) = 1 - h(c)); gain form: sum pi g > 1/2 - c = 0.2440
+    q=17: c = 0.24465, drift (1/2)log(q/4) = +0.7235; pi(R u R*) > 1 - h(c) = 0.19731; pi(R) > A_q = 0.03045 (A log2(e/A) = 1 - h(c)); gain form: sum pi g > 1/2 - c = 0.2553
+    q=19: c = 0.23541, drift (1/2)log(q/4) = +0.7791; pi(R u R*) > 1 - h(c) = 0.21268; pi(R) > A_q = 0.03354 (A log2(e/A) = 1 - h(c)); gain form: sum pi g > 1/2 - c = 0.2646
+    q=21: c = 0.22767, drift (1/2)log(q/4) = +0.8291; pi(R u R*) > 1 - h(c) = 0.22607; pi(R) > A_q = 0.03631 (A log2(e/A) = 1 - h(c)); gain form: sum pi g > 1/2 - c = 0.2723
+C4. 5n+1 pruned class-(i) sets: entropy inequality and concentration diagnostics (f = dpi/dU):
+      k   Haar(R)  pi(odd)  1-h(pi(odd))  merge-entropy  pi(R)   pi(R*)  U(R u R*)  max f on R u R*  ||f||_2^2
+      7  0.4531   0.3095   0.1074        0.2515         0.1577  0.1139  0.4141     1.310           1.265
+      8  0.3906   0.3080   0.1092        0.2352         0.1472  0.1043  0.3672     1.534           1.320
+      9  0.3672   0.3082   0.1090        0.2320         0.1397  0.1047  0.3516     1.576           1.344
+     10  0.3086   0.3092   0.1077        0.2131         0.1290  0.0953  0.2998     1.857           1.389
+     11  0.2881   0.3096   0.1072        0.2075         0.1214  0.0947  0.2817     1.825           1.404
+     12  0.2583   0.3117   0.1049        0.1967         0.1121  0.0909  0.2554     1.968           1.412
+     13  0.2441   0.3120   0.1045        0.1917         0.1096  0.0878  0.2418     2.204           1.438
+     14  0.2307   0.3130   0.1034        0.1864         0.1047  0.0862  0.2291     2.393           1.456
+
+====================================================================================================
+H. Controls
+====================================================================================================
+H1. q=3, k=8: flipping Bad_k (|Bad_k| = 19, Haar 0.1484) is class (i) (certificate at 147/233); pi(odd) = 0.4221 < 1/2 < log_3 2, pi(R) = 0.0405, merge entropy 0.0940 (for q = 3 Theorems 1-2 demand nothing: pi(odd) = 1/2 is already below log_3 2)
+H1. q=3, k=10: flipping Bad_k (|Bad_k| = 64, Haar 0.1250) is class (i) (certificate at 306/485); pi(odd) = 0.4285 < 1/2 < log_3 2, pi(R) = 0.0336, merge entropy 0.0785 (for q = 3 Theorems 1-2 demand nothing: pi(odd) = 1/2 is already below log_3 2)
+H1. q=3, k=12: flipping Bad_k (|Bad_k| = 226, Haar 0.1104) is class (i) (certificate at 2301/3647); pi(odd) = 0.4330 < 1/2 < log_3 2, pi(R) = 0.0293, merge entropy 0.0689 (for q = 3 Theorems 1-2 demand nothing: pi(odd) = 1/2 is already below log_3 2)
+H1. q=3, k=14: flipping Bad_k (|Bad_k| = 734, Haar 0.0896) is class (i) (certificate at 10281/16295)
+H2. q=7, k=8: expanding necklaces N_k(7) = 30 (Haar 0.2344, k*Haar 1.875) -- a lower bound for the distance if class (i) were nonempty
+H2. q=7, k=10: expanding necklaces N_k(7) = 89 (Haar 0.1738, k*Haar 1.738) -- a lower bound for the distance if class (i) were nonempty
+H2. q=7, k=12: expanding necklaces N_k(7) = 282 (Haar 0.1377, k*Haar 1.652) -- a lower bound for the distance if class (i) were nonempty
+H2. q=7, k=14: expanding necklaces N_k(7) = 1074 (Haar 0.1311, k*Haar 1.835) -- a lower bound for the distance if class (i) were nonempty
+H2. q=7, k=16: expanding necklaces N_k(7) = 3682 (Haar 0.1124, k*Haar 1.798) -- a lower bound for the distance if class (i) were nonempty
+H2. q=9, k=8: expanding necklaces N_k(9) = 30 (Haar 0.2344, k*Haar 1.875) -- a lower bound for the distance if class (i) were nonempty
+H2. q=9, k=10: expanding necklaces N_k(9) = 89 (Haar 0.1738, k*Haar 1.738) -- a lower bound for the distance if class (i) were nonempty
+H2. q=9, k=12: expanding necklaces N_k(9) = 325 (Haar 0.1587, k*Haar 1.904) -- a lower bound for the distance if class (i) were nonempty
+H2. q=9, k=14: expanding necklaces N_k(9) = 1074 (Haar 0.1311, k*Haar 1.835) -- a lower bound for the distance if class (i) were nonempty
+H2. q=9, k=16: expanding necklaces N_k(9) = 3682 (Haar 0.1124, k*Haar 1.798) -- a lower bound for the distance if class (i) were nonempty
+
+====================================================================================================
+I. What fails: simple explicit flip rules for 5n+1 (each leaves an expanding cycle)
+====================================================================================================
+I. k= 8 all 111-windows (r = 5 mod 8)                              Haar 0.250: expanding cycle of length 3 with 2 odd nodes (5^2 > 2^3), verified walk
+I. k= 8 max-halving (r = 1 mod 4)                                  Haar 0.500: expanding cycle of length 2 with 1 odd nodes (5^1 > 2^2), verified walk
+I. k= 8 undecided Bad_k (Theorem-1 analogue)                       Haar 0.547: expanding cycle of length 3 with 2 odd nodes (5^2 > 2^3), verified walk
+I. k= 8 Bad_k and 111                                              Haar 0.234: expanding cycle of length 3 with 2 odd nodes (5^2 > 2^3), verified walk
+I. k= 8 one flip per expanding necklace (lowest ballot rotation)   Haar 0.180: expanding cycle of length 5 with 4 odd nodes (5^4 > 2^5), verified walk
+I. k= 8 one flip per expanding necklace (highest ballot rotation)  Haar 0.180: expanding cycle of length 6 with 5 odd nodes (5^5 > 2^6), verified walk
+I. k= 8 all positive-gain residues (g >= 1)                        Haar 0.422: expanding cycle of length 10 with 5 odd nodes (5^5 > 2^10), verified walk
+I. k=10 all 111-windows (r = 5 mod 8)                              Haar 0.250: expanding cycle of length 2 with 1 odd nodes (5^1 > 2^2), verified walk
+I. k=10 max-halving (r = 1 mod 4)                                  Haar 0.500: expanding cycle of length 2 with 1 odd nodes (5^1 > 2^2), verified walk
+I. k=10 undecided Bad_k (Theorem-1 analogue)                       Haar 0.520: expanding cycle of length 3 with 2 odd nodes (5^2 > 2^3), verified walk
+I. k=10 Bad_k and 111                                              Haar 0.227: expanding cycle of length 2 with 1 odd nodes (5^1 > 2^2), verified walk
+I. k=10 one flip per expanding necklace (lowest ballot rotation)   Haar 0.131: expanding cycle of length 3 with 3 odd nodes (5^3 > 2^3), verified walk
+I. k=10 one flip per expanding necklace (highest ballot rotation)  Haar 0.131: expanding cycle of length 9 with 8 odd nodes (5^8 > 2^9), verified walk
+I. k=10 all positive-gain residues (g >= 1)                        Haar 0.445: expanding cycle of length 15 with 9 odd nodes (5^9 > 2^15), verified walk
+I. k=12 all 111-windows (r = 5 mod 8)                              Haar 0.250: expanding cycle of length 3 with 2 odd nodes (5^2 > 2^3), verified walk
+I. k=12 max-halving (r = 1 mod 4)                                  Haar 0.500: expanding cycle of length 4 with 2 odd nodes (5^2 > 2^4), verified walk
+I. k=12 undecided Bad_k (Theorem-1 analogue)                       Haar 0.492: expanding cycle of length 3 with 2 odd nodes (5^2 > 2^3), verified walk
+I. k=12 Bad_k and 111                                              Haar 0.218: expanding cycle of length 6 with 3 odd nodes (5^3 > 2^6), verified walk
+I. k=12 one flip per expanding necklace (lowest ballot rotation)   Haar 0.105: expanding cycle of length 2 with 2 odd nodes (5^2 > 2^2), verified walk
+I. k=12 one flip per expanding necklace (highest ballot rotation)  Haar 0.105: expanding cycle of length 11 with 8 odd nodes (5^8 > 2^11), verified walk
+I. k=12 all positive-gain residues (g >= 1)                        Haar 0.447: expanding cycle of length 2 with 1 odd nodes (5^1 > 2^2), verified walk
+I. k=14 all 111-windows (r = 5 mod 8)                              Haar 0.250: expanding cycle of length 3 with 2 odd nodes (5^2 > 2^3), verified walk
+I. k=14 max-halving (r = 1 mod 4)                                  Haar 0.500: expanding cycle of length 4 with 2 odd nodes (5^2 > 2^4), verified walk
+I. k=14 undecided Bad_k (Theorem-1 analogue)                       Haar 0.468: expanding cycle of length 3 with 2 odd nodes (5^2 > 2^3), verified walk
+I. k=14 Bad_k and 111                                              Haar 0.209: expanding cycle of length 2 with 1 odd nodes (5^1 > 2^2), verified walk
+I. k=14 one flip per expanding necklace (lowest ballot rotation)   Haar 0.087: expanding cycle of length 2 with 2 odd nodes (5^2 > 2^2), verified walk
+I. k=14 one flip per expanding necklace (highest ballot rotation)  Haar 0.087: expanding cycle of length 4 with 3 odd nodes (5^3 > 2^4), verified walk
+I. k=14 all positive-gain residues (g >= 1)                        Haar 0.449: expanding cycle of length 5 with 3 odd nodes (5^3 > 2^5), verified walk
+
+====================================================================================================
+J. Structure of the certified 5n+1 sets (critical flips, prefix classes, stationary visits)
+====================================================================================================
+J1. k=10: 158/158 flips are critical (removing one leaves a verified expanding cycle; lengths median 11, min 1, max 23); rho_max = 3/7, attained by a verified cycle of length 7
+    flipped fraction of each prefix class: 111: 0.641, 110: 0.414, 101: 0.180, 100: 0.000
+    mean dpi/dU (flipped / unflipped) per class: 111: 1.08 / 0.57, 110: 0.53 / 0.37, 101: 0.68 / 0.44
+J1. k=12: 529/529 flips are critical (removing one leaves a verified expanding cycle; lengths median 15, min 1, max 42); rho_max = 3/7, attained by a verified cycle of length 14
+    flipped fraction of each prefix class: 111: 0.602, 110: 0.307, 101: 0.125, 100: 0.000
+    mean dpi/dU (flipped / unflipped) per class: 111: 1.05 / 0.54, 110: 0.60 / 0.38, 101: 0.68 / 0.47
+J1. k=14: 1890/1890 flips are critical (removing one leaves a verified expanding cycle; lengths median 17, min 1, max 33); rho_max = 3/7, attained by a verified cycle of length 7
+    flipped fraction of each prefix class: 111: 0.547, 110: 0.274, 101: 0.102, 100: 0.000
+    mean dpi/dU (flipped / unflipped) per class: 111: 1.08 / 0.54, 110: 0.64 / 0.38, 101: 0.69 / 0.48
+    flipped fraction by 4-letter prefix: 1000: 0.00, 1001: 0.00, 1010: 0.17, 1011: 0.03, 1100: 0.19, 1101: 0.36, 1110: 0.84, 1111: 0.25
+
+====================================================================================================
+Z. Resources
+====================================================================================================
+wall time 1493s; peak RSS of the runner 284 MB
+sha256 procgen_drift_20260926_engine.c d26eb8df59efb184fafcba497f18d8b60fce4cbe30ee390421fe2e3974d32a43
+sha256 procgen_drift_20260926_lib.py 7d7fd5c88892a731966c2d1555ccdaaf33ff8c283a8c00da0591ff759046d896
+sha256 procgen_drift_20260926_ihs.py b781c768364530ea6657cfb77d71c3f068b3da501ead209872912d3dab445d23
+sha256 procgen_drift_20260926_local.py 42a6f934030c9ec8a8bb31601f648c0cb2fb740675f66186773e02200ea123eb
+sha256 procgen_drift_20260926_minmax.py 0f38db32e7e4c15ef92f99dbe0a7b20bff7d7b9e0f50e5502813598b73d5d85b
+sha256 procgen_drift_20260926_run.py c9d6e124d22172eaff4aed5c2a4d90d1051af3cfde00c0f401363c5465edf6d4
+ALL CHECKS PASSED
