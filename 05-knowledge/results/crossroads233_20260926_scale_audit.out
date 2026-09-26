@@ -1,0 +1,8 @@
+{"boolean_assignments": 32766, "minimal_cutoffs": [2, 5], "separate_optima": [0, 1], "joint_optimum": 2}
+{"independent_full_tree_coefficients": [1, 2, 6, 12, 30, 60, 124, 250, 498], "max_depth": 9}
+{"large_cutoff": 233, "small_cutoff": 103, "joint_optimum": 100, "normalized": 0.2976190476190476}
+{"large_cutoff": 1000, "small_cutoff": 444, "joint_optimum": 431, "normalized": 0.2984764542936288}
+{"large_cutoff": 10000, "small_cutoff": 4444, "joint_optimum": 4343, "normalized": 0.3006784824148435}
+{"large_cutoff": 100000, "small_cutoff": 44444, "joint_optimum": 43395, "normalized": 0.30042784747029994}
+{"beta20": "4538724347/15109399071", "alpha_upper": "3089623223/10460353203", "forced_limsup": "13417603/43046721", "forced_oscillation": "170854306/10460353203"}
+ALL INDEPENDENT SCALE CHECKS PASSED
