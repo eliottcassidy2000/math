@@ -9,6 +9,12 @@ Format per entry:
 - Why it was wrong
 - The correct framing
 
+## 2026-09-25 Bernoulli boundary probes -- endpoint atoms and bounded rank corrections
+
+- **Failed candidate, not a retraction.** A rank `a log n+h(n)`, with `a>0` and globally bounded h, cannot decrease at every positive odd Collatz step: `2^H-1` has H-1 rises with an unbounded endpoint/start ratio. Finite periodic Bernoulli corrections therefore cannot provide that rank. This does not exclude unbounded scale sums, adaptive centers, nonlinear couplings, or later-time descent.
+- **Endpoint convention is arithmetic data.** With `psi(x)={x}-1/2`, the expression `1/m+psi((z-1)/m)-psi(z/m)` is exactly `1_(m|z)`. Setting psi to zero at integers instead gives half-masses at `m|z` and `m|(z-1)`. Almost-everywhere agreement is insufficient for a divisibility claim.
+- **Bulk is not a surviving integer.** A repeated minus-cycle cylinder through 5 has bulk count `3/8^t` among the first three odd sources but exact count one; the B1 endpoint correction holds the whole survivor. Also `B3=0` does not imply the polynomial vanishes: `B3(1/4)=3/64`. Proofs, controls, and the precise Collatz/power-sum connections are in [the Bernoulli boundary note](../05-knowledge/results/bernoulli_boundary_20260925.md).
+
 ## 2026-09-25 Kuratowski/Collatz paste -- recurrence, escape, and finite-bit scope
 
 - **False orbit corollary.** The pasted note's section 3.3 assumes an orbit visits each odd value once. Under `3n-1`, `23->17->25->37->55->41->61->91->17` contains distinct edges into 17 with addresses `ABCC` and `ABCCAA`. The source's same-target comparability theorem survives; orbit incomparability needs distinct targets. This does not retract its separate consecutive-edge statement.

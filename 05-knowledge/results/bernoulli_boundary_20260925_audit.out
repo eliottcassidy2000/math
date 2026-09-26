@@ -1,0 +1,5 @@
+PASS: 19899 exact indicator checks; z=-100..100, m=2..100.
+PASS: 2010 exact partial-valuation checks; z=-100..100, cutoff=1..10.
+PASS: endpoint hostile controls; midpoint convention fails as expected.
+PASS: 1064 exact Faulhaber checks; m=2..39, k=2..29.
+Bernoulli convention: B1=-1/2. Universe checks are finite; identities have separate algebraic proofs.

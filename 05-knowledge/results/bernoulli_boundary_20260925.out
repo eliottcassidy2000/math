@@ -1,0 +1,12 @@
+Bernoulli endpoint/reflection degrees 1..40: 40 PASS
+Shift hostile: B3=0 but B3(1/4)=3/64
+Integer divisibility jump controls: 129087 PASS
+Dyadic valuation controls: 4097 inputs, 13 scales, zero retained PASS
+Exact cylinder counts: 51216 PASS
+Complete-child Bernoulli cancellation: 552 cases PASS
+Persistent boundary atom: (3, -1, 5, (1, 2)) 20 depths PASS
+Persistent boundary atom: (5, 1, 13, (1, 1, 5)) 20 depths PASS
+Persistent boundary atom: (3, 1, 1, (2,)) 20 depths PASS
+Normalized power sums: 1560 PASS
+Agoh-Giuga parity and separated-condition hostiles PASS
+script_sha256 44fbfef7f2120831b86f64348be88b42f25769d1b1e834ec94c0a1848a93c342

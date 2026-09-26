@@ -1,0 +1,10 @@
+{
+  "status": "FINITE-EXACT controls; infinite identities and obstructions have separate proofs",
+  "byte_basis": "raw UTF-8 bytes, LF, no BOM",
+  "sha256": {
+    "04-computation/experiments/bernoulli_boundary_20260925.py": "44fbfef7f2120831b86f64348be88b42f25769d1b1e834ec94c0a1848a93c342",
+    "04-computation/experiments/bernoulli_boundary_20260925_audit.py": "3f0156543d678131aeb16bd420c9ff084207b677bcaaab79221290c6870a9a4b",
+    "05-knowledge/results/bernoulli_boundary_20260925.out": "a455901a841d520755a622a77cc76d54de684e9a957a04f4b2cec7194692c8e0",
+    "05-knowledge/results/bernoulli_boundary_20260925_audit.out": "759d6bbb36444e9b0c105fa49bd35c5419e120c1d233401c7f2301acf81a71a7"
+  }
+}
