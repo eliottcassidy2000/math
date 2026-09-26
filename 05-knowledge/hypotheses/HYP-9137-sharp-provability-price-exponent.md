@@ -9,6 +9,13 @@ status: >
   a "hub" v can serve. Evidence: the greedy G_L pays 0.86-0.92 rho_L, and
   the brute-force hub weight over v <= 20000 is 80.6 against the tree
   bound 99.3 at L = 8.
+  UPDATE 2026-09-25 (THM-4477): the proved lower bound is now
+  2^(-(0.1445+o(1))L), via Cauchy-Schwarz with a certified second-moment
+  majorant. Any distribution-only argument is stuck at 2(1-h) = 0.1001
+  (moment-method limit, forced by g(2) = 1). The harmonic bound
+  H_L = E[1_Bad/max W_L] ~ 3.2 rho_L/M2(L) (L <= 16) is the proposed route
+  to the sharp exponent. It needs quenched independence of 2-adic badness
+  and 3-adic hub weight (condition (SD) of the Cauchy-Schwarz note).
 source: collatz-procgen-20260922 session, price lane (2026-09-25)
 depends_on:
   - 01-canon/theorems/THM-4475-price-of-provable-descent-tends-to-zero.md

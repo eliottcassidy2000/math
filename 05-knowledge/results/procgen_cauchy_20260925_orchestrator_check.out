@@ -1,0 +1,4 @@
+C1  M2(8) = 501975/4096 exactly: ok
+C2  Perron roots: theta_1 = 1.3430703, theta_5 = 1.0931544, theta_10 = 1.0491107: ok
+C3  rigorous theta_10 <= 1.0491582; exponent 2*eta + log2(theta_10) = 0.1693: ok
+ALL CHECKS PASSED

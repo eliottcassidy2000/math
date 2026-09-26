@@ -1,0 +1,343 @@
+====================================================================================================
+PART 1. Exact second moments of the weighted backward tree (3-adic, exact integers)
+====================================================================================================
+tables I_0..I_15 built (0.1s); max_v Z_k = I_k/2^k and max/1.5^k:
+   k= 5  max Z_k = 12.688   max Z_k / 1.5^k = 1.6708
+   k=10  max Z_k = 97.838   max Z_k / 1.5^k = 1.6967
+   k=15  max Z_k = 743.874   max Z_k / 1.5^k = 1.6988
+check: E_Haar[Z_k] = 1 exactly for k <= 15  (g(1) = 1: the mean-1 martingale)
+Gram matrix <Z_j,Z_k> exact for j,k <= 15 (0.2s)
+
+(1a) ||Z_k||^2, the cross term gamma_k = int Z_k(3u+1)Z_k(u)du, the identity ||Z_{k+1}||^2 = ||Z_k||^2 + gamma_k/2,
+     and the i.i.d.-cascade value 1 + k/2 (independent siblings):
+   k   ||Z_k||^2            increment    gamma_k        identity   iid 1+k/2   <Z_{k-1},Z_k>/||Z_{k-1}||^2
+   0   1.000000000000      0.000000     1.000000000    True       1.00        1.000000
+   1   1.500000000000      0.500000     0.500000000    True       1.50        1.000000
+   2   1.750000000000      0.250000     1.000000000    True       2.00        0.916667
+   3   2.250000000000      0.500000     0.828125000    True       2.50        1.000000
+   4   2.664062500000      0.414062     0.929687500    True       3.00        0.986111
+   5   3.128906250000      0.464844     0.813476562    True       3.50        1.002199
+   6   3.535644531250      0.406738     0.854980469    True       4.00        0.996567
+   7   3.963134765625      0.427490     0.788940430    True       4.50        1.002486
+   8   4.357604980469      0.394470     0.763381958    True       5.00        0.999923
+   9   4.739295959473      0.381691     0.743873596    True       5.50        0.999779
+  10   5.111232757568      0.371937     0.734602928    True       6.00        0.999716
+  11   5.478534221649      0.367301     0.723090410    True       6.50        0.999957
+  12   5.840079426765      0.361545     0.717405677    True       7.00        0.999900
+  13   6.198782265186      0.358703     0.715816438    True       7.50        1.000009
+  14   6.556690484285      0.357908     0.713079140    True       8.00        1.000189
+  15   6.913230054080      0.356540     0.712717232    True       8.50        1.000259
+   identity verified exactly (rationals) for k = 1..15.
+   exact values: ||Z_2||^2 = 7/4, ||Z_3||^2 = 9/4, ||Z_4||^2 = 341/128, gamma_3 = 53/64
+   ladder expansion gamma_k = 3 sum_j 4^-j <Z_{k-2j} o S^j, Z_k> + 4^-J c_k verified exactly for k = 1..12: True
+   increments ~0.357 and still slowly decreasing (gamma_k ~0.713); iid siblings would give 1/2 (gamma = 1).  See PART 2.
+
+(1b) M2(L) = E_Haar[W_L^2] exactly (rational), L <= 16:
+   L   M2(L)              M2/L^3    iid-model M2    rho_L        CS bound rho^2/M2   THM-4475 rho/sum(g)   CS/THM4475
+   1   1.000000           1.00000   1.00            0.500000     2.5000e-01          5.0000e-01            0.500
+   2   4.500000           0.56250   4.50            0.250000     1.3889e-02          8.3333e-02            0.167
+   3   11.000000          0.40741   11.50           0.250000     5.6818e-03          4.0000e-02            0.142
+   4   21.750000          0.33984   23.00           0.187500     1.6164e-03          1.6129e-02            0.100
+   5   37.382812          0.29906   40.00           0.125000     4.1797e-04          6.0976e-03            0.069
+   6   58.921875          0.27279   63.50           0.125000     2.6518e-04          3.5556e-03            0.075
+   7   86.990723          0.25362   94.50           0.101562     1.1858e-04          1.7110e-03            0.069
+   8   122.552490         0.23936   134.00          0.074219     4.4947e-05          7.4721e-04            0.060
+   9   166.291931         0.22811   183.00          0.074219     3.3125e-05          4.4891e-04            0.074
+  10   218.950264         0.21895   242.50          0.062500     1.7841e-05          2.2783e-04            0.078
+  11   281.246693         0.21130   313.50          0.062500     1.3889e-05          1.3757e-04            0.101
+  12   353.915432         0.20481   397.00          0.055176     8.6020e-06          7.3414e-05            0.117
+  13   437.663493         0.19921   494.00          0.044800     4.5858e-06          3.6058e-05            0.127
+  14   533.206802         0.19432   605.50          0.044800     3.7641e-06          2.1821e-05            0.172
+  15   641.266794         0.19000   732.50          0.039520     2.4356e-06          1.1652e-05            0.209
+  16   762.553365         0.18617   876.00          0.032257     1.3645e-06          5.7578e-06            0.237
+   exact: M2(8) = 501975/4096,  M2(12) = 742214457/2097152
+   (at small L the sup bound of THM-4475 is still better; the CS bound wins once rho_L^2 * sum(g) < rho_L * M2,
+    i.e. asymptotically, since M2 grows polynomially in this range and sum(g) ~ lambda^L.)
+
+   exponents (base 2, per L):  THM-4475 sup bound: eta + log2(lambda) = 0.7737;  CS with poly M2: 2 eta = 0.1001;  sharp (HYP-9137): eta = 0.0500
+   CS/THM4475 is still < 1 for L <= 16 (it rises from 0.06 at L = 8 to 0.24 at L = 16); the rigorous majorant of PART 3
+   puts the crossover of the proved bounds near L = 22.
+
+(1c) Holder exponents: E[Z_k^p] >= g(p)^k exactly (single-path lower bound), g(p) = 2^-p (1 + 3^(p-1)).
+   p      g(p)       E[Z_15^p]    g(p)^15     ratio
+   1.25   0.97379    1.3706       0.6714      2.041
+   1.50   0.96593    2.0844       0.5945      3.506
+   1.75   0.97500    3.5610       0.6841      5.206
+   2.00   1.00000    6.9132       1.0000      6.913
+   2.50   1.09534    38.8960      3.9193      9.924
+   3.00   1.25000    353.3423     28.4217     12.432
+   4.00   1.75000    73290.6559   4421.5112   16.576
+   Holder bound delta >= rho^(p/(p-1)) / (E W^p)^(1/(p-1)); its exponent is
+   e(p) = [p*eta + max(0, log2 g(p))]/(p-1)  (lower bound, using E W_L^p >= g(p)^(L-1) and E W^p >= 1):
+   p = 1.10   e(p) >= 0.55049
+   p = 1.50   e(p) >= 0.15013
+   p = 1.90   e(p) >= 0.10565
+   p = 2.00   e(p) >= 0.10009
+   p = 2.10   e(p) >= 0.11415
+   p = 2.50   e(p) >= 0.17099
+   p = 3.00   e(p) >= 0.23603
+   p = 4.00   e(p) >= 0.33584
+   (log2 g)'(2) = ln(27/16)/(4 ln 2) = 0.18872 > eta = 0.05004, so e(p) > 2 eta for every p != 2 (convexity of log g).
+   trend of E[Z_k^p] in k (bounded for p < 2 in the iid model; here FINITE-EXACT):
+   k    p=1.25    p=1.50    p=1.75    p=2.00  
+    3   1.1597    1.3997    1.7483    2.2500  
+    5   1.2416    1.6197    2.2071    3.1289  
+    7   1.2888    1.7687    2.5753    3.9631  
+    9   1.3183    1.8739    2.8723    4.7393  
+   11   1.3393    1.9554    3.1253    5.4785  
+   13   1.3562    2.0240    3.3518    6.1988  
+   15   1.3706    2.0844    3.5610    6.9132  
+
+(1d) the distribution-only optimum  delta*_L = min{ mu(B) : int_B W_L >= rho_L }  (best bound from the law of W_L alone)
+   L   rho_L       delta*_L      rho^2/M2      delta*/(rho^2/M2)   rho/max W     max W_L    max W_L/1.5^L
+   6   0.125000    4.1152e-03    2.6518e-04    15.52               3.8314e-03    32.62      2.864
+   7   0.101562    2.7435e-03    1.1858e-04    23.14               1.9620e-03    51.77      3.030
+   8   0.074219    1.3717e-03    4.4947e-05    30.52               9.2054e-04    80.62      3.146
+   9   0.074219    9.1449e-04    3.3125e-05    27.61               5.9843e-04    124.02     3.226
+  10   0.062500    5.0805e-04    1.7841e-05    28.48               3.3034e-04    189.20     3.281
+  11   0.062500    3.7257e-04    1.3889e-05    26.82               2.1774e-04    287.04     3.318
+  12   0.055176    2.3709e-04    8.6020e-06    27.56               1.2717e-04    433.86     3.344
+  13   0.044800    1.4113e-04    4.5858e-06    30.77               6.8483e-05    654.17     3.361
+  14   0.044800    1.0851e-04    3.7641e-06    28.83               4.5496e-05    984.70     3.373
+  15   0.039520    7.2758e-05    2.4356e-06    29.87               2.6693e-05    1480.57    3.381
+  16   0.032257    4.4881e-05    1.3645e-06    32.89               1.4501e-05    2224.45    3.387
+   check: M2(L) recomputed from the W_L recursion W_L = 1 + L W_{L-1} agrees exactly.
+
+(1e) tails at L = 16 (W_L) and k = 14 (Z_k) under Haar: x^2 P(. > x) and x * E[. 1{. > x}]
+   x        P(W>x)      x^2 P(W>x)   x E[W;W>x]  |  P(Z>x)      x^2 P(Z>x)   x E[Z;Z>x]
+   2        6.667e-01   2.6667       30.6667     |  1.287e-01   0.5148       1.1923
+   4        6.667e-01   10.6667      61.3334     |  4.608e-02   0.7373       1.4672
+   8        5.698e-01   36.4692      118.0014    |  1.387e-02   0.8877       1.5794
+   16       3.374e-01   86.3868      194.1545    |  2.563e-03   0.6561       1.2152
+   32       1.287e-01   131.7956     238.4618    |  5.645e-04   0.5781       0.9521
+   64       3.284e-02   134.5240     213.1939    |  1.487e-04   0.6089       0.8551
+   128      5.521e-03   90.4534      133.6452    |  8.781e-06   0.1439       0.2464
+   256      6.906e-04   45.2575      62.8350     |  2.091e-07   0.0137       0.0265
+   512      5.582e-05   14.6337      19.4995     |  0.000e+00   0.0000       0.0000
+   1024     2.509e-06   2.6308       3.1858      |  0.000e+00   0.0000       0.0000
+   (a tail ~ c x^-2 shows as a plateau of x^2 P and x E[.;.>x]; finite k, L cut the tail off near max ~ 1.7*1.5^k.)
+
+(1f) SHEET: the 3n-1 map U(n) = (3n-1)/2 has backward E-child (2v+1)/3 (v = 1 mod 3).
+   Z^-_k(v) = Z_k(-v) for all v mod 3^k, k <= 12: True  => M2, rho_L, the CS bound and the harmonic bound are identical on both sheets.
+
+(1g) DRIFT: 5x+1.  Z^(5)_k on Z/5^k (E-child (2v-1)/5, legal iff v = 3 mod 5, weight 5/2).
+   E[Z^(5)_k] = 1 exactly (g_5(1) = 1).
+   k   ||Z^(5)_k||^2     (3/2)^k        ratio      cross term check ||Z_{k+1}||^2 - 1.5||Z_k||^2 = <Z_k o tau_5, Z_k>/2 ?
+   0   1.0000           1.0000         1.0000     True
+   1   2.0000           1.5000         1.3333     True
+   2   3.2500           2.2500         1.4444     True
+   3   5.0000           3.3750         1.4815     True
+   4   7.5625           5.0625         1.4938     True
+   5   11.5312          7.5938         1.5185     True
+   6   17.3931          11.3906        1.5270     True
+   7   26.1505          17.0859        1.5305     True
+   8   39.2831          25.6289        1.5328     True
+   9   58.9989          38.4434        1.5347     
+   => ||Z^(5)_k||^2 >= (3/2)^k: the diagonal coefficient is g_5(2) = (1+5)/4 = 3/2 (AM of 1/2 and 5/2).
+   5x+1 undecided density beta_L (5^a_k > 2^k for all k <= L) and the CS bound beta^2/M2^(5) <= beta^2 (2/3)^(L-1):
+   L= 4 beta_L=0.3750  M2^(5)(L)=30.62  CS=4.592e-03  beta^2 (2/3)^(L-1)=4.167e-02
+   L= 6 beta_L=0.3125  M2^(5)(L)=104.66  CS=9.331e-04  beta^2 (2/3)^(L-1)=1.286e-02
+   L= 8 beta_L=0.2734  M2^(5)(L)=290.46  CS=2.574e-04  beta^2 (2/3)^(L-1)=4.376e-03
+   L=10 beta_L=0.2598  M2^(5)(L)=728.25  CS=9.266e-05  beta^2 (2/3)^(L-1)=1.755e-03
+   L= 20 beta_L=0.2221   CS bound <= 2.226e-05
+   L= 40 beta_L=0.1963   CS bound <= 5.225e-09
+   L=100 beta_L=0.1806   CS bound <= 1.203e-19
+   L=400 beta_L=0.1761   CS bound <= 1.702e-72
+
+PART 1 done in 2.4s
+[runner] procgen_cauchy_20260925_moments.py: 2.5 s; max RSS of children so far 526 MB
+
+====================================================================================================
+PART 2. The fixed point: the Syracuse law pi (stationary law of the 3-adic walk), L^2 energies, tail
+====================================================================================================
+  n= 1  ||pi||_n^2=1.666666666667  E_n=0.666666666667  ||p_n-p_{n-1}||_1=6.667e-01  L2-mass classes 1:2 = 0.200000 : 0.800000  (class 0: 9.8e-40)  max ball mass*2^n=1.333333 at -1: True  0.0s
+  n= 2  ||pi||_n^2=2.142857142857  E_n=0.476190476190  ||p_n-p_{n-1}||_1=4.762e-01  L2-mass classes 1:2 = 0.200000 : 0.800000  (class 0: 2.9e-78)  max ball mass*2^n=1.396825 at -1: True  0.0s
+  n= 3  ||pi||_n^2=2.604431823198  E_n=0.461574680341  ||p_n-p_{n-1}||_1=4.057e-01  L2-mass classes 1:2 = 0.200000 : 0.800000  (class 0: 8.5e-117)  max ball mass*2^n=1.421209 at -1: True  0.0s
+  n= 4  ||pi||_n^2=3.068646231616  E_n=0.464214408418  ||p_n-p_{n-1}||_1=3.425e-01  L2-mass classes 1:2 = 0.200000 : 0.800000  (class 0: 2.5e-155)  max ball mass*2^n=1.435761 at -1: True  0.0s
+  n= 5  ||pi||_n^2=3.534161151368  E_n=0.465514919752  ||p_n-p_{n-1}||_1=2.972e-01  L2-mass classes 1:2 = 0.200000 : 0.800000  (class 0: 7.3e-194)  max ball mass*2^n=1.445633 at -1: True  0.0s
+  n= 6  ||pi||_n^2=4.000329912369  E_n=0.466168761001  ||p_n-p_{n-1}||_1=2.627e-01  L2-mass classes 1:2 = 0.200000 : 0.800000  (class 0: 2.1e-232)  max ball mass*2^n=1.450929 at -1: True  0.0s
+  n= 7  ||pi||_n^2=4.465821342206  E_n=0.465491429836  ||p_n-p_{n-1}||_1=2.349e-01  L2-mass classes 1:2 = 0.200000 : 0.800000  (class 0: 6.3e-271)  max ball mass*2^n=1.454330 at -1: True  0.0s
+  n= 8  ||pi||_n^2=4.931742462505  E_n=0.465921120299  ||p_n-p_{n-1}||_1=2.127e-01  L2-mass classes 1:2 = 0.200000 : 0.800000  (class 0: 1.9e-309)  max ball mass*2^n=1.456746 at -1: True  0.0s
+  n= 9  ||pi||_n^2=5.398401608914  E_n=0.466659146410  ||p_n-p_{n-1}||_1=1.942e-01  L2-mass classes 1:2 = 0.200000 : 0.800000  (class 0: 0.0e+00)  max ball mass*2^n=1.458668 at -1: True  0.0s
+  n=10  ||pi||_n^2=5.865789026498  E_n=0.467387417584  ||p_n-p_{n-1}||_1=1.783e-01  L2-mass classes 1:2 = 0.200000 : 0.800000  (class 0: 0.0e+00)  max ball mass*2^n=1.459757 at -1: True  0.0s
+  n=11  ||pi||_n^2=6.333957660177  E_n=0.468168633679  ||p_n-p_{n-1}||_1=1.640e-01  L2-mass classes 1:2 = 0.200000 : 0.800000  (class 0: 0.0e+00)  max ball mass*2^n=1.460613 at -1: True  0.0s
+  n=12  ||pi||_n^2=6.802899040564  E_n=0.468941380387  ||p_n-p_{n-1}||_1=1.513e-01  L2-mass classes 1:2 = 0.200000 : 0.800000  (class 0: 0.0e+00)  max ball mass*2^n=1.461263 at -1: True  0.1s
+  n=13  ||pi||_n^2=7.272513954548  E_n=0.469614913984  ||p_n-p_{n-1}||_1=1.399e-01  L2-mass classes 1:2 = 0.200000 : 0.800000  (class 0: 0.0e+00)  max ball mass*2^n=1.461642 at -1: True  0.4s
+  n=14  ||pi||_n^2=7.742768288642  E_n=0.470254334094  ||p_n-p_{n-1}||_1=1.296e-01  L2-mass classes 1:2 = 0.200000 : 0.800000  (class 0: 0.0e+00)  max ball mass*2^n=1.461845 at -1: True  1.2s
+  n=15  ||pi||_n^2=8.213596069255  E_n=0.470827780613  ||p_n-p_{n-1}||_1=1.202e-01  L2-mass classes 1:2 = 0.200000 : 0.800000  (class 0: 0.0e+00)  max ball mass*2^n=1.461980 at -1: True  3.8s
+
+(2a) exact low levels: E_1 = 2/3 (err 1.1e-16), E_2 = 10/21 (err 1.1e-16); ||pi||_2^2 = 15/7.
+     L^2 mass on classes 1 and 2 mod 3 is exactly 1/5 : 4/5 at every level (|kappa_+^|^2 : |kappa_-^|^2 = 1 : 4 pointwise).
+     max_y pi(y + 3^n Z_3) = pi(-1 + 3^n Z_3) ~ c 2^-n: the L^infinity dimension is log_3 2 = 0.631 > 1/2.
+     level energies E_n rise slowly towards ~0.476 (increments shrink like ~1/n or faster);  ||pi||_n^2 ~ 0.47 n.
+     L^1 increments ||p_n - p_{n-1}||_1 shrink slowly (last ratio 0.928); consistent with L^1 convergence (absolute continuity of pi), not a proof.
+
+(2b) tail of the fixed-point density p_15 = d pi/d mu (at resolution 3^-15) under Haar:  x^2 P(p > x)
+   x=2     P(p>x)=1.2654e-01   x^2 P=0.5062   x E[p;p>x]=1.2364
+   x=3     P(p>x)=7.2520e-02   x^2 P=0.6527   x E[p;p>x]=1.4600
+   x=4     P(p>x)=4.6726e-02   x^2 P=0.7476   x E[p;p>x]=1.5915
+   x=6     P(p>x)=2.3649e-02   x^2 P=0.8514   x E[p;p>x]=1.7166
+   x=8     P(p>x)=1.4308e-02   x^2 P=0.9157   x E[p;p>x]=1.7763
+   x=12    P(p>x)=6.5073e-03   x^2 P=0.9371   x E[p;p>x]=1.7599
+   x=16    P(p>x)=3.8623e-03   x^2 P=0.9888   x E[p;p>x]=1.7676
+   x=24    P(p>x)=1.5536e-03   x^2 P=0.8949   x E[p;p>x]=1.5880
+   x=32    P(p>x)=9.3415e-04   x^2 P=0.9566   x E[p;p>x]=1.5738
+   x=48    P(p>x)=3.2330e-04   x^2 P=0.7449   x E[p;p>x]=1.2532
+   x=64    P(p>x)=1.9521e-04   x^2 P=0.7996   x E[p;p>x]=1.2106
+   x=96    P(p>x)=5.8541e-05   x^2 P=0.5395   x E[p;p>x]=0.8515
+   x=128   P(p>x)=3.2058e-05   x^2 P=0.5252   x E[p;p>x]=0.7380
+
+(2c) ladder autocorrelations C_j^(n) = 3^n sum_y pi_n(y) pi_n(S^j y), S(y) = 4y+1 (translation by j in the
+     coordinates Lambda = log_4(1+3y)), and the identity ||pi||_{n+1}^2 = sum_j 4^-|j| C_j^(n):
+   n=14: C_1..C_12 = 0.7281 0.4733 1.2370 0.8604 0.7650 1.3716 0.4278 0.7506 2.1116 0.5210 0.5917 1.5276
+   C_27 = 2.3616 (v_3 = 3),  C_9 = 2.1116 (v_3 = 2),  C_3 = 1.2370 (v_3 = 1): C_j grows with v_3(j) (log singularity at 0).
+   sum_j 4^-|j| C_j^(14) = 8.213596069255   vs   ||pi||_15^2 = 8.213596069255   (difference 1.6e-14; tail |j|>40 < 1e-23)
+   so E_{n+1} = 2 sum_{j>=1} 4^-j C_j^(n): the level energy is bounded iff the off-diagonal ladder correlations are.
+
+(2d) Fourier form: in Lambda = log_4(1+3y) coordinates,  ||pi||_n^2 = sum_{lev(xi) <= n-1} P(xi) |nu^(xi)|^2,
+     P(xi) = 15/(17 - 8 cos 2 pi {xi}) = Poisson kernel P_{1/4}, whose average over any full level is (1+4^-N)/(1-4^-N) ~ 1:
+   n= 1  ||pi||_n^2 = 1.666666666667   sum P|nu^|^2 = 1.666666666667   diff 0.0e+00
+   n= 2  ||pi||_n^2 = 2.142857142857   sum P|nu^|^2 = 2.142857142857   diff 0.0e+00
+   n= 3  ||pi||_n^2 = 2.604431823198   sum P|nu^|^2 = 2.604431823198   diff 8.9e-16
+   n= 4  ||pi||_n^2 = 3.068646231616   sum P|nu^|^2 = 3.068646231616   diff 4.4e-16
+   n= 5  ||pi||_n^2 = 3.534161151368   sum P|nu^|^2 = 3.534161151368   diff 0.0e+00
+   n= 6  ||pi||_n^2 = 4.000329912369   sum P|nu^|^2 = 4.000329912369   diff 0.0e+00
+   n= 7  ||pi||_n^2 = 4.465821342206   sum P|nu^|^2 = 4.465821342206   diff 0.0e+00
+   n= 8  ||pi||_n^2 = 4.931742462505   sum P|nu^|^2 = 4.931742462505   diff 1.8e-15
+   n= 9  ||pi||_n^2 = 5.398401608914   sum P|nu^|^2 = 5.398401608914   diff 0.0e+00
+   n=10  ||pi||_n^2 = 5.865789026498   sum P|nu^|^2 = 5.865789026498   diff 8.9e-16
+   n=11  ||pi||_n^2 = 6.333957660177   sum P|nu^|^2 = 6.333957660177   diff 1.8e-15
+
+PART 2 done in 6.3s
+[runner] procgen_cauchy_20260925_syracuse.py: 6.3 s; max RSS of children so far 615 MB
+
+====================================================================================================
+PART 3. Certified growth rate of ||Z_k||^2 by the level-r class-mass majorant (computer-assisted proof)
+====================================================================================================
+  r= 1  certified theta_r = 1.3430703  (min ratio 0.2500000)  log2 theta = 0.42553   C*sum(e) = 7.9914  (vs ||Z_14||^2 = 6.5567)  min e/mean e = 4.71e-01  0.1s
+  r= 2  certified theta_r = 1.1656855  (min ratio 0.2500000)  log2 theta = 0.22118   C*sum(e) = 7.5935  (vs ||Z_14||^2 = 6.5567)  min e/mean e = 2.20e-02  0.1s
+  r= 3  certified theta_r = 1.1309305  (min ratio 0.2500000)  log2 theta = 0.17751   C*sum(e) = 7.6312  (vs ||Z_14||^2 = 6.5567)  min e/mean e = 5.16e-03  0.1s
+  r= 4  certified theta_r = 1.1101261  (min ratio 0.2500000)  log2 theta = 0.15072   C*sum(e) = 8.1251  (vs ||Z_14||^2 = 6.5567)  min e/mean e = 2.85e-03  0.1s
+  r= 5  certified theta_r = 1.0939645  (min ratio 0.2500000)  log2 theta = 0.12957   C*sum(e) = 9.5134  (vs ||Z_14||^2 = 6.5567)  min e/mean e = 1.34e-03  0.1s
+  r= 6  certified theta_r = 1.0813083  (min ratio 0.2500000)  log2 theta = 0.11278   C*sum(e) = 13.8689  (vs ||Z_14||^2 = 6.5567)  min e/mean e = 7.83e-04  0.1s
+  r= 7  certified theta_r = 1.0707594  (min ratio 0.2500000)  log2 theta = 0.09863   C*sum(e) = 28.7244  (vs ||Z_14||^2 = 6.5567)  min e/mean e = 5.13e-04  0.1s
+  r= 8  certified theta_r = 1.0623829  (min ratio 0.2500000)  log2 theta = 0.08730   C*sum(e) = 42.8101  (vs ||Z_14||^2 = 6.5567)  min e/mean e = 4.39e-04  0.1s
+  r= 9  certified theta_r = 1.0555505  (min ratio 0.2500000)  log2 theta = 0.07800   C*sum(e) = 57.9914  (vs ||Z_14||^2 = 6.5567)  min e/mean e = 3.04e-04  0.1s
+  r=10  certified theta_r = 1.0498120  (min ratio 0.2500000)  log2 theta = 0.07013   C*sum(e) = 75.5346  (vs ||Z_14||^2 = 6.5567)  min e/mean e = 2.26e-04  0.2s
+  r=11  certified theta_r = 1.0449593  (min ratio 0.2500000)  log2 theta = 0.06345   C*sum(e) = 99.5733  (vs ||Z_14||^2 = 6.5567)  min e/mean e = 1.67e-04  0.3s
+  r=12  certified theta_r = 1.0407113  (min ratio 0.2500000)  log2 theta = 0.05757   C*sum(e) = 145.4651  (vs ||Z_14||^2 = 6.5567)  min e/mean e = 1.51e-04  0.7s
+  r=13  certified theta_r = 1.0371329  (min ratio 0.2500000)  log2 theta = 0.05260   C*sum(e) = 169.0243  (vs ||Z_14||^2 = 6.5567)  min e/mean e = 1.21e-04  2.4s
+  r=14  certified theta_r = 1.0340206  (min ratio 0.2500000)  log2 theta = 0.04826   C*sum(e) = 193.9248  (vs ||Z_14||^2 = 6.5567)  min e/mean e = 1.01e-04  7.7s
+  r=15  certified theta_r = 1.0312629  (min ratio 0.2500000)  log2 theta = 0.04441   C*sum(e) = 253.8122  (vs ||Z_14||^2 = 6.5567)  min e/mean e = 8.24e-05  26.0s
+
+(3a) PROVED bound: for all k >= 14,  ||Z_k||^2 <= 253.8122 * 1.0312629^(k-14)   (level r = 15).
+     hence M2(L) = ||W_L||^2 <= (sum_{k<L} ||Z_k||)^2 <= C' theta^L and, with rho_L >= 2^(-eta L)/poly(L) (THM-4475 B),
+     delta_L >= rho_L^2 / M2(L) >= 2^(-(2 eta + log2 theta) L - O(log L)),   2 eta + log2 theta = 0.10009 + 0.04441 = 0.14450
+     (THM-4475: 0.7737.  Conjectured from the exact data: 2 eta = 0.10009, since ||Z_k||^2 grows linearly.)
+
+(3b) explicit rigorous values of the bound  B(L) >= M2(L)  and the resulting lower bounds on delta_L:
+   L     B(L)          rho_L^2/B(L)   (log2; per L)            THM-4475: rho_L/sum_{k<L} g_k
+   rigorous ||Z_k||^2 bounds from the direct majorant iteration: k=20: 8.700, 30: 12.630, 50: 23.982, 100: 109.150, 250: 10079.666
+   16    9.7856e+02    1.0633e-06     (-19.84; 1.2402)         5.7578e-06
+   20    1.8022e+03    3.7688e-07     (-21.34; 1.0670)         6.2533e-07
+   22    2.3438e+03    2.1076e-07     (-22.18; 1.0081)         1.9555e-07
+   24    2.9829e+03    9.7818e-08     (-23.29; 0.9702)         5.5108e-08
+   26    3.7282e+03    6.4093e-08     (-23.90; 0.9190)         1.8287e-08
+   30    5.5752e+03    2.5375e-08     (-25.23; 0.8411)         1.8920e-09
+   40    1.2773e+04    2.6548e-09     (-28.49; 0.7122)         6.1415e-12
+   60    4.4329e+04    8.3350e-11     (-33.48; 0.5580)         8.9108e-17
+   100   2.7234e+05    2.0918e-13     (-42.12; 0.4212)         2.1378e-26
+   200   8.6520e+06    1.0826e-18     (-59.68; 0.2984)         4.4981e-50
+   400   4.2284e+09    3.1750e-28     (-91.35; 0.2284)         4.5856e-97
+
+PART 3 done in 44.2s
+[runner] procgen_cauchy_20260925_majorant.py: 44.3 s; max RSS of children so far 678 MB
+
+====================================================================================================
+PART 4. The harmonic (pointwise covering) bound H_L; quenched vs annealed hub weights on bad orbits
+====================================================================================================
+(4a) exact values (L <= 13): H_L against rho_L and the CS bound rho^2/M2 (for delta*_L see PART 1 (1d)); hub weights on bad orbits
+   L   rho_L      H_L          H/rho     H*M2/rho   CS=rho^2/M2   E_Bad[log2 What]  log2 E_Bad[E(What|w)]  E_Bad[log2 E(What|w)]  E_Bad[max rise]
+   4   0.187500   1.75953e-02  0.09384   2.041      1.6164e-03    3.429             3.443                  3.436                  1.560
+   5   0.125000   7.66620e-03  0.06133   2.293      4.1797e-04    4.072             4.110                  4.086                  1.901
+   6   0.125000   5.36876e-03  0.04295   2.531      2.6518e-04    4.594             4.646                  4.610                  2.090
+   7   0.101562   3.12231e-03  0.03074   2.674      1.1858e-04    5.087             5.152                  5.107                  2.360
+   8   0.074219   1.65836e-03  0.02234   2.738      4.4947e-05    5.564             5.645                  5.586                  2.667
+   9   0.074219   1.29146e-03  0.01740   2.894      3.3125e-05    5.939             6.038                  5.966                  2.808
+  10   0.062500   8.34035e-04  0.01334   2.922      1.7841e-05    6.336             6.450                  6.364                  3.022
+  11   0.062500   6.79820e-04  0.01088   3.059      1.3889e-05    6.649             6.785                  6.684                  3.135
+  12   0.055176   4.87211e-04  0.00883   3.125      8.6020e-06    6.974             7.137                  7.013                  3.301
+  13   0.044800   3.17553e-04  0.00709   3.102      4.5858e-06    7.315             7.505                  7.357                  3.513
+   (annealed log2 E[What | Bad] grows faster than the quenched E_Bad log2 E[What | w]: rare bad words with
+    heavy prefixes dominate the annealed mean; the harmonic bound only sees the typical, quenched behaviour.)
+
+(4b) Monte Carlo (L = 14..16; L = 12, 13 cross-check (4a)), 400000 (word, X_0) samples; uniform words give the unconditioned comparison:
+   L   rho_L      H_L (+- s.e.)            H/rho     H*M2/rho   E[1/What|Bad]/E[1/What]   E_Bad log2 What - E log2 What   E[What|Bad]/E[What]
+  12   0.055176   4.87242e-04 (+-3.5e-07)    0.00883   3.125      0.4420                    1.106                           2.015
+  13   0.044800   3.17172e-04 (+-2.5e-07)    0.00708   3.099      0.4100                    1.225                           2.190
+  14   0.044800   2.72766e-04 (+-2.2e-07)    0.00609   3.246      0.4038                    1.256                           2.244
+  15   0.039520   2.01564e-04 (+-1.7e-07)    0.00510   3.271      0.3834                    1.340                           2.384
+  16   0.032257   1.35574e-04 (+-1.2e-07)    0.00420   3.205      0.3538                    1.465                           2.608
+
+PART 4 done in 3.7s
+[runner] procgen_cauchy_20260925_harmonic.py: 3.8 s; max RSS of children so far 678 MB
+
+====================================================================================================
+PART 5. Mean-field smoothing transform vs the exact 3-adic cascade; moment functions; strips
+====================================================================================================
+(5a) g_q(s) = 2^-s (1 + q^(s-1)) = E_fwd[w^(s-1)], w in {1/2, q/2} with probability 1/2 each:
+     g_q(1) = 1 (mean), g_q(2) = (1+q)/4 = AM of the forward factors, -g_q'(1) = -E log w = log(2/sqrt q) (> 0: contracting):
+   q   g_q(2)    -g_q'(1) = log(4/q)/2   roots of g_q(s) = 1
+   1   0.5000    0.693147                 {1}
+   3   1.0000    0.143841                 {1, 2}
+   5   1.5000    -0.111572                {0.6509, 1}
+   7   2.0000    -0.279808                {0.3735, 1}
+   9   2.5000    -0.405465                {0.2581, 1}
+   q = 3 is the only q with g_q(2) = 1: this is THM-4470's AM-fairness (q+1)/4 = 1, and makes kappa = 2.
+   q = 3: -g'(1) = log(2/sqrt 3) = 0.143841 (the drift), tree-density constant R = 1/log(2/sqrt 3) = 6.95212 (inverse-tree note, Prop. 10);
+          g'(2) = ln(27/16)/4 = 0.130812 > 0 (Kesten-Goldie-type slope at kappa = 2); the s=2 tilt has odd-step frequency 3/4.
+
+(5b) Zolotarev zeta_s contraction constants of the mean-field smoothing transform S: zeta_s(S mu, S nu) <= g(s) zeta_s(mu, nu)
+     (ideal metric of order s, 1 < s <= 2, laws with equal means):
+     s:    1.100   1.250   1.500   1.750   1.900   2.000 
+     g(s): 0.9872  0.9738  0.9659  0.9750  0.9881  1.0000
+     strict contraction exactly on 1 < s < 2; the constant is 1 at s = 2: the Banach fixed-point argument and the
+     Cauchy-Schwarz lower bound fail at the same place, g(2) = 1.
+
+(5c) mean-field cascade: E[Z_k^2] = 1 + k/2 exactly (siblings independent); exact 3-adic values are smaller:
+   k:        0      3      6      9      12     15    
+   1+k/2:    1.000  2.500  4.000  5.500  7.000  8.500 
+   3-adic:   1.000  2.250  3.536  4.739  5.840  6.913 
+   population dynamics (pool 2000000, 40 generations): mean 1.0044, E|Z_{k+1}-Z_k| at k=10,20,30,39: 0.2246, 0.1239, 0.0757, 0.0529
+   tail of the mean-field fixed point (k = 40):  x^2 P(W > x)
+     x=2     P=1.1414e-01   x^2 P=0.4565
+     x=4     P=5.0038e-02   x^2 P=0.8006
+     x=8     P=1.8229e-02   x^2 P=1.1667
+     x=16    P=5.7760e-03   x^2 P=1.4787
+     x=32    P=1.6005e-03   x^2 P=1.6389
+     x=64    P=3.8950e-04   x^2 P=1.5954
+     x=128   P=1.0300e-04   x^2 P=1.6876
+   (compare PART 2 (2b): the 3-adic fixed point p_15 has x^2 P(p > x) ~ 0.9 on [6, 32]; both are ~ c x^-2.)
+
+(5d) exact 3-adic L^1 increments ||Z_{k+1} - Z_k||_1 (does Z_k = L^k 1 converge in L^1 to d pi/d mu?):
+   k=2: 0.6111, k=4: 0.4475, k=6: 0.3072, k=8: 0.2306, k=10: 0.1905, k=12: 0.1674, k=14: 0.1499
+   successive ratios: 0.905, 0.913, 0.932, 0.943, 0.943, 0.949
+
+(5e) strip confinement of bad words (used by the mean-field harmonic bound): S_k = a_k log2 3 - k,
+     q(L,y) = P(Bad_L, max_k S_k <= y) / P(Bad_L):
+     L      rho_L        y=sqrt(L)   y=2sqrt(L)   y=0.1L
+     50     3.3167e-03   0.5743      0.9983       0.1204
+     100    2.3868e-04   0.5759      0.9992       0.5759
+     200    3.0604e-06   0.6021      0.9997       0.9615
+     400    1.1587e-09   0.6198      0.9999       0.9999
+     800    4.0963e-16   0.6290      0.9999       1.0000
+   => a bad word typically rises only O(sqrt L): its own-path weight 3^a_j/2^j is 2^O(sqrt L).
+   annealed contrast: E[2^(S_j) | Bad_L] (exact DP) grows exponentially in j (rare heavy prefixes dominate):
+     L=50   j=12: 1.754e+01 (log2/j = 0.344)   j=25: 6.561e+01 (log2/j = 0.241)   j=37: 1.057e+02 (log2/j = 0.182)
+     L=100  j=25: 1.146e+02 (log2/j = 0.274)   j=50: 8.023e+02 (log2/j = 0.193)   j=75: 1.501e+03 (log2/j = 0.141)
+     L=200  j=50: 2.512e+03 (log2/j = 0.226)   j=100: 5.800e+04 (log2/j = 0.158)   j=150: 1.213e+05 (log2/j = 0.113)
+
+PART 5 done in 3.2s
+[runner] procgen_cauchy_20260925_meanfield.py: 3.3 s; max RSS of children so far 678 MB
+
+[runner] total 60.3 s

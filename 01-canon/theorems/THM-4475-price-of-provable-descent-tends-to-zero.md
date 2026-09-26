@@ -88,6 +88,9 @@ audit: >
 
 ## 4. Lower bound
 
+**Update 2026-09-25.** THM-4477 improves the lower bound to `delta_L >= rho_L^2/M2(L) >= 2^(-(0.1445+o(1))L)` (Cauchy–Schwarz with a certified second-moment majorant). It also shows that `2(1-h) = 0.1001` is the limit of any distribution-only argument.
+
+
 * If `n in Bad_L`, its first `L` points must meet a flipped pair.
 * Weighting by `1/n` and bounding how many bad orbits a flip at `v` can serve by the backward-tree weight `W_L`, which satisfies `g_k <= 1.5 g_(k-1) + 0.25 g_(k-2)`, gives `delta >= rho_L/W_L = 2^(-(0.7737+o(1))L)`.
 
