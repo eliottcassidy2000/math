@@ -1,0 +1,6 @@
+   d=14303: cycle through 101: period 2155, odd steps 1092, min 101, max 3863248, gcd(elements, d) = 1, a/p = 0.5067
+   d=17021: cycle through 5: period 2140, odd steps 1088, min 5, max 9122452, gcd(elements, d) = 1, a/p = 0.5084
+  ok: the two long primitive cycles exist with the stated least elements, clocks (2155,1092) and (2140,1088), and gcd 1 with d
+  ok: 2^27 - 3^17 = 355*14303 and 2^65 - 3^41 = 17021*19*29*44835377399
+  ok: shift criterion: mixed shape (p,a) of (qx+d)/2 is free iff (2^p - q^a) | d (q = 3,5,7; d <= 139; p <= 12)
+  ok: |2^p - q^a| = 1 (a >= 1) only for a = 1 or (q,p,a) = (3,3,2): 14 solutions, q <= 201

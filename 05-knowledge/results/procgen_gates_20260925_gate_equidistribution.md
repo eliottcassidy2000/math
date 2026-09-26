@@ -1,6 +1,6 @@
 # Cycle gates: exponential sums and the equidistribution of Collatz carries modulo 2^p − 3^a
 
-**Status: FINITE-EXACT + PROVED (elementary) + CITED. As a proof angle the exponential-sum/equidistribution route ranks LOW: every counting statement it reaches is already classical (Belaga's perigee bound), and a square-root barrier stops it short of excluding any cycle. Its value is diagnostic. Naive equidistribution of the gate residues is false, and the heuristic built on it fails for 3x+1: it predicts `ln P + 0.11` positive cycles of period `≤ P`. The repair is side-aware — only rational cycles whose least point is `≥ 1` may count. With that single input the model matches every control, including the published 3x+d cycle counts of Belaga–Mignotte (9 of 11 exactly, two off by one). No HYP or THM file was created.**
+**Status: FINITE-EXACT + PROVED (elementary) + CITED. As a proof angle the exponential-sum/equidistribution route ranks LOW: every counting statement it reaches is already classical (Belaga's perigee bound), and a square-root barrier stops it short of excluding any cycle. Its value is diagnostic. Naive equidistribution of the gate residues is false, and the heuristic built on it fails for 3x+1: it predicts `ln P + 0.11` positive cycles of period `≤ P`. The repair is side-aware — only rational cycles whose least point is `≥ 1` may count. With that single input the model matches every control, including the published 3x+d cycle counts of Belaga–Mignotte (9 of 11 exactly, two off by one; **RESOLVED 2026-09-26**: 11 of 11). The two missing cycles are long primitive cycles found by the [sporadic lane](procgen_sporadic_20260926_free_and_sporadic_cycles.md): `d = 14303` with least element 101 and clock `(2155,1092)`, and `d = 17021` with least element 5 and clock `(2140,1088)`. Both sit near `a/p ≈ 1/2`, beyond this lane's scan (`p ≤ 250`, main family `p ≤ 600`). No HYP or THM file was created.**
 
 * **FINITE-EXACT (census; SHEET and DRIFT controls).** Every clock `(p,a)` with `p ≤ 40` was checked for `q = 3` (860 clocks) and `q = 5` (860), by two independent methods: a sorted join of residues and orbit iteration over the size range. They agree. The integral periodic points are exactly the known cycles.
   * `3x+1`: `0`, `{1,2}`, `{-1}`, `{-5,-7,-10}`, `{-17,…,-136}`. The last three are the `3n−1` cycles on the side `3^a > 2^p` (SHEET).
@@ -24,7 +24,7 @@
   * All of the divergence sits on clocks whose rational cycles dip below 1.
   * Counting only necklaces with least point `≥ 1` gives finite totals: 1.81 (`3x+1`), 1.21 (`3x−1`), 2.77 (`5x+1`), 0.65 (`5x−1`). Observed: 0, 1, 3, 0.
 * **Dense divisor regime against published data (FINITE-EXACT).** For the eleven `d` of Belaga–Mignotte 2006, table (20), we enumerated exactly the primitive cycles of `T_d(y) = y/2, (3y+d)/2` on all clocks `p ≤ 250`, plus the main family to `p ≤ 600`.
-  * The totals reproduce their `ω(d)` for 9 of the 11 `d`. For `d = 14303` and `17021` we find one fewer (943, 257); unresolved, `§6`.
+  * The totals reproduce their `ω(d)` for 9 of the 11 `d`. For `d = 14303` and `17021` we find one fewer (943, 257). **RESOLVED 2026-09-26** by the sporadic lane: each has one more primitive cycle with period `p > 2000` (least elements 101 and 5), outside this scan. With them, all 11 match.
   * Near the critical line, equidistribution modulo `G/d` predicts every clock within noise.
   * On far clocks the multiples are depleted by factors up to 10.
 * **Proof angle.** The following are all dominated or classical:
@@ -312,7 +312,7 @@ What the numbers show:
 * **Near the critical line** (`a/p ≥ 0.59`), equidistribution modulo `G/d` predicts each clock within Poisson noise, and the totals within 1–4%.
 * **On far clocks** the main clock is exact: it has cofactor `G/d = 1`, so every necklace is a `T_d`-cycle. The multiples, however, are depleted by factors up to 10.
 * This is the dense-regime face of the archimedean non-uniformity of `§4`. It confirms, independently and from published data, that equidistribution holds exactly near the critical line.
-* **Unresolved.** `ω(14303) = 944` and `ω(17021) = 258` exceed our counts by one each.
+* **Resolved (2026-09-26, sporadic lane).** `ω(14303) = 944` and `ω(17021) = 258` exceeded our counts by one each. The missing cycles have clocks `(2155,1092)` (least element 101) and `(2140,1088)` (least element 5), at `a/p ≈ 0.507`. The claim here that the other lattice clocks have `a/p < 0.41` holds only up to `p ≈ 600`; the same lattice families return to `a/p ≈ 1/2` near `p ≈ 2000`. See [procgen_sporadic_20260926_free_and_sporadic_cycles](procgen_sporadic_20260926_free_and_sporadic_cycles.md).
   * No window was skipped and no orbit overflowed.
   * The main families were extended to `p ≈ 600` with no further cycle; the other lattice clocks with `d | G` beyond `p = 250` have `a/p < 0.41` and negligible predictions.
   * We cannot tell whether a cycle sits on a clock we did not scan or the table entry counts something else. Their exhaustiveness argument is in the 62-page report [4] (UNVERIFIED, not read).

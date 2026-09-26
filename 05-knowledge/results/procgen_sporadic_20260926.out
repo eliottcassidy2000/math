@@ -1,0 +1,239 @@
+procgen_sporadic_20260926_run.py  (session collatz-procgen-20260922, lane sporadic, 2026-09-26)
+python 3.10.0  platform darwin 
+
+==============================================================================================================
+T1. Free, partially free and sporadic words of T_{q,d}(y) = y/2, (q y + d)/2  (q odd, d odd, gcd(q,d) = 1)
+==============================================================================================================
+  [ok] T1.1 affine form: 2^p T^p(y) = q^a y + d c_w and itinerary w on the class y = d c_w/D (mod 2^p), 5040 random (q, d, w, y), q in {3,5,7,9}, p <= 40
+  [ok] T1.2 shift criterion: for every mixed shape (1 <= a <= p-1, p <= 12), q in {3,5,7} and the d in {+-1,+-5,+-7,11,+-13,23,+-25,47,115,-139,455,485} prime to q, 'every word integral' <=> D | d (2706 (q,d,shape) cases, 93 free); the two words 1^a 0^(p-a) and 1^(a-1) 0 1 0^(p-a-1) differ in carry by exactly 2^(a-1)
+  [ok] T1.3 single-word shapes: 0^p gives 0, 1^p gives -d/(q-2) (integral iff (q-2) | d, i.e. D(1,1) = 2 - q divides d); for q = 3 this is the fixed point -d
+  [ok] T1.4 |2^p - q^a| = 1 (p, a >= 1): exactly a = 1 with q = 2^p +- 1, and (q,p,a) = (3,3,2); checked for all odd q < 1000, p <= 64 (hand proof in the note)
+  [ok] T1.4 free mixed shapes of T_(q,+-1): q=3 [(2, 1), (3, 2)], q=5 [(2, 1)], q=7 [(3, 1)], q=9 [(3, 1)], q=15 [(4, 1)], q=17 [(4, 1)]
+  [ok] T1.5 all (p,a), p,a >= 1, with |2^p - 3^a| <= 20000: Ellison's bound 2^x e^(-x/10) > 20000 for x >= 17 leaves x <= 16 or x in S = {19, 27}; the 129 solutions agree with brute force to p = 400
+      |2^p - 3^a| <= 20000, mixed shapes (a <= p-1):
+        (2,1):1  (3,1):5  (3,2):-1  (4,1):13  (4,2):7  (4,3):-11  (5,1):29  (5,2):23  (5,3):5  (5,4):-49
+        (6,1):61  (6,2):55  (6,3):37  (6,4):-17  (6,5):-179  (7,1):125  (7,2):119  (7,3):101  (7,4):47  (7,5):-115
+        (7,6):-601  (8,1):253  (8,2):247  (8,3):229  (8,4):175  (8,5):13  (8,6):-473  (8,7):-1931  (9,1):509  (9,2):503
+        (9,3):485  (9,4):431  (9,5):269  (9,6):-217  (9,7):-1675  (9,8):-6049  (10,1):1021  (10,2):1015  (10,3):997  (10,4):943
+        (10,5):781  (10,6):295  (10,7):-1163  (10,8):-5537  (10,9):-18659  (11,1):2045  (11,2):2039  (11,3):2021  (11,4):1967  (11,5):1805
+        (11,6):1319  (11,7):-139  (11,8):-4513  (11,9):-17635  (12,1):4093  (12,2):4087  (12,3):4069  (12,4):4015  (12,5):3853  (12,6):3367
+        (12,7):1909  (12,8):-2465  (12,9):-15587  (13,1):8189  (13,2):8183  (13,3):8165  (13,4):8111  (13,5):7949  (13,6):7463  (13,7):6005
+        (13,8):1631  (13,9):-11491  (14,1):16381  (14,2):16375  (14,3):16357  (14,4):16303  (14,5):16141  (14,6):15655  (14,7):14197  (14,8):9823
+        (14,9):-3299  (15,9):13085  (16,10):6487  (19,12):-7153
+  [ok] T1.6 free cycles of T_(3,d) on Z for d in {1,5,7,11,13,23,25,29,47,139}: the predicted set {0}, {-d} and one cycle per Lyndon word of each free mixed shape (D | d) is contained in the least-element census (|least| <= 1e+06, both signs), and every other census cycle lies on a clock with D not dividing d
+      d =   1: free mixed shapes [(2, 1), (3, 2)]; free cycles 4; others (sign, least, p, a): (-1, 17, 11, 7)
+      d =   5: free mixed shapes [(2, 1), (3, 1), (3, 2), (5, 3)]; free cycles 7; others (sign, least, p, a): (-1, 85, 11, 7), (1, 187, 27, 17), (1, 347, 27, 17)
+      d =   7: free mixed shapes [(2, 1), (3, 2), (4, 2)]; free cycles 5; others (sign, least, p, a): (-1, 119, 11, 7)
+      d =  11: free mixed shapes [(2, 1), (3, 2), (4, 3)]; free cycles 5; others (sign, least, p, a): (-1, 187, 11, 7), (1, 1, 6, 2), (1, 13, 14, 8)
+      d =  13: free mixed shapes [(2, 1), (3, 2), (4, 1), (8, 5)]; free cycles 12; others (sign, least, p, a): (-1, 221, 11, 7), (1, 131, 24, 15)
+      d =  23: free mixed shapes [(2, 1), (3, 2), (5, 2)]; free cycles 6; others (sign, least, p, a): (-1, 391, 11, 7), (-1, 2263, 19, 12), (-1, 2359, 19, 12), (-1, 2743, 19, 12), (-1, 2963, 19, 12), (-1, 3091, 19, 12), (-1, 3415, 19, 12), (-1, 3743, 19, 12) ...
+      d =  25: free mixed shapes [(2, 1), (3, 1), (3, 2), (5, 3)]; free cycles 7; others (sign, least, p, a): (-1, 113, 34, 22), (-1, 425, 11, 7), (1, 7, 16, 8), (1, 17, 8, 4), (1, 935, 27, 17), (1, 1735, 27, 17)
+      d =  29: free mixed shapes [(2, 1), (3, 2), (5, 1)]; free cycles 5; others (sign, least, p, a): (-1, 109, 12, 8), (-1, 493, 11, 7), (1, 11, 17, 9), (1, 3811, 65, 41), (1, 7055, 65, 41)
+      d =  47: free mixed shapes [(2, 1), (3, 2), (7, 4)]; free cycles 9; others (sign, least, p, a): (-1, 799, 11, 7), (1, 5, 18, 7), (1, 25, 28, 16)
+      d = 139: free mixed shapes [(2, 1), (3, 2), (11, 7)]; free cycles 34; others (sign, least, p, a): (-1, 1291, 22, 14), (-1, 1355, 22, 14), (-1, 1367, 33, 21), (-1, 1495, 33, 21), (-1, 1931, 22, 14), (-1, 2203, 22, 14), (1, 11, 136, 74)
+  [ok] T1.7 on 455 (d, clock) cases (composite d, p <= 14): the integral words are exactly those with (D/g) | c_w, g = gcd(D, d), and each is the (d/f)-multiple of a primitive T_(3,f)-periodic point for the unique f = d/gcd(y_w, d), which divides g
+  [ok] T1.8 T_(3,5) on Z (census |least| <= 1e6): free {0}, {-5}, {5,10}, {-25,-35,-50}, {1,4,2}, {19,..}, {23,..}; partially free {187,..}, {347,..} on (27,17) (g = 5, D/g = 1015513); sporadic 5*{-17,..} on (11,7) (g = 1)
+      least     -5  clock (1,1)  D = -1  g = 1  free            primitive level f = 1
+      least    -25  clock (3,2)  D = -1  g = 1  free            primitive level f = 1
+      least    -85  clock (11,7)  D = -139  g = 1  sporadic        primitive level f = 1
+      least      0  clock (1,0)  D = 1  g = 1  free            primitive level f = 1
+      least      1  clock (3,1)  D = 5  g = 5  free            primitive level f = 5
+      least      5  clock (2,1)  D = 1  g = 1  free            primitive level f = 1
+      least     19  clock (5,3)  D = 5  g = 5  free            primitive level f = 5
+      least     23  clock (5,3)  D = 5  g = 5  free            primitive level f = 5
+      least    187  clock (27,17)  D = 5077565  g = 5  partially free  primitive level f = 5
+      least    347  clock (27,17)  D = 5077565  g = 5  partially free  primitive level f = 5
+  [T1 done 5.3s]
+
+==============================================================================================================
+T2. The Belaga-Mignotte counts omega(14303) = 944 and omega(17021) = 258
+==============================================================================================================
+  [ok] T2.1 d = 14303: the orbit of 101 is a primitive T_d-cycle with least element 101, period p = 2155, a = 1092 odd steps (a/p = 0.5067), max element 3863248; D = 2^2155 - 3^1092 is divisible by d (D/d has 2142 bits), m D = d c_w; perigee window [1, 15428]; (p,a) = 75*(27, 17) + 1*(130, -183) in the reduced basis of the clock lattice (index 7151)
+  [ok] T2.1 d = 17021: the orbit of 5 is a primitive T_d-cycle with least element 5, period p = 2140, a = 1088 odd steps (a/p = 0.5084), max element 9122452; D = 2^2140 - 3^1088 is divisible by d (D/d has 2126 bits), m D = d c_w; perigee window [1, 18718]; (p,a) = 31*(65, 41) + 1*(125, -183) in the reduced basis of the clock lattice (index 17020)
+  [ok] T2.2 2^27 - 3^17 = 5077565 = 355 * 14303 (355 = 5*71) and 2^65 - 3^41 = 420491770248316829 = 17021 * 19 * 29 * 44835377399; 14303 and 17021 are prime
+  [ok] T2.2 primality: 14303, 17021, 44835377399 are prime (sympy)
+  [ok] T2.3 d = 14303: least-element search over all 8581800 odd y <= 17163600: no overflow / unresolved start
+  [ok] T2.3 d = 14303: 944 primitive cycles with least element <= 17163600 (= Belaga-Mignotte omega(d)) and one non-primitive, d*{1,2}; per clock: (27, 17): 843, (54, 34): 76, (81, 51): 20, (108, 68): 3, (135, 85): 1, (2155, 1092): 1
+  [ok] T2.3 d = 14303: every lattice clock whose perigee window reaches 17163601 has p >= 203720 (least such clock (203720,128533)), so these are all primitive T_d-cycles with period p < 203720
+  [ok] T2.3 d = 14303: of the 255 lattice clocks with p <= 2200 the gates lane scanned 22 (p <= 250, and the main family (27, 17) to p <= 600); the only clock carrying a cycle outside that set is (2155, 1092) with exactly one cycle
+  [ok] T2.3 d = 14303: 231 lattice clocks with p <= 2200 have a nonempty window; equidistribution prediction L(p,a) (d/D)(1-1/d) summed over the scanned ones 955.6, over the unscanned ones 1.625
+      d = 14303: lattice clocks p <= 2200 with a cycle or prediction >= 0.01 (clock, cycles, scanned by gates, window top, prediction):
+        (  27,  17)   843  True     2099274         880
+        (  54,  34)    76  True     2099274        63.7
+        (  81,  51)    20  True     2099274        9.42
+        ( 108,  68)     3  True     2099274        1.87
+        ( 135,  85)     1  True     2099274       0.436
+        ( 162, 102)     0  True     2099274       0.112
+        ( 189, 119)     0  True     2099274      0.0311
+        (1696, 803)     0  False      10809       0.015
+        (1723, 820)     0  False      11081      0.0216
+        (1750, 837)     0  False      11352      0.0299
+        (1777, 854)     0  False      11624      0.0399
+        (1804, 871)     0  False      11896      0.0513
+        (1831, 888)     0  False      12167      0.0638
+        (1858, 905)     0  False      12439      0.0767
+        (1885, 922)     0  False      12711      0.0893
+        (1912, 939)     0  False      12983       0.101
+        (1939, 956)     0  False      13254       0.111
+        (1966, 973)     0  False      13526       0.118
+        (1993, 990)     0  False      13798       0.123
+        (2020,1007)     0  False      14070       0.125
+        (2047,1024)     0  False      14341       0.123
+        (2074,1041)     0  False      14613       0.119
+        (2101,1058)     0  False      14885       0.112
+        (2128,1075)     0  False      15156       0.104
+        (2155,1092)     1  False      15428      0.0938
+        (2182,1109)     0  False      15700      0.0832
+  [ok] T2.3 d = 17021: least-element search over all 10212600 odd y <= 20425200: no overflow / unresolved start
+  [ok] T2.3 d = 17021: 258 primitive cycles with least element <= 20425200 (= Belaga-Mignotte omega(d)) and one non-primitive, d*{1,2}; per clock: (65, 41): 254, (130, 82): 3, (2140, 1088): 1
+  [ok] T2.3 d = 17021: every lattice clock whose perigee window reaches 20425201 has p >= 1631245 (least such clock (1631245,1029201)), so these are all primitive T_d-cycles with period p < 1631245
+  [ok] T2.3 d = 17021: of the 108 lattice clocks with p <= 2200 the gates lane scanned 9 (p <= 250, and the main family (65, 41) to p <= 600); the only clock carrying a cycle outside that set is (2140, 1088) with exactly one cycle
+  [ok] T2.3 d = 17021: 97 lattice clocks with p <= 2200 have a nonempty window; equidistribution prediction L(p,a) (d/D)(1-1/d) summed over the scanned ones 252.3, over the unscanned ones 0.842
+      d = 17021: lattice clocks p <= 2200 with a cycle or prediction >= 0.01 (clock, cycles, scanned by gates, window top, prediction):
+        (  65,  41)   254  True    20290484         247
+        ( 130,  82)     3  True    20290484        4.65
+        ( 195, 123)     0  True    20290484       0.179
+        (1685, 801)     0  False      13114      0.0254
+        (1750, 842)     0  False      13913      0.0535
+        (1815, 883)     0  False      14713      0.0907
+        (1880, 924)     0  False      15513       0.127
+        (1945, 965)     0  False      16314       0.149
+        (2010,1006)     0  False      17115       0.151
+        (2075,1047)     0  False      17916       0.132
+        (2140,1088)     1  False      18718       0.101
+  [ok] T2.4 d = 14303: the perigee-window method (every odd y in the window, p steps) reproduces the least-element search clock by clock: (27, 17): 843, (54, 34): 76, (81, 51): 20, (108, 68): 3, (135, 85): 1, (2155, 1092): 1
+  [ok] T2.4 d = 17021: the perigee-window method (every odd y in the window, p steps) reproduces the least-element search clock by clock: (65, 41): 254, (130, 82): 3, (2140, 1088): 1
+  [ok] T2.5 d = 6487: 534 primitive cycles with least element <= 1200 d = omega(d); complete for periods p < 21004; longest p = 96
+  [ok] T2.5 d = 7463: 162 primitive cycles with least element <= 1200 d = omega(d); complete for periods p < 3716; longest p = 78
+  [ok] T2.5 d = 7727: 198 primitive cycles with least element <= 1200 d = omega(d); complete for periods p < 10835; longest p = 108
+  [ok] T2.5 d = 9823: 241 primitive cycles with least element <= 1200 d = omega(d); complete for periods p < 4974; longest p = 168
+  [ok] T2.5 d = 10289: 214 primitive cycles with least element <= 1200 d = omega(d); complete for periods p < 14176; longest p = 119
+  [ok] T2.5 d = 13085: 335 primitive cycles with least element <= 1200 d = omega(d); complete for periods p < 2823; longest p = 180
+  [ok] T2.5 d = 14197: 329 primitive cycles with least element <= 1200 d = omega(d); complete for periods p < 2582; longest p = 196
+  [ok] T2.5 d = 15655: 207 primitive cycles with least element <= 1200 d = omega(d); complete for periods p < 2330; longest p = 70
+  [ok] T2.5 d = 18359: 164 primitive cycles with least element <= 1200 d = omega(d); complete for periods p < 15576; longest p = 192
+  [ok] T2.6 sweep: all 6667 d <= 19999 with gcd(d,6) = 1, every odd y <= 1200 d tested (287 s wall, 2 processes); no overflow, no unresolved start, no orbit entering a cycle with least element > 1200 d
+  [ok] T2.6 all 99924 cycles re-verified by exact Python iteration (period, odd steps, least element, primitivity)
+  [ok] T2.6 Proposition 3 on the sweep: for every d, #cycles(T_d, least <= 1200 d) = sum over e | d of #primitive cycles(T_(d/e), least <= 1200 d/e)
+  [ok] T2.6 table (20) reproduced exactly: the eleven d with omega(d) > 160 and their omega: 7463:162, 18359:164, 7727:198, 15655:207, 10289:214, 9823:241, 17021:258, 14197:329, 13085:335, 6487:534, 14303:944
+  [ok] T2.6 every T_d has a primitive cycle (Lagarias's Conjecture 2(1) in range); omega = 1 for 1481 d and omega = 2 for 1507 d, as in Belaga-Mignotte
+  [ok] T2.6 long cycles: 2204 primitive cycles have p > 600 (a/p in [0.444, 0.561], mean 0.502); for 683 d the only primitive cycle is such a long one; the longest: d=16819 least 7 (p,a)=(4686,2292), d=11491 least 5 (p,a)=(4531,2253), d=13829 least 13 (p,a)=(3918,1954), d=19427 least 25 (p,a)=(3890,1948)
+  [ok] T2.6 EMPIRICAL: for the 18697 primitive cycles with p >= 100, m p / d has quartiles 2.03, 4.96, 10.30 (least element m ~ 5 d/p), a/p has median 0.500 and p/d <= 1.18; PROVED bound m > d/2^(K+1), K = longest run of even steps, checked on 5000 of them
+  [ok] T2.6 RESIDUAL: omega = 3 for 1004 d (Belaga-Mignotte: 1005) and 42757 primitive cycles in all (Belaga-Mignotte: 42765)
+  [ok] T2.7 extension (5663 d, 1.436e+11 further integers, i.e. 7.18e+10 odd starts, 519 s wall): least elements in (1200 d, X_d], X_d = max(1200 d, 2e7 for d < 16667, the perigee windows of all 1252 clocks (p,a) with p < 4000 and log2 3 < p/a < 65/41 that satisfy d | 2^p - 3^a): NO further cycle
+  [ok] T2.7 hence for every d <= 19999 the 42757 primitive cycles contain every primitive T_d-cycle of period p < 4000 (no clock of L_d with p < 4000 has perigee window reaching X_d + 1); the longest cycle found has p = 4686
+  [ok] T2.7 d = 6487: X_d = 20000000, least uncovered clock (21004,13252): omega(d) = 534 counts every primitive cycle of period p < 21004
+  [ok] T2.7 d = 7463: X_d = 20000000, least uncovered clock (4245,2678): omega(d) = 162 counts every primitive cycle of period p < 4245
+  [ok] T2.7 d = 7727: X_d = 20000000, least uncovered clock (10835,6836): omega(d) = 198 counts every primitive cycle of period p < 10835
+  [ok] T2.7 d = 9823: X_d = 20000000, least uncovered clock (4974,3138): omega(d) = 241 counts every primitive cycle of period p < 4974
+  [ok] T2.7 d = 10289: X_d = 20000000, least uncovered clock (14176,8944): omega(d) = 214 counts every primitive cycle of period p < 14176
+  [ok] T2.7 d = 13085: X_d = 61647379, least uncovered clock (14100,8896): omega(d) = 335 counts every primitive cycle of period p < 14100
+  [ok] T2.7 d = 14197: X_d = 115744533, least uncovered clock (80028,50492): omega(d) = 329 counts every primitive cycle of period p < 80028
+  [ok] T2.7 d = 14303: X_d = 20000000, least uncovered clock (203720,128533): omega(d) = 944 counts every primitive cycle of period p < 203720
+  [ok] T2.7 d = 15655: X_d = 105271617, least uncovered clock (10166,6414): omega(d) = 207 counts every primitive cycle of period p < 10166
+  [ok] T2.7 d = 17021: X_d = 20425200, least uncovered clock (1631245,1029201): omega(d) = 258 counts every primitive cycle of period p < 1631245
+  [ok] T2.7 d = 18359: X_d = 22030800, least uncovered clock (15576,9827): omega(d) = 164 counts every primitive cycle of period p < 15576
+  [ok] T2.8 the residual is not explained by Belaga-Mignotte having found extra cycles only: omega_BM(d) >= omega_ours(d) >= 1 for all d, with n1 = 1481 and n2 = 1507 equal on both sides, would force #{omega_BM = 3} <= #{omega_ours = 3} = 1004 < 1005
+  [T2 done 867.3s]
+
+==============================================================================================================
+T3. Stern-Brocot positions (theta_q = log_q 2; a/p < theta_q <=> 2^p > q^a)
+==============================================================================================================
+      SB path of log_3 2: 1/1U 1/2L 2/3U 3/5L 5/8L 7/11U 12/19U 17/27L 29/46L 41/65L 53/84U 94/149L 147/233L 200/317L 253/401L 306/485L
+      SB path of log_5 2: 1/1U 1/2U 1/3L 2/5L 3/7L 4/9U 7/16U 10/23U 13/30U 16/37U 19/44U 22/51U 25/58U 28/65U 31/72L 59/137L
+  [ok] T3.1 the Stern-Brocot path of log_3 2 begins 1/1 1/2 2/3 3/5 5/8 7/11 12/19 17/27 29/46 41/65 53/84 94/149
+  [ok] T3.1 the Stern-Brocot path of log_5 2 begins 1/1 1/2 1/3 2/5 3/7 4/9
+      map    least    (p,a)    a/p       SB-path  D=2^p-q^a   |D| vs |d|     kind
+      3x+1        -1  (  1,  1)  1/1       yes-U            -1   |D|<=|d|      free
+      3x+1        -5  (  3,  2)  2/3       yes-U            -1   |D|<=|d|      free
+      3x+1       -17  ( 11,  7)  7/11      yes-U          -139   |D|>|d|       sporadic
+      3x+1         0  (  1,  0)  0/1       yes-L             1   |D|<=|d|      free
+      3x+1         1  (  2,  1)  1/2       yes-L             1   |D|<=|d|      free
+      3x-1        -1  (  2,  1)  1/2       yes-L             1   |D|<=|d|      free
+      3x-1         0  (  1,  0)  0/1       yes-L             1   |D|<=|d|      free
+      3x-1         1  (  1,  1)  1/1       yes-U            -1   |D|<=|d|      free
+      3x-1         5  (  3,  2)  2/3       yes-U            -1   |D|<=|d|      free
+      3x-1        17  ( 11,  7)  7/11      yes-U          -139   |D|>|d|       sporadic
+      5x+1        -1  (  2,  1)  1/2       yes-U            -1   |D|<=|d|      free
+      5x+1         0  (  1,  0)  0/1       yes-L             1   |D|<=|d|      free
+      5x+1         1  (  5,  2)  2/5       yes-L             7   |D|>|d|       sporadic
+      5x+1        13  (  7,  3)  3/7       yes-L             3   |D|>|d|       sporadic
+      5x+1        17  (  7,  3)  3/7       yes-L             3   |D|>|d|       sporadic
+      5x-1        -1  (  5,  2)  2/5       yes-L             7   |D|>|d|       sporadic
+      5x-1       -13  (  7,  3)  3/7       yes-L             3   |D|>|d|       sporadic
+      5x-1       -17  (  7,  3)  3/7       yes-L             3   |D|>|d|       sporadic
+      5x-1         0  (  1,  0)  0/1       yes-L             1   |D|<=|d|      free
+      5x-1         1  (  2,  1)  1/2       yes-U            -1   |D|<=|d|      free
+      3x+5        -5  (  1,  1)  1/1       yes-U            -1   |D|<=|d|      free (= 5 x primitive T_(q,1))
+      3x+5       -25  (  3,  2)  2/3       yes-U            -1   |D|<=|d|      free (= 5 x primitive T_(q,1))
+      3x+5       -85  ( 11,  7)  7/11      yes-U          -139   |D|>|d|       sporadic (= 5 x primitive T_(q,1))
+      3x+5         0  (  1,  0)  0/1       yes-L             1   |D|<=|d|      free (= 5 x primitive T_(q,1))
+      3x+5         1  (  3,  1)  1/3       no                5   |D|<=|d|      free
+      3x+5         5  (  2,  1)  1/2       yes-L             1   |D|<=|d|      free (= 5 x primitive T_(q,1))
+      3x+5        19  (  5,  3)  3/5       yes-L             5   |D|<=|d|      free
+      3x+5        23  (  5,  3)  3/5       yes-L             5   |D|<=|d|      free
+      3x+5       187  ( 27, 17)  17/27     yes-L       5077565   |D|>|d|       partially free
+      3x+5       347  ( 27, 17)  17/27     yes-L       5077565   |D|>|d|       partially free
+      3x+7        -7  (  1,  1)  1/1       yes-U            -1   |D|<=|d|      free (= 7 x primitive T_(q,1))
+      3x+7       -35  (  3,  2)  2/3       yes-U            -1   |D|<=|d|      free (= 7 x primitive T_(q,1))
+      3x+7      -119  ( 11,  7)  7/11      yes-U          -139   |D|>|d|       sporadic (= 7 x primitive T_(q,1))
+      3x+7         0  (  1,  0)  0/1       yes-L             1   |D|<=|d|      free (= 7 x primitive T_(q,1))
+      3x+7         5  (  4,  2)  2/4       yes-L             7   |D|<=|d|      free
+      3x+7         7  (  2,  1)  1/2       yes-L             1   |D|<=|d|      free (= 7 x primitive T_(q,1))
+      3x+13      -13  (  1,  1)  1/1       yes-U            -1   |D|<=|d|      free (= 13 x primitive T_(q,1))
+      3x+13      -65  (  3,  2)  2/3       yes-U            -1   |D|<=|d|      free (= 13 x primitive T_(q,1))
+      3x+13     -221  ( 11,  7)  7/11      yes-U          -139   |D|>|d|       sporadic (= 13 x primitive T_(q,1))
+      3x+13        0  (  1,  0)  0/1       yes-L             1   |D|<=|d|      free (= 13 x primitive T_(q,1))
+      3x+13        1  (  4,  1)  1/4       no               13   |D|<=|d|      free
+      3x+13       13  (  2,  1)  1/2       yes-L             1   |D|<=|d|      free (= 13 x primitive T_(q,1))
+      3x+13      131  ( 24, 15)  15/24     yes-L       2428309   |D|>|d|       partially free
+      3x+13      211  (  8,  5)  5/8       yes-L            13   |D|<=|d|      free
+      3x+13      227  (  8,  5)  5/8       yes-L            13   |D|<=|d|      free
+      3x+13      251  (  8,  5)  5/8       yes-L            13   |D|<=|d|      free
+      3x+13      259  (  8,  5)  5/8       yes-L            13   |D|<=|d|      free
+      3x+13      283  (  8,  5)  5/8       yes-L            13   |D|<=|d|      free
+      3x+13      287  (  8,  5)  5/8       yes-L            13   |D|<=|d|      free
+      3x+13      319  (  8,  5)  5/8       yes-L            13   |D|<=|d|      free
+      3x+23      -23  (  1,  1)  1/1       yes-U            -1   |D|<=|d|      free (= 23 x primitive T_(q,1))
+      3x+23     -115  (  3,  2)  2/3       yes-U            -1   |D|<=|d|      free (= 23 x primitive T_(q,1))
+      3x+23     -391  ( 11,  7)  7/11      yes-U          -139   |D|>|d|       sporadic (= 23 x primitive T_(q,1))
+      3x+23    -2263  ( 19, 12)  12/19     yes-U         -7153   |D|>|d|       partially free
+      3x+23    -2359  ( 19, 12)  12/19     yes-U         -7153   |D|>|d|       partially free
+      3x+23    -2743  ( 19, 12)  12/19     yes-U         -7153   |D|>|d|       partially free
+      3x+23    -2963  ( 19, 12)  12/19     yes-U         -7153   |D|>|d|       partially free
+      3x+23    -3091  ( 19, 12)  12/19     yes-U         -7153   |D|>|d|       partially free
+      3x+23    -3415  ( 19, 12)  12/19     yes-U         -7153   |D|>|d|       partially free
+      3x+23    -3743  ( 19, 12)  12/19     yes-U         -7153   |D|>|d|       partially free
+      3x+23    -4819  ( 19, 12)  12/19     yes-U         -7153   |D|>|d|       partially free
+      3x+23        0  (  1,  0)  0/1       yes-L             1   |D|<=|d|      free (= 23 x primitive T_(q,1))
+      3x+23        5  (  5,  2)  2/5       no               23   |D|<=|d|      free
+      3x+23        7  (  5,  2)  2/5       no               23   |D|<=|d|      free
+      3x+23       23  (  2,  1)  1/2       yes-L             1   |D|<=|d|      free (= 23 x primitive T_(q,1))
+      3x+23       41  ( 43, 26)  26/43     no       6254227193879   |D|>|d|       partially free
+  [ok] T3.2 3x+1 on Z (census |least| <= 1e6): the five cycles 0, {1,2}, {-1}, {-5,..}, {-17,..}; all five densities 0/1, 1/2, 1/1, 2/3, 7/11 lie on the Stern-Brocot path of log_3 2
+  [ok] T3.2 3x+1: {-17,..} is the only sporadic cycle (|D| = 139); the other four are free (|D| = 1)
+  [ok] T3.2 3x-1 on Z: 0, {1}, {5,7,10}, {17,..}, {-1,-2} -- the negatives of the 3x+1 cycles
+  [ok] T3.3 clock (19,12), 3^12 - 2^19 = 7153: none of the 50388 words has 7153 | c_w, so no integer cycle of 3x+-1 sits at the next upper approximant
+  [ok] T3.4 EMPIRICAL (all 42757 primitive cycles of T_d, d <= 19999): density a/p on the Stern-Brocot path of log_3 2 for 9614 (22.5%), off it for 33143; gap cofactor D/d: D = d (free): 2566, D/d < 2^10: 4065, D/d < 2^100: 18925, D/d >= 2^100: 17201
+  [T3 done 869.9s]
+
+==============================================================================================================
+T4. 5x+1 and 3x-1
+==============================================================================================================
+  [ok] T4.1 5x+1 on Z, exact per-clock census of all periods p <= 60 (both signs): exactly 0, {-1,-2}, {1,3,8,4,2}, {13,..}, {17,..}
+  [ok] T4.2 5x+1 shapes: {-1,-2} on (2,1), D = -1, FREE (1 of 1 necklace); {1,3,8,4,2} on (5,2), D = 7, SPORADIC (1 of 2); {13,..} and {17,..} on (7,3), D = 3, SPORADIC (2 of 5)
+  [ok] T4.3 free cycles of 5x+1 are exactly {0} and {-1,-2}: the only free mixed shape is (2,1) (5 - 4 = 1; T1.4), and the single-word shape (1,1) gives -1/3
+  [ok] T4.4 T_(3,-1)(-y) = -T_(3,1)(y) for |y| < 1e5 (and identically: -y/2, (-3y-1)/2), so the cycles of 3x-1 are the negatives of those of 3x+1
+  [ok] T4.5 3x+1 on Z, exact per-clock census of all periods p <= 90 (both signs): 0, {1,2}, {-1}, {-5,-7,-10}, {-17,..}; hence 3x-1 has 0, {-1,-2}, {1}, {5,7,10}, {17,..} with the same shapes (1,1) D=-1 free, (3,2) D=-1 free, (11,7) D=-139 sporadic
+  [ok] T4.6 least-element search, all odd y <= 1e9: the positive cycles of 3x+1 are exactly [(1, 2, 1)] (least element, p, a)
+  [ok] T4.6 least-element search, all odd y <= 1e9: the positive cycles of 3x-1 are exactly [(1, 1, 1), (5, 3, 2), (17, 11, 7)] (least element, p, a)
+
+==============================================================================================================
+Reproduction
+==============================================================================================================
+  sha256 76429df107ff850c120ce3659dc9049616b4eac6df6f56743468601afef7e04f  04-computation/experiments/procgen_sporadic_20260926_lib.py
+  sha256 a3217c5d93f6e1733139dc8bb2e4f7d353e468d58426bf61c494a936fe6e426c  04-computation/experiments/procgen_sporadic_20260926_run.py
+  sha256 4343b7abbd0c0c42398731ad7ffac25962db4b65726f52befb129046eb7e7a95  04-computation/experiments/procgen_sporadic_20260926_traj.c
+  sha256 8a1257a418197c1c0df052047a828f989c6e522a7bfce42dfac8047c9b0042f9  04-computation/experiments/procgen_sporadic_20260926_sweep.c
+  wall time 886 s;  peak RSS: python 183 MB, C children 45.4 MB
+  70 checks passed
