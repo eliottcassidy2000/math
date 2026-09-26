@@ -30,7 +30,11 @@ status: >
   infinite branch of the inverse tree is thin in the same sense; (8) an
   orbit is eventually periodic iff its reciprocal sum diverges, so Collatz
   is equivalent to sum_i 1/T^i(n) = infinity for every n >= 1, and the
-  Dirichlet series of a divergent orbit has abscissa <= h*. It does NOT exclude divergent orbits
+  Dirichlet series of a divergent orbit has abscissa <= h*. The same proof gives, for every Conway/Matthews-Watts map
+  g(x) = (p_i x + q_i)/m with p_i coprime to m, prod p_i < m^m and
+  max p_i < m^2, the exponent max(1 - I(g), log_m max p_i/m) with I(g) the
+  Chernoff rate of the multipliers (section 1.8 of the note). It does NOT
+  exclude divergent orbits
   (expected to have N(X) of order log X) and does not bound the density of
   the union of divergent orbits.
 source: collatz-squares-doubles-20260925 session (opus), 2026-09-25; the owner asked to prove HYP-9160 for discrepancy O(log l). Mechanism: the in-house no-bounded-strip theorem's Terras stopping-time count (collatz_guards_20260921_discrepancy.md, section 2a) plus a pigeonhole on landing points that replaces the strip hypothesis. No priority claimed.
@@ -46,6 +50,12 @@ script: 04-computation/experiments/collatz_thin_20260925_counts.py
 output: 05-knowledge/results/collatz_thin_20260925_counts.out
 script_sha256: 721b2213ac70e3c2dd8d1e6fb109fd7c2c03a8d7918dcb1464d460c164d133b1
 output_sha256: 9e3dd585e2fc46be83eb6ec0e709682b50009b0fb5f22838d404e4310fafd9a5
+script_controls2: 04-computation/experiments/collatz_thin_20260925_controls2.py
+output_controls2: 05-knowledge/results/collatz_thin_20260925_controls2.out
+script_controls2_sha256: b7a2dbba3d4e9e95560734394f49d29ab90079497e214e0e438897dda6720cfc
+output_controls2_sha256: 31a284957f46959d72c8c7ebd93716f8b568af658e1faca3b0073597d9f638a4
+output_counts_to_2_24: 05-knowledge/results/collatz_thin_20260925_counts_to_2_24.out (same script with argument 24)
+output_counts_to_2_24_sha256: e344d992f821fe2f801eba960b25992859ba587821ccef613ac8d2477036e822
 hash_basis: raw LF bytes
 audit: >
   Self-audit complete (every step re-derived; both counting lemmas
@@ -117,6 +127,9 @@ eventually periodic). With `h* = h(log_3 2) = 0.949956...`:
   absolute constants, i.e. `|R(d)| <= K'|R_2(d)|`.
 * **Inverse tree.** Every infinite branch of the inverse tree is thin; the
   proof only needs an injective `T_b`-chain.
+* **Contracting Collatz-like maps.** Same statement and proof for every
+  `g(x) = (p_i x + q_i)/m` with `p_i` coprime to `m`, `prod p_i < m^m`,
+  `max p_i < m^2`; exponent `max(1 - I(g), log_m(max p_i/m))`.
 * **Harmonic form.** Eventually periodic iff `sum 1/|x_i| = infinity`:
   Collatz says `sum_i 1/T^i(n) = infinity` for every `n >= 1`. The union
   of thin orbits can have positive density (strategy `-chi_(-4)`), so the
@@ -129,7 +142,11 @@ eventually periodic). With `h* = h(log_3 2) = 0.949956...`:
 for `k <= 320`; direct enumeration of the no-dip sets `F_(+-1)(X, theta)`
 for `X <= 2^20`, growth exponents `0.775` (`theta = 0.03`) and `0.863`
 (`theta = 0.10`) against the bounds `0.9635` and `0.9867`; the two sheets
-differ by at most four elements at every size.
+differ by at most four elements at every size. `collatz_thin_20260925_controls2.py`: the union of all
+cycles of twelve maps `3n+b` (at most 86 periodic points below `2*10^5`); a
+contracting `m = 3` Conway map (bijection mod `3^k`, rate `0.2513`, counts
+below the bound); the parity map is a bijection mod `2^k` for `T_(+-1)` and
+fails for `-chi_(-4)` (`k + 1` words among `2^k` residues).
 
 ## 5. Non-consequences
 

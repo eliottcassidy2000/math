@@ -13,13 +13,21 @@ Sections
      the factor 1 - 1/(3 m_l), rational examples (vanishing / negative factor)
   E  the dichotomy / pigeonhole of section 1.5 on real finite segments,
      sign-change count of section 1.1, Terras bijection of section 1.2
-  F  Corollary 4: level-2 sign strategies where the parity map is NOT a
-     bijection and where the counting lemma FAILS
+  F  the withdrawn Corollary 4 (sign strategies): level-2 strategies where
+     the parity map is NOT a bijection and where the counting lemma FAILS
+  G  the replacement corollaries: injectivity of T_b on periodic points
+     (new Cor. 4), the log(1-x) inequality of Cor. 6, the exponent ladder
+     a(d) = max(1,a), and "bijection only for a constant shift" at level 3
 """
 import math
 import sys
 from fractions import Fraction
 from math import comb, log2
+
+try:
+    sys.stdout.reconfigure(newline="\n")   # raw LF output (hash_basis: raw LF bytes)
+except Exception:
+    pass
 
 ALPHA = log2(3.0)                      # log_2 3
 RHO0 = 1.0 / ALPHA                     # log_3 2
@@ -272,13 +280,32 @@ print("minus sheet (3n-1), odd n<=300, L<=%d: identity m_L 2^{d_L}/3^L = n prod_
       % (LMAX, bad_minus, checked))
 print("  every factor 1-1/(3 m_l) in [%s, %s] = [%.6f, %.6f] (all in (0,1))" % (factor_min, factor_max, float(factor_min), float(factor_max)))
 print("plus sheet (3n+1), odd n<=300, j<=%d: identity m_j 2^{d_j}/3^j = n + (1/3) sum_{i<j} 2^{d_i}/3^i: failures = %d" % (LMAX, bad_plus))
-# c_L -> 0 for eventually periodic minus-sheet orbits (all n<=300 enter a cycle)
-worst_c = 0.0
+# Prop 6(6) 2-adic statement: 3^L n - B_L (minus sheet) and 3^L n + B_L (plus sheet) divisible by 2^{d_L}
+bad2 = 0
 for n in range(1, 301, 2):
-    ms, ds = syracuse(n, -1, 400)
-    cL = ms[400] * Fraction(2) ** ds[400] / Fraction(3) ** 400
-    worst_c = max(worst_c, float(cL))
-print("minus sheet, odd n<=300, c_400 = m_400 2^{d_400}/3^400: max = %.3e (all orbits enter a cycle, c -> 0, R(d) -> n)" % worst_c)
+    for b in (-1, 1):
+        ms, ds = syracuse(n, b, 40)
+        BL = sum(3 ** (40 - 1 - l) * 2 ** ds[l] for l in range(40))
+        if (3 ** 40 * n + b * BL) % (2 ** ds[40]) != 0:
+            bad2 += 1
+print("Prop 6(6): 3^L n + b B_L = 0 mod 2^{d_L} (L=40, both sheets, odd n<=300): failures = %d" % bad2)
+# c_L -> 0 for eventually periodic minus-sheet orbits (all n<=300 enter a cycle); floats via logs
+def c_log2(n, L):
+    m = n
+    d = 0
+    for _ in range(L):
+        t = 3 * m - 1
+        v = (t & -t).bit_length() - 1
+        m = t >> v
+        d += v
+    return log2(m) + d - L * ALPHA
+
+
+for L in (400, 3000, 20000):
+    worst = max(c_log2(n, L) for n in range(1, 301, 2))
+    print("minus sheet, odd n<=300: max_n log2 c_L at L=%d is %.2f  (c_L = m_L 2^{d_L}/3^L -> 0 since every orbit enters a cycle)" % (L, worst))
+print("  (the slow case is the 3n-1 cycle 17,25,37,55,41,61,91: factor per period = %.6f)" %
+      float(Fraction(1) * (1 - Fraction(1, 51)) * (1 - Fraction(1, 75)) * (1 - Fraction(1, 111)) * (1 - Fraction(1, 165)) * (1 - Fraction(1, 123)) * (1 - Fraction(1, 183)) * (1 - Fraction(1, 273))))
 # rational examples for Corollary 2's factor
 print("rational examples for the factor 1 - 1/(3m):")
 for m in (Fraction(1, 3), Fraction(1, 5), Fraction(-1, 5), Fraction(3, 11), Fraction(-3, 7), Fraction(1), Fraction(-1)):
@@ -462,6 +489,7 @@ for b, orb in segs:
         print("  b=%3d segment start=%7d len=%4d  X=2^12 th=0.1: N=%d = E %d + D %d + ND %d ; k N(X^(1-th)) = %d ; #F=%d ; max dippers per landing = %d"
               % (bb, seg[0], len(seg), N, nE, nD, nND, k * Nlow, F_count_direct(2 ** 12, 0.1, bb), maxserve))
 print("partition N=E+D+ND, E<=k, D<=k N(X^(1-theta)), ND<=#F, <=k dippers per landing point, on all tested segments:", allok)
+print("note: #(E) equals k exactly on every segment above (indices M-k+1..M), i.e. 'at most k', not 'fewer than k'; (R) uses k, so harmless.")
 
 # ----------------------------------------------------------------- F
 print()
@@ -525,6 +553,100 @@ for th in (0.03, 0.1):
     print("   theta=%.2f: X/2 exceeds the lemma bound from k = %d on (X = 2^%d): the counting lemma is FALSE for this strategy for all X >= 2^%d"
           % (th, k, k, k))
 print("all orbits of that strategy are eventually increasing odd sequences (x -> (3x+-1)/2), so N(X)=O(log X): the THEOREM's conclusion holds there trivially,")
-print("but sections 1.2 and 1.4 do not survive, contrary to the proof of Corollary 4.")
+print("but sections 1.2 and 1.4 do not survive, contrary to the proof of the (withdrawn) Corollary 4.")
+
+# ----------------------------------------------------------------- G
+print()
+print("=" * 72)
+print("G. replacement corollaries")
+print("=" * 72)
+
+# G1: new Corollary 4 -- T_b is injective on the set of periodic points (unique periodic preimage)
+print("G1. periodic points of T_b with |p| <= X0: is T_b injective on them?  (search from every |x| <= X0, step cap 20000)")
+for b in (1, -1, 5, -5, 7, -7, 11, 13, -13, 17, 23):
+    X0 = 20000
+    periodic = set()
+    for x0 in range(-X0, X0 + 1):
+        if x0 == 0:
+            continue
+        seen = {}
+        x = x0
+        steps = 0
+        while x not in seen and x != 0 and steps < 20000 and abs(x) < 10 ** 15:
+            seen[x] = steps
+            x = T(x, b)
+            steps += 1
+        if x in seen:
+            # the cycle is the tail from seen[x]
+            cyc = [y for y, i in seen.items() if i >= seen[x]]
+            periodic.update(cyc)
+    preimages = {}
+    for p in periodic:
+        q = T(p, b)
+        assert q in periodic
+        preimages[q] = preimages.get(q, 0) + 1
+    inj = max(preimages.values()) == 1 if preimages else True
+    ncyc = 0
+    rest = set(periodic)
+    while rest:
+        p = next(iter(rest))
+        x = p
+        while True:
+            rest.discard(x)
+            x = T(x, b)
+            if x == p:
+                break
+        ncyc += 1
+    small = sorted(q for q in periodic if abs(q) <= X0)
+    print("   b=%3d: %2d cycles, %4d periodic points (|p|<=%d: %d, largest |p| = %d); T_b injective on them: %s; count(|p|<=X0)/X0^h* = %.4f"
+          % (b, ncyc, len(periodic), X0, len(small), max(abs(q) for q in periodic) if periodic else 0, inj,
+             len(small) / X0 ** hstar))
+
+# G2: Corollary 6's elementary inequality log(1-x) >= -x - x^2 on (0, 1/3]
+worst = min(math.log(1 - x) + x + x * x for x in [i / 30000.0 for i in range(1, 10001)])
+print("G2. min over x in (0,1/3] of log(1-x) + x + x^2 = %.6f (>= 0 required by Cor. 6): %s" % (worst, worst >= 0))
+
+# G3: exponent ladder -- formal plus-sheet orbit m_j = 2^{-Delta_j} (n + (1/3) sum_{i<j} 2^{Delta_i}) with Delta_j = -a log2 j
+print("G3. exponent ladder: Delta_j = -a log2 j, m_j(n=1) = 2^(-Delta_j)(1 + (1/3) sum_{i<j} 2^(Delta_i)); log m_j / log j at j = 10^6 vs max(1,a)")
+for a in (0.0, 0.5, 1.0, 1.03, 1.05, 1.5, 2.0):
+    s = 1.0  # i = 0 term: Delta_0 = 0
+    J = 10 ** 6
+    for i in range(1, J):
+        s += i ** (-a)
+    mj = J ** a * (1.0 + s / 3.0)
+    print("   a=%.2f: log m_j/log j = %.4f  (max(1,a) = %.2f)" % (a, math.log(mj) / math.log(J), max(1.0, a)))
+
+# G4: level-3 strategies: the parity word of length K is a function of y mod 2^(K+1); count distinct words and fibres
+print("G4. all 16 level-3 strategies sigma:{1,3,5,7}->{+-1}; words of length K=10 over y < 2^(K+1)")
+
+
+def Tsig3(x, sig):
+    if x % 2 == 0:
+        return x // 2
+    return (3 * x + sig[x % 8]) // 2
+
+
+K = 10
+for mask in range(16):
+    sig = {1: 1 if mask & 1 else -1, 3: 1 if mask & 2 else -1, 5: 1 if mask & 4 else -1, 7: 1 if mask & 8 else -1}
+    fib = {}
+    fn_of_mod2K = {}
+    welldef = True
+    for y in range(2 ** (K + 1)):
+        x = y
+        w = []
+        for _ in range(K):
+            w.append(x & 1)
+            x = Tsig3(x, sig)
+        w = tuple(w)
+        fib[w] = fib.get(w, 0) + 1
+        r = y % (2 ** K)
+        if r in fn_of_mod2K and fn_of_mod2K[r] != w:
+            welldef = False
+        fn_of_mod2K[r] = w
+    const = len(set(sig.values())) == 1
+    print("   sigma=(%+d,%+d,%+d,%+d)%s: distinct words %4d of %4d, max fibre %4d (2 = bijective), word determined by y mod 2^K: %s"
+          % (sig[1], sig[3], sig[5], sig[7], " CONST" if const else "      ", len(fib), 2 ** K, max(fib.values()), welldef))
+print("   => the parity word map is a bijection exactly for the two constant shifts; every non-constant level-3 strategy loses words.")
 print()
 print("done.")

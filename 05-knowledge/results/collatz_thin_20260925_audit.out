@@ -33,23 +33,25 @@ theta=0.10 (rho=0.56784, k_0=30): max S/bound1 over k in [k_0,400] = 0.0156, fai
 C. no-dip sets F_b(X,theta) = {y in [1,X]: T_b^i(y) >= y X^{-theta}, 0<=i<=k}, k=floor(log2 X)
 ========================================================================
 theta=0.03  rho=0.61200  h(rho)=0.96350  k_0=18 (lemma asserted only for X >= 2^18)
-  X        k      #F_{+1}   #F_{-1}   bound          ratio+    expo+    
-  2^12    12     274       273       195907.5       0.00140              robust(+-1e-9): yes
-  2^14    14     1206      1202      858889.6       0.00140   1.0690     robust(+-1e-9): yes
-  2^16    16     3989      3987      3699960.3      0.00108   0.8629     robust(+-1e-9): yes
-  2^18    18     12339     12337     15721264.2     0.00078   0.8146     robust(+-1e-9): yes
-  2^20    20     46612     46611     66066727.5     0.00071   0.9587     robust(+-1e-9): yes
+  X        k      #F_{+1}   #F_{-1}   bound          ratio+    logF/logX slope+   
+  2^10    10     80        78        43661.0        0.00183   0.6322             
+  2^12    12     274       273       195907.5       0.00140   0.6748    0.8881   
+  2^14    14     1206      1202      858889.6       0.00140   0.7311    1.0690   
+  2^16    16     3989      3987      3699960.3      0.00108   0.7476    0.8629   
+  2^18    18     12339     12337     15721264.2     0.00078   0.7551    0.8146   
+  2^20    20     46612     46611     66066727.5     0.00071   0.7754    0.9587   
   sheet difference |#F_{+1} - #F_{-1}| max over X: 4
-  lemma bound exponent h(rho)=0.9635 ; empirical exponent from 2^18->2^20: 0.9587
+  lemma exponent h(rho)=0.9635 ; the note's 'growth exponent' is log F/log X at 2^20 = 0.7754 ; least-squares slope 2^14..2^20 = 0.8723 ; local slope 2^18->2^20 = 0.9587
 theta=0.10  rho=0.56784  h(rho)=0.98668  k_0=30 (lemma asserted only for X >= 2^30)
-  X        k      #F_{+1}   #F_{-1}   bound          ratio+    expo+    
-  2^12    12     736       734       165174.0       0.00446              robust(+-1e-9): yes
-  2^14    14     2774      2771      747234.2       0.00371   0.9571     robust(+-1e-9): yes
-  2^16    16     9657      9654      3322614.0      0.00291   0.8998     robust(+-1e-9): yes
-  2^18    18     38146     38142     14575102.6     0.00262   0.9909     robust(+-1e-9): yes
-  2^20    20     157652    157648    63240359.4     0.00249   1.0236     robust(+-1e-9): NO [157652, 157652, 150156] [157648, 157648, 150153]
+  X        k      #F_{+1}   #F_{-1}   bound          ratio+    logF/logX slope+   
+  2^10    10     199       196       35694.0        0.00558   0.7637               [X^(-theta) = 1/2 is exact: strict-inequality counts 160 / 158]
+  2^12    12     736       734       165174.0       0.00446   0.7936    0.9435   
+  2^14    14     2774      2771      747234.2       0.00371   0.8170    0.9571   
+  2^16    16     9657      9654      3322614.0      0.00291   0.8273    0.8998   
+  2^18    18     38146     38142     14575102.6     0.00262   0.8455    0.9909   
+  2^20    20     157652    157648    63240359.4     0.00249   0.8633    1.0236     [X^(-theta) = 1/4 is exact: strict-inequality counts 150156 / 150153]
   sheet difference |#F_{+1} - #F_{-1}| max over X: 4
-  lemma bound exponent h(rho)=0.9867 ; empirical exponent from 2^18->2^20: 1.0236
+  lemma exponent h(rho)=0.9867 ; the note's 'growth exponent' is log F/log X at 2^20 = 0.8633 ; least-squares slope 2^14..2^20 = 0.9734 ; local slope 2^18->2^20 = 1.0236
 
 ========================================================================
 D. Proposition 6 identities with exact fractions
@@ -57,7 +59,11 @@ D. Proposition 6 identities with exact fractions
 minus sheet (3n-1), odd n<=300, L<=60: identity m_L 2^{d_L}/3^L = n prod_{l<L}(1-1/(3m_l)) and R_L(d)=n(1-prod): failures = 0 of 9150 checks
   every factor 1-1/(3 m_l) in [2/3, 33212/33213] = [0.666667, 0.999970] (all in (0,1))
 plus sheet (3n+1), odd n<=300, j<=60: identity m_j 2^{d_j}/3^j = n + (1/3) sum_{i<j} 2^{d_i}/3^i: failures = 0
-minus sheet, odd n<=300, c_400 = m_400 2^{d_400}/3^400: max = 7.705e+00 (all orbits enter a cycle, c -> 0, R(d) -> n)
+Prop 6(6): 3^L n + b B_L = 0 mod 2^{d_L} (L=40, both sheets, odd n<=300): failures = 0
+minus sheet, odd n<=300: max_n log2 c_L at L=400 is 2.95  (c_L = m_L 2^{d_L}/3^L -> 0 since every orbit enters a cycle)
+minus sheet, odd n<=300: max_n log2 c_L at L=3000 is -32.24  (c_L = m_L 2^{d_L}/3^L -> 0 since every orbit enters a cycle)
+minus sheet, odd n<=300: max_n log2 c_L at L=20000 is -262.32  (c_L = m_L 2^{d_L}/3^L -> 0 since every orbit enters a cycle)
+  (the slow case is the 3n-1 cycle 17,25,37,55,41,61,91: factor per period = 0.936443)
 rational examples for the factor 1 - 1/(3m):
    m=   1/3 : 1-1/(3m) = 0
    m=   1/5 : 1-1/(3m) = -2/3
@@ -83,6 +89,7 @@ carry bound: max |beta_k| / (|b|((3/2)^k-1)) over residues mod 2^12, b in {1,-1,
   b=  5 segment start=  11523 len= 170  X=2^12 th=0.1: N=43 = E 12 + D 17 + ND 14 ; k N(X^(1-th)) = 348 ; #F=742 ; max dippers per landing = 6
   b= -7 segment start=  17219 len= 177  X=2^12 th=0.1: N=78 = E 12 + D 51 + ND 15 ; k N(X^(1-th)) = 804 ; #F=729 ; max dippers per landing = 6
 partition N=E+D+ND, E<=k, D<=k N(X^(1-theta)), ND<=#F, <=k dippers per landing point, on all tested segments: True
+note: #(E) equals k exactly on every segment above (indices M-k+1..M), i.e. 'at most k', not 'fewer than k'; (R) uses k, so harmless.
 
 ========================================================================
 F. Corollary 4: level-2 sign strategies (THM-4474): sigma(1 mod 4), sigma(3 mod 4) in {+1,-1}
@@ -125,6 +132,49 @@ all-odd strategy sigma(1)=-1, sigma(3)=+1: T(x) odd and >= x for every odd x >= 
    theta=0.03: X/2 exceeds the lemma bound from k = 319 on (X = 2^319): the counting lemma is FALSE for this strategy for all X >= 2^319
    theta=0.10: X/2 exceeds the lemma bound from k = 953 on (X = 2^953): the counting lemma is FALSE for this strategy for all X >= 2^953
 all orbits of that strategy are eventually increasing odd sequences (x -> (3x+-1)/2), so N(X)=O(log X): the THEOREM's conclusion holds there trivially,
-but sections 1.2 and 1.4 do not survive, contrary to the proof of Corollary 4.
+but sections 1.2 and 1.4 do not survive, contrary to the proof of the (withdrawn) Corollary 4.
+
+========================================================================
+G. replacement corollaries
+========================================================================
+G1. periodic points of T_b with |p| <= X0: is T_b injective on them?  (search from every |x| <= X0, step cap 20000)
+   b=  1:  4 cycles,   17 periodic points (|p|<=20000: 17, largest |p| = 136); T_b injective on them: True; count(|p|<=X0)/X0^h* = 0.0014
+   b= -1:  4 cycles,   17 periodic points (|p|<=20000: 17, largest |p| = 136); T_b injective on them: True; count(|p|<=X0)/X0^h* = 0.0014
+   b=  5:  9 cycles,   84 periodic points (|p|<=20000: 84, largest |p| = 5098); T_b injective on them: True; count(|p|<=X0)/X0^h* = 0.0069
+   b= -5:  9 cycles,   84 periodic points (|p|<=20000: 84, largest |p| = 5098); T_b injective on them: True; count(|p|<=X0)/X0^h* = 0.0069
+   b=  7:  5 cycles,   21 periodic points (|p|<=20000: 21, largest |p| = 952); T_b injective on them: True; count(|p|<=X0)/X0^h* = 0.0017
+   b= -7:  5 cycles,   21 periodic points (|p|<=20000: 21, largest |p| = 952); T_b injective on them: True; count(|p|<=X0)/X0^h* = 0.0017
+   b= 11:  7 cycles,   41 periodic points (|p|<=20000: 41, largest |p| = 1496); T_b injective on them: True; count(|p|<=X0)/X0^h* = 0.0034
+   b= 13: 13 cycles,  101 periodic points (|p|<=20000: 101, largest |p| = 2786); T_b injective on them: True; count(|p|<=X0)/X0^h* = 0.0083
+   b=-13: 13 cycles,  101 periodic points (|p|<=20000: 101, largest |p| = 2786); T_b injective on them: True; count(|p|<=X0)/X0^h* = 0.0083
+   b= 17:  8 cycles,   67 periodic points (|p|<=20000: 67, largest |p| = 2312); T_b injective on them: True; count(|p|<=X0)/X0^h* = 0.0055
+   b= 23: 15 cycles,  222 periodic points (|p|<=20000: 206, largest |p| = 47408); T_b injective on them: True; count(|p|<=X0)/X0^h* = 0.0169
+G2. min over x in (0,1/3] of log(1-x) + x + x^2 = 0.000000 (>= 0 required by Cor. 6): True
+G3. exponent ladder: Delta_j = -a log2 j, m_j(n=1) = 2^(-Delta_j)(1 + (1/3) sum_{i<j} 2^(Delta_i)); log m_j / log j at j = 10^6 vs max(1,a)
+   a=0.00: log m_j/log j = 0.9205  (max(1,a) = 1.00)
+   a=0.50: log m_j/log j = 0.9707  (max(1,a) = 1.00)
+   a=1.00: log m_j/log j = 1.1313  (max(1,a) = 1.00)
+   a=1.03: log m_j/log j = 1.1507  (max(1,a) = 1.03)
+   a=1.05: log m_j/log j = 1.1643  (max(1,a) = 1.05)
+   a=1.50: log m_j/log j = 1.5572  (max(1,a) = 1.50)
+   a=2.00: log m_j/log j = 2.0458  (max(1,a) = 2.00)
+G4. all 16 level-3 strategies sigma:{1,3,5,7}->{+-1}; words of length K=10 over y < 2^(K+1)
+   sigma=(-1,-1,-1,-1) CONST: distinct words 1024 of 1024, max fibre    2 (2 = bijective), word determined by y mod 2^K: True
+   sigma=(+1,-1,-1,-1)      : distinct words  504 of 1024, max fibre   48 (2 = bijective), word determined by y mod 2^K: False
+   sigma=(-1,+1,-1,-1)      : distinct words  232 of 1024, max fibre  144 (2 = bijective), word determined by y mod 2^K: False
+   sigma=(+1,+1,-1,-1)      : distinct words  232 of 1024, max fibre   32 (2 = bijective), word determined by y mod 2^K: False
+   sigma=(-1,-1,+1,-1)      : distinct words  631 of 1024, max fibre   16 (2 = bijective), word determined by y mod 2^K: False
+   sigma=(+1,-1,+1,-1)      : distinct words  144 of 1024, max fibre   64 (2 = bijective), word determined by y mod 2^K: True
+   sigma=(-1,+1,+1,-1)      : distinct words  631 of 1024, max fibre    8 (2 = bijective), word determined by y mod 2^K: False
+   sigma=(+1,+1,+1,-1)      : distinct words  504 of 1024, max fibre   48 (2 = bijective), word determined by y mod 2^K: False
+   sigma=(-1,-1,-1,+1)      : distinct words  351 of 1024, max fibre   20 (2 = bijective), word determined by y mod 2^K: False
+   sigma=(+1,-1,-1,+1)      : distinct words  631 of 1024, max fibre    8 (2 = bijective), word determined by y mod 2^K: False
+   sigma=(-1,+1,-1,+1)      : distinct words   11 of 1024, max fibre 1024 (2 = bijective), word determined by y mod 2^K: True
+   sigma=(+1,+1,-1,+1)      : distinct words  232 of 1024, max fibre  144 (2 = bijective), word determined by y mod 2^K: False
+   sigma=(-1,-1,+1,+1)      : distinct words  351 of 1024, max fibre   16 (2 = bijective), word determined by y mod 2^K: False
+   sigma=(+1,-1,+1,+1)      : distinct words  631 of 1024, max fibre   16 (2 = bijective), word determined by y mod 2^K: False
+   sigma=(-1,+1,+1,+1)      : distinct words  351 of 1024, max fibre   20 (2 = bijective), word determined by y mod 2^K: False
+   sigma=(+1,+1,+1,+1) CONST: distinct words 1024 of 1024, max fibre    2 (2 = bijective), word determined by y mod 2^K: True
+   => the parity word map is a bijection exactly for the two constant shifts; every non-constant level-3 strategy loses words.
 
 done.

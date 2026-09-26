@@ -1,0 +1,33 @@
+== constants ==
+   alpha = log_2 3 = 1.584963, rho0 = log_3 2 = 0.630930, h* = h(rho0) = 0.949956, 1/h* = 1.052681
+   theta0 = 1 - alpha/2 = 0.207519 (the largest theta with rho(theta) > 1/2)
+   Corollary: no non-periodic positive orbit has m_j <= K j^a for all j with a < 1/h* = 1.05268
+   plus sheet log-band |Delta_j| <= C log_2 j excluded for C < (1/h* - 1)/2 = 0.02634
+   minus sheet log-band |delta_j| <= C log_2 j excluded for C < 1/h* = 1.05268
+   un-bootstrapped exponent: theta* = 0.03462, exponent = 0.96538
+   theta = 0.100: rho = 0.56784, h(rho) = 0.98668
+   theta = 0.050: rho = 0.59938, h(rho) = 0.97131
+   theta = 0.020: rho = 0.61831, h(rho) = 0.95923
+   theta = 0.010: rho = 0.62462, h(rho) = 0.95471
+   theta = 0.001: rho = 0.63030, h(rho) = 0.95044
+== (L1) class counts: exact sum_{o >= rho k - c} C(k,o) versus 2^(k h(rho)) ==
+   theta=0.00 k= 20: count = 2^18.720, entropy bound 2^18.999, ratio/(k+1) = 0.0393
+   theta=0.00 k= 40: count = 2^37.101, entropy bound 2^37.998, ratio/(k+1) = 0.0131
+   theta=0.00 k= 80: count = 2^74.859, entropy bound 2^75.996, ratio/(k+1) = 0.0056
+   theta=0.00 k=160: count = 2^150.764, entropy bound 2^151.993, ratio/(k+1) = 0.0026
+   theta=0.00 k=320: count = 2^302.251, entropy bound 2^303.986, ratio/(k+1) = 0.0009
+   theta=0.03 k= 20: count = 2^18.720, entropy bound 2^19.270, ratio/(k+1) = 0.0325
+   theta=0.03 k= 40: count = 2^37.781, entropy bound 2^38.540, ratio/(k+1) = 0.0144
+   theta=0.03 k= 80: count = 2^76.220, entropy bound 2^77.080, ratio/(k+1) = 0.0068
+   theta=0.03 k=160: count = 2^152.842, entropy bound 2^154.159, ratio/(k+1) = 0.0025
+   theta=0.03 k=320: count = 2^306.487, entropy bound 2^308.319, ratio/(k+1) = 0.0009
+   theta=0.10 k= 20: count = 2^19.234, entropy bound 2^19.734, ratio/(k+1) = 0.0337
+   theta=0.10 k= 40: count = 2^38.807, entropy bound 2^39.467, ratio/(k+1) = 0.0154
+   theta=0.10 k= 80: count = 2^77.796, entropy bound 2^78.934, ratio/(k+1) = 0.0056
+   theta=0.10 k=160: count = 2^156.516, entropy bound 2^157.869, ratio/(k+1) = 0.0024
+   theta=0.10 k=320: count = 2^313.897, entropy bound 2^315.738, ratio/(k+1) = 0.0009
+== (L2) integer counts F(X,theta) for X = 2^t, both sheets, versus X^(h(rho)) ==
+   theta=0.03 sheet 3n+1 (h(rho)=0.9635): 2^10: F=80 (exp 0.6322), 2^12: F=274 (exp 0.6748), 2^14: F=1206 (exp 0.7311), 2^16: F=3989 (exp 0.7476), 2^18: F=12339 (exp 0.7551), 2^20: F=46612 (exp 0.7754), 2^22: F=168829 (exp 0.7893), 2^24: F=602759 (exp 0.8001)
+   theta=0.03 sheet 3n-1 (h(rho)=0.9635): 2^10: F=78 (exp 0.6285), 2^12: F=273 (exp 0.6744), 2^14: F=1202 (exp 0.7308), 2^16: F=3987 (exp 0.7476), 2^18: F=12337 (exp 0.7550), 2^20: F=46611 (exp 0.7754), 2^22: F=168807 (exp 0.7893), 2^24: F=602757 (exp 0.8001)
+   theta=0.10 sheet 3n+1 (h(rho)=0.9867): 2^10: F=199 (exp 0.7637), 2^12: F=736 (exp 0.7936), 2^14: F=2774 (exp 0.8170), 2^16: F=9657 (exp 0.8273), 2^18: F=38146 (exp 0.8455), 2^20: F=157652 (exp 0.8633), 2^22: F=626438 (exp 0.8753), 2^24: F=2475550 (exp 0.8850)
+   theta=0.10 sheet 3n-1 (h(rho)=0.9867): 2^10: F=196 (exp 0.7615), 2^12: F=734 (exp 0.7933), 2^14: F=2771 (exp 0.8169), 2^16: F=9654 (exp 0.8273), 2^18: F=38142 (exp 0.8455), 2^20: F=157648 (exp 0.8633), 2^22: F=626434 (exp 0.8753), 2^24: F=2475521 (exp 0.8850)

@@ -11,8 +11,9 @@ constrains the shape of a hypothetical divergent orbit, it does not exclude
 one. Session `collatz-squares-doubles-20260925` (opus), 2026-09-25.**
 
 Theorem file: [THM-4476](../../01-canon/theorems/THM-4476-thin-divergent-orbits-reciprocal-sums-finite.md).
-Controls: `04-computation/experiments/collatz_thin_20260925_counts.py`,
-output `collatz_thin_20260925_counts.out`.
+Controls: `04-computation/experiments/collatz_thin_20260925_counts.py` and
+`collatz_thin_20260925_controls2.py`, outputs `collatz_thin_20260925_counts.out`
+and `collatz_thin_20260925_controls2.out`.
 Origin: the owner asked to prove HYP-9160 for discrepancy `O(log l)`; the
 in-house [no-bounded-strip theorem](collatz_guards_20260921_discrepancy.md)
 (section 2a) supplied the density mechanism, and a pigeonhole on landing
@@ -112,6 +113,12 @@ Conjecture for rationals with odd denominators have the same harmonic form.
 Moreover the Dirichlet series `sum_i |x_i|^(-s)` of a non-eventually-periodic
 orbit converges for every `s > h*`: its abscissa of convergence is at most
 `h(log_3 2)`.
+
+**Corollary 8' (a uniform criterion).** With `K = K(b)` from Corollary 6: an
+orbit is eventually periodic iff some partial sum `sum_(i<=N) 1/|x_i|` exceeds
+`K`. So Collatz is equivalent to: for every `n >= 1` the partial reciprocal
+sums of the orbit of `n` eventually exceed the absolute constant `K(1)`.
+(The proof makes `K` explicit in principle but astronomically large.)
 
 **Hostile control for the union question.** For the level-2 strategy
 `-chi_(-4)` of THM-4474 every odd `n` satisfies `v_2(3n + sigma(n)) = 1`, so
@@ -360,6 +367,48 @@ diverges, contradicting `sum_j 2^(Delta_j) = 3R(d) <= 3r` (Proposition 6(4)).
 Both cases need the sign-change reduction of 1.1 when `|r| < 1`, which only
 discards a finite prefix. ∎
 
+## 1.8 The same proof for every contracting Collatz-like map (Matthews–Watts framework)
+
+Let `m >= 2` and let `g(x) = (p_i x + q_i)/m` for `x = i mod m`, with integers
+`p_i, q_i`, `p_i >= 1` coprime to `m`, and `q_i = -p_i i mod m` so that `g`
+maps `Z` to `Z` (Conway's class; `m = 2`, `(p_0, q_0) = (1, 0)`,
+`(p_1, q_1) = (3, b)` is `T_b`). Write `a_i = p_i/m` and define the Chernoff
+rate
+
+```text
+I(g) = -log_m min_(lambda >= 0) (1/m) sum_i a_i^lambda,
+```
+
+which is positive exactly when the geometric mean of the `a_i` is below 1
+(`prod_i p_i < m^m`, the *contracting* case of Matthews–Watts). For `T_(+-1)`,
+`I = 1 - h* = 0.050044` at `lambda = 0.488`.
+
+**Theorem (general form; PROVED, same proof).** If `prod_i p_i < m^m` and
+`max_i p_i < m^2`, then every `g`-invariant subset of `Z \ {0}` on which `g`
+is injective (in particular every orbit with distinct terms, every infinite
+backward branch, and the union of all cycles) has at most
+`C(eps, g) X^(max(1 - I(g), log_m max_i a_i) + eps)` elements of absolute
+value at most `X`.
+
+*Proof.* Replace `2` by `m` throughout sections 1.1–1.6. The residue word
+`(g^j(x) mod m)_(j<k)` is a bijection `Z/m^k -> (Z/m)^k` because each
+`p_i` is a unit modulo `m` (section 1.2 verbatim). The affine form is
+`g^k(y) = (prod_j a_(i_j)) y + beta_k` with
+`|beta_k| <= max|q_i| ((max a)^k - 1)/(max a - 1)` when `max a > 1` (and
+`O(k max|q_i|)` otherwise). A no-dip word of length `k = floor(log_m X)`
+from `y >= Y_0 = 2 K X^(log_m max a + theta)` has
+`prod_j a_(i_j) >= X^(-theta)/2`; the number of such words is at most
+`m^(k(1 - I_theta(g)))` by Chernoff, with `I_theta -> I(g)` as `theta -> 0`.
+Sign changes occur only at `|x| <= max|q_i|/min p_i`, a finite set. The
+dichotomy, pigeonhole and bootstrap are unchanged. ∎
+
+So the single-orbit thinness is exactly a feature of the contracting regime
+of the Matthews–Watts conjecture (their Conjecture A: all orbits of a
+contracting map are eventually periodic). In the expanding regime
+(`5x+1`: geometric mean `sqrt(5/4) > 1`) the rate `I` is zero and the
+statement is not expected to be provable this way; there, divergent orbits
+are expected to exist and to be exponentially thin for a different reason.
+
 ## 2. What the theorem says and does not say
 
 * **Sheet.** The counting bound is the same on both sheets; the sign enters
@@ -409,6 +458,16 @@ From `collatz_thin_20260925_counts.out`:
 
 The two sheets differ by at most four elements at every size, as the
 sheet-blind class count predicts.
+
+Further controls (`collatz_thin_20260925_controls2.py` / `.out`):
+
+| control | result |
+|---|---|
+| (C1) union of all cycles of `T_b` with minimum `<= 2*10^5`, twelve odd `b` | at most 86 periodic points (b = 13, ten cycles); `count / X^(h*) <= 1.04` in every case |
+| (C2) contracting `m = 3` map `x/3, (2x+1)/3, (4x+1)/3` (`prod p = 8 < 27`, `max p = 4 < 9`) | residue-word bijection mod `3^k` exact for `k <= 7`; Chernoff rate `I(g) = 0.2513`; no-dip counts at `X = 3^12` grow like `X^0.57` (`theta = 0.03`) and `X^0.70` (`theta = 0.10`) against bounds `X^0.79`, `X^0.87` |
+| (C3) parity-word map mod `2^k` | a bijection for `T_(+1)` and `T_(-1)` for all `k <= 12`; for the strategy `-chi_(-4)` only `k + 1` distinct words among `2^k` residues (`k <= 10`), the witness for the withdrawn corollary |
+| (C4) the log-drift word `d_j = floor(j log_2 3 - 1.03 log_2 j)` (excluded by Corollary 9) | every prefix of length `k <= 18` is realised by an odd integer, the least one being `9, 41, 169, 681, 8873, ..., 5743273` for `k = 2, 4, 6, 8, 11, ..., 18`, growing like `2^(d_k)`; no odd `n < 2^24` realises the prefix of length 19 |
+| the no-dip count at `X = 2^24`, `theta = 0.03` | `0.7754, 0.7893, 0.8001` at `2^20, 2^22, 2^24` (`theta = 0.03`) and `0.8633, 0.8753, 0.8850` (`theta = 0.10`), rising slowly, both sheets within four elements; bounds `0.9635` and `0.9867` (`collatz_thin_20260925_counts_to_2_24.out`) |
 
 ## 4. Frontier
 

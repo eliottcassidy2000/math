@@ -1,0 +1,51 @@
+== (C1) union of all cycles of T_b with minimum <= 200000 ==
+   b= +1: 1 cycles (minima [1]), 2 periodic points, max 2, count/X^h* = 1.0353
+   b= -1: 3 cycles (minima [1, 5, 17]), 15 periodic points, max 136, count/X^h* = 0.1410
+   b= +5: 6 cycles (minima [1, 5, 19, 23, 187, 347]), 69 periodic points, max 5098, count/X^h* = 0.0207
+   b= -5: 3 cycles (minima [5, 25, 85]), 15 periodic points, max 680, count/X^h* = 0.0306
+   b= +7: 2 cycles (minima [5, 7]), 6 periodic points, max 20, count/X^h* = 0.3485
+   b= -7: 3 cycles (minima [7, 35, 119]), 15 periodic points, max 952, count/X^h* = 0.0222
+   b=+11: 3 cycles (minima [1, 11, 13]), 22 periodic points, max 124, count/X^h* = 0.2258
+   b=+13: 10 cycles (minima [1, 13, 131, 211, 227, 251, 259, 283]), 86 periodic points, max 2786, count/X^h* = 0.0459
+   b=-11: 4 cycles (minima [11, 19, 55, 187]), 19 periodic points, max 1496, count/X^h* = 0.0183
+   b=-13: 3 cycles (minima [13, 65, 221]), 15 periodic points, max 1768, count/X^h* = 0.0123
+   b=+17: 3 cycles (minima [1, 17, 23]), 40 periodic points, max 280, count/X^h* = 0.1894
+   b=+23: 4 cycles (minima [5, 7, 23, 41]), 55 periodic points, max 2488, count/X^h* = 0.0327
+== (C2) contracting Conway map m=3: g = x/3, (2x+1)/3, (4x+1)/3 ==
+   prod p_i = 8 < 27, max p_i = 4 < 9; Chernoff rate I(g) = 0.25130 (base 3), i.e. exponent 1 - I = 0.74870
+   residue-word bijection mod 3^k, k <= 7: True
+   theta=0.03: bound exponent 1 - I_theta = 0.7906; counts 3^8: F=76 (exp 0.4928), 3^10: F=545 (exp 0.5735), 3^12: F=1761 (exp 0.5669)
+   theta=0.10: bound exponent 1 - I_theta = 0.8712; counts 3^8: F=277 (exp 0.6399), 3^10: F=2556 (exp 0.7142), 3^12: F=9580 (exp 0.6954)
+== (C3) parity-word bijection mod 2^k: constant shifts vs the strategy -chi_{-4} ==
+   T_+1: bijection for k <= 12: True
+   T_-1: bijection for k <= 12: True
+      k=2: 3 distinct words among 4 residues
+      k=3: 4 distinct words among 8 residues
+      k=4: 5 distinct words among 16 residues
+      k=5: 6 distinct words among 32 residues
+      k=6: 7 distinct words among 64 residues
+      k=7: 8 distinct words among 128 residues
+      k=8: 9 distinct words among 256 residues
+      k=9: 10 distinct words among 512 residues
+      k=10: 11 distinct words among 1024 residues
+   -chi_{-4} strategy (sigma(1 mod 4) = -1, sigma(3 mod 4) = +1): bijection for k <= 10: False
+== (C4) Corollary 9 illustration: least odd n realising each prefix of the log-drift word a=1.03 ==
+   halving counts v_1..v_20: [2, 1, 1, 1, 1, 1, 1, 1, 1, 2, 1, 2, 1, 2, 1, 2, 1, 2, 1, 2]
+   k= 2: least odd n = 9 (log2 n = 3.17, d_k = 3)
+   k= 3: least odd n = 9 (log2 n = 3.17, d_k = 4)
+   k= 4: least odd n = 41 (log2 n = 5.36, d_k = 5)
+   k= 5: least odd n = 41 (log2 n = 5.36, d_k = 6)
+   k= 6: least odd n = 169 (log2 n = 7.40, d_k = 7)
+   k= 7: least odd n = 169 (log2 n = 7.40, d_k = 8)
+   k= 8: least odd n = 681 (log2 n = 9.41, d_k = 9)
+   k= 9: least odd n = 681 (log2 n = 9.41, d_k = 10)
+   k=10: least odd n = 681 (log2 n = 9.41, d_k = 12)
+   k=11: least odd n = 8873 (log2 n = 13.12, d_k = 13)
+   k=12: least odd n = 41641 (log2 n = 15.35, d_k = 15)
+   k=13: least odd n = 107177 (log2 n = 16.71, d_k = 16)
+   k=14: least odd n = 500393 (log2 n = 18.93, d_k = 18)
+   k=15: least odd n = 500393 (log2 n = 18.93, d_k = 19)
+   k=16: least odd n = 1548969 (log2 n = 20.56, d_k = 21)
+   k=17: least odd n = 5743273 (log2 n = 22.45, d_k = 22)
+   k=18: least odd n = 5743273 (log2 n = 22.45, d_k = 24)
+   k=19: no odd n < 2^24 has this prefix (d_k = 25)
